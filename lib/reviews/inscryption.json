@@ -1,0 +1,919 @@
+{
+"741005": {
+"add": [],
+"drop": [
+"random_ability"
+]
+},
+"741025": {
+"add": [],
+"drop": [
+"stat_condition"
+]
+},
+"741042": {
+"add": [],
+"drop": [
+"board_clog"
+]
+},
+"741043": {
+"add": [
+"merge_attach"
+],
+"drop": [
+"slot_filler",
+"terrain"
+]
+},
+"741045": {
+"add": [],
+"drop": [
+"terrain"
+]
+},
+"741046": {
+"add": [],
+"drop": [
+"slot_filler",
+"boss_phases"
+]
+},
+"741047": {
+"add": [],
+"drop": [
+"slot_filler",
+"terrain",
+"boss_phases"
+]
+},
+"741023": {
+"add": [
+"merge_attach"
+],
+"drop": []
+},
+"740972": {
+"add": [
+"run_structure"
+],
+"drop": []
+},
+"740973": {
+"add": [
+"run_structure"
+],
+"drop": []
+},
+"740974": {
+"add": [
+"run_structure",
+"shop_gold"
+],
+"drop": []
+},
+"740975": {
+"add": [
+"sacrifice"
+],
+"drop": []
+},
+"740989": {
+"add": [],
+"drop": [
+"variety_payoff"
+]
+},
+"740991": {
+"add": [
+"lanes",
+"excess_damage"
+],
+"drop": []
+},
+"741000": {
+"add": [
+"run_structure"
+],
+"drop": [
+"cost_condition",
+"variety_payoff"
+]
+},
+"741004": {
+"add": [
+"excess_damage:benefits"
+],
+"drop": []
+},
+"741011": {
+"add": [
+"graveyard"
+],
+"drop": [
+"turn_structure"
+]
+},
+"741036": {
+"add": [
+"variable_stats"
+],
+"drop": [
+"board_clog"
+]
+},
+"741038": {
+"add": [
+"deckbuilding_effect"
+],
+"drop": []
+},
+"740994": {
+"add": [],
+"drop": [
+"board_clog"
+]
+},
+"741022": {
+"add": [
+"board_clog",
+"slot_filler",
+"symmetric_effect"
+],
+"drop": []
+},
+"741031": {
+"add": [
+"removal"
+],
+"drop": [
+"board_clog"
+]
+},
+"741035": {
+"add": [
+"removal"
+],
+"drop": []
+},
+"740614": {
+"add": [
+"enemy_benefit"
+],
+"drop": []
+},
+"740620": {
+"add": [
+"slot_filler",
+"null_body"
+],
+"drop": [
+"tank"
+]
+},
+"740624": {
+"add": [
+"board_clog",
+"slot_filler",
+"symmetric_effect"
+],
+"drop": []
+},
+"740631": {
+"add": [
+"board_clog",
+"slot_filler",
+"null_body"
+],
+"drop": [
+"blocking"
+]
+},
+"740711": {
+"add": [],
+"drop": [
+"board_clog"
+]
+},
+"740636": {
+"add": [
+"slot_filler",
+"null_body",
+"blocking"
+],
+"drop": [
+"tank"
+]
+},
+"740637": {
+"add": [],
+"drop": [
+"board_clog"
+]
+},
+"740638": {
+"add": [
+"friendly_fire"
+],
+"drop": []
+},
+"740640": {
+"add": [
+"death_count"
+],
+"drop": [
+"cross_lane",
+"reveal_order"
+]
+},
+"740641": {
+"add": [],
+"drop": [
+"stat_multiply"
+]
+},
+"740646": {
+"add": [
+"variety_payoff"
+],
+"drop": [
+"in_hand_buff"
+]
+},
+"740647": {
+"add": [],
+"drop": [
+"variety_payoff"
+]
+},
+"740657": {
+"add": [
+"hand_size"
+],
+"drop": []
+},
+"740663": {
+"add": [
+"fodder"
+],
+"drop": [
+"variety_payoff"
+]
+},
+"740676": {
+"add": [
+"variable_stats"
+],
+"drop": [
+"buff"
+]
+},
+"740625": {
+"add": [
+"variable_stats"
+],
+"drop": [
+"buff"
+]
+},
+"740678": {
+"add": [
+"forced_movement"
+],
+"drop": []
+},
+"740687": {
+"add": [],
+"drop": [
+"board_clog"
+]
+},
+"740692": {
+"add": [
+"removal",
+"trap_secret"
+],
+"drop": []
+},
+"740696": {
+"add": [
+"removal"
+],
+"drop": [
+"forced_movement"
+]
+},
+"740980": {
+"add": [
+"slot_filler",
+"blocking"
+],
+"drop": []
+},
+"741014": {
+"add": [],
+"drop": [
+"combo_sequence"
+]
+},
+"740759": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": [
+"taunt"
+]
+},
+"740735": {
+"add": [
+"fodder",
+"null_body"
+],
+"drop": []
+},
+"740747": {
+"add": [
+"fodder",
+"null_body"
+],
+"drop": []
+},
+"740724": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740728": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740736": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740750": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740752": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740753": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740754": {
+"add": [
+"null_body",
+"blocking",
+"board_clog"
+],
+"drop": []
+},
+"740761": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740767": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740769": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740774": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740779": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740783": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740803": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740816": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740817": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740843": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740852": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740883": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740912": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740916": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740944": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740956": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740960": {
+"add": [
+"null_body",
+"blocking"
+],
+"drop": []
+},
+"740715": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740726": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740733": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740737": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740739": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740740": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740742": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740743": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740748": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740749": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740755": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740756": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740757": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740760": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740762": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740764": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740785": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740786": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740787": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740788": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740792": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740796": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740797": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740800": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740804": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740806": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740812": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740813": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740814": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740818": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740819": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740820": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740821": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740832": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740841": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740849": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740856": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740859": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740862": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740863": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740864": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740865": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740868": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740869": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740871": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740874": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740880": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740882": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740884": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740887": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740893": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740894": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740905": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740917": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740918": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740919": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740920": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740929": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740934": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740938": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740948": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740954": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740959": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740964": {
+"add": [
+"null_body"
+],
+"drop": []
+},
+"740952": {
+"add": [
+"permanent_growth"
+],
+"drop": []
+},
+"740953": {
+"add": [
+"permanent_growth"
+],
+"drop": []
+},
+"740935": {
+"add": [
+"fatigue"
+],
+"drop": []
+},
+"740926": {
+"add": [
+"fodder"
+],
+"drop": []
+}
+}

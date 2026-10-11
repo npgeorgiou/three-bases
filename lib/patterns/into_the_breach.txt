@@ -1,0 +1,11 @@
+# Into the Breach: "+N Damage / +N Health" are weapon upgrades bought with Reactor Cores, not unit buffs
+!buff|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b
+!buff|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)
+# "in a line / in a row" is an attack shape; Flying is movement over terrain; "all units in a line" is not global; "each tile you pass" is not passing
+!link_formation|\bin a line
+!rows|\brows?\b
+!evasion|\bflying\b
+!scope_global|\ball (creatures|minions|units|characters|cards)\b
+!round_passing|\b(you|your opponent|a player|both players|each player|opponent|they) (has |have )?pass(ed|es)?\b(?! (the|a|test|across|over|through))
+area_templates|does|\bin a (line|row)\b|\bcross[- ]shape|\bcone\b|\b\dx\d\b|\bthree tiles\b|\b3 tiles\b|\b5 tiles\b
+exhaust|does|\bsingle-use\b

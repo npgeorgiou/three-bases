@@ -1,0 +1,32 @@
+# Gwent: 'gold' and 'bronze' are card tiers, not money
+!shop_gold|\bgold\b(?! card)
+# units put on the opponent's side (Spying, Disloyal, spawns on enemy rows)
+board_clog|does|\b(spawn|summon|play|move|create)s?\b(?![^.]{0,30}\b(frost|fog|rain|storm|cataclysm|blood moon|dragon's dream|skellige wolves)\b)[^.]{0,60}\b(on|to) (the |an? |both |each )?(enemy rows?|opponent's side|enemy side)
+board_clog|does|(^|\. )disloyal\.
+enemy_benefit|does|(^|\. )disloyal\.
+donate|does|\bon the opposite side of the battlefield
+cost_condition|does|\b\d+ provisions? or (less|more)|\bprovision cost\b|\bwith (the )?(highest|lowest|equal) provision
+stat_condition|does|\b(highest|lowest)-power\b|\b\d+ or (less|more) power\b|\bpower (of )?\d+ or (less|more)
+symmetric_effect|does|\bboth players\b|\beach player\b|\bboth sides\b|\bon each side\b
+hand_disruption|does|\bopponent'?s hand\b
+in_hand_buff|does|\bin your (hand|deck)\b[^.]{0,40}\bboost|\bboost[^.]{0,40}\bin your (hand|deck)
+stat_multiply|does|\bdouble (its|the|self|this|a)[^.]{0,20}power
+count_payoff|does|(for each|number of)[^.]{0,60}\bthis (game|round)\b
+turn_number|does|\b(start|end) of (the )?(second|third|2nd|3rd) round\b|\bin round (2|3)\b
+control_reward|does|\bif you('re| are) (winning|losing|behind)|\bwin a round\b|\blose a round\b
+slot_filler|does|\brow is full\b|\bfull row\b
+forced_placement|does|\bmove (an enemy unit|all enemy units|enemy units?|a unit)[^.]{0,30}\bto (this|the other|the opposite|its) row
+lone_unit|does|\b(the )?only (unit|card) on (its|this|the) row\b|\bno other (units|allied units) on (its|this) row
+# Echo returns a card to the deck (not a copy); Initiative is a condition; (Ranged) / (Melee) name the row a unit stands in
+!copy|\bechoe?s?\b
+!turn_structure|\binitiative
+!ranged|\branged\b
+# Bonded is about copies, Barricade about armour, "cancel the Deploy ability" is not a counterspell; "reach" is a number
+!link_formation|\bbonded\b
+!block_armor|\bbarricade
+!counter_spell|\bcancel
+!evasion|\breach\b
+# Relict is a Gwent unit category (monsters), not a relic item
+!items_consumables|\brelic
+# the general 'spawn ... on an enemy row' pattern catches Gwent hazards (Frost, Rain...), handled by the Gwent pattern above
+!board_clog|\b(add|put|summon|create|place|spawn)s?\b[^.]{0,50}\b(to|on|onto|into|for) (your |the |each |an? )?(opponent|enemy)'?s? (side|board|battlefield|lane|row|camp)

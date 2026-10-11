@@ -1,0 +1,24 @@
+# Hearthstone: Overload is mana debt, not a kicker; "Advance to the present" is a time-travel transform, not movement
+!kicker|\boverload\b.{0,5}\d
+!movement|\badvance\b
+transform|does|\badvance to the (present|future)\b
+# effects on cards in hand / deck
+in_hand_buff|does|\b(minions?|cards?|spells?) in your (hand|deck)\b[^.]{0,40}(\+\d+|cost|costs)\b|\bin your hand\b[^.]{0,20}\+\d+/\+\d+
+life_payment|cost|\bdeal \d+ damage to your hero\b|\bdamage to your hero\b
+# Shuffling new cards into your deck adds cards (deck modification); only shuffling the card itself or cards from hand back is recycling
+!recycle|shuffle .{0,40}into (your|their|its owner.s) (deck|library)
+recycle|does|\bshuffle (this|it|them|me|that card|this card|this minion|this weapon)\b[^.]{0,30}into your deck|\bshuffle [^.]{0,40}\b(from|in) your hand into your deck|\bshuffle (the )?(left|right)[- ]?most card
+deck_modification|does|\bshuffle (a|an|\d+|two|three|four|five|six|seven|copies|a copy|\d+ copies)\b[^.]{0,60}into your deck
+# Corpses are a second resource spent with mana, not an activated ability or coins
+!activated|\bspend \d
+!coin_economy|\bspend \d+ \w+ to
+multiple_resources|cost|\bspend (up to )?\d+ corpses?\b
+upgrade|does|\b(transform|transforms) [^.]{0,40}\binto (a |random )?(ones?|minions?) that costs? \(\d+\) more\b|\bsummon a random minion that costs \(\d+\) more\b
+# Hearthstone has no board movement or ranged attacks: "swap", "shoot" and "move to the top of your deck" are not those
+!movement|\bswap
+!movement|\bmoves?\b
+!movement|\bshift
+!ranged|\bshoot
+!swap|\bswap
+swap|does|\bswap (the |its |their )?(attack|health|stats|cost)\b|\bswap (places|positions|hands|decks|stats)\b
+transform|does|\b(swaps|flips|changes) each turn\b

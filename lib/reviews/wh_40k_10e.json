@@ -1,0 +1,243 @@
+{
+"784557": {
+"add": [
+"tribal",
+"piercing"
+],
+"drop": []
+},
+"784562": {
+"add": [
+"aoe_damage",
+"random_effect"
+],
+"drop": [
+"condition_count"
+]
+},
+"784553": {
+"add": [
+"damage"
+],
+"drop": []
+},
+"784552": {
+"add": [],
+"drop": [
+"support",
+"destroy"
+]
+},
+"784566": {
+"add": [
+"advantage"
+],
+"drop": [
+"random_effect"
+]
+},
+"784560": {
+"add": [
+"piercing"
+],
+"drop": []
+},
+"784550": {
+"add": [],
+"drop": [
+"zone_of_control"
+]
+},
+"784570": {
+"add": [],
+"drop": [
+"symmetric_effect"
+]
+},
+"784574": {
+"add": [
+"damage_reduction",
+"stealth"
+],
+"drop": [
+"protection"
+]
+},
+"784558": {
+"add": [
+"advantage"
+],
+"drop": [
+"random_effect"
+]
+},
+"784569": {
+"add": [
+"advantage"
+],
+"drop": [
+"damage"
+]
+},
+"784556": {
+"add": [
+"advantage"
+],
+"drop": [
+"random_effect"
+]
+},
+"784290": {
+"add": [],
+"drop": [
+"activated",
+"bodyguard"
+]
+},
+"784392": {
+"add": [],
+"drop": [
+"movement",
+"terrain"
+]
+},
+"784385": {
+"add": [],
+"drop": [
+"scope_global"
+]
+},
+"784300": {
+"add": [
+"reserve_bench"
+],
+"drop": []
+},
+"784561": {
+"add": [],
+"drop": [
+"damage"
+]
+},
+"786634": {
+"add": [],
+"drop": [
+"drawback"
+]
+},
+"784576": {
+"add": [],
+"drop": [
+"merge_attach"
+]
+},
+"786949": {
+"add": [
+"drawback"
+],
+"drop": [
+"destroy"
+]
+},
+"786888": {
+"add": [
+"drawback"
+],
+"drop": [
+"destroy"
+]
+},
+"786604": {
+"add": [],
+"drop": [
+"stealth"
+]
+},
+"785244": {
+"add": [
+"heal"
+],
+"drop": []
+},
+"785871": {
+"add": [],
+"drop": [
+"graveyard"
+]
+},
+"784863": {
+"add": [],
+"drop": [
+"damage"
+]
+},
+"785112": {
+"add": [
+"drawback"
+],
+"drop": [
+"advantage",
+"piercing"
+]
+},
+"785114": {
+"add": [
+"drawback"
+],
+"drop": [
+"advantage",
+"piercing"
+]
+},
+"785116": {
+"add": [
+"drawback"
+],
+"drop": [
+"advantage",
+"piercing:benefits"
+]
+},
+"787018": {
+"add": [],
+"drop": [
+"piercing"
+]
+},
+"786009": {
+"add": [
+"drawback"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"786952": {
+"add": [
+"drawback"
+],
+"drop": [
+"mark_target",
+"zone_of_control"
+]
+},
+"786676": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"785454": {
+"add": [],
+"drop": [
+"damage_reduction",
+"ranged:counters"
+]
+},
+"784573": {
+"add": [],
+"drop": [
+"destroy"
+]
+}
+}

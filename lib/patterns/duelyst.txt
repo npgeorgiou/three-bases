@@ -1,0 +1,14 @@
+# Duelyst: "exhausted" means a unit that has already acted this turn, not a one-use card; "reactivate" is an extra action
+!exhaust|\bexhaust
+# Flying is free movement on the grid, not evasion; "into your action bar" creates cards (hand) rather than drawing; "in front of" is a grid position, not a row
+!evasion|\bflying\b
+!draw|(put|add) .{0,40}into your action bar
+generate_cards|does|\b(put|add)s? [^.]{0,60}\binto (your|their|the opponent's|your opponent's) action bar
+!rows|\bfront\b
+positional|does|\bin front of\b|\bbehind (an? |each |the )?(enemy|enemies|it|them|your general)\b|\bdiagonal|\bcolumn\b|\bstarting side\b|\bcorner
+adjacency|does|\bnearby\b|\baround (it|them|him|her|your general|the enemy general|this minion)\b|\bsurrounding\b
+area_templates|does|\b\dx\d area\b|\bcolumn\b|\bstraight line\b|\brow\b
+# Duelyst Frenzy hits all nearby enemies when attacking; it is not a when-damaged trigger
+!on_damaged|\bfrenzy
+# Replace = put a card from your action bar (hand) back into the deck for a new one, once a turn
+recycle|does|\breplac(e|es|ed|ing)\b

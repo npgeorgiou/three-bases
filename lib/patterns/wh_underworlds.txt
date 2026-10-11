@@ -1,0 +1,33 @@
+# Underworlds: "out of action" is a kill only when something takes a fighter out of action
+!destroy|out of action
+destroy|does|(?s)^(?!.*\bscore (this|it)\b).*?\btakes? (an?|the|one|two|that|this|each|any)? ?(enemy |target |adjacent |friendly )?[^.]{0,30}\bout of action\b
+on_kill|does|\b(if|when|after|each time) [^.]{0,50}\btakes? [^.]{0,40}\bout of action\b
+# activation = taking a turn with a fighter, not an activated ability
+!activated|\bactivate
+!activated|\bactivated
+disable|does|\bcannot be activated\b|\bgive [^.]{0,30}\benemy fighters?\b[^.]{0,10} (a|one) (move|charge) tokens?\b|\bgive that fighter (a|one) (move|charge) token\b|\bgive (the target|an enemy fighter|that enemy fighter|each enemy fighter|enemy fighters|that fighter|the chosen fighter)[^.]{0,15} (a|one) (move|charge) tokens?\b
+drawback|cost|\bgive this fighter (a|one) (move|charge) tokens?\b
+# Cleave ignores Block symbols (piercing); only Scything hits several fighters
+!multi_target_attack|\bcleave
+# "upgrades" are the equipment cards fighters carry
+!upgrade|\bupgrade
+items_consumables|does|\bupgrades?\b
+removal|does|\bthat upgrade is discarded\b|\bdiscard (one|an?|that|all) [^.]{0,30}upgrades?\b
+immunity|does|\bcannot (deal damage to|be targeted|be chosen|be the target)\b|\bcannot be dealt damage\b
+# Inspire flips a fighter to its upgraded side
+upgrade|does|\binspired?\b
+heal|does|\bheal \(\d\)
+# "-1 Damage / -1 Dice from Attack actions that target this fighter" is protection, not a debuff on someone
+!debuff|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)
+damage_reduction|does|-\d+ (damage|dice)\b[^.]{0,60}\b(that target this fighter|that targets this fighter|enemy fighters'? (range \d\+? )?attack actions|adjacent fighters'? attack actions)
+debuff|does|\b(give|gives) [^.]{0,40}-\d+|\benemy fighters? (has|have) -\d+|-\d+ (move|defence|wounds?|dice|damage) (to|from) (an?|the|one|each|that) enemy\b
+# own upgrades with a penalty
+drawback|cost|(^|\. |, )-\d+ (wounds?|move|defence)\b|\bthey first suffer \d+ damage\b|\bdeal \d+ damage to this fighter\b
+life_payment|cost|\b(this fighter|they) (first )?suffers? \d+ damage\b|\bdeal \d+ damage to this fighter\b
+disable|does|\bplace a (move|charge) token next to (the target|that fighter|an enemy fighter|the enemy fighter|the chosen fighter)\b
+revive|does|\b(be )?raised?\b(?! the)
+swap|does|\bswitch (the two|their|places|the positions|them|two)\b|\bswap (places|the positions)\b
+destroy|does|(?s)^(?!.*\bscore (this|it)\b).*?(?:\b(is|are|were|was|been) taken out of action\b|\btook [^.]{0,40}\bout of action\b)
+destroy|benefits|\bscore (this|it)\b[^\n]*?\bout of action\b
+death_count|does|\benemy (fighters?|leaders?) (are|is|were|was) out of action\b|\benemy fighters? out of action\b
+trap_secret|does|(^|\b)trap( reaction|,)|^trap\b

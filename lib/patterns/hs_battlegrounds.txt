@@ -1,0 +1,29 @@
+# Battlegrounds: no board movement; "swap" is a stat/type swap. Board order (left-most / right-most) matters because minions attack left to right.
+!movement|\bswap
+!movement|\bmoves?\b
+!movement|\bshift
+!swap|\bswap
+swap|does|\bswap (the |its |their )?(attack|health|stats|cost)\b|\bswap (places|positions|hands|decks|stats)\b|\bswap a friendly\b|\bswaps? (to|between)\b|\bgain each other.s\b
+transform|does|\bswaps type each turn\b|\b(swaps|flips|changes) each turn\b
+!adjacency|to (the |its )?(left|right)
+!adjacency|\bleft and right
+positional|does|\b(left|right)[- ]?most\b|\bleft and right\b
+adjacency|does|\badjacent\b|\bneighbou?rs?\b|\bnext to\b|\bto (the |its )?(left|right) of\b
+# taking a card from the Tavern for free is not stealing from an opponent
+!steal|\bsteal(s|ing)?\b
+steal|does|\bsteal [^.]{0,40}\b(from|of) (your|the|an?) (opponent|enemy|enemies)\b|\btake control\b
+life_payment|cost|(^|[.:] )take \d+ damage\b|\bdeal \d+ damage to your hero\b|\bdamage to your hero\b
+in_hand_buff|does|\b(minions?|cards?) in your hand\b[^.]{0,40}\+\d+|\bin your hand\b[^.]{0,20}\+\d+/\+\d+
+enemy_benefit|does|\bgive everyone else\b|\b(all|other) players\b[^.]{0,20}\b(get|gain)\b
+# Duos "Pass" sends a card to the teammate; Battlegrounds has no round passing
+!round_passing|\b(you|your opponent|a player|both players|each player|opponent|they) (has |have )?pass(ed|es)?\b(?! (the|a|test|across|over|through))
+!round_passing|\bafter (you|your opponent|both players) pass
+# Blood Gems are +1/+1 buffs played on minions; Golden = tripled, upgraded copy; maximum Gold is the resource cap
+buff|does|\bblood gems? on\b|\bplays? [^.]{0,20}\bblood gems?\b
+upgrade|does|\bmake [^.]{0,50}\bgolden\b|\bget a golden\b
+resource_gain|does|\b(increase|raise) your maximum gold\b|\bgain \d+ gold\b|\bfree refresh(es)?\b
+buff|does|\bconsumes? [^.]{0,60}\bto gain (its|their)\b
+transform|does|\bmorph(s|ing)?\b
+repeat_trigger|does|\b(trigger|cast)s? an extra time\b|\bhappen twice\b|\bsummon twice as many\b
+# Duos: "Pass" gives a card to your teammate; "your team" is you and your partner
+team_play|does|\byour team\b|\b(after|when|whenever|once|first time) (you|your team|this is) (pass(es|ed)?|passed)\b|\bpass (a|an|the|this|it|copies|a copy|a plain copy|a different)\b|\bpassed\b

@@ -1,0 +1,73 @@
+# Slay the Spire 2: same wording as sts1 (Curse = junk card, "Lose N HP" = self cost, draw/discard pile)
+!debuff|\bcurse
+!damage|loses? \d+ (life|health|hp)
+!regeneration|at the (start|end|beginning) of .{0,40}(heal(s|ed)?\b|restore)
+!regeneration|heals? (to )?full
+junk_cards|does|\b(become )?cursed\b|\bobtain (a|an) (unique |special )?curse\b|\bcursed - \w+
+generate_cards|does|\bshuffle (a|an|\d+|one|two|three|x) [^.]{0,40}\binto your draw pile\b
+generate_cards|does|\badd (a|an|\d+|one|two|x) [^.]{0,30}\binto your (discard pile|draw pile)\b
+return_to_hand|does|\b(put|return)s? [^.]{0,40}\bfrom (your |the )?(discard|exhaust) pile\b[^.]{0,20}\b(into|to) your hand\b
+graveyard|does|\bexhaust pile\b
+deck_position|does|\bon (the )?top of your draw pile\b|\bbottom of your draw pile\b
+recycle|does|\bshuffle (your|all your|all of your) [^.]{0,20}(discard pile|cards) into your draw pile\b
+tutor|does|\b(put|choose) [^.]{0,40}\bfrom your draw pile\b
+telegraphed_threats|benefits|\b(intends?|intents?) to attack\b|\benemy intents?\b
+permanent_growth|does|\b(raise|increase)s? your max hp\b|\bmax hp \+\d|\bgain \d+ max hp\b|\bpermanently increase\b
+permanent_loss|does|\blose (\d+%? )?max hp\b
+combat_start|does|\bstart each (elite |boss )?combat\b|\bat the start of (boss |elite )?combats?\b
+debuff|does|\b(enemy|enemies) loses? (\d+|x) strength\b
+round_carryover|does|\bblock is not removed\b
+heal|does|\bheal (to full|⅓|\d+%|all of your hp)|\bheal hp\b
+regeneration|does|\bregen\b
+life_payment|cost|(?:^|[.:/] )lose (\d+|1|all|some)? ?hp\b|\btake \d+% max hp damage\b|\btake damage\b|\blose \d+% hp\b
+damage|does|\b(enemy|enemies|they|it) loses? (\d+|x) hp\b
+on_damaged|does|\bwhenever you (lose hp|receive (unblocked )?attack damage)\b|\b(upon|on) receiving attack damage\b|\bwhenever you are attacked\b|\bwhen attacked\b|\bafter receiving \w+ damage\b
+counterattack|does|\bdeal(s)? (\d+|x) damage back\b
+multi_attack|does|\bdamage (twice|\d+ times|x times)\b|\bdamage to [^.]{0,30}\b(twice|\d+ times|x times)\b|\(multi_attack
+stakes_wager|does|\b(win \d+ gold|risky)\b
+deck_modification|does|\b(remove|transform|upgrade|duplicate) (a|\d+|two|all|2) [^.]{0,20}cards?( in| from)? your deck\b|\bremove all (strikes|curses)\b
+cheat_death|does|\bwhen you would die\b
+temporary_buff|does|\bat the end of (this|your) turn, lose (\d+|x) (strength|dexterity)\b|\btemporary\b
+!blocking|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b
+!disable|\bstun
+!disable|\bsleep
+!disable|\bdaze
+disable|does|\bstun (the|an|a|all|target)? ?(enem|target)
+drawback|does|\(stun\)|\(sleep\)|\bstunned \(stun
+!activated|\bpay \d
+!activated|\bspend \d
+!movement|\bmoves?\b
+!movement|\bpush
+!forced_movement|\bpush(ing|es|ed)?\b
+!zone_control|\bcapture
+!lifesteal|\bleech
+!swap|exchange
+!coin_economy|\btribute\b
+# STS2 keyword wording (no keyword links in the source)
+buff|does|\bgains? (\d+|x) (strength|dexterity|focus)\b
+stacking_keyword|does|\b(\d+|x) (strength|poison|doom|plating|vigor|regen|ritual)\b
+block_armor|benefits|\bdexterity\b
+spell_power|does|\b(\d+|x) focus\b
+damage_reduction|does|\bintangible\b
+shield|does|\bbuffer\b
+permanent_growth|does|\britual\b
+debuff|does|\b(vulnerable|weak|frail|doom)\b
+counterattack|does|\bthorns\b
+temporary_buff|does|\bvigor\b
+immunity|does|\bartifact\b
+slots_queue|does|\bchannel\b|\borb slots?\b|\bevoke\b
+cost_set|does|\bfree to play\b
+repeat_trigger|does|\breplay\b|\bplayed an extra time\b
+upgrade|does|\benchant(s|ed)? (a|an|\d+|all|1|2|it|this)\b|\benchanted\b
+deck_modification|does|\benchant(s)? (a|an|\d+|all|1|2)\b
+drawback|does|\bdowngrade\b
+discard|benefits|\bsly\b
+free_play|does|\bsly\b
+summon|benefits|\bosty\b
+multiple_resources|does|\bstar(s)?\b|starstar
+heal|does|\(heal\b|\bheals? (\d+|x)\b
+death_trigger|does|\(deathblow
+stat_multiply|does|\b(double|triple)d?\b[^.]{0,30}\b(damage|block|strength)\b|\b(damage|block) is (doubled|tripled)\b
+!stealth|\bhidden\b
+team_play|does|\b(another|other|each other) players?\b|\bteammates?\b
+buff|does|\bforge (\d+|x)\b|\bforges? an additional\b

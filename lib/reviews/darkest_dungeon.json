@@ -1,0 +1,6884 @@
+{
+"760253": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760389": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760178": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760452": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760063": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760138": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760354": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760264": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760384": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760461": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760247": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760490": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760043": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760041": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760031": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760037": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760036": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760040": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760038": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760032": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760034": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760033": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760035": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760044": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760039": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760042": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760335": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760140": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760209": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760440": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760352": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760281": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760460": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760412": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760226": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760323": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760199": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760213": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760450": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760171": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760359": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760252": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760492": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760411": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760321": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760067": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760056": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760325": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760053": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760098": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760184": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760183": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760146": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"debuff"
+]
+},
+"760117": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760190": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760186": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760112": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760161": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760362": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760307": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760248": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760200": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760152": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760410": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760135": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760168": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760175": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760239": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760476": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760116": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760054": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760137": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760126": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760101": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760084": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760227": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760225": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760513": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760493": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760342": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760071": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760082": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760408": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760319": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760428": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760336": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760393": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760282": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760079": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760205": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760371": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760465": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760477": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760481": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760106": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760069": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760121": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760203": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760326": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760201": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760401": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760444": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760167": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760318": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760439": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760172": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760315": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760512": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760267": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760049": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760165": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760395": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760425": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760228": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760327": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760369": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760075": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760511": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760299": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760379": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760211": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760216": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760224": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760111": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760182": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760232": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760471": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760110": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760108": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760270": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760498": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760383": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760128": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760340": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760422": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760118": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760127": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760322": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760285": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760062": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760156": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"debuff"
+]
+},
+"760277": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760356": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760119": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760189": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760188": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760278": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760139": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760055": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760353": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760497": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760141": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760292": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760235": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760290": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760193": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760102": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760212": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760181": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760103": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760306": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760095": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760348": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760144": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760314": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760294": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760258": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760515": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760300": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760301": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760343": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760405": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760163": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760177": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760464": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760266": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760160": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760260": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760429": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760469": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760491": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760090": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760070": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760466": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760142": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760202": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760223": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760047": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760243": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760489": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760246": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760100": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760363": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760479": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760286": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760221": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760114": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760381": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760366": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760467": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760435": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760433": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760416": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760351": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760302": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760237": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760482": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760061": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760430": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760051": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760218": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760283": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760276": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760094": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760509": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760159": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760179": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760087": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760105": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760060": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760517": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760058": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760255": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760059": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760287": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760382": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760249": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760310": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760231": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760495": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760494": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760089": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760373": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760484": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760083": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760244": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760345": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760427": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760214": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760331": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760468": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760385": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760256": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760423": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760129": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760337": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760309": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760485": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760280": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760421": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760350": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760365": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760447": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760046": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760403": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760234": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760072": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760238": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760197": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760194": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760507": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760107": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760451": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760370": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760148": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760076": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760275": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760308": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760418": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760169": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760064": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760457": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760432": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760206": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760123": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760434": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760380": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760500": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760426": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760504": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760073": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760068": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760478": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760404": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760499": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760505": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760445": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760125": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760191": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760192": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760284": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760217": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760510": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760332": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760455": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760480": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760475": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760503": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760402": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760407": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760210": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760328": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760195": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"debuff"
+]
+},
+"760394": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760419": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760344": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760099": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760305": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760459": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760473": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760311": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760251": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760413": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760268": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760424": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760149": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760508": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760091": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760222": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760180": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760080": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760196": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760415": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760441": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760074": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760173": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760057": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760448": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760078": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760431": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760320": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760313": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760147": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760081": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760406": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760150": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760456": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760198": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760162": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760386": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760297": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760045": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760088": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760250": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760506": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760269": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760339": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760372": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760164": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760392": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760330": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760109": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760166": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760298": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760085": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760396": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760093": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760312": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760409": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760289": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760417": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760288": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760317": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760220": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760449": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760233": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760133": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760145": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760153": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760077": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760097": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760124": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760438": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760157": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760364": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760050": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760390": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760245": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760158": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760400": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760273": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760104": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760387": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760361": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760229": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760355": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760096": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760187": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760185": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760155": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"debuff"
+]
+},
+"760207": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760170": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760066": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760065": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760120": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760333": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760132": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760487": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760398": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760113": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760130": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760518": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760329": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760279": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760397": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760414": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760215": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760474": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760122": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760502": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760368": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760316": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760230": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760349": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760453": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760341": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760458": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760272": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760442": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760420": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760296": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760265": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760470": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760259": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760261": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760446": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760358": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760360": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760291": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760496": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760263": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760463": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760304": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760254": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760347": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760357": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760338": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760242": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760454": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760236": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760391": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760516": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760483": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760486": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760376": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760262": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760334": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760501": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760367": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760377": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760436": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760462": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760241": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760092": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760399": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760048": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760437": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760514": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760378": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760346": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760240": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760295": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760388": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760151": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760176": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760257": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760208": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760174": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760303": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760274": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760143": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760374": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760136": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760154": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760219": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760271": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760488": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760086": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"debuff"
+]
+},
+"760472": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760115": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760134": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760293": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760052": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760204": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760375": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760131": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760324": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760443": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760616": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760686": {
+"add": [
+"traits_quirks",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760551": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760645": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760584": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760585": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760640": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760587": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760641": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760657": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760661": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760613": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760596": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760643": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760586": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760552": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760532": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760574": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760627": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760690": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760669": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760665": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760681": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760673": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760677": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760588": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760615": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760617": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760610": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760537": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760625": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760687": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760636": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760623": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760563": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760575": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760541": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760560": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760618": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760654": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760658": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760631": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760601": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760531": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760639": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760647": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760553": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760653": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760650": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760652": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760651": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760682": {
+"add": [
+"traits_quirks",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760633": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760542": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760691": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760520": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760629": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760632": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760611": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760626": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760554": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760521": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760649": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760589": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760614": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760619": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760603": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760688": {
+"add": [
+"traits_quirks",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760557": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760612": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760635": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760570": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760530": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760597": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760565": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760630": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760567": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760579": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760660": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760656": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760685": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760642": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760556": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760538": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760529": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760527": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760622": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760543": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760564": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760561": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760562": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760646": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760573": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760572": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760624": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760580": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760578": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760621": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760692": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760539": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760523": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760525": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760593": {
+"add": [
+"traits_quirks",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760545": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760634": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760550": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760546": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760583": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760536": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760604": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760568": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760684": {
+"add": [
+"traits_quirks",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760555": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760549": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760620": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760524": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760526": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760533": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760522": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760598": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760689": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760648": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760577": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760576": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760594": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760607": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760592": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760582": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760602": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760609": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760606": {
+"add": [
+"traits_quirks",
+"drawback",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760608": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760590": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760605": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760528": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760548": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760547": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760628": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760534": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760519": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760569": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760535": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760655": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760659": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760637": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760558": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760600": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760599": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760693": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760566": {
+"add": [
+"traits_quirks",
+"buff"
+],
+"drop": [
+"debuff"
+]
+},
+"760591": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760540": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760559": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760644": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760571": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"760638": {
+"add": [
+"traits_quirks"
+],
+"drop": [
+"debuff"
+]
+},
+"760581": {
+"add": [
+"traits_quirks",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"759929": {
+"add": [
+"drawback",
+"random_effect"
+],
+"drop": []
+},
+"760745": {
+"add": [
+"life_payment:cost",
+"drawback"
+],
+"drop": []
+},
+"760714": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"760754": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"760755": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759855": {
+"add": [],
+"drop": [
+"movement",
+"swap"
+]
+},
+"759862": {
+"add": [
+"disable:counters",
+"mark_target:counters"
+],
+"drop": [
+"disable"
+]
+},
+"759842": {
+"add": [
+"transform"
+],
+"drop": []
+},
+"760705": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"760731": {
+"add": [],
+"drop": [
+"damage_over_time"
+]
+},
+"760733": {
+"add": [],
+"drop": [
+"damage_over_time"
+]
+},
+"760695": {
+"add": [],
+"drop": [
+"damage_over_time"
+]
+},
+"760711": {
+"add": [
+"traits_quirks:counters"
+],
+"drop": []
+},
+"760732": {
+"add": [],
+"drop": [
+"traits_quirks"
+]
+},
+"759949": {
+"add": [
+"boss_phases"
+],
+"drop": []
+},
+"759947": {
+"add": [
+"boss_phases"
+],
+"drop": []
+},
+"759839": {
+"add": [],
+"drop": [
+"mark_target",
+"zone_of_control",
+"trap_secret"
+]
+},
+"759838": {
+"add": [],
+"drop": [
+"movement"
+]
+},
+"759811": {
+"add": [],
+"drop": [
+"passive",
+"rest_phase"
+]
+},
+"759814": {
+"add": [],
+"drop": [
+"passive"
+]
+},
+"759830": {
+"add": [],
+"drop": [
+"rows"
+]
+},
+"759809": {
+"add": [
+"damage_over_time:benefits"
+],
+"drop": [
+"shield"
+]
+},
+"759767": {
+"add": [],
+"drop": [
+"activated"
+]
+},
+"759768": {
+"add": [
+"board_clog"
+],
+"drop": [
+"blocking"
+]
+},
+"759837": {
+"add": [
+"board_clog"
+],
+"drop": [
+"destroy"
+]
+},
+"760760": {
+"add": [
+"trap_secret"
+],
+"drop": []
+},
+"760758": {
+"add": [
+"trap_secret"
+],
+"drop": []
+},
+"760763": {
+"add": [
+"trap_secret"
+],
+"drop": []
+},
+"760759": {
+"add": [
+"trap_secret"
+],
+"drop": []
+},
+"759835": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"759828": {
+"add": [
+"stakes_wager"
+],
+"drop": []
+},
+"759779": {
+"add": [
+"death_trigger"
+],
+"drop": [
+"destroy"
+]
+},
+"759816": {
+"add": [],
+"drop": [
+"passive"
+]
+},
+"759817": {
+"add": [
+"damage_over_time:counters"
+],
+"drop": [
+"passive"
+]
+}
+}

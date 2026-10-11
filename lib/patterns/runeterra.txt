@@ -1,0 +1,41 @@
+# Runeterra: "advance" is a Countdown, "activate" a Nightfall/Daybreak/trap trigger, Capture is temporary removal
+!movement|\badvance\b
+!activated|\bactivate
+!zone_control|\bcapture
+removal|does|\bcaptures? (a|an|another|the|all)\b
+# Everywhere = hand, deck and board; changes to cards in hand or deck
+in_hand_buff|does|\beverywhere\b
+in_hand_buff|does|\b(grant|give)s?\b[^.]{0,50}\bin (your )?(hand|deck)\b
+in_hand_buff|does|\b(in (your )?hand|in (your )?deck)\b[^.]{0,30}\+\d+\|
+stat_condition|does|\b\d+\+ (power|health)\b|\b(strongest|weakest)\b
+cost_condition|does|\b\d+\+ cost\b|\b\d+ cost (allies|ally|followers?|units?|spells?|cards?|champions?)\b|\bcosts? \d+ or (less|more)\b
+count_payoff|does|\b(you've|you have|i've seen|i've|allies have)\b[^.]{0,70}\bthis game\b
+count_payoff|does|\blevel up: (you've|i've|you have|allies have|your|i see)\b[^.]{0,30}\d+\+
+enemy_benefit|does|(?:^|[.:;,] |\bthen |\band )(your opponent|the enemy|enemies) (draws?|summons?|creates?)\b|\bgrant (an enemy|enemies) \+\d
+junk_cards|does|\bplant [^.]{0,40}\bin (the top \d+ cards of )?(the )?(enemy|opponent's) deck
+junk_cards|does|\byour opponent plants\b
+lone_unit|does|\bif (i'm|it's|you have) (your )?only (ally|one ally|unit)\b|\bno other allies\b
+turn_number|does|\bround \d+\+|\bround \d+ or later\b|\bafter round \d
+board_limit|does|\bif you have no (room|space)\b|\bboard is full\b|\b6 allies\b|\bfull board\b
+# "spend N mana to play me as" is an alternative cost, not a second currency
+!coin_economy|\bspend \d+ \w+ to
+cost_type|does|\bspend \d+ mana (and [^.]{0,20})?to play me as
+# "or spend/pay N to ..." is an optional extra cost (kicker), not an activated ability
+!activated|\bspend \d
+!activated|\bpay \d
+kicker|does|\bor (spend|pay) \d+( mana)? to\b
+# Elusive is evasion (blocking restriction), not targeting immunity; Quick Attack is first strike, not haste; Slay means "kill", not deathtouch
+!immunity|\belusive\b
+!haste|\bquick ?attack
+!deathtouch|\bslay\b
+# Self-damage to your own side
+friendly_fire|does|\b(deal|deals) \d+ to (an ally|all other allies|all allies|me)\b|\bstrike an ally\b|\bstrikes? an ally\b
+life_payment|does|\bdeal \d+ to your nexus\b
+free_play|does|\bwhile i'm in hand\b[^.]{0,80}\bsummon me\b
+# "Get a mana gem" is ramp; Empowered N is a Power threshold, not a kicker or upgrade
+!generate_cards|(^|[.:] )get (a|an|\d|two|three|four|five|copies|a copy|another)
+resource_gain|does|\b(get|gain)s? (an? |\d+ )?(empty |extra )?mana gems?\b|\brefill (\d+ |your )?(spell )?mana\b
+!kicker|\bempower(ed)? \d
+!upgrade|\bempowered\b
+stat_condition|does|\bempowered \d
+!activated|\bactivated

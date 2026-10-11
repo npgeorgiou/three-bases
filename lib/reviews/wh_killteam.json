@@ -1,0 +1,2761 @@
+{
+"788759": {
+"add": [
+"advantage"
+],
+"drop": [
+"random_effect",
+"retain"
+]
+},
+"788692": {
+"add": [
+"advantage"
+],
+"drop": [
+"random_effect"
+]
+},
+"788695": {
+"add": [
+"advantage"
+],
+"drop": [
+"random_effect"
+]
+},
+"788708": {
+"add": [
+"advantage"
+],
+"drop": [
+"random_effect"
+]
+},
+"788691": {
+"add": [
+"terrain:counters"
+],
+"drop": [
+"cant_attack",
+"information",
+"stealth"
+]
+},
+"788789": {
+"add": [
+"damage_over_time"
+],
+"drop": [
+"activated"
+]
+},
+"788693": {
+"add": [
+"multi_target_attack"
+],
+"drop": []
+},
+"788814": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"788728": {
+"add": [],
+"drop": [
+"activated"
+]
+},
+"788689": {
+"add": [
+"advantage",
+"resource_banking"
+],
+"drop": [
+"activated"
+]
+},
+"788715": {
+"add": [
+"cost_reduction"
+],
+"drop": [
+"activated"
+]
+},
+"788720": {
+"add": [
+"damage_over_time"
+],
+"drop": [
+"random_effect"
+]
+},
+"788683": {
+"add": [
+"turn_start"
+],
+"drop": []
+},
+"788762": {
+"add": [
+"advantage"
+],
+"drop": []
+},
+"788742": {
+"add": [],
+"drop": [
+"cant_attack"
+]
+},
+"788686": {
+"add": [
+"bodyguard"
+],
+"drop": [
+"multi_attack"
+]
+},
+"788712": {
+"add": [],
+"drop": [
+"mark_target"
+]
+},
+"788684": {
+"add": [],
+"drop": [
+"activated",
+"passive"
+]
+},
+"788745": {
+"add": [],
+"drop": [
+"activated"
+]
+},
+"788716": {
+"add": [
+"piercing"
+],
+"drop": [
+"damage_reduction",
+"retain"
+]
+},
+"788764": {
+"add": [
+"advantage"
+],
+"drop": []
+},
+"788687": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"advantage",
+"multi_attack"
+]
+},
+"788830": {
+"add": [],
+"drop": [
+"destroy",
+"stress_morale"
+]
+},
+"788735": {
+"add": [
+"tribal"
+],
+"drop": []
+},
+"788736": {
+"add": [],
+"drop": [
+"zone_of_control"
+]
+},
+"788670": {
+"add": [
+"piercing"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"788744": {
+"add": [],
+"drop": [
+"enemy_benefit"
+]
+},
+"788671": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"protection"
+]
+},
+"788965": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"789769": {
+"add": [
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"789963": {
+"add": [
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"789301": {
+"add": [
+"disable"
+],
+"drop": []
+},
+"789103": {
+"add": [
+"disable"
+],
+"drop": []
+},
+"789283": {
+"add": [
+"disable"
+],
+"drop": []
+},
+"788948": {
+"add": [],
+"drop": [
+"debuff",
+"disable"
+]
+},
+"789455": {
+"add": [],
+"drop": [
+"activated",
+"debuff",
+"disable"
+]
+},
+"789168": {
+"add": [
+"resource_gain"
+],
+"drop": []
+},
+"789067": {
+"add": [
+"repeat_trigger"
+],
+"drop": []
+},
+"789892": {
+"add": [
+"counterattack"
+],
+"drop": []
+},
+"788932": {
+"add": [],
+"drop": [
+"debuff"
+]
+},
+"789024": {
+"add": [],
+"drop": [
+"debuff"
+]
+},
+"789233": {
+"add": [],
+"drop": [
+"debuff"
+]
+},
+"789914": {
+"add": [],
+"drop": [
+"random_effect"
+]
+},
+"789239": {
+"add": [
+"heal"
+],
+"drop": []
+},
+"789938": {
+"add": [
+"buff"
+],
+"drop": [
+"drawback",
+"movement:counters"
+]
+},
+"789473": {
+"add": [],
+"drop": [
+"drawback",
+"movement:counters"
+]
+},
+"789317": {
+"add": [],
+"drop": [
+"drawback",
+"information"
+]
+},
+"789294": {
+"add": [
+"aura",
+"advantage:counters"
+],
+"drop": [
+"advantage"
+]
+},
+"789940": {
+"add": [
+"debuff",
+"aura"
+],
+"drop": [
+"advantage"
+]
+},
+"789979": {
+"add": [
+"death_trigger"
+],
+"drop": []
+},
+"789298": {
+"add": [
+"death_count",
+"count_payoff"
+],
+"drop": []
+},
+"789719": {
+"add": [],
+"drop": [
+"enemy_benefit"
+]
+},
+"789084": {
+"add": [
+"on_kill"
+],
+"drop": [
+"death_trigger"
+]
+},
+"789111": {
+"add": [
+"reactions"
+],
+"drop": []
+},
+"789629": {
+"add": [],
+"drop": [
+"buff"
+]
+},
+"789630": {
+"add": [],
+"drop": [
+"buff"
+]
+},
+"789352": {
+"add": [],
+"drop": [
+"quests",
+"zone_control"
+]
+},
+"789551": {
+"add": [
+"turn_structure"
+],
+"drop": []
+},
+"789553": {
+"add": [
+"turn_structure"
+],
+"drop": []
+},
+"789343": {
+"add": [
+"stealth"
+],
+"drop": []
+},
+"789983": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"debuff"
+]
+},
+"789372": {
+"add": [
+"trap_secret"
+],
+"drop": [
+"death_trigger",
+"destroy"
+]
+},
+"789061": {
+"add": [
+"immunity"
+],
+"drop": []
+},
+"789063": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"debuff",
+"multi_attack"
+]
+},
+"789014": {
+"add": [
+"immunity"
+],
+"drop": []
+},
+"789290": {
+"add": [],
+"drop": [
+"destroy"
+]
+},
+"789086": {
+"add": [
+"drawback"
+],
+"drop": [
+"extra_turn"
+]
+},
+"789288": {
+"add": [
+"damage_over_time"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"789003": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"damage"
+]
+},
+"789204": {
+"add": [
+"immunity"
+],
+"drop": [
+"permanent_growth",
+"movement"
+]
+},
+"789297": {
+"add": [],
+"drop": [
+"turn_start"
+]
+},
+"789851": {
+"add": [
+"drawback",
+"targeting_rules"
+],
+"drop": []
+},
+"789344": {
+"add": [],
+"drop": [
+"variable_stats",
+"condition_count"
+]
+},
+"789314": {
+"add": [
+"resource_gain",
+"count_payoff"
+],
+"drop": [
+"variable_stats"
+]
+},
+"789923": {
+"add": [
+"resource_gain"
+],
+"drop": []
+},
+"789999": {
+"add": [],
+"drop": [
+"condition_count"
+]
+},
+"789958": {
+"add": [
+"cost_reduction"
+],
+"drop": [
+"resource_gain"
+]
+},
+"789323": {
+"add": [],
+"drop": [
+"information",
+"stealth"
+]
+},
+"789937": {
+"add": [
+"immunity"
+],
+"drop": [
+"drawback:benefits",
+"movement:counters"
+]
+},
+"790012": {
+"add": [],
+"drop": [
+"debuff"
+]
+},
+"789648": {
+"add": [
+"debuff"
+],
+"drop": []
+},
+"789083": {
+"add": [
+"debuff"
+],
+"drop": [
+"advantage"
+]
+},
+"790003": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"advantage"
+]
+},
+"789912": {
+"add": [
+"debuff"
+],
+"drop": [
+"temporary_buff"
+]
+},
+"789706": {
+"add": [
+"drawback"
+],
+"drop": [
+"temporary_buff"
+]
+},
+"789467": {
+"add": [
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"789666": {
+"add": [
+"drawback"
+],
+"drop": [
+"activated"
+]
+},
+"789813": {
+"add": [
+"cheat_death",
+"revive"
+],
+"drop": [
+"destroy"
+]
+},
+"788926": {
+"add": [
+"on_kill"
+],
+"drop": []
+},
+"788942": {
+"add": [],
+"drop": [
+"heal"
+]
+},
+"789196": {
+"add": [
+"terrain"
+],
+"drop": [
+"cant_attack",
+"scope_global",
+"symmetric_effect"
+]
+},
+"789419": {
+"add": [],
+"drop": [
+"draw"
+]
+},
+"789203": {
+"add": [
+"drawback",
+"cant_attack"
+],
+"drop": []
+},
+"789595": {
+"add": [
+"immunity"
+],
+"drop": []
+},
+"789178": {
+"add": [
+"debuff"
+],
+"drop": []
+},
+"789384": {
+"add": [
+"immunity"
+],
+"drop": [
+"debuff",
+"disable"
+]
+},
+"789338": {
+"add": [],
+"drop": [
+"advantage"
+]
+},
+"789217": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"debuff",
+"multi_attack"
+]
+},
+"789453": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"debuff"
+]
+},
+"789383": {
+"add": [
+"damage_reduction"
+],
+"drop": []
+},
+"789080": {
+"add": [
+"revive"
+],
+"drop": [
+"destroy"
+]
+},
+"789347": {
+"add": [
+"debuff"
+],
+"drop": [
+"extra_turn"
+]
+},
+"789076": {
+"add": [],
+"drop": [
+"debuff"
+]
+},
+"788721": {
+"add": [],
+"drop": [
+"damage_reduction"
+]
+},
+"788725": {
+"add": [],
+"drop": [
+"damage_reduction"
+]
+},
+"788666": {
+"add": [
+"death_count"
+],
+"drop": [
+"destroy"
+]
+},
+"788785": {
+"add": [],
+"drop": [
+"destroy"
+]
+},
+"788885": {
+"add": [
+"damage_reduction"
+],
+"drop": []
+},
+"788858": {
+"add": [],
+"drop": [
+"discard"
+]
+},
+"788790": {
+"add": [],
+"drop": [
+"discard"
+]
+},
+"788681": {
+"add": [],
+"drop": [
+"cost_reduction",
+"free_play"
+]
+},
+"789655": {
+"add": [],
+"drop": [
+"damage"
+]
+},
+"788829": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"advantage"
+]
+},
+"788722": {
+"add": [],
+"drop": [
+"cant_attack",
+"scope_global",
+"symmetric_effect"
+]
+},
+"788810": {
+"add": [],
+"drop": [
+"copy"
+]
+},
+"788678": {
+"add": [
+"death_trigger",
+"snowball"
+],
+"drop": [
+"destroy"
+]
+},
+"788752": {
+"add": [
+"deckbuilding_effect"
+],
+"drop": [
+"silence"
+]
+},
+"788732": {
+"add": [
+"on_kill"
+],
+"drop": [
+"destroy"
+]
+},
+"788701": {
+"add": [],
+"drop": [
+"cant_attack",
+"piercing"
+]
+},
+"788741": {
+"add": [
+"mark_target"
+],
+"drop": [
+"destroy",
+"counterattack"
+]
+},
+"788903": {
+"add": [],
+"drop": [
+"adjacency"
+]
+},
+"788682": {
+"add": [
+"revive"
+],
+"drop": [
+"destroy",
+"adjacency",
+"regeneration"
+]
+},
+"788808": {
+"add": [
+"cheat_death"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"788680": {
+"add": [],
+"drop": [
+"discard"
+]
+},
+"788860": {
+"add": [],
+"drop": [
+"discard"
+]
+},
+"788787": {
+"add": [],
+"drop": [
+"evasion"
+]
+},
+"788768": {
+"add": [],
+"drop": [
+"block_armor",
+"shield"
+]
+},
+"789606": {
+"add": [
+"items_consumables"
+],
+"drop": [
+"block_armor"
+]
+},
+"788855": {
+"add": [
+"death_trigger"
+],
+"drop": [
+"destroy"
+]
+},
+"788831": {
+"add": [
+"immunity"
+],
+"drop": [
+"stat_multiply",
+"buff"
+]
+},
+"788779": {
+"add": [
+"debuff"
+],
+"drop": [
+"activated"
+]
+},
+"788837": {
+"add": [
+"piercing"
+],
+"drop": []
+},
+"788746": {
+"add": [
+"damage_reduction"
+],
+"drop": []
+},
+"788734": {
+"add": [
+"immunity"
+],
+"drop": []
+},
+"788820": {
+"add": [
+"immunity"
+],
+"drop": [
+"drawback:benefits",
+"movement:counters"
+]
+},
+"788718": {
+"add": [],
+"drop": [
+"drawback",
+"movement:counters"
+]
+},
+"788717": {
+"add": [],
+"drop": [
+"drawback",
+"movement:counters"
+]
+},
+"789048": {
+"add": [
+"damage_reduction",
+"items_consumables"
+],
+"drop": [
+"debuff"
+]
+},
+"789641": {
+"add": [
+"items_consumables"
+],
+"drop": [
+"cost_reduction",
+"free_play",
+"destroy"
+]
+},
+"789509": {
+"add": [
+"life_payment:cost",
+"items_consumables"
+],
+"drop": []
+},
+"789623": {
+"add": [
+"items_consumables"
+],
+"drop": [
+"destroy",
+"discard"
+]
+},
+"789697": {
+"add": [
+"death_trigger",
+"items_consumables"
+],
+"drop": [
+"destroy"
+]
+},
+"789712": {
+"add": [
+"drawback",
+"items_consumables"
+],
+"drop": [
+"block_armor"
+]
+},
+"789071": {
+"add": [
+"items_consumables"
+],
+"drop": [
+"multi_target_attack"
+]
+},
+"789279": {
+"add": [
+"items_consumables"
+],
+"drop": [
+"combo_sequence"
+]
+},
+"789331": {
+"add": [
+"immunity",
+"items_consumables"
+],
+"drop": [
+"drawback",
+"information"
+]
+},
+"789088": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789600": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789603": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789604": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789602": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789607": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789605": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789695": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789670": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789724": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789696": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789524": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789252": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789591": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789531": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789226": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789342": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789481": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789202": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789118": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789242": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789174": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789505": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788957": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789511": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789404": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789715": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789310": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789311": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789661": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789555": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789628": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789543": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789614": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789038": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789187": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789558": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789625": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789635": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789545": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789556": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789669": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789427": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789521": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789781": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789564": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789615": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789592": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789589": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789692": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789651": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789484": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789693": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789070": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789723": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789482": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789500": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789512": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789499": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788955": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789406": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789120": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789129": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789040": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789259": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789426": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789527": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789517": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789780": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789711": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789690": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789090": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789675": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789483": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789713": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789199": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789339": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789169": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789395": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789049": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789326": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789613": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789356": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789581": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789569": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789634": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789243": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789596": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789261": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789523": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789276": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789472": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789109": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789714": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789544": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789554": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789636": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789721": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789672": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789464": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789642": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789327": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789532": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789039": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788963": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789424": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789639": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789676": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789533": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789664": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788950": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789249": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789216": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789593": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789124": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789570": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789782": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789232": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789597": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789007": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789665": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789571": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789535": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789212": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789504": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789541": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789186": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789029": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789671": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788971": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789518": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789258": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789292": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789549": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789547": {
+"add": [
+"items_consumables",
+"summon"
+],
+"drop": [
+"information"
+]
+},
+"789503": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789198": {
+"add": [
+"items_consumables",
+"damage_reduction"
+],
+"drop": [
+"debuff",
+"multi_attack"
+]
+},
+"789485": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789176": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789645": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789277": {
+"add": [
+"items_consumables",
+"repeat_trigger"
+],
+"drop": []
+},
+"788979": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789248": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789506": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789572": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789647": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788990": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789539": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789550": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789660": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789140": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789567": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789659": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789548": {
+"add": [
+"items_consumables",
+"disruption"
+],
+"drop": [
+"information"
+]
+},
+"789253": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789434": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789215": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789245": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789096": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789010": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789507": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789478": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789654": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789674": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789662": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789578": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789340": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789587": {
+"add": [
+"items_consumables",
+"immunity"
+],
+"drop": [
+"piercing"
+]
+},
+"789221": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789579": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789106": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789561": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789580": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789538": {
+"add": [
+"items_consumables",
+"immunity"
+],
+"drop": [
+"piercing"
+]
+},
+"789280": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789197": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789315": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789011": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789051": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789429": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789691": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789250": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789244": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789425": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789493": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789491": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789492": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789519": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789708": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789510": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789673": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789640": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789525": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789526": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789247": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789398": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789594": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789626": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789257": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789698": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789496": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789476": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789193": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789590": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789688": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789627": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789652": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789537": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789783": {
+"add": [
+"items_consumables",
+"death_trigger"
+],
+"drop": [
+"destroy"
+]
+},
+"789718": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789126": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789568": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789520": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789684": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789195": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789663": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789536": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789441": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789444": {
+"add": [
+"items_consumables"
+],
+"drop": [
+"drawback",
+"movement:counters"
+]
+},
+"789366": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789367": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789497": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789687": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789364": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789682": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789273": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789622": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789710": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789644": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789091": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789683": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789173": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789400": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789574": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789573": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789246": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789172": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789480": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789428": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789560": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789542": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788991": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789540": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788984": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789699": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789513": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789610": {
+"add": [
+"items_consumables",
+"stealth"
+],
+"drop": []
+},
+"788980": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789514": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789028": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789508": {
+"add": [
+"items_consumables",
+"death_trigger"
+],
+"drop": [
+"destroy"
+]
+},
+"789632": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789546": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789270": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789631": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788934": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788952": {
+"add": [
+"items_consumables"
+],
+"drop": [
+"shield"
+]
+},
+"789498": {
+"add": [
+"items_consumables",
+"buff"
+],
+"drop": [
+"shield"
+]
+},
+"789104": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789709": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789494": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789700": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789557": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789566": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"789722": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"788673": {
+"add": [],
+"drop": [
+"destroy",
+"stealth",
+"zone_control"
+]
+},
+"788771": {
+"add": [],
+"drop": [
+"activated",
+"cooldowns"
+]
+},
+"788843": {
+"add": [
+"random_effect"
+],
+"drop": [
+"transform"
+]
+},
+"789825": {
+"add": [
+"damage"
+],
+"drop": [
+"resource_gain"
+]
+},
+"789877": {
+"add": [
+"debuff"
+],
+"drop": [
+"buff"
+]
+},
+"789804": {
+"add": [
+"debuff"
+],
+"drop": [
+"damage_reduction"
+]
+},
+"789735": {
+"add": [
+"piercing"
+],
+"drop": [
+"damage_reduction"
+]
+},
+"790917": {
+"add": [],
+"drop": [
+"debuff"
+]
+},
+"790443": {
+"add": [],
+"drop": [
+"cant_attack"
+]
+},
+"790543": {
+"add": [],
+"drop": [
+"transform"
+]
+},
+"790714": {
+"add": [
+"heal"
+],
+"drop": []
+}
+}

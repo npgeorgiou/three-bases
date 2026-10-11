@@ -1,0 +1,19 @@
+# Shadowverse: Ward is the taunt keyword (enemies must attack it), not a shield
+!shield|\bward\b
+taunt|grants|\b(give|gives|gain|gains|have)\b[^.]{0,40}(?<!ignore )\bward\b
+taunt|does|^ward\b|(?<!ignore )(?<!with )\bward\.
+taunt|counters|\bignore ward\b|\b(enemy follower|enemy followers|enemies) with ward\b
+# leader = hero; "both leaders" hits you too
+symmetric_effect|does|\bboth leaders\b|\bboth players\b|\beach leader\b
+friendly_fire|does|\bboth leaders\b|\ball (other )?followers\b(?! in your hand)
+life_payment|cost|\b(deal|deals) \d+ damage to your leader\b|\byour leader takes \d+ damage\b
+# shadows are the graveyard count (Necromancy spends them)
+graveyard|does|\bshadows?\b
+resource_gain|does|\brecover \d+ (play|evolution) points?\b|\bgain \d+ (empty )?play point orbs?\b
+multiple_resources|does|\bevolution points?\b
+# evolving is an upgrade
+!permanent_growth|\bevolve
+upgrade|does|\bevolve (it|this|an?|target|all|that|them)\b|\bcan evolve\b|\bwhen this follower evolves\b|\bthis follower evolves\b
+upgrade|benefits|\b(when|whenever|after) an allied [^.]{0,30}\bevolves\b
+# summoning a follower on the opponent's side ("summon an enemy X")
+enemy_benefit|does|\bsummon (a|an|\d|two|x) enemy\b|\bsummon \d+ enemy\b

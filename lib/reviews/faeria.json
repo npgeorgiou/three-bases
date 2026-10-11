@@ -1,0 +1,860 @@
+{
+"741238": {
+"add": [],
+"drop": [
+"on_attack",
+"on_damaged"
+]
+},
+"741291": {
+"add": [],
+"drop": [
+"ping"
+]
+},
+"741200": {
+"add": [],
+"drop": [
+"ping"
+]
+},
+"741444": {
+"add": [],
+"drop": [
+"ping"
+]
+},
+"741153": {
+"add": [],
+"drop": [
+"ping"
+]
+},
+"741248": {
+"add": [],
+"drop": [
+"ping"
+]
+},
+"741128": {
+"add": [],
+"drop": [
+"ping"
+]
+},
+"741119": {
+"add": [
+"disruption",
+"symmetric_effect"
+],
+"drop": [
+"ping"
+]
+},
+"741350": {
+"add": [
+"aura"
+],
+"drop": []
+},
+"741483": {
+"add": [
+"deck_position",
+"tutor"
+],
+"drop": []
+},
+"741373": {
+"add": [
+"removal"
+],
+"drop": []
+},
+"741307": {
+"add": [
+"transform",
+"count_payoff"
+],
+"drop": []
+},
+"741446": {
+"add": [
+"aura"
+],
+"drop": []
+},
+"741191": {
+"add": [
+"enemy_benefit"
+],
+"drop": []
+},
+"741207": {
+"add": [
+"on_damaged"
+],
+"drop": []
+},
+"741271": {
+"add": [
+"placement_rules"
+],
+"drop": []
+},
+"741156": {
+"add": [
+"cost_set",
+"hand_size"
+],
+"drop": [
+"scope_global"
+]
+},
+"741170": {
+"add": [
+"stat_condition"
+],
+"drop": []
+},
+"741324": {
+"add": [],
+"drop": [
+"generate_cards"
+]
+},
+"741306": {
+"add": [
+"stat_condition"
+],
+"drop": []
+},
+"741364": {
+"add": [
+"enemy_benefit"
+],
+"drop": []
+},
+"741447": {
+"add": [
+"condition"
+],
+"drop": [
+"evasion"
+]
+},
+"741326": {
+"add": [
+"life_payment"
+],
+"drop": []
+},
+"741349": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
+},
+"741169": {
+"add": [
+"self_destruct"
+],
+"drop": []
+},
+"741101": {
+"add": [
+"symmetric_effect",
+"friendly_fire"
+],
+"drop": []
+},
+"741361": {
+"add": [
+"symmetric_effect"
+],
+"drop": []
+},
+"741293": {
+"add": [
+"kicker"
+],
+"drop": [
+"activated"
+]
+},
+"741138": {
+"add": [
+"removal"
+],
+"drop": []
+},
+"741220": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"741385": {
+"add": [],
+"drop": [
+"drawback:grants"
+]
+},
+"741079": {
+"add": [],
+"drop": [
+"blocking"
+]
+},
+"741429": {
+"add": [
+"damage"
+],
+"drop": []
+},
+"741346": {
+"add": [
+"generate_cards"
+],
+"drop": []
+},
+"741339": {
+"add": [
+"draw",
+"tutor"
+],
+"drop": [
+"evasion",
+"movement",
+"terrain"
+]
+},
+"741265": {
+"add": [
+"condition",
+"play_restriction"
+],
+"drop": []
+},
+"741261": {
+"add": [
+"area_templates",
+"symmetric_effect"
+],
+"drop": [
+"scope_global",
+"board_wipe"
+]
+},
+"741260": {
+"add": [],
+"drop": [
+"generate_cards"
+]
+},
+"741090": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"741254": {
+"add": [
+"direct_damage"
+],
+"drop": []
+},
+"741357": {
+"add": [
+"deck_modification"
+],
+"drop": [
+"recycle"
+]
+},
+"741488": {
+"add": [
+"deck_modification"
+],
+"drop": [
+"recycle"
+]
+},
+"741133": {
+"add": [],
+"drop": [
+"scope_global"
+]
+},
+"741352": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"741317": {
+"add": [
+"information"
+],
+"drop": []
+},
+"741329": {
+"add": [
+"tutor"
+],
+"drop": []
+},
+"741481": {
+"add": [
+"resource_gain",
+"enemy_benefit"
+],
+"drop": [
+"permanent_growth"
+]
+},
+"741504": {
+"add": [
+"deck_modification"
+],
+"drop": [
+"recycle"
+]
+},
+"741503": {
+"add": [
+"enemy_benefit"
+],
+"drop": [
+"return_to_hand",
+"hand_disruption"
+]
+},
+"741177": {
+"add": [
+"stat_condition"
+],
+"drop": []
+},
+"741210": {
+"add": [
+"stat_condition"
+],
+"drop": []
+},
+"741514": {
+"add": [
+"deck_modification"
+],
+"drop": [
+"in_hand_buff"
+]
+},
+"741165": {
+"add": [
+"stat_condition"
+],
+"drop": []
+},
+"741473": {
+"add": [
+"sacrifice"
+],
+"drop": []
+},
+"741327": {
+"add": [
+"drawback",
+"revive"
+],
+"drop": []
+},
+"741310": {
+"add": [
+"copy",
+"variable_stats"
+],
+"drop": []
+},
+"Combat": {
+"add": [
+"combat"
+],
+"drop": [
+"on_damaged"
+]
+},
+"741342": {
+"add": [
+"symmetric_effect",
+"friendly_fire"
+],
+"drop": []
+},
+"741230": {
+"add": [
+"positional"
+],
+"drop": []
+},
+"741288": {
+"add": [
+"debuff"
+],
+"drop": []
+},
+"741154": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"741463": {
+"add": [
+"deck_condition",
+"deck_modification"
+],
+"drop": []
+},
+"741111": {
+"add": [
+"enemy_benefit"
+],
+"drop": []
+},
+"741456": {
+"add": [
+"direct_damage",
+"damage"
+],
+"drop": []
+},
+"741460": {
+"add": [
+"stat_condition"
+],
+"drop": []
+},
+"741258": {
+"add": [
+"direct_damage"
+],
+"drop": []
+},
+"741409": {
+"add": [
+"life_payment"
+],
+"drop": []
+},
+"741458": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"741469": {
+"add": [
+"enemy_benefit",
+"banish"
+],
+"drop": []
+},
+"741347": {
+"add": [
+"symmetric_effect",
+"resource_gain",
+"enemy_benefit"
+],
+"drop": []
+},
+"741241": {
+"add": [
+"placement_rules",
+"summon"
+],
+"drop": []
+},
+"741485": {
+"add": [
+"variety_payoff"
+],
+"drop": []
+},
+"741259": {
+"add": [
+"drawback",
+"on_enemy_enter"
+],
+"drop": [
+"summon"
+]
+},
+"741114": {
+"add": [
+"condition",
+"comeback"
+],
+"drop": []
+},
+"741406": {
+"add": [
+"disruption",
+"symmetric_effect"
+],
+"drop": []
+},
+"741334": {
+"add": [
+"protection"
+],
+"drop": []
+},
+"741397": {
+"add": [
+"hand_deck_swap"
+],
+"drop": [
+"scope_global"
+]
+},
+"741321": {
+"add": [
+"life_track"
+],
+"drop": []
+},
+"741223": {
+"add": [
+"condition_life"
+],
+"drop": []
+},
+"741388": {
+"add": [
+"self_destruct"
+],
+"drop": []
+},
+"741392": {
+"add": [
+"damage"
+],
+"drop": []
+},
+"741383": {
+"add": [
+"tutor"
+],
+"drop": []
+},
+"741160": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"741448": {
+"add": [
+"rule_change"
+],
+"drop": []
+},
+"741323": {
+"add": [
+"targeting_rules"
+],
+"drop": []
+},
+"741116": {
+"add": [
+"enemy_benefit"
+],
+"drop": []
+},
+"741078": {
+"add": [
+"repeat_trigger"
+],
+"drop": []
+},
+"741372": {
+"add": [
+"enemy_benefit"
+],
+"drop": []
+},
+"741411": {
+"add": [
+"symmetric_effect",
+"friendly_fire",
+"variable_stats"
+],
+"drop": []
+},
+"741502": {
+"add": [
+"deck_modification"
+],
+"drop": [
+"recycle"
+]
+},
+"741338": {
+"add": [
+"tutor"
+],
+"drop": []
+},
+"741465": {
+"add": [
+"enemy_benefit"
+],
+"drop": []
+},
+"741328": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
+},
+"741470": {
+"add": [
+"removal"
+],
+"drop": []
+},
+"741516": {
+"add": [
+"hand_size"
+],
+"drop": [
+"slot_filler"
+]
+},
+"741088": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
+},
+"741376": {
+"add": [
+"removal"
+],
+"drop": []
+},
+"741414": {
+"add": [
+"self_destruct"
+],
+"drop": []
+},
+"741424": {
+"add": [],
+"drop": [
+"blocking"
+]
+},
+"741497": {
+"add": [
+"cost_reduction",
+"territory_trigger"
+],
+"drop": []
+},
+"741150": {
+"add": [
+"upgrade",
+"random_effect"
+],
+"drop": [
+"cost_increase"
+]
+},
+"741468": {
+"add": [
+"condition_count"
+],
+"drop": []
+},
+"741098": {
+"add": [
+"symmetric_effect",
+"friendly_fire"
+],
+"drop": []
+},
+"741319": {
+"add": [
+"cost_reduction",
+"condition_life"
+],
+"drop": []
+},
+"741449": {
+"add": [
+"disable"
+],
+"drop": [
+"delayed"
+]
+},
+"741427": {
+"add": [
+"junk_cards",
+"hand_size"
+],
+"drop": [
+"drawback"
+]
+},
+"741416": {
+"add": [
+"tutor"
+],
+"drop": []
+},
+"741102": {
+"add": [],
+"drop": [
+"draw"
+]
+},
+"741379": {
+"add": [
+"self_destruct"
+],
+"drop": []
+},
+"741228": {
+"add": [
+"permanent_growth"
+],
+"drop": []
+},
+"741100": {
+"add": [
+"immunity"
+],
+"drop": []
+},
+"741301": {
+"add": [
+"lifesteal"
+],
+"drop": []
+},
+"741284": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"741237": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"741391": {
+"add": [],
+"drop": [
+"activated"
+]
+},
+"741423": {
+"add": [
+"disruption"
+],
+"drop": []
+},
+"741314": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
+},
+"741518": {
+"add": [
+"placement_rules"
+],
+"drop": []
+},
+"741489": {
+"add": [
+"deck_modification"
+],
+"drop": [
+"recycle"
+]
+},
+"741106": {
+"add": [
+"enemy_benefit"
+],
+"drop": []
+},
+"741206": {
+"add": [
+"scope_global"
+],
+"drop": [
+"slot_filler"
+]
+},
+"741462": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"741464": {
+"add": [
+"lone_unit"
+],
+"drop": []
+},
+"741096": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"741212": {
+"add": [
+"sacrifice"
+],
+"drop": []
+},
+"741331": {
+"add": [
+"stat_swap"
+],
+"drop": []
+},
+"741359": {
+"add": [
+"mill",
+"drawback"
+],
+"drop": []
+},
+"741168": {
+"add": [
+"disruption"
+],
+"drop": []
+},
+"741281": {
+"add": [
+"self_destruct"
+],
+"drop": []
+},
+"741113": {
+"add": [
+"condition_life"
+],
+"drop": []
+}
+}

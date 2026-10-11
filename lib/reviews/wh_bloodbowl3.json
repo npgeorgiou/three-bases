@@ -1,0 +1,518 @@
+{
+"794620": {
+"add": [
+"buff"
+],
+"drop": [
+"random_effect"
+]
+},
+"794677": {
+"add": [
+"buff"
+],
+"drop": [
+"random_effect"
+]
+},
+"794614": {
+"add": [],
+"drop": [
+"random_effect"
+]
+},
+"794623": {
+"add": [],
+"drop": [
+"random_effect"
+]
+},
+"794627": {
+"add": [
+"immunity"
+],
+"drop": [
+"random_effect"
+]
+},
+"794648": {
+"add": [],
+"drop": [
+"random_effect"
+]
+},
+"794616": {
+"add": [],
+"drop": [
+"disable"
+]
+},
+"794686": {
+"add": [
+"piercing"
+],
+"drop": [
+"destroy",
+"permanent_growth"
+]
+},
+"794682": {
+"add": [],
+"drop": [
+"destroy"
+]
+},
+"794661": {
+"add": [],
+"drop": [
+"destroy"
+]
+},
+"794715": {
+"add": [],
+"drop": [
+"permanent_growth"
+]
+},
+"794650": {
+"add": [
+"collision_damage"
+],
+"drop": [
+"permanent_growth"
+]
+},
+"794706": {
+"add": [],
+"drop": [
+"permanent_growth"
+]
+},
+"794697": {
+"add": [],
+"drop": [
+"combo_sequence"
+]
+},
+"794618": {
+"add": [
+"immunity"
+],
+"drop": [
+"combo_sequence"
+]
+},
+"794658": {
+"add": [],
+"drop": [
+"combo_sequence"
+]
+},
+"794723": {
+"add": [
+"evasion"
+],
+"drop": [
+"combo_sequence",
+"activated"
+]
+},
+"794655": {
+"add": [
+"self_destruct"
+],
+"drop": [
+"trap_secret"
+]
+},
+"794678": {
+"add": [],
+"drop": [
+"blocking"
+]
+},
+"794669": {
+"add": [
+"buff"
+],
+"drop": [
+"blocking"
+]
+},
+"794681": {
+"add": [],
+"drop": [
+"blocking",
+"activated"
+]
+},
+"794668": {
+"add": [
+"zone_of_control",
+"ranged:counters"
+],
+"drop": [
+"activated",
+"ranged",
+"symmetric_effect"
+]
+},
+"794679": {
+"add": [
+"reactions"
+],
+"drop": [
+"activated"
+]
+},
+"794670": {
+"add": [],
+"drop": [
+"activated"
+]
+},
+"794729": {
+"add": [],
+"drop": [
+"activated"
+]
+},
+"794690": {
+"add": [],
+"drop": [
+"on_damaged"
+]
+},
+"794643": {
+"add": [],
+"drop": [
+"on_damaged"
+]
+},
+"794692": {
+"add": [
+"multi_attack",
+"multi_target_attack"
+],
+"drop": [
+"on_damaged"
+]
+},
+"794644": {
+"add": [],
+"drop": [
+"combat"
+]
+},
+"794615": {
+"add": [],
+"drop": [
+"combat"
+]
+},
+"794703": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"794707": {
+"add": [
+"drawback"
+],
+"drop": [
+"disable"
+]
+},
+"794705": {
+"add": [
+"deckbuilding_effect"
+],
+"drop": []
+},
+"794702": {
+"add": [],
+"drop": [
+"destroy"
+]
+},
+"794626": {
+"add": [
+"immunity"
+],
+"drop": [
+"destroy"
+]
+},
+"794636": {
+"add": [],
+"drop": [
+"advantage"
+]
+},
+"794629": {
+"add": [],
+"drop": [
+"disable"
+]
+},
+"794619": {
+"add": [],
+"drop": [
+"disable"
+]
+},
+"794665": {
+"add": [],
+"drop": [
+"disable"
+]
+},
+"794646": {
+"add": [],
+"drop": [
+"disable"
+]
+},
+"794662": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"disable"
+]
+},
+"794711": {
+"add": [
+"summon"
+],
+"drop": [
+"damage_over_time",
+"disable"
+]
+},
+"794704": {
+"add": [],
+"drop": [
+"movement"
+]
+},
+"794684": {
+"add": [],
+"drop": [
+"advantage"
+]
+},
+"794624": {
+"add": [
+"piercing"
+],
+"drop": [
+"advantage"
+]
+},
+"794726": {
+"add": [],
+"drop": [
+"buff"
+]
+},
+"794657": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"794688": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"794675": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"794640": {
+"add": [
+"debuff"
+],
+"drop": []
+},
+"794673": {
+"add": [
+"debuff"
+],
+"drop": []
+},
+"794674": {
+"add": [
+"disable"
+],
+"drop": []
+},
+"794642": {
+"add": [
+"reactions"
+],
+"drop": []
+},
+"794641": {
+"add": [
+"reactions"
+],
+"drop": []
+},
+"794630": {
+"add": [
+"piercing:counters"
+],
+"drop": []
+},
+"794720": {
+"add": [],
+"drop": [
+"destroy",
+"forced_movement"
+]
+},
+"794695": {
+"add": [
+"friendly_fire"
+],
+"drop": [
+"modal_choice"
+]
+},
+"794701": {
+"add": [
+"damage"
+],
+"drop": []
+},
+"794717": {
+"add": [
+"piercing"
+],
+"drop": [
+"advantage"
+]
+},
+"794609": {
+"add": [
+"revive"
+],
+"drop": [
+"destroy"
+]
+},
+"794599": {
+"add": [
+"revive"
+],
+"drop": [
+"destroy"
+]
+},
+"794736": {
+"add": [],
+"drop": [
+"random_effect",
+"ranged"
+]
+},
+"794730": {
+"add": [
+"drawback"
+],
+"drop": [
+"destroy"
+]
+},
+"794652": {
+"add": [],
+"drop": [
+"protection"
+]
+},
+"794737": {
+"add": [],
+"drop": [
+"symmetric_effect"
+]
+},
+"794732": {
+"add": [],
+"drop": [
+"symmetric_effect"
+]
+},
+"794612": {
+"add": [],
+"drop": [
+"turn_structure"
+]
+},
+"794676": {
+"add": [],
+"drop": [
+"adjacency",
+"blocking"
+]
+},
+"794613": {
+"add": [],
+"drop": [
+"copy"
+]
+},
+"794634": {
+"add": [
+"summon",
+"revive"
+],
+"drop": [
+"disable",
+"free_play",
+"cost_reduction"
+]
+},
+"794603": {
+"add": [],
+"drop": [
+"turn_structure"
+]
+},
+"794604": {
+"add": [
+"reserve_bench"
+],
+"drop": [
+"game_end_trigger"
+]
+},
+"794611": {
+"add": [
+"aoe_damage",
+"damage"
+],
+"drop": [
+"piercing"
+]
+},
+"794633": {
+"add": [],
+"drop": [
+"damage_reduction",
+"passive"
+]
+},
+"794638": {
+"add": [],
+"drop": [
+"destroy"
+]
+}
+}

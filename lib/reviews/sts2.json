@@ -1,0 +1,6327 @@
+{
+"759590": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759603": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759607": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759631": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759632": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759633": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759634": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759652": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759653": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759665": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759675": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759680": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759688": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759690": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759693": {
+"add": [
+"modal_choice"
+],
+"drop": [
+"damage"
+]
+},
+"759694": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759695": {
+"add": [
+"modal_choice",
+"stakes_wager",
+"deck_modification"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759696": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759697": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759698": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759699": {
+"add": [
+"modal_choice",
+"deck_modification",
+"selection"
+],
+"drop": []
+},
+"759700": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759701": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759702": {
+"add": [
+"modal_choice",
+"heal"
+],
+"drop": []
+},
+"759703": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759704": {
+"add": [
+"modal_choice"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759705": {
+"add": [
+"modal_choice",
+"items_consumables"
+],
+"drop": []
+},
+"759706": {
+"add": [
+"modal_choice"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759707": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759708": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759709": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759710": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759711": {
+"add": [
+"modal_choice",
+"stakes_wager"
+],
+"drop": [
+"quests"
+]
+},
+"759713": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759714": {
+"add": [
+"modal_choice"
+],
+"drop": [
+"activated"
+]
+},
+"759715": {
+"add": [
+"modal_choice",
+"drawback",
+"deckbuilding_effect"
+],
+"drop": [
+"activated",
+"damage",
+"graveyard",
+"tutor",
+"scope_global"
+]
+},
+"759716": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759717": {
+"add": [
+"modal_choice",
+"junk_cards",
+"stakes_wager"
+],
+"drop": [
+"deck_position"
+]
+},
+"759718": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759719": {
+"add": [
+"modal_choice",
+"copy",
+"drawback",
+"deck_modification"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759720": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759721": {
+"add": [
+"modal_choice"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759723": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759724": {
+"add": [
+"modal_choice",
+"upgrade"
+],
+"drop": [
+"activated"
+]
+},
+"759725": {
+"add": [
+"modal_choice",
+"life_payment:cost",
+"deck_modification"
+],
+"drop": [
+"damage",
+"generate_cards"
+]
+},
+"759726": {
+"add": [
+"modal_choice",
+"junk_cards",
+"upgrade"
+],
+"drop": [
+"damage"
+]
+},
+"759727": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759728": {
+"add": [
+"modal_choice",
+"upgrade"
+],
+"drop": []
+},
+"759730": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759731": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759732": {
+"add": [
+"modal_choice",
+"deck_modification"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759733": {
+"add": [
+"modal_choice"
+],
+"drop": [
+"activated"
+]
+},
+"759734": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759735": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759736": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759712": {
+"add": [
+"modal_choice",
+"junk_cards"
+],
+"drop": []
+},
+"759722": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759729": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759739": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759737": {
+"add": [
+"modal_choice",
+"junk_cards"
+],
+"drop": []
+},
+"759738": {
+"add": [
+"modal_choice",
+"deck_modification"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759740": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759741": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759742": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759743": {
+"add": [
+"modal_choice",
+"drawback"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759744": {
+"add": [
+"modal_choice",
+"junk_cards"
+],
+"drop": []
+},
+"759745": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759746": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"759747": {
+"add": [
+"modal_choice"
+],
+"drop": [
+"activated"
+]
+},
+"759264": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759265": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759266": {
+"add": [
+"items_consumables",
+"debuff",
+"damage_reduction"
+],
+"drop": [
+"damage"
+]
+},
+"759267": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759268": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759269": {
+"add": [
+"items_consumables",
+"heal"
+],
+"drop": []
+},
+"759270": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759271": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759272": {
+"add": [
+"items_consumables",
+"delayed"
+],
+"drop": []
+},
+"759273": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759274": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759275": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759276": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759277": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759278": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759279": {
+"add": [
+"items_consumables",
+"tutor"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759280": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759281": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759282": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759283": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759284": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759285": {
+"add": [
+"items_consumables",
+"cheat_death"
+],
+"drop": []
+},
+"759286": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759287": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759288": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759289": {
+"add": [
+"items_consumables",
+"block_armor",
+"stat_multiply"
+],
+"drop": [
+"blocking"
+]
+},
+"759290": {
+"add": [
+"items_consumables",
+"aoe_damage",
+"friendly_fire"
+],
+"drop": []
+},
+"759291": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759292": {
+"add": [
+"items_consumables",
+"buff"
+],
+"drop": []
+},
+"759293": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759294": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759295": {
+"add": [
+"items_consumables",
+"stat_multiply",
+"temporary_buff"
+],
+"drop": []
+},
+"759296": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759297": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759298": {
+"add": [
+"items_consumables",
+"buff"
+],
+"drop": []
+},
+"759299": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759300": {
+"add": [
+"items_consumables",
+"cost_set"
+],
+"drop": []
+},
+"759301": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759302": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759303": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759304": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759305": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759306": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759307": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759308": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759309": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759310": {
+"add": [
+"items_consumables",
+"damage_over_time"
+],
+"drop": []
+},
+"759311": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759312": {
+"add": [
+"items_consumables",
+"delayed"
+],
+"drop": []
+},
+"759313": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759314": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759315": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759316": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759317": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759318": {
+"add": [
+"items_consumables",
+"repeat_trigger",
+"synergy_payoff"
+],
+"drop": [
+"damage",
+"scope_global"
+]
+},
+"759319": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759320": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759321": {
+"add": [
+"items_consumables",
+"resource_gain"
+],
+"drop": []
+},
+"759322": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759323": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759324": {
+"add": [
+"items_consumables",
+"cost_set",
+"in_hand_buff"
+],
+"drop": []
+},
+"759325": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759326": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759591": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759592": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759593": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759594": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759595": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759596": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759597": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759598": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759599": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759600": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759601": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759602": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759604": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759605": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759606": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759608": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759609": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759610": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759611": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759612": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759613": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759614": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759615": {
+"add": [
+"telegraphed_threats",
+"summon"
+],
+"drop": []
+},
+"759616": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759617": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759618": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759619": {
+"add": [
+"telegraphed_threats",
+"summon"
+],
+"drop": []
+},
+"759620": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759621": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759622": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759623": {
+"add": [
+"telegraphed_threats",
+"self_destruct"
+],
+"drop": []
+},
+"759624": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759625": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"stat_multiply"
+]
+},
+"759626": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759627": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759628": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759629": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759630": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759635": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759636": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759637": {
+"add": [
+"telegraphed_threats",
+"summon"
+],
+"drop": []
+},
+"759638": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759639": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759640": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759641": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759642": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759643": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759644": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759645": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759646": {
+"add": [
+"telegraphed_threats",
+"summon"
+],
+"drop": []
+},
+"759647": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759648": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759649": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759650": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759651": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759654": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759655": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759656": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759657": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759658": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759659": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759660": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759661": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759662": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759663": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759664": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759666": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759667": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759668": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759669": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759670": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759671": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759672": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759673": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759674": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759676": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759677": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759678": {
+"add": [
+"telegraphed_threats",
+"steal"
+],
+"drop": []
+},
+"759679": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759681": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759682": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759683": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759684": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759685": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759686": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759687": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759689": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759691": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"759692": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"758968": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758969": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758970": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758971": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759043": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758972": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"generate_cards"
+]
+},
+"758973": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification",
+"upgrade"
+],
+"drop": []
+},
+"758974": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758975": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": []
+},
+"758976": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758977": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758978": {
+"add": [
+"items_consumables",
+"passive",
+"damage_reduction"
+],
+"drop": []
+},
+"758979": {
+"add": [
+"items_consumables",
+"passive",
+"upgrade",
+"deck_modification"
+],
+"drop": []
+},
+"758980": {
+"add": [
+"items_consumables",
+"passive",
+"in_hand_buff"
+],
+"drop": []
+},
+"758981": {
+"add": [
+"items_consumables",
+"passive",
+"condition"
+],
+"drop": []
+},
+"758982": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758983": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": []
+},
+"758984": {
+"add": [
+"items_consumables",
+"passive",
+"junk_cards",
+"drawback"
+],
+"drop": []
+},
+"758985": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758986": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758987": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758988": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": []
+},
+"758990": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759044": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758989": {
+"add": [
+"items_consumables",
+"passive",
+"junk_cards",
+"drawback"
+],
+"drop": []
+},
+"758991": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758992": {
+"add": [
+"items_consumables",
+"passive",
+"in_hand_buff"
+],
+"drop": []
+},
+"758994": {
+"add": [
+"items_consumables",
+"passive",
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"758993": {
+"add": [
+"items_consumables",
+"passive",
+"count_payoff"
+],
+"drop": []
+},
+"758995": {
+"add": [
+"items_consumables",
+"passive",
+"retain:benefits",
+"cost_reduction"
+],
+"drop": [
+"generate_cards"
+]
+},
+"758996": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758997": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758998": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"758999": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"turn_number"
+],
+"drop": []
+},
+"759000": {
+"add": [
+"items_consumables",
+"passive",
+"cost_set",
+"count_payoff"
+],
+"drop": []
+},
+"759001": {
+"add": [
+"items_consumables",
+"passive",
+"enemy_benefit",
+"symmetric_effect"
+],
+"drop": []
+},
+"759002": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759003": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759004": {
+"add": [
+"items_consumables",
+"passive",
+"once_per_game"
+],
+"drop": []
+},
+"759005": {
+"add": [
+"items_consumables",
+"passive",
+"assists_support",
+"summon"
+],
+"drop": []
+},
+"759006": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759007": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number",
+"delayed"
+],
+"drop": []
+},
+"759008": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number"
+],
+"drop": []
+},
+"759009": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759010": {
+"add": [
+"items_consumables",
+"passive",
+"on_damaged"
+],
+"drop": []
+},
+"759011": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number",
+"delayed"
+],
+"drop": []
+},
+"759012": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759013": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": []
+},
+"759014": {
+"add": [
+"items_consumables",
+"passive",
+"selection"
+],
+"drop": []
+},
+"759016": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759017": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": []
+},
+"759018": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759019": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759020": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759021": {
+"add": [
+"items_consumables",
+"passive",
+"junk_cards"
+],
+"drop": []
+},
+"759022": {
+"add": [
+"items_consumables",
+"passive",
+"junk_cards:benefits"
+],
+"drop": [
+"junk_cards"
+]
+},
+"759023": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759024": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759025": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759026": {
+"add": [
+"items_consumables",
+"passive",
+"on_damaged"
+],
+"drop": []
+},
+"759027": {
+"add": [
+"items_consumables",
+"passive",
+"condition"
+],
+"drop": [
+"on_ally_play"
+]
+},
+"759028": {
+"add": [
+"items_consumables",
+"passive",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759029": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": []
+},
+"759030": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759031": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759032": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759033": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759034": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759035": {
+"add": [
+"items_consumables",
+"passive",
+"selection",
+"deckbuilding_effect"
+],
+"drop": [
+"advantage"
+]
+},
+"759036": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759037": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": []
+},
+"759038": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759039": {
+"add": [
+"items_consumables",
+"passive",
+"delayed"
+],
+"drop": []
+},
+"759040": {
+"add": [
+"items_consumables",
+"passive",
+"on_damaged",
+"repeat_trigger"
+],
+"drop": []
+},
+"759041": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759042": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759053": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": []
+},
+"759054": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"759055": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": []
+},
+"759056": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759057": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759058": {
+"add": [
+"items_consumables",
+"passive",
+"life_payment:cost",
+"deck_modification"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759059": {
+"add": [
+"items_consumables",
+"passive",
+"block_armor:benefits"
+],
+"drop": [
+"deck_modification"
+]
+},
+"759060": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759061": {
+"add": [
+"items_consumables",
+"passive",
+"generate_cards"
+],
+"drop": []
+},
+"759062": {
+"add": [
+"items_consumables",
+"passive",
+"debuff"
+],
+"drop": []
+},
+"759063": {
+"add": [
+"items_consumables",
+"passive",
+"count_payoff"
+],
+"drop": []
+},
+"759064": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759065": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759066": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"deck_modification"
+],
+"drop": [
+"damage"
+]
+},
+"759067": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": []
+},
+"759068": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": []
+},
+"759069": {
+"add": [
+"items_consumables",
+"passive",
+"repeat_trigger"
+],
+"drop": []
+},
+"759070": {
+"add": [
+"items_consumables",
+"passive",
+"upgrade",
+"deck_modification",
+"buff"
+],
+"drop": []
+},
+"759071": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759072": {
+"add": [
+"items_consumables",
+"passive",
+"run_structure"
+],
+"drop": []
+},
+"759073": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759074": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759075": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759076": {
+"add": [
+"items_consumables",
+"passive",
+"block_armor:counters"
+],
+"drop": []
+},
+"759077": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number"
+],
+"drop": []
+},
+"759045": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number"
+],
+"drop": []
+},
+"759078": {
+"add": [
+"items_consumables",
+"passive",
+"junk_cards",
+"drawback"
+],
+"drop": []
+},
+"759079": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759080": {
+"add": [
+"items_consumables",
+"passive",
+"repeat_trigger",
+"combo_sequence"
+],
+"drop": [
+"copy"
+]
+},
+"759081": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number"
+],
+"drop": []
+},
+"759082": {
+"add": [
+"items_consumables",
+"passive",
+"resource_banking"
+],
+"drop": []
+},
+"759083": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": []
+},
+"759084": {
+"add": [
+"items_consumables",
+"passive",
+"cost_condition"
+],
+"drop": []
+},
+"759085": {
+"add": [
+"items_consumables",
+"passive",
+"count_payoff"
+],
+"drop": []
+},
+"759086": {
+"add": [
+"items_consumables",
+"passive",
+"cost_condition"
+],
+"drop": []
+},
+"759087": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"random_effect"
+]
+},
+"759088": {
+"add": [
+"items_consumables",
+"passive",
+"upgrade"
+],
+"drop": []
+},
+"759089": {
+"add": [
+"items_consumables",
+"passive",
+"count_payoff"
+],
+"drop": []
+},
+"759090": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759091": {
+"add": [
+"items_consumables",
+"passive",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759092": {
+"add": [
+"items_consumables",
+"passive",
+"upgrade",
+"deck_modification"
+],
+"drop": []
+},
+"759093": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759094": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759095": {
+"add": [
+"items_consumables",
+"passive",
+"resource_gain"
+],
+"drop": []
+},
+"759096": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": [
+"damage"
+]
+},
+"759097": {
+"add": [
+"items_consumables",
+"passive",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759098": {
+"add": [
+"items_consumables",
+"passive",
+"condition"
+],
+"drop": []
+},
+"759099": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759100": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759101": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": [
+"damage"
+]
+},
+"759102": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759046": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759103": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759104": {
+"add": [
+"items_consumables",
+"passive",
+"cheat_death",
+"once_per_game"
+],
+"drop": []
+},
+"759105": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759106": {
+"add": [
+"items_consumables",
+"passive",
+"shop_gold"
+],
+"drop": []
+},
+"759107": {
+"add": [
+"items_consumables",
+"passive",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759108": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759109": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759110": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759111": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759047": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759112": {
+"add": [
+"items_consumables",
+"passive",
+"team_play"
+],
+"drop": []
+},
+"759113": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759114": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759115": {
+"add": [
+"items_consumables",
+"passive",
+"rest_phase"
+],
+"drop": []
+},
+"759116": {
+"add": [
+"items_consumables",
+"passive",
+"condition_life"
+],
+"drop": []
+},
+"759117": {
+"add": [
+"items_consumables",
+"passive",
+"shop_gold"
+],
+"drop": []
+},
+"759118": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"759119": {
+"add": [
+"items_consumables",
+"passive",
+"count_payoff",
+"once_per_game"
+],
+"drop": []
+},
+"759120": {
+"add": [
+"items_consumables",
+"passive",
+"multiple_resources:benefits"
+],
+"drop": []
+},
+"759121": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"upgrade"
+]
+},
+"759122": {
+"add": [
+"items_consumables",
+"passive",
+"rest_phase"
+],
+"drop": []
+},
+"759123": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759124": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number",
+"snowball"
+],
+"drop": []
+},
+"759125": {
+"add": [
+"items_consumables",
+"passive",
+"in_hand_buff"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759126": {
+"add": [
+"items_consumables",
+"passive",
+"generate_cards"
+],
+"drop": [
+"exhaust"
+]
+},
+"759127": {
+"add": [
+"items_consumables",
+"passive",
+"upgrade:benefits"
+],
+"drop": [
+"upgrade"
+]
+},
+"759128": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": []
+},
+"759129": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": [
+"damage"
+]
+},
+"759130": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": []
+},
+"759131": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": []
+},
+"759132": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759133": {
+"add": [
+"items_consumables",
+"passive",
+"count_payoff"
+],
+"drop": []
+},
+"759134": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759135": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"damage"
+]
+},
+"759136": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759137": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759138": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759139": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759049": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759140": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759141": {
+"add": [
+"items_consumables",
+"passive",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759142": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759143": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759144": {
+"add": [
+"items_consumables",
+"passive",
+"sacrifice",
+"condition"
+],
+"drop": []
+},
+"759145": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number"
+],
+"drop": []
+},
+"759146": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759147": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759148": {
+"add": [
+"items_consumables",
+"passive",
+"stat_multiply",
+"drawback",
+"block_armor:benefits"
+],
+"drop": []
+},
+"759149": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759150": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": [
+"random_effect"
+]
+},
+"759151": {
+"add": [
+"items_consumables",
+"passive",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759152": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": [
+"damage"
+]
+},
+"759153": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759154": {
+"add": [
+"items_consumables",
+"passive",
+"debuff:benefits"
+],
+"drop": [
+"damage",
+"debuff"
+]
+},
+"759155": {
+"add": [
+"items_consumables",
+"passive",
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"759156": {
+"add": [
+"items_consumables",
+"passive",
+"condition"
+],
+"drop": [
+"block_armor",
+"condition_count"
+]
+},
+"759157": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759158": {
+"add": [
+"items_consumables",
+"passive",
+"count_payoff"
+],
+"drop": []
+},
+"759159": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number"
+],
+"drop": []
+},
+"759160": {
+"add": [
+"items_consumables",
+"passive",
+"once_per_game"
+],
+"drop": []
+},
+"759161": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759162": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759163": {
+"add": [
+"items_consumables",
+"passive",
+"enemy_benefit",
+"drawback"
+],
+"drop": []
+},
+"759164": {
+"add": [
+"items_consumables",
+"passive",
+"turn_start"
+],
+"drop": []
+},
+"759165": {
+"add": [
+"items_consumables",
+"passive",
+"heal"
+],
+"drop": []
+},
+"759166": {
+"add": [
+"items_consumables",
+"passive",
+"condition"
+],
+"drop": [
+"on_ally_play"
+]
+},
+"759167": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number"
+],
+"drop": []
+},
+"759168": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759169": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759170": {
+"add": [
+"items_consumables",
+"passive",
+"tutor",
+"cost_condition"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759171": {
+"add": [
+"items_consumables",
+"passive",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759172": {
+"add": [
+"items_consumables",
+"passive",
+"life_payment:cost"
+],
+"drop": []
+},
+"759173": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759174": {
+"add": [
+"items_consumables",
+"passive",
+"junk_cards",
+"drawback"
+],
+"drop": []
+},
+"759175": {
+"add": [
+"items_consumables",
+"passive",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759176": {
+"add": [
+"items_consumables",
+"passive",
+"rest_phase"
+],
+"drop": []
+},
+"759177": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759178": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759179": {
+"add": [
+"items_consumables",
+"passive",
+"variety_payoff",
+"buff"
+],
+"drop": []
+},
+"759180": {
+"add": [
+"items_consumables",
+"passive",
+"in_hand_buff"
+],
+"drop": []
+},
+"759181": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759182": {
+"add": [
+"items_consumables",
+"passive",
+"condition_life",
+"buff"
+],
+"drop": []
+},
+"759183": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759184": {
+"add": [
+"items_consumables",
+"passive",
+"generate_cards:benefits"
+],
+"drop": []
+},
+"759185": {
+"add": [
+"items_consumables",
+"passive",
+"temporary_buff"
+],
+"drop": []
+},
+"759186": {
+"add": [
+"items_consumables",
+"passive",
+"turn_number"
+],
+"drop": []
+},
+"759188": {
+"add": [
+"items_consumables",
+"passive",
+"start_of_game"
+],
+"drop": []
+},
+"759189": {
+"add": [
+"items_consumables",
+"passive",
+"condition"
+],
+"drop": []
+},
+"759190": {
+"add": [
+"items_consumables",
+"passive",
+"life_payment:cost",
+"drawback"
+],
+"drop": []
+},
+"759191": {
+"add": [
+"items_consumables",
+"passive",
+"upgrade",
+"deck_modification"
+],
+"drop": []
+},
+"759192": {
+"add": [
+"items_consumables",
+"passive",
+"stat_multiply",
+"once_per_game"
+],
+"drop": []
+},
+"759193": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759194": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759195": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759196": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759197": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759198": {
+"add": [
+"items_consumables",
+"passive",
+"selection"
+],
+"drop": []
+},
+"759199": {
+"add": [
+"items_consumables",
+"passive",
+"selection",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759200": {
+"add": [
+"items_consumables",
+"passive",
+"resource_conversion"
+],
+"drop": [
+"coin_economy"
+]
+},
+"759201": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759202": {
+"add": [
+"items_consumables",
+"passive",
+"junk_cards"
+],
+"drop": []
+},
+"759203": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759204": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759205": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759206": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": []
+},
+"759207": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759208": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": []
+},
+"759209": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759210": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": []
+},
+"759050": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": []
+},
+"759211": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759212": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759213": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759214": {
+"add": [
+"items_consumables",
+"passive",
+"drawback"
+],
+"drop": []
+},
+"759215": {
+"add": [
+"items_consumables",
+"passive",
+"delayed"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"759216": {
+"add": [
+"items_consumables",
+"passive",
+"in_hand_buff"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759217": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759218": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759219": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759220": {
+"add": [
+"items_consumables",
+"passive",
+"synergy_payoff"
+],
+"drop": []
+},
+"759051": {
+"add": [
+"items_consumables",
+"passive",
+"synergy_payoff"
+],
+"drop": []
+},
+"759221": {
+"add": [
+"items_consumables",
+"passive",
+"round_carryover"
+],
+"drop": []
+},
+"759222": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": []
+},
+"759223": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759224": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759225": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759226": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"delayed"
+],
+"drop": []
+},
+"759227": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759228": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759015": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759229": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759048": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759230": {
+"add": [
+"items_consumables",
+"passive",
+"once_per_game"
+],
+"drop": []
+},
+"759231": {
+"add": [
+"items_consumables",
+"passive",
+"count_payoff"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759232": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759233": {
+"add": [
+"items_consumables",
+"passive",
+"sacrifice"
+],
+"drop": []
+},
+"759234": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759235": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759236": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759237": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759238": {
+"add": [
+"items_consumables",
+"passive",
+"self_destruct"
+],
+"drop": []
+},
+"759239": {
+"add": [
+"items_consumables",
+"passive",
+"upgrade",
+"deck_modification",
+"stat_multiply"
+],
+"drop": []
+},
+"759240": {
+"add": [
+"items_consumables",
+"passive",
+"damage_reduction"
+],
+"drop": []
+},
+"759241": {
+"add": [
+"items_consumables",
+"passive",
+"count_payoff"
+],
+"drop": []
+},
+"759242": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759243": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759244": {
+"add": [
+"items_consumables",
+"passive",
+"damage_reduction",
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"759245": {
+"add": [
+"items_consumables",
+"passive",
+"stat_multiply",
+"debuff:benefits",
+"once_per_game"
+],
+"drop": []
+},
+"759246": {
+"add": [
+"items_consumables",
+"passive",
+"buff"
+],
+"drop": []
+},
+"759247": {
+"add": [
+"items_consumables",
+"passive",
+"stat_multiply",
+"once_per_game"
+],
+"drop": []
+},
+"759248": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759249": {
+"add": [
+"items_consumables",
+"passive",
+"resource_gain"
+],
+"drop": []
+},
+"759052": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759250": {
+"add": [
+"items_consumables",
+"passive",
+"resource_gain"
+],
+"drop": []
+},
+"759251": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759252": {
+"add": [
+"items_consumables",
+"passive",
+"synergy_payoff"
+],
+"drop": []
+},
+"759253": {
+"add": [
+"items_consumables",
+"passive",
+"on_kill",
+"deck_modification"
+],
+"drop": [
+"destroy",
+"generate_cards"
+]
+},
+"759254": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": []
+},
+"759255": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": []
+},
+"759256": {
+"add": [
+"items_consumables",
+"passive",
+"drawback",
+"autonomous_units"
+],
+"drop": []
+},
+"759257": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759258": {
+"add": [
+"items_consumables",
+"passive",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759259": {
+"add": [
+"items_consumables",
+"passive",
+"deckbuilding_effect"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759260": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759261": {
+"add": [
+"items_consumables",
+"passive"
+],
+"drop": []
+},
+"759262": {
+"add": [
+"items_consumables",
+"passive",
+"delayed"
+],
+"drop": []
+},
+"759263": {
+"add": [
+"items_consumables",
+"passive",
+"deck_modification"
+],
+"drop": []
+},
+"759568": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"759569": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"759570": {
+"add": [
+"upgrade",
+"buff",
+"life_payment:cost"
+],
+"drop": [
+"damage"
+]
+},
+"759571": {
+"add": [
+"upgrade",
+"repeat_trigger",
+"once_per_game"
+],
+"drop": []
+},
+"759572": {
+"add": [
+"upgrade",
+"snowball"
+],
+"drop": [
+"blocking"
+]
+},
+"759573": {
+"add": [
+"upgrade",
+"free_play"
+],
+"drop": []
+},
+"759574": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"759575": {
+"add": [
+"upgrade",
+"stat_multiply"
+],
+"drop": []
+},
+"759576": {
+"add": [
+"upgrade",
+"snowball"
+],
+"drop": [
+"buff"
+]
+},
+"759577": {
+"add": [
+"upgrade",
+"block_armor:benefits"
+],
+"drop": [
+"blocking"
+]
+},
+"759578": {
+"add": [
+"upgrade",
+"deck_position"
+],
+"drop": []
+},
+"759579": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"759580": {
+"add": [
+"upgrade",
+"buff"
+],
+"drop": []
+},
+"759581": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"759582": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"759583": {
+"add": [
+"upgrade",
+"exhaust:counters"
+],
+"drop": [
+"exhaust"
+]
+},
+"759584": {
+"add": [
+"upgrade",
+"once_per_game"
+],
+"drop": []
+},
+"759585": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"759586": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"759587": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"759588": {
+"add": [
+"upgrade"
+],
+"drop": [
+"immunity"
+]
+},
+"759589": {
+"add": [
+"upgrade",
+"buff",
+"once_per_game"
+],
+"drop": []
+},
+"758397": {
+"add": [],
+"drop": [
+"immunity"
+]
+},
+"759750": {
+"add": [
+"heal:counters"
+],
+"drop": [
+"heal"
+]
+},
+"758405": {
+"add": [
+"stat_multiply"
+],
+"drop": []
+},
+"758408": {
+"add": [
+"snowball"
+],
+"drop": []
+},
+"758412": {
+"add": [],
+"drop": [
+"generate_cards"
+]
+},
+"758415": {
+"add": [
+"cost_condition"
+],
+"drop": []
+},
+"758416": {
+"add": [],
+"drop": [
+"graveyard"
+]
+},
+"758417": {
+"add": [
+"cost_condition"
+],
+"drop": []
+},
+"758421": {
+"add": [
+"in_hand_buff"
+],
+"drop": [
+"deck_modification"
+]
+},
+"758423": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758426": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758441": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
+},
+"758429": {
+"add": [
+"drawback",
+"life_payment:cost"
+],
+"drop": [
+"immunity"
+]
+},
+"758431": {
+"add": [
+"count_payoff",
+"cost_reduction"
+],
+"drop": []
+},
+"758432": {
+"add": [
+"count_payoff",
+"slots_queue:benefits"
+],
+"drop": []
+},
+"758433": {
+"add": [],
+"drop": [
+"turn_start"
+]
+},
+"758436": {
+"add": [
+"team_play",
+"assists_support"
+],
+"drop": []
+},
+"758438": {
+"add": [
+"free_play"
+],
+"drop": [
+"generate_cards"
+]
+},
+"758439": {
+"add": [
+"buff",
+"snowball"
+],
+"drop": []
+},
+"758440": {
+"add": [
+"junk_cards",
+"drawback"
+],
+"drop": []
+},
+"758443": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758444": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"758445": {
+"add": [],
+"drop": [
+"multiple_resources"
+]
+},
+"758448": {
+"add": [
+"damage_over_time"
+],
+"drop": []
+},
+"758453": {
+"add": [
+"block_armor:benefits"
+],
+"drop": []
+},
+"758454": {
+"add": [
+"bodyguard"
+],
+"drop": []
+},
+"758455": {
+"add": [
+"recycle"
+],
+"drop": []
+},
+"758456": {
+"add": [
+"recycle",
+"free_play"
+],
+"drop": []
+},
+"758457": {
+"add": [
+"sacrifice",
+"summon:cost"
+],
+"drop": [
+"summon:benefits"
+]
+},
+"758458": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758460": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758462": {
+"add": [
+"sacrifice"
+],
+"drop": []
+},
+"758465": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758466": {
+"add": [
+"damage_over_time:benefits"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"758468": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758469": {
+"add": [
+"in_hand_buff",
+"drawback"
+],
+"drop": []
+},
+"758470": {
+"add": [
+"count_payoff",
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"758471": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"758478": {
+"add": [
+"upgrade"
+],
+"drop": [
+"junk_cards"
+]
+},
+"758490": {
+"add": [
+"deck_modification"
+],
+"drop": []
+},
+"758482": {
+"add": [],
+"drop": [
+"exhaust"
+]
+},
+"758485": {
+"add": [
+"damage"
+],
+"drop": []
+},
+"758487": {
+"add": [
+"free_play",
+"tutor"
+],
+"drop": [
+"generate_cards"
+]
+},
+"758492": {
+"add": [
+"count_payoff"
+],
+"drop": [
+"multiple_resources"
+]
+},
+"758495": {
+"add": [
+"play_restriction"
+],
+"drop": [
+"in_hand_buff"
+]
+},
+"758496": {
+"add": [
+"snowball"
+],
+"drop": []
+},
+"758497": {
+"add": [
+"sacrifice"
+],
+"drop": []
+},
+"758501": {
+"add": [
+"junk_cards",
+"drawback"
+],
+"drop": []
+},
+"758502": {
+"add": [
+"damage_reduction",
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"758504": {
+"add": [
+"junk_cards:benefits"
+],
+"drop": []
+},
+"758505": {
+"add": [
+"count_payoff",
+"variety_payoff"
+],
+"drop": []
+},
+"758507": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"758508": {
+"add": [
+"turn_end"
+],
+"drop": []
+},
+"758510": {
+"add": [
+"count_payoff",
+"variety_payoff"
+],
+"drop": []
+},
+"758515": {
+"add": [
+"recycle"
+],
+"drop": []
+},
+"758516": {
+"add": [
+"damage_over_time"
+],
+"drop": []
+},
+"758517": {
+"add": [
+"junk_cards",
+"drawback"
+],
+"drop": []
+},
+"758519": {
+"add": [
+"count_payoff"
+],
+"drop": [
+"multiple_resources"
+]
+},
+"758521": {
+"add": [
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"758522": {
+"add": [
+"temporary_buff"
+],
+"drop": []
+},
+"758527": {
+"add": [
+"temporary_buff"
+],
+"drop": []
+},
+"758531": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758533": {
+"add": [
+"condition",
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"758534": {
+"add": [
+"stat_multiply"
+],
+"drop": []
+},
+"758537": {
+"add": [
+"repeat_trigger"
+],
+"drop": []
+},
+"758550": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"758552": {
+"add": [
+"generate_cards:benefits"
+],
+"drop": []
+},
+"758553": {
+"add": [
+"multi_attack"
+],
+"drop": []
+},
+"758555": {
+"add": [
+"debuff",
+"drawback"
+],
+"drop": []
+},
+"758556": {
+"add": [
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"758559": {
+"add": [
+"count_payoff",
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"758520": {
+"add": [
+"life_payment:cost"
+],
+"drop": []
+},
+"758535": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758560": {
+"add": [
+"resource_gain",
+"stat_multiply"
+],
+"drop": []
+},
+"758561": {
+"add": [
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"758562": {
+"add": [
+"in_hand_buff"
+],
+"drop": [
+"generate_cards",
+"graveyard"
+]
+},
+"758565": {
+"add": [
+"exhaust:benefits"
+],
+"drop": []
+},
+"758567": {
+"add": [
+"repeat_trigger"
+],
+"drop": []
+},
+"758568": {
+"add": [
+"temporary_buff"
+],
+"drop": []
+},
+"758570": {
+"add": [
+"on_kill",
+"repeat_trigger"
+],
+"drop": []
+},
+"758571": {
+"add": [
+"condition",
+"sacrifice"
+],
+"drop": []
+},
+"758573": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"758574": {
+"add": [
+"temporary_buff"
+],
+"drop": []
+},
+"758575": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
+},
+"758576": {
+"add": [
+"junk_cards",
+"play_restriction"
+],
+"drop": [
+"immunity"
+]
+},
+"758577": {
+"add": [
+"block_armor"
+],
+"drop": []
+},
+"758578": {
+"add": [
+"random_effect"
+],
+"drop": []
+},
+"758584": {
+"add": [
+"exhaust:benefits",
+"condition"
+],
+"drop": []
+},
+"758585": {
+"add": [
+"count_payoff",
+"drawback"
+],
+"drop": []
+},
+"758587": {
+"add": [
+"block_armor:counters"
+],
+"drop": [
+"immunity"
+]
+},
+"758590": {
+"add": [
+"aoe_damage"
+],
+"drop": []
+},
+"758591": {
+"add": [
+"synergy_payoff"
+],
+"drop": []
+},
+"758593": {
+"add": [
+"on_kill"
+],
+"drop": []
+},
+"758596": {
+"add": [
+"cost_condition"
+],
+"drop": []
+},
+"758597": {
+"add": [
+"once_per_game"
+],
+"drop": []
+},
+"758599": {
+"add": [
+"enemy_benefit",
+"drawback"
+],
+"drop": []
+},
+"758600": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758602": {
+"add": [
+"count_payoff",
+"combo_sequence"
+],
+"drop": []
+},
+"758603": {
+"add": [
+"block_armor"
+],
+"drop": []
+},
+"758604": {
+"add": [
+"junk_cards:benefits",
+"count_payoff"
+],
+"drop": [
+"generate_cards"
+]
+},
+"758606": {
+"add": [
+"debuff",
+"team_play"
+],
+"drop": [
+"buff"
+]
+},
+"758608": {
+"add": [
+"cost_condition"
+],
+"drop": []
+},
+"758609": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758611": {
+"add": [
+"temporary_buff"
+],
+"drop": []
+},
+"758613": {
+"add": [],
+"drop": [
+"immunity"
+]
+},
+"758614": {
+"add": [],
+"drop": [
+"draw"
+]
+},
+"758615": {
+"add": [
+"exhaust:benefits",
+"condition"
+],
+"drop": []
+},
+"758616": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758617": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758620": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"758639": {
+"add": [
+"sacrifice"
+],
+"drop": []
+},
+"758623": {
+"add": [
+"team_play",
+"count_payoff"
+],
+"drop": []
+},
+"758626": {
+"add": [
+"snowball"
+],
+"drop": []
+},
+"758631": {
+"add": [
+"team_play",
+"generate_cards"
+],
+"drop": []
+},
+"758634": {
+"add": [
+"telegraphed_threats:benefits"
+],
+"drop": []
+},
+"758635": {
+"add": [],
+"drop": [
+"variable_stats"
+]
+},
+"758636": {
+"add": [
+"play_restriction",
+"deck_condition"
+],
+"drop": []
+},
+"758637": {
+"add": [
+"generate_cards"
+],
+"drop": []
+},
+"758641": {
+"add": [
+"self_destruct"
+],
+"drop": []
+},
+"758642": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758643": {
+"add": [
+"slots_queue:benefits",
+"condition"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"758646": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
+},
+"758647": {
+"add": [
+"snowball",
+"mark_target"
+],
+"drop": []
+},
+"758648": {
+"add": [
+"on_ally_play"
+],
+"drop": []
+},
+"758652": {
+"add": [
+"stat_multiply"
+],
+"drop": []
+},
+"758655": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758657": {
+"add": [
+"free_play",
+"synergy_payoff"
+],
+"drop": []
+},
+"758661": {
+"add": [
+"in_hand_buff"
+],
+"drop": [
+"generate_cards"
+]
+},
+"758665": {
+"add": [
+"recycle"
+],
+"drop": []
+},
+"758666": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"758667": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758668": {
+"add": [
+"free_play",
+"deck_position:benefits"
+],
+"drop": []
+},
+"758670": {
+"add": [
+"team_play",
+"slots_queue"
+],
+"drop": []
+},
+"758671": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"758673": {
+"add": [
+"drawback",
+"life_payment:cost"
+],
+"drop": [
+"damage"
+]
+},
+"758675": {
+"add": [
+"life_payment:cost",
+"on_damaged"
+],
+"drop": []
+},
+"758678": {
+"add": [
+"team_play",
+"bodyguard",
+"taunt"
+],
+"drop": []
+},
+"758681": {
+"add": [
+"junk_cards:benefits"
+],
+"drop": []
+},
+"758683": {
+"add": [
+"cost_condition"
+],
+"drop": []
+},
+"758684": {
+"add": [
+"block_armor:benefits"
+],
+"drop": []
+},
+"758685": {
+"add": [
+"generate_cards",
+"combo_sequence"
+],
+"drop": [
+"transform"
+]
+},
+"758686": {
+"add": [
+"snowball"
+],
+"drop": []
+},
+"758687": {
+"add": [
+"snowball"
+],
+"drop": []
+},
+"758688": {
+"add": [
+"free_play",
+"recycle"
+],
+"drop": []
+},
+"758689": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"758690": {
+"add": [
+"on_kill"
+],
+"drop": []
+},
+"758692": {
+"add": [
+"quests"
+],
+"drop": [
+"junk_cards"
+]
+},
+"758693": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"758697": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"758698": {
+"add": [
+"temporary_buff"
+],
+"drop": []
+},
+"758699": {
+"add": [
+"team_play",
+"assists_support"
+],
+"drop": []
+},
+"758700": {
+"add": [
+"delayed"
+],
+"drop": []
+},
+"758703": {
+"add": [
+"count_payoff",
+"combo_sequence"
+],
+"drop": []
+},
+"758706": {
+"add": [
+"combo_sequence",
+"return_to_hand"
+],
+"drop": []
+},
+"758708": {
+"add": [
+"temporary_buff"
+],
+"drop": []
+},
+"758711": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
+},
+"758712": {
+"add": [
+"snowball"
+],
+"drop": []
+},
+"758714": {
+"add": [
+"on_ally_death"
+],
+"drop": []
+},
+"758715": {
+"add": [
+"count_payoff",
+"discard:benefits"
+],
+"drop": []
+},
+"758719": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"758720": {
+"add": [
+"deck_condition"
+],
+"drop": [
+"variable_stats"
+]
+},
+"758721": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758723": {
+"add": [
+"sacrifice"
+],
+"drop": []
+},
+"758725": {
+"add": [
+"count_payoff"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"758726": {
+"add": [
+"debuff"
+],
+"drop": []
+},
+"758727": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758728": {
+"add": [
+"stat_multiply"
+],
+"drop": []
+},
+"758730": {
+"add": [
+"on_attack",
+"debuff"
+],
+"drop": []
+},
+"758731": {
+"add": [
+"temporary_buff",
+"snowball"
+],
+"drop": []
+},
+"758732": {
+"add": [
+"repeat_trigger"
+],
+"drop": []
+},
+"758733": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758734": {
+"add": [
+"on_damaged"
+],
+"drop": []
+},
+"758737": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758745": {
+"add": [
+"aoe_damage"
+],
+"drop": []
+},
+"758747": {
+"add": [
+"on_ally_play"
+],
+"drop": []
+},
+"758749": {
+"add": [
+"aoe_damage"
+],
+"drop": []
+},
+"758751": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758752": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758754": {
+"add": [
+"drawback"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"758755": {
+"add": [
+"exhaust:benefits",
+"condition"
+],
+"drop": [
+"exhaust:grants"
+]
+},
+"758756": {
+"add": [
+"draw"
+],
+"drop": []
+},
+"758757": {
+"add": [
+"combo_sequence"
+],
+"drop": []
+},
+"758759": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758760": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"758762": {
+"add": [
+"recycle"
+],
+"drop": []
+},
+"758765": {
+"add": [
+"synergy_payoff",
+"count_payoff"
+],
+"drop": []
+},
+"758766": {
+"add": [
+"temporary_buff"
+],
+"drop": []
+},
+"758770": {
+"add": [
+"generate_cards:benefits"
+],
+"drop": []
+},
+"758771": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758776": {
+"add": [
+"hand_size",
+"drawback"
+],
+"drop": []
+},
+"758780": {
+"add": [
+"junk_cards"
+],
+"drop": []
+},
+"758782": {
+"add": [
+"block_armor"
+],
+"drop": []
+},
+"758783": {
+"add": [
+"draw"
+],
+"drop": []
+},
+"758784": {
+"add": [
+"summon:benefits"
+],
+"drop": [
+"buff"
+]
+},
+"758786": {
+"add": [
+"bodyguard",
+"taunt"
+],
+"drop": []
+},
+"758787": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758791": {
+"add": [
+"repeat_trigger"
+],
+"drop": []
+},
+"758793": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758796": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"758797": {
+"add": [
+"snowball"
+],
+"drop": []
+},
+"758798": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758801": {
+"add": [
+"damage_over_time"
+],
+"drop": []
+},
+"758804": {
+"add": [],
+"drop": [
+"combo_sequence"
+]
+},
+"758805": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"758806": {
+"add": [
+"counterattack"
+],
+"drop": []
+},
+"758811": {
+"add": [
+"count_payoff",
+"variety_payoff",
+"debuff:benefits"
+],
+"drop": []
+},
+"758815": {
+"add": [],
+"drop": [
+"revive"
+]
+},
+"758817": {
+"add": [
+"junk_cards:benefits"
+],
+"drop": []
+},
+"758818": {
+"add": [
+"snowball"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"758822": {
+"add": [
+"sacrifice",
+"block_armor"
+],
+"drop": []
+},
+"758826": {
+"add": [
+"damage_over_time"
+],
+"drop": []
+},
+"758827": {
+"add": [
+"cost_condition"
+],
+"drop": [
+"scope_global",
+"cost_set",
+"cost_reduction"
+]
+},
+"758829": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
+},
+"758830": {
+"add": [
+"generate_cards"
+],
+"drop": []
+},
+"758834": {
+"add": [
+"tutor"
+],
+"drop": [
+"generate_cards"
+]
+},
+"758835": {
+"add": [
+"aoe_damage"
+],
+"drop": []
+},
+"758836": {
+"add": [
+"generate_cards"
+],
+"drop": []
+},
+"758838": {
+"add": [
+"temporary_buff"
+],
+"drop": []
+},
+"758840": {
+"add": [],
+"drop": [
+"graveyard"
+]
+},
+"758842": {
+"add": [
+"discard"
+],
+"drop": []
+},
+"758843": {
+"add": [
+"block_armor",
+"temporary_buff"
+],
+"drop": []
+},
+"758844": {
+"add": [
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"758845": {
+"add": [
+"symmetric_effect",
+"drawback"
+],
+"drop": []
+},
+"758846": {
+"add": [
+"repeat_trigger"
+],
+"drop": []
+},
+"758847": {
+"add": [
+"recycle"
+],
+"drop": []
+},
+"758850": {
+"add": [
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"758852": {
+"add": [
+"mark_target"
+],
+"drop": []
+},
+"758856": {
+"add": [
+"debuff:benefits"
+],
+"drop": []
+},
+"758859": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758860": {
+"add": [
+"junk_cards:benefits"
+],
+"drop": []
+},
+"758863": {
+"add": [
+"team_play"
+],
+"drop": [
+"on_attack"
+]
+},
+"758866": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758870": {
+"add": [
+"draw:benefits"
+],
+"drop": []
+},
+"758872": {
+"add": [
+"self_destruct:benefits"
+],
+"drop": []
+},
+"758873": {
+"add": [
+"condition",
+"on_damaged"
+],
+"drop": []
+},
+"758874": {
+"add": [
+"deckbuilding_effect"
+],
+"drop": []
+},
+"758875": {
+"add": [
+"quests"
+],
+"drop": [
+"junk_cards"
+]
+},
+"758877": {
+"add": [
+"heal"
+],
+"drop": []
+},
+"758880": {
+"add": [
+"count_payoff",
+"block_armor"
+],
+"drop": [
+"variable_stats"
+]
+},
+"758881": {
+"add": [
+"free_play"
+],
+"drop": []
+},
+"758883": {
+"add": [
+"sacrifice"
+],
+"drop": []
+},
+"758884": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758888": {
+"add": [
+"damage_over_time"
+],
+"drop": []
+},
+"758889": {
+"add": [
+"tutor"
+],
+"drop": []
+},
+"758895": {
+"add": [
+"on_ally_play"
+],
+"drop": []
+},
+"758897": {
+"add": [
+"tutor"
+],
+"drop": []
+},
+"758900": {
+"add": [
+"generate_cards:benefits"
+],
+"drop": []
+},
+"758907": {
+"add": [
+"count_payoff",
+"variety_payoff",
+"temporary_buff"
+],
+"drop": []
+},
+"758910": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"758911": {
+"add": [
+"team_play",
+"taunt",
+"bodyguard",
+"drawback"
+],
+"drop": []
+},
+"758912": {
+"add": [],
+"drop": [
+"taunt"
+]
+},
+"758913": {
+"add": [
+"count_payoff",
+"on_damaged"
+],
+"drop": []
+},
+"758916": {
+"add": [
+"repeat_trigger"
+],
+"drop": []
+},
+"758917": {
+"add": [
+"delayed"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"758918": {
+"add": [
+"drawback",
+"self_destruct"
+],
+"drop": []
+},
+"758919": {
+"add": [
+"on_kill",
+"deckbuilding_effect"
+],
+"drop": []
+},
+"758920": {
+"add": [
+"snowball"
+],
+"drop": []
+},
+"758924": {
+"add": [
+"sacrifice",
+"stat_condition"
+],
+"drop": []
+},
+"758928": {
+"add": [
+"damage_over_time:benefits",
+"count_payoff"
+],
+"drop": []
+},
+"758930": {
+"add": [
+"delayed"
+],
+"drop": []
+},
+"758931": {
+"add": [
+"junk_cards",
+"drawback"
+],
+"drop": []
+},
+"758932": {
+"add": [
+"debuff:benefits"
+],
+"drop": [
+"buff",
+"debuff"
+]
+},
+"758933": {
+"add": [
+"in_hand_buff",
+"cost_increase"
+],
+"drop": []
+},
+"758934": {
+"add": [
+"junk_cards:benefits"
+],
+"drop": []
+},
+"758942": {
+"add": [],
+"drop": [
+"graveyard"
+]
+},
+"758943": {
+"add": [
+"count_payoff"
+],
+"drop": [
+"buff"
+]
+},
+"758949": {
+"add": [
+"free_play",
+"tutor"
+],
+"drop": []
+},
+"758950": {
+"add": [
+"self_destruct:benefits"
+],
+"drop": [
+"exhaust",
+"self_destruct"
+]
+},
+"758952": {
+"add": [
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"758953": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758954": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758956": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"758957": {
+"add": [
+"drawback"
+],
+"drop": [
+"resource_gain"
+]
+},
+"758962": {
+"add": [],
+"drop": [
+"draw"
+]
+},
+"758966": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"759328": {
+"add": [
+"damage"
+],
+"drop": [
+"buff"
+]
+},
+"759329": {
+"add": [
+"cheat_death",
+"snowball"
+],
+"drop": [
+"revive"
+]
+},
+"759333": {
+"add": [
+"immunity"
+],
+"drop": [
+"counter_spell"
+]
+},
+"759335": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"759336": {
+"add": [
+"positional"
+],
+"drop": [
+"damage"
+]
+},
+"759341": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"759345": {
+"add": [
+"debuff",
+"drawback"
+],
+"drop": []
+},
+"759347": {
+"add": [
+"boss_phases",
+"drawback"
+],
+"drop": []
+},
+"759350": {
+"add": [],
+"drop": [
+"buff"
+]
+},
+"759352": {
+"add": [
+"debuff",
+"junk_cards"
+],
+"drop": [
+"stress_morale"
+]
+},
+"759353": {
+"add": [
+"count_payoff"
+],
+"drop": [
+"condition_count"
+]
+},
+"759355": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"debuff"
+]
+},
+"759356": {
+"add": [
+"debuff",
+"drawback"
+],
+"drop": []
+},
+"759358": {
+"add": [
+"debuff",
+"aura"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"759364": {
+"add": [
+"bodyguard"
+],
+"drop": []
+},
+"759365": {
+"add": [
+"death_trigger",
+"snowball"
+],
+"drop": []
+},
+"759367": {
+"add": [
+"life_payment:cost",
+"block_armor"
+],
+"drop": []
+},
+"759370": {
+"add": [
+"on_damaged",
+"once_per_game",
+"block_armor"
+],
+"drop": [
+"random_effect"
+]
+},
+"759371": {
+"add": [
+"debuff",
+"aura",
+"drawback"
+],
+"drop": []
+},
+"759374": {
+"add": [
+"stat_multiply"
+],
+"drop": []
+},
+"759379": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"759380": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"damage"
+]
+},
+"759382": {
+"add": [
+"debuff"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"759389": {
+"add": [
+"snowball"
+],
+"drop": []
+},
+"759392": {
+"add": [
+"self_destruct"
+],
+"drop": []
+},
+"759398": {
+"add": [
+"debuff",
+"team_play",
+"stat_multiply"
+],
+"drop": []
+},
+"759399": {
+"add": [
+"damage_reduction"
+],
+"drop": []
+},
+"759403": {
+"add": [],
+"drop": [
+"passive"
+]
+},
+"759409": {
+"add": [
+"debuff"
+],
+"drop": [
+"stress_morale"
+]
+},
+"759413": {
+"add": [
+"damage_reduction"
+],
+"drop": []
+},
+"759416": {
+"add": [
+"snowball",
+"mark_target"
+],
+"drop": [
+"damage"
+]
+},
+"759417": {
+"add": [
+"damage_reduction"
+],
+"drop": []
+},
+"759419": {
+"add": [
+"summon"
+],
+"drop": []
+},
+"759421": {
+"add": [
+"death_trigger"
+],
+"drop": []
+},
+"759424": {
+"add": [
+"debuff",
+"aura"
+],
+"drop": [
+"passive"
+]
+},
+"759426": {
+"add": [
+"revive",
+"delayed"
+],
+"drop": []
+},
+"759427": {
+"add": [
+"drawback",
+"on_damaged:counters"
+],
+"drop": []
+},
+"759428": {
+"add": [
+"deck_modification"
+],
+"drop": [
+"generate_cards"
+]
+},
+"759433": {
+"add": [
+"team_play",
+"taunt"
+],
+"drop": []
+},
+"759438": {
+"add": [
+"aura",
+"buff"
+],
+"drop": []
+},
+"759439": {
+"add": [
+"temporary_buff"
+],
+"drop": []
+},
+"759443": {
+"add": [
+"delayed",
+"debuff"
+],
+"drop": []
+},
+"759455": {
+"add": [
+"debuff",
+"drawback"
+],
+"drop": []
+},
+"759456": {
+"add": [
+"debuff",
+"drawback"
+],
+"drop": [
+"resource_gain"
+]
+},
+"759464": {
+"add": [
+"on_damaged"
+],
+"drop": [
+"graveyard"
+]
+},
+"759467": {
+"add": [
+"on_attack"
+],
+"drop": []
+},
+"759468": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"759469": {
+"add": [
+"on_damaged"
+],
+"drop": []
+},
+"759472": {
+"add": [
+"block_armor"
+],
+"drop": [
+"turn_start"
+]
+},
+"759473": {
+"add": [
+"drawback",
+"condition_life"
+],
+"drop": []
+},
+"759474": {
+"add": [
+"damage_over_time"
+],
+"drop": []
+},
+"759481": {
+"add": [
+"turn_start"
+],
+"drop": []
+},
+"759482": {
+"add": [
+"death_count",
+"snowball"
+],
+"drop": []
+},
+"759484": {
+"add": [
+"boss_phases"
+],
+"drop": []
+},
+"759489": {
+"add": [
+"debuff",
+"play_restriction"
+],
+"drop": []
+},
+"759490": {
+"add": [
+"permanent_growth",
+"buff"
+],
+"drop": []
+},
+"759501": {
+"add": [
+"drawback",
+"condition_life"
+],
+"drop": []
+},
+"759502": {
+"add": [
+"debuff"
+],
+"drop": [
+"damage"
+]
+},
+"759506": {
+"add": [
+"on_damaged"
+],
+"drop": []
+},
+"759508": {
+"add": [
+"damage_reduction",
+"shield"
+],
+"drop": []
+},
+"759510": {
+"add": [
+"debuff",
+"snowball"
+],
+"drop": []
+},
+"759512": {
+"add": [
+"debuff"
+],
+"drop": []
+},
+"759514": {
+"add": [
+"team_play",
+"block_armor"
+],
+"drop": []
+},
+"759515": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"terrain"
+]
+},
+"759522": {
+"add": [
+"death_trigger"
+],
+"drop": []
+},
+"759525": {
+"add": [
+"damage_over_time"
+],
+"drop": []
+},
+"759526": {
+"add": [
+"tutor"
+],
+"drop": []
+},
+"759527": {
+"add": [
+"buff"
+],
+"drop": [
+"damage"
+]
+},
+"759535": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"759542": {
+"add": [
+"debuff",
+"drawback"
+],
+"drop": []
+},
+"759546": {
+"add": [
+"deckbuilding_effect"
+],
+"drop": []
+},
+"759549": {
+"add": [
+"counterattack"
+],
+"drop": [
+"damage"
+]
+},
+"759553": {
+"add": [
+"stat_multiply",
+"debuff:benefits"
+],
+"drop": [
+"debuff"
+]
+},
+"759559": {
+"add": [
+"temporary_buff"
+],
+"drop": [
+"buff"
+]
+},
+"759563": {
+"add": [
+"debuff",
+"drawback"
+],
+"drop": [
+"resource_gain"
+]
+},
+"759564": {
+"add": [
+"debuff"
+],
+"drop": [
+"damage"
+]
+},
+"759566": {
+"add": [
+"count_payoff",
+"junk_cards"
+],
+"drop": []
+},
+"759567": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"758742": {
+"add": [
+"drawback"
+],
+"drop": []
+}
+}

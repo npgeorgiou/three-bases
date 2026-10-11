@@ -1,0 +1,48 @@
+# Darkest Dungeon: skill lines "Deals damage", rank targeting, (self) clauses, stress wording, % stats
+!debuff|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)
+!movement|\bpush
+!movement|\bpull
+!damage_over_time|\bbleed
+damage|does|\btargets (all of )?enemy ranks [^.]*\.( moves self[^.]*\.)? deals damage\b
+multi_target_attack|does|\btargets all of enemy ranks\b
+scope_multi|does|\btargets all of ally ranks\b
+buff|does|\+\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit|max hp)\b|\bbuff: \+
+debuff|does|-\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit)\b(?![^;.]*\((self|individual|party_other)\))
+drawback|does|-\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit)\b[^;.]*\(self\)|\bstress damage amount \d+ \((self|party_other|individual)\)
+damage_over_time|does|\b(bleed|blight) \d+ per round\b|\bbleed debuff\b|\bblight debuff\b|\bbleed \d|\bblight \d
+damage_over_time|counters|\bcure (bleed|blight)\b|\bremove (bleeding|poison|blight)\b|\+\d+(\.\d+)?% (bleed|blight|poison) resistance\b|\bbandage\b|\bantivenom\b
+heal|does|\bhealth heal\b|\bheals \d+ \d+\b
+stress_morale|does|\bstress\b|\bresolve\b|\baffliction|\bvirtue
+mark_target|benefits|\bonly if target is tagged\b
+disable|benefits|\bonly if target is stunned\b
+condition|does|\bonly if target is\b|\bwhile light (below|above)\b|\bwhile in rank\b
+light_level|does|\blight (below|above)\b|\b(increase|decrease) light\b|\btorch\b
+!damage_reduction|\bresist
+immunity|does|\+\d+(\.\d+)?% (stun|poison|bleed|disease|debuff|move|trap|death_blow|blight) resistance\b
+tribal|does|\bvs (beast|eldritch|man|unholy|human|husk|bloodsucker|corpse|stress|veteran) enemies\b|\b(beast|eldritch|man|unholy) enemies\b
+condition_life|does|\bwhile hp (below|above)\b|\bhp below \d|\bdeaths? door\b
+combat_start|does|\bin the first round\b
+upkeep|does|\bfood consumption\b
+damage_over_time|benefits|\+\d+(\.\d+)?% (bleed|poison|blight) chance\b
+disable|benefits|\+\d+(\.\d+)?% stun chance\b
+forced_movement|benefits|\+\d+(\.\d+)?% move chance\b
+debuff|benefits|\+\d+(\.\d+)?% debuff chance\b
+play_restriction|does|\bclass: \w+
+board_clog|counters|\bclear_corpses\b
+cooldowns|does|\buses per camp\b|\blimit: \d
+summon|does|\bsummons allies\b|\b(effects: |; )summon \w+
+board_presence|does|\btakes [2-4] ranks\b
+multi_attack|does|\bacts [2-9] times per round\b
+!zone_control|\bcapture
+disable|does|\bcapture target\b
+destroy|does|\beffects: kill\b(?! \(self)|; kill\b(?! \(self)
+self_destruct|does|\bkill \(self\)
+telegraphed_threats|does|\brank target enemy\b
+!banish|\bpurge
+!exhaust|\bpurge
+!rows|\bfront\b
+!zone_of_control|\bmarked\b
+traits_quirks|counters|\bpurge \(negative\)|\bremove disease\b|\bcure disease
+random_effect|does|\bpossible outcomes:|\bon failure:
+items_consumables|benefits|\buse (holy_water|medicinal_herbs|torch|shovel|skeleton_key|antivenom|bandage|dog_treats|provision|laudanum)\b
+trap_secret|does|\bon failure:.{0,80}\bon success:

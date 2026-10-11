@@ -1,0 +1,27 @@
+# general patterns that misread wording in many games
+!random_effect|\bcoin
+!fodder|0/1
+!regeneration|at the (start|end|beginning) of .{0,40}(heal|restore)
+!heal|(prevent|stop)s? .{0,20}heal
+!donate|shuffle .{0,40}into your opponent.s deck
+!scope_global|\ball (creatures|minions|units|characters|cards)\b
+!life_payment|take \d+ damage
+!blocking|\bguard(s|ing)?\b
+!cost_increase|costs? \(?\d+\)? more
+!slot_filler|\bfill (this|your|the|each|a)\b
+!ranged|\breach\b
+!evasion|\breach\b
+!draw|put .{0,30}into your hand
+!tutor|from your deck
+!turn_start|at the (start|beginning) of (your|each|the|their)? ?(turn|round|combat)
+!revive|\b(revive|resurrect|reanimate|raise)s?\b
+!random_effect|\b\d+%
+!discard|\bdiscards?\b
+!generate_cards|random .{0,30}card
+!damage|\bdamage (a|an|all|self|it|the|each|\d|by|enemy|highest|lowest|adjacent)
+!heal|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)
+!heal|\bheal (a|an|all|your|target|each|it|this|them)
+!tutor|\btutor
+!debuff|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)
+!debuff|subtract \d from .{0,25}(hit|wound|save|charge) rolls?
+!debuff|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)

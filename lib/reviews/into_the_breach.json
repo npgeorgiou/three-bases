@@ -1,0 +1,1319 @@
+{
+"760967": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"760975": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"760983": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"760988": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"760989": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"760992": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"760993": {
+"add": [
+"telegraphed_threats",
+"disruption"
+],
+"drop": [
+"upgrade"
+]
+},
+"761000": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"761003": {
+"add": [
+"sacrifice",
+"self_destruct",
+"aoe_damage",
+"friendly_fire"
+],
+"drop": [
+"upgrade"
+]
+},
+"761005": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"761006": {
+"add": [
+"scope_multi"
+],
+"drop": [
+"upgrade",
+"symmetric_effect"
+]
+},
+"761124": {
+"add": [
+"on_kill",
+"heal"
+],
+"drop": [
+"upgrade"
+]
+},
+"760937": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"760941": {
+"add": [
+"heal"
+],
+"drop": [
+"upgrade"
+]
+},
+"760942": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"760943": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"760945": {
+"add": [
+"cheat_death"
+],
+"drop": [
+"upgrade"
+]
+},
+"760947": {
+"add": [
+"collision_damage"
+],
+"drop": [
+"upgrade",
+"buff"
+]
+},
+"760948": {
+"add": [
+"comeback",
+"condition_life"
+],
+"drop": [
+"upgrade"
+]
+},
+"761093": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"761129": {
+"add": [],
+"drop": [
+"upgrade"
+]
+},
+"761130": {
+"add": [
+"immunity"
+],
+"drop": [
+"upgrade"
+]
+},
+"761134": {
+"add": [],
+"drop": [
+"upgrade",
+"activated",
+"damage_reduction",
+"debuff"
+]
+},
+"761127": {
+"add": [
+"summon"
+],
+"drop": []
+},
+"761125": {
+"add": [
+"summon"
+],
+"drop": []
+},
+"761069": {
+"add": [
+"summon"
+],
+"drop": []
+},
+"761126": {
+"add": [
+"summon"
+],
+"drop": []
+},
+"761143": {
+"add": [
+"summon"
+],
+"drop": []
+},
+"761144": {
+"add": [
+"summon",
+"on_kill"
+],
+"drop": []
+},
+"760963": {
+"add": [],
+"drop": [
+"tribal"
+]
+},
+"760984": {
+"add": [
+"life_payment"
+],
+"drop": []
+},
+"760951": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"760982": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"760949": {
+"add": [
+"multi_target_attack"
+],
+"drop": [
+"combo_sequence"
+]
+},
+"761133": {
+"add": [
+"terrain"
+],
+"drop": []
+},
+"761123": {
+"add": [
+"terrain"
+],
+"drop": []
+},
+"761148": {
+"add": [],
+"drop": [
+"overload_debt:cost"
+]
+},
+"761149": {
+"add": [],
+"drop": [
+"overload_debt:cost"
+]
+},
+"761002": {
+"add": [],
+"drop": [
+"rows"
+]
+},
+"760959": {
+"add": [
+"life_payment"
+],
+"drop": []
+},
+"761121": {
+"add": [
+"forced_movement"
+],
+"drop": [
+"aoe_damage"
+]
+},
+"761009": {
+"add": [
+"adjacency"
+],
+"drop": []
+},
+"761007": {
+"add": [
+"scope_global"
+],
+"drop": []
+},
+"760968": {
+"add": [
+"variable_stats"
+],
+"drop": [
+"adjacency",
+"aoe_damage"
+]
+},
+"760985": {
+"add": [
+"life_payment"
+],
+"drop": []
+},
+"760970": {
+"add": [
+"life_payment",
+"collision_damage"
+],
+"drop": [
+"terrain"
+]
+},
+"761136": {
+"add": [
+"life_payment"
+],
+"drop": [
+"passive"
+]
+},
+"760976": {
+"add": [
+"spawn_blocking",
+"null_body"
+],
+"drop": []
+},
+"760952": {
+"add": [
+"spawn_blocking",
+"null_body"
+],
+"drop": []
+},
+"760998": {
+"add": [
+"adjacency"
+],
+"drop": []
+},
+"760969": {
+"add": [],
+"drop": [
+"passive"
+]
+},
+"761001": {
+"add": [],
+"drop": [
+"passive"
+]
+},
+"761135": {
+"add": [],
+"drop": [
+"passive"
+]
+},
+"761119": {
+"add": [
+"life_payment"
+],
+"drop": []
+},
+"760955": {
+"add": [
+"forced_movement"
+],
+"drop": []
+},
+"761008": {
+"add": [
+"scope_global"
+],
+"drop": []
+},
+"760971": {
+"add": [
+"life_payment"
+],
+"drop": []
+},
+"760960": {
+"add": [
+"life_payment"
+],
+"drop": []
+},
+"761039": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"stress_morale",
+"immunity"
+]
+},
+"761095": {
+"add": [
+"delayed",
+"telegraphed_threats"
+],
+"drop": []
+},
+"761030": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"zone_control"
+]
+},
+"761031": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"zone_control"
+]
+},
+"761032": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"zone_control"
+]
+},
+"761105": {
+"add": [
+"telegraphed_threats",
+"delayed"
+],
+"drop": []
+},
+"761035": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761037": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761049": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761052": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761055": {
+"add": [
+"telegraphed_threats",
+"summon"
+],
+"drop": [
+"disable"
+]
+},
+"761106": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"rows"
+]
+},
+"761107": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761108": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761109": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761113": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"760879": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"760880": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"760881": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"760882": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"760883": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"760884": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"760885": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761013": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761015": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761016": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761017": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761018": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"rows"
+]
+},
+"761019": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"rows"
+]
+},
+"761020": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761021": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761022": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"symmetric_effect"
+]
+},
+"761023": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"symmetric_effect"
+]
+},
+"761024": {
+"add": [
+"telegraphed_threats",
+"trap_secret"
+],
+"drop": [
+"assists_support"
+]
+},
+"761025": {
+"add": [
+"telegraphed_threats",
+"trap_secret"
+],
+"drop": []
+},
+"761026": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"buff"
+]
+},
+"761027": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761028": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761029": {
+"add": [
+"telegraphed_threats",
+"self_destruct"
+],
+"drop": [
+"summon",
+"disable"
+]
+},
+"761033": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761034": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761036": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761038": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761040": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761041": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761042": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761043": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761044": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761045": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761046": {
+"add": [
+"telegraphed_threats",
+"zone_control"
+],
+"drop": []
+},
+"761047": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761048": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761050": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761051": {
+"add": [
+"telegraphed_threats",
+"damage_over_time",
+"aura"
+],
+"drop": [
+"life_payment:cost",
+"symmetric_effect",
+"summon"
+]
+},
+"761053": {
+"add": [
+"telegraphed_threats",
+"disable"
+],
+"drop": [
+"rows"
+]
+},
+"761054": {
+"add": [
+"telegraphed_threats",
+"disable"
+],
+"drop": [
+"rows"
+]
+},
+"761056": {
+"add": [
+"telegraphed_threats",
+"delayed",
+"null_body"
+],
+"drop": [
+"destroy",
+"immunity"
+]
+},
+"761057": {
+"add": [
+"telegraphed_threats",
+"fodder"
+],
+"drop": [
+"debuff",
+"excess_damage",
+"multi_attack"
+]
+},
+"761058": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"debuff",
+"multi_attack"
+]
+},
+"761059": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"counter_spell",
+"flanking"
+]
+},
+"761060": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"counter_spell",
+"flanking"
+]
+},
+"761083": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761084": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761088": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761089": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"ping",
+"self_destruct",
+"summon"
+]
+},
+"761090": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761091": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"evasion"
+]
+},
+"761092": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"combo_sequence",
+"ping"
+]
+},
+"761094": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761096": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761097": {
+"add": [
+"telegraphed_threats",
+"aura"
+],
+"drop": [
+"summon"
+]
+},
+"761098": {
+"add": [
+"telegraphed_threats",
+"aura"
+],
+"drop": [
+"summon",
+"damage_reduction"
+]
+},
+"761099": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"combo_sequence"
+]
+},
+"761100": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761101": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761102": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761103": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"summon"
+]
+},
+"761104": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"evasion"
+]
+},
+"761114": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"zone_control"
+]
+},
+"761115": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"damage_over_time",
+"zone_control"
+]
+},
+"761116": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"damage_over_time",
+"zone_control"
+]
+},
+"760895": {
+"add": [
+"upgrade"
+],
+"drop": [
+"boss_phases",
+"immunity",
+"zone_control"
+]
+},
+"760894": {
+"add": [
+"life_track",
+"win_condition"
+],
+"drop": [
+"damage_reduction",
+"evasion:counters",
+"passive",
+"ranged",
+"revive",
+"random_effect"
+]
+},
+"761012": {
+"add": [
+"scoring_objectives"
+],
+"drop": [
+"passive",
+"summon",
+"zone_control"
+]
+},
+"760936": {
+"add": [],
+"drop": [
+"activated",
+"copy",
+"debuff",
+"disable",
+"evasion",
+"terrain",
+"tribal"
+]
+},
+"760886": {
+"add": [],
+"drop": [
+"movement",
+"rewind"
+]
+},
+"760869": {
+"add": [
+"deckbuilding_effect"
+],
+"drop": [
+"coin_economy",
+"copy",
+"movement",
+"passive",
+"ranged",
+"trap_secret",
+"tribal"
+]
+},
+"760887": {
+"add": [],
+"drop": [
+"evasion",
+"passive",
+"piercing",
+"zone_control"
+]
+},
+"760878": {
+"add": [
+"telegraphed_threats",
+"spawn_blocking"
+],
+"drop": [
+"assists_support",
+"counter_spell",
+"deathtouch",
+"debuff",
+"destroy",
+"drawback",
+"evasion:counters",
+"passive"
+]
+},
+"760904": {
+"add": [
+"immunity"
+],
+"drop": [
+"disable",
+"terrain"
+]
+},
+"760905": {
+"add": [
+"placement_rules"
+],
+"drop": [
+"first_strike",
+"on_attack"
+]
+},
+"760909": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"760906": {
+"add": [
+"multi_attack",
+"extra_turn"
+],
+"drop": []
+},
+"761070": {
+"add": [
+"condition"
+],
+"drop": []
+},
+"760907": {
+"add": [],
+"drop": [
+"ranged"
+]
+},
+"760946": {
+"add": [
+"friendly_fire"
+],
+"drop": [
+"buff"
+]
+},
+"760938": {
+"add": [
+"damage_over_time"
+],
+"drop": []
+},
+"760829": {
+"add": [],
+"drop": [
+"evasion"
+]
+},
+"760851": {
+"add": [
+"damage_over_time"
+],
+"drop": []
+},
+"761153": {
+"add": [
+"telegraphed_threats",
+"destroy",
+"terrain"
+],
+"drop": []
+},
+"761154": {
+"add": [
+"telegraphed_threats"
+],
+"drop": []
+},
+"761155": {
+"add": [
+"telegraphed_threats",
+"destroy"
+],
+"drop": []
+},
+"761156": {
+"add": [
+"terrain",
+"telegraphed_threats"
+],
+"drop": []
+},
+"761157": {
+"add": [
+"telegraphed_threats"
+],
+"drop": [
+"immunity"
+]
+},
+"761158": {
+"add": [
+"terrain",
+"telegraphed_threats"
+],
+"drop": []
+},
+"761159": {
+"add": [
+"destroy",
+"telegraphed_threats"
+],
+"drop": []
+},
+"761160": {
+"add": [
+"terrain"
+],
+"drop": []
+},
+"761161": {
+"add": [
+"destroy",
+"terrain"
+],
+"drop": []
+},
+"761162": {
+"add": [
+"destroy",
+"telegraphed_threats"
+],
+"drop": []
+},
+"761128": {
+"add": [],
+"drop": [
+"forced_movement",
+"movement",
+"friendly_fire"
+]
+},
+"761064": {
+"add": [],
+"drop": [
+"life_payment:cost",
+"passive",
+"placement_rules"
+]
+},
+"760911": {
+"add": [
+"shield"
+],
+"drop": [
+"passive",
+"terrain"
+]
+},
+"760867": {
+"add": [
+"terrain"
+],
+"drop": [
+"evasion"
+]
+},
+"760873": {
+"add": [
+"life_track",
+"protection"
+],
+"drop": []
+},
+"760871": {
+"add": [],
+"drop": [
+"zone_control"
+]
+},
+"761062": {
+"add": [
+"terrain",
+"destroy"
+],
+"drop": []
+},
+"760935": {
+"add": [
+"spawn_blocking"
+],
+"drop": []
+},
+"760926": {
+"add": [],
+"drop": [
+"combo_sequence"
+]
+},
+"761082": {
+"add": [
+"steal",
+"forced_movement"
+],
+"drop": []
+},
+"760877": {
+"add": [
+"friendly_fire"
+],
+"drop": [
+"buff"
+]
+},
+"760929": {
+"add": [
+"life_payment"
+],
+"drop": []
+},
+"761076": {
+"add": [
+"forced_movement"
+],
+"drop": []
+}
+}

@@ -1,0 +1,78 @@
+# Warhammer 40k 10th: re-rolls are advantage, "while" is not passive, unit/ability wording
+!random_effect|\broll
+!random_effect|\bdice\b
+random_effect|does|\broll (a|one|two|\d+)? ?d\d\b|\bon a \d\+|\broll off\b|\brandom number\b
+advantage|does|\bre-?roll(s|ed)?\b|\[twin-linked\]
+advantage|counters|\b(opponents?|your opponent) (must|cannot) re-?roll\b|\bcannot (be )?re-?roll(ed)?\b
+!passive|\bwhile\b
+!shield|\bshield\b
+!activated|\bactivate
+!activated|\bactivated
+!activated|once per (turn|round)
+once_per_game|does|\bonce per (battle|game)\b
+cooldowns|does|\bonce per (turn|phase|battle round)\b
+temporary_buff|does|\buntil the (end|start) of (the|this|your|your opponent's|the next)( next)? (phase|turn|fight phase|shooting phase|command phase|battle round)\b
+damage_reduction|does|\bfeel no pain\b|\binvulnerable save\b|\bsubtract 1 from the damage characteristic\b|\bworsen the armour penetration\b|\bdamage characteristic of that attack by 1\b
+damage|does|\b(suffers?|inflicts?|deals?|inflicting|suffering) (up to )?(\d+|d3|d6|2d3|\w+ )?(additional )?mortal wounds?\b|\[devastating wounds\]
+advantage|does|\[sustained hits \d\]|\[lethal hits\]|\[torrent\]
+piercing|does|\[lance\]|\[melta \d\]|\[devastating wounds\]|\[precision\]
+drawback|does|\[hazardous\]|\bhazardous test\b
+terrain|counters|\[ignores cover\]|\bignores cover\b|\bbenefit of cover\b(?! to)
+tribal|does|\[anti.[a-z]|\banti.[a-z]+ \d\+
+first_strike|does|\bfights first\b
+stealth|does|\[stealth\]|\bstealth\b|\blone operative\b|\bcannot be (selected as the )?target(ed)?\b
+reserve_bench|does|\bdeep strike\b|\bstrategic reserves\b|\breserves\b
+zone_control|does|\bobjective markers?\b|\bobjective control\b|\boc characteristic\b
+stress_morale|does|\bbattle-shock(ed)?\b|\bleadership\b
+destroy|does|\bdestroys? (an?|the|one|that) (enemy )?(unit|model)\b
+on_kill|does|\b(each time|when|if) [^.]{0,40}\bdestroys? (an?|the|that) enemy (unit|model)\b
+death_trigger|does|\b(each time|when) (a|this|that) model (in this unit )?is destroyed\b|\bwhen this model is destroyed\b
+resource_gain|does|\bgain (\d|one|an additional) ?cp\b|\bgain (\d|one) command points?\b
+cost_reduction|does|\bcosts? (you )?(\d|one) ?cp less\b|\breduce the cp cost\b
+movement|does|\bfall back\b|\badvance (move|roll)s?\b|\bcharge (move|roll)s?\b|\bnormal move\b|\bpile-in\b|\bconsolidat
+merge_attach|does|\bcan be attached to\b|\bwhile this model is leading a unit\b|\battached unit\b
+!cant_attack|\bdefender\b
+!extra_turn|additional action
+!kicker|\boverload\b.{0,5}\d
+!overload_debt|\boverload
+!evasion|\bburrow
+!discard|\bdiscards?\b(?! piles?\b)
+!summon|\bset up (a|an|one|\d+|up to)\b
+!heal|regain
+heal|does|\b(re)?gains? (up to )?(d3\+?\d*|d6|\d+|one|two|three)( lost)? wounds?\b|\breturn (up to )?(\d|d3|one) destroyed (model|bodyguard model)s?\b
+revive|does|\breturn (up to )?(\d|d3|one)\b[^.]{0,30}\bdestroyed\b[^.]{0,30}\bmodels?\b|\bdestroyed models? (to|back to) (this|the) unit\b
+!link_formation|\bformation
+!symmetric_effect|\beach player'?s\b
+!symmetric_effect|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)
+!scope_global|\beach player
+!evasion|\bfearsome\b
+!damage_reduction|\barmou?r\b
+!piercing|armou?r penetration
+!debuff|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)
+!debuff|subtract \d from .{0,25}(hit|wound|save|charge) rolls?
+!debuff|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)
+piercing|does|\bimprove the armour penetration\b|\barmour penetration characteristic of [^.]{0,40}(weapons|attacks?) [^.]{0,30}by 1\b(?![^.]*worsen)
+piercing|counters|\bworsen the armour penetration\b|\barmour penetration of that attack by 1\b
+damage_reduction|does|\b(attack|ranged attack|melee attack|psychic attack)s? (is made against|targets) (this|the bearer's|the bearer|that|this model's) (unit|model)?[^.]{0,90}\bsubtract (1|2) from (that attack's |the )?(hit|wound) roll\b|\bsubtract (1|2) from the (hit|wound) roll[^.]{0,30}\b(attacks?|ranged attacks?) (that )?targets? (this|the bearer)
+debuff|does|\b(enemy|opponent's) (unit|units|model|models)\b[^.]{0,80}\b(subtract \d|worsen)\b|\b(subtract \d|worsen)\b[^.]{0,60}\b(enemy|that enemy|enemy unit's)\b|\b-\d (to|from) (the )?(hit|wound|charge|leadership|objective control)
+!coin_economy|\bspend \d+ \w+ to
+resource_banking|does|\bspend (\d|one|up to \d) \w+ (tokens?|points?|dice)\b|\bminiracle dice\b|\bmiracle dice\b|\bpain tokens?\b
+!debuff|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))
+!debuff|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))
+!debuff|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))
+condition_life|does|\bwhile this model has \d+-\d+ wounds remaining\b|\bbelow (its )?(starting strength|half-strength)\b
+drawback|does|\bwhile this model has \d+-\d+ wounds remaining\b|\bsubtract \d from (this|its|that) (model's|unit's)? ?objective control\b|\b(this unit|this model) cannot (advance|shoot|declare a charge)\b
+!damage|\bstrikes?\b
+!scope_global|\bboth players
+!mark_target|\bmarked\b
+!generate_cards|\bmanifest\b
+!copy|\bduplicate
+!transform|\bmetamorph
+!deathtouch|\bslay\b
+!graveyard|\bbones?\b
+!rows|\bfront ?line
+!friendly_fire|friendly fire
+!territory_trigger|\binfiltrat
+!draw|\bdraw (a|an|one|two|three|x|\d+)
+draw|does|\bdraw(s|ing)? (\w+ )?(cards?|secondary mission)\b
+!quests|\bobjective\b

@@ -1,0 +1,8 @@
+# Magic: The Gathering: a few general patterns misread MTG keywords and nouns
+!coin_economy|\btribute\b
+!zone_of_control|\bmarked\b
+!mark_target|\bmarked\b
+!terrain|\bwall\b
+!movement|\bmoves?\b
+!stress_morale|\bafflict
+!multi_target_attack|\bcleave
