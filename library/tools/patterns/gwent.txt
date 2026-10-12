@@ -34,3 +34,6 @@ transform|does|\bawaken\b
 immunity|does|\bpower cannot be changed\b
 !board_clog|\b(enemy|opponent'?s?) side of (this|that|each|a|the)
 !symmetric_effect|\b(to|on) each side\b
+activated|does|order(?: \([a-z]+\))?:
+condition|does|\bif\b
+!passive|\bwhile\b
