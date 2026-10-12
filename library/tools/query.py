@@ -200,7 +200,7 @@ def combo(a, b, game=None):
 
 def grid(trigger=None, effect=None, game=None, examples=3, freq=None):
     """Trigger x effect design space. With no args: matrix of counts (games using each pair). With trigger and/or effect: examples per game."""
-    w = ' AND '.join(x for x in ['trigger=?' if trigger else '', 'effect=?' if effect else '', 'game=?' if game else '', 'frequency=?' if freq else ''] if x) or '1=1'
+    w = ' AND '.join(x for x in ['trigger IN (SELECT id FROM concept_tree WHERE root=?)' if trigger else '', 'effect IN (SELECT id FROM concept_tree WHERE root=?)' if effect else '', 'game=?' if game else '', 'frequency=?' if freq else ''] if x) or '1=1'
     args = [a for a in (trigger, effect, game, freq) if a]
     if not trigger and not effect:
         for r in q(f'SELECT trigger, effect, count(*), count(DISTINCT game) FROM trigger_effect WHERE {w} GROUP BY 1,2 ORDER BY 4 DESC, 3 DESC LIMIT 60', *args): print(f'  {r[0]:18} -> {r[1]:20} entries {r[2]:5} games {r[3]}')
@@ -212,7 +212,7 @@ def grid(trigger=None, effect=None, game=None, examples=3, freq=None):
 
 def unused_pairs(trigger):
     """Effects that no game pairs with this trigger (gaps in the design space)."""
-    used = {r[0] for r in q('SELECT DISTINCT effect FROM trigger_effect WHERE trigger=?', trigger)}
+    used = {r[0] for r in q('SELECT DISTINCT effect FROM trigger_effect WHERE trigger IN (SELECT id FROM concept_tree WHERE root=?)', trigger)}
     allf = {r[0] for r in q('SELECT DISTINCT effect FROM trigger_effect')}
     print(sorted(allf - used))
 
@@ -229,7 +229,7 @@ def frequency(bound=None, trigger=None, effect=None, game=None, examples=3):
     """Trigger -> effect pairs by frequency limit (per_card, per_round, unbounded, static). No bound: per bound, its share of each
     game's pairs, averaged over games (each game counts equally), with the raw count. With a bound: pairs ranked by the number of
     games that have them, then by the mean share per game."""
-    w = ' AND '.join(x for x in ['frequency=?' if bound else '', 'trigger=?' if trigger else '', 'effect=?' if effect else '', 'game=?' if game else ''] if x) or '1=1'
+    w = ' AND '.join(x for x in ['frequency=?' if bound else '', 'trigger IN (SELECT id FROM concept_tree WHERE root=?)' if trigger else '', 'effect IN (SELECT id FROM concept_tree WHERE root=?)' if effect else '', 'game=?' if game else ''] if x) or '1=1'
     args = [a for a in (bound, trigger, effect, game) if a]
     tot = dict(q('SELECT game, count(*) FROM trigger_effect GROUP BY 1'))
     if not bound:

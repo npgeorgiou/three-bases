@@ -1,7 +1,8 @@
 """Regression set: known-correct and known-wrong tags, taken from Claude's hand reviews.
   regression.py <db> make    -> writes lib/regression.tsv from lib/reviews/*.json and lib/snap_review.json
   regression.py <db> enforce -> re-applies the reviewed drops (build step after kw_sync and propagate)
-  regression.py <db> check   -> checks every line against the database; exit code 1 on any failure
+  regression.py <db> check   -> checks every line against the database; exit code 1 on any failure (a 'present' parent also holds
+                             through a narrower concept, see parent_rule.py)
 Lines: game, entity id, entity name, concept, role ('*' = any role), expect (present|absent).
 A review 'add' means the tag must be present; a 'drop' means it must be absent. Keyword corrections are also
 checked on one entry that has the keyword (inheritance via kw_sync must agree with the keyword)."""
@@ -71,6 +72,8 @@ else:
         n += 1
         args = [res(r['entity']), r['concept']] + ([] if r['role'] == '*' else [r['role']])
         have = bool(q('select 1 from entity_concepts where entity=? and concept=?' + ('' if r['role'] == '*' else ' and role=?'), *args))
+        if not have and r['expect'] == 'present':   # parent and child rule: a reviewed parent is kept by a narrower concept
+            have = bool(q('select 1 from entity_concepts where entity=? and concept in (select id from concept_tree where root=?)' + ('' if r['role'] == '*' else ' and role=?'), *args))
         if have != (r['expect'] == 'present'): bad.append(r)
     print(f'regression: {n - len(bad)}/{n} pass')
     for r in bad[:40]: print('  FAIL', r['game'], r['name'][:40], r['concept'], r['role'], 'expected', r['expect'])

@@ -19,7 +19,9 @@ upgrade|does|\b(transform|transforms) [^.]{0,40}\binto (a |random )?(ones?|minio
 !movement|\bshift
 !ranged|\bshoot
 !swap|\bswap
-swap|does|\bswap (the |its |their )?(attack|health|stats|cost)\b|\bswap (places|positions|hands|decks|stats)\b
+swap|does|\bswap (places|positions)\b
+stat_swap|does|\bswap (the |its |their )?(attack|health|stats|cost)\b|\bswap stats\b
+hand_deck_swap|does|\bswap (hands|decks)\b
 transform|does|\b(swaps|flips|changes) each turn\b
 # Freeze: the frozen character misses its next attack (a partial lock), not a total disable
 !disable|\bfreez
@@ -36,3 +38,6 @@ temporary_effect|does|\bfreez(e|es|ing)\b
 !debuff|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)
 resource_gain|does|\bgain (an? |\d+ |two |three )?(empty )?mana crystals?\b|\bgain .{0,15}mana crystals? this turn\b
 !board_clog|(?:^|[.:;,] |\bthen |\band )(target |each |your )?opponents? (creates?|summons?|puts?|gets?)\b[^.]{0,30}\b(token|minion|unit|creature|copy|rock)
+# Hearthstone's Elusive is untargetable by spells and hero powers (immunity), not hard to block
+immunity|does|\belusive\b
+!evasion|\belusive\b

@@ -11,7 +11,7 @@ so the same outcome is found across games however each game does it. Changes (Cl
     disable           total: can't act at all (stun, freeze, sleep, paralysis, skip a turn); under no_damage_output, cant_block, immobilize
   debuff              renamed "Stat loss": lower stats, any size (disable, silence, damage_over_time, mark_target no longer under it)
   temporary_effect    lasts only this turn or round, buff or not (temporary_buff becomes its child, for bonuses only)
-  card_advantage      gain cards: parent of draw, generate_cards, copy
+  card_advantage      gain cards: parent of draw, generate_cards, copy (generate_cards and mark_target parents: see concept_defs.py)
   return_to_hand      also under removal (it removes a unit from the board); revive under death and summon (a unit comes back)
 Text-pattern tags are recomputed for the moved concepts: a text_pattern 'disable' that only says "can't attack" / "can't move" /
 "can't block" becomes the matching partial lock; a text_pattern temporary_buff without a bonus becomes temporary_effect.
@@ -30,8 +30,8 @@ NEW = {
  'card_advantage': ('Card advantage', 'effect', ['effect'], 'Gain cards: draw, create or copy cards.'),
 }
 PARENTS = {'disable': ['suppress', 'no_damage_output', 'cant_block', 'immobilize'], 'silence': ['suppress', 'control'],
-           'damage_over_time': ['damage'], 'mark_target': ['combo_sequence'], 'temporary_buff': ['buff', 'temporary_effect'],
-           'draw': ['card_flow', 'card_advantage'], 'generate_cards': ['draw', 'card_advantage'], 'copy': ['effect', 'card_advantage'],
+           'damage_over_time': ['damage'], 'mark_target': ['condition'], 'temporary_buff': ['buff', 'temporary_effect'],
+           'draw': ['card_flow', 'card_advantage'], 'generate_cards': ['card_advantage'], 'copy': ['effect', 'card_advantage'],
            'return_to_hand': ['control', 'tempo', 'removal'], 'revive': ['death', 'summon']}
 DESC = {'debuff': ('Stat loss', 'Lower an enemy\'s stats, any size: -power, -attack, -health, shrink, wither. Locks and silence are under suppress.'),
         'disable': ('Total disable', "The unit can't act at all: stun, freeze, sleep, paralysis, skips its turn."),

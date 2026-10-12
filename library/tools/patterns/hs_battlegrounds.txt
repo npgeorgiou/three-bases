@@ -3,7 +3,9 @@
 !movement|\bmoves?\b
 !movement|\bshift
 !swap|\bswap
-swap|does|\bswap (the |its |their )?(attack|health|stats|cost)\b|\bswap (places|positions|hands|decks|stats)\b|\bswap a friendly\b|\bswaps? (to|between)\b|\bgain each other.s\b
+swap|does|\bswap (places|positions)\b
+stat_swap|does|\bswap (the |its |their )?(attack|health|stats|cost)\b|\bswap stats\b|\bgain each other.s\b
+hand_deck_swap|does|\bswap (hands|decks)\b
 transform|does|\bswaps type each turn\b|\b(swaps|flips|changes) each turn\b
 !adjacency|to (the |its )?(left|right)
 !adjacency|\bleft and right
