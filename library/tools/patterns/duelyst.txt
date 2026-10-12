@@ -12,3 +12,9 @@ area_templates|does|\b\dx\d area\b|\bcolumn\b|\bstraight line\b|\brow\b
 !on_damaged|\bfrenzy
 # Replace = put a card from your action bar (hand) back into the deck for a new one, once a turn
 recycle|does|\breplac(e|es|ed|ing)\b
+untap|does|reactivate
+aoe_damage|does|damage to (all |each )?(nearby )?enemies|damage to (all )?enemies around|damage to everything
+death_trigger|does|deathwatch|whenever (a|an|any) [a-z ]*(is destroyed|dies)
+tribal|does|\b(friendly|your|a|an|all) (vespyr|golem|dervish|spriggin|wraithling|battle pet|arcanyst|mech|egg|wall)s?(es)? minions?\b|\byour (golems|dervishes|wraithlings|vespyrs|arcanysts)\b|whenever a (friendly )?(spriggin|battle pet|golem|vespyr)
+!extra_turn|\breactivate
+!death_count|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)

@@ -1,0 +1,640 @@
+{
+ "741883": {
+  "A": {
+   "wrong": [
+    "transform",
+    "delayed"
+   ],
+   "missed": [
+    "quests: progresses MECHAZ0R build"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "transform",
+    "delayed"
+   ],
+   "missed": [
+    "quests: progresses MECHAZ0R build"
+   ]
+  }
+ },
+ "741523": {
+  "A": {
+   "wrong": [
+    "lanes"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "lanes"
+   ],
+   "missed": []
+  }
+ },
+ "742082": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742084": {
+  "A": {
+   "wrong": [
+    "on_play",
+    "summon:benefits"
+   ],
+   "missed": [
+    "permanent_growth: gains +2 Attack each trigger",
+    "synergy_payoff: minions with Opening Gambit"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "on_play",
+    "summon:benefits"
+   ],
+   "missed": [
+    "permanent_growth: gains +2 Attack each trigger",
+    "synergy_payoff: minions with Opening Gambit"
+   ]
+  }
+ },
+ "742169": {
+  "A": {
+   "wrong": [
+    "damage_over_time",
+    "items_consumables"
+   ],
+   "missed": [
+    "aura: your General gains Attack while this is in play"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "damage_over_time",
+    "items_consumables"
+   ],
+   "missed": [
+    "aura: your General gains Attack while this is in play"
+   ]
+  }
+ },
+ "742158": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741868": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741999": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742145": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741551": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741763": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742181": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "aoe_damage: 8 damage to all minions",
+    "direct_damage: hits Generals"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "aoe_damage: 8 damage to all minions",
+    "direct_damage: hits Generals"
+   ]
+  }
+ },
+ "741708": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "merge_attach: equip artifacts",
+    "free_play: equip from deck without paying"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "merge_attach: equip artifacts",
+    "free_play: equip from deck without paying"
+   ]
+  }
+ },
+ "742094": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742129": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741712": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741617": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "aura: your minions and General may move an additional space"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "aura: your minions and General may move an additional space"
+   ]
+  }
+ },
+ "742095": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742353": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "variable_stats: artifact with equal Attack"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "variable_stats: artifact with equal Attack"
+   ]
+  }
+ },
+ "741556": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741595": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "delayed: Egg hatches later"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "delayed: Egg hatches later"
+   ]
+  }
+ },
+ "741608": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741540": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "turn_start: Grow"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "turn_start: Grow"
+   ]
+  }
+ },
+ "741993": {
+  "A": {
+   "wrong": [
+    "summon",
+    "summon:benefits"
+   ],
+   "missed": [
+    "in_hand_buff: minion in your action bar +1 Attack"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "summon",
+    "summon:benefits"
+   ],
+   "missed": [
+    "in_hand_buff: minion in your action bar +1 Attack"
+   ]
+  }
+ },
+ "741536": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741816": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741783": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742228": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742170": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741716": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742232": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "count_payoff: Golems summoned this game",
+    "tribal: Golems"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "count_payoff: Golems summoned this game",
+    "tribal: Golems"
+   ]
+  }
+ },
+ "741826": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741594": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741698": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741690": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  }
+ },
+ "742242": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition_count: that many Eggs"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition_count: that many Eggs"
+   ]
+  }
+ },
+ "741807": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "summon: summon the stolen minion"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "summon: summon the stolen minion"
+   ]
+  }
+ },
+ "741830": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741995": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition: if you have another Wraithling"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition: if you have another Wraithling"
+   ]
+  }
+ },
+ "741858": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742038": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742015": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741641": {
+  "A": {
+   "wrong": [
+    "lanes"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "lanes"
+   ],
+   "missed": []
+  }
+ },
+ "741547": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "haste: Rush",
+    "self_destruct: disappears at end of turn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "haste: Rush",
+    "self_destruct: disappears at end of turn"
+   ]
+  }
+ },
+ "741848": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741924": {
+  "A": {
+   "wrong": [
+    "activated"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "activated"
+   ],
+   "missed": []
+  }
+ },
+ "741880": {
+  "A": {
+   "wrong": [
+    "transform",
+    "delayed"
+   ],
+   "missed": [
+    "quests: progresses MECHAZ0R build"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "transform",
+    "delayed"
+   ],
+   "missed": [
+    "quests: progresses MECHAZ0R build"
+   ]
+  }
+ },
+ "741637": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "aoe_damage: 4 damage to enemies around it"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742187": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "tribal: Vespyr minion"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742337": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "tribal: Vespyr minions"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  }
+ }
+}

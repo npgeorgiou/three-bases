@@ -1,0 +1,260 @@
+{
+"741883": [
+"count_payoff",
+"delayed",
+"on_play",
+"shield",
+"transform"
+],
+"741523": [
+"area_templates",
+"lanes",
+"multi_target_attack"
+],
+"742082": [
+"buff",
+"on_play",
+"random_effect"
+],
+"742084": [
+"buff",
+"on_ally_play",
+"on_play",
+"summon:benefits"
+],
+"742169": [
+"buff",
+"condition_count",
+"damage_over_time",
+"items_consumables",
+"terrain",
+"terrain:benefits"
+],
+"742158": [
+"death_trigger",
+"positional",
+"random_effect",
+"revive"
+],
+"741868": [
+"ranged"
+],
+"741999": [
+"alt_wincon",
+"delayed",
+"destroy",
+"high_cost:benefits"
+],
+"742145": [
+"adjacency",
+"death_trigger",
+"summon"
+],
+"741551": [
+"adjacency",
+"condition"
+],
+"741763": [
+"destroy",
+"summon"
+],
+"742181": [
+"damage",
+"friendly_fire",
+"high_cost:benefits",
+"symmetric_effect"
+],
+"741708": [
+"death_trigger",
+"high_cost:benefits",
+"items_consumables",
+"movement",
+"random_effect",
+"tutor"
+],
+"742094": [
+"shield"
+],
+"742129": [
+"cost_reduction",
+"death_trigger",
+"generate_cards",
+"random_effect"
+],
+"741712": [
+"adjacency",
+"high_cost:benefits",
+"steal"
+],
+"741617": [
+"adjacency",
+"high_cost:benefits",
+"immobilize",
+"movement",
+"taunt"
+],
+"742095": [
+"shield"
+],
+"742353": [
+"high_cost:benefits",
+"items_consumables",
+"on_play",
+"transform"
+],
+"741556": [
+"placement_rules"
+],
+"741595": [
+"copy",
+"summon"
+],
+"741608": [
+"adjacency",
+"buff",
+"condition"
+],
+"741540": [
+"permanent_growth",
+"terrain"
+],
+"741993": [
+"buff",
+"on_enemy_enter",
+"summon",
+"summon:benefits"
+],
+"741536": [
+"condition",
+"passive",
+"territory_trigger"
+],
+"741816": [
+"death_trigger",
+"summon"
+],
+"741783": [
+"adjacency",
+"buff",
+"on_play"
+],
+"742228": [
+"random_effect",
+"steal",
+"symmetric_effect"
+],
+"741637": [
+"adjacency",
+"damage",
+"heal"
+],
+"742170": [
+"permanent_growth",
+"turn_start"
+],
+"741716": [
+"buff",
+"movement:grants"
+],
+"742232": [
+"condition_count",
+"on_play",
+"random_effect",
+"summon"
+],
+"741826": [
+"adjacency",
+"death_trigger",
+"high_cost:benefits",
+"immobilize",
+"on_play",
+"summon",
+"taunt"
+],
+"741594": [
+"direct_damage",
+"draw",
+"symmetric_effect"
+],
+"741698": [
+"adjacency",
+"copy",
+"on_play",
+"summon"
+],
+"741690": [
+"direct_damage",
+"items_consumables",
+"on_spell",
+"ping"
+],
+"742187": [
+"multi_attack:grants",
+"on_play"
+],
+"742337": [
+"buff",
+"counterattack",
+"items_consumables",
+"on_attack"
+],
+"742242": [
+"adjacency",
+"damage:benefits",
+"high_cost:benefits",
+"on_damaged",
+"permanent_growth",
+"random_effect",
+"summon",
+"turn_start"
+],
+"741807": [
+"random_effect",
+"steal"
+],
+"741830": [
+"movement"
+],
+"741995": [
+"draw",
+"summon"
+],
+"741858": [
+"ranged"
+],
+"742038": [
+"immunity"
+],
+"742015": [
+"adjacency",
+"free_play",
+"high_cost:benefits",
+"symmetric_effect"
+],
+"741641": [
+"forced_movement",
+"lanes"
+],
+"741547": [
+"adjacency",
+"summon",
+"turn_end",
+"turn_start"
+],
+"741848": [
+"removal",
+"silence",
+"transform"
+],
+"741924": [
+"activated",
+"multi_attack"
+],
+"741880": [
+"count_payoff",
+"delayed",
+"on_play",
+"placement_rules",
+"transform"
+]
+}
