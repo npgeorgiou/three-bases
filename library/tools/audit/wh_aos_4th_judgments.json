@@ -1,0 +1,894 @@
+{
+ "791044": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "792827": {
+  "A": {
+   "wrong": [
+    "delayed",
+    "piercing",
+    "spell_power"
+   ],
+   "missed": [
+    "damage_reduction: subtract 1 from hit/wound rolls, Rend and Damage of attacks targeting this unit",
+    "drawback: subtract 1 from this unit's power level"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "delayed",
+    "piercing",
+    "spell_power"
+   ],
+   "missed": [
+    "damage_reduction: subtract 1 from hit/wound rolls, Rend and Damage of attacks targeting this unit",
+    "drawback: subtract 1 from this unit's power level"
+   ]
+  }
+ },
+ "794593": {
+  "A": {
+   "wrong": [
+    "advantage",
+    "life_track",
+    "permanent_growth",
+    "piercing"
+   ],
+   "missed": [
+    "protection: is not automatically destroyed",
+    "random_effect: allocate D3 damage points",
+    "buff: Attacks characteristic is 7 if this unit charged",
+    "aura: friendly units wholly within 12\" get Ward and control score",
+    "tribal: friendly Duardin units"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "advantage",
+    "life_track",
+    "permanent_growth",
+    "piercing"
+   ],
+   "missed": [
+    "protection: is not automatically destroyed",
+    "random_effect: allocate D3 damage points",
+    "buff: Attacks characteristic is 7 if this unit charged",
+    "aura: friendly units wholly within 12\" get Ward and control score",
+    "tribal: friendly Duardin units"
+   ]
+  }
+ },
+ "816544": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "counter_spell: enemy spells miscast and prayers fail"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "counter_spell: enemy spells miscast and prayers fail"
+   ]
+  }
+ },
+ "815157": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "deckbuilding_effect: Kruleboyz Hero only"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "deckbuilding_effect: Kruleboyz Hero only"
+   ]
+  }
+ },
+ "794410": {
+  "A": {
+   "wrong": [
+    "delayed",
+    "zone_of_control"
+   ],
+   "missed": [
+    "turn_end: End of Any Turn",
+    "information: hidden dice guessing game",
+    "modal_choice: pick 1 of the following effects"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "delayed",
+    "zone_of_control"
+   ],
+   "missed": [
+    "turn_end: End of Any Turn",
+    "information: hidden dice guessing game",
+    "modal_choice: pick 1 of the following effects"
+   ]
+  }
+ },
+ "793432": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "turn_end: End of Any Turn",
+    "debuff: subtract 1 from save rolls for the rest of the battle"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "turn_end: End of Any Turn",
+    "debuff: subtract 1 from save rolls for the rest of the battle"
+   ]
+  }
+ },
+ "815111": {
+  "A": {
+   "wrong": [
+    "round_carryover"
+   ],
+   "missed": [
+    "stacking_keyword: counts as 1 more daemonic power point"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "round_carryover"
+   ],
+   "missed": [
+    "stacking_keyword: counts as 1 more daemonic power point"
+   ]
+  }
+ },
+ "791622": {
+  "A": {
+   "wrong": [
+    "advantage"
+   ],
+   "missed": [
+    "attack_mod: Crit (2 Hits)",
+    "tribal: friendly Helsmiths of Hashut units",
+    "condition_count: 2 or more daemonic power points"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "advantage"
+   ],
+   "missed": [
+    "attack_mod: Crit (2 Hits)",
+    "tribal: friendly Helsmiths of Hashut units",
+    "condition_count: 2 or more daemonic power points"
+   ]
+  }
+ },
+ "793459": {
+  "A": {
+   "wrong": [
+    "cooldowns",
+    "movement",
+    "summon"
+   ],
+   "missed": [
+    "activated: Any Hero Phase Declare",
+    "scope_multi: an enemy unit for each part",
+    "debuff: subtract from the target's Move characteristic"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "cooldowns",
+    "movement",
+    "summon"
+   ],
+   "missed": [
+    "activated: Any Hero Phase Declare",
+    "scope_multi: an enemy unit for each part",
+    "debuff: subtract from the target's Move characteristic"
+   ]
+  }
+ },
+ "794568": {
+  "A": {
+   "wrong": [
+    "movement",
+    "tribal"
+   ],
+   "missed": [
+    "damage_reduction: subtract 1 from Rend of attacks targeting this unit",
+    "terrain: while wholly within the creeping overgrowth"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "movement",
+    "tribal"
+   ],
+   "missed": [
+    "damage_reduction: subtract 1 from Rend of attacks targeting this unit",
+    "terrain: while wholly within the creeping overgrowth"
+   ]
+  }
+ },
+ "793649": {
+  "A": {
+   "wrong": [
+    "delayed",
+    "destroy",
+    "zone_of_control"
+   ],
+   "missed": [
+    "attack_now: Shadow Queen immediately uses a Fight ability",
+    "aoe_damage: D3 mortal damage on each enemy unit in combat with the target",
+    "on_kill: each time you perform a blood rite after an ability destroyed a unit",
+    "modal_choice: pick 1 of the following effects",
+    "stealth: only visible to enemy units within its combat range",
+    "zone_control: set Control characteristic to 5 / 15"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "delayed",
+    "destroy",
+    "zone_of_control"
+   ],
+   "missed": [
+    "attack_now: Shadow Queen immediately uses a Fight ability",
+    "aoe_damage: D3 mortal damage on each enemy unit in combat with the target",
+    "on_kill: each time you perform a blood rite after an ability destroyed a unit",
+    "modal_choice: pick 1 of the following effects",
+    "stealth: only visible to enemy units within its combat range",
+    "zone_control: set Control characteristic to 5 / 15"
+   ]
+  }
+ },
+ "791973": {
+  "A": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": [
+    "suppress: the target cannot use commands"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": [
+    "suppress: the target cannot use commands"
+   ]
+  }
+ },
+ "793037": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "791281": {
+  "A": {
+   "wrong": [
+    "damage",
+    "temporary_effect"
+   ],
+   "missed": [
+    "movement: can immediately use a Retreat ability"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "damage",
+    "temporary_effect"
+   ],
+   "missed": [
+    "movement: can immediately use a Retreat ability"
+   ]
+  }
+ },
+ "793286": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "turn_end: at the end of this turn, after determining control of objectives"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "turn_end: at the end of this turn, after determining control of objectives"
+   ]
+  }
+ },
+ "792722": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "multi_attack: can use a second Shoot ability"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "multi_attack: can use a second Shoot ability"
+   ]
+  }
+ },
+ "793684": {
+  "A": {
+   "wrong": [
+    "damage",
+    "delayed",
+    "resource_gain",
+    "zone_of_control"
+   ],
+   "missed": [
+    "cooldowns: once per battle round engineer the outcome",
+    "aura: add 1 to casting/unbinding rolls for friendly Wizards wholly within 12\"",
+    "cost_reduction: no command points spent for Magical Intervention",
+    "suppress: target's weapons cannot be affected by Charge (+1 Damage)"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "damage",
+    "delayed",
+    "resource_gain",
+    "zone_of_control"
+   ],
+   "missed": [
+    "cooldowns: once per battle round engineer the outcome",
+    "aura: add 1 to casting/unbinding rolls for friendly Wizards wholly within 12\"",
+    "cost_reduction: no command points spent for Magical Intervention",
+    "suppress: target's weapons cannot be affected by Charge (+1 Damage)"
+   ]
+  }
+ },
+ "793616": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "791950": {
+  "A": {
+   "wrong": [
+    "delayed",
+    "turn_start"
+   ],
+   "missed": [
+    "aoe_damage: D3 mortal damage on each enemy unit that was in combat with the target"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "delayed",
+    "turn_start"
+   ],
+   "missed": [
+    "aoe_damage: D3 mortal damage on each enemy unit that was in combat with the target"
+   ]
+  }
+ },
+ "793396": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "792977": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "793303": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "tribal: friendly Deathrattle units",
+    "stat_condition: target has fewer models than the attacking unit"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "tribal: friendly Deathrattle units",
+    "stat_condition: target has fewer models than the attacking unit"
+   ]
+  }
+ },
+ "815128": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "deckbuilding_effect: only for non-Hero Idoneth units, max 1 Ethersea Companion per unit"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "deckbuilding_effect: only for non-Hero Idoneth units, max 1 Ethersea Companion per unit"
+   ]
+  }
+ },
+ "792688": {
+  "A": {
+   "wrong": [
+    "debuff"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "debuff"
+   ],
+   "missed": []
+  }
+ },
+ "792634": {
+  "A": {
+   "wrong": [
+    "sacrifice",
+    "zone_of_control"
+   ],
+   "missed": [
+    "buff: add the target's Control characteristic to the Attacks characteristic",
+    "forced_attack: all combat attacks must target that enemy unit"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "sacrifice",
+    "zone_of_control"
+   ],
+   "missed": [
+    "buff: add the target's Control characteristic to the Attacks characteristic",
+    "forced_attack: all combat attacks must target that enemy unit"
+   ]
+  }
+ },
+ "791021": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "793547": {
+  "A": {
+   "wrong": [
+    "counter_spell",
+    "delayed",
+    "temporary_buff"
+   ],
+   "missed": [
+    "resource_gain: this unit gains 1 ritual point",
+    "on_spell: each time the target uses a Spell or Unbind ability"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "counter_spell",
+    "delayed",
+    "temporary_buff"
+   ],
+   "missed": [
+    "resource_gain: this unit gains 1 ritual point",
+    "on_spell: each time the target uses a Spell or Unbind ability"
+   ]
+  }
+ },
+ "793554": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "793911": {
+  "A": {
+   "wrong": [
+    "upgrade"
+   ],
+   "missed": [
+    "activated: Empowered by Memory spell in your Hero Phase",
+    "buff: melee weapons have Crit (Auto-wound)"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "upgrade"
+   ],
+   "missed": [
+    "activated: Empowered by Memory spell in your Hero Phase",
+    "buff: melee weapons have Crit (Auto-wound)"
+   ]
+  }
+ },
+ "815018": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  }
+ },
+ "793865": {
+  "A": {
+   "wrong": [
+    "damage"
+   ],
+   "missed": [
+    "zone_of_control: no mortal damage inflicted by Retreat abilities"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "damage"
+   ],
+   "missed": [
+    "zone_of_control: no mortal damage inflicted by Retreat abilities"
+   ]
+  }
+ },
+ "792566": {
+  "A": {
+   "wrong": [
+    "reactions"
+   ],
+   "missed": [
+    "cost_reduction: subtract 1 from relentless discipline points spent"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "reactions"
+   ],
+   "missed": [
+    "cost_reduction: subtract 1 from relentless discipline points spent"
+   ]
+  }
+ },
+ "793180": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "type_grant: this unit has the Pledged to Slaanesh keyword"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "type_grant: this unit has the Pledged to Slaanesh keyword"
+   ]
+  }
+ },
+ "793813": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "791147": {
+  "A": {
+   "wrong": [
+    "activated"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "activated"
+   ],
+   "missed": []
+  }
+ },
+ "815092": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "deckbuilding_effect: can only be given to Magmadroths"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "deckbuilding_effect: can only be given to Magmadroths"
+   ]
+  }
+ },
+ "792082": {
+  "A": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  }
+ },
+ "793962": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "791845": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "793601": {
+  "A": {
+   "wrong": [
+    "destroy",
+    "zone_of_control"
+   ],
+   "missed": [
+    "turn_end: End of Any Turn",
+    "on_kill: if any enemy models are slain by this ability, place a token",
+    "stacking_keyword: dark sorcery tokens up to 3, +1 casting per token",
+    "scope_multi: up to 3 friendly units"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "destroy",
+    "zone_of_control"
+   ],
+   "missed": [
+    "turn_end: End of Any Turn",
+    "on_kill: if any enemy models are slain by this ability, place a token",
+    "stacking_keyword: dark sorcery tokens up to 3, +1 casting per token",
+    "scope_multi: up to 3 friendly units"
+   ]
+  }
+ },
+ "793744": {
+  "A": {
+   "wrong": [
+    "delayed",
+    "destroy",
+    "passive",
+    "zone_of_control"
+   ],
+   "missed": [
+    "sacrifice: 1 model in a friendly unit is automatically slain",
+    "turn_end: End of Any Turn"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "delayed",
+    "destroy",
+    "passive",
+    "zone_of_control"
+   ],
+   "missed": [
+    "sacrifice: 1 model in a friendly unit is automatically slain",
+    "turn_end: End of Any Turn"
+   ]
+  }
+ },
+ "791861": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": [
+    "movement: remove the target and set it up again"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": [
+    "movement: remove the target and set it up again"
+   ]
+  }
+ },
+ "816560": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "791446": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": [
+    "mark_target: attacks that target that enemy unit get +1 Rend"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": [
+    "mark_target: attacks that target that enemy unit get +1 Rend"
+   ]
+  }
+ },
+ "815067": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "suppress: the target cannot use Rampage abilities"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "suppress: the target cannot use Rampage abilities"
+   ]
+  }
+ },
+ "793603": {
+  "A": {
+   "wrong": [
+    "advantage"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "advantage"
+   ],
+   "missed": []
+  }
+ },
+ "815061": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "deckbuilding_effect: Cannonade Cogfort and Conqueror Cogfort only"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "deckbuilding_effect: Cannonade Cogfort and Conqueror Cogfort only"
+   ]
+  }
+ },
+ "815283": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "scope_multi: 1 additional target"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "scope_multi: 1 additional target"
+   ]
+  }
+ },
+ "815141": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ }
+}

@@ -1,0 +1,388 @@
+793681	+forced_movement	missed forced_movement
+793681	+turn_end	end of turn missed
+793681	-zone_of_control	in combat tagged as zone_of_control
+815268	+resource_gain	missed resource_gain
+815083	-condition_life	wrong condition_life
+815083	-drawback	wrong drawback
+794510	+immunity	missed immunity
+794510	-counter_spell	wrong counter_spell
+794510	-stealth	cannot be targeted tagged as stealth
+794510	-summon	summon word without summoning
+794510	-zone_of_control	in combat tagged as zone_of_control
+791316	+coin_economy:cost	missed coin_economy
+791316	+suppress	missed suppress
+791316	-resource_banking	wrong resource_banking
+792200	-turn_start	end of turn tagged as turn_start
+792200	-zone_of_control	in combat tagged as zone_of_control
+791568	+turn_end	end of turn missed
+791568	-turn_start	end of turn tagged as turn_start
+791568	-zone_of_control	in combat tagged as zone_of_control
+793356	+aoe_damage	missed aoe_damage
+793356	-damage	wrong damage
+793356	-zone_of_control	in combat tagged as zone_of_control
+794498	-advantage	no reroll tagged as advantage
+794498	-tribal	anti-keyword tagged as tribal
+793245	+spell_power:counters	missed spell_power
+793245	+removal	missed removal
+793245	-counter_spell	wrong counter_spell
+793245	-delayed	until next turn tagged as delayed
+793245	-spell_power	wrong spell_power
+793245	-summon	summon word without summoning
+794030	-zone_of_control	in combat tagged as zone_of_control
+792797	+summon:benefits	missed summon
+792797	+spell_power	missed spell_power
+792797	-summon	summon word without summoning
+815027	-temporary_effect	wrong temporary_effect
+791991	+stat_set	missed stat_set
+791991	-delayed	until next turn tagged as delayed
+791991	-passive	stat line or active ability tagged passive
+791991	-zone_of_control	in combat tagged as zone_of_control
+791455	+temporary_buff	missed temporary_buff
+791455	-buff	wrong buff
+791455	-temporary_effect	wrong temporary_effect
+793318	+on_kill	missed on_kill
+793318	+turn_end	end of turn missed
+793318	-zone_of_control	in combat tagged as zone_of_control
+791150	+turn_end	end of turn missed
+815220	+counterattack	missed counterattack
+792863	+ranged:counters	missed ranged
+792863	-ranged	wrong ranged
+793844	+turn_end	end of turn missed
+794504	+attack_now	missed attack_now
+794504	-zone_of_control	in combat tagged as zone_of_control
+794524	-advantage	no reroll tagged as advantage
+791023	+ranged:counters	missed ranged
+791023	-stealth	cannot be targeted tagged as stealth
+791023	-zone_of_control	in combat tagged as zone_of_control
+791023	-ranged	wrong ranged
+794214	+piercing:counters	missed piercing
+794214	+revive	missed revive
+794214	+bodyguard	missed bodyguard
+794214	+attack_mod	missed attack_mod
+794214	-advantage	no reroll tagged as advantage
+794214	-link_formation	wrong link_formation
+794214	-resource_gain	wrong resource_gain
+794214	-stealth	cannot be targeted tagged as stealth
+794214	-temporary_effect	wrong temporary_effect
+794214	-tribal	anti-keyword tagged as tribal
+794214	-zone_of_control	in combat tagged as zone_of_control
+794214	-piercing	wrong piercing
+792249	-delayed	until next turn tagged as delayed
+794329	+multi_attack	missed multi_attack
+794329	+drawback	missed drawback
+794329	-damage	wrong damage
+794329	-debuff	wrong debuff
+794329	-temporary_buff	wrong temporary_buff
+815081	-passive	stat line or active ability tagged passive
+793773	+mark_target	missed mark_target
+793773	+start_of_game	missed start_of_game
+793773	-placement_rules	wrong placement_rules
+793773	-zone_of_control	in combat tagged as zone_of_control
+792501	+immobilize	missed immobilize
+792501	+stat_condition	missed stat_condition
+792501	-movement	wrong movement
+792501	-zone_of_control	in combat tagged as zone_of_control
+791159	+permanent_growth	missed permanent_growth
+791159	+on_kill	missed on_kill
+791159	+turn_end	end of turn missed
+791159	-buff	wrong buff
+791123	+attack_mod	missed attack_mod
+791123	-buff	wrong buff
+791136	+revive:counters	missed revive
+791136	-destroy	slain models returned tagged as destroy
+794021	+condition_count	missed condition_count
+794021	-damage	wrong damage
+794021	-zone_of_control	in combat tagged as zone_of_control
+793560	+debuff	missed debuff
+793560	+temporary_effect	missed temporary_effect
+793560	-damage	wrong damage
+793560	-temporary_buff	wrong temporary_buff
+793560	-tribal	anti-keyword tagged as tribal
+793560	-zone_of_control	in combat tagged as zone_of_control
+792811	+shield	missed shield
+794175	-summon	summon word without summoning
+794347	-death_trigger	wrong death_trigger
+791152	+condition_count	missed condition_count
+793500	+attack_mod	missed attack_mod
+793500	-buff	wrong buff
+793087	-destroy	slain models returned tagged as destroy
+793357	+modal_choice	missed modal_choice
+793357	+drawback	drawback missed
+793357	-destroy	slain models returned tagged as destroy
+793357	-delayed	until next turn tagged as delayed
+793357	-passive	stat line or active ability tagged passive
+793610	-tribal	anti-keyword tagged as tribal
+793610	-zone_of_control	in combat tagged as zone_of_control
+793610	-damage	crit mortal or non-damage tagged as damage
+794135	+damage_reduction	missed damage_reduction
+794135	-temporary_effect	wrong temporary_effect
+794135	-terrain	wrong terrain
+794135	-buff	hit/rend/save mod tagged as buff
+792033	+piercing:counters	missed piercing
+792033	-delayed	until next turn tagged as delayed
+792033	-piercing	wrong piercing
+793187	+friendly_fire	missed friendly_fire
+793187	-piercing	wrong piercing
+793187	-damage	crit mortal or non-damage tagged as damage
+793187	-zone_of_control	in combat tagged as zone_of_control
+792368	+aoe_damage	multi-target mortal damage missed
+792368	-damage	crit mortal or non-damage tagged as damage
+791119	+multi_attack	two fights missed
+791119	+drawback	drawback missed
+791119	-debuff	self strike-last tagged as debuff
+815227	-passive	stat line or active ability tagged passive
+793627	+ranged:counters	missed ranged
+793627	-tribal	anti-keyword tagged as tribal
+793627	-passive	stat line or active ability tagged passive
+793627	-zone_control	wrong zone_control
+793627	-ranged	wrong ranged
+793990	+stat_condition	missed stat_condition
+793990	-tribal	anti-keyword tagged as tribal
+793990	-zone_of_control	in combat tagged as zone_of_control
+793990	-death_trigger	wrong death_trigger
+793990	-drawback	wrong drawback
+791483	+condition_life	missed condition_life
+791890	-delayed	until next turn tagged as delayed
+793935	+multi_attack	two fights missed
+793935	+drawback	drawback missed
+793935	+immobilize	missed immobilize
+793935	-debuff	self strike-last tagged as debuff
+793935	-damage	crit mortal or non-damage tagged as damage
+794338	+condition_life	missed condition_life
+794338	+attack_now	missed attack_now
+794338	-tribal	anti-keyword tagged as tribal
+794338	-zone_of_control	in combat tagged as zone_of_control
+816556	-zone_of_control	in combat tagged as zone_of_control
+792400	+damage_reduction:counters	missed damage_reduction
+792400	-damage_reduction	wrong damage_reduction
+792400	-zone_of_control	in combat tagged as zone_of_control
+791582	+type_grant	missed type_grant
+791582	-counter_spell	wrong counter_spell
+794420	-delayed	until next turn tagged as delayed
+794420	-damage	crit mortal or non-damage tagged as damage
+792573	-buff	hit/rend/save mod tagged as buff
+794283	+aoe_damage	multi-target mortal damage missed
+794283	-zone_of_control	in combat tagged as zone_of_control
+794283	-damage	crit mortal or non-damage tagged as damage
+793411	+damage_reduction	missed damage_reduction
+793411	-excess_damage	wrong excess_damage
+794107	+suppress	missed suppress
+794107	-advantage	no reroll tagged as advantage
+794107	-condition_life	wrong condition_life
+794107	-movement	wrong movement
+792432	+condition_count	missed condition_count
+792342	-selection	wrong selection
+792342	-zone_of_control	in combat tagged as zone_of_control
+793758	+death_trigger	missed death_trigger
+793758	+aura	missed aura
+793758	+condition_count	missed condition_count
+793758	-advantage	no reroll tagged as advantage
+793758	-cheat_death	wrong cheat_death
+793758	-on_damaged	wrong on_damaged
+793758	-delayed	until next turn tagged as delayed
+793372	-zone_of_control	in combat tagged as zone_of_control
+815263	+shield	missed shield
+793399	+death_count	missed death_count
+792879	+aura	missed aura
+793764	+modal_choice	missed modal_choice
+793764	+death_count	missed death_count
+793764	-delayed	until next turn tagged as delayed
+815292	-passive	stat line or active ability tagged passive
+793280	-zone_of_control	in combat tagged as zone_of_control
+792148	-delayed	until next turn tagged as delayed
+794423	-zone_of_control	in combat tagged as zone_of_control
+815063	-passive	stat line or active ability tagged passive
+792929	+on_kill	missed on_kill
+794084	-buff	hit/rend/save mod tagged as buff
+791824	+start_of_game	missed start_of_game
+791824	-placement_rules	wrong placement_rules
+792735	+attack_mod	hit/wound roll mod missed
+792735	-buff	hit/rend/save mod tagged as buff
+793593	+damage_reduction	missed damage_reduction
+793593	-movement	wrong movement
+793593	-temporary_effect	wrong temporary_effect
+794246	+ranged:counters	missed ranged
+794246	+suppress	missed suppress
+794246	-advantage	no reroll tagged as advantage
+794246	-link_formation	wrong link_formation
+794246	-delayed	until next turn tagged as delayed
+794246	-ranged	wrong ranged
+794561	+immobilize	missed immobilize
+794561	+aoe_damage	multi-target mortal damage missed
+794561	-advantage	no reroll tagged as advantage
+794561	-on_damaged	wrong on_damaged
+794561	-passive	stat line or active ability tagged passive
+794561	-zone_of_control	in combat tagged as zone_of_control
+794561	-damage	crit mortal or non-damage tagged as damage
+794125	+modal_choice	missed modal_choice
+794125	+attack_mod	hit/wound roll mod missed
+794125	-advantage	no reroll tagged as advantage
+794125	-damage	crit mortal or non-damage tagged as damage
+794125	-death_trigger	wrong death_trigger
+794400	+modal_choice	missed modal_choice
+794400	+revive	missed revive
+794400	+stat_set	missed stat_set
+794400	+attack_mod	hit/wound roll mod missed
+794400	-delayed	until next turn tagged as delayed
+794400	-destroy	slain models returned tagged as destroy
+794400	-haste	wrong haste
+794400	-summon	summon word without summoning
+794400	-zone_of_control	in combat tagged as zone_of_control
+794400	-piercing	ward-ignore or anti-rend tagged as piercing
+791425	+attack_mod	hit/wound roll mod missed
+791425	-buff	hit/rend/save mod tagged as buff
+791425	-zone_of_control	in combat tagged as zone_of_control
+793093	+debuff	missed debuff
+793093	-zone_of_control	in combat tagged as zone_of_control
+794080	+piercing:counters	missed piercing
+794080	-delayed	until next turn tagged as delayed
+794080	-piercing	ward-ignore or anti-rend tagged as piercing
+793414	+condition_count	missed condition_count
+793414	+attack_mod	hit/wound roll mod missed
+793414	-random_effect	wrong random_effect
+793414	-zone_of_control	in combat tagged as zone_of_control
+793414	-buff	hit/rend/save mod tagged as buff
+791525	+turn_start	missed turn_start
+791525	+attack_mod	hit/wound roll mod missed
+791525	-destroy	slain models returned tagged as destroy
+791525	-buff	hit/rend/save mod tagged as buff
+794572	-advantage	no reroll tagged as advantage
+794572	-terrain	wrong terrain
+794572	-zone_of_control	in combat tagged as zone_of_control
+791783	+drawback	drawback missed
+791783	+temporary_buff	missed temporary_buff
+791783	+turn_start	missed turn_start
+791783	-damage	crit mortal or non-damage tagged as damage
+791783	-damage_reduction	wrong damage_reduction
+791783	-piercing	ward-ignore or anti-rend tagged as piercing
+791783	-stat_multiply:benefits	duplicate stat_multiply role
+791783	-activated	wrong activated
+791783	-temporary_effect	wrong temporary_effect
+793469	+turn_end	missed turn_end
+793469	-tribal	anti-keyword tagged as tribal
+793469	-piercing	ward-ignore or anti-rend tagged as piercing
+793469	-summon	summon word without summoning
+815237	-passive	stat line or active ability tagged passive
+792878	+suppress	missed suppress
+792878	-zone_of_control	in combat tagged as zone_of_control
+792750	+temporary_buff	missed temporary_buff
+792750	-passive	stat line or active ability tagged passive
+792750	-temporary_effect	wrong temporary_effect
+793328	+friendly_fire	missed friendly_fire
+793328	-damage	crit mortal or non-damage tagged as damage
+793328	-piercing	ward-ignore or anti-rend tagged as piercing
+793328	-zone_of_control	in combat tagged as zone_of_control
+794377	+start_of_game	missed start_of_game
+794377	-advantage	no reroll tagged as advantage
+794377	-deck_position	wrong deck_position
+794377	-zone_of_control	in combat tagged as zone_of_control
+794377	-buff	hit/rend/save mod tagged as buff
+791155	+attack_mod	hit/wound roll mod missed
+791155	-buff	hit/rend/save mod tagged as buff
+793233	+stat_condition	missed stat_condition
+793233	-destroy:benefits	duplicate destroy role
+793233	-stat_multiply	wrong stat_multiply
+793233	-stat_multiply:benefits	duplicate stat_multiply role
+793233	-zone_of_control	in combat tagged as zone_of_control
+791222	+start_of_game	missed start_of_game
+791222	-placement_rules	wrong placement_rules
+791222	-zone_of_control	in combat tagged as zone_of_control
+792458	+turn_end	missed turn_end
+792458	+attack_now	missed attack_now
+792458	+coin_economy:cost	missed coin_economy
+792458	-resource_banking	wrong resource_banking
+794248	+stat_set	missed stat_set
+794248	-advantage	no reroll tagged as advantage
+794248	-drawback	wrong drawback
+794248	-zone_of_control	in combat tagged as zone_of_control
+794248	-ranged	wrong ranged
+815271	+death_trigger	missed death_trigger
+815271	+aoe_damage	multi-target mortal damage missed
+815271	+friendly_fire	missed friendly_fire
+815271	+stat_condition	missed stat_condition
+815271	-death_count	wrong death_count
+815271	-destroy	slain models returned tagged as destroy
+815271	-destroy:benefits	duplicate destroy role
+815271	-damage	crit mortal or non-damage tagged as damage
+793875	+immobilize	missed immobilize
+793875	+delayed	missed delayed
+793875	-advantage	no reroll tagged as advantage
+793875	-counter_spell	unbind/banish tagged as counter_spell
+793875	-damage	crit mortal or non-damage tagged as damage
+793875	-summon	summon word without summoning
+793783	+turn_start	missed turn_start
+793783	-zone_of_control	in combat tagged as zone_of_control
+793783	-temporary_effect	wrong temporary_effect
+793719	+buff	missed buff
+793719	+temporary_buff	missed temporary_buff
+793719	-summon	summon word without summoning
+793719	-upgrade	wrong upgrade
+793719	-passive	stat line or active ability tagged passive
+793719	-ranged	wrong ranged
+793719	-temporary_effect	wrong temporary_effect
+792880	-delayed	until next turn tagged as delayed
+794011	+stat_set	missed stat_set
+794011	+coin_economy	missed coin_economy
+794011	-condition_count	wrong condition_count
+794011	-variable_stats	wrong variable_stats
+794011	-zone_of_control	in combat tagged as zone_of_control
+794011	-on_attack	wrong on_attack
+794011	-drawback	wrong drawback
+794011	-damage	crit mortal or non-damage tagged as damage
+791812	+movement	missed movement
+791812	-zone_of_control	in combat tagged as zone_of_control
+793385	+resource_gain	missed resource_gain
+792070	-condition_count	wrong condition_count
+791076	+turn_start	missed turn_start
+791076	+drawback	drawback missed
+791076	-counter_spell	unbind/banish tagged as counter_spell
+791076	-summon	summon word without summoning
+794538	+attack_mod	hit/wound roll mod missed
+794538	+temporary_buff	missed temporary_buff
+794538	-buff	hit/rend/save mod tagged as buff
+794538	-damage	crit mortal or non-damage tagged as damage
+794538	-destroy	slain models returned tagged as destroy
+794538	-temporary_effect	wrong temporary_effect
+791949	-delayed	until next turn tagged as delayed
+793552	+debuff	missed debuff
+793552	-advantage	no reroll tagged as advantage
+793552	-once_per_game	wrong once_per_game
+816557	+movement	missed movement
+816557	-advantage	no reroll tagged as advantage
+816557	-tribal	anti-keyword tagged as tribal
+816557	-ranged	wrong ranged
+816557	-zone_of_control	in combat tagged as zone_of_control
+793591	+attack_mod	hit/wound roll mod missed
+793591	-buff	hit/rend/save mod tagged as buff
+793438	-random_effect	wrong random_effect
+792625	+movement	missed movement
+793717	+life_payment	missed life_payment
+793717	+revive	missed revive
+793717	-damage_reduction	wrong damage_reduction
+793717	-destroy	slain models returned tagged as destroy
+793717	-lifesteal	wrong lifesteal
+793717	-piercing	ward-ignore or anti-rend tagged as piercing
+793717	-tribal	anti-keyword tagged as tribal
+792672	+shield	missed shield
+793185	+condition_count	missed condition_count
+794062	+start_of_game	missed start_of_game
+794062	-damage	crit mortal or non-damage tagged as damage
+794062	-piercing	ward-ignore or anti-rend tagged as piercing
+794062	-tribal	anti-keyword tagged as tribal
+794062	-zone_of_control	in combat tagged as zone_of_control
+794062	-temporary_buff	wrong temporary_buff
+793590	+sacrifice	missed sacrifice
+793590	+damage_reduction	missed damage_reduction
+793590	-zone_of_control	in combat tagged as zone_of_control
+793850	+heal	missed heal
+793850	+permanent_growth	missed permanent_growth
+793850	+turn_end	missed turn_end
+793850	+stat_condition	missed stat_condition
+793850	+attack_now	missed attack_now
+793850	-counter_spell	unbind/banish tagged as counter_spell
+793850	-summon	summon word without summoning
+793850	-zone_of_control	in combat tagged as zone_of_control
+794362	+death_count	missed death_count
+794362	+aura	missed aura
+794362	-summon	summon word without summoning
+794362	-upgrade	wrong upgrade

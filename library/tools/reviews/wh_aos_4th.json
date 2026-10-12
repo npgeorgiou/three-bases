@@ -134,5 +134,1707 @@
 "regeneration"
 ],
 "drop": []
+},
+"793681": {
+"add": [
+"forced_movement",
+"turn_end",
+"cooldowns",
+"random_effect"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"815268": {
+"add": [
+"resource_gain",
+"passive"
+],
+"drop": []
+},
+"815083": {
+"add": [
+"passive"
+],
+"drop": [
+"condition_life",
+"drawback"
+]
+},
+"794510": {
+"add": [
+"immunity",
+"damage_reduction",
+"movement",
+"passive",
+"spell_power"
+],
+"drop": [
+"counter_spell",
+"stealth",
+"summon",
+"zone_of_control"
+]
+},
+"791316": {
+"add": [
+"coin_economy:cost",
+"suppress",
+"cooldowns",
+"temporary_effect"
+],
+"drop": [
+"resource_banking"
+]
+},
+"792200": {
+"add": [
+"activated",
+"movement",
+"random_effect"
+],
+"drop": [
+"turn_start",
+"zone_of_control"
+]
+},
+"791568": {
+"add": [
+"turn_end",
+"cooldowns",
+"movement",
+"random_effect"
+],
+"drop": [
+"turn_start",
+"zone_of_control"
+]
+},
+"793356": {
+"add": [
+"aoe_damage",
+"cooldowns",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"damage",
+"zone_of_control"
+]
+},
+"794498": {
+"add": [
+"activated",
+"damage",
+"movement",
+"piercing"
+],
+"drop": [
+"advantage",
+"tribal"
+]
+},
+"793245": {
+"add": [
+"removal",
+"cooldowns",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"counter_spell",
+"delayed",
+"summon"
+]
+},
+"794030": {
+"add": [
+"cooldowns",
+"movement",
+"random_effect",
+"ranged"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"792797": {
+"add": [
+"spell_power",
+"cooldowns",
+"random_effect",
+"reactions"
+],
+"drop": []
+},
+"815027": {
+"add": [
+"passive"
+],
+"drop": [
+"temporary_effect"
+]
+},
+"791991": {
+"add": [
+"stat_set",
+"activated",
+"random_effect",
+"temporary_effect",
+"zone_control"
+],
+"drop": [
+"delayed",
+"passive",
+"zone_of_control"
+]
+},
+"791455": {
+"add": [
+"temporary_buff",
+"activated",
+"once_per_game"
+],
+"drop": [
+"buff",
+"temporary_effect"
+]
+},
+"793318": {
+"add": [
+"on_kill",
+"turn_end",
+"activated",
+"movement",
+"random_effect"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"791150": {
+"add": [
+"turn_end",
+"activated",
+"damage",
+"random_effect"
+],
+"drop": []
+},
+"815220": {
+"add": [
+"counterattack",
+"damage",
+"passive",
+"random_effect"
+],
+"drop": []
+},
+"792863": {
+"add": [
+"damage_reduction",
+"passive"
+],
+"drop": []
+},
+"793844": {
+"add": [
+"turn_end",
+"cooldowns",
+"debuff",
+"movement",
+"passive",
+"random_effect",
+"zone_of_control"
+],
+"drop": []
+},
+"794504": {
+"add": [
+"attack_now",
+"activated",
+"ranged"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"794524": {
+"add": [
+"activated",
+"damage_reduction",
+"once_per_game",
+"passive",
+"piercing",
+"temporary_effect",
+"turn_end",
+"zone_control"
+],
+"drop": [
+"advantage"
+]
+},
+"791023": {
+"add": [
+"immunity",
+"passive",
+"terrain"
+],
+"drop": [
+"stealth",
+"zone_of_control"
+]
+},
+"794214": {
+"add": [
+"revive",
+"bodyguard",
+"attack_mod",
+"aura",
+"cooldowns",
+"counter_spell",
+"damage",
+"damage_reduction",
+"death_trigger",
+"destroy",
+"first_strike",
+"heal",
+"movement",
+"once_per_game",
+"placement_rules",
+"ranged",
+"reactions",
+"spell_power",
+"summon",
+"symmetric_effect",
+"terrain",
+"zone_control"
+],
+"drop": [
+"advantage",
+"link_formation",
+"resource_gain",
+"stealth",
+"temporary_effect",
+"tribal",
+"zone_of_control"
+]
+},
+"792249": {
+"add": [
+"activated",
+"buff",
+"piercing",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"delayed"
+]
+},
+"794329": {
+"add": [
+"multi_attack",
+"drawback",
+"activated",
+"once_per_game"
+],
+"drop": [
+"damage",
+"debuff",
+"temporary_buff"
+]
+},
+"815081": {
+"add": [],
+"drop": [
+"passive"
+]
+},
+"793773": {
+"add": [
+"mark_target",
+"start_of_game",
+"activated",
+"buff",
+"condition_life",
+"damage",
+"death_trigger",
+"passive",
+"reserve_bench"
+],
+"drop": [
+"placement_rules",
+"zone_of_control"
+]
+},
+"792501": {
+"add": [
+"immobilize",
+"stat_condition",
+"cooldowns",
+"destroy",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"movement",
+"zone_of_control"
+]
+},
+"791159": {
+"add": [
+"permanent_growth",
+"on_kill",
+"turn_end",
+"activated"
+],
+"drop": [
+"buff"
+]
+},
+"791123": {
+"add": [
+"attack_mod",
+"passive",
+"zone_control"
+],
+"drop": [
+"buff"
+]
+},
+"791136": {
+"add": [
+"revive:counters",
+"heal:counters",
+"passive"
+],
+"drop": [
+"destroy"
+]
+},
+"794021": {
+"add": [
+"condition_count",
+"buff",
+"damage_reduction",
+"passive",
+"piercing"
+],
+"drop": [
+"damage",
+"zone_of_control"
+]
+},
+"793560": {
+"add": [
+"debuff",
+"temporary_effect",
+"activated",
+"piercing",
+"random_effect"
+],
+"drop": [
+"damage",
+"temporary_buff",
+"tribal",
+"zone_of_control"
+]
+},
+"792811": {
+"add": [
+"shield",
+"damage_reduction",
+"passive"
+],
+"drop": []
+},
+"794175": {
+"add": [
+"debuff",
+"passive",
+"zone_control"
+],
+"drop": [
+"summon"
+]
+},
+"794347": {
+"add": [
+"activated",
+"damage",
+"random_effect"
+],
+"drop": [
+"death_trigger"
+]
+},
+"791152": {
+"add": [
+"condition_count",
+"buff",
+"passive",
+"random_effect"
+],
+"drop": []
+},
+"793500": {
+"add": [
+"attack_mod",
+"passive"
+],
+"drop": [
+"buff"
+]
+},
+"793087": {
+"add": [
+"activated",
+"once_per_game",
+"random_effect",
+"revive"
+],
+"drop": [
+"destroy"
+]
+},
+"793357": {
+"add": [
+"modal_choice",
+"drawback",
+"buff",
+"cooldowns",
+"revive",
+"temporary_effect",
+"turn_end",
+"zone_control"
+],
+"drop": [
+"destroy",
+"delayed",
+"passive"
+]
+},
+"793610": {
+"add": [
+"cooldowns",
+"first_strike",
+"passive",
+"piercing",
+"stealth"
+],
+"drop": [
+"tribal",
+"zone_of_control",
+"damage"
+]
+},
+"794135": {
+"add": [
+"damage_reduction",
+"passive"
+],
+"drop": [
+"temporary_effect",
+"terrain",
+"buff"
+]
+},
+"792033": {
+"add": [
+"activated",
+"damage_reduction",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"delayed"
+]
+},
+"793187": {
+"add": [
+"friendly_fire",
+"damage_reduction",
+"passive"
+],
+"drop": [
+"piercing",
+"damage",
+"zone_of_control"
+]
+},
+"792368": {
+"add": [
+"aoe_damage",
+"cooldowns",
+"random_effect"
+],
+"drop": [
+"damage"
+]
+},
+"791119": {
+"add": [
+"multi_attack",
+"drawback",
+"activated",
+"once_per_game",
+"temporary_effect"
+],
+"drop": [
+"debuff"
+]
+},
+"815227": {
+"add": [],
+"drop": [
+"passive"
+]
+},
+"793627": {
+"add": [
+"activated",
+"damage_reduction",
+"piercing",
+"random_effect",
+"summon",
+"terrain"
+],
+"drop": [
+"tribal",
+"passive",
+"zone_control"
+]
+},
+"793990": {
+"add": [
+"stat_condition",
+"condition_life",
+"cooldowns",
+"counter_spell",
+"damage",
+"destroy",
+"passive",
+"piercing",
+"random_effect",
+"reactions"
+],
+"drop": [
+"tribal",
+"zone_of_control",
+"death_trigger",
+"drawback"
+]
+},
+"791483": {
+"add": [
+"condition_life",
+"damage_reduction",
+"passive"
+],
+"drop": []
+},
+"791890": {
+"add": [
+"activated",
+"debuff",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"delayed"
+]
+},
+"793935": {
+"add": [
+"multi_attack",
+"drawback",
+"immobilize",
+"activated",
+"once_per_game",
+"passive",
+"ranged",
+"temporary_effect",
+"zone_of_control"
+],
+"drop": [
+"debuff",
+"damage"
+]
+},
+"794338": {
+"add": [
+"condition_life",
+"attack_now",
+"activated",
+"passive",
+"piercing",
+"reactions",
+"temporary_buff"
+],
+"drop": [
+"tribal",
+"zone_of_control"
+]
+},
+"816556": {
+"add": [
+"damage",
+"passive",
+"random_effect",
+"ranged"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"792400": {
+"add": [
+"cooldowns",
+"piercing",
+"temporary_effect"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"791582": {
+"add": [
+"type_grant",
+"passive",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"counter_spell"
+]
+},
+"794420": {
+"add": [
+"activated",
+"advantage",
+"passive",
+"temporary_effect"
+],
+"drop": [
+"delayed",
+"damage"
+]
+},
+"792573": {
+"add": [
+"passive",
+"piercing"
+],
+"drop": [
+"buff"
+]
+},
+"794283": {
+"add": [
+"aoe_damage",
+"activated",
+"movement",
+"random_effect",
+"ranged"
+],
+"drop": [
+"zone_of_control",
+"damage"
+]
+},
+"793411": {
+"add": [
+"damage_reduction",
+"passive"
+],
+"drop": [
+"excess_damage"
+]
+},
+"794107": {
+"add": [
+"suppress",
+"passive",
+"zone_control"
+],
+"drop": [
+"advantage",
+"condition_life",
+"movement"
+]
+},
+"792432": {
+"add": [
+"condition_count",
+"buff",
+"passive",
+"terrain"
+],
+"drop": []
+},
+"792342": {
+"add": [
+"debuff",
+"passive",
+"zone_control"
+],
+"drop": [
+"selection",
+"zone_of_control"
+]
+},
+"793758": {
+"add": [
+"death_trigger",
+"aura",
+"condition_count",
+"passive",
+"piercing",
+"temporary_buff",
+"tribal"
+],
+"drop": [
+"advantage",
+"cheat_death",
+"on_damaged",
+"delayed"
+]
+},
+"793372": {
+"add": [
+"cooldowns",
+"movement",
+"random_effect"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"815263": {
+"add": [
+"shield",
+"passive"
+],
+"drop": []
+},
+"793399": {
+"add": [
+"death_count",
+"movement",
+"passive"
+],
+"drop": []
+},
+"792879": {
+"add": [
+"aura",
+"buff",
+"passive"
+],
+"drop": []
+},
+"793764": {
+"add": [
+"modal_choice",
+"death_count",
+"buff",
+"cooldowns",
+"damage_reduction",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"delayed"
+]
+},
+"815292": {
+"add": [],
+"drop": [
+"passive"
+]
+},
+"793280": {
+"add": [
+"activated",
+"damage",
+"once_per_game",
+"random_effect"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"792148": {
+"add": [
+"activated",
+"buff",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"delayed"
+]
+},
+"794423": {
+"add": [
+"damage_reduction",
+"passive"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"815063": {
+"add": [],
+"drop": [
+"passive"
+]
+},
+"792929": {
+"add": [
+"on_kill",
+"activated",
+"once_per_game",
+"zone_control"
+],
+"drop": []
+},
+"794084": {
+"add": [
+"passive",
+"piercing"
+],
+"drop": [
+"buff"
+]
+},
+"791824": {
+"add": [
+"start_of_game",
+"activated",
+"movement"
+],
+"drop": [
+"placement_rules"
+]
+},
+"792735": {
+"add": [
+"attack_mod",
+"passive"
+],
+"drop": [
+"buff"
+]
+},
+"793593": {
+"add": [
+"damage_reduction",
+"passive"
+],
+"drop": [
+"movement",
+"temporary_effect"
+]
+},
+"794246": {
+"add": [
+"suppress",
+"activated",
+"damage",
+"damage_reduction",
+"temporary_effect"
+],
+"drop": [
+"advantage",
+"link_formation",
+"delayed"
+]
+},
+"794561": {
+"add": [
+"immobilize",
+"aoe_damage",
+"activated",
+"temporary_effect",
+"terrain"
+],
+"drop": [
+"advantage",
+"on_damaged",
+"passive",
+"zone_of_control",
+"damage"
+]
+},
+"794125": {
+"add": [
+"modal_choice",
+"attack_mod",
+"cooldowns",
+"passive",
+"temporary_buff",
+"zone_control"
+],
+"drop": [
+"advantage",
+"damage",
+"death_trigger"
+]
+},
+"794400": {
+"add": [
+"modal_choice",
+"revive",
+"stat_set",
+"attack_mod",
+"condition_life",
+"cooldowns",
+"damage",
+"damage_reduction",
+"drawback",
+"movement",
+"once_per_game",
+"passive",
+"random_effect",
+"spell_power",
+"stealth",
+"temporary_effect"
+],
+"drop": [
+"delayed",
+"destroy",
+"haste",
+"summon",
+"zone_of_control",
+"piercing"
+]
+},
+"792772": {
+"add": [
+"activated",
+"once_per_game",
+"random_effect",
+"reactions",
+"summon"
+],
+"drop": []
+},
+"791425": {
+"add": [
+"attack_mod",
+"activated",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"buff",
+"zone_of_control"
+]
+},
+"793093": {
+"add": [
+"debuff",
+"activated",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"794080": {
+"add": [
+"activated",
+"buff",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"delayed"
+]
+},
+"793414": {
+"add": [
+"condition_count",
+"attack_mod",
+"debuff",
+"passive"
+],
+"drop": [
+"random_effect",
+"zone_of_control",
+"buff"
+]
+},
+"791525": {
+"add": [
+"turn_start",
+"attack_mod",
+"cooldowns",
+"temporary_effect"
+],
+"drop": [
+"destroy",
+"buff"
+]
+},
+"794572": {
+"add": [
+"activated",
+"movement",
+"ranged",
+"reactions"
+],
+"drop": [
+"advantage",
+"terrain",
+"zone_of_control"
+]
+},
+"791783": {
+"add": [
+"drawback",
+"temporary_buff",
+"turn_start",
+"once_per_game",
+"ranged"
+],
+"drop": [
+"damage",
+"damage_reduction",
+"piercing",
+"stat_multiply:benefits",
+"activated",
+"temporary_effect"
+]
+},
+"793469": {
+"add": [
+"turn_end",
+"activated",
+"heal"
+],
+"drop": [
+"tribal",
+"piercing",
+"summon"
+]
+},
+"815237": {
+"add": [
+"terrain"
+],
+"drop": [
+"passive"
+]
+},
+"792878": {
+"add": [
+"suppress",
+"cooldowns",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"792750": {
+"add": [
+"temporary_buff",
+"zone_control"
+],
+"drop": [
+"passive",
+"temporary_effect"
+]
+},
+"793328": {
+"add": [
+"friendly_fire",
+"damage_reduction",
+"passive"
+],
+"drop": [
+"damage",
+"piercing",
+"zone_of_control"
+]
+},
+"794377": {
+"add": [
+"start_of_game",
+"activated",
+"placement_rules",
+"ranged",
+"reserve_bench",
+"temporary_effect"
+],
+"drop": [
+"advantage",
+"deck_position",
+"zone_of_control",
+"buff"
+]
+},
+"791155": {
+"add": [
+"attack_mod",
+"passive",
+"zone_control"
+],
+"drop": [
+"buff"
+]
+},
+"793233": {
+"add": [
+"stat_condition",
+"activated",
+"random_effect"
+],
+"drop": [
+"destroy:benefits",
+"stat_multiply",
+"stat_multiply:benefits",
+"zone_of_control"
+]
+},
+"791222": {
+"add": [
+"start_of_game",
+"activated",
+"movement"
+],
+"drop": [
+"placement_rules",
+"zone_of_control"
+]
+},
+"792458": {
+"add": [
+"turn_end",
+"attack_now",
+"coin_economy:cost",
+"cooldowns",
+"random_effect"
+],
+"drop": [
+"resource_banking"
+]
+},
+"794248": {
+"add": [
+"stat_set",
+"condition_life",
+"cooldowns",
+"damage",
+"movement",
+"passive",
+"piercing"
+],
+"drop": [
+"advantage",
+"drawback",
+"zone_of_control",
+"ranged"
+]
+},
+"815271": {
+"add": [
+"death_trigger",
+"aoe_damage",
+"friendly_fire",
+"stat_condition",
+"passive",
+"random_effect"
+],
+"drop": [
+"death_count",
+"destroy",
+"destroy:benefits",
+"damage"
+]
+},
+"793875": {
+"add": [
+"immobilize",
+"delayed",
+"activated",
+"passive"
+],
+"drop": [
+"advantage",
+"counter_spell",
+"damage",
+"summon"
+]
+},
+"793783": {
+"add": [
+"turn_start",
+"activated",
+"counter_spell",
+"heal",
+"once_per_game",
+"random_effect",
+"spell_power",
+"terrain"
+],
+"drop": [
+"zone_of_control",
+"temporary_effect"
+]
+},
+"793719": {
+"add": [
+"buff",
+"temporary_buff",
+"cooldowns",
+"piercing"
+],
+"drop": [
+"summon",
+"upgrade",
+"passive",
+"ranged",
+"temporary_effect"
+]
+},
+"792880": {
+"add": [
+"activated",
+"buff",
+"movement",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"delayed"
+]
+},
+"794011": {
+"add": [
+"stat_set",
+"coin_economy",
+"condition_life",
+"cooldowns",
+"passive",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"condition_count",
+"variable_stats",
+"zone_of_control",
+"on_attack",
+"drawback",
+"damage"
+]
+},
+"791812": {
+"add": [
+"movement",
+"activated",
+"once_per_game"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"793385": {
+"add": [
+"resource_gain",
+"death_trigger",
+"passive"
+],
+"drop": []
+},
+"792070": {
+"add": [
+"activated",
+"damage",
+"random_effect",
+"variable_stats"
+],
+"drop": [
+"condition_count"
+]
+},
+"791076": {
+"add": [
+"turn_start",
+"drawback",
+"activated",
+"damage",
+"random_effect",
+"spell_power"
+],
+"drop": [
+"counter_spell",
+"summon"
+]
+},
+"794538": {
+"add": [
+"attack_mod",
+"temporary_buff",
+"condition_life",
+"passive"
+],
+"drop": [
+"buff",
+"damage",
+"destroy",
+"temporary_effect"
+]
+},
+"791949": {
+"add": [
+"activated",
+"buff",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"delayed"
+]
+},
+"793552": {
+"add": [
+"debuff",
+"activated",
+"ranged",
+"temporary_effect"
+],
+"drop": [
+"advantage",
+"once_per_game"
+]
+},
+"816557": {
+"add": [
+"movement",
+"passive",
+"piercing"
+],
+"drop": [
+"advantage",
+"tribal",
+"ranged",
+"zone_of_control"
+]
+},
+"793591": {
+"add": [
+"attack_mod",
+"cooldowns",
+"random_effect",
+"temporary_effect"
+],
+"drop": [
+"buff"
+]
+},
+"792930": {
+"add": [
+"passive",
+"stealth"
+],
+"drop": []
+},
+"793438": {
+"add": [
+"heal",
+"passive"
+],
+"drop": [
+"random_effect"
+]
+},
+"792625": {
+"add": [
+"movement",
+"activated",
+"terrain"
+],
+"drop": []
+},
+"793717": {
+"add": [
+"life_payment",
+"revive",
+"cooldowns",
+"random_effect",
+"ranged"
+],
+"drop": [
+"damage_reduction",
+"destroy",
+"lifesteal",
+"piercing",
+"tribal"
+]
+},
+"792672": {
+"add": [
+"shield",
+"damage_reduction",
+"passive"
+],
+"drop": []
+},
+"793185": {
+"add": [
+"condition_count",
+"buff",
+"passive"
+],
+"drop": []
+},
+"794062": {
+"add": [
+"start_of_game",
+"activated",
+"debuff",
+"placement_rules",
+"random_effect",
+"reserve_bench"
+],
+"drop": [
+"damage",
+"piercing",
+"tribal",
+"zone_of_control",
+"temporary_buff"
+]
+},
+"793590": {
+"add": [
+"sacrifice",
+"damage_reduction",
+"activated",
+"buff",
+"once_per_game",
+"passive",
+"piercing",
+"ranged",
+"reactions",
+"temporary_effect"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"793850": {
+"add": [
+"heal",
+"permanent_growth",
+"turn_end",
+"stat_condition",
+"attack_now",
+"buff",
+"cooldowns",
+"destroy",
+"random_effect",
+"reactions",
+"temporary_effect"
+],
+"drop": [
+"counter_spell",
+"summon",
+"zone_of_control"
+]
+},
+"794362": {
+"add": [
+"death_count",
+"aura",
+"passive",
+"temporary_effect"
+],
+"drop": [
+"summon",
+"upgrade"
+]
+},
+"791647": {
+"add": [
+"movement",
+"passive"
+],
+"drop": []
+},
+"793142": {
+"add": [
+"buff",
+"passive"
+],
+"drop": []
+},
+"793065": {
+"add": [
+"advantage",
+"damage_reduction",
+"passive"
+],
+"drop": []
+},
+"793122": {
+"add": [
+"damage_reduction",
+"heal",
+"passive"
+],
+"drop": []
+},
+"792079": {
+"add": [
+"activated",
+"random_effect",
+"summon"
+],
+"drop": []
+},
+"791494": {
+"add": [
+"debuff",
+"passive",
+"zone_control"
+],
+"drop": []
+},
+"791063": {
+"add": [
+"comeback",
+"passive",
+"scoring_objectives",
+"turn_end",
+"zone_control"
+],
+"drop": []
+},
+"792023": {
+"add": [
+"activated",
+"random_effect",
+"summon"
+],
+"drop": []
+},
+"793015": {
+"add": [
+"activated",
+"heal",
+"random_effect"
+],
+"drop": []
+},
+"792045": {
+"add": [
+"activated",
+"random_effect",
+"summon"
+],
+"drop": []
+},
+"792099": {
+"add": [
+"activated",
+"random_effect",
+"summon"
+],
+"drop": []
+},
+"792632": {
+"add": [
+"activated",
+"movement"
+],
+"drop": []
+},
+"792087": {
+"add": [
+"activated",
+"damage",
+"random_effect"
+],
+"drop": []
+},
+"792988": {
+"add": [
+"activated",
+"reactions",
+"resource_gain"
+],
+"drop": []
+},
+"793379": {
+"add": [
+"damage_reduction",
+"passive"
+],
+"drop": []
+},
+"815196": {
+"add": [
+"counter_spell",
+"passive",
+"random_effect",
+"spell_power"
+],
+"drop": []
+},
+"791908": {
+"add": [
+"activated",
+"random_effect",
+"summon"
+],
+"drop": []
+},
+"791176": {
+"add": [
+"activated",
+"once_per_game",
+"random_effect"
+],
+"drop": []
+},
+"792981": {
+"add": [
+"buff",
+"passive",
+"random_effect"
+],
+"drop": []
+},
+"791804": {
+"add": [
+"damage_reduction",
+"passive"
+],
+"drop": []
+},
+"792094": {
+"add": [
+"activated",
+"random_effect",
+"summon"
+],
+"drop": []
+},
+"792266": {
+"add": [
+"activated",
+"damage",
+"random_effect",
+"temporary_buff",
+"zone_control"
+],
+"drop": []
 }
 }
