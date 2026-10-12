@@ -5,10 +5,13 @@
   audit.py show <game> <batch>                   work entries of batch 0, 1 or 2 (50 each): id | name | text | tags
   audit.py trial <game> add <concept> <role> <regex>    a new game pattern: entries of the game gaining the tag, 30 random gains
   audit.py trial <game> drop <concept> <regex>          a '!concept|regex' line: entries losing the tag, 30 random losses
+  audit.py confirm <game>                        every current tag of the work entries that the review does not drop is written into
+                                                 the game's review as confirmed (add)
   audit.py blind <game>                          held-out entries with the tags before (snapshot) and after (database), shuffled
                                                  as A and B per entry -> audit/<game>_blind.txt; the key -> audit/<game>_key.json
   audit.py score <game> <judgments.json>         unblinds the checker's judgments: wrong tags and missed mechanics per 100 entries,
                                                  before and after, and correct tags lost
+A trial also counts the changed entries whose locked decision it would undo (regression.tsv and the game's review file).
 Judgments file: {"<id>": {"A": {"wrong": ["concept:role", ...], "missed": ["short note", ...]}, "B": {...}}, ...}
 The database is library/three-bases-library.sqlite unless TB_LIB is set."""
 import json, os, random, re, sqlite3, sys
@@ -16,6 +19,16 @@ here = os.path.dirname(os.path.abspath(__file__))
 DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(os.path.dirname(here)), 'three-bases-library.sqlite'))
 c = sqlite3.connect(DB); q = lambda s, *a: c.execute(s, a).fetchall()
 f = lambda g, k: os.path.join(here, f'{g}_{k}')
+rvf = lambda g: os.path.join(os.path.dirname(here), 'reviews', g + '.json')
+
+def locked(g, con, exp):   # entries whose reviewed decision says concept con must be present / absent
+    import csv
+    out = {int(r['entity']) for r in csv.DictReader(open(os.path.join(os.path.dirname(here), 'regression.tsv'), encoding='utf-8'), delimiter='\t')
+           if r['game'] == g and r['concept'] == con and r['expect'] == exp}
+    if os.path.exists(rvf(g)):
+        for k, r in json.load(open(rvf(g), encoding='utf-8')).items():
+            if k.isdigit() and any(x.split(':')[0] == con for x in r.get('add' if exp == 'present' else 'drop', [])): out.add(int(k))
+    return out
 
 def tags(e):
     return sorted(k + ('' if r == 'does' else ':' + r) for k, r in q('SELECT concept, role FROM entity_concepts WHERE entity=?', e))
@@ -61,8 +74,22 @@ elif cmd == 'trial':
         for e, t, r in q("SELECT e.id, e.text, ec.role FROM entity_concepts ec JOIN entities e ON e.id=ec.entity WHERE e.game=? AND ec.concept=? AND ec.method='text_pattern'", g, con):
             low = (t or '').lower()
             if p.search(low) and not any(rr == r and o.search(low) for rr, o in others): ch.append(e)
-    print(f"{'gaining' if mode == 'add' else 'losing'} {con}: {len(ch)} entries")
+    lk = locked(g, con, 'absent' if mode == 'add' else 'present')
+    print(f"{'gaining' if mode == 'add' else 'losing'} {con}: {len(ch)} entries; undoing a locked decision: {len(set(ch) & lk)}")
     for e in random.Random(7).sample(ch, min(30, len(ch))): print(line(e))
+elif cmd == 'confirm':
+    g = a[0]; s = json.load(open(f(g, 'sample.json'))); d = json.load(open(rvf(g), encoding='utf-8')) if os.path.exists(rvf(g)) else {}
+    n = 0
+    for e in s['work']:
+        if not q('SELECT 1 FROM entities WHERE id=?', e): continue
+        r = d.setdefault(str(e), {'add': [], 'drop': []}); r.setdefault('add', []); r.setdefault('drop', [])
+        dropped = {x if ':' in x else x + ':does' for x in r['drop']} | {x for x in r['drop'] if ':' not in x}
+        for t in tags(e):
+            full = t if ':' in t else t + ':does'
+            if t in dropped or full in dropped or t.split(':')[0] in dropped or t in r['add']: continue
+            r['add'].append(t); n += 1
+    json.dump(d, open(rvf(g), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
+    print(g, 'confirmed tags added to the review:', n)
 elif cmd == 'blind':
     g = a[0]; s = json.load(open(f(g, 'sample.json'))); before = json.load(open(f(g, 'before.json')))
     rnd = random.Random(11); key = {}; out = []

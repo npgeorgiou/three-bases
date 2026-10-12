@@ -1,24 +1,41 @@
 {
 "760967": {
-"add": [],
+"add": [
+"forced_movement",
+"ranged",
+"adjacency"
+],
 "drop": [
 "upgrade"
 ]
 },
 "760975": {
-"add": [],
+"add": [
+"adjacency",
+"area_templates",
+"forced_movement"
+],
 "drop": [
 "upgrade"
 ]
 },
 "760983": {
-"add": [],
+"add": [
+"adjacency",
+"attack_lock",
+"forced_movement",
+"ranged",
+"terrain"
+],
 "drop": [
 "upgrade"
 ]
 },
 "760988": {
-"add": [],
+"add": [
+"forced_movement",
+"ranged"
+],
 "drop": [
 "upgrade"
 ]
@@ -45,7 +62,10 @@
 ]
 },
 "761000": {
-"add": [],
+"add": [
+"adjacency",
+"forced_movement"
+],
 "drop": [
 "upgrade"
 ]
@@ -62,9 +82,15 @@
 ]
 },
 "761005": {
-"add": [],
+"add": [
+"attack_lock",
+"exhaust",
+"terrain",
+"scope_multi"
+],
 "drop": [
-"upgrade"
+"upgrade",
+"area_templates"
 ]
 },
 "761006": {
@@ -86,7 +112,9 @@
 ]
 },
 "760937": {
-"add": [],
+"add": [
+"immunity"
+],
 "drop": [
 "upgrade"
 ]
@@ -100,7 +128,10 @@
 ]
 },
 "760942": {
-"add": [],
+"add": [
+"spawn_blocking",
+"immunity"
+],
 "drop": [
 "upgrade"
 ]
@@ -131,7 +162,8 @@
 "760948": {
 "add": [
 "comeback",
-"condition_life"
+"condition_life",
+"shield"
 ],
 "drop": [
 "upgrade"
@@ -158,12 +190,18 @@
 ]
 },
 "761134": {
-"add": [],
+"add": [
+"damage",
+"terrain",
+"on_attack",
+"piercing"
+],
 "drop": [
 "upgrade",
 "activated",
 "damage_reduction",
-"debuff"
+"debuff",
+"damage_prevention"
 ]
 },
 "761127": {
@@ -174,15 +212,27 @@
 },
 "761125": {
 "add": [
-"summon"
+"summon",
+"damage",
+"exhaust",
+"forced_movement",
+"ranged"
 ],
-"drop": []
+"drop": [
+"buff"
+]
 },
 "761069": {
 "add": [
-"summon"
+"summon",
+"exhaust",
+"forced_movement",
+"ranged",
+"movement:grants"
 ],
-"drop": []
+"drop": [
+"buff"
+]
 },
 "761126": {
 "add": [
@@ -192,28 +242,45 @@
 },
 "761143": {
 "add": [
-"summon"
+"summon",
+"ranged"
 ],
 "drop": []
 },
 "761144": {
 "add": [
 "summon",
-"on_kill"
+"on_kill",
+"damage",
+"debuff",
+"ranged"
 ],
 "drop": []
 },
 "760963": {
-"add": [],
+"add": [
+"damage",
+"movement",
+"terrain",
+"attack_lock"
+],
 "drop": [
 "tribal"
 ]
 },
 "760984": {
 "add": [
-"life_payment"
+"life_payment",
+"area_templates",
+"damage_over_time",
+"friendly_fire",
+"ranged",
+"terrain",
+"turn_start"
 ],
-"drop": []
+"drop": [
+"attack_lock"
+]
 },
 "760951": {
 "add": [
@@ -229,7 +296,9 @@
 },
 "760949": {
 "add": [
-"multi_target_attack"
+"multi_target_attack",
+"adjacency",
+"damage"
 ],
 "drop": [
 "combo_sequence"
@@ -237,13 +306,18 @@
 },
 "761133": {
 "add": [
-"terrain"
+"terrain",
+"adjacency",
+"exhaust"
 ],
 "drop": []
 },
 "761123": {
 "add": [
-"terrain"
+"terrain",
+"damage",
+"exhaust",
+"on_kill"
 ],
 "drop": []
 },
@@ -254,15 +328,26 @@
 ]
 },
 "761149": {
-"add": [],
+"add": [
+"forced_movement",
+"shield",
+"adjacency"
+],
 "drop": [
 "overload_debt:cost"
 ]
 },
 "761002": {
-"add": [],
+"add": [
+"damage_over_time",
+"disable",
+"exhaust",
+"terrain",
+"turn_start"
+],
 "drop": [
-"rows"
+"rows",
+"attack_lock"
 ]
 },
 "760959": {
@@ -273,7 +358,9 @@
 },
 "761121": {
 "add": [
-"forced_movement"
+"forced_movement",
+"adjacency",
+"damage"
 ],
 "drop": [
 "aoe_damage"
@@ -293,7 +380,11 @@
 },
 "760968": {
 "add": [
-"variable_stats"
+"variable_stats",
+"condition_count",
+"damage",
+"forced_movement",
+"ranged"
 ],
 "drop": [
 "adjacency",
@@ -326,20 +417,32 @@
 "760976": {
 "add": [
 "spawn_blocking",
-"null_body"
+"null_body",
+"adjacency",
+"damage",
+"forced_movement",
+"ranged",
+"terrain"
 ],
-"drop": []
+"drop": [
+"scope_global"
+]
 },
 "760952": {
 "add": [
 "spawn_blocking",
-"null_body"
+"null_body",
+"damage",
+"terrain",
+"ranged"
 ],
 "drop": []
 },
 "760998": {
 "add": [
-"adjacency"
+"adjacency",
+"exhaust",
+"shield"
 ],
 "drop": []
 },
@@ -363,31 +466,49 @@
 },
 "761119": {
 "add": [
-"life_payment"
+"life_payment",
+"area_templates",
+"friendly_fire",
+"aoe_damage",
+"multi_target_attack",
+"damage"
 ],
 "drop": []
 },
 "760955": {
 "add": [
-"forced_movement"
+"forced_movement",
+"damage",
+"immunity"
 ],
 "drop": []
 },
 "761008": {
 "add": [
-"scope_global"
+"scope_global",
+"exhaust",
+"forced_movement"
 ],
 "drop": []
 },
 "760971": {
 "add": [
-"life_payment"
+"life_payment",
+"damage",
+"forced_movement",
+"friendly_fire",
+"ranged"
 ],
 "drop": []
 },
 "760960": {
 "add": [
-"life_payment"
+"life_payment",
+"adjacency",
+"aoe_damage",
+"forced_movement",
+"friendly_fire",
+"multi_target_attack"
 ],
 "drop": []
 },
@@ -409,34 +530,67 @@
 },
 "761030": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"adjacency",
+"damage",
+"death_trigger",
+"movement",
+"quests",
+"summon",
+"terrain",
+"boss_phases"
 ],
 "drop": [
-"zone_control"
+"zone_control",
+"on_attack"
 ]
 },
 "761031": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"adjacency",
+"damage",
+"death_trigger",
+"movement",
+"quests",
+"summon",
+"terrain",
+"boss_phases"
 ],
 "drop": [
-"zone_control"
+"zone_control",
+"on_attack"
 ]
 },
 "761032": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"adjacency",
+"damage",
+"movement",
+"quests",
+"terrain",
+"boss_phases"
 ],
 "drop": [
-"zone_control"
+"zone_control",
+"on_attack"
 ]
 },
 "761105": {
 "add": [
 "telegraphed_threats",
-"delayed"
+"delayed",
+"adjacency",
+"attack_lock",
+"movement",
+"terrain",
+"immobilize",
+"destroy"
 ],
-"drop": []
+"drop": [
+"immunity"
+]
 },
 "761035": {
 "add": [
@@ -446,15 +600,28 @@
 },
 "761037": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"movement",
+"ranged",
+"terrain",
+"damage",
+"multi_target_attack"
 ],
-"drop": []
+"drop": [
+"damage_over_time"
+]
 },
 "761049": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"area_templates",
+"damage",
+"movement",
+"multi_target_attack"
 ],
-"drop": []
+"drop": [
+"terrain"
+]
 },
 "761052": {
 "add": [
@@ -465,18 +632,30 @@
 "761055": {
 "add": [
 "telegraphed_threats",
-"summon"
+"summon",
+"difficulty_modifiers",
+"movement",
+"random_effect",
+"terrain",
+"boss_phases"
 ],
 "drop": [
-"disable"
+"disable",
+"adjacency"
 ]
 },
 "761106": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"movement",
+"terrain",
+"summon",
+"damage"
 ],
 "drop": [
-"rows"
+"rows",
+"damage_over_time",
+"lanes"
 ]
 },
 "761107": {
@@ -493,21 +672,36 @@
 },
 "761109": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"debuff",
+"terrain",
+"multi_target_attack",
+"ranged"
 ],
 "drop": []
 },
 "761113": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"difficulty_modifiers",
+"movement",
+"ranged",
+"terrain",
+"multi_target_attack"
 ],
 "drop": []
 },
 "760879": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"forced_movement"
 ],
-"drop": []
+"drop": [
+"area_templates"
+]
 },
 "760880": {
 "add": [
@@ -523,9 +717,13 @@
 },
 "760882": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"ranged"
 ],
-"drop": []
+"drop": [
+"forced_movement"
+]
 },
 "760883": {
 "add": [
@@ -541,21 +739,34 @@
 },
 "760885": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"adjacency",
+"damage",
+"immobilize"
 ],
 "drop": []
 },
 "761013": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"aura",
+"movement"
 ],
-"drop": []
+"drop": [
+"terrain"
+]
 },
 "761015": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"aura",
+"damage_reduction",
+"movement"
 ],
-"drop": []
+"drop": [
+"damage_over_time",
+"terrain"
+]
 },
 "761016": {
 "add": [
@@ -581,7 +792,9 @@
 },
 "761019": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage_over_time",
+"ranged"
 ],
 "drop": [
 "rows"
@@ -601,18 +814,28 @@
 },
 "761022": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"condition_count",
+"damage",
+"ranged",
+"multi_target_attack"
 ],
 "drop": [
-"symmetric_effect"
+"symmetric_effect",
+"piercing"
 ]
 },
 "761023": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"condition_count",
+"damage",
+"ranged",
+"multi_target_attack"
 ],
 "drop": [
-"symmetric_effect"
+"symmetric_effect",
+"piercing"
 ]
 },
 "761024": {
@@ -654,11 +877,16 @@
 "761029": {
 "add": [
 "telegraphed_threats",
-"self_destruct"
+"self_destruct",
+"adjacency",
+"aoe_damage",
+"damage"
 ],
 "drop": [
 "summon",
-"disable"
+"disable",
+"destroy",
+"terrain"
 ]
 },
 "761033": {
@@ -681,7 +909,12 @@
 },
 "761038": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"adjacency",
+"damage",
+"movement",
+"terrain",
+"immobilize"
 ],
 "drop": [
 "summon"
@@ -689,24 +922,36 @@
 },
 "761040": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"ranged"
 ],
 "drop": []
 },
 "761041": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"ranged",
+"terrain",
+"multi_target_attack"
 ],
 "drop": [
-"summon"
+"summon",
+"lanes"
 ]
 },
 "761042": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"ranged",
+"terrain",
+"multi_target_attack"
 ],
 "drop": [
-"summon"
+"summon",
+"lanes"
 ]
 },
 "761043": {
@@ -719,7 +964,11 @@
 },
 "761044": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"debuff",
+"multi_target_attack",
+"ranged"
 ],
 "drop": [
 "summon"
@@ -740,9 +989,14 @@
 },
 "761047": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"debuff",
+"movement"
 ],
-"drop": []
+"drop": [
+"terrain"
+]
 },
 "761048": {
 "add": [
@@ -752,20 +1006,34 @@
 },
 "761050": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"adjacency",
+"aoe_damage",
+"movement",
+"piercing",
+"aura",
+"death_trigger:grants",
+"passive"
 ],
-"drop": []
+"drop": [
+"damage_over_time",
+"death_trigger",
+"terrain"
+]
 },
 "761051": {
 "add": [
 "telegraphed_threats",
 "damage_over_time",
-"aura"
+"aura",
+"movement",
+"turn_end"
 ],
 "drop": [
 "life_payment:cost",
 "symmetric_effect",
-"summon"
+"summon",
+"terrain"
 ]
 },
 "761053": {
@@ -780,7 +1048,9 @@
 "761054": {
 "add": [
 "telegraphed_threats",
-"disable"
+"disable",
+"summon",
+"adjacency"
 ],
 "drop": [
 "rows"
@@ -790,11 +1060,18 @@
 "add": [
 "telegraphed_threats",
 "delayed",
-"null_body"
+"null_body",
+"adjacency",
+"death_trigger",
+"immobilize",
+"summon",
+"self_destruct",
+"terrain"
 ],
 "drop": [
 "destroy",
-"immunity"
+"immunity",
+"attack_lock"
 ]
 },
 "761057": {
@@ -810,7 +1087,9 @@
 },
 "761058": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"adjacency",
+"damage"
 ],
 "drop": [
 "debuff",
@@ -819,20 +1098,41 @@
 },
 "761059": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"area_templates",
+"damage",
+"forced_movement:counters",
+"immunity",
+"on_damaged",
+"stealth",
+"terrain",
+"multi_target_attack"
 ],
 "drop": [
 "counter_spell",
-"flanking"
+"flanking",
+"forced_movement",
+"lanes"
 ]
 },
 "761060": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"area_templates",
+"damage",
+"forced_movement:counters",
+"immunity",
+"on_damaged",
+"stealth",
+"terrain",
+"multi_target_attack"
 ],
 "drop": [
 "counter_spell",
-"flanking"
+"flanking",
+"evasion",
+"forced_movement",
+"lanes"
 ]
 },
 "761083": {
@@ -853,10 +1153,14 @@
 },
 "761088": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"forced_movement",
+"ranged"
 ],
 "drop": [
-"summon"
+"summon",
+"terrain"
 ]
 },
 "761089": {
@@ -885,11 +1189,13 @@
 },
 "761092": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"collision_damage"
 ],
 "drop": [
 "combo_sequence",
-"ping"
+"ping",
+"lanes"
 ]
 },
 "761094": {
@@ -900,27 +1206,48 @@
 },
 "761096": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"movement",
+"terrain",
+"aura",
+"death_trigger:grants",
+"summon:grants",
+"passive"
 ],
-"drop": []
+"drop": [
+"death_trigger",
+"null_body"
+]
 },
 "761097": {
 "add": [
 "telegraphed_threats",
-"aura"
+"aura",
+"movement"
 ],
 "drop": [
-"summon"
+"summon",
+"damage",
+"terrain"
 ]
 },
 "761098": {
 "add": [
 "telegraphed_threats",
-"aura"
+"aura",
+"damage_over_time",
+"damage_types",
+"immunity",
+"movement",
+"terrain",
+"turn_start",
+"death_trigger:grants"
 ],
 "drop": [
 "summon",
-"damage_reduction"
+"damage_reduction",
+"attack_lock",
+"death_trigger"
 ]
 },
 "761099": {
@@ -933,27 +1260,39 @@
 },
 "761100": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"forced_movement"
 ],
 "drop": []
 },
 "761101": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"forced_movement",
+"ranged"
 ],
 "drop": [
-"summon"
+"summon",
+"terrain"
 ]
 },
 "761102": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"forced_movement",
+"ranged",
+"summon"
 ],
 "drop": []
 },
 "761103": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"multi_target_attack"
 ],
 "drop": [
 "summon"
@@ -969,28 +1308,55 @@
 },
 "761114": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"adjacency",
+"aoe_damage",
+"damage_over_time",
+"death_trigger",
+"disable",
+"piercing",
+"quests",
+"ranged"
 ],
 "drop": [
-"zone_control"
+"zone_control",
+"destroy"
 ]
 },
 "761115": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"adjacency",
+"aoe_damage",
+"area_templates",
+"death_trigger",
+"disable",
+"piercing",
+"quests",
+"ranged",
+"multi_target_attack"
 ],
 "drop": [
 "damage_over_time",
-"zone_control"
+"zone_control",
+"destroy"
 ]
 },
 "761116": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"adjacency",
+"aoe_damage",
+"death_trigger",
+"disable",
+"piercing",
+"quests",
+"multi_target_attack"
 ],
 "drop": [
 "damage_over_time",
-"zone_control"
+"zone_control",
+"destroy"
 ]
 },
 "760895": {
@@ -1019,7 +1385,9 @@
 },
 "761012": {
 "add": [
-"scoring_objectives"
+"scoring_objectives",
+"difficulty_modifiers",
+"random_effect"
 ],
 "drop": [
 "passive",
@@ -1028,7 +1396,9 @@
 ]
 },
 "760936": {
-"add": [],
+"add": [
+"passive"
+],
 "drop": [
 "activated",
 "copy",
@@ -1036,7 +1406,9 @@
 "disable",
 "evasion",
 "terrain",
-"tribal"
+"tribal",
+"attack_lock",
+"shop_gold"
 ]
 },
 "760886": {
@@ -1061,7 +1433,12 @@
 ]
 },
 "760887": {
-"add": [],
+"add": [
+"items_consumables",
+"quests",
+"random_effect",
+"resource_gain"
+],
 "drop": [
 "evasion",
 "passive",
@@ -1072,7 +1449,11 @@
 "760878": {
 "add": [
 "telegraphed_threats",
-"spawn_blocking"
+"spawn_blocking",
+"difficulty_modifiers",
+"movement",
+"boss_phases",
+"aura"
 ],
 "drop": [
 "assists_support",
@@ -1082,7 +1463,9 @@
 "destroy",
 "drawback",
 "evasion:counters",
-"passive"
+"passive",
+"blocking",
+"quests"
 ]
 },
 "760904": {
@@ -1130,10 +1513,12 @@
 },
 "760946": {
 "add": [
-"friendly_fire"
+"friendly_fire",
+"attack_mod"
 ],
 "drop": [
-"buff"
+"buff",
+"damage"
 ]
 },
 "760938": {
@@ -1178,13 +1563,15 @@
 "761156": {
 "add": [
 "terrain",
-"telegraphed_threats"
+"telegraphed_threats",
+"turn_start"
 ],
 "drop": []
 },
 "761157": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"disable"
 ],
 "drop": [
 "immunity"
@@ -1202,7 +1589,9 @@
 "destroy",
 "telegraphed_threats"
 ],
-"drop": []
+"drop": [
+"damage"
+]
 },
 "761160": {
 "add": [
@@ -1222,7 +1611,9 @@
 "destroy",
 "telegraphed_threats"
 ],
-"drop": []
+"drop": [
+"damage"
+]
 },
 "761128": {
 "add": [],
@@ -1279,12 +1670,19 @@
 },
 "760935": {
 "add": [
-"spawn_blocking"
+"spawn_blocking",
+"terrain",
+"null_body",
+"ranged"
 ],
 "drop": []
 },
 "760926": {
-"add": [],
+"add": [
+"adjacency",
+"damage",
+"multi_target_attack"
+],
 "drop": [
 "combo_sequence"
 ]
@@ -1292,16 +1690,22 @@
 "761082": {
 "add": [
 "steal",
-"forced_movement"
+"forced_movement",
+"temporary_effect"
 ],
-"drop": []
+"drop": [
+"terrain"
+]
 },
 "760877": {
 "add": [
-"friendly_fire"
+"friendly_fire",
+"forced_movement",
+"ranged"
 ],
 "drop": [
-"buff"
+"buff",
+"damage"
 ]
 },
 "760929": {
@@ -1312,8 +1716,554 @@
 },
 "761076": {
 "add": [
+"forced_movement",
+"swap"
+],
+"drop": []
+},
+"760908": {
+"add": [
+"damage"
+],
+"drop": []
+},
+"761139": {
+"add": [
+"attack_lock",
+"damage",
+"forced_movement",
+"terrain"
+],
+"drop": []
+},
+"760865": {
+"add": [
+"adjacency",
+"damage",
+"forced_movement",
+"ranged"
+],
+"drop": []
+},
+"760973": {
+"add": [
+"adjacency",
+"damage",
+"exhaust",
+"forced_movement",
+"ranged",
+"multi_target_attack"
+],
+"drop": []
+},
+"760899": {
+"add": [
+"adjacency",
 "forced_movement"
 ],
 "drop": []
+},
+"760950": {
+"add": [
+"damage",
+"immunity",
+"multi_target_attack"
+],
+"drop": [
+"piercing"
+]
+},
+"760847": {
+"add": [
+"on_damaged",
+"stealth"
+],
+"drop": []
+},
+"761065": {
+"add": [
+"attack_lock",
+"terrain",
+"transform",
+"on_damaged"
+],
+"drop": [
+"cant_attack"
+]
+},
+"760828": {
+"add": [
+"immunity"
+],
+"drop": []
+},
+"761073": {
+"add": [
+"movement",
+"shield"
+],
+"drop": []
+},
+"760979": {
+"add": [
+"adjacency",
+"damage_over_time",
+"forced_movement",
+"ranged",
+"terrain",
+"turn_start"
+],
+"drop": [
+"attack_lock"
+]
+},
+"760848": {
+"add": [
+"adjacency",
+"aoe_damage",
+"death_trigger",
+"piercing"
+],
+"drop": []
+},
+"760842": {
+"add": [
+"attack_lock",
+"terrain"
+],
+"drop": []
+},
+"760846": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"760831": {
+"add": [
+"damage_reduction"
+],
+"drop": []
+},
+"760953": {
+"add": [
+"adjacency",
+"damage",
+"forced_movement"
+],
+"drop": []
+},
+"761150": {
+"add": [
+"attack_lock",
+"damage_types",
+"terrain",
+"transform"
+],
+"drop": [
+"cant_attack",
+"damage_over_time",
+"turn_start",
+"movement"
+]
+},
+"761118": {
+"add": [
+"damage",
+"immunity",
+"multi_target_attack"
+],
+"drop": [
+"piercing"
+]
+},
+"760956": {
+"add": [
+"damage_over_time",
+"forced_movement",
+"terrain",
+"turn_start",
+"condition"
+],
+"drop": [
+"attack_lock"
+]
+},
+"761068": {
+"add": [
+"attack_lock",
+"damage",
+"forced_movement",
+"terrain"
+],
+"drop": []
+},
+"760962": {
+"add": [
+"adjacency",
+"damage",
+"exhaust",
+"forced_movement"
+],
+"drop": []
+},
+"760961": {
+"add": [
+"area_templates",
+"damage",
+"exhaust",
+"forced_movement",
+"multi_target_attack"
+],
+"drop": []
+},
+"760991": {
+"add": [
+"swap",
+"immobilize"
+],
+"drop": []
+},
+"761140": {
+"add": [
+"damage",
+"forced_movement",
+"multi_target_attack"
+],
+"drop": [
+"piercing"
+]
+},
+"760994": {
+"add": [
+"exhaust",
+"immunity",
+"terrain",
+"attack_lock",
+"adjacency"
+],
+"drop": [
+"terrain:benefits"
+]
+},
+"760900": {
+"add": [
+"movement"
+],
+"drop": []
+},
+"760939": {
+"add": [
+"condition_count",
+"heal",
+"on_kill"
+],
+"drop": [
+"damage"
+]
+},
+"760850": {
+"add": [
+"boss_phases",
+"immunity"
+],
+"drop": []
+},
+"760855": {
+"add": [
+"aura",
+"regeneration"
+],
+"drop": []
+},
+"761138": {
+"add": [
+"damage",
+"forced_movement",
+"immunity",
+"multi_target_attack",
+"ranged"
+],
+"drop": []
+},
+"760860": {
+"add": [
+"immunity"
+],
+"drop": []
+},
+"760875": {
+"add": [
+"spawn_blocking",
+"telegraphed_threats",
+"damage"
+],
+"drop": []
+},
+"760835": {
+"add": [
+"temporary_buff"
+],
+"drop": [
+"passive"
+]
+},
+"761122": {
+"add": [
+"adjacency",
+"damage",
+"forced_movement"
+],
+"drop": []
+},
+"760918": {
+"add": [
+"damage_over_time",
+"forced_movement",
+"immunity",
+"terrain",
+"turn_start"
+],
+"drop": [
+"attack_lock"
+]
+},
+"761132": {
+"add": [
+"damage_over_time",
+"forced_movement",
+"ranged",
+"multi_target_attack",
+"terrain"
+],
+"drop": []
+},
+"761081": {
+"add": [
+"adjacency",
+"attack_lock",
+"passive",
+"terrain",
+"heal",
+"damage_over_time"
+],
+"drop": []
+},
+"761063": {
+"add": [
+"transform",
+"terrain"
+],
+"drop": [
+"death_trigger"
+]
+},
+"760897": {
+"add": [
+"shield",
+"start_of_game"
+],
+"drop": []
+},
+"760830": {
+"add": [
+"movement",
+"temporary_buff"
+],
+"drop": []
+},
+"761120": {
+"add": [
+"condition_count",
+"damage",
+"immunity",
+"multi_target_attack"
+],
+"drop": []
+},
+"760981": {
+"add": [
+"damage",
+"forced_movement",
+"multi_target_attack"
+],
+"drop": []
+},
+"760898": {
+"add": [
+"damage_reduction"
+],
+"drop": [
+"shield"
+]
+},
+"760974": {
+"add": [
+"damage",
+"exhaust",
+"movement",
+"multi_target_attack"
+],
+"drop": []
+},
+"760930": {
+"add": [
+"damage",
+"ranged",
+"friendly_fire",
+"life_payment"
+],
+"drop": []
+},
+"760990": {
+"add": [
+"adjacency",
+"forced_movement",
+"shield"
+],
+"drop": []
+},
+"760932": {
+"add": [
+"forced_movement",
+"damage"
+],
+"drop": []
+},
+"761011": {
+"add": [
+"adjacency",
+"forced_movement",
+"ranged",
+"damage"
+],
+"drop": [
+"aoe_damage"
+]
+},
+"761110": {
+"add": [
+"adjacency",
+"area_templates",
+"forced_movement",
+"damage"
+],
+"drop": []
+},
+"761147": {
+"add": [
+"adjacency",
+"forced_movement",
+"shield"
+],
+"drop": [
+"activated"
+]
+},
+"760940": {
+"add": [
+"aura",
+"buff"
+],
+"drop": []
+},
+"760866": {
+"add": [
+"friendly_fire"
+],
+"drop": [
+"ranged",
+"shop_gold",
+"tribal"
+]
+},
+"760986": {
+"add": [
+"area_templates",
+"exhaust",
+"ranged",
+"aoe_damage",
+"multi_target_attack",
+"damage"
+],
+"drop": []
+},
+"760966": {
+"add": [
+"shield",
+"forced_movement",
+"movement"
+],
+"drop": []
+},
+"760972": {
+"add": [
+"adjacency",
+"exhaust",
+"forced_movement",
+"damage",
+"ranged"
+],
+"drop": [
+"aoe_damage"
+]
+},
+"760933": {
+"add": [
+"forced_movement",
+"multi_target_attack",
+"ranged"
+],
+"drop": [
+"terrain"
+]
+},
+"760827": {
+"add": [
+"shield"
+],
+"drop": []
+},
+"760980": {
+"add": [
+"adjacency",
+"damage",
+"ranged",
+"multi_target_attack"
+],
+"drop": []
+},
+"760999": {
+"add": [
+"area_templates",
+"exhaust",
+"forced_movement"
+],
+"drop": [
+"scope_global"
+]
+},
+"760996": {
+"add": [
+"area_templates",
+"exhaust",
+"damage_over_time",
+"terrain"
+],
+"drop": []
+},
+"761142": {
+"add": [
+"aoe_damage",
+"area_templates",
+"forced_movement",
+"immunity",
+"ranged",
+"multi_target_attack"
+],
+"drop": [
+"damage:benefits",
+"upgrade:benefits"
+]
 }
 }

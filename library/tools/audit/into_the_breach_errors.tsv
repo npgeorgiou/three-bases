@@ -1,0 +1,196 @@
+760973	+multi_target_attack	multi-tile attack missed
+761088	-terrain	flying reminder tagged terrain
+761037	-damage_over_time	plain damage tagged as dot
+761037	+multi_target_attack	multi-tile attack missed
+761037	+damage	damage missed
+760950	-piercing	beam pierce tagged as armour piercing
+760950	+multi_target_attack	beam multi-target missed
+760882	-forced_movement	negated push tagged
+761096	-death_trigger	granted ability tagged as does
+761096	-null_body	egg spawner tagged as null body
+761096	+aura	psion aura missed
+761096	+summon:grants	spawn missed
+761096	+death_trigger:grants	granted ability missed
+761042	-lanes	tiles in front tagged as lanes
+761042	+multi_target_attack	multi-tile attack missed
+761065	-cant_attack	smoke lock tagged as cant_attack
+761065	+on_damaged	if damaged trigger missed
+760979	-attack_lock	fire inherits smoke attack_lock
+760960	+multi_target_attack	multi-tile attack missed
+760887	+resource_gain	reactor core gain missed
+761005	-area_templates	tile count tagged as area shape
+761005	+scope_multi	tile count missed
+761125	-buff	weapon upgrade tagged as buff
+761038	+immobilize	web missed
+761059	-forced_movement	stable tagged as forced movement
+761059	-lanes	in a row tagged as lanes
+761059	+multi_target_attack	multi-tile attack missed
+761150	-cant_attack	smoke lock tagged as cant_attack
+761150	-damage_over_time	fire mention inherits dot
+761150	-turn_start	fire mention inherits turn_start
+761150	-movement	incidental move tagged
+761118	-piercing	beam pierce tagged as armour piercing
+761118	+multi_target_attack	beam multi-target missed
+760956	-attack_lock	fire inherits smoke attack_lock
+760956	+condition	if clause missed
+761019	+ranged	projectile missed
+760961	+multi_target_attack	multi-tile attack missed
+761082	-terrain	flying reminder tagged terrain
+761082	+temporary_effect	temporarily missed
+760991	+immobilize	web missed
+761140	-piercing	beam pierce tagged as armour piercing
+761140	+multi_target_attack	beam multi-target missed
+761056	-attack_lock	smoke immunity inherits smoke attack_lock
+761056	+immobilize	web missed
+761056	+summon	spawn missed
+761056	+self_destruct	kills itself missed
+760885	+immobilize	web missed
+760994	-terrain:benefits	smoke creation tagged as benefits
+760994	+attack_lock	smoke creation missed
+760994	+adjacency	surround missed
+760994	+terrain	smoke creation missed
+761013	-terrain	flying reminder tagged terrain
+761103	+multi_target_attack	multi-tile attack missed
+761134	-damage_prevention	deals no damage condition tagged as prevention
+761134	+on_attack	attack trigger missed
+761134	+piercing	ignores armour missed
+761106	-damage_over_time	plain damage tagged as dot
+761106	-lanes	in front tagged as lanes
+761106	+summon	create units missed
+761106	+damage	damage missed
+760939	-damage	heal amount tagged as damage
+760939	+on_kill	kill trigger missed
+760988	+ranged	projectile missed
+761102	+summon	launched unit missed
+761105	-immunity	mentioned immunity tagged
+761105	+immobilize	web missed
+761105	+destroy	kill effect missed
+761044	+multi_target_attack	multi-tile attack missed
+761044	+ranged	projectile missed
+761092	-lanes	tiles in front tagged as lanes
+760967	+ranged	projectile missed
+760967	+adjacency	tiles around target missed
+761049	-terrain	flying reminder tagged terrain
+761049	+multi_target_attack	multi-tile attack missed
+761116	-destroy	being destroyed tagged as destroy
+761116	+multi_target_attack	beam multi-target missed
+760878	-blocking	spawn blocking tagged as blocking
+760878	-quests	objective mention tagged as quest
+760878	+boss_phases	boss rules missed
+760878	+aura	psion aura missed
+760935	+null_body	obstacle body missed
+760935	+ranged	thrown attack missed
+761069	-buff	weapon upgrade tagged as buff
+761069	+ranged	projectile missed
+761069	+movement:grants	flying grant missed
+761022	-piercing	beam pierce tagged as armour piercing
+761022	+multi_target_attack	beam multi-target missed
+761041	-lanes	tiles in front tagged as lanes
+761041	+multi_target_attack	multi-tile attack missed
+761015	-damage_over_time	no words
+761015	-terrain	flying reminder tagged terrain
+761031	-on_attack	attack without trigger tagged on_attack
+761031	+boss_phases	boss rules missed
+761119	+aoe_damage	area damage tagged as plain damage
+761119	+multi_target_attack	multi-tile attack missed
+761138	+multi_target_attack	multi-tile attack missed
+761138	+ranged	projectile missed
+761159	-damage	kill tagged as damage
+761149	+adjacency	nearby units missed
+760875	+damage	damage missed
+760976	-scope_global	all units obstacle tagged global
+760942	+immunity	cannot take damage missed
+760936	-attack_lock	keyword mention inherits
+760936	-shop_gold	no words
+760968	+ranged	projectile missed
+761030	-on_attack	attack without trigger tagged on_attack
+761030	+boss_phases	boss rules missed
+760835	-passive	status tagged passive
+760963	+attack_lock	smoke creation missed
+760918	-attack_lock	fire inherits smoke attack_lock
+761023	-piercing	beam pierce tagged as armour piercing
+761023	+multi_target_attack	beam multi-target missed
+761060	-evasion	no words
+761060	-forced_movement	stable tagged as forced movement
+761060	-lanes	in a row tagged as lanes
+761060	+multi_target_attack	multi-tile attack missed
+761132	+multi_target_attack	multi-tile attack missed
+761132	+terrain	fire tiles missed
+761123	+on_kill	kill trigger missed
+761081	+heal	repair missed
+761081	+damage_over_time	fire applied missed
+760877	-damage	damage bonus tagged as damage
+761063	-death_trigger	tile destroyed tagged as death trigger
+761063	+terrain	tile missed
+760897	+start_of_game	start of mission missed
+761120	+multi_target_attack	beam multi-target missed
+760981	+multi_target_attack	multi-tile attack missed
+761097	-damage	damage bonus tagged as damage
+761097	-terrain	flying reminder tagged terrain
+760898	-shield	armored tagged as shield
+760898	+damage_reduction	armored missed
+760946	-damage	damage bonus tagged as damage
+760946	+attack_mod	damage bonus missed
+760974	+multi_target_attack	multi-tile attack missed
+760930	+friendly_fire	self damage missed
+760930	+life_payment	self damage missed
+760932	+damage	damage missed
+761162	-damage	kill tagged as damage
+761011	-aoe_damage	single target tagged area damage
+761011	+damage	damage missed
+761054	+summon	spawn missed
+761054	+adjacency	surrounding missed
+761110	+damage	damage missed
+761029	-destroy	being destroyed tagged as destroy
+761029	-terrain	incidental hazard mention tagged
+761029	+aoe_damage	area damage tagged as plain damage
+761147	-activated	weapon tagged activated
+760940	+aura	passive anthem missed
+761032	-on_attack	attack without trigger tagged on_attack
+761032	+boss_phases	boss rules missed
+761051	-terrain	flying reminder tagged terrain
+760866	-ranged	no words
+760866	-shop_gold	no words
+760866	-tribal	weapon classes tagged tribal
+760986	+aoe_damage	area damage tagged as plain damage
+760986	+multi_target_attack	multi-tile attack missed
+760952	+ranged	thrown attack missed
+760966	+forced_movement	pull missed
+761098	-attack_lock	fire inherits smoke attack_lock
+761098	-death_trigger	granted ability tagged as does
+761098	+death_trigger:grants	granted ability missed
+761109	+multi_target_attack	multi-tile attack missed
+761109	+ranged	projectile missed
+760984	-attack_lock	fire inherits smoke attack_lock
+760972	-aoe_damage	single target tagged area damage
+760972	+damage	damage missed
+760972	+ranged	projectile missed
+761115	-destroy	being destroyed tagged as destroy
+761115	+ranged	range attack missed
+761115	+multi_target_attack	multi-tile attack missed
+760933	-terrain	flying reminder tagged terrain
+760933	+multi_target_attack	multi-tile attack missed
+760933	+ranged	range attack missed
+761101	-terrain	flying reminder tagged terrain
+761050	-damage_over_time	no words
+761050	-death_trigger	granted ability tagged as does
+761050	-terrain	flying reminder tagged terrain
+761050	+aura	psion aura missed
+761050	+death_trigger:grants	granted ability missed
+760980	+multi_target_attack	multi-tile attack missed
+761055	-adjacency	negated adjacency tagged
+761055	+boss_phases	boss rules missed
+761002	-attack_lock	fire inherits smoke attack_lock
+760999	-scope_global	all units in a line tagged global
+760926	+damage	damage missed
+760926	+multi_target_attack	chain multi-target missed
+761047	-terrain	flying reminder tagged terrain
+760996	+damage_over_time	fire applied missed
+760996	+terrain	fire tiles missed
+761114	-destroy	being destroyed tagged as destroy
+761114	+ranged	projectile missed
+761142	-damage:benefits	no words
+761142	-upgrade:benefits	no words
+761142	+multi_target_attack	multi-tile attack missed
+760879	-area_templates	charge line tagged as area shape
+761113	+multi_target_attack	multi-tile attack missed
