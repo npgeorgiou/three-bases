@@ -1,0 +1,150 @@
+755875 | Electric Rhino | During your turn, when this card is added to your hand from your deck, if X is at least 1, subtract X from its cost and reveal it. X equals the number of allied Artifact cards destroyed this match. Whenever an allied Artifact card is destroyed, subtract 1 from the cost of this card. ---------- Rush. Fanfare: Put 3 Mechamagical Rhinos into your deck. Evolved: (Same as the unevolved form, excluding Fanfare.)
+  A: cost_reduction, death_count, haste, high_cost:benefits, information, on_play, sacrifice:benefits, tutor
+  B: cost_reduction, count_payoff, death_count, haste, high_cost:benefits, information, on_play, sacrifice:benefits, tribal, tutor
+752502 | Return from the Brink | At the end of this turn, put into your hand copies of 2 different random allied Swordcraft followers destroyed during your opponent's previous turn or this turn.
+  A: copy, random_effect
+  B: copy, random_effect
+754182 | Minthe of the Underworld | When this follower comes into play, gain 20 shadows. When this follower leaves play, lose 20 shadows. (Transformation doesn't count as leaving play.) Whenever you perform Necromancy, gain X shadows. X equals the Necromancy cost. Evolved: (Same as the unevolved form.)
+  A: graveyard
+  B: graveyard
+752478 | Seeker of Love | Fanfare: Choose - Put a Lord General Romeo or Princess Juliet into your hand. Rally (10): Summon it instead.
+  A: condition_count, draw, generate_cards, modal_choice, on_play
+  B: condition_count, draw, generate_cards, modal_choice, on_play
+755593 | Monk of Purification | Fanfare: Put 2 Monastic Holy Waters into your hand.
+  A: generate_cards, on_play
+  B: generate_cards, on_play
+753535 | Bloody Session | Select 2 allied Bloodcraft followers. Deal X damage to all enemy followers and restore Y defense to your leader. X equals the first follower's attack. Y equals the second follower's defense. (Can be played only when 2 targetable allied followers are in play.)
+  A: aoe_damage, heal, placement_rules
+  B: aoe_damage, heal, placement_rules
+752621 | Spectral Stomp | Burial Rite: Draw a card. Then, if you've performed Burial Rite at least 2 times this turn, draw a card.
+  A: condition_count, draw, graveyard, sacrifice:cost
+  B: condition_count, draw, graveyard, sacrifice:cost
+753648 | Muskfruit | Countdown (1) Fanfare: Put a random 1-play-point follower from your deck into your hand. Last Words: Put a Naterran Great Tree into your hand.
+  A: cost_condition, death_trigger, delayed, generate_cards, on_play, random_effect, tutor
+  B: death_trigger, delayed, generate_cards, on_play, random_effect, tutor
+755989 | Themis's Purge | Banish all followers.
+  A: banish, board_wipe, friendly_fire, high_cost:benefits, symmetric_effect
+  B: banish, board_wipe, friendly_fire, high_cost:benefits, symmetric_effect
+814076 | Irate Forest Beast | Rush. Gain Storm while an allied Gentle Forest Beauty is in play. Evolved: (Same as the unevolved form.)
+  A: haste, passive, terrain
+  B: haste, passive, terrain
+755834 | Heresy's Avatar | Last Words: Give your leader the following effect - Destroy every Countdown amulet immediately after you play it. (This effect lasts for the rest of the match.) Evolved: (Same as the unevolved form.)
+  A: death_trigger, delayed, high_cost:benefits
+  B: death_trigger, delayed, high_cost:benefits
+754143 | Grand Slam Tamer | Fanfare: Give +0/+1 to all Dragoncraft followers in your deck. If this follower has at least 5 defense, summon a Hellflame Dragon. If this follower has at least 7 defense, give the summoned follower Storm and evolve this follower.
+  A: condition_count, haste:grants, in_hand_buff, on_play, summon, upgrade
+  B: condition_count, haste:grants, in_hand_buff, on_play, summon, upgrade
+814201 | Medusiana | Rush. Bane. Can attack up to 3 times per turn. Evolved: (Same as the unevolved form.)
+  A: deathtouch, haste, multi_attack
+  B: deathtouch, haste, multi_attack
+756032 | Aethereal Golem | Crystallize (2): Earth Sigil Fanfare: Deal 3 damage to an enemy follower. ---------- Fanfare: Deal 6 damage to an enemy follower.
+  A: cost_type, damage, delayed, high_cost:benefits, on_play
+  B: cost_type, damage, delayed, high_cost:benefits, on_play
+754164 | Dracomancer's Rites | Whenever you discard cards from your hand, draw X cards. X equals the number of cards discarded.
+  A: discard, discard:benefits, draw
+  B: discard, discard:benefits, draw
+814286 | Keenedge Artifact | Rush. Drain. Evolved: (Same as the unevolved form.)
+  A: haste, lifesteal
+  B: haste, lifesteal
+752583 | Dragon's Nest | At the start of your turn, restore 2 defense to your leader, draw a card, and destroy this amulet if Overflow is active for you.
+  A: condition, destroy, draw, economy, regeneration, self_destruct, turn_start
+  B: condition, destroy, draw, economy, regeneration, self_destruct, turn_start
+755574 | Pazuzu, Noxious Gale | Fusion: Followers that originally cost at least 6 play points ---------- Fanfare: If this card is fused with at least 2 cards, deal 6 damage to all enemy followers. Then, if fused with at least 4 cards, deal 6 damage to the enemy leader. Then, if fused with at least 6 cards, draw 6 cards and recover 6 play points.
+  A: aoe_damage, condition_count, cost_condition, direct_damage, draw, merge_attach, on_play, resource_gain
+  B: aoe_damage, condition_count, direct_damage, draw, merge_attach, on_play, resource_gain
+754968 | XXI. Zelgenea, The World | Invocation: At the start of your tenth turn, invoke this card. Then, evolve it. ---------- Fanfare: Restore 5 defense to your leader. If your leader had 14 defense or less before defense was restored, draw 2 cards and randomly destroy 1 of the enemy followers with the highest attack in play. Can't be evolved using evolution points. (Can be evolved using card effects.) Evolved: Strike: Give your leader the following effect - At the end of your turn, deal 4 damage to all allies and enemies. (This effect is not stackable and lasts for the rest of the match.)
+  A: damage_over_time, draw, free_play, heal, multiple_resources, on_attack, on_play, random_effect, stat_condition, summon, turn_end, turn_start, upgrade
+  B: damage_over_time, draw, free_play, heal, multiple_resources, on_attack, on_play, random_effect, stat_condition, summon, turn_end, turn_start, upgrade
+755831 | Soul Collector | Fanfare: Summon a Death Sentence.
+  A: high_cost:benefits, on_play, summon
+  B: high_cost:benefits, on_play, summon
+752814 | Armored Goblin | Fanfare: Enhance (4) - Summon an Armored Goblin. Enhance (6): Summon 2 Armored Goblins instead. Give Ward to all allied Armored Goblins. Last Words: Give +0/+3 to a random allied follower. Evolved: (Same as the unevolved form, excluding Fanfare.)
+  A: buff, death_trigger, kicker, on_play, random_effect, summon, taunt:grants
+  B: buff, death_trigger, kicker, on_play, random_effect, summon, taunt:grants
+754783 | Deathly Tyrant's Feast | Give +3/+3 to an allied Shadowcraft follower. Necromancy (20): Give +10/+10 instead.
+  A: buff, graveyard:cost
+  B: buff, graveyard:cost
+753364 | Haunted Swordsman | Fanfare: Summon a Ghost and give it the ability to evolve for 0 evolution points. Enhance (6): Gain +1/+1 and Storm.
+  A: buff, haste, kicker, multiple_resources, on_play, summon
+  B: buff, haste, kicker, multiple_resources, on_play, summon
+754073 | Magical Reserves | Draw a card. If the total allied Stack count in play is less than 3, summon a Magic Sediment and add 2 to an allied Stack in play. Otherwise, perform Earth Rite (3): Deal 6 damage to all enemy followers.
+  A: aoe_damage, draw, sacrifice:cost, stacking_keyword, summon
+  B: aoe_damage, draw, sacrifice:cost, stacking_keyword, summon
+752720 | Luminescent Gem | Countdown (1) Can't be targeted by enemy effects. Last Words: If it's your turn, put a random amulet with Countdown from your deck into your hand.
+  A: death_trigger, delayed, immunity, random_effect, tutor
+  B: death_trigger, delayed, immunity, random_effect, tutor
+754846 | Priest of the Cudgel | Evolved: Evolve: Banish an enemy follower with 3 defense or less.
+  A: banish, multiple_resources:cost, upgrade
+  B: banish, multiple_resources:cost, upgrade
+752913 | Mechaboomerang Elf | Last Words: At the start of your next turn, put a random Machina card with the lowest cost from your deck into your hand. Evolved: (Same as the unevolved form.)
+  A: cost_condition, death_trigger, delayed, generate_cards, random_effect, turn_start, tutor
+  B: cost_condition, death_trigger, delayed, generate_cards, random_effect, turn_start, tutor
+752960 | Great Fairy Dragon | Fusion: Forestcraft cards that originally cost at least 2 play points Whenever cards are fused to this card, summon a Fairy and put a Fairy into your hand. ---------- Ward. Fanfare: Gain +X/+Y. X and Y equal the number of allied Forestcraft followers that have left play this match split randomly. Evolved: (Same as the unevolved form, excluding Fanfare.)
+  A: cost_condition, count_payoff, generate_cards, merge_attach, on_play, random_effect, summon, taunt
+  B: condition_count, generate_cards, merge_attach, on_play, random_effect, summon, taunt
+754879 | Featherfolk Courier | Storm. Fanfare: Enhance (7) - Summon a Featherfolk Courier. Evolve all unevolved allied Featherfolk Couriers. Strike: Draw a card. Evolved: (Same as the unevolved form, excluding Fanfare.)
+  A: damage, draw, haste, kicker, multiple_resources:cost, on_attack, on_play, summon, upgrade
+  B: damage, draw, haste, kicker, multiple_resources:cost, on_attack, on_play, summon, upgrade
+754777 | Call of the Void | Destroy an enemy follower. Necromancy (4): Summon a Lich.
+  A: destroy, graveyard:cost, summon
+  B: destroy, graveyard:cost, summon
+753632 | Noble Fangs | Countdown (4) Last Words: Summon a Barong.
+  A: death_trigger, delayed, summon
+  B: death_trigger, delayed, summon
+754404 | Forbidden Altar | Countdown (4) Fanfare: Enhance (6) - Subtract 4 from this amulet's Countdown. Last Words: Destroy all followers.
+  A: board_wipe, death_trigger, delayed, destroy, friendly_fire, kicker, on_play, symmetric_effect
+  B: board_wipe, death_trigger, delayed, destroy, friendly_fire, kicker, on_play, symmetric_effect
+753403 | Troth's Curse | Destroy an allied follower and an enemy follower. (Can be played only when both a targetable allied card and enemy card are in play.)
+  A: destroy, placement_rules, sacrifice
+  B: destroy, placement_rules, sacrifice
+752401 | Shamu & Shama, Posh Felines | Fanfare: If at least 2 other cards were played this turn, gain Storm. Then, if at least 4 other cards were played, evolve this follower. Then, if at least 6 other cards were played, put a Shamu's Antics and Shama's Gaze into your hand and change their costs to 1.
+  A: condition_count, draw, generate_cards, haste, on_play, upgrade
+  B: condition_count, draw, generate_cards, haste, on_play, upgrade
+752642 | Demonbrand Vampire | Fanfare: If Vengeance is active for you, gain +1/+1 and deal 4 damage to an enemy follower.
+  A: buff, condition_life, damage, on_play
+  B: buff, condition_life, damage, on_play
+754118 | Steelstorm Dragonewt | Fanfare: Put an Assembly Droid into your hand and change its cost to 0. If Overflow is active for you, put 3 into your hand instead. Evolved: Evolve: Evolve an unevolved allied Machina follower. (Evolve effects will not activate.)
+  A: activated, economy, generate_cards, multiple_resources:cost, on_play, tribal, upgrade
+  B: activated, condition, economy, generate_cards, multiple_resources:cost, on_play, upgrade
+756114 | Purson | Accelerate (8): Destroy all allied followers and amulets. For each card, put a random follower that costs more than it from your deck into play. ---------- Storm. Bane. Evolved: (Same as the unevolved form.)
+  A: condition_count, cost_increase, deathtouch, haste, high_cost:benefits, modal_choice, random_effect, sacrifice, tutor, upgrade
+  B: condition_count, cost_increase, deathtouch, haste, high_cost:benefits, modal_choice, random_effect, sacrifice, tutor, upgrade
+753741 | Rocket Knuckles | Deal 3 damage to an enemy follower. If there are any Artifact cards in your hand, randomly discard 1 and deal 6 damage instead.
+  A: damage, discard, random_effect
+  B: damage, discard, random_effect
+814106 | Eleanor's Ultimate | Select a card with Spellboost in your hand. Put a copy of it into your hand and Spellboost the copy X times. X equals the number of times the selected card has been Spellboosted.
+  A: copy, generate_cards
+  B: copy, generate_cards
+752638 | Briared Vampire | Fanfare: Discard 2 cards from your hand. Draw a card. At the start of your next turn, draw a card.
+  A: delayed, discard, draw, on_play, turn_start
+  B: delayed, discard, draw, on_play, turn_start
+755434 | Jolly Rogers | Fanfare: Randomly gain Rush, Bane, or Ward.
+  A: deathtouch, haste, on_play, random_effect, taunt, taunt:grants
+  B: deathtouch, haste, on_play, random_effect, taunt, taunt:grants
+753977 | Giant Slayer | Destroy an enemy follower with at least 5 attack.
+  A: condition_count, destroy
+  B: condition_count, destroy
+755180 | Phoenix Howl | Summon a Star Phoenix. Deal 2 damage to all enemy followers.
+  A: aoe_damage, summon
+  B: aoe_damage, summon
+753146 | Covetous Witch | Drain. Fanfare: Summon a Magic Sediment. Evolved: Drain. Evolve: Give your leader the following effect - At the end of your turn, add 1 to an allied Stack in play. (This effect is not stackable and lasts for the rest of the match.)
+  A: lifesteal, multiple_resources:cost, on_play, stacking_keyword, summon, turn_end, upgrade
+  B: lifesteal, multiple_resources:cost, on_play, stacking_keyword, summon, turn_end, upgrade
+754021 | Stormelementalist | Fanfare: If any allied amulets are in play, return 1 to your hand and restore 2 defense to your leader. Evolved: Evolve: Return an allied amulet to your hand and deal 3 damage to an enemy follower. (Activates only when both a targetable allied card and enemy card are in play.)
+  A: activated, damage, heal, multiple_resources:cost, on_play, return_to_hand, upgrade
+  B: activated, damage, heal, multiple_resources:cost, on_play, return_to_hand, upgrade
+755885 | Pureshot Angel | Accelerate (2): Deal 3 damage to a random enemy follower. ---------- Fanfare: Deal 3 damage to a random enemy follower and then 3 damage to the enemy leader.
+  A: cost_type, direct_damage, high_cost:benefits, modal_choice, on_play, random_effect
+  B: cost_type, direct_damage, high_cost:benefits, modal_choice, on_play, random_effect
+753926 | Charlotta, Tiny Justice | Ward. Evolved: Ward. Evolve: Give all allied followers the following effect until the end of the opponent's turn - Reduce damage from effects to 0.
+  A: damage_reduction, multiple_resources:cost, taunt, upgrade
+  B: damage_reduction, multiple_resources:cost, taunt, upgrade
+813939 | Storm Arrow | Your opponent draws a card. Deal X damage to the enemy leader. X equals half the number of cards in your opponent's hand (rounded up).
+  A: direct_damage, draw, enemy_benefit, hand_disruption
+  B: direct_damage, draw, enemy_benefit, hand_disruption
+753190 | Earthen Fist | Deal 3 damage to an enemy follower. Earth Rite (2): At the end of this turn, deal 3 damage to the enemy leader and put an Earthen Fist into your hand.
+  A: damage_over_time, direct_damage, generate_cards, sacrifice:cost
+  B: damage_over_time, direct_damage, generate_cards, sacrifice:cost
+755534 | Grudge Collector | Fanfare: Until the end of the turn, change the cost of a spell in your hand that originally costs 6 play points or less to 0.
+  A: cost_condition, in_hand_buff, on_play, temporary_effect
+  B: in_hand_buff, on_play, temporary_effect

@@ -24,3 +24,7 @@ cost_reduction|does|\bsubtract \d+ from the cost\b
 debuff|does|-x/-\d|-\d+/-x\b
 silence|does|\bremove all effects from\b
 direct_damage|does|\breduce the enemy leader's maximum defense\b
+count_payoff|does|(at least \d+|equals? the number|x is at least)[^.]*this match
+tribal|does|(allied|other|your) (machina|artifact|officer|commander|natura|mysteria|loot|armed|condemned|hellbound) (cards?|followers?)
+cost_condition|does|(costs? (at least )?\d+ play points? or (less|more)|\d+-play-point|originally costs? (at least )?\d+)
+haste|grants|(give|gives)[^.]*\b(storm|rush)\b

@@ -1,0 +1,721 @@
+{
+ "755875": {
+  "A": {
+   "wrong": [
+    "tutor"
+   ],
+   "missed": [
+    "tribal: allied Artifact cards",
+    "deck_modification: put 3 Mechamagical Rhinos into your deck",
+    "death_trigger: whenever an allied Artifact is destroyed"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "tutor"
+   ],
+   "missed": [
+    "deck_modification: put 3 Mechamagical Rhinos into your deck",
+    "death_trigger: whenever an allied Artifact is destroyed"
+   ]
+  }
+ },
+ "752502": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "turn_end: at the end of this turn",
+    "death: copies of allied followers destroyed recently"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "turn_end: at the end of this turn",
+    "death: copies of allied followers destroyed recently"
+   ]
+  }
+ },
+ "754182": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "on_play: when this follower comes into play",
+    "death_trigger: when this follower leaves play"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "on_play: when this follower comes into play",
+    "death_trigger: when this follower leaves play"
+   ]
+  }
+ },
+ "752478": {
+  "A": {
+   "wrong": [
+    "draw"
+   ],
+   "missed": [
+    "summon: Rally (10) summon it instead"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "draw"
+   ],
+   "missed": [
+    "summon: Rally (10) summon it instead"
+   ]
+  }
+ },
+ "755593": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "753535": {
+  "A": {
+   "wrong": [
+    "placement_rules"
+   ],
+   "missed": [
+    "play_restriction: playable only when 2 allied followers are in play"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "placement_rules"
+   ],
+   "missed": [
+    "play_restriction: playable only when 2 allied followers are in play"
+   ]
+  }
+ },
+ "752621": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "753648": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cost_condition: 1-play-point follower"
+   ]
+  }
+ },
+ "755989": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "814076": {
+  "A": {
+   "wrong": [
+    "terrain"
+   ],
+   "missed": [
+    "condition: while an allied Gentle Forest Beauty is in play"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "terrain"
+   ],
+   "missed": [
+    "condition: while an allied Gentle Forest Beauty is in play"
+   ]
+  }
+ },
+ "755834": {
+  "A": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": [
+    "rule_change: leader effect for the rest of the match",
+    "sacrifice: destroy your own Countdown amulets after playing them"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": [
+    "rule_change: leader effect for the rest of the match",
+    "sacrifice: destroy your own Countdown amulets after playing them"
+   ]
+  }
+ },
+ "754143": {
+  "A": {
+   "wrong": [
+    "condition_count"
+   ],
+   "missed": [
+    "stat_condition: if this follower has at least 5/7 defense"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "condition_count"
+   ],
+   "missed": [
+    "stat_condition: if this follower has at least 5/7 defense"
+   ]
+  }
+ },
+ "814201": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "756032": {
+  "A": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  }
+ },
+ "754164": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "814286": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "752583": {
+  "A": {
+   "wrong": [
+    "destroy"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "destroy"
+   ],
+   "missed": []
+  }
+ },
+ "755574": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cost_condition: followers that originally cost at least 6"
+   ]
+  }
+ },
+ "754968": {
+  "A": {
+   "wrong": [
+    "summon"
+   ],
+   "missed": [
+    "turn_number: start of your tenth turn",
+    "condition_life: leader had 14 defense or less",
+    "destroy: destroy an enemy follower",
+    "aoe_damage: 4 damage to all allies and enemies",
+    "friendly_fire: damage also hits your own side"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "summon"
+   ],
+   "missed": [
+    "turn_number: start of your tenth turn",
+    "condition_life: leader had 14 defense or less",
+    "destroy: destroy an enemy follower",
+    "aoe_damage: 4 damage to all allies and enemies",
+    "friendly_fire: damage also hits your own side"
+   ]
+  }
+ },
+ "755831": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "752814": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "754783": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "753364": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "upgrade: summoned Ghost can evolve for 0 evolution points"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "upgrade: summoned Ghost can evolve for 0 evolution points"
+   ]
+  }
+ },
+ "754073": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition_count: if allied Stack count is less than 3"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition_count: if allied Stack count is less than 3"
+   ]
+  }
+ },
+ "752720": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition: if it's your turn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition: if it's your turn"
+   ]
+  }
+ },
+ "754846": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "stat_condition: enemy follower with 3 defense or less"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "stat_condition: enemy follower with 3 defense or less"
+   ]
+  }
+ },
+ "752913": {
+  "A": {
+   "wrong": [
+    "generate_cards"
+   ],
+   "missed": [
+    "tribal: Machina card"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "generate_cards"
+   ],
+   "missed": [
+    "tribal: Machina card"
+   ]
+  }
+ },
+ "752960": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "buff: gain +X/+Y"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cost_condition: cards that originally cost at least 2",
+    "buff: gain +X/+Y"
+   ]
+  }
+ },
+ "754879": {
+  "A": {
+   "wrong": [
+    "damage"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "damage"
+   ],
+   "missed": []
+  }
+ },
+ "754777": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "753632": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "754404": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "753403": {
+  "A": {
+   "wrong": [
+    "placement_rules"
+   ],
+   "missed": [
+    "play_restriction: playable only when an allied and an enemy card are in play"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "placement_rules"
+   ],
+   "missed": [
+    "play_restriction: playable only when an allied and an enemy card are in play"
+   ]
+  }
+ },
+ "752401": {
+  "A": {
+   "wrong": [
+    "draw"
+   ],
+   "missed": [
+    "cost_set: change their costs to 1"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "draw"
+   ],
+   "missed": [
+    "cost_set: change their costs to 1"
+   ]
+  }
+ },
+ "752642": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "754118": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "cost_set: change its cost to 0",
+    "condition: if Overflow is active"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cost_set: change its cost to 0",
+    "tribal: allied Machina follower"
+   ]
+  }
+ },
+ "756114": {
+  "A": {
+   "wrong": [
+    "cost_increase",
+    "upgrade"
+   ],
+   "missed": [
+    "free_play: put followers from your deck into play",
+    "cost_type: Accelerate (8) alternative cost",
+    "cost_condition: a follower that costs more than it"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "cost_increase",
+    "upgrade"
+   ],
+   "missed": [
+    "free_play: put followers from your deck into play",
+    "cost_type: Accelerate (8) alternative cost",
+    "cost_condition: a follower that costs more than it"
+   ]
+  }
+ },
+ "753741": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition: if there are Artifact cards in your hand",
+    "tribal: Artifact cards"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition: if there are Artifact cards in your hand",
+    "tribal: Artifact cards"
+   ]
+  }
+ },
+ "814106": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "in_hand_buff: Spellboost the copy X times"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "in_hand_buff: Spellboost the copy X times"
+   ]
+  }
+ },
+ "752638": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "755434": {
+  "A": {
+   "wrong": [
+    "taunt:grants"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "taunt:grants"
+   ],
+   "missed": []
+  }
+ },
+ "753977": {
+  "A": {
+   "wrong": [
+    "condition_count"
+   ],
+   "missed": [
+    "stat_condition: enemy follower with at least 5 attack"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "condition_count"
+   ],
+   "missed": [
+    "stat_condition: enemy follower with at least 5 attack"
+   ]
+  }
+ },
+ "755180": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "753146": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "754021": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition: if any allied amulets are in play"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition: if any allied amulets are in play"
+   ]
+  }
+ },
+ "755885": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "damage: 3 damage to a random enemy follower"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "damage: 3 damage to a random enemy follower"
+   ]
+  }
+ },
+ "753926": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "temporary_effect: until the end of the opponent's turn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "temporary_effect: until the end of the opponent's turn"
+   ]
+  }
+ },
+ "813939": {
+  "A": {
+   "wrong": [
+    "hand_disruption"
+   ],
+   "missed": [
+    "hand_size: X from the number of cards in the opponent's hand"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "hand_disruption"
+   ],
+   "missed": [
+    "hand_size: X from the number of cards in the opponent's hand"
+   ]
+  }
+ },
+ "753190": {
+  "A": {
+   "wrong": [
+    "damage_over_time"
+   ],
+   "missed": [
+    "damage: 3 damage to an enemy follower",
+    "turn_end: at the end of this turn"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "damage_over_time"
+   ],
+   "missed": [
+    "damage: 3 damage to an enemy follower",
+    "turn_end: at the end of this turn"
+   ]
+  }
+ },
+ "755534": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "cost_set: change the cost to 0"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cost_set: change the cost to 0",
+    "cost_condition: originally costs 6 play points or less"
+   ]
+  }
+ }
+}

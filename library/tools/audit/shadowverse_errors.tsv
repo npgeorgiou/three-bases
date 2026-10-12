@@ -1,0 +1,248 @@
+752849	+variety_payoff	different-cards payoff missed
+752849	-copy	no-duplicates tagged as copy
+753300	+cost_reduction	cost reduction missed
+813969	+damage	non-ping damage tagged as ping
+813969	-ping	non-ping damage tagged as ping
+756021	+cost_condition	cost condition missed
+756021	-high_cost:benefits	high_cost benefits without cost payoff
+755447	+haste:grants	granted keyword tagged as does
+755447	+count_payoff	this-match count tagged as condition_count
+755447	+tribal	tribal missed
+755447	-haste	granted keyword tagged as does
+755447	-summon	invoke tagged as summon
+755447	-condition_count	this-match count tagged as condition_count
+754055	+tribal	tribal missed
+754055	-activated	automatic effect tagged as activated
+753103	-generate_cards	deck tutor tagged as generate_cards
+813898	+draw	draw missed
+813898	+tribal	tribal missed
+813898	-generate_cards	deck tutor tagged as generate_cards
+752564	+heal	restore defense missed
+752564	+count_payoff	this-match count tagged as condition_count
+755884	+resource_gain	recover play points missed
+755884	-high_cost:benefits	high_cost benefits without cost payoff
+755987	-high_cost:benefits	high_cost benefits without cost payoff
+754211	+buff	buff missed
+754211	+tribal	tribal missed
+754211	-multiple_resources:cost	evolve tagged as multiple_resources cost
+753172	+in_hand_buff	spellboost in-hand missed
+754937	-multiple_resources:cost	evolve tagged as multiple_resources cost
+752582	+transform	transform missed
+752582	+cost_condition	cost condition missed
+752582	-economy	parent tag economy
+752514	-multiple_resources:cost	evolve tagged as multiple_resources cost
+752540	-sacrifice:cost	earth rite filter tagged as sacrifice
+752407	+temporary_effect	this-turn effect missed
+754110	-multiple_resources:cost	evolve tagged as multiple_resources cost
+755796	+repeat_trigger	repeat fanfare missed
+755796	-activated	automatic effect tagged as activated
+755796	-modal_choice	accelerate/crystallize tagged as modal_choice
+752569	+turn_number	turn N condition missed
+754152	+condition_count	condition_count missed
+755926	+condition_count	condition_count missed
+755926	+cost_set	cost set to 0 missed
+755926	+cost_condition	cost condition missed
+755926	-high_cost:benefits	high_cost benefits without cost payoff
+755926	-multiple_resources:cost	evolve tagged as multiple_resources cost
+755926	-summon:benefits	unrelated tag
+755926	-on_ally_play	unrelated tag
+755169	-multiple_resources:cost	evolve tagged as multiple_resources cost
+754228	+cost_set	cost set to 0 missed
+754228	+tribal	tribal missed
+754228	-multiple_resources:cost	evolve tagged as multiple_resources cost
+754128	+stat_condition	stat threshold tagged as condition_count
+754128	-condition_count	this-match count tagged as condition_count
+756104	-high_cost:benefits	high_cost benefits without cost payoff
+756104	-modal_choice	accelerate/crystallize tagged as modal_choice
+754710	-multiple_resources:cost	evolve tagged as multiple_resources cost
+752508	+stealth:benefits	keyword payoff tagged as does
+752508	-multiple_resources:cost	evolve tagged as multiple_resources cost
+752508	-stealth	keyword payoff tagged as does
+755748	+stat_condition	stat threshold tagged as condition_count
+755748	+permanent_growth	permanent growth missed
+755748	-high_cost:benefits	high_cost benefits without cost payoff
+755748	-condition_count	this-match count tagged as condition_count
+753154	+count_payoff	this-match count tagged as condition_count
+753154	+temporary_effect	this-turn effect missed
+753154	-condition_count	this-match count tagged as condition_count
+753858	+on_ally_play	on_ally_play missed
+753858	+tribal	tribal missed
+753858	-multiple_resources:cost	evolve tagged as multiple_resources cost
+755063	+tribal	tribal missed
+814021	-terrain	unrelated tag
+814095	-shop_gold	unrelated tag
+754822	-combo_sequence	unrelated tag
+754822	-on_attack	unrelated tag
+814065	+cost_condition	cost condition missed
+814065	-condition_count	this-match count tagged as condition_count
+755561	+stat_condition	stat threshold tagged as condition_count
+755561	-ping	non-ping damage tagged as ping
+755561	-modal_choice	accelerate/crystallize tagged as modal_choice
+752614	+variety_payoff	different-cards payoff missed
+752614	+tribal	tribal missed
+752614	+revive	revive missed
+813831	+count_payoff	this-match count tagged as condition_count
+813831	-condition_count	this-match count tagged as condition_count
+754325	+deck_condition	deck size condition missed
+754325	+upgrade	evolve missed
+755650	+count_payoff	this-match count tagged as condition_count
+755650	-summon	invoke tagged as summon
+755650	-condition_count	this-match count tagged as condition_count
+755733	+buff	buff missed
+755733	-high_cost:benefits	high_cost benefits without cost payoff
+753753	+count_payoff	this-match count tagged as condition_count
+753753	-condition_count	this-match count tagged as condition_count
+755345	+on_ally_play	ally play trigger missed
+755345	+tribal	tribal missed
+755345	+generate_cards	card to deck missed
+755345	-multiple_resources:cost	evolve tagged as multiple_resources cost
+755407	+haste:grants	granted keyword tagged as does
+755934	+free_play	put into play missed
+755934	+cost_condition	cost condition missed
+755934	-cost_increase	unrelated tag
+755934	-upgrade	unrelated tag
+814103	+damage	non-ping damage tagged as ping
+814103	+deck_condition	deck size condition missed
+753219	+tribal	tribal missed
+753677	+protection	protection tagged as counters
+753677	+tribal	tribal missed
+753677	-destroy:counters	protection tagged as counters
+814252	+reactions	opponent-action trigger missed
+814252	+self_destruct	self-destroy tagged as destroy
+814252	-destroy	self-destroy tagged as destroy
+755560	+draw	draw missed
+755560	+tribal	tribal missed
+755560	-generate_cards	deck tutor tagged as generate_cards
+755373	-modal_choice	accelerate/crystallize tagged as modal_choice
+752574	+tribal	tribal missed
+752574	-generate_cards	deck tutor tagged as generate_cards
+813735	+play_restriction	play restriction tagged as placement
+813735	-placement_rules	play restriction tagged as placement
+752688	+death_trigger	when-destroyed trigger tagged as death_count
+752688	-death_count	when-destroyed trigger tagged as death_count
+752688	-cost_type:benefits	unrelated tag
+754864	+hand_size	hand size condition missed
+755563	-combo_sequence	unrelated tag
+755563	-damage	stat line/debuff tagged as damage
+753731	+count_payoff	this-match count tagged as condition_count
+753731	+cost_condition	cost condition missed
+753731	-generate_cards	deck tutor tagged as generate_cards
+753731	-condition_count	this-match count tagged as condition_count
+753731	-multiple_resources:cost	evolve tagged as multiple_resources cost
+753717	-multiple_resources:cost	evolve tagged as multiple_resources cost
+754196	-multiple_resources:cost	evolve tagged as multiple_resources cost
+753970	+count_payoff	this-match count tagged as condition_count
+753970	-condition_count	this-match count tagged as condition_count
+755652	+count_payoff	this-match count tagged as condition_count
+755652	-modal_choice	accelerate/crystallize tagged as modal_choice
+814164	-damage	stat line/debuff tagged as damage
+755154	+tribal	tribal missed
+755232	+direct_damage	leader damage missed
+756100	-damage	stat line/debuff tagged as damage
+756100	-high_cost:benefits	high_cost benefits without cost payoff
+754542	+deck_condition	deck size condition missed
+754542	+variety_payoff	different-cards payoff missed
+754542	-condition_count	this-match count tagged as condition_count
+752378	+heal	restore defense missed
+752378	+count_payoff	this-match count tagged as condition_count
+755481	+stat_condition	stat threshold tagged as condition_count
+753393	-multiple_resources:cost	evolve tagged as multiple_resources cost
+755829	-high_cost:benefits	high_cost benefits without cost payoff
+813839	+count_payoff	this-match count tagged as condition_count
+813839	+damage	non-ping damage tagged as ping
+813839	-condition_count	this-match count tagged as condition_count
+753973	-damage	stat line/debuff tagged as damage
+755725	-high_cost:benefits	high_cost benefits without cost payoff
+755725	-multiple_resources:cost	evolve tagged as multiple_resources cost
+755725	-delayed	unrelated tag
+813872	+count_payoff	this-match count tagged as condition_count
+813872	+damage	damage missed
+813872	-condition_count	this-match count tagged as condition_count
+755260	+condition	conditional missed
+755260	-condition_count	this-match count tagged as condition_count
+755260	-haste	granted keyword tagged as does
+755173	+damage	damage missed
+755173	+combo_sequence	previous-turn play condition missed
+755173	-multiple_resources:cost	evolve tagged as multiple_resources cost
+752344	+condition	conditional missed
+752344	-condition_count	this-match count tagged as condition_count
+755050	+buff	buff missed
+755050	+tribal	tribal missed
+755050	+free_play	put into play missed
+755050	+cost_condition	cost condition missed
+755050	-multiple_resources:cost	evolve tagged as multiple_resources cost
+756092	+damage	damage missed
+756092	-high_cost:benefits	high_cost benefits without cost payoff
+756092	-modal_choice	accelerate/crystallize tagged as modal_choice
+752561	+stat_condition	stat threshold tagged as condition_count
+752561	-condition_count	this-match count tagged as condition_count
+752561	-multiple_resources:cost	evolve tagged as multiple_resources cost
+753787	+banish	banish missed
+753787	-damage_over_time	unrelated tag
+753085	+condition	conditional missed
+753085	+tribal	tribal missed
+753085	+damage	damage missed
+754428	+count_payoff	this-match count tagged as condition_count
+754428	+variable_stats	X-stat effect missed
+754428	-buff	variable gain tagged as buff
+752597	+count_payoff	this-match count tagged as condition_count
+752597	-condition_count	this-match count tagged as condition_count
+752597	-graveyard	shadows tagged as graveyard
+752911	+kicker	union burst missed
+752911	-delayed	unrelated tag
+752468	+tribal	tribal missed
+752468	-multiple_resources:cost	evolve tagged as multiple_resources cost
+752468	-on_ally_play	evolve trigger tagged as on_ally_play
+756049	+damage	damage missed
+756049	-high_cost:benefits	high_cost benefits without cost payoff
+756049	-modal_choice	accelerate/crystallize tagged as modal_choice
+752451	+return_to_hand:benefits	bounce payoff missed
+754640	+count_payoff	this-match count tagged as condition_count
+754640	-multiple_resources:cost	evolve tagged as multiple_resources cost
+754381	+revive	revive missed
+754381	-condition_count	this-match count tagged as condition_count
+754381	-multiple_resources:cost	evolve tagged as multiple_resources cost
+753231	-draw	card to hand tagged as draw
+753848	-damage	stat line/debuff tagged as damage
+755159	-damage:benefits	unrelated tag
+752903	+tribal	tribal missed
+753707	-multiple_resources:cost	evolve tagged as multiple_resources cost
+753643	-summon:benefits	unrelated tag
+754427	-draw	card to hand tagged as draw
+753713	+tribal	tribal missed
+753713	-delayed	unrelated tag
+753713	-destroy	self-destroy tagged as destroy
+754572	+free_play	put into play missed
+754572	+cost_condition	cost condition missed
+754572	+tribal	tribal missed
+754749	-activated	automatic effect tagged as activated
+756063	+condition	conditional missed
+756063	+direct_damage	leader damage missed
+756063	-high_cost:benefits	high_cost benefits without cost payoff
+756063	-condition_count	this-match count tagged as condition_count
+754974	+count_payoff	this-match count tagged as condition_count
+754974	+damage	damage missed
+754974	-multiple_resources:cost	evolve tagged as multiple_resources cost
+813773	+self_destruct	self-destroy tagged as destroy
+813773	-destroy	self-destroy tagged as destroy
+755505	+stat_condition	stat threshold tagged as condition_count
+755505	+tribal	tribal missed
+755505	-condition_count	this-match count tagged as condition_count
+755505	-modal_choice	accelerate/crystallize tagged as modal_choice
+755150	+buff	buff missed
+755150	+permanent_growth	permanent growth missed
+755150	-in_hand_buff	self buff tagged as in_hand_buff
+755787	+free_play	put into play missed
+755787	+cost_condition	cost condition missed
+755787	+death_trigger	when-destroyed trigger tagged as death_count
+755787	-high_cost:benefits	high_cost benefits without cost payoff
+755787	-tutor	put into play tagged as tutor
+755787	-death_count	when-destroyed trigger tagged as death_count
+755787	-destroy:benefits	unrelated tag
+753876	+cost_reduction	cost reduction missed
+753225	+damage	damage missed
+753225	-ping	non-ping damage tagged as ping
+754413	+tribal	tribal missed
+814122	+haste:grants	granted keyword tagged as does
+814122	+variable_stats	X-stat effect missed
+814122	-haste	granted keyword tagged as does

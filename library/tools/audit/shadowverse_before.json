@@ -1,0 +1,343 @@
+{
+"755875": [
+"cost_reduction",
+"death_count",
+"haste",
+"high_cost:benefits",
+"information",
+"on_play",
+"sacrifice:benefits",
+"tutor"
+],
+"752502": [
+"copy",
+"random_effect"
+],
+"754182": [
+"graveyard"
+],
+"752478": [
+"condition_count",
+"draw",
+"generate_cards",
+"modal_choice",
+"on_play"
+],
+"755593": [
+"generate_cards",
+"on_play"
+],
+"753535": [
+"aoe_damage",
+"heal",
+"placement_rules"
+],
+"752621": [
+"condition_count",
+"draw",
+"graveyard",
+"sacrifice:cost"
+],
+"753648": [
+"death_trigger",
+"delayed",
+"generate_cards",
+"on_play",
+"random_effect",
+"tutor"
+],
+"755989": [
+"banish",
+"board_wipe",
+"friendly_fire",
+"high_cost:benefits",
+"symmetric_effect"
+],
+"814076": [
+"haste",
+"passive",
+"terrain"
+],
+"755834": [
+"death_trigger",
+"delayed",
+"high_cost:benefits"
+],
+"754143": [
+"condition_count",
+"haste:grants",
+"in_hand_buff",
+"on_play",
+"summon",
+"upgrade"
+],
+"814201": [
+"deathtouch",
+"haste",
+"multi_attack"
+],
+"756032": [
+"cost_type",
+"damage",
+"delayed",
+"high_cost:benefits",
+"on_play"
+],
+"754164": [
+"discard",
+"discard:benefits",
+"draw"
+],
+"814286": [
+"haste",
+"lifesteal"
+],
+"752583": [
+"condition",
+"destroy",
+"draw",
+"economy",
+"regeneration",
+"self_destruct",
+"turn_start"
+],
+"755574": [
+"aoe_damage",
+"condition_count",
+"direct_damage",
+"draw",
+"merge_attach",
+"on_play",
+"resource_gain"
+],
+"754968": [
+"damage_over_time",
+"draw",
+"free_play",
+"heal",
+"multiple_resources",
+"on_attack",
+"on_play",
+"random_effect",
+"stat_condition",
+"summon",
+"turn_end",
+"turn_start",
+"upgrade"
+],
+"755831": [
+"high_cost:benefits",
+"on_play",
+"summon"
+],
+"752814": [
+"buff",
+"death_trigger",
+"kicker",
+"on_play",
+"random_effect",
+"summon",
+"taunt:grants"
+],
+"754783": [
+"buff",
+"graveyard:cost"
+],
+"753364": [
+"buff",
+"haste",
+"kicker",
+"multiple_resources",
+"on_play",
+"summon"
+],
+"754073": [
+"aoe_damage",
+"draw",
+"sacrifice:cost",
+"stacking_keyword",
+"summon"
+],
+"752720": [
+"death_trigger",
+"delayed",
+"immunity",
+"random_effect",
+"tutor"
+],
+"754846": [
+"banish",
+"multiple_resources:cost",
+"upgrade"
+],
+"752913": [
+"cost_condition",
+"death_trigger",
+"delayed",
+"generate_cards",
+"random_effect",
+"turn_start",
+"tutor"
+],
+"752960": [
+"condition_count",
+"generate_cards",
+"merge_attach",
+"on_play",
+"random_effect",
+"summon",
+"taunt"
+],
+"754879": [
+"damage",
+"draw",
+"haste",
+"kicker",
+"multiple_resources:cost",
+"on_attack",
+"on_play",
+"summon",
+"upgrade"
+],
+"754777": [
+"destroy",
+"graveyard:cost",
+"summon"
+],
+"753632": [
+"death_trigger",
+"delayed",
+"summon"
+],
+"754404": [
+"board_wipe",
+"death_trigger",
+"delayed",
+"destroy",
+"friendly_fire",
+"kicker",
+"on_play",
+"symmetric_effect"
+],
+"753403": [
+"destroy",
+"placement_rules",
+"sacrifice"
+],
+"752401": [
+"condition_count",
+"draw",
+"generate_cards",
+"haste",
+"on_play",
+"upgrade"
+],
+"752642": [
+"buff",
+"condition_life",
+"damage",
+"on_play"
+],
+"754118": [
+"activated",
+"condition",
+"economy",
+"generate_cards",
+"multiple_resources:cost",
+"on_play",
+"upgrade"
+],
+"756114": [
+"condition_count",
+"cost_increase",
+"deathtouch",
+"haste",
+"high_cost:benefits",
+"modal_choice",
+"random_effect",
+"sacrifice",
+"tutor",
+"upgrade"
+],
+"753741": [
+"damage",
+"discard",
+"random_effect"
+],
+"814106": [
+"copy",
+"generate_cards"
+],
+"752638": [
+"delayed",
+"discard",
+"draw",
+"on_play",
+"turn_start"
+],
+"755434": [
+"deathtouch",
+"haste",
+"on_play",
+"random_effect",
+"taunt",
+"taunt:grants"
+],
+"753977": [
+"condition_count",
+"destroy"
+],
+"755180": [
+"aoe_damage",
+"summon"
+],
+"753146": [
+"lifesteal",
+"multiple_resources:cost",
+"on_play",
+"stacking_keyword",
+"summon",
+"turn_end",
+"upgrade"
+],
+"754021": [
+"activated",
+"damage",
+"heal",
+"multiple_resources:cost",
+"on_play",
+"return_to_hand",
+"upgrade"
+],
+"755885": [
+"cost_type",
+"direct_damage",
+"high_cost:benefits",
+"modal_choice",
+"on_play",
+"random_effect"
+],
+"753926": [
+"damage_reduction",
+"multiple_resources:cost",
+"taunt",
+"upgrade"
+],
+"813939": [
+"direct_damage",
+"draw",
+"enemy_benefit",
+"hand_disruption"
+],
+"753190": [
+"damage_over_time",
+"direct_damage",
+"generate_cards",
+"sacrifice:cost"
+],
+"755534": [
+"in_hand_buff",
+"on_play",
+"temporary_effect"
+]
+}
