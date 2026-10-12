@@ -24,9 +24,9 @@ When something changes state (an idea gets built, a to-do gets decided), move it
 - summary.txt is the source of truth for rules and UI: never contradict it without telling Kaptain. Never invent rules, stats or mechanics; mark suggestions as Claude's.
 - Change only what was asked. Fix bugs generically: when one card shows a problem, check every card with the same problem.
 - Visuals (layout, readability, animations) must look deliberate and clear.
-- After every change: commit, push, and also give Kaptain the changed game/scenarios/summary file as an immediate download.
+- After every change: commit and push. Give Kaptain only the changed HTML files (game, scenarios, AI lab) as downloads, never the text files (he reads those on GitHub).
 - Never publish anything as an artifact.
-- Summary updates are done in one pass after the current work; remind Kaptain in every reply to tell Claude to save the summary.
+- Summary updates are done in one pass after the current work: while game changes are not yet written into summary.txt, end every reply with a reminder that Kaptain should tell Claude to save the summary (= write those changes into summary.txt and push). No unsaved changes, no reminder.
 
 ## Reading rules (token economy)
 - Never read a whole big file. Find headings with grep and read only the section the task needs (e.g. only the factions a task touches in summary.txt).
