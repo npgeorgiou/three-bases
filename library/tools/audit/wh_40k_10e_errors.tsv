@@ -1,0 +1,343 @@
+784908	+zone_of_control	mechanic missed
+784908	+condition	mechanic missed
+787236	-advantage	keyword list tagged as advantage
+787236	-on_attack	attack modifier tagged as trigger
+787236	-tribal	keyword exclusion tagged as tribal
+787236	-zone_of_control	engagement range tagged as zone_of_control
+787236	+attack_mod	hit/wound roll modifier missed
+788387	-cooldowns	unjustified tag
+788387	-ranged	unjustified tag
+788198	-on_attack	attack modifier tagged as trigger
+788198	+attack_mod	hit/wound roll modifier missed
+788198	+damage	mechanic missed
+788039	-on_attack	attack modifier tagged as trigger
+788039	-spell_power:benefits	psychic keyword tagged as spell_power
+788039	+buff	mechanic missed
+784563	-merge_attach	unjustified tag
+784563	-piercing	unjustified tag
+785565	-damage_reduction	unjustified tag
+788026	-damage	keyword list tagged as damage
+788026	-on_attack	attack modifier tagged as trigger
+788026	-temporary_effect	temporary bonus tagged as generic temporary_effect
+788026	+on_play	mechanic missed
+788026	+temporary_buff	this-turn bonus missed
+786721	-debuff	roll penalty tagged as debuff
+786721	+attack_mod	hit/wound roll modifier missed
+787575	-stealth	unjustified tag
+786209	-on_attack	attack modifier tagged as trigger
+788142	-buff	roll modifier tagged as buff
+788142	-multi_attack:benefits	unjustified tag
+788142	-random_effect	unjustified tag
+788142	-terrain	unjustified tag
+788142	-turn_start	phase start tagged as turn_start
+788142	+mark_target	selected-target bonus missed
+788142	+attack_mod	hit/wound roll modifier missed
+788142	+tribal	mechanic missed
+784397	-buff	roll modifier tagged as buff
+784397	+attack_mod	hit/wound roll modifier missed
+788577	-aoe_damage	unjustified tag
+788577	-tribal	keyword exclusion tagged as tribal
+788577	+condition	mechanic missed
+788337	-buff	roll modifier tagged as buff
+788337	+damage_reduction	mechanic missed
+787394	-on_attack	attack modifier tagged as trigger
+787394	-damage	keyword list tagged as damage
+787394	-spell_power:benefits	psychic keyword tagged as spell_power
+787394	-temporary_effect	temporary bonus tagged as generic temporary_effect
+787394	+attack_mod	hit/wound roll modifier missed
+787394	+temporary_buff	this-turn bonus missed
+788033	-turn_end	end of phase tagged as turn_end
+788033	-zone_of_control	engagement range tagged as zone_of_control
+788033	-spell_power:benefits	psychic keyword tagged as spell_power
+788033	+cheat_death	return after destroyed missed
+788033	+on_attack	mechanic missed
+788054	-spell_power:benefits	psychic keyword tagged as spell_power
+787757	-on_attack	attack modifier tagged as trigger
+787757	-temporary_buff	this-turn bonus missed
+787757	-turn_start	phase start tagged as turn_start
+787757	-type_grant	unjustified tag
+787757	-movement	unjustified tag
+786585	-on_attack	attack modifier tagged as trigger
+786585	-damage	keyword list tagged as damage
+786585	+on_kill	mechanic missed
+786585	+summon	mechanic missed
+786585	+piercing:grants	mechanic missed
+785622	-buff	roll modifier tagged as buff
+785622	+attack_mod	hit/wound roll modifier missed
+785622	+aura	mechanic missed
+785622	+tribal	mechanic missed
+787864	-ranged	unjustified tag
+788196	-movement	unjustified tag
+788196	+stat_set	mechanic missed
+785430	+reactions:counters	mechanic missed
+787327	-advantage	keyword list tagged as advantage
+787327	-territory_trigger	unjustified tag
+787327	-zone_of_control	engagement range tagged as zone_of_control
+787327	-debuff	roll penalty tagged as debuff
+787327	+attack_mod	hit/wound roll modifier missed
+784753	+stat_set	mechanic missed
+784753	+type_grant	mechanic missed
+788610	-debuff	roll penalty tagged as debuff
+788610	-spell_power:benefits	psychic keyword tagged as spell_power
+788610	+attack_mod	hit/wound roll modifier missed
+785902	-temporary_effect	temporary bonus tagged as generic temporary_effect
+785902	+temporary_buff	this-turn bonus missed
+784371	-buff	roll modifier tagged as buff
+784371	-temporary_effect	temporary bonus tagged as generic temporary_effect
+784371	+attack_mod	hit/wound roll modifier missed
+784371	+mark_target	selected-target bonus missed
+784371	+temporary_buff	this-turn bonus missed
+784384	-on_attack	attack modifier tagged as trigger
+784384	+advantage	mechanic missed
+787567	-cooldowns	unjustified tag
+787567	-once_per_game	unjustified tag
+787567	-advantage	keyword list tagged as advantage
+787567	-condition	unjustified tag
+787567	-territory_trigger	unjustified tag
+784311	-buff	roll modifier tagged as buff
+784311	+movement:grants	mechanic missed
+815493	+mark_target	selected-target bonus missed
+788527	-on_attack	attack modifier tagged as trigger
+788527	-damage	keyword list tagged as damage
+787718	-spell_power:benefits	psychic keyword tagged as spell_power
+787718	-turn_start	phase start tagged as turn_start
+786435	-turn_end	end of phase tagged as turn_end
+786435	-zone_of_control	engagement range tagged as zone_of_control
+786435	+cheat_death	return after destroyed missed
+787882	-advantage	keyword list tagged as advantage
+787882	-zone_of_control	engagement range tagged as zone_of_control
+787882	+attack_mod	hit/wound roll modifier missed
+787169	-territory_trigger	infiltrators tagged as territory_trigger
+787169	-death_trigger	unjustified tag
+787169	+targeting_rules	mechanic missed
+785453	-advantage	keyword list tagged as advantage
+786046	-turn_end	end of phase tagged as turn_end
+786046	-zone_of_control	engagement range tagged as zone_of_control
+786046	+cheat_death	return after destroyed missed
+785443	-condition_count	unjustified tag
+787679	-temporary_effect	temporary bonus tagged as generic temporary_effect
+787679	-turn_start	phase start tagged as turn_start
+787679	+temporary_buff	this-turn bonus missed
+785373	-zone_of_control	engagement range tagged as zone_of_control
+786655	-passive	unjustified tag
+786655	-zone_of_control	engagement range tagged as zone_of_control
+786655	+reactions	reaction to enemy move missed
+785749	-territory_trigger	infiltrators tagged as territory_trigger
+784368	-run_structure	unjustified tag
+784368	-stances:benefits	unjustified tag
+784368	-piercing:benefits	unjustified tag
+784368	-temporary_effect	temporary bonus tagged as generic temporary_effect
+784368	-turn_start	phase start tagged as turn_start
+784368	+modal_choice	mechanic missed
+784368	+temporary_buff	this-turn bonus missed
+786403	-buff	roll modifier tagged as buff
+786403	+attack_mod	hit/wound roll modifier missed
+788345	-advantage	keyword list tagged as advantage
+788345	-tribal	keyword exclusion tagged as tribal
+788345	-temporary_effect	temporary bonus tagged as generic temporary_effect
+788345	+temporary_buff	this-turn bonus missed
+815331	+copy	mechanic missed
+787184	-turn_start	phase start tagged as turn_start
+787184	-territory_trigger	infiltrators tagged as territory_trigger
+787184	-advantage	keyword list tagged as advantage
+815367	-destroy	unjustified tag
+815367	-destroy:benefits	unjustified tag
+815367	-resource_banking	unjustified tag
+815367	+resource_gain	mechanic missed
+787537	-on_attack	attack modifier tagged as trigger
+787537	-zone_of_control	engagement range tagged as zone_of_control
+787537	-advantage	keyword list tagged as advantage
+787537	+attack_mod	hit/wound roll modifier missed
+784743	-passive	unjustified tag
+784743	-resource_banking	unjustified tag
+784743	-upgrade	unjustified tag
+784743	+coin_economy	mechanic missed
+785190	-turn_end	end of phase tagged as turn_end
+785190	-turn_start	phase start tagged as turn_start
+785190	-zone_of_control	engagement range tagged as zone_of_control
+785190	+game_end_trigger	mechanic missed
+787484	-advantage	keyword list tagged as advantage
+787484	-tribal	keyword exclusion tagged as tribal
+787873	-multi_attack	unjustified tag
+787873	-random_effect	unjustified tag
+787873	-piercing	unjustified tag
+788438	-turn_start	phase start tagged as turn_start
+788438	-passive	unjustified tag
+785785	-ranged	unjustified tag
+785785	+reactions:counters	mechanic missed
+787952	-movement	unjustified tag
+787952	-ranged	unjustified tag
+787952	-zone_of_control	engagement range tagged as zone_of_control
+787952	-tribal	keyword exclusion tagged as tribal
+787952	-turn_start	phase start tagged as turn_start
+787952	+condition_count	mechanic missed
+785974	-buff	roll modifier tagged as buff
+785974	+attack_mod	hit/wound roll modifier missed
+787821	-random_effect	unjustified tag
+787821	-terrain	unjustified tag
+786893	+turn_number	mechanic missed
+815471	-movement	unjustified tag
+815471	-placement_rules	unjustified tag
+815471	-reserve_bench	unjustified tag
+815471	-territory_trigger	infiltrators tagged as territory_trigger
+815471	+silence	mechanic missed
+788313	-lone_unit	unjustified tag
+788313	-on_attack	attack modifier tagged as trigger
+788313	-buff	roll modifier tagged as buff
+788313	-advantage	keyword list tagged as advantage
+788313	-zone_of_control	engagement range tagged as zone_of_control
+788313	+targeting_rules	mechanic missed
+787652	-turn_start	phase start tagged as turn_start
+787652	-cooldowns	unjustified tag
+787652	-merge_attach	unjustified tag
+787652	-advantage	keyword list tagged as advantage
+787652	-zone_of_control	engagement range tagged as zone_of_control
+787652	+reactions	reaction to enemy move missed
+787652	+merge_attach:benefits	mechanic missed
+785219	-zone_of_control	engagement range tagged as zone_of_control
+785219	-spell_power:benefits	psychic keyword tagged as spell_power
+787312	-advantage	keyword list tagged as advantage
+787312	-spell_power:benefits	psychic keyword tagged as spell_power
+788532	-deckbuilding_effect	unjustified tag
+788532	-upgrade	unjustified tag
+788532	-territory_trigger	infiltrators tagged as territory_trigger
+788382	-on_attack	attack modifier tagged as trigger
+816461	-turn_start	phase start tagged as turn_start
+816461	-temporary_buff	unjustified tag
+816461	-territory_trigger	infiltrators tagged as territory_trigger
+816461	-advantage	keyword list tagged as advantage
+786914	-advantage	keyword list tagged as advantage
+786280	-turn_start	phase start tagged as turn_start
+787318	-tribal	keyword exclusion tagged as tribal
+787318	-spell_power:benefits	psychic keyword tagged as spell_power
+788411	-on_attack	attack modifier tagged as trigger
+788411	-buff	roll modifier tagged as buff
+788411	-advantage	keyword list tagged as advantage
+788411	-temporary_effect	temporary bonus tagged as generic temporary_effect
+788411	+temporary_buff	this-turn bonus missed
+784430	-condition_count	unjustified tag
+784430	-passive	unjustified tag
+784430	-tribal	keyword exclusion tagged as tribal
+784430	+scope_multi	mechanic missed
+786761	-advantage	keyword list tagged as advantage
+786761	-multi_attack	unjustified tag
+786761	+piercing:grants	mechanic missed
+785502	-resource_banking	unjustified tag
+785502	+activated	mechanic missed
+787955	-attack_zero	unjustified tag
+787955	-immunity	unjustified tag
+787955	-stealth	unjustified tag
+787955	-tribal	keyword exclusion tagged as tribal
+787955	-zone_of_control	engagement range tagged as zone_of_control
+787955	-ranged	unjustified tag
+787955	-saving_throws	unjustified tag
+787955	-temporary_effect	temporary bonus tagged as generic temporary_effect
+787955	+damage_prevention	mechanic missed
+787955	+temporary_buff	this-turn bonus missed
+787955	+attack_mod	hit/wound roll modifier missed
+788178	-territory_trigger	infiltrators tagged as territory_trigger
+788178	-spell_power:benefits	psychic keyword tagged as spell_power
+788178	+targeting_rules	mechanic missed
+786349	-ranged	unjustified tag
+786349	+stat_set	mechanic missed
+786349	+type_grant	mechanic missed
+786395	-activated	unjustified tag
+786395	-piercing	unjustified tag
+786395	+coin_economy	mechanic missed
+787629	-steal	unjustified tag
+787629	-spell_power:benefits	psychic keyword tagged as spell_power
+787629	+attack_mod	hit/wound roll modifier missed
+785119	-piercing:grants	unjustified tag
+787152	-advantage	keyword list tagged as advantage
+787152	-turn_end	end of phase tagged as turn_end
+787152	-zone_of_control	engagement range tagged as zone_of_control
+787152	+temporary_buff	this-turn bonus missed
+788533	-turn_start	phase start tagged as turn_start
+788533	-zone_of_control	engagement range tagged as zone_of_control
+788533	-advantage	keyword list tagged as advantage
+788533	-on_attack	attack modifier tagged as trigger
+788533	+modal_choice	mechanic missed
+787786	-random_effect	unjustified tag
+787786	-temporary_buff	unjustified tag
+788089	-advantage	keyword list tagged as advantage
+788089	-tribal	keyword exclusion tagged as tribal
+787669	-random_effect	unjustified tag
+787669	-ranged	unjustified tag
+787669	-temporary_buff	unjustified tag
+787669	-heal	unjustified tag
+787669	+regeneration	mechanic missed
+787932	-turn_end	end of phase tagged as turn_end
+787932	-zone_of_control	engagement range tagged as zone_of_control
+787932	-tribal	keyword exclusion tagged as tribal
+787932	+cheat_death	return after destroyed missed
+784663	-once_per_game	once per round tagged as once_per_game
+784663	-advantage	keyword list tagged as advantage
+786551	-piercing	unjustified tag
+787625	-passive	unjustified tag
+787625	-turn_start	phase start tagged as turn_start
+787625	-zone_of_control	engagement range tagged as zone_of_control
+787625	+reactions	reaction to enemy move missed
+786927	-once_per_game	once per round tagged as once_per_game
+788100	-items_consumables	unjustified tag
+788100	-ranged	unjustified tag
+785067	-once_per_game	once per round tagged as once_per_game
+788355	-advantage	keyword list tagged as advantage
+788355	-death_trigger	unjustified tag
+788355	+cheat_death	return after destroyed missed
+788355	+counterattack	mechanic missed
+786278	-immunity	unjustified tag
+786167	-piercing	unjustified tag
+786167	+target_choice	mechanic missed
+786809	+start_of_game	mechanic missed
+787910	-buff	roll modifier tagged as buff
+787910	-advantage	keyword list tagged as advantage
+784405	-temporary_effect	temporary bonus tagged as generic temporary_effect
+786705	-once_per_game	once per round tagged as once_per_game
+784470	-temporary_buff	unjustified tag
+784470	+advantage	mechanic missed
+784470	+deckbuilding_effect	mechanic missed
+785847	-zone_of_control	engagement range tagged as zone_of_control
+785847	+permanent_growth	mechanic missed
+787788	-turn_end	end of phase tagged as turn_end
+787788	-advantage	keyword list tagged as advantage
+787788	-tribal	keyword exclusion tagged as tribal
+787788	-drawback	unjustified tag
+788390	-activated	unjustified tag
+788390	-advantage	keyword list tagged as advantage
+788390	-ranged	unjustified tag
+787424	-buff	roll modifier tagged as buff
+787424	-damage	unjustified tag
+787424	-on_attack	attack modifier tagged as trigger
+787424	-ranged	unjustified tag
+787424	-passive	unjustified tag
+787424	-zone_of_control	engagement range tagged as zone_of_control
+787424	+reactions	reaction to enemy move missed
+787335	-turn_end	end of phase tagged as turn_end
+787335	-zone_of_control	engagement range tagged as zone_of_control
+787335	-spell_power:benefits	psychic keyword tagged as spell_power
+787335	-advantage	keyword list tagged as advantage
+787335	+cheat_death	return after destroyed missed
+787274	-advantage	keyword list tagged as advantage
+787274	-damage	unjustified tag
+787274	-tribal	keyword exclusion tagged as tribal
+786282	+attack_mod	hit/wound roll modifier missed
+787557	-zone_of_control	engagement range tagged as zone_of_control
+787557	-tribal	keyword exclusion tagged as tribal
+787557	-spell_power:benefits	psychic keyword tagged as spell_power
+787557	-temporary_effect	temporary bonus tagged as generic temporary_effect
+787557	+attack_mod	hit/wound roll modifier missed
+787557	+mark_target	mechanic missed
+787557	+temporary_buff	this-turn bonus missed
+785091	-random_effect	unjustified tag
+786899	-zone_of_control	engagement range tagged as zone_of_control
+784325	-advantage	keyword list tagged as advantage
+784325	-stress_morale	unjustified tag
+784325	+modal_choice	mechanic missed
+784325	+life_payment:cost	mechanic missed
+788068	-terrain	unjustified tag
+788068	-tribal	keyword exclusion tagged as tribal
+788068	-on_attack	attack modifier tagged as trigger
+788068	-damage	unjustified tag
+788068	+buff	mechanic missed
+787094	-zone_of_control	engagement range tagged as zone_of_control
+815350	+resource_gain	mechanic missed

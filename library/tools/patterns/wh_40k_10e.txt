@@ -14,7 +14,6 @@ cooldowns|does|\bonce per (turn|phase|battle round)\b
 temporary_buff|does|\buntil the (end|start) of (the|this|your|your opponent's|the next)( next)? (phase|turn|fight phase|shooting phase|command phase|battle round)\b
 damage_reduction|does|\bfeel no pain\b|\binvulnerable save\b|\bsubtract 1 from the damage characteristic\b|\bworsen the armour penetration\b|\bdamage characteristic of that attack by 1\b
 damage|does|\b(suffers?|inflicts?|deals?|inflicting|suffering) (up to )?(\d+|d3|d6|2d3|\w+ )?(additional )?mortal wounds?\b|\[devastating wounds\]
-advantage|does|\[sustained hits \d\]|\[lethal hits\]|\[torrent\]
 piercing|does|\[lance\]|\[melta \d\]|\[devastating wounds\]|\[precision\]
 drawback|does|\[hazardous\]|\bhazardous test\b
 terrain|counters|\[ignores cover\]|\bignores cover\b|\bbenefit of cover\b(?! to)
@@ -84,3 +83,8 @@ type_grant|does|\b(gains?) the \w+( \w+)? keyword\b|\b(the bearer|this model|thi
 bodyguard|does|\bmust allocate it to this model\b
 !shop_gold|\bteeth\b
 !bodyguard|\bbodyguard
+attack_mod|does|(add|subtract) 1 (to|from) the (hit|wound) roll
+cheat_death|does|the first time (this model|the bearer) is destroyed
+temporary_buff|does|until the end of the (phase|turn), (add|improve)
+reactions|does|each time an enemy unit (has shot|is selected to shoot|ends a)
+!on_attack|when .{0,20}attacks

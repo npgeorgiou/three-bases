@@ -1,0 +1,806 @@
+{
+ "788439": {
+  "A": {
+   "wrong": [
+    "piercing"
+   ],
+   "missed": [
+    "buff: 'Ard Case adds 2 Toughness",
+    "attack_mod: Anti-Vehicle 4+ critical wounds"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "piercing"
+   ],
+   "missed": [
+    "buff: 'Ard Case adds 2 Toughness",
+    "attack_mod: Anti-Vehicle 4+ critical wounds"
+   ]
+  }
+ },
+ "787150": {
+  "A": {
+   "wrong": [
+    "advantage",
+    "once_per_game",
+    "piercing"
+   ],
+   "missed": [
+    "random_effect: roll D6, on 3+",
+    "resource_gain: gain 1 Battle Focus token",
+    "attack_mod: Heavy/Torrent/Anti- hit and wound changes"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "advantage",
+    "once_per_game",
+    "piercing"
+   ],
+   "missed": [
+    "random_effect: roll D6, on 3+",
+    "resource_gain: gain 1 Battle Focus token",
+    "attack_mod: Heavy/Torrent/Anti- hit and wound changes"
+   ]
+  }
+ },
+ "785449": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "786350": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "stat_set: Move 5, Toughness 6, Wounds 5",
+    "type_grant: remove Tacticus, add Gravis keyword"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "stat_set: Move 5, Toughness 6, Wounds 5",
+    "type_grant: remove Tacticus, add Gravis keyword"
+   ]
+  }
+ },
+ "786956": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "786039": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "787271": {
+  "A": {
+   "wrong": [
+    "advantage"
+   ],
+   "missed": [
+    "attack_mod: Torrent auto-hits"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "advantage"
+   ],
+   "missed": [
+    "attack_mod: Torrent auto-hits"
+   ]
+  }
+ },
+ "786078": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "786653": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "start_of_game: attached during Declare Battle Formations"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "start_of_game: attached during Declare Battle Formations"
+   ]
+  }
+ },
+ "788650": {
+  "A": {
+   "wrong": [
+    "movement",
+    "on_attack",
+    "temporary_buff"
+   ],
+   "missed": [
+    "damage_reduction: on 4+ the Hazardous wound is not lost"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "movement",
+    "temporary_buff"
+   ],
+   "missed": [
+    "damage_reduction: on 4+ the Hazardous wound is not lost"
+   ]
+  }
+ },
+ "785634": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "attack_mod: Anti-Infantry 2+/Anti-Monster 4+ critical wounds"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "attack_mod: Anti-Infantry 2+/Anti-Monster 4+ critical wounds"
+   ]
+  }
+ },
+ "787607": {
+  "A": {
+   "wrong": [
+    "advantage",
+    "drawback"
+   ],
+   "missed": [
+    "buff: +2 Attacks while damaged"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "advantage",
+    "drawback"
+   ],
+   "missed": [
+    "buff: +2 Attacks while damaged"
+   ]
+  }
+ },
+ "787149": {
+  "A": {
+   "wrong": [
+    "once_per_game",
+    "piercing",
+    "stealth",
+    "territory_trigger"
+   ],
+   "missed": [
+    "attack_mod: Heavy/Torrent/Anti- hit and wound changes"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "once_per_game",
+    "piercing",
+    "stealth",
+    "territory_trigger"
+   ],
+   "missed": [
+    "attack_mod: Heavy/Torrent/Anti- hit and wound changes"
+   ]
+  }
+ },
+ "787400": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "787896": {
+  "A": {
+   "wrong": [
+    "points_scoring",
+    "reserve_bench"
+   ],
+   "missed": [
+    "mark_target: selected enemy unit, later attacks against it re-roll Wound"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "points_scoring",
+    "reserve_bench"
+   ],
+   "missed": [
+    "mark_target: selected enemy unit, later attacks against it re-roll Wound"
+   ]
+  }
+ },
+ "784295": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "on_enemy_enter: enemy ends a move within 6\""
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "on_enemy_enter: enemy ends a move within 6\""
+   ]
+  }
+ },
+ "786228": {
+  "A": {
+   "wrong": [
+    "ranged"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "ranged"
+   ],
+   "missed": []
+  }
+ },
+ "788121": {
+  "A": {
+   "wrong": [
+    "buff",
+    "piercing"
+   ],
+   "missed": [
+    "attack_mod: Anti-Vehicle 2+ critical wounds"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "buff",
+    "piercing"
+   ],
+   "missed": [
+    "attack_mod: Anti-Vehicle 2+ critical wounds"
+   ]
+  }
+ },
+ "788426": {
+  "A": {
+   "wrong": [
+    "advantage"
+   ],
+   "missed": [
+    "regeneration: Reanimation Protocols"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "advantage"
+   ],
+   "missed": [
+    "regeneration: Reanimation Protocols"
+   ]
+  }
+ },
+ "788274": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "modal_choice: select two Author of the Codex abilities",
+    "mark_target: Oath of Moment second target",
+    "random_effect: roll D6, on 3+"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cheat_death: Armour of Fate, set back up with 6 wounds",
+    "modal_choice: select two Author of the Codex abilities",
+    "mark_target: Oath of Moment second target",
+    "random_effect: roll D6, on 3+"
+   ]
+  }
+ },
+ "788547": {
+  "A": {
+   "wrong": [
+    "stealth"
+   ],
+   "missed": [
+    "death_trigger: if destroyed, attached Leaders become separate units"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "stealth"
+   ],
+   "missed": [
+    "death_trigger: if destroyed, attached Leaders become separate units"
+   ]
+  }
+ },
+ "815485": {
+  "A": {
+   "wrong": [
+    "destroy"
+   ],
+   "missed": [
+    "on_kill: if the unit destroys an enemy unit",
+    "placement_rules: set up Hounds/Krootox in the same Entry Zone",
+    "permanent_growth: Feel No Pain 5+ stays in effect",
+    "type_grant: act as if Battleline",
+    "drawback: units lose Fieldcraft/Loping Pounce/Kroot Packmates"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "destroy"
+   ],
+   "missed": [
+    "on_kill: if the unit destroys an enemy unit",
+    "placement_rules: set up Hounds/Krootox in the same Entry Zone",
+    "permanent_growth: Feel No Pain 5+ stays in effect",
+    "type_grant: act as if Battleline",
+    "drawback: units lose Fieldcraft/Loping Pounce/Kroot Packmates"
+   ]
+  }
+ },
+ "787942": {
+  "A": {
+   "wrong": [
+    "deckbuilding_effect",
+    "upgrade"
+   ],
+   "missed": [
+    "activated: issue up to 2 Orders",
+    "zone_of_control: shoot after Falling Back"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "deckbuilding_effect",
+    "upgrade"
+   ],
+   "missed": [
+    "activated: issue up to 2 Orders",
+    "zone_of_control: shoot after Falling Back"
+   ]
+  }
+ },
+ "786949": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "788228": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "deckbuilding_effect: army cannot contain both Logan Grimnar versions"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "deckbuilding_effect: army cannot contain both Logan Grimnar versions"
+   ]
+  }
+ },
+ "784887": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "786981": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "damage_reduction: Stealth -1 to Hit"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "damage_reduction: Stealth -1 to Hit"
+   ]
+  }
+ },
+ "788096": {
+  "A": {
+   "wrong": [
+    "movement"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "movement"
+   ],
+   "missed": []
+  }
+ },
+ "787204": {
+  "A": {
+   "wrong": [
+    "merge_attach",
+    "resource_banking",
+    "stress_morale"
+   ],
+   "missed": [
+    "coin_economy: spend Pain token to Empower"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "merge_attach",
+    "resource_banking",
+    "stress_morale"
+   ],
+   "missed": [
+    "coin_economy: spend Pain token to Empower"
+   ]
+  }
+ },
+ "785305": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "786488": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "drawback: not eligible to declare a charge"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "drawback: not eligible to declare a charge"
+   ]
+  }
+ },
+ "784532": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "multi_attack: Sustained Hits 1",
+    "tribal: Orks Infantry and Orks Walker models"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "advantage"
+   ],
+   "missed": [
+    "multi_attack: Sustained Hits 1",
+    "tribal: Orks Infantry and Orks Walker models"
+   ]
+  }
+ },
+ "786764": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "788479": {
+  "A": {
+   "wrong": [
+    "adjacency",
+    "random_effect:grants"
+   ],
+   "missed": [
+    "on_attack: Critical Wound with 'urty syringe triggers mortal wounds"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "adjacency",
+    "random_effect:grants"
+   ],
+   "missed": [
+    "on_attack: Critical Wound with 'urty syringe triggers mortal wounds"
+   ]
+  }
+ },
+ "786131": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "787239": {
+  "A": {
+   "wrong": [
+    "merge_attach",
+    "resource_banking",
+    "stress_morale",
+    "turn_start"
+   ],
+   "missed": [
+    "multi_attack: Rapid Fire 8 when Empowered",
+    "coin_economy: spend Pain token to Empower"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "merge_attach",
+    "resource_banking",
+    "stress_morale",
+    "turn_start"
+   ],
+   "missed": [
+    "multi_attack: Rapid Fire 8 when Empowered",
+    "coin_economy: spend Pain token to Empower"
+   ]
+  }
+ },
+ "787175": {
+  "A": {
+   "wrong": [
+    "hand_position",
+    "merge_attach",
+    "merge_attach:benefits",
+    "piercing",
+    "stealth",
+    "territory_trigger",
+    "zone_of_control"
+   ],
+   "missed": [
+    "on_enemy_enter: enemy ends a move within 9\"",
+    "attack_mod: Heavy"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "buff",
+    "hand_position",
+    "stealth",
+    "territory_trigger",
+    "zone_of_control"
+   ],
+   "missed": [
+    "on_enemy_enter: enemy ends a move within 9\"",
+    "attack_mod: Heavy"
+   ]
+  }
+ },
+ "785267": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "816462": {
+  "A": {
+   "wrong": [
+    "advantage"
+   ],
+   "missed": [
+    "type_grant: gains the Synapse keyword"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "advantage",
+    "merge_attach",
+    "merge_attach:benefits"
+   ],
+   "missed": [
+    "type_grant: gains the Synapse keyword"
+   ]
+  }
+ },
+ "786912": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "786391": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "merge_attach: while the bearer is leading a unit"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "merge_attach: while the bearer is leading a unit"
+   ]
+  }
+ },
+ "786787": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "788245": {
+  "A": {
+   "wrong": [
+    "disable",
+    "spell_power:benefits"
+   ],
+   "missed": [
+    "saving_throws: enemy takes a Battle-shock test",
+    "debuff: Stunned, -1 to Hit for Psychic Attacks"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "disable",
+    "spell_power:benefits"
+   ],
+   "missed": [
+    "saving_throws: enemy takes a Battle-shock test",
+    "debuff: Stunned, -1 to Hit for Psychic Attacks"
+   ]
+  }
+ },
+ "786093": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "786048": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "784274": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "attack_mod: +1 to Hit and Wound vs Vengeful Dead units",
+    "mark_target: Vengeful Dead tokens",
+    "death_trigger: Psyker destroyed gives token",
+    "tribal: Wraith Construct units"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "mark_target: Vengeful Dead tokens",
+    "death_trigger: Psyker destroyed gives token",
+    "tribal: Wraith Construct units"
+   ]
+  }
+ },
+ "787086": {
+  "A": {
+   "wrong": [
+    "ranged"
+   ],
+   "missed": [
+    "damage_reduction: -1 to Wound roll",
+    "stat_condition: Strength greater than Toughness"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "ranged"
+   ],
+   "missed": [
+    "damage_reduction: -1 to Wound roll",
+    "stat_condition: Strength greater than Toughness"
+   ]
+  }
+ },
+ "787096": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "stat_set: Objective Control becomes 1"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "stat_set: Objective Control becomes 1"
+   ]
+  }
+ },
+ "787460": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "kicker: overcharge the daemonforge",
+    "drawback: suffers mortal wounds on failed test"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "merge_attach",
+    "merge_attach:benefits"
+   ],
+   "missed": [
+    "kicker: overcharge the daemonforge",
+    "drawback: suffers mortal wounds on failed test"
+   ]
+  }
+ },
+ "788133": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ }
+}

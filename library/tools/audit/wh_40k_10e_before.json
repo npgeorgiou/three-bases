@@ -1,0 +1,456 @@
+{
+"788439": [
+"aoe_damage",
+"damage_reduction",
+"death_trigger",
+"multi_attack",
+"piercing",
+"piercing:counters",
+"random_effect",
+"ranged",
+"temporary_buff",
+"tribal"
+],
+"787150": [
+"advantage",
+"cooldowns",
+"cost_reduction",
+"damage",
+"damage_reduction",
+"merge_attach",
+"movement",
+"multi_attack",
+"once_per_game",
+"passive",
+"piercing",
+"placement_rules",
+"ranged",
+"reserve_bench",
+"terrain:counters",
+"tribal"
+],
+"785449": [
+"once_per_game",
+"reserve_bench",
+"turn_end",
+"zone_of_control"
+],
+"786350": [
+"merge_attach",
+"movement"
+],
+"786956": [
+"movement",
+"passive",
+"start_of_game",
+"turn_start"
+],
+"786039": [
+"first_strike:grants",
+"once_per_game",
+"temporary_effect",
+"turn_start"
+],
+"787271": [
+"advantage",
+"movement",
+"ranged"
+],
+"786078": [
+"random_effect",
+"resource_gain",
+"zone_control"
+],
+"786653": [
+"merge_attach",
+"movement",
+"type_grant"
+],
+"788650": [
+"aoe_damage",
+"death_trigger",
+"drawback",
+"movement",
+"multi_attack",
+"on_attack",
+"random_effect",
+"ranged",
+"temporary_buff",
+"terrain"
+],
+"785634": [
+"ranged",
+"tribal"
+],
+"787607": [
+"advantage",
+"aoe_damage",
+"aura",
+"condition_life",
+"damage_reduction",
+"death_trigger",
+"drawback",
+"movement",
+"piercing",
+"placement_rules",
+"ranged",
+"reserve_bench",
+"terrain:counters"
+],
+"787149": [
+"advantage",
+"cooldowns",
+"cost_reduction",
+"damage",
+"damage_reduction",
+"first_strike",
+"merge_attach",
+"movement",
+"multi_attack",
+"once_per_game",
+"passive",
+"piercing",
+"placement_rules",
+"ranged",
+"ranged:counters",
+"start_of_game",
+"stealth",
+"terrain:counters",
+"territory_trigger",
+"tribal",
+"turn_start"
+],
+"787400": [
+"damage",
+"damage_reduction",
+"once_per_game",
+"piercing",
+"temporary_effect"
+],
+"787896": [
+"advantage",
+"aoe_damage",
+"death_trigger",
+"movement",
+"points_scoring",
+"ranged",
+"reserve_bench",
+"temporary_effect"
+],
+"784295": [
+"movement",
+"passive",
+"random_effect",
+"zone_of_control"
+],
+"786228": [
+"damage_reduction",
+"ranged"
+],
+"788121": [
+"advantage",
+"buff",
+"damage",
+"piercing",
+"ranged",
+"tribal",
+"zone_control"
+],
+"788426": [
+"advantage",
+"aoe_damage",
+"damage_reduction",
+"death_trigger",
+"debuff",
+"movement",
+"multi_attack",
+"piercing",
+"ranged",
+"saving_throws:counters",
+"terrain:counters"
+],
+"788274": [
+"advantage",
+"aura",
+"cooldowns",
+"cost_reduction",
+"damage",
+"immunity",
+"multi_attack",
+"once_per_game",
+"piercing",
+"ranged",
+"saving_throws:counters",
+"stealth",
+"stress_morale",
+"temporary_effect",
+"turn_end",
+"turn_start",
+"zone_control",
+"zone_of_control"
+],
+"788547": [
+"damage_reduction",
+"merge_attach",
+"movement",
+"passive",
+"ranged:counters",
+"start_of_game",
+"stealth",
+"turn_end",
+"turn_start",
+"zone_control"
+],
+"815485": [
+"damage_reduction",
+"destroy",
+"passive",
+"random_effect"
+],
+"787942": [
+"deckbuilding_effect",
+"merge_attach",
+"passive",
+"ranged",
+"upgrade"
+],
+"786949": [
+"drawback",
+"stress_morale"
+],
+"788228": [
+"aoe_damage",
+"death_trigger",
+"merge_attach",
+"multi_attack",
+"random_effect"
+],
+"784887": [
+"ranged",
+"terrain",
+"terrain:counters"
+],
+"786981": [
+"ranged:counters"
+],
+"788096": [
+"advantage",
+"debuff",
+"merge_attach",
+"movement",
+"passive",
+"piercing",
+"ranged",
+"terrain:counters",
+"zone_control",
+"zone_of_control"
+],
+"787204": [
+"activated",
+"advantage",
+"damage",
+"damage_reduction",
+"death_count",
+"merge_attach",
+"movement",
+"multi_attack",
+"passive",
+"piercing",
+"ranged",
+"resource_banking",
+"saving_throws:counters",
+"start_of_game",
+"stress_morale",
+"temporary_buff",
+"tribal",
+"turn_start",
+"upgrade"
+],
+"785305": [
+"damage_reduction",
+"merge_attach",
+"passive"
+],
+"786488": [
+"movement",
+"once_per_game",
+"ranged"
+],
+"784532": [
+"advantage",
+"passive",
+"ranged"
+],
+"786764": [
+"buff",
+"damage_reduction",
+"piercing:counters"
+],
+"788479": [
+"adjacency",
+"condition_life",
+"damage",
+"damage_reduction",
+"damage_reduction:grants",
+"heal",
+"merge_attach",
+"once_per_game",
+"passive",
+"random_effect:grants",
+"revive"
+],
+"786131": [
+"debuff",
+"movement"
+],
+"787239": [
+"activated",
+"aoe_damage",
+"condition_life",
+"damage_reduction",
+"death_count",
+"death_trigger",
+"drawback",
+"merge_attach",
+"movement",
+"on_attack",
+"passive",
+"placement_rules",
+"random_effect",
+"ranged",
+"reserve_bench",
+"resource_banking",
+"stress_morale",
+"temporary_buff",
+"turn_start",
+"upgrade",
+"zone_of_control"
+],
+"787175": [
+"bodyguard:counters",
+"cooldowns",
+"damage_reduction",
+"hand_position",
+"merge_attach",
+"merge_attach:benefits",
+"movement",
+"piercing",
+"placement_rules",
+"ranged",
+"ranged:counters",
+"stealth",
+"target_choice",
+"territory_trigger",
+"zone_of_control"
+],
+"785267": [
+"buff",
+"spell_power:benefits"
+],
+"816462": [
+"advantage",
+"bodyguard:counters",
+"damage",
+"damage_reduction",
+"first_strike",
+"immunity",
+"merge_attach",
+"merge_attach:benefits",
+"movement",
+"multi_attack",
+"passive",
+"piercing",
+"placement_rules",
+"ranged",
+"ranged:counters",
+"reserve_bench",
+"saving_throws:counters",
+"start_of_game",
+"stealth",
+"target_choice",
+"terrain",
+"terrain:counters",
+"territory_trigger",
+"turn_start"
+],
+"786912": [
+"buff",
+"stress_morale",
+"zone_control"
+],
+"786391": [
+"damage_reduction",
+"passive"
+],
+"786787": [
+"movement"
+],
+"788245": [
+"bodyguard:counters",
+"damage",
+"damage_reduction",
+"disable",
+"merge_attach",
+"merge_attach:benefits",
+"movement",
+"passive",
+"piercing",
+"ranged",
+"saving_throws:counters",
+"spell_power:benefits",
+"start_of_game",
+"stress_morale",
+"target_choice",
+"temporary_effect",
+"tribal",
+"turn_start"
+],
+"786093": [
+"once_per_game",
+"reserve_bench",
+"turn_end",
+"zone_of_control"
+],
+"786048": [
+"buff",
+"passive",
+"stress_morale"
+],
+"784274": [
+"aura",
+"type_grant"
+],
+"787086": [
+"ranged"
+],
+"787096": [
+"passive",
+"stress_morale",
+"zone_control"
+],
+"787460": [
+"advantage",
+"aoe_damage",
+"bodyguard:counters",
+"condition",
+"death_trigger",
+"merge_attach",
+"merge_attach:benefits",
+"movement",
+"multi_attack",
+"on_attack",
+"once_per_game",
+"piercing",
+"ranged",
+"stress_morale",
+"target_choice",
+"temporary_effect",
+"terrain",
+"terrain:counters",
+"zone_of_control"
+],
+"788133": [
+"movement",
+"temporary_buff"
+]
+}
