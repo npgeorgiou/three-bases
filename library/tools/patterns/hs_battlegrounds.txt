@@ -33,3 +33,6 @@ team_play|does|\byour team\b|\b(after|when|whenever|once|first time) (you|your t
 !disable|\bfreez
 selection|does|\bfreez(e|es)\b
 !scope_global|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))
+tribal|does|\b(murlocs?|beasts?|mechs?|demons?|dragons?|elementals?|pirates?|naga|quilboar|undead|zerg|whelps?)\b
+temporary_buff|does|\+[^.]* until next (turn|combat)
+generate_cards|does|\bget (a|an|another|\d+|x|two|three) (random |new |plain )?[a-z]
