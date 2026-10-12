@@ -1,0 +1,934 @@
+{
+ "788769": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "tribal: faction keyword synergy (KOMMANDO)"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "tribal: faction keyword synergy (KOMMANDO)"
+   ]
+  }
+ },
+ "790178": {
+  "A": {
+   "wrong": [
+    "movement",
+    "movement:counters",
+    "zone_of_control"
+   ],
+   "missed": [
+    "mark_target: Mark action",
+    "multi_attack: two Shoot actions",
+    "start_of_game: select in Select Equipment step",
+    "information: hidden selection revealed with equipment"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "movement",
+    "movement:counters"
+   ],
+   "missed": [
+    "mark_target: Mark action",
+    "multi_attack: two Shoot actions",
+    "start_of_game: select in Select Equipment step",
+    "information: hidden selection revealed with equipment"
+   ]
+  }
+ },
+ "790497": {
+  "A": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": [
+    "temporary_buff: until end of next activation",
+    "tribal: faction keyword synergy (FARSTALKER KINBAND)"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "zone_of_control"
+   ],
+   "missed": [
+    "temporary_buff: until end of next activation",
+    "tribal: faction keyword synergy (FARSTALKER KINBAND)"
+   ]
+  }
+ },
+ "790316": {
+  "A": {
+   "wrong": [
+    "damage",
+    "ranged",
+    "revive"
+   ],
+   "missed": [
+    "cheat_death: not incapacitated, 1 wound remaining",
+    "activated: Chirurgeon's Tools (1AP)",
+    "drawback: subtract 1 from both operatives' APL",
+    "tribal: faction keyword synergy (NOVITIATE)"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "damage",
+    "ranged",
+    "revive",
+    "zone_of_control"
+   ],
+   "missed": [
+    "cheat_death: not incapacitated, 1 wound remaining",
+    "activated: Chirurgeon's Tools (1AP)",
+    "drawback: subtract 1 from both operatives' APL",
+    "tribal: faction keyword synergy (NOVITIATE)"
+   ]
+  }
+ },
+ "790644": {
+  "A": {
+   "wrong": [
+    "buff",
+    "on_attack",
+    "symmetric_effect"
+   ],
+   "missed": [
+    "forced_movement: remove enemy and set it up within boost zone"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "buff",
+    "on_attack",
+    "symmetric_effect"
+   ],
+   "missed": [
+    "forced_movement: remove enemy and set it up within boost zone"
+   ]
+  }
+ },
+ "789580": {
+  "A": {
+   "wrong": [
+    "piercing",
+    "turn_start"
+   ],
+   "missed": [
+    "reactions: used when an operative shoots a friendly",
+    "tribal: faction keyword synergy (HUNTER CLADE)"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "piercing",
+    "turn_start"
+   ],
+   "missed": [
+    "reactions: used when an operative shoots a friendly",
+    "tribal: faction keyword synergy (HUNTER CLADE)"
+   ]
+  }
+ },
+ "789919": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "aura: protects friendly models within 3\""
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "aura: protects friendly models within 3\""
+   ]
+  }
+ },
+ "789188": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "789897": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "cooldowns: once per Shooting phase",
+    "attack_mod: +1 to hit rolls",
+    "temporary_buff: in this phase"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cooldowns: once per Shooting phase",
+    "attack_mod: +1 to hit rolls",
+    "temporary_buff: in this phase"
+   ]
+  }
+ },
+ "814809": {
+  "A": {
+   "wrong": [
+    "drawback",
+    "movement",
+    "movement:counters"
+   ],
+   "missed": [
+    "attack_mod: Lethal 5+ near terrain"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "drawback",
+    "movement",
+    "movement:counters"
+   ],
+   "missed": [
+    "attack_mod: Lethal 5+ near terrain"
+   ]
+  }
+ },
+ "789678": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "activated: 1AP action",
+    "mark_target: Doused tokens",
+    "tribal: faction keyword synergy (SANCTIFIER)"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "activated: 1AP action",
+    "mark_target: Doused tokens",
+    "tribal: faction keyword synergy (SANCTIFIER)"
+   ]
+  }
+ },
+ "790693": {
+  "A": {
+   "wrong": [
+    "destroy"
+   ],
+   "missed": [
+    "on_kill: incapacitating an enemy gains Faith",
+    "resource_gain: gain Faith points",
+    "aura: Severe for nearby NOVITIATE",
+    "stat_condition: Wounds 12 or more",
+    "tribal: faction keyword synergy (NOVITIATE)"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "advantage",
+    "damage",
+    "destroy"
+   ],
+   "missed": [
+    "on_kill: incapacitating an enemy gains Faith",
+    "resource_gain: gain Faith points",
+    "aura: Severe for nearby NOVITIATE",
+    "stat_condition: Wounds 12 or more",
+    "tribal: faction keyword synergy (NOVITIATE)"
+   ]
+  }
+ },
+ "788758": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "789756": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "drawback: +1 to Nerve tests near SLAANESH",
+    "tribal: faction keyword synergy (SLAANESH)"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "drawback: +1 to Nerve tests near SLAANESH",
+    "tribal: faction keyword synergy (SLAANESH)"
+   ]
+  }
+ },
+ "788744": {
+  "A": {
+   "wrong": [
+    "ranged"
+   ],
+   "missed": [
+    "drawback: cannot perform other actions or contest markers",
+    "scoring_objectives: ignored for kill op and victory conditions"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "ranged"
+   ],
+   "missed": [
+    "drawback: cannot perform other actions or contest markers",
+    "scoring_objectives: ignored for kill op and victory conditions"
+   ]
+  }
+ },
+ "790543": {
+  "A": {
+   "wrong": [
+    "telegraphed_threats"
+   ],
+   "missed": [
+    "cost_set: ploy costs 0CP",
+    "modal_choice: either move the marker or change the ploy"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "telegraphed_threats"
+   ],
+   "missed": [
+    "cost_set: ploy costs 0CP",
+    "modal_choice: either move the marker or change the ploy"
+   ]
+  }
+ },
+ "789371": {
+  "A": {
+   "wrong": [
+    "condition_count",
+    "passive"
+   ],
+   "missed": [
+    "activated: 1AP action",
+    "once_per_game: only once",
+    "scope_multi: each operative within area",
+    "friendly_fire: affects every operative in area"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "condition_count",
+    "passive",
+    "zone_of_control"
+   ],
+   "missed": [
+    "activated: 1AP action",
+    "once_per_game: only once",
+    "scope_multi: each operative within area",
+    "friendly_fire: affects every operative in area"
+   ]
+  }
+ },
+ "788821": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "789445": {
+  "A": {
+   "wrong": [
+    "ranged",
+    "turn_start"
+   ],
+   "missed": [
+    "reactions: used when a shooting attack is made against it"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "ranged",
+    "turn_start"
+   ],
+   "missed": [
+    "reactions: used when a shooting attack is made against it"
+   ]
+  }
+ },
+ "790751": {
+  "A": {
+   "wrong": [
+    "death_trigger",
+    "ranged"
+   ],
+   "missed": [
+    "cheat_death: isn't incapacitated, 1 wound remaining",
+    "drawback: subtract APL, activation ends",
+    "cooldowns: first time each turning point",
+    "tribal: faction keyword synergy (SPECTRE SQUAD)"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "death_trigger",
+    "ranged"
+   ],
+   "missed": [
+    "cheat_death: isn't incapacitated, 1 wound remaining",
+    "drawback: subtract APL, activation ends",
+    "cooldowns: first time each turning point",
+    "tribal: faction keyword synergy (SPECTRE SQUAD)"
+   ]
+  }
+ },
+ "814785": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "on_attack: each time after it fights"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "on_attack: each time after it fights"
+   ]
+  }
+ },
+ "790670": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "counterattack: free Shoot back at the operative that shot it",
+    "condition_count: dice equal to discarded dice plus one"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "counterattack: free Shoot back at the operative that shot it",
+    "condition_count: dice equal to discarded dice plus one"
+   ]
+  }
+ },
+ "816466": {
+  "A": {
+   "wrong": [
+    "adjacency",
+    "disable",
+    "reactions"
+   ],
+   "missed": [
+    "on_attack: each time it performs the Fight action"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "adjacency",
+    "disable",
+    "reactions"
+   ],
+   "missed": [
+    "on_attack: each time it performs the Fight action"
+   ]
+  }
+ },
+ "789734": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "814841": {
+  "A": {
+   "wrong": [
+    "reactions"
+   ],
+   "missed": [
+    "multi_attack: repeated free Fight actions"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "reactions"
+   ],
+   "missed": [
+    "multi_attack: repeated free Fight actions"
+   ]
+  }
+ },
+ "790772": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "789746": {
+  "A": {
+   "wrong": [
+    "ranged",
+    "stealth"
+   ],
+   "missed": [
+    "attack_mod: -1 to enemy hit rolls against obscured target"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "ranged",
+    "stealth"
+   ],
+   "missed": [
+    "attack_mod: -1 to enemy hit rolls against obscured target"
+   ]
+  }
+ },
+ "814878": {
+  "A": {
+   "wrong": [
+    "stealth"
+   ],
+   "missed": [
+    "targeting_rules: friendly GHEISTSKULL is always the primary target",
+    "friendly_fire: targets own operative"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "stealth"
+   ],
+   "missed": [
+    "targeting_rules: friendly GHEISTSKULL is always the primary target",
+    "friendly_fire: targets own operative"
+   ]
+  }
+ },
+ "790533": {
+  "A": {
+   "wrong": [
+    "counterattack",
+    "ranged"
+   ],
+   "missed": [
+    "damage_reduction: subtract 1 from damage"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "counterattack",
+    "ranged"
+   ],
+   "missed": [
+    "damage_reduction: subtract 1 from damage"
+   ]
+  }
+ },
+ "790223": {
+  "A": {
+   "wrong": [
+    "movement:counters",
+    "multi_attack",
+    "terrain",
+    "zone_control",
+    "zone_of_control"
+   ],
+   "missed": [
+    "mark_target: selected enemy gets rerolls against it",
+    "extra_turn: activate another friendly operative right after"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "movement:counters",
+    "multi_attack",
+    "terrain",
+    "zone_control"
+   ],
+   "missed": [
+    "mark_target: selected enemy gets rerolls against it",
+    "extra_turn: activate another friendly operative right after"
+   ]
+  }
+ },
+ "790669": {
+  "A": {
+   "wrong": [
+    "damage",
+    "terrain:counters"
+   ],
+   "missed": [
+    "drawback: cannot use Light terrain for cover"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "damage",
+    "terrain:counters"
+   ],
+   "missed": [
+    "drawback: cannot use Light terrain for cover"
+   ]
+  }
+ },
+ "788932": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "790120": {
+  "A": {
+   "wrong": [
+    "immunity",
+    "ranged",
+    "zone_of_control"
+   ],
+   "missed": [
+    "disable: arrested operative can only Pass",
+    "attack_now: free Fight action",
+    "protection: ignore modifiers to its characteristics",
+    "stat_condition: Wounds 10 or less"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "immunity",
+    "ranged"
+   ],
+   "missed": [
+    "disable: arrested operative can only Pass",
+    "attack_now: free Fight action",
+    "protection: ignore modifiers to its characteristics",
+    "stat_condition: Wounds 10 or less"
+   ]
+  }
+ },
+ "789269": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "789693": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "cost_set: mission action without spending a Communion point",
+    "tribal: faction keyword synergy (VESPID STINGWING)"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cost_set: mission action without spending a Communion point",
+    "tribal: faction keyword synergy (VESPID STINGWING)"
+   ]
+  }
+ },
+ "788878": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "790152": {
+  "A": {
+   "wrong": [
+    "condition_count",
+    "damage_over_time",
+    "disable",
+    "immunity",
+    "zone_of_control"
+   ],
+   "missed": [
+    "aoe_damage: 3 mortal wounds to each operative in area",
+    "protection: ignore modifiers to APL, not affected by Stun",
+    "friendly_fire: each other operative in area"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "condition_count",
+    "damage_over_time",
+    "disable",
+    "immunity"
+   ],
+   "missed": [
+    "aoe_damage: 3 mortal wounds to each operative in area",
+    "protection: ignore modifiers to APL, not affected by Stun",
+    "friendly_fire: each other operative in area"
+   ]
+  }
+ },
+ "788996": {
+  "A": {
+   "wrong": [
+    "damage_reduction"
+   ],
+   "missed": [
+    "stat_condition: target Save 3+ or better",
+    "attack_mod: Lethal 4+"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "damage_reduction"
+   ],
+   "missed": [
+    "stat_condition: target Save 3+ or better",
+    "attack_mod: Lethal 4+"
+   ]
+  }
+ },
+ "789024": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "790172": {
+  "A": {
+   "wrong": [
+    "buff",
+    "condition_count",
+    "damage_reduction",
+    "immunity",
+    "turn_end",
+    "zone_of_control"
+   ],
+   "missed": [
+    "aoe_damage: D3 mortal wounds to each operative near an incapacitated target",
+    "turn_start: at the end of the Ready Operatives step each Turning Point",
+    "stat_condition: Save 4+ or worse",
+    "friendly_fire: each operative within range"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "buff",
+    "condition_count",
+    "damage_reduction",
+    "immunity",
+    "turn_end"
+   ],
+   "missed": [
+    "aoe_damage: D3 mortal wounds to each operative near an incapacitated target",
+    "turn_start: at the end of the Ready Operatives step each Turning Point",
+    "stat_condition: Save 4+ or worse",
+    "friendly_fire: each operative within range"
+   ]
+  }
+ },
+ "790117": {
+  "A": {
+   "wrong": [
+    "stealth"
+   ],
+   "missed": [
+    "aura: Balanced for VOIDSMAN within range",
+    "multi_attack: two shooting attacks in one action",
+    "advantage: Balanced",
+    "drawback: cannot perform with Conceal order"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "stealth",
+    "zone_of_control"
+   ],
+   "missed": [
+    "aura: Balanced for VOIDSMAN within range",
+    "multi_attack: two shooting attacks in one action",
+    "advantage: Balanced",
+    "drawback: cannot perform with Conceal order"
+   ]
+  }
+ },
+ "789432": {
+  "A": {
+   "wrong": [
+    "ranged"
+   ],
+   "missed": [
+    "damage_reduction: halve damage"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "ranged"
+   ],
+   "missed": [
+    "damage_reduction: halve damage"
+   ]
+  }
+ },
+ "789891": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "attack_mod: +1 to hit rolls"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "attack_mod: +1 to hit rolls"
+   ]
+  }
+ },
+ "789291": {
+  "A": {
+   "wrong": [
+    "immunity"
+   ],
+   "missed": [
+    "damage_reduction: cover saves become critical saves"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "immunity"
+   ],
+   "missed": [
+    "damage_reduction: cover saves become critical saves"
+   ]
+  }
+ },
+ "788700": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "788834": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "789722": {
+  "A": {
+   "wrong": [
+    "stealth"
+   ],
+   "missed": [
+    "modal_choice: select one of two Torrent options",
+    "tribal: faction keyword synergy (XV26 STEALTH BATTLESUIT)"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "stealth"
+   ],
+   "missed": [
+    "modal_choice: select one of two Torrent options",
+    "tribal: faction keyword synergy (XV26 STEALTH BATTLESUIT)"
+   ]
+  }
+ },
+ "790815": {
+  "A": {
+   "wrong": [
+    "advantage",
+    "reactions",
+    "stealth"
+   ],
+   "missed": [
+    "death_count: 2 or more friendly operatives incapacitated",
+    "rule_change: ignore Drone rule",
+    "attack_mod: Accurate",
+    "tribal: faction keyword synergy (XV26 STEALTH BATTLESUIT)"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "advantage",
+    "reactions",
+    "stealth"
+   ],
+   "missed": [
+    "death_count: 2 or more friendly operatives incapacitated",
+    "rule_change: ignore Drone rule",
+    "attack_mod: Accurate",
+    "tribal: faction keyword synergy (XV26 STEALTH BATTLESUIT)"
+   ]
+  }
+ },
+ "789505": {
+  "A": {
+   "wrong": [
+    "information"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "information"
+   ],
+   "missed": []
+  }
+ },
+ "814803": {
+  "A": {
+   "wrong": [
+    "buff"
+   ],
+   "missed": [
+    "aoe_damage: damage to each operative within 2\"",
+    "friendly_fire: each operative within 2\""
+   ]
+  },
+  "B": {
+   "wrong": [
+    "buff"
+   ],
+   "missed": [
+    "aoe_damage: damage to each operative within 2\"",
+    "friendly_fire: each operative within 2\""
+   ]
+  }
+ }
+}

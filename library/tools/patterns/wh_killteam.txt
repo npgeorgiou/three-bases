@@ -70,3 +70,6 @@ placement_rules|does|\bchange the set ?up of (one|up to \w+) of your operatives\
 !debuff|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))
 !debuff|\bhalve
 !counter_spell|\bdeny\b
+activated|does|\([0-9]ap\)
+attack_mod|does|\b(has|have|gains?) the (\w+ and )?lethal \d\+
+!zone_of_control|\bengagement range

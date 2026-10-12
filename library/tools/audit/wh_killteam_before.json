@@ -1,0 +1,340 @@
+{
+"788769": [
+"movement",
+"passive",
+"stealth"
+],
+"790178": [
+"activated",
+"advantage",
+"advantage:counters",
+"drawback",
+"movement",
+"movement:counters",
+"passive",
+"piercing",
+"ranged",
+"stealth",
+"temporary_effect",
+"terrain",
+"terrain:counters",
+"zone_of_control"
+],
+"790497": [
+"activated",
+"buff",
+"mark_target",
+"passive",
+"piercing",
+"ranged",
+"terrain",
+"terrain:counters",
+"zone_of_control"
+],
+"790316": [
+"cooldowns",
+"damage",
+"heal",
+"movement",
+"passive",
+"ranged",
+"revive",
+"zone_of_control"
+],
+"790644": [
+"activated",
+"buff",
+"death_trigger",
+"movement",
+"on_attack",
+"placement_rules",
+"random_effect",
+"symmetric_effect",
+"zone_of_control"
+],
+"789580": [
+"cooldowns",
+"items_consumables",
+"piercing",
+"ranged",
+"ranged:counters",
+"turn_start"
+],
+"789919": [
+"damage_reduction",
+"passive",
+"random_effect",
+"stress_morale"
+],
+"789188": [
+"zone_control"
+],
+"789897": [
+"buff",
+"ranged",
+"stress_morale"
+],
+"814809": [
+"counterattack",
+"drawback",
+"movement",
+"movement:counters",
+"reactions",
+"terrain"
+],
+"789678": [
+"passive",
+"piercing",
+"random_effect",
+"ranged",
+"terrain:counters"
+],
+"790693": [
+"advantage",
+"damage",
+"destroy",
+"piercing"
+],
+"788758": [
+"piercing",
+"terrain:counters"
+],
+"789756": [
+"advantage",
+"stress_morale"
+],
+"788744": [
+"cost_reduction",
+"movement",
+"ranged",
+"zone_of_control"
+],
+"790543": [
+"telegraphed_threats"
+],
+"789371": [
+"condition_count",
+"debuff",
+"passive",
+"random_effect",
+"zone_of_control"
+],
+"788821": [
+"random_effect",
+"stress_morale"
+],
+"789445": [
+"damage_reduction",
+"once_per_game",
+"ranged",
+"ranged:counters",
+"temporary_effect",
+"turn_start"
+],
+"790751": [
+"activated",
+"death_trigger",
+"heal",
+"movement",
+"passive",
+"ranged"
+],
+"814785": [
+"damage",
+"random_effect"
+],
+"790670": [
+"advantage",
+"damage",
+"multi_target_attack",
+"piercing",
+"ranged",
+"reactions",
+"targeting_rules",
+"terrain:counters"
+],
+"816466": [
+"adjacency",
+"advantage",
+"aoe_damage",
+"debuff",
+"disable",
+"multi_target_attack",
+"once_per_game",
+"piercing",
+"ranged",
+"reactions",
+"terrain",
+"terrain:counters"
+],
+"789734": [
+"buff",
+"temporary_effect"
+],
+"814841": [
+"reactions"
+],
+"790772": [
+"damage",
+"drawback",
+"piercing",
+"ranged"
+],
+"789746": [
+"ranged",
+"stealth"
+],
+"814878": [
+"stealth",
+"terrain"
+],
+"790533": [
+"counterattack",
+"ranged",
+"reactions",
+"zone_control"
+],
+"790223": [
+"activated",
+"advantage",
+"bodyguard",
+"drawback",
+"movement",
+"movement:counters",
+"multi_attack",
+"passive",
+"ranged",
+"ranged:counters",
+"temporary_buff",
+"terrain",
+"zone_control",
+"zone_of_control"
+],
+"790669": [
+"advantage",
+"damage",
+"passive",
+"stealth",
+"terrain",
+"terrain:counters"
+],
+"788932": [
+"ranged",
+"reactions"
+],
+"790120": [
+"activated",
+"damage_reduction",
+"debuff",
+"immunity",
+"passive",
+"piercing",
+"random_effect",
+"ranged",
+"zone_of_control"
+],
+"789269": [
+"advantage",
+"movement"
+],
+"789693": [
+"cooldowns",
+"items_consumables"
+],
+"788878": [
+"advantage",
+"passive"
+],
+"790152": [
+"activated",
+"condition_count",
+"damage_over_time",
+"damage_reduction",
+"debuff",
+"disable",
+"immunity",
+"passive",
+"random_effect",
+"zone_of_control"
+],
+"788996": [
+"damage_reduction",
+"ranged"
+],
+"789024": [
+"ranged",
+"reactions"
+],
+"790172": [
+"activated",
+"buff",
+"condition_count",
+"damage_over_time",
+"damage_reduction",
+"death_trigger",
+"immunity",
+"on_attack",
+"on_kill",
+"passive",
+"random_effect",
+"ranged",
+"turn_end",
+"zone_of_control"
+],
+"790117": [
+"activated",
+"damage_reduction",
+"once_per_game",
+"passive",
+"ranged",
+"stealth",
+"zone_of_control"
+],
+"789432": [
+"passive",
+"ranged",
+"temporary_effect",
+"zone_control"
+],
+"789891": [
+"buff"
+],
+"789291": [
+"immunity",
+"terrain"
+],
+"788700": [
+"ranged",
+"terrain:counters"
+],
+"788834": [
+"condition_count",
+"stress_morale"
+],
+"789722": [
+"cooldowns",
+"items_consumables",
+"multi_target_attack",
+"ranged",
+"stealth"
+],
+"790815": [
+"advantage",
+"ranged",
+"reactions",
+"stealth",
+"support"
+],
+"789505": [
+"cost_set",
+"information",
+"items_consumables",
+"random_effect"
+],
+"814803": [
+"buff",
+"damage",
+"death_trigger",
+"random_effect"
+]
+}
