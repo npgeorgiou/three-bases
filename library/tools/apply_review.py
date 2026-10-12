@@ -19,7 +19,7 @@ for key, r in rv.items():
     kwi = [i for i in ids if (q("select category from entities where id=?", i) or [(None,)])[0][0] == 'keyword']   # ids merged away later are skipped
     for k in kwi:
         linked = [x for (x,) in q("select distinct l.src from entity_links l join entities e on e.id=l.src where l.dst=? and e.game=? and l.rel in ('has_keyword','mentions_keyword','grants_keyword')", k, game)]
-        linked_add = [x for (x,) in q("select distinct l.src from entity_links l join entities e on e.id=l.src where l.dst=? and e.game=? and l.rel in ('has_keyword','mentions_keyword')", k, game)]
+        linked_add = [x for (x,) in q("select distinct l.src from entity_links l join entities e on e.id=l.src where l.dst=? and e.game=? and l.rel='has_keyword'", k, game)]   # an entry that only mentions a keyword does not have it
         for item in r.get('drop', []):
             con, role = (item.split(':') + [None])[:2]
             for x in linked:
@@ -38,7 +38,7 @@ for key, r in rv.items():
         for item in r.get('add', []):
             con, role = (item.split(':') + ['does'])[:2]
             c.execute("insert or ignore into entity_concepts values(?,?,?,?,?)", (e, con, role, 'claude_review', 'hand-mapped from the text'))
-            c.execute("update entity_concepts set method='claude_review' where entity=? and concept=? and role=? and method='text_pattern'", (e, con, role))   # a reviewed tag is no longer a pattern's
+            c.execute("update entity_concepts set method='claude_review' where entity=? and concept=? and role=? and method!='claude_review'", (e, con, role))   # a reviewed tag is no longer a pattern's or a keyword's
         n += 1
 c.commit()
 print(game, 'entries changed', n)

@@ -32,9 +32,9 @@ steps() {   # $1 = db
   $P engine_links.py "$D"
   $P design_problems.py "$D"
   $P trigger_pairs.py "$D"
+  $P regression.py "$D" enforce
   $P parent_rule.py "$D"
   $P dedupe.py "$D"
-  $P regression.py "$D" enforce
   $P frequency.py "$D"
   $P fixes/f07_keywords_structure.py "$D"
   $P fixes/f05_factions.py "$D"

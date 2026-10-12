@@ -546,8 +546,7 @@
 },
 "Loki": {
 "add": [
-"deck_modification",
-"steal"
+"deck_modification"
 ],
 "drop": []
 },
@@ -673,8 +672,7 @@
 },
 "Hydra Bob": {
 "add": [
-"autonomous_units",
-"stakes_wager:benefits"
+"autonomous_units"
 ],
 "drop": []
 },
@@ -774,8 +772,7 @@
 },
 "Mole Man": {
 "add": [
-"null_body",
-"stat_swap"
+"null_body"
 ],
 "drop": []
 },
@@ -825,7 +822,6 @@
 "Night Nurse": {
 "add": [
 "return_to_hand",
-"revive",
 "graveyard"
 ],
 "drop": [
@@ -920,8 +916,6 @@
 },
 "Professor X": {
 "add": [
-"protection",
-"disable",
 "lane_closure"
 ],
 "drop": [
@@ -1044,9 +1038,7 @@
 },
 "Shadow King": {
 "add": [
-"rewind",
-"debuff",
-"buff"
+"rewind"
 ],
 "drop": []
 },
@@ -1371,10 +1363,7 @@
 "drop": []
 },
 "The Inversion": {
-"add": [
-"debuff",
-"buff"
-],
+"add": [],
 "drop": []
 },
 "The Living Tribunal": {
@@ -1452,15 +1441,13 @@
 "add": [
 "buff",
 "debuff",
-"stat_swap",
 "symmetric_effect"
 ],
 "drop": []
 },
 "Viper": {
 "add": [
-"donate",
-"board_clog"
+"donate"
 ],
 "drop": []
 },
@@ -1563,8 +1550,7 @@
 },
 "Stegron": {
 "add": [
-"forced_movement",
-"forced_placement"
+"forced_movement"
 ],
 "drop": []
 },
@@ -1865,9 +1851,7 @@
 "drop": []
 },
 "Colossus": {
-"add": [
-"immunity"
-],
+"add": [],
 "drop": []
 },
 "Cosmic Ghost Rider": {
@@ -2270,8 +2254,7 @@
 },
 "Khonshu Full": {
 "add": [
-"graveyard",
-"stat_swap"
+"graveyard"
 ],
 "drop": []
 },
@@ -2315,7 +2298,6 @@
 },
 "Lady Deathstrike": {
 "add": [
-"symmetric_effect",
 "friendly_fire"
 ],
 "drop": []
@@ -2327,9 +2309,7 @@
 "drop": []
 },
 "Leader": {
-"add": [
-"simultaneous_play:benefits"
-],
+"add": [],
 "drop": []
 },
 "Legion": {
@@ -2341,8 +2321,7 @@
 },
 "Magik": {
 "add": [
-"lane_rule",
-"game_length"
+"lane_rule"
 ],
 "drop": [
 "turn_structure"
@@ -2774,8 +2753,7 @@
 },
 "Widow's Kiss": {
 "add": [
-"null_body",
-"debuff"
+"null_body"
 ],
 "drop": [
 "slot_filler"
@@ -2855,9 +2833,7 @@
 ]
 },
 "Camelot": {
-"add": [
-"stat_swap"
-],
+"add": [],
 "drop": []
 },
 "Cancun": {
@@ -2944,10 +2920,7 @@
 "drop": []
 },
 "Death's Domain": {
-"add": [
-"sacrifice",
-"destroy:benefits"
-],
+"add": [],
 "drop": []
 },
 "Deep Space": {
@@ -3199,9 +3172,7 @@
 "drop": []
 },
 "Muir Island": {
-"add": [
-"permanent_growth"
-],
+"add": [],
 "drop": []
 },
 "Onslaught's Citadel": {

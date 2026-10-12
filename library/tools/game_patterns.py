@@ -1,5 +1,5 @@
 """Game-specific wording: each tools/patterns/<game>.txt line 'concept|role|regex' is stored as a concept_patterns row for that game and
-applied to that game's entries (method text_pattern; the text is read lower-cased, own name as 'name', Magic without reminder text). A line '!concept|pattern' names a general pattern that misreads this game's wording:
+applied to that game's entries (method text_pattern; the text is read lower-cased, own name as 'name', Magic without reminder text). A line removed from a file takes its tags away. A line '!concept|pattern' names a general pattern that misreads this game's wording:
 the concept's automatic tag is removed from entries where no other pattern of the concept matches. File _all.txt applies to every game
 except Marvel Snap. Usage: game_patterns.py <db> <dir>"""
 import os, re, sqlite3, sys
@@ -29,6 +29,22 @@ for f in sorted(os.listdir(d)):
                     c.execute("delete from entity_concepts where entity=? and concept=? and role=? and method='text_pattern'", (e, con, role)); nx += 1
     if g == '_all':
         print('_all exclusions removed', nx); continue
+    # a line removed from the file also takes its tags away (where no remaining pattern of the concept still matches)
+    newset = {(con, role, p) for con, role, p in rows}
+    gone = [(con, role, p) for con, role, p in c.execute("select concept, role, pattern from concept_patterns where game=?", (g,)).fetchall() if (con, role, p) not in newset]
+    if gone:
+        import csv
+        keep = {(int(r['entity']), r['concept']) for r in csv.DictReader(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present'}
+        for con, role, p in gone:
+            rest = [re.compile(x, re.I) for x, in c.execute("select pattern from concept_patterns where concept=? and role=? and game is null", (con, role))] + [re.compile(x, re.I) for cc, rr, x in rows if cc == con and rr == role]
+            bad = re.compile(p, re.I)
+            for e, t, nm in c.execute("select e.id, e.text, e.name from entity_concepts ec join entities e on e.id=ec.entity where e.game=? and ec.concept=? and ec.role=? and ec.method='text_pattern'", (g, con, role)).fetchall():
+                low = (t or '').lower()
+                if g == 'mtg': low = re.sub(r'\([^()]*\)', ' ', low)
+                for x in [nm] + nm.split(' // '):
+                    if len(x) > 2: low = low.replace(x.lower(), 'name')
+                if (e, con) not in keep and bad.search(low) and not any(o.search(low) for o in rest):
+                    c.execute("delete from entity_concepts where entity=? and concept=? and role=? and method='text_pattern'", (e, con, role)); nx += 1
     c.execute("delete from concept_patterns where game=?", (g,))
     for con, role, p in rows: c.execute("insert into concept_patterns values(?,?,?,?)", (con, role, p, g))
     n = 0

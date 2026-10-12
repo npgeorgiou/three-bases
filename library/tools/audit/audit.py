@@ -5,6 +5,8 @@
   audit.py show <game> <batch>                   work entries of batch 0, 1 or 2 (50 each): id | name | text | tags
   audit.py trial <game> add <concept> <role> <regex>    a new game pattern: entries of the game gaining the tag, 30 random gains
   audit.py trial <game> drop <concept> <regex>          a '!concept|regex' line: entries losing the tag, 30 random losses
+  audit.py source <game> <concept>               where the game's tags of a concept come from: count per method, and for wording
+                                                 patterns each pattern exactly as stored with how many tagged entries it matches
   audit.py confirm <game>                        every current tag of the work entries that the review does not drop is written into
                                                  the game's review as confirmed (add)
   audit.py blind <game>                          held-out entries with the tags before (snapshot) and after (database), shuffled
@@ -77,6 +79,15 @@ elif cmd == 'trial':
     lk = locked(g, con, 'absent' if mode == 'add' else 'present')
     print(f"{'gaining' if mode == 'add' else 'losing'} {con}: {len(ch)} entries; undoing a locked decision: {len(set(ch) & lk)}")
     for e in random.Random(7).sample(ch, min(30, len(ch))): print(line(e))
+elif cmd == 'source':
+    g, con = a[0], a[1]
+    print('methods:', q('SELECT ec.method, ec.role, count(*) FROM entity_concepts ec JOIN entities e ON e.id=ec.entity WHERE e.game=? AND ec.concept=? GROUP BY 1, 2 ORDER BY 3 DESC', g, con))
+    rows = q("SELECT e.text, e.name FROM entity_concepts ec JOIN entities e ON e.id=ec.entity WHERE e.game=? AND ec.concept=? AND ec.method='text_pattern'", g, con)
+    for p, gg, r in q('SELECT pattern, game, role FROM concept_patterns WHERE concept=? AND (game IS NULL OR game=?)', con, g):
+        try: rx = re.compile(p, re.I)
+        except re.error: continue
+        k = sum(1 for t, nm in rows if rx.search(read(g, t or '', nm)))
+        if k: print(f"{'general' if gg is None else 'game'} {r} {k} | {p}")
 elif cmd == 'confirm':
     g = a[0]; s = json.load(open(f(g, 'sample.json'))); d = json.load(open(rvf(g), encoding='utf-8')) if os.path.exists(rvf(g)) else {}
     n = 0
