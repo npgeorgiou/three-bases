@@ -1,5 +1,5 @@
 """Regression set: known-correct and known-wrong tags, taken from Claude's hand reviews.
-  regression.py <db> make    -> writes lib/regression.tsv from lib/reviews/*.json and lib/snap_review.json
+  regression.py <db> make    -> writes tools/regression.tsv from tools/reviews/*.json and tools/snap_review.json
   regression.py <db> enforce -> re-applies the reviewed drops (build step after kw_sync and propagate)
   regression.py <db> check   -> checks every line against the database; exit code 1 on any failure
 Lines: game, entity id, entity name, concept, role ('*' = any role), expect (present|absent).

@@ -1,4 +1,4 @@
-"""Definitions for keywords the sources left without one (lib/keyword_defs.json, key 'game|name'): sets text and source_type.
+"""Definitions for keywords the sources left without one (tools/keyword_defs.json, key 'game|name'): sets text and source_type.
 An entry with only text_note records a keyword left unmapped on purpose (kept in extra.unmapped_reason). Usage: keyword_defs.py <db>"""
 import json, sqlite3, sys, os
 c = sqlite3.connect(sys.argv[1])

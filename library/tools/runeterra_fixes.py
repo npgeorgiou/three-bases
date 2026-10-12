@@ -1,10 +1,10 @@
 """Legends of Runeterra fixes:
 1. The 'Runeterra' champion region is removed completely (its cards, tags, links, pairs and faction rows), as if it did not exist.
-2. Levelled champions are added (lib/runeterra_levelled.json, from Riot's Data Dragon set files): the base loader dropped every
+2. Levelled champions are added (tools/runeterra_levelled.json, from Riot's Data Dragon set files): the base loader dropped every
    non-collectible card, which removed the levelled side of each champion. Each levelled side is an entry '<name> (level 2)' in the
    base card's faction, linked base -> transforms_into -> levelled; tagged with the general and Runeterra patterns (text_pattern),
    its keywords (has_keyword, concepts inherited via_keyword) and trigger -> effect pairs per clause.
-3. The other cards the first load dropped (lib/runeterra_extra.json), linked from the cards that create them (generates).
+3. The other cards the first load dropped (tools/runeterra_extra.json), linked from the cards that create them (generates).
 Idempotent. Usage: runeterra_fixes.py <db>"""
 import json, os, re, sqlite3, sys
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
@@ -74,7 +74,7 @@ for card in d['cards']:
     c.execute("INSERT OR IGNORE INTO entity_links VALUES(?,?,?,?)", (bid, 'transforms_into' if lvl else 'generates', nid, 'levels up into' if lvl else 'creates'))
     tag(nid, text, card['keywords'])
     nid += 1; n += 1
-# 3. the other cards the first load dropped (lib/runeterra_extra.json): tokens, champion spells, created cards, abilities,
+# 3. the other cards the first load dropped (tools/runeterra_extra.json): tokens, champion spells, created cards, abilities,
 #    landmarks, equipment, and collectible cards no pattern matched; links from the card that creates them (associatedCardRefs)
 drop([i for (i,) in q("SELECT id FROM entities WHERE game=? AND ext_id LIKE 'extra:%'", G)])
 x = json.load(open(os.path.join(here, 'runeterra_extra.json'), encoding='utf-8'))

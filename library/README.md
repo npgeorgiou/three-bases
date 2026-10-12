@@ -3,7 +3,7 @@
 ## What it is
 A SQLite database of game mechanics from 20 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
 
-It lives unzipped in **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite` at the root, `lib/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results). three-bases-library.zip holds the same files and is only a way to download them.
+It lives unzipped in **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite` at the root, `tools/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results). three-bases-library.zip holds the same files and is only a way to download them.
 
 ## Contents
 55,312 entries (cards, units, locations, abilities, items, rules), 1,187 keywords and 450 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
@@ -67,13 +67,13 @@ Created cards are included where a source has them: Runeterra (levelled champion
 **entity_fts**: full-text search. **games**, **load_log**: what each game is and how it was loaded.
 
 ## How Claude uses it
-In a fresh chat, Claude clones the repository and runs `python3 lib/query.py <command>` (the script finds the database next to `lib/`; `TB_LIB` overrides). The commands and the rules for reading results are in SEARCH_GUIDE.md. The database never enters the conversation, only printed results do, so a design question costs a few short queries.
+In a fresh chat, Claude clones the repository and runs `python3 tools/query.py <command>` (the script finds the database next to `tools/`; `TB_LIB` overrides). The commands and the rules for reading results are in SEARCH_GUIDE.md. The database never enters the conversation, only printed results do, so a design question costs a few short queries.
 
 ## Maintenance
-`lib/build.sh` rebuilds the database from the raw corpus and the data files in `lib/`. Wrong tags are fixed in these places:
-- the per-game pattern files (`lib/patterns/<game>.txt`);
-- the hand reviews (`lib/reviews/<game>.json`);
-- the keyword reviews against the outcome tree (`lib/reviews_outcome/<game>.json`).
+`tools/build.sh` rebuilds the database from the raw corpus and the data files in `tools/`. Wrong tags are fixed in these places:
+- the per-game pattern files (`tools/patterns/<game>.txt`);
+- the hand reviews (`tools/reviews/<game>.json`);
+- the keyword reviews against the outcome tree (`tools/reviews_outcome/<game>.json`).
 
 The build stops if any check fails:
 - **regression set** (`regression.py <db> check`): 12,694 reviewed tags must hold;

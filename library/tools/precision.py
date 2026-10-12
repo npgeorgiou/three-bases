@@ -1,5 +1,5 @@
 """Precision estimate per concept and game, from the hand reviews (no extra reading needed). On every entry a review touched
-(any line of lib/regression.tsv), an automatic tag that is still there was judged right (the reviewer read the entry and kept it),
+(any line of tools/regression.tsv), an automatic tag that is still there was judged right (the reviewer read the entry and kept it),
 and a reviewed drop was an automatic tag judged wrong; a reviewed add with no automatic tag is one the patterns missed.
 Table concept_precision(game, concept, kept, dropped, missed, precision, recall) for cells with 10+ judged automatic tags.
 `concept` prints a warning for a game whose precision for the concept is below 0.7. Usage: precision.py <db>"""

@@ -16,10 +16,14 @@ When something changes state (an idea gets built, a to-do gets decided), move it
 - `three-bases-scenarios.html` — the game plus a SCENARIOS script and styles appended at the end. Every game edit goes into both files; rebuild it after every game change.
 - `three-bases-ai-lab.html` — the AI lab. Never remove the lab or anything related to it.
 - `summary.txt`, `factions.txt`, `todo.md` — see above.
-- Inspiration library: `three-bases-library.sqlite`, `lib/` (run `python3 lib/query.py <command>` from the repo root), `README.md` and `SEARCH_GUIDE.md` (both are the library's). Library questions go in fresh chats, with compact queries in one go.
-  - Library changes are committed and pushed here (no zip). Concepts are organised by outcome (e.g. "no damage output" covers "can't attack" and "strength 0"), not by mechanism; combos emerge from card mechanics as links, never added from outside sources. Shadowverse: Worlds Beyond is excluded entirely; cut any game whose data could drown out the others. Kaptain doesn't have the raw library-corpus.zip, so dropped cards must come from other reachable sources. Improvement ideas: README.md, "Suggestions for improving the library".
+- `library/` — the inspiration library: `three-bases-library.sqlite`, `tools/` (run `python3 library/tools/query.py <command>`), `README.md`, `SEARCH_GUIDE.md`. Library questions go in fresh chats, with compact queries in one go.
+  - Library changes are committed and pushed here (no zip). Concepts are organised by outcome (e.g. "no damage output" covers "can't attack" and "strength 0"), not by mechanism; combos emerge from card mechanics as links, never added from outside sources. Shadowverse: Worlds Beyond is excluded entirely; cut any game whose data could drown out the others. Kaptain doesn't have the raw library-corpus.zip, so dropped cards must come from other reachable sources. Improvement ideas: library/README.md, "Suggestions for improving the library".
 
 ## Workflow
+- The project files on claude.ai are no longer used; this repository is the only copy. Work from the clone.
+- summary.txt is the source of truth for rules and UI: never contradict it without telling Kaptain. Never invent rules, stats or mechanics; mark suggestions as Claude's.
+- Change only what was asked. Fix bugs generically: when one card shows a problem, check every card with the same problem.
+- Visuals (layout, readability, animations) must look deliberate and clear.
 - After every change: commit, push, and also give Kaptain the changed game/scenarios/summary file as an immediate download.
 - Never publish anything as an artifact.
 - Summary updates are done in one pass after the current work; remind Kaptain in every reply to tell Claude to save the summary.
