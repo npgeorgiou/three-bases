@@ -70,3 +70,6 @@ multi_attack|does|\battack (twice|three times|four times)(,)? instead of once\b|
 block_armor|does|\+\d bonus to ac\b
 buff|does|\bscores? increases? by \d\b
 free_play|does|\bwithout expending a spell slot\b
+assists_support|does|\bpack tactics\b
+attack_mod|does|\+\d bonus to attack rolls
+!on_attack|\battack:

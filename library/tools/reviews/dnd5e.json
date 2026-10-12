@@ -31,7 +31,9 @@
 },
 "761541": {
 "add": [
-"items_consumables"
+"items_consumables",
+"immunity",
+"passive"
 ],
 "drop": []
 },
@@ -91,9 +93,16 @@
 },
 "761549": {
 "add": [
-"items_consumables"
+"items_consumables",
+"bodyguard",
+"damage_reduction",
+"ranged",
+"reactions"
 ],
-"drop": []
+"drop": [
+"passive",
+"random_effect"
+]
 },
 "761780": {
 "add": [
@@ -157,9 +166,12 @@
 },
 "761559": {
 "add": [
-"items_consumables"
+"items_consumables",
+"activated"
 ],
-"drop": []
+"drop": [
+"passive"
+]
 },
 "761560": {
 "add": [
@@ -205,7 +217,11 @@
 },
 "761567": {
 "add": [
-"items_consumables"
+"items_consumables",
+"damage_reduction",
+"damage_types",
+"immunity",
+"passive"
 ],
 "drop": []
 },
@@ -337,15 +353,32 @@
 },
 "761587": {
 "add": [
-"items_consumables"
+"items_consumables",
+"attack_mod",
+"cooldowns",
+"damage",
+"damage_types",
+"on_attack",
+"saving_throws"
 ],
-"drop": []
+"drop": [
+"damage_over_time",
+"debuff:grants",
+"spell_speed"
+]
 },
 "761588": {
 "add": [
-"items_consumables"
+"items_consumables",
+"activated",
+"damage",
+"movement"
 ],
-"drop": []
+"drop": [
+"passive",
+"random_effect",
+"spell_speed"
+]
 },
 "761589": {
 "add": [
@@ -415,9 +448,21 @@
 },
 "761599": {
 "add": [
-"items_consumables"
+"items_consumables",
+"area_templates",
+"friendly_fire",
+"self_destruct",
+"disable",
+"saving_throws",
+"turn_end"
 ],
-"drop": []
+"drop": [
+"concentration",
+"information",
+"reactions",
+"scope_global",
+"once_per_game"
+]
 },
 "761600": {
 "add": [
@@ -475,7 +520,9 @@
 },
 "761608": {
 "add": [
-"items_consumables"
+"items_consumables",
+"advantage",
+"passive"
 ],
 "drop": []
 },
@@ -565,7 +612,8 @@
 },
 "761622": {
 "add": [
-"items_consumables"
+"items_consumables",
+"passive"
 ],
 "drop": []
 },
@@ -595,9 +643,16 @@
 },
 "761627": {
 "add": [
-"items_consumables"
+"items_consumables",
+"damage_reduction",
+"aoe_damage",
+"area_templates",
+"damage_types",
+"passive"
 ],
-"drop": []
+"drop": [
+"spell_speed"
+]
 },
 "761628": {
 "add": [
@@ -631,9 +686,23 @@
 },
 "761633": {
 "add": [
-"items_consumables"
+"items_consumables",
+"summon",
+"cooldowns",
+"drawback",
+"debuff:counters",
+"immunity",
+"random_effect"
 ],
-"drop": []
+"drop": [
+"advantage:counters",
+"condition_life",
+"control:counters",
+"control:grants",
+"debuff:grants",
+"spell_speed",
+"tribal"
+]
 },
 "761635": {
 "add": [
@@ -697,9 +766,16 @@
 },
 "761643": {
 "add": [
-"items_consumables"
+"items_consumables",
+"attack_mod",
+"cooldowns",
+"advantage",
+"saving_throws"
 ],
-"drop": []
+"drop": [
+"disable:grants",
+"passive"
+]
 },
 "761644": {
 "add": [
@@ -727,7 +803,10 @@
 },
 "761647": {
 "add": [
-"items_consumables"
+"items_consumables",
+"advantage",
+"passive",
+"saving_throws"
 ],
 "drop": []
 },
@@ -739,9 +818,12 @@
 },
 "761649": {
 "add": [
-"items_consumables"
+"items_consumables",
+"buff"
 ],
-"drop": []
+"drop": [
+"activated"
+]
 },
 "761650": {
 "add": [
@@ -751,9 +833,12 @@
 },
 "761651": {
 "add": [
-"items_consumables"
+"items_consumables",
+"buff"
 ],
-"drop": []
+"drop": [
+"activated"
+]
 },
 "761652": {
 "add": [
@@ -775,9 +860,18 @@
 },
 "761654": {
 "add": [
-"items_consumables"
+"items_consumables",
+"banish",
+"activated",
+"immunity",
+"passive",
+"saving_throws"
 ],
-"drop": []
+"drop": [
+"condition_life",
+"damage_over_time",
+"damage_types"
+]
 },
 "761655": {
 "add": [
@@ -787,7 +881,16 @@
 },
 "761656": {
 "add": [
-"items_consumables"
+"items_consumables",
+"random_effect",
+"summon",
+"advantage",
+"condition_life",
+"damage",
+"damage_types",
+"debuff",
+"draw",
+"multi_attack"
 ],
 "drop": []
 },
@@ -841,15 +944,29 @@
 },
 "761786": {
 "add": [
-"items_consumables"
+"items_consumables",
+"on_damaged",
+"disable",
+"saving_throws"
 ],
-"drop": []
+"drop": [
+"damage_over_time",
+"debuff:grants",
+"on_attack",
+"passive"
+]
 },
 "762119": {
 "add": [
-"items_consumables"
+"items_consumables",
+"activated",
+"drawback"
 ],
-"drop": []
+"drop": [
+"advantage:cost",
+"control:cost",
+"passive"
+]
 },
 "761787": {
 "add": [
@@ -925,7 +1042,8 @@
 },
 "761676": {
 "add": [
-"items_consumables"
+"items_consumables",
+"advantage"
 ],
 "drop": []
 },
@@ -1093,7 +1211,11 @@
 },
 "761701": {
 "add": [
-"items_consumables"
+"items_consumables",
+"damage_reduction",
+"damage_types",
+"passive",
+"random_effect"
 ],
 "drop": []
 },
@@ -1231,9 +1353,16 @@
 },
 "761724": {
 "add": [
-"items_consumables"
+"items_consumables",
+"advantage",
+"damage_reduction",
+"passive",
+"reactions",
+"saving_throws"
 ],
-"drop": []
+"drop": [
+"damage_types"
+]
 },
 "761725": {
 "add": [
@@ -1279,9 +1408,15 @@
 },
 "761730": {
 "add": [
-"items_consumables"
+"items_consumables",
+"advantage",
+"passive",
+"saving_throws"
 ],
-"drop": []
+"drop": [
+"damage_reduction",
+"debuff"
+]
 },
 "761732": {
 "add": [
@@ -1471,9 +1606,18 @@
 },
 "761760": {
 "add": [
-"items_consumables"
+"items_consumables",
+"attack_mod",
+"deathtouch",
+"damage",
+"damage_types",
+"immunity",
+"piercing"
 ],
-"drop": []
+"drop": [
+"damage_reduction",
+"random_effect"
+]
 },
 "761761": {
 "add": [
@@ -1537,9 +1681,12 @@
 },
 "761772": {
 "add": [
-"items_consumables"
+"items_consumables",
+"saving_throws"
 ],
-"drop": []
+"drop": [
+"passive"
+]
 },
 "761773": {
 "add": [
@@ -1573,9 +1720,12 @@
 },
 "762118": {
 "add": [
-"items_consumables"
+"items_consumables",
+"attack_mod"
 ],
-"drop": []
+"drop": [
+"random_effect"
+]
 },
 "761776": {
 "add": [
@@ -1637,9 +1787,13 @@
 },
 "761994": {
 "add": [
-"evasion"
+"activated",
+"cooldowns"
 ],
-"drop": []
+"drop": [
+"evasion",
+"spell_speed"
+]
 },
 "762265": {
 "add": [
@@ -1866,6 +2020,1598 @@
 "815513": {
 "add": [
 "terrain:benefits"
+],
+"drop": []
+},
+"761449": {
+"add": [
+"debuff",
+"damage",
+"damage_types",
+"ranged",
+"temporary_effect",
+"upgrade"
+],
+"drop": [
+"delayed",
+"multi_attack"
+]
+},
+"762584": {
+"add": [
+"damage",
+"damage_types",
+"delayed",
+"disable",
+"movement",
+"on_attack",
+"passive",
+"turn_end"
+],
+"drop": [
+"debuff:benefits",
+"debuff:counters",
+"destroy",
+"graveyard",
+"terrain",
+"saving_throws"
+]
+},
+"761299": {
+"add": [
+"target_choice",
+"damage",
+"damage_types",
+"multi_attack",
+"ranged",
+"upgrade"
+],
+"drop": [
+"condition_count",
+"random_effect"
+]
+},
+"761414": {
+"add": [
+"damage_reduction",
+"random_effect"
+],
+"drop": [
+"condition_count",
+"debuff",
+"movement"
+]
+},
+"762433": {
+"add": [
+"damage_types",
+"aoe_damage",
+"area_templates",
+"multi_attack",
+"saving_throws"
+],
+"drop": [
+"damage_over_time",
+"damage_reduction"
+]
+},
+"762314": {
+"add": [
+"type_grant",
+"passive"
+],
+"drop": [
+"cooldowns"
+]
+},
+"762386": {
+"add": [
+"immobilize",
+"damage",
+"debuff",
+"disable",
+"multi_attack",
+"on_attack",
+"passive",
+"saving_throws",
+"turn_end"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"815547": {
+"add": [
+"activated",
+"modal_choice",
+"spell_speed"
+],
+"drop": [
+"selection"
+]
+},
+"761362": {
+"add": [
+"block_armor",
+"concentration",
+"debuff:counters",
+"immunity",
+"turn_start",
+"upgrade"
+],
+"drop": [
+"condition_count",
+"stress_morale"
+]
+},
+"762418": {
+"add": [
+"steal",
+"aoe_damage",
+"area_templates",
+"damage_types",
+"debuff",
+"disable",
+"immunity",
+"movement",
+"multi_attack",
+"passive",
+"saving_throws",
+"terrain"
+],
+"drop": [
+"concentration",
+"condition_life",
+"reactions"
+]
+},
+"762235": {
+"add": [
+"advantage",
+"reactions"
+],
+"drop": [
+"debuff"
+]
+},
+"762663": {
+"add": [
+"damage",
+"advantage"
+],
+"drop": [
+"on_attack"
+]
+},
+"761167": {
+"add": [
+"debuff",
+"passive"
+],
+"drop": []
+},
+"762295": {
+"add": [
+"stealth"
+],
+"drop": [
+"movement",
+"reactions"
+]
+},
+"762629": {
+"add": [
+"damage",
+"passive"
+],
+"drop": [
+"on_attack"
+]
+},
+"761379": {
+"add": [
+"immobilize",
+"advantage",
+"concentration",
+"control",
+"debuff",
+"saving_throws"
+],
+"drop": [
+"on_attack",
+"passive"
+]
+},
+"761850": {
+"add": [
+"information",
+"passive"
+],
+"drop": [
+"saving_throws",
+"stealth",
+"trap_secret"
+]
+},
+"761229": {
+"add": [
+"damage",
+"damage_types",
+"saving_throws",
+"upgrade"
+],
+"drop": [
+"condition_count"
+]
+},
+"761211": {
+"add": [
+"concentration",
+"immunity",
+"movement",
+"spell_speed"
+],
+"drop": [
+"shield"
+]
+},
+"761219": {
+"add": [
+"control",
+"transform"
+],
+"drop": [
+"advantage",
+"damage",
+"movement",
+"spell_speed"
+]
+},
+"815543": {
+"add": [
+"cooldowns",
+"free_play"
+],
+"drop": [
+"spell_speed"
+]
+},
+"762527": {
+"add": [
+"summon",
+"damage",
+"multi_attack",
+"ranged",
+"stat_multiply",
+"turn_structure"
+],
+"drop": [
+"random_effect"
+]
+},
+"762040": {
+"add": [
+"activated",
+"cooldowns"
+],
+"drop": [
+"concentration",
+"disable",
+"disable:grants",
+"reactions"
+]
+},
+"762200": {
+"add": [],
+"drop": []
+},
+"761226": {
+"add": [
+"aoe_damage",
+"concentration",
+"saving_throws",
+"terrain"
+],
+"drop": [
+"cooldowns",
+"debuff:benefits",
+"disable"
+]
+},
+"762499": {
+"add": [
+"damage",
+"immobilize",
+"forced_movement",
+"damage_types",
+"debuff",
+"delayed",
+"immunity",
+"multi_attack",
+"on_attack",
+"turn_start"
+],
+"drop": [
+"damage_over_time",
+"damage_prevention",
+"death_trigger",
+"movement",
+"disable",
+"saving_throws"
+]
+},
+"762434": {
+"add": [
+"debuff",
+"temporary_effect",
+"aoe_damage",
+"area_templates",
+"damage_types",
+"delayed",
+"legendary_actions",
+"movement",
+"multi_attack",
+"saving_throws"
+],
+"drop": [
+"damage_over_time",
+"damage_reduction"
+]
+},
+"762551": {
+"add": [
+"damage",
+"immunity",
+"movement",
+"multi_attack",
+"saving_throws",
+"transform"
+],
+"drop": [
+"condition_life",
+"reactions",
+"debuff"
+]
+},
+"762360": {
+"add": [
+"damage_over_time",
+"area_templates",
+"aoe_damage",
+"damage_types",
+"disable",
+"multi_attack",
+"saving_throws",
+"terrain",
+"turn_start"
+],
+"drop": [
+"advantage",
+"damage_reduction",
+"debuff:counters",
+"graveyard",
+"on_attack:counters",
+"passive"
+]
+},
+"761210": {
+"add": [
+"forced_movement",
+"saving_throws"
+],
+"drop": [
+"advantage",
+"advantage:benefits",
+"control:benefits",
+"debuff:benefits",
+"movement"
+]
+},
+"762558": {
+"add": [
+"summon",
+"advantage",
+"damage_types",
+"debuff",
+"multi_attack",
+"passive",
+"ranged",
+"saving_throws"
+],
+"drop": [
+"lifesteal"
+]
+},
+"761374": {
+"add": [
+"modal_choice",
+"immobilize",
+"debuff",
+"delayed",
+"disable",
+"immunity",
+"movement",
+"saving_throws"
+],
+"drop": [
+"on_spell",
+"summon",
+"passive"
+]
+},
+"762708": {
+"add": [
+"ranged"
+],
+"drop": [
+"forced_movement",
+"passive"
+]
+},
+"761893": {
+"add": [
+"counterattack",
+"damage",
+"damage_reduction",
+"ranged",
+"reactions",
+"saving_throws"
+],
+"drop": [
+"debuff",
+"terrain"
+]
+},
+"762444": {
+"add": [
+"assists_support",
+"damage_types",
+"advantage",
+"damage",
+"ranged"
+],
+"drop": [
+"concentration",
+"disable",
+"disable:grants",
+"reactions"
+]
+},
+"762458": {
+"add": [
+"delayed",
+"damage",
+"revive"
+],
+"drop": [
+"random_effect"
+]
+},
+"815641": {
+"add": [
+"cost_set",
+"cooldowns",
+"free_play"
+],
+"drop": []
+},
+"761805": {
+"add": [
+"movement"
+],
+"drop": [
+"spell_speed"
+]
+},
+"762622": {
+"add": [
+"assists_support",
+"advantage",
+"damage"
+],
+"drop": [
+"concentration",
+"disable",
+"disable:grants",
+"reactions"
+]
+},
+"762441": {
+"add": [
+"assists_support",
+"advantage",
+"aoe_damage",
+"area_templates",
+"damage_types",
+"multi_attack",
+"saving_throws"
+],
+"drop": [
+"concentration",
+"damage_reduction",
+"disable",
+"disable:grants",
+"reactions"
+]
+},
+"762453": {
+"add": [
+"on_damaged",
+"advantage",
+"aoe_damage",
+"area_templates",
+"damage_types",
+"heal",
+"multi_attack",
+"ranged",
+"saving_throws"
+],
+"drop": [
+"damage_over_time",
+"damage_reduction",
+"movement"
+]
+},
+"762095": {
+"add": [
+"buff",
+"immobilize",
+"advantage",
+"immobilize:benefits",
+"movement"
+],
+"drop": [
+"cooldowns",
+"debuff:benefits",
+"on_attack:benefits",
+"permanent_growth",
+"damage"
+]
+},
+"762625": {
+"add": [
+"damage",
+"advantage",
+"aoe_damage",
+"area_templates",
+"damage_types",
+"debuff",
+"immunity",
+"legendary_actions",
+"multi_attack",
+"saving_throws",
+"turn_end"
+],
+"drop": [
+"damage_over_time",
+"damage_reduction",
+"evasion",
+"on_attack"
+]
+},
+"761237": {
+"add": [
+"steal",
+"saving_throws",
+"upgrade"
+],
+"drop": [
+"advantage:benefits",
+"condition_count",
+"control:benefits",
+"damage"
+]
+},
+"762402": {
+"add": [
+"damage",
+"aoe_damage",
+"area_templates",
+"damage_types",
+"debuff",
+"multi_attack",
+"saving_throws"
+],
+"drop": [
+"advantage",
+"damage_reduction",
+"on_attack"
+]
+},
+"762174": {
+"add": [
+"lone_unit",
+"buff"
+],
+"drop": [
+"random_effect"
+]
+},
+"815626": {
+"add": [
+"debuff",
+"cooldowns"
+],
+"drop": []
+},
+"761533": {
+"add": [
+"area_templates",
+"concentration",
+"damage",
+"saving_throws",
+"terrain"
+],
+"drop": [
+"evasion"
+]
+},
+"762542": {
+"add": [
+"damage",
+"immunity",
+"multi_attack",
+"saving_throws",
+"transform"
+],
+"drop": [
+"condition_life",
+"movement",
+"debuff"
+]
+},
+"762025": {
+"add": [
+"block_armor",
+"movement",
+"cooldowns"
+],
+"drop": [
+"spell_speed"
+]
+},
+"761347": {
+"add": [
+"rewind"
+],
+"drop": [
+"items_consumables"
+]
+},
+"762267": {
+"add": [
+"cost_type",
+"activated",
+"saving_throws"
+],
+"drop": [
+"on_spell"
+]
+},
+"815624": {
+"add": [],
+"drop": [
+"free_play"
+]
+},
+"762460": {
+"add": [
+"counter_spell",
+"damage",
+"damage_types",
+"multi_attack",
+"ranged",
+"reactions"
+],
+"drop": [
+"saving_throws"
+]
+},
+"761394": {
+"add": [
+"immunity",
+"advantage",
+"area_templates",
+"control",
+"debuff",
+"modal_choice",
+"saving_throws",
+"upgrade"
+],
+"drop": [
+"movement",
+"on_attack"
+]
+},
+"762485": {
+"add": [
+"revive",
+"aoe_damage",
+"advantage",
+"area_templates",
+"aura",
+"damage_over_time",
+"damage_reduction",
+"damage_types",
+"debuff",
+"multi_attack",
+"on_attack",
+"saving_throws",
+"turn_end",
+"turn_start"
+],
+"drop": [
+"concentration",
+"disable",
+"disable:grants",
+"heal",
+"reactions",
+"immunity"
+]
+},
+"762009": {
+"add": [
+"temporary_effect",
+"cooldowns",
+"damage",
+"disable",
+"on_attack",
+"saving_throws"
+],
+"drop": [
+"concentration",
+"reactions"
+]
+},
+"762421": {
+"add": [
+"reactions",
+"damage_reduction",
+"damage",
+"debuff",
+"multi_attack",
+"ranged",
+"saving_throws"
+],
+"drop": [
+"advantage",
+"on_attack",
+"passive"
+]
+},
+"761227": {
+"add": [
+"area_templates",
+"aoe_damage",
+"concentration",
+"damage",
+"damage_types",
+"saving_throws",
+"terrain"
+],
+"drop": [
+"cooldowns"
+]
+},
+"762380": {
+"add": [
+"advantage",
+"damage",
+"debuff",
+"immobilize",
+"movement",
+"multi_attack",
+"on_attack",
+"ranged",
+"saving_throws"
+],
+"drop": [
+"disable:grants"
+]
+},
+"761257": {
+"add": [
+"damage_types",
+"area_templates",
+"concentration",
+"damage",
+"on_attack",
+"terrain",
+"upgrade"
+],
+"drop": [
+"condition_count",
+"summon"
+]
+},
+"761817": {
+"add": [
+"buff",
+"cooldowns",
+"random_effect",
+"upgrade"
+],
+"drop": [
+"spell_speed"
+]
+},
+"762678": {
+"add": [
+"immobilize",
+"damage_over_time",
+"damage_reduction",
+"damage",
+"debuff",
+"disable",
+"on_attack",
+"passive",
+"turn_start"
+],
+"drop": [
+"concentration",
+"reactions",
+"saving_throws"
+]
+},
+"762633": {
+"add": [
+"damage",
+"advantage",
+"passive"
+],
+"drop": [
+"on_attack"
+]
+},
+"762603": {
+"add": [
+"reactions",
+"damage",
+"area_templates",
+"movement",
+"passive"
+],
+"drop": [
+"random_effect"
+]
+},
+"762096": {
+"add": [
+"attack_mod",
+"ranged"
+],
+"drop": [
+"random_effect"
+]
+},
+"761526": {
+"add": [
+"area_templates",
+"aoe_damage",
+"damage_types",
+"concentration",
+"damage",
+"movement",
+"saving_throws",
+"terrain",
+"upgrade"
+],
+"drop": [
+"cooldowns",
+"counterattack"
+]
+},
+"761523": {
+"add": [
+"area_templates",
+"concentration",
+"forced_movement",
+"immunity",
+"terrain"
+],
+"drop": [
+"shield"
+]
+},
+"762447": {
+"add": [
+"heal:counters",
+"advantage",
+"damage_over_time",
+"damage_reduction",
+"damage_types",
+"multi_attack",
+"passive",
+"ranged",
+"saving_throws",
+"turn_start"
+],
+"drop": [
+"condition_life"
+]
+},
+"761188": {
+"add": [
+"damage",
+"multi_target_attack",
+"on_attack"
+],
+"drop": [
+"cooldowns"
+]
+},
+"762524": {
+"add": [
+"aoe_damage",
+"damage_over_time",
+"counter_spell",
+"area_templates",
+"damage",
+"damage_reduction",
+"damage_types",
+"disable",
+"legendary_actions",
+"multi_attack",
+"saving_throws",
+"stat_multiply",
+"turn_start"
+],
+"drop": [
+"advantage:benefits",
+"concentration",
+"debuff:benefits",
+"debuff:counters",
+"graveyard",
+"on_attack",
+"on_attack:benefits",
+"on_attack:counters",
+"ranged",
+"terrain",
+"movement"
+]
+},
+"762541": {
+"add": [
+"damage",
+"immunity",
+"multi_attack",
+"ranged",
+"saving_throws",
+"transform"
+],
+"drop": [
+"condition_life",
+"movement",
+"debuff"
+]
+},
+"762471": {
+"add": [
+"immobilize",
+"advantage",
+"damage",
+"damage_types",
+"debuff",
+"on_attack"
+],
+"drop": [
+"disable",
+"movement",
+"passive",
+"saving_throws"
+]
+},
+"761926": {
+"add": [
+"aura",
+"debuff:counters",
+"immunity"
+],
+"drop": [
+"debuff:benefits",
+"debuff:grants"
+]
+},
+"762602": {
+"add": [
+"damage"
+],
+"drop": [
+"random_effect"
+]
+},
+"761954": {
+"add": [
+"modal_choice",
+"condition_life",
+"multi_target_attack",
+"damage",
+"on_attack"
+],
+"drop": [
+"cooldowns",
+"multi_attack"
+]
+},
+"762359": {
+"add": [
+"advantage",
+"damage_over_time",
+"damage_types",
+"debuff",
+"multi_attack",
+"on_attack",
+"saving_throws",
+"turn_start"
+],
+"drop": [
+"condition_life",
+"damage_reduction",
+"delayed",
+"passive"
+]
+},
+"815605": {
+"add": [
+"damage_reduction",
+"on_damaged",
+"temporary_effect"
+],
+"drop": [
+"block_armor"
+]
+},
+"762666": {
+"add": [
+"assists_support",
+"advantage",
+"damage",
+"ranged"
+],
+"drop": [
+"concentration:counters",
+"debuff",
+"disable:counters",
+"on_attack",
+"passive",
+"reactions:counters"
+]
+},
+"761174": {
+"add": [
+"advantage",
+"debuff",
+"passive"
+],
+"drop": [
+"on_attack"
+]
+},
+"762046": {
+"add": [
+"damage",
+"damage_reduction",
+"counterattack",
+"cooldowns",
+"modal_choice",
+"movement",
+"on_attack",
+"reactions",
+"temporary_effect"
+],
+"drop": [
+"damage_over_time",
+"delayed",
+"random_effect",
+"selection"
+]
+},
+"762468": {
+"add": [
+"temporary_effect",
+"aoe_damage",
+"area_templates",
+"damage_types",
+"death_trigger",
+"debuff",
+"saving_throws"
+],
+"drop": [
+"damage_reduction",
+"delayed"
+]
+},
+"761438": {
+"add": [
+"area_templates",
+"immobilize",
+"damage",
+"damage_types",
+"disable",
+"saving_throws",
+"terrain",
+"turn_end"
+],
+"drop": [
+"debuff:grants",
+"movement",
+"on_spell",
+"transform"
+]
+},
+"762481": {
+"add": [
+"damage",
+"immobilize",
+"disable",
+"multi_attack",
+"saving_throws"
+],
+"drop": [
+"cooldowns",
+"damage_over_time:benefits",
+"damage_reduction",
+"debuff:benefits",
+"debuff:counters",
+"delayed",
+"on_attack",
+"on_attack:benefits",
+"on_attack:counters"
+]
+},
+"762568": {
+"add": [
+"movement",
+"advantage",
+"condition_life",
+"damage",
+"debuff"
+],
+"drop": [
+"passive",
+"on_attack"
+]
+},
+"762209": {
+"add": [
+"cost_type",
+"damage_types",
+"tribal",
+"damage",
+"on_attack"
+],
+"drop": [
+"condition_count"
+]
+},
+"761284": {
+"add": [
+"banish",
+"damage",
+"damage_types",
+"saving_throws",
+"upgrade"
+],
+"drop": [
+"condition_count",
+"condition_life",
+"terrain"
+]
+},
+"762404": {
+"add": [
+"damage",
+"damage_types",
+"advantage",
+"debuff",
+"multi_attack",
+"passive",
+"ranged"
+],
+"drop": [
+"damage_over_time",
+"saving_throws"
+]
+},
+"761983": {
+"add": [
+"resource_conversion",
+"multiple_resources",
+"cooldowns"
+],
+"drop": [
+"spell_speed",
+"transform"
+]
+},
+"762586": {
+"add": [
+"damage"
+],
+"drop": [
+"random_effect"
+]
+},
+"762554": {
+"add": [
+"assists_support",
+"advantage",
+"damage",
+"immunity",
+"multi_attack",
+"saving_throws",
+"transform"
+],
+"drop": [
+"concentration",
+"condition_life",
+"disable",
+"disable:grants",
+"reactions",
+"movement",
+"debuff"
+]
+},
+"762452": {
+"add": [
+"immobilize",
+"damage_over_time",
+"damage",
+"damage_types",
+"debuff",
+"disable",
+"movement",
+"multi_attack",
+"play_restriction",
+"saving_throws",
+"stealth",
+"turn_start"
+],
+"drop": [
+"advantage",
+"on_attack"
+]
+},
+"762172": {
+"add": [
+"attack_mod",
+"ranged"
+],
+"drop": [
+"random_effect"
+]
+},
+"762412": {
+"add": [
+"on_damaged",
+"random_effect",
+"autonomous_units",
+"temporary_effect",
+"advantage",
+"condition_life",
+"damage",
+"damage_types",
+"debuff",
+"heal",
+"movement",
+"multi_attack",
+"on_attack",
+"passive",
+"saving_throws"
+],
+"drop": [
+"death_count",
+"damage_reduction",
+"delayed"
+]
+},
+"761966": {
+"add": [
+"modal_choice",
+"movement",
+"damage_over_time",
+"saving_throws",
+"turn_end"
+],
+"drop": [
+"debuff:benefits",
+"debuff:grants",
+"on_attack:benefits",
+"advantage",
+"reactions"
+]
+},
+"761932": {
+"add": [
+"attack_mod",
+"damage_types",
+"damage"
+],
+"drop": [
+"area_templates",
+"once_per_game",
+"random_effect"
+]
+},
+"761166": {
+"add": [
+"debuff",
+"fatigue",
+"passive",
+"stacking_keyword"
+],
+"drop": [
+"cooldowns"
+]
+},
+"762521": {
+"add": [
+"debuff",
+"advantage",
+"damage",
+"damage_reduction",
+"damage_types",
+"multi_attack",
+"ranged",
+"saving_throws"
+],
+"drop": [
+"movement",
+"spell_speed"
+]
+},
+"762525": {
+"add": [
+"assists_support",
+"advantage",
+"damage",
+"ranged"
+],
+"drop": [
+"concentration",
+"disable",
+"disable:grants",
+"reactions"
+]
+},
+"762696": {
+"add": [
+"reveal_order",
+"turn_structure",
+"passive",
+"random_effect",
+"reactions"
+],
+"drop": [
+"multi_attack",
+"selection",
+"symmetric_effect",
+"turn_end",
+"turn_start"
+]
+},
+"762673": {
+"add": [
+"immobilize",
+"movement",
+"advantage",
+"area_templates",
+"on_attack",
+"passive",
+"stealth"
+],
+"drop": [
+"saving_throws",
+"spell_speed",
+"debuff",
+"disable"
+]
+},
+"761890": {
+"add": [
+"multi_attack",
+"movement",
+"cooldowns",
+"kicker",
+"saving_throws"
+],
+"drop": [
+"damage",
+"spell_speed",
+"zone_of_control"
+]
+},
+"762357": {
+"add": [
+"immobilize",
+"revive",
+"ping",
+"advantage",
+"damage_over_time",
+"damage_reduction",
+"damage_types",
+"multi_attack",
+"on_attack",
+"ranged",
+"turn_start"
+],
+"drop": [
+"debuff",
+"disable",
+"saving_throws"
+]
+},
+"762647": {
+"add": [
+"advantage",
+"damage",
+"multi_attack"
+],
+"drop": [
+"on_attack"
+]
+},
+"761224": {
+"add": [
+"silence",
+"damage",
+"damage_types",
+"play_restriction",
+"saving_throws"
+],
+"drop": [
+"turn_end"
+]
+},
+"762726": {
+"add": [
+"stealth",
+"trap_secret"
+],
+"drop": [
+"damage_over_time",
+"damage_reduction",
+"forced_movement",
+"multi_target_attack",
+"passive",
+"activated"
+]
+},
+"762546": {
+"add": [
+"transform",
+"damage",
+"multi_attack",
+"ranged"
+],
+"drop": [
+"movement",
+"random_effect"
+]
+},
+"762615": {
+"add": [
+"condition_life",
+"damage",
+"movement"
+],
+"drop": [
+"random_effect"
+]
+},
+"761357": {
+"add": [
+"heal",
+"debuff:counters",
+"upgrade"
+],
+"drop": [
+"condition_count",
+"damage_over_time"
+]
+},
+"762547": {
+"add": [
+"damage",
+"immunity",
+"multi_attack",
+"ranged",
+"saving_throws",
+"transform"
+],
+"drop": [
+"condition_life",
+"movement",
+"debuff"
+]
+},
+"761233": {
+"add": [
+"aoe_damage",
+"area_templates",
+"damage_types",
+"saving_throws",
+"upgrade"
+],
+"drop": [
+"condition_count",
+"damage_over_time",
+"ranged"
+]
+},
+"761314": {
+"add": [],
+"drop": [
+"damage",
+"terrain"
+]
+},
+"762035": {
+"add": [
+"damage_reduction",
+"damage_types"
+],
+"drop": []
+},
+"761225": {
+"add": [
+"advantage",
+"concentration",
+"damage",
+"damage_types",
+"debuff",
+"modal_choice",
+"on_attack",
+"saving_throws",
+"turn_start",
+"upgrade"
+],
+"drop": []
+},
+"762079": {
+"add": [
+"advantage"
+],
+"drop": []
+},
+"761181": {
+"add": [
+"multi_attack",
+"spell_speed"
+],
+"drop": []
+},
+"762254": {
+"add": [
+"modal_choice"
+],
+"drop": []
+},
+"761929": {
+"add": [
+"area_templates",
+"aura"
+],
+"drop": []
+},
+"762181": {
+"add": [
+"advantage",
+"cooldowns",
+"saving_throws"
+],
+"drop": []
+},
+"761420": {
+"add": [
+"immunity"
+],
+"drop": []
+},
+"761512": {
+"add": [
+"concentration",
+"movement"
 ],
 "drop": []
 }

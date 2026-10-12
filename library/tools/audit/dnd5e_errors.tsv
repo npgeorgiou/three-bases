@@ -1,0 +1,502 @@
+761449	-delayed	duration read as delayed
+761449	-multi_attack	cantrip scaling tagged multi_attack
+761449	+debuff	speed reduction missed
+762584	-debuff:benefits	spurious role variant
+762584	-debuff:counters	spurious role variant
+762584	-destroy	kill word tagged destroy
+762584	-graveyard	corpse tagged graveyard
+762584	-terrain	spurious terrain
+762584	-saving_throws	escape DC tagged save
+762584	-immobilize:counters	grapple tagged wrong role
+762584	+immobilize	grapple/restrain missed
+761299	-condition_count	level scaling tagged condition_count
+761299	-random_effect	attack roll tagged random
+761299	+target_choice	target choice missed
+761414	-condition_count	level scaling tagged condition_count
+761414	-debuff	spurious debuff
+761414	-movement	spurious movement
+762433	-damage_over_time	poison damage tagged dot
+762433	-damage_reduction	spurious damage_reduction
+762433	+damage_types	typed damage missed
+762314	-cooldowns	rest mention tagged cooldown
+762314	+type_grant	counts-as type missed
+762386	-damage_over_time	poison damage tagged dot
+762386	+immobilize	grapple/restrain missed
+762386	+damage	attack damage missed
+815547	-selection	spurious selection
+761362	-condition_count	level scaling tagged condition_count
+761362	-stress_morale	frightened tagged stress
+761362	+block_armor	temporary hit points missed
+762418	-concentration	spurious concentration
+762418	-condition_life	0 HP tagged condition_life
+762418	-reactions	bonus action tagged reactions
+762418	+steal	possession/control missed
+762235	-debuff	disadvantage tagged debuff
+762663	-on_attack	plain attack tagged on_attack
+762663	+damage	attack damage missed
+761167	+advantage	disadvantage missed
+762295	-movement	spurious movement
+762295	-reactions	reaction word tagged reactions
+762295	+stealth	invisibility missed
+761724	-damage_types	spurious damage_types
+762629	-on_attack	plain attack tagged on_attack
+761379	-on_attack	plain attack tagged on_attack
+761379	-passive	spurious passive
+761379	+immobilize	grapple/restrain missed
+761850	-saving_throws	ability check tagged save
+761850	-stealth	spurious stealth
+761850	-trap_secret	spurious trap_secret
+761850	+information	hidden information missed
+761229	-condition_count	level scaling tagged condition_count
+761211	-shield	spurious shield
+761219	-advantage	spurious advantage
+761219	-damage	damage mention tagged damage
+761219	-movement	spurious movement
+761219	-spell_speed	casting tagged spell_speed
+815543	-spell_speed	casting tagged spell_speed
+762527	-random_effect	attack roll tagged random
+762527	+summon	animate/summon missed
+762040	-concentration	spurious concentration
+762040	-disable	incapacitated end clause tagged disable
+762040	-disable:grants	spurious role variant
+762040	-reactions	bonus action tagged reactions
+762040	+activated	activated ability missed
+762200	-upkeep	counter role tagged does
+762200	+upkeep:counters	counter role missed
+761226	-cooldowns	once per turn tagged cooldown
+761226	-debuff:benefits	spurious role variant
+761226	-disable	restrained tagged disable
+761226	-immobilize:benefits	grapple tagged wrong role
+761226	+immobilize	grapple/restrain missed
+762499	-damage_over_time	poison condition tagged dot
+762499	-damage_prevention	spurious damage_prevention
+762499	-death_trigger	destroyed part tagged death_trigger
+762499	-movement	pull tagged movement
+762499	-disable	grapple tagged disable
+762499	-saving_throws	escape DC tagged save
+762499	+damage	attack damage missed
+762499	+immobilize	grapple/restrain missed
+762499	+forced_movement	pull missed
+761633	-advantage:counters	spurious role variant
+761633	-condition_life	0 HP tagged condition_life
+761633	-control:counters	spurious role variant
+761633	-control:grants	spurious role variant
+761633	-debuff:grants	spurious role variant
+761633	-spell_speed	casting tagged spell_speed
+761633	-tribal	spurious tribal
+761633	+summon	animate/summon missed
+761633	+cooldowns	recharge limit missed
+761633	+drawback	drawback missed
+762434	-damage_over_time	poison damage tagged dot
+762434	-damage_reduction	spurious damage_reduction
+762434	+debuff	AC penalty missed
+762434	+temporary_effect	this-turn effect missed
+762551	-condition_life	0 HP tagged condition_life
+762551	-reactions	opportunity attack tagged reactions
+762551	-debuff	spurious debuff
+762551	+damage	attack damage missed
+761656	+random_effect	random table missed
+761656	+summon	animate/summon missed
+761651	-activated	study time tagged activated
+761651	+buff	ability score increase missed
+761627	-spell_speed	casting tagged spell_speed
+761627	+damage_reduction	resistance missed
+762360	-advantage	spurious advantage
+762360	-damage_reduction	spurious damage_reduction
+762360	-debuff:counters	spurious role variant
+762360	-graveyard	corpse tagged graveyard
+762360	-immobilize:counters	grapple tagged wrong role
+762360	-on_attack:counters	spurious role variant
+762360	-passive	spurious passive
+762360	+immobilize	grapple/restrain missed
+762360	+damage_over_time	repeating damage missed
+762360	+area_templates	area shape missed
+761772	-passive	spurious passive
+761210	-advantage	spurious advantage
+761210	-advantage:benefits	spurious role variant
+761210	-control:benefits	spurious role variant
+761210	-debuff:benefits	spurious role variant
+761210	-high_cost:benefits	spurious role variant
+761210	-movement	forced move tagged movement
+761210	+forced_movement	forced move missed
+762558	-lifesteal	HP max drain tagged lifesteal
+762558	+summon	animate/summon missed
+761374	-on_spell	spell mention tagged on_spell
+761374	-summon	spurious summon
+761374	-high_cost:benefits	spurious role variant
+761374	-passive	spurious passive
+761374	+modal_choice	choose-one missed
+761374	+immobilize	grapple/restrain missed
+761559	-passive	spurious passive
+761559	+activated	activated ability missed
+762708	-forced_movement	rules text tagged forced_movement
+762708	-passive	spurious passive
+761786	-damage_over_time	poison condition tagged dot
+761786	-debuff:grants	spurious role variant
+761786	-on_attack	spurious on_attack
+761786	-passive	spurious passive
+761786	+on_damaged	damaged trigger missed
+761893	-debuff	spurious debuff
+761893	-terrain	cover tagged terrain
+761893	+counterattack	redirect damage missed
+762444	-concentration	pack tactics tagged concentration
+762444	-disable	incapacitated end clause tagged disable
+762444	-disable:grants	spurious role variant
+762444	-reactions	spurious reactions
+762444	+assists_support	pack tactics missed
+762444	+damage_types	typed damage missed
+762458	-random_effect	dice duration tagged random
+762458	+delayed	delayed revive missed
+815641	+cost_set	no slot cost missed
+761805	-spell_speed	bonus action tagged spell_speed
+761760	-damage_reduction	spurious damage_reduction
+761760	-random_effect	attack roll tagged random
+761760	+attack_mod	attack bonus missed
+761760	+deathtouch	instant kill missed
+762622	-concentration	pack tactics tagged concentration
+762622	-disable	incapacitated end clause tagged disable
+762622	-disable:grants	spurious role variant
+762622	-reactions	spurious reactions
+762622	+assists_support	pack tactics missed
+762441	-concentration	pack tactics tagged concentration
+762441	-damage_reduction	spurious damage_reduction
+762441	-disable	incapacitated end clause tagged disable
+762441	-disable:grants	spurious role variant
+762441	-reactions	spurious reactions
+762441	+assists_support	pack tactics missed
+762453	-damage_over_time	poison damage tagged dot
+762453	-damage_reduction	spurious damage_reduction
+762453	-movement	shape-shift tagged movement
+762453	+on_damaged	damaged trigger missed
+762095	-cooldowns	once per turn tagged cooldown
+762095	-debuff:benefits	spurious role variant
+762095	-on_attack:benefits	spurious role variant
+762095	-permanent_growth	ASI tagged permanent_growth
+762095	-damage	damage mention tagged damage
+762095	+buff	ability score increase missed
+762095	+immobilize	grapple/restrain missed
+762625	-damage_over_time	poison damage tagged dot
+762625	-damage_reduction	spurious damage_reduction
+762625	-evasion	flying move tagged evasion
+762625	-on_attack	plain attack tagged on_attack
+762625	+damage	attack damage missed
+761237	-advantage:benefits	spurious role variant
+761237	-condition_count	level scaling tagged condition_count
+761237	-control:benefits	spurious role variant
+761237	-damage	damage mention tagged damage
+761237	+steal	possession/control missed
+762402	-advantage	spurious advantage
+762402	-damage_reduction	spurious damage_reduction
+762402	-on_attack	plain attack tagged on_attack
+762402	+damage	attack damage missed
+762118	-random_effect	rarity tagged random
+762118	+attack_mod	attack bonus missed
+762174	-random_effect	damage bonus tagged random
+762174	+lone_unit	lone weapon condition missed
+762174	+buff	damage bonus missed
+815626	+debuff	slow spell missed
+761533	-evasion	wall tagged evasion
+761533	+area_templates	area shape missed
+761994	-evasion	flying tagged evasion
+761994	-spell_speed	bonus action tagged spell_speed
+761994	+activated	activated ability missed
+762542	-condition_life	0 HP tagged condition_life
+762542	-movement	shape-shift tagged movement
+762542	-debuff	spurious debuff
+762025	-spell_speed	bonus action tagged spell_speed
+762025	+block_armor	temporary hit points missed
+762025	+movement	dash missed
+761347	-items_consumables	cursed item mention tagged item
+761347	+rewind	restore missed
+762267	-on_spell	spell modifier tagged on_spell
+762267	+cost_type	alternate resource cost missed
+815624	-free_play	at-will cast tagged free_play
+762460	-saving_throws	save DC mention tagged save
+762460	+counter_spell	counterspell missed
+761394	-movement	move ban tagged movement
+761394	-on_attack	spurious on_attack
+761394	+immunity	condition immunity missed
+762485	-concentration	spurious concentration
+762485	-disable	incapacitated end clause tagged disable
+762485	-disable:grants	spurious role variant
+762485	-heal	revive tagged heal
+762485	-reactions	spurious reactions
+762485	-immunity	save-success immunity tagged immunity
+762485	+revive	revive missed
+762485	+aoe_damage	area damage missed
+762009	-concentration	spurious concentration
+762009	-reactions	spurious reactions
+762009	+temporary_effect	this-turn effect missed
+762421	-advantage	spurious advantage
+762421	-on_attack	plain attack tagged on_attack
+762421	-passive	spurious passive
+762421	+reactions	reaction missed
+762421	+damage_reduction	AC bonus missed
+761227	-cooldowns	once per turn tagged cooldown
+761227	+area_templates	area shape missed
+761227	+aoe_damage	area damage missed
+762380	-disable:grants	spurious role variant
+761257	-condition_count	level scaling tagged condition_count
+761257	-summon	conjure flavour tagged summon
+761257	+damage_types	typed damage missed
+761817	-spell_speed	bonus action tagged spell_speed
+761817	+buff	ally roll bonus missed
+762678	-concentration	spurious concentration
+762678	-reactions	spurious reactions
+762678	-saving_throws	escape DC tagged save
+762678	+immobilize	grapple/restrain missed
+762678	+damage_over_time	repeating damage missed
+762678	+damage_reduction	half damage missed
+762633	-on_attack	plain attack tagged on_attack
+762633	+damage	attack damage missed
+762603	-random_effect	spurious random
+762603	+reactions	reaction missed
+762603	+damage	attack damage missed
+762096	-random_effect	attack bonus tagged random
+762096	+attack_mod	attack bonus missed
+761526	-cooldowns	once per turn tagged cooldown
+761526	-counterattack	spurious counterattack
+761526	+area_templates	area shape missed
+761526	+aoe_damage	area damage missed
+761526	+damage_types	typed damage missed
+761523	-shield	spurious shield
+762447	-condition_life	wound tagged condition_life
+762447	+heal:counters	healing ends wound missed
+761643	-disable:grants	spurious role variant
+761643	-passive	spurious passive
+761643	+attack_mod	attack bonus missed
+761643	+cooldowns	recharge limit missed
+761188	-cooldowns	once per turn tagged cooldown
+761587	-damage_over_time	poison condition tagged dot
+761587	-debuff:grants	spurious role variant
+761587	-spell_speed	bonus action tagged spell_speed
+761587	+attack_mod	attack bonus missed
+761587	+cooldowns	recharge limit missed
+761587	+damage	attack damage missed
+761587	+damage_types	typed damage missed
+762524	-advantage:benefits	spurious role variant
+762524	-concentration	lose concentration tagged concentration
+762524	-debuff:benefits	spurious role variant
+762524	-debuff:counters	spurious role variant
+762524	-graveyard	corpse tagged graveyard
+762524	-immobilize:counters	grapple tagged wrong role
+762524	-on_attack	plain attack tagged on_attack
+762524	-on_attack:benefits	spurious role variant
+762524	-on_attack:counters	spurious role variant
+762524	-ranged	ranged mention tagged ranged
+762524	-terrain	spurious terrain
+762524	-movement	own move tagged movement
+762524	+immobilize	grapple/restrain missed
+762524	+aoe_damage	area damage missed
+762524	+damage_over_time	repeating damage missed
+762524	+counter_spell	reflect spell missed
+762541	-condition_life	0 HP tagged condition_life
+762541	-movement	shape-shift tagged movement
+762541	-debuff	spurious debuff
+761654	-condition_life	0 HP tagged condition_life
+761654	-damage_over_time	spurious damage_over_time
+761654	-damage_types	object resistances tagged damage_types
+761654	+banish	trap away missed
+762119	-advantage:cost	spurious role variant
+762119	-control:cost	spurious role variant
+762119	-passive	spurious passive
+762119	+activated	activated ability missed
+762119	+drawback	drawback missed
+762471	-disable	grapple tagged disable
+762471	-movement	shape-shift tagged movement
+762471	-passive	spurious passive
+762471	-saving_throws	escape DC tagged save
+762471	+immobilize	grapple/restrain missed
+761926	-debuff:benefits	spurious role variant
+761926	-debuff:grants	spurious role variant
+762602	-random_effect	attack roll tagged random
+762602	+damage	attack damage missed
+761954	-cooldowns	once per turn tagged cooldown
+761954	-multi_attack	extra attack on another target tagged multi_attack
+761954	+modal_choice	choose-one missed
+761954	+condition_life	damaged target condition missed
+761954	+multi_target_attack	second target attack missed
+762359	-condition_life	wound tagged condition_life
+762359	-damage_reduction	spurious damage_reduction
+762359	-delayed	duration read as delayed
+762359	-heal	no-heal tagged heal
+762359	-passive	spurious passive
+762359	+heal:counters	healing ends wound missed
+761730	-damage_reduction	spurious damage_reduction
+761730	-debuff	disadvantage tagged debuff
+815605	-block_armor	AC bonus tagged block_armor
+815605	+damage_reduction	AC bonus missed
+815605	+on_damaged	damaged trigger missed
+815605	+temporary_effect	this-turn effect missed
+762666	-concentration:counters	pack tactics tagged concentration
+762666	-debuff	disadvantage tagged debuff
+762666	-disable:counters	incapacitated end clause tagged disable
+762666	-on_attack	plain attack tagged on_attack
+762666	-passive	spurious passive
+762666	-reactions:counters	spurious reactions
+762666	+assists_support	pack tactics missed
+761174	-on_attack	spurious on_attack
+762046	-damage_over_time	spurious damage_over_time
+762046	-debuff:grants	spurious role variant
+762046	-delayed	duration read as delayed
+762046	-random_effect	dice tagged random
+762046	-selection	spurious selection
+762046	+damage	attack damage missed
+762046	+debuff	speed reduction missed
+762046	+damage_reduction	damage reduction missed
+762046	+counterattack	retaliation missed
+762046	+cooldowns	recharge limit missed
+762468	-advantage	disadvantage tagged advantage
+762468	-damage_reduction	spurious damage_reduction
+762468	-delayed	duration read as delayed
+762468	+advantage	disadvantage missed
+762468	+temporary_effect	this-turn effect missed
+761438	-debuff:grants	spurious role variant
+761438	-high_cost:benefits	spurious role variant
+761438	-movement	spurious movement
+761438	-on_spell	spell mention tagged on_spell
+761438	-transform	petrified tagged transform
+761438	+area_templates	area shape missed
+761438	+immobilize	grapple/restrain missed
+762481	-cooldowns	spurious cooldowns
+762481	-damage_over_time:benefits	spurious role variant
+762481	-damage_reduction	spurious damage_reduction
+762481	-debuff:benefits	spurious role variant
+762481	-debuff:counters	spurious role variant
+762481	-delayed	duration read as delayed
+762481	-on_attack	plain attack tagged on_attack
+762481	-on_attack:benefits	spurious role variant
+762481	-on_attack:counters	spurious role variant
+762481	+damage	attack damage missed
+762481	+immobilize	grapple/restrain missed
+762568	-passive	spurious passive
+762568	-on_attack	plain attack tagged on_attack
+762568	+movement	charge condition missed
+761599	-concentration	spurious concentration
+761599	-information	identify mention tagged information
+761599	-reactions	spurious reactions
+761599	-scope_global	area tagged scope_global
+761599	-once_per_game	one-use tagged once_per_game
+761599	+area_templates	area shape missed
+761599	+friendly_fire	hits self missed
+761599	+self_destruct	single-use item missed
+762209	-condition_count	slot scaling tagged condition_count
+762209	+cost_type	alternate resource cost missed
+762209	+damage_types	typed damage missed
+762209	+tribal	creature type bonus missed
+761284	-condition_count	level scaling tagged condition_count
+761284	-condition_life	0 HP tagged condition_life
+761284	-terrain	spurious terrain
+761284	+banish	no-revive kill missed
+762404	-damage_over_time	poison damage tagged dot
+762404	-saving_throws	save DC mention tagged save
+762404	+damage	attack damage missed
+762404	+damage_types	typed damage missed
+761983	-spell_speed	bonus action tagged spell_speed
+761983	-transform	resource conversion tagged transform
+761983	+resource_conversion	resource conversion missed
+761983	+multiple_resources	several resources missed
+762586	-random_effect	attack roll tagged random
+762554	-concentration	pack tactics tagged concentration
+762554	-condition_life	0 HP tagged condition_life
+762554	-disable	incapacitated end clause tagged disable
+762554	-disable:grants	spurious role variant
+762554	-reactions	spurious reactions
+762554	-movement	shape-shift tagged movement
+762554	-debuff	spurious debuff
+762554	+assists_support	pack tactics missed
+761588	-passive	spurious passive
+761588	-random_effect	attack roll tagged random
+761588	-spell_speed	bonus action tagged spell_speed
+761588	+activated	activated ability missed
+761588	+damage	attack damage missed
+762452	-advantage	spurious advantage
+762452	-on_attack	plain attack tagged on_attack
+762452	+immobilize	grapple/restrain missed
+762452	+damage_over_time	repeating damage missed
+762172	-random_effect	attack bonus tagged random
+762172	+attack_mod	attack bonus missed
+762412	-death_count	spurious death_count
+762412	-damage_reduction	spurious damage_reduction
+762412	-delayed	duration read as delayed
+762412	+on_damaged	damaged trigger missed
+762412	+random_effect	die roll effect missed
+762412	+autonomous_units	berserk autonomy missed
+762412	+temporary_effect	this-turn effect missed
+761966	-debuff:benefits	spurious role variant
+761966	-debuff:grants	spurious role variant
+761966	-on_attack:benefits	spurious role variant
+761966	-advantage	spurious advantage
+761966	-reactions	opportunity attack tagged reactions
+761966	+modal_choice	choose-one missed
+761966	+movement	own move missed
+761932	-area_templates	light radius tagged area_templates
+761932	-once_per_game	channel use tagged once_per_game
+761932	-random_effect	spurious random
+761932	+attack_mod	attack bonus missed
+761932	+damage_types	typed damage missed
+761166	-cooldowns	rest mention tagged cooldown
+762521	-movement	spurious movement
+762521	-spell_speed	bonus action tagged spell_speed
+762521	+debuff	slow spell missed
+762525	-concentration	pack tactics tagged concentration
+762525	-disable	incapacitated end clause tagged disable
+762525	-disable:grants	spurious role variant
+762525	-reactions	spurious reactions
+762525	+assists_support	pack tactics missed
+762696	-multi_attack	spurious multi_attack
+762696	-selection	spurious selection
+762696	-symmetric_effect	spurious symmetric_effect
+762696	-turn_end	rules text tagged turn timing
+762696	-turn_start	rules text tagged turn timing
+762696	+reveal_order	initiative order missed
+762696	+turn_structure	round structure missed
+762673	-saving_throws	escape DC tagged save
+762673	-spell_speed	bonus action tagged spell_speed
+762673	-debuff	spurious debuff
+762673	-disable	grapple tagged disable
+762673	+immobilize	grapple/restrain missed
+762673	+movement	dash missed
+761890	-damage	damage mention tagged damage
+761890	-spell_speed	bonus action tagged spell_speed
+761890	-zone_of_control	disengage tagged zone_of_control
+761890	+multi_attack	extra strikes missed
+761890	+movement	dash missed
+762357	-debuff	spurious debuff
+762357	-disable	grapple tagged disable
+762357	-saving_throws	escape DC tagged save
+762357	+immobilize	grapple/restrain missed
+762357	+revive	revive missed
+762357	+ping	repeating small damage missed
+762647	-on_attack	plain attack tagged on_attack
+761224	-high_cost:benefits	spurious role variant
+761224	-turn_end	30-day save tagged turn_end
+761224	+silence	can't cast missed
+761649	-activated	study time tagged activated
+761649	+buff	ability score increase missed
+762726	-damage_over_time	spurious damage_over_time
+762726	-damage_reduction	spurious damage_reduction
+762726	-forced_movement	rules text tagged forced_movement
+762726	-multi_target_attack	spurious multi_target_attack
+762726	-passive	spurious passive
+762726	-activated	activated word tagged activated
+762546	-movement	shape-shift tagged movement
+762546	-random_effect	attack roll tagged random
+762546	+transform	shape-shift missed
+762615	-heal	no-heal tagged heal
+762615	-random_effect	attack roll tagged random
+762615	+heal:counters	no-heal missed
+761549	-passive	spurious passive
+761549	-random_effect	attack roll tagged random
+761549	+bodyguard	redirect attack to self missed
+761357	-condition_count	level scaling tagged condition_count
+761357	-damage_over_time	poisoned condition tagged dot
+761357	+heal	healing missed
+762547	-condition_life	0 HP tagged condition_life
+762547	-movement	shape-shift tagged movement
+762547	-debuff	spurious debuff
+761233	-condition_count	level scaling tagged condition_count
+761233	-damage_over_time	burning tagged dot
+761233	-ranged	area tagged ranged
+761314	-damage	damage mention tagged damage
+761314	-terrain	spurious terrain
