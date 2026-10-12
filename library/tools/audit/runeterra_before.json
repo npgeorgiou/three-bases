@@ -1,0 +1,292 @@
+{
+"751154": [
+"destroy",
+"on_play",
+"summon"
+],
+"751826": [
+"activated",
+"cost_condition",
+"cost_reduction",
+"merge_attach",
+"on_play",
+"permanent_growth"
+],
+"751598": [
+"draw",
+"on_kill",
+"spell_speed",
+"summon",
+"turn_start"
+],
+"750666": [
+"on_kill",
+"resource_banking",
+"spell_speed"
+],
+"751078": [
+"cost_increase",
+"symmetric_effect"
+],
+"751046": [
+"cost_condition",
+"damage",
+"on_ally_play",
+"on_kill",
+"passive",
+"random_effect",
+"spell_speed",
+"summon"
+],
+"796793": [
+"direct_damage",
+"spell_speed"
+],
+"751081": [
+"damage",
+"heal",
+"spell_speed"
+],
+"751521": [
+"debuff",
+"destroy",
+"high_cost:benefits",
+"on_kill",
+"spell_speed"
+],
+"751615": [
+"heal"
+],
+"796479": [
+"draw",
+"first_strike",
+"generate_cards",
+"passive",
+"turn_start",
+"upgrade"
+],
+"751734": [
+"copy",
+"transform"
+],
+"796661": [
+"direct_damage",
+"spell_speed"
+],
+"796559": [
+"first_strike",
+"passive"
+],
+"750855": [
+"cost_reduction",
+"draw",
+"in_hand_buff",
+"spell_speed"
+],
+"750468": [
+"attack_token"
+],
+"751687": [
+"condition_count",
+"first_strike",
+"on_attack",
+"on_play",
+"passive",
+"stat_condition",
+"turn_start",
+"upgrade"
+],
+"752006": [
+"high_cost:benefits",
+"on_spell",
+"spell_speed",
+"summon"
+],
+"751822": [
+"activated",
+"items_consumables",
+"merge_attach"
+],
+"752154": [
+"first_strike",
+"on_attack",
+"passive"
+],
+"751168": [
+"buff",
+"cant_attack",
+"count_payoff",
+"delayed",
+"stat_condition",
+"summon",
+"terrain",
+"turn_start"
+],
+"751461": [
+"buff",
+"cant_attack",
+"delayed",
+"on_play",
+"stat_condition",
+"terrain",
+"turn_start"
+],
+"750833": [
+"debuff",
+"drawback:grants",
+"on_play",
+"stat_condition",
+"target_choice:counters"
+],
+"751441": [
+"excess_damage",
+"life_payment",
+"on_play",
+"symmetric_effect"
+],
+"796719": [
+"disable",
+"on_kill",
+"spell_speed"
+],
+"751255": [
+"generate_cards",
+"on_play"
+],
+"797146": [
+"in_hand_buff",
+"on_play",
+"shield"
+],
+"752202": [
+"target_choice"
+],
+"750457": [
+"on_attack"
+],
+"751324": [
+"buff",
+"condition_count",
+"on_play"
+],
+"750443": [
+"mill"
+],
+"752052": [
+"cost_condition",
+"discard",
+"hand_disruption",
+"on_kill",
+"spell_speed"
+],
+"750990": [
+"buff",
+"immunity:grants",
+"shield",
+"shield:grants",
+"spell_speed"
+],
+"750520": [
+"buff",
+"condition",
+"economy",
+"lifesteal"
+],
+"751049": [
+"blocking",
+"blocking:counters",
+"combo_sequence",
+"copy",
+"evasion",
+"generate_cards",
+"self_destruct",
+"stat_condition",
+"turn_end"
+],
+"752270": [
+"items_consumables",
+"random_effect",
+"stat_condition"
+],
+"796702": [
+"draw",
+"spell_speed"
+],
+"752177": [
+"buff"
+],
+"796869": [
+"cant_attack",
+"delayed",
+"resource_gain",
+"temporary_effect",
+"terrain",
+"turn_start"
+],
+"751303": [
+"combo_sequence",
+"generate_cards",
+"on_kill",
+"random_effect",
+"spell_speed"
+],
+"796747": [
+"disable",
+"spell_speed",
+"stat_condition"
+],
+"752295": [
+"generate_cards",
+"on_play",
+"resource_gain"
+],
+"751314": [
+"damage_reduction",
+"high_cost:benefits",
+"multi_attack:grants",
+"on_play",
+"target_choice:grants"
+],
+"796778": [
+"damage",
+"deck_position",
+"random_effect",
+"spell_speed"
+],
+"752041": [
+"buff",
+"damage",
+"spell_speed"
+],
+"797013": [
+"excess_damage",
+"on_kill",
+"shield",
+"spell_speed"
+],
+"751731": [
+"activated",
+"condition_count",
+"items_consumables",
+"merge_attach"
+],
+"752176": [
+"copy",
+"generate_cards",
+"on_play",
+"self_destruct",
+"turn_end"
+],
+"750619": [
+"damage",
+"spell_speed"
+],
+"751632": [
+"attack_token",
+"count_payoff",
+"generate_cards",
+"on_play",
+"turn_start",
+"upgrade"
+]
+}

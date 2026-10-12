@@ -1,0 +1,318 @@
+750941	-drawback:grants	vulnerable tagged as drawback
+750941	-target_choice:counters	vulnerable tagged as targeting counter
+750941	-debuff	vulnerable tagged as debuff
+750941	-spell_speed	spell speed tagged without speed keyword
+750941	+mark_target	vulnerable missed as mark_target
+796982	-high_cost:benefits	spurious high_cost payoff
+796982	-in_hand_buff	spell damage boost tagged in_hand_buff
+796982	-permanent_growth	spell damage boost tagged growth
+796982	-spell_speed	spell speed tagged without speed keyword
+796982	+buff	anthem buff missed
+750638	-turn_end	fleeting/ephemeral reminder tagged turn_end
+750638	-stat_condition	count threshold tagged stat_condition
+750638	+tribal	tribe synergy missed
+751447	-drawback:grants	vulnerable tagged as drawback
+751447	-target_choice:counters	vulnerable tagged as targeting counter
+751447	-debuff	vulnerable tagged as debuff
+751447	-on_kill	on_kill tagged without kill trigger
+751447	-spell_speed	spell speed tagged without speed keyword
+751447	+mark_target	vulnerable missed as mark_target
+751447	+temporary_effect	this-round effect missed
+750870	-spell_speed	spell speed tagged without speed keyword
+750870	+deck_position	top of deck missed
+796657	-on_kill	on_kill tagged without kill trigger
+796657	-damage	aoe tagged as plain damage
+796657	+aoe_damage	aoe missed
+796657	+friendly_fire	hits all units missed
+796553	-high_cost:benefits	spurious high_cost payoff
+796553	-turn_end	fleeting/ephemeral reminder tagged turn_end
+796553	+attack_token	rally missed
+751976	+permanent_growth	growth per trigger missed
+751258	-high_cost:benefits	spurious high_cost payoff
+750770	-destroy	sacrifice tagged as destroy
+752020	-drawback:grants	vulnerable tagged as drawback
+752020	-target_choice:counters	vulnerable tagged as targeting counter
+752020	-debuff	vulnerable tagged as debuff
+752020	-activated	daybreak tagged activated
+752020	+mark_target	vulnerable missed as mark_target
+752020	+on_play	play trigger missed
+797155	-on_kill	on_kill tagged without kill trigger
+750376	+return_to_hand	recall missed
+752269	-turn_end	fleeting/ephemeral reminder tagged turn_end
+752269	+drawback	built-in downside missed
+751494	-turn_end	fleeting/ephemeral reminder tagged turn_end
+751494	+selection	pick from top N missed
+751494	+deck_position	top of deck missed
+751338	-immunity:grants	spellshield tagged immunity
+751338	-shield	granted shield tagged as does
+751338	-spell_speed	spell speed tagged without speed keyword
+751338	+temporary_effect	this-round effect missed
+751338	+modal_choice	or-choice missed
+751715	-buff	keyword bonus tagged buff
+751715	-turn_end	fleeting/ephemeral reminder tagged turn_end
+750501	-on_attack:grants	quick attack tagged on_attack
+750501	-spell_speed	spell speed tagged without speed keyword
+750501	-buff	this-round buff tagged as plain buff
+750501	+temporary_buff	this-round buff missed
+750463	+self_destruct	fleeting missed
+750479	-spell_speed	spell speed tagged without speed keyword
+750479	-buff	this-round buff tagged as plain buff
+750479	+temporary_buff	this-round buff missed
+750479	+modal_choice	or-choice missed
+751983	-high_cost:benefits	spurious high_cost payoff
+751983	-spell_speed	spell speed tagged without speed keyword
+751983	+direct_damage	nexus damage missed
+751983	+condition_count	N+ threshold missed
+750493	-debuff	ephemeral transfer tagged debuff
+750493	-spell_speed	spell speed tagged without speed keyword
+750493	-turn_end	fleeting/ephemeral reminder tagged turn_end
+750493	+removal	removal missed
+751308	-attack_token	free attack tagged attack_token
+751308	-on_kill	on_kill tagged without kill trigger
+751308	-spell_speed	spell speed tagged without speed keyword
+751308	+attack_now	free attack missed
+752230	-cost_increase	own cost increase tagged as tax
+752230	+drawback	built-in downside missed
+796658	-on_kill	on_kill tagged without kill trigger
+796905	-destroy	sacrifice tagged as destroy
+796905	-on_kill	on_kill tagged without kill trigger
+796905	-turn_end	fleeting/ephemeral reminder tagged turn_end
+796905	+sacrifice	sacrifice cost missed
+751355	-damage	aoe tagged as plain damage
+751355	-high_cost:benefits	spurious high_cost payoff
+751355	-on_kill	on_kill tagged without kill trigger
+751355	-spell_speed	spell speed tagged without speed keyword
+751355	+aoe_damage	aoe missed
+751355	+repeat_trigger	do it again missed
+751831	-on_kill	on_kill tagged without kill trigger
+751831	-spell_speed	spell speed tagged without speed keyword
+751831	+modal_choice	or-choice missed
+751346	-junk_cards	puffcaps tagged junk
+751346	-spell_speed	spell speed tagged without speed keyword
+751346	+selection	pick 1 of 3 missed
+796500	-multi_attack	summon on attack tagged multi_attack
+796500	+summon	summon missed
+751595	+buff	buff missed
+751595	+on_attack	attack trigger missed
+796926	-on_kill	on_kill tagged without kill trigger
+750796	-spell_speed	spell speed tagged without speed keyword
+750796	-buff	this-round buff tagged as plain buff
+750796	-turn_end	fleeting/ephemeral reminder tagged turn_end
+750796	+temporary_buff	this-round buff missed
+751623	-stat_condition	spurious stat_condition
+751623	-summon	spawn tagged summon
+751623	-friendly_fire	self damage tagged friendly_fire
+751778	-spell_speed	spell speed tagged without speed keyword
+751778	+condition	if clause missed
+751778	+target_choice	targeted effect missed
+796680	-disable	stun condition tagged disable
+796680	+condition	if clause missed
+796680	+generate_cards	create in deck missed
+751175	-on_kill	on_kill tagged without kill trigger
+751175	-high_cost:benefits	spurious high_cost payoff
+751175	+condition_count	N+ threshold missed
+751175	+direct_damage	nexus damage missed
+751651	-on_kill	on_kill tagged without kill trigger
+751651	-spell_speed	spell speed tagged without speed keyword
+751651	+buff	buff missed
+751569	-cant_attack	landmark tagged cant_attack
+797066	-on_kill	on_kill tagged without kill trigger
+797066	+merge_attach	equip missed
+797066	+attack_now	free attack missed
+796673	+damage	damage missed
+752035	-activated	daybreak tagged activated
+752035	-excess_damage	granted keyword tagged as does
+752035	-shield	granted shield tagged as does
+752035	-immunity:grants	spellshield tagged immunity
+752035	-high_cost:benefits	spurious high_cost payoff
+752035	+repeat_trigger	activate other triggers missed
+796586	+repeat_trigger	gains it again missed
+751396	-resource_gain	attune reminder tagged resource_gain
+752080	-cant_attack	landmark tagged cant_attack
+752080	-cost_reduction	updraft tagged cost_reduction
+752080	+deck_position	bottom of deck missed
+752123	-banish	capture tagged banish
+752123	+removal	removal missed
+751101	-spell_speed	spell speed tagged without speed keyword
+751101	-regeneration	granted keyword tagged as does
+751101	+condition	if clause missed
+796887	-copy	plant on copies tagged copy
+796887	-junk_cards	puffcaps tagged junk
+796887	+selection	pick 1 of 3 missed
+751956	-trap_secret	chimes tagged trap
+751956	-death_count	death trigger tagged death_count
+751956	+generate_cards	create in deck missed
+750740	-death_count	death trigger tagged death_count
+752236	+temporary_effect	this-round effect missed
+796711	-buff	in-hand buff tagged buff
+796711	-cost_reduction	in-hand discount tagged cost_reduction
+796711	+in_hand_buff	in-hand buff missed
+796711	+tutor	draw specific card missed
+750830	-damage	spell damage boost tagged damage
+750830	-high_cost:benefits	spurious high_cost payoff
+750830	-multi_attack	scout tagged multi_attack
+750830	-spell_speed	spell speed tagged without speed keyword
+750830	+tutor	draw specific card missed
+751063	-adjacency	support tagged adjacency
+751063	-on_attack	support trigger tagged on_attack
+751063	-buff	this-round buff tagged as plain buff
+751063	+assists_support	support missed
+751063	+temporary_buff	this-round buff missed
+796765	-on_kill	on_kill tagged without kill trigger
+796765	-spell_speed	spell speed tagged without speed keyword
+796765	+attack_token	rally missed
+752034	-debuff	curse tagged debuff
+752034	-debuff:grants	curse tagged debuff
+752034	-shield	granted shield tagged as does
+752034	-spell_speed	spell speed tagged without speed keyword
+752034	+shield:grants	shield grant missed
+752034	+temporary_effect	this-round effect missed
+751939	-copy:benefits	spurious payoff role
+751939	-death_trigger:benefits	spurious payoff role
+751939	-stat_multiply:benefits	doubling tagged as payoff
+751939	+stat_multiply	doubling missed
+751939	+generate_cards	create in deck missed
+796629	-on_kill	on_kill tagged without kill trigger
+750497	+modal_choice	or-choice missed
+796541	-immunity	spellshield tagged immunity
+796541	-shield	granted shield tagged as does
+796541	-passive	spurious passive
+796541	+shield:grants	shield grant missed
+796541	+buff	buff missed
+750554	-high_cost:benefits	spurious high_cost payoff
+751673	-activated	spurious activated
+751673	-items_consumables	equipment tagged items
+751673	+transform	play as another card missed
+797200	-on_kill	on_kill tagged without kill trigger
+797200	-spell_speed	spell speed tagged without speed keyword
+797200	-buff	this-round buff tagged as plain buff
+797200	+temporary_buff	this-round buff missed
+797090	-on_kill	on_kill tagged without kill trigger
+797090	-spell_speed	spell speed tagged without speed keyword
+797024	-activated	spurious activated
+797024	-items_consumables	equipment tagged items
+752036	-high_cost:benefits	spurious high_cost payoff
+752036	-on_kill	on_kill tagged without kill trigger
+752036	-spell_speed	spell speed tagged without speed keyword
+751083	-high_cost:benefits	spurious high_cost payoff
+751083	+attack_token	rally missed
+796686	-buff	this-round buff tagged as plain buff
+796686	-turn_end	fleeting/ephemeral reminder tagged turn_end
+796686	+temporary_buff	this-round buff missed
+751330	-damage	spurious damage
+751330	-passive	spurious passive
+751330	+direct_damage	nexus condition missed
+796845	-destroy	sacrifice tagged as destroy
+796845	+temporary_effect	this-round effect missed
+751351	-generate_cards	manifest+summon tagged generate
+751351	+summon	summon missed
+752081	-cost_reduction	updraft tagged cost_reduction
+752081	-stat_condition	cost tagged stat_condition
+752081	+cost_condition	cost condition missed
+752081	+deck_position	bottom of deck missed
+796735	-high_cost:benefits	spurious high_cost payoff
+751824	-multi_attack:grants	scout tagged multi_attack
+751863	-spell_speed	spell speed tagged without speed keyword
+796498	-high_cost:benefits	spurious high_cost payoff
+796498	+mark_target	vulnerable missed as mark_target
+796498	+temporary_effect	this-round effect missed
+751506	-spell_speed	spell speed tagged without speed keyword
+797165	+generate_cards	create in deck missed
+751993	-on_attack	quick attack tagged on_attack
+751993	-passive	keyword tagged passive
+751993	+delayed	next round effect missed
+751993	+condition_count	N+ threshold missed
+796730	-on_kill	on_kill tagged without kill trigger
+796730	+condition	if clause missed
+750918	-high_cost:benefits	spurious high_cost payoff
+750918	+on_spell	spell trigger missed
+750918	+condition	if clause missed
+796756	-on_kill	on_kill tagged without kill trigger
+796756	-damage	aoe tagged as plain damage
+796756	+aoe_damage	aoe missed
+796756	+direct_damage	nexus damage missed
+796946	-stat_condition	spurious stat_condition
+751240	-spell_speed	spell speed tagged without speed keyword
+796590	+condition	if clause missed
+751915	-high_cost:benefits	spurious high_cost payoff
+751915	-on_kill	on_kill tagged without kill trigger
+751915	-spell_speed	spell speed tagged without speed keyword
+796985	+condition	if clause missed
+751216	-activated	spurious activated
+751216	-on_kill	on_kill tagged without kill trigger
+751216	-high_cost:benefits	spurious high_cost payoff
+751216	-spell_speed	spell speed tagged without speed keyword
+751216	+repeat_trigger:grants	activates twice missed
+796696	-on_kill	on_kill tagged without kill trigger
+796696	-first_strike	granted keyword tagged as does
+796696	+first_strike:grants	keyword grant missed
+796696	+temporary_effect	this-round effect missed
+796607	-high_cost:benefits	spurious high_cost payoff
+796607	-damage	aoe tagged as plain damage
+796607	+aoe_damage	aoe missed
+751877	-spell_speed	spell speed tagged without speed keyword
+751833	-cant_attack	landmark tagged cant_attack
+796847	-on_kill	on_kill tagged without kill trigger
+796847	-draw	specific draw tagged draw
+796847	+tutor	draw specific card missed
+751772	-high_cost:benefits	spurious high_cost payoff
+751772	-damage	aoe tagged as plain damage
+751772	+aoe_damage	aoe missed
+796494	+on_attack	attack trigger missed
+796494	+aoe_damage	aoe missed
+796494	+direct_damage	nexus damage missed
+797121	-high_cost:benefits	spurious high_cost payoff
+797121	+tribal	tribe synergy missed
+750489	-on_attack	quick attack tagged on_attack
+750489	-passive	keyword tagged passive
+751341	-damage	spurious damage
+751341	-direct_damage:grants	impact tagged direct_damage
+751341	-immunity	spellshield tagged immunity
+751341	-shield	granted shield tagged as does
+751341	-on_attack	quick attack tagged on_attack
+751341	-passive	keyword tagged passive
+751341	-stacking_keyword:grants	spurious stacking
+751341	-in_hand_buff	spurious in_hand_buff
+751341	-first_strike	granted keyword tagged as does
+751341	+first_strike:grants	keyword grant missed
+751341	+shield:grants	shield grant missed
+751341	+tribal	tribe synergy missed
+751121	-activated	spurious activated
+751121	-aura	spurious aura
+751121	-in_hand_buff	spurious in_hand_buff
+751121	+tribal	tribe synergy missed
+796895	-spell_speed	spell speed tagged without speed keyword
+796895	+direct_damage	nexus damage missed
+797050	-buff	this-round buff tagged as plain buff
+797050	+temporary_buff	this-round buff missed
+751136	-on_attack	blade dance tagged on_attack
+750761	-cost_reduction	in-hand discount tagged cost_reduction
+750761	-self_destruct	granted keyword tagged as does
+796897	-on_kill	on_kill tagged without kill trigger
+751448	-high_cost:benefits	spurious high_cost payoff
+750508	-spell_speed	spell speed tagged without speed keyword
+750508	+temporary_effect	this-round effect missed
+750670	+permanent_growth	growth per trigger missed
+750724	-high_cost:benefits	spurious high_cost payoff
+750724	-on_kill	on_kill tagged without kill trigger
+750724	-spell_speed	spell speed tagged without speed keyword
+750724	-buff	this-round buff tagged as plain buff
+750724	+temporary_buff	this-round buff missed
+796472	-stat_condition	spurious stat_condition
+796472	-turn_end	regeneration reminder tagged turn_end
+796472	+friendly_fire	damage to own allies missed
+796472	+adjacency	position to the right missed
+796472	+direct_damage	nexus damage missed
+750427	-activated	spurious activated
+750427	-aura	spurious aura
+750427	+buff	buff missed
+750427	+tribal	tribe synergy missed
+751557	-stat_condition	spurious stat_condition
+751425	-generate_cards:benefits	spurious payoff role
+751425	-on_ally_play	spurious on_ally_play
+751425	-permanent_growth	spurious growth
+751425	+in_hand_buff	in-hand discount missed
+751504	-spell_speed	spell speed tagged without speed keyword
+751504	+deck_position	top of deck missed
+750836	-debuff	vulnerable tagged as debuff
+750836	-target_choice:counters	vulnerable tagged as targeting counter

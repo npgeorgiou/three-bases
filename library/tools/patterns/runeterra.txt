@@ -41,3 +41,6 @@ stat_condition|does|\bempowered \d
 !activated|\bactivated
 !cost_condition|\b\d+[- ]cost\b
 !stat_multiply|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)
+temporary_buff|does|\+\d+\|\+\d+[^.]*this round
+aoe_damage|does|deal \d+ to all (enemies|units|enemy units)|strikes? all battling enemies|to all battling enemies
+direct_damage|does|(deal|drain) \d+ (three times )?(to|from) (all enemies and )?the enemy nexus|and the enemy nexus
