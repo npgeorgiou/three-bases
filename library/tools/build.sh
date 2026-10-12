@@ -1,37 +1,58 @@
 #!/bin/sh
-# Rebuild the library from the raw corpus (repo/Library.sqlite, src/): concepts, patterns, Marvel Snap, hand reviews, keyword sync;
-# then later loads (Underworlds warscrolls, Runeterra, Hearthstone, Battlegrounds), the outcome concept tree and its keyword review, link rules, trigger table, duplicate merging, frequency, signatures, precision, clean-up, and the checks (any failed check stops the build).
+# Incremental build. The raw corpus of the first build is gone and not needed: three-bases-library.sqlite is the base for all work.
+# One-time loads (Marvel Snap, Underworlds warscrolls, Runeterra, Hearthstone and Battlegrounds created cards, the Oct 2026 loads)
+# are already in the database; their scripts stay in lib/ for reference. One-time fixes of 12 Oct 2026 are in lib/fixes/ (f01-f08);
+# the idempotent ones (f03, f05, f07) are also build steps.
+# Usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]
+#   Without loads: runs every step below on a copy of <in> (tags, links and pairs are re-derived for all entries).
+#   With loads: each JSON (made by a converter in convert/, format in load_cards.py) is loaded into the copy first. The steps also
+#   run on a second copy without the loads, and keep_old.py then keeps every older entry as it was in <in>, apart from what the
+#   loads change (merges, links to new cards). A pattern-file change reaches older entries only through a run without loads.
+#   Any failed check stops the build.
 set -e
+[ $# -ge 2 ] || { echo "usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]"; exit 2; }
+IN=$(readlink -f "$1"); OUT=$(readlink -f "$2"); shift 2
 cd "$(dirname "$0")"
-rm -f build.sqlite build.sqlite-journal build.sqlite-wal; cp repo/Library.sqlite build.sqlite
-python3 -I tools/new_concepts.py build.sqlite
-python3 -I tools/retag.py build.sqlite @tools/retag_concepts.txt
-python3 -I tools/game_patterns.py build.sqlite tools/patterns
-python3 -I tools/fix_grants.py build.sqlite
-python3 -I tools/load_snap.py build.sqlite src/sd/cards.json src/locations.json tools/snap_review.json
-for f in tools/reviews/*.json; do [ -e "$f" ] || continue; g=$(basename "$f" .json); python3 -I tools/apply_review.py build.sqlite "$g" "$f"; done
-python3 -I tools/kw_sync.py build.sqlite wh_bloodbowl3 wh_killteam wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:wh_underworlds h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th
-python3 -I tools/propagate.py build.sqlite
-python3 -I tools/load_underworlds_warscrolls.py build.sqlite
-python3 -I tools/runeterra_fixes.py build.sqlite
-python3 -I tools/load_extra.py build.sqlite hearthstone tools/hearthstone_extra.json
-python3 -I tools/load_extra.py build.sqlite hs_battlegrounds tools/hs_battlegrounds_extra.json
-python3 -I tools/keyword_defs.py build.sqlite
-python3 -I tools/outcome_tree.py build.sqlite
-for f in tools/reviews_outcome/*.json; do g=$(basename "$f" .json); python3 -I tools/apply_review.py build.sqlite "$g" "$f"; done
-python3 -I tools/condition_roles.py build.sqlite
-python3 -I tools/link_types.py build.sqlite
-python3 -I tools/engine_links.py build.sqlite
-python3 -I tools/design_problems.py build.sqlite
-python3 -I tools/trigger_pairs.py build.sqlite
-python3 -I tools/dedupe.py build.sqlite
-python3 -I tools/regression.py build.sqlite enforce
-python3 -I tools/frequency.py build.sqlite
-python3 -I tools/signature.py build.sqlite
-python3 -I tools/precision.py build.sqlite
-python3 -I tools/finalize.py build.sqlite
-python3 -I tools/regression.py build.sqlite check
-python3 -I tools/combo_check.py build.sqlite
-python3 -I tools/trigger_pairs.py build.sqlite check
-python3 -I -c "import sqlite3; c=sqlite3.connect('build.sqlite', isolation_level=None); c.execute(\"insert into entity_fts(entity_fts) values('integrity-check')\"); c.execute('vacuum'); print(c.execute('pragma integrity_check').fetchone())"
-python3 -I tools/test_query.py build.sqlite
+P="python3 -I"
+steps() {   # $1 = db
+  D="$1"
+  $P game_patterns.py "$D" patterns
+  $P drop_untagged.py "$D"
+  $P fix_grants.py "$D"
+  $P fixes/f03_grant_not_does.py "$D"
+  for f in reviews/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f"; done
+  $P kw_sync.py "$D" wh_bloodbowl3 wh_killteam wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:wh_underworlds h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th
+  $P propagate.py "$D"
+  $P keyword_defs.py "$D"
+  $P outcome_tree.py "$D"
+  for f in reviews_outcome/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f"; done
+  $P condition_roles.py "$D"
+  $P link_types.py "$D"
+  $P engine_links.py "$D"
+  $P design_problems.py "$D"
+  $P trigger_pairs.py "$D"
+  $P dedupe.py "$D"
+  $P regression.py "$D" enforce
+  $P frequency.py "$D"
+  $P fixes/f07_keywords_structure.py "$D"
+  $P fixes/f05_factions.py "$D"
+  $P distinct.py "$D"
+}
+rm -f "$OUT"; cp "$IN" "$OUT"
+if [ $# -gt 0 ]; then
+  BASE="$OUT.base"; rm -f "$BASE"; cp "$IN" "$BASE"
+  steps "$BASE"
+  for a in "$@"; do $P load_cards.py "$OUT" "${a%%=*}" "${a#*=}"; done
+  steps "$OUT"
+  $P keep_old.py "$OUT" "$IN" "$BASE"; rm -f "$BASE"
+else
+  steps "$OUT"
+fi
+$P signature.py "$OUT"
+$P precision.py "$OUT"
+$P finalize.py "$OUT"
+$P regression.py "$OUT" check
+$P combo_check.py "$OUT"
+$P trigger_pairs.py "$OUT" check
+python3 -I -c "import sqlite3,sys; c=sqlite3.connect(sys.argv[1], isolation_level=None); c.execute(\"insert into entity_fts(entity_fts) values('integrity-check')\"); c.execute('vacuum'); print(c.execute('pragma integrity_check').fetchone())" "$OUT"
+$P test_query.py "$OUT"

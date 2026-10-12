@@ -1,5 +1,5 @@
 """Game-specific wording: each tools/patterns/<game>.txt line 'concept|role|regex' is stored as a concept_patterns row for that game and
-applied to that game's entries (method text_pattern). A line '!concept|pattern' names a general pattern that misreads this game's wording:
+applied to that game's entries (method text_pattern; the text is read lower-cased, own name as 'name', Magic without reminder text). A line '!concept|pattern' names a general pattern that misreads this game's wording:
 the concept's automatic tag is removed from entries where no other pattern of the concept matches. File _all.txt applies to every game
 except Marvel Snap. Usage: game_patterns.py <db> <dir>"""
 import os, re, sqlite3, sys
@@ -33,8 +33,11 @@ for f in sorted(os.listdir(d)):
     for con, role, p in rows: c.execute("insert into concept_patterns values(?,?,?,?)", (con, role, p, g))
     n = 0
     comp = [(con, role, re.compile(p, re.I)) for con, role, p in rows]
-    for e, t in c.execute("select id,text from entities where game=? and text is not null", (g,)).fetchall():
+    for e, t, nm in c.execute("select id,text,name from entities where game=? and text is not null", (g,)).fetchall():
         low = t.lower()
+        if g == 'mtg': low = re.sub(r'\([^()]*\)', ' ', low)   # Magic is read without reminder text, as in the first build
+        for x in [nm] + nm.split(' // '):
+            if len(x) > 2: low = low.replace(x.lower(), 'name')   # the entry's own name, as in the first build
         for con, role, p in comp:
             m = p.search(low)
             if m:

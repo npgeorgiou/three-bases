@@ -43,3 +43,9 @@ drawback|does|\(stun\)|\(sleep\)|\bstunned \(stun
 !lifesteal|\bleech
 !swap|exchange
 !coin_economy|\btribute\b
+# added 12 Oct 2026 (wiki upgrades load)
+damage|does|\blose hp equal to\b
+aoe_damage|does|\ball enemies lose hp\b
+mark_target|does|\bapply \d+ mark\b
+!damage_over_time|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)
+!graveyard|discard pile

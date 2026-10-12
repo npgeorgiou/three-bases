@@ -65,3 +65,8 @@ permanent_growth|does|\bhit point maximum increases\b|\bincrease (one|an|two) ab
 !copy|\bmimic
 !copy|\bduplicate
 aoe_damage|does|\beach creature (in|within) (the|that|a|this) [^.]{0,40}\b(sphere|cube|cone|line|emanation|radius|cylinder|area)\b|\beach creature in (a|the) \d+-foot\b
+# added 12 Oct 2026 (SRD load)
+multi_attack|does|\battack (twice|three times|four times)(,)? instead of once\b|\bmake another attack\b
+block_armor|does|\+\d bonus to ac\b
+buff|does|\bscores? increases? by \d\b
+free_play|does|\bwithout expending a spell slot\b

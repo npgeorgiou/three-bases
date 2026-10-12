@@ -53,3 +53,6 @@ drawback|does|\bbattle damaged\b|\bsubtract \d from its power level\b
 !deathtouch|\bslay\b
 !scope_global|\bboth players
 !copy|\bduplicate
+!death_trigger|\bdeathrattle
+!shop_gold|\bgold\b(?! card)
+!shop_gold|\bteeth\b

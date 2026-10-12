@@ -58,3 +58,14 @@ extra_turn|does|\b(additional|extra) action(?! points?)\b(?! ?\(?ap)
 !territory_trigger|\binfiltrat
 !graveyard|\bbones?\b
 !quests|\bobjective\b
+# added 12 Oct 2026 (BSData load)
+cost_reduction|does|\bfor 0 ?cp\b|\bone less ap\b|\bwithout spending (any )?ap\b|\bfor (one|1) less ap\b
+buff|does|\badd (⬤|▲|■|⬛|⬟|\d"?) to (this|that|the|its|the selected|the operative's|this operative's|that operative's) [^.]{0,20}(movement|range|distance)\b|\badd (⬤|▲|■|⬛|⬟) to the (distance|range)\b
+attack_mod|does|\bgains? the (lethal|rending|balanced|ceaseless|relentless|piercing|severe|brutal|punishing|accurate|ap\d|devastating|saturate|shock|stun|seek)\b[^.]{0,15}\bspecial rule\b
+extra_turn|does|\bcan perform the [^.]{0,40}action twice\b
+resource_banking|does|\bgains? (\d|one|a|an) pain tokens?\b|\b(gain|would gain) a pain token\b
+type_grant|does|\b(gains?) the \w+( \w+)? keyword\b|\b(the bearer|this model|this unit|this operative|that operative|models in the bearer's unit)( now)? (has|have) the \w+( \w+)? keyword\b
+placement_rules|does|\bchange the set ?up of (one|up to \w+) of your operatives\b
+!debuff|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))
+!debuff|\bhalve
+!counter_spell|\bdeny\b

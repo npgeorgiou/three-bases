@@ -76,3 +76,11 @@ drawback|does|\bwhile this model has \d+-\d+ wounds remaining\b|\bsubtract \d fr
 !draw|\bdraw (a|an|one|two|three|x|\d+)
 draw|does|\bdraw(s|ing)? (\w+ )?(cards?|secondary mission)\b
 !quests|\bobjective\b
+# added 12 Oct 2026 (BSData load)
+attack_mod|does|\bunmodified (hit|wound) roll of \d\+ (scores|is) a critical (hit|wound)\b|\bcritical (hit|wound) is scored on an unmodified\b
+cost_reduction|does|\bfor 0 ?cp\b
+immunity|does|\bignore any or all modifiers\b
+type_grant|does|\b(gains?) the \w+( \w+)? keyword\b|\b(the bearer|this model|this unit|this operative|that operative|models in the bearer's unit)( now)? (has|have) the \w+( \w+)? keyword\b
+bodyguard|does|\bmust allocate it to this model\b
+!shop_gold|\bteeth\b
+!bodyguard|\bbodyguard

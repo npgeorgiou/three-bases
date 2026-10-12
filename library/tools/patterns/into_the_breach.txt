@@ -9,3 +9,10 @@
 !round_passing|\b(you|your opponent|a player|both players|each player|opponent|they) (has |have )?pass(ed|es)?\b(?! (the|a|test|across|over|through))
 area_templates|does|\bin a (line|row)\b|\bcross[- ]shape|\bcone\b|\b\dx\d\b|\bthree tiles\b|\b3 tiles\b|\b5 tiles\b
 exhaust|does|\bsingle-use\b
+!upgrade|\bupgrade
+!summon|\bspawn
+!passive|\bwhile\b
+!passive|\bpassive
+!zone_control|\bobjective markers?
+!zone_control|\bobjective
+!rows|\bfront\b

@@ -71,3 +71,4 @@ stat_multiply|does|\b(double|triple)d?\b[^.]{0,30}\b(damage|block|strength)\b|\b
 !stealth|\bhidden\b
 team_play|does|\b(another|other|each other) players?\b|\bteammates?\b
 buff|does|\bforge (\d+|x)\b|\bforges? an additional\b
+!damage_over_time|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)

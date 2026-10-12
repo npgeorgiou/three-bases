@@ -3,77 +3,88 @@
 ## What it is
 A SQLite database of game mechanics from 20 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
 
-It lives unzipped in **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite` at the root, `tools/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results). three-bases-library.zip holds the same files and is only a way to download them.
+It lives unzipped in **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite` at the root, `lib/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results). three-bases-library.zip holds the same files and is only a way to download them.
 
 ## Contents
-55,312 entries (cards, units, locations, abilities, items, rules), 1,187 keywords and 450 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
+57,495 entries (cards, units, locations, abilities, items, rules), 1,186 keywords and 450 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
 
 | Game | Entries |
 |---|---|
-| Magic: The Gathering | 17,813 |
-| Hearthstone | 8,389 |
-| Shadowverse | 3,799 |
-| Warhammer 40,000 (10th edition) | 3,761 |
-| Warhammer Age of Sigmar (4th edition) | 3,213 |
-| Warhammer Underworlds | 3,131 |
-| Legends of Runeterra | 2,438 |
-| Hearthstone Battlegrounds | 2,260 |
-| Warhammer 40,000: Kill Team | 1,977 |
-| Dungeons & Dragons 5e (SRD) | 1,279 |
+| Magic: The Gathering | 18,933 |
+| Hearthstone | 8,058 |
+| Shadowverse | 4,386 |
+| Warhammer 40,000 (10th edition) | 3,809 |
+| Warhammer Age of Sigmar (4th edition) | 3,508 |
+| Warhammer Underworlds | 3,217 |
+| Legends of Runeterra | 2,434 |
+| Hearthstone Battlegrounds | 2,239 |
+| Warhammer 40,000: Kill Team | 2,156 |
+| Gwent (standalone) | 1,357 |
+| Dungeons & Dragons 5e (SRD) | 1,344 |
 | Slay the Spire 2 (Early Access) | 1,271 |
-| Gwent (standalone) | 1,250 |
-| Darkest Dungeon | 950 |
+| Darkest Dungeon | 949 |
 | Marvel Snap (699 cards, 212 locations, 6 rules) | 917 |
-| Slay the Spire | 838 |
+| Slay the Spire | 895 |
 | Duelyst | 786 |
 | Faeria | 443 |
-| Into the Breach | 289 |
-| Inscryption | 264 |
-| Blood Bowl (Third Season) | 244 |
+| Into the Breach | 287 |
+| Inscryption | 263 |
+| Blood Bowl (Third Season) | 243 |
 
-Created cards are included where a source has them: Runeterra (levelled champions, champion spells, tokens), Hearthstone (tokens, generated cards, rewards) and Battlegrounds. They carry edition `non-collectible`, and a name already used gets " (created)".
+What is in, beyond the cards each source lists as playable:
+- **Created cards** (edition `non-collectible`; a name already used gets " (created)"): Runeterra (levelled champions, champion spells, tokens), Hearthstone (tokens, generated cards, rewards), Battlegrounds, Gwent and Shadowverse tokens, Magic tokens and emblems that have rules text, Slay the Spire's created cards (Shiv, Miracle, Smite, ...). Cards link to what they create (`generates`; for Magic from Scryfall's list of related tokens).
+- **Slay the Spire upgrades:** an upgrade that changes only numbers is kept on its base card (`extra.upgraded_text`, `extra.upgraded_cost`); an upgrade that changes the mechanic (Innate or Retain added, Exhaust dropped, all cards instead of one, ...) is its own entry `<name>+`, linked `variant_of` to the base card.
+- **Magic:** the cards of the first build (no commons, no Commander-only cards, no near-duplicates) plus 640 cards from MTGJSON that bring a mechanic the others lack. The other 10,560 MTGJSON cards repeated existing mechanics and were left out, so Magic does not drown the smaller games.
+- **Warhammer factions** are armies: a BSData "Library" file's entries belong to the army that uses it, and an Age of Sigmar army of renown or Legends list belongs to its army (`extra.army_of_renown`, `extra.legends`).
 
 ## Structure
-**entities**: every card, unit, spell, item, location, ability, rule, keyword (its definition as text) and tribe, with game, category, faction, cost, stats and rules text. `variants` lists other names the same mechanic was printed under; **merged_entities** maps each merged name to the entry that kept it, so commands still find it.
+**entities**: every card, unit, spell, item, location, ability, rule, keyword (its definition as text) and tribe, with game, category, faction, cost, stats and rules text. `variants` lists other names the same mechanic was printed under; **merged_entities** maps each merged name to the entry that kept it, so commands still find it. A keyword no card text uses (a game term from a source's glossary, a status, a weapon property) is kept with `extra.note` "used by no card text in this library".
 
-**concepts**: Claude's cross-game network of 277 design concepts under ten roots (effect, combat, trigger, condition, economy, scope, structure, win_condition, role, design_problem). Effects are sorted by **outcome first, mechanism second**, and a concept can have several parents. For example, "no damage output" holds can't attack (attack lock), attack set to 0 and damage prevention. It sits under "suppress", next to can't block, immobilize, silence and total disable (stun, freeze). "Stat loss" (debuff) is a separate branch, and "this turn / round only" is a separate marker. The view `concept_tree` gives all descendants.
+**concepts**: Claude's cross-game network of 277 design concepts under ten roots (effect, combat, trigger, condition, economy, scope, structure, win_condition, role, design_problem). Effects are sorted by **outcome first, mechanism second**, and a concept can have several parents. For example, "no damage output" holds can't attack (attack lock), attack set to 0 and damage prevention. It sits under "suppress", next to can't block, immobilize, silence and total disable (stun, freeze). "Stat loss" (debuff) is a separate branch, and "this turn / round only" is a separate marker. `death_count` (a unit dies; counts deaths) is under both the trigger and the condition branches. The view `concept_tree` gives all descendants.
 
-**entity_concepts**: links each entry to its concepts with a role (does, grants, benefits, counters, cost; exhibits for design problems) and the method that made the link (reliability order in SEARCH_GUIDE).
+**entity_concepts**: links each entry to its concepts with a role (does, grants, benefits, counters, cost; exhibits for design problems) and the method that made the link (reliability order in SEARCH_GUIDE). A card that gives a keyword to others has that keyword's concepts as `grants`, not `does`.
 
-**concept_relations**: 447 relations (synergizes, enables, counters, mitigates, tension, variant_of), Claude's analysis. Every design problem is linked to the mechanics that ease or worsen it, including five from Three Bases playtests: p_objective_stalemate (dot-holding stalemates), p_resource_hoarding (carry-over hoarding), p_front_pileup (units piling into the front row), p_draw_engine (card-draw engines) and p_holder_snowball (the base holder snowballing).
+**concept_relations**: 447 relations (synergizes, enables, counters, mitigates, tension, variant_of), Claude's analysis. Every design problem is linked to the mechanics that ease or worsen it, including five from Three Bases playtests: p_objective_stalemate (dot-holding stalemates), p_resource_hoarding (carry-over hoarding), p_front_pileup (units piling into the front row), p_draw_engine (card-draw engines) and p_holder_snowball (the base holder snowballing). `anti_stalemate` (stalemates and board locks, and what breaks them) is a design problem too.
 
 **entity_links**:
-- **Keyword links:** has, grants, mentions. D&D conditions use inflicts, counters, suffers and benefits instead.
+- **Keyword links:** has (the card's own keyword), grants (given to others: "creatures you control have flying"), mentions (only named: "creatures with flying"), describes (the text describes a keyword's mechanic in other words, Claude's reading). D&D conditions use inflicts, counters, suffers and benefits instead.
 - **Type links:** has_type, cares_about_type.
-- **Name links:** references, summons, generates (a card that creates another), transforms_into (a champion's level-up).
-- **variant_of:** also links the same mechanic in another faction.
+- **Name links:** references (names another card; for Magic also Scryfall's related cards), summons, generates (creates another card), transforms_into (a champion's level-up).
+- **variant_of:** the same mechanic in another faction, and a Slay the Spire upgrade to its base card.
 - **equivalent_keyword:** the same keyword in another game.
 
-**trigger_effect**: about 68,400 "when X, do Y" pairs, from every clause of every entry and from the entry's keywords. Each pair has a **frequency** limit and its basis:
+**trigger_effect**: about 71,000 "when X, do Y" pairs, from every clause of every entry and from the entry's keywords. Each pair has a **frequency** limit and its basis:
 - **per_card:** a spell, a Place/on-play effect, the card's own death, or once per game.
 - **per_round:** a once-per-turn cap, or the card's own turn start/end, attack, kill or tap ability.
 - **unbounded:** fires on other units' events or on repeated events.
 - **static:** an aura, not a trigger.
 
 **faction_signature**: per source faction (30+ entries):
-- **signature mechanics:** concepts the faction uses much more than the rest of its game;
+- **signature mechanics:** concepts the faction uses much more than the rest of its game. Share = the part of the faction's entries that have the concept; lift = that share divided by the game's average share. The rule: 5+ entries, share 6%+, lift 1.8+, and one of the two factions of its game that use the concept most. A broad faction left with fewer than 3 signatures (a Magic colour, a big class) also gets its concepts with lift 1.3+ (same entry and share minimums).
 - **keyword signatures** (`kw:<keyword>`): a keyword whose cards are 60%+ that faction's;
 - **splash:** every other faction that uses a signature mechanic, sorted by share.
 
-**factions / archetypes / faction_archetypes**: per-faction concept profiles, and 20 cross-game archetypes (swarm, sacrifice, graveyard, control, burn, aggro/tempo, scaling, fortress, sustain, spellslinger, ramp, positional, disruption, trickery, chaos, card advantage, tribal, objectives, damage over time, transformation). Each faction is listed with its share and lift, recomputed from the current tags.
+**factions / archetypes / faction_archetypes**: every faction with its size and concept profile (concepts on 3+ of its entries and 5%+ of them, top 12 by lift), and 20 cross-game archetypes (swarm, sacrifice, graveyard, control, burn, aggro/tempo, scaling, fortress, sustain, spellslinger, ramp, positional, disruption, trickery, chaos, card advantage, tribal, objectives, damage over time, transformation) with each faction's share and lift. All rebuilt from the current tags on every build.
 
-**concept_precision**: per concept and game, how often the automatic tags were right on the entries the hand reviews checked. `concept` warns where they are below 70%.
+**mechanic_repeat**: an entry whose category, concepts and trigger pairs are exactly those of an earlier entry of the same game (usually the same mechanic in other numbers). Nothing is removed; `concept` and `search` take `distinct=1` to skip these.
+
+**concept_precision**: per concept and game, how often the current wording patterns are right on the entries the hand reviews checked (a reviewed wrong tag counts only while a pattern would still make it). `concept` warns where this is below 70%.
 
 **entity_fts**: full-text search. **games**, **load_log**: what each game is and how it was loaded.
 
 ## How Claude uses it
-In a fresh chat, Claude clones the repository and runs `python3 tools/query.py <command>` (the script finds the database next to `tools/`; `TB_LIB` overrides). The commands and the rules for reading results are in SEARCH_GUIDE.md. The database never enters the conversation, only printed results do, so a design question costs a few short queries.
+In a fresh chat, Claude clones the repository and runs `python3 lib/query.py <command>` (the script finds the database next to `lib/`; `TB_LIB` overrides). The commands and the rules for reading results are in SEARCH_GUIDE.md. The database never enters the conversation, only printed results do, so a design question costs a few short queries.
 
 ## Maintenance
-`tools/build.sh` rebuilds the database from the raw corpus and the data files in `tools/`. Wrong tags are fixed in these places:
-- the per-game pattern files (`tools/patterns/<game>.txt`);
-- the hand reviews (`tools/reviews/<game>.json`);
-- the keyword reviews against the outcome tree (`tools/reviews_outcome/<game>.json`).
+The build is incremental: `three-bases-library.sqlite` is the base for all work. The raw corpus of the first build is deleted and not needed.
+
+- **Fix wrong tags** in these places, then run `lib/build.sh <in.sqlite> <out.sqlite>`:
+  - the per-game pattern files (`lib/patterns/<game>.txt`: `concept|role|regex` adds a pattern, `!concept|pattern` switches a general pattern off for that game);
+  - the hand reviews (`lib/reviews/<game>.json`), then `regression.py <db> make`;
+  - the keyword reviews against the outcome tree (`lib/reviews_outcome/<game>.json`).
+- **Add cards:** a converter in `lib/convert/` turns a source file into the load format (described in `lib/load_cards.py`). Then run `lib/build.sh <in.sqlite> <out.sqlite> <game>=<cards.json> ...`. New cards get the same tagging as the rest of their game; older entries stay as they were, apart from merges and links to the new cards.
+- **How entries are tagged:** an entry gets the general wording patterns (all games) once, when it is loaded; the game's own patterns, keyword inheritance, outcome concepts, link rules and trigger pairs are re-derived on every build. Text is read lower-cased with the entry's own name as "name"; Magic without reminder text. Entries that no pattern or keyword reaches are dropped.
+- **One-time fixes** of 12 Oct 2026 are in `lib/fixes/` (f01 Magic cut, f02 Scryfall data, f04 text clean-up, f06 leftovers, f08 weak patterns, f09 whole-entry patterns, f10 Magic non-token cards); f03 (granted keywords are not "does"), f05 (faction names and table) and f07 (keyword links, concept tree) are also build steps.
 
 The build stops if any check fails:
 - **regression set** (`regression.py <db> check`): 12,694 reviewed tags must hold;
@@ -81,26 +92,25 @@ The build stops if any check fails:
 - **trigger coverage** (`trigger_pairs.py <db> check`): at least 50% of entries with a trigger in every game;
 - **query tests** (`test_query.py <db>`): all 16 commands.
 
-After a new hand review, run `regression.py <db> make`.
+Sources of the later loads (converter in brackets):
+- Magic: MTGJSON AtomicCards.json [conv_mtg.py] for the 640 cards with a new mechanic; Scryfall Oracle Cards [conv_scryfall_tokens.py, fixes/f02] for tokens, emblems, set names, related cards and keyword lists.
+- Slay the Spire 1: the wiki's Module:Cards/data [conv_sts.py].
+- Gwent: the gwent.one v14.8 export, NonOwnable set [conv_gwent.py].
+- Shadowverse: the Portal card API export, set 90000 [conv_sv.py].
+- Underworlds: yawudb's db.js, github.com/PompolutZ/yawudb [conv_wu.py].
+- 40k, Kill Team, Age of Sigmar: the BSData repos at their current state [conv_bs.py]: abilities and rules whose text the library lacked; campaign content (Crusade, Path to Glory, hero creation) left out.
+- D&D 5e: github.com/5e-bits/5e-database [conv_dnd.py].
 
 ## Known limits
-- Automatic tags on long prose (D&D, Warhammer army rules) are the least precise; the precision warnings show where.
+- Automatic tags on long prose (D&D, Warhammer army rules, Inscryption and Into the Breach wiki text) are the least precise. Five concept/game cells are below 70% (Hearthstone hand_disruption, adjacency and debuff; Kill Team information; Shadowverse tutor): their right and wrong tags come from the same wording, so `concept` warns there.
 - Combo detection finds candidates through concepts, keywords and trigger links; confirming a combo means reading both cards.
 - Frequency limits, D&D condition roles and trigger pairs come from wording rules, not play; real counts come from the Three Bases simulator.
-- Missing data:
-  - Magic: commons, tokens and Commander cards.
-  - Shadowverse and Gwent: tokens.
-  - Slay the Spire: upgraded card versions.
-  - Underworlds: fighter stat lines.
-  - All games: entries the first build dropped because no pattern matched them.
+- Warhammer and D&D entries loaded on 12 Oct 2026 come from the current BSData and SRD data, which can differ from the older snapshot of the first build. New Warhammer unit datasheets (stat lines) are not loaded, only their abilities.
+- Missing data: Slay the Spire 2 upgrades, Blood Bowl Third Season entries the first build dropped, and Underworlds fighter stat lines (no source known); about 25 dropped entries of Duelyst, Darkest Dungeon, Inscryption and Into the Breach (not reloaded).
+- About 280 Magic token links are left out: Scryfall lists a related token whose name and type several tokens share, and the card's text does not say which one.
+- Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Suggestions for improving the library
 Claude's suggestions, none done.
-1. **Load the missing data** above once the source files are available. The files needed are:
-   - Magic: Scryfall's "Oracle Cards" bulk file or MTGJSON's AtomicCards.json;
-   - Shadowverse and Gwent: a full card export including tokens;
-   - Slay the Spire 1 and 2: card data with upgraded text;
-   - all games: the raw corpus (library-corpus.zip).
-
-   This session cannot reach any of these sources.
-2. **Review the weak cells** that concept_precision lists (below 70%), game by game, and fix them in the pattern files.
+1. **Hand-review more entries** of the noisiest games (Age of Sigmar, 40k, D&D) and the 12 Oct loads, and add the decisions to `lib/reviews/` (then `regression.py <db> make`).
+2. **Load Warhammer unit datasheets** (stat lines) from the BSData repos.

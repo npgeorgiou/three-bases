@@ -1,7 +1,7 @@
 """Search helpers for the Three Bases inspiration library.
 Usage: python3 query.py <command> <args>   (see SEARCH_GUIDE.md)"""
 import sqlite3, json, sys, collections, os
-DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'three-bases-library.sqlite'))  # the database sits next to tools/
+DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'three-bases-library.sqlite'))  # the database sits next to lib/
 db = sqlite3.connect(DB)
 q = lambda s, *a: db.execute(s, a).fetchall()
 
@@ -12,8 +12,9 @@ def concepts(term=''):
                  FROM concepts c WHERE c.id LIKE ? OR c.name LIKE ? OR c.description LIKE ? ORDER BY c.facet, c.id''', t, t, t):
         print(f'{r[0]:24} {r[1]:10} {r[3]:6}  {r[2]}')
 
-def concept(cid, per_game=4, role=None, game=None):
-    """Everything linked to a concept and its sub-concepts, broken down per game."""
+def concept(cid, per_game=4, role=None, game=None, distinct=0):
+    """Everything linked to a concept and its sub-concepts, broken down per game. distinct=1: examples skip entries that repeat
+    an earlier entry's mechanic (table mechanic_repeat)."""
     c = q('SELECT id, name, facet, description FROM concepts WHERE id=?', cid)
     if not c: print('no concept', cid); return concepts(cid)
     print('==', c[0][1], f'[{c[0][2]}]', c[0][3] or '')
@@ -24,7 +25,7 @@ def concept(cid, per_game=4, role=None, game=None):
     print('children:', [r[0] for r in q('SELECT child FROM concept_parents WHERE parent=?', cid)])
     for a, rel, b, note in q('SELECT a, rel, b, note FROM concept_relations WHERE a=? OR b=?', cid, cid):
         print(f'  relation: {a} --{rel}--> {b}' + (f'  ({note})' if note else ''))
-    where = 'ct.root=?' + (' AND ec.role=?' if role else '') + (' AND e.game=?' if game else '')
+    where = 'ct.root=?' + (' AND ec.role=?' if role else '') + (' AND e.game=?' if game else '') + (' AND e.id NOT IN (SELECT entity FROM mechanic_repeat)' if int(distinct) else '')
     args = [cid] + ([role] if role else []) + ([game] if game else [])
     rows = q(f'''SELECT e.game, e.category, ec.role, count(DISTINCT e.id) FROM entity_concepts ec
         JOIN concept_tree ct ON ct.id=ec.concept JOIN entities e ON e.id=ec.entity WHERE {where} GROUP BY 1,2,3 ORDER BY 1,4 DESC''', *args)
@@ -49,18 +50,27 @@ def concept(cid, per_game=4, role=None, game=None):
             print(f'   {r[0]}/{r[1]} [{r[3]} via {r[4]}] {r[2]}: {r[5]}')
 
 def cooccur(cid, game=None, top=25):
-    """Concepts that most often appear on the same entities (synergy/idea mining)."""
-    args = [cid] + ([game] if game else [])
-    rows = q(f'''SELECT ec2.concept, count(DISTINCT ec2.entity) n FROM entity_concepts ec JOIN concept_tree ct ON ct.id=ec.concept
+    """Concepts that most often appear on the same entities (synergy/idea mining). Each game counts equally: per game, the share
+    of the concept's entries that also carry the other concept; ranked by the mean share over the games that have the concept."""
+    rows = q(f'''SELECT e.game, ec2.concept, count(DISTINCT ec2.entity) FROM entity_concepts ec JOIN concept_tree ct ON ct.id=ec.concept
         JOIN entity_concepts ec2 ON ec2.entity=ec.entity JOIN entities e ON e.id=ec.entity
         WHERE ct.root=? {'AND e.game=?' if game else ''} AND ec2.concept NOT IN (SELECT id FROM concept_tree WHERE root=?)
-        GROUP BY 1 ORDER BY 2 DESC LIMIT ?''', *args, cid, top)
-    for r in rows: print(f'  {r[0]:24} {r[1]}')
+        GROUP BY 1,2''', *([cid] + ([game] if game else []) + [cid]))
+    base = dict(q(f'''SELECT e.game, count(DISTINCT e.id) FROM entity_concepts ec JOIN concept_tree ct ON ct.id=ec.concept JOIN entities e ON e.id=ec.entity
+        WHERE ct.root=? {'AND e.game=?' if game else ''} GROUP BY 1''', *([cid] + ([game] if game else []))))
+    agg = {}
+    for g, k, n in rows: agg.setdefault(k, []).append(n / base[g])
+    games = len(base) or 1
+    out = sorted(((sum(v) / games, len(v), k) for k, v in agg.items()), reverse=True)[:top]
+    print(f'  ({len(base)} games; share = mean over games of the share of entries with {cid} that also have the concept)')
+    for sh, ng, k in out: print(f'  {k:24} share {sh:.2f}  games {ng}')
 
-def search(text, game=None, limit=30):
-    """Full-text search over names and rules text (FTS5 syntax)."""
-    rows = q(f'''SELECT e.game, e.category, e.name, substr(replace(e.text,char(10),' '),1,220) FROM entity_fts f JOIN entities e ON e.id=f.rowid
-        WHERE entity_fts MATCH ? {'AND e.game=?' if game else ''} LIMIT ?''', *([text] + ([game] if game else []) + [limit]))
+def search(text, game=None, limit=30, per_game=4, distinct=0):
+    """Full-text search over names and rules text (FTS5 syntax). At most per_game hits per game (all hits up to limit with game=x).
+    distinct=1 skips entries that repeat an earlier entry's mechanic."""
+    rows = q(f'''SELECT game, category, name, t FROM (SELECT e.game, e.category, e.name, substr(replace(e.text,char(10),' '),1,220) t,
+        row_number() OVER (PARTITION BY e.game ORDER BY f.rank) r FROM entity_fts f JOIN entities e ON e.id=f.rowid
+        WHERE entity_fts MATCH ? {'AND e.game=?' if game else ''} {'AND e.id NOT IN (SELECT entity FROM mechanic_repeat)' if int(distinct) else ''}) WHERE r<=? ORDER BY game, r LIMIT ?''', *([text] + ([game] if game else []) + [limit if game else int(per_game), limit if game else 400]))
     for r in rows: print(r)
 
 def entity(name, game=None):
@@ -216,13 +226,23 @@ def archetypes(name=None, game=None):
         for g, f, s, l in q('SELECT game, faction, share, lift FROM faction_archetypes WHERE archetype=? ORDER BY lift DESC' + ('' if name else ' LIMIT 8'), aid): print(f'   {g:16} {f:35} share {s:.2f} lift {l}')
 
 def frequency(bound=None, trigger=None, effect=None, game=None, examples=3):
-    """Trigger -> effect pairs by frequency limit (per_card, per_round, unbounded, static). No bound: counts per bound for the filters."""
+    """Trigger -> effect pairs by frequency limit (per_card, per_round, unbounded, static). No bound: per bound, its share of each
+    game's pairs, averaged over games (each game counts equally), with the raw count. With a bound: pairs ranked by the number of
+    games that have them, then by the mean share per game."""
     w = ' AND '.join(x for x in ['frequency=?' if bound else '', 'trigger=?' if trigger else '', 'effect=?' if effect else '', 'game=?' if game else ''] if x) or '1=1'
     args = [a for a in (bound, trigger, effect, game) if a]
+    tot = dict(q('SELECT game, count(*) FROM trigger_effect GROUP BY 1'))
     if not bound:
-        for r in q(f'SELECT frequency, count(*), count(DISTINCT game) FROM trigger_effect WHERE {w} GROUP BY 1 ORDER BY 2 DESC', *args): print(f'  {r[0]:10} entries {r[1]:6} games {r[2]}')
+        per = {}
+        for f, g, n in q(f'SELECT frequency, game, count(*) FROM trigger_effect WHERE {w} GROUP BY 1,2', *args): per.setdefault(f, {})[g] = n
+        gs = {g for d in per.values() for g in d}
+        for f, d in sorted(per.items(), key=lambda x: -sum(n / tot[g] for g, n in x[1].items())):
+            print(f'  {f:10} mean share {sum(n / tot[g] for g, n in d.items()) / len(gs):.2f}  entries {sum(d.values()):6}  games {len(d)}')
         return
-    for r in q(f'SELECT trigger, effect, count(*), count(DISTINCT game) FROM trigger_effect WHERE {w} GROUP BY 1,2 ORDER BY 3 DESC LIMIT 25', *args): print(f'  {r[0]:18} -> {r[1]:20} entries {r[2]:5} games {r[3]}')
+    per = {}
+    for t, e, g, n in q(f'SELECT trigger, effect, game, count(*) FROM trigger_effect WHERE {w} GROUP BY 1,2,3', *args): per.setdefault((t, e), {})[g] = n
+    for (t, e), d in sorted(per.items(), key=lambda x: (-len(x[1]), -sum(n / tot[g] for g, n in x[1].items())))[:25]:
+        print(f'  {t:18} -> {e:20} games {len(d):2}  mean share {sum(n / tot[g] for g, n in d.items()) / len(d):.3f}  entries {sum(d.values())}')
     for g, in q(f'SELECT DISTINCT game FROM trigger_effect WHERE {w}', *args):
         print('--', g)
         for n, cl, b in q(f'SELECT x.name, t.clause, t.basis FROM trigger_effect t JOIN entities x ON x.id=t.entity WHERE {w.replace("game=?", "t.game=?")} AND t.game=? ORDER BY random() LIMIT ?', *args, g, examples):

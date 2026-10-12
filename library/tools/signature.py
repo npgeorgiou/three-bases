@@ -2,7 +2,8 @@
 elsewhere they appear on a very few cards, expressed through that faction's own character).
 Builds table faction_signature(game, faction, concept, kind, entities, share, lift, owner, owner_share):
   signature  the faction's own mechanic: at least 5 cards, share >= 6% of the faction, lift >= 1.8 over the game's factions,
-             and the faction is one of the top 2 factions of its game for that concept
+             and the faction is one of the top 2 factions of its game for that concept. A faction left with fewer than 3 such
+             signatures also gets its concepts with lift >= 1.3 (5+ cards, 6%+ share)
   splash     another faction's signature mechanic used by a faction below the signature bar: 1+ cards, sorted by share, no upper limit
   keyword_signature  a keyword at least 60% of whose cards (8+) are one faction's (concept 'kw:<keyword>')
 Factions with fewer than 30 entries are left out. Also recomputes faction_archetypes from the current tags (share of the
@@ -39,6 +40,18 @@ for (g,) in q('SELECT DISTINCT game FROM factions'):
             if f in own: continue
             c.execute('INSERT INTO faction_signature VALUES(?,?,?,?,?,?,?,?,?)', (g, f, k, 'splash', cnt[f, k], round(s, 3), round(s / avg, 2), top[1], top[0]))
     # keyword signatures: a keyword is a faction's own when at least 60% of the cards that have, grant or mention it are that faction's (8+ cards)
+    # broad factions (a Magic colour, a big class) rarely reach lift 1.8: a faction left with fewer than 3 signatures also gets
+    # its concepts with lift >= 1.3 (still 5+ cards and 6%+ of the faction) as signatures (Claude's rule, agreed 12 Oct 2026)
+    have = collections.Counter(f for (f,) in q("SELECT faction FROM faction_signature WHERE game=? AND kind='signature'", g))
+    for f in fac:
+        if have[f] >= 3: continue
+        got = {k for (k,) in q("SELECT concept FROM faction_signature WHERE game=? AND faction=? AND kind='signature'", g, f)}
+        for k, n in gtot.items():
+            avg = n / tot
+            if avg > 0.25 or k in got or cnt[f, k] < 5: continue
+            s_ = cnt[f, k] / fac[f]
+            if s_ >= 0.06 and s_ / avg >= 1.3:
+                c.execute('INSERT INTO faction_signature VALUES(?,?,?,?,?,?,?,?,?)', (g, f, k, 'signature', cnt[f, k], round(s_, 3), round(s_ / avg, 2), f, round(s_, 3)))
     kwc = collections.Counter(); kwt = collections.Counter()
     for k, f, n in q("""SELECT kk.name, e.faction, count(DISTINCT e.id) FROM entity_links l JOIN entities kk ON kk.id=l.dst JOIN entities e ON e.id=l.src
                          WHERE kk.game=? AND kk.category='keyword' AND e.category NOT IN ('keyword','tribe') AND l.rel IN ('has_keyword','grants_keyword','mentions_keyword')

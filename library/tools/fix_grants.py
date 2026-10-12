@@ -14,6 +14,7 @@ for i, t, con, kn in rows:
     if re.search(r"\b(give|gives|giving|gain|gains|get|gets|grant|grants|gaining)\b[^.]{0,50}\b" + k, tl): continue
     if re.search(r"\b(have|has)\s+(\+\d+/\+\d+ and |\+\d+ \w+ and )?" + k, tl): continue   # "your minions have Rush" = grants
     if not re.search(r"\bwith\b[^.]{0,20}\b" + k, tl): continue
+    if re.search(r"\b(create|creates|summon|summons|become|becomes|put|puts)\b[^.]{0,80}\bwith\b[^.]{0,30}\b" + k, tl): continue   # makes bodies with the keyword = grants
     role = 'counters' if re.search(r"\b(enemy|enemies|opponent'?s?|destroy|silence|banish|transform)\b[^.]{0,50}\bwith\b[^.]{0,20}\b" + k, tl) else 'benefits'
     have = c.execute("select 1 from entity_concepts where entity=? and concept=? and role=?", (i, con, role)).fetchone()
     c.execute("delete from entity_concepts where entity=? and concept=? and role='grants' and method='via_keyword'", (i, con))

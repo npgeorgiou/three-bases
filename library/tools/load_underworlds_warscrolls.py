@@ -1,5 +1,5 @@
 """Warhammer Underworlds warband rules (Embergard edition): the warscroll abilities of 8 warbands and the shared Grand Alliance
-warscrolls, from the official PDFs listed in tools/underworlds_warscrolls.json (paraphrased; concepts hand-mapped, claude_review).
+warscrolls, from the official PDFs listed in lib/underworlds_warscrolls.json (paraphrased; concepts hand-mapped, claude_review).
 Each entry is an 'ability' with the warband (or Grand Alliance) as faction and the warscroll as subtype. Idempotent.
 Usage: load_underworlds_warscrolls.py <db>"""
 import json, sqlite3, sys, os, re

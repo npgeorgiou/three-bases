@@ -7,7 +7,7 @@ Usage: trigger_pairs.py <db> [check]"""
 import re, sqlite3, sys
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
 EXTRA = {   # trigger wording the general patterns miss (Claude's list, from the misses)
- 'on_attack': [r"\b(the first time|whenever|when|each time|after) (i|this|it|~|he|she|they|this (unit|creature|minion|follower|model|operative))\b[^.,:]{0,15}\battacks?\b", r"\b(nexus )?strike:", r"\bclash:", r"\battack:", r"\brally:"],
+ 'on_attack': [r"\b(whenever|when|each time) (this|it|~|this (creature|unit|minion|follower|model|operative|vehicle)|enchanted creature|equipped creature|(a|another|one or more) (\w+ )?creatures? you control)\b[^.,:]{0,20}\bdeals? combat damage to (a player|an opponent|one or more players|a creature)\b", r"\b(the first time|whenever|when|each time|after) (i|this|it|~|he|she|they|this (unit|creature|minion|follower|model|operative))\b[^.,:]{0,15}\battacks?\b", r"\b(nexus )?strike:", r"\bclash:", r"\battack:", r"\brally:"],
  'on_play': [r"\b(gift|deploy|fanfare|battlecry)\s*[-–:]", r"\bwhen i'?m (summoned|played)\b", r"\bwhen you (play|cast) (this|me|~)\b", r"\bon reveal:", r"\bdeploy:", r"\bfanfare:", r"\bopening gambit", r"\bplay:", r"\bgift:", r"\bbattlecry:", r"\bwhen (this|~) (creature|permanent|minion|unit) enters\b"],
  'death_trigger': [r"\blast words\s*[-–]", r"\blast breath:", r"\bwhen i die\b", r"\bwhen (this|it|~) (dies|is destroyed|perishes)\b", r"\bdying wish:", r"\bdeathwish:", r"\blast words:", r"\bwhen destroyed:", r"\bdeathrattle:"],
  'death_count': [r"\b(when|whenever|each time|after) (an?|another|any|one or more|a friendly|an allied|an enemy|your)\b[^.,:]{0,35}\b(dies|die|is destroyed|are destroyed|perishes|is slain|are slain)\b"],
@@ -19,7 +19,7 @@ EXTRA = {   # trigger wording the general patterns miss (Claude's list, from the
  'on_kill': [r"\bwhen(ever)? (i|this|it|~)\b[^.,:]{0,10}\b(kills?|slays?)\b", r"\bslay:", r"\bdeathblow\b", r"\boverkill\b"],
 }
 if len(sys.argv) < 3 or sys.argv[2] != 'check':
-    root = dict(q("SELECT id, root FROM concept_tree WHERE root IN ('trigger','effect')"))
+    root = dict(q("SELECT id, root FROM concept_tree WHERE root IN ('trigger','effect') ORDER BY root DESC"))   # a concept under both (death_count) reads its patterns as effects; its trigger wording is in EXTRA
     pats = {}
     for con, p, g in q("SELECT concept, pattern, game FROM concept_patterns WHERE role='does'"):
         if root.get(con) in ('trigger', 'effect'):
@@ -36,6 +36,8 @@ if len(sys.argv) < 3 or sys.argv[2] != 'check':
         if root.get(k) == 'trigger' and k not in ('passive', 'aura', 'trigger'): whole.setdefault(e, set()).add(k)
     for e, g, t in q("SELECT id, game, text FROM entities WHERE text IS NOT NULL AND category NOT IN ('tribe') AND length(text) < 6000"):
         P = pats.get(None, []) + pats.get(g, [])
+        tl = t.lower()   # a whole-entry pattern ("(?s)^(?!.*timing:)...": no Timing line anywhere) is checked on the whole text, not per clause
+        P = [x for x in P if not x[2].pattern.startswith('(?s)^(?!') or x[2].search(tl)]
         found = False
         cls = [x.lower().strip() for x in SPLIT.split(t)]
         for j, low in enumerate(cls):

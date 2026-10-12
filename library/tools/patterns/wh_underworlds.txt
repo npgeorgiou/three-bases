@@ -31,3 +31,18 @@ destroy|does|(?s)^(?!.*\bscore (this|it)\b).*?(?:\b(is|are|were|was|been) taken 
 destroy|benefits|\bscore (this|it)\b[^\n]*?\bout of action\b
 death_count|does|\benemy (fighters?|leaders?) (are|is|were|was) out of action\b|\benemy fighters? out of action\b
 trap_secret|does|(^|\b)trap( reaction|,)|^trap\b
+# added 12 Oct 2026 (yawudb load)
+heal|does|\bremove (one|up to one|up to two|a|two|\d+) wound tokens?\b|\bremove one wound token from (each|all)\b
+immunity|does|\bcannot be driven back\b|\bcan only be driven back by\b
+block_armor|does|\bdefence characteristic (changes to|of)\b|\bhave a defence characteristic of\b
+attack_mod|does|\b(attack actions?|attack action's)[^.]{0,40}\bhave the :at\w+: characteristic\b|:at\w+: characteristics (become|are) :at\w+: characteristics\b|\bboth :atfury: ?and :atsmash: symbols are successes\b|\bconsider a :at\w+: as a success\b
+ranged|does|\b[+]\d range\b|\bhas a range of \d\b|\bwith a range (of|or) \d\b
+assists_support|counters|\bcannot (support|provide support)\b
+assists_support|does|\beach friendly fighter within \d hexes of the target supports\b
+damage_reduction|does|\bonly suffers one damage\b
+silence|does|\bcannot (attempt to )?cast spells\b|\bcannot use reactions\b
+terrain|does|\bfeature tokens?\b|\blethal hexes?\b|\bsnare token\b
+swap|does|\bplace each (feature token|fighter) in the hex the other\b
+movement|does|\bplace (them|that fighter|this fighter|one available|a friendly fighter|the chosen fighter) [^.]{0,30}\b(on|in) (any|an?|the) [^.]{0,20}\bhex\b
+draw|does|\bdraws? up to (one|two|three) power cards?\b
+immunity|does|\b(attack actions cannot target|cannot target fighters that|cannot choose this fighter)\b

@@ -7,7 +7,6 @@ damage|does|\btargets (all of )?enemy ranks [^.]*\.( moves self[^.]*\.)? deals d
 multi_target_attack|does|\btargets all of enemy ranks\b
 scope_multi|does|\btargets all of ally ranks\b
 buff|does|\+\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit|max hp)\b|\bbuff: \+
-debuff|does|-\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit)\b(?![^;.]*\((self|individual|party_other)\))
 drawback|does|-\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit)\b[^;.]*\(self\)|\bstress damage amount \d+ \((self|party_other|individual)\)
 damage_over_time|does|\b(bleed|blight) \d+ per round\b|\bbleed debuff\b|\bblight debuff\b|\bbleed \d|\bblight \d
 damage_over_time|counters|\bcure (bleed|blight)\b|\bremove (bleeding|poison|blight)\b|\+\d+(\.\d+)?% (bleed|blight|poison) resistance\b|\bbandage\b|\bantivenom\b

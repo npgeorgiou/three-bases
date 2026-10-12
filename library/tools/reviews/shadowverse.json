@@ -1599,5 +1599,19 @@
 "drawback"
 ],
 "drop": []
+},
+"814335": {
+"add": [
+"stat_set"
+],
+"drop": []
+},
+"813966": {
+"add": [
+"self_destruct"
+],
+"drop": [
+"banish"
+]
 }
 }

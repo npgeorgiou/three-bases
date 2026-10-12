@@ -2,7 +2,6 @@
 !activated|\bactivate
 !activated|\bactivated
 !activated|once per (turn|round)
-activated|does|\bspecial action\b
 turn_start|does|\b(whenever|when) this player is activated\b
 !random_effect|\broll
 !random_effect|\bdice\b
@@ -14,8 +13,6 @@ zone_of_control|does|\bmark(ed|ing|s)? (by )?(this|an|the|any|one or more|a)? ?(
 !damage_reduction|\barmou?r\b
 damage_reduction|does|\b(modifier|modifiers) (to|when making) (an |the )?armou?r roll against this player\b|\bcannot apply any modifiers when making an armou?r roll\b|\bmay choose not to be knocked down\b
 piercing|does|\b\+1 modifier to (either )?the armou?r roll\b|\barmou?r roll\b[^.]{0,40}\+1\b
-disable|does|\bknock(s|ed)? down\b|\bplaced prone\b|\bbecomes? stunned\b|\bdistracted\b
-destroy|does|\bcasualty\b|\bknocked-out\b|\bdead result\b|\bsent-off\b
 !haste|\brush\b
 movement|does|\brush(es|ing)?\b|\bdodg(e|es|ing)\b|\bleap(s|ing)?\b|\bjump(s|ing)?\b|\bmove action\b
 !terrain|\blands?\b

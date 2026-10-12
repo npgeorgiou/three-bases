@@ -8,8 +8,6 @@ darkest_dungeon	759779	Heart Attack	death_trigger	does	present
 darkest_dungeon	759779	Heart Attack	destroy	*	absent
 darkest_dungeon	759809	Monsters with High PROT	damage_over_time	benefits	present
 darkest_dungeon	759809	Monsters with High PROT	shield	*	absent
-darkest_dungeon	759811	Get Help Where You May!	passive	*	absent
-darkest_dungeon	759811	Get Help Where You May!	rest_phase	*	absent
 darkest_dungeon	759814	Hallway Movement	passive	*	absent
 darkest_dungeon	759816	Bandaging	passive	*	absent
 darkest_dungeon	759817	Curing Blight	damage_over_time	counters	present
@@ -5868,7 +5866,6 @@ inscryption	740916	Sapphire Mox	blocking	does	present
 inscryption	740916	Sapphire Mox	null_body	does	present
 inscryption	740917	Sentry Drone	null_body	does	present
 inscryption	740918	Sentry Spore	null_body	does	present
-inscryption	740919	Sentry Drone	null_body	does	present
 inscryption	740920	Shield Latcher	null_body	does	present
 inscryption	740929	Skunk	null_body	does	present
 inscryption	740934	Squirrel Ball	null_body	does	present
@@ -5970,8 +5967,6 @@ into_the_breach	760882	Firefly	telegraphed_threats	does	present
 into_the_breach	760883	Hornet	telegraphed_threats	does	present
 into_the_breach	760884	Scarab	telegraphed_threats	does	present
 into_the_breach	760885	Scorpion	telegraphed_threats	does	present
-into_the_breach	760886	Reactor Core	movement	*	absent
-into_the_breach	760886	Reactor Core	rewind	*	absent
 into_the_breach	760887	Time Pod	evasion	*	absent
 into_the_breach	760887	Time Pod	passive	*	absent
 into_the_breach	760887	Time Pod	piercing	*	absent
@@ -6016,7 +6011,6 @@ into_the_breach	760938	Storm Generator	damage_over_time	does	present
 into_the_breach	760941	Repair Field	heal	does	present
 into_the_breach	760941	Repair Field	upgrade	*	absent
 into_the_breach	760942	Stabilizers	upgrade	*	absent
-into_the_breach	760943	Psionic Receiver	upgrade	*	absent
 into_the_breach	760945	Medical Supplies	cheat_death	does	present
 into_the_breach	760945	Medical Supplies	upgrade	*	absent
 into_the_breach	760946	Vek Hormones	buff	*	absent
@@ -6794,8 +6788,8 @@ marvel_snap	795922	Sasquatch	turn_structure	*	absent
 marvel_snap	795928	Scarlet Witch - Brotherhood of Mutants	lane_rule	does	present
 marvel_snap	795930	Scorn	recycle	does	present
 marvel_snap	795932	Scorpion Brand New Day	buff	*	absent
-marvel_snap	795932	Scorpion Brand New Day	debuff	does	present
 marvel_snap	795932	Scorpion Brand New Day	debuff	benefits	present
+marvel_snap	795932	Scorpion Brand New Day	debuff	does	present
 marvel_snap	795934	Sebastian Shaw	upgrade	*	absent
 marvel_snap	795935	Selene	hand_disruption	does	present
 marvel_snap	795936	Selene - Brotherhood of Mutants	generate_cards	*	absent
@@ -7051,8 +7045,8 @@ marvel_snap	796208	Eternity Range	board_clog	does	present
 marvel_snap	796208	Eternity Range	null_body	does	present
 marvel_snap	796210	Fisk Tower	movement	counters	present
 marvel_snap	796213	Fogwell's Gym	stakes_wager	does	present
-marvel_snap	796217	Genosha	destroy	does	present
 marvel_snap	796217	Genosha	destroy	benefits	absent
+marvel_snap	796217	Genosha	destroy	does	present
 marvel_snap	796217	Genosha	sacrifice	does	present
 marvel_snap	796220	Great Web	forced_movement	does	present
 marvel_snap	796223	Hellfire Club	cost_condition	does	present
@@ -7177,6 +7171,8 @@ mtg	765929	Suspect	cant_block	does	present
 mtg	765929	Suspect	debuff	*	absent
 mtg	766155	Wither	permanent_loss	does	present
 mtg	766161	Detain	temporary_effect	does	present
+mtg	802891	Commissar Severina Raine	rows	*	absent
+mtg	806574	Jenny, Generated Anomaly	stat_multiply	*	absent
 runeterra	750379	Elemental Skill	activated	*	absent
 runeterra	750379	Elemental Skill	spell_speed	does	present
 runeterra	750392	Weakest	cost_condition	*	absent
@@ -7591,8 +7587,8 @@ shadowverse	754120	Slaughtering Dragonewt	board_wipe	*	absent
 shadowverse	754120	Slaughtering Dragonewt	mill	does	present
 shadowverse	754126	Godfire Phoenix	drawback	does	present
 shadowverse	754133	Dragonskull Bludgeoner	damage_reduction	does	present
-shadowverse	754182	Minthe of the Underworld	graveyard	cost	absent
 shadowverse	754182	Minthe of the Underworld	graveyard	does	present
+shadowverse	754182	Minthe of the Underworld	graveyard	cost	absent
 shadowverse	754198	Mummy Chef	sacrifice	does	present
 shadowverse	754218	Wandering Plaguebearer	sacrifice	does	present
 shadowverse	754224	Mirror Ghost	steal	does	present
@@ -7816,6 +7812,9 @@ shadowverse	756112	Ghost Town Apparition	symmetric_effect	does	present
 shadowverse	756112	Ghost Town Apparition	transform	does	present
 shadowverse	756114	Purson	sacrifice	does	present
 shadowverse	756114	Purson	upgrade	does	present
+shadowverse	813966	Anne's Summoning	banish	*	absent
+shadowverse	813966	Anne's Summoning	self_destruct	does	present
+shadowverse	814335	Ephemeral Moon	stat_set	does	present
 sts1	757509	Lock-On	mark_target	does	present
 sts1	757510	Opener	play_restriction	does	present
 sts1	757518	Shiv	cost_condition	*	absent
@@ -8390,12 +8389,12 @@ sts1	758002	Pantograph	items_consumables	does	present
 sts1	758002	Pantograph	passive	does	present
 sts1	758002	Pantograph	regeneration	*	absent
 sts1	758003	Paper Krane	damage	*	absent
-sts1	758003	Paper Krane	debuff	benefits	present
 sts1	758003	Paper Krane	debuff	counters	absent
+sts1	758003	Paper Krane	debuff	benefits	present
 sts1	758003	Paper Krane	items_consumables	does	present
 sts1	758003	Paper Krane	passive	does	present
-sts1	758004	Paper Phrog	debuff	counters	absent
 sts1	758004	Paper Phrog	debuff	benefits	present
+sts1	758004	Paper Phrog	debuff	counters	absent
 sts1	758004	Paper Phrog	items_consumables	does	present
 sts1	758004	Paper Phrog	passive	does	present
 sts1	758005	Peace Pipe	items_consumables	does	present
@@ -9015,8 +9014,8 @@ sts2	758455	Bolas	recycle	does	present
 sts2	758456	Bombardment	free_play	does	present
 sts2	758456	Bombardment	recycle	does	present
 sts2	758457	Bone Shards	sacrifice	does	present
-sts2	758457	Bone Shards	summon	benefits	absent
 sts2	758457	Bone Shards	summon	cost	present
+sts2	758457	Bone Shards	summon	benefits	absent
 sts2	758458	Boost Away	drawback	does	present
 sts2	758460	Borrowed Time	drawback	does	present
 sts2	758462	Brand	sacrifice	does	present
@@ -10728,6 +10727,8 @@ wh_40k_10e	786952	Disgraced	drawback	does	present
 wh_40k_10e	786952	Disgraced	mark_target	*	absent
 wh_40k_10e	786952	Disgraced	zone_of_control	*	absent
 wh_40k_10e	787018	Evasive	piercing	*	absent
+wh_aos_4th	791689	Lord of Storm and Sea	destroy	*	absent
+wh_aos_4th	793255	Grave Sentinels	tribal	*	absent
 wh_bloodbowl3	794599	Blitzer's Best Kegs	destroy	*	absent
 wh_bloodbowl3	794599	Blitzer's Best Kegs	revive	does	present
 wh_bloodbowl3	794603	Plague Doctor	turn_structure	*	absent
@@ -10738,7 +10739,6 @@ wh_bloodbowl3	794609	Bugman's XXXXXX	revive	does	present
 wh_bloodbowl3	794611	Sports Wizard	aoe_damage	does	present
 wh_bloodbowl3	794611	Sports Wizard	damage	does	present
 wh_bloodbowl3	794611	Sports Wizard	piercing	*	absent
-wh_bloodbowl3	794612	Things that aren't implemented	turn_structure	*	absent
 wh_bloodbowl3	794613	Desperate Measures	copy	*	absent
 wh_bloodbowl3	794614	Catch	random_effect	*	absent
 wh_bloodbowl3	794615	Dodge	combat	*	absent

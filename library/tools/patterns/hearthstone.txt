@@ -7,7 +7,6 @@ in_hand_buff|does|\b(minions?|cards?|spells?) in your (hand|deck)\b[^.]{0,40}(\+
 life_payment|cost|\bdeal \d+ damage to your hero\b|\bdamage to your hero\b
 # Shuffling new cards into your deck adds cards (deck modification); only shuffling the card itself or cards from hand back is recycling
 !recycle|shuffle .{0,40}into (your|their|its owner.s) (deck|library)
-recycle|does|\bshuffle (this|it|them|me|that card|this card|this minion|this weapon)\b[^.]{0,30}into your deck|\bshuffle [^.]{0,40}\b(from|in) your hand into your deck|\bshuffle (the )?(left|right)[- ]?most card
 deck_modification|does|\bshuffle (a|an|\d+|two|three|four|five|six|seven|copies|a copy|\d+ copies)\b[^.]{0,60}into your deck
 # Corpses are a second resource spent with mana, not an activated ability or coins
 !activated|\bspend \d
@@ -27,3 +26,13 @@ transform|does|\b(swaps|flips|changes) each turn\b
 !disable|\bfrozen\b
 attack_lock|does|\bfreez(e|es|ing)\b
 temporary_effect|does|\bfreez(e|es|ing)\b
+!recycle|put .{0,30}on the (top|bottom) of
+!cost_increase|costs? more
+!resource_gain|mana crystal
+!passive|\bwhile\b
+!damage_over_time|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)
+!donate|shuffle .{0,40}into your opponent.s deck
+!autonomous_units|attacks? (a|the) random
+!debuff|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)
+resource_gain|does|\bgain (an? |\d+ |two |three )?(empty )?mana crystals?\b|\bgain .{0,15}mana crystals? this turn\b
+!board_clog|(?:^|[.:;,] |\bthen |\band )(target |each |your )?opponents? (creates?|summons?|puts?|gets?)\b[^.]{0,30}\b(token|minion|unit|creature|copy|rock)

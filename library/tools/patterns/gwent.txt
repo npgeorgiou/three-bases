@@ -7,7 +7,6 @@ enemy_benefit|does|(^|\. )disloyal\.
 donate|does|\bon the opposite side of the battlefield
 cost_condition|does|\b\d+ provisions? or (less|more)|\bprovision cost\b|\bwith (the )?(highest|lowest|equal) provision
 stat_condition|does|\b(highest|lowest)-power\b|\b\d+ or (less|more) power\b|\bpower (of )?\d+ or (less|more)
-symmetric_effect|does|\bboth players\b|\beach player\b|\bboth sides\b|\bon each side\b
 hand_disruption|does|\bopponent'?s hand\b
 in_hand_buff|does|\bin your (hand|deck)\b[^.]{0,40}\bboost|\bboost[^.]{0,40}\bin your (hand|deck)
 stat_multiply|does|\bdouble (its|the|self|this|a)[^.]{0,20}power
@@ -30,3 +29,8 @@ lone_unit|does|\b(the )?only (unit|card) on (its|this|the) row\b|\bno other (uni
 !items_consumables|\brelic
 # the general 'spawn ... on an enemy row' pattern catches Gwent hazards (Frost, Rain...), handled by the Gwent pattern above
 !board_clog|\b(add|put|summon|create|place|spawn)s?\b[^.]{0,50}\b(to|on|onto|into|for) (your |the |each |an? )?(opponent|enemy)'?s? (side|board|battlefield|lane|row|camp)
+# added 12 Oct 2026 (token load)
+transform|does|\bawaken\b
+immunity|does|\bpower cannot be changed\b
+!board_clog|\b(enemy|opponent'?s?) side of (this|that|each|a|the)
+!symmetric_effect|\b(to|on) each side\b

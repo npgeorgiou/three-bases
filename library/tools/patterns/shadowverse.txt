@@ -17,3 +17,10 @@ upgrade|does|\bevolve (it|this|an?|target|all|that|them)\b|\bcan evolve\b|\bwhen
 upgrade|benefits|\b(when|whenever|after) an allied [^.]{0,30}\bevolves\b
 # summoning a follower on the opponent's side ("summon an enemy X")
 enemy_benefit|does|\bsummon (a|an|\d|two|x) enemy\b|\bsummon \d+ enemy\b
+# added 12 Oct 2026 (token load)
+resource_gain|does|\bgain (an|\d+|x) empty play point orbs?\b
+stat_set|does|\bchange (an?|the|all) [^.]{0,40}\b(defense|attack|cost)\b[^.]{0,30}\bto \d+\b
+cost_reduction|does|\bsubtract \d+ from the cost\b
+debuff|does|-x/-\d|-\d+/-x\b
+silence|does|\bremove all effects from\b
+direct_damage|does|\breduce the enemy leader's maximum defense\b

@@ -1,4 +1,4 @@
-"""Combo validation set: checks that `combo` (query.connections) finds every known combo in tools/combos.tsv.
+"""Combo validation set: checks that `combo` (query.connections) finds every known combo in lib/combos.tsv.
 Each line is enabler -> payoff in one game (Claude's list of well-known combos; the 'why' column is Claude's summary).
 Usage: combo_check.py <db> [-v]   prints found/missed and the strongest layer that found each one; exit 1 on a miss not listed as known_miss.
 A known_miss line names the link type the library lacks; when a new link type finds it, clear the column."""

@@ -30,3 +30,4 @@ team_play|does|\byour team\b|\b(after|when|whenever|once|first time) (you|your t
 # Freeze keeps the tavern's offers for next turn: a shop selection, not a disable
 !disable|\bfreez
 selection|does|\bfreez(e|es)\b
+!scope_global|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))

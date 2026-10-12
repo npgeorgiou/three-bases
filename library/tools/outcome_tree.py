@@ -15,7 +15,7 @@ so the same outcome is found across games however each game does it. Changes (Cl
   return_to_hand      also under removal (it removes a unit from the board); revive under death and summon (a unit comes back)
 Text-pattern tags are recomputed for the moved concepts: a text_pattern 'disable' that only says "can't attack" / "can't move" /
 "can't block" becomes the matching partial lock; a text_pattern temporary_buff without a bonus becomes temporary_effect.
-Hand-reviewed tags are not touched here (keywords are re-checked in tools/reviews_outcome/). Idempotent. Usage: outcome_tree.py <db>"""
+Hand-reviewed tags are not touched here (keywords are re-checked in lib/reviews_outcome/). Idempotent. Usage: outcome_tree.py <db>"""
 import re, sqlite3, sys
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
 NEW = {

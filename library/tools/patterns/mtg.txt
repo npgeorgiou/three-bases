@@ -6,3 +6,53 @@
 !movement|\bmoves?\b
 !stress_morale|\bafflict
 !multi_target_attack|\bcleave
+# added 12 Oct 2026 (MTGJSON load): wordings the general patterns missed
+return_to_hand|does|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b
+counter_spell|does|(?<!opponent controls, )\bcounter (up to (one|two|three|four|x|\d+) )?(target|that|those|it|them|the (spell|ability)|all|each)\b(?! (creature|land|permanent|player|opponent|artifact|enchantment|planeswalker)s?\b)
+destroy|does|\bdestroy (up to (one|two|three|four|x|\d+) |x |two |three |four |any number of )(target|other|nonland|artifact|creature|enchantment|land|permanent)
+disable|does|\btap (up to (one|two|three|four|x|\d+) |x |two |three |all |each |any number of )(target |other |untapped )?(nonland |noncreature )?(creatures?|permanents?|artifacts?|lands?)\b(?![^.:]{0,40}\byou control)
+disable|does|\b(creatures|permanents|artifacts|lands) your opponents control enter tapped
+drawback|does|^(name|this creature|this land|this artifact|this permanent) enters tapped
+cost_increase|does|\bcosts? (\{[^}]+\})+ more\b
+resource_gain|does|\badds (\{|one mana|x mana|that much|an additional)
+damage|does|\bdeals? damage equal to\b
+bodyguard|does|damage that would be dealt to [^.]{0,60}\bis dealt to (name|this creature) instead
+protection|does|damage that would be dealt to (you|target creature|enchanted creature|equipped creature|creatures you control|permanents you control|name|this creature)\b[^.]{0,60}\bis dealt to (?!name\b|this creature\b)
+heal|counters|\b(an opponent|a player|each opponent|your opponents|each player) would gain life\b
+blocking|does|\bmust be blocked\b
+type_grant|does|\bbecomes? (the colou?r or colou?rs of your choice|the chosen colou?r|all colou?rs|colorless|(white|blue|black|red|green)\b(?! and/or))
+type_grant|does|\b(is|are) (all colou?rs|colorless|the chosen colou?r)\b(?! (sources|spells))
+disable|does|\b(don't|doesn't) untap during\b
+disable|does|\btap all (\w+ )?creatures\b
+destroy|does|\bdestroy (five|six|seven|eight|nine|ten) target\b
+removal|does|\bput (up to \w+ )?target (?![^.]{0,40}(you control|\bcard\b))[^.]{0,40}\b(on the bottom of|on top of|into|just beneath the top \w+ cards of) (its|their) owners?'?s?'? librar(y|ies)\b
+removal|does|\bits owner shuffles it into (their|its owner's) library\b
+deck_position|does|\b(on the bottom of|on top of|top or bottom of|just beneath the top \w+ cards of) (its|their) owners?'?s?'? librar(y|ies)\b
+protection|does|\bphases? out\b
+protection|does|\bcan't be the targets? of\b
+evasion|does|\bassign (its|their) combat damage [^.]{0,30}as though (it|they) weren't blocked\b
+evasion|counters|\bcan be blocked as though (it|they) didn't have\b
+disruption|does|\bskips? (their|your|his or her) next (draw|untap) step\b
+donate|does|\bgains? control of (target permanent you control|this creature|name)\b
+rule_change|does|\b(the "legend rule" doesn't apply|state-based actions don't apply|don't cause abilities to trigger|players can't search libraries)
+play_restriction|does|\bcan cast spells only during\b|\bno more than (one|two|three) creatures can attack\b|\bcan cast only one more spell\b|\bcast this spell only (during|if|before|after)\b
+resource_gain|does|\badd (one|two|three|four|five|six|seven|eight|x|that much|an amount of) (mana|\{)|\badd x mana\b|\bproduces twice as much\b
+cost_reduction|does|\bcosts? (\{[^}]+\})+ less\b
+variable_stats|does|\b(power|toughness)( and toughness)? (is|are|are each) equal to\b
+buff|does|\bgets? \+x/\+|\bget \+x/\+x\b
+free_play|does|\bput (a|an|any number of) [^.]{0,40}\bcards? from your hand onto the battlefield\b
+side_deck|does|\b(from your sideboard|from outside the game)\b
+transform|does|\bturn (target|it|that) [^.]{0,20}face down\b
+stat_set|does|\bbase power (perpetually )?becomes\b
+drawback|does|\bwhenever a player casts a spell, tap (name|this creature)\b
+summon|does|\btokens plus (a|an|one|two) [^.]{0,30}tokens? are created\b
+removal|does|\bowner puts it on (their choice of )?(the )?top or bottom of their library\b
+deck_position|does|\bowner puts it on (their choice of )?(the )?top or bottom of their library\b
+disable|does|\b(creatures|permanents) (played by your opponents |your opponents control )?enter tapped\b
+disable|does|\bplayers can't untap more than one\b
+heal|counters|\bwould cause its controller to gain life\b
+piercing|does|\bdamage [^.]{0,40}\bcan't be prevented\b
+!terrain|\blands?\b
+!terrain|\bdeserts?\b
+!terrain|\bforests?\b
+!terrain|\bmountains?\b

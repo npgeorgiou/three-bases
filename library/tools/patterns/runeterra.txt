@@ -39,3 +39,5 @@ resource_gain|does|\b(get|gain)s? (an? |\d+ )?(empty |extra )?mana gems?\b|\bref
 !upgrade|\bempowered\b
 stat_condition|does|\bempowered \d
 !activated|\bactivated
+!cost_condition|\b\d+[- ]cost\b
+!stat_multiply|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)

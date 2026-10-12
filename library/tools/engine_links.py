@@ -1,4 +1,4 @@
-"""Enabler -> payoff tags found through the combo validation set (tools/combos.tsv): payoff cards were tagged with what they DO,
+"""Enabler -> payoff tags found through the combo validation set (lib/combos.tsv): payoff cards were tagged with what they DO,
 not with what they WAIT FOR, so `combo` could not see the engine. Two wording rules add role 'benefits' (method engine_rule):
   trigger_watch  the trigger part of a clause ("Whenever a card is Exhausted, ...", "Whenever you lose HP ..."; not the card's own attack) names an effect:
                  the card benefits from that effect (Feel No Pain benefits exhaust).

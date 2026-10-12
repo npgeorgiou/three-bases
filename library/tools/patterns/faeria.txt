@@ -6,3 +6,4 @@ life_payment|cost|\bdeal \d+ damage to (this|yourself)\b
 in_hand_buff|does|\bwherever they are\b|\bin your (hand|deck)\b[^.]{0,30}\+\d+/\+\d+
 stat_condition|does|\bwith \d+ (attack|life) or (more|less)\b
 drawback|does|\bcan't harvest\b|\bcan only attack gods\b
+!ping|deal 1 damage
