@@ -38,6 +38,7 @@ for key, r in rv.items():
         for item in r.get('add', []):
             con, role = (item.split(':') + ['does'])[:2]
             c.execute("insert or ignore into entity_concepts values(?,?,?,?,?)", (e, con, role, 'claude_review', 'hand-mapped from the text'))
+            c.execute("update entity_concepts set method='claude_review' where entity=? and concept=? and role=? and method='text_pattern'", (e, con, role))   # a reviewed tag is no longer a pattern's
         n += 1
 c.commit()
 print(game, 'entries changed', n)

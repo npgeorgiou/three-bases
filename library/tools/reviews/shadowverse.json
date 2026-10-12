@@ -1613,5 +1613,25 @@
 "drop": [
 "banish"
 ]
+},
+"813801": {
+"add": [
+"stat_set"
+],
+"drop": []
+},
+"813904": {
+"add": [
+"deathtouch:grants"
+],
+"drop": []
+},
+"814105": {
+"add": [
+"cost_set",
+"stat_set",
+"in_hand_buff"
+],
+"drop": []
 }
 }

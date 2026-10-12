@@ -15,7 +15,7 @@ for con, role, p, g in q("SELECT concept, role, pattern, game FROM concept_patte
     except re.error: pass
 kwc = collections.defaultdict(set)
 for k, con in q("SELECT entity, concept FROM entity_concepts x JOIN entities e ON e.id=x.entity WHERE e.category='keyword' AND x.role IN ('does','grants')"): kwc[k].add(con)
-keep = set()   # tags the hand reviews confirmed (lib/regression.tsv, expect present) are never removed
+keep = set()   # tags the hand reviews confirmed (tools/regression.tsv, expect present) are never removed
 for line in open(os.path.join(here, 'regression.tsv'), encoding='utf-8'):
     f = line.rstrip('\n').split('\t')
     if len(f) >= 6 and f[5] == 'present' and f[4] in ('does', '*') and f[1].isdigit(): keep.add((int(f[1]), f[3]))

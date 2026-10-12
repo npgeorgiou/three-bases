@@ -1,7 +1,7 @@
 """Search helpers for the Three Bases inspiration library.
 Usage: python3 query.py <command> <args>   (see SEARCH_GUIDE.md)"""
 import sqlite3, json, sys, collections, os
-DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'three-bases-library.sqlite'))  # the database sits next to lib/
+DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'three-bases-library.sqlite'))  # the database sits next to tools/
 db = sqlite3.connect(DB)
 q = lambda s, *a: db.execute(s, a).fetchall()
 

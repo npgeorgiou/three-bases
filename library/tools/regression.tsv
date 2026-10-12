@@ -4,8 +4,6 @@ darkest_dungeon	759767	Camping Skill	activated	*	absent
 darkest_dungeon	759768	Corpse	blocking	*	absent
 darkest_dungeon	759768	Corpse	board_clog	does	present
 darkest_dungeon	759772	Debuff	temporary_effect	does	present
-darkest_dungeon	759779	Heart Attack	death_trigger	does	present
-darkest_dungeon	759779	Heart Attack	destroy	*	absent
 darkest_dungeon	759809	Monsters with High PROT	damage_over_time	benefits	present
 darkest_dungeon	759809	Monsters with High PROT	shield	*	absent
 darkest_dungeon	759814	Hallway Movement	passive	*	absent
@@ -2751,6 +2749,7 @@ dnd5e	761180	Heavy	ranged	*	absent
 dnd5e	761183	Range	debuff	*	absent
 dnd5e	761245	Color Spray	aoe_damage	*	absent
 dnd5e	761245	Color Spray	delayed	*	absent
+dnd5e	761378	Instant Summons	items_consumables	does	present
 dnd5e	761380	Invisibility	damage	*	absent
 dnd5e	761380	Invisibility	random_effect	*	absent
 dnd5e	761391	Longstrider	buff	does	present
@@ -3046,8 +3045,32 @@ dnd5e	762190	Step of the Wind	zone_of_control	does	absent
 dnd5e	762190	Step of the Wind	zone_of_control	counters	present
 dnd5e	762265	Flexible Casting: Creating Spell Slots	resource_conversion	does	present
 dnd5e	762265	Flexible Casting: Creating Spell Slots	transform	*	absent
+dnd5e	815505	Darkvision	information	does	present
+dnd5e	815509	Telepathic Bond	information	does	present
+dnd5e	815511	Transport via Plants	movement	does	present
+dnd5e	815512	True Seeing	information	does	present
+dnd5e	815512	True Seeing	stealth	counters	present
+dnd5e	815513	Water Breathing	terrain	benefits	present
+dnd5e	815519	Magical Secrets	deckbuilding_effect	does	present
+dnd5e	815519	Magical Secrets	type_grant	does	present
+dnd5e	815533	Feral Senses	information	does	present
+dnd5e	815533	Feral Senses	stealth	counters	present
+dnd5e	815536	Draconic Spells	deckbuilding_effect	does	present
+dnd5e	815537	Eldritch Invocations	deckbuilding_effect	does	present
+dnd5e	815544	Darkvision (60 ft.)	information	does	present
+dnd5e	815545	Darkvision (120 ft.)	information	does	present
+dnd5e	815592	Monastic Tradition	upgrade	does	present
+dnd5e	815593	Monastic Tradition feature	upgrade	does	present
+dnd5e	815596	Sacred Oath	upgrade	does	present
+dnd5e	815600	Aura improvements	aura	benefits	present
+dnd5e	815600	Aura improvements	upgrade	does	present
+dnd5e	815601	Spellcasting: Ranger	upgrade	does	present
 dnd5e	815620	Eldritch Invocation: Eldritch Spear	ranged	does	present
 dnd5e	815620	Eldritch Invocation: Eldritch Spear	spell_power	does	present
+dnd5e	815639	Arcane Tradition	upgrade	does	present
+dnd5e	815640	Arcane Tradition feature	upgrade	does	present
+dnd5e	815642	Darkvision	information	does	present
+dnd5e	815643	Dwarven Combat Training	attack_mod	does	present
 duelyst	741536	Infiltrate	board_clog	*	absent
 duelyst	741538	MECHAZ0R	count_payoff	does	present
 duelyst	741543	Sentinel	trap_secret	does	present
@@ -5264,6 +5287,16 @@ hearthstone	748018	Resizing Pouch	resource_gain	*	absent
 hearthstone	748021	Moonfang	damage	*	absent
 hearthstone	748021	Moonfang	damage_reduction	does	present
 hearthstone	748021	Moonfang	life_payment	cost	absent
+hearthstone	797340	Fandral Staghelm	modal_choice	benefits	present
+hearthstone	797524	Breakout	haste	grants	present
+hearthstone	797524	Breakout	scope_multi	does	present
+hearthstone	798214	Starship Pieces	merge_attach	does	present
+hearthstone	798240	Launch Starship	summon	does	present
+hearthstone	798451	Fork	haste	grants	present
+hearthstone	799243	Nightmare Fandral	cost_increase	does	present
+hearthstone	799363	Bold Charge	haste	grants	present
+hearthstone	800790	The Badlands Bandits	generate_cards	does	present
+hearthstone	800790	The Badlands Bandits	summon	does	present
 hs_battlegrounds	748051	Spirit Swap	swap	does	present
 hs_battlegrounds	748053	Power of the Storm	selection	does	present
 hs_battlegrounds	748067	Devour	buff	does	present
@@ -5319,6 +5352,7 @@ hs_battlegrounds	748686	Sun Screener	symmetric_effect	does	present
 hs_battlegrounds	748694	Malevolent Mirage	scope_global	*	absent
 hs_battlegrounds	748695	Mellow Mirage	scope_global	*	absent
 hs_battlegrounds	748705	Hot-Air Surveyor	repeat_trigger	does	present
+hs_battlegrounds	748709	Fill Your Plate	generate_cards	does	present
 hs_battlegrounds	748728	Eternal Portrait	items_consumables	does	present
 hs_battlegrounds	748729	Automaton Portrait	items_consumables	does	present
 hs_battlegrounds	748730	Rivendare Portrait	items_consumables	does	present
@@ -5759,6 +5793,12 @@ hs_battlegrounds	750362	Pass	team_play	does	present
 hs_battlegrounds	750364	Buddy	generate_cards	does	present
 hs_battlegrounds	750365	Timewarp	multiple_resources	does	present
 hs_battlegrounds	750365	Timewarp	shop_gold	does	present
+hs_battlegrounds	800804	Wondrous Wisdomball	random_effect	does	present
+hs_battlegrounds	800804	Wondrous Wisdomball	shop_gold	does	present
+hs_battlegrounds	800812	Quests	quests	does	present
+hs_battlegrounds	800819	Knockoff Wisdomball	shop_gold	does	present
+hs_battlegrounds	800829	Guiding Candle	shop_gold	does	present
+hs_battlegrounds	800846	Trailblazer Sticker	modal_choice	benefits	present
 inscryption	740614	Annoying	enemy_benefit	does	present
 inscryption	740620	Bellist	null_body	does	present
 inscryption	740620	Bellist	slot_filler	does	present
@@ -5950,17 +5990,12 @@ inscryption	741047	The Trapper	terrain	*	absent
 into_the_breach	760829	Flying	evasion	*	absent
 into_the_breach	760836	Fire	disable	*	absent
 into_the_breach	760836	Fire	movement	*	absent
-into_the_breach	760838	Not Powered	drawback	does	present
 into_the_breach	760839	Webbed	disable	*	absent
 into_the_breach	760839	Webbed	immobilize	does	present
-into_the_breach	760840	Electric Smoke	attack_lock	does	present
-into_the_breach	760840	Electric Smoke	disable	*	absent
 into_the_breach	760842	Smoke	attack_lock	does	present
 into_the_breach	760842	Smoke	disable	*	absent
 into_the_breach	760843	Submerged	attack_lock	does	present
 into_the_breach	760843	Submerged	disable	*	absent
-into_the_breach	760844	Submerged in A.C.I.D.	attack_lock	does	present
-into_the_breach	760845	Submerged in Lava	attack_lock	does	present
 into_the_breach	760851	Hive Targeted	damage_over_time	does	present
 into_the_breach	760867	Water Tile	evasion	*	absent
 into_the_breach	760867	Water Tile	terrain	does	present
@@ -7072,8 +7107,8 @@ marvel_snap	796208	Eternity Range	board_clog	does	present
 marvel_snap	796208	Eternity Range	null_body	does	present
 marvel_snap	796210	Fisk Tower	movement	counters	present
 marvel_snap	796213	Fogwell's Gym	stakes_wager	does	present
-marvel_snap	796217	Genosha	destroy	does	present
 marvel_snap	796217	Genosha	destroy	benefits	absent
+marvel_snap	796217	Genosha	destroy	does	present
 marvel_snap	796217	Genosha	sacrifice	does	present
 marvel_snap	796220	Great Web	forced_movement	does	present
 marvel_snap	796223	Hellfire Club	cost_condition	does	present
@@ -7198,8 +7233,12 @@ mtg	765929	Suspect	cant_block	does	present
 mtg	765929	Suspect	debuff	*	absent
 mtg	766155	Wither	permanent_loss	does	present
 mtg	766161	Detain	temporary_effect	does	present
+mtg	768669	Entangling Trap	disable	does	present
+mtg	768669	Entangling Trap	random_effect	does	present
 mtg	802891	Commissar Severina Raine	rows	*	absent
 mtg	806574	Jenny, Generated Anomaly	stat_multiply	*	absent
+mtg	815843	Citizen	type_grant	does	present
+mtg	816029	Elemental	type_grant	does	present
 runeterra	750379	Elemental Skill	activated	*	absent
 runeterra	750379	Elemental Skill	spell_speed	does	present
 runeterra	750392	Weakest	cost_condition	*	absent
@@ -7214,8 +7253,6 @@ runeterra	750460	Empowered	stat_condition	does	present
 runeterra	750466	Everywhere	in_hand_buff	does	present
 runeterra	750468	Rally	extra_turn	*	absent
 runeterra	750474	Ambush	cost_condition	*	absent
-runeterra	750478	Charm	temporary_buff	*	absent
-runeterra	750478	Charm	temporary_effect	does	present
 runeterra	750486	Recall	return_to_hand	does	present
 runeterra	750493	Death Mark	debuff	does	present
 runeterra	750529	Solitary Monk	scope_multi	does	present
@@ -7614,8 +7651,8 @@ shadowverse	754120	Slaughtering Dragonewt	board_wipe	*	absent
 shadowverse	754120	Slaughtering Dragonewt	mill	does	present
 shadowverse	754126	Godfire Phoenix	drawback	does	present
 shadowverse	754133	Dragonskull Bludgeoner	damage_reduction	does	present
-shadowverse	754182	Minthe of the Underworld	graveyard	does	present
 shadowverse	754182	Minthe of the Underworld	graveyard	cost	absent
+shadowverse	754182	Minthe of the Underworld	graveyard	does	present
 shadowverse	754198	Mummy Chef	sacrifice	does	present
 shadowverse	754218	Wandering Plaguebearer	sacrifice	does	present
 shadowverse	754224	Mirror Ghost	steal	does	present
@@ -7839,8 +7876,13 @@ shadowverse	756112	Ghost Town Apparition	symmetric_effect	does	present
 shadowverse	756112	Ghost Town Apparition	transform	does	present
 shadowverse	756114	Purson	sacrifice	does	present
 shadowverse	756114	Purson	upgrade	does	present
+shadowverse	813801	Demon's Dress	stat_set	does	present
+shadowverse	813904	False Slash	deathtouch	grants	present
 shadowverse	813966	Anne's Summoning	banish	*	absent
 shadowverse	813966	Anne's Summoning	self_destruct	does	present
+shadowverse	814105	Amaryllis's Ultimate	cost_set	does	present
+shadowverse	814105	Amaryllis's Ultimate	in_hand_buff	does	present
+shadowverse	814105	Amaryllis's Ultimate	stat_set	does	present
 shadowverse	814335	Ephemeral Moon	stat_set	does	present
 sts1	757509	Lock-On	mark_target	does	present
 sts1	757510	Opener	play_restriction	does	present
@@ -8420,8 +8462,8 @@ sts1	758003	Paper Krane	debuff	counters	absent
 sts1	758003	Paper Krane	debuff	benefits	present
 sts1	758003	Paper Krane	items_consumables	does	present
 sts1	758003	Paper Krane	passive	does	present
-sts1	758004	Paper Phrog	debuff	counters	absent
 sts1	758004	Paper Phrog	debuff	benefits	present
+sts1	758004	Paper Phrog	debuff	counters	absent
 sts1	758004	Paper Phrog	items_consumables	does	present
 sts1	758004	Paper Phrog	passive	does	present
 sts1	758005	Peace Pipe	items_consumables	does	present
@@ -9067,8 +9109,8 @@ sts2	758455	Bolas	recycle	does	present
 sts2	758456	Bombardment	free_play	does	present
 sts2	758456	Bombardment	recycle	does	present
 sts2	758457	Bone Shards	sacrifice	does	present
-sts2	758457	Bone Shards	summon	benefits	absent
 sts2	758457	Bone Shards	summon	cost	present
+sts2	758457	Bone Shards	summon	benefits	absent
 sts2	758458	Boost Away	drawback	does	present
 sts2	758460	Borrowed Time	drawback	does	present
 sts2	758462	Brand	sacrifice	does	present
@@ -9283,8 +9325,8 @@ sts2	758752	Outbreak	count_payoff	does	present
 sts2	758754	Overclock	damage_over_time	*	absent
 sts2	758754	Overclock	drawback	does	present
 sts2	758755	Pact's End	condition	does	present
-sts2	758755	Pact's End	exhaust	grants	absent
 sts2	758755	Pact's End	exhaust	benefits	present
+sts2	758755	Pact's End	exhaust	grants	absent
 sts2	758756	Pagestorm	draw	does	present
 sts2	758757	Pale Blue Dot	combo_sequence	does	present
 sts2	758759	Panic Button	drawback	does	present
@@ -10831,6 +10873,7 @@ wh_40k_10e	786597	Psychic Shadow	terrain	*	absent
 wh_40k_10e	786604	By Instinct Alone	stealth	*	absent
 wh_40k_10e	786634	Autodivinator	drawback	*	absent
 wh_40k_10e	786676	Depleted Transmaterial Reserves	drawback	does	present
+wh_40k_10e	786840	Esteemed Leader	random_effect	benefits	present
 wh_40k_10e	786840	Esteemed Leader	stress_morale	*	absent
 wh_40k_10e	786888	Betrayed	destroy	*	absent
 wh_40k_10e	786888	Betrayed	drawback	does	present
@@ -10841,6 +10884,14 @@ wh_40k_10e	786952	Disgraced	drawback	does	present
 wh_40k_10e	786952	Disgraced	mark_target	*	absent
 wh_40k_10e	786952	Disgraced	zone_of_control	*	absent
 wh_40k_10e	787018	Evasive	piercing	*	absent
+wh_40k_10e	815306	Servants of the Whispering God	deckbuilding_effect	does	present
+wh_40k_10e	815306	Servants of the Whispering God	type_grant	does	present
+wh_40k_10e	815318	Path of the Witch	type_grant	does	present
+wh_40k_10e	815335	Touched by the Warp	type_grant	does	present
+wh_40k_10e	815380	Oracular Gifts	spawn_blocking	does	present
+wh_40k_10e	815405	Keywords	type_grant	does	present
+wh_40k_10e	815406	Kill Teams	attack_mod	does	present
+wh_40k_10e	815469	Keywords	type_grant	does	present
 wh_aos_4th	791251	Grapple-net Launcher	debuff	does	present
 wh_aos_4th	791251	Grapple-net Launcher	zone_of_control	*	absent
 wh_aos_4th	791257	Frenzied Restoration	revive	does	present
@@ -11560,6 +11611,9 @@ wh_killteam	790443	Abjuror	cant_attack	*	absent
 wh_killteam	790543	Navis Sergeant-At-Arms	transform	*	absent
 wh_killteam	790714	Plague Marine Champion	heal	does	present
 wh_killteam	790917	Aberrant	debuff	*	absent
+wh_killteam	814792	Second in Command	death_trigger	does	present
+wh_killteam	814792	Second in Command	type_grant	does	present
+wh_killteam	814795	Flip Belts	movement	does	present
 wh_underworlds	762752	Blood Offering	life_payment	cost	present
 wh_underworlds	762762	Berserk Charge	items_consumables	does	present
 wh_underworlds	762763	Bloodslick	items_consumables	does	present

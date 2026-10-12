@@ -1,7 +1,7 @@
 #!/bin/sh
 # Incremental build. The raw corpus of the first build is gone and not needed: three-bases-library.sqlite is the base for all work.
 # One-time loads (Marvel Snap, Underworlds warscrolls, Runeterra, Hearthstone and Battlegrounds created cards, the Oct 2026 loads)
-# are already in the database; their scripts stay in lib/ for reference. One-time fixes of 12 Oct 2026 are in lib/fixes/ (f01-f08);
+# are already in the database; their scripts and data files are removed. One-time fixes of 12 Oct 2026 are in tools/fixes/ (f01-f12);
 # the idempotent ones (f03, f05, f07) are also build steps.
 # Usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]
 #   Without loads: runs every step below on a copy of <in> (tags, links and pairs are re-derived for all entries).

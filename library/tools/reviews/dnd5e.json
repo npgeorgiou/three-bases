@@ -1738,5 +1738,135 @@
 "drop": [
 "on_attack"
 ]
+},
+"815519": {
+"add": [
+"deckbuilding_effect",
+"type_grant"
+],
+"drop": []
+},
+"815533": {
+"add": [
+"information",
+"stealth:counters"
+],
+"drop": []
+},
+"815536": {
+"add": [
+"deckbuilding_effect"
+],
+"drop": []
+},
+"815537": {
+"add": [
+"deckbuilding_effect"
+],
+"drop": []
+},
+"815544": {
+"add": [
+"information"
+],
+"drop": []
+},
+"815545": {
+"add": [
+"information"
+],
+"drop": []
+},
+"815592": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"815593": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"815596": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"815600": {
+"add": [
+"upgrade",
+"aura:benefits"
+],
+"drop": []
+},
+"815601": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"815639": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"815640": {
+"add": [
+"upgrade"
+],
+"drop": []
+},
+"815642": {
+"add": [
+"information"
+],
+"drop": []
+},
+"815643": {
+"add": [
+"attack_mod"
+],
+"drop": []
+},
+"761378": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"815505": {
+"add": [
+"information"
+],
+"drop": []
+},
+"815509": {
+"add": [
+"information"
+],
+"drop": []
+},
+"815511": {
+"add": [
+"movement"
+],
+"drop": []
+},
+"815512": {
+"add": [
+"information",
+"stealth:counters"
+],
+"drop": []
+},
+"815513": {
+"add": [
+"terrain:benefits"
+],
+"drop": []
 }
 }

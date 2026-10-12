@@ -2764,5 +2764,18 @@
 "summon"
 ],
 "drop": []
+},
+"814792": {
+"add": [
+"death_trigger",
+"type_grant"
+],
+"drop": []
+},
+"814795": {
+"add": [
+"movement"
+],
+"drop": []
 }
 }

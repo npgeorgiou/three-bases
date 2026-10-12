@@ -2788,5 +2788,42 @@
 "multiple_resources"
 ],
 "drop": []
+},
+"800812": {
+"add": [
+"quests"
+],
+"drop": []
+},
+"800829": {
+"add": [
+"shop_gold"
+],
+"drop": []
+},
+"800846": {
+"add": [
+"modal_choice:benefits"
+],
+"drop": []
+},
+"800804": {
+"add": [
+"shop_gold",
+"random_effect"
+],
+"drop": []
+},
+"800819": {
+"add": [
+"shop_gold"
+],
+"drop": []
+},
+"748709": {
+"add": [
+"generate_cards"
+],
+"drop": []
 }
 }

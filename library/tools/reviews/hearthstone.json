@@ -6144,5 +6144,55 @@
 "deckbuilding_effect"
 ],
 "drop": []
+},
+"797524": {
+"add": [
+"haste:grants",
+"scope_multi"
+],
+"drop": []
+},
+"798240": {
+"add": [
+"summon"
+],
+"drop": []
+},
+"799363": {
+"add": [
+"haste:grants"
+],
+"drop": []
+},
+"800790": {
+"add": [
+"generate_cards",
+"summon"
+],
+"drop": []
+},
+"797340": {
+"add": [
+"modal_choice:benefits"
+],
+"drop": []
+},
+"798214": {
+"add": [
+"merge_attach"
+],
+"drop": []
+},
+"798451": {
+"add": [
+"haste:grants"
+],
+"drop": []
+},
+"799243": {
+"add": [
+"cost_increase"
+],
+"drop": []
 }
 }

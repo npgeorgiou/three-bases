@@ -248,7 +248,9 @@
 "drop": []
 },
 "786840": {
-"add": [],
+"add": [
+"random_effect:benefits"
+],
 "drop": [
 "stress_morale"
 ]
@@ -318,5 +320,48 @@
 "delayed",
 "passive"
 ]
+},
+"815318": {
+"add": [
+"type_grant"
+],
+"drop": []
+},
+"815335": {
+"add": [
+"type_grant"
+],
+"drop": []
+},
+"815380": {
+"add": [
+"spawn_blocking"
+],
+"drop": []
+},
+"815306": {
+"add": [
+"deckbuilding_effect",
+"type_grant"
+],
+"drop": []
+},
+"815405": {
+"add": [
+"type_grant"
+],
+"drop": []
+},
+"815406": {
+"add": [
+"attack_mod"
+],
+"drop": []
+},
+"815469": {
+"add": [
+"type_grant"
+],
+"drop": []
 }
 }

@@ -1,5 +1,5 @@
 """Precision estimate per concept and game, from the hand reviews (no extra reading needed). On every entry a review touched
-(any line of lib/regression.tsv), an automatic tag that is still there was judged right (the reviewer read the entry and kept it),
+(any line of tools/regression.tsv), an automatic tag that is still there was judged right (the reviewer read the entry and kept it),
 and a reviewed drop was an automatic tag judged wrong (counted only while a current pattern would still make that tag, so a
 pattern fixed later stops counting against the concept); a reviewed add with no automatic tag is one the patterns missed.
 Table concept_precision(game, concept, kept, dropped, missed, precision, recall) for cells with 10+ judged automatic tags.

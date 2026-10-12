@@ -10,5 +10,24 @@
 "drop": [
 "stat_multiply"
 ]
+},
+"768669": {
+"add": [
+"disable",
+"random_effect"
+],
+"drop": []
+},
+"815843": {
+"add": [
+"type_grant"
+],
+"drop": []
+},
+"816029": {
+"add": [
+"type_grant"
+],
+"drop": []
 }
 }
