@@ -1,0 +1,3 @@
+!death_count|^rulebook: when a card bearing this sigil (perishes|dies)
+!trap_secret|\btrap\b
+!trap_secret|\bsecret\b

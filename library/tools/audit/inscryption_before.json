@@ -1,0 +1,281 @@
+{
+"740615": [
+"activated",
+"generate_cards",
+"on_play",
+"tribal"
+],
+"740830": [
+"direct_damage",
+"evasion"
+],
+"741009": [
+"activated",
+"death_trigger:benefits",
+"destroy",
+"friendly_fire",
+"items_consumables"
+],
+"740683": [
+"counterattack",
+"ping"
+],
+"740675": [
+"buff",
+"permanent_loss"
+],
+"741056": [
+"forced_movement",
+"items_consumables",
+"scope_global"
+],
+"740994": [
+"items_consumables",
+"temporary_effect"
+],
+"740877": [
+"forced_movement",
+"turn_end"
+],
+"740911": [
+"death_count",
+"death_trigger",
+"multiple_resources",
+"summon",
+"terrain"
+],
+"740659": [
+"forced_movement",
+"turn_end"
+],
+"740916": [
+"activated",
+"blocking",
+"multiple_resources",
+"null_body",
+"on_play",
+"passive",
+"resource_gain",
+"terrain"
+],
+"740687": [
+"target_choice"
+],
+"740996": [
+"shop_gold"
+],
+"740654": [
+"death_count",
+"death_trigger",
+"generate_cards",
+"random_effect"
+],
+"740652": [
+"on_play",
+"shield:grants",
+"side_deck:benefits"
+],
+"740872": [
+"board_clog",
+"drawback",
+"on_play",
+"passive",
+"slot_filler",
+"summon",
+"symmetric_effect"
+],
+"740753": [
+"activated",
+"adjacency",
+"aoe_damage",
+"blocking",
+"death_count",
+"death_trigger",
+"friendly_fire",
+"null_body",
+"terrain"
+],
+"740655": [
+"death_count",
+"death_trigger",
+"generate_cards",
+"link_formation",
+"random_effect"
+],
+"740793": [
+"copy",
+"generate_cards",
+"on_play"
+],
+"740681": [
+"graveyard",
+"passive",
+"resource_gain"
+],
+"740790": [
+"fodder",
+"on_attack",
+"self_destruct",
+"turn_end"
+],
+"740817": [
+"activated",
+"blocking",
+"multiple_resources",
+"null_body",
+"on_play",
+"passive",
+"resource_gain",
+"terrain"
+],
+"740688": [
+"link_formation",
+"summon",
+"turn_end"
+],
+"740957": [
+"death_count",
+"death_trigger",
+"high_cost:benefits",
+"null_body",
+"resource_gain",
+"sacrifice:benefits",
+"trap_secret"
+],
+"740809": [
+"multiple_resources:benefits",
+"self_destruct",
+"turn_end",
+"turn_start"
+],
+"740695": [
+"on_damaged",
+"stat_swap"
+],
+"740743": [
+"activated",
+"graveyard:cost",
+"null_body",
+"permanent_growth"
+],
+"740737": [
+"activated",
+"multiple_resources",
+"null_body",
+"on_play",
+"passive",
+"resource_gain"
+],
+"740641": [
+"counterattack",
+"multi_attack"
+],
+"740956": [
+"blocking",
+"null_body",
+"terrain"
+],
+"740692": [
+"activated",
+"death_count",
+"death_trigger",
+"destroy",
+"generate_cards",
+"lanes",
+"on_kill",
+"passive",
+"trap_secret"
+],
+"740711": [
+"hand_size",
+"variable_stats"
+],
+"741027": [
+"damage",
+"enemy_benefit",
+"passive"
+],
+"741046": [
+"deck_modification",
+"passive",
+"shop_gold"
+],
+"741045": [
+"boss_phases"
+],
+"740935": [
+"counterattack",
+"direct_damage",
+"evasion",
+"fatigue",
+"immunity",
+"trap_secret"
+],
+"740639": [
+"activated",
+"generate_cards",
+"graveyard:cost"
+],
+"740676": [
+"activated",
+"random_effect",
+"variable_stats"
+],
+"741053": [
+"null_body",
+"passive",
+"tribal"
+],
+"740665": [
+"deathtouch:counters",
+"debuff:counters",
+"immunity"
+],
+"740998": [
+"deck_condition",
+"enemy_benefit",
+"passive",
+"selection"
+],
+"741048": [
+"boss_phases",
+"death_count",
+"life_payment:cost",
+"rule_change"
+],
+"740617": [
+"aura",
+"link_formation"
+],
+"740669": [
+"blocking",
+"evasion:counters"
+],
+"741001": [
+"items_consumables",
+"resource_gain"
+],
+"740714": [
+"lanes",
+"variable_stats"
+],
+"740649": [
+"aura",
+"multiple_resources:benefits"
+],
+"740621": [
+"adjacency",
+"lane_identity",
+"multi_target_attack"
+],
+"740653": [
+"link_formation",
+"side_deck",
+"summon",
+"turn_end"
+],
+"740729": [
+"direct_damage",
+"evasion"
+]
+}

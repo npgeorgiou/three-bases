@@ -1,0 +1,736 @@
+{
+ "740615": {
+  "A": {
+   "wrong": [
+    "activated",
+    "tribal"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "activated",
+    "tribal"
+   ],
+   "missed": []
+  }
+ },
+ "740830": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741009": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "sacrifice: destroys your own card for its death effects"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "sacrifice: destroys your own card for its death effects"
+   ]
+  }
+ },
+ "740683": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740675": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "death_trigger: if a card bearing this sigil perishes",
+    "upgrade: player applies the sigil to a chosen card at the event"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "death_trigger: if a card bearing this sigil perishes",
+    "upgrade: player applies the sigil to a chosen card at the event"
+   ]
+  }
+ },
+ "741056": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740994": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "generate_cards: creature created in your hand",
+    "destroy: Scissors destroy an adversary card",
+    "direct_damage: weight on the scales earns damage",
+    "resource_gain: gain 4 Bones / refill Energy",
+    "disable: adversary skips their next turn",
+    "steal: hook an enemy card and take it",
+    "evasion: creatures attack as though Airborne",
+    "summon: Explode Bots on all empty spaces",
+    "shield: bots get Nano Armor",
+    "forced_movement: all creatures rotate clockwise",
+    "silence: cards lose all sigils",
+    "tutor: draw any one card from deck"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "generate_cards: creature created in your hand",
+    "destroy: Scissors destroy an adversary card",
+    "direct_damage: weight on the scales earns damage",
+    "resource_gain: gain 4 Bones / refill Energy",
+    "disable: adversary skips their next turn",
+    "steal: hook an enemy card and take it",
+    "evasion: creatures attack as though Airborne",
+    "summon: Explode Bots on all empty spaces",
+    "shield: bots get Nano Armor",
+    "forced_movement: all creatures rotate clockwise",
+    "silence: cards lose all sigils",
+    "tutor: draw any one card from deck"
+   ]
+  }
+ },
+ "740877": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740911": {
+  "A": {
+   "wrong": [
+    "death_count"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740659": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740916": {
+  "A": {
+   "wrong": [
+    "activated",
+    "blocking",
+    "on_play"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "activated",
+    "blocking",
+    "on_play"
+   ],
+   "missed": []
+  }
+ },
+ "740687": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740996": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740654": {
+  "A": {
+   "wrong": [
+    "death_count"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "death_count"
+   ],
+   "missed": []
+  }
+ },
+ "740652": {
+  "A": {
+   "wrong": [
+    "side_deck:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "side_deck:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "740872": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  }
+ },
+ "740753": {
+  "A": {
+   "wrong": [
+    "activated",
+    "blocking",
+    "death_count"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "activated",
+    "blocking",
+    "death_count"
+   ],
+   "missed": []
+  }
+ },
+ "740655": {
+  "A": {
+   "wrong": [
+    "death_count"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "death_count"
+   ],
+   "missed": []
+  }
+ },
+ "740793": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740681": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "death_trigger: opposing creatures grant Bones upon death"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "death_trigger: opposing creatures grant Bones upon death"
+   ]
+  }
+ },
+ "740790": {
+  "A": {
+   "wrong": [
+    "turn_end"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "turn_end"
+   ],
+   "missed": []
+  }
+ },
+ "740817": {
+  "A": {
+   "wrong": [
+    "activated",
+    "blocking",
+    "on_play"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "activated",
+    "blocking",
+    "on_play"
+   ],
+   "missed": []
+  }
+ },
+ "740688": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740957": {
+  "A": {
+   "wrong": [
+    "death_count",
+    "high_cost:benefits",
+    "null_body",
+    "sacrifice:benefits",
+    "trap_secret"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits",
+    "sacrifice:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "740809": {
+  "A": {
+   "wrong": [
+    "multiple_resources:benefits",
+    "turn_end",
+    "turn_start"
+   ],
+   "missed": [
+    "drawback: perishes without gems on the board"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "multiple_resources:benefits",
+    "turn_end",
+    "turn_start"
+   ],
+   "missed": [
+    "drawback: perishes without gems on the board"
+   ]
+  }
+ },
+ "740695": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740743": {
+  "A": {
+   "wrong": [
+    "null_body"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "null_body"
+   ],
+   "missed": []
+  }
+ },
+ "740737": {
+  "A": {
+   "wrong": [
+    "activated",
+    "null_body",
+    "on_play"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "activated",
+    "null_body",
+    "on_play"
+   ],
+   "missed": []
+  }
+ },
+ "740641": {
+  "A": {
+   "wrong": [
+    "counterattack"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "counterattack"
+   ],
+   "missed": []
+  }
+ },
+ "740956": {
+  "A": {
+   "wrong": [
+    "blocking"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "blocking"
+   ],
+   "missed": []
+  }
+ },
+ "740692": {
+  "A": {
+   "wrong": [
+    "activated",
+    "death_count",
+    "on_kill",
+    "passive",
+    "trap_secret"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "activated",
+    "death_count",
+    "on_kill",
+    "passive",
+    "trap_secret"
+   ],
+   "missed": []
+  }
+ },
+ "740711": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741027": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "aura: adjacency to a Leader increases Power",
+    "debuff: weakened by opposition to a Stinky creature",
+    "buff: Power increased for the run by Campfire/Mycologist",
+    "variable_stats: Power defined by Variable Stats",
+    "permanent_growth: Ouroboros gains 1 Power each time it perishes"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "aura: adjacency to a Leader increases Power",
+    "debuff: weakened by opposition to a Stinky creature",
+    "buff: Power increased for the run by Campfire/Mycologist",
+    "variable_stats: Power defined by Variable Stats",
+    "permanent_growth: Ouroboros gains 1 Power each time it perishes",
+    "enemy_benefit: opposing Annoying creature increases Power"
+   ]
+  }
+ },
+ "741046": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "boss_phases: Trader takes over in Phase 2",
+    "resource_conversion: trade Pelts for cards",
+    "random_ability: random cards with random extra Sigils"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "boss_phases: Trader takes over in Phase 2",
+    "resource_conversion: trade Pelts for cards",
+    "random_ability: random cards with random extra Sigils"
+   ]
+  }
+ },
+ "741045": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "board_wipe: kills all your cards on the table",
+    "transform: replaces them with Gold Nuggets",
+    "random_effect: 66%/33% card odds",
+    "selection: pick one of 3 boulders"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "board_wipe: kills all your cards on the table",
+    "transform: replaces them with Gold Nuggets",
+    "random_effect: 66%/33% card odds",
+    "selection: pick one of 3 boulders"
+   ]
+  }
+ },
+ "740935": {
+  "A": {
+   "wrong": [
+    "counterattack",
+    "fatigue"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "counterattack",
+    "fatigue",
+    "trap_secret"
+   ],
+   "missed": []
+  }
+ },
+ "740639": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740676": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741053": {
+  "A": {
+   "wrong": [
+    "null_body"
+   ],
+   "missed": [
+    "type_grant: Amalgam belongs to all Tribes"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "null_body"
+   ],
+   "missed": [
+    "type_grant: Amalgam belongs to all Tribes"
+   ]
+  }
+ },
+ "740665": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740998": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": [
+    "random_ability: rewards infused with random Sigils",
+    "deck_modification: chosen creature joins the deck"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "enemy_benefit",
+    "passive"
+   ],
+   "missed": [
+    "random_ability: rewards infused with random Sigils",
+    "deck_modification: chosen creature joins the deck"
+   ]
+  }
+ },
+ "741048": {
+  "A": {
+   "wrong": [
+    "death_count",
+    "life_payment:cost"
+   ],
+   "missed": [
+    "turn_start: every time your turn starts",
+    "on_play: when a card is played",
+    "death_trigger: when a card dies",
+    "random_effect: a random card takes damage / is played",
+    "shield: one of my cards gains Nano Armor",
+    "summon: I play a L33pB0t",
+    "aoe_damage: all cards take 1 damage",
+    "direct_damage: you lose 1 life"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "death_count",
+    "life_payment:cost"
+   ],
+   "missed": [
+    "turn_start: every time your turn starts",
+    "on_play: when a card is played",
+    "death_trigger: when a card dies",
+    "random_effect: a random card takes damage / is played",
+    "shield: one of my cards gains Nano Armor",
+    "summon: I play a L33pB0t",
+    "aoe_damage: all cards take 1 damage",
+    "direct_damage: you lose 1 life"
+   ]
+  }
+ },
+ "740617": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740669": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741001": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740714": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740649": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740621": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "740653": {
+  "A": {
+   "wrong": [
+    "side_deck"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "side_deck"
+   ],
+   "missed": []
+  }
+ },
+ "740729": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ }
+}
