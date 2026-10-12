@@ -27,3 +27,6 @@ transform|does|\bmorph(s|ing)?\b
 repeat_trigger|does|\b(trigger|cast)s? an extra time\b|\bhappen twice\b|\bsummon twice as many\b
 # Duos: "Pass" gives a card to your teammate; "your team" is you and your partner
 team_play|does|\byour team\b|\b(after|when|whenever|once|first time) (you|your team|this is) (pass(es|ed)?|passed)\b|\bpass (a|an|the|this|it|copies|a copy|a plain copy|a different)\b|\bpassed\b
+# Freeze keeps the tavern's offers for next turn: a shop selection, not a disable
+!disable|\bfreez
+selection|does|\bfreez(e|es)\b

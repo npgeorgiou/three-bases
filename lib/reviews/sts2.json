@@ -4988,7 +4988,7 @@
 },
 "758714": {
 "add": [
-"on_ally_death"
+"death_count"
 ],
 "drop": []
 },

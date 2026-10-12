@@ -15,7 +15,7 @@ for key, r in rv.items():
     for i in ids:
         if i in text: targets |= {i} | set(bytext.get(text[i], []))
     # a keyword's correction also reaches the entries that only inherited the concept from it (method via_keyword)
-    kwi = [i for i in ids if q("select category from entities where id=?", i)[0][0] == 'keyword']
+    kwi = [i for i in ids if (q("select category from entities where id=?", i) or [(None,)])[0][0] == 'keyword']   # ids merged away later are skipped
     for k in kwi:
         linked = [x for (x,) in q("select distinct l.src from entity_links l join entities e on e.id=l.src where l.dst=? and e.game=? and l.rel in ('has_keyword','mentions_keyword','grants_keyword')", k, game)]
         linked_add = [x for (x,) in q("select distinct l.src from entity_links l join entities e on e.id=l.src where l.dst=? and e.game=? and l.rel in ('has_keyword','mentions_keyword')", k, game)]

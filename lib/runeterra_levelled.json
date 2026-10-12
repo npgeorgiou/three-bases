@@ -1,0 +1,2035 @@
+{
+"_source": "Riot Legends of Runeterra Data Dragon set files (mirrored at github.com/noxelisdev/LoR_DDragon_Set1..Set9): levelled champion cards (non-collectible, supertype Champion, type Unit).",
+"cards": [
+{
+"code": "01IO015T1",
+"base": "01IO015",
+"name": "Yasuo",
+"regions": [
+"Ionia"
+],
+"cost": 4,
+"attack": 5,
+"health": 5,
+"keywords": [
+"Quick Attack"
+],
+"text": "When you Stun or Recall an enemy, I strike it."
+},
+{
+"code": "01IO041T1",
+"base": "01IO041",
+"name": "Karma",
+"regions": [
+"Ionia"
+],
+"cost": 5,
+"attack": 5,
+"health": 4,
+"keywords": [
+"Imbue"
+],
+"text": "Round End: Create in hand a random spell from your regions.\r\nWhen you play a spell, copy it with the same targets."
+},
+{
+"code": "01IO009T2",
+"base": "01IO009",
+"name": "Zed",
+"regions": [
+"Ionia"
+],
+"cost": 3,
+"attack": 4,
+"health": 3,
+"keywords": [
+"Quick Attack"
+],
+"text": "Attack: Summon an attacking Living Shadow with my stats and positive keywords."
+},
+{
+"code": "01IO032T1",
+"base": "01IO032",
+"name": "Shen",
+"regions": [
+"Ionia"
+],
+"cost": 4,
+"attack": 4,
+"health": 6,
+"keywords": [
+"Barrier",
+"Support"
+],
+"text": "Support: Give my supported ally Barrier this round.\r\nWhen an ally gets Barrier, give it +3|+0 this round."
+},
+{
+"code": "01NX020T3",
+"base": "01NX020",
+"name": "Draven",
+"regions": [
+"Noxus"
+],
+"cost": 3,
+"attack": 4,
+"health": 4,
+"keywords": [
+"Quick Attack",
+"Overwhelm"
+],
+"text": "When I'm summoned or strike: Create 2 Spinning Axes in hand."
+},
+{
+"code": "01NX006T1",
+"base": "01NX006",
+"name": "Vladimir",
+"regions": [
+"Noxus"
+],
+"cost": 5,
+"attack": 6,
+"health": 6,
+"keywords": [
+"Fearsome",
+"Regeneration"
+],
+"text": "Play: Deal 1 to any number of allies to deal that much to an enemy.\r\nAttack: For each attacking ally on my right, deal 1 to it and drain 1 from the enemy Nexus."
+},
+{
+"code": "01NX038T2",
+"base": "01NX038",
+"name": "Darius",
+"regions": [
+"Noxus"
+],
+"cost": 6,
+"attack": 10,
+"health": 7,
+"keywords": [
+"Overwhelm"
+],
+"text": ""
+},
+{
+"code": "01NX042T2",
+"base": "01NX042",
+"name": "Katarina",
+"regions": [
+"Noxus"
+],
+"cost": 4,
+"attack": 4,
+"health": 3,
+"keywords": [
+"Quick Attack"
+],
+"text": "When I'm summoned, Rally and create a Fleeting Blade's Edge in hand. It costs 0.\r\nStrike: Recall me."
+},
+{
+"code": "01DE042T2",
+"base": "01DE042",
+"name": "Lux",
+"regions": [
+"Demacia"
+],
+"cost": 5,
+"attack": 4,
+"health": 6,
+"keywords": [
+"Barrier"
+],
+"text": "Each time you play 6+ mana of spells, create a Final Spark in hand. "
+},
+{
+"code": "01DE012T1",
+"base": "01DE012",
+"name": "Garen",
+"regions": [
+"Demacia"
+],
+"cost": 5,
+"attack": 6,
+"health": 6,
+"keywords": [
+"Regeneration"
+],
+"text": "When I'm summoned, give other allies +1|+1 this round.\r\nRound Start: Rally."
+},
+{
+"code": "01DE022T1",
+"base": "01DE022",
+"name": "Lucian",
+"regions": [
+"Demacia"
+],
+"cost": 1,
+"attack": 3,
+"health": 2,
+"keywords": [
+"Double Attack"
+],
+"text": "Each round, the first time an ally dies, Rally."
+},
+{
+"code": "01DE045T1",
+"base": "01DE045",
+"name": "Fiora",
+"regions": [
+"Demacia"
+],
+"cost": 4,
+"attack": 5,
+"health": 5,
+"keywords": [
+"Challenger"
+],
+"text": "When I've killed 4 enemies and survived, you win the game. "
+},
+{
+"code": "01PZ040T1",
+"base": "01PZ040",
+"name": "Jinx",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 4,
+"attack": 5,
+"health": 4,
+"keywords": [
+"Quick Attack"
+],
+"text": "Round Start: Draw 1.\r\nEach round, the first time I level up or you empty your hand, create a Super Mega Death Rocket! in hand."
+},
+{
+"code": "01PZ008T2",
+"base": "01PZ008",
+"name": "Teemo",
+"regions": [
+"Bandle City",
+"Piltover & Zaun"
+],
+"cost": 1,
+"attack": 2,
+"health": 2,
+"keywords": [
+"Elusive"
+],
+"text": "Nexus Strike: Double the Poison Puffcaps in the enemy deck (plants 5 minimum)."
+},
+{
+"code": "01PZ056T10",
+"base": "01PZ056",
+"name": "Heimerdinger",
+"regions": [
+"Bandle City",
+"Piltover & Zaun"
+],
+"cost": 5,
+"attack": 3,
+"health": 5,
+"keywords": [
+"Imbue"
+],
+"text": "When you play a spell, create a Fleeting Turret in hand with equal cost. Grant it +1|+1 and it costs 0."
+},
+{
+"code": "01PZ036T1",
+"base": "01PZ036",
+"name": "Ezreal",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 3,
+"attack": 2,
+"health": 4,
+"keywords": [
+"Elusive",
+"Imbue"
+],
+"text": "Nexus Strike: Create a Fleeting Mystic Shot in hand.\r\nWhen you play a spell, deal 1 to the enemy Nexus. If it targeted an enemy, deal 2 to the enemy Nexus instead."
+},
+{
+"code": "01FR024T3",
+"base": "01FR024",
+"name": "Anivia",
+"regions": [
+"Freljord"
+],
+"cost": 6,
+"attack": 4,
+"health": 6,
+"keywords": [
+"Last Breath"
+],
+"text": "Attack: Deal 2 to all enemies and the enemy Nexus.\r\nLast Breath: Revive me transformed into Eggnivia."
+},
+{
+"code": "01FR024T4",
+"base": "01FR024",
+"name": "Eggnivia",
+"regions": [
+"Freljord"
+],
+"cost": 1,
+"attack": 0,
+"health": 2,
+"keywords": [],
+"text": ""
+},
+{
+"code": "01FR039T2",
+"base": "01FR039",
+"name": "Tryndamere",
+"regions": [
+"Freljord"
+],
+"cost": 8,
+"attack": 9,
+"health": 9,
+"keywords": [
+"Overwhelm",
+"Fearsome",
+"Tough"
+],
+"text": ""
+},
+{
+"code": "01FR038T2",
+"base": "01FR038",
+"name": "Ashe",
+"regions": [
+"Freljord"
+],
+"cost": 4,
+"attack": 6,
+"health": 4,
+"keywords": [
+"Missing Translation"
+],
+"text": "Attack: Frostbite the strongest enemy.\r\nEnemies with 0 Power can't block."
+},
+{
+"code": "01FR009T1",
+"base": "01FR009",
+"name": "Braum",
+"regions": [
+"Freljord"
+],
+"cost": 4,
+"attack": 1,
+"health": 7,
+"keywords": [
+"Challenger",
+"Regeneration"
+],
+"text": "When I survive damage, summon a Mighty Poro."
+},
+{
+"code": "01SI053T2",
+"base": "01SI053",
+"name": "Spider Queen Elise",
+"regions": [
+"Shadow Isles"
+],
+"cost": 2,
+"attack": 4,
+"health": 3,
+"keywords": [
+"Fearsome",
+"Challenger",
+"Missing Translation"
+],
+"text": "Other Spider allies have Challenger and Fearsome."
+},
+{
+"code": "01SI042T1",
+"base": "01SI042",
+"name": "Hecarim",
+"regions": [
+"Shadow Isles"
+],
+"cost": 6,
+"attack": 6,
+"health": 7,
+"keywords": [
+"Overwhelm"
+],
+"text": "When I level up, grant your Nexus \"Ephemeral allies have +3|+0\".\r\nAttack: Summon 2 attacking Spectral Riders."
+},
+{
+"code": "01SI030T2",
+"base": "01SI030",
+"name": "Kalista",
+"regions": [
+"Shadow Isles"
+],
+"cost": 3,
+"attack": 4,
+"health": 5,
+"keywords": [
+"Fearsome"
+],
+"text": "Each round, the first time I attack revive an attacking Ephemeral copy of the strongest dead allied follower. This round, we're bonded and it takes damage for me."
+},
+{
+"code": "01SI052T1",
+"base": "01SI052",
+"name": "Thresh",
+"regions": [
+"Shadow Isles"
+],
+"cost": 5,
+"attack": 4,
+"health": 7,
+"keywords": [
+"Challenger"
+],
+"text": "The first time I attack this game, summon another attacking champion from your deck or hand."
+},
+{
+"code": "02PZ008T2",
+"base": "02PZ008",
+"name": "Vi",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 5,
+"attack": 10,
+"health": 5,
+"keywords": [
+"Challenger",
+"Tough"
+],
+"text": "When I strike a unit while attacking, deal 5 to the enemy Nexus."
+},
+{
+"code": "02BW032T3",
+"base": "02BW032",
+"name": "Gangplank",
+"regions": [
+"Bilgewater"
+],
+"cost": 5,
+"attack": 6,
+"health": 5,
+"keywords": [
+"Overwhelm"
+],
+"text": "When I'm summoned or Round Start: Summon a Powder Keg.\r\nAttack: Deal 1 to all enemies and the enemy Nexus."
+},
+{
+"code": "02BW022T2",
+"base": "02BW022",
+"name": "Miss Fortune",
+"regions": [
+"Bilgewater"
+],
+"cost": 3,
+"attack": 4,
+"health": 4,
+"keywords": [
+"Overwhelm"
+],
+"text": "When allies attack, deal 1 three times to all battling enemies and the enemy Nexus."
+},
+{
+"code": "02BW046T3",
+"base": "02BW046",
+"name": "Fizz",
+"regions": [
+"Bandle City",
+"Bilgewater"
+],
+"cost": 1,
+"attack": 3,
+"health": 2,
+"keywords": [
+"Imbue"
+],
+"text": "When you play a spell, stop all enemy spells and Skills targeting me and give me Elusive this round.\r\nNexus Strike: Create a Chum the Waters in hand."
+},
+{
+"code": "02BW026T3",
+"base": "02BW026",
+"name": "Twisted Fate",
+"regions": [
+"Bilgewater"
+],
+"cost": 4,
+"attack": 3,
+"health": 3,
+"keywords": [
+"Quick Attack"
+],
+"text": "Each round, the first 3 times you play a card, I play a Destiny Card."
+},
+{
+"code": "02BW053T1",
+"base": "02BW053",
+"name": "Nautilus",
+"regions": [
+"Bilgewater"
+],
+"cost": 7,
+"attack": 13,
+"health": 13,
+"keywords": [
+"Tough",
+"Fearsome",
+"Missing Translation"
+],
+"text": "Sea Monster allies cost 4 less."
+},
+{
+"code": "02FR002T3",
+"base": "02FR002",
+"name": "Sejuani",
+"regions": [
+"Freljord"
+],
+"cost": 6,
+"attack": 6,
+"health": 7,
+"keywords": [
+"Overwhelm"
+],
+"text": "Play: Give an enemy Frostbite and Vulnerable this round.\r\nEach round, the first time you damage the enemy Nexus, Frostbite all enemies."
+},
+{
+"code": "02NX007T2",
+"base": "02NX007",
+"name": "Swain",
+"regions": [
+"Noxus"
+],
+"cost": 5,
+"attack": 4,
+"health": 7,
+"keywords": [
+"Fearsome",
+"Overwhelm"
+],
+"text": "When you deal non-combat damage to the enemy Nexus, Stun the strongest backrow enemy.\r\nNexus Strike: Deal 3 to all enemies and the enemy Nexus."
+},
+{
+"code": "02DE006T1",
+"base": "02DE006",
+"name": "Quinn",
+"regions": [
+"Demacia"
+],
+"cost": 5,
+"attack": 4,
+"health": 6,
+"keywords": [
+"Scout"
+],
+"text": "Attack: Summon Valor Challenging the strongest enemy."
+},
+{
+"code": "02SI008T2",
+"base": "02SI008",
+"name": "Maokai",
+"regions": [
+"Shadow Isles"
+],
+"cost": 4,
+"attack": 3,
+"health": 5,
+"keywords": [
+"Regeneration"
+],
+"text": "When I level up, Obliterate the enemy deck, leaving 4 non-champions.\r\nRound Start: Summon a Sapling."
+},
+{
+"code": "02IO006T1",
+"base": "02IO006",
+"name": "Lee Sin",
+"regions": [
+"Ionia"
+],
+"cost": 5,
+"attack": 4,
+"health": 6,
+"keywords": [
+"Imbue"
+],
+"text": "When you play a spell, give me Challenger this round.\r\nIf you play another, give me Barrier this round.\r\nI Dragon's Rage enemies that I Challenge."
+},
+{
+"code": "03NX007T1",
+"base": "03NX007",
+"name": "Riven",
+"regions": [
+"Noxus"
+],
+"cost": 3,
+"attack": 4,
+"health": 5,
+"keywords": [],
+"text": "When I'm summoned, if you have the attack token, or when you gain the attack token, Reforge.\r\nEach round, the first time you increase my Power, grant me that much Power."
+},
+{
+"code": "03BW004T3",
+"base": "03BW004",
+"name": "Tahm Kench",
+"regions": [
+"Bilgewater"
+],
+"cost": 4,
+"attack": 3,
+"health": 7,
+"keywords": [],
+"text": "When I'm summoned or Round Start: Create an An Acquired Taste in hand.\r\nAttack: Obliterate my Captured enemies and release my allies."
+},
+{
+"code": "03MT217T13",
+"base": "03MT217",
+"name": "Aphelios",
+"regions": [
+"Targon"
+],
+"cost": 3,
+"attack": 4,
+"health": 4,
+"keywords": [
+"Quick Attack",
+"Missing Translation"
+],
+"text": "Nightfall: Pick a Moon Weapon to create in hand.\r\nEach round, the first time you play 2 other cards or Round Start: Create the Phased Moon Weapon in hand if you don't already have one.\r\nYour Moon Weapons cost 1 less."
+},
+{
+"code": "03MT056T1",
+"base": "03MT056",
+"name": "Diana",
+"regions": [
+"Targon"
+],
+"cost": 2,
+"attack": 3,
+"health": 3,
+"keywords": [
+"Quick Attack"
+],
+"text": "Nightfall or when you activate another Nightfall: Give me +2|+0 and Challenger this round."
+},
+{
+"code": "03MT055T1",
+"base": "03MT055",
+"name": "Soraka",
+"regions": [
+"Targon"
+],
+"cost": 3,
+"attack": 2,
+"health": 7,
+"keywords": [
+"Support"
+],
+"text": "Each round, the first time you heal a damaged ally, draw 1.\r\nSupport: Fully heal me and my supported ally."
+},
+{
+"code": "03MT009T1",
+"base": "03MT009",
+"name": "Zoe",
+"regions": [
+"Targon"
+],
+"cost": 1,
+"attack": 2,
+"health": 2,
+"keywords": [
+"Elusive",
+"Missing Translation"
+],
+"text": "When I level up, grant your Nexus \"When you summon an ally, grant its keywords to all allies.\"\r\nNexus Strike: Create a Behold the Infinite that costs 0 in hand."
+},
+{
+"code": "03MT087T1",
+"base": "03MT087",
+"name": "Aurelion Sol",
+"regions": [
+"Targon"
+],
+"cost": 10,
+"attack": 11,
+"health": 11,
+"keywords": [
+"Fury",
+"SpellShield",
+"Missing Translation"
+],
+"text": "Play: Invoke a Celestial card that costs 7 or more.\r\nRound Start: Create a random Celestial card in hand.\r\nYour Celestial cards cost 0."
+},
+{
+"code": "03MT054T1",
+"base": "03MT054",
+"name": "Leona",
+"regions": [
+"Targon"
+],
+"cost": 5,
+"attack": 4,
+"health": 6,
+"keywords": [
+"Challenger"
+],
+"text": "Daybreak or when you activate another Daybreak: Stun the strongest enemy and give me Barrier this round."
+},
+{
+"code": "03MT058T1",
+"base": "03MT058",
+"name": "Taric",
+"regions": [
+"Targon"
+],
+"cost": 4,
+"attack": 4,
+"health": 6,
+"keywords": [
+"Support"
+],
+"text": "Support: My supported ally and I can't take damage or die this round. Copy the last spell you played on only me this round onto that ally (It can't be copied again)."
+},
+{
+"code": "03PZ003T1",
+"base": "03PZ003",
+"name": "Viktor",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 4,
+"attack": 3,
+"health": 5,
+"keywords": [
+"Augment",
+"Missing Translation"
+],
+"text": "Your created cards cost 1 less.\r\nWhen I'm summoned or Round Start: Create a Hex Core Upgrade in hand."
+},
+{
+"code": "03SI005T1",
+"base": "03SI005",
+"name": "Nocturne",
+"regions": [
+"Shadow Isles"
+],
+"cost": 4,
+"attack": 6,
+"health": 4,
+"keywords": [
+"Fearsome",
+"Missing Translation"
+],
+"text": "Nightfall: Grant an enemy Vulnerable and give enemies -1|-0 this round.\r\nOther allies have Fearsome.\r\nWhen you summon another ally, give enemies -1|-0 this round."
+},
+{
+"code": "03IO002T1",
+"base": "03IO002",
+"name": "Lulu",
+"regions": [
+"Bandle City",
+"Ionia"
+],
+"cost": 3,
+"attack": 4,
+"health": 4,
+"keywords": [
+"Support"
+],
+"text": "Round Start: Create a Fleeting Help, Pix! in hand.\r\nSupport: My supported ally grows up to 5|5 this round."
+},
+{
+"code": "03DE011T1",
+"base": "03DE011",
+"name": "Dragon Shyvana",
+"regions": [
+"Demacia"
+],
+"cost": 4,
+"attack": 4,
+"health": 5,
+"keywords": [
+"Fury"
+],
+"text": "Attack: Give me +2|+2 this round and create a Fleeting 2 cost Strafing Strike in hand."
+},
+{
+"code": "03FR006T2",
+"base": "03FR006",
+"name": "Trundle",
+"regions": [
+"Freljord"
+],
+"cost": 5,
+"attack": 5,
+"health": 7,
+"keywords": [
+"Overwhelm",
+"Regeneration"
+],
+"text": "When I'm summoned, create an Ice Pillar in hand.\r\nAttack: Grant me +1|+0 for each 8+ cost card you Behold."
+},
+{
+"code": "04PZ001T3",
+"base": "04PZ001",
+"name": "Ekko",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 4,
+"attack": 5,
+"health": 3,
+"keywords": [
+"Quick Attack"
+],
+"text": "Strike: Create a Fleeting 0 cost Time Trick in hand."
+},
+{
+"code": "04BW005T2",
+"base": "04BW005",
+"name": "Pyke",
+"regions": [
+"Bilgewater"
+],
+"cost": 5,
+"attack": 2,
+"health": 4,
+"keywords": [
+"Lurk",
+"Quick Attack"
+],
+"text": "When I Lurk, transform me into Death From Below.\r\nWhen I kill an enemy, I strike the weakest enemy."
+},
+{
+"code": "04IO005T2",
+"base": "04IO005",
+"name": "Irelia",
+"regions": [
+"Ionia"
+],
+"cost": 3,
+"attack": 4,
+"health": 3,
+"keywords": [
+"Quick Attack",
+"Attune"
+],
+"text": "When I'm summoned or Round Start: If you have the attack token, create a Flawless Duet in hand.\r\nWhen allies attack, create a Bladesurge in hand."
+},
+{
+"code": "04SH019T1",
+"base": "04SH019",
+"name": "Rek'Sai",
+"regions": [
+"Shurima"
+],
+"cost": 3,
+"attack": 4,
+"health": 7,
+"keywords": [
+"Lurk",
+"Overwhelm"
+],
+"text": "When I level up, create 3 random Lurkers in hand.\r\nWhen I Lurk or Attack: Grant Lurker allies everywhere +1|+0."
+},
+{
+"code": "04SH039T1",
+"base": "04SH039",
+"name": "Zilean",
+"regions": [
+"Shurima"
+],
+"cost": 2,
+"attack": 2,
+"health": 5,
+"keywords": [],
+"text": "Round Start: Create a Fleeting copy of each non-Fleeting card I saw you play last round.\r\nPlay: Create 4 Time Bombs in your deck, then Predict."
+},
+{
+"code": "04SH073T2",
+"base": "04SH073",
+"name": "Taliyah",
+"regions": [
+"Shurima"
+],
+"cost": 5,
+"attack": 4,
+"health": 6,
+"keywords": [],
+"text": "Play: Summon an exact copy of an allied landmark. \r\nAttack: I deal 2 damage to my blocker 3 times. If it's dead or gone, I deal 2 damage to the enemy Nexus instead."
+},
+{
+"code": "04SH003T2",
+"base": "04SH003",
+"name": "Azir",
+"regions": [
+"Shurima"
+],
+"cost": 3,
+"attack": 6,
+"health": 6,
+"keywords": [],
+"text": "When I level up, replace your deck with the Emperor's Deck, then draw 1.\r\nWhen allies attack, summon an attacking Sandstone Charger."
+},
+{
+"code": "04SH003T3",
+"base": "04SH003",
+"name": "Azir",
+"regions": [
+"Shurima"
+],
+"cost": 3,
+"attack": 2,
+"health": 6,
+"keywords": [],
+"text": "When allies attack, summon an attacking Sand Soldier.\r\nWhen you summon another ally, give us both +1|+0 this round."
+},
+{
+"code": "04SH130T2",
+"base": "04SH130",
+"name": "Akshan",
+"regions": [
+"Shurima"
+],
+"cost": 2,
+"attack": 3,
+"health": 3,
+"keywords": [
+"Quick Attack"
+],
+"text": "When I'm summoned or strike: Summon a Warlord's Hoard or advance it 1 round."
+},
+{
+"code": "04SH067T1",
+"base": "04SH067",
+"name": "Renekton",
+"regions": [
+"Shurima"
+],
+"cost": 4,
+"attack": 10,
+"health": 10,
+"keywords": [
+"Overwhelm"
+],
+"text": "When I block or Attack: Deal 2 to enemies and the enemy Nexus."
+},
+{
+"code": "04SH067T4",
+"base": "04SH067",
+"name": "Renekton",
+"regions": [
+"Shurima"
+],
+"cost": 4,
+"attack": 5,
+"health": 5,
+"keywords": [
+"Overwhelm"
+],
+"text": "Attack: Give me +3|+3 this round. "
+},
+{
+"code": "04SH047T2",
+"base": "04SH047",
+"name": "Nasus",
+"regions": [
+"Shurima"
+],
+"cost": 6,
+"attack": 10,
+"health": 10,
+"keywords": [
+"Fearsome",
+"SpellShield",
+"Missing Translation"
+],
+"text": "I have +1|+1 for each unit you've slain this game. \r\nEnemies have -3|-0."
+},
+{
+"code": "04SH047T3",
+"base": "04SH047",
+"name": "Nasus",
+"regions": [
+"Shurima"
+],
+"cost": 6,
+"attack": 4,
+"health": 4,
+"keywords": [
+"Fearsome",
+"SpellShield",
+"Missing Translation"
+],
+"text": "I have +1|+1 for each unit you've slain this game. \r\nEnemies have -1|-0."
+},
+{
+"code": "04SH020T1",
+"base": "04SH020",
+"name": "Sivir",
+"regions": [
+"Shurima"
+],
+"cost": 4,
+"attack": 6,
+"health": 4,
+"keywords": [
+"Quick Attack",
+"SpellShield"
+],
+"text": "While I'm attacking, attacking allies have my keywords."
+},
+{
+"code": "04FR005T1",
+"base": "04FR005",
+"name": "Lissandra",
+"regions": [
+"Freljord"
+],
+"cost": 3,
+"attack": 3,
+"health": 4,
+"keywords": [
+"Tough",
+"Missing Translation"
+],
+"text": "Your Nexus is Tough.\r\nWhen I'm summoned, summon a Frozen Thrall and advance it 2.\r\nRound Start: Create a Fleeting 0 cost Ice Shard in hand."
+},
+{
+"code": "04NX004T2",
+"base": "04NX004",
+"name": "LeBlanc",
+"regions": [
+"Noxus"
+],
+"cost": 3,
+"attack": 6,
+"health": 3,
+"keywords": [
+"Quick Attack"
+],
+"text": "Each time you deal 15+ damage, create a Mirror Image in hand. If you already have one, reduce its cost by 1 instead. "
+},
+{
+"code": "04SI005T1",
+"base": "04SI005",
+"name": "Kindred",
+"regions": [
+"Shadow Isles"
+],
+"cost": 4,
+"attack": 5,
+"health": 4,
+"keywords": [
+"Quick Attack"
+],
+"text": "Each round, the first time you slay a unit, grant me +2|+2 and I mark the weakest enemy. \r\nRound End: Kill units with my mark."
+},
+{
+"code": "04SI055T2",
+"base": "04SI055",
+"name": "Viego",
+"regions": [
+"Shadow Isles"
+],
+"cost": 6,
+"attack": 7,
+"health": 6,
+"keywords": [
+"Fearsome"
+],
+"text": "Each round, the first time another unit dies, summon an Encroaching Mist.\r\nRound Start: Steal the strongest enemy this round. If it's a champion, kill it instead."
+},
+{
+"code": "04MT008T1",
+"base": "04MT008",
+"name": "Malphite",
+"regions": [
+"Targon"
+],
+"cost": 7,
+"attack": 7,
+"health": 11,
+"keywords": [
+"Tough"
+],
+"text": "Play: Stun an enemy.\r\nWhen I'm summoned or Round Start: If you have the attack token, create an Unstoppable Force in hand."
+},
+{
+"code": "04DE008T1",
+"base": "04DE008",
+"name": "Jarvan IV",
+"regions": [
+"Demacia"
+],
+"cost": 6,
+"attack": 7,
+"health": 5,
+"keywords": [
+"Barrier"
+],
+"text": "When you attack, pay my cost to summon me Challenging the strongest enemy.\r\nRound Start: Create a Fleeting Cataclysm in hand.\r\nWhen I Challenge an enemy, give me Barrier this round."
+},
+{
+"code": "05BC133T1",
+"base": "05BC133",
+"name": "Tristana",
+"regions": [
+"Bandle City"
+],
+"cost": 3,
+"attack": 2,
+"health": 4,
+"keywords": [
+"Quick Attack",
+"Impact"
+],
+"text": "I have +1|+0 for each multi-region ally you've summoned this game.\r\nWhen you summon a multi-region ally, grant me and it +1|+0 and Impact."
+},
+{
+"code": "05BC161T1",
+"base": "05BC161",
+"name": "Mega Gnar",
+"regions": [
+"Bandle City",
+"Freljord"
+],
+"cost": 4,
+"attack": 5,
+"health": 5,
+"keywords": [
+"Overwhelm",
+"Quick Attack"
+],
+"text": "When I level up, grant the strongest enemy Vulnerable.\r\nRound End: If I've seen you start the round with the attack token, transform me back into Gnar."
+},
+{
+"code": "05BC029T5",
+"base": "05BC029",
+"name": "Yuumi",
+"regions": [
+"Bandle City",
+"Targon"
+],
+"cost": 3,
+"attack": 3,
+"health": 2,
+"keywords": [
+"Attach",
+"SpellShield"
+],
+"text": "Round Start: Grant the unit I'm Attached to SpellShield and +1|+1. Otherwise, grant me SpellShield and +1|+1 instead."
+},
+{
+"code": "05BC029T7",
+"base": "05BC029",
+"name": "Yuumi",
+"regions": [
+"Bandle City",
+"Targon"
+],
+"cost": 3,
+"attack": 2,
+"health": 1,
+"keywords": [],
+"text": "Round Start: Grant me +1|+1."
+},
+{
+"code": "05BC029T4",
+"base": "05BC029",
+"name": "Yuumi",
+"regions": [
+"Bandle City",
+"Targon"
+],
+"cost": 3,
+"attack": 3,
+"health": 2,
+"keywords": [
+"Attach",
+"SpellShield"
+],
+"text": "Round Start: Grant the unit I'm Attached to SpellShield and +1|+1. "
+},
+{
+"code": "05BC029T8",
+"base": "05BC029",
+"name": "Yuumi",
+"regions": [
+"Bandle City",
+"Targon"
+],
+"cost": 3,
+"attack": 3,
+"health": 2,
+"keywords": [
+"SpellShield"
+],
+"text": "Round Start: Grant me SpellShield and +1|+1."
+},
+{
+"code": "05BC029T3",
+"base": "05BC029",
+"name": "Yuumi",
+"regions": [
+"Bandle City",
+"Targon"
+],
+"cost": 3,
+"attack": 2,
+"health": 1,
+"keywords": [
+"Attach"
+],
+"text": "Round Start: Grant the unit I'm Attached to +1|+1."
+},
+{
+"code": "05BC093T2",
+"base": "05BC093",
+"name": "Grand Overseer Veigar",
+"regions": [
+"Bandle City",
+"Shadow Isles"
+],
+"cost": 4,
+"attack": 2,
+"health": 5,
+"keywords": [
+"Missing Translation"
+],
+"text": "When I'm summoned or Round Start: Create a Darkness in hand if you don't have one. Round Start: Grant your Darkness everywhere 1 extra damage.\r\nWhen you play Darkness, it can target anything."
+},
+{
+"code": "05BC088T2",
+"base": "05BC088",
+"name": "Rumble",
+"regions": [
+"Bandle City",
+"Noxus"
+],
+"cost": 4,
+"attack": 6,
+"health": 5,
+"keywords": [
+"Quick Attack",
+"SpellShield",
+"Impact"
+],
+"text": "When you deal damage to the enemy Nexus, create a random Mecha Yordle in hand or if you have one, grant all Mecha Yordles in hand +1|+1 and reduce their cost by 1."
+},
+{
+"code": "05BC058T2",
+"base": "05BC058",
+"name": "Kennen",
+"regions": [
+"Bandle City",
+"Ionia"
+],
+"cost": 1,
+"attack": 3,
+"health": 2,
+"keywords": [
+"Quick Attack"
+],
+"text": "When I'm summoned, blocked, or Attack: Create a Mark of the Storm in hand."
+},
+{
+"code": "05BC163T1",
+"base": "05BC163",
+"name": "Ziggs",
+"regions": [
+"Bandle City",
+"Shurima"
+],
+"cost": 3,
+"attack": 4,
+"health": 5,
+"keywords": [],
+"text": "Attack: I deal 2 damage to my blocker and the enemy Nexus.\r\nWhen you destroy an allied landmark, deal 2 to the enemy Nexus."
+},
+{
+"code": "05BC041T1",
+"base": "05BC041",
+"name": "Poppy",
+"regions": [
+"Bandle City",
+"Demacia"
+],
+"cost": 4,
+"attack": 4,
+"health": 4,
+"keywords": [
+"Impact"
+],
+"text": "Attack: Grant allies with equal or less power than me +2|+2 and Impact."
+},
+{
+"code": "05FR013T4",
+"base": "05FR013",
+"name": "Udyr",
+"regions": [
+"Freljord"
+],
+"cost": 5,
+"attack": 6,
+"health": 6,
+"keywords": [],
+"text": "When I'm summoned or strike: Create a Stance Swap in hand or, if you have one, reduce its cost to 0. \r\nI have +1|+1 for each stance you've played this game. "
+},
+{
+"code": "05IO004T2",
+"base": "05IO004",
+"name": "Ahri",
+"regions": [
+"Ionia"
+],
+"cost": 2,
+"attack": 3,
+"health": 3,
+"keywords": [
+"Quick Attack",
+"Elusive",
+"Missing Translation"
+],
+"text": "When you Recall an ally, reduce its cost by 1.\r\nAttack: Each time I attack strike, swap me with the ally to my right, then Recall it."
+},
+{
+"code": "05SH014T1",
+"base": "05SH014",
+"name": "Xerath",
+"regions": [
+"Shurima"
+],
+"cost": 4,
+"attack": 4,
+"health": 5,
+"keywords": [],
+"text": "When you destroy an allied landmark, deal 3 to the weakest enemy. "
+},
+{
+"code": "05SH014T2",
+"base": "05SH014",
+"name": "Xerath",
+"regions": [
+"Shurima"
+],
+"cost": 4,
+"attack": 5,
+"health": 9,
+"keywords": [],
+"text": "When you destroy an allied landmark or Round Start: Deal 5 to the weakest enemy or the enemy Nexus if there are none.\r\nIf an enemy unit would die, Obliterate it instead."
+},
+{
+"code": "05NX001T1",
+"base": "05NX001",
+"name": "Sion Returned",
+"regions": [
+"Noxus"
+],
+"cost": 7,
+"attack": 9,
+"health": 4,
+"keywords": [
+"Overwhelm",
+"Ephemeral"
+],
+"text": "When I'm summoned, Rally."
+},
+{
+"code": "05NX001T3",
+"base": "05NX001",
+"name": "Sion",
+"regions": [
+"Noxus"
+],
+"cost": 7,
+"attack": 9,
+"health": 6,
+"keywords": [
+"Overwhelm",
+"Last Breath"
+],
+"text": "Last Breath: Summon Sion Returned. \r\nWhen I'm discarded, grant your strongest ally Overwhelm and place me into your deck."
+},
+{
+"code": "05BW005T1",
+"base": "05BW005",
+"name": "Nami",
+"regions": [
+"Bilgewater"
+],
+"cost": 3,
+"attack": 3,
+"health": 4,
+"keywords": [
+"Attune",
+"Imbue"
+],
+"text": "When you play a spell, grant +2|+1 to the weakest other ally that isn't Immobile."
+},
+{
+"code": "05PZ022T8",
+"base": "05PZ022",
+"name": "Jayce",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 4,
+"attack": 5,
+"health": 5,
+"keywords": [
+"Quick Attack"
+],
+"text": "Each round, the first time you play a 6+ cost spell, copy it with the same targets."
+},
+{
+"code": "05PZ022T1",
+"base": "05PZ022",
+"name": "Jayce",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 4,
+"attack": 5,
+"health": 5,
+"keywords": [],
+"text": "Play: Grant me Quick Attack or Challenger.\r\nEach round, the first time you play a 6+ cost spell, copy it with the same targets."
+},
+{
+"code": "05PZ022T7",
+"base": "05PZ022",
+"name": "Jayce",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 4,
+"attack": 4,
+"health": 4,
+"keywords": [
+"Challenger"
+],
+"text": ""
+},
+{
+"code": "05PZ022T6",
+"base": "05PZ022",
+"name": "Jayce",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 4,
+"attack": 4,
+"health": 4,
+"keywords": [
+"Quick Attack"
+],
+"text": ""
+},
+{
+"code": "05PZ022T9",
+"base": "05PZ022",
+"name": "Jayce",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 4,
+"attack": 5,
+"health": 5,
+"keywords": [
+"Challenger"
+],
+"text": "Each round, the first time you play a 6+ cost spell, copy it with the same targets."
+},
+{
+"code": "05PZ006T2",
+"base": "05PZ006",
+"name": "Caitlyn",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 3,
+"attack": 4,
+"health": 4,
+"keywords": [
+"Quick Attack"
+],
+"text": "Strike: Plant 4 Flashbomb Traps in the top 8 cards of the enemy deck and deal damage to the enemy Nexus equal to the number of your traps activated this round. "
+},
+{
+"code": "05SI009T1",
+"base": "05SI009",
+"name": "Senna",
+"regions": [
+"Shadow Isles"
+],
+"cost": 5,
+"attack": 5,
+"health": 5,
+"keywords": [
+"Quick Attack",
+"Missing Translation"
+],
+"text": "When I'm summoned or Attack: Create a Darkness in hand if you don't have one. Your damage and kill spells accelerate to Fast and cost 1 less."
+},
+{
+"code": "05MT003T2",
+"base": "05MT003",
+"name": "Pantheon",
+"regions": [
+"Targon"
+],
+"cost": 4,
+"attack": 4,
+"health": 3,
+"keywords": [
+"Overwhelm",
+"Barrier"
+],
+"text": "Once a Pantheon has leveled up, grant me a random keyword for each round you've targeted allies this game. "
+},
+{
+"code": "05DE009T1",
+"base": "05DE009",
+"name": "Galio",
+"regions": [
+"Demacia"
+],
+"cost": 7,
+"attack": 0,
+"health": 10,
+"keywords": [
+"Formidable",
+"SpellShield"
+],
+"text": "When I'm summoned, grant other allies +0|+3. \r\nEach round, the first time an ally takes damage, Rally."
+},
+{
+"code": "06NX012T7",
+"base": "06NX012",
+"name": "Annie",
+"regions": [
+"Noxus"
+],
+"cost": 1,
+"attack": 1,
+"health": 3,
+"keywords": [],
+"text": "Attack: I deal 3 to my blocker and Stun it. If it's dead or gone, I deal 3 to the enemy Nexus instead."
+},
+{
+"code": "06RU025T5",
+"base": "06RU025",
+"name": "Evelynn",
+"regions": [
+"Runeterra"
+],
+"cost": 4,
+"attack": 5,
+"health": 5,
+"keywords": [],
+"text": "When you or an ally kill an allied Husk, give me its positive keywords this round.\r\nRound End: Summon a random Husk. If fewer than 6 allies have died this game, transform me back into Evelynn. "
+},
+{
+"code": "06RU001T4",
+"base": "06RU001",
+"name": "Bard",
+"regions": [
+"Runeterra"
+],
+"cost": 4,
+"attack": 3,
+"health": 6,
+"keywords": [],
+"text": "Attack: Plant 6 Chimes in your deck.\r\nWhen you activate a Chime, grant +1|+1 to a random ally in play."
+},
+{
+"code": "06RU002T1",
+"base": "06RU002",
+"name": "Jhin",
+"regions": [
+"Runeterra"
+],
+"cost": 4,
+"attack": 4,
+"health": 4,
+"keywords": [
+"Quick Attack"
+],
+"text": "\r\nAttack: Deal 4 to all Stunned enemies and the enemy Nexus.\r\n"
+},
+{
+"code": "06BW006T1",
+"base": "06BW006",
+"name": "Illaoi",
+"regions": [
+"Bilgewater"
+],
+"cost": 4,
+"attack": 3,
+"health": 7,
+"keywords": [
+"Overwhelm"
+],
+"text": "When you Spawn, increase its value by 1.\r\nAttack: Spawn 1, then fully heal your strongest Tentacle and I gain stats equal to its stats this round."
+},
+{
+"code": "06SH009T2",
+"base": "06SH009",
+"name": "Kai'Sa",
+"regions": [
+"Shurima"
+],
+"cost": 5,
+"attack": 5,
+"health": 5,
+"keywords": [
+"Evolve"
+],
+"text": "When I'm summoned or Round Start: If you have the attack token, create a Second Skin in hand.\r\nAttack: Deal 1 for each positive keyword I have to enemies or the enemy Nexus (lowest health first)."
+},
+{
+"code": "06SI012T1",
+"base": "06SI012",
+"name": "Gwen",
+"regions": [
+"Shadow Isles"
+],
+"cost": 4,
+"attack": 4,
+"health": 5,
+"keywords": [
+"Hallowed",
+"Quick Attack"
+],
+"text": "Attack: When another ally gains Power from Hallowed, so do I. Drain 1 from the enemy Nexus one time for every 2 Power I have.\r\n"
+},
+{
+"code": "06MT008T2",
+"base": "06MT008",
+"name": "Kayle",
+"regions": [
+"Targon"
+],
+"cost": 5,
+"attack": 2,
+"health": 6,
+"keywords": [
+"Quick Attack",
+"Overwhelm"
+],
+"text": "I have +1|+0 for each time an ally attacked with increased Power.\r\nWhen I'm summoned or level up, grant allies +1|+1.\r\nEmpowered 16: Double Attack."
+},
+{
+"code": "06RU008T7",
+"base": "06RU008",
+"name": "Jax",
+"regions": [
+"Runeterra"
+],
+"cost": 2,
+"attack": 4,
+"health": 3,
+"keywords": [
+"Overwhelm"
+],
+"text": "Auto-Equip The Light of Icathia.\r\nAttack: Give me +1|+1 this round for each Equipped ally."
+},
+{
+"code": "06RU006T5",
+"base": "06RU006",
+"name": "Ryze",
+"regions": [
+"Runeterra"
+],
+"cost": 4,
+"attack": 4,
+"health": 6,
+"keywords": [
+"SpellShield"
+],
+"text": "When I'm summoned or Round Start: Create 2 Delve Into The Pasts in your deck.\r\nAttack: Activate all your World Runes. If you have 5 unique World Runes, destroy the enemy Nexus."
+},
+{
+"code": "06RU005T2",
+"base": "06RU005",
+"name": "Rhaast",
+"regions": [
+"Runeterra"
+],
+"cost": 5,
+"attack": 3,
+"health": 6,
+"keywords": [
+"Challenger",
+"Overwhelm"
+],
+"text": "Auto-Equip: Corrupted Scythe.\r\nWhen I kill an enemy, fully heal me and heal your Nexus 2."
+},
+{
+"code": "06RU005T8",
+"base": "06RU005",
+"name": "Kayn",
+"regions": [
+"Runeterra"
+],
+"cost": 0,
+"attack": 3,
+"health": 6,
+"keywords": [],
+"text": "Play: Transform me and all copies of me into Rhaast or The Shadow Assassin."
+},
+{
+"code": "06RU005T1",
+"base": "06RU005",
+"name": "The Shadow Assassin",
+"regions": [
+"Runeterra"
+],
+"cost": 5,
+"attack": 3,
+"health": 6,
+"keywords": [
+"Elusive",
+"Challenger"
+],
+"text": "Auto-Equip: Shadow Scythe."
+},
+{
+"code": "06RU026T3",
+"base": "06RU026",
+"name": "Aatrox",
+"regions": [
+"Runeterra"
+],
+"cost": 6,
+"attack": 9,
+"health": 9,
+"keywords": [
+"Overwhelm"
+],
+"text": "Auto-Equip: The Darkin Blade.\r\nDarkin allies cost 5 less.\r\nWhen I'm summoned or strike: Heal your Nexus 2."
+},
+{
+"code": "06RU009T6",
+"base": "06RU009",
+"name": "Varus",
+"regions": [
+"Runeterra"
+],
+"cost": 4,
+"attack": 4,
+"health": 5,
+"keywords": [
+"Overwhelm",
+"Quick Attack"
+],
+"text": "Auto-Equip The Darkin Bow. \r\nThe Darkin Bow activates twice and has max +10|+0."
+},
+{
+"code": "06FR011T1",
+"base": "06FR011",
+"name": "Ornn",
+"regions": [
+"Freljord"
+],
+"cost": 7,
+"attack": 6,
+"health": 6,
+"keywords": [
+"Tough"
+],
+"text": "Play: Equip me with an exact copy of an ally's equipment or the strongest equipment from hand.\r\nAttack: Forge me twice, then summon an attacking Spirit of the Ram with my stats."
+},
+{
+"code": "06BC015T2",
+"base": "06BC015",
+"name": "Norra",
+"regions": [
+"Bandle City"
+],
+"cost": 2,
+"attack": 2,
+"health": 3,
+"keywords": [
+"Elusive"
+],
+"text": "Your Mysterious Portals now summon 4, 5, 6, or 7 cost followers instead.\r\nNexus Strike: Plant a Mysterious Portal in the top 4 cards of your deck."
+},
+{
+"code": "06IO008T1",
+"base": "06IO008",
+"name": "Master Yi",
+"regions": [
+"Ionia"
+],
+"cost": 2,
+"attack": 2,
+"health": 4,
+"keywords": [
+"Quick Attack",
+"Flow"
+],
+"text": "Attack: I immediately strike the Weakest enemy. \r\nRound Start: Reduce the cost of a spell in your hand by 1 and Flow: Grant all allied Master Yis Everywhere +2|+0."
+},
+{
+"code": "06PZ021T2",
+"base": "06PZ021",
+"name": "Seraphine",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 2,
+"attack": 2,
+"health": 5,
+"keywords": [
+"Missing Translation"
+],
+"text": "When I'm summoned, create a random new 2 cost spell in hand.\r\nWhen you play a new spell that costs 2 or less, copy it with the same targets.\r\n"
+},
+{
+"code": "06DE021T1",
+"base": "06DE021",
+"name": "Vayne",
+"regions": [
+"Demacia"
+],
+"cost": 3,
+"attack": 4,
+"health": 4,
+"keywords": [],
+"text": "When I'm summoned or Round Start: Create a 0 cost Tumble in hand or if you have one, reduce its cost to 0."
+},
+{
+"code": "07NX007T1",
+"base": "07NX007",
+"name": "Samira",
+"regions": [
+"Noxus"
+],
+"cost": 2,
+"attack": 3,
+"health": 3,
+"keywords": [
+"Quick Attack",
+"Plunder"
+],
+"text": "Plunder or strike: Create a Flair in hand if you don't already have one.\r\nWhen you play 6 cards, Rally. Resets when you start a round with the attack token. "
+},
+{
+"code": "07BW002T2",
+"base": "07BW002",
+"name": "Jack",
+"regions": [
+"Bilgewater"
+],
+"cost": 4,
+"attack": 5,
+"health": 6,
+"keywords": [
+"Overwhelm",
+"Brash"
+],
+"text": "Strike: Create 2 Coins in hand.\r\nWhen you refill mana, grant me +1|+0 and heal me 1 for each mana refilled."
+},
+{
+"code": "07IO011T1",
+"base": "07IO011",
+"name": "Sett",
+"regions": [
+"Ionia"
+],
+"cost": 5,
+"attack": 5,
+"health": 6,
+"keywords": [
+"Challenger"
+],
+"text": "While I'm attacking, I can't take damage or die.\r\nEach round, create a Show Stopper in hand once you've spent 12+ mana that round. "
+},
+{
+"code": "07RU015T4",
+"base": "07RU015",
+"name": "The Poro King",
+"regions": [
+"Runeterra"
+],
+"cost": 5,
+"attack": 5,
+"health": 5,
+"keywords": [],
+"text": "Each round, the first time you summon another Poro, create a random Special Snax in hand."
+},
+{
+"code": "07RU012T2",
+"base": "07RU012",
+"name": "Neeko",
+"regions": [
+"Runeterra"
+],
+"cost": 2,
+"attack": 3,
+"health": 3,
+"keywords": [
+"Elusive"
+],
+"text": "When I level up or Attack: Grant allies that have a subtype everywhere +1|+1."
+},
+{
+"code": "07SH013T4",
+"base": "07SH013",
+"name": "Packmother Nidalee",
+"regions": [
+"Shurima"
+],
+"cost": 4,
+"attack": 6,
+"health": 4,
+"keywords": [
+"Overwhelm",
+"Quick Attack"
+],
+"text": "Ambush 2\r\nNexus Strike: Transform me back into Nidalee and create a Javelin Toss in hand.\r\n"
+},
+{
+"code": "08SI042T1",
+"base": "08SI042",
+"name": "Mordekaiser",
+"regions": [
+"Shadow Isles",
+"Noxus"
+],
+"cost": 7,
+"attack": 6,
+"health": 9,
+"keywords": [
+"Challenger"
+],
+"text": "Play: Kill up to 2 allies.\r\nWhen you slay another ally, revive it.\r\nAttack: For the rest of the game, when you slay a unit, Drain 1 from the enemy Nexus."
+},
+{
+"code": "08BW008T1",
+"base": "08BW008",
+"name": "Nilah",
+"regions": [
+"Bilgewater"
+],
+"cost": 2,
+"attack": 3,
+"health": 4,
+"keywords": [
+"Brash"
+],
+"text": "Attack: Create a Slipstream in the top 6 cards of your deck and deal 2 damage to all enemies and the enemy Nexus. They cannot drop below 1 Health from this damage."
+},
+{
+"code": "08PZ001T3",
+"base": "08PZ001",
+"name": "Janna",
+"regions": [
+"Piltover & Zaun"
+],
+"cost": 4,
+"attack": 3,
+"health": 5,
+"keywords": [
+"Elusive"
+],
+"text": "Round Start: Draw 1.\r\nWhen you draw a card, reduce its cost by 1 this round."
+},
+{
+"code": "08FR001T1",
+"base": "08FR001",
+"name": "Volibear",
+"regions": [
+"Freljord"
+],
+"cost": 9,
+"attack": 11,
+"health": 11,
+"keywords": [
+"Overwhelm",
+"Missing Translation"
+],
+"text": "Play or Attack: Play Relentless Storm 3 times. Each one targets a different random enemy or the enemy Nexus if none.\r\nOther allies have Overwhelm."
+},
+{
+"code": "08RU014T9",
+"base": "08RU014",
+"name": "Elder Dragon",
+"regions": [
+"Runeterra"
+],
+"cost": 12,
+"attack": 30,
+"health": 30,
+"keywords": [
+"Fury"
+],
+"text": "\r\n\r\n\r\n\r\nI CANNOT BE STOPPED"
+},
+{
+"code": "08MT003T4",
+"base": "08MT003",
+"name": "Morgana",
+"regions": [
+"Targon",
+"Demacia"
+],
+"cost": 5,
+"attack": 4,
+"health": 5,
+"keywords": [
+"Lifesteal"
+],
+"text": "Play: Curse an enemy with Shackles twice.\r\nAttack: Curse the strongest enemy that isn't Cursed with Shackles and deal 3 to Cursed enemies and 2 to the enemy Nexus."
+},
+{
+"code": "09DE034T1",
+"base": "09DE034",
+"name": "Lux: Illuminated",
+"regions": [
+"Demacia"
+],
+"cost": 3,
+"attack": 2,
+"health": 3,
+"keywords": [
+"Spirit",
+"Support"
+],
+"text": "Support: Grant my supported ally Spirit and give me Barrier this round.\r\nWhen an ally gains Spirit, it gains it again."
+},
+{
+"code": "09IO052T1",
+"base": "09IO052",
+"name": "Lillia",
+"regions": [
+"Ionia"
+],
+"cost": 3,
+"attack": 3,
+"health": 2,
+"keywords": [
+"Quick Attack",
+"Spirit"
+],
+"text": "When I'm summoned or Strike: Create a Dream-Laden Bough in hand or, if you have one, reduce its cost by 1.\r\nWhen you Sleep another ally, immediately wake it up and grant it Spirit."
+},
+{
+"code": "09BC001T3",
+"base": "09BC001",
+"name": "Vex",
+"regions": [
+"Bandle City",
+"Shadow Isles"
+],
+"cost": 4,
+"attack": 6,
+"health": 5,
+"keywords": [
+"Fearsome"
+],
+"text": "Attack: Grant the strongest enemy Gloom.\r\nWhen an enemy gains Gloom, it gains it again."
+}
+]
+}

@@ -2769,5 +2769,24 @@
 "multi_target_attack"
 ],
 "drop": []
+},
+"Pass": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"Buddy": {
+"add": [
+"generate_cards"
+],
+"drop": []
+},
+"Timewarp": {
+"add": [
+"shop_gold",
+"multiple_resources"
+],
+"drop": []
 }
 }

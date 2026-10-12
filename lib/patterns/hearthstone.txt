@@ -22,3 +22,8 @@ upgrade|does|\b(transform|transforms) [^.]{0,40}\binto (a |random )?(ones?|minio
 !swap|\bswap
 swap|does|\bswap (the |its |their )?(attack|health|stats|cost)\b|\bswap (places|positions|hands|decks|stats)\b
 transform|does|\b(swaps|flips|changes) each turn\b
+# Freeze: the frozen character misses its next attack (a partial lock), not a total disable
+!disable|\bfreez
+!disable|\bfrozen\b
+attack_lock|does|\bfreez(e|es|ing)\b
+temporary_effect|does|\bfreez(e|es|ing)\b

@@ -1,0 +1,17 @@
+{
+ "hs_battlegrounds|Pass": {
+  "text": "Duos: give a card from your hand to your teammate (Claude inference from the cards that use it).",
+  "source_type": "keyword (definition: card text, Claude inference)"
+ },
+ "hs_battlegrounds|Buddy": {
+  "text": "A minion tied to your hero, earned or Discovered and added to your hand (Claude inference from the cards that use it).",
+  "source_type": "keyword (definition: card text, Claude inference)"
+ },
+ "hs_battlegrounds|Timewarp": {
+  "text": "A special shop visited on set turns where Chronum, a second currency that carries over, buys minions and spells (Claude inference from the cards that use it).",
+  "source_type": "keyword (definition: card text, Claude inference)"
+ },
+ "wh_40k_10e|Kill Team": {
+  "text_note": "left unmapped on purpose: unit-composition bookkeeping (majority Toughness for mixed units), no design mechanic"
+ }
+}

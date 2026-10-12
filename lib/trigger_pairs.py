@@ -1,0 +1,85 @@
+"""Rebuild the trigger -> effect table for every game. The first build only made pairs for clauses where a concept being retagged
+appeared, so most cards with triggers had none (Runeterra: 367 of 929). Now every clause of every entry is read: its triggers
+(general and per-game trigger patterns plus the trigger words below) and its effects (general and per-game effect patterns) are
+paired. Entries inherit the pairs of the keywords they have. Existing rows are kept (hand-made Underworlds warscroll pairs, Marvel Snap's own loader); new pairs are added.
+Coverage check: per game, the share of entries with a trigger tag that have at least one pair; `check` fails below 50%.
+Usage: trigger_pairs.py <db> [check]"""
+import re, sqlite3, sys
+c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
+EXTRA = {   # trigger wording the general patterns miss (Claude's list, from the misses)
+ 'on_attack': [r"\b(the first time|whenever|when|each time|after) (i|this|it|~|he|she|they|this (unit|creature|minion|follower|model|operative))\b[^.,:]{0,15}\battacks?\b", r"\b(nexus )?strike:", r"\bclash:", r"\battack:", r"\brally:"],
+ 'on_play': [r"\b(gift|deploy|fanfare|battlecry)\s*[-–:]", r"\bwhen i'?m (summoned|played)\b", r"\bwhen you (play|cast) (this|me|~)\b", r"\bon reveal:", r"\bdeploy:", r"\bfanfare:", r"\bopening gambit", r"\bplay:", r"\bgift:", r"\bbattlecry:", r"\bwhen (this|~) (creature|permanent|minion|unit) enters\b"],
+ 'death_trigger': [r"\blast words\s*[-–]", r"\blast breath:", r"\bwhen i die\b", r"\bwhen (this|it|~) (dies|is destroyed|perishes)\b", r"\bdying wish:", r"\bdeathwish:", r"\blast words:", r"\bwhen destroyed:", r"\bdeathrattle:"],
+ 'death_count': [r"\b(when|whenever|each time|after) (an?|another|any|one or more|a friendly|an allied|an enemy|your)\b[^.,:]{0,35}\b(dies|die|is destroyed|are destroyed|perishes|is slain|are slain)\b"],
+ 'turn_start': [r"\bproduction\s*[-–]", r"\bround start:", r"\bat the (start|beginning) of (each|your|the|every)\b", r"\bstart of turn:", r"\bproduction:"],
+ 'turn_end': [r"\bround end:", r"\bat the end of (each|your|the|every)\b", r"\bend of turn:"],
+ 'on_ally_play': [r"\bwhen(ever)? you (play|summon) (an?|another)\b(?! spell)", r"\bwhen(ever)? (an?|another) (ally|allied|friendly)[^.,:]{0,20}(is summoned|is played|enters)\b"],
+ 'on_spell': [r"\bwhen(ever)? you (cast|play) (an?|another)? ?[^.,:]{0,12}(spell|skill)\b", r"\bspellburst\b", r"\bmagecraft\b", r"\bprowess\b"],
+ 'on_damaged': [r"\bwhen(ever)? (i|this|it|~)\b[^.,:]{0,15}\b(takes|survives) damage\b", r"\benrage\b", r"\bwhen i'?m damaged\b"],
+ 'on_kill': [r"\bwhen(ever)? (i|this|it|~)\b[^.,:]{0,10}\b(kills?|slays?)\b", r"\bslay:", r"\bdeathblow\b", r"\boverkill\b"],
+}
+if len(sys.argv) < 3 or sys.argv[2] != 'check':
+    root = dict(q("SELECT id, root FROM concept_tree WHERE root IN ('trigger','effect')"))
+    pats = {}
+    for con, p, g in q("SELECT concept, pattern, game FROM concept_patterns WHERE role='does'"):
+        if root.get(con) in ('trigger', 'effect'):
+            try: pats.setdefault(g, []).append((con, root[con], re.compile(p, re.I)))
+            except re.error: pass
+    for con, ps in EXTRA.items():
+        for p in ps: pats.setdefault(None, []).append((con, 'trigger', re.compile(p, re.I)))
+    have = {(e, t, f) for e, t, f in q('SELECT entity, trigger, effect FROM trigger_effect')}
+    SPLIT = re.compile(r'(?<=[.!;])\s+|\n+')
+    n = 0
+    # whole-entry triggers that are not in the wording (monster intents, structure rules, reviewed tags): used when no clause names a trigger
+    whole = {}
+    for e, k in q("SELECT entity, concept FROM entity_concepts WHERE role='does' AND method IN ('game_structure','data_rule','claude_review','via_keyword','claude_inference')"):
+        if root.get(k) == 'trigger' and k not in ('passive', 'aura', 'trigger'): whole.setdefault(e, set()).add(k)
+    for e, g, t in q("SELECT id, game, text FROM entities WHERE text IS NOT NULL AND category NOT IN ('tribe') AND length(text) < 6000"):
+        P = pats.get(None, []) + pats.get(g, [])
+        found = False
+        cls = [x.lower().strip() for x in SPLIT.split(t)]
+        for j, low in enumerate(cls):
+            cl = low
+            if not low: continue
+            tr = {con for con, r, p in P if r == 'trigger' and p.search(low)}
+            if not tr: continue
+            found = True
+            for a in tr: c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, a, 'does', 'text_pattern', low[:60]))   # the entry gets the trigger tag too
+            ef = {con for con, r, p in P if r == 'effect' and p.search(low)}
+            if not ef:   # "At the start of each turn, repeat this." — the effect is in the clause before or after
+                for nb in (cls[j - 1] if j else '', cls[j + 1] if j + 1 < len(cls) else ''):
+                    ef |= {con for con, r, p in P if r == 'effect' and p.search(nb)}
+            for a in tr:
+                for b in ef:
+                    if (e, a, b) in have: continue
+                    have.add((e, a, b)); n += 1
+                    c.execute("INSERT INTO trigger_effect(entity, game, trigger, effect, clause) VALUES(?,?,?,?,?)", (e, g, a, b, cl.strip()[:300]))
+        if not found and e in whole:
+            for cl in SPLIT.split(t):
+                low = cl.lower().strip()
+                ef = {con for con, r, p in P if r == 'effect' and p.search(low)}
+                for a in whole[e]:
+                    for b in ef:
+                        if (e, a, b) in have: continue
+                        have.add((e, a, b)); n += 1
+                        c.execute("INSERT INTO trigger_effect(entity, game, trigger, effect, clause) VALUES(?,?,?,?,?)", (e, g, a, b, cl.strip()[:300]))
+    # an entry that has a keyword also has that keyword's trigger -> effect pairs (Inscryption sigils, Blood Bowl skills...)
+    k = 0
+    kwp = {}
+    for e, t, f, cl in q("SELECT t.entity, t.trigger, t.effect, t.clause FROM trigger_effect t JOIN entities x ON x.id=t.entity WHERE x.category='keyword'"): kwp.setdefault(e, []).append((t, f, cl))
+    for src, dst, g, kn in q("SELECT l.src, l.dst, x.game, k.name FROM entity_links l JOIN entities x ON x.id=l.src JOIN entities k ON k.id=l.dst WHERE l.rel IN ('has_keyword','grants_keyword') AND k.category='keyword'"):
+        for t, f, cl in kwp.get(dst, []):
+            if (src, t, f) in have: continue
+            have.add((src, t, f)); k += 1
+            c.execute("INSERT INTO trigger_effect(entity, game, trigger, effect, clause) VALUES(?,?,?,?,?)", (src, g, t, f, f'via keyword {kn}: {cl}'[:300]))
+    c.commit(); print('trigger pairs added:', n, ' inherited from keywords:', k)
+trig = {i for (i,) in q("SELECT id FROM concept_tree WHERE root='trigger'")} - {'passive', 'aura', 'trigger'}
+bad = []
+for g, in q('SELECT DISTINCT game FROM entities'):
+    tagged = {e for (e, k) in q("SELECT ec.entity, ec.concept FROM entity_concepts ec JOIN entities x ON x.id=ec.entity WHERE x.game=? AND ec.role='does' AND x.category NOT IN ('keyword','tribe')", g) if k in trig}
+    paired = {e for (e,) in q('SELECT DISTINCT entity FROM trigger_effect WHERE game=?', g)}
+    if len(tagged) >= 50:
+        share = len(tagged & paired) / len(tagged)
+        if share < 0.5: bad.append(f'{g} {share:.0%}')
+print('trigger coverage below 50%:', bad or 'none')
+if len(sys.argv) > 2 and bad: sys.exit(1)

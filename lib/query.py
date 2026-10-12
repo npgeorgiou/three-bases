@@ -1,7 +1,7 @@
 """Search helpers for the Three Bases inspiration library.
 Usage: python3 query.py <command> <args>   (see SEARCH_GUIDE.md)"""
 import sqlite3, json, sys, collections, os
-DB = os.environ.get('TB_LIB', '/home/claude/library/three-bases-library.sqlite')
+DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'three-bases-library.sqlite'))  # the database sits next to lib/
 db = sqlite3.connect(DB)
 q = lambda s, *a: db.execute(s, a).fetchall()
 
@@ -18,6 +18,9 @@ def concept(cid, per_game=4, role=None, game=None):
     if not c: print('no concept', cid); return concepts(cid)
     print('==', c[0][1], f'[{c[0][2]}]', c[0][3] or '')
     print('parents:', [r[0] for r in q('SELECT parent FROM concept_parents WHERE child=?', cid)])
+    if q("SELECT 1 FROM sqlite_master WHERE name='concept_precision'"):
+        w = q('SELECT game, precision FROM concept_precision WHERE concept=? AND precision < 0.7 ORDER BY precision', cid)
+        if w: print('WARNING, automatic tags for this concept are often wrong in:', ', '.join(f'{g} ({p:.0%} right)' for g, p in w), '- read the card text there')
     print('children:', [r[0] for r in q('SELECT child FROM concept_parents WHERE parent=?', cid)])
     for a, rel, b, note in q('SELECT a, rel, b, note FROM concept_relations WHERE a=? OR b=?', cid, cid):
         print(f'  relation: {a} --{rel}--> {b}' + (f'  ({note})' if note else ''))
@@ -62,7 +65,11 @@ def search(text, game=None, limit=30):
 
 def entity(name, game=None):
     """Full record of an entity with its keywords, concepts and links."""
-    for e in q(f"SELECT * FROM entities WHERE name=? {'AND game=?' if game else ''}", *([name] + ([game] if game else []))):
+    rows = q(f"SELECT * FROM entities WHERE name=? {'AND game=?' if game else ''}", *([name] + ([game] if game else [])))
+    if not rows and q("SELECT 1 FROM sqlite_master WHERE name='merged_entities'"):
+        rows = q(f"SELECT x.* FROM merged_entities m JOIN entities x ON x.id=m.kept_id WHERE m.name=? {'AND m.game=?' if game else ''}", *([name] + ([game] if game else [])))
+        if rows: print(f'{name} was merged into {rows[0][3]} (same mechanic)')
+    for e in rows:
         cols = [d[0] for d in db.execute('SELECT * FROM entities LIMIT 0').description]
         for c, v in zip(cols, e):
             if v not in (None, ''): print(f'{c}: {v}')
@@ -87,6 +94,9 @@ def problem(pid):
 
 def _ent(name, game=None):
     r = q(f"SELECT id, game, name FROM entities WHERE name=? {'AND game=?' if game else ''} AND category NOT IN ('keyword','tribe')", *([name] + ([game] if game else [])))
+    if not r and q("SELECT 1 FROM sqlite_master WHERE name='merged_entities'"):
+        r = q(f"SELECT x.id, x.game, x.name FROM merged_entities m JOIN entities x ON x.id=m.kept_id WHERE m.name=? {'AND m.game=?' if game else ''}", *([name] + ([game] if game else [])))
+        if r: print(f'{name} was merged into {r[0][2]} (same mechanic)')
     if not r: print('not found', name); return None
     if len(r) > 1: print('several matches, using first:', r[:5])
     return r[0]
@@ -107,7 +117,8 @@ def interactions(name, game=None, per=8):
         print(f'   {rel} {tn}: partners ({other}):', ', '.join(p[0] for p in ps))
     print('-- keyword partners:')
     for rel, kid, kn in q('SELECT l.rel, k.id, k.name FROM entity_links l JOIN entities k ON k.id=l.dst WHERE l.src=? AND k.category="keyword"', eid):
-        other = ('grants_keyword', 'mentions_keyword') if rel == 'has_keyword' else ('has_keyword',)
+        other = {'has_keyword': ('grants_keyword', 'mentions_keyword'), 'inflicts_keyword': ('benefits_keyword', 'counters_keyword'), 'benefits_keyword': ('inflicts_keyword',),
+                 'counters_keyword': ('inflicts_keyword',), 'suffers_keyword': ('counters_keyword', 'benefits_keyword')}.get(rel, ('has_keyword',))
         ps = q(f'SELECT x.name, l.rel FROM entity_links l JOIN entities x ON x.id=l.src WHERE l.dst=? AND l.rel IN ({",".join("?"*len(other))}) AND x.id<>? ORDER BY random() LIMIT ?', kid, *other, eid, per)
         print(f'   {rel} {kn}:', ', '.join(f'{a} ({b})' for a, b in ps))
     print('-- concept partners in the same game (what this benefits from <-> who does it; what this does <-> who benefits):')
@@ -125,24 +136,62 @@ def interactions(name, game=None, per=8):
     partners(does, ('benefits',), 'feeds (cards that benefit from)')
     partners({b for c in does for b in syn.get(c, ())} - does, ('does', 'grants'), 'synergy (concept relation) with')
 
+def _anc(c):
+    """A concept with all its ancestors (a payoff for a parent concept is also a payoff for its children)."""
+    return {r[0] for r in q('SELECT root FROM concept_tree WHERE id=?', c)} | {c}
+
+FEEDS = {   # which effects set off which triggers (Claude's mapping)
+    'on_ally_play': {'summon', 'revive', 'free_play'}, 'death_count': {'sacrifice', 'destroy', 'self_destruct', 'board_wipe', 'aoe_damage'},
+    'on_damaged': {'damage', 'friendly_fire'}, 'on_attack': {'attack_now', 'haste', 'multi_attack', 'forced_attack'},
+    'on_kill': {'destroy', 'deathtouch'}, 'on_play': {'blink', 'copy', 'return_to_hand'}, 'death_trigger': {'sacrifice', 'self_destruct', 'destroy'}}
+
+def connections(ia, ib):
+    """Every known connection between two entities, by layer: link, type, keyword, role (exact), role (concept tree), relation, engine."""
+    out = []
+    for r in q('SELECT rel FROM entity_links WHERE src=? AND dst=?', ia, ib): out.append(('link', f'A {r[0]} B'))
+    for r in q('SELECT rel FROM entity_links WHERE src=? AND dst=?', ib, ia): out.append(('link', f'B {r[0]} A'))
+    for k, r1, r2, cat in q('SELECT k.name, l1.rel, l2.rel, k.category FROM entity_links l1 JOIN entity_links l2 ON l1.dst=l2.dst JOIN entities k ON k.id=l1.dst WHERE l1.src=? AND l2.src=? AND k.category IN ("keyword","tribe")', ia, ib):
+        out.append(('type' if cat == 'tribe' else 'keyword', f'{k} (A {r1}, B {r2})'))
+    ca = q('SELECT concept, role FROM entity_concepts WHERE entity=?', ia); cb = q('SELECT concept, role FROM entity_concepts WHERE entity=?', ib)
+    rel = {}
+    for a, r, b in q('SELECT a, rel, b FROM concept_relations WHERE rel IN ("synergizes","enables")'):
+        rel.setdefault((a, b), r); rel.setdefault((b, a), r)
+    for x, y, lx, ly in ((ca, cb, 'A', 'B'), (cb, ca, 'B', 'A')):
+        does = {c for c, r in x if r in ('does', 'grants')}; need = {c for c, r in y if r in ('benefits', 'cost')}
+        for c in sorted(does & need): out.append(('role', f'{lx} does {c}, {ly} benefits'))
+        for c in sorted({c for c, r in x if r == 'cost'} & {c for c, r in y if r == 'benefits'}): out.append(('role', f'{lx} pays {c} as a cost, {ly} benefits'))
+        for c in sorted(does):
+            for n in sorted((_anc(c) - {c}) & need): out.append(('role_tree', f'{lx} does {c} (a kind of {n}), {ly} benefits from {n}'))
+        for c in sorted(does):
+            for n in sorted({d for d, r in y if r in ('benefits', 'cost', 'does')}):
+                hit = [(a, b) for a in _anc(c) for b in _anc(n) if (a, b) in rel]
+                if hit: out.append(('relation', f'{lx} does {c}, {ly} has {n}: {hit[0][0]} {rel[hit[0]]} {hit[0][1]}'))
+    # engine: one card's trigger is the other's effect (enabler -> payoff), from trigger_effect
+    for x, y, lx, ly in ((ia, ib, 'A', 'B'), (ib, ia, 'B', 'A')):
+        trig_ids = {i for (i,) in q("SELECT id FROM concept_tree WHERE root='trigger'")}
+        eff = {e for (e,) in q('SELECT effect FROM trigger_effect WHERE entity=?', x)} | {c for c, r in q('SELECT concept, role FROM entity_concepts WHERE entity=?', x) if r in ('does', 'grants') and c not in trig_ids}
+        cat = q('SELECT category FROM entities WHERE id=?', x)[0][0]
+        for t, e in q('SELECT DISTINCT trigger, effect FROM trigger_effect WHERE entity=?', y):
+            m = sorted(c for c in eff if t in _anc(c) or (FEEDS.get(t, set()) & _anc(c)))
+            if t == 'on_spell' and cat == 'spell': m = m or ['a spell']
+            if m: out.append(('engine', f'{lx} does {m[0]} -> {ly} triggers on {t} ({e})'))
+    seen = set(); res = []
+    for o in out:
+        if o not in seen: seen.add(o); res.append(o)
+    return res
+
 def combo(a, b, game=None):
-    """Explain every known connection between two cards."""
+    """Explain every known connection between two cards, layer by layer (link, type, keyword, role, role_tree, relation, engine)."""
     ea, eb = _ent(a, game), _ent(b, game)
     if not ea or not eb: return
-    ia, ib = ea[0], eb[0]
-    print('direct:', q('SELECT rel FROM entity_links WHERE (src=? AND dst=?) OR (src=? AND dst=?)', ia, ib, ib, ia))
-    print('shared keywords:', q('SELECT k.name, l1.rel, l2.rel FROM entity_links l1 JOIN entity_links l2 ON l1.dst=l2.dst JOIN entities k ON k.id=l1.dst WHERE l1.src=? AND l2.src=? AND k.category IN ("keyword","tribe")', ia, ib))
-    ca = q('SELECT concept, role FROM entity_concepts WHERE entity=?', ia); cb = q('SELECT concept, role FROM entity_concepts WHERE entity=?', ib)
-    print('A does what B benefits from:', sorted({c for c, r in ca if r in ('does','grants')} & {c for c, r in cb if r in ('benefits','cost')}))
-    print('B does what A benefits from:', sorted({c for c, r in cb if r in ('does','grants')} & {c for c, r in ca if r in ('benefits','cost')}))
-    rel = q('SELECT a, rel, b FROM concept_relations')
-    sa = {c for c, _ in ca}; sb = {c for c, _ in cb}
-    print('concept relations between their concepts:', [(x, r, y) for x, r, y in rel if (x in sa and y in sb) or (x in sb and y in sa)][:20])
+    res = connections(ea[0], eb[0])
+    if not res: print('no known connection'); return
+    for layer, d in res[:40]: print(f'  {layer:10} {d}')
 
-def grid(trigger=None, effect=None, game=None, examples=3):
+def grid(trigger=None, effect=None, game=None, examples=3, freq=None):
     """Trigger x effect design space. With no args: matrix of counts (games using each pair). With trigger and/or effect: examples per game."""
-    w = ' AND '.join(x for x in ['trigger=?' if trigger else '', 'effect=?' if effect else '', 'game=?' if game else ''] if x) or '1=1'
-    args = [a for a in (trigger, effect, game) if a]
+    w = ' AND '.join(x for x in ['trigger=?' if trigger else '', 'effect=?' if effect else '', 'game=?' if game else '', 'frequency=?' if freq else ''] if x) or '1=1'
+    args = [a for a in (trigger, effect, game, freq) if a]
     if not trigger and not effect:
         for r in q(f'SELECT trigger, effect, count(*), count(DISTINCT game) FROM trigger_effect WHERE {w} GROUP BY 1,2 ORDER BY 4 DESC, 3 DESC LIMIT 60', *args): print(f'  {r[0]:18} -> {r[1]:20} entries {r[2]:5} games {r[3]}')
         return
@@ -165,6 +214,47 @@ def archetypes(name=None, game=None):
     for aid, d, cs in q('SELECT id, description, concepts FROM archetypes' + (' WHERE id=?' if name else ''), *([name] if name else [])):
         print(f'== {aid}: {d}  concepts: {cs}')
         for g, f, s, l in q('SELECT game, faction, share, lift FROM faction_archetypes WHERE archetype=? ORDER BY lift DESC' + ('' if name else ' LIMIT 8'), aid): print(f'   {g:16} {f:35} share {s:.2f} lift {l}')
+
+def frequency(bound=None, trigger=None, effect=None, game=None, examples=3):
+    """Trigger -> effect pairs by frequency limit (per_card, per_round, unbounded, static). No bound: counts per bound for the filters."""
+    w = ' AND '.join(x for x in ['frequency=?' if bound else '', 'trigger=?' if trigger else '', 'effect=?' if effect else '', 'game=?' if game else ''] if x) or '1=1'
+    args = [a for a in (bound, trigger, effect, game) if a]
+    if not bound:
+        for r in q(f'SELECT frequency, count(*), count(DISTINCT game) FROM trigger_effect WHERE {w} GROUP BY 1 ORDER BY 2 DESC', *args): print(f'  {r[0]:10} entries {r[1]:6} games {r[2]}')
+        return
+    for r in q(f'SELECT trigger, effect, count(*), count(DISTINCT game) FROM trigger_effect WHERE {w} GROUP BY 1,2 ORDER BY 3 DESC LIMIT 25', *args): print(f'  {r[0]:18} -> {r[1]:20} entries {r[2]:5} games {r[3]}')
+    for g, in q(f'SELECT DISTINCT game FROM trigger_effect WHERE {w}', *args):
+        print('--', g)
+        for n, cl, b in q(f'SELECT x.name, t.clause, t.basis FROM trigger_effect t JOIN entities x ON x.id=t.entity WHERE {w.replace("game=?", "t.game=?")} AND t.game=? ORDER BY random() LIMIT ?', *args, g, examples):
+            print(f'    {n}: {cl[:130]}  [{b}]')
+
+def signature(game, faction=None, per=3):
+    """Per source faction: its signature mechanics (with example cards) and the other factions' mechanics it splashes."""
+    fs = [faction] if faction else [f for (f,) in q('SELECT DISTINCT faction FROM faction_signature WHERE game=? ORDER BY 1', game)]
+    for f in fs:
+        sig = q("SELECT concept, entities, share, lift FROM faction_signature WHERE game=? AND faction=? AND kind='signature' ORDER BY lift DESC", game, f)
+        print(f'== {f}')
+        for k, n, s, l in sig:
+            ex = q("SELECT DISTINCT x.name FROM entities x JOIN entity_concepts ec ON ec.entity=x.id WHERE x.game=? AND x.faction=? AND ec.concept=? AND ec.role IN ('does','grants') AND x.category NOT IN ('keyword','tribe') ORDER BY random() LIMIT ?", game, f, k, per)
+            print(f'   signature {k:22} cards {n:4} share {s:.2f} lift {l:4}  e.g. ' + ', '.join(e[0] for e in ex))
+        kws = q("SELECT concept, entities, lift FROM faction_signature WHERE game=? AND faction=? AND kind='keyword_signature' ORDER BY entities DESC", game, f)
+        if kws: print('   own keywords:', ', '.join(f'{k[3:]} ({n} cards, {int(l * 100)}% of its uses)' for k, n, l in kws))
+        sp = q("SELECT concept, entities, owner FROM faction_signature WHERE game=? AND faction=? AND kind='splash' ORDER BY entities LIMIT 12", game, f)
+        if sp: print('   splash (others\' signatures, few cards):', ', '.join(f'{k} x{n} (of {o})' for k, n, o in sp))
+
+def splash(concept, game=None, per=3):
+    """Cards that use another faction's signature mechanic sparingly, per game, with the splashing faction's own signatures each card also carries."""
+    games = [game] if game else [g for (g,) in q("SELECT DISTINCT game FROM faction_signature WHERE concept=? AND kind='splash' ORDER BY 1", concept)]
+    for g in games:
+        own = q("SELECT faction, share FROM faction_signature WHERE game=? AND concept=? AND kind='signature' ORDER BY share DESC", g, concept)
+        print(f'== {g}: signature of', ', '.join(f'{f} ({s:.2f})' for f, s in own) or 'no faction')
+        for f, n, s in q("SELECT faction, entities, share FROM faction_signature WHERE game=? AND concept=? AND kind='splash' ORDER BY entities", g, concept):
+            fsig = {k for (k,) in q("SELECT concept FROM faction_signature WHERE game=? AND faction=? AND kind='signature'", g, f)}
+            cards = q("SELECT DISTINCT x.id, x.name, x.text FROM entities x JOIN entity_concepts ec ON ec.entity=x.id WHERE x.game=? AND x.faction=? AND ec.concept=? AND ec.role IN ('does','grants') AND x.category NOT IN ('keyword','tribe') ORDER BY random() LIMIT ?", g, f, concept, per)
+            print(f'   {f}: {n} cards (share {s:.2f})')
+            for i, nm, t in cards:
+                tr = sorted(fsig & {k for (k,) in q("SELECT concept FROM entity_concepts WHERE entity=? AND role IN ('does','grants')", i)})
+                print(f'     {nm}: {(t or "")[:110]}' + (f'  [own trait: {", ".join(tr)}]' if tr else ''))
 
 def games():
     for r in q('SELECT g.id, g.name, (SELECT count(*) FROM entities WHERE game=g.id), g.structure FROM games g'): print(r)

@@ -1,0 +1,59 @@
+{
+"760840": {
+"add": [
+"attack_lock"
+],
+"drop": [
+"disable"
+]
+},
+"760842": {
+"add": [
+"attack_lock"
+],
+"drop": [
+"disable"
+]
+},
+"760836": {
+"add": [],
+"drop": [
+"disable",
+"movement"
+]
+},
+"760838": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"760843": {
+"add": [
+"attack_lock"
+],
+"drop": [
+"disable"
+]
+},
+"760844": {
+"add": [
+"attack_lock"
+],
+"drop": []
+},
+"760845": {
+"add": [
+"attack_lock"
+],
+"drop": []
+},
+"760839": {
+"add": [
+"immobilize"
+],
+"drop": [
+"disable"
+]
+}
+}

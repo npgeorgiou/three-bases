@@ -1,0 +1,17 @@
+{
+"742371": {
+"add": [
+"attack_lock",
+"temporary_effect"
+],
+"drop": [
+"disable"
+]
+},
+"742361": {
+"add": [],
+"drop": [
+"attack_lock"
+]
+}
+}
