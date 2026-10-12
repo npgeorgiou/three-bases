@@ -40,7 +40,9 @@
 "buff"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity",
+"run_structure"
 ]
 },
 "760063": {
@@ -69,7 +71,10 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"combat_start",
+"condition",
+"light_level"
 ],
 "drop": [
 "debuff"
@@ -266,10 +271,12 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760042": {
@@ -427,10 +434,12 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"tribal"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760359": {
@@ -452,7 +461,8 @@
 "buff"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760492": {
@@ -460,7 +470,11 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"combat_start",
+"condition",
+"light_level",
+"stress_morale"
 ],
 "drop": [
 "debuff"
@@ -547,20 +561,26 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"damage_over_time:counters"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity",
+"run_structure"
 ]
 },
 "760183": {
 "add": [
 "items_consumables",
 "passive",
-"drawback"
+"drawback",
+"damage_over_time:benefits",
+"random_effect"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760146": {
@@ -705,10 +725,14 @@
 "add": [
 "items_consumables",
 "passive",
-"drawback"
+"drawback",
+"damage_over_time:benefits",
+"play_restriction",
+"random_effect"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760175": {
@@ -833,10 +857,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition_life",
+"ranged",
+"tribal"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760493": {
@@ -866,10 +894,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"rank_positions"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760082": {
@@ -986,10 +1017,15 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"cheat_death",
+"combat_start",
+"condition",
+"light_level"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity"
 ]
 },
 "760477": {
@@ -1039,7 +1075,11 @@
 "add": [
 "items_consumables",
 "passive",
-"buff"
+"buff",
+"play_restriction",
+"random_effect",
+"rest_phase",
+"stress_morale"
 ],
 "drop": [
 "debuff"
@@ -1060,7 +1100,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"light_level",
+"random_effect",
+"rank_positions",
+"rest_phase",
+"stress_morale"
 ],
 "drop": [
 "debuff"
@@ -1081,10 +1127,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"combat_start"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity",
+"run_structure"
 ]
 },
 "760444": {
@@ -1125,7 +1174,11 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"light_level",
+"rest_phase",
+"stress_morale"
 ],
 "drop": [
 "debuff"
@@ -1138,7 +1191,8 @@
 "buff"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760315": {
@@ -1222,7 +1276,10 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"light_level",
+"stress_morale"
 ],
 "drop": [
 "debuff"
@@ -1286,10 +1343,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"rank_positions"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760211": {
@@ -1349,10 +1409,12 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"run_structure"
 ],
 "drop": [
-"debuff"
+"debuff",
+"stress_morale"
 ]
 },
 "760471": {
@@ -1380,10 +1442,15 @@
 "add": [
 "items_consumables",
 "passive",
-"drawback"
+"drawback",
+"forced_movement:benefits",
+"play_restriction",
+"random_effect"
 ],
 "drop": [
-"debuff"
+"debuff",
+"movement",
+"run_structure"
 ]
 },
 "760270": {
@@ -1639,10 +1706,16 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition_life",
+"rank_positions",
+"stress_morale",
+"tribal"
 ],
 "drop": [
-"debuff"
+"debuff",
+"cheat_death",
+"run_structure"
 ]
 },
 "760235": {
@@ -1802,10 +1875,15 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"damage_over_time:counters",
+"rank_positions"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity",
+"run_structure"
 ]
 },
 "760300": {
@@ -1922,10 +2000,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"stress_morale",
+"tribal"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760469": {
@@ -1943,7 +2024,11 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition_life",
+"light_level",
+"random_effect",
+"stress_morale"
 ],
 "drop": [
 "debuff"
@@ -1996,10 +2081,12 @@
 "add": [
 "items_consumables",
 "passive",
-"buff"
+"buff",
+"play_restriction"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760223": {
@@ -2072,7 +2159,9 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"light_level"
 ],
 "drop": [
 "debuff"
@@ -2094,20 +2183,26 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition_life",
+"tribal"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure",
+"trap_secret"
 ]
 },
 "760221": {
 "add": [
 "items_consumables",
 "passive",
-"buff"
+"buff",
+"ranged"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760114": {
@@ -2184,7 +2279,9 @@
 "buff"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure",
+"trap_secret"
 ]
 },
 "760351": {
@@ -2277,10 +2374,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"combat_start",
+"random_effect",
+"ranged"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760276": {
@@ -2319,10 +2420,12 @@
 "add": [
 "items_consumables",
 "passive",
-"buff"
+"buff",
+"play_restriction"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760179": {
@@ -2394,10 +2497,15 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"random_effect",
+"rank_positions"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity",
+"run_structure"
 ]
 },
 "760059": {
@@ -2502,10 +2610,17 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"cheat_death",
+"combat_start",
+"condition_life",
+"light_level",
+"upkeep"
 ],
 "drop": [
-"debuff"
+"debuff",
+"trap_secret",
+"stress_morale"
 ]
 },
 "760484": {
@@ -2513,10 +2628,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition_life",
+"light_level",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"cheat_death"
 ]
 },
 "760083": {
@@ -2524,10 +2643,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"damage_over_time:counters",
+"play_restriction"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity",
+"run_structure"
 ]
 },
 "760244": {
@@ -2568,10 +2691,12 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760331": {
@@ -2633,10 +2758,12 @@
 "add": [
 "items_consumables",
 "passive",
-"buff"
+"buff",
+"play_restriction"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760337": {
@@ -2797,10 +2924,13 @@
 "add": [
 "items_consumables",
 "passive",
-"buff"
+"buff",
+"play_restriction",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760507": {
@@ -2830,7 +2960,11 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"light_level",
+"rank_positions",
+"stress_morale"
 ],
 "drop": [
 "debuff"
@@ -2917,10 +3051,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"cheat_death",
+"condition_life"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity",
+"run_structure"
 ]
 },
 "760457": {
@@ -2970,10 +3108,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"combat_start",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760380": {
@@ -2992,10 +3133,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"stress_morale",
+"tribal"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760426": {
@@ -3133,7 +3277,10 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"light_level",
+"stress_morale"
 ],
 "drop": [
 "debuff"
@@ -3154,10 +3301,12 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"run_structure"
 ],
 "drop": [
-"debuff"
+"debuff",
+"stress_morale"
 ]
 },
 "760332": {
@@ -3276,7 +3425,8 @@
 "buff"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760419": {
@@ -3316,10 +3466,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition_life",
+"random_effect"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760459": {
@@ -3468,10 +3621,12 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"play_restriction"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760415": {
@@ -3522,10 +3677,16 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"play_restriction",
+"random_effect",
+"upkeep"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity",
+"trap_secret",
+"run_structure"
 ]
 },
 "760448": {
@@ -3543,10 +3704,16 @@
 "add": [
 "items_consumables",
 "passive",
-"drawback"
+"drawback",
+"forced_movement:benefits",
+"play_restriction",
+"random_effect"
 ],
 "drop": [
-"debuff"
+"debuff",
+"disable",
+"movement",
+"run_structure"
 ]
 },
 "760431": {
@@ -3590,7 +3757,8 @@
 "buff"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760081": {
@@ -3814,10 +3982,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"stress_morale",
+"tribal"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760085": {
@@ -3850,7 +4021,8 @@
 "buff"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760312": {
@@ -3858,10 +4030,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"ranged",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760409": {
@@ -3880,10 +4055,17 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"cheat_death",
+"combat_start",
+"condition",
+"light_level",
+"rank_positions",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity"
 ]
 },
 "760417": {
@@ -3923,10 +4105,13 @@
 "add": [
 "items_consumables",
 "passive",
-"buff"
+"buff",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity",
+"run_structure"
 ]
 },
 "760449": {
@@ -4033,14 +4218,18 @@
 "buff"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760364": {
 "add": [
 "items_consumables",
 "passive",
-"buff"
+"buff",
+"condition",
+"light_level",
+"random_effect"
 ],
 "drop": [
 "debuff"
@@ -4105,10 +4294,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"combat_start",
+"condition_life"
 ],
 "drop": [
-"debuff"
+"debuff",
+"cheat_death",
+"run_structure"
 ]
 },
 "760104": {
@@ -4259,7 +4452,8 @@
 "buff"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760333": {
@@ -4267,10 +4461,16 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition_life",
+"ranged",
+"stress_morale",
+"upkeep"
 ],
 "drop": [
-"debuff"
+"debuff",
+"cheat_death",
+"run_structure"
 ]
 },
 "760132": {
@@ -4355,10 +4555,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"cheat_death",
+"condition",
+"light_level"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity"
 ]
 },
 "760397": {
@@ -4398,10 +4602,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition_life",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"cheat_death",
+"run_structure"
 ]
 },
 "760122": {
@@ -4486,7 +4694,10 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"light_level",
+"stress_morale"
 ],
 "drop": [
 "debuff"
@@ -4497,7 +4708,12 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"damage_over_time:counters",
+"immunity",
+"light_level",
+"stress_morale"
 ],
 "drop": [
 "debuff"
@@ -4628,10 +4844,16 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"combat_start",
+"condition_life",
+"light_level",
+"stress_morale",
+"upkeep"
 ],
 "drop": [
-"debuff"
+"debuff",
+"cheat_death"
 ]
 },
 "760496": {
@@ -4650,10 +4872,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"combat_start",
+"ranged"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760463": {
@@ -4716,10 +4941,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"light_level",
+"random_effect"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity"
 ]
 },
 "760242": {
@@ -4727,10 +4956,17 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"cheat_death",
+"combat_start",
+"condition_life",
+"rank_positions",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity",
+"run_structure"
 ]
 },
 "760454": {
@@ -4858,10 +5094,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"cheat_death",
+"condition_life",
+"light_level"
 ],
 "drop": [
-"debuff"
+"debuff",
+"immunity"
 ]
 },
 "760436": {
@@ -4883,7 +5123,8 @@
 "buff"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760241": {
@@ -4935,10 +5176,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"condition",
+"rank_positions",
+"upkeep"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760514": {
@@ -5012,10 +5257,12 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"tribal"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760176": {
@@ -5085,10 +5332,13 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"play_restriction",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760374": {
@@ -5138,10 +5388,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"random_effect",
+"stress_morale",
+"upkeep"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760488": {
@@ -5234,7 +5488,10 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"light_level",
+"stress_morale",
+"tribal"
 ],
 "drop": [
 "debuff"
@@ -5256,10 +5513,14 @@
 "items_consumables",
 "passive",
 "drawback",
-"buff"
+"buff",
+"combat_start",
+"stress_morale",
+"tribal"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "760443": {
@@ -5355,7 +5616,10 @@
 "760657": {
 "add": [
 "traits_quirks",
-"buff"
+"buff",
+"passive",
+"stress_morale",
+"tribal"
 ],
 "drop": [
 "debuff"
@@ -5497,7 +5761,8 @@
 "760588": {
 "add": [
 "traits_quirks",
-"drawback"
+"drawback",
+"passive"
 ],
 "drop": [
 "debuff"
@@ -5530,7 +5795,8 @@
 "760537": {
 "add": [
 "traits_quirks",
-"buff"
+"buff",
+"passive"
 ],
 "drop": [
 "debuff"
@@ -5547,10 +5813,15 @@
 "760687": {
 "add": [
 "traits_quirks",
-"drawback"
+"drawback",
+"friendly_fire",
+"random_effect",
+"autonomous_units",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"trap_secret"
 ]
 },
 "760636": {
@@ -5712,7 +5983,10 @@
 "760651": {
 "add": [
 "traits_quirks",
-"drawback"
+"drawback",
+"passive",
+"stress_morale",
+"tribal"
 ],
 "drop": [
 "debuff"
@@ -5860,10 +6134,15 @@
 "add": [
 "traits_quirks",
 "drawback",
-"buff"
+"buff",
+"friendly_fire",
+"random_effect",
+"autonomous_units",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"trap_secret"
 ]
 },
 "760557": {
@@ -5938,7 +6217,10 @@
 "760567": {
 "add": [
 "traits_quirks",
-"buff"
+"buff",
+"condition",
+"light_level",
+"passive"
 ],
 "drop": [
 "debuff"
@@ -6080,8 +6362,7 @@
 },
 "760573": {
 "add": [
-"traits_quirks",
-"drawback"
+"traits_quirks"
 ],
 "drop": [
 "debuff"
@@ -6090,10 +6371,13 @@
 "760572": {
 "add": [
 "traits_quirks",
-"buff"
+"buff",
+"passive",
+"combat_start"
 ],
 "drop": [
-"debuff"
+"debuff",
+"drawback"
 ]
 },
 "760624": {
@@ -6106,8 +6390,7 @@
 },
 "760580": {
 "add": [
-"traits_quirks",
-"drawback"
+"traits_quirks"
 ],
 "drop": [
 "debuff"
@@ -6116,10 +6399,15 @@
 "760578": {
 "add": [
 "traits_quirks",
-"buff"
+"buff",
+"condition",
+"light_level",
+"passive",
+"stress_morale"
 ],
 "drop": [
-"debuff"
+"debuff",
+"drawback"
 ]
 },
 "760621": {
@@ -6214,7 +6502,9 @@
 "760583": {
 "add": [
 "traits_quirks",
-"drawback"
+"drawback",
+"stress_morale",
+"tribal"
 ],
 "drop": [
 "debuff"
@@ -6222,8 +6512,7 @@
 },
 "760536": {
 "add": [
-"traits_quirks",
-"drawback"
+"traits_quirks"
 ],
 "drop": [
 "debuff"
@@ -6241,10 +6530,13 @@
 "760568": {
 "add": [
 "traits_quirks",
-"buff"
+"buff",
+"condition_life",
+"passive"
 ],
 "drop": [
-"debuff"
+"debuff",
+"drawback"
 ]
 },
 "760684": {
@@ -6277,10 +6569,12 @@
 },
 "760620": {
 "add": [
-"traits_quirks"
+"traits_quirks",
+"upkeep:benefits"
 ],
 "drop": [
-"debuff"
+"debuff",
+"heal:benefits"
 ]
 },
 "760524": {
@@ -6313,7 +6607,8 @@
 "760522": {
 "add": [
 "traits_quirks",
-"drawback"
+"drawback",
+"passive"
 ],
 "drop": [
 "debuff"
@@ -6385,7 +6680,8 @@
 "760592": {
 "add": [
 "traits_quirks",
-"drawback"
+"drawback",
+"passive"
 ],
 "drop": [
 "debuff"
@@ -6422,7 +6718,8 @@
 "add": [
 "traits_quirks",
 "drawback",
-"buff"
+"buff",
+"passive"
 ],
 "drop": [
 "debuff"
@@ -6458,7 +6755,8 @@
 "760528": {
 "add": [
 "traits_quirks",
-"drawback"
+"drawback",
+"passive"
 ],
 "drop": [
 "debuff"
@@ -6510,8 +6808,7 @@
 },
 "760569": {
 "add": [
-"traits_quirks",
-"drawback"
+"traits_quirks"
 ],
 "drop": [
 "debuff"
@@ -6520,10 +6817,13 @@
 "760535": {
 "add": [
 "traits_quirks",
-"buff"
+"buff",
+"passive",
+"ranged"
 ],
 "drop": [
-"debuff"
+"debuff",
+"drawback"
 ]
 },
 "760655": {
@@ -6538,7 +6838,9 @@
 "760659": {
 "add": [
 "traits_quirks",
-"buff"
+"buff",
+"passive",
+"tribal"
 ],
 "drop": [
 "debuff"
@@ -6691,10 +6993,16 @@
 "drop": []
 },
 "759855": {
-"add": [],
+"add": [
+"swap",
+"bodyguard",
+"buff",
+"ranged",
+"rank_positions",
+"scope_self"
+],
 "drop": [
-"movement",
-"swap"
+"movement"
 ]
 },
 "759862": {
@@ -6731,10 +7039,13 @@
 ]
 },
 "760695": {
-"add": [],
-"drop": [
-"damage_over_time"
-]
+"add": [
+"damage_over_time:counters",
+"cooldowns",
+"heal",
+"rest_phase"
+],
+"drop": []
 },
 "760711": {
 "add": [
@@ -6790,7 +7101,8 @@
 "759830": {
 "add": [],
 "drop": [
-"rows"
+"rows",
+"lanes"
 ]
 },
 "759809": {
@@ -6809,10 +7121,12 @@
 },
 "759768": {
 "add": [
-"board_clog"
+"null_body",
+"rank_positions"
 ],
 "drop": [
-"blocking"
+"blocking",
+"board_clog"
 ]
 },
 "759837": {
@@ -6843,7 +7157,10 @@
 },
 "760759": {
 "add": [
-"trap_secret"
+"trap_secret",
+"random_effect",
+"run_structure",
+"stress_morale"
 ],
 "drop": []
 },
@@ -6880,5 +7197,482 @@
 "drop": [
 "passive"
 ]
+},
+"760739": {
+"add": [
+"buff",
+"cooldowns",
+"rest_phase",
+"stress_morale"
+],
+"drop": []
+},
+"760823": {
+"drop": [
+"random_effect"
+],
+"add": [
+"run_structure"
+]
+},
+"760751": {
+"drop": [
+"high_cost:benefits"
+],
+"add": [
+"buff",
+"cooldowns",
+"drawback",
+"rest_phase",
+"scope_self",
+"stress_morale"
+]
+},
+"759794": {
+"add": [
+"reveal_order",
+"turn_structure"
+],
+"drop": []
+},
+"759789": {
+"add": [
+"saving_throws"
+],
+"drop": [
+"immunity"
+]
+},
+"760727": {
+"drop": [
+"high_cost:benefits",
+"temporary_buff"
+],
+"add": [
+"condition_life",
+"cooldowns",
+"drawback",
+"heal",
+"light_level",
+"rest_phase",
+"scope_self",
+"stress_morale"
+]
+},
+"759994": {
+"drop": [
+"board_presence",
+"piercing",
+"temporary_effect"
+],
+"add": [
+"damage_over_time",
+"debuff",
+"light_level",
+"multi_target_attack",
+"ranged",
+"rank_positions",
+"stress_morale",
+"traits_quirks"
+]
+},
+"760822": {
+"drop": [
+"random_effect"
+],
+"add": [
+"run_structure"
+]
+},
+"760818": {
+"drop": [
+"random_effect"
+],
+"add": [
+"items_consumables:benefits",
+"run_structure"
+]
+},
+"760005": {
+"add": [
+"forced_movement",
+"damage_over_time",
+"light_level",
+"multi_attack",
+"multi_target_attack",
+"ranged",
+"rank_positions",
+"stress_morale",
+"summon"
+],
+"drop": []
+},
+"760003": {
+"add": [
+"forced_movement",
+"damage_over_time",
+"movement",
+"multi_target_attack",
+"ranged",
+"rank_positions",
+"stress_morale",
+"summon"
+],
+"drop": []
+},
+"759991": {
+"add": [
+"debuff",
+"mark_target",
+"movement",
+"multi_target_attack",
+"ranged",
+"rank_positions",
+"traits_quirks"
+],
+"drop": [
+"damage_over_time:counters"
+]
+},
+"760817": {
+"drop": [
+"random_effect"
+],
+"add": [
+"items_consumables:benefits",
+"stress_morale",
+"traits_quirks"
+]
+},
+"760794": {
+"drop": [
+"damage_over_time:counters"
+],
+"add": [
+"items_consumables:benefits",
+"random_effect",
+"traits_quirks"
+]
+},
+"760777": {
+"drop": [
+"random_effect"
+],
+"add": [
+"light_level"
+]
+},
+"759961": {
+"drop": [
+"on_play"
+],
+"add": [
+"bodyguard",
+"damage",
+"disable",
+"multi_attack",
+"ranged",
+"rank_positions",
+"stress_morale",
+"summon",
+"telegraphed_threats"
+]
+},
+"760662": {
+"add": [
+"passive",
+"buff",
+"random_effect",
+"traits_quirks"
+],
+"drop": []
+},
+"760723": {
+"drop": [
+"high_cost:benefits"
+],
+"add": [
+"buff",
+"cooldowns",
+"rest_phase",
+"scope_self"
+]
+},
+"759771": {
+"add": [
+"cheat_death",
+"condition_life",
+"passive"
+],
+"drop": []
+},
+"759971": {
+"drop": [
+"piercing",
+"temporary_effect"
+],
+"add": [
+"buff",
+"condition",
+"damage_over_time",
+"debuff",
+"mark_target:benefits",
+"movement",
+"rank_positions",
+"scope_self"
+]
+},
+"760709": {
+"drop": [
+"high_cost:benefits"
+],
+"add": [
+"cooldowns",
+"rest_phase",
+"scope_self",
+"stress_morale"
+]
+},
+"759904": {
+"add": [
+"damage",
+"disable",
+"rank_positions"
+],
+"drop": []
+},
+"760028": {
+"add": [
+"damage_over_time",
+"disable",
+"rank_positions"
+],
+"drop": []
+},
+"759887": {
+"add": [
+"damage_over_time",
+"rank_positions"
+],
+"drop": []
+},
+"759981": {
+"add": [
+"damage",
+"disable",
+"multi_target_attack",
+"rank_positions",
+"summon"
+],
+"drop": []
+},
+"759863": {
+"add": [
+"buff",
+"condition",
+"damage",
+"mark_target:benefits",
+"rank_positions",
+"scope_self"
+],
+"drop": []
+},
+"759792": {
+"add": [
+"items_consumables",
+"stress_morale"
+],
+"drop": []
+},
+"759761": {
+"add": [
+"damage_over_time:counters",
+"items_consumables"
+],
+"drop": []
+},
+"760001": {
+"add": [
+"damage_over_time",
+"disable",
+"multi_target_attack",
+"ranged",
+"rank_positions",
+"stress_morale",
+"telegraphed_threats"
+],
+"drop": []
+},
+"759871": {
+"add": [
+"damage",
+"multi_target_attack",
+"ranged",
+"rank_positions"
+],
+"drop": []
+},
+"759785": {
+"add": [
+"stress_morale",
+"terrain"
+],
+"drop": []
+},
+"759988": {
+"add": [
+"damage_over_time",
+"rank_positions"
+],
+"drop": []
+},
+"760807": {
+"add": [
+"damage_over_time",
+"items_consumables:benefits",
+"random_effect",
+"run_structure"
+],
+"drop": []
+},
+"760786": {
+"add": [
+"random_effect",
+"stress_morale",
+"traits_quirks"
+],
+"drop": []
+},
+"759869": {
+"add": [
+"damage_over_time",
+"ranged",
+"rank_positions"
+],
+"drop": []
+},
+"759957": {
+"add": [
+"damage",
+"movement",
+"multi_target_attack",
+"rank_positions"
+],
+"drop": []
+},
+"760703": {
+"add": [
+"buff",
+"cooldowns",
+"rest_phase",
+"scope_self"
+],
+"drop": []
+},
+"759890": {
+"add": [
+"damage_over_time",
+"drawback",
+"rank_positions",
+"scope_self"
+],
+"drop": []
+},
+"759798": {
+"add": [
+"items_consumables",
+"light_level"
+],
+"drop": []
+},
+"760015": {
+"add": [
+"buff",
+"condition",
+"damage_over_time",
+"mark_target:benefits",
+"ranged",
+"rank_positions",
+"scope_self"
+],
+"drop": []
+},
+"759944": {
+"add": [
+"heal",
+"rank_positions",
+"scope_multi"
+],
+"drop": []
+},
+"759877": {
+"add": [
+"damage",
+"rank_positions"
+],
+"drop": []
+},
+"759934": {
+"add": [
+"damage_over_time",
+"multi_target_attack",
+"ranged",
+"rank_positions"
+],
+"drop": []
+},
+"759793": {
+"add": [
+"items_consumables"
+],
+"drop": []
+},
+"759807": {
+"add": [
+"quests"
+],
+"drop": []
+},
+"759941": {
+"add": [
+"damage",
+"heal",
+"ranged",
+"rank_positions",
+"scope_self"
+],
+"drop": []
+},
+"759939": {
+"add": [
+"board_clog:counters",
+"damage",
+"disable",
+"ranged",
+"rank_positions"
+],
+"drop": []
+},
+"759999": {
+"add": [
+"damage",
+"movement",
+"multi_target_attack",
+"ranged",
+"rank_positions",
+"stress_morale",
+"summon"
+],
+"drop": []
+},
+"760004": {
+"add": [
+"buff",
+"damage",
+"rank_positions",
+"scope_self",
+"stress_morale"
+],
+"drop": []
 }
 }

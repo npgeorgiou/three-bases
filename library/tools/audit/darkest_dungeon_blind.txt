@@ -1,0 +1,150 @@
+760042 | Ancestor's Tentacle Idol | +25% resolve check percent
+  A: buff, items_consumables, passive, run_structure, stress_morale
+  B: buff, items_consumables, passive, run_structure, stress_morale
+760447 | Leaders Crest | +0.05 protection; -10% stress dmg received percent while in rank ; +10% damage while in rank ; +10% damage while in rank ; -0.05 accuracy while in rank ; -10% damage while in rank ; -10% damage while in rank 
+  A: buff, condition, drawback, items_consumables, passive, rank_positions, run_structure, stress_morale
+  B: buff, condition, drawback, items_consumables, passive, rank_positions, run_structure, stress_morale
+760733 | SELF-MEDICATE | Camping skill. stress heal amount 10 (self); health heal max health percent 0.2 (self); remove poison (self); remove bleeding (self); buff: +0.1 accuracy (self). Uses per camp: 1.
+  A: buff, cooldowns, heal, rest_phase, scope_self, stress_morale
+  B: buff, cooldowns, heal, rest_phase, scope_self, stress_morale
+760395 | Cloak Of Shadows | +0.05 dodge; +4 speed while light below 26; +8% trap resistance; -10% max HP; -8% resolve check percent while light below 26
+  A: buff, condition, drawback, immunity, items_consumables, light_level, passive, stress_morale, trap_secret
+  B: buff, condition, drawback, immunity, items_consumables, light_level, passive, stress_morale, trap_secret
+760518 | T Doh Teddy Bear | -15% stress dmg received percent; -10% trap resistance not in the first round
+  A: buff, combat_start, drawback, items_consumables, passive, run_structure, stress_morale, trap_secret
+  B: buff, combat_start, drawback, items_consumables, passive, run_structure, stress_morale, trap_secret
+759764 | Bleed | Heroes or enemies with Bleed take damage each combat round or hallway step. It will eventually go away but can be cured early with bandages, combat skills, and Camping skills.
+  A: damage_over_time
+  B: damage_over_time
+760161 | Blood Charm | +30% bleed resistance
+  A: buff, damage_over_time:counters, immunity, items_consumables, passive, run_structure
+  B: buff, damage_over_time:counters, immunity, items_consumables, passive, run_structure
+760599 | Vertigo | -50% move resistance
+  A: drawback, passive, traits_quirks
+  B: drawback, traits_quirks
+760532 | Clumsy | -0.05 dodge
+  A: drawback, traits_quirks
+  B: drawback, passive, traits_quirks
+760296 | The Glass Of Milk | +10% max HP; +0.06 protection; +10% stress dmg received percent; +10% stress dmg received percent
+  A: buff, drawback, items_consumables, passive, run_structure, stress_morale
+  B: buff, drawback, items_consumables, passive, run_structure, stress_morale
+760627 | Compulsive | Suffers intense need to do specific actions.. Interacts with All curios
+  A: traits_quirks
+  B: traits_quirks
+759899 | Hound's Harry | Ranged skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3, 4. Deals damage (modifier -80%). Effects: bleed 3 per round for 3 rounds.
+  A: damage_over_time, multi_target_attack, ranged, rank_positions
+  B: damage_over_time, multi_target_attack, ranged, rank_positions
+760303 | Vial Of Tears | +10% damage; +10% damage; +13% debuff resistance while light above 75; +0.05 accuracy; -8% monsters surprise chance; -13% hp heal received percent; -6% death_blow resistance while light above 75
+  A: buff, condition, drawback, immunity, items_consumables, light_level, passive, random_effect
+  B: buff, condition, drawback, immunity, items_consumables, light_level, passive, random_effect
+760591 | Wasting Sickness | Life drains with each step...; -50% disease resistance
+  A: drawback, traits_quirks
+  B: drawback, passive, traits_quirks
+760346 | Trouble | +10% damage with melee skills; +10% damage with melee skills; +0.04 crit while in rank ; +6% resolve check percent; -0.06 dodge while in rank ; -10% move resistance while in rank 
+  A: buff, condition, drawback, items_consumables, passive, rank_positions, run_structure, stress_morale
+  B: buff, condition, drawback, items_consumables, passive, rank_positions, run_structure, stress_morale
+759977 | Mammoth Cyst | Takes 3 ranks. Acts 2 times per round. Summons allies. Skills: Bulging Gaze: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 8-13. Effects: stress +15; -20% damage. | Digestion: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 8-17. Effects: blight 8 per round for 3 rounds. | Revivify: Melee skill. Usable from ranks 4, 3, 2, 1. Heals 10 20. Effects: +25% damage (self). | Summon: Melee skill. Usable from ranks 4, 3, 2, 1. Targets ally ranks 1, 2, 3, 4. Effects: summon cell_white_D.
+  A: buff, damage_over_time, heal, multi_attack, on_play, passive, ranged, rank_positions, scope_self, stress_morale, summon
+  B: buff, damage_over_time, heal, multi_attack, on_play, ranged, rank_positions, scope_self, stress_morale, summon
+760206 | Medic's Boots | +33% hp heal percent. Class: musketeer
+  A: buff, items_consumables, passive, play_restriction, run_structure
+  B: buff, items_consumables, passive, play_restriction, run_structure
+759823 | The Benefits of Camping | Camping consists of two parts: Meal phase and Skill phase. During the Meal phase, you choose how much they eat, which determines recovery. Make sure you have enough food! Skill Phase allows you to spend Rest Points on different hero skills used for recuperation.
+  A: rest_phase, upkeep
+  B: rest_phase, upkeep
+760264 | Ajs Growling Tome Of Madness | +10% damage; +10% damage; +13% hp heal received percent; -4 speed in the first round
+  A: buff, combat_start, drawback, items_consumables, passive, run_structure
+  B: buff, combat_start, drawback, items_consumables, passive, run_structure
+760141 | Deteriorating Bracer | +0.1 dodge while HP above 0.75; -0.06 dodge while HP below 0.5
+  A: buff, condition_life, drawback, items_consumables, passive, run_structure
+  B: buff, condition_life, drawback, items_consumables, passive, run_structure
+760355 | Stones Of Gelati Preziosi | +17% hp heal received percent with melee skills; +13% max HP while HP above 0.75; +0.05 crit while HP below 0.25; -0.05 accuracy while light below 26; -10% damage while in rank ; -10% damage while in rank ; -0.06 dodge
+  A: buff, condition_life, drawback, items_consumables, light_level, passive, rank_positions
+  B: buff, condition_life, drawback, items_consumables, light_level, passive, rank_positions
+760339 | Scent Of Sarnath | +0.09 protection vs eldritch enemies; +0.09 dodge while light below 26; -10% disease resistance vs beast enemies; -8% monsters surprise chance while light below 26
+  A: buff, drawback, items_consumables, light_level, passive, random_effect, tribal
+  B: buff, drawback, items_consumables, light_level, passive, random_effect, tribal
+760653 | Fear of Beasts | +15% stress dmg received percent vs beast enemies; -0.1 accuracy vs beast enemies
+  A: drawback, passive, stress_morale, traits_quirks, tribal
+  B: drawback, stress_morale, traits_quirks, tribal
+760288 | Silent | +13% damage while HP above 0.75; +13% damage while HP above 0.75; +0.06 accuracy while light above 75; +4 speed; -0.06 protection while light below 26; -0.06 dodge vs beast enemies; -0.06 protection at Death's Door
+  A: buff, cheat_death, condition_life, drawback, items_consumables, light_level, passive, tribal
+  B: buff, cheat_death, condition_life, items_consumables, light_level, passive, permanent_loss, tribal
+760193 | Disease Charm | +20% disease resistance; -0.02 dodge
+  A: buff, drawback, immunity, items_consumables, passive, run_structure
+  B: buff, drawback, immunity, items_consumables, passive, run_structure
+760268 | Philosophers Wisdom | +8% resolve check percent; +0.06 accuracy while in rank ; +10% stress dmg received percent
+  A: buff, condition, drawback, items_consumables, passive, rank_positions, run_structure, stress_morale
+  B: buff, condition, drawback, items_consumables, passive, rank_positions, run_structure, stress_morale
+760133 | Slippery Boots | +0.04 dodge; -20% move resistance
+  A: buff, drawback, items_consumables, passive, run_structure
+  B: buff, drawback, items_consumables, passive, run_structure
+760714 | PILFER | Camping skill. loot S 1 (self). Uses per camp: 1.
+  A: cooldowns, items_consumables, rest_phase, scope_self
+  B: cooldowns, items_consumables, rest_phase, scope_self
+760122 | Tenacity Ring | +10% death_blow resistance; +0.05 dodge; -0.01 crit
+  A: buff, drawback, immunity, items_consumables, passive, run_structure
+  B: buff, cheat_death, drawback, immunity, items_consumables, passive, run_structure
+759760 | Affliction | A temporary condition that may be triggered when a hero reaches 100 stress. Afflicted heroes act on their own and suffer stat penalties. Afflictions can be cured in town by reducing the hero's stress at the Abbey or the Tavern.
+  A: autonomous_units, stress_morale
+  B: autonomous_units, stress_morale
+760323 | Avalon | +6 speed; +0.06 crit; -0.06 protection in the first round; -10% disease resistance while in rank ; -10% poison resistance while in rank 
+  A: buff, combat_start, condition, drawback, items_consumables, passive, rank_positions, run_structure
+  B: buff, combat_start, condition, drawback, items_consumables, passive, rank_positions, run_structure
+760325 | Black Design | +0.05 crit while HP above 0.75; +6% death_blow resistance; +0.05 accuracy; +50% food consumption percent; -0.06 protection while light below 26; -13% hp heal percent while light below 26
+  A: buff, cheat_death, condition_life, drawback, immunity, items_consumables, light_level, passive, upkeep
+  B: buff, condition_life, drawback, immunity, items_consumables, light_level, passive, upkeep
+760410 | Bloodstained Bounty List | +0.05 crit vs targets with tagged; +13% damage vs targets with tagged; +13% damage vs targets with tagged; -0.05 accuracy vs targets with tagged
+  A: buff, drawback, items_consumables, passive, run_structure
+  B: buff, drawback, items_consumables, passive, run_structure
+760603 | Hysterical Blindness | -0.2 accuracy while stress above 70
+  A: drawback, passive, stress_morale, traits_quirks
+  B: drawback, passive, stress_morale, traits_quirks
+760399 | Torchwood | +0.05 protection while in rank ; +0.05 protection while in rank ; +8% move resistance while in rank ; -10% max HP
+  A: buff, condition, drawback, immunity, items_consumables, passive, rank_positions, run_structure
+  B: buff, condition, drawback, immunity, items_consumables, passive, rank_positions, run_structure
+760107 | Longevity Eyepatch | +15% max HP; -1 speed. Class: man_at_arms
+  A: buff, drawback, items_consumables, passive, play_restriction, run_structure
+  B: buff, drawback, items_consumables, passive, play_restriction, run_structure
+760241 | Tome Of The Dawn | +0.11 protection while light below 26; +23% hp heal percent while light below 26; -10% debuff resistance while in rank ; -8% resolve check percent while in rank ; -8% monsters surprise chance while in rank 
+  A: buff, condition, drawback, items_consumables, light_level, passive, random_effect, rank_positions, stress_morale
+  B: buff, condition, drawback, items_consumables, light_level, passive, random_effect, rank_positions, stress_morale
+760386 | Rough-Hewn Heart | +10% max HP; +16% resolve xp bonus percent; +0.06 protection; -0.06 dodge; -10% trap resistance; -8% monsters surprise chance
+  A: buff, drawback, items_consumables, passive, random_effect, run_structure, stress_morale, trap_secret
+  B: buff, drawback, items_consumables, passive, random_effect, run_structure, stress_morale, trap_secret
+759791 | Resolve XP | Earning Resolve XP progresses a hero towards the next Resolve Level. Resolve XP can only be earned by completing quests. Heroes do not earn Resolve XP if they abandon or fail quests.
+  A: stress_morale, upgrade
+  B: stress_morale, upgrade
+760002 | Rabid Gnasher | Skills: Rabid Rush: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Moves self (back/forward) 0 3. Deals damage 1-3. Effects: inflict disease rabies; bleed 1 per round for 3 rounds.
+  A: damage_over_time, movement, rank_positions, traits_quirks
+  B: damage_over_time, movement, rank_positions, traits_quirks
+760422 | Danos Glory | +0.04 crit; +0.05 accuracy; +4 speed; -4% scouting chance in the first round; -10% stun resistance in the first round; -8% resolve check percent in the first round
+  A: buff, combat_start, drawback, items_consumables, passive, random_effect, run_structure, stress_morale
+  B: buff, combat_start, drawback, items_consumables, passive, random_effect, run_structure, stress_morale
+759948 | Imperfect Reflection | Skills: It Chooses: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 1-3. Effects: mark target for 3 rounds; stun. | We Are the Same: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 2-2. Effects: stress +8.
+  A: damage, disable, mark_target, rank_positions, stress_morale
+  B: damage, disable, mark_target, rank_positions, stress_morale
+760335 | Arbalest Accolade | +0.03 dodge; +5% damage; +5% damage; +4% resolve check percent; -10% move resistance in the first round
+  A: buff, combat_start, drawback, items_consumables, passive, run_structure, stress_morale
+  B: buff, combat_start, drawback, items_consumables, passive, run_structure, stress_morale
+760370 | Lost Ring Of The Serpent | +20% poison resistance; -8% resolve check percent; -6% death_blow resistance at Death's Door; -13% hp heal received percent while camping
+  A: buff, cheat_death, condition_life, damage_over_time:counters, drawback, immunity, items_consumables, passive, rest_phase, stress_morale
+  B: buff, cheat_death, condition_life, damage_over_time:counters, immunity, items_consumables, passive, permanent_loss, rest_phase, stress_morale
+759952 | Ancestor | Summons allies. Skills: Perfect Replication: Ranged skill. Usable from ranks 1, 2, 3, 4. Effects: summon ancestor_perfect_D. | Sporadic Reproduction: Ranged skill. Usable from ranks 1, 2, 3, 4. Effects: summon ancestor_perfect_D ancestor_flawed_D. | Imperfect Reproduction: Ranged skill. Usable from ranks 1, 2, 3, 4. Effects: summon ancestor_perfect_D ancestor_flawed_D. | Time Heals All: Ranged skill. Usable from ranks 4, 3, 2. Targets all of ally ranks 1, 2, 3, 4. Heals 7 11. | kill self: Ranged skill. Usable from ranks 1, 2, 3, 4.
+  A: heal, ranged, rank_positions, scope_multi, summon
+  B: heal, ranged, rank_positions, scope_multi, summon
+759860 | Blindfire | Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage (modifier -10%). Effects: +8 speed (self).
+  A: buff, damage, ranged, rank_positions, scope_self
+  B: buff, damage, ranged, rank_positions, scope_self
+760336 | Brutal Hairpin | +15% damage; +15% damage; -10% bleed resistance while camping
+  A: buff, drawback, items_consumables, passive, rest_phase
+  B: buff, drawback, items_consumables, passive, rest_phase
+760820 | Tutorial Shovel | Possible outcomes: Loot 100.00% (SHOVELONLY)
+  A: random_effect, run_structure
+  B: random_effect, run_structure
+759796 | Stun | An effect that forces the hero or enemy to pass on his/her next turn.
+  A: delayed, disable
+  B: delayed, disable
+760461 | Amiga | +0.06 protection; +4 speed; +5 speed while HP below 0.25; -10% damage; -10% damage; -0.04 crit; -13% hp heal percent while light below 26
+  A: buff, condition_life, drawback, items_consumables, light_level, passive
+  B: buff, condition_life, drawback, items_consumables, light_level, passive

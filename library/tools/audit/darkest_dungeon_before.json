@@ -1,0 +1,381 @@
+{
+"760042": [
+"buff",
+"items_consumables",
+"passive",
+"run_structure",
+"stress_morale"
+],
+"760447": [
+"buff",
+"condition",
+"drawback",
+"items_consumables",
+"passive",
+"rank_positions",
+"run_structure",
+"stress_morale"
+],
+"760733": [
+"buff",
+"cooldowns",
+"heal",
+"rest_phase",
+"scope_self",
+"stress_morale"
+],
+"760395": [
+"buff",
+"condition",
+"drawback",
+"immunity",
+"items_consumables",
+"light_level",
+"passive",
+"stress_morale",
+"trap_secret"
+],
+"760518": [
+"buff",
+"combat_start",
+"drawback",
+"items_consumables",
+"passive",
+"run_structure",
+"stress_morale",
+"trap_secret"
+],
+"759764": [
+"damage_over_time"
+],
+"760161": [
+"buff",
+"damage_over_time:counters",
+"immunity",
+"items_consumables",
+"passive",
+"run_structure"
+],
+"760599": [
+"drawback",
+"traits_quirks"
+],
+"760532": [
+"drawback",
+"traits_quirks"
+],
+"760296": [
+"buff",
+"drawback",
+"items_consumables",
+"passive",
+"run_structure",
+"stress_morale"
+],
+"760627": [
+"traits_quirks"
+],
+"759899": [
+"damage_over_time",
+"multi_target_attack",
+"ranged",
+"rank_positions"
+],
+"760303": [
+"buff",
+"condition",
+"drawback",
+"immunity",
+"items_consumables",
+"light_level",
+"passive",
+"random_effect"
+],
+"760591": [
+"drawback",
+"traits_quirks"
+],
+"760346": [
+"buff",
+"condition",
+"drawback",
+"items_consumables",
+"passive",
+"rank_positions",
+"run_structure",
+"stress_morale"
+],
+"759977": [
+"buff",
+"damage_over_time",
+"heal",
+"multi_attack",
+"on_play",
+"ranged",
+"rank_positions",
+"scope_self",
+"stress_morale",
+"summon"
+],
+"760206": [
+"buff",
+"items_consumables",
+"passive",
+"play_restriction",
+"run_structure"
+],
+"759823": [
+"rest_phase",
+"upkeep"
+],
+"760264": [
+"buff",
+"combat_start",
+"drawback",
+"items_consumables",
+"passive",
+"run_structure"
+],
+"760141": [
+"buff",
+"condition_life",
+"drawback",
+"items_consumables",
+"passive",
+"run_structure"
+],
+"760355": [
+"buff",
+"condition_life",
+"drawback",
+"items_consumables",
+"light_level",
+"passive",
+"rank_positions"
+],
+"760339": [
+"buff",
+"drawback",
+"items_consumables",
+"light_level",
+"passive",
+"random_effect",
+"tribal"
+],
+"760653": [
+"drawback",
+"stress_morale",
+"traits_quirks",
+"tribal"
+],
+"760288": [
+"buff",
+"cheat_death",
+"condition_life",
+"drawback",
+"items_consumables",
+"light_level",
+"passive",
+"tribal"
+],
+"760193": [
+"buff",
+"drawback",
+"immunity",
+"items_consumables",
+"passive",
+"run_structure"
+],
+"760268": [
+"buff",
+"condition",
+"drawback",
+"items_consumables",
+"passive",
+"rank_positions",
+"run_structure",
+"stress_morale"
+],
+"760133": [
+"buff",
+"drawback",
+"items_consumables",
+"passive",
+"run_structure"
+],
+"760714": [
+"cooldowns",
+"items_consumables",
+"rest_phase",
+"scope_self"
+],
+"760122": [
+"buff",
+"drawback",
+"immunity",
+"items_consumables",
+"passive",
+"run_structure"
+],
+"759760": [
+"autonomous_units",
+"stress_morale"
+],
+"760323": [
+"buff",
+"combat_start",
+"condition",
+"drawback",
+"items_consumables",
+"passive",
+"rank_positions",
+"run_structure"
+],
+"760325": [
+"buff",
+"condition_life",
+"drawback",
+"immunity",
+"items_consumables",
+"light_level",
+"passive",
+"upkeep"
+],
+"760410": [
+"buff",
+"drawback",
+"items_consumables",
+"passive",
+"run_structure"
+],
+"760603": [
+"drawback",
+"passive",
+"stress_morale",
+"traits_quirks"
+],
+"760399": [
+"buff",
+"condition",
+"drawback",
+"immunity",
+"items_consumables",
+"passive",
+"rank_positions",
+"run_structure"
+],
+"760107": [
+"buff",
+"drawback",
+"items_consumables",
+"passive",
+"play_restriction",
+"run_structure"
+],
+"760241": [
+"buff",
+"condition",
+"drawback",
+"items_consumables",
+"light_level",
+"passive",
+"random_effect",
+"rank_positions",
+"stress_morale"
+],
+"760386": [
+"buff",
+"drawback",
+"items_consumables",
+"passive",
+"random_effect",
+"run_structure",
+"stress_morale",
+"trap_secret"
+],
+"759791": [
+"stress_morale",
+"upgrade"
+],
+"760002": [
+"damage_over_time",
+"movement",
+"rank_positions",
+"traits_quirks"
+],
+"760422": [
+"buff",
+"combat_start",
+"drawback",
+"items_consumables",
+"passive",
+"random_effect",
+"run_structure",
+"stress_morale"
+],
+"759948": [
+"damage",
+"disable",
+"mark_target",
+"rank_positions",
+"stress_morale"
+],
+"760335": [
+"buff",
+"combat_start",
+"drawback",
+"items_consumables",
+"passive",
+"run_structure",
+"stress_morale"
+],
+"760370": [
+"buff",
+"cheat_death",
+"condition_life",
+"damage_over_time:counters",
+"drawback",
+"immunity",
+"items_consumables",
+"passive",
+"rest_phase",
+"stress_morale"
+],
+"759952": [
+"heal",
+"ranged",
+"rank_positions",
+"scope_multi",
+"summon"
+],
+"759860": [
+"buff",
+"damage",
+"ranged",
+"rank_positions",
+"scope_self"
+],
+"760336": [
+"buff",
+"drawback",
+"items_consumables",
+"passive",
+"rest_phase"
+],
+"760820": [
+"random_effect",
+"run_structure"
+],
+"759796": [
+"delayed",
+"disable"
+],
+"760461": [
+"buff",
+"condition_life",
+"drawback",
+"items_consumables",
+"light_level",
+"passive"
+]
+}

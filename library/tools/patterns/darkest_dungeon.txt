@@ -45,3 +45,5 @@ traits_quirks|counters|\bpurge \(negative\)|\bremove disease\b|\bcure disease
 random_effect|does|\bpossible outcomes:|\bon failure:
 items_consumables|benefits|\buse (holy_water|medicinal_herbs|torch|shovel|skeleton_key|antivenom|bandage|dog_treats|provision|laudanum)\b
 trap_secret|does|\bon failure:.{0,80}\bon success:
+passive|does|^[+-]\d+(\.\d+)?%? [a-z]
+cheat_death|does|\+\d+% death_blow resistance
