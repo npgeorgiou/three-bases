@@ -1,0 +1,287 @@
+{
+"741437": [
+"banish",
+"buff",
+"death_trigger",
+"movement",
+"on_play"
+],
+"741271": [
+"activated",
+"adjacency",
+"movement",
+"placement_rules"
+],
+"741308": [
+"counterattack",
+"drawback",
+"on_ally_play",
+"ranged",
+"scope_self",
+"summon:benefits",
+"temporary_buff"
+],
+"741242": [
+"damage"
+],
+"741453": [
+"buff",
+"count_payoff",
+"damage",
+"distribute",
+"passive",
+"random_effect"
+],
+"741237": [
+"buff",
+"condition",
+"on_play",
+"scope_self"
+],
+"741057": [
+"on_play"
+],
+"741335": [
+"damage",
+"debuff"
+],
+"741397": [
+"cost_reduction",
+"hand_deck_swap",
+"immobilize",
+"on_play",
+"recycle",
+"taunt",
+"zone_of_control"
+],
+"741229": [
+"combat",
+"cost_reduction",
+"high_cost:benefits",
+"in_hand_buff",
+"on_attack",
+"random_effect"
+],
+"741294": [
+"buff"
+],
+"741475": [
+"activated",
+"banish",
+"buff",
+"death_trigger",
+"destroy",
+"on_play",
+"turn_start"
+],
+"741490": [
+"buff",
+"draw",
+"movement",
+"on_play",
+"scope_self"
+],
+"741147": [
+"death_trigger",
+"high_cost:benefits",
+"resource_gain"
+],
+"741341": [
+"haste:benefits",
+"summon"
+],
+"741149": [
+"cost_reduction",
+"count_payoff",
+"high_cost:benefits"
+],
+"741103": [
+"death_trigger",
+"generate_cards"
+],
+"741342": [
+"adjacency",
+"destroy",
+"friendly_fire",
+"high_cost:benefits",
+"movement",
+"on_play",
+"symmetric_effect",
+"terrain"
+],
+"741515": [
+"activated",
+"banish",
+"buff",
+"death_trigger",
+"destroy",
+"on_play",
+"turn_start"
+],
+"741073": [
+"deathtouch"
+],
+"741093": [
+"cost_reduction",
+"generate_cards",
+"random_effect",
+"terrain",
+"turn_start"
+],
+"741099": [
+"buff",
+"counterattack",
+"drawback",
+"high_cost:benefits",
+"on_attack",
+"ranged"
+],
+"741065": [
+"movement"
+],
+"741291": [
+"activated",
+"damage",
+"life_payment:cost",
+"movement:grants"
+],
+"741064": [
+"movement"
+],
+"741202": [
+"death_count",
+"destroy:benefits",
+"in_hand_buff",
+"random_effect",
+"sacrifice:benefits"
+],
+"741186": [
+"damage:benefits",
+"on_damaged",
+"stat_multiply"
+],
+"741457": [
+"generate_cards",
+"movement",
+"movement:benefits",
+"terrain",
+"territory_trigger"
+],
+"741113": [
+"buff",
+"condition_life",
+"passive"
+],
+"741151": [
+"movement",
+"on_play",
+"terrain"
+],
+"741483": [
+"deck_condition",
+"deck_position",
+"turn_end",
+"tutor"
+],
+"741461": [
+"draw",
+"lifesteal",
+"turn_end"
+],
+"741092": [
+"immobilize",
+"on_attack",
+"resource_gain",
+"taunt",
+"zone_of_control"
+],
+"741142": [
+"generate_cards",
+"random_effect"
+],
+"741138": [
+"movement:counters",
+"removal",
+"transform"
+],
+"741353": [
+"movement",
+"on_play"
+],
+"741474": [
+"high_cost:benefits",
+"movement",
+"on_play",
+"terrain"
+],
+"741402": [
+"immobilize",
+"movement",
+"placement_rules",
+"taunt",
+"terrain",
+"zone_of_control"
+],
+"741198": [
+"immobilize",
+"on_play",
+"taunt",
+"terrain",
+"zone_of_control"
+],
+"741209": [
+"buff",
+"count_payoff",
+"immobilize",
+"movement",
+"on_play",
+"scope_self",
+"taunt",
+"zone_of_control"
+],
+"741292": [
+"buff",
+"movement",
+"on_attack",
+"scope_self",
+"terrain"
+],
+"741224": [
+"adjacency",
+"aura"
+],
+"741314": [
+"death_count",
+"in_hand_buff",
+"movement",
+"passive",
+"terrain"
+],
+"741302": [
+"immunity",
+"movement",
+"terrain"
+],
+"741115": [
+"deathtouch"
+],
+"741069": [
+"shield"
+],
+"741218": [
+"combat",
+"on_attack",
+"resource_gain"
+],
+"741257": [
+"adjacency",
+"aoe_damage"
+],
+"741235": [
+"damage",
+"on_play"
+],
+"741275": [
+"destroy"
+]
+}

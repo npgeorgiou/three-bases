@@ -1,0 +1,711 @@
+{
+ "741437": {
+  "A": {
+   "wrong": [
+    "banish",
+    "death_trigger"
+   ],
+   "missed": [
+    "sacrifice: swallow another friendly Rakoan to gain +2/+0",
+    "tribal: another friendly Rakoan"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "banish",
+    "death_trigger"
+   ],
+   "missed": [
+    "sacrifice: swallow another friendly Rakoan to gain +2/+0",
+    "tribal: another friendly Rakoan"
+   ]
+  }
+ },
+ "741271": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741308": {
+  "A": {
+   "wrong": [
+    "counterattack",
+    "drawback",
+    "summon:benefits"
+   ],
+   "missed": [
+    "on_spell: whenever you play an event"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "counterattack",
+    "drawback",
+    "summon:benefits"
+   ],
+   "missed": [
+    "on_spell: whenever you play an event"
+   ]
+  }
+ },
+ "741242": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741453": {
+  "A": {
+   "wrong": [
+    "buff"
+   ],
+   "missed": [
+    "in_hand_buff: deals +1 damage per faeria selection while in hand or deck"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "buff"
+   ],
+   "missed": [
+    "in_hand_buff: deals +1 damage per faeria selection while in hand or deck"
+   ]
+  }
+ },
+ "741237": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "stat_condition: another creature with higher Attack than Life"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "stat_condition: another creature with higher Attack than Life"
+   ]
+  }
+ },
+ "741057": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741335": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "heal: god: 4 Life",
+    "modal_choice: effect depends on chosen target type"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "heal: god: 4 Life",
+    "modal_choice: effect depends on chosen target type"
+   ]
+  }
+ },
+ "741397": {
+  "A": {
+   "wrong": [
+    "immobilize",
+    "zone_of_control"
+   ],
+   "missed": [
+    "in_hand_buff: reduce the cost of all cards in your hand"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "immobilize",
+    "zone_of_control"
+   ],
+   "missed": [
+    "in_hand_buff: reduce the cost of all cards in your hand"
+   ]
+  }
+ },
+ "741229": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741294": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "aura: all your flying creatures have +1/+0"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "aura: all your flying creatures have +1/+0"
+   ]
+  }
+ },
+ "741475": {
+  "A": {
+   "wrong": [
+    "banish",
+    "death_trigger",
+    "destroy"
+   ],
+   "missed": [
+    "self_destruct: Activate - Destroy this",
+    "permanent_growth: Production - swallowed creature gains stats each turn"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "banish",
+    "death_trigger",
+    "destroy"
+   ],
+   "missed": [
+    "self_destruct: Activate - Destroy this",
+    "permanent_growth: Production - swallowed creature gains stats each turn"
+   ]
+  }
+ },
+ "741490": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition: if any of them are a Treasure Map"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition: if any of them are a Treasure Map"
+   ]
+  }
+ },
+ "741147": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741341": {
+  "A": {
+   "wrong": [
+    "haste:benefits"
+   ],
+   "missed": [
+    "haste (grants): summoned yaks have Haste"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "haste:benefits"
+   ],
+   "missed": [
+    "haste (grants): summoned yaks have Haste"
+   ]
+  }
+ },
+ "741149": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741103": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741342": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "evasion: Flying"
+   ]
+  }
+ },
+ "741515": {
+  "A": {
+   "wrong": [
+    "banish",
+    "death_trigger",
+    "destroy"
+   ],
+   "missed": [
+    "self_destruct: Activate - Destroy this",
+    "permanent_growth: Production - swallowed creature gains stats each turn"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "banish",
+    "death_trigger",
+    "destroy"
+   ],
+   "missed": [
+    "self_destruct: Activate - Destroy this",
+    "permanent_growth: Production - swallowed creature gains stats each turn"
+   ]
+  }
+ },
+ "741073": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741093": {
+  "A": {
+   "wrong": [
+    "terrain"
+   ],
+   "missed": [
+    "in_hand_buff: added Legend becomes wild land (land requirement changed)",
+    "tribal: your Legends cost 1 less"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "terrain"
+   ],
+   "missed": [
+    "in_hand_buff: added Legend becomes wild land (land requirement changed)",
+    "tribal: your Legends cost 1 less"
+   ]
+  }
+ },
+ "741099": {
+  "A": {
+   "wrong": [
+    "counterattack",
+    "drawback",
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "permanent_growth: after this attacks, it gains +1/+0"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "counterattack",
+    "drawback",
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "permanent_growth: after this attacks, it gains +1/+0"
+   ]
+  }
+ },
+ "741065": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741291": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "temporary_effect: Charge 3 this turn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "temporary_effect: Charge 3 this turn"
+   ]
+  }
+ },
+ "741064": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741202": {
+  "A": {
+   "wrong": [
+    "death_count",
+    "destroy:benefits",
+    "sacrifice:benefits"
+   ],
+   "missed": [
+    "death_trigger: whenever another friendly creature dies"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "death_count",
+    "destroy:benefits",
+    "sacrifice:benefits"
+   ],
+   "missed": [
+    "death_trigger: whenever another friendly creature dies"
+   ]
+  }
+ },
+ "741186": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741457": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "evasion: Flying"
+   ]
+  }
+ },
+ "741113": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741151": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741483": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "generate_cards: shuffle a Treasure Map into the deck"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "generate_cards: shuffle a Treasure Map into the deck"
+   ]
+  }
+ },
+ "741461": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "hand_size: if your opponent has 4 or more cards in hand"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "hand_size: if your opponent has 4 or more cards in hand"
+   ]
+  }
+ },
+ "741092": {
+  "A": {
+   "wrong": [
+    "immobilize",
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "immobilize",
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "741142": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741138": {
+  "A": {
+   "wrong": [
+    "movement:counters"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "movement:counters"
+   ],
+   "missed": []
+  }
+ },
+ "741353": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741474": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "haste: can harvest faeria the turn you play it"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "haste: can harvest faeria the turn you play it"
+   ]
+  }
+ },
+ "741402": {
+  "A": {
+   "wrong": [
+    "immobilize",
+    "zone_of_control"
+   ],
+   "missed": [
+    "evasion: Flying"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "immobilize",
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "741198": {
+  "A": {
+   "wrong": [
+    "immobilize",
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "immobilize",
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "741209": {
+  "A": {
+   "wrong": [
+    "immobilize",
+    "zone_of_control"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "immobilize",
+    "zone_of_control"
+   ],
+   "missed": []
+  }
+ },
+ "741292": {
+  "A": {
+   "wrong": [
+    "terrain"
+   ],
+   "missed": [
+    "permanent_growth: gains +3/+0 whenever a friendly creature attacks a god"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "terrain"
+   ],
+   "missed": [
+    "evasion: Flying",
+    "permanent_growth: gains +3/+0 whenever a friendly creature attacks a god"
+   ]
+  }
+ },
+ "741224": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741314": {
+  "A": {
+   "wrong": [
+    "terrain"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "terrain"
+   ],
+   "missed": [
+    "evasion: Flying"
+   ]
+  }
+ },
+ "741302": {
+  "A": {
+   "wrong": [
+    "terrain"
+   ],
+   "missed": [
+    "evasion: Flying"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "terrain"
+   ],
+   "missed": []
+  }
+ },
+ "741115": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741069": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741218": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741257": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741235": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "741275": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ }
+}

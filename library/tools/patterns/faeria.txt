@@ -1,9 +1,10 @@
 # Faeria: Flying is movement over ocean (blocked by creatures and structures), not evasion
 !evasion|\bflying\b
 # Structures pay for Activate with damage to themselves
-life_payment|cost|\bdeal \d+ damage to (this|yourself)\b
+life_payment|cost|\bactivate - [^.]*\. deal \d+ damage to this\b
 # "wherever they are" reaches hand and deck
 in_hand_buff|does|\bwherever they are\b|\bin your (hand|deck)\b[^.]{0,30}\+\d+/\+\d+
 stat_condition|does|\bwith \d+ (attack|life) or (more|less)\b
 drawback|does|\bcan't harvest\b|\bcan only attack gods\b
 !ping|deal 1 damage
+tribal|does|\b(friendly|adjacent friendly|another|a random) (yaks?|beasts?|tritons?)\b

@@ -1,0 +1,175 @@
+741125	+condition	condition missed
+741493	+selection	discover as selection missed
+741493	-copy	discover tagged as copy
+741493	-terrain	flying or wild land tagged as terrain
+741451	+in_hand_buff	in-hand cost change missed
+741451	+tribal	tribe mention missed
+741089	+haste:grants	summoned keyword role wrong
+741089	-haste:benefits	summoned keyword role wrong
+741089	-high_cost:benefits	high_cost:benefits without text
+741449	+immobilize	cant move tagged as disable
+741449	+temporary_effect	this-turn effect missed
+741449	-disable	cant move tagged as disable
+741449	-terrain	flying or wild land tagged as terrain
+741449	-high_cost:benefits	high_cost:benefits without text
+741290	+draw:benefits	draw trigger tagged as draw
+741290	-draw	draw trigger tagged as draw
+741290	-terrain	flying or wild land tagged as terrain
+741301	+death_trigger	ally death trigger tagged as death_count
+741301	-death_count	ally death trigger tagged as death_count
+741301	-destroy:benefits	destroy:benefits on death payoff
+741254	+damage	fight or damage missed
+741254	+condition	condition missed
+741463	-high_cost:benefits	high_cost:benefits without text
+741309	+on_spell	event trigger tagged as on_ally_play
+741309	-on_ally_play	event trigger tagged as on_ally_play
+741309	-summon:benefits	summon:benefits without text
+741487	+condition	condition missed
+741259	-life_payment:cost	self damage drawback as life payment
+741416	+stat_condition	stat threshold missed
+741288	-terrain	flying or wild land tagged as terrain
+741288	-high_cost:benefits	high_cost:benefits without text
+741429	+tribal	tribe mention missed
+741518	-on_play	placement rule tagged as on_play
+741518	-terrain	flying or wild land tagged as terrain
+741174	+death_trigger	ally death trigger tagged as death_count
+741174	-death_count	ally death trigger tagged as death_count
+741174	-destroy:benefits	destroy:benefits on death payoff
+741109	-high_cost:benefits	high_cost:benefits without text
+741109	-terrain	flying or wild land tagged as terrain
+741337	+damage	fight or damage missed
+741276	-damage	self damage is life payment not damage
+741431	+merge_attach	swallow/attach missed
+741431	-terrain:grants	flying or wild land tagged as terrain
+741431	-high_cost:benefits	high_cost:benefits without text
+741503	+selection	discover as selection missed
+741503	+cost_condition	cost threshold missed
+741503	-copy	discover tagged as copy
+741503	-terrain	flying or wild land tagged as terrain
+741330	+combo_sequence	next card played missed
+741449	+evasion	flying as evasion missed
+741290	+evasion	flying as evasion missed
+741288	+evasion	flying as evasion missed
+741518	+evasion	flying as evasion missed
+741431	+evasion:grants	flying as evasion missed
+741503	+evasion	flying as evasion missed
+741513	+evasion	flying as evasion missed
+741513	-terrain	flying or wild land tagged as terrain
+741343	-high_cost:benefits	high_cost:benefits without text
+741236	+permanent_growth	permanent growth missed
+741169	+combo_sequence	next card played missed
+741512	-high_cost:benefits	high_cost:benefits without text
+741512	-terrain	flying or wild land tagged as terrain
+741295	+permanent_growth	permanent growth missed
+741485	+evasion	flying as evasion missed
+741485	-terrain	flying or wild land tagged as terrain
+741485	-high_cost:benefits	high_cost:benefits without text
+741273	+evasion	flying as evasion missed
+741273	-terrain	flying or wild land tagged as terrain
+741388	+evasion	flying as evasion missed
+741388	+drawback	drawback missed
+741388	-terrain	flying or wild land tagged as terrain
+741388	-destroy	self destroy tagged as destroy
+741152	+evasion	flying as evasion missed
+741152	+draw:benefits	draw trigger tagged as draw
+741152	-terrain	flying or wild land tagged as terrain
+741152	-draw	draw trigger tagged as draw
+741430	+taunt:grants	summoned keyword role wrong
+741430	-taunt:benefits	summoned keyword role wrong
+741430	-zone_of_control:benefits	taunt tagged as zone_of_control
+741210	+condition	condition missed
+741230	+condition	condition missed
+741492	+condition	condition missed
+741424	+taunt:grants	summoned keyword role wrong
+741424	+evasion:grants	flying as evasion missed
+741424	+tribal	tribe mention missed
+741424	-high_cost:benefits	high_cost:benefits without text
+741424	-movement:benefits	summoned keyword role wrong
+741424	-terrain:benefits	flying or wild land tagged as terrain
+741424	-taunt:benefits	summoned keyword role wrong
+741424	-zone_of_control:benefits	taunt tagged as zone_of_control
+741477	+in_hand_buff	in-hand buff missed
+741477	+delayed	delayed effect missed
+741319	+evasion	flying as evasion missed
+741319	-terrain	flying or wild land tagged as terrain
+741319	-high_cost:benefits	high_cost:benefits without text
+741154	+permanent_growth	permanent growth missed
+741360	+evasion	flying as evasion missed
+741360	-terrain	flying or wild land tagged as terrain
+741315	+evasion	flying as evasion missed
+741315	-terrain	flying or wild land tagged as terrain
+741315	-high_cost:benefits	high_cost:benefits without text
+741318	+evasion	flying as evasion missed
+741318	-terrain	flying or wild land tagged as terrain
+741261	-high_cost:benefits	high_cost:benefits without text
+741361	+aoe_damage	modal aoe missed
+741361	+friendly_fire	modal aoe missed
+741266	+condition	condition missed
+741400	+evasion	flying as evasion missed
+741247	+evasion	flying as evasion missed
+741247	+draw:benefits	draw trigger tagged as draw
+741247	-terrain	flying or wild land tagged as terrain
+741247	-draw	draw trigger tagged as draw
+741247	-counterattack	keyword reminder tags without text
+741247	-drawback	keyword reminder tags without text
+741340	-high_cost:benefits	high_cost:benefits without text
+741419	+drawback	drawback missed
+741419	-life_payment:cost	self damage drawback as life payment
+741405	+evasion	flying as evasion missed
+741405	-terrain	flying or wild land tagged as terrain
+741251	+stat_condition	stat threshold missed
+741251	+permanent_growth	permanent growth missed
+741471	+tribal	tribe mention missed
+741399	+evasion:grants	flying as evasion missed
+741399	+draw:benefits	draw trigger tagged as draw
+741399	-terrain:benefits	flying or wild land tagged as terrain
+741320	+drawback	self damage drawback as life payment
+741320	-damage	self damage drawback as life payment
+741320	-life_payment:cost	self damage drawback as life payment
+741326	+drawback	drawback missed
+741326	-debuff	own life loss as debuff
+741326	-high_cost:benefits	high_cost:benefits without text
+741436	+condition	condition missed
+741436	+tribal	tribe mention missed
+741249	+death_trigger	death trigger tagged as death_count
+741249	-death_count	death trigger tagged as death_count
+741249	-destroy:benefits	destroy:benefits on death payoff
+741249	-sacrifice:benefits	destroy:benefits on death payoff
+741310	-copy	discover or stat match tagged as copy
+741310	-high_cost:benefits	high_cost:benefits without text
+741486	+evasion	flying as evasion missed
+741486	-terrain	flying or wild land tagged as terrain
+741079	+taunt:grants	summoned keyword role wrong
+741079	-taunt:benefits	summoned keyword role wrong
+741079	-zone_of_control:benefits	taunt tagged as zone_of_control
+741374	-counterattack	keyword reminder tags without text
+741374	-drawback	keyword reminder tags without text
+741144	+on_spell	event trigger tagged as on_ally_play
+741144	-on_ally_play	event trigger tagged as on_ally_play
+741144	-summon:benefits	summon:benefits without text
+741317	+deck_position	top of deck missed
+741317	-terrain	flying or wild land tagged as terrain
+741063	+evasion	flying as evasion missed
+741159	+draw:benefits	draw trigger tagged as draw
+741159	-draw	draw trigger tagged as draw
+741336	+cost_condition	cost threshold missed
+741336	-high_cost:benefits	high_cost:benefits without text
+741426	+condition	condition missed
+741426	+tribal	tribe mention missed
+741466	+terrain	land creation missed
+741267	+condition	condition missed
+741467	+tribal	tribe mention missed
+741355	-high_cost:benefits	high_cost:benefits without text
+741462	+evasion	flying as evasion missed
+741396	+evasion	flying as evasion missed
+741396	-terrain	flying or wild land tagged as terrain
+741325	-high_cost:benefits	high_cost:benefits without text
+741278	+drawback	self damage drawback as life payment
+741278	-damage	self damage drawback as life payment
+741278	-life_payment:cost	self damage drawback as life payment
+741520	+selection	discover as selection missed
+741520	-copy	discover or stat match tagged as copy
+741520	-terrain	flying or wild land tagged as terrain
+741469	+merge_attach	swallow/attach missed
+741469	-banish	swallow tagged as banish
+741398	-high_cost:benefits	high_cost:benefits without text
