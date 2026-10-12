@@ -2,7 +2,6 @@
 !activated|\bactivate
 !activated|\bactivated
 !activated|once per (turn|round)
-turn_start|does|\b(whenever|when) this player is activated\b
 !random_effect|\broll
 !random_effect|\bdice\b
 advantage|does|\bre-?roll(s|ed)?\b|\bteam re-?roll\b
@@ -20,8 +19,8 @@ movement|does|\brush(es|ing)?\b|\bdodg(e|es|ing)\b|\bleap(s|ing)?\b|\bjump(s|ing
 ranged|does|\bpass action\b|\bthrow team-?mate\b|\blong (pass|bomb)\b|\bquick pass\b|\bshort pass\b
 !symmetric_effect|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)
 !scope_global|\beach player
-team_play|does|\bteam-?mates?\b
 forced_movement|does|\bpush(ed|es)? back\b|\bpushed into the crowd\b|\bfollow-?up\b
 assists_support|does|\b(offensive|defensive) assists?\b
 coin_economy|does|\bgold pieces\b|\bhiring fee\b|\binducements?\b|\bteam value\b
 permanent_growth|does|\bspp\b|\bstar player points\b|\badvancements?\b
+random_effect|does|roll a d\d+|rolls? a d6|roll a d16

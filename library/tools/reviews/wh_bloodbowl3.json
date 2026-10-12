@@ -1,7 +1,8 @@
 {
 "794620": {
 "add": [
-"buff"
+"buff",
+"ranged"
 ],
 "drop": [
 "random_effect"
@@ -16,7 +17,9 @@
 ]
 },
 "794614": {
-"add": [],
+"add": [
+"advantage"
+],
 "drop": [
 "random_effect"
 ]
@@ -63,7 +66,9 @@
 ]
 },
 "794661": {
-"add": [],
+"add": [
+"advantage"
+],
 "drop": [
 "destroy"
 ]
@@ -76,16 +81,26 @@
 },
 "794650": {
 "add": [
-"collision_damage"
+"collision_damage",
+"attack_mod",
+"ranged"
 ],
 "drop": [
-"permanent_growth"
+"permanent_growth",
+"team_play"
 ]
 },
 "794706": {
-"add": [],
+"add": [
+"drawback",
+"ranged"
+],
 "drop": [
-"permanent_growth"
+"permanent_growth",
+"activated",
+"disable",
+"team_play",
+"turn_start"
 ]
 },
 "794697": {
@@ -136,7 +151,8 @@
 "buff"
 ],
 "drop": [
-"blocking"
+"blocking",
+"evasion:counters"
 ]
 },
 "794681": {
@@ -184,24 +200,34 @@
 ]
 },
 "794643": {
-"add": [],
+"add": [
+"movement"
+],
 "drop": [
-"on_damaged"
+"on_damaged",
+"combat"
 ]
 },
 "794692": {
 "add": [
-"multi_attack",
-"multi_target_attack"
+"multi_target_attack",
+"drawback",
+"debuff",
+"turnover"
 ],
 "drop": [
-"on_damaged"
+"on_damaged",
+"forced_movement",
+"multi_attack"
 ]
 },
 "794644": {
-"add": [],
+"add": [
+"tempo"
+],
 "drop": [
-"combat"
+"combat",
+"activated"
 ]
 },
 "794615": {
@@ -212,7 +238,8 @@
 },
 "794703": {
 "add": [
-"drawback"
+"drawback",
+"movement"
 ],
 "drop": []
 },
@@ -251,13 +278,17 @@
 ]
 },
 "794629": {
-"add": [],
+"add": [
+"piercing"
+],
 "drop": [
 "disable"
 ]
 },
 "794619": {
-"add": [],
+"add": [
+"piercing"
+],
 "drop": [
 "disable"
 ]
@@ -269,7 +300,9 @@
 ]
 },
 "794646": {
-"add": [],
+"add": [
+"adjacency"
+],
 "drop": [
 "disable"
 ]
@@ -284,11 +317,16 @@
 },
 "794711": {
 "add": [
-"summon"
+"summon",
+"on_kill",
+"once_per_game",
+"reserve_bench"
 ],
 "drop": [
 "damage_over_time",
-"disable"
+"disable",
+"combat",
+"regeneration"
 ]
 },
 "794704": {
@@ -298,7 +336,11 @@
 ]
 },
 "794684": {
-"add": [],
+"add": [
+"random_effect",
+"movement",
+"turnover"
+],
 "drop": [
 "advantage"
 ]
@@ -319,15 +361,24 @@
 },
 "794657": {
 "add": [
-"buff"
+"buff",
+"random_effect",
+"stat_condition",
+"comeback"
 ],
-"drop": []
+"drop": [
+"combat",
+"on_damaged"
+]
 },
 "794688": {
 "add": [
-"buff"
+"buff",
+"movement"
 ],
-"drop": []
+"drop": [
+"activated"
+]
 },
 "794675": {
 "add": [
@@ -355,9 +406,13 @@
 },
 "794642": {
 "add": [
-"reactions"
+"reactions",
+"advantage",
+"zone_of_control"
 ],
-"drop": []
+"drop": [
+"movement"
+]
 },
 "794641": {
 "add": [
@@ -369,13 +424,23 @@
 "add": [
 "piercing:counters"
 ],
-"drop": []
+"drop": [
+"damage_reduction"
+]
 },
 "794720": {
-"add": [],
+"add": [
+"drawback",
+"random_effect",
+"movement"
+],
 "drop": [
 "destroy",
-"forced_movement"
+"forced_movement",
+"activated",
+"combat",
+"immobilize",
+"turn_start"
 ]
 },
 "794695": {
@@ -394,10 +459,14 @@
 },
 "794717": {
 "add": [
-"piercing"
+"adjacency",
+"damage"
 ],
 "drop": [
-"advantage"
+"advantage",
+"activated",
+"turn_start",
+"piercing"
 ]
 },
 "794609": {
@@ -417,10 +486,13 @@
 ]
 },
 "794736": {
-"add": [],
+"add": [
+"permanent_growth"
+],
 "drop": [
 "random_effect",
-"ranged"
+"ranged",
+"advantage"
 ]
 },
 "794730": {
@@ -444,9 +516,16 @@
 ]
 },
 "794732": {
-"add": [],
+"add": [
+"permanent_loss",
+"condition_count",
+"random_effect",
+"shop_gold"
+],
 "drop": [
-"symmetric_effect"
+"symmetric_effect",
+"coin_economy",
+"permanent_growth:benefits"
 ]
 },
 "794612": {
@@ -496,10 +575,18 @@
 "794611": {
 "add": [
 "aoe_damage",
-"damage"
+"damage",
+"random_effect",
+"transform",
+"modal_choice",
+"adjacency",
+"disable",
+"once_per_game",
+"turn_end"
 ],
 "drop": [
-"piercing"
+"piercing",
+"delayed"
 ]
 },
 "794633": {
@@ -514,5 +601,1617 @@
 "drop": [
 "destroy"
 ]
+},
+"794896": {
+"add": [
+"advantage",
+"buff",
+"drawback",
+"evasion",
+"passive",
+"ranged"
+],
+"drop": [
+"condition_count",
+"disable",
+"movement",
+"symmetric_effect",
+"trap_secret",
+"turn_end",
+"turn_start",
+"zone_of_control"
+]
+},
+"794834": {
+"add": [
+"cheat_death",
+"drawback",
+"immobilize",
+"once_per_game",
+"piercing",
+"ranged:counters",
+"reserve_bench",
+"summon",
+"zone_of_control"
+],
+"drop": [
+"aura",
+"condition_count",
+"debuff",
+"movement",
+"regeneration",
+"team_play",
+"turn_end",
+"turn_start"
+]
+},
+"794846": {
+"add": [
+"advantage",
+"buff",
+"comeback",
+"damage_reduction",
+"drawback",
+"forced_movement",
+"multi_attack",
+"passive",
+"tribal"
+],
+"drop": [
+"on_damaged"
+]
+},
+"794938": {
+"add": [
+"zone_of_control:counters",
+"advantage",
+"buff",
+"cheat_death",
+"damage_reduction",
+"drawback",
+"passive",
+"ranged"
+],
+"drop": [
+"immunity"
+]
+},
+"794798": {
+"add": [
+"drawback",
+"damage_reduction",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"adjacency",
+"condition_count",
+"forced_movement",
+"immobilize",
+"immunity",
+"on_damaged",
+"support",
+"team_play",
+"turn_start"
+]
+},
+"794610": {
+"add": [
+"placement_rules",
+"once_per_game"
+],
+"drop": []
+},
+"794825": {
+"add": [
+"damage_reduction",
+"drawback",
+"passive"
+],
+"drop": [
+"combat",
+"movement"
+]
+},
+"794916": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive",
+"ranged",
+"reactions"
+],
+"drop": [
+"turnover",
+"damage_reduction",
+"forced_movement:benefits",
+"forced_movement",
+"immunity",
+"zone_of_control"
+]
+},
+"794832": {
+"add": [
+"buff",
+"cheat_death",
+"damage_reduction",
+"on_attack",
+"once_per_game",
+"passive",
+"reserve_bench",
+"summon"
+],
+"drop": [
+"combat",
+"regeneration",
+"turnover"
+]
+},
+"794718": {
+"add": [
+"drawback",
+"evasion",
+"movement"
+],
+"drop": []
+},
+"794907": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive",
+"zone_of_control:counters"
+],
+"drop": [
+"damage_reduction",
+"forced_movement"
+]
+},
+"794766": {
+"add": [
+"damage_reduction",
+"disable",
+"drawback",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"movement",
+"support",
+"team_play",
+"turn_start"
+]
+},
+"794882": {
+"add": [
+"cheat_death",
+"drawback",
+"forced_movement",
+"multi_attack",
+"passive",
+"piercing",
+"turnover"
+],
+"drop": [
+"adjacency",
+"on_damaged",
+"ranged",
+"team_play",
+"turn_start"
+]
+},
+"794598": {
+"add": [
+"turn_start",
+"once_per_game",
+"row_effects"
+],
+"drop": []
+},
+"794799": {
+"add": [
+"advantage",
+"ranged",
+"turnover"
+],
+"drop": [
+"evasion:counters"
+]
+},
+"794943": {
+"add": [
+"advantage",
+"damage_reduction",
+"drawback",
+"passive",
+"piercing",
+"tribal"
+],
+"drop": [
+"activated",
+"movement",
+"tempo"
+]
+},
+"794875": {
+"add": [
+"drawback"
+],
+"drop": [
+"ranged",
+"team_play"
+]
+},
+"794714": {
+"add": [
+"adjacency",
+"condition",
+"drawback"
+],
+"drop": [
+"activated",
+"team_play",
+"turn_start"
+]
+},
+"794828": {
+"add": [
+"advantage",
+"buff",
+"comeback",
+"ranged"
+],
+"drop": [
+"forced_movement",
+"on_damaged"
+]
+},
+"794946": {
+"add": [
+"buff",
+"drawback",
+"evasion",
+"evasion:counters",
+"immobilize",
+"passive",
+"zone_of_control"
+],
+"drop": [
+"debuff",
+"movement",
+"protection"
+]
+},
+"794888": {
+"add": [
+"advantage",
+"evasion",
+"movement",
+"zone_of_control:counters"
+],
+"drop": [
+"adjacency",
+"damage_reduction"
+]
+},
+"794780": {
+"add": [
+"advantage",
+"ranged",
+"reactions"
+],
+"drop": [
+"immunity"
+]
+},
+"794719": {
+"add": [
+"random_effect",
+"advantage",
+"ranged"
+],
+"drop": [
+"team_play"
+]
+},
+"794713": {
+"add": [
+"adjacency",
+"drawback",
+"random_effect",
+"activated",
+"damage"
+],
+"drop": [
+"combat",
+"turn_start"
+]
+},
+"794752": {
+"add": [
+"damage_reduction",
+"disable",
+"drawback",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"movement",
+"support",
+"team_play",
+"turn_start"
+]
+},
+"794926": {
+"add": [
+"drawback",
+"advantage",
+"damage",
+"evasion",
+"passive"
+],
+"drop": [
+"damage_reduction",
+"movement",
+"self_destruct",
+"trap_secret",
+"turn_end",
+"turn_start",
+"turnover",
+"zone_of_control"
+]
+},
+"794817": {
+"add": [
+"damage_reduction",
+"disable",
+"drawback",
+"passive",
+"piercing",
+"zone_of_control"
+],
+"drop": [
+"debuff",
+"movement",
+"turn_start"
+]
+},
+"794889": {
+"add": [
+"advantage",
+"buff",
+"comeback",
+"drawback",
+"evasion",
+"forced_movement:counters",
+"multi_attack",
+"passive",
+"piercing"
+],
+"drop": [
+"activated",
+"forced_movement:benefits",
+"on_damaged",
+"tempo",
+"zone_of_control"
+]
+},
+"794649": {
+"add": [
+"suppress",
+"assists_support",
+"forced_movement"
+],
+"drop": [
+"activated"
+]
+},
+"794696": {
+"add": [
+"random_effect",
+"tribal",
+"drawback"
+],
+"drop": [
+"ranged",
+"team_play"
+]
+},
+"794755": {
+"add": [
+"damage_reduction",
+"passive",
+"piercing:counters"
+],
+"drop": [
+"combat"
+]
+},
+"794774": {
+"add": [
+"advantage",
+"damage_reduction",
+"passive"
+],
+"drop": [
+"immunity",
+"movement"
+]
+},
+"794861": {
+"add": [
+"advantage",
+"damage",
+"evasion",
+"piercing",
+"zone_of_control:counters"
+],
+"drop": [
+"turn_start",
+"movement"
+]
+},
+"794920": {
+"add": [
+"drawback",
+"evasion:counters",
+"immobilize",
+"reactions",
+"zone_of_control"
+],
+"drop": [
+"aura",
+"debuff",
+"movement",
+"team_play",
+"protection",
+"ranged"
+]
+},
+"794864": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive",
+"ranged"
+],
+"drop": [
+"forced_movement:benefits",
+"forced_movement",
+"zone_of_control",
+"team_play"
+]
+},
+"794698": {
+"add": [
+"drawback",
+"random_effect",
+"adjacency",
+"movement",
+"turnover"
+],
+"drop": [
+"activated",
+"turn_start",
+"ranged",
+"team_play"
+]
+},
+"794759": {
+"add": [
+"drawback"
+],
+"drop": [
+"ranged",
+"team_play"
+]
+},
+"794749": {
+"add": [
+"buff",
+"damage_reduction",
+"on_attack",
+"passive"
+],
+"drop": [
+"combat"
+]
+},
+"794860": {
+"add": [
+"forced_movement"
+],
+"drop": [
+"combat",
+"damage_reduction"
+]
+},
+"794863": {
+"add": [
+"advantage",
+"deckbuilding_effect",
+"drawback",
+"evasion",
+"passive",
+"ranged"
+],
+"drop": [
+"forced_movement",
+"forced_movement:benefits",
+"zone_of_control",
+"team_play"
+]
+},
+"794805": {
+"add": [
+"advantage",
+"ranged"
+],
+"drop": [
+"immunity"
+]
+},
+"794850": {
+"add": [
+"buff"
+],
+"drop": [
+"combat",
+"damage_reduction",
+"movement",
+"zone_of_control",
+"evasion:counters"
+]
+},
+"794810": {
+"add": [
+"advantage"
+],
+"drop": [
+"damage_reduction"
+]
+},
+"794816": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive",
+"ranged",
+"reactions",
+"zone_of_control",
+"zone_of_control:counters"
+],
+"drop": [
+"movement"
+]
+},
+"794689": {
+"add": [
+"ranged"
+],
+"drop": [
+"team_play"
+]
+},
+"794791": {
+"add": [
+"drawback",
+"forced_movement",
+"passive"
+],
+"drop": [
+"combo_sequence",
+"disable",
+"evasion",
+"on_damaged",
+"team_play",
+"trap_secret",
+"turn_start",
+"turn_end",
+"zone_of_control"
+]
+},
+"794795": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive",
+"ranged"
+],
+"drop": [
+"movement",
+"team_play",
+"zone_of_control"
+]
+},
+"794935": {
+"add": [
+"damage_reduction",
+"debuff",
+"drawback",
+"forced_movement",
+"multi_attack",
+"passive",
+"piercing",
+"zone_of_control"
+],
+"drop": [
+"on_damaged",
+"turn_start"
+]
+},
+"794865": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive",
+"ranged"
+],
+"drop": [
+"forced_movement",
+"forced_movement:benefits",
+"team_play",
+"zone_of_control"
+]
+},
+"794653": {
+"add": [
+"assists_support"
+],
+"drop": [
+"combat",
+"team_play"
+]
+},
+"794871": {
+"add": [
+"cheat_death",
+"damage_reduction",
+"passive"
+],
+"drop": [
+"combat"
+]
+},
+"794891": {
+"add": [
+"advantage",
+"buff",
+"damage_reduction",
+"drawback",
+"passive",
+"ranged"
+],
+"drop": [
+"immunity",
+"trap_secret",
+"turn_end",
+"evasion:counters"
+]
+},
+"794793": {
+"add": [
+"cheat_death",
+"damage",
+"drawback",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"movement",
+"support",
+"team_play",
+"turn_start"
+]
+},
+"794855": {
+"add": [
+"advantage",
+"cheat_death",
+"evasion",
+"passive",
+"zone_of_control:counters"
+],
+"drop": [
+"movement"
+]
+},
+"794927": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive",
+"ranged"
+],
+"drop": [
+"immunity",
+"movement",
+"team_play",
+"zone_of_control",
+"damage_reduction"
+]
+},
+"794845": {
+"add": [
+"advantage",
+"damage_reduction",
+"evasion:counters",
+"passive",
+"reactions",
+"zone_of_control"
+],
+"drop": [
+"movement"
+]
+},
+"794761": {
+"add": [
+"drawback"
+],
+"drop": [
+"ranged",
+"team_play"
+]
+},
+"794876": {
+"add": [
+"advantage",
+"drawback",
+"ranged"
+],
+"drop": [
+"immunity",
+"team_play"
+]
+},
+"794862": {
+"add": [
+"debuff",
+"forced_movement",
+"friendly_fire",
+"multi_attack",
+"passive",
+"piercing",
+"turnover",
+"zone_of_control"
+],
+"drop": [
+"on_damaged",
+"turn_start",
+"team_play"
+]
+},
+"794600": {
+"add": [
+"random_effect",
+"turnover"
+],
+"drop": []
+},
+"794911": {
+"add": [
+"advantage",
+"buff",
+"damage_reduction",
+"drawback",
+"evasion:counters",
+"forced_movement",
+"on_attack",
+"passive",
+"piercing",
+"zone_of_control"
+],
+"drop": [
+"debuff"
+]
+},
+"794811": {
+"add": [
+"damage_reduction",
+"disable",
+"drawback",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"movement",
+"support",
+"team_play",
+"turn_start"
+]
+},
+"794912": {
+"add": [
+"advantage",
+"buff",
+"drawback",
+"evasion",
+"evasion:counters",
+"passive",
+"zone_of_control",
+"zone_of_control:counters"
+],
+"drop": [
+"debuff",
+"movement"
+]
+},
+"794848": {
+"add": [
+"damage_reduction",
+"drawback",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"adjacency",
+"condition_count",
+"forced_movement",
+"immobilize",
+"immunity",
+"on_damaged",
+"support",
+"team_play",
+"turn_start"
+]
+},
+"794898": {
+"add": [
+"damage_reduction",
+"drawback",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"adjacency",
+"condition_count",
+"forced_movement",
+"immunity",
+"on_damaged",
+"support",
+"team_play"
+]
+},
+"794751": {
+"add": [
+"cheat_death",
+"damage",
+"drawback",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"movement",
+"support",
+"team_play",
+"turn_start"
+]
+},
+"794931": {
+"add": [
+"advantage",
+"assists_support",
+"buff",
+"drawback",
+"evasion",
+"movement",
+"on_attack",
+"passive",
+"ranged",
+"reactions"
+],
+"drop": [
+"activated",
+"tempo",
+"turnover",
+"zone_of_control"
+]
+},
+"794836": {
+"add": [
+"damage_reduction",
+"disable",
+"drawback",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"movement",
+"support",
+"team_play",
+"turn_start"
+]
+},
+"794951": {
+"add": [
+"advantage",
+"buff",
+"damage_reduction",
+"drawback",
+"evasion:counters",
+"passive",
+"piercing",
+"ranged",
+"zone_of_control"
+],
+"drop": [
+"immunity",
+"movement",
+"turnover"
+]
+},
+"794772": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"forced_movement",
+"multi_attack",
+"zone_of_control:counters"
+],
+"drop": [
+"activated",
+"on_damaged",
+"tempo"
+]
+},
+"794744": {
+"add": [
+"cheat_death",
+"damage",
+"drawback",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"movement",
+"support",
+"team_play",
+"turn_start"
+]
+},
+"794895": {
+"add": [
+"advantage",
+"cant_block",
+"cheat_death",
+"drawback",
+"evasion",
+"passive",
+"zone_of_control:counters"
+],
+"drop": [
+"activated",
+"adjacency",
+"movement",
+"ranged",
+"team_play",
+"tempo",
+"turn_start",
+"turnover"
+]
+},
+"794790": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive",
+"ranged"
+],
+"drop": [
+"movement",
+"team_play",
+"zone_of_control"
+]
+},
+"794934": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"movement",
+"team_play",
+"zone_of_control",
+"damage"
+]
+},
+"794699": {
+"add": [
+"aoe_damage",
+"random_effect",
+"friendly_fire",
+"adjacency",
+"ranged"
+],
+"drop": [
+"activated",
+"movement",
+"symmetric_effect",
+"turn_start"
+]
+},
+"794804": {
+"add": [
+"advantage",
+"evasion",
+"zone_of_control:counters"
+],
+"drop": [
+"movement"
+]
+},
+"794823": {
+"add": [
+"cheat_death",
+"damage_reduction",
+"drawback",
+"passive"
+],
+"drop": [
+"combat",
+"forced_movement",
+"immunity",
+"on_damaged"
+]
+},
+"794814": {
+"add": [
+"drawback",
+"forced_movement",
+"multi_attack"
+],
+"drop": [
+"on_damaged"
+]
+},
+"794830": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive"
+],
+"drop": [
+"condition_count",
+"movement",
+"team_play",
+"turn_end",
+"zone_of_control"
+]
+},
+"794918": {
+"add": [
+"damage_reduction",
+"drawback",
+"forced_movement",
+"passive"
+],
+"drop": [
+"combat",
+"zone_of_control",
+"evasion:counters"
+]
+},
+"794734": {
+"add": [
+"permanent_growth"
+],
+"drop": [
+"collision_damage"
+]
+},
+"794899": {
+"add": [
+"advantage",
+"cant_block",
+"drawback",
+"evasion",
+"passive",
+"ranged",
+"reactions",
+"zone_of_control:counters"
+],
+"drop": [
+"immunity",
+"movement",
+"turn_start"
+]
+},
+"794937": {
+"add": [
+"aura",
+"drawback",
+"forced_movement",
+"on_attack",
+"piercing",
+"ranged:counters",
+"zone_of_control"
+],
+"drop": [
+"debuff",
+"team_play",
+"damage_reduction"
+]
+},
+"794747": {
+"add": [
+"advantage",
+"buff",
+"comeback",
+"ranged"
+],
+"drop": [
+"immunity",
+"on_damaged"
+]
+},
+"794929": {
+"add": [
+"cheat_death",
+"drawback",
+"forced_movement",
+"passive",
+"piercing",
+"ranged"
+],
+"drop": [
+"team_play",
+"support",
+"adjacency"
+]
+},
+"794710": {
+"add": [
+"random_effect",
+"turn_end"
+],
+"drop": [
+"condition_count",
+"team_play"
+]
+},
+"794919": {
+"add": [
+"advantage",
+"buff",
+"comeback",
+"drawback",
+"evasion",
+"movement",
+"passive",
+"zone_of_control:counters"
+],
+"drop": [
+"activated",
+"tempo",
+"on_damaged",
+"damage_reduction"
+]
+},
+"794724": {
+"add": [
+"random_effect",
+"drawback"
+],
+"drop": [
+"activated",
+"combat",
+"turn_start"
+]
+},
+"794826": {
+"add": [
+"aura",
+"drawback",
+"forced_movement",
+"multi_attack",
+"piercing",
+"ranged:counters",
+"zone_of_control"
+],
+"drop": [
+"debuff",
+"on_damaged",
+"team_play",
+"turn_start"
+]
+},
+"794694": {
+"add": [
+"random_effect",
+"turnover",
+"drawback"
+],
+"drop": [
+"ranged",
+"team_play"
+]
+},
+"794894": {
+"add": [
+"advantage",
+"buff",
+"drawback",
+"evasion",
+"passive",
+"ranged"
+],
+"drop": [
+"condition_count",
+"disable",
+"movement",
+"symmetric_effect",
+"team_play",
+"trap_secret",
+"turn_end",
+"turn_start",
+"zone_of_control"
+]
+},
+"794745": {
+"add": [],
+"drop": [
+"combat",
+"disable"
+]
+},
+"794904": {
+"add": [
+"damage_reduction",
+"forced_movement",
+"forced_movement:counters",
+"friendly_fire",
+"multi_attack",
+"passive",
+"piercing",
+"turnover",
+"zone_of_control"
+],
+"drop": [
+"debuff",
+"immunity",
+"on_damaged",
+"turn_start",
+"team_play"
+]
+},
+"794731": {
+"add": [
+"advantage",
+"once_per_game"
+],
+"drop": [
+"damage_reduction",
+"ranged"
+]
+},
+"794914": {
+"add": [
+"advantage",
+"aura",
+"cheat_death",
+"drawback",
+"evasion:counters",
+"forced_movement",
+"on_attack",
+"piercing",
+"ranged:counters",
+"tribal",
+"zone_of_control"
+],
+"drop": [
+"debuff",
+"team_play",
+"damage_reduction"
+]
+},
+"794812": {
+"add": [
+"drawback",
+"forced_movement",
+"multi_attack"
+],
+"drop": [
+"on_damaged"
+]
+},
+"794885": {
+"add": [
+"advantage",
+"ranged"
+],
+"drop": [
+"adjacency"
+]
+},
+"794594": {
+"add": [
+"random_effect",
+"shop_gold"
+],
+"drop": [
+"condition_count"
+]
+},
+"794741": {
+"add": [
+"advantage",
+"evasion",
+"movement"
+],
+"drop": [
+"activated",
+"tempo",
+"zone_of_control"
+]
+},
+"794742": {
+"add": [
+"advantage",
+"damage_reduction",
+"drawback",
+"evasion",
+"passive",
+"ranged"
+],
+"drop": [
+"movement",
+"team_play",
+"zone_of_control"
+]
+},
+"794763": {
+"add": [
+"drawback"
+],
+"drop": [
+"ranged",
+"team_play"
+]
+},
+"794760": {
+"add": [
+"advantage",
+"drawback",
+"evasion",
+"passive"
+],
+"drop": [
+"ranged",
+"team_play",
+"movement",
+"zone_of_control"
+]
+},
+"794874": {
+"add": [
+"advantage",
+"deckbuilding_effect",
+"drawback",
+"evasion",
+"passive",
+"ranged"
+],
+"drop": [
+"forced_movement",
+"forced_movement:benefits",
+"zone_of_control",
+"team_play"
+]
+},
+"794757": {
+"add": [
+"damage",
+"movement",
+"reactions",
+"zone_of_control"
+],
+"drop": [
+"turn_start",
+"piercing"
+]
+},
+"794928": {
+"add": [
+"damage",
+"drawback",
+"passive",
+"reactions",
+"zone_of_control"
+],
+"drop": [
+"forced_movement",
+"forced_movement:benefits",
+"immunity",
+"turn_start",
+"piercing"
+]
+},
+"794851": {
+"add": [
+"drawback",
+"passive",
+"piercing"
+],
+"drop": [
+"damage_reduction",
+"forced_movement"
+]
+},
+"794753": {
+"add": [
+"buff",
+"damage_reduction",
+"drawback",
+"forced_movement",
+"multi_attack",
+"on_attack",
+"passive",
+"piercing"
+],
+"drop": [
+"on_damaged",
+"turn_start"
+]
+},
+"794827": {
+"add": [
+"drawback",
+"forced_movement",
+"multi_attack",
+"passive"
+],
+"drop": [
+"on_damaged"
+]
+},
+"794659": {
+"add": [
+"drawback",
+"forced_movement",
+"multi_attack"
+],
+"drop": []
+},
+"794858": {
+"add": [
+"cheat_death",
+"damage_reduction",
+"passive"
+],
+"drop": []
+},
+"794708": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"794854": {
+"add": [
+"assists_support",
+"cheat_death",
+"drawback",
+"forced_movement",
+"passive"
+],
+"drop": []
+},
+"794803": {
+"add": [
+"advantage",
+"evasion",
+"movement",
+"zone_of_control:counters"
+],
+"drop": []
+},
+"794595": {
+"add": [
+"condition_count",
+"shop_gold"
+],
+"drop": []
+},
+"794740": {
+"add": [
+"advantage",
+"evasion",
+"movement",
+"ranged",
+"reactions",
+"turnover",
+"zone_of_control:counters"
+],
+"drop": []
+},
+"794605": {
+"add": [
+"once_per_game",
+"shop_gold"
+],
+"drop": []
+},
+"794820": {
+"add": [
+"assists_support",
+"cheat_death",
+"drawback",
+"forced_movement",
+"passive"
+],
+"drop": []
+},
+"794840": {
+"add": [
+"advantage",
+"evasion",
+"movement",
+"zone_of_control:counters"
+],
+"drop": []
+},
+"794725": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"794687": {
+"add": [
+"advantage"
+],
+"drop": []
+},
+"794691": {
+"add": [
+"forced_movement",
+"on_attack",
+"piercing"
+],
+"drop": []
+},
+"794869": {
+"add": [
+"cheat_death",
+"damage_reduction",
+"passive"
+],
+"drop": []
+},
+"794685": {
+"add": [
+"turnover"
+],
+"drop": []
+},
+"794601": {
+"add": [
+"advantage"
+],
+"drop": []
 }
 }
