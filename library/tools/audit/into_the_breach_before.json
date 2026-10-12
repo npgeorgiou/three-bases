@@ -1,0 +1,258 @@
+{
+"760992": [
+"debuff",
+"forced_movement"
+],
+"760880": [
+"damage",
+"forced_movement",
+"ranged",
+"telegraphed_threats"
+],
+"760856": [
+"heal",
+"on_damaged",
+"shield"
+],
+"761028": [
+"adjacency",
+"damage",
+"lanes",
+"movement",
+"telegraphed_threats"
+],
+"760905": [
+"adjacency",
+"damage",
+"placement_rules"
+],
+"760836": [
+"attack_lock",
+"damage_over_time",
+"terrain",
+"turn_start"
+],
+"760851": [
+"aura",
+"damage_over_time"
+],
+"760854": [
+"aura",
+"regeneration"
+],
+"761137": [
+"damage",
+"damage:benefits",
+"exhaust",
+"immunity",
+"piercing",
+"upgrade:benefits"
+],
+"760958": [
+"damage",
+"debuff",
+"forced_movement"
+],
+"761124": [
+"damage",
+"exhaust",
+"heal",
+"on_kill"
+],
+"760911": [
+"shield"
+],
+"760903": [
+"movement"
+],
+"761046": [
+"adjacency",
+"aoe_damage",
+"attack_now",
+"telegraphed_threats",
+"terrain",
+"zone_control"
+],
+"760861": [
+"forced_movement",
+"shield",
+"terrain"
+],
+"760881": [
+"area_templates",
+"forced_movement",
+"ping",
+"telegraphed_threats"
+],
+"761021": [
+"area_templates",
+"damage",
+"telegraphed_threats"
+],
+"760914": [
+"adjacency",
+"aoe_damage",
+"forced_movement",
+"immunity",
+"ranged"
+],
+"761107": [
+"area_templates",
+"collision_damage",
+"damage_reduction",
+"flanking",
+"multi_target_attack",
+"passive",
+"spawn_blocking",
+"telegraphed_threats",
+"terrain"
+],
+"760876": [
+"adjacency",
+"forced_movement"
+],
+"760874": [
+"terrain"
+],
+"761003": [
+"adjacency",
+"aoe_damage",
+"exhaust",
+"friendly_fire",
+"sacrifice",
+"self_destruct"
+],
+"760978": [
+"attack_lock",
+"damage",
+"forced_movement",
+"ranged",
+"terrain"
+],
+"761062": [
+"destroy",
+"forced_movement",
+"terrain"
+],
+"760909": [
+"drawback",
+"shield"
+],
+"760915": [
+"adjacency",
+"forced_movement"
+],
+"760959": [
+"adjacency",
+"damage",
+"friendly_fire",
+"life_payment",
+"movement"
+],
+"760922": [
+"area_templates",
+"forced_movement"
+],
+"760970": [
+"area_templates",
+"collision_damage",
+"friendly_fire",
+"life_payment"
+],
+"760964": [
+"damage",
+"forced_movement"
+],
+"760862": [
+"movement",
+"terrain"
+],
+"760834": [
+"debuff"
+],
+"760919": [
+"adjacency",
+"attack_lock",
+"damage_over_time",
+"forced_movement",
+"terrain",
+"turn_start"
+],
+"761057": [
+"adjacency",
+"damage",
+"fodder",
+"telegraphed_threats"
+],
+"760929": [
+"adjacency",
+"life_payment",
+"movement"
+],
+"761153": [
+"destroy",
+"telegraphed_threats",
+"terrain"
+],
+"761152": [
+"spawn_blocking",
+"telegraphed_threats"
+],
+"760906": [
+"extra_turn",
+"movement",
+"multi_attack"
+],
+"761161": [
+"destroy",
+"telegraphed_threats",
+"terrain",
+"transform"
+],
+"761160": [
+"telegraphed_threats",
+"terrain",
+"transform",
+"turn_start"
+],
+"761043": [
+"damage",
+"debuff",
+"telegraphed_threats"
+],
+"761077": [
+"forced_movement"
+],
+"761035": [
+"adjacency",
+"aoe_damage",
+"area_templates",
+"forced_movement",
+"telegraphed_threats",
+"terrain"
+],
+"760859": [
+"drawback"
+],
+"760917": [
+"adjacency",
+"forced_movement"
+],
+"760893": [
+"damage"
+],
+"760947": [
+"collision_damage",
+"spawn_blocking"
+],
+"760829": [
+"movement"
+],
+"760993": [
+"disruption",
+"telegraphed_threats"
+],
+"761014": [
+"stealth"
+]
+}

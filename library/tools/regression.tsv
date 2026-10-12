@@ -3041,8 +3041,8 @@ dnd5e	762119	Orb of Dragonkind	items_consumables	does	present
 dnd5e	762178	Action Surge (1 use)	forced_movement	*	absent
 dnd5e	762178	Action Surge (1 use)	movement	*	absent
 dnd5e	762188	Flurry of Blows	multi_attack	does	present
-dnd5e	762190	Step of the Wind	zone_of_control	does	absent
 dnd5e	762190	Step of the Wind	zone_of_control	counters	present
+dnd5e	762190	Step of the Wind	zone_of_control	does	absent
 dnd5e	762265	Flexible Casting: Creating Spell Slots	resource_conversion	does	present
 dnd5e	762265	Flexible Casting: Creating Spell Slots	transform	*	absent
 dnd5e	815505	Darkvision	information	does	present
@@ -4084,8 +4084,8 @@ hearthstone	743167	Corrupt Constable	movement	*	absent
 hearthstone	743169	Frame Job	deck_position	does	present
 hearthstone	743169	Frame Job	disruption	does	present
 hearthstone	743170	Harsh Sentence	junk_cards	does	present
-hearthstone	743182	Crystalspine Cub	resource_gain	benefits	absent
 hearthstone	743182	Crystalspine Cub	resource_gain	*	absent
+hearthstone	743182	Crystalspine Cub	resource_gain	benefits	absent
 hearthstone	743191	Merithra of the Dream	hand_size	does	present
 hearthstone	743196	Arisen Onyxia	board_presence	*	absent
 hearthstone	743196	Arisen Onyxia	summon	*	absent
@@ -5987,16 +5987,44 @@ inscryption	741046	The Trader	slot_filler	*	absent
 inscryption	741047	The Trapper	boss_phases	*	absent
 inscryption	741047	The Trapper	slot_filler	*	absent
 inscryption	741047	The Trapper	terrain	*	absent
+into_the_breach	760827	Energy Shield	shield	does	present
+into_the_breach	760828	Fire Immunity	immunity	does	present
 into_the_breach	760829	Flying	evasion	*	absent
+into_the_breach	760830	Kickoff Boosters	movement	does	present
+into_the_breach	760830	Kickoff Boosters	temporary_buff	does	present
+into_the_breach	760831	Natural Armor	damage_reduction	does	present
+into_the_breach	760835	Boost	passive	*	absent
+into_the_breach	760835	Boost	temporary_buff	does	present
 into_the_breach	760836	Fire	disable	*	absent
 into_the_breach	760836	Fire	movement	*	absent
 into_the_breach	760839	Webbed	disable	*	absent
 into_the_breach	760839	Webbed	immobilize	does	present
 into_the_breach	760842	Smoke	attack_lock	does	present
 into_the_breach	760842	Smoke	disable	*	absent
+into_the_breach	760842	Smoke	terrain	does	present
 into_the_breach	760843	Submerged	attack_lock	does	present
 into_the_breach	760843	Submerged	disable	*	absent
+into_the_breach	760846	Alpha Unit	upgrade	does	present
+into_the_breach	760847	Burrower	on_damaged	does	present
+into_the_breach	760847	Burrower	stealth	does	present
+into_the_breach	760848	Explosive Decay	adjacency	does	present
+into_the_breach	760848	Explosive Decay	aoe_damage	does	present
+into_the_breach	760848	Explosive Decay	death_trigger	does	present
+into_the_breach	760848	Explosive Decay	piercing	does	present
+into_the_breach	760850	Hive Leader	boss_phases	does	present
+into_the_breach	760850	Hive Leader	immunity	does	present
 into_the_breach	760851	Hive Targeted	damage_over_time	does	present
+into_the_breach	760855	Regeneration	aura	does	present
+into_the_breach	760855	Regeneration	regeneration	does	present
+into_the_breach	760860	Mine Immunity	immunity	does	present
+into_the_breach	760865	Artillery Mech	adjacency	does	present
+into_the_breach	760865	Artillery Mech	damage	does	present
+into_the_breach	760865	Artillery Mech	forced_movement	does	present
+into_the_breach	760865	Artillery Mech	ranged	does	present
+into_the_breach	760866	Weapons	friendly_fire	does	present
+into_the_breach	760866	Weapons	ranged	*	absent
+into_the_breach	760866	Weapons	shop_gold	*	absent
+into_the_breach	760866	Weapons	tribal	*	absent
 into_the_breach	760867	Water Tile	evasion	*	absent
 into_the_breach	760867	Water Tile	terrain	does	present
 into_the_breach	760869	Squads	coin_economy	*	absent
@@ -6010,28 +6038,53 @@ into_the_breach	760869	Squads	tribal	*	absent
 into_the_breach	760871	Coal Plant	zone_control	*	absent
 into_the_breach	760873	Civilian Building	life_track	does	present
 into_the_breach	760873	Civilian Building	protection	does	present
+into_the_breach	760875	Emerging	damage	does	present
+into_the_breach	760875	Emerging	spawn_blocking	does	present
+into_the_breach	760875	Emerging	telegraphed_threats	does	present
 into_the_breach	760877	Gravity Mech	buff	*	absent
+into_the_breach	760877	Gravity Mech	damage	*	absent
+into_the_breach	760877	Gravity Mech	forced_movement	does	present
 into_the_breach	760877	Gravity Mech	friendly_fire	does	present
+into_the_breach	760877	Gravity Mech	ranged	does	present
 into_the_breach	760878	Vek	assists_support	*	absent
+into_the_breach	760878	Vek	aura	does	present
+into_the_breach	760878	Vek	blocking	*	absent
+into_the_breach	760878	Vek	boss_phases	does	present
 into_the_breach	760878	Vek	counter_spell	*	absent
 into_the_breach	760878	Vek	deathtouch	*	absent
 into_the_breach	760878	Vek	debuff	*	absent
 into_the_breach	760878	Vek	destroy	*	absent
+into_the_breach	760878	Vek	difficulty_modifiers	does	present
 into_the_breach	760878	Vek	drawback	*	absent
 into_the_breach	760878	Vek	evasion	counters	absent
+into_the_breach	760878	Vek	movement	does	present
 into_the_breach	760878	Vek	passive	*	absent
+into_the_breach	760878	Vek	quests	*	absent
 into_the_breach	760878	Vek	spawn_blocking	does	present
 into_the_breach	760878	Vek	telegraphed_threats	does	present
+into_the_breach	760879	Alpha Beetle	area_templates	*	absent
+into_the_breach	760879	Alpha Beetle	damage	does	present
+into_the_breach	760879	Alpha Beetle	forced_movement	does	present
 into_the_breach	760879	Alpha Beetle	telegraphed_threats	does	present
 into_the_breach	760880	Alpha Firefly	telegraphed_threats	does	present
 into_the_breach	760881	Beetle	telegraphed_threats	does	present
+into_the_breach	760882	Firefly	damage	does	present
+into_the_breach	760882	Firefly	forced_movement	*	absent
+into_the_breach	760882	Firefly	ranged	does	present
 into_the_breach	760882	Firefly	telegraphed_threats	does	present
 into_the_breach	760883	Hornet	telegraphed_threats	does	present
 into_the_breach	760884	Scarab	telegraphed_threats	does	present
+into_the_breach	760885	Scorpion	adjacency	does	present
+into_the_breach	760885	Scorpion	damage	does	present
+into_the_breach	760885	Scorpion	immobilize	does	present
 into_the_breach	760885	Scorpion	telegraphed_threats	does	present
 into_the_breach	760887	Time Pod	evasion	*	absent
+into_the_breach	760887	Time Pod	items_consumables	does	present
 into_the_breach	760887	Time Pod	passive	*	absent
 into_the_breach	760887	Time Pod	piercing	*	absent
+into_the_breach	760887	Time Pod	quests	does	present
+into_the_breach	760887	Time Pod	random_effect	does	present
+into_the_breach	760887	Time Pod	resource_gain	does	present
 into_the_breach	760887	Time Pod	zone_control	*	absent
 into_the_breach	760894	Grid Power	damage_reduction	*	absent
 into_the_breach	760894	Grid Power	evasion	counters	absent
@@ -6045,6 +6098,13 @@ into_the_breach	760895	Corporate Reputation	boss_phases	*	absent
 into_the_breach	760895	Corporate Reputation	immunity	*	absent
 into_the_breach	760895	Corporate Reputation	upgrade	does	present
 into_the_breach	760895	Corporate Reputation	zone_control	*	absent
+into_the_breach	760897	Bethany Jones	shield	does	present
+into_the_breach	760897	Bethany Jones	start_of_game	does	present
+into_the_breach	760898	Abe Isamu	damage_reduction	does	present
+into_the_breach	760898	Abe Isamu	shield	*	absent
+into_the_breach	760899	Harold Schmidt	adjacency	does	present
+into_the_breach	760899	Harold Schmidt	forced_movement	does	present
+into_the_breach	760900	Prospero	movement	does	present
 into_the_breach	760904	Camila Vera	disable	*	absent
 into_the_breach	760904	Camila Vera	immunity	does	present
 into_the_breach	760904	Camila Vera	terrain	*	absent
@@ -6054,99 +6114,308 @@ into_the_breach	760905	Gana	placement_rules	does	present
 into_the_breach	760906	Silica	extra_turn	does	present
 into_the_breach	760906	Silica	multi_attack	does	present
 into_the_breach	760907	Archimedes	ranged	*	absent
+into_the_breach	760908	Kazaaakpleth	damage	does	present
 into_the_breach	760909	Mafan	drawback	does	present
 into_the_breach	760911	Shield	passive	*	absent
 into_the_breach	760911	Shield	shield	does	present
 into_the_breach	760911	Shield	terrain	*	absent
+into_the_breach	760918	Flame Mech	attack_lock	*	absent
+into_the_breach	760918	Flame Mech	damage_over_time	does	present
+into_the_breach	760918	Flame Mech	forced_movement	does	present
+into_the_breach	760918	Flame Mech	immunity	does	present
+into_the_breach	760918	Flame Mech	terrain	does	present
+into_the_breach	760918	Flame Mech	turn_start	does	present
+into_the_breach	760926	Lightning Mech	adjacency	does	present
 into_the_breach	760926	Lightning Mech	combo_sequence	*	absent
+into_the_breach	760926	Lightning Mech	damage	does	present
+into_the_breach	760926	Lightning Mech	multi_target_attack	does	present
 into_the_breach	760929	Leap Mech	life_payment	does	present
+into_the_breach	760930	Unstable Mech	damage	does	present
+into_the_breach	760930	Unstable Mech	friendly_fire	does	present
+into_the_breach	760930	Unstable Mech	life_payment	does	present
+into_the_breach	760930	Unstable Mech	ranged	does	present
+into_the_breach	760932	Techno-Beetle	damage	does	present
+into_the_breach	760932	Techno-Beetle	forced_movement	does	present
+into_the_breach	760933	Techno-Hornet	forced_movement	does	present
+into_the_breach	760933	Techno-Hornet	multi_target_attack	does	present
+into_the_breach	760933	Techno-Hornet	ranged	does	present
+into_the_breach	760933	Techno-Hornet	terrain	*	absent
+into_the_breach	760935	Rock Mech	null_body	does	present
+into_the_breach	760935	Rock Mech	ranged	does	present
 into_the_breach	760935	Rock Mech	spawn_blocking	does	present
+into_the_breach	760935	Rock Mech	terrain	does	present
 into_the_breach	760936	Passives	activated	*	absent
+into_the_breach	760936	Passives	attack_lock	*	absent
 into_the_breach	760936	Passives	copy	*	absent
 into_the_breach	760936	Passives	debuff	*	absent
 into_the_breach	760936	Passives	disable	*	absent
 into_the_breach	760936	Passives	evasion	*	absent
+into_the_breach	760936	Passives	passive	does	present
+into_the_breach	760936	Passives	shop_gold	*	absent
 into_the_breach	760936	Passives	terrain	*	absent
 into_the_breach	760936	Passives	tribal	*	absent
+into_the_breach	760937	Flame Shielding	immunity	does	present
 into_the_breach	760937	Flame Shielding	upgrade	*	absent
 into_the_breach	760938	Storm Generator	damage_over_time	does	present
+into_the_breach	760939	Viscera Nanobots	condition_count	does	present
+into_the_breach	760939	Viscera Nanobots	damage	*	absent
+into_the_breach	760939	Viscera Nanobots	heal	does	present
+into_the_breach	760939	Viscera Nanobots	on_kill	does	present
+into_the_breach	760940	Networked Armor	aura	does	present
 into_the_breach	760941	Repair Field	heal	does	present
 into_the_breach	760941	Repair Field	upgrade	*	absent
+into_the_breach	760942	Stabilizers	immunity	does	present
+into_the_breach	760942	Stabilizers	spawn_blocking	does	present
 into_the_breach	760942	Stabilizers	upgrade	*	absent
 into_the_breach	760945	Medical Supplies	cheat_death	does	present
 into_the_breach	760945	Medical Supplies	upgrade	*	absent
+into_the_breach	760946	Vek Hormones	attack_mod	does	present
 into_the_breach	760946	Vek Hormones	buff	*	absent
+into_the_breach	760946	Vek Hormones	damage	*	absent
 into_the_breach	760946	Vek Hormones	friendly_fire	does	present
 into_the_breach	760947	Force Amp	buff	*	absent
 into_the_breach	760947	Force Amp	collision_damage	does	present
 into_the_breach	760947	Force Amp	upgrade	*	absent
 into_the_breach	760948	Critical Shields	comeback	does	present
 into_the_breach	760948	Critical Shields	condition_life	does	present
+into_the_breach	760948	Critical Shields	shield	does	present
 into_the_breach	760948	Critical Shields	upgrade	*	absent
+into_the_breach	760949	Electric Whip	adjacency	does	present
 into_the_breach	760949	Electric Whip	combo_sequence	*	absent
+into_the_breach	760949	Electric Whip	damage	does	present
 into_the_breach	760949	Electric Whip	multi_target_attack	does	present
+into_the_breach	760950	Burst Beam	damage	does	present
+into_the_breach	760950	Burst Beam	immunity	does	present
+into_the_breach	760950	Burst Beam	multi_target_attack	does	present
+into_the_breach	760950	Burst Beam	piercing	*	absent
 into_the_breach	760951	Spartan Shield	telegraphed_threats	does	present
+into_the_breach	760952	Rock Launcher	damage	does	present
 into_the_breach	760952	Rock Launcher	null_body	does	present
+into_the_breach	760952	Rock Launcher	ranged	does	present
 into_the_breach	760952	Rock Launcher	spawn_blocking	does	present
+into_the_breach	760952	Rock Launcher	terrain	does	present
+into_the_breach	760953	Sidewinder Fist	adjacency	does	present
+into_the_breach	760953	Sidewinder Fist	damage	does	present
+into_the_breach	760953	Sidewinder Fist	forced_movement	does	present
+into_the_breach	760955	Vice Fist	damage	does	present
 into_the_breach	760955	Vice Fist	forced_movement	does	present
+into_the_breach	760955	Vice Fist	immunity	does	present
+into_the_breach	760956	Flame Thrower	attack_lock	*	absent
+into_the_breach	760956	Flame Thrower	condition	does	present
+into_the_breach	760956	Flame Thrower	damage_over_time	does	present
+into_the_breach	760956	Flame Thrower	forced_movement	does	present
+into_the_breach	760956	Flame Thrower	terrain	does	present
+into_the_breach	760956	Flame Thrower	turn_start	does	present
 into_the_breach	760959	Hydraulic Legs	life_payment	does	present
+into_the_breach	760960	Vortex Fist	adjacency	does	present
+into_the_breach	760960	Vortex Fist	aoe_damage	does	present
+into_the_breach	760960	Vortex Fist	forced_movement	does	present
+into_the_breach	760960	Vortex Fist	friendly_fire	does	present
 into_the_breach	760960	Vortex Fist	life_payment	does	present
+into_the_breach	760960	Vortex Fist	multi_target_attack	does	present
+into_the_breach	760961	Titanite Blade	area_templates	does	present
+into_the_breach	760961	Titanite Blade	damage	does	present
+into_the_breach	760961	Titanite Blade	exhaust	does	present
+into_the_breach	760961	Titanite Blade	forced_movement	does	present
+into_the_breach	760961	Titanite Blade	multi_target_attack	does	present
+into_the_breach	760962	Mercury Fist	adjacency	does	present
+into_the_breach	760962	Mercury Fist	damage	does	present
+into_the_breach	760962	Mercury Fist	exhaust	does	present
+into_the_breach	760962	Mercury Fist	forced_movement	does	present
+into_the_breach	760963	Aerial Bombs	attack_lock	does	present
+into_the_breach	760963	Aerial Bombs	damage	does	present
+into_the_breach	760963	Aerial Bombs	movement	does	present
+into_the_breach	760963	Aerial Bombs	terrain	does	present
 into_the_breach	760963	Aerial Bombs	tribal	*	absent
+into_the_breach	760966	Grappling Hook	forced_movement	does	present
+into_the_breach	760966	Grappling Hook	shield	does	present
+into_the_breach	760967	Def. Shrapnel	adjacency	does	present
+into_the_breach	760967	Def. Shrapnel	forced_movement	does	present
+into_the_breach	760967	Def. Shrapnel	ranged	does	present
 into_the_breach	760967	Def. Shrapnel	upgrade	*	absent
 into_the_breach	760968	Rail Cannon	adjacency	*	absent
 into_the_breach	760968	Rail Cannon	aoe_damage	*	absent
+into_the_breach	760968	Rail Cannon	condition_count	does	present
+into_the_breach	760968	Rail Cannon	damage	does	present
+into_the_breach	760968	Rail Cannon	forced_movement	does	present
+into_the_breach	760968	Rail Cannon	ranged	does	present
 into_the_breach	760968	Rail Cannon	variable_stats	does	present
 into_the_breach	760969	Shock Cannon	passive	*	absent
 into_the_breach	760970	Ramming Engines	collision_damage	does	present
 into_the_breach	760970	Ramming Engines	life_payment	does	present
 into_the_breach	760970	Ramming Engines	terrain	*	absent
+into_the_breach	760971	Unstable Cannon	damage	does	present
+into_the_breach	760971	Unstable Cannon	forced_movement	does	present
+into_the_breach	760971	Unstable Cannon	friendly_fire	does	present
 into_the_breach	760971	Unstable Cannon	life_payment	does	present
+into_the_breach	760971	Unstable Cannon	ranged	does	present
+into_the_breach	760972	Heavy Rocket	adjacency	does	present
+into_the_breach	760972	Heavy Rocket	aoe_damage	*	absent
+into_the_breach	760972	Heavy Rocket	damage	does	present
+into_the_breach	760972	Heavy Rocket	exhaust	does	present
+into_the_breach	760972	Heavy Rocket	forced_movement	does	present
+into_the_breach	760972	Heavy Rocket	ranged	does	present
+into_the_breach	760973	Shrapnel Cannon	adjacency	does	present
+into_the_breach	760973	Shrapnel Cannon	damage	does	present
+into_the_breach	760973	Shrapnel Cannon	exhaust	does	present
+into_the_breach	760973	Shrapnel Cannon	forced_movement	does	present
+into_the_breach	760973	Shrapnel Cannon	multi_target_attack	does	present
+into_the_breach	760973	Shrapnel Cannon	ranged	does	present
+into_the_breach	760974	Astra Bombs	damage	does	present
+into_the_breach	760974	Astra Bombs	exhaust	does	present
+into_the_breach	760974	Astra Bombs	movement	does	present
+into_the_breach	760974	Astra Bombs	multi_target_attack	does	present
+into_the_breach	760975	Hermes Engines	adjacency	does	present
+into_the_breach	760975	Hermes Engines	area_templates	does	present
+into_the_breach	760975	Hermes Engines	forced_movement	does	present
 into_the_breach	760975	Hermes Engines	upgrade	*	absent
+into_the_breach	760976	Rock Accelerator	adjacency	does	present
+into_the_breach	760976	Rock Accelerator	damage	does	present
+into_the_breach	760976	Rock Accelerator	forced_movement	does	present
 into_the_breach	760976	Rock Accelerator	null_body	does	present
+into_the_breach	760976	Rock Accelerator	ranged	does	present
+into_the_breach	760976	Rock Accelerator	scope_global	*	absent
 into_the_breach	760976	Rock Accelerator	spawn_blocking	does	present
+into_the_breach	760976	Rock Accelerator	terrain	does	present
+into_the_breach	760979	Vulcan Artillery	adjacency	does	present
+into_the_breach	760979	Vulcan Artillery	attack_lock	*	absent
+into_the_breach	760979	Vulcan Artillery	damage_over_time	does	present
+into_the_breach	760979	Vulcan Artillery	forced_movement	does	present
+into_the_breach	760979	Vulcan Artillery	ranged	does	present
+into_the_breach	760979	Vulcan Artillery	terrain	does	present
+into_the_breach	760979	Vulcan Artillery	turn_start	does	present
+into_the_breach	760980	Micro-Artillery	adjacency	does	present
+into_the_breach	760980	Micro-Artillery	damage	does	present
+into_the_breach	760980	Micro-Artillery	multi_target_attack	does	present
+into_the_breach	760980	Micro-Artillery	ranged	does	present
+into_the_breach	760981	Aegon Mortar	damage	does	present
+into_the_breach	760981	Aegon Mortar	forced_movement	does	present
+into_the_breach	760981	Aegon Mortar	multi_target_attack	does	present
 into_the_breach	760982	Cryo-Launcher	drawback	does	present
+into_the_breach	760983	Smoke Mortar	adjacency	does	present
+into_the_breach	760983	Smoke Mortar	attack_lock	does	present
+into_the_breach	760983	Smoke Mortar	forced_movement	does	present
+into_the_breach	760983	Smoke Mortar	ranged	does	present
+into_the_breach	760983	Smoke Mortar	terrain	does	present
 into_the_breach	760983	Smoke Mortar	upgrade	*	absent
+into_the_breach	760984	Burning Mortar	area_templates	does	present
+into_the_breach	760984	Burning Mortar	attack_lock	*	absent
+into_the_breach	760984	Burning Mortar	damage_over_time	does	present
+into_the_breach	760984	Burning Mortar	friendly_fire	does	present
 into_the_breach	760984	Burning Mortar	life_payment	does	present
+into_the_breach	760984	Burning Mortar	ranged	does	present
+into_the_breach	760984	Burning Mortar	terrain	does	present
+into_the_breach	760984	Burning Mortar	turn_start	does	present
 into_the_breach	760985	Raining Death	life_payment	does	present
+into_the_breach	760986	Heavy Artillery	aoe_damage	does	present
+into_the_breach	760986	Heavy Artillery	area_templates	does	present
+into_the_breach	760986	Heavy Artillery	exhaust	does	present
+into_the_breach	760986	Heavy Artillery	multi_target_attack	does	present
+into_the_breach	760986	Heavy Artillery	ranged	does	present
+into_the_breach	760988	Attraction Pulse	forced_movement	does	present
+into_the_breach	760988	Attraction Pulse	ranged	does	present
 into_the_breach	760988	Attraction Pulse	upgrade	*	absent
 into_the_breach	760989	Grav Well	upgrade	*	absent
+into_the_breach	760990	Repulse	adjacency	does	present
+into_the_breach	760990	Repulse	forced_movement	does	present
+into_the_breach	760990	Repulse	shield	does	present
+into_the_breach	760991	Teleporter	immobilize	does	present
+into_the_breach	760991	Teleporter	swap	does	present
 into_the_breach	760992	A.C.I.D. Projector	upgrade	*	absent
 into_the_breach	760993	Confuse Shot	disruption	does	present
 into_the_breach	760993	Confuse Shot	telegraphed_threats	does	present
 into_the_breach	760993	Confuse Shot	upgrade	*	absent
+into_the_breach	760994	Smoke Pellets	adjacency	does	present
+into_the_breach	760994	Smoke Pellets	attack_lock	does	present
+into_the_breach	760994	Smoke Pellets	exhaust	does	present
+into_the_breach	760994	Smoke Pellets	immunity	does	present
+into_the_breach	760994	Smoke Pellets	terrain	does	present
+into_the_breach	760994	Smoke Pellets	terrain	benefits	absent
+into_the_breach	760996	Fire Beam	area_templates	does	present
+into_the_breach	760996	Fire Beam	damage_over_time	does	present
+into_the_breach	760996	Fire Beam	exhaust	does	present
+into_the_breach	760996	Fire Beam	terrain	does	present
 into_the_breach	760998	Shield Array	adjacency	does	present
+into_the_breach	760998	Shield Array	exhaust	does	present
+into_the_breach	760998	Shield Array	shield	does	present
+into_the_breach	760999	Push Beam	area_templates	does	present
+into_the_breach	760999	Push Beam	exhaust	does	present
+into_the_breach	760999	Push Beam	forced_movement	does	present
+into_the_breach	760999	Push Beam	scope_global	*	absent
+into_the_breach	761000	Boosters	adjacency	does	present
+into_the_breach	761000	Boosters	forced_movement	does	present
 into_the_breach	761000	Boosters	upgrade	*	absent
 into_the_breach	761001	Smoke Bombs	passive	*	absent
+into_the_breach	761002	Heat Converter	attack_lock	*	absent
+into_the_breach	761002	Heat Converter	damage_over_time	does	present
+into_the_breach	761002	Heat Converter	disable	does	present
+into_the_breach	761002	Heat Converter	exhaust	does	present
 into_the_breach	761002	Heat Converter	rows	*	absent
+into_the_breach	761002	Heat Converter	terrain	does	present
+into_the_breach	761002	Heat Converter	turn_start	does	present
 into_the_breach	761003	Self-Destruct	aoe_damage	does	present
 into_the_breach	761003	Self-Destruct	friendly_fire	does	present
 into_the_breach	761003	Self-Destruct	sacrifice	does	present
 into_the_breach	761003	Self-Destruct	self_destruct	does	present
 into_the_breach	761003	Self-Destruct	upgrade	*	absent
+into_the_breach	761005	Smoke Drop	area_templates	*	absent
+into_the_breach	761005	Smoke Drop	attack_lock	does	present
+into_the_breach	761005	Smoke Drop	exhaust	does	present
+into_the_breach	761005	Smoke Drop	scope_multi	does	present
+into_the_breach	761005	Smoke Drop	terrain	does	present
 into_the_breach	761005	Smoke Drop	upgrade	*	absent
 into_the_breach	761006	Repair Drop	scope_multi	does	present
 into_the_breach	761006	Repair Drop	symmetric_effect	*	absent
 into_the_breach	761006	Repair Drop	upgrade	*	absent
 into_the_breach	761007	Missile Barrage	scope_global	does	present
+into_the_breach	761008	Wind Torrent	exhaust	does	present
+into_the_breach	761008	Wind Torrent	forced_movement	does	present
 into_the_breach	761008	Wind Torrent	scope_global	does	present
 into_the_breach	761009	Ice Generator	adjacency	does	present
+into_the_breach	761011	Explosive Goo	adjacency	does	present
+into_the_breach	761011	Explosive Goo	aoe_damage	*	absent
+into_the_breach	761011	Explosive Goo	damage	does	present
+into_the_breach	761011	Explosive Goo	forced_movement	does	present
+into_the_breach	761011	Explosive Goo	ranged	does	present
+into_the_breach	761012	Missions	difficulty_modifiers	does	present
 into_the_breach	761012	Missions	passive	*	absent
+into_the_breach	761012	Missions	random_effect	does	present
 into_the_breach	761012	Missions	scoring_objectives	does	present
 into_the_breach	761012	Missions	summon	*	absent
 into_the_breach	761012	Missions	zone_control	*	absent
+into_the_breach	761013	Soldier Psion	aura	does	present
+into_the_breach	761013	Soldier Psion	movement	does	present
 into_the_breach	761013	Soldier Psion	telegraphed_threats	does	present
+into_the_breach	761013	Soldier Psion	terrain	*	absent
+into_the_breach	761015	Shell Psion	aura	does	present
+into_the_breach	761015	Shell Psion	damage_over_time	*	absent
+into_the_breach	761015	Shell Psion	damage_reduction	does	present
+into_the_breach	761015	Shell Psion	movement	does	present
 into_the_breach	761015	Shell Psion	telegraphed_threats	does	present
+into_the_breach	761015	Shell Psion	terrain	*	absent
 into_the_breach	761016	Leaper	summon	*	absent
 into_the_breach	761016	Leaper	telegraphed_threats	does	present
 into_the_breach	761017	Blood Psion	telegraphed_threats	does	present
 into_the_breach	761018	Cannon-Bot	rows	*	absent
 into_the_breach	761018	Cannon-Bot	telegraphed_threats	does	present
+into_the_breach	761019	Cannon-Mech	damage_over_time	does	present
+into_the_breach	761019	Cannon-Mech	ranged	does	present
 into_the_breach	761019	Cannon-Mech	rows	*	absent
 into_the_breach	761019	Cannon-Mech	telegraphed_threats	does	present
 into_the_breach	761020	Artillery-Bot	telegraphed_threats	does	present
 into_the_breach	761021	Artillery-Mech	telegraphed_threats	does	present
+into_the_breach	761022	Laser-Bot	condition_count	does	present
+into_the_breach	761022	Laser-Bot	damage	does	present
+into_the_breach	761022	Laser-Bot	multi_target_attack	does	present
+into_the_breach	761022	Laser-Bot	piercing	*	absent
+into_the_breach	761022	Laser-Bot	ranged	does	present
 into_the_breach	761022	Laser-Bot	symmetric_effect	*	absent
 into_the_breach	761022	Laser-Bot	telegraphed_threats	does	present
+into_the_breach	761023	Laser-Mech	condition_count	does	present
+into_the_breach	761023	Laser-Mech	damage	does	present
+into_the_breach	761023	Laser-Mech	multi_target_attack	does	present
+into_the_breach	761023	Laser-Mech	piercing	*	absent
+into_the_breach	761023	Laser-Mech	ranged	does	present
 into_the_breach	761023	Laser-Mech	symmetric_effect	*	absent
 into_the_breach	761023	Laser-Mech	telegraphed_threats	does	present
 into_the_breach	761024	Mine-Bot	assists_support	*	absent
@@ -6158,93 +6427,236 @@ into_the_breach	761026	Bot Leader	buff	*	absent
 into_the_breach	761026	Bot Leader	telegraphed_threats	does	present
 into_the_breach	761027	Blobber	telegraphed_threats	does	present
 into_the_breach	761028	Alpha Blobber	telegraphed_threats	does	present
+into_the_breach	761029	Blob	adjacency	does	present
+into_the_breach	761029	Blob	aoe_damage	does	present
+into_the_breach	761029	Blob	destroy	*	absent
 into_the_breach	761029	Blob	disable	*	absent
 into_the_breach	761029	Blob	self_destruct	does	present
 into_the_breach	761029	Blob	summon	*	absent
 into_the_breach	761029	Blob	telegraphed_threats	does	present
+into_the_breach	761029	Blob	terrain	*	absent
+into_the_breach	761030	Large Goo	adjacency	does	present
+into_the_breach	761030	Large Goo	boss_phases	does	present
+into_the_breach	761030	Large Goo	damage	does	present
+into_the_breach	761030	Large Goo	death_trigger	does	present
+into_the_breach	761030	Large Goo	movement	does	present
+into_the_breach	761030	Large Goo	on_attack	*	absent
+into_the_breach	761030	Large Goo	quests	does	present
+into_the_breach	761030	Large Goo	summon	does	present
 into_the_breach	761030	Large Goo	telegraphed_threats	does	present
+into_the_breach	761030	Large Goo	terrain	does	present
 into_the_breach	761030	Large Goo	zone_control	*	absent
+into_the_breach	761031	Medium Goo	adjacency	does	present
+into_the_breach	761031	Medium Goo	boss_phases	does	present
+into_the_breach	761031	Medium Goo	damage	does	present
+into_the_breach	761031	Medium Goo	death_trigger	does	present
+into_the_breach	761031	Medium Goo	movement	does	present
+into_the_breach	761031	Medium Goo	on_attack	*	absent
+into_the_breach	761031	Medium Goo	quests	does	present
+into_the_breach	761031	Medium Goo	summon	does	present
 into_the_breach	761031	Medium Goo	telegraphed_threats	does	present
+into_the_breach	761031	Medium Goo	terrain	does	present
 into_the_breach	761031	Medium Goo	zone_control	*	absent
+into_the_breach	761032	Small Goo	adjacency	does	present
+into_the_breach	761032	Small Goo	boss_phases	does	present
+into_the_breach	761032	Small Goo	damage	does	present
+into_the_breach	761032	Small Goo	movement	does	present
+into_the_breach	761032	Small Goo	on_attack	*	absent
+into_the_breach	761032	Small Goo	quests	does	present
 into_the_breach	761032	Small Goo	telegraphed_threats	does	present
+into_the_breach	761032	Small Goo	terrain	does	present
 into_the_breach	761032	Small Goo	zone_control	*	absent
 into_the_breach	761033	A.C.I.D. Scorpion	telegraphed_threats	does	present
 into_the_breach	761034	Alpha Scorpion	telegraphed_threats	does	present
 into_the_breach	761035	Scorpion Leader	telegraphed_threats	does	present
 into_the_breach	761036	A.C.I.D. Firefly	telegraphed_threats	does	present
+into_the_breach	761037	Firefly Leader	damage	does	present
+into_the_breach	761037	Firefly Leader	damage_over_time	*	absent
+into_the_breach	761037	Firefly Leader	movement	does	present
+into_the_breach	761037	Firefly Leader	multi_target_attack	does	present
+into_the_breach	761037	Firefly Leader	ranged	does	present
 into_the_breach	761037	Firefly Leader	telegraphed_threats	does	present
+into_the_breach	761037	Firefly Leader	terrain	does	present
+into_the_breach	761038	Alpha Leaper	adjacency	does	present
+into_the_breach	761038	Alpha Leaper	damage	does	present
+into_the_breach	761038	Alpha Leaper	immobilize	does	present
+into_the_breach	761038	Alpha Leaper	movement	does	present
 into_the_breach	761038	Alpha Leaper	summon	*	absent
 into_the_breach	761038	Alpha Leaper	telegraphed_threats	does	present
+into_the_breach	761038	Alpha Leaper	terrain	does	present
 into_the_breach	761039	Beetle Leader	immunity	*	absent
 into_the_breach	761039	Beetle Leader	stress_morale	*	absent
 into_the_breach	761039	Beetle Leader	telegraphed_threats	does	present
+into_the_breach	761040	Alpha Scarab	damage	does	present
+into_the_breach	761040	Alpha Scarab	ranged	does	present
 into_the_breach	761040	Alpha Scarab	telegraphed_threats	does	present
+into_the_breach	761041	Crab	damage	does	present
+into_the_breach	761041	Crab	lanes	*	absent
+into_the_breach	761041	Crab	multi_target_attack	does	present
+into_the_breach	761041	Crab	ranged	does	present
 into_the_breach	761041	Crab	summon	*	absent
 into_the_breach	761041	Crab	telegraphed_threats	does	present
+into_the_breach	761041	Crab	terrain	does	present
+into_the_breach	761042	Alpha Crab	damage	does	present
+into_the_breach	761042	Alpha Crab	lanes	*	absent
+into_the_breach	761042	Alpha Crab	multi_target_attack	does	present
+into_the_breach	761042	Alpha Crab	ranged	does	present
 into_the_breach	761042	Alpha Crab	summon	*	absent
 into_the_breach	761042	Alpha Crab	telegraphed_threats	does	present
+into_the_breach	761042	Alpha Crab	terrain	does	present
 into_the_breach	761043	Centipede	summon	*	absent
 into_the_breach	761043	Centipede	telegraphed_threats	does	present
+into_the_breach	761044	Alpha Centipede	damage	does	present
+into_the_breach	761044	Alpha Centipede	debuff	does	present
+into_the_breach	761044	Alpha Centipede	multi_target_attack	does	present
+into_the_breach	761044	Alpha Centipede	ranged	does	present
 into_the_breach	761044	Alpha Centipede	summon	*	absent
 into_the_breach	761044	Alpha Centipede	telegraphed_threats	does	present
 into_the_breach	761045	Digger	telegraphed_threats	does	present
 into_the_breach	761046	Alpha Digger	telegraphed_threats	does	present
 into_the_breach	761046	Alpha Digger	zone_control	does	present
+into_the_breach	761047	A.C.I.D. Hornet	damage	does	present
+into_the_breach	761047	A.C.I.D. Hornet	debuff	does	present
+into_the_breach	761047	A.C.I.D. Hornet	movement	does	present
 into_the_breach	761047	A.C.I.D. Hornet	telegraphed_threats	does	present
+into_the_breach	761047	A.C.I.D. Hornet	terrain	*	absent
 into_the_breach	761048	Alpha Hornet	telegraphed_threats	does	present
+into_the_breach	761049	Hornet Leader	area_templates	does	present
+into_the_breach	761049	Hornet Leader	damage	does	present
+into_the_breach	761049	Hornet Leader	movement	does	present
+into_the_breach	761049	Hornet Leader	multi_target_attack	does	present
 into_the_breach	761049	Hornet Leader	telegraphed_threats	does	present
+into_the_breach	761049	Hornet Leader	terrain	*	absent
+into_the_breach	761050	Blast Psion	adjacency	does	present
+into_the_breach	761050	Blast Psion	aoe_damage	does	present
+into_the_breach	761050	Blast Psion	aura	does	present
+into_the_breach	761050	Blast Psion	damage_over_time	*	absent
+into_the_breach	761050	Blast Psion	death_trigger	grants	present
+into_the_breach	761050	Blast Psion	movement	does	present
+into_the_breach	761050	Blast Psion	piercing	does	present
 into_the_breach	761050	Blast Psion	telegraphed_threats	does	present
+into_the_breach	761050	Blast Psion	terrain	*	absent
 into_the_breach	761051	Psion Tyrant	aura	does	present
 into_the_breach	761051	Psion Tyrant	damage_over_time	does	present
 into_the_breach	761051	Psion Tyrant	life_payment	cost	absent
+into_the_breach	761051	Psion Tyrant	movement	does	present
 into_the_breach	761051	Psion Tyrant	summon	*	absent
 into_the_breach	761051	Psion Tyrant	symmetric_effect	*	absent
 into_the_breach	761051	Psion Tyrant	telegraphed_threats	does	present
+into_the_breach	761051	Psion Tyrant	terrain	*	absent
+into_the_breach	761051	Psion Tyrant	turn_end	does	present
 into_the_breach	761052	Psion Abomination	telegraphed_threats	does	present
 into_the_breach	761053	Spider	disable	does	present
 into_the_breach	761053	Spider	rows	*	absent
 into_the_breach	761053	Spider	telegraphed_threats	does	present
+into_the_breach	761054	Alpha Spider	adjacency	does	present
 into_the_breach	761054	Alpha Spider	disable	does	present
 into_the_breach	761054	Alpha Spider	rows	*	absent
+into_the_breach	761054	Alpha Spider	summon	does	present
 into_the_breach	761054	Alpha Spider	telegraphed_threats	does	present
+into_the_breach	761055	Spider Leader	adjacency	*	absent
+into_the_breach	761055	Spider Leader	boss_phases	does	present
+into_the_breach	761055	Spider Leader	difficulty_modifiers	does	present
 into_the_breach	761055	Spider Leader	disable	*	absent
+into_the_breach	761055	Spider Leader	movement	does	present
+into_the_breach	761055	Spider Leader	random_effect	does	present
 into_the_breach	761055	Spider Leader	summon	does	present
 into_the_breach	761055	Spider Leader	telegraphed_threats	does	present
+into_the_breach	761055	Spider Leader	terrain	does	present
+into_the_breach	761056	Spiderling Egg	adjacency	does	present
+into_the_breach	761056	Spiderling Egg	attack_lock	*	absent
+into_the_breach	761056	Spiderling Egg	death_trigger	does	present
 into_the_breach	761056	Spiderling Egg	delayed	does	present
 into_the_breach	761056	Spiderling Egg	destroy	*	absent
+into_the_breach	761056	Spiderling Egg	immobilize	does	present
 into_the_breach	761056	Spiderling Egg	immunity	*	absent
 into_the_breach	761056	Spiderling Egg	null_body	does	present
+into_the_breach	761056	Spiderling Egg	self_destruct	does	present
+into_the_breach	761056	Spiderling Egg	summon	does	present
 into_the_breach	761056	Spiderling Egg	telegraphed_threats	does	present
 into_the_breach	761057	Spiderling	debuff	*	absent
 into_the_breach	761057	Spiderling	excess_damage	*	absent
 into_the_breach	761057	Spiderling	fodder	does	present
 into_the_breach	761057	Spiderling	multi_attack	*	absent
 into_the_breach	761057	Spiderling	telegraphed_threats	does	present
+into_the_breach	761058	Alpha Spiderling	adjacency	does	present
+into_the_breach	761058	Alpha Spiderling	damage	does	present
 into_the_breach	761058	Alpha Spiderling	debuff	*	absent
 into_the_breach	761058	Alpha Spiderling	multi_attack	*	absent
 into_the_breach	761058	Alpha Spiderling	telegraphed_threats	does	present
+into_the_breach	761059	Burrower	area_templates	does	present
 into_the_breach	761059	Burrower	counter_spell	*	absent
+into_the_breach	761059	Burrower	damage	does	present
 into_the_breach	761059	Burrower	flanking	*	absent
+into_the_breach	761059	Burrower	forced_movement	counters	present
+into_the_breach	761059	Burrower	immunity	does	present
+into_the_breach	761059	Burrower	lanes	*	absent
+into_the_breach	761059	Burrower	multi_target_attack	does	present
+into_the_breach	761059	Burrower	on_damaged	does	present
+into_the_breach	761059	Burrower	stealth	does	present
 into_the_breach	761059	Burrower	telegraphed_threats	does	present
+into_the_breach	761059	Burrower	terrain	does	present
+into_the_breach	761060	Alpha Burrower	area_templates	does	present
 into_the_breach	761060	Alpha Burrower	counter_spell	*	absent
+into_the_breach	761060	Alpha Burrower	damage	does	present
+into_the_breach	761060	Alpha Burrower	evasion	*	absent
 into_the_breach	761060	Alpha Burrower	flanking	*	absent
+into_the_breach	761060	Alpha Burrower	forced_movement	counters	present
+into_the_breach	761060	Alpha Burrower	immunity	does	present
+into_the_breach	761060	Alpha Burrower	lanes	*	absent
+into_the_breach	761060	Alpha Burrower	multi_target_attack	does	present
+into_the_breach	761060	Alpha Burrower	on_damaged	does	present
+into_the_breach	761060	Alpha Burrower	stealth	does	present
 into_the_breach	761060	Alpha Burrower	telegraphed_threats	does	present
+into_the_breach	761060	Alpha Burrower	terrain	does	present
 into_the_breach	761062	Chasm Tile	destroy	does	present
 into_the_breach	761062	Chasm Tile	terrain	does	present
+into_the_breach	761063	Ice Tile	death_trigger	*	absent
+into_the_breach	761063	Ice Tile	terrain	does	present
+into_the_breach	761063	Ice Tile	transform	does	present
 into_the_breach	761064	Fire	life_payment	cost	absent
 into_the_breach	761064	Fire	passive	*	absent
 into_the_breach	761064	Fire	placement_rules	*	absent
+into_the_breach	761065	Sand Tile	attack_lock	does	present
+into_the_breach	761065	Sand Tile	cant_attack	*	absent
+into_the_breach	761065	Sand Tile	on_damaged	does	present
+into_the_breach	761065	Sand Tile	terrain	does	present
+into_the_breach	761065	Sand Tile	transform	does	present
+into_the_breach	761068	Ramming Speed (weapon)	attack_lock	does	present
+into_the_breach	761068	Ramming Speed (weapon)	damage	does	present
+into_the_breach	761068	Ramming Speed (weapon)	forced_movement	does	present
+into_the_breach	761068	Ramming Speed (weapon)	terrain	does	present
+into_the_breach	761069	Pull-Tank	buff	*	absent
+into_the_breach	761069	Pull-Tank	exhaust	does	present
+into_the_breach	761069	Pull-Tank	forced_movement	does	present
+into_the_breach	761069	Pull-Tank	movement	grants	present
+into_the_breach	761069	Pull-Tank	ranged	does	present
 into_the_breach	761069	Pull-Tank	summon	does	present
 into_the_breach	761070	Kai Miller	condition	does	present
+into_the_breach	761073	Adam	movement	does	present
+into_the_breach	761073	Adam	shield	does	present
 into_the_breach	761076	Exchange Mech	forced_movement	does	present
+into_the_breach	761076	Exchange Mech	swap	does	present
+into_the_breach	761081	Smog Mech	adjacency	does	present
+into_the_breach	761081	Smog Mech	attack_lock	does	present
+into_the_breach	761081	Smog Mech	damage_over_time	does	present
+into_the_breach	761081	Smog Mech	heal	does	present
+into_the_breach	761081	Smog Mech	passive	does	present
+into_the_breach	761081	Smog Mech	terrain	does	present
 into_the_breach	761082	Control Mech	forced_movement	does	present
 into_the_breach	761082	Control Mech	steal	does	present
+into_the_breach	761082	Control Mech	temporary_effect	does	present
+into_the_breach	761082	Control Mech	terrain	*	absent
 into_the_breach	761083	Mosquito	summon	*	absent
 into_the_breach	761083	Mosquito	telegraphed_threats	does	present
 into_the_breach	761084	Alpha Mosquito	summon	*	absent
 into_the_breach	761084	Alpha Mosquito	telegraphed_threats	does	present
+into_the_breach	761088	Moth	damage	does	present
+into_the_breach	761088	Moth	forced_movement	does	present
+into_the_breach	761088	Moth	ranged	does	present
 into_the_breach	761088	Moth	summon	*	absent
 into_the_breach	761088	Moth	telegraphed_threats	does	present
+into_the_breach	761088	Moth	terrain	*	absent
 into_the_breach	761089	Starfish	ping	*	absent
 into_the_breach	761089	Starfish	self_destruct	*	absent
 into_the_breach	761089	Starfish	summon	*	absent
@@ -6252,54 +6664,165 @@ into_the_breach	761089	Starfish	telegraphed_threats	does	present
 into_the_breach	761090	Plasmodia	telegraphed_threats	does	present
 into_the_breach	761091	Tumblebug	evasion	*	absent
 into_the_breach	761091	Tumblebug	telegraphed_threats	does	present
+into_the_breach	761092	Bouncer	collision_damage	does	present
 into_the_breach	761092	Bouncer	combo_sequence	*	absent
+into_the_breach	761092	Bouncer	lanes	*	absent
 into_the_breach	761092	Bouncer	ping	*	absent
 into_the_breach	761092	Bouncer	telegraphed_threats	does	present
 into_the_breach	761093	Nanofilter Mending	upgrade	*	absent
 into_the_breach	761094	Gastropod	telegraphed_threats	does	present
 into_the_breach	761095	Blobber Leader	delayed	does	present
 into_the_breach	761095	Blobber Leader	telegraphed_threats	does	present
+into_the_breach	761096	Arachnid Psion	aura	does	present
+into_the_breach	761096	Arachnid Psion	death_trigger	grants	present
+into_the_breach	761096	Arachnid Psion	movement	does	present
+into_the_breach	761096	Arachnid Psion	null_body	*	absent
+into_the_breach	761096	Arachnid Psion	summon	grants	present
 into_the_breach	761096	Arachnid Psion	telegraphed_threats	does	present
+into_the_breach	761096	Arachnid Psion	terrain	does	present
 into_the_breach	761097	Raging Psion	aura	does	present
+into_the_breach	761097	Raging Psion	damage	*	absent
+into_the_breach	761097	Raging Psion	movement	does	present
 into_the_breach	761097	Raging Psion	summon	*	absent
 into_the_breach	761097	Raging Psion	telegraphed_threats	does	present
+into_the_breach	761097	Raging Psion	terrain	*	absent
+into_the_breach	761098	Smoldering Psion	attack_lock	*	absent
 into_the_breach	761098	Smoldering Psion	aura	does	present
+into_the_breach	761098	Smoldering Psion	damage_over_time	does	present
 into_the_breach	761098	Smoldering Psion	damage_reduction	*	absent
+into_the_breach	761098	Smoldering Psion	damage_types	does	present
+into_the_breach	761098	Smoldering Psion	death_trigger	grants	present
+into_the_breach	761098	Smoldering Psion	immunity	does	present
+into_the_breach	761098	Smoldering Psion	movement	does	present
 into_the_breach	761098	Smoldering Psion	summon	*	absent
 into_the_breach	761098	Smoldering Psion	telegraphed_threats	does	present
+into_the_breach	761098	Smoldering Psion	terrain	does	present
+into_the_breach	761098	Smoldering Psion	turn_start	does	present
 into_the_breach	761099	Alpha Bouncer	combo_sequence	*	absent
 into_the_breach	761099	Alpha Bouncer	telegraphed_threats	does	present
+into_the_breach	761100	Alpha Gastropod	damage	does	present
+into_the_breach	761100	Alpha Gastropod	forced_movement	does	present
 into_the_breach	761100	Alpha Gastropod	telegraphed_threats	does	present
+into_the_breach	761101	Alpha Moth	damage	does	present
+into_the_breach	761101	Alpha Moth	forced_movement	does	present
+into_the_breach	761101	Alpha Moth	ranged	does	present
 into_the_breach	761101	Alpha Moth	summon	*	absent
 into_the_breach	761101	Alpha Moth	telegraphed_threats	does	present
+into_the_breach	761101	Alpha Moth	terrain	*	absent
+into_the_breach	761102	Alpha Plasmodia	damage	does	present
+into_the_breach	761102	Alpha Plasmodia	forced_movement	does	present
+into_the_breach	761102	Alpha Plasmodia	ranged	does	present
+into_the_breach	761102	Alpha Plasmodia	summon	does	present
 into_the_breach	761102	Alpha Plasmodia	telegraphed_threats	does	present
+into_the_breach	761103	Alpha Starfish	damage	does	present
+into_the_breach	761103	Alpha Starfish	multi_target_attack	does	present
 into_the_breach	761103	Alpha Starfish	summon	*	absent
 into_the_breach	761103	Alpha Starfish	telegraphed_threats	does	present
 into_the_breach	761104	Alpha Tumblebug	evasion	*	absent
 into_the_breach	761104	Alpha Tumblebug	telegraphed_threats	does	present
+into_the_breach	761105	Mosquito Leader	adjacency	does	present
+into_the_breach	761105	Mosquito Leader	attack_lock	does	present
 into_the_breach	761105	Mosquito Leader	delayed	does	present
+into_the_breach	761105	Mosquito Leader	destroy	does	present
+into_the_breach	761105	Mosquito Leader	immobilize	does	present
+into_the_breach	761105	Mosquito Leader	immunity	*	absent
+into_the_breach	761105	Mosquito Leader	movement	does	present
 into_the_breach	761105	Mosquito Leader	telegraphed_threats	does	present
+into_the_breach	761105	Mosquito Leader	terrain	does	present
+into_the_breach	761106	Tumblebug Leader	damage	does	present
+into_the_breach	761106	Tumblebug Leader	damage_over_time	*	absent
+into_the_breach	761106	Tumblebug Leader	lanes	*	absent
+into_the_breach	761106	Tumblebug Leader	movement	does	present
 into_the_breach	761106	Tumblebug Leader	rows	*	absent
+into_the_breach	761106	Tumblebug Leader	summon	does	present
 into_the_breach	761106	Tumblebug Leader	telegraphed_threats	does	present
+into_the_breach	761106	Tumblebug Leader	terrain	does	present
 into_the_breach	761107	Bouncer Leader	telegraphed_threats	does	present
 into_the_breach	761108	Starfish Leader	telegraphed_threats	does	present
+into_the_breach	761109	Centipede Leader	damage	does	present
+into_the_breach	761109	Centipede Leader	debuff	does	present
+into_the_breach	761109	Centipede Leader	multi_target_attack	does	present
+into_the_breach	761109	Centipede Leader	ranged	does	present
 into_the_breach	761109	Centipede Leader	telegraphed_threats	does	present
+into_the_breach	761109	Centipede Leader	terrain	does	present
+into_the_breach	761110	Dispersal Mech	adjacency	does	present
+into_the_breach	761110	Dispersal Mech	area_templates	does	present
+into_the_breach	761110	Dispersal Mech	damage	does	present
+into_the_breach	761110	Dispersal Mech	forced_movement	does	present
+into_the_breach	761113	Crab Leader	damage	does	present
+into_the_breach	761113	Crab Leader	difficulty_modifiers	does	present
+into_the_breach	761113	Crab Leader	movement	does	present
+into_the_breach	761113	Crab Leader	multi_target_attack	does	present
+into_the_breach	761113	Crab Leader	ranged	does	present
 into_the_breach	761113	Crab Leader	telegraphed_threats	does	present
+into_the_breach	761113	Crab Leader	terrain	does	present
+into_the_breach	761114	Boom Cannon	adjacency	does	present
+into_the_breach	761114	Boom Cannon	aoe_damage	does	present
+into_the_breach	761114	Boom Cannon	damage_over_time	does	present
+into_the_breach	761114	Boom Cannon	death_trigger	does	present
+into_the_breach	761114	Boom Cannon	destroy	*	absent
+into_the_breach	761114	Boom Cannon	disable	does	present
+into_the_breach	761114	Boom Cannon	piercing	does	present
+into_the_breach	761114	Boom Cannon	quests	does	present
+into_the_breach	761114	Boom Cannon	ranged	does	present
 into_the_breach	761114	Boom Cannon	telegraphed_threats	does	present
 into_the_breach	761114	Boom Cannon	zone_control	*	absent
+into_the_breach	761115	Boom Artillery	adjacency	does	present
+into_the_breach	761115	Boom Artillery	aoe_damage	does	present
+into_the_breach	761115	Boom Artillery	area_templates	does	present
 into_the_breach	761115	Boom Artillery	damage_over_time	*	absent
+into_the_breach	761115	Boom Artillery	death_trigger	does	present
+into_the_breach	761115	Boom Artillery	destroy	*	absent
+into_the_breach	761115	Boom Artillery	disable	does	present
+into_the_breach	761115	Boom Artillery	multi_target_attack	does	present
+into_the_breach	761115	Boom Artillery	piercing	does	present
+into_the_breach	761115	Boom Artillery	quests	does	present
+into_the_breach	761115	Boom Artillery	ranged	does	present
 into_the_breach	761115	Boom Artillery	telegraphed_threats	does	present
 into_the_breach	761115	Boom Artillery	zone_control	*	absent
+into_the_breach	761116	Boom Laser	adjacency	does	present
+into_the_breach	761116	Boom Laser	aoe_damage	does	present
 into_the_breach	761116	Boom Laser	damage_over_time	*	absent
+into_the_breach	761116	Boom Laser	death_trigger	does	present
+into_the_breach	761116	Boom Laser	destroy	*	absent
+into_the_breach	761116	Boom Laser	disable	does	present
+into_the_breach	761116	Boom Laser	multi_target_attack	does	present
+into_the_breach	761116	Boom Laser	piercing	does	present
+into_the_breach	761116	Boom Laser	quests	does	present
 into_the_breach	761116	Boom Laser	telegraphed_threats	does	present
 into_the_breach	761116	Boom Laser	zone_control	*	absent
+into_the_breach	761118	Refractor Laser	damage	does	present
+into_the_breach	761118	Refractor Laser	immunity	does	present
+into_the_breach	761118	Refractor Laser	multi_target_attack	does	present
+into_the_breach	761118	Refractor Laser	piercing	*	absent
+into_the_breach	761119	The Big One	aoe_damage	does	present
+into_the_breach	761119	The Big One	area_templates	does	present
+into_the_breach	761119	The Big One	friendly_fire	does	present
 into_the_breach	761119	The Big One	life_payment	does	present
+into_the_breach	761119	The Big One	multi_target_attack	does	present
+into_the_breach	761120	Prism Laser	condition_count	does	present
+into_the_breach	761120	Prism Laser	damage	does	present
+into_the_breach	761120	Prism Laser	immunity	does	present
+into_the_breach	761120	Prism Laser	multi_target_attack	does	present
+into_the_breach	761121	Hydraulic Lifter	adjacency	does	present
 into_the_breach	761121	Hydraulic Lifter	aoe_damage	*	absent
+into_the_breach	761121	Hydraulic Lifter	damage	does	present
 into_the_breach	761121	Hydraulic Lifter	forced_movement	does	present
+into_the_breach	761122	Spring-Loaded Legs	adjacency	does	present
+into_the_breach	761122	Spring-Loaded Legs	damage	does	present
+into_the_breach	761122	Spring-Loaded Legs	forced_movement	does	present
+into_the_breach	761123	Fissure Fist	damage	does	present
+into_the_breach	761123	Fissure Fist	exhaust	does	present
+into_the_breach	761123	Fissure Fist	on_kill	does	present
 into_the_breach	761123	Fissure Fist	terrain	does	present
 into_the_breach	761124	Grid Charger	heal	does	present
 into_the_breach	761124	Grid Charger	on_kill	does	present
 into_the_breach	761124	Grid Charger	upgrade	*	absent
+into_the_breach	761125	Light Tank	buff	*	absent
+into_the_breach	761125	Light Tank	damage	does	present
+into_the_breach	761125	Light Tank	exhaust	does	present
+into_the_breach	761125	Light Tank	forced_movement	does	present
+into_the_breach	761125	Light Tank	ranged	does	present
 into_the_breach	761125	Light Tank	summon	does	present
 into_the_breach	761126	Shield-Tank	summon	does	present
 into_the_breach	761127	A.C.I.D. Tank	summon	does	present
@@ -6309,19 +6832,71 @@ into_the_breach	761128	Corroding A.C.I.D.	movement	*	absent
 into_the_breach	761129	Heat Engines	upgrade	*	absent
 into_the_breach	761130	Networked Shielding	immunity	does	present
 into_the_breach	761130	Networked Shielding	upgrade	*	absent
+into_the_breach	761132	Firestorm Generator	damage_over_time	does	present
+into_the_breach	761132	Firestorm Generator	forced_movement	does	present
+into_the_breach	761132	Firestorm Generator	multi_target_attack	does	present
+into_the_breach	761132	Firestorm Generator	ranged	does	present
+into_the_breach	761132	Firestorm Generator	terrain	does	present
+into_the_breach	761133	Flood Drill	adjacency	does	present
+into_the_breach	761133	Flood Drill	exhaust	does	present
 into_the_breach	761133	Flood Drill	terrain	does	present
 into_the_breach	761134	Void Shocker	activated	*	absent
+into_the_breach	761134	Void Shocker	damage	does	present
+into_the_breach	761134	Void Shocker	damage_prevention	*	absent
 into_the_breach	761134	Void Shocker	damage_reduction	*	absent
 into_the_breach	761134	Void Shocker	debuff	*	absent
+into_the_breach	761134	Void Shocker	on_attack	does	present
+into_the_breach	761134	Void Shocker	piercing	does	present
+into_the_breach	761134	Void Shocker	terrain	does	present
 into_the_breach	761134	Void Shocker	upgrade	*	absent
 into_the_breach	761135	Smoldering Shells	passive	*	absent
 into_the_breach	761136	Reverse Thrusters	life_payment	does	present
 into_the_breach	761136	Reverse Thrusters	passive	*	absent
+into_the_breach	761138	Ricochet Rocket	damage	does	present
+into_the_breach	761138	Ricochet Rocket	forced_movement	does	present
+into_the_breach	761138	Ricochet Rocket	immunity	does	present
+into_the_breach	761138	Ricochet Rocket	multi_target_attack	does	present
+into_the_breach	761138	Ricochet Rocket	ranged	does	present
+into_the_breach	761139	Guided Missile	attack_lock	does	present
+into_the_breach	761139	Guided Missile	damage	does	present
+into_the_breach	761139	Guided Missile	forced_movement	does	present
+into_the_breach	761139	Guided Missile	terrain	does	present
+into_the_breach	761140	AP Cannon	damage	does	present
+into_the_breach	761140	AP Cannon	forced_movement	does	present
+into_the_breach	761140	AP Cannon	multi_target_attack	does	present
+into_the_breach	761140	AP Cannon	piercing	*	absent
+into_the_breach	761142	Tri-Rocket	aoe_damage	does	present
+into_the_breach	761142	Tri-Rocket	area_templates	does	present
+into_the_breach	761142	Tri-Rocket	damage	benefits	absent
+into_the_breach	761142	Tri-Rocket	forced_movement	does	present
+into_the_breach	761142	Tri-Rocket	immunity	does	present
+into_the_breach	761142	Tri-Rocket	multi_target_attack	does	present
+into_the_breach	761142	Tri-Rocket	ranged	does	present
+into_the_breach	761142	Tri-Rocket	upgrade	benefits	absent
+into_the_breach	761143	Bomb Dispenser	ranged	does	present
 into_the_breach	761143	Bomb Dispenser	summon	does	present
+into_the_breach	761144	Arachnoid Injector	damage	does	present
+into_the_breach	761144	Arachnoid Injector	debuff	does	present
 into_the_breach	761144	Arachnoid Injector	on_kill	does	present
+into_the_breach	761144	Arachnoid Injector	ranged	does	present
 into_the_breach	761144	Arachnoid Injector	summon	does	present
+into_the_breach	761147	Area Shift	activated	*	absent
+into_the_breach	761147	Area Shift	adjacency	does	present
+into_the_breach	761147	Area Shift	forced_movement	does	present
+into_the_breach	761147	Area Shift	shield	does	present
 into_the_breach	761148	Grid Assault	overload_debt	cost	absent
+into_the_breach	761149	Grid Repulse	adjacency	does	present
+into_the_breach	761149	Grid Repulse	forced_movement	does	present
 into_the_breach	761149	Grid Repulse	overload_debt	cost	absent
+into_the_breach	761149	Grid Repulse	shield	does	present
+into_the_breach	761150	Smoke Tile	attack_lock	does	present
+into_the_breach	761150	Smoke Tile	cant_attack	*	absent
+into_the_breach	761150	Smoke Tile	damage_over_time	*	absent
+into_the_breach	761150	Smoke Tile	damage_types	does	present
+into_the_breach	761150	Smoke Tile	movement	*	absent
+into_the_breach	761150	Smoke Tile	terrain	does	present
+into_the_breach	761150	Smoke Tile	transform	does	present
+into_the_breach	761150	Smoke Tile	turn_start	*	absent
 into_the_breach	761153	Air Strike	destroy	does	present
 into_the_breach	761153	Air Strike	telegraphed_threats	does	present
 into_the_breach	761153	Air Strike	terrain	does	present
@@ -6330,15 +6905,19 @@ into_the_breach	761155	Falling Rock	destroy	does	present
 into_the_breach	761155	Falling Rock	telegraphed_threats	does	present
 into_the_breach	761156	High Tide	telegraphed_threats	does	present
 into_the_breach	761156	High Tide	terrain	does	present
+into_the_breach	761156	High Tide	turn_start	does	present
+into_the_breach	761157	Ice Storm	disable	does	present
 into_the_breach	761157	Ice Storm	immunity	*	absent
 into_the_breach	761157	Ice Storm	telegraphed_threats	does	present
 into_the_breach	761158	Lava Flow	telegraphed_threats	does	present
 into_the_breach	761158	Lava Flow	terrain	does	present
+into_the_breach	761159	Lightning Strike	damage	*	absent
 into_the_breach	761159	Lightning Strike	destroy	does	present
 into_the_breach	761159	Lightning Strike	telegraphed_threats	does	present
 into_the_breach	761160	Seismic Activity	terrain	does	present
 into_the_breach	761161	Tentacles	destroy	does	present
 into_the_breach	761161	Tentacles	terrain	does	present
+into_the_breach	761162	Volcanic Projectile	damage	*	absent
 into_the_breach	761162	Volcanic Projectile	destroy	does	present
 into_the_breach	761162	Volcanic Projectile	telegraphed_threats	does	present
 marvel_snap	795408	Abomination	null_body	does	present
@@ -6850,8 +7429,8 @@ marvel_snap	795922	Sasquatch	turn_structure	*	absent
 marvel_snap	795928	Scarlet Witch - Brotherhood of Mutants	lane_rule	does	present
 marvel_snap	795930	Scorn	recycle	does	present
 marvel_snap	795932	Scorpion Brand New Day	buff	*	absent
-marvel_snap	795932	Scorpion Brand New Day	debuff	benefits	present
 marvel_snap	795932	Scorpion Brand New Day	debuff	does	present
+marvel_snap	795932	Scorpion Brand New Day	debuff	benefits	present
 marvel_snap	795934	Sebastian Shaw	upgrade	*	absent
 marvel_snap	795935	Selene	hand_disruption	does	present
 marvel_snap	795936	Selene - Brotherhood of Mutants	generate_cards	*	absent
@@ -6937,8 +7516,8 @@ marvel_snap	795997	Storm	turn_structure	*	absent
 marvel_snap	795998	Storm Horseman of Famine	rows	*	absent
 marvel_snap	796000	Strange Supreme	deck_modification	*	absent
 marvel_snap	796000	Strange Supreme	generate_cards	benefits	present
-marvel_snap	796001	Strong Guy	hand_size	benefits	present
 marvel_snap	796001	Strong Guy	hand_size	does	present
+marvel_snap	796001	Strong Guy	hand_size	benefits	present
 marvel_snap	796002	Stryfe	repeat_trigger	does	present
 marvel_snap	796003	Sub-Mariner	upgrade	*	absent
 marvel_snap	796004	Subterranean Summons	generate_cards	benefits	present
@@ -7107,8 +7686,8 @@ marvel_snap	796208	Eternity Range	board_clog	does	present
 marvel_snap	796208	Eternity Range	null_body	does	present
 marvel_snap	796210	Fisk Tower	movement	counters	present
 marvel_snap	796213	Fogwell's Gym	stakes_wager	does	present
-marvel_snap	796217	Genosha	destroy	benefits	absent
 marvel_snap	796217	Genosha	destroy	does	present
+marvel_snap	796217	Genosha	destroy	benefits	absent
 marvel_snap	796217	Genosha	sacrifice	does	present
 marvel_snap	796220	Great Web	forced_movement	does	present
 marvel_snap	796223	Hellfire Club	cost_condition	does	present
@@ -7651,8 +8230,8 @@ shadowverse	754120	Slaughtering Dragonewt	board_wipe	*	absent
 shadowverse	754120	Slaughtering Dragonewt	mill	does	present
 shadowverse	754126	Godfire Phoenix	drawback	does	present
 shadowverse	754133	Dragonskull Bludgeoner	damage_reduction	does	present
-shadowverse	754182	Minthe of the Underworld	graveyard	cost	absent
 shadowverse	754182	Minthe of the Underworld	graveyard	does	present
+shadowverse	754182	Minthe of the Underworld	graveyard	cost	absent
 shadowverse	754198	Mummy Chef	sacrifice	does	present
 shadowverse	754218	Wandering Plaguebearer	sacrifice	does	present
 shadowverse	754224	Mirror Ghost	steal	does	present
@@ -8462,8 +9041,8 @@ sts1	758003	Paper Krane	debuff	counters	absent
 sts1	758003	Paper Krane	debuff	benefits	present
 sts1	758003	Paper Krane	items_consumables	does	present
 sts1	758003	Paper Krane	passive	does	present
-sts1	758004	Paper Phrog	debuff	benefits	present
 sts1	758004	Paper Phrog	debuff	counters	absent
+sts1	758004	Paper Phrog	debuff	benefits	present
 sts1	758004	Paper Phrog	items_consumables	does	present
 sts1	758004	Paper Phrog	passive	does	present
 sts1	758005	Peace Pipe	items_consumables	does	present
@@ -9109,8 +9688,8 @@ sts2	758455	Bolas	recycle	does	present
 sts2	758456	Bombardment	free_play	does	present
 sts2	758456	Bombardment	recycle	does	present
 sts2	758457	Bone Shards	sacrifice	does	present
-sts2	758457	Bone Shards	summon	cost	present
 sts2	758457	Bone Shards	summon	benefits	absent
+sts2	758457	Bone Shards	summon	cost	present
 sts2	758458	Boost Away	drawback	does	present
 sts2	758460	Borrowed Time	drawback	does	present
 sts2	758462	Brand	sacrifice	does	present
