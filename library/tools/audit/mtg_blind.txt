@@ -1,0 +1,150 @@
+775114 | Shadowheart, Cleric of War | Deathtouch At the beginning of your end step, Shadowheart, Cleric of War deals 1 damage to each player. Whenever you lose life during your turn, Shadowheart deals that much damage to each opponent.
+  A: damage_over_time, deathtouch, direct_damage, symmetric_effect, turn_start
+  B: damage_over_time, deathtouch, direct_damage, symmetric_effect, turn_end, turn_start
+775836 | Fae Offering | At the beginning of each end step, if you've cast both a creature spell and a noncreature spell this turn, create a Clue token, a Food token, and a Treasure token.
+  A: heal, items_consumables, resource_gain, summon, turn_start, upkeep
+  B: heal, items_consumables, resource_gain, summon, turn_end, turn_start, upkeep
+781160 | Graf Harvest | Zombies you control have menace. (They can't be blocked except by two or more creatures.) {3}{B}, Exile a creature card from your graveyard: Create a 2/2 black Zombie creature token.
+  A: banish, evasion:grants, graveyard, summon, tribal
+  B: banish, graveyard, summon, tribal
+776749 | Sunstreak Phoenix | Flying If it's neither day nor night, it becomes day as this creature enters. Whenever day becomes night or night becomes day, you may pay {1}{R}. If you do, return this card from your graveyard to the battlefield tapped.
+  A: evasion, graveyard, revive
+  B: evasion, graveyard, revive
+782548 | Steel-Plume Marshal | Flying Whenever this creature attacks, other attacking creatures you control with flying get +2/+2 until end of turn.
+  A: aura, evasion, on_attack, temporary_buff
+  B: aura, evasion, on_attack, temporary_buff
+781795 | Hallowed Burial | Put all creatures on the bottom of their owners' libraries.
+  A: deck_position, recycle, scope_global
+  B: deck_position, recycle, scope_global
+769841 | The Vision and Scarlet Witch | Flying Whenever you cast a spell, add {R} and put a +1/+1 counter on The Vision and Scarlet Witch.
+  A: evasion, on_spell, permanent_growth, resource_gain, stacking_keyword
+  B: evasion, on_spell, permanent_growth, resource_gain, stacking_keyword
+766828 | Talara's Battalion | Cast this spell only if you've cast another green spell this turn. Trample
+  A: combo_sequence, excess_damage, play_restriction
+  B: combo_sequence, excess_damage, play_restriction
+776418 | Splinter | Exile target artifact. Search its controller's graveyard, hand, and library for all cards with the same name as that artifact and exile them. Then that player shuffles.
+  A: banish, graveyard, scope_global
+  B: banish, graveyard, scope_global
+778895 | Biomechan Engineer | When this creature enters, create a Lander token. (It's an artifact with "{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.") {8}: Draw two cards and create a 2/2 colorless Robot artifact creature token.
+  A: activated, draw, on_play, summon
+  B: activated, draw, on_play, summon
+777455 | No-Regrets Egret | Flying Any time you could mulligan and No-Regrets Egret is in your hand, you may reveal No-Regrets Egret. If you do, look at the top two cards of your library. (Put those cards back in the same order. You can still mulligan.)
+  A: evasion, information, selection, start_of_game
+  B: evasion, information, selection, start_of_game
+780034 | Stone Catapult | {T}: Destroy target tapped nonblack creature. Activate only during your turn, before attackers are declared.
+  A: activated, destroy
+  B: activated, destroy
+772289 | Frazzle | Counter target nonblue spell.
+  A: counter_spell
+  B: counter_spell
+774634 | Shakedown Heavy | Menace Whenever this creature attacks, defending player may have you draw a card. If they do, untap this creature and remove it from combat.
+  A: draw, evasion, on_attack, untap
+  B: draw, evasion, on_attack, untap
+769661 | Rogue's Gloves | Whenever equipped creature deals combat damage to a player, you may draw a card. Equip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)
+  A: activated, damage, damage:benefits, draw, items_consumables, merge_attach, on_attack
+  B: activated, damage, damage:benefits, draw, items_consumables, merge_attach, on_attack
+774468 | Cranial Plating | Equipped creature gets +1/+0 for each artifact you control. {B}{B}: Attach this Equipment to target creature you control. Equip {1}
+  A: activated, condition_count, items_consumables, merge_attach
+  B: activated, condition_count, items_consumables, merge_attach
+783002 | Uro, Titan of Nature's Wrath | When Uro enters, sacrifice it unless it escaped. Whenever Uro enters or attacks, you gain 3 life and draw a card, then you may put a land card from your hand onto the battlefield. Escape—{G}{G}{U}{U}, Exile five other cards from your graveyard. (You may cast this card from your graveyard for its escape cost.)
+  A: banish, cast_from_zone, draw, free_play, graveyard, heal, on_attack, sacrifice, summon
+  B: banish, cast_from_zone, draw, free_play, graveyard, heal, on_attack, sacrifice, summon
+772988 | Hollowhenge Scavenger | Morbid — When this creature enters, if a creature died this turn, you gain 5 life.
+  A: death_count, heal, on_play
+  B: death_count, heal, on_play
+780392 | Eye of Jace | At the beginning of your upkeep, surveil 1. Then if there are seven or more cards in your graveyard, sacrifice this artifact, it deals 2 damage to each opponent, and you gain 2 life. (To surveil 1, look at the top card of your library. You may put it into your graveyard.)
+  A: deck_position, direct_damage, graveyard, heal, sacrifice, selection, turn_start
+  B: deck_position, direct_damage, graveyard, heal, sacrifice, selection, turn_start
+766735 | Flesh // Blood | Flesh: Exile target creature card from a graveyard. Put X +1/+1 counters on target creature, where X is the power of the card you exiled. Fuse (You may cast one or both halves of this card from your hand.) // Blood: Target creature you control deals damage equal to its power to any target. Fuse (You may cast one or both halves of this card from your hand.)
+  A: banish, damage, deck_modification, delayed, graveyard, high_cost:benefits, merge_attach, modal_choice, permanent_growth, stacking_keyword
+  B: banish, damage, deck_modification, delayed, graveyard, high_cost:benefits, merge_attach, modal_choice, permanent_growth, stacking_keyword
+773528 | Decree of Justice | Create X 4/4 white Angel creature tokens with flying. Cycling {2}{W} ({2}{W}, Discard this card: Draw a card.) When you cycle this card, you may pay {X}. If you do, create X 1/1 white Soldier creature tokens.
+  A: activated, discard, selection, summon
+  B: activated, discard, evasion:grants, selection, summon
+766635 | Cactusfolk Sureshot | Reach Ward {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.) At the beginning of combat on your turn, other creatures you control with power 4 or greater gain trample and haste until end of turn.
+  A: blocking, cost_increase, evasion:counters, immunity, ranged, shield, temporary_buff
+  B: blocking, cost_increase, evasion:counters, excess_damage:grants, haste:grants, immunity, ranged, shield, temporary_buff
+779251 | Ghalta, Stampede Tyrant | Trample When Ghalta enters, put any number of creature cards from your hand onto the battlefield.
+  A: excess_damage, free_play, high_cost:benefits
+  B: excess_damage, free_play, high_cost:benefits
+770908 | Necrosquito | Flying This creature enters with two oil counters on it. This creature gets +1/+1 for each oil counter on it. Whenever another creature or artifact you control is put into a graveyard from the battlefield, put an oil counter on this creature.
+  A: buff, death_count, evasion, graveyard, graveyard:benefits, sacrifice:benefits, stacking_keyword
+  B: buff, death_count, evasion, graveyard, graveyard:benefits, sacrifice:benefits, stacking_keyword
+767218 | Blood of the Martyr | Until end of turn, if damage would be dealt to any creature, you may have that damage dealt to you instead.
+  A: temporary_effect
+  B: temporary_effect
+771367 | Scampering Scorcher | When this creature enters, create two 1/1 red Elemental creature tokens. Elementals you control gain haste until end of turn. (They can attack and {T} this turn.)
+  A: haste:grants, on_play, summon, temporary_buff, tribal
+  B: on_play, summon, temporary_buff, tribal
+780856 | Skinshifter | {G}: Choose one. Activate only once each turn. • Until end of turn, this creature becomes a Rhino with base power and toughness 4/4 and gains trample. • Until end of turn, this creature becomes a Bird with base power and toughness 2/2 and gains flying. • Until end of turn, this creature becomes a Plant with base power and toughness 0/8.
+  A: activated, evasion, excess_damage, modal_choice, stat_set, temporary_buff, transform
+  B: activated, evasion, excess_damage, modal_choice, stat_set, temporary_buff, transform
+782872 | Ghostly Keybearer | Flying Whenever this creature deals combat damage to a player, unlock a locked door of up to one target Room you control.
+  A: damage, evasion, on_attack
+  B: damage, evasion, on_attack
+780227 | Slavering Nulls | Whenever this creature deals combat damage to a player, if you control a Swamp, you may have that player discard a card.
+  A: damage, discard, on_attack
+  B: damage, discard, on_attack
+784156 | Mirran Crusader | Double strike, protection from black and from green
+  A: copy, damage, first_strike, immunity, multi_attack
+  B: copy, damage, first_strike, immunity, multi_attack
+773369 | Phyrexian Unlife | You don't lose the game for having 0 or less life. As long as you have 0 or less life, all damage is dealt to you as though its source had infect. (Damage is dealt to you in the form of poison counters.)
+  A: alt_wincon, condition, passive
+  B: alt_wincon, passive
+783219 | Chatterfang, Squirrel General | Forestwalk (This creature can't be blocked as long as defending player controls a Forest.) If one or more tokens would be created under your control, those tokens plus that many 1/1 green Squirrel creature tokens are created instead. {B}, Sacrifice X Squirrels: Target creature gets +X/-X until end of turn.
+  A: activated, condition, evasion, fodder, passive, sacrifice, sacrifice:cost, temporary_buff
+  B: activated, evasion, fodder, passive, sacrifice, sacrifice:cost, temporary_buff
+781030 | Reyav, Master Smith | Whenever a creature you control that's enchanted or equipped attacks, that creature gains double strike until end of turn.
+  A: damage, first_strike:grants, multi_attack:grants, temporary_buff
+  B: damage, temporary_buff
+773455 | Sylvan Awakening | Until your next turn, all lands you control become 2/2 Elemental creatures with reach, indestructible, and haste. They're still lands.
+  A: delayed, destroy:counters, evasion:counters, haste, immunity, ranged, stat_set, temporary_effect
+  B: delayed, destroy:counters, evasion:counters, haste, immunity, ranged, stat_set, temporary_effect
+783466 | Angel of Serenity | Flying When this creature enters, you may exile up to three other target creatures from the battlefield and/or creature cards from graveyards. When this creature leaves the battlefield, return the exiled cards to their owners' hands.
+  A: banish, evasion, graveyard, high_cost:benefits, on_play, return_to_hand
+  B: banish, evasion, graveyard, high_cost:benefits, on_play, return_to_hand
+767063 | Ruby Medallion | Red spells you cast cost {1} less to cast.
+  A: cost_reduction
+  B: cost_reduction
+779172 | Pharika, God of Affliction | Indestructible As long as your devotion to black and green is less than seven, Pharika isn't a creature. {B}{G}: Exile target creature card from a graveyard. Its owner creates a 1/1 black and green Snake enchantment creature token with deathtouch.
+  A: activated, banish, deathtouch:grants, destroy:counters, graveyard, immunity, passive
+  B: activated, banish, condition, destroy:counters, graveyard, immunity, passive
+816019 | Beast (created) | Trample
+  A: excess_damage
+  B: excess_damage
+776724 | Aphetto Runecaster | Whenever a permanent is turned face up, you may draw a card.
+  A: draw
+  B: draw
+780215 | Meteoric Mace | Equipped creature gets +4/+0 and has trample. Equip {4} Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)
+  A: activated, excess_damage:grants, free_play, high_cost:benefits, items_consumables, merge_attach, on_play, on_spell, random_effect
+  B: activated, free_play, high_cost:benefits, items_consumables, merge_attach, on_play, on_spell, random_effect
+768002 | Imperial Recovery Unit | Whenever this Vehicle attacks, return target creature or Vehicle card with mana value 2 or less from your graveyard to your hand. Crew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)
+  A: activated, graveyard, on_attack, stat_condition, support, temporary_effect
+  B: activated, graveyard, on_attack, stat_condition, support, temporary_effect
+775972 | Burdened Stoneback | This creature enters with two -1/-1 counters on it. {1}{W}, Remove a counter from this creature: Target creature gains indestructible until end of turn. Activate only as a sorcery. (Damage and effects that say "destroy" don't destroy it. If its toughness is 0 or less, it still dies.)
+  A: activated, debuff, destroy:counters, stacking_keyword, temporary_buff
+  B: activated, debuff, destroy:counters, immunity:grants, stacking_keyword, temporary_buff
+770220 | Adeline, Resplendent Cathar | Vigilance Adeline's power is equal to the number of creatures you control. Whenever you attack, for each opponent, create a 1/1 white Human creature token that's tapped and attacking that player or a planeswalker they control.
+  A: blocking, condition_count, summon, variable_stats
+  B: blocking, condition_count, summon, variable_stats
+773089 | Deadly Plot | Choose one — • Destroy target creature or planeswalker. • Return target Zombie creature card from your graveyard to the battlefield tapped.
+  A: destroy, graveyard, modal_choice, revive
+  B: destroy, graveyard, modal_choice, revive
+767624 | Tazri, Stalwart Survivor | Each creature you control has "{T}: Add one mana of any of this creature's colors. Spend this mana only to activate an ability of a creature. Activate only if this creature has another activated ability." {W}{U}{B}{R}{G}, {T}: Mill five cards. Put all creature cards with activated abilities that aren't mana abilities from among the milled cards into your hand.
+  A: activated, mill, resource_gain
+  B: activated, mill, resource_gain
+776231 | Prowl, Stoic Strategist // Prowl, Pursuit Vehicle | Prowl, Stoic Strategist: More Than Meets the Eye {2}{W} (You may cast this card converted for {2}{W}.) Whenever Prowl attacks, exile up to one other target tapped creature or Vehicle. For as long as that card remains exiled, its owner may play it. Whenever a player plays a card exiled with Prowl, you draw a card and convert Prowl. // Prowl, Pursuit Vehicle: Living metal (During your turn, this Vehicle is also a creature.) Whenever another creature or Vehicle you control enters, put a +1/+1 counter on Prowl. If this is the second time this ability has resolved this turn, convert Prowl.
+  A: banish, banish:benefits, cost_type, draw, on_attack, passive, permanent_growth, stacking_keyword, temporary_effect, transform
+  B: banish, banish:benefits, cost_type, draw, on_attack, passive, permanent_growth, stacking_keyword, temporary_effect, transform
+768396 | Mathas, Fiend Seeker | Menace At the beginning of your end step, put a bounty counter on target creature an opponent controls. For as long as that creature has a bounty counter on it, it has "When this creature dies, each opponent draws a card and gains 2 life."
+  A: death_trigger, draw, enemy_benefit, evasion, heal, passive, stacking_keyword, turn_start
+  B: death_trigger, draw, enemy_benefit, evasion, heal, passive, stacking_keyword, turn_end, turn_start
+768587 | Lita, Little Orphan Amphibian | Alliance — Whenever another creature you control enters, choose one that hasn't been chosen this turn. • Put a +1/+1 counter on Lita. • Create a Food token. (It's an artifact with "{2}, {T}, Sacrifice this token: You gain 3 life.") • Scry 1.
+  A: activated, deck_position, heal, items_consumables, modal_choice, on_ally_play, permanent_growth, selection, stacking_keyword, summon, upkeep
+  B: activated, deck_position, heal, items_consumables, modal_choice, on_ally_play, permanent_growth, selection, stacking_keyword, summon, upkeep
+776364 | Clever Lumimancer | Magecraft — Whenever you cast or copy an instant or sorcery spell, this creature gets +2/+2 until end of turn.
+  A: copy, on_spell, temporary_buff
+  B: copy, on_spell, temporary_buff
+775948 | Jeweled Bird | Remove this card from your deck before playing if you're not playing for ante. {T}: Ante this artifact. If you do, put all other cards you own from the ante into your graveyard, then draw a card.
+  A: activated, deck_modification, draw, graveyard, stakes_wager
+  B: activated, deck_modification, draw, graveyard, stakes_wager

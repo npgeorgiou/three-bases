@@ -56,3 +56,6 @@ piercing|does|\bdamage [^.]{0,40}\bcan't be prevented\b
 !terrain|\bdeserts?\b
 !terrain|\bforests?\b
 !terrain|\bmountains?\b
+turn_end|does|at the beginning of (your|the next|each) end step
+death_trigger|does|\bwhen(ever)? [^.]{0,60}\bdies\b
+condition|does|(?<!for )\bas long as (you|your|there|this|it|equipped|enchanted|an?|defending|no)\b

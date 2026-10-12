@@ -1,0 +1,789 @@
+{
+ "775114": {
+  "A": {
+   "wrong": [
+    "turn_start"
+   ],
+   "missed": [
+    "turn_end: at the beginning of your end step",
+    "on_damaged: whenever you lose life during your turn"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "turn_start"
+   ],
+   "missed": [
+    "on_damaged: whenever you lose life during your turn"
+   ]
+  }
+ },
+ "775836": {
+  "A": {
+   "wrong": [
+    "turn_start",
+    "upkeep"
+   ],
+   "missed": [
+    "turn_end: at the beginning of each end step",
+    "combo_sequence: cast both a creature and a noncreature spell this turn",
+    "card_advantage: Clue token"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "turn_start",
+    "upkeep"
+   ],
+   "missed": [
+    "combo_sequence: cast both a creature and a noncreature spell this turn",
+    "card_advantage: Clue token"
+   ]
+  }
+ },
+ "781160": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "activated: {3}{B}, exile a creature card: create a Zombie",
+    "aura: Zombies you control have menace"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "evasion: Zombies you control have menace",
+    "activated: {3}{B}, exile a creature card: create a Zombie",
+    "aura: Zombies you control have menace"
+   ]
+  }
+ },
+ "776749": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "782548": {
+  "A": {
+   "wrong": [
+    "aura"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "aura"
+   ],
+   "missed": []
+  }
+ },
+ "781795": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "board_wipe: put all creatures on the bottom of libraries"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "board_wipe: put all creatures on the bottom of libraries"
+   ]
+  }
+ },
+ "769841": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "766828": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "776418": {
+  "A": {
+   "wrong": [
+    "scope_global"
+   ],
+   "missed": [
+    "hand_disruption: exile same-name cards from hand",
+    "mill: exile same-name cards from library"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "scope_global"
+   ],
+   "missed": [
+    "hand_disruption: exile same-name cards from hand",
+    "mill: exile same-name cards from library"
+   ]
+  }
+ },
+ "778895": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "resource_gain: Lander token fetches a land onto the battlefield"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "resource_gain: Lander token fetches a land onto the battlefield"
+   ]
+  }
+ },
+ "777455": {
+  "A": {
+   "wrong": [
+    "selection"
+   ],
+   "missed": [
+    "deck_position: look at the top two cards of your library"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "selection"
+   ],
+   "missed": [
+    "deck_position: look at the top two cards of your library"
+   ]
+  }
+ },
+ "780034": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "targeting_rules: only tapped nonblack creatures"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "targeting_rules: only tapped nonblack creatures"
+   ]
+  }
+ },
+ "772289": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "774634": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "769661": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  }
+ },
+ "774468": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "buff: equipped creature gets +1/+0 per artifact"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "buff: equipped creature gets +1/+0 per artifact"
+   ]
+  }
+ },
+ "783002": {
+  "A": {
+   "wrong": [
+    "summon"
+   ],
+   "missed": [
+    "on_play: whenever Uro enters",
+    "resource_gain: put a land onto the battlefield"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "summon"
+   ],
+   "missed": [
+    "on_play: whenever Uro enters",
+    "resource_gain: put a land onto the battlefield"
+   ]
+  }
+ },
+ "772988": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "780392": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition_count: seven or more cards in your graveyard"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition_count: seven or more cards in your graveyard"
+   ]
+  }
+ },
+ "766735": {
+  "A": {
+   "wrong": [
+    "deck_modification",
+    "delayed",
+    "high_cost:benefits",
+    "merge_attach"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "deck_modification",
+    "delayed",
+    "high_cost:benefits",
+    "merge_attach"
+   ],
+   "missed": []
+  }
+ },
+ "773528": {
+  "A": {
+   "wrong": [
+    "selection"
+   ],
+   "missed": [
+    "draw: cycling draws a card",
+    "evasion: Angel tokens with flying",
+    "kicker: when you cycle, you may pay {X} for Soldiers"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "selection"
+   ],
+   "missed": [
+    "draw: cycling draws a card",
+    "kicker: when you cycle, you may pay {X} for Soldiers"
+   ]
+  }
+ },
+ "766635": {
+  "A": {
+   "wrong": [
+    "ranged",
+    "shield"
+   ],
+   "missed": [
+    "combat_start: at the beginning of combat on your turn",
+    "stat_condition: creatures with power 4 or greater",
+    "excess_damage: gain trample",
+    "haste: gain haste"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "ranged",
+    "shield"
+   ],
+   "missed": [
+    "combat_start: at the beginning of combat on your turn",
+    "stat_condition: creatures with power 4 or greater"
+   ]
+  }
+ },
+ "779251": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "on_play: when Ghalta enters"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "on_play: when Ghalta enters"
+   ]
+  }
+ },
+ "770908": {
+  "A": {
+   "wrong": [
+    "graveyard",
+    "graveyard:benefits"
+   ],
+   "missed": [
+    "death_trigger: whenever another creature or artifact you control is put into a graveyard",
+    "permanent_growth: gains a counter each time"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "graveyard",
+    "graveyard:benefits"
+   ],
+   "missed": [
+    "death_trigger: whenever another creature or artifact you control is put into a graveyard",
+    "permanent_growth: gains a counter each time"
+   ]
+  }
+ },
+ "767218": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "bodyguard: damage to creatures is dealt to you instead"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "bodyguard: damage to creatures is dealt to you instead"
+   ]
+  }
+ },
+ "771367": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "haste: Elementals gain haste"
+   ]
+  }
+ },
+ "780856": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "782872": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "780227": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition: if you control a Swamp"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition: if you control a Swamp"
+   ]
+  }
+ },
+ "784156": {
+  "A": {
+   "wrong": [
+    "copy"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "copy"
+   ],
+   "missed": []
+  }
+ },
+ "773369": {
+  "A": {
+   "wrong": [
+    "alt_wincon"
+   ],
+   "missed": [
+    "cheat_death: you don't lose for having 0 or less life",
+    "rule_change: damage dealt to you as though it had infect",
+    "condition_life: as long as you have 0 or less life"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "alt_wincon"
+   ],
+   "missed": [
+    "cheat_death: you don't lose for having 0 or less life",
+    "rule_change: damage dealt to you as though it had infect",
+    "condition_life: as long as you have 0 or less life"
+   ]
+  }
+ },
+ "783219": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "summon: extra Squirrel tokens created",
+    "debuff: target creature gets -X toughness",
+    "tribal: sacrifice X Squirrels"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "summon: extra Squirrel tokens created",
+    "debuff: target creature gets -X toughness",
+    "tribal: sacrifice X Squirrels"
+   ]
+  }
+ },
+ "781030": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "on_attack: whenever an enchanted or equipped creature attacks",
+    "merge_attach: cares about enchanted or equipped creatures"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "on_attack: whenever an enchanted or equipped creature attacks",
+    "merge_attach: cares about enchanted or equipped creatures",
+    "multi_attack: gains double strike"
+   ]
+  }
+ },
+ "773455": {
+  "A": {
+   "wrong": [
+    "delayed",
+    "immunity",
+    "ranged"
+   ],
+   "missed": [
+    "transform: lands become 2/2 Elemental creatures"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "delayed",
+    "immunity",
+    "ranged"
+   ],
+   "missed": [
+    "transform: lands become 2/2 Elemental creatures"
+   ]
+  }
+ },
+ "783466": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "death_trigger: when this creature leaves the battlefield"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "death_trigger: when this creature leaves the battlefield"
+   ]
+  }
+ },
+ "767063": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "779172": {
+  "A": {
+   "wrong": [
+    "immunity"
+   ],
+   "missed": [
+    "summon: its owner creates a Snake token",
+    "condition_count: devotion less than seven",
+    "enemy_benefit: the opponent gets the Snake token"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "immunity"
+   ],
+   "missed": [
+    "summon: its owner creates a Snake token",
+    "condition_count: devotion less than seven",
+    "enemy_benefit: the opponent gets the Snake token",
+    "deathtouch: Snake token with deathtouch"
+   ]
+  }
+ },
+ "816019": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "776724": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "information: whenever a permanent is turned face up"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "information: whenever a permanent is turned face up"
+   ]
+  }
+ },
+ "780215": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "buff: equipped creature gets +4/+0",
+    "cast_from_zone: cascade casts the exiled card"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "buff: equipped creature gets +4/+0",
+    "cast_from_zone: cascade casts the exiled card",
+    "excess_damage: equipped creature has trample"
+   ]
+  }
+ },
+ "768002": {
+  "A": {
+   "wrong": [
+    "support"
+   ],
+   "missed": [
+    "cost_condition: mana value 2 or less"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "support"
+   ],
+   "missed": [
+    "cost_condition: mana value 2 or less"
+   ]
+  }
+ },
+ "775972": {
+  "A": {
+   "wrong": [
+    "debuff"
+   ],
+   "missed": [
+    "drawback: enters with two -1/-1 counters"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "debuff",
+    "immunity:grants"
+   ],
+   "missed": [
+    "drawback: enters with two -1/-1 counters"
+   ]
+  }
+ },
+ "770220": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "on_attack: whenever you attack",
+    "attack_now: tokens created tapped and attacking"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "on_attack: whenever you attack",
+    "attack_now: tokens created tapped and attacking"
+   ]
+  }
+ },
+ "773089": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "tribal: target Zombie creature card"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "tribal: target Zombie creature card"
+   ]
+  }
+ },
+ "767624": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "aura: each creature you control has a mana ability",
+    "card_advantage: put milled creature cards into your hand"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "aura: each creature you control has a mana ability",
+    "card_advantage: put milled creature cards into your hand"
+   ]
+  }
+ },
+ "776231": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "on_ally_play: whenever another creature or Vehicle you control enters",
+    "cast_from_zone: owner may play the exiled card"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "on_ally_play: whenever another creature or Vehicle you control enters",
+    "cast_from_zone: owner may play the exiled card"
+   ]
+  }
+ },
+ "768396": {
+  "A": {
+   "wrong": [
+    "stacking_keyword",
+    "turn_start"
+   ],
+   "missed": [
+    "turn_end: at the beginning of your end step",
+    "mark_target: bounty counter on an enemy creature"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "stacking_keyword",
+    "turn_start"
+   ],
+   "missed": [
+    "mark_target: bounty counter on an enemy creature"
+   ]
+  }
+ },
+ "768587": {
+  "A": {
+   "wrong": [
+    "upkeep"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "upkeep"
+   ],
+   "missed": []
+  }
+ },
+ "776364": {
+  "A": {
+   "wrong": [
+    "copy"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "copy"
+   ],
+   "missed": []
+  }
+ },
+ "775948": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ }
+}
