@@ -1012,12 +1012,10 @@
 "movement",
 "piercing",
 "aura",
-"death_trigger:grants",
 "passive"
 ],
 "drop": [
 "damage_over_time",
-"death_trigger",
 "terrain"
 ]
 },
@@ -1101,7 +1099,6 @@
 "telegraphed_threats",
 "area_templates",
 "damage",
-"forced_movement:counters",
 "immunity",
 "on_damaged",
 "stealth",
@@ -1120,7 +1117,6 @@
 "telegraphed_threats",
 "area_templates",
 "damage",
-"forced_movement:counters",
 "immunity",
 "on_damaged",
 "stealth",
@@ -1210,12 +1206,10 @@
 "movement",
 "terrain",
 "aura",
-"death_trigger:grants",
 "summon:grants",
 "passive"
 ],
 "drop": [
-"death_trigger",
 "null_body"
 ]
 },
@@ -1240,14 +1234,12 @@
 "immunity",
 "movement",
 "terrain",
-"turn_start",
-"death_trigger:grants"
+"turn_start"
 ],
 "drop": [
 "summon",
 "damage_reduction",
-"attack_lock",
-"death_trigger"
+"attack_lock"
 ]
 },
 "761099": {
@@ -1938,13 +1930,10 @@
 "add": [
 "exhaust",
 "immunity",
-"terrain",
 "attack_lock",
 "adjacency"
 ],
-"drop": [
-"terrain:benefits"
-]
+"drop": []
 },
 "760900": {
 "add": [

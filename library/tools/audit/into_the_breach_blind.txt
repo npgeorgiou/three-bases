@@ -1,0 +1,150 @@
+760992 | A.C.I.D. Projector | Fire a projectile that applies A.C.I.D. and pushes. Class: Science. Upgrades: A.C.I.D. Projector has no upgrades. Availability:
+  A: debuff, forced_movement
+  B: debuff, forced_movement, ranged
+760880 | Alpha Firefly | Health 5, move 2. Weapons/skills: Enhanced Thorax: Launch a volatile mass of goo dealing 3 damage.. The Alpha Firefly shoots projectiles in a direct line, similar to the Taurus Cannon weapon without push.
+  A: damage, forced_movement, ranged, telegraphed_threats
+  B: damage, forced_movement, ranged, telegraphed_threats
+760856 | Self-Repairing | If damaged, this unit will Shield itself and prepare to heal.
+  A: heal, on_damaged, shield
+  B: heal, on_damaged, shield
+761028 | Alpha Blobber | Health 4, move 2. Weapons/skills: Volatile Growths: Throw a massive blob that will explode.. The Alpha Blobber maintains a safe distance from mechs, attempting to attack by spawning Alpha Blobs onto any tile across from them, in the row or columns they can move in. Alpha Blobs always explode last in the attack order during the enemy turn they were spawned, and damage all adjacent tiles for 2. Alpha Blobbers are capped at one spawn per mission (regular Blobbers included) and cannot spawn on island 1, nor can it co-exist with the normal and alpha variants of the Spider and Plasmodia.
+  A: adjacency, damage, lanes, movement, multi_target_attack, ranged, telegraphed_threats
+  B: adjacency, damage, lanes, movement, telegraphed_threats
+760905 | Gana | Pilot ability: Preemptive Strike: Deploy anywhere on the map, damaging adjacent enemies. Requires 1 Power.
+  A: adjacency, damage, placement_rules
+  B: adjacency, damage, placement_rules
+760836 | Fire | Units on Fire take 1 damage at the start of every turn. Repairing removes the effect, so does ending a movement Submerged in Water or in Smoke. Flying units cannot submerge in Water.
+  A: attack_lock, damage_over_time, terrain, turn_start
+  B: attack_lock, damage_over_time, terrain, turn_start
+760851 | Hive Targeted | The Psion Tyrant will do 1 damage all friendly units every turn.
+  A: aura, damage_over_time
+  B: aura, damage_over_time
+760854 | Overpowered | The Psion Abomination is enhancing all Vek. They gain +1 HP, regeneration, and explode on death.
+  A: aura, regeneration
+  B: aura, regeneration
+761137 | EM Railgun | Pierce through any killed Enemies. Single-use. Deals 2 damage to the target, and continues to travel through any killed targets. Class: Brute. Upgrades: * +2 Damage - Deals 2 additional damage to all targets. * Building Immune - This attack will no longer damage Grid Buildings. Availability: Damage 2. Upgrade: +2 Damage (cost 1); Upgrade: Building Immune (cost 1).
+  A: damage, damage:benefits, exhaust, immunity, piercing, upgrade:benefits
+  B: damage, damage:benefits, exhaust, immunity, piercing, upgrade:benefits
+760958 | Prime Spear | Stab multiple tiles and push the farthest hit tile. Starts with 2-tile range. Costs 1 Reactor Core to power. Class: Prime. Upgrades: * A.C.I.D. Tip - Adds A.C.I.D. to the furthest hit enemy. * +1 Range - Increases the maximum number of hit tiles by 1. Availability: Damage 2. Upgrade: A.C.I.D. Tip (cost 1); Upgrade: +1 Range (cost 2).
+  A: damage, debuff, forced_movement
+  B: damage, debuff, forced_movement
+761124 | Grid Charger | Killing an enemy will charge the Power Grid 1 point. Single-use. Deals 1 damage, and costs 1 Reactor Core to power. Class: Any. Upgrades: Grid Charger has no upgrades. Availability: Damage 1.
+  A: damage, exhaust, heal, on_kill
+  B: damage, exhaust, heal, on_kill
+760911 | Shield | A shield will absorb any non-fatal damage once, and prevent status effects while it is active. Shields can be applied on Mechs, Veks, structures, other allied/enemy units, and mountains. A shield can be applied on the Supply Train, but it's considered one shield even though train has two units; attacking on any part of the train removes shield from whole train and conversely, applying shield on any part of the train grants shield on the whole train. The shield persists through turns indefinitely, only disappearing once damage removes it. Any status effects such as Fire and A.C.I.D that th
+  A: shield
+  B: shield
+760903 | Henry Kwan | Pilot ability: Maneuverable: Mech can move through enemy units.
+  A: movement
+  B: movement
+761046 | Alpha Digger | Health 4, move 3. Weapons/skills: Digging Tusks: Create a defensive rock wall before attacking adjacent tiles for 2 damage.. Before attacking, the Alpha Digger places a normal boulder on any empty adjacent tile. Alpha Diggers attack for 2 damage to all adjacent tiles, likely destroying the boulders in the process. Alpha Diggers cannot appear on the first island and are limited to one spawn per mission.
+  A: adjacency, aoe_damage, attack_now, telegraphed_threats, terrain, zone_control
+  B: adjacency, aoe_damage, attack_now, telegraphed_threats, terrain, zone_control
+760861 | Defense Mech | Health 2, move 4. Weapons/skills: Attraction Pulse: Pull target towards you 1 tile. | Shield Projector: Shield tiles from damage. (2 uses per battle.). Special: Flying: Flying units can move over any terrain tile..
+  A: forced_movement, shield, terrain
+  B: forced_movement, shield, terrain
+760881 | Beetle | Health 4, move 2. Weapons/skills: Pincers: Charge forward to deal 1 damage and push the target.. The Beetle charges forward in a line, dealing 1 damage and pushing the first target it hits. Its 4 health is the most of any non-Alpha Vek.
+  A: area_templates, forced_movement, ping, telegraphed_threats
+  B: area_templates, forced_movement, ping, telegraphed_threats
+761021 | Artillery-Mech | Health 1, move 3. Weapons/skills: Vk8 Rockets Mark II: Launch Rockets at 3 tiles dealing 3 damage to each (5 tile range).. A cylindrical shaped quadreped robot carrying a missile launcher behind it.
+  A: area_templates, damage, telegraphed_threats
+  B: area_templates, damage, telegraphed_threats
+760914 | Artemis Artillery | Powerful artillery strike, damaging a single tile and pushing adjacent tiles. Deals 1 damage to the target. Class: Ranged. Upgrades: * Buildings Immune (1 Reactor Core ) - This attack will no longer damage Grid Buildings. * +2 Damage (3 Reactor Cores ) - Increases damage by 2. Availability: Damage 1. Upgrade: Buildings Immune (cost 1); Upgrade: +2 Damage (cost 3).
+  A: adjacency, aoe_damage, forced_movement, immunity, multi_target_attack, ranged
+  B: adjacency, aoe_damage, forced_movement, immunity, ranged
+761107 | Bouncer Leader | Health 4, move 3. Weapons/skills: Sweeping Horns: Deal 2 damage to and push three tiles then bounce backwards.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing). | Natural Armor: Weapon damage to this unit is reduced by 1. All other damage (Push, Blocking, Fire, etc.) is unaffected.. The Bouncer Leader attacks in a 3x1 rectangle perpendicular to the direction it is facing and pushes them away, while bouncing itself backwards. It has Natural Armor like the Hook Mech and thus takes 1 less damage from weapons, but not from other damage sources such as blocking spawns, collisions or fire. Bouncer Leaders cannot spawn on the Volcanic Hive like all Advanced Edition vek.
+  A: area_templates, collision_damage, damage_reduction, flanking, multi_target_attack, passive, spawn_blocking, telegraphed_threats, terrain
+  B: area_templates, collision_damage, damage_reduction, flanking, multi_target_attack, passive, spawn_blocking, telegraphed_threats, terrain
+760876 | Combat Mech | Health 3, move 3. Weapons/skills: Titan Fist: Punch an adjacent tile, damaging and pushing it..
+  A: adjacency, forced_movement
+  B: adjacency, forced_movement
+760874 | Mountain Tile | Mountain Tile.; Damaged Mountain Tile.; Mountain Rubble Tile.
+  A: terrain
+  B: terrain
+761003 | Self-Destruct | Mech explodes, killing self and anything adjacent to Mech. Single-use. Class: Any. Upgrades: Self-Destruct has no upgrades. Availability: Damage Kill.
+  A: adjacency, aoe_damage, exhaust, friendly_fire, sacrifice, self_destruct
+  B: adjacency, aoe_damage, exhaust, friendly_fire, sacrifice, self_destruct
+760978 | Rocket Artillery | Fires a pushing artillery and creates Smoke behind the shooter. Deals 2 damage to the target. Class: Ranged. Upgrades: * +1 Damage (2 Reactor Cores ) - Increases damage by 1. * +1 Damage (2 Reactor Cores ) - Increases damage by 1. Availability: Damage 2. Upgrade: +1 Damage (cost 2); Upgrade: +1 Damage (cost 2).
+  A: attack_lock, damage, forced_movement, ranged, terrain
+  B: attack_lock, damage, forced_movement, ranged, terrain
+761062 | Chasm Tile | Ground units pushed in will be destroyed.
+  A: destroy, forced_movement, terrain
+  B: destroy, forced_movement, terrain
+760909 | Mafan | Pilot ability: Zoltan: +1 Reactor Core. Reduce Mech HP to 1. Gain Shield every turn.
+  A: drawback, shield
+  B: drawback, shield
+760915 | Siege Mech | Health 2, move 3. Weapons/skills: Cluster Artillery: Protect a tile by damaging and pushing adjacent tiles..
+  A: adjacency, forced_movement
+  B: adjacency, forced_movement, multi_target_attack, ranged
+760959 | Hydraulic Legs | Leap to a tile, damaging self and adjacent tiles. Starts with 1 damage to all targets, and 1 self-damage to Mech. Class: Prime. Upgrades: * +1 Damage Each - - Increases damage to self and targets by 1. * +1 Damage - - Increases damage to targets by 1. Availability: Damage 1 (1 self). Upgrade: +1 Damage Each (cost 1); Upgrade: +1 Damage (cost 3).
+  A: adjacency, damage, friendly_fire, life_payment, movement
+  B: adjacency, damage, friendly_fire, life_payment, movement
+760922 | Charge Mech | Health 3, move 3. Weapons/skills: Ramming Engines: Fly in a line and slam into the target, pushing it and hurting yourself..
+  A: area_templates, forced_movement
+  B: area_templates, forced_movement
+760970 | Ramming Engines | Fly in a line and slam into the target, pushing it and hurting yourself. Deals 2 damage to the target and 1 self damage to the user. The self damage is also considered as an attack to the terrain. If it does not hit a target, it will not cause self-damage. Class: Brute. Upgrades: * +1 Damage Each (1 Reactor Core ) * +1 Damage (3 Reactor Cores ) Availability: Damage 2 (1 self). Upgrade: +1 Damage Each (cost 1); Upgrade: +1 Damage (cost 3).
+  A: area_templates, collision_damage, friendly_fire, life_payment
+  B: area_templates, collision_damage, friendly_fire, life_payment
+760964 | Janus Cannon | Fire two projectiles in opposite directions. Deals 1 damage to both targets. Pushes targets. Class: Brute. Upgrades: * +1 Damage (1 Reactor Core ) * +1 Damage (3 Reactor Cores ) Availability: Damage 1. Upgrade: +1 Damage (cost 1); Upgrade: +1 Damage (cost 3).
+  A: damage, forced_movement
+  B: damage, forced_movement
+760862 | Jet Mech | Health 2, move 4. Weapons/skills: Aerial Bombs: Fly over a target, dropping an explosive smoke bomb.. Special: Flying: Flying units can move over any terrain tile..
+  A: movement, terrain
+  B: movement, terrain
+760834 | A.C.I.D. | Weapon damage against this unit is doubled and Natural Armor is disabled. All other damage (Push, Blocking, Fire, etc.) is unaffected. Repairing removes the effect.
+  A: debuff
+  B: debuff
+760919 | Meteor Mech | Health 3, move 3. Weapons/skills: Vulcan Artillery: Light the target on Fire and push adjacent tiles..
+  A: adjacency, attack_lock, damage_over_time, forced_movement, terrain, turn_start
+  B: adjacency, attack_lock, damage_over_time, forced_movement, multi_target_attack, ranged, terrain, turn_start
+761057 | Spiderling | Health 1, move 3. Weapons/skills: Tiny Mandibles: Weak 1 damage attack against a single adjacent target.. Spiderlings, spawned from Spiderling Eggs, are a very weak 1-health, 1-damage enemy that can quickly overwhelm the player with numbers.
+  A: adjacency, damage, fodder, telegraphed_threats
+  B: adjacency, damage, fodder, telegraphed_threats
+760929 | Leap Mech | Health 3, move 4. Weapons/skills: Hydraulic Legs: Leap to a tile, damaging self and adjacent tiles..
+  A: adjacency, life_payment, movement
+  B: adjacency, life_payment, movement
+761153 | Air Strike | Bombs will be dropped here, instantly killing any unit
+  A: destroy, telegraphed_threats, terrain
+  B: destroy, telegraphed_threats, terrain
+761152 | Spawn Tile | Vek will emerge here next turn. Any unit blocking this space will take one damage. Vek will emerge here next turn. Any unit blocking this space will take one damage.
+  A: spawn_blocking, telegraphed_threats
+  B: spawn_blocking, telegraphed_threats
+760906 | Silica | Pilot ability: Double Shot: Mech can act twice if it does not move. Requires 2 Power.
+  A: extra_turn, movement, multi_attack
+  B: extra_turn, movement, multi_attack
+761161 | Tentacles | The unit here will die and the tile will turn into Lava.
+  A: destroy, telegraphed_threats, terrain, transform
+  B: destroy, telegraphed_threats, terrain, transform
+761160 | Seismic Activity | This tile will become a Chasm at the start of the enemy turn.
+  A: telegraphed_threats, terrain, transform, turn_start
+  B: telegraphed_threats, terrain, transform, turn_start
+761043 | Centipede | Health 3, move 2. Weapons/skills: Acidic Vomit: Launch a volatile mass of goo, dealing 1 damage and applying A.C.I.D. on nearby units.. The Centipede shares the movement and health of the Firefly, but is armed with an acidic attack that applies A.C.I.D. to the targeted tile and the two tiles perpendicular to the direction of the projectile. Centipedes cannot appear on the first island and are limited to two spawns, including its alpha, per mission.
+  A: damage, debuff, ranged, telegraphed_threats
+  B: damage, debuff, telegraphed_threats
+761077 | Bulk Mech | Health 3, move 3. Weapons/skills: Ricochet Rocket: Bounce a projectile off one target to hit another (pushes each target)..
+  A: forced_movement, ranged
+  B: forced_movement
+761035 | Scorpion Leader | Health 7, move 3. Weapons/skills: Massive Spinneret: Web all targets, preparing to deal 2 damage to adjacent tiles.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. Can web and melee attack in all four directions around itself in a cross-shape pattern. Unlike most other Scorpions, this attack also pushes its target.
+  A: adjacency, aoe_damage, area_templates, forced_movement, telegraphed_threats, terrain
+  B: adjacency, aoe_damage, area_templates, forced_movement, telegraphed_threats, terrain
+760859 | Minor | This unit does not grant XP to pilots on kill.
+  A: drawback
+  B: drawback
+760917 | Pulse Mech | Health 3, move 4. Weapons/skills: Repulse: Push all adjacent tiles..
+  A: adjacency, forced_movement, multi_target_attack
+  B: adjacency, forced_movement
+760893 | Health | Health is how much damage a Mech can take before being damaged.
+  A: damage
+  B: damage
+760947 | Force Amp | All Vek take +1 damage from Bumps and blocking emerging Vek. Note that the additional damage does not apply to Sentient Weapons; most notably the Bot Leader. Class: Any. Upgrades: Force Amp has no upgrades. Availability:
+  A: collision_damage, spawn_blocking
+  B: collision_damage, spawn_blocking
+760829 | Flying | Flying units can be positioned at any terrain tile, except mountains and other units. Mountains and unfriendly units can be overflown. Flying mechs cannot be waterlogged, and all flying units are not affected by lava or A.C.I.D. tiles, because they don't submerge. Flying units are not immune to A.C.I.D. pools, fire, or emerging Vek.
+  A: movement
+  B: movement
+760993 | Confuse Shot | Fire a projectile that flips a target's attack direction. Class: Science. Upgrades: Confuse Shot has no upgrades. Availability:
+  A: disruption, ranged, telegraphed_threats
+  B: disruption, telegraphed_threats
+761014 | Marked tile | This special tile variant spawns already damaged at the start of a mission and has a faint, yellow glow originating from inside it. The tile will appear undamaged during the mission preview and will not actually crack until the mission is begun. Destroying the tile will reveal a "strange object" hidden inside it; upon being picked up it will broadcast a signal. After the end of that turn, a Strange Pod will fall from the sky, similarly to a Time Pod. Rescuing the Pod will unlock one of three spe
+  A: stealth
+  B: stealth

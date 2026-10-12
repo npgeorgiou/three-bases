@@ -16,3 +16,7 @@ exhaust|does|\bsingle-use\b
 !zone_control|\bobjective markers?
 !zone_control|\bobjective
 !rows|\bfront\b
+ranged|does|\bprojectile\b|\bartillery\b|\bthrows?\b
+multi_target_attack|does|\bbeam\b|\b(damag|push)\w* (all )?adjacent tiles\b|\bdamages? all tiles\b
+immobilize|does|\bwebs?\b|\bwebbed\b
+boss_phases|does|\bboss\b
