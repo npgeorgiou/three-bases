@@ -1,0 +1,172 @@
+743477	-destroy	own destroy tagged as destroy
+743477	+condition_count	threshold missed
+747077	-high_cost:benefits	high_cost benefits without cost text
+747077	+condition	condition missed
+799175	+direct_damage:benefits	hero damage payoff missed
+798642	-turn_start	start of game tagged as turn start
+798237	+summon	summon missed
+798237	+tribal	tribe reference missed
+742884	+cost_condition	cost condition missed
+746468	-high_cost:benefits	high_cost benefits without cost text
+746468	+tribal	tribe reference missed
+798213	+cost_set	set cost missed
+746089	-death_trigger	keyword reference tagged as does
+746089	+death_trigger:benefits	keyword payoff missed
+746089	+in_hand_buff	deck cost reduction missed
+746277	+stat_set	set stats missed
+746277	+stat_condition	highest stat missed
+798494	-damage	aoe tagged as damage
+798494	+aoe_damage	aoe missed
+744106	-generate_cards	discover from deck tagged as generate
+744106	+selection	discover missed
+744106	+tribal	tribe reference missed
+743137	-cant_attack	partial attack restriction tagged as cant_attack
+743137	-high_cost:benefits	high_cost benefits without cost text
+743137	+targeting_rules	attack target restriction missed
+746406	-generate_cards	discover from deck tagged as generate
+746406	+selection	discover missed
+742594	-high_cost:benefits	high_cost benefits without cost text
+742594	+copy	recast missed
+799675	-taunt	keyword grant tagged as does
+799675	+taunt:grants	keyword grant missed
+799675	-permanent_growth	permanent grant tagged as growth
+799675	-cost_increase	own cost penalty tagged as cost_increase
+799675	+drawback	drawback missed
+745592	-high_cost:benefits	high_cost benefits without cost text
+745592	+free_play	summon from deck missed
+745592	+tribal	tribe reference missed
+745592	+death_trigger:grants	keyword grant missed
+797378	-high_cost:benefits	high_cost benefits without cost text
+797378	+heal	heal missed
+746054	-high_cost:benefits	high_cost benefits without cost text
+798290	+buff	damage bonus missed
+744264	-spell_power:benefits	spell damage keyword tagged as benefits
+744264	+permanent_growth	growth each turn missed
+800175	+deck_modification	deck change missed
+799756	+heal	heal missed
+744992	-buff	growth tagged as buff
+744992	+permanent_growth	growth on trigger missed
+744992	-summon:benefits	play trigger tagged as summon
+742544	-high_cost:benefits	high_cost benefits without cost text
+742544	-hero_power	hero power count tagged as does
+742544	+hero_power:benefits	keyword payoff missed
+747740	-taunt	discovered keyword tagged as does
+746847	-cost_condition	0-cost token tagged as cost_condition
+742434	-spell_power	spell damage payoff tagged as does
+800121	+hand_deck_swap	new hand missed
+745519	-damage:benefits	on damaged tagged as damage
+745519	-debuff	keyword name tagged as debuff
+797261	+tutor	draw specific missed
+800457	-spell_power:benefits	spell damage keyword tagged as benefits
+742599	-high_cost:benefits	high_cost benefits without cost text
+746943	+tribal	tribe reference missed
+745227	+condition	condition missed
+745227	+tribal	tribe reference missed
+745227	+target_choice	target choice missed
+744281	-high_cost:benefits	high_cost benefits without cost text
+747965	-debuff	cost change tagged as debuff
+747965	+cost_type	alternative cost missed
+746174	+card_crafting	craft missed
+746174	+generate_cards	craft missed
+800276	+destroy	destroy missed
+744765	-destroy	own destroy tagged as destroy
+744765	+tribal	tribe reference missed
+799990	+on_attack	attack trigger missed
+742538	+condition	condition missed
+742538	+cost_condition	cost condition missed
+745812	-high_cost:benefits	cost threshold tagged as high_cost
+745812	+cost_condition	cost condition missed
+799895	-taunt	keyword grant tagged as does
+799895	+taunt:grants	keyword grant missed
+799895	+aura	aura missed
+799895	-turn_start	start of game tagged as turn start
+799895	+draw	draw missed
+743192	-summon	deathrattle trigger tagged as summon
+743192	-high_cost:benefits	high_cost benefits without cost text
+747573	+condition_life	low life condition missed
+747573	+condition	condition missed
+797796	-haste	keyword grant tagged as does
+797796	+haste:grants	keyword grant missed
+797796	-high_cost:benefits	high_cost benefits without cost text
+744820	-hero_power	hero power trigger tagged as does
+798021	-symmetric_effect	one-sided wipe tagged as symmetric
+798021	+buff	buff missed
+745119	+condition	condition missed
+745119	+cost_condition	cost condition missed
+800521	-high_cost:benefits	high_cost benefits without cost text
+746513	-spell_power:benefits	spell damage keyword tagged as benefits
+746513	-spell_power:counters	spell damage keyword tagged as counters
+746513	-transform:benefits	transform tagged as benefits
+800429	-high_cost:benefits	high_cost benefits without cost text
+800429	+repeat_trigger	repeat effect missed
+800429	+condition_count	threshold missed
+798986	-death_trigger	launch tagged as deathrattle
+747912	+condition	condition missed
+747912	+tribal	tribe reference missed
+744719	-high_cost:benefits	high_cost benefits without cost text
+744719	+repeat_trigger	repeat effect missed
+744719	+delayed	next spells effect missed
+747230	-damage	aoe tagged as damage
+747230	+aoe_damage	aoe missed
+747230	-scope_global	scope with aoe
+800524	-high_cost:benefits	high_cost benefits without cost text
+800524	+summon	summon missed
+799575	+tribal	tribe reference missed
+746501	+condition_count	threshold missed
+799162	+draw	draw missed
+799162	+in_hand_buff	deck cost reduction missed
+745624	-transform	in-hand change tagged as transform
+745624	+in_hand_buff	in-hand change missed
+747242	+tribal	tribe reference missed
+746344	+condition_life	damaged condition missed
+798592	-trap_secret	keyword reference tagged as does
+798592	+trap_secret:benefits	keyword payoff missed
+745713	-life_payment:cost	self damage tagged as life payment
+747865	-passive	passive without passive text
+747865	+tribal	tribe reference missed
+747865	+condition	condition missed
+743800	-death_count	death trigger tagged as death count
+743800	+death_trigger	death trigger missed
+743800	-destroy:benefits	death trigger tagged as destroy
+743800	-sacrifice:benefits	death trigger tagged as sacrifice
+745404	+tribal	tribe reference missed
+746909	-selection	trade tagged as selection
+799577	+turn_start	turn start missed
+797443	-permanent_growth	permanent keyword tagged as growth
+797443	+disable	freeze missed
+745466	-condition_count	count without threshold
+743076	-cost_condition	summon by cost tagged as cost_condition
+743076	+condition	condition missed
+746001	-taunt	keyword grant tagged as does
+746001	+taunt:grants	keyword grant missed
+747857	-cost_condition	0-cost token tagged as cost_condition
+747857	+generate_cards	token to hand missed
+743258	-condition_count	count without threshold
+798395	+mill	deck destroy missed
+743722	-condition_count	game history count tagged as condition_count
+743722	+count_payoff	game history count missed
+743722	-high_cost:benefits	high_cost benefits without cost text
+746678	+buff	buff missed
+746678	+condition	condition missed
+746678	+tribal	tribe reference missed
+746678	+deck_condition	deck condition missed
+799097	-buff	aura tagged as buff
+799097	+aura	aura missed
+799097	+haste:benefits	keyword payoff missed
+745623	-economy	finale tagged as economy
+745623	-on_play	finale tagged as on_play
+745432	+tribal	tribe reference missed
+746421	+tribal	tribe reference missed
+746253	+tribal	tribe reference missed
+746253	+temporary_effect	this-turn effect missed
+744919	+condition	condition missed
+747453	+stat_set	set stats missed
+747276	+on_kill	kill trigger missed
+747276	+heal	heal missed
+747153	+resource_gain	mana refresh missed
+747720	-cost_condition	random by cost tagged as cost_condition
+743778	-high_cost:benefits	high_cost benefits without cost text
+743778	+revive	revive missed
+743778	+tribal	tribe reference missed
+743764	-destroy	card destroy tagged as destroy
+743764	+mill	deck destroy missed

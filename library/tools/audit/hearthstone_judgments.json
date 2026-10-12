@@ -1,0 +1,718 @@
+{
+ "746525": {
+  "A": {
+   "wrong": [
+    "modal_choice"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "modal_choice"
+   ],
+   "missed": []
+  }
+ },
+ "744249": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "repeat_trigger: also trigger its Deathrattle",
+    "graveyard: friendly minion that died this game"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "repeat_trigger: also trigger its Deathrattle",
+    "graveyard: friendly minion that died this game"
+   ]
+  }
+ },
+ "800636": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "742460": {
+  "A": {
+   "wrong": [
+    "coin_economy"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "coin_economy"
+   ],
+   "missed": []
+  }
+ },
+ "798321": {
+  "A": {
+   "wrong": [
+    "draw",
+    "drawback"
+   ],
+   "missed": [
+    "reactions: whenever your opponent draws"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "draw",
+    "drawback"
+   ],
+   "missed": [
+    "reactions: whenever your opponent draws"
+   ]
+  }
+ },
+ "744021": {
+  "A": {
+   "wrong": [
+    "taunt:benefits"
+   ],
+   "missed": [
+    "taunt: summons an Elemental with Taunt"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "taunt:benefits"
+   ],
+   "missed": [
+    "taunt: summons an Elemental with Taunt"
+   ]
+  }
+ },
+ "746832": {
+  "A": {
+   "wrong": [
+    "death_count",
+    "sacrifice:benefits"
+   ],
+   "missed": [
+    "death_trigger: after a friendly Beast dies",
+    "tribal: Beast",
+    "generate_cards: get a Legendary Beast"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "death_count",
+    "sacrifice:benefits"
+   ],
+   "missed": [
+    "death_trigger: after a friendly Beast dies",
+    "tribal: Beast",
+    "generate_cards: get a Legendary Beast"
+   ]
+  }
+ },
+ "799927": {
+  "A": {
+   "wrong": [
+    "combo_sequence"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "combo_sequence"
+   ],
+   "missed": []
+  }
+ },
+ "799303": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition: if drawn this turn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition: if drawn this turn"
+   ]
+  }
+ },
+ "746905": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "tribal: each Dragon you're holding"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "tribal: each Dragon you're holding"
+   ]
+  }
+ },
+ "744291": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "cost_condition: spell that costs (3) or less"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cost_condition: spell that costs (3) or less"
+   ]
+  }
+ },
+ "745715": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "746619": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "hand_size: hand has 3 or less cards"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "hand_size: hand has 3 or less cards"
+   ]
+  }
+ },
+ "745211": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "800278": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "747150": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "generate_cards: put a Sunken Sweeper into the deck"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "generate_cards: put a Sunken Sweeper into the deck"
+   ]
+  }
+ },
+ "745290": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits",
+    "stat_multiply:benefits"
+   ],
+   "missed": [
+    "in_hand_buff: minions in your hand"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits",
+    "stat_multiply:benefits"
+   ],
+   "missed": [
+    "in_hand_buff: minions in your hand"
+   ]
+  }
+ },
+ "746170": {
+  "A": {
+   "wrong": [
+    "permanent_growth"
+   ],
+   "missed": [
+    "retain: permanently in your hand"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "permanent_growth"
+   ],
+   "missed": [
+    "retain: permanently in your hand"
+   ]
+  }
+ },
+ "799839": {
+  "A": {
+   "wrong": [
+    "overload_debt:cost"
+   ],
+   "missed": [
+    "overload_debt payoff: after you Overload",
+    "buff: give your minions Attack"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "overload_debt:cost"
+   ],
+   "missed": [
+    "overload_debt payoff: after you Overload",
+    "buff: give your minions Attack"
+   ]
+  }
+ },
+ "744596": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "tutor: draw Galakrond"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "tutor: draw Galakrond",
+    "condition: if you're already Galakrond"
+   ]
+  }
+ },
+ "747819": {
+  "A": {
+   "wrong": [
+    "copy"
+   ],
+   "missed": [
+    "variety_payoff: deck started with no duplicates",
+    "generate_cards: get a Mirage"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "copy"
+   ],
+   "missed": [
+    "variety_payoff: deck started with no duplicates",
+    "generate_cards: get a Mirage"
+   ]
+  }
+ },
+ "746903": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "hand_deck_swap: start with one of Whizbang's decks instead"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "hand_deck_swap: start with one of Whizbang's decks instead"
+   ]
+  }
+ },
+ "747405": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "stat_set: change into a 1/1"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "stat_set: change into a 1/1"
+   ]
+  }
+ },
+ "800329": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "free_play: Casts When Drawn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "free_play: Casts When Drawn"
+   ]
+  }
+ },
+ "797872": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "742405": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "745540": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition: if they're both minions"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition: if they're both minions"
+   ]
+  }
+ },
+ "798440": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "799265": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "distribute: 8 damage split among random enemies"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "distribute: 8 damage split among random enemies"
+   ]
+  }
+ },
+ "798825": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "800303": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "799612": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "800115": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "in_hand_buff: reduce the cost of cards in your deck"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "in_hand_buff: reduce the cost of cards in your deck"
+   ]
+  }
+ },
+ "797994": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "free_play: Casts When Drawn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "free_play: Casts When Drawn"
+   ]
+  }
+ },
+ "746609": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "attack_now: they attack the lowest Health enemy"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "attack_now: they attack the lowest Health enemy"
+   ]
+  }
+ },
+ "798707": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "count_payoff: Holy spells you've cast this game"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "count_payoff: Holy spells you've cast this game"
+   ]
+  }
+ },
+ "743434": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "746660": {
+  "A": {
+   "wrong": [
+    "stealth:benefits",
+    "tutor"
+   ],
+   "missed": [
+    "stealth: Tiger with Stealth",
+    "free_play: summon a random minion from your deck"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "stealth:benefits",
+    "tutor"
+   ],
+   "missed": [
+    "stealth: Tiger with Stealth",
+    "free_play: summon a random minion from your deck"
+   ]
+  }
+ },
+ "798386": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "self_destruct: destroy this one"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "self_destruct: destroy this one"
+   ]
+  }
+ },
+ "747012": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "tribal: if you're holding a Dragon",
+    "condition: if you're holding a Dragon"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "tribal: if you're holding a Dragon"
+   ]
+  }
+ },
+ "744070": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "tribal: Discover a Demon"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "tribal: Discover a Demon"
+   ]
+  }
+ },
+ "745895": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "800252": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "free_play: Casts When Drawn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "free_play: Casts When Drawn"
+   ]
+  }
+ },
+ "742823": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "cost_condition: Shadow spell that costs (1) or more"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cost_condition: Shadow spell that costs (1) or more"
+   ]
+  }
+ },
+ "746351": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "799398": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition: if Finley's Mum is present"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition: if Finley's Mum is present"
+   ]
+  }
+ },
+ "745383": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "variable_stats: set Attack equal to Health"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "variable_stats: set Attack equal to Health"
+   ]
+  }
+ },
+ "747084": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "tribal: after you summon a Mech"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "tribal: after you summon a Mech"
+   ]
+  }
+ },
+ "746955": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "tutor: draw a Shadow spell"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "tutor: draw a Shadow spell"
+   ]
+  }
+ },
+ "744024": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "on_kill: if it dies",
+    "combo_sequence: your next card this turn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "on_kill: if it dies",
+    "combo_sequence: your next card this turn"
+   ]
+  }
+ }
+}

@@ -41,3 +41,5 @@ resource_gain|does|\bgain (an? |\d+ |two |three )?(empty )?mana crystals?\b|\bga
 # Hearthstone's Elusive is untargetable by spells and hero powers (immunity), not hard to block
 immunity|does|\belusive\b
 !evasion|\belusive\b
+# 'If you/your...' clauses are conditional effects
+condition|does|\bif (you|you.re|your)\b
