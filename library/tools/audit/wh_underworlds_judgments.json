@@ -1,0 +1,877 @@
+{
+ "765192": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "buff: +1 wizard level to each wizard",
+    "rule_change: Waypoint effect persists until another Waypoint"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "buff: +1 wizard level to each wizard",
+    "rule_change: Waypoint effect persists until another Waypoint"
+   ]
+  }
+ },
+ "765128": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "condition_count: third or subsequent Illusion upgrade",
+    "tribal: Illusion upgrades"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "condition_count: third or subsequent Illusion upgrade",
+    "tribal: Illusion upgrades"
+   ]
+  }
+ },
+ "763625": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "random_effect: spell must be cast with a magic dice roll"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "random_effect: spell must be cast with a magic dice roll"
+   ]
+  }
+ },
+ "764922": {
+  "A": {
+   "wrong": [
+    "destroy",
+    "destroy:benefits",
+    "items_consumables",
+    "scoring_objectives"
+   ],
+   "missed": [
+    "death_trigger: after this fighter is taken out of action",
+    "enemy_benefit: opponent gains 1 glory point"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "destroy",
+    "destroy:benefits",
+    "items_consumables",
+    "scoring_objectives"
+   ],
+   "missed": [
+    "death_trigger: after this fighter is taken out of action",
+    "enemy_benefit: opponent gains 1 glory point"
+   ]
+  }
+ },
+ "764537": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  }
+ },
+ "764838": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "attack_mod: -1 Dice from enemy Attack actions",
+    "temporary_effect: in the next activation"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "temporary_effect: in the next activation"
+   ]
+  }
+ },
+ "764297": {
+  "A": {
+   "wrong": [
+    "scoring_objectives"
+   ],
+   "missed": [
+    "points_scoring: gain 1 glory point"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "scoring_objectives"
+   ],
+   "missed": [
+    "points_scoring: gain 1 glory point"
+   ]
+  }
+ },
+ "764251": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "type_grant: this fighter is a Hunter"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "type_grant: this fighter is a Hunter"
+   ]
+  }
+ },
+ "762747": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "turn_end: score in an end phase"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "765062": {
+  "A": {
+   "wrong": [
+    "damage_reduction"
+   ],
+   "missed": [
+    "condition: has one or more Guard tokens"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "damage_reduction"
+   ],
+   "missed": [
+    "condition: has one or more Guard tokens"
+   ]
+  }
+ },
+ "765069": {
+  "A": {
+   "wrong": [
+    "death_count",
+    "destroy",
+    "items_consumables",
+    "scoring_objectives"
+   ],
+   "missed": [
+    "points_scoring: gain 1 spent glory point"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "death_count",
+    "destroy",
+    "items_consumables",
+    "scoring_objectives"
+   ],
+   "missed": [
+    "points_scoring: gain 1 spent glory point"
+   ]
+  }
+ },
+ "765416": {
+  "A": {
+   "wrong": [
+    "destroy"
+   ],
+   "missed": [
+    "on_kill: after an Attack action took the target out of action"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "destroy"
+   ],
+   "missed": [
+    "on_kill: after an Attack action took the target out of action"
+   ]
+  }
+ },
+ "765371": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "temporary_effect: in the next activation"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "temporary_effect: in the next activation"
+   ]
+  }
+ },
+ "764183": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "temporary_effect: until the end of the next activation",
+    "rule_change: players cannot re-roll dice"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "temporary_effect: until the end of the next activation",
+    "rule_change: players cannot re-roll dice"
+   ]
+  }
+ },
+ "764723": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "forced_attack: enemy must target the chosen fighter"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "forced_attack: enemy must target the chosen fighter"
+   ]
+  }
+ },
+ "765319": {
+  "A": {
+   "wrong": [
+    "piercing"
+   ],
+   "missed": [
+    "temporary_effect: in the next activation",
+    "piercing counter: Cleave and Ensnare cannot affect friendly defence rolls"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "piercing"
+   ],
+   "missed": [
+    "temporary_effect: in the next activation",
+    "piercing counter: Cleave and Ensnare cannot affect friendly defence rolls"
+   ]
+  }
+ },
+ "762861": {
+  "A": {
+   "wrong": [
+    "death_count",
+    "movement:counters",
+    "on_attack:counters"
+   ],
+   "missed": [
+    "movement: kill made with a Charge action"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "death_count",
+    "movement:counters",
+    "on_attack:counters"
+   ],
+   "missed": [
+    "movement: kill made with a Charge action"
+   ]
+  }
+ },
+ "763756": {
+  "A": {
+   "wrong": [
+    "forced_movement"
+   ],
+   "missed": [
+    "movement: friendly fighter placed in a different hex"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "forced_movement"
+   ],
+   "missed": [
+    "movement: friendly fighter placed in a different hex"
+   ]
+  }
+ },
+ "765465": {
+  "A": {
+   "wrong": [
+    "collision_damage",
+    "combo_sequence",
+    "forced_movement:benefits",
+    "reactions"
+   ],
+   "missed": [
+    "movement: push the chosen friendly fighter",
+    "random_effect: scatter 5",
+    "tribal: if the chosen fighter is a brawler"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "collision_damage",
+    "combo_sequence",
+    "forced_movement:benefits",
+    "reactions"
+   ],
+   "missed": [
+    "movement: push the chosen friendly fighter",
+    "random_effect: scatter 5",
+    "tribal: if the chosen fighter is a brawler"
+   ]
+  }
+ },
+ "763523": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "terrain: lethal hex"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "terrain: lethal hex"
+   ]
+  }
+ },
+ "765112": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "stat_condition: Wounds characteristic of 4 or less",
+    "type_grant: this fighter is a hunter"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "stat_condition: Wounds characteristic of 4 or less",
+    "type_grant: this fighter is a hunter"
+   ]
+  }
+ },
+ "765254": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "763538": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "lane_closure: removes an objective from the battlefield"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "lane_closure: removes an objective from the battlefield"
+   ]
+  }
+ },
+ "763151": {
+  "A": {
+   "wrong": [
+    "discard",
+    "items_consumables"
+   ],
+   "missed": [
+    "self_destruct: discard this upgrade after the attack",
+    "random_effect: on a critical hit"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "discard",
+    "items_consumables"
+   ],
+   "missed": [
+    "self_destruct: discard this upgrade after the attack",
+    "random_effect: on a critical hit"
+   ]
+  }
+ },
+ "765115": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "condition_count: two or more Illusion upgrades",
+    "tribal: Illusion upgrades"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "condition_count: two or more Illusion upgrades",
+    "tribal: Illusion upgrades"
+   ]
+  }
+ },
+ "763865": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "attack_mod: +2 Dice to the first Attack action",
+    "temporary_buff: in the next activation"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "762880": {
+  "A": {
+   "wrong": [
+    "immunity",
+    "items_consumables"
+   ],
+   "missed": [
+    "counterattack: makes this Attack action against the attacker",
+    "forced_movement counter: cannot be driven back"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "immunity",
+    "items_consumables"
+   ],
+   "missed": [
+    "counterattack: makes this Attack action against the attacker",
+    "forced_movement counter: cannot be driven back"
+   ]
+  }
+ },
+ "765625": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "symmetric_effect: applies to any fighter's Charge",
+    "rule_change: Domain effect persists until end of round or another Domain"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "symmetric_effect: applies to any fighter's Charge",
+    "rule_change: Domain effect persists until end of round or another Domain"
+   ]
+  }
+ },
+ "763049": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "turn_end: score in an end phase",
+    "condition_count: same number of fighters out of action"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition_count: same number of fighters out of action"
+   ]
+  }
+ },
+ "763105": {
+  "A": {
+   "wrong": [
+    "activated",
+    "on_attack"
+   ],
+   "missed": [
+    "stat_multiply: double the move characteristic",
+    "temporary_effect: in the next activation",
+    "drawback: cannot Charge or be activated again this phase"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "activated",
+    "on_attack"
+   ],
+   "missed": [
+    "stat_multiply: double the move characteristic",
+    "temporary_effect: in the next activation",
+    "drawback: cannot Charge or be activated again this phase"
+   ]
+  }
+ },
+ "762813": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "temporary_buff: one additional hex in the next activation"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "temporary_buff: one additional hex in the next activation"
+   ]
+  }
+ },
+ "764701": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "stacking_keyword: Hunger counters",
+    "condition_count: two or more Hunger counters"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "stacking_keyword: Hunger counters",
+    "condition_count: two or more Hunger counters"
+   ]
+  }
+ },
+ "762804": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "turn_end: score in an end phase",
+    "condition_count: at least five surviving fighters"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "condition_count: at least five surviving fighters"
+   ]
+  }
+ },
+ "796425": {
+  "A": {
+   "wrong": [
+    "cast_from_zone"
+   ],
+   "missed": [
+    "adjacency: place it adjacent to the fighter that Delved"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "cast_from_zone"
+   ],
+   "missed": [
+    "adjacency: place it adjacent to the fighter that Delved"
+   ]
+  }
+ },
+ "796431": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "763975": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  }
+ },
+ "763842": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": []
+  }
+ },
+ "763923": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition_count: third or subsequent gambit in a round"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition_count: third or subsequent gambit in a round"
+   ]
+  }
+ },
+ "763237": {
+  "A": {
+   "wrong": [
+    "destroy",
+    "items_consumables",
+    "on_kill",
+    "scoring_objectives"
+   ],
+   "missed": [
+    "death_trigger: after your leader is taken out of action",
+    "points_scoring: gain 1 glory point"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "destroy",
+    "items_consumables",
+    "on_kill",
+    "scoring_objectives"
+   ],
+   "missed": [
+    "death_trigger: after your leader is taken out of action",
+    "points_scoring: gain 1 glory point"
+   ]
+  }
+ },
+ "765422": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "condition: if this fighter is vulnerable"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "condition: if this fighter is vulnerable"
+   ]
+  }
+ },
+ "763558": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "764244": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "random_effect: on a critical hit"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "random_effect: on a critical hit"
+   ]
+  }
+ },
+ "764015": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "763045": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "turn_end: score in an end phase",
+    "link_formation: all fighters in a single connected group",
+    "condition_count: at least three surviving fighters"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "link_formation: all fighters in a single connected group",
+    "condition_count: at least three surviving fighters"
+   ]
+  }
+ },
+ "763482": {
+  "A": {
+   "wrong": [
+    "destroy:benefits"
+   ],
+   "missed": [
+    "terrain: lethal hex",
+    "on_damaged: damaged but not taken out of action"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "destroy:benefits"
+   ],
+   "missed": [
+    "terrain: lethal hex",
+    "on_damaged: damaged but not taken out of action"
+   ]
+  }
+ },
+ "763450": {
+  "A": {
+   "wrong": [
+    "death_count",
+    "movement:counters",
+    "on_attack:counters"
+   ],
+   "missed": [
+    "movement: kill made with a Charge action"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "death_count",
+    "movement:counters",
+    "on_attack:counters"
+   ],
+   "missed": [
+    "movement: kill made with a Charge action"
+   ]
+  }
+ },
+ "765017": {
+  "A": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "random_effect: scatter 1 from the target's hex",
+    "friendly_fire: damage to any fighter in the end hex"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "items_consumables"
+   ],
+   "missed": [
+    "random_effect: scatter 1 from the target's hex",
+    "friendly_fire: damage to any fighter in the end hex"
+   ]
+  }
+ },
+ "763485": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits",
+    "zone_control"
+   ],
+   "missed": [
+    "condition_count: at least two objective cards"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits",
+    "zone_control"
+   ],
+   "missed": [
+    "turn_end: score in an end phase",
+    "condition_count: at least two objective cards"
+   ]
+  }
+ },
+ "765556": {
+  "A": {
+   "wrong": [
+    "upgrade"
+   ],
+   "missed": [
+    "assists_support: supported by friendly fighters",
+    "temporary_buff: in the next activation",
+    "tribal: friendly beasts"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "upgrade"
+   ],
+   "missed": [
+    "attack_mod: +1/+2 Dice to the first Attack action",
+    "assists_support: supported by friendly fighters",
+    "temporary_buff: in the next activation",
+    "tribal: friendly beasts"
+   ]
+  }
+ },
+ "763941": {
+  "A": {
+   "wrong": [
+    "items_consumables",
+    "on_attack"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "items_consumables",
+    "on_attack"
+   ],
+   "missed": []
+  }
+ }
+}

@@ -46,3 +46,8 @@ swap|does|\bplace each (feature token|fighter) in the hex the other\b
 movement|does|\bplace (them|that fighter|this fighter|one available|a friendly fighter|the chosen fighter) [^.]{0,30}\b(on|in) (any|an?|the) [^.]{0,20}\bhex\b
 draw|does|\bdraws? up to (one|two|three) power cards?\b
 immunity|does|\b(attack actions cannot target|cannot target fighters that|cannot choose this fighter)\b
+turn_end|does|\bscore this in (an|the third) end phase\b
+movement|does|(?<!cannot )\bpush (this fighter|your leader|another friendly fighter)\b|\bfriendly (fighters?|squigs) [^.]{0,30}\band push (them|each of them)\b|\bfriendly fighter.s attack action[^.]{0,30}\. push them\b
+temporary_buff|does|(?<!-)\+\d+ (move|defence|dice|damage|wounds?)\b[^.]{0,50}\bin the next activation\b|\b(first|next) attack action [^.]{0,40}\bin the next activation (has|gains) (\+\d|cleave|ensnare|grievous)
+attack_mod|does|[+-]\d+ dice\b[^.]{0,40}\battack actions?\b|\battack actions?\b[^.]{0,60}\bhas [+-]\d+ dice\b|\broll an extra attack dice\b
+points_scoring|does|\b(gain|gains|score) (\d|one|two|a) (spent )?glory points?\b

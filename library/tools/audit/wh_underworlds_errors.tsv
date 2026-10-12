@@ -1,0 +1,339 @@
+763346	+aoe_damage	each-adjacent damage missed
+763346	+activated	action ability missed
+765189	+swap	position swap missed
+765189	-on_attack	unjustified tag
+765189	-movement	position swap tagged movement
+796465	+condition_count	count condition missed
+796465	+positional	position matters missed
+796465	-rows	unjustified tag
+796465	-board_presence	unjustified tag
+763864	+temporary_buff	this-turn effect missed
+763272	+turn_end	end phase scoring missed
+764884	+attack_mod	dice modifier missed
+764884	+passive	passive missed
+764884	-damage_reduction	dice penalty tagged damage_reduction
+796453	+condition	condition missed
+796453	-immunity	unjustified tag
+796453	-stat_condition	token condition tagged stat_condition
+764785	+counter_spell	discard gambit tagged discard
+764785	+on_attack	attack trigger missed
+764785	-discard	discard gambit tagged discard
+765534	+self_destruct	break this card missed
+765534	-quests	feature/objective token tagged quests
+765534	-zone_control	unjustified tag
+765534	-passive	unjustified tag
+764392	+turn_end	end phase scoring missed
+764392	-high_cost:benefits	objective tagged high_cost
+763671	+condition	condition missed
+763671	+on_attack	attack trigger missed
+763671	-damage	damage buff tagged damage
+763165	+movement	own push tagged forced_movement
+763165	+on_attack	attack trigger missed
+763165	-forced_movement	own push tagged forced_movement
+764852	+activated	action ability missed
+764852	+condition	condition missed
+764852	-quests	feature/objective token tagged quests
+762863	+turn_end	end phase scoring missed
+762863	-on_attack	unjustified tag
+764435	-quests	feature/objective token tagged quests
+764617	+on_kill	kill trigger missed
+764617	+ranged	ranged missed
+764617	-death_count	single kill tagged death_count
+765350	+delayed	delayed effect missed
+765350	+damage	damage missed
+765350	+kicker	kicker missed
+765350	-damage_over_time	delayed damage tagged damage_over_time
+796459	-reactions	unjustified tag
+814428	+condition	condition missed
+814428	+temporary_buff	this-turn effect missed
+762749	+turn_end	end phase scoring missed
+762749	+turn_number	round number missed
+762749	-high_cost:benefits	objective tagged high_cost
+765720	+attack_now	immediate attack missed
+765720	+condition	condition missed
+764669	+stacking_keyword	counters missed
+764669	-modal_choice	choose fighters tagged modal_choice
+764669	-mark_target:benefits	unjustified tag
+763913	+on_kill	kill trigger missed
+763913	-death_count	single kill tagged death_count
+765826	-damage	damage condition tagged damage
+763753	+turn_end	end phase scoring missed
+763753	-high_cost:benefits	objective tagged high_cost
+762872	+attack_lock	attack lock missed
+762872	+temporary_effect	this-turn effect missed
+762872	-disable	partial lock tagged disable
+762837	+turn_end	end phase scoring missed
+762837	-high_cost:benefits	objective tagged high_cost
+762850	+condition	condition missed
+765526	+movement	own push tagged forced_movement
+765526	+attack_mod	dice modifier missed
+765526	-forced_movement	own push tagged forced_movement
+765074	+turn_end	end phase scoring missed
+762780	+turn_end	end phase scoring missed
+764399	+advantage	reroll missed
+765681	+turn_end	end phase scoring missed
+765681	-high_cost:benefits	objective tagged high_cost
+763701	+variable_stats	variable stat missed
+764573	+death_trigger	death trigger missed
+764573	+modal_choice	choose one missed
+764573	+points_scoring	glory gain missed
+764573	-destroy	death trigger tagged destroy
+764573	-scoring_objectives	glory gain tagged scoring_objectives
+762865	+turn_end	end phase scoring missed
+762865	+turn_number	round number missed
+762865	-high_cost:benefits	objective tagged high_cost
+763724	+spell_power	spell boost missed
+764638	+turn_end	end phase scoring missed
+764638	-high_cost:benefits	objective tagged high_cost
+765122	+on_kill	kill trigger missed
+765122	+condition_count	count condition missed
+765122	-high_cost:benefits	objective tagged high_cost
+763771	+movement	own push tagged forced_movement
+763771	-forced_movement	own push tagged forced_movement
+763761	-adjacency	unjustified tag
+763761	-random_effect	unjustified tag
+765641	+turn_end	end phase scoring missed
+765641	+positional	position matters missed
+765641	-high_cost:benefits	objective tagged high_cost
+763711	+on_attack	attack trigger missed
+763711	-selection	choose target tagged selection
+763711	-modal_choice	choose target tagged modal_choice
+764729	+condition	condition missed
+764012	+turn_end	end phase scoring missed
+764012	-high_cost:benefits	objective tagged high_cost
+762834	+turn_end	end phase scoring missed
+762834	+board_presence:benefits	going wide payoff missed
+764548	+turn_end	end phase scoring missed
+764548	+turn_number	round number missed
+764548	-high_cost:benefits	objective tagged high_cost
+765137	+turn_end	end phase scoring missed
+765137	+positional	position matters missed
+763195	-damage	1 damage tagged damage not ping
+763564	+silence	ability lock missed
+763564	-damage	1 damage tagged damage not ping
+765440	+turn_end	end phase scoring missed
+765440	-evasion	flying condition tagged evasion
+765837	-damage	damage condition tagged damage
+764041	+turn_end	end phase scoring missed
+763285	+temporary_buff	this-turn effect missed
+765921	+on_kill	kill trigger missed
+765921	-damage_over_time	poison keyword tagged damage_over_time
+764190	-damage_over_time	poison keyword tagged damage_over_time
+764190	-destroy	duration clause tagged destroy
+764190	-movement	move token lock missed
+765784	+attack_mod	dice modifier missed
+765784	+debuff	debuff missed
+765784	-random_effect	dice modifier tagged random_effect
+764906	+death_trigger	death trigger missed
+764906	-destroy	death trigger tagged destroy
+764934	+turn_end	end phase scoring missed
+764934	+turn_number	round number missed
+765612	+turn_number	round number missed
+763580	+attack_mod	dice modifier missed
+763580	+temporary_buff	this-turn effect missed
+763580	-random_effect	dice modifier tagged random_effect
+764069	+death_trigger	death trigger missed
+764069	+aoe_damage	each-adjacent damage missed
+764069	-destroy	death trigger tagged destroy
+764069	-damage	each-adjacent damage missed
+763987	+turn_end	end phase scoring missed
+765267	+on_kill	kill trigger missed
+765267	-debuff	unjustified tag
+764900	+death_trigger	death trigger missed
+764900	-destroy	death trigger tagged destroy
+764900	-on_kill	ally death tagged on_kill
+764900	-spell_power:grants	unjustified tag
+764924	+condition_count	count condition missed
+764924	+steal	glory steal missed
+764924	+self_destruct	discard this card missed
+764924	-scoring_objectives	glory gain tagged scoring_objectives
+764924	-movement	stat buff tagged movement
+764924	-discard	discard this card tagged discard
+764451	+turn_end	end phase scoring missed
+764451	+stacking_keyword	counters missed
+764451	+turn_number	round number missed
+764451	-high_cost:benefits	objective tagged high_cost
+765273	+turn_end	end phase scoring missed
+762890	+turn_end	end phase scoring missed
+762890	-high_cost:benefits	objective tagged high_cost
+764819	+on_enemy_enter	enemy approach trigger missed
+764819	+temporary_buff	this-turn effect missed
+764819	-movement	enemy move condition tagged movement
+763813	+passive	passive missed
+763813	-damage	damage condition tagged damage
+765924	-damage_over_time	poison keyword tagged damage_over_time
+764498	+temporary_buff	this-turn effect missed
+764541	+advantage	reroll missed
+764541	+self_destruct	discard this card missed
+764541	-damage	damage condition tagged damage
+764541	-discard	discard this card tagged discard
+764541	-random_effect	reroll tagged random_effect
+765589	+movement	own push tagged forced_movement
+765589	+on_attack	attack trigger missed
+765589	-forced_movement	own push tagged forced_movement
+763506	+turn_end	end phase scoring missed
+763506	-activated	activation count tagged activated
+764339	+attack_mod	dice modifier missed
+764339	+debuff	debuff missed
+764339	+temporary_effect	this-turn effect missed
+764339	-damage_reduction	dice penalty tagged damage_reduction
+764339	-random_effect	dice modifier tagged random_effect
+765104	-trigger	unjustified tag
+765750	+temporary_buff	this-turn effect missed
+765750	+buff	move buff missed
+765750	-movement	stat buff tagged movement
+765631	+aura	aura missed
+765631	+stat_set	stat set missed
+765631	-movement	stat buff tagged movement
+765901	+turn_end	end phase scoring missed
+765901	-movement	unjustified tag
+765901	-movement:grants	unjustified tag
+765901	-on_attack:grants	unjustified tag
+764371	+debuff	debuff missed
+764371	+temporary_effect	this-turn effect missed
+764371	-damage	damage modifier tagged damage
+763120	+on_attack	attack trigger missed
+763120	-damage	damage buff tagged damage
+763120	-ranged	range 1 tagged ranged
+764642	+hand_size	hand count missed
+765585	+assists_support	support missed
+765585	-trigger	unjustified tag
+764937	+turn_end	end phase scoring missed
+764937	-high_cost:benefits	objective tagged high_cost
+763231	+advantage	reroll missed
+763231	+condition	condition missed
+763231	-random_effect	reroll tagged random_effect
+814478	+protection	drive-back protection missed
+814478	+forced_movement:counters	drive-back immunity missed
+814478	-immunity	drive-back immunity tagged immunity
+764989	+movement	own push tagged forced_movement
+764989	+self_destruct	break this card missed
+764989	+cost_reduction	free play missed
+764989	-forced_movement	own push tagged forced_movement
+764989	-adjacency:benefits	unjustified tag
+764989	-multi_target_attack:benefits	unjustified tag
+764989	-on_play	unjustified tag
+764989	-scoring_objectives	glory cost tagged scoring_objectives
+764450	+buff	move buff missed
+764450	+tribal	tribe condition missed
+764450	-movement	stat buff tagged movement
+764354	+on_attack	attack trigger missed
+764354	-damage	damage buff tagged damage
+764859	-on_attack	charge tagged on_attack
+765878	+spell_power	spell boost missed
+765878	+temporary_buff	this-turn effect missed
+765878	-quests	feature/objective token tagged quests
+765878	-zone_control	unjustified tag
+762868	+damage_prevention	damage prevented missed
+762868	+on_damaged	damaged trigger missed
+764773	+stacking_keyword	counters missed
+764773	+modal_choice	choose one missed
+764773	+turn_start	activation trigger missed
+764773	-activated	activation trigger tagged activated
+762929	+temporary_buff	this-turn effect missed
+762929	-damage	damage buff tagged damage
+762929	-destroy	kill condition tagged destroy
+764090	+counterattack	counterattack missed
+764090	+forced_movement:counters	drive-back immunity missed
+764090	-immunity	drive-back immunity tagged immunity
+765752	+cant_attack	self attack lock missed
+765752	-movement	unjustified tag
+765752	-on_attack	unjustified tag
+765381	+turn_end	end phase scoring missed
+765291	+spell_power	spell boost missed
+765291	+stacking_keyword	counters missed
+765291	-discard	discard counters tagged discard
+764452	+on_kill	kill trigger missed
+765516	+passive	passive missed
+765516	+forced_movement:counters	drive-back immunity missed
+765516	-damage	damage modifier tagged damage
+765516	-forced_movement	push immunity tagged forced_movement
+763495	+turn_end	end phase scoring missed
+763495	+positional	position matters missed
+763495	-high_cost:benefits	objective tagged high_cost
+763487	+turn_end	end phase scoring missed
+763487	+on_kill	kill trigger missed
+763487	-death_count	single kill tagged death_count
+764912	+attack_now	immediate attack missed
+764912	-damage	damage buff tagged damage
+763745	+movement	own push tagged forced_movement
+763745	-forced_movement	own push tagged forced_movement
+814442	-damage	stat line tagged damage
+763624	+attack_mod	dice modifier missed
+763624	-random_effect	dice modifier tagged random_effect
+765067	+buff	inspire missed
+765067	+self_destruct	break this card missed
+765067	+cost_reduction	free play missed
+765067	-debuff	vulnerable condition tagged debuff
+765067	-on_play	unjustified tag
+765067	-scoring_objectives	glory cost tagged scoring_objectives
+765102	+turn_end	end phase scoring missed
+765102	-high_cost:benefits	objective tagged high_cost
+763766	+attack_mod	dice modifier missed
+763766	+temporary_buff	this-turn effect missed
+763766	-random_effect	dice modifier tagged random_effect
+763766	-quests	feature/objective token tagged quests
+763766	-ranged	range 1 tagged ranged
+764499	+buff	move buff missed
+764499	+temporary_buff	this-turn effect missed
+764499	-movement	stat buff tagged movement
+764499	-on_play	unjustified tag
+764499	-temporary_effect	this-turn effect missed
+764959	+turn_end	end phase scoring missed
+764959	+turn_number	round number missed
+764242	+attack_now	immediate attack missed
+765226	+buff	move buff missed
+765226	+condition_count	count condition missed
+765226	-movement	stat buff tagged movement
+764283	+friendly_fire	self damage missed
+764283	+points_scoring	glory gain missed
+764283	-scoring_objectives	glory gain tagged scoring_objectives
+764727	-quests	feature/objective token tagged quests
+764727	-zone_control	unjustified tag
+764727	-collision_damage	unjustified tag
+764727	-combo_sequence	unjustified tag
+765567	+attack_now	immediate attack missed
+765101	+turn_end	end phase scoring missed
+765101	-graveyard	unjustified tag
+765357	+modal_choice	choose one missed
+765357	+cost_type	counter cost missed
+765863	+hand_size:benefits	hand count missed
+765863	-in_hand_buff	unjustified tag
+765863	-temporary_effect	unjustified tag
+762766	+attack_mod	dice modifier missed
+762766	-multi_attack	extra dice tagged multi_attack
+762766	-on_attack	unjustified tag
+762766	-movement	unjustified tag
+762766	-random_effect	dice modifier tagged random_effect
+814504	+swap	position swap missed
+814504	+turn_number	round number missed
+814504	+self_destruct	break this card missed
+814504	-turn_start	round-start timing
+765911	+attack_lock	attack lock missed
+765911	-damage_over_time	poison keyword tagged damage_over_time
+765911	-movement	move token lock missed
+765911	-passive	unjustified tag
+764954	+modal_choice	choose one missed
+764954	-quests	feature/objective token tagged quests
+764954	-zone_control	unjustified tag
+763324	+turn_number	round number missed
+763324	+points_scoring	glory gain missed
+763324	-scoring_objectives	glory gain tagged scoring_objectives
+764979	+damage_reduction	damage reduction missed
+764979	+cheat_death	prevent lethal missed
+764979	-damage	damage modifier tagged damage
+764979	-destroy	kill condition tagged destroy
+764979	-random_effect	unjustified tag
+814474	+forced_movement:counters	drive-back immunity missed
+814474	-immunity	drive-back immunity tagged immunity
+765157	+movement	own push tagged forced_movement
+765157	-forced_movement	own push tagged forced_movement
+764590	+turn_end	end phase scoring missed
+762983	+turn_end	end phase scoring missed
+762983	-high_cost:benefits	objective tagged high_cost
+764822	+attack_mod	dice modifier missed
+764822	+condition_life	wounded condition missed
+764822	-damage	damage buff tagged damage
+764822	-random_effect	dice modifier tagged random_effect
+764329	+turn_end	end phase scoring missed
+764190	+disable	move token lock missed

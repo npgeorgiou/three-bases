@@ -1,0 +1,265 @@
+{
+"765192": [
+"damage",
+"damage:benefits",
+"random_effect",
+"symmetric_effect"
+],
+"765128": [
+"items_consumables",
+"scoring_objectives",
+"trigger"
+],
+"763625": [
+"adjacency",
+"heal"
+],
+"764922": [
+"adjacency",
+"destroy",
+"destroy:benefits",
+"items_consumables",
+"piercing:grants",
+"scoring_objectives"
+],
+"764537": [
+"items_consumables",
+"piercing:grants"
+],
+"764838": [
+"random_effect"
+],
+"764297": [
+"random_effect",
+"reactions",
+"revive",
+"scoring_objectives",
+"stacking_keyword"
+],
+"764251": [
+"items_consumables",
+"mark_target:benefits",
+"random_effect"
+],
+"762747": [
+"destroy:benefits",
+"scoring_objectives"
+],
+"765062": [
+"adjacency",
+"damage_reduction",
+"heal"
+],
+"765069": [
+"assists_support",
+"death_count",
+"destroy",
+"items_consumables",
+"on_kill",
+"scoring_objectives"
+],
+"765416": [
+"assists_support",
+"destroy",
+"draw",
+"reactions"
+],
+"765371": [
+"random_effect"
+],
+"764183": [
+"random_effect",
+"symmetric_effect"
+],
+"764723": [
+"movement",
+"on_attack",
+"random_effect",
+"reactions",
+"trap_secret"
+],
+"765319": [
+"disruption",
+"piercing",
+"random_effect"
+],
+"762861": [
+"death_count",
+"destroy:benefits",
+"movement:counters",
+"on_attack:counters",
+"on_kill",
+"scoring_objectives"
+],
+"763756": [
+"forced_movement",
+"scoring_objectives"
+],
+"765465": [
+"adjacency",
+"collision_damage",
+"combo_sequence",
+"forced_movement:benefits",
+"ping",
+"reactions"
+],
+"763523": [
+"destroy:benefits",
+"scoring_objectives"
+],
+"765112": [
+"heal",
+"items_consumables",
+"reactions"
+],
+"765254": [
+"adjacency",
+"debuff"
+],
+"763538": [
+"scoring_objectives",
+"zone_control"
+],
+"763151": [
+"buff",
+"damage",
+"discard",
+"items_consumables",
+"on_attack"
+],
+"765115": [
+"items_consumables",
+"scoring_objectives",
+"trigger"
+],
+"763865": [
+"damage",
+"damage_reduction:grants",
+"life_payment:cost",
+"random_effect"
+],
+"762880": [
+"immunity",
+"items_consumables",
+"reactions"
+],
+"765625": [
+"condition_count",
+"movement",
+"on_attack",
+"ping",
+"random_effect",
+"temporary_effect"
+],
+"763049": [
+"destroy:benefits",
+"scoring_objectives"
+],
+"763105": [
+"activated",
+"movement",
+"on_attack"
+],
+"762813": [
+"movement"
+],
+"764701": [
+"forced_movement"
+],
+"762804": [
+"high_cost:benefits",
+"movement",
+"scoring_objectives"
+],
+"796425": [
+"cast_from_zone",
+"death_count",
+"draw",
+"modal_choice",
+"reactions",
+"revive",
+"zone_control:benefits"
+],
+"796431": [
+"on_spell",
+"upgrade"
+],
+"763975": [
+"items_consumables",
+"random_effect"
+],
+"763842": [
+"items_consumables",
+"random_effect"
+],
+"763923": [
+"scoring_objectives",
+"trigger"
+],
+"763237": [
+"destroy",
+"items_consumables",
+"on_kill",
+"reactions",
+"scoring_objectives"
+],
+"765422": [
+"immunity",
+"items_consumables"
+],
+"763558": [
+"destroy:benefits",
+"on_kill",
+"scoring_objectives"
+],
+"764244": [
+"buff",
+"damage",
+"items_consumables"
+],
+"764015": [
+"adjacency",
+"forced_movement",
+"scoring_objectives",
+"trigger"
+],
+"763045": [
+"adjacency",
+"scoring_objectives"
+],
+"763482": [
+"destroy:benefits",
+"movement",
+"scoring_objectives"
+],
+"763450": [
+"death_count",
+"destroy:benefits",
+"movement:counters",
+"on_attack:counters",
+"on_kill",
+"scoring_objectives"
+],
+"765017": [
+"items_consumables",
+"ping",
+"reactions"
+],
+"763485": [
+"high_cost:benefits",
+"scoring_objectives",
+"zone_control"
+],
+"765556": [
+"condition",
+"random_effect",
+"upgrade"
+],
+"763941": [
+"adjacency",
+"items_consumables",
+"movement",
+"on_attack",
+"reactions"
+]
+}
