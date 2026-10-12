@@ -17,6 +17,7 @@ When something changes state (an idea gets built, a to-do gets decided), move it
 - `three-bases-ai-lab.html` — the AI lab. Never remove the lab or anything related to it.
 - `summary.txt`, `factions.txt`, `todo.md` — see above.
 - Inspiration library: `three-bases-library.sqlite`, `lib/` (run `python3 lib/query.py <command>` from the repo root), `README.md` and `SEARCH_GUIDE.md` (both are the library's). Library questions go in fresh chats, with compact queries in one go.
+  - Library changes are committed and pushed here (no zip). Concepts are organised by outcome (e.g. "no damage output" covers "can't attack" and "strength 0"), not by mechanism; combos emerge from card mechanics as links, never added from outside sources. Shadowverse: Worlds Beyond is excluded entirely; cut any game whose data could drown out the others. Kaptain doesn't have the raw library-corpus.zip, so dropped cards must come from other reachable sources. Improvement ideas: README.md, "Suggestions for improving the library".
 
 ## Workflow
 - After every change: commit, push, and also give Kaptain the changed game/scenarios/summary file as an immediate download.
