@@ -10,5 +10,129 @@
 "drop": [
 "tribal"
 ]
+},
+"792309": {
+"add": [
+"assists_support"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"792526": {
+"add": [
+"multi_attack",
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"793353": {
+"add": [
+"drawback"
+],
+"drop": [
+"debuff"
+]
+},
+"791297": {
+"add": [],
+"drop": [
+"delayed"
+]
+},
+"791375": {
+"add": [
+"aura"
+],
+"drop": []
+},
+"792435": {
+"add": [
+"mark_target"
+],
+"drop": []
+},
+"793119": {
+"add": [
+"life_payment:cost"
+],
+"drop": [
+"damage"
+]
+},
+"791739": {
+"add": [
+"start_of_game"
+],
+"drop": [
+"placement_rules"
+]
+},
+"791351": {
+"add": [
+"spell_power",
+"coin_economy"
+],
+"drop": []
+},
+"791816": {
+"add": [
+"movement"
+],
+"drop": []
+},
+"791363": {
+"add": [
+"coin_economy"
+],
+"drop": []
+},
+"793022": {
+"add": [
+"attack_mod"
+],
+"drop": [
+"destroy"
+]
+},
+"791251": {
+"add": [
+"debuff"
+],
+"drop": [
+"zone_of_control"
+]
+},
+"793062": {
+"add": [
+"damage_reduction"
+],
+"drop": []
+},
+"793291": {
+"add": [
+"revive"
+],
+"drop": []
+},
+"793276": {
+"add": [
+"revive"
+],
+"drop": []
+},
+"791257": {
+"add": [
+"revive"
+],
+"drop": []
+},
+"793095": {
+"add": [
+"regeneration"
+],
+"drop": []
 }
 }

@@ -1,13 +1,14 @@
 """Apply a Claude review file to one game. The file maps an entity id (or, for Marvel Snap, a name) to {add:[concept[:role]], drop:[...]}.
-Each decision also applies to every other entry of the same game with the very same text. Usage: apply_review.py <db> <game> <review.json>
+Each decision also applies to every other entry of the same game and category with the very same text (a potion and a card
+with the same words are different things: a card does not inherit 'items_consumables' from the potion). Usage: apply_review.py <db> <game> <review.json>
 An explicit drop removes the concept whatever method added it (the reviewer has read the text)."""
 import json, sqlite3, sys
 db, game, path = sys.argv[1:4]
 c = sqlite3.connect(db); q = lambda s, *a: c.execute(s, a).fetchall()
 rv = json.load(open(path, encoding='utf-8'))
 bytext = {}
-for i, t in q("select id,text from entities where game=? and text is not null", game): bytext.setdefault(t, []).append(i)
-text = dict(q("select id,text from entities where game=?", game))
+for i, t, k in q("select id,text,category from entities where game=? and text is not null", game): bytext.setdefault((t, k), []).append(i)
+text = {i: (t, k) for i, t, k in q("select id,text,category from entities where game=?", game)}
 n = 0
 for key, r in rv.items():
     ids = [int(key)] if key.isdigit() else [i for (i,) in q("select id from entities where game=? and name=?", game, key)]

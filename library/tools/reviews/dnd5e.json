@@ -1626,5 +1626,117 @@
 "drop": [
 "excess_damage"
 ]
+},
+"761883": {
+"add": [
+"on_attack"
+],
+"drop": [
+"reactions"
+]
+},
+"761994": {
+"add": [
+"evasion"
+],
+"drop": []
+},
+"762265": {
+"add": [
+"resource_conversion"
+],
+"drop": [
+"transform"
+]
+},
+"761245": {
+"add": [],
+"drop": [
+"aoe_damage",
+"delayed"
+]
+},
+"762188": {
+"add": [
+"multi_attack"
+],
+"drop": []
+},
+"815620": {
+"add": [
+"ranged",
+"spell_power"
+],
+"drop": []
+},
+"761451": {
+"add": [],
+"drop": [
+"multi_attack",
+"damage_over_time",
+"delayed"
+]
+},
+"761391": {
+"add": [
+"movement",
+"buff"
+],
+"drop": []
+},
+"762190": {
+"add": [
+"zone_of_control:counters"
+],
+"drop": [
+"zone_of_control:does"
+]
+},
+"761877": {
+"add": [
+"debuff"
+],
+"drop": [
+"movement"
+]
+},
+"761380": {
+"add": [],
+"drop": [
+"damage",
+"random_effect"
+]
+},
+"761826": {
+"add": [
+"resource_gain"
+],
+"drop": [
+"comeback"
+]
+},
+"762055": {
+"add": [
+"free_play"
+],
+"drop": []
+},
+"761906": {
+"add": [
+"resource_gain"
+],
+"drop": []
+},
+"761484": {
+"add": [
+"cheat_death"
+],
+"drop": []
+},
+"762041": {
+"add": [],
+"drop": [
+"on_attack"
+]
 }
 }

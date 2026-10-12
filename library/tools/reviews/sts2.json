@@ -6323,5 +6323,219 @@
 "drawback"
 ],
 "drop": []
+},
+"816332": {
+"add": [
+"in_hand_buff"
+],
+"drop": [
+"deck_modification"
+]
+},
+"816335": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"816337": {
+"add": [
+"generate_cards",
+"combo_sequence"
+],
+"drop": [
+"transform"
+]
+},
+"816340": {
+"add": [],
+"drop": [
+"generate_cards"
+]
+},
+"816344": {
+"add": [
+"sacrifice"
+],
+"drop": []
+},
+"816355": {
+"add": [
+"count_payoff"
+],
+"drop": [
+"damage_over_time"
+]
+},
+"816357": {
+"add": [
+"draw:benefits"
+],
+"drop": []
+},
+"816360": {
+"add": [
+"free_play",
+"recycle"
+],
+"drop": []
+},
+"816365": {
+"add": [
+"deck_modification"
+],
+"drop": []
+},
+"816367": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"816369": {
+"add": [
+"temporary_buff",
+"snowball"
+],
+"drop": []
+},
+"816376": {
+"add": [
+"buff"
+],
+"drop": []
+},
+"816383": {
+"add": [
+"drawback"
+],
+"drop": []
+},
+"816395": {
+"add": [],
+"drop": [
+"exhaust"
+]
+},
+"816397": {
+"add": [
+"debuff"
+],
+"drop": []
+},
+"816398": {
+"add": [
+"damage_over_time"
+],
+"drop": []
+},
+"816399": {
+"add": [
+"damage_over_time:benefits",
+"count_payoff"
+],
+"drop": []
+},
+"816400": {
+"add": [
+"in_hand_buff",
+"cost_increase"
+],
+"drop": []
+},
+"816408": {
+"add": [
+"team_play",
+"slots_queue"
+],
+"drop": []
+},
+"816410": {
+"add": [
+"repeat_trigger"
+],
+"drop": []
+},
+"816418": {
+"add": [
+"count_payoff"
+],
+"drop": []
+},
+"816420": {
+"add": [
+"count_payoff",
+"block_armor"
+],
+"drop": [
+"variable_stats"
+]
+},
+"816424": {
+"add": [
+"block_armor"
+],
+"drop": []
+},
+"816428": {
+"add": [
+"cost_condition"
+],
+"drop": []
+},
+"816429": {
+"add": [
+"team_play",
+"assists_support"
+],
+"drop": []
+},
+"816430": {
+"add": [
+"random_effect"
+],
+"drop": []
+},
+"816431": {
+"add": [],
+"drop": [
+"variable_stats"
+]
+},
+"816432": {
+"add": [
+"cost_condition"
+],
+"drop": []
+},
+"816433": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"816434": {
+"add": [
+"team_play"
+],
+"drop": []
+},
+"816439": {
+"add": [
+"deckbuilding_effect"
+],
+"drop": []
+},
+"816442": {
+"add": [],
+"drop": [
+"draw"
+]
+},
+"816457": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
 }
 }

@@ -3,25 +3,25 @@
 ## What it is
 A SQLite database of game mechanics from 20 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
 
-It lives unzipped in **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite` at the root, `lib/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results). three-bases-library.zip holds the same files and is only a way to download them.
+It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite`, `tools/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results).
 
 ## Contents
-57,495 entries (cards, units, locations, abilities, items, rules), 1,186 keywords and 450 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
+57,709 entries (cards, units, locations, abilities, items, rules), 1,186 keywords and 450 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
 
 | Game | Entries |
 |---|---|
 | Magic: The Gathering | 18,933 |
 | Hearthstone | 8,058 |
 | Shadowverse | 4,386 |
-| Warhammer 40,000 (10th edition) | 3,809 |
-| Warhammer Age of Sigmar (4th edition) | 3,508 |
+| Warhammer 40,000 (10th edition) | 3,813 |
+| Warhammer Age of Sigmar (4th edition) | 3,540 |
 | Warhammer Underworlds | 3,217 |
 | Legends of Runeterra | 2,434 |
 | Hearthstone Battlegrounds | 2,239 |
-| Warhammer 40,000: Kill Team | 2,156 |
+| Warhammer 40,000: Kill Team | 2,219 |
+| Slay the Spire 2 (Early Access) | 1,386 |
 | Gwent (standalone) | 1,357 |
 | Dungeons & Dragons 5e (SRD) | 1,344 |
-| Slay the Spire 2 (Early Access) | 1,271 |
 | Darkest Dungeon | 949 |
 | Marvel Snap (699 cards, 212 locations, 6 rules) | 917 |
 | Slay the Spire | 895 |
@@ -33,7 +33,8 @@ It lives unzipped in **github.com/npgeorgiou/three-bases**: `three-bases-library
 
 What is in, beyond the cards each source lists as playable:
 - **Created cards** (edition `non-collectible`; a name already used gets " (created)"): Runeterra (levelled champions, champion spells, tokens), Hearthstone (tokens, generated cards, rewards), Battlegrounds, Gwent and Shadowverse tokens, Magic tokens and emblems that have rules text, Slay the Spire's created cards (Shiv, Miracle, Smite, ...). Cards link to what they create (`generates`; for Magic from Scryfall's list of related tokens).
-- **Slay the Spire upgrades:** an upgrade that changes only numbers is kept on its base card (`extra.upgraded_text`, `extra.upgraded_cost`); an upgrade that changes the mechanic (Innate or Retain added, Exhaust dropped, all cards instead of one, ...) is its own entry `<name>+`, linked `variant_of` to the base card.
+- **Slay the Spire 1 and 2 upgrades:** an upgrade that changes only numbers is kept on its base card (`extra.upgraded_text`, `extra.upgraded_cost`); an upgrade that changes the mechanic (Innate or Retain added, Exhaust dropped, all cards instead of one, ...) is its own entry `<name>+`, linked `variant_of` to the base card, and carries the base card's hand-review decisions. Slay the Spire 2: 69 such entries and 412 number-only upgrades; its upgraded costs are unknown (the source lists no costs).
+- **Warhammer unit datasheets:** units and Kill Team operatives from the current BSData repos that the library lacked (40k 4, Kill Team 63, Age of Sigmar 32), with their stat line (`stats`; other models' lines in `extra.model_stats`) and abilities, weapon abilities and special rules as text; and stat lines for 29 older units that had none. As in the first build, a unit without any ability (Kill Team: without an ability of its own) is left out, and so are Kill Team fire teams, which only group operatives.
 - **Magic:** the cards of the first build (no commons, no Commander-only cards, no near-duplicates) plus 640 cards from MTGJSON that bring a mechanic the others lack. The other 10,560 MTGJSON cards repeated existing mechanics and were left out, so Magic does not drown the smaller games.
 - **Warhammer factions** are armies: a BSData "Library" file's entries belong to the army that uses it, and an Age of Sigmar army of renown or Legends list belongs to its army (`extra.army_of_renown`, `extra.legends`).
 
@@ -73,21 +74,21 @@ What is in, beyond the cards each source lists as playable:
 **entity_fts**: full-text search. **games**, **load_log**: what each game is and how it was loaded.
 
 ## How Claude uses it
-In a fresh chat, Claude clones the repository and runs `python3 lib/query.py <command>` (the script finds the database next to `lib/`; `TB_LIB` overrides). The commands and the rules for reading results are in SEARCH_GUIDE.md. The database never enters the conversation, only printed results do, so a design question costs a few short queries.
+In a fresh chat, Claude clones the repository and runs `python3 library/tools/query.py <command>` (the script finds the database next to `tools/`; `TB_LIB` overrides). The commands and the rules for reading results are in SEARCH_GUIDE.md. The database never enters the conversation, only printed results do, so a design question costs a few short queries.
 
 ## Maintenance
 The build is incremental: `three-bases-library.sqlite` is the base for all work. The raw corpus of the first build is deleted and not needed.
 
-- **Fix wrong tags** in these places, then run `lib/build.sh <in.sqlite> <out.sqlite>`:
-  - the per-game pattern files (`lib/patterns/<game>.txt`: `concept|role|regex` adds a pattern, `!concept|pattern` switches a general pattern off for that game);
-  - the hand reviews (`lib/reviews/<game>.json`), then `regression.py <db> make`;
-  - the keyword reviews against the outcome tree (`lib/reviews_outcome/<game>.json`).
-- **Add cards:** a converter in `lib/convert/` turns a source file into the load format (described in `lib/load_cards.py`). Then run `lib/build.sh <in.sqlite> <out.sqlite> <game>=<cards.json> ...`. New cards get the same tagging as the rest of their game; older entries stay as they were, apart from merges and links to the new cards.
+- **Fix wrong tags** in these places, then run `tools/build.sh <in.sqlite> <out.sqlite>`:
+  - the per-game pattern files (`tools/patterns/<game>.txt`: `concept|role|regex` adds a pattern, `!concept|pattern` switches a general pattern off for that game);
+  - the hand reviews (`tools/reviews/<game>.json`; a decision also reaches entries of the same category with the very same text), then `regression.py <db> make` and `regression.py <db> enforce`;
+  - the keyword reviews against the outcome tree (`tools/reviews_outcome/<game>.json`).
+- **Add cards:** a converter in `tools/convert/` turns a source file into the load format (described in `tools/load_cards.py`). Then run `tools/build.sh <in.sqlite> <out.sqlite> <game>=<cards.json> ...`. New cards get the same tagging as the rest of their game; older entries stay as they were, apart from merges and links to the new cards.
 - **How entries are tagged:** an entry gets the general wording patterns (all games) once, when it is loaded; the game's own patterns, keyword inheritance, outcome concepts, link rules and trigger pairs are re-derived on every build. Text is read lower-cased with the entry's own name as "name"; Magic without reminder text. Entries that no pattern or keyword reaches are dropped.
-- **One-time fixes** of 12 Oct 2026 are in `lib/fixes/` (f01 Magic cut, f02 Scryfall data, f04 text clean-up, f06 leftovers, f08 weak patterns, f09 whole-entry patterns, f10 Magic non-token cards); f03 (granted keywords are not "does"), f05 (faction names and table) and f07 (keyword links, concept tree) are also build steps.
+- **One-time fixes** of 12 Oct 2026 are in `tools/fixes/` (f01 Magic cut, f02 Scryfall data, f04 text clean-up, f06 leftovers, f08 weak patterns, f09 whole-entry patterns, f10 Magic non-token cards, f11 icon words in Slay the Spire text and stat lines for units without them, f12 review tags that older builds copied across categories); f03 (granted keywords are not "does"), f05 (faction names and table) and f07 (keyword links, concept tree) are also build steps.
 
 The build stops if any check fails:
-- **regression set** (`regression.py <db> check`): 12,694 reviewed tags must hold;
+- **regression set** (`regression.py <db> check`): 12,835 reviewed tags must hold;
 - **combo set** (`combo_check.py <db>`): 82 enabler → payoff pairs, 80 found, 2 known misses;
 - **trigger coverage** (`trigger_pairs.py <db> check`): at least 50% of entries with a trigger in every game;
 - **query tests** (`test_query.py <db>`): all 16 commands.
@@ -95,22 +96,22 @@ The build stops if any check fails:
 Sources of the later loads (converter in brackets):
 - Magic: MTGJSON AtomicCards.json [conv_mtg.py] for the 640 cards with a new mechanic; Scryfall Oracle Cards [conv_scryfall_tokens.py, fixes/f02] for tokens, emblems, set names, related cards and keyword lists.
 - Slay the Spire 1: the wiki's Module:Cards/data [conv_sts.py].
+- Slay the Spire 2: the wiki's card lists, normal and upgraded, supplied by Kaptain on 12 Oct 2026 [conv_sts2.py]: upgrades, and 46 cards the library lacked.
 - Gwent: the gwent.one v14.8 export, NonOwnable set [conv_gwent.py].
 - Shadowverse: the Portal card API export, set 90000 [conv_sv.py].
 - Underworlds: yawudb's db.js, github.com/PompolutZ/yawudb [conv_wu.py].
-- 40k, Kill Team, Age of Sigmar: the BSData repos at their current state [conv_bs.py]: abilities and rules whose text the library lacked; campaign content (Crusade, Path to Glory, hero creation) left out.
+- 40k, Kill Team, Age of Sigmar: the BSData repos at their current state [conv_bs.py]: abilities and rules whose text the library lacked; campaign content (Crusade, Path to Glory, hero creation) left out. Unit datasheets and missing stat lines [conv_bs_units.py].
 - D&D 5e: github.com/5e-bits/5e-database [conv_dnd.py].
 
 ## Known limits
 - Automatic tags on long prose (D&D, Warhammer army rules, Inscryption and Into the Breach wiki text) are the least precise. Five concept/game cells are below 70% (Hearthstone hand_disruption, adjacency and debuff; Kill Team information; Shadowverse tutor): their right and wrong tags come from the same wording, so `concept` warns there.
 - Combo detection finds candidates through concepts, keywords and trigger links; confirming a combo means reading both cards.
 - Frequency limits, D&D condition roles and trigger pairs come from wording rules, not play; real counts come from the Three Bases simulator.
-- Warhammer and D&D entries loaded on 12 Oct 2026 come from the current BSData and SRD data, which can differ from the older snapshot of the first build. New Warhammer unit datasheets (stat lines) are not loaded, only their abilities.
-- Missing data: Slay the Spire 2 upgrades, Blood Bowl Third Season entries the first build dropped, and Underworlds fighter stat lines (no source known); about 25 dropped entries of Duelyst, Darkest Dungeon, Inscryption and Into the Breach (not reloaded).
+- Warhammer and D&D entries loaded on 12 Oct 2026 come from the current BSData and SRD data, which can differ from the older snapshot of the first build. Units still without a stat line: 40k 46, Kill Team 83 (no single matching stat profile in BSData).
+- Missing data: Underworlds fighter stat lines. The three stat files Kaptain supplied on 12 Oct 2026 were not loaded: most rows are a repeated template ("Leader", "Minion A", "Melee Weapon" with the same numbers for every warband), and on the fighters they share the files disagree (32 fighter states conflict, 11 agree). Also missing: about 25 dropped entries of Duelyst, Darkest Dungeon, Inscryption and Into the Breach (not reloaded).
 - About 280 Magic token links are left out: Scryfall lists a related token whose name and type several tokens share, and the card's text does not say which one.
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Suggestions for improving the library
 Claude's suggestions, none done.
-1. **Hand-review more entries** of the noisiest games (Age of Sigmar, 40k, D&D) and the 12 Oct loads, and add the decisions to `lib/reviews/` (then `regression.py <db> make`).
-2. **Load Warhammer unit datasheets** (stat lines) from the BSData repos.
+1. **Hand-review more entries** of the noisiest games (Age of Sigmar, 40k, D&D) and the 12 Oct loads, and add the decisions to `tools/reviews/` (then `regression.py <db> make` and `enforce`). A first sample was reviewed on 12 Oct 2026 (Age of Sigmar 30, 40k 30, D&D 25 entries: 46 needed corrections); it is still too small for precision estimates there (Age of Sigmar has one precision cell, 40k none).

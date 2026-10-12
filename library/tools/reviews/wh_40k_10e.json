@@ -239,5 +239,84 @@
 "drop": [
 "destroy"
 ]
+},
+"786182": {
+"add": [
+"start_of_game",
+"placement_rules"
+],
+"drop": []
+},
+"786840": {
+"add": [],
+"drop": [
+"stress_morale"
+]
+},
+"785920": {
+"add": [
+"attack_mod"
+],
+"drop": []
+},
+"786047": {
+"add": [
+"attack_mod"
+],
+"drop": []
+},
+"786252": {
+"add": [
+"buff"
+],
+"drop": [
+"advantage"
+]
+},
+"785096": {
+"add": [
+"damage_reduction"
+],
+"drop": []
+},
+"785081": {
+"add": [
+"attack_mod"
+],
+"drop": []
+},
+"786931": {
+"add": [
+"self_destruct"
+],
+"drop": []
+},
+"786384": {
+"add": [
+"aura"
+],
+"drop": []
+},
+"785085": {
+"add": [],
+"drop": [
+"turn_start",
+"zone_of_control"
+]
+},
+"786597": {
+"add": [],
+"drop": [
+"terrain"
+]
+},
+"786398": {
+"add": [
+"debuff"
+],
+"drop": [
+"delayed",
+"passive"
+]
 }
 }

@@ -4245,5 +4245,118 @@
 "drop": [
 "buff"
 ]
+},
+"813505": {
+"add": [
+"in_hand_buff"
+],
+"drop": [
+"deck_modification"
+]
+},
+"813508": {
+"add": [
+"life_payment:cost"
+],
+"drop": [
+"damage"
+]
+},
+"813514": {
+"add": [
+"stat_multiply"
+],
+"drop": []
+},
+"813516": {
+"add": [
+"discard:benefits"
+],
+"drop": [
+"junk_cards"
+]
+},
+"813521": {
+"add": [
+"return_to_hand"
+],
+"drop": [
+"discard"
+]
+},
+"813529": {
+"add": [
+"sacrifice"
+],
+"drop": []
+},
+"813536": {
+"add": [
+"return_to_hand",
+"drawback"
+],
+"drop": [
+"discard"
+]
+},
+"813538": {
+"add": [
+"generate_cards"
+],
+"drop": []
+},
+"813539": {
+"add": [
+"drawback",
+"stat_multiply"
+],
+"drop": []
+},
+"813540": {
+"add": [
+"generate_cards"
+],
+"drop": []
+},
+"813541": {
+"add": [
+"resource_gain",
+"snowball"
+],
+"drop": []
+},
+"813551": {
+"add": [
+"in_hand_buff"
+],
+"drop": []
+},
+"813552": {
+"add": [
+"deck_position"
+],
+"drop": []
+},
+"813554": {
+"add": [
+"tutor"
+],
+"drop": [
+"draw"
+]
+},
+"813555": {
+"add": [
+"tutor"
+],
+"drop": [
+"draw"
+]
+},
+"813556": {
+"add": [
+"deck_position"
+],
+"drop": []
 }
 }

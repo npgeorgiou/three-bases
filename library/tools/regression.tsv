@@ -2749,6 +2749,16 @@ dnd5e	761175	Restrained	immobilize	does	present
 dnd5e	761180	Heavy	debuff	*	absent
 dnd5e	761180	Heavy	ranged	*	absent
 dnd5e	761183	Range	debuff	*	absent
+dnd5e	761245	Color Spray	aoe_damage	*	absent
+dnd5e	761245	Color Spray	delayed	*	absent
+dnd5e	761380	Invisibility	damage	*	absent
+dnd5e	761380	Invisibility	random_effect	*	absent
+dnd5e	761391	Longstrider	buff	does	present
+dnd5e	761391	Longstrider	movement	does	present
+dnd5e	761451	Ray of Sickness	damage_over_time	*	absent
+dnd5e	761451	Ray of Sickness	delayed	*	absent
+dnd5e	761451	Ray of Sickness	multi_attack	*	absent
+dnd5e	761484	Spare the Dying	cheat_death	does	present
 dnd5e	761537	Adamantine Armor	items_consumables	does	present
 dnd5e	761538	Ammunition	items_consumables	does	present
 dnd5e	761539	Ammunition of Slaying	items_consumables	does	present
@@ -3005,9 +3015,19 @@ dnd5e	761789	Serpent Venom	items_consumables	does	present
 dnd5e	761790	Spider's Sting	items_consumables	does	present
 dnd5e	761791	Torpor	items_consumables	does	present
 dnd5e	761792	Truth Serum	items_consumables	does	present
+dnd5e	761826	Superior Inspiration	comeback	*	absent
+dnd5e	761826	Superior Inspiration	resource_gain	does	present
 dnd5e	761870	Action Surge	forced_movement	*	absent
 dnd5e	761870	Action Surge	movement	*	absent
+dnd5e	761877	Tactical Master	debuff	does	present
+dnd5e	761877	Tactical Master	movement	*	absent
+dnd5e	761883	Remarkable Athlete	on_attack	does	present
+dnd5e	761883	Remarkable Athlete	reactions	*	absent
+dnd5e	761906	Perfect Focus	resource_gain	does	present
 dnd5e	761925	Abjure Foes	excess_damage	*	absent
+dnd5e	761994	Dragon Wings	evasion	does	present
+dnd5e	762041	Dwarven Resilience	on_attack	*	absent
+dnd5e	762055	Gnomish Lineage: Forest Gnome	free_play	does	present
 dnd5e	762109	Ammunition, +1, +2, or +3	items_consumables	does	present
 dnd5e	762110	Armor, +1, +2, or +3	items_consumables	does	present
 dnd5e	762111	Arrow of Slaying	items_consumables	does	present
@@ -3021,6 +3041,13 @@ dnd5e	762118	Weapon, +1, +2, or +3	items_consumables	does	present
 dnd5e	762119	Orb of Dragonkind	items_consumables	does	present
 dnd5e	762178	Action Surge (1 use)	forced_movement	*	absent
 dnd5e	762178	Action Surge (1 use)	movement	*	absent
+dnd5e	762188	Flurry of Blows	multi_attack	does	present
+dnd5e	762190	Step of the Wind	zone_of_control	does	absent
+dnd5e	762190	Step of the Wind	zone_of_control	counters	present
+dnd5e	762265	Flexible Casting: Creating Spell Slots	resource_conversion	does	present
+dnd5e	762265	Flexible Casting: Creating Spell Slots	transform	*	absent
+dnd5e	815620	Eldritch Invocation: Eldritch Spear	ranged	does	present
+dnd5e	815620	Eldritch Invocation: Eldritch Spear	spell_power	does	present
 duelyst	741536	Infiltrate	board_clog	*	absent
 duelyst	741538	MECHAZ0R	count_payoff	does	present
 duelyst	741543	Sentinel	trap_secret	does	present
@@ -6875,8 +6902,8 @@ marvel_snap	795997	Storm	turn_structure	*	absent
 marvel_snap	795998	Storm Horseman of Famine	rows	*	absent
 marvel_snap	796000	Strange Supreme	deck_modification	*	absent
 marvel_snap	796000	Strange Supreme	generate_cards	benefits	present
-marvel_snap	796001	Strong Guy	hand_size	does	present
 marvel_snap	796001	Strong Guy	hand_size	benefits	present
+marvel_snap	796001	Strong Guy	hand_size	does	present
 marvel_snap	796002	Stryfe	repeat_trigger	does	present
 marvel_snap	796003	Sub-Mariner	upgrade	*	absent
 marvel_snap	796004	Subterranean Summons	generate_cards	benefits	present
@@ -7045,8 +7072,8 @@ marvel_snap	796208	Eternity Range	board_clog	does	present
 marvel_snap	796208	Eternity Range	null_body	does	present
 marvel_snap	796210	Fisk Tower	movement	counters	present
 marvel_snap	796213	Fogwell's Gym	stakes_wager	does	present
-marvel_snap	796217	Genosha	destroy	benefits	absent
 marvel_snap	796217	Genosha	destroy	does	present
+marvel_snap	796217	Genosha	destroy	benefits	absent
 marvel_snap	796217	Genosha	sacrifice	does	present
 marvel_snap	796220	Great Web	forced_movement	does	present
 marvel_snap	796223	Hellfire Club	cost_condition	does	present
@@ -7155,8 +7182,8 @@ marvel_snap	796358	Valley of the Baby Hand	stakes_wager	does	present
 marvel_snap	796359	Valley Of The Hand	graveyard	does	present
 marvel_snap	796360	Vibranium Mines	generate_cards	does	present
 marvel_snap	796360	Vibranium Mines	recycle	*	absent
-marvel_snap	796361	Vormir	destroy	benefits	absent
 marvel_snap	796361	Vormir	destroy	does	present
+marvel_snap	796361	Vormir	destroy	benefits	absent
 marvel_snap	796361	Vormir	sacrifice	does	present
 marvel_snap	796363	Wakandan Embassy	in_hand_buff	does	present
 marvel_snap	796365	Washington D.C.	null_body	benefits	present
@@ -8393,8 +8420,8 @@ sts1	758003	Paper Krane	debuff	counters	absent
 sts1	758003	Paper Krane	debuff	benefits	present
 sts1	758003	Paper Krane	items_consumables	does	present
 sts1	758003	Paper Krane	passive	does	present
-sts1	758004	Paper Phrog	debuff	benefits	present
 sts1	758004	Paper Phrog	debuff	counters	absent
+sts1	758004	Paper Phrog	debuff	benefits	present
 sts1	758004	Paper Phrog	items_consumables	does	present
 sts1	758004	Paper Phrog	passive	does	present
 sts1	758005	Peace Pipe	items_consumables	does	present
@@ -8976,6 +9003,32 @@ sts1	758375	Wing Statue	modal_choice	does	present
 sts1	758376	World of Goop	damage	*	absent
 sts1	758376	World of Goop	life_payment	cost	present
 sts1	758376	World of Goop	modal_choice	does	present
+sts1	813505	Armaments+	deck_modification	*	absent
+sts1	813505	Armaments+	in_hand_buff	does	present
+sts1	813508	Brutality+	damage	*	absent
+sts1	813508	Brutality+	life_payment	cost	present
+sts1	813514	Catalyst+	stat_multiply	does	present
+sts1	813516	Tactician+	discard	benefits	present
+sts1	813516	Tactician+	junk_cards	*	absent
+sts1	813521	Hologram+	discard	*	absent
+sts1	813521	Hologram+	return_to_hand	does	present
+sts1	813529	Fission+	sacrifice	does	present
+sts1	813536	Meditate+	discard	*	absent
+sts1	813536	Meditate+	drawback	does	present
+sts1	813536	Meditate+	return_to_hand	does	present
+sts1	813538	Alpha+	generate_cards	does	present
+sts1	813539	Blasphemy+	drawback	does	present
+sts1	813539	Blasphemy+	stat_multiply	does	present
+sts1	813540	Conjure Blade+	generate_cards	does	present
+sts1	813541	Deva Form+	resource_gain	does	present
+sts1	813541	Deva Form+	snowball	does	present
+sts1	813551	Enlightenment+	in_hand_buff	does	present
+sts1	813552	Forethought+	deck_position	does	present
+sts1	813554	Secret Technique+	draw	*	absent
+sts1	813554	Secret Technique+	tutor	does	present
+sts1	813555	Secret Weapon+	draw	*	absent
+sts1	813555	Secret Weapon+	tutor	does	present
+sts1	813556	Thinking Ahead+	deck_position	does	present
 sts2	758397	Eternal	immunity	*	absent
 sts2	758405	Accelerant	stat_multiply	does	present
 sts2	758408	Adaptive Strike	snowball	does	present
@@ -9014,8 +9067,8 @@ sts2	758455	Bolas	recycle	does	present
 sts2	758456	Bombardment	free_play	does	present
 sts2	758456	Bombardment	recycle	does	present
 sts2	758457	Bone Shards	sacrifice	does	present
-sts2	758457	Bone Shards	summon	cost	present
 sts2	758457	Bone Shards	summon	benefits	absent
+sts2	758457	Bone Shards	summon	cost	present
 sts2	758458	Boost Away	drawback	does	present
 sts2	758460	Borrowed Time	drawback	does	present
 sts2	758462	Brand	sacrifice	does	present
@@ -9230,8 +9283,8 @@ sts2	758752	Outbreak	count_payoff	does	present
 sts2	758754	Overclock	damage_over_time	*	absent
 sts2	758754	Overclock	drawback	does	present
 sts2	758755	Pact's End	condition	does	present
-sts2	758755	Pact's End	exhaust	benefits	present
 sts2	758755	Pact's End	exhaust	grants	absent
+sts2	758755	Pact's End	exhaust	benefits	present
 sts2	758756	Pagestorm	draw	does	present
 sts2	758757	Pale Blue Dot	combo_sequence	does	present
 sts2	758759	Panic Button	drawback	does	present
@@ -10669,6 +10722,50 @@ sts2	759746	Wood Carvings	modal_choice	does	present
 sts2	759747	Zen Weaver	activated	*	absent
 sts2	759747	Zen Weaver	modal_choice	does	present
 sts2	759750	Weary Traveler	heal	counters	present
+sts2	816332	Armaments+	deck_modification	*	absent
+sts2	816332	Armaments+	in_hand_buff	does	present
+sts2	816335	Demonic Shield+	team_play	does	present
+sts2	816337	Juggling+	combo_sequence	does	present
+sts2	816337	Juggling+	generate_cards	does	present
+sts2	816337	Juggling+	transform	*	absent
+sts2	816340	Aggression+	generate_cards	*	absent
+sts2	816344	Stoke+	sacrifice	does	present
+sts2	816355	Mirage+	count_payoff	does	present
+sts2	816355	Mirage+	damage_over_time	*	absent
+sts2	816357	Speedster+	draw	benefits	present
+sts2	816360	Knife Trap+	free_play	does	present
+sts2	816360	Knife Trap+	recycle	does	present
+sts2	816367	Largesse+	team_play	does	present
+sts2	816369	Monologue+	snowball	does	present
+sts2	816369	Monologue+	temporary_buff	does	present
+sts2	816376	Big Bang+	buff	does	present
+sts2	816383	Void Form+	drawback	does	present
+sts2	816395	Call of the Void+	exhaust	*	absent
+sts2	816397	Misery+	debuff	does	present
+sts2	816398	Reaper Form+	damage_over_time	does	present
+sts2	816399	Time's Up+	count_payoff	does	present
+sts2	816399	Time's Up+	damage_over_time	benefits	present
+sts2	816400	Transfigure+	cost_increase	does	present
+sts2	816400	Transfigure+	in_hand_buff	does	present
+sts2	816408	Ignition+	slots_queue	does	present
+sts2	816408	Ignition+	team_play	does	present
+sts2	816410	Tesla Coil+	repeat_trigger	does	present
+sts2	816418	Voltaic+	count_payoff	does	present
+sts2	816420	Stack+	block_armor	does	present
+sts2	816420	Stack+	count_payoff	does	present
+sts2	816420	Stack+	variable_stats	*	absent
+sts2	816424	Prolong+	block_armor	does	present
+sts2	816428	Anointed+	cost_condition	does	present
+sts2	816429	Beacon of Hope+	assists_support	does	present
+sts2	816429	Beacon of Hope+	team_play	does	present
+sts2	816430	Entropy+	random_effect	does	present
+sts2	816431	Gold Axe+	variable_stats	*	absent
+sts2	816432	Jackpot+	cost_condition	does	present
+sts2	816433	Knockdown+	team_play	does	present
+sts2	816434	Mimic+	team_play	does	present
+sts2	816439	Splash+	deckbuilding_effect	does	present
+sts2	816442	Wish+	draw	*	absent
+sts2	816457	Enlightenment+	in_hand_buff	does	present
 wh_40k_10e	784290	Power from Pain	activated	*	absent
 wh_40k_10e	784290	Power from Pain	bodyguard	*	absent
 wh_40k_10e	784300	Warp Rifts	reserve_bench	does	present
@@ -10701,6 +10798,10 @@ wh_40k_10e	784574	Stealth	protection	*	absent
 wh_40k_10e	784574	Stealth	stealth	does	present
 wh_40k_10e	784576	Lone Operative	merge_attach	*	absent
 wh_40k_10e	784863	Blasphemous Engine	damage	*	absent
+wh_40k_10e	785081	Stolid Bulk	attack_mod	does	present
+wh_40k_10e	785085	Sporebelch	turn_start	*	absent
+wh_40k_10e	785085	Sporebelch	zone_of_control	*	absent
+wh_40k_10e	785096	Veil of Flies	damage_reduction	does	present
 wh_40k_10e	785112	Drawback	advantage	*	absent
 wh_40k_10e	785112	Drawback	drawback	does	present
 wh_40k_10e	785112	Drawback	piercing	*	absent
@@ -10714,21 +10815,61 @@ wh_40k_10e	785244	Biomechanical Mutation	heal	does	present
 wh_40k_10e	785454	Dirtcycle	damage_reduction	*	absent
 wh_40k_10e	785454	Dirtcycle	ranged	counters	absent
 wh_40k_10e	785871	Brute Shield	graveyard	*	absent
+wh_40k_10e	785920	Indefatigable Will	attack_mod	does	present
 wh_40k_10e	786009	Desperate For Redemption	drawback	does	present
 wh_40k_10e	786009	Desperate For Redemption	zone_of_control	*	absent
+wh_40k_10e	786047	Stubborn Tenacity	attack_mod	does	present
+wh_40k_10e	786182	Defensive Mastery	placement_rules	does	present
+wh_40k_10e	786182	Defensive Mastery	start_of_game	does	present
+wh_40k_10e	786252	Chalice of Baal	advantage	*	absent
+wh_40k_10e	786252	Chalice of Baal	buff	does	present
+wh_40k_10e	786384	Astartes Tank Ace (Aura)	aura	does	present
+wh_40k_10e	786398	Quake Multigenerator	debuff	does	present
+wh_40k_10e	786398	Quake Multigenerator	delayed	*	absent
+wh_40k_10e	786398	Quake Multigenerator	passive	*	absent
+wh_40k_10e	786597	Psychic Shadow	terrain	*	absent
 wh_40k_10e	786604	By Instinct Alone	stealth	*	absent
 wh_40k_10e	786634	Autodivinator	drawback	*	absent
 wh_40k_10e	786676	Depleted Transmaterial Reserves	drawback	does	present
+wh_40k_10e	786840	Esteemed Leader	stress_morale	*	absent
 wh_40k_10e	786888	Betrayed	destroy	*	absent
 wh_40k_10e	786888	Betrayed	drawback	does	present
+wh_40k_10e	786931	Floating Death	self_destruct	does	present
 wh_40k_10e	786949	Battle-weary	destroy	*	absent
 wh_40k_10e	786949	Battle-weary	drawback	does	present
 wh_40k_10e	786952	Disgraced	drawback	does	present
 wh_40k_10e	786952	Disgraced	mark_target	*	absent
 wh_40k_10e	786952	Disgraced	zone_of_control	*	absent
 wh_40k_10e	787018	Evasive	piercing	*	absent
+wh_aos_4th	791251	Grapple-net Launcher	debuff	does	present
+wh_aos_4th	791251	Grapple-net Launcher	zone_of_control	*	absent
+wh_aos_4th	791257	Frenzied Restoration	revive	does	present
+wh_aos_4th	791297	Witchbrew	delayed	*	absent
+wh_aos_4th	791351	Destined Arcana	coin_economy	does	present
+wh_aos_4th	791351	Destined Arcana	spell_power	does	present
+wh_aos_4th	791363	Inevitable Ending	coin_economy	does	present
+wh_aos_4th	791375	A Majestic Menagerie	aura	does	present
 wh_aos_4th	791689	Lord of Storm and Sea	destroy	*	absent
+wh_aos_4th	791739	Amberbone Whetstone	placement_rules	*	absent
+wh_aos_4th	791739	Amberbone Whetstone	start_of_game	does	present
+wh_aos_4th	791816	Experimental Aether-powered Ejector Rig	movement	does	present
+wh_aos_4th	792309	Sworn Defenders	assists_support	does	present
+wh_aos_4th	792309	Sworn Defenders	zone_of_control	*	absent
+wh_aos_4th	792435	There Is No Escape	mark_target	does	present
+wh_aos_4th	792526	Shattering Strike	debuff	*	absent
+wh_aos_4th	792526	Shattering Strike	drawback	does	present
+wh_aos_4th	792526	Shattering Strike	multi_attack	does	present
+wh_aos_4th	793022	Friendly Competition	attack_mod	does	present
+wh_aos_4th	793022	Friendly Competition	destroy	*	absent
+wh_aos_4th	793062	Subtle Tactician	damage_reduction	does	present
+wh_aos_4th	793095	Foulhide	regeneration	does	present
+wh_aos_4th	793119	Black Ritual Dagger	damage	*	absent
+wh_aos_4th	793119	Black Ritual Dagger	life_payment	cost	present
 wh_aos_4th	793255	Grave Sentinels	tribal	*	absent
+wh_aos_4th	793276	Eternal Champion	revive	does	present
+wh_aos_4th	793291	Keeper of the Royal Menagerie	revive	does	present
+wh_aos_4th	793353	Defensive Mastery	debuff	*	absent
+wh_aos_4th	793353	Defensive Mastery	drawback	does	present
 wh_bloodbowl3	794599	Blitzer's Best Kegs	destroy	*	absent
 wh_bloodbowl3	794599	Blitzer's Best Kegs	revive	does	present
 wh_bloodbowl3	794603	Plague Doctor	turn_structure	*	absent
