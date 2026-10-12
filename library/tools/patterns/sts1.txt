@@ -49,3 +49,6 @@ aoe_damage|does|\ball enemies lose hp\b
 mark_target|does|\bapply \d+ mark\b
 !damage_over_time|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)
 !graveyard|discard pile
+temporary_effect|does|this turn
+multi_attack|does|damage x[2-9]
+debuff|does|\((attack |strong )?debuff\)|attack debuff

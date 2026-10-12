@@ -1,0 +1,175 @@
+758074	+temporary_effect	this-turn effect missed
+758074	-run_structure	run_structure without text
+758295	+buff	monster buff action missed
+757552	+condition	if condition missed
+757749	-start_of_game	innate tagged start_of_game
+757749	-high_cost:benefits	high_cost:benefits without cost text
+757608	+debuff:counters	artifact tagged immunity
+757608	-immunity	artifact tagged immunity
+757997	-summon:benefits	card play tagged summon:benefits
+757997	-run_structure	run_structure without text
+757950	-damage:benefits	strength tagged damage:benefits
+757973	+heal:counters	heal prevention missed
+757973	-run_structure	run_structure without text
+758161	+aoe_damage	all enemies damage tagged plain damage
+758161	-damage	all enemies damage tagged plain damage
+758161	-random_effect	random_effect without text
+757878	-high_cost:benefits	high_cost:benefits without cost text
+758321	+multi_attack	monster multi-hit missed
+758321	+debuff	monster debuff action missed
+757702	-high_cost:benefits	high_cost:benefits without cost text
+757702	-resource_gain	gold tagged resource_gain
+757584	-high_cost:benefits	high_cost:benefits without cost text
+757584	-self_destruct	ethereal tagged self_destruct
+757517	+card_flow	discard from draw pile missed
+813541	+permanent_growth	growing gain missed
+813541	-high_cost:benefits	high_cost:benefits without cost text
+758370	-modal_choice	single event choice tagged modal_choice
+757889	-start_of_game	innate tagged start_of_game
+758114	+buff	additional damage tagged damage
+758114	-damage	additional damage tagged damage
+758293	+debuff	monster debuff action missed
+758298	+debuff	monster debuff action missed
+758214	+mark_target	mark tagged debuff
+758214	-debuff	mark tagged debuff
+758214	-combo_sequence	card play tagged combo_sequence
+758214	-summon:benefits	card play tagged summon:benefits
+757946	+deck_position	draw pile order missed
+757946	-run_structure	run_structure without text
+757760	+on_ally_play	card play trigger missed
+758246	-summon:benefits	card play tagged summon:benefits
+813567	-high_cost:benefits	high_cost:benefits without cost text
+757722	-delayed	block tagged delayed
+758097	-run_structure	run_structure without text
+757592	-resource_gain	stance tagged resource_gain
+757592	-turn_end	turn_end without text
+757814	+condition	if condition missed
+757814	-delayed	block tagged delayed
+757814	-exhaust	exhaust payoff tagged exhaust
+758159	+temporary_effect	this-turn effect missed
+758046	+recycle:benefits	shuffle trigger missed
+758046	-delayed	block tagged delayed
+758046	-run_structure	run_structure without text
+757880	+temporary_effect	this-turn effect missed
+757922	-passive	passive without text
+757922	-run_structure	run_structure without text
+758252	-damage	additional damage tagged damage
+758031	+condition	if condition missed
+758031	-run_structure	run_structure without text
+757715	+condition	if condition missed
+757715	-drawback	drawback without text
+757715	-stat_multiply	vulnerable tagged stat_multiply
+813566	-turn_end	turn_end without text
+757938	+condition	if condition missed
+757938	-run_structure	run_structure without text
+813559	+generate_cards	shuffle-in card creation missed
+813559	-high_cost:benefits	high_cost:benefits without cost text
+758058	-run_structure	run_structure without text
+757726	-delayed	block tagged delayed
+757724	+condition	if condition missed
+758193	+condition	if condition missed
+758193	-delayed	block tagged delayed
+758193	-resource_gain	stance tagged resource_gain
+757712	-high_cost:benefits	high_cost:benefits without cost text
+813558	+damage_reduction	intangible missed
+757960	-run_structure	run_structure without text
+813527	-high_cost:benefits	high_cost:benefits without cost text
+757916	-run_structure	run_structure without text
+758372	-sacrifice	losing items tagged sacrifice
+758061	-run_structure	run_structure without text
+758150	+permanent_growth	growing gain missed
+757590	-high_cost:benefits	high_cost:benefits without cost text
+757678	+temporary_effect	this-turn effect missed
+757678	-delayed	block tagged delayed
+757678	-high_cost:benefits	high_cost:benefits without cost text
+757792	-concentration	channel tagged concentration
+757611	-high_cost:benefits	high_cost:benefits without cost text
+758273	+multi_attack	monster multi-hit missed
+758273	-stances	action name tagged stances
+757829	-delayed	block tagged delayed
+813535	+temporary_effect	this-turn effect missed
+758002	-run_structure	run_structure without text
+813518	-start_of_game	innate tagged start_of_game
+813518	-summon:benefits	card play tagged summon:benefits
+758010	-run_structure	run_structure without text
+758364	-resource_gain	gold tagged resource_gain
+758093	-run_structure	run_structure without text
+758001	-run_structure	run_structure without text
+758008	-run_structure	run_structure without text
+758008	-buff:counters	enemy strength tagged buff:counters
+758008	-stacking_keyword:counters	enemy strength tagged buff:counters
+757892	+block_armor	start-of-combat block missed
+757892	-run_structure	run_structure without text
+758095	+buff	max HP gain tagged permanent_growth
+758095	-run_structure	run_structure without text
+758095	-permanent_growth	max HP gain tagged permanent_growth
+757981	-run_structure	run_structure without text
+758274	+multi_attack	monster multi-hit missed
+757903	+rule_change	rule change missed
+757903	-run_structure	run_structure without text
+757903	-summon:benefits	card play tagged summon:benefits
+757914	-run_structure	run_structure without text
+757665	-high_cost:benefits	high_cost:benefits without cost text
+757865	-high_cost:benefits	high_cost:benefits without cost text
+757736	+cost_set	cost to 0 tagged cost_reduction
+757736	-cost_reduction	cost to 0 tagged cost_reduction
+758053	-turn_start	start of combat tagged turn_start
+758053	-run_structure	run_structure without text
+758190	+block_armor:benefits	block trigger tagged block_armor
+758190	-delayed	block tagged delayed
+758190	-block_armor	block trigger tagged block_armor
+758308	+debuff	monster debuff action missed
+757873	-delayed	block tagged delayed
+757873	-high_cost:benefits	high_cost:benefits without cost text
+757576	-high_cost:benefits	high_cost:benefits without cost text
+757939	-run_structure	run_structure without text
+758174	-draw	draw trigger tagged draw
+758174	-junk_cards	draw trigger tagged draw
+758311	+multi_attack	monster multi-hit missed
+758311	+debuff	monster debuff action missed
+758024	+information	intent hiding tagged telegraphed_threats:benefits
+758024	-run_structure	run_structure without text
+758024	-telegraphed_threats:benefits	intent hiding tagged telegraphed_threats:benefits
+758365	-resource_gain	gold tagged resource_gain
+757991	-turn_start	start of combat tagged turn_start
+757991	-concentration	channel tagged concentration
+757991	-resource_gain	resource_gain without text
+757991	-run_structure	run_structure without text
+758259	-stat_multiply	wrath tagged stat_multiply
+758259	-drawback	drawback without text
+757518	-generate_cards	reminder text tagged
+757970	-run_structure	run_structure without text
+757532	+buff	additional damage tagged damage
+757532	-damage	additional damage tagged damage
+757804	+condition	if condition missed
+758121	+debuff:counters	artifact tagged immunity
+758121	-immunity	artifact tagged immunity
+758099	-run_structure	run_structure without text
+758084	+temporary_effect	this-turn effect missed
+758084	-run_structure	run_structure without text
+757662	+condition	if condition missed
+757662	-delayed	block tagged delayed
+757660	-high_cost:benefits	high_cost:benefits without cost text
+757660	-turn_start	turn_start without text
+758004	-run_structure	run_structure without text
+757720	+condition	if condition missed
+757720	-resource_gain	stance tagged resource_gain
+758044	-turn_start	start of combat tagged turn_start
+758044	-concentration	channel tagged concentration
+758044	-permanent_growth	permanent_growth without text
+758044	-run_structure	run_structure without text
+758353	-modal_choice	single event choice tagged modal_choice
+757725	-delayed	block tagged delayed
+757725	-high_cost:benefits	high_cost:benefits without cost text
+757725	-block_armor	block trigger tagged block_armor
+757904	-run_structure	run_structure without text
+757904	-damage	additional damage tagged damage
+758017	-turn_start	start of combat tagged turn_start
+758017	-run_structure	run_structure without text
+758083	+deck_position	top of deck missed
+758083	-run_structure	run_structure without text
+757851	-high_cost:benefits	high_cost:benefits without cost text
+757763	+temporary_effect	this-turn effect missed
+757763	-delayed	block tagged delayed
+758115	-stat_multiply	wrath tagged stat_multiply
+758115	-stances	stance trigger tagged stances

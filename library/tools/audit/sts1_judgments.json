@@ -1,0 +1,650 @@
+{
+ "757882": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits",
+    "snowball"
+   ],
+   "missed": [
+    "permanent_growth: increase its damage by 4 each time Retained"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits",
+    "snowball"
+   ],
+   "missed": [
+    "permanent_growth: increase its damage by 4 each time Retained"
+   ]
+  }
+ },
+ "758271": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "multi_attack: Peck, 1 damage x5"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758015": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757620": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "758022": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758066": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  }
+ },
+ "757698": {
+  "A": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  }
+ },
+ "757926": {
+  "A": {
+   "wrong": [
+    "concentration",
+    "damage",
+    "random_effect",
+    "turn_start"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "concentration",
+    "damage",
+    "random_effect",
+    "turn_start"
+   ],
+   "missed": []
+  }
+ },
+ "757545": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757982": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757863": {
+  "A": {
+   "wrong": [
+    "delayed",
+    "high_cost:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "delayed",
+    "high_cost:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "758075": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "in_hand_buff: upgrade all cards in your hand"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "in_hand_buff: upgrade all cards in your hand"
+   ]
+  }
+ },
+ "758059": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758318": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "debuff: Bash (attack debuff)"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758007": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757913": {
+  "A": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  }
+ },
+ "757986": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "stat_set: enemies will have 1 HP"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "stat_set: enemies will have 1 HP"
+   ]
+  }
+ },
+ "757855": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "758357": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757844": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "combo_sequence: the next Attack you play costs 0"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "combo_sequence: the next Attack you play costs 0"
+   ]
+  }
+ },
+ "757489": {
+  "A": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  }
+ },
+ "758043": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758045": {
+  "A": {
+   "wrong": [
+    "resource_gain"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "resource_gain"
+   ],
+   "missed": []
+  }
+ },
+ "758130": {
+  "A": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  }
+ },
+ "758119": {
+  "A": {
+   "wrong": [
+    "on_ally_play",
+    "summon:benefits",
+    "snowball"
+   ],
+   "missed": [
+    "reactions: gains Strength whenever the opponent (you) plays a Skill"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "on_ally_play",
+    "summon:benefits",
+    "snowball"
+   ],
+   "missed": [
+    "reactions: gains Strength whenever the opponent (you) plays a Skill"
+   ]
+  }
+ },
+ "757828": {
+  "A": {
+   "wrong": [
+    "concentration",
+    "random_effect"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "concentration",
+    "random_effect"
+   ],
+   "missed": []
+  }
+ },
+ "757959": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758106": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "drawback: receive no rewards"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "drawback: receive no rewards"
+   ]
+  }
+ },
+ "757516": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757723": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758143": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "aoe_damage: deal damage to ALL enemies"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "aoe_damage: deal damage to ALL enemies"
+   ]
+  }
+ },
+ "757669": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "758055": {
+  "A": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "delayed"
+   ],
+   "missed": []
+  }
+ },
+ "758090": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757673": {
+  "A": {
+   "wrong": [
+    "count_payoff",
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "condition_count: 7 damage for each card Exhausted"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "count_payoff",
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "condition_count: 7 damage for each card Exhausted"
+   ]
+  }
+ },
+ "757581": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "draw: then draw that many cards"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "draw: then draw that many cards"
+   ]
+  }
+ },
+ "758056": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "813563": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757521": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758187": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757560": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757573": {
+  "A": {
+   "wrong": [
+    "count_payoff"
+   ],
+   "missed": [
+    "condition_count: 7 damage for each enemy in combat"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "count_payoff"
+   ],
+   "missed": [
+    "condition_count: 7 damage for each enemy in combat"
+   ]
+  }
+ },
+ "757505": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757953": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757502": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757776": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757743": {
+  "A": {
+   "wrong": [
+    "return_to_hand",
+    "resource_gain"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "return_to_hand",
+    "resource_gain"
+   ],
+   "missed": []
+  }
+ },
+ "758351": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "757600": {
+  "A": {
+   "wrong": [
+    "count_payoff"
+   ],
+   "missed": [
+    "condition_count: draw 1 for each unique Orb you have"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "count_payoff"
+   ],
+   "missed": [
+    "condition_count: draw 1 for each unique Orb you have"
+   ]
+  }
+ },
+ "758131": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ }
+}

@@ -53,9 +53,16 @@
 "758273": {
 "add": [
 "telegraphed_threats",
-"boss_phases"
+"boss_phases",
+"multi_attack",
+"block_armor",
+"buff",
+"damage",
+"debuff"
 ],
-"drop": []
+"drop": [
+"stances"
+]
 },
 "758320": {
 "add": [
@@ -68,7 +75,12 @@
 "758321": {
 "add": [
 "telegraphed_threats",
-"boss_phases"
+"boss_phases",
+"multi_attack",
+"debuff",
+"block_armor",
+"buff",
+"damage"
 ],
 "drop": []
 },
@@ -162,7 +174,9 @@
 },
 "758336": {
 "add": [
-"modal_choice"
+"modal_choice",
+"random_effect",
+"shop_gold"
 ],
 "drop": []
 },
@@ -296,9 +310,12 @@
 },
 "758353": {
 "add": [
-"modal_choice"
+"deck_modification",
+"run_structure"
 ],
-"drop": []
+"drop": [
+"modal_choice"
+]
 },
 "758354": {
 "add": [
@@ -378,19 +395,24 @@
 "758364": {
 "add": [
 "modal_choice",
-"heal"
+"heal",
+"permanent_loss",
+"shop_gold"
 ],
 "drop": [
-"regeneration"
+"regeneration",
+"resource_gain"
 ]
 },
 "758365": {
 "add": [
-"modal_choice"
+"modal_choice",
+"shop_gold"
 ],
 "drop": [
 "permanent_growth",
-"turn_end"
+"turn_end",
+"resource_gain"
 ]
 },
 "758366": {
@@ -423,9 +445,13 @@
 },
 "758370": {
 "add": [
-"modal_choice"
+"deck_modification",
+"run_structure",
+"upgrade"
 ],
-"drop": []
+"drop": [
+"modal_choice"
+]
 },
 "758371": {
 "add": [
@@ -441,9 +467,12 @@
 "758372": {
 "add": [
 "modal_choice",
-"sacrifice"
+"items_consumables",
+"shop_gold"
 ],
-"drop": []
+"drop": [
+"sacrifice"
+]
 },
 "758373": {
 "add": [
@@ -491,9 +520,17 @@
 },
 "758074": {
 "add": [
-"items_consumables"
+"items_consumables",
+"temporary_effect",
+"copy",
+"cost_set",
+"generate_cards",
+"random_effect",
+"selection"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "758075": {
 "add": [
@@ -548,15 +585,23 @@
 },
 "758083": {
 "add": [
-"items_consumables"
+"items_consumables",
+"deck_position",
+"free_play"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "758084": {
 "add": [
-"items_consumables"
+"items_consumables",
+"temporary_effect",
+"repeat_trigger"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "758085": {
 "add": [
@@ -618,9 +663,12 @@
 },
 "758093": {
 "add": [
-"items_consumables"
+"items_consumables",
+"damage"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "758110": {
 "add": [
@@ -638,9 +686,12 @@
 "758095": {
 "add": [
 "items_consumables",
-"permanent_growth"
+"buff"
 ],
-"drop": []
+"drop": [
+"run_structure",
+"permanent_growth"
+]
 },
 "758096": {
 "add": [
@@ -651,9 +702,12 @@
 },
 "758097": {
 "add": [
-"items_consumables"
+"items_consumables",
+"damage_reduction"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "758098": {
 "add": [
@@ -664,9 +718,12 @@
 },
 "758099": {
 "add": [
-"items_consumables"
+"items_consumables",
+"counterattack"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "758100": {
 "add": [
@@ -772,7 +829,8 @@
 },
 "758268": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage"
 ],
 "drop": []
 },
@@ -792,7 +850,10 @@
 },
 "758274": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"multi_attack",
+"damage",
+"debuff"
 ],
 "drop": []
 },
@@ -858,13 +919,17 @@
 },
 "758292": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage"
 ],
 "drop": []
 },
 "758295": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"buff",
+"block_armor",
+"damage"
 ],
 "drop": []
 },
@@ -911,7 +976,10 @@
 "758293": {
 "add": [
 "telegraphed_threats",
-"heal"
+"heal",
+"debuff",
+"buff",
+"damage"
 ],
 "drop": []
 },
@@ -942,7 +1010,9 @@
 },
 "758303": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"debuff"
 ],
 "drop": []
 },
@@ -982,7 +1052,10 @@
 },
 "758311": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"multi_attack",
+"debuff",
+"damage"
 ],
 "drop": []
 },
@@ -1013,7 +1086,9 @@
 },
 "758316": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"damage",
+"debuff"
 ],
 "drop": []
 },
@@ -1049,13 +1124,18 @@
 },
 "758308": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"debuff",
+"damage"
 ],
 "drop": []
 },
 "758298": {
 "add": [
-"telegraphed_threats"
+"telegraphed_threats",
+"debuff",
+"buff",
+"damage"
 ],
 "drop": []
 },
@@ -1088,17 +1168,19 @@
 "add": [
 "items_consumables",
 "passive",
-"combat_start"
+"combat_start",
+"block_armor"
 ],
 "drop": [
-"block_armor:benefits"
+"run_structure"
 ]
 },
 "757893": {
 "add": [
 "items_consumables",
 "passive",
-"resource_gain"
+"resource_gain",
+"rest_phase"
 ],
 "drop": []
 },
@@ -1173,11 +1255,17 @@
 "add": [
 "items_consumables",
 "passive",
-"life_payment:cost"
+"life_payment:cost",
+"rule_change",
+"exhaust",
+"junk_cards",
+"on_ally_play"
 ],
 "drop": [
 "damage",
-"debuff"
+"debuff",
+"run_structure",
+"summon:benefits"
 ]
 },
 "757905": {
@@ -1255,10 +1343,12 @@
 "757914": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"junk_cards"
 ],
 "drop": [
-"debuff"
+"debuff",
+"run_structure"
 ]
 },
 "757915": {
@@ -1272,9 +1362,12 @@
 "757916": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"random_effect"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "757917": {
 "add": [
@@ -1314,10 +1407,12 @@
 },
 "757922": {
 "add": [
-"items_consumables",
-"passive"
+"items_consumables"
 ],
-"drop": []
+"drop": [
+"passive",
+"run_structure"
+]
 },
 "757923": {
 "add": [
@@ -1402,7 +1497,8 @@
 "757933": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"shop_gold"
 ],
 "drop": []
 },
@@ -1452,16 +1548,23 @@
 "items_consumables",
 "passive",
 "on_damaged",
-"repeat_trigger"
+"repeat_trigger",
+"condition",
+"turn_start"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "757939": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"deck_modification"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "757940": {
 "add": [
@@ -1511,9 +1614,12 @@
 "add": [
 "items_consumables",
 "passive",
-"information"
+"information",
+"deck_position"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "757947": {
 "add": [
@@ -1541,9 +1647,14 @@
 "757950": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"buff",
+"rest_phase",
+"stacking_keyword"
 ],
-"drop": []
+"drop": [
+"damage:benefits"
+]
 },
 "757912": {
 "add": [
@@ -1628,7 +1739,9 @@
 "passive",
 "resource_banking"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "757961": {
 "add": [
@@ -1707,7 +1820,9 @@
 "passive",
 "heal:benefits"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "757971": {
 "add": [
@@ -1729,9 +1844,12 @@
 "add": [
 "items_consumables",
 "passive",
-"drawback"
+"drawback",
+"heal:counters"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "757974": {
 "add": [
@@ -1789,10 +1907,13 @@
 "757981": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"aoe_damage",
+"turn_start"
 ],
 "drop": [
-"damage_over_time"
+"damage_over_time",
+"run_structure"
 ]
 },
 "757982": {
@@ -1828,7 +1949,8 @@
 "add": [
 "items_consumables",
 "passive",
-"drawback"
+"drawback",
+"run_structure"
 ],
 "drop": []
 },
@@ -1866,9 +1988,16 @@
 "757991": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"combat_start",
+"slots_queue"
 ],
-"drop": []
+"drop": [
+"turn_start",
+"concentration",
+"resource_gain",
+"run_structure"
+]
 },
 "757992": {
 "add": [
@@ -1915,9 +2044,13 @@
 "items_consumables",
 "passive",
 "variety_payoff",
-"debuff:counters"
+"debuff:counters",
+"on_ally_play"
 ],
-"drop": []
+"drop": [
+"summon:benefits",
+"run_structure"
+]
 },
 "757998": {
 "add": [
@@ -1945,19 +2078,25 @@
 "758001": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"random_effect",
+"transform"
 ],
 "drop": [
-"damage"
+"damage",
+"run_structure"
 ]
 },
 "758002": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"combat_start",
+"heal"
 ],
 "drop": [
-"regeneration"
+"regeneration",
+"run_structure"
 ]
 },
 "758003": {
@@ -1978,7 +2117,8 @@
 "debuff:benefits"
 ],
 "drop": [
-"debuff:counters"
+"debuff:counters",
+"run_structure"
 ]
 },
 "758005": {
@@ -2009,9 +2149,15 @@
 "items_consumables",
 "passive",
 "enemy_benefit",
-"drawback"
+"drawback",
+"resource_gain",
+"turn_start"
 ],
-"drop": []
+"drop": [
+"run_structure",
+"buff:counters",
+"stacking_keyword:counters"
+]
 },
 "758009": {
 "add": [
@@ -2025,13 +2171,16 @@
 "items_consumables",
 "passive"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "758011": {
 "add": [
 "items_consumables",
 "passive",
-"deckbuilding_effect"
+"deckbuilding_effect",
+"run_structure"
 ],
 "drop": []
 },
@@ -2077,9 +2226,14 @@
 "758017": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"combat_start",
+"debuff"
 ],
-"drop": []
+"drop": [
+"turn_start",
+"run_structure"
+]
 },
 "758018": {
 "add": [
@@ -2124,10 +2278,14 @@
 "add": [
 "items_consumables",
 "passive",
-"drawback"
+"drawback",
+"information",
+"resource_gain",
+"turn_start"
 ],
 "drop": [
-"information"
+"run_structure",
+"telegraphed_threats:benefits"
 ]
 },
 "758025": {
@@ -2181,9 +2339,14 @@
 "758031": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"condition",
+"resource_gain",
+"turn_start"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "758032": {
 "add": [
@@ -2280,9 +2443,16 @@
 "758044": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"combat_start",
+"slots_queue"
 ],
-"drop": []
+"drop": [
+"turn_start",
+"concentration",
+"permanent_growth",
+"run_structure"
+]
 },
 "758045": {
 "add": [
@@ -2295,16 +2465,24 @@
 "758046": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"recycle:benefits",
+"block_armor"
 ],
-"drop": []
+"drop": [
+"delayed",
+"run_structure"
+]
 },
 "757904": {
 "add": [
 "items_consumables",
 "passive"
 ],
-"drop": []
+"drop": [
+"run_structure",
+"damage"
+]
 },
 "758047": {
 "add": [
@@ -2358,9 +2536,16 @@
 "758053": {
 "add": [
 "items_consumables",
-"passive"
+"passive",
+"combat_start",
+"generate_cards",
+"random_effect",
+"selection"
 ],
-"drop": []
+"drop": [
+"turn_start",
+"run_structure"
+]
 },
 "758054": {
 "add": [
@@ -2397,7 +2582,9 @@
 "passive",
 "damage_reduction"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "758059": {
 "add": [
@@ -2420,9 +2607,12 @@
 "add": [
 "items_consumables",
 "passive",
-"hand_size"
+"hand_size",
+"draw"
 ],
-"drop": []
+"drop": [
+"run_structure"
+]
 },
 "758062": {
 "add": [
@@ -2506,18 +2696,25 @@
 },
 "757510": {
 "add": [
-"play_restriction"
+"play_restriction",
+"combo_sequence"
 ],
 "drop": []
 },
 "757518": {
-"add": [],
+"add": [
+"exhaust"
+],
 "drop": [
-"cost_condition"
+"cost_condition",
+"generate_cards"
 ]
 },
 "757523": {
-"add": [],
+"add": [
+"random_effect",
+"transform"
+],
 "drop": [
 "generate_cards"
 ]
@@ -2583,7 +2780,9 @@
 },
 "757552": {
 "add": [
-"damage_over_time:benefits"
+"damage_over_time:benefits",
+"condition",
+"damage"
 ],
 "drop": [
 "damage_over_time"
@@ -2703,7 +2902,10 @@
 },
 "757590": {
 "add": [
-"generate_cards"
+"generate_cards",
+"cost_set",
+"exhaust",
+"random_effect"
 ],
 "drop": []
 },
@@ -2717,13 +2919,17 @@
 },
 "757692": {
 "add": [
-"snowball"
+"snowball",
+"damage"
 ],
 "drop": []
 },
 "757598": {
 "add": [
-"delayed"
+"delayed",
+"exhaust",
+"generate_cards",
+"turn_start"
 ],
 "drop": []
 },
@@ -2866,9 +3072,13 @@
 },
 "757660": {
 "add": [
-"on_attack"
+"on_attack",
+"damage_over_time",
+"stacking_keyword"
 ],
-"drop": []
+"drop": [
+"turn_start"
+]
 },
 "757664": {
 "add": [
@@ -2879,7 +3089,10 @@
 "757665": {
 "add": [
 "discard:benefits",
-"count_payoff"
+"count_payoff",
+"cost_reduction",
+"damage",
+"multi_attack"
 ],
 "drop": []
 },
@@ -2957,9 +3170,14 @@
 },
 "757678": {
 "add": [
-"counterattack"
+"counterattack",
+"temporary_effect",
+"block_armor",
+"damage"
 ],
-"drop": []
+"drop": [
+"delayed"
+]
 },
 "757680": {
 "add": [
@@ -2974,7 +3192,12 @@
 "drop": []
 },
 "757682": {
-"add": [],
+"add": [
+"damage",
+"return_to_hand",
+"stances",
+"stances:benefits"
+],
 "drop": [
 "revive",
 "discard"
@@ -3060,7 +3283,8 @@
 },
 "757709": {
 "add": [
-"life_payment:cost"
+"life_payment:cost",
+"damage"
 ],
 "drop": []
 },
@@ -3080,7 +3304,10 @@
 },
 "757712": {
 "add": [
-"drawback"
+"drawback",
+"aoe_damage",
+"generate_cards",
+"junk_cards"
 ],
 "drop": [
 "discard",
@@ -3096,16 +3323,20 @@
 },
 "757724": {
 "add": [
-"finisher"
+"finisher",
+"condition",
+"destroy"
 ],
 "drop": []
 },
 "757725": {
 "add": [
-"block_armor:benefits"
+"damage",
+"random_effect"
 ],
 "drop": [
-"block_armor"
+"block_armor",
+"delayed"
 ]
 },
 "757727": {
@@ -3127,10 +3358,14 @@
 },
 "757736": {
 "add": [
-"in_hand_buff"
+"in_hand_buff",
+"cost_set",
+"exhaust",
+"random_effect"
 ],
 "drop": [
-"generate_cards"
+"generate_cards",
+"cost_reduction"
 ]
 },
 "757738": {
@@ -3173,9 +3408,15 @@
 },
 "757749": {
 "add": [
-"deck_condition"
+"deck_condition",
+"combat_start",
+"condition_count",
+"damage",
+"variable_stats"
 ],
-"drop": []
+"drop": [
+"start_of_game"
+]
 },
 "757750": {
 "add": [
@@ -3226,17 +3467,23 @@
 },
 "757760": {
 "add": [
-"drawback"
+"drawback",
+"on_ally_play",
+"junk_cards",
+"passive"
 ],
-"drop": [
-"on_ally_play"
-]
+"drop": []
 },
 "757763": {
 "add": [
-"drawback"
+"drawback",
+"temporary_effect",
+"block_armor",
+"exhaust"
 ],
-"drop": []
+"drop": [
+"delayed"
+]
 },
 "757764": {
 "add": [
@@ -3283,13 +3530,16 @@
 },
 "757779": {
 "add": [
-"multi_attack"
+"multi_attack",
+"damage",
+"exhaust"
 ],
 "drop": []
 },
 "757785": {
 "add": [
-"snowball"
+"snowball",
+"damage"
 ],
 "drop": []
 },
@@ -3330,9 +3580,12 @@
 },
 "757792": {
 "add": [
-"repeat_trigger"
+"repeat_trigger",
+"slots_queue"
 ],
-"drop": []
+"drop": [
+"concentration"
+]
 },
 "757791": {
 "add": [
@@ -3365,7 +3618,11 @@
 },
 "757799": {
 "add": [
-"snowball"
+"snowball",
+"damage",
+"exhaust",
+"on_kill",
+"permanent_growth"
 ],
 "drop": []
 },
@@ -3403,7 +3660,10 @@
 },
 "757804": {
 "add": [
-"combo_sequence"
+"combo_sequence",
+"condition",
+"damage",
+"debuff"
 ],
 "drop": []
 },
@@ -3462,9 +3722,14 @@
 },
 "757814": {
 "add": [
-"exhaust:benefits"
+"condition",
+"block_armor",
+"resource_gain"
 ],
-"drop": []
+"drop": [
+"delayed",
+"exhaust"
+]
 },
 "757815": {
 "add": [
@@ -3536,10 +3801,12 @@
 },
 "757829": {
 "add": [
-"drawback"
+"drawback",
+"block_armor"
 ],
 "drop": [
-"blocking"
+"blocking",
+"delayed"
 ]
 },
 "757832": {
@@ -3604,7 +3871,8 @@
 },
 "757851": {
 "add": [
-"delayed"
+"delayed",
+"aoe_damage"
 ],
 "drop": [
 "damage_over_time"
@@ -3630,7 +3898,9 @@
 },
 "757865": {
 "add": [
-"free_play"
+"free_play",
+"exhaust",
+"random_effect"
 ],
 "drop": [
 "adjacency"
@@ -3706,9 +3976,13 @@
 },
 "757889": {
 "add": [
-"drawback"
+"drawback",
+"combat_start",
+"junk_cards"
 ],
-"drop": []
+"drop": [
+"start_of_game"
+]
 },
 "758120": {
 "add": [
@@ -3719,10 +3993,11 @@
 },
 "758121": {
 "add": [
-"immunity"
+"debuff:counters"
 ],
 "drop": [
-"counter_spell"
+"counter_spell",
+"immunity"
 ]
 },
 "758123": {
@@ -3859,7 +4134,8 @@
 },
 "758156": {
 "add": [
-"draw"
+"draw",
+"turn_start"
 ],
 "drop": []
 },
@@ -3886,7 +4162,9 @@
 },
 "758170": {
 "add": [
-"junk_cards:benefits"
+"junk_cards:benefits",
+"draw",
+"draw:benefits"
 ],
 "drop": []
 },
@@ -3910,14 +4188,18 @@
 },
 "758174": {
 "add": [
-"junk_cards:benefits"
+"aoe_damage"
 ],
 "drop": [
-"debuff"
+"debuff",
+"draw",
+"junk_cards"
 ]
 },
 "758175": {
-"add": [],
+"add": [
+"counterattack"
+],
 "drop": [
 "damage"
 ]
@@ -3984,10 +4266,15 @@
 },
 "758214": {
 "add": [
-"debuff",
-"combo_sequence"
+"mark_target",
+"damage",
+"on_ally_play"
 ],
-"drop": []
+"drop": [
+"debuff",
+"combo_sequence",
+"summon:benefits"
+]
 },
 "758202": {
 "add": [
@@ -4056,13 +4343,18 @@
 ]
 },
 "758223": {
-"add": [],
+"add": [
+"heal",
+"turn_end"
+],
 "drop": [
 "regeneration"
 ]
 },
 "758224": {
-"add": [],
+"add": [
+"heal"
+],
 "drop": [
 "regeneration"
 ]
@@ -4075,10 +4367,14 @@
 "drop": []
 },
 "758115": {
-"add": [],
+"add": [
+"draw"
+],
 "drop": [
 "buff",
-"drawback"
+"drawback",
+"stat_multiply",
+"stances"
 ]
 },
 "758228": {
@@ -4107,9 +4403,13 @@
 },
 "758259": {
 "add": [
-"turn_start"
+"turn_start",
+"stances"
 ],
-"drop": []
+"drop": [
+"stat_multiply",
+"drawback"
+]
 },
 "758232": {
 "add": [
@@ -4127,7 +4427,8 @@
 },
 "758235": {
 "add": [
-"death_trigger"
+"death_trigger",
+"debuff"
 ],
 "drop": []
 },
@@ -4213,7 +4514,9 @@
 "add": [
 "temporary_buff"
 ],
-"drop": []
+"drop": [
+"damage"
+]
 },
 "758253": {
 "add": [
@@ -4321,7 +4624,9 @@
 "813541": {
 "add": [
 "resource_gain",
-"snowball"
+"snowball",
+"permanent_growth",
+"turn_start"
 ],
 "drop": []
 },
@@ -4356,6 +4661,403 @@
 "813556": {
 "add": [
 "deck_position"
+],
+"drop": []
+},
+"757608": {
+"add": [
+"debuff:counters",
+"damage",
+"exhaust"
+],
+"drop": [
+"immunity"
+]
+},
+"758161": {
+"add": [
+"aoe_damage",
+"slots_queue"
+],
+"drop": [
+"damage",
+"random_effect"
+]
+},
+"757878": {
+"add": [
+"damage",
+"draw"
+],
+"drop": []
+},
+"757702": {
+"add": [
+"damage",
+"on_kill",
+"shop_gold"
+],
+"drop": [
+"resource_gain"
+]
+},
+"757584": {
+"add": [
+"damage",
+"exhaust",
+"turn_end"
+],
+"drop": [
+"self_destruct"
+]
+},
+"757517": {
+"add": [
+"card_flow",
+"deck_position",
+"selection"
+],
+"drop": []
+},
+"758114": {
+"add": [
+"buff"
+],
+"drop": [
+"damage"
+]
+},
+"758246": {
+"add": [
+"aoe_damage",
+"on_ally_play"
+],
+"drop": [
+"summon:benefits"
+]
+},
+"813567": {
+"add": [
+"aoe_damage",
+"turn_end"
+],
+"drop": []
+},
+"757722": {
+"add": [
+"block_armor",
+"damage"
+],
+"drop": [
+"delayed"
+]
+},
+"757592": {
+"add": [
+"exhaust",
+"retain",
+"stances"
+],
+"drop": [
+"resource_gain",
+"turn_end"
+]
+},
+"758159": {
+"add": [
+"temporary_effect",
+"repeat_trigger"
+],
+"drop": []
+},
+"757880": {
+"add": [
+"temporary_effect",
+"cost_set",
+"exhaust",
+"generate_cards",
+"random_effect"
+],
+"drop": []
+},
+"757715": {
+"add": [
+"condition",
+"debuff",
+"stances"
+],
+"drop": [
+"drawback",
+"stat_multiply"
+]
+},
+"813566": {
+"add": [
+"exhaust",
+"resource_gain",
+"retain"
+],
+"drop": [
+"turn_end"
+]
+},
+"813559": {
+"add": [
+"generate_cards",
+"exhaust"
+],
+"drop": []
+},
+"757726": {
+"add": [
+"block_armor",
+"damage",
+"deck_position",
+"selection"
+],
+"drop": [
+"delayed"
+]
+},
+"758193": {
+"add": [
+"condition",
+"block_armor",
+"stances",
+"turn_end"
+],
+"drop": [
+"delayed",
+"resource_gain"
+]
+},
+"813558": {
+"add": [
+"damage_reduction",
+"exhaust"
+],
+"drop": []
+},
+"813527": {
+"add": [
+"shield"
+],
+"drop": []
+},
+"758150": {
+"add": [
+"permanent_growth",
+"resource_gain",
+"turn_start"
+],
+"drop": []
+},
+"757611": {
+"add": [
+"generate_cards",
+"random_effect",
+"turn_start"
+],
+"drop": []
+},
+"813535": {
+"add": [
+"temporary_effect",
+"cost_set",
+"exhaust",
+"generate_cards",
+"selection"
+],
+"drop": []
+},
+"813518": {
+"add": [
+"block_armor",
+"combat_start",
+"on_ally_play"
+],
+"drop": [
+"start_of_game",
+"summon:benefits"
+]
+},
+"758190": {
+"add": [
+"damage",
+"random_effect"
+],
+"drop": [
+"delayed"
+]
+},
+"757873": {
+"add": [
+"block_armor",
+"damage"
+],
+"drop": [
+"delayed"
+]
+},
+"757576": {
+"add": [
+"shield"
+],
+"drop": []
+},
+"757532": {
+"add": [
+"buff"
+],
+"drop": [
+"damage"
+]
+},
+"757662": {
+"add": [
+"condition",
+"block_armor",
+"draw"
+],
+"drop": [
+"delayed"
+]
+},
+"757720": {
+"add": [
+"condition",
+"draw",
+"stances"
+],
+"drop": [
+"resource_gain"
+]
+},
+"757625": {
+"add": [
+"damage",
+"junk_cards",
+"turn_end"
+],
+"drop": []
+},
+"758382": {
+"add": [
+"difficulty_modifiers",
+"run_structure"
+],
+"drop": []
+},
+"757490": {
+"add": [
+"damage",
+"junk_cards"
+],
+"drop": []
+},
+"757519": {
+"add": [
+"stances"
+],
+"drop": []
+},
+"757514": {
+"add": [
+"regeneration",
+"turn_end"
+],
+"drop": []
+},
+"757497": {
+"add": [
+"block_armor:benefits",
+"buff"
+],
+"drop": []
+},
+"758203": {
+"add": [
+"block_armor",
+"delayed"
+],
+"drop": []
+},
+"813549": {
+"add": [
+"debuff"
+],
+"drop": []
+},
+"757843": {
+"add": [
+"damage"
+],
+"drop": []
+},
+"758136": {
+"add": [
+"delayed",
+"generate_cards",
+"turn_start"
+],
+"drop": []
+},
+"758249": {
+"add": [
+"discard",
+"draw",
+"turn_start"
+],
+"drop": []
+},
+"758184": {
+"add": [
+"generate_cards",
+"random_effect",
+"turn_start"
+],
+"drop": []
+},
+"757655": {
+"add": [
+"damage",
+"stances"
+],
+"drop": []
+},
+"757869": {
+"add": [
+"exhaust",
+"items_consumables",
+"random_effect"
+],
+"drop": []
+},
+"757500": {
+"add": [
+"slots_queue"
+],
+"drop": []
+},
+"757842": {
+"add": [
+"aoe_damage",
+"draw"
+],
+"drop": []
+},
+"758393": {
+"add": [
+"difficulty_modifiers",
+"run_structure"
+],
+"drop": []
+},
+"757493": {
+"add": [
+"draw:benefits",
+"drawback",
+"random_effect"
 ],
 "drop": []
 }
