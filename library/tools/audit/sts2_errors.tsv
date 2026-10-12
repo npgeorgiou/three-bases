@@ -1,0 +1,121 @@
+758686	-high_cost:benefits	high_cost benefits without cost payoff
+758686	-snowball	snowball without wording
+759646	+debuff	enemy debuff action missed
+758531	-damage:benefits	damage benefits on plain damage
+758531	+draw:benefits	draw payoff missed
+758945	-high_cost:benefits	high_cost benefits without cost payoff
+758945	+combo_sequence	next card played missed
+758649	+cast_from_zone	play from deck top missed
+759468	-buff	block grant tagged as buff
+759468	+block_armor:grants	block grant tagged as buff
+759410	+resource_gain	resource gain missed
+816399	-count_payoff	current count tagged as count_payoff
+816399	+condition_count	current count tagged as count_payoff
+816399	-turn_end	retain keyword tagged as turn_end
+816399	-debuff	debuff payoff tagged as does
+816399	+debuff:benefits	debuff payoff tagged as does
+759206	-passive	pickup effect tagged as passive
+759206	-scope_global	scope without wording
+758597	-once_per_game	this-turn condition tagged as once_per_game
+758597	-temporary_effect	temporary_effect without lasting effect
+758597	+condition	condition missed
+759449	-buff	this-turn buff tagged as buff
+759449	+temporary_buff	this-turn buff tagged as buff
+759449	-temporary_effect	parent with child present
+759449	-summon:benefits	power card read as summon
+758458	-graveyard	adding to discard tagged as graveyard
+759228	-damage:benefits	damage benefits on plain damage
+759228	+attack_mod	attack damage modifier missed
+758886	-summon:benefits	power card read as summon
+759691	-drawback	drawback without wording
+759691	+junk_cards	status card action missed
+759075	-death_count	death trigger tagged as death_count
+759075	+death_trigger	death trigger tagged as death_count
+759075	-destroy:benefits	destroy benefits on death trigger
+759075	-sacrifice:benefits	sacrifice benefits on death trigger
+758462	-sacrifice	exhausting cards tagged as sacrifice
+759588	-damage:benefits	damage benefits on plain damage
+758415	-high_cost:benefits	high_cost benefits without cost payoff
+758415	-return_to_hand	discard to hand tagged as return_to_hand
+758415	+card_flow	discard to hand tagged as return_to_hand
+759209	-passive	pickup effect tagged as passive
+758861	-high_cost:benefits	high_cost benefits without cost payoff
+758861	-turn_end	retain keyword tagged as turn_end
+759558	-debuff	debuff payoff tagged as does
+758872	-summon:benefits	power card read as summon
+758895	-summon:benefits	power card read as summon
+816453	-turn_end	retain keyword tagged as turn_end
+758866	-count_payoff	current count tagged as count_payoff
+758866	+condition_count	current count tagged as count_payoff
+758866	-damage:benefits	damage benefits on plain damage
+758866	-exhaust	exhaust payoff tagged as does
+758866	-graveyard	exhaust payoff tagged as does
+759620	+debuff	enemy debuff action missed
+816375	+generate_cards:benefits	create-card trigger missed
+758609	-count_payoff	current count tagged as count_payoff
+758609	+condition_count	current count tagged as count_payoff
+758794	-summon:benefits	power card read as summon
+758794	+temporary_effect	this-turn effect missed
+816342	+combo_sequence	next card played missed
+759032	-passive	pickup effect tagged as passive
+759032	+deck_modification	deck change missed
+759106	-passive	pickup effect tagged as passive
+759482	-death_count	death trigger tagged as death_count
+759482	-snowball	snowball without wording
+759482	+buff	strength gain missed
+759046	-passive	pickup effect tagged as passive
+759006	-passive	pickup effect tagged as passive
+759235	-passive	pickup effect tagged as passive
+758471	-high_cost:benefits	high_cost benefits without cost payoff
+758917	-high_cost:benefits	high_cost benefits without cost payoff
+759278	+cast_from_zone	play from deck top missed
+758580	-high_cost:benefits	high_cost benefits without cost payoff
+758580	-turn_end	retain keyword tagged as turn_end
+759328	-damage	damage modifier tagged as damage
+759328	+attack_mod	attack damage modifier missed
+759504	-summon:benefits	summon payoff on summon effect
+759504	+on_attack	attack trigger missed
+758628	-high_cost:benefits	high_cost benefits without cost payoff
+759538	-debuff	self drawback tagged as debuff
+759538	-stat_multiply	damage doubling tagged as stat_multiply
+759538	+drawback	self drawback tagged as debuff
+759455	-debuff	self drawback tagged as debuff
+759455	-draw	draw lock tagged as draw
+759455	+draw:counters	draw lock tagged as draw
+759455	+temporary_effect	this-turn effect missed
+758460	-cost_increase	own cost increase tagged as cost_increase
+758460	+temporary_effect	this-turn effect missed
+759404	+combo_sequence	next card played missed
+759056	-turn_number	combat count tagged as turn_number
+759740	+junk_cards	curse received missed
+759695	-stakes_wager	risk choice tagged as stakes_wager
+759236	-discard	discard payoff tagged as does
+816389	+condition_count	scaling count missed
+758758	-combo_sequence	cards-played count tagged as combo_sequence
+758758	+count_payoff	cards-played count tagged as combo_sequence
+759130	-passive	pickup effect tagged as passive
+759664	-drawback	drawback without wording
+759150	-passive	pickup effect tagged as passive
+759150	+random_effect	random effect missed
+758408	-high_cost:benefits	high_cost benefits without cost payoff
+758408	-snowball	snowball without wording
+758408	-graveyard	adding to discard tagged as graveyard
+759214	-cost_increase	own cost increase tagged as cost_increase
+759513	+junk_cards:benefits	create-card trigger missed
+759528	-summon:benefits	power card read as summon
+758837	-high_cost:benefits	high_cost benefits without cost payoff
+758837	-summon:benefits	power card read as summon
+759433	-taunt	redirect for one ally tagged as taunt
+759174	-passive	pickup effect tagged as passive
+759616	-drawback	drawback without wording
+759586	-turn_end	retain keyword tagged as turn_end
+759103	-combo_sequence	cards-played count tagged as combo_sequence
+759103	+count_payoff	cards-played count tagged as combo_sequence
+759373	-exhaust	exhaust payoff tagged as does
+758457	+condition	condition missed
+758888	-summon:benefits	power card read as summon
+758888	+temporary_effect	this-turn effect missed
+816358	-summon:benefits	power card read as summon
+758775	-high_cost:benefits	high_cost benefits without cost payoff
+758775	+combo_sequence	next card played missed
+758783	-high_cost:benefits	high_cost benefits without cost payoff

@@ -1,0 +1,670 @@
+{
+ "758467": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "816444": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758546": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758573": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758433": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "block_armor: Block is not removed"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "block_armor: Block is not removed"
+   ]
+  }
+ },
+ "759361": {
+  "A": {
+   "wrong": [
+    "draw"
+   ],
+   "missed": [
+    "temporary_effect: this turn",
+    "scope_multi: ALL enemies"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "draw"
+   ],
+   "missed": [
+    "temporary_effect: this turn",
+    "scope_multi: ALL enemies"
+   ]
+  }
+ },
+ "758428": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "759000": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758933": {
+  "A": {
+   "wrong": [
+    "cost_increase"
+   ],
+   "missed": [
+    "drawback: it costs an extra energy"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "cost_increase"
+   ],
+   "missed": [
+    "drawback: it costs an extra energy"
+   ]
+  }
+ },
+ "758975": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  }
+ },
+ "758631": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "816333": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758792": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "759131": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  }
+ },
+ "759019": {
+  "A": {
+   "wrong": [
+    "turn_start"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "turn_start"
+   ],
+   "missed": []
+  }
+ },
+ "758544": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758755": {
+  "A": {
+   "wrong": [
+    "graveyard"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "graveyard"
+   ],
+   "missed": []
+  }
+ },
+ "758737": {
+  "A": {
+   "wrong": [
+    "debuff"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "debuff"
+   ],
+   "missed": []
+  }
+ },
+ "758757": {
+  "A": {
+   "wrong": [
+    "combo_sequence"
+   ],
+   "missed": [
+    "condition_count: if you play 5 or more cards in a turn"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "combo_sequence"
+   ],
+   "missed": [
+    "condition_count: if you play 5 or more cards in a turn"
+   ]
+  }
+ },
+ "816410": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "slots_queue: trigger all Lightning"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "slots_queue: trigger all Lightning"
+   ]
+  }
+ },
+ "758983": {
+  "A": {
+   "wrong": [
+    "permanent_growth",
+    "turn_start"
+   ],
+   "missed": [
+    "buff: raise your Max HP by 20"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "permanent_growth",
+    "turn_start"
+   ],
+   "missed": [
+    "buff: raise your Max HP by 20"
+   ]
+  }
+ },
+ "816392": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "on_attack: whenever other players deal attack damage",
+    "stacking_keyword: apply that much Doom"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "on_attack: whenever other players deal attack damage",
+    "stacking_keyword: apply that much Doom"
+   ]
+  }
+ },
+ "759028": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "759365": {
+  "A": {
+   "wrong": [
+    "death_count",
+    "snowball"
+   ],
+   "missed": [
+    "permanent_growth: gains Strength each time an ally dies"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "death_count",
+    "snowball"
+   ],
+   "missed": [
+    "permanent_growth: gains Strength each time an ally dies"
+   ]
+  }
+ },
+ "759084": {
+  "A": {
+   "wrong": [
+    "summon:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "summon:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "759470": {
+  "A": {
+   "wrong": [
+    "turn_end"
+   ],
+   "missed": [
+    "tribal: Shivs"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "turn_end"
+   ],
+   "missed": [
+    "tribal: Shivs"
+   ]
+  }
+ },
+ "759414": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "condition: if you have Frost",
+    "slots_queue: Frost"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "condition: if you have Frost",
+    "slots_queue: Frost"
+   ]
+  }
+ },
+ "758640": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758448": {
+  "A": {
+   "wrong": [
+    "damage_over_time"
+   ],
+   "missed": [
+    "damage: deal 8 damage",
+    "stacking_keyword: apply Doom equal to damage dealt"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "damage_over_time"
+   ],
+   "missed": [
+    "damage: deal 8 damage",
+    "stacking_keyword: apply Doom equal to damage dealt"
+   ]
+  }
+ },
+ "759063": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "759221": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "759129": {
+  "A": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "passive"
+   ],
+   "missed": []
+  }
+ },
+ "759292": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758800": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits",
+    "turn_end"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits",
+    "turn_end"
+   ],
+   "missed": []
+  }
+ },
+ "758953": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758629": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758941": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "759507": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "synergy_payoff: whenever you apply a debuff"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "synergy_payoff: whenever you apply a debuff"
+   ]
+  }
+ },
+ "758845": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "759721": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "selection: choose 2 of 8 cards",
+    "items_consumables: obtain the Chosen Cheese"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "selection: choose 2 of 8 cards",
+    "items_consumables: obtain the Chosen Cheese"
+   ]
+  }
+ },
+ "759314": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "scope_multi: ALL enemies"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "scope_multi: ALL enemies"
+   ]
+  }
+ },
+ "758441": {
+  "A": {
+   "wrong": [
+    "damage"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "damage"
+   ],
+   "missed": []
+  }
+ },
+ "758879": {
+  "A": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "condition_count: 5 additional damage for each other Osty Attack"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "high_cost:benefits"
+   ],
+   "missed": [
+    "condition_count: 5 additional damage for each other Osty Attack"
+   ]
+  }
+ },
+ "758435": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "drawback: you cannot draw additional cards this turn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "drawback: you cannot draw additional cards this turn"
+   ]
+  }
+ },
+ "759243": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "hand_size: no cards in Hand"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "hand_size: no cards in Hand"
+   ]
+  }
+ },
+ "758710": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "758473": {
+  "A": {
+   "wrong": [
+    "life_payment:cost"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "life_payment:cost"
+   ],
+   "missed": []
+  }
+ },
+ "758739": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "759498": {
+  "A": {
+   "wrong": [
+    "summon:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "summon:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "816455": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ }
+}

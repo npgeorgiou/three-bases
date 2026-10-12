@@ -1,0 +1,291 @@
+{
+"758467": [
+"high_cost:benefits",
+"shield"
+],
+"816444": [
+"exhaust"
+],
+"758546": [
+"block_armor",
+"debuff",
+"exhaust",
+"self_destruct"
+],
+"758573": [
+"exhaust",
+"resource_gain",
+"symmetric_effect",
+"team_play"
+],
+"758433": [
+"high_cost:benefits",
+"round_carryover"
+],
+"759361": [
+"damage_over_time",
+"draw",
+"draw:benefits",
+"stacking_keyword"
+],
+"758428": [
+"combat_start",
+"damage",
+"exhaust",
+"start_of_game"
+],
+"759000": [
+"cost_set",
+"count_payoff",
+"items_consumables",
+"passive",
+"run_structure"
+],
+"758933": [
+"cost_increase",
+"exhaust",
+"in_hand_buff",
+"repeat_trigger"
+],
+"758975": [
+"deck_modification",
+"items_consumables",
+"passive",
+"run_structure",
+"transform",
+"upgrade"
+],
+"758631": [
+"exhaust",
+"generate_cards",
+"symmetric_effect",
+"team_play"
+],
+"816333": [
+"block_armor",
+"exhaust"
+],
+"758792": [
+"generate_cards",
+"random_effect",
+"selection"
+],
+"759131": [
+"deck_modification",
+"items_consumables",
+"passive",
+"run_structure",
+"transform"
+],
+"759019": [
+"combat_start",
+"items_consumables",
+"passive",
+"run_structure",
+"slots_queue",
+"turn_start"
+],
+"758544": [
+"block_armor"
+],
+"758755": [
+"aoe_damage",
+"condition_count",
+"exhaust:benefits",
+"graveyard"
+],
+"758737": [
+"debuff",
+"draw",
+"drawback",
+"resource_gain",
+"stacking_keyword",
+"turn_start"
+],
+"758757": [
+"combo_sequence",
+"delayed",
+"draw",
+"turn_start"
+],
+"816410": [
+"damage",
+"repeat_trigger"
+],
+"758983": [
+"combat_start",
+"draw",
+"drawback",
+"items_consumables",
+"passive",
+"permanent_growth",
+"run_structure",
+"turn_start"
+],
+"816392": [
+"debuff",
+"exhaust",
+"team_play",
+"temporary_effect"
+],
+"759028": [
+"deckbuilding_effect",
+"items_consumables",
+"passive",
+"run_structure"
+],
+"759365": [
+"block_armor",
+"buff",
+"death_count",
+"death_trigger",
+"snowball",
+"stacking_keyword"
+],
+"759084": [
+"block_armor",
+"cost_condition",
+"items_consumables",
+"on_ally_play",
+"passive",
+"run_structure",
+"summon:benefits"
+],
+"759470": [
+"damage",
+"damage:benefits",
+"retain",
+"turn_end"
+],
+"759414": [
+"aoe_damage",
+"turn_end"
+],
+"758640": [
+"damage",
+"draw"
+],
+"758448": [
+"damage_over_time",
+"debuff"
+],
+"759063": [
+"block_armor",
+"count_payoff",
+"items_consumables",
+"multiple_resources",
+"passive",
+"run_structure"
+],
+"759221": [
+"block_armor",
+"items_consumables",
+"passive",
+"round_carryover",
+"run_structure"
+],
+"759129": [
+"deck_modification",
+"items_consumables",
+"passive",
+"run_structure",
+"upgrade"
+],
+"759292": [
+"block_armor:benefits",
+"buff",
+"items_consumables",
+"run_structure",
+"stacking_keyword"
+],
+"758800": [
+"damage",
+"high_cost:benefits",
+"retain",
+"turn_end"
+],
+"758953": [
+"draw:benefits",
+"exhaust",
+"junk_cards",
+"self_destruct"
+],
+"758629": [
+"block_armor",
+"slots_queue"
+],
+"758941": [
+"damage"
+],
+"759507": [
+"damage"
+],
+"758845": [
+"debuff",
+"drawback",
+"exhaust",
+"stacking_keyword",
+"symmetric_effect"
+],
+"759721": [
+"deck_modification",
+"life_payment:cost",
+"modal_choice",
+"random_effect",
+"run_structure"
+],
+"759314": [
+"debuff",
+"items_consumables",
+"run_structure",
+"stacking_keyword",
+"temporary_effect"
+],
+"758441": [
+"damage",
+"in_hand_buff",
+"transform"
+],
+"758879": [
+"damage",
+"damage:benefits",
+"high_cost:benefits",
+"summon:benefits"
+],
+"758435": [
+"draw",
+"draw:counters",
+"temporary_effect"
+],
+"759243": [
+"draw",
+"items_consumables",
+"passive",
+"run_structure"
+],
+"758710": [
+"draw",
+"exhaust"
+],
+"758473": [
+"drawback",
+"junk_cards",
+"life_payment:cost",
+"turn_end"
+],
+"758739": [
+"block_armor",
+"stacking_keyword"
+],
+"759498": [
+"damage",
+"on_ally_play",
+"random_effect",
+"summon:benefits"
+],
+"816455": [
+"combat_start",
+"junk_cards",
+"start_of_game"
+]
+}
