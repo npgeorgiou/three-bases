@@ -1,0 +1,610 @@
+{
+ "796069": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796051": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796248": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795994": {
+  "A": {
+   "wrong": [
+    "cost_reduction",
+    "count_payoff"
+   ],
+   "missed": [
+    "cost_set: costs 1",
+    "condition/discard payoff: if your opponent discarded a card this game"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "cost_reduction",
+    "count_payoff"
+   ],
+   "missed": [
+    "cost_set: costs 1",
+    "condition/discard payoff: if your opponent discarded a card this game"
+   ]
+  }
+ },
+ "795888": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795972": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "rule_change: nothing can stop you from playing Thanos"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "rule_change: nothing can stop you from playing Thanos"
+   ]
+  }
+ },
+ "795810": {
+  "A": {
+   "wrong": [
+    "scope_global"
+   ],
+   "missed": [
+    "cross_lane: counts locations across the board"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "scope_global"
+   ],
+   "missed": [
+    "cross_lane: counts locations across the board"
+   ]
+  }
+ },
+ "796286": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795798": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795391": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796030": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796033": {
+  "A": {
+   "wrong": [
+    "generate_cards"
+   ],
+   "missed": [
+    "in_hand_buff: your cards gain Quickdraw text",
+    "stacking_keyword: shots are loaded and accumulate"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "generate_cards"
+   ],
+   "missed": [
+    "in_hand_buff: your cards gain Quickdraw text",
+    "stacking_keyword: shots are loaded and accumulate"
+   ]
+  }
+ },
+ "796132": {
+  "A": {
+   "wrong": [
+    "deck_condition"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "deck_condition"
+   ],
+   "missed": []
+  }
+ },
+ "796118": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795776": {
+  "A": {
+   "wrong": [
+    "cost_reduction"
+   ],
+   "missed": [
+    "cost_set: this costs 1"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "cost_reduction"
+   ],
+   "missed": [
+    "cost_set: this costs 1"
+   ]
+  }
+ },
+ "795943": {
+  "A": {
+   "wrong": [
+    "cost_increase"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "cost_increase"
+   ],
+   "missed": []
+  }
+ },
+ "796102": {
+  "A": {
+   "wrong": [
+    "cost_condition"
+   ],
+   "missed": [
+    "recycle: put back into hand after being discarded"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "cost_condition"
+   ],
+   "missed": [
+    "recycle: put back into hand after being discarded"
+   ]
+  }
+ },
+ "795419": {
+  "A": {
+   "wrong": [
+    "summon:benefits"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "summon:benefits"
+   ],
+   "missed": []
+  }
+ },
+ "795660": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796145": {
+  "A": {
+   "wrong": [
+    "summon",
+    "tribal"
+   ],
+   "missed": [
+    "death_trigger: after one of your other cards is destroyed"
+   ]
+  },
+  "B": {
+   "wrong": [
+    "summon",
+    "tribal"
+   ],
+   "missed": [
+    "death_trigger: after one of your other cards is destroyed"
+   ]
+  }
+ },
+ "795592": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796044": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796085": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "buff: add their Power to this card"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "buff: add their Power to this card"
+   ]
+  }
+ },
+ "795597": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795492": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796045": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796380": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "lane_rule: each location carries its own rule"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "lane_rule: each location carries its own rule"
+   ]
+  }
+ },
+ "795424": {
+  "A": {
+   "wrong": [
+    "deck_condition"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "deck_condition"
+   ],
+   "missed": []
+  }
+ },
+ "795467": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "cost_condition: costs the same or more"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "cost_condition: costs the same or more"
+   ]
+  }
+ },
+ "795482": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795407": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795937": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795404": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795720": {
+  "A": {
+   "wrong": [
+    "resource_banking"
+   ],
+   "missed": []
+  },
+  "B": {
+   "wrong": [
+    "resource_banking"
+   ],
+   "missed": []
+  }
+ },
+ "795686": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "repeat_trigger: Quickdraw, judge again"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "repeat_trigger: Quickdraw, judge again"
+   ]
+  }
+ },
+ "796238": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795512": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796133": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795601": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "combo_sequence: the next character you play",
+    "permanent_growth: +2 Power each end of turn",
+    "in_hand_buff: grows while in hand"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "combo_sequence: the next character you play",
+    "permanent_growth: +2 Power each end of turn",
+    "in_hand_buff: grows while in hand"
+   ]
+  }
+ },
+ "796242": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795730": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795466": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795581": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795573": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796196": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796334": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796252": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795712": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "796170": {
+  "A": {
+   "wrong": [],
+   "missed": []
+  },
+  "B": {
+   "wrong": [],
+   "missed": []
+  }
+ },
+ "795735": {
+  "A": {
+   "wrong": [],
+   "missed": [
+    "combo_sequence: if you played a 1-Cost card this turn"
+   ]
+  },
+  "B": {
+   "wrong": [],
+   "missed": [
+    "combo_sequence: if you played a 1-Cost card this turn"
+   ]
+  }
+ }
+}

@@ -1,1 +1,2 @@
 !recycle|shuffle .{0,40}into (your|their|its owner.s) (deck|library)
+stat_set|does|set (?:all cards here|all|its base power|their power|its power) to \d+|power set to \d+|set .{0,20}to \d+ power

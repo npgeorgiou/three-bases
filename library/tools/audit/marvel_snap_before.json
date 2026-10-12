@@ -1,0 +1,392 @@
+{
+"796069": [
+"cross_lane",
+"high_cost:benefits",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"slot_filler",
+"summon"
+],
+"796051": [
+"deck_modification",
+"generate_cards",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits"
+],
+"796248": [
+"buff",
+"cost_condition",
+"lane_rule",
+"symmetric_effect",
+"turn_end"
+],
+"795994": [
+"cost_reduction",
+"count_payoff",
+"high_cost:benefits",
+"lanes:benefits",
+"points_scoring:benefits"
+],
+"795888": [
+"lanes:benefits",
+"points_scoring:benefits",
+"start_of_game",
+"tutor"
+],
+"795972": [
+"lanes:benefits",
+"on_play",
+"passive",
+"points_scoring:benefits",
+"tutor"
+],
+"795810": [
+"buff",
+"death_count",
+"lanes",
+"lanes:benefits",
+"passive",
+"points_scoring:benefits",
+"scope_global"
+],
+"796286": [
+"cost_condition",
+"lane_rule",
+"placement_rules",
+"play_restriction",
+"symmetric_effect"
+],
+"795798": [
+"copy",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits"
+],
+"795391": [
+"passive"
+],
+"796030": [
+"lanes:benefits",
+"points_scoring:benefits",
+"resource_banking",
+"stat_condition",
+"turn_end",
+"tutor"
+],
+"796033": [
+"delayed",
+"generate_cards",
+"high_cost:benefits",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"start_of_game"
+],
+"796132": [
+"cost_condition",
+"cost_reduction",
+"deck_condition",
+"in_hand_buff",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits"
+],
+"796118": [
+"comeback",
+"drawback",
+"lanes",
+"lanes:benefits",
+"play_restriction",
+"points_scoring:benefits"
+],
+"795776": [
+"condition",
+"cost_reduction",
+"lanes:benefits",
+"movement:benefits",
+"points_scoring:benefits"
+],
+"795943": [
+"cost_increase",
+"high_cost:benefits",
+"lanes",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"random_effect",
+"transform"
+],
+"796102": [
+"cost_condition",
+"cost_reduction",
+"discard:benefits",
+"high_cost:benefits",
+"lanes:benefits",
+"points_scoring:benefits"
+],
+"795419": [
+"combo_sequence",
+"lanes",
+"lanes:benefits",
+"merge_attach",
+"on_ally_play",
+"points_scoring:benefits",
+"summon:benefits"
+],
+"795660": [
+"lanes",
+"lanes:benefits",
+"once_per_game",
+"permanent_growth",
+"points_scoring:benefits",
+"slot_filler:benefits",
+"stat_multiply",
+"turn_end"
+],
+"796145": [
+"destroy",
+"destroy:benefits",
+"lanes",
+"lanes:benefits",
+"on_play",
+"permanent_growth",
+"points_scoring:benefits",
+"sacrifice",
+"summon",
+"tribal"
+],
+"795592": [
+"adjacency",
+"buff",
+"cross_lane",
+"lanes:benefits",
+"passive",
+"points_scoring:benefits"
+],
+"796044": [
+"buff",
+"lanes",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits"
+],
+"796085": [
+"destroy",
+"lanes",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"sacrifice"
+],
+"795597": [
+"adjacency",
+"buff",
+"condition_count",
+"lanes",
+"lanes:benefits",
+"movement",
+"on_play",
+"points_scoring:benefits"
+],
+"795492": [
+"debuff",
+"disruption",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"scope_global",
+"steal"
+],
+"796045": [
+"buff",
+"lanes",
+"lanes:benefits",
+"points_scoring:benefits",
+"turn_end"
+],
+"796380": [
+"lanes",
+"randomness",
+"rule_change",
+"terrain",
+"turn_number"
+],
+"795424": [
+"deck_condition",
+"deck_position",
+"in_hand_buff",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits"
+],
+"795467": [
+"combo_sequence",
+"high_cost:benefits",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"swap",
+"tutor"
+],
+"795482": [
+"destroy",
+"forced_movement",
+"high_cost:benefits",
+"lanes",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"stat_condition"
+],
+"795407": [
+"debuff"
+],
+"795937": [
+"lanes",
+"lanes:benefits",
+"null_body:benefits",
+"points_scoring:benefits",
+"quests",
+"steal"
+],
+"795404": [
+"discard"
+],
+"795720": [
+"banish",
+"buff",
+"cost_condition",
+"deck_condition",
+"deck_position",
+"delayed",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"resource_banking",
+"resource_gain"
+],
+"795686": [
+"buff",
+"condition",
+"debuff",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"random_effect"
+],
+"796238": [
+"lane_closure",
+"lane_rule",
+"symmetric_effect",
+"turn_number"
+],
+"795512": [
+"draw",
+"enemy_benefit",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"symmetric_effect"
+],
+"796133": [
+"combo_sequence",
+"drawback:counters",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"silence"
+],
+"795601": [
+"buff",
+"control_reward",
+"high_cost:benefits",
+"lanes",
+"lanes:benefits",
+"points_scoring:benefits",
+"turn_end"
+],
+"796242": [
+"information",
+"lane_rule",
+"symmetric_effect"
+],
+"795730": [
+"cost_condition",
+"hand_disruption",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits",
+"silence"
+],
+"795466": [
+"discard",
+"hand_position",
+"lanes:benefits",
+"on_play",
+"points_scoring:benefits"
+],
+"795581": [
+"activated",
+"adjacency",
+"buff",
+"lane_identity",
+"lanes:benefits",
+"movement",
+"once_per_game",
+"points_scoring:benefits"
+],
+"795573": [
+"condition",
+"high_cost:benefits",
+"in_hand_buff",
+"lanes:benefits",
+"permanent_growth",
+"points_scoring:benefits",
+"resource_banking",
+"turn_end"
+],
+"796196": [
+"game_end_trigger",
+"lane_rule",
+"simultaneous_play",
+"symmetric_effect"
+],
+"796334": [
+"buff",
+"cross_lane",
+"lane_rule",
+"symmetric_effect"
+],
+"796252": [
+"lane_rule",
+"play_restriction",
+"summon:counters",
+"symmetric_effect",
+"turn_number"
+],
+"795712": [
+"activated",
+"generate_cards:benefits",
+"lanes:benefits",
+"once_per_game",
+"points_scoring:benefits",
+"tutor"
+],
+"796170": [
+"buff",
+"control_reward",
+"cross_lane",
+"lane_rule",
+"symmetric_effect"
+],
+"795735": [
+"cost_condition",
+"debuff",
+"lanes",
+"lanes:benefits",
+"points_scoring:benefits",
+"turn_end"
+]
+}
