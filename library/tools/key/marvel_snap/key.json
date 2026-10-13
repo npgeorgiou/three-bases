@@ -17,6 +17,15 @@
 ],
 "by": "C"
 },
+"795394": {
+"tags": [
+[
+"turn_start",
+"Triggers at the start of each turn"
+]
+],
+"by": "A=B"
+},
 "795395": {
 "tags": [
 [
@@ -83,6 +92,19 @@
 [
 "stat_condition",
 "highest-Power"
+]
+],
+"by": "A=B"
+},
+"795414": {
+"tags": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"generate_cards",
+"Shuffle 4 Ancient Arcana into your deck"
 ]
 ],
 "by": "A=B"
@@ -168,6 +190,23 @@
 ],
 "by": "A=B"
 },
+"795422": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"+1 Power for each card in play afflicted with negative Power"
+],
+[
+"condition_count",
+"for each card in play afflicted with negative Power"
+]
+],
+"by": "A=B"
+},
 "795423": {
 "tags": [
 [
@@ -211,6 +250,48 @@
 ],
 "by": "C"
 },
+"795429": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"board_presence",
+"If your side of this location is full"
+],
+[
+"stat_gain",
+"+4 Power"
+]
+],
+"by": "A=B"
+},
+"795434": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_condition",
+"lowest-Power"
+],
+[
+"rows",
+"front row"
+],
+[
+"cast_from_zone",
+"with one from your deck"
+],
+[
+"cross_lane",
+"at any location"
+]
+],
+"by": "C"
+},
 "795435": {
 "tags": [
 [
@@ -227,6 +308,52 @@
 ]
 ],
 "by": "A=B"
+},
+"795439": {
+"tags": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"generate_cards",
+"Shuffle 12 new cards into your deck"
+],
+[
+"turn_number",
+"On turn 3"
+],
+[
+"resource_gain",
+"+1 Max Energy"
+]
+],
+"by": "A=B"
+},
+"795443": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"summon",
+"Create a 1-Cost card at another location"
+],
+[
+"cross_lane",
+"another location"
+],
+[
+"zone_control",
+"you're winning here"
+],
+[
+"turn_start",
+"as the turn starts"
+]
+],
+"by": "C"
 },
 "795448": {
 "tags": [
@@ -258,6 +385,32 @@
 [
 "cost_reduction",
 "They cost 1 less next turn"
+]
+],
+"by": "A=B"
+},
+"795457": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Shuffle Stormbreaker into your deck"
+]
+],
+"by": "A=B"
+},
+"795458": {
+"tags": [
+[
+"on_ally_play",
+"After you play a card"
+],
+[
+"permanent_growth",
+"this gains +1 Power"
 ]
 ],
 "by": "A=B"
@@ -317,6 +470,52 @@
 ],
 "by": "C"
 },
+"795468": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"merge_attach",
+"Merge cards from your deck into this"
+],
+[
+"stat_gain",
+"gains 13 or more Power"
+],
+[
+"condition_count",
+"13 or more"
+]
+],
+"by": "A=B"
+},
+"795471": {
+"tags": [
+[
+"return_to_hand",
+"Return this to your hand"
+],
+[
+"activated",
+"Activate"
+],
+[
+"hand_disruption",
+"steal 4 Power from characters in your opponent's hand"
+],
+[
+"steal",
+"steal 4 Power"
+],
+[
+"random_effect",
+"randomly"
+]
+],
+"by": "A=B"
+},
 "795477": {
 "tags": [],
 "by": "A=B"
@@ -334,6 +533,23 @@
 [
 "cost_condition",
 "1 and 6-Cost cards"
+]
+],
+"by": "A=B"
+},
+"795481": {
+"tags": [
+[
+"quests",
+"Objective"
+],
+[
+"cost_condition",
+"4-Cost or more"
+],
+[
+"stat_loss",
+"Afflict the highest-Cost enemy card with -7 Power"
 ]
 ],
 "by": "A=B"
@@ -379,6 +595,19 @@
 ]
 ],
 "by": "C"
+},
+"795488": {
+"tags": [
+[
+"game_end_trigger",
+"At the end of the game"
+],
+[
+"movement",
+"move to a location that wins you the game"
+]
+],
+"by": "A=B"
 },
 "795489": {
 "tags": [
@@ -428,6 +657,27 @@
 ],
 "by": "A=B"
 },
+"795500": {
+"tags": [
+[
+"cost_reduction",
+"Costs 1 less for each different Cost"
+],
+[
+"variety_payoff",
+"different Cost among your cards in play"
+],
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"Give your Champion +8 Power"
+]
+],
+"by": "A=B"
+},
 "795504": {
 "tags": [
 [
@@ -454,6 +704,23 @@
 [
 "resource_gain",
 "+1 Max Energy"
+]
+],
+"by": "A=B"
+},
+"795510": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"steal",
+"Steal all the Power of a front-row enemy card here"
+],
+[
+"rows",
+"front-row"
 ]
 ],
 "by": "A=B"
@@ -513,6 +780,23 @@
 ],
 "by": "A=B"
 },
+"795528": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"summon",
+"Add a Rock to each other location"
+],
+[
+"cross_lane",
+"each other location"
+]
+],
+"by": "A=B"
+},
 "795531": {
 "tags": [
 [
@@ -529,6 +813,44 @@
 ]
 ],
 "by": "C"
+},
+"795532": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"aura",
+"Enemy cards here afflicted with negative Power have an additional -2 Power"
+],
+[
+"stat_loss",
+"additional -2 Power"
+]
+],
+"by": "C"
+},
+"795561": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"resource_gain",
+"+1 Max Energy"
+],
+[
+"passive",
+"Ongoing"
+],
+[
+"play_restriction",
+"You can only play 1 card a turn"
+]
+],
+"by": "A=B"
 },
 "795563": {
 "tags": [
@@ -595,6 +917,23 @@
 [
 "stat_loss",
 "-1 Power"
+]
+],
+"by": "A=B"
+},
+"795580": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"return_to_hand",
+"Return your 1-Cost cards to your hand"
+],
+[
+"cost_condition",
+"1-Cost"
 ]
 ],
 "by": "A=B"
@@ -688,6 +1027,27 @@
 ],
 "by": "C"
 },
+"795600": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"zone_control",
+"you're winning this location"
+],
+[
+"lone_unit",
+"this is your only card here"
+],
+[
+"lane_closure",
+"destroy all other locations"
+]
+],
+"by": "A=B"
+},
 "795601": {
 "tags": [
 [
@@ -708,6 +1068,27 @@
 ]
 ],
 "by": "C"
+},
+"795604": {
+"tags": [
+[
+"quests",
+"Objective"
+],
+[
+"count_payoff",
+"Play 6 total Cost of created cards"
+],
+[
+"random_effect",
+"Randomly"
+],
+[
+"destroy",
+"destroy up to 3 total Cost of enemy cards"
+]
+],
+"by": "A=B"
 },
 "795608": {
 "tags": [
@@ -747,6 +1128,40 @@
 ],
 "by": "A=B"
 },
+"795615": {
+"tags": [
+[
+"play_restriction",
+"You can only play this at the left location"
+],
+[
+"lane_identity",
+"left location"
+]
+],
+"by": "A=B"
+},
+"795618": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"disruption",
+"Other cards can't be revealed this turn"
+],
+[
+"information",
+"can't be revealed"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "C"
+},
 "795621": {
 "tags": [
 [
@@ -756,6 +1171,27 @@
 [
 "cost_increase",
 "created cards cost 1 more"
+]
+],
+"by": "A=B"
+},
+"795623": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"movement",
+"Move one of your other On Reveal cards here to the middle location"
+],
+[
+"lane_identity",
+"middle location"
+],
+[
+"repeat_trigger",
+"Its ability happens again"
 ]
 ],
 "by": "A=B"
@@ -789,6 +1225,19 @@
 ]
 ],
 "by": "C"
+},
+"795631": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"permanent_growth",
+"this gains +3 Power"
+]
+],
+"by": "A=B"
 },
 "795636": {
 "tags": [
@@ -896,6 +1345,36 @@
 ],
 "by": "A=B"
 },
+"795643": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"repeat_trigger",
+"Execute all 4 of H.E.R.B.I.E.'s abilities here"
+]
+],
+"by": "A=B"
+},
+"795649": {
+"tags": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"upgrade",
+"Unlock the potential of your cards with no abilities"
+],
+[
+"null_body",
+"cards with no abilities"
+]
+],
+"by": "C"
+},
 "795653": {
 "tags": [
 [
@@ -947,8 +1426,110 @@
 ],
 "by": "A=B"
 },
+"795665": {
+"tags": [
+[
+"turn_start",
+"Start of Turn"
+],
+[
+"resource_gain",
+"+1 Energy"
+],
+[
+"self_destruct",
+"destroy this"
+],
+[
+"board_presence",
+"your side is full here"
+]
+],
+"by": "C"
+},
+"795666": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"hand_disruption",
+"Give a card in your opponent's hand +1 Cost"
+],
+[
+"cost_increase",
+"+1 Cost"
+]
+],
+"by": "A=B"
+},
+"795667": {
+"tags": [
+[
+"play_restriction",
+"You can only play this where an enemy is afflicted with negative Power"
+]
+],
+"by": "A=B"
+},
 "795668": {
 "tags": [],
+"by": "A=B"
+},
+"795669": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"transform",
+"Transform your other cards here"
+],
+[
+"copy",
+"copies of the highest-Power one"
+],
+[
+"stat_condition",
+"highest-Power"
+]
+],
+"by": "A=B"
+},
+"795671": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_condition",
+"with 20 or more Power"
+],
+[
+"destroy",
+"destroy front-row enemy cards here"
+],
+[
+"rows",
+"front-row"
+]
+],
+"by": "A=B"
+},
+"795673": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"information",
+"Cards you play here are not revealed until the game ends"
+]
+],
 "by": "A=B"
 },
 "795681": {
@@ -1014,6 +1595,23 @@
 ],
 "by": "A=B"
 },
+"795687": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"tutor",
+"Draw all cards that cost 0 from your deck"
+],
+[
+"cost_condition",
+"cost 0"
+]
+],
+"by": "A=B"
+},
 "795697": {
 "tags": [],
 "by": "A=B"
@@ -1026,6 +1624,23 @@
 ]
 ],
 "by": "C"
+},
+"795702": {
+"tags": [
+[
+"quests",
+"Objective"
+],
+[
+"variety_payoff",
+"6 different Powers"
+],
+[
+"stat_gain",
+"+6 Power"
+]
+],
+"by": "A=B"
 },
 "795706": {
 "tags": [
@@ -1070,6 +1685,61 @@
 ],
 "by": "A=B"
 },
+"795714": {
+"tags": [
+[
+"turn_start",
+"Start of Turn"
+],
+[
+"return_to_hand",
+"Return this to your hand"
+],
+[
+"permanent_growth",
+"When this returns to your hand, +1 Power"
+]
+],
+"by": "A=B"
+},
+"795716": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"symmetric_effect",
+"EACH player"
+],
+[
+"random_effect",
+"randomly"
+],
+[
+"in_hand_buff",
+"gives a card in their hand -1 Cost"
+],
+[
+"variety_payoff",
+"different Cost among their cards in play"
+]
+],
+"by": "A=B"
+},
+"795719": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"junk_cards",
+"Shuffle a Rock into your opponent's deck"
+]
+],
+"by": "A=B"
+},
 "795720": {
 "tags": [
 [
@@ -1099,6 +1769,27 @@
 ],
 "by": "A=B"
 },
+"795722": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_loss",
+"Afflict an enemy card with -2 Power"
+],
+[
+"repeat_trigger",
+"Repeat on a different enemy"
+],
+[
+"resource_banking",
+"for each of your unspent Energy"
+]
+],
+"by": "A=B"
+},
 "795725": {
 "tags": [
 [
@@ -1115,6 +1806,19 @@
 ]
 ],
 "by": "C"
+},
+"795727": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"stat_loss",
+"Afflict an enemy card here with negative Power"
+]
+],
+"by": "A=B"
 },
 "795730": {
 "tags": [
@@ -1153,6 +1857,40 @@
 ]
 ],
 "by": "A=B"
+},
+"795737": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"hand_deck_swap",
+"Replace your deck with your opponent's starting deck"
+],
+[
+"in_hand_buff",
+"Give those cards -1 Cost"
+]
+],
+"by": "C"
+},
+"795743": {
+"tags": [
+[
+"turn_start",
+"Start of Turn"
+],
+[
+"permanent_growth",
+"+2 Power"
+],
+[
+"hand_size",
+"if your hand is full"
+]
+],
+"by": "C"
 },
 "795750": {
 "tags": [
@@ -1195,6 +1933,56 @@
 ]
 ],
 "by": "A=B"
+},
+"795753": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"tutor",
+"Add a 3-Cost or less card from your deck here"
+],
+[
+"free_play",
+"from your deck here"
+],
+[
+"cost_condition",
+"3-Cost or less"
+],
+[
+"information",
+"don't reveal it until the game ends"
+]
+],
+"by": "C"
+},
+"795759": {
+"tags": [
+[
+"death_trigger",
+"When Discarded or Destroyed"
+],
+[
+"discard",
+"Discarded"
+],
+[
+"distribute",
+"Randomly split -7 Power among enemy cards"
+],
+[
+"stat_loss",
+"-7 Power"
+],
+[
+"random_effect",
+"Randomly"
+]
+],
+"by": "C"
 },
 "795763": {
 "tags": [
@@ -1259,6 +2047,32 @@
 ],
 "by": "C"
 },
+"795769": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"enemy_benefit",
+"Your opponent draws 2 cards"
+]
+],
+"by": "A=B"
+},
+"795771": {
+"tags": [
+[
+"game_end_trigger",
+"If you win this game"
+],
+[
+"stakes_wager",
+"double your winnings"
+]
+],
+"by": "A=B"
+},
 "795772": {
 "tags": [
 [
@@ -1276,6 +2090,23 @@
 ],
 "by": "A=B"
 },
+"795775": {
+"tags": [
+[
+"discard",
+"When you discard a card"
+],
+[
+"permanent_growth",
+"this gains +1 Power"
+],
+[
+"movement",
+"Moveable next turn"
+]
+],
+"by": "A=B"
+},
 "795776": {
 "tags": [
 [
@@ -1284,6 +2115,23 @@
 ]
 ],
 "by": "C"
+},
+"795778": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"tutor",
+"Draw 2 Stones from your deck"
+],
+[
+"tribal",
+"Stones"
+]
+],
+"by": "A=B"
 },
 "795786": {
 "tags": [
@@ -1320,6 +2168,31 @@
 [
 "copy",
 "Get a copy of your opening hand"
+]
+],
+"by": "A=B"
+},
+"795794": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"banish",
+"Banish the top card of your deck"
+],
+[
+"deck_position",
+"top card of your deck"
+],
+[
+"generate_cards",
+"Add 2 Rocks to your hand"
+],
+[
+"variable_stats",
+"Set their Power to the banished card's Cost"
 ]
 ],
 "by": "A=B"
@@ -1384,6 +2257,27 @@
 ],
 "by": "A=B"
 },
+"795805": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Become a copy of a card in your opponent's hand"
+],
+[
+"transform",
+"Become a copy"
+],
+[
+"information",
+"a card in your opponent's hand"
+]
+],
+"by": "C"
+},
 "795806": {
 "tags": [
 [
@@ -1443,6 +2337,23 @@
 [
 "tribal",
 "Brotherhood cards"
+]
+],
+"by": "A=B"
+},
+"795816": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"+5 Power"
+],
+[
+"lone_unit",
+"this is your only card here"
 ]
 ],
 "by": "A=B"
@@ -1558,6 +2469,19 @@
 ],
 "by": "A=B"
 },
+"795846": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"repeat_trigger",
+"apply an additional time"
+]
+],
+"by": "A=B"
+},
 "795847": {
 "tags": [],
 "by": "A=B"
@@ -1575,9 +2499,64 @@
 ],
 "by": "A=B"
 },
+"795853": {
+"tags": [
+[
+"transform",
+"Transform charged cards in play into ones that cost 1 more"
+]
+],
+"by": "A=B"
+},
 "795859": {
 "tags": [],
 "by": "A=B"
+},
+"795861": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"aura",
+"Your cards with no abilities have +2 Power"
+],
+[
+"null_body",
+"cards with no abilities"
+],
+[
+"stat_gain",
+"+2 Power"
+]
+],
+"by": "C"
+},
+"795863": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add SP//dr to your hand"
+],
+[
+"merge_attach",
+"When this merges"
+],
+[
+"resource_gain",
+"+1 Energy next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"by": "C"
 },
 "795864": {
 "tags": [
@@ -1617,6 +2596,36 @@
 ],
 "by": "A=B"
 },
+"795870": {
+"tags": [
+[
+"quests",
+"Objective"
+],
+[
+"free_play",
+"Put a card from your hand here"
+]
+],
+"by": "C"
+},
+"795871": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"transform",
+"Transform your lowest-Power character here into one that costs 1 more"
+],
+[
+"stat_condition",
+"lowest-Power"
+]
+],
+"by": "A=B"
+},
 "795873": {
 "tags": [
 [
@@ -1651,6 +2660,23 @@
 ],
 "by": "C"
 },
+"795886": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"swap",
+"Swap the positions of the other two locations"
+],
+[
+"cross_lane",
+"other two locations"
+]
+],
+"by": "C"
+},
 "795888": {
 "tags": [
 [
@@ -1673,6 +2699,27 @@
 ],
 "by": "A=B"
 },
+"795891": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"variable_stats",
+"Set this card's Power equal to the Power of a random card in your deck"
+],
+[
+"random_effect",
+"random card"
+],
+[
+"deck_condition",
+"a random card in your deck"
+]
+],
+"by": "A=B"
+},
 "795899": {
 "tags": [
 [
@@ -1685,6 +2732,23 @@
 ]
 ],
 "by": "A=B"
+},
+"795901": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"enemy_benefit",
+"Enemy cards here have +2 Power"
+],
+[
+"aura",
+"Enemy cards here have +2 Power"
+]
+],
+"by": "C"
 },
 "795902": {
 "tags": [
@@ -1749,6 +2813,56 @@
 ]
 ],
 "by": "A=B"
+},
+"795919": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"summon",
+"Add Cap's Shield to another location"
+],
+[
+"cross_lane",
+"another location"
+],
+[
+"passive",
+"Ongoing"
+],
+[
+"movement",
+"Moveable"
+]
+],
+"by": "C"
+},
+"795920": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"cost_increase",
+"cards cost 1 more"
+],
+[
+"symmetric_effect",
+"cards cost 1 more"
+],
+[
+"delayed",
+"Next turn"
+],
+[
+"temporary_effect",
+"Next turn"
+]
+],
+"by": "C"
 },
 "795921": {
 "tags": [
@@ -1984,6 +3098,27 @@
 ],
 "by": "A=B"
 },
+"795960": {
+"tags": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"type_grant",
+"The first 6 characters you draw are EVIL!"
+],
+[
+"quests",
+"(0/6)"
+],
+[
+"merge_attach",
+"merge them into this"
+]
+],
+"by": "C"
+},
 "795963": {
 "tags": [
 [
@@ -2008,6 +3143,44 @@
 ]
 ],
 "by": "C"
+},
+"795969": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"passive",
+"Ongoing"
+],
+[
+"protection",
+"Thanos can't be discarded or destroyed"
+]
+],
+"by": "A=B"
+},
+"795970": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"merge_attach",
+"Merge this into one of your cards here"
+],
+[
+"movement",
+"It's Moveable next turn"
+]
+],
+"by": "A=B"
 },
 "795972": {
 "tags": [
@@ -2229,6 +3402,23 @@
 ],
 "by": "C"
 },
+"795996": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"combo_sequence",
+"the next card you play"
+],
+[
+"stat_gain",
+"Give the next card you play Power equal to this card's Power"
+]
+],
+"by": "C"
+},
 "795998": {
 "tags": [
 [
@@ -2249,6 +3439,40 @@
 ]
 ],
 "by": "C"
+},
+"796000": {
+"tags": [
+[
+"permanent_growth",
+"Gains +2 Power from merging"
+],
+[
+"turn_end",
+"End of Turn"
+],
+[
+"merge_attach",
+"Merge one of your created cards into this"
+]
+],
+"by": "C"
+},
+"796003": {
+"tags": [
+[
+"generate_cards",
+"add a random 1-Cost character to your hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"in_hand_buff",
+"with that same increase"
+]
+],
+"by": "A=B"
 },
 "796006": {
 "tags": [
@@ -2288,6 +3512,27 @@
 ],
 "by": "A=B"
 },
+"796011": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"information",
+"don't reveal until the game ends"
+],
+[
+"symmetric_effect",
+"All cards played next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"by": "A=B"
+},
 "796015": {
 "tags": [
 [
@@ -2318,6 +3563,48 @@
 ],
 "by": "C"
 },
+"796020": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"merge_attach",
+"Merge your lowest-Cost card here into this"
+],
+[
+"cost_condition",
+"lowest-Cost"
+],
+[
+"repeat_trigger",
+"Copy its text like it just revealed"
+]
+],
+"by": "C"
+},
+"796021": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"merge_attach",
+"Merge one of your cards here into this"
+],
+[
+"tutor",
+"Replace that card with a Spider-Verse card from your deck"
+],
+[
+"tribal",
+"Spider-Verse"
+]
+],
+"by": "A=B"
+},
 "796022": {
 "tags": [
 [
@@ -2327,6 +3614,23 @@
 [
 "copy",
 "Copy the text of one of your Ongoing cards"
+]
+],
+"by": "A=B"
+},
+"796024": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"variable_stats",
+"Set this card's Power equal to that of the last card you played"
+],
+[
+"combo_sequence",
+"the last card you played"
 ]
 ],
 "by": "A=B"
@@ -2442,6 +3746,23 @@
 ],
 "by": "A=B"
 },
+"796043": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"distribute",
+"Split your total Power evenly among all locations"
+],
+[
+"cross_lane",
+"all locations"
+]
+],
+"by": "C"
+},
 "796044": {
 "tags": [
 [
@@ -2514,6 +3835,27 @@
 ],
 "by": "C"
 },
+"796052": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"tutor",
+"Draw an Avenger"
+],
+[
+"tribal",
+"Avenger"
+],
+[
+"generate_cards",
+"shuffle Mjolnir into your deck"
+]
+],
+"by": "A=B"
+},
 "796054": {
 "tags": [
 [
@@ -2536,6 +3878,65 @@
 [
 "cost_reduction",
 "Reduce the cost of your cards in hand by 1"
+]
+],
+"by": "A=B"
+},
+"796061": {
+"tags": [
+[
+"lane_rule",
+"After you play a card here"
+],
+[
+"forced_placement",
+"move it to the middle location"
+],
+[
+"lane_identity",
+"middle location"
+]
+],
+"by": "C"
+},
+"796063": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Give 2 characters in your hand +3 Power"
+],
+[
+"play_restriction",
+"You can't play them next turn unless they're Thunderbolts"
+],
+[
+"tribal",
+"Thunderbolts"
+]
+],
+"by": "A=B"
+},
+"796064": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"return_to_hand",
+"Return your other cards here to your hand"
+],
+[
+"stat_gain",
+"+2 Power for each returned"
+],
+[
+"condition_count",
+"for each returned"
 ]
 ],
 "by": "A=B"
@@ -2595,6 +3996,31 @@
 ],
 "by": "A=B"
 },
+"796073": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"board_presence",
+"your full locations"
+],
+[
+"condition_count",
+"For each of your full locations"
+],
+[
+"stat_gain",
+"give one of your cards there +3 Power"
+],
+[
+"cross_lane",
+"For each of your full locations"
+]
+],
+"by": "C"
+},
 "796078": {
 "tags": [
 [
@@ -2636,6 +4062,19 @@
 ]
 ],
 "by": "A=B"
+},
+"796086": {
+"tags": [
+[
+"synergy_payoff",
+"When your cards in play are Empowered"
+],
+[
+"stat_gain",
+"additional +1 Power"
+]
+],
+"by": "C"
 },
 "796090": {
 "tags": [
@@ -2755,6 +4194,32 @@
 ],
 "by": "C"
 },
+"796110": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"board_clog",
+"Add a Widow's Kiss to your opponent's side of this location"
+]
+],
+"by": "A=B"
+},
+"796113": {
+"tags": [
+[
+"self_destruct",
+"Destroy this when your side of this location is full"
+],
+[
+"board_limit",
+"your side of this location is full"
+]
+],
+"by": "A=B"
+},
 "796114": {
 "tags": [
 [
@@ -2793,6 +4258,23 @@
 ],
 "by": "C"
 },
+"796119": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"enemy_benefit",
+"Your opponent draws a card"
+],
+[
+"cost_increase",
+"increase its cost by 1"
+]
+],
+"by": "A=B"
+},
 "796121": {
 "tags": [
 [
@@ -2813,6 +4295,56 @@
 ]
 ],
 "by": "A=B"
+},
+"796123": {
+"tags": [
+[
+"quests",
+"Objective"
+],
+[
+"stat_condition",
+"5 or more Power"
+],
+[
+"stat_gain",
+"Give one of your cards at each location +4 Power"
+],
+[
+"cross_lane",
+"at each location"
+]
+],
+"by": "C"
+},
+"796125": {
+"tags": [
+[
+"death_trigger",
+"When Discarded or Destroyed"
+],
+[
+"discard",
+"Discarded"
+],
+[
+"cheat_death",
+"Regenerate this"
+],
+[
+"random_effect",
+"random location"
+],
+[
+"resource_gain",
+"+1 Energy next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"by": "C"
 },
 "796131": {
 "tags": [
@@ -2861,6 +4393,44 @@
 ],
 "by": "A=B"
 },
+"796137": {
+"tags": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"on_play",
+"On Reveal"
+],
+[
+"transform",
+"Transform those cards into copies of this"
+],
+[
+"copy",
+"copies of this"
+]
+],
+"by": "A=B"
+},
+"796138": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stacking_keyword",
+"Horde +2"
+],
+[
+"variable_stats",
+"this gains Power equal to your Zombie Horde"
+]
+],
+"by": "A=B"
+},
 "796141": {
 "tags": [
 [
@@ -2877,6 +4447,27 @@
 ]
 ],
 "by": "C"
+},
+"796144": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stacking_keyword",
+"Horde +1"
+],
+[
+"condition_count",
+"for each of your cards at the right location"
+],
+[
+"lane_identity",
+"right location"
+]
+],
+"by": "A=B"
 },
 "796145": {
 "tags": [
@@ -2926,6 +4517,40 @@
 ],
 "by": "A=B"
 },
+"796163": {
+"tags": [
+[
+"lone_unit",
+"If you only have one card here"
+],
+[
+"stat_gain",
+"+5 Power"
+],
+[
+"lane_rule",
+"If you only have one card here, it has +5 Power"
+]
+],
+"by": "A=B"
+},
+"796164": {
+"tags": [
+[
+"turn_number",
+"After turn 3"
+],
+[
+"hand_deck_swap",
+"shuffle your hand into your deck"
+],
+[
+"draw",
+"Draw 3 cards"
+]
+],
+"by": "C"
+},
 "796167": {
 "tags": [
 [
@@ -2948,6 +4573,23 @@
 [
 "cross_lane",
 "at the others"
+]
+],
+"by": "A=B"
+},
+"796171": {
+"tags": [
+[
+"lane_rule",
+"The next card you play here"
+],
+[
+"transform",
+"becomes a random 6-Cost card"
+],
+[
+"random_effect",
+"random"
 ]
 ],
 "by": "A=B"
@@ -2998,6 +4640,19 @@
 ]
 ],
 "by": "C"
+},
+"796183": {
+"tags": [
+[
+"summon",
+"Add a Squirrel to each location"
+],
+[
+"symmetric_effect",
+"Add a Squirrel to each location"
+]
+],
+"by": "A=B"
 },
 "796184": {
 "tags": [
@@ -3055,6 +4710,36 @@
 ],
 "by": "C"
 },
+"796192": {
+"tags": [
+[
+"control_reward",
+"Whoever is winning here gets +4 Power at adjacent locations"
+],
+[
+"stat_gain",
+"+4 Power"
+],
+[
+"adjacency",
+"adjacent locations"
+]
+],
+"by": "A=B"
+},
+"796193": {
+"tags": [
+[
+"hand_deck_swap",
+"Shuffle your hand into your deck"
+],
+[
+"draw",
+"Draw 3 cards"
+]
+],
+"by": "C"
+},
 "796196": {
 "tags": [
 [
@@ -3063,6 +4748,27 @@
 ]
 ],
 "by": "A=B"
+},
+"796200": {
+"tags": [
+[
+"hand_deck_swap",
+"Replace both decks with 10 random cards"
+],
+[
+"symmetric_effect",
+"both decks"
+],
+[
+"random_effect",
+"random cards"
+],
+[
+"generate_cards",
+"10 random cards"
+]
+],
+"by": "C"
 },
 "796208": {
 "tags": [
@@ -3107,6 +4813,19 @@
 ],
 "by": "A=B"
 },
+"796212": {
+"tags": [
+[
+"lane_closure",
+"This is the last turn cards can be played here"
+],
+[
+"play_restriction",
+"last turn cards can be played here"
+]
+],
+"by": "A=B"
+},
 "796214": {
 "tags": [
 [
@@ -3120,6 +4839,23 @@
 [
 "hand_position",
 "rightmost card"
+]
+],
+"by": "C"
+},
+"796216": {
+"tags": [
+[
+"turn_number",
+"After turn 3"
+],
+[
+"transform",
+"transform all cards here into the Hulk"
+],
+[
+"lane_rule",
+"transform all cards here"
 ]
 ],
 "by": "C"
@@ -3140,6 +4876,27 @@
 ]
 ],
 "by": "A=B"
+},
+"796221": {
+"tags": [
+[
+"turn_number",
+"After turn 4"
+],
+[
+"board_wipe",
+"destroy all cards on the losing side here"
+],
+[
+"zone_control",
+"losing side"
+],
+[
+"lane_rule",
+"destroy all cards on the losing side here"
+]
+],
+"by": "C"
 },
 "796224": {
 "tags": [
@@ -3175,6 +4932,23 @@
 ]
 ],
 "by": "A=B"
+},
+"796234": {
+"tags": [
+[
+"turn_number",
+"After turn 4"
+],
+[
+"merge_attach",
+"merge your cards here into a Symbiote"
+],
+[
+"lane_rule",
+"merge your cards here into a Symbiote"
+]
+],
+"by": "C"
 },
 "796237": {
 "tags": [
@@ -3245,6 +5019,32 @@
 ],
 "by": "C"
 },
+"796243": {
+"tags": [
+[
+"game_length",
+"There is a turn 7 this game"
+]
+],
+"by": "C"
+},
+"796244": {
+"tags": [
+[
+"turn_number",
+"After turn 3"
+],
+[
+"lane_closure",
+"ruin a random location"
+],
+[
+"random_effect",
+"random location"
+]
+],
+"by": "A=B"
+},
 "796246": {
 "tags": [
 [
@@ -3301,6 +5101,70 @@
 ],
 "by": "A=B"
 },
+"796258": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"permanent_growth",
+"Give front-row cards here +1 Power"
+],
+[
+"rows",
+"front-row"
+],
+[
+"lane_rule",
+"Give front-row cards here +1 Power"
+]
+],
+"by": "A=B"
+},
+"796264": {
+"tags": [
+[
+"lane_rule",
+"After you play a card here"
+],
+[
+"enemy_benefit",
+"your opponent gets a Chimichanga"
+]
+],
+"by": "C"
+},
+"796265": {
+"tags": [
+[
+"turn_number",
+"After turn 3"
+],
+[
+"board_wipe",
+"destroy all cards here"
+],
+[
+"lane_rule",
+"destroy all cards here"
+]
+],
+"by": "C"
+},
+"796275": {
+"tags": [
+[
+"lane_rule",
+"Ongoing effects here apply an additional time"
+],
+[
+"repeat_trigger",
+"apply an additional time"
+]
+],
+"by": "A=B"
+},
 "796278": {
 "tags": [
 [
@@ -3314,6 +5178,23 @@
 [
 "hand_disruption",
 "from their hand"
+]
+],
+"by": "C"
+},
+"796279": {
+"tags": [
+[
+"lane_rule",
+"When your revealed cards fill this"
+],
+[
+"board_presence",
+"When your revealed cards fill this"
+],
+[
+"merge_attach",
+"merge them into a Symbiote"
 ]
 ],
 "by": "C"
@@ -3370,6 +5251,23 @@
 ],
 "by": "A=B"
 },
+"796295": {
+"tags": [
+[
+"resource_gain",
+"+1 Energy each turn"
+],
+[
+"board_presence",
+"if your side here is full"
+],
+[
+"lane_rule",
+"+1 Energy each turn if your side here is full"
+]
+],
+"by": "A=B"
+},
 "796298": {
 "tags": [
 [
@@ -3400,6 +5298,19 @@
 ],
 "by": "C"
 },
+"796306": {
+"tags": [
+[
+"game_length",
+"After turn 5, end the game"
+],
+[
+"turn_number",
+"After turn 5"
+]
+],
+"by": "A=B"
+},
 "796316": {
 "tags": [
 [
@@ -3409,6 +5320,19 @@
 [
 "distribute",
 "split +8 Power among ALL cards here"
+]
+],
+"by": "C"
+},
+"796319": {
+"tags": [
+[
+"turn_number",
+"After turn 4"
+],
+[
+"swap",
+"swap the position of each location"
 ]
 ],
 "by": "C"
@@ -3426,6 +5350,53 @@
 [
 "random_effect",
 "random locations"
+]
+],
+"by": "A=B"
+},
+"796326": {
+"tags": [
+[
+"lane_rule",
+"After you play a character here"
+],
+[
+"transform",
+"transform it into another one of the same Cost"
+]
+],
+"by": "C"
+},
+"796327": {
+"tags": [
+[
+"race_objective",
+"First to put exactly 2 cards here"
+],
+[
+"condition_count",
+"exactly 2 cards"
+],
+[
+"draw",
+"draws a card"
+]
+],
+"by": "A=B"
+},
+"796331": {
+"tags": [
+[
+"generate_cards",
+"Add a random Food Fight variant to each player's hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"symmetric_effect",
+"each player's hand"
 ]
 ],
 "by": "A=B"
@@ -3473,6 +5444,40 @@
 ],
 "by": "C"
 },
+"796338": {
+"tags": [
+[
+"race_objective",
+"First to fill this"
+],
+[
+"copy",
+"a copy of their opening hand"
+],
+[
+"card_advantage",
+"gets a copy of their opening hand"
+]
+],
+"by": "C"
+},
+"796339": {
+"tags": [
+[
+"lane_rule",
+"Created cards cost 1 more"
+],
+[
+"cost_increase",
+"Created cards cost 1 more"
+],
+[
+"symmetric_effect",
+"Created cards cost 1 more"
+]
+],
+"by": "C"
+},
 "796344": {
 "tags": [
 [
@@ -3512,6 +5517,19 @@
 ],
 "by": "A=B"
 },
+"796360": {
+"tags": [
+[
+"lane_rule",
+"After you play here"
+],
+[
+"generate_cards",
+"shuffle 3 Vibranium into your deck"
+]
+],
+"by": "C"
+},
 "796366": {
 "tags": [
 [
@@ -3521,6 +5539,41 @@
 [
 "draw",
 "draw a card"
+]
+],
+"by": "A=B"
+},
+"796369": {
+"tags": [
+[
+"lane_rule",
+"Turns into a new location"
+],
+[
+"turn_number",
+"on turn 4"
+]
+],
+"by": "A=B"
+},
+"796370": {
+"tags": [
+[
+"race_objective",
+"First to fill this"
+],
+[
+"resource_gain",
+"+3 Max Energy"
+]
+],
+"by": "A=B"
+},
+"796373": {
+"tags": [
+[
+"lane_closure",
+"Destroy the other locations"
 ]
 ],
 "by": "A=B"
@@ -3601,5 +5654,18 @@
 ]
 ],
 "by": "A=B"
+},
+"796383": {
+"tags": [
+[
+"turn_structure",
+"Energy each turn equals the turn number"
+],
+[
+"game_length",
+"the game lasts 6 turns"
+]
+],
+"by": "C"
 }
 }

@@ -1,0 +1,1050 @@
+{
+"756206": [
+[
+"damage",
+"Units take turns dealing damage equal to their power"
+]
+],
+"756216": [
+[
+"piercing",
+"ignoring its Armor"
+],
+[
+"friendly_fire",
+"damage this unit by its Fee amount"
+],
+[
+"coin_economy",
+"insufficient Coins"
+],
+[
+"cost_type",
+"to trigger its Fee ability"
+]
+],
+"756221": [
+[
+"condition_count",
+"a total of 25 or more points"
+],
+[
+"rows",
+"at least one of your rows"
+]
+],
+"756228": [
+[
+"on_play",
+"Deploy"
+],
+[
+"damage",
+"Damage 3 enemy units by 1"
+],
+[
+"scope_multi",
+"3 enemy units"
+],
+[
+"return_to_hand",
+"move self back to your hand"
+],
+[
+"comeback",
+"When you lose a round"
+]
+],
+"756231": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"aoe_damage",
+"Damage all units on an enemy row by 1"
+],
+[
+"reveal_order",
+"Initiative"
+],
+[
+"repeat_trigger",
+"repeat this ability"
+],
+[
+"on_kill",
+"If any were destroyed"
+]
+],
+"756242": [
+[
+"on_play",
+"Deploy (Adrenaline 4)"
+],
+[
+"hand_size",
+"Adrenaline 4"
+],
+[
+"tutor",
+"Summon Vesemir and Lambert from your deck"
+],
+[
+"free_play",
+"Summon Vesemir and Lambert from your deck"
+]
+],
+"756244": [
+[
+"on_play",
+"Deploy (Adrenaline 4)"
+],
+[
+"hand_size",
+"Adrenaline 4"
+],
+[
+"tutor",
+"Summon Eskel and Vesemir from your deck"
+],
+[
+"free_play",
+"Summon Eskel and Vesemir from your deck"
+]
+],
+"756259": [
+[
+"banish",
+"Doomed"
+],
+[
+"quests",
+"Scenario: Progress whenever you play a gold unit"
+],
+[
+"on_ally_play",
+"whenever you play a gold unit"
+],
+[
+"row_effects",
+"Spawn Cataclysm on both enemy rows for 2 turns"
+],
+[
+"damage",
+"Damage an enemy unit by 5"
+],
+[
+"generate_cards",
+"Spawn and play Clear Skies"
+]
+],
+"756261": [
+[
+"cast_from_zone",
+"play the top unit from your deck"
+],
+[
+"recycle",
+"Shuffle an allied unit on the battlefield into your deck"
+],
+[
+"deck_position",
+"play the top unit from your deck"
+],
+[
+"free_play",
+"play the top unit from your deck"
+]
+],
+"756266": [
+[
+"destroy",
+"Destroy the lowest-power unit"
+],
+[
+"stat_condition",
+"lowest-power unit"
+],
+[
+"reveal_order",
+"Initiative"
+],
+[
+"friendly_fire",
+"Destroy the lowest-power unit"
+]
+],
+"756268": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"row_effects",
+"Increase all row effect durations by 1"
+],
+[
+"rows",
+"Deploy (Ranged)"
+],
+[
+"scope_global",
+"all row effect durations"
+]
+],
+"756277": [
+[
+"destroy",
+"Destroy the highest-power unit"
+],
+[
+"stat_condition",
+"highest-power unit"
+],
+[
+"reveal_order",
+"Initiative"
+],
+[
+"friendly_fire",
+"Destroy the highest-power unit"
+]
+],
+"756291": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"recycle",
+"Shuffle a card from your hand into your deck"
+],
+[
+"tutor",
+"draw a unit of your choice"
+],
+[
+"in_hand_buff",
+"boost it by 3"
+]
+],
+"756295": [
+[
+"activated",
+"Order"
+],
+[
+"symmetric_effect",
+"both players draw a card"
+],
+[
+"draw",
+"both players draw a card"
+],
+[
+"enemy_benefit",
+"both players draw a card"
+],
+[
+"hand_size",
+"your opponent's hand is not full"
+],
+[
+"round_passing",
+"If neither player has passed"
+]
+],
+"756298": [
+[
+"donate",
+"Disloyal"
+],
+[
+"death_trigger",
+"Deathwish:"
+],
+[
+"aoe_damage",
+"Damage all units on this row by 3"
+],
+[
+"friendly_fire",
+"Damage all units on this row by 3"
+]
+],
+"756309": [
+[
+"activated",
+"Order"
+],
+[
+"ping",
+"Damage a unit by 1"
+],
+[
+"cooldowns",
+"Cooldown: 1"
+]
+],
+"756324": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"rows",
+"Ranged"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"deck_position",
+"move a card from your hand to the top of your deck"
+]
+],
+"756353": [
+[
+"delayed",
+"Timer 3"
+],
+[
+"tutor",
+"Summon Old Speartip from your deck to this row"
+],
+[
+"stat_gain",
+"increase its base power by 6"
+],
+[
+"banish",
+"Banish self"
+],
+[
+"on_damaged",
+"If Old Speartip: Asleep takes damage"
+],
+[
+"free_play",
+"Summon Old Speartip from your deck to this row"
+],
+[
+"self_destruct",
+"Banish self"
+]
+],
+"756356": [
+[
+"immunity",
+"Veil"
+],
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost self by the total duration of row effects on the opposite side"
+],
+[
+"row_effects",
+"row effects"
+],
+[
+"permanent_growth",
+"Whenever you apply a row effect, boost self by its duration"
+]
+],
+"756361": [
+[
+"death_trigger",
+"Whenever a unit is destroyed during your turn"
+],
+[
+"permanent_growth",
+"boost self by 1"
+]
+],
+"756364": [
+[
+"symmetric_effect",
+"Each player destroys their lowest-power unit"
+],
+[
+"destroy",
+"destroys their lowest-power unit"
+],
+[
+"friendly_fire",
+"Each player destroys"
+],
+[
+"stat_condition",
+"lowest-power unit"
+]
+],
+"756370": [
+[
+"on_play",
+"Deploy"
+],
+[
+"tutor",
+"Play [1] Rock Barrage(s) from your deck"
+],
+[
+"count_payoff",
+"for each Construct you played this game"
+],
+[
+"tribal",
+"Construct"
+],
+[
+"forced_movement",
+"move an enemy unit to the other row"
+],
+[
+"free_play",
+"Play [1] Rock Barrage(s) from your deck"
+]
+],
+"756384": [
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Order"
+],
+[
+"destroy",
+"Destroy all other units with power equal to Schirrú"
+],
+[
+"stat_condition",
+"power equal to Schirrú"
+],
+[
+"friendly_fire",
+"Destroy all other units"
+],
+[
+"scope_global",
+"all other units"
+]
+],
+"756420": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"tutor",
+"Play an Alchemy card from your deck"
+],
+[
+"tribal",
+"Alchemy"
+],
+[
+"free_play",
+"Play an Alchemy card from your deck"
+]
+],
+"756451": [
+[
+"discard",
+"When this unit is Discarded"
+],
+[
+"revive",
+"Summon it from your graveyard to your Melee row"
+],
+[
+"graveyard",
+"from your graveyard"
+]
+],
+"756458": [
+[
+"recycle",
+"Echo"
+],
+[
+"selection",
+"Choose between a random bronze Skellige Beast and a random bronze Skellige Human"
+],
+[
+"generate_cards",
+"Spawn and play the one you chose"
+],
+[
+"random_effect",
+"random bronze Skellige Beast"
+],
+[
+"tribal",
+"Skellige Beast"
+],
+[
+"graveyard",
+"Spawn the other in your graveyard"
+]
+],
+"756464": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"tutor",
+"Play a Tactic from your deck"
+],
+[
+"rows",
+"Ranged"
+],
+[
+"free_play",
+"Play a Tactic from your deck"
+]
+],
+"756469": [
+[
+"immunity",
+"Immunity"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"random_effect",
+"a random enemy unit"
+],
+[
+"debuff",
+"Whenever this unit receives a status, damage self by 1"
+],
+[
+"on_play",
+"Whenever this card enters the battlefield"
+],
+[
+"enemy_benefit",
+"your opponent draws a card"
+],
+[
+"round_passing",
+"your opponent has already passed"
+],
+[
+"hand_size",
+"their hand is full"
+],
+[
+"friendly_fire",
+"damage self by 12"
+]
+],
+"756472": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"disruption",
+"Shuffle a card from your opponent's graveyard into their deck"
+],
+[
+"recycle",
+"Shuffle a card from your graveyard into your deck"
+],
+[
+"rows",
+"Deploy (Ranged)"
+],
+[
+"graveyard",
+"Shuffle a card from your opponent's graveyard into their deck"
+]
+],
+"756480": [
+[
+"donate",
+"Disloyal"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"steal",
+"Play the top card from your opponent's deck"
+],
+[
+"cast_from_zone",
+"Play the top card from your opponent's deck"
+],
+[
+"deck_position",
+"the top card from your opponent's deck"
+]
+],
+"756484": [
+[
+"on_play",
+"Deploy"
+],
+[
+"tribal",
+"If you control a Soldier"
+],
+[
+"tutor",
+"Summon all copies of self from your deck to this row"
+],
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"generate_cards",
+"Spawn a copy of self in your deck"
+],
+[
+"copy",
+"Spawn a copy of self"
+],
+[
+"free_play",
+"Summon all copies of self from your deck to this row"
+]
+],
+"756486": [
+[
+"on_play",
+"Deploy"
+],
+[
+"deck_position",
+"Look at the top 3 units in your opponent's deck"
+],
+[
+"information",
+"Look at the top 3 units in your opponent's deck"
+],
+[
+"damage_reduction",
+"gain Armor equal to its power"
+],
+[
+"activated",
+"Order"
+],
+[
+"selection",
+"look at the top units in your deck up to that amount, then choose one"
+],
+[
+"regeneration",
+"gain Vitality equal to its power"
+],
+[
+"stat_gain",
+"boost self by its power"
+],
+[
+"tribal",
+"bronze Soldier"
+]
+],
+"756494": [
+[
+"activated",
+"Order:"
+],
+[
+"damage_over_time",
+"Bleeding (1)"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"condition_count",
+"at least 3 Charges"
+],
+[
+"damage_reduction",
+"gain 1 Armor"
+]
+],
+"756520": [
+[
+"on_play",
+"Deploy"
+],
+[
+"friendly_fire",
+"Damage self by 6"
+],
+[
+"heal",
+"Heal self by 1"
+]
+],
+"756521": [
+[
+"shield",
+"Shield"
+],
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage a unit by 2"
+],
+[
+"on_spell",
+"Whenever you play a Tactic"
+],
+[
+"tribal",
+"Tactic"
+]
+],
+"756533": [
+[
+"generate_cards",
+"Create and play a gold unit from any faction"
+]
+],
+"756543": [
+[
+"count_payoff",
+"Whenever you use an Order ability while this card is in your deck"
+],
+[
+"delayed",
+"Counter: 10"
+],
+[
+"free_play",
+"Summon this card from your deck to your Ranged row"
+],
+[
+"cast_from_zone",
+"Summon this card from your deck to your Ranged row"
+]
+],
+"756545": [
+[
+"delayed",
+"Timer 2 (Ranged)"
+],
+[
+"symmetric_effect",
+"Each player draws a unit"
+],
+[
+"tutor",
+"draws a unit"
+],
+[
+"enemy_benefit",
+"Each player draws a unit"
+],
+[
+"stat_loss",
+"sets its power to 1"
+]
+],
+"756554": [
+[
+"turn_end",
+"At the end of the round"
+],
+[
+"rows",
+"Melee"
+],
+[
+"donate",
+"shuffle self into your opponent's deck"
+]
+],
+"756563": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"heal",
+"Heal all other units on this row by 1"
+],
+[
+"regeneration",
+"Heal all other units on this row by 1"
+],
+[
+"rows",
+"this row"
+],
+[
+"scope_multi",
+"all other units on this row"
+]
+],
+"756566": [
+[
+"activated",
+"Order"
+],
+[
+"generate_cards",
+"Spawn and play Mardroeme"
+],
+[
+"on_spell",
+"Whenever you play an Alchemy card"
+],
+[
+"tribal",
+"Alchemy"
+],
+[
+"heal",
+"Heal a random allied unit by 1"
+],
+[
+"random_effect",
+"random allied unit"
+],
+[
+"deckbuilding_effect",
+"adds 17 provisions to your deck's provisions limit"
+]
+],
+"756589": [
+[
+"trap_secret",
+"Ambush"
+],
+[
+"reactions",
+"When your opponent plays a card face up"
+],
+[
+"distribute",
+"split damage equal to its provision cost randomly between all enemy units"
+],
+[
+"random_effect",
+"randomly"
+],
+[
+"cost_condition",
+"equal to its provision cost"
+]
+],
+"756591": [
+[
+"on_play",
+"Deploy"
+],
+[
+"summon",
+"Spawn a Left Fucking Flank and a Right Fucking Flank on each side of this unit"
+],
+[
+"adjacency",
+"on each side of this unit"
+],
+[
+"stat_gain",
+"boost self by 3"
+]
+],
+"756639": [
+[
+"in_hand_buff",
+"While in hand, deck, or on the battlefield"
+],
+[
+"death_trigger",
+"whenever an enemy unit is destroyed or Banished during your turn"
+],
+[
+"permanent_growth",
+"boost self by 1"
+]
+],
+"756640": [
+[
+"selection",
+"Look at a random Dwarf, Dryad, and Elf from your deck, then play one"
+],
+[
+"random_effect",
+"random Dwarf, Dryad, and Elf"
+],
+[
+"tribal",
+"Dwarf, Dryad, and Elf"
+],
+[
+"stat_gain",
+"boost it by 2"
+],
+[
+"free_play",
+"then play one"
+]
+],
+"756646": [
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage an enemy unit by the amount Mad Kiyan is boosted"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"rewind",
+"Reset own power"
+]
+],
+"756651": [
+[
+"on_play",
+"Deploy"
+],
+[
+"deck_condition",
+"If your starting deck does not have cards with a provision cost of 10 or more"
+],
+[
+"cost_condition",
+"provision cost of 10 or more"
+],
+[
+"protection",
+"gain Resilience, Shield, and Veil"
+],
+[
+"shield",
+"Shield"
+],
+[
+"immunity",
+"Veil"
+]
+],
+"756656": [
+[
+"ping",
+"Damage an enemy unit by 1"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"free_play",
+"Play a bronze card from your hand"
+],
+[
+"return_to_hand",
+"move Sihil back to your hand"
+],
+[
+"reveal_order",
+"Initiative"
+],
+[
+"permanent_growth",
+"increase the damage by 1 for the rest of the game"
+],
+[
+"transform",
+"transform into Masterful Sihil"
+],
+[
+"spell_power",
+"increase the damage by 1 for the rest of the game"
+]
+],
+"756663": [
+[
+"on_play",
+"Deploy"
+],
+[
+"copy",
+"Spawn and play a base copy of a bronze Soldier from your starting deck"
+],
+[
+"tribal",
+"Soldier"
+],
+[
+"activated",
+"Order"
+],
+[
+"stat_gain",
+"Boost an allied Soldier and all its copies by 1"
+],
+[
+"damage_reduction",
+"give them 1 Armor"
+],
+[
+"summon",
+"Spawn and play a base copy of a bronze Soldier"
+],
+[
+"deck_condition",
+"from your starting deck"
+],
+[
+"round_carryover",
+"Resilience"
+]
+],
+"756697": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"Discard a card"
+],
+[
+"stat_gain",
+"boost self by its power"
+],
+[
+"rows",
+"Melee"
+]
+]
+}

@@ -1,0 +1,51 @@
+796670 | Love Tap | Keywords: Skill. Deal 1 to all battling enemies and the enemy Nexus.
+   A: [["spell_speed", "Skill"], ["aoe_damage", "Deal 1 to all battling enemies"], ["direct_damage", "the enemy Nexus"]]
+   B: [["aoe_damage", "Deal 1 to all battling enemies"], ["ping", "Deal 1"], ["direct_damage", "the enemy Nexus"]]
+796776 | Pyke's Bone Skewer | Keywords: Fast. An ally strikes an enemy, then moves to the top of your deck. Create a Pyke in your deck.
+   A: [["spell_speed", "Fast"], ["damage", "An ally strikes an enemy"], ["deck_position", "moves to the top of your deck"], ["recycle", "moves to the top of your deck"], ["generate_cards", "Create a Pyke in your deck"]]
+   B: [["spell_speed", "Fast"], ["damage", "An ally strikes an enemy"], ["deck_position", "moves to the top of your deck"], ["generate_cards", "Create a Pyke in your deck"]]
+796808 | Warlord's Palace | Keywords: Countdown, Landmark. Countdown 8: Create a Relic of Power in hand. When you target allies advance me 1.
+   A: [["delayed", "Countdown 8"], ["generate_cards", "Create a Relic of Power in hand"], ["on_spell", "When you target allies"]]
+   B: [["delayed", "Countdown 8"], ["generate_cards", "Create a Relic of Power in hand"], ["speed", "When you target allies advance me 1"]]
+796835 | Roiling Sands | Keywords: Landmark. When an enemy is summoned, destroy me to grant it Vulnerable.
+   A: [["on_enemy_enter", "When an enemy is summoned"], ["self_destruct", "destroy me"], ["mark_target", "grant it Vulnerable"]]
+   B: [["on_enemy_enter", "When an enemy is summoned"], ["self_destruct", "destroy me"], ["blocking", "grant it Vulnerable"]]
+796888 | Entrapment (created) | Keywords: Burst. Pick 1 of 3 units from the enemy deck and plant 3 Poison Puffcaps on all copies of it.
+   A: [["spell_speed", "Burst"], ["information", "Pick 1 of 3 units from the enemy deck"], ["junk_cards", "plant 3 Poison Puffcaps on all copies of it"]]
+   B: [["spell_speed", "Burst"], ["selection", "Pick 1 of 3 units from the enemy deck"], ["junk_cards", "plant 3 Poison Puffcaps on all copies of it"]]
+796900 | Papercraft Dragon (created) | Keywords: Attach, Double Attack. Attach me to an ally to give it my stats and keywords while I'm Attached. When that ally leaves play, Recall me.
+   A: [["merge_attach", "Attach me to an ally"], ["multi_attack", "Double Attack"], ["buff", "give it my stats and keywords"], ["return_to_hand", "Recall me"]]
+   B: [["merge_attach", "Attach me to an ally"], ["stat_gain", "give it my stats and keywords"], ["multi_attack", "Double Attack"], ["return_to_hand", "Recall me"]]
+796968 | Caitlyn's Piltover Peacemaker | Keywords: Fast. Deal 2 to a unit and plant 2 Flashbomb Traps in the top 8 cards of the enemy deck. Create a Caitlyn in your deck.
+   A: [["spell_speed", "Fast"], ["damage", "Deal 2 to a unit"], ["trap_secret", "plant 2 Flashbomb Traps in the top 8 cards of the enemy deck"], ["generate_cards", "Create a Caitlyn in your deck"]]
+   B: [["spell_speed", "Fast"], ["damage", "Deal 2 to a unit"], ["trap_secret", "plant 2 Flashbomb Traps in the top 8 cards of the enemy deck"], ["junk_cards", "plant 2 Flashbomb Traps"], ["deck_position", "top 8 cards of the enemy deck"], ["generate_cards", "Create a Caitlyn in your deck"]]
+797037 | Mysterious Portal | Keywords: Boon. Summon a random 2 or 3 cost follower. If your board is full, create a 0 cost Fleeting copy in hand instead.
+   A: [["summon", "Summon a random 2 or 3 cost follower"], ["random_effect", "random 2 or 3 cost follower"], ["board_limit", "If your board is full"], ["generate_cards", "create a 0 cost Fleeting copy in hand instead"]]
+   B: [["merge_attach", "Boon"], ["summon", "Summon a random 2 or 3 cost follower"], ["random_effect", "a random 2 or 3 cost follower"], ["cost_condition", "2 or 3 cost"], ["board_limit", "If your board is full"], ["generate_cards", "create a 0 cost Fleeting copy in hand instead"], ["cost_set", "0 cost"]]
+797065 | Feed the Void | Keywords: Skill. Camouflaged Horror strikes an enemy.
+   A: [["spell_speed", "Skill"], ["damage", "Camouflaged Horror strikes an enemy"]]
+   B: [["damage", "Camouflaged Horror strikes an enemy"]]
+797068 | Joraal | Keywords: Challenger, Tough. Your opponent's spells cost 2 more while I am attacking.
+   A: [["damage_reduction", "Tough"], ["cost_increase", "Your opponent's spells cost 2 more while I am attacking"]]
+   B: [["blocking", "Challenger"], ["damage_reduction", "Tough"], ["cost_increase", "Your opponent's spells cost 2 more while I am attacking"]]
+797078 | Taarosh | Keywords: Fearsome. Each round, the first time I attack, fill your attackers with revived Ephemeral copies of the strongest followers you've slain this game.
+   A: [["evasion", "Fearsome"], ["on_attack", "the first time I attack"], ["revive", "fill your attackers with revived Ephemeral copies of the strongest followers you've slain this game"], ["self_destruct", "Ephemeral"], ["count_payoff", "you've slain this game"]]
+   B: [["evasion", "Fearsome"], ["on_attack", "the first time I attack"], ["revive", "revived Ephemeral copies of the strongest followers you've slain this game"], ["self_destruct", "Ephemeral"], ["stat_condition", "the strongest followers"], ["count_payoff", "you've slain this game"]]
+797138 | Sigil of the Storm | Keywords: Landmark, Missing Translation. Sigils of the Storm stack. Titanic allies cost 1 less. Destroy me when you play a Titanic ally.
+   A: [["stacking_keyword", "Sigils of the Storm stack"], ["cost_reduction", "Titanic allies cost 1 less"], ["tribal", "Titanic allies"], ["self_destruct", "Destroy me when you play a Titanic ally"]]
+   B: [["stacking_keyword", "Sigils of the Storm stack"], ["cost_reduction", "Titanic allies cost 1 less"], ["tribal", "Titanic allies"], ["self_destruct", "Destroy me when you play a Titanic ally"], ["on_ally_play", "when you play a Titanic ally"]]
+797143 | Shackles | Keywords: Focus, Curse. While I'm in hand, the cursed unit is Immobile.
+   A: [["spell_speed", "Focus"], ["junk_cards", "Curse"], ["immobilize", "the cursed unit is Immobile"]]
+   B: [["suppress", "the cursed unit is Immobile"]]
+797147 | Suppression | Keywords: Focus, Curse. While I'm in hand, you can't play spells other than curses.
+   A: [["play_restriction", "you can't play spells other than curses"], ["junk_cards", "Curse"]]
+   B: [["play_restriction", "you can't play spells other than curses"]]
+797167 | Petricite Effigy | Keywords: Skill, Slow. Curse your opponent with Suppression.
+   A: [["spell_speed", "Skill"], ["disruption", "Curse your opponent with Suppression"]]
+   B: [["spell_speed", "Slow"]]
+797181 | Soaring Cartographer (created) | Keywords: Brash. Updraft 1 to draw another card that costs more than the card you Updrafted.
+   A: [["draw", "draw another card that costs more than the card you Updrafted"], ["cost_condition", "costs more than the card you Updrafted"], ["recycle", "Updraft 1"]]
+   B: [["draw", "draw another card"], ["cost_condition", "costs more than the card you Updrafted"]]
+797228 | Smoke Visions | Keywords: Skill, Focus. To play, discard 1. Invoke a Celestial card that costs 7 or more.
+   A: [["spell_speed", "Skill"], ["discard", "To play, discard 1"], ["generate_cards", "Invoke a Celestial card"], ["cost_condition", "costs 7 or more"]]
+   B: [["discard", "To play, discard 1"], ["generate_cards", "Invoke a Celestial card"], ["selection", "Invoke"], ["cost_condition", "costs 7 or more"]]

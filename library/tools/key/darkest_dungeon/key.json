@@ -25,6 +25,19 @@
 ],
 "by": "A=B"
 },
+"759762": {
+"tags": [
+[
+"upgrade",
+"Armor can be upgraded at the Blacksmith"
+],
+[
+"items_consumables",
+"A hero's armor"
+]
+],
+"by": "A=B"
+},
 "759764": {
 "tags": [
 [
@@ -47,6 +60,27 @@
 [
 "targeting_rules",
 "require heroes to use skills to attack around the corpses"
+]
+],
+"by": "C"
+},
+"759770": {
+"tags": [
+[
+"cheat_death",
+"on Death's Door"
+],
+[
+"destroy",
+"permanently kills the hero"
+],
+[
+"permanent_loss",
+"permanently kills the hero"
+],
+[
+"on_damaged",
+"A hit taken by a hero"
 ]
 ],
 "by": "C"
@@ -88,6 +122,15 @@
 ]
 ],
 "by": "C"
+},
+"759787": {
+"tags": [
+[
+"items_consumables",
+"An item that can be added to the player's inventory"
+]
+],
+"by": "A=B"
 },
 "759789": {
 "tags": [
@@ -176,6 +219,19 @@
 ],
 "by": "A=B"
 },
+"759802": {
+"tags": [
+[
+"items_consumables",
+"A type of equipment used by a hero"
+],
+[
+"upgrade",
+"Weapons can be upgraded at the Blacksmith"
+]
+],
+"by": "A=B"
+},
 "759807": {
 "tags": [
 [
@@ -185,6 +241,61 @@
 [
 "run_structure",
 "return to town at any time"
+]
+],
+"by": "C"
+},
+"759809": {
+"tags": [
+[
+"damage_reduction",
+"high PROT, which absorbs attack damage"
+],
+[
+"piercing",
+"DOTs (blight and bleed) ignore PROT"
+],
+[
+"damage_over_time",
+"DOTs (blight and bleed)"
+]
+],
+"by": "A=B"
+},
+"759819": {
+"tags": [
+[
+"items_consumables",
+"bring some food and torches"
+],
+[
+"upkeep",
+"always bring some food and torches"
+],
+[
+"run_structure",
+"how long the quest is"
+]
+],
+"by": "C"
+},
+"759822": {
+"tags": [
+[
+"rest_phase",
+"Camping gives heroes a chance to recuperate"
+],
+[
+"items_consumables",
+"firewood in your inventory"
+],
+[
+"heal",
+"recuperate"
+],
+[
+"stress_morale",
+"stressed"
 ]
 ],
 "by": "C"
@@ -206,6 +317,40 @@
 ],
 "by": "C"
 },
+"759824": {
+"tags": [
+[
+"stress_morale",
+"Heroes relieve stress"
+],
+[
+"rest_phase",
+"activities at the Tavern and Abbey"
+],
+[
+"traits_quirks",
+"depending on their quirks"
+],
+[
+"reserve_bench",
+"You'll have to take a different hero with you on your next quest"
+]
+],
+"by": "A=B"
+},
+"759828": {
+"tags": [
+[
+"permanent_loss",
+"given their all"
+],
+[
+"run_structure",
+"abandoning this quest"
+]
+],
+"by": "C"
+},
 "759831": {
 "tags": [
 [
@@ -214,6 +359,119 @@
 ]
 ],
 "by": "A=B"
+},
+"759834": {
+"tags": [
+[
+"permanent_growth",
+"Resolve XP for each successful quest"
+],
+[
+"upgrade",
+"Resolve Level"
+],
+[
+"stress_morale",
+"directly acts as Stress Resistance"
+],
+[
+"run_structure",
+"successful quest"
+]
+],
+"by": "C"
+},
+"759837": {
+"tags": [
+[
+"death_trigger",
+"When most monsters die, they leave corpses"
+],
+[
+"self_destruct",
+"will eventually go away on their own"
+],
+[
+"terrain",
+"Corpses act as temporary obstacles"
+],
+[
+"forced_movement",
+"push/pull skills"
+],
+[
+"damage_over_time",
+"bleed, blight"
+],
+[
+"ranged",
+"use ranged skills"
+]
+],
+"by": "C"
+},
+"759839": {
+"tags": [
+[
+"information",
+"A critical scouting success will sometimes reveal a Secret Room"
+],
+[
+"random_effect",
+"will sometimes reveal"
+],
+[
+"items_consumables",
+"equipped with a key"
+]
+],
+"by": "C"
+},
+"759841": {
+"tags": [
+[
+"permanent_loss",
+"will never return"
+],
+[
+"run_structure",
+"successful quest in the Darkest Dungeon"
+]
+],
+"by": "A=B"
+},
+"759855": {
+"tags": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"damage_reduction",
+"+30% protection"
+],
+[
+"stat_gain",
+"+5% dodge"
+],
+[
+"bodyguard",
+"guard target ally"
+],
+[
+"swap",
+"swap places with target"
+],
+[
+"temporary_effect",
+"for 2 rounds"
+]
+],
+"by": "C"
 },
 "759856": {
 "tags": [
@@ -239,6 +497,27 @@
 ]
 ],
 "by": "C"
+},
+"759857": {
+"tags": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 2, 3, 4"
+],
+[
+"stat_loss",
+"-10% accuracy, -10% crit"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3"
+]
+],
+"by": "A=B"
 },
 "759860": {
 "tags": [
@@ -316,6 +595,23 @@
 ],
 "by": "C"
 },
+"759871": {
+"tags": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 2, 1"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2"
+]
+],
+"by": "A=B"
+},
 "759872": {
 "tags": [
 [
@@ -388,6 +684,56 @@
 ],
 "by": "C"
 },
+"759892": {
+"tags": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2"
+],
+[
+"damage",
+"Deals damage"
+],
+[
+"mark_target",
+"only if target is tagged, +25% damage (self)"
+]
+],
+"by": "C"
+},
+"759896": {
+"tags": [
+[
+"movement",
+"Moves self (back/forward) 0 1"
+],
+[
+"counterattack",
+"riposte (counterattack)"
+],
+[
+"stat_loss",
+"-15% damage"
+],
+[
+"temporary_buff",
+"+2% crit (self) for 2 rounds"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2"
+],
+[
+"damage",
+"Deals damage"
+]
+],
+"by": "A=B"
+},
 "759899": {
 "tags": [
 [
@@ -438,6 +784,27 @@
 ],
 "by": "C"
 },
+"759902": {
+"tags": [
+[
+"bodyguard",
+"guard target ally for 1 rounds"
+],
+[
+"stat_gain",
+"+25% dodge (self)"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"temporary_effect",
+"for 1 rounds"
+]
+],
+"by": "C"
+},
 "759905": {
 "tags": [
 [
@@ -451,6 +818,135 @@
 [
 "movement",
 "Moves self (back/forward) 0 1"
+]
+],
+"by": "C"
+},
+"759908": {
+"tags": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"scope_multi",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"movement",
+"Moves self (back/forward) 0 3"
+],
+[
+"no_damage_output",
+"Deals damage (modifier -100%)"
+],
+[
+"stat_loss",
+"-18% accuracy"
+],
+[
+"debuff",
+"-18% accuracy"
+],
+[
+"speed",
+"+9 speed (self)"
+]
+],
+"by": "C"
+},
+"759914": {
+"tags": [
+[
+"forced_movement",
+"push back 3 ranks"
+],
+[
+"terrain",
+"clear_corpses"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2"
+],
+[
+"targeting_rules",
+"Targets enemy ranks 1"
+]
+],
+"by": "A=B"
+},
+"759922": {
+"tags": [
+[
+"bodyguard",
+"guard target ally for 2 rounds"
+],
+[
+"damage_reduction",
+"+45% protection (self)"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2, 3, 4"
+]
+],
+"by": "A=B"
+},
+"759923": {
+"tags": [
+[
+"counterattack",
+"riposte (counterattack)"
+],
+[
+"temporary_buff",
+"+20% damage, +2% crit (self) for 2 rounds"
+],
+[
+"taunt",
+"mark target (self) for 1 rounds"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2, 3"
+],
+[
+"damage",
+"Deals damage"
+]
+],
+"by": "A=B"
+},
+"759932": {
+"tags": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 2, 3, 4"
+],
+[
+"targeting_rules",
+"Targets enemy ranks 3, 4"
+],
+[
+"damage",
+"Deals damage (modifier -50%)"
+],
+[
+"forced_movement",
+"pull forward 2 ranks"
+],
+[
+"terrain",
+"clear_corpses"
 ]
 ],
 "by": "C"
@@ -479,6 +975,35 @@
 ]
 ],
 "by": "A=B"
+},
+"759939": {
+"tags": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"no_damage_output",
+"Deals damage (modifier -100%)"
+],
+[
+"debuff",
+"Disorient 5"
+],
+[
+"terrain",
+"clear_corpses"
+],
+[
+"disable",
+"stun"
+]
+],
+"by": "C"
 },
 "759940": {
 "tags": [
@@ -543,6 +1068,47 @@
 ],
 "by": "C"
 },
+"759947": {
+"tags": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"damage",
+"Deals damage 5-14"
+],
+[
+"damage_over_time",
+"bleed 5 per round for 3 rounds"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"movement",
+"Shuffle Self"
+],
+[
+"stress_morale",
+"stress +7"
+],
+[
+"stat_loss",
+"-20% damage"
+],
+[
+"self_destruct",
+"kill self"
+]
+],
+"by": "C"
+},
 "759948": {
 "tags": [
 [
@@ -601,6 +1167,31 @@
 ],
 "by": "C"
 },
+"759951": {
+"tags": [
+[
+"board_limit",
+"Takes 4 ranks"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"damage_over_time",
+"blight 2 per round for 3 rounds"
+],
+[
+"self_destruct",
+"kill (self)"
+]
+],
+"by": "C"
+},
 "759952": {
 "tags": [
 [
@@ -655,6 +1246,27 @@
 ],
 "by": "A=B"
 },
+"759957": {
+"tags": [
+[
+"movement",
+"Moves self (back/forward) 3 0"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"ping",
+"Deals damage 1-1"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2, 3, 4"
+]
+],
+"by": "C"
+},
 "759958": {
 "tags": [
 [
@@ -684,6 +1296,76 @@
 ],
 "by": "C"
 },
+"759959": {
+"tags": [
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"stat_loss",
+"-6% dodge for 2 rounds"
+],
+[
+"stress_morale",
+"stress +4"
+],
+[
+"movement",
+"Moves self (back/forward) 1 0"
+],
+[
+"rank_positions",
+"Usable from ranks 1"
+],
+[
+"ranged",
+"Ranged skill"
+]
+],
+"by": "A=B"
+},
+"759961": {
+"tags": [
+[
+"multi_attack",
+"Acts 2 times per round"
+],
+[
+"summon",
+"Summons allies"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 3, 2, 1"
+],
+[
+"mark_target",
+"Rank Target Enemy 1"
+],
+[
+"damage",
+"Deals damage 23-45"
+],
+[
+"disable",
+"stun"
+],
+[
+"bodyguard",
+"guard target ally for 2 rounds"
+],
+[
+"stress_morale",
+"stress +8"
+]
+],
+"by": "C"
+},
 "759962": {
 "tags": [
 [
@@ -708,6 +1390,80 @@
 ]
 ],
 "by": "C"
+},
+"759966": {
+"tags": [
+[
+"summon",
+"Summons allies"
+],
+[
+"stress_morale",
+"stress +10"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2"
+],
+[
+"ping",
+"Deals damage 1-1"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"lifesteal",
+"Life Steal"
+],
+[
+"damage_over_time",
+"bleed 2 per round for 3 rounds"
+],
+[
+"heal",
+"heal 10 (self)"
+],
+[
+"mark_target",
+"mark target for 2 rounds"
+]
+],
+"by": "C"
+},
+"759971": {
+"tags": [
+[
+"rank_positions",
+"Usable from ranks 2, 1"
+],
+[
+"movement",
+"Moves self (back/forward) 0 1"
+],
+[
+"damage_over_time",
+"bleed 1 per round for 3 rounds"
+],
+[
+"mark_target",
+"only if target is tagged, +50% damage (self)"
+],
+[
+"debuff",
+"Brawler Rend Debuff 1"
+],
+[
+"damage",
+"Deals damage 2-4"
+]
+],
+"by": "A=B"
 },
 "759972": {
 "tags": [
@@ -741,6 +1497,52 @@
 ]
 ],
 "by": "C"
+},
+"759973": {
+"tags": [
+[
+"heal",
+"Heals 6 12"
+],
+[
+"bodyguard",
+"guard target ally for 2 rounds"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+]
+],
+"by": "A=B"
+},
+"759975": {
+"tags": [
+[
+"rank_positions",
+"Usable from ranks 2, 1"
+],
+[
+"movement",
+"Moves self (back/forward) 0 1"
+],
+[
+"damage_over_time",
+"bleed 6 per round for 3 rounds"
+],
+[
+"mark_target",
+"only if target is tagged, +50% damage (self)"
+],
+[
+"debuff",
+"Turbo Cultist Rend Debuff"
+],
+[
+"damage",
+"Deals damage 4-9"
+]
+],
+"by": "A=B"
 },
 "759977": {
 "tags": [
@@ -796,6 +1598,55 @@
 ],
 "by": "C"
 },
+"759979": {
+"tags": [
+[
+"board_limit",
+"Takes 3 ranks"
+],
+[
+"multi_attack",
+"Acts 2 times per round"
+],
+[
+"summon",
+"summon drowned_anchor_A"
+],
+[
+"forced_movement",
+"pull forward 3 ranks"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"damage",
+"Deals damage 3-7"
+],
+[
+"damage_over_time",
+"bleed 2 per round for 3 rounds"
+],
+[
+"ping",
+"Deals damage 1-1"
+],
+[
+"stress_morale",
+"stress +10"
+],
+[
+"stat_loss",
+"-5% crit, -33% damage"
+]
+],
+"by": "C"
+},
 "759982": {
 "tags": [
 [
@@ -828,6 +1679,23 @@
 ]
 ],
 "by": "C"
+},
+"759987": {
+"tags": [
+[
+"disable",
+"stun"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2, 3"
+],
+[
+"damage",
+"Deals damage 2-4"
+]
+],
+"by": "A=B"
 },
 "759989": {
 "tags": [
@@ -870,6 +1738,76 @@
 ]
 ],
 "by": "C"
+},
+"759993": {
+"tags": [
+[
+"rank_positions",
+"Usable from ranks 3, 2, 1"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2"
+],
+[
+"damage",
+"Deals damage 1-3"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"ping",
+"Deals damage 1-1"
+],
+[
+"disable",
+"stun"
+]
+],
+"by": "C"
+},
+"759994": {
+"tags": [
+[
+"board_limit",
+"Takes 2 ranks"
+],
+[
+"damage_over_time",
+"bleed 2 per round for 3 rounds"
+],
+[
+"debuff",
+"Ghoul Rend Debuff 1"
+],
+[
+"stress_morale",
+"stress +15"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"light_level",
+"decrease light 10 (global)"
+],
+[
+"traits_quirks",
+"inflict disease the_worries"
+],
+[
+"scope_multi",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"rank_positions",
+"Usable from ranks 2, 1"
+]
+],
+"by": "A=B"
 },
 "759995": {
 "tags": [
@@ -933,6 +1871,47 @@
 [
 "stat_gain",
 "+25% protection"
+]
+],
+"by": "C"
+},
+"760001": {
+"tags": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"mark_target",
+"Rank Target Enemy 1"
+],
+[
+"damage",
+"Deals damage 11-23"
+],
+[
+"disable",
+"stun"
+],
+[
+"stress_morale",
+"stress +11"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"damage_over_time",
+"blight 1 per round for 2 rounds"
+],
+[
+"ping",
+"Deals damage 1-1"
 ]
 ],
 "by": "C"
@@ -1110,6 +2089,52 @@
 ],
 "by": "C"
 },
+"760007": {
+"tags": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3"
+],
+[
+"damage",
+"Deals damage 3-7"
+],
+[
+"mark_target",
+"only if target is tagged, +25% damage (self)"
+],
+[
+"movement",
+"Moves self (back/forward) 1 0"
+]
+],
+"by": "C"
+},
+"760012": {
+"tags": [
+[
+"damage",
+"Deals damage 3-8"
+],
+[
+"rank_positions",
+"Usable from ranks 3, 2, 1"
+],
+[
+"movement",
+"Moves self (back/forward) 0 1"
+],
+[
+"targeting_rules",
+"Targets enemy ranks 1, 2, 3"
+]
+],
+"by": "C"
+},
 "760016": {
 "tags": [
 [
@@ -1142,6 +2167,183 @@
 ]
 ],
 "by": "C"
+},
+"760019": {
+"tags": [
+[
+"board_limit",
+"Takes 3 ranks"
+],
+[
+"damage",
+"Deals damage 5-9"
+],
+[
+"mark_target",
+"only if target is tagged, +100% damage (self)"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"disable",
+"stun"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2, 3, 4"
+]
+],
+"by": "C"
+},
+"760020": {
+"tags": [
+[
+"damage_over_time",
+"bleed 2 per round for 3 rounds"
+],
+[
+"disable",
+"stun"
+],
+[
+"forced_movement",
+"push back 1 ranks"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2"
+],
+[
+"targeting_rules",
+"Targets enemy ranks 3, 4"
+]
+],
+"by": "A=B"
+},
+"760023": {
+"tags": [
+[
+"board_limit",
+"Takes 2 ranks"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"movement",
+"Moves self (back/forward) 0 2"
+],
+[
+"damage",
+"Deals damage 6-12"
+],
+[
+"forced_movement",
+"push back 3 ranks"
+],
+[
+"disable",
+"stun"
+],
+[
+"ranged",
+"Ranged skill"
+]
+],
+"by": "C"
+},
+"760025": {
+"tags": [
+[
+"board_limit",
+"Takes 2 ranks"
+],
+[
+"multi_attack",
+"Acts 2 times per round"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"damage_over_time",
+"blight 10 per round for 3 rounds"
+],
+[
+"movement",
+"Moves self (back/forward) 0 1"
+],
+[
+"forced_movement",
+"push back 2 ranks"
+],
+[
+"disable",
+"stun"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"stress_morale",
+"stress +40"
+]
+],
+"by": "A=B"
+},
+"760027": {
+"tags": [
+[
+"board_limit",
+"Takes 2 ranks"
+],
+[
+"multi_attack",
+"Acts 2 times per round"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"damage_over_time",
+"blight 6 per round for 3 rounds"
+],
+[
+"stat_loss",
+"-33% damage, -10% crit"
+],
+[
+"stress_morale",
+"stress +40"
+]
+],
+"by": "A=B"
 },
 "760029": {
 "tags": [
@@ -1235,6 +2437,39 @@
 ],
 "by": "C"
 },
+"760057": {
+"tags": [
+[
+"passive",
+"+0.03 crit"
+],
+[
+"stat_gain",
+"+0.03 crit"
+],
+[
+"saving_throws",
+"+30% trap resistance"
+],
+[
+"speed",
+"+2 speed"
+],
+[
+"information",
+"+20% scouting chance"
+],
+[
+"upkeep",
+"+1 food consumption percent"
+],
+[
+"tribal",
+"Class: grave_robber"
+]
+],
+"by": "C"
+},
 "760059": {
 "tags": [
 [
@@ -1306,6 +2541,39 @@
 ],
 "by": "C"
 },
+"760075": {
+"tags": [
+[
+"passive",
+"+0.03 crit"
+],
+[
+"stat_gain",
+"+0.03 crit"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"heal",
+"+33% hp heal percent"
+],
+[
+"stat_loss",
+"-10% poison resistance"
+],
+[
+"saving_throws",
+"poison resistance"
+],
+[
+"tribal",
+"Class: crusader"
+]
+],
+"by": "C"
+},
 "760079": {
 "tags": [
 [
@@ -1361,6 +2629,31 @@
 [
 "tribal",
 "Class: vestal"
+]
+],
+"by": "C"
+},
+"760105": {
+"tags": [
+[
+"passive",
+"+0.1 protection"
+],
+[
+"saving_throws",
+"+40% move resistance"
+],
+[
+"stat_gain",
+"+40% move resistance"
+],
+[
+"damage_reduction",
+"+0.1 protection"
+],
+[
+"stat_loss",
+"-2 speed"
 ]
 ],
 "by": "C"
@@ -1508,6 +2801,31 @@
 [
 "tribal",
 "Class: crusader"
+]
+],
+"by": "C"
+},
+"760132": {
+"tags": [
+[
+"passive",
+"+10% trap resistance"
+],
+[
+"information",
+"+10% scouting chance"
+],
+[
+"saving_throws",
+"trap resistance"
+],
+[
+"stat_gain",
+"+10% trap resistance"
+],
+[
+"stat_loss",
+"-1 speed"
 ]
 ],
 "by": "C"
@@ -1751,6 +3069,27 @@
 ],
 "by": "C"
 },
+"760163": {
+"tags": [
+[
+"passive",
+"+0.04 crit"
+],
+[
+"stat_gain",
+"+20% damage"
+],
+[
+"tribal",
+"vs eldritch enemies"
+],
+[
+"tribal",
+"Class: occultist"
+]
+],
+"by": "C"
+},
 "760169": {
 "tags": [
 [
@@ -1806,6 +3145,56 @@
 [
 "tribal",
 "Class: grave_robber"
+]
+],
+"by": "C"
+},
+"760175": {
+"tags": [
+[
+"passive",
+"+0.1 accuracy"
+],
+[
+"stat_gain",
+"+20% damage with melee skills"
+],
+[
+"stat_gain",
+"+0.1 accuracy"
+],
+[
+"damage_over_time",
+"+30% bleed chance"
+],
+[
+"tribal",
+"Class: plague_doctor"
+]
+],
+"by": "C"
+},
+"760176": {
+"tags": [
+[
+"passive",
+"+30% move resistance"
+],
+[
+"saving_throws",
+"+30% move resistance"
+],
+[
+"stat_gain",
+"+30% move resistance"
+],
+[
+"forced_movement",
+"+20% move chance"
+],
+[
+"tribal",
+"Class: bounty_hunter"
 ]
 ],
 "by": "C"
@@ -1932,6 +3321,27 @@
 ],
 "by": "C"
 },
+"760198": {
+"tags": [
+[
+"passive",
+"-25% stress dmg percent"
+],
+[
+"stress_morale",
+"-25% stress dmg received percent"
+],
+[
+"stances",
+"with skill transform"
+],
+[
+"tribal",
+"Class: abomination"
+]
+],
+"by": "C"
+},
 "760203": {
 "tags": [
 [
@@ -1945,6 +3355,39 @@
 [
 "tribal",
 "Class: antiquarian"
+]
+],
+"by": "C"
+},
+"760204": {
+"tags": [
+[
+"passive",
+"+20% damage"
+],
+[
+"stat_gain",
+"+20% damage"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"debuff",
+"+30% debuff chance"
+],
+[
+"heal",
+"-30% hp heal percent"
+],
+[
+"stat_loss",
+"-33% hp heal received percent"
+],
+[
+"tribal",
+"Class: musketeer"
 ]
 ],
 "by": "C"
@@ -2050,6 +3493,77 @@
 ],
 "by": "C"
 },
+"760223": {
+"tags": [
+[
+"passive",
+"+15% max HP"
+],
+[
+"saving_throws",
+"+35% bleed resistance"
+],
+[
+"stat_gain",
+"+15% max HP"
+]
+],
+"by": "C"
+},
+"760227": {
+"tags": [
+[
+"passive",
+"+0.04 crit"
+],
+[
+"stat_gain",
+"+10% damage"
+],
+[
+"damage_reduction",
+"+0.06 protection"
+],
+[
+"rest_phase",
+"while camping"
+],
+[
+"stat_loss",
+"-10% move resistance"
+],
+[
+"saving_throws",
+"move resistance"
+]
+],
+"by": "C"
+},
+"760228": {
+"tags": [
+[
+"passive",
+"+6 speed"
+],
+[
+"stress_morale",
+"-15% stress dmg received percent"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"speed",
+"+6 speed"
+],
+[
+"stat_loss",
+"-0.04 crit"
+]
+],
+"by": "C"
+},
 "760229": {
 "tags": [
 [
@@ -2088,6 +3602,39 @@
 [
 "rank_positions",
 "while in rank"
+]
+],
+"by": "C"
+},
+"760238": {
+"tags": [
+[
+"passive",
+"+5 speed"
+],
+[
+"speed",
+"+5 speed"
+],
+[
+"light_level",
+"while light above 75"
+],
+[
+"stat_gain",
+"+0.05 crit"
+],
+[
+"turn_number",
+"not in the first round"
+],
+[
+"stat_loss",
+"-0.06 protection"
+],
+[
+"saving_throws",
+"death_blow resistance"
 ]
 ],
 "by": "C"
@@ -2249,6 +3796,27 @@
 [
 "condition_life",
 "while HP below 0.25"
+]
+],
+"by": "C"
+},
+"760258": {
+"tags": [
+[
+"passive",
+"+10% poison resistance"
+],
+[
+"heal",
+"+13% hp heal percent"
+],
+[
+"saving_throws",
+"poison resistance"
+],
+[
+"stat_loss",
+"-4 speed"
 ]
 ],
 "by": "C"
@@ -2454,6 +4022,35 @@
 [
 "light_level",
 "while light below 26"
+]
+],
+"by": "C"
+},
+"760286": {
+"tags": [
+[
+"passive",
+"+2 speed"
+],
+[
+"stat_gain",
+"+5% damage"
+],
+[
+"condition_life",
+"while HP below 0.25"
+],
+[
+"speed",
+"+2 speed"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+],
+[
+"tribal",
+"vs unholy enemies"
 ]
 ],
 "by": "C"
@@ -2703,6 +4300,31 @@
 [
 "condition_life",
 "at Death's Door"
+]
+],
+"by": "C"
+},
+"760302": {
+"tags": [
+[
+"passive",
+"+8% death_blow resistance"
+],
+[
+"cheat_death",
+"+8% death_blow resistance"
+],
+[
+"saving_throws",
+"death_blow resistance"
+],
+[
+"turn_number",
+"not in the first round"
+],
+[
+"stress_morale",
+"-13% stress dmg received percent"
 ]
 ],
 "by": "C"
@@ -2980,6 +4602,31 @@
 ],
 "by": "C"
 },
+"760333": {
+"tags": [
+[
+"passive",
+"+0.03 crit"
+],
+[
+"stress_morale",
+"+4% resolve check percent"
+],
+[
+"stat_gain",
+"+0.04 accuracy with ranged skills"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+],
+[
+"condition_life",
+"at Death's Door"
+]
+],
+"by": "C"
+},
 "760334": {
 "tags": [
 [
@@ -3084,6 +4731,31 @@
 ],
 "by": "C"
 },
+"760338": {
+"tags": [
+[
+"passive",
+"+8% disease resistance"
+],
+[
+"saving_throws",
+"disease resistance"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"speed",
+"+3 speed"
+],
+[
+"stat_loss",
+"-0.05 accuracy"
+]
+],
+"by": "C"
+},
 "760339": {
 "tags": [
 [
@@ -3167,6 +4839,35 @@
 ],
 "by": "C"
 },
+"760344": {
+"tags": [
+[
+"passive",
+"+0.08 dodge"
+],
+[
+"stat_gain",
+"+0.08 dodge"
+],
+[
+"tribal",
+"vs beast enemies"
+],
+[
+"cheat_death",
+"+8% death_blow resistance"
+],
+[
+"saving_throws",
+"death_blow resistance"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+]
+],
+"by": "C"
+},
 "760346": {
 "tags": [
 [
@@ -3213,6 +4914,35 @@
 [
 "condition_life",
 "while HP below 0.25"
+]
+],
+"by": "C"
+},
+"760354": {
+"tags": [
+[
+"passive",
+"+0.03 crit"
+],
+[
+"stat_gain",
+"+8% damage"
+],
+[
+"stat_loss",
+"-10% bleed resistance"
+],
+[
+"saving_throws",
+"bleed resistance"
+],
+[
+"turn_number",
+"in the first round"
+],
+[
+"light_level",
+"while light below 26"
 ]
 ],
 "by": "C"
@@ -3337,6 +5067,47 @@
 [
 "tribal",
 "vs eldritch enemies"
+]
+],
+"by": "C"
+},
+"760369": {
+"tags": [
+[
+"passive",
+"+0.04 crit"
+],
+[
+"stat_gain",
+"+13% damage"
+],
+[
+"condition_life",
+"while HP below 0.25"
+],
+[
+"cheat_death",
+"+8% death_blow resistance"
+],
+[
+"saving_throws",
+"death_blow resistance"
+],
+[
+"stat_loss",
+"-0.06 dodge"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"tribal",
+"vs unholy enemies"
+],
+[
+"turn_number",
+"in the first round"
 ]
 ],
 "by": "C"
@@ -3519,6 +5290,76 @@
 ],
 "by": "C"
 },
+"760382": {
+"tags": [
+[
+"passive",
+"+0.05 accuracy"
+],
+[
+"stress_morale",
+"-15% stress dmg received percent"
+],
+[
+"turn_number",
+"not in the first round"
+],
+[
+"stat_gain",
+"+0.05 accuracy"
+],
+[
+"heal",
+"-13% hp heal percent"
+],
+[
+"stat_loss",
+"-10% move resistance"
+],
+[
+"saving_throws",
+"move resistance"
+]
+],
+"by": "C"
+},
+"760384": {
+"tags": [
+[
+"passive",
+"+0.11 protection"
+],
+[
+"damage_reduction",
+"+0.11 protection"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"stress_morale",
+"-18% stress dmg received percent"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"condition_life",
+"while HP above 0.75"
+],
+[
+"tribal",
+"vs beast enemies"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+]
+],
+"by": "C"
+},
 "760386": {
 "tags": [
 [
@@ -3561,6 +5402,35 @@
 [
 "rank_positions",
 "while in rank"
+]
+],
+"by": "C"
+},
+"760393": {
+"tags": [
+[
+"passive",
+"+0.08 protection while in rank"
+],
+[
+"damage_reduction",
+"+0.08 protection"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"saving_throws",
+"move resistance"
+],
+[
+"stat_gain",
+"+13% move resistance"
+],
+[
+"stress_morale",
+"-8% resolve check percent"
 ]
 ],
 "by": "C"
@@ -3706,6 +5576,43 @@
 ],
 "by": "C"
 },
+"760405": {
+"tags": [
+[
+"passive",
+"+10% poison resistance"
+],
+[
+"stat_gain",
+"+13% damage"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"saving_throws",
+"poison resistance"
+],
+[
+"upkeep",
+"-20% food consumption percent"
+],
+[
+"stat_loss",
+"-10% max HP"
+],
+[
+"stress_morale",
+"+10% stress dmg received percent"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"by": "C"
+},
 "760410": {
 "tags": [
 [
@@ -3744,6 +5651,31 @@
 [
 "light_level",
 "while light below 26"
+]
+],
+"by": "C"
+},
+"760416": {
+"tags": [
+[
+"passive",
+"+3 speed"
+],
+[
+"speed",
+"+3 speed"
+],
+[
+"damage_reduction",
+"+0.05 protection"
+],
+[
+"stat_gain",
+"+0.03 crit"
+],
+[
+"stat_loss",
+"-0.06 dodge"
 ]
 ],
 "by": "C"
@@ -3835,6 +5767,27 @@
 [
 "condition_life",
 "while HP below 0.25"
+]
+],
+"by": "C"
+},
+"760426": {
+"tags": [
+[
+"passive",
+"+15% damage"
+],
+[
+"stat_gain",
+"+15% damage"
+],
+[
+"turn_number",
+"in the first round"
+],
+[
+"stat_loss",
+"-0.05 accuracy"
 ]
 ],
 "by": "C"
@@ -3947,6 +5900,39 @@
 ],
 "by": "C"
 },
+"760444": {
+"tags": [
+[
+"passive",
+"+10% trap resistance"
+],
+[
+"saving_throws",
+"+10% trap resistance"
+],
+[
+"stat_gain",
+"+10% trap resistance"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+],
+[
+"condition_life",
+"at Death's Door"
+],
+[
+"upkeep",
+"+50% starving damage percent"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"by": "C"
+},
 "760447": {
 "tags": [
 [
@@ -4043,6 +6029,43 @@
 [
 "rank_positions",
 "while in rank"
+]
+],
+"by": "C"
+},
+"760457": {
+"tags": [
+[
+"passive",
+"+0.06 protection"
+],
+[
+"damage_reduction",
+"+0.06 protection"
+],
+[
+"stat_gain",
+"+0.08 dodge"
+],
+[
+"condition_life",
+"while HP below 0.25"
+],
+[
+"stress_morale",
+"+8% resolve check percent"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+],
+[
+"rest_phase",
+"while camping"
+],
+[
+"stat_loss",
+"-4 speed"
 ]
 ],
 "by": "C"
@@ -4147,6 +6170,43 @@
 ],
 "by": "C"
 },
+"760465": {
+"tags": [
+[
+"passive",
+"+5% max HP"
+],
+[
+"damage_reduction",
+"+0.03 protection"
+],
+[
+"stat_gain",
+"+5% max HP"
+],
+[
+"cheat_death",
+"+5% death_blow resistance"
+],
+[
+"saving_throws",
+"death_blow resistance"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"stat_loss",
+"-4 speed"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"by": "C"
+},
 "760466": {
 "tags": [
 [
@@ -4226,6 +6286,35 @@
 ],
 "by": "C"
 },
+"760491": {
+"tags": [
+[
+"passive",
+"+0.02 crit"
+],
+[
+"stat_gain",
+"+0.02 crit"
+],
+[
+"stat_gain",
+"+0.05 dodge"
+],
+[
+"condition_life",
+"while HP above 0.75"
+],
+[
+"light_level",
+"while light above 75"
+],
+[
+"stress_morale",
+"-8% resolve check percent"
+]
+],
+"by": "C"
+},
 "760492": {
 "tags": [
 [
@@ -4297,6 +6386,31 @@
 [
 "turn_number",
 "in the first round"
+]
+],
+"by": "C"
+},
+"760508": {
+"tags": [
+[
+"passive",
+"+0.03 crit"
+],
+[
+"stress_morale",
+"-5% stress dmg received percent"
+],
+[
+"stat_gain",
+"+0.03 crit with ranged skills"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+],
+[
+"condition_life",
+"while HP below 0.25"
 ]
 ],
 "by": "C"
@@ -4718,6 +6832,44 @@
 ],
 "by": "C"
 },
+"760609": {
+"tags": [
+[
+"passive",
+"-5 speed"
+],
+[
+"traits_quirks",
+"The Black Plague"
+],
+[
+"stat_loss",
+"-75% poison resistance"
+],
+[
+"saving_throws",
+"poison resistance"
+],
+[
+"stat_loss",
+"-10% max HP"
+]
+],
+"by": "C"
+},
+"760612": {
+"tags": [
+[
+"traits_quirks",
+"Prone to stealing items"
+],
+[
+"autonomous_units",
+"Prone to stealing items"
+]
+],
+"by": "A=B"
+},
 "760616": {
 "tags": [
 [
@@ -4736,6 +6888,19 @@
 ],
 "by": "A=B"
 },
+"760622": {
+"tags": [
+[
+"traits_quirks",
+"Fascinated with corpses"
+],
+[
+"autonomous_units",
+"Interacts with Body curios"
+]
+],
+"by": "A=B"
+},
 "760627": {
 "tags": [
 [
@@ -4750,6 +6915,32 @@
 [
 "traits_quirks",
 "will only Drink"
+]
+],
+"by": "C"
+},
+"760644": {
+"tags": [
+[
+"resource_advantage",
+"+0.2 upgrade discount weapon"
+],
+[
+"upgrade",
+"upgrade discount"
+]
+],
+"by": "C"
+},
+"760645": {
+"tags": [
+[
+"resource_advantage",
+"+0.2 upgrade discount armour"
+],
+[
+"upgrade",
+"upgrade discount"
 ]
 ],
 "by": "C"
@@ -4864,6 +7055,214 @@
 ],
 "by": "C"
 },
+"760682": {
+"tags": [
+[
+"passive",
+"-15% stun resistance"
+],
+[
+"stat_loss",
+"-15% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_loss",
+"-25% damage"
+],
+[
+"stat_gain",
+"+0.1 dodge"
+],
+[
+"speed",
+"+2 speed"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"by": "C"
+},
+"760684": {
+"tags": [
+[
+"passive",
+"-15% stun resistance"
+],
+[
+"stat_loss",
+"-15% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_loss",
+"-10% damage"
+],
+[
+"stat_gain",
+"+0.05 dodge"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"by": "C"
+},
+"760685": {
+"tags": [
+[
+"passive",
+"-15% stun resistance"
+],
+[
+"stat_loss",
+"-15% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_loss",
+"-0.15 dodge"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"by": "C"
+},
+"760687": {
+"tags": [
+[
+"passive",
+"-15% stun resistance"
+],
+[
+"stat_loss",
+"-15% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_loss",
+"-3 speed"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"by": "C"
+},
 "760688": {
 "tags": [
 [
@@ -4946,6 +7345,169 @@
 ],
 "by": "C"
 },
+"760691": {
+"tags": [
+[
+"passive",
+"+20% stun resistance"
+],
+[
+"stat_gain",
+"+20% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_gain",
+"+0.1 accuracy"
+],
+[
+"stress_morale",
+"while virtued"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"by": "C"
+},
+"760692": {
+"tags": [
+[
+"passive",
+"+20% stun resistance"
+],
+[
+"stat_gain",
+"+20% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_gain",
+"+25% damage"
+],
+[
+"stress_morale",
+"while virtued"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"by": "C"
+},
+"760693": {
+"tags": [
+[
+"passive",
+"+20% stun resistance"
+],
+[
+"stat_gain",
+"+20% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"speed",
+"+5 speed"
+],
+[
+"stat_gain",
+"+10% dodge"
+],
+[
+"stress_morale",
+"while virtued"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"by": "C"
+},
 "760696": {
 "tags": [
 [
@@ -4958,6 +7520,36 @@
 ]
 ],
 "by": "A=B"
+},
+"760697": {
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"stress_morale",
+"stress heal amount 12 (self)"
+]
+],
+"by": "A=B"
+},
+"760703": {
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"stat_gain",
+"+0.1 accuracy (self)"
+],
+[
+"scope_self",
+"(self)"
+]
+],
+"by": "C"
 },
 "760704": {
 "tags": [
@@ -4972,6 +7564,23 @@
 ],
 "by": "C"
 },
+"760705": {
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"stat_gain",
+"+25% damage vs size 2 enemies (self)"
+],
+[
+"stat_condition",
+"vs size 2 enemies"
+]
+],
+"by": "A=B"
+},
 "760709": {
 "tags": [
 [
@@ -4985,6 +7594,19 @@
 ],
 "by": "C"
 },
+"760711": {
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"traits_quirks",
+"remove disease"
+]
+],
+"by": "C"
+},
 "760714": {
 "tags": [
 [
@@ -4994,6 +7616,31 @@
 [
 "items_consumables",
 "loot S 1"
+]
+],
+"by": "C"
+},
+"760719": {
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"stat_gain",
+"+0.1 dodge (self)"
+],
+[
+"speed",
+"+5 speed (self)"
+],
+[
+"stat_gain",
+"+10% damage with melee skills (self)"
+],
+[
+"scope_self",
+"(self)"
 ]
 ],
 "by": "C"
@@ -5015,6 +7662,23 @@
 ],
 "by": "A=B"
 },
+"760724": {
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"stat_gain",
+"+0.1 dodge (individual)"
+],
+[
+"speed",
+"+5 speed (individual)"
+]
+],
+"by": "C"
+},
 "760728": {
 "tags": [
 [
@@ -5028,6 +7692,65 @@
 [
 "stress_morale",
 "stress damage amount 15 (self)"
+]
+],
+"by": "C"
+},
+"760730": {
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"heal",
+"health heal max health percent 0.5 (individual)"
+],
+[
+"stat_gain",
+"+20% hp heal received percent (individual)"
+]
+],
+"by": "C"
+},
+"760731": {
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"heal",
+"health heal max health percent 0.15 (individual)"
+],
+[
+"traits_quirks",
+"remove disease (individual)"
+]
+],
+"by": "A=B"
+},
+"760732": {
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"traits_quirks",
+"remove disease (self)"
+],
+[
+"saving_throws",
+"+25% disease resistance"
+],
+[
+"stat_gain",
+"+25% disease resistance (self)"
+],
+[
+"scope_self",
+"(self)"
 ]
 ],
 "by": "C"
@@ -5079,6 +7802,31 @@
 ],
 "by": "C"
 },
+"760753": {
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"saving_throws",
+"+25% poison resistance"
+],
+[
+"stat_gain",
+"+25% poison resistance (self)"
+],
+[
+"stress_morale",
+"-30% stress dmg received percent"
+],
+[
+"scope_self",
+"(self)"
+]
+],
+"by": "C"
+},
 "760759": {
 "tags": [
 [
@@ -5096,9 +7844,81 @@
 ],
 "by": "C"
 },
+"760761": {
+"tags": [
+[
+"random_effect",
+"On failure"
+],
+[
+"debuff",
+"Lurker Trap Debuff 1"
+],
+[
+"stress_morale",
+"Stress 2"
+],
+[
+"damage",
+"HP change -10%"
+]
+],
+"by": "C"
+},
+"760771": {
+"tags": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"stress_morale",
+"Effect 40.00% (Stress 3)"
+],
+[
+"items_consumables",
+"use holy_water"
+]
+],
+"by": "A=B"
+},
 "760777": {
 "tags": [],
 "by": "C"
+},
+"760780": {
+"tags": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"traits_quirks",
+"Quirk 25.00% (ruins_adventurer)"
+],
+[
+"shield",
+"Suit of Armor Shield"
+]
+],
+"by": "C"
+},
+"760784": {
+"tags": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"stress_morale",
+"Effect 50.00% (Stress 2)"
+],
+[
+"items_consumables",
+"use holy_water"
+]
+],
+"by": "A=B"
 },
 "760786": {
 "tags": [
@@ -5121,6 +7941,27 @@
 ],
 "by": "C"
 },
+"760791": {
+"tags": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"traits_quirks",
+"Quirk 25.00% (warren_explorer)"
+],
+[
+"stress_morale",
+"Effect 50.00% (Stress 4)"
+],
+[
+"items_consumables",
+"use provision"
+]
+],
+"by": "A=B"
+},
 "760794": {
 "tags": [
 [
@@ -5142,6 +7983,48 @@
 ],
 "by": "C"
 },
+"760797": {
+"tags": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"traits_quirks",
+"Quirk 16.67% (positive)"
+],
+[
+"stress_morale",
+"Effect 16.67% (Stress 2)"
+],
+[
+"information",
+"Scouting 33.33%"
+],
+[
+"items_consumables",
+"use torch"
+]
+],
+"by": "A=B"
+},
+"760802": {
+"tags": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"stress_morale",
+"Effect 12.50% (Stress 3)"
+],
+[
+"information",
+"Scouting 37.50%"
+]
+],
+"by": "A=B"
+},
 "760807": {
 "tags": [
 [
@@ -5158,6 +8041,23 @@
 ]
 ],
 "by": "C"
+},
+"760813": {
+"tags": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"stress_morale",
+"eerie_coral_healstress"
+],
+[
+"items_consumables",
+"use medicinal_herbs"
+]
+],
+"by": "A=B"
 },
 "760817": {
 "tags": [

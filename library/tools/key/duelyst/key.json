@@ -25,6 +25,15 @@
 ],
 "by": "C"
 },
+"741526": {
+"tags": [
+[
+"multi_attack",
+"activate twice per turn"
+]
+],
+"by": "A=B"
+},
 "741527": {
 "tags": [
 [
@@ -43,6 +52,15 @@
 [
 "on_ally_play",
 "when its owner summons a minion"
+]
+],
+"by": "A=B"
+},
+"741532": {
+"tags": [
+[
+"shield",
+"Cancel the first damage taken each turn"
 ]
 ],
 "by": "A=B"
@@ -86,6 +104,27 @@
 ],
 "by": "C"
 },
+"741542": {
+"tags": [
+[
+"death_trigger",
+"When this dies"
+],
+[
+"summon",
+"leaves behind a 0/1 Egg"
+],
+[
+"revive",
+"hatches into the same minion"
+],
+[
+"delayed",
+"before your next turn"
+]
+],
+"by": "C"
+},
 "741545": {
 "tags": [
 [
@@ -119,6 +158,23 @@
 ]
 ],
 "by": "C"
+},
+"741548": {
+"tags": [
+[
+"autonomous_units",
+"Activates at the start of your turn and moves to attack the nearest enemy"
+],
+[
+"turn_start",
+"at the start of your turn"
+],
+[
+"targeting_rules",
+"nearest enemy"
+]
+],
+"by": "A=B"
 },
 "741549": {
 "tags": [
@@ -177,11 +233,37 @@
 ],
 "by": "A=B"
 },
+"741555": {
+"tags": [
+[
+"haste",
+"Can move and attack immediately"
+]
+],
+"by": "A=B"
+},
 "741556": {
 "tags": [
 [
 "placement_rules",
 "Summon this minion anywhere on the battlefield"
+]
+],
+"by": "A=B"
+},
+"741557": {
+"tags": [
+[
+"immobilize",
+"Stops nearby enemy minions and Generals from moving"
+],
+[
+"taunt",
+"They must attack this first"
+],
+[
+"adjacency",
+"nearby enemy minions"
 ]
 ],
 "by": "A=B"
@@ -195,11 +277,50 @@
 ],
 "by": "A=B"
 },
+"741559": {
+"tags": [
+[
+"taunt",
+"Ranged attackers must attack this minion first"
+]
+],
+"by": "A=B"
+},
+"741564": {
+"tags": [
+[
+"taunt",
+"Provoke"
+],
+[
+"multi_attack",
+"Celerity"
+],
+[
+"stat_gain",
+"+1/+1"
+],
+[
+"count_payoff",
+"for each time you healed anything this game"
+]
+],
+"by": "A=B"
+},
 "741567": {
 "tags": [
 [
 "shield",
 "Give a friendly minion Forcefield"
+]
+],
+"by": "A=B"
+},
+"741574": {
+"tags": [
+[
+"flanking",
+"Backstab (2)"
 ]
 ],
 "by": "A=B"
@@ -220,6 +341,19 @@
 ]
 ],
 "by": "C"
+},
+"741586": {
+"tags": [
+[
+"sacrifice",
+"Destroy a friendly minion"
+],
+[
+"heal",
+"restore 5 Health to your General"
+]
+],
+"by": "A=B"
 },
 "741587": {
 "tags": [
@@ -280,11 +414,79 @@
 ],
 "by": "A=B"
 },
+"741597": {
+"tags": [
+[
+"on_kill",
+"Whenever this minion destroys an enemy"
+],
+[
+"untap",
+"reactivate it"
+]
+],
+"by": "A=B"
+},
+"741603": {
+"tags": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"cost_set",
+"costs 0"
+]
+],
+"by": "A=B"
+},
+"741607": {
+"tags": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"summon",
+"Summon a 1/2 Crestfallen"
+],
+[
+"adjacency",
+"Zeal"
+],
+[
+"taunt",
+"Provoke"
+],
+[
+"positional",
+"in front of your General"
+]
+],
+"by": "C"
+},
 "741608": {
 "tags": [
 [
 "stat_gain",
 "Gains +1 Attack"
+]
+],
+"by": "C"
+},
+"741609": {
+"tags": [
+[
+"adjacency",
+"Zeal"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"regeneration",
+"fully heal this minion"
 ]
 ],
 "by": "C"
@@ -309,6 +511,19 @@
 ]
 ],
 "by": "C"
+},
+"741615": {
+"tags": [
+[
+"on_attack",
+"Whenever this attacks"
+],
+[
+"silence",
+"dispels that enemy"
+]
+],
+"by": "A=B"
 },
 "741617": {
 "tags": [
@@ -336,6 +551,27 @@
 ],
 "by": "C"
 },
+"741623": {
+"tags": [
+[
+"summon",
+"Summon a 1/2 Crestfallen"
+],
+[
+"adjacency",
+"Zeal"
+],
+[
+"taunt",
+"Provoke"
+],
+[
+"positional",
+"in front of your General"
+]
+],
+"by": "C"
+},
 "741627": {
 "tags": [
 [
@@ -358,6 +594,19 @@
 [
 "stat_loss",
 "-3 Health"
+]
+],
+"by": "A=B"
+},
+"741633": {
+"tags": [
+[
+"silence",
+"Dispel a 2x2 area"
+],
+[
+"area_templates",
+"2x2 area"
 ]
 ],
 "by": "A=B"
@@ -392,6 +641,19 @@
 ],
 "by": "C"
 },
+"741638": {
+"tags": [
+[
+"stat_gain",
+"+Attack equal to its Health"
+],
+[
+"variable_stats",
+"equal to its Health"
+]
+],
+"by": "C"
+},
 "741641": {
 "tags": [
 [
@@ -414,11 +676,88 @@
 ],
 "by": "C"
 },
+"741646": {
+"tags": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"summon",
+"Summon a Heartseeker"
+],
+[
+"adjacency",
+"nearby your General"
+]
+],
+"by": "C"
+},
+"741647": {
+"tags": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"generate_cards",
+"Put a Spellsword into your action bar"
+]
+],
+"by": "A=B"
+},
 "741648": {
 "tags": [
 [
 "ranged",
 "Ranged"
+]
+],
+"by": "A=B"
+},
+"741654": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"turn_start",
+"at the beginning of your turn"
+],
+[
+"return_to_hand",
+"Return this minion to your action bar"
+]
+],
+"by": "A=B"
+},
+"741655": {
+"tags": [
+[
+"on_damaged",
+"Whenever this minion takes damage"
+],
+[
+"generate_cards",
+"put a Phoenix Fire into your action bar"
+]
+],
+"by": "A=B"
+},
+"741656": {
+"tags": [
+[
+"on_damaged",
+"Whenever this minion takes damage"
+],
+[
+"ping",
+"deal 1 damage to a random enemy minion"
+],
+[
+"random_effect",
+"random enemy minion"
 ]
 ],
 "by": "A=B"
@@ -432,6 +771,36 @@
 [
 "permanent_growth",
 "gains +1/+1"
+]
+],
+"by": "A=B"
+},
+"741658": {
+"tags": [
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"direct_damage",
+"deal 1 damage to enemy General"
+],
+[
+"heal",
+"restore 1 Health to your General"
+]
+],
+"by": "A=B"
+},
+"741661": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"friendly_fire",
+"deal 2 damage to your General"
 ]
 ],
 "by": "A=B"
@@ -453,6 +822,68 @@
 ],
 "by": "A=B"
 },
+"741665": {
+"tags": [
+[
+"generate_cards",
+"Put a Spellsword into your action bar"
+]
+],
+"by": "A=B"
+},
+"741669": {
+"tags": [
+[
+"flanking",
+"Backstab (2)"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"by": "A=B"
+},
+"741678": {
+"tags": [
+[
+"untap",
+"Reactivate an exhausted friendly minion"
+],
+[
+"stat_condition",
+"3 or less Attack"
+]
+],
+"by": "A=B"
+},
+"741680": {
+"tags": [
+[
+"aoe_damage",
+"Deal 1 damage to all enemy minions"
+]
+],
+"by": "A=B"
+},
+"741683": {
+"tags": [
+[
+"swap",
+"Switch positions between ANY two minions"
+]
+],
+"by": "A=B"
+},
+"741685": {
+"tags": [
+[
+"tutor",
+"Draw 3 spell cards from your deck"
+]
+],
+"by": "A=B"
+},
 "741690": {
 "tags": [
 [
@@ -462,6 +893,23 @@
 [
 "direct_damage",
 "deal 1 damage to the enemy General"
+]
+],
+"by": "A=B"
+},
+"741692": {
+"tags": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"stat_multiply",
+"double damage"
+],
+[
+"temporary_buff",
+"this turn"
 ]
 ],
 "by": "A=B"
@@ -534,6 +982,19 @@
 ],
 "by": "C"
 },
+"741702": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"self_destruct",
+"Ephemeral"
+]
+],
+"by": "A=B"
+},
 "741704": {
 "tags": [
 [
@@ -589,6 +1050,19 @@
 ],
 "by": "C"
 },
+"741715": {
+"tags": [
+[
+"attack_zero",
+"Lower a minion's Attack to 0"
+],
+[
+"temporary_effect",
+"until your next turn"
+]
+],
+"by": "A=B"
+},
 "741716": {
 "tags": [
 [
@@ -619,6 +1093,15 @@
 ],
 "by": "C"
 },
+"741719": {
+"tags": [
+[
+"untap",
+"Reactivate your General"
+]
+],
+"by": "A=B"
+},
 "741721": {
 "tags": [
 [
@@ -632,6 +1115,23 @@
 ],
 "by": "A=B"
 },
+"741726": {
+"tags": [
+[
+"summon",
+"Summon a Wind Dervish"
+],
+[
+"haste",
+"Rush"
+],
+[
+"condition_count",
+"in front of each enemy minion and General"
+]
+],
+"by": "A=B"
+},
 "741731": {
 "tags": [
 [
@@ -641,6 +1141,23 @@
 [
 "multi_target_attack",
 "Blast"
+]
+],
+"by": "A=B"
+},
+"741734": {
+"tags": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"ping",
+"Deal 1 damage to a minion"
+],
+[
+"terrain",
+"the space turns into Shadow Creep"
 ]
 ],
 "by": "A=B"
@@ -804,11 +1321,104 @@
 ],
 "by": "A=B"
 },
+"741767": {
+"tags": [
+[
+"stat_gain",
+"+2 Attack"
+],
+[
+"temporary_buff",
+"this turn"
+],
+[
+"scope_multi",
+"all friendly minions"
+]
+],
+"by": "A=B"
+},
+"741769": {
+"tags": [
+[
+"sacrifice",
+"Destroy a friendly minion"
+],
+[
+"revive",
+"re-summon it on the same space"
+],
+[
+"delayed",
+"At the end of your turn"
+],
+[
+"stat_gain",
+"+1/+1"
+]
+],
+"by": "A=B"
+},
+"741772": {
+"tags": [
+[
+"stat_gain",
+"Your General gains +2 Attack"
+],
+[
+"on_kill",
+"Whenever your General destroys an enemy"
+],
+[
+"heal",
+"restore 2 Health to your General"
+]
+],
+"by": "A=B"
+},
+"741775": {
+"tags": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"summon",
+"Summon a Ripper Egg"
+],
+[
+"adjacency",
+"nearby your General"
+]
+],
+"by": "C"
+},
 "741776": {
 "tags": [
 [
 "permanent_growth",
 "Grow: +1/+1"
+]
+],
+"by": "A=B"
+},
+"741781": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"damage",
+"deal 4 damage to a random minion or General"
+],
+[
+"random_effect",
+"random minion or General"
+],
+[
+"friendly_fire",
+"a random minion or General"
 ]
 ],
 "by": "A=B"
@@ -830,6 +1440,27 @@
 ],
 "by": "C"
 },
+"741787": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"aoe_damage",
+"deal 1 damage to ALL other minions"
+],
+[
+"friendly_fire",
+"ALL other minions"
+],
+[
+"ping",
+"deal 1 damage"
+]
+],
+"by": "A=B"
+},
 "741789": {
 "tags": [
 [
@@ -839,11 +1470,76 @@
 ],
 "by": "A=B"
 },
+"741794": {
+"tags": [
+[
+"suppress",
+"It can no longer counterattack"
+]
+],
+"by": "C"
+},
+"741795": {
+"tags": [
+[
+"combo_sequence",
+"If the next card you play this turn is a minion"
+],
+[
+"cost_reduction",
+"costs 2 less"
+],
+[
+"friendly_fire",
+"takes 2 damage"
+]
+],
+"by": "A=B"
+},
+"741797": {
+"tags": [
+[
+"disable",
+"Stun enemy minions"
+],
+[
+"area_templates",
+"2x2 area"
+]
+],
+"by": "A=B"
+},
+"741798": {
+"tags": [
+[
+"death_trigger",
+"Whenever a friendly minion dies this turn"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "A=B"
+},
 "741800": {
 "tags": [
 [
 "heal",
 "Restore 8 Health to your General"
+]
+],
+"by": "A=B"
+},
+"741801": {
+"tags": [
+[
+"stat_gain",
+"Your General becomes 10/10"
 ]
 ],
 "by": "A=B"
@@ -861,6 +1557,32 @@
 [
 "temporary_effect",
 "until the end of your opponent's turn"
+]
+],
+"by": "A=B"
+},
+"741804": {
+"tags": [
+[
+"board_wipe",
+"Destroy ALL minions with 3 or less Attack"
+],
+[
+"stat_condition",
+"3 or less Attack"
+]
+],
+"by": "A=B"
+},
+"741806": {
+"tags": [
+[
+"destroy",
+"Destroy ANY minion with the lowest Attack"
+],
+[
+"stat_condition",
+"lowest Attack"
 ]
 ],
 "by": "A=B"
@@ -911,6 +1633,36 @@
 ]
 ],
 "by": "C"
+},
+"741821": {
+"tags": [
+[
+"territory_trigger",
+"Infiltrate"
+],
+[
+"death_trigger",
+"When this minion dies"
+],
+[
+"return_to_hand",
+"return it to your action bar"
+]
+],
+"by": "A=B"
+},
+"741824": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"swap",
+"Switch positions with ANY other minion"
+]
+],
+"by": "A=B"
 },
 "741825": {
 "tags": [
@@ -976,6 +1728,36 @@
 ],
 "by": "C"
 },
+"741834": {
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"resource_gain",
+"Permanently gain 1 mana crystal"
+]
+],
+"by": "A=B"
+},
+"741838": {
+"tags": [
+[
+"summon",
+"Summon four joined 0/1 Walls"
+],
+[
+"taunt",
+"Provoke"
+],
+[
+"null_body",
+"0/1 Walls"
+]
+],
+"by": "C"
+},
 "741839": {
 "tags": [
 [
@@ -1023,6 +1805,28 @@
 ],
 "by": "A=B"
 },
+"741852": {
+"tags": [
+[
+"bounce_enemy",
+"Return ANY minion to its action bar"
+]
+],
+"by": "A=B"
+},
+"741853": {
+"tags": [
+[
+"untap",
+"Reactivate friendly minions"
+],
+[
+"territory_trigger",
+"on your opponent's starting side of the battlefield"
+]
+],
+"by": "A=B"
+},
 "741854": {
 "tags": [
 [
@@ -1036,6 +1840,23 @@
 ],
 "by": "A=B"
 },
+"741856": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"aoe_damage",
+"deals 2 damage to each enemy minion around them"
+],
+[
+"adjacency",
+"around them"
+]
+],
+"by": "A=B"
+},
 "741858": {
 "tags": [
 [
@@ -1044,6 +1865,19 @@
 ]
 ],
 "by": "A=B"
+},
+"741865": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"copy",
+"Put a copy of the most recently cast spell into your action bar"
+]
+],
+"by": "C"
 },
 "741868": {
 "tags": [
@@ -1062,6 +1896,32 @@
 ]
 ],
 "by": "A=B"
+},
+"741871": {
+"tags": [
+[
+"taunt",
+"Ranged attackers must attack this minion first"
+]
+],
+"by": "A=B"
+},
+"741878": {
+"tags": [
+[
+"on_enemy_enter",
+"Whenever your opponent summons a minion"
+],
+[
+"direct_damage",
+"deal 1 damage to the enemy General"
+],
+[
+"ping",
+"deal 1 damage"
+]
+],
+"by": "C"
 },
 "741880": {
 "tags": [
@@ -1153,6 +2013,27 @@
 ],
 "by": "A=B"
 },
+"741898": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"stat_gain",
+"+2 Attack"
+],
+[
+"temporary_buff",
+"this turn"
+],
+[
+"adjacency",
+"nearby friendly minion"
+]
+],
+"by": "A=B"
+},
 "741902": {
 "tags": [
 [
@@ -1179,6 +2060,23 @@
 ],
 "by": "A=B"
 },
+"741905": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"direct_damage",
+"deal 4 damage to the enemy General"
+],
+[
+"permanent_growth",
+"this minion gains +4 Attack"
+]
+],
+"by": "A=B"
+},
 "741908": {
 "tags": [
 [
@@ -1195,6 +2093,36 @@
 ]
 ],
 "by": "C"
+},
+"741910": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"ping",
+"Deal 1 damage to an enemy"
+]
+],
+"by": "A=B"
+},
+"741911": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"damage",
+"Deal 3 damage to ANY minion in front of this"
+],
+[
+"positional",
+"in front of this"
+]
+],
+"by": "A=B"
 },
 "741912": {
 "tags": [
@@ -1239,6 +2167,27 @@
 ],
 "by": "A=B"
 },
+"741920": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"steal",
+"Gain a copy of a random spell from your opponent's action bar"
+],
+[
+"copy",
+"Gain a copy"
+],
+[
+"random_effect",
+"random spell"
+]
+],
+"by": "A=B"
+},
 "741921": {
 "tags": [
 [
@@ -1265,6 +2214,31 @@
 [
 "multi_attack",
 "Celerity"
+]
+],
+"by": "C"
+},
+"741927": {
+"tags": [
+[
+"ranged",
+"Ranged"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"regeneration",
+"restore 2 Health to all nearby friendly minions"
+],
+[
+"adjacency",
+"nearby"
+],
+[
+"scope_multi",
+"all nearby friendly minions"
 ]
 ],
 "by": "C"
@@ -1308,6 +2282,27 @@
 ],
 "by": "C"
 },
+"741941": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"regeneration",
+"fully heal this minion"
+],
+[
+"stat_gain",
+"switch its Attack and Health"
+],
+[
+"stat_loss",
+"switch its Attack and Health"
+]
+],
+"by": "C"
+},
 "741942": {
 "tags": [
 [
@@ -1333,6 +2328,61 @@
 ]
 ],
 "by": "A=B"
+},
+"741946": {
+"tags": [
+[
+"card_quality",
+"replace an additional card each turn"
+]
+],
+"by": "A=B"
+},
+"741947": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"steal",
+"Take control of a nearby enemy minion"
+],
+[
+"stat_condition",
+"2 or less Attack"
+],
+[
+"adjacency",
+"nearby enemy minion"
+]
+],
+"by": "A=B"
+},
+"741950": {
+"tags": [
+[
+"placement_rules",
+"Airdrop"
+],
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"forced_movement",
+"Push ALL nearby minions and Generals to random spaces"
+],
+[
+"random_effect",
+"random spaces"
+],
+[
+"adjacency",
+"nearby"
+]
+],
+"by": "C"
 },
 "741953": {
 "tags": [
@@ -1390,6 +2440,23 @@
 ],
 "by": "A=B"
 },
+"741963": {
+"tags": [
+[
+"destroy",
+"Destroy ALL minions in a 3x3 area"
+],
+[
+"area_templates",
+"3x3 area"
+],
+[
+"terrain",
+"turn their spaces into Hallowed Ground"
+]
+],
+"by": "A=B"
+},
 "741966": {
 "tags": [
 [
@@ -1399,6 +2466,53 @@
 [
 "adjacency",
 "around it"
+]
+],
+"by": "C"
+},
+"741968": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"polymorph",
+"transform all nearby enemy minions into 0/2 Panddos"
+],
+[
+"adjacency",
+"nearby enemy minions"
+]
+],
+"by": "A=B"
+},
+"741970": {
+"tags": [
+[
+"ping",
+"Deal 1 damage to a minion"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"delayed",
+"at end of turn"
+]
+],
+"by": "A=B"
+},
+"741971": {
+"tags": [
+[
+"trap_secret",
+"hidden condition"
+],
+[
+"transform",
+"transforms into a powerful minion"
 ]
 ],
 "by": "C"
@@ -1442,6 +2556,57 @@
 ],
 "by": "A=B"
 },
+"741980": {
+"tags": [
+[
+"reactions",
+"Whenever your opponent draws a card"
+],
+[
+"random_ability",
+"gains a random keyword ability"
+]
+],
+"by": "A=B"
+},
+"741982": {
+"tags": [
+[
+"summon",
+"Summon Dervish"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"aoe_damage",
+"deal 6 damage to all enemy minions in this row"
+],
+[
+"rows",
+"in this row"
+]
+],
+"by": "A=B"
+},
+"741983": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"board_wipe",
+"destroy this and all enemy minions"
+],
+[
+"self_destruct",
+"destroy this"
+]
+],
+"by": "A=B"
+},
 "741986": {
 "tags": [
 [
@@ -1455,6 +2620,48 @@
 [
 "lane_identity",
 "center column"
+]
+],
+"by": "C"
+},
+"741987": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"bounce_enemy",
+"Return a nearby minion to its action bar"
+],
+[
+"adjacency",
+"nearby"
+],
+[
+"terrain",
+"Turn that space into Exhuming Sand"
+]
+],
+"by": "C"
+},
+"741988": {
+"tags": [
+[
+"return_to_hand",
+"Return a friendly Obelysk to your action bar"
+],
+[
+"cost_set",
+"reduce its cost to 0"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"tribal",
+"Obelysk"
 ]
 ],
 "by": "C"
@@ -1485,6 +2692,19 @@
 ],
 "by": "A=B"
 },
+"741994": {
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"tutor",
+"Draw two minions with Dying Wish from your deck"
+]
+],
+"by": "A=B"
+},
 "741995": {
 "tags": [
 [
@@ -1498,6 +2718,44 @@
 [
 "condition_count",
 "If you have another Wraithling"
+]
+],
+"by": "A=B"
+},
+"741997": {
+"tags": [
+[
+"untap",
+"reactivate"
+],
+[
+"steal",
+"take control of it until the end of your turn"
+],
+[
+"temporary_effect",
+"until the end of your turn"
+]
+],
+"by": "A=B"
+},
+"741998": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"lifesteal",
+"Steal 2 Health from the enemy General"
+],
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"return_to_hand",
+"Return Desolator to your action bar"
 ]
 ],
 "by": "A=B"
@@ -1531,6 +2789,44 @@
 ]
 ],
 "by": "C"
+},
+"742004": {
+"tags": [
+[
+"movement",
+"Teleport ANY minion to friendly Shadow Creep"
+],
+[
+"forced_movement",
+"Teleport ANY minion"
+],
+[
+"terrain",
+"Shadow Creep"
+]
+],
+"by": "A=B"
+},
+"742008": {
+"tags": [
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"aoe_damage",
+"deal 1 damage to ALL minions"
+],
+[
+"friendly_fire",
+"ALL minions"
+],
+[
+"ping",
+"deal 1 damage"
+]
+],
+"by": "A=B"
 },
 "742010": {
 "tags": [
@@ -1583,6 +2879,36 @@
 ],
 "by": "C"
 },
+"742019": {
+"tags": [
+[
+"protection",
+"Minions cannot attack your General"
+]
+],
+"by": "A=B"
+},
+"742020": {
+"tags": [
+[
+"summon",
+"Summon five joined 0/1 Walls"
+],
+[
+"death_trigger",
+"when destroyed"
+],
+[
+"aoe_damage",
+"deal 2 damage to nearby enemies"
+],
+[
+"adjacency",
+"nearby"
+]
+],
+"by": "C"
+},
 "742021": {
 "tags": [
 [
@@ -1620,6 +2946,19 @@
 ]
 ],
 "by": "A=B"
+},
+"742025": {
+"tags": [
+[
+"trap_secret",
+"hidden condition"
+],
+[
+"transform",
+"transforms into a powerful minion"
+]
+],
+"by": "C"
 },
 "742026": {
 "tags": [
@@ -1668,6 +3007,36 @@
 ],
 "by": "C"
 },
+"742034": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"enemy_benefit",
+"Your opponent summons two Komodo Chargers"
+]
+],
+"by": "A=B"
+},
+"742035": {
+"tags": [
+[
+"play_restriction",
+"cannot cast spells that cost 2 or less"
+],
+[
+"symmetric_effect",
+"BOTH players"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"by": "A=B"
+},
 "742037": {
 "tags": [
 [
@@ -1712,6 +3081,19 @@
 ],
 "by": "A=B"
 },
+"742044": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"hand_deck_swap",
+"Replace each card in your action bar"
+]
+],
+"by": "A=B"
+},
 "742045": {
 "tags": [
 [
@@ -1721,6 +3103,31 @@
 [
 "link_formation",
 "joined enemies"
+]
+],
+"by": "C"
+},
+"742046": {
+"tags": [
+[
+"taunt",
+"Provoke"
+],
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"summon",
+"summons three Spriggin Kin"
+],
+[
+"symmetric_effect",
+"Each player"
+],
+[
+"enemy_benefit",
+"Each player summons three Spriggin Kin"
 ]
 ],
 "by": "C"
@@ -1837,6 +3244,44 @@
 ],
 "by": "C"
 },
+"742066": {
+"tags": [
+[
+"shield",
+"Forcefield"
+],
+[
+"suppress",
+"exhaust it"
+],
+[
+"symmetric_effect",
+"Whenever ANY player summons a minion with Rush"
+]
+],
+"by": "A=B"
+},
+"742068": {
+"tags": [
+[
+"movement",
+"Flying"
+],
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"aoe_damage",
+"Deal 3 damage to all enemies in front of this minion"
+],
+[
+"area_templates",
+"in front of this minion"
+]
+],
+"by": "C"
+},
 "742071": {
 "tags": [
 [
@@ -1853,6 +3298,28 @@
 ]
 ],
 "by": "C"
+},
+"742077": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you summon a minion"
+],
+[
+"random_ability",
+"gains a random keyword ability"
+]
+],
+"by": "A=B"
+},
+"742079": {
+"tags": [
+[
+"haste",
+"Rush"
+]
+],
+"by": "A=B"
 },
 "742082": {
 "tags": [
@@ -1925,6 +3392,83 @@
 ]
 ],
 "by": "C"
+},
+"742086": {
+"tags": [
+[
+"damage",
+"deal 2 damage to a random enemy"
+],
+[
+"random_effect",
+"random enemy"
+],
+[
+"ping",
+"deal 2 damage"
+]
+],
+"by": "A=B"
+},
+"742087": {
+"tags": [
+[
+"movement",
+"Flying"
+],
+[
+"temporary_buff",
+"gains +2 Attack this turn"
+]
+],
+"by": "C"
+},
+"742088": {
+"tags": [
+[
+"in_hand_buff",
+"it costs 3 less and gains +3/+3"
+]
+],
+"by": "C"
+},
+"742089": {
+"tags": [
+[
+"free_play",
+"summon it on a random nearby space"
+],
+[
+"random_effect",
+"random nearby space"
+],
+[
+"friendly_fire",
+"Your General takes 2 damage"
+]
+],
+"by": "C"
+},
+"742090": {
+"tags": [
+[
+"taunt",
+"Provoke"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"aoe_damage",
+"deal 2 damage to each enemy minion around this one"
+],
+[
+"adjacency",
+"around this one"
+]
+],
+"by": "A=B"
 },
 "742092": {
 "tags": [
@@ -2012,6 +3556,23 @@
 ],
 "by": "C"
 },
+"742102": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"permanent_growth",
+"give all friendly minions +1 health"
+],
+[
+"scope_multi",
+"all friendly minions"
+]
+],
+"by": "A=B"
+},
 "742105": {
 "tags": [
 [
@@ -2055,6 +3616,23 @@
 [
 "stat_gain",
 "+1/+1"
+]
+],
+"by": "C"
+},
+"742121": {
+"tags": [
+[
+"adjacency",
+"Zeal"
+],
+[
+"draw",
+"Draw 2 additional cards"
+],
+[
+"turn_end",
+"at the end of your turn"
 ]
 ],
 "by": "C"
@@ -2123,6 +3701,15 @@
 ],
 "by": "C"
 },
+"742133": {
+"tags": [
+[
+"flanking",
+"Backstab: (1)"
+]
+],
+"by": "A=B"
+},
 "742134": {
 "tags": [
 [
@@ -2174,6 +3761,53 @@
 ],
 "by": "C"
 },
+"742139": {
+"tags": [
+[
+"copy",
+"Summon a copy of a friendly minion"
+],
+[
+"summon",
+"Summon a copy"
+],
+[
+"cost_condition",
+"costs 2 or less"
+]
+],
+"by": "A=B"
+},
+"742140": {
+"tags": [
+[
+"transform",
+"Transform all minions in your action bar and deck into 0-cost Gore Horns"
+],
+[
+"cost_set",
+"0-cost"
+],
+[
+"draw",
+"Draw 3 cards"
+]
+],
+"by": "C"
+},
+"742142": {
+"tags": [
+[
+"cost_set",
+"Costs 0"
+],
+[
+"count_payoff",
+"if you've cast all three Scion's Wish spells this game"
+]
+],
+"by": "A=B"
+},
 "742145": {
 "tags": [
 [
@@ -2190,6 +3824,19 @@
 ]
 ],
 "by": "C"
+},
+"742151": {
+"tags": [
+[
+"generate_cards",
+"Put 3 random Battle Pets into your action bar"
+],
+[
+"random_effect",
+"random Battle Pets"
+]
+],
+"by": "A=B"
 },
 "742153": {
 "tags": [
@@ -2221,6 +3868,15 @@
 [
 "random_effect",
 "random spaces"
+]
+],
+"by": "A=B"
+},
+"742155": {
+"tags": [
+[
+"board_wipe",
+"Destroy ALL non-Structure minions"
 ]
 ],
 "by": "A=B"
@@ -2259,6 +3915,40 @@
 [
 "adjacency",
 "nearby Wraithling"
+]
+],
+"by": "C"
+},
+"742164": {
+"tags": [
+[
+"damage",
+"Deal 2 damage to a minion"
+],
+[
+"generate_cards",
+"put a random Battle Pet into your action bar"
+],
+[
+"random_effect",
+"random Battle Pet"
+]
+],
+"by": "A=B"
+},
+"742166": {
+"tags": [
+[
+"polymorph",
+"Transform ALL minions that cost 2 or less into 1/1 Wraithlings"
+],
+[
+"cost_condition",
+"cost 2 or less"
+],
+[
+"scope_global",
+"ALL minions"
 ]
 ],
 "by": "C"
@@ -2302,6 +3992,27 @@
 ],
 "by": "C"
 },
+"742179": {
+"tags": [
+[
+"summon",
+"Summon four copies of a random Battle Pet"
+],
+[
+"random_effect",
+"random Battle Pet"
+],
+[
+"tribal",
+"Battle Pet"
+],
+[
+"area_templates",
+"2x2 area"
+]
+],
+"by": "A=B"
+},
 "742181": {
 "tags": [
 [
@@ -2311,6 +4022,27 @@
 [
 "friendly_fire",
 "ALL non-Egg minions and Generals"
+]
+],
+"by": "A=B"
+},
+"742184": {
+"tags": [
+[
+"territory_trigger",
+"Infiltrate"
+],
+[
+"on_attack",
+"Whenever this minion damages a General"
+],
+[
+"generate_cards",
+"put a random Battle Pet into your action bar"
+],
+[
+"random_effect",
+"random Battle Pet"
 ]
 ],
 "by": "A=B"
@@ -2391,6 +4123,23 @@
 ],
 "by": "C"
 },
+"742195": {
+"tags": [
+[
+"stat_gain",
+"Your General gains +3 Attack"
+],
+[
+"on_kill",
+"Whenever your General destroys a minion"
+],
+[
+"summon",
+"summon a 3/3 Blazing Spine Wall"
+]
+],
+"by": "A=B"
+},
 "742196": {
 "tags": [
 [
@@ -2416,6 +4165,40 @@
 ]
 ],
 "by": "C"
+},
+"742200": {
+"tags": [
+[
+"ranged",
+"Ranged"
+],
+[
+"stat_multiply",
+"double damage"
+],
+[
+"direct_damage",
+"double damage to Generals"
+]
+],
+"by": "C"
+},
+"742201": {
+"tags": [
+[
+"death_trigger",
+"Whenever a friendly Battle Pet dies"
+],
+[
+"tribal",
+"Battle Pet"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "A=B"
 },
 "742206": {
 "tags": [
@@ -2562,6 +4345,23 @@
 ],
 "by": "A=B"
 },
+"742234": {
+"tags": [
+[
+"lifesteal",
+"steals 1 Health from the enemy General"
+],
+[
+"condition_count",
+"for each other friendly Arcanyst"
+],
+[
+"tribal",
+"Arcanyst"
+]
+],
+"by": "A=B"
+},
 "742236": {
 "tags": [
 [
@@ -2643,6 +4443,19 @@
 ],
 "by": "C"
 },
+"742248": {
+"tags": [
+[
+"damage",
+"Deal 1 damage to an enemy minion"
+],
+[
+"resource_gain",
+"permanently gain 1 mana crystal"
+]
+],
+"by": "C"
+},
 "742251": {
 "tags": [
 [
@@ -2673,6 +4486,15 @@
 ],
 "by": "C"
 },
+"742256": {
+"tags": [
+[
+"copy",
+"put a copy of it into your action bar"
+]
+],
+"by": "C"
+},
 "742260": {
 "tags": [
 [
@@ -2695,6 +4517,23 @@
 [
 "adjacency",
 "nearby"
+]
+],
+"by": "C"
+},
+"742271": {
+"tags": [
+[
+"aoe_damage",
+"Deal 3 damage to enemies"
+],
+[
+"heal",
+"restore 3 Health to friendly minions and Generals"
+],
+[
+"area_templates",
+"in a row"
 ]
 ],
 "by": "C"
@@ -2755,6 +4594,27 @@
 ],
 "by": "A=B"
 },
+"742279": {
+"tags": [
+[
+"delayed",
+"Build: (2)"
+],
+[
+"on_play",
+"When this minion is built"
+],
+[
+"resource_gain",
+"gain +2 mana this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "C"
+},
 "742282": {
 "tags": [
 [
@@ -2772,6 +4632,40 @@
 ],
 "by": "C"
 },
+"742284": {
+"tags": [
+[
+"polymorph",
+"Transform a nearby enemy minion into a 0/2 Panddo"
+],
+[
+"destroy",
+"destroy it"
+],
+[
+"draw",
+"draw to fill your action bar"
+],
+[
+"hand_size",
+"fill your action bar"
+],
+[
+"adjacency",
+"nearby enemy minion"
+]
+],
+"by": "A=B"
+},
+"742285": {
+"tags": [
+[
+"swap",
+"Switch positions between a friendly minion and your General"
+]
+],
+"by": "A=B"
+},
 "742292": {
 "tags": [
 [
@@ -2784,6 +4678,53 @@
 ]
 ],
 "by": "C"
+},
+"742296": {
+"tags": [
+[
+"stat_gain",
+"Health becomes equal to its Attack"
+],
+[
+"stat_loss",
+"Health becomes equal to its Attack"
+]
+],
+"by": "C"
+},
+"742297": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"steal",
+"Take control of enemy minions"
+],
+[
+"stat_condition",
+"2 or less Attack"
+],
+[
+"rows",
+"on this row"
+]
+],
+"by": "A=B"
+},
+"742305": {
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"generate_cards",
+"Shuffle a MECHAZ0R into your deck"
+]
+],
+"by": "A=B"
 },
 "742310": {
 "tags": [
@@ -2904,6 +4845,49 @@
 ],
 "by": "A=B"
 },
+"742325": {
+"tags": [
+[
+"cheat_death",
+"Rebirth"
+],
+[
+"on_attack",
+"After this minion attacks"
+],
+[
+"transform",
+"turn it into an Egg"
+]
+],
+"by": "A=B"
+},
+"742326": {
+"tags": [
+[
+"stat_gain",
+"+Attack equal to your General's Attack"
+],
+[
+"variable_stats",
+"equal to your General's Attack"
+]
+],
+"by": "C"
+},
+"742329": {
+"tags": [
+[
+"polymorph",
+"Transform ANY minion into a 4/5 Ursaplomb"
+]
+],
+"by": "C"
+},
+"742330": {
+"tags": [],
+"by": "A=B"
+},
 "742332": {
 "tags": [
 [
@@ -2924,6 +4908,19 @@
 ]
 ],
 "by": "C"
+},
+"742333": {
+"tags": [
+[
+"summon",
+"Summon three 2/2 Vespyr Winter Maerids"
+],
+[
+"placement_rules",
+"on any column"
+]
+],
+"by": "A=B"
 },
 "742337": {
 "tags": [
@@ -2963,6 +4960,32 @@
 ],
 "by": "C"
 },
+"742339": {
+"tags": [
+[
+"delayed",
+"Build: (2)"
+],
+[
+"immobilize",
+"enemy minions and Generals can only move 1 space"
+]
+],
+"by": "A=B"
+},
+"742340": {
+"tags": [
+[
+"stat_multiply",
+"Double the Attack and Health buffs"
+],
+[
+"scope_multi",
+"friendly minions"
+]
+],
+"by": "A=B"
+},
 "742341": {
 "tags": [
 [
@@ -2972,11 +4995,66 @@
 ],
 "by": "C"
 },
+"742347": {
+"tags": [
+[
+"on_kill",
+"Whenever this minion destroys an enemy"
+],
+[
+"tutor",
+"summon a different Mech minion from your deck"
+],
+[
+"free_play",
+"summon a different Mech minion from your deck"
+],
+[
+"tribal",
+"Mech"
+]
+],
+"by": "C"
+},
 "742348": {
 "tags": [
 [
 "stat_gain",
 "Gains +2/+2"
+]
+],
+"by": "A=B"
+},
+"742349": {
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"mill",
+"Remove all minions that cost 2 or less from each player's deck"
+],
+[
+"symmetric_effect",
+"each player's deck"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"by": "A=B"
+},
+"742351": {
+"tags": [
+[
+"death_trigger",
+"Whenever a friendly minion is destroyed"
+],
+[
+"donate",
+"your opponent takes control of this minion"
 ]
 ],
 "by": "A=B"

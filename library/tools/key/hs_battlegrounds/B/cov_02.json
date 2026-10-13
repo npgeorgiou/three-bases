@@ -1,0 +1,634 @@
+{
+"800873": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"board_clog",
+"Summon a 3/3 Pip Quickwit for your opponent"
+],
+[
+"enemy_benefit",
+"for your opponent"
+]
+],
+"749758": [
+[
+"generate_cards",
+"get 2 random Aberrations"
+],
+[
+"random_effect",
+"random Aberrations"
+],
+[
+"discard",
+"discard the other"
+]
+],
+"750039": [
+[
+"discard",
+"After you discard a card"
+],
+[
+"copy",
+"Pass a plain copy of it"
+],
+[
+"team_play",
+"Pass"
+],
+[
+"once_per_game",
+"(Once per turn.)"
+]
+],
+"749756": [
+[
+"stat_gain",
+"Give your minions +X/+Y"
+],
+[
+"discard",
+"If you discard this"
+],
+[
+"repeat_trigger",
+"cast it twice"
+]
+],
+"749903": [
+[
+"generate_cards",
+"Get 2 random Tavern spells"
+],
+[
+"random_effect",
+"random Tavern spells"
+],
+[
+"discard",
+"discard the other"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"repeat_trigger",
+"repeat this"
+]
+],
+"748927": [
+[
+"on_damaged",
+"After your hero takes damage"
+],
+[
+"rewind",
+"rewind it"
+],
+[
+"cost_reduction",
+"reduce the Cost of your next Tavern spell by (1)"
+]
+],
+"749072": [
+[
+"on_damaged",
+"After your hero takes damage"
+],
+[
+"rewind",
+"rewind it"
+],
+[
+"stat_gain",
+"give minions in the Tavern +X/+Y"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"750194": [
+[
+"on_damaged",
+"Whenever your hero takes damage"
+],
+[
+"rewind",
+"rewind it"
+],
+[
+"permanent_growth",
+"gain stats equal to that amount"
+]
+],
+"748796": [
+[
+"generate_cards",
+"Get a Soul Rewinder and a Wrath Weaver"
+],
+[
+"stat_gain",
+"Your Soul Rewinders also gain Attack"
+]
+],
+"749436": [
+[
+"on_damaged",
+"After your hero takes damage"
+],
+[
+"rewind",
+"rewind it"
+],
+[
+"stat_gain",
+"give your Demons +Z Health"
+],
+[
+"tribal",
+"Demons"
+]
+],
+"749691": [
+[
+"resource_gain",
+"Gain X Gold"
+]
+],
+"748243": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"lane_identity",
+"left and right-most minions"
+],
+[
+"stat_gain",
+"consume a minion in the Tavern to gain its stats"
+]
+],
+"748063": [
+[
+"delayed",
+"In 1 turn"
+],
+[
+"generate_cards",
+"get a random 1-Cost Tavern spell"
+],
+[
+"random_effect",
+"random 1-Cost Tavern spell"
+]
+],
+"749837": [
+[
+"generate_cards",
+"Get a Lurking Lionfish"
+],
+[
+"on_attack",
+"Whenever a friendly Beast attacks"
+],
+[
+"tribal",
+"Beast"
+],
+[
+"stat_gain",
+"give it +X/+Y"
+]
+],
+"748387": [
+[
+"delayed",
+"At the end of every 2 turns"
+],
+[
+"copy",
+"get a plain copy of the left-most card in your hand"
+],
+[
+"hand_position",
+"left-most card in your hand"
+]
+],
+"749572": [
+[
+"generate_cards",
+"Fill your hand with Tavern Dish Bananas"
+],
+[
+"hand_size",
+"Fill your hand"
+],
+[
+"spell_power",
+"Your Tavern spells give an extra +X/+Y this game"
+]
+],
+"749581": [
+[
+"generate_cards",
+"Fill your hand with random Spellcraft spells"
+],
+[
+"random_effect",
+"random Spellcraft spells"
+]
+],
+"750139": [
+[
+"generate_cards",
+"Fill your hand with Tavern Dish Bananas"
+]
+],
+"748223": [
+[
+"quests",
+"Quest: Have friendly minions attack X times."
+]
+],
+"748624": [
+[
+"quests",
+"Quest: Cast X spells."
+]
+],
+"748222": [
+[
+"quests",
+"Quest: End your turn with unspent Gold X times."
+],
+[
+"resource_banking",
+"unspent Gold"
+]
+],
+"749132": [
+[
+"generate_cards",
+"Get a Golden Mishmash and a X/X Amalgam with Venomous"
+],
+[
+"deathtouch",
+"Venomous"
+]
+],
+"748173": [
+[
+"board_limit",
+"When you have space in combat"
+],
+[
+"summon",
+"summon a X/X Tentacle with Taunt"
+],
+[
+"taunt",
+"Taunt"
+],
+[
+"permanent_growth",
+"Gains +1/+1 after you sell a minion"
+]
+],
+"748364": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"summon",
+"Summon a X/X Tentacle"
+],
+[
+"permanent_growth",
+"It gains +4/+4 permanently after you summon a minion in combat"
+],
+[
+"on_ally_play",
+"after you summon a minion in combat"
+]
+],
+"750186": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"variety_payoff",
+"4 minions with different types"
+],
+[
+"condition_count",
+"4 minions"
+],
+[
+"stat_gain",
+"gain your minions' highest Attack and Health"
+],
+[
+"stat_condition",
+"highest Attack and Health"
+]
+],
+"749514": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"stat_gain",
+"Gain the stats of 3 friendly minions"
+],
+[
+"variety_payoff",
+"different types"
+]
+],
+"750109": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"+1/+1"
+],
+[
+"variety_payoff",
+"3 friendly minions of different types"
+]
+],
+"748192": [
+[
+"on_ally_play",
+"After you play a minion with no type"
+],
+[
+"variety_payoff",
+"3 friendly minions of different types"
+],
+[
+"stat_gain",
+"+2/+2"
+]
+],
+"748612": [
+[
+"cost_type",
+"costs Health instead of Gold"
+],
+[
+"life_payment",
+"costs Health instead of Gold"
+]
+],
+"749137": [
+[
+"cost_type",
+"costs Health instead of Gold"
+],
+[
+"life_payment",
+"costs Health instead of Gold"
+],
+[
+"tribal",
+"Demon"
+]
+],
+"749076": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"cost_type",
+"They cost Health instead of Gold"
+],
+[
+"life_payment",
+"cost Health instead of Gold"
+]
+],
+"748354": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"life_payment",
+"Deal 1 damage to your hero"
+]
+],
+"749278": [
+[
+"delayed",
+"At the start of your next turn"
+],
+[
+"resource_gain",
+"gain 4 Gold"
+],
+[
+"selection",
+"choose a Lesser Trinket to buy"
+]
+],
+"750307": [
+[
+"count_payoff",
+"After you buy 3 minions"
+],
+[
+"generate_cards",
+"get a Tavern Coin"
+]
+],
+"750315": [
+[
+"stakes_wager",
+"Guess which player will win their next combat"
+],
+[
+"generate_cards",
+"get 3 Tavern Coins"
+]
+],
+"748504": [
+[
+"stakes_wager",
+"Guess which player will win your next combat"
+],
+[
+"resource_gain",
+"get 3 Gold Coins"
+]
+],
+"748476": [
+[
+"information",
+"look at 2 minions"
+],
+[
+"stakes_wager",
+"Guess which one your next opponent had last combat for a Coin"
+]
+],
+"748395": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"generate_cards",
+"Add a Coin to your hand"
+]
+],
+"750365": [
+[
+"multiple_resources",
+"a second currency"
+],
+[
+"round_carryover",
+"carries over"
+],
+[
+"shop_gold",
+"buys minions and spells"
+]
+],
+"749375": [
+[
+"multiple_resources",
+"Chronum"
+],
+[
+"round_carryover",
+"Any unspent carries over"
+]
+],
+"748448": [
+[
+"resource_banking",
+"Unspent Gold carries over to your next turn"
+],
+[
+"resource_gain",
+"gain 1 extra"
+]
+],
+"749575": [
+[
+"card_advantage",
+"Steal all minions from the Tavern"
+]
+],
+"748200": [
+[
+"selection",
+"Discover a Tier X minion"
+],
+[
+"permanent_growth",
+"Improves each turn"
+]
+],
+"749602": [
+[
+"fodder",
+"Fodder"
+]
+],
+"749815": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"fodder",
+"Fodder"
+]
+],
+"748360": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"summon",
+"Summon two 0/1 Cublings with Taunt"
+],
+[
+"taunt",
+"Taunt"
+],
+[
+"null_body",
+"0/1 Cublings"
+]
+],
+"750064": [
+[
+"distribute",
+"give this minion's stats split amongst your other minions"
+],
+[
+"stat_gain",
+"give this minion's stats"
+]
+],
+"748183": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"sacrifice",
+"Sell a friendly minion"
+],
+[
+"distribute",
+"Split its stats evenly amongst its neighbors"
+],
+[
+"adjacency",
+"neighbors"
+]
+],
+"748501": [
+[
+"rule_change",
+"ALL minions are Golden"
+],
+[
+"scope_global",
+"ALL minions"
+]
+],
+"748471": [
+[
+"start_of_game",
+"Start at Tavern Tier 3 with 9 Gold"
+],
+[
+"resource_gain",
+"9 Gold"
+],
+[
+"rule_change",
+"All cards in your first shop are Tier 3"
+]
+]
+}

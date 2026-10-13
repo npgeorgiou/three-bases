@@ -1,0 +1,24 @@
+{
+"791061": [
+[
+"quests",
+"You complete this battle tactic"
+],
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"steal",
+"you control an objective that was controlled by your opponent at the start of the turn"
+],
+[
+"zone_control",
+"you control every objective on the battlefield that can be controlled"
+],
+[
+"territory_trigger",
+"every objective that can be controlled within enemy territory"
+]
+]
+}

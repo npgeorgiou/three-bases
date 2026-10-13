@@ -1,0 +1,816 @@
+{
+"757338": [
+[
+"quests",
+"Scenario: Progress whenever you play a Tidecloak"
+],
+[
+"tribal",
+"Tidecloak"
+],
+[
+"summon",
+"Spawn Gudrun Bjornsdottir on this row"
+],
+[
+"resource_gain",
+"gain enough Coins to fill your pouch"
+],
+[
+"coin_economy",
+"Coins"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"damage",
+"Damage the highest-power enemy unit"
+],
+[
+"stat_condition",
+"highest-power enemy unit"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"on_ally_play",
+"whenever you play a Tidecloak"
+],
+[
+"resource_banking",
+"Hoard 8"
+]
+],
+"757339": [
+[
+"on_play",
+"Deploy"
+],
+[
+"copy",
+"Spawn 3 base copies of self on this row"
+],
+[
+"summon",
+"Spawn 3 base copies of self"
+],
+[
+"coin_economy",
+"Your Hoards require 1 less Coins to trigger"
+],
+[
+"resource_banking",
+"Hoard 9"
+],
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"delayed",
+"Counter: 3"
+],
+[
+"cost_reduction",
+"Your Hoards require 1 less Coins to trigger"
+]
+],
+"757353": [
+[
+"on_play",
+"Deploy"
+],
+[
+"lifesteal",
+"Drain an enemy unit by 3"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"in_hand_buff",
+"while in hand or deck, if there is an enemy unit with Bleeding, increase own base power by 1"
+],
+[
+"damage_over_time",
+"Bleeding"
+],
+[
+"permanent_growth",
+"increase own base power by 1"
+]
+],
+"757356": [
+[
+"recycle",
+"Echo"
+],
+[
+"damage",
+"Damage an enemy unit by 0"
+],
+[
+"stat_gain",
+"boost the lowest-power allied unit by the excess damage dealt"
+],
+[
+"stat_condition",
+"lowest-power allied unit"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"in_hand_buff",
+"increase the damage by 1, wherever this card is"
+],
+[
+"points_scoring",
+"if you have more points than your opponent"
+]
+],
+"757374": [
+[
+"resource_gain",
+"Profit 4"
+],
+[
+"coin_economy",
+"Fee 1"
+],
+[
+"activated",
+"Fee 1"
+],
+[
+"stat_gain",
+"Boost an allied unit by 1"
+],
+[
+"count_payoff",
+"Each time you pay this card's Fee, increase its cost by 1"
+],
+[
+"round_carryover",
+"Resilience"
+]
+],
+"757376": [
+[
+"on_play",
+"Deploy"
+],
+[
+"deck_condition",
+"If your starting deck does not have cards with a provision cost of 10 or more"
+],
+[
+"cost_condition",
+"provision cost of 10 or more"
+],
+[
+"free_play",
+"play the top unit, special, and artifact from your deck"
+],
+[
+"cast_from_zone",
+"play the top unit, special, and artifact from your deck"
+],
+[
+"deck_position",
+"play the top unit, special, and artifact from your deck"
+]
+],
+"757382": [
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage a unit by 2"
+],
+[
+"piercing",
+"ignoring its Armor"
+],
+[
+"tribal",
+"from your Warriors"
+],
+[
+"ping",
+"damage it by 1"
+]
+],
+"757390": [
+[
+"activated",
+"Order"
+],
+[
+"destroy",
+"Destroy an enemy unit with 2 or less power"
+],
+[
+"stat_condition",
+"2 or less power"
+],
+[
+"tribal",
+"Soldier"
+],
+[
+"count_payoff",
+"Whenever you Spawn a Soldier, increase the limit by 1"
+],
+[
+"on_ally_play",
+"Whenever you Spawn a Soldier"
+]
+],
+"757397": [
+[
+"on_play",
+"Deploy"
+],
+[
+"selection",
+"Look at Collusion and a random unit from each Gang from your deck, then play 1"
+],
+[
+"tutor",
+"from your deck, then play 1"
+],
+[
+"kicker",
+"Tribute 9"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"cost_reduction",
+"Tribute costs 2 less"
+],
+[
+"variety_payoff",
+"for each unique Gang category you control"
+],
+[
+"tribal",
+"Gang"
+],
+[
+"free_play",
+"then play 1"
+],
+[
+"random_effect",
+"a random unit"
+]
+],
+"757407": [
+[
+"on_play",
+"Deploy"
+],
+[
+"damage",
+"Damage an enemy unit by the difference between its base and current power"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"upgrade",
+"evolve after you win a round"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"stat_condition",
+"difference between its base and current power"
+],
+[
+"round_carryover",
+"Gain Resilience"
+]
+],
+"757408": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"in_hand_buff",
+"boost all non-Neutral units in your hand"
+],
+[
+"variety_payoff",
+"primary categories that you don't control"
+],
+[
+"upgrade",
+"evolve after you win a round"
+],
+[
+"banish",
+"Doomed"
+]
+],
+"757409": [
+[
+"variety_payoff",
+"Harmony"
+],
+[
+"on_ally_play",
+"Whenever you play another Relict"
+],
+[
+"tribal",
+"Relict"
+],
+[
+"generate_cards",
+"Spawn and play Loc Feainn: Convergence"
+]
+],
+"757411": [
+[
+"immunity",
+"Immunity"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Create a legendary unit from your faction that is not in your starting deck 3 times"
+],
+[
+"activated",
+"Order"
+],
+[
+"tutor",
+"Draw a unit of your choice"
+],
+[
+"in_hand_buff",
+"boost it by your hand size"
+],
+[
+"hand_size",
+"your hand size"
+],
+[
+"recycle",
+"shuffle a card back into your deck"
+],
+[
+"upgrade",
+"evolve after you win a round"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"round_carryover",
+"Resilience"
+]
+],
+"757412": [
+[
+"on_play",
+"Deploy"
+],
+[
+"in_hand_buff",
+"Infuse 5 units in your deck"
+],
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"stat_gain",
+"Boost the lowest-power allied unit by 2"
+],
+[
+"stat_condition",
+"lowest-power allied unit"
+],
+[
+"graveyard",
+"Spawn Call of the Depths in your graveyard"
+],
+[
+"activated",
+"Order"
+],
+[
+"sacrifice",
+"Consume an allied unit"
+],
+[
+"on_ally_play",
+"Whenever you play a Deathwish unit"
+],
+[
+"upgrade",
+"evolve after you win a round"
+],
+[
+"banish",
+"Doomed"
+]
+],
+"757414": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_gain",
+"Boost self by 1 for each unit you control"
+],
+[
+"board_presence",
+"for each unit you control"
+],
+[
+"resource_gain",
+"gain a Coin for each Firesworn card you control"
+],
+[
+"tribal",
+"Firesworn"
+],
+[
+"upgrade",
+"evolve after you win a round"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"coin_economy",
+"gain a Coin for each Firesworn card you control"
+]
+],
+"757417": [
+[
+"on_play",
+"Deploy"
+],
+[
+"junk_cards",
+"Shuffle a card from your deck into your opponent's deck"
+],
+[
+"activated",
+"Order"
+],
+[
+"deck_condition",
+"the difference between the number of cards in the players' decks"
+],
+[
+"variable_stats",
+"set its power to the difference"
+],
+[
+"permanent_growth",
+"boost self by 1"
+],
+[
+"donate",
+"Shuffle a card from your deck into your opponent's deck"
+],
+[
+"deck_position",
+"at the bottom of your opponent's deck"
+]
+],
+"757432": [
+[
+"tribal",
+"Kikimore"
+],
+[
+"variety_payoff",
+"Choose 4 different bronze Kikimore units"
+],
+[
+"graveyard",
+"While in your graveyard"
+],
+[
+"transform",
+"transform it into the next chosen Kikimore unit"
+],
+[
+"selection",
+"Choose 4 different bronze Kikimore units"
+],
+[
+"on_ally_play",
+"the first time you Spawn a Drone on the battlefield each allied turn"
+]
+],
+"757440": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"summon",
+"Spawn Imperial Fleet to the left of self and Imperial Marine to the right of self"
+],
+[
+"activated",
+"Order:"
+],
+[
+"stat_gain",
+"Boost 2 allied units by 2"
+],
+[
+"swap",
+"swap their positions"
+],
+[
+"round_carryover",
+"Resilience"
+]
+],
+"757442": [
+[
+"activated",
+"Order:"
+],
+[
+"destroy",
+"Poison a non-Poisoned unit"
+],
+[
+"condition_count",
+"at least 1 status"
+],
+[
+"turn_end",
+"At the end of your turn"
+]
+],
+"757445": [
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Order"
+],
+[
+"deck_position",
+"move it up by one position in your deck"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"permanent_growth",
+"boost self by 1"
+]
+],
+"757453": [
+[
+"on_play",
+"Deploy"
+],
+[
+"adjacency",
+"If played adjacent to at least one"
+],
+[
+"tutor",
+"Play an Elf from your deck"
+],
+[
+"tribal",
+"Elf"
+],
+[
+"trap_secret",
+"Play a Trap from your deck"
+],
+[
+"free_play",
+"Play a Trap from your deck"
+]
+],
+"757462": [
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage an enemy unit by 2"
+],
+[
+"in_hand_buff",
+"boost a random non-boosted unit in your deck by the excess damage dealt"
+],
+[
+"random_effect",
+"random"
+],
+[
+"count_payoff",
+"for each time you used an Order ability this turn"
+]
+],
+"757464": [
+[
+"on_play",
+"Deploy (Might)"
+],
+[
+"variable_stats",
+"The base power of this card is equal to the number of Ogroids in your starting deck"
+],
+[
+"deck_condition",
+"Ogroids in your starting deck"
+],
+[
+"tribal",
+"Ogroids"
+],
+[
+"round_carryover",
+"Gain Resilience"
+]
+],
+"757471": [
+[
+"on_play",
+"Deploy"
+],
+[
+"resource_gain",
+"Gain as many Coins as you spent this turn"
+],
+[
+"coin_economy",
+"Coins"
+],
+[
+"activated",
+"Fee 1"
+],
+[
+"stat_gain",
+"Boost an allied Pirate by 1"
+],
+[
+"tribal",
+"Pirate"
+],
+[
+"count_payoff",
+"as many Coins as you spent this turn"
+]
+],
+"813614": [
+[
+"taunt",
+"Defender"
+],
+[
+"banish",
+"Doomed"
+]
+],
+"813622": [
+[
+"on_play",
+"Deploy"
+],
+[
+"revive",
+"Play a bronze Warrior from your graveyard"
+],
+[
+"cast_from_zone",
+"from your graveyard"
+],
+[
+"tribal",
+"Warrior"
+],
+[
+"deckbuilding_effect",
+"Devotion"
+],
+[
+"turn_start",
+"At the start of the round"
+],
+[
+"upgrade",
+"evolve"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"banish",
+"give it Doomed"
+]
+],
+"813660": [
+[
+"banish",
+"Doomed"
+],
+[
+"activated",
+"Order:"
+],
+[
+"ping",
+"Damage an enemy unit by 1"
+],
+[
+"mark_target",
+"Infuse it with \"Whenever this unit takes damage from other abilities, damage self by the same amount\""
+]
+],
+"813663": [
+[
+"banish",
+"Doomed"
+],
+[
+"on_damaged",
+"When this unit takes damage"
+],
+[
+"self_destruct",
+"destroy self"
+]
+],
+"813691": [
+[
+"activated",
+"Fee 3"
+],
+[
+"coin_economy",
+"Fee 3"
+],
+[
+"damage",
+"Damage an enemy unit by 3"
+],
+[
+"self_destruct",
+"then destroy self"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"cost_reduction",
+"reduce the Fee cost by 1"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"delayed",
+"If the Fee cost was 0, destroy self instead"
+]
+]
+}

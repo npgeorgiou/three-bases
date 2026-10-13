@@ -1,0 +1,898 @@
+{
+"750552": [
+[
+"direct_damage",
+"I deal double damage to the Nexus"
+],
+[
+"stat_multiply",
+"double damage"
+]
+],
+"751849": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"stat_multiply",
+"Double my power"
+],
+[
+"condition_count",
+"Plunder"
+]
+],
+"796900": [
+[
+"merge_attach",
+"Attach me to an ally"
+],
+[
+"multi_attack",
+"Double Attack"
+],
+[
+"buff",
+"give it my stats and keywords"
+],
+[
+"return_to_hand",
+"Recall me"
+]
+],
+"750887": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"summon",
+"summon Valor"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"I've seen you attack 4 times"
+]
+],
+"751952": [
+[
+"on_play",
+"Play"
+],
+[
+"sacrifice",
+"Kill up to 2 allies"
+],
+[
+"revive",
+"revive it"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"death_count",
+"15+ allies have died"
+],
+[
+"stat_condition",
+"Allies with 5+ Power count twice"
+]
+],
+"796533": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_kill",
+"the first time you slay a unit"
+],
+[
+"stat_gain",
+"grant me +2|+2"
+],
+[
+"mark_target",
+"I mark the weakest enemy"
+],
+[
+"stat_condition",
+"weakest enemy"
+],
+[
+"turn_end",
+"Round End"
+],
+[
+"destroy",
+"Kill units with my mark"
+]
+],
+"751268": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_kill",
+"the first time you slay a unit"
+],
+[
+"mark_target",
+"I mark the weakest enemy"
+],
+[
+"stat_condition",
+"weakest enemy"
+],
+[
+"turn_end",
+"Round End"
+],
+[
+"destroy",
+"Kill units with my mark"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"751794": [
+[
+"on_kill",
+"When you slay a unit"
+],
+[
+"cost_reduction",
+"reduce the cost of the next Darkin Unit you play by 1"
+],
+[
+"tribal",
+"Darkin Unit"
+]
+],
+"796579": [
+[
+"on_play",
+"Play"
+],
+[
+"sacrifice",
+"Kill up to 2 allies"
+],
+[
+"revive",
+"revive it"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"lifesteal",
+"Drain 1 from the enemy Nexus"
+],
+[
+"direct_damage",
+"Drain 1 from the enemy Nexus"
+]
+],
+"751406": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"stat_gain",
+"grant me +1|+0"
+],
+[
+"random_ability",
+"a random keyword"
+]
+],
+"751642": [
+[
+"random_ability",
+"I have a random keyword that changes each round"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"transform",
+"Evolve"
+]
+],
+"796840": [
+[
+"random_ability",
+"I have 3 random keywords"
+]
+],
+"750831": [
+[
+"condition_count",
+"Plunder"
+],
+[
+"random_ability",
+"Grant me 2 random keywords"
+]
+],
+"752155": [
+[
+"random_ability",
+"I have a random keyword that changes each round"
+],
+[
+"on_play",
+"When I'm summoned"
+]
+],
+"750673": [
+[
+"spell_power",
+"All of your spells and Skills deal 1 extra damage"
+]
+],
+"751780": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"spell_power",
+"Your spells and Skills deal 1 extra damage"
+]
+],
+"752183": [
+[
+"spell_power",
+"All of your spells and Skills deal 1 extra damage"
+]
+],
+"751347": [
+[
+"damage_reduction",
+"Tough"
+],
+[
+"on_play",
+"Play"
+],
+[
+"discard",
+"Discard 1"
+],
+[
+"generate_cards",
+"Manifest a Mecha Yordle"
+],
+[
+"cost_reduction",
+"reduce its cost by 1"
+]
+],
+"751761": [
+[
+"damage",
+"Deal 6 to a unit"
+],
+[
+"banish",
+"Obliterate it instead"
+]
+],
+"750474": [
+[
+"information",
+"Can be played hidden"
+],
+[
+"cost_set",
+"Hidden allies are 2 cost 2|2s"
+],
+[
+"transform",
+"transform it into its base card"
+]
+],
+"797065": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"damage",
+"Camouflaged Horror strikes an enemy"
+]
+],
+"751682": [
+[
+"turn_end",
+"Round End"
+],
+[
+"permanent_growth",
+"Round End: Grant allies in play and in hand +1|+1"
+],
+[
+"in_hand_buff",
+"in hand +1|+1"
+],
+[
+"evasion",
+"Elusive"
+],
+[
+"lifesteal",
+"Lifesteal"
+],
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"count_payoff",
+"Empowered 5"
+]
+],
+"751652": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"stat_gain",
+"so do I"
+],
+[
+"lifesteal",
+"Drain 2 from the enemy Nexus"
+],
+[
+"direct_damage",
+"Drain 2 from the enemy Nexus"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"I've dealt 10+ damage"
+]
+],
+"751093": [
+[
+"regeneration",
+"Regeneration"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"generate_cards",
+"create an Ice Pillar in hand"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"796472": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"on_play",
+"Play"
+],
+[
+"friendly_fire",
+"Deal 1 to any number of allies"
+],
+[
+"damage",
+"deal that much to an enemy"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"adjacency",
+"attacking ally on my right"
+],
+[
+"lifesteal",
+"drain 1 from the enemy Nexus"
+],
+[
+"direct_damage",
+"drain 1 from the enemy Nexus"
+]
+],
+"751941": [
+[
+"deck_position",
+"the top 9 cards in your deck"
+],
+[
+"tutor",
+"draw each Dragon"
+],
+[
+"tribal",
+"Dragon"
+],
+[
+"cost_set",
+"reduce their costs to 0 this round"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"752150": [
+[
+"generate_cards",
+"Shuffle 2 copies of me into your deck"
+],
+[
+"cost_set",
+"They cost 1"
+]
+],
+"751779": [
+[
+"turn_start",
+"Round Start"
+],
+[
+"resource_gain",
+"Refill 2 spell mana"
+],
+[
+"condition_count",
+"Flow"
+]
+],
+"751419": [
+[
+"return_to_hand",
+"Recall an ally"
+],
+[
+"cost_set",
+"costs 0 instead"
+],
+[
+"cost_condition",
+"equal or less cost"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"750669": [
+[
+"condition_count",
+"Allegiance"
+],
+[
+"generate_cards",
+"Create a Sumpworks Map in hand"
+],
+[
+"cost_set",
+"It costs 0 this round"
+]
+],
+"751526": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"generate_cards",
+"create a Darkness in hand"
+],
+[
+"cost_set",
+"costs 0"
+],
+[
+"in_hand_buff",
+"gains \u201cI deal damage to all enemy targets.\u201d"
+],
+[
+"aoe_damage",
+"I deal damage to all enemy targets"
+]
+],
+"750909": [
+[
+"free_play",
+"summon me when you play 2 spells in a round"
+],
+[
+"on_spell",
+"when you play 2 spells"
+],
+[
+"condition_count",
+"2 spells in a round"
+]
+],
+"751250": [
+[
+"turn_start",
+"Round Start"
+],
+[
+"tribal",
+"Yetis"
+],
+[
+"condition_count",
+"2+ Yetis"
+],
+[
+"free_play",
+"summon me"
+],
+[
+"generate_cards",
+"create a copy of me in your deck"
+],
+[
+"on_play",
+"Play"
+],
+[
+"tutor",
+"Draw a Yeti"
+]
+],
+"750757": [
+[
+"cant_block",
+"Can't Block"
+],
+[
+"death_trigger",
+"Last Breath"
+],
+[
+"revive",
+"Revive me at the next Round Start"
+],
+[
+"delayed",
+"at the next Round Start"
+],
+[
+"stat_gain",
+"grant me +1|+1"
+],
+[
+"death_count",
+"for each time I've died"
+]
+],
+"796490": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"on_attack",
+"the first time I attack"
+],
+[
+"revive",
+"revive an attacking Ephemeral copy of the strongest dead allied follower"
+],
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"bodyguard",
+"it takes damage for me"
+]
+],
+"751263": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"Play"
+],
+[
+"revive",
+"Revive the Strongest dead ally"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"variable_stats",
+"Grant me Power equal to the total Power of all allies"
+]
+],
+"751654": [
+[
+"on_attack",
+"Attack"
+],
+[
+"revive",
+"Revive an attacking Ephemeral copy of the strongest dead ally"
+],
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"stat_condition",
+"with my power or less"
+]
+],
+"750756": [
+[
+"revive",
+"Revive the 6 strongest allies that died this game"
+],
+[
+"self_destruct",
+"Ephemeral"
+]
+],
+"796569": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"count_payoff",
+"for each time an ally attacked with increased Power"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"stat_gain",
+"grant allies +1|+1"
+],
+[
+"multi_attack",
+"Double Attack"
+]
+],
+"797055": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"first_strike",
+"Quick Attack"
+]
+],
+"796572": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"damage",
+"I immediately strike the Weakest enemy"
+],
+[
+"stat_condition",
+"Weakest enemy"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"in_hand_buff",
+"Reduce the cost of a spell in your hand by 1"
+],
+[
+"stat_gain",
+"Grant all allied Master Yis Everywhere +2|+0"
+],
+[
+"condition_count",
+"Flow"
+]
+],
+"751325": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"count_payoff",
+"for each multi-region ally you've summoned this game"
+],
+[
+"on_ally_play",
+"When you summon a multi-region ally"
+],
+[
+"stat_gain",
+"grant it +1|+0"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"796517": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"generate_cards",
+"Create a Fleeting 0 cost Time Trick in hand"
+]
+],
+"750746": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"summon",
+"Summon 2 attacking Spectral Riders"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"You've attacked with 7+ Ephemeral allies"
+]
+],
+"796469": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"summon",
+"Summon an attacking Living Shadow"
+],
+[
+"copy",
+"with my stats and positive keywords"
+]
+],
+"796769": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"attack_now",
+"Start a free attack"
+],
+[
+"copy",
+"exact Ephemeral copy of each ally"
+],
+[
+"self_destruct",
+"Ephemeral"
+]
+],
+"751436": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"on_attack",
+"strike"
+],
+[
+"generate_cards",
+"Create a Stance Swap in hand"
+],
+[
+"in_hand_buff",
+"reduce its cost to 0"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"796779": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"swap",
+"Swap Irelia with an ally"
+]
+],
+"751141": [
+[
+"swap",
+"Swap 2 allies"
+]
+],
+"751540": [
+[
+"tank",
+"Formidable"
+],
+[
+"on_play",
+"Play"
+],
+[
+"swap",
+"Swap my Health and your Nexus' Health"
+],
+[
+"evasion",
+"I can't be blocked by enemies with less Health than me"
+]
+]
+}

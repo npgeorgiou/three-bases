@@ -1,0 +1,150 @@
+762741 | Hunter | From card text: Hunter fighters gain bonuses against fighters marked as Quarry.
+   A: [["mark_target", "fighters marked as Quarry"], ["stat_gain", "gain bonuses"], ["tribal", "Hunter fighters"]]
+   B: [["mark_target", "marked as Quarry"], ["buff", "gain bonuses against fighters marked as Quarry"]]
+762931 | Fountain of Gore | Reaction: Play this after an Attack action or ploy that takes a fighter out of action. All friendly fighters have +1 Defence in the next activation.
+   A: [["reactions", "Reaction: Play this after an Attack action or ploy that takes a fighter out of action"], ["death_trigger", "takes a fighter out of action"], ["stat_gain", "+1 Defence"], ["scope_multi", "All friendly fighters"], ["temporary_effect", "in the next activation"]]
+   B: [["reactions", "Reaction:"], ["death_trigger", "takes a fighter out of action"], ["stat_gain", "+1 Defence"], ["scope_multi", "All friendly fighters"], ["temporary_buff", "in the next activation"]]
+762933 | Glory to Khorne | Roll one extra attack dice for the first Attack action made by a friendly fighter in the next activation.
+   A: [["stat_gain", "Roll one extra attack dice"], ["temporary_effect", "in the next activation"]]
+   B: [["stat_gain", "Roll one extra attack dice"], ["temporary_buff", "in the next activation"]]
+762997 | Divide and Conquer | Score this in an end phase if each player has at least one fighter in their own territory and at least one fighter in enemy territory.
+   A: [["scoring_objectives", "Score this in an end phase"], ["territory_trigger", "at least one fighter in enemy territory"], ["symmetric_effect", "each player"]]
+   B: [["scoring_objectives", "Score this in an end phase"], ["territory_trigger", "at least one fighter in enemy territory"]]
+763075 | Improvisation | Discard all power cards in your hand and draw three power cards.
+   A: [["discard", "Discard all power cards in your hand"], ["draw", "draw three power cards"], ["hand_deck_swap", "Discard all power cards in your hand and draw three power cards"]]
+   B: [["discard", "Discard all power cards in your hand"], ["draw", "draw three power cards"]]
+763086 | No Time | No more power cards can be played until after the next activation.
+   A: [["play_restriction", "No more power cards can be played"], ["symmetric_effect", "No more power cards can be played"], ["temporary_effect", "until after the next activation"]]
+   B: [["play_restriction", "No more power cards can be played"], ["temporary_effect", "until after the next activation"]]
+763100 | Shattershard | Choose an enemy fighter, and choose one of their upgrades. Roll an attack dice. On a roll of :atSmash: or :atCrit: that upgrade is discarded.
+   A: [["random_effect", "Roll an attack dice"], ["silence", "that upgrade is discarded"]]
+   B: [["random_effect", "Roll an attack dice"], ["disruption", "that upgrade is discarded"]]
+763113 | Trust to Luck | Discard any number of power cards and draw up to that number of power cards from your deck.
+   A: [["discard", "Discard any number of power cards"], ["draw", "draw up to that number of power cards"], ["card_quality", "Discard any number of power cards and draw"]]
+   B: [["discard", "Discard any number of power cards"], ["draw", "draw up to that number of power cards"]]
+763189 | Grimnir Commands | The first friendly fighter (other than your leader) to make a Move action (not as part of a Charge action) in the next activation has +2 Move. You can only play this if your leader is on the battlefield.
+   A: [["stat_gain", "+2 Move"], ["temporary_effect", "in the next activation"], ["play_restriction", "You can only play this if your leader is on the battlefield"]]
+   B: [["temporary_buff", "in the next activation"], ["stat_gain", "+2 Move"], ["play_restriction", "You can only play this if your leader is on the battlefield"]]
+763217 | Inspired Command | Choose a friendly fighter (other than your leader) and push them up to one hex or put them on Guard. You can only play this if your leader is on the battlefield.
+   A: [["movement", "push them up to one hex"], ["damage_reduction", "put them on Guard"], ["modal_choice", "or put them on Guard"], ["play_restriction", "You can only play this if your leader is on the battlefield"]]
+   B: [["movement", "push them up to one hex"], ["protection", "put them on Guard"], ["modal_choice", "or put them on Guard"], ["play_restriction", "You can only play this if your leader is on the battlefield"]]
+763229 | Irresistible Challenge | Reaction: During an adjacent enemy fighter's Attack action, before any dice are rolled, change the target of that Attack action to this fighter and discard this card.
+   A: [["reactions", "Reaction: During an adjacent enemy fighter's Attack action"], ["bodyguard", "change the target of that Attack action to this fighter"], ["self_destruct", "discard this card"]]
+   B: [["reactions", "Reaction:"], ["adjacency", "adjacent enemy fighter's"], ["bodyguard", "change the target of that Attack action to this fighter"], ["self_destruct", "discard this card"]]
+763233 | Master of Tactics | If this fighter is on the battlefield, at the beginning of the round you can draw one objective card. If you do so, discard one objective card.
+   A: [["turn_start", "at the beginning of the round"], ["draw", "draw one objective card"], ["discard", "discard one objective card"], ["card_quality", "If you do so, discard one objective card"]]
+   B: [["turn_start", "at the beginning of the round"], ["draw", "draw one objective card"], ["discard", "discard one objective card"]]
+763360 | Oath of Annihilation | You may reveal this card at the start of your first activation in the action phase, then return it to your hand. Score this in an end phase if all enemy fighters are out of action. If you revealed this card, gain 1 additional glory point.
+   A: [["scoring_objectives", "Score this in an end phase"], ["information", "reveal this card"], ["kicker", "If you revealed this card, gain 1 additional glory point"], ["death_count", "all enemy fighters are out of action"]]
+   B: [["information", "reveal this card"], ["scoring_objectives", "Score this in an end phase"], ["points_scoring", "gain 1 additional glory point"]]
+763361 | Oath of Conquest | You may reveal this card at the start of your first activation in the action phase, then return it to your hand. Score this in the third end phase if all surviving friendly fighters are in enemy territory. If you revealed this card, gain 1 additional glory point.
+   A: [["scoring_objectives", "Score this in the third end phase"], ["turn_number", "third end phase"], ["information", "reveal this card"], ["kicker", "If you revealed this card, gain 1 additional glory point"], ["territory_trigger", "in enemy territory"]]
+   B: [["information", "reveal this card"], ["scoring_objectives", "Score this in the third end phase"], ["turn_number", "third end phase"], ["territory_trigger", "in enemy territory"], ["points_scoring", "gain 1 additional glory point"]]
+763362 | Oath of Denial | You may reveal this card at the start of your first activation in the action phase, then return it to your hand. Score this in the third end phase if there are no enemy fighters in your territory. If you revealed this card, gain 1 additional glory point.
+   A: [["scoring_objectives", "Score this in the third end phase"], ["turn_number", "third end phase"], ["information", "reveal this card"], ["kicker", "If you revealed this card, gain 1 additional glory point"]]
+   B: [["information", "reveal this card"], ["scoring_objectives", "Score this in the third end phase"], ["turn_number", "third end phase"], ["zone_control", "no enemy fighters in your territory"], ["points_scoring", "gain 1 additional glory point"]]
+763363 | Oath of Murder | You may reveal this card at the start of your first activation in the action phase, then return it to your hand. Score this in an end phase if your warband took an enemy leader out of action in the preceding action phase. If you revealed this card, gain 1 additional glory point.
+   A: [["scoring_objectives", "Score this in an end phase"], ["information", "reveal this card"], ["kicker", "If you revealed this card, gain 1 additional glory point"], ["targeting_rules", "an enemy leader"]]
+   B: [["information", "reveal this card"], ["turn_start", "at the start of your first activation"], ["scoring_objectives", "Score this in an end phase"], ["points_scoring", "gain 1 additional glory point"]]
+763364 | Oath of Supremacy | You may reveal this card at the start of your first activation in the action phase, then return it to your hand. Score this in an end phase if you hold three or more objectives. If you revealed this card, gain 1 additional glory point.
+   A: [["scoring_objectives", "Score this in an end phase"], ["information", "reveal this card"], ["kicker", "If you revealed this card, gain 1 additional glory point"], ["zone_control", "hold three or more objectives"]]
+   B: [["information", "reveal this card"], ["scoring_objectives", "Score this in an end phase"], ["zone_control", "hold three or more objectives"], ["points_scoring", "gain 1 additional glory point"]]
+763425 | Atmospheric Isolation | Play this only if there is a surviving friendly Thundrik. No more power cards can be played until after the next activation.
+   A: [["play_restriction", "No more power cards can be played"], ["symmetric_effect", "No more power cards can be played"], ["temporary_effect", "until after the next activation"], ["condition_count", "surviving friendly Thundrik"]]
+   B: [["play_restriction", "No more power cards can be played"], ["temporary_effect", "until after the next activation"]]
+763584 | Entropic Curse | Gambit Spell (:MagFocus:): If this spell is cast, choose an enemy fighter within four hexes of the caster. That fighter suffers 1 damage at the beginning of each round, before the first activation. This spell persists until that fighter is out of action.
+   A: [["random_effect", "If this spell is cast"], ["damage_over_time", "suffers 1 damage at the beginning of each round"], ["turn_start", "at the beginning of each round"], ["ranged", "within four hexes"]]
+   B: [["ranged", "within four hexes of the caster"], ["damage_over_time", "suffers 1 damage at the beginning of each round"], ["turn_start", "at the beginning of each round"]]
+763595 | Infinite Riches | Gambit Spell (:MagChannel::MagChannel:): If this spell is cast, choose one upgrade from your power discard pile and add it to your hand.
+   A: [["random_effect", "If this spell is cast"], ["recycle", "choose one upgrade from your power discard pile and add it to your hand"], ["graveyard", "your power discard pile"]]
+   B: [["graveyard", "choose one upgrade from your power discard pile"], ["recycle", "add it to your hand"]]
+763618 | Sorcerous Insight | Gambit Spell (:MagFocus::MagFocus:): If this spell is cast, choose one ploy from your discard pile and add it to your hand.
+   A: [["random_effect", "If this spell is cast"], ["recycle", "choose one ploy from your discard pile and add it to your hand"], ["graveyard", "your discard pile"]]
+   B: [["graveyard", "choose one ploy from your discard pile"], ["recycle", "add it to your hand"]]
+763683 | Nullstone Axe | [:Hex: 1 - :atSmash: 2 - :boom: 2] You can re-roll one dice in the attack roll if the target is a wizard [:Hex: 3 - :atSmash: 2 - :boom: 1] After a fighter makes this Attack action, discard this upgrade. You can re-roll one dice in the attack roll if the target is a wizard.
+   A: [["random_effect", "re-roll one dice"], ["tribal", "if the target is a wizard"], ["self_destruct", "discard this upgrade"], ["ranged", ":Hex: 3"]]
+   B: [["advantage", "re-roll one dice"], ["tribal", "if the target is a wizard"], ["ranged", ":Hex: 3"], ["self_destruct", "discard this upgrade"]]
+763702 | Scroll of Recall | Reaction: After this fighter's gambit spell is resolved, discard this card and roll a magic dice. On a roll of :MagChannel:, place the gambit spell on top of your power deck instead of on your power discard pile.
+   A: [["reactions", "Reaction: After this fighter's gambit spell is resolved"], ["on_spell", "gambit spell is resolved"], ["self_destruct", "discard this card"], ["random_effect", "roll a magic dice"], ["recycle", "place the gambit spell on top of your power deck"], ["deck_position", "on top of your power deck"]]
+   B: [["reactions", "Reaction:"], ["self_destruct", "discard this card"], ["random_effect", "roll a magic dice"], ["recycle", "place the gambit spell on top of your power deck"]]
+763784 | Wall of Force | [:Hex: 3 - :MagChannel: - - :boom: 0] This Attack action deals no damage when it is successful. It has Knockback X, where X is the number of successes in the attack roll.
+   A: [["forced_movement", "Knockback X"], ["no_damage_output", "deals no damage when it is successful"], ["variable_stats", "X is the number of successes in the attack roll"]]
+   B: [["no_damage_output", "deals no damage when it is successful"], ["forced_movement", "Knockback X"], ["condition_count", "X is the number of successes"]]
+763812 | Punishing Blow | [:Hex: 1 - :atSmash: 3 - :boom: 4 -(Cleave)-] After a fighter makes this Attack action, discard this card.
+   A: [["multi_target_attack", "Cleave"], ["self_destruct", "discard this card"]]
+   B: [["piercing", "(Cleave)"], ["self_destruct", "discard this card"]]
+763839 | Arcane Siphon | Action: Choose one enemy fighter within three hexes of this fighter. Pick one of that fighter's upgrades. That upgrade is discarded. Roll an attack dice. On a roll of :atSmash: or :atCrit: discard this card.
+   A: [["activated", "Action:"], ["silence", "That upgrade is discarded"], ["random_effect", "Roll an attack dice"], ["self_destruct", "discard this card"]]
+   B: [["activated", "Action:"], ["disruption", "That upgrade is discarded"], ["random_effect", "Roll an attack dice"], ["self_destruct", "discard this card"]]
+764013 | Dinner Time | Surge: Score this immediately when an enemy fighter Moves into, is pushed into or is placed in the same hex as a friendly Trap model.
+   A: [["scoring_objectives", "Score this immediately"], ["on_enemy_enter", "an enemy fighter Moves into"], ["trap_secret", "friendly Trap model"]]
+   B: [["scoring_objectives", "Score this immediately"], ["on_enemy_enter", "when an enemy fighter Moves into"]]
+764025 | Gotcha! | Reaction: Play this after a friendly fighter's successful Trap Launcher Attack action that does not take the target out of action. Give the target one Move token.
+   A: [["reactions", "Reaction: Play this after a friendly fighter's successful Trap Launcher Attack action"], ["immobilize", "Give the target one Move token"]]
+   B: [["reactions", "Reaction:"], ["on_attack", "successful Trap Launcher Attack action"], ["immobilize", "Give the target one Move token"]]
+764059 | Headlong Fury | Choose one Inspired friendly fighter. The chosen fighter makes a Move action. Do not give the chosen fighter a Move token for that action.
+   A: [["extra_turn", "The chosen fighter makes a Move action"], ["condition_count", "one Inspired friendly fighter"]]
+   B: [["movement", "The chosen fighter makes a Move action"], ["extra_turn", "Do not give the chosen fighter a Move token"]]
+764060 | Incredible Agility | (Errata update) The Flying trait replaces the similar ability on this card. In the next activation, friendly fighters other than Kyrae treat lethal hexes as normal hexes and can move through occupied hexes, but cannot end their move in an occupied hex.
+   A: [["evasion", "can move through occupied hexes"], ["immunity", "treat lethal hexes as normal hexes"], ["temporary_effect", "In the next activation"], ["scope_multi", "friendly fighters other than Kyrae"]]
+   B: [["temporary_buff", "In the next activation"], ["scope_multi", "friendly fighters other than Kyrae"], ["immunity", "treat lethal hexes as normal hexes"], ["terrain", "lethal hexes"]]
+764088 | Brutal Attack | +1 Dice to the first Attack action made by a friendly fighter in the next activation. After that Attack action, place one Waaagh! counter on that fighter's fighter card.
+   A: [["stat_gain", "+1 Dice"], ["temporary_effect", "in the next activation"], ["stacking_keyword", "Waaagh! counter"]]
+   B: [["stat_gain", "+1 Dice"], ["temporary_buff", "in the next activation"]]
+764123 | Fateful Strike | Surge: Score this immediately after a friendly fighter's successful Attack action that targets a fighter with a Defence characteristic of 2 or more.
+   A: [["scoring_objectives", "Score this immediately"], ["stat_condition", "Defence characteristic of 2 or more"]]
+   B: [["scoring_objectives", "Score this immediately"], ["on_attack", "after a friendly fighter's successful Attack action"], ["stat_condition", "Defence characteristic of 2 or more"]]
+764169 | Dangerous Prize | Pick one objective token in an empty hex. The first fighter to move into, be pushed into or be placed in the same hex as that objective token in the next activation is dealt 1 damage.
+   A: [["trap_secret", "The first fighter to move into"], ["damage", "is dealt 1 damage"], ["temporary_effect", "in the next activation"]]
+   B: [["zone_control", "objective token"], ["delayed", "in the next activation"], ["damage", "dealt 1 damage"]]
+764175 | Euphoric Dust | Poison Choose one enemy fighter adjacent to one or more friendly fighters. -1 Defence from that enemy fighter (to a minimum of 1) until the next power step.
+   A: [["stat_loss", "-1 Defence"], ["adjacency", "adjacent to one or more friendly fighters"], ["temporary_effect", "until the next power step"], ["tribal", "Poison"]]
+   B: [["adjacency", "adjacent to one or more friendly fighters"], ["stat_loss", "-1 Defence"], ["temporary_effect", "until the next power step"]]
+764217 | Amberbone Axe | [:Hex: 3 - :atSmash: 2 - :boom: 1] After this fighter makes this Attack action, discard this card. [:Hex: 1 - :atSmash: 2 - :boom: 2] If this Attack action takes an enemy fighter out of action, discard this card and gain 1 glory point.
+   A: [["self_destruct", "discard this card"], ["on_kill", "takes an enemy fighter out of action"], ["resource_gain", "gain 1 glory point"], ["ranged", ":Hex: 3"]]
+   B: [["ranged", ":Hex: 3"], ["self_destruct", "discard this card"], ["on_kill", "If this Attack action takes an enemy fighter out of action"], ["points_scoring", "gain 1 glory point"]]
+764218 | Amberbone Dagger | [:Hex: 1 - :atFury: 3 - :boom: 2] If there are one or more :atCrit: in the attack roll, this Attack action has Cleave. If this Attack action takes an enemy fighter out of action, discard this card and gain 1 glory point.
+   A: [["random_effect", "If there are one or more :atCrit: in the attack roll"], ["multi_target_attack", "Cleave"], ["on_kill", "takes an enemy fighter out of action"], ["self_destruct", "discard this card"], ["resource_gain", "gain 1 glory point"]]
+   B: [["random_effect", "If there are one or more :atCrit:"], ["piercing", "this Attack action has Cleave"], ["on_kill", "If this Attack action takes an enemy fighter out of action"], ["self_destruct", "discard this card"], ["points_scoring", "gain 1 glory point"]]
+764220 | Amberbone Mace | [:Hex: 1 - :atSmash: 2 - :boom: 2] You can re-roll any number of dice in the attack roll. If this Attack action takes an enemy fighter out of action, discard this card and gain 1 glory point.
+   A: [["random_effect", "re-roll any number of dice"], ["on_kill", "takes an enemy fighter out of action"], ["self_destruct", "discard this card"], ["resource_gain", "gain 1 glory point"]]
+   B: [["advantage", "re-roll any number of dice"], ["on_kill", "If this Attack action takes an enemy fighter out of action"], ["self_destruct", "discard this card"], ["points_scoring", "gain 1 glory point"]]
+764242 | Inescapable Blow | [:Hex: 1 - :atSmash: 2 - :boom: 2] Reaction: After this fighter's successful Attack action with Combo, make this Attack action. It must target the same fighter and has Cleave and Ensnare.
+   A: [["reactions", "Reaction: After this fighter's successful Attack action with Combo"], ["multi_attack", "make this Attack action"], ["combo_sequence", "Attack action with Combo"], ["multi_target_attack", "Cleave"], ["immobilize", "Ensnare"]]
+   B: [["reactions", "Reaction:"], ["combo_sequence", "successful Attack action with Combo"], ["multi_attack", "make this Attack action"], ["piercing", "has Cleave and Ensnare"]]
+764261 | Sting of the Ur-Grub | Ur-grub Aspect +1 Damage to this fighter's Range 1 Attack actions. If this fighter has three or more Ur-grub Aspects, remove those cards from the game (they do not go into a discard pile) and give the Avatar of the Ur-grub upgrade to this fighter.
+   A: [["stat_gain", "+1 Damage"], ["condition_count", "three or more Ur-grub Aspects"], ["banish", "remove those cards from the game"], ["transform", "give the Avatar of the Ur-grub upgrade to this fighter"], ["tribal", "Ur-grub Aspect"]]
+   B: [["tribal", "Ur-grub Aspect"], ["stat_gain", "+1 Damage"], ["condition_count", "three or more Ur-grub Aspects"], ["banish", "remove those cards from the game"], ["upgrade", "give the Avatar of the Ur-grub upgrade"]]
+764296 | Outrageous Fortune | Reaction: Play this after a friendly fighter is dealt damage in the deal damage step. Pick one of that fighter's upgrades and discard it. If you do, reduce that damage by 1 to a minimum of 1.
+   A: [["reactions", "Reaction: Play this after a friendly fighter is dealt damage"], ["sacrifice", "Pick one of that fighter's upgrades and discard it"], ["damage_reduction", "reduce that damage by 1"]]
+   B: [["reactions", "Reaction:"], ["on_damaged", "after a friendly fighter is dealt damage"], ["discard", "Pick one of that fighter's upgrades and discard it"], ["damage_reduction", "reduce that damage by 1"]]
+764307 | Draining Leech | [:Hex: 3 - :atFury: 3 - :boom: 1] This Attack action's Damage characteristic cannot be modified. After this fighter makes this Attack action, discard this upgrade. Reaction: After the deal damage step, pick one of the target's upgrades. Discard that upgrade.
+   A: [["immunity", "Damage characteristic cannot be modified"], ["self_destruct", "discard this upgrade"], ["reactions", "Reaction: After the deal damage step"], ["silence", "Discard that upgrade"], ["ranged", ":Hex: 3"]]
+   B: [["ranged", ":Hex: 3"], ["self_destruct", "discard this upgrade"], ["reactions", "Reaction:"], ["disruption", "Discard that upgrade"]]
+764311 | Gauntlet of Dominance | Mortis Relic If this fighter has two or more Mortis Relics, +1 Damage to this fighter's Range 1 and Range 2 Attack actions. Reaction: After this fighter's activation, spend 1 glory point. If you do, push one enemy fighter 1 hex.
+   A: [["condition_count", "two or more Mortis Relics"], ["stat_gain", "+1 Damage"], ["tribal", "Mortis Relics"], ["reactions", "Reaction: After this fighter's activation"], ["cost_type", "spend 1 glory point"], ["forced_movement", "push one enemy fighter 1 hex"]]
+   B: [["condition_count", "two or more Mortis Relics"], ["stat_gain", "+1 Damage"], ["reactions", "Reaction:"], ["cost_type", "spend 1 glory point"], ["forced_movement", "push one enemy fighter 1 hex"]]
+764355 | Beautiful Deaths | Dual: Score this in an end phase if: There are three or more surviving friendly fighters And: Three or more enemy fighters are out of action.
+   A: [["scoring_objectives", "Score this in an end phase"], ["board_presence", "three or more surviving friendly fighters"], ["death_count", "Three or more enemy fighters are out of action"]]
+   B: [["scoring_objectives", "Score this in an end phase"], ["condition_count", "three or more surviving friendly fighters"], ["death_count", "Three or more enemy fighters are out of action"]]
+764378 | Dance Without End | Reaction: After another friendly fighter's Move action, push this fighter 1 hex, or 2 hexes if you first deal 1 damage to this fighter.
+   A: [["reactions", "Reaction: After another friendly fighter's Move action"], ["movement", "push this fighter 1 hex"], ["kicker", "or 2 hexes if you first deal 1 damage to this fighter"], ["life_payment", "deal 1 damage to this fighter"]]
+   B: [["reactions", "Reaction:"], ["movement", "push this fighter 1 hex"], ["life_payment", "if you first deal 1 damage to this fighter"]]
+764407 | Whispers of Chaos | Gambit Spell (:MagFocus:): If cast, choose one enemy fighter within 3 hexes of the caster. Push that fighter up to 1 hex, then pick one: deal 1 damage to that fighter, or give that fighter one Move token.
+   A: [["random_effect", "If cast"], ["forced_movement", "Push that fighter up to 1 hex"], ["modal_choice", "pick one"], ["damage", "deal 1 damage to that fighter"], ["immobilize", "give that fighter one Move token"]]
+   B: [["ranged", "within 3 hexes of the caster"], ["forced_movement", "Push that fighter up to 1 hex"], ["modal_choice", "pick one:"], ["damage", "deal 1 damage to that fighter"], ["immobilize", "give that fighter one Move token"]]
+764434 | Light of the Stars | Reaction: Play this after an opponent plays a gambit. That gambit deals no damage.
+   A: [["reactions", "Reaction: Play this after an opponent plays a gambit"], ["counter_spell", "That gambit deals no damage"]]
+   B: [["reactions", "after an opponent plays a gambit"], ["damage_prevention", "That gambit deals no damage"]]
+764463 | Bestial Transformation | Choose one friendly fighter. Discard that fighter's upgrades. That fighter's Range 1 Attack actions have Cleave and Ensnare and each enemy fighter is a Quarry. This effect persists until that fighter is given an upgrade, or until that fighter is taken out of action.
+   A: [["sacrifice", "Discard that fighter's upgrades"], ["multi_target_attack", "Cleave"], ["immobilize", "Ensnare"], ["mark_target", "each enemy fighter is a Quarry"]]
+   B: [["discard", "Discard that fighter's upgrades"], ["piercing", "Cleave and Ensnare"], ["type_grant", "each enemy fighter is a Quarry"], ["concentration", "persists until that fighter is given an upgrade"]]
+764467 | Deathly Apotheosis | Choose one friendly fighter. While that fighter has Bloodthirst, give that fighter one Hunger counter at the end of the action phase and Heal (1) that fighter each time that fighter is given one or more Hunger counters. While that fighter is Inspired, you can re-roll one dice in the fighter's attack rolls. This effect persists until that fighter is taken out of action.
+   A: [["regeneration", "Heal (1) that fighter each time"], ["stacking_keyword", "Hunger counter"], ["turn_end", "at the end of the action phase"], ["random_effect", "re-roll one dice"]]
+   B: [["turn_end", "at the end of the action phase"], ["heal", "Heal (1)"], ["stacking_keyword", "Hunger counter"], ["advantage", "re-roll one dice"]]
+764528 | Deathless Warriors | At the start of the deal damage step for each enemy fighter's Attack action that targets a friendly Mortek, roll one defence dice. On a roll of :dfCrit:, that Attack action deals no damage, the combat sequence ends and you discard this card. This effect persists until the end of the round.
+   A: [["shield", "that Attack action deals no damage"], ["random_effect", "roll one defence dice"], ["tribal", "a friendly Mortek"], ["self_destruct", "you discard this card"], ["temporary_effect", "until the end of the round"]]
+   B: [["tribal", "Mortek"], ["random_effect", "roll one defence dice"], ["damage_prevention", "that Attack action deals no damage"], ["self_destruct", "you discard this card"], ["temporary_effect", "until the end of the round"]]
+764541 | Hatred of the Living | You can re-roll one attack dice in this fighter's attack rolls for Range 1 and Range 2 Attack actions. Reaction: During an Attack action that targets this fighter, before the deal damage step, reduce the Damage characteristic of that Attack action by 1, to a minimum of 1, then discard this card.
+   A: [["random_effect", "re-roll one attack dice"], ["reactions", "Reaction: During an Attack action that targets this fighter"], ["damage_reduction", "reduce the Damage characteristic of that Attack action by 1"], ["self_destruct", "then discard this card"]]
+   B: [["advantage", "re-roll one attack dice"], ["reactions", "Reaction:"], ["damage_reduction", "reduce the Damage characteristic of that Attack action by 1"], ["self_destruct", "discard this card"]]

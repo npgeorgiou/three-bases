@@ -1,0 +1,1438 @@
+{
+"761178": [
+[
+"ranged",
+"make a ranged attack only if you have ammunition"
+],
+[
+"items_consumables",
+"Each attack expends one piece of ammunition"
+],
+[
+"recycle",
+"recover half the ammunition (round down) you used in the fight"
+],
+[
+"permanent_loss",
+"the rest is lost"
+]
+],
+"761183": [
+[
+"ranged",
+"A Range weapon has a range"
+],
+[
+"advantage",
+"you have Disadvantage on the attack roll"
+],
+[
+"targeting_rules",
+"You can't attack a target beyond the long range"
+]
+],
+"761204": [
+[
+"tribal",
+"A Tiny Beast"
+],
+[
+"saving_throws",
+"Charisma saving throw"
+],
+[
+"stat_condition",
+"if the target's Challenge Rating isn't 0, it automatically succeeds"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761207": [
+[
+"concentration",
+"Concentration."
+],
+[
+"summon",
+"becomes a Construct that uses the Animated Object stat block"
+],
+[
+"condition_count",
+"The maximum number of objects is equal to your spellcasting ability modifier"
+],
+[
+"activated",
+"you can take a Bonus Action to mentally command"
+],
+[
+"autonomous_units",
+"If you issue no commands, the creature takes the Dodge action"
+],
+[
+"kicker",
+"At higher levels"
+],
+[
+"immunity",
+"Immunities Poison, Psychic"
+],
+[
+"damage",
+"Hit: Force damage"
+],
+[
+"damage_types",
+"Force damage"
+]
+],
+"761212": [
+[
+"concentration",
+"Concentration."
+],
+[
+"summon",
+"You create a Large hand of shimmering magical energy"
+],
+[
+"variable_stats",
+"Hit Points equal to your Hit Point maximum"
+],
+[
+"activated",
+"as a Bonus Action on your later turns"
+],
+[
+"movement",
+"you can move the hand up to 60 feet"
+],
+[
+"modal_choice",
+"cause one of the following effects"
+],
+[
+"damage",
+"the target takes 5d8 Force damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"forced_movement",
+"the hand pushes the target"
+],
+[
+"saving_throws",
+"Strength saving throw"
+],
+[
+"immobilize",
+"the target has the Grappled condition"
+],
+[
+"protection",
+"The hand grants you Half Cover"
+],
+[
+"terrain",
+"its space counts as Difficult Terrain for your enemies"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761216": [
+[
+"scope_multi",
+"You and up to eight willing creatures"
+],
+[
+"movement",
+"project your astral bodies into the Astral Plane"
+],
+[
+"disable",
+"it has the Unconscious condition"
+],
+[
+"copy",
+"replicating its game statistics and possessions"
+],
+[
+"destroy",
+"the target's body and astral form both die"
+],
+[
+"activated",
+"take a Magic action to dismiss it"
+]
+],
+"761221": [
+[
+"concentration",
+"Concentration."
+],
+[
+"saving_throws",
+"Charisma saving throw"
+],
+[
+"removal",
+"be transported to a harmless demiplane"
+],
+[
+"disable",
+"the target has the Incapacitated condition"
+],
+[
+"tribal",
+"If the target is an Aberration, a Celestial, an Elemental, a Fey, or a Fiend"
+],
+[
+"banish",
+"the target doesn't return if the spell lasts for 1 minute"
+],
+[
+"random_effect",
+"a random location on a plane"
+],
+[
+"kicker",
+"At higher levels"
+],
+[
+"scope_multi",
+"You can target one additional creature"
+]
+],
+"761244": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"20-foot-radius Sphere"
+],
+[
+"light_level",
+"Its area is Heavily Obscured"
+],
+[
+"aoe_damage",
+"Each creature in the Sphere makes a Constitution saving throw"
+],
+[
+"saving_throws",
+"Constitution saving throw"
+],
+[
+"damage_types",
+"Poison damage"
+],
+[
+"on_enemy_enter",
+"when it enters the Sphere"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"turn_start",
+"at the start of each of your turns"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761247": [
+[
+"information",
+"You receive a correct answer for each question"
+],
+[
+"random_effect",
+"25 percent chance for each casting after the first that you get no answer"
+]
+],
+"761256": [
+[
+"concentration",
+"Concentration."
+],
+[
+"summon",
+"You conjure a Medium spirit"
+],
+[
+"on_play",
+"When the spirit appears, you can make one melee spell attack"
+],
+[
+"damage",
+"takes Psychic damage equal to 3d12 plus your spellcasting ability modifier"
+],
+[
+"damage_types",
+"Psychic damage"
+],
+[
+"debuff",
+"the target has the Frightened condition"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"activated",
+"As a Bonus Action on your later turns"
+],
+[
+"movement",
+"teleport the spirit"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761258": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"10-foot Emanation"
+],
+[
+"on_enemy_enter",
+"whenever a creature you can see enters the Emanation"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"saving_throws",
+"make a Wisdom saving throw"
+],
+[
+"damage",
+"takes 5d8 Force damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"kicker",
+"At higher levels"
+],
+[
+"zone_of_control",
+"you can take the Disengage action as a Bonus Action"
+]
+],
+"761263": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"a Cube up to 100 feet on a side"
+],
+[
+"modal_choice",
+"using one of the following effects"
+],
+[
+"activated",
+"As a Magic action on your later turns"
+],
+[
+"random_effect",
+"25 percent chance of capsizing"
+],
+[
+"turn_start",
+"the wave repeats on the start of your next turn"
+],
+[
+"terrain",
+"create a trench"
+],
+[
+"forced_movement",
+"is pulled 10 feet toward it"
+],
+[
+"on_enemy_enter",
+"When a creature enters the whirlpool for the first time on a turn"
+],
+[
+"saving_throws",
+"it makes a Strength saving throw"
+],
+[
+"damage",
+"the creature takes 2d8 Bludgeoning damage"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"immobilize",
+"A creature can swim away from the whirlpool only if it first takes an action to pull away"
+]
+],
+"761268": [
+[
+"play_restriction",
+"You can cast this spell only at night"
+],
+[
+"tribal",
+"Medium or Small Humanoids"
+],
+[
+"summon",
+"Each one becomes a Ghoul under your control"
+],
+[
+"activated",
+"As a Bonus Action on each of your turns, you can mentally command"
+],
+[
+"autonomous_units",
+"If you issue no commands, the creature takes the Dodge action"
+],
+[
+"upkeep",
+"To maintain control of the creature for another 24 hours, you must cast this spell on the creature"
+],
+[
+"kicker",
+"At higher levels"
+],
+[
+"death",
+"Choose up to three corpses of Medium or Small Humanoids within range"
+]
+],
+"761272": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"15-foot-radius Sphere"
+],
+[
+"light_level",
+"magical Darkness spreads"
+],
+[
+"cost_condition",
+"created by a spell of level 2 or lower"
+]
+],
+"761274": [
+[
+"area_templates",
+"60-foot-radius Sphere"
+],
+[
+"light_level",
+"The sunlight's area is Bright Light"
+],
+[
+"cost_condition",
+"created by a spell of level 3 or lower"
+]
+],
+"761275": [
+[
+"cheat_death",
+"the target instead drops to 1 Hit Point"
+],
+[
+"protection",
+"that effect is negated against the target"
+]
+],
+"761276": [
+[
+"concentration",
+"Concentration."
+],
+[
+"delayed",
+"When the spell ends, the bead explodes"
+],
+[
+"aoe_damage",
+"each creature in a 20-foot-radius Sphere"
+],
+[
+"area_templates",
+"20-foot-radius Sphere"
+],
+[
+"saving_throws",
+"makes a Dexterity saving throw"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"spell_power",
+"the damage increases by 1d6 whenever your turn ends"
+],
+[
+"turn_end",
+"whenever your turn ends"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761298": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"100-foot-radius circle"
+],
+[
+"terrain",
+"The ground there is Difficult Terrain"
+],
+[
+"turn_end",
+"at the end of each of your turns"
+],
+[
+"aoe_damage",
+"each creature on the ground in the area makes a Dexterity saving throw"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"debuff",
+"a creature has the Prone condition"
+],
+[
+"silence",
+"its Concentration is broken"
+],
+[
+"random_effect",
+"A total of 1d6 fissures"
+],
+[
+"damage",
+"the creature takes 12d6 Bludgeoning damage"
+],
+[
+"immobilize",
+"is buried in the rubble"
+]
+],
+"761315": [
+[
+"summon",
+"You gain the service of a familiar"
+],
+[
+"modal_choice",
+"takes an animal form you choose"
+],
+[
+"stat_condition",
+"Challenge Rating of 0"
+],
+[
+"type_grant",
+"it is a Celestial, Fey, or Fiend (your choice) instead of a Beast"
+],
+[
+"autonomous_units",
+"Your familiar acts independently of you"
+],
+[
+"information",
+"you can see through the familiar's eyes"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"cant_attack",
+"A familiar can't attack"
+],
+[
+"revive",
+"It reappears after you cast this spell again"
+],
+[
+"board_limit",
+"You can't have more than one familiar at a time"
+],
+[
+"transform",
+"cause it to adopt a new eligible form"
+],
+[
+"reserve_bench",
+"you can temporarily dismiss the familiar to a pocket dimension"
+]
+],
+"761336": [
+[
+"concentration",
+"Concentration."
+],
+[
+"transform",
+"shape-shifts, along with everything it's wearing and carrying, into a misty cloud"
+],
+[
+"damage_reduction",
+"Resistance to Bludgeoning, Piercing, and Slashing damage"
+],
+[
+"immunity",
+"Immunity to the Prone condition"
+],
+[
+"advantage",
+"Advantage on Strength, Dexterity, and Constitution saving throws"
+],
+[
+"cant_attack",
+"the target can't attack or cast spells"
+],
+[
+"kicker",
+"At higher levels"
+],
+[
+"scope_multi",
+"You can target one additional creature"
+]
+],
+"761351": [
+[
+"ranged",
+"Make a ranged spell attack"
+],
+[
+"damage",
+"it takes 4d6 Radiant damage"
+],
+[
+"damage_types",
+"Radiant damage"
+],
+[
+"mark_target",
+"the next attack roll made against it before the end of your next turn has Advantage"
+],
+[
+"advantage",
+"has Advantage"
+],
+[
+"temporary_effect",
+"before the end of your next turn"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761353": [
+[
+"row_effects",
+"infuse an area around it with holy or unholy power"
+],
+[
+"play_restriction",
+"the spell fails if the radius includes an area already under the effect of Hallow"
+],
+[
+"tribal",
+"Choose any of these creature types"
+],
+[
+"modal_choice",
+"You bind an extra effect to the area from the list below"
+],
+[
+"immunity",
+"can't gain the Frightened condition"
+],
+[
+"light_level",
+"Darkness fills the area"
+],
+[
+"debuff",
+"have the Frightened condition while in the area"
+],
+[
+"damage_reduction",
+"Resistance to one damage type of your choice"
+],
+[
+"damage_types",
+"Vulnerability to one damage type of your choice"
+]
+],
+"761356": [
+[
+"concentration",
+"Concentration."
+],
+[
+"stat_multiply",
+"the target's Speed is doubled"
+],
+[
+"stat_gain",
+"it gains a +2 bonus to Armor Class"
+],
+[
+"advantage",
+"Advantage on Dexterity saving throws"
+],
+[
+"extra_turn",
+"it gains an additional action on each of its turns"
+],
+[
+"friendly_fire",
+"When the spell ends, the target is Incapacitated"
+],
+[
+"temporary_effect",
+"until the end of its next turn"
+]
+],
+"761375": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"20-foot-radius Sphere"
+],
+[
+"light_level",
+"The cloud's area is Heavily Obscured"
+],
+[
+"aoe_damage",
+"each creature in it makes a Dexterity saving throw"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"on_enemy_enter",
+"when it enters the Sphere"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"turn_start",
+"at the start of each of your turns"
+]
+],
+"761377": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"20-foot-radius Sphere"
+],
+[
+"light_level",
+"Lightly Obscured"
+],
+[
+"terrain",
+"Difficult Terrain"
+],
+[
+"aoe_damage",
+"each creature in it makes a Constitution saving throw"
+],
+[
+"saving_throws",
+"Constitution saving throw"
+],
+[
+"on_enemy_enter",
+"when it enters the spell's area for the first time on a turn"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761399": [
+[
+"summon",
+"A staff of 100 near-transparent servants"
+],
+[
+"immunity",
+"They are invulnerable"
+],
+[
+"cant_attack",
+"they can't attack"
+]
+],
+"761400": [
+[
+"concentration",
+"Concentration."
+],
+[
+"no_damage_output",
+"it can't deal damage or cause conditions"
+],
+[
+"activated",
+"take a Magic action to cause the image to move"
+],
+[
+"information",
+"can determine that it is an illusion"
+],
+[
+"kicker",
+"At higher levels"
+],
+[
+"area_templates",
+"20-foot Cube"
+]
+],
+"761405": [
+[
+"concentration",
+"Concentration."
+],
+[
+"removal",
+"You banish a creature that you can see within range into a labyrinthine demiplane"
+]
+],
+"761417": [
+[
+"concentration",
+"Concentration."
+],
+[
+"saving_throws",
+"makes a Wisdom saving throw"
+],
+[
+"advantage",
+"it has Advantage on the save"
+],
+[
+"disable",
+"the target also has the Incapacitated condition"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761418": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"5-foot-radius, 40-foot-high Cylinder"
+],
+[
+"light_level",
+"Dim Light fills the Cylinder"
+],
+[
+"activated",
+"you can take a Magic action on later turns to move the Cylinder"
+],
+[
+"aoe_damage",
+"each creature in it makes a Constitution saving throw"
+],
+[
+"saving_throws",
+"Constitution saving throw"
+],
+[
+"damage_types",
+"Radiant damage"
+],
+[
+"on_enemy_enter",
+"when it enters the spell's area"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"kicker",
+"At higher levels"
+],
+[
+"suppress",
+"can't shape-shift until it leaves the Cylinder"
+]
+],
+"761426": [
+[
+"summon",
+"making the creature appear in an unoccupied space within range"
+],
+[
+"tribal",
+"a Celestial, an Elemental, or a Fiend"
+],
+[
+"upkeep",
+"requires 10,000 GP per day"
+],
+[
+"self_destruct",
+"the creature returns to its home plane"
+],
+[
+"autonomous_units",
+"it is under no compulsion to behave a particular way"
+]
+],
+"761429": [
+[
+"modal_choice",
+"The casting time you use determines whether the spell has the Overgrowth or the Enrichment effect"
+],
+[
+"area_templates",
+"100-foot-radius Sphere"
+],
+[
+"terrain",
+"become thick and overgrown"
+],
+[
+"debuff",
+"must spend 4 feet of movement for every 1 foot it moves"
+],
+[
+"stat_multiply",
+"yield twice the normal amount of food"
+]
+],
+"761430": [
+[
+"ranged",
+"Make a ranged spell attack"
+],
+[
+"damage",
+"the target takes 1d12 Poison damage"
+],
+[
+"damage_types",
+"Poison damage"
+],
+[
+"upgrade",
+"Cantrip Upgrade"
+]
+],
+"761434": [
+[
+"disable",
+"it has the Stunned condition"
+],
+[
+"stat_condition",
+"If the target has 150 Hit Points or fewer"
+],
+[
+"immobilize",
+"its Speed is 0"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"saving_throws",
+"makes a Constitution saving throw at the end of each of its turns"
+],
+[
+"turn_end",
+"at the end of each of its turns"
+]
+],
+"761436": [
+[
+"modal_choice",
+"Choose the effect from the options below"
+],
+[
+"play_restriction",
+"up to three of its non-instantaneous effects active at a time"
+],
+[
+"temporary_effect",
+"It lasts until the end of your next turn"
+]
+],
+"761439": [
+[
+"area_templates",
+"The area is a Cube"
+],
+[
+"modal_choice",
+"choosing any of the following properties"
+],
+[
+"light_level",
+"appears dark and foggy, preventing vision"
+],
+[
+"immunity",
+"Creatures in the area can't be targeted by Divination spells"
+],
+[
+"row_effects",
+"Nothing can teleport into or out of the warded area"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761465": [
+[
+"activated",
+"you can take a Magic action and touch the replica to recall the chest"
+],
+[
+"delayed",
+"After 60 days"
+],
+[
+"random_effect",
+"5 percent chance at the end of each day that the spell ends"
+]
+],
+"761480": [
+[
+"concentration",
+"Concentration."
+],
+[
+"target_choice",
+"Each creature of your choice"
+],
+[
+"area_templates",
+"5-foot-radius Sphere"
+],
+[
+"saving_throws",
+"Wisdom saving throw"
+],
+[
+"disable",
+"have the Incapacitated condition"
+],
+[
+"temporary_effect",
+"until the end of its next turn"
+],
+[
+"on_damaged",
+"The spell ends on a target if it takes damage"
+],
+[
+"immunity",
+"automatically succeed on saves against this spell"
+]
+],
+"761486": [
+[
+"information",
+"allowing it to answer questions you pose"
+],
+[
+"tribal",
+"if the deceased creature was Undead"
+],
+[
+"death",
+"a corpse of your choice"
+],
+[
+"cooldowns",
+"The spell also fails if the corpse was the target of this spell within the past 10 days"
+]
+],
+"761492": [
+[
+"ranged",
+"Make a ranged spell attack"
+],
+[
+"damage",
+"the target takes 1d8 Radiant damage"
+],
+[
+"damage_types",
+"Radiant damage"
+],
+[
+"temporary_effect",
+"until the end of your next turn"
+],
+[
+"light_level",
+"it emits Dim Light in a 10-foot radius"
+],
+[
+"information",
+"can't benefit from the Invisible condition"
+],
+[
+"upgrade",
+"Cantrip Upgrade"
+]
+],
+"761505": [
+[
+"movement",
+"Any creature that enters the portal instantly appears within 5 feet of the destination circle"
+],
+[
+"temporary_effect",
+"remains open until the end of your next turn"
+],
+[
+"terrain",
+"you draw a 5-foot-radius circle on the ground"
+]
+],
+"761506": [
+[
+"modal_choice",
+"You create one of the effects below"
+],
+[
+"play_restriction",
+"up to three of its 1-minute effects active at a time"
+],
+[
+"advantage",
+"Advantage on Charisma (Intimidation) checks"
+],
+[
+"temporary_effect",
+"for 1 minute"
+]
+],
+"761508": [
+[
+"extra_turn",
+"you take 1d4 + 1 turns in a row"
+],
+[
+"random_effect",
+"1d4 + 1 turns"
+]
+],
+"761509": [
+[
+"area_templates",
+"A 10-foot Emanation"
+],
+[
+"terrain",
+"springs into existence around you"
+],
+[
+"protection",
+"All other creatures and objects are barred from passing through it"
+],
+[
+"immunity",
+"Spells of level 3 or lower can't be cast through it"
+],
+[
+"cost_condition",
+"Spells of level 3 or lower"
+],
+[
+"light_level",
+"command the interior to have Dim Light or Darkness"
+],
+[
+"information",
+"The Emanation is opaque from the outside"
+]
+],
+"761517": [
+[
+"concentration",
+"Concentration."
+],
+[
+"terrain",
+"A wall of water springs into existence"
+],
+[
+"aoe_damage",
+"each creature in its area makes a Strength saving throw"
+],
+[
+"saving_throws",
+"Strength saving throw"
+],
+[
+"turn_start",
+"At the start of each of your turns"
+],
+[
+"forced_movement",
+"along with any creatures in it, moves 50 feet away from you"
+],
+[
+"turn_end",
+"At the end of the turn"
+],
+[
+"immobilize",
+"If it fails the check, it can't move"
+]
+],
+"761525": [
+[
+"concentration",
+"Concentration."
+],
+[
+"terrain",
+"A nonmagical wall of solid stone springs into existence"
+],
+[
+"forced_movement",
+"the creature is pushed to one side of the wall"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"reactions",
+"use its Reaction to move up to its Speed"
+],
+[
+"immunity",
+"Immunity to Poison and Psychic damage"
+]
+],
+"761530": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"20-foot Cube"
+],
+[
+"terrain",
+"The webs are Difficult Terrain"
+],
+[
+"light_level",
+"Lightly Obscured"
+],
+[
+"on_enemy_enter",
+"The first time a creature enters the webs on a turn"
+],
+[
+"turn_start",
+"starts its turn there"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"immobilize",
+"have the Restrained condition"
+],
+[
+"damage",
+"dealing 2d4 Fire damage"
+],
+[
+"damage_types",
+"Fire damage"
+]
+],
+"761534": [
+[
+"copy",
+"duplicate any other spell of level 8 or lower"
+],
+[
+"free_play",
+"you don't need to meet any requirements to cast that spell"
+],
+[
+"modal_choice",
+"you can create one of the following effects of your choice"
+],
+[
+"heal",
+"regain all Hit Points"
+],
+[
+"scope_multi",
+"up to twenty creatures that you can see"
+],
+[
+"damage_reduction",
+"Resistance to one damage type that you choose"
+],
+[
+"immunity",
+"immunity to a single spell or other magical effect"
+],
+[
+"rewind",
+"You undo a single recent event by forcing a reroll"
+],
+[
+"advantage",
+"made with Advantage or Disadvantage"
+],
+[
+"random_effect",
+"the greater the likelihood that something goes wrong"
+],
+[
+"damage_types",
+"Necrotic damage"
+],
+[
+"stat_loss",
+"your Strength score becomes 3 for 2d4 days"
+],
+[
+"permanent_loss",
+"you are unable to cast Wish ever again"
+],
+[
+"cost_condition",
+"any other spell of level 8 or lower"
+],
+[
+"life_payment",
+"you take 1d10 Necrotic damage per level of that spell"
+]
+],
+"761537": [
+[
+"passive",
+"While you're wearing it"
+],
+[
+"merge_attach",
+"While you're wearing it"
+],
+[
+"protection",
+"any Critical Hit against you becomes a normal hit"
+]
+],
+"761539": [
+[
+"tribal",
+"meant to slay creatures of a particular type"
+],
+[
+"random_effect",
+"determines randomly"
+],
+[
+"saving_throws",
+"DC 17 Constitution saving throw"
+],
+[
+"damage",
+"taking an extra 6d10 Force damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"exhaust",
+"the ammunition becomes nonmagical"
+],
+[
+"items_consumables",
+"Weapon (Any Ammunition)"
+]
+]
+}

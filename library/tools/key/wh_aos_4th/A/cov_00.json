@@ -1,0 +1,1482 @@
+{
+"794389": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"territory_trigger",
+"If this unit is wholly within enemy territory"
+],
+[
+"aura",
+"while they are wholly within 12\" of this unit"
+],
+[
+"tribal",
+"friendly Darkoath units"
+],
+[
+"stat_gain",
+"add 1 to hit rolls for combat attacks"
+],
+[
+"condition_life",
+"While this unit is damaged"
+],
+[
+"stat_gain",
+"add 2 to the Attacks characteristic of its melee weapons"
+],
+[
+"terrain",
+"Pick a terrain feature that has not yet been set ablaze"
+],
+[
+"zone_control",
+"Add 1 to this unit's control score"
+],
+[
+"permanent_growth",
+"(this effect is cumulative)"
+],
+[
+"friendly_fire",
+"(friend or enemy)"
+],
+[
+"damage",
+"inflict an amount of mortal damage on that unit equal to the roll"
+],
+[
+"random_effect",
+"roll a D3"
+],
+[
+"taunt",
+"all of their attacks must target the other unit"
+],
+[
+"advantage",
+"you can re-roll hit rolls"
+],
+[
+"suppress",
+"The target cannot use Fight abilities for the rest of the phase"
+],
+[
+"resource_gain",
+"you gain 1 command point"
+],
+[
+"tribal",
+"target enemy Order units"
+],
+[
+"random_effect",
+"Roll a dice and apply the corresponding effect"
+],
+[
+"friendly_fire",
+"Inflict 1 mortal damage on this unit"
+],
+[
+"counterattack",
+"inflict 1 mortal damage on the attacking unit"
+],
+[
+"multi_attack",
+"This unit can use 2 Fight abilities this phase"
+],
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"turn_number",
+"the battle round in which this unit will be inspired"
+],
+[
+"first_strike",
+"it has Strike-first"
+],
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"regeneration",
+"Heal (D3) this unit"
+],
+[
+"damage",
+"Inflict D3 mortal damage on the target"
+]
+],
+"793845": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"condition_life",
+"if any models in this unit have been slain"
+],
+[
+"first_strike",
+"This unit has Strike-first"
+],
+[
+"stat_multiply",
+"Double the Attacks characteristic"
+],
+[
+"temporary_buff",
+"For the rest of the turn"
+],
+[
+"tribal",
+"an enemy Monster or Beast"
+],
+[
+"shield",
+"ignore the first damage point allocated to it each phase"
+],
+[
+"piercing",
+"Anti-Beast (+1 Rend)"
+]
+],
+"793370": [
+[
+"stat_multiply",
+"Double the Damage characteristic of the target weapon"
+],
+[
+"stat_loss",
+"Halve the Attacks characteristic"
+],
+[
+"temporary_buff",
+"For the rest of the turn"
+],
+[
+"buff",
+"score critical hits on unmodified hit rolls of 3+"
+]
+],
+"794463": [
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"coin_economy",
+"charmed fate points"
+],
+[
+"advantage",
+"you can re-roll 1 hit roll"
+],
+[
+"stat_multiply",
+"Double the Attacks characteristic"
+],
+[
+"tribal",
+"an enemy Monster"
+],
+[
+"lone_unit",
+"no other friendly units are in combat with that enemy Monster"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+]
+],
+"816547": [
+[
+"mark_target",
+"The target is the mark for the rest of the battle"
+],
+[
+"stat_multiply",
+"Double the Damage characteristic"
+],
+[
+"piercing",
+"(+1 Rend)"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"794151": [
+[
+"random_effect",
+"roll a dice"
+],
+[
+"immunity",
+"have no effect on this unit"
+],
+[
+"first_strike",
+"This unit has Strike-first"
+],
+[
+"counterattack",
+"inflict 1 mortal damage on the attacking unit"
+],
+[
+"immunity",
+"weapon abilities for attacks that target this unit have no effect"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+],
+[
+"piercing",
+"Anti-Infantry (+1 Rend)"
+]
+],
+"794211": [
+[
+"first_strike",
+"The target has Strike-first"
+],
+[
+"tribal",
+"friendly Ossiarch Bonereapers unit"
+],
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"stat_gain",
+"Add 2 to charge rolls for this unit"
+],
+[
+"saving_throws",
+"This unit has Ward (5+)"
+],
+[
+"piercing",
+"Anti-Hero (+1 Rend)"
+],
+[
+"modal_choice",
+"Pick 1 of the following weapon abilities"
+],
+[
+"regeneration",
+"Heal (D3) this unit"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"debuff",
+"the target has Strike-last"
+],
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"movement",
+"use the 'Normal Move' ability"
+],
+[
+"reactions",
+"Reaction: You declared a Relentless Discipline ability"
+],
+[
+"resource_advantage",
+"No relentless discipline points are spent"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"damage_reduction",
+"Subtract 1 from wound rolls for combat attacks that target this unit"
+],
+[
+"aura",
+"wholly within 12\" of this unit"
+]
+],
+"791371": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"reveal_order",
+"If you won the priority roll"
+],
+[
+"first_strike",
+"this unit has Strike-first"
+]
+],
+"794455": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"reactions",
+"Enemy Hero Phase"
+],
+[
+"immobilize",
+"the target cannot end moves made as part of a non-Charge Move ability within X"
+],
+[
+"condition_count",
+"where X is equal to your current fury level"
+],
+[
+"coin_economy",
+"Spend 1 rage dice"
+],
+[
+"modal_choice",
+"pick 1 of the following effects"
+],
+[
+"protection",
+"Ignore positive modifiers to hit rolls and wound rolls for attacks made by enemy units"
+],
+[
+"stat_gain",
+"Add 1 to save rolls for this unit"
+],
+[
+"stat_gain",
+"Add 1 to hit rolls for this unit's attacks"
+],
+[
+"piercing",
+"Add 1 to the Rend and Damage characteristics"
+],
+[
+"temporary_buff",
+"For the rest of the turn"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"794396": [
+[
+"condition_life",
+"While this unit has 15 or more damage points"
+],
+[
+"modal_choice",
+"pick either the Calamitous Sweep or Crushing Blow"
+],
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"stat_gain",
+"This unit has a Move characteristic of 4D6"
+],
+[
+"terrain",
+"within 1\" of a terrain feature"
+],
+[
+"random_effect",
+"You and your opponent must roll off"
+],
+[
+"movement",
+"this unit can move a distance up to its Move characteristic"
+]
+],
+"794398": [
+[
+"condition_life",
+"While this unit has 15 or more damage points"
+],
+[
+"movement",
+"The target can move 2D6"
+],
+[
+"tribal",
+"friendly Big or Little unit"
+],
+[
+"random_effect",
+"Make a rampage roll of D3"
+],
+[
+"stat_gain",
+"add the roll to the Attacks characteristic"
+],
+[
+"on_kill",
+"If any models are slain by those attacks"
+],
+[
+"zone_control",
+"enemy units have a maximum control score of 1"
+],
+[
+"modal_choice",
+"pick either the Calamitous Sweep or Crushing Blow"
+]
+],
+"794394": [
+[
+"condition_life",
+"While this unit has 15 or more damage points"
+],
+[
+"reactions",
+"Reaction: You declared a Fight ability for this unit"
+],
+[
+"tribal",
+"friendly Sons of Behemat unit"
+],
+[
+"random_effect",
+"make a rampage roll of D6"
+],
+[
+"buff",
+"the target's melee weapons have Crit (2 Hits)"
+],
+[
+"condition_count",
+"for each other friendly Big or Little unit"
+],
+[
+"piercing",
+"subtract 1 from ward rolls"
+],
+[
+"modal_choice",
+"pick either the Calamitous Sweep or Crushing Blow"
+]
+],
+"793924": [
+[
+"reactions",
+"Reaction: You declared a Fight ability for this unit"
+],
+[
+"debuff",
+"subtract 1 from wound rolls for attacks made by those enemy units"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+],
+[
+"piercing",
+"Anti-Monster (+1 Rend)"
+]
+],
+"794488": [
+[
+"random_effect",
+"Roll a dice for each model in the target unit"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"condition_life",
+"While this unit has 5-9 damage points"
+],
+[
+"stat_gain",
+"add 1 to the Attacks characteristic of its melee weapons"
+],
+[
+"stat_loss",
+"Subtract 1 from the Attacks characteristic of the target's melee weapons"
+],
+[
+"piercing",
+"Anti-Infantry (+1 Rend)"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"794287": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"random_effect",
+"roll a dice for each model in the target unit"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"regeneration",
+"Heal (D6) this unit"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"death_trigger",
+"The first time this unit would be destroyed"
+],
+[
+"random_effect",
+"roll a dice and apply the corresponding effect"
+],
+[
+"aoe_damage",
+"Roll a D3 for each enemy unit in combat with this unit"
+],
+[
+"cheat_death",
+"This unit is not destroyed"
+],
+[
+"piercing",
+"Anti-Infantry (+1 Rend)"
+]
+],
+"792301": [
+[
+"cheat_death",
+"it is not destroyed"
+],
+[
+"heal",
+"Heal (1) this unit"
+],
+[
+"saving_throws",
+"This unit has Ward (4+)"
+],
+[
+"evasion",
+"Fly"
+]
+],
+"791168": [
+[
+"cheat_death",
+"this unit is not destroyed"
+],
+[
+"random_effect",
+"On a 3+"
+],
+[
+"heal",
+"Heal (1) this unit"
+],
+[
+"once_per_game",
+"This unit cannot use this ability again for the rest of the battle"
+]
+],
+"791105": [
+[
+"cheat_death",
+"that unit is not destroyed"
+],
+[
+"tribal",
+"friendly Gorechosen Champions unit"
+],
+[
+"random_effect",
+"On a 5+"
+],
+[
+"heal",
+"Heal (1) that unit"
+]
+],
+"792322": [
+[
+"cheat_death",
+"this unit is not destroyed"
+],
+[
+"random_effect",
+"On a 3+"
+],
+[
+"heal",
+"Heal (D3) this unit"
+]
+],
+"793757": [
+[
+"first_strike",
+"it has Strike-first"
+],
+[
+"tribal",
+"enemy Monster or Beast units"
+],
+[
+"temporary_buff",
+"For the rest of the turn"
+],
+[
+"piercing",
+"Anti-Monster (+1 Rend)"
+]
+],
+"791071": [
+[
+"quests",
+"You complete this battle tactic"
+],
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"zone_control",
+"if you control an objective"
+],
+[
+"death_count",
+"more friendly units were destroyed this turn than enemy units"
+],
+[
+"territory_trigger",
+"each objective within enemy territory"
+]
+],
+"794558": [
+[
+"lane_rule",
+"within the creeping overgrowth"
+],
+[
+"territory_trigger",
+"within friendly territory"
+],
+[
+"random_effect",
+"On a 3+"
+],
+[
+"mark_target",
+"add 1 to wound rolls for combat attacks that target that enemy unit"
+]
+],
+"791960": [
+[
+"summon",
+"Set up a Cadaverous Barricade"
+],
+[
+"play_restriction",
+"If there is not a friendly Cadaverous Barricade on the battlefield"
+],
+[
+"tribal",
+"friendly Flesh-eater Courts Wizard"
+]
+],
+"792289": [
+[
+"revive",
+"set up a replacement unit identical to the target"
+],
+[
+"condition_count",
+"3 or more runes in your library"
+],
+[
+"cost_type",
+"Remove any 3 runes from your library"
+],
+[
+"tribal",
+"non-Unique Monster unit"
+],
+[
+"placement_rules",
+"more than 9\" from all enemy units"
+]
+],
+"793108": [
+[
+"saving_throws",
+"This unit has Ward (4+)"
+],
+[
+"friendly_fire",
+"allocate 1 damage point to a friendly non-Hero Skaven Infantry unit"
+],
+[
+"tribal",
+"friendly non-Hero Skaven Infantry unit"
+]
+],
+"794350": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"zone_control",
+"contesting an objective you control"
+],
+[
+"territory_trigger",
+"not within friendly territory"
+],
+[
+"saving_throws",
+"this unit has Ward (5+)"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"794590": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"modal_choice",
+"Pick 1 of the following effects"
+],
+[
+"heal",
+"Heal (D3) the target"
+],
+[
+"saving_throws",
+"The target has Ward (6+)"
+],
+[
+"tribal",
+"friendly Sylvaneth unit"
+],
+[
+"lane_rule",
+"wholly within the creeping overgrowth"
+],
+[
+"stat_gain",
+"Add 2 to the Attacks characteristic"
+],
+[
+"zone_control",
+"Subtract 3 from the control scores of enemy units"
+],
+[
+"reactions",
+"Enemy Movement Phase"
+],
+[
+"movement",
+"use the 'Normal Move' ability"
+],
+[
+"friendly_fire",
+"Pick each other friendly unit contesting the same objective"
+],
+[
+"friendly_fire",
+"inflict 1 mortal damage on it"
+],
+[
+"stat_loss",
+"Halve this unit's Move characteristic"
+],
+[
+"turn_number",
+"until the start of the second battle round"
+],
+[
+"damage",
+"For each 5+, inflict 1 mortal damage on the target"
+],
+[
+"blink",
+"remove it from the battlefield and set it up again"
+],
+[
+"aoe_damage",
+"pick up to 3 visible enemy units"
+],
+[
+"debuff",
+"subtract 1 from hit rolls for the target's combat attacks"
+],
+[
+"forced_movement",
+"your opponent must remove the target from the battlefield and set it up again within 1\" of this unit"
+],
+[
+"piercing",
+"Anti-Monster (+1 Rend)"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"793353": [
+[
+"temporary_buff",
+"For the rest of the turn"
+],
+[
+"saving_throws",
+"Ward (4+)"
+]
+],
+"794366": [
+[
+"death_count",
+"Each time a model (friendly or enemy) is slain"
+],
+[
+"stacking_keyword",
+"give this unit a sacrifice point, to a maximum of 6"
+],
+[
+"modal_choice",
+"Pick 1 of the following effects"
+],
+[
+"suppress",
+"the target cannot use commands"
+],
+[
+"condition_count",
+"roll a number of dice equal to the number of sacrifice points"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"heal",
+"Heal (X)"
+]
+],
+"793078": [
+[
+"first_strike",
+"This unit has Strike-first"
+],
+[
+"self_destruct",
+"at the end of the turn, this unit is destroyed"
+],
+[
+"death_trigger",
+"When this unit would be destroyed"
+],
+[
+"stat_loss",
+"subtract 1 from the Attacks characteristic of that enemy unit's melee weapons for the rest of the battle"
+],
+[
+"tribal",
+"Mutated Menagerie Monster"
+]
+],
+"793644": [
+[
+"tribal",
+"friendly Sigmarite unit"
+],
+[
+"buff",
+"Charge (+1 Damage)"
+],
+[
+"saving_throws",
+"the target has Ward (5+)"
+],
+[
+"random_effect",
+"make a chanting roll of D6"
+],
+[
+"death_trigger",
+"If this unit would be destroyed"
+],
+[
+"spell_power",
+"you must use a value of 10 for the roll"
+],
+[
+"temporary_buff",
+"Until the start of your next turn"
+]
+],
+"793623": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"movement",
+"Remove this unit from the battlefield and set it up again"
+],
+[
+"cheat_death",
+"this unit is not destroyed"
+],
+[
+"random_effect",
+"On a 3+"
+],
+[
+"heal",
+"Heal (5) this unit"
+]
+],
+"793430": [
+[
+"cheat_death",
+"this unit is not destroyed"
+],
+[
+"random_effect",
+"On a 3+"
+],
+[
+"heal",
+"Heal (D3) this unit"
+]
+],
+"791627": [
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"tribal",
+"Helsmiths of Hashut Automaton unit"
+],
+[
+"bodyguard",
+"the target is this unit's bodyguard"
+],
+[
+"first_strike",
+"its bodyguard has Strike-first"
+],
+[
+"saving_throws",
+"it has Ward (5+)"
+]
+],
+"815243": [
+[
+"bodyguard",
+"while the bodyguard is wholly within 6\" of this unit"
+],
+[
+"stat_gain",
+"add 1 to wound rolls for attacks made by the bodyguard"
+],
+[
+"saving_throws",
+"this unit has Ward (4+)"
+]
+],
+"794040": [
+[
+"stat_condition",
+"with a Health characteristic of 10 or less"
+],
+[
+"stealth",
+"That unit is not visible to enemy units"
+],
+[
+"bodyguard",
+"Enemy abilities that would target this unit must target this Manifestation instead"
+]
+],
+"791695": [
+[
+"coin_economy",
+"Spend 1 rage dice"
+],
+[
+"suppress",
+"Other enemy units cannot use Fight abilities"
+],
+[
+"taunt",
+"must target this unit"
+],
+[
+"forced_movement",
+"this unit must be picked to be the target of pile-in moves"
+]
+],
+"791306": [
+[
+"condition_count",
+"no more than 1 model"
+],
+[
+"random_effect",
+"Roll 2D6"
+],
+[
+"stat_condition",
+"If the roll equals or exceeds the target's Control characteristic"
+],
+[
+"taunt",
+"all of the target's attacks must target this unit"
+]
+],
+"794034": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"tribal",
+"friendly Alarith unit"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"taunt",
+"must target this unit"
+],
+[
+"condition_count",
+"for each instance of Alaithi"
+],
+[
+"stat_gain",
+"Add 1 to the Attacks characteristic of this unit's Firestealer Hammers"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"794309": [
+[
+"aoe_damage",
+"Pick each enemy unit in combat with this unit to be the targets"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"advantage",
+"You can re-roll chanting rolls"
+],
+[
+"taunt",
+"all of the target's attacks must target this unit"
+],
+[
+"debuff",
+"Subtract 1 from hit rolls and wound rolls for the target's combat attacks"
+],
+[
+"stat_loss",
+"subtract 1 from the Attacks characteristic of the target's melee weapons"
+],
+[
+"multi_attack",
+"it can use 2 Fight abilities this turn"
+],
+[
+"tribal",
+"friendly Skaven Infantry unit"
+],
+[
+"scope_multi",
+"you can pick 2 targets instead of 1"
+]
+],
+"793892": [
+[
+"spell_power",
+"Add 1 to casting rolls and unbinding rolls"
+],
+[
+"stat_gain",
+"add 1 to this unit's power level"
+],
+[
+"permanent_growth",
+"the effects are cumulative"
+],
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"scope_multi",
+"Pick up to 3 enemy units"
+],
+[
+"suppress",
+"The target cannot use the 'Eruption of Fury' ability"
+],
+[
+"piercing",
+"Add 1 to the Rend characteristic of weapons used for attacks that target that enemy unit"
+],
+[
+"saving_throws",
+"This unit has Ward (6+)"
+],
+[
+"condition_count",
+"the number of daemonic power points this unit has"
+],
+[
+"buff",
+"Charge (+1 Damage)"
+]
+],
+"793466": [
+[
+"movement",
+"remove it from the battlefield and set it up again"
+],
+[
+"silence",
+"the effects of the 'Fly' ability do not apply to that unit"
+],
+[
+"spawn_blocking",
+"Enemy units cannot be set up within 9\" of either part"
+]
+],
+"794031": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"spell_power",
+"Add 1 to casting rolls and banishment rolls"
+],
+[
+"aura",
+"while they are wholly within 12\" of this unit"
+],
+[
+"tribal",
+"friendly Lumineth Realm"
+],
+[
+"flexibility",
+"this unit can use Spell abilities from the Lore of Hysh"
+],
+[
+"modal_choice",
+"Pick 1 of the following"
+],
+[
+"spell_power",
+"you can use a value of 12 for the roll"
+],
+[
+"stat_loss",
+"Subtract 1 from the target's power level"
+],
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"turn_start",
+"Start of Battle Round"
+],
+[
+"aoe_damage",
+"Pick any number of different visible enemy units"
+],
+[
+"damage",
+"Inflict D3 mortal damage on each target"
+]
+],
+"794081": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"random_effect",
+"You and your opponent must roll off"
+],
+[
+"stat_condition",
+"Add this unit's Control characteristic to your roll"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the difference"
+],
+[
+"destroy",
+"1 model in the target unit is slain"
+],
+[
+"permanent_growth",
+"this unit gains D3 leech points for the rest of the battle"
+],
+[
+"stat_gain",
+"add 1 to this unit's Control characteristic for each leech point"
+],
+[
+"damage_over_time",
+"each time the target uses a Core ability or command"
+],
+[
+"lifesteal",
+"Heal (1) this unit"
+]
+],
+"794458": [
+[
+"lifesteal",
+"Each time an attack made by this Manifestation scores a critical hit, Heal (1) this Manifestation"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"793808": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"destroy",
+"1 model in the target unit is slain"
+],
+[
+"stat_condition",
+"If the roll equals or exceeds the target's Health characteristic"
+],
+[
+"random_effect",
+"Roll 3 dice"
+],
+[
+"friendly_fire",
+"Inflict D3 mortal damage on this unit"
+],
+[
+"aura",
+"friendly Troggoth units while they are wholly within 12\" of this unit"
+],
+[
+"stat_gain",
+"Add 1 to the Attacks characteristic of melee weapons"
+],
+[
+"piercing",
+"Add 1 to the Rend characteristic"
+],
+[
+"counter_spell",
+"This unit can use Unbind abilities"
+],
+[
+"protection",
+"Subtract 1 from hit rolls for shooting attacks that target friendly Troggoth units"
+],
+[
+"saving_throws",
+"This unit has Ward (5+)"
+],
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"regeneration",
+"Heal (D6) this unit"
+]
+],
+"793809": [
+[
+"random_effect",
+"On a 4+"
+],
+[
+"aura",
+"friendly Troggoth units while they are wholly within 12\" of this unit"
+],
+[
+"stat_gain",
+"add 1 to the Attacks characteristic"
+],
+[
+"reactions",
+"Reaction: Opponent declared a Spell ability"
+],
+[
+"immunity",
+"ignore the effect of that spell on this unit"
+],
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"regeneration",
+"Heal (D6) this unit"
+]
+],
+"793989": [
+[
+"aura",
+"While they are wholly within 12\" of this unit"
+],
+[
+"tribal",
+"friendly Kruleboyz Infantry units"
+],
+[
+"speed",
+"can use Charge abilities even if they used a Run ability"
+],
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"regeneration",
+"Heal (D3) this unit"
+]
+],
+"793842": [
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"regeneration",
+"Heal (D6) this unit"
+],
+[
+"immunity",
+"weapon abilities for attacks that target this unit have no effect"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"stealth",
+"it is not visible to enemy units"
+],
+[
+"terrain",
+"wholly on a terrain feature"
+],
+[
+"protection",
+"subtract 1 from hit rolls for attacks that target this unit"
+],
+[
+"zone_control",
+"subtract 1 from the control scores of enemy units"
+],
+[
+"movement",
+"use the 'Retreat' ability"
+],
+[
+"piercing",
+"ward rolls cannot be made for damage points inflicted on the target"
+],
+[
+"damage",
+"inflict D3 mortal damage on that target"
+]
+],
+"792246": [
+[
+"tribal",
+"friendly Nagash"
+],
+[
+"area_templates",
+"draw a line between those points"
+],
+[
+"aoe_damage",
+"Each visible enemy unit the line passes across is a target"
+],
+[
+"modal_choice",
+"Pick normal gaze or empowered gaze"
+],
+[
+"damage",
+"inflict D3 mortal damage on each target"
+],
+[
+"random_effect",
+"make an empowerment roll of 2D6"
+],
+[
+"spell_power",
+"inflict D3+X mortal damage on each target"
+]
+]
+}

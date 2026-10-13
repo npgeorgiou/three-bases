@@ -1,0 +1,734 @@
+{
+"751904": [
+[
+"cost_type",
+"To play, spend all your mana"
+],
+[
+"summon",
+"Summon a Runaway Scraptrap"
+],
+[
+"variable_stats",
+"grow its stats to that amount"
+]
+],
+"751105": [
+[
+"cost_type",
+"To play, spend all your mana"
+],
+[
+"summon",
+"Summon random Turrets"
+],
+[
+"random_effect",
+"random Turrets"
+]
+],
+"750951": [
+[
+"turn_end",
+"Round End"
+],
+[
+"heal",
+"Heal damaged allies 1"
+],
+[
+"condition_life",
+"damaged allies"
+],
+[
+"count_payoff",
+"if I've seen you heal 22+ damage from allies"
+],
+[
+"alt_wincon",
+"win the game"
+]
+],
+"751364": [
+[
+"turn_start",
+"Round Start"
+],
+[
+"generate_cards",
+"Create a follower from a new region in hand"
+],
+[
+"variety_payoff",
+"allies from 10 regions"
+],
+[
+"alt_wincon",
+"win the game"
+]
+],
+"751539": [
+[
+"comeback",
+"If your opponent has more units than you"
+],
+[
+"stat_gain",
+"grant an ally +1|+1"
+],
+[
+"condition_count",
+"for each extra unit they have"
+]
+],
+"751149": [
+[
+"stat_loss",
+"Give an enemy follower -4|-0 this round"
+],
+[
+"temporary_effect",
+"this round"
+],
+[
+"comeback",
+"If you have fewer mana gems than your opponent"
+],
+[
+"destroy",
+"kill it instead"
+]
+],
+"751064": [
+[
+"polymorph",
+"Transform a follower into a 1|1 Squirrel"
+],
+[
+"silence",
+"Silence it this round"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"796760": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"polymorph",
+"Transform a follower into a 1|1 Squirrel"
+],
+[
+"silence",
+"Silence it this round"
+],
+[
+"temporary_effect",
+"this round"
+],
+[
+"generate_cards",
+"Create a Lulu in your deck"
+]
+],
+"797078": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"on_attack",
+"the first time I attack"
+],
+[
+"revive",
+"fill your attackers with revived Ephemeral copies of the strongest followers you've slain this game"
+],
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"count_payoff",
+"you've slain this game"
+]
+],
+"797037": [
+[
+"summon",
+"Summon a random 2 or 3 cost follower"
+],
+[
+"random_effect",
+"random 2 or 3 cost follower"
+],
+[
+"board_limit",
+"If your board is full"
+],
+[
+"generate_cards",
+"create a 0 cost Fleeting copy in hand instead"
+]
+],
+"751878": [
+[
+"on_ally_play",
+"the first time you play another follower"
+],
+[
+"copy",
+"summon an exact copy of it"
+],
+[
+"board_limit",
+"If your board is full"
+],
+[
+"stat_gain",
+"grant its stats and keywords to me instead"
+]
+],
+"750718": [
+[
+"regeneration",
+"Regeneration"
+],
+[
+"on_play",
+"Play"
+],
+[
+"board_wipe",
+"Obliterate ALL units with 4 or less Power in play"
+],
+[
+"banish",
+"Obliterate"
+],
+[
+"stat_condition",
+"4 or less Power"
+],
+[
+"hand_disruption",
+"in hands"
+],
+[
+"symmetric_effect",
+"ALL units"
+]
+],
+"750476": [
+[
+"random_effect",
+"This has a chance to deal double damage"
+],
+[
+"stat_multiply",
+"double damage"
+]
+],
+"751043": [
+[
+"turn_start",
+"Round Start"
+],
+[
+"draw",
+"ALL players draw 1"
+],
+[
+"symmetric_effect",
+"ALL players draw 1"
+]
+],
+"750456": [
+[
+"type_grant",
+"This champion counts as one of your deck's regions"
+],
+[
+"deckbuilding_effect",
+"During deckbuilding, you may add the specified cards to your deck regardless of region"
+],
+[
+"start_of_game",
+"Start of Game"
+]
+],
+"751091": [
+[
+"information",
+"Pick a unit in hand to reveal"
+],
+[
+"heal",
+"Heal your Nexus equal to its Power"
+],
+[
+"in_hand_buff",
+"Reduce its cost to 0"
+],
+[
+"condition_count",
+"Enlightened"
+]
+],
+"752186": [
+[
+"buff",
+"Grant targeted allies an Epic item"
+],
+[
+"merge_attach",
+"Epic item"
+]
+],
+"752259": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"random_ability",
+"Grant me 2 random Epic items"
+],
+[
+"merge_attach",
+"Epic items"
+]
+],
+"752147": [
+[
+"stat_condition",
+"your strongest ally"
+],
+[
+"random_ability",
+"a random Epic item"
+],
+[
+"merge_attach",
+"Epic item"
+]
+],
+"796808": [
+[
+"delayed",
+"Countdown 8"
+],
+[
+"generate_cards",
+"Create a Relic of Power in hand"
+],
+[
+"on_spell",
+"When you target allies"
+]
+],
+"750465": [
+[
+"stat_gain",
+"Grant an ally +1|+1"
+],
+[
+"merge_attach",
+"If the ally is equipped, grant it to their item instead"
+]
+],
+"750369": [
+[
+"spell_speed",
+"Happens instantly and allows you to continue to play other cards"
+]
+],
+"750390": [
+[
+"spell_speed",
+"Happens after your opponent has a chance to react"
+]
+],
+"750394": [
+[
+"spell_speed",
+"Can be played outside of combat when no spells or skills are pending"
+]
+],
+"750381": [
+[
+"spell_speed",
+"Happens instantly and allows you to continue to play other cards"
+]
+],
+"750377": [
+[
+"activated",
+"Activatable once per round"
+],
+[
+"spell_speed",
+"Focus speed"
+],
+[
+"transform",
+"transform me to the next Act"
+]
+],
+"797114": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"transform",
+"Transform my Shadow in the Brush into an All-Terrain Trooper"
+],
+[
+"self_destruct",
+"Obliterate me"
+]
+],
+"750373": [
+[
+"removal",
+"A Captured card is removed from the game"
+],
+[
+"delayed",
+"It returns when the Capturing unit leaves play"
+]
+],
+"797170": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"removal",
+"An ally Captures a unit"
+]
+],
+"750949": [
+[
+"immunity",
+"SpellShield"
+],
+[
+"on_play",
+"Play"
+],
+[
+"removal",
+"Capture a unit or landmark"
+]
+],
+"751897": [
+[
+"stat_condition",
+"An ally with 4+ Power"
+],
+[
+"removal",
+"Captures a unit"
+],
+[
+"modal_choice",
+"or an ally Captures a landmark"
+]
+],
+"796504": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"generate_cards",
+"Create an An Acquired Taste in hand"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"banish",
+"Obliterate my Captured enemies"
+],
+[
+"return_to_hand",
+"release my allies"
+]
+],
+"796782": [
+[
+"self_destruct",
+"Obliterate me when I leave combat"
+]
+],
+"750385": [
+[
+"merge_attach",
+"Attaches to another card in a deck"
+],
+[
+"delayed",
+"When that card is drawn, activate the effect"
+]
+],
+"751505": [
+[
+"on_play",
+"Play"
+],
+[
+"trap_secret",
+"Plant 5 Flashbomb Traps in the top 5 cards of the enemy deck"
+],
+[
+"modal_choice",
+"or activate the effects of all traps"
+],
+[
+"deck_position",
+"top 5 cards of the enemy deck"
+]
+],
+"751694": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"assists_support",
+"Support: Grant my supported ally +1|+1"
+],
+[
+"stat_gain",
+"Grant my supported ally +1|+1"
+],
+[
+"kicker",
+"You may spend 8 mana"
+],
+[
+"transform",
+"play me as Horazi"
+]
+],
+"796561": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"trap_secret",
+"Plant 4 Flashbomb Traps in the top 8 cards of the enemy deck"
+],
+[
+"direct_damage",
+"deal damage to the enemy Nexus"
+],
+[
+"count_payoff",
+"equal to the number of your traps activated this round"
+]
+],
+"750965": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"combo_sequence",
+"Nightfall or when you activate another Nightfall"
+],
+[
+"taunt",
+"Give me Challenger this round"
+],
+[
+"temporary_effect",
+"this round"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"You've activated Nightfall 4+ times"
+]
+],
+"751874": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"aura",
+"Other Bird allies have +1|+0 and Quick Attack"
+],
+[
+"tribal",
+"Bird allies"
+]
+],
+"796646": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"aura",
+"Other Fearsome allies have +1|+0"
+]
+],
+"750535": [
+[
+"on_damaged",
+"When I survive damage"
+],
+[
+"generate_cards",
+"create a random Crimson unit in hand"
+],
+[
+"random_effect",
+"random Crimson unit"
+]
+],
+"752116": [
+[
+"discard",
+"To play me, discard 1"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"summon",
+"summon an Enraged Yeti"
+]
+],
+"750544": [
+[
+"on_damaged",
+"When I survive damage"
+],
+[
+"direct_damage",
+"deal 1 to the enemy Nexus"
+]
+],
+"796487": [
+[
+"regeneration",
+"Regeneration"
+],
+[
+"on_damaged",
+"When I survive damage"
+],
+[
+"summon",
+"summon a Mighty Poro"
+]
+],
+"750736": [
+[
+"tribal",
+"If you have a Yeti"
+],
+[
+"summon",
+"summon an Enraged Yeti"
+],
+[
+"generate_cards",
+"create it on top of your deck"
+],
+[
+"deck_position",
+"on top of your deck"
+]
+],
+"796835": [
+[
+"on_enemy_enter",
+"When an enemy is summoned"
+],
+[
+"self_destruct",
+"destroy me"
+],
+[
+"mark_target",
+"grant it Vulnerable"
+]
+],
+"751161": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"on_kill",
+"When you slay a unit"
+],
+[
+"permanent_growth",
+"grant me +1|+0"
+]
+],
+"750985": [
+[
+"on_kill",
+"when an ally with Fury kills an enemy"
+],
+[
+"generate_cards",
+"create a random Dragon follower in hand"
+],
+[
+"random_effect",
+"random Dragon follower"
+],
+[
+"permanent_growth",
+"Fury"
+]
+],
+"751313": [
+[
+"on_kill",
+"When an ally with Fury kills a unit"
+],
+[
+"stat_gain",
+"grant it an additional +1|+1"
+]
+],
+"750402": [
+[
+"multi_attack",
+"it strikes both before AND at the same time as its blocker"
+],
+[
+"first_strike",
+"before"
+]
+]
+}

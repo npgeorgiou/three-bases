@@ -1,0 +1,814 @@
+{
+"816501": [
+[
+"suppress",
+"it cannot perform psychic actions"
+],
+[
+"aura",
+"While an operative is within ⬟ of this operative"
+],
+[
+"immunity",
+"This operative cannot be targeted or affected by psychic actions"
+]
+],
+"789385": [
+[
+"suppress",
+"it cannot perform psychic actions"
+],
+[
+"tribal",
+"ANATHEMA PSYKANA"
+],
+[
+"immunity",
+"SISTER OF SILENCE operatives cannot be targeted or affected by psychic actions"
+]
+],
+"789592": [
+[
+"tribal",
+"INQUISITORIAL AGENT"
+],
+[
+"stat_gain",
+"add 1 to its Atk stat"
+]
+],
+"788734": [
+[
+"immunity",
+"PSYCHIC ranged weapons cannot inflict damage on firendly CELESTIAN INSIDIANT operatives"
+],
+[
+"tribal",
+"CELESTIAN INSIDIANT"
+],
+[
+"suppress",
+"That operative cannot perform PSYCHIC actions or use PSYCHIC additional rules"
+],
+[
+"silence",
+"PSYCHIC melee weapons have no weapon rules"
+],
+[
+"aura",
+"Whenever an operative is within 3\" of a friendly CELESTIAN INSIDIANT operative"
+]
+],
+"790149": [
+[
+"aura",
+"While an enemy operative is Visible to and within ⬛ of this operative"
+],
+[
+"stat_loss",
+"Subtract 1 from the Attacks characteristic of that enemy operative’s melee weapons"
+],
+[
+"cost_increase",
+"1 additional action point must be subtracted for that enemy operative to perform the Fall Back action"
+],
+[
+"activated",
+"Incite Fury (1AP)"
+],
+[
+"tribal",
+"FELLGOR RAVAGER"
+],
+[
+"stat_gain",
+"Add 1 to its APL"
+]
+],
+"816496": [
+[
+"activated",
+"Enhanced Data-tether (1AP)"
+],
+[
+"tribal",
+"HUNTER CLADE"
+],
+[
+"stat_gain",
+"Add 1 to its APL"
+]
+],
+"790439": [
+[
+"activated",
+"Overcharge (1AP)"
+],
+[
+"tribal",
+"CANOPTEK CIRCLE CANOPTEK"
+],
+[
+"stat_gain",
+"add 1 to its APL stat"
+],
+[
+"temporary_effect",
+"Until the end of that selected operative's next activation"
+],
+[
+"activated",
+"Cranial Overload (1AP)"
+],
+[
+"stat_loss",
+"subtract 1 from its APL stat"
+]
+],
+"789455": [
+[
+"immunity",
+"you can ignore any or all modifiers to its APL"
+],
+[
+"immunity",
+"This operative is not affected by the Stun critical hit rule"
+]
+],
+"788842": [
+[
+"random_effect",
+"You can re-roll charge rolls"
+]
+],
+"788699": [
+[
+"play_restriction",
+"cannot perform a Charge, Fall Back or Normal Move action in the same activation in which it performs a Shoot action"
+]
+],
+"789741": [
+[
+"saving_throws",
+"This model has a 5+ invulnerable save"
+],
+[
+"on_attack",
+"When this model finishes a charge move within 1\" of an enemy model"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"damage",
+"the enemy model suffers a mortal wound"
+]
+],
+"789757": [
+[
+"buff",
+"weapons (excluding Heavy weapons) are used as if the model had remained stationary"
+]
+],
+"790491": [
+[
+"counterattack",
+"for each attack dice your opponent discards as a fail, inflict 1 damage on the enemy operative"
+],
+[
+"multi_attack",
+"this operative can immediately perform a free Fight action afterwards"
+]
+],
+"790133": [
+[
+"damage",
+"the enemy operative in that combat suffers 1 mortal wound"
+],
+[
+"condition_count",
+"for each attack dice your opponent discards"
+],
+[
+"activated",
+"Savage Assault (1AP)"
+],
+[
+"multi_attack",
+"fight in combat with this operative against the same target using the same weapon again"
+]
+],
+"814861": [
+[
+"resource_gain",
+"you gain Resourceful points"
+],
+[
+"condition_count",
+"determined by the number of friendly HERNKYN YAEGIR operatives in the killzone"
+],
+[
+"tribal",
+"HERNKYN YAEGIR"
+],
+[
+"turn_end",
+"At the end of each turning point, discard your Resourceful points"
+],
+[
+"modal_choice",
+"to do one of the following"
+],
+[
+"stat_gain",
+"add 1 to that friendly operative’s APL stat"
+],
+[
+"temporary_buff",
+"until the end of its activation"
+],
+[
+"heal",
+"it regains up to D3+1 lost wounds"
+]
+],
+"790301": [
+[
+"resource_gain",
+"add D3 Prescience tokens to your pool"
+],
+[
+"coin_economy",
+"Your Prescience tokens are spent on abilities and unique actions on this datacard"
+],
+[
+"reactions",
+"at the start of the Resolve Successful Hits step of that combat or shooting attack"
+],
+[
+"shield",
+"discard one of your opponent's successful hits"
+],
+[
+"activated",
+"Premonition (1AP)"
+],
+[
+"resource_conversion",
+"Discard one of your Prescience tokens to gain 1CP"
+]
+],
+"789724": [
+[
+"tribal",
+"XV26 STEALTH BATTLESUIT"
+],
+[
+"piercing",
+"you don't have to discard one success as a result of that rule"
+]
+],
+"790651": [
+[
+"resource_gain",
+"you gain D3 Prescience points"
+],
+[
+"turn_end",
+"At the end of each turning point, discard your Prescience points"
+],
+[
+"coin_economy",
+"You can spend your Prescience points in the Firefight phase"
+],
+[
+"shield",
+"ignore that inflicted damage"
+],
+[
+"activated",
+"Premonition (1AP)"
+],
+[
+"resource_conversion",
+"Spend 1 of your Prescience points to gain 1CP"
+]
+],
+"789709": [
+[
+"tribal",
+"WOLF SCOUT"
+],
+[
+"buff",
+"you can discard one of them to retain another as a normal success instead"
+]
+],
+"790825": [
+[
+"buff",
+"You can add 1 to Deny the Witch tests"
+],
+[
+"buff",
+"Add 1 to this model's Psychic tests"
+],
+[
+"buff",
+"Re-roll hit rolls of 1"
+],
+[
+"tribal",
+"When targeting ORKS models"
+],
+[
+"stress_morale",
+"are automatically shaken"
+],
+[
+"game_end_trigger",
+"after all Casualty rolls have been made after a mission"
+],
+[
+"random_effect",
+"roll a D6 for each enemy specialist"
+],
+[
+"resource_gain",
+"you gain 1 Morale"
+]
+],
+"789727": [
+[
+"immunity",
+"it cannot be targeted or affected by psychic powers"
+],
+[
+"debuff",
+"subtract 1 from Psychic tests and Deny the Witch tests"
+]
+],
+"790857": [
+[
+"random_effect",
+"Roll a D6 whenever this model suffers a mortal wound"
+],
+[
+"damage_reduction",
+"On a 5+ that wound is not lost"
+],
+[
+"random_effect",
+"re-roll any number of dice"
+]
+],
+"789729": [
+[
+"saving_throws",
+"Models with this ability have a 6+ invulnerable save"
+],
+[
+"counter_spell",
+"can attempt to deny one psychic power"
+]
+],
+"789755": [
+[
+"stress_morale",
+"automatically pass Nerve tests"
+],
+[
+"aura",
+"while they are within 6\" of the psyker"
+],
+[
+"buff",
+"add 1 to Deny the Witch tests"
+]
+],
+"790617": [
+[
+"death_trigger",
+"If this operative is incapacitated"
+],
+[
+"random_effect",
+"roll one D6, or two D6 if you wish"
+],
+[
+"attack_now",
+"this operative performs a free Shoot action with its explosives"
+],
+[
+"play_restriction",
+"This operative cannot perform any actions other than Charge, Dash, Fight, Reposition and Shoot"
+],
+[
+"fodder",
+"This operative is ignored for your opponent’s kill/elimination op"
+]
+],
+"790551": [
+[
+"play_restriction",
+"This operative cannot perform any actions other than Charge, Dash, Fall Back, Reposition and Spot"
+],
+[
+"zone_control",
+"treat this operative’s APL stat as 1 lower"
+],
+[
+"stealth",
+"Whenever this operative has a Conceal order and is in cover, it cannot be selected as a valid target"
+],
+[
+"fodder",
+"This operative is ignored for your opponent’s kill/elimination op"
+],
+[
+"activated",
+"Spot (1AP)"
+],
+[
+"mark_target",
+"Select one enemy operative visible to this operative"
+],
+[
+"piercing",
+"That enemy operative cannot be obscured"
+],
+[
+"tribal",
+"IMPERIAL NAVY BREACHER"
+]
+],
+"790549": [
+[
+"fodder",
+"This operative is ignored for your opponent’s kill/elimination op"
+],
+[
+"play_restriction",
+"This operative cannot perform any actions other than Boost, Charge, Dash, Fall Back and Reposition"
+],
+[
+"zone_control",
+"treat this operative’s APL stat as 1 lower"
+],
+[
+"stealth",
+"Whenever this operative has a Conceal order and is in cover, it cannot be selected as a valid target"
+],
+[
+"activated",
+"Boost (1AP)"
+],
+[
+"movement",
+"add 4\" to the distance it can move"
+],
+[
+"once_per_game",
+"This operative can only perform this action once per battle"
+]
+],
+"790440": [
+[
+"fodder",
+"This operative is ignored for your opponent's kill/elimination op"
+],
+[
+"turn_number",
+"in each turning point after the first"
+],
+[
+"condition_count",
+"if you have less than three non-incapacitated friendly CANOPTEK CIRCLE WARRIOR operatives"
+],
+[
+"summon",
+"you can set up another one ready"
+],
+[
+"tribal",
+"CANOPTEK CIRCLE WARRIOR"
+],
+[
+"death_trigger",
+"If this operative is incapacitated by an enemy operative within 2\" of it"
+],
+[
+"random_effect",
+"roll one D3"
+],
+[
+"damage",
+"inflict 1 damage on that enemy operative"
+]
+],
+"816480": [
+[
+"saving_throws",
+"This operative has a 6+ invulnerable save"
+]
+],
+"816481": [
+[
+"cost_increase",
+"you must subtract one additional AP to do so"
+],
+[
+"saving_throws",
+"This operative has a 6+ invulnerable save"
+]
+],
+"789431": [
+[
+"activated",
+"Litany of Sacrifice (1AP)"
+],
+[
+"aura",
+"while a friendly VETERAN GUARDMAN operative is within ⬟ of this operative"
+],
+[
+"temporary_effect",
+"Until the end of the Turning Point"
+],
+[
+"debuff",
+"change one of your opponent's critical hits to a normal hit"
+]
+],
+"789478": [
+[
+"tribal",
+"ANGEL OF DEATH"
+],
+[
+"buff",
+"you can discard one of them to retain another as a normal success instead"
+]
+],
+"789700": [
+[
+"tribal",
+"VOID-DANCER TROUPE"
+],
+[
+"buff",
+"you can discard one of them to retain another as a normal success instead"
+]
+],
+"788858": [
+[
+"stat_loss",
+"Subtract 1 from the Leadership characteristic of enemy models"
+],
+[
+"aura",
+"while they are within 3\" of any models in your kill team"
+],
+[
+"stress_morale",
+"whenever an opponent takes a Nerve test"
+],
+[
+"advantage",
+"they must roll two dice and discard the lowest result"
+]
+],
+"789623": [
+[
+"modal_choice",
+"Select one Marks of Chaos keyword"
+],
+[
+"tribal",
+"LEGIONARY"
+],
+[
+"friendly_fire",
+"you can inflict D3 damage on that friendly operative"
+],
+[
+"buff",
+"retain the other as a normal success instead"
+]
+],
+"789654": [
+[
+"tribal",
+"PHOBOS STRIKE TEAM"
+],
+[
+"buff",
+"you can discard one of them to retain another as a normal success instead"
+]
+],
+"789196": [
+[
+"start_of_game",
+"In the Scouting step"
+],
+[
+"terrain",
+"you can open one Hatchway"
+],
+[
+"reveal_order",
+"the Defender resolves this ability first"
+]
+],
+"790093": [
+[
+"activated",
+"Control Platform (1AP)"
+],
+[
+"tribal",
+"GUARDIAN DEFENDER HEAVY WEAPON PLATFORM"
+],
+[
+"attack_now",
+"Perform a free Normal Move, Fall Back or Shoot action with that operative"
+]
+],
+"788742": [
+[
+"blocking",
+"Each of your blocks can be allocated to block two unresolved successes"
+],
+[
+"first_strike",
+"you resolve the first attack dice"
+]
+],
+"790455": [
+[
+"first_strike",
+"you resolve the first attack dice"
+],
+[
+"mark_target",
+"Select one enemy operative within 9\" of this operative"
+],
+[
+"reactions",
+"after that enemy operative performs an action in which it moves, you can interrupt"
+],
+[
+"movement",
+"perform either a free Reposition action"
+],
+[
+"attack_now",
+"a free Charge action"
+]
+],
+"790853": [
+[
+"play_restriction",
+"can only move, Advance, React, shoot or fight if a friendly Guardian Defender that is not shaken is within 3\" of it"
+],
+[
+"cant_attack",
+"may not charge"
+],
+[
+"stress_morale",
+"automatically passes Nerve tests"
+]
+],
+"789060": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"reveal_order",
+"after rolling off to determine initiative"
+],
+[
+"random_effect",
+"you can re-roll your dice"
+]
+],
+"788832": [
+[
+"mark_target",
+"choose a datasheet to be your kill team’s priority target"
+],
+[
+"turn_number",
+"At the beginning of the first battle round"
+],
+[
+"buff",
+"You can re-roll wound rolls of 1"
+]
+],
+"790220": [
+[
+"aura",
+"While a friendly HUNTER CADRE operative is within ⬛ of this operative"
+],
+[
+"tribal",
+"HUNTER CADRE"
+],
+[
+"buff",
+"you can retain one as a successful normal hit without rolling it"
+]
+],
+"789780": [
+[
+"tribal",
+"EXODITE DRAGON MASTER MOUNTED"
+],
+[
+"saving_throws",
+"you can retain one of your normal successes as a critical success instead"
+]
+],
+"814805": [
+[
+"stat_loss",
+"Subtract 2\" from its Move stat"
+],
+[
+"protection",
+"you can re-roll any of your defence dice"
+],
+[
+"stances",
+"Whenever this operative is activated, you can use this rule"
+]
+],
+"791001": [
+[
+"bodyguard",
+"choose one of these models to intercept that hit"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"death_trigger",
+"a friendly COMMANDER is taken out of action"
+],
+[
+"stat_gain",
+"its Attacks characteristic becomes 4"
+]
+],
+"790689": [
+[
+"counterattack",
+"inflict damage equal to the weapon’s Critical Dmg stat on the enemy operative"
+]
+],
+"814935": [
+[
+"blocking",
+"each of your blocks can be allocated to block two unresolved successes"
+]
+],
+"790567": [
+[
+"play_restriction",
+"This operative cannot perform any actions other than Charge, Dash, Fall Back, Reposition and Spot"
+],
+[
+"zone_control",
+"treat this operative’s APL stat as 1 lower"
+],
+[
+"stealth",
+"Whenever this operative has a Conceal order and is in cover, it cannot be selected as a valid target"
+],
+[
+"fodder",
+"This operative is ignored for your opponent’s kill/elimination op"
+],
+[
+"activated",
+"Spot (1AP)"
+],
+[
+"mark_target",
+"Select one enemy operative visible to this operative"
+],
+[
+"piercing",
+"That enemy operative cannot be obscured"
+],
+[
+"tribal",
+"INQUISITORIAL AGENT BREACHER"
+]
+]
+}

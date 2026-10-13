@@ -1,0 +1,150 @@
+748051 | Spirit Swap | Choose 2 minions. They gain each other's Attack until next turn.
+   A: [["swap", "They gain each other's Attack"], ["temporary_buff", "until next turn"]]
+   B: [["stat_gain", "They gain each other's Attack"], ["temporary_effect", "until next turn"]]
+748109 | Mantid Queen | Venomous. Start of Combat: For each of your minion types gain +5/+5, Windfury, Reborn, or Taunt.
+   A: [["deathtouch", "Venomous"], ["combat_start", "Start of Combat"], ["variety_payoff", "For each of your minion types"], ["random_ability", "gain +5/+5, Windfury, Reborn, or Taunt"]]
+   B: [["deathtouch", "Venomous"], ["combat_start", "Start of Combat"], ["variety_payoff", "For each of your minion types"], ["stat_gain", "+5/+5"], ["multi_attack", "Windfury"], ["cheat_death", "Reborn"], ["taunt", "Taunt"]]
+748120 | Aim Right! | Passive. Start of Combat: Deal Y damage to the right-most enemy minion.
+   A: [["passive", "Passive"], ["combat_start", "Start of Combat"], ["damage", "Deal Y damage"], ["targeting_rules", "right-most enemy minion"]]
+   B: [["passive", "Passive."], ["combat_start", "Start of Combat"], ["damage", "Deal Y damage to the right-most enemy minion"], ["lane_identity", "right-most enemy minion"]]
+748132 | Twice as Nice | After the Tavern is Refreshed, copy its highest-Tier minion and Freeze them both.
+   A: [["copy", "copy its highest-Tier minion"], ["cost_condition", "highest-Tier"], ["retain", "Freeze them both"]]
+   B: [["copy", "copy its highest-Tier minion"], ["stat_condition", "highest-Tier minion"]]
+748200 | Patient Scout | When you sell this, Discover a Tier X minion. (Improves each turn!)
+   A: [["shop_gold", "When you sell this"], ["selection", "Discover a Tier X minion"], ["permanent_growth", "Improves each turn!"]]
+   B: [["selection", "Discover a Tier X minion"], ["permanent_growth", "Improves each turn"]]
+748223 | Crack the Case | Quest: Have friendly minions attack X times.
+   A: [["quests", "Quest"], ["count_payoff", "Have friendly minions attack X times"]]
+   B: [["quests", "Quest: Have friendly minions attack X times."]]
+748262 | Kidnap Sack | Spellcraft: Choose a non-Golden card. Move it to your hand.
+   A: [["steal", "Move it to your hand"], ["on_spell", "Spellcraft"]]
+   B: [["on_spell", "Spellcraft"], ["card_advantage", "Move it to your hand"]]
+748313 | Shadowy Construct | Whenever a friendly minion dies, gain its maximum stats. (Once per combat.)
+   A: [["death_trigger", "Whenever a friendly minion dies"], ["stat_gain", "gain its maximum stats"], ["once_per_game", "Once per combat"]]
+   B: [["death_trigger", "Whenever a friendly minion dies"], ["permanent_growth", "gain its maximum stats"], ["once_per_game", "(Once per combat.)"]]
+748331 | Just Keep Swimming | Give a minion +X/+Y and Stealth until next turn.
+   A: [["stat_gain", "Give a minion +X/+Y"], ["stealth", "Stealth"], ["temporary_buff", "until next turn"]]
+   B: [["stat_gain", "+X/+Y"], ["stealth", "Stealth"], ["temporary_effect", "until next turn"]]
+748364 | Octosari, Wrap God | Deathrattle: Summon a X/X Tentacle. (It gains +4/+4 permanently after you summon a minion in combat!)
+   A: [["death_trigger", "Deathrattle"], ["summon", "Summon a X/X Tentacle"], ["permanent_growth", "It gains +4/+4 permanently after you summon a minion in combat!"]]
+   B: [["death_trigger", "Deathrattle"], ["summon", "Summon a X/X Tentacle"], ["permanent_growth", "It gains +4/+4 permanently after you summon a minion in combat"], ["on_ally_play", "after you summon a minion in combat"]]
+748395 | Gilded Gargoyle | Deathrattle: Add a Coin to your hand.
+   A: [["death_trigger", "Deathrattle"], ["resource_gain", "Add a Coin to your hand"]]
+   B: [["death_trigger", "Deathrattle"], ["generate_cards", "Add a Coin to your hand"]]
+748413 | Dreadbeard | At the end of your turn, deal 1 damage to your hero and get a Tavern Coin.
+   A: [["turn_end", "At the end of your turn"], ["life_payment", "deal 1 damage to your hero"], ["resource_gain", "get a Tavern Coin"]]
+   B: [["turn_end", "At the end of your turn"], ["life_payment", "deal 1 damage to your hero"], ["generate_cards", "get a Tavern Coin"]]
+748451 | Big League | Only Tavern Tiers 3, 4, 5, and 6 exist. Start with 10 extra Armor.
+   A: [["rule_change", "Only Tavern Tiers 3, 4, 5, and 6 exist"], ["start_of_game", "Start with 10 extra Armor"], ["damage_reduction", "Armor"]]
+   B: [["rule_change", "Only Tavern Tiers 3, 4, 5, and 6 exist"], ["block_armor", "Start with 10 extra Armor"], ["start_of_game", "Start with 10 extra Armor"]]
+748474 | Secrets of Norgannon | Tavern Tier 7 exists. Start with 10 extra Armor.
+   A: [["rule_change", "Tavern Tier 7 exists"], ["start_of_game", "Start with 10 extra Armor"], ["damage_reduction", "Armor"]]
+   B: [["rule_change", "Tavern Tier 7 exists"], ["block_armor", "Start with 10 extra Armor"], ["start_of_game", "Start with 10 extra Armor"]]
+748488 | Everything's on Fire! | At the start of the game, take 25 damage. After another hero dies, regain 5 Health.
+   A: [["start_of_game", "At the start of the game"], ["life_payment", "take 25 damage"], ["heal", "regain 5 Health"]]
+   B: [["life_payment", "take 25 damage"], ["start_of_game", "At the start of the game"], ["heal", "regain 5 Health"], ["death_trigger", "After another hero dies"]]
+748501 | The Golden Arena | ALL minions are Golden, but you do not get Triple Rewards.
+   A: [["rule_change", "ALL minions are Golden"], ["upgrade", "Golden"], ["scope_global", "ALL minions"]]
+   B: [["rule_change", "ALL minions are Golden"], ["scope_global", "ALL minions"]]
+748513 | Choose Your Champion | Passive. At the start of the game, Discover a Tier 7 minion to get after you spend 60 Gold. (X left!)X[x]Passive. At the start of the game, Discover a Tier 7 minion to get after you spend 60 Gold. (Done!)
+   A: [["passive", "Passive"], ["start_of_game", "At the start of the game"], ["selection", "Discover a Tier 7 minion"], ["quests", "to get after you spend 60 Gold"]]
+   B: [["passive", "Passive."], ["start_of_game", "At the start of the game"], ["selection", "Discover a Tier 7 minion"], ["count_payoff", "after you spend 60 Gold"]]
+748542 | Armor Stash | Set your Armor to 5.
+   A: [["damage_reduction", "Set your Armor to 5"]]
+   B: [["block_armor", "Set your Armor to 5"]]
+748563 | Snarling Conductor | At the start of your turn, discard a spell to gain 4 Gold.
+   A: [["turn_start", "At the start of your turn"], ["discard", "discard a spell"], ["resource_conversion", "discard a spell to gain 4 Gold"]]
+   B: [["turn_start", "At the start of your turn"], ["discard", "discard a spell"], ["resource_gain", "gain 4 Gold"], ["resource_conversion", "discard a spell to gain 4 Gold"]]
+748574 | Plunder Seeker | Steal a random card from the Tavern for each Pirate you control.
+   A: [["steal", "Steal a random card from the Tavern"], ["random_effect", "random card"], ["condition_count", "for each Pirate you control"], ["tribal", "Pirate"]]
+   B: [["card_advantage", "Steal a random card from the Tavern"], ["random_effect", "random card"], ["condition_count", "for each Pirate you control"], ["tribal", "Pirate"]]
+748575 | Fluidity | Swap a friendly non-Golden minion with a random one in the Tavern.
+   A: [["transform", "Swap a friendly non-Golden minion with a random one in the Tavern"], ["random_effect", "random one"]]
+   B: [["swap", "Swap a friendly non-Golden minion with a random one in the Tavern"], ["random_effect", "random one"]]
+748621 | Reliquary Research | Every third Tavern spell you buy costs (0). (X left!)X[x]Every third Tavern spell you buy costs (0). (Active!)
+   A: [["count_payoff", "Every third Tavern spell you buy"], ["cost_set", "costs (0)"], ["shop_gold", "buy"]]
+   B: [["cost_set", "costs (0)"], ["count_payoff", "Every third Tavern spell you buy"]]
+748624 | Fill the Cauldron | Quest: Cast X spells.
+   A: [["quests", "Quest"], ["count_payoff", "Cast X spells"]]
+   B: [["quests", "Quest: Cast X spells."]]
+748650 | Iridescent Skyblazer | Whenever a friendly Beast takes damage, give a friendly Beast other than it +X/+Y permanently.
+   A: [["on_damaged", "Whenever a friendly Beast takes damage"], ["tribal", "Beast"], ["stat_gain", "+X/+Y permanently"]]
+   B: [["on_damaged", "Whenever a friendly Beast takes damage"], ["tribal", "Beast"], ["permanent_growth", "+X/+Y permanently"]]
+748698 | Volcanic Visitor | Spellcraft: Choose One - Give your minions +4 Attack; or +4 Health.
+   A: [["on_spell", "Spellcraft"], ["modal_choice", "Choose One"], ["stat_gain", "Give your minions +4 Attack"], ["scope_multi", "your minions"]]
+   B: [["on_spell", "Spellcraft"], ["modal_choice", "Choose One"], ["stat_gain", "+4 Attack"]]
+748796 | Rewinder Portrait | Get a Soul Rewinder and a Wrath Weaver. Your Soul Rewinders also gain Attack.
+   A: [["generate_cards", "Get a Soul Rewinder and a Wrath Weaver"], ["aura", "Your Soul Rewinders also gain Attack"]]
+   B: [["generate_cards", "Get a Soul Rewinder and a Wrath Weaver"], ["stat_gain", "Your Soul Rewinders also gain Attack"]]
+748946 | Marauder's Contract | Steal a random Pirate from the Tavern.
+   A: [["steal", "Steal a random Pirate from the Tavern"], ["tribal", "Pirate"], ["random_effect", "random Pirate"]]
+   B: [["card_advantage", "Steal a random Pirate from the Tavern"], ["tribal", "Pirate"], ["random_effect", "random Pirate"]]
+748959 | Continuing Education | At the start of each turn, get an Evolving Scroll. Each turn, it transforms into a Tavern spell from a Tier higher.
+   A: [["turn_start", "At the start of each turn"], ["generate_cards", "get an Evolving Scroll"], ["upgrade", "transforms into a Tavern spell from a Tier higher"]]
+   B: [["turn_start", "At the start of each turn"], ["generate_cards", "get an Evolving Scroll"], ["transform", "it transforms into a Tavern spell from a Tier higher"]]
+748980 | Mini-Zerek | Battlecry: Choose a minion in the Tavern. Transform into a copy of it.
+   A: [["on_play", "Battlecry"], ["copy", "Transform into a copy of it"]]
+   B: [["on_play", "Battlecry"], ["transform", "Transform into a copy of it"], ["copy", "a copy of it"]]
+748981 | Cloning Gallery | Once per game, summon an exact copy of a friendly minion.X[x]Once per game, summon an exact copy of a friendly minion. (Except Timewarped minions.)
+   A: [["once_per_game", "Once per game"], ["copy", "summon an exact copy of a friendly minion"]]
+   B: [["once_per_game", "Once per game"], ["copy", "summon an exact copy of a friendly minion"], ["summon", "summon an exact copy"]]
+749072 | Ashen Corruptor | After your hero takes damage, rewind it and give minions in the Tavern +X/+Y this turn.
+   A: [["on_damaged", "After your hero takes damage"], ["rewind", "rewind it"], ["stat_gain", "give minions in the Tavern +X/+Y"], ["temporary_buff", "this turn"]]
+   B: [["on_damaged", "After your hero takes damage"], ["rewind", "rewind it"], ["stat_gain", "give minions in the Tavern +X/+Y"], ["temporary_effect", "this turn"]]
+749075 | Dream Inquisitor | Whenever you cast a Tavern spell, deal 1 damage to your hero and give your Demons +1/+1.
+   A: [["on_spell", "Whenever you cast a Tavern spell"], ["life_payment", "deal 1 damage to your hero"], ["stat_gain", "give your Demons +1/+1"], ["tribal", "Demons"]]
+   B: [["on_spell", "Whenever you cast a Tavern spell"], ["life_payment", "deal 1 damage to your hero"], ["permanent_growth", "give your Demons +1/+1"], ["tribal", "Demons"]]
+749076 | Bounding Felstalker | Battlecry: Refresh the Tavern with 2 extra Tavern spells. They cost Health instead of Gold.
+   A: [["on_play", "Battlecry"], ["selection", "Refresh the Tavern with 2 extra Tavern spells"], ["life_payment", "They cost Health instead of Gold"], ["cost_type", "cost Health instead of Gold"]]
+   B: [["on_play", "Battlecry"], ["cost_type", "They cost Health instead of Gold"], ["life_payment", "cost Health instead of Gold"]]
+749096 | Ornate Clock | Gain 2 Gold. Buy your Greater Trinket next turn instead of Turn 9.
+   A: [["resource_gain", "Gain 2 Gold"], ["speed", "Buy your Greater Trinket next turn instead of Turn 9"]]
+   B: [["resource_gain", "Gain 2 Gold"], ["tempo", "Buy your Greater Trinket next turn instead of Turn 9"]]
+749149 | Shadowy Elixir | Gain 5 Armor. After you play a Demon, deal 1 damage to your hero.
+   A: [["damage_reduction", "Gain 5 Armor"], ["on_ally_play", "After you play a Demon"], ["tribal", "Demon"], ["life_payment", "deal 1 damage to your hero"]]
+   B: [["block_armor", "Gain 5 Armor"], ["on_ally_play", "After you play a Demon"], ["tribal", "Demon"], ["life_payment", "deal 1 damage to your hero"]]
+749207 | Primeval Monstrosity | Stealth. Whenever a friendly Rally minion attacks, give a friendly minion of each type +X/+Y permanently.
+   A: [["stealth", "Stealth"], ["on_attack", "Whenever a friendly Rally minion attacks"], ["variety_payoff", "a friendly minion of each type"], ["stat_gain", "+X/+Y permanently"]]
+   B: [["stealth", "Stealth"], ["on_attack", "Whenever a friendly Rally minion attacks"], ["variety_payoff", "a friendly minion of each type"], ["permanent_growth", "+X/+Y permanently"]]
+749300 | Old Soul | After Y friendly minions die while this is in your hand, make this Golden. (X left!)
+   A: [["death_count", "After Y friendly minions die"], ["upgrade", "make this Golden"], ["in_hand_buff", "while this is in your hand"]]
+   B: [["death_count", "After Y friendly minions die while this is in your hand"], ["upgrade", "make this Golden"]]
+749375 | Twisting Hourglass | All 4 Chronum this game can be spent at the Minor Timewarp. Any unspent carries over to the Major Timewarp.
+   A: [["multiple_resources", "Chronum"], ["resource_banking", "Any unspent carries over to the Major Timewarp"]]
+   B: [["multiple_resources", "Chronum"], ["round_carryover", "Any unspent carries over"]]
+749429 | Timewarped Pagle | Once per combat, when this attacks and kills a minion, get a Triple Reward.
+   A: [["once_per_game", "Once per combat"], ["on_kill", "when this attacks and kills a minion"], ["card_advantage", "get a Triple Reward"]]
+   B: [["once_per_game", "Once per combat"], ["on_kill", "when this attacks and kills a minion"], ["generate_cards", "get a Triple Reward"]]
+749443 | Timewarped Shivarra | Whenever a minion is consumed, this gains its stats.
+   A: [["stat_gain", "this gains its stats"]]
+   B: [["permanent_growth", "Whenever a minion is consumed, this gains its stats"]]
+749477 | Timewarped Snow Elemental | The Tavern offers an extra Frozen Elemental whenever it is Refreshed.
+   A: [["card_quality", "The Tavern offers an extra Frozen Elemental"], ["tribal", "Elemental"]]
+   B: [["rule_change", "The Tavern offers an extra Frozen Elemental"], ["tribal", "Elemental"]]
+749572 | Timewarped B.A.N.A.N.A.S. | Fill your hand with Tavern Dish Bananas. Your Tavern spells give an extra +X/+Y this game.
+   A: [["generate_cards", "Fill your hand with Tavern Dish Bananas"], ["spell_power", "Your Tavern spells give an extra +X/+Y this game"]]
+   B: [["generate_cards", "Fill your hand with Tavern Dish Bananas"], ["hand_size", "Fill your hand"], ["spell_power", "Your Tavern spells give an extra +X/+Y this game"]]
+749575 | Timewarped Enchanted Lasso | Steal all minions from the Tavern, then Refresh it.
+   A: [["steal", "Steal all minions from the Tavern"], ["selection", "Refresh it"]]
+   B: [["card_advantage", "Steal all minions from the Tavern"]]
+749578 | Timewarped Armor Stash | Casts When Bought Gain X Armor.
+   A: [["shop_gold", "Casts When Bought"], ["damage_reduction", "Gain X Armor"]]
+   B: [["block_armor", "Gain X Armor"]]
+749602 | Twisted Wrathguard | After you sell a minion, add a Fodder to your next Refresh.
+   A: [["shop_gold", "After you sell a minion"], ["generate_cards", "add a Fodder to your next Refresh"], ["fodder", "Fodder"]]
+   B: [["fodder", "Fodder"]]
+749638 | Lesser Crystal Ball | When you buy a Lesser Trinket, this transforms into a copy of it.
+   A: [["shop_gold", "When you buy a Lesser Trinket"], ["copy", "transforms into a copy of it"]]
+   B: [["transform", "this transforms into a copy of it"], ["copy", "a copy of it"]]
+749640 | Greater Crystal Ball | When you buy a Greater Trinket, this transforms into a copy of it.
+   A: [["shop_gold", "When you buy a Greater Trinket"], ["copy", "transforms into a copy of it"]]
+   B: [["transform", "this transforms into a copy of it"], ["copy", "a copy of it"]]
+749660 | Jewelry Box | Get a Blood Gem that gives a Quilboar Taunt, Divine Shield, or Reborn. At the start of each turn, repeat this.
+   A: [["generate_cards", "Get a Blood Gem"], ["modal_choice", "Taunt, Divine Shield, or Reborn"], ["tribal", "Quilboar"], ["turn_start", "At the start of each turn"], ["repeat_trigger", "repeat this"]]
+   B: [["generate_cards", "Get a Blood Gem"], ["modal_choice", "Taunt, Divine Shield, or Reborn"], ["tribal", "Quilboar"], ["turn_start", "At the start of each turn"]]
+749669 | Powder Keg | Start of Combat: Give X friendly Pirates "Deathrattle: Summon a 1/1 Sky Pirate and give it this minion's Attack. It attacks immediately."
+   A: [["combat_start", "Start of Combat"], ["tribal", "Pirates"], ["death_trigger", "Deathrattle"], ["summon", "Summon a 1/1 Sky Pirate"], ["variable_stats", "give it this minion's Attack"], ["attack_now", "It attacks immediately"]]
+   B: [["combat_start", "Start of Combat"], ["tribal", "Pirates"], ["death_trigger", "Deathrattle"], ["summon", "Summon a 1/1 Sky Pirate"], ["attack_now", "It attacks immediately"]]
+749675 | Electrode Attractor | Magnetic Mechs cost (2). The Tavern offers an extra one whenever it is Refreshed.
+   A: [["merge_attach", "Magnetic"], ["tribal", "Mechs"], ["cost_set", "cost (2)"], ["card_quality", "The Tavern offers an extra one whenever it is Refreshed"]]
+   B: [["cost_set", "Magnetic Mechs cost (2)"], ["tribal", "Mechs"], ["merge_attach", "Magnetic"]]

@@ -1,0 +1,730 @@
+{
+"760416": [
+[
+"passive",
+"+3 speed"
+],
+[
+"speed",
+"+3 speed"
+],
+[
+"damage_reduction",
+"+0.05 protection"
+],
+[
+"stat_gain",
+"+0.03 crit"
+],
+[
+"stat_loss",
+"-0.06 dodge"
+]
+],
+"760426": [
+[
+"passive",
+"+15% damage"
+],
+[
+"stat_gain",
+"+15% damage"
+],
+[
+"turn_number",
+"in the first round"
+],
+[
+"stat_loss",
+"-0.05 accuracy"
+]
+],
+"760444": [
+[
+"passive",
+"+10% trap resistance"
+],
+[
+"saving_throws",
+"+10% trap resistance"
+],
+[
+"stat_gain",
+"+10% trap resistance"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+],
+[
+"condition_life",
+"at Death's Door"
+],
+[
+"upkeep",
+"+50% starving damage percent"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760457": [
+[
+"passive",
+"+0.06 protection"
+],
+[
+"damage_reduction",
+"+0.06 protection"
+],
+[
+"stat_gain",
+"+0.08 dodge"
+],
+[
+"condition_life",
+"while HP below 0.25"
+],
+[
+"stress_morale",
+"+8% resolve check percent"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+],
+[
+"rest_phase",
+"while camping"
+],
+[
+"stat_loss",
+"-4 speed"
+]
+],
+"760465": [
+[
+"passive",
+"+5% max HP"
+],
+[
+"damage_reduction",
+"+0.03 protection"
+],
+[
+"stat_gain",
+"+5% max HP"
+],
+[
+"cheat_death",
+"+5% death_blow resistance"
+],
+[
+"saving_throws",
+"death_blow resistance"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"stat_loss",
+"-4 speed"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760491": [
+[
+"passive",
+"+0.02 crit"
+],
+[
+"stat_gain",
+"+0.02 crit"
+],
+[
+"stat_gain",
+"+0.05 dodge"
+],
+[
+"condition_life",
+"while HP above 0.75"
+],
+[
+"light_level",
+"while light above 75"
+],
+[
+"stress_morale",
+"-8% resolve check percent"
+]
+],
+"760508": [
+[
+"passive",
+"+0.03 crit"
+],
+[
+"stress_morale",
+"-5% stress dmg received percent"
+],
+[
+"stat_gain",
+"+0.03 crit with ranged skills"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+],
+[
+"condition_life",
+"while HP below 0.25"
+]
+],
+"760609": [
+[
+"passive",
+"-5 speed"
+],
+[
+"traits_quirks",
+"The Black Plague"
+],
+[
+"stat_loss",
+"-75% poison resistance"
+],
+[
+"saving_throws",
+"poison resistance"
+],
+[
+"stat_loss",
+"-10% max HP"
+]
+],
+"760644": [
+[
+"resource_advantage",
+"+0.2 upgrade discount weapon"
+],
+[
+"upgrade",
+"upgrade discount"
+]
+],
+"760645": [
+[
+"resource_advantage",
+"+0.2 upgrade discount armour"
+],
+[
+"upgrade",
+"upgrade discount"
+]
+],
+"760682": [
+[
+"passive",
+"-15% stun resistance"
+],
+[
+"stat_loss",
+"-15% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_loss",
+"-25% damage"
+],
+[
+"stat_gain",
+"+0.1 dodge"
+],
+[
+"speed",
+"+2 speed"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"760684": [
+[
+"passive",
+"-15% stun resistance"
+],
+[
+"stat_loss",
+"-15% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_loss",
+"-10% damage"
+],
+[
+"stat_gain",
+"+0.05 dodge"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"760685": [
+[
+"passive",
+"-15% stun resistance"
+],
+[
+"stat_loss",
+"-15% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_loss",
+"-0.15 dodge"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"760687": [
+[
+"passive",
+"-15% stun resistance"
+],
+[
+"stat_loss",
+"-15% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_loss",
+"-3 speed"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"760691": [
+[
+"passive",
+"+20% stun resistance"
+],
+[
+"stat_gain",
+"+20% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_gain",
+"+0.1 accuracy"
+],
+[
+"stress_morale",
+"while virtued"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"760692": [
+[
+"passive",
+"+20% stun resistance"
+],
+[
+"stat_gain",
+"+20% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"stat_gain",
+"+25% damage"
+],
+[
+"stress_morale",
+"while virtued"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"760693": [
+[
+"passive",
+"+20% stun resistance"
+],
+[
+"stat_gain",
+"+20% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"speed",
+"+5 speed"
+],
+[
+"stat_gain",
+"+10% dodge"
+],
+[
+"stress_morale",
+"while virtued"
+],
+[
+"autonomous_units",
+"Acts on its own"
+],
+[
+"friendly_fire",
+"attack friendly"
+],
+[
+"heal",
+"heal self"
+],
+[
+"buff",
+"buff party"
+],
+[
+"movement",
+"change pos"
+],
+[
+"random_effect",
+"random command"
+],
+[
+"stress_morale",
+"stress heal party"
+]
+],
+"760703": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"stat_gain",
+"+0.1 accuracy (self)"
+],
+[
+"scope_self",
+"(self)"
+]
+],
+"760711": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"traits_quirks",
+"remove disease"
+]
+],
+"760719": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"stat_gain",
+"+0.1 dodge (self)"
+],
+[
+"speed",
+"+5 speed (self)"
+],
+[
+"stat_gain",
+"+10% damage with melee skills (self)"
+],
+[
+"scope_self",
+"(self)"
+]
+],
+"760724": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"stat_gain",
+"+0.1 dodge (individual)"
+],
+[
+"speed",
+"+5 speed (individual)"
+]
+],
+"760730": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"heal",
+"health heal max health percent 0.5 (individual)"
+],
+[
+"stat_gain",
+"+20% hp heal received percent (individual)"
+]
+],
+"760732": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"traits_quirks",
+"remove disease (self)"
+],
+[
+"saving_throws",
+"+25% disease resistance"
+],
+[
+"stat_gain",
+"+25% disease resistance (self)"
+],
+[
+"scope_self",
+"(self)"
+]
+],
+"760753": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"saving_throws",
+"+25% poison resistance"
+],
+[
+"stat_gain",
+"+25% poison resistance (self)"
+],
+[
+"stress_morale",
+"-30% stress dmg received percent"
+],
+[
+"scope_self",
+"(self)"
+]
+],
+"760761": [
+[
+"random_effect",
+"On failure"
+],
+[
+"debuff",
+"Lurker Trap Debuff 1"
+],
+[
+"stress_morale",
+"Stress 2"
+],
+[
+"damage",
+"HP change -10%"
+]
+],
+"760780": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"traits_quirks",
+"Quirk 25.00% (ruins_adventurer)"
+],
+[
+"shield",
+"Suit of Armor Shield"
+]
+]
+}

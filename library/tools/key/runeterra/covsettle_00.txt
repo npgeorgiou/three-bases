@@ -1,0 +1,150 @@
+750373 | Capture | A Captured card is removed from the game. It returns when the Capturing unit leaves play.
+   A: [["removal", "A Captured card is removed from the game"], ["delayed", "It returns when the Capturing unit leaves play"]]
+   B: [["removal", "A Captured card is removed from the game"]]
+750393 | Support | Attacking with a support unit will buff the unit to its right.
+   A: [["assists_support", "Attacking with a support unit will buff the unit to its right"], ["adjacency", "the unit to its right"]]
+   B: [["assists_support", "Attacking with a support unit will buff the unit to its right"], ["adjacency", "the unit to its right"], ["buff", "buff the unit"]]
+750470 | Gathering Storm | Reduce the cost of Storm Conduits in your hand by 1.
+   A: [["in_hand_buff", "Reduce the cost of Storm Conduits in your hand by 1"]]
+   B: [["cost_reduction", "Reduce the cost of Storm Conduits in your hand by 1"]]
+750535 | Crimson Curator | When I survive damage, create a random Crimson unit in hand.
+   A: [["on_damaged", "When I survive damage"], ["generate_cards", "create a random Crimson unit in hand"], ["random_effect", "random Crimson unit"]]
+   B: [["on_damaged", "When I survive damage"], ["generate_cards", "create a random Crimson unit in hand"], ["random_effect", "a random Crimson unit"], ["tribal", "Crimson unit"]]
+750544 | Crimson Disciple | When I survive damage, deal 1 to the enemy Nexus.
+   A: [["on_damaged", "When I survive damage"], ["direct_damage", "deal 1 to the enemy Nexus"]]
+   B: [["on_damaged", "When I survive damage"], ["direct_damage", "deal 1 to the enemy Nexus"], ["ping", "deal 1"]]
+750549 | Reckoning | If you have a 5+ Power ally, kill ALL units with 4 or less Power.
+   A: [["stat_condition", "If you have a 5+ Power ally"], ["board_wipe", "kill ALL units with 4 or less Power"], ["symmetric_effect", "kill ALL units"]]
+   B: [["stat_condition", "If you have a 5+ Power ally"], ["board_wipe", "kill ALL units with 4 or less Power"], ["friendly_fire", "kill ALL units"]]
+750669 | Sumpsnipe Scavenger | Allegiance: Create a Sumpworks Map in hand. It costs 0 this round.
+   A: [["condition_count", "Allegiance"], ["generate_cards", "Create a Sumpworks Map in hand"], ["cost_set", "It costs 0 this round"]]
+   B: [["deck_condition", "Allegiance"], ["generate_cards", "Create a Sumpworks Map in hand"], ["cost_set", "It costs 0 this round"]]
+750704 | Stalking Wolf | Keywords: Challenger. When I'm summoned, your opponent summons a Snow Hare.
+   A: [["on_play", "When I'm summoned"], ["enemy_benefit", "your opponent summons a Snow Hare"]]
+   B: [["blocking", "Challenger"], ["on_play", "When I'm summoned"], ["enemy_benefit", "your opponent summons a Snow Hare"]]
+750718 | She Who Wanders | Keywords: Regeneration. Play: Obliterate ALL units with 4 or less Power in play and in hands.
+   A: [["regeneration", "Regeneration"], ["on_play", "Play"], ["board_wipe", "Obliterate ALL units with 4 or less Power in play"], ["banish", "Obliterate"], ["stat_condition", "4 or less Power"], ["hand_disruption", "in hands"], ["symmetric_effect", "ALL units"]]
+   B: [["regeneration", "Regeneration"], ["on_play", "Play:"], ["banish", "Obliterate ALL units"], ["board_wipe", "Obliterate ALL units with 4 or less Power"], ["stat_condition", "4 or less Power"], ["hand_disruption", "in hands"], ["friendly_fire", "Obliterate ALL units"]]
+750756 | The Harrowing | Revive the 6 strongest allies that died this game and grant them Ephemeral.
+   A: [["revive", "Revive the 6 strongest allies that died this game"], ["self_destruct", "Ephemeral"]]
+   B: [["revive", "Revive the 6 strongest allies that died this game"], ["stat_condition", "6 strongest allies"], ["self_destruct", "Ephemeral"]]
+750757 | The Undying | Keywords: Can't Block, Last Breath. Last Breath: Revive me at the next Round Start and grant me +1|+1 for each time I've died.
+   A: [["cant_block", "Can't Block"], ["death_trigger", "Last Breath"], ["revive", "Revive me at the next Round Start"], ["delayed", "at the next Round Start"], ["stat_gain", "grant me +1|+1"], ["death_count", "for each time I've died"]]
+   B: [["death_trigger", "Last Breath"], ["revive", "Revive me"], ["delayed", "at the next Round Start"], ["stat_gain", "grant me +1|+1"], ["count_payoff", "for each time I've died"]]
+750831 | Plunder Poro | Keywords: Plunder. Plunder: Grant me 2 random keywords.
+   A: [["condition_count", "Plunder"], ["random_ability", "Grant me 2 random keywords"]]
+   B: [["random_ability", "Grant me 2 random keywords"]]
+750840 | Fizz | Keywords: Imbue. When you play a spell, stop all enemy spells and Skills targeting me and give me Elusive this round. Level up: You've played 6+ spells.
+   A: [["on_spell", "When you play a spell"], ["counter_spell", "stop all enemy spells and Skills targeting me"], ["evasion", "give me Elusive this round"], ["temporary_effect", "this round"], ["upgrade", "Level up"], ["count_payoff", "You've played 6+ spells"]]
+   B: [["on_spell", "When you play a spell"], ["protection", "stop all enemy spells and Skills targeting me"], ["evasion", "give me Elusive this round"], ["temporary_effect", "this round"], ["upgrade", "Level up"], ["count_payoff", "You've played 6+ spells"]]
+750887 | Quinn | Keywords: Scout. When I'm summoned, summon Valor. Level up: I've seen you attack 4 times.
+   A: [["on_play", "When I'm summoned"], ["summon", "summon Valor"], ["upgrade", "Level up"], ["count_payoff", "I've seen you attack 4 times"]]
+   B: [["multi_attack", "Scout"], ["on_play", "When I'm summoned"], ["summon", "summon Valor"], ["upgrade", "Level up"], ["count_payoff", "I've seen you attack 4 times"]]
+750912 | Dragon's Rage | An ally kicks an enemy into the enemy Nexus, striking the enemy then the enemy Nexus. / If the enemy survives, Recall it.
+   A: [["damage", "striking the enemy"], ["direct_damage", "then the enemy Nexus"], ["bounce_enemy", "If the enemy survives, Recall it"]]
+   B: [["collision_damage", "An ally kicks an enemy into the enemy Nexus"], ["damage", "striking the enemy"], ["direct_damage", "then the enemy Nexus"], ["bounce_enemy", "Recall it"]]
+750949 | Captain Arrika | Keywords: SpellShield. Play: Capture a unit or landmark.
+   A: [["immunity", "SpellShield"], ["on_play", "Play"], ["removal", "Capture a unit or landmark"]]
+   B: [["shield", "SpellShield"], ["on_play", "Play:"], ["removal", "Capture a unit or landmark"]]
+750965 | Diana | Keywords: Quick Attack. Nightfall or when you activate another Nightfall: Give me Challenger this round. Level up: You've activated Nightfall 4+ times.
+   A: [["first_strike", "Quick Attack"], ["combo_sequence", "Nightfall or when you activate another Nightfall"], ["taunt", "Give me Challenger this round"], ["temporary_effect", "this round"], ["upgrade", "Level up"], ["count_payoff", "You've activated Nightfall 4+ times"]]
+   B: [["first_strike", "Quick Attack"], ["combo_sequence", "Nightfall"], ["blocking", "Give me Challenger this round"], ["temporary_effect", "this round"], ["upgrade", "Level up"], ["count_payoff", "You've activated Nightfall 4+ times"]]
+750985 | Inviolus Vox | Keywords: Fury. Each round, when an ally with Fury kills an enemy for the first time, create a random Dragon follower in hand.
+   A: [["on_kill", "when an ally with Fury kills an enemy"], ["generate_cards", "create a random Dragon follower in hand"], ["random_effect", "random Dragon follower"], ["permanent_growth", "Fury"]]
+   B: [["on_kill", "when an ally with Fury kills an enemy"], ["generate_cards", "create a random Dragon follower in hand"], ["random_effect", "a random Dragon follower"], ["tribal", "Dragon follower"]]
+750988 | Zoe | Keywords: Elusive. Nexus Strike: Create a Supercool Starchart in hand or, if you have one, reduce its cost by 1. Level up: I've seen you play 10 cards with different names.
+   A: [["evasion", "Elusive"], ["direct_damage", "Nexus Strike"], ["generate_cards", "Create a Supercool Starchart in hand"], ["in_hand_buff", "reduce its cost by 1"], ["upgrade", "Level up"], ["variety_payoff", "10 cards with different names"]]
+   B: [["evasion", "Elusive"], ["on_attack", "Nexus Strike"], ["generate_cards", "Create a Supercool Starchart in hand"], ["cost_reduction", "reduce its cost by 1"], ["upgrade", "Level up"], ["variety_payoff", "10 cards with different names"]]
+751033 | Patched Porobot | While in hand, I have a random keyword that changes each round. When I'm summoned, grant me this keyword.
+   A: [["random_ability", "I have a random keyword that changes each round"], ["on_play", "When I'm summoned"]]
+   B: [["random_ability", "I have a random keyword that changes each round"], ["in_hand_buff", "While in hand, I have a random keyword"]]
+751091 | Revitalizing Roar | Pick a unit in hand to reveal. Heal your Nexus equal to its Power. / Enlightened: Reduce its cost to 0.
+   A: [["information", "Pick a unit in hand to reveal"], ["heal", "Heal your Nexus equal to its Power"], ["in_hand_buff", "Reduce its cost to 0"], ["condition_count", "Enlightened"]]
+   B: [["information", "Pick a unit in hand to reveal"], ["heal", "Heal your Nexus equal to its Power"], ["cost_set", "Reduce its cost to 0"]]
+751093 | Trundle | Keywords: Regeneration. When I'm summoned, create an Ice Pillar in hand. Level up: I've seen you play Ice Pillar.
+   A: [["regeneration", "Regeneration"], ["on_play", "When I'm summoned"], ["generate_cards", "create an Ice Pillar in hand"], ["upgrade", "Level up"]]
+   B: [["regeneration", "Regeneration"], ["on_play", "When I'm summoned"], ["generate_cards", "create an Ice Pillar in hand"], ["upgrade", "Level up"], ["count_payoff", "I've seen you play Ice Pillar"]]
+751109 | Defective Swapbot | Play: Swap my stats with another unit.
+   A: [["on_play", "Play"], ["swap", "Swap my stats with another unit"]]
+   B: [["on_play", "Play:"], ["stat_gain", "Swap my stats with another unit"], ["stat_loss", "Swap my stats with another unit"]]
+751152 | Rek'Sai | Keywords: Lurk. When I Lurk or Attack: Grant Lurker allies everywhere +1|+0. / Round End: Place me into your deck. Level up: I've attacked with 10+ Power.
+   A: [["deck_position", "Lurk"], ["on_attack", "Attack"], ["stat_gain", "Grant Lurker allies everywhere +1|+0"], ["tribal", "Lurker allies"], ["in_hand_buff", "everywhere +1|+0"], ["turn_end", "Round End"], ["recycle", "Place me into your deck"], ["upgrade", "Level up"], ["count_payoff", "I've attacked with 10+ Power"]]
+   B: [["on_attack", "Attack"], ["in_hand_buff", "Grant Lurker allies everywhere +1|+0"], ["tribal", "Lurker allies"], ["turn_end", "Round End"], ["upgrade", "Level up"], ["stat_condition", "I've attacked with 10+ Power"]]
+751193 | Emperor's Divide | Give enemies Vulnerable this round and summon 6 Sand Soldiers.
+   A: [["mark_target", "Give enemies Vulnerable this round"], ["temporary_effect", "this round"], ["summon", "summon 6 Sand Soldiers"]]
+   B: [["blocking", "Give enemies Vulnerable this round"], ["temporary_effect", "this round"], ["summon", "summon 6 Sand Soldiers"]]
+751208 | Buried Sun Disc | Keywords: Countdown, Landmark. Start of Game: Summon 1 of me from your deck if it's all Shuriman. / Countdown 25: Restore the Sun Disc. / I advance 9 rounds for each time an Ascended ally has leveled up this game.
+   A: [["delayed", "Countdown 25"], ["start_of_game", "Start of Game"], ["free_play", "Summon 1 of me from your deck"], ["deck_condition", "if it's all Shuriman"], ["alt_wincon", "Restore the Sun Disc"], ["count_payoff", "for each time an Ascended ally has leveled up this game"]]
+   B: [["start_of_game", "Start of Game"], ["free_play", "Summon 1 of me from your deck"], ["deck_condition", "if it's all Shuriman"], ["delayed", "Countdown 25"], ["speed", "I advance 9 rounds"], ["count_payoff", "for each time an Ascended ally has leveled up this game"]]
+751241 | Lissandra | Keywords: Tough. When I'm summoned, summon a Frozen Thrall and advance it 2. Level up: You've summoned 2+ allies that cost 8+. When I level up, create a Watcher in hand.
+   A: [["damage_reduction", "Tough"], ["on_play", "When I'm summoned"], ["summon", "summon a Frozen Thrall"], ["delayed", "advance it 2"], ["upgrade", "Level up"], ["cost_condition", "allies that cost 8+"], ["generate_cards", "create a Watcher in hand"]]
+   B: [["damage_reduction", "Tough"], ["on_play", "When I'm summoned"], ["summon", "summon a Frozen Thrall"], ["speed", "advance it 2"], ["upgrade", "Level up"], ["cost_condition", "allies that cost 8+"], ["generate_cards", "create a Watcher in hand"]]
+751250 | Abominable Guardian | While I'm in hand, Round Start: If you have 2+ Yetis, summon me and create a copy of me in your deck. / Play: Draw a Yeti.
+   A: [["turn_start", "Round Start"], ["tribal", "Yetis"], ["condition_count", "2+ Yetis"], ["free_play", "summon me"], ["generate_cards", "create a copy of me in your deck"], ["on_play", "Play"], ["tutor", "Draw a Yeti"]]
+   B: [["turn_start", "Round Start"], ["condition_count", "2+ Yetis"], ["tribal", "Yetis"], ["free_play", "summon me"], ["copy", "create a copy of me in your deck"], ["on_play", "Play:"], ["tutor", "Draw a Yeti"]]
+751263 | Atakhan, Bringer of Ruin | Keywords: Overwhelm. Play: Revive the Strongest dead ally. / Attack: Grant me Power equal to the total Power of all allies.
+   A: [["excess_damage", "Overwhelm"], ["on_play", "Play"], ["revive", "Revive the Strongest dead ally"], ["on_attack", "Attack"], ["variable_stats", "Grant me Power equal to the total Power of all allies"]]
+   B: [["excess_damage", "Overwhelm"], ["on_play", "Play:"], ["revive", "Revive the Strongest dead ally"], ["stat_condition", "Strongest dead ally"], ["on_attack", "Attack:"], ["variable_stats", "Grant me Power equal to the total Power of all allies"]]
+751268 | Kindred | Keywords: Quick Attack. Each round, the first time you slay a unit, I mark the weakest enemy.  / Round End: Kill units with my mark. Level up: I've seen you slay 2+ units with my mark.
+   A: [["first_strike", "Quick Attack"], ["on_kill", "the first time you slay a unit"], ["mark_target", "I mark the weakest enemy"], ["stat_condition", "weakest enemy"], ["turn_end", "Round End"], ["destroy", "Kill units with my mark"], ["upgrade", "Level up"]]
+   B: [["first_strike", "Quick Attack"], ["on_kill", "the first time you slay a unit"], ["mark_target", "I mark the weakest enemy"], ["stat_condition", "weakest enemy"], ["turn_end", "Round End"], ["destroy", "Kill units with my mark"], ["upgrade", "Level up"], ["count_payoff", "I've seen you slay 2+ units with my mark"]]
+751284 | Crawling Viperwyrm | Keywords: Fury. To play me, I strike an ally or deal 3 to your Nexus.
+   A: [["friendly_fire", "I strike an ally"], ["life_payment", "deal 3 to your Nexus"]]
+   B: [["on_kill", "Fury"], ["friendly_fire", "I strike an ally"], ["life_payment", "deal 3 to your Nexus"], ["modal_choice", "I strike an ally or deal 3 to your Nexus"]]
+751288 | Camavoran Dragon | Keywords: Fury, Fearsome. To play me, I strike an ally or deal 3 to your Nexus. / When I kill another unit, drain 1 from the enemy Nexus.
+   A: [["evasion", "Fearsome"], ["friendly_fire", "I strike an ally"], ["life_payment", "deal 3 to your Nexus"], ["on_kill", "When I kill another unit"], ["lifesteal", "drain 1 from the enemy Nexus"], ["direct_damage", "drain 1 from the enemy Nexus"]]
+   B: [["on_kill", "When I kill another unit"], ["evasion", "Fearsome"], ["friendly_fire", "I strike an ally"], ["life_payment", "deal 3 to your Nexus"], ["lifesteal", "drain 1 from the enemy Nexus"]]
+751300 | Starlit Epiphany | Invoke. / If you have a Celestial ally, replace your deck with 20 copies of Behold the Infinite.
+   A: [["generate_cards", "Invoke"], ["tribal", "Celestial ally"], ["hand_deck_swap", "replace your deck with 20 copies of Behold the Infinite"], ["alt_wincon", "Behold the Infinite"]]
+   B: [["generate_cards", "Invoke"], ["selection", "Invoke"], ["tribal", "Celestial ally"], ["hand_deck_swap", "replace your deck with 20 copies of Behold the Infinite"]]
+751325 | Tristana | Keywords: Quick Attack, Impact. I have +1|+0 for each multi-region ally you've summoned this game. / When you summon a multi-region ally, grant it +1|+0. Level up: You've summoned 5+ multi-region allies.
+   A: [["first_strike", "Quick Attack"], ["count_payoff", "for each multi-region ally you've summoned this game"], ["on_ally_play", "When you summon a multi-region ally"], ["stat_gain", "grant it +1|+0"], ["upgrade", "Level up"]]
+   B: [["first_strike", "Quick Attack"], ["direct_damage", "Impact"], ["count_payoff", "I have +1|+0 for each multi-region ally you've summoned this game"], ["on_ally_play", "When you summon a multi-region ally"], ["stat_gain", "grant it +1|+0"], ["upgrade", "Level up"], ["condition_count", "5+ multi-region allies"]]
+751326 | Minitee | Round End: If you've damaged the enemy Nexus this round, transform me into Megatee.
+   A: [["turn_end", "Round End"], ["direct_damage", "If you've damaged the enemy Nexus this round"], ["transform", "transform me into Megatee"]]
+   B: [["turn_end", "Round End"], ["transform", "transform me into Megatee"]]
+751342 | Gust Monk | When I'm summoned, create a Cloud Stance in hand.
+   A: [["on_play", "When I'm summoned"], ["generate_cards", "create a Cloud Stance in hand"]]
+   B: [["on_play", "When I'm summoned"], ["generate_cards", "create a Cloud Stance in hand"], ["stances", "Cloud Stance"]]
+751347 | Arena Promoter | Keywords: Tough. Play: Discard 1 to Manifest a Mecha Yordle and reduce its cost by 1.
+   A: [["damage_reduction", "Tough"], ["on_play", "Play"], ["discard", "Discard 1"], ["generate_cards", "Manifest a Mecha Yordle"], ["cost_reduction", "reduce its cost by 1"]]
+   B: [["damage_reduction", "Tough"], ["on_play", "Play:"], ["discard", "Discard 1"], ["generate_cards", "Manifest a Mecha Yordle"], ["selection", "Manifest"], ["tribal", "Mecha Yordle"], ["cost_reduction", "reduce its cost by 1"]]
+751364 | The Bandle Tree | Keywords: Landmark. Round Start: Create a follower from a new region in hand. Then, if I've seen allies from 10 regions, win the game.
+   A: [["turn_start", "Round Start"], ["generate_cards", "Create a follower from a new region in hand"], ["variety_payoff", "allies from 10 regions"], ["alt_wincon", "win the game"]]
+   B: [["turn_start", "Round Start"], ["generate_cards", "Create a follower from a new region in hand"], ["variety_payoff", "from a new region"], ["count_payoff", "if I've seen allies from 10 regions"], ["alt_wincon", "win the game"]]
+751380 | Teenydactyl | Round End: If you've damaged the enemy Nexus this round, transform me into Terrordactyl.
+   A: [["turn_end", "Round End"], ["direct_damage", "If you've damaged the enemy Nexus this round"], ["transform", "transform me into Terrordactyl"]]
+   B: [["turn_end", "Round End"], ["transform", "transform me into Terrordactyl"]]
+751436 | Udyr | When I'm summoned or strike: Create a Stance Swap in hand or, if you have one, reduce its cost to 0. Level up: You've played Stance Swap 3+ times.
+   A: [["on_play", "When I'm summoned"], ["on_attack", "strike"], ["generate_cards", "Create a Stance Swap in hand"], ["in_hand_buff", "reduce its cost to 0"], ["upgrade", "Level up"]]
+   B: [["on_play", "When I'm summoned"], ["on_attack", "strike"], ["generate_cards", "Create a Stance Swap in hand"], ["cost_set", "reduce its cost to 0"], ["stances", "Stance Swap"], ["upgrade", "Level up"], ["count_payoff", "You've played Stance Swap 3+ times"]]
+751437 | Shaman's Call | Create 2 Fleeting 0 cost Stance Swaps in hand.
+   A: [["generate_cards", "Create 2 Fleeting 0 cost Stance Swaps in hand"]]
+   B: [["generate_cards", "Create 2 Fleeting 0 cost Stance Swaps in hand"], ["cost_set", "0 cost"], ["stances", "Stance Swaps"]]
+751438 | Hyara Allseer | When I'm summoned, create a Stance Swap in hand.  / The first Stance Swap you play each round costs 0.
+   A: [["on_play", "When I'm summoned"], ["generate_cards", "create a Stance Swap in hand"], ["cost_set", "The first Stance Swap you play each round costs 0"]]
+   B: [["on_play", "When I'm summoned"], ["generate_cards", "create a Stance Swap in hand"], ["stances", "Stance Swap"], ["cost_set", "costs 0"]]
+751440 | Inner Beast | Give an ally +1|+1 this round. Create a Stance Swap in hand.
+   A: [["temporary_buff", "Give an ally +1|+1 this round"], ["generate_cards", "Create a Stance Swap in hand"]]
+   B: [["temporary_buff", "Give an ally +1|+1 this round"], ["generate_cards", "Create a Stance Swap in hand"], ["stances", "Stance Swap"]]
+751444 | Vulpine Wanderer | When I'm summoned, create a Stance Swap in hand.
+   A: [["on_play", "When I'm summoned"], ["generate_cards", "create a Stance Swap in hand"]]
+   B: [["on_play", "When I'm summoned"], ["generate_cards", "create a Stance Swap in hand"], ["stances", "Stance Swap"]]
+751451 | Children of the Forest | Recall an ally, or spend 8 mana to summon Ephemeral copies of the 3 strongest followers you've Recalled this game.
+   A: [["return_to_hand", "Recall an ally"], ["kicker", "spend 8 mana"], ["copy", "summon Ephemeral copies of the 3 strongest followers you've Recalled this game"], ["count_payoff", "you've Recalled this game"], ["self_destruct", "Ephemeral"]]
+   B: [["return_to_hand", "Recall an ally"], ["kicker", "spend 8 mana"], ["summon", "summon Ephemeral copies of the 3 strongest followers"], ["copy", "Ephemeral copies"], ["self_destruct", "Ephemeral"], ["stat_condition", "the 3 strongest followers"], ["count_payoff", "you've Recalled this game"]]
+751493 | Justice Rider | Whenever your opponent draws, plant 1 Flashbomb Trap in the top 8 cards of the enemy deck.
+   A: [["reactions", "Whenever your opponent draws"], ["trap_secret", "plant 1 Flashbomb Trap in the top 8 cards of the enemy deck"]]
+   B: [["reactions", "Whenever your opponent draws"], ["junk_cards", "plant 1 Flashbomb Trap in the top 8 cards of the enemy deck"], ["deck_position", "the top 8 cards of the enemy deck"]]
+751505 | Corina, Mastermind | Play: Plant 5 Flashbomb Traps in the top 5 cards of the enemy deck or activate the effects of all traps in the top 5 cards of the enemy deck.
+   A: [["on_play", "Play"], ["trap_secret", "Plant 5 Flashbomb Traps in the top 5 cards of the enemy deck"], ["modal_choice", "or activate the effects of all traps"], ["deck_position", "top 5 cards of the enemy deck"]]
+   B: [["on_play", "Play:"], ["junk_cards", "Plant 5 Flashbomb Traps in the top 5 cards of the enemy deck"], ["trap_secret", "Flashbomb Traps"], ["deck_position", "the top 5 cards of the enemy deck"], ["modal_choice", "or activate the effects of all traps"]]
+751509 | Caitlyn | Keywords: Quick Attack. Strike: Plant 2 Flashbomb Traps in the top 8 cards of the enemy deck. Level up: 5+ of your traps have been activated.
+   A: [["first_strike", "Quick Attack"], ["on_attack", "Strike"], ["trap_secret", "Plant 2 Flashbomb Traps in the top 8 cards of the enemy deck"], ["upgrade", "Level up"], ["count_payoff", "5+ of your traps have been activated"]]
+   B: [["first_strike", "Quick Attack"], ["on_attack", "Strike:"], ["trap_secret", "Plant 2 Flashbomb Traps in the top 8 cards of the enemy deck"], ["junk_cards", "Plant 2 Flashbomb Traps"], ["deck_position", "top 8 cards of the enemy deck"], ["upgrade", "Level up"], ["count_payoff", "5+ of your traps have been activated"]]
+751540 | Gorlith the Unscalable | Keywords: Formidable, Tough. Play: Swap my Health and your Nexus' Health.  / I can't be blocked by enemies with less Health than me.
+   A: [["tank", "Formidable"], ["on_play", "Play"], ["swap", "Swap my Health and your Nexus' Health"], ["evasion", "I can't be blocked by enemies with less Health than me"]]
+   B: [["damage_reduction", "Tough"], ["on_play", "Play:"], ["stat_gain", "Swap my Health and your Nexus' Health"], ["evasion", "I can't be blocked by enemies with less Health than me"], ["stat_condition", "enemies with less Health than me"]]
+751553 | Strategic Execution | Stun 2 enemies or spend 6 mana to summon a Legion General.
+   A: [["disable", "Stun 2 enemies"], ["scope_multi", "2 enemies"], ["kicker", "spend 6 mana to summon a Legion General"], ["summon", "summon a Legion General"]]
+   B: [["disable", "Stun 2 enemies"], ["modal_choice", "or spend 6 mana"], ["kicker", "spend 6 mana to summon a Legion General"], ["summon", "summon a Legion General"]]

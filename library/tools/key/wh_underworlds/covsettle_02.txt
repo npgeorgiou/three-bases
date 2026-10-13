@@ -1,0 +1,57 @@
+765925 | Venombite Weapons | Poison Play this only if there are one or more poison gambits in your power discard pile. When you give this upgrade to a fighter, pick up to one poison gambit from your power discard pile and put it beneath this card. Reaction: After this fighter's successful Attack action, place the poison gambit beneath this card in your hand. Then pick up to one poison gambit from your power discard pile and put it beneath this card.
+   A: [["play_restriction", "Play this only if there are one or more poison gambits in your power discard pile"], ["graveyard", "pick up to one poison gambit from your power discard pile"], ["recycle", "place the poison gambit beneath this card in your hand"], ["reactions", "Reaction: After this fighter's successful Attack action"], ["tribal", "poison gambit"]]
+   B: [["play_restriction", "Play this only if"], ["graveyard", "poison gambits in your power discard pile"], ["reactions", "Reaction:"], ["on_attack", "After this fighter's successful Attack action"], ["recycle", "place the poison gambit beneath this card in your hand"]]
+765926 | Wicked Hunter | Poison Reaction: After you play a poison gambit, push this fighter 1 hex, then stagger each enemy fighter adjacent to this fighter.
+   A: [["reactions", "Reaction: After you play a poison gambit"], ["on_spell", "After you play a poison gambit"], ["movement", "push this fighter 1 hex"], ["disable", "stagger each enemy fighter adjacent to this fighter"], ["adjacency", "adjacent to this fighter"], ["tribal", "poison gambit"]]
+   B: [["reactions", "Reaction:"], ["on_spell", "After you play a poison gambit"], ["movement", "push this fighter 1 hex"], ["debuff", "stagger each enemy fighter adjacent to this fighter"], ["adjacency", "adjacent to this fighter"]]
+796394 | Deny Trespassers | Friendly fighters in friendly territory cannot be Flanked or Surrounded.
+   A: [["flanking", "cannot be Flanked or Surrounded"], ["territory_trigger", "in friendly territory"]]
+   B: [["positional", "in friendly territory"], ["immunity", "cannot be Flanked or Surrounded"], ["flanking", "Flanked or Surrounded"]]
+796402 | Purge the Weak | Once per game: pick an enemy with a Stagger token; until the next turn friendly melee weapons get +1 Attack dice against it.
+   A: [["once_per_game", "Once per game"], ["stat_gain", "+1 Attack dice"], ["mark_target", "pick an enemy with a Stagger token"], ["temporary_effect", "until the next turn"]]
+   B: [["once_per_game", "Once per game"], ["mark_target", "pick an enemy with a Stagger token"], ["stat_gain", "+1 Attack dice"], ["temporary_buff", "until the next turn"]]
+796416 | Kunnin' | Start of the first Action step each battle round, if your leader is on the battlefield: you may discard an Upgrade equipped by a friendly fighter, then add a Ploy from your Power discard pile to your hand (each Ploy at most once per game).
+   A: [["turn_start", "Start of the first Action step each battle round"], ["discard", "discard an Upgrade equipped by a friendly fighter"], ["recycle", "add a Ploy from your Power discard pile to your hand"], ["graveyard", "Power discard pile"]]
+   B: [["turn_start", "Start of the first Action step"], ["discard", "discard an Upgrade"], ["recycle", "add a Ploy from your Power discard pile to your hand"], ["once_per_game", "at most once per game"]]
+796418 | 'Ave 'Is Ya Git! | Once per game, immediately after an enemy Charges: a friendly fighter adjacent to the charger may Attack it.
+   A: [["once_per_game", "Once per game"], ["reactions", "immediately after an enemy Charges"], ["counterattack", "may Attack it"], ["adjacency", "adjacent to the charger"]]
+   B: [["once_per_game", "Once per game"], ["reactions", "immediately after an enemy Charges"], ["attack_now", "may Attack it"], ["adjacency", "adjacent to the charger"]]
+796432 | Scheming Pack | Friendly melee weapons have Grievous against targets that are Flanked or Surrounded.
+   A: [["piercing", "Grievous"], ["flanking", "Flanked or Surrounded"]]
+   B: [["scope_multi", "Friendly melee weapons"], ["buff", "Grievous"], ["flanking", "Flanked or Surrounded"]]
+796447 | Soul Harvest | Power step, once per game: pick an Inspired enemy; its owner chooses to Uninspire it or let you draw Power cards equal to the battle round.
+   A: [["once_per_game", "once per game"], ["modal_choice", "its owner chooses"], ["draw", "draw Power cards equal to the battle round"], ["turn_number", "equal to the battle round"], ["rewind", "Uninspire it"]]
+   B: [["once_per_game", "once per game"], ["modal_choice", "its owner chooses"], ["draw", "draw Power cards equal to the battle round"], ["turn_number", "equal to the battle round"]]
+796449 | Cyreni Inspire | At the start of each combat phase, Inspire as many friendly fighters as the battle round number; at the start of each round, Uninspire each friendly fighter.
+   A: [["combat_start", "At the start of each combat phase"], ["upgrade", "Inspire as many friendly fighters"], ["turn_number", "as the battle round number"], ["turn_start", "at the start of each round"], ["rewind", "Uninspire each friendly fighter"]]
+   B: [["combat_start", "At the start of each combat phase"], ["upgrade", "Inspire as many friendly fighters"], ["turn_number", "as the battle round number"], ["turn_start", "at the start of each round"]]
+796452 | Aetherically Charged Maul | Once per game, after you pick a weapon for an Attack by a friendly shield-bearer: the weapon has +1 Range for that Attack.
+   A: [["once_per_game", "Once per game"], ["ranged", "+1 Range"], ["tribal", "shield-bearer"], ["temporary_effect", "for that Attack"]]
+   B: [["once_per_game", "Once per game"], ["ranged", "+1 Range"], ["temporary_buff", "for that Attack"], ["tribal", "shield-bearer"]]
+796459 | Schemin' Gitz | Instead of playing a Ploy in the opponent's Power step, discard Ploys for effects that last until the end of your next turn and add up: 1 card, friendly fighters +1 Move; 2, enemies are Flanked; 3, friendly weapons +1 Attack dice.
+   A: [["discard", "discard Ploys"], ["condition_count", "add up"], ["stat_gain", "+1 Move"], ["flanking", "enemies are Flanked"], ["temporary_effect", "until the end of your next turn"], ["cost_type", "Instead of playing a Ploy"]]
+   B: [["cost_type", "Instead of playing a Ploy"], ["discard", "discard Ploys"], ["temporary_effect", "until the end of your next turn"], ["stat_gain", "+1 Move"], ["flanking", "enemies are Flanked"], ["stat_gain", "+1 Attack dice"]]
+796461 | Fulminating Hymn | At the start of the combat phase choose one hymn; while you have 2 or more friendly fighters, each can use it: Charged Aura (friendly fighters cannot be Flanked), Reckless Abandon (instead of taking a Charge token, a fighter may take 1 damage), Faithful Dynamos (friendly weapons have Stagger).
+   A: [["combat_start", "At the start of the combat phase"], ["modal_choice", "choose one hymn"], ["condition_count", "2 or more friendly fighters"], ["flanking", "cannot be Flanked"], ["life_payment", "a fighter may take 1 damage"], ["disable", "Stagger"]]
+   B: [["combat_start", "At the start of the combat phase"], ["modal_choice", "choose one hymn"], ["condition_count", "2 or more friendly fighters"], ["immunity", "friendly fighters cannot be Flanked"], ["flanking", "Flanked"], ["life_payment", "a fighter may take 1 damage"], ["buff", "friendly weapons have Stagger"]]
+796466 | Brethren Inspire | Friendly fighters start the game Inspired; after an Action step in which a friendly fighter was conducting, Inspire it; after a friendly fighter's successful Attack, Uninspire it.
+   A: [["start_of_game", "start the game Inspired"], ["upgrade", "Inspire it"], ["rewind", "Uninspire it"]]
+   B: [["start_of_game", "start the game Inspired"], ["upgrade", "Inspire it"], ["on_attack", "after a friendly fighter's successful Attack"]]
+814420 | Remembered Shield | This fighter's Defence characteristic changes to :dfBlock:.
+   A: [["stat_gain", "Defence characteristic changes to :dfBlock:"]]
+   B: [["buff", "Defence characteristic changes to :dfBlock:"]]
+814422 | Slaying Blow | If the first Attack action in the next activation is a critical hit, double its Damage characteristic.
+   A: [["stat_multiply", "double its Damage characteristic"], ["random_effect", "is a critical hit"], ["temporary_effect", "in the next activation"], ["delayed", "in the next activation"]]
+   B: [["stat_multiply", "double its Damage characteristic"], ["temporary_buff", "in the next activation"], ["random_effect", "is a critical hit"]]
+814428 | Lethal Strike | If the first Attack action in the next activation is a critical hit, double its Damage characteristic for that Attack action.
+   A: [["stat_multiply", "double its Damage characteristic"], ["random_effect", "is a critical hit"], ["temporary_effect", "for that Attack action"], ["delayed", "in the next activation"]]
+   B: [["stat_multiply", "double its Damage characteristic"], ["temporary_buff", "for that Attack action"], ["random_effect", "is a critical hit"]]
+814444 | Arcanite Shield | This fighter's Defence characteristic changes to :dfBlock:.
+   A: [["stat_gain", "Defence characteristic changes to :dfBlock:"]]
+   B: [["buff", "Defence characteristic changes to :dfBlock:"]]
+814473 | Stealthy Blade | [:Hex: 1 - :atSmash: 2 - :boom: 2] Players cannot use reactions during this Attack action.
+   A: [["counter_spell", "Players cannot use reactions during this Attack action"], ["rule_change", "Players cannot use reactions"]]
+   B: [["rule_change", "Players cannot use reactions during this Attack action"]]
+814483 | Phantasmal Forms | In the next activation, friendly fighters have a Defence characteristic of :dfDodge: 3.
+   A: [["stat_gain", "Defence characteristic of :dfDodge: 3"], ["temporary_effect", "In the next activation"], ["scope_multi", "friendly fighters"]]
+   B: [["temporary_buff", "In the next activation"], ["stat_gain", "Defence characteristic of :dfDodge: 3"], ["scope_multi", "friendly fighters"]]

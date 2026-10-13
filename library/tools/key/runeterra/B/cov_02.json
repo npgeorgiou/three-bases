@@ -1,0 +1,834 @@
+{
+"752048": [
+[
+"counter_spell",
+"Stop an enemy Fast spell, Slow spell, or Skill"
+],
+[
+"bounce_enemy",
+"Recall an enemy"
+],
+[
+"summon",
+"summon The Empyrean"
+]
+],
+"796495": [
+[
+"on_spell",
+"When you play a spell"
+],
+[
+"protection",
+"stop all enemy spells and Skills targeting me"
+],
+[
+"evasion",
+"give me Elusive this round"
+],
+[
+"temporary_effect",
+"this round"
+],
+[
+"on_attack",
+"Nexus Strike"
+],
+[
+"generate_cards",
+"Create a Chum the Waters in hand"
+]
+],
+"750840": [
+[
+"on_spell",
+"When you play a spell"
+],
+[
+"protection",
+"stop all enemy spells and Skills targeting me"
+],
+[
+"evasion",
+"give me Elusive this round"
+],
+[
+"temporary_effect",
+"this round"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"You've played 6+ spells"
+]
+],
+"797068": [
+[
+"blocking",
+"Challenger"
+],
+[
+"damage_reduction",
+"Tough"
+],
+[
+"cost_increase",
+"Your opponent's spells cost 2 more while I am attacking"
+]
+],
+"751648": [
+[
+"cost_increase",
+"ALL spells cost 2 more"
+],
+[
+"symmetric_effect",
+"ALL spells cost 2 more"
+],
+[
+"delayed",
+"Countdown 2"
+]
+],
+"797181": [
+[
+"draw",
+"draw another card"
+],
+[
+"cost_condition",
+"costs more than the card you Updrafted"
+]
+],
+"752026": [
+[
+"cost_increase",
+"Increase the cost of enemy Curses everywhere by 1"
+]
+],
+"796968": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"damage",
+"Deal 2 to a unit"
+],
+[
+"trap_secret",
+"plant 2 Flashbomb Traps in the top 8 cards of the enemy deck"
+],
+[
+"junk_cards",
+"plant 2 Flashbomb Traps"
+],
+[
+"deck_position",
+"top 8 cards of the enemy deck"
+],
+[
+"generate_cards",
+"Create a Caitlyn in your deck"
+]
+],
+"751509": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_attack",
+"Strike:"
+],
+[
+"trap_secret",
+"Plant 2 Flashbomb Traps in the top 8 cards of the enemy deck"
+],
+[
+"junk_cards",
+"Plant 2 Flashbomb Traps"
+],
+[
+"deck_position",
+"top 8 cards of the enemy deck"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"5+ of your traps have been activated"
+]
+],
+"750704": [
+[
+"blocking",
+"Challenger"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"enemy_benefit",
+"your opponent summons a Snow Hare"
+]
+],
+"750828": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"enemy_benefit",
+"your opponent summons a Golden Narwhal"
+]
+],
+"751512": [
+[
+"bounce_enemy",
+"Place an enemy follower into the enemy deck"
+],
+[
+"enemy_benefit",
+"your opponent draws 1"
+]
+],
+"751804": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"death_trigger",
+"Last Breath"
+],
+[
+"summon",
+"summon a Darkinthrall"
+],
+[
+"kicker",
+"You may spend 6 mana and kill an ally to play me as Xolaani"
+],
+[
+"sacrifice",
+"kill an ally"
+]
+],
+"797228": [
+[
+"discard",
+"To play, discard 1"
+],
+[
+"generate_cards",
+"Invoke a Celestial card"
+],
+[
+"selection",
+"Invoke"
+],
+[
+"cost_condition",
+"costs 7 or more"
+]
+],
+"750639": [
+[
+"on_play",
+"Play:"
+],
+[
+"discard",
+"Discard your hand"
+],
+[
+"draw",
+"Draw 3"
+],
+[
+"damage",
+"Deal 3 to an enemy"
+]
+],
+"750411": [
+[
+"cant_attack",
+"Can't attack or block"
+]
+],
+"750372": [
+[
+"board_limit",
+"Landmarks take up a space on the board"
+],
+[
+"cant_attack",
+"They can't attack, block"
+],
+[
+"immunity",
+"or take damage"
+]
+],
+"797147": [
+[
+"play_restriction",
+"you can't play spells other than curses"
+]
+],
+"751422": [
+[
+"generate_cards",
+"Fill your hand with random cards"
+],
+[
+"random_effect",
+"random cards"
+],
+[
+"cost_set",
+"They cost 0"
+],
+[
+"play_restriction",
+"You can only play 3 more cards this round"
+]
+],
+"796523": [
+[
+"upgrade",
+"When I level up"
+],
+[
+"hand_deck_swap",
+"replace your deck with the Emperor's Deck"
+],
+[
+"draw",
+"draw 1"
+],
+[
+"on_attack",
+"When allies attack"
+],
+[
+"summon",
+"summon an attacking Sandstone Charger"
+]
+],
+"751300": [
+[
+"generate_cards",
+"Invoke"
+],
+[
+"selection",
+"Invoke"
+],
+[
+"tribal",
+"Celestial ally"
+],
+[
+"hand_deck_swap",
+"replace your deck with 20 copies of Behold the Infinite"
+]
+],
+"750393": [
+[
+"assists_support",
+"Attacking with a support unit will buff the unit to its right"
+],
+[
+"adjacency",
+"the unit to its right"
+],
+[
+"buff",
+"buff the unit"
+]
+],
+"751295": [
+[
+"assists_support",
+"When I'm supported"
+],
+[
+"temporary_buff",
+"give me and my supporting ally +1|+1 this round"
+]
+],
+"750737": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"stat_gain",
+"grant me +1|+1"
+],
+[
+"death_count",
+"for each ally that has died"
+]
+],
+"752062": [
+[
+"death_trigger",
+"Whenever a non-Tentacle ally dies"
+],
+[
+"tribal",
+"non-Tentacle"
+],
+[
+"summon",
+"Spawn 2"
+]
+],
+"751679": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"variable_stats",
+"I have +2|+2 for each ally that died"
+],
+[
+"death_count",
+"for each ally that died with its power increased"
+],
+[
+"condition_count",
+"Empowered 16"
+],
+[
+"transform",
+"Transform me into Xolaani, Aspect's Bane"
+]
+],
+"751829": [
+[
+"turn_end",
+"Round End"
+],
+[
+"death_count",
+"For each ally that died this round"
+],
+[
+"in_hand_buff",
+"grant all allied copies of it everywhere +1|+1"
+]
+],
+"751803": [
+[
+"turn_start",
+"Round Start"
+],
+[
+"friendly_fire",
+"Deal 4 to me"
+],
+[
+"tutor",
+"Draw a champion"
+],
+[
+"stat_gain",
+"grant it +2|+2"
+],
+[
+"deckbuilding_effect",
+"If your deck started with 6+ different champions"
+],
+[
+"variety_payoff",
+"6+ different champions"
+],
+[
+"free_play",
+"summon it instead"
+]
+],
+"750636": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"hand_size",
+"I see your hand is empty"
+]
+],
+"751019": [
+[
+"generate_cards",
+"Fill your hand with Gems"
+]
+],
+"796735": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"generate_cards",
+"Fill your hand with random Fleeting Celestial cards"
+],
+[
+"random_effect",
+"random Fleeting Celestial cards"
+],
+[
+"resource_gain",
+"Refill your mana to full"
+]
+],
+"750470": [
+[
+"cost_reduction",
+"Reduce the cost of Storm Conduits in your hand by 1"
+]
+],
+"797138": [
+[
+"stacking_keyword",
+"Sigils of the Storm stack"
+],
+[
+"cost_reduction",
+"Titanic allies cost 1 less"
+],
+[
+"tribal",
+"Titanic allies"
+],
+[
+"self_destruct",
+"Destroy me when you play a Titanic ally"
+],
+[
+"on_ally_play",
+"when you play a Titanic ally"
+]
+],
+"751356": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"temporary_buff",
+"Give me Power this round"
+],
+[
+"variable_stats",
+"equal to the number of other Fae allies"
+],
+[
+"tribal",
+"Fae allies"
+]
+],
+"751613": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_attack",
+"Attack:"
+],
+[
+"summon",
+"Spawn 1"
+],
+[
+"variable_stats",
+"I gain Power equal to your strongest Tentacle's Power this round"
+],
+[
+"temporary_buff",
+"this round"
+],
+[
+"tribal",
+"Tentacle"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"deal 15+ damage"
+]
+],
+"750988": [
+[
+"evasion",
+"Elusive"
+],
+[
+"on_attack",
+"Nexus Strike"
+],
+[
+"generate_cards",
+"Create a Supercool Starchart in hand"
+],
+[
+"cost_reduction",
+"reduce its cost by 1"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"variety_payoff",
+"10 cards with different names"
+]
+],
+"751885": [
+[
+"kicker",
+"Spend 6 mana to play me as Frostcoat Mother instead"
+]
+],
+"751828": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"sacrifice",
+"To play me, kill an ally"
+],
+[
+"kicker",
+"You may spend 10 mana to play me as Taarosh"
+]
+],
+"751712": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"condition_count",
+"Empowered 8"
+],
+[
+"regeneration",
+"Regeneration"
+]
+],
+"751553": [
+[
+"disable",
+"Stun 2 enemies"
+],
+[
+"modal_choice",
+"or spend 6 mana"
+],
+[
+"kicker",
+"spend 6 mana to summon a Legion General"
+],
+[
+"summon",
+"summon a Legion General"
+]
+],
+"751622": [
+[
+"summon",
+"Spawn 2"
+],
+[
+"kicker",
+"spend 5 mana to Spawn 4 instead"
+]
+],
+"751451": [
+[
+"return_to_hand",
+"Recall an ally"
+],
+[
+"kicker",
+"spend 8 mana"
+],
+[
+"summon",
+"summon Ephemeral copies of the 3 strongest followers"
+],
+[
+"copy",
+"Ephemeral copies"
+],
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"stat_condition",
+"the 3 strongest followers"
+],
+[
+"count_payoff",
+"you've Recalled this game"
+]
+],
+"751284": [
+[
+"on_kill",
+"Fury"
+],
+[
+"friendly_fire",
+"I strike an ally"
+],
+[
+"life_payment",
+"deal 3 to your Nexus"
+],
+[
+"modal_choice",
+"I strike an ally or deal 3 to your Nexus"
+]
+],
+"796623": [
+[
+"trap_secret",
+"Trap"
+],
+[
+"direct_damage",
+"Deal 1 to your Nexus"
+],
+[
+"ping",
+"Deal 1"
+]
+],
+"751288": [
+[
+"on_kill",
+"When I kill another unit"
+],
+[
+"evasion",
+"Fearsome"
+],
+[
+"friendly_fire",
+"I strike an ally"
+],
+[
+"life_payment",
+"deal 3 to your Nexus"
+],
+[
+"lifesteal",
+"drain 1 from the enemy Nexus"
+]
+],
+"751744": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"on_attack",
+"Attack:"
+],
+[
+"summon",
+"Summon an attacking Dragonling"
+],
+[
+"kicker",
+"You may spend 9 mana to play me as Praa the Breachwalker"
+]
+],
+"751862": [
+[
+"generate_cards",
+"Create 3 Coins in hand"
+]
+],
+"751786": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"evasion",
+"Fearsome"
+],
+[
+"on_attack",
+"Attack:"
+],
+[
+"draw",
+"Draw 1 at next Round Start"
+],
+[
+"delayed",
+"at next Round Start"
+],
+[
+"kicker",
+"You may spend 9 mana to play me as Ibaaros"
+]
+],
+"797095": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"bounce_enemy",
+"Recall an enemy"
+],
+[
+"generate_cards",
+"create a Coin in hand"
+]
+],
+"752262": [
+[
+"generate_cards",
+"Create 2 Coins in hand"
+]
+]
+}

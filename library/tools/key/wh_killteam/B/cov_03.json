@@ -1,0 +1,1126 @@
+{
+"790678": [
+[
+"control_reward",
+"an enemy operative that contests a marker"
+],
+[
+"buff",
+"that Leagues of Vontann operative's weapons have the Balanced weapon rule"
+],
+[
+"territory_trigger",
+"wholly within enemy territory"
+],
+[
+"condition_count",
+"if two or more fails are rolled for it"
+],
+[
+"random_effect",
+"re-roll another"
+],
+[
+"damage_reduction",
+"one of its defence dice can be retained as a normal success without rolling it"
+],
+[
+"debuff",
+"Worsen the hit stat of the Ork Nemesis operatives' ranged weapons by 1"
+],
+[
+"regeneration",
+"In the ready step of each Strategy phase, each Necron NPO and friendly Necron Nemesis operative regains up to D3+1 lost wounds"
+],
+[
+"adjacency",
+"within 3\" of another"
+],
+[
+"immunity",
+"Ignore the changes to Tyranid NPO and Tyranid Nemesis operatives' stats from being injured"
+],
+[
+"on_attack",
+"Whenever this operative performs the Charge action"
+],
+[
+"temporary_buff",
+"until the end of that activation"
+],
+[
+"damage",
+"inflict D3+3 damage on one enemy operative within its control range"
+],
+[
+"first_strike",
+"resolve one of its successes before the normal order"
+],
+[
+"shield",
+"Once per battle, when an attack dice inflicts damage on his operative, you can ignore that inflicted damage"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"death_trigger",
+"If this operative is incapacitated, before it's removed from the killzone"
+],
+[
+"aoe_damage",
+"inflice D6+1 damage on each other operative within 3\" of it"
+],
+[
+"friendly_fire",
+"each other operative within 3\" of it"
+],
+[
+"tribal",
+"Tyranid NPO"
+],
+[
+"targeting_rules",
+"the closest valid target"
+],
+[
+"stat_condition",
+"Normal Dmg stat of 3 or less"
+],
+[
+"condition_life",
+"unless this operative is injured"
+],
+[
+"evasion",
+"This operative can move through other operatives"
+],
+[
+"piercing",
+"This operative cannot be in cover or obscured"
+],
+[
+"terrain",
+"temporarily remove that terrain feature from the killzone"
+],
+[
+"modal_choice",
+"Leagues of Vontann: Acquisition at all costs"
+]
+],
+"814881": [
+[
+"piercing",
+"Your opponent can only block with critical successes"
+]
+],
+"789236": [
+[
+"damage_reduction",
+"you can choose for that attack dice to inflict Normal Damage instead"
+]
+],
+"814774": [
+[
+"counterattack",
+"each time you parry with a critical hit, also inflict damage"
+]
+],
+"789223": [
+[
+"once_per_game",
+"Once per Turning Point"
+],
+[
+"damage_reduction",
+"that attack dice inflicts Normal Damage instead"
+]
+],
+"790297": [
+[
+"stat_gain",
+"add 1 to the Critical Damage characteristic"
+],
+[
+"terrain",
+"within shadow"
+]
+],
+"789342": [
+[
+"stat_gain",
+"Add 1 to its Critical Damage characteristic"
+],
+[
+"buff",
+"It gains the Lethal 5+ special rule"
+],
+[
+"merge_attach",
+"Select a combat knife or combat blade this operative is equipped with"
+]
+],
+"789279": [
+[
+"stat_gain",
+"Add 1 to the attacks characteristic"
+],
+[
+"merge_attach",
+"the double-handed chain axe the operatiev is equipped with"
+]
+],
+"790484": [
+[
+"immunity",
+"ignore the Piercing weapon rule"
+],
+[
+"damage",
+"inflict 1 damage on the enemy operative in that sequence"
+],
+[
+"condition_life",
+"already wounded when the action started"
+],
+[
+"buff",
+"this operative's weapons have the Balanced weapon rule"
+],
+[
+"on_kill",
+"The first time this operative incapacitates an enemy operative"
+],
+[
+"resource_gain",
+"gain 1 additional CP"
+],
+[
+"modal_choice",
+"you can either gain 1 additional CP or use an additional WARRANT OF TRADE rule"
+]
+],
+"790558": [
+[
+"reactions",
+"Whenever an enemy operative would perform the Fall Back action"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stat_condition",
+"has a higher Wounds stat than this operative"
+],
+[
+"condition_life",
+"if that enemy operative is wounded"
+],
+[
+"immobilize",
+"that enemy operative cannot perform that action"
+],
+[
+"zone_of_control",
+"Whenever an enemy operative would perform the Fall Back action while within control range of this operative"
+],
+[
+"death_trigger",
+"Whenever an enemy operative is incapacitated within this operative’s control range"
+],
+[
+"resource_gain",
+"you gain 1CP"
+]
+],
+"790513": [
+[
+"speed",
+"you must then activate one other ready friendly GELLERPOX INFECTED MUTOID VERMIN operative"
+],
+[
+"tribal",
+"GELLERPOX INFECTED MUTOID VERMIN"
+],
+[
+"condition_life",
+"against a wounded operative"
+],
+[
+"stat_gain",
+"add 1 to the Atk stat of this weapon"
+],
+[
+"buff",
+"it has the Lethal 5+ weapon rule"
+]
+],
+"790655": [
+[
+"aura",
+"Whenever an enemy operative within 3\" of this operative"
+],
+[
+"debuff",
+"your opponent cannot re-roll their attack dice"
+],
+[
+"condition_life",
+"against a wounded enemy operative"
+],
+[
+"buff",
+"have the Lethal 4+ weapon rule"
+]
+],
+"790562": [
+[
+"immunity",
+"isn’t affected by enemy operatives’ Shock and Stun weapon rules"
+],
+[
+"condition_life",
+"against a wounded enemy operative"
+],
+[
+"buff",
+"this operative’s weapons have the Relentless weapon rule"
+]
+],
+"790490": [
+[
+"damage_reduction",
+"inflict Normal Dmg instead"
+],
+[
+"condition_life",
+"against a wounded enemy operative"
+],
+[
+"buff",
+"this operative’s weapons have the Lethal 5+ weapon rule"
+]
+],
+"789298": [
+[
+"death_count",
+"Each time an operative is incapacitated, add 1 to the Misery tally"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"heal",
+"regains a number of lost wounds equal to your Misery tally"
+]
+],
+"790538": [
+[
+"trap_secret",
+"Minefield markers"
+],
+[
+"information",
+"their specifics aren’t revealed"
+],
+[
+"start_of_game",
+"Set up all your Minefield markers as if they were one item of equipment"
+],
+[
+"placement_rules",
+"more than 6\" from your opponent’s drop zone"
+],
+[
+"on_enemy_enter",
+"within an enemy operative’s control range"
+],
+[
+"damage",
+"inflict 3 damage on that enemy operative"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stat_condition",
+"less than that enemy operative’s Save stat"
+],
+[
+"counter_spell",
+"end its action"
+],
+[
+"recycle",
+"reset one of your flipped Minefield markers"
+]
+],
+"790201": [
+[
+"tribal",
+"CRYPTEK"
+],
+[
+"targeting_rules",
+"treat that friendly CRYPTEK operative as the active operative for the purposes of determining Line of Sight"
+],
+[
+"random_effect",
+"re-roll any or all of your attack dice results of one result"
+],
+[
+"activated",
+"Apprentek Assistance (1AP)"
+],
+[
+"copy",
+"Perform a free Cryptek action with this operative that a friendly CRYPTEK operative from your kill team has gained"
+],
+[
+"piercing",
+"AP1"
+]
+],
+"790315": [
+[
+"death_trigger",
+"Each time a friendly NOVITIATE operative is incapacitated"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"attack_now",
+"immediately perform a free Shoot action"
+],
+[
+"activated",
+"Plant the Icon (1AP)"
+],
+[
+"zone_control",
+"when determining who controls that objective marker"
+],
+[
+"debuff",
+"halve the APL of enemy operatives"
+]
+],
+"790633": [
+[
+"zone_control",
+"determining control of a marker"
+],
+[
+"rule_change",
+"treat this operative’s APL stat as 1 higher"
+],
+[
+"turn_start",
+"In the Ready step of each Strategy phase"
+],
+[
+"control_reward",
+"if this operative controls an objective marker that isn't tainted"
+],
+[
+"resource_gain",
+"you gain 1CP"
+]
+],
+"816490": [
+[
+"tribal",
+"HEARTHKYN SALVAGER"
+],
+[
+"control_reward",
+"if it’s within ⬤ of an objective marker"
+],
+[
+"damage_reduction",
+"subtract 1 from the damage inflicted on it"
+]
+],
+"790158": [
+[
+"aura",
+"while within ⬛ of this operative"
+],
+[
+"cost_increase",
+"one additional action point must be subtracted"
+],
+[
+"zone_control",
+"treat enemy operatives' total APL as being 1 less"
+]
+],
+"790937": [
+[
+"aura",
+"while they are within 12\" of any enemy models with this ability"
+],
+[
+"disruption",
+"PSYKERS suffer Perils of the Warp on any Psychic roll of a double"
+],
+[
+"saving_throws",
+"5+ invulnerable save"
+],
+[
+"modal_choice",
+"2 powers from the Malefic Discipline"
+]
+],
+"790643": [
+[
+"on_kill",
+"Whenever this operative incapacitates an enemy operative that has your Challenge token"
+],
+[
+"resource_gain",
+"you gain 1CP"
+],
+[
+"activated",
+"STRATEGIC GAMBIT"
+],
+[
+"mark_target",
+"select one enemy operative to gain your Challenge token"
+],
+[
+"modal_choice",
+"you can select one of the following weapon rules"
+],
+[
+"buff",
+"Balanced, Brutal, Punishing, Severe, Shock"
+]
+],
+"816507": [
+[
+"turn_start",
+"Once in each Strategy phase"
+],
+[
+"disable",
+"cannot be activated or perform actions"
+],
+[
+"condition_count",
+"equal to the number of friendly operatives with this ability"
+],
+[
+"activated",
+"Guerilla Warfare (1AP)"
+],
+[
+"stances",
+"Change this operative's order"
+],
+[
+"turn_number",
+"during the first Turning Point"
+]
+],
+"789314": [
+[
+"once_per_game",
+"Once in this battle"
+],
+[
+"turn_start",
+"at the start of a Turning Point"
+],
+[
+"resource_gain",
+"you gain a number of Faith points"
+],
+[
+"variable_stats",
+"equal to the number of other friendly NOVITIATE operatives"
+],
+[
+"condition_count",
+"to a maximum of 4 Faith points"
+],
+[
+"tribal",
+"NOVITIATE"
+]
+],
+"789344": [
+[
+"turn_start",
+"Once in each Strategy phase"
+],
+[
+"disable",
+"cannot be activated or perform actions"
+],
+[
+"condition_count",
+"equal to the number of friendly operatives with this ability"
+]
+],
+"790052": [
+[
+"tribal",
+"BROOD BROTHER"
+],
+[
+"aura",
+"Friendly BROOD BROTHER operatives have a 5+ invulnerable save"
+],
+[
+"saving_throws",
+"5+ invulnerable save"
+],
+[
+"immunity",
+"cannot be injured"
+],
+[
+"activated",
+"Telepathic Overload (1AP)"
+],
+[
+"stat_loss",
+"Subtract 1 from its APL"
+],
+[
+"damage",
+"suffer 2 mortal wounds"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stat_condition",
+"greater than that enemy operative's APL"
+],
+[
+"repeat_trigger",
+"Keep rolling one D6 in this manner"
+]
+],
+"789628": [
+[
+"once_per_game",
+"Once per turning point"
+],
+[
+"tribal",
+"MANDRAKE"
+]
+],
+"814757": [
+[
+"tribal",
+"HAND OF THE ARCHON"
+],
+[
+"aura",
+"within ⬟ of this operative"
+],
+[
+"stacking_keyword",
+"Pain token"
+],
+[
+"target_choice",
+"select another friendly HAND OF THE ARCHON operative within ⬟ of this operative to gain it instead"
+]
+],
+"814758": [
+[
+"stacking_keyword",
+"gains 1 Pain token"
+]
+],
+"790175": [
+[
+"damage_reduction",
+"subtract 1 from both Damage characteristics of weapons the enemy operative is equipped with"
+],
+[
+"on_attack",
+"the first time it strikes with a critical hit"
+],
+[
+"stacking_keyword",
+"gain 1 Pain token"
+],
+[
+"tribal",
+"HAND OF THE ARCHON"
+]
+],
+"790356": [
+[
+"activated",
+"Smoke Grenade (1AP)"
+],
+[
+"stealth",
+"an operative is Obscured"
+],
+[
+"area_templates",
+"area of smoke with a ⬤ radius"
+],
+[
+"temporary_effect",
+"Until the end of the Turning Point"
+],
+[
+"once_per_game",
+"can only perform this action once"
+],
+[
+"terrain",
+"area of smoke"
+]
+],
+"789213": [
+[
+"activated",
+"Smoke Grenade (1AP)"
+],
+[
+"stealth",
+"an operative is Obscured"
+],
+[
+"area_templates",
+"area of smoke with a ⬤ radius"
+],
+[
+"temporary_effect",
+"Until the end of the Turning Point"
+],
+[
+"once_per_game",
+"can only perform this action once"
+],
+[
+"terrain",
+"area of smoke"
+]
+],
+"788714": [
+[
+"multi_target_attack",
+"select any number of other valid targets within ⬤ of the original target"
+],
+[
+"distribute",
+"Distribute your attack dice between the targets you have selected"
+]
+],
+"790786": [
+[
+"activated",
+"Fog of Dreams (1AP)"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"disable",
+"cannot be activated or perform actions until it's the last enemy operative to be activated"
+],
+[
+"temporary_effect",
+"Until the end of the turning point"
+],
+[
+"damage",
+"inflict D3 damage on that enemy operative"
+],
+[
+"symmetric_effect",
+"Both players roll five D6"
+],
+[
+"play_restriction",
+"cannot perform this action while within control range of an enemy operative"
+]
+],
+"788722": [
+[
+"start_of_game",
+"At the end of the Set Up Operatives step"
+],
+[
+"modal_choice",
+"select and resolve up to five Forward Scouting options"
+],
+[
+"reveal_order",
+"alternate resolving, starting with the Defender"
+]
+],
+"790272": [
+[
+"start_of_game",
+"In the Scouting step"
+],
+[
+"repeat_trigger",
+"resolve an additional Recon option"
+],
+[
+"reveal_order",
+"the Defender resolves this ability first"
+],
+[
+"activated",
+"Warden Auspex (1AP)"
+],
+[
+"piercing",
+"that enemy operative is not Obscured"
+],
+[
+"tribal",
+"KASRKIN"
+],
+[
+"temporary_effect",
+"Until the end of the Turning Point"
+]
+],
+"790040": [
+[
+"once_per_game",
+"Once per Turning Point"
+],
+[
+"death_trigger",
+"is incapacitated within ⬟ of this operative"
+],
+[
+"tribal",
+"BLOODED"
+],
+[
+"recycle",
+"add that token to your pool"
+],
+[
+"piercing",
+"AP1"
+]
+],
+"788953": [
+[
+"temporary_effect",
+"until the end of that activation"
+],
+[
+"type_grant",
+"treat it as if it has a Blooded token"
+],
+[
+"turn_end",
+"At the end of this operative's activation"
+],
+[
+"friendly_fire",
+"this operative suffers D3 mortal wounds"
+],
+[
+"random_effect",
+"D3"
+]
+],
+"790780": [
+[
+"play_restriction",
+"cannot perform any action other than Aerial Guidance, Charge, Dash, Fall Back, Fight and Reposition"
+],
+[
+"zone_control",
+"treat this operative's APL stat as 1 lower"
+],
+[
+"stealth",
+"it cannot be selected as a valid target"
+],
+[
+"immunity",
+"ignore the Piercing weapon rule"
+],
+[
+"activated",
+"Aerial Guidance (1AP)"
+],
+[
+"aura",
+"another friendly VESPID STINGWING operative within 6\" of this operative"
+],
+[
+"buff",
+"have the Lethal 5+ and Saturate weapon rules"
+],
+[
+"tribal",
+"VESPID STINGWING"
+]
+],
+"789631": [
+[
+"once_per_game",
+"Once per turning point"
+],
+[
+"reactions",
+"when an enemy operative ends the Fall Back action"
+],
+[
+"zone_of_control",
+"if at least one friendly MURDERWING operative was within its control range"
+],
+[
+"tribal",
+"MURDERWING"
+],
+[
+"attack_now",
+"free Reposition or Charge action"
+]
+],
+"789519": [
+[
+"once_per_game",
+"Once per turning point"
+],
+[
+"tribal",
+"CORSAIR VOIDSCARRED WAY SEEKER"
+],
+[
+"spell_power",
+"add 3\" to its distance requirement"
+],
+[
+"temporary_effect",
+"until the end of that action"
+]
+],
+"790186": [
+[
+"turn_start",
+"Once in each Strategy phase"
+],
+[
+"modal_choice",
+"place either your Attack token or your Defend token"
+],
+[
+"tribal",
+"HEARTHKYN SALVAGER"
+],
+[
+"random_effect",
+"re-roll one of your attack dice"
+],
+[
+"protection",
+"re-roll one of your defence dice"
+],
+[
+"turn_end",
+"At the end of each Turning Point"
+],
+[
+"activated",
+"Accelerated Appraisal (1AP)"
+],
+[
+"aura",
+"While an enemy operative is within ⬛ of your Attack token"
+]
+],
+"790676": [
+[
+"autonomous_units",
+"This NPO will move towards the enemy to fight them"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"multi_attack",
+"perform two Fight actions"
+],
+[
+"immunity",
+"its stats cannot be changed"
+],
+[
+"damage_reduction",
+"worsen the x of the Piercing weapon rule by 1"
+],
+[
+"death_trigger",
+"Whenever this operative is incapacitated"
+],
+[
+"revive",
+"Set up this operative with an Engage order on the centre of that reanimation marker"
+],
+[
+"delayed",
+"After that many activations have been completed"
+],
+[
+"heal",
+"regains all lost wounds"
+],
+[
+"evasion",
+"can move through parts of terrain features"
+],
+[
+"terrain",
+"remove that terrain from the killzone"
+],
+[
+"forced_movement",
+"remove those operatives from the killzone and set them up"
+],
+[
+"extra_turn",
+"it can activate multiple times per turning point"
+],
+[
+"boss_phases",
+"Mighty Foe"
+]
+],
+"790663": [
+[
+"autonomous_units",
+"this NPO"
+],
+[
+"targeting_rules",
+"the closest valid target"
+],
+[
+"buff",
+"its weapons have the Accurate 1 weapon rule"
+],
+[
+"flexibility",
+"either a gauss flayer or a gauss reaper"
+]
+],
+"788983": [
+[
+"information",
+"When this item of equipment is revealed"
+],
+[
+"modal_choice",
+"select one Accursed Gift"
+]
+],
+"790694": [
+[
+"cost_reduction",
+"for 1 less AP"
+],
+[
+"once_per_game",
+"Once per turning point"
+],
+[
+"control_reward",
+"requires it to control an objective or mission marker"
+],
+[
+"resource_gain",
+"you gain a number of Faith points"
+],
+[
+"variable_stats",
+"equal to the turning point number"
+]
+],
+"790940": [
+[
+"immunity",
+"do not suffer any penalty to their Nerve tests"
+],
+[
+"stress_morale",
+"Nerve tests"
+],
+[
+"spell_power",
+"Add 1\" to the range of a Dark Apostle's Aura Tactics"
+],
+[
+"condition_count",
+"for each friendly Dark Disciple"
+],
+[
+"support",
+"Add 1\" to the range of a Dark Apostle's Aura Tactics"
+]
+],
+"790796": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"tribal",
+"WARPCOVEN TZAANGOR WARRIOR"
+],
+[
+"cost_reduction",
+"for 1 less AP"
+],
+[
+"territory_trigger",
+"within your opponent's territory"
+]
+],
+"789532": [
+[
+"condition_count",
+"Up to twice per turning point"
+],
+[
+"tribal",
+"ELUCIDIAN STARSTRIDER"
+],
+[
+"temporary_buff",
+"until the end of the turning point"
+],
+[
+"stat_gain",
+"add 1 to both Dmg stats of that weapon"
+],
+[
+"piercing",
+"Piercing Crits 1"
+]
+]
+}
