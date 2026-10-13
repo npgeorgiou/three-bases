@@ -1,8 +1,10 @@
 # Concept tree v3 (13 Oct 2026)
 
-Claude's design, from the player's point of view. Every effect answers first: does this help or hurt, and whom. Each concept's definition, with two cards that fit and one look-alike that doesn't, is in `tools/concept_tree_v3.txt` and `tools/concept_examples.tsv`, and is stored in the concepts table. A concept with two parents shows the second as "also under".
+Claude's design, from the player's point of view. Every effect answers first: does this help or hurt, and whom. Each concept's definition, with two cards that fit and one look-alike that doesn't, is in `tools/concept_tree_v3.txt` and `tools/concept_examples.tsv`, and is stored in the concepts table.
 
 ## The tree
+
+A concept with two parents is listed under both, with the other one named as "also under".
 
 - Effects `effect`
   - Helps my side `helps_me`
@@ -69,19 +71,25 @@ Claude's design, from the player's point of view. Every effect answers first: do
       - Switch stances or forms `stances`
     - Steal from the opponent `steal` (also under Hurts the enemy)
   - Hurts the enemy `hurts_enemy`
+    - Steal from the opponent `steal` (also under Helps my side)
     - Deal damage `damage`
+      - Excess damage carries on (trample) `excess_damage` (also under Make a unit stronger (buff))
+      - Lifesteal / drain `lifesteal` (also under Restore health (heal))
       - Damage to many at once `aoe_damage` (also under Several targets)
       - Damage over time (poison, burn) `damage_over_time`
       - Damage to the player or base `direct_damage`
       - Small repeatable damage `ping`
+      - Bump damage (pushed into something) `collision_damage` (also under Move enemy units (push, pull))
     - Remove an enemy unit `removal`
       - Destroy outright `destroy`
+        - Any damage kills (deathtouch, poisonous) `deathtouch` (also under Make a unit stronger (buff))
       - Banish / exile (gone for good) `banish`
       - Board wipe `board_wipe` (also under Several targets)
       - Send an enemy unit back (bounce) `bounce_enemy` (also under Tempo)
       - Turn an enemy into something weaker `polymorph`
     - Make a unit weaker (debuff) `debuff`
       - Stat loss (-power, -health) `stat_loss`
+      - Attack set to 0 `attack_zero` (also under Deals no damage)
       - Can't attack (my own unit) `cant_attack` (also under Hurts my side (drawback))
     - Mark a target for later hits `mark_target` (also under Conditions)
     - Stop an enemy unit from acting `suppress`
@@ -89,8 +97,11 @@ Claude's design, from the player's point of view. Every effect answers first: do
         - Attack set to 0 `attack_zero` (also under Make a unit weaker (debuff))
         - Can't attack (lock on an enemy) `attack_lock`
         - Its damage is prevented `damage_prevention`
+        - Can't act at all (stun, freeze) `disable` (also under Stop an enemy unit from acting, Can't block, Can't move (root))
       - Can't block `cant_block`
+        - Can't act at all (stun, freeze) `disable` (also under Stop an enemy unit from acting, Deals no damage, Can't move (root))
       - Can't move (root) `immobilize`
+        - Can't act at all (stun, freeze) `disable` (also under Stop an enemy unit from acting, Deals no damage, Can't block)
       - Silence (abilities removed) `silence`
       - Can't act at all (stun, freeze) `disable` (also under Deals no damage, Can't block, Can't move (root))
     - Move enemy units (push, pull) `forced_movement` (also under Position and space)
@@ -110,23 +121,34 @@ Claude's design, from the player's point of view. Every effect answers first: do
     - Sacrifice my own units `sacrifice` (also under Death and graveyard (theme))
     - Discard my own cards `discard` (also under Hand, deck and discard pile)
     - One use (exhausted for the battle) `exhaust` (also under Hand, deck and discard pile)
+    - Can't attack (my own unit) `cant_attack` (also under Make a unit weaker (debuff))
     - Give my units or cards to the opponent `donate`
+    - Permanent loss `permanent_loss` (also under Roguelike run)
   - Neutral game rules `game_rules`
     - Change the game's rules `rule_change` (also under Game structure)
+      - Close or ruin a lane `lane_closure` (also under Limit what can be played, Lanes / locations)
+      - Change how long the game lasts `game_length` (also under Turn and round structure)
+      - A lane with its own rule `lane_rule` (also under Terrain / board features, Lanes / locations)
     - Limit what can be played `play_restriction`
       - Close or ruin a lane `lane_closure` (also under Change the game's rules, Lanes / locations)
       - Force where cards go `forced_placement` (also under Where units can be placed)
     - Swap or replace hands or decks `hand_deck_swap` (also under Hand, deck and discard pile)
     - Rewind / reset to an earlier state `rewind`
 - Combat rules `combat`
+  - Advantage / disadvantage (roll twice) `advantage` (also under Random results)
+  - Blocking / interception rules `blocking` (also under Targeting rules)
   - Damage types, resistances and weaknesses `damage_types`
+  - Defender rolls to resist (saves) `saving_throws` (also under Random results)
   - Targeting rules `targeting_rules`
+    - Taunt (enemies must attack it) `taunt` (also under Keep my units alive (protection))
     - Blocking / interception rules `blocking` (also under Combat rules)
     - Choose attack targets `target_choice`
 - Conditions `condition`
+  - Mark a target for later hits `mark_target` (also under Hurts the enemy)
   - Order of my plays matters (combo) `combo_sequence`
   - Counts / thresholds `condition_count`
     - Grows with what happened this game `count_payoff`
+    - Counts deaths `death_count` (also under Death and graveyard (theme))
     - Quests / objectives with rewards `quests`
       - First to do it wins the reward `race_objective`
       - Objectives that score points `scoring_objectives` (also under Points decide the winner)
@@ -136,16 +158,21 @@ Claude's design, from the player's point of view. Every effect answers first: do
   - Low life matters (player behind) `low_life` (also under Comeback / catch-up)
   - Cost matters `cost_condition`
   - Deck contents matter `deck_condition`
+  - Top or bottom of the deck matters `deck_position` (also under Hand, deck and discard pile)
   - Position in hand matters `hand_position` (also under Hand, deck and discard pile)
   - Hand size matters `hand_size` (also under Hand, deck and discard pile)
+  - Formations (pairs, chains) `link_formation` (also under Position and space)
   - Alone matters `lone_unit` (also under Neighbours matter (adjacency))
   - Stats matter (highest, lowest) `stat_condition`
   - Tribe / type matters `tribal` (also under Synergy payoff)
     - Counts as another type `type_grant`
   - Stats equal to a count `variable_stats`
 - Design roles `role`
+  - Alternate win condition `alt_wincon` (also under How the game is won)
   - Board presence / going wide `board_presence`
+    - Summon units / tokens `summon` (also under Helps my side)
   - Comeback / catch-up `comeback`
+    - Low life matters (player behind) `low_life` (also under Conditions)
   - Finisher / closer `finisher`
   - Fodder / disposable bodies `fodder`
     - Empty bodies (0 stats or no abilities) `null_body`
@@ -153,62 +180,120 @@ Claude's design, from the player's point of view. Every effect answers first: do
   - Snowball / runaway advantage `snowball`
   - Support / enabler `support`
   - Synergy payoff `synergy_payoff`
+    - Help from nearby allies (assists) `assists_support` (also under Neighbours matter (adjacency))
+    - Tribe / type matters `tribal` (also under Conditions)
+      - Counts as another type `type_grant`
+    - When I play another card `on_ally_play` (also under Triggers & timing)
   - Tank / wall `tank`
   - Tempo `tempo`
+    - Put into play for free `free_play` (also under More resources or cheaper plays, Economy & resources)
+    - Act the turn it arrives (haste, rush) `haste` (also under Act sooner or more often)
+    - Attack right away `attack_now` (also under Act sooner or more often)
+    - Extra turns or actions `extra_turn` (also under Act sooner or more often)
+    - Send an enemy unit back (bounce) `bounce_enemy` (also under Remove an enemy unit)
 - Scope (who is affected) `scope`
   - Several targets `scope_multi`
+    - One attack hits several targets (cleave) `multi_target_attack` (also under Make a unit stronger (buff))
+    - Damage to many at once `aoe_damage` (also under Deal damage)
+    - Board wipe `board_wipe` (also under Remove an enemy unit)
     - Area shapes (cone, line, sphere) `area_templates`
     - Split a total among several `distribute`
     - Whole board / all players `scope_global`
       - Both players alike `symmetric_effect`
   - Only itself `scope_self`
 - Game structure `structure`
+  - Change the game's rules `rule_change` (also under Neutral game rules)
+    - Close or ruin a lane `lane_closure` (also under Limit what can be played, Lanes / locations)
+    - Change how long the game lasts `game_length` (also under Turn and round structure)
+    - A lane with its own rule `lane_rule` (also under Terrain / board features, Lanes / locations)
   - Units that act on their own `autonomous_units`
   - Board size limit `board_limit`
+    - Clog the opponent's board `board_clog` (also under Disrupt the opponent's plans)
+    - Slot fillers `slot_filler` (also under Fodder / disposable bodies)
     - Bench / reserve `reserve_bench`
   - Boss phases and rules `boss_phases`
     - Boss acts between turns `legendary_actions`
   - Hand, deck and discard pile `card_flow`
+    - Draw cards `draw` (also under Get more cards)
+    - Look at cards and pick (scry) `selection` (also under Better or chosen cards)
+      - Search the deck for a card (tutor) `tutor`
+    - Keep cards in hand across turns `retain` (also under Better or chosen cards)
+    - Reuse my cards (shuffle back) `recycle` (also under Better or chosen cards)
+    - Fill my own discard pile (self-mill) `self_mill` (also under Helps my side, Discard pile / graveyard as a resource)
+    - Mill the opponent's deck `mill` (also under Disrupt the opponent's plans)
+    - Junk cards into a deck or hand `junk_cards` (also under Disrupt the opponent's plans)
+    - Discard my own cards `discard` (also under Hurts my side (drawback))
+    - One use (exhausted for the battle) `exhaust` (also under Hurts my side (drawback))
+    - Swap or replace hands or decks `hand_deck_swap` (also under Neutral game rules)
     - Top or bottom of the deck matters `deck_position` (also under Conditions)
+    - Position in hand matters `hand_position` (also under Conditions)
+    - Hand size matters `hand_size` (also under Conditions)
     - Change the deck between battles `deck_modification`
       - Card crafting `card_crafting`
       - Deckbuilding rules `deckbuilding_effect`
+    - Side deck `side_deck` (also under Game structure)
   - Attach or merge onto a unit `merge_attach`
   - Play from another zone `cast_from_zone`
   - Sustained effects that can be broken `concentration`
   - Death and graveyard (theme) `death`
+    - Bring back dead units (revive) `revive` (also under Helps my side)
+    - Destroys itself / temporary unit `self_destruct` (also under Hurts my side (drawback))
+    - Sacrifice my own units `sacrifice` (also under Hurts my side (drawback))
     - Counts deaths `death_count` (also under Counts / thresholds)
     - Discard pile / graveyard as a resource `graveyard`
+      - Fill my own discard pile (self-mill) `self_mill` (also under Helps my side, Hand, deck and discard pile)
     - When it dies (deathrattle) `death_trigger` (also under Triggers & timing)
   - Difficulty modifiers `difficulty_modifiers`
   - Fatigue / end-game pressure `fatigue`
   - Hidden and revealed information `information`
+    - Stealth / hidden until it acts `stealth` (also under Keep my units alive (protection))
+    - Light / visibility level `light_level` (also under Roguelike run)
+    - Play at the same time, then reveal `simultaneous_play` (also under Turn and round structure)
     - Enemy actions announced in advance `telegraphed_threats` (also under Delayed / countdown)
     - Hidden traps / secrets `trap_secret` (also under Triggers & timing)
   - Items & consumables `items_consumables`
+  - Life / health track `life_track` (also under How the game is won)
+    - Stress / morale (second damage track) `stress_morale`
   - Position and space `positional`
+    - Ranged attack / long reach `ranged` (also under Make a unit stronger (buff))
+    - Move my units (reposition) `movement` (also under Helps my side)
+      - Swap positions `swap`
+    - Move enemy units (push, pull) `forced_movement` (also under Hurts the enemy)
+      - Bump damage (pushed into something) `collision_damage` (also under Deal damage)
     - Neighbours matter (adjacency) `adjacency`
       - Help from nearby allies (assists) `assists_support` (also under Synergy payoff)
+      - Alone matters `lone_unit` (also under Conditions)
+      - Zones of control (leaving is punished) `zone_of_control` (also under Position and space)
     - Facing / attack from behind `flanking`
     - Formations (pairs, chains) `link_formation` (also under Conditions)
     - Lanes / locations `lanes`
+      - Close or ruin a lane `lane_closure` (also under Limit what can be played, Change the game's rules)
       - Reaches other lanes `cross_lane`
       - Which lane matters `lane_identity`
+      - A lane with its own rule `lane_rule` (also under Terrain / board features, Change the game's rules)
       - Row-wide lasting effects (weather) `row_effects` (also under Terrain / board features)
     - Where units can be placed `placement_rules`
+      - Force where cards go `forced_placement` (also under Limit what can be played)
       - Block enemy spawns `spawn_blocking` (also under Hold zones or lanes)
     - Formation ranks `rank_positions` (also under Rows (front and back))
     - Rows (front and back) `rows`
+      - Formation ranks `rank_positions` (also under Position and space)
     - Terrain / board features `terrain`
       - A lane with its own rule `lane_rule` (also under Change the game's rules, Lanes / locations)
+      - Row-wide lasting effects (weather) `row_effects` (also under Lanes / locations)
     - Hold zones or lanes `zone_control`
       - Reward for holding a zone `control_reward`
+      - Block enemy spawns `spawn_blocking` (also under Where units can be placed)
     - Zones of control (leaving is punished) `zone_of_control` (also under Neighbours matter (adjacency))
+    - In or entering enemy territory `territory_trigger` (also under Triggers & timing)
   - Randomness in the game's structure `randomness`
     - Random results `random_effect`
+      - Gain a random ability or keyword `random_ability` (also under Make a unit stronger (buff))
       - Advantage / disadvantage (roll twice) `advantage` (also under Combat rules)
       - Defender rolls to resist (saves) `saving_throws` (also under Combat rules)
+      - A failed action ends my turn `turnover` (also under Turn and round structure)
   - Roguelike run `run_structure`
+    - Shops and gold `shop_gold` (also under Economy & resources)
     - Light / visibility level `light_level` (also under Hidden and revealed information)
     - Permanent loss `permanent_loss` (also under Hurts my side (drawback))
     - Rest or camp between fights `rest_phase`
@@ -217,6 +302,7 @@ Claude's design, from the player's point of view. Every effect answers first: do
   - Slots that fill and fire (orbs) `slots_queue`
   - Team play `team_play`
   - This turn / round only `temporary_effect`
+    - Temporary bonus (this turn only) `temporary_buff` (also under Make a unit stronger (buff))
   - Turn and round structure `turn_structure`
     - Attack token / alternating attack `attack_token`
     - Automatic combat `auto_battle`
@@ -226,13 +312,18 @@ Claude's design, from the player's point of view. Every effect answers first: do
       - Carry-over between rounds `round_carryover`
     - Play at the same time, then reveal `simultaneous_play` (also under Hidden and revealed information)
     - Speed / reaction timing `spell_speed`
+      - Reactions on the opponent's turn `reactions` (also under Triggers & timing)
     - A failed action ends my turn `turnover` (also under Random results)
+    - On a set turn or round `turn_number` (also under Delayed / countdown)
 - Triggers & timing `trigger`
   - Activated ability (pay to use) `activated`
     - Ability cooldowns `cooldowns`
     - Hero power `hero_power`
   - Start of combat `combat_start`
+  - When it dies (deathrattle) `death_trigger` (also under Death and graveyard (theme))
   - Delayed / countdown `delayed`
+    - Pay later (overload, debt) `overload_debt` (also under Alternative costs)
+    - Enemy actions announced in advance `telegraphed_threats` (also under Hidden and revealed information)
     - On a set turn or round `turn_number` (also under Turn and round structure)
   - At the end of the game `game_end_trigger` (also under How the game is won)
   - When I play another card `on_ally_play` (also under Synergy payoff)
@@ -248,6 +339,7 @@ Claude's design, from the player's point of view. Every effect answers first: do
   - Reactions on the opponent's turn `reactions` (also under Speed / reaction timing)
   - Start of the game `start_of_game`
   - In or entering enemy territory `territory_trigger` (also under Position and space)
+  - Hidden traps / secrets `trap_secret` (also under Hidden and revealed information)
   - End of turn / round `turn_end`
   - Start of turn / round `turn_start`
 - Design problems `design_problem`
@@ -273,6 +365,11 @@ Claude's design, from the player's point of view. Every effect answers first: do
   - Swingy randomness `p_swingy_random`
   - Turtling rewarded `p_turtling`
 - Economy & resources `economy`
+  - Gain resources (ramp) `resource_gain` (also under More resources or cheaper plays)
+  - Cards cost less `cost_reduction` (also under More resources or cheaper plays)
+  - Set a cost to a fixed number `cost_set` (also under More resources or cheaper plays)
+  - Put into play for free `free_play` (also under More resources or cheaper plays, Tempo)
+  - Make the opponent's cards cost more `cost_increase` (also under Disrupt the opponent's plans)
   - Alternative costs `cost_type`
     - Optional extra cost for a bonus `kicker`
     - Pay life as a cost `life_payment`
@@ -280,6 +377,8 @@ Claude's design, from the player's point of view. Every effect answers first: do
   - Second currency for abilities `coin_economy` (also under Several resource types)
   - Expensive card `high_cost`
   - Several resource types `multiple_resources`
+    - Second currency for abilities `coin_economy` (also under Economy & resources)
+    - Convert one resource into another `resource_conversion` (also under Economy & resources)
   - Save unspent resources `resource_banking`
   - Convert one resource into another `resource_conversion` (also under Several resource types)
   - Shops and gold `shop_gold` (also under Roguelike run)
@@ -289,7 +388,9 @@ Claude's design, from the player's point of view. Every effect answers first: do
   - Life / health track `life_track` (also under Game structure)
     - Stress / morale (second damage track) `stress_morale`
   - Points decide the winner `points_scoring`
+    - Objectives that score points `scoring_objectives` (also under Quests / objectives with rewards)
   - Stakes and wagers `stakes_wager`
+  - At the end of the game `game_end_trigger` (also under Triggers & timing)
 
 ## Every move and why (Claude's decisions)
 
