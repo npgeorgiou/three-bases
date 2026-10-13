@@ -11,6 +11,7 @@ kept_id = dict(q('SELECT old_id, kept_id FROM merged_entities')) if q("SELECT 1 
 rows = list(csv.DictReader(open(os.path.join(here, 'regression.tsv'), encoding='utf-8'), delimiter='\t'))
 game = dict(q('SELECT id, game FROM entities'))
 import re
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from concept_tree import primary
 excl = collections.defaultdict(set)
 for f in os.listdir(os.path.join(here, 'patterns')):
     for line in open(os.path.join(here, 'patterns', f), encoding='utf-8'):
@@ -33,9 +34,10 @@ drop = collections.Counter(); add = collections.Counter(); keep = collections.Co
 for r in rows:
     e = kept_id.get(int(r['entity']), int(r['entity']))
     if e not in game: continue
-    if r['expect'] == 'absent':
-        if fires(e, game[e], r['concept']): drop[game[e], r['concept']] += 1   # a reviewed drop counts while a current pattern still makes it
-    elif r['expect'] == 'present': add[game[e], r['concept']] += 1
+    for k in primary(r['concept']):   # the regression set names the old concepts (concept_tree.py, Step 1)
+        if r['expect'] == 'absent':
+            if fires(e, game[e], k): drop[game[e], k] += 1   # a reviewed drop counts while a current pattern still makes it
+        elif r['expect'] == 'present': add[game[e], k] += 1
 auto = ('text_pattern', 'engine_rule')
 for e, k in q("SELECT entity, concept FROM entity_concepts WHERE method IN (?,?)", *auto):
     if e in reviewed and e in game: keep[game[e], k] += 1

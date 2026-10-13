@@ -1,0 +1,318 @@
+# Concept tree v3 (Step 1 of the tag-fix plan, 13 Oct 2026; Claude's design). Built from the player's point of view, for a
+# lane-control card battler: every effect answers first "does this help or hurt, and whom".
+# One line per concept: id | name | facet | parents (comma-separated, empty for a root) | what counts | what doesn't count (and where it goes)
+# Examples (two real cards that fit, one look-alike that doesn't) are in concept_examples.tsv. Read by concept_tree.py.
+
+## Effects: the four branches
+effect | Effects | effect |  | What a card does when it works; every effect sits under who it helps or hurts. | When it happens is a trigger, what it depends on is a condition, how the game is laid out is structure.
+helps_me | Helps my side | effect | effect | The effect leaves the card owner's side stronger, safer, faster, or with more or better cards or resources. | Making the enemy weaker is hurts_enemy, even though it helps me too.
+hurts_enemy | Hurts the enemy | effect | effect | The effect damages, removes, weakens, stops or disrupts the opponent's units, cards, resources or plans. | Losses on my own side are drawback.
+drawback | Hurts my side (drawback) | effect | effect | The card costs its owner something on their own side beyond its normal cost: own units, cards, life, attacks, or something given to the opponent. | An optional extra payment for a bonus is kicker; paying a card's normal cost is not a drawback.
+game_rules | Neutral game rules | effect | effect | The effect changes how the game, a lane or playing cards works for both players alike, or works the same whichever side it touches. | A rule that only binds the opponent is disruption.
+
+## Helps my side
+buff | Make a unit stronger (buff) | effect | helps_me | A unit gains stats or a combat ability it did not have: more power or health, first strike, flying, extra attacks, reach, piercing. | Improving a card still in hand is in_hand_buff; a unit printed with high stats is not buffed.
+stat_gain | Stat gain (+power, +health) | effect | buff | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+temporary_buff | Temporary bonus (this turn only) | effect | buff,temporary_effect | A unit's bonus lasts only this turn, round or fight. | A bonus that stays is stat_gain or permanent_growth.
+permanent_growth | Grows again and again | effect | buff | A unit gains stats repeatedly (each turn, each trigger) and keeps them. | A single lasting bonus is stat_gain.
+stat_multiply | Double or multiply stats | effect | buff | A stat or a total is doubled, tripled or multiplied. | Adding a fixed amount is stat_gain.
+first_strike | First strike (hits before the enemy) | combat | buff | The unit deals its combat damage before the enemy can strike back. | Attacking the turn it arrives is haste.
+multi_attack | Attack more than once | combat | buff | The unit attacks or strikes more than once per turn or round. | One attack that hits several targets is multi_target_attack; readying a used unit is untap.
+counterattack | Strike back when attacked (counterattack, thorns) | combat | buff | When the unit is attacked or hit, it deals damage back to the attacker. | Damage it deals when it attacks is on_attack.
+piercing | Ignore armour or defence | combat | buff | The unit's damage or attacks ignore or lower the target's armour, saves or defence. | Damage that carries on to another target is excess_damage.
+evasion | Hard to block (flying, unblockable) | combat | buff | The unit can't be blocked, can be blocked only by some units, or hits the player past blockers. | Can't be targeted is immunity; hidden until it acts is stealth.
+ranged | Ranged attack / long reach | combat | buff,positional | The unit attacks from a distance, from the back row or over other units. | Damage from a spell is damage.
+multi_target_attack | One attack hits several targets (cleave) | combat | buff,scope_multi | A single attack also hits other units or spaces: cleave, sweep, splash. | Area damage from an effect is aoe_damage; several separate attacks are multi_attack.
+excess_damage | Excess damage carries on (trample) | effect | buff,damage | Damage beyond what kills the target goes on to the player or another unit. | Ignoring armour is piercing.
+deathtouch | Any damage kills (deathtouch, poisonous) | combat | buff,destroy | Any damage this unit deals destroys the unit it hits. | Destroying by an effect without combat damage is destroy.
+random_ability | Gain a random ability or keyword | effect | buff,random_effect | A unit gains a randomly chosen keyword or ability. | Other random results are random_effect.
+spell_power | My spells and abilities get stronger | effect | helps_me | The owner's spells or abilities deal more damage or have bigger effects: spell damage, ability power, amplify. | A unit gaining stats is stat_gain.
+protection | Keep my units alive (protection) | effect | helps_me | A unit on my side is guarded against damage, destruction or targeting. | Restoring health already lost is heal.
+damage_reduction | Take less damage (armour) | effect | protection | Damage a unit or player takes is reduced by an amount or a share. | Absorbing one whole hit is shield; points that wear off are block_armor.
+block_armor | Block points that wear off | effect | damage_reduction | Points that absorb damage and run out or wear off, usually at the end of the turn. | A lasting reduction is damage_reduction.
+shield | Absorb one hit (shield, ward) | effect | protection | The next hit or damage instance is fully absorbed or cancelled. | Damage lowered by an amount is damage_reduction.
+immunity | Immune / can't be targeted | effect | protection | A unit can't be targeted, or is immune to a damage type, effect or condition. | Hard to block is evasion; hidden until it acts is stealth.
+cheat_death | Cheat death (survive lethal) | effect | protection | A unit that would die survives, or comes back in the same moment it dies. | Bringing back a unit that died earlier is revive.
+bodyguard | Protect a specific ally (bodyguard) | effect | protection | The unit takes hits for, or turns attacks away from, a particular ally. | Forcing all enemy attacks onto itself is taunt.
+taunt | Taunt (enemies must attack it) | effect | protection,targeting_rules | Enemies must attack or target this unit before other units. | Shielding one chosen ally is bodyguard.
+stealth | Stealth / hidden until it acts | effect | protection,information | The unit can't be seen, targeted or attacked until it acts or a condition ends. | Untargetable for good is immunity.
+heal | Restore health (heal) | effect | helps_me | Lost health of a unit, hero or player is restored. | Preventing damage before it happens is protection.
+lifesteal | Lifesteal / drain | effect | heal,damage | Damage dealt also heals its source or its owner. | Healing not tied to damage dealt is heal.
+regeneration | Heal every turn (regeneration) | effect | heal | A unit heals again each turn or returns to full health each turn. | A single heal is heal.
+card_advantage | Get more cards | effect | helps_me | The owner ends up with more cards: drawn, created or copied. | Choosing which card to get without getting more is selection.
+draw | Draw cards | effect | card_advantage,card_flow | Cards are drawn from the owner's deck into hand. | Searching the deck for a chosen kind of card is tutor; making a new card is generate_cards.
+generate_cards | Create new cards | effect | card_advantage | New cards that were not in the deck are put into hand or deck. | Units made on the board are summon.
+card_quality | Better or chosen cards | effect | helps_me | The owner gets the cards they want, keeps them, reuses them or makes them better before playing them. | Simply getting more cards is card_advantage.
+selection | Look at cards and pick (scry) | effect | card_quality,card_flow | The owner looks at several cards and chooses which to keep, take or put back. | Searching the deck for a stated kind of card is tutor.
+tutor | Search the deck for a card (tutor) | effect | selection | The owner searches the deck for a card of a stated kind and takes it. | Drawing the top card is draw.
+retain | Keep cards in hand across turns | effect | card_quality,card_flow | Cards that would leave the hand at the end of the turn stay in it. | Returning a played unit to hand is return_to_hand.
+recycle | Reuse my cards (shuffle back) | effect | card_quality,card_flow | The owner's used or discarded cards go back into deck or hand to be used again. | An enemy unit sent to its deck is bounce_enemy.
+upgrade | Upgrade / level up a card | effect | card_quality | A card is upgraded, levelled up or enhanced into a better version of itself. | A plain stat rise on the board is stat_gain.
+in_hand_buff | Improve cards in hand or deck | effect | card_quality | Cards still in hand or deck get more power, a lower cost or better text before they are played. | A discount on whatever is played this turn is cost_reduction.
+resource_advantage | More resources or cheaper plays | effect | helps_me | The owner gets more to spend, or pays less for their cards. | Making the opponent pay more is cost_increase.
+resource_gain | Gain resources (ramp) | effect | resource_advantage,economy | The owner gains extra mana, energy, supply or another resource, now or for good. | Cards costing less is cost_reduction.
+cost_reduction | Cards cost less | effect | resource_advantage,economy | The owner's cards cost less by an amount. | A play that costs nothing at all is free_play; a cost set to a number is cost_set.
+cost_set | Set a cost to a fixed number | effect | resource_advantage,economy | A card's cost becomes a fixed number (costs 0, costs 3). | A reduction by an amount is cost_reduction.
+free_play | Put into play for free | effect | resource_advantage,economy,tempo | A card enters play without its cost being paid, by an effect or automatically. | A dead unit coming back is revive.
+summon | Summon units / tokens | effect | helps_me,board_presence | New units are put onto the owner's side of the board. | Units put on the opponent's side are board_clog; units back from death are revive.
+revive | Bring back dead units (revive) | effect | helps_me,death | A unit that died or was destroyed earlier comes back to play or to hand. | Surviving at the moment of death is cheat_death.
+self_mill | Fill my own discard pile (self-mill) | effect | helps_me,graveyard,card_flow | The owner puts cards from their own deck straight into their discard pile or graveyard. | Doing it to the opponent is mill.
+speed | Act sooner or more often | effect | helps_me | The owner's units or turns act earlier or more times than normal. | Several strikes in one attack step is multi_attack.
+haste | Act the turn it arrives (haste, rush) | combat | speed,tempo | A unit can attack or act on the turn it is played. | An effect that makes it attack at once is attack_now.
+attack_now | Attack right away | combat | speed,tempo | An effect makes a unit attack at once, outside the normal attack step. | Being allowed to attack the turn it arrives is haste.
+extra_turn | Extra turns or actions | effect | speed,tempo | The owner takes an extra turn, round or action. | Readying a used unit is untap.
+untap | Ready a used unit again (untap) | effect | speed | A used or tapped unit or card is readied so it can act again. | A whole extra turn is extra_turn.
+movement | Move my units (reposition) | effect | helps_me,positional | The owner moves their own unit to another space, row, lane or location. | Moving enemy units is forced_movement.
+swap | Swap positions | effect | movement | Two units trade places, or trade lanes or locations. | Trading stats is stat_gain or stat_loss; trading hands or decks is hand_deck_swap.
+blink | Blink (leave and come back fresh) | effect | helps_me | A unit leaves play and returns at once, reset, repeating its on-enter effect. | Going back to hand is return_to_hand.
+return_to_hand | Return my unit to hand | effect | helps_me | The owner returns their own unit to hand, to replay it or save it. | Sending an enemy unit back is bounce_enemy.
+copy | Copy cards or units | effect | helps_me | A copy of a card, unit or effect is made for the owner. | Doing a trigger again is repeat_trigger; a copy given to the opponent is enemy_benefit.
+repeat_trigger | Repeat or double triggers | effect | helps_me | A trigger or effect happens again, or twice. | Copying a whole card is copy.
+transform | Transform my card into another | effect | helps_me | The owner's own card or unit turns into a different one: evolve, flip, become. | Turning an enemy into something weaker is polymorph.
+flexibility | Choose what a card does | effect | helps_me | The owner picks between effects, modes or forms. | A random pick is random_effect.
+modal_choice | Choose one of several effects | effect | flexibility | The card offers several effects and the owner picks one or more. | Switching a unit between lasting forms is stances.
+stances | Switch stances or forms | effect | flexibility | The owner switches a unit or hero between lasting modes. | A one-time pick is modal_choice.
+steal | Steal from the opponent | effect | helps_me,hurts_enemy | The owner takes the opponent's units, cards, resources or text for themselves. | Destroying them instead is removal.
+
+## Hurts the enemy
+damage | Deal damage | effect | hurts_enemy | Damage is dealt to a unit, player or base. | Killing regardless of health is destroy; damage to my own side is friendly_fire.
+aoe_damage | Damage to many at once | effect | damage,scope_multi | Damage hits several units, a row, a lane or an area at once. | One unit's attack hitting several is multi_target_attack.
+damage_over_time | Damage over time (poison, burn) | effect | damage | Damage repeats over turns: poison, burn, bleed. | One-time damage is damage.
+direct_damage | Damage to the player or base | effect | damage | Damage goes straight to the enemy player, hero or base. | Damage to units is damage.
+ping | Small repeatable damage | effect | damage | A small amount of damage (1 or 2) that can be dealt again and again. | One big hit is damage.
+collision_damage | Bump damage (pushed into something) | combat | forced_movement,damage | A unit takes damage from being pushed into a unit, wall or obstacle. | Damage from the push effect itself is damage.
+removal | Remove an enemy unit | effect | hurts_enemy | An enemy unit leaves the board: destroyed, exiled, sent to hand or deck, or turned into something harmless. | Weakening it but leaving it there is debuff.
+destroy | Destroy outright | effect | removal | A unit is destroyed or killed regardless of its health. | Killing by damage is damage; destroying my own unit for value is sacrifice.
+banish | Banish / exile (gone for good) | effect | removal | A unit or card is removed from the game for good, beyond the discard pile. | Leaving and coming back is blink.
+board_wipe | Board wipe | effect | removal,scope_multi | Most or all units on the board, or in a lane, are destroyed or removed. | Damage to several that may leave survivors is aoe_damage.
+bounce_enemy | Send an enemy unit back (bounce) | effect | removal,tempo | An enemy unit is returned to its owner's hand or deck. | Returning my own unit is return_to_hand.
+polymorph | Turn an enemy into something weaker | effect | removal | An enemy unit is turned into a weaker or harmless card or unit. | My own card turning into another is transform.
+debuff | Make a unit weaker (debuff) | effect | hurts_enemy | A unit loses stats or gets a combat penalty. | Stopping it from acting is suppress.
+stat_loss | Stat loss (-power, -health) | effect | debuff | A unit's power, attack, health or other stat goes down, or is set or swapped to a lower value. | Not being able to attack is attack_lock or cant_attack.
+attack_zero | Attack set to 0 | effect | no_damage_output,debuff | A unit's attack, power or strength becomes 0. | Lowered by an amount but above 0 is stat_loss.
+mark_target | Mark a target for later hits | effect | hurts_enemy,condition | A target is marked so that later effects or attacks hit it harder. | A lasting stat loss is stat_loss.
+suppress | Stop an enemy unit from acting | effect | hurts_enemy | An enemy unit can't attack, deal damage, block, move, use abilities, or act at all. | Lowering its stats is debuff.
+no_damage_output | Deals no damage | effect | suppress | The unit deals no damage, however it is done: can't attack, attack set to 0, damage prevented. | Can't block is cant_block.
+attack_lock | Can't attack (lock on an enemy) | effect | no_damage_output | An enemy unit can't attack, often for a turn or round. | My own unit that never attacks is cant_attack.
+damage_prevention | Its damage is prevented | effect | no_damage_output | Damage an enemy unit would deal is prevented. | Damage I would take being reduced is damage_reduction.
+cant_block | Can't block | effect | suppress | An enemy unit can't block or intercept. | Can't attack is attack_lock.
+immobilize | Can't move (root) | effect | suppress | An enemy unit can't move: root, snare, pin. | Moved against its will is forced_movement.
+silence | Silence (abilities removed) | effect | suppress | A unit's abilities or text are removed or switched off. | Lowering stats is stat_loss.
+disable | Can't act at all (stun, freeze) | effect | suppress,no_damage_output,cant_block,immobilize | The unit can't act at all: stun, freeze, sleep, skip its turn. | Losing only its attack is attack_lock.
+forced_movement | Move enemy units (push, pull) | effect | hurts_enemy,positional | Enemy units are moved against their will: push, pull, knockback, sent to another lane. | Moving my own units is movement.
+forced_attack | Force enemy units to attack | effect | hurts_enemy | Enemy units are made to attack, often a chosen or bad target. | My own unit that must attack each turn is drawback.
+disruption | Disrupt the opponent's plans | effect | hurts_enemy | The opponent's hand, deck, resources, plays or board space are interfered with. | Damaging or removing their units is damage or removal.
+hand_disruption | Attack the opponent's hand | effect | disruption | Cards in the opponent's hand are discarded, taken, weakened, made dearer or looked at. | Discarding my own cards is discard.
+counter_spell | Counter / cancel a play | effect | disruption | An opponent's card or effect is cancelled before it resolves. | Removing a unit after it is in play is removal.
+cost_increase | Make the opponent's cards cost more | effect | disruption,economy | The opponent's cards cost more. | Making my cards cheaper is cost_reduction.
+mill | Mill the opponent's deck | effect | disruption,card_flow | Cards are put from the opponent's deck into their discard pile or removed. | Doing it to my own deck is self_mill.
+junk_cards | Junk cards into a deck or hand | effect | disruption,card_flow | Useless or harmful cards (curses, statuses, rocks) are put into a deck or hand to clog it. | Useless units on the board are board_clog.
+board_clog | Clog the opponent's board | effect | disruption,board_limit | Weak, useless or harmful units are put onto the opponent's side to take their slots. | Units on my own side are summon.
+
+## Hurts my side (drawback)
+enemy_benefit | Helps the opponent | role | drawback | The card gives the opponent something: cards, power, resources, units or a copy. | Giving them harmful units is board_clog.
+friendly_fire | Hits my own side too | role | drawback | An effect also damages, weakens or destroys the owner's own units or player. | Destroying my own unit on purpose for value is sacrifice.
+self_destruct | Destroys itself / temporary unit | effect | drawback,death | The unit destroys itself or leaves after a time or after use. | Destroying another own unit for value is sacrifice.
+sacrifice | Sacrifice my own units | cost | drawback,death | The owner destroys or gives up their own unit, as a cost or for value. | An enemy being made to sacrifice is destroy.
+discard | Discard my own cards | effect | drawback,card_flow | The owner discards cards from their own hand, as a cost or to fuel effects. | Making the opponent discard is hand_disruption.
+exhaust | One use (exhausted for the battle) | effect | drawback,card_flow | A card is removed for the rest of the battle after use, or other cards of mine are. | Removing a card from the game for good is banish.
+cant_attack | Can't attack (my own unit) | combat | debuff,drawback | The unit itself can't attack: defender, wall. | A lock put on an enemy is attack_lock.
+donate | Give my units or cards to the opponent | effect | drawback | The owner gives their own units or cards to the opponent. | Putting harmful units on their side is board_clog.
+
+## Neutral game rules
+rule_change | Change the game's rules | effect | game_rules,structure | An effect changes a rule of the game or of a zone for everyone. | A rule that binds only the opponent is disruption.
+play_restriction | Limit what can be played | effect | game_rules | Where, what or how many cards can be played is limited: can't be played here, only N per turn. | Cancelling a play already made is counter_spell.
+lane_closure | Close or ruin a lane | effect | play_restriction,rule_change,lanes | A lane, location or zone stops being usable: flooded, destroyed, locked. | A lane with an extra rule is lane_rule.
+forced_placement | Force where cards go | effect | play_restriction,placement_rules | Where units are played or end up is dictated: all cards must be played here, played cards move here. | A unit moved after it was placed is movement or forced_movement.
+hand_deck_swap | Swap or replace hands or decks | effect | game_rules,card_flow | Hands or decks are exchanged, replaced or reshuffled and redrawn. | Taking single cards from the opponent is steal.
+rewind | Rewind / reset to an earlier state | effect | game_rules | A unit, card or the game goes back to an earlier state: reset to base stats, undo, redo. | A plain heal is heal.
+
+## Combat rules
+combat | Combat rules | combat |  | How attacks, blocks and targeting work. | What a single unit gains for combat is buff.
+advantage | Advantage / disadvantage (roll twice) | combat | random_effect,combat | A roll is made twice and the better or worse result is kept. | A flat bonus to the roll is buff or debuff.
+blocking | Blocking / interception rules | combat | targeting_rules,combat | Rules for who can block or intercept an attacker. | A unit that can't block is cant_block.
+damage_types | Damage types, resistances and weaknesses | combat | combat | Damage has a type (fire, poison...) and units resist or are weak to types. | Damage over turns is damage_over_time.
+saving_throws | Defender rolls to resist (saves) | combat | random_effect,combat | The target rolls to resist an effect or damage. | Armour that always reduces damage is damage_reduction.
+targeting_rules | Targeting rules | combat | combat | Rules for what may be targeted: only the front row, only damaged units, the nearest. | Forcing attacks onto one unit is taunt.
+target_choice | Choose attack targets | combat | targeting_rules | The owner chooses which unit an attack or effect hits. | A random target is random_effect.
+
+## Conditions
+condition | Conditions | condition |  | An effect works only if, unless or when something is true. | When it happens is a trigger.
+adjacency | Neighbours matter (adjacency) | condition | positional | The effect cares about units beside it, or the lane or location to the left or right. | Several lanes away is cross_lane.
+assists_support | Help from nearby allies (assists) | condition | adjacency,synergy_payoff | Nearby allies add a bonus to an action: assists, support, flanking help. | Bonuses for any ally anywhere are tribal or aura.
+combo_sequence | Order of my plays matters (combo) | condition | condition | The effect cares about the order of the owner's plays: the last card played, played another card first. | Order between the players is reveal_order.
+condition_count | Counts / thresholds | condition | condition | The effect needs or scales with a number: for each, N or more. | Counts of past events this game are count_payoff.
+condition_life | Damaged unit matters | condition | condition | The effect cares that a unit is damaged or wounded: enrage, bloodied, below full health. | The player being at low life is low_life.
+low_life | Low life matters (player behind) | condition | condition,comeback | The effect cares that the owner's player or hero is at low life. | A unit being damaged is condition_life.
+cost_condition | Cost matters | condition | condition | The effect cares about a card's cost: 1-cost cards, odd or even cost, N or more. | Changing costs is cost_reduction or cost_set.
+count_payoff | Grows with what happened this game | condition | condition_count | The effect grows with how many times something happened this game: cards played, units died, spells cast. | A count of what is on the board now is condition_count.
+death_count | Counts deaths | condition | death,condition_count | The effect counts or scales with how many units died. | A single death trigger is death_trigger.
+deck_condition | Deck contents matter | condition | condition | The effect cares about what is in the deck: deck size, cards in it, an empty deck. | The top card is deck_position.
+deck_position | Top or bottom of the deck matters | condition | card_flow,condition | The top or bottom card of a deck matters: looked at, revealed or changed. | Searching the whole deck is tutor.
+flanking | Facing / attack from behind | condition | positional | Facing, flanking or attacking from the side or behind matters. | Simple neighbours are adjacency.
+hand_position | Position in hand matters | condition | condition,card_flow | Where a card sits in hand (leftmost, oldest) or how long it has been there matters. | Hand size is hand_size.
+hand_size | Hand size matters | condition | condition,card_flow | How many cards are in hand matters: empty or full hand. | Position in hand is hand_position.
+link_formation | Formations (pairs, chains) | condition | positional,condition | Units must stand in a pattern: pairs, chains, circuits. | Simple neighbours are adjacency.
+lone_unit | Alone matters | condition | condition,adjacency | The effect rewards a unit that stands alone: the only unit in a lane, no neighbours. | Many units are board_presence.
+quests | Quests / objectives with rewards | condition | condition_count | A goal with progress gives a reward when it is completed. | A goal that scores points is scoring_objectives.
+race_objective | First to do it wins the reward | condition | quests | The reward goes to the first player to meet a condition. | A goal for one player only is quests.
+scoring_objectives | Objectives that score points | condition | quests,points_scoring | Objective or secret-goal cards score points when their condition is met. | Rewards other than points are quests.
+random_effect | Random results | condition | randomness | The outcome is random: random target, random card, chance, dice. | A random ability is random_ability.
+stacking_keyword | Stacking keywords / counters | condition | condition_count | A keyword or counter stacks and grows with each copy. | A one-time count is condition_count.
+stat_condition | Stats matter (highest, lowest) | condition | condition | The effect cares about stats: the highest or lowest power, N or more attack. | Changing stats is buff or debuff.
+tribal | Tribe / type matters | condition | condition,synergy_payoff | The effect cares about a tribe, type, team or family of cards. | Counting as another type is type_grant.
+variable_stats | Stats equal to a count | condition | condition | A unit's stats are computed from the game state: power equal to the number of something. | A fixed stat rise is stat_gain.
+variety_payoff | Variety matters (all different) | condition | condition_count | The effect rewards different costs, types or names, or no duplicates. | Many of the same tribe is tribal.
+
+## Costs
+cost_type | Alternative costs | cost | economy | A card can be paid with something other than the usual resource. | An optional extra payment for a bonus is kicker.
+kicker | Optional extra cost for a bonus | cost | cost_type | Paying extra is optional and adds a bonus effect: kicker, enhance. | A required alternative cost is cost_type.
+life_payment | Pay life as a cost | cost | cost_type | The owner pays life or health to play or use something. | Damage to my own units is friendly_fire.
+overload_debt | Pay later (overload, debt) | cost | cost_type,delayed | Part of the cost is paid later: locked resources next turn, debt. | A cost paid now is cost_type.
+
+## Resources
+economy | Economy & resources | resource |  | How players get and spend resources. | Cards themselves are card_advantage.
+coin_economy | Second currency for abilities | resource | economy,multiple_resources | A second currency (coins, crowns) is spent on abilities. | Shop gold between fights is shop_gold.
+graveyard | Discard pile / graveyard as a resource | resource | death | Cards in the discard pile or graveyard are used: played, counted or eaten. | Filling it from my deck is self_mill.
+high_cost | Expensive card | resource | economy | The card is at the top of its game's cost curve (top 10% of costs). | Cost conditions are cost_condition.
+multiple_resources | Several resource types | resource | economy | The game uses several resource types. | One resource gained is resource_gain.
+resource_banking | Save unspent resources | resource | economy | Unspent resources are kept for later, or reward the owner. | Gaining new resources is resource_gain.
+resource_conversion | Convert one resource into another | resource | economy,multiple_resources | One resource is turned into another. | Gaining resources from nothing is resource_gain.
+shop_gold | Shops and gold | resource | economy,run_structure | Gold is spent in shops to buy cards or items. | A currency spent in battle is coin_economy.
+upkeep | Upkeep (ongoing resource drain) | resource | economy | Resources must be paid again and again to keep things: food, fuel, upkeep. | A one-time cost is cost_type.
+
+## Roles
+role | Design roles | role |  | The job a card does in a deck. | What the card does is an effect.
+alt_wincon | Alternate win condition | role | win_condition,role | The card gives another way to win the game. | Scoring more points is points_scoring.
+board_presence | Board presence / going wide | role | role | Having many units on the board. | One big unit is tank.
+comeback | Comeback / catch-up | role | role | The card helps the player who is behind or losing. | A damaged unit is condition_life.
+finisher | Finisher / closer | role | role | The card closes out the game. | Steady damage is damage.
+fodder | Fodder / disposable bodies | role | role | Bodies meant to die or be used up. | Units meant to last are tank.
+null_body | Empty bodies (0 stats or no abilities) | role | fodder | Units with zero stats or no abilities, valued only for being there. | Weak but useful units are fodder.
+slot_filler | Slot fillers | role | fodder,board_limit | Cheap bodies whose job is to fill slots or reach a count. | Disposable bodies to sacrifice are fodder.
+snowball | Snowball / runaway advantage | role | role | An advantage that keeps growing once gained. | Catch-up for the losing player is comeback.
+support | Support / enabler | role | role | The card makes other cards better. | A payoff for a synergy is synergy_payoff.
+synergy_payoff | Synergy payoff | role | role | The card rewards building around something. | The card that enables it is support.
+tank | Tank / wall | role | role | High defence that holds the line. | A unit that can't attack at all is cant_attack.
+tempo | Tempo | role | role | Acting faster or more efficiently than the opponent. | Raw card gain is card_advantage.
+
+## Scope
+scope | Scope (who is affected) | scope |  | How many and which targets an effect touches. | Whether it helps or hurts is the effect branch.
+area_templates | Area shapes (cone, line, sphere) | scope | scope_multi | The effect covers a shape: cone, line, sphere. | All units everywhere is scope_global.
+cross_lane | Reaches other lanes | scope | lanes | The effect reaches or counts other lanes, zones or locations. | Its own lane only is lanes.
+distribute | Split a total among several | scope | scope_multi | An amount of damage, power or counters is split among several units. | The full amount to each is scope_multi.
+scope_global | Whole board / all players | scope | scope_multi | The effect touches the whole board or all players. | Several but not all is scope_multi.
+scope_multi | Several targets | scope | scope | The effect touches several targets. | One target is the default.
+scope_self | Only itself | scope | scope | The effect touches only the card itself. | Its allies too is scope_multi.
+symmetric_effect | Both players alike | scope | scope_global | The effect touches both players the same way: each player draws. | Only my side is the effect itself.
+
+## Structure
+structure | Game structure | structure |  | How the game is laid out and played. | What cards do is an effect.
+attack_token | Attack token / alternating attack | structure | turn_structure | An attack token or alternating attack rights. | Ordinary turns are turn_structure.
+auto_battle | Automatic combat | structure | turn_structure | Combat resolves on its own (auto-battler). | Units choosing their own actions is autonomous_units.
+autonomous_units | Units that act on their own | structure | structure | Units act without the player choosing. | Combat that resolves on its own is auto_battle.
+board_limit | Board size limit | structure | structure | Limits on board size or units per lane, row or location. | Bench units are reserve_bench.
+boss_phases | Boss phases and rules | structure | structure | Bosses with phases and their own rules. | Boss acting between turns is legendary_actions.
+card_crafting | Card crafting | structure | deck_modification | Cards are crafted or built from points. | Upgrading an existing card is upgrade.
+card_flow | Hand, deck and discard pile | structure | structure | Cards moving between hand, deck and discard pile, as a theme. | Getting more cards is card_advantage.
+merge_attach | Attach or merge onto a unit | structure | structure | A card attaches to or merges with a unit: equipment, enchant creature, a leader attached to a unit, magnetic. | What the attached card gives is buff or debuff.
+cast_from_zone | Play from another zone | structure | structure | Cards are played from somewhere other than the hand: discard pile, exile, top of the deck. | A dead unit returned by an effect is revive.
+concentration | Sustained effects that can be broken | structure | structure | An effect lasts while it is kept up and can be broken: concentration, channelling. | An effect for this turn only is temporary_effect.
+control_reward | Reward for holding a zone | structure | zone_control | Whoever holds or wins a lane, zone or objective gets a bonus. | Winning the game by zones is zone_control.
+cooldowns | Ability cooldowns | structure | activated | An ability must wait some turns before it can be used again. | Once per game is once_per_game.
+death | Death and graveyard (theme) | structure | structure | Death and the graveyard as a theme. | Removing enemy units is removal.
+deck_modification | Change the deck between battles | structure | card_flow | A deck's contents change for good: cards added or changed between battles. | Cards created for one battle are generate_cards.
+deckbuilding_effect | Deckbuilding rules | structure | deck_modification | The effect changes how a deck or army is built. | Changes during play are card_flow.
+difficulty_modifiers | Difficulty modifiers | structure | structure | Difficulty modifiers and challenges. | A boss's rules are boss_phases.
+fatigue | Fatigue / end-game pressure | structure | structure | Pressure that grows towards the end of the game. | A set last turn is game_length.
+game_length | Change how long the game lasts | structure | turn_structure,rule_change | Turns or rounds are added, the game ends early or the last turn is set. | Extra turns for one player are extra_turn.
+information | Hidden and revealed information | structure | structure | Hidden and revealed information: face-down cards, looking at the opponent's hand. | Hidden units are stealth.
+items_consumables | Items & consumables | structure | structure | Items and consumables outside the deck. | Cards in the deck are card_flow.
+lane_identity | Which lane matters | structure | lanes | The effect names or depends on which lane: left, middle, right. | Any other lane is cross_lane.
+lane_rule | A lane with its own rule | structure | terrain,rule_change,lanes | A lane, location or zone carries its own rule that changes play there. | A closed lane is lane_closure.
+lanes | Lanes / locations | structure | positional | The board is split into lanes, columns or locations. | Rows inside a lane are rows.
+legendary_actions | Boss acts between turns | structure | boss_phases | A boss acts between other turns. | Extra turns for the owner are extra_turn.
+life_track | Life / health track | structure | win_condition,structure | A life, scale or health track decides the game. | A second damage track is stress_morale.
+light_level | Light / visibility level | structure | run_structure,information | A light or visibility level trades risk for reward. | Hidden units are stealth.
+permanent_loss | Permanent loss | structure | run_structure,drawback | Losses that last beyond the battle. | Losses for one battle are exhaust.
+placement_rules | Where units can be placed | structure | positional | Rules for where units can enter. | Moving after placement is movement.
+points_scoring | Points decide the winner | structure | win_condition | Points or score decide the winner. | Destroying the enemy base is life_track.
+positional | Position and space | structure | structure | Position and space on the board matter. | Card zones are card_flow.
+randomness | Randomness in the game's structure | structure | structure | Randomness built into the game's structure. | A random effect on a card is random_effect.
+rank_positions | Formation ranks | structure | positional,rows | A unit's rank limits its skills and targets. | Plain front and back rows are rows.
+reserve_bench | Bench / reserve | structure | board_limit | Units wait on a bench or in reserve. | Cards in hand are card_flow.
+rest_phase | Rest or camp between fights | structure | run_structure | A rest or camp phase between fights. | Healing in battle is heal.
+reveal_order | Who acts or reveals first | structure | turn_structure | The order in which players act or reveal matters or changes. | The order of my own plays is combo_sequence.
+round_carryover | Carry-over between rounds | structure | round_passing | Things carry over from one round to the next. | Saved resources are resource_banking.
+round_passing | Best-of-rounds with passing | structure | turn_structure | Matches of several rounds where players pass. | Single games are turn_structure.
+row_effects | Row-wide lasting effects (weather) | structure | lanes,terrain | A lasting effect covers a whole row or lane: weather, hazards, boons. | A lane's printed rule is lane_rule.
+rows | Rows (front and back) | structure | positional | The board has front and back rows. | Lanes side by side are lanes.
+run_structure | Roguelike run | structure | structure | A run of fights with a map, nodes and things kept between fights. | A single game is turn_structure.
+side_deck | Side deck | structure | structure,card_flow | A second deck beside the main one. | Changing the deck is deck_modification.
+simultaneous_play | Play at the same time, then reveal | structure | turn_structure,information | Players commit plays face down at the same time and reveal them after. | Order of reveal is reveal_order.
+slots_queue | Slots that fill and fire (orbs) | structure | structure | Slots or queues fill up and then fire. | Delayed effects are delayed.
+spawn_blocking | Block enemy spawns | structure | placement_rules,zone_control | Occupying tiles stops enemy units from arriving there. | Clogging their board with units is board_clog.
+spell_speed | Speed / reaction timing | structure | turn_structure | Spells and actions have speeds: instant, fast, slow, responses. | Reacting to the opponent is reactions.
+stakes_wager | Stakes and wagers | structure | win_condition | What a game is worth changes: double the stakes, bet, concede to lose less. | Points scored in the game are points_scoring.
+stress_morale | Stress / morale (second damage track) | structure | life_track | Stress, morale or sanity work as a second damage track. | Health is life_track.
+team_play | Team play | structure | structure | Teammates, passing cards, partner effects. | Allied units of one player are tribal.
+telegraphed_threats | Enemy actions announced in advance | structure | information,delayed | Enemy actions are announced now and happen later. | My own delayed effects are delayed.
+temporary_effect | This turn / round only | structure | structure | It lasts only this turn or round: a bonus, a penalty or a lock. | Lasting changes are the effect itself.
+terrain | Terrain / board features | structure | positional | Terrain and features on the board. | A lane's rule is lane_rule.
+traits_quirks | Lasting character traits | structure | run_structure | Characters gain or lose lasting traits over a run. | Keywords in battle are buff.
+turn_structure | Turn and round structure | structure | structure | How turns and rounds work. | Extra turns are extra_turn.
+turnover | A failed action ends my turn | structure | turn_structure,random_effect | A failed action ends the whole turn. | A failed roll without that cost is random_effect.
+type_grant | Counts as another type | structure | tribal | A card counts as a type, tribe or faction it is not, or as every type. | Caring about a type is tribal.
+win_condition | How the game is won | structure |  | How a game is won. | Ways to get ahead are effects.
+zone_control | Hold zones or lanes | structure | positional | Controlling zones, lanes or objectives; winning or losing a location. | A bonus for holding a zone is control_reward.
+zone_of_control | Zones of control (leaving is punished) | structure | positional,adjacency | Leaving an enemy's reach is punished. | Being unable to move is immobilize.
+
+## Triggers
+trigger | Triggers & timing | trigger |  | When an effect happens. | What it does is an effect.
+activated | Activated ability (pay to use) | trigger | trigger | The player chooses when to use an ability: activate, tap, pay to use. | Abilities that fire on their own are triggers.
+aura | Aura (ongoing effect on others) | trigger | passive | While the source is in play, other units are continuously changed: anthem, lord. | A one-time change is the effect itself.
+combat_start | Start of combat | trigger | trigger | Effects at the start of combat or before a fight. | Start of turn is turn_start.
+death_trigger | When it dies (deathrattle) | trigger | death,trigger | Effects when a unit dies or is destroyed. | Counting deaths is death_count.
+delayed | Delayed / countdown | trigger | trigger | The effect happens later: next turn, after N turns, countdowns. | A set turn number is turn_number.
+game_end_trigger | At the end of the game | trigger | trigger,win_condition | Effects when the game ends or at the final count. | End of a turn is turn_end.
+hero_power | Hero power | trigger | activated | A repeatable player or leader ability. | A unit's own ability is activated.
+on_ally_play | When I play another card | trigger | trigger,synergy_payoff | Triggers when the owner plays or summons another card or unit. | When this card is played is on_play.
+on_attack | When it attacks | trigger | trigger | Triggers when the unit attacks or strikes. | When it is attacked is on_damaged or counterattack.
+on_damaged | When it is damaged | trigger | trigger | Triggers when the unit is damaged or survives damage. | Striking back at the attacker is counterattack.
+on_enemy_enter | When an enemy arrives | trigger | trigger | Triggers when an enemy is placed or moves in. | When an ally arrives is on_ally_play.
+on_kill | When it kills | trigger | trigger | Triggers when the unit kills another. | When it dies is death_trigger.
+on_play | When played (battlecry, on reveal) | trigger | trigger | Triggers when the card is played or revealed: battlecry, on reveal, enters. | When another card is played is on_ally_play.
+on_spell | When a spell is played | trigger | trigger | Triggers when a spell or action is played. | When a unit is played is on_ally_play.
+once_per_game | Once per game | trigger | trigger | The effect can be used only once per game. | Waiting turns between uses is cooldowns.
+passive | Passive / always on | trigger | trigger | The effect is always on while the card is in play. | Effects that fire on an event are triggers.
+reactions | Reactions on the opponent's turn | trigger | trigger,spell_speed | The effect answers the opponent's actions: interrupts, after your opponent plays. | Hidden traps are trap_secret.
+start_of_game | Start of the game | trigger | trigger | Effects at the start of the game or before it. | Start of turn is turn_start.
+territory_trigger | In or entering enemy territory | trigger | trigger,positional | The effect fires or turns on when a unit enters or stands in enemy territory or a set zone: infiltrate. | When an enemy arrives on my side is on_enemy_enter.
+trap_secret | Hidden traps / secrets | trigger | information,trigger | A hidden card fires on an opponent's action. | Open reactions are reactions.
+turn_end | End of turn / round | trigger | trigger | Effects at the end of a turn or round. | Start of turn is turn_start.
+turn_number | On a set turn or round | trigger | delayed,turn_structure | Effects tied to a given turn or round number: on turn 5, until round 4. | After N turns from now is delayed.
+turn_start | Start of turn / round | trigger | trigger | Effects at the start of a turn or round. | End of turn is turn_end.
+
+## Design problems
+design_problem | Design problems | problem |  | Problems games run into, and the mechanics that fix or worsen them. | Mechanics themselves are effects.
+anti_stalemate | Stalemate / board lock | problem | design_problem | Stalemates and board locks, and what breaks them. | Objective stalemates are p_objective_stalemate.
+p_alpha_strike | Burst / one-turn kills | problem | design_problem | Burst damage and one-turn kills that give no chance to answer. | Steady pressure is p_snowballing.
+p_board_flood | Board flooding | problem | design_problem | Boards flooded with too many units. | Crowding one row is p_front_pileup.
+p_complexity | Complexity overload | problem | design_problem | Too many rules to track. | Hidden information is p_hidden_info_frustration.
+p_dead_draws | Dead draws | problem | design_problem | Draws and hands that can't be played. | Too few resources is p_resource_screw.
+p_degenerate_combo | Degenerate combos / infinite loops | problem | design_problem | Combos and infinite loops that end the game or break it. | Burst damage without a loop is p_alpha_strike.
+p_dominant_strategy | One strategy dominates | problem | design_problem | One strategy beats all others. | Power growing over sets is p_power_creep.
+p_draw_engine | Card-draw engine | problem | design_problem | Repeated draw triggers bury the opponent in cards. | Dead draws are p_dead_draws.
+p_first_player | First-player advantage | problem | design_problem | The first player has an advantage. | Early leads that grow are p_snowballing.
+p_front_pileup | Front-row pile-up | problem | design_problem | One row holds all the value, so every unit crowds into it. | Too many units overall is p_board_flood.
+p_hidden_info_frustration | Unreadable board | problem | design_problem | Boards that can't be read and hidden information that frustrates. | Too many rules is p_complexity.
+p_holder_snowball | Objective-holder snowball | problem | design_problem | Rewards for holding an objective keep the first holder ahead. | Leads in general are p_snowballing.
+p_long_games | Overlong games | problem | design_problem | Games that run too long. | Locked boards are anti_stalemate.
+p_non_interaction | Solitaire play | problem | design_problem | Players barely interact. | One strategy winning is p_dominant_strategy.
+p_objective_stalemate | Objective stalemate | problem | design_problem | Both sides hold their objectives and neither can break the other. | Board locks are anti_stalemate.
+p_power_creep | Power creep | problem | design_problem | Cards get stronger over expansions. | One strategy winning is p_dominant_strategy.
+p_resource_hoarding | Resource hoarding | problem | design_problem | Banking resources beats spending them, so players pass rounds to save up. | Too few resources is p_resource_screw.
+p_resource_screw | Resource screw / flood | problem | design_problem | Too few or too many resources to play cards. | Saving up on purpose is p_resource_hoarding.
+p_snowballing | Snowballing | problem | design_problem | An early lead becomes unbeatable. | Burst kills are p_alpha_strike.
+p_swingy_random | Swingy randomness | problem | design_problem | Random results decide games. | Hidden information is p_hidden_info_frustration.
+p_turtling | Turtling rewarded | problem | design_problem | Passive defensive play is rewarded. | Board locks are anti_stalemate.

@@ -1,0 +1,394 @@
+# Concept tree v3 (13 Oct 2026)
+
+Claude's design, from the player's point of view. Every effect answers first: does this help or hurt, and whom. Each concept's definition, with two cards that fit and one look-alike that doesn't, is in `tools/concept_tree_v3.txt` and `tools/concept_examples.tsv`, and is stored in the concepts table. A concept with two parents shows the second as "also under".
+
+## The tree
+
+- Effects `effect`
+  - Helps my side `helps_me`
+    - Make a unit stronger (buff) `buff`
+      - Stat gain (+power, +health) `stat_gain`
+      - Temporary bonus (this turn only) `temporary_buff` (also under This turn / round only)
+      - Grows again and again `permanent_growth`
+      - Double or multiply stats `stat_multiply`
+      - First strike (hits before the enemy) `first_strike`
+      - Attack more than once `multi_attack`
+      - Strike back when attacked (counterattack, thorns) `counterattack`
+      - Ignore armour or defence `piercing`
+      - Hard to block (flying, unblockable) `evasion`
+      - Ranged attack / long reach `ranged` (also under Position and space)
+      - One attack hits several targets (cleave) `multi_target_attack` (also under Several targets)
+      - Excess damage carries on (trample) `excess_damage` (also under Deal damage)
+      - Any damage kills (deathtouch, poisonous) `deathtouch` (also under Destroy outright)
+      - Gain a random ability or keyword `random_ability` (also under Random results)
+    - My spells and abilities get stronger `spell_power`
+    - Keep my units alive (protection) `protection`
+      - Take less damage (armour) `damage_reduction`
+        - Block points that wear off `block_armor`
+      - Absorb one hit (shield, ward) `shield`
+      - Immune / can't be targeted `immunity`
+      - Cheat death (survive lethal) `cheat_death`
+      - Protect a specific ally (bodyguard) `bodyguard`
+      - Taunt (enemies must attack it) `taunt` (also under Targeting rules)
+      - Stealth / hidden until it acts `stealth` (also under Hidden and revealed information)
+    - Restore health (heal) `heal`
+      - Lifesteal / drain `lifesteal` (also under Deal damage)
+      - Heal every turn (regeneration) `regeneration`
+    - Get more cards `card_advantage`
+      - Draw cards `draw` (also under Hand, deck and discard pile)
+      - Create new cards `generate_cards`
+    - Better or chosen cards `card_quality`
+      - Look at cards and pick (scry) `selection` (also under Hand, deck and discard pile)
+        - Search the deck for a card (tutor) `tutor`
+      - Keep cards in hand across turns `retain` (also under Hand, deck and discard pile)
+      - Reuse my cards (shuffle back) `recycle` (also under Hand, deck and discard pile)
+      - Upgrade / level up a card `upgrade`
+      - Improve cards in hand or deck `in_hand_buff`
+    - More resources or cheaper plays `resource_advantage`
+      - Gain resources (ramp) `resource_gain` (also under Economy & resources)
+      - Cards cost less `cost_reduction` (also under Economy & resources)
+      - Set a cost to a fixed number `cost_set` (also under Economy & resources)
+      - Put into play for free `free_play` (also under Economy & resources, Tempo)
+    - Summon units / tokens `summon` (also under Board presence / going wide)
+    - Bring back dead units (revive) `revive` (also under Death and graveyard (theme))
+    - Fill my own discard pile (self-mill) `self_mill` (also under Discard pile / graveyard as a resource, Hand, deck and discard pile)
+    - Act sooner or more often `speed`
+      - Act the turn it arrives (haste, rush) `haste` (also under Tempo)
+      - Attack right away `attack_now` (also under Tempo)
+      - Extra turns or actions `extra_turn` (also under Tempo)
+      - Ready a used unit again (untap) `untap`
+    - Move my units (reposition) `movement` (also under Position and space)
+      - Swap positions `swap`
+    - Blink (leave and come back fresh) `blink`
+    - Return my unit to hand `return_to_hand`
+    - Copy cards or units `copy`
+    - Repeat or double triggers `repeat_trigger`
+    - Transform my card into another `transform`
+    - Choose what a card does `flexibility`
+      - Choose one of several effects `modal_choice`
+      - Switch stances or forms `stances`
+    - Steal from the opponent `steal` (also under Hurts the enemy)
+  - Hurts the enemy `hurts_enemy`
+    - Deal damage `damage`
+      - Damage to many at once `aoe_damage` (also under Several targets)
+      - Damage over time (poison, burn) `damage_over_time`
+      - Damage to the player or base `direct_damage`
+      - Small repeatable damage `ping`
+    - Remove an enemy unit `removal`
+      - Destroy outright `destroy`
+      - Banish / exile (gone for good) `banish`
+      - Board wipe `board_wipe` (also under Several targets)
+      - Send an enemy unit back (bounce) `bounce_enemy` (also under Tempo)
+      - Turn an enemy into something weaker `polymorph`
+    - Make a unit weaker (debuff) `debuff`
+      - Stat loss (-power, -health) `stat_loss`
+      - Can't attack (my own unit) `cant_attack` (also under Hurts my side (drawback))
+    - Mark a target for later hits `mark_target` (also under Conditions)
+    - Stop an enemy unit from acting `suppress`
+      - Deals no damage `no_damage_output`
+        - Attack set to 0 `attack_zero` (also under Make a unit weaker (debuff))
+        - Can't attack (lock on an enemy) `attack_lock`
+        - Its damage is prevented `damage_prevention`
+      - Can't block `cant_block`
+      - Can't move (root) `immobilize`
+      - Silence (abilities removed) `silence`
+      - Can't act at all (stun, freeze) `disable` (also under Deals no damage, Can't block, Can't move (root))
+    - Move enemy units (push, pull) `forced_movement` (also under Position and space)
+      - Bump damage (pushed into something) `collision_damage` (also under Deal damage)
+    - Force enemy units to attack `forced_attack`
+    - Disrupt the opponent's plans `disruption`
+      - Attack the opponent's hand `hand_disruption`
+      - Counter / cancel a play `counter_spell`
+      - Make the opponent's cards cost more `cost_increase` (also under Economy & resources)
+      - Mill the opponent's deck `mill` (also under Hand, deck and discard pile)
+      - Junk cards into a deck or hand `junk_cards` (also under Hand, deck and discard pile)
+      - Clog the opponent's board `board_clog` (also under Board size limit)
+  - Hurts my side (drawback) `drawback`
+    - Helps the opponent `enemy_benefit`
+    - Hits my own side too `friendly_fire`
+    - Destroys itself / temporary unit `self_destruct` (also under Death and graveyard (theme))
+    - Sacrifice my own units `sacrifice` (also under Death and graveyard (theme))
+    - Discard my own cards `discard` (also under Hand, deck and discard pile)
+    - One use (exhausted for the battle) `exhaust` (also under Hand, deck and discard pile)
+    - Give my units or cards to the opponent `donate`
+  - Neutral game rules `game_rules`
+    - Change the game's rules `rule_change` (also under Game structure)
+    - Limit what can be played `play_restriction`
+      - Close or ruin a lane `lane_closure` (also under Change the game's rules, Lanes / locations)
+      - Force where cards go `forced_placement` (also under Where units can be placed)
+    - Swap or replace hands or decks `hand_deck_swap` (also under Hand, deck and discard pile)
+    - Rewind / reset to an earlier state `rewind`
+- Combat rules `combat`
+  - Damage types, resistances and weaknesses `damage_types`
+  - Targeting rules `targeting_rules`
+    - Blocking / interception rules `blocking` (also under Combat rules)
+    - Choose attack targets `target_choice`
+- Conditions `condition`
+  - Order of my plays matters (combo) `combo_sequence`
+  - Counts / thresholds `condition_count`
+    - Grows with what happened this game `count_payoff`
+    - Quests / objectives with rewards `quests`
+      - First to do it wins the reward `race_objective`
+      - Objectives that score points `scoring_objectives` (also under Points decide the winner)
+    - Stacking keywords / counters `stacking_keyword`
+    - Variety matters (all different) `variety_payoff`
+  - Damaged unit matters `condition_life`
+  - Low life matters (player behind) `low_life` (also under Comeback / catch-up)
+  - Cost matters `cost_condition`
+  - Deck contents matter `deck_condition`
+  - Position in hand matters `hand_position` (also under Hand, deck and discard pile)
+  - Hand size matters `hand_size` (also under Hand, deck and discard pile)
+  - Alone matters `lone_unit` (also under Neighbours matter (adjacency))
+  - Stats matter (highest, lowest) `stat_condition`
+  - Tribe / type matters `tribal` (also under Synergy payoff)
+    - Counts as another type `type_grant`
+  - Stats equal to a count `variable_stats`
+- Design roles `role`
+  - Board presence / going wide `board_presence`
+  - Comeback / catch-up `comeback`
+  - Finisher / closer `finisher`
+  - Fodder / disposable bodies `fodder`
+    - Empty bodies (0 stats or no abilities) `null_body`
+    - Slot fillers `slot_filler` (also under Board size limit)
+  - Snowball / runaway advantage `snowball`
+  - Support / enabler `support`
+  - Synergy payoff `synergy_payoff`
+  - Tank / wall `tank`
+  - Tempo `tempo`
+- Scope (who is affected) `scope`
+  - Several targets `scope_multi`
+    - Area shapes (cone, line, sphere) `area_templates`
+    - Split a total among several `distribute`
+    - Whole board / all players `scope_global`
+      - Both players alike `symmetric_effect`
+  - Only itself `scope_self`
+- Game structure `structure`
+  - Units that act on their own `autonomous_units`
+  - Board size limit `board_limit`
+    - Bench / reserve `reserve_bench`
+  - Boss phases and rules `boss_phases`
+    - Boss acts between turns `legendary_actions`
+  - Hand, deck and discard pile `card_flow`
+    - Top or bottom of the deck matters `deck_position` (also under Conditions)
+    - Change the deck between battles `deck_modification`
+      - Card crafting `card_crafting`
+      - Deckbuilding rules `deckbuilding_effect`
+  - Attach or merge onto a unit `merge_attach`
+  - Play from another zone `cast_from_zone`
+  - Sustained effects that can be broken `concentration`
+  - Death and graveyard (theme) `death`
+    - Counts deaths `death_count` (also under Counts / thresholds)
+    - Discard pile / graveyard as a resource `graveyard`
+    - When it dies (deathrattle) `death_trigger` (also under Triggers & timing)
+  - Difficulty modifiers `difficulty_modifiers`
+  - Fatigue / end-game pressure `fatigue`
+  - Hidden and revealed information `information`
+    - Enemy actions announced in advance `telegraphed_threats` (also under Delayed / countdown)
+    - Hidden traps / secrets `trap_secret` (also under Triggers & timing)
+  - Items & consumables `items_consumables`
+  - Position and space `positional`
+    - Neighbours matter (adjacency) `adjacency`
+      - Help from nearby allies (assists) `assists_support` (also under Synergy payoff)
+    - Facing / attack from behind `flanking`
+    - Formations (pairs, chains) `link_formation` (also under Conditions)
+    - Lanes / locations `lanes`
+      - Reaches other lanes `cross_lane`
+      - Which lane matters `lane_identity`
+      - Row-wide lasting effects (weather) `row_effects` (also under Terrain / board features)
+    - Where units can be placed `placement_rules`
+      - Block enemy spawns `spawn_blocking` (also under Hold zones or lanes)
+    - Formation ranks `rank_positions` (also under Rows (front and back))
+    - Rows (front and back) `rows`
+    - Terrain / board features `terrain`
+      - A lane with its own rule `lane_rule` (also under Change the game's rules, Lanes / locations)
+    - Hold zones or lanes `zone_control`
+      - Reward for holding a zone `control_reward`
+    - Zones of control (leaving is punished) `zone_of_control` (also under Neighbours matter (adjacency))
+  - Randomness in the game's structure `randomness`
+    - Random results `random_effect`
+      - Advantage / disadvantage (roll twice) `advantage` (also under Combat rules)
+      - Defender rolls to resist (saves) `saving_throws` (also under Combat rules)
+  - Roguelike run `run_structure`
+    - Light / visibility level `light_level` (also under Hidden and revealed information)
+    - Permanent loss `permanent_loss` (also under Hurts my side (drawback))
+    - Rest or camp between fights `rest_phase`
+    - Lasting character traits `traits_quirks`
+  - Side deck `side_deck` (also under Hand, deck and discard pile)
+  - Slots that fill and fire (orbs) `slots_queue`
+  - Team play `team_play`
+  - This turn / round only `temporary_effect`
+  - Turn and round structure `turn_structure`
+    - Attack token / alternating attack `attack_token`
+    - Automatic combat `auto_battle`
+    - Change how long the game lasts `game_length` (also under Change the game's rules)
+    - Who acts or reveals first `reveal_order`
+    - Best-of-rounds with passing `round_passing`
+      - Carry-over between rounds `round_carryover`
+    - Play at the same time, then reveal `simultaneous_play` (also under Hidden and revealed information)
+    - Speed / reaction timing `spell_speed`
+    - A failed action ends my turn `turnover` (also under Random results)
+- Triggers & timing `trigger`
+  - Activated ability (pay to use) `activated`
+    - Ability cooldowns `cooldowns`
+    - Hero power `hero_power`
+  - Start of combat `combat_start`
+  - Delayed / countdown `delayed`
+    - On a set turn or round `turn_number` (also under Turn and round structure)
+  - At the end of the game `game_end_trigger` (also under How the game is won)
+  - When I play another card `on_ally_play` (also under Synergy payoff)
+  - When it attacks `on_attack`
+  - When it is damaged `on_damaged`
+  - When an enemy arrives `on_enemy_enter`
+  - When it kills `on_kill`
+  - When played (battlecry, on reveal) `on_play`
+  - When a spell is played `on_spell`
+  - Once per game `once_per_game`
+  - Passive / always on `passive`
+    - Aura (ongoing effect on others) `aura`
+  - Reactions on the opponent's turn `reactions` (also under Speed / reaction timing)
+  - Start of the game `start_of_game`
+  - In or entering enemy territory `territory_trigger` (also under Position and space)
+  - End of turn / round `turn_end`
+  - Start of turn / round `turn_start`
+- Design problems `design_problem`
+  - Stalemate / board lock `anti_stalemate`
+  - Burst / one-turn kills `p_alpha_strike`
+  - Board flooding `p_board_flood`
+  - Complexity overload `p_complexity`
+  - Dead draws `p_dead_draws`
+  - Degenerate combos / infinite loops `p_degenerate_combo`
+  - One strategy dominates `p_dominant_strategy`
+  - Card-draw engine `p_draw_engine`
+  - First-player advantage `p_first_player`
+  - Front-row pile-up `p_front_pileup`
+  - Unreadable board `p_hidden_info_frustration`
+  - Objective-holder snowball `p_holder_snowball`
+  - Overlong games `p_long_games`
+  - Solitaire play `p_non_interaction`
+  - Objective stalemate `p_objective_stalemate`
+  - Power creep `p_power_creep`
+  - Resource hoarding `p_resource_hoarding`
+  - Resource screw / flood `p_resource_screw`
+  - Snowballing `p_snowballing`
+  - Swingy randomness `p_swingy_random`
+  - Turtling rewarded `p_turtling`
+- Economy & resources `economy`
+  - Alternative costs `cost_type`
+    - Optional extra cost for a bonus `kicker`
+    - Pay life as a cost `life_payment`
+    - Pay later (overload, debt) `overload_debt` (also under Delayed / countdown)
+  - Second currency for abilities `coin_economy` (also under Several resource types)
+  - Expensive card `high_cost`
+  - Several resource types `multiple_resources`
+  - Save unspent resources `resource_banking`
+  - Convert one resource into another `resource_conversion` (also under Several resource types)
+  - Shops and gold `shop_gold` (also under Roguelike run)
+  - Upkeep (ongoing resource drain) `upkeep`
+- How the game is won `win_condition`
+  - Alternate win condition `alt_wincon` (also under Design roles)
+  - Life / health track `life_track` (also under Game structure)
+    - Stress / morale (second damage track) `stress_morale`
+  - Points decide the winner `points_scoring`
+  - Stakes and wagers `stakes_wager`
+
+## Every move and why (Claude's decisions)
+
+**New branches.** The effect branch now starts with who it helps or hurts:
+- `helps_me` (new): one of the four branches the plan asks for.
+- `hurts_enemy` (new): one of the four branches; replaces the vague `control`.
+- `drawback`: moved from the roles to the effect branch, as the "hurts my side" branch.
+- `game_rules` (new): one of the four branches, for rules that bind both players.
+
+**Helps my side**
+- `buff`: now "make a unit stronger", covering stats and combat abilities, so the attack bonuses can sit under it.
+- `stat_gain` (new): takes the old meaning of `buff` (+power, +health), now one kind of stronger.
+- `first_strike`, `multi_attack`, `piercing`, `evasion`: from `attack_mod` to `buff`; a unit gaining them gets stronger.
+- `ranged`, `multi_target_attack`, `excess_damage`, `deathtouch`: from `attack_mod` to `buff`; their second parents stay because they always hold.
+- `counterattack`: from `attack_mod` and `on_damaged` to `buff`; it is gaining free attacks, and it fires on being attacked, not only on damage.
+- `spell_power`: from `buff` to helps my side; stronger spells are not a stronger unit.
+- `protection`, `heal`, `card_advantage`: under helps my side.
+- `card_quality` (new): groups getting the right cards or better cards, as opposed to more cards.
+- `selection`, `retain`, `recycle`: under `card_quality`; they choose or keep cards rather than add them.
+- `tutor`: only under `selection`, since a search to the battlefield is not a draw. Tags that put the card in hand also get `draw`.
+- `upgrade`: from `permanent_growth` to `card_quality`, since upgrading a card is not growing every turn. Units that level up or evolve also get `buff`.
+- `in_hand_buff`: from `buff` to `card_quality`, because a cheaper card is not a stat gain. Cards given +stats in hand also get `stat_gain`.
+- `resource_advantage` (new): groups more resources and cheaper plays.
+- `resource_gain`, `cost_reduction`, `cost_set`, `free_play`: under `resource_advantage`. Their old parents still hold, so they stay.
+- `summon`, `revive`: under helps my side. `revive` leaves `summon` because returning to hand is not summoning; revives into play also get `summon`.
+- `self_mill` (new): split from `mill`, because filling my own discard pile is a setup for me, not an attack.
+- `speed` (new): groups acting sooner or more often.
+- `haste`, `attack_now`, `extra_turn`: under `speed`; `combat` is dropped, since they are not combat rules.
+- `untap`: from `extra_turn` to `speed`; readying one unit is not an extra turn.
+- `movement`: now only my own units, under helps my side. Moving enemies is `forced_movement`.
+- `blink`: leaves `movement`, since a blink is not moving on the board.
+- `return_to_hand`: only my own units, under helps my side; it leaves `removal` and `tempo`. Bounced enemies are `bounce_enemy`.
+- `copy`: leaves `card_advantage`, because copying a unit or an effect gives no card. Copies put in hand or deck also get `generate_cards`.
+- `repeat_trigger`: leaves `copy`; doing a trigger twice is not copying a card.
+- `transform`: only my own cards, under helps my side. Enemy transforms are `polymorph`.
+- `flexibility` (new): groups choosing what a card does.
+- `modal_choice`, `stances`: under `flexibility`.
+- `steal`: under both helps my side and hurts the enemy, since it always does both, like lifesteal.
+
+**Hurts the enemy**
+- `damage`, `removal`, `suppress`, `disruption`, `forced_attack`: from `control` and the root to hurts the enemy.
+- `bounce_enemy` (new): enemy units sent back to hand or deck, under `removal` and `tempo`.
+- `polymorph` (new): enemies turned into something weaker, under `removal`.
+- `debuff`: now "make a unit weaker", covering stats and penalties.
+- `stat_loss` (new): takes the old meaning of `debuff`.
+- `attack_zero`: loses the removed `stat_set` and goes under `debuff`; attack set to 0 is always a stat loss.
+- `mark_target`: from conditions to hurts the enemy, since marking makes the enemy take more; it keeps `condition`.
+- `silence`: drops `control`; `suppress` already places it.
+- `forced_movement`: leaves `movement`, which is now my own units, and goes under hurts the enemy and `positional`.
+- `counter_spell`: from `control` to `disruption`.
+- `mill`: from `card_flow` to `disruption`; milling myself is `self_mill`.
+- `junk_cards`: under `disruption`; junk put in my own deck also gets `drawback`.
+
+**Hurts my side (drawback)**
+- `sacrifice`: from `cost_type` to `drawback`, since sacrificing for value is not a cost. Sacrifices paid as a cost also get `cost_type`; making the opponent sacrifice also gets `destroy`.
+- `discard`: only my own cards, under `drawback`. Making the opponent discard is `hand_disruption`.
+- `exhaust`: from `card_flow` to `drawback`; the card is gone for the battle.
+- `cant_attack`: from `attack_mod` to `debuff` and `drawback`, as the plan asks.
+- `donate`: drops `control`; giving away my units hurts me. Harmful gifts also get `board_clog`.
+
+**Neutral game rules**
+- `rule_change`: under `game_rules`.
+- `play_restriction`: from `disruption` to `game_rules`, since most limits bind both players. Limits on the opponent only also get `disruption`.
+- `hand_deck_swap`: from `disruption` to `game_rules`; swapping hands or decks touches both sides alike.
+- `rewind`: under `game_rules`; resetting to an earlier state can help or hurt either side.
+
+**Outside the effect branch**
+- `aura`: from `buff` to `passive`, since an aura can weaken enemies. Auras that help my units also get `buff`; those that weaken enemies also get `debuff`.
+- `merge_attach`: from `buff` to structure, since an attachment can help or harm. Helpful attachments also get `buff`, harmful ones `debuff`.
+- `distribute`: from the effect root to `scope_multi`; splitting an amount is about how many targets, not help or harm.
+- `card_flow`: from the effect root to structure, as a theme for hand, deck and discard pile.
+- `death`: from the effect root to structure, as a theme.
+- `condition_life`: now a damaged unit only, and leaves `comeback`; a damaged unit is not a player who is behind.
+- `low_life` (new): the player at low life, under `condition` and `comeback`.
+- `variable_stats`: leaves `buff`; stats equal to a count are not a buff.
+- `variety_payoff`: leaves `deckbuilding_effect`; most variety payoffs are about play, not deck rules. Highlander deck rules also get `deckbuilding_effect`.
+- `death_count`: drops `trigger`; counting deaths is not a timing.
+- `autonomous_units`: from `randomness` to structure; units acting alone are not always random. Random ones also get `random_effect`.
+- `concentration`: from `delayed` to structure; a sustained effect is not a later one.
+- `control_reward`, `zone_control`: drop `win_condition`; holding a zone does not always win the game.
+- `stakes_wager`: drops `information`; wagers are not always about hidden information.
+- `legendary_actions`: drops `extra_turn`, since that is now my own extra turn, and a boss acting is not.
+- `lane_identity`: drops `positional`, which `lanes` already gives it.
+
+**Removed**
+- `stat_set` and `stat_swap`: mechanisms, replaced by outcomes. A set or swap becomes `stat_gain` when the target ends stronger, `stat_loss` when weaker, and both when it can hit either side.
+- `attack_mod`: a mixed group. Its tags go to `buff` for bonuses, `debuff` for penalties, and both when the text has both or neither.
+- `control`: a vague group. Its tags go to `steal` for taking control, otherwise to `hurts_enemy`.
+
+## How the tags moved (counts from the build of 13 Oct 2026)
+
+Every old concept maps to one or more new ones by the rules in `tools/concept_tree.py`. The script reads the card's own text, with wording made for each concept.
+
+- `buff` → `stat_gain`: 6,956 tags.
+- `debuff` → `stat_loss`: 2,328 tags.
+- `stat_set` and `stat_swap` → `stat_gain` and/or `stat_loss`: 563 tags, giving 862 new ones.
+- `attack_mod` → `buff` and/or `debuff`: 852 tags.
+- `control` → `steal` or `hurts_enemy`: 75 tags.
+- Side splits, enemy-side tags moved: `discard` 290, `mill` 210, `movement` 135, `condition_life` 125, `forced_attack` 58, `transform` 32, `return_to_hand` 23, `recycle` 1.
+- Parents carried along as their own tags where the text supports them: `merge_attach` 2,129, `sacrifice` 1,935, `upgrade` 1,232, `revive` 1,118, `aura` 877, `tutor` 707, `in_hand_buff` 404, and smaller numbers for the rest.
+
+A tag a hand review judged right is never lost: where none of its new concepts is left on the entry, it is kept as its own tag (19 such tags). A split rule never adds a concept that a hand review dropped from that entry. All 26,473 lines of the regression set still pass.

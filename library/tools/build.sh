@@ -16,6 +16,7 @@ cd "$(dirname "$0")"
 P="python3 -I"
 steps() {   # $1 = db
   D="$1"
+  $P concept_tree.py "$D" restore
   $P concept_defs.py "$D"
   $P game_patterns.py "$D" patterns
   $P drop_untagged.py "$D"
@@ -33,6 +34,7 @@ steps() {   # $1 = db
   $P design_problems.py "$D"
   $P trigger_pairs.py "$D"
   $P regression.py "$D" enforce
+  $P concept_tree.py "$D" apply
   $P parent_rule.py "$D"
   $P dedupe.py "$D"
   $P frequency.py "$D"

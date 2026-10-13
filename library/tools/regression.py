@@ -68,12 +68,22 @@ elif mode == 'enforce':
     c.commit(); print('reviewed drops re-applied:', n)
 else:
     bad = []; n = 0
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from concept_tree import primary, REMOVED   # the lines name the old concepts; concept_tree.py moved them (Step 1, 13 Oct 2026)
     for r in csv.DictReader(open(out, encoding='utf-8'), delimiter='\t'):
         n += 1
-        args = [res(r['entity']), r['concept']] + ([] if r['role'] == '*' else [r['role']])
-        have = bool(q('select 1 from entity_concepts where entity=? and concept=?' + ('' if r['role'] == '*' else ' and role=?'), *args))
-        if not have and r['expect'] == 'present':   # parent and child rule: a reviewed parent is kept by a narrower concept
-            have = bool(q('select 1 from entity_concepts where entity=? and concept in (select id from concept_tree where root=?)' + ('' if r['role'] == '*' else ' and role=?'), *args))
+        if r['expect'] == 'absent':   # a reviewed drop: the old concept's own new id must be absent (a removed mechanism has none),
+            if r['concept'] in REMOVED: continue   # unless it came from the plan's rule for the removed mechanisms (stat_set...)
+            ks = primary(r['concept'])[:1]
+            if q("select 1 from sqlite_master where name='tree_v3_added'") and q('select 1 from tree_v3_added where entity=? and concept=? and source in (%s)' % ','.join('?' * len(REMOVED)), res(r['entity']), ks[0], *REMOVED) \
+               and not q("select 1 from entity_concepts ec where entity=? and concept=? and not exists (select 1 from tree_v3_added a where a.entity=ec.entity and a.concept=ec.concept and a.role=ec.role)", res(r['entity']), ks[0]):
+                continue
+        else: ks = primary(r['concept'])   # a reviewed add: kept by any concept it moved to
+        have = False
+        for k in ks:
+            args = [res(r['entity']), k] + ([] if r['role'] == '*' else [r['role']])
+            have = have or bool(q('select 1 from entity_concepts where entity=? and concept=?' + ('' if r['role'] == '*' else ' and role=?'), *args))
+            if not have and r['expect'] == 'present':   # parent and child rule: a reviewed parent is kept by a narrower concept
+                have = bool(q('select 1 from entity_concepts where entity=? and concept in (select id from concept_tree where root=?)' + ('' if r['role'] == '*' else ' and role=?'), *args))
         if have != (r['expect'] == 'present'): bad.append(r)
     print(f'regression: {n - len(bad)}/{n} pass')
     for r in bad[:40]: print('  FAIL', r['game'], r['name'][:40], r['concept'], r['role'], 'expected', r['expect'])
