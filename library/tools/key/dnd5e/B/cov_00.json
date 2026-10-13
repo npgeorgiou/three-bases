@@ -1,0 +1,1386 @@
+{
+"761417": [
+[
+"concentration",
+"Concentration."
+],
+[
+"saving_throws",
+"makes a Wisdom saving throw"
+],
+[
+"advantage",
+"it has Advantage on the save"
+],
+[
+"disable",
+"the target also has the Incapacitated condition"
+]
+],
+"762112": [
+[
+"random_effect",
+"draw them randomly"
+],
+[
+"draw",
+"draw two additional cards beyond your declared draws"
+],
+[
+"stat_loss",
+"Permanently reduce your Intelligence by 1d4 + 1"
+],
+[
+"debuff",
+"You take a -2 penalty on saving throws"
+],
+[
+"summon",
+"You gain the service of a 4th-level fighter"
+],
+[
+"friendly_fire",
+"It appears in a space of the GM's choice within 10 feet of you and attacks you"
+],
+[
+"rewind",
+"allowing you to avoid or erase one event as if it never happened"
+],
+[
+"resource_gain",
+"Twenty-five pieces of jewelry worth 2,000 gp each"
+],
+[
+"items_consumables",
+"A rare or rarer magic weapon with which you are proficient appears in your hands"
+],
+[
+"permanent_loss",
+"All forms of wealth that you carry or own, other than magic items, are lost to you"
+]
+],
+"762528": [
+[
+"regeneration",
+"The troll regains 15 Hit Points at the start of each of its turns"
+],
+[
+"turn_start",
+"at the start of each of its turns"
+],
+[
+"damage_types",
+"If the troll takes Acid or Fire damage, this trait doesn’t function"
+],
+[
+"condition_life",
+"If the troll ends any turn Bloodied"
+],
+[
+"turn_end",
+"ends any turn Bloodied"
+],
+[
+"summon",
+"becomes a Troll Limb"
+],
+[
+"cheat_death",
+"The troll dies only if it starts its turn with 0 Hit Points and doesn’t regenerate"
+],
+[
+"multi_attack",
+"The troll makes three Rend attacks"
+],
+[
+"damage",
+"11 (2d6 + 4) Slashing damage"
+],
+[
+"movement",
+"The troll moves up to half its Speed straight toward an enemy"
+]
+],
+"761550": [
+[
+"aoe_damage",
+"they explode in a 10-foot-radius Sphere centered on them"
+],
+[
+"area_templates",
+"10-foot-radius Sphere"
+],
+[
+"friendly_fire",
+"each creature in the Sphere, including you"
+],
+[
+"saving_throws",
+"DC 15 Dexterity saving throw"
+],
+[
+"damage_types",
+"5d4 Force damage"
+],
+[
+"random_effect",
+"determine it randomly"
+],
+[
+"delayed",
+"produces an effect 1 minute later"
+],
+[
+"summon",
+"Three Shrieker Fungi sprout"
+],
+[
+"stat_gain",
+"permanently increases its lowest ability score by 1"
+],
+[
+"items_consumables",
+"This heavy cloth bag contains 3d4 dry beans"
+]
+],
+"762102": [
+[
+"stat_gain",
+"Increase one ability score of your choice by 1"
+],
+[
+"reactions",
+"When you or another creature within 60 feet of you succeeds on or fails a D20 Test"
+],
+[
+"temporary_buff",
+"apply the total rolled as a bonus or penalty to the d20 roll"
+],
+[
+"debuff",
+"apply the total rolled as a bonus or penalty to the d20 roll"
+],
+[
+"random_effect",
+"you can roll 2d4"
+],
+[
+"cooldowns",
+"you can't use it again until you roll Initiative or finish a Short or Long Rest"
+]
+],
+"762642": [
+[
+"advantage",
+"has advantage on saving throws against poison, spells, and illusions"
+],
+[
+"saving_throws",
+"saving throws against poison, spells, and illusions"
+],
+[
+"debuff",
+"While in sunlight, the duergar has disadvantage on attack rolls"
+],
+[
+"stat_multiply",
+"doubles its damage dice on Strength-based weapon attacks"
+],
+[
+"temporary_buff",
+"For 1 minute, the duergar magically increases in size"
+],
+[
+"stealth",
+"The duergar magically turns invisible until it attacks"
+],
+[
+"concentration",
+"as if concentrating on a spell"
+],
+[
+"ranged",
+"range 30/120 ft."
+],
+[
+"damage",
+"6 (1d8 + 2) piercing damage"
+]
+],
+"762438": [
+[
+"multi_attack",
+"The guard makes two attacks"
+],
+[
+"flexibility",
+"using Javelin or Longsword in any combination"
+],
+[
+"ranged",
+"range 30/120 ft."
+],
+[
+"damage",
+"14 (3d6 + 4) Piercing damage"
+]
+],
+"762694": [
+[
+"advantage",
+"has advantage on Wisdom (Perception) checks"
+],
+[
+"ping",
+"Hit: 1 piercing damage"
+]
+],
+"762456": [
+[
+"saving_throws",
+"If the kraken fails a saving throw, it can choose to succeed instead"
+],
+[
+"stat_multiply",
+"The kraken deals double damage to objects and structures"
+],
+[
+"multi_attack",
+"The kraken makes two Tentacle attacks"
+],
+[
+"damage",
+"24 (4d6 + 10) Bludgeoning damage"
+],
+[
+"immobilize",
+"The target has the Grappled condition (escape DC 20)"
+],
+[
+"forced_movement",
+"The kraken throws a Large or smaller creature Grappled by it"
+],
+[
+"debuff",
+"the target has the Prone condition"
+],
+[
+"ranged",
+"one creature the kraken can see within 120 feet"
+],
+[
+"damage_types",
+"33 (6d10) Lightning damage"
+],
+[
+"damage_over_time",
+"takes 24 (7d6) Acid damage at the start of each of its turns"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"scope_multi",
+"each creature in a 15-foot Emanation"
+],
+[
+"area_templates",
+"15-foot Emanation"
+],
+[
+"cooldowns",
+"The kraken can’t take this action again until the start of its next turn"
+]
+],
+"762352": [
+[
+"advantage",
+"with Advantage if the target is Grappled by the ankheg"
+],
+[
+"damage",
+"10 (2d6 + 3) Slashing damage"
+],
+[
+"damage_types",
+"3 (1d6) Acid damage"
+],
+[
+"immobilize",
+"it has the Grappled condition (escape DC 13)"
+],
+[
+"aoe_damage",
+"each creature in a 30-foot-long, 5-foot-wide Line"
+],
+[
+"area_templates",
+"30-foot-long, 5-foot-wide Line"
+],
+[
+"saving_throws",
+"Dexterity Saving Throw: DC 12"
+]
+],
+"762496": [
+[
+"saving_throws",
+"If the dragon fails a saving throw, it can choose to succeed instead"
+],
+[
+"multi_attack",
+"The dragon makes three Rend attacks"
+],
+[
+"flexibility",
+"It can replace one attack with a use of Spellcasting"
+],
+[
+"damage",
+"19 (2d8 + 10) Slashing damage"
+],
+[
+"damage_types",
+"10 (3d6) Fire damage"
+],
+[
+"aoe_damage",
+"each creature in a 90-foot Cone"
+],
+[
+"area_templates",
+"90-foot Cone"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"cooldowns",
+"The dragon can’t take this action again until the start of its next turn"
+],
+[
+"movement",
+"The dragon moves up to half its Speed"
+]
+],
+"762727": [
+[
+"quests",
+"setting the adventurers on a quest to find a cure"
+],
+[
+"immunity",
+"gnomes are strangely immune"
+],
+[
+"delayed",
+"Symptoms manifest 1d4 hours after infection"
+],
+[
+"debuff",
+"gains one level of exhaustion"
+],
+[
+"saving_throws",
+"DC 13 Constitution saving throw"
+],
+[
+"damage_types",
+"5 (1d10) psychic damage"
+],
+[
+"disable",
+"becomes incapacitated with mad laughter for 1 minute"
+],
+[
+"on_damaged",
+"taking damage"
+],
+[
+"turn_start",
+"starts its turn within 10 feet of an infected creature"
+]
+],
+"761207": [
+[
+"concentration",
+"Concentration."
+],
+[
+"summon",
+"becomes a Construct that uses the Animated Object stat block"
+],
+[
+"condition_count",
+"The maximum number of objects is equal to your spellcasting ability modifier"
+],
+[
+"activated",
+"you can take a Bonus Action to mentally command any creature you made with this spell"
+],
+[
+"autonomous_units",
+"If you issue no commands, the creature takes the Dodge action"
+],
+[
+"immunity",
+"Immunities Poison, Psychic"
+],
+[
+"damage",
+"Force damage equal to 1d4 + 3"
+],
+[
+"kicker",
+"for each spell slot level above 5"
+]
+],
+"761434": [
+[
+"stat_condition",
+"If the target has 150 Hit Points or fewer"
+],
+[
+"disable",
+"it has the Stunned condition"
+],
+[
+"immobilize",
+"its Speed is 0 until the start of your next turn"
+],
+[
+"saving_throws",
+"makes a Constitution saving throw at the end of each of its turns"
+]
+],
+"762430": [
+[
+"damage",
+"18 (2d12 + 5) Piercing damage"
+],
+[
+"debuff",
+"the target has the Prone condition"
+],
+[
+"scope_multi",
+"each creature in a 30-foot Cone"
+],
+[
+"area_templates",
+"30-foot Cone"
+],
+[
+"saving_throws",
+"Constitution Saving Throw: DC 15"
+],
+[
+"immobilize",
+"The target has the Restrained condition"
+],
+[
+"disable",
+"The target has the Petrified condition"
+],
+[
+"targeting_rules",
+"one creature within 5 feet that has the Prone condition"
+]
+],
+"762155": [
+[
+"transform",
+"magically assume the shape of a beast"
+],
+[
+"activated",
+"you can use your action to magically assume the shape of a beast"
+],
+[
+"cooldowns",
+"You regain expended uses when you finish a short or long rest"
+],
+[
+"stances",
+"You can revert to your normal form earlier by using a bonus action"
+],
+[
+"play_restriction",
+"You can't cast spells"
+]
+],
+"762575": [
+[
+"multi_attack",
+"The elephant makes two Gore attacks"
+],
+[
+"damage",
+"15 (2d8 + 6) Piercing damage"
+],
+[
+"debuff",
+"the target has the Prone condition"
+],
+[
+"targeting_rules",
+"one creature within 5 feet that has the Prone condition"
+],
+[
+"saving_throws",
+"Dexterity Saving Throw: DC 16"
+]
+],
+"762436": [
+[
+"death_trigger",
+"If the naga dies"
+],
+[
+"revive",
+"it returns to life in 1d6 days and regains all its Hit Points"
+],
+[
+"delayed",
+"in 1d6 days"
+],
+[
+"multi_attack",
+"The naga makes two Bite attacks"
+],
+[
+"flexibility",
+"It can replace any attack with a use of Poisonous Spittle"
+],
+[
+"damage",
+"17 (2d12 + 4) Piercing damage"
+],
+[
+"damage_types",
+"22 (4d10) Poison damage"
+],
+[
+"ranged",
+"one creature the naga can see within 60 feet"
+],
+[
+"debuff",
+"the target has the Blinded condition"
+],
+[
+"temporary_effect",
+"until the start of the naga’s next turn"
+],
+[
+"saving_throws",
+"Constitution Saving Throw: DC 16"
+]
+],
+"762111": [
+[
+"items_consumables",
+"Weapon (arrow), very rare"
+],
+[
+"tribal",
+"If a creature belonging to the type, race, or group associated with an arrow of slaying takes damage"
+],
+[
+"damage",
+"taking an extra 6d10 piercing damage"
+],
+[
+"saving_throws",
+"DC 17 Constitution saving throw"
+],
+[
+"self_destruct",
+"it becomes a nonmagical arrow"
+]
+],
+"761280": [
+[
+"concentration",
+"Concentration."
+],
+[
+"information",
+"you sense the location of poisons"
+]
+],
+"761539": [
+[
+"items_consumables",
+"Weapon (Any Ammunition)"
+],
+[
+"random_effect",
+"determines randomly by rolling on the table below"
+],
+[
+"tribal",
+"If a creature of that type takes damage from the ammunition"
+],
+[
+"damage",
+"taking an extra 6d10 Force damage"
+],
+[
+"saving_throws",
+"DC 17 Constitution saving throw"
+],
+[
+"self_destruct",
+"the ammunition becomes nonmagical"
+]
+],
+"762431": [
+[
+"on_damaged",
+"immediately after dealing damage to the ooze"
+],
+[
+"stat_loss",
+"Any nonmagical weapon takes a cumulative −1 penalty to attack rolls"
+],
+[
+"stacking_keyword",
+"cumulative −1 penalty"
+],
+[
+"destroy",
+"The weapon is destroyed if the penalty reaches −5"
+],
+[
+"damage_types",
+"10 (2d8 + 1) Acid damage"
+],
+[
+"piercing",
+"Nonmagical armor worn by the target takes a −1 penalty to the AC it offers"
+]
+],
+"762505": [
+[
+"debuff",
+"the shadow has Disadvantage on D20 Tests"
+],
+[
+"damage_types",
+"5 (1d6 + 2) Necrotic damage"
+],
+[
+"stat_loss",
+"the target’s Strength score decreases by 1d4"
+],
+[
+"destroy",
+"The target dies if this reduces that score to 0"
+],
+[
+"on_kill",
+"If a Humanoid is slain by this attack"
+],
+[
+"summon",
+"a Shadow rises from the corpse 1d4 hours later"
+],
+[
+"delayed",
+"1d4 hours later"
+],
+[
+"stealth",
+"the shadow takes the Hide action"
+]
+],
+"762478": [
+[
+"damage_types",
+"12 (3d6 + 2) Acid damage"
+],
+[
+"reactions",
+"Reactions: Split"
+],
+[
+"stat_condition",
+"has 10+ Hit Points"
+],
+[
+"condition_life",
+"it becomes Bloodied"
+],
+[
+"on_damaged",
+"is subjected to Lightning or Slashing damage"
+],
+[
+"summon",
+"The jelly splits into two new Ochre Jellies"
+]
+],
+"762365": [
+[
+"counterattack",
+"A creature that hits the pudding with a melee attack roll takes 4 (1d8) Acid damage"
+],
+[
+"on_damaged",
+"immediately after dealing damage to the pudding"
+],
+[
+"stat_loss",
+"Any nonmagical weapon takes a cumulative −1 penalty to attack rolls"
+],
+[
+"stacking_keyword",
+"cumulative −1 penalty"
+],
+[
+"destroy",
+"The weapon is destroyed if the penalty reaches −5"
+],
+[
+"damage_types",
+"17 (4d6 + 3) Acid damage"
+],
+[
+"piercing",
+"Nonmagical armor worn by the target takes a −1 penalty to the AC it offers"
+],
+[
+"reactions",
+"Reactions: Split"
+],
+[
+"stat_condition",
+"has 10+ Hit Points"
+],
+[
+"condition_life",
+"it becomes Bloodied"
+],
+[
+"summon",
+"The pudding splits into two new Black Puddings"
+]
+],
+"762113": [
+[
+"merge_attach",
+"While wearing this armor"
+],
+[
+"stat_gain",
+"you gain a +1 bonus to AC"
+],
+[
+"activated",
+"use a bonus action to speak the armor's command word"
+]
+],
+"762637": [
+[
+"advantage",
+"has advantage on saving throws against being charmed or frightened"
+],
+[
+"multi_attack",
+"The fanatic makes two melee attacks"
+],
+[
+"ranged",
+"range 20/60 ft."
+],
+[
+"damage",
+"4 (1d4 + 2) piercing damage"
+]
+],
+"762461": [
+[
+"advantage",
+"Advantage on saving throws against spells and other magical effects"
+],
+[
+"multi_attack",
+"The archmage makes four Arcane Burst attacks"
+],
+[
+"ranged",
+"range 150 ft."
+],
+[
+"damage_types",
+"27 (4d10 + 5) Force damage"
+],
+[
+"reactions",
+"casts Counterspell or Shield in response to the spell’s trigger"
+],
+[
+"counter_spell",
+"Counterspell"
+]
+],
+"762720": [
+[
+"merge_attach",
+"form a bond with them before their magical properties can be used"
+],
+[
+"rest_phase",
+"spend a short rest focused on only that item"
+],
+[
+"play_restriction",
+"a creature can be attuned to no more than three magic items at a time"
+],
+[
+"play_restriction",
+"a creature can't attune to more than one copy of an item"
+]
+],
+"761342": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"10foot Emanation"
+],
+[
+"immunity",
+"Any spell of level 5 or lower cast from outside the barrier can't affect anything within it"
+],
+[
+"cost_condition",
+"spell of level 5 or lower"
+],
+[
+"kicker",
+"for each spell slot level above 6"
+]
+],
+"762604": [
+[
+"zone_of_control",
+"doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach"
+],
+[
+"ping",
+"Hit: 1 Slashing damage"
+]
+],
+"761902": [
+[
+"upgrade",
+"Your Flurry of Blows, Patient Defense, and Step of the Wind gain the following benefits"
+],
+[
+"coin_economy",
+"You can expend 1 Focus Point"
+],
+[
+"multi_attack",
+"make three Unarmed Strikes with it instead of two"
+],
+[
+"block_armor",
+"you gain a number of Temporary Hit Points"
+],
+[
+"movement",
+"You move the creature with you"
+],
+[
+"zone_of_control",
+"The creature's movement doesn't provoke Opportunity Attacks"
+]
+],
+"762608": [
+[
+"zone_of_control",
+"doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach"
+],
+[
+"damage",
+"6 (1d8 + 2) Piercing damage"
+]
+],
+"762609": [
+[
+"zone_of_control",
+"doesn’t provoke an Opportunity Attack when it moves out of an enemy’s reach"
+],
+[
+"ping",
+"Hit: 1 Piercing damage"
+]
+],
+"762576": [
+[
+"zone_of_control",
+"doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach"
+],
+[
+"damage",
+"Hit: 1 Piercing damage"
+],
+[
+"damage_types",
+"5 (2d4) Poison damage"
+]
+],
+"761719": [
+[
+"merge_attach",
+"it functions as a magic Mace"
+],
+[
+"stat_gain",
+"grants a +3 bonus to attack rolls and damage rolls made with it"
+],
+[
+"activated",
+"You can press one of the following buttons as a Bonus Action"
+],
+[
+"stances",
+"a button's effect lasts until you push a different button"
+],
+[
+"transform",
+"transforming the rod into a magic Battleaxe"
+],
+[
+"damage_types",
+"an extra 2d6 Fire damage"
+],
+[
+"on_attack",
+"When you hit a creature with a melee attack using the rod"
+],
+[
+"saving_throws",
+"DC 17 Constitution saving throw"
+],
+[
+"lifesteal",
+"you regain a number of Hit Points equal to half that Necrotic damage"
+],
+[
+"cooldowns",
+"this property can't be used again until the next dawn"
+],
+[
+"disable",
+"the target has the Paralyzed condition for 1 minute"
+],
+[
+"scope_multi",
+"force each creature you can see within 30 feet of yourself"
+],
+[
+"debuff",
+"a target has the Frightened condition for 1 minute"
+]
+],
+"762561": [
+[
+"movement",
+"The wraith can move through other creatures and objects"
+],
+[
+"turn_end",
+"if it ends its turn inside an object"
+],
+[
+"debuff",
+"the wraith has Disadvantage on ability checks and attack rolls"
+],
+[
+"damage_types",
+"21 (4d8 + 3) Necrotic damage"
+],
+[
+"stat_loss",
+"its Hit Point maximum decreases by an amount equal to the damage taken"
+],
+[
+"death",
+"targets a Humanoid corpse within 10 feet of itself"
+],
+[
+"summon",
+"The target’s spirit rises as a Specter"
+],
+[
+"board_limit",
+"The wraith can have no more than seven specters under its control at a time"
+]
+],
+"762715": [
+[
+"rest_phase",
+"cast only a limited number of spells before resting"
+],
+[
+"deckbuilding_effect",
+"undergo a process of preparing spells"
+]
+],
+"762529": [
+[
+"regeneration",
+"The limb regains 5 Hit Points at the start of each of its turns"
+],
+[
+"turn_start",
+"at the start of each of its turns"
+],
+[
+"damage_types",
+"If the limb takes Acid or Fire damage, this trait doesn’t function"
+],
+[
+"cheat_death",
+"The limb dies only if it starts its turn with 0 Hit Points and doesn’t regenerate"
+],
+[
+"delayed",
+"If the limb isn’t destroyed within 24 hours"
+],
+[
+"random_effect",
+"roll 1d12"
+],
+[
+"transform",
+"the limb turns into a Troll"
+],
+[
+"self_destruct",
+"the limb withers away"
+],
+[
+"damage",
+"9 (2d4 + 4) Slashing damage"
+]
+],
+"762480": [
+[
+"regeneration",
+"The oni regains 10 Hit Points at the start of each of its turns"
+],
+[
+"turn_start",
+"at the start of each of its turns"
+],
+[
+"multi_attack",
+"The oni makes two Claw or Nightmare Ray attacks"
+],
+[
+"flexibility",
+"It can replace one attack with a use of Spellcasting"
+],
+[
+"damage_types",
+"9 (2d8) Necrotic damage"
+],
+[
+"ranged",
+"Ranged Attack Roll: +5, range 60 ft."
+],
+[
+"debuff",
+"the target has the Frightened condition"
+],
+[
+"temporary_effect",
+"until the start of the oni’s next turn"
+],
+[
+"transform",
+"The oni shape-shifts into a Small or Medium Humanoid or a Large Giant"
+],
+[
+"stealth",
+"The oni casts Invisibility on itself"
+]
+],
+"761638": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"take a Magic action to toss an Ioun Stone into the air"
+],
+[
+"merge_attach",
+"the stone orbits your head"
+],
+[
+"board_limit",
+"You can have up to three Ioun Stones orbiting your head at the same time"
+],
+[
+"immunity",
+"thwarting all attempts by other creatures to attack or snatch it"
+],
+[
+"reactions",
+"you can take a Reaction to cancel a spell of level 4 or lower"
+],
+[
+"counter_spell",
+"cancel a spell of level 4 or lower cast by a creature you can see"
+],
+[
+"cost_condition",
+"a spell of level 4 or lower"
+],
+[
+"self_destruct",
+"it burns out, turns dull gray, and loses its magic"
+],
+[
+"stat_gain",
+"Your Dexterity increases by 2"
+],
+[
+"advantage",
+"you have Advantage on Initiative rolls"
+],
+[
+"regeneration",
+"You regain 15 Hit Points at the end of each hour"
+],
+[
+"resource_banking",
+"This vibrant purple prism stores spells cast into it, holding them until you use them"
+]
+],
+"762507": [
+[
+"bodyguard",
+"half of any damage the wearer takes (round up) is transferred to the guardian"
+],
+[
+"regeneration",
+"The guardian regains 10 Hit Points at the start of each of its turns"
+],
+[
+"turn_start",
+"at the start of each of its turns"
+],
+[
+"resource_banking",
+"cause the guardian to store one spell of level 4 or lower"
+],
+[
+"multi_attack",
+"The guardian makes two Fist attacks"
+],
+[
+"damage_types",
+"7 (2d6) Force damage"
+],
+[
+"reactions",
+"Trigger: An attack roll hits the wearer of the guardian’s amulet"
+],
+[
+"protection",
+"The wearer gains a +5 bonus to AC"
+],
+[
+"temporary_buff",
+"until the start of the guardian’s next turn"
+]
+],
+"761602": [
+[
+"items_consumables",
+"Wondrous Item"
+]
+],
+"761505": [
+[
+"area_templates",
+"5-foot-radius circle"
+],
+[
+"movement",
+"Any creature that enters the portal instantly appears within 5 feet of the destination circle"
+],
+[
+"temporary_effect",
+"remains open until the end of your next turn"
+]
+],
+"761590": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"random_effect",
+"its cards are drawn at random"
+],
+[
+"draw",
+"draw a card at random from the deck"
+],
+[
+"summon",
+"An illusion of a creature, determined by rolling on the Deck of Illusions table, forms over the thrown card"
+],
+[
+"null_body",
+"except that it can do no harm"
+],
+[
+"activated",
+"you can take a Magic action to move it"
+],
+[
+"movement",
+"move it anywhere within 30 feet of its card"
+],
+[
+"banish",
+"that card can't be used again"
+]
+],
+"762187": [
+[
+"coin_economy",
+"a number of ki points"
+],
+[
+"cooldowns",
+"When you spend a ki point, it is unavailable until you finish a short or long rest"
+],
+[
+"rest_phase",
+"until you finish a short or long rest"
+],
+[
+"saving_throws",
+"Some of your ki features require your target to make a saving throw"
+]
+],
+"761399": [
+[
+"summon",
+"A staff of 100 near-transparent servants attends all who enter"
+],
+[
+"immunity",
+"They are invulnerable"
+],
+[
+"cant_attack",
+"they can't attack or take any action that would directly harm another creature"
+]
+],
+"761258": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"10-foot Emanation"
+],
+[
+"on_enemy_enter",
+"whenever a creature you can see enters the Emanation"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"saving_throws",
+"make a Wisdom saving throw"
+],
+[
+"damage",
+"The creature takes 5d8 Force damage"
+],
+[
+"zone_of_control",
+"you can take the Disengage action as a Bonus Action"
+],
+[
+"kicker",
+"for each spell slot level above 4"
+]
+],
+"761506": [
+[
+"modal_choice",
+"You create one of the effects below within range"
+],
+[
+"board_limit",
+"you can have up to three of its 1-minute effects active at a time"
+],
+[
+"advantage",
+"you have Advantage on Charisma (Intimidation) checks"
+],
+[
+"temporary_effect",
+"for 1 minute"
+]
+],
+"761256": [
+[
+"concentration",
+"Concentration."
+],
+[
+"summon",
+"You conjure a Medium spirit from the Feywild"
+],
+[
+"on_play",
+"When the spirit appears, you can make one melee spell attack"
+],
+[
+"damage_types",
+"Psychic damage equal to 3d12"
+],
+[
+"debuff",
+"the target has the Frightened condition"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"activated",
+"As a Bonus Action on your later turns"
+],
+[
+"movement",
+"you can teleport the spirit"
+],
+[
+"kicker",
+"for each spell slot level above 6"
+]
+]
+}

@@ -1,0 +1,1062 @@
+{
+"759770": [
+[
+"cheat_death",
+"Death's Door"
+],
+[
+"permanent_loss",
+"permanently kills the hero"
+],
+[
+"destroy",
+"permanently kills the hero"
+]
+],
+"759993": [
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2"
+],
+[
+"rank_positions",
+"Usable from ranks 3, 2, 1"
+],
+[
+"damage",
+"Deals damage 1-3"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"disable",
+"stun"
+]
+],
+"760025": [
+[
+"board_limit",
+"Takes 2 ranks"
+],
+[
+"multi_attack",
+"Acts 2 times per round"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"damage_over_time",
+"blight 10 per round for 3 rounds"
+],
+[
+"movement",
+"Moves self (back/forward) 0 1"
+],
+[
+"forced_movement",
+"push back 2 ranks"
+],
+[
+"disable",
+"stun"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"stress_morale",
+"stress +40"
+]
+],
+"760027": [
+[
+"board_limit",
+"Takes 2 ranks"
+],
+[
+"multi_attack",
+"Acts 2 times per round"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"damage_over_time",
+"blight 6 per round for 3 rounds"
+],
+[
+"stat_loss",
+"-33% damage, -10% crit"
+],
+[
+"stress_morale",
+"stress +40"
+]
+],
+"759961": [
+[
+"multi_attack",
+"Acts 2 times per round"
+],
+[
+"summon",
+"Summons allies"
+],
+[
+"mark_target",
+"Rank Target Enemy 1"
+],
+[
+"damage",
+"Deals damage 23-45"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+],
+[
+"disable",
+"stun"
+],
+[
+"summon",
+"summon brigand_raider_D"
+],
+[
+"bodyguard",
+"guard target ally for 2 rounds"
+],
+[
+"stress_morale",
+"stress +8"
+]
+],
+"759979": [
+[
+"board_limit",
+"Takes 3 ranks"
+],
+[
+"multi_attack",
+"Acts 2 times per round"
+],
+[
+"summon",
+"summon drowned_anchor_A"
+],
+[
+"forced_movement",
+"pull forward 3 ranks"
+],
+[
+"damage_over_time",
+"bleed 2 per round for 3 rounds"
+],
+[
+"stress_morale",
+"stress +10"
+],
+[
+"stat_loss",
+"-5% crit, -33% damage"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+]
+],
+"759896": [
+[
+"movement",
+"Moves self (back/forward) 0 1"
+],
+[
+"counterattack",
+"riposte (counterattack)"
+],
+[
+"stat_loss",
+"-15% damage"
+],
+[
+"temporary_buff",
+"+2% crit (self) for 2 rounds"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2"
+],
+[
+"damage",
+"Deals damage"
+]
+],
+"759923": [
+[
+"counterattack",
+"riposte (counterattack)"
+],
+[
+"temporary_buff",
+"+20% damage, +2% crit (self) for 2 rounds"
+],
+[
+"taunt",
+"mark target (self) for 1 rounds"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2, 3"
+],
+[
+"damage",
+"Deals damage"
+]
+],
+"759971": [
+[
+"rank_positions",
+"Usable from ranks 2, 1"
+],
+[
+"movement",
+"Moves self (back/forward) 0 1"
+],
+[
+"damage_over_time",
+"bleed 1 per round for 3 rounds"
+],
+[
+"mark_target",
+"only if target is tagged, +50% damage (self)"
+],
+[
+"debuff",
+"Brawler Rend Debuff 1"
+],
+[
+"damage",
+"Deals damage 2-4"
+]
+],
+"759994": [
+[
+"board_limit",
+"Takes 2 ranks"
+],
+[
+"damage_over_time",
+"bleed 2 per round for 3 rounds"
+],
+[
+"debuff",
+"Ghoul Rend Debuff 1"
+],
+[
+"stress_morale",
+"stress +15"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"light_level",
+"decrease light 10 (global)"
+],
+[
+"traits_quirks",
+"inflict disease the_worries"
+],
+[
+"scope_multi",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"rank_positions",
+"Usable from ranks 2, 1"
+]
+],
+"759975": [
+[
+"rank_positions",
+"Usable from ranks 2, 1"
+],
+[
+"movement",
+"Moves self (back/forward) 0 1"
+],
+[
+"damage_over_time",
+"bleed 6 per round for 3 rounds"
+],
+[
+"mark_target",
+"only if target is tagged, +50% damage (self)"
+],
+[
+"debuff",
+"Turbo Cultist Rend Debuff"
+],
+[
+"damage",
+"Deals damage 4-9"
+]
+],
+"759857": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 2, 3, 4"
+],
+[
+"stat_loss",
+"-10% accuracy, -10% crit"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3"
+]
+],
+"759947": [
+[
+"damage_over_time",
+"bleed 5 per round for 3 rounds"
+],
+[
+"movement",
+"Shuffle Self"
+],
+[
+"stress_morale",
+"stress +7"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"stat_loss",
+"-20% damage"
+],
+[
+"stress_morale",
+"stress +18"
+],
+[
+"self_destruct",
+"kill self"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+]
+],
+"759871": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 2, 1"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2"
+]
+],
+"759908": [
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"movement",
+"Moves self (back/forward) 0 3"
+],
+[
+"stat_loss",
+"-18% accuracy"
+],
+[
+"stat_gain",
+"+9 speed (self)"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+]
+],
+"759959": [
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"stat_loss",
+"-6% dodge for 2 rounds"
+],
+[
+"stress_morale",
+"stress +4"
+],
+[
+"movement",
+"Moves self (back/forward) 1 0"
+],
+[
+"rank_positions",
+"Usable from ranks 1"
+],
+[
+"ranged",
+"Ranged skill"
+]
+],
+"760338": [
+[
+"stat_gain",
+"+8% disease resistance"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"stat_gain",
+"+3 speed"
+],
+[
+"stat_loss",
+"-0.05 accuracy"
+]
+],
+"760258": [
+[
+"heal",
+"+13% hp heal percent"
+],
+[
+"stat_gain",
+"+10% poison resistance"
+],
+[
+"stat_loss",
+"-4 speed"
+]
+],
+"760393": [
+[
+"damage_reduction",
+"+0.08 protection"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"stat_gain",
+"+13% move resistance"
+],
+[
+"stress_morale",
+"-8% resolve check percent"
+]
+],
+"760286": [
+[
+"stat_gain",
+"+5% damage"
+],
+[
+"low_life",
+"while HP below 0.25"
+],
+[
+"stat_gain",
+"+2 speed"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+],
+[
+"tribal",
+"vs unholy enemies"
+]
+],
+"760176": [
+[
+"stat_gain",
+"+30% move resistance"
+],
+[
+"tribal",
+"Class: bounty_hunter"
+]
+],
+"760780": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"traits_quirks",
+"Quirk 25.00% (ruins_adventurer)"
+],
+[
+"shield",
+"Suit of Armor Shield"
+]
+],
+"759809": [
+[
+"damage_reduction",
+"high PROT, which absorbs attack damage"
+],
+[
+"piercing",
+"DOTs (blight and bleed) ignore PROT"
+],
+[
+"damage_over_time",
+"DOTs (blight and bleed)"
+]
+],
+"760405": [
+[
+"stat_gain",
+"+13% damage"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"stat_gain",
+"+10% poison resistance"
+],
+[
+"upkeep",
+"-20% food consumption percent"
+],
+[
+"stat_loss",
+"-10% max HP"
+],
+[
+"stress_morale",
+"+10% stress dmg received percent"
+],
+[
+"turn_number",
+"in the first round"
+],
+[
+"stat_loss",
+"-10% disease resistance"
+]
+],
+"760223": [
+[
+"stat_gain",
+"+35% bleed resistance"
+],
+[
+"stat_gain",
+"+15% max HP"
+]
+],
+"760132": [
+[
+"information",
+"+10% scouting chance"
+],
+[
+"stat_gain",
+"+10% trap resistance"
+],
+[
+"stat_loss",
+"-1 speed"
+]
+],
+"760732": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"heal",
+"remove disease (self)"
+],
+[
+"stat_gain",
+"+25% disease resistance (self)"
+],
+[
+"traits_quirks",
+"remove disease"
+]
+],
+"760302": [
+[
+"stat_gain",
+"+8% death_blow resistance"
+],
+[
+"turn_number",
+"not in the first round"
+],
+[
+"stress_morale",
+"-13% stress dmg received percent"
+]
+],
+"759902": [
+[
+"bodyguard",
+"guard target ally for 1 rounds"
+],
+[
+"stat_gain",
+"+25% dodge (self)"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+]
+],
+"759922": [
+[
+"bodyguard",
+"guard target ally for 2 rounds"
+],
+[
+"damage_reduction",
+"+45% protection (self)"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2, 3, 4"
+]
+],
+"759855": [
+[
+"damage_reduction",
+"+30% protection"
+],
+[
+"stat_gain",
+"+5% dodge"
+],
+[
+"bodyguard",
+"guard target ally"
+],
+[
+"swap",
+"swap places with target"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+]
+],
+"760645": [
+[
+"cost_reduction",
+"+0.2 upgrade discount armour"
+],
+[
+"upgrade",
+"upgrade discount"
+]
+],
+"759762": [
+[
+"upgrade",
+"Armor can be upgraded at the Blacksmith"
+],
+[
+"items_consumables",
+"A hero's armor"
+]
+],
+"760644": [
+[
+"cost_reduction",
+"+0.2 upgrade discount weapon"
+],
+[
+"upgrade",
+"upgrade discount"
+]
+],
+"759802": [
+[
+"items_consumables",
+"A type of equipment used by a hero"
+],
+[
+"upgrade",
+"Weapons can be upgraded at the Blacksmith"
+]
+],
+"760023": [
+[
+"board_limit",
+"Takes 2 ranks"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"movement",
+"Moves self (back/forward) 0 2"
+],
+[
+"forced_movement",
+"push back 3 ranks"
+],
+[
+"disable",
+"stun"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3"
+],
+[
+"damage",
+"Deals damage 6-12"
+]
+],
+"760198": [
+[
+"stress_morale",
+"-25% stress dmg received percent"
+],
+[
+"stances",
+"with skill transform"
+],
+[
+"tribal",
+"Class: abomination"
+]
+],
+"760612": [
+[
+"traits_quirks",
+"Prone to stealing items"
+],
+[
+"autonomous_units",
+"Prone to stealing items"
+]
+],
+"759966": [
+[
+"summon",
+"Summons allies"
+],
+[
+"stress_morale",
+"stress +10"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2"
+],
+[
+"summon",
+"summon collector_battle_A collector_protect_A collector_shaman_A"
+],
+[
+"lifesteal",
+"Life Steal"
+],
+[
+"damage_over_time",
+"bleed 2 per round for 3 rounds"
+],
+[
+"heal",
+"heal 10 (self)"
+],
+[
+"mark_target",
+"mark target for 2 rounds"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+]
+],
+"759837": [
+[
+"death_trigger",
+"When most monsters die, they leave corpses"
+],
+[
+"self_destruct",
+"will eventually go away on their own"
+],
+[
+"terrain",
+"Corpses act as temporary obstacles"
+],
+[
+"forced_movement",
+"push/pull skills"
+],
+[
+"damage_over_time",
+"bleed, blight"
+]
+],
+"760797": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"traits_quirks",
+"Quirk 16.67% (positive)"
+],
+[
+"stress_morale",
+"Effect 16.67% (Stress 2)"
+],
+[
+"information",
+"Scouting 33.33%"
+],
+[
+"items_consumables",
+"use torch"
+]
+],
+"760019": [
+[
+"board_limit",
+"Takes 3 ranks"
+],
+[
+"mark_target",
+"only if target is tagged, +100% damage (self)"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2"
+],
+[
+"disable",
+"stun"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2, 3, 4"
+],
+[
+"damage",
+"Deals damage 5-9"
+]
+],
+"760813": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"stress_morale",
+"eerie_coral_healstress"
+],
+[
+"items_consumables",
+"use medicinal_herbs"
+]
+],
+"760771": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"stress_morale",
+"Effect 40.00% (Stress 3)"
+],
+[
+"items_consumables",
+"use holy_water"
+]
+],
+"760791": [
+[
+"random_effect",
+"Possible outcomes"
+],
+[
+"traits_quirks",
+"Quirk 25.00% (warren_explorer)"
+],
+[
+"stress_morale",
+"Effect 50.00% (Stress 4)"
+],
+[
+"items_consumables",
+"use provision"
+]
+],
+"759957": [
+[
+"movement",
+"Moves self (back/forward) 3 0"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2, 3, 4"
+],
+[
+"ping",
+"Deals damage 1-1"
+]
+],
+"759939": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"disable",
+"stun"
+],
+[
+"terrain",
+"clear_corpses"
+],
+[
+"debuff",
+"Disorient 5"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+]
+],
+"759932": [
+[
+"forced_movement",
+"pull forward 2 ranks"
+],
+[
+"terrain",
+"clear_corpses"
+],
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 2, 3, 4"
+],
+[
+"targeting_rules",
+"Targets enemy ranks 3, 4"
+]
+],
+"759914": [
+[
+"forced_movement",
+"push back 3 ranks"
+],
+[
+"terrain",
+"clear_corpses"
+],
+[
+"rank_positions",
+"Usable from ranks 1, 2"
+],
+[
+"targeting_rules",
+"Targets enemy ranks 1"
+]
+],
+"759951": [
+[
+"board_limit",
+"Takes 4 ranks"
+],
+[
+"damage_over_time",
+"blight 2 per round for 3 rounds"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"self_destruct",
+"kill (self)"
+],
+[
+"ranged",
+"Ranged skill"
+]
+]
+}

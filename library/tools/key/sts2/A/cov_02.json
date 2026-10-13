@@ -1,0 +1,686 @@
+{
+"758650": [
+[
+"damage_over_time",
+"Apply 4 Poison"
+],
+[
+"aoe_damage",
+"to ALL enemies"
+],
+[
+"free_play",
+"Sly"
+]
+],
+"758946": [
+[
+"block_armor",
+"Gain 6 Block"
+],
+[
+"free_play",
+"Sly"
+]
+],
+"758863": [
+[
+"team_play",
+"Whenever another player attacks an enemy"
+],
+[
+"block_armor",
+"gain 1 Block"
+],
+[
+"free_play",
+"Sly"
+]
+],
+"758842": [
+[
+"discard",
+"Discard your Hand"
+],
+[
+"stat_multiply",
+"Attacks deal double damage"
+],
+[
+"delayed",
+"Next turn"
+]
+],
+"759035": [
+[
+"selection",
+"reroll each card reward once"
+]
+],
+"759634": [
+[
+"damage",
+"Slash (19 damage)"
+],
+[
+"block_armor",
+"block 12"
+],
+[
+"multi_attack",
+"Disembowel (multi_attack, 9 damage)"
+],
+[
+"disable",
+"Sleep (sleep)"
+],
+[
+"debuff",
+"Soul Siphon (debuff, buff, power, power, power)"
+],
+[
+"buff",
+"Soul Siphon (debuff, buff"
+]
+],
+"758719": [
+[
+"block_armor",
+"Gain Block"
+],
+[
+"variable_stats",
+"equal to the Block on another player"
+],
+[
+"team_play",
+"another player"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"759639": [
+[
+"damage",
+"Pounce (attack, 14 damage)"
+],
+[
+"debuff",
+"Web Cannon (attack, debuff, 9 damage, power)"
+],
+[
+"block_armor",
+"block 14"
+],
+[
+"buff",
+"Curl and Grow (defend, buff, power, block 14)"
+]
+],
+"759577": [
+[
+"in_hand_buff",
+"Increases Block gained from this card by X"
+]
+],
+"758626": [
+[
+"block_armor",
+"Gain 1 Block"
+],
+[
+"in_hand_buff",
+"Permanently increase this card's Block by 3"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"759632": [
+[
+"damage",
+"Orb of Frailty (8 damage)"
+],
+[
+"multi_attack",
+"Soul Beam (3 damage x3)"
+],
+[
+"debuff",
+"Orb of Weakness (attack, debuff, 8 damage, power)"
+],
+[
+"buff",
+"Dark Ritual (buff, power)"
+]
+],
+"759093": [
+[
+"condition_count",
+"Every time you play 3 Attacks in a single turn"
+],
+[
+"stat_gain",
+"gain 1 Dexterity"
+]
+],
+"759140": [
+[
+"condition_count",
+"Every time you play 3 Attacks in a single turn"
+],
+[
+"block_armor",
+"gain 4 Block"
+]
+],
+"759204": [
+[
+"condition_count",
+"Every time you play 3 Attacks in a single turn"
+],
+[
+"stat_gain",
+"gain 1 Strength"
+]
+],
+"758804": [
+[
+"damage",
+"Deal 9 damage"
+],
+[
+"deck_position",
+"on top of your Draw Pile"
+],
+[
+"recycle",
+"Put the next card you play this turn on top of your Draw Pile"
+]
+],
+"759710": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"random_effect",
+"Obtain a random Power"
+],
+[
+"deck_modification",
+"Obtain a random 0 cost card"
+]
+],
+"759678": [
+[
+"damage",
+"Hat Trick (21 damage)"
+],
+[
+"steal",
+"Thievery (attack, debuff, 17 damage)"
+],
+[
+"buff",
+"Flutter (buff, power)"
+],
+[
+"self_destruct",
+"Escape (escape)"
+]
+],
+"759532": [
+[
+"flanking",
+"attacked from behind"
+],
+[
+"mark_target",
+"Receive 50% more damage"
+]
+],
+"759336": [
+[
+"flanking",
+"attacking you from behind"
+],
+[
+"stat_gain",
+"Deals 50% more damage"
+]
+],
+"758828": [
+[
+"draw",
+"Draw cards until your Hand is full"
+],
+[
+"hand_size",
+"until your Hand is full"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"816436": [
+[
+"retain",
+"Retain"
+],
+[
+"draw",
+"Draw cards until your Hand is full"
+],
+[
+"hand_size",
+"until your Hand is full"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"759264": [
+[
+"exhaust",
+"Exhaust any number of cards in your Hand"
+]
+],
+"759711": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"shop_gold",
+"Gain 150 Gold"
+],
+[
+"life_payment",
+"Lose 18 HP"
+],
+[
+"team_play",
+"Join Forces"
+]
+],
+"759208": [
+[
+"combat_start",
+"Start each Elite combat"
+],
+[
+"stat_gain",
+"2 Strength"
+]
+],
+"759213": [
+[
+"turn_number",
+"At the start of your 3rd turn"
+],
+[
+"stat_gain",
+"gain 1 Strength and 1 Dexterity"
+]
+],
+"758772": [
+[
+"damage",
+"Deal 6 damage"
+],
+[
+"damage_over_time",
+"Apply 3 Poison"
+]
+],
+"759391": [
+[
+"on_attack",
+"Whenever you deal unblocked attack damage"
+],
+[
+"damage_over_time",
+"apply 1 Poison"
+]
+],
+"758527": [
+[
+"stat_loss",
+"Enemy loses 9 Strength this turn"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758635": [
+[
+"damage",
+"Deal damage"
+],
+[
+"count_payoff",
+"equal to the number of cards played this combat"
+]
+],
+"758880": [
+[
+"block_armor",
+"Gain Block"
+],
+[
+"graveyard",
+"number of cards in your Discard Pile"
+],
+[
+"condition_count",
+"equal to the number of cards"
+]
+],
+"816420": [
+[
+"block_armor",
+"Gain Block"
+],
+[
+"graveyard",
+"number of cards in your Discard Pile"
+],
+[
+"condition_count",
+"equal to the number of cards"
+]
+],
+"816431": [
+[
+"retain",
+"Retain"
+],
+[
+"damage",
+"Deal damage"
+],
+[
+"count_payoff",
+"equal to the number of cards played this combat"
+]
+],
+"758720": [
+[
+"damage",
+"Deal damage"
+],
+[
+"deck_condition",
+"equal to the number of cards in your Draw Pile"
+],
+[
+"start_of_game",
+"Innate"
+]
+],
+"759701": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"overload_debt",
+"Gain a Debt"
+],
+[
+"shop_gold",
+"Pay 50 Gold"
+],
+[
+"repeat_trigger",
+"Divine 6 times"
+]
+],
+"759713": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"shop_gold",
+"Pay 149 Gold"
+],
+[
+"random_effect",
+"Obtain a random Relic"
+],
+[
+"deck_modification",
+"Remove 2 cards from your Deck"
+]
+],
+"759200": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"resource_conversion",
+"spend 5 Gold to gain energy"
+]
+],
+"759733": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"shop_gold",
+"Pay 50 Gold"
+]
+],
+"758515": [
+[
+"block_armor",
+"Gain 6 Block"
+],
+[
+"recycle",
+"Put a card from your Discard Pile on top of your Draw Pile"
+],
+[
+"deck_position",
+"on top of your Draw Pile"
+]
+],
+"758754": [
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"junk_cards",
+"Add a Burn into your Discard Pile"
+]
+],
+"759331": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"recycle",
+"put a random Attack from your Discard Pile into your Hand"
+],
+[
+"random_effect",
+"a random Attack"
+],
+[
+"upgrade",
+"Upgrade it for the rest of combat"
+]
+],
+"758665": [
+[
+"aoe_damage",
+"Deal 16 damage to ALL enemies"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"cast_from_zone",
+"if this is in your Exhaust Pile, play it"
+]
+],
+"759321": [
+[
+"resource_gain",
+"Gain 3 stars"
+]
+],
+"759342": [
+[
+"multiple_resources",
+"spend or gain star"
+],
+[
+"aoe_damage",
+"deal 3 damage to ALL enemies"
+]
+],
+"758847": [
+[
+"damage",
+"Deal 8 damage"
+],
+[
+"resource_gain",
+"Gain 2 stars"
+],
+[
+"deck_position",
+"on top of your Draw Pile"
+],
+[
+"recycle",
+"Put this card on top of your Draw Pile"
+]
+],
+"758659": [
+[
+"resource_gain",
+"Gain star"
+],
+[
+"delayed",
+"Next turn, gain 3 stars"
+]
+],
+"758492": [
+[
+"block_armor",
+"gain 2 Block for each star spent"
+],
+[
+"condition_count",
+"for each star spent"
+]
+],
+"759149": [
+[
+"resource_banking",
+"If you end your turn with unspent energy, gain an additional 2 energy next turn"
+],
+[
+"turn_end",
+"end your turn"
+]
+],
+"758645": [
+[
+"damage",
+"Deal 20 damage"
+],
+[
+"on_kill",
+"If Fatal"
+],
+[
+"shop_gold",
+"gain 20 Gold"
+]
+],
+"759715": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"random_effect",
+"obtain a random Rare Card"
+],
+[
+"deck_modification",
+"add to your Deck"
+],
+[
+"upgrade",
+"Upgrade a random card in your Deck"
+],
+[
+"junk_cards",
+"add 1 Injury to your Deck"
+],
+[
+"transform",
+"Transform 1 of your Strikes and 1 of your Defends"
+],
+[
+"stat_gain",
+"raise your Max HP by {MaxHp}"
+],
+[
+"rest_phase",
+"Whenever you Rest at a Rest Site"
+],
+[
+"run_structure",
+"ignore paths when choosing the next rooms"
+],
+[
+"items_consumables",
+"procure 1 random potion"
+],
+[
+"selection",
+"choose 1 of 3 Multiplayer Cards"
+],
+[
+"combat_start",
+"At the start of Elite combats"
+],
+[
+"permanent_loss",
+"lose all Gold"
+]
+],
+"759318": [
+[
+"repeat_trigger",
+"gain 1 Replay this combat"
+],
+[
+"in_hand_buff",
+"All cards containing Strike gain 1 Replay"
+]
+]
+}

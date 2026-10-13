@@ -1,0 +1,132 @@
+795434 | Apocalypse, Celestials' Chosen | On Reveal: Swap the lowest-Power character in your front row at any location with one from your deck.
+   A: [["on_play", "On Reveal"], ["stat_condition", "lowest-Power"], ["rows", "front row"], ["cast_from_zone", "with one from your deck"]]
+   B: [["on_play", "On Reveal:"], ["stat_condition", "lowest-Power"], ["rows", "front row"], ["tutor", "Swap the lowest-Power character in your front row at any location with one from your deck"]]
+795443 | Askani'son | Activate: Create a 1-Cost card at another location. Increase the Cost each time you're winning here as the turn starts.
+   A: [["activated", "Activate"], ["summon", "Create a 1-Cost card at another location"], ["cross_lane", "another location"], ["turn_start", "as the turn starts"]]
+   B: [["activated", "Activate:"], ["summon", "Create a 1-Cost card at another location"], ["cross_lane", "another location"], ["zone_control", "you're winning here"], ["turn_start", "as the turn starts"]]
+795532 | Diamondback | Ongoing: Enemy cards here afflicted with negative Power have an additional -2 Power.
+   A: [["passive", "Ongoing"], ["aura", "Enemy cards here afflicted with negative Power have an additional -2 Power"], ["stat_loss", "additional -2 Power"]]
+   B: [["passive", "Ongoing:"], ["stat_loss", "additional -2 Power"]]
+795618 | Goblin Queen | On Reveal: Other cards can't be revealed this turn.
+   A: [["on_play", "On Reveal"], ["disruption", "Other cards can't be revealed this turn"], ["information", "can't be revealed"], ["temporary_effect", "this turn"]]
+   B: [["on_play", "On Reveal:"], ["information", "Other cards can't be revealed this turn"], ["temporary_effect", "this turn"]]
+795649 | High Evolutionary | Game Start: Unlock the potential of your cards with no abilities.
+   A: [["start_of_game", "Game Start"], ["upgrade", "Unlock the potential of your cards with no abilities"], ["null_body", "cards with no abilities"]]
+   B: [["start_of_game", "Game Start:"], ["in_hand_buff", "Unlock the potential of your cards with no abilities"], ["null_body", "cards with no abilities"]]
+795665 | Ice Cube | Start of Turn: +1 Energy. Then destroy this if your side is full here.
+   A: [["turn_start", "Start of Turn"], ["resource_gain", "+1 Energy"], ["self_destruct", "destroy this if your side is full here"]]
+   B: [["turn_start", "Start of Turn:"], ["resource_gain", "+1 Energy"], ["self_destruct", "destroy this"], ["board_presence", "your side is full here"]]
+795737 | Loki | On Reveal: Replace your deck with your opponent's starting deck. Give those cards -1 Cost.
+   A: [["on_play", "On Reveal"], ["hand_deck_swap", "Replace your deck with your opponent's starting deck"], ["in_hand_buff", "Give those cards -1 Cost"]]
+   B: [["on_play", "On Reveal:"], ["hand_deck_swap", "Replace your deck with your opponent's starting deck"], ["steal", "your opponent's starting deck"], ["cost_reduction", "Give those cards -1 Cost"]]
+795743 | Mad Thinker | Start of Turn (after drawing): +2 Power if your hand is full.
+   A: [["turn_start", "Start of Turn"], ["stat_gain", "+2 Power"], ["hand_size", "if your hand is full"]]
+   B: [["turn_start", "Start of Turn (after drawing):"], ["permanent_growth", "+2 Power"], ["hand_size", "if your hand is full"]]
+795753 | Malekith | On Reveal: Add a 3-Cost or less card from your deck here, but don't reveal it until the game ends.
+   A: [["on_play", "On Reveal"], ["cast_from_zone", "Add a 3-Cost or less card from your deck here"], ["cost_condition", "3-Cost or less"], ["information", "don't reveal it until the game ends"]]
+   B: [["on_play", "On Reveal:"], ["tutor", "Add a 3-Cost or less card from your deck here"], ["free_play", "from your deck here"], ["cost_condition", "3-Cost or less"], ["information", "don't reveal it until the game ends"]]
+795759 | Marrow | When Discarded or Destroyed: Randomly split -7 Power among enemy cards.
+   A: [["death_trigger", "When Discarded or Destroyed"], ["discard", "Discarded"], ["distribute", "Randomly split -7 Power among enemy cards"], ["stat_loss", "-7 Power"], ["random_effect", "Randomly"]]
+   B: [["death_trigger", "When Discarded or Destroyed:"], ["distribute", "Randomly split -7 Power among enemy cards"], ["stat_loss", "-7 Power"], ["random_effect", "Randomly"]]
+795805 | Morph | On Reveal: Become a copy of a card in your opponent's hand.
+   A: [["on_play", "On Reveal"], ["copy", "Become a copy of a card in your opponent's hand"], ["transform", "Become a copy"]]
+   B: [["on_play", "On Reveal:"], ["copy", "Become a copy of a card in your opponent's hand"], ["information", "a card in your opponent's hand"]]
+795861 | Patriot | Ongoing: Your cards with no abilities have +2 Power.
+   A: [["passive", "Ongoing"], ["aura", "Your cards with no abilities have +2 Power"], ["null_body", "cards with no abilities"], ["stat_gain", "+2 Power"]]
+   B: [["passive", "Ongoing:"], ["aura", "Your cards with no abilities have +2 Power"], ["null_body", "cards with no abilities"]]
+795863 | Peni Parker | On Reveal: Add SP//dr to your hand. When this merges, you get +1 Energy next turn.
+   A: [["on_play", "On Reveal"], ["generate_cards", "Add SP//dr to your hand"], ["merge_attach", "When this merges"], ["resource_gain", "+1 Energy next turn"]]
+   B: [["on_play", "On Reveal:"], ["generate_cards", "Add SP//dr to your hand"], ["resource_gain", "+1 Energy next turn"], ["delayed", "next turn"]]
+795870 | Polaris Horseman of Pestilence | Objective: Cards in play are afflicted with -5 Power Put a card from your hand here. (0/5)
+   A: [["quests", "Objective"], ["count_payoff", "Cards in play are afflicted with -5 Power"], ["free_play", "Put a card from your hand here"]]
+   B: [["quests", "Objective:"], ["condition_count", "Cards in play are afflicted with -5 Power"], ["free_play", "Put a card from your hand here"]]
+795886 | Quake | On Reveal: Swap the positions of the other two locations.
+   A: [["on_play", "On Reveal"], ["swap", "Swap the positions of the other two locations"], ["cross_lane", "other two locations"]]
+   B: [["on_play", "On Reveal:"], ["swap", "Swap the positions of the other two locations"]]
+795901 | Red Skull | Ongoing: Enemy cards here have +2 Power.
+   A: [["passive", "Ongoing"], ["enemy_benefit", "Enemy cards here have +2 Power"], ["aura", "Enemy cards here have +2 Power"]]
+   B: [["passive", "Ongoing:"], ["enemy_benefit", "Enemy cards here have +2 Power"]]
+795919 | Sam Wilson Captain America | On Reveal: Add Cap's Shield to another location. Ongoing: Cap's Shield is Moveable.
+   A: [["on_play", "On Reveal"], ["summon", "Add Cap's Shield to another location"], ["cross_lane", "another location"], ["passive", "Ongoing"], ["movement", "Moveable"]]
+   B: [["on_play", "On Reveal:"], ["generate_cards", "Add Cap's Shield to another location"], ["cross_lane", "another location"], ["passive", "Ongoing:"], ["support", "Cap's Shield is Moveable"]]
+795920 | Sandman | On Reveal: Next turn, cards cost 1 more. (maximum 6)
+   A: [["on_play", "On Reveal"], ["cost_increase", "cards cost 1 more"], ["symmetric_effect", "cards cost 1 more"], ["delayed", "Next turn"]]
+   B: [["on_play", "On Reveal:"], ["cost_increase", "cards cost 1 more"], ["symmetric_effect", "cards cost 1 more"], ["delayed", "Next turn"], ["temporary_effect", "Next turn"]]
+795960 | Sinister Six | Game Start: The first 6 characters you draw are EVIL! After you play them all, merge them into this and add this to the last one's location. (0/6)
+   A: [["start_of_game", "Game Start"], ["type_grant", "The first 6 characters you draw are EVIL!"], ["quests", "(0/6)"], ["merge_attach", "merge them into this"]]
+   B: [["start_of_game", "Game Start:"], ["quests", "After you play them all"], ["merge_attach", "merge them into this"], ["free_play", "add this to the last one's location"]]
+795996 | Stick | On Reveal: Give the next card you play Power equal to this card's Power.
+   A: [["on_play", "On Reveal"], ["in_hand_buff", "Give the next card you play Power"], ["combo_sequence", "the next card you play"]]
+   B: [["on_play", "On Reveal:"], ["combo_sequence", "the next card you play"], ["stat_gain", "Give the next card you play Power equal to this card's Power"]]
+796000 | Strange Supreme | Gains +2 Power from merging. End of Turn: Merge one of your created cards into this.
+   A: [["permanent_growth", "Gains +2 Power from merging"], ["turn_end", "End of Turn"], ["merge_attach", "Merge one of your created cards into this"]]
+   B: [["stat_gain", "Gains +2 Power from merging"], ["turn_end", "End of Turn:"], ["merge_attach", "Merge one of your created cards into this"]]
+796020 | Symbiote Spider-Man | Activate: Merge your lowest-Cost card here into this. Copy its text like it just revealed.
+   A: [["activated", "Activate"], ["merge_attach", "Merge your lowest-Cost card here into this"], ["cost_condition", "lowest-Cost"], ["copy", "Copy its text"], ["repeat_trigger", "like it just revealed"]]
+   B: [["activated", "Activate:"], ["merge_attach", "Merge your lowest-Cost card here into this"], ["cost_condition", "lowest-Cost"], ["repeat_trigger", "Copy its text like it just revealed"]]
+796043 | The Living Tribunal | Ongoing: Split your total Power evenly among all locations.
+   A: [["passive", "Ongoing"], ["distribute", "Split your total Power evenly among all locations"], ["cross_lane", "all locations"]]
+   B: [["passive", "Ongoing:"], ["distribute", "Split your total Power evenly among all locations"]]
+796061 | Topaz | After you play a card here, move it to the middle location.
+   A: [["lane_rule", "After you play a card here"], ["on_ally_play", "After you play a card here"], ["forced_placement", "move it to the middle location"], ["lane_identity", "middle location"]]
+   B: [["lane_rule", "After you play a card here"], ["movement", "move it to the middle location"], ["lane_identity", "middle location"]]
+796073 | Ultron Soul Stone | On Reveal: For each of your full locations, give one of your cards there +3 Power.
+   A: [["on_play", "On Reveal"], ["board_presence", "For each of your full locations"], ["stat_gain", "+3 Power"], ["cross_lane", "For each of your full locations"]]
+   B: [["on_play", "On Reveal:"], ["condition_count", "For each of your full locations"], ["stat_gain", "give one of your cards there +3 Power"]]
+796086 | Venus | When your cards in play are Empowered, give those cards an additional +1 Power.
+   A: [["synergy_payoff", "When your cards in play are Empowered"], ["stat_gain", "+1 Power"]]
+   B: [["support", "When your cards in play are Empowered"], ["stat_gain", "additional +1 Power"]]
+796123 | Wolverine Horseman of War | Objective: This has 5 or more Power Give one of your cards at each location +4 Power. (3/5)
+   A: [["quests", "Objective"], ["stat_condition", "This has 5 or more Power"], ["stat_gain", "+4 Power"], ["cross_lane", "at each location"]]
+   B: [["quests", "Objective:"], ["stat_condition", "5 or more Power"], ["stat_gain", "Give one of your cards at each location +4 Power"]]
+796125 | X-23 | When Discarded or Destroyed: Regenerate this at a random location and you get +1 Energy next turn.
+   A: [["death_trigger", "When Discarded or Destroyed"], ["discard", "Discarded"], ["cheat_death", "Regenerate this"], ["random_effect", "random location"], ["resource_gain", "+1 Energy next turn"], ["delayed", "next turn"]]
+   B: [["death_trigger", "When Discarded or Destroyed:"], ["revive", "Regenerate this at a random location"], ["random_effect", "random location"], ["resource_gain", "+1 Energy next turn"], ["delayed", "next turn"]]
+796164 | Attilan | After turn 3, shuffle your hand into your deck. Draw 3 cards.
+   A: [["turn_number", "After turn 3"], ["hand_deck_swap", "shuffle your hand into your deck"], ["draw", "Draw 3 cards"]]
+   B: [["turn_number", "After turn 3"], ["hand_deck_swap", "shuffle your hand into your deck. Draw 3 cards"]]
+796193 | Crystal Towers | Shuffle your hand into your deck. Draw 3 cards.
+   A: [["hand_deck_swap", "Shuffle your hand into your deck"], ["draw", "Draw 3 cards"]]
+   B: [["hand_deck_swap", "Shuffle your hand into your deck. Draw 3 cards"]]
+796200 | District X | Replace both decks with 10 random cards.
+   A: [["hand_deck_swap", "Replace both decks with 10 random cards"], ["symmetric_effect", "both decks"], ["random_effect", "random cards"], ["generate_cards", "10 random cards"]]
+   B: [["hand_deck_swap", "Replace both decks with 10 random cards"], ["random_effect", "random cards"], ["symmetric_effect", "both decks"]]
+796216 | Gamma Lab | After turn 3, transform all cards here into the Hulk.
+   A: [["turn_number", "After turn 3"], ["transform", "transform all cards here into the Hulk"], ["lane_rule", "transform all cards here"]]
+   B: [["turn_number", "After turn 3"], ["transform", "transform all cards here into the Hulk"], ["scope_global", "all cards here"]]
+796221 | Hala | After turn 4, destroy all cards on the losing side here.
+   A: [["turn_number", "After turn 4"], ["board_wipe", "destroy all cards on the losing side here"], ["zone_control", "losing side"], ["lane_rule", "destroy all cards on the losing side here"]]
+   B: [["turn_number", "After turn 4"], ["destroy", "destroy all cards on the losing side here"], ["control_reward", "losing side"]]
+796234 | Klyntar | After turn 4, merge your cards here into a Symbiote.
+   A: [["turn_number", "After turn 4"], ["merge_attach", "merge your cards here into a Symbiote"], ["lane_rule", "merge your cards here into a Symbiote"]]
+   B: [["turn_number", "After turn 4"], ["merge_attach", "merge your cards here into a Symbiote"]]
+796243 | Limbo | There is a turn 7 this game.
+   A: [["game_length", "There is a turn 7 this game"], ["lane_rule", "There is a turn 7 this game"]]
+   B: [["game_length", "There is a turn 7 this game"]]
+796264 | Munchineworld | After you play a card here, your opponent gets a Chimichanga.
+   A: [["lane_rule", "After you play a card here"], ["on_ally_play", "After you play a card here"], ["enemy_benefit", "your opponent gets a Chimichanga"]]
+   B: [["lane_rule", "After you play a card here"], ["enemy_benefit", "your opponent gets a Chimichanga"]]
+796265 | Murderworld | After turn 3, destroy all cards here.
+   A: [["turn_number", "After turn 3"], ["board_wipe", "destroy all cards here"], ["lane_rule", "destroy all cards here"]]
+   B: [["turn_number", "After turn 3"], ["board_wipe", "destroy all cards here"]]
+796279 | Our Lady of Saints | When your revealed cards fill this, merge them into a Symbiote.
+   A: [["lane_rule", "When your revealed cards fill this"], ["board_presence", "When your revealed cards fill this"], ["merge_attach", "merge them into a Symbiote"]]
+   B: [["lane_rule", "When your revealed cards fill this"], ["merge_attach", "merge them into a Symbiote"]]
+796319 | Starlight Citadel | After turn 4, swap the position of each location.
+   A: [["turn_number", "After turn 4"], ["swap", "swap the position of each location"], ["lane_rule", "swap the position of each location"]]
+   B: [["turn_number", "After turn 4"], ["swap", "swap the position of each location"]]
+796326 | Tarnax IV | After you play a character here, transform it into another one of the same Cost.
+   A: [["lane_rule", "After you play a character here"], ["on_ally_play", "After you play a character here"], ["transform", "transform it into another one of the same Cost"]]
+   B: [["lane_rule", "After you play a character here"], ["transform", "transform it into another one of the same Cost"]]
+796338 | The Sacred Timeline | First to fill this gets a copy of their opening hand.
+   A: [["race_objective", "First to fill this"], ["copy", "a copy of their opening hand"]]
+   B: [["race_objective", "First to fill this"], ["card_advantage", "gets a copy of their opening hand"], ["copy", "a copy of their opening hand"]]
+796339 | The Sandbar | Created cards cost 1 more. (max 6)
+   A: [["lane_rule", "Created cards cost 1 more"], ["cost_increase", "Created cards cost 1 more"], ["symmetric_effect", "Created cards cost 1 more"]]
+   B: [["lane_rule", "Created cards cost 1 more"]]
+796360 | Vibranium Mines | After you play here, shuffle 3 Vibranium into your deck.
+   A: [["lane_rule", "After you play here"], ["on_ally_play", "After you play here"], ["generate_cards", "shuffle 3 Vibranium into your deck"]]
+   B: [["lane_rule", "After you play here"], ["generate_cards", "shuffle 3 Vibranium into your deck"]]
+796383 | Energy and game length | Energy each turn equals the turn number and does not carry over; the game lasts 6 turns.
+   A: [["turn_structure", "Energy each turn equals the turn number"], ["game_length", "the game lasts 6 turns"]]
+   B: [["resource_gain", "Energy each turn equals the turn number"], ["turn_structure", "the game lasts 6 turns"], ["game_length", "the game lasts 6 turns"]]

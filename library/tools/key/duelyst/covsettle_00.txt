@@ -1,0 +1,108 @@
+741542 | Rebirth | When this dies, it leaves behind a 0/1 Egg that hatches into the same minion before your next turn.
+   A: [["death_trigger", "When this dies"], ["cheat_death", "hatches into the same minion"], ["summon", "leaves behind a 0/1 Egg"], ["delayed", "before your next turn"]]
+   B: [["death_trigger", "When this dies"], ["summon", "leaves behind a 0/1 Egg"], ["revive", "hatches into the same minion"], ["delayed", "before your next turn"]]
+741607 | Brome Warcrest | Bloodbound Spell: Summon a 1/2 Crestfallen with Zeal: Provoke in front of your General.
+   A: [["hero_power", "Bloodbound Spell"], ["summon", "Summon a 1/2 Crestfallen"], ["taunt", "Provoke"]]
+   B: [["hero_power", "Bloodbound Spell"], ["summon", "Summon a 1/2 Crestfallen"], ["adjacency", "Zeal"], ["taunt", "Provoke"], ["positional", "in front of your General"]]
+741609 | Suntide Maiden | Zeal: At the end of your turn, fully heal this minion.
+   A: [["turn_end", "At the end of your turn"], ["regeneration", "fully heal this minion"]]
+   B: [["adjacency", "Zeal"], ["turn_end", "At the end of your turn"], ["regeneration", "fully heal this minion"]]
+741623 | Conscript | Summon a 1/2 Crestfallen with Zeal: Provoke in front of your General.
+   A: [["summon", "Summon a 1/2 Crestfallen"], ["taunt", "Provoke"]]
+   B: [["summon", "Summon a 1/2 Crestfallen"], ["adjacency", "Zeal"], ["taunt", "Provoke"], ["positional", "in front of your General"]]
+741638 | Divine Bond | Give a minion +Attack equal to its Health.
+   A: [["stat_gain", "+Attack equal to its Health"], ["variable_stats", "equal to its Health"]]
+   B: [["stat_gain", "+Attack equal to its Health"]]
+741646 | Reva Eventide | Bloodbound Spell: Summon a Heartseeker nearby your General.
+   A: [["hero_power", "Bloodbound Spell"], ["summon", "Summon a Heartseeker"]]
+   B: [["hero_power", "Bloodbound Spell"], ["summon", "Summon a Heartseeker"], ["adjacency", "nearby your General"]]
+741775 | Ragnora the Relentless | Bloodbound Spell: Summon a Ripper Egg nearby your General.
+   A: [["hero_power", "Bloodbound Spell"], ["summon", "Summon a Ripper Egg"]]
+   B: [["hero_power", "Bloodbound Spell"], ["summon", "Summon a Ripper Egg"], ["adjacency", "nearby your General"]]
+741794 | Dampening Wave | Choose an enemy minion. It can no longer counterattack.
+   A: [["debuff", "It can no longer counterattack"]]
+   B: [["suppress", "It can no longer counterattack"]]
+741838 | Gravity Well | Summon four joined 0/1 Walls with Provoke.
+   A: [["summon", "Summon four joined 0/1 Walls"], ["taunt", "Provoke"], ["null_body", "0/1 Walls"]]
+   B: [["summon", "Summon four joined 0/1 Walls"], ["taunt", "Provoke"], ["null_body", "0/1 Walls"], ["link_formation", "joined"]]
+741865 | Alcuin Loremaster | Opening Gambit: Put a copy of the most recently cast spell into your action bar.
+   A: [["on_play", "Opening Gambit"], ["copy", "Put a copy of the most recently cast spell into your action bar"]]
+   B: [["on_play", "Opening Gambit"], ["copy", "Put a copy of the most recently cast spell into your action bar"], ["generate_cards", "Put a copy of the most recently cast spell into your action bar"]]
+741878 | Venom Toth | Whenever your opponent summons a minion, deal 1 damage to the enemy General.
+   A: [["on_enemy_enter", "Whenever your opponent summons a minion"], ["direct_damage", "deal 1 damage to the enemy General"], ["ping", "deal 1 damage"]]
+   B: [["on_enemy_enter", "Whenever your opponent summons a minion"], ["direct_damage", "deal 1 damage to the enemy General"]]
+741927 | Lux Ignis | Ranged / At the end of your turn, restore 2 Health to all nearby friendly minions.
+   A: [["ranged", "Ranged"], ["turn_end", "At the end of your turn"], ["regeneration", "restore 2 Health to all nearby friendly minions"], ["adjacency", "nearby friendly minions"]]
+   B: [["ranged", "Ranged"], ["turn_end", "At the end of your turn"], ["heal", "restore 2 Health"], ["adjacency", "nearby"], ["scope_multi", "all nearby friendly minions"]]
+741941 | Moebius | At the start of your turn, fully heal this minion and switch its Attack and Health.
+   A: [["turn_start", "At the start of your turn"], ["regeneration", "fully heal this minion"], ["stat_gain", "switch its Attack and Health"]]
+   B: [["turn_start", "At the start of your turn"], ["regeneration", "fully heal this minion"]]
+741950 | Paddo | Airdrop / Opening Gambit: Push ALL nearby minions and Generals to random spaces.
+   A: [["placement_rules", "Airdrop"], ["on_play", "Opening Gambit"], ["forced_movement", "Push ALL nearby minions and Generals to random spaces"], ["random_effect", "random spaces"]]
+   B: [["placement_rules", "Airdrop"], ["on_play", "Opening Gambit"], ["forced_movement", "Push ALL nearby minions and Generals to random spaces"], ["random_effect", "random spaces"], ["adjacency", "nearby"]]
+741971 | Watchful Sentinel | Sentinel: This transforms into a powerful minion if its hidden condition is met.
+   A: [["transform", "transforms into a powerful minion"], ["quests", "if its hidden condition is met"]]
+   B: [["trap_secret", "hidden condition"], ["transform", "transforms into a powerful minion"]]
+741987 | Sandswirl Reader | Opening Gambit: Return a nearby minion to its action bar. Turn that space into Exhuming Sand.
+   A: [["on_play", "Opening Gambit"], ["bounce_enemy", "Return a nearby minion to its action bar"], ["terrain", "Turn that space into Exhuming Sand"]]
+   B: [["on_play", "Opening Gambit"], ["bounce_enemy", "Return a nearby minion to its action bar"], ["adjacency", "nearby"], ["terrain", "Exhuming Sand"]]
+741988 | Reassemble | Return a friendly Obelysk to your action bar and reduce its cost to 0. Draw a card.
+   A: [["return_to_hand", "Return a friendly Obelysk to your action bar"], ["cost_set", "reduce its cost to 0"], ["draw", "Draw a card"], ["tribal", "Obelysk"]]
+   B: [["return_to_hand", "Return a friendly Obelysk to your action bar"], ["cost_set", "reduce its cost to 0"], ["draw", "Draw a card"]]
+742020 | Luminous Charge | Summon five joined 0/1 Walls that deal 2 damage to nearby enemies when destroyed.
+   A: [["summon", "Summon five joined 0/1 Walls"], ["death_trigger", "when destroyed"], ["aoe_damage", "deal 2 damage to nearby enemies"], ["adjacency", "nearby enemies"]]
+   B: [["summon", "Summon five joined 0/1 Walls"], ["link_formation", "joined"], ["death_trigger", "when destroyed"], ["aoe_damage", "deal 2 damage to nearby enemies"], ["adjacency", "nearby"]]
+742025 | Watchful Sentinel | Sentinel: This transforms into a powerful minion if its hidden condition is met.
+   A: [["transform", "transforms into a powerful minion"], ["quests", "if its hidden condition is met"]]
+   B: [["trap_secret", "hidden condition"], ["transform", "transforms into a powerful minion"]]
+742046 | Spriggin | Provoke / Opening Gambit: Each player summons three Spriggin Kin nearby their General.
+   A: [["taunt", "Provoke"], ["on_play", "Opening Gambit"], ["summon", "Each player summons three Spriggin Kin"], ["symmetric_effect", "Each player"]]
+   B: [["taunt", "Provoke"], ["on_play", "Opening Gambit"], ["summon", "summons three Spriggin Kin"], ["symmetric_effect", "Each player"], ["enemy_benefit", "Each player summons three Spriggin Kin"]]
+742068 | Dust Wailer | Flying / Opening Gambit: Deal 3 damage to all enemies in front of this minion.
+   A: [["evasion", "Flying"], ["on_play", "Opening Gambit"], ["aoe_damage", "Deal 3 damage to all enemies in front of this minion"], ["area_templates", "in front of this minion"]]
+   B: [["movement", "Flying"], ["on_play", "Opening Gambit"], ["aoe_damage", "Deal 3 damage to all enemies in front of this minion"], ["area_templates", "in front of this minion"]]
+742087 | Wings of Paradise | Flying / Whenever you replace a card, this minion gains +2 Attack this turn.
+   A: [["evasion", "Flying"], ["stat_gain", "+2 Attack"], ["temporary_buff", "this turn"]]
+   B: [["movement", "Flying"], ["stat_gain", "+2 Attack"], ["temporary_buff", "this turn"]]
+742088 | Astral Crusader | Whenever you replace this card, it costs 3 less and gains +3/+3.
+   A: [["in_hand_buff", "it costs 3 less and gains +3/+3"]]
+   B: [["in_hand_buff", "it costs 3 less and gains +3/+3"], ["cost_reduction", "costs 3 less"]]
+742089 | Dreamgazer | When you replace this card, summon it on a random nearby space. Your General takes 2 damage.
+   A: [["free_play", "summon it on a random nearby space"], ["random_effect", "random nearby space"], ["friendly_fire", "Your General takes 2 damage"]]
+   B: [["free_play", "summon it on a random nearby space"], ["random_effect", "random nearby space"], ["life_payment", "Your General takes 2 damage"]]
+742121 | Solarius | Zeal: Draw 2 additional cards at the end of your turn.
+   A: [["draw", "Draw 2 additional cards"], ["turn_end", "at the end of your turn"]]
+   B: [["adjacency", "Zeal"], ["draw", "Draw 2 additional cards"], ["turn_end", "at the end of your turn"]]
+742140 | Koan of Horns | Transform all minions in your action bar and deck into 0-cost Gore Horns. Draw 3 cards.
+   A: [["transform", "Transform all minions in your action bar and deck into 0-cost Gore Horns"], ["cost_set", "0-cost"], ["draw", "Draw 3 cards"]]
+   B: [["in_hand_buff", "Transform all minions in your action bar and deck"], ["cost_set", "0-cost"], ["draw", "Draw 3 cards"]]
+742166 | Echoing Shriek | Transform ALL minions that cost 2 or less into 1/1 Wraithlings.
+   A: [["polymorph", "Transform ALL minions that cost 2 or less into 1/1 Wraithlings"], ["cost_condition", "cost 2 or less"]]
+   B: [["polymorph", "Transform ALL minions that cost 2 or less into 1/1 Wraithlings"], ["cost_condition", "cost 2 or less"], ["scope_global", "ALL minions"]]
+742200 | Ion | Ranged / Deals double damage to Generals.
+   A: [["ranged", "Ranged"], ["stat_multiply", "double damage to Generals"]]
+   B: [["ranged", "Ranged"], ["stat_multiply", "double damage"], ["direct_damage", "double damage to Generals"]]
+742248 | Mana Deathgrip | Deal 1 damage to an enemy minion. If it dies this turn, permanently gain 1 mana crystal.
+   A: [["ping", "Deal 1 damage to an enemy minion"], ["resource_gain", "permanently gain 1 mana crystal"]]
+   B: [["damage", "Deal 1 damage"], ["resource_gain", "permanently gain 1 mana crystal"]]
+742256 | Loreweaver | Whenever you draw a spell, put a copy of it into your action bar.
+   A: [["copy", "put a copy of it into your action bar"]]
+   B: [["copy", "put a copy of it into your action bar"], ["generate_cards", "put a copy of it into your action bar"]]
+742271 | Sunstrike | Deal 3 damage to enemies and restore 3 Health to friendly minions and Generals in a row.
+   A: [["aoe_damage", "Deal 3 damage to enemies"], ["heal", "restore 3 Health to friendly minions and Generals"], ["area_templates", "in a row"]]
+   B: [["aoe_damage", "Deal 3 damage to enemies"], ["heal", "restore 3 Health"], ["rows", "in a row"]]
+742279 | Manakite Drifter | Build: (2). / When this minion is built, gain +2 mana this turn.
+   A: [["delayed", "Build: (2)"], ["resource_gain", "gain +2 mana this turn"], ["temporary_effect", "this turn"]]
+   B: [["delayed", "Build: (2)"], ["resource_gain", "gain +2 mana this turn"]]
+742296 | Equality Constraint | ANY minion's Health becomes equal to its Attack.
+   A: [["variable_stats", "Health becomes equal to its Attack"]]
+   B: [["stat_gain", "Health becomes equal to its Attack"], ["stat_loss", "Health becomes equal to its Attack"]]
+742326 | Effulgent Infusion | Give a friendly minion +Attack equal to your General's Attack.
+   A: [["stat_gain", "+Attack equal to your General's Attack"], ["variable_stats", "equal to your General's Attack"]]
+   B: [["stat_gain", "+Attack equal to your General's Attack"]]
+742329 | Aspect of the Bear | Transform ANY minion into a 4/5 Ursaplomb that will not counterattack.
+   A: [["polymorph", "Transform ANY minion into a 4/5 Ursaplomb"]]
+   B: [["polymorph", "Transform ANY minion"], ["transform", "Transform ANY minion"]]
+742347 | DECEPTIB0T | Whenever this minion destroys an enemy, summon a different Mech minion from your deck nearby.
+   A: [["on_kill", "Whenever this minion destroys an enemy"], ["tutor", "summon a different Mech minion from your deck"], ["summon", "summon a different Mech minion"], ["tribal", "Mech"]]
+   B: [["on_kill", "Whenever this minion destroys an enemy"], ["tutor", "summon a different Mech minion from your deck"], ["free_play", "summon a different Mech minion from your deck"], ["tribal", "Mech"]]

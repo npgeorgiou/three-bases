@@ -1,0 +1,150 @@
+756206 | Duel | Units take turns dealing damage equal to their power until one of them is destroyed.
+   A: [["damage", "Units take turns dealing damage equal to their power"]]
+   B: [["damage", "dealing damage equal to their power"], ["multi_attack", "Units take turns dealing damage"]]
+756216 | Insanity | If you have insufficient Coins, damage this unit by its Fee amount, ignoring its Armor, to trigger its Fee ability.\nNote: Insanity cannot be used if it would destroy the unit and works only if damage is inflicted.
+   A: [["piercing", "ignoring its Armor"], ["friendly_fire", "damage this unit by its Fee amount"], ["coin_economy", "insufficient Coins"], ["cost_type", "to trigger its Fee ability"]]
+   B: [["friendly_fire", "damage this unit by its Fee amount"], ["piercing", "ignoring its Armor"], ["coin_economy", "insufficient Coins"], ["repeat_trigger", "to trigger its Fee ability"]]
+756221 | Sabbath | Trigger this ability if at least one of your rows has a total of 25 or more points.
+   A: [["condition_count", "a total of 25 or more points"], ["rows", "at least one of your rows"]]
+   B: [["condition_count", "25 or more points"]]
+756228 | Ciri | Deploy: Damage 3 enemy units by 1. When you lose a round, move self back to your hand.
+   A: [["on_play", "Deploy"], ["damage", "Damage 3 enemy units by 1"], ["scope_multi", "3 enemy units"], ["return_to_hand", "move self back to your hand"], ["comeback", "When you lose a round"]]
+   B: [["on_play", "Deploy:"], ["ping", "Damage 3 enemy units by 1"], ["scope_multi", "3 enemy units"], ["return_to_hand", "move self back to your hand"], ["comeback", "When you lose a round"]]
+756231 | Regis | Deploy: Damage all units on an enemy row by 1. Initiative: If any were destroyed, repeat this ability.
+   A: [["on_play", "Deploy"], ["aoe_damage", "Damage all units on an enemy row by 1"], ["reveal_order", "Initiative"], ["repeat_trigger", "repeat this ability"], ["death_count", "If any were destroyed"]]
+   B: [["on_play", "Deploy:"], ["aoe_damage", "Damage all units on an enemy row by 1"], ["reveal_order", "Initiative"], ["repeat_trigger", "repeat this ability"], ["on_kill", "If any were destroyed"]]
+756242 | Eskel | Deploy (Adrenaline 4): Summon Vesemir and Lambert from your deck.
+   A: [["on_play", "Deploy (Adrenaline 4)"], ["hand_size", "Adrenaline 4"], ["tutor", "Summon Vesemir and Lambert from your deck"]]
+   B: [["on_play", "Deploy (Adrenaline 4)"], ["hand_size", "Adrenaline 4"], ["tutor", "Summon Vesemir and Lambert from your deck"], ["free_play", "Summon Vesemir and Lambert from your deck"]]
+756244 | Lambert | Deploy (Adrenaline 4): Summon Eskel and Vesemir from your deck.
+   A: [["on_play", "Deploy (Adrenaline 4)"], ["hand_size", "Adrenaline 4"], ["tutor", "Summon Eskel and Vesemir from your deck"]]
+   B: [["on_play", "Deploy (Adrenaline 4)"], ["hand_size", "Adrenaline 4"], ["tutor", "Summon Eskel and Vesemir from your deck"], ["free_play", "Summon Eskel and Vesemir from your deck"]]
+756259 | Ragh Nar Roog | Doomed. Scenario: Progress whenever you play a gold unit. Prologue: Spawn Cataclysm on both enemy rows for 2 turns. Chapter 1: Damage an enemy unit by 5. Chapter 2: Spawn and play Clear Skies.
+   A: [["exhaust", "Doomed"], ["quests", "Scenario: Progress whenever you play a gold unit"], ["row_effects", "Spawn Cataclysm on both enemy rows for 2 turns"], ["damage", "Damage an enemy unit by 5"], ["generate_cards", "Spawn and play Clear Skies"]]
+   B: [["banish", "Doomed"], ["quests", "Scenario: Progress whenever you play a gold unit"], ["on_ally_play", "whenever you play a gold unit"], ["row_effects", "Spawn Cataclysm on both enemy rows for 2 turns"], ["damage", "Damage an enemy unit by 5"], ["generate_cards", "Spawn and play Clear Skies"]]
+756261 | Decoy | Shuffle an allied unit on the battlefield into your deck, then play the top unit from your deck.
+   A: [["return_to_hand", "Shuffle an allied unit on the battlefield into your deck"], ["cast_from_zone", "play the top unit from your deck"]]
+   B: [["return_to_hand", "Shuffle an allied unit on the battlefield into your deck"], ["recycle", "Shuffle an allied unit on the battlefield into your deck"], ["deck_position", "play the top unit from your deck"], ["free_play", "play the top unit from your deck"]]
+756266 | Blizzard | Destroy the lowest-power unit. Initiative: Destroy all lowest-power units instead.
+   A: [["destroy", "Destroy the lowest-power unit"], ["stat_condition", "lowest-power unit"], ["reveal_order", "Initiative"], ["board_wipe", "Destroy all lowest-power units"]]
+   B: [["destroy", "Destroy the lowest-power unit"], ["stat_condition", "lowest-power unit"], ["friendly_fire", "Destroy the lowest-power unit"], ["reveal_order", "Initiative"]]
+756268 | Vaedermakar | Deploy (Melee): Increase all row effect durations by 1. Deploy (Ranged): Decrease all row effect durations by 1. If you control Scepter of Storms, increase or decrease the durations by 3 instead.
+   A: [["on_play", "Deploy (Melee)"], ["row_effects", "Increase all row effect durations by 1"], ["rows", "Deploy (Ranged)"]]
+   B: [["on_play", "Deploy (Melee)"], ["row_effects", "Increase all row effect durations by 1"], ["scope_global", "all row effect durations"]]
+756277 | Scorch | Destroy the highest-power unit. Initiative: Destroy all highest-power units instead.
+   A: [["destroy", "Destroy the highest-power unit"], ["stat_condition", "highest-power unit"], ["reveal_order", "Initiative"], ["board_wipe", "Destroy all highest-power units"]]
+   B: [["destroy", "Destroy the highest-power unit"], ["stat_condition", "highest-power unit"], ["friendly_fire", "Destroy the highest-power unit"], ["reveal_order", "Initiative"]]
+756291 | Triss: Butterflies | Deploy (Ranged): Shuffle a card from your hand into your deck, then draw a unit of your choice and boost it by 3.
+   A: [["on_play", "Deploy (Ranged)"], ["tutor", "draw a unit of your choice"], ["in_hand_buff", "boost it by 3"]]
+   B: [["on_play", "Deploy (Ranged)"], ["recycle", "Shuffle a card from your hand into your deck"], ["tutor", "draw a unit of your choice"], ["in_hand_buff", "boost it by 3"]]
+756295 | Thaler | Formation. Order: If neither player has passed and your opponent's hand is not full, both players draw a card.
+   A: [["activated", "Order"], ["symmetric_effect", "both players draw a card"], ["draw", "both players draw a card"], ["enemy_benefit", "both players draw a card"], ["hand_size", "your opponent's hand is not full"], ["round_passing", "If neither player has passed"]]
+   B: [["activated", "Order:"], ["draw", "both players draw a card"], ["symmetric_effect", "both players draw a card"], ["enemy_benefit", "both players draw a card"], ["hand_size", "your opponent's hand is not full"], ["round_passing", "neither player has passed"], ["movement", "Formation"]]
+756298 | Sabrina Glevissig | Disloyal. Deathwish: Damage all units on this row by 3.
+   A: [["donate", "Disloyal"], ["death_trigger", "Deathwish"], ["aoe_damage", "Damage all units on this row by 3"]]
+   B: [["donate", "Disloyal"], ["death_trigger", "Deathwish:"], ["aoe_damage", "Damage all units on this row by 3"], ["friendly_fire", "Damage all units on this row by 3"]]
+756309 | Reinforced Ballista | Formation. Resupply. Order: Damage a unit by 1. Cooldown: 1
+   A: [["activated", "Order"], ["ping", "Damage a unit by 1"], ["cooldowns", "Cooldown: 1"]]
+   B: [["movement", "Formation"], ["activated", "Order:"], ["ping", "Damage a unit by 1"], ["cooldowns", "Cooldown: 1"]]
+756324 | Vicovaro Novice | Deploy (Ranged): Draw a card, then move a card from your hand to the top of your deck.
+   A: [["on_play", "Deploy (Ranged)"], ["rows", "Ranged"], ["draw", "Draw a card"], ["deck_position", "move a card from your hand to the top of your deck"]]
+   B: [["on_play", "Deploy (Ranged)"], ["draw", "Draw a card"], ["deck_position", "move a card from your hand to the top of your deck"], ["recycle", "move a card from your hand to the top of your deck"], ["rows", "Ranged"]]
+756353 | Old Speartip: Asleep | Timer 3: Summon Old Speartip from your deck to this row and increase its base power by 6, then Banish self. If Old Speartip: Asleep takes damage, Summon Old Speartip from your deck, then Banish self instead.
+   A: [["delayed", "Timer 3"], ["tutor", "Summon Old Speartip from your deck to this row"], ["stat_gain", "increase its base power by 6"], ["banish", "Banish self"], ["on_damaged", "If Old Speartip: Asleep takes damage"]]
+   B: [["delayed", "Timer 3"], ["tutor", "Summon Old Speartip from your deck"], ["free_play", "Summon Old Speartip from your deck to this row"], ["stat_gain", "increase its base power by 6"], ["self_destruct", "Banish self"], ["on_damaged", "If Old Speartip: Asleep takes damage"]]
+756356 | Ancient Foglet | Veil. Deploy: Boost self by the total duration of row effects on the opposite side. Whenever you apply a row effect, boost self by its duration.
+   A: [["protection", "Veil"], ["on_play", "Deploy"], ["stat_gain", "Boost self by the total duration of row effects on the opposite side"], ["row_effects", "row effects"], ["permanent_growth", "Whenever you apply a row effect, boost self by its duration"]]
+   B: [["immunity", "Veil"], ["on_play", "Deploy:"], ["stat_gain", "Boost self by the total duration of row effects on the opposite side"], ["row_effects", "row effects"], ["permanent_growth", "Whenever you apply a row effect, boost self by its duration"]]
+756361 | Vran Warrior | Whenever a unit is destroyed during your turn, boost self by 1.
+   A: [["death_trigger", "Whenever a unit is destroyed during your turn"], ["permanent_growth", "boost self by 1"]]
+   B: [["death_count", "Whenever a unit is destroyed during your turn"], ["permanent_growth", "boost self by 1"]]
+756364 | Predatory Dive | Each player destroys their lowest-power unit.
+   A: [["symmetric_effect", "Each player destroys their lowest-power unit"], ["destroy", "destroys their lowest-power unit"], ["stat_condition", "lowest-power unit"], ["sacrifice", "Each player destroys their lowest-power unit"]]
+   B: [["symmetric_effect", "Each player destroys their lowest-power unit"], ["destroy", "destroys their lowest-power unit"], ["friendly_fire", "Each player destroys"], ["stat_condition", "lowest-power unit"]]
+756370 | Frenzied D'ao | Deploy: Play [1] Rock Barrage(s) from your deck. Increase this value by 1 for each Construct you played this game. If no Rock Barrages are available, move an enemy unit to the other row instead.
+   A: [["on_play", "Deploy"], ["tutor", "Play [1] Rock Barrage(s) from your deck"], ["count_payoff", "for each Construct you played this game"], ["tribal", "Construct"], ["forced_movement", "move an enemy unit to the other row"]]
+   B: [["on_play", "Deploy:"], ["tutor", "Play [1] Rock Barrage(s) from your deck"], ["free_play", "Play [1] Rock Barrage(s) from your deck"], ["count_payoff", "for each Construct you played this game"], ["forced_movement", "move an enemy unit to the other row"]]
+756384 | Schirrú | Zeal. Order: Destroy all other units with power equal to Schirrú.
+   A: [["haste", "Zeal"], ["activated", "Order"], ["destroy", "Destroy all other units with power equal to Schirrú"], ["stat_condition", "power equal to Schirrú"], ["friendly_fire", "Destroy all other units"]]
+   B: [["haste", "Zeal"], ["activated", "Order:"], ["destroy", "Destroy all other units with power equal to Schirrú"], ["stat_condition", "power equal to Schirrú"], ["scope_global", "all other units"]]
+756420 | Ermion | Deploy (Ranged): Play an Alchemy card from your deck.
+   A: [["on_play", "Deploy (Ranged)"], ["tutor", "Play an Alchemy card from your deck"], ["tribal", "Alchemy"]]
+   B: [["on_play", "Deploy (Ranged)"], ["tutor", "Play an Alchemy card from your deck"], ["free_play", "Play an Alchemy card from your deck"], ["tribal", "Alchemy"]]
+756451 | Tuirseach Skirmisher | When this unit is Discarded, Summon it from your graveyard to your Melee row.
+   A: [["discard", "When this unit is Discarded"], ["revive", "Summon it from your graveyard to your Melee row"], ["graveyard", "from your graveyard"]]
+   B: [["discard", "When this unit is Discarded"], ["revive", "Summon it from your graveyard to your Melee row"]]
+756458 | Delirium | Echo. Choose between a random bronze Skellige Beast and a random bronze Skellige Human that were not in your starting deck, then Spawn and play the one you chose, and Spawn the other in your graveyard. When Doomed, choose between gold ones instead
+   A: [["recycle", "Echo"], ["selection", "Choose between a random bronze Skellige Beast and a random bronze Skellige Human"], ["generate_cards", "Spawn and play the one you chose"], ["random_effect", "random bronze Skellige Beast"], ["tribal", "Skellige Beast"], ["graveyard", "Spawn the other in your graveyard"]]
+   B: [["repeat_trigger", "Echo"], ["flexibility", "Choose between"], ["random_effect", "a random bronze Skellige Beast and a random bronze Skellige Human"], ["generate_cards", "Spawn and play the one you chose"], ["graveyard", "Spawn the other in your graveyard"], ["tribal", "Beast"]]
+756464 | Menno Coehoorn | Deploy (Ranged): Play a Tactic from your deck.
+   A: [["on_play", "Deploy (Ranged)"], ["tutor", "Play a Tactic from your deck"], ["rows", "Ranged"]]
+   B: [["on_play", "Deploy (Ranged)"], ["tutor", "Play a Tactic from your deck"], ["free_play", "Play a Tactic from your deck"], ["rows", "Ranged"]]
+756469 | Tibor Eggebracht | Immunity. At the end of your turn, Infuse a random enemy unit with "Whenever this unit receives a status, damage self by 1". Whenever this card enters the battlefield, your opponent draws a card. If your opponent has already passed or their hand is full, damage self by 12 instead.
+   A: [["immunity", "Immunity"], ["turn_end", "At the end of your turn"], ["random_effect", "a random enemy unit"], ["debuff", "Whenever this unit receives a status, damage self by 1"], ["on_play", "Whenever this card enters the battlefield"], ["enemy_benefit", "your opponent draws a card"], ["round_passing", "your opponent has already passed"], ["hand_size", "their hand is full"], ["friendly_fire", "damage self by 12"]]
+   B: [["immunity", "Immunity"], ["turn_end", "At the end of your turn"], ["random_effect", "a random enemy unit"], ["ping", "damage self by 1"], ["enemy_benefit", "your opponent draws a card"], ["round_passing", "If your opponent has already passed"], ["hand_size", "their hand is full"], ["friendly_fire", "damage self by 12"]]
+756472 | Assire var Anahid | Deploy (Melee): Shuffle a card from your opponent's graveyard into their deck. Deploy (Ranged): Shuffle a card from your graveyard into your deck.
+   A: [["on_play", "Deploy (Melee)"], ["disruption", "Shuffle a card from your opponent's graveyard into their deck"], ["recycle", "Shuffle a card from your graveyard into your deck"], ["rows", "Deploy (Ranged)"]]
+   B: [["on_play", "Deploy (Melee)"], ["graveyard", "Shuffle a card from your opponent's graveyard into their deck"], ["disruption", "Shuffle a card from your opponent's graveyard into their deck"], ["recycle", "Shuffle a card from your graveyard into your deck"]]
+756480 | Cantarella | Disloyal. Deploy: Play the top card from your opponent's deck.
+   A: [["donate", "Disloyal"], ["on_play", "Deploy"], ["steal", "Play the top card from your opponent's deck"], ["cast_from_zone", "Play the top card from your opponent's deck"]]
+   B: [["donate", "Disloyal"], ["on_play", "Deploy:"], ["steal", "Play the top card from your opponent's deck"], ["deck_position", "the top card from your opponent's deck"], ["cast_from_zone", "from your opponent's deck"]]
+756484 | Daerlan Soldier | Deploy: If you control a Soldier, Summon all copies of self from your deck to this row. At the start of the game, Spawn a copy of self in your deck.
+   A: [["on_play", "Deploy"], ["tribal", "If you control a Soldier"], ["tutor", "Summon all copies of self from your deck to this row"], ["start_of_game", "At the start of the game"], ["generate_cards", "Spawn a copy of self in your deck"], ["copy", "Spawn a copy of self"]]
+   B: [["on_play", "Deploy:"], ["tribal", "If you control a Soldier"], ["tutor", "Summon all copies of self from your deck"], ["free_play", "Summon all copies of self from your deck to this row"], ["start_of_game", "At the start of the game"], ["generate_cards", "Spawn a copy of self in your deck"], ["copy", "copy of self"]]
+756486 | Spotter | Deploy: Look at the top 3 units in your opponent's deck, then choose one and gain Armor equal to its power. Order: Lose all Armor and look at the top units in your deck up to that amount, then choose one and gain Vitality equal to its power. If it's a bronze Soldier, boost self by its power instead.
+   A: [["on_play", "Deploy"], ["deck_position", "Look at the top 3 units in your opponent's deck"], ["information", "Look at the top 3 units in your opponent's deck"], ["damage_reduction", "gain Armor equal to its power"], ["activated", "Order"], ["selection", "look at the top units in your deck up to that amount, then choose one"], ["regeneration", "gain Vitality equal to its power"], ["stat_gain", "boost self by its power"], ["tribal", "bronze Soldier"]]
+   B: [["on_play", "Deploy:"], ["information", "Look at the top 3 units in your opponent's deck"], ["damage_reduction", "gain Armor equal to its power"], ["activated", "Order:"], ["selection", "look at the top units in your deck up to that amount, then choose one"], ["regeneration", "gain Vitality equal to its power"], ["stat_gain", "boost self by its power"], ["tribal", "bronze Soldier"]]
+756494 | Alba Pikeman | Flanking. Order: Give an enemy unit Bleeding (1). Charges: 0 At the end of your turn, gain 1 Charge. If this unit has at least 3 Charges, gain 1 Armor instead.
+   A: [["activated", "Order"], ["damage_over_time", "Give an enemy unit Bleeding (1)"], ["turn_end", "At the end of your turn"], ["damage_reduction", "gain 1 Armor"], ["condition_count", "at least 3 Charges"]]
+   B: [["flanking", "Flanking"], ["activated", "Order:"], ["damage_over_time", "Bleeding (1)"], ["turn_end", "At the end of your turn"], ["condition_count", "at least 3 Charges"], ["damage_reduction", "gain 1 Armor"]]
+756520 | An Craite Greatsword | Veteran. Deploy: Damage self by 6. Whenever an enemy unit takes damage, Heal self by 1.
+   A: [["on_play", "Deploy"], ["friendly_fire", "Damage self by 6"], ["heal", "Heal self by 1"], ["on_damaged", "Whenever an enemy unit takes damage"]]
+   B: [["on_play", "Deploy:"], ["friendly_fire", "Damage self by 6"], ["reactions", "Whenever an enemy unit takes damage"], ["heal", "Heal self by 1"]]
+756521 | Hefty Helge | Shield. Order: Damage a unit by 2. Charge: 1 Whenever you play a Tactic, gain 1 Charge.
+   A: [["shield", "Shield"], ["activated", "Order"], ["damage", "Damage a unit by 2"], ["on_spell", "Whenever you play a Tactic"], ["tribal", "Tactic"]]
+   B: [["shield", "Shield"], ["activated", "Order:"], ["damage", "Damage a unit by 2"], ["on_spell", "Whenever you play a Tactic"]]
+756533 | Uma's Curse | Create and play a gold unit from any faction.
+   A: [["generate_cards", "Create and play a gold unit from any faction"]]
+   B: [["generate_cards", "Create and play a gold unit from any faction"], ["selection", "Create"]]
+756543 | Hubert Rejk | Whenever you use an Order ability while this card is in your deck, remove a Counter from it. When the Counter reaches 0, Summon this card from your deck to your Ranged row. Counter: 10
+   A: [["count_payoff", "Whenever you use an Order ability while this card is in your deck"], ["delayed", "Counter: 10"], ["free_play", "Summon this card from your deck to your Ranged row"]]
+   B: [["count_payoff", "Whenever you use an Order ability while this card is in your deck"], ["delayed", "Counter: 10"], ["cast_from_zone", "Summon this card from your deck to your Ranged row"], ["free_play", "Summon this card from your deck"]]
+756545 | Stregobor | Timer 2 (Ranged): Each player draws a unit and sets its power to 1.
+   A: [["delayed", "Timer 2 (Ranged)"], ["symmetric_effect", "Each player draws a unit"], ["draw", "draws a unit"], ["enemy_benefit", "Each player draws a unit"], ["in_hand_buff", "sets its power to 1"]]
+   B: [["delayed", "Timer 2 (Ranged)"], ["symmetric_effect", "Each player draws a unit"], ["tutor", "draws a unit"], ["enemy_benefit", "Each player draws a unit"], ["stat_loss", "sets its power to 1"]]
+756554 | Infiltrator | Melee: At the end of the round, shuffle self into your opponent's deck.
+   A: [["turn_end", "At the end of the round"], ["junk_cards", "shuffle self into your opponent's deck"], ["rows", "Melee"]]
+   B: [["rows", "Melee:"], ["turn_end", "At the end of the round"], ["donate", "shuffle self into your opponent's deck"]]
+756563 | Heymaey Flaminica | At the end of your turn, Heal all other units on this row by 1.
+   A: [["turn_end", "At the end of your turn"], ["heal", "Heal all other units on this row by 1"], ["regeneration", "Heal all other units on this row by 1"], ["rows", "this row"]]
+   B: [["turn_end", "At the end of your turn"], ["heal", "Heal all other units on this row by 1"], ["scope_multi", "all other units on this row"]]
+756566 | Battle Trance | Order: Spawn and play Mardroeme. Whenever you play an Alchemy card, Heal a random allied unit by 1. This ability adds 17 provisions to your deck's provisions limit.
+   A: [["activated", "Order"], ["generate_cards", "Spawn and play Mardroeme"], ["on_spell", "Whenever you play an Alchemy card"], ["tribal", "Alchemy"], ["heal", "Heal a random allied unit by 1"], ["random_effect", "random allied unit"], ["deckbuilding_effect", "adds 17 provisions to your deck's provisions limit"]]
+   B: [["activated", "Order:"], ["generate_cards", "Spawn and play Mardroeme"], ["on_spell", "Whenever you play an Alchemy card"], ["heal", "Heal a random allied unit by 1"], ["random_effect", "random allied unit"], ["deckbuilding_effect", "adds 17 provisions"]]
+756589 | Pitfall Trap | Ambush: When your opponent plays a card face up, split damage equal to its provision cost randomly between all enemy units. Spring: Split 6 damage randomly between all enemy units.
+   A: [["trap_secret", "Ambush"], ["reactions", "When your opponent plays a card face up"], ["distribute", "split damage equal to its provision cost randomly between all enemy units"], ["random_effect", "randomly"], ["cost_condition", "equal to its provision cost"]]
+   B: [["trap_secret", "Ambush"], ["reactions", "When your opponent plays a card face up"], ["distribute", "split damage equal to its provision cost randomly between all enemy units"], ["random_effect", "randomly"]]
+756591 | Poor Fucking Infantry | Deploy: Spawn a Left Fucking Flank and a Right Fucking Flank on each side of this unit. Bonded: Also boost self by 3.
+   A: [["on_play", "Deploy"], ["summon", "Spawn a Left Fucking Flank and a Right Fucking Flank on each side of this unit"], ["adjacency", "on each side of this unit"], ["stat_gain", "boost self by 3"]]
+   B: [["on_play", "Deploy:"], ["summon", "Spawn a Left Fucking Flank and a Right Fucking Flank on each side of this unit"], ["adjacency", "on each side of this unit"], ["synergy_payoff", "Bonded"], ["stat_gain", "boost self by 3"]]
+756639 | Saesenthessis: Blaze | Lineage. While in hand, deck, or on the battlefield, whenever an enemy unit is destroyed or Banished during your turn, boost self by 1.
+   A: [["in_hand_buff", "While in hand, deck, or on the battlefield"], ["death_trigger", "whenever an enemy unit is destroyed or Banished during your turn"], ["permanent_growth", "boost self by 1"]]
+   B: [["in_hand_buff", "While in hand, deck"], ["death_count", "whenever an enemy unit is destroyed or Banished during your turn"], ["permanent_growth", "boost self by 1"]]
+756640 | Isengrim's Council | Look at a random Dwarf, Dryad, and Elf from your deck, then play one and boost it by 2.
+   A: [["selection", "Look at a random Dwarf, Dryad, and Elf from your deck, then play one"], ["random_effect", "random Dwarf, Dryad, and Elf"], ["tribal", "Dwarf, Dryad, and Elf"], ["stat_gain", "boost it by 2"]]
+   B: [["selection", "Look at a random Dwarf, Dryad, and Elf from your deck, then play one"], ["random_effect", "a random Dwarf"], ["tribal", "Dwarf, Dryad, and Elf"], ["free_play", "then play one"], ["stat_gain", "boost it by 2"]]
+756646 | Mad Kiyan | Formation. Order: Damage an enemy unit by the amount Mad Kiyan is boosted. Deathblow: Reset own power.
+   A: [["activated", "Order"], ["damage", "Damage an enemy unit by the amount Mad Kiyan is boosted"], ["on_kill", "Deathblow"], ["rewind", "Reset own power"]]
+   B: [["movement", "Formation"], ["activated", "Order:"], ["damage", "Damage an enemy unit by the amount Mad Kiyan is boosted"], ["on_kill", "Deathblow:"], ["rewind", "Reset own power"]]
+756651 | Ciri: Nova | Deploy: If your starting deck does not have cards with a provision cost of 10 or more, gain Resilience, Shield, and Veil. Ciri: Nova and Golden Nekker are excluded from this condition.
+   A: [["on_play", "Deploy"], ["deck_condition", "If your starting deck does not have cards with a provision cost of 10 or more"], ["cost_condition", "provision cost of 10 or more"], ["protection", "gain Resilience, Shield, and Veil"], ["shield", "Shield"]]
+   B: [["on_play", "Deploy:"], ["deckbuilding_effect", "If your starting deck does not have cards with a provision cost of 10 or more"], ["deck_condition", "starting deck does not have cards with a provision cost of 10 or more"], ["shield", "Shield"], ["immunity", "Veil"]]
+756656 | Sihil | Damage an enemy unit by 1. Deathblow: Play a bronze card from your hand, then move Sihil back to your hand. Initiative: Also increase the damage by 1 for the rest of the game. If the damage was 3, transform into Masterful Sihil instead.
+   A: [["ping", "Damage an enemy unit by 1"], ["on_kill", "Deathblow"], ["free_play", "Play a bronze card from your hand"], ["return_to_hand", "move Sihil back to your hand"], ["reveal_order", "Initiative"], ["permanent_growth", "increase the damage by 1 for the rest of the game"], ["transform", "transform into Masterful Sihil"]]
+   B: [["ping", "Damage an enemy unit by 1"], ["on_kill", "Deathblow:"], ["free_play", "Play a bronze card from your hand"], ["return_to_hand", "move Sihil back to your hand"], ["reveal_order", "Initiative"], ["spell_power", "increase the damage by 1 for the rest of the game"], ["transform", "transform into Masterful Sihil"]]
+756663 | Garrison | Resilience. Deploy: Spawn and play a base copy of a bronze Soldier from your starting deck. Order: Boost an allied Soldier and all its copies by 1 and give them 1 Armor.
+   A: [["protection", "Resilience"], ["on_play", "Deploy"], ["copy", "Spawn and play a base copy of a bronze Soldier from your starting deck"], ["tribal", "Soldier"], ["activated", "Order"], ["stat_gain", "Boost an allied Soldier and all its copies by 1"], ["damage_reduction", "give them 1 Armor"]]
+   B: [["on_play", "Deploy:"], ["summon", "Spawn and play a base copy of a bronze Soldier"], ["copy", "base copy"], ["deck_condition", "from your starting deck"], ["activated", "Order:"], ["stat_gain", "Boost an allied Soldier and all its copies by 1"], ["tribal", "Soldier"], ["damage_reduction", "give them 1 Armor"]]
+756697 | Imlerith | Deploy (Melee): Draw a card, then Discard a card. If the Discarded card was a unit, boost self by its power.
+   A: [["on_play", "Deploy (Melee)"], ["draw", "Draw a card"], ["discard", "Discard a card"], ["stat_gain", "boost self by its power"]]
+   B: [["on_play", "Deploy (Melee)"], ["draw", "Draw a card"], ["discard", "Discard a card"], ["stat_gain", "boost self by its power"], ["rows", "Melee"]]

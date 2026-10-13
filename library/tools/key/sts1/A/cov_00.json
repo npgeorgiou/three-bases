@@ -1,0 +1,594 @@
+{
+"813510": [
+[
+"stat_multiply",
+"Double your Strength"
+]
+],
+"757606": [
+[
+"spell_power",
+"Gain 2 Focus"
+],
+[
+"slots_queue",
+"Lose 1 Orb slot"
+]
+],
+"757887": [
+[
+"damage_reduction",
+"Gain 2 Intangible"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_loss",
+"lose 1 Dexterity"
+]
+],
+"758071": [
+[
+"on_ally_play",
+"Whenever you play an Attack"
+],
+[
+"temporary_buff",
+"gain 1 temporary Dexterity"
+]
+],
+"758258": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_loss",
+"lose X Dexterity"
+]
+],
+"758152": [
+[
+"turn_end",
+"At the end of this turn"
+],
+[
+"stat_loss",
+"lose X Dexterity"
+]
+],
+"757681": [
+[
+"temporary_buff",
+"Gain 2 Strength. At the end of this turn, lose 2 Strength"
+]
+],
+"758282": [
+[
+"damage",
+"Bite (attack, 6 damage)"
+],
+[
+"stat_gain",
+"Grow (buff)"
+]
+],
+"758216": [
+[
+"stat_multiply",
+"Deal Double Damage"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"758306": [
+[
+"damage",
+"Fell (attack debuff, 18 damage)"
+],
+[
+"debuff",
+"attack debuff"
+],
+[
+"multi_attack",
+"6 damage x2"
+],
+[
+"lifesteal",
+"Life Suck (attack buff"
+],
+[
+"disable",
+"Stunned (stun)"
+]
+],
+"757768": [
+[
+"delayed",
+"Next turn"
+],
+[
+"stat_multiply",
+"your Attacks deal double damage"
+]
+],
+"757732": [
+[
+"stat_multiply",
+"Double your Strength"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"757909": [
+[
+"combat_start",
+"Start each combat"
+],
+[
+"counterattack",
+"3 Thorns"
+]
+],
+"758314": [
+[
+"damage",
+"Attack (attack, 7 damage)"
+],
+[
+"counterattack",
+"Buff Thorns"
+]
+],
+"758319": [
+[
+"damage",
+"Burn Strike (attack debuff, 5 damage x2)"
+],
+[
+"junk_cards",
+"Burn Strike"
+],
+[
+"multi_attack",
+"10 damage x3"
+],
+[
+"buff",
+"Piercer (buff)"
+]
+],
+"758290": [
+[
+"protection",
+"Protect (defend)"
+],
+[
+"damage",
+"Shield Bash (attack, 6 damage)"
+],
+[
+"self_destruct",
+"Move 99 (escape)"
+]
+],
+"758132": [
+[
+"shield",
+"Prevent the next time you would lose HP"
+]
+],
+"757943": [
+[
+"shield",
+"Prevent the first time you would lose HP each combat"
+]
+],
+"758091": [
+[
+"cheat_death",
+"When you would die, heal to 30% of your Max HP instead"
+],
+[
+"items_consumables",
+"discard this potion"
+]
+],
+"757969": [
+[
+"cheat_death",
+"When you would die, heal to 50% of your Max HP instead"
+],
+[
+"once_per_game",
+"works once"
+]
+],
+"757977": [
+[
+"low_life",
+"If your HP is at or below 50%"
+],
+[
+"heal",
+"heal 12 HP"
+],
+[
+"game_end_trigger",
+"at the end of combat"
+]
+],
+"758222": [
+[
+"regeneration",
+"At the end of its turn, heals X HP"
+],
+[
+"turn_end",
+"At the end of its turn"
+]
+],
+"757899": [
+[
+"game_end_trigger",
+"At the end of combat"
+],
+[
+"heal",
+"heal 12 HP"
+]
+],
+"757809": [
+[
+"tutor",
+"Put a Skill from your draw pile into your hand"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"813554": [
+[
+"tutor",
+"Put a Skill from your draw pile into your hand"
+]
+],
+"813555": [
+[
+"tutor",
+"Put an Attack from your draw pile into your hand"
+]
+],
+"757812": [
+[
+"tutor",
+"Put 1 card from your draw pile into your hand"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"757810": [
+[
+"tutor",
+"Put an Attack from your draw pile into your hand"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"757788": [
+[
+"recycle",
+"Shuffle ALL your cards into your draw pile"
+],
+[
+"draw",
+"Draw 4 cards"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"757627": [
+[
+"recycle",
+"Shuffle your discard pile into your draw pile"
+],
+[
+"draw",
+"Draw 1 card"
+]
+],
+"757983": [
+[
+"on_ally_play",
+"Whenever you play a Power card"
+],
+[
+"random_effect",
+"a random card in your hand"
+],
+[
+"cost_set",
+"costs 0 that turn"
+]
+],
+"757980": [
+[
+"shop_gold",
+"50% discount on all products"
+]
+],
+"757577": [
+[
+"play_restriction",
+"You cannot draw additional cards this turn"
+],
+[
+"cost_set",
+"Reduce the cost of all cards in your hand to 0 this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"757687": [
+[
+"cost_reduction",
+"Costs 1 less energy for each Power card played this combat"
+],
+[
+"count_payoff",
+"for each Power card played this combat"
+],
+[
+"block_armor",
+"Gain 12 Block"
+]
+],
+"757658": [
+[
+"cost_set",
+"Reduce the cost of all cards in your hand to 1 this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"757742": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"cast_from_zone",
+"play the top card of your draw pile"
+],
+[
+"free_play",
+"play the top card"
+]
+],
+"757703": [
+[
+"cast_from_zone",
+"Play the top card of your draw pile"
+],
+[
+"free_play",
+"Play the top card"
+],
+[
+"exhaust",
+"Exhaust it"
+]
+],
+"758199": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"cast_from_zone",
+"play the top card of your draw pile"
+],
+[
+"free_play",
+"play the top card"
+]
+],
+"758377": [
+[
+"difficulty_modifiers",
+"Ascension Mode Level 1"
+]
+],
+"758320": [
+[
+"summon",
+"Spawn (unknown)"
+],
+[
+"damage",
+"Fireball (attack, 18 damage)"
+],
+[
+"block_armor",
+"35 block"
+],
+[
+"stat_gain",
+"defend buff"
+],
+[
+"debuff",
+"Mega Debuff (strong debuff)"
+],
+[
+"revive",
+"Revive (unknown)"
+]
+],
+"758269": [
+[
+"multi_attack",
+"7 damage x2"
+],
+[
+"damage",
+"HYPER BEAM (attack, 45 damage)"
+],
+[
+"disable",
+"Stunned (stun)"
+],
+[
+"summon",
+"Spawn Orbs"
+],
+[
+"block_armor",
+"9 block"
+]
+],
+"758302": [
+[
+"multi_attack",
+"13 damage x2"
+],
+[
+"debuff",
+"attack debuff"
+],
+[
+"summon",
+"Spawn Dagger"
+],
+[
+"damage",
+"Big Bite (attack, 30 damage)"
+]
+],
+"757876": [
+[
+"damage",
+"Deal 4 damage"
+],
+[
+"recycle",
+"return this from the discard pile to your Hand"
+],
+[
+"graveyard",
+"from the discard pile"
+],
+[
+"selection",
+"Whenever you Scry"
+]
+],
+"758191": [
+[
+"revive",
+"revives in X2 turns at X50% HP"
+],
+[
+"delayed",
+"in X2 turns"
+],
+[
+"condition_count",
+"If other enemies are still alive"
+]
+],
+"758288": [
+[
+"damage",
+"Bull Rush (attack, 14 damage)"
+],
+[
+"debuff",
+"Skull Bash"
+],
+[
+"stat_gain",
+"Bellow (buff)"
+]
+],
+"758322": [
+[
+"damage",
+"Reverberate (attack)"
+],
+[
+"block_armor",
+"20 block"
+],
+[
+"debuff",
+"Ripple (defend debuff"
+],
+[
+"block_armor",
+"Haste (buff, 26 block)"
+]
+],
+"757867": [
+[
+"extra_turn",
+"Take an extra turn after this one"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758289": [
+[
+"damage",
+"Puncture (attack, 9 damage)"
+],
+[
+"self_destruct",
+"Move 99 (escape)"
+]
+],
+"758291": [
+[
+"damage",
+"Scratch (attack, 4 damage)"
+],
+[
+"self_destruct",
+"Move 99 (escape)"
+]
+],
+"758286": [
+[
+"damage",
+"Smash (attack debuff, 4 damage)"
+],
+[
+"debuff",
+"attack debuff"
+],
+[
+"self_destruct",
+"Move 99 (escape)"
+]
+]
+}

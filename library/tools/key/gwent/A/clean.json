@@ -3186,5 +3186,4280 @@
 "damage_over_time",
 "Bleeding (2)"
 ]
+],
+"756282": [
+[
+"damage",
+"damage it by double the amount boosted"
+],
+[
+"stat_gain",
+"boost it by double the amount damaged"
+],
+[
+"condition_life",
+"If it's damaged"
+],
+[
+"stat_condition",
+"If it's boosted"
+],
+[
+"stat_multiply",
+"double the amount"
+],
+[
+"target_choice",
+"Choose a unit"
+]
+],
+"756216": [
+[
+"piercing",
+"ignoring its Armor"
+],
+[
+"friendly_fire",
+"damage this unit by its Fee amount"
+],
+[
+"coin_economy",
+"insufficient Coins"
+],
+[
+"cost_type",
+"to trigger its Fee ability"
+]
+],
+"756947": [
+[
+"damage",
+"Damage an enemy unit by 4"
+],
+[
+"piercing",
+"ignoring its Armor"
+]
+],
+"757382": [
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage a unit by 2"
+],
+[
+"piercing",
+"ignoring its Armor"
+],
+[
+"tribal",
+"from your Warriors"
+],
+[
+"on_damaged",
+"Whenever an enemy unit takes damage"
+]
+],
+"756568": [
+[
+"activated",
+"Order"
+],
+[
+"distribute",
+"Split 4 damage randomly between all enemy units"
+],
+[
+"random_effect",
+"randomly"
+],
+[
+"piercing",
+"ignoring their Armor"
+],
+[
+"deckbuilding_effect",
+"adds 16 provisions to your deck's provisions limit"
+]
+],
+"756324": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"rows",
+"Ranged"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"deck_position",
+"move a card from your hand to the top of your deck"
+]
+],
+"756825": [
+[
+"on_play",
+"Deploy"
+],
+[
+"tutor",
+"Play a 4-provision Cultist from your deck"
+],
+[
+"free_play",
+"Play a 4-provision Cultist from your deck"
+],
+[
+"tribal",
+"Cultist"
+],
+[
+"on_ally_play",
+"Whenever a unit is played"
+],
+[
+"damage",
+"damage it by half its power"
+],
+[
+"rows",
+"Ranged"
+]
+],
+"757293": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"generate_cards",
+"Create and play a bronze special card from your opponent's faction"
+],
+[
+"cast_from_zone",
+"Play a bronze special card from your opponent's graveyard"
+],
+[
+"steal",
+"from your opponent's graveyard"
+],
+[
+"rows",
+"Deploy (Ranged)"
+]
+],
+"756464": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"tutor",
+"Play a Tactic from your deck"
+],
+[
+"rows",
+"Ranged"
+]
+],
+"756746": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"deck_position",
+"Move any card from your deck to the top"
+],
+[
+"rows",
+"Ranged"
+]
+],
+"756924": [
+[
+"tutor",
+"Play a bronze Dwarf or Crownsplitter unit from your deck"
+],
+[
+"tribal",
+"Dwarf or Crownsplitter"
+],
+[
+"summon",
+"Spawn a Cleaver's Muscle on your Melee row"
+]
+],
+"757237": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn and play Shakedown"
+],
+[
+"adjacency",
+"for each adjacent Crownsplitter"
+],
+[
+"tribal",
+"Crownsplitter"
+],
+[
+"condition_count",
+"for each adjacent Crownsplitter"
+],
+[
+"coin_economy",
+"Fee 4"
+],
+[
+"activated",
+"Fee 4"
+],
+[
+"summon",
+"Spawn a Cleaver's Muscle on this row"
+]
+],
+"757462": [
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage an enemy unit by 2"
+],
+[
+"in_hand_buff",
+"boost a random non-boosted unit in your deck by the excess damage dealt"
+],
+[
+"random_effect",
+"random"
+],
+[
+"count_payoff",
+"for each time you used an Order ability this turn"
+]
+],
+"757238": [
+[
+"on_play",
+"Deploy"
+],
+[
+"damage",
+"Damage a boosted enemy unit by 6"
+],
+[
+"stat_condition",
+"boosted enemy unit"
+],
+[
+"resource_gain",
+"Gain a Coin for each point of excess damage dealt"
+],
+[
+"coin_economy",
+"Coin"
+],
+[
+"deckbuilding_effect",
+"Devotion"
+],
+[
+"destroy",
+"Destroy an enemy unit with 3 or less power"
+],
+[
+"stat_condition",
+"3 or less power"
+],
+[
+"activated",
+"Fee 3"
+]
+],
+"756845": [
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage an enemy unit by 6"
+],
+[
+"resource_gain",
+"gain Coins equal to any excess damage dealt"
+],
+[
+"coin_economy",
+"Coins"
+],
+[
+"permanent_growth",
+"increase the damage by 1"
+],
+[
+"death_trigger",
+"Whenever an enemy unit with Bounty is destroyed"
+],
+[
+"deckbuilding_effect",
+"adds 16 provisions to your deck's provisions limit"
+]
+],
+"756975": [
+[
+"damage",
+"Damage an enemy unit by 4"
+],
+[
+"summon",
+"Spawn a Drone on a random allied row"
+],
+[
+"random_effect",
+"random allied row"
+]
+],
+"813671": [
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage an enemy unit by 6"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"excess_damage",
+"Deal excess damage to adjacent units"
+],
+[
+"adjacency",
+"adjacent units"
+]
+],
+"756181": [
+[
+"shield",
+"blocks the next instance of damage"
+]
+],
+"756889": [
+[
+"on_ally_play",
+"Whenever you play a unit next to Prophet Lebioda"
+],
+[
+"adjacency",
+"next to Prophet Lebioda"
+],
+[
+"shield",
+"give it a Shield"
+]
+],
+"757024": [
+[
+"activated",
+"Order"
+],
+[
+"stat_gain",
+"Boost an allied unit by 4"
+],
+[
+"shield",
+"give it Shield"
+]
+],
+"756348": [
+[
+"shield",
+"Shield"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"count_payoff",
+"for each Construct you played this game"
+],
+[
+"tribal",
+"Construct"
+],
+[
+"stat_gain",
+"Boost self by [0]"
+]
+],
+"756801": [
+[
+"generate_cards",
+"Create and play a bronze Northern Realms Mage"
+],
+[
+"tribal",
+"Mage"
+],
+[
+"shield",
+"give it a Shield"
+]
+],
+"756709": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"rows",
+"Deploy (Ranged)"
+],
+[
+"immunity",
+"Gain Immunity"
+],
+[
+"protection",
+"Gain Resilience"
+],
+[
+"on_ally_play",
+"Whenever you play a Dwarf"
+],
+[
+"tribal",
+"Dwarf"
+],
+[
+"permanent_growth",
+"boost self by 1"
+]
+],
+"757177": [
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Order"
+],
+[
+"transform",
+"Transform self into Saber-Tooth Tiger: Stealth"
+],
+[
+"stealth",
+"Stealth"
+]
+],
+"756194": [
+[
+"trap_secret",
+"face-down Trap"
+],
+[
+"activated",
+"Manual activation"
+],
+[
+"adjacency",
+"next to an Artifact"
+]
+],
+"757457": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_gain",
+"Boost self by 3"
+],
+[
+"condition_count",
+"for each face-down allied Trap"
+],
+[
+"trap_secret",
+"face-down allied Trap"
+]
+],
+"756664": [
+[
+"activated",
+"Order"
+],
+[
+"heal",
+"Heal an allied unit by 2"
+],
+[
+"on_damaged",
+"Whenever an adjacent unit takes damage"
+],
+[
+"adjacency",
+"adjacent unit"
+]
+],
+"756225": [
+[
+"rewind",
+"Restore a unit to its base power"
+]
+],
+"756566": [
+[
+"activated",
+"Order"
+],
+[
+"generate_cards",
+"Spawn and play Mardroeme"
+],
+[
+"on_spell",
+"Whenever you play an Alchemy card"
+],
+[
+"tribal",
+"Alchemy"
+],
+[
+"heal",
+"Heal a random allied unit by 1"
+],
+[
+"random_effect",
+"random allied unit"
+],
+[
+"deckbuilding_effect",
+"adds 17 provisions to your deck's provisions limit"
+]
+],
+"756232": [
+[
+"activated",
+"Order (Melee)"
+],
+[
+"lifesteal",
+"Drain an enemy unit"
+],
+[
+"stat_condition",
+"by the amount of boost it has"
+]
+],
+"757353": [
+[
+"on_play",
+"Deploy"
+],
+[
+"lifesteal",
+"Drain an enemy unit by 3"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"in_hand_buff",
+"while in hand or deck, if there is an enemy unit with Bleeding, increase own base power by 1"
+],
+[
+"damage_over_time",
+"Bleeding"
+]
+],
+"757194": [
+[
+"on_play",
+"Deploy"
+],
+[
+"friendly_fire",
+"Damage self by 4"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"regeneration",
+"Heal self by 1"
+],
+[
+"block_armor",
+"gain 1 Armor"
+],
+[
+"condition_life",
+"While not damaged"
+]
+],
+"756563": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"heal",
+"Heal all other units on this row by 1"
+],
+[
+"regeneration",
+"Heal all other units on this row by 1"
+],
+[
+"rows",
+"this row"
+]
+],
+"756831": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"heal",
+"Heal the unit to the left by 1"
+],
+[
+"ping",
+"damage the unit to the right by 1"
+],
+[
+"adjacency",
+"the unit to the right"
+]
+],
+"756295": [
+[
+"activated",
+"Order"
+],
+[
+"symmetric_effect",
+"both players draw a card"
+],
+[
+"draw",
+"both players draw a card"
+],
+[
+"enemy_benefit",
+"both players draw a card"
+],
+[
+"hand_size",
+"your opponent's hand is not full"
+],
+[
+"round_passing",
+"If neither player has passed"
+]
+],
+"756697": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"Discard a card"
+],
+[
+"stat_gain",
+"boost self by its power"
+]
+],
+"756446": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"Discard a card"
+]
+],
+"756484": [
+[
+"on_play",
+"Deploy"
+],
+[
+"tribal",
+"If you control a Soldier"
+],
+[
+"tutor",
+"Summon all copies of self from your deck to this row"
+],
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"generate_cards",
+"Spawn a copy of self in your deck"
+],
+[
+"copy",
+"Spawn a copy of self"
+]
+],
+"756420": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"tutor",
+"Play an Alchemy card from your deck"
+],
+[
+"tribal",
+"Alchemy"
+]
+],
+"756696": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"random_effect",
+"Reveal a random unit from your deck"
+],
+[
+"information",
+"Reveal"
+],
+[
+"stat_gain",
+"boost an allied unit by its power"
+]
+],
+"756244": [
+[
+"on_play",
+"Deploy (Adrenaline 4)"
+],
+[
+"hand_size",
+"Adrenaline 4"
+],
+[
+"tutor",
+"Summon Eskel and Vesemir from your deck"
+]
+],
+"756242": [
+[
+"on_play",
+"Deploy (Adrenaline 4)"
+],
+[
+"hand_size",
+"Adrenaline 4"
+],
+[
+"tutor",
+"Summon Vesemir and Lambert from your deck"
+]
+],
+"757397": [
+[
+"on_play",
+"Deploy"
+],
+[
+"selection",
+"Look at Collusion and a random unit from each Gang from your deck, then play 1"
+],
+[
+"tutor",
+"from your deck, then play 1"
+],
+[
+"kicker",
+"Tribute 9"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"cost_reduction",
+"Tribute costs 2 less"
+],
+[
+"variety_payoff",
+"for each unique Gang category you control"
+],
+[
+"tribal",
+"Gang"
+]
+],
+"756869": [
+[
+"activated",
+"Order"
+],
+[
+"resource_gain",
+"Gain 2 Coins"
+],
+[
+"coin_economy",
+"Coins"
+],
+[
+"cost_reduction",
+"Your Tributes cost 1 Coin less"
+],
+[
+"deckbuilding_effect",
+"adds 15 provisions to your deck's provisions limit"
+]
+],
+"813691": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"activated",
+"Fee 3"
+],
+[
+"coin_economy",
+"Fee 3"
+],
+[
+"damage",
+"Damage an enemy unit by 3"
+],
+[
+"self_destruct",
+"then destroy self"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"cost_reduction",
+"reduce the Fee cost by 1"
+]
+],
+"756863": [
+[
+"kicker",
+"Tribute 3"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"haste",
+"Gain Zeal"
+],
+[
+"activated",
+"Order"
+],
+[
+"cost_set",
+"Your next Tribute this round costs 0"
+]
+],
+"757376": [
+[
+"on_play",
+"Deploy"
+],
+[
+"deck_condition",
+"If your starting deck does not have cards with a provision cost of 10 or more"
+],
+[
+"cost_condition",
+"provision cost of 10 or more"
+],
+[
+"free_play",
+"play the top unit, special, and artifact from your deck"
+],
+[
+"cast_from_zone",
+"play the top unit, special, and artifact from your deck"
+]
+],
+"756897": [
+[
+"banish",
+"Banish an allied unit"
+],
+[
+"sacrifice",
+"Banish an allied unit"
+],
+[
+"cast_from_zone",
+"play the top card from your deck"
+],
+[
+"tribal",
+"Firesworn"
+],
+[
+"selection",
+"look at the top 3 cards from your deck and play 1 of them"
+]
+],
+"756480": [
+[
+"donate",
+"Disloyal"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"steal",
+"Play the top card from your opponent's deck"
+],
+[
+"cast_from_zone",
+"Play the top card from your opponent's deck"
+]
+],
+"756261": [
+[
+"return_to_hand",
+"Shuffle an allied unit on the battlefield into your deck"
+],
+[
+"cast_from_zone",
+"play the top unit from your deck"
+]
+],
+"756783": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Choose an unboosted enemy unit"
+],
+[
+"cast_from_zone",
+"play the top card from your deck"
+],
+[
+"enemy_benefit",
+"boost that unit by that card's provision cost"
+],
+[
+"selection",
+"choose from the top 3 cards of your deck"
+]
+],
+"757440": [
+[
+"protection",
+"Resilience"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"summon",
+"Spawn Imperial Fleet to the left of self and Imperial Marine to the right of self"
+],
+[
+"activated",
+"Order"
+],
+[
+"stat_gain",
+"Boost 2 allied units by 2"
+],
+[
+"swap",
+"swap their positions"
+]
+],
+"756570": [
+[
+"activated",
+"Order"
+],
+[
+"stat_gain",
+"Boost 2 allied units by 1"
+],
+[
+"swap",
+"swap their positions"
+],
+[
+"damage_reduction",
+"give 1 Armor to each targeted Soldier"
+],
+[
+"tribal",
+"Soldier"
+],
+[
+"deckbuilding_effect",
+"adds 16 provisions to your deck's provision limit"
+]
+],
+"757348": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"round_passing",
+"If neither player has passed"
+],
+[
+"hand_size",
+"your opponent's hand is not full"
+],
+[
+"bounce_enemy",
+"move a non-Doomed enemy unit with power up to 2 to your opponent's hand"
+],
+[
+"stat_condition",
+"power up to 2"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"deck_condition",
+"the number of Tactics in your starting deck"
+]
+],
+"757337": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"sacrifice",
+"Consume an allied unit"
+],
+[
+"repeat_trigger",
+"triggers Thrive an additional time"
+],
+[
+"rows",
+"Deploy (Ranged)"
+]
+],
+"756486": [
+[
+"on_play",
+"Deploy"
+],
+[
+"deck_position",
+"Look at the top 3 units in your opponent's deck"
+],
+[
+"information",
+"Look at the top 3 units in your opponent's deck"
+],
+[
+"damage_reduction",
+"gain Armor equal to its power"
+],
+[
+"activated",
+"Order"
+],
+[
+"selection",
+"look at the top units in your deck up to that amount, then choose one"
+],
+[
+"regeneration",
+"gain Vitality equal to its power"
+],
+[
+"stat_gain",
+"boost self by its power"
+],
+[
+"tribal",
+"bronze Soldier"
+]
+],
+"757148": [
+[
+"recycle",
+"Echo"
+],
+[
+"modal_choice",
+"Choose one"
+],
+[
+"stat_gain",
+"Boost an allied unit by 9"
+],
+[
+"protection",
+"give it Veil"
+],
+[
+"regeneration",
+"give it Vitality (6)"
+]
+],
+"757101": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"row_effects",
+"Spawn Frost on an enemy row for 4 turns"
+],
+[
+"revive",
+"replay a bronze Wild Hunt unit"
+],
+[
+"tribal",
+"Wild Hunt"
+],
+[
+"scope_multi",
+"both enemy rows"
+]
+],
+"756708": [
+[
+"on_play",
+"Deploy"
+],
+[
+"destroy",
+"Destroy all units with 1 power"
+],
+[
+"stat_condition",
+"units with 1 power"
+],
+[
+"scope_global",
+"Destroy all units"
+],
+[
+"stat_gain",
+"boost self by 2"
+],
+[
+"death_count",
+"For each unit destroyed"
+]
+],
+"756384": [
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Order"
+],
+[
+"destroy",
+"Destroy all other units with power equal to Schirr\u00fa"
+],
+[
+"stat_condition",
+"power equal to Schirr\u00fa"
+],
+[
+"friendly_fire",
+"Destroy all other units"
+]
+],
+"757362": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"banish",
+"Banish all cards in your hand"
+],
+[
+"hand_deck_swap",
+"Banish all cards in your hand, then draw as many cards"
+],
+[
+"draw",
+"draw as many cards"
+]
+],
+"756337": [
+[
+"on_play",
+"Deploy"
+],
+[
+"banish",
+"Banish all units in your graveyard"
+],
+[
+"graveyard",
+"units in your graveyard"
+],
+[
+"stat_gain",
+"boost self by 1 for each"
+],
+[
+"condition_count",
+"for each"
+]
+],
+"756472": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"disruption",
+"Shuffle a card from your opponent's graveyard into their deck"
+],
+[
+"recycle",
+"Shuffle a card from your graveyard into your deck"
+],
+[
+"rows",
+"Deploy (Ranged)"
+]
+],
+"756722": [
+[
+"on_play",
+"Deploy"
+],
+[
+"card_quality",
+"Shuffle a gold card from your hand into your deck, then draw a bronze card"
+],
+[
+"tutor",
+"draw a bronze card"
+],
+[
+"stat_gain",
+"boost self by 4"
+]
+],
+"756763": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"card_quality",
+"Shuffle a card from your hand into your deck, then draw a card"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"756291": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"tutor",
+"draw a unit of your choice"
+],
+[
+"in_hand_buff",
+"boost it by 3"
+]
+],
+"757432": [
+[
+"tribal",
+"Kikimore"
+],
+[
+"variety_payoff",
+"Choose 4 different bronze Kikimore units"
+],
+[
+"graveyard",
+"While in your graveyard"
+],
+[
+"transform",
+"transform it into the next chosen Kikimore unit"
+]
+],
+"757115": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"friendly_fire",
+"damage self"
+],
+[
+"ping",
+"damage self and a random enemy unit by 1"
+],
+[
+"random_effect",
+"random enemy unit"
+],
+[
+"condition_life",
+"Berserk 3"
+],
+[
+"transform",
+"Transform into a Bear Abomination"
+]
+],
+"757282": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"summon",
+"Spawn a Gernichora's Fruit on each sides of this unit"
+],
+[
+"adjacency",
+"on each sides of this unit"
+],
+[
+"transform",
+"transform self into Gernichora"
+]
+],
+"756827": [
+[
+"on_play",
+"Deploy"
+],
+[
+"transform",
+"Transform a damaged allied unit into a Bear Abomination"
+],
+[
+"condition_life",
+"damaged allied unit"
+]
+],
+"757158": [
+[
+"on_play",
+"Deploy"
+],
+[
+"transform",
+"Transform adjacent units into random units that cost 1 provision more"
+],
+[
+"adjacency",
+"adjacent units"
+],
+[
+"random_effect",
+"random units"
+],
+[
+"polymorph",
+"Transform adjacent units into random units"
+]
+],
+"757469": [
+[
+"delayed",
+"Timer 7"
+],
+[
+"stat_gain",
+"Set own base power to 10"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"tribal",
+"Ogroid"
+],
+[
+"condition_count",
+"for each Ogroid in your hand"
+]
+],
+"757482": [
+[
+"on_play",
+"Deploy (Devotion)"
+],
+[
+"deckbuilding_effect",
+"Devotion"
+],
+[
+"immunity",
+"Gain Immunity"
+],
+[
+"tribal",
+"Cursed unit"
+],
+[
+"on_ally_play",
+"The first time a Cursed unit enters the battlefield during your turn"
+],
+[
+"stat_gain",
+"boost self by its base power"
+]
+],
+"757033": [
+[
+"activated",
+"Order"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"Discard a card"
+],
+[
+"summon",
+"Spawn 2 Crows on your Melee row"
+]
+],
+"756422": [
+[
+"on_play",
+"Deploy"
+],
+[
+"draw",
+"Draw up to 2 cards"
+],
+[
+"discard",
+"Discard the same number of cards"
+]
+],
+"756898": [
+[
+"on_play",
+"Deploy"
+],
+[
+"self_destruct",
+"At the end of this turn, destroy self"
+],
+[
+"kicker",
+"Tribute 1: Cancel the Deploy ability"
+],
+[
+"coin_economy",
+"Tribute 1"
+]
+],
+"756443": [
+[
+"on_play",
+"Deploy"
+],
+[
+"self_mill",
+"Move the top card from your deck to your graveyard"
+],
+[
+"tribal",
+"If you control a Ship"
+]
+],
+"757105": [
+[
+"protection",
+"Veil"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"self_destruct",
+"Destroy self"
+],
+[
+"deckbuilding_effect",
+"Devotion"
+]
+],
+"756169": [
+[
+"damage_over_time",
+"damages the unit by 1 at the end of its turn"
+],
+[
+"stacking_keyword",
+"Bleeding turns can accumulate"
+],
+[
+"piercing",
+"Bleeding ignores armor"
+],
+[
+"turn_end",
+"at the end of its turn"
+]
+],
+"757244": [
+[
+"on_play",
+"Deploy"
+],
+[
+"cast_from_zone",
+"Play an Alchemy card from your graveyard"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"tribal",
+"Alchemy"
+],
+[
+"cost_condition",
+"provision cost 4 or less"
+],
+[
+"row_effects",
+"Rain and Storm"
+]
+],
+"757374": [
+[
+"protection",
+"Resilience"
+],
+[
+"resource_gain",
+"Profit 4"
+],
+[
+"coin_economy",
+"Fee 1"
+],
+[
+"activated",
+"Fee 1"
+],
+[
+"stat_gain",
+"Boost an allied unit by 1"
+],
+[
+"permanent_growth",
+"Increase the boost by this card's Fee cost"
+],
+[
+"cost_increase",
+"increase its cost by 1, up to 9"
+]
+],
+"756554": [
+[
+"turn_end",
+"At the end of the round"
+],
+[
+"junk_cards",
+"shuffle self into your opponent's deck"
+],
+[
+"rows",
+"Melee"
+]
+],
+"757417": [
+[
+"on_play",
+"Deploy"
+],
+[
+"junk_cards",
+"Shuffle a card from your deck into your opponent's deck"
+],
+[
+"activated",
+"Order"
+],
+[
+"junk_cards",
+"Spawn a Drone at the bottom of your opponent's deck"
+],
+[
+"deck_condition",
+"the difference between the number of cards in the players' decks"
+],
+[
+"variable_stats",
+"set its power to the difference"
+],
+[
+"permanent_growth",
+"boost self by 1"
+],
+[
+"disruption",
+"Whenever a card enters or leaves your opponent's deck"
+]
+],
+"756704": [
+[
+"donate",
+"Disloyal"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"random_effect",
+"Play a random gold card from your deck"
+],
+[
+"free_play",
+"Play a random gold card from your deck"
+]
+],
+"756469": [
+[
+"immunity",
+"Immunity"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"random_effect",
+"a random enemy unit"
+],
+[
+"debuff",
+"Whenever this unit receives a status, damage self by 1"
+],
+[
+"on_play",
+"Whenever this card enters the battlefield"
+],
+[
+"enemy_benefit",
+"your opponent draws a card"
+],
+[
+"round_passing",
+"your opponent has already passed"
+],
+[
+"hand_size",
+"their hand is full"
+],
+[
+"friendly_fire",
+"damage self by 12"
+]
+],
+"756360": [
+[
+"on_play",
+"Deploy"
+],
+[
+"sacrifice",
+"Destroy an allied unit on this row"
+],
+[
+"self_destruct",
+"destroy self"
+]
+],
+"757230": [
+[
+"on_play",
+"Deploy (Bloodthirst 3)"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"Discard a card"
+],
+[
+"revive",
+"Summon it from your graveyard to this row"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"deckbuilding_effect",
+"Devotion"
+]
+],
+"756451": [
+[
+"discard",
+"When this unit is Discarded"
+],
+[
+"revive",
+"Summon it from your graveyard to your Melee row"
+],
+[
+"graveyard",
+"from your graveyard"
+]
+],
+"757323": [
+[
+"on_play",
+"Deploy"
+],
+[
+"damage",
+"Clash with an enemy unit"
+],
+[
+"activated",
+"Order (Bloodthirst 2)"
+],
+[
+"discard",
+"Discard a card"
+],
+[
+"return_to_hand",
+"move self back to your hand"
+]
+],
+"756424": [
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Order"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"Discard a card"
+],
+[
+"damage",
+"damage a random enemy unit by 2"
+],
+[
+"random_effect",
+"random enemy unit"
+]
+],
+"756989": [
+[
+"taunt",
+"Defender"
+],
+[
+"condition_life",
+"Berserk 6"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"damage_reduction",
+"gain 1 Armor"
+],
+[
+"permanent_growth",
+"gain 1 Armor"
+]
+],
+"756954": [
+[
+"taunt",
+"Defender"
+],
+[
+"shield",
+"Shield"
+]
+],
+"756981": [
+[
+"taunt",
+"Defender"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn and play Battle Preparation"
+]
+],
+"757001": [
+[
+"taunt",
+"Defender"
+],
+[
+"activated",
+"Order"
+],
+[
+"movement",
+"Move self to the other row"
+]
+],
+"813614": [
+[
+"taunt",
+"Defender"
+],
+[
+"exhaust",
+"Doomed"
+]
+],
+"757102": [
+[
+"on_play",
+"Deploy"
+],
+[
+"forced_movement",
+"Move an enemy unit to the other row"
+],
+[
+"row_effects",
+"Frost"
+],
+[
+"damage",
+"damage it by 2"
+]
+],
+"756600": [
+[
+"on_play",
+"Deploy"
+],
+[
+"forced_movement",
+"Move an enemy unit to the other row"
+],
+[
+"damage",
+"damage it by the number of units on that row"
+],
+[
+"condition_count",
+"the number of units on that row"
+]
+],
+"757059": [
+[
+"tribal",
+"Harmony"
+],
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"damage",
+"Damage an enemy unit by 2"
+],
+[
+"forced_movement",
+"Move a unit to the other row"
+],
+[
+"movement",
+"Move a unit to the other row"
+]
+],
+"756531": [
+[
+"activated",
+"Order"
+],
+[
+"forced_movement",
+"Move an enemy unit to the other row"
+],
+[
+"row_effects",
+"Spawn Frost on its row for 2 turns"
+],
+[
+"on_ally_play",
+"Whenever you play a Wild Hunt unit"
+],
+[
+"tribal",
+"Wild Hunt"
+],
+[
+"stat_gain",
+"boost it by 1"
+],
+[
+"deckbuilding_effect",
+"adds 15 provisions to your deck's provisions limit"
+]
+],
+"756574": [
+[
+"activated",
+"Order"
+],
+[
+"forced_movement",
+"Move a unit to the other row"
+],
+[
+"movement",
+"Move a unit to the other row"
+],
+[
+"ping",
+"damage it by 1"
+],
+[
+"stat_gain",
+"boost it by 3"
+],
+[
+"deckbuilding_effect",
+"adds 15 provisions to your deck's provisions limit"
+]
+],
+"756743": [
+[
+"activated",
+"Order"
+],
+[
+"repeat_trigger",
+"Repeat the Deploy ability of the next unit you play"
+],
+[
+"combo_sequence",
+"the next unit you play during this turn"
+]
+],
+"757333": [
+[
+"activated",
+"Order"
+],
+[
+"stat_gain",
+"Boost the next unit you play by 2"
+],
+[
+"combo_sequence",
+"the next unit you play"
+],
+[
+"tribal",
+"Knight"
+],
+[
+"permanent_growth",
+"At the end of your turn, boost self by 1"
+],
+[
+"turn_end",
+"At the end of your turn"
+]
+],
+"757384": [
+[
+"on_play",
+"Deploy"
+],
+[
+"damage",
+"Damage an enemy unit by 3"
+],
+[
+"condition_life",
+"If the target is damaged"
+],
+[
+"repeat_trigger",
+"repeat the Deploy ability with a different target"
+]
+],
+"757456": [
+[
+"on_play",
+"Deploy"
+],
+[
+"steal",
+"Seize an enemy unit with 0 or less power"
+],
+[
+"stat_condition",
+"0 or less power"
+],
+[
+"transform",
+"transform the Seized unit into an Elven Deadeye"
+],
+[
+"count_payoff",
+"for each Trap you played this round"
+],
+[
+"trap_secret",
+"Trap"
+]
+],
+"756345": [
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Order"
+],
+[
+"aoe_damage",
+"Damage 3 adjacent enemy units"
+],
+[
+"adjacency",
+"adjacent enemy units"
+],
+[
+"count_payoff",
+"for each Construct you played this game"
+],
+[
+"tribal",
+"Construct"
+],
+[
+"cooldowns",
+"Cooldown: 3"
+]
+],
+"756370": [
+[
+"on_play",
+"Deploy"
+],
+[
+"tutor",
+"Play [1] Rock Barrage(s) from your deck"
+],
+[
+"count_payoff",
+"for each Construct you played this game"
+],
+[
+"tribal",
+"Construct"
+],
+[
+"forced_movement",
+"move an enemy unit to the other row"
+]
+],
+"756639": [
+[
+"in_hand_buff",
+"While in hand, deck, or on the battlefield"
+],
+[
+"death_trigger",
+"whenever an enemy unit is destroyed or Banished during your turn"
+],
+[
+"permanent_growth",
+"boost self by 1"
+]
+],
+"756435": [
+[
+"on_play",
+"Deploy"
+],
+[
+"graveyard",
+"for each Savage Bear in your graveyard"
+],
+[
+"condition_count",
+"for each Savage Bear in your graveyard"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Order"
+],
+[
+"damage_over_time",
+"Give an enemy unit Bleeding (2)"
+]
+],
+"756361": [
+[
+"death_trigger",
+"Whenever a unit is destroyed during your turn"
+],
+[
+"permanent_growth",
+"boost self by 1"
+]
+],
+"757390": [
+[
+"activated",
+"Order"
+],
+[
+"destroy",
+"Destroy an enemy unit with 2 or less power"
+],
+[
+"stat_condition",
+"2 or less power"
+],
+[
+"tribal",
+"Soldier"
+],
+[
+"count_payoff",
+"Whenever you Spawn a Soldier, increase the limit by 1"
+]
+],
+"756591": [
+[
+"on_play",
+"Deploy"
+],
+[
+"summon",
+"Spawn a Left Fucking Flank and a Right Fucking Flank on each side of this unit"
+],
+[
+"adjacency",
+"on each side of this unit"
+],
+[
+"stat_gain",
+"boost self by 3"
+]
+],
+"756985": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"ping",
+"damage the last unit played by your opponent by 1"
+]
+],
+"757442": [
+[
+"activated",
+"Order"
+],
+[
+"destroy",
+"Poison a non-Poisoned unit"
+],
+[
+"stat_condition",
+"with at least 1 status"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"resource_gain",
+"gain a Charge"
+]
+],
+"757445": [
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Order"
+],
+[
+"deck_position",
+"move it up by one position in your deck"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_gain",
+"boost self by 1"
+]
+],
+"756494": [
+[
+"activated",
+"Order"
+],
+[
+"damage_over_time",
+"Give an enemy unit Bleeding (1)"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"damage_reduction",
+"gain 1 Armor"
+],
+[
+"condition_count",
+"at least 3 Charges"
+]
+],
+"757085": [
+[
+"protection",
+"Veil"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"transform",
+"Transform the leftmost card in your hand into a random legendary card"
+],
+[
+"hand_position",
+"leftmost card in your hand"
+],
+[
+"random_effect",
+"random legendary card"
+],
+[
+"repeat_trigger",
+"Repeat this ability whenever you play the rightmost card from your hand"
+],
+[
+"deck_condition",
+"not in your starting deck"
+]
+],
+"756970": [
+[
+"on_play",
+"Deploy"
+],
+[
+"damage_reduction",
+"Gain Armor equal to the number of cards in your hand"
+],
+[
+"hand_size",
+"the number of cards in your hand"
+],
+[
+"self_destruct",
+"destroy self"
+]
+],
+"756307": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"damage",
+"Damage an enemy unit by 1 for each card in your hand"
+],
+[
+"hand_size",
+"for each card in your hand"
+]
+],
+"756552": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"in_hand_buff",
+"Boost a Beast in your hand"
+],
+[
+"hand_size",
+"the number of cards in your hand"
+],
+[
+"tribal",
+"Beast"
+],
+[
+"stat_gain",
+"Boost all allied Beasts by 1"
+]
+],
+"757411": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"immunity",
+"Immunity"
+],
+[
+"protection",
+"Resilience"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Create a legendary unit from your faction that is not in your starting deck 3 times"
+],
+[
+"activated",
+"Order"
+],
+[
+"tutor",
+"Draw a unit of your choice"
+],
+[
+"in_hand_buff",
+"boost it by your hand size"
+],
+[
+"hand_size",
+"your hand size"
+],
+[
+"recycle",
+"shuffle a card back into your deck"
+],
+[
+"upgrade",
+"evolve after you win a round"
+],
+[
+"round_passing",
+"after you win a round"
+]
+],
+"756946": [
+[
+"on_play",
+"Deploy"
+],
+[
+"summon",
+"Spawn a 1-power Locked copy of a Bonded unit"
+],
+[
+"copy",
+"copy of a Bonded unit from your starting deck"
+],
+[
+"silence",
+"Locked"
+]
+],
+"757014": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"stat_gain",
+"Boost self by 3"
+],
+[
+"copy",
+"Spawn a base copy of self on this row"
+],
+[
+"summon",
+"Spawn a base copy of self"
+]
+],
+"756646": [
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage an enemy unit by the amount Mad Kiyan is boosted"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"rewind",
+"Reset own power"
+]
+],
+"756732": [
+[
+"activated",
+"Order"
+],
+[
+"ping",
+"Damage a unit by 1"
+],
+[
+"damage",
+"Damage by 3 instead"
+]
+],
+"756309": [
+[
+"activated",
+"Order"
+],
+[
+"ping",
+"Damage a unit by 1"
+],
+[
+"cooldowns",
+"Cooldown: 1"
+]
+],
+"756945": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"permanent_growth",
+"boost self by 1"
+],
+[
+"lone_unit",
+"if this is the only card on its row"
+]
+],
+"756414": [
+[
+"on_play",
+"Deploy (Ranged)"
+],
+[
+"damage",
+"Damage an enemy unit by 3"
+],
+[
+"lone_unit",
+"if it is the only unit on its row"
+]
+],
+"757464": [
+[
+"on_play",
+"Deploy (Might)"
+],
+[
+"protection",
+"Gain Resilience"
+],
+[
+"variable_stats",
+"The base power of this card is equal to the number of Ogroids in your starting deck"
+],
+[
+"deck_condition",
+"Ogroids in your starting deck"
+],
+[
+"tribal",
+"Ogroids"
+]
+],
+"757239": [
+[
+"on_play",
+"Deploy"
+],
+[
+"selection",
+"Look at the top 3 units in your deck. Move 1 to your graveyard"
+],
+[
+"self_mill",
+"Move 1 to your graveyard"
+],
+[
+"destroy",
+"destroy an enemy unit with power equal to that unit's power"
+],
+[
+"activated",
+"Order"
+],
+[
+"variable_stats",
+"Set the power of a unit to match the number of cards in your deck"
+],
+[
+"deck_condition",
+"the number of cards in your deck"
+]
+],
+"756457": [
+[
+"on_play",
+"Deploy"
+],
+[
+"distribute",
+"Split damage equal to the number of units on an enemy row randomly between all units on that row"
+],
+[
+"random_effect",
+"randomly"
+],
+[
+"condition_count",
+"the number of units on an enemy row"
+]
+],
+"756859": [
+[
+"in_hand_buff",
+"while Rico is in your hand or deck, set his power"
+],
+[
+"reactions",
+"Whenever opponent plays a unit"
+],
+[
+"on_enemy_enter",
+"Whenever opponent plays a unit"
+]
+],
+"757155": [
+[
+"activated",
+"Order"
+],
+[
+"transform",
+"Transform into a Young Dryad"
+],
+[
+"regeneration",
+"gain Vitality"
+],
+[
+"tribal",
+"Dryads"
+],
+[
+"condition_count",
+"the number of Dryads on this row"
+]
+],
+"756267": [
+[
+"stat_gain",
+"Boost 5 adjacent units by 2"
+],
+[
+"scope_multi",
+"Boost 5 adjacent units"
+],
+[
+"adjacency",
+"adjacent units"
+],
+[
+"condition_count",
+"for each gold unit adjacent to them"
+]
+],
+"757319": [
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"type_grant",
+"with Cultist category"
+],
+[
+"random_effect",
+"2 random gold non-Cultist units"
+],
+[
+"in_hand_buff",
+"Infuse 2 random gold non-Cultist units in your starting deck"
+],
+[
+"tribal",
+"if you control 3 or more Cultists"
+],
+[
+"damage",
+"damage the lowest-power Infused enemy unit by 3"
+],
+[
+"stat_condition",
+"lowest-power"
+]
+],
+"756533": [
+[
+"generate_cards",
+"Create and play a gold unit from any faction"
+]
+],
+"756259": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"quests",
+"Scenario: Progress whenever you play a gold unit"
+],
+[
+"row_effects",
+"Spawn Cataclysm on both enemy rows for 2 turns"
+],
+[
+"damage",
+"Damage an enemy unit by 5"
+],
+[
+"generate_cards",
+"Spawn and play Clear Skies"
+]
+],
+"756458": [
+[
+"recycle",
+"Echo"
+],
+[
+"selection",
+"Choose between a random bronze Skellige Beast and a random bronze Skellige Human"
+],
+[
+"generate_cards",
+"Spawn and play the one you chose"
+],
+[
+"random_effect",
+"random bronze Skellige Beast"
+],
+[
+"tribal",
+"Skellige Beast"
+],
+[
+"graveyard",
+"Spawn the other in your graveyard"
+]
+],
+"757174": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"permanent_growth",
+"boost self by 1"
+],
+[
+"deck_condition",
+"if your opponent has more cards in the deck than you"
+]
+],
+"756972": [
+[
+"on_play",
+"Deploy"
+],
+[
+"silence",
+"Lock self"
+],
+[
+"delayed",
+"Timer 3"
+],
+[
+"condition_count",
+"If this row is full"
+],
+[
+"stat_gain",
+"boost self by 12"
+]
+],
+"757338": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"quests",
+"Scenario: Progress whenever you play a Tidecloak"
+],
+[
+"tribal",
+"Tidecloak"
+],
+[
+"summon",
+"Spawn Gudrun Bjornsdottir on this row"
+],
+[
+"resource_gain",
+"gain enough Coins to fill your pouch"
+],
+[
+"coin_economy",
+"Coins"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"damage",
+"Damage the highest-power enemy unit"
+],
+[
+"stat_condition",
+"highest-power enemy unit"
+]
+],
+"813676": [
+[
+"hero_power",
+"After using your leader ability"
+],
+[
+"distribute",
+"randomly split 6 damage among all enemy units"
+],
+[
+"random_effect",
+"randomly"
+]
+],
+"756589": [
+[
+"trap_secret",
+"Ambush"
+],
+[
+"reactions",
+"When your opponent plays a card face up"
+],
+[
+"distribute",
+"split damage equal to its provision cost randomly between all enemy units"
+],
+[
+"random_effect",
+"randomly"
+],
+[
+"cost_condition",
+"equal to its provision cost"
+]
+],
+"757110": [
+[
+"protection",
+"Veil"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Order (Melee)"
+],
+[
+"distribute",
+"Split 3 damage randomly between enemy units on a row"
+],
+[
+"random_effect",
+"randomly"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"ping",
+"damage a random enemy unit by 1"
+]
+],
+"756942": [
+[
+"piercing",
+"Remove 2 Armor from all units on a row"
+],
+[
+"aoe_damage",
+"damage them by 2"
+],
+[
+"rows",
+"all units on a row"
+]
+],
+"756665": [
+[
+"trap_secret",
+"Ambush (Timer 2)"
+],
+[
+"delayed",
+"Timer 2"
+],
+[
+"aoe_damage",
+"Damage all units on the enemy row with the most units by 2"
+],
+[
+"condition_count",
+"the enemy row with the most units"
+]
+],
+"756866": [
+[
+"on_play",
+"Deploy"
+],
+[
+"aoe_damage",
+"Damage all units on an enemy row by 2"
+],
+[
+"kicker",
+"Tribute 8"
+],
+[
+"coin_economy",
+"Tribute 8"
+]
+],
+"756298": [
+[
+"donate",
+"Disloyal"
+],
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"aoe_damage",
+"Damage all units on this row by 3"
+]
+],
+"756545": [
+[
+"delayed",
+"Timer 2 (Ranged)"
+],
+[
+"symmetric_effect",
+"Each player draws a unit"
+],
+[
+"draw",
+"draws a unit"
+],
+[
+"enemy_benefit",
+"Each player draws a unit"
+],
+[
+"in_hand_buff",
+"sets its power to 1"
+]
+],
+"756364": [
+[
+"symmetric_effect",
+"Each player destroys their lowest-power unit"
+],
+[
+"destroy",
+"destroys their lowest-power unit"
+],
+[
+"stat_condition",
+"lowest-power unit"
+],
+[
+"sacrifice",
+"Each player destroys their lowest-power unit"
+]
+],
+"813595": [
+[
+"on_play",
+"Deploy"
+],
+[
+"transform",
+"Transform the rightmost card in each player's hand into a random special card"
+],
+[
+"hand_position",
+"rightmost card"
+],
+[
+"symmetric_effect",
+"each player's hand"
+],
+[
+"random_effect",
+"random special card"
+],
+[
+"hand_disruption",
+"Transform the rightmost card in each player's hand"
+]
+],
+"756147": [
+[
+"information",
+"Show a card to both players, then hide it back in the hand or deck"
+]
+],
+"757412": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"in_hand_buff",
+"Infuse 5 units in your deck"
+],
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"stat_gain",
+"Boost the lowest-power allied unit by 2"
+],
+[
+"stat_condition",
+"lowest-power allied unit"
+],
+[
+"graveyard",
+"Spawn Call of the Depths in your graveyard"
+],
+[
+"activated",
+"Order"
+],
+[
+"sacrifice",
+"Consume an allied unit"
+],
+[
+"on_ally_play",
+"Whenever you play a Deathwish unit"
+],
+[
+"upgrade",
+"evolve after you win a round"
+]
+],
+"756228": [
+[
+"on_play",
+"Deploy"
+],
+[
+"damage",
+"Damage 3 enemy units by 1"
+],
+[
+"scope_multi",
+"3 enemy units"
+],
+[
+"return_to_hand",
+"move self back to your hand"
+],
+[
+"comeback",
+"When you lose a round"
+]
+],
+"757414": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_gain",
+"Boost self by 1 for each unit you control"
+],
+[
+"board_presence",
+"for each unit you control"
+],
+[
+"resource_gain",
+"gain a Coin for each Firesworn card you control"
+],
+[
+"tribal",
+"Firesworn"
+],
+[
+"upgrade",
+"evolve after you win a round"
+]
+],
+"757408": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"in_hand_buff",
+"boost all non-Neutral units in your hand"
+],
+[
+"variety_payoff",
+"primary categories that you don't control"
+],
+[
+"upgrade",
+"evolve after you win a round"
+]
+],
+"756744": [
+[
+"round_passing",
+"When you lose a round"
+],
+[
+"self_mill",
+"Banish the top 3 cards from your deck"
+],
+[
+"banish",
+"Banish self"
+]
+],
+"756640": [
+[
+"selection",
+"Look at a random Dwarf, Dryad, and Elf from your deck, then play one"
+],
+[
+"random_effect",
+"random Dwarf, Dryad, and Elf"
+],
+[
+"tribal",
+"Dwarf, Dryad, and Elf"
+],
+[
+"stat_gain",
+"boost it by 2"
+]
+],
+"757284": [
+[
+"activated",
+"Order"
+],
+[
+"stat_loss",
+"Halve this unit's base power"
+],
+[
+"copy",
+"Spawn a copy with the same base power on this row"
+],
+[
+"on_ally_play",
+"Whenever you play a Relict"
+],
+[
+"tribal",
+"Relict"
+],
+[
+"permanent_growth",
+"increase this unit's base power by 1"
+]
+],
+"795339": [],
+"757409": [
+[
+"on_ally_play",
+"Whenever you play another Relict"
+],
+[
+"tribal",
+"Relict"
+],
+[
+"generate_cards",
+"Spawn and play Loc Feainn: Convergence"
+]
+],
+"756221": [
+[
+"condition_count",
+"a total of 25 or more points"
+],
+[
+"rows",
+"at least one of your rows"
+]
+],
+"757356": [
+[
+"recycle",
+"Echo"
+],
+[
+"damage",
+"Damage an enemy unit by 0"
+],
+[
+"stat_gain",
+"boost the lowest-power allied unit by the excess damage dealt"
+],
+[
+"stat_condition",
+"lowest-power allied unit"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"in_hand_buff",
+"increase the damage by 1, wherever this card is"
+],
+[
+"points_scoring",
+"if you have more points than your opponent"
+]
+],
+"756651": [
+[
+"on_play",
+"Deploy"
+],
+[
+"deck_condition",
+"If your starting deck does not have cards with a provision cost of 10 or more"
+],
+[
+"cost_condition",
+"provision cost of 10 or more"
+],
+[
+"protection",
+"gain Resilience, Shield, and Veil"
+],
+[
+"shield",
+"Shield"
+]
+],
+"757188": [
+[
+"protection",
+"Resilience"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn and play a Bear Witcher Adept"
+],
+[
+"modal_choice",
+"Bear Witcher Adept, Bear Witcher, Bear Witcher Mentor, or Bear Witcher Quartermaster"
+],
+[
+"activated",
+"Order"
+],
+[
+"heal",
+"Heal the adjacent units by 2"
+],
+[
+"adjacency",
+"adjacent units"
+]
+],
+"756663": [
+[
+"protection",
+"Resilience"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"copy",
+"Spawn and play a base copy of a bronze Soldier from your starting deck"
+],
+[
+"tribal",
+"Soldier"
+],
+[
+"activated",
+"Order"
+],
+[
+"stat_gain",
+"Boost an allied Soldier and all its copies by 1"
+],
+[
+"damage_reduction",
+"give them 1 Armor"
+]
+],
+"757255": [
+[
+"condition_count",
+"Sabbath"
+],
+[
+"turn_end",
+"At the end of round"
+],
+[
+"protection",
+"give Resilience"
+],
+[
+"stat_condition",
+"highest base power unit"
+]
+],
+"757407": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"damage",
+"Damage an enemy unit by the difference between its base and current power"
+],
+[
+"condition_life",
+"the difference between its base and current power"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"protection",
+"Gain Resilience"
+],
+[
+"upgrade",
+"evolve after you win a round"
+]
+],
+"757455": [
+[
+"trap_secret",
+"Ambush"
+],
+[
+"reactions",
+"When your opponent plays a unit with 4 or less power"
+],
+[
+"stat_condition",
+"4 or less power"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_gain",
+"boost adjacent units by [2]"
+],
+[
+"adjacency",
+"adjacent units"
+],
+[
+"round_passing",
+"When your opponent passes"
+],
+[
+"silence",
+"Lock self"
+],
+[
+"in_hand_buff",
+"Boost a unit in your hand by [6]"
+]
+],
+"757099": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"row_effects",
+"Frost on both enemy rows"
+],
+[
+"revive",
+"Summon self from your deck to your Ranged row"
+],
+[
+"free_play",
+"Summon self from your deck"
+],
+[
+"deckbuilding_effect",
+"Devotion"
+],
+[
+"round_passing",
+"Once both players have passed"
+],
+[
+"stat_gain",
+"boost self by 2 for each turn of Frost remaining"
+]
+],
+"757360": [
+[
+"start_of_game",
+"This card starts in your hand"
+],
+[
+"stat_gain",
+"Boost an allied unit by 3"
+],
+[
+"in_hand_buff",
+"While in hand, at the end of your turn, increase the boost by 2"
+],
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"round_passing",
+"When your opponent passes"
+],
+[
+"banish",
+"Banish self from hand"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"813679": [
+[
+"round_passing",
+"Whenever you pass"
+],
+[
+"stat_gain",
+"boost the lowest-power allied unit by 4"
+],
+[
+"stat_condition",
+"lowest-power allied unit"
+]
+],
+"756768": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn and play Biting Frost, Impenetrable Fog, or Torrential Rain"
+],
+[
+"modal_choice",
+"Biting Frost, Impenetrable Fog, or Torrential Rain"
+],
+[
+"row_effects",
+"row effect duration"
+],
+[
+"activated",
+"Order"
+]
+],
+"756268": [
+[
+"on_play",
+"Deploy (Melee)"
+],
+[
+"row_effects",
+"Increase all row effect durations by 1"
+],
+[
+"rows",
+"Deploy (Ranged)"
+]
+],
+"756356": [
+[
+"protection",
+"Veil"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_gain",
+"Boost self by the total duration of row effects on the opposite side"
+],
+[
+"row_effects",
+"row effects"
+],
+[
+"permanent_growth",
+"Whenever you apply a row effect, boost self by its duration"
+]
+],
+"756684": [
+[
+"on_play",
+"Deploy"
+],
+[
+"movement",
+"Move a unit to the other row"
+],
+[
+"forced_movement",
+"Move a unit to the other row"
+]
+],
+"757097": [
+[
+"on_play",
+"Deploy"
+],
+[
+"row_effects",
+"Spawn Frost on an enemy row for 2 turns"
+],
+[
+"damage_over_time",
+"Increase the damage dealt by Frost by 1"
+],
+[
+"spell_power",
+"Increase the damage dealt by Frost by 1"
+]
+],
+"757211": [
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"revive",
+"Summon self from your graveyard to a random row"
+],
+[
+"graveyard",
+"another Succubus in your graveyard"
+],
+[
+"random_effect",
+"a random row"
+],
+[
+"exhaust",
+"gain Doomed"
+],
+[
+"hand_size",
+"Adrenaline 4"
+]
+],
+"756377": [
+[
+"immunity",
+"Immunity"
+],
+[
+"activated",
+"Order"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+]
+],
+"757471": [
+[
+"on_play",
+"Deploy"
+],
+[
+"resource_gain",
+"Gain as many Coins as you spent this turn"
+],
+[
+"coin_economy",
+"Coins"
+],
+[
+"activated",
+"Fee 1"
+],
+[
+"stat_gain",
+"Boost an allied Pirate by 1"
+],
+[
+"tribal",
+"Pirate"
+]
+],
+"757012": [
+[
+"on_play",
+"Deploy"
+],
+[
+"summon",
+"Spawn Desert Treasure on this row"
+]
+],
+"813596": [],
+"757326": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"quests",
+"Scenario: Progress whenever you play a unit with Harmony"
+],
+[
+"summon",
+"Spawn Lake Guardian: Dawn Aspect on this row"
+],
+[
+"variable_stats",
+"set its power to the number of non-Neutral units with unique primary categories in your starting deck"
+],
+[
+"variety_payoff",
+"unique primary categories"
+],
+[
+"on_ally_play",
+"Whenever you play a non-Neutral unit"
+],
+[
+"stat_gain",
+"boost it by 1 for each category it has"
+],
+[
+"generate_cards",
+"Spawn and play Loc Feainn: Convergence"
+]
+],
+"756231": [
+[
+"on_play",
+"Deploy"
+],
+[
+"aoe_damage",
+"Damage all units on an enemy row by 1"
+],
+[
+"reveal_order",
+"Initiative"
+],
+[
+"repeat_trigger",
+"repeat this ability"
+],
+[
+"death_count",
+"If any were destroyed"
+]
+],
+"756206": [
+[
+"damage",
+"Units take turns dealing damage equal to their power"
+]
+],
+"756277": [
+[
+"destroy",
+"Destroy the highest-power unit"
+],
+[
+"stat_condition",
+"highest-power unit"
+],
+[
+"reveal_order",
+"Initiative"
+],
+[
+"board_wipe",
+"Destroy all highest-power units"
+]
+],
+"756656": [
+[
+"ping",
+"Damage an enemy unit by 1"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"free_play",
+"Play a bronze card from your hand"
+],
+[
+"return_to_hand",
+"move Sihil back to your hand"
+],
+[
+"reveal_order",
+"Initiative"
+],
+[
+"permanent_growth",
+"increase the damage by 1 for the rest of the game"
+],
+[
+"transform",
+"transform into Masterful Sihil"
+]
+],
+"756266": [
+[
+"destroy",
+"Destroy the lowest-power unit"
+],
+[
+"stat_condition",
+"lowest-power unit"
+],
+[
+"reveal_order",
+"Initiative"
+],
+[
+"board_wipe",
+"Destroy all lowest-power units"
+]
+],
+"756353": [
+[
+"delayed",
+"Timer 3"
+],
+[
+"tutor",
+"Summon Old Speartip from your deck to this row"
+],
+[
+"stat_gain",
+"increase its base power by 6"
+],
+[
+"banish",
+"Banish self"
+],
+[
+"on_damaged",
+"If Old Speartip: Asleep takes damage"
+]
+],
+"756828": [
+[
+"on_damaged",
+"Whenever this unit is damaged by other non-status abilities"
+],
+[
+"damage_over_time",
+"gain Bleeding"
+],
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage a unit by the duration of Bleeding on self"
+],
+[
+"friendly_fire",
+"damage self by that amount"
+],
+[
+"stat_gain",
+"boost self by that amount"
+]
+],
+"813660": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"activated",
+"Order"
+],
+[
+"ping",
+"Damage an enemy unit by 1"
+],
+[
+"mark_target",
+"Whenever this unit takes damage from other abilities, damage self by the same amount"
+]
+],
+"813663": [
+[
+"exhaust",
+"Doomed"
+],
+[
+"on_damaged",
+"When this unit takes damage"
+],
+[
+"self_destruct",
+"destroy self"
+]
+],
+"756520": [
+[
+"on_play",
+"Deploy"
+],
+[
+"friendly_fire",
+"Damage self by 6"
+],
+[
+"heal",
+"Heal self by 1"
+],
+[
+"on_damaged",
+"Whenever an enemy unit takes damage"
+]
+],
+"757156": [
+[
+"on_spell",
+"Whenever you play a Spell"
+],
+[
+"summon",
+"Spawn a random unit with the same provision cost on this row"
+],
+[
+"random_effect",
+"random unit"
+],
+[
+"cost_condition",
+"the same provision cost"
+]
+],
+"756521": [
+[
+"shield",
+"Shield"
+],
+[
+"activated",
+"Order"
+],
+[
+"damage",
+"Damage a unit by 2"
+],
+[
+"on_spell",
+"Whenever you play a Tactic"
+],
+[
+"tribal",
+"Tactic"
+]
+],
+"757081": [
+[
+"activated",
+"Order"
+],
+[
+"stat_gain",
+"Boost an allied unit by 1"
+],
+[
+"once_per_game",
+"Once per game"
+],
+[
+"generate_cards",
+"Spawn and play a Lyrian Scytheman"
+],
+[
+"deckbuilding_effect",
+"adds 17 provisions to your deck's provision limit"
+]
+],
+"757339": [
+[
+"on_play",
+"Deploy"
+],
+[
+"copy",
+"Spawn 3 base copies of self on this row"
+],
+[
+"summon",
+"Spawn 3 base copies of self"
+],
+[
+"coin_economy",
+"Your Hoards require 1 less Coins to trigger"
+],
+[
+"resource_banking",
+"Hoard 9"
+],
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"delayed",
+"Counter: 3"
+]
+],
+"813622": [
+[
+"on_play",
+"Deploy"
+],
+[
+"revive",
+"Play a bronze Warrior from your graveyard"
+],
+[
+"cast_from_zone",
+"from your graveyard"
+],
+[
+"tribal",
+"Warrior"
+],
+[
+"exhaust",
+"give it Doomed"
+],
+[
+"deckbuilding_effect",
+"Devotion"
+],
+[
+"turn_start",
+"At the start of the round"
+],
+[
+"upgrade",
+"evolve"
+]
+],
+"756543": [
+[
+"count_payoff",
+"Whenever you use an Order ability while this card is in your deck"
+],
+[
+"delayed",
+"Counter: 10"
+],
+[
+"free_play",
+"Summon this card from your deck to your Ranged row"
+]
+],
+"756703": [
+[
+"in_hand_buff",
+"While in hand, deck, or on the battlefield"
+],
+[
+"on_ally_play",
+"whenever you play the second copy of a Bonded unit"
+],
+[
+"permanent_growth",
+"boost self by 3"
+]
+],
+"757126": [
+[
+"activated",
+"Order"
+],
+[
+"untap",
+"Reset an allied non-Neutral unit's Order ability"
+],
+[
+"turn_start",
+"At the start of the round"
+],
+[
+"upgrade",
+"evolve"
+]
+],
+"757359": [
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Order"
+],
+[
+"stat_gain",
+"Boost an allied unit by 4"
+],
+[
+"regeneration",
+"give it Vitality (4)"
+],
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"deck_condition",
+"if both players have this card in their deck"
+],
+[
+"free_play",
+"Summon self to a random allied row"
+],
+[
+"random_effect",
+"random allied row"
+],
+[
+"transform",
+"transform"
+]
+],
+"757479": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_gain",
+"Boost all allied Humans by 1"
+],
+[
+"tribal",
+"Humans"
+],
+[
+"start_of_game",
+"Start the game with 5 random Skellige bronze Humans in your graveyard"
+],
+[
+"graveyard",
+"in your graveyard"
+],
+[
+"random_effect",
+"5 random Skellige bronze Humans"
+]
+],
+"795314": [],
+"756662": [
+[
+"trap_secret",
+"Whenever an allied Trap is triggered"
+],
+[
+"permanent_growth",
+"boost self by 2"
+]
+],
+"757453": [
+[
+"on_play",
+"Deploy"
+],
+[
+"adjacency",
+"If played adjacent to at least one"
+],
+[
+"tutor",
+"Play an Elf from your deck"
+],
+[
+"tribal",
+"Elf"
+],
+[
+"trap_secret",
+"Play a Trap from your deck"
+]
+],
+"757394": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"in_hand_buff",
+"while in hand or deck, reset own power and boost self"
+],
+[
+"rewind",
+"reset own power"
+],
+[
+"row_effects",
+"damage dealt by Frost"
+],
+[
+"count_payoff",
+"the damage dealt by Frost in the last 5 enemy turns"
+]
+],
+"756874": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"random_effect",
+"randomly change own Fee"
+],
+[
+"activated",
+"Fee 1"
+],
+[
+"coin_economy",
+"Fee 1"
+],
+[
+"movement",
+"Move self to the other row"
+],
+[
+"stat_gain",
+"boost self by the Fee cost"
+],
+[
+"resource_gain",
+"gain 1 Coin for each allied unit on that row"
+],
+[
+"condition_count",
+"for each allied unit on that row"
+],
+[
+"cooldowns",
+"Cooldown: 1"
+]
 ]
 }

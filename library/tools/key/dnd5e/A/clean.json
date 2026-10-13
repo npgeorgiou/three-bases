@@ -4770,5 +4770,7049 @@
 "variable_stats",
 "1 + its Constitution modifier"
 ]
+],
+"761417": [
+[
+"concentration",
+"Concentration."
+],
+[
+"saving_throws",
+"makes a Wisdom saving throw"
+],
+[
+"advantage",
+"it has Advantage on the save"
+],
+[
+"disable",
+"the target also has the Incapacitated condition"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"762112": [
+[
+"random_effect",
+"draw them randomly"
+],
+[
+"draw",
+"draw a card from the deck"
+],
+[
+"recycle",
+"the card reappears in the deck"
+],
+[
+"stat_loss",
+"Permanently reduce your Intelligence by 1d4 + 1"
+],
+[
+"debuff",
+"You take a -2 penalty on saving throws"
+],
+[
+"summon",
+"You gain the service of a 4th-level fighter"
+],
+[
+"rewind",
+"avoid or erase one event as if it never happened"
+],
+[
+"upgrade",
+"gain one level"
+],
+[
+"friendly_fire",
+"attacks you"
+],
+[
+"modal_choice",
+"You gain 10,000 XP, or you can draw two additional cards"
+],
+[
+"discard",
+"discard this card"
+],
+[
+"permanent_loss",
+"All forms of wealth that you carry or own, other than magic items, are lost to you"
+],
+[
+"items_consumables",
+"A rare or rarer magic weapon with which you are proficient appears in your hands"
+]
+],
+"762528": [
+[
+"regeneration",
+"The troll regains 15 Hit Points at the start of each of its turns"
+],
+[
+"turn_start",
+"at the start of each of its turns"
+],
+[
+"condition_life",
+"Bloodied"
+],
+[
+"turn_end",
+"ends any turn Bloodied"
+],
+[
+"on_damaged",
+"took 15+ Slashing damage during that turn"
+],
+[
+"summon",
+"becomes a Troll Limb"
+],
+[
+"damage_types",
+"Acid or Fire damage"
+],
+[
+"silence",
+"this trait doesn\u2019t function on the troll\u2019s next turn"
+],
+[
+"cheat_death",
+"The troll dies only if it starts its turn with 0 Hit Points"
+],
+[
+"multi_attack",
+"The troll makes three Rend attacks"
+],
+[
+"damage",
+"11 (2d6 + 4) Slashing damage"
+],
+[
+"movement",
+"moves up to half its Speed straight toward an enemy"
+]
+],
+"761550": [
+[
+"aoe_damage",
+"they explode in a 10-foot-radius Sphere"
+],
+[
+"area_templates",
+"10-foot-radius Sphere"
+],
+[
+"friendly_fire",
+"including you"
+],
+[
+"saving_throws",
+"DC 15 Dexterity saving throw"
+],
+[
+"damage",
+"taking 5d4 Force damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"random_effect",
+"determine it randomly"
+],
+[
+"delayed",
+"produces an effect 1 minute later"
+],
+[
+"summon",
+"Three Shrieker Fungi sprout"
+],
+[
+"stat_gain",
+"permanently increases its lowest ability score by 1"
+],
+[
+"items_consumables",
+"contains 3d4 dry beans"
+]
+],
+"762102": [
+[
+"stat_gain",
+"Increase one ability score of your choice by 1"
+],
+[
+"random_effect",
+"roll 2d4"
+],
+[
+"modal_choice",
+"as a bonus or penalty"
+],
+[
+"reactions",
+"When you or another creature within 60 feet of you succeeds on or fails a D20 Test"
+],
+[
+"cooldowns",
+"you can't use it again until you roll Initiative or finish a Short or Long Rest"
+]
+],
+"762642": [
+[
+"advantage",
+"has advantage on saving throws against poison"
+],
+[
+"light_level",
+"While in sunlight, the duergar has disadvantage on attack rolls"
+],
+[
+"stat_multiply",
+"doubles its damage dice"
+],
+[
+"temporary_buff",
+"For 1 minute, the duergar magically increases in size"
+],
+[
+"damage",
+"6 (1d8 + 2) piercing damage"
+],
+[
+"ranged",
+"range 30/120 ft."
+],
+[
+"stealth",
+"turns invisible until it attacks"
+],
+[
+"concentration",
+"as if concentrating on a spell"
+]
+],
+"762438": [
+[
+"multi_attack",
+"The guard makes two attacks"
+],
+[
+"modal_choice",
+"using Javelin or Longsword in any combination"
+],
+[
+"ranged",
+"range 30/120 ft."
+],
+[
+"damage",
+"14 (3d6 + 4) Piercing damage"
+]
+],
+"762694": [
+[
+"advantage",
+"has advantage on Wisdom (Perception) checks"
+],
+[
+"damage",
+"Hit: 1 piercing damage"
+]
+],
+"762456": [
+[
+"saving_throws",
+"If the kraken fails a saving throw, it can choose to succeed instead"
+],
+[
+"stat_multiply",
+"deals double damage to objects and structures"
+],
+[
+"multi_attack",
+"makes two Tentacle attacks"
+],
+[
+"damage",
+"24 (4d6 + 10) Bludgeoning damage"
+],
+[
+"immobilize",
+"Grappled condition (escape DC 20)"
+],
+[
+"forced_movement",
+"The kraken throws a Large or smaller creature"
+],
+[
+"aoe_damage",
+"each creature in the destination space"
+],
+[
+"debuff",
+"the target has the Prone condition"
+],
+[
+"damage_types",
+"Lightning damage"
+],
+[
+"ranged",
+"within 120 feet"
+],
+[
+"removal",
+"it is swallowed"
+],
+[
+"damage_over_time",
+"takes 24 (7d6) Acid damage at the start of each of its turns"
+],
+[
+"on_damaged",
+"If the kraken takes 50 damage or more on a single turn from a creature inside it"
+],
+[
+"death_trigger",
+"If the kraken dies"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"area_templates",
+"15-foot Emanation"
+],
+[
+"temporary_effect",
+"until the end of the kraken"
+],
+[
+"cooldowns",
+"take this action again until the start of its next turn"
+]
+],
+"762352": [
+[
+"movement",
+"can burrow through solid rock"
+],
+[
+"terrain",
+"leaves a 10-foot-diameter tunnel"
+],
+[
+"advantage",
+"with Advantage if the target is Grappled"
+],
+[
+"damage",
+"10 (2d6 + 3) Slashing damage"
+],
+[
+"damage_types",
+"Acid damage"
+],
+[
+"immobilize",
+"Grappled condition (escape DC 13)"
+],
+[
+"aoe_damage",
+"each creature in a 30-foot-long, 5-foot-wide Line"
+],
+[
+"area_templates",
+"5-foot-wide Line"
+],
+[
+"saving_throws",
+"Dexterity Saving Throw: DC 12"
+]
+],
+"762496": [
+[
+"saving_throws",
+"If the dragon fails a saving throw, it can choose to succeed instead"
+],
+[
+"multi_attack",
+"The dragon makes three Rend attacks"
+],
+[
+"modal_choice",
+"It can replace one attack with a use of Spellcasting"
+],
+[
+"damage",
+"19 (2d8 + 10) Slashing damage"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"aoe_damage",
+"each creature in a 90-foot Cone"
+],
+[
+"area_templates",
+"90-foot Cone"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"cooldowns",
+"take this action again until the start of its next turn"
+],
+[
+"movement",
+"moves up to half its Speed"
+]
+],
+"762727": [
+[
+"debuff",
+"gains one level of exhaustion"
+],
+[
+"saving_throws",
+"DC 13 Constitution saving throw"
+],
+[
+"damage",
+"takes 5 (1d10) psychic damage"
+],
+[
+"damage_types",
+"psychic damage"
+],
+[
+"disable",
+"becomes incapacitated with mad laughter for 1 minute"
+],
+[
+"immunity",
+"gnomes are strangely immune"
+],
+[
+"on_damaged",
+"taking damage"
+],
+[
+"turn_end",
+"at the end of each of its turns"
+],
+[
+"turn_start",
+"starts its turn within 10 feet of an infected creature"
+],
+[
+"delayed",
+"Symptoms manifest 1d4 hours after infection"
+],
+[
+"tribal",
+"This disease targets humanoids"
+]
+],
+"761207": [
+[
+"concentration",
+"Concentration."
+],
+[
+"summon",
+"becomes a Construct that uses the Animated Object stat block"
+],
+[
+"condition_count",
+"The maximum number of objects is equal to your spellcasting ability modifier"
+],
+[
+"activated",
+"you can take a Bonus Action to mentally command"
+],
+[
+"autonomous_units",
+"If you issue no commands, the creature takes the Dodge action"
+],
+[
+"kicker",
+"At higher levels"
+],
+[
+"immunity",
+"Immunities Poison, Psychic"
+],
+[
+"damage",
+"Hit: Force damage"
+],
+[
+"damage_types",
+"Force damage"
+]
+],
+"761434": [
+[
+"disable",
+"it has the Stunned condition"
+],
+[
+"stat_condition",
+"If the target has 150 Hit Points or fewer"
+],
+[
+"immobilize",
+"its Speed is 0"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"saving_throws",
+"makes a Constitution saving throw at the end of each of its turns"
+],
+[
+"turn_end",
+"at the end of each of its turns"
+]
+],
+"762430": [
+[
+"damage",
+"18 (2d12 + 5) Piercing damage"
+],
+[
+"debuff",
+"the target has the Prone condition"
+],
+[
+"aoe_damage",
+"each creature in a 30-foot Cone"
+],
+[
+"area_templates",
+"30-foot Cone"
+],
+[
+"immobilize",
+"Restrained condition"
+],
+[
+"polymorph",
+"has the Petrified condition"
+],
+[
+"saving_throws",
+"Constitution Saving Throw: DC 15"
+],
+[
+"targeting_rules",
+"one creature within 5 feet that has the Prone condition"
+],
+[
+"damage_types",
+"Bludgeoning damage"
+]
+],
+"762155": [
+[
+"transform",
+"assume the shape of a beast"
+],
+[
+"activated",
+"use your action"
+],
+[
+"condition_count",
+"You can use this feature twice"
+],
+[
+"rest_phase",
+"You regain expended uses when you finish a short or long rest"
+],
+[
+"stat_condition",
+"challenge rating of 1/4 or lower"
+],
+[
+"cheat_death",
+"As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked unconscious"
+]
+],
+"762575": [
+[
+"multi_attack",
+"The elephant makes two Gore attacks"
+],
+[
+"damage",
+"15 (2d8 + 6) Piercing damage"
+],
+[
+"debuff",
+"the target has the Prone condition"
+],
+[
+"targeting_rules",
+"one creature within 5 feet that has the Prone condition"
+],
+[
+"saving_throws",
+"Dexterity Saving Throw: DC 16"
+]
+],
+"762436": [
+[
+"revive",
+"it returns to life in 1d6 days"
+],
+[
+"death_trigger",
+"If the naga dies"
+],
+[
+"delayed",
+"in 1d6 days"
+],
+[
+"multi_attack",
+"The naga makes two Bite attacks"
+],
+[
+"modal_choice",
+"It can replace any attack with a use of Poisonous Spittle"
+],
+[
+"damage",
+"17 (2d12 + 4) Piercing damage"
+],
+[
+"damage_types",
+"Poison damage"
+],
+[
+"ranged",
+"within 60 feet"
+],
+[
+"saving_throws",
+"Constitution Saving Throw: DC 16"
+],
+[
+"debuff",
+"the target has the Blinded condition"
+],
+[
+"temporary_effect",
+"until the start of the naga"
+]
+],
+"762111": [
+[
+"tribal",
+"meant to slay a particular kind of creature"
+],
+[
+"damage",
+"taking an extra 6d10 piercing damage"
+],
+[
+"saving_throws",
+"DC 17 Constitution saving throw"
+],
+[
+"exhaust",
+"it becomes a nonmagical arrow"
+],
+[
+"items_consumables",
+"Weapon (arrow)"
+]
+],
+"761280": [
+[
+"concentration",
+"Concentration."
+],
+[
+"information",
+"you sense the location of poisons"
+]
+],
+"761539": [
+[
+"tribal",
+"meant to slay creatures of a particular type"
+],
+[
+"random_effect",
+"determines randomly"
+],
+[
+"saving_throws",
+"DC 17 Constitution saving throw"
+],
+[
+"damage",
+"taking an extra 6d10 Force damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"exhaust",
+"the ammunition becomes nonmagical"
+],
+[
+"items_consumables",
+"Weapon (Any Ammunition)"
+]
+],
+"762431": [
+[
+"movement",
+"can move through a space as narrow as 1 inch"
+],
+[
+"counterattack",
+"Nonmagical ammunition is destroyed immediately after hitting the ooze"
+],
+[
+"on_damaged",
+"immediately after dealing damage to the ooze"
+],
+[
+"stacking_keyword",
+"cumulative \u22121 penalty to attack rolls"
+],
+[
+"stat_loss",
+"takes a cumulative \u22121 penalty to attack rolls"
+],
+[
+"damage",
+"10 (2d8 + 1) Acid damage"
+],
+[
+"damage_types",
+"Acid damage"
+],
+[
+"piercing",
+"Nonmagical armor worn by the target takes a \u22121 penalty to the AC it offers"
+]
+],
+"762505": [
+[
+"movement",
+"can move through a space as narrow as 1 inch"
+],
+[
+"light_level",
+"While in sunlight, the shadow has Disadvantage on D20 Tests"
+],
+[
+"advantage",
+"Disadvantage on D20 Tests"
+],
+[
+"damage",
+"5 (1d6 + 2) Necrotic damage"
+],
+[
+"damage_types",
+"Necrotic damage"
+],
+[
+"stat_loss",
+"Strength score decreases by 1d4"
+],
+[
+"destroy",
+"The target dies if this reduces that score to 0"
+],
+[
+"on_kill",
+"If a Humanoid is slain by this attack"
+],
+[
+"summon",
+"a Shadow rises from the corpse"
+],
+[
+"delayed",
+"1d4 hours later"
+],
+[
+"stealth",
+"the shadow takes the Hide action"
+]
+],
+"762478": [
+[
+"movement",
+"can climb difficult surfaces"
+],
+[
+"damage",
+"12 (3d6 + 2) Acid damage"
+],
+[
+"reactions",
+"Reactions: Split"
+],
+[
+"on_damaged",
+"it becomes Bloodied or is subjected to Lightning or Slashing damage"
+],
+[
+"condition_life",
+"it becomes Bloodied"
+],
+[
+"stat_condition",
+"has 10+ Hit Points"
+],
+[
+"summon",
+"The jelly splits into two new Ochre Jellies"
+],
+[
+"damage_types",
+"Lightning or Slashing damage"
+]
+],
+"762365": [
+[
+"movement",
+"can move through a space as narrow as 1 inch"
+],
+[
+"counterattack",
+"A creature that hits the pudding with a melee attack roll takes 4 (1d8) Acid damage"
+],
+[
+"stacking_keyword",
+"cumulative \u22121 penalty to attack rolls"
+],
+[
+"stat_loss",
+"takes a cumulative \u22121 penalty to attack rolls"
+],
+[
+"damage",
+"17 (4d6 + 3) Acid damage"
+],
+[
+"damage_types",
+"Acid damage"
+],
+[
+"piercing",
+"Nonmagical armor worn by the target takes a \u22121 penalty to the AC it offers"
+],
+[
+"reactions",
+"Reactions: Split"
+],
+[
+"on_damaged",
+"it becomes Bloodied or is subjected to Lightning or Slashing damage"
+],
+[
+"condition_life",
+"it becomes Bloodied"
+],
+[
+"stat_condition",
+"has 10+ Hit Points"
+],
+[
+"summon",
+"The pudding splits into two new Black Puddings"
+]
+],
+"762113": [
+[
+"stat_gain",
+"you gain a +1 bonus to AC"
+],
+[
+"passive",
+"While wearing this armor"
+],
+[
+"activated",
+"use a bonus action to speak the armor's command word"
+]
+],
+"762637": [
+[
+"advantage",
+"has advantage on saving throws against being charmed or frightened"
+],
+[
+"multi_attack",
+"The fanatic makes two melee attacks"
+],
+[
+"ranged",
+"range 20/60 ft."
+],
+[
+"damage",
+"4 (1d4 + 2) piercing damage"
+]
+],
+"762461": [
+[
+"advantage",
+"Advantage on saving throws against spells"
+],
+[
+"multi_attack",
+"The archmage makes four Arcane Burst attacks"
+],
+[
+"ranged",
+"range 150 ft."
+],
+[
+"damage",
+"27 (4d10 + 5) Force damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"movement",
+"Misty Step"
+],
+[
+"reactions",
+"casts Counterspell or Shield in response"
+],
+[
+"counter_spell",
+"Counterspell"
+]
+],
+"762720": [
+[
+"items_consumables",
+"Some magic items require a creature to form a bond with them"
+],
+[
+"rest_phase",
+"spend a short rest focused on only that item"
+],
+[
+"play_restriction",
+"a creature can be attuned to no more than three magic items at a time"
+],
+[
+"variety_payoff",
+"a creature can't attune to more than one copy of an item"
+]
+],
+"761342": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"10foot Emanation"
+],
+[
+"immunity",
+"can't affect anything within it"
+],
+[
+"cost_condition",
+"Any spell of level 5 or lower"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"762604": [
+[
+"zone_of_control",
+"Opportunity Attack"
+],
+[
+"damage",
+"Hit: 1 Slashing damage"
+]
+],
+"761902": [
+[
+"multi_attack",
+"make three Unarmed Strikes with it instead of two"
+],
+[
+"coin_economy",
+"expend 1 Focus Point"
+],
+[
+"block_armor",
+"you gain a number of Temporary Hit Points"
+],
+[
+"random_effect",
+"two rolls of your Martial Arts die"
+],
+[
+"movement",
+"You move the creature with you until the end of your turn"
+],
+[
+"temporary_effect",
+"until the end of your turn"
+],
+[
+"zone_of_control",
+"doesn't provoke Opportunity Attacks"
+]
+],
+"762608": [
+[
+"zone_of_control",
+"Opportunity Attack"
+],
+[
+"damage",
+"6 (1d8 + 2) Piercing damage"
+]
+],
+"762609": [
+[
+"zone_of_control",
+"Opportunity Attack"
+],
+[
+"damage",
+"Hit: 1 Piercing damage"
+]
+],
+"762576": [
+[
+"zone_of_control",
+"Opportunity Attack"
+],
+[
+"damage",
+"1 Piercing damage plus 5 (2d4) Poison damage"
+],
+[
+"damage_types",
+"Poison damage"
+]
+],
+"761719": [
+[
+"stat_gain",
+"grants a +3 bonus to attack rolls and damage rolls"
+],
+[
+"activated",
+"You can press one of the following buttons as a Bonus Action"
+],
+[
+"stances",
+"a button's effect lasts until you push a different button"
+],
+[
+"damage",
+"deals an extra 2d6 Fire damage on a hit"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"transform",
+"transforming the rod into a magic Battleaxe"
+],
+[
+"on_attack",
+"When you hit a creature with a melee attack using the rod"
+],
+[
+"saving_throws",
+"DC 17 Constitution saving throw"
+],
+[
+"lifesteal",
+"you regain a number of Hit Points equal to half that Necrotic damage"
+],
+[
+"disable",
+"the target has the Paralyzed condition for 1 minute"
+],
+[
+"cooldowns",
+"can't be used again until the next dawn"
+],
+[
+"debuff",
+"a target has the Frightened condition"
+],
+[
+"scope_multi",
+"force each creature you can see within 30 feet of yourself"
+],
+[
+"turn_end",
+"at the end of each of its turns"
+],
+[
+"items_consumables",
+"Rod This rod"
+]
+],
+"762561": [
+[
+"movement",
+"can move through other creatures and objects"
+],
+[
+"turn_end",
+"if it ends its turn inside an object"
+],
+[
+"light_level",
+"While in sunlight, the wraith has Disadvantage"
+],
+[
+"advantage",
+"Disadvantage on ability checks and attack rolls"
+],
+[
+"damage",
+"21 (4d8 + 3) Necrotic damage"
+],
+[
+"damage_types",
+"Necrotic damage"
+],
+[
+"stat_loss",
+"its Hit Point maximum decreases by an amount equal to the damage taken"
+],
+[
+"graveyard",
+"targets a Humanoid corpse within 10 feet of itself"
+],
+[
+"summon",
+"rises as a Specter"
+],
+[
+"board_limit",
+"can have no more than seven specters under its control at a time"
+]
+],
+"762715": [
+[
+"rest_phase",
+"cast only a limited number of spells before resting"
+],
+[
+"deckbuilding_effect",
+"undergo a process of preparing spells"
+]
+],
+"762529": [
+[
+"regeneration",
+"The limb regains 5 Hit Points at the start of each of its turns"
+],
+[
+"turn_start",
+"at the start of each of its turns"
+],
+[
+"damage_types",
+"Acid or Fire damage"
+],
+[
+"silence",
+"this trait doesn\u2019t function on the limb\u2019s next turn"
+],
+[
+"cheat_death",
+"The limb dies only if it starts its turn with 0 Hit Points"
+],
+[
+"delayed",
+"within 24 hours"
+],
+[
+"random_effect",
+"roll 1d12"
+],
+[
+"transform",
+"the limb turns into a Troll"
+],
+[
+"self_destruct",
+"the limb withers away"
+],
+[
+"damage",
+"9 (2d4 + 4) Slashing damage"
+]
+],
+"762480": [
+[
+"regeneration",
+"The oni regains 10 Hit Points at the start of each of its turns"
+],
+[
+"turn_start",
+"at the start of each of its turns"
+],
+[
+"multi_attack",
+"The oni makes two Claw or Nightmare Ray attacks"
+],
+[
+"modal_choice",
+"It can replace one attack with a use of Spellcasting"
+],
+[
+"damage",
+"10 (1d12 + 4) Slashing damage"
+],
+[
+"damage_types",
+"Necrotic damage"
+],
+[
+"ranged",
+"range 60 ft."
+],
+[
+"debuff",
+"the target has the Frightened condition"
+],
+[
+"temporary_effect",
+"until the start of the oni"
+],
+[
+"transform",
+"The oni shape-shifts"
+],
+[
+"stealth",
+"The oni casts Invisibility on itself"
+]
+],
+"761638": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"take a Magic action to toss an Ioun Stone into the air"
+],
+[
+"play_restriction",
+"You can have up to three Ioun Stones orbiting your head at the same time"
+],
+[
+"immunity",
+"thwarting all attempts by other creatures to attack or snatch it"
+],
+[
+"reactions",
+"you can take a Reaction to cancel a spell"
+],
+[
+"counter_spell",
+"cancel a spell of level 4 or lower"
+],
+[
+"cost_condition",
+"a spell of level 4 or lower"
+],
+[
+"self_destruct",
+"it burns out, turns dull gray, and loses its magic"
+],
+[
+"stat_gain",
+"Your Dexterity increases by 2"
+],
+[
+"advantage",
+"you have Advantage on Initiative rolls"
+],
+[
+"regeneration",
+"You regain 15 Hit Points at the end of each hour"
+],
+[
+"resource_banking",
+"stores spells cast into it, holding them until you use them"
+],
+[
+"cast_from_zone",
+"you can cast any spell stored in it"
+]
+],
+"762507": [
+[
+"bodyguard",
+"half of any damage the wearer takes (round up) is transferred to the guardian"
+],
+[
+"regeneration",
+"The guardian regains 10 Hit Points at the start of each of its turns"
+],
+[
+"turn_start",
+"at the start of each of its turns"
+],
+[
+"resource_banking",
+"The spell has no effect but is stored within the guardian"
+],
+[
+"cast_from_zone",
+"The guardian can cast the spell stored"
+],
+[
+"multi_attack",
+"The guardian makes two Fist attacks"
+],
+[
+"damage",
+"11 (2d6 + 4) Bludgeoning damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"reactions",
+"Reactions: Protection"
+],
+[
+"temporary_buff",
+"The wearer gains a +5 bonus to AC"
+],
+[
+"protection",
+"possibly causing it to miss"
+]
+],
+"761602": [
+[
+"items_consumables",
+"Wondrous Item"
+]
+],
+"761505": [
+[
+"movement",
+"Any creature that enters the portal instantly appears within 5 feet of the destination circle"
+],
+[
+"temporary_effect",
+"remains open until the end of your next turn"
+],
+[
+"terrain",
+"you draw a 5-foot-radius circle on the ground"
+]
+],
+"761590": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"random_effect",
+"its cards are drawn at random"
+],
+[
+"draw",
+"draw a card at random from the deck"
+],
+[
+"summon",
+"An illusion of a creature"
+],
+[
+"no_damage_output",
+"it can do no harm"
+],
+[
+"activated",
+"take a Magic action to move it"
+],
+[
+"movement",
+"move it anywhere within 30 feet of its card"
+],
+[
+"information",
+"identifies it as an illusion"
+],
+[
+"exhaust",
+"that card can't be used again"
+]
+],
+"762187": [
+[
+"coin_economy",
+"You can spend these points to fuel various ki features"
+],
+[
+"rest_phase",
+"it is unavailable until you finish a short or long rest"
+],
+[
+"saving_throws",
+"require your target to make a saving throw"
+],
+[
+"upgrade",
+"You learn more ki features as you gain levels"
+]
+],
+"761399": [
+[
+"terrain",
+"You conjure a shimmering door"
+],
+[
+"summon",
+"A staff of 100 near-transparent servants"
+],
+[
+"immunity",
+"They are invulnerable"
+],
+[
+"cant_attack",
+"they can't attack"
+]
+],
+"761258": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"10-foot Emanation"
+],
+[
+"on_enemy_enter",
+"whenever a creature you can see enters the Emanation"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"saving_throws",
+"make a Wisdom saving throw"
+],
+[
+"damage",
+"takes 5d8 Force damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"movement",
+"take the Disengage action as a Bonus Action"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761506": [
+[
+"modal_choice",
+"You create one of the effects below"
+],
+[
+"play_restriction",
+"up to three of its 1-minute effects active at a time"
+],
+[
+"advantage",
+"Advantage on Charisma (Intimidation) checks"
+],
+[
+"temporary_effect",
+"for 1 minute"
+]
+],
+"761256": [
+[
+"concentration",
+"Concentration."
+],
+[
+"summon",
+"You conjure a Medium spirit"
+],
+[
+"on_play",
+"When the spirit appears, you can make one melee spell attack"
+],
+[
+"damage",
+"takes Psychic damage equal to 3d12 plus your spellcasting ability modifier"
+],
+[
+"damage_types",
+"Psychic damage"
+],
+[
+"debuff",
+"the target has the Frightened condition"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"activated",
+"As a Bonus Action on your later turns"
+],
+[
+"movement",
+"teleport the spirit"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761337": [
+[
+"concentration",
+"Concentration."
+],
+[
+"movement",
+"Anything that does so is instantly transported to the other plane"
+],
+[
+"forced_movement",
+"transports it to the nearest unoccupied space on your side of the portal"
+]
+],
+"762504": [
+[
+"assists_support",
+"While within 30 feet of at least two hag allies"
+],
+[
+"rest_phase",
+"The hag must finish a Long Rest before using this trait to cast that spell again"
+],
+[
+"tribal",
+"any Beast or Humanoid"
+],
+[
+"turn_start",
+"starts its turn within 30 feet of the hag"
+],
+[
+"saving_throws",
+"Wisdom Saving Throw: DC 11"
+],
+[
+"debuff",
+"The target has the Frightened condition"
+],
+[
+"temporary_effect",
+"until the start of its next turn"
+],
+[
+"immunity",
+"The target is immune to this hag"
+],
+[
+"damage",
+"10 (2d6 + 3) Slashing damage"
+],
+[
+"targeting_rules",
+"one Frightened creature"
+],
+[
+"stat_condition",
+"If the target has 20 Hit Points or fewer"
+],
+[
+"destroy",
+"it drops to 0 Hit Points"
+],
+[
+"damage_types",
+"Psychic damage"
+]
+],
+"762013": [
+[
+"modal_choice",
+"Choose one of the following skills"
+],
+[
+"stat_gain",
+"You have Expertise in the chosen skill"
+]
+],
+"761582": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"information",
+"you can cast Detect Thoughts"
+],
+[
+"saving_throws",
+"save DC 17"
+],
+[
+"concentration",
+"You don't need to concentrate on this Detect Thoughts spell"
+]
+],
+"761583": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"saving_throws",
+"save DC 17"
+],
+[
+"concentration",
+"You don't need to concentrate on this Suggestion"
+],
+[
+"cooldowns",
+"You can't cast Suggestion in this way again until the next dawn"
+]
+],
+"762475": [
+[
+"assists_support",
+"While within 30 feet of at least two hag allies"
+],
+[
+"rest_phase",
+"The hag must finish a Long Rest before using this trait to cast that spell again"
+],
+[
+"advantage",
+"Advantage on saving throws against spells"
+],
+[
+"damage_reduction",
+"Resistance to all damage"
+],
+[
+"multi_attack",
+"The hag makes two Claw attacks"
+],
+[
+"damage",
+"13 (2d8 + 4) Slashing damage"
+],
+[
+"immunity",
+"The spell fails and is wasted if the target is under the effect of the Protection from Evil and Good spell"
+],
+[
+"stat_loss",
+"Hit Point maximum decreases by an amount equal to that damage"
+],
+[
+"on_kill",
+"If the spell kills the target"
+],
+[
+"banish",
+"its soul is trapped in the hag"
+],
+[
+"transform",
+"The hag shape-shifts"
+]
+],
+"761276": [
+[
+"concentration",
+"Concentration."
+],
+[
+"delayed",
+"When the spell ends, the bead explodes"
+],
+[
+"aoe_damage",
+"each creature in a 20-foot-radius Sphere"
+],
+[
+"area_templates",
+"20-foot-radius Sphere"
+],
+[
+"saving_throws",
+"makes a Dexterity saving throw"
+],
+[
+"damage",
+"takes Fire damage equal to the total accumulated damage"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"spell_power",
+"the damage increases by 1d6 whenever your turn ends"
+],
+[
+"turn_end",
+"whenever your turn ends"
+],
+[
+"damage_over_time",
+"start burning"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761351": [
+[
+"ranged",
+"Make a ranged spell attack"
+],
+[
+"damage",
+"it takes 4d6 Radiant damage"
+],
+[
+"damage_types",
+"Radiant damage"
+],
+[
+"mark_target",
+"the next attack roll made against it before the end of your next turn has Advantage"
+],
+[
+"advantage",
+"has Advantage"
+],
+[
+"temporary_effect",
+"before the end of your next turn"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761295": [
+[
+"concentration",
+"Concentration."
+],
+[
+"buff",
+"the target can take a Magic action to exhale a 15-foot Cone"
+],
+[
+"area_templates",
+"15-foot Cone"
+],
+[
+"aoe_damage",
+"Each creature in that area makes a Dexterity saving throw"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"damage",
+"taking 3d6 damage of the chosen type"
+],
+[
+"modal_choice",
+"choose Acid, Cold, Fire, Lightning, or Poison"
+],
+[
+"damage_types",
+"damage of the chosen type"
+],
+[
+"kicker",
+"Using a Higher-Level Spell Slot"
+]
+],
+"761430": [
+[
+"ranged",
+"Make a ranged spell attack"
+],
+[
+"damage",
+"the target takes 1d12 Poison damage"
+],
+[
+"damage_types",
+"Poison damage"
+],
+[
+"upgrade",
+"Cantrip Upgrade"
+]
+],
+"761198": [
+[
+"ranged",
+"Make a ranged spell attack"
+],
+[
+"damage",
+"the target takes 4d4 Acid damage"
+],
+[
+"delayed",
+"2d4 Acid damage at the end of its next turn"
+],
+[
+"damage_types",
+"Acid damage"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761637": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"As a Magic action"
+],
+[
+"terrain",
+"cause it to grow rapidly into asquare adamantine tower"
+],
+[
+"forced_movement",
+"Each creature in the area where the tower appears is pushed"
+],
+[
+"immunity",
+"Immunity to Bludgeoning, Piercing, and Slashing damage"
+],
+[
+"damage_reduction",
+"Resistance to all other damage"
+],
+[
+"heal",
+"Each casting of Wish causes the tower to regain all its Hit Points"
+]
+],
+"761525": [
+[
+"concentration",
+"Concentration."
+],
+[
+"terrain",
+"A nonmagical wall of solid stone springs into existence"
+],
+[
+"forced_movement",
+"the creature is pushed to one side of the wall"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"reactions",
+"use its Reaction to move up to its Speed"
+],
+[
+"immunity",
+"Immunity to Poison and Psychic damage"
+]
+],
+"762002": [
+[
+"free_play",
+"You can cast your arcanum spell once without expending a spell slot"
+],
+[
+"rest_phase",
+"you must finish a Long Rest before you can cast it in this way again"
+],
+[
+"upgrade",
+"you gain another Warlock spell of your choice"
+],
+[
+"deckbuilding_effect",
+"you can replace one of your arcanum spells with another Warlock spell of the same level"
+]
+],
+"761840": [
+[
+"activated",
+"As a Magic action"
+],
+[
+"modal_choice",
+"choose any Cleric spell of level 5 or lower"
+],
+[
+"cost_condition",
+"level 5 or lower"
+],
+[
+"free_play",
+"you cast that spell without expending a spell slot"
+],
+[
+"rest_phase",
+"You can't use this feature again until you finish a Long Rest"
+]
+],
+"761572": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"take a Magic action to summon an Air Elemental"
+],
+[
+"summon",
+"summon an Air Elemental"
+],
+[
+"self_destruct",
+"The elemental disappears after 1 hour"
+],
+[
+"cooldowns",
+"The censer can't be used this way again until the next dawn"
+]
+],
+"762702": [
+[
+"merge_attach",
+"you can mount a creature"
+],
+[
+"saving_throws",
+"DC 10 Dexterity saving throw"
+],
+[
+"autonomous_units",
+"allow it to act independently"
+],
+[
+"haste",
+"A controlled mount can move and act even on the turn that you mount it"
+],
+[
+"zone_of_control",
+"if the mount provokes an opportunity attack"
+],
+[
+"target_choice",
+"the attacker can target you or the mount"
+]
+],
+"761688": [
+[
+"items_consumables",
+"When you drink this potion"
+],
+[
+"speed",
+"you gain the effect of the Haste spell"
+],
+[
+"temporary_buff",
+"for 1 minute"
+]
+],
+"761356": [
+[
+"concentration",
+"Concentration."
+],
+[
+"stat_multiply",
+"the target's Speed is doubled"
+],
+[
+"stat_gain",
+"it gains a +2 bonus to Armor Class"
+],
+[
+"advantage",
+"Advantage on Dexterity saving throws"
+],
+[
+"extra_turn",
+"it gains an additional action on each of its turns"
+],
+[
+"friendly_fire",
+"When the spell ends, the target is Incapacitated"
+],
+[
+"immobilize",
+"has a Speed of 0"
+],
+[
+"temporary_effect",
+"until the end of its next turn"
+]
+],
+"762178": [
+[
+"extra_turn",
+"you can take one additional action"
+],
+[
+"rest_phase",
+"you must finish a short or long rest before you can use it again"
+],
+[
+"upgrade",
+"Starting at 17th level, you can use it twice before a rest"
+]
+],
+"761870": [
+[
+"extra_turn",
+"you can take one additional action"
+],
+[
+"rest_phase",
+"you can't do so again until you finish a Short or Long Rest"
+],
+[
+"upgrade",
+"Starting at level 17, you can use it twice before a rest"
+]
+],
+"762425": [
+[
+"multi_attack",
+"The goblin makes two attacks"
+],
+[
+"modal_choice",
+"using Scimitar or Shortbow in any combination"
+],
+[
+"damage",
+"5 (1d6 + 2) Slashing damage"
+],
+[
+"advantage",
+"if the attack roll had Advantage"
+],
+[
+"ranged",
+"range 80/320 ft."
+],
+[
+"movement",
+"The goblin takes the Disengage or Hide action"
+],
+[
+"reactions",
+"Reactions: Redirect Attack"
+],
+[
+"swap",
+"The goblin and that ally swap places"
+],
+[
+"protection",
+"the ally becomes the target of the attack instead"
+],
+[
+"adjacency",
+"ally within 5 feet of itself"
+]
+],
+"761212": [
+[
+"concentration",
+"Concentration."
+],
+[
+"summon",
+"You create a Large hand of shimmering magical energy"
+],
+[
+"variable_stats",
+"Hit Points equal to your Hit Point maximum"
+],
+[
+"activated",
+"as a Bonus Action on your later turns"
+],
+[
+"movement",
+"you can move the hand up to 60 feet"
+],
+[
+"modal_choice",
+"cause one of the following effects"
+],
+[
+"damage",
+"the target takes 5d8 Force damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"forced_movement",
+"the hand pushes the target"
+],
+[
+"saving_throws",
+"Strength saving throw"
+],
+[
+"immobilize",
+"the target has the Grappled condition"
+],
+[
+"protection",
+"The hand grants you Half Cover"
+],
+[
+"terrain",
+"its space counts as Difficult Terrain for your enemies"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761204": [
+[
+"tribal",
+"A Tiny Beast"
+],
+[
+"saving_throws",
+"Charisma saving throw"
+],
+[
+"stat_condition",
+"if the target's Challenge Rating isn't 0, it automatically succeeds"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761243": [
+[
+"copy",
+"An inert duplicate of that creature"
+],
+[
+"delayed",
+"finishes growing after 120 days"
+],
+[
+"death_trigger",
+"If the original creature dies"
+],
+[
+"cheat_death",
+"the creature's soul transfers to the clone"
+]
+],
+"762610": [
+[
+"damage",
+"Hit: 1 Piercing damage"
+]
+],
+"761442": [
+[
+"concentration",
+"Concentration."
+],
+[
+"copy",
+"You create an illusory copy of yourself"
+],
+[
+"self_destruct",
+"If the illusion takes any damage, it disappears"
+],
+[
+"activated",
+"As a Magic action, you can move it up to 60 feet"
+],
+[
+"movement",
+"move it up to 60 feet"
+],
+[
+"information",
+"can determine that it is an illusion"
+]
+],
+"762347": [
+[
+"on_attack",
+"When you score a critical hit with a melee weapon attack"
+],
+[
+"random_effect",
+"roll one of the weapon's damage dice one additional time"
+],
+[
+"damage",
+"add it to the extra damage of the critical hit"
+]
+],
+"761275": [
+[
+"cheat_death",
+"the target instead drops to 1 Hit Point"
+],
+[
+"immunity",
+"that effect is negated against the target"
+]
+],
+"762429": [
+[
+"saving_throws",
+"If the dragon fails a saving throw, it can choose to succeed instead"
+],
+[
+"multi_attack",
+"The dragon makes three Rend attacks"
+],
+[
+"modal_choice",
+"It can replace one attack with a use of (A) Spellcasting"
+],
+[
+"damage",
+"19 (2d8 + 10) Slashing damage"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"aoe_damage",
+"each creature in a 90-foot Cone"
+],
+[
+"area_templates",
+"90-foot Cone"
+],
+[
+"advantage",
+"Disadvantage on Strength-based D20 Tests"
+],
+[
+"stat_loss",
+"subtracts 5 (1d10) from its damage rolls"
+],
+[
+"turn_end",
+"at the end of each of its turns"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"removal",
+"is transported to a harmless demiplane"
+],
+[
+"disable",
+"the target has the Incapacitated condition"
+],
+[
+"temporary_effect",
+"until the start of the dragon"
+],
+[
+"ranged",
+"within 120 feet"
+],
+[
+"cooldowns",
+"take this action again until the start of its next turn"
+],
+[
+"movement",
+"The dragon moves up to half its Speed"
+]
+],
+"762661": [
+[
+"immunity",
+"The sphinx is immune to any effect that would sense its emotions or read its thoughts"
+],
+[
+"advantage",
+"have disadvantage"
+],
+[
+"multi_attack",
+"The sphinx makes two claw attacks"
+],
+[
+"damage",
+"13 (2d8 + 4) slashing damage"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"movement",
+"The sphinx magically teleports"
+]
+],
+"762627": [
+[
+"immunity",
+"The sphinx is immune to any effect that would sense its emotions or read its thoughts"
+],
+[
+"advantage",
+"have disadvantage"
+],
+[
+"multi_attack",
+"The sphinx makes two claw attacks"
+],
+[
+"damage",
+"17 (2d10 + 6) slashing damage"
+],
+[
+"count_payoff",
+"Each time it roars before finishing a long rest, the roar is louder and the effect is different"
+],
+[
+"scope_multi",
+"Each creature within 500 feet of the sphinx"
+],
+[
+"saving_throws",
+"DC 18 Wisdom saving throw"
+],
+[
+"debuff",
+"is frightened for 1 minute"
+],
+[
+"disable",
+"A frightened creature is paralyzed"
+],
+[
+"turn_end",
+"at the end of each of its turns"
+],
+[
+"aoe_damage",
+"a creature takes 44 (8d10) thunder damage"
+],
+[
+"damage_types",
+"thunder damage"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"movement",
+"The sphinx magically teleports"
+]
+],
+"761405": [
+[
+"concentration",
+"Concentration."
+],
+[
+"removal",
+"You banish a creature that you can see within range into a labyrinthine demiplane"
+],
+[
+"blink",
+"the target reappears in the space it left"
+]
+],
+"761613": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"each requiring a Magic action to use"
+],
+[
+"modal_choice",
+"This item also has three command words"
+],
+[
+"transform",
+"The box unfolds into a Rowboat"
+]
+],
+"762544": [
+[
+"multi_attack",
+"The wereboar makes two attacks"
+],
+[
+"modal_choice",
+"using Javelin or Tusk in any combination"
+],
+[
+"damage",
+"12 (2d8 + 3) Piercing damage"
+],
+[
+"tribal",
+"If the target is a Humanoid"
+],
+[
+"saving_throws",
+"Constitution Saving Throw: DC 12"
+],
+[
+"steal",
+"it instead becomes a Wereboar under the GM"
+],
+[
+"immunity",
+"The target is immune to this wereboar"
+],
+[
+"ranged",
+"range 30/120 ft."
+],
+[
+"debuff",
+"has the Prone condition"
+],
+[
+"transform",
+"The wereboar shape-shifts"
+]
+],
+"762550": [
+[
+"multi_attack",
+"The weretiger makes two attacks"
+],
+[
+"modal_choice",
+"using Scratch or Longbow in any combination"
+],
+[
+"damage",
+"12 (2d8 + 3) Piercing damage"
+],
+[
+"tribal",
+"If the target is a Humanoid"
+],
+[
+"saving_throws",
+"Constitution Saving Throw: DC 13"
+],
+[
+"steal",
+"it instead becomes a Weretiger under the GM"
+],
+[
+"immunity",
+"The target is immune to this weretiger"
+],
+[
+"ranged",
+"range 150/600 ft."
+],
+[
+"movement",
+"The weretiger moves up to its Speed"
+],
+[
+"zone_of_control",
+"without provoking Opportunity Attacks"
+],
+[
+"stealth",
+"the weretiger can take the Hide action"
+],
+[
+"transform",
+"The weretiger shape-shifts"
+]
+],
+"761537": [
+[
+"immunity",
+"any Critical Hit against you becomes a normal hit"
+],
+[
+"passive",
+"While you're wearing it"
+]
+],
+"762683": [
+[
+"transform",
+"polymorph into a Small or Medium humanoid"
+],
+[
+"damage",
+"6 (1d6 + 3) slashing damage"
+],
+[
+"tribal",
+"One humanoid"
+],
+[
+"saving_throws",
+"DC 15 Wisdom saving throw"
+],
+[
+"steal",
+"The charmed target obeys the fiend's verbal or telepathic commands"
+],
+[
+"on_damaged",
+"If the target suffers any harm"
+],
+[
+"immunity",
+"the target is immune to this fiend's Charm for the next 24 hours"
+],
+[
+"play_restriction",
+"The fiend can have only one target charmed at a time"
+],
+[
+"targeting_rules",
+"a creature charmed by it or a willing creature"
+],
+[
+"damage_types",
+"psychic damage"
+],
+[
+"stat_loss",
+"The target's hit point maximum is reduced by an amount equal to the damage taken"
+],
+[
+"destroy",
+"The target dies if this effect reduces its hit point maximum to 0"
+],
+[
+"movement",
+"The fiend magically enters the Ethereal Plane"
+]
+],
+"761949": [
+[
+"advantage",
+"You have Advantage on attack rolls against the creature currently marked"
+],
+[
+"mark_target",
+"marked by your Hunter's Mark"
+]
+],
+"761953": [
+[
+"mark_target",
+"While a creature is marked by your Hunter's Mark"
+],
+[
+"information",
+"you know whether that creature has any Immunities, Resistances, or Vulnerabilities"
+],
+[
+"damage_types",
+"Immunities, Resistances, or Vulnerabilities"
+]
+],
+"761956": [
+[
+"mark_target",
+"a creature marked by your Hunter's Mark"
+],
+[
+"on_attack",
+"when you deal damage to a creature"
+],
+[
+"multi_target_attack",
+"you can also deal that spell's extra damage to a different creature"
+]
+],
+"761336": [
+[
+"concentration",
+"Concentration."
+],
+[
+"transform",
+"shape-shifts, along with everything it's wearing and carrying, into a misty cloud"
+],
+[
+"movement",
+"Fly Speed of 10 feet"
+],
+[
+"damage_reduction",
+"Resistance to Bludgeoning, Piercing, and Slashing damage"
+],
+[
+"immunity",
+"Immunity to the Prone condition"
+],
+[
+"advantage",
+"Advantage on Strength, Dexterity, and Constitution saving throws"
+],
+[
+"cant_attack",
+"the target can't attack or cast spells"
+],
+[
+"kicker",
+"At higher levels"
+],
+[
+"scope_multi",
+"You can target one additional creature"
+]
+],
+"761400": [
+[
+"concentration",
+"Concentration."
+],
+[
+"no_damage_output",
+"it can't deal damage or cause conditions"
+],
+[
+"activated",
+"take a Magic action to cause the image to move"
+],
+[
+"information",
+"can determine that it is an illusion"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761436": [
+[
+"modal_choice",
+"Choose the effect from the options below"
+],
+[
+"play_restriction",
+"up to three of its non-instantaneous effects active at a time"
+],
+[
+"temporary_effect",
+"It lasts until the end of your next turn"
+],
+[
+"no_damage_output",
+"A trinket can deal no damage"
+]
+],
+"762722": [
+[
+"activated",
+"Activating some magic items requires a user to do something special"
+],
+[
+"play_restriction",
+"can't be activated in an area where sound is prevented"
+],
+[
+"items_consumables",
+"Some items are used up when they are activated"
+],
+[
+"exhaust",
+"Once used, a consumable item loses its magic"
+],
+[
+"free_play",
+"doesn't expend any of the user's spell slots"
+],
+[
+"coin_economy",
+"charges that must be expended to activate their properties"
+]
+],
+"761353": [
+[
+"row_effects",
+"infuse an area around it with holy or unholy power"
+],
+[
+"play_restriction",
+"the spell fails if the radius includes an area already under the effect of Hallow"
+],
+[
+"tribal",
+"Choose any of these creature types"
+],
+[
+"modal_choice",
+"You bind an extra effect to the area from the list below"
+],
+[
+"immunity",
+"can't gain the Frightened condition"
+],
+[
+"light_level",
+"Darkness fills the area"
+],
+[
+"debuff",
+"have the Frightened condition while in the area"
+],
+[
+"damage_reduction",
+"Resistance to one damage type of your choice"
+],
+[
+"damage_types",
+"Vulnerability to one damage type of your choice"
+]
+],
+"761408": [],
+"761717": [
+[
+"items_consumables",
+"Rod While holding this rod"
+],
+[
+"reactions",
+"take a Reaction to absorb a spell"
+],
+[
+"counter_spell",
+"The absorbed spell's effect is canceled"
+],
+[
+"resource_banking",
+"the spell's energy-not the spell itself-is stored in the rod"
+],
+[
+"resource_conversion",
+"convert energy stored in it into spell slots"
+]
+],
+"761740": [
+[
+"stat_gain",
+"grants a +2 bonus to attack rolls and damage rolls"
+],
+[
+"spell_power",
+"you gain a +2 bonus to spell attack rolls"
+],
+[
+"advantage",
+"you have Advantage on saving throws against spells"
+],
+[
+"reactions",
+"you can take a Reaction when another creature casts a spell that targets only you"
+],
+[
+"counter_spell",
+"cancel-ing its effect"
+],
+[
+"resource_gain",
+"gaining a number of charges equal to the absorbed spell's level"
+],
+[
+"coin_economy",
+"how many charges you must expend to cast the spell"
+],
+[
+"random_effect",
+"roll 1d20"
+],
+[
+"self_destruct",
+"The staff is destroyed and releases its magic in an explosion"
+],
+[
+"area_templates",
+"30-foot Emanation"
+],
+[
+"friendly_fire",
+"you take Force damage equal to 16 times the numberof charges"
+],
+[
+"aoe_damage",
+"Each other creature in the area makes a DC 17 Dexterity saving throw"
+],
+[
+"condition_count",
+"Force damage equal to 6 times the number of charges in the staff"
+],
+[
+"damage_types",
+"Force damage"
+]
+],
+"761426": [
+[
+"summon",
+"making the creature appear in an unoccupied space within range"
+],
+[
+"tribal",
+"a Celestial, an Elemental, or a Fiend"
+],
+[
+"upkeep",
+"requires 10,000 GP per day"
+],
+[
+"self_destruct",
+"the creature returns to its home plane"
+]
+],
+"761393": [
+[
+"summon",
+"A spectral, floating hand appears"
+],
+[
+"self_destruct",
+"The hand vanishes if it is ever more than 30 feet away from you"
+],
+[
+"activated",
+"As a Magic action on your later turns"
+],
+[
+"movement",
+"you can move the hand up to 30 feet"
+],
+[
+"cant_attack",
+"The hand can't attack"
+]
+],
+"761164": [
+[
+"attack_lock",
+"You can't attack the charmer"
+],
+[
+"advantage",
+"The charmer has Advantage on ability checks"
+]
+],
+"761611": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"take a Magic action to throw the figurine"
+],
+[
+"summon",
+"the figurine becomes a living creature"
+],
+[
+"autonomous_units",
+"If you issue no commands, the creature defends itself"
+],
+[
+"self_destruct",
+"At the end of the duration, the creature reverts to its figurine form"
+],
+[
+"cooldowns",
+"it can't be used again until 5 days have passed"
+],
+[
+"merge_attach",
+"can be ridden as a mount"
+],
+[
+"cant_attack",
+"The goat can't attack"
+],
+[
+"area_templates",
+"30-foot Emanation"
+],
+[
+"turn_start",
+"starts its turn within a 30-foot Emanation"
+],
+[
+"saving_throws",
+"DC 15 Wisdom saving throw"
+],
+[
+"debuff",
+"have the Frightened condition for 1 minute"
+],
+[
+"immunity",
+"a creature is immune to this effect for the next 24 hours"
+],
+[
+"upkeep",
+"each hour or portion thereof it spends in goat form costs 1 charge"
+],
+[
+"random_effect",
+"10 percent chance each time you use it to ignore your orders"
+]
+],
+"761315": [
+[
+"summon",
+"You gain the service of a familiar"
+],
+[
+"modal_choice",
+"takes an animal form you choose"
+],
+[
+"stat_condition",
+"Challenge Rating of 0"
+],
+[
+"type_grant",
+"it is a Celestial, Fey, or Fiend (your choice) instead of a Beast"
+],
+[
+"autonomous_units",
+"Your familiar acts independently of you"
+],
+[
+"information",
+"you can see through the familiar's eyes"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"reactions",
+"it must take a Reaction to deliver the touch"
+],
+[
+"cant_attack",
+"A familiar can't attack"
+],
+[
+"revive",
+"It reappears after you cast this spell again"
+],
+[
+"return_to_hand",
+"temporarily dismiss the familiar to a pocket dimension"
+],
+[
+"board_limit",
+"You can't have more than one familiar at a time"
+],
+[
+"transform",
+"cause it to adopt a new eligible form"
+]
+],
+"761183": [
+[
+"ranged",
+"A Range weapon has a range"
+],
+[
+"advantage",
+"you have Disadvantage on the attack roll"
+],
+[
+"targeting_rules",
+"You can't attack a target beyond the long range"
+]
+],
+"761852": [
+[
+"transform",
+"you shape-shift into a Beast form"
+],
+[
+"activated",
+"As a Bonus Action"
+],
+[
+"condition_count",
+"You can use Wild Shape twice"
+],
+[
+"rest_phase",
+"You regain one expended use when you finish a Short Rest"
+],
+[
+"upgrade",
+"You gain additional uses when you reach certain Druid levels"
+],
+[
+"stat_condition",
+"maximum Challenge Rating of 1/4"
+],
+[
+"deckbuilding_effect",
+"you can replace one of your known forms with another eligible form"
+],
+[
+"block_armor",
+"you gain a number of Temporary Hit Points equal to your Druid level"
+],
+[
+"play_restriction",
+"You can't cast spells"
+]
+],
+"762282": [
+[
+"modal_choice",
+"Choose two 1st-level spells that have the ritual tag"
+],
+[
+"deckbuilding_effect",
+"don't count against the number of spells you know"
+],
+[
+"play_restriction",
+"You can't cast the spells except as rituals"
+],
+[
+"deck_modification",
+"you can add it to the book"
+],
+[
+"cost_condition",
+"if the spell's level is equal to or less than half your warlock level"
+],
+[
+"cost_type",
+"costs 50 gp for the rare inks"
+]
+],
+"761509": [
+[
+"area_templates",
+"A 10-foot Emanation"
+],
+[
+"terrain",
+"springs into existence around you"
+],
+[
+"protection",
+"All other creatures and objects are barred from passing through it"
+],
+[
+"immunity",
+"Spells of level 3 or lower can't be cast through it"
+],
+[
+"cost_condition",
+"Spells of level 3 or lower"
+],
+[
+"light_level",
+"command the interior to have Dim Light or Darkness"
+],
+[
+"information",
+"The Emanation is opaque from the outside"
+]
+],
+"761574": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"cooldowns",
+"can't cast this spell again until the next dawn"
+]
+],
+"762716": [
+[
+"spell_speed",
+"some spells require a bonus action, a reaction, or much more time to cast"
+],
+[
+"reactions",
+"cast in response to some event"
+],
+[
+"play_restriction",
+"You can't cast another spell during the same turn, except for a cantrip"
+],
+[
+"concentration",
+"you must maintain your concentration"
+],
+[
+"ranged",
+"The target of a spell must be within the spell's range"
+],
+[
+"scope_self",
+"These spells have a range of self"
+],
+[
+"area_templates",
+"cones or lines of effect"
+]
+],
+"761534": [
+[
+"copy",
+"duplicate any other spell of level 8 or lower"
+],
+[
+"free_play",
+"you don't need to meet any requirements to cast that spell"
+],
+[
+"modal_choice",
+"you can create one of the following effects of your choice"
+],
+[
+"items_consumables",
+"You create one object"
+],
+[
+"heal",
+"regain all Hit Points"
+],
+[
+"scope_multi",
+"up to twenty creatures that you can see"
+],
+[
+"damage_reduction",
+"Resistance to one damage type that you choose"
+],
+[
+"immunity",
+"immunity to a single spell or other magical effect"
+],
+[
+"rewind",
+"You undo a single recent event by forcing a reroll"
+],
+[
+"advantage",
+"made with Advantage or Disadvantage"
+],
+[
+"random_effect",
+"the greater the likelihood that something goes wrong"
+],
+[
+"friendly_fire",
+"you take 1d10 Necrotic damage per level of that spell"
+],
+[
+"damage_types",
+"Necrotic damage"
+],
+[
+"stat_loss",
+"your Strength score becomes 3 for 2d4 days"
+],
+[
+"permanent_loss",
+"you are unable to cast Wish ever again"
+]
+],
+"762700": [
+[
+"terrain",
+"Walls, trees, creatures, and other obstacles can provide cover"
+],
+[
+"protection",
+"making a target more difficult to harm"
+],
+[
+"positional",
+"only when an attack or other effect originates on the opposite side of the cover"
+],
+[
+"stat_gain",
+"has a +2 bonus to AC and Dexterity saving throws"
+],
+[
+"immunity",
+"can't be targeted directly by an attack or a spell"
+]
+],
+"761711": [
+[
+"activated",
+"take a Magic action to gain X-ray vision"
+],
+[
+"information",
+"solid objects within that radius appear transparent"
+],
+[
+"temporary_effect",
+"for 1 minute"
+],
+[
+"saving_throws",
+"DC 15 Constitution saving throw"
+],
+[
+"debuff",
+"gain 1 Exhaustion level"
+]
+],
+"761741": [
+[
+"activated",
+"As a Magic action"
+],
+[
+"summon",
+"causing the staff to become a Giant Constrictor Snake"
+],
+[
+"autonomous_units",
+"Absent commands from you, the snake defends itself"
+],
+[
+"return_to_hand",
+"command the snake to revert to staff form"
+],
+[
+"cooldowns",
+"you can't use the staff's property again for 1 hour"
+],
+[
+"death_trigger",
+"If the snake is reduced to 0 Hit Points, it dies"
+],
+[
+"permanent_loss",
+"the staff then shatters and is destroyed"
+],
+[
+"heal",
+"it regains all of them"
+]
+],
+"761274": [
+[
+"area_templates",
+"60-foot-radius Sphere"
+],
+[
+"light_level",
+"The sunlight's area is Bright Light"
+],
+[
+"cost_condition",
+"created by a spell of level 3 or lower"
+],
+[
+"silence",
+"that other spell is dispelled"
+]
+],
+"761272": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"15-foot-radius Sphere"
+],
+[
+"light_level",
+"magical Darkness spreads"
+],
+[
+"cost_condition",
+"created by a spell of level 2 or lower"
+],
+[
+"silence",
+"that other spell is dispelled"
+]
+],
+"762384": [
+[
+"death_trigger",
+"If the devil dies outside the Nine Hells"
+],
+[
+"cheat_death",
+"it gains a new body instantly"
+],
+[
+"advantage",
+"Advantage on saving throws against spells"
+],
+[
+"multi_attack",
+"The devil makes two Chain attacks"
+],
+[
+"damage",
+"11 (2d6 + 4) Slashing damage"
+],
+[
+"immobilize",
+"Grappled condition (escape DC 14)"
+],
+[
+"saving_throws",
+"Dexterity Saving Throw: DC 15"
+],
+[
+"ranged",
+"within 60 feet"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"temporary_effect",
+"until the end of the devil"
+],
+[
+"forced_movement",
+"the devil moves the target up to 30 feet straight toward itself"
+],
+[
+"reactions",
+"Reactions: Unnerving Gaze"
+],
+[
+"turn_start",
+"starts its turn within 30 feet of the devil"
+],
+[
+"debuff",
+"The target has the Frightened condition"
+],
+[
+"immunity",
+"The target is immune to this devil"
+]
+],
+"761605": [
+[
+"stat_gain",
+"You gain a +1 bonus to Armor Class"
+],
+[
+"passive",
+"while you wear this armor"
+]
+],
+"761407": [
+[
+"heal",
+"you mend it, leaving no trace of the former damage"
+]
+],
+"761667": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"passive",
+"While you wear it"
+],
+[
+"immunity",
+"Immunity to the Poisoned condition and Poison damage"
+],
+[
+"damage_types",
+"Poison damage"
+]
+],
+"762650": [
+[
+"combo_sequence",
+"If the elk moves at least 20 ft. straight toward a target and then hits it"
+],
+[
+"damage",
+"the target takes an extra 7 (2d6) damage"
+],
+[
+"saving_throws",
+"DC 14 Strength saving throw"
+],
+[
+"debuff",
+"be knocked prone"
+],
+[
+"targeting_rules",
+"one prone creature"
+]
+],
+"762636": [
+[
+"combo_sequence",
+"If the centaur moves at least 30 ft. straight toward a target and then hits it"
+],
+[
+"damage",
+"the target takes an extra 10 (3d6) piercing damage"
+],
+[
+"multi_attack",
+"The centaur makes two attacks"
+],
+[
+"modal_choice",
+"one with its pike and one with its hooves or two with its longbow"
+],
+[
+"ranged",
+"range 150/600 ft."
+]
+],
+"761707": [
+[
+"resource_gain",
+"regains 1d3 expended charges daily at dawn"
+],
+[
+"activated",
+"take a Magic action"
+],
+[
+"coin_economy",
+"expend 1 to 3 charges"
+],
+[
+"ranged",
+"make a ranged spell attack"
+],
+[
+"kicker",
+"for each charge you spend"
+],
+[
+"damage",
+"the target takes 2d10 Force damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"forced_movement",
+"is pushed 5 feet away from you"
+]
+],
+"761722": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"take a Magic action to command the other end of the rope"
+],
+[
+"turn_start",
+"at the start of each of your subsequent turns"
+],
+[
+"advantage",
+"grants Advantage on ability checks made to climb"
+],
+[
+"immunity",
+"Immunity to Poison and Psychic damage"
+],
+[
+"regeneration",
+"It regains 1 Hit Point every5 minutes"
+]
+],
+"762409": [
+[
+"death_trigger",
+"If the erinyes dies outside the Nine Hells"
+],
+[
+"cheat_death",
+"it gains a new body instantly"
+],
+[
+"advantage",
+"Advantage on saving throws against spells"
+],
+[
+"rest_phase",
+"the erinyes can fully restore it when finishing a Short or Long Rest"
+],
+[
+"multi_attack",
+"The erinyes makes three Withering Sword attacks"
+],
+[
+"damage",
+"13 (2d8 + 4) Slashing damage"
+],
+[
+"damage_types",
+"Necrotic damage"
+],
+[
+"saving_throws",
+"Strength Saving Throw: DC 16"
+],
+[
+"ranged",
+"within 120 feet"
+],
+[
+"immobilize",
+"the target has the Restrained condition"
+],
+[
+"reactions",
+"Reactions: Parry"
+],
+[
+"on_damaged",
+"The erinyes is hit by a melee attack roll"
+],
+[
+"temporary_buff",
+"The erinyes adds 4 to its AC against that attack"
+]
+],
+"762676": [
+[
+"advantage",
+"has advantage on melee attack rolls"
+],
+[
+"condition_life",
+"any creature that doesn't have all its hit points"
+],
+[
+"damage",
+"Hit: 1 piercing damage"
+]
+],
+"762564": [
+[
+"cheat_death",
+"the zombie drops to 1 Hit Point instead"
+],
+[
+"saving_throws",
+"it makes a Constitution saving throw"
+],
+[
+"damage_types",
+"unless the damage is Radiant"
+],
+[
+"damage",
+"13 (2d8 + 4) Bludgeoning damage"
+]
+],
+"762531": [
+[
+"information",
+"the vampire can perceive through the familiar"
+],
+[
+"multi_attack",
+"The familiar makes two Umbral Dagger attacks"
+],
+[
+"ranged",
+"range 20/60 ft."
+],
+[
+"damage",
+"5 (1d4 + 3) Piercing damage"
+],
+[
+"damage_types",
+"Necrotic damage"
+],
+[
+"on_kill",
+"If the target is reduced to 0 Hit Points by this attack"
+],
+[
+"disable",
+"the target has the Paralyzed condition"
+],
+[
+"movement",
+"The familiar takes the Dash or Disengage action"
+]
+],
+"762655": [
+[
+"on_kill",
+"When the gnoll reduces a creature to 0 hit points"
+],
+[
+"movement",
+"move up to half its speed"
+],
+[
+"attack_now",
+"make a bite attack"
+],
+[
+"damage",
+"4 (1d4 + 2) piercing damage"
+],
+[
+"ranged",
+"range 20/60 ft."
+]
+],
+"762533": [
+[
+"saving_throws",
+"If the vampire fails a saving throw, it can choose to succeed instead"
+],
+[
+"cheat_death",
+"the vampire uses Shape-Shift to become mist"
+],
+[
+"movement",
+"The vampire can climb difficult surfaces"
+],
+[
+"play_restriction",
+"enter a residence without an invitation"
+],
+[
+"turn_end",
+"if it ends its turn in running water"
+],
+[
+"damage_types",
+"20 Acid damage"
+],
+[
+"turn_start",
+"if it starts its turn in sunlight"
+],
+[
+"light_level",
+"While in sunlight, it has Disadvantage on attack rolls and ability checks"
+],
+[
+"multi_attack",
+"The vampire makes two Grave Strike attacks"
+],
+[
+"damage",
+"8 (1d8 + 4) Bludgeoning damage"
+],
+[
+"immobilize",
+"Grappled condition (escape DC 14)"
+],
+[
+"targeting_rules",
+"one creature within 5 feet that is willing or that has the Grappled, Incapacitated, or Restrained condition"
+],
+[
+"stat_loss",
+"Hit Point maximum decreases by an amount equal to the Necrotic damage taken"
+],
+[
+"lifesteal",
+"the vampire regains Hit Points equal to that amount"
+],
+[
+"on_kill",
+"A Humanoid reduced to 0 Hit Points by this damage"
+],
+[
+"summon",
+"rises the following sunset as a Vampire Spawn"
+],
+[
+"delayed",
+"rises the following sunset"
+],
+[
+"steal",
+"The vampire casts Charm Person"
+],
+[
+"transform",
+"shape-shifts into a Tiny bat"
+],
+[
+"damage_reduction",
+"It has Resistance to all damage"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"cooldowns",
+"take this action again until the start of its next turn"
+]
+],
+"762448": [
+[
+"on_damaged",
+"Whenever the hydra takes 25 damage or more on a single turn"
+],
+[
+"turn_end",
+"At the end of each of its turns"
+],
+[
+"permanent_growth",
+"the hydra grows two heads for each of its heads that died"
+],
+[
+"damage_types",
+"unless it has taken Fire damage"
+],
+[
+"heal",
+"The hydra regains 20 Hit Points when it grows new heads"
+],
+[
+"condition_count",
+"For each head the hydra has beyond one"
+],
+[
+"reactions",
+"it gets an extra Reaction"
+],
+[
+"zone_of_control",
+"Opportunity Attacks"
+],
+[
+"multi_attack",
+"The hydra makes as many Bite attacks as it has heads"
+],
+[
+"damage",
+"10 (1d10 + 5) Piercing damage"
+]
+],
+"761668": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"passive",
+"While wearing this pendant"
+],
+[
+"saving_throws",
+"Whenever you make a Death Saving Throw"
+],
+[
+"cheat_death",
+"turning a failed save into a successful one"
+],
+[
+"stat_multiply",
+"double the number of Hit Points it restores"
+],
+[
+"heal",
+"roll a Hit Point Die to regain Hit Points"
+]
+],
+"762387": [
+[
+"immunity",
+"it takes no damage"
+],
+[
+"heal",
+"regains a number of Hit Points equal to the Acid damage dealt"
+],
+[
+"damage_types",
+"Acid damage"
+],
+[
+"condition_life",
+"starts its turn Bloodied"
+],
+[
+"turn_start",
+"Whenever the golem starts its turn"
+],
+[
+"random_effect",
+"roll 1d6"
+],
+[
+"targeting_rules",
+"the golem attacks the nearest creature it can see"
+],
+[
+"autonomous_units",
+"the golem goes berserk"
+],
+[
+"advantage",
+"Advantage on saving throws against spells"
+],
+[
+"multi_attack",
+"The golem makes two Slam attacks"
+],
+[
+"combo_sequence",
+"three Slam attacks if it used Hasten this turn"
+],
+[
+"damage",
+"10 (1d10 + 5) Bludgeoning damage"
+],
+[
+"stat_loss",
+"Hit Point maximum decreases by an amount equal to the Acid damage taken"
+],
+[
+"movement",
+"The golem takes the Dash and Disengage actions"
+]
+],
+"762313": [
+[
+"activated",
+"use your action to create a pact weapon"
+],
+[
+"items_consumables",
+"create a pact weapon in your empty hand"
+],
+[
+"modal_choice",
+"You can choose the form that this melee weapon takes"
+],
+[
+"piercing",
+"counts as magical for the purpose of overcoming resistance and immunity"
+],
+[
+"self_destruct",
+"Your pact weapon disappears if it is more than 5 feet away from you"
+],
+[
+"transform",
+"transform one magic weapon into your pact weapon"
+],
+[
+"rest_phase",
+"can be done during a short rest"
+],
+[
+"death_trigger",
+"if you die"
+]
+],
+"761743": [
+[
+"stat_gain",
+"grants a +2 bonus to attack rolls and damage rolls"
+],
+[
+"cooldowns",
+"it can't be used again until the next dawn"
+],
+[
+"on_attack",
+"When you hit with a melee attack using the staff"
+],
+[
+"damage",
+"take an extra 2d6 Lightning damage"
+],
+[
+"damage_types",
+"Lightning damage"
+],
+[
+"saving_throws",
+"DC 17 Constitution saving throw"
+],
+[
+"disable",
+"have the Stunned condition"
+],
+[
+"temporary_effect",
+"until the end of your next turn"
+],
+[
+"activated",
+"You can take a Magic action"
+],
+[
+"aoe_damage",
+"Each creature in that Line"
+],
+[
+"area_templates",
+"60-foot Emanation"
+],
+[
+"debuff",
+"has the Deafened condition"
+]
+],
+"761589": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"You can take a Magic action"
+],
+[
+"modal_choice",
+"issue one of three command words"
+],
+[
+"temporary_effect",
+"The water stops pouring out at the start of your next turn"
+],
+[
+"area_templates",
+"in a Line 30 feet long and 1 foot wide"
+],
+[
+"target_choice",
+"One creature of your choice in the Line"
+],
+[
+"saving_throws",
+"DC 13 Strength saving throw"
+],
+[
+"damage",
+"take 1d4 Bludgeoning damage"
+],
+[
+"debuff",
+"have the Prone condition"
+]
+],
+"762707": [
+[
+"random_effect",
+"the dice determine the results"
+],
+[
+"stat_condition",
+"The participant with the higher check total wins the contest"
+]
+],
+"761777": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"saving_throws",
+"save DC 13"
+],
+[
+"stacking_keyword",
+"it has a cumulative 20 percent chance of not working"
+],
+[
+"random_effect",
+"20 percent chance of not working"
+],
+[
+"self_destruct",
+"it tears into useless, nonmagical tatters"
+]
+],
+"761247": [
+[
+"information",
+"You receive a correct answer for each question"
+],
+[
+"stacking_keyword",
+"there is a cumulative 25 percent chance for each casting after the first"
+],
+[
+"random_effect",
+"25 percent chance for each casting after the first that you get no answer"
+]
+],
+"762515": [
+[
+"immunity",
+"No magic can observe the sphinx remotely or detect its thoughts"
+],
+[
+"advantage",
+"are made with Disadvantage"
+],
+[
+"saving_throws",
+"If the sphinx fails a saving throw, it can choose to succeed instead"
+],
+[
+"multi_attack",
+"The sphinx makes three Claw attacks"
+],
+[
+"damage",
+"14 (3d6 + 4) Slashing damage"
+],
+[
+"aoe_damage",
+"each enemy in a 300-foot Emanation"
+],
+[
+"area_templates",
+"300-foot Emanation"
+],
+[
+"damage_types",
+"Psychic damage"
+],
+[
+"disable",
+"the target has the Incapacitated condition"
+],
+[
+"temporary_effect",
+"until the start of the sphinx"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"movement",
+"The sphinx can teleport up to 30 feet"
+],
+[
+"ranged",
+"within 120 feet"
+],
+[
+"debuff",
+"The target gains 1 Exhaustion level"
+],
+[
+"cooldowns",
+"take this action again until the start of its next turn"
+]
+],
+"761465": [
+[
+"activated",
+"you can take a Magic action and touch the replica to recall the chest"
+],
+[
+"delayed",
+"After 60 days"
+],
+[
+"stacking_keyword",
+"cumulative 5 percent chance"
+],
+[
+"random_effect",
+"5 percent chance at the end of each day that the spell ends"
+]
+],
+"762701": [
+[
+"life_track",
+"Hit points represent a combination of physical and mental durability"
+],
+[
+"damage",
+"Each weapon, spell, and harmful monster ability specifies the damage it deals"
+],
+[
+"heal",
+"receives healing"
+],
+[
+"random_effect",
+"You roll the damage die or dice"
+],
+[
+"stat_multiply",
+"Roll all of the attack's damage dice twice"
+],
+[
+"damage_types",
+"Damage Types"
+]
+],
+"815580": [],
+"761610": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"exhaust",
+"single-use effect"
+],
+[
+"random_effect",
+"determines it randomly"
+],
+[
+"activated",
+"You can take a Magic action"
+],
+[
+"immobilize",
+"the vessel can't be moved by any means"
+],
+[
+"summon",
+"an enormous, multicolored bird takes its place"
+],
+[
+"cant_attack",
+"but it can't attack"
+],
+[
+"self_destruct",
+"The bird disappears after flying its maximum distance"
+],
+[
+"terrain",
+"a nonmagical oak tree springs into existence"
+],
+[
+"damage",
+"the target takes 1d6 + 5 Force damage"
+],
+[
+"movement",
+"direct the whip to fly up to 20 feet"
+]
+],
+"762535": [
+[
+"saving_throws",
+"If the vampire fails a saving throw, it can choose to succeed instead"
+],
+[
+"cheat_death",
+"the vampire uses Shape-Shift to become mist"
+],
+[
+"movement",
+"The vampire can climb difficult surfaces"
+],
+[
+"play_restriction",
+"enter a residence without an invitation"
+],
+[
+"turn_end",
+"if it ends its turn in running water"
+],
+[
+"damage_types",
+"20 Acid damage"
+],
+[
+"turn_start",
+"if it starts its turn in sunlight"
+],
+[
+"light_level",
+"While in sunlight, it has Disadvantage on attack rolls and ability checks"
+],
+[
+"disable",
+"the vampire has the Paralyzed condition until the weapon is removed"
+],
+[
+"steal",
+"The vampire casts Charm Person"
+],
+[
+"transform",
+"shape-shifts into a Tiny bat"
+],
+[
+"damage_reduction",
+"It has Resistance to all damage"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"cooldowns",
+"take this action again until the start of its next turn"
+]
+],
+"761552": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"permanent_loss",
+"it is destroyed, and its contents are scattered in the Astral Plane"
+],
+[
+"forced_movement",
+"Any creature within a 10-foot-radius Sphere centered on the gate is sucked through it"
+],
+[
+"area_templates",
+"10-foot-radius Sphere"
+],
+[
+"random_effect",
+"a random location on the Astral Plane"
+]
+],
+"761624": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"tutor",
+"When you reach into the haversack for a specific item, the item is always magically on top"
+],
+[
+"permanent_loss",
+"its contents are lost forever"
+],
+[
+"forced_movement",
+"Any creature within 10 feet of the gate and not behind Total Cover is sucked through it"
+],
+[
+"random_effect",
+"a random location on the Astral Plane"
+]
+],
+"761178": [
+[
+"ranged",
+"make a ranged attack only if you have ammunition"
+],
+[
+"items_consumables",
+"Each attack expends one piece of ammunition"
+],
+[
+"recycle",
+"recover half the ammunition (round down) you used in the fight"
+],
+[
+"permanent_loss",
+"the rest is lost"
+]
+],
+"761486": [
+[
+"graveyard",
+"a corpse of your choice within range"
+],
+[
+"information",
+"allowing it to answer questions you pose"
+],
+[
+"tribal",
+"if the deceased creature was Undead"
+],
+[
+"play_restriction",
+"The spell also fails if the corpse was the target of this spell within the past 10 days"
+]
+],
+"762593": [
+[
+"movement",
+"Long Jump is up to 20 feet"
+],
+[
+"damage",
+"5 (1d6 + 2) Piercing damage"
+],
+[
+"damage_types",
+"Poison damage"
+],
+[
+"immobilize",
+"Grappled condition (escape DC 12)"
+],
+[
+"removal",
+"The toad swallows a Medium or smaller target it is grappling"
+],
+[
+"targeting_rules",
+"target it is grappling"
+],
+[
+"debuff",
+"has the Blinded and Restrained conditions"
+],
+[
+"damage_over_time",
+"the target takes 10 (3d6) Acid damage at the end of each of the toad"
+],
+[
+"turn_end",
+"at the end of each of the toad"
+],
+[
+"play_restriction",
+"The toad can have only one target swallowed at a time"
+],
+[
+"death_trigger",
+"If the toad dies"
+]
+],
+"761268": [
+[
+"play_restriction",
+"You can cast this spell only at night"
+],
+[
+"graveyard",
+"Choose up to three corpses"
+],
+[
+"tribal",
+"Medium or Small Humanoids"
+],
+[
+"summon",
+"Each one becomes a Ghoul under your control"
+],
+[
+"activated",
+"As a Bonus Action on each of your turns, you can mentally command"
+],
+[
+"autonomous_units",
+"If you issue no commands, the creature takes the Dodge action"
+],
+[
+"upkeep",
+"To maintain control of the creature for another 24 hours, you must cast this spell on the creature"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"762497": [
+[
+"turn_end",
+"At the end of each of the remorhaz"
+],
+[
+"aoe_damage",
+"each creature in a 5-foot Emanation originating from the remorhaz takes 16 (3d10) Fire damage"
+],
+[
+"area_templates",
+"5-foot Emanation"
+],
+[
+"damage",
+"18 (2d10 + 7) Piercing damage"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"immobilize",
+"Grappled condition (escape DC 17)"
+],
+[
+"saving_throws",
+"Strength Saving Throw: DC 19"
+],
+[
+"targeting_rules",
+"one Large or smaller creature Grappled by the remorhaz"
+],
+[
+"play_restriction",
+"it can have up to two creatures swallowed at a time"
+],
+[
+"removal",
+"The target is swallowed by the remorhaz"
+],
+[
+"debuff",
+"has the Blinded and Restrained conditions"
+],
+[
+"damage_over_time",
+"takes 10 (3d6) Acid damage plus 10 (3d6) Fire damage at the start of each of the remorhaz"
+],
+[
+"on_damaged",
+"If the remorhaz takes 30 damage or more on a single turn"
+],
+[
+"death_trigger",
+"If the remorhaz dies"
+]
+],
+"762422": [
+[
+"damage",
+"5 (1d6 + 2) Piercing damage"
+],
+[
+"ranged",
+"range 150/600 ft."
+],
+[
+"on_attack",
+"Immediately after dealing damage to a creature"
+],
+[
+"condition_life",
+"a creature that is already Bloodied"
+],
+[
+"movement",
+"the gnoll moves up to half its Speed"
+],
+[
+"attack_now",
+"it makes one Rend attack"
+]
+],
+"762719": [
+[
+"trap_secret",
+"Contact poison can be smeared on an object and remains potent until it is touched"
+],
+[
+"merge_attach",
+"Injury poison can be applied to weapons"
+],
+[
+"area_templates",
+"5-foot cube"
+],
+[
+"advantage",
+"allowing advantage on the saving throw"
+],
+[
+"items_consumables",
+"Price per Dose"
+],
+[
+"saving_throws",
+"DC 10 Constitution saving throw"
+],
+[
+"damage",
+"it takes 6 (1d12) poison damage"
+],
+[
+"damage_types",
+"poison damage"
+],
+[
+"debuff",
+"is poisoned for 24 hours"
+],
+[
+"damage_over_time",
+"On each successive failed save, the character takes 3 (1d6) poison damage"
+]
+],
+"761652": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"exhaust",
+"expending 1 pot of pigment"
+],
+[
+"area_templates",
+"20-foot Cube"
+],
+[
+"concentration",
+"requires Concentration"
+],
+[
+"terrain",
+"all the painted objects and terrain features become real"
+],
+[
+"no_damage_output",
+"doing no harm"
+]
+],
+"761650": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"random_effect",
+"determines it randomly"
+],
+[
+"play_restriction",
+"you must be a spellcaster with at least two level 5 spell slots"
+],
+[
+"damage",
+"takes 6d6 Psychic damage"
+],
+[
+"delayed",
+"you must spend the time shown on the table"
+],
+[
+"cost_type",
+"pay the specified cost to purchase supplies"
+],
+[
+"exhaust",
+"the book is consumed in eldritch flames"
+],
+[
+"summon",
+"The golem becomes animate"
+]
+],
+"761721": [
+[
+"activated",
+"take a Magic action to activate it"
+],
+[
+"movement",
+"instantly transports you and up to 199 other willing creatures"
+],
+[
+"immunity",
+"the demiplane's environment can't harm its occupants"
+],
+[
+"regeneration",
+"For each hour spent in the demiplane, a visitor regains Hit Points"
+],
+[
+"condition_count",
+"200 days divided by the number of creatures present"
+],
+[
+"cooldowns",
+"can't be used again until 10 days have passed"
+]
+],
+"762039": [
+[
+"modal_choice",
+"Choose the kind of dragon"
+],
+[
+"damage_types",
+"Damage Resistance"
+]
+],
+"761469": [
+[
+"stealth",
+"the target has the Invisible condition"
+],
+[
+"immunity",
+"can't be targeted by Divination spells"
+],
+[
+"disable",
+"it has the Unconscious condition"
+],
+[
+"on_damaged",
+"This spell also ends if the target takes any damage"
+]
+],
+"762221": [
+[
+"modal_choice",
+"Choose one type of favored terrain"
+],
+[
+"stat_multiply",
+"your proficiency bonus is doubled"
+],
+[
+"terrain",
+"Difficult terrain doesn't slow your group's travel"
+],
+[
+"stealth",
+"you can move stealthily at a normal pace"
+],
+[
+"information",
+"you also learn their exact number"
+],
+[
+"upgrade",
+"You choose additional favored terrain types at 6th and 10th level"
+]
+],
+"761216": [
+[
+"scope_multi",
+"You and up to eight willing creatures"
+],
+[
+"movement",
+"project your astral bodies into the Astral Plane"
+],
+[
+"disable",
+"it has the Unconscious condition"
+],
+[
+"copy",
+"replicating its game statistics and possessions"
+],
+[
+"destroy",
+"the target's body and astral form both die"
+],
+[
+"activated",
+"take a Magic action to dismiss it"
+]
+],
+"761266": [
+[
+"items_consumables",
+"You create 45 pounds of food"
+],
+[
+"self_destruct",
+"The food spoils after 24 hours if uneaten"
+]
+],
+"761429": [
+[
+"modal_choice",
+"The casting time you use determines whether the spell has the Overgrowth or the Enrichment effect"
+],
+[
+"area_templates",
+"100-foot-radius Sphere"
+],
+[
+"terrain",
+"become thick and overgrown"
+],
+[
+"debuff",
+"must spend 4 feet of movement for every 1 foot it moves"
+],
+[
+"target_choice",
+"You can exclude one or more areas"
+],
+[
+"stat_multiply",
+"yield twice the normal amount of food"
+],
+[
+"play_restriction",
+"They can benefit from only one Plant Growth per year"
+]
+],
+"761826": [
+[
+"combat_start",
+"When you roll Initiative"
+],
+[
+"resource_gain",
+"you regain expended uses of Bardic Inspiration"
+],
+[
+"condition_count",
+"until you have two if you have fewer than that"
+]
+],
+"761674": [
+[
+"items_consumables",
+"When you drink this potion"
+],
+[
+"saving_throws",
+"save DC 13"
+]
+],
+"761530": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"20-foot Cube"
+],
+[
+"terrain",
+"The webs are Difficult Terrain"
+],
+[
+"light_level",
+"Lightly Obscured"
+],
+[
+"on_enemy_enter",
+"The first time a creature enters the webs on a turn"
+],
+[
+"turn_start",
+"starts its turn there"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"immobilize",
+"have the Restrained condition"
+],
+[
+"damage",
+"dealing 2d4 Fire damage"
+],
+[
+"damage_types",
+"Fire damage"
+]
+],
+"761377": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"20-foot-radius Sphere"
+],
+[
+"light_level",
+"Lightly Obscured"
+],
+[
+"terrain",
+"Difficult Terrain"
+],
+[
+"aoe_damage",
+"each creature in it makes a Constitution saving throw"
+],
+[
+"saving_throws",
+"Constitution saving throw"
+],
+[
+"damage",
+"taking 4d10 Piercing damage"
+],
+[
+"on_enemy_enter",
+"when it enters the spell's area for the first time on a turn"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761739": [
+[
+"coin_economy",
+"expend 1 charge"
+],
+[
+"area_templates",
+"30-footEmanation"
+],
+[
+"light_level",
+"Heavily Obscured for creatures other than you"
+],
+[
+"modal_choice",
+"cast one of the spells on the following table"
+],
+[
+"resource_gain",
+"The staff regains 1d6 + 4 expended charges daily at dawn"
+],
+[
+"random_effect",
+"roll 1d20"
+],
+[
+"self_destruct",
+"consumes and destroys the staff"
+]
+],
+"761221": [
+[
+"concentration",
+"Concentration."
+],
+[
+"saving_throws",
+"Charisma saving throw"
+],
+[
+"removal",
+"be transported to a harmless demiplane"
+],
+[
+"disable",
+"the target has the Incapacitated condition"
+],
+[
+"blink",
+"the target reappears in the space it left"
+],
+[
+"tribal",
+"If the target is an Aberration, a Celestial, an Elemental, a Fey, or a Fiend"
+],
+[
+"banish",
+"the target doesn't return if the spell lasts for 1 minute"
+],
+[
+"random_effect",
+"a random location on a plane"
+],
+[
+"kicker",
+"At higher levels"
+],
+[
+"scope_multi",
+"You can target one additional creature"
+]
+],
+"761551": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"banish",
+"devoured and lost forever"
+],
+[
+"random_effect",
+"there is a 50 percent chance that the creature is pulled inside the bag"
+],
+[
+"removal",
+"the creature is pulled inside the bag"
+],
+[
+"turn_start",
+"Any creature that starts its turn inside the bag"
+],
+[
+"destroy",
+"its body destroyed"
+]
+],
+"762144": [
+[
+"activated",
+"As an action"
+],
+[
+"heal",
+"restore a number of hit points equal to five times your cleric level"
+],
+[
+"distribute",
+"divide those hit points among them"
+],
+[
+"stat_condition",
+"no more than half of its hit point maximum"
+],
+[
+"tribal",
+"an undead or a construct"
+]
+],
+"761402": [
+[
+"heal",
+"You restore up to 700 Hit Points"
+],
+[
+"distribute",
+"divided as you choose among any number of creatures"
+]
+],
+"761846": [
+[
+"activated",
+"As a Magic action"
+],
+[
+"coin_economy",
+"expend a use of your Channel Divinity"
+],
+[
+"heal",
+"restore a number of Hit Points equal to five times your Cleric level"
+],
+[
+"condition_life",
+"Choose Bloodied creatures"
+],
+[
+"distribute",
+"divide those Hit Points among them"
+],
+[
+"stat_condition",
+"no more than half its Hit Point maximum"
+]
+],
+"761457": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"50-foot-radius, 100foot high Cylinder"
+],
+[
+"forced_movement",
+"fall upward"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"collision_damage",
+"creatures and objects strike it just as they would during a downward fall"
+],
+[
+"delayed",
+"When the spell ends, affected objects and creatures fall downward"
+]
+],
+"761623": [
+[
+"stat_gain",
+"You gain a +1 bonus to attack rolls and damage rolls"
+],
+[
+"coin_economy",
+"You can expend 1 charge"
+],
+[
+"ranged",
+"make a ranged attack with the weapon"
+],
+[
+"scope_multi",
+"The target and every creature within 30 feet of it other than you"
+],
+[
+"saving_throws",
+"DC 17 Constitution saving throw"
+],
+[
+"disable",
+"have the Stunned condition"
+],
+[
+"temporary_effect",
+"until the end of your next turn"
+],
+[
+"return_to_hand",
+"the weapon flies back to your hand"
+],
+[
+"resource_gain",
+"regains 1d4 + 1 expended charges daily at dawn"
+],
+[
+"synergy_payoff",
+"wearing either a Belt of Giant Strength or Gauntlets of Ogre Power"
+],
+[
+"random_effect",
+"When you roll a 20 on the d20"
+],
+[
+"tribal",
+"against a Giant"
+],
+[
+"destroy",
+"saving throw or die"
+]
+],
+"761631": [
+[
+"stat_gain",
+"You gain a +3 bonus to attack rolls and damage rolls"
+],
+[
+"on_attack",
+"When you hit a Fiend or an Undead with it"
+],
+[
+"tribal",
+"a Fiend or an Undead"
+],
+[
+"damage",
+"that creature takes an extra 2d10 Radiant damage"
+],
+[
+"damage_types",
+"Radiant damage"
+],
+[
+"area_templates",
+"10-foot Emanation"
+],
+[
+"aura",
+"You and all creatures Friendly to you in the Emanation have Advantage"
+],
+[
+"advantage",
+"Advantage on saving throws against spells"
+]
+],
+"761439": [
+[
+"area_templates",
+"The area is a Cube"
+],
+[
+"modal_choice",
+"choosing any of the following properties"
+],
+[
+"light_level",
+"appears dark and foggy, preventing vision"
+],
+[
+"immunity",
+"Creatures in the area can't be targeted by Divination spells"
+],
+[
+"row_effects",
+"Nothing can teleport into or out of the warded area"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761508": [
+[
+"extra_turn",
+"you take 1d4 + 1 turns in a row"
+],
+[
+"random_effect",
+"1d4 + 1 turns"
+]
+],
+"762388": [
+[
+"light_level",
+"While in Bright Light, the cloaker has Disadvantage on attack rolls"
+],
+[
+"advantage",
+"Disadvantage on attack rolls"
+],
+[
+"multi_attack",
+"The cloaker makes one Attach attack and two Tail attacks"
+],
+[
+"damage",
+"13 (3d6 + 3) Piercing damage"
+],
+[
+"merge_attach",
+"the cloaker attaches to it"
+],
+[
+"debuff",
+"the target has the Blinded condition"
+],
+[
+"damage_reduction",
+"the cloaker halves the damage it takes"
+],
+[
+"on_damaged",
+"the target takes the same amount of damage"
+],
+[
+"area_templates",
+"60-foot Emanation"
+],
+[
+"saving_throws",
+"Wisdom Saving Throw: DC 13"
+],
+[
+"temporary_effect",
+"until the end of the cloaker"
+],
+[
+"immunity",
+"The target is immune to this cloaker"
+],
+[
+"protection",
+"The cloaker casts the Mirror Image spell"
+],
+[
+"turn_start",
+"starts or ends its turn in Bright Light"
+]
+],
+"761635": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"As a Magic action"
+],
+[
+"merge_attach",
+"the horseshoe affixes itself to the hoof"
+],
+[
+"condition_count",
+"While all four horseshoes are attached to the same creature"
+],
+[
+"stat_gain",
+"its Speed is increased by 30 feet"
+]
+],
+"762105": [
+[
+"stat_gain",
+"Increase one ability score of your choice by 1"
+],
+[
+"light_level",
+"While within Dim Light or Darkness"
+],
+[
+"stealth",
+"you can give yourself the Invisible condition"
+],
+[
+"activated",
+"as a Bonus Action"
+],
+[
+"damage_reduction",
+"you have Resistance to all damage except Psychic and Radiant"
+]
+],
+"762398": [
+[
+"damage",
+"6 (1d6 + 3) Bludgeoning damage"
+],
+[
+"merge_attach",
+"the darkmantle attaches to the target"
+],
+[
+"advantage",
+"the darkmantle had Advantage on the attack roll"
+],
+[
+"debuff",
+"which has the Blinded condition"
+],
+[
+"targeting_rules",
+"the darkmantle can attack only the target"
+],
+[
+"light_level",
+"Magical Darkness fills a 15-foot Emanation"
+],
+[
+"area_templates",
+"15-foot Emanation"
+],
+[
+"concentration",
+"maintains Concentration on it"
+]
+],
+"762709": [
+[
+"saving_throws",
+"A saving throw-also called a save-represents an attempt to resist"
+],
+[
+"advantage",
+"can be affected by advantage and disadvantage"
+]
+],
+"762711": [
+[
+"movement",
+"Every character and monster has a speed"
+],
+[
+"terrain",
+"the terrain they're moving over"
+],
+[
+"modal_choice",
+"can move at a normal, fast, or slow pace"
+],
+[
+"stealth",
+"a slow pace makes it possible to sneak around"
+],
+[
+"saving_throws",
+"must make a Constitution saving throw at the end of the hour"
+],
+[
+"stacking_keyword",
+"The DC is 10 + 1 for each hour past 8 hours"
+],
+[
+"debuff",
+"a character suffers one level of exhaustion"
+],
+[
+"stat_multiply",
+"covering twice the usual distance"
+]
+],
+"761480": [
+[
+"concentration",
+"Concentration."
+],
+[
+"target_choice",
+"Each creature of your choice"
+],
+[
+"area_templates",
+"5-foot-radius Sphere"
+],
+[
+"saving_throws",
+"Wisdom saving throw"
+],
+[
+"disable",
+"have the Incapacitated condition"
+],
+[
+"temporary_effect",
+"until the end of its next turn"
+],
+[
+"on_damaged",
+"The spell ends on a target if it takes damage"
+],
+[
+"immunity",
+"automatically succeed on saves against this spell"
+]
+],
+"761634": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"As a Magic action"
+],
+[
+"merge_attach",
+"the horseshoe affixes itself to the hoof"
+],
+[
+"movement",
+"the creature can cross or stand above nonsolid or unstable surfaces"
+],
+[
+"terrain",
+"ignores Difficult Terrain"
+],
+[
+"immunity",
+"without gaining Exhaustion levels from extended travel"
+]
+],
+"761749": [
+[
+"stat_gain",
+"maximize your weapon damage dice against the target"
+],
+[
+"on_attack",
+"When you attack a creature with this weapon"
+],
+[
+"random_effect",
+"roll a 20 on the d20"
+],
+[
+"damage",
+"that target takes an extra 14 Slashing damage"
+],
+[
+"debuff",
+"gains1 Exhaustion level"
+]
+],
+"761903": [
+[
+"turn_end",
+"at the end of each of your turns"
+],
+[
+"protection",
+"remove one of the following conditions from yourself"
+],
+[
+"immunity",
+"forgoing food and drink doesn't give you levels of Exhaustion"
+]
+],
+"761595": [
+[
+"passive",
+"While wearing this armor"
+],
+[
+"stat_gain",
+"you gain a +1 bonus to Armor Class"
+],
+[
+"advantage",
+"Advantage on saving throws against the breath weapons of Dragons"
+],
+[
+"damage_reduction",
+"Resistance to one damage type"
+],
+[
+"information",
+"discern the distance and direction to the closest dragon"
+],
+[
+"cooldowns",
+"This action can't be used again until the next dawn"
+]
+],
+"761991": [
+[
+"stat_gain",
+"Your Hit Point maximum increases by 3"
+],
+[
+"permanent_growth",
+"it increases by 1 whenever you gain another Sorcerer level"
+],
+[
+"variable_stats",
+"your base Armor Class equals 10 plus your Dexterity and Charisma modifiers"
+]
+],
+"762315": [
+[
+"modal_choice",
+"Choose one 6th-level spell"
+],
+[
+"free_play",
+"You can cast your arcanum spell once without expending a spell slot"
+],
+[
+"rest_phase",
+"You must finish a long rest before you can do so again"
+],
+[
+"upgrade",
+"you gain more warlock spells of your choice"
+]
+],
+"761794": [
+[
+"activated",
+"You can enter it as a Bonus Action"
+],
+[
+"play_restriction",
+"if you aren't wearing Heavy armor"
+],
+[
+"rest_phase",
+"You regain one expended use when you finish a Short Rest"
+],
+[
+"damage_reduction",
+"You have Resistance to Bludgeoning, Piercing, and Slashing damage"
+],
+[
+"stat_gain",
+"you gain a bonus to the damage"
+],
+[
+"upgrade",
+"increases as you gain levels as a Barbarian"
+],
+[
+"advantage",
+"You have Advantage on Strength checks and Strength saving throws"
+],
+[
+"concentration",
+"You can't maintain Concentration"
+],
+[
+"temporary_buff",
+"The Rage lasts until the end of your next turn"
+],
+[
+"upkeep",
+"you can extend the Rage for another round by doing one of the following"
+],
+[
+"on_attack",
+"Make an attack roll against an enemy"
+]
+],
+"761887": [
+[
+"advantage",
+"You have Advantage on Death Saving Throws"
+],
+[
+"saving_throws",
+"Death Saving Throw"
+],
+[
+"cheat_death",
+"you gain the benefit of rolling a 20 on it"
+],
+[
+"turn_start",
+"At the start of each of your turns"
+],
+[
+"regeneration",
+"you regain Hit Points equal to 5 plus your Constitution modifier"
+],
+[
+"condition_life",
+"if you are Bloodied"
+]
+],
+"761555": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"advantage",
+"You have Advantage on Charisma (Persuasion) checks"
+],
+[
+"tribal",
+"dwarves and duergar"
+],
+[
+"stat_gain",
+"Your Constitution increases by 2"
+],
+[
+"random_effect",
+"50 percent chance each day"
+],
+[
+"damage_reduction",
+"You have Resistance to Poison damage"
+],
+[
+"damage_types",
+"Poison damage"
+]
+],
+"761692": [
+[
+"random_effect",
+"randomly determines the linked plane"
+],
+[
+"advantage",
+"you have Advantage on attack rolls against Elementals"
+],
+[
+"tribal",
+"against Elementals"
+],
+[
+"activated",
+"take a Magic action to try to compel an Elemental"
+],
+[
+"saving_throws",
+"DC 18 Wisdom saving throw"
+],
+[
+"steal",
+"you determine what it does with its move and action on its next turn"
+],
+[
+"temporary_effect",
+"until the start your next turn"
+],
+[
+"damage_reduction",
+"Resistance to Lightning damage"
+],
+[
+"movement",
+"you have a Fly Speed equal to your Speed"
+],
+[
+"terrain",
+"isn't Difficult Terrain for you"
+],
+[
+"turn_end",
+"Ifyou end your turn in solid earth or rock"
+],
+[
+"immunity",
+"Immunity to Fire damage"
+],
+[
+"resource_gain",
+"regains 1d4 + 1 expended charges daily at dawn"
+],
+[
+"coin_economy",
+"how many charges you must expend to cast the spell"
+]
+],
+"761264": [
+[
+"concentration",
+"Concentration."
+],
+[
+"row_effects",
+"You take control of the weather within 5 miles of you"
+],
+[
+"play_restriction",
+"You must be outdoors to cast this spell"
+],
+[
+"delayed",
+"It takes 1d4"
+]
+],
+"761263": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"a Cube up to 100 feet on a side"
+],
+[
+"modal_choice",
+"using one of the following effects"
+],
+[
+"activated",
+"As a Magic action on your later turns"
+],
+[
+"random_effect",
+"25 percent chance of capsizing"
+],
+[
+"turn_start",
+"the wave repeats on the start of your next turn"
+],
+[
+"terrain",
+"create a trench"
+],
+[
+"forced_movement",
+"is pulled 10 feet toward it"
+],
+[
+"on_enemy_enter",
+"When a creature enters the whirlpool for the first time on a turn"
+],
+[
+"saving_throws",
+"it makes a Strength saving throw"
+],
+[
+"damage",
+"the creature takes 2d8 Bludgeoning damage"
+]
+],
+"761487": [
+[
+"area_templates",
+"30-foot Emanation"
+],
+[
+"information",
+"gaining information about creatures that have passed"
+],
+[
+"terrain",
+"turn ordinary terrain where plants are present into Difficult Terrain"
+]
+],
+"761297": [
+[
+"modal_choice",
+"you create one of the following effects"
+],
+[
+"information",
+"predicts what the weather will be"
+],
+[
+"area_templates",
+"5-foot Cube"
+]
+],
+"761544": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"transform",
+"the apparatus transforms to resemble a giant lobster"
+],
+[
+"immunity",
+"Immunity to Poison and Psychic damage"
+],
+[
+"damage_over_time",
+"takes 2d6 Bludgeoning damage each minute from pressure"
+],
+[
+"activated",
+"take a Utilize action to move as many as two of the apparatus's levers"
+],
+[
+"light_level",
+"emit Bright Light"
+]
+],
+"761714": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"stat_gain",
+"You gain a +1 bonus to saving throws"
+],
+[
+"activated",
+"take a Magic action to remove one of the stars"
+],
+[
+"resource_gain",
+"Daily at dusk, 1d6 removed stars reappear on the robe"
+],
+[
+"movement",
+"enter the Astral Plane"
+]
+],
+"762408": [
+[
+"death_trigger",
+"If the efreeti dies outside the Elemental Plane of Fire"
+],
+[
+"revive",
+"it gains a new body in 1d4 days, reviving with all its Hit Points"
+],
+[
+"advantage",
+"Advantage on saving throws against spells"
+],
+[
+"random_effect",
+"30 percent chance of knowing the Wish spell"
+],
+[
+"play_restriction",
+"can cast it only on behalf of a non-genie creature"
+],
+[
+"cooldowns",
+"do so again for 365 days"
+],
+[
+"multi_attack",
+"The efreeti makes three attacks"
+],
+[
+"modal_choice",
+"using Heated Blade or Hurl Flame in any combination"
+],
+[
+"damage",
+"13 (2d6 + 6) Slashing damage"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"ranged",
+"range 120 ft."
+]
+],
+"762400": [
+[
+"death_trigger",
+"If the djinni dies outside the Elemental Plane of Air"
+],
+[
+"revive",
+"it gains a new body in 1d4 days, reviving with all its Hit Points"
+],
+[
+"advantage",
+"Advantage on saving throws against spells"
+],
+[
+"random_effect",
+"30 percent chance of knowing the Wish spell"
+],
+[
+"play_restriction",
+"can cast it only on behalf of a non-genie creature"
+],
+[
+"cooldowns",
+"do so again for 365 days"
+],
+[
+"multi_attack",
+"The djinni makes three attacks"
+],
+[
+"modal_choice",
+"using Storm Blade or Storm Bolt in any combination"
+],
+[
+"damage",
+"12 (2d6 + 5) Slashing damage"
+],
+[
+"damage_types",
+"Lightning damage"
+],
+[
+"ranged",
+"range 120 feet"
+],
+[
+"debuff",
+"it has the Prone condition"
+],
+[
+"area_templates",
+"20-foot-radius, 60-foot-high Cylinder"
+],
+[
+"concentration",
+"Concentration on it ends"
+],
+[
+"movement",
+"The djinni can move the whirlwind up to 20 feet at the start of each of its turns"
+],
+[
+"on_enemy_enter",
+"a creature enters the whirlwind"
+],
+[
+"saving_throws",
+"Strength Saving Throw: DC 17"
+],
+[
+"immobilize",
+"the target has the Restrained condition"
+],
+[
+"forced_movement",
+"moves with the whirlwind"
+],
+[
+"damage_over_time",
+"At the start of each of its turns, the Restrained target takes 21 (6d6) Thunder damage"
+],
+[
+"turn_end",
+"At the end of each of its turns"
+]
+],
+"762728": [
+[
+"stress_morale",
+"the stress of being an adventurer can be too much to bear"
+],
+[
+"saving_throws",
+"a Wisdom or Charisma saving throw"
+],
+[
+"random_effect",
+"d100 Effect"
+],
+[
+"traits_quirks",
+"gains a new character flaw"
+],
+[
+"disable",
+"becomes paralyzed"
+],
+[
+"on_damaged",
+"The effect ends if the character takes any damage"
+],
+[
+"forced_attack",
+"must use his or her action each round to attack the nearest creature"
+],
+[
+"advantage",
+"has disadvantage on ability checks"
+],
+[
+"steal",
+"does whatever anyone tells him or her to do"
+]
+],
+"761308": [
+[
+"concentration",
+"Concentration."
+],
+[
+"target_choice",
+"One creature of your choice"
+],
+[
+"saving_throws",
+"Wisdom saving throw"
+],
+[
+"modal_choice",
+"one of the following effects of your choice"
+],
+[
+"activated",
+"you can take a Magic action to target another creature"
+],
+[
+"disable",
+"The target has the Unconscious condition"
+],
+[
+"on_damaged",
+"It wakes up if it takes any damage"
+],
+[
+"forced_movement",
+"must take the Dash action and move away from you"
+],
+[
+"debuff",
+"The target has the Poisoned condition"
+]
+],
+"762639": [
+[
+"advantage",
+"The dog has advantage on Wisdom (Perception) checks"
+],
+[
+"multi_attack",
+"The dog makes two bite attacks"
+],
+[
+"damage",
+"5 (1d6 + 2) piercing damage"
+],
+[
+"saving_throws",
+"DC 12 Constitution saving throw"
+],
+[
+"debuff",
+"become poisoned until the disease is cured"
+],
+[
+"delayed",
+"Every 24 hours that elapse"
+],
+[
+"stat_loss",
+"reducing its hit point maximum by 5 (1d10) on a failure"
+],
+[
+"destroy",
+"The creature dies if the disease reduces its hit point maximum to 0"
+]
+],
+"762652": [
+[
+"advantage",
+"The rat has advantage on an attack roll against a creature"
+],
+[
+"assists_support",
+"if at least one of the rat's allies is within 5 ft. of the creature"
+],
+[
+"damage",
+"3 (1d4 + 2) piercing damage"
+],
+[
+"saving_throws",
+"DC 10 Constitution saving throw"
+],
+[
+"debuff",
+"the target can't regain hit points except by magical means"
+],
+[
+"stat_loss",
+"the target's hit point maximum decreases by 3 (1d6) every 24 hours"
+],
+[
+"destroy",
+"the target dies"
+]
+],
+"761718": [
+[
+"advantage",
+"you have Advantage on Wisdom (Perception) checks and on Initiative rolls"
+],
+[
+"activated",
+"As a Magic action"
+],
+[
+"light_level",
+"sheds Bright Light in a 60-foot radius"
+],
+[
+"aura",
+"you and your allies gain a +1 bonus to Armor Class and saving throws"
+],
+[
+"information",
+"can sense the location of any Invisible creature"
+],
+[
+"cooldowns",
+"this property can't be used again until the next dawn"
+]
+],
+"762723": [
+[
+"traits_quirks",
+"personality quirks, ideals, bonds, and sometimes flaws"
+],
+[
+"autonomous_units",
+"Sentient magic items function as NPCs under the GM's control"
+],
+[
+"friendly_fire",
+"turn them against the wielder"
+],
+[
+"random_effect",
+"determine them randomly"
+]
+],
+"762116": [
+[
+"items_consumables",
+"contains 1d4 + 1 doses"
+],
+[
+"activated",
+"As an action"
+],
+[
+"heal",
+"regains 2d8 + 2 hit points"
+]
+],
+"761427": [
+[
+"tribal",
+"a Celestial, an Elemental, a Fey, or a Fiend"
+],
+[
+"saving_throws",
+"Charisma saving throw"
+],
+[
+"steal",
+"be bound to serve you for the duration"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"762698": [
+[
+"modal_choice",
+"you can take one of the actions presented here"
+],
+[
+"multi_attack",
+"allow you to make more than one attack with this action"
+],
+[
+"spell_speed",
+"Each spell has a casting time"
+],
+[
+"movement",
+"you gain extra movement for the current turn"
+],
+[
+"zone_of_control",
+"your movement doesn't provoke opportunity attacks"
+],
+[
+"advantage",
+"any attack roll made against you has disadvantage"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+],
+[
+"assists_support",
+"the creature you aid gains advantage"
+]
+],
+"762423": [
+[
+"ranged",
+"range 20/60 ft."
+],
+[
+"damage",
+"4 (1d4 + 2) Piercing damage"
+],
+[
+"movement",
+"The goblin takes the Disengage or Hide action"
+]
+],
+"762621": [
+[
+"damage",
+"10 (2d6 + 3) Slashing damage"
+],
+[
+"debuff",
+"it has the Prone condition"
+],
+[
+"movement",
+"The tiger takes the Disengage or Hide action"
+]
+],
+"762612": [
+[
+"movement",
+"the tiger can Long Jump up to 25 feet"
+],
+[
+"multi_attack",
+"The tiger makes two Rend attacks"
+],
+[
+"damage",
+"11 (2d6 + 4) Slashing damage"
+]
+],
+"762466": [
+[
+"death_trigger",
+"The mephit explodes when it dies"
+],
+[
+"aoe_damage",
+"each creature in a 5-foot Emanation originating from the mephit"
+],
+[
+"saving_throws",
+"Constitution Saving Throw: DC 10"
+],
+[
+"damage",
+"3 (1d4 + 1) Slashing damage"
+],
+[
+"damage_types",
+"Cold damage"
+],
+[
+"area_templates",
+"15-foot Cone"
+]
+],
+"762465": [
+[
+"death_trigger",
+"The mephit explodes when it dies"
+],
+[
+"aoe_damage",
+"each creature in a 5-foot Emanation originating from the mephit"
+],
+[
+"saving_throws",
+"Dexterity Saving Throw: DC 10"
+],
+[
+"damage",
+"4 (1d4 + 2) Slashing damage"
+],
+[
+"area_templates",
+"15-foot Cone"
+],
+[
+"debuff",
+"The target has the Blinded condition"
+],
+[
+"temporary_effect",
+"until the end of the mephit"
+]
+],
+"761566": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"take a Magic action to summon a Fire Elemental"
+],
+[
+"summon",
+"summon a Fire Elemental"
+],
+[
+"self_destruct",
+"The elemental disappears after 1 hour"
+],
+[
+"cooldowns",
+"The brazier can't be used this way again until the next dawn"
+]
+],
+"762467": [
+[
+"death_trigger",
+"The mephit explodes when it dies"
+],
+[
+"aoe_damage",
+"each creature in a 5-foot Emanation originating from the mephit"
+],
+[
+"saving_throws",
+"Dexterity Saving Throw: DC 11"
+],
+[
+"damage",
+"3 (1d4 + 1) Slashing damage"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"area_templates",
+"15-foot Cone"
+]
+],
+"762511": [
+[
+"saving_throws",
+"If the dragon fails a saving throw, it can choose to succeed instead"
+],
+[
+"multi_attack",
+"The dragon makes three Rend attacks"
+],
+[
+"modal_choice",
+"It can replace one attack with a use of (A) Paralyzing Breath"
+],
+[
+"damage",
+"19 (2d8 + 10) Slashing damage"
+],
+[
+"damage_types",
+"Cold damage"
+],
+[
+"aoe_damage",
+"each creature in a 90-foot Cone"
+],
+[
+"area_templates",
+"90-foot Cone"
+],
+[
+"disable",
+"The target has the Incapacitated condition"
+],
+[
+"temporary_effect",
+"until the end of its next turn"
+],
+[
+"turn_end",
+"at the end of each of its turns"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"cooldowns",
+"take this action again until the start of its next turn"
+],
+[
+"forced_movement",
+"the target is pushed up to 30 feet straight away from the dragon"
+],
+[
+"movement",
+"The dragon moves up to half its Speed"
+]
+],
+"761713": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"resource_gain",
+"it regains 1d3 expended charges daily at dawn"
+],
+[
+"activated",
+"take a Magic action"
+],
+[
+"coin_economy",
+"expend 1 charge"
+],
+[
+"temporary_effect",
+"until the end of your next turn"
+],
+[
+"light_level",
+"sheds Bright Light in a 30-foot radius"
+],
+[
+"advantage",
+"have Disadvantage on attack rolls against you"
+],
+[
+"saving_throws",
+"DC 15 Wisdom saving throw"
+],
+[
+"disable",
+"have the Stunned condition"
+]
+],
+"762472": [
+[
+"multi_attack",
+"The mummy makes two Rotting Fist attacks"
+],
+[
+"damage",
+"8 (1d10 + 3) Bludgeoning damage"
+],
+[
+"damage_types",
+"Necrotic damage"
+],
+[
+"debuff",
+"While cursed, the target"
+],
+[
+"stat_loss",
+"its Hit Point maximum decreases by 10 (3d6) every 24 hours"
+],
+[
+"on_kill",
+"A creature dies and turns to dust if reduced to 0 Hit Points by this attack"
+],
+[
+"banish",
+"turns to dust"
+],
+[
+"saving_throws",
+"Wisdom Saving Throw: DC 11"
+],
+[
+"ranged",
+"within 60 feet"
+],
+[
+"temporary_effect",
+"until the end of the mummy"
+],
+[
+"immunity",
+"The target is immune to this mummy"
+]
+],
+"761492": [
+[
+"ranged",
+"Make a ranged spell attack"
+],
+[
+"damage",
+"the target takes 1d8 Radiant damage"
+],
+[
+"damage_types",
+"Radiant damage"
+],
+[
+"temporary_effect",
+"until the end of your next turn"
+],
+[
+"light_level",
+"it emits Dim Light in a 10-foot radius"
+],
+[
+"information",
+"can't benefit from the Invisible condition"
+],
+[
+"upgrade",
+"Cantrip Upgrade"
+]
+],
+"762687": [
+[
+"advantage",
+"The swarm has advantage on melee attack rolls"
+],
+[
+"condition_life",
+"any creature that doesn't have all its hit points"
+],
+[
+"movement",
+"The swarm can occupy another creature's space"
+],
+[
+"damage",
+"14 (4d6) piercing damage"
+],
+[
+"stat_condition",
+"if the swarm has half of its hit points or fewer"
+]
+],
+"762361": [
+[
+"condition_life",
+"While Bloodied"
+],
+[
+"advantage",
+"the berserker has Advantage on attack rolls and saving throws"
+],
+[
+"damage",
+"9 (1d12 + 3) Slashing damage"
+]
+],
+"761418": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"5-foot-radius, 40-foot-high Cylinder"
+],
+[
+"light_level",
+"Dim Light fills the Cylinder"
+],
+[
+"activated",
+"you can take a Magic action on later turns to move the Cylinder"
+],
+[
+"movement",
+"move the Cylinder up to 60 feet"
+],
+[
+"aoe_damage",
+"each creature in it makes a Constitution saving throw"
+],
+[
+"saving_throws",
+"Constitution saving throw"
+],
+[
+"damage",
+"a creature takes 2d10 Radiant damage"
+],
+[
+"damage_types",
+"Radiant damage"
+],
+[
+"rewind",
+"it reverts to its true form"
+],
+[
+"on_enemy_enter",
+"when it enters the spell's area"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"762714": [
+[
+"rest_phase",
+"adventurers need time to rest, recuperate"
+],
+[
+"upkeep",
+"pay the cost of maintaining that lifestyle"
+],
+[
+"card_crafting",
+"You can craft nonmagical objects"
+],
+[
+"cost_type",
+"you must expend raw materials worth half the total market value"
+]
+],
+"761244": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"20-foot-radius Sphere"
+],
+[
+"light_level",
+"Its area is Heavily Obscured"
+],
+[
+"aoe_damage",
+"Each creature in the Sphere makes a Constitution saving throw"
+],
+[
+"saving_throws",
+"Constitution saving throw"
+],
+[
+"damage",
+"taking 5d8 Poison damage"
+],
+[
+"damage_types",
+"Poison damage"
+],
+[
+"on_enemy_enter",
+"when it enters the Sphere"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"turn_start",
+"at the start of each of your turns"
+],
+[
+"kicker",
+"At higher levels"
+]
+],
+"761375": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"20-foot-radius Sphere"
+],
+[
+"light_level",
+"The cloud's area is Heavily Obscured"
+],
+[
+"aoe_damage",
+"each creature in it makes a Dexterity saving throw"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"damage",
+"taking 10d8 Fire damage"
+],
+[
+"damage_types",
+"Fire damage"
+],
+[
+"on_enemy_enter",
+"when it enters the Sphere"
+],
+[
+"turn_end",
+"ends its turn there"
+],
+[
+"turn_start",
+"at the start of each of your turns"
+]
+],
+"762104": [
+[
+"stat_gain",
+"Increase one ability score of your choice by 1"
+],
+[
+"random_effect",
+"roll 1d4"
+],
+[
+"cost_condition",
+"If the number you roll is the same as the slot's level"
+],
+[
+"free_play",
+"the slot isn't expended"
+]
+],
+"761867": [
+[
+"modal_choice",
+"gain a Fighting Style feat of your choice"
+],
+[
+"deckbuilding_effect",
+"you can replace the feat you chose with a different Fighting Style feat"
+]
+],
+"761847": [
+[
+"on_spell",
+"Immediately after you cast a spell with a spell slot that restores Hit Points"
+],
+[
+"heal",
+"you regain Hit Points equal to 2 plus the spell slot's level"
+]
+],
+"761856": [
+[
+"play_restriction",
+"Once on each of your turns"
+],
+[
+"condition_count",
+"if you have no uses of Wild Shape left"
+],
+[
+"resource_conversion",
+"you can give yourself one use by expending a spell slot"
+],
+[
+"rest_phase",
+"you can't do so again until you finish a Long Rest"
+]
+],
+"761832": [
+[
+"reactions",
+"When you make an ability check or attack roll and fail"
+],
+[
+"coin_economy",
+"expend one use of Bardic Inspiration"
+],
+[
+"random_effect",
+"roll the Bardic Inspiration die"
+],
+[
+"temporary_buff",
+"add the number rolled to the d20"
+]
+],
+"761830": [
+[
+"ranged",
+"within 60 feet of yourself"
+],
+[
+"reactions",
+"you can take a Reaction to expend one use of your Bardic Inspiration"
+],
+[
+"coin_economy",
+"expend one use of your Bardic Inspiration"
+],
+[
+"random_effect",
+"roll your Bardic Inspiration die"
+],
+[
+"debuff",
+"subtract the number rolled from the creature's roll"
+],
+[
+"damage_reduction",
+"reducing the damage"
+]
+],
+"761597": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"exhaust",
+"There is enough of it for one use"
+],
+[
+"activated",
+"take a Utilize action to throw the dust into the air"
+],
+[
+"area_templates",
+"10-foot Emanation"
+],
+[
+"scope_multi",
+"you and each creature and object within a 10-foot Emanation"
+],
+[
+"stealth",
+"have the Invisible condition"
+]
+],
+"761976": [
+[
+"activated",
+"As a Bonus Action"
+],
+[
+"modal_choice",
+"you can do one of the following"
+]
+],
+"761770": [
+[
+"resource_gain",
+"regains 1d3 expended charges daily at dawn"
+],
+[
+"activated",
+"you can take a Magic action to expend 1 charge"
+],
+[
+"coin_economy",
+"expend 1 charge"
+],
+[
+"information",
+"the wand pulses and points at the one nearest to you"
+]
+],
+"761318": [
+[
+"information",
+"You sense any trap within range"
+]
+],
+"761517": [
+[
+"concentration",
+"Concentration."
+],
+[
+"terrain",
+"A wall of water springs into existence"
+],
+[
+"aoe_damage",
+"each creature in its area makes a Strength saving throw"
+],
+[
+"saving_throws",
+"Strength saving throw"
+],
+[
+"damage",
+"taking 6d10 Bludgeoning damage"
+],
+[
+"turn_start",
+"At the start of each of your turns"
+],
+[
+"forced_movement",
+"along with any creatures in it, moves 50 feet away from you"
+],
+[
+"turn_end",
+"At the end of the turn"
+],
+[
+"immobilize",
+"If it fails the check, it can't move"
+]
+],
+"761298": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"100-foot-radius circle"
+],
+[
+"terrain",
+"The ground there is Difficult Terrain"
+],
+[
+"turn_end",
+"at the end of each of your turns"
+],
+[
+"aoe_damage",
+"each creature on the ground in the area makes a Dexterity saving throw"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"debuff",
+"a creature has the Prone condition"
+],
+[
+"silence",
+"its Concentration is broken"
+],
+[
+"random_effect",
+"A total of 1d6 fissures"
+],
+[
+"damage",
+"the creature takes 12d6 Bludgeoning damage"
+],
+[
+"immobilize",
+"is buried in the rubble"
+]
+],
+"761603": [
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"activated",
+"take a Magic action to remove the stopper"
+],
+[
+"delayed",
+"At the end of your turn"
+],
+[
+"summon",
+"an Efreeti appears in an unoccupied space"
+],
+[
+"random_effect",
+"the GM rolls onthe following table"
+],
+[
+"self_destruct",
+"after which it returns to the bottle"
+],
+[
+"cooldowns",
+"The stopper can't be removed for 24 hours"
+],
+[
+"count_payoff",
+"If the bottle is opened a fourth time, the efreeti escapes"
+]
+],
+"761907": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"coin_economy",
+"expend 3 Focus Points"
+],
+[
+"temporary_buff",
+"for 1 minute"
+],
+[
+"damage_reduction",
+"Resistance to all damage except Force damage"
+]
 ]
 }

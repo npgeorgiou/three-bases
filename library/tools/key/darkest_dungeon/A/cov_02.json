@@ -1,0 +1,190 @@
+{
+"760354": [
+[
+"stat_gain",
+"+8% damage"
+],
+[
+"stat_gain",
+"+0.03 crit"
+],
+[
+"stat_loss",
+"-10% bleed resistance"
+],
+[
+"turn_number",
+"in the first round"
+],
+[
+"light_level",
+"while light below 26"
+]
+],
+"760426": [
+[
+"stat_gain",
+"+0.06 crit"
+],
+[
+"turn_number",
+"in the first round"
+],
+[
+"stat_gain",
+"+15% damage"
+],
+[
+"stat_loss",
+"-0.05 accuracy"
+],
+[
+"stat_loss",
+"-0.04 crit"
+]
+],
+"760369": [
+[
+"stat_gain",
+"+13% damage"
+],
+[
+"low_life",
+"while HP below 0.25"
+],
+[
+"stat_gain",
+"+0.04 crit"
+],
+[
+"stat_gain",
+"+8% death_blow resistance"
+],
+[
+"cheat_death",
+"Death's Door"
+],
+[
+"stat_loss",
+"-0.06 dodge"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"tribal",
+"vs unholy enemies"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760384": [
+[
+"damage_reduction",
+"+0.11 protection"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"stress_morale",
+"-18% stress dmg received percent"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"condition_life",
+"while HP above 0.75"
+],
+[
+"tribal",
+"vs beast enemies"
+]
+],
+"760227": [
+[
+"stat_gain",
+"+10% damage"
+],
+[
+"stat_gain",
+"+0.04 crit"
+],
+[
+"damage_reduction",
+"+0.06 protection"
+],
+[
+"rest_phase",
+"while camping"
+],
+[
+"stat_loss",
+"-10% move resistance"
+]
+],
+"760416": [
+[
+"stat_gain",
+"+3 speed"
+],
+[
+"damage_reduction",
+"+0.05 protection"
+],
+[
+"stat_loss",
+"-0.06 dodge"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+]
+],
+"760344": [
+[
+"stat_gain",
+"+0.08 dodge"
+],
+[
+"tribal",
+"vs beast enemies"
+],
+[
+"stat_gain",
+"+8% death_blow resistance"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+]
+],
+"760444": [
+[
+"stat_gain",
+"+10% trap resistance"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+],
+[
+"cheat_death",
+"Death's Door"
+],
+[
+"upkeep",
+"+50% starving damage percent"
+],
+[
+"turn_number",
+"in the first round"
+]
+]
+}

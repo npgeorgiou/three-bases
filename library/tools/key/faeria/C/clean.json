@@ -1,4 +1,572 @@
 {
+"741087": [
+[
+"damage",
+"Deal 1 damage to a creature"
+],
+[
+"ping",
+"Deal 1 damage"
+]
+],
+"741088": [
+[
+"temporary_buff",
+"Has +2/+0 during your turn"
+],
+[
+"in_hand_buff",
+"while in your hand or in play"
+]
+],
+"741097": [
+[
+"movement",
+"Charge 3"
+],
+[
+"on_attack",
+"Combat"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"cost_set",
+"It costs 0 faeria"
+]
+],
+"741100": [
+[
+"immunity",
+"ignores all damage equal to 4 or more"
+],
+[
+"condition_count",
+"4 or more"
+]
+],
+"741114": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"summon",
+"summon another Defender of the Homeland"
+],
+[
+"comeback",
+"If you were attacked last turn"
+]
+],
+"741130": [
+[
+"movement",
+"Charge 2"
+],
+[
+"cost_condition",
+"base cost of 7 faeria or higher"
+],
+[
+"stat_gain",
+"this gains +1/+1"
+],
+[
+"evasion",
+"Flying"
+]
+],
+"741150": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"transform",
+"Transform all your other creatures into creatures that cost 2 faeria more"
+],
+[
+"random_effect",
+"creatures that cost 2 faeria more"
+]
+],
+"741157": [
+[
+"movement",
+"Jump"
+],
+[
+"on_spell",
+"Whenever you play an event"
+],
+[
+"temporary_buff",
+"this gains +2/+0 this turn"
+]
+],
+"741171": [
+[
+"summon",
+"Summon two 2/2 Frogs with Jump"
+],
+[
+"movement",
+"Jump"
+]
+],
+"741193": [
+[
+"turn_start",
+"Production"
+],
+[
+"permanent_growth",
+"This structure gains +0/+1"
+],
+[
+"stat_condition",
+"When this has 5 or more Life"
+],
+[
+"self_destruct",
+"destroy it"
+],
+[
+"resource_gain",
+"gain 10 faeria"
+]
+],
+"741206": [
+[
+"taunt",
+"Taunt"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"terrain",
+"Fill the world with forests"
+],
+[
+"scope_global",
+"Fill the world"
+]
+],
+"741217": [
+[
+"movement",
+"Dash 2"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"revive",
+"Return Ruunin to your hand at the end of the turn"
+],
+[
+"in_hand_buff",
+"She gains +2/+2"
+]
+],
+"741228": [
+[
+"on_kill",
+"When Seifer destroys a creature"
+],
+[
+"permanent_growth",
+"he gains Attack and Life equal to the destroyed creature's base Attack and Life"
+]
+],
+"741263": [
+[
+"resource_gain",
+"select +1 faeria from the power wheel"
+],
+[
+"damage",
+"deal 4 damage"
+],
+[
+"distribute",
+"randomly split among enemies"
+],
+[
+"random_effect",
+"randomly split"
+]
+],
+"741297": [
+[
+"deathtouch",
+"Deathtouch"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"sacrifice",
+"sacrifice another creature"
+],
+[
+"protection",
+"give this creature Protection"
+]
+],
+"741298": [
+[
+"on_play",
+"Gift"
+],
+[
+"sacrifice",
+"sacrifice another creature"
+],
+[
+"summon",
+"summoning a 5/2 Flying Demon Wing in its place"
+],
+[
+"evasion",
+"Flying"
+]
+],
+"741307": [
+[
+"stat_condition",
+"When Doomgate has 13 Life or more"
+],
+[
+"self_destruct",
+"destroy it"
+],
+[
+"transform",
+"summon Ostregoth in its place"
+],
+[
+"activated",
+"Activate"
+],
+[
+"sacrifice",
+"Sacrifice a creature"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"permanent_growth",
+"Doomgate gains +0/+2"
+]
+],
+"741334": [
+[
+"immunity",
+"Divine"
+],
+[
+"protection",
+"When you would take lethal damage, prevent it"
+],
+[
+"self_destruct",
+"destroy this instead"
+]
+],
+"741352": [
+[
+"transform",
+"Transform a creature that attacked a god this turn into a 10/10 Sky Swallower with Flying"
+],
+[
+"evasion",
+"Flying"
+]
+],
+"741378": [
+[
+"turn_start",
+"Production"
+],
+[
+"stat_loss",
+"Give all enemy creatures -1/-0"
+],
+[
+"scope_multi",
+"all enemy creatures"
+],
+[
+"destroy",
+"destroy all enemy creatures with 0 Attack"
+],
+[
+"stat_condition",
+"with 0 Attack"
+]
+],
+"741387": [
+[
+"on_attack",
+"Combat"
+],
+[
+"tutor",
+"Draw a Gift of Steel from your deck"
+],
+[
+"generate_cards",
+"shuffle one in"
+],
+[
+"deck_condition",
+"If there are none"
+]
+],
+"741417": [
+[
+"taunt",
+"Taunt"
+],
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"stat_multiply",
+"Double this creature's Attack"
+]
+],
+"741422": [
+[
+"lifesteal",
+"Drain 1 life from an enemy creature"
+],
+[
+"on_kill",
+"If you kill it"
+],
+[
+"copy",
+"add a copy of it to your hand"
+],
+[
+"cost_type",
+"It becomes wild land"
+]
+],
+"741427": [
+[
+"on_play",
+"Gift"
+],
+[
+"junk_cards",
+"Fill your opponent's hand with Ruby Fish"
+]
+],
+"741445": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 3"
+],
+[
+"on_kill",
+"would kill a creature in combat"
+],
+[
+"steal",
+"swallow and gain control of it"
+]
+],
+"741459": [
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"cost_increase",
+"Increase the cost of each card in your opponent's hand by 1 faeria"
+]
+],
+"741485": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"variety_payoff",
+"If your deck has only 1 of each card"
+],
+[
+"haste",
+"gain Haste"
+],
+[
+"protection",
+"Protection"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"recycle",
+"Shuffle Celeste back into your deck"
+]
+],
+"741502": [
+[
+"movement",
+"Dash 1"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"generate_cards",
+"shuffle 2 Treasure Maps into your deck"
+],
+[
+"territory_trigger",
+"if this is on an enemy land"
+]
+],
+"741503": [
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"selection",
+"Discover a card"
+],
+[
+"generate_cards",
+"Discover a card"
+],
+[
+"cost_condition",
+"costs 5 faeria or more"
+],
+[
+"enemy_benefit",
+"Add the 2 cards you didn't pick to your opponent's hand"
+],
+[
+"cost_type",
+"They all become wild land"
+]
+],
+"741505": [
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Add a Treasure Map"
+],
+[
+"deck_position",
+"top of your deck"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"revive",
+"Return Aryana to your hand"
+]
+],
+"741507": [
+[
+"stat_gain",
+"Give a creature +3/+3"
+],
+[
+"movement",
+"Charge 3"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"cost_reduction",
+"Costs 3 faeria less"
+],
+[
+"death_count",
+"for each friendly creature that died this turn"
+]
+],
+"741516": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Dash 5"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Fill your hand with Flash Winds"
+],
+[
+"cost_type",
+"They become wild land"
+]
+],
 "741063": [
 [
 "movement",

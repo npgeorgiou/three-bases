@@ -1,0 +1,746 @@
+{
+"795737": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"hand_deck_swap",
+"Replace your deck with your opponent's starting deck"
+],
+[
+"in_hand_buff",
+"Give those cards -1 Cost"
+]
+],
+"796193": [
+[
+"hand_deck_swap",
+"Shuffle your hand into your deck"
+],
+[
+"draw",
+"Draw 3 cards"
+]
+],
+"796200": [
+[
+"hand_deck_swap",
+"Replace both decks with 10 random cards"
+],
+[
+"symmetric_effect",
+"both decks"
+],
+[
+"random_effect",
+"random cards"
+],
+[
+"generate_cards",
+"10 random cards"
+]
+],
+"796192": [
+[
+"control_reward",
+"Whoever is winning here gets +4 Power at adjacent locations"
+],
+[
+"stat_gain",
+"+4 Power"
+],
+[
+"adjacency",
+"adjacent locations"
+]
+],
+"795743": [
+[
+"turn_start",
+"Start of Turn"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"hand_size",
+"if your hand is full"
+]
+],
+"796163": [
+[
+"lone_unit",
+"If you only have one card here"
+],
+[
+"stat_gain",
+"+5 Power"
+],
+[
+"lane_rule",
+"If you only have one card here, it has +5 Power"
+]
+],
+"795816": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"+5 Power"
+],
+[
+"lone_unit",
+"this is your only card here"
+]
+],
+"795702": [
+[
+"quests",
+"Objective"
+],
+[
+"variety_payoff",
+"6 different Powers"
+],
+[
+"stat_gain",
+"+6 Power"
+]
+],
+"795604": [
+[
+"quests",
+"Objective"
+],
+[
+"count_payoff",
+"Play 6 total Cost of created cards"
+],
+[
+"random_effect",
+"Randomly"
+],
+[
+"destroy",
+"destroy up to 3 total Cost of enemy cards"
+]
+],
+"796327": [
+[
+"race_objective",
+"First to put exactly 2 cards here"
+],
+[
+"condition_count",
+"exactly 2 cards"
+],
+[
+"draw",
+"draws a card"
+]
+],
+"796338": [
+[
+"race_objective",
+"First to fill this"
+],
+[
+"copy",
+"a copy of their opening hand"
+]
+],
+"796370": [
+[
+"race_objective",
+"First to fill this"
+],
+[
+"resource_gain",
+"+3 Max Energy"
+]
+],
+"795891": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"variable_stats",
+"Set this card's Power equal to the Power of a random card in your deck"
+],
+[
+"random_effect",
+"random card"
+],
+[
+"deck_condition",
+"a random card in your deck"
+]
+],
+"795996": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Give the next card you play Power"
+],
+[
+"combo_sequence",
+"the next card you play"
+]
+],
+"795727": [
+[
+"activated",
+"Activate"
+],
+[
+"stat_loss",
+"Afflict an enemy card here with negative Power"
+]
+],
+"796024": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"variable_stats",
+"Set this card's Power equal to that of the last card you played"
+],
+[
+"combo_sequence",
+"the last card you played"
+]
+],
+"795500": [
+[
+"cost_reduction",
+"Costs 1 less for each different Cost"
+],
+[
+"variety_payoff",
+"different Cost among your cards in play"
+],
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"Give your Champion +8 Power"
+]
+],
+"795716": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"symmetric_effect",
+"EACH player"
+],
+[
+"random_effect",
+"randomly"
+],
+[
+"in_hand_buff",
+"gives a card in their hand -1 Cost"
+],
+[
+"variety_payoff",
+"different Cost among their cards in play"
+]
+],
+"796063": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Give 2 characters in your hand +3 Power"
+],
+[
+"play_restriction",
+"You can't play them next turn unless they're Thunderbolts"
+],
+[
+"tribal",
+"Thunderbolts"
+]
+],
+"795722": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_loss",
+"Afflict an enemy card with -2 Power"
+],
+[
+"repeat_trigger",
+"Repeat on a different enemy"
+],
+[
+"resource_banking",
+"for each of your unspent Energy"
+]
+],
+"796331": [
+[
+"generate_cards",
+"Add a random Food Fight variant to each player's hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"symmetric_effect",
+"each player's hand"
+]
+],
+"796183": [
+[
+"summon",
+"Add a Squirrel to each location"
+],
+[
+"symmetric_effect",
+"Add a Squirrel to each location"
+]
+],
+"795649": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"upgrade",
+"Unlock the potential of your cards with no abilities"
+],
+[
+"null_body",
+"cards with no abilities"
+]
+],
+"795861": [
+[
+"passive",
+"Ongoing"
+],
+[
+"aura",
+"Your cards with no abilities have +2 Power"
+],
+[
+"null_body",
+"cards with no abilities"
+],
+[
+"stat_gain",
+"+2 Power"
+]
+],
+"795429": [
+[
+"passive",
+"Ongoing"
+],
+[
+"board_presence",
+"If your side of this location is full"
+],
+[
+"stat_gain",
+"+4 Power"
+]
+],
+"796295": [
+[
+"resource_gain",
+"+1 Energy each turn"
+],
+[
+"board_presence",
+"if your side here is full"
+],
+[
+"lane_rule",
+"+1 Energy each turn if your side here is full"
+]
+],
+"795665": [
+[
+"turn_start",
+"Start of Turn"
+],
+[
+"resource_gain",
+"+1 Energy"
+],
+[
+"self_destruct",
+"destroy this if your side is full here"
+]
+],
+"796279": [
+[
+"lane_rule",
+"When your revealed cards fill this"
+],
+[
+"board_presence",
+"When your revealed cards fill this"
+],
+[
+"merge_attach",
+"merge them into a Symbiote"
+]
+],
+"796073": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"board_presence",
+"For each of your full locations"
+],
+[
+"stat_gain",
+"+3 Power"
+],
+[
+"cross_lane",
+"For each of your full locations"
+]
+],
+"795759": [
+[
+"death_trigger",
+"When Discarded or Destroyed"
+],
+[
+"discard",
+"Discarded"
+],
+[
+"distribute",
+"Randomly split -7 Power among enemy cards"
+],
+[
+"stat_loss",
+"-7 Power"
+],
+[
+"random_effect",
+"Randomly"
+]
+],
+"796043": [
+[
+"passive",
+"Ongoing"
+],
+[
+"distribute",
+"Split your total Power evenly among all locations"
+],
+[
+"cross_lane",
+"all locations"
+]
+],
+"795458": [
+[
+"on_ally_play",
+"After you play a card"
+],
+[
+"permanent_growth",
+"this gains +1 Power"
+]
+],
+"796123": [
+[
+"quests",
+"Objective"
+],
+[
+"stat_condition",
+"This has 5 or more Power"
+],
+[
+"stat_gain",
+"+4 Power"
+],
+[
+"cross_lane",
+"at each location"
+]
+],
+"796138": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stacking_keyword",
+"Horde +2"
+],
+[
+"variable_stats",
+"this gains Power equal to your Zombie Horde"
+]
+],
+"795775": [
+[
+"discard",
+"When you discard a card"
+],
+[
+"permanent_growth",
+"this gains +1 Power"
+],
+[
+"movement",
+"Moveable next turn"
+]
+],
+"795631": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"permanent_growth",
+"this gains +3 Power"
+]
+],
+"795970": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"merge_attach",
+"Merge this into one of your cards here"
+],
+[
+"movement",
+"It's Moveable next turn"
+]
+],
+"796021": [
+[
+"activated",
+"Activate"
+],
+[
+"merge_attach",
+"Merge one of your cards here into this"
+],
+[
+"tutor",
+"Replace that card with a Spider-Verse card from your deck"
+],
+[
+"tribal",
+"Spider-Verse"
+]
+],
+"795960": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"type_grant",
+"The first 6 characters you draw are EVIL!"
+],
+[
+"quests",
+"(0/6)"
+],
+[
+"merge_attach",
+"merge them into this"
+]
+],
+"795863": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add SP//dr to your hand"
+],
+[
+"merge_attach",
+"When this merges"
+],
+[
+"resource_gain",
+"+1 Energy next turn"
+]
+],
+"796000": [
+[
+"permanent_growth",
+"Gains +2 Power from merging"
+],
+[
+"turn_end",
+"End of Turn"
+],
+[
+"merge_attach",
+"Merge one of your created cards into this"
+]
+],
+"796020": [
+[
+"activated",
+"Activate"
+],
+[
+"merge_attach",
+"Merge your lowest-Cost card here into this"
+],
+[
+"cost_condition",
+"lowest-Cost"
+],
+[
+"copy",
+"Copy its text"
+],
+[
+"repeat_trigger",
+"like it just revealed"
+]
+],
+"796234": [
+[
+"turn_number",
+"After turn 4"
+],
+[
+"merge_attach",
+"merge your cards here into a Symbiote"
+],
+[
+"lane_rule",
+"merge your cards here into a Symbiote"
+]
+],
+"796243": [
+[
+"game_length",
+"There is a turn 7 this game"
+],
+[
+"lane_rule",
+"There is a turn 7 this game"
+]
+],
+"796383": [
+[
+"turn_structure",
+"Energy each turn equals the turn number"
+],
+[
+"game_length",
+"the game lasts 6 turns"
+]
+],
+"796306": [
+[
+"game_length",
+"After turn 5, end the game"
+],
+[
+"turn_number",
+"After turn 5"
+]
+],
+"795561": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"resource_gain",
+"+1 Max Energy"
+],
+[
+"passive",
+"Ongoing"
+],
+[
+"play_restriction",
+"You can only play 1 card a turn"
+]
+],
+"795528": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"summon",
+"Add a Rock to each other location"
+],
+[
+"cross_lane",
+"each other location"
+]
+],
+"795671": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_condition",
+"with 20 or more Power"
+],
+[
+"destroy",
+"destroy front-row enemy cards here"
+],
+[
+"rows",
+"front-row"
+]
+],
+"796061": [
+[
+"lane_rule",
+"After you play a card here"
+],
+[
+"on_ally_play",
+"After you play a card here"
+],
+[
+"forced_placement",
+"move it to the middle location"
+],
+[
+"lane_identity",
+"middle location"
+]
+]
+}

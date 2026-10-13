@@ -1,0 +1,718 @@
+{
+"795643": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"repeat_trigger",
+"Execute all 4 of H.E.R.B.I.E.'s abilities here"
+]
+],
+"795919": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"summon",
+"Add Cap's Shield to another location"
+],
+[
+"cross_lane",
+"another location"
+],
+[
+"passive",
+"Ongoing"
+],
+[
+"movement",
+"Moveable"
+]
+],
+"796125": [
+[
+"death_trigger",
+"When Discarded or Destroyed"
+],
+[
+"discard",
+"Discarded"
+],
+[
+"cheat_death",
+"Regenerate this"
+],
+[
+"random_effect",
+"random location"
+],
+[
+"resource_gain",
+"+1 Energy next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"795969": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"passive",
+"Ongoing"
+],
+[
+"protection",
+"Thanos can't be discarded or destroyed"
+]
+],
+"795687": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"tutor",
+"Draw all cards that cost 0 from your deck"
+],
+[
+"cost_condition",
+"cost 0"
+]
+],
+"795778": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"tutor",
+"Draw 2 Stones from your deck"
+],
+[
+"tribal",
+"Stones"
+]
+],
+"795468": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"merge_attach",
+"Merge cards from your deck into this"
+],
+[
+"stat_gain",
+"gains 13 or more Power"
+],
+[
+"condition_count",
+"13 or more"
+]
+],
+"796360": [
+[
+"lane_rule",
+"After you play here"
+],
+[
+"on_ally_play",
+"After you play here"
+],
+[
+"generate_cards",
+"shuffle 3 Vibranium into your deck"
+]
+],
+"796164": [
+[
+"turn_number",
+"After turn 3"
+],
+[
+"hand_deck_swap",
+"shuffle your hand into your deck"
+],
+[
+"draw",
+"Draw 3 cards"
+]
+],
+"795439": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"generate_cards",
+"Shuffle 12 new cards into your deck"
+],
+[
+"turn_number",
+"On turn 3"
+],
+[
+"resource_gain",
+"+1 Max Energy"
+]
+],
+"796086": [
+[
+"synergy_payoff",
+"When your cards in play are Empowered"
+],
+[
+"stat_gain",
+"+1 Power"
+]
+],
+"796003": [
+[
+"generate_cards",
+"add a random 1-Cost character to your hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"in_hand_buff",
+"with that same increase"
+]
+],
+"796319": [
+[
+"turn_number",
+"After turn 4"
+],
+[
+"swap",
+"swap the position of each location"
+],
+[
+"lane_rule",
+"swap the position of each location"
+]
+],
+"795886": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"swap",
+"Swap the positions of the other two locations"
+],
+[
+"cross_lane",
+"other two locations"
+]
+],
+"796064": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"return_to_hand",
+"Return your other cards here to your hand"
+],
+[
+"stat_gain",
+"+2 Power for each returned"
+],
+[
+"condition_count",
+"for each returned"
+]
+],
+"795471": [
+[
+"return_to_hand",
+"Return this to your hand"
+],
+[
+"activated",
+"Activate"
+],
+[
+"hand_disruption",
+"steal 4 Power from characters in your opponent's hand"
+],
+[
+"steal",
+"steal 4 Power"
+],
+[
+"random_effect",
+"randomly"
+]
+],
+"795846": [
+[
+"passive",
+"Ongoing"
+],
+[
+"repeat_trigger",
+"apply an additional time"
+]
+],
+"796275": [
+[
+"lane_rule",
+"Ongoing effects here apply an additional time"
+],
+[
+"repeat_trigger",
+"apply an additional time"
+]
+],
+"796171": [
+[
+"lane_rule",
+"The next card you play here"
+],
+[
+"transform",
+"becomes a random 6-Cost card"
+],
+[
+"random_effect",
+"random"
+]
+],
+"796216": [
+[
+"turn_number",
+"After turn 3"
+],
+[
+"transform",
+"transform all cards here into the Hulk"
+],
+[
+"lane_rule",
+"transform all cards here"
+]
+],
+"796137": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"on_play",
+"On Reveal"
+],
+[
+"transform",
+"Transform those cards into copies of this"
+],
+[
+"copy",
+"copies of this"
+]
+],
+"795805": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Become a copy of a card in your opponent's hand"
+],
+[
+"transform",
+"Become a copy"
+]
+],
+"796265": [
+[
+"turn_number",
+"After turn 3"
+],
+[
+"board_wipe",
+"destroy all cards here"
+],
+[
+"lane_rule",
+"destroy all cards here"
+]
+],
+"796113": [
+[
+"self_destruct",
+"Destroy this when your side of this location is full"
+],
+[
+"board_limit",
+"your side of this location is full"
+]
+],
+"795794": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"banish",
+"Banish the top card of your deck"
+],
+[
+"deck_position",
+"top card of your deck"
+],
+[
+"generate_cards",
+"Add 2 Rocks to your hand"
+],
+[
+"variable_stats",
+"Set their Power to the banished card's Cost"
+]
+],
+"796221": [
+[
+"turn_number",
+"After turn 4"
+],
+[
+"board_wipe",
+"destroy all cards on the losing side here"
+],
+[
+"zone_control",
+"losing side"
+],
+[
+"lane_rule",
+"destroy all cards on the losing side here"
+]
+],
+"796052": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"tutor",
+"Draw an Avenger"
+],
+[
+"tribal",
+"Avenger"
+],
+[
+"generate_cards",
+"shuffle Mjolnir into your deck"
+]
+],
+"795714": [
+[
+"turn_start",
+"Start of Turn"
+],
+[
+"return_to_hand",
+"Return this to your hand"
+],
+[
+"permanent_growth",
+"When this returns to your hand, +1 Power"
+]
+],
+"795414": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"generate_cards",
+"Shuffle 4 Ancient Arcana into your deck"
+]
+],
+"795580": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"return_to_hand",
+"Return your 1-Cost cards to your hand"
+],
+[
+"cost_condition",
+"1-Cost"
+]
+],
+"795457": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Shuffle Stormbreaker into your deck"
+]
+],
+"795853": [
+[
+"transform",
+"Transform charged cards in play into ones that cost 1 more"
+]
+],
+"795871": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"transform",
+"Transform your lowest-Power character here into one that costs 1 more"
+],
+[
+"stat_condition",
+"lowest-Power"
+]
+],
+"796369": [
+[
+"lane_rule",
+"Turns into a new location"
+],
+[
+"turn_number",
+"on turn 4"
+]
+],
+"796326": [
+[
+"lane_rule",
+"After you play a character here"
+],
+[
+"on_ally_play",
+"After you play a character here"
+],
+[
+"transform",
+"transform it into another one of the same Cost"
+]
+],
+"795669": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"transform",
+"Transform your other cards here"
+],
+[
+"copy",
+"copies of the highest-Power one"
+],
+[
+"stat_condition",
+"highest-Power"
+]
+],
+"795666": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"hand_disruption",
+"Give a card in your opponent's hand +1 Cost"
+],
+[
+"cost_increase",
+"+1 Cost"
+]
+],
+"795920": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"cost_increase",
+"cards cost 1 more"
+],
+[
+"symmetric_effect",
+"cards cost 1 more"
+],
+[
+"delayed",
+"Next turn"
+]
+],
+"796339": [
+[
+"lane_rule",
+"Created cards cost 1 more"
+],
+[
+"cost_increase",
+"Created cards cost 1 more"
+],
+[
+"symmetric_effect",
+"Created cards cost 1 more"
+]
+],
+"796119": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"enemy_benefit",
+"Your opponent draws a card"
+],
+[
+"cost_increase",
+"increase its cost by 1"
+]
+],
+"795443": [
+[
+"activated",
+"Activate"
+],
+[
+"summon",
+"Create a 1-Cost card at another location"
+],
+[
+"cross_lane",
+"another location"
+],
+[
+"turn_start",
+"as the turn starts"
+]
+],
+"795719": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"junk_cards",
+"Shuffle a Rock into your opponent's deck"
+]
+],
+"796110": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"board_clog",
+"Add a Widow's Kiss to your opponent's side of this location"
+]
+],
+"795769": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"enemy_benefit",
+"Your opponent draws 2 cards"
+]
+],
+"795901": [
+[
+"passive",
+"Ongoing"
+],
+[
+"enemy_benefit",
+"Enemy cards here have +2 Power"
+],
+[
+"aura",
+"Enemy cards here have +2 Power"
+]
+],
+"796264": [
+[
+"lane_rule",
+"After you play a card here"
+],
+[
+"on_ally_play",
+"After you play a card here"
+],
+[
+"enemy_benefit",
+"your opponent gets a Chimichanga"
+]
+],
+"796244": [
+[
+"turn_number",
+"After turn 3"
+],
+[
+"lane_closure",
+"ruin a random location"
+],
+[
+"random_effect",
+"random location"
+]
+],
+"795600": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"zone_control",
+"you're winning this location"
+],
+[
+"lone_unit",
+"this is your only card here"
+],
+[
+"lane_closure",
+"destroy all other locations"
+]
+],
+"796373": [
+[
+"lane_closure",
+"Destroy the other locations"
+]
+],
+"796212": [
+[
+"lane_closure",
+"This is the last turn cards can be played here"
+],
+[
+"play_restriction",
+"last turn cards can be played here"
+]
+]
+}

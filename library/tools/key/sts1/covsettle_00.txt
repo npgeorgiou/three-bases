@@ -1,0 +1,150 @@
+757488 | Artifact | Negates the next debuff.
+   A: [["immunity", "Negates the next debuff"], ["shield", "Negates the next debuff"]]
+   B: [["immunity", "Negates the next debuff"]]
+757542 | Anger | Deal 6 damage. Add a copy of this card into your discard pile.
+   A: [["damage", "Deal 6 damage"], ["copy", "Add a copy of this card into your discard pile"], ["generate_cards", "Add a copy of this card"]]
+   B: [["damage", "Deal 6 damage"], ["copy", "Add a copy of this card into your discard pile"]]
+757554 | Barricade | Block is not removed at the start of your turn.
+   A: [["round_carryover", "Block is not removed at the start of your turn"], ["block_armor", "Block"]]
+   B: [["round_carryover", "Block is not removed at the start of your turn"]]
+757606 | Consume | Gain 2 Focus. Lose 1 Orb slot.
+   A: [["spell_power", "Gain 2 Focus"], ["slots_queue", "Lose 1 Orb slot"]]
+   B: [["stat_gain", "Gain 2 Focus"], ["slots_queue", "Lose 1 Orb slot"]]
+757609 | Corpse Explosion | Apply 6 Poison. When the enemy dies, deal damage equal to its Max HP to ALL enemies.
+   A: [["damage_over_time", "Apply 6 Poison"], ["death_trigger", "When the enemy dies"], ["aoe_damage", "deal damage equal to its Max HP to ALL enemies"], ["stat_condition", "equal to its Max HP"]]
+   B: [["damage_over_time", "Apply 6 Poison"], ["death_trigger", "When the enemy dies"], ["aoe_damage", "deal damage equal to its Max HP to ALL enemies"]]
+757615 | Curse of the Bell | Unplayable. Cannot be removed from your deck.
+   A: [["play_restriction", "Unplayable"], ["junk_cards", "Cannot be removed from your deck"]]
+   B: [["play_restriction", "Unplayable"], ["permanent_loss", "Cannot be removed from your deck"]]
+757658 | Enlightenment | Reduce the cost of all cards in your hand to 1 this turn.
+   A: [["cost_set", "Reduce the cost of all cards in your hand to 1 this turn"], ["temporary_effect", "this turn"]]
+   B: [["cost_set", "Reduce the cost of all cards in your hand to 1 this turn"]]
+757703 | Havoc | Play the top card of your draw pile and Exhaust it.
+   A: [["cast_from_zone", "Play the top card of your draw pile"], ["free_play", "Play the top card"], ["exhaust", "Exhaust it"]]
+   B: [["cast_from_zone", "Play the top card of your draw pile"], ["exhaust", "Exhaust it"]]
+757704 | Headbutt | Deal 9 damage. Put a card from your discard pile on top of your draw pile.
+   A: [["damage", "Deal 9 damage"], ["recycle", "Put a card from your discard pile on top of your draw pile"], ["deck_position", "on top of your draw pile"], ["graveyard", "from your discard pile"]]
+   B: [["damage", "Deal 9 damage"], ["recycle", "Put a card from your discard pile on top of your draw pile"], ["deck_position", "on top of your draw pile"]]
+757739 | Masterful Stab | Costs 1 additional energy for each time you lose HP this combat. Deal 12 damage.
+   A: [["cost_increase", "Costs 1 additional energy for each time you lose HP this combat"], ["count_payoff", "for each time you lose HP this combat"], ["damage", "Deal 12 damage"]]
+   B: [["count_payoff", "for each time you lose HP this combat"], ["damage", "Deal 12 damage"]]
+757742 | Mayhem | At the start of your turn, play the top card of your draw pile.
+   A: [["turn_start", "At the start of your turn"], ["cast_from_zone", "play the top card of your draw pile"], ["free_play", "play the top card"]]
+   B: [["turn_start", "At the start of your turn"], ["cast_from_zone", "play the top card of your draw pile"]]
+757788 | Reboot | Shuffle ALL your cards into your draw pile. Draw 4 cards. Exhaust.
+   A: [["recycle", "Shuffle ALL your cards into your draw pile"], ["draw", "Draw 4 cards"], ["exhaust", "Exhaust"]]
+   B: [["hand_deck_swap", "Shuffle ALL your cards into your draw pile"], ["draw", "Draw 4 cards"], ["exhaust", "Exhaust"]]
+757789 | Rebound | Deal 9 damage. Put the next card you play this turn on top of your draw pile.
+   A: [["damage", "Deal 9 damage"], ["deck_position", "on top of your draw pile"], ["recycle", "Put the next card you play this turn on top of your draw pile"], ["combo_sequence", "the next card you play this turn"]]
+   B: [["damage", "Deal 9 damage"], ["deck_position", "on top of your draw pile"], ["card_quality", "Put the next card you play this turn on top of your draw pile"]]
+757794 | Regret | Unplayable. At the end of your turn, lose HP equal to the number of cards in your hand.
+   A: [["play_restriction", "Unplayable"], ["junk_cards", "Regret"], ["turn_end", "At the end of your turn"], ["life_payment", "lose HP equal to the number of cards in your hand"], ["hand_size", "number of cards in your hand"]]
+   B: [["play_restriction", "Unplayable"], ["junk_cards", "Regret"], ["turn_end", "At the end of your turn"], ["hand_size", "equal to the number of cards in your hand"], ["friendly_fire", "lose HP equal to the number of cards in your hand"]]
+757827 | Stack | Gain Block equal to the number of cards in your discard pile.
+   A: [["block_armor", "Gain Block equal to the number of cards in your discard pile"], ["graveyard", "number of cards in your discard pile"], ["variable_stats", "equal to the number of cards in your discard pile"]]
+   B: [["block_armor", "Gain Block"], ["graveyard", "equal to the number of cards in your discard pile"]]
+757874 | Warcry | Draw 1 card. Put a card from your hand onto the top of your draw pile. Exhaust.
+   A: [["draw", "Draw 1 card"], ["deck_position", "onto the top of your draw pile"], ["card_quality", "Put a card from your hand onto the top of your draw pile"], ["exhaust", "Exhaust"]]
+   B: [["draw", "Draw 1 card"], ["deck_position", "onto the top of your draw pile"], ["exhaust", "Exhaust"]]
+757876 | Weave | Deal 4 damage. Whenever you Scry, return this from the discard pile to your Hand.
+   A: [["damage", "Deal 4 damage"], ["recycle", "return this from the discard pile to your Hand"], ["graveyard", "from the discard pile"], ["selection", "Whenever you Scry"]]
+   B: [["damage", "Deal 4 damage"], ["recycle", "return this from the discard pile to your Hand"], ["graveyard", "from the discard pile"]]
+757895 | Astrolabe | Upon pickup, Transform 3 cards, then Upgrade them.
+   A: [["deck_modification", "Transform 3 cards, then Upgrade them"], ["transform", "Transform 3 cards"], ["random_effect", "Transform 3 cards"], ["upgrade", "Upgrade them"]]
+   B: [["transform", "Transform 3 cards"], ["upgrade", "Upgrade them"], ["deck_modification", "Upon pickup, Transform 3 cards"]]
+757899 | Black Blood | Replaces Burning Blood. At the end of combat, heal 12 HP.
+   A: [["game_end_trigger", "At the end of combat"], ["heal", "heal 12 HP"]]
+   B: [["heal", "heal 12 HP"]]
+757968 | Letter Opener | Every time you play 3 Skills in a single turn, deal 5 damage to ALL enemies.
+   A: [["condition_count", "Every time you play 3 Skills in a single turn"], ["aoe_damage", "deal 5 damage to ALL enemies"], ["combo_sequence", "in a single turn"]]
+   B: [["condition_count", "Every time you play 3 Skills in a single turn"], ["aoe_damage", "deal 5 damage to ALL enemies"]]
+757977 | Meat on the Bone | If your HP is at or below 50% at the end of combat, heal 12 HP.
+   A: [["low_life", "If your HP is at or below 50%"], ["heal", "heal 12 HP"], ["game_end_trigger", "at the end of combat"]]
+   B: [["low_life", "If your HP is at or below 50%"], ["heal", "heal 12 HP"]]
+757983 | Mummified Hand | Whenever you play a Power card, a random card in your hand costs 0 that turn.
+   A: [["on_ally_play", "Whenever you play a Power card"], ["random_effect", "a random card in your hand"], ["cost_set", "costs 0 that turn"]]
+   B: [["on_spell", "Whenever you play a Power card"], ["cost_set", "costs 0 that turn"], ["random_effect", "a random card in your hand"]]
+757985 | Necronomicon | The first Attack played each turn that costs 2 or more is played twice. Upon pickup, obtain a special Curse.
+   A: [["repeat_trigger", "is played twice"], ["cost_condition", "costs 2 or more"], ["junk_cards", "obtain a special Curse"], ["deck_modification", "Upon pickup, obtain a special Curse"]]
+   B: [["repeat_trigger", "is played twice"], ["cost_condition", "costs 2 or more"], ["junk_cards", "obtain a special Curse"]]
+757996 | Omamori | Negate the next 2 Curses you obtain.
+   A: [["shield", "Negate the next 2 Curses you obtain"]]
+   B: [["immunity", "Negate the next 2 Curses you obtain"]]
+758071 | Duality | Whenever you play an Attack, gain 1 temporary Dexterity.
+   A: [["on_ally_play", "Whenever you play an Attack"], ["temporary_buff", "gain 1 temporary Dexterity"]]
+   B: [["on_attack", "Whenever you play an Attack"], ["temporary_buff", "gain 1 temporary Dexterity"]]
+758085 | Elixir | Exhaust any number of cards in your hand.
+   A: [["exhaust", "Exhaust any number of cards in your hand"], ["card_quality", "Exhaust any number of cards"]]
+   B: [["exhaust", "Exhaust any number of cards in your hand"]]
+758091 | Fairy in a Bottle | When you would die, heal to 30% of your Max HP instead and discard this potion.
+   A: [["cheat_death", "When you would die, heal to 30% of your Max HP instead"], ["items_consumables", "discard this potion"]]
+   B: [["cheat_death", "When you would die, heal to 30% of your Max HP instead"], ["self_destruct", "discard this potion"]]
+758096 | Gambler's Brew | Discard any number of cards then draw that many.
+   A: [["discard", "Discard any number of cards"], ["draw", "then draw that many"], ["selection", "Discard any number of cards then draw that many"], ["items_consumables", "Gambler's Brew"]]
+   B: [["discard", "Discard any number of cards"], ["draw", "draw that many"]]
+758100 | Liquid Memories | Choose a card in your discard pile and return it to your hand. It costs 0 this turn.1Choose cards in your discard pile and return them to your hand. They cost 0 this turn.
+   A: [["recycle", "Choose a card in your discard pile and return it to your hand"], ["selection", "Choose a card in your discard pile"], ["cost_set", "It costs 0 this turn"], ["temporary_effect", "this turn"]]
+   B: [["recycle", "Choose a card in your discard pile and return it to your hand"], ["cost_set", "It costs 0 this turn"]]
+758123 | Back Attack | Deals X50% more damage as it is attacking you from behind.
+   A: [["flanking", "attacking you from behind"], ["stat_multiply", "Deals X50% more damage"]]
+   B: [["flanking", "attacking you from behind"], ["damage", "Deals X50% more damage"]]
+758124 | Barricade | Block is not removed at the start of your turn.Block is not removed at the start of its turn.
+   A: [["round_carryover", "Block is not removed at the start of your turn"], ["block_armor", "Block"]]
+   B: [["round_carryover", "Block is not removed at the start of your turn"]]
+758138 | Reactive | Upon receiving attack damage, changes its intent.
+   A: [["on_damaged", "Upon receiving attack damage"], ["telegraphed_threats", "changes its intent"]]
+   B: [["on_damaged", "Upon receiving attack damage"]]
+758153 | Dexterity | Increases Block gained from cards by X.
+   A: [["spell_power", "Increases Block gained from cards by X"], ["stat_gain", "Dexterity"]]
+   B: [["spell_power", "Increases Block gained from cards by X"]]
+758155 | Double Tap | Your next Attack is played twice this turn.Your next
+   A: [["repeat_trigger", "Your next Attack is played twice this turn"], ["temporary_effect", "this turn"]]
+   B: [["repeat_trigger", "Your next Attack is played twice this turn"]]
+758177 | Flight | Receives 50% less attack damage. Cancelled if dealt attack damage X times in one turn.
+   A: [["damage_reduction", "Receives 50% less attack damage"], ["condition_count", "Cancelled if dealt attack damage X times in one turn"]]
+   B: [["damage_reduction", "Receives 50% less attack damage"]]
+758197 | Malleable | Upon receiving attack damage, gains X Block. Block gain increases as
+   A: [["on_damaged", "Upon receiving attack damage"], ["block_armor", "gains X Block"], ["permanent_growth", "Block gain increases"]]
+   B: [["on_damaged", "Upon receiving attack damage"], ["block_armor", "gains X Block"]]
+758199 | Mayhem | At the start of your turn, play the top card of your draw pile.At the start of your turn, play the top X
+   A: [["turn_start", "At the start of your turn"], ["cast_from_zone", "play the top card of your draw pile"], ["free_play", "play the top card"]]
+   B: [["turn_start", "At the start of your turn"], ["cast_from_zone", "play the top card of your draw pile"]]
+758242 | Surrounded | Receive X50% more damage if attacked from behind. Use targeting cards or potions to change your orientation.
+   A: [["flanking", "attacked from behind"], ["target_choice", "Use targeting cards or potions to change your orientation"]]
+   B: [["flanking", "attacked from behind"], ["mark_target", "Receive X50% more damage"]]
+758282 | Fungi Beast | Actions: Bite (attack, 6 damage); Grow (buff)
+   A: [["damage", "Bite (attack, 6 damage)"], ["stat_gain", "Grow (buff)"]]
+   B: [["damage", "Bite (attack, 6 damage)"], ["permanent_growth", "Grow (buff)"]]
+758288 | Gremlin Nob | Actions: Bull Rush (attack, 14 damage); Skull Bash (attack, 6 damage); Bellow (buff)
+   A: [["damage", "Bull Rush (attack, 14 damage)"], ["debuff", "Skull Bash"], ["stat_gain", "Bellow (buff)"]]
+   B: [["damage", "Bull Rush (attack, 14 damage)"], ["damage", "Skull Bash (attack, 6 damage)"], ["buff", "Bellow (buff)"]]
+758290 | Shield Gremlin | Actions: Protect (defend); Shield Bash (attack, 6 damage); Move 99 (escape)
+   A: [["protection", "Protect (defend)"], ["damage", "Shield Bash (attack, 6 damage)"], ["self_destruct", "Move 99 (escape)"]]
+   B: [["block_armor", "Protect (defend)"], ["damage", "Shield Bash (attack, 6 damage)"], ["self_destruct", "Move 99 (escape)"]]
+758294 | Hexaghost | Actions: Divider (attack, -1 damage x6); Tackle (attack, 5 damage x2); Inflame (defend buff, 12 block); Sear (attack debuff, 6 damage); Activate (unknown); Inferno (attack debuff, 2 damage x6)
+   A: [["multi_attack", "-1 damage x6"], ["multi_attack", "5 damage x2"], ["block_armor", "12 block"], ["stat_gain", "Inflame (defend buff"], ["debuff", "Sear (attack debuff"], ["junk_cards", "Sear"], ["delayed", "Activate (unknown)"]]
+   B: [["multi_attack", "Divider (attack, -1 damage x6)"], ["multi_attack", "Tackle (attack, 5 damage x2)"], ["block_armor", "12 block"], ["buff", "defend buff"], ["damage", "Sear (attack debuff, 6 damage)"], ["multi_attack", "Inferno (attack debuff, 2 damage x6)"]]
+758296 | Lagavulin | Actions: Siphon Soul (strong debuff); Strong Atk (attack, 18 damage); Open (stun); Idle (sleep)
+   A: [["debuff", "Siphon Soul (strong debuff)"], ["stat_loss", "Siphon Soul"], ["damage", "Strong Atk (attack, 18 damage)"], ["disable", "Idle (sleep)"]]
+   B: [["debuff", "Siphon Soul (strong debuff)"], ["damage", "Strong Atk (attack, 18 damage)"], ["disable", "Idle (sleep)"]]
+758302 | Reptomancer | Actions: Snake Strike (attack debuff, 13 damage x2); Spawn Dagger (unknown); Big Bite (attack, 30 damage)
+   A: [["multi_attack", "13 damage x2"], ["debuff", "attack debuff"], ["summon", "Spawn Dagger"], ["damage", "Big Bite (attack, 30 damage)"]]
+   B: [["multi_attack", "Snake Strike (attack debuff, 13 damage x2)"], ["summon", "Spawn Dagger"], ["damage", "Big Bite (attack, 30 damage)"]]
+758319 | Spire Spear | Actions: Burn Strike (attack debuff, 5 damage x2); Piercer (buff); Skewer (attack, 10 damage x3)
+   A: [["damage", "Burn Strike (attack debuff, 5 damage x2)"], ["junk_cards", "Burn Strike"], ["multi_attack", "10 damage x3"], ["buff", "Piercer (buff)"]]
+   B: [["multi_attack", "Burn Strike (attack debuff, 5 damage x2)"], ["buff", "Piercer (buff)"], ["multi_attack", "Skewer (attack, 10 damage x3)"]]
+758320 | The Collector | Actions: Spawn (unknown); Fireball (attack, 18 damage); Buff (defend buff, 35 block); Mega Debuff (strong debuff); Revive (unknown)
+   A: [["summon", "Spawn (unknown)"], ["damage", "Fireball (attack, 18 damage)"], ["block_armor", "35 block"], ["stat_gain", "defend buff"], ["debuff", "Mega Debuff (strong debuff)"], ["revive", "Revive (unknown)"]]
+   B: [["summon", "Spawn"], ["damage", "Fireball (attack, 18 damage)"], ["block_armor", "35 block"], ["debuff", "Mega Debuff (strong debuff)"], ["revive", "Revive"]]
+758328 | Augmenter | Choices: Get JAXXED. | Transform 2 cards. | Obtain a special relic.
+   A: [["modal_choice", "Choices: Get JAXXED. | Transform 2 cards."], ["generate_cards", "Get JAXXED"], ["transform", "Transform 2 cards"], ["deck_modification", "Transform 2 cards"]]
+   B: [["modal_choice", "Choices"], ["transform", "Transform 2 cards"], ["deck_modification", "Transform 2 cards"]]
+758329 | Big Fish | Choices: Heal ⅓ Max HP. | Max HP +5. | Obtain a Relic. Become Cursed - Regret.
+   A: [["modal_choice", "Choices: Heal ⅓ Max HP. | Max HP +5."], ["heal", "Heal ⅓ Max HP"], ["stat_gain", "Max HP +5"], ["junk_cards", "Become Cursed - Regret"], ["deck_modification", "Become Cursed - Regret"]]
+   B: [["modal_choice", "Choices"], ["heal", "Heal ⅓ Max HP"], ["stat_gain", "Max HP +5"], ["junk_cards", "Become Cursed - Regret"]]
+758346 | Mind Bloom | Choices: Fight a Boss from Act 1. Obtain a Rare Relic. | Gain 999 Gold. Cursed - 2 Normality. | Heal to full HP. Cursed - Doubt. | Upgrade all Cards. You can no longer heal.
+   A: [["modal_choice", "Choices: Fight a Boss from Act 1."], ["boss_phases", "Fight a Boss from Act 1"], ["shop_gold", "Gain 999 Gold"], ["junk_cards", "Cursed - 2 Normality"], ["heal", "Heal to full HP"], ["upgrade", "Upgrade all Cards"], ["rule_change", "You can no longer heal"]]
+   B: [["modal_choice", "Choices"], ["boss_phases", "Fight a Boss from Act 1"], ["shop_gold", "Gain 999 Gold"], ["junk_cards", "Cursed - 2 Normality"], ["heal", "Heal to full HP"], ["upgrade", "Upgrade all Cards"], ["permanent_loss", "You can no longer heal"]]
+813507 | Dual Wield+ | Choose an Attack or Power card. Add 2 copies of that card into your hand.
+   A: [["copy", "Add 2 copies of that card into your hand"], ["tribal", "Choose an Attack or Power card"]]
+   B: [["copy", "Add 2 copies of that card into your hand"]]

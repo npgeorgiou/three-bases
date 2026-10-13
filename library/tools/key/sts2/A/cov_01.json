@@ -1,0 +1,654 @@
+{
+"758909": [
+[
+"resource_gain",
+"Gain energy"
+],
+[
+"free_play",
+"Sly"
+]
+],
+"758815": [
+[
+"damage",
+"Osty deals 4 damage"
+],
+[
+"on_ally_play",
+"Whenever you play a card that costs 2 energy or more"
+],
+[
+"cost_condition",
+"costs 2 energy or more"
+],
+[
+"recycle",
+"return this to your Hand from the Discard Pile"
+]
+],
+"759426": [
+[
+"death_trigger",
+"When this dies"
+],
+[
+"revive",
+"it revives next turn at full HP"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"759329": [
+[
+"cheat_death",
+"When this creature would be defeated, it instead revives"
+],
+[
+"stat_gain",
+"even stronger"
+]
+],
+"759484": [
+[
+"revive",
+"revives in 2 turns with 25 HP"
+],
+[
+"delayed",
+"in 2 turns"
+],
+[
+"condition_count",
+"If other segments are still alive"
+]
+],
+"759144": [
+[
+"once_per_game",
+"The first time each combat"
+],
+[
+"turn_end",
+"end your turn without playing cards"
+],
+[
+"exhaust",
+"Exhaust your Hand"
+],
+[
+"extra_turn",
+"take an extra turn"
+]
+],
+"759675": [
+[
+"multi_attack",
+"ThrashMove (8 damage x2)"
+],
+[
+"damage",
+"Lunging Bite (28 damage)"
+],
+[
+"junk_cards",
+"Liquify Ground (buff, status)"
+],
+[
+"buff",
+"Salivate (buff, power)"
+]
+],
+"759724": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"upgrade",
+"Choose a Skill to Enchant with Nimble 2"
+]
+],
+"759600": [
+[
+"disable",
+"Sleep (sleep)"
+],
+[
+"buff",
+"Wake (buff, power)"
+],
+[
+"damage",
+"Slashes (attack, 13 damage)"
+]
+],
+"816401": [
+[
+"block_armor",
+"Gain 5 Block"
+],
+[
+"recycle",
+"Put a card from your Discard Pile into your Hand"
+],
+[
+"graveyard",
+"from your Discard Pile"
+]
+],
+"758663": [
+[
+"block_armor",
+"Gain 3 Block"
+],
+[
+"recycle",
+"Put a card from your Discard Pile into your Hand"
+],
+[
+"graveyard",
+"from your Discard Pile"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758762": [
+[
+"block_armor",
+"Gain 9 Block"
+],
+[
+"recycle",
+"Return this card to your Hand"
+]
+],
+"759396": [
+[
+"cost_condition",
+"0 energy Attack"
+],
+[
+"recycle",
+"return it to your Hand"
+]
+],
+"758564": [
+[
+"recycle",
+"Put 3 cards from your Discard Pile into your Hand"
+],
+[
+"graveyard",
+"from your Discard Pile"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"759080": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"copy",
+"play a copy of your last played Attack or Skill"
+],
+[
+"combo_sequence",
+"your last played Attack or Skill"
+]
+],
+"759126": [
+[
+"copy",
+"Create an Ethereal copy of the first Attack you play each turn"
+],
+[
+"combo_sequence",
+"the first Attack you play each turn"
+]
+],
+"758985": [
+[
+"deck_modification",
+"Whenever you add a card to your Deck"
+],
+[
+"copy",
+"add one additional copy"
+]
+],
+"759548": [
+[
+"steal",
+"Steals Gold"
+],
+[
+"on_attack",
+"when Attacking"
+]
+],
+"759215": [
+[
+"turn_number",
+"At the end of turn 7"
+],
+[
+"aoe_damage",
+"deal 52 damage to ALL enemies"
+]
+],
+"759722": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"heal",
+"Heal to full HP"
+],
+[
+"junk_cards",
+"Obtain Royal Poison"
+],
+[
+"life_payment",
+"Lose 11 HP"
+],
+[
+"random_effect",
+"Obtain a random Relic"
+]
+],
+"758818": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"aoe_damage",
+"deal 5 damage to ALL enemies"
+],
+[
+"permanent_growth",
+"increase this damage by 5"
+]
+],
+"759057": [
+[
+"exhaust",
+"Whenever you Exhaust a card"
+],
+[
+"ping",
+"deal 1 damage to a random enemy"
+],
+[
+"random_effect",
+"a random enemy"
+]
+],
+"758733": [
+[
+"damage",
+"Deal 1 damage"
+],
+[
+"count_payoff",
+"for each card drawn this combat"
+]
+],
+"759517": [
+[
+"draw",
+"Whenever you draw a card during your turn"
+],
+[
+"aoe_damage",
+"deal 1 damage to ALL enemies"
+],
+[
+"ping",
+"1 damage"
+]
+],
+"759253": [
+[
+"on_kill",
+"Whenever you kill an Elite"
+],
+[
+"upgrade",
+"Upgrade 4 random cards"
+],
+[
+"random_effect",
+"4 random cards"
+]
+],
+"758994": [
+[
+"death_trigger",
+"Whenever a non-Minion enemy dies to Doom"
+],
+[
+"heal",
+"heal 3 HP"
+]
+],
+"758638": [
+[
+"damage",
+"Deal 4 damage"
+],
+[
+"recycle",
+"Put a card from your Discard Pile into your Hand"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758736": [
+[
+"damage",
+"Deal 10 damage"
+],
+[
+"recycle",
+"Put up to 2 cards from your Discard Pile into your Hand"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"816340": [
+[
+"start_of_game",
+"Innate"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"recycle",
+"put a random Attack from your Discard Pile into your Hand"
+],
+[
+"random_effect",
+"a random Attack"
+],
+[
+"upgrade",
+"Upgrade it"
+]
+],
+"816384": [
+[
+"damage",
+"Deal 6 damage"
+],
+[
+"recycle",
+"Put a card from your Discard Pile into your Hand"
+]
+],
+"758455": [
+[
+"damage",
+"Deal 3 damage"
+],
+[
+"recycle",
+"return this to your Hand"
+],
+[
+"delayed",
+"At the start of your next turn"
+]
+],
+"759436": [
+[
+"copy",
+"Add a copy of the third Attack you play each turn into your Hand"
+],
+[
+"combo_sequence",
+"the third Attack you play each turn"
+]
+],
+"758578": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"transform",
+"Transform 1 card in your Hand"
+]
+],
+"758973": [
+[
+"on_play",
+"Upon pickup"
+],
+[
+"transform",
+"Transform a starter card into an ancient version"
+],
+[
+"deck_modification",
+"Transform a starter card"
+]
+],
+"759714": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"permanent_loss",
+"Lose} ALL of {IsMultiplayer:their|your} Gold"
+],
+[
+"transform",
+"Transform 2 cards"
+],
+[
+"stat_gain",
+"Gain 5 Max HP"
+],
+[
+"team_play",
+"Everyone loses"
+]
+],
+"759152": [
+[
+"transform",
+"Transform ALL Strikes and Defends"
+],
+[
+"deck_modification",
+"Transform ALL Strikes and Defends"
+]
+],
+"758935": [
+[
+"mark_target",
+"Apply 3 Vulnerable"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"759483": [
+[
+"on_attack",
+"Whenever Attacks deal damage"
+],
+[
+"debuff",
+"apply that much Doom"
+]
+],
+"758789": [
+[
+"debuff",
+"Apply 2 Weak"
+],
+[
+"mark_target",
+"Apply 2 Vulnerable"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758929": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"draw",
+"draw 1 card"
+],
+[
+"discard",
+"discard 1 card"
+]
+],
+"759064": [
+[
+"combat_start",
+"At the start of each combat"
+],
+[
+"discard",
+"discard any number of cards"
+],
+[
+"draw",
+"draw that many"
+]
+],
+"816349": [
+[
+"retain",
+"Retain"
+],
+[
+"discard",
+"Discard your Hand"
+],
+[
+"draw",
+"draw that many cards"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758827": [
+[
+"damage",
+"Deal 7 damage"
+],
+[
+"draw",
+"Draw 4 cards"
+],
+[
+"discard",
+"Discard all cards drawn this way"
+],
+[
+"cost_condition",
+"do not cost 0 energy"
+]
+],
+"758902": [
+[
+"block_armor",
+"Gain 8 Block"
+],
+[
+"discard",
+"Discard 1 card"
+]
+],
+"759333": [
+[
+"immunity",
+"Negates debuffs"
+]
+],
+"758616": [
+[
+"movement",
+"Get farther away"
+],
+[
+"in_hand_buff",
+"Increase the cost of this card by 1"
+]
+],
+"758727": [
+[
+"slots_queue",
+"Gain 1 Orb Slot"
+],
+[
+"draw",
+"Draw 1 card"
+]
+],
+"759345": [
+[
+"rule_change",
+"Cards cost an additional Energy this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"758639": [
+[
+"transform",
+"Transform any number of cards in your Hand into Minion Sacrifice"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"759151": [
+[
+"sacrifice",
+"sacrifice card rewards to Pael"
+],
+[
+"condition_count",
+"Every 2 sacrifices"
+],
+[
+"items_consumables",
+"obtain a Relic"
+]
+]
+}

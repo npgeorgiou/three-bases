@@ -1,0 +1,150 @@
+758431 | Banshee's Cry | Deal 33 damage to ALL enemies. Costs 2 energy less for each Ethereal card played this combat.
+   A: [["aoe_damage", "Deal 33 damage to ALL enemies"], ["count_payoff", "for each Ethereal card played this combat"], ["cost_reduction", "Costs 2 energy less"]]
+   B: [["aoe_damage", "Deal 33 damage to ALL enemies"], ["cost_reduction", "Costs 2 energy less for each Ethereal card played this combat"], ["count_payoff", "for each Ethereal card played this combat"], ["high_cost", "Banshee's Cry"]]
+758478 | Byrdonis Egg | Can be hatched at a Rest Site. Unplayable.
+   A: [["rest_phase", "Can be hatched at a Rest Site"], ["transform", "hatched"], ["play_restriction", "Unplayable"]]
+   B: [["rest_phase", "hatched at a Rest Site"], ["play_restriction", "Unplayable"]]
+758492 | Child of the Stars | Whenever you spend star, gain 2 Block for each star spent.
+   A: [["block_armor", "gain 2 Block for each star spent"], ["condition_count", "for each star spent"]]
+   B: [["block_armor", "gain 2 Block for each star spent"], ["condition_count", "for each star spent"], ["multiple_resources", "Whenever you spend star"]]
+758497 | Cleanse | Summon 3. Exhaust 1 card from your Draw Pile.
+   A: [["summon", "Summon 3"], ["exhaust", "Exhaust 1 card from your Draw Pile"]]
+   B: [["summon", "Summon 3"], ["self_mill", "Exhaust 1 card from your Draw Pile"]]
+758507 | Conqueror | Forge 3. Sovereign Blade deals double damage to the enemy this turn.
+   A: [["stat_multiply", "deals double damage"], ["temporary_buff", "this turn"]]
+   B: [["stat_multiply", "deals double damage"], ["temporary_buff", "this turn"], ["upgrade", "Forge 3"]]
+758564 | Dredge | Put 3 cards from your Discard Pile into your Hand. Exhaust.
+   A: [["recycle", "Put 3 cards from your Discard Pile into your Hand"], ["graveyard", "from your Discard Pile"], ["exhaust", "Exhaust"]]
+   B: [["recycle", "Put 3 cards from your Discard Pile into your Hand"], ["exhaust", "Exhaust"]]
+758616 | Frantic Escape | Get farther away. Increase Sandpit by 1. Increase the cost of this card by 1.
+   A: [["movement", "Get farther away"], ["in_hand_buff", "Increase the cost of this card by 1"]]
+   B: [["cost_increase", "Increase the cost of this card by 1"]]
+758626 | Genetic Algorithm | Gain 1 Block. Permanently increase this card's Block by 3. Exhaust.
+   A: [["block_armor", "Gain 1 Block"], ["in_hand_buff", "Permanently increase this card's Block by 3"], ["exhaust", "Exhaust"]]
+   B: [["block_armor", "Gain 1 Block"], ["in_hand_buff", "Permanently increase this card's Block by 3"], ["deck_modification", "Permanently increase"], ["exhaust", "Exhaust"]]
+758634 | Go for the Eyes | Deal 3 damage. If the enemy intends to attack, apply 1 Weak.
+   A: [["damage", "Deal 3 damage"], ["telegraphed_threats", "If the enemy intends to attack"], ["debuff", "apply 1 Weak"]]
+   B: [["damage", "Deal 3 damage"], ["stat_loss", "apply 1 Weak"], ["information", "If the enemy intends to attack"]]
+758650 | Haze | Apply 4 Poison to ALL enemies. Sly.
+   A: [["damage_over_time", "Apply 4 Poison"], ["aoe_damage", "to ALL enemies"], ["free_play", "Sly"]]
+   B: [["damage_over_time", "Apply 4 Poison to ALL enemies"], ["scope_multi", "ALL enemies"], ["free_play", "Sly"]]
+758663 | Hologram | Gain 3 Block. Put a card from your Discard Pile into your Hand. Exhaust.
+   A: [["block_armor", "Gain 3 Block"], ["recycle", "Put a card from your Discard Pile into your Hand"], ["graveyard", "from your Discard Pile"], ["exhaust", "Exhaust"]]
+   B: [["block_armor", "Gain 3 Block"], ["recycle", "Put a card from your Discard Pile into your Hand"], ["exhaust", "Exhaust"]]
+758666 | Huddle Up | ALL players draw 2 cards. Exhaust.
+   A: [["draw", "ALL players draw 2 cards"], ["symmetric_effect", "ALL players draw"], ["team_play", "ALL players"], ["exhaust", "Exhaust"]]
+   B: [["draw", "ALL players draw 2 cards"], ["team_play", "ALL players"], ["exhaust", "Exhaust"]]
+758701 | Loop | At the start of your turn, trigger the passive ability of your rightmost Orb.
+   A: [["turn_start", "At the start of your turn"], ["repeat_trigger", "trigger the passive ability of your rightmost Orb"], ["slots_queue", "your rightmost Orb"]]
+   B: [["turn_start", "At the start of your turn"], ["repeat_trigger", "trigger the passive ability of your rightmost Orb"], ["positional", "rightmost Orb"]]
+758714 | Melancholy | Gain 13 Block. Reduce this card's cost by energy whenever ANYONE dies.
+   A: [["block_armor", "Gain 13 Block"], ["in_hand_buff", "Reduce this card's cost by energy whenever ANYONE dies"], ["death_count", "whenever ANYONE dies"]]
+   B: [["block_armor", "Gain 13 Block"], ["in_hand_buff", "Reduce this card's cost by energy whenever ANYONE dies"], ["death_trigger", "whenever ANYONE dies"]]
+758719 | Mimic | Gain Block equal to the Block on another player. Exhaust.
+   A: [["block_armor", "Gain Block"], ["variable_stats", "equal to the Block on another player"], ["team_play", "another player"], ["exhaust", "Exhaust"]]
+   B: [["block_armor", "Gain Block equal to the Block on another player"], ["team_play", "another player"], ["exhaust", "Exhaust"]]
+758727 | Modded | Gain 1 Orb Slot. Draw 1 card. Increase this card's cost by 1.
+   A: [["slots_queue", "Gain 1 Orb Slot"], ["draw", "Draw 1 card"]]
+   B: [["draw", "Draw 1 card"], ["resource_gain", "Gain 1 Orb Slot"]]
+758789 | Putrefy | Apply 2 Weak. Apply 2 Vulnerable. Exhaust.
+   A: [["debuff", "Apply 2 Weak"], ["mark_target", "Apply 2 Vulnerable"], ["exhaust", "Exhaust"]]
+   B: [["stat_loss", "Apply 2 Weak"], ["mark_target", "Apply 2 Vulnerable"], ["exhaust", "Exhaust"]]
+758804 | Rebound | Deal 9 damage. Put the next card you play this turn on top of your Draw Pile.
+   A: [["damage", "Deal 9 damage"], ["deck_position", "on top of your Draw Pile"], ["recycle", "Put the next card you play this turn on top of your Draw Pile"]]
+   B: [["damage", "Deal 9 damage"], ["deck_position", "Put the next card you play this turn on top of your Draw Pile"], ["card_quality", "on top of your Draw Pile"]]
+758818 | Rolling Boulder | At the start of your turn, deal 5 damage to ALL enemies and increase this damage by 5.
+   A: [["turn_start", "At the start of your turn"], ["aoe_damage", "deal 5 damage to ALL enemies"], ["permanent_growth", "increase this damage by 5"]]
+   B: [["turn_start", "At the start of your turn"], ["aoe_damage", "deal 5 damage to ALL enemies"], ["snowball", "increase this damage by 5"]]
+758880 | Stack | Gain Block equal to the number of cards in your Discard Pile.
+   A: [["block_armor", "Gain Block"], ["graveyard", "number of cards in your Discard Pile"], ["condition_count", "equal to the number of cards"]]
+   B: [["block_armor", "Gain Block"], ["graveyard", "equal to the number of cards in your Discard Pile"]]
+758911 | Tank | Take double damage from enemies. Allies take half damage from enemies.
+   A: [["taunt", "Allies take half damage from enemies"], ["damage_reduction", "Allies take half damage"], ["team_play", "Allies"]]
+   B: [["bodyguard", "Allies take half damage from enemies"], ["friendly_fire", "Take double damage from enemies"], ["team_play", "Allies"]]
+758969 | Alchemical Coffer | Upon pickup, gain 4 potion slots filled with random potions.
+   A: [["on_play", "Upon pickup"], ["items_consumables", "gain 4 potion slots filled with random potions"], ["random_effect", "random potions"]]
+   B: [["items_consumables", "gain 4 potion slots filled with random potions"]]
+758973 | Archaic Tooth | Upon pickup, Transform a starter card into an ancient version.
+   A: [["on_play", "Upon pickup"], ["transform", "Transform a starter card into an ancient version"], ["deck_modification", "Transform a starter card"]]
+   B: [["transform", "Transform a starter card into an ancient version"], ["deck_modification", "Upon pickup"]]
+759003 | Burning Blood | At the end of combat, heal 6 HP.
+   A: [["heal", "heal 6 HP"]]
+   B: [["turn_end", "At the end of combat"], ["heal", "heal 6 HP"]]
+759015 | The Chosen Cheese | At the end of combat, gain 1 Max HP.
+   A: [["stat_gain", "gain 1 Max HP"]]
+   B: [["turn_end", "At the end of combat"], ["stat_gain", "gain 1 Max HP"]]
+759047 | Mango??? | Upon pickup, raise your Max HP by 3.
+   A: [["stat_gain", "raise your Max HP by 3"], ["on_play", "Upon pickup"]]
+   B: [["stat_gain", "raise your Max HP by 3"]]
+759067 | Girya | You can now gain Strength at Rest Sites. (3 times max)
+   A: [["rest_phase", "gain Strength at Rest Sites"], ["stat_gain", "gain Strength"], ["condition_count", "(3 times max)"]]
+   B: [["rest_phase", "at Rest Sites"], ["stat_gain", "gain Strength"]]
+759080 | History Course | At the start of your turn, play a copy of your last played Attack or Skill.
+   A: [["turn_start", "At the start of your turn"], ["copy", "play a copy of your last played Attack or Skill"], ["combo_sequence", "your last played Attack or Skill"]]
+   B: [["turn_start", "At the start of your turn"], ["copy", "play a copy of your last played Attack or Skill"], ["combo_sequence", "your last played Attack or Skill"], ["free_play", "play a copy"]]
+759116 | Meat on the Bone | If your HP is at or below 50% at the end of combat, heal 12 HP.
+   A: [["low_life", "If your HP is at or below 50%"], ["heal", "heal 12 HP"]]
+   B: [["low_life", "If your HP is at or below 50%"], ["turn_end", "at the end of combat"], ["heal", "heal 12 HP"]]
+759126 | Music Box | Create an Ethereal copy of the first Attack you play each turn.
+   A: [["copy", "Create an Ethereal copy of the first Attack you play each turn"], ["combo_sequence", "the first Attack you play each turn"]]
+   B: [["copy", "Create an Ethereal copy of the first Attack you play each turn"], ["on_spell", "the first Attack you play each turn"]]
+759149 | Pael's Tears | If you end your turn with unspent energy, gain an additional 2 energy next turn.
+   A: [["resource_banking", "If you end your turn with unspent energy, gain an additional 2 energy next turn"], ["turn_end", "end your turn"]]
+   B: [["resource_banking", "If you end your turn with unspent energy, gain an additional 2 energy next turn"], ["resource_gain", "gain an additional 2 energy"]]
+759151 | Pael's Wing | You may sacrifice card rewards to Pael. Every 2 sacrifices, obtain a Relic.
+   A: [["sacrifice", "sacrifice card rewards to Pael"], ["condition_count", "Every 2 sacrifices"], ["items_consumables", "obtain a Relic"]]
+   B: [["sacrifice", "sacrifice card rewards to Pael"], ["condition_count", "Every 2 sacrifices"], ["random_effect", "obtain a Relic"]]
+759200 | Seal of Gold | At the start of your turn, spend 5 Gold to gain energy.
+   A: [["turn_start", "At the start of your turn"], ["resource_conversion", "spend 5 Gold to gain energy"]]
+   B: [["turn_start", "At the start of your turn"], ["resource_conversion", "spend 5 Gold to gain energy"], ["resource_gain", "gain energy"]]
+759271 | Bottled Potential | Shuffle ALL your cards into your Draw Pile. Draw 5 cards.
+   A: [["recycle", "Shuffle ALL your cards into your Draw Pile"], ["draw", "Draw 5 cards"]]
+   B: [["hand_deck_swap", "Shuffle ALL your cards into your Draw Pile"], ["draw", "Draw 5 cards"]]
+759290 | Foul Potion | Deal 12 damage to ALL players and enemies. Can be thrown at the Merchant for 100 Gold instead.
+   A: [["aoe_damage", "Deal 12 damage to ALL players and enemies"], ["friendly_fire", "ALL players"], ["flexibility", "Can be thrown at the Merchant for 100 Gold instead"], ["shop_gold", "for 100 Gold"]]
+   B: [["aoe_damage", "Deal 12 damage to ALL players and enemies"], ["friendly_fire", "ALL players"], ["shop_gold", "thrown at the Merchant for 100 Gold"], ["items_consumables", "Foul Potion"]]
+759321 | Star Potion | Gain 3 stars.
+   A: [["resource_gain", "Gain 3 stars"]]
+   B: [["resource_gain", "Gain 3 stars"], ["multiple_resources", "stars"]]
+759336 | Back Attack | Deals 50% more damage when it is attacking you from behind.
+   A: [["flanking", "attacking you from behind"], ["stat_gain", "Deals 50% more damage"]]
+   B: [["flanking", "attacking you from behind"], ["stat_multiply", "Deals 50% more damage"]]
+759338 | Barricade | Block is not removed at the start of this creature's turn.
+   A: [["block_armor", "Block is not removed at the start of this creature's turn"], ["resource_banking", "Block is not removed"]]
+   B: [["block_armor", "Block is not removed at the start of this creature's turn"], ["round_carryover", "Block is not removed"]]
+759344 | Blur | Block is not removed at the start of your next turn.
+   A: [["block_armor", "Block is not removed at the start of your next turn"], ["resource_banking", "Block is not removed"]]
+   B: [["block_armor", "Block is not removed at the start of your next turn"], ["round_carryover", "Block is not removed"]]
+759345 | Borrowed Time | Cards cost an additional Energy this turn.
+   A: [["rule_change", "Cards cost an additional Energy this turn"], ["temporary_effect", "this turn"]]
+   B: [["cost_increase", "Cards cost an additional Energy this turn"], ["temporary_effect", "this turn"]]
+759352 | Chains of Binding | The first 3 cards drawn each turn are Afflicted with Bound.
+   A: [["hand_disruption", "The first 3 cards drawn each turn are Afflicted with Bound"], ["condition_count", "The first 3 cards drawn"]]
+   B: [["hand_disruption", "The first 3 cards drawn each turn are Afflicted with Bound"]]
+759371 | Dampen | While Magi Knight is alive, ALL your cards are Downgraded.
+   A: [["debuff", "ALL your cards are Downgraded"], ["hand_disruption", "ALL your cards are Downgraded"], ["condition_count", "While Magi Knight is alive"]]
+   B: [["aura", "While Magi Knight is alive"], ["hand_disruption", "ALL your cards are Downgraded"]]
+759396 | Feral | The first time you play a 0 energy Attack each turn, return it to your Hand.
+   A: [["cost_condition", "0 energy Attack"], ["recycle", "return it to your Hand"]]
+   B: [["recycle", "return it to your Hand"], ["cost_condition", "0 energy Attack"], ["once_per_game", "The first time you play a 0 energy Attack each turn"]]
+759436 | Juggling | Add a copy of the third Attack you play each turn into your Hand.
+   A: [["copy", "Add a copy of the third Attack you play each turn into your Hand"], ["combo_sequence", "the third Attack you play each turn"]]
+   B: [["copy", "Add a copy of the third Attack you play each turn into your Hand"], ["condition_count", "the third Attack you play each turn"]]
+759477 | Prep Time | At the start of your turn, gain 4 Vigor.
+   A: [["turn_start", "At the start of your turn"], ["temporary_buff", "gain 4 Vigor"]]
+   B: [["turn_start", "At the start of your turn"], ["permanent_growth", "gain 4 Vigor"]]
+759515 | Soar | Receives 50% less attack damage until it lands.
+   A: [["damage_reduction", "Receives 50% less attack damage"], ["delayed", "until it lands"]]
+   B: [["damage_reduction", "Receives 50% less attack damage until it lands"]]
+759548 | Thievery | Steals Gold when Attacking.
+   A: [["steal", "Steals Gold"], ["on_attack", "when Attacking"]]
+   B: [["steal", "Steals Gold"], ["on_attack", "when Attacking"], ["shop_gold", "Gold"]]
+759577 | Nimble | Increases Block gained from this card by X.
+   A: [["in_hand_buff", "Increases Block gained from this card by X"]]
+   B: [["upgrade", "Increases Block gained from this card by X"], ["block_armor", "Block"]]
+759652 | Queen | Actions: Off with Your Head (3 damage x5); Execution (15 damage); Puppet Strings (debuff, power); You Are Mine (debuff, power, power, power); Burn Bright for Me (buff, defend, power, block 20); Off with Your Head (multi_attack, 3 damage); Execution (attack, 15 damage); Enrage (buff, power)
+   A: [["multi_attack", "Off with Your Head (3 damage x5)"], ["damage", "Execution (15 damage)"], ["debuff", "Puppet Strings (debuff, power)"], ["block_armor", "block 20"], ["buff", "Enrage (buff, power)"]]
+   B: [["multi_attack", "Off with Your Head (3 damage x5)"], ["damage", "Execution (15 damage)"], ["steal", "You Are Mine (debuff, power, power, power)"], ["block_armor", "block 20"], ["buff", "Enrage (buff, power)"]]
+759696 | Brain Leech | Choices: Rip the Leech Off: Lose 5 HP. Gain a Colorless card reward. | Share Knowledge: Choose 1 of 5 random cards to add to your Deck.
+   A: [["modal_choice", "Choices"], ["life_payment", "Lose 5 HP"], ["deck_modification", "Gain a Colorless card reward"], ["selection", "Choose 1 of 5 random cards to add to your Deck"], ["random_effect", "5 random cards"]]
+   B: [["modal_choice", "Choices"], ["life_payment", "Lose 5 HP"], ["generate_cards", "Gain a Colorless card reward"], ["selection", "Choose 1 of 5 random cards to add to your Deck"], ["random_effect", "random cards"], ["deck_modification", "add to your Deck"]]

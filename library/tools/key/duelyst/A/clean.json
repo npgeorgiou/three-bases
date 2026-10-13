@@ -2370,5 +2370,1614 @@
 "tribal",
 "Vespyr"
 ]
+],
+"741767": [
+[
+"stat_gain",
+"+2 Attack"
+],
+[
+"temporary_buff",
+"this turn"
+],
+[
+"scope_multi",
+"all friendly minions"
+]
+],
+"741898": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"stat_gain",
+"+2 Attack"
+],
+[
+"temporary_buff",
+"this turn"
+],
+[
+"adjacency",
+"nearby friendly minion"
+]
+],
+"741692": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"stat_multiply",
+"double damage"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"742200": [
+[
+"ranged",
+"Ranged"
+],
+[
+"stat_multiply",
+"double damage to Generals"
+]
+],
+"742340": [
+[
+"stat_multiply",
+"Double the Attack and Health buffs"
+],
+[
+"scope_multi",
+"friendly minions"
+]
+],
+"742325": [
+[
+"cheat_death",
+"Rebirth"
+],
+[
+"on_attack",
+"After this minion attacks"
+],
+[
+"transform",
+"turn it into an Egg"
+]
+],
+"741794": [
+[
+"debuff",
+"It can no longer counterattack"
+]
+],
+"742330": [],
+"742329": [
+[
+"polymorph",
+"Transform ANY minion into a 4/5 Ursaplomb"
+]
+],
+"741615": [
+[
+"on_attack",
+"Whenever this attacks"
+],
+[
+"silence",
+"dispels that enemy"
+]
+],
+"742077": [
+[
+"on_ally_play",
+"Whenever you summon a minion"
+],
+[
+"random_ability",
+"gains a random keyword ability"
+]
+],
+"741980": [
+[
+"reactions",
+"Whenever your opponent draws a card"
+],
+[
+"random_ability",
+"gains a random keyword ability"
+]
+],
+"742025": [
+[
+"transform",
+"transforms into a powerful minion"
+],
+[
+"quests",
+"if its hidden condition is met"
+]
+],
+"741971": [
+[
+"transform",
+"transforms into a powerful minion"
+],
+[
+"quests",
+"if its hidden condition is met"
+]
+],
+"741927": [
+[
+"ranged",
+"Ranged"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"regeneration",
+"restore 2 Health to all nearby friendly minions"
+],
+[
+"adjacency",
+"nearby friendly minions"
+]
+],
+"741941": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"regeneration",
+"fully heal this minion"
+],
+[
+"stat_gain",
+"switch its Attack and Health"
+]
+],
+"741609": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"regeneration",
+"fully heal this minion"
+]
+],
+"742256": [
+[
+"copy",
+"put a copy of it into your action bar"
+]
+],
+"741655": [
+[
+"on_damaged",
+"Whenever this minion takes damage"
+],
+[
+"generate_cards",
+"put a Phoenix Fire into your action bar"
+]
+],
+"741946": [
+[
+"card_quality",
+"replace an additional card each turn"
+]
+],
+"742086": [
+[
+"damage",
+"deal 2 damage to a random enemy"
+],
+[
+"random_effect",
+"random enemy"
+],
+[
+"ping",
+"deal 2 damage"
+]
+],
+"741685": [
+[
+"tutor",
+"Draw 3 spell cards from your deck"
+]
+],
+"741994": [
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"tutor",
+"Draw two minions with Dying Wish from your deck"
+]
+],
+"742044": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"hand_deck_swap",
+"Replace each card in your action bar"
+]
+],
+"742089": [
+[
+"free_play",
+"summon it on a random nearby space"
+],
+[
+"random_effect",
+"random nearby space"
+],
+[
+"friendly_fire",
+"Your General takes 2 damage"
+]
+],
+"741647": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"generate_cards",
+"Put a Spellsword into your action bar"
+]
+],
+"741665": [
+[
+"generate_cards",
+"Put a Spellsword into your action bar"
+]
+],
+"742087": [
+[
+"evasion",
+"Flying"
+],
+[
+"stat_gain",
+"+2 Attack"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"742248": [
+[
+"ping",
+"Deal 1 damage to an enemy minion"
+],
+[
+"resource_gain",
+"permanently gain 1 mana crystal"
+]
+],
+"741834": [
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"resource_gain",
+"Permanently gain 1 mana crystal"
+]
+],
+"742279": [
+[
+"delayed",
+"Build: (2)"
+],
+[
+"resource_gain",
+"gain +2 mana this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"742088": [
+[
+"in_hand_buff",
+"it costs 3 less and gains +3/+3"
+]
+],
+"741603": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"cost_set",
+"costs 0"
+]
+],
+"742142": [
+[
+"cost_set",
+"Costs 0"
+],
+[
+"count_payoff",
+"if you've cast all three Scion's Wish spells this game"
+]
+],
+"741654": [
+[
+"haste",
+"Rush"
+],
+[
+"turn_start",
+"at the beginning of your turn"
+],
+[
+"return_to_hand",
+"Return this minion to your action bar"
+]
+],
+"742079": [
+[
+"haste",
+"Rush"
+]
+],
+"741555": [
+[
+"haste",
+"Can move and attack immediately"
+]
+],
+"741557": [
+[
+"immobilize",
+"Stops nearby enemy minions and Generals from moving"
+],
+[
+"taunt",
+"They must attack this first"
+],
+[
+"adjacency",
+"nearby enemy minions"
+]
+],
+"741559": [
+[
+"taunt",
+"Ranged attackers must attack this minion first"
+]
+],
+"741997": [
+[
+"untap",
+"reactivate"
+],
+[
+"steal",
+"take control of it until the end of your turn"
+],
+[
+"temporary_effect",
+"until the end of your turn"
+]
+],
+"741853": [
+[
+"untap",
+"Reactivate friendly minions"
+],
+[
+"territory_trigger",
+"on your opponent's starting side of the battlefield"
+]
+],
+"741678": [
+[
+"untap",
+"Reactivate an exhausted friendly minion"
+],
+[
+"stat_condition",
+"3 or less Attack"
+]
+],
+"741719": [
+[
+"untap",
+"Reactivate your General"
+]
+],
+"741597": [
+[
+"on_kill",
+"Whenever this minion destroys an enemy"
+],
+[
+"untap",
+"reactivate it"
+]
+],
+"741950": [
+[
+"placement_rules",
+"Airdrop"
+],
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"forced_movement",
+"Push ALL nearby minions and Generals to random spaces"
+],
+[
+"random_effect",
+"random spaces"
+]
+],
+"742285": [
+[
+"swap",
+"Switch positions between a friendly minion and your General"
+]
+],
+"741683": [
+[
+"swap",
+"Switch positions between ANY two minions"
+]
+],
+"741824": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"swap",
+"Switch positions with ANY other minion"
+]
+],
+"741988": [
+[
+"return_to_hand",
+"Return a friendly Obelysk to your action bar"
+],
+[
+"cost_set",
+"reduce its cost to 0"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"tribal",
+"Obelysk"
+]
+],
+"741987": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"bounce_enemy",
+"Return a nearby minion to its action bar"
+],
+[
+"terrain",
+"Turn that space into Exhuming Sand"
+]
+],
+"741998": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"lifesteal",
+"Steal 2 Health from the enemy General"
+],
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"return_to_hand",
+"Return Desolator to your action bar"
+]
+],
+"741821": [
+[
+"territory_trigger",
+"Infiltrate"
+],
+[
+"death_trigger",
+"When this minion dies"
+],
+[
+"return_to_hand",
+"return it to your action bar"
+]
+],
+"741920": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"steal",
+"Gain a copy of a random spell from your opponent's action bar"
+],
+[
+"copy",
+"Gain a copy"
+],
+[
+"random_effect",
+"random spell"
+]
+],
+"741865": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"copy",
+"Put a copy of the most recently cast spell into your action bar"
+]
+],
+"742234": [
+[
+"lifesteal",
+"steals 1 Health from the enemy General"
+],
+[
+"condition_count",
+"for each other friendly Arcanyst"
+],
+[
+"tribal",
+"Arcanyst"
+]
+],
+"741856": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"aoe_damage",
+"deals 2 damage to each enemy minion around them"
+],
+[
+"adjacency",
+"around them"
+]
+],
+"741661": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"friendly_fire",
+"deal 2 damage to your General"
+]
+],
+"741905": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"direct_damage",
+"deal 4 damage to the enemy General"
+],
+[
+"permanent_growth",
+"this minion gains +4 Attack"
+]
+],
+"741787": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"aoe_damage",
+"deal 1 damage to ALL other minions"
+],
+[
+"friendly_fire",
+"ALL other minions"
+],
+[
+"ping",
+"deal 1 damage"
+]
+],
+"742090": [
+[
+"taunt",
+"Provoke"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"aoe_damage",
+"deal 2 damage to each enemy minion around this one"
+],
+[
+"adjacency",
+"around this one"
+]
+],
+"741878": [
+[
+"on_enemy_enter",
+"Whenever your opponent summons a minion"
+],
+[
+"direct_damage",
+"deal 1 damage to the enemy General"
+],
+[
+"ping",
+"deal 1 damage"
+]
+],
+"741970": [
+[
+"ping",
+"Deal 1 damage to a minion"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"delayed",
+"at end of turn"
+]
+],
+"741656": [
+[
+"on_damaged",
+"Whenever this minion takes damage"
+],
+[
+"ping",
+"deal 1 damage to a random enemy minion"
+],
+[
+"random_effect",
+"random enemy minion"
+]
+],
+"741658": [
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"direct_damage",
+"deal 1 damage to enemy General"
+],
+[
+"heal",
+"restore 1 Health to your General"
+]
+],
+"741910": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"ping",
+"Deal 1 damage to an enemy"
+]
+],
+"741680": [
+[
+"aoe_damage",
+"Deal 1 damage to all enemy minions"
+]
+],
+"741983": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"board_wipe",
+"destroy this and all enemy minions"
+],
+[
+"self_destruct",
+"destroy this"
+]
+],
+"742155": [
+[
+"board_wipe",
+"Destroy ALL non-Structure minions"
+]
+],
+"741804": [
+[
+"board_wipe",
+"Destroy ALL minions with 3 or less Attack"
+],
+[
+"stat_condition",
+"3 or less Attack"
+]
+],
+"741963": [
+[
+"destroy",
+"Destroy ALL minions in a 3x3 area"
+],
+[
+"area_templates",
+"3x3 area"
+],
+[
+"terrain",
+"turn their spaces into Hallowed Ground"
+]
+],
+"741852": [
+[
+"bounce_enemy",
+"Return ANY minion to its action bar"
+]
+],
+"742305": [
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"generate_cards",
+"Shuffle a MECHAZ0R into your deck"
+]
+],
+"741968": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"polymorph",
+"transform all nearby enemy minions into 0/2 Panddos"
+],
+[
+"adjacency",
+"nearby enemy minions"
+]
+],
+"742140": [
+[
+"transform",
+"Transform all minions in your action bar and deck into 0-cost Gore Horns"
+],
+[
+"cost_set",
+"0-cost"
+],
+[
+"draw",
+"Draw 3 cards"
+]
+],
+"741801": [
+[
+"stat_gain",
+"Your General becomes 10/10"
+]
+],
+"741715": [
+[
+"attack_zero",
+"Lower a minion's Attack to 0"
+],
+[
+"temporary_effect",
+"until your next turn"
+]
+],
+"741797": [
+[
+"disable",
+"Stun enemy minions"
+],
+[
+"area_templates",
+"2x2 area"
+]
+],
+"742004": [
+[
+"movement",
+"Teleport ANY minion to friendly Shadow Creep"
+],
+[
+"forced_movement",
+"Teleport ANY minion"
+],
+[
+"terrain",
+"Shadow Creep"
+]
+],
+"742339": [
+[
+"delayed",
+"Build: (2)"
+],
+[
+"immobilize",
+"enemy minions and Generals can only move 1 space"
+]
+],
+"741871": [
+[
+"taunt",
+"Ranged attackers must attack this minion first"
+]
+],
+"741532": [
+[
+"shield",
+"Cancel the first damage taken each turn"
+]
+],
+"742034": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"enemy_benefit",
+"Your opponent summons two Komodo Chargers"
+]
+],
+"741702": [
+[
+"haste",
+"Rush"
+],
+[
+"self_destruct",
+"Ephemeral"
+]
+],
+"741769": [
+[
+"sacrifice",
+"Destroy a friendly minion"
+],
+[
+"revive",
+"re-summon it on the same space"
+],
+[
+"delayed",
+"At the end of your turn"
+],
+[
+"stat_gain",
+"+1/+1"
+]
+],
+"741586": [
+[
+"sacrifice",
+"Destroy a friendly minion"
+],
+[
+"heal",
+"restore 5 Health to your General"
+]
+],
+"742066": [
+[
+"shield",
+"Forcefield"
+],
+[
+"suppress",
+"exhaust it"
+],
+[
+"symmetric_effect",
+"Whenever ANY player summons a minion with Rush"
+]
+],
+"742019": [
+[
+"protection",
+"Minions cannot attack your General"
+]
+],
+"741795": [
+[
+"combo_sequence",
+"If the next card you play this turn is a minion"
+],
+[
+"cost_reduction",
+"costs 2 less"
+],
+[
+"friendly_fire",
+"takes 2 damage"
+]
+],
+"742166": [
+[
+"polymorph",
+"Transform ALL minions that cost 2 or less into 1/1 Wraithlings"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"742139": [
+[
+"copy",
+"Summon a copy of a friendly minion"
+],
+[
+"summon",
+"Summon a copy"
+],
+[
+"cost_condition",
+"costs 2 or less"
+]
+],
+"742349": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"mill",
+"Remove all minions that cost 2 or less from each player's deck"
+],
+[
+"symmetric_effect",
+"each player's deck"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"742035": [
+[
+"play_restriction",
+"cannot cast spells that cost 2 or less"
+],
+[
+"symmetric_effect",
+"BOTH players"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"741564": [
+[
+"taunt",
+"Provoke"
+],
+[
+"multi_attack",
+"Celerity"
+],
+[
+"stat_gain",
+"+1/+1"
+],
+[
+"count_payoff",
+"for each time you healed anything this game"
+]
+],
+"741798": [
+[
+"death_trigger",
+"Whenever a friendly minion dies this turn"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"742351": [
+[
+"death_trigger",
+"Whenever a friendly minion is destroyed"
+],
+[
+"donate",
+"your opponent takes control of this minion"
+]
+],
+"742201": [
+[
+"death_trigger",
+"Whenever a friendly Battle Pet dies"
+],
+[
+"tribal",
+"Battle Pet"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"741574": [
+[
+"flanking",
+"Backstab (2)"
+]
+],
+"741669": [
+[
+"flanking",
+"Backstab (2)"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"742133": [
+[
+"flanking",
+"Backstab: (1)"
+]
+],
+"742297": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"steal",
+"Take control of enemy minions"
+],
+[
+"stat_condition",
+"2 or less Attack"
+],
+[
+"rows",
+"on this row"
+]
+],
+"741806": [
+[
+"destroy",
+"Destroy ANY minion with the lowest Attack"
+],
+[
+"stat_condition",
+"lowest Attack"
+]
+],
+"741947": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"steal",
+"Take control of a nearby enemy minion"
+],
+[
+"stat_condition",
+"2 or less Attack"
+],
+[
+"adjacency",
+"nearby enemy minion"
+]
+],
+"741638": [
+[
+"stat_gain",
+"+Attack equal to its Health"
+],
+[
+"variable_stats",
+"equal to its Health"
+]
+],
+"742326": [
+[
+"stat_gain",
+"+Attack equal to your General's Attack"
+],
+[
+"variable_stats",
+"equal to your General's Attack"
+]
+],
+"742296": [
+[
+"variable_stats",
+"Health becomes equal to its Attack"
+]
+],
+"741542": [
+[
+"death_trigger",
+"When this dies"
+],
+[
+"cheat_death",
+"hatches into the same minion"
+],
+[
+"summon",
+"leaves behind a 0/1 Egg"
+],
+[
+"delayed",
+"before your next turn"
+]
+],
+"741838": [
+[
+"summon",
+"Summon four joined 0/1 Walls"
+],
+[
+"taunt",
+"Provoke"
+],
+[
+"null_body",
+"0/1 Walls"
+]
+],
+"742020": [
+[
+"summon",
+"Summon five joined 0/1 Walls"
+],
+[
+"death_trigger",
+"when destroyed"
+],
+[
+"aoe_damage",
+"deal 2 damage to nearby enemies"
+],
+[
+"adjacency",
+"nearby enemies"
+]
+],
+"742284": [
+[
+"polymorph",
+"Transform a nearby enemy minion into a 0/2 Panddo"
+],
+[
+"destroy",
+"destroy it"
+],
+[
+"draw",
+"draw to fill your action bar"
+],
+[
+"hand_size",
+"fill your action bar"
+],
+[
+"adjacency",
+"nearby enemy minion"
+]
+],
+"742333": [
+[
+"summon",
+"Summon three 2/2 Vespyr Winter Maerids"
+],
+[
+"placement_rules",
+"on any column"
+]
+],
+"741633": [
+[
+"silence",
+"Dispel a 2x2 area"
+],
+[
+"area_templates",
+"2x2 area"
+]
+],
+"742008": [
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"aoe_damage",
+"deal 1 damage to ALL minions"
+],
+[
+"friendly_fire",
+"ALL minions"
+],
+[
+"ping",
+"deal 1 damage"
+]
+],
+"742046": [
+[
+"taunt",
+"Provoke"
+],
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"summon",
+"Each player summons three Spriggin Kin"
+],
+[
+"symmetric_effect",
+"Each player"
+]
+],
+"742179": [
+[
+"summon",
+"Summon four copies of a random Battle Pet"
+],
+[
+"random_effect",
+"random Battle Pet"
+],
+[
+"tribal",
+"Battle Pet"
+],
+[
+"area_templates",
+"2x2 area"
+]
+],
+"742164": [
+[
+"damage",
+"Deal 2 damage to a minion"
+],
+[
+"generate_cards",
+"put a random Battle Pet into your action bar"
+],
+[
+"random_effect",
+"random Battle Pet"
+]
+],
+"742151": [
+[
+"generate_cards",
+"Put 3 random Battle Pets into your action bar"
+],
+[
+"random_effect",
+"random Battle Pets"
+]
+],
+"741607": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"summon",
+"Summon a 1/2 Crestfallen"
+],
+[
+"taunt",
+"Provoke"
+]
+],
+"741911": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"damage",
+"Deal 3 damage to ANY minion in front of this"
+],
+[
+"positional",
+"in front of this"
+]
+],
+"742068": [
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"aoe_damage",
+"Deal 3 damage to all enemies in front of this minion"
+],
+[
+"area_templates",
+"in front of this minion"
+]
+],
+"741623": [
+[
+"summon",
+"Summon a 1/2 Crestfallen"
+],
+[
+"taunt",
+"Provoke"
+]
+],
+"742271": [
+[
+"aoe_damage",
+"Deal 3 damage to enemies"
+],
+[
+"heal",
+"restore 3 Health to friendly minions and Generals"
+],
+[
+"area_templates",
+"in a row"
+]
+],
+"741726": [
+[
+"summon",
+"Summon a Wind Dervish"
+],
+[
+"haste",
+"Rush"
+],
+[
+"condition_count",
+"in front of each enemy minion and General"
+]
+],
+"741982": [
+[
+"summon",
+"Summon Dervish"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"aoe_damage",
+"deal 6 damage to all enemy minions in this row"
+],
+[
+"rows",
+"in this row"
+]
+],
+"741548": [
+[
+"autonomous_units",
+"Activates at the start of your turn and moves to attack the nearest enemy"
+],
+[
+"turn_start",
+"at the start of your turn"
+],
+[
+"targeting_rules",
+"nearest enemy"
+]
+],
+"741526": [
+[
+"multi_attack",
+"activate twice per turn"
+]
+],
+"741646": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"summon",
+"Summon a Heartseeker"
+]
+],
+"741734": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"ping",
+"Deal 1 damage to a minion"
+],
+[
+"terrain",
+"the space turns into Shadow Creep"
+]
+],
+"741775": [
+[
+"hero_power",
+"Bloodbound Spell"
+],
+[
+"summon",
+"Summon a Ripper Egg"
+]
+],
+"742347": [
+[
+"on_kill",
+"Whenever this minion destroys an enemy"
+],
+[
+"tutor",
+"summon a different Mech minion from your deck"
+],
+[
+"summon",
+"summon a different Mech minion"
+],
+[
+"tribal",
+"Mech"
+]
+],
+"741772": [
+[
+"stat_gain",
+"Your General gains +2 Attack"
+],
+[
+"on_kill",
+"Whenever your General destroys an enemy"
+],
+[
+"heal",
+"restore 2 Health to your General"
+]
+],
+"742195": [
+[
+"stat_gain",
+"Your General gains +3 Attack"
+],
+[
+"on_kill",
+"Whenever your General destroys a minion"
+],
+[
+"summon",
+"summon a 3/3 Blazing Spine Wall"
+]
+],
+"742184": [
+[
+"territory_trigger",
+"Infiltrate"
+],
+[
+"on_attack",
+"Whenever this minion damages a General"
+],
+[
+"generate_cards",
+"put a random Battle Pet into your action bar"
+],
+[
+"random_effect",
+"random Battle Pet"
+]
+],
+"742121": [
+[
+"draw",
+"Draw 2 additional cards"
+],
+[
+"turn_end",
+"at the end of your turn"
+]
+],
+"742102": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"permanent_growth",
+"give all friendly minions +1 health"
+],
+[
+"scope_multi",
+"all friendly minions"
+]
+],
+"741781": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"damage",
+"deal 4 damage to a random minion or General"
+],
+[
+"random_effect",
+"random minion or General"
+],
+[
+"friendly_fire",
+"a random minion or General"
+]
 ]
 }
