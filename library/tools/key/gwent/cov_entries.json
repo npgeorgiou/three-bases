@@ -1,0 +1,1037 @@
+[
+{
+"id": 756282,
+"name": "Bekker's Dark Mirror",
+"text": "Choose a unit. If it's boosted, damage it by double the amount boosted. If it's damaged, boost it by double the amount damaged."
+},
+{
+"id": 756216,
+"name": "Insanity",
+"text": "If you have insufficient Coins, damage this unit by its Fee amount, ignoring its Armor, to trigger its Fee ability.\\nNote: Insanity cannot be used if it would destroy the unit and works only if damage is inflicted."
+},
+{
+"id": 756947,
+"name": "Piercing Missile",
+"text": "Damage an enemy unit by 4, ignoring its Armor."
+},
+{
+"id": 757382,
+"name": "Ulula",
+"text": "Order: Damage a unit by 2. Whenever an enemy unit takes damage from your Warriors, damage it by 1, ignoring its Armor."
+},
+{
+"id": 756568,
+"name": "Reckless Flurry",
+"text": "Order: Split 4 damage randomly between all enemy units, ignoring their Armor. Charges: 2 This ability adds 16 provisions to your deck's provisions limit."
+},
+{
+"id": 756324,
+"name": "Vicovaro Novice",
+"text": "Deploy (Ranged): Draw a card, then move a card from your hand to the top of your deck."
+},
+{
+"id": 756825,
+"name": "Artis",
+"text": "Deploy: Play a 4-provision Cultist from your deck. Ranged: Whenever a unit is played, damage it by half its power."
+},
+{
+"id": 757293,
+"name": "Lydia van Bredevoort",
+"text": "Deploy (Melee): Create and play a bronze special card from your opponent's faction. Deploy (Ranged): Play a bronze special card from your opponent's graveyard."
+},
+{
+"id": 756464,
+"name": "Menno Coehoorn",
+"text": "Deploy (Ranged): Play a Tactic from your deck."
+},
+{
+"id": 756746,
+"name": "Fisher King",
+"text": "Deploy (Ranged): Move any card from your deck to the top."
+},
+{
+"id": 756924,
+"name": "Novigradian Justice",
+"text": "Play a bronze Dwarf or Crownsplitter unit from your deck. If you already control a Dwarf or Crownsplitter, also Spawn a Cleaver's Muscle on your Melee row."
+},
+{
+"id": 757237,
+"name": "Cleaver",
+"text": "Intimidate. Deploy: Spawn and play Shakedown. Increase this card's Intimidate by 1 for each adjacent Crownsplitter. Fee 4: Spawn a Cleaver's Muscle on this row."
+},
+{
+"id": 757462,
+"name": "Ship Ballista",
+"text": "Order: Damage an enemy unit by 2, then boost a random non-boosted unit in your deck by the excess damage dealt. Increase the damage for each time you used an Order ability this turn."
+},
+{
+"id": 757238,
+"name": "Whoreson Junior",
+"text": "Insanity. Deploy: Damage a boosted enemy unit by 6. Gain a Coin for each point of excess damage dealt. Devotion: Damage an enemy unit instead. Fee 3: Destroy an enemy unit with 3 or less power."
+},
+{
+"id": 756845,
+"name": "Blood Money",
+"text": "Order: Damage an enemy unit by 6, then gain Coins equal to any excess damage dealt. Whenever an enemy unit with Bounty is destroyed, increase the damage by 1. If the Order is used up, refresh it and set its damage to 1 instead. This ability adds 16 provisions to your deck's provisions limit."
+},
+{
+"id": 756975,
+"name": "Natural Selection",
+"text": "Damage an enemy unit by 4, then Spawn a Drone on a random allied row for each point of excess damage dealt."
+},
+{
+"id": 813671,
+"name": "Curse of Wrath",
+"text": "Order: Damage an enemy unit by 6.\nDeathblow: Deal excess damage to adjacent units."
+},
+{
+"id": 756181,
+"name": "Shield",
+"text": "Status that blocks the next instance of damage dealt to a unit."
+},
+{
+"id": 756889,
+"name": "Prophet Lebioda",
+"text": "Whenever you play a unit next to Prophet Lebioda, give it a Shield."
+},
+{
+"id": 757024,
+"name": "Engineering Solution",
+"text": "Order: Boost an allied unit by 4 and give it Shield."
+},
+{
+"id": 756348,
+"name": "Primordial D'ao",
+"text": "Shield. Deploy: Boost self by [0]. Increase this value by 1 for each Construct you played this game."
+},
+{
+"id": 756801,
+"name": "Runeword",
+"text": "Create and play a bronze Northern Realms Mage and give it a Shield."
+},
+{
+"id": 756709,
+"name": "Gabor Zigrin",
+"text": "Deploy (Melee): Gain Resilience. Deploy (Ranged): Gain Immunity. Whenever you play a Dwarf, boost self by 1."
+},
+{
+"id": 757177,
+"name": "Saber-Tooth Tiger",
+"text": "Zeal. Order: Transform self into Saber-Tooth Tiger: Stealth."
+},
+{
+"id": 756194,
+"name": "Spring",
+"text": "Manual activation of a face-down Trap. Spring is activated automatically on a Trap played next to an Artifact. Cards with Spring are flipped over after use."
+},
+{
+"id": 757457,
+"name": "Trapmaker",
+"text": "Deploy: Boost self by 3 for each face-down allied Trap."
+},
+{
+"id": 756664,
+"name": "Yoana",
+"text": "Order: Heal an allied unit by 2. Charge: 1 Whenever an adjacent unit takes damage, gain 1 Charge."
+},
+{
+"id": 756225,
+"name": "Reset",
+"text": "Restore a unit to its base power. (2020 definition)"
+},
+{
+"id": 756566,
+"name": "Battle Trance",
+"text": "Order: Spawn and play Mardroeme. Whenever you play an Alchemy card, Heal a random allied unit by 1. This ability adds 17 provisions to your deck's provisions limit."
+},
+{
+"id": 756232,
+"name": "Regis: Higher Vampire",
+"text": "Order (Melee): Drain an enemy unit by the amount of boost it has."
+},
+{
+"id": 757353,
+"name": "Regis: Reborn",
+"text": "Deploy: Drain an enemy unit by 3. At the end of your turn, while in hand or deck, if there is an enemy unit with Bleeding, increase own base power by 1."
+},
+{
+"id": 757194,
+"name": "Bear Witcher Adept",
+"text": "Deploy: Damage self by 4. At the end of your turn, Heal self by 1. While not damaged, gain 1 Armor instead."
+},
+{
+"id": 756563,
+"name": "Heymaey Flaminica",
+"text": "At the end of your turn, Heal all other units on this row by 1."
+},
+{
+"id": 756831,
+"name": "Svalblod Cultist",
+"text": "At the end of your turn, Heal the unit to the left by 1 and damage the unit to the right by 1."
+},
+{
+"id": 756295,
+"name": "Thaler",
+"text": "Formation. Order: If neither player has passed and your opponent's hand is not full, both players draw a card."
+},
+{
+"id": 756697,
+"name": "Imlerith",
+"text": "Deploy (Melee): Draw a card, then Discard a card. If the Discarded card was a unit, boost self by its power."
+},
+{
+"id": 756446,
+"name": "Heymaey Skald",
+"text": "Deploy (Ranged): Draw a card, then Discard a card."
+},
+{
+"id": 756484,
+"name": "Daerlan Soldier",
+"text": "Deploy: If you control a Soldier, Summon all copies of self from your deck to this row. At the start of the game, Spawn a copy of self in your deck."
+},
+{
+"id": 756420,
+"name": "Ermion",
+"text": "Deploy (Ranged): Play an Alchemy card from your deck."
+},
+{
+"id": 756696,
+"name": "Yennefer: Divination",
+"text": "Deploy (Ranged): Reveal a random unit from your deck, then boost an allied unit by its power."
+},
+{
+"id": 756244,
+"name": "Lambert",
+"text": "Deploy (Adrenaline 4): Summon Eskel and Vesemir from your deck."
+},
+{
+"id": 756242,
+"name": "Eskel",
+"text": "Deploy (Adrenaline 4): Summon Vesemir and Lambert from your deck."
+},
+{
+"id": 757397,
+"name": "Sigi Reuven: Mastermind",
+"text": "Deploy: Look at Collusion and a random unit from each Gang from your deck, then play 1. Tribute 9: Play 2 instead. Tribute costs 2 less for each unique Gang category you control."
+},
+{
+"id": 756869,
+"name": "Off the Books",
+"text": "Order: Gain 2 Coins. Charges: 4 Your Tributes cost 1 Coin less. This ability adds 15 provisions to your deck's provisions limit."
+},
+{
+"id": 813691,
+"name": "Explosives",
+"text": "Doomed.\nFee 3: Damage an enemy unit by 3, then destroy self.\nAt the end of your turn, reduce the Fee cost by 1. If the Fee cost was 0, destroy self instead."
+},
+{
+"id": 756863,
+"name": "Madame Luiza",
+"text": "Intimidate. Tribute 3: Gain Zeal. Order: Your next Tribute this round costs 0."
+},
+{
+"id": 757376,
+"name": "Golden Nekker",
+"text": "Deploy: If your starting deck does not have cards with a provision cost of 10 or more, play the top unit, special, and artifact from your deck. Ciri: Nova and Golden Nekker are excluded from this condition."
+},
+{
+"id": 756897,
+"name": "Excommunication",
+"text": "Banish an allied unit, then play the top card from your deck. If the target was a Firesworn, look at the top 3 cards from your deck and play 1 of them instead."
+},
+{
+"id": 756480,
+"name": "Cantarella",
+"text": "Disloyal. Deploy: Play the top card from your opponent's deck."
+},
+{
+"id": 756261,
+"name": "Decoy",
+"text": "Shuffle an allied unit on the battlefield into your deck, then play the top unit from your deck."
+},
+{
+"id": 756783,
+"name": "Palmerin de Launfal",
+"text": "Deploy: Choose an unboosted enemy unit, then play the top card from your deck and boost that unit by that card's provision cost. If you control Milton de Peyrac-Peyran, you may choose from the top 3 cards of your deck instead."
+},
+{
+"id": 757440,
+"name": "Baccal\u00e0",
+"text": "Resilience. Deploy: Spawn Imperial Fleet to the left of self and Imperial Marine to the right of self. Order: Boost 2 allied units by 2 and swap their positions."
+},
+{
+"id": 756570,
+"name": "Imperial Formation",
+"text": "Order: Boost 2 allied units by 1 and swap their positions, then give 1 Armor to each targeted Soldier. Charges: 4 This ability adds 16 provisions to your deck's provision limit."
+},
+{
+"id": 757348,
+"name": "Ardal aep Dahy",
+"text": "Deploy (Ranged): If neither player has passed and your opponent's hand is not full, move a non-Doomed enemy unit with power up to 2 to your opponent's hand, then draw a card. Increase the maximum value by the number of Tactics in your starting deck."
+},
+{
+"id": 757337,
+"name": "Orchard Mantrap",
+"text": "Deploy (Melee): Consume an allied unit. This unit triggers Thrive an additional time. Deploy (Ranged): Infuse 2 allied units with \"Thrive\"."
+},
+{
+"id": 756486,
+"name": "Spotter",
+"text": "Deploy: Look at the top 3 units in your opponent's deck, then choose one and gain Armor equal to its power. Order: Lose all Armor and look at the top units in your deck up to that amount, then choose one and gain Vitality equal to its power. If it's a bronze Soldier, boost self by its power instead."
+},
+{
+"id": 757148,
+"name": "Shaping Nature",
+"text": "Echo. Choose one: Boost an allied unit by 7 and give it Veil. Boost an allied unit by 9. Boost an allied unit by 6 and give it Vitality (6)."
+},
+{
+"id": 757101,
+"name": "Red Riders",
+"text": "Choose one: Spawn Frost on an enemy row for 4 turns. Spawn Frost on an enemy row for 2 turns, then replay a bronze Wild Hunt unit. Spawn Frost on both enemy rows for 2 turns."
+},
+{
+"id": 756708,
+"name": "Glustyworp",
+"text": "Deploy: Destroy all units with 1 power. For each unit destroyed, boost self by 2."
+},
+{
+"id": 756384,
+"name": "Schirr\u00fa",
+"text": "Zeal. Order: Destroy all other units with power equal to Schirr\u00fa."
+},
+{
+"id": 757362,
+"name": "Troll Porter",
+"text": "Deploy (Melee): Banish all cards in your hand, then draw as many cards."
+},
+{
+"id": 756337,
+"name": "Mourntart",
+"text": "Deploy: Banish all units in your graveyard, then boost self by 1 for each."
+},
+{
+"id": 756472,
+"name": "Assire var Anahid",
+"text": "Deploy (Melee): Shuffle a card from your opponent's graveyard into their deck. Deploy (Ranged): Shuffle a card from your graveyard into your deck."
+},
+{
+"id": 756722,
+"name": "Strays of Spalla",
+"text": "Deploy: Shuffle a gold card from your hand into your deck, then draw a bronze card and boost self by 4. Bonded: Boost self by 4 instead."
+},
+{
+"id": 756763,
+"name": "Traveling Merchant",
+"text": "Deploy (Ranged): Shuffle a card from your hand into your deck, then draw a card."
+},
+{
+"id": 756291,
+"name": "Triss: Butterflies",
+"text": "Deploy (Ranged): Shuffle a card from your hand into your deck, then draw a unit of your choice and boost it by 3."
+},
+{
+"id": 757432,
+"name": "Hive Mind",
+"text": "Choose 4 different bronze Kikimore units. While in your graveyard, the first time you Spawn a Drone on the battlefield each allied turn, transform it into the next chosen Kikimore unit."
+},
+{
+"id": 757115,
+"name": "Drummond Berserker",
+"text": "At the end of your turn, damage self and a random enemy unit by 1. Berserk 3: Transform into a Bear Abomination."
+},
+{
+"id": 757282,
+"name": "Bloody Mistress",
+"text": "Sabbath: At the end of your turn, Spawn a Gernichora's Fruit on each sides of this unit and transform self into Gernichora without changing power."
+},
+{
+"id": 756827,
+"name": "Arnvald",
+"text": "Deploy: Transform a damaged allied unit into a Bear Abomination."
+},
+{
+"id": 757158,
+"name": "Cosimo Malaspina",
+"text": "Deploy: Transform adjacent units into random units that cost 1 provision more."
+},
+{
+"id": 757469,
+"name": "Enraged Cyclops",
+"text": "Timer 7: Set own base power to 10. Deploy: Reduce the Timer by 1 for each Ogroid in your hand."
+},
+{
+"id": 757482,
+"name": "Princess Adda",
+"text": "Deploy (Devotion): Gain Immunity. The first time a Cursed unit enters the battlefield during your turn, boost self by its base power."
+},
+{
+"id": 757033,
+"name": "Mask of Uroboros",
+"text": "Order: Draw a card, then Discard a card and Spawn 2 Crows on your Melee row."
+},
+{
+"id": 756422,
+"name": "Birna Bran",
+"text": "Deploy: Draw up to 2 cards, then Discard the same number of cards."
+},
+{
+"id": 756898,
+"name": "Arena Ghoul",
+"text": "Deploy: At the end of this turn, destroy self. Tribute 1: Cancel the Deploy ability."
+},
+{
+"id": 756443,
+"name": "Dimun Pirate",
+"text": "Deploy: Move the top card from your deck to your graveyard. If you control a Ship, cancel this ability."
+},
+{
+"id": 757105,
+"name": "Aen Elle Conqueror",
+"text": "Veil. Deploy: Destroy self. Devotion: Cancel the Deploy ability."
+},
+{
+"id": 756169,
+"name": "Bleeding",
+"text": "Status that damages the unit by 1 at the end of its turn. Note: Bleeding turns can accumulate, 1 turn of Bleeding cancels out 1 turn of Vitality. Bleeding ignores armor."
+},
+{
+"id": 757244,
+"name": "Bride of the Sea",
+"text": "Deploy: Play an Alchemy card from your graveyard with a provision cost 4 or less. Increase the cost by the total duration of Rain and Storm on your opponent's side."
+},
+{
+"id": 757374,
+"name": "Conjurer's Candle",
+"text": "Resilience. Profit 4. Fee 1: Boost an allied unit by 1. Increase the boost by this card's Fee cost. Each time you pay this card's Fee, increase its cost by 1, up to 9."
+},
+{
+"id": 756554,
+"name": "Infiltrator",
+"text": "Melee: At the end of the round, shuffle self into your opponent's deck."
+},
+{
+"id": 757417,
+"name": "Sandor de Baccal\u00e0",
+"text": "Deploy: Shuffle a card from your deck into your opponent's deck. Order: Spawn a Drone at the bottom of your opponent's deck and set its power to the difference between the number of cards in the players' decks. Whenever a card enters or leaves your opponent's deck, boost self by 1."
+},
+{
+"id": 756704,
+"name": "Prince Villem",
+"text": "Disloyal. Deploy: Play a random gold card from your deck."
+},
+{
+"id": 756469,
+"name": "Tibor Eggebracht",
+"text": "Immunity. At the end of your turn, Infuse a random enemy unit with \"Whenever this unit receives a status, damage self by 1\". Whenever this card enters the battlefield, your opponent draws a card. If your opponent has already passed or their hand is full, damage self by 12 instead."
+},
+{
+"id": 756360,
+"name": "Griffin",
+"text": "Deploy: Destroy an allied unit on this row. If there are no targets, destroy self."
+},
+{
+"id": 757230,
+"name": "Eist Tuirseach",
+"text": "Veteran. Deploy (Bloodthirst 3): Draw a card, then Discard a card. Whenever you Discard a non-Neutral unit during your turn, Summon it from your graveyard to this row. Counter: 2 Devotion: Also works whenever a non-Neutral unit enters your graveyard during your turn."
+},
+{
+"id": 756451,
+"name": "Tuirseach Skirmisher",
+"text": "When this unit is Discarded, Summon it from your graveyard to your Melee row."
+},
+{
+"id": 757323,
+"name": "Bjorn Stormursson",
+"text": "Veteran. Deploy: Clash with an enemy unit. Order (Bloodthirst 2): Discard a card, then move self back to your hand."
+},
+{
+"id": 756424,
+"name": "Coral",
+"text": "Zeal. Order: Draw a card, then Discard a card. Whenever you Discard a card, damage a random enemy unit by 2."
+},
+{
+"id": 756989,
+"name": "Covenant of Steel",
+"text": "Defender. Berserk 6: At the end of your turn, gain 1 Armor."
+},
+{
+"id": 756954,
+"name": "Donimir of Troy",
+"text": "Defender. Shield."
+},
+{
+"id": 756981,
+"name": "Ffion var Gaernel",
+"text": "Defender. Deploy: Spawn and play Battle Preparation."
+},
+{
+"id": 757001,
+"name": "Figgis Merluzzo",
+"text": "Defender. Order: Move self to the other row."
+},
+{
+"id": 813614,
+"name": "Scarab",
+"text": "Defender. Doomed."
+},
+{
+"id": 757102,
+"name": "Wild Hunt Bruiser",
+"text": "Deploy: Move an enemy unit to the other row. If the target moves to a row affected by Frost, damage it by 2."
+},
+{
+"id": 756600,
+"name": "Whale Harpooner",
+"text": "Deploy: Move an enemy unit to the other row, then damage it by the number of units on that row."
+},
+{
+"id": 757059,
+"name": "Trained Hawk",
+"text": "Harmony. Deploy (Melee): Damage an enemy unit by 2. Deploy (Ranged): Move a unit to the other row."
+},
+{
+"id": 756531,
+"name": "White Frost",
+"text": "Order: Move an enemy unit to the other row and Spawn Frost on its row for 2 turns. Charges: 2 Whenever you play a Wild Hunt unit, if there's Frost on the opposite row, boost it by 1. This ability adds 15 provisions to your deck's provisions limit."
+},
+{
+"id": 756574,
+"name": "Guerilla Tactics",
+"text": "Order: Move a unit to the other row. If it's an enemy, damage it by 1; if it's an ally, boost it by 3. Charges: 3 This ability adds 15 provisions to your deck's provisions limit."
+},
+{
+"id": 756743,
+"name": "Syanna",
+"text": "Order: Repeat the Deploy ability of the next unit you play during this turn."
+},
+{
+"id": 757333,
+"name": "Squire",
+"text": "Order: Boost the next unit you play by 2. If it is a Knight, also Infuse it with \"At the end of your turn, boost self by 1\"."
+},
+{
+"id": 757384,
+"name": "Brokvar Warrior",
+"text": "Deploy: Damage an enemy unit by 3. If the target is damaged, repeat the Deploy ability with a different target and decrease the damage by 1."
+},
+{
+"id": 757456,
+"name": "Hostage Taker",
+"text": "Deploy: Seize an enemy unit with 0 or less power, then transform the Seized unit into an Elven Deadeye without changing its power. The maximum power is increased by 1 for each Trap you played this round."
+},
+{
+"id": 756345,
+"name": "Colossal Ifrit",
+"text": "Zeal. Order: Damage 3 adjacent enemy units by [0]. Increase this value by 1 for each Construct you played this game. Cooldown: 3"
+},
+{
+"id": 756370,
+"name": "Frenzied D'ao",
+"text": "Deploy: Play [1] Rock Barrage(s) from your deck. Increase this value by 1 for each Construct you played this game. If no Rock Barrages are available, move an enemy unit to the other row instead."
+},
+{
+"id": 756639,
+"name": "Saesenthessis: Blaze",
+"text": "Lineage. While in hand, deck, or on the battlefield, whenever an enemy unit is destroyed or Banished during your turn, boost self by 1."
+},
+{
+"id": 756435,
+"name": "Savage Bear",
+"text": "Deploy: Gain 1 Charge for each Savage Bear in your graveyard. Zeal. Order: Give an enemy unit Bleeding (2). Charge: 1"
+},
+{
+"id": 756361,
+"name": "Vran Warrior",
+"text": "Whenever a unit is destroyed during your turn, boost self by 1."
+},
+{
+"id": 757390,
+"name": "Kennet and Gar",
+"text": "Formation. Order: Destroy an enemy unit with 2 or less power. Whenever you Spawn a Soldier, increase the limit by 1."
+},
+{
+"id": 756591,
+"name": "Poor Fucking Infantry",
+"text": "Deploy: Spawn a Left Fucking Flank and a Right Fucking Flank on each side of this unit. Bonded: Also boost self by 3."
+},
+{
+"id": 756985,
+"name": "Ard Feainn Light Cavalry",
+"text": "Flanking. Barricade: At the end of your turn, damage the last unit played by your opponent by 1."
+},
+{
+"id": 757442,
+"name": "The Catriona",
+"text": "Flanking. Order: Poison a non-Poisoned unit with at least 1 status. At the end of your turn, gain a Charge. Charge: 1"
+},
+{
+"id": 757445,
+"name": "Imperial Marine",
+"text": "Flanking. Zeal. Order: Choose a card from your deck. At the end of your turn, move it up by one position in your deck. If it's on the top, boost self by 1 instead."
+},
+{
+"id": 756494,
+"name": "Alba Pikeman",
+"text": "Flanking. Order: Give an enemy unit Bleeding (1). Charges: 0 At the end of your turn, gain 1 Charge. If this unit has at least 3 Charges, gain 1 Armor instead."
+},
+{
+"id": 757085,
+"name": "Master Mirror",
+"text": "Veil. Deploy: Transform the leftmost card in your hand into a random legendary card from your faction that was not in your starting deck. Repeat this ability whenever you play the rightmost card from your hand."
+},
+{
+"id": 756970,
+"name": "Yghern",
+"text": "Deploy: Gain Armor equal to the number of cards in your hand. If this unit has no Armor, destroy self."
+},
+{
+"id": 756307,
+"name": "Carlo Varese",
+"text": "Deploy (Melee): Damage an enemy unit by 1 for each card in your hand."
+},
+{
+"id": 756552,
+"name": "Alpha Werewolf",
+"text": "Deploy (Melee): Boost a Beast in your hand by the number of cards in your hand. Deploy (Ranged): Boost all allied Beasts by 1."
+},
+{
+"id": 757411,
+"name": "Temple of Melitele: Congregation",
+"text": "Doomed. Immunity. Resilience. Deploy: Create a legendary unit from your faction that is not in your starting deck 3 times, then shuffle them into your deck. Order: Draw a unit of your choice and boost it by your hand size, then shuffle a card back into your deck. While in hand or deck, evolve after you win a round."
+},
+{
+"id": 756946,
+"name": "Iron Falcon Troubadour",
+"text": "Deploy: Spawn a 1-power Locked copy of a Bonded unit from your starting deck on this row."
+},
+{
+"id": 757014,
+"name": "Caravan Vanguard",
+"text": "Deploy (Melee): Boost self by 3. Deploy (Ranged): Spawn a base copy of self on this row. Bonded: Combine both abilities instead."
+},
+{
+"id": 756646,
+"name": "Mad Kiyan",
+"text": "Formation. Order: Damage an enemy unit by the amount Mad Kiyan is boosted. Deathblow: Reset own power."
+},
+{
+"id": 756732,
+"name": "Lyrian Landsknecht",
+"text": "Formation. Order: Damage a unit by 1. Inspired: Damage by 3 instead."
+},
+{
+"id": 756309,
+"name": "Reinforced Ballista",
+"text": "Formation. Resupply. Order: Damage a unit by 1. Cooldown: 1"
+},
+{
+"id": 756945,
+"name": "Iron Falcon Infantry",
+"text": "At the end of your turn, boost self by 1 if this is the only card on its row. Bonded: At the end of your turn, boost self by 1 instead."
+},
+{
+"id": 756414,
+"name": "Blue Mountain Elite",
+"text": "Deploy (Ranged): Damage an enemy unit by 3 if it is the only unit on its row."
+},
+{
+"id": 757464,
+"name": "King Chrum",
+"text": "Deploy (Might): Gain Resilience. The base power of this card is equal to the number of Ogroids in your starting deck."
+},
+{
+"id": 757239,
+"name": "Rience",
+"text": "Deploy: Look at the top 3 units in your deck. Move 1 to your graveyard, then destroy an enemy unit with power equal to that unit's power Order: Set the power of a unit to match the number of cards in your deck."
+},
+{
+"id": 756457,
+"name": "Hemdall",
+"text": "Deploy: Split damage equal to the number of units on an enemy row randomly between all units on that row."
+},
+{
+"id": 756859,
+"name": "Rico Meiersdorf",
+"text": "Whenever opponent plays a unit while Rico is in your hand or deck, set his power equal to that unit's power."
+},
+{
+"id": 757155,
+"name": "Abandoned Girl",
+"text": "Order: Transform into a Young Dryad without changing power, then gain Vitality equal to the number of Dryads on this row."
+},
+{
+"id": 756267,
+"name": "Commander's Horn",
+"text": "Boost 5 adjacent units by 2. Boost bronze units by an additional 1 for each gold unit adjacent to them."
+},
+{
+"id": 757319,
+"name": "Master of Ceremonies",
+"text": "At the start of the game, Infuse 2 random gold non-Cultist units in your starting deck with Cultist category and Infuse them with \"After this card is played or Summoned, if you control 3 or more Cultists, damage the lowest-power Infused enemy unit by 3\"."
+},
+{
+"id": 756533,
+"name": "Uma's Curse",
+"text": "Create and play a gold unit from any faction."
+},
+{
+"id": 756259,
+"name": "Ragh Nar Roog",
+"text": "Doomed. Scenario: Progress whenever you play a gold unit. Prologue: Spawn Cataclysm on both enemy rows for 2 turns. Chapter 1: Damage an enemy unit by 5. Chapter 2: Spawn and play Clear Skies."
+},
+{
+"id": 756458,
+"name": "Delirium",
+"text": "Echo. Choose between a random bronze Skellige Beast and a random bronze Skellige Human that were not in your starting deck, then Spawn and play the one you chose, and Spawn the other in your graveyard. When Doomed, choose between gold ones instead"
+},
+{
+"id": 757174,
+"name": "Viper Witcher Adept",
+"text": "At the end of your turn, boost self by 1 if your opponent has more cards in the deck than you."
+},
+{
+"id": 756972,
+"name": "Armored Arachas",
+"text": "Deploy: If there is another card on this row, Lock self. Timer 3: If this row is full, boost self by 12."
+},
+{
+"id": 757338,
+"name": "In Search of Forgotten Treasures",
+"text": "Doomed. Scenario: Progress whenever you play a Tidecloak. Prologue: Spawn Gudrun Bjornsdottir on this row. Chapter 1: Hoard 8: At the end of your turn, gain enough Coins to fill your pouch. Chapter 2: Damage the highest-power enemy unit by the number of Coins you have."
+},
+{
+"id": 813676,
+"name": "Blessing of Diligence",
+"text": "After using your leader ability, randomly split 6 damage among all enemy units."
+},
+{
+"id": 756589,
+"name": "Pitfall Trap",
+"text": "Ambush: When your opponent plays a card face up, split damage equal to its provision cost randomly between all enemy units. Spring: Split 6 damage randomly between all enemy units."
+},
+{
+"id": 757110,
+"name": "Herkja Drummond",
+"text": "Veil. Zeal. Order (Melee): Split 3 damage randomly between enemy units on a row. At the end of your turn, if the Order is not used, damage a random enemy unit by 1."
+},
+{
+"id": 756942,
+"name": "Surrender",
+"text": "Remove 2 Armor from all units on a row and damage them by 2."
+},
+{
+"id": 756665,
+"name": "Crushing Trap",
+"text": "Ambush (Timer 2): Damage all units on the enemy row with the most units by 2. Spring: Damage all units on a row by 1."
+},
+{
+"id": 756866,
+"name": "Tinboy",
+"text": "Deploy: Damage all units on an enemy row by 2. Tribute 8: Damage all enemy units by 2 instead."
+},
+{
+"id": 756298,
+"name": "Sabrina Glevissig",
+"text": "Disloyal. Deathwish: Damage all units on this row by 3."
+},
+{
+"id": 756545,
+"name": "Stregobor",
+"text": "Timer 2 (Ranged): Each player draws a unit and sets its power to 1."
+},
+{
+"id": 756364,
+"name": "Predatory Dive",
+"text": "Each player destroys their lowest-power unit."
+},
+{
+"id": 813595,
+"name": "Shupe: Mage (created)",
+"text": "Deploy: Transform the rightmost card in each player's hand into a random special card."
+},
+{
+"id": 756147,
+"name": "Reveal",
+"text": "Show a card to both players, then hide it back in the hand or deck."
+},
+{
+"id": 757412,
+"name": "Dagon: Promised",
+"text": "Doomed. Deploy: Infuse 5 units in your deck with \"Deathwish: Boost the lowest-power allied unit by 2 and worship Dagon\" and Spawn Call of the Depths in your graveyard. Order: Consume an allied unit. Whenever you play a Deathwish unit, boost it by 1. While in hand or deck, evolve after you win a round."
+},
+{
+"id": 756228,
+"name": "Ciri",
+"text": "Deploy: Damage 3 enemy units by 1. When you lose a round, move self back to your hand."
+},
+{
+"id": 757414,
+"name": "Saint Gregory: Justicar",
+"text": "Doomed. Deploy: Boost self by 1 for each unit you control and gain a Coin for each Firesworn card you control. While in hand or deck, evolve after you win a round."
+},
+{
+"id": 757408,
+"name": "Dana M\u00e9adbh: Provider",
+"text": "Doomed. Harmony. At the end of your turn, boost all non-Neutral units in your hand with primary categories that you don't control by 1. While in hand or deck, evolve after you win a round."
+},
+{
+"id": 756744,
+"name": "Regis: Bloodlust",
+"text": "When you lose a round while this card is: On the battlefield or in your graveyard - Banish the top 3 cards from your deck. In your hand or deck - Banish self."
+},
+{
+"id": 756640,
+"name": "Isengrim's Council",
+"text": "Look at a random Dwarf, Dryad, and Elf from your deck, then play one and boost it by 2."
+},
+{
+"id": 757284,
+"name": "Selfeater",
+"text": "Order: Halve this unit's base power, then Spawn a copy with the same base power on this row. Whenever you play a Relict, increase this unit's base power by 1."
+},
+{
+"id": 795339,
+"name": "Relict",
+"text": "Relict: 36 entities of this type."
+},
+{
+"id": 757409,
+"name": "Quarixis",
+"text": "Harmony. Whenever you play another Relict, Spawn and play Loc Feainn: Convergence."
+},
+{
+"id": 756221,
+"name": "Sabbath",
+"text": "Trigger this ability if at least one of your rows has a total of 25 or more points."
+},
+{
+"id": 757356,
+"name": "Aerondight",
+"text": "Echo. Damage an enemy unit by 0, then boost the lowest-power allied unit by the excess damage dealt. At the end of your turn, if you have more points than your opponent, increase the damage by 1, wherever this card is."
+},
+{
+"id": 756651,
+"name": "Ciri: Nova",
+"text": "Deploy: If your starting deck does not have cards with a provision cost of 10 or more, gain Resilience, Shield, and Veil. Ciri: Nova and Golden Nekker are excluded from this condition."
+},
+{
+"id": 757188,
+"name": "Haern Caduch",
+"text": "Resilience. Deploy: Spawn and play a Bear Witcher Adept, Bear Witcher, Bear Witcher Mentor, or Bear Witcher Quartermaster. Order: Heal the adjacent units by 2."
+},
+{
+"id": 756663,
+"name": "Garrison",
+"text": "Resilience. Deploy: Spawn and play a base copy of a bronze Soldier from your starting deck. Order: Boost an allied Soldier and all its copies by 1 and give them 1 Armor."
+},
+{
+"id": 757255,
+"name": "She Who Knows",
+"text": "Sabbath: At the end of round, give Resilience to the highest base power unit on your side of the battlefield."
+},
+{
+"id": 757407,
+"name": "Tyr: Slayer of Yngvar",
+"text": "Doomed. Deploy: Damage an enemy unit by the difference between its base and current power. Deathblow: Gain Resilience. While in hand or deck, evolve after you win a round."
+},
+{
+"id": 757455,
+"name": "Sticky Situation",
+"text": "Ambush: When your opponent plays a unit with 4 or less power, flip self. At the end of your turn, boost adjacent units by [2]. When your opponent passes while this card is face-up, Lock self. Spring: Boost a unit in your hand by [6], then Lock self. Whenever your opponent passes, decrease the boost values by 1."
+},
+{
+"id": 757099,
+"name": "Winter Queen",
+"text": "At the end of your turn, if there is Frost on both enemy rows, Summon self from your deck to your Ranged row. Devotion: Once both players have passed, boost self by 2 for each turn of Frost remaining on your opponent's side."
+},
+{
+"id": 757360,
+"name": "Ring of Favor",
+"text": "This card starts in your hand. Boost an allied unit by 3. While in hand, at the end of your turn, increase the boost by 2. When your opponent passes, Banish self from hand and draw a card. When moved to the deck, Banish self."
+},
+{
+"id": 813679,
+"name": "Blessing of Humility",
+"text": "Whenever you pass, boost the lowest-power allied unit by 4."
+},
+{
+"id": 756768,
+"name": "Scepter of Storms",
+"text": "Deploy: Spawn and play Biting Frost, Impenetrable Fog, or Torrential Rain. Order: Increase the row effect duration on an enemy row by 1 turn."
+},
+{
+"id": 756268,
+"name": "Vaedermakar",
+"text": "Deploy (Melee): Increase all row effect durations by 1. Deploy (Ranged): Decrease all row effect durations by 1. If you control Scepter of Storms, increase or decrease the durations by 3 instead."
+},
+{
+"id": 756356,
+"name": "Ancient Foglet",
+"text": "Veil. Deploy: Boost self by the total duration of row effects on the opposite side. Whenever you apply a row effect, boost self by its duration."
+},
+{
+"id": 756684,
+"name": "Scout",
+"text": "Deploy: Move a unit to the other row."
+},
+{
+"id": 757097,
+"name": "Eredin Br\u00e9acc Glas",
+"text": "Deploy: Spawn Frost on an enemy row for 2 turns. Dominance: Increase the damage dealt by Frost by 1"
+},
+{
+"id": 757211,
+"name": "Succubus",
+"text": "Deathwish: At the end of your turn, if there is another Succubus in your graveyard, Summon self from your graveyard to a random row and gain Doomed. Adrenaline 4: Don't gain Doomed."
+},
+{
+"id": 756377,
+"name": "Saesenthessis",
+"text": "Immunity. Order: Remove this unit's Immunity until the start of your next turn."
+},
+{
+"id": 757471,
+"name": "Captain Yago",
+"text": "Deploy: Gain as many Coins as you spent this turn. Fee 1: Boost an allied Pirate by 1."
+},
+{
+"id": 757012,
+"name": "Runewright",
+"text": "Deploy: If you control Dulla kh'Amanni, Spawn Desert Treasure on this row."
+},
+{
+"id": 813596,
+"name": "Shupe: Hunter",
+"text": "Send Shupe to the forests of Dol Blathanna."
+},
+{
+"id": 757326,
+"name": "Mysteries of Loc Feainn",
+"text": "Doomed. Scenario: Progress whenever you play a unit with Harmony. Prologue: Spawn Lake Guardian: Dawn Aspect on this row and set its power to the number of non-Neutral units with unique primary categories in your starting deck. Chapter 1: Whenever you play a non-Neutral unit, boost it by 1 for each category it has. Chapter 2: Spawn and play Loc Feainn: Convergence."
+},
+{
+"id": 756231,
+"name": "Regis",
+"text": "Deploy: Damage all units on an enemy row by 1. Initiative: If any were destroyed, repeat this ability."
+},
+{
+"id": 756206,
+"name": "Duel",
+"text": "Units take turns dealing damage equal to their power until one of them is destroyed."
+},
+{
+"id": 756277,
+"name": "Scorch",
+"text": "Destroy the highest-power unit. Initiative: Destroy all highest-power units instead."
+},
+{
+"id": 756656,
+"name": "Sihil",
+"text": "Damage an enemy unit by 1. Deathblow: Play a bronze card from your hand, then move Sihil back to your hand. Initiative: Also increase the damage by 1 for the rest of the game. If the damage was 3, transform into Masterful Sihil instead."
+},
+{
+"id": 756266,
+"name": "Blizzard",
+"text": "Destroy the lowest-power unit. Initiative: Destroy all lowest-power units instead."
+},
+{
+"id": 756353,
+"name": "Old Speartip: Asleep",
+"text": "Timer 3: Summon Old Speartip from your deck to this row and increase its base power by 6, then Banish self. If Old Speartip: Asleep takes damage, Summon Old Speartip from your deck, then Banish self instead."
+},
+{
+"id": 756828,
+"name": "Sigvald",
+"text": "Whenever this unit is damaged by other non-status abilities, gain Bleeding for the same duration instead. Order: Damage a unit by the duration of Bleeding on self, then Purify self. If it was an enemy unit, damage self by that amount. If it was an allied unit, boost self by that amount."
+},
+{
+"id": 813660,
+"name": "Bjorn's Drakkar",
+"text": "Doomed.\nOrder: Damage an enemy unit by 1 and Infuse it with \"Whenever this unit takes damage from other abilities, damage self by the same amount\".\nCharge: 1"
+},
+{
+"id": 813663,
+"name": "Yennefer's Illusion",
+"text": "Doomed.\nWhen this unit takes damage, destroy self."
+},
+{
+"id": 756520,
+"name": "An Craite Greatsword",
+"text": "Veteran. Deploy: Damage self by 6. Whenever an enemy unit takes damage, Heal self by 1."
+},
+{
+"id": 757156,
+"name": "Alzur",
+"text": "Whenever you play a Spell, Spawn a random unit with the same provision cost on this row. Counter: 3"
+},
+{
+"id": 756521,
+"name": "Hefty Helge",
+"text": "Shield. Order: Damage a unit by 2. Charge: 1 Whenever you play a Tactic, gain 1 Charge."
+},
+{
+"id": 757081,
+"name": "Uprising",
+"text": "Order: Boost an allied unit by 1. Charges: 3 Once per game, once all Charges are used up, Spawn and play a Lyrian Scytheman. This ability adds 17 provisions to your deck's provision limit."
+},
+{
+"id": 757339,
+"name": "Flyndr's Crew",
+"text": "Deploy: Spawn 3 base copies of self on this row. Reduce the number of copies by 1 for each Counter. Your Hoards require 1 less Coins to trigger. Hoard 9: Once per round, at the end of your turn, while in hand or deck, remove a Counter. Counter: 3"
+},
+{
+"id": 813622,
+"name": "Harald: Warmonger",
+"text": "Deploy: Play a bronze Warrior from your graveyard and give it Doomed.\nDevotion: At the start of the round, while in hand or deck, evolve."
+},
+{
+"id": 756543,
+"name": "Hubert Rejk",
+"text": "Whenever you use an Order ability while this card is in your deck, remove a Counter from it. When the Counter reaches 0, Summon this card from your deck to your Ranged row. Counter: 10"
+},
+{
+"id": 756703,
+"name": "Gascon",
+"text": "While in hand, deck, or on the battlefield, whenever you play the second copy of a Bonded unit this game, boost self by 3."
+},
+{
+"id": 757126,
+"name": "Viraxas: Prince",
+"text": "Order: Reset an allied non-Neutral unit's Order ability. At the start of the round, while in hand or deck, evolve."
+},
+{
+"id": 757359,
+"name": "Vial of Forbidden Knowledge",
+"text": "Zeal. Order: Boost an allied unit by 4 and give it Vitality (4). At the start of the game, if both players have this card in their deck, Summon self to a random allied row and transform."
+},
+{
+"id": 757479,
+"name": "Heulyn",
+"text": "Deploy: Boost all allied Humans by 1. Start the game with 5 random Skellige bronze Humans in your graveyard."
+},
+{
+"id": 795314,
+"name": "Trap",
+"text": "Trap: 8 entities of this type."
+},
+{
+"id": 756662,
+"name": "Elven Scout",
+"text": "Whenever an allied Trap is triggered, boost self by 2."
+},
+{
+"id": 757453,
+"name": "Riordain",
+"text": "Deploy: If played adjacent to at least one: Trap - Play an Elf from your deck. Elf - Play a Trap from your deck."
+},
+{
+"id": 757394,
+"name": "Caranthir: Golden Child",
+"text": "At the start of your turn, while in hand or deck, reset own power and boost self by the damage dealt by Frost in the last 5 enemy turns (0, 0, 0, 0, 0)."
+},
+{
+"id": 756874,
+"name": "Boris",
+"text": "At the start of your turn, wherever this card is, randomly change own Fee to a different cost between 1 and 9. Fee 1: Move self to the other row, then boost self by the Fee cost. If you have 0 Coins, also gain 1 Coin for each allied unit on that row. Cooldown: 1"
+}
+]

@@ -1,0 +1,562 @@
+{
+"758400": [
+[
+"combat_start",
+"Start each combat with this card in your Hand"
+]
+],
+"758408": [
+[
+"damage",
+"Deal 18 damage"
+],
+[
+"copy",
+"Add a 0 energy copy of this card into your Discard Pile"
+],
+[
+"cost_set",
+"0 energy copy"
+]
+],
+"758415": [
+[
+"damage",
+"Deal 10 damage"
+],
+[
+"recycle",
+"Put ALL 0 energy cards from your Discard Pile into your Hand"
+],
+[
+"cost_condition",
+"0 energy cards"
+]
+],
+"758424": [
+[
+"damage",
+"Deal 10 damage"
+],
+[
+"debuff",
+"Apply 1 Vulnerable"
+],
+[
+"exhaust",
+"Exhaust."
+],
+[
+"combat_start",
+"Innate"
+]
+],
+"758428": [
+[
+"damage",
+"Deal 11 damage"
+],
+[
+"exhaust",
+"Exhaust."
+],
+[
+"combat_start",
+"Innate"
+]
+],
+"758435": [
+[
+"draw",
+"Draw 3 cards"
+],
+[
+"rule_change",
+"You cannot draw additional cards this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"758441": [
+[
+"transform",
+"Transform into Minion Strike"
+]
+],
+"758444": [
+[
+"draw",
+"Draw 1 card"
+],
+[
+"resource_gain",
+"Gain energy"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"758445": [
+[
+"aoe_damage",
+"deal 3 damage to ALL enemies"
+]
+],
+"758448": [
+[
+"damage",
+"Deal 8 damage"
+],
+[
+"debuff",
+"Apply Doom"
+]
+],
+"758459": [
+[
+"block_armor",
+"Gain 10 Block"
+],
+[
+"exhaust",
+"Exhaust."
+],
+[
+"combat_start",
+"Innate"
+]
+],
+"758460": [
+[
+"resource_gain",
+"Gain 4 energy"
+],
+[
+"rule_change",
+"Cards cost an additional energy this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"758471": [
+[
+"block_armor",
+"Gain 12 Block"
+]
+],
+"758516": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"debuff",
+"apply 6 Doom"
+],
+[
+"random_effect",
+"random enemy"
+]
+],
+"758573": [
+[
+"resource_gain",
+"gain 2 energy"
+],
+[
+"team_play",
+"ALL players"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"758591": [
+[
+"block_armor",
+"Gain an additional 4 Block from Defend cards"
+],
+[
+"spell_power",
+"Gain an additional 4 Block from Defend cards"
+]
+],
+"758597": [
+[
+"damage",
+"Osty deals 3 damage"
+],
+[
+"draw",
+"draw 1 card"
+]
+],
+"758615": [
+[
+"combo_sequence",
+"If you Exhausted a card this turn"
+],
+[
+"resource_gain",
+"gain 3 energy"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"758628": [
+[
+"block_armor",
+"Gain 6 Block"
+],
+[
+"slots_queue",
+"Channel 2 Frost"
+]
+],
+"758629": [
+[
+"block_armor",
+"Gain 5 Block"
+],
+[
+"slots_queue",
+"Channel 1 Glass"
+]
+],
+"758631": [
+[
+"generate_cards",
+"add 3 Souls into their Draw Pile"
+],
+[
+"team_play",
+"ALL players"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"758757": [
+[
+"condition_count",
+"play 5 or more cards in a turn"
+],
+[
+"draw",
+"draw 1 card"
+],
+[
+"turn_start",
+"at the start of your next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"758767": [
+[
+"damage",
+"Deal 10 damage"
+],
+[
+"draw",
+"Draw 1 card"
+],
+[
+"deck_position",
+"on top of your Draw Pile"
+]
+],
+"758794": [
+[
+"on_ally_play",
+"Whenever you play an Attack this turn"
+],
+[
+"block_armor",
+"gain 3 Block"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"758803": [
+[
+"hand_deck_swap",
+"Shuffle ALL your cards into your Draw Pile"
+],
+[
+"draw",
+"Draw 4 cards"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"758826": [
+[
+"debuff",
+"Apply 13 Doom"
+],
+[
+"draw",
+"Draw 1 card"
+]
+],
+"758845": [
+[
+"stat_loss",
+"Enemy loses 2 Strength"
+],
+[
+"friendly_fire",
+"Lose 2 Strength"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"758886": [
+[
+"on_spell",
+"Whenever you play a Power"
+],
+[
+"slots_queue",
+"Channel 1 Lightning"
+]
+],
+"758895": [
+[
+"on_spell",
+"Whenever you play a Power"
+],
+[
+"resource_gain",
+"gain energy"
+]
+],
+"758933": [
+[
+"in_hand_buff",
+"Add Replay to a card in your Hand"
+],
+[
+"repeat_trigger",
+"Replay"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"758970": [
+[
+"shop_gold",
+"Enemies drop 15 additional Gold"
+]
+],
+"758983": [
+[
+"stat_gain",
+"raise your Max HP by 20"
+],
+[
+"combat_start",
+"At the start of each combat"
+]
+],
+"759000": [
+[
+"count_payoff",
+"The 5th card you play from your hand each turn"
+],
+[
+"free_play",
+"is free"
+]
+],
+"759006": [
+[
+"junk_cards",
+"obtain a unique Curse"
+],
+[
+"deck_modification",
+"obtain a unique Curse"
+]
+],
+"759019": [
+[
+"combat_start",
+"At the start of each combat"
+],
+[
+"slots_queue",
+"Channel 1 Lightning"
+]
+],
+"759056": [
+[
+"count_payoff",
+"Every 3 normal combats"
+],
+[
+"upgrade",
+"Upgrade a random card in your Deck"
+],
+[
+"random_effect",
+"random card"
+]
+],
+"759075": [
+[
+"death_trigger",
+"Whenever an enemy dies"
+],
+[
+"resource_gain",
+"gain energy"
+],
+[
+"draw",
+"draw 1 card"
+]
+],
+"759150": [
+[
+"deck_modification",
+"remove 5 cards from your Deck"
+],
+[
+"random_effect",
+"randomly add 1 back Upgraded"
+],
+[
+"upgrade",
+"Upgraded"
+]
+],
+"759186": [
+[
+"turn_start",
+"At the start of your first 3 turns"
+],
+[
+"draw",
+"draw 2 additional cards"
+],
+[
+"turn_number",
+"first 3 turns"
+]
+],
+"759206": [
+[
+"permanent_loss",
+"lose all Gold"
+],
+[
+"upgrade",
+"Enchant all cards"
+]
+],
+"759214": [
+[
+"turn_start",
+"at the start of each turn"
+],
+[
+"resource_gain",
+"Gain energy"
+],
+[
+"rule_change",
+"Powers cost 1 more energy"
+]
+],
+"759228": [
+[
+"spell_power",
+"increase it to 5"
+]
+],
+"759302": [
+[
+"buff",
+"Gain 1 Ritual"
+]
+],
+"759328": [
+[
+"spell_power",
+"Shivs deal additional damage"
+]
+],
+"759361": [
+[
+"damage_over_time",
+"apply 2 Poison to ALL enemies"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"759455": [
+[
+"rule_change",
+"You may not draw any more cards this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"759470": [
+[
+"retain",
+"Shivs gain Retain"
+],
+[
+"spell_power",
+"deals 9 additional damage"
+]
+],
+"759487": [
+[
+"regeneration",
+"Regen heals HP at the end of your turn"
+],
+[
+"turn_end",
+"at the end of your turn"
+]
+],
+"759492": [
+[
+"shop_gold",
+"gain 25 Gold"
+]
+],
+"759502": [
+[
+"debuff",
+"Attacks deal 30% less damage"
+]
+]
+}

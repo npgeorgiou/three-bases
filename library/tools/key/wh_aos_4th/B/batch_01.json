@@ -1,0 +1,890 @@
+{
+"793357": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"modal_choice",
+"pick 1 of the following effects"
+],
+[
+"revive",
+"return 1 slain model to it"
+],
+[
+"stat_gain",
+"add 1 to the Attacks characteristic of its melee weapons"
+],
+[
+"temporary_buff",
+"until the end of the next turn"
+],
+[
+"debuff",
+"it cannot contest objectives or use commands"
+],
+[
+"tribal",
+"Ruination Chamber"
+]
+],
+"793610": [
+[
+"stealth",
+"this unit is not visible to enemy units"
+],
+[
+"condition_count",
+"5 or more models"
+],
+[
+"first_strike",
+"This unit has Strike-first if it charged in the same turn"
+],
+[
+"on_attack",
+"if it charged in the same turn"
+],
+[
+"piercing",
+"Anti-Hero (+1 Rend)"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"792099": [
+[
+"summon",
+"Set up a Scrapskuttle's Arachnacauldron"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"board_limit",
+"If there is not a friendly Scrapskuttle's Arachnacauldron on the battlefield"
+],
+[
+"tribal",
+"Gloomspite Gitz Wizard"
+]
+],
+"792632": [
+[
+"movement",
+"it can move 3\""
+]
+],
+"792087": [
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"random_effect",
+"Roll a dice for each model in the target unit"
+],
+[
+"condition_count",
+"For each 5+"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+]
+],
+"794135": [
+[
+"buff",
+"Add 1 to save rolls"
+],
+[
+"saving_throws",
+"save rolls"
+]
+],
+"792033": [
+[
+"damage_reduction",
+"subtract 1 from wound rolls for attacks that target that friendly unit"
+],
+[
+"random_effect",
+"chanting roll of D6"
+],
+[
+"condition_count",
+"if the chanting roll was 8+"
+],
+[
+"damage_reduction",
+"subtract 1 from the Rend characteristic of weapons used for attacks that target that friendly unit"
+],
+[
+"temporary_buff",
+"Until the start of your next turn"
+],
+[
+"tribal",
+"Ogor Mawtribes unit"
+]
+],
+"793187": [
+[
+"protection",
+"King Brodd has Ward (5+)"
+],
+[
+"bodyguard",
+"allocate 1 damage point to another friendly Brodd's Stomp unit"
+],
+[
+"friendly_fire",
+"allocate 1 damage point to another friendly Brodd's Stomp unit"
+],
+[
+"tribal",
+"Brodd's Stomp units"
+]
+],
+"792368": [
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"scope_multi",
+"Pick each enemy unit within 3\" of any friendly Feculent Gnarlmaws"
+],
+[
+"random_effect",
+"Roll a D3 for each target"
+]
+],
+"791119": [
+[
+"multi_attack",
+"can use 2 Fight abilities this phase"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"debuff",
+"this unit has Strike-last for the rest of the turn"
+]
+],
+"792988": [
+[
+"reactions",
+"Reaction: Opponent declared the 'Rally' command"
+],
+[
+"free_play",
+"No command points are spent to use that command"
+],
+[
+"heal",
+"immediately use the 'Rally' command"
+]
+],
+"815227": [
+[
+"deckbuilding_effect",
+"Ossiarch Bonereapers Hero only"
+],
+[
+"tribal",
+"Ossiarch Bonereapers Hero only"
+]
+],
+"793627": [
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"terrain",
+"terrain feature"
+],
+[
+"stat_loss",
+"subtract 1 from hit rolls for shooting attacks that target friendly Infantry or Cavalry units"
+],
+[
+"protection",
+"subtract 1 from hit rolls for shooting attacks that target friendly Infantry or Cavalry units"
+],
+[
+"summon",
+"set up a friendly Wisper"
+],
+[
+"board_limit",
+"If there is not a friendly Wisper on the battlefield"
+],
+[
+"piercing",
+"Anti-Faction Terrain (+1 Rend)"
+]
+],
+"793990": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"stat_loss",
+"the Attacks characteristic of Killabeak's Talons and Beak is 5"
+],
+[
+"reactions",
+"Reaction: Opponent declared a Spell ability"
+],
+[
+"counter_spell",
+"uses the 'Unbind' ability"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"stat_condition",
+"If the roll exceeds the target's Health characteristic"
+],
+[
+"destroy",
+"1 model in the target unit is slain"
+],
+[
+"damage",
+"inflict D3 mortal damage on the caster"
+],
+[
+"condition_count",
+"If the unbinding roll was 10+"
+],
+[
+"variable_stats",
+"Roll a number of dice equal to the target's Health characteristic"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"piercing",
+"Anti-Wizard (+1 Rend)"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"791483": [
+[
+"protection",
+"have WArd (6+)"
+],
+[
+"condition_life",
+"While this unit has no damage points"
+],
+[
+"aura",
+"while they are wholly within 9\" of this unit"
+],
+[
+"tribal",
+"Droggz's Gitmob units"
+]
+],
+"791890": [
+[
+"debuff",
+"each target has Strike-last"
+],
+[
+"random_effect",
+"chanting roll of D6"
+],
+[
+"scope_multi",
+"second target"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+],
+[
+"tribal",
+"Sons of Behemat Priest"
+]
+],
+"793935": [
+[
+"multi_attack",
+"can use 2 Fight abilities this phase"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"debuff",
+"this unit has Strike-last for the rest of the turn"
+],
+[
+"immobilize",
+"Enemy units cannot use Retreat abilities while they are in combat with this unit"
+],
+[
+"rule_change",
+"can still use Shoot and/or Charge abilities later in the turn"
+],
+[
+"protection",
+"No mortal damage is inflicted on friendly Idoneth Deepkin units by Retreat abilities"
+],
+[
+"aura",
+"while they are wholly within 12\" of this unit"
+]
+],
+"794338": [
+[
+"condition_life",
+"While this unit is damaged"
+],
+[
+"stat_gain",
+"add 2 to the Attacks characteristic of its melee weapons"
+],
+[
+"on_attack",
+"You declared a Fight ability for this unit"
+],
+[
+"attack_now",
+"The target can be picked to use a Fight ability immediately"
+],
+[
+"buff",
+"add 1 to hit rolls for the target's attacks"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+],
+[
+"tribal",
+"Ogroid Theridons unit"
+],
+[
+"piercing",
+"Anti-Monster (+1 Rend)"
+]
+],
+"816556": [
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"damage",
+"Inflict 1 mortal damage on the target"
+],
+[
+"movement",
+"immediately use the 'Retreat' ability"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"792400": [
+[
+"piercing",
+"Ward rolls cannot be made for the targets"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+],
+[
+"scope_multi",
+"each accused enemy unit"
+]
+],
+"791582": [
+[
+"type_grant",
+"that unit has the Euphoric keyword"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+],
+[
+"condition_count",
+"is 5 or less"
+],
+[
+"aura",
+"wholly within 12\" of this unit"
+]
+],
+"794420": [
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"buff",
+"re-roll charge rolls"
+],
+[
+"temporary_buff",
+"Until the start of your next turn"
+],
+[
+"tribal",
+"Soulblight Gravelords Infantry"
+],
+[
+"on_attack",
+"If this unit charged this turn"
+],
+[
+"buff",
+"add 1 to wound rolls for combat attacks"
+],
+[
+"aura",
+"while they are wholly within 12\" of this unit"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"792573": [
+[
+"piercing",
+"Add 1 to the Rend characteristic of this unit's melee weapons"
+]
+],
+"794283": [
+[
+"movement",
+"This unit can move a distance up to its Move characteristic"
+],
+[
+"evasion",
+"can pass through other models and the combat ranges of enemy units"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"scope_multi",
+"pick up to 3 enemy units"
+],
+[
+"random_effect",
+"Roll a D3 for each target"
+],
+[
+"stat_gain",
+"Charge (+1 Damage)"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"793379": [
+[
+"protection",
+"subtract 1 from hit rolls for attacks that target this unit"
+],
+[
+"on_play",
+"Each time this unit is set up using the 'Scions of the Storm' ability"
+],
+[
+"temporary_buff",
+"for the rest of the battle round"
+],
+[
+"on_ally_play",
+"each time a friendly Stormcast Eternals unit is set up wholly within 12\" of this unit"
+]
+],
+"793411": [
+[
+"damage_reduction",
+"You cannot allocate more than 10 damage points per phase"
+],
+[
+"tribal",
+"Soulpod Guardians unit"
+]
+],
+"815196": [
+[
+"counter_spell",
+"it can use the 'Unbind' ability"
+],
+[
+"type_grant",
+"as if it had Wizard (1)"
+],
+[
+"spell_power",
+"add 1 to casting rolls"
+],
+[
+"flexibility",
+"Otherwise"
+]
+],
+"794107": [
+[
+"zone_control",
+"While this unit contests an objective you control"
+],
+[
+"protection",
+"enemy units cannot finish a charge move within 1/2\" of a model in this unit"
+],
+[
+"piercing",
+"Crit (Auto-wound)"
+]
+],
+"791908": [
+[
+"summon",
+"Set up a Soulstealer Carrion"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"board_limit",
+"If there is not a friendly Soulstealer Carrion on the battlefield"
+],
+[
+"tribal",
+"Ossiarch Bonereapers Wizard"
+]
+],
+"792432": [
+[
+"stat_gain",
+"Add 1 to the Attacks characteristic of this unit's melee weapons"
+],
+[
+"condition_count",
+"for each non-Faction Terrain terrain feature that is being contested by friendly units"
+],
+[
+"zone_control",
+"being contested by friendly units"
+]
+],
+"792342": [
+[
+"stat_loss",
+"Subtract 3 from the control scores of enemy units"
+],
+[
+"tribal",
+"Cycle of Corruption units"
+]
+],
+"793758": [
+[
+"cheat_death",
+"If this unit would be destroyed, before removing it from play"
+],
+[
+"death_trigger",
+"If this unit would be destroyed"
+],
+[
+"buff",
+"Melee weapons used by friendly enraged units have Crit (Auto-wound)"
+],
+[
+"temporary_buff",
+"until the start of your next turn"
+],
+[
+"aura",
+"while they are wholly within 12\" of this unit"
+],
+[
+"stat_gain",
+"Add 1 to the Attacks characteristic of melee weapons used by other friendly non-Monster Flesh-eater Courts Heroes"
+],
+[
+"condition_count",
+"for each other friendly non-Monster Flesh-eater Courts Hero"
+],
+[
+"tribal",
+"Flesh-eater Courts"
+],
+[
+"piercing",
+"Anti-Hero (+1 Rend)"
+]
+],
+"793372": [
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"movement",
+"set it up again anywhere on the battlefield"
+],
+[
+"tribal",
+"Vanguard Chamber unit"
+]
+],
+"815263": [
+[
+"shield",
+"the first damage point inflicted on this unit is ignored"
+]
+],
+"793399": [
+[
+"variable_stats",
+"Add the number of enemy units that have been destroyed this battle to this unit's Move characteristic"
+],
+[
+"death_count",
+"the number of enemy units that have been destroyed this battle"
+]
+],
+"792879": [
+[
+"stat_gain",
+"Add 1 to the Attacks characteristic of melee weapons"
+],
+[
+"aura",
+"while they are wholly within 12\" of the Ushoran"
+]
+],
+"793764": [
+[
+"death_count",
+"less than the number of Fyreslayers units that have been destroyed during the battle"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"modal_choice",
+"pick 1 of the following effects"
+],
+[
+"protection",
+"The target has Ward (5+)"
+],
+[
+"buff",
+"Add 2 to charge rolls for the target"
+],
+[
+"stat_gain",
+"Add 1 to the Damage characteristic of the target's melee weapons"
+],
+[
+"temporary_buff",
+"until the start of your next turn"
+],
+[
+"tribal",
+"Fyreslayers Infantry unit"
+]
+],
+"815292": [
+[
+"deckbuilding_effect",
+"Stormcast Eternals Hero only"
+],
+[
+"tribal",
+"Stormcast Eternals Hero only"
+]
+],
+"791176": [
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"spell_power",
+"you can use a value of 6 for the roll that cannot be modified"
+]
+],
+"793280": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"damage",
+"Inflict D3 mortal damage on the target"
+],
+[
+"tribal",
+"If the target is a Priest"
+]
+],
+"792148": [
+[
+"stat_gain",
+"Add 1 to the Attacks characteristic of the target's melee weapons"
+],
+[
+"temporary_buff",
+"until the start of your next turn"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"tribal",
+"Ossiarch Bonereapers unit"
+]
+],
+"794423": [
+[
+"protection",
+"have Ward (5+)"
+],
+[
+"tribal",
+"Radukar the Wolf or Radukar the Beast"
+]
+],
+"815063": [
+[
+"tribal",
+"Fly only."
+]
+],
+"792929": [
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"on_kill",
+"is destroyed by a unit in this Regiment of Renown"
+],
+[
+"stat_gain",
+"add 10 to the control score of each unit"
+]
+],
+"792981": [
+[
+"buff",
+"Add 1 to charge rolls"
+]
+],
+"794084": [
+[
+"piercing",
+"Add 1 to the Rend characteristic of this unit's melee weapons"
+],
+[
+"territory_trigger",
+"while it is not within enemy territory"
+]
+],
+"791824": [
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"movement",
+"use the 'Normal Move' ability"
+],
+[
+"scope_multi",
+"up to 2 other friendly Kharadron Overlords non-Hero Infantry units"
+],
+[
+"tribal",
+"Kharadron Overlords non-Hero Infantry"
+]
+],
+"792735": [
+[
+"buff",
+"Add 1 to hit rolls for this unit's combat attacks"
+]
+],
+"793593": [
+[
+"protection",
+"attacks that target this unit cannot score critical hits"
+]
+],
+"794246": [
+[
+"protection",
+"Subtract 1 from hit rolls for shooting attacks that target this unit"
+],
+[
+"damage",
+"Inflict 1 mortal damage on the target"
+],
+[
+"random_effect",
+"Roll a dice for each model in this unit"
+],
+[
+"condition_count",
+"For each 5+"
+],
+[
+"immobilize",
+"the target cannot use Run abilities"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"piercing",
+"Crit (Auto-wound)"
+]
+]
+}

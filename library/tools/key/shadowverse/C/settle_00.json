@@ -1,0 +1,1330 @@
+{
+"752370": [
+[
+"banish",
+"Banish a card in your hand"
+],
+[
+"copy",
+"Put a copy of the banished card into your deck"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"752437": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_loss",
+"give -1/-1 to all enemy followers"
+],
+[
+"scope_multi",
+"all enemy followers"
+]
+],
+"752494": [
+[
+"tutor",
+"Put a random Swordcraft follower from your deck into your hand"
+],
+[
+"random_effect",
+"random Swordcraft follower"
+],
+[
+"tribal",
+"Swordcraft"
+],
+[
+"count_payoff",
+"Rally (10)"
+]
+],
+"752502": [
+[
+"turn_end",
+"At the end of this turn"
+],
+[
+"revive",
+"put into your hand copies of 2 different random allied Swordcraft followers destroyed"
+],
+[
+"random_effect",
+"random allied Swordcraft followers"
+],
+[
+"tribal",
+"Swordcraft followers"
+]
+],
+"752530": [
+[
+"damage",
+"Deal 1 damage to an enemy"
+],
+[
+"ping",
+"Deal 1 damage"
+],
+[
+"condition_count",
+"Spellboosted at least 5 times"
+],
+[
+"generate_cards",
+"put an Impalement Arts into your hand"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"self_destruct",
+"discard this card from your hand"
+]
+],
+"752551": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"friendly_fire",
+"deal 2 damage to 1"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"stat_gain",
+"gain +2/+1"
+]
+],
+"752552": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Bullet Bike into your hand"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"summon",
+"summon it instead"
+]
+],
+"752566": [
+[
+"transform",
+"Transform a Dragoncraft card in your hand into a Windblast Dragon"
+],
+[
+"in_hand_buff",
+"Transform a Dragoncraft card in your hand"
+],
+[
+"tribal",
+"Dragoncraft card"
+]
+],
+"752583": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"self_destruct",
+"destroy this amulet"
+],
+[
+"condition_count",
+"if Overflow is active for you"
+]
+],
+"752611": [
+[
+"sacrifice",
+"Burial Rite"
+],
+[
+"tutor",
+"Put a random Shadowcraft follower from your deck into your hand"
+],
+[
+"random_effect",
+"random Shadowcraft follower"
+],
+[
+"tribal",
+"Shadowcraft follower"
+],
+[
+"stat_condition",
+"original attack or defense of 1"
+]
+],
+"752621": [
+[
+"sacrifice",
+"Burial Rite"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"condition_count",
+"performed Burial Rite at least 2 times this turn"
+]
+],
+"752783": [
+[
+"transform",
+"Evolve"
+],
+[
+"symmetric_effect",
+"Give both leaders the following effect"
+],
+[
+"rule_change",
+"Allied Fanfare effects will not activate"
+]
+],
+"752960": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Forestcraft cards"
+],
+[
+"cost_condition",
+"originally cost at least 2 play points"
+],
+[
+"summon",
+"summon a Fairy"
+],
+[
+"generate_cards",
+"put a Fairy into your hand"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Gain +X/+Y"
+],
+[
+"count_payoff",
+"the number of allied Forestcraft followers that have left play this match"
+],
+[
+"distribute",
+"split randomly"
+],
+[
+"random_effect",
+"randomly"
+]
+],
+"753012": [
+[
+"taunt",
+"your opponent can only target this follower"
+],
+[
+"immunity",
+"Can't be destroyed by effects"
+]
+],
+"753072": [
+[
+"taunt",
+"Ward"
+],
+[
+"cost_set",
+"Can evolve for 0 evolution points"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"stat_gain",
+"Allied Neutral followers deal +1 damage"
+],
+[
+"tribal",
+"Neutral followers"
+],
+[
+"transform",
+"evolve it"
+]
+],
+"753188": [
+[
+"banish",
+"Banish 2 random cards from your deck"
+],
+[
+"random_effect",
+"random cards"
+],
+[
+"turn_end",
+"At the end of this turn"
+],
+[
+"deck_condition",
+"if you have more than 20 cards in your deck"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"copy",
+"put a copy of a random allied follower played this turn into your hand"
+]
+],
+"753269": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"in_hand_buff",
+"Give +0/+1 to all Dragoncraft followers in your deck"
+],
+[
+"tribal",
+"Dragoncraft followers"
+],
+[
+"targeting_rules",
+"Can't attack the enemy leader"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"stat_gain",
+"Change this follower's attack to its defense"
+]
+],
+"753504": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"If Wrath is not active for you"
+],
+[
+"friendly_fire",
+"deal 1 damage to your leader"
+],
+[
+"repeat_trigger",
+"Do this 2 times"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all enemy followers"
+],
+[
+"heal",
+"Restore 2 defense to your leader"
+]
+],
+"753535": [
+[
+"target_choice",
+"Select 2 allied Bloodcraft followers"
+],
+[
+"tribal",
+"Bloodcraft followers"
+],
+[
+"aoe_damage",
+"Deal X damage to all enemy followers"
+],
+[
+"stat_condition",
+"X equals the first follower's attack"
+],
+[
+"heal",
+"restore Y defense to your leader"
+],
+[
+"play_restriction",
+"Can be played only when 2 targetable allied followers are in play"
+]
+],
+"753646": [
+[
+"delayed",
+"Countdown (3)"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"hand_size",
+"If you have more cards in hand than your opponent"
+],
+[
+"speed",
+"subtract 1 from the Countdown of this amulet"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon an Adamantium Bird"
+]
+],
+"753648": [
+[
+"delayed",
+"Countdown (1)"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"tutor",
+"Put a random 1-play-point follower from your deck into your hand"
+],
+[
+"random_effect",
+"random 1-play-point follower"
+],
+[
+"cost_condition",
+"1-play-point follower"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"generate_cards",
+"Put a Naterran Great Tree into your hand"
+]
+],
+"753710": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"generate_cards",
+"Put a Queen Hemera the White or Queen Magnus the Black into your hand"
+],
+[
+"death_count",
+"if at least 10 allied followers have been destroyed this match"
+],
+[
+"in_hand_buff",
+"subtract 2 from its cost"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"in_hand_buff",
+"Subtract 2 from the costs of a random Queen Hemera the White"
+],
+[
+"random_effect",
+"random Queen Hemera the White"
+]
+],
+"753722": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"variety_payoff",
+"no duplicate cards in your deck"
+],
+[
+"deck_condition",
+"If there are no duplicate cards in your deck"
+],
+[
+"tutor",
+"put a random 1-play-point follower from your deck into your hand"
+],
+[
+"random_effect",
+"random 1-play-point follower"
+],
+[
+"cost_condition",
+"1-play-point follower"
+],
+[
+"kicker",
+"Enhance (4)"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all enemy followers"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"resource_gain",
+"Recover 1 evolution point"
+]
+],
+"753756": [
+[
+"on_attack",
+"Strike"
+],
+[
+"aoe_damage",
+"Deal 1 damage to all enemy followers"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"merge_attach",
+"combine with an allied Harnessed Flame"
+],
+[
+"transform",
+"become a Flame and Glass"
+]
+],
+"753785": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put 2 Goblins into your hand"
+],
+[
+"transform",
+"Transform an allied Goblin into a Goblin King"
+]
+],
+"753990": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Swordcraft cards"
+],
+[
+"summon",
+"Summon 2 Steelclad Knights"
+],
+[
+"condition_count",
+"If this card is fused with at least 1 card"
+],
+[
+"summon",
+"summon a Naterran World Tree"
+],
+[
+"damage",
+"deal 5 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random enemy follower"
+],
+[
+"summon",
+"summon 2 Fox Spearmen"
+]
+],
+"754017": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"copy",
+"put a copy of that amulet into your hand"
+],
+[
+"in_hand_buff",
+"Subtract 1 from its cost"
+]
+],
+"754021": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"return_to_hand",
+"return 1 to your hand"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"return_to_hand",
+"Return an allied amulet to your hand"
+],
+[
+"damage",
+"deal 3 damage to an enemy follower"
+]
+],
+"754079": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Machina cards"
+],
+[
+"tutor",
+"Put 2 different random Machina followers from your deck into your hand"
+],
+[
+"random_effect",
+"random Machina followers"
+],
+[
+"condition_count",
+"If this card is fused with at least 1 card"
+],
+[
+"summon",
+"summon 2 Assembly Droids"
+],
+[
+"transform",
+"evolve a random unevolved allied Assembly Droid"
+],
+[
+"resource_gain",
+"recover 1 play point"
+]
+],
+"754097": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"enemy_benefit",
+"Summon an enemy Dragon"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"banish",
+"Banish an enemy Dragon"
+]
+],
+"754118": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put an Assembly Droid into your hand"
+],
+[
+"cost_set",
+"change its cost to 0"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"transform",
+"Evolve an unevolved allied Machina follower"
+],
+[
+"tribal",
+"Machina follower"
+]
+],
+"754133": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"haste",
+"Rush"
+],
+[
+"damage_reduction",
+"Can't take more than 1 damage at a time"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"discard",
+"Discard a card from your hand"
+],
+[
+"draw",
+"Draw 2 cards"
+]
+],
+"754164": [
+[
+"discard",
+"Whenever you discard cards from your hand"
+],
+[
+"draw",
+"draw X cards"
+],
+[
+"condition_count",
+"X equals the number of cards discarded"
+]
+],
+"754186": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"sacrifice",
+"Burial Rite"
+],
+[
+"tutor",
+"Put a random Shadowcraft follower from your deck into your hand"
+],
+[
+"random_effect",
+"random Shadowcraft follower"
+],
+[
+"tribal",
+"Shadowcraft follower"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+]
+],
+"754294": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon 2 Forest Bats"
+],
+[
+"resource_banking",
+"If you have at least 7 remaining play points"
+],
+[
+"generate_cards",
+"put a Darkfeast Bat into your hand"
+],
+[
+"on_ally_play",
+"Whenever an allied Forest Bat comes into play"
+],
+[
+"haste",
+"give it Storm"
+],
+[
+"count_payoff",
+"if Wrath is active for you"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"lifesteal",
+"Drain"
+],
+[
+"friendly_fire",
+"deal 1 damage to your leader"
+]
+],
+"754350": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Mark of Balance into both players' hands"
+],
+[
+"symmetric_effect",
+"both players' hands"
+],
+[
+"enemy_benefit",
+"both players' hands"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"resource_gain",
+"Recover 1 play point"
+]
+],
+"754396": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"resource_gain",
+"Recover 1 evolution point"
+],
+[
+"banish",
+"banish a random enemy follower with the highest attack in play"
+],
+[
+"stat_condition",
+"highest attack"
+],
+[
+"random_effect",
+"random enemy follower"
+],
+[
+"self_destruct",
+"banish this amulet"
+]
+],
+"754609": [
+[
+"haste",
+"Storm"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Revolutionaries' Shot into your hand"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"self_destruct",
+"discard it"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"delayed",
+"At the start of your next turn"
+],
+[
+"summon",
+"summon a Val, Speedy Magicar"
+]
+],
+"754679": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"resource_gain",
+"Recover 1 evolution point"
+],
+[
+"condition_count",
+"if Overflow is active for you"
+]
+],
+"754684": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Gain +0/+3"
+],
+[
+"condition_count",
+"if Overflow is active for you"
+]
+],
+"754718": [
+[
+"destroy",
+"Destroy an enemy follower"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"tutor",
+"put a random Dragoncraft follower from your deck into your hand"
+],
+[
+"random_effect",
+"random Dragoncraft follower"
+],
+[
+"tribal",
+"Dragoncraft follower"
+]
+],
+"754815": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"If Wrath is active for you"
+],
+[
+"cost_set",
+"evolve for 0 evolution points"
+],
+[
+"turn_start",
+"At the start of your opponent's turn"
+],
+[
+"heal",
+"restore 3 defense to your leader"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"friendly_fire",
+"Deal 1 damage to your leader"
+],
+[
+"damage",
+"4 damage to an enemy follower"
+],
+[
+"resource_banking",
+"If you have at least 4 play points"
+],
+[
+"haste",
+"gain Storm"
+],
+[
+"aoe_damage",
+"deal 8 damage to all other followers"
+],
+[
+"friendly_fire",
+"all other followers"
+]
+],
+"754833": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Liberté, Werewolf Pup"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"summon",
+"Summon a Savage Wolf"
+],
+[
+"count_payoff",
+"If Wrath is active for you"
+],
+[
+"transform",
+"evolve all unevolved allied followers"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"aoe_damage",
+"Deal 1 damage to all enemy followers"
+],
+[
+"direct_damage",
+"1 damage to both leaders"
+],
+[
+"friendly_fire",
+"both leaders"
+],
+[
+"symmetric_effect",
+"both leaders"
+],
+[
+"repeat_trigger",
+"Do this 2 times"
+]
+],
+"755128": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"destroy",
+"Destroy an enemy follower"
+],
+[
+"in_hand_buff",
+"Spellboost the cards in your hand"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"copy",
+"Put a copy of it into your hand"
+],
+[
+"condition_count",
+"X equals the number of times the selected card has been Spellboosted"
+]
+],
+"755142": [
+[
+"symmetric_effect",
+"Give both leaders the following effect"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"cost_set",
+"change the cost of all cards in your hand to X"
+],
+[
+"random_effect",
+"a random number between 1 and 10"
+],
+[
+"rule_change",
+"lasts for the rest of the match"
+]
+],
+"755229": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"direct_damage",
+"deal 2 damage to the enemy leader"
+],
+[
+"damage",
+"a random enemy follower"
+],
+[
+"random_effect",
+"random enemy follower"
+],
+[
+"low_life",
+"if the leader's defense is higher than yours"
+]
+],
+"755294": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Natura cards"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+],
+[
+"haste",
+"Storm"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"fused with at least 1 card"
+],
+[
+"deathtouch",
+"gain Bane"
+],
+[
+"taunt",
+"gain Ward"
+],
+[
+"lifesteal",
+"gain Drain"
+]
+],
+"755376": [
+[
+"haste",
+"Rush"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_count",
+"at least 1 allied Naterran Great Tree has been destroyed this match"
+],
+[
+"multi_attack",
+"attack 2 times per turn"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"summon",
+"summon a Viridia Magna"
+],
+[
+"transform",
+"evolve it"
+],
+[
+"taunt",
+"Ward"
+]
+],
+"755416": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Forestcraft followers"
+],
+[
+"cost_condition",
+"originally cost 2 play points or more"
+],
+[
+"condition_count",
+"2 or more cards are fused"
+],
+[
+"stat_gain",
+"gain +2/+0"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"gain Storm"
+],
+[
+"destroy",
+"destroy an enemy follower"
+]
+],
+"755473": [
+[
+"cost_type",
+"Crystallize (3)"
+],
+[
+"delayed",
+"Countdown (5)"
+],
+[
+"on_ally_play",
+"when you play a follower"
+],
+[
+"stat_gain",
+"give it +1/+0"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"speed",
+"subtract 1 from this amulet's Countdown"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Xeno Ifrit"
+],
+[
+"on_play",
+"When this follower comes into play"
+],
+[
+"aoe_damage",
+"deal 3 damage to all enemies"
+]
+]
+}

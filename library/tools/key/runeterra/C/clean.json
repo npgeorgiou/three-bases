@@ -1,0 +1,1600 @@
+{
+"750391": [
+[
+"return_to_hand",
+"Return a unit to hand"
+],
+[
+"bounce_enemy",
+"Return a unit to hand"
+],
+[
+"rewind",
+"remove all effects applied to it"
+]
+],
+"750405": [
+[
+"disable",
+"It can't attack or block for the rest of the round"
+],
+[
+"temporary_effect",
+"for the rest of the round"
+]
+],
+"750427": [
+[
+"on_attack",
+"When you attack"
+],
+[
+"deck_position",
+"while I'm on top of your deck"
+],
+[
+"tribal",
+"Lurker allies"
+],
+[
+"permanent_growth",
+"granting Lurker allies everywhere +1|+0"
+],
+[
+"in_hand_buff",
+"everywhere"
+]
+],
+"750437": [
+[
+"transform",
+"Secretly transforms into another unit"
+],
+[
+"information",
+"They won't reveal their true identity to your opponent"
+]
+],
+"750457": [
+[
+"on_attack",
+"when a unit attempts to deal damage using its Power"
+],
+[
+"stat_condition",
+"Units with 0 Power can't strike"
+]
+],
+"750463": [
+[
+"on_play",
+"When you play this spell"
+],
+[
+"copy",
+"create in hand a fleeting copy of it"
+]
+],
+"750493": [
+[
+"protection",
+"Remove Ephemeral from an ally"
+],
+[
+"removal",
+"grant it to an enemy"
+]
+],
+"750501": [
+[
+"temporary_buff",
+"Give an ally +1|+0 and Quick Attack this round"
+],
+[
+"first_strike",
+"Quick Attack"
+]
+],
+"750517": [
+[
+"deck_position",
+"Allegiance"
+],
+[
+"tutor",
+"Summon a 1 cost ally from your deck"
+],
+[
+"free_play",
+"Summon a 1 cost ally from your deck"
+],
+[
+"cost_condition",
+"1 cost ally"
+]
+],
+"750520": [
+[
+"lifesteal",
+"Lifesteal"
+],
+[
+"condition_count",
+"Enlightened"
+],
+[
+"stat_gain",
+"I have +4|+4"
+]
+],
+"750638": [
+[
+"on_spell",
+"When you play a spell"
+],
+[
+"generate_cards",
+"create a Fleeting Turret in hand"
+],
+[
+"cost_condition",
+"with equal cost"
+],
+[
+"cost_set",
+"It costs 0"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"I've seen you summon 12+ Power of Tech allies"
+],
+[
+"tribal",
+"Tech allies"
+]
+],
+"750724": [
+[
+"temporary_buff",
+"Give allies +2|+2 and Overwhelm this round"
+],
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"scope_multi",
+"Give allies"
+]
+],
+"750740": [
+[
+"death_trigger",
+"When another ally dies"
+],
+[
+"direct_damage",
+"deal 1 to the enemy Nexus"
+],
+[
+"ping",
+"deal 1"
+]
+],
+"750796": [
+[
+"temporary_buff",
+"Give an ally +2|+0 this round"
+],
+[
+"copy",
+"Create a Fleeting Vault Breaker in hand"
+]
+],
+"750833": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"stat_condition",
+"strongest enemy"
+],
+[
+"blocking",
+"Vulnerable"
+]
+],
+"750836": [
+[
+"evasion",
+"Elusive"
+],
+[
+"blocking",
+"Vulnerable"
+]
+],
+"750870": [
+[
+"in_hand_buff",
+"Grant the top 3 units in your deck +1|+1"
+],
+[
+"deck_position",
+"top 3 units in your deck"
+],
+[
+"draw",
+"Draw 1 of them"
+]
+],
+"750918": [
+[
+"turn_end",
+"Round End"
+],
+[
+"combo_sequence",
+"If you played a spell on me this round"
+],
+[
+"damage",
+"I strike the weakest enemy"
+],
+[
+"stat_condition",
+"weakest enemy"
+]
+],
+"750941": [
+[
+"friendly_fire",
+"Deal 2 to an ally"
+],
+[
+"blocking",
+"Vulnerable"
+],
+[
+"scope_multi",
+"2 enemies"
+]
+],
+"750990": [
+[
+"stat_gain",
+"Grant an ally +1|+1"
+],
+[
+"shield",
+"SpellShield"
+]
+],
+"751046": [
+[
+"damage",
+"Deal 1 to a unit"
+],
+[
+"summon",
+"Summon a random 1 cost follower"
+],
+[
+"random_effect",
+"random 1 cost follower"
+],
+[
+"in_hand_buff",
+"While I'm in hand, increase both by 1"
+],
+[
+"on_ally_play",
+"when you play a 3 cost card"
+],
+[
+"cost_condition",
+"3 cost card"
+]
+],
+"751049": [
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"evasion",
+"Fearsome"
+],
+[
+"combo_sequence",
+"Nightfall"
+],
+[
+"copy",
+"Create a copy of me in hand"
+]
+],
+"751063": [
+[
+"assists_support",
+"Support"
+],
+[
+"shield",
+"Barrier"
+],
+[
+"temporary_buff",
+"Give my supported ally +2|+1 this round"
+]
+],
+"751136": [
+[
+"on_play",
+"Play"
+],
+[
+"summon",
+"Blade Dance 2"
+],
+[
+"attack_now",
+"Blade Dance 2"
+]
+],
+"751154": [
+[
+"on_play",
+"Play"
+],
+[
+"destroy",
+"Destroy a landmark"
+],
+[
+"summon",
+"summon a Grumpy Rockbear"
+]
+],
+"751168": [
+[
+"delayed",
+"Countdown 2"
+],
+[
+"summon",
+"Summon a Grumpy Rockbear"
+],
+[
+"count_payoff",
+"if you've summoned 4+ landmarks this game"
+],
+[
+"stat_condition",
+"strongest ally"
+],
+[
+"stat_gain",
+"+2|+2"
+]
+],
+"751175": [
+[
+"count_payoff",
+"Reputation"
+],
+[
+"cost_reduction",
+"I cost 3 less"
+],
+[
+"ping",
+"Deal 1"
+],
+[
+"random_effect",
+"a random enemy"
+],
+[
+"direct_damage",
+"the enemy Nexus"
+],
+[
+"repeat_trigger",
+"5 times"
+]
+],
+"751258": [
+[
+"count_payoff",
+"Reputation"
+],
+[
+"cost_reduction",
+"I cost 2 less"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"attack_token",
+"Rally"
+]
+],
+"751303": [
+[
+"combo_sequence",
+"Daybreak"
+],
+[
+"generate_cards",
+"Create a random Nightfall card in hand"
+],
+[
+"random_effect",
+"random"
+]
+],
+"751308": [
+[
+"attack_now",
+"An ally starts a free attack"
+],
+[
+"blocking",
+"Challenging an enemy"
+]
+],
+"751314": [
+[
+"damage_reduction",
+"Tough"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"tutor",
+"draw Jarvan IV"
+],
+[
+"temporary_buff",
+"give allies Challenger and Scout this round"
+],
+[
+"blocking",
+"Challenger"
+],
+[
+"multi_attack",
+"Scout"
+],
+[
+"scope_multi",
+"give allies"
+]
+],
+"751338": [
+[
+"modal_choice",
+"Barrier or SpellShield"
+],
+[
+"shield",
+"Barrier"
+],
+[
+"temporary_buff",
+"this round"
+]
+],
+"751341": [
+[
+"on_play",
+"Play"
+],
+[
+"discard",
+"Discard up to 3 cards"
+],
+[
+"in_hand_buff",
+"allied Rumbles everywhere"
+],
+[
+"stacking_keyword",
+"Impact"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"shield",
+"SpellShield"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"I've seen Mecha Yordle allies deal 12+ damage"
+],
+[
+"tribal",
+"Mecha Yordle"
+]
+],
+"751351": [
+[
+"discard",
+"To play, discard 1"
+],
+[
+"selection",
+"Manifest"
+],
+[
+"tribal",
+"Yordle"
+],
+[
+"cost_condition",
+"costs 3 or less"
+],
+[
+"summon",
+"summon it"
+]
+],
+"751355": [
+[
+"aoe_damage",
+"Deal 1 to all enemies"
+],
+[
+"repeat_trigger",
+"then do it again"
+],
+[
+"ping",
+"Deal 1"
+]
+],
+"751396": [
+[
+"resource_gain",
+"Attune"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"generate_cards",
+"create a Prank in hand"
+]
+],
+"751425": [
+[
+"permanent_growth",
+"Augment"
+],
+[
+"on_play",
+"Play"
+],
+[
+"discard",
+"Discard 1"
+],
+[
+"generate_cards",
+"create a multi-region follower in hand"
+],
+[
+"in_hand_buff",
+"reduce its cost by 1"
+]
+],
+"751447": [
+[
+"return_to_hand",
+"Recall an ally"
+],
+[
+"blocking",
+"Vulnerable"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"751461": [
+[
+"delayed",
+"Countdown 3"
+],
+[
+"on_play",
+"when I'm summoned"
+],
+[
+"death_trigger",
+"you destroy me"
+],
+[
+"stat_condition",
+"strongest ally"
+],
+[
+"stat_gain",
+"+2|+0"
+]
+],
+"751504": [
+[
+"trap_secret",
+"Plant 2 Flashbomb Traps"
+],
+[
+"deck_position",
+"top 8 cards of the enemy deck"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"751569": [
+[
+"delayed",
+"Countdown 3"
+],
+[
+"summon",
+"Summon Inviolus Vox"
+]
+],
+"751595": [
+[
+"on_attack",
+"When an ally with an attachment attacks"
+],
+[
+"merge_attach",
+"attachment"
+],
+[
+"permanent_growth",
+"grant that attachment +1|+0"
+]
+],
+"751623": [
+[
+"cant_attack",
+"Immobile"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"friendly_fire",
+"Deal 2 to me"
+]
+],
+"751632": [
+[
+"variety_payoff",
+"Evolve"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"attack_token",
+"If you have the attack token"
+],
+[
+"generate_cards",
+"create a Second Skin in hand"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"751687": [
+[
+"variable_stats",
+"I have +1|+0 for each time an ally attacked with increased Power"
+],
+[
+"count_payoff",
+"for each time an ally attacked"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"stat_gain",
+"grant allies +1|+0"
+],
+[
+"stat_condition",
+"Empowered 6"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"turn_start",
+"Round Start"
+]
+],
+"751731": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"stat_gain",
+"Give me +1|+0"
+],
+[
+"count_payoff",
+"for each of your traps or boons that was activated this round"
+],
+[
+"trap_secret",
+"traps"
+]
+],
+"751772": [
+[
+"on_play",
+"Play"
+],
+[
+"aoe_damage",
+"Deal 1 to all enemies"
+],
+[
+"count_payoff",
+"If you've played 6+ new spells this game"
+],
+[
+"variety_payoff",
+"new spells"
+]
+],
+"751778": [
+[
+"damage",
+"Deal 1 to a unit"
+],
+[
+"count_payoff",
+"If you've Equipped an ally this game"
+],
+[
+"repeat_trigger",
+"copy me with the same target"
+]
+],
+"751826": [
+[
+"death_count",
+"If an ally died this round"
+],
+[
+"cost_reduction",
+"I cost 2 less"
+],
+[
+"on_play",
+"Play"
+],
+[
+"merge_attach",
+"Equip me with an equipment"
+],
+[
+"cost_condition",
+"costs 2 or less"
+],
+[
+"upgrade",
+"Forge me"
+]
+],
+"751831": [
+[
+"destroy",
+"Kill a unit"
+],
+[
+"stat_condition",
+"total Power and Health of 4 or less"
+],
+[
+"modal_choice",
+"or destroy a unit's equipment"
+],
+[
+"merge_attach",
+"equipment"
+]
+],
+"751833": [
+[
+"on_play",
+"When I am summoned"
+],
+[
+"summon",
+"summon a Ghastly Band"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"attack_token",
+"If you have the attack token"
+]
+],
+"751925": [
+[
+"transform",
+"When I transform"
+],
+[
+"summon",
+"summon a Aurora Hallunatis"
+]
+],
+"751976": [
+[
+"evasion",
+"Brash"
+],
+[
+"on_ally_play",
+"When you play a card"
+],
+[
+"cost_condition",
+"cost equal to my Power"
+],
+[
+"permanent_growth",
+"grant me +1|+1"
+]
+],
+"752020": [
+[
+"combo_sequence",
+"Daybreak"
+],
+[
+"blocking",
+"Vulnerable"
+],
+[
+"stat_condition",
+"weakest enemy"
+]
+],
+"752034": [
+[
+"shield",
+"Spellshield"
+],
+[
+"temporary_buff",
+"Give an ally Spellshield this round"
+],
+[
+"friendly_fire",
+"Curse it with Shackles"
+]
+],
+"752035": [
+[
+"on_play",
+"Play"
+],
+[
+"repeat_trigger",
+"Activate other allies' Daybreak and Nightfall effects"
+],
+[
+"combo_sequence",
+"Daybreak"
+],
+[
+"excess_damage",
+"Grant me Overwhelm"
+],
+[
+"shield",
+"Grant me SpellShield"
+]
+],
+"752041": [
+[
+"temporary_buff",
+"Give an ally +0|+2 this round"
+],
+[
+"damage",
+"That ally and an enemy strike each other"
+]
+],
+"752080": [
+[
+"delayed",
+"I-II"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"752081": [
+[
+"evasion",
+"Brash"
+],
+[
+"on_play",
+"Play"
+],
+[
+"draw",
+"draw another card"
+],
+[
+"cost_condition",
+"costs either more or less than the card you Updrafted"
+]
+],
+"752202": [
+[
+"blocking",
+"Challenger"
+]
+],
+"752288": [
+[
+"repeat_trigger",
+"Copy me onto the same targets"
+]
+],
+"752295": [
+[
+"resource_gain",
+"Attune"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"generate_cards",
+"create a Prank in hand"
+]
+],
+"796478": [
+[
+"blocking",
+"Challenger"
+],
+[
+"count_payoff",
+"When I've killed 4 enemies and survived"
+],
+[
+"alt_wincon",
+"you win the game"
+]
+],
+"796479": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"draw",
+"Draw 1"
+],
+[
+"upgrade",
+"level up"
+],
+[
+"hand_size",
+"you empty your hand"
+],
+[
+"generate_cards",
+"create a Super Mega Death Rocket! in hand"
+]
+],
+"796521": [
+[
+"turn_start",
+"Round Start"
+],
+[
+"copy",
+"Create a Fleeting copy of each non-Fleeting card I saw you play last round"
+],
+[
+"on_play",
+"Play"
+],
+[
+"generate_cards",
+"Create 4 Time Bombs in your deck"
+],
+[
+"selection",
+"Predict"
+]
+],
+"796567": [
+[
+"variety_payoff",
+"Evolve"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"attack_token",
+"If you have the attack token"
+],
+[
+"generate_cards",
+"create a Second Skin in hand"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"condition_count",
+"for each positive keyword I have"
+],
+[
+"damage",
+"Deal 1"
+],
+[
+"direct_damage",
+"the enemy Nexus"
+],
+[
+"targeting_rules",
+"lowest health first"
+]
+],
+"796570": [
+[
+"damage_reduction",
+"Tough"
+],
+[
+"on_play",
+"Play"
+],
+[
+"merge_attach",
+"Equip me"
+],
+[
+"copy",
+"an exact copy of an ally's equipment"
+],
+[
+"stat_condition",
+"strongest equipment"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"upgrade",
+"Forge me twice"
+],
+[
+"summon",
+"summon an attacking Spirit of the Ram"
+],
+[
+"variable_stats",
+"with my stats"
+]
+],
+"796586": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"stat_condition",
+"strongest enemy"
+],
+[
+"repeat_trigger",
+"it gains it again"
+]
+],
+"796600": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"friendly_fire",
+"Deal 1 to an ally"
+],
+[
+"temporary_buff",
+"give another ally +2|+2 this round"
+],
+[
+"generate_cards",
+"Create a Vladimir in your deck"
+]
+],
+"796607": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"multi_target_attack",
+"strikes all battling enemies"
+],
+[
+"generate_cards",
+"Create a Garen in your deck"
+]
+],
+"796640": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"banish",
+"Obliterate"
+],
+[
+"board_wipe",
+"Obliterate ALL units with 4 or less Power"
+],
+[
+"stat_condition",
+"4 or less Power"
+],
+[
+"hand_disruption",
+"in hands"
+],
+[
+"friendly_fire",
+"ALL units"
+],
+[
+"symmetric_effect",
+"ALL units"
+]
+],
+"796653": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"temporary_buff",
+"Give an ally +2|+0 this round"
+],
+[
+"generate_cards",
+"Create a Vi in your deck"
+]
+],
+"796660": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"draw",
+"draw me instead"
+],
+[
+"self_mill",
+"Tossed"
+],
+[
+"summon",
+"Summon 3 Vicious Platewyrms"
+]
+],
+"796666": [
+[
+"cant_attack",
+"Immobile"
+],
+[
+"blocking",
+"Vulnerable"
+],
+[
+"stacking_keyword",
+"Powder Kegs stack"
+],
+[
+"spell_power",
+"All of your spells and Skills deal 1 extra damage"
+],
+[
+"self_destruct",
+"Destroy me"
+]
+],
+"796679": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"temporary_buff",
+"Give an ally +3|+4 this round"
+],
+[
+"generate_cards",
+"Create a Sejuani in your deck"
+]
+],
+"796683": [
+[
+"blocking",
+"Challenger"
+],
+[
+"multi_attack",
+"Scout"
+]
+],
+"796689": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"damage",
+"striking both"
+],
+[
+"direct_damage",
+"into the enemy Nexus"
+],
+[
+"bounce_enemy",
+"Recall it"
+]
+],
+"796692": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"free_play",
+"Summon an ally that costs 3 or less from hand"
+],
+[
+"cost_condition",
+"costs 3 or less"
+]
+],
+"796699": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"removal",
+"he Captures it"
+],
+[
+"friendly_fire",
+"It strikes him"
+]
+],
+"796709": [
+[
+"blocking",
+"Challenger"
+],
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"count_payoff",
+"for each Celestial card you played this game"
+],
+[
+"tribal",
+"Celestial"
+],
+[
+"stat_gain",
+"grant me +1|+0"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"temporary_buff",
+"Give other allies +2|+2 and Overwhelm this round"
+],
+[
+"scope_multi",
+"other allies"
+]
+],
+"796746": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"temporary_buff",
+"Give allies +1|+1 this round"
+],
+[
+"scope_multi",
+"Give allies"
+],
+[
+"repeat_trigger",
+"Activate an ally's Daybreak effect"
+],
+[
+"generate_cards",
+"Create a Leona in your deck"
+]
+],
+"796773": [
+[
+"on_ally_play",
+"When you summon a Tech"
+],
+[
+"tribal",
+"Tech"
+],
+[
+"buff",
+"we share keywords"
+]
+],
+"796824": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"excess_damage",
+"Overwhelm"
+]
+],
+"796826": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"stat_gain",
+"+1|+1"
+]
+],
+"796869": [
+[
+"delayed",
+"Countdown 1"
+],
+[
+"resource_gain",
+"Get an extra mana gem this round"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"796891": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"shield",
+"SpellShield"
+],
+[
+"temporary_buff",
+"Give an ally SpellShield this round"
+]
+],
+"796990": [
+[
+"cant_attack",
+"Immobile"
+],
+[
+"evasion",
+"Elusive"
+],
+[
+"on_ally_play",
+"When you play an ally"
+],
+[
+"self_destruct",
+"kill me"
+],
+[
+"stat_gain",
+"grant it my stats and positive keywords"
+]
+],
+"797013": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"shield",
+"SpellShield"
+],
+[
+"generate_cards",
+"Create a Kai'Sa in your deck"
+]
+],
+"797043": [
+[
+"on_play",
+"Play"
+],
+[
+"transform",
+"when I transform"
+],
+[
+"summon",
+"Summon two Ephemeral copies of me"
+],
+[
+"copy",
+"copies of me"
+],
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"lifesteal",
+"Lifesteal"
+],
+[
+"blocking",
+"Challenger"
+],
+[
+"evasion",
+"Elusive"
+]
+],
+"797050": [
+[
+"on_play",
+"Play"
+],
+[
+"temporary_buff",
+"Give other allies +1|+1 this round"
+],
+[
+"scope_multi",
+"other allies"
+]
+],
+"797100": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"ping",
+"Deal 1 to anything"
+]
+],
+"797126": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"draw",
+"Draw 2"
+]
+],
+"797172": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"on_ally_play",
+"When you summon an ally this round"
+],
+[
+"temporary_buff",
+"give it +2|+0 this round"
+]
+]
+}

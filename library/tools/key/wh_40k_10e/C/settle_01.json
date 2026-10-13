@@ -1,0 +1,766 @@
+{
+"786259": [
+[
+"advantage",
+"you can re-roll the Charge roll"
+],
+[
+"reserve_bench",
+"Strategic Reserves"
+]
+],
+"786280": [
+[
+"combat_start",
+"At the start of the Fight phase"
+],
+[
+"stress_morale",
+"must take a Battle-shock test"
+],
+[
+"debuff",
+"subtracting 1 from that test"
+],
+[
+"scope_multi",
+"each enemy unit within 6"
+]
+],
+"786282": [
+[
+"tribal",
+"Wolf Priest model only"
+],
+[
+"merge_attach",
+"While this model is leading a unit"
+],
+[
+"buff",
+"add 1 to the Hit roll"
+]
+],
+"786350": [
+[
+"tribal",
+"Infantry only"
+],
+[
+"stat_gain",
+"its Toughness characteristic to 6 and its Wounds characteristic to 5"
+],
+[
+"type_grant",
+"add the Gravis keyword"
+],
+[
+"merge_attach",
+"replace the list of units this model can be attached to"
+]
+],
+"786351": [
+[
+"tribal",
+"Infantry only"
+],
+[
+"buff",
+"This model gains the Infiltrators and Stealth abilities"
+],
+[
+"type_grant",
+"add the Phobos keyword"
+],
+[
+"merge_attach",
+"replace the list of units this model can be attached to"
+]
+],
+"786391": [
+[
+"merge_attach",
+"While the bearer is leading a unit"
+],
+[
+"saving_throws",
+"5+ invulnerable save"
+]
+],
+"786392": [
+[
+"merge_attach",
+"While the bearer is leading a unit"
+],
+[
+"placement_rules",
+"have the Deep Strike ability"
+]
+],
+"786404": [
+[
+"tribal",
+"Leagues of Votann model only"
+],
+[
+"turn_end",
+"At the end of the turn"
+],
+[
+"resource_banking",
+"you spent no YP in that turn"
+],
+[
+"resource_gain",
+"you gain 1YP"
+]
+],
+"786437": [
+[
+"advantage",
+"you can re-roll the Hit roll"
+],
+[
+"turn_end",
+"At the end of the Fight phase"
+],
+[
+"coin_economy",
+"spend up to 4 Yield points"
+],
+[
+"random_effect",
+"Roll one D6 for each point spent"
+],
+[
+"damage",
+"that enemy unit suffers 1 mortal wound"
+]
+],
+"786488": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"on_attack",
+"after this unit has shot"
+],
+[
+"movement",
+"it can make a Normal move of up to 6"
+],
+[
+"cant_attack",
+"this unit is not eligible to declare a charge"
+]
+],
+"786490": [
+[
+"immunity",
+"You can ignore any or all modifiers to the Leadership characteristic"
+],
+[
+"advantage",
+"you can re-roll failed Out of Action tests"
+]
+],
+"786548": [
+[
+"tribal",
+"Tyranids model only"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"cost_set",
+"for 0CP"
+],
+[
+"rule_change",
+"even if you have already targeted a different unit with that Stratagem this phase"
+]
+],
+"786588": [
+[
+"advantage",
+"you can re-roll the Hit roll"
+]
+],
+"786653": [
+[
+"type_grant",
+"The bearer has the Destroyer Cult keyword"
+],
+[
+"merge_attach",
+"the bearer can be attached to a Destroyer Cult unit"
+],
+[
+"deckbuilding_effect",
+"the bearer’s unit cannot contain any models without the Destroyer Cult keyword"
+],
+[
+"stat_gain",
+"Add 3"
+]
+],
+"786655": [
+[
+"reactions",
+"Each time an enemy unit is selected to shoot, after that unit has shot"
+],
+[
+"death_trigger",
+"if any models from the bearer’s unit were destroyed as a result of those attacks"
+],
+[
+"movement",
+"the bearer’s unit can make a Surge move"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stress_morale",
+"while it is Battle‑shocked"
+]
+],
+"786657": [
+[
+"advantage",
+"re-roll a Hit roll of 1"
+]
+],
+"786710": [
+[
+"merge_attach",
+"While the bearer is leading a unit"
+],
+[
+"saving_throws",
+"4+ invulnerable save against ranged attacks"
+]
+],
+"786723": [
+[
+"tribal",
+"Orks Infantry model only"
+],
+[
+"temporary_buff",
+"while resolving those attacks, add 1 to the Strength characteristic"
+],
+[
+"condition_count",
+"10 or more models"
+]
+],
+"786764": [
+[
+"tribal",
+"Infantry* or Mounted model only"
+],
+[
+"stat_gain",
+"Add 1 to the bearer's Wounds characteristic"
+],
+[
+"damage_reduction",
+"worsen the Armour Penetration of that attack by 1"
+]
+],
+"786766": [
+[
+"tribal",
+"Mounted Waaagh!boss model only"
+],
+[
+"stat_gain",
+"Add 2"
+],
+[
+"first_strike",
+"have the Fights First ability"
+]
+],
+"786787": [
+[
+"tribal",
+"Walker model only"
+],
+[
+"stat_gain",
+"Add 2"
+],
+[
+"buff",
+"Add 1 to Advance and Charge rolls"
+]
+],
+"786789": [
+[
+"tribal",
+"Hordeboss or Warphead only"
+],
+[
+"stat_gain",
+"its Toughness and Wounds characteristic to 6"
+],
+[
+"type_grant",
+"add the Mountedkeyword"
+],
+[
+"merge_attach",
+"replace the list of units this model can be attached to"
+]
+],
+"786801": [
+[
+"protection",
+"subtract 1 from the Wound roll"
+]
+],
+"786812": [
+[
+"tribal",
+"T’au Empire model only"
+],
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"buff",
+"have the Scouts 6"
+],
+[
+"scope_multi",
+"up to two friendly T’au Empire units"
+]
+],
+"786839": [
+[
+"merge_attach",
+"While that Shaper model is leading a unit"
+],
+[
+"buff",
+"add 1 to the Hit roll"
+]
+],
+"786840": [
+[
+"buff",
+"add 1 to the result"
+]
+],
+"786895": [
+[
+"advantage",
+"You can re-roll Advance and Charge rolls"
+]
+],
+"786902": [
+[
+"piercing",
+"[IGNORES COVER] ability"
+]
+],
+"786914": [
+[
+"tribal",
+"Kinband Champion only"
+],
+[
+"merge_attach",
+"While this model is leading a unit"
+],
+[
+"buff",
+"have the [SUSTAINED HITS 1] ability"
+]
+],
+"786916": [
+[
+"start_of_game",
+"After both players have deployed their armies"
+],
+[
+"movement",
+"redeploy this model's unit and one other friendly T'au Empire unit"
+],
+[
+"reserve_bench",
+"placed into Strategic Reserves"
+],
+[
+"tribal",
+"T'au Empire unit"
+]
+],
+"786929": [
+[
+"zone_of_control",
+"Enemy units cannot start or end an Advance move within 6"
+]
+],
+"786952": [
+[
+"play_restriction",
+"You cannot use any Stratagems to affect this unit"
+]
+],
+"786956": [
+[
+"buff",
+"This unit has the Scouts 9"
+]
+],
+"786958": [
+[
+"stress_morale",
+"Battle-shock or Leadership test"
+],
+[
+"advantage",
+"you can re-roll that test"
+]
+],
+"786981": [
+[
+"buff",
+"have the Stealth ability"
+]
+],
+"786993": [
+[
+"advantage",
+"re-roll a Hit roll of 1"
+],
+[
+"tribal",
+"targets an Infantry or Mounted unit"
+]
+],
+"787027": [
+[
+"on_play",
+"Each time this unit is set up on the battlefield using the Deep Strike ability"
+],
+[
+"temporary_effect",
+"until the end of your next turn"
+],
+[
+"buff",
+"this unit has the Stealth ability"
+],
+[
+"protection",
+"enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit"
+]
+],
+"787089": [
+[
+"advantage",
+"re-roll a Hit roll of 1"
+]
+],
+"787099": [
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"control_reward",
+"friendly units within range of that objective marker have a 5+ invulnerable save"
+],
+[
+"saving_throws",
+"5+ invulnerable save"
+]
+],
+"787149": [
+[
+"merge_attach",
+"While this model is leading a unit"
+],
+[
+"advantage",
+"you can re-roll Advance rolls"
+],
+[
+"on_spell",
+"when its unit is targeted with a Stratagem"
+],
+[
+"cost_reduction",
+"reduce the CP cost of that usage of that stratagem by 1CP"
+],
+[
+"saving_throws",
+"4+ Invulnerable save"
+],
+[
+"first_strike",
+"it has the Fights First ability"
+],
+[
+"tribal",
+"leading a Howling Banshees unit"
+]
+],
+"787150": [
+[
+"on_spell",
+"when its unit is targeted with a Stratagem"
+],
+[
+"cost_reduction",
+"reduce the CP cost of that usage of that stratagem by 1CP"
+],
+[
+"saving_throws",
+"4+ Invulnerable save"
+],
+[
+"merge_attach",
+"While this model is leading a unit"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"resource_gain",
+"you gain 1 Battle Focus token"
+]
+],
+"787151": [
+[
+"damage_reduction",
+"halve the Damage characteristic of that attack"
+],
+[
+"aura",
+"(Aura)"
+],
+[
+"buff",
+"add 1 to Advance and Charge rolls"
+],
+[
+"tribal",
+"friendly Aeldari unit"
+],
+[
+"condition_life",
+"While this model has 1-5 wounds remaining"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+],
+[
+"saving_throws",
+"4+ Invulnerable save"
+]
+],
+"787152": [
+[
+"saving_throws",
+"4+ Invulnerable save"
+],
+[
+"merge_attach",
+"This model can be attached"
+],
+[
+"on_play",
+"Each time this model is set-up on the battlefield"
+],
+[
+"temporary_buff",
+"a successful unmodified Hit roll scores a Critical Hit"
+],
+[
+"turn_end",
+"at the end of your opponent's turn"
+],
+[
+"reserve_bench",
+"place it into Strategic Reserves"
+],
+[
+"placement_rules",
+"can be set-up anywhere on the battlefield that is more than 6"
+],
+[
+"cant_attack",
+"it is not eligible to declare a charge"
+]
+],
+"787154": [
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"mark_target",
+"select one unit from your opponent’s army"
+],
+[
+"buff",
+"that attack has the [LETHAL HITS] and [PRECISION] abilities"
+],
+[
+"shield",
+"change the Damage characteristic of that attack to 0"
+],
+[
+"piercing",
+"[IGNORES COVER] ability"
+],
+[
+"saving_throws",
+"4+ invulnerable save"
+]
+],
+"787171": [
+[
+"saving_throws",
+"4+ Invulnerable save"
+],
+[
+"merge_attach",
+"This model can be attached"
+],
+[
+"buff",
+"add 1 to the Hit roll"
+],
+[
+"buff",
+"have the [DEVASTATING WOUNDS] ability"
+]
+],
+"787175": [
+[
+"saving_throws",
+"5+ invulnerable save against ranged attacks only"
+],
+[
+"reactions",
+"when an enemy unit ends a Normal, Advance or Fall Back move within 9"
+],
+[
+"on_enemy_enter",
+"ends a Normal, Advance or Fall Back move within 9"
+],
+[
+"movement",
+"it can make a Normal move of up to D6"
+],
+[
+"random_effect",
+"D6"
+]
+],
+"787177": [
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"movement",
+"ignore any vertical distance"
+]
+],
+"787186": [
+[
+"saving_throws",
+"5+ Invulnerable save"
+],
+[
+"on_play",
+"when this unit is set-up on the battlefield"
+],
+[
+"random_effect",
+"roll one D6 for each Swooping Hawks model"
+],
+[
+"damage",
+"that enemy unit suffers 1 mortal wound"
+],
+[
+"play_restriction",
+"you cannot target this unit with the Grenades Stratagem"
+]
+],
+"787204": [
+[
+"advantage",
+"you can re-roll Charge rolls"
+],
+[
+"saving_throws",
+"6+ Invulnerable save"
+],
+[
+"kicker",
+"you can spend 1 of your Pain tokens to Empower this unit"
+],
+[
+"coin_economy",
+"Pain tokens"
+],
+[
+"tribal",
+"Beast model"
+]
+],
+"787206": [
+[
+"aura",
+"(Aura)"
+],
+[
+"coin_economy",
+"spend 1 Pain token to Empower"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"resource_gain",
+"you gain 1 Pain token"
+],
+[
+"saving_throws",
+"6+ Invulnerable save"
+],
+[
+"kicker",
+"you can spend 1 Pain token to Empower this unit"
+],
+[
+"on_kill",
+"if one or more enemy models were destroyed as a result of those attacks"
+],
+[
+"heal",
+"one model in this unit regains up to 3 lost wounds"
+],
+[
+"revive",
+"1 model is returned to this unit"
+]
+]
+}

@@ -1,0 +1,6007 @@
+{
+"752312": {
+"tags": [
+[
+"modal_choice",
+"Choose"
+]
+],
+"by": "A=B"
+},
+"752317": {
+"tags": [
+[
+"stealth",
+"Ambush"
+]
+],
+"by": "A=B"
+},
+"752347": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"resource_banking",
+"if you have at least 1 play point"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+]
+],
+"by": "A=B"
+},
+"752370": {
+"tags": [
+[
+"banish",
+"Banish a card in your hand"
+],
+[
+"copy",
+"Put a copy of the banished card into your deck"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "C"
+},
+"752376": {
+"tags": [
+[
+"modal_choice",
+"Choose"
+],
+[
+"generate_cards",
+"Put a Dark Angel Olivia or Lucifer into your hand"
+],
+[
+"cost_set",
+"change its cost to 5"
+]
+],
+"by": "A=B"
+},
+"752401": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"combo_sequence",
+"at least 2 other cards were played this turn"
+],
+[
+"haste",
+"gain Storm"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"generate_cards",
+"put a Shamu's Antics and Shama's Gaze into your hand"
+],
+[
+"cost_set",
+"change their costs to 1"
+]
+],
+"by": "A=B"
+},
+"752420": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"combo_sequence",
+"played at least 2 other cards this turn"
+],
+[
+"haste",
+"gain Storm"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"return_to_hand",
+"return this card to your hand"
+]
+],
+"by": "A=B"
+},
+"752437": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_loss",
+"give -1/-1 to all enemy followers"
+],
+[
+"scope_multi",
+"all enemy followers"
+]
+],
+"by": "C"
+},
+"752447": {
+"tags": [
+[
+"summon",
+"Summon a Naterran World Tree"
+],
+[
+"combo_sequence",
+"at least 2 other cards were played this turn"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+]
+],
+"by": "A=B"
+},
+"752471": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"at least 1 enemy follower in play"
+],
+[
+"haste",
+"gain Rush"
+],
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"multi_attack",
+"attack 2 times per turn"
+]
+],
+"by": "A=B"
+},
+"752477": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"Rally (7)"
+],
+[
+"haste",
+"Gain Rush"
+],
+[
+"on_attack",
+"Clash"
+],
+[
+"generate_cards",
+"Put a Gilded Blade into your hand"
+]
+],
+"by": "A=B"
+},
+"752478": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"generate_cards",
+"Put a Lord General Romeo or Princess Juliet into your hand"
+],
+[
+"count_payoff",
+"Rally (10)"
+],
+[
+"summon",
+"Summon it instead"
+]
+],
+"by": "A=B"
+},
+"752483": {
+"tags": [
+[
+"deathtouch",
+"Bane"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"count_payoff",
+"If allied followers have evolved at least 5 times this match"
+],
+[
+"shield",
+"reduce that damage to 0"
+]
+],
+"by": "A=B"
+},
+"752494": {
+"tags": [
+[
+"tutor",
+"Put a random Swordcraft follower from your deck into your hand"
+],
+[
+"random_effect",
+"random Swordcraft follower"
+],
+[
+"tribal",
+"Swordcraft"
+],
+[
+"count_payoff",
+"Rally (10)"
+]
+],
+"by": "C"
+},
+"752502": {
+"tags": [
+[
+"turn_end",
+"At the end of this turn"
+],
+[
+"revive",
+"put into your hand copies of 2 different random allied Swordcraft followers destroyed"
+],
+[
+"random_effect",
+"random allied Swordcraft followers"
+],
+[
+"tribal",
+"Swordcraft followers"
+]
+],
+"by": "C"
+},
+"752509": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_gain",
+"give +1/+0"
+],
+[
+"random_effect",
+"random"
+],
+[
+"tribal",
+"Officer follower"
+]
+],
+"by": "A=B"
+},
+"752530": {
+"tags": [
+[
+"damage",
+"Deal 1 damage to an enemy"
+],
+[
+"ping",
+"Deal 1 damage"
+],
+[
+"condition_count",
+"Spellboosted at least 5 times"
+],
+[
+"generate_cards",
+"put an Impalement Arts into your hand"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"self_destruct",
+"discard this card from your hand"
+]
+],
+"by": "C"
+},
+"752533": {
+"tags": [
+[
+"damage",
+"Deal 2 damage to an enemy follower"
+],
+[
+"summon",
+"Summon a Magic Sediment"
+],
+[
+"stacking_keyword",
+"Stack count"
+],
+[
+"condition_count",
+"at least 3"
+]
+],
+"by": "A=B"
+},
+"752538": {
+"tags": [
+[
+"summon",
+"Summon a Magical Pawn"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"heal",
+"Restore 1 defense to your leader"
+],
+[
+"count_payoff",
+"at least 8 allied Magical Pawns have left play this match"
+],
+[
+"haste",
+"Storm"
+]
+],
+"by": "A=B"
+},
+"752543": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"tribal",
+"Earth Sigil amulet"
+],
+[
+"sacrifice",
+"Earth Rite"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"resource_gain",
+"recover 1 play point"
+]
+],
+"by": "A=B"
+},
+"752551": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"friendly_fire",
+"deal 2 damage to 1"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"stat_gain",
+"gain +2/+1"
+]
+],
+"by": "C"
+},
+"752552": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Bullet Bike into your hand"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"summon",
+"summon it instead"
+]
+],
+"by": "C"
+},
+"752566": {
+"tags": [
+[
+"transform",
+"Transform a Dragoncraft card in your hand into a Windblast Dragon"
+],
+[
+"in_hand_buff",
+"Transform a Dragoncraft card in your hand"
+],
+[
+"tribal",
+"Dragoncraft card"
+]
+],
+"by": "C"
+},
+"752583": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"self_destruct",
+"destroy this amulet"
+],
+[
+"condition_count",
+"if Overflow is active for you"
+]
+],
+"by": "C"
+},
+"752590": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"stat_gain",
+"Gain +5/+5"
+],
+[
+"graveyard",
+"3 shadows"
+],
+[
+"death_trigger",
+"Last Words"
+]
+],
+"by": "A=B"
+},
+"752607": {
+"tags": [
+[
+"silence",
+"Remove all effects from an enemy follower"
+],
+[
+"kicker",
+"Enhance (5)"
+],
+[
+"destroy",
+"Then destroy that follower"
+]
+],
+"by": "A=B"
+},
+"752611": {
+"tags": [
+[
+"sacrifice",
+"Burial Rite"
+],
+[
+"tutor",
+"Put a random Shadowcraft follower from your deck into your hand"
+],
+[
+"random_effect",
+"random Shadowcraft follower"
+],
+[
+"tribal",
+"Shadowcraft follower"
+],
+[
+"stat_condition",
+"original attack or defense of 1"
+]
+],
+"by": "C"
+},
+"752621": {
+"tags": [
+[
+"sacrifice",
+"Burial Rite"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"condition_count",
+"performed Burial Rite at least 2 times this turn"
+]
+],
+"by": "C"
+},
+"752638": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"discard",
+"Discard 2 cards from your hand"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"delayed",
+"At the start of your next turn"
+]
+],
+"by": "A=B"
+},
+"752642": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"low_life",
+"Vengeance"
+],
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"damage",
+"deal 4 damage to an enemy follower"
+]
+],
+"by": "A=B"
+},
+"752657": {
+"tags": [
+[
+"generate_cards",
+"Put a Naterran Great Tree into your hand"
+],
+[
+"turn_number",
+"fifth turn or later"
+],
+[
+"resource_gain",
+"recover 1 play point"
+],
+[
+"direct_damage",
+"deal 3 damage to the enemy leader"
+],
+[
+"heal",
+"restore 3 defense to your leader"
+]
+],
+"by": "A=B"
+},
+"752689": {
+"tags": [
+[
+"stealth",
+"Ambush"
+],
+[
+"on_ally_play",
+"when another allied follower comes into play"
+],
+[
+"self_destruct",
+"banish this follower"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "A=B"
+},
+"752720": {
+"tags": [
+[
+"delayed",
+"Countdown (1)"
+],
+[
+"immunity",
+"Can't be targeted by enemy effects"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"tutor",
+"put a random amulet with Countdown from your deck into your hand"
+],
+[
+"random_effect",
+"random"
+]
+],
+"by": "A=B"
+},
+"752761": {
+"tags": [
+[
+"sacrifice",
+"Burial Rite"
+],
+[
+"copy",
+"Put a copy of that follower into your hand"
+],
+[
+"death_count",
+"at least 10 allied followers have been destroyed this match"
+],
+[
+"revive",
+"a copy of a random allied 3-play-point follower and 4-play-point follower destroyed this match"
+],
+[
+"random_effect",
+"random"
+]
+],
+"by": "A=B"
+},
+"752783": {
+"tags": [
+[
+"transform",
+"Evolve"
+],
+[
+"symmetric_effect",
+"Give both leaders the following effect"
+],
+[
+"rule_change",
+"Allied Fanfare effects will not activate"
+]
+],
+"by": "C"
+},
+"752814": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (4)"
+],
+[
+"summon",
+"Summon an Armored Goblin"
+],
+[
+"taunt",
+"Give Ward to all allied Armored Goblins"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"stat_gain",
+"Give +0/+3 to a random allied follower"
+],
+[
+"random_effect",
+"random"
+]
+],
+"by": "A=B"
+},
+"752818": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"shield",
+"reduce that damage to 0"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"stat_gain",
+"Gain +X/+X"
+],
+[
+"variable_stats",
+"X equals half the number of cards in your hand"
+],
+[
+"hand_size",
+"the number of cards in your hand"
+]
+],
+"by": "A=B"
+},
+"752872": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"combo_sequence",
+"at least 2 other cards were played this turn"
+]
+],
+"by": "A=B"
+},
+"752880": {
+"tags": [
+[
+"on_attack",
+"Clash"
+],
+[
+"stat_loss",
+"Give the enemy follower -1/-0"
+]
+],
+"by": "A=B"
+},
+"752882": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"combo_sequence",
+"Add 1 to the number of cards played this turn"
+]
+],
+"by": "A=B"
+},
+"752913": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"At the start of your next turn"
+],
+[
+"tutor",
+"put a random Machina card with the lowest cost from your deck into your hand"
+],
+[
+"tribal",
+"Machina card"
+],
+[
+"cost_condition",
+"the lowest cost"
+]
+],
+"by": "A=B"
+},
+"752929": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Give +0/+2 to another allied follower"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"regeneration",
+"fully restore all allied followers' defense"
+]
+],
+"by": "A=B"
+},
+"752960": {
+"tags": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Forestcraft cards"
+],
+[
+"cost_condition",
+"originally cost at least 2 play points"
+],
+[
+"summon",
+"summon a Fairy"
+],
+[
+"generate_cards",
+"put a Fairy into your hand"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Gain +X/+Y"
+],
+[
+"count_payoff",
+"the number of allied Forestcraft followers that have left play this match"
+],
+[
+"distribute",
+"split randomly"
+],
+[
+"random_effect",
+"randomly"
+]
+],
+"by": "C"
+},
+"752985": {
+"tags": [
+[
+"delayed",
+"Countdown (2)"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"random_effect",
+"random"
+],
+[
+"attack_lock",
+"It can't attack next turn"
+]
+],
+"by": "A=B"
+},
+"753012": {
+"tags": [
+[
+"taunt",
+"your opponent can only target this follower"
+],
+[
+"immunity",
+"Can't be destroyed by effects"
+]
+],
+"by": "C"
+},
+"753054": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal 1 damage to an enemy follower"
+],
+[
+"direct_damage",
+"then the enemy leader"
+],
+[
+"count_payoff",
+"at least 5 other allied Commander cards have come into play this match"
+],
+[
+"tribal",
+"Commander cards"
+],
+[
+"transform",
+"evolve this follower"
+]
+],
+"by": "A=B"
+},
+"753072": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"cost_set",
+"Can evolve for 0 evolution points"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"stat_gain",
+"Allied Neutral followers deal +1 damage"
+],
+[
+"tribal",
+"Neutral followers"
+],
+[
+"transform",
+"evolve it"
+]
+],
+"by": "C"
+},
+"753115": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"discard",
+"Discard a card with Spellboost from your hand"
+],
+[
+"tutor",
+"put a random card with Spellboost"
+],
+[
+"random_effect",
+"random"
+],
+[
+"cost_condition",
+"originally costs more than the discarded card"
+],
+[
+"in_hand_buff",
+"Spellboost it X times"
+]
+],
+"by": "A=B"
+},
+"753123": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Naterran Great Tree into your hand"
+],
+[
+"deck_condition",
+"20 cards or less in your deck"
+],
+[
+"stat_gain",
+"gain +2/+2"
+]
+],
+"by": "A=B"
+},
+"753141": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"If allied followers have evolved at least 1 time this match"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"heal",
+"restore 3 defense to your leader"
+],
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"haste",
+"Storm"
+]
+],
+"by": "A=B"
+},
+"753146": {
+"tags": [
+[
+"lifesteal",
+"Drain"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Magic Sediment"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stacking_keyword",
+"add 1 to an allied Stack"
+]
+],
+"by": "A=B"
+},
+"753188": {
+"tags": [
+[
+"banish",
+"Banish 2 random cards from your deck"
+],
+[
+"random_effect",
+"random cards"
+],
+[
+"turn_end",
+"At the end of this turn"
+],
+[
+"deck_condition",
+"if you have more than 20 cards in your deck"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"copy",
+"put a copy of a random allied follower played this turn into your hand"
+]
+],
+"by": "C"
+},
+"753190": {
+"tags": [
+[
+"damage",
+"Deal 3 damage to an enemy follower"
+],
+[
+"sacrifice",
+"Earth Rite (2)"
+],
+[
+"delayed",
+"At the end of this turn"
+],
+[
+"direct_damage",
+"deal 3 damage to the enemy leader"
+],
+[
+"generate_cards",
+"put an Earthen Fist into your hand"
+]
+],
+"by": "A=B"
+},
+"753194": {
+"tags": [
+[
+"modal_choice",
+"Choose"
+],
+[
+"generate_cards",
+"Put a Magical Squirrel or Wise Owl into your hand"
+],
+[
+"condition_count",
+"Spellboosted at least 5 times"
+],
+[
+"cost_set",
+"change its cost to 0"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+]
+],
+"by": "A=B"
+},
+"753200": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"random_effect",
+"Randomly"
+],
+[
+"summon",
+"summon 1 of the following"
+]
+],
+"by": "A=B"
+},
+"753239": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"discard",
+"Discard a card from your hand"
+],
+[
+"damage",
+"deal 4 damage to an enemy follower"
+],
+[
+"kicker",
+"Enhance (5)"
+],
+[
+"stat_gain",
+"Gain +3/+3"
+]
+],
+"by": "A=B"
+},
+"753269": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"in_hand_buff",
+"Give +0/+1 to all Dragoncraft followers in your deck"
+],
+[
+"tribal",
+"Dragoncraft followers"
+],
+[
+"targeting_rules",
+"Can't attack the enemy leader"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"stat_gain",
+"Change this follower's attack to its defense"
+]
+],
+"by": "C"
+},
+"753294": {
+"tags": [
+[
+"in_hand_buff",
+"Give +0/+1 to all Dragoncraft followers in your deck"
+],
+[
+"tribal",
+"Dragoncraft"
+],
+[
+"tutor",
+"Put a random Dragoncraft follower from your deck into your hand"
+],
+[
+"random_effect",
+"random"
+]
+],
+"by": "A=B"
+},
+"753333": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (6)"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"summon",
+"Summon a Spellplate Cavalier or Bone Cavalier"
+]
+],
+"by": "A=B"
+},
+"753362": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"graveyard",
+"Necromancy (2)"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"damage",
+"Deal 3 damage to an enemy follower"
+]
+],
+"by": "A=B"
+},
+"753364": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Ghost"
+],
+[
+"cost_set",
+"evolve for 0 evolution points"
+],
+[
+"kicker",
+"Enhance (6)"
+],
+[
+"stat_gain",
+"Gain +1/+1"
+],
+[
+"haste",
+"Storm"
+]
+],
+"by": "A=B"
+},
+"753372": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"destroy",
+"Destroy an enemy follower"
+],
+[
+"cost_condition",
+"costs at least 5 play points"
+],
+[
+"count_payoff",
+"performed Burial Rite at least 2 times this turn or at least 5 times this match"
+],
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"haste",
+"Storm"
+]
+],
+"by": "A=B"
+},
+"753403": {
+"tags": [
+[
+"sacrifice",
+"Destroy an allied follower"
+],
+[
+"destroy",
+"an enemy follower"
+],
+[
+"play_restriction",
+"Can be played only when both a targetable allied card and enemy card are in play"
+]
+],
+"by": "A=B"
+},
+"753404": {
+"tags": [
+[
+"revive",
+"Reanimate (3)"
+],
+[
+"kicker",
+"Enhance (8)"
+]
+],
+"by": "A=B"
+},
+"753504": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"If Wrath is not active for you"
+],
+[
+"friendly_fire",
+"deal 1 damage to your leader"
+],
+[
+"repeat_trigger",
+"Do this 2 times"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all enemy followers"
+],
+[
+"heal",
+"Restore 2 defense to your leader"
+]
+],
+"by": "C"
+},
+"753535": {
+"tags": [
+[
+"target_choice",
+"Select 2 allied Bloodcraft followers"
+],
+[
+"tribal",
+"Bloodcraft followers"
+],
+[
+"aoe_damage",
+"Deal X damage to all enemy followers"
+],
+[
+"stat_condition",
+"X equals the first follower's attack"
+],
+[
+"heal",
+"restore Y defense to your leader"
+],
+[
+"play_restriction",
+"Can be played only when 2 targetable allied followers are in play"
+]
+],
+"by": "C"
+},
+"753601": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"on_attack",
+"Whenever another allied follower attacks"
+],
+[
+"count_payoff",
+"played at least 5 cards using their Crystallize effect this match"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"haste",
+"Give Storm"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"stat_condition",
+"2 attack or less"
+]
+],
+"by": "A=B"
+},
+"753612": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal 1 damage to an enemy follower"
+],
+[
+"heal",
+"Restore 1 defense to your leader"
+],
+[
+"count_payoff",
+"If allied followers have evolved at least 3 times this match"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"random_effect",
+"random"
+]
+],
+"by": "A=B"
+},
+"753617": {
+"tags": [
+[
+"speed",
+"Subtract 2 from the Countdown of an allied amulet"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "A=B"
+},
+"753632": {
+"tags": [
+[
+"delayed",
+"Countdown (4)"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Barong"
+]
+],
+"by": "A=B"
+},
+"753646": {
+"tags": [
+[
+"delayed",
+"Countdown (3)"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"hand_size",
+"If you have more cards in hand than your opponent"
+],
+[
+"speed",
+"subtract 1 from the Countdown of this amulet"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon an Adamantium Bird"
+]
+],
+"by": "C"
+},
+"753648": {
+"tags": [
+[
+"delayed",
+"Countdown (1)"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"tutor",
+"Put a random 1-play-point follower from your deck into your hand"
+],
+[
+"random_effect",
+"random 1-play-point follower"
+],
+[
+"cost_condition",
+"1-play-point follower"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"generate_cards",
+"Put a Naterran Great Tree into your hand"
+]
+],
+"by": "C"
+},
+"753676": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"sacrifice",
+"Destroy another allied Portalcraft follower"
+],
+[
+"tribal",
+"Portalcraft"
+],
+[
+"draw",
+"draw 2 cards"
+]
+],
+"by": "A=B"
+},
+"753682": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put 2 Ancient Artifacts into your deck"
+]
+],
+"by": "A=B"
+},
+"753686": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Naterran Great Tree into your hand"
+],
+[
+"deck_condition",
+"Resonance"
+],
+[
+"haste",
+"gain Rush"
+]
+],
+"by": "A=B"
+},
+"753700": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_count",
+"at least 10 allied followers have been destroyed this match"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"generate_cards",
+"Put a Facsimile into your hand"
+]
+],
+"by": "A=B"
+},
+"753710": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"generate_cards",
+"Put a Queen Hemera the White or Queen Magnus the Black into your hand"
+],
+[
+"death_count",
+"if at least 10 allied followers have been destroyed this match"
+],
+[
+"in_hand_buff",
+"subtract 2 from its cost"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"in_hand_buff",
+"Subtract 2 from the costs of a random Queen Hemera the White"
+],
+[
+"random_effect",
+"random Queen Hemera the White"
+]
+],
+"by": "C"
+},
+"753722": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"variety_payoff",
+"no duplicate cards in your deck"
+],
+[
+"deck_condition",
+"If there are no duplicate cards in your deck"
+],
+[
+"tutor",
+"put a random 1-play-point follower from your deck into your hand"
+],
+[
+"random_effect",
+"random 1-play-point follower"
+],
+[
+"cost_condition",
+"1-play-point follower"
+],
+[
+"kicker",
+"Enhance (4)"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all enemy followers"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"resource_gain",
+"Recover 1 evolution point"
+]
+],
+"by": "C"
+},
+"753741": {
+"tags": [
+[
+"damage",
+"Deal 3 damage to an enemy follower"
+],
+[
+"tribal",
+"Artifact cards"
+],
+[
+"discard",
+"randomly discard 1"
+],
+[
+"random_effect",
+"randomly"
+]
+],
+"by": "A=B"
+},
+"753756": {
+"tags": [
+[
+"on_attack",
+"Strike"
+],
+[
+"aoe_damage",
+"Deal 1 damage to all enemy followers"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"merge_attach",
+"combine with an allied Harnessed Flame"
+],
+[
+"transform",
+"become a Flame and Glass"
+]
+],
+"by": "C"
+},
+"753785": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put 2 Goblins into your hand"
+],
+[
+"transform",
+"Transform an allied Goblin into a Goblin King"
+]
+],
+"by": "C"
+},
+"753817": {
+"tags": [
+[
+"polymorph",
+"Transform a follower in play into a Fallen Angel"
+],
+[
+"damage",
+"Deal 4 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random"
+],
+[
+"direct_damage",
+"2 damage to the enemy leader"
+]
+],
+"by": "A=B"
+},
+"753827": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Gain +1/+1"
+],
+[
+"combo_sequence",
+"each other card played this turn"
+]
+],
+"by": "A=B"
+},
+"753845": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"combo_sequence",
+"another Machina card was played this turn"
+],
+[
+"tribal",
+"Machina"
+],
+[
+"haste",
+"gain Storm"
+]
+],
+"by": "A=B"
+},
+"753860": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"generate_cards",
+"Put a Naterran Great Tree into your hand"
+]
+],
+"by": "A=B"
+},
+"753926": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"immunity",
+"Reduce damage from effects to 0"
+],
+[
+"temporary_effect",
+"until the end of the opponent's turn"
+],
+[
+"scope_multi",
+"all allied followers"
+]
+],
+"by": "A=B"
+},
+"753939": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"turn_number",
+"Union Burst (10)"
+],
+[
+"stat_gain",
+"Gain +3/+3"
+],
+[
+"damage",
+"Deal 5 damage to an enemy follower"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"permanent_growth",
+"gain +0/+1"
+]
+],
+"by": "A=B"
+},
+"753942": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"at least 2 Commander cards in your hand"
+],
+[
+"tribal",
+"Commander cards"
+],
+[
+"deathtouch",
+"gain Bane"
+],
+[
+"shield",
+"reduce that damage to 0"
+],
+[
+"kicker",
+"Enhance (8)"
+],
+[
+"resource_gain",
+"Recover 5 play points"
+]
+],
+"by": "A=B"
+},
+"753946": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"Rally (5)"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"summon",
+"Summon a Bullet Bike or Arcane Personnel Carrier"
+]
+],
+"by": "A=B"
+},
+"753977": {
+"tags": [
+[
+"destroy",
+"Destroy an enemy follower"
+],
+[
+"stat_condition",
+"at least 5 attack"
+]
+],
+"by": "A=B"
+},
+"753988": {
+"tags": [
+[
+"damage",
+"Deal 4 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random"
+],
+[
+"summon",
+"Summon 2 Heavy Knights"
+],
+[
+"count_payoff",
+"Rally (10)"
+]
+],
+"by": "A=B"
+},
+"753990": {
+"tags": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Swordcraft cards"
+],
+[
+"summon",
+"Summon 2 Steelclad Knights"
+],
+[
+"condition_count",
+"If this card is fused with at least 1 card"
+],
+[
+"summon",
+"summon a Naterran World Tree"
+],
+[
+"damage",
+"deal 5 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random enemy follower"
+],
+[
+"summon",
+"summon 2 Fox Spearmen"
+]
+],
+"by": "C"
+},
+"754017": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"copy",
+"put a copy of that amulet into your hand"
+],
+[
+"in_hand_buff",
+"Subtract 1 from its cost"
+]
+],
+"by": "C"
+},
+"754021": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"return_to_hand",
+"return 1 to your hand"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"return_to_hand",
+"Return an allied amulet to your hand"
+],
+[
+"damage",
+"deal 3 damage to an enemy follower"
+]
+],
+"by": "C"
+},
+"754024": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"in_hand_buff",
+"Spellboost the cards in your hand"
+],
+[
+"deck_condition",
+"20 cards or less in your deck"
+]
+],
+"by": "A=B"
+},
+"754042": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"in_hand_buff",
+"Spellboost the cards in your hand"
+],
+[
+"condition_count",
+"Spellboosted at least 5 times"
+],
+[
+"damage",
+"deal 3 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random"
+],
+[
+"resource_gain",
+"recover 2 play points"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"banish",
+"Banish an enemy follower"
+],
+[
+"generate_cards",
+"Put a Meltina, Miracle Sorceress into your hand"
+],
+[
+"self_destruct",
+"Banish this follower"
+]
+],
+"by": "A=B"
+},
+"754073": {
+"tags": [
+[
+"draw",
+"Draw a card"
+],
+[
+"stacking_keyword",
+"Stack count"
+],
+[
+"condition_count",
+"less than 3"
+],
+[
+"summon",
+"summon a Magic Sediment"
+],
+[
+"sacrifice",
+"Earth Rite (3)"
+],
+[
+"aoe_damage",
+"Deal 6 damage to all enemy followers"
+]
+],
+"by": "A=B"
+},
+"754079": {
+"tags": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Machina cards"
+],
+[
+"tutor",
+"Put 2 different random Machina followers from your deck into your hand"
+],
+[
+"random_effect",
+"random Machina followers"
+],
+[
+"condition_count",
+"If this card is fused with at least 1 card"
+],
+[
+"summon",
+"summon 2 Assembly Droids"
+],
+[
+"transform",
+"evolve a random unevolved allied Assembly Droid"
+],
+[
+"resource_gain",
+"recover 1 play point"
+]
+],
+"by": "C"
+},
+"754087": {
+"tags": [
+[
+"immunity",
+"Can't be attacked"
+]
+],
+"by": "A=B"
+},
+"754097": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"enemy_benefit",
+"Summon an enemy Dragon"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"banish",
+"Banish an enemy Dragon"
+]
+],
+"by": "C"
+},
+"754112": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put an Assembly Droid into your hand"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"condition_count",
+"at least 2 Machina cards in your hand"
+],
+[
+"tribal",
+"Machina cards"
+],
+[
+"damage",
+"deal 3 damage to an enemy"
+]
+],
+"by": "A=B"
+},
+"754118": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put an Assembly Droid into your hand"
+],
+[
+"cost_set",
+"change its cost to 0"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"transform",
+"Evolve an unevolved allied Machina follower"
+],
+[
+"tribal",
+"Machina follower"
+]
+],
+"by": "C"
+},
+"754121": {
+"tags": [
+[
+"discard",
+"Discard a card from your hand"
+],
+[
+"generate_cards",
+"Put an Azure Dragon's Rage into your hand"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+]
+],
+"by": "A=B"
+},
+"754133": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"haste",
+"Rush"
+],
+[
+"damage_reduction",
+"Can't take more than 1 damage at a time"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"discard",
+"Discard a card from your hand"
+],
+[
+"draw",
+"Draw 2 cards"
+]
+],
+"by": "C"
+},
+"754143": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"in_hand_buff",
+"Give +0/+1 to all Dragoncraft followers in your deck"
+],
+[
+"tribal",
+"Dragoncraft followers"
+],
+[
+"stat_condition",
+"at least 5 defense"
+],
+[
+"summon",
+"summon a Hellflame Dragon"
+],
+[
+"haste",
+"give the summoned follower Storm"
+],
+[
+"transform",
+"evolve this follower"
+]
+],
+"by": "A=B"
+},
+"754151": {
+"tags": [
+[
+"damage",
+"Deal X damage to an enemy follower"
+],
+[
+"stat_condition",
+"the attack of the strongest allied follower"
+]
+],
+"by": "A=B"
+},
+"754164": {
+"tags": [
+[
+"discard",
+"Whenever you discard cards from your hand"
+],
+[
+"draw",
+"draw X cards"
+],
+[
+"condition_count",
+"X equals the number of cards discarded"
+]
+],
+"by": "C"
+},
+"754179": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"graveyard",
+"Necromancy (2)"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Zombie"
+]
+],
+"by": "A=B"
+},
+"754182": {
+"tags": [
+[
+"on_play",
+"When this follower comes into play"
+],
+[
+"graveyard",
+"gain 20 shadows"
+]
+],
+"by": "A=B"
+},
+"754186": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"sacrifice",
+"Burial Rite"
+],
+[
+"tutor",
+"Put a random Shadowcraft follower from your deck into your hand"
+],
+[
+"random_effect",
+"random Shadowcraft follower"
+],
+[
+"tribal",
+"Shadowcraft follower"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+]
+],
+"by": "C"
+},
+"754197": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (6)"
+],
+[
+"transform",
+"Evolve this follower"
+],
+[
+"immunity",
+"Can't be attacked"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"stat_condition",
+"2 defense or less"
+],
+[
+"graveyard",
+"Necromancy (3)"
+],
+[
+"banish",
+"Banish the enemy follower"
+]
+],
+"by": "A=B"
+},
+"754207": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"free_play",
+"from your deck into play"
+],
+[
+"random_effect",
+"random"
+],
+[
+"cost_condition",
+"costs 2 play points or less"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"heal",
+"Restore 1 defense to your leader"
+],
+[
+"transform",
+"Evolve"
+]
+],
+"by": "A=B"
+},
+"754215": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"sacrifice",
+"Burial Rite"
+],
+[
+"summon",
+"Summon a Ghost"
+],
+[
+"tribal",
+"Festive follower"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"draw",
+"draw 2 cards"
+]
+],
+"by": "A=B"
+},
+"754294": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon 2 Forest Bats"
+],
+[
+"resource_banking",
+"If you have at least 7 remaining play points"
+],
+[
+"generate_cards",
+"put a Darkfeast Bat into your hand"
+],
+[
+"on_ally_play",
+"Whenever an allied Forest Bat comes into play"
+],
+[
+"haste",
+"give it Storm"
+],
+[
+"count_payoff",
+"if Wrath is active for you"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"lifesteal",
+"Drain"
+],
+[
+"friendly_fire",
+"deal 1 damage to your leader"
+]
+],
+"by": "C"
+},
+"754350": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Mark of Balance into both players' hands"
+],
+[
+"symmetric_effect",
+"both players' hands"
+],
+[
+"enemy_benefit",
+"both players' hands"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"resource_gain",
+"Recover 1 play point"
+]
+],
+"by": "C"
+},
+"754373": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (6)"
+],
+[
+"summon",
+"Summon a Zlatorog"
+],
+[
+"transform",
+"Evolve all unevolved allied Zlatorogs"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "A=B"
+},
+"754382": {
+"tags": [
+[
+"stat_gain",
+"Give +1/+2"
+],
+[
+"taunt",
+"Ward"
+]
+],
+"by": "A=B"
+},
+"754395": {
+"tags": [
+[
+"delayed",
+"Countdown (8)"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Holywing Dragon"
+]
+],
+"by": "A=B"
+},
+"754396": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"resource_gain",
+"Recover 1 evolution point"
+],
+[
+"banish",
+"banish a random enemy follower with the highest attack in play"
+],
+[
+"stat_condition",
+"highest attack"
+],
+[
+"random_effect",
+"random enemy follower"
+],
+[
+"self_destruct",
+"banish this amulet"
+]
+],
+"by": "C"
+},
+"754397": {
+"tags": [
+[
+"delayed",
+"Countdown (2)"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"summon",
+"summon a Holy Cavalier"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"resource_gain",
+"recover 1 play point"
+]
+],
+"by": "A=B"
+},
+"754404": {
+"tags": [
+[
+"delayed",
+"Countdown (4)"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (6)"
+],
+[
+"speed",
+"Subtract 4 from this amulet's Countdown"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"board_wipe",
+"Destroy all followers"
+]
+],
+"by": "A=B"
+},
+"754422": {
+"tags": [
+[
+"immunity",
+"Can't be attacked"
+],
+[
+"deck_condition",
+"Resonance"
+],
+[
+"aoe_damage",
+"deal 1 damage to all enemies"
+]
+],
+"by": "A=B"
+},
+"754487": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal 2 damage to an enemy"
+]
+],
+"by": "A=B"
+},
+"754506": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"stealth",
+"Gain Ambush"
+],
+[
+"combo_sequence",
+"at least 2 other cards were played this turn"
+]
+],
+"by": "A=B"
+},
+"754511": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_kill",
+"attacks and destroys an enemy follower"
+],
+[
+"permanent_growth",
+"gain +1/+1"
+]
+],
+"by": "A=B"
+},
+"754541": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Give +1/+1 to another allied follower"
+],
+[
+"combo_sequence",
+"at least 2 other cards were played this turn"
+],
+[
+"haste",
+"Storm"
+],
+[
+"tribal",
+"Fairies"
+]
+],
+"by": "A=B"
+},
+"754609": {
+"tags": [
+[
+"haste",
+"Storm"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Revolutionaries' Shot into your hand"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"self_destruct",
+"discard it"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"delayed",
+"At the start of your next turn"
+],
+[
+"summon",
+"summon a Val, Speedy Magicar"
+]
+],
+"by": "C"
+},
+"754633": {
+"tags": [
+[
+"cost_type",
+"Accelerate (2)"
+],
+[
+"damage",
+"Deal 1 damage to an enemy"
+],
+[
+"summon",
+"Summon a Witch's Cauldron"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"sacrifice",
+"Earth Rite"
+],
+[
+"direct_damage",
+"Deal 1 damage to the enemy leader"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"stat_gain",
+"gain +2/+2"
+]
+],
+"by": "A=B"
+},
+"754679": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"resource_gain",
+"Recover 1 evolution point"
+],
+[
+"condition_count",
+"if Overflow is active for you"
+]
+],
+"by": "C"
+},
+"754684": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Gain +0/+3"
+],
+[
+"condition_count",
+"if Overflow is active for you"
+]
+],
+"by": "C"
+},
+"754718": {
+"tags": [
+[
+"destroy",
+"Destroy an enemy follower"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"tutor",
+"put a random Dragoncraft follower from your deck into your hand"
+],
+[
+"random_effect",
+"random Dragoncraft follower"
+],
+[
+"tribal",
+"Dragoncraft follower"
+]
+],
+"by": "C"
+},
+"754734": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal 2 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random"
+],
+[
+"stat_gain",
+"give +2/+0"
+]
+],
+"by": "A=B"
+},
+"754746": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"random_effect",
+"Randomly"
+],
+[
+"summon",
+"summon 1 of the following"
+],
+[
+"transform",
+"Evolve"
+]
+],
+"by": "A=B"
+},
+"754752": {
+"tags": [
+[
+"deathtouch",
+"Bane"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"graveyard",
+"Necromancy (8)"
+],
+[
+"resource_gain",
+"Recover 1 evolution point"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"on_ally_play",
+"when you play a follower"
+],
+[
+"stat_condition",
+"original attack or defense of 1"
+],
+[
+"haste",
+"give it Storm"
+]
+],
+"by": "A=B"
+},
+"754777": {
+"tags": [
+[
+"destroy",
+"Destroy an enemy follower"
+],
+[
+"graveyard",
+"Necromancy (4)"
+],
+[
+"summon",
+"Summon a Lich"
+]
+],
+"by": "A=B"
+},
+"754783": {
+"tags": [
+[
+"stat_gain",
+"Give +3/+3"
+],
+[
+"tribal",
+"Shadowcraft follower"
+],
+[
+"graveyard",
+"Necromancy (20)"
+]
+],
+"by": "A=B"
+},
+"754791": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"lifesteal",
+"Drain"
+],
+[
+"low_life",
+"Vengeance"
+]
+],
+"by": "A=B"
+},
+"754815": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"If Wrath is active for you"
+],
+[
+"cost_set",
+"evolve for 0 evolution points"
+],
+[
+"turn_start",
+"At the start of your opponent's turn"
+],
+[
+"heal",
+"restore 3 defense to your leader"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"friendly_fire",
+"Deal 1 damage to your leader"
+],
+[
+"damage",
+"4 damage to an enemy follower"
+],
+[
+"resource_banking",
+"If you have at least 4 play points"
+],
+[
+"haste",
+"gain Storm"
+],
+[
+"aoe_damage",
+"deal 8 damage to all other followers"
+],
+[
+"friendly_fire",
+"all other followers"
+]
+],
+"by": "C"
+},
+"754833": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Libert\u00e9, Werewolf Pup"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"summon",
+"Summon a Savage Wolf"
+],
+[
+"count_payoff",
+"If Wrath is active for you"
+],
+[
+"transform",
+"evolve all unevolved allied followers"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"aoe_damage",
+"Deal 1 damage to all enemy followers"
+],
+[
+"direct_damage",
+"1 damage to both leaders"
+],
+[
+"friendly_fire",
+"both leaders"
+],
+[
+"symmetric_effect",
+"both leaders"
+],
+[
+"repeat_trigger",
+"Do this 2 times"
+]
+],
+"by": "C"
+},
+"754846": {
+"tags": [
+[
+"transform",
+"Evolve"
+],
+[
+"banish",
+"Banish an enemy follower"
+],
+[
+"stat_condition",
+"3 defense or less"
+]
+],
+"by": "A=B"
+},
+"754848": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Beastly Vow"
+]
+],
+"by": "A=B"
+},
+"754861": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Naterran Great Tree into your hand"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"resource_gain",
+"recover 3 play points"
+],
+[
+"on_ally_play",
+"Whenever an allied Naterran Great Tree comes into play"
+],
+[
+"summon",
+"summon a Meus Knight"
+],
+[
+"on_attack",
+"Strike"
+]
+],
+"by": "A=B"
+},
+"754879": {
+"tags": [
+[
+"haste",
+"Storm"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"summon",
+"Summon a Featherfolk Courier"
+],
+[
+"transform",
+"Evolve all unevolved allied Featherfolk Couriers"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "A=B"
+},
+"754906": {
+"tags": [
+[
+"transform",
+"Evolve"
+],
+[
+"banish",
+"Banish an enemy follower"
+],
+[
+"cost_condition",
+"costs 2 play points or less"
+],
+[
+"steal",
+"summon a copy of that follower as an allied follower"
+]
+],
+"by": "A=B"
+},
+"754937": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put 2 Enhanced Puppets into your hand"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"resource_gain",
+"Recover 2 play points"
+]
+],
+"by": "A=B"
+},
+"754943": {
+"tags": [
+[
+"banish",
+"Banish an enemy follower"
+],
+[
+"cost_condition",
+"costs 2 play points or less"
+],
+[
+"steal",
+"summon an allied copy of that follower"
+],
+[
+"deck_condition",
+"Resonance"
+],
+[
+"generate_cards",
+"put a Puppet into your hand"
+]
+],
+"by": "A=B"
+},
+"754968": {
+"tags": [
+[
+"turn_number",
+"At the start of your tenth turn"
+],
+[
+"free_play",
+"invoke this card"
+],
+[
+"transform",
+"evolve it"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"heal",
+"Restore 5 defense to your leader"
+],
+[
+"low_life",
+"14 defense or less"
+],
+[
+"draw",
+"draw 2 cards"
+],
+[
+"destroy",
+"destroy 1 of the enemy followers with the highest attack"
+],
+[
+"random_effect",
+"randomly"
+],
+[
+"stat_condition",
+"the highest attack"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"aoe_damage",
+"deal 4 damage to all allies and enemies"
+],
+[
+"friendly_fire",
+"all allies"
+]
+],
+"by": "A=B"
+},
+"755018": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_loss",
+"Give -5/-0 to an enemy follower"
+],
+[
+"combo_sequence",
+"at least 2 other cards were played this turn"
+],
+[
+"transform",
+"evolve this follower"
+]
+],
+"by": "A=B"
+},
+"755032": {
+"tags": [
+[
+"cost_set",
+"for 0 evolution points"
+],
+[
+"tribal",
+"Fairy"
+],
+[
+"transform",
+"evolve"
+]
+],
+"by": "A=B"
+},
+"755119": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"resource_gain",
+"Recover 3 play points"
+]
+],
+"by": "A=B"
+},
+"755123": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal 4 damage to an enemy follower"
+],
+[
+"direct_damage",
+"2 damage to the enemy leader"
+],
+[
+"death_trigger",
+"Whenever an enemy follower is destroyed"
+],
+[
+"stacking_keyword",
+"add 1 to an allied Stack"
+],
+[
+"transform",
+"Evolve"
+]
+],
+"by": "A=B"
+},
+"755128": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"destroy",
+"Destroy an enemy follower"
+],
+[
+"in_hand_buff",
+"Spellboost the cards in your hand"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"copy",
+"Put a copy of it into your hand"
+],
+[
+"condition_count",
+"X equals the number of times the selected card has been Spellboosted"
+]
+],
+"by": "C"
+},
+"755138": {
+"tags": [
+[
+"damage",
+"Deal 3 damage to an enemy"
+],
+[
+"generate_cards",
+"Put a Chain Lightning into your hand"
+],
+[
+"hand_size",
+"3 other cards or less in your hand"
+]
+],
+"by": "A=B"
+},
+"755142": {
+"tags": [
+[
+"symmetric_effect",
+"Give both leaders the following effect"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"cost_set",
+"change the cost of all cards in your hand to X"
+],
+[
+"random_effect",
+"a random number between 1 and 10"
+],
+[
+"rule_change",
+"lasts for the rest of the match"
+]
+],
+"by": "C"
+},
+"755149": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"generate_cards",
+"Put a Blazing Breath into your hand"
+]
+],
+"by": "A=B"
+},
+"755180": {
+"tags": [
+[
+"summon",
+"Summon a Star Phoenix"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all enemy followers"
+]
+],
+"by": "A=B"
+},
+"755201": {
+"tags": [
+[
+"targeting_rules",
+"Can only attack the enemy leader"
+],
+[
+"evasion",
+"Ignore Ward"
+],
+[
+"haste",
+"Storm"
+]
+],
+"by": "A=B"
+},
+"755229": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"direct_damage",
+"deal 2 damage to the enemy leader"
+],
+[
+"damage",
+"a random enemy follower"
+],
+[
+"random_effect",
+"random enemy follower"
+],
+[
+"low_life",
+"if the leader's defense is higher than yours"
+]
+],
+"by": "C"
+},
+"755294": {
+"tags": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Natura cards"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+],
+[
+"haste",
+"Storm"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"fused with at least 1 card"
+],
+[
+"deathtouch",
+"gain Bane"
+],
+[
+"taunt",
+"gain Ward"
+],
+[
+"lifesteal",
+"gain Drain"
+]
+],
+"by": "C"
+},
+"755314": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"destroy",
+"Destroy an enemy follower"
+],
+[
+"heal",
+"Restore 2 defense to your leader"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"transform",
+"Evolve"
+]
+],
+"by": "A=B"
+},
+"755342": {
+"tags": [
+[
+"cost_type",
+"Accelerate (2)"
+],
+[
+"summon",
+"Summon 2 Puppets"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put 2 Puppets into your hand"
+],
+[
+"transform",
+"Evolve"
+]
+],
+"by": "A=B"
+},
+"755376": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_count",
+"at least 1 allied Naterran Great Tree has been destroyed this match"
+],
+[
+"multi_attack",
+"attack 2 times per turn"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"summon",
+"summon a Viridia Magna"
+],
+[
+"transform",
+"evolve it"
+],
+[
+"taunt",
+"Ward"
+]
+],
+"by": "C"
+},
+"755403": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Give all other allied followers +1/+1"
+],
+[
+"condition_count",
+"at least 3 other Neutral cards in your hand"
+],
+[
+"tribal",
+"Neutral cards"
+]
+],
+"by": "A=B"
+},
+"755416": {
+"tags": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Forestcraft followers"
+],
+[
+"cost_condition",
+"originally cost 2 play points or more"
+],
+[
+"condition_count",
+"2 or more cards are fused"
+],
+[
+"stat_gain",
+"gain +2/+0"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"gain Storm"
+],
+[
+"destroy",
+"destroy an enemy follower"
+]
+],
+"by": "C"
+},
+"755429": {
+"tags": [
+[
+"destroy",
+"Destroy an enemy follower"
+],
+[
+"heal",
+"Restore X defense to your leader"
+],
+[
+"draw",
+"draw X cards"
+],
+[
+"stat_condition",
+"half the destroyed follower's defense"
+]
+],
+"by": "A=B"
+},
+"755434": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"random_ability",
+"Randomly gain Rush, Bane, or Ward"
+]
+],
+"by": "A=B"
+},
+"755450": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon 2 Fortress Guards"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"generate_cards",
+"Put a Stratagem into your hand"
+],
+[
+"cost_set",
+"change its cost to 0"
+]
+],
+"by": "A=B"
+},
+"755473": {
+"tags": [
+[
+"cost_type",
+"Crystallize (3)"
+],
+[
+"delayed",
+"Countdown (5)"
+],
+[
+"on_ally_play",
+"when you play a follower"
+],
+[
+"stat_gain",
+"give it +1/+0"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"speed",
+"subtract 1 from this amulet's Countdown"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Xeno Ifrit"
+],
+[
+"on_play",
+"When this follower comes into play"
+],
+[
+"aoe_damage",
+"deal 3 damage to all enemies"
+]
+],
+"by": "C"
+},
+"755501": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"on_attack",
+"Clash"
+],
+[
+"stat_loss",
+"Give -2/-0 to the enemy follower"
+]
+],
+"by": "A=B"
+},
+"755529": {
+"tags": [
+[
+"cost_type",
+"Accelerate (3)"
+],
+[
+"revive",
+"Reanimate (3)"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_loss",
+"Give -1/-4 to all other followers"
+],
+[
+"friendly_fire",
+"all other followers"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"stat_gain",
+"Give +1/+4 to all other allied followers"
+]
+],
+"by": "A=B"
+},
+"755530": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Ghost"
+],
+[
+"revive",
+"Reanimate (4)"
+]
+],
+"by": "A=B"
+},
+"755532": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Marian the Mummy"
+]
+],
+"by": "A=B"
+},
+"755534": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"temporary_effect",
+"Until the end of the turn"
+],
+[
+"cost_set",
+"change the cost of a spell in your hand"
+],
+[
+"cost_condition",
+"originally costs 6 play points or less"
+]
+],
+"by": "A=B"
+},
+"755543": {
+"tags": [
+[
+"cost_type",
+"Accelerate (0)"
+],
+[
+"graveyard",
+"Necromancy (4)"
+],
+[
+"summon",
+"Summon a Zombie"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"direct_damage",
+"Deal 1 damage to the enemy leader"
+],
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve them"
+]
+],
+"by": "A=B"
+},
+"755562": {
+"tags": [
+[
+"cost_type",
+"Accelerate (2)"
+],
+[
+"summon",
+"Summon 2 Serpents"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal 3 damage to an enemy follower"
+],
+[
+"low_life",
+"Vengeance"
+],
+[
+"heal",
+"restore 3 defense to your leader"
+]
+],
+"by": "A=B"
+},
+"755574": {
+"tags": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"cost_condition",
+"originally cost at least 6 play points"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"If this card is fused with at least 2 cards"
+],
+[
+"aoe_damage",
+"deal 6 damage to all enemy followers"
+],
+[
+"direct_damage",
+"deal 6 damage to the enemy leader"
+],
+[
+"draw",
+"draw 6 cards"
+],
+[
+"resource_gain",
+"recover 6 play points"
+]
+],
+"by": "C"
+},
+"755593": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put 2 Monastic Holy Waters into your hand"
+]
+],
+"by": "A=B"
+},
+"755619": {
+"tags": [
+[
+"cost_type",
+"Crystallize (1)"
+],
+[
+"delayed",
+"Countdown (2)"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"damage",
+"Deal 2 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random"
+],
+[
+"generate_cards",
+"Put a Holy Lightning Bird into your hand"
+],
+[
+"haste",
+"Storm"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"played at least 5 cards using their Crystallize effect this match"
+],
+[
+"resource_gain",
+"recover 2 play points"
+]
+],
+"by": "A=B"
+},
+"755621": {
+"tags": [
+[
+"cost_type",
+"Crystallize (1)"
+],
+[
+"delayed",
+"Countdown (1)"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"cost_set",
+"Change the cost of a Havencraft amulet in your hand to 0"
+],
+[
+"tribal",
+"Havencraft amulet"
+],
+[
+"temporary_effect",
+"until the end of the turn"
+],
+[
+"in_hand_buff",
+"give it Fanfare"
+],
+[
+"damage",
+"Deal X damage to a random enemy follower"
+],
+[
+"direct_damage",
+"then the enemy leader"
+],
+[
+"random_effect",
+"random enemy follower"
+],
+[
+"self_destruct",
+"then destroy this amulet"
+],
+[
+"cost_condition",
+"X equals this amulet's original cost"
+]
+],
+"by": "C"
+},
+"755694": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"random_effect",
+"Randomly"
+],
+[
+"free_play",
+"from your deck into play"
+],
+[
+"variety_payoff",
+"different Swordcraft followers"
+],
+[
+"tribal",
+"Swordcraft followers"
+],
+[
+"cost_condition",
+"cost 2 play points or less"
+]
+],
+"by": "A=B"
+},
+"755702": {
+"tags": [
+[
+"cost_type",
+"Accelerate (3)"
+],
+[
+"summon",
+"Summon 3 Shield Guardians"
+],
+[
+"haste",
+"Storm"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_count",
+"at least 10 allied followers have been destroyed this match"
+],
+[
+"stat_gain",
+"give +2/+2"
+]
+],
+"by": "A=B"
+},
+"755717": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"deck_condition",
+"20 cards or less in your deck"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"summon",
+"Summon an Eldritch Chimera or Eldritch Demon"
+]
+],
+"by": "A=B"
+},
+"755756": {
+"tags": [
+[
+"haste",
+"Storm"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"taunt",
+"Ward"
+]
+],
+"by": "A=B"
+},
+"755765": {
+"tags": [
+[
+"cost_type",
+"Crystallize (2)"
+],
+[
+"on_ally_play",
+"when an allied Dragoncraft follower"
+],
+[
+"tribal",
+"Dragoncraft"
+],
+[
+"cost_condition",
+"originally costs at least 7 play points"
+],
+[
+"self_destruct",
+"destroy this amulet"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Dormant Dragon"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"When this follower comes into play"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+],
+[
+"draw",
+"draw 2 cards"
+],
+[
+"condition_count",
+"if you have 10 play point orbs"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"immunity",
+"Can't be targeted by enemy effects"
+]
+],
+"by": "A=B"
+},
+"755798": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"board_wipe",
+"Destroy all enemy followers"
+],
+[
+"copy",
+"Summon allied copies of 4 different enemy followers destroyed this match"
+],
+[
+"cost_condition",
+"cost between 2 and 5 play points"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"generate_cards",
+"Put a Corpse King's Command into your hand"
+]
+],
+"by": "C"
+},
+"755800": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon 2 Ghosts"
+],
+[
+"graveyard",
+"Necromancy (6)"
+],
+[
+"stat_gain",
+"Gain +3/+3"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"damage",
+"deal 6 damage to an enemy follower"
+],
+[
+"on_ally_play",
+"Whenever an allied Ghost comes into play"
+],
+[
+"transform",
+"evolve it"
+]
+],
+"by": "C"
+},
+"755803": {
+"tags": [
+[
+"board_wipe",
+"Destroy all enemy followers with 4 defense or less"
+],
+[
+"stat_condition",
+"4 defense or less"
+]
+],
+"by": "A=B"
+},
+"755831": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Death Sentence"
+]
+],
+"by": "A=B"
+},
+"755834": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"sacrifice",
+"Destroy every Countdown amulet immediately after you play it"
+]
+],
+"by": "C"
+},
+"755844": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"allied amulets have been destroyed this match"
+],
+[
+"banish",
+"banish X random enemy followers"
+],
+[
+"random_effect",
+"random"
+],
+[
+"direct_damage",
+"deal Y damage to the enemy leader"
+],
+[
+"heal",
+"restore Y defense to your leader"
+],
+[
+"revive",
+"summon Z copies of allied Havencraft followers destroyed this match"
+],
+[
+"tribal",
+"Havencraft followers"
+]
+],
+"by": "A=B"
+},
+"755853": {
+"tags": [
+[
+"random_effect",
+"Randomly"
+],
+[
+"free_play",
+"from your deck into play"
+],
+[
+"variety_payoff",
+"3 different"
+],
+[
+"cost_condition",
+"cost 2 play points or less"
+]
+],
+"by": "A=B"
+},
+"755854": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal X damage to an enemy follower"
+],
+[
+"deck_condition",
+"the number of remaining Artifact cards in your deck"
+],
+[
+"tribal",
+"Artifact cards"
+]
+],
+"by": "A=B"
+},
+"755875": {
+"tags": [
+[
+"in_hand_buff",
+"subtract X from its cost"
+],
+[
+"information",
+"reveal it"
+],
+[
+"death_count",
+"X equals the number of allied Artifact cards destroyed this match"
+],
+[
+"tribal",
+"Artifact cards"
+],
+[
+"death_trigger",
+"Whenever an allied Artifact card is destroyed"
+],
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put 3 Mechamagical Rhinos into your deck"
+]
+],
+"by": "C"
+},
+"755885": {
+"tags": [
+[
+"cost_type",
+"Accelerate (2)"
+],
+[
+"damage",
+"Deal 3 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"direct_damage",
+"3 damage to the enemy leader"
+]
+],
+"by": "A=B"
+},
+"755895": {
+"tags": [
+[
+"stealth",
+"Ambush"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"stat_loss",
+"Give -1/-0 to all enemy followers"
+],
+[
+"scope_multi",
+"all enemy followers"
+]
+],
+"by": "A=B"
+},
+"755903": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"multi_attack",
+"Can attack up to 14 times per turn"
+],
+[
+"targeting_rules",
+"Can't attack the enemy leader"
+]
+],
+"by": "C"
+},
+"755956": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"random_effect",
+"Randomly"
+],
+[
+"free_play",
+"from your deck into play"
+],
+[
+"variety_payoff",
+"followers of different costs"
+],
+[
+"sacrifice",
+"Then destroy those followers"
+]
+],
+"by": "A=B"
+},
+"755958": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"revive",
+"Reanimate (10)"
+]
+],
+"by": "A=B"
+},
+"755989": {
+"tags": [
+[
+"board_wipe",
+"Banish all followers"
+],
+[
+"banish",
+"Banish"
+]
+],
+"by": "A=B"
+},
+"755990": {
+"tags": [
+[
+"delayed",
+"Countdown (1)"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon an Awakened Seraph"
+]
+],
+"by": "A=B"
+},
+"756001": {
+"tags": [
+[
+"cost_type",
+"Accelerate (3)"
+],
+[
+"summon",
+"Summon a Bullet Bike"
+],
+[
+"generate_cards",
+"Put a Puppet into your hand"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"resource_gain",
+"Recover 7 play points"
+]
+],
+"by": "A=B"
+},
+"756018": {
+"tags": [
+[
+"draw",
+"Draw a card"
+],
+[
+"damage",
+"deal X damage to an enemy"
+],
+[
+"hand_size",
+"the number of other cards in your hand"
+]
+],
+"by": "A=B"
+},
+"756032": {
+"tags": [
+[
+"cost_type",
+"Crystallize (2)"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal 3 damage to an enemy follower"
+],
+[
+"damage",
+"Deal 6 damage to an enemy follower"
+]
+],
+"by": "C"
+},
+"756061": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal 5 damage to an enemy"
+],
+[
+"heal",
+"Restore 5 defense to your leader"
+]
+],
+"by": "A=B"
+},
+"756069": {
+"tags": [
+[
+"cost_type",
+"Accelerate (1)"
+],
+[
+"speed",
+"Subtract 3 from the Countdown of all allied amulets"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Whenever an allied amulet is destroyed"
+],
+[
+"direct_damage",
+"deal 3 damage to the enemy leader"
+]
+],
+"by": "A=B"
+},
+"756073": {
+"tags": [
+[
+"cost_type",
+"Crystallize (2)"
+],
+[
+"delayed",
+"Countdown (2)"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"destroy",
+"Destroy a random enemy follower"
+],
+[
+"random_effect",
+"random enemy follower"
+]
+],
+"by": "A=B"
+},
+"756083": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"board_wipe",
+"Destroy all other followers and amulets"
+],
+[
+"friendly_fire",
+"all other followers and amulets"
+],
+[
+"targeting_rules",
+"Can't attack the enemy leader"
+],
+[
+"condition_count",
+"if 2 or more enemy followers are in play"
+]
+],
+"by": "C"
+},
+"756114": {
+"tags": [
+[
+"cost_type",
+"Accelerate (8)"
+],
+[
+"sacrifice",
+"Destroy all allied followers and amulets"
+],
+[
+"free_play",
+"from your deck into play"
+],
+[
+"random_effect",
+"random"
+],
+[
+"cost_condition",
+"costs more than it"
+],
+[
+"haste",
+"Storm"
+],
+[
+"deathtouch",
+"Bane"
+]
+],
+"by": "A=B"
+},
+"795301": {
+"tags": [],
+"by": "A=B"
+},
+"813705": {
+"tags": [
+[
+"damage",
+"Deal 1 damage to a random enemy"
+],
+[
+"random_effect",
+"random enemy"
+],
+[
+"low_life",
+"Vengeance"
+],
+[
+"delayed",
+"at the start of your next turn"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "A=B"
+},
+"813718": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"information",
+"reveal it"
+],
+[
+"stat_gain",
+"give +0/+1 to a random allied follower"
+],
+[
+"random_effect",
+"random allied follower"
+]
+],
+"by": "C"
+},
+"813773": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"turn_end",
+"At the end of your opponent's turn"
+],
+[
+"self_destruct",
+"destroy this follower"
+]
+],
+"by": "A=B"
+},
+"813780": {
+"tags": [
+[
+"aoe_damage",
+"Deal 3 damage to all enemy followers"
+],
+[
+"cost_condition",
+"originally costs at least 8 play points"
+]
+],
+"by": "A=B"
+},
+"813814": {
+"tags": [
+[
+"haste",
+"Storm"
+]
+],
+"by": "A=B"
+},
+"813841": {
+"tags": [
+[
+"damage",
+"Deal 2 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random"
+],
+[
+"count_payoff",
+"played at least 3 other Hastening Convictions this match"
+],
+[
+"direct_damage",
+"deal 2 damage to the enemy leader"
+],
+[
+"generate_cards",
+"put a Hastening Conviction into your hand"
+]
+],
+"by": "A=B"
+},
+"813857": {
+"tags": [
+[
+"in_hand_buff",
+"Subtract 1 from the cost of a Natura card in your hand"
+],
+[
+"tribal",
+"Natura card"
+],
+[
+"temporary_effect",
+"until the end of the turn"
+]
+],
+"by": "C"
+},
+"813907": {
+"tags": [
+[
+"copy",
+"Put a copy of a random allied follower"
+],
+[
+"random_effect",
+"random"
+],
+[
+"combo_sequence",
+"played this turn"
+]
+],
+"by": "A=B"
+},
+"813910": {
+"tags": [
+[
+"immunity",
+"Reduce damage from effects to 0"
+],
+[
+"temporary_effect",
+"until the end of your opponent's turn"
+]
+],
+"by": "A=B"
+},
+"813916": {
+"tags": [
+[
+"delayed",
+"Countdown (2)"
+],
+[
+"on_ally_play",
+"Whenever you play an Artifact card"
+],
+[
+"tribal",
+"Artifact card"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+]
+],
+"by": "A=B"
+},
+"813939": {
+"tags": [
+[
+"enemy_benefit",
+"Your opponent draws a card"
+],
+[
+"direct_damage",
+"Deal X damage to the enemy leader"
+],
+[
+"hand_size",
+"the number of cards in your opponent's hand"
+]
+],
+"by": "A=B"
+},
+"813945": {
+"tags": [
+[
+"on_attack",
+"Follower Strike"
+],
+[
+"damage",
+"Deal 1 damage to the enemy follower"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"generate_cards",
+"Put a Gilded Blade into your hand"
+]
+],
+"by": "A=B"
+},
+"813957": {
+"tags": [
+[
+"summon",
+"Summon an Arcane Personnel Carrier"
+],
+[
+"count_payoff",
+"Rally (10)"
+]
+],
+"by": "A=B"
+},
+"813972": {
+"tags": [
+[
+"damage",
+"Deal 3 damage to an enemy"
+],
+[
+"kicker",
+"Enhance (4)"
+],
+[
+"heal",
+"Restore 3 defense to your leader"
+]
+],
+"by": "A=B"
+},
+"813998": {
+"tags": [
+[
+"deathtouch",
+"Bane"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"graveyard",
+"Necromancy (6)"
+],
+[
+"stat_loss",
+"Give -2/-2 to all enemy followers"
+],
+[
+"scope_multi",
+"all enemy followers"
+]
+],
+"by": "C"
+},
+"814003": {
+"tags": [
+[
+"repeat_trigger",
+"Activate an allied follower's Last Words effects"
+]
+],
+"by": "A=B"
+},
+"814013": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve an allied Trill, Devilish Idol"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"heal",
+"Restore 2 defense to your leader"
+]
+],
+"by": "A=B"
+},
+"814025": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Give +0/+2"
+]
+],
+"by": "A=B"
+},
+"814033": {
+"tags": [
+[
+"delayed",
+"Countdown (2)"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"heal",
+"Restore 1 defense to your leader"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "A=B"
+},
+"814036": {
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"banish",
+"Banish an enemy follower with 3 defense or less"
+],
+[
+"stat_condition",
+"3 defense or less"
+],
+[
+"synergy_payoff",
+"If any allied Relic Goddesses are in play"
+],
+[
+"self_destruct",
+"banish this card"
+],
+[
+"turn_start",
+"At the start of your opponent's turn"
+],
+[
+"merge_attach",
+"combine with an allied Prism Relic, Cylinder Relic, and Octarelic"
+],
+[
+"transform",
+"become a Relic Goddess"
+]
+],
+"by": "C"
+},
+"814049": {
+"tags": [
+[
+"damage",
+"Deal 3 damage to an enemy follower"
+],
+[
+"death_count",
+"If at least 10 allied followers have been destroyed this match"
+],
+[
+"direct_damage",
+"deal 3 damage to any enemy instead"
+]
+],
+"by": "C"
+},
+"814074": {
+"tags": [
+[
+"haste",
+"Storm"
+]
+],
+"by": "A=B"
+},
+"814076": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"synergy_payoff",
+"while an allied Gentle Forest Beauty is in play"
+],
+[
+"haste",
+"Gain Storm"
+]
+],
+"by": "C"
+},
+"814091": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"regeneration",
+"fully restore this follower's defense"
+],
+[
+"heal",
+"restore X defense to your leader"
+]
+],
+"by": "A=B"
+},
+"814106": {
+"tags": [
+[
+"target_choice",
+"Select a card with Spellboost in your hand"
+],
+[
+"copy",
+"Put a copy of it into your hand"
+],
+[
+"in_hand_buff",
+"Spellboost the copy X times"
+],
+[
+"condition_count",
+"X equals the number of times the selected card has been Spellboosted"
+]
+],
+"by": "C"
+},
+"814122": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"permanent_growth",
+"Gain +2/+0"
+],
+[
+"direct_damage",
+"Deal X damage to the enemy leader"
+],
+[
+"stat_condition",
+"X equals this follower's attack"
+]
+],
+"by": "C"
+},
+"814147": {
+"tags": [
+[
+"on_ally_play",
+"Whenever an allied Artifact card comes into play"
+],
+[
+"tribal",
+"Artifact"
+],
+[
+"resource_gain",
+"recover 1 play point"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"temporary_effect",
+"until the end of the turn"
+]
+],
+"by": "A=B"
+},
+"814170": {
+"tags": [
+[
+"target_choice",
+"Select 2 enemy cards"
+],
+[
+"board_wipe",
+"destroy all other enemy cards in play"
+],
+[
+"transform",
+"Evolve a random unevolved allied Nahtnaught"
+],
+[
+"random_effect",
+"random"
+],
+[
+"play_restriction",
+"Can be played only when 2 targetable enemy cards are in play"
+]
+],
+"by": "C"
+},
+"814201": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"multi_attack",
+"Can attack up to 3 times per turn"
+]
+],
+"by": "A=B"
+},
+"814213": {
+"tags": [
+[
+"delayed",
+"Countdown (2)"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"polymorph",
+"transform a random enemy follower"
+],
+[
+"random_effect",
+"random"
+]
+],
+"by": "A=B"
+},
+"814252": {
+"tags": [
+[
+"reactions",
+"When your opponent plays a spell"
+],
+[
+"self_destruct",
+"destroy this amulet"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"draw",
+"Draw 3 cards"
+],
+[
+"heal",
+"restore 3 defense to your leader"
+]
+],
+"by": "A=B"
+},
+"814257": {
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"synergy_payoff",
+"if an allied Garyu, Supreme Dragonkin is in play"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+],
+[
+"stat_gain",
+"gain +2/+2"
+]
+],
+"by": "C"
+},
+"814286": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"lifesteal",
+"Drain"
+]
+],
+"by": "A=B"
+},
+"814382": {
+"tags": [
+[
+"delayed",
+"Countdown (1)"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Renascent Seraph"
+]
+],
+"by": "A=B"
+},
+"814391": {
+"tags": [
+[
+"cost_condition",
+"originally cost at least 5 play points"
+],
+[
+"board_wipe",
+"banish all other followers"
+],
+[
+"banish",
+"banish all other followers"
+],
+[
+"friendly_fire",
+"banish all other followers"
+]
+],
+"by": "C"
+},
+"814395": {
+"tags": [
+[
+"death_trigger",
+"Whenever an allied follower is destroyed"
+],
+[
+"in_hand_buff",
+"subtract 1 from the cost of this card"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"direct_damage",
+"Deal 4 damage to the enemy leader"
+],
+[
+"immunity",
+"Can't be destroyed by effects"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"direct_damage",
+"deal 2 damage to the enemy leader"
+],
+[
+"synergy_payoff",
+"If any allied New Prayers are in play"
+]
+],
+"by": "C"
+},
+"814409": {
+"tags": [
+[
+"haste",
+"Storm"
+],
+[
+"targeting_rules",
+"Can only attack the enemy leader"
+],
+[
+"evasion",
+"Ignore Ward"
+]
+],
+"by": "A=B"
+}
+}

@@ -1,0 +1,3834 @@
+{
+"750374": {
+"tags": [
+[
+"on_attack",
+"when this unit attacks"
+]
+],
+"by": "A=B"
+},
+"750376": {
+"tags": [
+[
+"merge_attach",
+"Attach me to an ally"
+],
+[
+"stat_gain",
+"give it my stats and keywords"
+],
+[
+"return_to_hand",
+"Recall me"
+]
+],
+"by": "A=B"
+},
+"750391": {
+"tags": [
+[
+"return_to_hand",
+"Return a unit to hand"
+],
+[
+"bounce_enemy",
+"Return a unit to hand"
+],
+[
+"rewind",
+"remove all effects applied to it"
+]
+],
+"by": "C"
+},
+"750405": {
+"tags": [
+[
+"disable",
+"It can't attack or block for the rest of the round"
+],
+[
+"temporary_effect",
+"for the rest of the round"
+]
+],
+"by": "C"
+},
+"750418": {
+"tags": [
+[
+"regeneration",
+"Heals fully at the end of each round"
+]
+],
+"by": "A=B"
+},
+"750427": {
+"tags": [
+[
+"on_attack",
+"When you attack"
+],
+[
+"deck_position",
+"while I'm on top of your deck"
+],
+[
+"tribal",
+"Lurker allies"
+],
+[
+"permanent_growth",
+"granting Lurker allies everywhere +1|+0"
+],
+[
+"in_hand_buff",
+"everywhere"
+]
+],
+"by": "C"
+},
+"750437": {
+"tags": [
+[
+"transform",
+"Secretly transforms into another unit"
+],
+[
+"information",
+"They won't reveal their true identity to your opponent"
+]
+],
+"by": "C"
+},
+"750443": {
+"tags": [
+[
+"self_mill",
+"Obliterate X non-champion cards from the bottom of your deck"
+],
+[
+"deck_position",
+"bottom of your deck"
+]
+],
+"by": "A=B"
+},
+"750457": {
+"tags": [
+[
+"on_attack",
+"when a unit attempts to deal damage using its Power"
+],
+[
+"stat_condition",
+"Units with 0 Power can't strike"
+]
+],
+"by": "C"
+},
+"750460": {
+"tags": [
+[
+"stat_condition",
+"while its Power is at least the listed number"
+]
+],
+"by": "A=B"
+},
+"750463": {
+"tags": [
+[
+"on_play",
+"When you play this spell"
+],
+[
+"copy",
+"create in hand a fleeting copy of it"
+]
+],
+"by": "C"
+},
+"750468": {
+"tags": [
+[
+"attack_token",
+"gain the attack token"
+]
+],
+"by": "A=B"
+},
+"750479": {
+"tags": [
+[
+"modal_choice",
+"+3|+0 or +0|+3"
+],
+[
+"temporary_buff",
+"this round"
+]
+],
+"by": "A=B"
+},
+"750489": {
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+]
+],
+"by": "A=B"
+},
+"750491": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"in_hand_buff",
+"Grant an ally in hand +3|+3"
+]
+],
+"by": "A=B"
+},
+"750493": {
+"tags": [
+[
+"protection",
+"Remove Ephemeral from an ally"
+],
+[
+"removal",
+"grant it to an enemy"
+]
+],
+"by": "C"
+},
+"750497": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"modal_choice",
+"+3|+0 or +0|+3"
+],
+[
+"stat_gain",
+"Grant me +3|+0"
+]
+],
+"by": "A=B"
+},
+"750501": {
+"tags": [
+[
+"temporary_buff",
+"Give an ally +1|+0 and Quick Attack this round"
+],
+[
+"first_strike",
+"Quick Attack"
+]
+],
+"by": "C"
+},
+"750508": {
+"tags": [
+[
+"evasion",
+"Give an ally Elusive"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"by": "A=B"
+},
+"750517": {
+"tags": [
+[
+"deck_position",
+"Allegiance"
+],
+[
+"tutor",
+"Summon a 1 cost ally from your deck"
+],
+[
+"free_play",
+"Summon a 1 cost ally from your deck"
+],
+[
+"cost_condition",
+"1 cost ally"
+]
+],
+"by": "C"
+},
+"750520": {
+"tags": [
+[
+"lifesteal",
+"Lifesteal"
+],
+[
+"condition_count",
+"Enlightened"
+],
+[
+"stat_gain",
+"I have +4|+4"
+]
+],
+"by": "C"
+},
+"750554": {
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"generate_cards",
+"create 2 Decimates in hand"
+]
+],
+"by": "A=B"
+},
+"750608": {
+"tags": [
+[
+"death_trigger",
+"Last Breath"
+],
+[
+"generate_cards",
+"Create in hand a random 6+ cost spell"
+],
+[
+"random_effect",
+"random"
+],
+[
+"cost_condition",
+"6+ cost spell"
+]
+],
+"by": "A=B"
+},
+"750619": {
+"tags": [
+[
+"damage",
+"An ally and an enemy strike each other"
+]
+],
+"by": "A=B"
+},
+"750638": {
+"tags": [
+[
+"on_spell",
+"When you play a spell"
+],
+[
+"generate_cards",
+"create a Fleeting Turret in hand"
+],
+[
+"cost_condition",
+"with equal cost"
+],
+[
+"cost_set",
+"It costs 0"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"I've seen you summon 12+ Power of Tech allies"
+],
+[
+"tribal",
+"Tech allies"
+]
+],
+"by": "C"
+},
+"750666": {
+"tags": [
+[
+"cost_type",
+"To play, spend all your mana"
+],
+[
+"variable_stats",
+"Deal that much to a unit"
+],
+[
+"damage",
+"Deal that much to a unit"
+]
+],
+"by": "A=B"
+},
+"750670": {
+"tags": [
+[
+"on_spell",
+"When you play a spell"
+],
+[
+"permanent_growth",
+"grant me +1|+1"
+]
+],
+"by": "A=B"
+},
+"750724": {
+"tags": [
+[
+"temporary_buff",
+"Give allies +2|+2 and Overwhelm this round"
+],
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"scope_multi",
+"Give allies"
+]
+],
+"by": "C"
+},
+"750740": {
+"tags": [
+[
+"death_trigger",
+"When another ally dies"
+],
+[
+"direct_damage",
+"deal 1 to the enemy Nexus"
+],
+[
+"ping",
+"deal 1"
+]
+],
+"by": "C"
+},
+"750761": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"in_hand_buff",
+"reduce its cost by 1"
+]
+],
+"by": "A=B"
+},
+"750770": {
+"tags": [
+[
+"cost_type",
+"To play me, kill an ally"
+],
+[
+"sacrifice",
+"kill an ally"
+]
+],
+"by": "A=B"
+},
+"750796": {
+"tags": [
+[
+"temporary_buff",
+"Give an ally +2|+0 this round"
+],
+[
+"copy",
+"Create a Fleeting Vault Breaker in hand"
+]
+],
+"by": "C"
+},
+"750806": {
+"tags": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"evasion",
+"Elusive"
+]
+],
+"by": "A=B"
+},
+"750830": {
+"tags": [
+[
+"multi_attack",
+"Scout"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"tutor",
+"draw Miss Fortune"
+],
+[
+"spell_power",
+"deal 1 extra damage"
+]
+],
+"by": "A=B"
+},
+"750833": {
+"tags": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"stat_condition",
+"strongest enemy"
+],
+[
+"blocking",
+"Vulnerable"
+]
+],
+"by": "C"
+},
+"750836": {
+"tags": [
+[
+"evasion",
+"Elusive"
+],
+[
+"blocking",
+"Vulnerable"
+]
+],
+"by": "C"
+},
+"750855": {
+"tags": [
+[
+"in_hand_buff",
+"Reduce the cost of Sea Monster allies everywhere by 1"
+],
+[
+"tribal",
+"Sea Monster"
+],
+[
+"tutor",
+"Draw a Sea Monster"
+]
+],
+"by": "A=B"
+},
+"750870": {
+"tags": [
+[
+"in_hand_buff",
+"Grant the top 3 units in your deck +1|+1"
+],
+[
+"deck_position",
+"top 3 units in your deck"
+],
+[
+"draw",
+"Draw 1 of them"
+]
+],
+"by": "C"
+},
+"750884": {
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+]
+],
+"by": "A=B"
+},
+"750918": {
+"tags": [
+[
+"turn_end",
+"Round End"
+],
+[
+"combo_sequence",
+"If you played a spell on me this round"
+],
+[
+"damage",
+"I strike the weakest enemy"
+],
+[
+"stat_condition",
+"weakest enemy"
+]
+],
+"by": "C"
+},
+"750941": {
+"tags": [
+[
+"friendly_fire",
+"Deal 2 to an ally"
+],
+[
+"blocking",
+"Vulnerable"
+],
+[
+"scope_multi",
+"2 enemies"
+]
+],
+"by": "C"
+},
+"750990": {
+"tags": [
+[
+"stat_gain",
+"Grant an ally +1|+1"
+],
+[
+"shield",
+"SpellShield"
+]
+],
+"by": "C"
+},
+"751046": {
+"tags": [
+[
+"damage",
+"Deal 1 to a unit"
+],
+[
+"summon",
+"Summon a random 1 cost follower"
+],
+[
+"random_effect",
+"random 1 cost follower"
+],
+[
+"in_hand_buff",
+"While I'm in hand, increase both by 1"
+],
+[
+"on_ally_play",
+"when you play a 3 cost card"
+],
+[
+"cost_condition",
+"3 cost card"
+]
+],
+"by": "C"
+},
+"751049": {
+"tags": [
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"evasion",
+"Fearsome"
+],
+[
+"combo_sequence",
+"Nightfall"
+],
+[
+"copy",
+"Create a copy of me in hand"
+]
+],
+"by": "C"
+},
+"751063": {
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"shield",
+"Barrier"
+],
+[
+"temporary_buff",
+"Give my supported ally +2|+1 this round"
+]
+],
+"by": "C"
+},
+"751078": {
+"tags": [
+[
+"cost_increase",
+"ALL spells cost 1 more"
+],
+[
+"symmetric_effect",
+"ALL spells"
+]
+],
+"by": "A=B"
+},
+"751081": {
+"tags": [
+[
+"damage",
+"An ally and an enemy strike each other"
+],
+[
+"tribal",
+"if the ally is a Dragon"
+],
+[
+"heal",
+"heal it 5"
+]
+],
+"by": "A=B"
+},
+"751083": {
+"tags": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"tribal",
+"Dragon"
+],
+[
+"attack_token",
+"Rally"
+]
+],
+"by": "A=B"
+},
+"751090": {
+"tags": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"cost_condition",
+"8+ cost card"
+],
+[
+"stat_gain",
+"+3|+0"
+]
+],
+"by": "A=B"
+},
+"751101": {
+"tags": [
+[
+"regeneration",
+"Grant an ally Regeneration"
+],
+[
+"stat_gain",
+"+2|+2"
+]
+],
+"by": "A=B"
+},
+"751121": {
+"tags": [
+[
+"deck_position",
+"Lurk"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"transform",
+"transform me into Death From Below"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"Allied Pykes have dealt 15+ damage"
+]
+],
+"by": "A=B"
+},
+"751136": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"summon",
+"Blade Dance 2"
+],
+[
+"attack_now",
+"Blade Dance 2"
+]
+],
+"by": "C"
+},
+"751154": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"destroy",
+"Destroy a landmark"
+],
+[
+"summon",
+"summon a Grumpy Rockbear"
+]
+],
+"by": "C"
+},
+"751159": {
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"on_play",
+"Play"
+],
+[
+"selection",
+"Predict"
+],
+[
+"summon",
+"Summon a Clockling"
+]
+],
+"by": "A=B"
+},
+"751168": {
+"tags": [
+[
+"delayed",
+"Countdown 2"
+],
+[
+"summon",
+"Summon a Grumpy Rockbear"
+],
+[
+"count_payoff",
+"if you've summoned 4+ landmarks this game"
+],
+[
+"stat_condition",
+"strongest ally"
+],
+[
+"stat_gain",
+"+2|+2"
+]
+],
+"by": "C"
+},
+"751175": {
+"tags": [
+[
+"count_payoff",
+"Reputation"
+],
+[
+"cost_reduction",
+"I cost 3 less"
+],
+[
+"ping",
+"Deal 1"
+],
+[
+"random_effect",
+"a random enemy"
+],
+[
+"direct_damage",
+"the enemy Nexus"
+],
+[
+"repeat_trigger",
+"5 times"
+]
+],
+"by": "C"
+},
+"751215": {
+"tags": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"speed",
+"advance your Buried Sun Disc 3 rounds"
+]
+],
+"by": "A=B"
+},
+"751216": {
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"repeat_trigger",
+"activates twice"
+]
+],
+"by": "A=B"
+},
+"751240": {
+"tags": [
+[
+"resource_gain",
+"Get an empty mana gem"
+],
+[
+"stat_gain",
+"+0|+2"
+]
+],
+"by": "A=B"
+},
+"751255": {
+"tags": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"generate_cards",
+"create a Midnight Raid in hand"
+]
+],
+"by": "A=B"
+},
+"751258": {
+"tags": [
+[
+"count_payoff",
+"Reputation"
+],
+[
+"cost_reduction",
+"I cost 2 less"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"attack_token",
+"Rally"
+]
+],
+"by": "C"
+},
+"751287": {
+"tags": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"summon",
+"summon a Prey"
+]
+],
+"by": "A=B"
+},
+"751296": {
+"tags": [
+[
+"death_trigger",
+"Last Breath"
+],
+[
+"summon",
+"Summon a Crest of Insight"
+]
+],
+"by": "A=B"
+},
+"751303": {
+"tags": [
+[
+"combo_sequence",
+"Daybreak"
+],
+[
+"generate_cards",
+"Create a random Nightfall card in hand"
+],
+[
+"random_effect",
+"random"
+]
+],
+"by": "C"
+},
+"751308": {
+"tags": [
+[
+"attack_now",
+"An ally starts a free attack"
+],
+[
+"blocking",
+"Challenging an enemy"
+]
+],
+"by": "C"
+},
+"751314": {
+"tags": [
+[
+"damage_reduction",
+"Tough"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"tutor",
+"draw Jarvan IV"
+],
+[
+"temporary_buff",
+"give allies Challenger and Scout this round"
+],
+[
+"blocking",
+"Challenger"
+],
+[
+"multi_attack",
+"Scout"
+],
+[
+"scope_multi",
+"give allies"
+]
+],
+"by": "C"
+},
+"751324": {
+"tags": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"stat_gain",
+"grant me +1|+1"
+],
+[
+"condition_count",
+"for each other Yordle ally"
+],
+[
+"tribal",
+"Yordle"
+]
+],
+"by": "A=B"
+},
+"751330": {
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"generate_cards",
+"Create a Pokey Stick in hand"
+],
+[
+"in_hand_buff",
+"reduce its cost by 2"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"turn_end",
+"Round End"
+]
+],
+"by": "A=B"
+},
+"751338": {
+"tags": [
+[
+"modal_choice",
+"Barrier or SpellShield"
+],
+[
+"shield",
+"Barrier"
+],
+[
+"temporary_buff",
+"this round"
+]
+],
+"by": "C"
+},
+"751341": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"discard",
+"Discard up to 3 cards"
+],
+[
+"in_hand_buff",
+"allied Rumbles everywhere"
+],
+[
+"stacking_keyword",
+"Impact"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"shield",
+"SpellShield"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"count_payoff",
+"I've seen Mecha Yordle allies deal 12+ damage"
+],
+[
+"tribal",
+"Mecha Yordle"
+]
+],
+"by": "C"
+},
+"751346": {
+"tags": [
+[
+"selection",
+"Pick 1 of 3 units or spells from the enemy deck"
+],
+[
+"junk_cards",
+"plant 3 Poison Puffcaps"
+]
+],
+"by": "A=B"
+},
+"751351": {
+"tags": [
+[
+"discard",
+"To play, discard 1"
+],
+[
+"selection",
+"Manifest"
+],
+[
+"tribal",
+"Yordle"
+],
+[
+"cost_condition",
+"costs 3 or less"
+],
+[
+"summon",
+"summon it"
+]
+],
+"by": "C"
+},
+"751355": {
+"tags": [
+[
+"aoe_damage",
+"Deal 1 to all enemies"
+],
+[
+"repeat_trigger",
+"then do it again"
+],
+[
+"ping",
+"Deal 1"
+]
+],
+"by": "C"
+},
+"751396": {
+"tags": [
+[
+"resource_gain",
+"Attune"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"generate_cards",
+"create a Prank in hand"
+]
+],
+"by": "C"
+},
+"751425": {
+"tags": [
+[
+"permanent_growth",
+"Augment"
+],
+[
+"on_play",
+"Play"
+],
+[
+"discard",
+"Discard 1"
+],
+[
+"generate_cards",
+"create a multi-region follower in hand"
+],
+[
+"in_hand_buff",
+"reduce its cost by 1"
+]
+],
+"by": "C"
+},
+"751441": {
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"Play"
+],
+[
+"direct_damage",
+"Deal 1 to EACH Nexus"
+],
+[
+"symmetric_effect",
+"EACH Nexus"
+]
+],
+"by": "A=B"
+},
+"751447": {
+"tags": [
+[
+"return_to_hand",
+"Recall an ally"
+],
+[
+"blocking",
+"Vulnerable"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"by": "C"
+},
+"751448": {
+"tags": [
+[
+"evasion",
+"Elusive"
+],
+[
+"on_play",
+"Play"
+],
+[
+"bounce_enemy",
+"Recall a unit"
+]
+],
+"by": "A=B"
+},
+"751461": {
+"tags": [
+[
+"delayed",
+"Countdown 3"
+],
+[
+"on_play",
+"when I'm summoned"
+],
+[
+"death_trigger",
+"you destroy me"
+],
+[
+"stat_condition",
+"strongest ally"
+],
+[
+"stat_gain",
+"+2|+0"
+]
+],
+"by": "C"
+},
+"751494": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"selection",
+"Pick a spell in the top 5 cards of your deck"
+],
+[
+"deck_position",
+"top 5 cards"
+],
+[
+"copy",
+"create an exact Fleeting copy in hand"
+]
+],
+"by": "A=B"
+},
+"751504": {
+"tags": [
+[
+"trap_secret",
+"Plant 2 Flashbomb Traps"
+],
+[
+"deck_position",
+"top 8 cards of the enemy deck"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"by": "C"
+},
+"751506": {
+"tags": [
+[
+"draw",
+"draw 2"
+],
+[
+"symmetric_effect",
+"ALL players draw 2"
+]
+],
+"by": "A=B"
+},
+"751521": {
+"tags": [
+[
+"destroy",
+"Kill a unit"
+],
+[
+"stat_loss",
+"-2|-0"
+],
+[
+"scope_multi",
+"all enemies"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"by": "A=B"
+},
+"751557": {
+"tags": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"stat_gain",
+"I gain all allied everywhere buffs"
+]
+],
+"by": "A=B"
+},
+"751569": {
+"tags": [
+[
+"delayed",
+"Countdown 3"
+],
+[
+"summon",
+"Summon Inviolus Vox"
+]
+],
+"by": "C"
+},
+"751595": {
+"tags": [
+[
+"on_attack",
+"When an ally with an attachment attacks"
+],
+[
+"merge_attach",
+"attachment"
+],
+[
+"permanent_growth",
+"grant that attachment +1|+0"
+]
+],
+"by": "C"
+},
+"751598": {
+"tags": [
+[
+"flexibility",
+"now or at the next Round Start"
+],
+[
+"summon",
+"Summon a Keeper of Masks"
+],
+[
+"delayed",
+"at the next Round Start"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"by": "A=B"
+},
+"751615": {
+"tags": [
+[
+"deck_condition",
+"Deep"
+],
+[
+"heal",
+"heal your allies and Nexus 3"
+]
+],
+"by": "A=B"
+},
+"751623": {
+"tags": [
+[
+"cant_attack",
+"Immobile"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"friendly_fire",
+"Deal 2 to me"
+]
+],
+"by": "C"
+},
+"751632": {
+"tags": [
+[
+"variety_payoff",
+"Evolve"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"attack_token",
+"If you have the attack token"
+],
+[
+"generate_cards",
+"create a Second Skin in hand"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"by": "C"
+},
+"751651": {
+"tags": [
+[
+"summon",
+"Summon a random Husk"
+],
+[
+"random_effect",
+"random Husk"
+],
+[
+"stat_gain",
+"+1|+0"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"by": "A=B"
+},
+"751673": {
+"tags": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"kicker",
+"You may spend 8 mana to play me as Naganeka of Zuretta"
+]
+],
+"by": "A=B"
+},
+"751687": {
+"tags": [
+[
+"variable_stats",
+"I have +1|+0 for each time an ally attacked with increased Power"
+],
+[
+"count_payoff",
+"for each time an ally attacked"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"stat_gain",
+"grant allies +1|+0"
+],
+[
+"stat_condition",
+"Empowered 6"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"turn_start",
+"Round Start"
+]
+],
+"by": "C"
+},
+"751715": {
+"tags": [
+[
+"stat_condition",
+"Empowered 3"
+],
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"damage_reduction",
+"Tough"
+]
+],
+"by": "A=B"
+},
+"751731": {
+"tags": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"stat_gain",
+"Give me +1|+0"
+],
+[
+"count_payoff",
+"for each of your traps or boons that was activated this round"
+],
+[
+"trap_secret",
+"traps"
+]
+],
+"by": "C"
+},
+"751734": {
+"tags": [
+[
+"transform",
+"transform me into an exact copy of it"
+],
+[
+"copy",
+"exact copy of it"
+]
+],
+"by": "A=B"
+},
+"751772": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"aoe_damage",
+"Deal 1 to all enemies"
+],
+[
+"count_payoff",
+"If you've played 6+ new spells this game"
+],
+[
+"variety_payoff",
+"new spells"
+]
+],
+"by": "C"
+},
+"751778": {
+"tags": [
+[
+"damage",
+"Deal 1 to a unit"
+],
+[
+"count_payoff",
+"If you've Equipped an ally this game"
+],
+[
+"repeat_trigger",
+"copy me with the same target"
+]
+],
+"by": "C"
+},
+"751822": {
+"tags": [
+[
+"merge_attach",
+"Equipment"
+]
+],
+"by": "A=B"
+},
+"751824": {
+"tags": [
+[
+"damage_reduction",
+"Tough"
+],
+[
+"count_payoff",
+"Once you've Equipped an ally this game"
+],
+[
+"multi_attack",
+"grant me Scout"
+]
+],
+"by": "A=B"
+},
+"751826": {
+"tags": [
+[
+"death_count",
+"If an ally died this round"
+],
+[
+"cost_reduction",
+"I cost 2 less"
+],
+[
+"on_play",
+"Play"
+],
+[
+"merge_attach",
+"Equip me with an equipment"
+],
+[
+"cost_condition",
+"costs 2 or less"
+],
+[
+"upgrade",
+"Forge me"
+]
+],
+"by": "C"
+},
+"751831": {
+"tags": [
+[
+"destroy",
+"Kill a unit"
+],
+[
+"stat_condition",
+"total Power and Health of 4 or less"
+],
+[
+"modal_choice",
+"or destroy a unit's equipment"
+],
+[
+"merge_attach",
+"equipment"
+]
+],
+"by": "C"
+},
+"751833": {
+"tags": [
+[
+"on_play",
+"When I am summoned"
+],
+[
+"summon",
+"summon a Ghastly Band"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"attack_token",
+"If you have the attack token"
+]
+],
+"by": "C"
+},
+"751863": {
+"tags": [
+[
+"damage",
+"Deal 3 to a unit"
+],
+[
+"on_kill",
+"If this kills it"
+],
+[
+"generate_cards",
+"create 2 Coins in hand"
+]
+],
+"by": "A=B"
+},
+"751877": {
+"tags": [
+[
+"draw",
+"Draw 2"
+],
+[
+"generate_cards",
+"create 2 Coins in hand"
+]
+],
+"by": "A=B"
+},
+"751915": {
+"tags": [
+[
+"summon",
+"Summon a random Husk"
+],
+[
+"random_effect",
+"random Husk"
+],
+[
+"stat_gain",
+"+1|+1"
+],
+[
+"cost_condition",
+"1 cost allies"
+],
+[
+"in_hand_buff",
+"everywhere"
+]
+],
+"by": "A=B"
+},
+"751925": {
+"tags": [
+[
+"transform",
+"When I transform"
+],
+[
+"summon",
+"summon a Aurora Hallunatis"
+]
+],
+"by": "C"
+},
+"751939": {
+"tags": [
+[
+"death_trigger",
+"Last Breath"
+],
+[
+"copy",
+"Create in deck an exact copy"
+],
+[
+"stat_condition",
+"strongest"
+],
+[
+"in_hand_buff",
+"double the stats of Proliferating Darkwraiths in deck"
+],
+[
+"stat_multiply",
+"double the stats"
+]
+],
+"by": "A=B"
+},
+"751956": {
+"tags": [
+[
+"death_trigger",
+"When another ally dies"
+],
+[
+"death_trigger",
+"Last Breath"
+],
+[
+"generate_cards",
+"Plant 4 Chimes in your deck"
+]
+],
+"by": "A=B"
+},
+"751976": {
+"tags": [
+[
+"evasion",
+"Brash"
+],
+[
+"on_ally_play",
+"When you play a card"
+],
+[
+"cost_condition",
+"cost equal to my Power"
+],
+[
+"permanent_growth",
+"grant me +1|+1"
+]
+],
+"by": "C"
+},
+"751983": {
+"tags": [
+[
+"count_payoff",
+"If you've drawn 3+ cards this round"
+],
+[
+"cost_reduction",
+"I cost 2 less"
+],
+[
+"damage",
+"Deal 3 to a unit"
+],
+[
+"direct_damage",
+"2 to the enemy Nexus"
+]
+],
+"by": "A=B"
+},
+"751993": {
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"count_payoff",
+"If you've drawn 3+ cards this round"
+],
+[
+"cost_reduction",
+"I cost 2 less"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"delayed",
+"at the next Round Start"
+],
+[
+"draw",
+"draw 2"
+]
+],
+"by": "A=B"
+},
+"752006": {
+"tags": [
+[
+"on_spell",
+"When you play a spell or Skill"
+],
+[
+"summon",
+"summon an Sigil of the Storm"
+]
+],
+"by": "A=B"
+},
+"752020": {
+"tags": [
+[
+"combo_sequence",
+"Daybreak"
+],
+[
+"blocking",
+"Vulnerable"
+],
+[
+"stat_condition",
+"weakest enemy"
+]
+],
+"by": "C"
+},
+"752034": {
+"tags": [
+[
+"shield",
+"Spellshield"
+],
+[
+"temporary_buff",
+"Give an ally Spellshield this round"
+],
+[
+"friendly_fire",
+"Curse it with Shackles"
+]
+],
+"by": "C"
+},
+"752035": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"repeat_trigger",
+"Activate other allies' Daybreak and Nightfall effects"
+],
+[
+"combo_sequence",
+"Daybreak"
+],
+[
+"excess_damage",
+"Grant me Overwhelm"
+],
+[
+"shield",
+"Grant me SpellShield"
+]
+],
+"by": "C"
+},
+"752036": {
+"tags": [
+[
+"tribal",
+"Titanic unit"
+],
+[
+"cost_reduction",
+"I cost 3 less"
+],
+[
+"damage",
+"Deal 7 to a unit"
+]
+],
+"by": "A=B"
+},
+"752041": {
+"tags": [
+[
+"temporary_buff",
+"Give an ally +0|+2 this round"
+],
+[
+"damage",
+"That ally and an enemy strike each other"
+]
+],
+"by": "C"
+},
+"752052": {
+"tags": [
+[
+"hand_disruption",
+"Your opponent discards"
+],
+[
+"cost_condition",
+"highest cost card"
+]
+],
+"by": "A=B"
+},
+"752080": {
+"tags": [
+[
+"delayed",
+"I-II"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"by": "C"
+},
+"752081": {
+"tags": [
+[
+"evasion",
+"Brash"
+],
+[
+"on_play",
+"Play"
+],
+[
+"draw",
+"draw another card"
+],
+[
+"cost_condition",
+"costs either more or less than the card you Updrafted"
+]
+],
+"by": "C"
+},
+"752119": {
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"by": "A=B"
+},
+"752123": {
+"tags": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"removal",
+"Capture the strongest enemy"
+],
+[
+"stat_condition",
+"strongest enemy"
+]
+],
+"by": "A=B"
+},
+"752133": {
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"by": "A=B"
+},
+"752154": {
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+]
+],
+"by": "A=B"
+},
+"752158": {
+"tags": [
+[
+"hand_disruption",
+"The opponent discards"
+],
+[
+"random_effect",
+"a random card"
+]
+],
+"by": "A=B"
+},
+"752175": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"copy",
+"Summon an exact copy of me"
+]
+],
+"by": "A=B"
+},
+"752176": {
+"tags": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"copy",
+"create a Fleeting copy of me in hand"
+]
+],
+"by": "A=B"
+},
+"752177": {
+"tags": [
+[
+"stat_gain",
+"+1|+3"
+]
+],
+"by": "A=B"
+},
+"752202": {
+"tags": [
+[
+"blocking",
+"Challenger"
+]
+],
+"by": "C"
+},
+"752206": {
+"tags": [
+[
+"stat_condition",
+"strongest ally"
+],
+[
+"random_effect",
+"random Rare item"
+],
+[
+"merge_attach",
+"item"
+]
+],
+"by": "A=B"
+},
+"752230": {
+"tags": [
+[
+"stat_gain",
+"+3|+3"
+]
+],
+"by": "A=B"
+},
+"752236": {
+"tags": [
+[
+"shield",
+"Barrier"
+],
+[
+"scope_multi",
+"targeted allies"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"by": "A=B"
+},
+"752269": {
+"tags": [
+[
+"cost_reduction",
+"-4 Cost"
+],
+[
+"self_destruct",
+"Ephemeral"
+]
+],
+"by": "A=B"
+},
+"752270": {
+"tags": [
+[
+"stat_condition",
+"strongest ally"
+],
+[
+"random_effect",
+"random Common item"
+],
+[
+"merge_attach",
+"item"
+]
+],
+"by": "A=B"
+},
+"752288": {
+"tags": [
+[
+"repeat_trigger",
+"Copy me onto the same targets"
+]
+],
+"by": "C"
+},
+"752295": {
+"tags": [
+[
+"resource_gain",
+"Attune"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"generate_cards",
+"create a Prank in hand"
+]
+],
+"by": "C"
+},
+"795276": {
+"tags": [
+[
+"tribal",
+"Dragon: 31 entities of this type"
+]
+],
+"by": "A=B"
+},
+"795283": {
+"tags": [
+[
+"tribal",
+"Weaponmaster: 15 entities of this type"
+]
+],
+"by": "A=B"
+},
+"796474": {
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"attack_token",
+"Rally"
+],
+[
+"generate_cards",
+"create a Fleeting Blade's Edge in hand"
+],
+[
+"cost_set",
+"It costs 0"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"return_to_hand",
+"Recall me"
+]
+],
+"by": "A=B"
+},
+"796478": {
+"tags": [
+[
+"blocking",
+"Challenger"
+],
+[
+"count_payoff",
+"When I've killed 4 enemies and survived"
+],
+[
+"alt_wincon",
+"you win the game"
+]
+],
+"by": "C"
+},
+"796479": {
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"draw",
+"Draw 1"
+],
+[
+"upgrade",
+"level up"
+],
+[
+"hand_size",
+"you empty your hand"
+],
+[
+"generate_cards",
+"create a Super Mega Death Rocket! in hand"
+]
+],
+"by": "C"
+},
+"796480": {
+"tags": [
+[
+"evasion",
+"Elusive"
+],
+[
+"on_attack",
+"Nexus Strike"
+],
+[
+"stat_multiply",
+"Double the Poison Puffcaps"
+],
+[
+"junk_cards",
+"Poison Puffcaps in the enemy deck"
+]
+],
+"by": "A=B"
+},
+"796521": {
+"tags": [
+[
+"turn_start",
+"Round Start"
+],
+[
+"copy",
+"Create a Fleeting copy of each non-Fleeting card I saw you play last round"
+],
+[
+"on_play",
+"Play"
+],
+[
+"generate_cards",
+"Create 4 Time Bombs in your deck"
+],
+[
+"selection",
+"Predict"
+]
+],
+"by": "C"
+},
+"796534": {
+"tags": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"death_trigger",
+"the first time another unit dies"
+],
+[
+"summon",
+"summon an Encroaching Mist"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"steal",
+"Steal the strongest enemy this round"
+],
+[
+"stat_condition",
+"strongest enemy"
+],
+[
+"temporary_effect",
+"this round"
+],
+[
+"destroy",
+"kill it instead"
+]
+],
+"by": "A=B"
+},
+"796540": {
+"tags": [
+[
+"turn_start",
+"Round Start"
+],
+[
+"permanent_growth",
+"Grant me +1|+1"
+]
+],
+"by": "A=B"
+},
+"796559": {
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+]
+],
+"by": "A=B"
+},
+"796567": {
+"tags": [
+[
+"variety_payoff",
+"Evolve"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"attack_token",
+"If you have the attack token"
+],
+[
+"generate_cards",
+"create a Second Skin in hand"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"condition_count",
+"for each positive keyword I have"
+],
+[
+"damage",
+"Deal 1"
+],
+[
+"direct_damage",
+"the enemy Nexus"
+],
+[
+"targeting_rules",
+"lowest health first"
+]
+],
+"by": "C"
+},
+"796570": {
+"tags": [
+[
+"damage_reduction",
+"Tough"
+],
+[
+"on_play",
+"Play"
+],
+[
+"merge_attach",
+"Equip me"
+],
+[
+"copy",
+"an exact copy of an ally's equipment"
+],
+[
+"stat_condition",
+"strongest equipment"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"upgrade",
+"Forge me twice"
+],
+[
+"summon",
+"summon an attacking Spirit of the Ram"
+],
+[
+"variable_stats",
+"with my stats"
+]
+],
+"by": "C"
+},
+"796586": {
+"tags": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"stat_condition",
+"strongest enemy"
+],
+[
+"repeat_trigger",
+"it gains it again"
+]
+],
+"by": "C"
+},
+"796600": {
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"friendly_fire",
+"Deal 1 to an ally"
+],
+[
+"temporary_buff",
+"give another ally +2|+2 this round"
+],
+[
+"generate_cards",
+"Create a Vladimir in your deck"
+]
+],
+"by": "C"
+},
+"796607": {
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"multi_target_attack",
+"strikes all battling enemies"
+],
+[
+"generate_cards",
+"Create a Garen in your deck"
+]
+],
+"by": "C"
+},
+"796636": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"attack_zero",
+"Frostbite"
+],
+[
+"stat_condition",
+"3 or less Health"
+],
+[
+"scope_multi",
+"all other enemies"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"by": "A=B"
+},
+"796637": {
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"attack_zero",
+"Frostbite"
+],
+[
+"generate_cards",
+"Create an Ashe in your deck"
+]
+],
+"by": "A=B"
+},
+"796640": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"banish",
+"Obliterate"
+],
+[
+"board_wipe",
+"Obliterate ALL units with 4 or less Power"
+],
+[
+"stat_condition",
+"4 or less Power"
+],
+[
+"hand_disruption",
+"in hands"
+],
+[
+"friendly_fire",
+"ALL units"
+],
+[
+"symmetric_effect",
+"ALL units"
+]
+],
+"by": "C"
+},
+"796653": {
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"temporary_buff",
+"Give an ally +2|+0 this round"
+],
+[
+"generate_cards",
+"Create a Vi in your deck"
+]
+],
+"by": "C"
+},
+"796660": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"draw",
+"draw me instead"
+],
+[
+"self_mill",
+"Tossed"
+],
+[
+"summon",
+"Summon 3 Vicious Platewyrms"
+]
+],
+"by": "C"
+},
+"796661": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"damage",
+"Deal 2 to a unit"
+],
+[
+"direct_damage",
+"deal 1 to the enemy Nexus instead"
+]
+],
+"by": "A=B"
+},
+"796666": {
+"tags": [
+[
+"cant_attack",
+"Immobile"
+],
+[
+"blocking",
+"Vulnerable"
+],
+[
+"stacking_keyword",
+"Powder Kegs stack"
+],
+[
+"spell_power",
+"All of your spells and Skills deal 1 extra damage"
+],
+[
+"self_destruct",
+"Destroy me"
+]
+],
+"by": "C"
+},
+"796677": {
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"disable",
+"Stun an enemy"
+],
+[
+"bounce_enemy",
+"Place that unit into the enemy deck"
+],
+[
+"generate_cards",
+"Create a Nautilus into your deck"
+]
+],
+"by": "A=B"
+},
+"796679": {
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"temporary_buff",
+"Give an ally +3|+4 this round"
+],
+[
+"generate_cards",
+"Create a Sejuani in your deck"
+]
+],
+"by": "C"
+},
+"796683": {
+"tags": [
+[
+"blocking",
+"Challenger"
+],
+[
+"multi_attack",
+"Scout"
+]
+],
+"by": "C"
+},
+"796689": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"damage",
+"striking both"
+],
+[
+"direct_damage",
+"into the enemy Nexus"
+],
+[
+"bounce_enemy",
+"Recall it"
+]
+],
+"by": "C"
+},
+"796692": {
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"free_play",
+"Summon an ally that costs 3 or less from hand"
+],
+[
+"cost_condition",
+"costs 3 or less"
+]
+],
+"by": "C"
+},
+"796699": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"removal",
+"he Captures it"
+],
+[
+"friendly_fire",
+"It strikes him"
+]
+],
+"by": "C"
+},
+"796702": {
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"tutor",
+"Draw a landmark"
+]
+],
+"by": "A=B"
+},
+"796709": {
+"tags": [
+[
+"blocking",
+"Challenger"
+],
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"count_payoff",
+"for each Celestial card you played this game"
+],
+[
+"tribal",
+"Celestial"
+],
+[
+"stat_gain",
+"grant me +1|+0"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"temporary_buff",
+"Give other allies +2|+2 and Overwhelm this round"
+],
+[
+"scope_multi",
+"other allies"
+]
+],
+"by": "C"
+},
+"796714": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"silence",
+"Silence a follower"
+]
+],
+"by": "A=B"
+},
+"796719": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"disable",
+"Stun 2 enemies"
+],
+[
+"scope_multi",
+"2 enemies"
+]
+],
+"by": "A=B"
+},
+"796727": {
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"modal_choice",
+"Pick a Moon Weapon"
+],
+[
+"generate_cards",
+"create in hand"
+],
+[
+"generate_cards",
+"Create an Aphelios in your deck"
+]
+],
+"by": "A=B"
+},
+"796736": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"banish",
+"Obliterate a unit or landmark"
+]
+],
+"by": "A=B"
+},
+"796746": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"temporary_buff",
+"Give allies +1|+1 this round"
+],
+[
+"scope_multi",
+"Give allies"
+],
+[
+"repeat_trigger",
+"Activate an ally's Daybreak effect"
+],
+[
+"generate_cards",
+"Create a Leona in your deck"
+]
+],
+"by": "C"
+},
+"796747": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"disable",
+"Stun enemies"
+],
+[
+"scope_multi",
+"Stun enemies"
+],
+[
+"stat_condition",
+"2 or less Power"
+]
+],
+"by": "A=B"
+},
+"796758": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"lifesteal",
+"Drain 2"
+],
+[
+"direct_damage",
+"from the enemy Nexus"
+]
+],
+"by": "A=B"
+},
+"796773": {
+"tags": [
+[
+"on_ally_play",
+"When you summon a Tech"
+],
+[
+"tribal",
+"Tech"
+],
+[
+"buff",
+"we share keywords"
+]
+],
+"by": "C"
+},
+"796775": {
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"summon",
+"Summon Pyke"
+],
+[
+"damage",
+"striking an enemy"
+]
+],
+"by": "A=B"
+},
+"796778": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"tribal",
+"Lurker ally"
+],
+[
+"damage",
+"strikes a random enemy"
+],
+[
+"random_effect",
+"a random enemy"
+]
+],
+"by": "A=B"
+},
+"796793": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"damage",
+"Deal 2 to Taliyah's blocker"
+],
+[
+"direct_damage",
+"deal 2 to the enemy Nexus instead"
+]
+],
+"by": "A=B"
+},
+"796819": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"aoe_damage",
+"Deal 2 to enemies"
+],
+[
+"direct_damage",
+"the enemy Nexus"
+]
+],
+"by": "A=B"
+},
+"796824": {
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"excess_damage",
+"Overwhelm"
+]
+],
+"by": "C"
+},
+"796826": {
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"stat_gain",
+"+1|+1"
+]
+],
+"by": "C"
+},
+"796833": {
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"speed",
+"Advance your landmarks 1 round"
+]
+],
+"by": "A=B"
+},
+"796847": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"sacrifice",
+"Destroy one of your mana gems"
+],
+[
+"tutor",
+"draw a Champion"
+]
+],
+"by": "A=B"
+},
+"796863": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"sacrifice",
+"Kill an ally"
+],
+[
+"direct_damage",
+"deal 3 to the enemy Nexus"
+]
+],
+"by": "A=B"
+},
+"796864": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"sacrifice",
+"Kill an ally"
+],
+[
+"destroy",
+"kill an enemy"
+]
+],
+"by": "A=B"
+},
+"796866": {
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"disable",
+"Stun an enemy"
+],
+[
+"damage",
+"Deal 3 to it"
+],
+[
+"count_payoff",
+"if you've summoned a landmark this game"
+],
+[
+"generate_cards",
+"Create a Malphite in your deck"
+]
+],
+"by": "A=B"
+},
+"796869": {
+"tags": [
+[
+"delayed",
+"Countdown 1"
+],
+[
+"resource_gain",
+"Get an extra mana gem this round"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"by": "C"
+},
+"796875": {
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+]
+],
+"by": "A=B"
+},
+"796877": {
+"tags": [
+[
+"stacking_keyword",
+"Impact"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"polymorph",
+"Transform the strongest enemy into a 3|3 Mini-Minitee"
+],
+[
+"stat_condition",
+"strongest enemy"
+],
+[
+"silence",
+"Silence it"
+],
+[
+"cant_block",
+"It can't block"
+]
+],
+"by": "A=B"
+},
+"796884": {
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"disable",
+"Stun an enemy"
+],
+[
+"scope_multi",
+"stun all enemies"
+],
+[
+"stat_condition",
+"2 or less Power"
+],
+[
+"generate_cards",
+"Create a Veigar in your deck"
+]
+],
+"by": "A=B"
+},
+"796891": {
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"shield",
+"SpellShield"
+],
+[
+"temporary_buff",
+"Give an ally SpellShield this round"
+]
+],
+"by": "C"
+},
+"796901": {
+"tags": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"stacking_keyword",
+"grant me 3 Impact"
+]
+],
+"by": "A=B"
+},
+"796927": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"ping",
+"Deal 1"
+],
+[
+"scope_multi",
+"two enemies"
+]
+],
+"by": "A=B"
+},
+"796963": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"damage",
+"Deal 3 to an enemy"
+],
+[
+"direct_damage",
+"the enemy Nexus"
+],
+[
+"scope_multi",
+"and 3 to another"
+],
+[
+"generate_cards",
+"Create a Jayce in your deck"
+]
+],
+"by": "A=B"
+},
+"796966": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"on_play",
+"Play"
+],
+[
+"trap_secret",
+"Activate the effects of all traps"
+],
+[
+"deck_position",
+"top 5 cards of the enemy deck"
+]
+],
+"by": "A=B"
+},
+"796990": {
+"tags": [
+[
+"cant_attack",
+"Immobile"
+],
+[
+"evasion",
+"Elusive"
+],
+[
+"on_ally_play",
+"When you play an ally"
+],
+[
+"self_destruct",
+"kill me"
+],
+[
+"stat_gain",
+"grant it my stats and positive keywords"
+]
+],
+"by": "C"
+},
+"796998": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"speed",
+"Advance all your Frozen Thralls 1 round"
+]
+],
+"by": "A=B"
+},
+"797000": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"summon",
+"Summon a Keeper of Masks"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"by": "A=B"
+},
+"797013": {
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"shield",
+"SpellShield"
+],
+[
+"generate_cards",
+"Create a Kai'Sa in your deck"
+]
+],
+"by": "C"
+},
+"797030": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"upgrade",
+"Forge an ally"
+],
+[
+"aoe_damage",
+"deal 1 to ALL units"
+],
+[
+"friendly_fire",
+"ALL units"
+],
+[
+"repeat_trigger",
+"then do it again"
+],
+[
+"generate_cards",
+"Create an Ornn in your deck"
+]
+],
+"by": "A=B"
+},
+"797043": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"transform",
+"when I transform"
+],
+[
+"summon",
+"Summon two Ephemeral copies of me"
+],
+[
+"copy",
+"copies of me"
+],
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"lifesteal",
+"Lifesteal"
+],
+[
+"blocking",
+"Challenger"
+],
+[
+"evasion",
+"Elusive"
+]
+],
+"by": "C"
+},
+"797050": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"temporary_buff",
+"Give other allies +1|+1 this round"
+],
+[
+"scope_multi",
+"other allies"
+]
+],
+"by": "C"
+},
+"797062": {
+"tags": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"death_trigger",
+"LastBreath"
+],
+[
+"tribal",
+"If my bearer is not a Darkinthrall"
+],
+[
+"summon",
+"summon a Darkinthrall"
+]
+],
+"by": "A=B"
+},
+"797070": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"damage",
+"An ally and an enemy strike each other"
+]
+],
+"by": "A=B"
+},
+"797100": {
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"ping",
+"Deal 1 to anything"
+]
+],
+"by": "C"
+},
+"797126": {
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"draw",
+"Draw 2"
+]
+],
+"by": "C"
+},
+"797135": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"draw",
+"draw 1"
+]
+],
+"by": "A=B"
+},
+"797141": {
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"junk_cards",
+"Curse"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"friendly_fire",
+"Deal 1 to your Nexus"
+]
+],
+"by": "A=B"
+},
+"797146": {
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"in_hand_buff",
+"Grant SpellShield to an ally in hand"
+]
+],
+"by": "A=B"
+},
+"797156": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"copy",
+"Create an Ephemeral copy of it in hand"
+],
+[
+"in_hand_buff",
+"with +1|+1"
+],
+[
+"self_destruct",
+"Ephemeral"
+]
+],
+"by": "A=B"
+},
+"797172": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"on_ally_play",
+"When you summon an ally this round"
+],
+[
+"temporary_buff",
+"give it +2|+0 this round"
+]
+],
+"by": "C"
+},
+"797225": {
+"tags": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"in_hand_buff",
+"Reduce the cost of a random card in hand by 5"
+],
+[
+"random_effect",
+"random card"
+]
+],
+"by": "A=B"
+}
+}

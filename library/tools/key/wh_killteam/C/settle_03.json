@@ -1,0 +1,332 @@
+{
+"814803": [
+[
+"death_trigger",
+"If this operative is incapacitated"
+],
+[
+"random_effect",
+"roll two D6"
+],
+[
+"aoe_damage",
+"inflict D3+2 damage on each operative visible to and within 2\" of this operative"
+],
+[
+"friendly_fire",
+"each operative visible to and within 2\" of this operative"
+]
+],
+"814808": [
+[
+"stealth",
+"perform the Charge action while it has a Conceal order"
+],
+[
+"death_trigger",
+"If this operative is incapacitated during the Fight action"
+],
+[
+"damage",
+"you can strike the enemy operative in that sequence"
+]
+],
+"814809": [
+[
+"terrain",
+"Light or Heavy terrain is within its control range"
+],
+[
+"buff",
+"this weapon has the Lethal 5+ weapon rule"
+]
+],
+"814827": [
+[
+"multi_attack",
+"it can immediately perform a free Fight action afterwards"
+]
+],
+"814841": [
+[
+"multi_attack",
+"it can immediately perform a free Fight action afterwards"
+]
+],
+"814845": [
+[
+"tribal",
+"GOREMONGER"
+],
+[
+"start_of_game",
+"They start the battle at half"
+],
+[
+"on_kill",
+"incapacitates an operative within its control range"
+],
+[
+"resource_gain",
+"you can increase its GORE TANK"
+],
+[
+"coin_economy",
+"uses a SANGUAVITAE rule, you must decrease its GORE TANK"
+]
+],
+"814854": [
+[
+"start_of_game",
+"At the end of the Select Operatives step"
+],
+[
+"modal_choice",
+"select one of the following COMBAT DRUG rules"
+],
+[
+"tribal",
+"HAND OF THE ARCHON"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"damage_reduction",
+"subtract 1 from that inflicted damage"
+],
+[
+"turn_start",
+"In the Ready step of each Strategy phase"
+],
+[
+"resource_gain",
+"gain one of your Pain tokens"
+],
+[
+"immunity",
+"ignore any changes to this operative's Move stat from being injured"
+]
+],
+"814867": [
+[
+"aura",
+"Whenever a friendly HUNTER CLADE INFILTRATOR operative is within 3\" of this operative"
+],
+[
+"tribal",
+"HUNTER CLADE INFILTRATOR"
+],
+[
+"terrain",
+"is in cover"
+],
+[
+"immunity",
+"cannot be selected as a valid target"
+]
+],
+"814878": [
+[
+"targeting_rules",
+"a friendly INQUISITORIAL AGENT GHEISTSKULL operative is always the primary target"
+],
+[
+"tribal",
+"INQUISITORIAL AGENT GHEISTSKULL"
+],
+[
+"play_restriction",
+"you cannot select this weapon"
+]
+],
+"814900": [
+[
+"on_attack",
+"After this operative uses this weapon"
+],
+[
+"random_effect",
+"roll 2D6"
+],
+[
+"stat_condition",
+"the target's remaining wounds"
+],
+[
+"destroy",
+"the target is incapacitated"
+]
+],
+"814967": [
+[
+"death_trigger",
+"If this model is taken out of action in the Fight phase"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"counterattack",
+"the enemy model that made the attack that took this model out of action suffers 1 mortal wound"
+]
+],
+"814971": [
+[
+"on_kill",
+"takes an enemy model out of action in the Shooting phase"
+],
+[
+"stress_morale",
+"must add 1 to Nerve tests"
+]
+],
+"814982": [
+[
+"damage_reduction",
+"the damage is ignored and the model does not lose a wound"
+],
+[
+"random_effect",
+"Roll a D6"
+],
+[
+"aura",
+"within 6\" of a friendly SYNAPSE model"
+],
+[
+"tribal",
+"SYNAPSE"
+]
+],
+"816466": [
+[
+"on_attack",
+"Each time this operative performs the Fight action"
+],
+[
+"debuff",
+"worsen the Weapon Skill characteristic of the target operative's weapons by 1"
+],
+[
+"temporary_effect",
+"for that combat"
+]
+],
+"816472": [
+[
+"saving_throws",
+"5+ invulnerable save"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Torrent x"
+]
+],
+"816491": [
+[
+"protection",
+"this operative is always treated as being in Cover"
+],
+[
+"terrain",
+"in Cover"
+],
+[
+"stealth",
+"it is always treated as having a Conceal order"
+]
+],
+"816492": [
+[
+"activated",
+"Markerlight (1AP)"
+],
+[
+"mark_target",
+"That enemy operative gains one Markerlight token"
+],
+[
+"temporary_effect",
+"until the end of the Turning Point"
+],
+[
+"play_restriction",
+"cannot perform this action within Engagement Range of enemy operatives"
+],
+[
+"buff",
+"you can re-roll one of your attack dice"
+]
+],
+"816495": [
+[
+"damage_reduction",
+"one additional dice can be retained as a successful normal save as a result of Cover"
+],
+[
+"terrain",
+"if it is in Cover"
+]
+],
+"816512": [
+[
+"damage_reduction",
+"one additional dice can be retained as a successful normal save as a result of Cover"
+],
+[
+"terrain",
+"if this operative is in Cover"
+]
+],
+"816520": [
+[
+"turn_start",
+"In the Ready Operatives step of each Turning Point"
+],
+[
+"regeneration",
+"this operative regains up to 2 lost wounds"
+],
+[
+"multi_target_attack",
+"Splash x"
+],
+[
+"piercing",
+"APx"
+]
+],
+"816530": [
+[
+"death_trigger",
+"If a friendly SERGEANT VETERAN operative is incapacitated"
+],
+[
+"type_grant",
+"it gains the LEADER keyword"
+],
+[
+"speed",
+"After this operative's activation ends, activate that operative"
+],
+[
+"tribal",
+"VETERAN GUARDSMAN"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"APx"
+]
+]
+}

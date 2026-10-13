@@ -1,0 +1,834 @@
+{
+"751778": [
+[
+"damage",
+"Deal 1 to a unit"
+],
+[
+"ping",
+"Deal 1"
+],
+[
+"count_payoff",
+"If you've Equipped an ally this game"
+],
+[
+"copy",
+"copy me with the same target"
+]
+],
+"796660": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"draw",
+"draw me instead"
+],
+[
+"self_mill",
+"Tossed"
+],
+[
+"summon",
+"Summon 3 Vicious Platewyrms"
+],
+[
+"scope_multi",
+"3 Vicious Platewyrms"
+]
+],
+"796689": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"forced_movement",
+"kicks an enemy into the enemy Nexus"
+],
+[
+"damage",
+"striking both"
+],
+[
+"direct_damage",
+"enemy Nexus"
+],
+[
+"bounce_enemy",
+"Recall it"
+]
+],
+"751175": [
+[
+"cost_reduction",
+"I cost 3 less"
+],
+[
+"random_effect",
+"a random enemy"
+],
+[
+"ping",
+"Deal 1"
+],
+[
+"direct_damage",
+"the enemy Nexus"
+],
+[
+"repeat_trigger",
+"5 times"
+]
+],
+"751651": [
+[
+"summon",
+"Summon a random Husk"
+],
+[
+"random_effect",
+"a random Husk"
+],
+[
+"stat_gain",
+"grant it +1|+0"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"751569": [
+[
+"passive",
+"Landmark"
+],
+[
+"delayed",
+"Countdown 3"
+],
+[
+"summon",
+"Summon Inviolus Vox"
+]
+],
+"797043": [
+[
+"on_play",
+"Play"
+],
+[
+"transform",
+"when I transform"
+],
+[
+"copy",
+"Summon two Ephemeral copies of me"
+],
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"lifesteal",
+"Lifesteal"
+],
+[
+"forced_attack",
+"Challenger"
+],
+[
+"evasion",
+"Elusive"
+]
+],
+"796653": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"temporary_buff",
+"Give an ally +2|+0 this round"
+],
+[
+"generate_cards",
+"Create a Fleeting Vault Breaker in hand"
+],
+[
+"generate_cards",
+"Create a Vi in your deck"
+]
+],
+"796679": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"temporary_buff",
+"Give an ally +3|+4 this round"
+],
+[
+"generate_cards",
+"Create a Sejuani in your deck"
+]
+],
+"752035": [
+[
+"on_play",
+"Play:"
+],
+[
+"repeat_trigger",
+"Activate other allies' Daybreak and Nightfall effects"
+],
+[
+"turn_start",
+"Daybreak"
+],
+[
+"excess_damage",
+"Grant me Overwhelm"
+],
+[
+"combo_sequence",
+"Nightfall"
+],
+[
+"immunity",
+"Grant me SpellShield"
+]
+],
+"797050": [
+[
+"on_play",
+"Play:"
+],
+[
+"temporary_buff",
+"Give other allies +1|+1 this round"
+],
+[
+"scope_multi",
+"other allies"
+]
+],
+"750517": [
+[
+"deck_condition",
+"Allegiance"
+],
+[
+"tutor",
+"Summon a 1 cost ally from your deck"
+],
+[
+"free_play",
+"Summon a 1 cost ally from your deck"
+],
+[
+"cost_condition",
+"1 cost ally"
+]
+],
+"796567": [
+[
+"upgrade",
+"Evolve"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"attack_token",
+"If you have the attack token"
+],
+[
+"generate_cards",
+"create a Second Skin in hand"
+],
+[
+"on_attack",
+"Attack:"
+],
+[
+"condition_count",
+"for each positive keyword I have"
+],
+[
+"direct_damage",
+"the enemy Nexus"
+],
+[
+"targeting_rules",
+"lowest health first"
+]
+],
+"751396": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"generate_cards",
+"create a Prank in hand"
+]
+],
+"752080": [
+[
+"passive",
+"Landmark"
+],
+[
+"delayed",
+"I-II"
+],
+[
+"selection",
+"Updraft 1"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"752123": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"removal",
+"I Capture the strongest enemy"
+],
+[
+"stat_condition",
+"the strongest enemy"
+]
+],
+"751101": [
+[
+"regeneration",
+"Grant an ally Regeneration"
+],
+[
+"stat_gain",
+"grant them +2|+2 instead"
+]
+],
+"751925": [
+[
+"stealth",
+"Ambush 4"
+],
+[
+"transform",
+"When I transform"
+],
+[
+"summon",
+"summon a Aurora Hallunatis"
+]
+],
+"796866": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"disable",
+"Stun an enemy"
+],
+[
+"damage",
+"Deal 3 to it"
+],
+[
+"count_payoff",
+"if you've summoned a landmark this game"
+],
+[
+"generate_cards",
+"Create a Malphite in your deck"
+]
+],
+"751956": [
+[
+"death_trigger",
+"When another ally dies"
+],
+[
+"generate_cards",
+"Plant 4 Chimes in your deck"
+]
+],
+"750740": [
+[
+"death_trigger",
+"When another ally dies"
+],
+[
+"direct_damage",
+"deal 1 to the enemy Nexus"
+],
+[
+"ping",
+"deal 1"
+]
+],
+"752236": [
+[
+"shield",
+"Barrier"
+],
+[
+"scope_multi",
+"targeted allies"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"796692": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"self_destruct",
+"Fleeting"
+],
+[
+"free_play",
+"Summon an ally that costs 3 or less from hand"
+],
+[
+"cost_condition",
+"costs 3 or less"
+]
+],
+"750830": [
+[
+"multi_attack",
+"Scout"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"tutor",
+"draw Miss Fortune"
+],
+[
+"spell_power",
+"all your spells and Skills deal 1 extra damage"
+]
+],
+"751063": [
+[
+"support",
+"Support"
+],
+[
+"shield",
+"Barrier"
+],
+[
+"temporary_buff",
+"Give my supported ally +2|+1 this round"
+],
+[
+"assists_support",
+"my supported ally"
+]
+],
+"796746": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"temporary_buff",
+"Give allies +1|+1 this round"
+],
+[
+"repeat_trigger",
+"Activate an ally's Daybreak effect"
+],
+[
+"generate_cards",
+"Create a Leona in your deck"
+]
+],
+"752034": [
+[
+"immunity",
+"Spellshield"
+],
+[
+"temporary_effect",
+"this round"
+],
+[
+"friendly_fire",
+"Curse it with Shackles"
+]
+],
+"751939": [
+[
+"death_trigger",
+"Last Breath"
+],
+[
+"copy",
+"Create in deck an exact copy"
+],
+[
+"stat_condition",
+"your strongest"
+],
+[
+"in_hand_buff",
+"double the stats of Proliferating Darkwraiths in deck"
+],
+[
+"stat_multiply",
+"double the stats"
+]
+],
+"796607": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"multi_target_attack",
+"strikes all battling enemies"
+],
+[
+"generate_cards",
+"Create a Garen in your deck"
+]
+],
+"750497": [
+[
+"on_play",
+"Play:"
+],
+[
+"stat_gain",
+"Grant me +3|+0 or +0|+3"
+],
+[
+"modal_choice",
+"+3|+0 or +0|+3"
+]
+],
+"796521": [
+[
+"turn_start",
+"Round Start"
+],
+[
+"copy",
+"Create a Fleeting copy of each non-Fleeting card I saw you play last round"
+],
+[
+"count_payoff",
+"each non-Fleeting card I saw you play last round"
+],
+[
+"on_play",
+"Play:"
+],
+[
+"generate_cards",
+"Create 4 Time Bombs in your deck"
+],
+[
+"selection",
+"Predict"
+]
+],
+"750554": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"generate_cards",
+"create 2 Decimates in hand"
+]
+],
+"751673": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"kicker",
+"You may spend 8 mana to play me as Naganeka of Zuretta"
+]
+],
+"797172": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"on_ally_play",
+"When you summon an ally this round"
+],
+[
+"temporary_buff",
+"give it +2|+0 this round"
+]
+],
+"797070": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"damage",
+"An ally and an enemy strike each other"
+]
+],
+"797000": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"summon",
+"Summon a Keeper of Masks"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"752036": [
+[
+"tribal",
+"Titanic unit"
+],
+[
+"cost_reduction",
+"I cost 3 less"
+],
+[
+"damage",
+"Deal 7 to a unit"
+]
+],
+"751090": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"cost_condition",
+"Behold an 8+ cost card"
+],
+[
+"stat_gain",
+"grant me +3|+0"
+]
+],
+"751083": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"tribal",
+"Behold a Dragon"
+],
+[
+"attack_token",
+"Rally"
+]
+],
+"796666": [
+[
+"cant_attack",
+"Immobile"
+],
+[
+"mark_target",
+"Vulnerable"
+],
+[
+"stacking_keyword",
+"Powder Kegs stack"
+],
+[
+"spell_power",
+"All of your spells and Skills deal 1 extra damage"
+],
+[
+"self_destruct",
+"Destroy me"
+]
+],
+"751330": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_attack",
+"Strike:"
+],
+[
+"generate_cards",
+"Create a Pokey Stick in hand"
+],
+[
+"in_hand_buff",
+"reduce its cost by 2"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"turn_end",
+"Round End"
+]
+],
+"750418": [
+[
+"regeneration",
+"Heals fully at the end of each round"
+]
+],
+"751215": [
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"speed",
+"advance your Buried Sun Disc 3 rounds"
+]
+],
+"796824": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"self_destruct",
+"Fleeting"
+],
+[
+"excess_damage",
+"Overwhelm"
+]
+],
+"796864": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"sacrifice",
+"Kill an ally"
+],
+[
+"destroy",
+"kill an enemy"
+]
+],
+"751351": [
+[
+"discard",
+"To play, discard 1"
+],
+[
+"generate_cards",
+"Manifest a Yordle"
+],
+[
+"tribal",
+"Yordle"
+],
+[
+"cost_condition",
+"costs 3 or less"
+],
+[
+"summon",
+"summon it"
+]
+],
+"752081": [
+[
+"on_play",
+"Play:"
+],
+[
+"selection",
+"Updraft 1"
+],
+[
+"draw",
+"draw another card"
+],
+[
+"cost_condition",
+"costs either more or less than the card you Updrafted"
+]
+],
+"796714": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"silence",
+"Silence a follower"
+]
+],
+"751824": [
+[
+"damage_reduction",
+"Tough"
+],
+[
+"count_payoff",
+"Once you've Equipped an ally this game"
+],
+[
+"multi_attack",
+"grant me Scout"
+]
+],
+"796998": [
+[
+"on_play",
+"Play:"
+],
+[
+"speed",
+"Advance all your Frozen Thralls 1 round"
+]
+]
+}

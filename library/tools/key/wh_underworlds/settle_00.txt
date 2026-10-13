@@ -1,0 +1,150 @@
+762747 | It Begins | Score this in an end phase if at least one fighter from each warband is out of action.
+   A: [["scoring_objectives", "Score this in an end phase"], ["turn_end", "in an end phase"]]
+   B: [["scoring_objectives", "Score this"], ["turn_end", "in an end phase"], ["death_count", "at least one fighter from each warband is out of action"]]
+762752 | Blood Offering | Choose a friendly fighter. They suffer 1 damage. Roll two extra attack dice for their first Attack action in the next activation.
+   A: [["life_payment", "They suffer 1 damage"], ["stat_gain", "Roll two extra attack dice"], ["temporary_buff", "in the next activation"]]
+   B: [["life_payment", "They suffer 1 damage"], ["temporary_buff", "Roll two extra attack dice"]]
+762813 | Danse Macabre | Any friendly fighters that make a Move action in the next activation can move one additional hex.
+   A: [["stat_gain", "can move one additional hex"], ["temporary_buff", "in the next activation"]]
+   B: [["temporary_buff", "can move one additional hex"], ["scope_multi", "Any friendly fighters"]]
+762848 | Scrag 'Em | Each friendly fighter that supports the first Attack action in the next activation is considered to be two supporting fighters.
+   A: [["assists_support", "is considered to be two supporting fighters"], ["temporary_buff", "in the next activation"]]
+   B: [["assists_support", "considered to be two supporting fighters"], ["temporary_effect", "in the next activation"]]
+762852 | Brutal Swing | (Errata update) The Scything keyword replaces the similar ability on this card. [:Hex: 1 - :atFury: 3 - :boom: 2] Targets all adjacent enemy fighters - roll for each.
+   A: [["multi_target_attack", "Targets all adjacent enemy fighters"], ["adjacency", "adjacent enemy fighters"]]
+   B: [["multi_target_attack", "Targets all adjacent enemy fighters"], ["random_effect", "roll for each"]]
+762856 | Headlong Rush | This fighter's Attack actions gain Knockback 1 in a phase in which they make a Charge action.
+   A: [["forced_movement", "Knockback 1"], ["combo_sequence", "in a phase in which they make a Charge action"]]
+   B: [["forced_movement", "Knockback 1"]]
+762860 | A Grim Promise | Score this in an end phase if your warband took an enemy leader out of action in the preceding action phase.
+   A: [["scoring_objectives", "Score this in an end phase"], ["turn_end", "in an end phase"]]
+   B: [["scoring_objectives", "Score this"], ["turn_end", "in an end phase"], ["removal", "took an enemy leader out of action"]]
+762877 | We Shall Not Be Moved | Friendly fighters holding objectives cannot be driven back by the first Attack action in the next activation.
+   A: [["immunity", "cannot be driven back"], ["zone_control", "Friendly fighters holding objectives"], ["temporary_effect", "in the next activation"]]
+   B: [["immunity", "cannot be driven back"], ["temporary_effect", "in the next activation"]]
+762969 | Lone Warrior | Rolls of :dfSup1: made for this fighter when they are targeted by an Attack action also count as successes when they are adjacent to no friendly fighters.
+   A: [["lone_unit", "adjacent to no friendly fighters"], ["saving_throws", "Rolls of :dfSup1: made for this fighter when they are targeted by an Attack action also count as successes"]]
+   B: [["protection", "also count as successes"], ["lone_unit", "adjacent to no friendly fighters"]]
+763105 | Sprint | Double the move characteristic of the first friendly fighter to make a Move action in the next activation. They may not make a Charge action. Once they have moved, they cannot be activated again in this phase.
+   A: [["stat_multiply", "Double the move characteristic"], ["temporary_buff", "in the next activation"]]
+   B: [["stat_multiply", "Double the move characteristic"], ["temporary_effect", "in the next activation"]]
+763108 | Tantalising Prize | The first friendly fighter to take a Move action in the next activation can move up to an additional two hexes if they end their move on an objective.
+   A: [["stat_gain", "move up to an additional two hexes"], ["temporary_buff", "in the next activation"], ["zone_control", "end their move on an objective"]]
+   B: [["temporary_buff", "move up to an additional two hexes"], ["zone_control", "end their move on an objective"]]
+763151 | Shadeglass Axe | (Errata update) The Grievous 1 keyword replaces the similar ability on this card. [:Hex: 1 - :atSmash: 2 - :boom: 2] When this Attack action is successful, discard this upgrade. On a critical hit, this Attack action has +1 Damage. [:Hex: 3 - :atSmash: 2 - :boom: 2] After a fighter makes this Attack action, discard this upgrade. On a critical hit, this Attack action has +1 Damage.
+   A: [["self_destruct", "discard this upgrade"], ["stat_gain", "On a critical hit, this Attack action has +1 Damage"], ["ranged", "[:Hex: 3"]]
+   B: [["self_destruct", "discard this upgrade"], ["stat_gain", "+1 Damage"]]
+763261 | Disarming Blow | Reaction: After an Attack action made by an adjacent enemy fighter that targets this fighter and fails, roll a defence dice. On a roll of :dfBlock: or :dfCrit:, select an Attack action upgrade on the attacking fighter. That upgrade is discarded.
+   A: [["reactions", "Reaction: After an Attack action made by an adjacent enemy fighter"], ["adjacency", "adjacent enemy fighter"], ["random_effect", "roll a defence dice"], ["debuff", "That upgrade is discarded"]]
+   B: [["reactions", "Reaction:"], ["random_effect", "roll a defence dice"], ["debuff", "That upgrade is discarded"]]
+763334 | Scragged | Score this immediately if an enemy fighter is taken out of action while adjacent to three or more friendly fighters.
+   A: [["scoring_objectives", "Score this immediately"], ["adjacency", "adjacent to three or more friendly fighters"], ["condition_count", "three or more friendly fighters"]]
+   B: [["scoring_objectives", "Score this"], ["death_trigger", "taken out of action"], ["adjacency", "adjacent to three or more friendly fighters"], ["condition_count", "three or more"]]
+763456 | Mesmerising Gaze | Choose an enemy fighter adjacent to a friendly fighter and choose one: remove the enemy fighter's Guard tokens, or place a Move token next to the enemy fighter.
+   A: [["modal_choice", "choose one"], ["adjacency", "adjacent to a friendly fighter"], ["debuff", "remove the enemy fighter's Guard tokens"], ["immobilize", "place a Move token next to the enemy fighter"]]
+   B: [["modal_choice", "choose one"], ["adjacency", "adjacent to a friendly fighter"], ["debuff", "remove the enemy fighter's Guard tokens"], ["debuff", "place a Move token"]]
+763523 | Master of Terrain | Score this immediately if an enemy fighter is taken out of action by a lethal hex.
+   A: [["scoring_objectives", "Score this immediately"], ["terrain", "lethal hex"]]
+   B: [["scoring_objectives", "Score this"], ["death_trigger", "taken out of action by a lethal hex"], ["terrain", "lethal hex"]]
+763558 | Witch-Slayer | Score this immediately if your leader takes an enemy wizard out of action.
+   A: [["scoring_objectives", "Score this immediately"], ["on_kill", "your leader takes an enemy wizard out of action"]]
+   B: [["scoring_objectives", "Score this"], ["on_kill", "your leader takes an enemy wizard out of action"], ["tribal", "wizard"]]
+763569 | Baffling Illusion | The first time a fighter would make a Move action in the next activation, their player instead Scatters X from the hex that fighter occupies, and pushes the fighter along the chain to the end hex. X is the fighter's Move characteristic. If the fighter cannot be pushed into a hex, the push ends in the last hex in the chain they can occupy. Place a Move token next to that fighter.
+   A: [["random_effect", "Scatters X"], ["forced_movement", "pushes the fighter along the chain to the end hex"], ["variable_stats", "X is the fighter's Move characteristic"], ["immobilize", "Place a Move token next to that fighter"]]
+   B: [["random_effect", "Scatters X"], ["forced_movement", "pushes the fighter along the chain"], ["variable_stats", "X is the fighter's Move characteristic"], ["temporary_effect", "in the next activation"], ["debuff", "Place a Move token"]]
+763625 | Sphere of Ghyran | Gambit Spell (:MagChannel::MagChannel:): If this spell is cast, choose the caster or a friendly fighter adjacent to the caster. Remove 1 wound token from that fighter's fighter card.
+   A: [["heal", "Remove 1 wound token from that fighter's fighter card"], ["adjacency", "adjacent to the caster"]]
+   B: [["random_effect", "If this spell is cast"], ["adjacency", "adjacent to the caster"], ["heal", "Remove 1 wound token"]]
+763745 | Disciplined Retreat | Reaction: After this fighter's Attack action, push them up to two hexes.
+   A: [["reactions", "Reaction: After this fighter's Attack action"], ["movement", "push them up to two hexes"]]
+   B: [["reactions", "Reaction"], ["on_attack", "After this fighter's Attack action"], ["movement", "push them up to two hexes"]]
+763750 | Champions All | Score this immediately when a second or subsequent enemy fighter is taken out of action in this phase, and each one was taken out of action by an Attack action made by a different friendly fighter.
+   A: [["scoring_objectives", "Score this immediately"], ["count_payoff", "second or subsequent enemy fighter is taken out of action in this phase"], ["variety_payoff", "made by a different friendly fighter"]]
+   B: [["scoring_objectives", "Score this"], ["death_count", "second or subsequent enemy fighter is taken out of action"], ["variety_payoff", "by a different friendly fighter"]]
+763759 | Strange Demise | Score this immediately when an enemy fighter is taken out of action by a spell that damaged them or by a spell Attack action that damaged them.
+   A: [["scoring_objectives", "Score this immediately"]]
+   B: [["scoring_objectives", "Score this"], ["death_trigger", "taken out of action by a spell"]]
+763831 | Dissipate | Reaction: Play this during an Attack action, before the attack roll. Choose a friendly fighter. That fighter gains Innate (:dfDodge:). This persists until the Attack action ends or until that friendly fighter is taken out of action.
+   A: [["reactions", "Reaction: Play this during an Attack action, before the attack roll"], ["protection", "That fighter gains Innate (:dfDodge:)"], ["temporary_buff", "until the Attack action ends"]]
+   B: [["reactions", "Reaction"], ["protection", "That fighter gains Innate (:dfDodge:)"], ["temporary_effect", "until the Attack action ends"]]
+763865 | Blood Taunt | Choose a friendly fighter. They are dealt 1 damage. Give them a Guard token. +2 Dice to the first Attack action made by that fighter in the next activation.
+   A: [["life_payment", "They are dealt 1 damage"], ["protection", "Give them a Guard token"], ["stat_gain", "+2 Dice"], ["temporary_buff", "in the next activation"]]
+   B: [["life_payment", "They are dealt 1 damage"], ["protection", "Give them a Guard token"], ["temporary_buff", "+2 Dice to the first Attack action"]]
+763901 | Strike in Concert | The first Range 1 or Range 2 Attack action made by a friendly fighter in the next activation has +1 Damage for each friendly supporting fighter.
+   A: [["stat_gain", "+1 Damage"], ["assists_support", "for each friendly supporting fighter"], ["temporary_buff", "in the next activation"]]
+   B: [["temporary_buff", "+1 Damage"], ["assists_support", "for each friendly supporting fighter"]]
+763912 | Vicious Darts | (Errata update) The Grievous 1 keyword replaces the similar ability on this card. [:Hex: 3 - :MagFocus: - - :boom: 1] Ensnare. On a critical hit this Attack action has +1 Damage.
+   A: [["ranged", "[:Hex: 3"], ["piercing", "Ensnare"], ["stat_gain", "On a critical hit this Attack action has +1 Damage"]]
+   B: [["piercing", "Ensnare"], ["stat_gain", "+1 Damage"]]
+763941 | Right-hand Ghoul | Reaction: After a friendly Crakmarrow's Move action, if this fighter has no Move or Charge tokens, this fighter makes a Move action. This fighter must end the Move action adjacent to a friendly Crakmarrow
+   A: [["reactions", "Reaction: After a friendly Crakmarrow's Move action"], ["movement", "this fighter makes a Move action"], ["adjacency", "adjacent to a friendly Crakmarrow"]]
+   B: [["reactions", "Reaction"], ["tribal", "Crakmarrow"], ["movement", "this fighter makes a Move action"], ["adjacency", "adjacent to a friendly Crakmarrow"]]
+763976 | Quickdrop Venom | Reaction: After this fighter's successful Attack action (other than a Snarlfang's Jaws Attack action), roll one attack dice. On a :atSmash: or :atCrit: the target of that Attack action is dealt 1 damage.
+   A: [["reactions", "Reaction: After this fighter's successful Attack action"], ["random_effect", "roll one attack dice"], ["damage", "the target of that Attack action is dealt 1 damage"]]
+   B: [["reactions", "Reaction"], ["on_attack", "After this fighter's successful Attack action"], ["random_effect", "roll one attack dice"], ["damage", "dealt 1 damage"]]
+763999 | Fly Swarm | -1 Dice (to a minimum of 1) from Attack actions with a Range of 3 or more that target this fighter.
+   A: [["damage_reduction", "-1 Dice (to a minimum of 1) from Attack actions with a Range of 3 or more that target this fighter"]]
+   B: [["protection", "-1 Dice (to a minimum of 1) from Attack actions"], ["ranged", "Range of 3 or more"]]
+764029 | Quick Snack | Reaction: Play this after an enemy fighter adjacent to your leader is taken out of action. If the enemy fighter's Wounds characteristic is 4 or more, Heal (2) your leader, otherwise Heal (1) your leader.
+   A: [["reactions", "Reaction: Play this after an enemy fighter adjacent to your leader is taken out of action"], ["adjacency", "adjacent to your leader"], ["stat_condition", "Wounds characteristic is 4 or more"], ["heal", "Heal (2) your leader"]]
+   B: [["reactions", "Reaction"], ["death_trigger", "is taken out of action"], ["stat_condition", "Wounds characteristic is 4 or more"], ["heal", "Heal (2) your leader"]]
+764079 | In Their Element | Score this in an end phase if each surviving friendly fighter is Inspired.
+   A: [["scoring_objectives", "Score this in an end phase"], ["turn_end", "in an end phase"], ["transform", "Inspired"]]
+   B: [["scoring_objectives", "Score this"], ["turn_end", "in an end phase"]]
+764116 | Blaze a Trail | Surge: Score this immediately after an activation if each surviving friendly fighter is in enemy territory and adjacent to no enemy fighters.
+   A: [["scoring_objectives", "Score this immediately"], ["territory_trigger", "in enemy territory"], ["adjacency", "adjacent to no enemy fighters"]]
+   B: [["scoring_objectives", "Score this"], ["territory_trigger", "each surviving friendly fighter is in enemy territory"]]
+764172 | Dragged into the Darkness | Choose one enemy fighter that has one or more Move tokens. The chosen fighter is dealt 1 damage if that damage would take the chosen fighter out of action.
+   A: [["destroy", "dealt 1 damage if that damage would take the chosen fighter out of action"], ["condition_life", "if that damage would take the chosen fighter out of action"]]
+   B: [["damage", "dealt 1 damage"], ["condition_life", "if that damage would take the chosen fighter out of action"]]
+764238 | Hunter's Talisman | +1 Dice to this fighter's Attack actions. If the target is a Quarry, you can re-roll one attack dice in the attack roll.
+   A: [["stat_gain", "+1 Dice"], ["mark_target", "Quarry"], ["random_effect", "re-roll one attack dice"]]
+   B: [["buff", "+1 Dice"], ["mark_target", "Quarry"], ["random_effect", "re-roll one attack dice"]]
+764240 | Hunting Companion | Reaction: During this fighter's successful Range 1 or Range 2 Attack action in which you rolled one or more :atSup2: in the attack roll, after the deal damage step, the target is dealt 1 damage.
+   A: [["reactions", "Reaction: During this fighter's successful Range 1 or Range 2 Attack action"], ["damage", "the target is dealt 1 damage"]]
+   B: [["reactions", "Reaction"], ["on_attack", "successful Range 1 or Range 2 Attack action"], ["random_effect", "rolled one or more :atSup2:"], ["damage", "the target is dealt 1 damage"]]
+764244 | Keila's Choking Coil | (Errata update) The Grievous 1 keyword replaces the similar ability on this card. Lost page [:Hex: 3 - :MagFocus: - - :boom: 1] On a critical hit, this Attack action has +1 Damage.
+   A: [["ranged", "[:Hex: 3"], ["stat_gain", "On a critical hit, this Attack action has +1 Damage"]]
+   B: [["stat_gain", "+1 Damage"]]
+764251 | Predatory Instinct | This fighter is a Hunter. You can re-roll one dice in the attack rolls for this fighter's Attack actions that target a Quarry.
+   A: [["tribal", "This fighter is a Hunter"], ["random_effect", "re-roll one dice"], ["mark_target", "target a Quarry"]]
+   B: [["type_grant", "This fighter is a Hunter"], ["random_effect", "re-roll one dice"], ["mark_target", "target a Quarry"]]
+764286 | Cold Fury | Reaction: Play this after you place a Raise counter on a friendly fighter's fighter card. +1 Damage and you can re-roll one attack dice in the attack roll for that fighter's next Range 1 or Range 2 Attack action. This effect persists until that fighter is taken out of action or until they make an Attack action.
+   A: [["reactions", "Reaction: Play this after you place a Raise counter"], ["stat_gain", "+1 Damage"], ["random_effect", "re-roll one attack dice"]]
+   B: [["reactions", "Reaction"], ["temporary_buff", "+1 Damage"], ["random_effect", "re-roll one attack dice"]]
+764342 | Surety of Purpose | +1 Damage to the first Attack action made as part of a Charge action by a friendly fighter in the next activation.
+   A: [["stat_gain", "+1 Damage"], ["temporary_buff", "in the next activation"]]
+   B: [["temporary_buff", "+1 Damage to the first Attack action"]]
+764439 | The Great Drake | Asterism +1 Dice to friendly fighters' Range 1 Attack actions. This effect persists until the end of the round or until any player plays another Asterism card.
+   A: [["stat_gain", "+1 Dice to friendly fighters' Range 1 Attack actions"], ["temporary_buff", "until the end of the round"]]
+   B: [["buff", "+1 Dice to friendly fighters' Range 1 Attack actions"], ["temporary_effect", "until the end of the round"], ["scope_multi", "friendly fighters'"]]
+764440 | The Hunter's Steed | Asterism +1 Move to friendly fighters. This effect persists until the end of the round or until any player plays another Asterism card.
+   A: [["stat_gain", "+1 Move to friendly fighters"], ["temporary_effect", "until the end of the round"]]
+   B: [["stat_gain", "+1 Move to friendly fighters"], ["temporary_effect", "until the end of the round"], ["scope_multi", "friendly fighters"]]
+764441 | Adaptive Camouflage | -1 Dice (to a minimum of 1) from Attack actions that target this fighter if the attacker is not adjacent.
+   A: [["damage_reduction", "-1 Dice (to a minimum of 1) from Attack actions that target this fighter if the attacker is not adjacent"]]
+   B: [["protection", "-1 Dice (to a minimum of 1) from Attack actions"], ["ranged", "if the attacker is not adjacent"]]
+764530 | Exceptional Efficiency | When you play this card, pick one opponent. That opponent picks one: you gain two tithe counters, or in the next activation, you can re-roll any number of dice in friendly Morteks' attack rolls.
+   A: [["modal_choice", "That opponent picks one"], ["resource_gain", "you gain two tithe counters"], ["random_effect", "re-roll any number of dice"]]
+   B: [["enemy_benefit", "That opponent picks one"], ["resource_gain", "you gain two tithe counters"], ["random_effect", "re-roll any number of dice"], ["tribal", "Morteks"]]
+764606 | Immortal Hunger | Dual: Score this in the third end phase if: The number of surviving friendly fighters is greater or equal to the number of friendly fighters out of action And: Each surviving friendly fighter has four or more Hunger counters.
+   A: [["scoring_objectives", "Score this in the third end phase"], ["turn_number", "third end phase"], ["death_count", "number of friendly fighters out of action"], ["stacking_keyword", "Hunger counters"], ["condition_count", "four or more Hunger counters"]]
+   B: [["scoring_objectives", "Score this"], ["turn_number", "in the third end phase"], ["death_count", "friendly fighters out of action"], ["condition_count", "four or more Hunger counters"]]
+764631 | Prize Beyond Measure | Surge: Score this immediately after an activation if one or more surviving friendly fighters hold an objective and each have three or more upgrades.
+   A: [["scoring_objectives", "Score this immediately"], ["zone_control", "hold an objective"], ["merge_attach", "three or more upgrades"], ["condition_count", "three or more upgrades"]]
+   B: [["scoring_objectives", "Score this"], ["zone_control", "hold an objective"], ["condition_count", "three or more upgrades"]]
+764676 | Delicious Morsel | Choose one fighter. Heal (1) that fighter. If that fighter has any Hunger counters, instead Heal (2) that fighter and remove two of that fighter's Hunger counters, or one Hunger counter if the fighter only has one.
+   A: [["heal", "Heal (1) that fighter"], ["stacking_keyword", "Hunger counters"]]
+   B: [["heal", "Heal (1) that fighter"], ["heal", "Heal (2) that fighter"]]
+764701 | Irresistible Hunger | Choose one friendly fighter. Give that fighter one Hunger counter, then push one enemy fighter within 2 hexes of that fighter 1 hex towards that fighter, or if that friendly fighter has two or more Hunger counters, push each enemy fighter within 2 hexes of that fighter up to 1 hex towards that fighter.
+   A: [["stacking_keyword", "Give that fighter one Hunger counter"], ["forced_movement", "push one enemy fighter within 2 hexes of that fighter 1 hex towards that fighter"], ["condition_count", "two or more Hunger counters"]]
+   B: [["stacking_keyword", "Hunger counter"], ["forced_movement", "push one enemy fighter within 2 hexes"], ["condition_count", "two or more Hunger counters"], ["scope_multi", "push each enemy fighter"]]
+764712 | More Muscle | The player who has the most surviving friendly fighters adjacent to enemy fighters gains the Primacy token.
+   A: [["adjacency", "adjacent to enemy fighters"], ["board_presence", "the most surviving friendly fighters"], ["race_objective", "gains the Primacy token"]]
+   B: [["control_reward", "gains the Primacy token"], ["adjacency", "adjacent to enemy fighters"]]
+764716 | Predatory Impulse | Choose one friendly fighter. In the next activation that fighter has +1 Move and that fighter's Range 1 Attack actions have Ensnare.
+   A: [["stat_gain", "+1 Move"], ["piercing", "Ensnare"], ["temporary_buff", "In the next activation"]]
+   B: [["temporary_buff", "+1 Move"], ["piercing", "Ensnare"]]
+764774 | Hungering Harpoon | [:Hex: 3 - :atFury: 1 - :boom: 2] When you give a fighter this upgrade, give that fighter one Hunger counter. +2 Dice to this Attack action if this fighter has three or more Hunger counters.
+   A: [["merge_attach", "When you give a fighter this upgrade"], ["stacking_keyword", "give that fighter one Hunger counter"], ["stat_gain", "+2 Dice to this Attack action"], ["condition_count", "three or more Hunger counters"]]
+   B: [["merge_attach", "When you give a fighter this upgrade"], ["stacking_keyword", "Hunger counter"], ["condition_count", "three or more Hunger counters"], ["buff", "+2 Dice to this Attack action"]]

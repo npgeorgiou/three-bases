@@ -1,0 +1,278 @@
+{
+"757478": [
+[
+"on_play",
+"Deploy (Ranged):"
+],
+[
+"friendly_fire",
+"Damage self down to 1"
+],
+[
+"cast_from_zone",
+"play all copies of Freya's Blessing from your graveyard"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"banish",
+"give them Doomed"
+],
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"stat_gain",
+"increase own base power"
+],
+[
+"condition_count",
+"for each Alchemy in your starting deck"
+]
+],
+"757481": [
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"in_hand_buff",
+"Infuse a random Zoltan in your deck"
+],
+[
+"random_effect",
+"random Zoltan"
+],
+[
+"tribal",
+"Zoltan"
+],
+[
+"on_play",
+"When this card appears on the battlefield"
+],
+[
+"summon",
+"Spawn Eudora Breckenriggs to the right of self"
+],
+[
+"stat_gain",
+"boost her by 1"
+],
+[
+"condition_count",
+"for each Zoltan in your starting deck"
+],
+[
+"banish",
+"Banish self"
+]
+],
+"757485": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage_over_time",
+"Bleeding (4)"
+],
+[
+"debuff",
+"Bleeding enemy units cannot be boosted"
+]
+],
+"813587": [
+[
+"banish",
+"Doomed"
+]
+],
+"813593": [
+[
+"distribute",
+"Split 6 damage randomly between all units on an enemy row"
+],
+[
+"random_effect",
+"randomly"
+]
+],
+"813617": [
+[
+"banish",
+"Doomed"
+]
+],
+"813626": [
+[
+"banish",
+"Doomed"
+]
+],
+"813630": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"board_clog",
+"Spawn an Operative on each enemy row"
+],
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"steal",
+"Seize all Spying Operatives"
+],
+[
+"turn_start",
+"At the start of the round"
+],
+[
+"transform",
+"evolve"
+]
+],
+"813631": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"board_clog",
+"Spawn an Operative on each enemy row"
+],
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"steal",
+"Seize all Spying Operatives"
+],
+[
+"stat_gain",
+"boost self by 1"
+]
+],
+"813685": [
+[
+"banish",
+"Doomed"
+],
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost the lowest power allied unit"
+],
+[
+"stat_condition",
+"lowest power allied unit"
+],
+[
+"variety_payoff",
+"each unique non-Neutral primary category"
+],
+[
+"on_ally_play",
+"Whenever you play a non-Neutral unit"
+]
+],
+"813686": [
+[
+"banish",
+"Doomed"
+],
+[
+"immunity",
+"Immunity"
+],
+[
+"on_play",
+"Deploy:"
+],
+[
+"recycle",
+"Shuffle an allied unit back into your deck"
+],
+[
+"bounce_enemy",
+"shuffle an enemy unit of the same power or less back into your opponent's deck"
+],
+[
+"stat_condition",
+"same power or less"
+],
+[
+"activated",
+"Order:"
+],
+[
+"cast_from_zone",
+"Play the shuffled unit from your deck"
+]
+],
+"813687": [
+[
+"banish",
+"Doomed"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stacking_keyword",
+"increase the Counter by 1"
+],
+[
+"death_trigger",
+"Deathwish:"
+],
+[
+"revive",
+"Summon the lowest-power bronze Deathwish unit from your graveyard to this row"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"stat_gain",
+"Boost all allied units on this row by 1"
+],
+[
+"row_effects",
+"Spawn Storm on the opposite row for 2 turns"
+],
+[
+"damage",
+"Damage the 2 lowest-power enemy units by 2"
+],
+[
+"stat_condition",
+"lowest-power enemy units"
+],
+[
+"copy",
+"Spawn a base copy of self in your hand"
+]
+]
+}

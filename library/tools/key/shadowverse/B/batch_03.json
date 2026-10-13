@@ -1,0 +1,1162 @@
+{
+"753194": [
+[
+"modal_choice",
+"Choose"
+],
+[
+"generate_cards",
+"Put a Magical Squirrel or Wise Owl into your hand"
+],
+[
+"condition_count",
+"Spellboosted at least 5 times"
+],
+[
+"cost_set",
+"change its cost to 0"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+]
+],
+"754382": [
+[
+"stat_gain",
+"Give +1/+2"
+],
+[
+"taunt",
+"Ward"
+]
+],
+"814049": [
+[
+"damage",
+"Deal 3 damage to an enemy follower"
+],
+[
+"death_count",
+"If at least 10 allied followers have been destroyed this match"
+],
+[
+"direct_damage",
+"deal 3 damage to any enemy instead"
+]
+],
+"754017": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"copy",
+"put a copy of that amulet into your hand"
+],
+[
+"in_hand_buff",
+"Subtract 1 from its cost"
+]
+],
+"755844": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"If at least 1, 4, 7, 10, or 13 allied amulets have been destroyed this match"
+],
+[
+"banish",
+"banish X random enemy followers"
+],
+[
+"random_effect",
+"random enemy followers"
+],
+[
+"direct_damage",
+"deal Y damage to the enemy leader"
+],
+[
+"heal",
+"restore Y defense to your leader"
+],
+[
+"revive",
+"summon Z copies of allied Havencraft followers destroyed this match"
+],
+[
+"tribal",
+"Havencraft followers"
+]
+],
+"752471": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"If there is at least 1 enemy follower in play"
+],
+[
+"haste",
+"gain Rush"
+],
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"multi_attack",
+"attack 2 times per turn"
+]
+],
+"754151": [
+[
+"damage",
+"Deal X damage to an enemy follower"
+],
+[
+"stat_condition",
+"X equals the attack of the strongest allied follower in play"
+]
+],
+"752447": [
+[
+"summon",
+"Summon a Naterran World Tree"
+],
+[
+"combo_sequence",
+"If at least 2 other cards were played this turn"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+]
+],
+"755562": [
+[
+"cost_type",
+"Accelerate (2)"
+],
+[
+"summon",
+"Summon 2 Serpents"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal 3 damage to an enemy follower"
+],
+[
+"low_life",
+"If Vengeance is active for you"
+],
+[
+"heal",
+"restore 3 defense to your leader"
+]
+],
+"753504": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"If Wrath is not active for you"
+],
+[
+"life_payment",
+"deal 1 damage to your leader"
+],
+[
+"repeat_trigger",
+"Do this 2 times"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all enemy followers"
+],
+[
+"heal",
+"Restore 2 defense to your leader"
+]
+],
+"752590": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"stat_gain",
+"Gain +5/+5"
+],
+[
+"graveyard",
+"3 shadows"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"graveyard",
+"Gain 1 shadow"
+]
+],
+"753617": [
+[
+"speed",
+"Subtract 2 from the Countdown of an allied amulet"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"755958": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"revive",
+"Reanimate (10)"
+]
+],
+"814013": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve an allied Trill, Devilish Idol"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"heal",
+"Restore 2 defense to your leader"
+]
+],
+"755803": [
+[
+"board_wipe",
+"Destroy all enemy followers with 4 defense or less"
+],
+[
+"stat_condition",
+"4 defense or less"
+]
+],
+"754112": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put an Assembly Droid into your hand"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"tribal",
+"Machina cards"
+],
+[
+"condition_count",
+"at least 2 Machina cards in your hand"
+],
+[
+"damage",
+"deal 3 damage to an enemy"
+]
+],
+"814122": [
+[
+"haste",
+"Rush"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"stat_gain",
+"Gain +2/+0"
+],
+[
+"direct_damage",
+"Deal X damage to the enemy leader"
+],
+[
+"stat_condition",
+"X equals this follower's attack"
+]
+],
+"756001": [
+[
+"cost_type",
+"Accelerate (3)"
+],
+[
+"summon",
+"Summon a Bullet Bike"
+],
+[
+"generate_cards",
+"Put a Puppet into your hand"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"resource_gain",
+"Recover 7 play points"
+]
+],
+"754133": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"haste",
+"Rush"
+],
+[
+"damage_reduction",
+"Can't take more than 1 damage at a time"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"discard",
+"Discard a card from your hand"
+],
+[
+"draw",
+"Draw 2 cards"
+]
+],
+"814213": [
+[
+"delayed",
+"Countdown (2)"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"polymorph",
+"transform a random enemy follower"
+],
+[
+"random_effect",
+"random enemy follower"
+]
+],
+"752552": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Bullet Bike into your hand"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"summon",
+"summon it instead"
+]
+],
+"755543": [
+[
+"cost_type",
+"Accelerate (0)"
+],
+[
+"graveyard",
+"Necromancy (4)"
+],
+[
+"summon",
+"Summon a Zombie"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"direct_damage",
+"Deal 1 damage to the enemy leader"
+],
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon 2 Zombies"
+],
+[
+"graveyard",
+"Necromancy (8)"
+],
+[
+"transform",
+"Evolve them"
+]
+],
+"754937": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put 2 Enhanced Puppets into your hand"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"resource_gain",
+"Recover 2 play points"
+]
+],
+"755800": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon 2 Ghosts"
+],
+[
+"graveyard",
+"Necromancy (6)"
+],
+[
+"stat_gain",
+"Gain +3/+3"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"damage",
+"deal 6 damage to an enemy follower"
+],
+[
+"on_ally_play",
+"Whenever an allied Ghost comes into play"
+],
+[
+"transform",
+"evolve it"
+],
+[
+"tribal",
+"Ghost"
+]
+],
+"752783": [
+[
+"transform",
+"Evolve"
+],
+[
+"symmetric_effect",
+"Give both leaders the following effect"
+],
+[
+"silence",
+"Allied Fanfare effects will not activate"
+],
+[
+"rule_change",
+"Allied Fanfare effects will not activate"
+]
+],
+"754752": [
+[
+"deathtouch",
+"Bane"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"graveyard",
+"Necromancy (8)"
+],
+[
+"resource_gain",
+"Recover 1 evolution point"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"on_ally_play",
+"when you play a follower with an original attack or defense of 1"
+],
+[
+"stat_condition",
+"original attack or defense of 1"
+],
+[
+"haste",
+"give it Storm"
+]
+],
+"753333": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (6)"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"summon",
+"Summon a Spellplate Cavalier or Bone Cavalier"
+]
+],
+"754042": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"in_hand_buff",
+"Spellboost the cards in your hand"
+],
+[
+"condition_count",
+"If this card has been Spellboosted at least 5 times"
+],
+[
+"damage",
+"deal 3 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random enemy follower"
+],
+[
+"resource_gain",
+"recover 2 play points"
+],
+[
+"resource_gain",
+"recover 1 evolution point"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"banish",
+"Banish an enemy follower"
+],
+[
+"generate_cards",
+"Put a Meltina, Miracle Sorceress into your hand"
+],
+[
+"self_destruct",
+"Banish this follower"
+]
+],
+"752689": [
+[
+"stealth",
+"Ambush"
+],
+[
+"on_ally_play",
+"when another allied follower comes into play"
+],
+[
+"self_destruct",
+"banish this follower"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"754815": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"If Wrath is active for you"
+],
+[
+"cost_set",
+"evolve for 0 evolution points"
+],
+[
+"turn_start",
+"At the start of your opponent's turn"
+],
+[
+"heal",
+"restore 3 defense to your leader"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"life_payment",
+"Deal 1 damage to your leader"
+],
+[
+"damage",
+"4 damage to an enemy follower"
+],
+[
+"resource_banking",
+"If you have at least 4 play points"
+],
+[
+"haste",
+"gain Storm"
+],
+[
+"aoe_damage",
+"deal 8 damage to all other followers"
+],
+[
+"friendly_fire",
+"all other followers"
+]
+],
+"752882": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"combo_sequence",
+"Add 1 to the number of cards played this turn"
+]
+],
+"752929": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Give +0/+2 to another allied follower"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"regeneration",
+"fully restore all allied followers' defense"
+]
+],
+"754848": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Beastly Vow"
+]
+],
+"754746": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"random_effect",
+"Randomly summon 1 of the following"
+],
+[
+"summon",
+"Randomly summon 1 of the following"
+],
+[
+"kicker",
+"Enhance (10)"
+],
+[
+"summon",
+"Summon 2 more"
+],
+[
+"transform",
+"Evolve"
+]
+],
+"753601": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"If any allied amulets are in play"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"on_attack",
+"Whenever another allied follower attacks"
+],
+[
+"count_payoff",
+"if you've played at least 5 cards using their Crystallize effect this match"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"haste",
+"Give Storm"
+],
+[
+"taunt",
+"Ward to another allied follower"
+],
+[
+"stat_condition",
+"2 attack or less"
+]
+],
+"754373": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (6)"
+],
+[
+"summon",
+"Summon a Zlatorog"
+],
+[
+"transform",
+"Evolve all unevolved allied Zlatorogs"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"753372": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"destroy",
+"Destroy an enemy follower"
+],
+[
+"cost_condition",
+"costs at least 5 play points"
+],
+[
+"count_payoff",
+"If you've performed Burial Rite at least 2 times this turn or at least 5 times this match"
+],
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"haste",
+"Storm"
+]
+],
+"752370": [
+[
+"banish",
+"Banish a card in your hand"
+],
+[
+"copy",
+"Put a copy of the banished card into your deck"
+],
+[
+"recycle",
+"into your deck"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"752611": [
+[
+"sacrifice",
+"Burial Rite"
+],
+[
+"tutor",
+"Put a random Shadowcraft follower from your deck into your hand"
+],
+[
+"random_effect",
+"random Shadowcraft follower"
+],
+[
+"stat_condition",
+"original attack or defense of 1"
+]
+],
+"754087": [
+[
+"immunity",
+"Can't be attacked"
+]
+],
+"756083": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"board_wipe",
+"Destroy all other followers and amulets"
+],
+[
+"friendly_fire",
+"all other followers and amulets"
+],
+[
+"cant_attack",
+"Can't attack the enemy leader"
+],
+[
+"condition_count",
+"if 2 or more enemy followers are in play"
+]
+],
+"753710": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"generate_cards",
+"Put a Queen Hemera the White or Queen Magnus the Black into your hand"
+],
+[
+"death_count",
+"if at least 10 allied followers have been destroyed this match"
+],
+[
+"cost_reduction",
+"subtract 2 from its cost"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"in_hand_buff",
+"Subtract 2 from the costs of a random Queen Hemera the White"
+],
+[
+"random_effect",
+"random Queen Hemera the White"
+]
+],
+"814036": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"banish",
+"Banish an enemy follower with 3 defense or less"
+],
+[
+"stat_condition",
+"3 defense or less"
+],
+[
+"synergy_payoff",
+"If any allied Relic Goddesses are in play"
+],
+[
+"self_destruct",
+"banish this card"
+],
+[
+"turn_start",
+"At the start of your opponent's turn"
+],
+[
+"merge_attach",
+"combine with an allied Prism Relic, Cylinder Relic, and Octarelic"
+],
+[
+"transform",
+"become a Relic Goddess"
+]
+],
+"752607": [
+[
+"silence",
+"Remove all effects from an enemy follower"
+],
+[
+"kicker",
+"Enhance (5)"
+],
+[
+"destroy",
+"destroy that follower"
+]
+],
+"755403": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Give all other allied followers +1/+1"
+],
+[
+"tribal",
+"Neutral cards"
+],
+[
+"condition_count",
+"at least 3 other Neutral cards in your hand"
+]
+],
+"753946": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"Rally (5)"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"summon",
+"Summon a Bullet Bike or Arcane Personnel Carrier"
+]
+],
+"755149": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"generate_cards",
+"Put a Blazing Breath into your hand"
+]
+],
+"753115": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"discard",
+"Discard a card with Spellboost from your hand"
+],
+[
+"tutor",
+"put a random card with Spellboost that originally costs more than the discarded card from your deck into your hand"
+],
+[
+"random_effect",
+"random card with Spellboost"
+],
+[
+"cost_condition",
+"originally costs more than the discarded card"
+],
+[
+"in_hand_buff",
+"Spellboost it X times"
+]
+],
+"753990": [
+[
+"merge_attach",
+"Fusion"
+],
+[
+"tribal",
+"Swordcraft cards"
+],
+[
+"summon",
+"Summon 2 Steelclad Knights"
+],
+[
+"condition_count",
+"If this card is fused with at least 1 card"
+],
+[
+"summon",
+"summon a Naterran World Tree"
+],
+[
+"damage",
+"deal 5 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random enemy follower"
+],
+[
+"summon",
+"summon 2 Fox Spearmen"
+]
+],
+"755854": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Deal X damage to an enemy follower"
+],
+[
+"deck_condition",
+"X equals the number of remaining Artifact cards in your deck"
+],
+[
+"tribal",
+"Artifact cards"
+]
+]
+}

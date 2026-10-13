@@ -1,0 +1,674 @@
+{
+"765630": [
+[
+"aura",
+"Fighters adjacent to this fighter cannot be given Guard tokens"
+],
+[
+"adjacency",
+"Fighters adjacent to this fighter"
+]
+],
+"763699": [
+[
+"regeneration",
+"Remove up to one wound token"
+],
+[
+"turn_start",
+"at the beginning of each round"
+]
+],
+"764718": [
+[
+"random_effect",
+"re-roll one dice"
+],
+[
+"spell_power",
+"roll one extra dice in that roll"
+]
+],
+"763999": [
+[
+"protection",
+"-1 Dice (to a minimum of 1) from Attack actions"
+],
+[
+"ranged",
+"Range of 3 or more"
+]
+],
+"762821": [
+[
+"assists_support",
+"considered to be two supporting fighters"
+]
+],
+"764537": [
+[
+"piercing",
+"Cleave"
+]
+],
+"765126": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"territory_trigger",
+"Each surviving fighter is in enemy territory"
+],
+[
+"board_presence",
+"more surviving friendly fighters than surviving enemy fighters"
+]
+],
+"765484": [
+[
+"reactions",
+"Reaction"
+],
+[
+"heal",
+"Heal (2) the chosen fighter"
+]
+],
+"763183": [
+[
+"reactions",
+"Reaction"
+],
+[
+"on_kill",
+"your leader takes an enemy leader out of action"
+],
+[
+"resource_gain",
+"Gain a glory point"
+]
+],
+"763552": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"count_payoff",
+"took three or more enemy fighters out of action"
+]
+],
+"765429": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"terrain",
+"on a feature token"
+],
+[
+"condition_life",
+"one or more wound counters"
+]
+],
+"765824": [
+[
+"forced_movement",
+"Knockback 2"
+],
+[
+"reactions",
+"Reaction"
+],
+[
+"debuff",
+"stagger each enemy fighter within 1 hex of the target"
+],
+[
+"scope_multi",
+"each enemy fighter within 1 hex"
+]
+],
+"764029": [
+[
+"reactions",
+"Reaction"
+],
+[
+"death_trigger",
+"is taken out of action"
+],
+[
+"stat_condition",
+"Wounds characteristic is 4 or more"
+],
+[
+"heal",
+"Heal (2) your leader"
+]
+],
+"763274": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"zone_control",
+"hold all objectives on one or more game boards"
+]
+],
+"765910": [
+[
+"disruption",
+"That objective cannot be held"
+],
+[
+"temporary_effect",
+"until the end of the round"
+]
+],
+"764178": [
+[
+"modal_choice",
+"Pick one:"
+],
+[
+"hand_disruption",
+"That opponent must reveal that card to you"
+],
+[
+"information",
+"reveal that card to you"
+],
+[
+"deck_position",
+"Look at the top card"
+]
+],
+"765773": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"territory_trigger",
+"in enemy territory"
+],
+[
+"tribal",
+"beast, companion, minion"
+]
+],
+"764895": [
+[
+"reactions",
+"Reaction"
+],
+[
+"death_trigger",
+"takes one or more friendly fighters out of action"
+],
+[
+"draw",
+"Draw two power cards"
+]
+],
+"764923": [
+[
+"reactions",
+"Reaction"
+],
+[
+"recycle",
+"give this fighter that upgrade"
+],
+[
+"self_destruct",
+"Then discard this card"
+]
+],
+"765601": [
+[
+"reactions",
+"Reaction"
+],
+[
+"reactions",
+"After an enemy fighter's failed Attack action"
+],
+[
+"stat_loss",
+"-1 Defence"
+],
+[
+"debuff",
+"-1 Dice from that fighter's Attack actions"
+],
+[
+"temporary_effect",
+"Clear all Curse counters at the end of the phase"
+]
+],
+"763569": [
+[
+"random_effect",
+"Scatters X"
+],
+[
+"forced_movement",
+"pushes the fighter along the chain"
+],
+[
+"variable_stats",
+"X is the fighter's Move characteristic"
+],
+[
+"temporary_effect",
+"in the next activation"
+],
+[
+"debuff",
+"Place a Move token"
+]
+],
+"764058": [
+[
+"damage_reduction",
+"that fighter is dealt 1 damage instead"
+],
+[
+"temporary_effect",
+"in the next activation"
+]
+],
+"763976": [
+[
+"reactions",
+"Reaction"
+],
+[
+"on_attack",
+"After this fighter's successful Attack action"
+],
+[
+"random_effect",
+"roll one attack dice"
+],
+[
+"damage",
+"dealt 1 damage"
+]
+],
+"765256": [
+[
+"reactions",
+"Reaction"
+],
+[
+"on_kill",
+"took the target out of action"
+],
+[
+"movement",
+"Place that friendly fighter on a starting hex"
+]
+],
+"764889": [
+[
+"reactions",
+"Reaction"
+],
+[
+"death_trigger",
+"enough damage to a friendly fighter to take that fighter out of action"
+],
+[
+"random_effect",
+"Roll one magic dice"
+],
+[
+"adjacency",
+"adjacent to that friendly fighter"
+],
+[
+"damage",
+"deal 1 damage to that fighter"
+],
+[
+"debuff",
+"give that fighter one Move token"
+]
+],
+"764913": [
+[
+"random_effect",
+"re-roll any number of dice"
+],
+[
+"buff",
+"any number of attack dice"
+]
+],
+"764440": [
+[
+"stat_gain",
+"+1 Move to friendly fighters"
+],
+[
+"temporary_effect",
+"until the end of the round"
+],
+[
+"scope_multi",
+"friendly fighters"
+]
+],
+"765262": [
+[
+"reactions",
+"Reaction"
+],
+[
+"on_attack",
+"After this fighter's Trifang Triskele and Net Attack action"
+],
+[
+"target_choice",
+"choose one other enemy fighter"
+],
+[
+"damage",
+"Deal 1 damage to the chosen fighter"
+]
+],
+"762877": [
+[
+"immunity",
+"cannot be driven back"
+],
+[
+"temporary_effect",
+"in the next activation"
+]
+],
+"764807": [
+[
+"mark_target",
+"This fighter is a Quarry"
+],
+[
+"stat_gain",
+"Defence characteristic is :dfBlock: 2"
+],
+[
+"protection",
+"is on Guard"
+],
+[
+"condition_count",
+"three or more Silent Relics"
+]
+],
+"763802": [
+[
+"movement",
+"push them up to two hexes"
+],
+[
+"adjacency",
+"adjacent to another fighter"
+]
+],
+"765913": [
+[
+"movement",
+"Push each chosen friendly fighter 1 hex closer"
+]
+],
+"764487": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"zone_control",
+"Your leader holds an objective"
+]
+],
+"764530": [
+[
+"enemy_benefit",
+"That opponent picks one"
+],
+[
+"resource_gain",
+"you gain two tithe counters"
+],
+[
+"random_effect",
+"re-roll any number of dice"
+],
+[
+"tribal",
+"Morteks"
+]
+],
+"765578": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"zone_control",
+"holds two or more objectives"
+]
+],
+"763495": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"positional",
+"on an edge hex"
+]
+],
+"764328": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"zone_control",
+"holds three or more objectives"
+]
+],
+"765093": [
+[
+"reactions",
+"Reaction"
+],
+[
+"movement",
+"Place that fighter in a cover hex"
+]
+],
+"765739": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"on_attack",
+"after a friendly fighter's successful Attack action"
+]
+],
+"814454": [
+[
+"immunity",
+"treats lethal hexes as normal hexes"
+],
+[
+"terrain",
+"lethal hexes"
+]
+],
+"765618": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"condition_count",
+"Exploration count is 10 or more"
+]
+],
+"765890": [
+[
+"reactions",
+"Reaction"
+],
+[
+"reactions",
+"after this fighter is pushed by an enemy fighter"
+],
+[
+"friendly_fire",
+"Stagger this fighter"
+],
+[
+"movement",
+"push this fighter 1 hex"
+]
+],
+"764360": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"adjacency",
+"adjacent to two or more enemy fighters"
+]
+],
+"763108": [
+[
+"temporary_buff",
+"move up to an additional two hexes"
+],
+[
+"zone_control",
+"end their move on an objective"
+]
+],
+"764631": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"zone_control",
+"hold an objective"
+],
+[
+"condition_count",
+"three or more upgrades"
+]
+],
+"765574": [
+[
+"reactions",
+"Reaction"
+],
+[
+"movement",
+"push this fighter 1 hex"
+]
+],
+"764926": [
+[
+"piercing",
+"Skip the defence roll"
+],
+[
+"immunity",
+"characteristics cannot be modified"
+]
+],
+"763219": [
+[
+"reactions",
+"Reaction"
+],
+[
+"immunity",
+"cannot be driven back"
+]
+],
+"814467": [
+[
+"random_effect",
+"If cast"
+],
+[
+"terrain",
+"feature token"
+],
+[
+"transform",
+"Flip that token"
+]
+],
+"763456": [
+[
+"modal_choice",
+"choose one"
+],
+[
+"adjacency",
+"adjacent to a friendly fighter"
+],
+[
+"debuff",
+"remove the enemy fighter's Guard tokens"
+],
+[
+"debuff",
+"place a Move token"
+]
+]
+}

@@ -1,0 +1,1122 @@
+{
+"794561": [
+[
+"immobilize",
+"Enemy units cannot use Run or Retreat abilities while they are within 9\" of this unit"
+],
+[
+"aura",
+"while they are within 9\" of this unit"
+],
+[
+"scope_multi",
+"Pick up to 3 enemy units"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"damage",
+"Inflict D3 mortal damage on each target"
+],
+[
+"piercing",
+"mortal damage"
+],
+[
+"movement",
+"You can remove this unit from the battlefield and set it up again within 1/2\" of an enemy unit"
+],
+[
+"terrain",
+"a terrain feature that has a friendly overgrown token"
+],
+[
+"multi_attack",
+"Crit (2 Hits)"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"794125": [
+[
+"buff",
+"add 1 to the number of dice rolled when making charge rolls for this unit"
+],
+[
+"zone_control",
+"Pick an objective you do not control to be the target"
+],
+[
+"protection",
+"they cannot score critical hits while this unit is also contesting it"
+],
+[
+"modal_choice",
+"Pick 1 of the following to apply for the rest of the turn"
+],
+[
+"piercing",
+"have Crit (Mortal) instead of Crit (Auto-wound)"
+],
+[
+"tribal",
+"friendly Nighthaunt unit"
+],
+[
+"type_grant",
+"This unit has Wizard (1)"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+],
+[
+"stat_gain",
+"Charge (+1 Damage)"
+]
+],
+"794400": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"stat_loss",
+"the Attacks characteristic of its Spear of Krum Kalda is 3"
+],
+[
+"tribal",
+"Ancient Ghyrochs unit"
+],
+[
+"random_effect",
+"make a rampage roll of D6"
+],
+[
+"modal_choice",
+"pick 1 of the effects below"
+],
+[
+"stat_gain",
+"add 1 to the Damage characteristic of the target's Mighty Horns and Hooves"
+],
+[
+"movement",
+"it can move 3\""
+],
+[
+"spell_power",
+"Add 1 to this unit's casting power level"
+],
+[
+"buff",
+"add 1 to hit rolls for the target's combat attacks"
+],
+[
+"stealth",
+"this unit is not visible to enemy units more than 12\" away from it"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target of the attack"
+],
+[
+"revive",
+"pick a friendly non-Unique Big unit that has been destroyed"
+],
+[
+"sacrifice",
+"1 model in the mighty unit is slain"
+],
+[
+"temporary_buff",
+"Until the start of your next turn"
+]
+],
+"792772": [
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"on_spell",
+"You declared a Summon Spell ability for this unit"
+],
+[
+"spell_power",
+"Change the casting roll for that spell to a value of 8 that cannot be modified"
+],
+[
+"summon",
+"set up the Manifestation on the battlefield"
+]
+],
+"791425": [
+[
+"on_attack",
+"If this unit charged this phase"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"stat_condition",
+"If the roll is greater than the target's control characteristic"
+],
+[
+"debuff",
+"Subtract 1 from hit rolls for the target's combat attacks"
+],
+[
+"mark_target",
+"Add 1 to hit rolls for combat attacks made by friendly units that target that enemy unit"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+]
+],
+"793093": [
+[
+"random_effect",
+"Roll a dice. On a 3+"
+],
+[
+"debuff",
+"subtract 1 from save rolls for the target"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+]
+],
+"794080": [
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"debuff",
+"Subtract 1 from the Rend characteristic of the target's melee weapons"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"tribal",
+"friendly Pestigors unit"
+],
+[
+"multi_attack",
+"add 1 to the Attacks characteristic of the target's melee weapons"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+]
+],
+"793414": [
+[
+"tribal",
+"friendly Evergreen Hunt units"
+],
+[
+"stacking_keyword",
+"The following cumulative effects apply"
+],
+[
+"condition_count",
+"depending on the number of chords you have"
+],
+[
+"buff",
+"Add 1 to run rolls and charge rolls"
+],
+[
+"positional",
+"wholly within the same quarter of the battlefield as the quarry"
+],
+[
+"mark_target",
+"Add 1 to hit rolls and wound rolls for friendly units' combat attacks that target an enemy unit"
+],
+[
+"multi_attack",
+"Add 1 to the Attacks characteristic of melee weapons"
+],
+[
+"debuff",
+"the quarry has Strike-last"
+]
+],
+"791525": [
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"on_kill",
+"If a friendly Twin destroyed an enemy unit in the previous turn"
+],
+[
+"temporary_buff",
+"For the rest of the turn, add 1 to hit rolls"
+]
+],
+"794572": [
+[
+"on_attack",
+"You declared a Shoot ability for this unit"
+],
+[
+"movement",
+"this unit can move up to D6\""
+],
+[
+"piercing",
+"Crit (Auto-wound)"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"791783": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"turn_start",
+"Start of Any Battle Round"
+],
+[
+"stat_multiply",
+"Double the Attacks characteristic of that weapon"
+],
+[
+"ranged",
+"ranged weapons"
+],
+[
+"temporary_buff",
+"For the rest of the battle round"
+],
+[
+"friendly_fire",
+"allocate 1 damage point to this unit"
+]
+],
+"793469": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"regeneration",
+"Heal (3) this Manifestation"
+],
+[
+"heal",
+"Heal (3) the target"
+],
+[
+"piercing",
+"Anti-Infantry (+1 Rend)"
+]
+],
+"815237": [
+[
+"terrain",
+"terrain feature"
+],
+[
+"protection",
+"Cover"
+]
+],
+"792878": [
+[
+"random_effect",
+"Roll a dice. On a 3+"
+],
+[
+"suppress",
+"the target cannot use commands for the rest of the turn"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+]
+],
+"792750": [
+[
+"on_attack",
+"If this unit charged this turn"
+],
+[
+"zone_control",
+"add 5 to its control score"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+]
+],
+"793328": [
+[
+"saving_throws",
+"That friendly Ionus Cryptborn has Ward (4+)"
+],
+[
+"bodyguard",
+"allocate 1 damage point to a friendly Stormdrake Guard unit"
+],
+[
+"friendly_fire",
+"allocate 1 damage point to a friendly Stormdrake Guard unit"
+]
+],
+"794377": [
+[
+"reserve_bench",
+"Set up this unit in reserve lurking in the shadows"
+],
+[
+"movement",
+"Set up this unit anywhere on the battlefield more than 9\" from all enemy units"
+],
+[
+"buff",
+"add 1 to charge rolls for this unit for the rest of the turn"
+],
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"multi_attack",
+"Crit (2 Hits)"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"791155": [
+[
+"buff",
+"Add 1 to hit rolls for combat attacks"
+],
+[
+"tribal",
+"friendly Bloodbound units"
+],
+[
+"zone_control",
+"contesting an objective you do not control"
+]
+],
+"793233": [
+[
+"random_effect",
+"Roll 3 dice"
+],
+[
+"stat_condition",
+"at least double the target's Health characteristic"
+],
+[
+"destroy",
+"1 model in the target unit is automatically slain"
+]
+],
+"791222": [
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"movement",
+"can use the 'Normal Move' ability as if it were your movement phase"
+],
+[
+"tribal",
+"Iron March War Machine"
+]
+],
+"792458": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"coin_economy",
+"Spend 10 raw ingredients"
+],
+[
+"tribal",
+"Each friendly Gollop unit"
+],
+[
+"attack_now",
+"can immediately use a Charge ability as if it were your charge phase"
+],
+[
+"debuff",
+"subtract 1 from the number of dice rolled when making the charge roll"
+]
+],
+"794248": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"stat_loss",
+"the Attacks characteristic of its Stegadon's Horns and Jaws is 4"
+],
+[
+"on_attack",
+"If this unit charged this phase"
+],
+[
+"tribal",
+"enemy Infantry unit"
+],
+[
+"damage",
+"Inflict D3 mortal damage on the target"
+],
+[
+"piercing",
+"mortal damage"
+],
+[
+"movement",
+"this unit can move 2D6\""
+],
+[
+"evasion",
+"This unit can pass through models in the target unit"
+],
+[
+"piercing",
+"Anti‑Infantry (+1 Rend)"
+],
+[
+"multi_attack",
+"Crit (2 Hits)"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"815271": [
+[
+"death_trigger",
+"Each time a friendly Big or Little model is slain"
+],
+[
+"tribal",
+"Big or Little model"
+],
+[
+"random_effect",
+"the players must roll off"
+],
+[
+"aoe_damage",
+"Inflict D3 mortal damage on each unit (friendly and enemy) within 3\" of that point"
+],
+[
+"friendly_fire",
+"(friendly and enemy)"
+],
+[
+"stat_condition",
+"that has a lower Health characteristic than that model"
+]
+],
+"793875": [
+[
+"suppress",
+"It cannot use Run abilities"
+],
+[
+"damage",
+"Your opponent must roll a D6 instead of a D3 when determining the amount of mortal damage"
+],
+[
+"concentration",
+"Until this Manifestation is banished or destroyed"
+],
+[
+"multi_attack",
+"Crit (2 Hits)"
+]
+],
+"793783": [
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"tribal",
+"Fyreslayers Priest"
+],
+[
+"heal",
+"Heal (D3) each friendly Fyreslayers unit on the battlefield"
+],
+[
+"scope_global",
+"each friendly Fyreslayers unit on the battlefield"
+],
+[
+"terrain",
+"terrain feature"
+],
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"spell_power",
+"Add 1 to chanting rolls for the target"
+],
+[
+"type_grant",
+"as if it had Wizard (1)"
+],
+[
+"counter_spell",
+"the target can use the 'Unbind' ability"
+]
+],
+"793719": [
+[
+"stat_gain",
+"Add 1 to the Damage characteristic of this unit's melee weapons"
+],
+[
+"condition_count",
+"wholly within 12\" of any Manifestations (friendly or enemy)"
+],
+[
+"mark_target",
+"add 1 to the Rend characteristic of melee weapons used by friendly Kairic Acolytes units for attacks that target that enemy unit"
+],
+[
+"tribal",
+"friendly Kairic Acolytes units"
+],
+[
+"temporary_buff",
+"For the rest of the turn"
+]
+],
+"792880": [
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"stat_gain",
+"Add 2\" to the target's Move characteristic"
+],
+[
+"buff",
+"Add 1 to wound rolls for the target's combat attacks"
+],
+[
+"temporary_buff",
+"Until the start of your next turn"
+]
+],
+"794011": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"stat_loss",
+"the Attacks characteristic of Sloppklaw's Bite and Talons is 4"
+],
+[
+"coin_economy",
+"give this unit 1 betting chip"
+],
+[
+"resource_banking",
+"you can spend any number of betting chips after seeing the result of the roll"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"condition_count",
+"less than or equal to the number of models in the target unit"
+],
+[
+"targeting_rules",
+"if all of the attacks target that enemy unit"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"791812": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"tribal",
+"Kharadron Overlords unit that has Fly"
+],
+[
+"movement",
+"Remove the target from the battlefield and set it up again wholly within 9\" of this unit"
+]
+],
+"791804": [
+[
+"protection",
+"Subtract 1 from hit rolls for attacks that target friendly Kharadron Overlords Infantry units"
+],
+[
+"adjacency",
+"wholly within 6\" of a friendly Arkanaut Ironclad or Arkanaut Frigate"
+]
+],
+"793385": [
+[
+"death_trigger",
+"When this unit is destroyed"
+],
+[
+"resource_gain",
+"gain 3 rage dice"
+]
+],
+"792070": [
+[
+"tribal",
+"Disciples of Tzeentch Wizard"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"variable_stats",
+"a number of dice equal to the number of fate points you have"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"piercing",
+"mortal damage"
+],
+[
+"play_restriction",
+"that has not been picked to be the target of this spell this turn"
+]
+],
+"791076": [
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"terrain",
+"Place of Power"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"friendly_fire",
+"On a 1, inflict D3 mortal damage on that Hero"
+],
+[
+"spell_power",
+"add 1 to casting rolls or chanting rolls for that Hero this turn"
+],
+[
+"type_grant",
+"as if they had Wizard (1)"
+],
+[
+"counter_spell",
+"they can use the 'Unbind' or 'Banish Manifestation' ability"
+]
+],
+"794538": [
+[
+"condition_life",
+"If this unit is damaged or if any models in this unit were slain this turn"
+],
+[
+"on_damaged",
+"if any models in this unit were slain this turn"
+],
+[
+"temporary_buff",
+"add 1 to hit rolls for this unit's attacks for the rest of the turn"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"791949": [
+[
+"random_effect",
+"make a chanting roll of D6"
+],
+[
+"buff",
+"Add 2 to charge rolls for the target"
+],
+[
+"kicker",
+"If the chanting roll was 8+, add 4 to charge rolls"
+],
+[
+"temporary_buff",
+"until the start of your next turn"
+]
+],
+"793552": [
+[
+"targeting_rules",
+"If all of the attacks made with this unit's Stinga Bows this turn targeted the same enemy unit"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"tribal",
+"if the target is a Beast or Cavalry unit"
+],
+[
+"stat_loss",
+"subtract 1 from the Attacks characteristic of the target's Companion weapons"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+],
+[
+"piercing",
+"Crit (Auto-wound)"
+]
+],
+"816557": [
+[
+"buff",
+"Ignore negative modifiers to hit rolls and wound rolls for this unit's attacks"
+],
+[
+"movement",
+"Remove this unit from the battlefield and set it up again within 1\" of the target"
+],
+[
+"piercing",
+"Anti-Hero (+1 Rend)"
+],
+[
+"multi_attack",
+"Crit (2 Hits)"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"793591": [
+[
+"tribal",
+"Cities of Sigmar Duardin unit"
+],
+[
+"random_effect",
+"Roll a dice. On a 3+"
+],
+[
+"buff",
+"add 1 to wound rolls for the target's combat attacks"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+]
+],
+"792094": [
+[
+"summon",
+"Set up a Realmscourge Rupture"
+],
+[
+"tribal",
+"Slaves to Darkness Wizard"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+]
+],
+"792930": [
+[
+"stealth",
+"not visible to enemy units more than 12\" from them"
+],
+[
+"aura",
+"while they are wholly within 9\" of the Treelord"
+]
+],
+"793438": [
+[
+"heal",
+"Heal (3) each of those targets"
+],
+[
+"tribal",
+"Monster targets"
+]
+],
+"792625": [
+[
+"terrain",
+"wholly within 3\" of a terrain feature"
+],
+[
+"movement",
+"remove it from the battlefield and set it up again wholly within friendly territory"
+]
+],
+"793717": [
+[
+"random_effect",
+"Roll a D3"
+],
+[
+"friendly_fire",
+"Allocate a number of damage points to this unit equal to the roll"
+],
+[
+"life_payment",
+"Allocate a number of damage points to this unit"
+],
+[
+"multi_attack",
+"add 2 to the Attacks characteristic of this unit's ranged weapons"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+],
+[
+"revive",
+"You can return D3 slain models to this unit"
+],
+[
+"piercing",
+"Anti-Unique (+1 Rend)"
+]
+],
+"792672": [
+[
+"damage_reduction",
+"Ignore the first damage point that would be allocated to this unit in each phase"
+]
+],
+"793185": [
+[
+"condition_count",
+"While your fury level is 7"
+],
+[
+"stat_gain",
+"add 1 to the Damage characteristic of this unit's weapons"
+]
+],
+"792266": [
+[
+"tribal",
+"Allies of the Free Cities Wizard"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"stat_gain",
+"have Charge (+1 Damage)"
+],
+[
+"zone_control",
+"enemy units that are contesting the target objective"
+],
+[
+"temporary_buff",
+"For the rest of the turn"
+]
+],
+"794062": [
+[
+"reserve_bench",
+"set up in reserve aboard the Slime Fleet"
+],
+[
+"movement",
+"Set up this unit on the battlefield, wholly within 7\" of a battlefield edge"
+],
+[
+"scope_multi",
+"set up every other friendly unit that is aboard the Slime Fleet"
+],
+[
+"random_effect",
+"Roll a dice. On a 3+"
+],
+[
+"debuff",
+"the target has Strike-last for the rest of the turn"
+],
+[
+"tribal",
+"enemy Infantry Hero"
+],
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"piercing",
+"Anti-Hero (+1 Rend)"
+]
+],
+"793590": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"on_attack",
+"You declared a Shoot ability for this unit"
+],
+[
+"sacrifice",
+"Remove this unit's Blackpowder Squire from the battlefield"
+],
+[
+"piercing",
+"add 1 to the Rend characteristic of this unit's ranged weapons"
+],
+[
+"ranged",
+"Shoot in Combat"
+],
+[
+"damage_reduction",
+"Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit"
+]
+],
+"793850": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"on_kill",
+"If any enemy models were slain by this unit's combat attacks this turn"
+],
+[
+"heal",
+"Heal (D3) this unit"
+],
+[
+"permanent_growth",
+"This unit can be affected by this ability multiple times and the effects are cumulative"
+],
+[
+"multi_attack",
+"add 1 to the Attacks characteristic of this unit's Impaling Talons for the rest of the battle"
+],
+[
+"random_effect",
+"Roll 2D6"
+],
+[
+"stat_condition",
+"If the roll exceeds the target's Health characteristic"
+],
+[
+"destroy",
+"1 model in the target is automatically slain"
+],
+[
+"removal",
+"it is banished and removed from play"
+],
+[
+"rule_change",
+"This unit can use Charge abilities even if it is in combat"
+],
+[
+"on_attack",
+"You declared a Fight Ability for this unit"
+],
+[
+"attack_now",
+"The target can be picked to use a Fight ability immediately after"
+],
+[
+"stat_gain",
+"Charge (+1 Damage)"
+]
+],
+"794362": [
+[
+"death_count",
+"If 2 or more units (friendly or enemy) were destroyed this turn"
+],
+[
+"multi_attack",
+"add 1 to the Attacks characteristic of melee weapons"
+],
+[
+"tribal",
+"friendly Slaves to Darkness units"
+],
+[
+"aura",
+"while they are wholly within 12\" of this Manifestation"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+]
+]
+}

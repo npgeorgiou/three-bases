@@ -1,0 +1,886 @@
+{
+"760422": [
+[
+"passive",
+"+0.04 crit"
+],
+[
+"stat_gain",
+"+0.04 crit"
+],
+[
+"speed",
+"+4 speed"
+],
+[
+"information",
+"-4% scouting chance"
+],
+[
+"stat_loss",
+"-10% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760423": [
+[
+"passive",
+"+10% hp heal percent"
+],
+[
+"stat_gain",
+"+10% hp heal percent"
+],
+[
+"stress_morale",
+"-10% stress dmg received percent"
+],
+[
+"saving_throws",
+"move resistance"
+],
+[
+"stat_loss",
+"-10% damage"
+],
+[
+"light_level",
+"while light above 75"
+],
+[
+"condition_life",
+"while HP below 0.25"
+]
+],
+"760430": [
+[
+"passive",
+"+5% damage"
+],
+[
+"stat_gain",
+"+5% damage"
+],
+[
+"stress_morale",
+"+10% stress dmg received percent"
+],
+[
+"condition_life",
+"at Death's Door"
+]
+],
+"760435": [
+[
+"passive",
+"+0.06 accuracy while in rank"
+],
+[
+"stat_gain",
+"+0.06 accuracy"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+],
+[
+"saving_throws",
+"trap resistance"
+],
+[
+"rank_positions",
+"while in rank"
+]
+],
+"760438": [
+[
+"passive",
+"+10% max HP"
+],
+[
+"stat_gain",
+"+10% max HP"
+],
+[
+"stat_loss",
+"-10% debuff resistance"
+],
+[
+"saving_throws",
+"debuff resistance"
+],
+[
+"stress_morale",
+"+10% stress dmg received percent"
+],
+[
+"light_level",
+"while light below 26"
+]
+],
+"760440": [
+[
+"passive",
+"-5% stress dmg received percent"
+],
+[
+"stress_morale",
+"-5% stress dmg received percent"
+],
+[
+"stat_gain",
+"+10% hp heal received percent"
+],
+[
+"stat_loss",
+"-10% disease resistance"
+],
+[
+"saving_throws",
+"disease resistance"
+],
+[
+"light_level",
+"while light above 75"
+],
+[
+"condition_life",
+"while HP above 0.75"
+]
+],
+"760447": [
+[
+"passive",
+"+0.05 protection"
+],
+[
+"stat_gain",
+"+0.05 protection"
+],
+[
+"stress_morale",
+"-10% stress dmg received percent"
+],
+[
+"stat_loss",
+"-0.05 accuracy"
+],
+[
+"rank_positions",
+"while in rank"
+]
+],
+"760448": [
+[
+"passive",
+"+0.02 accuracy"
+],
+[
+"stat_gain",
+"+0.02 accuracy"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+],
+[
+"saving_throws",
+"trap resistance"
+],
+[
+"rank_positions",
+"while in rank"
+]
+],
+"760452": [
+[
+"passive",
+"+0.06 protection"
+],
+[
+"stat_gain",
+"+0.06 protection"
+],
+[
+"saving_throws",
+"move resistance"
+],
+[
+"stat_loss",
+"-0.06 dodge"
+]
+],
+"760453": [
+[
+"passive",
+"+0.06 dodge"
+],
+[
+"stat_gain",
+"+0.06 dodge"
+],
+[
+"stat_loss",
+"-13% hp heal percent"
+],
+[
+"saving_throws",
+"move resistance"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"rank_positions",
+"while in rank"
+]
+],
+"760459": [
+[
+"passive",
+"+10% damage in the first round"
+],
+[
+"stat_gain",
+"+10% damage"
+],
+[
+"upkeep",
+"+50% starving damage percent"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760461": [
+[
+"passive",
+"+0.06 protection"
+],
+[
+"stat_gain",
+"+0.06 protection"
+],
+[
+"speed",
+"+4 speed"
+],
+[
+"stat_loss",
+"-10% damage"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"condition_life",
+"while HP below 0.25"
+]
+],
+"760462": [
+[
+"passive",
+"+15% max HP"
+],
+[
+"stat_gain",
+"+15% max HP"
+],
+[
+"stat_loss",
+"-13% hp heal received percent"
+]
+],
+"760463": [
+[
+"passive",
+"+0.06 protection"
+],
+[
+"stat_gain",
+"+0.06 protection"
+],
+[
+"cheat_death",
+"+8% death_blow resistance"
+],
+[
+"saving_throws",
+"death_blow resistance"
+],
+[
+"stat_loss",
+"-13% hp heal percent"
+],
+[
+"condition_life",
+"at Death's Door"
+],
+[
+"tribal",
+"vs beast enemies"
+]
+],
+"760466": [
+[
+"passive",
+"+9% death_blow resistance"
+],
+[
+"cheat_death",
+"+9% death_blow resistance"
+],
+[
+"saving_throws",
+"death_blow resistance"
+],
+[
+"stat_loss",
+"-8% resolve check percent"
+]
+],
+"760475": [
+[
+"passive",
+"+0.06 crit"
+],
+[
+"stat_gain",
+"+0.06 crit"
+],
+[
+"stat_loss",
+"-10% move resistance"
+],
+[
+"saving_throws",
+"move resistance"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760485": [
+[
+"passive",
+"+0.05 accuracy while in rank"
+],
+[
+"stat_gain",
+"+0.05 accuracy"
+],
+[
+"stress_morale",
+"+10% stress dmg received percent"
+],
+[
+"stat_loss",
+"-10% stun resistance"
+],
+[
+"saving_throws",
+"stun resistance"
+],
+[
+"condition_life",
+"while HP below 0.25"
+],
+[
+"rank_positions",
+"while in rank"
+]
+],
+"760492": [
+[
+"passive",
+"-13% stress dmg received percent while light below 26"
+],
+[
+"stress_morale",
+"-13% stress dmg received percent"
+],
+[
+"stat_gain",
+"+16% resolve xp bonus percent"
+],
+[
+"stat_loss",
+"-0.06 dodge"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760493": [
+[
+"passive",
+"+26% hp heal received percent while HP below 0.25"
+],
+[
+"stat_gain",
+"+26% hp heal received percent"
+],
+[
+"stat_loss",
+"-10% max HP"
+],
+[
+"condition_life",
+"while HP below 0.25"
+]
+],
+"760501": [
+[
+"passive",
+"+10% damage"
+],
+[
+"stat_gain",
+"+10% damage"
+],
+[
+"stat_loss",
+"-10% bleed resistance"
+],
+[
+"saving_throws",
+"bleed resistance"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760511": [
+[
+"passive",
+"+3 speed in the first round"
+],
+[
+"speed",
+"+3 speed"
+],
+[
+"stat_gain",
+"+0.03 crit"
+],
+[
+"stat_loss",
+"-0.06 protection"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760514": [
+[
+"passive",
+"+0.06 dodge"
+],
+[
+"stat_gain",
+"+0.06 dodge"
+],
+[
+"stat_loss",
+"-0.05 accuracy"
+],
+[
+"saving_throws",
+"death_blow resistance"
+],
+[
+"light_level",
+"while light below 26"
+]
+],
+"760516": [
+[
+"passive",
+"+15% disease resistance"
+],
+[
+"stat_gain",
+"+15% disease resistance"
+],
+[
+"saving_throws",
+"disease resistance"
+],
+[
+"stat_loss",
+"-6% death_blow resistance"
+],
+[
+"turn_number",
+"not in the first round"
+]
+],
+"760518": [
+[
+"passive",
+"-15% stress dmg received percent"
+],
+[
+"stress_morale",
+"-15% stress dmg received percent"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+],
+[
+"saving_throws",
+"trap resistance"
+],
+[
+"turn_number",
+"not in the first round"
+]
+],
+"760519": [
+[
+"passive",
+"+10% max HP"
+],
+[
+"stat_gain",
+"+10% max HP"
+]
+],
+"760523": [
+[
+"passive",
+"+2 speed"
+],
+[
+"speed",
+"+2 speed"
+]
+],
+"760529": [
+[
+"passive",
+"+0.05 accuracy with ranged skills"
+],
+[
+"stat_gain",
+"+0.05 accuracy"
+]
+],
+"760532": [
+[
+"passive",
+"-0.05 dodge"
+],
+[
+"stat_loss",
+"-0.05 dodge"
+]
+],
+"760533": [
+[
+"passive",
+"+10% damage with melee skills"
+],
+[
+"stat_gain",
+"+10% damage"
+]
+],
+"760537": [
+[
+"passive",
+"+0.01 crit"
+],
+[
+"stat_gain",
+"+0.01 crit"
+]
+],
+"760538": [
+[
+"passive",
+"-0.01 crit"
+],
+[
+"stat_loss",
+"-0.01 crit"
+]
+],
+"760568": [
+[
+"passive",
+"+10% damage while HP below 0.5"
+],
+[
+"stat_gain",
+"+10% damage"
+],
+[
+"condition_life",
+"while HP below 0.5"
+]
+],
+"760570": [
+[
+"passive",
+"+1 speed while HP below 0.5"
+],
+[
+"speed",
+"+1 speed"
+],
+[
+"condition_life",
+"while HP below 0.5"
+]
+],
+"760574": [
+[
+"passive",
+"+0.03 crit while HP below 0.5"
+],
+[
+"stat_gain",
+"+0.03 crit"
+],
+[
+"condition_life",
+"while HP below 0.5"
+]
+],
+"760579": [
+[
+"passive",
+"+20% stress dmg received percent while light below 26"
+],
+[
+"stress_morale",
+"+20% stress dmg received percent"
+],
+[
+"light_level",
+"while light below 26"
+]
+],
+"760584": [
+[
+"passive",
+"+20% stress dmg received percent vs man enemies"
+],
+[
+"stress_morale",
+"+20% stress dmg received percent"
+],
+[
+"tribal",
+"vs man enemies"
+]
+],
+"760590": [
+[
+"passive",
+"-0.2 dodge"
+],
+[
+"stat_loss",
+"-0.2 dodge"
+]
+],
+"760591": [
+[
+"damage_over_time",
+"Life drains with each step"
+],
+[
+"stat_loss",
+"-50% disease resistance"
+],
+[
+"saving_throws",
+"disease resistance"
+]
+],
+"760592": [
+[
+"passive",
+"-0.05 accuracy"
+],
+[
+"stat_loss",
+"-0.05 accuracy"
+]
+],
+"760593": [
+[
+"passive",
+"-0.1 accuracy"
+],
+[
+"stat_loss",
+"-0.1 accuracy"
+],
+[
+"stat_gain",
+"+15% damage"
+]
+],
+"760599": [
+[
+"passive",
+"-50% move resistance"
+],
+[
+"stat_loss",
+"-50% move resistance"
+],
+[
+"saving_throws",
+"move resistance"
+]
+],
+"760600": [
+[
+"passive",
+"-50% debuff resistance"
+],
+[
+"stat_loss",
+"-50% debuff resistance"
+],
+[
+"saving_throws",
+"debuff resistance"
+]
+],
+"760603": [
+[
+"passive",
+"-0.2 accuracy while stress above 70"
+],
+[
+"stat_loss",
+"-0.2 accuracy"
+],
+[
+"stress_morale",
+"while stress above 70"
+]
+],
+"760604": [
+[
+"passive",
+"-40% bleed resistance"
+],
+[
+"stat_loss",
+"-40% bleed resistance"
+],
+[
+"saving_throws",
+"bleed resistance"
+]
+],
+"760607": [
+[
+"passive",
+"+1 food consumption percent"
+],
+[
+"upkeep",
+"+1 food consumption percent"
+]
+],
+"760628": [
+[
+"traits_quirks",
+"will only Drink"
+]
+],
+"760651": [
+[
+"passive",
+"+15% stress dmg received percent vs unholy enemies"
+],
+[
+"stress_morale",
+"+15% stress dmg received percent"
+],
+[
+"stat_loss",
+"-0.1 accuracy"
+],
+[
+"tribal",
+"vs unholy enemies"
+]
+],
+"760652": [
+[
+"passive",
+"+15% stress dmg received percent vs man enemies"
+],
+[
+"stress_morale",
+"+15% stress dmg received percent"
+],
+[
+"stat_loss",
+"-0.1 accuracy"
+],
+[
+"tribal",
+"vs man enemies"
+]
+],
+"760653": [
+[
+"passive",
+"+15% stress dmg received percent vs beast enemies"
+],
+[
+"stress_morale",
+"+15% stress dmg received percent"
+],
+[
+"stat_loss",
+"-0.1 accuracy"
+],
+[
+"tribal",
+"vs beast enemies"
+]
+],
+"760658": [
+[
+"passive",
+"+0.1 accuracy vs eldritch enemies"
+],
+[
+"stat_gain",
+"+0.1 accuracy"
+],
+[
+"tribal",
+"vs eldritch enemies"
+]
+]
+}

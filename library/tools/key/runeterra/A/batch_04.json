@@ -1,0 +1,186 @@
+{
+"796793": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"damage",
+"Deal 2 to Taliyah's blocker"
+],
+[
+"direct_damage",
+"deal 2 to the enemy Nexus instead"
+]
+],
+"796479": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"draw",
+"Draw 1"
+],
+[
+"hand_size",
+"you empty your hand"
+],
+[
+"generate_cards",
+"create a Super Mega Death Rocket! in hand"
+]
+],
+"796559": [
+[
+"first_strike",
+"Quick Attack"
+]
+],
+"796661": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"damage",
+"Deal 2 to a unit"
+],
+[
+"direct_damage",
+"deal 1 to the enemy Nexus instead"
+]
+],
+"796719": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"disable",
+"Stun 2 enemies"
+],
+[
+"scope_multi",
+"2 enemies"
+]
+],
+"797146": [
+[
+"on_play",
+"Play"
+],
+[
+"in_hand_buff",
+"Grant SpellShield to an ally in hand"
+]
+],
+"796702": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"tutor",
+"Draw a landmark"
+]
+],
+"796869": [
+[
+"delayed",
+"Countdown 1"
+],
+[
+"resource_gain",
+"Get an extra mana gem this round"
+],
+[
+"temporary_effect",
+"this round"
+]
+],
+"796747": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"disable",
+"Stun enemies"
+],
+[
+"scope_multi",
+"Stun enemies"
+],
+[
+"stat_condition",
+"2 or less Power"
+]
+],
+"796778": [
+[
+"spell_speed",
+"Skill"
+],
+[
+"tribal",
+"Lurker ally"
+],
+[
+"damage",
+"strikes a random enemy"
+],
+[
+"random_effect",
+"a random enemy"
+]
+],
+"797013": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"shield",
+"SpellShield"
+],
+[
+"generate_cards",
+"Create a Kai'Sa in your deck"
+]
+],
+"751632": [
+[
+"variety_payoff",
+"Evolve"
+],
+[
+"on_play",
+"When I'm summoned"
+],
+[
+"turn_start",
+"Round Start"
+],
+[
+"attack_token",
+"If you have the attack token"
+],
+[
+"generate_cards",
+"create a Second Skin in hand"
+],
+[
+"upgrade",
+"Level up"
+]
+]
+}

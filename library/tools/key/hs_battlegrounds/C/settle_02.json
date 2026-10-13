@@ -1,0 +1,192 @@
+{
+"750181": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"card_quality",
+"Replace cards in the Tavern with ones from a Tier higher"
+]
+],
+"750197": [
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"temporary_buff",
+"until next turn"
+]
+],
+"750199": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_gain",
+"give the minion to the left +X Health"
+],
+[
+"adjacency",
+"the minion to the left"
+],
+[
+"low_life",
+"each Health your hero is missing"
+]
+],
+"750204": [
+[
+"stat_gain",
+"give their stats to your minions"
+]
+],
+"750215": [
+[
+"resource_advantage",
+"Two Refreshes each turn are free"
+]
+],
+"750217": [
+[
+"permanent_growth",
+"give it +1 Health permanently"
+]
+],
+"750223": [
+[
+"card_quality",
+"extra minion of a higher Tier"
+]
+],
+"750237": [
+[
+"selection",
+"After you Discover a minion"
+],
+[
+"stat_gain",
+"give it +Y/+Y"
+],
+[
+"upgrade",
+"improve this"
+]
+],
+"750242": [
+[
+"on_damaged",
+"Whenever a friendly Taunt minion is attacked"
+],
+[
+"permanent_growth",
+"give your minions +1/+1 permanently"
+]
+],
+"750285": [
+[
+"selection",
+"Discover an Aberration"
+],
+[
+"transform",
+"Swaps type each turn"
+]
+],
+"750301": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"permanent_growth",
+"+2 Attack permanently"
+],
+[
+"scope_global",
+"ALL minions"
+],
+[
+"symmetric_effect",
+"ALL minions"
+]
+],
+"750302": [
+[
+"card_quality",
+"offers an extra Dragon"
+],
+[
+"tribal",
+"Dragon"
+]
+],
+"750354": [
+[
+"stealth",
+"Stealth"
+]
+],
+"750361": [
+[
+"activated",
+"pay gold to use the effect"
+]
+],
+"794971": [
+[
+"tribal",
+"Elemental"
+]
+],
+"800819": [
+[
+"card_quality",
+"Your next 2 Refreshes are helpful"
+]
+],
+"800820": [
+[
+"repeat_trigger",
+"casts an extra time"
+],
+[
+"combo_sequence",
+"Your first spell each turn"
+]
+],
+"800836": [
+[
+"card_quality",
+"offers X Golden minions"
+]
+],
+"800838": [
+[
+"turn_number",
+"On Turns 8 and 9"
+],
+[
+"rule_change",
+"There is no Minor Timewarp in this game"
+]
+],
+"800845": [
+[
+"repeat_trigger",
+"Battlecries trigger an extra time"
+],
+[
+"tribal",
+"Your Dragons'"
+]
+],
+"800856": [
+[
+"team_play",
+"Pass a non-Golden minion"
+]
+]
+}

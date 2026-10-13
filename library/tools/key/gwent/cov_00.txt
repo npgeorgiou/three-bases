@@ -1,0 +1,50 @@
+756282 | Bekker's Dark Mirror | Choose a unit. If it's boosted, damage it by double the amount boosted. If it's damaged, boost it by double the amount damaged.
+756216 | Insanity | If you have insufficient Coins, damage this unit by its Fee amount, ignoring its Armor, to trigger its Fee ability.\nNote: Insanity cannot be used if it would destroy the unit and works only if damage is inflicted.
+756947 | Piercing Missile | Damage an enemy unit by 4, ignoring its Armor.
+757382 | Ulula | Order: Damage a unit by 2. Whenever an enemy unit takes damage from your Warriors, damage it by 1, ignoring its Armor.
+756568 | Reckless Flurry | Order: Split 4 damage randomly between all enemy units, ignoring their Armor. Charges: 2 This ability adds 16 provisions to your deck's provisions limit.
+756324 | Vicovaro Novice | Deploy (Ranged): Draw a card, then move a card from your hand to the top of your deck.
+756825 | Artis | Deploy: Play a 4-provision Cultist from your deck. Ranged: Whenever a unit is played, damage it by half its power.
+757293 | Lydia van Bredevoort | Deploy (Melee): Create and play a bronze special card from your opponent's faction. Deploy (Ranged): Play a bronze special card from your opponent's graveyard.
+756464 | Menno Coehoorn | Deploy (Ranged): Play a Tactic from your deck.
+756746 | Fisher King | Deploy (Ranged): Move any card from your deck to the top.
+756924 | Novigradian Justice | Play a bronze Dwarf or Crownsplitter unit from your deck. If you already control a Dwarf or Crownsplitter, also Spawn a Cleaver's Muscle on your Melee row.
+757237 | Cleaver | Intimidate. Deploy: Spawn and play Shakedown. Increase this card's Intimidate by 1 for each adjacent Crownsplitter. Fee 4: Spawn a Cleaver's Muscle on this row.
+757462 | Ship Ballista | Order: Damage an enemy unit by 2, then boost a random non-boosted unit in your deck by the excess damage dealt. Increase the damage for each time you used an Order ability this turn.
+757238 | Whoreson Junior | Insanity. Deploy: Damage a boosted enemy unit by 6. Gain a Coin for each point of excess damage dealt. Devotion: Damage an enemy unit instead. Fee 3: Destroy an enemy unit with 3 or less power.
+756845 | Blood Money | Order: Damage an enemy unit by 6, then gain Coins equal to any excess damage dealt. Whenever an enemy unit with Bounty is destroyed, increase the damage by 1. If the Order is used up, refresh it and set its damage to 1 instead. This ability adds 16 provisions to your deck's provisions limit.
+756975 | Natural Selection | Damage an enemy unit by 4, then Spawn a Drone on a random allied row for each point of excess damage dealt.
+813671 | Curse of Wrath | Order: Damage an enemy unit by 6. / Deathblow: Deal excess damage to adjacent units.
+756181 | Shield | Status that blocks the next instance of damage dealt to a unit.
+756889 | Prophet Lebioda | Whenever you play a unit next to Prophet Lebioda, give it a Shield.
+757024 | Engineering Solution | Order: Boost an allied unit by 4 and give it Shield.
+756348 | Primordial D'ao | Shield. Deploy: Boost self by [0]. Increase this value by 1 for each Construct you played this game.
+756801 | Runeword | Create and play a bronze Northern Realms Mage and give it a Shield.
+756709 | Gabor Zigrin | Deploy (Melee): Gain Resilience. Deploy (Ranged): Gain Immunity. Whenever you play a Dwarf, boost self by 1.
+757177 | Saber-Tooth Tiger | Zeal. Order: Transform self into Saber-Tooth Tiger: Stealth.
+756194 | Spring | Manual activation of a face-down Trap. Spring is activated automatically on a Trap played next to an Artifact. Cards with Spring are flipped over after use.
+757457 | Trapmaker | Deploy: Boost self by 3 for each face-down allied Trap.
+756664 | Yoana | Order: Heal an allied unit by 2. Charge: 1 Whenever an adjacent unit takes damage, gain 1 Charge.
+756225 | Reset | Restore a unit to its base power. (2020 definition)
+756566 | Battle Trance | Order: Spawn and play Mardroeme. Whenever you play an Alchemy card, Heal a random allied unit by 1. This ability adds 17 provisions to your deck's provisions limit.
+756232 | Regis: Higher Vampire | Order (Melee): Drain an enemy unit by the amount of boost it has.
+757353 | Regis: Reborn | Deploy: Drain an enemy unit by 3. At the end of your turn, while in hand or deck, if there is an enemy unit with Bleeding, increase own base power by 1.
+757194 | Bear Witcher Adept | Deploy: Damage self by 4. At the end of your turn, Heal self by 1. While not damaged, gain 1 Armor instead.
+756563 | Heymaey Flaminica | At the end of your turn, Heal all other units on this row by 1.
+756831 | Svalblod Cultist | At the end of your turn, Heal the unit to the left by 1 and damage the unit to the right by 1.
+756295 | Thaler | Formation. Order: If neither player has passed and your opponent's hand is not full, both players draw a card.
+756697 | Imlerith | Deploy (Melee): Draw a card, then Discard a card. If the Discarded card was a unit, boost self by its power.
+756446 | Heymaey Skald | Deploy (Ranged): Draw a card, then Discard a card.
+756484 | Daerlan Soldier | Deploy: If you control a Soldier, Summon all copies of self from your deck to this row. At the start of the game, Spawn a copy of self in your deck.
+756420 | Ermion | Deploy (Ranged): Play an Alchemy card from your deck.
+756696 | Yennefer: Divination | Deploy (Ranged): Reveal a random unit from your deck, then boost an allied unit by its power.
+756244 | Lambert | Deploy (Adrenaline 4): Summon Eskel and Vesemir from your deck.
+756242 | Eskel | Deploy (Adrenaline 4): Summon Vesemir and Lambert from your deck.
+757397 | Sigi Reuven: Mastermind | Deploy: Look at Collusion and a random unit from each Gang from your deck, then play 1. Tribute 9: Play 2 instead. Tribute costs 2 less for each unique Gang category you control.
+756869 | Off the Books | Order: Gain 2 Coins. Charges: 4 Your Tributes cost 1 Coin less. This ability adds 15 provisions to your deck's provisions limit.
+813691 | Explosives | Doomed. / Fee 3: Damage an enemy unit by 3, then destroy self. / At the end of your turn, reduce the Fee cost by 1. If the Fee cost was 0, destroy self instead.
+756863 | Madame Luiza | Intimidate. Tribute 3: Gain Zeal. Order: Your next Tribute this round costs 0.
+757376 | Golden Nekker | Deploy: If your starting deck does not have cards with a provision cost of 10 or more, play the top unit, special, and artifact from your deck. Ciri: Nova and Golden Nekker are excluded from this condition.
+756897 | Excommunication | Banish an allied unit, then play the top card from your deck. If the target was a Firesworn, look at the top 3 cards from your deck and play 1 of them instead.
+756480 | Cantarella | Disloyal. Deploy: Play the top card from your opponent's deck.
+756261 | Decoy | Shuffle an allied unit on the battlefield into your deck, then play the top unit from your deck.

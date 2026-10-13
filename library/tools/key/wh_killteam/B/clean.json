@@ -2972,5 +2972,811 @@
 "counterattack",
 "you can strike the enemy operative in that sequence"
 ]
+],
+"790178": [
+[
+"start_of_game",
+"In the Select Equipment step"
+],
+[
+"target_choice",
+"you can select one enemy operative or one other friendly HAND OF THE ARCHON operative"
+],
+[
+"information",
+"reveal your selection when you reveal equipment"
+],
+[
+"tribal",
+"HAND OF THE ARCHON"
+],
+[
+"debuff",
+"your opponent must re-roll dice results of 6"
+],
+[
+"buff",
+"you can re-roll dice results of 1"
+],
+[
+"multi_attack",
+"it can perform two Shoot actions during its activation"
+],
+[
+"activated",
+"Mark (1AP)"
+],
+[
+"mark_target",
+"this operative treats it as having an Engage order"
+],
+[
+"temporary_effect",
+"Until the end of the Turning Point"
+],
+[
+"terrain",
+"Cover from Heavy terrain"
+],
+[
+"play_restriction",
+"This operative cannot perform this action while within Engagement Range of an enemy operative"
+],
+[
+"piercing",
+"No Cover"
+]
+],
+"790497": [
+[
+"activated",
+"From the Eye Above (1AP)"
+],
+[
+"tribal",
+"FARSTALKER KINBAND"
+],
+[
+"stat_gain",
+"add 1 to its APL stat"
+],
+[
+"temporary_effect",
+"Until the end of that operative\u2019s next activation"
+],
+[
+"play_restriction",
+"This operative cannot perform this action while within control range of an enemy operative"
+],
+[
+"activated",
+"Marked for the Hunt (1AP)"
+],
+[
+"mark_target",
+"place your Pech\u2019ra marker"
+],
+[
+"terrain",
+"Vantage terrain"
+],
+[
+"piercing",
+"Seek Light weapon rule"
+],
+[
+"delayed",
+"At the start of this operative\u2019s next activation"
+]
+],
+"790316": [
+[
+"cheat_death",
+"That operative is not incapacitated, has 1 wound remaining"
+],
+[
+"tribal",
+"NOVITIATE"
+],
+[
+"movement",
+"perform a free Dash action"
+],
+[
+"friendly_fire",
+"Subtract 1 from both operatives' APL"
+],
+[
+"activated",
+"Chirurgeon's Tools (1AP)"
+],
+[
+"heal",
+"regains 2D3 lost wounds"
+],
+[
+"random_effect",
+"2D3"
+],
+[
+"play_restriction",
+"This operative cannot perform this action if it is within Engagement Range of an enemy operative"
+]
+],
+"790644": [
+[
+"death_trigger",
+"If this operative is incapacitated during the Fight action"
+],
+[
+"damage",
+"strike the enemy operative in that sequence with one of your unresolved successes"
+],
+[
+"activated",
+"Snatch (1AP)"
+],
+[
+"random_effect",
+"Both players roll one D6"
+],
+[
+"stat_condition",
+"add their respective operative's Wounds stat to their result"
+],
+[
+"forced_movement",
+"remove that enemy operative from the killzone and set it back up"
+],
+[
+"play_restriction",
+"This operative cannot perform this action normally"
+]
+],
+"789580": [
+[
+"reactions",
+"when an operative is shooting a friendly HUNTER CLADE operative"
+],
+[
+"tribal",
+"HUNTER CLADE"
+],
+[
+"debuff",
+"worsen the x of the Piercing weapon rule by 1"
+],
+[
+"temporary_effect",
+"until the end of that sequence"
+]
+],
+"789919": [
+[
+"on_damaged",
+"when a friendly model within 3\" of this model suffers a wound"
+],
+[
+"random_effect",
+"Roll a D6"
+],
+[
+"damage_reduction",
+"on a 6 that wound is not lost"
+]
+],
+"789188": [
+[
+"zone_control",
+"When determining control of an objective marker"
+],
+[
+"stat_gain",
+"treat this operative's APL characteristic as being 1 higher"
+]
+],
+"789897": [
+[
+"assists_support",
+"when you pick another model from your kill team within 6\" of this model to shoot"
+],
+[
+"buff",
+"add 1 to hit rolls for that model"
+],
+[
+"temporary_effect",
+"in this phase"
+]
+],
+"814809": [
+[
+"on_attack",
+"Whenever this operative is fighting or retaliating with this weapon"
+],
+[
+"terrain",
+"Light or Heavy terrain is within its control range"
+],
+[
+"buff",
+"this weapon has the Lethal 5+ weapon rule"
+]
+],
+"789678": [
+[
+"activated",
+"Sanctification Orb (1AP)"
+],
+[
+"scope_multi",
+"That operative and each other enemy operative within 1\" of it takes a doused test"
+],
+[
+"random_effect",
+"on a 3+"
+],
+[
+"mark_target",
+"it gains one of your Doused tokens"
+],
+[
+"tribal",
+"SANCTIFIER"
+],
+[
+"piercing",
+"that weapon also has the Seek weapon rule"
+],
+[
+"play_restriction",
+"This operative cannot perform this action while within control range of an enemy operative"
+]
+],
+"790693": [
+[
+"on_kill",
+"Whenever this operative incapacitates a ready enemy operative"
+],
+[
+"resource_gain",
+"you gain 1 Faith point"
+],
+[
+"stat_condition",
+"Wounds stat of 12 or more"
+],
+[
+"aura",
+"Whenever a friendly NOVITIATE operative is within 3\" of this operative"
+],
+[
+"tribal",
+"NOVITIATE"
+],
+[
+"buff",
+"weapons have the Severe weapon rule"
+]
+],
+"789756": [
+[
+"buff",
+"re-roll failed hit rolls"
+],
+[
+"temporary_effect",
+"in a battle round in which it charges or is charged"
+],
+[
+"tribal",
+"SLAANESH"
+],
+[
+"stress_morale",
+"add 1 to Nerve tests"
+]
+],
+"790543": [
+[
+"cost_set",
+"it costs you 0CP"
+],
+[
+"modal_choice",
+"you can either"
+],
+[
+"movement",
+"Remove that marker and place it again"
+]
+],
+"789371": [
+[
+"activated",
+"Shock Grenade (1AP)"
+],
+[
+"area_templates",
+"within \u2b24 of that point"
+],
+[
+"random_effect",
+"Roll one D6 for each operative"
+],
+[
+"friendly_fire",
+"for each operative within \u2b24 of that point"
+],
+[
+"stat_loss",
+"subtract 1 from that operative's APL"
+],
+[
+"once_per_game",
+"can only perform this action once"
+],
+[
+"play_restriction",
+"cannot perform this action while within Engagement Range of enemy operatives"
+]
+],
+"790751": [
+[
+"cheat_death",
+"that friendly operative isn\u2019t incapacitated, has 1 wound remaining"
+],
+[
+"immunity",
+"cannot be incapacitated for the remainder of the action"
+],
+[
+"tribal",
+"SPECTRE SQUAD"
+],
+[
+"movement",
+"perform a free Dash action"
+],
+[
+"friendly_fire",
+"Subtract 1 from this and that operative\u2019s APL stats"
+],
+[
+"activated",
+"Medkit (0AP)"
+],
+[
+"heal",
+"regain up to 2D3 lost wounds"
+],
+[
+"random_effect",
+"2D3"
+],
+[
+"play_restriction",
+"This operative cannot perform this action while within control range of an enemy operative"
+]
+],
+"790670": [
+[
+"autonomous_units",
+"this NPO"
+],
+[
+"reactions",
+"Whenever a player operative within 8\" of this NPO is shooting it"
+],
+[
+"counterattack",
+"this NPO can perform a free Shoot action"
+],
+[
+"targeting_rules",
+"it can only target that player operative"
+],
+[
+"condition_count",
+"roll a number of attack dice equal to the opponent's discarded attack dice plus one"
+],
+[
+"piercing",
+"Piercing x"
+]
+],
+"816466": [
+[
+"on_attack",
+"Each time this operative performs the Fight action"
+],
+[
+"debuff",
+"worsen the Weapon Skill characteristic of the target operative's weapons by 1"
+],
+[
+"temporary_effect",
+"for that combat"
+]
+],
+"789734": [
+[
+"target_choice",
+"pick a friendly model within 12\" of the psyker"
+],
+[
+"stat_gain",
+"add 1 to that model's Strength, Toughness and Attacks characteristics"
+],
+[
+"temporary_effect",
+"Until the start of the next Psychic phase"
+]
+],
+"814841": [
+[
+"on_attack",
+"Whenever this operative performs the Fight action"
+],
+[
+"multi_attack",
+"it can immediately perform a free Fight action afterwards"
+]
+],
+"790772": [
+[
+"piercing",
+"Piercing x"
+]
+],
+"789746": [
+[
+"protection",
+"that hit roll suffers an additional -1 modifier"
+]
+],
+"814878": [
+[
+"targeting_rules",
+"a friendly INQUISITORIAL AGENT GHEISTSKULL operative is always the primary target"
+],
+[
+"play_restriction",
+"you cannot select this weapon"
+]
+],
+"790533": [
+[
+"on_damaged",
+"Whenever an enemy operative is shooting against, fighting against or retaliating against this operative"
+],
+[
+"zone_control",
+"contests an objective marker"
+],
+[
+"damage_reduction",
+"subtract 1 from the damage inflicted on it from one success"
+]
+],
+"790223": [
+[
+"activated",
+"Analyse (1AP)"
+],
+[
+"target_choice",
+"Select one enemy operative Visible to this operative"
+],
+[
+"tribal",
+"HUNTER CADRE"
+],
+[
+"speed",
+"you can activate that other friendly operative"
+],
+[
+"buff",
+"you can re-roll any or all of your attack dice"
+],
+[
+"play_restriction",
+"This operative cannot perform this action while within Engagement Range of enemy operatives"
+]
+],
+"790669": [
+[
+"debuff",
+"it cannot use Light terrain for cover"
+],
+[
+"terrain",
+"Light terrain"
+]
+],
+"790120": [
+[
+"immunity",
+"You can ignore any or all modifiers to this operative's characteristics"
+],
+[
+"on_damaged",
+"Each time this operative would lose a wound"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"damage_reduction",
+"on a 6, that wound is not lost"
+],
+[
+"activated",
+"Castigator's Arrest (1AP)"
+],
+[
+"attack_now",
+"Perform a free Fight action with this operative"
+],
+[
+"stat_condition",
+"Wounds characteristic of 10 or less"
+],
+[
+"tribal",
+"EXACTION SQUAD"
+],
+[
+"disable",
+"cannot perform any actions other than Pass"
+],
+[
+"immunity",
+"cannot themselves be arrested"
+]
+],
+"789269": [
+[
+"on_attack",
+"Each time this operative fights in combat"
+],
+[
+"combo_sequence",
+"if this operative performed a Charge action"
+],
+[
+"buff",
+"re-roll one of your attack dice"
+]
+],
+"789693": [
+[
+"tribal",
+"VESPID STINGWING"
+],
+[
+"resource_advantage",
+"without you spending a Communion point"
+]
+],
+"790152": [
+[
+"immunity",
+"not affected by the Stun critical hit rule"
+],
+[
+"on_damaged",
+"Each time this operative would lose a wound"
+],
+[
+"damage_reduction",
+"on a 6, that wound is not lost"
+],
+[
+"activated",
+"Pox Bomb (1AP)"
+],
+[
+"random_effect",
+"Roll one D6 for each other operative"
+],
+[
+"friendly_fire",
+"for each other operative within \u2b24 of that point"
+],
+[
+"stat_loss",
+"subtract 1 from that operative\u2019s APL"
+],
+[
+"aoe_damage",
+"that operative also suffers 3 mortal wounds"
+],
+[
+"play_restriction",
+"This operative cannot perform this action while within Engagement Range of an enemy operative"
+]
+],
+"790172": [
+[
+"stat_condition",
+"less than the target's Save characteristic"
+],
+[
+"damage",
+"inflict 1 mortal wound on the target"
+],
+[
+"piercing",
+"no defence dice are rolled"
+],
+[
+"on_kill",
+"Each time an enemy operative is incapacitated by this weapon"
+],
+[
+"aoe_damage",
+"suffers D3 mortal wounds"
+],
+[
+"friendly_fire",
+"each operative Visible to and within \u2b24 of it"
+],
+[
+"repeat_trigger",
+"will cause this to happen again"
+],
+[
+"activated",
+"Torment Grenade (1AP)"
+],
+[
+"random_effect",
+"Roll one D6 for each other operative"
+],
+[
+"damage_over_time",
+"poisoned operatives suffer 2 mortal wounds"
+],
+[
+"turn_start",
+"At the end of the Ready Operatives step of each Turning Point"
+],
+[
+"condition_life",
+"treated as being injured"
+],
+[
+"play_restriction",
+"This operative cannot perform this action while within Engagement Range of an enemy operative"
+]
+],
+"790117": [
+[
+"aura",
+"While a friendly VOIDSMAN operative is within 2\u2b24 of this operative"
+],
+[
+"tribal",
+"VOIDSMAN"
+],
+[
+"buff",
+"gain the Balanced special rule"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"shield",
+"ignore the damage inflicted on this operative from one attack dice"
+],
+[
+"activated",
+"Uncompromising Fire (1AP)"
+],
+[
+"multi_attack",
+"Make a shooting attack with the laspistol and make a shooting attack"
+],
+[
+"play_restriction",
+"This operative cannot perform this action if it has a Conceal order"
+]
+],
+"789432": [
+[
+"turn_end",
+"At the end of this operative's activation"
+],
+[
+"temporary_effect",
+"until the start of its next activation"
+],
+[
+"zone_control",
+"When determining control of an objective marker"
+],
+[
+"stat_gain",
+"treat its APL as 1 higher"
+],
+[
+"damage_reduction",
+"halve the damage that is applied"
+]
+],
+"789891": [
+[
+"buff",
+"Add 1 to hit rolls"
+]
+],
+"789291": [
+[
+"terrain",
+"Cover"
+],
+[
+"buff",
+"are critical saves"
+]
+],
+"790815": [
+[
+"tribal",
+"XV26 STEALTH BATTLESUIT DRONE"
+],
+[
+"buff",
+"ignore the first two bullet points of its Drone rule"
+],
+[
+"temporary_effect",
+"Until the end of that operative's next activation"
+],
+[
+"spell_power",
+"add 1 to the result"
+],
+[
+"death_count",
+"if 2 or more friendly XV26 STEALTH BATTLESUIT operatives (excluding DRONE) are incapacitated"
+]
+],
+"789505": [
+[
+"start_of_game",
+"After revealing this equipment option"
+],
+[
+"random_effect",
+"roll one D3"
+],
+[
+"cost_set",
+"for 0CP"
+]
+],
+"814803": [
+[
+"death_trigger",
+"If this operative is incapacitated"
+],
+[
+"random_effect",
+"roll two D6"
+],
+[
+"aoe_damage",
+"inflict D3+2 damage on each operative visible to and within 2\" of this operative"
+],
+[
+"friendly_fire",
+"each operative visible to and within 2\" of this operative"
+]
 ]
 }

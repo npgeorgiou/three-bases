@@ -1,0 +1,633 @@
+{
+"763334": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"death_trigger",
+"taken out of action"
+],
+[
+"adjacency",
+"adjacent to three or more friendly fighters"
+],
+[
+"condition_count",
+"three or more"
+]
+],
+"765178": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"reactions",
+"after an enemy fighter is given an Illusion upgrade"
+],
+[
+"disruption",
+"discard one glory point"
+],
+[
+"debuff",
+"break that card"
+]
+],
+"796454": [
+[
+"on_attack",
+"After an Attack roll"
+],
+[
+"transform",
+"Inspire that fighter"
+]
+],
+"763000": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"adjacency",
+"adjacent to the same friendly fighter"
+],
+[
+"condition_count",
+"at least three"
+]
+],
+"763853": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"zone_control",
+"holds three or more objectives"
+],
+[
+"condition_count",
+"three or more"
+]
+],
+"763261": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"random_effect",
+"roll a defence dice"
+],
+[
+"debuff",
+"That upgrade is discarded"
+]
+],
+"764873": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"attack_now",
+"That fighter makes an Attack action"
+]
+],
+"796442": [
+[
+"once_per_game",
+"Once per game"
+],
+[
+"protection",
+"give a Guard token"
+],
+[
+"condition_life",
+"damaged friendly fighter"
+],
+[
+"territory_trigger",
+"in enemy territory"
+]
+],
+"764676": [
+[
+"heal",
+"Heal (1) that fighter"
+],
+[
+"heal",
+"Heal (2) that fighter"
+]
+],
+"764774": [
+[
+"merge_attach",
+"When you give a fighter this upgrade"
+],
+[
+"stacking_keyword",
+"Hunger counter"
+],
+[
+"condition_count",
+"three or more Hunger counters"
+],
+[
+"buff",
+"+2 Dice to this Attack action"
+]
+],
+"765523": [
+[
+"buff",
+"+1 Dice and Ensnare"
+],
+[
+"piercing",
+"Ensnare"
+],
+[
+"count_payoff",
+"one or more Domain gambits were played"
+]
+],
+"764380": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"life_payment",
+"deal 1 damage to this fighter"
+],
+[
+"modal_choice",
+"choose Cleave or Ensnare"
+],
+[
+"piercing",
+"Cleave or Ensnare"
+],
+[
+"temporary_buff",
+"until it has been resolved"
+]
+],
+"763659": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"death_trigger",
+"take this fighter out of action"
+],
+[
+"steal",
+"take up to one of their unspent glory points"
+]
+],
+"763146": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"movement",
+"push them one hex"
+]
+],
+"764839": [
+[
+"damage_reduction",
+"reduce that damage to 1"
+],
+[
+"temporary_effect",
+"in the next activation"
+]
+],
+"762850": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"random_effect",
+"re-roll one attack dice"
+]
+],
+"764424": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"count_payoff",
+"second or subsequent reaction"
+]
+],
+"764606": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_number",
+"in the third end phase"
+],
+[
+"death_count",
+"friendly fighters out of action"
+],
+[
+"condition_count",
+"four or more Hunger counters"
+]
+],
+"765339": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"count_payoff",
+"two or more successful Attack actions"
+]
+],
+"796448": [
+[
+"area_templates",
+"draw a line"
+],
+[
+"damage",
+"takes 1 damage"
+],
+[
+"debuff",
+"a Stagger token"
+]
+],
+"814417": [
+[
+"damage_reduction",
+"only suffers one damage"
+],
+[
+"temporary_effect",
+"in the next activation"
+]
+],
+"762737": [],
+"765709": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"terrain",
+"feature tokens"
+],
+[
+"condition_count",
+"Three or more"
+]
+],
+"764658": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"comeback",
+"Each opponent has scored 3 or more objective cards more than you"
+]
+],
+"763901": [
+[
+"temporary_buff",
+"+1 Damage"
+],
+[
+"assists_support",
+"for each friendly supporting fighter"
+]
+],
+"765815": [
+[
+"random_effect",
+"If cast"
+],
+[
+"forced_movement",
+"Push each chosen fighter"
+],
+[
+"debuff",
+"stagger the chosen fighters"
+],
+[
+"scope_multi",
+"choose two enemy fighters"
+]
+],
+"763742": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"draw",
+"draw a power card"
+]
+],
+"765271": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"on_kill",
+"The target was taken out of action"
+],
+[
+"terrain",
+"cover hex"
+]
+],
+"763192": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"lone_unit",
+"your leader is the only surviving fighter"
+]
+],
+"764116": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"territory_trigger",
+"each surviving friendly fighter is in enemy territory"
+]
+],
+"762860": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"removal",
+"took an enemy leader out of action"
+]
+],
+"762824": [
+[
+"random_effect",
+"If you roll at least one"
+],
+[
+"piercing",
+"Cleave"
+]
+],
+"762838": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"on_damaged",
+"suffers 3 or more damage in a single attack and is not take out of action"
+]
+],
+"765515": [
+[
+"stat_gain",
+"+1 Damage"
+],
+[
+"terrain",
+"cover hex"
+]
+],
+"765063": [
+[
+"movement",
+"Push up to two friendly fighters"
+]
+],
+"762768": [
+[
+"activated",
+"Action:"
+],
+[
+"forced_movement",
+"Push each adjacent enemy fighter"
+],
+[
+"adjacency",
+"adjacent enemy fighter"
+]
+],
+"764388": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"zone_control",
+"desecrates an objective"
+]
+],
+"765670": [
+[
+"immunity",
+"Enemy warbands cannot push this fighter"
+],
+[
+"random_effect",
+"re-roll one dice"
+]
+],
+"763690": [
+[
+"protection",
+"counts rolls of :dfDodge: and :dfBlock: as successes"
+]
+],
+"764561": [
+[
+"immunity",
+"cannot be the target of Attack actions"
+],
+[
+"temporary_effect",
+"Until the end of the next activation"
+]
+],
+"765835": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"tribal",
+"friendly changers"
+],
+[
+"condition_count",
+"Two or more"
+]
+],
+"762852": [
+[
+"multi_target_attack",
+"Targets all adjacent enemy fighters"
+],
+[
+"random_effect",
+"roll for each"
+]
+],
+"765007": [
+[
+"temporary_buff",
+"has Ensnare"
+],
+[
+"piercing",
+"Ensnare"
+],
+[
+"resource_gain",
+"Gain one Swag counter"
+]
+],
+"763712": [
+[
+"activated",
+"Action:"
+],
+[
+"damage",
+"They suffer 1 damage"
+],
+[
+"adjacency",
+"adjacent enemy fighter"
+]
+],
+"764627": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"zone_control",
+"holds more objectives than any other warband"
+]
+],
+"764874": [
+[
+"stat_loss",
+"-1 Move from enemy fighters"
+],
+[
+"temporary_effect",
+"in the next activation"
+]
+],
+"765110": [
+[
+"forced_movement",
+"Knockback 1"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"damage",
+"deal 1 damage to the target"
+]
+],
+"763759": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"death_trigger",
+"taken out of action by a spell"
+]
+],
+"764238": [
+[
+"buff",
+"+1 Dice"
+],
+[
+"mark_target",
+"Quarry"
+],
+[
+"random_effect",
+"re-roll one attack dice"
+]
+],
+"763750": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"death_count",
+"second or subsequent enemy fighter is taken out of action"
+],
+[
+"variety_payoff",
+"by a different friendly fighter"
+]
+]
+}

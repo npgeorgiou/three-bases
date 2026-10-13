@@ -1,0 +1,2730 @@
+{
+"758400": {
+"tags": [
+[
+"combat_start",
+"Start each combat with this card in your Hand"
+]
+],
+"by": "C"
+},
+"758401": {
+"tags": [
+[
+"retain",
+"Retained cards are not discarded at the end of turn"
+]
+],
+"by": "A=B"
+},
+"758408": {
+"tags": [
+[
+"damage",
+"Deal 18 damage"
+],
+[
+"copy",
+"Add a 0 energy copy of this card into your Discard Pile"
+],
+[
+"cost_set",
+"0 energy copy"
+]
+],
+"by": "C"
+},
+"758415": {
+"tags": [
+[
+"damage",
+"Deal 10 damage"
+],
+[
+"recycle",
+"Put ALL 0 energy cards from your Discard Pile into your Hand"
+],
+[
+"cost_condition",
+"0 energy cards"
+]
+],
+"by": "C"
+},
+"758424": {
+"tags": [
+[
+"damage",
+"Deal 10 damage"
+],
+[
+"debuff",
+"Apply 1 Vulnerable"
+],
+[
+"exhaust",
+"Exhaust."
+],
+[
+"combat_start",
+"Innate"
+]
+],
+"by": "C"
+},
+"758428": {
+"tags": [
+[
+"damage",
+"Deal 11 damage"
+],
+[
+"exhaust",
+"Exhaust."
+],
+[
+"combat_start",
+"Innate"
+]
+],
+"by": "C"
+},
+"758433": {
+"tags": [
+[
+"block_armor",
+"Block is not removed at the start of your turn"
+]
+],
+"by": "A=B"
+},
+"758435": {
+"tags": [
+[
+"draw",
+"Draw 3 cards"
+],
+[
+"rule_change",
+"You cannot draw additional cards this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "C"
+},
+"758441": {
+"tags": [
+[
+"transform",
+"Transform into Minion Strike"
+]
+],
+"by": "C"
+},
+"758444": {
+"tags": [
+[
+"draw",
+"Draw 1 card"
+],
+[
+"resource_gain",
+"Gain energy"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "C"
+},
+"758445": {
+"tags": [
+[
+"aoe_damage",
+"deal 3 damage to ALL enemies"
+]
+],
+"by": "C"
+},
+"758448": {
+"tags": [
+[
+"damage",
+"Deal 8 damage"
+],
+[
+"debuff",
+"Apply Doom"
+]
+],
+"by": "C"
+},
+"758452": {
+"tags": [
+[
+"block_armor",
+"Gain 5 Block"
+]
+],
+"by": "A=B"
+},
+"758457": {
+"tags": [
+[
+"aoe_damage",
+"he deals 9 damage to ALL enemies"
+],
+[
+"block_armor",
+"gain 9 Block"
+],
+[
+"sacrifice",
+"Osty dies"
+]
+],
+"by": "A=B"
+},
+"758458": {
+"tags": [
+[
+"block_armor",
+"Gain 6 Block"
+],
+[
+"junk_cards",
+"Add a Dazed into your Discard Pile"
+]
+],
+"by": "A=B"
+},
+"758459": {
+"tags": [
+[
+"block_armor",
+"Gain 10 Block"
+],
+[
+"exhaust",
+"Exhaust."
+],
+[
+"combat_start",
+"Innate"
+]
+],
+"by": "C"
+},
+"758460": {
+"tags": [
+[
+"resource_gain",
+"Gain 4 energy"
+],
+[
+"rule_change",
+"Cards cost an additional energy this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "C"
+},
+"758462": {
+"tags": [
+[
+"life_payment",
+"Lose 1 HP"
+],
+[
+"exhaust",
+"Exhaust 1 card"
+],
+[
+"stat_gain",
+"Gain 1 Strength"
+]
+],
+"by": "A=B"
+},
+"758467": {
+"tags": [
+[
+"shield",
+"Prevent the next time you would lose HP"
+]
+],
+"by": "A=B"
+},
+"758471": {
+"tags": [
+[
+"block_armor",
+"Gain 12 Block"
+]
+],
+"by": "C"
+},
+"758473": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"friendly_fire",
+"take 2 damage"
+],
+[
+"play_restriction",
+"Unplayable"
+]
+],
+"by": "A=B"
+},
+"758490": {
+"tags": [
+[
+"selection",
+"Choose 2 cards in your Draw Pile"
+],
+[
+"transform",
+"Transform into Minion Dive Bombs"
+]
+],
+"by": "A=B"
+},
+"758516": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"debuff",
+"apply 6 Doom"
+],
+[
+"random_effect",
+"random enemy"
+]
+],
+"by": "C"
+},
+"758531": {
+"tags": [
+[
+"damage",
+"Deal 8 damage"
+],
+[
+"condition_count",
+"for each card drawn during your turn"
+]
+],
+"by": "A=B"
+},
+"758544": {
+"tags": [
+[
+"block_armor",
+"Gain 4 Block"
+]
+],
+"by": "A=B"
+},
+"758546": {
+"tags": [
+[
+"block_armor",
+"Gain 6 Block"
+],
+[
+"debuff",
+"Apply 1 Weak"
+]
+],
+"by": "A=B"
+},
+"758573": {
+"tags": [
+[
+"resource_gain",
+"gain 2 energy"
+],
+[
+"team_play",
+"ALL players"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "C"
+},
+"758580": {
+"tags": [
+[
+"block_armor",
+"Gain 13 Block"
+],
+[
+"retain",
+"Retain your Hand this turn"
+]
+],
+"by": "A=B"
+},
+"758591": {
+"tags": [
+[
+"block_armor",
+"Gain an additional 4 Block from Defend cards"
+],
+[
+"spell_power",
+"Gain an additional 4 Block from Defend cards"
+]
+],
+"by": "C"
+},
+"758597": {
+"tags": [
+[
+"damage",
+"Osty deals 3 damage"
+],
+[
+"draw",
+"draw 1 card"
+]
+],
+"by": "C"
+},
+"758609": {
+"tags": [
+[
+"damage",
+"Deal 5 damage"
+],
+[
+"condition_count",
+"for each Skill in your Hand"
+]
+],
+"by": "A=B"
+},
+"758615": {
+"tags": [
+[
+"combo_sequence",
+"If you Exhausted a card this turn"
+],
+[
+"resource_gain",
+"gain 3 energy"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "C"
+},
+"758628": {
+"tags": [
+[
+"block_armor",
+"Gain 6 Block"
+],
+[
+"slots_queue",
+"Channel 2 Frost"
+]
+],
+"by": "C"
+},
+"758629": {
+"tags": [
+[
+"block_armor",
+"Gain 5 Block"
+],
+[
+"slots_queue",
+"Channel 1 Glass"
+]
+],
+"by": "C"
+},
+"758631": {
+"tags": [
+[
+"generate_cards",
+"add 3 Souls into their Draw Pile"
+],
+[
+"team_play",
+"ALL players"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "C"
+},
+"758640": {
+"tags": [
+[
+"damage",
+"Deal 12 damage"
+],
+[
+"draw",
+"Draw 2 cards"
+]
+],
+"by": "A=B"
+},
+"758649": {
+"tags": [
+[
+"cast_from_zone",
+"Play the top card of your Draw Pile"
+],
+[
+"exhaust",
+"Exhaust it"
+],
+[
+"deck_position",
+"top card of your Draw Pile"
+]
+],
+"by": "A=B"
+},
+"758655": {
+"tags": [
+[
+"damage",
+"Deal 3 damage"
+],
+[
+"condition_count",
+"for each energy previously spent this turn"
+]
+],
+"by": "A=B"
+},
+"758674": {
+"tags": [
+[
+"generate_cards",
+"Add a random Attack into your Hand"
+],
+[
+"random_effect",
+"random Attack"
+],
+[
+"cost_set",
+"free to play this turn"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "A=B"
+},
+"758686": {
+"tags": [
+[
+"damage",
+"Deal 27 damage"
+],
+[
+"in_hand_buff",
+"reduce its cost by 1"
+]
+],
+"by": "A=B"
+},
+"758710": {
+"tags": [
+[
+"draw",
+"Draw 3 cards"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "A=B"
+},
+"758737": {
+"tags": [
+[
+"resource_gain",
+"Gain 3 energy"
+],
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"friendly_fire",
+"apply 3 Doom to yourself"
+]
+],
+"by": "A=B"
+},
+"758739": {
+"tags": [
+[
+"block_armor",
+"Gain 8 Plating"
+]
+],
+"by": "A=B"
+},
+"758748": {
+"tags": [
+[
+"life_payment",
+"Lose 6 HP"
+],
+[
+"resource_gain",
+"Gain 2 energy"
+],
+[
+"draw",
+"Draw 3 cards"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "A=B"
+},
+"758755": {
+"tags": [
+[
+"condition_count",
+"3 or more cards in your Exhaust Pile"
+],
+[
+"aoe_damage",
+"deal 17 damage to ALL enemies"
+]
+],
+"by": "A=B"
+},
+"758757": {
+"tags": [
+[
+"condition_count",
+"play 5 or more cards in a turn"
+],
+[
+"draw",
+"draw 1 card"
+],
+[
+"turn_start",
+"at the start of your next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"by": "C"
+},
+"758758": {
+"tags": [
+[
+"count_payoff",
+"Every time you play 5 cards in a single turn"
+],
+[
+"aoe_damage",
+"deal 10 damage to ALL enemies"
+]
+],
+"by": "A=B"
+},
+"758761": {
+"tags": [
+[
+"draw",
+"Draw 3 cards"
+]
+],
+"by": "A=B"
+},
+"758767": {
+"tags": [
+[
+"damage",
+"Deal 10 damage"
+],
+[
+"draw",
+"Draw 1 card"
+],
+[
+"deck_position",
+"on top of your Draw Pile"
+]
+],
+"by": "C"
+},
+"758775": {
+"tags": [
+[
+"damage",
+"Deal 14 damage"
+],
+[
+"cost_set",
+"costs 0 energy"
+]
+],
+"by": "A=B"
+},
+"758783": {
+"tags": [
+[
+"draw",
+"Draw 6 cards"
+]
+],
+"by": "A=B"
+},
+"758792": {
+"tags": [
+[
+"selection",
+"Choose 1 of 3 random Colorless cards"
+],
+[
+"generate_cards",
+"add into your Hand"
+],
+[
+"random_effect",
+"random Colorless cards"
+]
+],
+"by": "A=B"
+},
+"758794": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play an Attack this turn"
+],
+[
+"block_armor",
+"gain 3 Block"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "C"
+},
+"758800": {
+"tags": [
+[
+"damage",
+"Deal 27 damage"
+],
+[
+"retain",
+"Retain"
+]
+],
+"by": "A=B"
+},
+"758803": {
+"tags": [
+[
+"hand_deck_swap",
+"Shuffle ALL your cards into your Draw Pile"
+],
+[
+"draw",
+"Draw 4 cards"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "C"
+},
+"758825": {
+"tags": [
+[
+"exhaust",
+"Exhaust a card"
+],
+[
+"resource_gain",
+"gain 2 energy"
+],
+[
+"delayed",
+"Next turn"
+]
+],
+"by": "A=B"
+},
+"758826": {
+"tags": [
+[
+"debuff",
+"Apply 13 Doom"
+],
+[
+"draw",
+"Draw 1 card"
+]
+],
+"by": "C"
+},
+"758837": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"damage",
+"deal 4 damage to a random enemy"
+],
+[
+"random_effect",
+"random enemy"
+]
+],
+"by": "A=B"
+},
+"758845": {
+"tags": [
+[
+"stat_loss",
+"Enemy loses 2 Strength"
+],
+[
+"friendly_fire",
+"Lose 2 Strength"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "C"
+},
+"758846": {
+"tags": [
+[
+"aoe_damage",
+"Deal 7 damage to ALL enemies"
+],
+[
+"repeat_trigger",
+"Evoke all of your Orbs twice"
+]
+],
+"by": "A=B"
+},
+"758861": {
+"tags": [
+[
+"damage_over_time",
+"Apply 7 Poison"
+],
+[
+"retain",
+"Retain"
+]
+],
+"by": "A=B"
+},
+"758866": {
+"tags": [
+[
+"damage",
+"Deal 9 damage"
+],
+[
+"condition_count",
+"for each Soul in your Exhaust Pile"
+]
+],
+"by": "A=B"
+},
+"758872": {
+"tags": [
+[
+"block_armor",
+"gain 4 Block"
+],
+[
+"on_ally_play",
+"Whenever you play an Ethereal card"
+]
+],
+"by": "A=B"
+},
+"758879": {
+"tags": [
+[
+"damage",
+"Osty deals 25 damage"
+],
+[
+"condition_count",
+"for ALL your other Osty Attacks"
+]
+],
+"by": "A=B"
+},
+"758882": {
+"tags": [
+[
+"damage",
+"Deal 5 damage to a random enemy X times"
+],
+[
+"random_effect",
+"random enemy"
+]
+],
+"by": "A=B"
+},
+"758886": {
+"tags": [
+[
+"on_spell",
+"Whenever you play a Power"
+],
+[
+"slots_queue",
+"Channel 1 Lightning"
+]
+],
+"by": "C"
+},
+"758888": {
+"tags": [
+[
+"damage",
+"Deal 8 damage"
+],
+[
+"on_ally_play",
+"Whenever you play a card this turn"
+],
+[
+"damage",
+"the enemy loses 2 HP"
+]
+],
+"by": "A=B"
+},
+"758890": {
+"tags": [
+[
+"damage",
+"Deal 6 damage"
+]
+],
+"by": "A=B"
+},
+"758893": {
+"tags": [
+[
+"damage",
+"Deal 6 damage"
+]
+],
+"by": "A=B"
+},
+"758895": {
+"tags": [
+[
+"on_spell",
+"Whenever you play a Power"
+],
+[
+"resource_gain",
+"gain energy"
+]
+],
+"by": "C"
+},
+"758917": {
+"tags": [
+[
+"delayed",
+"At the end of 3 turns"
+],
+[
+"aoe_damage",
+"deal 40 damage to ALL enemies"
+]
+],
+"by": "A=B"
+},
+"758933": {
+"tags": [
+[
+"in_hand_buff",
+"Add Replay to a card in your Hand"
+],
+[
+"repeat_trigger",
+"Replay"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "C"
+},
+"758941": {
+"tags": [
+[
+"damage",
+"Deal 14 damage"
+]
+],
+"by": "A=B"
+},
+"758945": {
+"tags": [
+[
+"damage",
+"Deal 14 damage"
+],
+[
+"cost_set",
+"costs 0 energy"
+]
+],
+"by": "A=B"
+},
+"758953": {
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+]
+],
+"by": "A=B"
+},
+"758970": {
+"tags": [
+[
+"shop_gold",
+"Enemies drop 15 additional Gold"
+]
+],
+"by": "C"
+},
+"758975": {
+"tags": [
+[
+"transform",
+"Transform 3 cards"
+],
+[
+"upgrade",
+"Upgrade them"
+]
+],
+"by": "A=B"
+},
+"758976": {
+"tags": [
+[
+"combat_start",
+"At the start of each combat"
+],
+[
+"debuff",
+"apply 1 Vulnerable to ALL enemies"
+]
+],
+"by": "A=B"
+},
+"758983": {
+"tags": [
+[
+"stat_gain",
+"raise your Max HP by 20"
+],
+[
+"combat_start",
+"At the start of each combat"
+]
+],
+"by": "C"
+},
+"759000": {
+"tags": [
+[
+"count_payoff",
+"The 5th card you play from your hand each turn"
+],
+[
+"free_play",
+"is free"
+]
+],
+"by": "C"
+},
+"759006": {
+"tags": [
+[
+"junk_cards",
+"obtain a unique Curse"
+],
+[
+"deck_modification",
+"obtain a unique Curse"
+]
+],
+"by": "C"
+},
+"759018": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"block_armor",
+"gain 1 Block"
+],
+[
+"hand_size",
+"for each card in your Hand"
+]
+],
+"by": "A=B"
+},
+"759019": {
+"tags": [
+[
+"combat_start",
+"At the start of each combat"
+],
+[
+"slots_queue",
+"Channel 1 Lightning"
+]
+],
+"by": "C"
+},
+"759028": {
+"tags": [
+[
+"rule_change",
+"Card rewards can now contain Colorless cards"
+]
+],
+"by": "A=B"
+},
+"759032": {
+"tags": [
+[
+"copy",
+"obtain an additional copy of a card in your Deck"
+],
+[
+"deck_modification",
+"additional copy of a card in your Deck"
+]
+],
+"by": "A=B"
+},
+"759046": {
+"tags": [
+[
+"heal",
+"heal 10% of your HP"
+]
+],
+"by": "A=B"
+},
+"759056": {
+"tags": [
+[
+"count_payoff",
+"Every 3 normal combats"
+],
+[
+"upgrade",
+"Upgrade a random card in your Deck"
+],
+[
+"random_effect",
+"random card"
+]
+],
+"by": "C"
+},
+"759063": {
+"tags": [
+[
+"block_armor",
+"gain 10 Block"
+],
+[
+"count_payoff",
+"For every 10 star spent"
+]
+],
+"by": "A=B"
+},
+"759075": {
+"tags": [
+[
+"death_trigger",
+"Whenever an enemy dies"
+],
+[
+"resource_gain",
+"gain energy"
+],
+[
+"draw",
+"draw 1 card"
+]
+],
+"by": "C"
+},
+"759084": {
+"tags": [
+[
+"cost_condition",
+"costs 2 energy or more"
+],
+[
+"block_armor",
+"gain 4 Block"
+],
+[
+"on_ally_play",
+"Whenever you play a card"
+]
+],
+"by": "A=B"
+},
+"759103": {
+"tags": [
+[
+"count_payoff",
+"Every time you play 3 Skills in a single turn"
+],
+[
+"aoe_damage",
+"deal 5 damage to ALL enemies"
+]
+],
+"by": "A=B"
+},
+"759106": {
+"tags": [
+[
+"shop_gold",
+"When you encounter the Merchant"
+]
+],
+"by": "A=B"
+},
+"759129": {
+"tags": [
+[
+"upgrade",
+"Upgrade 1 of your Strikes and 1 of your Defends"
+]
+],
+"by": "A=B"
+},
+"759130": {
+"tags": [
+[
+"deck_modification",
+"add 1 Neow's Fury to your Deck"
+]
+],
+"by": "A=B"
+},
+"759131": {
+"tags": [
+[
+"transform",
+"Transform 1 card"
+]
+],
+"by": "A=B"
+},
+"759133": {
+"tags": [
+[
+"count_payoff",
+"Every time you play 10 Attacks"
+],
+[
+"resource_gain",
+"gain energy"
+]
+],
+"by": "A=B"
+},
+"759135": {
+"tags": [
+[
+"deck_modification",
+"Enchant all Strikes in your Deck"
+]
+],
+"by": "A=B"
+},
+"759150": {
+"tags": [
+[
+"deck_modification",
+"remove 5 cards from your Deck"
+],
+[
+"random_effect",
+"randomly add 1 back Upgraded"
+],
+[
+"upgrade",
+"Upgraded"
+]
+],
+"by": "C"
+},
+"759158": {
+"tags": [
+[
+"stat_multiply",
+"deals double damage"
+],
+[
+"count_payoff",
+"Every 10th Attack you play"
+]
+],
+"by": "A=B"
+},
+"759174": {
+"tags": [
+[
+"deck_modification",
+"remove 3 cards from your Deck"
+],
+[
+"junk_cards",
+"Add Folly to your Deck"
+]
+],
+"by": "A=B"
+},
+"759179": {
+"tags": [
+[
+"variety_payoff",
+"Attack, Skill, and Power each turn"
+],
+[
+"stat_gain",
+"gain 1 Strength and 1 Dexterity"
+]
+],
+"by": "A=B"
+},
+"759186": {
+"tags": [
+[
+"turn_start",
+"At the start of your first 3 turns"
+],
+[
+"draw",
+"draw 2 additional cards"
+],
+[
+"turn_number",
+"first 3 turns"
+]
+],
+"by": "C"
+},
+"759195": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"block_armor",
+"gain 7 Block"
+]
+],
+"by": "A=B"
+},
+"759206": {
+"tags": [
+[
+"permanent_loss",
+"lose all Gold"
+],
+[
+"upgrade",
+"Enchant all cards"
+]
+],
+"by": "C"
+},
+"759209": {
+"tags": [
+[
+"random_effect",
+"random Relic"
+]
+],
+"by": "A=B"
+},
+"759214": {
+"tags": [
+[
+"turn_start",
+"at the start of each turn"
+],
+[
+"resource_gain",
+"Gain energy"
+],
+[
+"rule_change",
+"Powers cost 1 more energy"
+]
+],
+"by": "C"
+},
+"759221": {
+"tags": [
+[
+"block_armor",
+"Up to 10 Block persists across turns"
+]
+],
+"by": "A=B"
+},
+"759228": {
+"tags": [
+[
+"spell_power",
+"increase it to 5"
+]
+],
+"by": "C"
+},
+"759235": {
+"tags": [
+[
+"transform",
+"replace your starter Relic with an Ancient version"
+]
+],
+"by": "A=B"
+},
+"759236": {
+"tags": [
+[
+"block_armor",
+"gain 3 Block"
+],
+[
+"discard",
+"Whenever you discard a card during your turn"
+]
+],
+"by": "A=B"
+},
+"759243": {
+"tags": [
+[
+"draw",
+"draw a card"
+],
+[
+"hand_size",
+"no cards in Hand"
+]
+],
+"by": "A=B"
+},
+"759257": {
+"tags": [
+[
+"items_consumables",
+"Potions always appear in combat rewards"
+]
+],
+"by": "A=B"
+},
+"759258": {
+"tags": [
+[
+"card_advantage",
+"additional Rare card reward"
+]
+],
+"by": "A=B"
+},
+"759276": {
+"tags": [
+[
+"resource_gain",
+"Gain energy"
+],
+[
+"draw",
+"Draw 2 cards"
+]
+],
+"by": "A=B"
+},
+"759278": {
+"tags": [
+[
+"cast_from_zone",
+"Play the top 3 cards of your Draw Pile"
+],
+[
+"deck_position",
+"top 3 cards of your Draw Pile"
+]
+],
+"by": "A=B"
+},
+"759282": {
+"tags": [
+[
+"items_consumables",
+"potion slots"
+],
+[
+"random_effect",
+"random potions"
+]
+],
+"by": "A=B"
+},
+"759292": {
+"tags": [
+[
+"stat_gain",
+"Gain 1 Strength and 1 Dexterity"
+]
+],
+"by": "A=B"
+},
+"759294": {
+"tags": [
+[
+"damage_reduction",
+"Gain 1 Intangible"
+]
+],
+"by": "A=B"
+},
+"759302": {
+"tags": [
+[
+"buff",
+"Gain 1 Ritual"
+]
+],
+"by": "C"
+},
+"759314": {
+"tags": [
+[
+"stat_loss",
+"ALL enemies lose 7 Strength this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "A=B"
+},
+"759316": {
+"tags": [
+[
+"generate_cards",
+"add into your Hand"
+],
+[
+"selection",
+"Choose 1 of 3 random Skill cards"
+],
+[
+"random_effect",
+"random Skill cards"
+],
+[
+"cost_set",
+"free to play this turn"
+]
+],
+"by": "A=B"
+},
+"759326": {
+"tags": [
+[
+"debuff",
+"Apply 3 Weak"
+]
+],
+"by": "A=B"
+},
+"759328": {
+"tags": [
+[
+"spell_power",
+"Shivs deal additional damage"
+]
+],
+"by": "C"
+},
+"759346": {
+"tags": [
+[
+"shield",
+"Prevent the next time you would lose HP"
+]
+],
+"by": "A=B"
+},
+"759354": {
+"tags": [
+[
+"draw",
+"draw 1 additional card"
+],
+[
+"turn_start",
+"At the start of your next turn"
+]
+],
+"by": "A=B"
+},
+"759361": {
+"tags": [
+[
+"damage_over_time",
+"apply 2 Poison to ALL enemies"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "C"
+},
+"759365": {
+"tags": [
+[
+"death_trigger",
+"When an ally dies"
+],
+[
+"stat_gain",
+"gains 5 Strength"
+],
+[
+"block_armor",
+"99 Block"
+]
+],
+"by": "A=B"
+},
+"759373": {
+"tags": [
+[
+"draw",
+"draw 1 card"
+]
+],
+"by": "A=B"
+},
+"759375": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"resource_gain",
+"gain 1 Energy"
+],
+[
+"draw",
+"draw 1 additional card"
+]
+],
+"by": "A=B"
+},
+"759377": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"permanent_growth",
+"gain 2 Strength"
+]
+],
+"by": "A=B"
+},
+"759404": {
+"tags": [
+[
+"cost_set",
+"costs 0 energy"
+]
+],
+"by": "A=B"
+},
+"759410": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"resource_gain",
+"gain star"
+]
+],
+"by": "A=B"
+},
+"759414": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"aoe_damage",
+"deal 6 damage to ALL enemies"
+]
+],
+"by": "A=B"
+},
+"759431": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"generate_cards",
+"add a Shiv into your Hand"
+]
+],
+"by": "A=B"
+},
+"759433": {
+"tags": [
+[
+"bodyguard",
+"redirected towards you"
+],
+[
+"team_play",
+"You are covering another player"
+]
+],
+"by": "A=B"
+},
+"759442": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"draw",
+"draw 1 additional card"
+]
+],
+"by": "A=B"
+},
+"759449": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a card this turn"
+],
+[
+"temporary_buff",
+"gain 1 Strength this turn"
+]
+],
+"by": "A=B"
+},
+"759455": {
+"tags": [
+[
+"rule_change",
+"You may not draw any more cards this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "C"
+},
+"759468": {
+"tags": [
+[
+"block_armor",
+"gains Block"
+]
+],
+"by": "A=B"
+},
+"759469": {
+"tags": [
+[
+"on_damaged",
+"Whenever this enemy is hit by an Attack"
+],
+[
+"junk_cards",
+"add Dazed into your Draw Pile"
+]
+],
+"by": "A=B"
+},
+"759470": {
+"tags": [
+[
+"retain",
+"Shivs gain Retain"
+],
+[
+"spell_power",
+"deals 9 additional damage"
+]
+],
+"by": "C"
+},
+"759479": {
+"tags": [
+[
+"resource_gain",
+"Gain an additional Energy next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"by": "A=B"
+},
+"759482": {
+"tags": [
+[
+"death_trigger",
+"When an enemy dies"
+],
+[
+"stat_gain",
+"gaining 1 Strength"
+],
+[
+"disable",
+"becoming Stunned"
+]
+],
+"by": "A=B"
+},
+"759487": {
+"tags": [
+[
+"regeneration",
+"Regen heals HP at the end of your turn"
+],
+[
+"turn_end",
+"at the end of your turn"
+]
+],
+"by": "C"
+},
+"759492": {
+"tags": [
+[
+"shop_gold",
+"gain 25 Gold"
+]
+],
+"by": "C"
+},
+"759496": {
+"tags": [
+[
+"block_armor",
+"Gain 3 Block next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"by": "A=B"
+},
+"759498": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"damage",
+"deal 4 damage to a random enemy"
+],
+[
+"random_effect",
+"random enemy"
+]
+],
+"by": "A=B"
+},
+"759502": {
+"tags": [
+[
+"debuff",
+"Attacks deal 30% less damage"
+]
+],
+"by": "C"
+},
+"759504": {
+"tags": [
+[
+"on_attack",
+"Whenever Osty hits this enemy this turn"
+],
+[
+"summon",
+"Summon 3"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "C"
+},
+"759507": {
+"tags": [
+[
+"damage",
+"they take 13 damage"
+]
+],
+"by": "C"
+},
+"759513": {
+"tags": [
+[
+"aoe_damage",
+"deal damage to ALL enemies"
+]
+],
+"by": "C"
+},
+"759516": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"generate_cards",
+"add 1 random Colorless card into your Hand"
+],
+[
+"random_effect",
+"random Colorless card"
+]
+],
+"by": "A=B"
+},
+"759528": {
+"tags": [
+[
+"on_spell",
+"Whenever you play a Power"
+],
+[
+"resource_gain",
+"gain 1 energy"
+]
+],
+"by": "C"
+},
+"759538": {
+"tags": [
+[
+"damage_reduction",
+"Allies take half damage from enemies"
+]
+],
+"by": "A=B"
+},
+"759558": {
+"tags": [
+[
+"draw",
+"draw 1 card"
+]
+],
+"by": "A=B"
+},
+"759582": {
+"tags": [
+[
+"in_hand_buff",
+"reduce its cost by 1 until it is played"
+],
+[
+"turn_end",
+"at the end of turn"
+]
+],
+"by": "A=B"
+},
+"759585": {
+"tags": [
+[
+"in_hand_buff",
+"This card gains Replay 1"
+],
+[
+"repeat_trigger",
+"Replay 1"
+]
+],
+"by": "C"
+},
+"759586": {
+"tags": [
+[
+"retain",
+"gains Retain"
+]
+],
+"by": "A=B"
+},
+"759588": {
+"tags": [
+[
+"cost_set",
+"Costs 0"
+],
+[
+"in_hand_buff",
+"deals 3 additional damage"
+]
+],
+"by": "A=B"
+},
+"759602": {
+"tags": [
+[
+"damage",
+"Dark Strike (9 damage)"
+],
+[
+"buff",
+"Incantation (buff, power)"
+]
+],
+"by": "A=B"
+},
+"759603": {
+"tags": [
+[
+"damage",
+"Stomp (15 damage)"
+],
+[
+"buff",
+"Stamp (buff, power)"
+],
+[
+"disable",
+"Stun (stun)"
+],
+[
+"debuff",
+"Beast Cry (debuff, power)"
+]
+],
+"by": "A=B"
+},
+"759607": {
+"tags": [
+[
+"damage",
+"Thrash (12 damage)"
+],
+[
+"multi_attack",
+"Bug Sting (multi_attack"
+],
+[
+"debuff",
+"debuff"
+],
+[
+"buff",
+"Adapt (buff, power)"
+],
+[
+"block_armor",
+"block 18"
+]
+],
+"by": "C"
+},
+"759608": {
+"tags": [
+[
+"damage",
+"RepeaterBlastMove (7 damage)"
+],
+[
+"multi_attack",
+"Expel (multi_attack, 5 damage)"
+],
+[
+"buff",
+"Charge Up (buff, power)"
+]
+],
+"by": "A=B"
+},
+"759613": {
+"tags": [
+[
+"damage",
+"Mandibles (8 damage)"
+],
+[
+"multi_attack",
+"Skitter (multi_attack)"
+],
+[
+"buff",
+"Enrage (buff, power)"
+],
+[
+"random_effect",
+"RAND ()"
+]
+],
+"by": "A=B"
+},
+"759616": {
+"tags": [
+[
+"disable",
+"Wake Up (stun)"
+],
+[
+"self_destruct",
+"Flee (escape)"
+]
+],
+"by": "C"
+},
+"759620": {
+"tags": [
+[
+"damage",
+"Tackle (9 damage)"
+],
+[
+"debuff",
+"Tackle (attack, debuff, 9 damage, power)"
+],
+[
+"multi_attack",
+"Lash (multi_attack, 3 damage)"
+]
+],
+"by": "A=B"
+},
+"759630": {
+"tags": [
+[
+"damage",
+"Jab (3 damage)"
+],
+[
+"multi_attack",
+"Whirlwind (multi_attack, 2 damage)"
+],
+[
+"random_effect",
+"INIT RAND ()"
+]
+],
+"by": "A=B"
+},
+"759646": {
+"tags": [
+[
+"damage",
+"Smash (16 damage)"
+],
+[
+"summon",
+"Lay Eggs (summon, power)"
+],
+[
+"debuff",
+"Tenderizer (attack, debuff, 7 damage, power)"
+],
+[
+"buff",
+"Nutritional Paste (buff, power)"
+]
+],
+"by": "A=B"
+},
+"759648": {
+"tags": [
+[
+"damage",
+"Slam (16 damage)"
+]
+],
+"by": "A=B"
+},
+"759664": {
+"tags": [
+[
+"damage",
+"Tackle (9 damage)"
+],
+[
+"disable",
+"Wake Up (stun)"
+]
+],
+"by": "A=B"
+},
+"759665": {
+"tags": [
+[
+"damage",
+"Gaze (7 damage)"
+],
+[
+"junk_cards",
+"Beckon (status)"
+],
+[
+"buff",
+"Fade (buff, power)"
+],
+[
+"debuff",
+"Scream (attack, debuff, 13 damage, power)"
+]
+],
+"by": "A=B"
+},
+"759677": {
+"tags": [
+[
+"damage",
+"Piercing Gaze (10 damage)"
+],
+[
+"summon",
+"Illusion (summon)"
+],
+[
+"buff",
+"Sail (buff, power)"
+],
+[
+"block_armor",
+"block 6"
+]
+],
+"by": "A=B"
+},
+"759684": {
+"tags": [
+[
+"damage",
+"UnloadMove (3 damage x5)"
+],
+[
+"multi_attack",
+"Unload! (multi_attack, 3 damage)"
+],
+[
+"buff",
+"Reload (buff, power)"
+]
+],
+"by": "A=B"
+},
+"759687": {
+"tags": [
+[
+"damage",
+"Scratch (8 damage)"
+],
+[
+"debuff",
+"Screech (debuff, power)"
+],
+[
+"summon",
+"Call for Backup (summon)"
+]
+],
+"by": "A=B"
+},
+"759691": {
+"tags": [
+[
+"damage",
+"Nasty Bite (6 damage)"
+],
+[
+"buff",
+"Wriggle (buff, status, power)"
+],
+[
+"disable",
+"Spawned (stun)"
+]
+],
+"by": "A=B"
+},
+"759695": {
+"tags": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"random_effect",
+"1 random Potion"
+],
+[
+"upgrade",
+"Upgrade 2 random cards"
+]
+],
+"by": "A=B"
+},
+"759709": {
+"tags": [
+[
+"modal_choice",
+"Choices"
+]
+],
+"by": "A=B"
+},
+"759721": {
+"tags": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"selection",
+"Choose 2 of 8 random Common cards"
+],
+[
+"random_effect",
+"random Common cards"
+],
+[
+"deck_modification",
+"add to your Deck"
+],
+[
+"life_payment",
+"Lose 14 HP"
+]
+],
+"by": "C"
+},
+"759725": {
+"tags": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"life_payment",
+"Lose X HP"
+],
+[
+"random_effect",
+"randomized"
+],
+[
+"deck_modification",
+"A random card is removed from your Deck"
+]
+],
+"by": "A=B"
+},
+"759728": {
+"tags": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"random_effect",
+"Lose a random Potion"
+],
+[
+"stat_gain",
+"Gain 10 Max HP"
+],
+[
+"life_payment",
+"Lose 6 HP"
+],
+[
+"upgrade",
+"Enchant an Attack with Vigorous 8"
+]
+],
+"by": "C"
+},
+"759735": {
+"tags": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"shop_gold",
+"Gain 100 Gold"
+]
+],
+"by": "C"
+},
+"759740": {
+"tags": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"permanent_loss",
+"Lose 8 Max HP"
+],
+[
+"random_effect",
+"random Relic"
+],
+[
+"heal",
+"Heal to full HP"
+],
+[
+"junk_cards",
+"Receive Poor Sleep"
+]
+],
+"by": "A=B"
+},
+"759757": {
+"tags": [
+[
+"difficulty_modifiers",
+"All enemies have deadlier attacks"
+]
+],
+"by": "A=B"
+},
+"816333": {
+"tags": [
+[
+"block_armor",
+"Gain 9 Block"
+],
+[
+"exhaust",
+"Exhaust 1 card"
+]
+],
+"by": "A=B"
+},
+"816342": {
+"tags": [
+[
+"repeat_trigger",
+"played an extra time"
+],
+[
+"temporary_effect",
+"This turn"
+]
+],
+"by": "A=B"
+},
+"816358": {
+"tags": [
+[
+"combat_start",
+"Innate"
+],
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"block_armor",
+"gain 1 Block"
+]
+],
+"by": "C"
+},
+"816375": {
+"tags": [
+[
+"combat_start",
+"Innate"
+],
+[
+"permanent_growth",
+"Whenever you create a card, gain 1 Strength"
+]
+],
+"by": "C"
+},
+"816389": {
+"tags": [
+[
+"debuff",
+"Apply 10 Doom"
+],
+[
+"condition_count",
+"for every 10 Doom already on this enemy"
+]
+],
+"by": "C"
+},
+"816392": {
+"tags": [
+[
+"debuff",
+"apply that much Doom"
+],
+[
+"team_play",
+"other players"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "C"
+},
+"816395": {
+"tags": [
+[
+"combat_start",
+"Innate"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"generate_cards",
+"add 1 random card into your Hand"
+],
+[
+"random_effect",
+"random card"
+]
+],
+"by": "C"
+},
+"816399": {
+"tags": [
+[
+"retain",
+"Retain"
+],
+[
+"damage",
+"Deal damage equal to the enemy's Doom"
+],
+[
+"condition_count",
+"damage equal to the enemy's Doom"
+]
+],
+"by": "C"
+},
+"816410": {
+"tags": [
+[
+"damage",
+"Deal 4 damage"
+],
+[
+"repeat_trigger",
+"Trigger all Lightning against the enemy twice"
+]
+],
+"by": "A=B"
+},
+"816416": {
+"tags": [
+[
+"slots_queue",
+"Channel 1 Lightning"
+]
+],
+"by": "C"
+},
+"816425": {
+"tags": [
+[
+"stat_gain",
+"Gain 1 Strength"
+]
+],
+"by": "A=B"
+},
+"816427": {
+"tags": [
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"deck_position",
+"on top of your Draw Pile"
+]
+],
+"by": "C"
+},
+"816438": {
+"tags": [
+[
+"tutor",
+"Put an Attack from your Draw Pile into your Hand"
+]
+],
+"by": "A=B"
+},
+"816444": {
+"tags": [
+[
+"exhaust",
+"Exhaust."
+]
+],
+"by": "A=B"
+},
+"816447": {
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+]
+],
+"by": "A=B"
+},
+"816453": {
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+],
+[
+"retain",
+"Retain"
+]
+],
+"by": "A=B"
+},
+"816455": {
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+],
+[
+"combat_start",
+"Innate"
+]
+],
+"by": "C"
+}
+}

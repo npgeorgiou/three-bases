@@ -1,0 +1,837 @@
+{
+"788441": [
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"buff",
+"add 1 to the Hit roll"
+],
+[
+"temporary_buff",
+"until the end of the turn"
+],
+[
+"combo_sequence",
+"Each time this model makes a Charge move"
+],
+[
+"merge_attach",
+"This model can be attached to the following unit"
+]
+],
+"787152": [
+[
+"damage_reduction",
+"4+ Invulnerable save"
+],
+[
+"merge_attach",
+"This model can be attached to the following unit"
+],
+[
+"on_play",
+"Each time this model is set-up on the battlefield"
+],
+[
+"temporary_buff",
+"until the end of the turn"
+],
+[
+"buff",
+"scores a Critical Hit"
+],
+[
+"turn_end",
+"at the end of your opponent's turn"
+],
+[
+"return_to_hand",
+"remove it from the battlefield and place it into Strategic Reserves"
+],
+[
+"reserve_bench",
+"Strategic Reserves"
+],
+[
+"placement_rules",
+"can be set-up anywhere on the battlefield that is more than 6\" horizontally away from all enemy models"
+]
+],
+"785450": [
+[
+"start_of_game",
+"At the start of the first battle round"
+],
+[
+"mark_target",
+"to be this model's prey"
+],
+[
+"buff",
+"you can re-roll the Hit roll and you can re-roll the Wound roll"
+]
+],
+"786351": [
+[
+"stealth",
+"Stealth abilities"
+],
+[
+"transform",
+"remove the Tacticus keyword, add the Phobos keyword"
+],
+[
+"merge_attach",
+"replace the list of units this model can be attached to"
+]
+],
+"786958": [
+[
+"stress_morale",
+"Battle-shock or Leadership test"
+],
+[
+"random_effect",
+"you can re-roll that test"
+]
+],
+"786040": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"combat_start",
+"at the start of the Fight phase"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"buff",
+"[SUSTAINED HITS 3] ability"
+],
+[
+"tribal",
+"Adeptus Astartes model only"
+]
+],
+"787274": [],
+"786079": [
+[
+"buff",
+"[LETHAL HITS] ability"
+],
+[
+"control_reward",
+"within range of your Vowed objective marker"
+],
+[
+"tribal",
+"Deathwing model only"
+]
+],
+"786655": [
+[
+"reactions",
+"Each time an enemy unit is selected to shoot, after that unit has shot"
+],
+[
+"death_trigger",
+"if any models from the bearer’s unit were destroyed"
+],
+[
+"movement",
+"Surge move"
+],
+[
+"random_effect",
+"roll one D6"
+]
+],
+"788652": [
+[
+"placement_rules",
+"can be set up or end any type of move on top of the platform section"
+],
+[
+"terrain",
+"platform section of this Fortification"
+],
+[
+"damage_reduction",
+"5+ invulnerable save against ranged attacks"
+],
+[
+"turn_end",
+"At the end of your Movement phase"
+],
+[
+"heal",
+"regains up to D3 lost wounds"
+]
+],
+"785635": [
+[
+"turn_end",
+"At the end of your Command phase"
+],
+[
+"control_reward",
+"within range of your Acquisition objective marker"
+],
+[
+"random_effect",
+"roll one D6: on a 4+"
+],
+[
+"resource_gain",
+"you gain 1CP"
+]
+],
+"787609": [
+[
+"damage_reduction",
+"5+ invulnerable save"
+],
+[
+"zone_of_control",
+"Falls Back, models in that enemy unit must take Desperate Escape tests"
+],
+[
+"stress_morale",
+"Battle-shocked"
+],
+[
+"debuff",
+"subtract 1 from each of those Desperate Escape tests"
+]
+],
+"787151": [
+[
+"damage_reduction",
+"halve the Damage characteristic of that attack"
+],
+[
+"aura",
+"The Bloody Handed (Aura)"
+],
+[
+"movement",
+"add 1 to Advance and Charge rolls"
+],
+[
+"condition_life",
+"While this model has 1-5 wounds remaining"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+]
+],
+"787402": [
+[
+"damage_reduction",
+"5+ invulnerable save"
+],
+[
+"on_kill",
+"destroyed one or more enemy units"
+],
+[
+"turn_end",
+"At the end of the Fight phase"
+],
+[
+"stat_gain",
+"add 1 to the Attacks characteristic"
+],
+[
+"permanent_growth",
+"until the end of the battle, add 1 to the Attacks characteristic"
+]
+],
+"787898": [
+[
+"on_attack",
+"after this model has shot"
+],
+[
+"stress_morale",
+"Battle-shock test"
+],
+[
+"tribal",
+"Infantry unit"
+]
+],
+"784295": [
+[
+"on_enemy_enter",
+"ends a Normal or Advance move within 6\""
+],
+[
+"reactions",
+"Each time an enemy unit (excluding AIRCRAFT) ends a Normal or Advance move"
+],
+[
+"movement",
+"Surge move"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"tribal",
+"LEGIONES DAEMONICA KHORNE units"
+]
+],
+"786229": [
+[
+"immunity",
+"ignore any or all modifiers to that attack's Ballistic Skill characteristic"
+]
+],
+"788123": [
+[
+"aura",
+"Wisdom of the Ancients [Aura]"
+],
+[
+"buff",
+"re-roll a Hit roll of 1"
+],
+[
+"tribal",
+"Adeptus Astartes Infantry unit"
+]
+],
+"788428": [
+[
+"damage_reduction",
+"5+ invulnerable save"
+],
+[
+"aura",
+"Phase Shift Generator (Aura)"
+],
+[
+"protection",
+"has the Benefit of Cover against that attack"
+],
+[
+"terrain",
+"because of this Fortification"
+],
+[
+"condition_life",
+"While this model has 1-7 wounds remaining"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+]
+],
+"788276": [
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"stat_gain",
+"improve the Objective Control characteristic"
+],
+[
+"buff",
+"add 1 to the Hit roll"
+],
+[
+"modal_choice",
+"select one of the following abilities"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"merge_attach",
+"This model can be attached to the following units"
+]
+],
+"788549": [
+[
+"movement",
+"add 6\" to the Move characteristic"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"merge_attach",
+"it can be attached to this unit instead"
+]
+],
+"815491": [
+[
+"friendly_fire",
+"your Warlord suffers D3 mortal wounds"
+],
+[
+"start_of_game",
+"At the start of the first turn"
+],
+[
+"random_effect",
+"D3"
+]
+],
+"787944": [
+[
+"buff",
+"[ASSAULT] ability"
+],
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"support",
+"This Officer can issue up to 1 Order"
+]
+],
+"786952": [
+[
+"play_restriction",
+"You cannot use any Stratagems to affect this unit"
+],
+[
+"immunity",
+"cannot be Marked for Greatness"
+]
+],
+"788230": [
+[
+"protection",
+"subtract 1 from the Wound roll"
+],
+[
+"stat_condition",
+"if the Strength characteristic of that attack is greater than this model's Toughness characteristic"
+],
+[
+"turn_start",
+"At the start of your Command phase"
+],
+[
+"resource_gain",
+"you gain 1 CP"
+],
+[
+"damage_reduction",
+"Invulnerable Save: 5+"
+]
+],
+"784888": [
+[
+"random_effect",
+"roll one D6: on a 5+"
+],
+[
+"resource_gain",
+"you gain 1CP"
+]
+],
+"786983": [
+[
+"rule_change",
+"You can target this unit with Stratagems even while it is Battle-shocked"
+],
+[
+"stress_morale",
+"Battle-shocked"
+]
+],
+"788098": [
+[
+"damage_reduction",
+"halve the Damage characteristic of that attack"
+],
+[
+"merge_attach",
+"This model can be attached to the following units"
+]
+],
+"787206": [
+[
+"aura",
+"Pain Engine (Aura)"
+],
+[
+"coin_economy",
+"spend 1 Pain token"
+],
+[
+"resource_gain",
+"you gain 1 Pain token"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"damage_reduction",
+"6+ Invulnerable save"
+],
+[
+"on_kill",
+"if one or more enemy models were destroyed as a result of those attacks"
+],
+[
+"heal",
+"regains up to 3 lost wounds"
+],
+[
+"revive",
+"1 model is returned to this unit"
+]
+],
+"785306": [
+[
+"on_attack",
+"after this model has shot"
+],
+[
+"immobilize",
+"that unit is ensnared"
+],
+[
+"stat_loss",
+"subtract 2 from its Move characteristic"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+],
+[
+"tribal",
+"enemy Infantry unit"
+]
+],
+"786490": [
+[
+"immunity",
+"ignore any or all modifiers to the Leadership characteristic"
+],
+[
+"random_effect",
+"re-roll failed Out of Action tests"
+]
+],
+"784532": [
+[
+"buff",
+"[ASSAULT] ability"
+],
+[
+"tribal",
+"Orks Infantry and Orks Walker models"
+],
+[
+"condition_count",
+"While the Waaagh! is active"
+]
+],
+"786766": [
+[
+"movement",
+"Add 2\" to the Move characteristic"
+],
+[
+"first_strike",
+"Fights First ability"
+],
+[
+"tribal",
+"Mounted Waaagh!boss model only"
+]
+],
+"788481": [
+[
+"movement",
+"set it up again anywhere on the battlefield that is more than 9\" horizontally away from all enemy models"
+],
+[
+"blink",
+"remove it from the battlefield and set it up again"
+]
+],
+"786133": [
+[
+"placement_rules",
+"Deep Strike ability"
+],
+[
+"tribal",
+"ADEPTUS ASTARTES model only"
+]
+],
+"787241": [
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"damage_reduction",
+"4+ Invulnerable save"
+],
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"damage_reduction",
+"Feel No Pain 6+"
+],
+[
+"adjacency",
+"within 3\" of one or more friendly Wraith Construct"
+],
+[
+"heal",
+"regains up to D3 lost wounds"
+],
+[
+"turn_start",
+"In your Command phase"
+],
+[
+"tribal",
+"Wraith Construct or Asuryani Vehicle"
+]
+],
+"787177": [
+[
+"damage_reduction",
+"4+ invulnerable save"
+],
+[
+"movement",
+"ignore any vertical distance"
+]
+],
+"785270": [
+[
+"debuff",
+"subtract 1 from the Hit roll"
+],
+[
+"temporary_effect",
+"Until the start of your next Shooting phase"
+],
+[
+"condition_count",
+"12+"
+],
+[
+"targeting_rules",
+"within 24\" of and visible to the manifesting model"
+]
+],
+"786914": [
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"buff",
+"[SUSTAINED HITS 1] ability"
+]
+],
+"786392": [
+[
+"aura",
+"While the bearer is leading a unit"
+],
+[
+"placement_rules",
+"Deep Strike ability"
+]
+],
+"786789": [
+[
+"stat_gain",
+"its Toughness and Wounds characteristic to 6"
+],
+[
+"transform",
+"Remove the Infantry keyword"
+],
+[
+"merge_attach",
+"replace the list of units this model can be attached to"
+]
+],
+"788247": [
+[
+"on_damaged",
+"if this model lost one or more wounds as a result of those attacks"
+],
+[
+"reactions",
+"Each time an enemy unit is selected to shoot, after that unit has shot"
+],
+[
+"movement",
+"Bestial Rage move"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"buff",
+"TWIN-LINKED ability"
+]
+],
+"786094": [
+[
+"reactions",
+"when an enemy unit ends a Normal, Advance or Fall Back move within 9\""
+],
+[
+"on_enemy_enter",
+"ends a Normal, Advance or Fall Back move within 9\" of the bearer’s unit"
+],
+[
+"movement",
+"make a Normal move of up to D6\""
+],
+[
+"tribal",
+"Adeptus Astartes Psyker model only"
+]
+],
+"786049": [
+[
+"aura",
+"While the bearer is leading a unit"
+],
+[
+"damage_reduction",
+"Feel No Pain 6+"
+],
+[
+"stress_morale",
+"Battle-shocked"
+],
+[
+"comeback",
+"While that unit is Battle-shocked"
+]
+],
+"784274": [
+[
+"death_trigger",
+"Each time an Asuryani Psyker model from your army is destroyed"
+],
+[
+"mark_target",
+"gains a Vengeful Dead token"
+],
+[
+"buff",
+"add 1 to the Hit roll and add 1 to the Wound roll"
+],
+[
+"aura",
+"Spirit Guides (Aura)"
+],
+[
+"type_grant",
+"gains the Battleline keyword"
+],
+[
+"tribal",
+"Wraith Construct model"
+]
+],
+"787089": [
+[
+"buff",
+"re-roll a Hit roll of 1"
+]
+],
+"787099": [
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"control_reward",
+"friendly units within range of that objective marker have a 5+ invulnerable save"
+],
+[
+"damage_reduction",
+"5+ invulnerable save"
+]
+],
+"787462": [
+[
+"adjacency",
+"within 3\" of one or more friendly Death Guard Infantry units"
+],
+[
+"stealth",
+"Lone Operative ability"
+],
+[
+"damage_reduction",
+"4+ invulnerable save"
+],
+[
+"cost_reduction",
+"reduce the CP cost of that Stratagem by 1CP"
+],
+[
+"aura",
+"Miasma of Pestilence (Aura)"
+],
+[
+"protection",
+"Benefit of Cover against that attack"
+],
+[
+"tribal",
+"Death Guard unit"
+]
+],
+"788135": [
+[
+"on_attack",
+"after this unit has shot"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+]
+],
+"787416": [
+[
+"targeting_rules",
+"can target enemy units within Engagement Range of it"
+],
+[
+"immunity",
+"does not suffer the penalty to its Hit rolls"
+]
+]
+}

@@ -1,0 +1,72 @@
+797889 | The Box | Each turn this is in your hand, transform it into a random treasure.
+   A: [["transform", "transform it into a random treasure"], ["random_effect", "random treasure"], ["in_hand_buff", "Each turn this is in your hand"]]
+   B: [["transform", "transform it into a random treasure"], ["random_effect", "a random treasure"]]
+797960 | Twist - The Carts | Both players can only have four minions.
+   A: [["board_limit", "Both players can only have four minions"], ["rule_change", "Both players can only have four minions"], ["symmetric_effect", "Both players"]]
+   B: [["board_limit", "Both players can only have four minions"], ["rule_change", "Both players can only have four minions"]]
+797994 | Improvised Explosive | Casts When Drawn Take 3 damage.
+   A: [["free_play", "Casts When Drawn"], ["friendly_fire", "Take 3 damage"]]
+   B: [["friendly_fire", "Take 3 damage"]]
+798014 | The Egg of Khelos (created) | Deathrattle: Summon a very cracked Egg. (Break 3 times to hatch a 20/20 Beast with Taunt!)
+   A: [["death_trigger", "Deathrattle"], ["summon", "Summon a very cracked Egg"], ["transform", "Break 3 times to hatch a 20/20 Beast with Taunt"], ["condition_count", "Break 3 times"], ["taunt", "Taunt"]]
+   B: [["death_trigger", "Deathrattle"], ["summon", "Summon a very cracked Egg"], ["condition_count", "Break 3 times to hatch"], ["taunt", "with Taunt"]]
+798306 | Caltrops | Passive After your opponent plays a minion, deal 1 damage to it.
+   A: [["passive", "Passive"], ["reactions", "After your opponent plays a minion"], ["on_enemy_enter", "After your opponent plays a minion"], ["ping", "deal 1 damage to it"]]
+   B: [["passive", "Passive"], ["on_enemy_enter", "After your opponent plays a minion"], ["ping", "deal 1 damage to it"]]
+798440 | Wailing Rhapsody | Deal 3 damage to all minions. Summon a 5/5 Demon. (Changes each turn.)
+   A: [["aoe_damage", "Deal 3 damage to all minions"], ["friendly_fire", "all minions"], ["summon", "Summon a 5/5 Demon"], ["in_hand_buff", "(Changes each turn.)"]]
+   B: [["aoe_damage", "Deal 3 damage to all minions"], ["friendly_fire", "to all minions"], ["summon", "Summon a 5/5 Demon"], ["random_effect", "(Changes each turn.)"]]
+798623 | Unstable Evolution (created) | Transform a friendly minion into one that costs (1) more. Repeatable this turn.
+   A: [["transform", "Transform a friendly minion into one that costs (1) more"], ["repeat_trigger", "Repeatable this turn"], ["temporary_effect", "this turn"]]
+   B: [["transform", "Transform a friendly minion into one that costs (1) more"], ["repeat_trigger", "Repeatable this turn"]]
+798707 | Flickering Lightbot (created) | Gigantic Costs (1) less for each Holy spell you've cast this game.
+   A: [["summon", "Gigantic"], ["cost_reduction", "Costs (1) less"], ["count_payoff", "for each Holy spell you've cast this game"]]
+   B: [["summon", "Gigantic"], ["cost_reduction", "Costs (1) less"], ["count_payoff", "for each Holy spell you've cast this game"], ["tribal", "Holy spell"]]
+798825 | Stonebound Gargon (created) | Infused Rush. Also damages the minions next to whomever this attacks.
+   A: [["kicker", "Infused"], ["haste", "Rush"], ["multi_target_attack", "Also damages the minions next to whomever this attacks"], ["adjacency", "minions next to"]]
+   B: [["haste", "Rush"], ["multi_target_attack", "Also damages the minions next to whomever this attacks"], ["adjacency", "the minions next to"]]
+799150 | Sam the Wise | At the start of your turn, restore 3 Health to himself. Deathrattle: Gift the Metal Brew and advance fight.
+   A: [["turn_start", "At the start of your turn"], ["regeneration", "restore 3 Health to himself"], ["death_trigger", "Deathrattle"]]
+   B: [["turn_start", "At the start of your turn"], ["regeneration", "restore 3 Health to himself"], ["death_trigger", "Deathrattle"], ["boss_phases", "advance fight"]]
+799218 | Spirit of Air | Elusive Deathrattle: Advance fight and restore 15 Health to Thrall.
+   A: [["immunity", "Elusive"], ["death_trigger", "Deathrattle"], ["heal", "restore 15 Health to Thrall"]]
+   B: [["immunity", "Elusive"], ["death_trigger", "Deathrattle"], ["boss_phases", "Advance fight"], ["heal", "restore 15 Health to Thrall"]]
+799265 | Way of the Archdruid | Choose One - Deal 8 damage to random enemies or restore 8 Health to random friendly characters.
+   A: [["modal_choice", "Choose One"], ["distribute", "Deal 8 damage to random enemies"], ["random_effect", "random enemies"], ["heal", "restore 8 Health to random friendly characters"]]
+   B: [["modal_choice", "Choose One"], ["damage", "Deal 8 damage to random enemies"], ["random_effect", "random enemies"], ["heal", "restore 8 Health to random friendly characters"]]
+799286 | Forgotten Clan Shaman (created) | Battlecry: Return all enemy minions to your opponent's hand.
+   A: [["on_play", "Battlecry"], ["bounce_enemy", "Return all enemy minions to your opponent's hand"], ["board_wipe", "Return all enemy minions to your opponent's hand"]]
+   B: [["on_play", "Battlecry"], ["bounce_enemy", "Return all enemy minions to your opponent's hand"]]
+799303 | Teron'gor | Battlecry: Destroy a minion. If drawn this turn, instead destroy all enemy minions.
+   A: [["on_play", "Battlecry"], ["destroy", "Destroy a minion"], ["board_wipe", "destroy all enemy minions"]]
+   B: [["on_play", "Battlecry"], ["destroy", "Destroy a minion"], ["hand_position", "If drawn this turn"], ["board_wipe", "destroy all enemy minions"]]
+799612 | Defend the Squirrels | Questline: Gain 5 Attack with your hero. Reward: Gain 5 Armor and draw a card.
+   A: [["quests", "Questline"], ["temporary_buff", "Gain 5 Attack with your hero"], ["damage_reduction", "Gain 5 Armor"], ["draw", "draw a card"]]
+   B: [["quests", "Questline: Gain 5 Attack with your hero"], ["block_armor", "Gain 5 Armor"], ["draw", "draw a card"]]
+799744 | Titanographer Osk (created) | Battlecry: Send all other minions into the Twisting Nether.
+   A: [["on_play", "Battlecry"], ["board_wipe", "Send all other minions into the Twisting Nether"], ["friendly_fire", "all other minions"]]
+   B: [["on_play", "Battlecry"], ["board_wipe", "Send all other minions into the Twisting Nether"]]
+799839 | Krag'wa's Lure | Shrine After you Overload, give your minions that much Attack.
+   A: [["overload_debt", "After you Overload"], ["stat_gain", "give your minions that much Attack"], ["variable_stats", "that much Attack"]]
+   B: [["overload_debt", "After you Overload"], ["stat_gain", "give your minions that much Attack"]]
+799914 | Lobstrok Tastetester | After you cast a spell, draw a spell from your deck. It costs (2) less.
+   A: [["on_spell", "After you cast a spell"], ["tutor", "draw a spell from your deck"], ["in_hand_buff", "It costs (2) less"]]
+   B: [["on_spell", "After you cast a spell"], ["tutor", "draw a spell from your deck"], ["cost_reduction", "It costs (2) less"]]
+799971 | Control the Makers | Both heroes have +1 Attack on their turns.
+   A: [["symmetric_effect", "Both heroes have +1 Attack on their turns"], ["stat_gain", "+1 Attack"]]
+   B: [["symmetric_effect", "Both heroes have +1 Attack"], ["temporary_buff", "+1 Attack on their turns"]]
+800104 | Disks of Legend | Passive After you play a Legendary minion, summon a copy of it.
+   A: [["passive", "Passive"], ["on_ally_play", "After you play a Legendary minion"], ["copy", "summon a copy of it"], ["summon", "summon a copy of it"]]
+   B: [["passive", "Passive"], ["on_ally_play", "After you play a Legendary minion"], ["copy", "summon a copy of it"]]
+800240 | Choose Your Path | Discover a card.
+   A: [["selection", "Discover a card"], ["generate_cards", "Discover a card"]]
+   B: [["selection", "Discover a card"]]
+800252 | Eruption | Casts When Drawn Deal $@ damage to all enemies.
+   A: [["free_play", "Casts When Drawn"], ["aoe_damage", "damage to all enemies"]]
+   B: [["aoe_damage", "Deal $@ damage to all enemies"]]
+800285 | Seabreeze Chalice (created) | Deal 2 damage randomly split among all enemy minions. (Last Drink!)
+   A: [["distribute", "Deal 2 damage randomly split among all enemy minions"], ["random_effect", "randomly split"], ["self_destruct", "Last Drink!"]]
+   B: [["distribute", "Deal 2 damage randomly split among all enemy minions"], ["random_effect", "randomly split"]]
+800329 | Culling of Stratholme | Casts When Drawn Deal 2 damage to all enemies.
+   A: [["free_play", "Casts When Drawn"], ["aoe_damage", "Deal 2 damage to all enemies"]]
+   B: [["aoe_damage", "Deal 2 damage to all enemies"]]

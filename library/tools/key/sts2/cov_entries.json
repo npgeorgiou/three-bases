@@ -1,0 +1,977 @@
+[
+{
+"id": 758763,
+"name": "Patter",
+"text": "Gain 8 Block. Gain 2 Vigor."
+},
+{
+"id": 759477,
+"name": "Prep Time",
+"text": "At the start of your turn, gain 4 Vigor."
+},
+{
+"id": 758915,
+"name": "Terraforming",
+"text": "Gain 6 Vigor."
+},
+{
+"id": 758968,
+"name": "Akabeko",
+"text": "At the start of each combat, gain 8 Vigor."
+},
+{
+"id": 759015,
+"name": "The Chosen Cheese",
+"text": "At the end of combat, gain 1 Max HP."
+},
+{
+"id": 759047,
+"name": "Mango???",
+"text": "Upon pickup, raise your Max HP by 3."
+},
+{
+"id": 759742,
+"name": "Waterlogged Scriptorium",
+"text": "Choices: Bloody Ink: Gain 6 Max HP. | Prickly Sponge: Pay 99 Gold. Enchant 2 cards with Steady. | Tentacle Quill: Pay 55 Gold. Enchant a card with Steady."
+},
+{
+"id": 758507,
+"name": "Conqueror",
+"text": "Forge 3. Sovereign Blade deals double damage to the enemy this turn."
+},
+{
+"id": 758606,
+"name": "Flanking",
+"text": "The enemy takes double attack damage from other players this turn."
+},
+{
+"id": 759575,
+"name": "Instinct",
+"text": "This card's attack damage is doubled."
+},
+{
+"id": 758911,
+"name": "Tank",
+"text": "Take double damage from enemies. Allies take half damage from enemies."
+},
+{
+"id": 759299,
+"name": "Liquid Bronze",
+"text": "Gain 3 Thorns."
+},
+{
+"id": 759397,
+"name": "Flame Barrier",
+"text": "Whenever you are attacked this turn, deal 4 damage back."
+},
+{
+"id": 758483,
+"name": "Caltrops",
+"text": "Whenever you are attacked, deal 3 damage back."
+},
+{
+"id": 758605,
+"name": "Flame Barrier",
+"text": "Gain 12 Block. Whenever you are attacked this turn, deal 4 damage back."
+},
+{
+"id": 759002,
+"name": "Bronze Scales",
+"text": "Start each combat with 3 Thorns."
+},
+{
+"id": 759658,
+"name": "Skulking Colony",
+"text": "Actions: Inertia (9 damage); Piercing Stabs (7 damage); ZoomMove (14 damage); Zoom (attack, 14 damage); Zoom Move 2 (attack, 14 damage); Inertia (attack, buff, 9 damage, power); Piercing Stabs (multi_attack, 7 damage)"
+},
+{
+"id": 759683,
+"name": "Tunneler",
+"text": "Actions: Bite (13 damage); Bite (attack, 13 damage); Burrow (buff, defend, power, block 32); Attack from Below (attack, 23 damage); Dizzy (stun)"
+},
+{
+"id": 759497,
+"name": "Sentry Mode",
+"text": "At the start of your turn, add 1 Sweeping Gaze into your Hand."
+},
+{
+"id": 758836,
+"name": "Sentry Mode",
+"text": "At the start of your turn, add 1 Sweeping Gaze into your Hand."
+},
+{
+"id": 759642,
+"name": "Mecha Knight",
+"text": "Actions: Charge (25 damage); Heavy Cleave (35 damage); Charge (attack); Flamethrower (status); Windup (defend, buff, power, block 15); Heavy Cleave (attack)"
+},
+{
+"id": 758545,
+"name": "Defragment",
+"text": "Gain 1 Focus."
+},
+{
+"id": 759638,
+"name": "Living Shield",
+"text": "Actions: Shield Slam (6 damage); Smash (16 damage); Shield Slam (attack); Smash (attack, buff, 16 damage, power)"
+},
+{
+"id": 759301,
+"name": "Lucky Tonic",
+"text": "Gain 1 Buffer."
+},
+{
+"id": 759640,
+"name": "Magi Knight",
+"text": "Actions: Power Shield (6 damage); Ram (10 damage); Power Shield (attack, defend, 6 damage, block 5); Dampen (debuff); Prep (defend, block 5); Magic Bomb (attack, 35 damage); Ram (attack, 10 damage)"
+},
+{
+"id": 758587,
+"name": "Expose",
+"text": "Remove all Artifact and Block from the enemy. Apply 2 Vulnerable. Exhaust."
+},
+{
+"id": 759364,
+"name": "Covered",
+"text": "An ally is covering you. All attacks that would be directed to you are redirected to them instead."
+},
+{
+"id": 759594,
+"name": "Big Dummy",
+"text": "Actions: Nothing (hidden)"
+},
+{
+"id": 758744,
+"name": "Not Yet",
+"text": "Heal 10 HP. Exhaust."
+},
+{
+"id": 759114,
+"name": "Meal Ticket",
+"text": "Whenever you enter a shop room, heal 15 HP."
+},
+{
+"id": 759696,
+"name": "Brain Leech",
+"text": "Choices: Rip the Leech Off: Lose 5 HP. Gain a Colorless card reward. | Share Knowledge: Choose 1 of 5 random cards to add to your Deck."
+},
+{
+"id": 759666,
+"name": "Soul Nexus",
+"text": "Actions: Soul Burn (29 damage); Maelstrom (6 damage); Drain Life (18 damage); Soul Burn (attack, 29 damage); Maelstrom (multi_attack, 6 damage); Drain Life (attack, debuff, 18 damage, power, power)"
+},
+{
+"id": 759659,
+"name": "Slimed Berserker",
+"text": "Actions: Furious Pummeling (4 damage x4); SmotherMove (30 damage); Vomit Ichor (status); Leeching Hug (debuff, buff, power, power); Smother (attack, 30 damage); Furious Pummeling (multi_attack, 4 damage)"
+},
+{
+"id": 759313,
+"name": "Regen Potion",
+"text": "Gain 5 Regen."
+},
+{
+"id": 759044,
+"name": "Blood Vial???",
+"text": "At the start of each combat, heal 1 HP."
+},
+{
+"id": 759003,
+"name": "Burning Blood",
+"text": "At the end of combat, heal 6 HP."
+},
+{
+"id": 759116,
+"name": "Meat on the Bone",
+"text": "If your HP is at or below 50% at the end of combat, heal 12 HP."
+},
+{
+"id": 816428,
+"name": "Anointed+",
+"text": "Retain. Put every Rare card from your Draw Pile into your Hand. Exhaust."
+},
+{
+"id": 758614,
+"name": "Foregone Conclusion",
+"text": "Next turn, put 2 cards from your Draw Pile into your Hand."
+},
+{
+"id": 759087,
+"name": "Jeweled Mask",
+"text": "At the start of each combat, put a random Power from your Draw Pile into your Hand. It's free to play this combat."
+},
+{
+"id": 758497,
+"name": "Cleanse",
+"text": "Summon 3. Exhaust 1 card from your Draw Pile."
+},
+{
+"id": 759271,
+"name": "Bottled Potential",
+"text": "Shuffle ALL your cards into your Draw Pile. Draw 5 cards."
+},
+{
+"id": 758714,
+"name": "Melancholy",
+"text": "Gain 13 Block. Reduce this card's cost by energy whenever ANYONE dies."
+},
+{
+"id": 759369,
+"name": "Curious",
+"text": "Powers cost 1 energy less."
+},
+{
+"id": 758575,
+"name": "Enlightenment",
+"text": "Reduce the cost of ALL cards in your Hand to 1 this turn. Exhaust."
+},
+{
+"id": 758431,
+"name": "Banshee's Cry",
+"text": "Deal 33 damage to ALL enemies. Costs 2 energy less for each Ethereal card played this combat."
+},
+{
+"id": 758729,
+"name": "Momentum Strike",
+"text": "Deal 10 damage. Reduce this card's cost to 0 energy."
+},
+{
+"id": 758646,
+"name": "Hand Trick",
+"text": "Gain 7 Block. Add Sly to a Skill in your Hand this turn."
+},
+{
+"id": 758404,
+"name": "Abrasive",
+"text": "Gain 1 Dexterity. Gain 4 Thorns. Sly."
+},
+{
+"id": 759444,
+"name": "Master Planner",
+"text": "When you play a Skill, it gains Sly."
+},
+{
+"id": 758909,
+"name": "Tactician",
+"text": "Gain energy. Sly."
+},
+{
+"id": 758815,
+"name": "Right Hand Hand",
+"text": "Osty deals 4 damage. Whenever you play a card that costs 2 energy or more, return this to your Hand from the Discard Pile."
+},
+{
+"id": 759426,
+"name": "Illusion",
+"text": "When this dies, it revives next turn at full HP."
+},
+{
+"id": 759329,
+"name": "Adaptable",
+"text": "When this creature would be defeated, it instead revives even stronger."
+},
+{
+"id": 759484,
+"name": "Reattach",
+"text": "If other segments are still alive, revives in 2 turns with 25 HP."
+},
+{
+"id": 759144,
+"name": "Pael's Eye",
+"text": "The first time each combat you end your turn without playing cards, Exhaust your Hand, and take an extra turn."
+},
+{
+"id": 759675,
+"name": "The Insatiable",
+"text": "Actions: ThrashMove (8 damage x2); Lunging Bite (28 damage); Liquify Ground (buff, status); Thrash (multi_attack, 8 damage); Thrash Move 2 (multi_attack, 8 damage); Lunging Bite (attack, 28 damage); Salivate (buff, power)"
+},
+{
+"id": 759724,
+"name": "Self-Help Book",
+"text": "Choices: Move On: You don't have any cards that can be Enchanted. | Read the Entire Book: Choose a Power to Enchant with {Enchantment3} 2. | Read a Random Passage: Choose a Skill to Enchant with Nimble 2. | Read the Back: Choose an Attack to Enchant with Sharp 2."
+},
+{
+"id": 759600,
+"name": "Bygone Effigy",
+"text": "Actions: Sleep (sleep); Wake (buff, power); Sleep Move 2 (sleep); Slashes (attack, 13 damage)"
+},
+{
+"id": 816401,
+"name": "Hologram+",
+"text": "Gain 5 Block. Put a card from your Discard Pile into your Hand."
+},
+{
+"id": 758663,
+"name": "Hologram",
+"text": "Gain 3 Block. Put a card from your Discard Pile into your Hand. Exhaust."
+},
+{
+"id": 758762,
+"name": "Particle Wall",
+"text": "Gain 9 Block. Return this card to your Hand."
+},
+{
+"id": 759396,
+"name": "Feral",
+"text": "The first time you play a 0 energy Attack each turn, return it to your Hand."
+},
+{
+"id": 758564,
+"name": "Dredge",
+"text": "Put 3 cards from your Discard Pile into your Hand. Exhaust."
+},
+{
+"id": 759080,
+"name": "History Course",
+"text": "At the start of your turn, play a copy of your last played Attack or Skill."
+},
+{
+"id": 759126,
+"name": "Music Box",
+"text": "Create an Ethereal copy of the first Attack you play each turn."
+},
+{
+"id": 758985,
+"name": "Bing Bong",
+"text": "Whenever you add a card to your Deck, add one additional copy."
+},
+{
+"id": 759548,
+"name": "Thievery",
+"text": "Steals Gold when Attacking."
+},
+{
+"id": 759215,
+"name": "Stone Calendar",
+"text": "At the end of turn 7, deal 52 damage to ALL enemies."
+},
+{
+"id": 759722,
+"name": "The Round Tea Party",
+"text": "Choices: Enjoy Your Tea: Obtain Royal Poison. Heal to full HP. | Pick a Fight: Lose 11 HP. Obtain a random Relic."
+},
+{
+"id": 758818,
+"name": "Rolling Boulder",
+"text": "At the start of your turn, deal 5 damage to ALL enemies and increase this damage by 5."
+},
+{
+"id": 759057,
+"name": "Forgotten Soul",
+"text": "Whenever you Exhaust a card, deal 1 damage to a random enemy."
+},
+{
+"id": 758733,
+"name": "Murder",
+"text": "Deal 1 damage. Deals 1 additional damage for each card drawn this combat."
+},
+{
+"id": 759517,
+"name": "Speedster",
+"text": "Whenever you draw a card during your turn, deal 1 damage to ALL enemies."
+},
+{
+"id": 759253,
+"name": "War Hammer",
+"text": "Whenever you kill an Elite, Upgrade 4 random cards."
+},
+{
+"id": 758994,
+"name": "Book Repair Knife",
+"text": "Whenever a non-Minion enemy dies to Doom, heal 3 HP."
+},
+{
+"id": 758638,
+"name": "Graveblast",
+"text": "Deal 4 damage. Put a card from your Discard Pile into your Hand. Exhaust."
+},
+{
+"id": 758736,
+"name": "Neow's Fury",
+"text": "Deal 10 damage. Put up to 2 cards from your Discard Pile into your Hand. Exhaust."
+},
+{
+"id": 816340,
+"name": "Aggression+",
+"text": "Innate. At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it."
+},
+{
+"id": 816384,
+"name": "Graveblast+",
+"text": "Deal 6 damage. Put a card from your Discard Pile into your Hand."
+},
+{
+"id": 758455,
+"name": "Bolas",
+"text": "Deal 3 damage. At the start of your next turn, return this to your Hand."
+},
+{
+"id": 759436,
+"name": "Juggling",
+"text": "Add a copy of the third Attack you play each turn into your Hand."
+},
+{
+"id": 758578,
+"name": "Entropy",
+"text": "At the start of your turn, Transform 1 card in your Hand."
+},
+{
+"id": 758973,
+"name": "Archaic Tooth",
+"text": "Upon pickup, Transform a starter card into an ancient version."
+},
+{
+"id": 759714,
+"name": "Morphic Grove",
+"text": "Choices: Group: {IsMultiplayer:Everyone loses|Lose} ALL of {IsMultiplayer:their|your} Gold. Transform 2 cards. | Loner: Gain 5 Max HP."
+},
+{
+"id": 759152,
+"name": "Pandora's Box",
+"text": "Transform ALL Strikes and Defends."
+},
+{
+"id": 758935,
+"name": "Tremble",
+"text": "Apply 3 Vulnerable. Exhaust."
+},
+{
+"id": 759483,
+"name": "Reaper Form",
+"text": "Whenever Attacks deal damage, apply that much Doom."
+},
+{
+"id": 758789,
+"name": "Putrefy",
+"text": "Apply 2 Weak. Apply 2 Vulnerable. Exhaust."
+},
+{
+"id": 758929,
+"name": "Tools of the Trade",
+"text": "At the start of your turn, draw 1 card and discard 1 card."
+},
+{
+"id": 759064,
+"name": "Gambling Chip",
+"text": "At the start of each combat, discard any number of cards then draw that many."
+},
+{
+"id": 816349,
+"name": "Calculated Gamble+",
+"text": "Retain. Discard your Hand, then draw that many cards. Exhaust."
+},
+{
+"id": 758827,
+"name": "Scrape",
+"text": "Deal 7 damage. Draw 4 cards. Discard all cards drawn this way that do not cost 0 energy."
+},
+{
+"id": 758902,
+"name": "Survivor",
+"text": "Gain 8 Block. Discard 1 card."
+},
+{
+"id": 759333,
+"name": "Artifact",
+"text": "Negates debuffs."
+},
+{
+"id": 758616,
+"name": "Frantic Escape",
+"text": "Get farther away. Increase Sandpit by 1. Increase the cost of this card by 1."
+},
+{
+"id": 758727,
+"name": "Modded",
+"text": "Gain 1 Orb Slot. Draw 1 card. Increase this card's cost by 1."
+},
+{
+"id": 759345,
+"name": "Borrowed Time",
+"text": "Cards cost an additional Energy this turn."
+},
+{
+"id": 758639,
+"name": "GUARDS!!!",
+"text": "Transform any number of cards in your Hand into Minion Sacrifice. Exhaust."
+},
+{
+"id": 759151,
+"name": "Pael's Wing",
+"text": "You may sacrifice card rewards to Pael. Every 2 sacrifices, obtain a Relic."
+},
+{
+"id": 758650,
+"name": "Haze",
+"text": "Apply 4 Poison to ALL enemies. Sly."
+},
+{
+"id": 758946,
+"name": "Untouchable",
+"text": "Gain 6 Block. Sly."
+},
+{
+"id": 758863,
+"name": "Sneaky",
+"text": "Whenever another player attacks an enemy, gain 1 Block. Sly."
+},
+{
+"id": 758842,
+"name": "Shadow Step",
+"text": "Discard your Hand. Next turn, Attacks deal double damage."
+},
+{
+"id": 759035,
+"name": "Driftwood",
+"text": "You may reroll each card reward once."
+},
+{
+"id": 759634,
+"name": "Lagavulin Matriarch",
+"text": "Actions: Slash (19 damage); Slash2Move (12 damage); Disembowel (9 damage); Sleep (sleep); Slash (attack, 19 damage); Slash2 (attack, defend, 12 damage, block 12); Disembowel (multi_attack, 9 damage); Soul Siphon (debuff, buff, power, power, power)"
+},
+{
+"id": 758719,
+"name": "Mimic",
+"text": "Gain Block equal to the Block on another player. Exhaust."
+},
+{
+"id": 759639,
+"name": "Louse Progenitor",
+"text": "Actions: Web Cannon (attack, debuff, 9 damage, power); Pounce (attack, 14 damage); Curl and Grow (defend, buff, power, block 14)"
+},
+{
+"id": 759577,
+"name": "Nimble",
+"text": "Increases Block gained from this card by X."
+},
+{
+"id": 758626,
+"name": "Genetic Algorithm",
+"text": "Gain 1 Block. Permanently increase this card's Block by 3. Exhaust."
+},
+{
+"id": 759632,
+"name": "Kin Priest",
+"text": "Actions: Orb of Frailty (8 damage); Orb of Weakness (8 damage); Soul Beam (3 damage x3); Orb of Frailty (attack, debuff, 8 damage, power); Orb of Weakness (attack, debuff, 8 damage, power); Soul Beam (multi_attack, 3 damage); Dark Ritual (buff, power)"
+},
+{
+"id": 759093,
+"name": "Kunai",
+"text": "Every time you play 3 Attacks in a single turn, gain 1 Dexterity."
+},
+{
+"id": 759140,
+"name": "Ornamental Fan",
+"text": "Every time you play 3 Attacks in a single turn, gain 4 Block."
+},
+{
+"id": 759204,
+"name": "Shuriken",
+"text": "Every time you play 3 Attacks in a single turn, gain 1 Strength."
+},
+{
+"id": 758804,
+"name": "Rebound",
+"text": "Deal 9 damage. Put the next card you play this turn on top of your Draw Pile."
+},
+{
+"id": 759710,
+"name": "Infested Automaton",
+"text": "Choices: Study: Obtain a random Power. | Touch the Core: Obtain a random 0 cost card."
+},
+{
+"id": 759678,
+"name": "Thieving Hopper",
+"text": "Actions: Nab (14 damage); Hat Trick (21 damage); Thievery (attack, debuff, 17 damage); Nab (attack, 14 damage); Hat Trick (attack, 21 damage); Flutter (buff, power); Escape (escape)"
+},
+{
+"id": 759532,
+"name": "Surrounded",
+"text": "Receive 50% more damage if attacked from behind. Use targeting cards or potions to change your orientation."
+},
+{
+"id": 759336,
+"name": "Back Attack",
+"text": "Deals 50% more damage when it is attacking you from behind."
+},
+{
+"id": 758828,
+"name": "Scrawl",
+"text": "Draw cards until your Hand is full. Exhaust."
+},
+{
+"id": 816436,
+"name": "Scrawl+",
+"text": "Retain. Draw cards until your Hand is full. Exhaust."
+},
+{
+"id": 759264,
+"name": "Ashwater",
+"text": "Exhaust any number of cards in your Hand."
+},
+{
+"id": 759711,
+"name": "Jungle Maze Adventure",
+"text": "Choices: Join Forces: Gain 50 Gold. | Solo Quest: Gain 150 Gold. Lose 18 HP."
+},
+{
+"id": 759208,
+"name": "Sling of Courage",
+"text": "Start each Elite combat with 2 Strength."
+},
+{
+"id": 759213,
+"name": "Sparkling Rouge",
+"text": "At the start of your 3rd turn, gain 1 Strength and 1 Dexterity."
+},
+{
+"id": 758772,
+"name": "Poisoned Stab",
+"text": "Deal 6 damage. Apply 3 Poison."
+},
+{
+"id": 759391,
+"name": "Envenom",
+"text": "Whenever you deal unblocked attack damage, apply 1 Poison."
+},
+{
+"id": 758527,
+"name": "Dark Shackles",
+"text": "Enemy loses 9 Strength this turn. Exhaust."
+},
+{
+"id": 758635,
+"name": "Gold Axe",
+"text": "Deal damage equal to the number of cards played this combat."
+},
+{
+"id": 758880,
+"name": "Stack",
+"text": "Gain Block equal to the number of cards in your Discard Pile."
+},
+{
+"id": 816420,
+"name": "Stack+",
+"text": "Gain Block equal to the number of cards in your Discard Pile +3."
+},
+{
+"id": 816431,
+"name": "Gold Axe+",
+"text": "Retain. Deal damage equal to the number of cards played this combat."
+},
+{
+"id": 758720,
+"name": "Mind Blast",
+"text": "Deal damage equal to the number of cards in your Draw Pile. Innate."
+},
+{
+"id": 759701,
+"name": "Crystal Sphere",
+"text": "Choices: Payment Plan: Gain a Debt. Divine 6 times. | Uncover Future: Pay 50 Gold. Divine 3 times."
+},
+{
+"id": 759713,
+"name": "Luminous Choir",
+"text": "Choices: Offer Tribute: Pay 149 Gold. Obtain a random Relic. | Reach into the Flesh: Remove 2 cards from your Deck. Add Spore Mind to your Deck."
+},
+{
+"id": 759200,
+"name": "Seal of Gold",
+"text": "At the start of your turn, spend 5 Gold to gain energy."
+},
+{
+"id": 759733,
+"name": "Tea Master",
+"text": "Choices: Bone Tea: Pay 50 Gold. Bone Tea | Ember Tea: Pay 150 Gold. Ember Tea | Tea of Discourtesy: Tea of Discourtesy"
+},
+{
+"id": 758515,
+"name": "Cosmic Indifference",
+"text": "Gain 6 Block. Put a card from your Discard Pile on top of your Draw Pile."
+},
+{
+"id": 758754,
+"name": "Overclock",
+"text": "Draw 2 cards. Add a Burn into your Discard Pile."
+},
+{
+"id": 759331,
+"name": "Aggression",
+"text": "At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it for the rest of combat."
+},
+{
+"id": 758665,
+"name": "Howl from Beyond",
+"text": "Deal 16 damage to ALL enemies. At the end of your turn, if this is in your Exhaust Pile, play it."
+},
+{
+"id": 759321,
+"name": "Star Potion",
+"text": "Gain 3 stars."
+},
+{
+"id": 759342,
+"name": "Black Hole",
+"text": "Whenever you spend or gain star, deal 3 damage to ALL enemies."
+},
+{
+"id": 758847,
+"name": "Shining Strike",
+"text": "Deal 8 damage. Gain 2 stars. Put this card on top of your Draw Pile."
+},
+{
+"id": 758659,
+"name": "Hidden Cache",
+"text": "Gain star. Next turn, gain 3 stars."
+},
+{
+"id": 758492,
+"name": "Child of the Stars",
+"text": "Whenever you spend star, gain 2 Block for each star spent."
+},
+{
+"id": 759149,
+"name": "Pael's Tears",
+"text": "If you end your turn with unspent energy, gain an additional 2 energy next turn."
+},
+{
+"id": 758645,
+"name": "Hand of Greed",
+"text": "Deal 20 damage. If Fatal, gain 20 Gold."
+},
+{
+"id": 759715,
+"name": "Neow",
+"text": "Choices: Arcane Scroll: Upon pickup, obtain a random Rare Card to add to your Deck. | Booming Conch: At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards} and gain {Energy:energyIcons()}. | Fishing Rod: Every {Combats:plural:normal combat|{} normal combats}, Upgrade a random card in your Deck. | Golden Pearl: Upon pickup, gain {Gold} Gold. | Kaleidoscope: Upon pickup, obtain {Cards} {Cards:plural:card reward|card rewards} from other characters. | Lead Paperweight: Upon pickup, choose 1 of 2 Colorless cards to add to your Deck. | Lost Coffer: Upon pickup, gain 1 card reward and procure 1 random potion. | Massive Scroll: Upon pickup, choose 1 of 3 Multiplayer Cards to add to your Deck. | Neow's Torment: Upon pickup, add 1 Neow's Fury to your Deck. | New Leaf: Upon pickup, Transform {Cards} {Cards:plural:card|cards}. | Phial Holster: Upon pickup, gain {PotionSlots} potion {PotionSlots:plural:slot|slots} and procure {Potions} random {Potions:plural:potion|potions}. | Precise Scissors: Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck. | Scroll Boxes: Upon pickup, choose 1 of 2 packs of cards to add to your Deck. | Winged Boots: You may ignore paths when choosing the next rooms to travel to {Rooms} times. | Cursed Pearl: Upon pickup, receive Greed. Gain {Gold} Gold. | Hefty Tablet: Upon pickup, choose 1 of {Cards} Rare cards to add to your Deck, and add 1 Injury to your Deck. | Large Capsule: Upon pickup, obtain {Relics} random {Relics:plural:Relic|Relics}. Add an additional Strike and Defend to your Deck. | Leafy Poultice: Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose {MaxHp} Max HP. | Neow's Bones: Upon pickup, gain {Relics} random Neow {Relics:plural:Relic|Relics}. Add {Curses} random {Curses:plural:Curse|Curses} to your Deck. | Precarious Shears: Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck and lose {Damage} HP. | Silken Tress: Upon pickup, lose all Gold. Enchant all cards in the first card reward with Glam. | Silver Crucible: The first {Cards} card rewards you see are Upgraded. The first Treasure Chest you open is empty. | Lava Rock: The Act 1 Boss drops {Relics} Relics. | Neow's Talisman: Upon pickup, Upgrade 1 of your Strikes and 1 of your Defends. | Nutritious Oyster: Upon pickup, raise your Max HP by {MaxHp}. | Pomander: Upon pickup, Upgrade a card. | Small Capsule: Upon pickup, obtain a random Relic. | Stone Humidifier: Whenever you Rest at a Rest Site, raise your Max HP by {MaxHp}."
+},
+{
+"id": 759318,
+"name": "Soldier's Stew",
+"text": "All cards containing Strike gain 1 Replay this combat."
+},
+{
+"id": 759290,
+"name": "Foul Potion",
+"text": "Deal 12 damage to ALL players and enemies. Can be thrown at the Merchant for 100 Gold instead."
+},
+{
+"id": 758666,
+"name": "Huddle Up",
+"text": "ALL players draw 2 cards. Exhaust."
+},
+{
+"id": 816394,
+"name": "Cacophony",
+"text": "Every 33 cards drawn by ALL players, deal 66 damage to a random enemy."
+},
+{
+"id": 816348,
+"name": "Blade Symphony",
+"text": "Add 2 Shivs to ALL players' Hands."
+},
+{
+"id": 816338,
+"name": "Outrage",
+"text": "Deal 9 damage. Add a copy of this card into EVERYONE'S Discard Pile."
+},
+{
+"id": 758705,
+"name": "Mad Science",
+"text": "A custom card created during the Tinker Time event. You choose a card type (Attack, Skill, or Power) and a rider effect."
+},
+{
+"id": 759653,
+"name": "Rocket",
+"text": "Actions: Targeting Reticle (3 damage); Precision Beam (18 damage); Laser (31 damage); Targeting Reticle (attack, 3 damage); Precision Beam (attack, 18 damage); Charge Up (buff, power); Laser (attack, 31 damage); Recharge (sleep)"
+},
+{
+"id": 759748,
+"name": "No Ascension",
+"text": "Play without any Ascension modifiers."
+},
+{
+"id": 759738,
+"name": "Trash Heap",
+"text": "Choices: Dive In: Lose 8 HP. Obtain a random forgotten Relic from the past. | Grab Random Junk: Gain 100 Gold. Obtain a random forgotten card from the past."
+},
+{
+"id": 758969,
+"name": "Alchemical Coffer",
+"text": "Upon pickup, gain 4 potion slots filled with random potions."
+},
+{
+"id": 759262,
+"name": "Wongo's Mystery Ticket",
+"text": "Receive 3 random Relics after 5 combats."
+},
+{
+"id": 759467,
+"name": "Paper Cuts",
+"text": "Whenever this creature deals unblocked attack damage to you, you lose 1 Max HP."
+},
+{
+"id": 759732,
+"name": "Tablet of Truth",
+"text": "Choices: Decipher: Lose 3 Max HP. Upgrade a random card. | Smash: Heal 20 HP."
+},
+{
+"id": 759705,
+"name": "Drowning Beacon",
+"text": "Choices: Bottle: Procure Glowwater Potion. | Climb: Obtain Fresnel Lens. Lose 13 Max HP."
+},
+{
+"id": 759203,
+"name": "Shovel",
+"text": "You can now dig at Rest Sites to obtain a random Relic."
+},
+{
+"id": 759569,
+"name": "Clone",
+"text": "This card can be duplicated at Rest Sites."
+},
+{
+"id": 759754,
+"name": "Gloom",
+"text": "Less Rest Sites."
+},
+{
+"id": 758478,
+"name": "Byrdonis Egg",
+"text": "Can be hatched at a Rest Site. Unplayable."
+},
+{
+"id": 759067,
+"name": "Girya",
+"text": "You can now gain Strength at Rest Sites. (3 times max)"
+},
+{
+"id": 759344,
+"name": "Blur",
+"text": "Block is not removed at the start of your next turn."
+},
+{
+"id": 759338,
+"name": "Barricade",
+"text": "Block is not removed at the start of this creature's turn."
+},
+{
+"id": 759347,
+"name": "Burrowed",
+"text": "Block is not removed at the start of this creature's turn. Stunned if all Block is removed."
+},
+{
+"id": 759352,
+"name": "Chains of Binding",
+"text": "The first 3 cards drawn each turn are Afflicted with Bound."
+},
+{
+"id": 759409,
+"name": "Galvanic",
+"text": "Powers are afflicted with Galvanized."
+},
+{
+"id": 816434,
+"name": "Mimic+",
+"text": "Gain Block equal to the Block on another player."
+},
+{
+"id": 758634,
+"name": "Go for the Eyes",
+"text": "Deal 3 damage. If the enemy intends to attack, apply 1 Weak."
+},
+{
+"id": 759515,
+"name": "Soar",
+"text": "Receives 50% less attack damage until it lands."
+},
+{
+"id": 759712,
+"name": "The Lost Wisp",
+"text": "Choices: Capture the Wisp: Add Decay to your Deck. Obtain the Relic. | Search the Nearby Area: Gain 60 Gold."
+},
+{
+"id": 759743,
+"name": "Welcome to Wongo's",
+"text": "Choices: Wongo's Bargain Bin: Pay 100 Gold. Obtain 1 random Common Relic. | Wongo's Featured Item: Pay 200 Gold. Obtain a random Relic. | Leave: Downgrade a random card. | Wongo's Mystery Box: Pay 300 Gold. Obtain 3 random Relics after 5 combats."
+},
+{
+"id": 759747,
+"name": "Zen Weaver",
+"text": "Choices: Arachnid Acupuncture: Pay 250 Gold. Remove 2 cards from your Deck. | Breathing Techniques: Pay 50 Gold. Add 2 Enlightenment to your Deck. | Emotional Awareness: Pay 125 Gold. Remove 1 card from your Deck."
+},
+{
+"id": 759623,
+"name": "Gas Bomb",
+"text": "Actions: Explode (8 damage); Explode (deathblow)"
+},
+{
+"id": 759690,
+"name": "Waterfall Giant",
+"text": "Actions: Pressure Up (13 damage); Stomp (15 damage); Ram (10 damage); Pressurize (buff, power); Stomp (attack, debuff, buff, 15 damage, power, power); Ram (attack, buff, 10 damage, power); Siphon (heal, buff, power); Pressure Gun (attack, buff, power); Pressure Up (attack, buff, 13 damage, power); About to Blow (stun); Explode (deathblow)"
+},
+{
+"id": 816398,
+"name": "Reaper Form+",
+"text": "Retain. Whenever Attacks deal damage, apply that much Doom."
+},
+{
+"id": 816350,
+"name": "Concoct",
+"text": "Choose another player. Whenever their Attacks deal unblocked damage this turn, they apply 3 Poison."
+},
+{
+"id": 758801,
+"name": "Reaper Form",
+"text": "Whenever Attacks deal damage, apply that much Doom."
+},
+{
+"id": 759514,
+"name": "Sneaky",
+"text": "Whenever another player attacks an enemy, gain Block."
+},
+{
+"id": 759429,
+"name": "Inferno",
+"text": "At the start of your turn, lose 1 HP. Whenever you lose HP on your turn, deal 4 damage to ALL enemies."
+},
+{
+"id": 759201,
+"name": "Self-Forming Clay",
+"text": "Whenever you lose HP in combat, gain 3 Block next turn."
+},
+{
+"id": 759652,
+"name": "Queen",
+"text": "Actions: Off with Your Head (3 damage x5); Execution (15 damage); Puppet Strings (debuff, power); You Are Mine (debuff, power, power, power); Burn Bright for Me (buff, defend, power, block 20); Off with Your Head (multi_attack, 3 damage); Execution (attack, 15 damage); Enrage (buff, power)"
+},
+{
+"id": 758675,
+"name": "Inferno",
+"text": "At the start of your turn, lose 1 HP. Whenever you lose HP on your turn, deal 6 damage to ALL enemies."
+},
+{
+"id": 816405,
+"name": "Darkness+",
+"text": "Channel 1 Dark. Trigger the passive ability of all Dark Orbs twice."
+},
+{
+"id": 759040,
+"name": "Emotion Chip",
+"text": "If you lost HP during the previous turn, trigger the passive ability of all Orbs at the start of your turn."
+},
+{
+"id": 758701,
+"name": "Loop",
+"text": "At the start of your turn, trigger the passive ability of your rightmost Orb."
+},
+{
+"id": 759182,
+"name": "Red Skull",
+"text": "While your HP is at or below 50%, you have 3 additional Strength."
+},
+{
+"id": 759371,
+"name": "Dampen",
+"text": "While Magi Knight is alive, ALL your cards are Downgraded."
+}
+]

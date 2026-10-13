@@ -1,0 +1,1147 @@
+[
+{
+"id": 790732,
+"name": "Ratling Vox-thief",
+"text": "Intercept Communications (1AP): \u25b6 SUPPORT. Select one other friendly RATLING operative visible to and within 6\" of this operative. Until the end of its next activation, add 1 to that operative's APL stat. \u25c6 This operative cannot perform this action while within control range of an enemy operative."
+},
+{
+"id": 789231,
+"name": "Adrenaline Shot",
+"text": "Once per battle, when this operative is activated, you can use this ability. If you do so, until the end of its activation, you can ignore any or all modifiers to this operative's APL and Movement characteristics."
+},
+{
+"id": 790915,
+"name": "Ghyrson Stark",
+"text": "Inspirational Deeds: If an enemy model is taken out of action by an attack made with this model's liberator autostubs, then until the end of the phase, re-roll hit rolls of 1 for models in your kill team whilst they are within 6\" of this model. Lightning Reflexes: This model has a 5+ invulnerable save. Hybrid Agility: Add 1 to this model's Movement characteristic (already included in profile). Preternatural Skill: Shooting attacks made by this model do not suffer the penalty to hit rolls for the target being obscured. Swift Reflexes: This model successfully hits on results of 4+ instead of 6 when making Overwatch attacks. Trick Shooter: Once per battle round, when you pick this model to shoot, you can choose a friendly model within 6\" of this model. You can resolve one of the Kelermorph's attacks (including choosing a target and measuring range) as if the attack was made by the other model you chose, but using the Kelermorph's weapon and characteristics."
+},
+{
+"id": 790434,
+"name": "Magus",
+"text": "Spiritual Leader: STRATEGIC GAMBIT if this operative is in the killzone. Select one of the following for friendly BROOD BROTHER operatives to have until the end of the turning point or until this operative is incapacitated (whichever comes first): - Whenever an operative is shooting a friendly BROOD BROTHER operative, ignore the Piercing weapon rule. - You can ignore any changes to friendly BROOD BROTHER operatives\u2019 stats from being injured (including their weapons\u2019 stats). - You can ignore any changes to the APL stats of friendly BROOD BROTHER operatives. Telepathic Overload (1AP): \u25b6 PSYCHIC. Select one enemy operative that's a valid target for this operative. Until the end of that operative\u2019s next activation, subtract 1 from its APL stat. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Mental Onslaught (1AP): \u25b6 PSYCHIC. Select one enemy operative that\u2019s a valid target for this operative. Inflict 2 damage on it, or 4 damage instead if it\u2019s within 6\" of this operative. Then roll one D6: if the result is higher than that enemy operative\u2019s APL stat, inflict an additional 2 damage on it, or 4 damage instead if it\u2019s within 6\" of this operative. Keep rolling one D6 in this manner until you roll equal to or less than that enemy operative\u2019s APL stat, until it\u2019s incapacitated, or until you inflict 8 damage on it during this action (whichever comes first). \u25c6 This operative cannot perform this action while within control range of an enemy operative. Special rules: Lethal x+, Range x, Shock."
+},
+{
+"id": 790394,
+"name": "Tzaangor Icon Bearer",
+"text": "Icon Bearer: When determining control of an objective marker, treat this operative's APL as being 1 higher. Note this is not a modifier. Herd Banner (1AP): Until the end of the Turning Point, while a friendly TZAANGOR operative is within \u2b1b of this operative, that operative is invigorated by the herd banner. While an operative is invigorated by the herd banner, improve its invulnerable save by 1. Special rules: Rending."
+},
+{
+"id": 790914,
+"name": "Crasker Matterzhek",
+"text": "Sacred Cult Banner: You can re-roll failed Nerve tests for friendly models that are within 6\" of this model. Sacred Duty: Add 1 to this model's Wounds characteristic (already included in profile). Fearless Dedication: This model can never be shaken. Scale the Heights: If this model climbs any distance vertically (up or down) when it makes a normal move, halve the distance moved in this way (e.g. climbing up a 4\" wall counts as 2\" of movement). Raise the Standard High: If the vertical distance between this model and the surface of the battlefield (e.g. the gameboard) is greater than 1\", increase the range of this model's Sacred Cult Banner ability to 12\"."
+},
+{
+"id": 790250,
+"name": "Autosavant Agent",
+"text": "Scrivener: Each subsequent time your opponent uses each Strategic or Tactical Ploy (excluding Command Re-roll) during the battle, you gain 1 CP. Chronicle: In narrative play, in the Update Dataslates step, if this operative was not incapacitated, you can select one other friendly INQUISITORIAL AGENT\u00ae operative that was in that battle to gain D3 experience points Irrefutable Report (1AP): Select one objective marker. Until this operative performs this action again, while this operative is within \u2b1b of that objective marker, it dominates it. A friendly operative that dominates an objective marker always controls it, regardless of any other rules or the API of enemy operatives within the required distance of it. If an enemy operative would also dominate that objective marker, control is determined as normal. This operative can only perform this action once per battle, and cannot perform it while within Engagement Range of an enemy operative."
+},
+{
+"id": 790249,
+"name": "Tome-skull",
+"text": "Support Unit: This operative cannot: \u2022 Perform any actions other than Dash, Fall Back, Normal Move or Pass. \u2022 Make shooting attacks, fight in combat (do not select a weapon or roll any attack dice for it) or provide combat support. \u2022 Be equipped with equipment or carry anything. Machine: \u2022 This operative cannot earn (or lose) experience points and automatically passes Casualty tests. \u2022 This operative's APL cannot be modified. \u2022 This operative can perform the Fall Back action for one less action point (to a minimum of 1AP). Special rules: *Group Activation."
+},
+{
+"id": 789204,
+"name": "Machine",
+"text": "- When drawing a Visibility line from this operative, draw it from any part of the miniature. - This operative cannot earn (or lose) experience points and automatically passes Casualty tests. - This operative's APL cannot be modified. - This operative can perform the Fall Back action for one less action point (to a minimum of 1AP)."
+},
+{
+"id": 790094,
+"name": "Heavy Weapon Platform",
+"text": "Platform Controller: This operative cannot be activated as normal. Instead, a friendly GUARDIAN DEFENDER HEAVY GUNNER operative must perform the Control Platform action. Gun Platform: This operative cannot have a Conceal order. It cannot fight in combat (do not select a weapon or roll any attack dice for it) and cannot provide combat support. In narrative play, this operative cannot gain (or lose) experience points. When drawing a Visibility line from this operative, draw it from any part of the miniature. Weapon abilities: AP1, AP2, Blast \u2b24, Ceaseless, Fusillade, Heavy, P2, Rending. Special rules: APx, Blast x, Ceaseless, Fusillade, Heavy, Px, Rending."
+},
+{
+"id": 788815,
+"name": "Industrial Efficiency (Armageddon)",
+"text": "Models in your kill team firing Rapid Fire weapons double the number of attacks they make if all of their targets are within 18\" (instead of half the weapon's Range characteristic)."
+},
+{
+"id": 788831,
+"name": "Inexorable Advance",
+"text": "Models in your kill team do not suffer the penalty to their hit rolls for shooting Heavy weapons during a battle round in which they moved, or for shooting Assault weapons during a battle round in which they Advanced. In addition, models in your kill team firing Rapid Fire weapons double the number of attacks they make if all of their targets are within 18\" (rather than half the weapon's Range characteristic)."
+},
+{
+"id": 789480,
+"name": "Tilting Shields",
+"text": "Once per turning point, when a friendly ANGEL OF DEATH operative is fighting or retaliating, after your opponent rolls their attack dice, you can use this rule. If you do, your opponent cannot retain attack dice results of less than 6 as critical successes during that sequence (e.g. as a result of the Lethal, Rending or Severe weapon rules)."
+},
+{
+"id": 790475,
+"name": "Blademaster Veteran",
+"text": "Adaptive Swordsmanship: You can ignore any changes to the Hit stat of this operative's xenophase blade. Whenever this operative is fighting or retaliating, you can resolve one of your successes before the normal order. If you do, that success must be used to block. Special rules: Brutal, Lethal x+."
+},
+{
+"id": 788785,
+"name": "Burrow",
+"text": "When setting up a RAVENER kill team before the battle, your first two operatives must be set up as normal. Each other friendly RAVENER operative thereafter can be set up underground: place it to one side instead of in the killzone. In the Firefight phase, friendly RAVENER operatives set up underground are activated and can counteract as normal. Whenever a friendly RAVENER operative is underground, it cannot perform any actions other than Burrow. At the end of the battle, each friendly RAVENER operative that's underground is incapacitated. Friendly RAVENER operatives can perform the Burrow unique action."
+},
+{
+"id": 790948,
+"name": "Lychguard",
+"text": "Guardian Protocols: Roll a D6 each time a COMMANDER loses a wound whilst they are within 3\" of any friendly models with this ability; on a 2+ choose one of those models to intercept that hit - the COMMANDER does not lose a wound but the model you chose suffers a mortal wound. Dispersion shield: Add 1 to saving throws made for a model armed with a dispersion shield (excluding invulnerable saves). In addition, it has a 4+ invulnerable save."
+},
+{
+"id": 788787,
+"name": "Predatory Instincts",
+"text": "During each friendly RAVENER operative's activation, it can perform two Fight actions. Each friendly RAVENER operative can counteract regardless of its order. Whenever it does: - You can change its order first, or change its order instead of performing an action (for the latter, still treat it as having counteracted this turning point). - During that counteraction, if it doesn't perform a mission action it can perform a free Burrow action."
+},
+{
+"id": 790735,
+"name": "Venomspitter",
+"text": "Distend Dorsal Sac (1AP): \u25b6 Until this operative has shot with its venom bolt, until it performs this action again or until it performs the Burrow action (whichever comes first), all profiles of its venom bolt have the Lethal 5+ weapon rule, have 1 added to their Atk stat, and the Range 8\" weapon rule removed. Special rules: *Poison, Blast x, Lethal x+, Range x."
+},
+{
+"id": 790910,
+"name": "Leystalker",
+"text": "Implacable Darkscale: You can ignore any changes to this operative\u2019s drakesteed fangs & talons weapon\u2019s Hit stat from being injured. Leystalker Upgrades: When this operative is selected for the battle, select up to two different Leystalker Upgrade rules (see Faction Rules) to be added to its datacard for the battle. Nomad Executioner: Whenever this operative is performing the Sprint action, it can perform the Shoot action during that action (it must do so in a location it can be placed, and any remaining move distance it had from that Sprint action can be used after it does so). Note that as the Shoot action occurs before the Sprint action ends, for that Shoot action, this operative\u2019s SPEED is whatever it had before beginning the Sprint action. Elusive Phantasm: At the end of each Firefight phase, if this operative isn\u2019t within control range of enemy operatives, it can perform a free Sprint or Turn action, but it cannot move more than 3\" during that action and its SPEED remains the same. Note that it must still have the necessary amount of movement allowance remaining this turning point. Fated Shot: Once per turning point, when this operative performs the Shoot action and you select a profile of its long rifle, you can use this rule. If you do, select one of the following rules for it to have until the end of that sequence: - Enemy operatives cannot be obscured. - Having other friendly EXODITE DRAGON MASTER operatives within an enemy operative\u2019s control range doesn\u2019t prevent that enemy operative from being selected as a valid target. Nexus Sentinel: Once per turning point, this operative can perform the Guard action during its activation regardless of the killzone if it has SPEED 3- (see close quarters rules, Kill Team Core Book). Whenever this operative performs a point-blank shot as a result of the Guard action, don\u2019t worsen the Hit stat of its weapons as a result of performing a point-blank shot. Gloaming Mantle: Whenever an operative is shooting this operative from more than 8\" away, if you cannot retain any cover saves, you can retain one of your defence dice as a normal success without rolling it; if you can retain any cover saves, you can retain one cover save as a critical success instead. Special rules: Devastating x, Lethal x+."
+},
+{
+"id": 790536,
+"name": "Bombast",
+"text": "Wroughtlock Negotiation: STRATEGIC GAMBIT. This operative can immediately perform a free Shoot action (you can change its order to Engage to do so). Brazen Killer: Whenever this operative incapacitates an enemy operative with its wroughtlock revolvers, roll one D6 separately for each other enemy operative visible to and within 2\" of that enemy operative: if the result is higher than that other enemy operative\u2019s APL stat, subtract 1 from its APL stat until the end of its next activation. Special rules: Ceaseless, Lethal x+, Range x."
+},
+{
+"id": 790195,
+"name": "Yaegir Tracker",
+"text": "Pan Spectral Visor: When determining Line of Sight for this operative, enemy operatives within \u2b1f of it that aren't ready: - Cannot be Obscured. - Are treated as having an Engage order. Tracker: Each time this operative fights in combat or makes a shooting attack against an enemy operative that is within \u2b1f of it, if that enemy operative isn't ready, in the Roll Attack Dice step of that combat or shooting attack, you can reroll any rolls of attack dice of one result (e.g. results of 2). Weapon abilities: Limited, Rending, Rng \u2b1f, Silent. Special rules: Limited, Rending, Rng x, Silent."
+},
+{
+"id": 814879,
+"name": "Blast x",
+"text": "The target you select is the primary target. After shooting the primary target, shoot with this weapon against each secondary target in an order of your choice (roll each sequence separately). Secondary targets are other operatives visible to and within x of the primary target, e.g. Blast 2\" (they are all valid targets, regardless of a conceal order). Secondary targets are in cover and obscured if the primary target was."
+},
+{
+"id": 790540,
+"name": "Tracker",
+"text": "Pan Spectral Visor: Whenever this operative is shooting an operative within 6\" of it: - This operative\u2019s weapons have the Seek Light weapon rule. - That operative cannot be obscured. Tracker: Whenever this operative is shooting against or fighting against an expended operative within 6\" of it, this operative\u2019s weapons have the Punishing weapon rule. Special rules: Limited x, Range x, Rending, Silent."
+},
+{
+"id": 790715,
+"name": "Malignant Plaguecaster",
+"text": "Poisonous Miasma (1AP): \u25b6 PSYCHIC. Select one enemy operative visible to and within 7\" of this operative, or one enemy operative that\u2019s a valid target for this operative. That enemy operative gains one of your Poison tokens (if it doesn\u2019t already have one). If it already has one, inflict 3 damage on that enemy operative instead. \u25c6 An operative cannot perform this action while within control range of an enemy operative. Putrescent Vitality (1AP): \u25b6 PSYCHIC. Select one friendly operative visible to and within 3\" of this operative, then roll 2D6: if the result is 7, the selected operative regains 7 lost wounds; otherwise, the selected operative regains lost wounds equal to the highest D6. \u25c6 An operative cannot perform this action while within control range of an enemy operative. Special rules: *Poison, Range x, Saturate, Severe, Shock, Stun, Torrent x."
+},
+{
+"id": 789712,
+"name": "Extra Armour",
+"text": "Subtract 1\" from the Move stat of friendly WRECKA KREW operatives and improve their Save stat by 1. This excludes BOMB SQUIG operatives and isn't cumulative with the Protective rule of a Portable Barricade from universal equipment."
+},
+{
+"id": 789608,
+"name": "1x Portable Barricade",
+"text": "A portable barricade is Light, Protective and Portable terrain, except the feet which are Insignificant and Exposed. Before the battle, you can set it up wholly within your territory, on the killzone floor, and more than 2\" from other equipment terrain features, access points and Accessible terrain."
+},
+{
+"id": 789605,
+"name": "2x Light Barricades",
+"text": "Light barricades are Light terrain, except the feet, which are Insignificant and Exposed. Before the battle, you can set up any of them wholly within your territory, on the killzone floor and more than 2\" from other equipment terrain features, access points and Accessible terrain."
+},
+{
+"id": 789609,
+"name": "Move with Barricade (1AP)",
+"text": "\u25b6 The same as the Reposition action, except the active operative can move no more than its Move stat minus 2\" and cannot climb, drop, jump or use any kill team's rules that remove it and set it back up again (e.g. HEARTHKYN SALVAGER FLY, MANDRAKE SHADOW PASSAGE). \u25b6 Before this operative moves, remove the portable barricade it's connected to. After it moves, set up the portable barricade so it's connected again, but the portable barricade cannot be set up within 2\" of other equipment terrain features, access points, or Accessible terrain. If this is not possible, the portable barricade is not set up again. \u25c6 This action is treated as a Reposition action. An operative cannot perform this action while within control range of an enemy operative, or in the same activation in which it performed the Fall Back or Charge action."
+},
+{
+"id": 788768,
+"name": "Portable",
+"text": "This terrain feature only provides cover while an operative is connected to it and if the shield is intervening (ignore its feet). Operatives connected to the inside of it can perform the \"Move with Barricade\" unique action during the battle."
+},
+{
+"id": 790391,
+"name": "Sorcerer",
+"text": "Manifest Psychic Power (1AP): Psychic action. Resolve a WARPCOVEN psychic power. This operative cannot perform this action while within Engagement Range of an enemy operative. Patron of Destiny: Once per Turning Point, when this operative is fighting in combat or making a shooting attack or a shooting attack is being made against it, you can use the Command Re-roll Tactical Ploy without spending any CPs. Each time you do so, roll one D6: on a 1-3, this operative loses this ability for the rest of the battle. Incorporeal Sight: Ranged weapons this operative is equipped with gain the Lethal 5+ and No Cover special rules. Time-walker: - Add 1 to the Attacks characteristic of melee weapons this operative is equipped with. - Add \u25b2 to this operative's Movement characteristic. Immaterial Flight: This operative gains the FLY keyword. Crystalline: Improve this operative's Save characteristic by 1. Empyric Ward: This operative has a 4+ invulnerable save. Weave Fate: Select one friendly WARPCOVEN operative visible to this operative. Until the start of this operative's next activation, until it's incapacitated, or until this psychic power is selected again (whichever comes first), each time a shooting attack is made against that operative, in the Roll Defence Dice step of that shooting attack, you can re-roll any or all of your defence dice. Twist Destiny: Select one enemy operative Visible to this operative. Until the start of this operative's next activation, until it's incapacitated, or until this psychic power is selected again (whichever comes first): - Each time that enemy operative fights in combat or makes a shooting attack, in the Roll Attack Dice step of that [combat or] shooting attack, your opponent cannot re-roll their attack dice. - That enemy operative ignores all positive modifiers to its APL. Doombolt: Perform a free Shoot action using the ranged weapon below. Firestorm: Perform a free Shoot action using the ranged weapon below. Warp Portal: Select one friendly WARPCOVEN operative Visible to and within \u2b1b of this operative that has not performed an action in which it moved during this Turning Point. Remove it from the killzone and set it back up again within \u2b1f of this operative and not within Engagement Range of an enemy operative. That friendly operative cannot perform actions in which it moves during this Turning Point. Infernal Fire: Select one enemy operative Visible to this operative. Until the start of this operative's next activation, until it's incapacitated, or until this psychic power is selected again (whichever comes first), each time a friendly WARPCOVEN operative fights in combat or makes a shooting attack against that enemy operative, in the Roll Attack Dice step of that combat or shooting attack, you can re-roll any or all of your attack dice. Fluxblast: Perform a free Shoot action using the ranged weapon below. Temporal Manipulation: Select one friendly WARPCOVEN operative Visible to and within \u2b1f of this operative. That operative regains 2D3 lost wounds. Ephemeral Instability: Until the start of this operative's next activation, until it's incapacitated, or until this psychic power is selected again (whichever comes first), subtract \u25b2 from the distance that enemy operatives can move when performing Charge and Dash actions. Weapon abilities: AP1, Barrage, Blast \u25b2, Blast \u2b24, Indirect, Lethal 5+, MW2, Relentless, Rending, Rng \u2b1f, Stun, Torrent \u25b2. Special rules: APx, Barrage, Blast x, Indirect, Lethal x, MWx, No Cover, Relentless, Rng x, Stun, Torrent x."
+},
+{
+"id": 789725,
+"name": "Simulacrum Imperialis",
+"text": "The Shield of Faith ability grants a 5+ invulnerable save instead of a 6+ to models from your kill team, whilst they are within 6\" of any friendly models with a Simulacrum Imperialis."
+},
+{
+"id": 789498,
+"name": "Wicked Blades",
+"text": "Add 1 to both Dmg stats of each friendly BLOODED operative\u2019s bayonet, bayonet & shield and improvised blade for the battle."
+},
+{
+"id": 790431,
+"name": "Brood Brother Veteran",
+"text": "Resilient: Normal Dmg of 3 or more inflicts 1 less damage on this operative. Bodyguard: You can use the Unquestioning Loyalty firefight ploy for 0CP if this is the specified friendly BROODGUARD operative. Special rules: Balanced, Range x."
+},
+{
+"id": 790884,
+"name": "Deathshroud Terminator",
+"text": "Eyes of Mortarion: Add 1 to the Attacks characteristic of COMMANDERS within 3\" of any friendly models with this ability. Silent Bodyguard: Roll a D6 each time a COMMANDER is hit by a ranged or melee weapon whilst they are within 3\" of any friendly models with this ability. On a 2+, choose one of those models to be hit instead - resolve the remainder of the attack sequence against that model."
+},
+{
+"id": 790957,
+"name": "Chaos Ogryn",
+"text": "Avalanche of Muscle: Add 1 to the attacks characteristic of this model during and turn in which it made a successful charge. Bodyguard: Roll a D6 each time a TRAITOR COMMISAR from your kill team loses a wound whilst it is within 3\" of this model; on a 3+ the TRAITOR COMMISAR does not lose a wound, but this model suffers 1 mortal wound. Blasphemous Icon: When you pick this model to move in the Movement phase, roll a D6. On a 6, you can add 2\" to this model's Move characteristic until the end of the phase, and this model regains 1 lost wound."
+},
+{
+"id": 790923,
+"name": "Locus",
+"text": "Neurotraumal Rod: Your opponent must add 1 to Nerve tests taken for models that are within 3\" of any models with this ability. Quicksilver Dodge: This model has a 5+ invulnerable save. Quicksilver Strike: If this fighter is within 1\" of an enemy model at the beginning of the Fight phase, it is considered to have charged. Unquestioning Bodyguard: Roll a dice each time a Leader from your kill team loses a wound whilst they are within 3\" of any friendly models with this ability; on a 2+ choose one of those models to intercept that hit - the Leader does not lose a wound but the model you chose suffers a mortal wound."
+},
+{
+"id": 790049,
+"name": "Brood Brother Veteran",
+"text": "Resilient: Each time this operative would lose a wound, roll one D6; on a 5+, that wound is not lost. Bodyguard: You can use the Unquestioning Loyalty Tactical Ploy (pg 40) for 0CP if this operative is the friendly BROODGUARD operative. Weapon abilities: Balanced, Rng \u2b1f. Special rules: Balanced, Rng x."
+},
+{
+"id": 789514,
+"name": "Vile Blessing",
+"text": "Once per battle, when an attack dice inflicts Normal Dmg on a friendly CHAOS CULT operative (excluding DEVOTEE), you can ignore that inflicted damage. If that friendly operative is a MUTANT or TORMENT operative, you cannot roll for the Unnatural Regeneration rule for that attack dice then decide to use this rule on the same dice \u2013 you must use one or the other."
+},
+{
+"id": 788987,
+"name": "Vile Blessing",
+"text": "Once per battle, in the Resolve Successful Hits step of a combat or shooting attack, you can ignore the damage inflicted on this operative from one attack dice. This must be done before rolling to ignore lost wounds (e.g. the Unnatural Regeneration ability, see Chaos Mutant and Chaos Torment datacards)."
+},
+{
+"id": 790456,
+"name": "Voidscarred Shade Runner",
+"text": "Blink pack: Whenever this operative performs the Charge, Fall Back or Reposition action, it can warp jump. If it does, don\u2019t move it. Instead, remove it from the killzone and set it back up wholly within 7\" of its original location, measuring the horizontal distance only (in Killzone: Gallowdark, this distance can be measured through walls). It must be set up in a location it can be placed, and unless it\u2019s the Charge action, it cannot be set up within control range of an enemy operative. Slicing Attack: Whenever this operative performs the Reposition action with a warp jump (see Blink Pack), you can use this rule. If you do, after it moves, draw an imaginary line 1mm in diameter and up to 7\" long between it and its previous location. Note this doesn\u2019t have to be a straight line. Inflict D3+2 damage on one enemy operative that line crosses. You cannot inflict damage on an enemy operative that was not visible to this operative at the start of that action. A 28mm round marker can be temporarily placed underneath this operative before it moves to help determine this. Special rules: Ceaseless, Lethal x+, Range x, Silent."
+},
+{
+"id": 789419,
+"name": "Strafing Run",
+"text": "Select one enemy enemy operative in a friendly VETERAN GUARDMAN operative's Line of Sight to be the mark. Then place a Strafing Run token anywhere in the killzone (if you have a killzone edge, it cannot be placed closer to your edge than the mark is). Draw an imaginary line, 1mm wide, with unlimited height above and below between any part of the base of the mark and the centre of that Strafing Run token. Using the ranged weapon below, make a shooting attack against the mark and each other operative that has a base crossed by that line. For those shooting attacks, when determining if another operative is a valid target and if it is in Cover, draw Visibility and Cover lines from the mark, and if they are in Cover provided by Light terrain or another operative, they are treated as having an Engage order for that attack instead."
+},
+{
+"id": 790382,
+"name": "Demolition Veteran",
+"text": "Plant Mine (1AP): Place a Mine token in a location Visible to and within \u25b2 of and Visible to this operative, then perform a free Dash action. This operative cannot perform this action if it is within Engagement Range of an enemy operative, or if this operative's Mine token is in the killzone. If this operative is incapacitated and removed from the killzone, remove its Mine token. This operative can only perform this action once. Detonate: Each time this operative makes a Shoot action using its remote mine, make a shooting attack against each operative within \u2b24 of the centre of its Mine token with that weapon. When making those shooting attacks, each operative (friendly and enemy) within \u2b24 is a valid target, but when determining if it is in Cover, treat this operative's Mine token as the active operative. Then remove this operative's Mine token. An operative cannot make a shooting attack with this weapon by performing an Overwatch action, or if its Mine token is not in the killzone. An operative cannot be a valid target if Heavy terrain is wholly intervening (must be able to draw a Cover line from the centre of the Mine token to any part of the intended target's base without crossing Heavy terrain). Weapon abilities: AP1, Detonate*, Silent. Special rules: APx, Silent."
+},
+{
+"id": 816488,
+"name": "Grey Knight (Warrior)",
+"text": "Manifest Psychic Power (1AP): Each time a friendly Grey Knight operative performs the Manifest Psychic Power action, select one psychic power to be resolved. Special rules: Rng x, Limited, Blast x, Indirect, Balanced, Brutal, Rending, Lethal x, Stun, Ceaseless, Px, No Cover, Relentless."
+},
+{
+"id": 790387,
+"name": "Shadowseer",
+"text": "Manifest Psychic Power (1AP): Psychic action. Resolve a VOID-DANCER TROUPE psychic power. This operative can perform this action twice during its activation, but cannot perform it while within Engagement Range of an enemy operative. Hallucinogen Grenade (1AP): Select one point on the killzone within \u2b1f of this operative. Roll one D6 for each operative within \u2b24 of that point, subtracting 1 from the result if that operative is not Visible to this operative. On a 4+, subtract 1 from that operative's APL; in addition, on a 6, that operative suffers 1 mortal wound. This operative can only perform this action once per battle, and cannot perform this action while within Engagement Range of an enemy operative. Veil of Tears: Select one friendly VOID-DANCER TROUPE operative Visible to this operative. Until the end of the Turning Point: - For the purposes of determining Line of Sight, while that operative is more than \u2b1f from the active operative, it is in Cover. - Enemy operatives cannot end a Charge action within Engagement Range of that operative unless they began that action within \u2b1f of it, or they would also end that action within Engagement Range of another friendly operative from your kill team. Fog of Dreams: Select one ready enemy operative Visible to this operative and roll one D6. Until the end of the Turning Point, that enemy operative is treated as having a Group Activation of 1, and cannot be activated or perform actions until it is the last enemy operative to be activated, or a number of enemy operatives have been activated equal to the result of the D6 (whichever comes first). Mirror of Minds: Select one enemy operative within this operative's Line of Sight. Both players roll six D6. Pair your dice with your opponent's dice based on matching results. For each matching pair, that enemy operative suffers 1 mortal wound. For example, if you roll 6, 5, 5, 4, 2, 1 and your opponent rolls 6, 5, 4, 4, 3, 1, that enemy operative would suffer 4 mortal wounds. Weapon abilities: Stun. Special rules: Stun."
+},
+{
+"id": 789014,
+"name": "Lodestar Helm",
+"text": "The second time this operative performs the Manifest Psychic Power action in each of it activations, it does not suffer any mortal wounds as a result of rolling a 1-2 (note this does not allow you to select a psychic power to be resolved)."
+},
+{
+"id": 790084,
+"name": "Way Seeker",
+"text": "Manifest Psychic Power (1AP): Psychic action. Resolve a CORSAIR VOIDSCARRED psychic power. This operative can perform this action twice during its activation. This operative cannot perform this action while within Engagement Range of an enemy operative. Lightning Strike: Perform a free Shoot action using the ranged weapon below. Warding Shield: Select one friendly CORSAIR VOIDSCARRED operative Visible to and within \u2b1f of this operative. Until the end of the Turning Point, that operative has a 3+ invulnerable save. Freezing Grasp: Select one enemy operative Visible to this operative. Until the end of the Turning Point, subtract \u2b24 from that operative's Movement characteristic and it cannot perform the Dash action. Warp Fold: Select one other friendly CORSAIR VOIDSCARRED operative Visible to and within \u2b1f of this operative. That friendly operative and this operative both drop any objective markers they are carrying. That friendly operative then swaps positions with this operative; remove both operatives from the kill zone and set them back up in their new positions. -: The first time a friendly CORSAIR VOIDSCARRED PSYKER operative performs the Manifest Psychic Power action in each of its activations, select one psychic power from the list below to be resolved. The second time a friendly CORSAIR VOIDSCARRED operative performs the Manifest Psychic Power action in each of its activations, roll one D6; on a 1-2, that operative suffers 3 mortal wounds. On a 3+, select another psychic power from the list below to be resolved. Weapon abilities: AP1. Special rules: APx."
+},
+{
+"id": 789392,
+"name": "Mythic Scroll",
+"text": "Once per battle, during this operative's activation, it can perform a free Manifest Psychic Power action."
+},
+{
+"id": 790992,
+"name": "Exalted Sorcerer",
+"text": "Exalted Sorcerer: Psybolt and 2 powers from the Discipline of Tzeentch Plasma pistol: When attacking with this weapon, choose one of the profiles below."
+},
+{
+"id": 790993,
+"name": "Exalted Sorcerer on Disc of Tzeentch",
+"text": "Exalted Sorcerer: Psybolt and 2 powers from the Discipline of Tzeentch Plasma pistol: When attacking with this weapon, choose one of the profiles below."
+},
+{
+"id": 790954,
+"name": "Negavolt Cultist",
+"text": "Fanatical Devotion: Each time this model loses a wound, roll a D6; on a 5+ the model does not lose that wound. Voltageist Field: This model has a 5+ invulnerable save. After this model has charged, choose one of the target models within 1\" and roll a D6. On a 6 that target model suffers 1 mortal wound."
+},
+{
+"id": 788669,
+"name": "Mutation",
+"text": "During the battle, friendly CHAOS CULT operatives can \u2018mutate\u2019. Each time they do, choose one of the following: - If it\u2019s a DEVOTEE operative, turn it into a MUTANT operative. - If it\u2019s a MUTANT operative, turn it into a TORMENT operative. - It can regain D3+1 lost wounds. If the operative was mutated into a new operative, the new operative has the same wounds remaining as the preceding operative but then regains D3+1 wounds if it\u2019s now a MUTANT operative or D3+3 if it\u2019s now a TORMENT operative; in either case, it cannot go above its maximum wounds. An operative cannot mutate more than once per Turning Point. In addition, you can never have more than five MUTANT operatives and three TORMENT operatives at once. When an operative mutates into another operative, it\u2019s still the same DEVOTEE operative on your roster/dataslate, so has the same Battle Honours and is the same operative for any Tac Ops it has already been selected for, etc. The operative is simply a new operative type and will use that new type\u2019s miniature and datacard rules. It will revert back to its original DEVOTEE miniature and datacard after the battle. You can mutate friendly operatives as follows: - Once in each Strategy phase, when it is your turn to use a Strategic Ploy or pass, you can instead mutate a number of friendly CHAOS CULT operatives equal to the Turning Point number. - At the end of a combat in which a friendly DEVOTEE operative incapacitated an enemy operative and was not incapacitated. - When a friendly CULT DEMAGOGUE operative performs the Accursed Benediction action (see Cult Demagogue datacard). When a friendly operative mutates into a new operative: - Swap the miniatures, ensuring the centre of the new miniature\u2019s base is as close as possible to that of the old miniature. This can put it within Engagement Range of enemy operatives, and if the old miniature was, the new miniature must return there if possible. - Any wounds it lost are ignored - the new operative type has its full wounds remaining."
+},
+{
+"id": 790560,
+"name": "Mystic",
+"text": "Icon Bearer: Whenever determining control of a marker, treat this operative\u2019s APL stat as 1 higher. Note this isn\u2019t a change to its APL stat, so any changes are cumulative with this. Scry (1AP): \u25b6 PSYCHIC. Select one friendly INQUISITORIAL AGENT operative within 6\" of this operative, then select one of the following effects to last until the start of this operative\u2019s next activation, until it\u2019s incapacitated or until it performs this action again (whichever comes first): - Guidance: PSYCHIC. Whenever the selected operative is shooting, fighting or retaliating, in the Roll Attack Dice step, you can retain one of your fails as a normal success instead of discarding it, or retain one of your normal successes as a critical success instead. - Protection: PSYCHIC. Whenever an operative is shooting the selected operative, in the Roll Defence Dice step, you can retain one of your fails as a normal success instead of discarding it, or retain one of your normal successes as a critical success instead. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Lightly Armed: This operative cannot use any weapons that aren\u2019t on its datacard. Special rules: Range x, Seek."
+},
+{
+"id": 788759,
+"name": "Accurate x",
+"text": "You can retain up to *x* attack dice as normal successes without rolling them. If a weapon has more than one instance of Accurate *x*, you can treat it as one instance of Accurate 2 instead (this takes precedence over *x* rules above)."
+},
+{
+"id": 814892,
+"name": "Soulstrike",
+"text": "Successful defence dice are determined differently. Each result that\u2019s equal to or less than the target\u2019s APL stat is a success and is retained. Each result that\u2019s higher than the target\u2019s APL stat is a fail and is discarded. Each result of 1 is always a critical success. Each other success is a normal success. Each result of 6 is always a fail."
+},
+{
+"id": 790911,
+"name": "Stonesinger",
+"text": "Stonesinger Upgrades: When this operative is selected for the battle, select up to two different Stonesinger Upgrade rules (see Faction Rules) to be added to its datacard for the battle. Song of Renewal (1AP): \u25b6 PSYCHIC. Select one friendly EXODITE DRAGON MASTER operative visible to this operative. That operative regains up to 2D3 lost wounds. \u25b6 PSYCHIC. Alternatively, each friendly EXODITE DRAGON MASTER operative can regain up to D3 lost wounds. \u25c6 This operative cannot perform this action while within control range of an enemy operative, or more than once per turning point. Wails of the World (1AP): \u25b6 PSYCHIC. Select one enemy operative visible to this operative. Subtract 2\" from the Move stat of that operative and each other enemy operative within 2\" of it until the end of their next activations respectively (this isn\u2019t cumulative with being injured). MOUNTED operatives are unaffected. \u25b6 Roll 2D3 separately for each of those operatives: inflict damage on that operative equal to the difference between the result and their new Move stat (this takes precedence over stats not changing during an action). MOUNTED operatives are unaffected. \u25c6 This operative cannot perform this action while within control range of an enemy operative, or more than once per turning point. Cleansing of the Pale Moon (1AP): \u25b6 PSYCHIC. Select one friendly EXODITE DRAGON MASTER operative visible to this operative. Remove one rules effect or stat change your opponent has applied to it (e.g. Poison token, -1APL, cannot be activated or perform actions, etc.) This cannot allow it to regain lost wounds, remove mission pack rules or ignore the effects of being injured. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Note that unlike this operative's other unique action upgrades, it can perform this action more than once per turning point. Sow the Seeds: Once per turning point, during this operative\u2019s activation, before or after it performs an action, you can use this rule. If you do, select one objective marker it controls. Until this operative is incapacitated, until you use this rule again or until an enemy operative controls that marker (whichever comes first), this operative is treated as contesting that marker with an APL of 1 and controlling it for the purposes of mission actions and victory conditions (even if it\u2019s not within this operative\u2019s control range). Note that this could allow this operative to perform a mission action that would require it to control that marker. Wind's Grace (1AP): \u25b6 PSYCHIC. Select one friendly EXODITE DRAGON MASTER operative visible to this operative. Until the start of this operative\u2019s first activation in the next turning point, until it\u2019s incapacitated or until it performs this action again (whichever comes first), that selected operative\u2019s SPEED is one higher (i.e. if it would have SPEED 3-, it has SPEED 4+; if it would have SPEED 4+, it has SPEED 7+). \u25c6 This operative cannot perform this action while within control range of an enemy operative, or more than once per turning point. Special rules: Devastating x, Lethal x+, Range x, Saturate, Severe, Shock, Stun, Torrent x."
+},
+{
+"id": 790909,
+"name": "Clanblade",
+"text": "Scaleshield: Whenever an operative is shooting this operative, and no attack dice are retained as critical successes, worsen the x of the Piercing weapon rule by 1 (if any). Note that Piercing 1 would therefore be ignored. Clanblade Upgrades: When this operative is selected for the battle, select up to two different Clanblade Upgrade rules (see Faction Rules) to be added to its datacard for the battle. Moonsong Cull: Once during each of this operative\u2019s activations, after it\u2019s performed the Sprint action forwards and incapacitated an enemy operative during the Fight action, if it\u2019s no longer within control range of enemy operatives, you can use this rule. If you do, it can immediately perform a free Sprint action forwards using any remaining move distance it had from that first Sprint action, but it cannot pivot during that free action. That operative can perform two Sprint actions during its activation to do so, and its SPEED is measured by the distance moved during both Sprint actions combined. The operative cannot have performed any other actions between those actions. Spectral Nimbus: Once per turning point, when this operative is fighting or retaliating, after your opponent rolls their attack dice, but before re-rolls, you can use this rule. If you do, your opponent cannot retain attack dice results of less than 6 as critical successes during that sequence (e.g. as a result of the Lethal, Rending or Severe weapon rules). Focused Reflection: Whenever an enemy operative is shooting this operative while within 6\" of it, if you allocate one or more critical successes to block your opponent\u2019s attack dice, you can use this rule. If you do, after the action, before incapacitated operatives are removed (including this one, if relevant), inflict 1 damage on that enemy operative for each critical success allocated this way. Speartip of the Clan: Whenever this operative is fighting: - If it has SPEED 4+, the first time you strike with a normal success during that sequence, inflict 1 additional damage. - If it has SPEED 7+, add 1 to the Normal Dmg stat of melee weapons on its datacard. Bladed Stance: Whenever this operative is fighting or retaliating with its moonblades, you can resolve one of your successes before the normal order. If you do, that success must be used to block. Special rules: Lethal x+."
+},
+{
+"id": 790710,
+"name": "MV4 Shield Drone",
+"text": "Shield Generator: - This operative ignores the Piercing weapon rule. - Once per turning point, when an attack dice inflicts Normal Dmg on this operative, you can ignore that inflicted damage. - You can use the Saviour Protocols firefight ploy for 0CP if this is the specified DRONE operative."
+},
+{
+"id": 790441,
+"name": "Geomancer",
+"text": "Obelisk Node Control: Whenever this operative would perform a mission action (excluding Pick up Marker or Retrieve, Approved Ops 2025), if it requires this operative to control and objective marker, you can instead determine control from one of your OBELISK NODE markers (see Obelisk Node Matrix faction rule). Whenever this operative would perform the Operate Hatch action, you can open or close a hatchway thats access point is within 1\" of one of your OBELISK NODE markers instead. Note that you must still fulfil the Operate Hatch action's conditions. Molecular Breach (1AP): \u25b6 SUPPORT. Select one friendly CANOPTEK CIRCLE operative visible to and within 6\" of this operative. Alternatively, you can select one friendly CANOPTEK CIRCLE operative visible to this operative and within your OBELISK NODE MATRIX (SUPPORT doesn't apply to this selection). \u25b6 The next time the selected operative performs an action in which it moves, don't move it. Instead, remove it from the killzone and set it back up wholly within a distance equal to its Move stat (or 3\" if it was a Dash) of its original location, measuring the horizontal distance only (in a killzone that uses the close quarters rules, e.g. Killzone: Tomb World, this distance can be measured over and through Wall terrain and the operative can be set up on the other side). Note that it gains no additional distance when performing the Charge action. It must be set up in a location it can be placed, and unless it's the Charge action, it cannot be set up within control range of an enemy operative. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Canoptek Control (1AP): \u25b6 SUPPORT. Select one friendly CANOPTEK CIRCLE CANOPTEK operative visible to and within 6\" of this operative. Alternatively, you can select one friendly CANOPTEK CIRCLE CANOPTEK operative that's visible to this operative and within your OBELISK NODE MATRIX (SUPPORT doesn't apply to this selection). That selected operative can immediately perform a 1AP action for free; during that action, it cannot move more than 2\" or must be set up wholly within 2\" if it's removed and set up again. \u25c6 This operative cannot perform this action while within control range of an enemy operative, or while counteracting. Geomantic Disturbance (1AP): \u25b6 SUPPORT. Select a point on a terrain feature; that point must be visible to and within 8\" of this operative. Separately roll 2D6 for each operative within 2\" of that point. If the result is higher than that operative's remaining wounds, inflict damage on it equal to the difference. \u25c6 This operative cannot perform this action while it has a Conceal order, or while within control range of an enemy operative. Special rules: Blast x, Piercing x, Seek, Severe, Shock, Stun."
+},
+{
+"id": 789641,
+"name": "Auto-chastisers",
+"text": "Once per turning point, when a friendly NOVITIATE operative is shooting, fighting or retaliating, in the Roll Attack Dice step, you can inflict 1-3 damage on that friendly operative (but not enough to incapacitate it). If you do, you can use one ACT OF FAITH for free during that sequence with a Faith points cost no more than the damage you inflicted from this rule."
+},
+{
+"id": 788681,
+"name": "Dauntless Explorers",
+"text": "If you are not using the Close Quarters rules, in the Set Up Operatives step, up to three friendly HERNKYN YAEGIR operatives can be set up with a Conceal order wholly within 2\u2b24 of your drop zone, and more than \u2b1b from enemy operatives and your opponent's drop zone*. Operatives set up in this manner cannot make shooting attacks or perform the Charge action during the first Turning Point. *In ordinary circumstances, this will always be more than \u2b1b from your opponent's drop zone, but some mission maps may differ (e.g. Shadow Operations). If you are using the Close Quarters rules, at the end of the Set Up Operatives step, in an order of your choice, up to three friendly HERNKYN YAEGIR operatives that have a Conceal order and are wholly within your drop zone can perform up to two different actions from the following for free: - Normal Move - Operate Hatch - Dash Operatives that do so cannot make shooting attacks or perform the Charge action during the first Turning Point."
+},
+{
+"id": 790779,
+"name": "Vespid Strain Leader",
+"text": "Communion Helm: Once during each of this operative's activations, you can do one of the following: - Spend 1 Communion point for free. - Spend 1 Communion point and select one friendly VESPID STINGWING operative within 3\" of this operative. That other friendly operative can immediately perform a free 1AP mission action (you must still spend a Communion point for it to perform that action as normal, and this cannot be ignored using the Convergence Stimulant equipment). Commune: When selecting your operatives for the battle, also select one VESPID STINGWING strategy ploy. Whenever this operative is in the killzone and not within control range of an enemy operative, that ploy costs you 0CP."
+},
+{
+"id": 790113,
+"name": "Canid",
+"text": "Canid: This operative cannot perform mission actions and cannot be equipped with equipment (unless CANID operative is specified). Each time this operative is activated, it can ignore the first distance of \u2b24 it travels for a climb, drop or traverse during that activation. Loyal Companion: Each time an enemy operative performs a fight action, if this operative is a valid target, you can select this operative as the target instead. Each time an enemy operative finishes a Charge action within Engagement Range of another friendly ELUCIDIAN STARSTRIDER operative within \u2b1b of this operative, if this operative is not within Engagement Range of an enemy operative, this operative can perform a free Charge action, but must finish that move within Engagement Range of that enemy operative. Retrieve (1AP): Perform a free Dash, Fall Back or Normal Move action with this operative. At any point during that move, you can perform the Pick Up action for free with this operative, and any remaining increments of movement can be used after it does so. Aggression Serum: You can ignore any or all modifiers to this operative's Movement characteristic. In addition, the vicious bite this operative is equipped with gains the Relentless special rule for the battle. Weapon abilities: Rending. Special rules: Relentless, Rending."
+},
+{
+"id": 790323,
+"name": "Drone Controller Pathfinder",
+"text": "Drone Scout: During deployment, if this operative was selected for deployment, you can set up one friendly PATHFINDER DRONE operative with a Conceal order anywhere in the killzone that is wholly within \u2b1f of your dropzone, more than \u2b1f from enemy operatives and more than \u2b1b from the enemy dropzone. In a battle that uses Hazardous Areas rules, the DRONE operative must be set up wholly within 2\u2b24 of your drop zone. In a battle that uses Close Quarters rules, you cannot set up the DRONE operative as specified. Instead, at the end of the Scouting step, if that DRONE operative is wholly within your drop zone and has a Conceal order, it can perform a free Normal Move and/or operate Hatch action and its order cannot be changed in the first Turning Point. Control Drone (1AP): Select one friendly PATHFINDER DRONE operative, then select one of the following: - If that DRONE operative is Ready, after this activation ends, you can activate that DRONE operative and until the end of the Turning Point, it is not considered to have the first three bullet points of its Artificial Intelligence ability. - If that DRONE operative has been activated during this Turning Point, perform a free Dash or Shoot action with it. If you perform a Shoot action, for that action's shooting attack, worsen the Ballistic Skill characteristic of its ranged weapons by 1. This operative cannot perform this action if it is within Engagement Range of an enemy operative."
+},
+{
+"id": 789603,
+"name": "1x Comms Device",
+"text": "Before the battle, you can set up one of your Comms Device markers wholly within your territory. While a friendly operative controls this marker, add 3\" to the distance requirements of its SUPPORT rules that refer to friendly operatives (e.g. 'select a friendly operative within 6\" would be 9\" instead). Note that you cannot benefit from your opponent's Comms Device markers."
+},
+{
+"id": 789600,
+"name": "1x Ammo Cache",
+"text": "Before the battle, you can set up one of your Ammo Cache markers wholly within your territory. Friendly operatives can perform the \"Ammo Resupply\" mission action during the battle."
+},
+{
+"id": 789554,
+"name": "Gory Totem",
+"text": "Before the battle, you can set up one of your Gory Totem markers wholly within your territory and more than 2\" from other markers (excluding your Bloody Cadaver marker). Whenever an enemy operative within 3\" of your Gory Totem marker is shooting, fighting or retaliating, your opponent cannot re-roll their attack dice."
+},
+{
+"id": 790731,
+"name": "Ratling Stashmaster",
+"text": "Light-fingered: Once during each of this operative's activations, it can perform the Place Marker, Pick Up Marker or a mission action for 1 less AP. Well Stocked: If you select an Ammo Cache from universal equipment, you can set up an additional Ammo Cache marker."
+},
+{
+"id": 790046,
+"name": "Brood Brother Medic",
+"text": "Medic!: Once per Turning Point, the first time another friendly BROOD BROTHER operative (excluding a PATRIARCH) would be incapacitated while Visible to and within \u2b1b of this operative and not within Engagement Range of an enemy operative, if this operative is not within Engagement Range of an enemy operative, this operative can revive it. That friendly operative is not incapacitated, has 1 wound remaining, and if it was a shooting attack, any remaining attack dice are discarded. That friendly operative can then perform a free Dash action, but must finish that move within \u25b2 of this operative. Subtract 1 from both operatives' APL. Medikit (1AP): Select one friendly BROOD BROTHER operative (excluding a PATRIARCH) Visible to and within \u25b2 of this operative. That friendly operative regains 2D3 lost wounds. An operative cannot be selected for this action if it was revived using the Medic! ability during the same Turning Point. This operative cannot perform this action while within Engagement Range of an enemy operative. Weapon abilities: Lethal 5+, Limited. Special rules: Lethal x, Limited."
+},
+{
+"id": 790181,
+"name": "Hearthkyn Field Medic",
+"text": "Combat Surgery: Once per Turning Point, the first time another friendly HEARTHKYN SALVAGER operative would be incapacitated while Visible to and within \u2b1b of this operative and not within Engagement Range of an enemy operative, if this operative is not within Engagement Range of an enemy operative, this operative can revive it. That friendly operative is not incapacitated, has 1 wound remaining, and if it was a shooting attack, any remaining attack dice are discarded. That friendly operative can then perform a free Dash action, but must finish that move within \u25b2 of this operative. Subtract 1 from both operatives\u2019 APL. Medipack (1AP): Select one friendly HEARTHKYN SALVAGER operative Visible to and within \u25b2 of this operative. That friendly operative regains 2D3 lost wounds. An operative cannot be selected for this action if it was revived using the Combat Surgery ability during the same Turning Point. This operative cannot perform this action while within Engagement Range of an enemy operative. Weapon abilities: Lethal 5+. Special rules: Lethal x."
+},
+{
+"id": 790327,
+"name": "Medical Technician Pathfinder",
+"text": "Medikit (1AP): Select one friendly PATHFINDER operative (excluding a DRONE operative) within \u25b2 of and Visible to this operative. That operative regains 2D3 lost wounds. An operative cannot be selected for this ability if it was revived using the Medic! ability during the same Turning Point. This operative cannot perform this action if it is within Engagement Range of an enemy operative. Medic!: Once per Turning Point, the first time another friendly PATHFINDER operative (excluding a Drone operative) would be incapacitated while Visible to and within \u2b1b of this operative and not within Engagement Range of an enemy operative, if this operative is not within Engagement Range of an enemy operative, this operative can revive it. That friendly operative is not incapacitated, has 1 wound remaining and if it would have been incapacitated as a result of a shooting attack, any remaining attack dice are discarded. That friendly operative can then perform a free Dash action, but must finish that move within \u25b2 of this operative. Subtract 1 from both operatives' APL."
+},
+{
+"id": 790313,
+"name": "Novitiate Pronatus",
+"text": "Relic Seeker: Each time this operative is activated, it can perform one mission action at any point during its activation without subtracting any action points. Raise Relic (1AP): You gain 2 Faith points. If this operative performs this action while within \u2b24 of the centre of an objective marker, or while within \u2b1f of the enemy dropzone, you gain 3 Faith points instead."
+},
+{
+"id": 790383,
+"name": "Medic Veteran",
+"text": "Medic!: Once per Turning Point, the first time another friendly VETERAN GUARDSMAN operative would be incapacitated while Visible to and within \u2b1b of this operative and not within Engagement Range of an enemy operative, if this operative is not within Engagement Range of an enemy operative, this operative can revive it. That operative is not incapacitated, has 1 wound remaining, and if it was a shooting attack, any remaining attack dice are discarded. That other friendly operative can then perform a free Dash action, but must finish that move within \u25b2 of this operative. Subtract 1 from both operatives' APL. Medikit (1AP): Select one friendly VETERAN GUARDSMAN operative within \u25b2 of and Visible to this operative. That operative regains 2D3 lost wounds. An operative cannot be selected for this if it was revived using the Medic! ability during the same Turning Point. This operative cannot perform this action if it is within Engagement Range of an enemy operative."
+},
+{
+"id": 789111,
+"name": "Clone Field",
+"text": "Once during the battle, when this operative is selected as the target of a combat or shooting attack, you can use this ability. If you do so, this operative can immediately perform a free Dash action as though it can FLY (and can do so even if it is within Engagement Range of an enemy operative). If it is no longer a valid target, that combat or shooting attack immediately ends (the action points subtracted are not refunded)."
+},
+{
+"id": 790460,
+"name": "Voidscarred Way Seeker",
+"text": "Warp Fold (1AP): \u25b6 PSYCHIC. Select two friendly CORSAIR VOIDSCARRED operatives visible to and within 5\" of this operative. Remove them both from the killzone and set them back up in each other\u2019s previous locations (in other words, swap their positions). If one of them performed the Charge, Fall Back or Reposition action during this turning point and the other is ready, the other cannot perform any of those actions in its activation during this turning point. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Warding Shield (1AP): \u25b6 PSYCHIC. Select one friendly CORSAIR VOIDSCARRED operative visible to and within 6\" of this operative. Until the start of this operative\u2019s next activation, until it\u2019s incapacitated or until it performs this action again (whichever comes first), the first time an attack dice inflicts Normal Dmg on that friendly operative, ignore that inflicted damage. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Special rules: Devastating x, Severe, Shock, Silent, Stun."
+},
+{
+"id": 789705,
+"name": "Sorcerous Scrolls",
+"text": "Once per battle, when a friendly WARPCOVEN SORCERER operative is activated or counteracts, you can select a different BOON OF TZEENTCH for it to have until the end of the battle (it loses any it previously had). It cannot be the same BOON OF TZEENTCH any other friendly operative has. Note that if you use this rule when a friendly operative counteracts and you select Echoes from the Warp, it can be used immediately to change the operative\u2019s order and perform a free action during that counteraction."
+},
+{
+"id": 788810,
+"name": "Glory to the Omnissiah (Mars)",
+"text": "Each time you randomly determine which Canticle of the Omnissiah is being chanted, roll two dice instead of one. Models in your kill team receive the benefit of both results, instead of just the result of the first dice (if a duplicate is rolled, no additional Canticle is chanted this turn)."
+},
+{
+"id": 790307,
+"name": "Night Lord Ventrilokar",
+"text": "Icon Bearer: When determining control of an objective marker, treat this operative's APL characteristic as being 1 higher. Note that this is not a modifier. In narrative play, this is cumulative with the Focused Battle Honour (see the Kill Team Core Book). Disconcerting Mimicry (1AP): Psychic action. Select one enemy operative within \u2b1f of this operative, then select one of the following for that enemy operative (you can only select each one once per battle): - Subtract 1 from its APL. - Change its order. - Perform a free Dash action with it (specify the location for your opponent to move it to). This operative cannot perform this action while within Engagement Range of an enemy operative."
+},
+{
+"id": 790657,
+"name": "Ventriloquar",
+"text": "Icon Bearer: Whenever determining control of a marker, treat this operative\u2019s APL stat as 1 higher. Note this isn\u2019t a change to its APL stat, so any changes are cumulative with this. Disconcerting Mimicry (1AP): \u25b6 PSYCHIC. Select one enemy operative within 6\" of this operative, then select one of the following for that enemy operative (you can only select each option once per battle): - Until the end of its next activation, subtract 1 from its APL stat. - Change its order. - Perform a free Dash action with it (specify the location for your opponent to move it to). \u25c6 This operative cannot perform this action while within control range of an enemy operative."
+},
+{
+"id": 790648,
+"name": "Shrieker",
+"text": "Modified Vox-casters: Whenever an enemy operative is within 3\" of this operative, your opponent must spend 1 additional AP for that enemy operative to perform the Pick Up Marker and mission actions. Whenever determining control of a marker, treat the total APL stat of enemy operatives that contest it as 1 lower if at least one of those enemy operatives is within 3\" of this operative. Note this isn't a change to the APL stat, so any changes are cumulative with this. Shriek (1AP): \u25b6 Select one enemy operative that's visible to and within 6\" of this operative. Alternatively, select one enemy operative within this operative's BOOST ZONE (at which point this becomes a BOOST action). If enemy operatives are within control range of this operative, you cannot select an enemy operative that isn't. Inflict D3 damage on the selected operative and subtract 1 from its APL stat until the end of its next activation. \u25c6 This operative cannot perform this action while it has a Conceal order. If you're selecting an enemy operative within this operative's BOOST ZONE, this operative cannot perform this action normally. Instead, it performs this action during the Fall Back or Reposition action after setting up from a BOOST."
+},
+{
+"id": 788843,
+"name": "Combat Drugs",
+"text": "Models with this ability gain a bonus during the battle depending on the drugs they have taken. Before the battle, roll on the table below to see which combat drug your kill team is using. This bonus applies to all models in your kill team with the Combat Drugs ability. 1 - Adrenalight: +1 to Attacks characteristic. 2 - Grave Lotus: +1 to Strength characteristic. 3 - Hypex: +2 to Move characteristic. 4 - Painbringer: +1 to Toughness characteristic. 5 - Serpentin: +1 to Weapon Skill characteristic (eg WS 3+ becomes a WS 2+) 6 - Splintermind: +2 to Leadership characteristic."
+},
+{
+"id": 790088,
+"name": "Kurnathi",
+"text": "Bladed Stance: Each time this operative fights in combact, in the Resolve Successful Hits step of that combat, you can resolve one successful hit before the Attacker. If you do so, that successful hit must be used to parry. Weapon abilities: Lethal 5+, Relentless. Special rules: Lethal x, Relentless."
+},
+{
+"id": 790741,
+"name": "Death Cult Assassin",
+"text": "Bladed Stance: Whenever this operative is fighting or retaliating, you can resolve one of your successes before the normal order. If you do, that success must be used to block. Trained Assassin (1AP): \u25b6 Change this operative's order. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Special rules: Range x, Silent."
+},
+{
+"id": 790454,
+"name": "Voidscarred Kurnathi",
+"text": "Blademaster: This operative can perform the Dash action during an activation in which it performed the Charge action, but can only use any remaining move distance it had from that Charge action (to a maximum of 3\"). Bladed Stance: Whenever this operative is fighting or retaliating, you can resolve one of your successes before the normal order. If you do, that success must be used to block. Special rules: Ceaseless, Lethal x+."
+},
+{
+"id": 790447,
+"name": "Mortisanctus",
+"text": "Zealous Ultimatum: Once per battle STRATEGIC GAMBIT. Select one enemy operative within 8\" of this operative and issue an ultimatum to it. Your opponent must accept or decline that ultimatum (if it's a non-player operative, roll one D6: on a 4+, the ultimatum is accepted, otherwise it's declined). If the ultimatum is accepted, whenever this operative is fighting against or retaliating against that enemy operative, add 1 to the Atk stat of this operative's blessed broadsword. The first time this operative incapacitates that enemy operative while fighting or retaliating during the battle. Add 1 to the Atk stat of this operative's blessed broadsword until the end of the battle. In either case this is to amaxiumum of 5. If the ultimatum is declined, whenever that enemy operative is fighting against or retaliating against a friendly CELESTIAN INSIDIANT operative, subtract 1 from the Atk stat of that enemy operative's weapons. Bladed Stance: Whenever this operative is fighting or retaliating, you can resolve one of your successes before the normal order. If you do, that success must be used to block. Special rules: Brutal, Lethal x+."
+},
+{
+"id": 790053,
+"name": "Patriarch",
+"text": "Alpha Predator: This operative has a 4+ invulnerable save. Its APL cannot be modified. You can activate it twice during the Turning Point so long as it has the action points to spend (it stays ready while it has), but it cannot move more than \u2b1f+\u2b1b per Turning Point. Each time you activate it, generate as many action points for that activation as you wish from its APL (you cannot generate more over the Turning Point than its APL). Monster: This operative cannot be equipped with equipment. Light terrain and operatives with a Wounds characteristic of 15 or less do not provide Cover for this operative. Mind Control (2AP): Psychic action. Select one enemy operative Visible to and within \u2b24 of this operative. Both players roll one D6 and add their respective operative's APL to the total. If your total is higher than your opponent, you can resolve this action's effect: Until the end of the activation, that enemy operative doesn\u2019t treat your operatives as enemy operatives (and vice versa), and it treats your opponent\u2019s operatives as enemy operatives. You can change its order and perform a free action with it. It cannot perform an action in which it moves other than Dash (in which case specify the location for your opponent to move the operative to). You can only resolve this action's effect once per battle. Into Shadow (1AP): Change this operative's order. This operative cannot perform this action while within Engagement Range of an enemy operative. Weapon abilities: Relentless, Rending. Special rules: Relentless, Rending."
+},
+{
+"id": 790288,
+"name": "Anointed",
+"text": "Unleash Daemon: Once per battle, when this operative is activated, the daemon can take control. If it does so, until the end of the battle: - This operative cannot perform Overwatch, Pick Up, Shoot or mission actions. - Each time this operative would lose a wound, roll one D6; on a 5+ that wound is not lost. - Its daemonic claw gains the Ceaseless and Lethal 5+ special rules. - Each time this operative is activated, it can perform two Fight actions during that activation. Weapon abilities: Rending. Special rules: Rending."
+},
+{
+"id": 790044,
+"name": "Brood Brother Iconward",
+"text": "Cult Icon: When determining control of an objective marker within \u2b1f of this operative, treat the total APL characteristic of friendly BROOD BROTHER operatives within the required distance of that objective marker as being 1 higher. Not that this is not a modifier. In narrative play, this is cumulative with the Focused Battle Honour (see the Kill Team Core Book). Broodmind Devotion: Once per Turning Point, when a ready friendly BROOD BROTHER operative would be incapacitated within \u2b1f of this operative, you can use this ability. If you do, before that operative is incapacitated, it can perform one free action (excluding Fight, Explosives on page 44, and Mind Control on page 48) and you can change its order to do so. It's then incapacitated as normal. You cannot use this ability on the Medic! ability (see MEDIC datacard) on the same operative at the same time."
+},
+{
+"id": 789789,
+"name": "2. Mind Control",
+"text": "Mind Control has a warp charge value of 6. If manifested, pick an enemy model within 12\" of the pysker and roll 3D6. If the score is less than that model's Leadership characteristic nothing happens. If it is equal to or greater, that model immediately shoots another enemy model of your choice as if it were the Shooting phase, or makes a single close combat attack against another enemy model within 1\" as if it were the Fight phase, as if it were part of your kill team."
+},
+{
+"id": 790435,
+"name": "Patriarch",
+"text": "Alpha Predator: Whenever an operative is shooting this operative, ignore the Piercing weapon rule. You can activate this operative twice during the turning point as long as it has AP to spend (it stays ready while it can still be activated a second time). Per turning point, it cannot move more than 9\" and you cannot spend more than 4AP in total for it. Mind Control (2AP): \u25b6 PSYCHIC. Select one enemy operative visible to and within 2\" of this operative. Both players roll one D6 and add their respective operative\u2019s APL stat to the total. If your total is higher than your opponent\u2019s, you can resolve this action\u2019s second effect. \u25b6 Until the end of the activation, that enemy operative is a friendly operative (an enemy operative for your opponent), you can change its order, and it can immediately perform one free action. It cannot perform an action in which it moves other than Dash (in which case specify the location for your opponent to move the operative to). You can only resolve this action\u2019s second effect once per battle. \u25c6 This operative cannot perform this action while within control range of an enemy operative, unless the only enemy operative it\u2019s within control range of is selected for this action. Into Shadow (1AP): \u25b6 Change this operative\u2019s order. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Monster: This operative cannot use any weapons that aren\u2019t on its datacard, or perform unique actions (excluding Into Shadow and Mind Control). Whenever your opponent is selecting a valid target, if this operative has a Conceal order, it cannot use Light terrain for cover. While this can allow this operative to be targeted (assuming it\u2019s visible), it doesn\u2019t remove its cover save (if any). Special rules: Relentless, Rending."
+},
+{
+"id": 790103,
+"name": "Plague Marine (Icon Bearer)",
+"text": "Icon Bearer: While determining control of an objective marker, treat this operative's APL characteristic as being 1 higher. Note that this is not a modifier. In narrative play, this is cumulative with the Focused Battle Honour. Icon of Decay (1AP): Until the end of the Turning Point, while this operative is Visible to and within \u2b1b of a friendly BUBONIC ASTARTES operative, that friendly operative is invigorated by decay. While an operative is invigorated with decay, when rolling for its Disgustingly Resilient ability, you can re-roll results of 1 and 2."
+},
+{
+"id": 789525,
+"name": "Sanctus-V Bioscryer Cuffs",
+"text": "Once during each friendly DEATHWATCH operative's activation, before or after it performs an action, if it's not within control range of enemy operatives, you can use this rule. If you do, select one of the following: - That friendly operative regains D3 lost wounds. - Remove any changes to that friendly operative's APL stat. - Remove one of the following tokens that friendly operative has (before that token's activation effects are resolved, if relevant): Neutron Fragment, Poison, Terrorchem."
+},
+{
+"id": 790714,
+"name": "Plague Marine Champion",
+"text": "Grandfather's Blessing: Whenever an enemy operative that has one of your Poison tokens loses one or more wounds within 7\" of this operative, this operative regains up to an equal number of lost wounds (to a maximum of 3 lost wounds per turning point, and only if this operative isn\u2019t incapacitated). Special rules: *Poison, *Toxic, Hot, Lethal x+, Piercing x, Range x, Severe."
+},
+{
+"id": 790720,
+"name": "Plague Marine Heavy Gunner",
+"text": "Special rules: *Poison, Range x, Saturate, Severe, Torrent x."
+},
+{
+"id": 790520,
+"name": "Inciter",
+"text": "Dash and Spray (1AP): \u25b6 Perform a free Dash action and a free Shoot action with this operative in any order. You can only select dual autopistols (focused) for that Shoot action. \u25c6 This operative cannot perform this action while it has a Conceal order, or while within control range of an enemy operative. Incite the Hunt: Whenever this operative incapacitates an enemy operative from more than 2\" away, before that enemy operative is removed from the killzone, you can increase the GORE TANK of one friendly GOREMONGER operative within 8\" of that enemy operative. Whenever this operative inflicts damage on an enemy operative with either profile of its dual autopistols but doesn't incapacitate it, that enemy operative gains a Bleeding token (if it doesn't already have one). During a friendly GOREMONGER operative's activation or counteraction, before or after it performs an action, if it's within 8\" of an enemy operative that has a Bleeding token, you can remove that token and increase that friendly operative's GORE TANK. Special rules: Ceaseless, Devastating x, Range x, Rending."
+},
+{
+"id": 790504,
+"name": "Gorehorn",
+"text": "Champion: This operative can perform two Fight actions during its activation. *Headtaker: Whenever this operative incapacitates an operative with this weapon, roll one D3: - This operative regains a number of lost wounds equal to the result (unless it has one of your Frenzy tokens). - Until the end of the battle, add the result to the Critical Dmg stat of this operative\u2019s skullcleaver (to a maximum of 8). Special rules: Frenzy, Lethal x+."
+},
+{
+"id": 790636,
+"name": "Mandrake Nightfiend",
+"text": "Harrowing Whispers: Whenever your opponent would activate an enemy operative within 6\" of this operative, you can roll one D6 (you cannot do so if you already also interrupted that operative's activation with this rule or with the DIRGEMAW operative's Haunting Focus additional rule during this turning point): if the result is higher than that enemy operative\u2019s APL stat, they cannot activate it during this activation. If there are no other enemy operatives eligible to be activated, this rule has no effect. Oubliex: Whenever this operative is readied, or if this operative incapacitates an enemy operative with its huskblade, its oubliex becomes active. Whenever its oubliex is active and an attack dice would inflict damage on this operative, you can roll one D6: on a 5+, ignore the damage inflicted from that attack dice and its oubliex is no longer active. Special rules: Lethal x+, Shock."
+},
+{
+"id": 789910,
+"name": "Ammo Hound",
+"text": "If this model is in your kill team and not out of action when you make your Casualty rolls, roll a D6. On a 5+ you gain 1 Materiel."
+},
+{
+"id": 790695,
+"name": "Purgatus",
+"text": "Purge with Flame: Once per turning point, you can use the Inferno firefight ploy for 0CP if this is the specified friendly NOVITIATE operative. Special rules: Range x, Saturate, Torrent x."
+},
+{
+"id": 790738,
+"name": "Confessor",
+"text": "Lead the Procession: In each turning point after the first, whenever this operative is an ORATOR and performs the Charge, Fall Back, or Reposition action during its activation, you can use this rule before it moves. If you do, determine each other friendly SANCTIFIER operative that's benefitting from the SERMON and is visible to this operative (or vice versa). After this operative ends that action, each of those friendly SANCTIFIER operatives can immediately perform a free Charge, Fall Back, or Reposition action in an order of your choice, but each cannot move more than or be removed and set up more than 3\" and must end that move in a location where they are still benefitting from the SERMON. If this operative is incapacitated before this rule is fully resolved, e.g. from the Guard action's interruption, don't remove it from the killzone until this rule has been resolved. Commanding Declamation: Whenever the enemy operative would perform an action during an activation or counteraction while visible to and within 6\" of this operative, you can use this rule. If you do, roll one D6: if the result is higher than that enemy operative's APL stat: - It cannot perform that action during that activation or counteraction (the AP spent on it isn't refunded). If it's a counteraction, that counteraction ends. - You cannot use this rule again during the battle. Special rules: Brutal, Shock."
+},
+{
+"id": 790517,
+"name": "Aspirant",
+"text": "Obsessive Bloodlust: Once per turning point, when an operative with this rule ends the Fight action, if it's no longer within control range of enemy operatives, you can use this rule. If you do, it can immediately perform a free Charge action (even if it's already performed the Charge action during that activation), but cannot move more than 2\" during that action. Doing so doesn't prevent it from performing the Charge, Dash or Reposition action afterwards during that activation."
+},
+{
+"id": 816501,
+"name": "Sister of Silence Witchseeker",
+"text": "Psychic Abomination: While an operative is within \u2b1f of this operative, it cannot perform psychic actions. This operative cannot be targeted or affected by psychic actions. Special rules: Torrent x, Rng x, Lethal x, Blast x, Limited, Indirect, APx, MWx."
+},
+{
+"id": 789385,
+"name": "Psychic Abomination",
+"text": "While an operative is within \u2b1f of an ANATHEMA PSYKANA operative, it cannot perform psychic actions. SISTER OF SILENCE operatives cannot be targeted or affected by psychic actions."
+},
+{
+"id": 789592,
+"name": "Combat Daggers",
+"text": "Friendly INQUISITORIAL AGENT operatives have the following melee weapon. Whenever a friendly SISTER OF SILENCE operative is using it, add 1 to its Atk stat."
+},
+{
+"id": 788734,
+"name": "Weapons of the Witch Hunters",
+"text": "PSYCHIC ranged weapons cannot inflict damage on firendly CELESTIAN INSIDIANT operatives. For the effects of PSYCHIC actions, friendly CELESTIAN INSIDIANT operatives cannot be selected and are never treated as being within those actions' required distances. Whenever an operative is within 3\" of a friendly CELESTIAN INSIDIANT operative: - That operative cannot perform PSYCHIC actions or use PSYCHIC additional rules. - That operative cannot use PSYCHIC ranged weapons. - PSYCHIC melee weapons have no weapon rules and cannot have Dmg stats higher than 3/4."
+},
+{
+"id": 790149,
+"name": "Fellgor Herd-goad",
+"text": "Whip Control: While an enemy operative is Visible to and within \u2b1b of this operative, and this operative is not within Engagement Range of any other enemy operatives: - Subtract 1 from the Attacks characteristic of that enemy operative\u2019s melee weapons (to a minimum of 1). - 1 additional action point must be subtracted for that enemy operative to perform the Fall Back action. Incite Fury (1AP): Select one friendly FELLGOR RAVAGER operative (excluding a SHAMAN or IRONHORN operative) Visible to and within \u2b1b of this operative. Add 1 to its APL. This operative cannot perform this action while within Engagement Range of an enemy operative. Weapon abilities: Lethal 4+, Rng \u2b1b, Stun. Special rules: Lethal x, Rng x, Stun."
+},
+{
+"id": 816496,
+"name": "Skitarii Ranger Diktat",
+"text": "Enhanced Data-tether (1AP): Select one friendly HUNTER CLADE operative Visible to and within \u2b1f of this operative. Add 1 to its APL. This operative cannot perform this action while within Engagement Range of an enemy operative. Special rules: Heavy, Px, No Cover, Balanced, Brutal, Rending, Lethal x, Stun, Ceaseless."
+},
+{
+"id": 790439,
+"name": "Macrocyte Accelerator",
+"text": "Overcharge (1AP): \u25b6 Select one other friendly CANOPTEK CIRCLE CANOPTEK operative visible to and within 3\" of this operative. Alternatively, if this operative is within your OBELISK NODE MATRIX, you can select one other friendly CANOPTEK CIRCLE CANOPTEK operative within your OBELISK NODE MATRIX. Until the end of that selected operative's next activation, add 1 to its APL stat. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Cranial Overload (1AP): \u25b6 Select one enemy operative visible to and within 3\" of this operative. Alternatively, if this operative is within your OBELISK NODE MATRIX, you can select one enemy operative within your OBELISK NODE MATRIX. Until the end of that enemy operative's next activation, subtract 1 from its APL stat. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Special rules: Lethal x+, Piercing x, Range x, Stun."
+},
+{
+"id": 789455,
+"name": "Automata",
+"text": "- Each time this operative is activated, you can ignore any or all modifiers to its APL. - This operative is not affected by the Stun critical hit rule."
+},
+{
+"id": 788842,
+"name": "Speed of the Kill (Red Grief)",
+"text": "You can re-roll charge rolls for models in your kill team."
+},
+{
+"id": 788699,
+"name": "Heavy",
+"text": "An Operative cannot perform a Charge, Fall Back or Normal Move action in the same activation in which it performs a Shoot action with this ranged weapon."
+},
+{
+"id": 789741,
+"name": "Voltagheist Field",
+"text": "This model has a 5+ invulnerable save. When this model finishes a charge move within 1\" of an enemy model, pick an enemy model within 1\" and roll a D6. On a roll of 6 the enemy model suffers a mortal wound."
+},
+{
+"id": 789757,
+"name": "Battle Focus",
+"text": "If this model moves or Advances in its Movement phase, weapons (excluding Heavy weapons) are used as if the model had remained stationary."
+},
+{
+"id": 790491,
+"name": "Kroot Cut-Skin",
+"text": "Vicious Duellist: Whenever this operative is fighting or retaliating, for each attack dice your opponent discards as a fail, inflict 1 damage on the enemy operative in that sequence. Savage Assault: The first time this operative performs the Fight action during each of its activations, if neither it nor the enemy operative in that sequence is incapacitated, this operative can immediately perform a free Fight action afterwards, but it can only fight against that enemy operative (and only if it\u2019s still valid to fight against). This takes precedence over action restrictions. Special rules: Ceaseless, Lethal x+."
+},
+{
+"id": 790133,
+"name": "Cut-skin",
+"text": "Vicious Duellist: Each time this operative fights in combat, in the Roll Attack Dice step of that combat, for each attack dice your opponent discards, the enemy operative in that combat suffers 1 mortal wound. Savage Assault (1AP): Perform a free Fight action with this operative. After completing that action's fight sequence, if this operative or the target operative have not been incapacitated, fight in combat with this operative against the same target using the same weapon again. Weapon abilities: Balanced, Lethal 5+. Special rules: Balanced, Lethal x, Rogue."
+},
+{
+"id": 814861,
+"name": "Resourceful",
+"text": "In the Ready step of each Strategy phase after the first, you gain Resourceful points determined by the number of friendly HERNKYN YAEGIR operatives in the killzone that aren\u2019t within control range of enemy operatives. At the end of each turning point, discard your Resourceful points. 5+ Operatives - 2 Resourceful Points 1-4 Operatives - 1 Resourceful Points You can spend 1 of your Resourceful points during each activation of each friendly HERNKYN YAEGIR operative to do one of the following: - Before or after it performs an action, if it\u2019s not within control range of enemy operatives, you can use this rule. If you do, add 1 to that friendly operative\u2019s APL stat until the end of its activation. - When it\u2019s activated, if it\u2019s not within control range of enemy operatives, it regains up to D3+1 lost wounds."
+},
+{
+"id": 790301,
+"name": "Night Lord Visionary",
+"text": "Prescience: Once in each Strategy phase, when it's your turn to use a Strategic Ploy or pass, you can use this ability instead. If you do so, add D3 Prescience tokens to your pool. Your Prescience tokens are spent on abilities and unique actions on this datacard, but you cannot spend them if this operative is not in the killzone. Foreboding: In the Firefight phase, when it's your turn turn activate a ready friendly operative, you can discard one of your Prescience tokens to skip that activation. Portent: Once per Turning Point, when this operative fights in combat or a shooting attack is made against it, at the start of the Resolve Successful Hits step of that combat or shooting attack, you can discard one of your Prescience tokens to discard one of your opponent's successful hits. Premonition (1AP): Psychic action. Discard one of your Prescience tokens to gain 1CP. This operative cannot perform this action while within Engagement Range of an enemy operative. Weapon abilities: AP1, AP2, Brutal, Hot, Lethal 5+, Rending, Rng \u2b1f, Stun. Special rules: APx, Brutal, Hot, Lethal x, Rending, Rng x, Stun."
+},
+{
+"id": 789724,
+"name": "Advanced Blacksun Filters",
+"text": "Whenever a friendly XV26 STEALTH BATTLESUIT operative is shooting an operative that's obscured, you don't have to discard one success as a result of that rule. All other effects of obscured apply as normal."
+},
+{
+"id": 790651,
+"name": "Visionary",
+"text": "Prescience: PSYCHIC. In the Ready step of each Strategy phase, you gain D3 Prescience points. At the end of each turning point, discard your Prescience points. You can spend your Prescience points in the Firefight phase as follows (you cannot use each of the following rules more than once per turning point): - Foreboding: PSYCHIC. Whenever it\u2019s your turn to activate a friendly operative, you can spend 1 of your Prescience points to skip that activation. - Portent: PSYCHIC. Whenever an attack dice inflicts Normal Dmg on this operative, you can spend 1 of your Prescience points to ignore that inflicted damage. You cannot gain or spend your Prescience points if this operative is incapacitated. Premonition (1AP): \u25b6 PSYCHIC. Spend 1 of your Prescience points to gain 1CP. \u25c6 This operative cannot perform this action while within control range of an enemy operative, or more than once per turning point. Special rules: Brutal, Hot, Lethal x+, Piercing x, Range x, Shock."
+},
+{
+"id": 789709,
+"name": "Wolfteeth Necklaces",
+"text": "Once per turning point, when a friendly WOLF SCOUT operative (excluding FENRISIAN WOLF) is shooting, fighting or retaliating, if you roll two or more fails, you can discard one of them to retain another as a normal success instead."
+},
+{
+"id": 790825,
+"name": "Torrvald Orksbane",
+"text": "Torrvald Orksbane: Psybolt and two powers from the Librarius Discipline Psychic Hood: You can add 1 to Deny the Witch tests you take for this model against enemy PSYKERS within 12\". Wyrdborn: Add 1 to this model's Psychic tests. Bane of Orks: Re-roll hit rolls of 1 for this model in the Fight phase. When targeting ORKS models in the Fight phase, re-roll all failed hit rolls for this model in the Fight phase instead. The Icy Kiss of Fenris: Enemy models that suffer a mortal wound from a Psybolt manifested by this model are automatically shaken if they are not taken out of action. Trophy Hunter: If this model is in your kill team and not out of action after all Casualty rolls have been made after a mission, roll a D6 for each enemy specialist this model took out of action in that mission. If you roll a 5+ on any of the dice, you gain 1 Morale."
+},
+{
+"id": 789727,
+"name": "Null Rod",
+"text": "If this model has a null rod, it cannot be targeted or affected by psychic powers. In addition, whilst any models from your kill team that are equipped with a null rod are within 18\" of a PSYKER, subtract 1 from Psychic tests and Deny the Witch tests taken for that model."
+},
+{
+"id": 790857,
+"name": "Farseer",
+"text": "Farseer: Psybolt and 2 from the Runes of Fate Discipline. Ghosthelm: Roll a D6 whenever this model suffers a mortal wound, adding 3 to the roll if the mortal wound was inflicted as the result of the psyker suffering Perils of the Warp. On a 5+ that wound is not lost. Runes of the Farseer: Once in each Psychic phase, you can attempt to re-roll any number of dice used for this model's attempt to manifest or deny a psychic power."
+},
+{
+"id": 789729,
+"name": "Shield of Faith",
+"text": "Models with this ability have a 6+ invulnerable save. In addition, models with this ability can attempt to deny one psychic power in each Psychic phase in the same manner as a PSYKER. When making this attempt, roll one D6 instead of 2D6; the psychic power is resisted if the roll is greater than the result of the Psychic test that manifested the power."
+},
+{
+"id": 789755,
+"name": "Will of Asuryan",
+"text": "Will of Asuryan has a warp charge value of 5. If manifested, friendly models automatically pass Nerve tests while they are within 6\" of the psyker until the next Psychic phase. In addition, you can add 1 to Deny the Witch tests that you make for the psyker until the next Psychic phase."
+},
+{
+"id": 790617,
+"name": "Bomb Squig",
+"text": "Boom!: If this operative is incapacitated during a battle in which it hasn\u2019t used its explosives, roll one D6, or two D6 if you wish. If any result is a 4+, this operative performs a free Shoot action with its explosives before it\u2019s removed from the killzone. Stoopid: In the Firefight phase, whenever you determine this operative\u2019s order, you cannot select Conceal. This operative cannot perform any actions other than Charge, Dash, Fight, Reposition and Shoot. It cannot use any weapons that aren\u2019t on its datacard. Expendable: This operative is ignored for your opponent\u2019s kill/elimination op (when it\u2019s incapacitated, and when determining your starting number of operatives). It\u2019s also ignored for victory conditions and scoring VPS if either require operatives to \u2018escape\u2019, \u2018survive\u2019 or be incapacitated by enemy operatives (if it escapes/survives/is incapacitated, determining how many operatives must escape/survive/be incapacitated, etc.). Special rules: Blast x, Limited x."
+},
+{
+"id": 790551,
+"name": "Navis C.A.T. Unit",
+"text": "Machine: - This operative cannot be activated or perform actions if it\u2019s within control range of an enemy operative, or if a friendly IMPERIAL NAVY BREACHER SURVEYOR operative has been incapacitated. The turning point can end even if this operative is still ready. - This operative cannot perform any actions other than Charge, Dash, Fall Back, Reposition and Spot. - It cannot retaliate, assist in a fight, climb or jump. - Whenever determining control of a marker, treat this operative\u2019s APL stat as 1 lower. Note this isn\u2019t a change to its APL stat, so any changes are cumulative with this. - Whenever this operative has a Conceal order and is in cover, it cannot be selected as a valid target, taking precedence over all other rules (e.g. Seek, Vantage terrain) except being within 2\". - Whenever determining what\u2019s visible to this operative, draw the line from any part of the miniature. Expendable: This operative is ignored for your opponent\u2019s kill/elimination op (when it\u2019s incapacitated, and when determining your starting number of operatives). It\u2019s also ignored for victory conditions and scoring VPs if either require operatives to \u2018escape\u2019, \u2018survive\u2019 or be incapacitated by enemy operatives (if it escapes/survives/is incapacitated, determining how many operatives must escape/survive/be incapacitated, etc.). Spot (1AP): \u25b6 Select one enemy operative visible to this operative. Until the end of the turning point, until that enemy operative is no longer visible to this operative or until this operative performs this action again (whichever comes first), whenever a friendly IMPERIAL NAVY BREACHER operative is shooting that enemy operative, you can use this effect. If you do: - That friendly operative\u2019s ranged weapons have the Seek Light weapon rule. - That enemy operative cannot be obscured. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Special rules: Seek."
+},
+{
+"id": 790549,
+"name": "Navis Gheistskull",
+"text": "Expendable: This operative is ignored for your opponent\u2019s kill/elimination op (when it\u2019s incapacitated, and when determining your starting number of operatives). It\u2019s also ignored for victory conditions and scoring VPs if either require operatives to \u2018escape\u2019, \u2018survive\u2019 or be incapacitated by enemy operatives (if it escapes/survives/is incapacitated, determining how many operatives must escape/survive/be incapacitated, etc.). Machine: - This operative cannot perform any actions other than Boost, Charge, Dash, Fall Back and Reposition. - It cannot retaliate or assist in a fight. - Whenever determining control of a marker, treat this operative\u2019s APL stat as 1 lower. Note this isn\u2019t a change to its APL stat, so any changes are cumulative with this. - Whenever this operative has a Conceal order and is in cover, it cannot be selected as a valid target, taking precedence over all other rules (e.g. Seek, Vantage terrain) except being within 2\". Boost (1AP): \u25b6 The next time this operative performs a Charge action during this activation, add 4\" to the distance it can move (instead of 2\"). \u25c6 This operative can only perform this action once per battle, and cannot perform it during the first turning point."
+},
+{
+"id": 790440,
+"name": "Macrocyte Warrior",
+"text": "Expendable Construct: This operative is ignored for your opponent's kill/elimination op (when it's incapacitated, and when determining your starting number of operatives). It's also ignored for victory conditions that require operatives to 'escape', 'survive' or be incapacitated (if it escapes/survives/is incapacitated, determining how many operatives must escape/survive/be incapacitated, etc.). A Ceaseless Scuttling: As a STRATEGIC GAMBIT in each turning point after the first, if you have less than three non-incapacitated friendly CANOPTEK CIRCLE WARRIOR operatives, you can set up another one ready and with a Conceal order wholly within your drop zone (you can select its weapon options as normal). Aggressive Defence: If this operative is incapacitated by an enemy operative within 2\" of it, roll one D3; on a 2+, inflict 1 damage on that enemy operative. Special rules: Blast x, Piercing x."
+},
+{
+"id": 790567,
+"name": "Navis C.A.T. Unit",
+"text": "Machine: - This operative cannot be activated or perform actions if it\u2019s within control range of an enemy operative, or if a friendly INQUISITORIAL AGENT SURVEYOR operative has been incapacitated. The turning point can end even if this operative is still ready. - This operative cannot perform any actions other than Charge, Dash, Fall Back, Reposition and Spot. - It cannot retaliate, assist in a fight, climb or jump. - Whenever determining control of a marker, treat this operative\u2019s APL stat as 1 lower. Note this isn\u2019t a change to its APL stat, so any changes are cumulative with this. - Whenever this operative has a Conceal order and is in cover, it cannot be selected as a valid target, taking precedence over all other rules (e.g. Vantage terrain). - Whenever determining what\u2019s visible to this operative, draw the line from any part of the miniature. Expendable: This operative is ignored for your opponent\u2019s kill/elimination op (when it\u2019s incapacitated, and when determining your starting number of operatives). It\u2019s also ignored for victory conditions and scoring VPs if either require operatives to \u2018escape\u2019, \u2018survive\u2019 or be incapacitated by enemy operatives (if it escapes/survives/is incapacitated, determining how many operatives must escape/survive/be incapacitated, etc.). Spot (1AP): \u25b6 Select one enemy operative visible to this operative. Until the end of the turning point, until that enemy operative is no longer visible to this operative or until this operative performs this action again (whichever comes first), whenever a friendly INQUISITORIAL AGENT BREACHER operative is shooting that enemy operative, you can use this effect. If you do: - That friendly operative\u2019s ranged weapons have the Seek Light weapon rule. - That enemy operative cannot be obscured. \u25c6 This operative cannot perform this action while within control range of an enemy operative."
+},
+{
+"id": 816480,
+"name": "Blue Horror",
+"text": "Ephemeral Daemon: This operative has a 6+ invulnerable save. Special rules: APx, Rng x, Torrent x, Stun, Rending, Balanced, Ceaseless, Px, No Cover, Brutal, Lethal x."
+},
+{
+"id": 816481,
+"name": "Brimstone Horrors",
+"text": "Insignificant: Each time this operative would perform a mission action or the Pick Up action, you must subtract one additional AP to do so. This operative cannot be equipped with equipment. Note that in narrative play, this operative does not have a narrative datacard and is no longer part of your kill team after the game. Ephemeral Daemon: This operative has a 6+ invulnerable save."
+},
+{
+"id": 789431,
+"name": "Litany of Sacrifice (1AP)",
+"text": "Until the end of the Turning Point, while a friendly VETERAN GUARDMAN operative is within \u2b1f of this operative, it is inspired by sacrifice. While an operative is inspired by sacrifice, each time it fights in combat or is the target of a shooting attack, in the Roll Attack Dice step of that combat or shooting attack, you can change one of your opponent's critical hits to a normal hit."
+},
+{
+"id": 789478,
+"name": "Purity Seals",
+"text": "Once per turning point, when a friendly ANGEL OF DEATH operative is shooting, fighting or retaliating, if you roll two or more fails, you can discard one of them to retain another as a normal success instead."
+},
+{
+"id": 789700,
+"name": "Wraithbone Talisman",
+"text": "Once per turning point, when a friendly VOID-DANCER TROUPE operative is shooting, fighting or retaliating, if you roll two or more fails, you can discard one of them to retain another as a normal success instead"
+},
+{
+"id": 788858,
+"name": "Dance of Nightmares Made Flesh (Silent Shroud)",
+"text": "Subtract 1 from the Leadership characteristic of enemy models while they are within 3\" of any models in your kill team. In addition, whenever an opponent takes a Nerve test for a model that is within 3\" of any models in your kill team, they must roll two dice and discard the lowest result."
+},
+{
+"id": 789623,
+"name": "Chaos Talismans",
+"text": "STRATEGIC GAMBIT. Select one Marks of Chaos keyword. Once during each of their activations, when a friendly LEGIONARY operative that has that keyword is shooting, fighting or retaliating, if you roll two or more fails, you can inflict D3 damage on that friendly operative to discard one of them and retain the other as a normal success instead. Note that if it\u2019s the Shoot action and that damage incapacitates that friendly operative, the action doesn\u2019t end (continue the sequence with your successful attack dice)."
+},
+{
+"id": 789654,
+"name": "Purity Seals",
+"text": "Once per turning point, when a friendly PHOBOS STRIKE TEAM operative is shooting, fighting or retaliating, if you roll two or more fails, you can discard one of them to retain another as a normal success instead."
+},
+{
+"id": 789196,
+"name": "System Override Device",
+"text": "In the Scouting step, after resolving your selection, you can open one Hatchway. If both players have this or a similar ability, the Defender resolves this ability first."
+},
+{
+"id": 790093,
+"name": "Guardian Defender (Heavy Gunner)",
+"text": "Control Platform (1AP): Select one ready friendly GUARDIAN DEFENDER HEAVY WEAPON PLATFORM operative within \u2b1b of this operative. Perform a free Normal Move, Fall Back or Shoot action with that operative, then change its order token to activated. This operative cannot perform this action while within Engagement Range of enemy operatives."
+},
+{
+"id": 788742,
+"name": "Repress",
+"text": "Whenever this operative is using this weapon: - Each of your blocks can be allocated to block two unresolved successes (instead of one). - If this operative is retaliating, you resolve the first attack dice (i.e. defender instead of attacker)."
+},
+{
+"id": 790455,
+"name": "Voidscarred Kurnite Hunter",
+"text": "Faolch\u00fa's Bond: The first time during each turning point that this operative is retaliating, if it's ready, in the Resolve Attack Dice step of that sequence, you resolve the first attack dice (i.e. defender instead of attacker). Erudite Hunter: STRATEGIC GAMBIT. Select one enemy operative within 9\" of this operative. Once during this turning point, after that enemy operative performs an action in which it moves, you can interrupt to use this rule. If you do, this operative can immediately perform either a free Reposition action (it cannot end that move further from that enemy operative), or a free Charge action (you can change its order to do so, and it must end that move within control range of that enemy operative). Special rules: Rending, Saturate, Seek, Silent."
+},
+{
+"id": 790853,
+"name": "Heavy Weapons Platform",
+"text": "Crewed Weapon: A Heavy Weapons Platform can only move, Advance, React, shoot or fight if a friendly Guardian Defender that is not shaken is within 3\" of it. If a Heavy Weapons Platform shoots, you must choose one such Guardian Defender that could still shoot its own ranged weapon in that phase, that Guardian Defender may not fire any of its own ranged weapons this phase. Heavy Weapons Platforms may not charge, may not be specialists, are not part of a fire team and do not gain experience. A Heavy Weapon Platform automatically passes Nerve tests."
+},
+{
+"id": 789060,
+"name": "Kroothawk Totem",
+"text": "Once per battle, after rolling off to determine initiative, this operative can use this ability. If it does so, you can re-roll your dice."
+},
+{
+"id": 788832,
+"name": "Mission Tactics",
+"text": "At the beginning of the first battle round, choose a datasheet to be your kill team\u2019s priority target (e.g. Tyranid Warrior). You can re-roll wound rolls of 1 for attacks made by models in your kill team that target a model from the datasheet that is your kill team\u2019s priority target (so if you chose Tyranid Warrior, this ability would apply to attacks that targeted Tyranid Warriors and Tyranid Warrior Gunners)."
+},
+{
+"id": 790220,
+"name": "MV31 Pulse Accelerator Drone",
+"text": "Pulse Accelerator: While a friendly HUNTER CADRE operative is within \u2b1b of this operative, pulse weapons that friendly operative is equipped with are accelerated. While a pulse weapon is accelerated, each time a shooting attack is made with it, in the Roll Attack Dice step of that shooting attack, before rolling your attack dice, you can retain one as a successful normal hit without rolling it. A pulse weapon is a ranged weapon that includes the word \"pulse\" in its name, e.g. pulse carbine. Special rules: Artificial Intelligence, Saviour Protocols."
+},
+{
+"id": 789780,
+"name": "Dragonscale Mesh",
+"text": "Once per turning point, when an operative is shooting a friendly EXODITE DRAGON MASTER MOUNTED operative, in the Roll Defence Dice step, you can retain one of your normal successes as a critical success instead."
+},
+{
+"id": 814805,
+"name": "Shielding",
+"text": "Whenever this operative is activated, you can use this rule. If you do, until the start of this operative\u2019s next activation: - Subtract 2\" from its Move stat. - Whenever an operative is shooting this operative, you can re-roll any of your defence dice."
+},
+{
+"id": 791001,
+"name": "Tyrant Guard",
+"text": "Shield Wall: Roll a dice each time a COMMANDER loses a wound whilst they are within 3\" of any friendly models with this ability; on a 2+ choose one of these models to intercept that hit - the Commander does not lose a wound but the model you chose suffers a mortal wound. Blind Rampage: From the end of a phase in which a friendly COMMANDER is taken out of action, until the end of the battle, this model's Weapon Skill characteristic becomes 4+ and its Attacks characteristic becomes 4."
+},
+{
+"id": 790689,
+"name": "Duellist",
+"text": "*Riposte: Whenever you block with a critical success, you can also inflict damage equal to the weapon\u2019s Critical Dmg stat on the enemy operative in that sequence. Special rules: Ceaseless."
+},
+{
+"id": 814935,
+"name": "Shield",
+"text": "This operative has a 4+ Save stat, and whenever it\u2019s fighting or retaliating with this weapon, each of your blocks can be allocated to block two unresolved successes (instead of one)."
+},
+{
+"id": 790678,
+"name": "Nemesis (L)",
+"text": "Leagues of Vontann: Acquisition at all costs: Whenever a Leagues of Vontann NPO or friendly Leagues of Vontann Nemesis operative is shooting against or fighting against an enemy operative that contests a marker, or an area of the killzone that determines victory, that Leagues of Vontann operative's weapons have the Balanced weapon rule. Chaos: Let the galaxy burn: Whenever a Chaos NPO or friendly Chaos Nemesis operative is wholly within enemy territory, its weapons have the Balanced weapon rule. Aeldari: Arrogant Superiority: Whenever an Aeldari NPO or friendly Aeldari Nemesis operative is shooting against or fighting against a ready enemy operative, if two or more fails are rolled for it, one of them can be discarded to re-roll another. Imperium: Defenders of the Imperium: Whenever an operative is shooting an Imperium NPO or friendly Imperium Nemesis operative, if that Imperium operative is wholly within its territory, one of its defence dice can be retained as a normal success without rolling it (in addition to a cover save, if any). Ork: WAAAGH!: Whenever an Ork NPO is fighting, its weapons have the Balanced weapon rule. Worsen the hit stat of the Ork Nemesis operatives' ranged weapons by 1, but their melee weapons have the Severe weapon rule. Necron: Living Metal: In the ready step of each Strategy phase, each Necron NPO and friendly Necron Nemesis operative regains up to D3+1 lost wounds (roll seperately for each). T'au: Supporting Fire: Whenever a T'au Empire NPO is within 3\" of another, it's ranged weapons have the Accurate 1 weapon rule. Whenever a friendly T'au Empire Nemesis operative is within 3\" of another friendly T'au Empire operative, that Nemesis operative's ranged weapons have the Accurate 1 weapon rule. Tyranid: Will of the hive mind: Ignore the changes to Tyranid NPO and Tyranid Nemesis operatives' stats from being injured (including their weapon stats). Armoured: Whenever an operative is shooting this operative with a weapon that has a Normal Dmg stat of 3 or less, improve this operative's Save stat by 1. Blitz: Whenever this operative performs the Charge action during it's activation, it's melee weapons have the Severe and Shock weapon rules until the end of that activation. Close-range lethality: Whenver this operative is shooting the closest valid target within 8\" of it, its ranged weapons have the Lethal 5+ weapon rule, if the weapon already has that weapon rule, it also has the Severe weapon rule. Crushing impact: When this operative finishes moving during the Charge action, inflict D3+3 damage on one enemy operative within its control range. Duellist: Whenever this operative is fighting or retaliating, you can resolve one of its successes before the normal order. If you do, the success must be used to block Focused targeting: Whenever this operative is shooting during it's activation, if it hasn't performed any other actions during that activation, its ranged weapons have the Punishing weapon rule. Fury: This operative's melee weapons have the Ceasless weapon rule, if the weapon already has that weapon rule, it has the Relentless weapon rule. Worsen the hit stat of this operative's ranged weapons by 1. Implacable: Ignore any changes to this operative's weapon stats from being injured. Shielded: Once per battle, when an attack dice inflicts damage on his operative, you can ignore that inflicted damage. Shrouded: Whenever an operative is shooting this operative from more than 8\" away, attack dice cannot be re-rolled. Tenacious: Ignore any changes to this operative's move stat from being injured. Tough: Whenever an attack dice inflicts damage of 4 or more on this operative, roll one D6: on a 5+, subtract 1 from that inflicted damage. Violent demise: If this operative is incapacitated, before it's removed from the killzone, inflice D6+1 damage on each other operative within 3\" of it (excluding operatives with Heavy terrain wholly intervening between them and this operative). Tough: Whenever an attack dice inflicts damage of 4 or more on this operative, roll one D6: on a 5+, subtract 1 from that inflicted damage. Tenacious: Ignore any changes to this operative's move stat from being injured. Shrouded: Whenever an operative is shooting this operative from more than 8\" away, attack dice cannot be re-rolled. Shielded: Once per battle, when an attack dice inflicts damage on his operative, you can ignore that inflicted damage. Implacable: Ignore any changes to this operative's weapon stats from being injured. Fury: This operative's melee weapons have the Ceasless weapon rule, if the weapon already has that weapon rule, it has the Relentless weapon rule. Worsen the hit stat of this operative's ranged weapons by 1. Duellist: Whenever this operative is fighting or retaliating, you can resolve one of its successes before the normal order. If you do, the success must be used to block Focused targeting: Whenever this operative is shooting during it's activation, if it hasn't performed any other actions during that activation, its ranged weapons have the Punishing weapon rule. Crushing impact: When this operative finishes moving during the Charge action, inflict D3+3 damage on one enemy operative within its control range. Close-range lethality: Whenver this operative is shooting the closest valid target within 8\" of it, its ranged weapons have the Lethal 5+ weapon rule, if the weapon already has that weapon rule, it also has the Severe weapon rule. Blitz: Whenever this operative performs the Charge action during it's activation, it's melee weapons have the Severe and Shock weapon rules until the end of that activation. Armoured: Whenever an operative is shooting this operative with a weapon that has a Normal Dmg stat of 3 or less, improve this operative's Save stat by 1. Extra Defense: Whenever an operative is shooting this operative, collect and roll one additional defence dice, unless this operative is injured. Bulky: This operative cannot be placed on Vantage terrain higher than 2\" from the killzone floor. Whenever this operative would perform the fight action, the distance requirements for its control range can be changed to 1\" horizontally and 4\" vertically until the end of that action. This operative can move through other operatives (excluding Nemesis operatives) Ignore all changes to this operative's APL and if it's a player operative, APL changes don't affect the 5AP you can spend per turning point. Towering size: In the Firefight phase, whenever you determine this operative's order, you cannot select Conceal. This operative cannot be in cover or obscured by Light terrain, terrain parts less than 3\" tall or terrain that's not wholly intervening. Whenever another operative is performing the Shoot action, being within control range of other operatives doesn't prevent this operative from being selected as a valid target. This operative can move through terrain parts less than 2\" tall. It cannot move through Accessible terrain (excluding hatchways) unless that terrain is also less than 2\" tall. Whenever this operative would finish a move in a terrain feature less than 2\" tall, temporarily remove that terrain feature from the killzone, then return it when this operative leaves that location. If it's an equipment terrain feature, remove it from the battle instead."
+},
+{
+"id": 814881,
+"name": "Brutal",
+"text": "Your opponent can only block with critical successes."
+},
+{
+"id": 789236,
+"name": "Plasteel Armour Enhancement",
+"text": "Each time a shooting attack is made against this operative, in the Resolve Successful Hits step of that shooting attack, each time an attack dice would inflict Critical Damage on this operative, you can choose for that attack dice to inflict Normal Damage instead."
+},
+{
+"id": 814774,
+"name": "Expert Riposte",
+"text": "Each time this operative fights in combat using its duelling blades, in the Resolve Successful Hits step of that combat, each time you parry with a critical hit, also inflict damage equal to the weapon's Critical Damage characteristic."
+},
+{
+"id": 789223,
+"name": "Adamantine Mantle",
+"text": "Once per Turning Point, when Critical Damage would be inflicted upon this operative, you can use this ability. If you do so, that attack dice inflicts Normal Damage instead."
+},
+{
+"id": 790297,
+"name": "Warrior",
+"text": "Shadow Warrior: While this operative is within shadow (pg 54), add 1 to the Critical Damage characteristic of its glimmersteel blade."
+},
+{
+"id": 789342,
+"name": "Artificer's Blade",
+"text": "Select a combat knife or combat blade this operative is equipped with. it gains the following improvements for the battle: - Add 1 to its Critical Damage characteristic. - It gains the Lethal 5+ special rule."
+},
+{
+"id": 789279,
+"name": "Daemon Axe",
+"text": "Add 1 to the attacks characteristic of the double-handed chain axe the operatiev is equipped with for the battle."
+},
+{
+"id": 790484,
+"name": "Elucia Vayne",
+"text": "Disruption Field: Whenever an operative is shooting this operative, ignore the Piercing weapon rule. Digital Lasers: Whenever this operative performs the Fight action, at the start of the Roll Attack Dice step, you can use this rule. If you do, inflict 1 damage on the enemy operative in that sequence. Merciless: Whenever this operative is shooting against, fighting against or retaliating against an enemy operative that was already wounded when the action started, this operative's weapons have the Balanced weapon rule; if the weapon already has that weapon rule, it has the Ceaseless weapon rule instead of Balanced. Reputation to Maintain: The first time this operative incapacitates an enemy operative during the battle, you can either gain 1 additional CP or use an additional WARRANT OF TRADE rule (up to five uses per battle, instead of four). Note that you still cannot use the same WARRANT OF TRADE rule more than once per battle. Special rules: Lethal x+, Piercing x, Range x, Seek."
+},
+{
+"id": 790558,
+"name": "Enlightener",
+"text": "No Escape: Whenever an enemy operative would perform the Fall Back action while within control range of this operative, you can use this rule. If you do, roll one D6, subtracting 1 from the result if that enemy operative has a higher Wounds stat than this operative, and adding 1 if that enemy operative is wounded: on a 4+, that enemy operative cannot perform that action during that activation/counteraction (the AP spent on it isn\u2019t refunded). Extract Information: Whenever an enemy operative is incapacitated within this operative\u2019s control range, you gain 1CP. Special rules: Balanced, Rending."
+},
+{
+"id": 790513,
+"name": "Cursemite",
+"text": "Group Activation: Whenever this operative is expended, you must then activate one other ready friendly GELLERPOX INFECTED MUTOID VERMIN operative (if able) before your opponent activates. When that other operative is expended, your opponent then activates as normal (in other words, you cannot activate more than two operatives in succession with this rule). *Feast: Whenever this operative is using this weapon against a wounded operative, add 1 to the Atk stat of this weapon and it has the Lethal 5+ weapon rule. Special rules: Mutoid Vermin."
+},
+{
+"id": 790655,
+"name": "Screecher",
+"text": "Screecher: Whenever an enemy operative within 3\" of this operative is shooting, fighting or retaliating, your opponent cannot re-roll their attack dice Appetite for Cruelty: Whenever this operative is fighting against a wounded enemy operative, this operative\u2019s lightning claws have the Lethal 4+ weapon rule. Special rules: Ceaseless, Lethal x+."
+},
+{
+"id": 790562,
+"name": "Penal Legionnaire",
+"text": "Chem-mask: You can ignore any changes to this operative\u2019s APL stat, and any changes to its stats from being injured. This operative isn\u2019t affected by enemy operatives\u2019 Shock and Stun weapon rules. Cruel: Whenever this operative is shooting against, fighting against or retaliating against a wounded enemy operative, this operative\u2019s weapons have the Relentless weapon rule. Special rules: Range x, Saturate, Torrent x."
+},
+{
+"id": 790490,
+"name": "Kroot Cold-Blood",
+"text": "Hardy: Whenever an attack dice would inflict Critical Dmg on this operative, you can choose for that attack dice to inflict Normal Dmg instead. Cold-blooded: Whenever this operative is shooting against, fighting against or retaliating against a wounded enemy operative, this operative\u2019s weapons have the Lethal 5+ weapon rule; if that enemy operative is also injured, this operative\u2019s weapons also have the Rending weapon rule. Special rules: Lethal x+, Rending."
+},
+{
+"id": 789298,
+"name": "Elixir of Misery",
+"text": "Keep a Misery tally for this operative. Each time an operative is incapacitated, add 1 to the Misery tally. Once per battle, when this operative is activated, you can use this ability. If you do so, this operative regains a number of lost wounds equal to your Misery tally (to a maximum of 8)."
+},
+{
+"id": 790538,
+"name": "Ironbraek",
+"text": "Minefield: You have five Minefield markers for the battle. On the reverse side, three of them are HY-Pex mines (see right) and two are blank. Set up all your Minefield markers as if they were one item of equipment. Each must be set up reverse-side down (their specifics aren\u2019t revealed), more than 2\" from other markers and access points and Accessible terrain, and more than 6\" from your opponent\u2019s drop zone and your other Minefield markers. Whenever this operative is readied, if it\u2019s not within control range of enemy operatives, you can reset one of your flipped Minefield markers that\u2019s within its control range (flip the marker back over again). HY-Pex Mines: Whenever one of your reverse-side down Minefield markers is both within an enemy operative\u2019s control range and not within a friendly HERNKYN YAEGIR operative\u2019s control range, flip the marker over. If it\u2019s a blank, there\u2019s no effect. If it\u2019s a HY-Pex mine, inflict 3 damage on that enemy operative and roll one D6: if the result is less than that enemy operative\u2019s Save stat, inflict additional damage on it equal to the dice result; regardless of the result, if it isn\u2019t incapacitated, end its action (if any), even if that action\u2019s effects aren\u2019t fulfilled. If it cannot be placed, move it the minimum amount to do so. Regardless, that marker isn\u2019t removed."
+},
+{
+"id": 790201,
+"name": "Apprentek",
+"text": "Magnification Conduit (Apprentek): Each time this operative makes a shooting attack if a friendly CRYPTEK operative has an Engage order and is Visible to this operative, in the Select Valid Target step of that shooting attack, you can treat that friendly CRYPTEK operative as the active operative for the purposes of determining Line of Sight. If you do so, in the Roll Attack Dice step of that shooting attack, you can re-roll any or all of your attack dice results of one result (e.g. results of 2). Apprentek Assistance (1AP): Perform a free Cryptek action with this operative that a friendly CRYPTEK operative from your kill team has gained, but has not performed during this Turning Point (see your selected CRYPTEK operative's datacard). That Cryptek action cannot be performed by friendly operatives again during this Turning Point. This operative cannot perform this action while within Engagement Range of an enemy operative. Weapon abilities: AP1. Special rules: APx, Living Metal."
+},
+{
+"id": 790315,
+"name": "Novitiate Reliquarius",
+"text": "Icon of Purity: Each time a friendly NOVITIATE operative is incapacitated, if this operative is within \u2b1f of and Visible to it, roll one D6: on a 4+, that operative can immediately perform a free Shoot action. Plant the Icon (1AP): Perform this action while within \u2b24 of the centre of an objective marker. Until this operative is next activated, if it is within \u2b24 of the centre of that objective marker, halve the APL of enemy operatives (rounding up) when determining who controls that objective marker."
+},
+{
+"id": 790633,
+"name": "Legionary Icon Bearer",
+"text": "Icon Bearer: Whenever determining control of a marker, treat this operative\u2019s APL stat as 1 higher. Note this isn\u2019t a change to its APL stat, so any changes are cumulative with this. Favoured of the Dark Gods: In the Ready step of each Strategy phase, if this operative controls an objective marker that isn't tainted, that objective marker is tainted for the battle and you gain 1CP. Note that if any operative (including enemy operatives) has tainted an objective marker, you cannot taint that objective marker."
+},
+{
+"id": 816490,
+"name": "Hearthkyn Warrior",
+"text": "Secure Salvage: Each time a friendly HEARTHKYN SALVAGER operative fights in combat, if it\u2019s within \u2b24 of an objective marker, in the Resolve Successful Hits step of that combat, you can subtract 1 from the damage inflicted on it from one of your opponent\u2019s successful hits (to a minimum of 3). Special rules: Ceaseless, Px, Lethal x, Blast x, Indirect, Limited, Rng x, Rending, No Cover, Balanced, Brutal, Stun."
+},
+{
+"id": 790158,
+"name": "Fleshscreamer",
+"text": "Horrifying Shrieking: Each time an enemy operative would perform a mission action or the Pick-up action while within \u2b1b of this operative, one additional action point must be subtracted for that enemy operative to perform that action. When determining control of an objective marker this operative is within \u2b24 of, treat enemy operatives' total APL as being 1 less. Note this is not a modifier. Weapon abilities: Lethal 5+. Special rules: Lethal x."
+},
+{
+"id": 790937,
+"name": "Master of Possession",
+"text": "Rite of Possession: PSYKERS suffer Perils of the Warp on any Psychic roll of a double that is made for them, instead of just double 1 or 6, while they are within 12\" of any enemy models with this ability. Aura of Dark Glory: This model has a 5+ invulnerable save. Master of Possession: Psybolt and 2 powers from the Malefic Discipline"
+},
+{
+"id": 790643,
+"name": "Champion",
+"text": "Path to Glory: Whenever this operative incapacitates an enemy operative that has your Challenge token, you gain 1CP. Chaos Champion: STRATEGIC GAMBIT. Remove your Challenge token from the enemy operative that has it (if any), then select one enemy operative to gain your Challenge token. Whenever this operative is fighting against or retaliating against an enemy operative that has your Challenge token, in the Select Weapons step, you can select one of the following weapon rules for this operative's melee weapons to have until the end of the sequence: Balanced, Brutal, Punishing, Severe, Shock. Special rules: Balanced, Brutal, Punishing, Severe, Shock."
+},
+{
+"id": 816507,
+"name": "Infiltrator Warrior",
+"text": "Omni-scrambler: Once in each Strategy phase, when it is your turn to use a Strategic Ploy or pass, if any friendly operatives with this ability are in the killzone, you can use this ability instead. If you do so, select one enemy operative Visible to any friendly operative with this ability; in the following Firefight phase, that enemy operative is treated as having a Group Activation characteristic of 1, and cannot be activated or perform actions until one of the following is true: - A number of enemy operatives have been activated equal to the number of friendly operatives with this ability in the kill zone at the start of the phase, - It is the last enemy operative to be activated. Guerilla Warfare (1AP): Change this operative's order. This operative cannot perform this action during the first Turning Point or while within \u2b1b of an enemy operative. Special rules: Lethal x, Rng x, Limited, Silent, Blast x, Indirect, APx, Balanced, Brutal, Rending, Stun, Ceaseless, Px, No Cover."
+},
+{
+"id": 789314,
+"name": "Proclamation Broadcaster",
+"text": "Once in this battle, at the start of a Turning Point, this operative can use its Proclamation Broadcaster. If it does, you gain a number of Faith points equal to the number of other friendly NOVITIATE operatives Visible to and within \u2b1b of this operative (to a maximum of 4 Faith points)."
+},
+{
+"id": 789344,
+"name": "Omni-scrambler",
+"text": "Once in each Strategy phase, when it is your turn to use a Strategic Ploy or pass, if any friendly operatives with this ability are in the killzone, you can use this ability instead. If you do so, select one enemy operative Visible to any friendly operative with this ability; in the following Firefight phase, that enemy operative is treated as having a Group Activation characteristic of 1, and cannot be activated or perform actions until one of the following is true: - A number of enemy operatives have been activated equal to the number of friendly operatives with this ability in the kill zone at the start of the phase, - It is the last enemy operative to be activated."
+},
+{
+"id": 790052,
+"name": "Magus",
+"text": "Spiritual Leader: Friendly BROOD BROTHER operatives have a 5+ invulnerable save, cannot be injured and their APL cannot be negatively modified. Telepathic Overload (1AP): Psychic Action. Select one enemy operative Visible to this operative. Subtract 1 from its APL. Mental Onslaught (1AP): Psychic Action. Select one enemy operative in this operative's Line of Sight to suffer 2 mortal wounds (or 4 mortal wounds if it's within \u2b1f of this operative). Then roll one D6; if the result is greater than that enemy operative's APL, it suffers another 2 mortal wounds (or 4 mortal wounds if it's within \u2b1f of this operative). Keep rolling one D6 in this manner until you roll equal to or less than that enemy operative's APL, or it has suffered 8 mortal wounds during this action. This operative cannot perform this action while within Engagement Range of an enemy operative. Weapon abilities: Lethal 4+, Rng \u2b1f, Stun. Special rules: Lethal x, Rng x, Stun."
+},
+{
+"id": 789628,
+"name": "Bone Darts",
+"text": "Once per turning point, a friendly MANDRAKE operative can use the Bone dart ranged weapon."
+},
+{
+"id": 814757,
+"name": "Pain Casket",
+"text": "Each time a friendly HAND OF THE ARCHON operative within \u2b1f of this operative would gain a Pain token, you can select another friendly HAND OF THE ARCHON operative within \u2b1f of this operative to gain it instead."
+},
+{
+"id": 814758,
+"name": "Living Trophy",
+"text": "The operative gains 1 Pain token for the battle."
+},
+{
+"id": 790175,
+"name": "Flayer",
+"text": "Insensible to Pain: Each time this operative fights in combat or a shooting attack is made against it, subtract 1 from both Damage characteristics of weapons the enemy operative is equipped with for that combat or shooting attack (to a minimum of 1). *Flay: Each time this operative fights in combat with this weapon, in the Resolve Successful Hits step of that combat, the first time it strikes with a critical hit, you can select one friendly HAND OF THE ARCHON operative within \u2b1f of this operative to gain 1 Pain token. Weapon abilities: Flay*, Relentless. Special rules: Relentless."
+},
+{
+"id": 790356,
+"name": "Brother Thysor",
+"text": "Smoke Grenade (1AP): Place the centre of one of your Smoke tokens within \u2b1f of this operative. That token creates an area of smoke with a \u2b24 radius and unlimited upward height (but not below). Until the end of the Turning Point, an operative is Obscured if every Cover line drawn to it crosses an area of smoke. This operative can only perform this action once, and cannot perform this action while within Engagement Range of enemy operative."
+},
+{
+"id": 789213,
+"name": "Smoke Grenade (1AP)",
+"text": "Place the centre of one Smoke token on a point within \u2b1f of this operative. That token creates an area of smoke with a \u2b24 radius and unlimited upward height (but not below). Until the end of the Turning Point, an operative is Obscured if every Cover line drawn to it crosses an area of smoke. This operative can only perform this action once, and cannot perform this action while within Engagement Range of an enemy operative."
+},
+{
+"id": 788714,
+"name": "Fusillade",
+"text": "Each time a friendly operative performs a Shoot action and selects this weapon, after selecting a valid target, you can select any number of other valid targets within \u2b24 of the original target. Distribute your attack dice between the targets you have selected. Make a shooting attack with this weapon (using the same profile) against each of the targets you have selected using the attack dice you have distributed to each of them."
+},
+{
+"id": 790786,
+"name": "Shadowseer",
+"text": "Fog of Dreams (1AP): \u25b6 PSYCHIC. Select one ready enemy operative visible to this operative and roll one D6. Until the end of the turning point, that enemy operative cannot be activated or perform actions until it's the last enemy operative to be activated, or until your opponent has activated a number of enemy operatives after this action equal to the result of the D6 (whichever comes first). \u25c6 This operative cannot perform this action while within control range of an enemy operative. Mirror of Minds (1AP): \u25b6 PSYCHIC. Select one enemy operative that\u2019s a valid target for and within 8\" of this operative. Both players roll five D6. Pair your dice with your opponent\u2019s dice based on matching results. For each matching pair, inflict D3 damage on that enemy operative (to a maximum of 8). For example, if you rolled 6, 5, 5, 2, 1 and your opponent rolled 6, 5, 4, 3, 1, you would inflict 3D3 damage on that enemy operative. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Special rules: Blast x, Range x, Seek, Shock, Silent, Stun."
+},
+{
+"id": 788722,
+"name": "Forward Scouting",
+"text": "At the end of the Set Up Operatives step, you can select and resolve up to five Forward Scouting options. Each option has a number in brackets, which is the maximum number of times you can select and resolve it for the battle. For example, your five selections could be Recon x2, Trip Alarm, Booby Trap, and Diversion. If both players have this ability, alternate resolving, starting with the Defender."
+},
+{
+"id": 790272,
+"name": "Kasrkin Recon-Trooper",
+"text": "Reconnoitre Killzone: In the Scouting step, after resolving your selection, you can resolve an additional Recon option (even if you have already selected that option). Initiative is still determined by your original selection. If both players have this or a similar ability, the Defender resolves this ability first. Warden Auspex (1AP): Select one enemy operative. Until the end of the Turning Point, each time a friendly KASRKIN operative makes a shooting attack, that enemy operative is not Obscured. This operative cannot perform this action while within Engagement Range of an enemy operative."
+},
+{
+"id": 790040,
+"name": "Traitor Chieftain",
+"text": "Blooded Icon: Once per Turning Point, when a friendly BLOODED operative with a Blooded token is incapacitated within \u2b1f of this operative, you can add that token to your pool. This has no effect if the operative is only treated as having a Blooded token. Lead with Strength: Each time this operative fights in combat or makes a shooting attack, if it has a Blooded token and is more than \u2b1f from your drop zone, treat it as if it's under the gaze of the gods for that combat or shooting attack. Weapon abilities: AP1, AP2, Hot, Rng \u2b1f. Special rules: APx, Hot, Rng x."
+},
+{
+"id": 788953,
+"name": "Unholy Sigil",
+"text": "Each time this operative is activated, you can use this ability. If you do so, until the end of that activation: - If this operative does not have a Blooded token, treat it as if it has a Blooded token. - If this operative has a Blooded token, treat it as if it's under the gaze of the gods. This has no effect if the operative is only treated as having a Blooded token. - At the end of this operative's activation, if this operative has not caused an enemy operative to lose any wounds, this operative suffers D3 mortal wounds."
+},
+{
+"id": 790780,
+"name": "Oversight Drone",
+"text": "Evasive Drone: - This operative cannot perform any action other than Aerial Guidance, Charge, Dash, Fall Back, Fight and Reposition. - Whenever determining control of objective markers, treat this operative's APL stat as 1 lower. - Whenever determining what's visible to this operative, the round disc at the top of the miniature is its head. - Whenever this operative has a Conceal order and is in cover, it cannot be selected as a valid target, taking precedence over all other rules (e.g. Seek, Vantage terrain) except being within 2\". - Whenever an operative is shooting this operative, ignore the Piercing weapon rule. Aerial Guidance (1AP): \u25b6 SUPPORT. Until the start of this operative's next activation, whenever another friendly VESPID STINGWING operative within 6\" of this operative is shooting an enemy operative visible to this operative, that friendly operative's ranged weapons have the Lethal 5+ and Saturate weapon rules. This has no effect while this operative is within control range of an enemy operative. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Special rules: Lethal x+, Saturate."
+},
+{
+"id": 789631,
+"name": "Warp Fuel",
+"text": "Once per turning point, when an enemy operative ends the Fall Back action during its activation, if at least one friendly MURDERWING operative was within its control range at the start of that action, you can use this rule. One of those friendly operatives can immediately perform a free Reposition or Charge action, but cannot use more than 3\" of move distance. Note that if the enemy operative doesn't perform the Fall Back action during its own activation, this has no effect."
+},
+{
+"id": 789519,
+"name": "Runes of Guidance",
+"text": "Once per turning point, when a friendly CORSAIR VOIDSCARRED WAY SEEKER or CORSAIR VOIDSCARRED SOUL WEAVER operative is performing a PSYCHIC unique action (excluding Warp Fold), you can use this rule. If you do, until the end of that action, add 3\" to its distance requirement. Note this has no effect on PSYCHIC weapons (e.g. the Devastating distance requirement of lightning strike)."
+},
+{
+"id": 790186,
+"name": "Hearthkyn Kognit\u00e2ar",
+"text": "Tactician: Once in each Strategy phase, when it is your turn to use a Strategic Ploy or pass, you can instead place either your Attack token or your Defend token in the killzone. - While an enemy operative is within \u2b1b of your Attack token, each time a friendly HEARTHKYN SALVAGER operative fights in combat with or makes a shooting attack against it, in the Roll Attack Dice step of that combat or shooting attack, you can re-roll one of your attack dice. - While a friendly HEARTHKYN SALVAGER operative is within \u2b1b of your Defend token, each time a shooting attack is made against it, in the Roll Defence Dice step of that shooting attack, you can re-roll one of your defence dice. - At the end of each Turning Point, remove your Attack token or Defend token. Accelerated Appraisal (1AP): If your Attack token or Defend token (see above) is in the killzone, remove it, then place either your Attack token or Defend token in the killzone. This operative cannot perform this action while within Engagement Range of an enemy operative."
+},
+{
+"id": 790676,
+"name": "C'tan Shard of the Nightbringer",
+"text": "C'tan Shard of the Nightbringer: This NPO will move towards the enemy to fight them, but will shoot if it can't. 1. Fight. 2. Charge the closest player operative via the shortest possible route. 3. Shoot. 4. Reposition towards the closest player operative. Mighty Foe: This operative cannot have a Conceal order and cannot be in cover, obscured, readied or expended (meaning it can activate multiple times per turning point and the turning point will end when all other operatives are expended). Whenever it's the NPO's turn to activate, roll one D6: on a 4+, activate this NPO (or skip the activation if it isn't in the killzone); on a 1-3, activate another ready NPO (or skip the activation if there aren't any in the killzone). This operative can perform two Fight actions during its activation, but cannot move more than 12\" per turning point. Necrodermis: This operative cannot be injured and its stats cannot be changed. Whenever an operative is shooting this operative, worsen the x of the Piercing weapon rule by 1 (if any). Note that Piercing 1 would therefore be ignored. Indomitable Reanimation: Whenever this operative is incapacitated, before it's removed from the killzone, place a Reanimation marker underneath the centre of its base. Then remove it as incapacitated, also removing any tokens and rules effects it had (e.g. Poison token). In the Ready step of the next Strategy phase, roll D3+1. After that many activations have been completed: - Set up this operative with an Engage order on the centre of that reanimation marker. If there are any operatives that prevent this, set them up as though this operative ended a move there, (see Domineering Presence below). - This operative regains all lost wounds. - Remove that Reanimation marker. Dominnering Presence: This operative can move through parts of terrain features (including Wall terrain features) as if they were not there (taking precedence over the terrain feature's rules) but must end those moves in a location it can be placed. When this operative moves through Light terrain, remove that terrain from the killzone unless it's attached to Heavy terrain. This operative can move through operatives, and can end its move and be set up over their bases. If it does, remove those operatives from the killzone and set them up in a location they can be placed within control range of this operative (if possible) and as close to their previous position as possible. Whenever another operative is on Vantage terrain, if it's visible to and within 2\" horizontally of this operative (or vice versa), it's within this operative's control range. Special rules: Devastating x, Lethal x+, Range x, Rending, Severe."
+},
+{
+"id": 790663,
+"name": "Necron warrior (Pts 2)",
+"text": "Unrelenting: Whenever this NPO is shooting against the closest valid target, its weapons have the Accurate 1 weapon rule. Weapon Options: This NPO has a combat attachment and either a gauss flayer or a gauss reaper. Special rules: Piercing x, Range x."
+},
+{
+"id": 788983,
+"name": "Accursed Consecration",
+"text": "When this item of equipment is revealed, select one Accursed Gift for this operative to gain."
+},
+{
+"id": 790694,
+"name": "Pronatus",
+"text": "Relic Seeker: Once during each of this operative\u2019s activations, it can perform the Pick Up Marker, Place Marker or a mission action for 1 less AP. Divine Acquisition: Once per turning point, when this operative performs a mission action that requires it to control an objective or mission marker, you gain a number of Faith points equal to the turning point number."
+},
+{
+"id": 790940,
+"name": "Dark Disciple",
+"text": "Followers: Models do not suffer any penalty to their Nerve tests for a friendly Dark Disciple being out of action. Dark Disciples cannot be specialists, are not part of a fire team and cannot gain experience. Relic of Corruption: Add 1\" to the range of a Dark Apostle's Aura Tactics for each friendly Dark Disciple that is within 1\" of that Dark Apostle."
+},
+{
+"id": 790796,
+"name": "Tzaangor Warrior",
+"text": "Relic Hunters: Once per battle, one friendly WARPCOVEN TZAANGOR WARRIOR can perform the Pick Up Marker, Place Marker or a mission action for 1 less AP if that friendly operative is within your opponent's territory. Special rules: Balanced, Range x."
+},
+{
+"id": 789532,
+"name": "Hot Shot Capacitor Packs",
+"text": "Up to twice per turning point, whenever a friendly ELUCIDIAN STARSTRIDER operative is performing the Shoot action and you select a laspistol, lasgun, or relic laspisol, you can use this rule. If you do, until the end of the turning point, add 1 to both Dmg stats of that weapon and it has the Hot and Piercing Crits 1 weapon rules."
+},
+{
+"id": 814926,
+"name": "Skytorch",
+"text": "An operative can only use this weapon during the Skytorch Assault action. If it does, don't select a valid target. Instead, shoot against each operative within its torch zone (excluding operatives wholly underneath Vantage terrain); they are not in cover or obscured. Roll each sequence separately in order of furthest operative to closest. The torch zone is the area between the operative's current and previous location. A 28mm round Skytorch marker can be temporarily placed underneath this operative before it moves to help determine this. Torrent 0\" means you cannot select secondary targets outside of its torch zone, but this weapon still has the Torrent weapon rule for all other rules purposes, e.g. the Condensed Stronghold rule (see Killzone: Volkus, Kill Team Core Book)."
+},
+{
+"id": 789602,
+"name": "1x Razor Wire",
+"text": "Razor wire is Exposed and Obstructing terrain. Before the battle, you can set it up wholly within your territory, on the killzone floor and more than 2\" from other equipment terrain features, access points and Accessible terrain."
+},
+{
+"id": 814839,
+"name": "Engineered",
+"text": "At the end of the Select Operatives step, if this operative is selected for deployment, select up to two of the following improvements or weapon rules for this weapon to have for the battle: Add 1 to the Normal Dmg stat, add 1 to the Critical Dmg stat, Balanced, Brutal, Lethal 5+, Rending."
+},
+{
+"id": 788915,
+"name": "The Slicing Hurricane",
+"text": "Use this Aspect Technique during a friendly DIRE AVENGER operative\u2019s Normal Move action. Perform one Shoot action with that operative during that Normal Move action (it must do so in a location it can be placed, and any remaining increments of movement can be used after it does so). You must select a shuriken catapult, shuriken pistol or twin shuriken catapult for that shooting attack."
+},
+{
+"id": 790851,
+"name": "Sly Marbo",
+"text": "Loner: The Voice of Command ability has no effect on Sly Marbo. Stalk with Blade: You can immediately declare that Sly Marbo will attempt to charge, though you may only roll a single D6 (rather than 2D6) for the charge roll. In addition, until the end of the battle round, add 2 to Sly Marbo's Attacks characteristic. -: When you set up Sly Marbo from Reserve, you can choose one of the following: Snipe with Pistol: Sly Marbo can immediately shoot his ripper pistol as if it were the Shooting phase. Detonate Concealed Explosives: Roll a D6 for each of up to 6 enemy models on the battlefield. On a 6 the model being rolled for and all models within 2\" of that model suffer a mortal wound."
+},
+{
+"id": 791000,
+"name": "Deathleaper",
+"text": "It's After Me!: You can re-roll hit and wound rolls in the Fight phase for any of Deathleaper's attacks that target enemy COMMANDERS. In addition, Deathleaper can make a charge attempt when it is set up from Reserve, though if it does so you may only roll a single D6 (rather than 2D6) for the charge roll."
+},
+{
+"id": 790019,
+"name": "Like Fighting a Shadow",
+"text": "Once per battle, at the start of any Movement phase, if there are no enemy models within 6\" of this model (other than shaken models) and this model is not shaken, you may remove this model from the battlefield and place them in Reserve."
+},
+{
+"id": 790850,
+"name": "Severina Raine",
+"text": "Leading From The Front: Friendly ASTRA MILITARUM units within 6\" of this model - whilst it is within 1\" of an enemy model and not shaken - automatically pass Nerve tests."
+},
+{
+"id": 790707,
+"name": "Shas'La Pathfinder",
+"text": "Fearless on the Frontline: This operative can perform the Markerlight action while within control range of an enemy operative (taking precedence over the Markerlight action\u2019s normal conditions). In addition, this operative can perform the Fall Back action for 1 less AP Group Activation: Whenever this operative is expended, you must then activate one other ready friendly PATHFINDER SHAS\u2019LA operative (if able) before your opponent activates. When that other operative is expended, your opponent then activates as normal (in other words, you cannot activate more than two operatives in succession with this rule)."
+},
+{
+"id": 789186,
+"name": "Medikit",
+"text": "The operative gains the MEDIC keyword until the start of the next battle and can perform the action below during the battle."
+},
+{
+"id": 790235,
+"name": "Navis Sergeant-at-Arms",
+"text": "Command Breach: At the start of the first Strategy phase, select the Attack Order or Defence Order Strategic Ploy. Until the end of the battle, while this operative is in the killzone, you can use that Strategic Ploy without spending any Command points. Special rules: Void Armour."
+},
+{
+"id": 790140,
+"name": "Tracker",
+"text": "Pech'ra: The first time this operative is activated during the battle, place your Pech'ra token within \u2b1f horizontally and any distance vertically of this operative. Each time this operative is activated thereafter, you can move your Pech'ra token up to \u2b1f horizontally and any distance vertically. If this operative is incapacitated and removed from the killzone, remove your Pech'ra token. Marked for the Hunt (1AP): Select one enemy operative. Until the end of the Turning Point, while that enemy operative is within \u2b1f horizontally and any distance vertically of your Pech'ra token, it is marked for the hunt. Until the end of the Turning Point, each time a friendly FARSTALKER KINBAND operative within \u2b1f horizontally and any distance vertically of your Pech'ra token makes a shooting attack against an enemy operative marked for the hunt, that enemy operative cannot use Light terrain as Cover for that shooting attack. This operative cannot perform this action while within Engagement Range of an enemy operative. From the Eye Above (1AP): Select one friendly operative Visible to and within \u2b1f of this operative. Add 1 to its APL. This operative cannot perform this action while within Engagement Range of an enemy operative. Special rules: Rogue."
+},
+{
+"id": 790804,
+"name": "Rune Priest Skjald",
+"text": "Cast the Runes: After selecting this operative, before the battle, roll three D6 and put them to one side. For each result of 1-4, you can use the Command Re-roll firefight ploy for OCP once during the turning point that matches the result. If one or more results are 5-6, you gain 1CP. For example, if you roll 2, 2 and 5, you gain 1CP and twice during the second turning point you can use Command Re-roll for 0CP. Special rules: Blast x, Range x, Saturate, Seek, Severe, Shock, Stun, Torrent x."
+},
+{
+"id": 788846,
+"name": "Draconic Cavalry Tactics",
+"text": "When setting up an EXODITE DRAGON MASTER kill team before the battle, the first third of your kill team must be friendly DRAKOLITHE operatives set up as normal. Each friendly EXODITE DRAGON MASTER MOUNTED operative thereafter must be set up in reserve: place it to one side instead of in the killzone. In the first Firefight phase, each friendly EXODITE DRAGON MASTER MOUNTED operative set up in reserve is activated as normal. When it is, set it up in a location it can be placed on the killzone floor with its base touching your killzone edge (it\u2019s no longer in reserve). The operative is treated as performing the Turn action (spend the AP accordingly), then continue its activation as normal. Each friendly EXODITE DRAGON MASTER MOUNTED operative is activated twice per turning point (it\u2019s only expended after the second activation). You cannot spend more than 3AP for it per activation, or more than its APL stat per turning point. Each friendly EXODITE DRAGON MASTER MOUNTED operative cannot be in cover from or obscured by Light terrain, terrain parts less than 2\" tall or terrain that's not wholly intervening. Whenever a friendly EXODITE DRAGON MASTER MOUNTED operative would perform the Fight action, the distance requirements of its control range can be changed to 1\" horizontally and 4\" vertically until the end of that action."
+},
+{
+"id": 789601,
+"name": "Ammo Resupply (0AP)",
+"text": "\u25b6 One of your Ammo Cache markers the active operative controls is used this turning point. \u25b6 Until the start of the next turning point, whenever this operative is shooting with a weapon from its datacard, you can re-roll one of your attack dice. \u25c6 An operative cannot perform this action while within control range of an enemy operative, if that marker isn't yours or if that marker has been used this turning point."
+},
+{
+"id": 790151,
+"name": "Fellgor Shaman",
+"text": "Manifest Psychic Power (1AP): Psychic action. Resolve a FELLGOR RAVAGER psychic power. This operative cannot perform this action while within Engagement Range of an enemy operative. Apoplectic Rejuvenation: Select one friendly FELLGOR RAVAGER operative that doesn\u2019t have a Frenzy token and is Visible to and within \u2b1f of this operative; that operative regains 2D3 lost wounds. If that operative has incapacitated any enemy operatives while fighting in combat during the battle, it regains 6 lost wounds instead. Mantle of Darkness: Until the end of the Turning Point, while a friendly FELLGOR RAVAGER operative is within \u2b1b of this operative, enemy operatives more than \u2b1f from that friendly operative always treat it as having a Conceal order, regardless of any other rules (e.g. Vantage Point). Curse Weapon: Select one enemy operative in this operative\u2019s Line of Sight, then select one ranged weapon they are equipped with. Until the end of the battle, that enemy operative\u2019s selected ranged weapon gains the Hot special rule (if the ranged weapon has more than one profile, all profiles gain the Hot special rule). If that enemy operative\u2019s selected ranged weapon (or its profile) already has the Hot special rule, until the end of the battle, they suffer 1 additional mortal wound for each discarded attack dice result of 1. Weapon abilities: Stun. Special rules: Stun."
+},
+{
+"id": 790508,
+"name": "Vandal",
+"text": "*Vicious Blows: Whenever this operative is fighting, this weapon has the Ceaseless weapon rule. Sweeping Blow (1AP): \u25b6 Inflict D3+1 damage on each other operative visible to and within 2\" of this operative. \u25c6 This operative cannot perform this action while it has a Conceal order. Special rules: Brutal, Frenzy."
+},
+{
+"id": 790690,
+"name": "Exactor",
+"text": "Whip Into Frenzy (1AP): \u25b6 Select one other friendly NOVITIATE operative (excluding SUPERIOR) visible to and within 3\" of this operative that isn\u2019t currently benefitting from the effects of this action. Until the end of that operative\u2019s next activation, add 1 to its APL stat, add 1\" to its Move stat, and it can perform two Fight actions during its next activation. \u25c6 This operative cannot perform this action while within control range of an enemy operative. Special rules: Lethal x+, Range x, Shock, Stun."
+},
+{
+"id": 790692,
+"name": "Penitent",
+"text": "Absolution Through Destruction: Whenever this operative performs the Fight action, if it isn\u2019t incapacitated, it can immediately perform a free Fight action afterwards. This takes precedence over action restrictions, and you cannot perform more than two Fight actions in succession as a result of this rule. If this operative is benefitting from the effects of the Whip Into Frenzy action (see EXACTOR), this applies to each of the Fight actions from those effects. *Zealous Rage: Whenever this operative is fighting with this weapon, it has the Ceaseless weapon rule. Special rules: Brutal, Ceaseless."
+},
+{
+"id": 790750,
+"name": "Vox-Relay Beacon",
+"text": "Pre-Deploy: In the Set Up Operatives step, this operative can be set up outside of your drop zone. It must be set up in a location it can be placed, wholly within your territory and more than 2\" from markers and equipment terrain features. Expendable: This operative cannot perform any actions other than Signal. It cannot counteract, retaliate or assist in a fight. This operative cannot contest markers or areas of the killzone, and is ignored for your opponent\u2019s kill/elimination op (when it\u2019s incapacitated, and when determining your starting number of operatives). It\u2019s also ignored for victory conditions and scoring VPs if either require operatives to \u2018escape\u2019, \u2018survive\u2019 or be incapacitated by enemy operatives (if it escapes/survives/is incapacitated, determining how many operatives must escape/survive/be incapacitated, etc.). Operatives can move through this operative. Your opponent can ignore this operative\u2019s control range at any time. Whenever a friendly SPECTRE SQUAD operative is performing the Shoot action and you\u2019re selecting a valid target, you can ignore this operative\u2019s control range. Note that control range wouldn\u2019t be mutual when ignored. Signal (1AP): \u25b6 Select one other friendly SPECTRE SQUAD operative within 6\" of this operative. Until the end of that operative\u2019s next activation, add 1 to its APL stat. \u25c6 This operative cannot perform this action while within control range of an enemy operative."
+},
+{
+"id": 788778,
+"name": "Omni-Scrambler",
+"text": "STRATEGIC GAMBIT if a friendly INFILTRATOR operative is in the killzone. Select one enemy operative visible to a friendly INFILTRATOR operative, or within 6\" of a friendly VOXBREAKER operative. In the following Firefight phase, that enemy operative cannot be activated or perform actions until one of the following is true: - Your opponent has activated a number of enemy operatives equal to the number of friendly INFILTRATOR operatives in the killzone when this STRATEGIC GAMBIT was used. - It\u2019s the last enemy operative to be activated."
+},
+{
+"id": 790718,
+"name": "Plague Marine Icon Bearer",
+"text": "Icon Bearer: Whenever determining control of a marker, treat this operative\u2019s APL stat as 1 higher. Note this isn\u2019t a change to its APL stat, so any changes are cumulative with this. Icon of Contagion: Whenever this operative is within your opponent's territory, the Contagion strategy ploy costs you 0CP. Special rules: Range x."
+},
+{
+"id": 790962,
+"name": "Infiltrator",
+"text": "Infiltrator Comms Array: Add 1 to the Leadership characteristic of models within 6\" of any friendly models equipped with an Infiltrator Comms Array."
+},
+{
+"id": 788962,
+"name": "Covert Guise",
+"text": "At the end of the Scouting step, if this operative is wholly within your drop zone and has a Conceal order, it can perform a free Dash action. If it does so, its order cannot be changed during the first Turning Point (e.g. as a result of the Infiltrate option in the Scouting step)."
+},
+{
+"id": 790943,
+"name": "Dahyak Grekh",
+"text": "Concealed Booby Traps: If you select the Plant Traps strategy during the Scouting Phase, you can booby-trap up to D3+1 pieces of terrain instead of up to D3. Fieldcraft: When an opponent makes a hit roll for a shooting attack that targets this model, and this model is obscurred, that hit roll suffers an additional -1 modifier. Quarry Can't Hide: This model does not suffer the penalty to hit rolls for the target being obscurred."
+},
+{
+"id": 789352,
+"name": "Booby Trap (1)",
+"text": "Place one of your Booby Trap tokens more than \u2b1f from your opponent's drop zone and more than \u2b24 from each objective marker. Each time an enemy operative moves within \u2b24 of one of your Booby Trap tokens, interrupt that action to roll one D6, adding 1 to the result if the enemy operative's move is from a Charge or Dash action. Only roll once per action for each relevant token. - On a 1-3, nothing happens and that enemy operative continues its action (the token is not removed). - On a 4+, that enemy operative suffers a number of mortal wounds equal to the result of the D6, its move action ends and the token is removed."
+},
+{
+"id": 788680,
+"name": "Resourceful",
+"text": "Keep a pool of Resourceful points. In the Ready Operatives step of each Turning Point after the first, add Resourceful points to your pool determined by the number of friendly HERNKYN YAEGIR operatives in the killzone within Engagement Range of an enemy operative. At the end of each Turning Point, discard the Resourceful points in your pool. Operatives | Resourceful points --- | --- 6+ | 2 3-5 | 1 0-2 | 0 Each time a friendly HERNKYN YAEGIR operative that isn't within Engagement Range of an enemy operative is activated, you can spend one of your Resourceful points to do one of the following effects: - Add 1 to its APL. - It regains D3+1 lost wounds."
+},
+{
+"id": 790526,
+"name": "Grenadier",
+"text": "Grenadier: This operative can use frag, krak, smoke and stun grenades (see universal equipment). Doing so doesn\u2019t count towards any limited uses you have (i.e. if you also select those grenades from equipment for other operatives). Whenever this operative is using a frag or krak grenade, improve the Hit stat of that weapon by 1. V\u00e2yr-3 Utility Grenade: \u25b6 Place one of your Utility Grenade markers within 6\" of this operative. It must be visible to this operative, or on Vantage terrain of a terrain feature that\u2019s visible to this operative. Whenever an operative is within 3\" of that Utility Grenade marker, its controlling player must spend 1 additional AP for that operative to perform the Pick Up Marker and mission actions. \u25b6 In the Ready step of the next Strategy phase, roll one D3. Remove that Utility Grenade marker after a number of activations equal to the result have been completed, or at the end of the turning point (whichever comes first). \u25c6 This operative cannot perform this action while within control range of an enemy operative. Special rules: Blast x, Heavy, Limited x, Piercing x, Range x, Saturate."
+},
+{
+"id": 790066,
+"name": "Mindwitch",
+"text": "Heinous Deluge (1AP): Psychic action. Select one enemy operative in this operative\u2019s Line of Sight. Subtract 1 from its APL. This operative cannot perform this action while within Engagement Range of an enemy operative. Malefic Vortex (1AP): Psychic action. Remove your Malefic Vortex token (if any). Then place a Malefic Vortex token in a location that is Visible to this operative, or on a Vantage Point of a terrain feature that is Visible to this operative (treat it as an intended target for the purposes of the Visibility line). Each enemy operative within \u2b24 of that token suffers 1 mortal wound. In addition, at the end of each Turning Point, each enemy operative within \u2b24 of that token suffers 1 mortal wound. This operative cannot perform this action while within Engagement Range of an enemy operative. Infernal Gaze (1AP): Psychic action. Select one enemy operative within \u2b1f of this operative and in its Line of Sight. That enemy operative suffers a number of mortal wounds based on the closest distance it is from this operative. Note that these are not cumulative. - Within \u2b24 - D3+5 mortal wounds - Within 2\u2b24 - D3+3 mortal wounds - Within \u2b1f - 3 mortal wounds This operative cannot perform this action while it has a Conceal order or while within Engagement Range of an enemy operative."
+}
+]

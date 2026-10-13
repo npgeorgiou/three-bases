@@ -1,0 +1,4128 @@
+{
+"756144": {
+"tags": [
+[
+"rows",
+"melee row"
+]
+],
+"by": "A=B"
+},
+"756145": {
+"tags": [
+[
+"damage",
+"Damage ignoring the target's armor"
+],
+[
+"piercing",
+"ignoring the target's armor"
+],
+[
+"stat_gain",
+"boost self by the damage dealt"
+]
+],
+"by": "A=B"
+},
+"756152": {
+"tags": [
+[
+"cooldowns",
+"The number of turns before an Order or Fee ability can be reused"
+]
+],
+"by": "A=B"
+},
+"756159": {
+"tags": [
+[
+"banish",
+"removes the card from the game"
+]
+],
+"by": "C"
+},
+"756166": {
+"tags": [
+[
+"silence",
+"disables a unit's abilities"
+]
+],
+"by": "A=B"
+},
+"756170": {
+"tags": [
+[
+"donate",
+"played on the opposite side of the battlefield"
+]
+],
+"by": "A=B"
+},
+"756175": {
+"tags": [
+[
+"adjacency",
+"between two Soldiers"
+],
+[
+"tribal",
+"Soldiers"
+]
+],
+"by": "C"
+},
+"756177": {
+"tags": [
+[
+"permanent_growth",
+"boosts this unit by 1 on its turn end"
+],
+[
+"turn_end",
+"on its turn end"
+],
+[
+"stacking_keyword",
+"Vitality turns can accumulate"
+]
+],
+"by": "C"
+},
+"756183": {
+"tags": [],
+"by": "A=B"
+},
+"756185": {
+"tags": [
+[
+"destroy",
+"Destroy a unit"
+],
+[
+"stat_gain",
+"boost self by its power"
+],
+[
+"banish",
+"Banish it instead"
+],
+[
+"graveyard",
+"If target is in the graveyard"
+]
+],
+"by": "C"
+},
+"756186": {
+"tags": [
+[
+"forced_movement",
+"Move an enemy unit to the opposite row"
+]
+],
+"by": "A=B"
+},
+"756189": {
+"tags": [
+[
+"stat_condition",
+"highest unit on the battlefield"
+]
+],
+"by": "A=B"
+},
+"756193": {
+"tags": [
+[
+"trap_secret",
+"Played face down, then flips over when the ability's condition is met."
+]
+],
+"by": "A=B"
+},
+"756198": {
+"tags": [
+[
+"turn_start",
+"At the beginning of the round"
+],
+[
+"recycle",
+"move this card from the graveyard to the top of its owner's deck"
+],
+[
+"graveyard",
+"from the graveyard"
+],
+[
+"deck_position",
+"top of its owner's deck"
+],
+[
+"banish",
+"Give it Doomed"
+]
+],
+"by": "C"
+},
+"756199": {
+"tags": [],
+"by": "A=B"
+},
+"756200": {
+"tags": [
+[
+"adjacency",
+"adjacent to only one card"
+],
+[
+"turn_end",
+"end of turn ability"
+],
+[
+"repeat_trigger",
+"triggered twice"
+],
+[
+"block_armor",
+"gain 1 Armor"
+],
+[
+"rows",
+"Melee row"
+]
+],
+"by": "C"
+},
+"756201": {
+"tags": [
+[
+"generate_cards",
+"Spawn one of three randomly selected cards from the specified source"
+],
+[
+"random_effect",
+"randomly selected"
+]
+],
+"by": "A=B"
+},
+"756203": {
+"tags": [
+[
+"targeting_rules",
+"can only target units with power lower than own"
+],
+[
+"stat_condition",
+"power lower than own"
+]
+],
+"by": "C"
+},
+"756207": {
+"tags": [
+[
+"permanent_growth",
+"Boost self by 1"
+],
+[
+"on_ally_play",
+"whenever you play a non-Neutral unit"
+],
+[
+"variety_payoff",
+"primary category is unique among all of your units"
+]
+],
+"by": "C"
+},
+"756211": {
+"tags": [
+[
+"on_play",
+"On Deploy"
+],
+[
+"coin_economy",
+"spend the specified amount of Coins"
+],
+[
+"kicker",
+"you may choose to spend"
+]
+],
+"by": "C"
+},
+"756230": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"destroy",
+"Destroy an enemy unit with 9 or more power"
+],
+[
+"stat_condition",
+"9 or more power"
+]
+],
+"by": "A=B"
+},
+"756255": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"graveyard",
+"in your graveyard"
+],
+[
+"in_hand_buff",
+"boost all units in your deck by 1"
+],
+[
+"banish",
+"Banish self"
+]
+],
+"by": "A=B"
+},
+"756270": {
+"tags": [
+[
+"damage",
+"Damage a unit by 5"
+]
+],
+"by": "A=B"
+},
+"756284": {
+"tags": [
+[
+"silence",
+"Lock a unit"
+],
+[
+"damage",
+"damage it by 3"
+]
+],
+"by": "C"
+},
+"756286": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"rewind",
+"Reset the power of a unit"
+],
+[
+"damage_over_time",
+"give it Bleeding equal to the amount of boost it lost"
+]
+],
+"by": "A=B"
+},
+"756313": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"cooldowns",
+"Reduce the Cooldown of an allied unit by 1"
+],
+[
+"stat_gain",
+"Boost an allied unit by 1"
+],
+[
+"activated",
+"Order:"
+],
+[
+"haste",
+"Give an allied unit Zeal"
+]
+],
+"by": "C"
+},
+"756320": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"stat_gain",
+"Boost an allied unit by 2"
+],
+[
+"condition_count",
+"for each remaining Charge of your leader ability"
+]
+],
+"by": "A=B"
+},
+"756330": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn and play Woodland Spirit"
+],
+[
+"deckbuilding_effect",
+"adds 16 provisions to your deck's provisions limit"
+]
+],
+"by": "A=B"
+},
+"756335": {
+"tags": [
+[
+"death_trigger",
+"Deathwish:"
+],
+[
+"steal",
+"Seize a random enemy unit"
+],
+[
+"random_effect",
+"random enemy unit"
+],
+[
+"stat_condition",
+"with 4 or less power"
+]
+],
+"by": "A=B"
+},
+"756349": {
+"tags": [
+[
+"activated",
+"Order (Melee):"
+],
+[
+"ping",
+"Damage a unit by 1"
+],
+[
+"cooldowns",
+"Cooldown: 1"
+]
+],
+"by": "A=B"
+},
+"756354": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn an Ekimmara on this row"
+],
+[
+"cooldowns",
+"Cooldown: 4"
+]
+],
+"by": "C"
+},
+"756366": {
+"tags": [
+[
+"death_trigger",
+"Deathwish:"
+],
+[
+"summon",
+"Spawn a Harpy on this row"
+]
+],
+"by": "A=B"
+},
+"756367": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"permanent_growth",
+"boost self by 1"
+]
+],
+"by": "A=B"
+},
+"756369": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage an enemy unit by [5]"
+],
+[
+"count_payoff",
+"for each Construct you played this game"
+],
+[
+"tribal",
+"Construct"
+]
+],
+"by": "C"
+},
+"756379": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"return_to_hand",
+"Move an allied Trap back to your hand"
+],
+[
+"tribal",
+"Trap"
+]
+],
+"by": "C"
+},
+"756387": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage an enemy unit"
+],
+[
+"condition_count",
+"by the number of Elves on this row"
+],
+[
+"tribal",
+"Elves"
+]
+],
+"by": "A=B"
+},
+"756393": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"haste",
+"gain Zeal"
+],
+[
+"condition_count",
+"2 or more allied Dryads"
+],
+[
+"tribal",
+"Dryads"
+],
+[
+"activated",
+"Order:"
+],
+[
+"ping",
+"Damage an enemy unit by 1"
+]
+],
+"by": "C"
+},
+"756410": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"in_hand_buff",
+"Boost a unit in your hand by 1"
+]
+],
+"by": "A=B"
+},
+"756421": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"discard",
+"Discard the rightmost card in your hand"
+],
+[
+"hand_disruption",
+"your opponent Discards the rightmost card in their hand"
+],
+[
+"hand_position",
+"rightmost card in your hand"
+]
+],
+"by": "A=B"
+},
+"756473": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"deck_position",
+"on top of your opponent's deck"
+],
+[
+"disruption",
+"Spawn The Guardian on top of your opponent's deck"
+]
+],
+"by": "A=B"
+},
+"756482": {
+"tags": [
+[
+"donate",
+"Disloyal."
+],
+[
+"on_play",
+"Deploy:"
+],
+[
+"cast_from_zone",
+"Play a bronze Tactic from your graveyard"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"banish",
+"give it Doomed"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"permanent_growth",
+"boost self by 1"
+],
+[
+"movement",
+"Move self to the opposite row"
+]
+],
+"by": "C"
+},
+"756489": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"ping",
+"Damage a unit by 1"
+],
+[
+"on_spell",
+"Whenever you play a Tactic"
+]
+],
+"by": "C"
+},
+"756491": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"ping",
+"Damage an enemy unit by 1"
+],
+[
+"on_kill",
+"Deathblow:"
+],
+[
+"block_armor",
+"Gain 1 Armor"
+]
+],
+"by": "C"
+},
+"756492": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"comeback",
+"If your opponent has won a round this game"
+],
+[
+"summon",
+"Spawn and play Battle Preparation"
+]
+],
+"by": "A=B"
+},
+"756495": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage 2 enemy units"
+],
+[
+"condition_count",
+"by the number of statuses on units adjacent to the targets"
+],
+[
+"adjacency",
+"units adjacent to the targets"
+]
+],
+"by": "A=B"
+},
+"756501": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"enemy_benefit",
+"Boost an enemy unit by 2"
+]
+],
+"by": "A=B"
+},
+"756509": {
+"tags": [
+[
+"damage",
+"Damage a unit by 3"
+],
+[
+"on_kill",
+"Deathblow:"
+],
+[
+"aoe_damage",
+"Also damage adjacent units by 3"
+],
+[
+"adjacency",
+"adjacent units"
+]
+],
+"by": "C"
+},
+"756517": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"sacrifice",
+"Destroy an adjacent allied unit"
+],
+[
+"adjacency",
+"adjacent allied unit"
+],
+[
+"damage",
+"damage an enemy unit by the destroyed unit's power"
+]
+],
+"by": "A=B"
+},
+"756525": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"friendly_fire",
+"Damage self by 3"
+],
+[
+"heal",
+"Heal self"
+]
+],
+"by": "C"
+},
+"756527": {
+"tags": [
+[
+"movement",
+"Move self to the Ranged row"
+],
+[
+"activated",
+"Order (Melee):"
+],
+[
+"damage",
+"damage the highest-power enemy unit by 3"
+],
+[
+"stat_condition",
+"highest-power enemy unit"
+],
+[
+"target_choice",
+"Choose the enemy unit to damage"
+],
+[
+"cooldowns",
+"Cooldown: 2"
+]
+],
+"by": "A=B"
+},
+"756532": {
+"tags": [
+[
+"on_play",
+"Deploy (Ranged):"
+],
+[
+"generate_cards",
+"Create and play a special card from any faction"
+]
+],
+"by": "A=B"
+},
+"756535": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"hand_disruption",
+"Set the power of the highest-power unit in your opponent's hand to 1"
+],
+[
+"stat_loss",
+"Set the power of the highest-power unit in your opponent's hand to 1"
+],
+[
+"stat_condition",
+"highest-power unit"
+]
+],
+"by": "C"
+},
+"756555": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"information",
+"Reveal the top card from your opponent's deck"
+],
+[
+"deck_position",
+"top card from your opponent's deck"
+],
+[
+"mill",
+"Banish it"
+],
+[
+"banish",
+"Banish it"
+]
+],
+"by": "C"
+},
+"756556": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"damage",
+"Damage a random enemy unit and self by 4"
+],
+[
+"random_effect",
+"random enemy unit"
+],
+[
+"friendly_fire",
+"and self by 4"
+]
+],
+"by": "A=B"
+},
+"756567": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"damage",
+"Damage an enemy unit by 3"
+],
+[
+"in_hand_buff",
+"give all Pirates and Ships in your hand 1 Armor"
+],
+[
+"tribal",
+"Pirates and Ships"
+],
+[
+"deckbuilding_effect",
+"adds 16 provisions to your deck's provisions limit"
+]
+],
+"by": "C"
+},
+"756575": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"stat_gain",
+"Boost an allied unit by 2"
+],
+[
+"haste",
+"also give it Zeal"
+],
+[
+"deckbuilding_effect",
+"adds 15 provisions to your deck's provisions limit"
+]
+],
+"by": "C"
+},
+"756576": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn a base copy of an allied bronze Soldier"
+],
+[
+"copy",
+"a base copy of an allied bronze Soldier"
+],
+[
+"stat_gain",
+"boost both units by 3"
+],
+[
+"tribal",
+"Soldier"
+],
+[
+"deckbuilding_effect",
+"adds 16 provisions to your deck's provisions limit"
+]
+],
+"by": "C"
+},
+"756590": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost self by 2"
+],
+[
+"condition_count",
+"for each adjacent Beast"
+],
+[
+"adjacency",
+"adjacent Beast"
+],
+[
+"tribal",
+"Beast"
+],
+[
+"damage_over_time",
+"Poison an enemy unit"
+]
+],
+"by": "A=B"
+},
+"756595": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"in_hand_buff",
+"Give 1 Armor to 2 Dwarves in your hand"
+],
+[
+"tribal",
+"Dwarves"
+],
+[
+"on_ally_play",
+"Whenever you play a Dwarf"
+],
+[
+"block_armor",
+"give it 1 Armor"
+]
+],
+"by": "C"
+},
+"756601": {
+"tags": [
+[
+"selection",
+"Look at 2 random gold cards from your deck"
+],
+[
+"random_effect",
+"2 random gold cards"
+],
+[
+"deck_position",
+"move the other back to the top of it"
+]
+],
+"by": "A=B"
+},
+"756608": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost self by 5"
+],
+[
+"on_ally_play",
+"When you play a Soldier"
+],
+[
+"revive",
+"Summon self from your graveyard"
+],
+[
+"tribal",
+"Soldier"
+],
+[
+"random_effect",
+"random allied row"
+]
+],
+"by": "C"
+},
+"756611": {
+"tags": [
+[
+"death_count",
+"Whenever a unit is destroyed during your turn"
+],
+[
+"permanent_growth",
+"boost self by 2"
+]
+],
+"by": "A=B"
+},
+"756615": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"rewind",
+"Reset the power of all units on a row"
+],
+[
+"scope_multi",
+"all units on a row"
+]
+],
+"by": "C"
+},
+"756617": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"distribute",
+"Split 3 damage randomly between all enemy units"
+],
+[
+"random_effect",
+"randomly"
+]
+],
+"by": "C"
+},
+"756619": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn and play Buhurt"
+],
+[
+"stat_gain",
+"boost a random allied unit by 1"
+],
+[
+"random_effect",
+"random allied unit"
+],
+[
+"deckbuilding_effect",
+"adds 15 provisions to your deck's provisions limit"
+]
+],
+"by": "A=B"
+},
+"756622": {
+"tags": [
+[
+"generate_cards",
+"Create and play a bronze Nilfgaard card"
+]
+],
+"by": "A=B"
+},
+"756624": {
+"tags": [
+[
+"generate_cards",
+"Create and play a bronze Scoia'tael card"
+]
+],
+"by": "A=B"
+},
+"756644": {
+"tags": [
+[
+"stat_gain",
+"Boost an allied unit by 5"
+],
+[
+"repeat_trigger",
+"trigger its end of turn ability"
+],
+[
+"turn_end",
+"end of turn ability"
+],
+[
+"tribal",
+"bronze Soldier"
+]
+],
+"by": "C"
+},
+"756659": {
+"tags": [
+[
+"destroy",
+"Destroy the unit with the highest base power"
+],
+[
+"stat_condition",
+"highest base power"
+]
+],
+"by": "A=B"
+},
+"756667": {
+"tags": [
+[
+"damage",
+"Damage an enemy unit by 4"
+],
+[
+"forced_movement",
+"move it to the other row"
+]
+],
+"by": "A=B"
+},
+"756670": {
+"tags": [
+[
+"trap_secret",
+"Ambush:"
+],
+[
+"stat_gain",
+"boost adjacent units by 4"
+],
+[
+"adjacency",
+"adjacent units"
+]
+],
+"by": "C"
+},
+"756677": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"repeat_trigger",
+"Trigger the end of turn abilities of 2 allied bronze Soldiers"
+],
+[
+"turn_end",
+"end of turn abilities"
+],
+[
+"tribal",
+"Soldiers"
+]
+],
+"by": "C"
+},
+"756693": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "A=B"
+},
+"756698": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"summon",
+"Summons the highest-provision cost unit from their deck"
+],
+[
+"symmetric_effect",
+"Each player Summons"
+],
+[
+"cost_condition",
+"highest-provision cost unit"
+]
+],
+"by": "A=B"
+},
+"756699": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play another unit"
+],
+[
+"aoe_damage",
+"damage all enemy units with the same provision cost by 1"
+],
+[
+"cost_condition",
+"same provision cost"
+],
+[
+"ping",
+"by 1"
+]
+],
+"by": "C"
+},
+"756706": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order (Melee):"
+],
+[
+"banish",
+"Banish a card from your opponent's graveyard"
+],
+[
+"graveyard",
+"your opponent's graveyard"
+],
+[
+"cooldowns",
+"Cooldown: 1"
+]
+],
+"by": "C"
+},
+"756723": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage an enemy unit by 1"
+],
+[
+"tribal",
+"Bomb"
+]
+],
+"by": "C"
+},
+"756729": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a unit with Orders"
+],
+[
+"permanent_growth",
+"boost self by 1"
+]
+],
+"by": "C"
+},
+"756741": {
+"tags": [
+[
+"recycle",
+"Echo"
+],
+[
+"damage",
+"Damage an enemy unit by 5"
+],
+[
+"summon",
+"Spawn and play a base copy of the stored unit"
+],
+[
+"copy",
+"a base copy of the stored unit"
+],
+[
+"banish",
+"give it Doomed"
+],
+[
+"on_kill",
+"Deathblow:"
+],
+[
+"banish",
+"Banish the unit"
+]
+],
+"by": "C"
+},
+"756742": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"cast_from_zone",
+"Play a special card from your deck"
+],
+[
+"activated",
+"Order:"
+],
+[
+"transform",
+"Transform a special card in your hand into a random unit"
+],
+[
+"random_effect",
+"a random unit of the same provision cost"
+],
+[
+"cost_condition",
+"same provision cost"
+]
+],
+"by": "C"
+},
+"756751": {
+"tags": [
+[
+"stat_gain",
+"boost a unit by 12"
+],
+[
+"delayed",
+"Once both players have passed, damage self by 12"
+]
+],
+"by": "A=B"
+},
+"756755": {
+"tags": [
+[
+"damage",
+"Damage an enemy unit by 3"
+],
+[
+"on_kill",
+"Deathblow:"
+],
+[
+"adjacency",
+"the unit to the right"
+]
+],
+"by": "A=B"
+},
+"756769": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"damage_over_time",
+"Bleeding (3)"
+]
+],
+"by": "A=B"
+},
+"756779": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order (Melee):"
+],
+[
+"damage_over_time",
+"Bleeding (2)"
+],
+[
+"cooldowns",
+"Cooldown: 2"
+],
+[
+"on_ally_play",
+"Whenever you play a Vampire"
+],
+[
+"tribal",
+"Vampire"
+]
+],
+"by": "C"
+},
+"756786": {
+"tags": [
+[
+"donate",
+"Disloyal."
+],
+[
+"on_play",
+"Deploy:"
+],
+[
+"selection",
+"Look at 2 random gold cards from your deck"
+],
+[
+"random_effect",
+"2 random gold cards"
+]
+],
+"by": "C"
+},
+"756798": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"condition_count",
+"Gain Charges equal to the number of boosted allied units"
+],
+[
+"activated",
+"Order:"
+],
+[
+"ping",
+"Damage an enemy unit by 1"
+]
+],
+"by": "A=B"
+},
+"756807": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"selection",
+"Look at 3 random cards from your deck"
+],
+[
+"random_effect",
+"3 random cards"
+],
+[
+"deck_position",
+"move 1 to the top of it"
+],
+[
+"cooldowns",
+"Cooldown: 2"
+]
+],
+"by": "C"
+},
+"756826": {
+"tags": [
+[
+"transform",
+"Transform into Champion of Svalblod"
+]
+],
+"by": "A=B"
+},
+"756829": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost self by 2"
+],
+[
+"condition_count",
+"for each unique Beast"
+],
+[
+"variety_payoff",
+"unique Beast"
+],
+[
+"graveyard",
+"in your graveyard"
+],
+[
+"tribal",
+"Beast"
+]
+],
+"by": "C"
+},
+"756851": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage an enemy unit by 2"
+],
+[
+"graveyard",
+"in your graveyard"
+],
+[
+"coin_economy",
+"Fee 1"
+],
+[
+"damage_over_time",
+"Bleeding (1)"
+]
+],
+"by": "A=B"
+},
+"756852": {
+"tags": [
+[
+"coin_economy",
+"Profit 8"
+]
+],
+"by": "C"
+},
+"756853": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost all allied Witch Hunters by 1"
+],
+[
+"tribal",
+"Witch Hunters"
+],
+[
+"kicker",
+"Tribute 3"
+],
+[
+"coin_economy",
+"Tribute 3"
+],
+[
+"in_hand_buff",
+"in hand, deck and on the battlefield"
+]
+],
+"by": "C"
+},
+"756855": {
+"tags": [
+[
+"coin_economy",
+"Profit 2"
+],
+[
+"condition_count",
+"for each allied Sly Seductress"
+],
+[
+"kicker",
+"Tribute 5"
+],
+[
+"summon",
+"Spawn a Sly Seductress on this row"
+]
+],
+"by": "C"
+},
+"756856": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"damage_over_time",
+"Poison an allied unit"
+],
+[
+"friendly_fire",
+"Poison an allied unit"
+],
+[
+"stat_gain",
+"boost it by 2"
+]
+],
+"by": "C"
+},
+"756871": {
+"tags": [
+[
+"damage",
+"Damage an enemy unit by 5"
+],
+[
+"resource_gain",
+"Gain a Coin"
+],
+[
+"condition_count",
+"for each point of excess damage dealt"
+]
+],
+"by": "A=B"
+},
+"756878": {
+"tags": [
+[
+"coin_economy",
+"Profit 2"
+],
+[
+"coin_economy",
+"Fee 2 (Melee)"
+],
+[
+"damage",
+"Damage an enemy unit by 2"
+]
+],
+"by": "A=B"
+},
+"756894": {
+"tags": [
+[
+"damage_over_time",
+"Bleeding (2)"
+],
+[
+"random_effect",
+"random enemy unit"
+]
+],
+"by": "C"
+},
+"756899": {
+"tags": [
+[
+"forced_attack",
+"Force an enemy unit to Duel an adjacent unit"
+],
+[
+"adjacency",
+"adjacent unit"
+]
+],
+"by": "A=B"
+},
+"756906": {
+"tags": [
+[
+"coin_economy",
+"Profit 2"
+],
+[
+"coin_economy",
+"Fee 1"
+],
+[
+"summon",
+"Spawn a Firesworn Zealot on this row"
+],
+[
+"cooldowns",
+"Cooldown: 1"
+]
+],
+"by": "A=B"
+},
+"756915": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost self by 1"
+],
+[
+"condition_count",
+"for each Crime in your hand"
+],
+[
+"tribal",
+"Crime"
+]
+],
+"by": "C"
+},
+"756925": {
+"tags": [
+[
+"coin_economy",
+"Tribute 2"
+],
+[
+"kicker",
+"Tribute 2"
+],
+[
+"immunity",
+"Gain Immunity"
+]
+],
+"by": "C"
+},
+"756928": {
+"tags": [
+[
+"coin_economy",
+"Profit 3"
+],
+[
+"coin_economy",
+"Fee 3"
+]
+],
+"by": "A=B"
+},
+"756935": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_loss",
+"Remove a unit's Armor"
+],
+[
+"stat_gain",
+"boost self by that amount"
+]
+],
+"by": "C"
+},
+"756941": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost an allied unit by 6"
+],
+[
+"activated",
+"Order:"
+],
+[
+"block_armor",
+"Give an allied unit 3 Armor"
+]
+],
+"by": "C"
+},
+"756948": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"banish",
+"Banish the bronze unit to the right"
+],
+[
+"activated",
+"Order:"
+],
+[
+"transform",
+"Transform self into a base copy"
+],
+[
+"adjacency",
+"unit to the right"
+]
+],
+"by": "C"
+},
+"756955": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost an allied unit and all its copies by 1"
+],
+[
+"block_armor",
+"give them 1 Armor"
+],
+[
+"scope_multi",
+"all its copies"
+]
+],
+"by": "C"
+},
+"756956": {
+"tags": [
+[
+"stat_gain",
+"Boost an allied unit by 5"
+],
+[
+"block_armor",
+"give it 2 Armor"
+],
+[
+"permanent_growth",
+"give it Vitality (2)"
+],
+[
+"tribal",
+"Knight"
+]
+],
+"by": "C"
+},
+"756963": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"damage_over_time",
+"Bleeding (2)"
+]
+],
+"by": "A=B"
+},
+"756978": {
+"tags": [
+[
+"summon",
+"Summon self from your deck to a random allied row"
+],
+[
+"random_effect",
+"random allied row"
+],
+[
+"condition_count",
+"at least 4 units with Flanking"
+],
+[
+"haste",
+"gain Zeal"
+],
+[
+"activated",
+"Order:"
+],
+[
+"stat_gain",
+"Boost all allied Soldiers with Armor by 1"
+],
+[
+"tribal",
+"Soldiers"
+]
+],
+"by": "C"
+},
+"756979": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"summon",
+"Spawn and play a base copy of a bronze Soldier from your hand"
+],
+[
+"copy",
+"a base copy of a bronze Soldier"
+],
+[
+"block_armor",
+"give it 2 Armor"
+]
+],
+"by": "C"
+},
+"756997": {
+"tags": [
+[
+"damage",
+"Damage a unit by 5"
+]
+],
+"by": "A=B"
+},
+"756999": {
+"tags": [],
+"by": "A=B"
+},
+"757003": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"stat_gain",
+"Boost self by 4"
+],
+[
+"block_armor",
+"gain 2 Armor"
+],
+[
+"summon",
+"Spawn 2 Rowdy Dwarves on your Melee row"
+],
+[
+"activated",
+"Order:"
+],
+[
+"cooldowns",
+"Cooldown: 1"
+]
+],
+"by": "C"
+},
+"757013": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage an enemy unit by the number of units you control"
+],
+[
+"condition_count",
+"the number of units you control"
+]
+],
+"by": "A=B"
+},
+"757015": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage an enemy unit by 1"
+],
+[
+"condition_count",
+"for every 3 power the target has"
+],
+[
+"stat_condition",
+"3 power the target has"
+]
+],
+"by": "C"
+},
+"757023": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"transform",
+"Transform into Lamp Djinn"
+]
+],
+"by": "A=B"
+},
+"757035": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"summon",
+"Spawn 2 Crows on this row"
+],
+[
+"on_ally_play",
+"Whenever you play an Alchemy card"
+],
+[
+"tribal",
+"Alchemy"
+],
+[
+"revive",
+"Summon Crowmother from your graveyard"
+],
+[
+"random_effect",
+"random allied row"
+]
+],
+"by": "C"
+},
+"757037": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"summon",
+"Spawn and play Crow's-eye Rhizome"
+],
+[
+"transform",
+"Transform adjacent Crows into Crow Messengers"
+],
+[
+"adjacency",
+"adjacent Crows"
+],
+[
+"tribal",
+"Crows"
+]
+],
+"by": "C"
+},
+"757047": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"sacrifice",
+"Consume an allied unit"
+],
+[
+"activated",
+"Order (Dominance):"
+]
+],
+"by": "A=B"
+},
+"757049": {
+"tags": [
+[
+"death_trigger",
+"Deathwish:"
+],
+[
+"board_clog",
+"Spawn 2 Rats on a random enemy row"
+],
+[
+"random_effect",
+"random enemy row"
+]
+],
+"by": "A=B"
+},
+"757063": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"haste",
+"gain Zeal"
+],
+[
+"tribal",
+"a Vampire"
+],
+[
+"activated",
+"Order:"
+],
+[
+"banish",
+"Give an enemy unit Doomed"
+],
+[
+"silence",
+"Lock it instead"
+],
+[
+"damage_over_time",
+"Poison it"
+],
+[
+"condition_count",
+"more than 1 status"
+],
+[
+"cooldowns",
+"Cooldown: 1"
+]
+],
+"by": "C"
+},
+"757071": {
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"quests",
+"Scenario: Progress whenever you play a Blindeye"
+],
+[
+"on_ally_play",
+"whenever you play a Blindeye"
+],
+[
+"tribal",
+"Blindeye"
+],
+[
+"summon",
+"Spawn Sly Seductress on this row"
+],
+[
+"resource_gain",
+"Gain 6 Coins"
+]
+],
+"by": "C"
+},
+"757078": {
+"tags": [
+[
+"coin_economy",
+"Fee 2"
+],
+[
+"block_armor",
+"Gain 2 Armor"
+],
+[
+"self_destruct",
+"Destroy self"
+]
+],
+"by": "C"
+},
+"757082": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn and play Tempering"
+],
+[
+"in_hand_buff",
+"All Dwarves in your starting deck get 1 Armor"
+],
+[
+"tribal",
+"Dwarves"
+],
+[
+"deckbuilding_effect",
+"adds 18 provisions to your deck's provision limit"
+]
+],
+"by": "C"
+},
+"757089": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"in_hand_buff",
+"Boost 3 units in your deck by 2"
+],
+[
+"condition_count",
+"for each Offering in your starting deck"
+],
+[
+"deck_condition",
+"Offering in your starting deck"
+]
+],
+"by": "C"
+},
+"757091": {
+"tags": [
+[
+"stat_gain",
+"Boost a unit by 6"
+],
+[
+"banish",
+"give it Doomed"
+]
+],
+"by": "C"
+},
+"757092": {
+"tags": [
+[
+"destroy",
+"Destroy a Doomed unit"
+]
+],
+"by": "A=B"
+},
+"757112": {
+"tags": [],
+"by": "A=B"
+},
+"757118": {
+"tags": [
+[
+"recycle",
+"Echo"
+],
+[
+"damage",
+"Damage an enemy unit by 3"
+],
+[
+"stat_gain",
+"boost all allied Firesworn units by 1"
+],
+[
+"tribal",
+"Firesworn"
+],
+[
+"on_kill",
+"Deathblow:"
+]
+],
+"by": "C"
+},
+"757121": {
+"tags": [
+[
+"coin_economy",
+"Profit 3"
+],
+[
+"summon",
+"Spawn a Flaming Rose Footman on an allied row"
+]
+],
+"by": "C"
+},
+"757134": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"stat_gain",
+"Boost an allied unit by 2"
+]
+],
+"by": "C"
+},
+"757136": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"board_clog",
+"Spawn an Operative on an enemy row"
+],
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"steal",
+"Seize all Spying Operatives"
+],
+[
+"turn_start",
+"At the start of the round"
+],
+[
+"transform",
+"evolve"
+]
+],
+"by": "C"
+},
+"757144": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"aoe_damage",
+"Damage adjacent units by 3"
+],
+[
+"adjacency",
+"adjacent units"
+],
+[
+"on_kill",
+"Deathblow:"
+],
+[
+"movement",
+"Move self to the opposite row"
+]
+],
+"by": "A=B"
+},
+"757150": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order (Melee):"
+],
+[
+"damage",
+"Damage an enemy unit by 3"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"in_hand_buff",
+"boost a random non-Neutral unit in your hand by 1"
+],
+[
+"random_effect",
+"a random non-Neutral unit"
+]
+],
+"by": "C"
+},
+"757153": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"damage",
+"Damage an enemy unit by 2"
+]
+],
+"by": "C"
+},
+"757165": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"selection",
+"Look at your deck in order from top to bottom"
+],
+[
+"deck_position",
+"move a card to the bottom of it"
+]
+],
+"by": "C"
+},
+"757166": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Swap this unit's power with an enemy unit"
+],
+[
+"damage",
+"Damage an enemy unit by 4"
+]
+],
+"by": "A=B"
+},
+"757167": {
+"tags": [
+[
+"turn_end",
+"At the end of the round"
+],
+[
+"donate",
+"move self to your opponent's graveyard"
+],
+[
+"graveyard",
+"while in the graveyard"
+],
+[
+"banish",
+"Banish the lowest-cost card from it"
+],
+[
+"cost_condition",
+"lowest-cost card"
+],
+[
+"board_clog",
+"Summon self to a random enemy row"
+],
+[
+"random_effect",
+"random enemy row"
+]
+],
+"by": "C"
+},
+"757173": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"information",
+"Reveal a random unit from your opponent's deck"
+],
+[
+"random_effect",
+"random unit"
+],
+[
+"stat_gain",
+"boost self by its power"
+]
+],
+"by": "A=B"
+},
+"757176": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"movement",
+"move self to the Ranged row"
+],
+[
+"stat_gain",
+"boost a random allied unit on this row by 1"
+],
+[
+"random_effect",
+"random allied unit"
+],
+[
+"damage",
+"damage a random enemy unit"
+],
+[
+"scope_multi",
+"all other units on that row"
+]
+],
+"by": "C"
+},
+"757179": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"destroy",
+"Destroy the rightmost unit on an enemy row"
+],
+[
+"condition_count",
+"with at least 5 units"
+]
+],
+"by": "A=B"
+},
+"757184": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"damage_over_time",
+"Bleeding"
+],
+[
+"condition_count",
+"equal to the number of units on that unit's row"
+]
+],
+"by": "A=B"
+},
+"757185": {
+"tags": [
+[
+"forced_movement",
+"Move an enemy unit to the other row"
+],
+[
+"damage_over_time",
+"Bleeding (4)"
+],
+[
+"lone_unit",
+"If it's the only unit on that row"
+],
+[
+"damage",
+"damage it by 4"
+]
+],
+"by": "A=B"
+},
+"757190": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"destroy",
+"Destroy a damaged enemy unit"
+],
+[
+"condition_life",
+"damaged enemy unit"
+]
+],
+"by": "A=B"
+},
+"757192": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost self by 1"
+],
+[
+"condition_count",
+"for each damaged allied unit"
+],
+[
+"condition_life",
+"damaged allied unit"
+]
+],
+"by": "A=B"
+},
+"757195": {
+"tags": [
+[
+"damage",
+"Damage an enemy unit by 2"
+],
+[
+"summon",
+"Spawn 3 Witcher Students on the opposite row"
+],
+[
+"friendly_fire",
+"damage them by 1"
+],
+[
+"block_armor",
+"give them 1 Armor"
+]
+],
+"by": "C"
+},
+"757200": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a special card"
+],
+[
+"summon",
+"Spawn a Witcher Student on this row"
+],
+[
+"turn_end",
+"At the end of your turn"
+]
+],
+"by": "A=B"
+},
+"757203": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost self by 1"
+],
+[
+"condition_count",
+"for each unit on an enemy row"
+],
+[
+"activated",
+"Order:"
+],
+[
+"stat_gain",
+"Transfer all boost from self to an allied unit"
+]
+],
+"by": "A=B"
+},
+"757213": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"sacrifice",
+"Consume an allied unit"
+],
+[
+"stat_gain",
+"boost all copies of the Consumed unit on that unit's row by 1"
+]
+],
+"by": "C"
+},
+"757217": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"summon",
+"Spawn and play a Failed Experiment"
+],
+[
+"modal_choice",
+"Salamandra Abomination, Salamandra Mage, or Salamandra Lackey"
+],
+[
+"activated",
+"Order:"
+],
+[
+"damage_over_time",
+"Poison"
+]
+],
+"by": "A=B"
+},
+"757231": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"block_armor",
+"Gain 1 Armor"
+],
+[
+"condition_count",
+"for each Dwarf in your hand"
+],
+[
+"tribal",
+"Dwarf"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_gain",
+"boost all Dwarves with Armor on this row by 1"
+]
+],
+"by": "C"
+},
+"757253": {
+"tags": [
+[
+"stat_gain",
+"Boost an allied unit by 5"
+],
+[
+"untap",
+"reset its Order ability"
+],
+[
+"haste",
+"give it Zeal"
+]
+],
+"by": "C"
+},
+"757256": {
+"tags": [
+[
+"on_damaged",
+"Whenever this unit is damaged"
+],
+[
+"stat_loss",
+"reduce its base power by 1"
+],
+[
+"on_ally_play",
+"Whenever you play a Relict"
+],
+[
+"stat_gain",
+"increase this unit's base power by 1"
+],
+[
+"tribal",
+"Relict"
+]
+],
+"by": "C"
+},
+"757257": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Increase this unit's base power by 2"
+],
+[
+"condition_count",
+"for each adjacent Relict"
+],
+[
+"adjacency",
+"adjacent Relict"
+],
+[
+"tribal",
+"Relict"
+]
+],
+"by": "C"
+},
+"757259": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"summon",
+"Spawn 3 Syndicate Crowns on this row"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"mark_target",
+"place a Bounty on the highest-power enemy unit"
+],
+[
+"stat_condition",
+"highest-power enemy unit"
+]
+],
+"by": "A=B"
+},
+"757273": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"friendly_fire",
+"Damage self by 4"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"damage",
+"damage the unit to the right by 1"
+],
+[
+"adjacency",
+"the unit to the right"
+],
+[
+"heal",
+"Heal self by 2"
+]
+],
+"by": "C"
+},
+"757274": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"cast_from_zone",
+"Play all copies of a bronze special card from your deck"
+]
+],
+"by": "A=B"
+},
+"757278": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"delayed",
+"At the end of this turn"
+],
+[
+"untap",
+"reset the Order of all allied Mages"
+],
+[
+"tribal",
+"Mages"
+]
+],
+"by": "C"
+},
+"757279": {
+"tags": [
+[
+"activated",
+"Order (Ranged):"
+],
+[
+"delayed",
+"At the end of this turn"
+]
+],
+"by": "C"
+},
+"757283": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"banish",
+"Banish a bronze unit from your graveyard"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"stat_gain",
+"boost self by its power"
+],
+[
+"summon",
+"Summon a copy of it from your deck"
+]
+],
+"by": "C"
+},
+"757286": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"steal",
+"Summon the top bronze unit from your opponent's deck to the opposite row"
+],
+[
+"deck_position",
+"top bronze unit from your opponent's deck"
+],
+[
+"mark_target",
+"place a Bounty on it"
+],
+[
+"kicker",
+"Tribute 2"
+],
+[
+"coin_economy",
+"Tribute 2"
+],
+[
+"coin_economy",
+"Fee 1"
+],
+[
+"damage",
+"Damage the enemy unit with a Bounty by 1"
+]
+],
+"by": "C"
+},
+"757290": {
+"tags": [
+[
+"transform",
+"Transform an artifact into an Elder Bear"
+],
+[
+"stat_gain",
+"also boost it by 4"
+]
+],
+"by": "A=B"
+},
+"757300": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"generate_cards",
+"Create and play a Scoia'tael special card"
+],
+[
+"cost_condition",
+"provision cost equal to this unit's power"
+]
+],
+"by": "A=B"
+},
+"757316": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"summon",
+"Spawn and play a Bonded unit"
+],
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn and play Golden Froth"
+]
+],
+"by": "A=B"
+},
+"757318": {
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"quests",
+"Scenario: Progress whenever you play a gold Cultist"
+],
+[
+"summon",
+"Spawn Eternal Eclipse Initiate on this row"
+],
+[
+"in_hand_buff",
+"Infuse all your non-Disloyal Cultists on the battlefield, in your hand and in your deck"
+],
+[
+"on_ally_play",
+"Whenever you play a Cultist"
+],
+[
+"tribal",
+"Cultist"
+],
+[
+"permanent_growth",
+"boost self by 1"
+]
+],
+"by": "C"
+},
+"757334": {
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"quests",
+"Scenario: Progress whenever you play a unit with Thrive"
+],
+[
+"on_ally_play",
+"whenever you play a unit"
+],
+[
+"summon",
+"Spawn a Cursed Damsel on this row"
+],
+[
+"stat_gain",
+"boost it by 2"
+],
+[
+"cast_from_zone",
+"Play the highest-power bronze non-Neutral unit from your deck"
+],
+[
+"stat_condition",
+"highest-power"
+]
+],
+"by": "C"
+},
+"757335": {
+"tags": [
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"immunity",
+"gain Immunity"
+],
+[
+"on_play",
+"Deploy:"
+],
+[
+"activated",
+"Order:"
+],
+[
+"permanent_growth",
+"Increase the boost value by 2"
+],
+[
+"repeat_trigger",
+"replay self"
+],
+[
+"rule_change",
+"Units played on your opponent's side can trigger your Thrive abilities"
+]
+],
+"by": "C"
+},
+"757347": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"sacrifice",
+"Consume an allied unit"
+],
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn and play Arachas Nest"
+],
+[
+"death_trigger",
+"Deathwish:"
+],
+[
+"copy",
+"Spawn a base copy of the Consumed unit"
+]
+],
+"by": "A=B"
+},
+"757354": {
+"tags": [
+[
+"coin_economy",
+"Fee 1"
+],
+[
+"stat_gain",
+"Boost self by 1"
+],
+[
+"resource_gain",
+"gain 1 Coin"
+],
+[
+"summon",
+"Summon self from your deck to a random allied row"
+],
+[
+"random_effect",
+"random allied row"
+],
+[
+"delayed",
+"When the Counter reaches 0"
+]
+],
+"by": "C"
+},
+"757357": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"cast_from_zone",
+"Play a special card from your deck"
+],
+[
+"movement",
+"move self to the opposite row"
+],
+[
+"self_destruct",
+"destroy self"
+],
+[
+"cooldowns",
+"Cooldown: 1"
+],
+[
+"turn_end",
+"At the end of your turn"
+]
+],
+"by": "C"
+},
+"757361": {
+"tags": [
+[
+"stat_gain",
+"Boost an allied unit by the amount of damage dealt"
+],
+[
+"damage",
+"damage an enemy unit by the amount of boost"
+],
+[
+"modal_choice",
+"or damage an enemy unit"
+],
+[
+"count_payoff",
+"this turn"
+]
+],
+"by": "A=B"
+},
+"757365": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"friendly_fire",
+"Damage self by 2"
+],
+[
+"hand_disruption",
+"Lock all units in your opponent's hand"
+],
+[
+"silence",
+"Lock all units"
+],
+[
+"temporary_effect",
+"until the end of round"
+]
+],
+"by": "C"
+},
+"757379": {
+"tags": [
+[
+"enemy_benefit",
+"Boost an enemy unit by 3"
+],
+[
+"stat_gain",
+"an allied unit by 9"
+]
+],
+"by": "A=B"
+},
+"757391": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn a base copy of self on this row"
+],
+[
+"copy",
+"a base copy of self"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"ping",
+"damage the highest-power enemy unit by 1"
+],
+[
+"stat_condition",
+"highest-power enemy unit"
+]
+],
+"by": "C"
+},
+"757395": {
+"tags": [
+[
+"activated",
+"Order (Dominance):"
+],
+[
+"forced_movement",
+"Move an enemy unit to the other row"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"row_effects",
+"Spawn Frost for 1 turn on each enemy row"
+],
+[
+"temporary_effect",
+"for 1 turn"
+]
+],
+"by": "C"
+},
+"757398": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a unit with a Gang category you don't control"
+],
+[
+"resource_gain",
+"gain a Coin"
+],
+[
+"condition_count",
+"for each unique Gang category you control"
+],
+[
+"variety_payoff",
+"unique Gang category"
+],
+[
+"tribal",
+"Gang category"
+]
+],
+"by": "C"
+},
+"757405": {
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"on_play",
+"Deploy:"
+],
+[
+"copy",
+"Spawn base copies of them into your deck"
+],
+[
+"cost_condition",
+"provision costs of 10 or less"
+],
+[
+"stat_gain",
+"Boost self by 1"
+],
+[
+"condition_count",
+"for each provision below the limit"
+],
+[
+"activated",
+"Order:"
+],
+[
+"banish",
+"Banish up to 3 cards from your starting deck"
+],
+[
+"transform",
+"evolve after you win a round"
+]
+],
+"by": "C"
+},
+"757410": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost an allied unit by 5"
+],
+[
+"recycle",
+"moved back into your deck"
+],
+[
+"summon",
+"Spawn a random 4-provision Northern Realms unit"
+],
+[
+"random_effect",
+"random 4-provision"
+]
+],
+"by": "A=B"
+},
+"757427": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"forced_movement",
+"Move the last played enemy unit to the other row"
+],
+[
+"tribal",
+"Elf"
+],
+[
+"damage",
+"damage self by 1"
+]
+],
+"by": "C"
+},
+"757430": {
+"tags": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Summon self from your deck to its row"
+]
+],
+"by": "C"
+},
+"757439": {
+"tags": [
+[
+"coin_economy",
+"Fee 2"
+],
+[
+"stat_gain",
+"Boost adjacent units by 1"
+],
+[
+"adjacency",
+"adjacent units"
+]
+],
+"by": "A=B"
+},
+"757452": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"on_ally_play",
+"whenever an Elven Deadeye enters your side of the battlefield"
+],
+[
+"stat_gain",
+"boost it by 1"
+],
+[
+"tribal",
+"Elven Deadeye"
+],
+[
+"condition_count",
+"at least 4 unique Traps"
+],
+[
+"variety_payoff",
+"unique Traps"
+]
+],
+"by": "C"
+},
+"757466": {
+"tags": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"attack_now",
+"Clash with the highest-power enemy unit"
+],
+[
+"stat_condition",
+"highest-power enemy unit"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"in_hand_buff",
+"while in hand, gain 1 Armor"
+],
+[
+"block_armor",
+"gain 1 Armor"
+]
+],
+"by": "C"
+},
+"757476": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"generate_cards",
+"Create a legendary unit from your faction"
+],
+[
+"enemy_benefit",
+"add it to your opponent's hand"
+],
+[
+"hand_size",
+"their hand is not full"
+],
+[
+"deck_position",
+"move the rest to the bottom of your opponent's deck"
+]
+],
+"by": "A=B"
+},
+"757478": {
+"tags": [
+[
+"on_play",
+"Deploy (Ranged):"
+],
+[
+"friendly_fire",
+"Damage self down to 1"
+],
+[
+"cast_from_zone",
+"play all copies of Freya's Blessing from your graveyard"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"banish",
+"give them Doomed"
+],
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"stat_gain",
+"increase own base power"
+],
+[
+"condition_count",
+"for each Alchemy in your starting deck"
+]
+],
+"by": "C"
+},
+"757481": {
+"tags": [
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"in_hand_buff",
+"Infuse a random Zoltan in your deck"
+],
+[
+"random_effect",
+"random Zoltan"
+],
+[
+"tribal",
+"Zoltan"
+],
+[
+"on_play",
+"When this card appears on the battlefield"
+],
+[
+"summon",
+"Spawn Eudora Breckenriggs to the right of self"
+],
+[
+"stat_gain",
+"boost her by 1"
+],
+[
+"condition_count",
+"for each Zoltan in your starting deck"
+],
+[
+"banish",
+"Banish self"
+]
+],
+"by": "C"
+},
+"757485": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage_over_time",
+"Bleeding (4)"
+],
+[
+"debuff",
+"Bleeding enemy units cannot be boosted"
+]
+],
+"by": "C"
+},
+"795319": {
+"tags": [],
+"by": "A=B"
+},
+"795325": {
+"tags": [],
+"by": "A=B"
+},
+"795334": {
+"tags": [],
+"by": "A=B"
+},
+"795336": {
+"tags": [],
+"by": "A=B"
+},
+"795347": {
+"tags": [],
+"by": "A=B"
+},
+"795353": {
+"tags": [],
+"by": "A=B"
+},
+"795356": {
+"tags": [],
+"by": "A=B"
+},
+"795361": {
+"tags": [],
+"by": "A=B"
+},
+"813587": {
+"tags": [
+[
+"banish",
+"Doomed"
+]
+],
+"by": "C"
+},
+"813593": {
+"tags": [
+[
+"distribute",
+"Split 6 damage randomly between all units on an enemy row"
+],
+[
+"random_effect",
+"randomly"
+]
+],
+"by": "C"
+},
+"813617": {
+"tags": [
+[
+"banish",
+"Doomed"
+]
+],
+"by": "C"
+},
+"813626": {
+"tags": [
+[
+"banish",
+"Doomed"
+]
+],
+"by": "C"
+},
+"813630": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"board_clog",
+"Spawn an Operative on each enemy row"
+],
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"steal",
+"Seize all Spying Operatives"
+],
+[
+"turn_start",
+"At the start of the round"
+],
+[
+"transform",
+"evolve"
+]
+],
+"by": "C"
+},
+"813631": {
+"tags": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"board_clog",
+"Spawn an Operative on each enemy row"
+],
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"steal",
+"Seize all Spying Operatives"
+],
+[
+"stat_gain",
+"boost self by 1"
+]
+],
+"by": "C"
+},
+"813632": {
+"tags": [
+[
+"immunity",
+"Immunity."
+],
+[
+"on_play",
+"When entering the battlefield"
+],
+[
+"stat_gain",
+"boost self by 1"
+],
+[
+"condition_count",
+"for each Spying enemy unit"
+]
+],
+"by": "A=B"
+},
+"813648": {
+"tags": [
+[
+"damage_over_time",
+"Poison an allied unit"
+],
+[
+"friendly_fire",
+"Poison an allied unit"
+],
+[
+"resource_gain",
+"gain 5 Coins"
+]
+],
+"by": "A=B"
+},
+"813649": {
+"tags": [
+[
+"stat_gain",
+"Boost an allied unit by 4"
+]
+],
+"by": "A=B"
+},
+"813669": {
+"tags": [
+[
+"activated",
+"Order:"
+],
+[
+"selection",
+"look at the top 3 units from your deck"
+],
+[
+"draw",
+"draw 1"
+],
+[
+"deck_position",
+"top 3 units from your deck"
+]
+],
+"by": "A=B"
+},
+"813674": {
+"tags": [
+[
+"hero_power",
+"After using your leader ability"
+],
+[
+"stat_gain",
+"set the lowest-power allied unit to 10"
+],
+[
+"stat_condition",
+"lowest-power allied unit"
+]
+],
+"by": "A=B"
+},
+"813678": {
+"tags": [
+[
+"cooldowns",
+"Cooldown: 8"
+]
+],
+"by": "A=B"
+},
+"813685": {
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost the lowest power allied unit"
+],
+[
+"stat_condition",
+"lowest power allied unit"
+],
+[
+"variety_payoff",
+"each unique non-Neutral primary category"
+],
+[
+"on_ally_play",
+"Whenever you play a non-Neutral unit"
+]
+],
+"by": "C"
+},
+"813686": {
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"immunity",
+"Immunity"
+],
+[
+"on_play",
+"Deploy:"
+],
+[
+"recycle",
+"Shuffle an allied unit back into your deck"
+],
+[
+"bounce_enemy",
+"shuffle an enemy unit of the same power or less back into your opponent's deck"
+],
+[
+"stat_condition",
+"same power or less"
+],
+[
+"activated",
+"Order:"
+],
+[
+"cast_from_zone",
+"Play the shuffled unit from your deck"
+]
+],
+"by": "C"
+},
+"813687": {
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stacking_keyword",
+"increase the Counter by 1"
+],
+[
+"death_trigger",
+"Deathwish:"
+],
+[
+"revive",
+"Summon the lowest-power bronze Deathwish unit from your graveyard to this row"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"stat_gain",
+"Boost all allied units on this row by 1"
+],
+[
+"row_effects",
+"Spawn Storm on the opposite row for 2 turns"
+],
+[
+"damage",
+"Damage the 2 lowest-power enemy units by 2"
+],
+[
+"stat_condition",
+"lowest-power enemy units"
+],
+[
+"copy",
+"Spawn a base copy of self in your hand"
+]
+],
+"by": "C"
+}
+}

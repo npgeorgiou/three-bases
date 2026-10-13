@@ -1,0 +1,592 @@
+[
+{
+"id": 795643,
+"name": "Helpful Assistance",
+"text": "On Reveal: Execute all 4 of H.E.R.B.I.E.'s abilities here."
+},
+{
+"id": 795919,
+"name": "Sam Wilson Captain America",
+"text": "On Reveal: Add Cap's Shield to another location. Ongoing: Cap's Shield is Moveable."
+},
+{
+"id": 796125,
+"name": "X-23",
+"text": "When Discarded or Destroyed: Regenerate this at a random location and you get +1 Energy next turn."
+},
+{
+"id": 795969,
+"name": "Soul Stone",
+"text": "On Reveal: Draw a card. Ongoing: Thanos can't be discarded or destroyed."
+},
+{
+"id": 795687,
+"name": "Jane Foster Mighty Thor",
+"text": "On Reveal: Draw all cards that cost 0 from your deck."
+},
+{
+"id": 795778,
+"name": "Mind Stone",
+"text": "On Reveal: Draw 2 Stones from your deck."
+},
+{
+"id": 795468,
+"name": "Blob",
+"text": "On Reveal: Merge cards from your deck into this until it gains 13 or more Power."
+},
+{
+"id": 796360,
+"name": "Vibranium Mines",
+"text": "After you play here, shuffle 3 Vibranium into your deck."
+},
+{
+"id": 796164,
+"name": "Attilan",
+"text": "After turn 3, shuffle your hand into your deck. Draw 3 cards."
+},
+{
+"id": 795439,
+"name": "Arishem",
+"text": "Game Start: Shuffle 12 new cards into your deck. On turn 3, get +1 Max Energy."
+},
+{
+"id": 796086,
+"name": "Venus",
+"text": "When your cards in play are Empowered, give those cards an additional +1 Power."
+},
+{
+"id": 796003,
+"name": "Sub-Mariner",
+"text": "When this is Empowered, add a random 1-Cost character to your hand with that same increase. (if in hand or in play)"
+},
+{
+"id": 796319,
+"name": "Starlight Citadel",
+"text": "After turn 4, swap the position of each location."
+},
+{
+"id": 795886,
+"name": "Quake",
+"text": "On Reveal: Swap the positions of the other two locations."
+},
+{
+"id": 796064,
+"name": "Toxin",
+"text": "On Reveal: Return your other cards here to your hand. +2 Power for each returned."
+},
+{
+"id": 795471,
+"name": "Boomerang",
+"text": "When this returns to your hand, randomly steal 4 Power from characters in your opponent's hand. Activate: Return this to your hand."
+},
+{
+"id": 795846,
+"name": "Onslaught",
+"text": "Ongoing: Your other Ongoing effects here apply an additional time."
+},
+{
+"id": 796275,
+"name": "Onslaught's Citadel",
+"text": "Ongoing effects here apply an additional time."
+},
+{
+"id": 796171,
+"name": "Black Vortex",
+"text": "The next card you play here becomes a random 6-Cost card."
+},
+{
+"id": 796216,
+"name": "Gamma Lab",
+"text": "After turn 3, transform all cards here into the Hulk."
+},
+{
+"id": 796137,
+"name": "Zombie Galacti",
+"text": "Game Start: Choose 6 other characters in your deck. On Reveal: Transform those cards into copies of this."
+},
+{
+"id": 795805,
+"name": "Morph",
+"text": "On Reveal: Become a copy of a card in your opponent's hand."
+},
+{
+"id": 796265,
+"name": "Murderworld",
+"text": "After turn 3, destroy all cards here."
+},
+{
+"id": 796113,
+"name": "Widow's Kiss",
+"text": "Destroy this when your side of this location is full."
+},
+{
+"id": 795794,
+"name": "Mole Man",
+"text": "On Reveal: Banish the top card of your deck. Add 2 Rocks to your hand. Set their Power to the banished card's Cost."
+},
+{
+"id": 796221,
+"name": "Hala",
+"text": "After turn 4, destroy all cards on the losing side here."
+},
+{
+"id": 796052,
+"name": "Thor - Avengers",
+"text": "On Reveal: Draw an Avenger, then shuffle Mjolnir into your deck."
+},
+{
+"id": 795714,
+"name": "Kitty Pryde",
+"text": "Start of Turn: Return this to your hand. When this returns to your hand, +1 Power."
+},
+{
+"id": 795414,
+"name": "Agamotto",
+"text": "Game Start: Shuffle 4 Ancient Arcana into your deck."
+},
+{
+"id": 795580,
+"name": "Falcon",
+"text": "On Reveal: Return your 1-Cost cards to your hand."
+},
+{
+"id": 795457,
+"name": "Beta Ray Bill",
+"text": "On Reveal: Shuffle Stormbreaker into your deck."
+},
+{
+"id": 795853,
+"name": "Overdrive Reactor Effect04",
+"text": "Transform charged cards in play into ones that cost 1 more."
+},
+{
+"id": 795871,
+"name": "Polymorph",
+"text": "On Reveal: Transform your lowest-Power character here into one that costs 1 more."
+},
+{
+"id": 796369,
+"name": "Westview",
+"text": "Turns into a new location on turn 4."
+},
+{
+"id": 796326,
+"name": "Tarnax IV",
+"text": "After you play a character here, transform it into another one of the same Cost."
+},
+{
+"id": 795669,
+"name": "Images of Ikonn",
+"text": "On Reveal: Transform your other cards here into copies of the highest-Power one."
+},
+{
+"id": 795666,
+"name": "Iceman",
+"text": "On Reveal: Give a card in your opponent's hand +1 Cost. (maximum 6)"
+},
+{
+"id": 795920,
+"name": "Sandman",
+"text": "On Reveal: Next turn, cards cost 1 more. (maximum 6)"
+},
+{
+"id": 796339,
+"name": "The Sandbar",
+"text": "Created cards cost 1 more. (max 6)"
+},
+{
+"id": 796119,
+"name": "Witchfire",
+"text": "On Reveal: Your opponent draws a card, increase its cost by 1."
+},
+{
+"id": 795443,
+"name": "Askani'son",
+"text": "Activate: Create a 1-Cost card at another location. Increase the Cost each time you're winning here as the turn starts."
+},
+{
+"id": 795719,
+"name": "Korg",
+"text": "On Reveal: Shuffle a Rock into your opponent's deck."
+},
+{
+"id": 796110,
+"name": "White Widow",
+"text": "On Reveal: Add a Widow's Kiss to your opponent's side of this location."
+},
+{
+"id": 795769,
+"name": "Maximus",
+"text": "On Reveal: Your opponent draws 2 cards."
+},
+{
+"id": 795901,
+"name": "Red Skull",
+"text": "Ongoing: Enemy cards here have +2 Power."
+},
+{
+"id": 796264,
+"name": "Munchineworld",
+"text": "After you play a card here, your opponent gets a Chimichanga."
+},
+{
+"id": 796244,
+"name": "Los Diablos Base",
+"text": "After turn 3, ruin a random location."
+},
+{
+"id": 795600,
+"name": "Galactus",
+"text": "On Reveal: If you're winning this location and this is your only card here, destroy all other locations."
+},
+{
+"id": 796373,
+"name": "Worldship",
+"text": "Destroy the other locations."
+},
+{
+"id": 796212,
+"name": "Flooding",
+"text": "This is the last turn cards can be played here."
+},
+{
+"id": 795737,
+"name": "Loki",
+"text": "On Reveal: Replace your deck with your opponent's starting deck. Give those cards -1 Cost."
+},
+{
+"id": 796193,
+"name": "Crystal Towers",
+"text": "Shuffle your hand into your deck. Draw 3 cards."
+},
+{
+"id": 796200,
+"name": "District X",
+"text": "Replace both decks with 10 random cards."
+},
+{
+"id": 796192,
+"name": "Crown City",
+"text": "Whoever is winning here gets +4 Power at adjacent locations."
+},
+{
+"id": 795743,
+"name": "Mad Thinker",
+"text": "Start of Turn (after drawing): +2 Power if your hand is full."
+},
+{
+"id": 796163,
+"name": "Atlantis",
+"text": "If you only have one card here, it has +5 Power."
+},
+{
+"id": 795816,
+"name": "Namor",
+"text": "Ongoing: +5 Power if this is your only card here."
+},
+{
+"id": 795702,
+"name": "Juggernaut Horseman of War",
+"text": "Objective: Have 6 different Powers among your other cards in play +6 Power. (0/6)"
+},
+{
+"id": 795604,
+"name": "Gambit Horseman of Death",
+"text": "Objective: Play 6 total Cost of created cards Randomly destroy up to 3 total Cost of enemy cards. (0/6)"
+},
+{
+"id": 796327,
+"name": "The Abbey",
+"text": "First to put exactly 2 cards here draws a card."
+},
+{
+"id": 796338,
+"name": "The Sacred Timeline",
+"text": "First to fill this gets a copy of their opening hand."
+},
+{
+"id": 796370,
+"name": "White Hot Room",
+"text": "First to fill this gets +3 Max Energy."
+},
+{
+"id": 795891,
+"name": "Random",
+"text": "On Reveal: Set this card's Power equal to the Power of a random card in your deck."
+},
+{
+"id": 795996,
+"name": "Stick",
+"text": "On Reveal: Give the next card you play Power equal to this card's Power."
+},
+{
+"id": 795727,
+"name": "Lasher",
+"text": "Activate: Afflict an enemy card here with negative Power equal to this card's Power."
+},
+{
+"id": 796024,
+"name": "Taskmaster",
+"text": "On Reveal: Set this card's Power equal to that of the last card you played. (if able)"
+},
+{
+"id": 795500,
+"name": "Clobberin' Time",
+"text": "Costs 1 less for each different Cost among your cards in play. On Reveal: Give your Champion +8 Power."
+},
+{
+"id": 795716,
+"name": "Kluh",
+"text": "On Reveal: EACH player randomly gives a card in their hand -1 Cost for each different Cost among their cards in play."
+},
+{
+"id": 796063,
+"name": "Toxie Doxie - Thunderbolts",
+"text": "On Reveal: Give 2 characters in your hand +3 Power. You can't play them next turn unless they're Thunderbolts."
+},
+{
+"id": 795722,
+"name": "Lady Bullseye",
+"text": "On Reveal: Afflict an enemy card with -2 Power. Repeat on a different enemy for each of your unspent Energy."
+},
+{
+"id": 796331,
+"name": "The Grub",
+"text": "Add a random Food Fight variant to each player's hand."
+},
+{
+"id": 796183,
+"name": "Central Park",
+"text": "Add a Squirrel to each location."
+},
+{
+"id": 795649,
+"name": "High Evolutionary",
+"text": "Game Start: Unlock the potential of your cards with no abilities."
+},
+{
+"id": 795861,
+"name": "Patriot",
+"text": "Ongoing: Your cards with no abilities have +2 Power."
+},
+{
+"id": 795429,
+"name": "Ant Man",
+"text": "Ongoing: If your side of this location is full, +4 Power."
+},
+{
+"id": 796295,
+"name": "Reed's Lab",
+"text": "+1 Energy each turn if your side here is full."
+},
+{
+"id": 795665,
+"name": "Ice Cube",
+"text": "Start of Turn: +1 Energy. Then destroy this if your side is full here."
+},
+{
+"id": 796279,
+"name": "Our Lady of Saints",
+"text": "When your revealed cards fill this, merge them into a Symbiote."
+},
+{
+"id": 796073,
+"name": "Ultron Soul Stone",
+"text": "On Reveal: For each of your full locations, give one of your cards there +3 Power."
+},
+{
+"id": 795759,
+"name": "Marrow",
+"text": "When Discarded or Destroyed: Randomly split -7 Power among enemy cards."
+},
+{
+"id": 796043,
+"name": "The Living Tribunal",
+"text": "Ongoing: Split your total Power evenly among all locations."
+},
+{
+"id": 795458,
+"name": "Bishop",
+"text": "After you play a card, this gains +1 Power."
+},
+{
+"id": 796123,
+"name": "Wolverine Horseman of War",
+"text": "Objective: This has 5 or more Power Give one of your cards at each location +4 Power. (3/5)"
+},
+{
+"id": 796138,
+"name": "Zombie Giant-Man",
+"text": "On Reveal: Horde +2, then this gains Power equal to your Zombie Horde."
+},
+{
+"id": 795775,
+"name": "Miek",
+"text": "When you discard a card, this gains +1 Power and Moveable next turn."
+},
+{
+"id": 795631,
+"name": "Havok",
+"text": "End of Turn: You lose 1 Max Energy and this gains +3 Power."
+},
+{
+"id": 795970,
+"name": "SP//dr",
+"text": "On Reveal: Merge this into one of your cards here. It's Moveable next turn."
+},
+{
+"id": 796021,
+"name": "Symbiote Spider-Man - Spider-Verse",
+"text": "Activate: Merge one of your cards here into this. Replace that card with a Spider-Verse card from your deck."
+},
+{
+"id": 795960,
+"name": "Sinister Six",
+"text": "Game Start: The first 6 characters you draw are EVIL! After you play them all, merge them into this and add this to the last one's location. (0/6)"
+},
+{
+"id": 795863,
+"name": "Peni Parker",
+"text": "On Reveal: Add SP//dr to your hand. When this merges, you get +1 Energy next turn."
+},
+{
+"id": 796000,
+"name": "Strange Supreme",
+"text": "Gains +2 Power from merging. End of Turn: Merge one of your created cards into this."
+},
+{
+"id": 796020,
+"name": "Symbiote Spider-Man",
+"text": "Activate: Merge your lowest-Cost card here into this. Copy its text like it just revealed."
+},
+{
+"id": 796234,
+"name": "Klyntar",
+"text": "After turn 4, merge your cards here into a Symbiote."
+},
+{
+"id": 796243,
+"name": "Limbo",
+"text": "There is a turn 7 this game."
+},
+{
+"id": 796383,
+"name": "Energy and game length",
+"text": "Energy each turn equals the turn number and does not carry over; the game lasts 6 turns."
+},
+{
+"id": 796306,
+"name": "Sandcastle",
+"text": "After turn 5, end the game."
+},
+{
+"id": 795561,
+"name": "Electro",
+"text": "On Reveal: +1 Max Energy. Ongoing: You can only play 1 card a turn."
+},
+{
+"id": 795528,
+"name": "Debrii",
+"text": "On Reveal: Add a Rock to each other location."
+},
+{
+"id": 795671,
+"name": "Inevitable",
+"text": "On Reveal: If your Champion is in play with 20 or more Power, destroy front-row enemy cards here. (even unrevealed ones)"
+},
+{
+"id": 796061,
+"name": "Topaz",
+"text": "After you play a card here, move it to the middle location."
+},
+{
+"id": 795623,
+"name": "Grand Master",
+"text": "On Reveal: Move one of your other On Reveal cards here to the middle location. Its ability happens again."
+},
+{
+"id": 796144,
+"name": "Zombie Sentry",
+"text": "On Reveal: Horde +1 for each of your cards at the right location."
+},
+{
+"id": 795615,
+"name": "Giganto",
+"text": "You can only play this at the left location."
+},
+{
+"id": 795510,
+"name": "Crimson Behemoth",
+"text": "On Reveal: Steal all the Power of a front-row enemy card here."
+},
+{
+"id": 795434,
+"name": "Apocalypse, Celestials' Chosen",
+"text": "On Reveal: Swap the lowest-Power character in your front row at any location with one from your deck."
+},
+{
+"id": 796258,
+"name": "Mosh Pit",
+"text": "End of Turn: Give front-row cards here +1 Power."
+},
+{
+"id": 795771,
+"name": "Mephisto",
+"text": "If you win this game, double your winnings."
+},
+{
+"id": 795422,
+"name": "Ajax",
+"text": "Ongoing: +1 Power for each card in play afflicted with negative Power."
+},
+{
+"id": 795667,
+"name": "Ikari",
+"text": "You can only play this where an enemy is afflicted with negative Power."
+},
+{
+"id": 795870,
+"name": "Polaris Horseman of Pestilence",
+"text": "Objective: Cards in play are afflicted with -5 Power Put a card from your hand here. (0/5)"
+},
+{
+"id": 795532,
+"name": "Diamondback",
+"text": "Ongoing: Enemy cards here afflicted with negative Power have an additional -2 Power."
+},
+{
+"id": 795481,
+"name": "Caliban Horseman of Pestilence",
+"text": "Objective: Have 3 cards that are 4-Cost or more in play Afflict the highest-Cost enemy card with -7 Power. (0/3)"
+},
+{
+"id": 795618,
+"name": "Goblin Queen",
+"text": "On Reveal: Other cards can't be revealed this turn."
+},
+{
+"id": 796011,
+"name": "Supergiant",
+"text": "On Reveal: All cards played next turn don't reveal until the game ends."
+},
+{
+"id": 795673,
+"name": "Invisible Woman",
+"text": "Ongoing: Cards you play here are not revealed until the game ends."
+},
+{
+"id": 795488,
+"name": "Captain Marvel",
+"text": "At the end of the game, move to a location that wins you the game. (If possible)"
+},
+{
+"id": 795753,
+"name": "Malekith",
+"text": "On Reveal: Add a 3-Cost or less card from your deck here, but don't reveal it until the game ends."
+},
+{
+"id": 795394,
+"name": "Start of Turn",
+"text": "Triggers at the start of each turn while the card is on the board."
+}
+]

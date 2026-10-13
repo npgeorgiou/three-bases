@@ -1,0 +1,2858 @@
+{
+"743477": [
+[
+"sacrifice",
+"Destroy a friendly minion"
+],
+[
+"condition_count",
+"If you had 5 or more"
+],
+[
+"summon",
+"summon a 5/5 Demon"
+]
+],
+"747077": [
+[
+"summon",
+"Colossal +1"
+],
+[
+"immunity",
+"Immune while you control"
+]
+],
+"799160": [
+[
+"on_attack",
+"After your hero attacks"
+],
+[
+"summon",
+"summon three reinforcements"
+]
+],
+"798629": [
+[
+"selection",
+"Discover a Legendary minion"
+],
+[
+"summon",
+"Summon two copies of it"
+],
+[
+"copy",
+"two copies of it"
+]
+],
+"798224": [
+[
+"delayed",
+"In 2 turns"
+],
+[
+"summon",
+"summon two 6/6 Demons"
+],
+[
+"taunt",
+"with Taunt"
+]
+],
+"742884": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"tutor",
+"Draw a spell from your deck"
+],
+[
+"cost_condition",
+"costs (5) or more"
+]
+],
+"744479": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"copy",
+"Become a 4/4 copy of it"
+],
+[
+"silence",
+"then Silence it"
+]
+],
+"743341": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"selection",
+"Discover a Hunter, Paladin, or Warrior card"
+]
+],
+"746468": [
+[
+"cost_reduction",
+"Costs (1) less"
+],
+[
+"count_payoff",
+"for each SI:7 card you've played this game"
+],
+[
+"tribal",
+"SI:7 card"
+],
+[
+"combo_sequence",
+"Combo"
+],
+[
+"destroy",
+"Destroy an enemy minion"
+]
+],
+"798196": [
+[
+"damage",
+"Deal 2 damage"
+]
+],
+"746089": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"in_hand_buff",
+"Reduce the Cost of all Deathrattle cards in your deck"
+],
+[
+"tribal",
+"Deathrattle cards"
+]
+],
+"746277": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"Set this minion's Attack and Health to the highest"
+],
+[
+"stat_condition",
+"the highest in the battlefield"
+]
+],
+"747756": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"lifesteal",
+"Give a friendly minion Lifesteal"
+]
+],
+"745506": [
+[
+"in_hand_buff",
+"Give minions in your hand +1/+1"
+],
+[
+"tribal",
+"Legendary minions get an extra +2/+1"
+]
+],
+"798481": [
+[
+"summon",
+"Summon two random Murlocs"
+],
+[
+"random_effect",
+"random Murlocs"
+]
+],
+"744106": [
+[
+"selection",
+"Discover a minion from your deck"
+],
+[
+"tribal",
+"If all 3 are Beasts"
+],
+[
+"draw",
+"draw them all instead"
+]
+],
+"743137": [
+[
+"cant_attack",
+"Can't attack heroes"
+]
+],
+"746406": [
+[
+"selection",
+"Discover a card from your deck to draw"
+],
+[
+"draw",
+"to draw instead"
+]
+],
+"742594": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"repeat_trigger",
+"Recast a spell"
+],
+[
+"variety_payoff",
+"from each spell school"
+],
+[
+"count_payoff",
+"you've cast this game"
+]
+],
+"799662": [
+[
+"stat_multiply",
+"doubled stats"
+]
+],
+"799037": [
+[
+"summon",
+"Summon four 2/2 Treant Totems"
+],
+[
+"haste",
+"with Rush"
+],
+[
+"overload_debt",
+"Overload: (2)"
+]
+],
+"745592": [
+[
+"death_trigger",
+"Deathrattle: Summon a random Demon from your deck"
+],
+[
+"free_play",
+"Summon a random Demon from your deck"
+],
+[
+"random_effect",
+"a random Demon"
+],
+[
+"revive",
+"Summon Moragg."
+]
+],
+"745951": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"generate_cards",
+"Add a random Toxin card to your hand"
+],
+[
+"random_effect",
+"a random Toxin card"
+]
+],
+"747393": [
+[
+"cheat_death",
+"Give a minion Reborn"
+]
+],
+"798212": [
+[
+"damage",
+"Deal damage equal to the Starship's Attack"
+],
+[
+"distribute",
+"randomly split between all enemies"
+],
+[
+"random_effect",
+"randomly split"
+]
+],
+"798264": [
+[
+"multi_target_attack",
+"Also damages the minions next to whomever your hero attacks"
+],
+[
+"adjacency",
+"the minions next to"
+]
+],
+"742376": [
+[
+"cheat_death",
+"The first time it dies, returns with 1 Health"
+]
+],
+"797364": [
+[
+"friendly_fire",
+"You take 4 damage"
+]
+],
+"746054": [
+[
+"draw",
+"Draw 5 cards"
+],
+[
+"repeat_trigger",
+"Trigger any Deathrattles drawn"
+]
+],
+"744572": [
+[
+"haste",
+"Rush"
+],
+[
+"multi_attack",
+"Windfury"
+]
+],
+"797761": [
+[
+"delayed",
+"The trial finishes at the start of your next turn"
+],
+[
+"turn_start",
+"at the start of your next turn"
+]
+],
+"798623": [
+[
+"transform",
+"Transform a friendly minion into one that costs (1) more"
+],
+[
+"repeat_trigger",
+"Repeatable this turn"
+]
+],
+"744264": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"spell_power",
+"gain Spell Damage +2"
+]
+],
+"747259": [
+[
+"taunt",
+"Taunt"
+],
+[
+"generate_cards",
+"add a random Dragon to your hand"
+],
+[
+"random_effect",
+"a random Dragon"
+]
+],
+"800163": [
+[
+"stat_gain",
+"Give a friendly Beast +3/+3"
+],
+[
+"tribal",
+"friendly Beast"
+],
+[
+"death_trigger",
+"Deathrattle: Give Brann's Saddle to another friendly Beast."
+]
+],
+"743210": [
+[
+"taunt",
+"Taunt"
+]
+],
+"799744": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"board_wipe",
+"Send all other minions into the Twisting Nether"
+]
+],
+"744992": [
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"permanent_growth",
+"gain +1/+1"
+]
+],
+"742612": [
+[
+"trap_secret",
+"Secret: When your opponent casts a spell"
+],
+[
+"counter_spell",
+"return it to their hand instead"
+],
+[
+"cost_increase",
+"It costs (1) more"
+]
+],
+"742544": [
+[
+"cost_reduction",
+"Costs (1) less"
+],
+[
+"count_payoff",
+"for each time you used your Hero Power this game"
+],
+[
+"hero_power",
+"Hero Power"
+]
+],
+"742570": [
+[
+"on_kill",
+"Honorable Kill"
+],
+[
+"stat_gain",
+"Gain +2 Attack"
+]
+],
+"747740": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"selection",
+"Discover a Taunt minion"
+],
+[
+"block_armor",
+"Gain Armor equal to its Cost"
+]
+],
+"746847": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"generate_cards",
+"Get two 0-Cost Bandages"
+],
+[
+"heal",
+"restore 3 Health"
+]
+],
+"742434": [
+[
+"damage",
+"Deal 2 damage to a minion"
+],
+[
+"spell_power",
+"double bonus from Spell Damage"
+]
+],
+"800104": [
+[
+"passive",
+"Passive"
+],
+[
+"on_ally_play",
+"After you play a Legendary minion"
+],
+[
+"copy",
+"summon a copy of it"
+]
+],
+"799542": [
+[
+"cost_reduction",
+"reduces the cost of your Hero Power by (1)"
+],
+[
+"hero_power",
+"Hero Power"
+]
+],
+"745519": [
+[
+"on_damaged",
+"After this minion takes damage"
+],
+[
+"summon",
+"summon two 1/1 Frail Ghouls"
+]
+],
+"797245": [
+[
+"stat_gain",
+"Give a minion +2 Health"
+]
+],
+"744162": [
+[
+"temporary_buff",
+"Give your characters +2 Attack this turn"
+]
+],
+"800439": [
+[
+"spell_power",
+"Spell Damage +2"
+]
+],
+"745861": [
+[
+"disable",
+"Freeze a minion"
+],
+[
+"copy",
+"Summon a Frozen copy of it"
+]
+],
+"797807": [
+[
+"draw",
+"Draw 3 spells"
+],
+[
+"tutor",
+"Draw 3 spells"
+],
+[
+"adjacency",
+"Cast every adjoining Aspect Essence"
+]
+],
+"742599": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all enemies"
+],
+[
+"merge_attach",
+"Equip a 2/5 Immovable Object"
+]
+],
+"746733": [
+[
+"stat_gain",
+"Give +1/+2 to a friendly minion"
+],
+[
+"tribal",
+"share a type with it"
+]
+],
+"744205": [
+[
+"aoe_damage",
+"Deal $ damage to all minions"
+],
+[
+"friendly_fire",
+"to all minions"
+],
+[
+"upgrade",
+"Upgrades each turn!"
+]
+],
+"745993": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"merge_attach",
+"Give your weapon +2 Attack"
+]
+],
+"746471": [
+[
+"modal_choice",
+"Choose One"
+],
+[
+"stat_gain",
+"Give your minions +1 Attack"
+],
+[
+"summon",
+"Summon a 2/2 Treant"
+]
+],
+"746943": [
+[
+"revive",
+"Resurrect your last Demon that died"
+],
+[
+"tribal",
+"Demon"
+]
+],
+"744299": [
+[
+"tutor",
+"Draw the lowest Cost minion from your deck"
+],
+[
+"cost_condition",
+"the lowest Cost minion"
+],
+[
+"stat_gain",
+"Give it +2/+2"
+]
+],
+"745227": [
+[
+"damage",
+"Deal 4 damage to a random enemy"
+],
+[
+"random_effect",
+"a random enemy"
+],
+[
+"combo_sequence",
+"If you played an Elemental last turn"
+],
+[
+"tribal",
+"an Elemental"
+],
+[
+"target_choice",
+"choose the target"
+]
+],
+"744281": [
+[
+"selection",
+"Discover a 6-Cost minion"
+],
+[
+"summon",
+"Summon two copies of it"
+],
+[
+"copy",
+"two copies of it"
+]
+],
+"747965": [
+[
+"rule_change",
+"Enemy minions cost Health instead of Mana next turn"
+],
+[
+"disruption",
+"Enemy minions cost Health instead of Mana"
+],
+[
+"temporary_effect",
+"next turn"
+]
+],
+"744181": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"summon",
+"Summon a 1/1 Boar"
+]
+],
+"746174": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"card_crafting",
+"Craft a custom Zombeast"
+],
+[
+"generate_cards",
+"Craft a custom Zombeast"
+]
+],
+"800264": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"Gain +2/+2"
+],
+[
+"taunt",
+"and Taunt"
+],
+[
+"disable",
+"Freeze three random enemy minions"
+],
+[
+"random_effect",
+"three random enemy minions"
+]
+],
+"744765": [
+[
+"sacrifice",
+"Destroy a friendly Wisp"
+],
+[
+"draw",
+"draw 3 cards"
+]
+],
+"799971": [
+[
+"symmetric_effect",
+"Both heroes have +1 Attack"
+],
+[
+"temporary_buff",
+"+1 Attack on their turns"
+]
+],
+"742538": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"information",
+"Reveal a minion in each deck"
+],
+[
+"cost_condition",
+"If yours costs more"
+],
+[
+"taunt",
+"gain Taunt"
+],
+[
+"shield",
+"Divine Shield"
+]
+],
+"745812": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"summon",
+"Summon a 5/5 Dragon for each spell"
+],
+[
+"count_payoff",
+"for each spell you cast this game"
+],
+[
+"cost_condition",
+"costs (5) or more"
+]
+],
+"799057": [
+[
+"generate_cards",
+"Add 2 random cards to your hand"
+],
+[
+"random_effect",
+"2 random cards"
+]
+],
+"799883": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"disruption",
+"Overload 3 of your opponent's Mana Crystals"
+]
+],
+"746972": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"selection",
+"Discover two cards"
+],
+[
+"enemy_benefit",
+"Give one to your opponent at random"
+],
+[
+"random_effect",
+"at random"
+]
+],
+"799932": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"forced_attack",
+"force a random enemy minion to attack"
+],
+[
+"random_effect",
+"a random enemy minion"
+]
+],
+"747680": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"selection",
+"Discover an amazing Amulet"
+],
+[
+"symmetric_effect",
+"to give to both players"
+],
+[
+"enemy_benefit",
+"The enemy's is a phony version!"
+]
+],
+"743192": [
+[
+"summon",
+"Colossal +2"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"repeat_trigger",
+"trigger your minions' Deathrattles"
+]
+],
+"743907": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"generate_cards",
+"Get a random card"
+],
+[
+"random_effect",
+"a random card"
+]
+],
+"747573": [
+[
+"steal",
+"Summon a copy of an enemy minion"
+],
+[
+"copy",
+"Summon a copy"
+],
+[
+"low_life",
+"If you have 20 or less Health"
+],
+[
+"destroy",
+"destroy the original"
+]
+],
+"800779": [
+[
+"taunt",
+"Taunt"
+]
+],
+"797781": [
+[
+"copy",
+"Summon a copy of a friendly minion"
+]
+],
+"799283": [
+[
+"friendly_fire",
+"Deal 3 damage to your hero"
+],
+[
+"revive",
+"Return two friendly minions that died this game to your hand"
+]
+],
+"744820": [
+[
+"hero_power",
+"After you use your Hero Power"
+],
+[
+"resource_gain",
+"refresh 2 Mana Crystals"
+]
+],
+"743366": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"generate_cards",
+"Add a random Potion to your hand"
+],
+[
+"random_effect",
+"a random Potion"
+]
+],
+"798004": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"aoe_damage",
+"deal 2 damage to all enemies"
+]
+],
+"745119": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"cost_condition",
+"holding a spell that costs (5) or more"
+],
+[
+"shield",
+"gain Divine Shield"
+],
+[
+"lifesteal",
+"Lifesteal"
+]
+],
+"799682": [
+[
+"taunt",
+"Taunt"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"free_play",
+"Summon a Blood Fighter from your hand"
+],
+[
+"stat_gain",
+"Give it +5/+5"
+]
+],
+"800499": [
+[
+"aura",
+"Adjacent minions have +2 Attack"
+],
+[
+"adjacency",
+"Adjacent minions"
+]
+],
+"797531": [
+[
+"on_spell",
+"After you play a spell"
+],
+[
+"ping",
+"deal 1 damage to a random enemy minion"
+],
+[
+"random_effect",
+"a random enemy minion"
+]
+],
+"746513": [
+[
+"polymorph",
+"Transform a minion into a 4/1 Jellyfish"
+],
+[
+"spell_power",
+"Spell Damage +2"
+]
+],
+"800079": [
+[
+"summon",
+"Summon two 6/6 Infernals"
+]
+],
+"800413": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"Give a friendly Mech +1/+1"
+],
+[
+"tribal",
+"friendly Mech"
+]
+],
+"746570": [
+[
+"stealth",
+"Stealth"
+],
+[
+"cost_reduction",
+"Costs (1) less"
+],
+[
+"condition_count",
+"for each time the enemy hero took damage this turn"
+]
+],
+"798967": [
+[
+"immunity",
+"Sylvanas is Immune"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"summon",
+"Summon the Inner Gate of Quel'Thalas"
+]
+],
+"799831": [
+[
+"spell_power",
+"Spell Damage +1"
+]
+],
+"747912": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"tribal",
+"If you're holding a Dragon"
+],
+[
+"resource_gain",
+"gain an empty Mana Crystal"
+]
+],
+"743941": [
+[
+"stat_gain",
+"Give a minion +2/+1"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"744877": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"lone_unit",
+"If you control no other minions"
+],
+[
+"damage",
+"deal 2 damage"
+]
+],
+"744719": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"repeat_trigger",
+"The next 3 spells you play cast twice"
+]
+],
+"747230": [
+[
+"discard",
+"Discard your highest Cost card"
+],
+[
+"cost_condition",
+"highest Cost card"
+],
+[
+"aoe_damage",
+"Deal damage equal to its Cost to all minions"
+],
+[
+"friendly_fire",
+"to all minions"
+]
+],
+"800503": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all minions"
+],
+[
+"friendly_fire",
+"to all minions"
+]
+],
+"799558": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"heal",
+"Restore 15 Health to random friendly characters"
+],
+[
+"random_effect",
+"random friendly characters"
+]
+],
+"746501": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"quests",
+"If you've cast three spells while holding this"
+],
+[
+"on_spell",
+"cast three spells while holding this"
+],
+[
+"damage",
+"deal 5 damage"
+]
+],
+"799150": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"regeneration",
+"restore 3 Health to himself"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"boss_phases",
+"advance fight"
+]
+],
+"800125": [
+[
+"hero_power",
+"Choose a new starting Hero Power"
+],
+[
+"flexibility",
+"Choose a new starting Hero Power"
+]
+],
+"746550": [
+[
+"stat_gain",
+"Give your minions +1/+1"
+],
+[
+"junk_cards",
+"Shuffle 2 Shreds of Time into your deck"
+]
+],
+"745624": [
+[
+"aoe_damage",
+"Deal 3 damage to all minions"
+],
+[
+"friendly_fire",
+"to all minions"
+],
+[
+"random_effect",
+"Gains an extra effect in your hand that changes each turn"
+]
+],
+"747242": [
+[
+"on_ally_play",
+"After you summon an Elemental"
+],
+[
+"tribal",
+"an Elemental"
+],
+[
+"stat_gain",
+"give it +1/+1"
+]
+],
+"799218": [
+[
+"immunity",
+"Elusive"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"boss_phases",
+"Advance fight"
+],
+[
+"heal",
+"restore 15 Health to Thrall"
+]
+],
+"742645": [
+[
+"haste",
+"Rush"
+],
+[
+"cost_reduction",
+"Costs (1) less"
+],
+[
+"count_payoff",
+"for each non-Rogue Class card added to your hand this game"
+]
+],
+"746344": [
+[
+"destroy",
+"Destroy a damaged minion"
+],
+[
+"condition_life",
+"a damaged minion"
+],
+[
+"combo_sequence",
+"Combo"
+]
+],
+"744378": [
+[
+"generate_cards",
+"Get a random Golden Pirate and Elemental from other classes"
+],
+[
+"random_effect",
+"a random Golden Pirate"
+]
+],
+"798014": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"summon",
+"Summon a very cracked Egg"
+],
+[
+"condition_count",
+"Break 3 times to hatch"
+],
+[
+"taunt",
+"with Taunt"
+]
+],
+"798572": [
+[
+"damage_reduction",
+"This minion can only take 1 damage at a time"
+]
+],
+"745713": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"friendly_fire",
+"deals 7 damage to you when drawn"
+]
+],
+"745797": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"in_hand_buff",
+"Give a minion in your hand +4/+2"
+],
+[
+"merge_attach",
+"reequip this"
+]
+],
+"747865": [
+[
+"selection",
+"Discover a Naga"
+],
+[
+"tribal",
+"a Naga"
+],
+[
+"in_hand_buff",
+"reduce its Cost by (1)"
+],
+[
+"condition_count",
+"If you've played a Naga while holding this"
+]
+],
+"743800": [
+[
+"death_trigger",
+"Whenever one of your other minions dies"
+],
+[
+"summon",
+"summon a 2/2 Ghoul"
+]
+],
+"745404": [
+[
+"on_ally_play",
+"Whenever you summon a Pirate"
+],
+[
+"tribal",
+"a Pirate"
+],
+[
+"stealth",
+"gain Stealth"
+]
+],
+"746909": [
+[
+"recycle",
+"Tradeable"
+],
+[
+"on_play",
+"Battlecry"
+],
+[
+"resource_gain",
+"Refresh Mana Crystals"
+],
+[
+"upgrade",
+"Trade to upgrade!"
+]
+],
+"799561": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"summon",
+"summons a 2/2 Vespers Cannon"
+]
+],
+"797430": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"damage",
+"deal 4 damage to a random enemy minion"
+],
+[
+"random_effect",
+"a random enemy minion"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"cheat_death",
+"Go Dormant for 2 turns"
+],
+[
+"delayed",
+"for 2 turns"
+]
+],
+"798356": [
+[
+"self_mill",
+"Remove the top 5 cards of your deck"
+],
+[
+"deck_position",
+"the top 5 cards of your deck"
+],
+[
+"free_play",
+"Summon any minions removed"
+]
+],
+"747946": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"cost_increase",
+"Enemy Battlecry cards cost (5) more next turn"
+],
+[
+"temporary_effect",
+"next turn"
+]
+],
+"797938": [
+[
+"passive",
+"Passive"
+],
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"summon",
+"summon three 1/1 Boom Bots"
+]
+],
+"745466": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"merge_attach",
+"Equip a random weapon"
+],
+[
+"random_effect",
+"a random weapon"
+],
+[
+"symmetric_effect",
+"for each player"
+],
+[
+"enemy_benefit",
+"for each player"
+]
+],
+"743076": [
+[
+"damage",
+"Deal 5 damage"
+],
+[
+"deck_condition",
+"If your deck has no minions"
+],
+[
+"summon",
+"summon a random 5-Cost minion"
+],
+[
+"random_effect",
+"a random 5-Cost minion"
+]
+],
+"746001": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_play",
+"Battlecry"
+],
+[
+"in_hand_buff",
+"Give your C'Thun +1/+1 and Taunt (wherever it is)"
+]
+],
+"747857": [
+[
+"heal",
+"Restore 8 Health to a damaged character"
+],
+[
+"condition_life",
+"a damaged character"
+],
+[
+"generate_cards",
+"Save any excess in a 1-Cost Bottle"
+]
+],
+"746576": [
+[
+"turn_end",
+"At the end of each player's turn"
+],
+[
+"symmetric_effect",
+"give them a Coin"
+],
+[
+"resource_gain",
+"give them a Coin"
+],
+[
+"enemy_benefit",
+"each player's turn, give them a Coin"
+]
+],
+"743258": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Battlecry"
+]
+],
+"798383": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"direct_damage",
+"deal 15 damage to the enemy hero"
+]
+],
+"743722": [
+[
+"cost_reduction",
+"Costs (1) less"
+],
+[
+"count_payoff",
+"for each Mana Crystal you've Overloaded this game"
+]
+],
+"746678": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"deck_condition",
+"If every minion in your deck shares a minion type"
+],
+[
+"tribal",
+"shares a minion type"
+],
+[
+"stat_gain",
+"give your other minions +2/+2"
+],
+[
+"in_hand_buff",
+"(wherever they are)"
+]
+],
+"799084": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"summon",
+"summon two random Elementals"
+],
+[
+"random_effect",
+"two random Elementals"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"destroy",
+"Destroy all Elemental minions"
+],
+[
+"tribal",
+"all Elemental minions"
+]
+],
+"745623": [
+[
+"haste",
+"Give a minion Rush"
+],
+[
+"stat_gain",
+"And +1/+1"
+]
+],
+"745432": [
+[
+"on_ally_play",
+"Whenever you summon a Mech"
+],
+[
+"tribal",
+"a Mech"
+],
+[
+"shield",
+"gain Divine Shield"
+]
+],
+"746421": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"tribal",
+"Choose a friendly Beast"
+],
+[
+"copy",
+"Shuffle three 3/3 copies into your deck"
+],
+[
+"card_advantage",
+"Shuffle three 3/3 copies into your deck"
+]
+],
+"797889": [
+[
+"transform",
+"transform it into a random treasure"
+],
+[
+"random_effect",
+"a random treasure"
+]
+],
+"742604": [
+[
+"damage",
+"Deal 2 damage"
+],
+[
+"on_kill",
+"Honorable Kill"
+],
+[
+"in_hand_buff",
+"Reduce the Cost of spells in your hand by (1)"
+]
+],
+"746253": [
+[
+"cost_reduction",
+"Your next Protoss card this turn costs (2) less"
+],
+[
+"tribal",
+"Protoss card"
+]
+],
+"742720": [
+[
+"on_damaged",
+"Frenzy"
+],
+[
+"summon",
+"Summon another Gruntled Patron"
+]
+],
+"744919": [
+[
+"lifesteal",
+"Lifesteal"
+],
+[
+"damage",
+"Deal 6 damage to a minion"
+],
+[
+"cost_reduction",
+"Costs (3) less"
+],
+[
+"overload_debt",
+"if you're Overloaded"
+]
+],
+"797433": [
+[
+"haste",
+"Rush"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"return_to_hand",
+"Return this to your hand"
+]
+],
+"799168": [
+[
+"quests",
+"Quest: Kill the Training Totem"
+],
+[
+"alt_wincon",
+"Reward: Victory!"
+]
+],
+"800632": [
+[
+"immunity",
+"Elusive"
+]
+],
+"747453": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"copy",
+"Summon a 1/1 copy of it"
+]
+],
+"747276": [
+[
+"haste",
+"Rush"
+],
+[
+"on_kill",
+"After this attacks and kills a minion"
+],
+[
+"heal",
+"restore this to full Health"
+]
+],
+"747153": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"resource_gain",
+"Refresh an empty Mana Crystal"
+],
+[
+"condition_count",
+"for each spell you've cast this turn"
+]
+],
+"745626": [
+[
+"hand_position",
+"Outcast"
+],
+[
+"bounce_enemy",
+"Return a minion to its owner's hand"
+]
+],
+"747720": [
+[
+"transform",
+"transform it into a random 3-Cost minion"
+],
+[
+"random_effect",
+"a random 3-Cost minion"
+],
+[
+"deathtouch",
+"gains Poisonous"
+]
+],
+"743778": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"revive",
+"Summon a random friendly Beast that died this game"
+],
+[
+"tribal",
+"friendly Beast"
+],
+[
+"random_effect",
+"a random friendly Beast"
+]
+],
+"743764": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"hand_disruption",
+"Destroy all 1-Cost spells in both hands"
+],
+[
+"mill",
+"Destroy all 1-Cost spells in both hands and decks"
+],
+[
+"cost_condition",
+"1-Cost spells"
+],
+[
+"symmetric_effect",
+"in both hands and decks"
+]
+],
+"746525": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"hand_disruption",
+"Look at 3 cards in your opponent's hand"
+],
+[
+"information",
+"Look at 3 cards in your opponent's hand"
+],
+[
+"play_restriction",
+"It can't be played next turn"
+],
+[
+"temporary_effect",
+"next turn"
+]
+],
+"744249": [
+[
+"selection",
+"Discover a friendly Deathrattle minion that died this game"
+],
+[
+"revive",
+"a friendly Deathrattle minion that died this game"
+],
+[
+"repeat_trigger",
+"Also trigger its Deathrattle"
+]
+],
+"800617": [
+[
+"damage",
+"Deal 5 damage"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"742460": [
+[
+"on_attack",
+"Whenever this minion attacks a hero"
+],
+[
+"generate_cards",
+"add the Coin to your hand"
+]
+],
+"798306": [
+[
+"passive",
+"Passive"
+],
+[
+"on_enemy_enter",
+"After your opponent plays a minion"
+],
+[
+"ping",
+"deal 1 damage to it"
+]
+],
+"744021": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"summon",
+"Summon a 3/5 Elemental"
+],
+[
+"taunt",
+"with Taunt"
+]
+],
+"746832": [
+[
+"death_trigger",
+"After a friendly Beast dies"
+],
+[
+"tribal",
+"a friendly Beast"
+],
+[
+"generate_cards",
+"get a random Legendary Beast from the past"
+],
+[
+"random_effect",
+"a random Legendary Beast"
+],
+[
+"cost_reduction",
+"It costs (2) less"
+]
+],
+"799914": [
+[
+"on_spell",
+"After you cast a spell"
+],
+[
+"tutor",
+"draw a spell from your deck"
+],
+[
+"cost_reduction",
+"It costs (2) less"
+]
+],
+"799286": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"bounce_enemy",
+"Return all enemy minions to your opponent's hand"
+]
+],
+"746905": [
+[
+"aoe_damage",
+"Deal 1 damage to all enemy minions"
+],
+[
+"repeat_trigger",
+"Repeat for each Dragon you're holding"
+],
+[
+"tribal",
+"Dragon"
+],
+[
+"condition_count",
+"for each Dragon you're holding"
+]
+],
+"744291": [
+[
+"selection",
+"Discover a spell that costs (3) or less"
+],
+[
+"cost_condition",
+"costs (3) or less"
+]
+],
+"745715": [
+[
+"stat_gain",
+"Give your minions +2/+2"
+],
+[
+"cost_reduction",
+"Costs (1) less"
+],
+[
+"condition_count",
+"for each Murloc you control"
+],
+[
+"tribal",
+"Murloc"
+]
+],
+"746619": [
+[
+"cost_set",
+"Your Hero Power costs (0)"
+],
+[
+"hero_power",
+"Hero Power"
+],
+[
+"hand_size",
+"while your hand has 3 or less cards"
+]
+],
+"745211": [
+[
+"haste",
+"Rush"
+],
+[
+"taunt",
+"Taunt"
+],
+[
+"stealth",
+"Stealth?"
+]
+],
+"800266": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"destroy",
+"Destroy two random enemy minions"
+],
+[
+"random_effect",
+"two random enemy minions"
+],
+[
+"disable",
+"Freeze three random enemy minions"
+]
+],
+"747150": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"deck_position",
+"on the bottom of your deck"
+],
+[
+"generate_cards",
+"Put a 'Sunken Sweeper' on the bottom of your deck"
+]
+],
+"745290": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"in_hand_buff",
+"all minions in your hand"
+],
+[
+"stat_multiply",
+"Double the Attack and Health"
+]
+],
+"746170": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"generate_cards",
+"Permanently add a Vision of Darkness to your hand"
+]
+],
+"799827": [
+[
+"on_play",
+"Mini Battlecry"
+],
+[
+"temporary_buff",
+"+2 Attack and Immune this turn"
+],
+[
+"immunity",
+"Immune this turn"
+],
+[
+"tribal",
+"a friendly Demon"
+]
+],
+"744596": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"tutor",
+"Draw Galakrond"
+],
+[
+"condition_count",
+"If you're already Galakrond"
+]
+],
+"747819": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"variety_payoff",
+"no duplicates"
+],
+[
+"deck_condition",
+"If your deck started with no duplicates"
+],
+[
+"generate_cards",
+"get a permanent Mirage"
+]
+],
+"746903": [
+[
+"start_of_game",
+"You start the game"
+],
+[
+"deckbuilding_effect",
+"one of Whizbang's Experimental Decks"
+],
+[
+"random_effect",
+"one of Whizbang's Experimental Decks"
+]
+],
+"747405": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"in_hand_buff",
+"Change each Deathrattle minion in your hand into a 1/1 that costs (1)"
+],
+[
+"cost_set",
+"costs (1)"
+],
+[
+"tribal",
+"Deathrattle minion"
+]
+],
+"800311": [
+[
+"damage",
+"Deal 6 damage"
+]
+],
+"797846": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"temporary_buff",
+"Give your hero +1 Attack this turn"
+]
+],
+"742405": [
+[
+"random_ability",
+"A random bonus effect on a discovered minion"
+]
+],
+"745540": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"haste",
+"gain Charge"
+]
+],
+"798428": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"generate_cards",
+"Get two random Mage Secrets"
+],
+[
+"random_effect",
+"two random Mage Secrets"
+],
+[
+"trap_secret",
+"Mage Secrets"
+]
+],
+"799252": [
+[
+"stealth",
+"Stealth"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"summon",
+"summon a 1/1 Huntress"
+]
+],
+"798813": [
+[
+"cant_attack",
+"Can't attack"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"aoe_damage",
+"Deal 2 damage to ALL minions"
+],
+[
+"friendly_fire",
+"ALL minions"
+]
+],
+"800285": [
+[
+"distribute",
+"Deal 2 damage randomly split among all enemy minions"
+],
+[
+"random_effect",
+"randomly split"
+]
+],
+"799596": [
+[
+"delayed",
+"In 5 turns"
+],
+[
+"distribute",
+"deal 12 damage randomly split among enemies"
+],
+[
+"random_effect",
+"randomly split"
+]
+],
+"800098": [
+[
+"passive",
+"Passive"
+],
+[
+"on_spell",
+"After you cast a spell"
+],
+[
+"free_play",
+"put a minion from your deck into the battlefield"
+]
+],
+"797960": [
+[
+"board_limit",
+"Both players can only have four minions"
+],
+[
+"rule_change",
+"Both players can only have four minions"
+]
+],
+"746609": [
+[
+"summon",
+"Summon two 3/2 Demons"
+],
+[
+"deck_condition",
+"If your deck has no minions"
+],
+[
+"attack_now",
+"they attack the lowest Health enemy"
+],
+[
+"stat_condition",
+"the lowest Health enemy"
+]
+],
+"798694": [
+[
+"on_play",
+"Battlecry"
+]
+],
+"743434": [
+[
+"on_ally_play",
+"After you summon a minion"
+],
+[
+"friendly_fire",
+"deal 5 damage to your hero"
+]
+],
+"746660": [
+[
+"free_play",
+"Summon a random minion from your deck"
+],
+[
+"random_effect",
+"a random minion"
+],
+[
+"enemy_benefit",
+"Summon a 5/5 Tiger with Stealth for your opponent"
+]
+],
+"798373": [
+[
+"cost_set",
+"The next spell you cast this turn costs (0)"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"747012": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"tribal",
+"If you're holding a Dragon"
+],
+[
+"block_armor",
+"gain 5 Armor"
+]
+],
+"744070": [
+[
+"selection",
+"Discover a Demon"
+],
+[
+"cost_reduction",
+"Your next one costs (1) less"
+],
+[
+"tribal",
+"Demon"
+]
+],
+"745895": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"merge_attach",
+"Give your weapon +1/+1"
+]
+],
+"800240": [
+[
+"selection",
+"Discover a card"
+]
+],
+"742823": [
+[
+"on_spell",
+"Whenever you cast a Shadow spell"
+],
+[
+"tribal",
+"Shadow spell"
+],
+[
+"cost_condition",
+"costs (1) or more"
+],
+[
+"copy",
+"add a copy to your hand"
+],
+[
+"cost_set",
+"that costs (0)"
+]
+],
+"746351": [
+[
+"shield",
+"Divine Shield"
+],
+[
+"on_spell",
+"Spellburst"
+]
+],
+"799378": [
+[
+"on_spell",
+"Spellburst"
+],
+[
+"generate_cards",
+"Add a Dredge spell to your hand"
+]
+],
+"745383": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"in_hand_buff",
+"on every minion in your deck"
+],
+[
+"stat_gain",
+"set Attack equal to Health"
+]
+],
+"747084": [
+[
+"on_ally_play",
+"After you summon a Mech"
+],
+[
+"tribal",
+"a Mech"
+],
+[
+"distribute",
+"deal 3 damage randomly split among all enemies"
+],
+[
+"random_effect",
+"randomly split"
+]
+],
+"746955": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"tutor",
+"Draw a Shadow spell"
+],
+[
+"copy",
+"Get a Temporary copy of it"
+],
+[
+"self_destruct",
+"Temporary"
+]
+],
+"800636": [
+[
+"taunt",
+"Taunt"
+]
+],
+"798321": [
+[
+"reactions",
+"Whenever your opponent draws a card"
+],
+[
+"copy",
+"add a copy to your hand"
+],
+[
+"steal",
+"add a copy to your hand"
+]
+],
+"799927": [
+[
+"counter_spell",
+"Counter the next minion your opponent plays"
+]
+],
+"799303": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"destroy",
+"Destroy a minion"
+],
+[
+"hand_position",
+"If drawn this turn"
+],
+[
+"board_wipe",
+"destroy all enemy minions"
+]
+],
+"800278": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"direct_damage",
+"Deal 6 damage to the enemy hero"
+],
+[
+"disable",
+"Freeze three random enemy minions"
+],
+[
+"random_effect",
+"three random enemy minions"
+]
+],
+"799839": [
+[
+"overload_debt",
+"After you Overload"
+],
+[
+"stat_gain",
+"give your minions that much Attack"
+]
+],
+"800329": [
+[
+"aoe_damage",
+"Deal 2 damage to all enemies"
+]
+],
+"797872": [
+[
+"damage",
+"Deal 2 damage"
+]
+],
+"798440": [
+[
+"aoe_damage",
+"Deal 3 damage to all minions"
+],
+[
+"friendly_fire",
+"to all minions"
+],
+[
+"summon",
+"Summon a 5/5 Demon"
+],
+[
+"random_effect",
+"(Changes each turn.)"
+]
+],
+"799265": [
+[
+"modal_choice",
+"Choose One"
+],
+[
+"damage",
+"Deal 8 damage to random enemies"
+],
+[
+"random_effect",
+"random enemies"
+],
+[
+"heal",
+"restore 8 Health to random friendly characters"
+]
+],
+"798825": [
+[
+"haste",
+"Rush"
+],
+[
+"multi_target_attack",
+"Also damages the minions next to whomever this attacks"
+],
+[
+"adjacency",
+"the minions next to"
+]
+],
+"800303": [
+[
+"summon",
+"Summon three random"
+],
+[
+"random_effect",
+"three random"
+]
+],
+"799612": [
+[
+"quests",
+"Questline: Gain 5 Attack with your hero"
+],
+[
+"block_armor",
+"Gain 5 Armor"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"800115": [
+[
+"in_hand_buff",
+"Reduce the Cost of all cards in your deck by (1)"
+]
+],
+"797994": [
+[
+"friendly_fire",
+"Take 3 damage"
+]
+],
+"798707": [
+[
+"summon",
+"Gigantic"
+],
+[
+"cost_reduction",
+"Costs (1) less"
+],
+[
+"count_payoff",
+"for each Holy spell you've cast this game"
+],
+[
+"tribal",
+"Holy spell"
+]
+],
+"798386": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"destroy",
+"destroy a random enemy minion"
+],
+[
+"random_effect",
+"a random enemy minion"
+],
+[
+"self_destruct",
+"and this one"
+]
+],
+"800252": [
+[
+"aoe_damage",
+"Deal $@ damage to all enemies"
+]
+],
+"799398": [
+[
+"immunity",
+"Immune"
+],
+[
+"stat_gain",
+"Gain +2/+2"
+]
+],
+"744024": [
+[
+"damage",
+"Deal 3 damage to a minion"
+],
+[
+"on_kill",
+"If it dies"
+],
+[
+"cost_reduction",
+"your next card this turn costs (2) less"
+],
+[
+"temporary_effect",
+"this turn"
+]
+]
+}

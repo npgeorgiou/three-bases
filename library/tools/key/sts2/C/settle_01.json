@@ -1,0 +1,244 @@
+{
+"759504": [
+[
+"on_attack",
+"Whenever Osty hits this enemy this turn"
+],
+[
+"summon",
+"Summon 3"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"759507": [
+[
+"damage",
+"they take 13 damage"
+]
+],
+"759513": [
+[
+"aoe_damage",
+"deal damage to ALL enemies"
+]
+],
+"759528": [
+[
+"on_spell",
+"Whenever you play a Power"
+],
+[
+"resource_gain",
+"gain 1 energy"
+]
+],
+"759585": [
+[
+"in_hand_buff",
+"This card gains Replay 1"
+],
+[
+"repeat_trigger",
+"Replay 1"
+]
+],
+"759607": [
+[
+"damage",
+"Thrash (12 damage)"
+],
+[
+"multi_attack",
+"Bug Sting (multi_attack"
+],
+[
+"debuff",
+"debuff"
+],
+[
+"buff",
+"Adapt (buff, power)"
+],
+[
+"block_armor",
+"block 18"
+]
+],
+"759616": [
+[
+"disable",
+"Wake Up (stun)"
+],
+[
+"self_destruct",
+"Flee (escape)"
+]
+],
+"759721": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"selection",
+"Choose 2 of 8 random Common cards"
+],
+[
+"random_effect",
+"random Common cards"
+],
+[
+"deck_modification",
+"add to your Deck"
+],
+[
+"life_payment",
+"Lose 14 HP"
+]
+],
+"759728": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"random_effect",
+"Lose a random Potion"
+],
+[
+"stat_gain",
+"Gain 10 Max HP"
+],
+[
+"life_payment",
+"Lose 6 HP"
+],
+[
+"upgrade",
+"Enchant an Attack with Vigorous 8"
+]
+],
+"759735": [
+[
+"modal_choice",
+"Choices"
+],
+[
+"shop_gold",
+"Gain 100 Gold"
+]
+],
+"816358": [
+[
+"combat_start",
+"Innate"
+],
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"block_armor",
+"gain 1 Block"
+]
+],
+"816375": [
+[
+"combat_start",
+"Innate"
+],
+[
+"permanent_growth",
+"Whenever you create a card, gain 1 Strength"
+]
+],
+"816389": [
+[
+"debuff",
+"Apply 10 Doom"
+],
+[
+"condition_count",
+"for every 10 Doom already on this enemy"
+]
+],
+"816392": [
+[
+"debuff",
+"apply that much Doom"
+],
+[
+"team_play",
+"other players"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"exhaust",
+"Exhaust."
+]
+],
+"816395": [
+[
+"combat_start",
+"Innate"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"generate_cards",
+"add 1 random card into your Hand"
+],
+[
+"random_effect",
+"random card"
+]
+],
+"816399": [
+[
+"retain",
+"Retain"
+],
+[
+"damage",
+"Deal damage equal to the enemy's Doom"
+],
+[
+"condition_count",
+"damage equal to the enemy's Doom"
+]
+],
+"816416": [
+[
+"slots_queue",
+"Channel 1 Lightning"
+]
+],
+"816427": [
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"deck_position",
+"on top of your Draw Pile"
+]
+],
+"816455": [
+[
+"play_restriction",
+"Unplayable"
+],
+[
+"combat_start",
+"Innate"
+]
+]
+}

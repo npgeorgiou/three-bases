@@ -1,0 +1,662 @@
+{
+"765192": [
+[
+"stat_gain",
+"+1 wizard level to each wizard"
+],
+[
+"tribal",
+"wizard"
+],
+[
+"symmetric_effect",
+"each wizard"
+],
+[
+"rule_change",
+"A wizard suffers backlash if their casting roll contains one or more :MagCrit:"
+]
+],
+"765128": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"count_payoff",
+"third or subsequent Illusion upgrade"
+]
+],
+"763625": [
+[
+"random_effect",
+"If this spell is cast"
+],
+[
+"adjacency",
+"adjacent to the caster"
+],
+[
+"heal",
+"Remove 1 wound token"
+]
+],
+"764922": [
+[
+"piercing",
+"Cleave and Ensnare"
+],
+[
+"adjacency",
+"target an adjacent fighter"
+],
+[
+"death_trigger",
+"After this fighter is taken out of action"
+],
+[
+"enemy_benefit",
+"That opponent gains 1 glory point"
+]
+],
+"764838": [
+[
+"debuff",
+"-1 Dice from enemy fighter's Attack actions"
+],
+[
+"temporary_effect",
+"in the next activation"
+]
+],
+"764297": [
+[
+"reactions",
+"Reaction"
+],
+[
+"random_effect",
+"Roll two magic dice"
+],
+[
+"resource_gain",
+"gain 1 glory point"
+]
+],
+"764251": [
+[
+"type_grant",
+"This fighter is a Hunter"
+],
+[
+"random_effect",
+"re-roll one dice"
+],
+[
+"mark_target",
+"target a Quarry"
+]
+],
+"762747": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"death_count",
+"at least one fighter from each warband is out of action"
+]
+],
+"765062": [
+[
+"heal",
+"Heal (1) each friendly fighter"
+],
+[
+"scope_multi",
+"each friendly fighter"
+],
+[
+"adjacency",
+"adjacent to one or more enemy fighters"
+]
+],
+"765069": [
+[
+"on_kill",
+"takes an enemy fighter out of action"
+],
+[
+"assists_support",
+"if this fighter was supporting that fighter"
+],
+[
+"resource_gain",
+"gain 1 spent glory point"
+]
+],
+"765416": [
+[
+"reactions",
+"Reaction"
+],
+[
+"on_kill",
+"took the target out of action"
+],
+[
+"assists_support",
+"had one or more supporting fighters"
+],
+[
+"draw",
+"Draw two power cards"
+]
+],
+"765371": [
+[
+"random_effect",
+"re-roll results"
+],
+[
+"temporary_effect",
+"In the next activation step"
+]
+],
+"764183": [
+[
+"rule_change",
+"Players cannot re-roll dice"
+],
+[
+"symmetric_effect",
+"Players cannot re-roll dice"
+],
+[
+"temporary_effect",
+"until the end of the next activation"
+]
+],
+"764723": [
+[
+"trap_secret",
+"Trap Reaction"
+],
+[
+"random_effect",
+"Roll one magic dice"
+],
+[
+"forced_attack",
+"must target the chosen fighter"
+]
+],
+"765319": [
+[
+"debuff",
+"the characteristics of enemy fighters' Attack actions cannot be modified"
+],
+[
+"immunity",
+"Cleave and Ensnare cannot affect friendly fighters' defence rolls"
+],
+[
+"temporary_effect",
+"In the next activation"
+]
+],
+"762861": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"on_kill",
+"takes an enemy fighter out of action with a Charge action"
+]
+],
+"763756": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"movement",
+"placed in a different hex"
+]
+],
+"765465": [
+[
+"random_effect",
+"Scatter 5"
+],
+[
+"movement",
+"push the chosen fighter along the chain"
+],
+[
+"tribal",
+"brawler"
+],
+[
+"damage",
+"deal 1 damage to one enemy fighter"
+],
+[
+"adjacency",
+"adjacent to the chosen fighter"
+]
+],
+"763523": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"death_trigger",
+"taken out of action by a lethal hex"
+],
+[
+"terrain",
+"lethal hex"
+]
+],
+"765112": [
+[
+"stat_condition",
+"Wounds characteristic of 4 or less"
+],
+[
+"type_grant",
+"This fighter is a hunter"
+],
+[
+"reactions",
+"Reaction"
+],
+[
+"merge_attach",
+"After this fighter is given an upgrade"
+],
+[
+"heal",
+"heal (1) this fighter"
+]
+],
+"765254": [
+[
+"adjacency",
+"adjacent to one or more friendly fighters"
+],
+[
+"debuff",
+"Stagger the chosen fighter"
+]
+],
+"763538": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"zone_control",
+"removes an objective from the battlefield"
+]
+],
+"763151": [
+[
+"self_destruct",
+"discard this upgrade"
+],
+[
+"stat_gain",
+"+1 Damage"
+]
+],
+"765115": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"condition_count",
+"two or more Illusion upgrades"
+]
+],
+"763865": [
+[
+"life_payment",
+"They are dealt 1 damage"
+],
+[
+"protection",
+"Give them a Guard token"
+],
+[
+"temporary_buff",
+"+2 Dice to the first Attack action"
+]
+],
+"762880": [
+[
+"reactions",
+"Reaction"
+],
+[
+"immunity",
+"cannot be driven back"
+],
+[
+"counterattack",
+"makes this Attack action. It must target the attacker"
+]
+],
+"765625": [
+[
+"rule_change",
+"Domain"
+],
+[
+"symmetric_effect",
+"that fighter's player"
+],
+[
+"death_count",
+"for each fighter in their warband that is out of action"
+],
+[
+"random_effect",
+"rolls one attack dice"
+],
+[
+"damage",
+"deal 1 damage to the fighter that made the Charge action"
+],
+[
+"temporary_effect",
+"until the end of the round"
+]
+],
+"763049": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"death_count",
+"the same number of fighters (at least one) from each warband are out of action"
+]
+],
+"763105": [
+[
+"stat_multiply",
+"Double the move characteristic"
+],
+[
+"temporary_effect",
+"in the next activation"
+]
+],
+"762813": [
+[
+"temporary_buff",
+"can move one additional hex"
+],
+[
+"scope_multi",
+"Any friendly fighters"
+]
+],
+"764701": [
+[
+"stacking_keyword",
+"Hunger counter"
+],
+[
+"forced_movement",
+"push one enemy fighter within 2 hexes"
+],
+[
+"condition_count",
+"two or more Hunger counters"
+],
+[
+"scope_multi",
+"push each enemy fighter"
+]
+],
+"762804": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"condition_count",
+"at least five"
+]
+],
+"796425": [
+[
+"tribal",
+"minion"
+],
+[
+"modal_choice",
+"either"
+],
+[
+"draw",
+"draw Power cards equal to the number of slain friendly fighters"
+],
+[
+"death_count",
+"the number of slain friendly fighters"
+],
+[
+"revive",
+"raise a slain friendly minion"
+]
+],
+"796431": [
+[
+"on_spell",
+"After resolving a Ploy"
+],
+[
+"transform",
+"Inspire that fighter"
+]
+],
+"763975": [
+[
+"random_effect",
+"re-roll any number of dice"
+]
+],
+"763842": [
+[
+"random_effect",
+"re-roll one dice"
+]
+],
+"763923": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"count_payoff",
+"third or subsequent gambit card in a single round"
+]
+],
+"763237": [
+[
+"reactions",
+"Reaction"
+],
+[
+"death_trigger",
+"takes your leader out of action"
+],
+[
+"resource_gain",
+"gain 1 glory point"
+]
+],
+"765422": [
+[
+"condition_life",
+"If this fighter is vulnerable"
+],
+[
+"immunity",
+"cannot be dealt damage except by Attack actions"
+]
+],
+"763558": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"on_kill",
+"your leader takes an enemy wizard out of action"
+],
+[
+"tribal",
+"wizard"
+]
+],
+"764244": [
+[
+"stat_gain",
+"+1 Damage"
+]
+],
+"764015": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"forced_movement",
+"pushes an enemy fighter"
+],
+[
+"adjacency",
+"adjacent to your leader"
+]
+],
+"763045": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"link_formation",
+"in a single group with each friendly fighter adjacent to another friendly fighter"
+],
+[
+"condition_count",
+"at least three"
+]
+],
+"763482": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"terrain",
+"lethal hex"
+],
+[
+"on_damaged",
+"damages them but doesn't take them out of action"
+]
+],
+"763450": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"on_kill",
+"takes an enemy fighter out of action with a Charge action"
+]
+],
+"765017": [
+[
+"reactions",
+"Reaction"
+],
+[
+"on_attack",
+"after this fighter's Grundebuss Attack action"
+],
+[
+"repeat_trigger",
+"do the following twice"
+],
+[
+"random_effect",
+"Scatter 1"
+],
+[
+"damage",
+"deal 1 damage to any fighter"
+],
+[
+"friendly_fire",
+"any fighter in the end hex"
+]
+],
+"763485": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"count_payoff",
+"at least two objective cards"
+]
+],
+"763941": [
+[
+"reactions",
+"Reaction"
+],
+[
+"tribal",
+"Crakmarrow"
+],
+[
+"movement",
+"this fighter makes a Move action"
+],
+[
+"adjacency",
+"adjacent to a friendly Crakmarrow"
+]
+]
+}

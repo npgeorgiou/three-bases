@@ -145,7 +145,7 @@ def coverage(g):
         if not rx: continue
         hits = [r for r in rows if any(x.search(r[2].lower()) for x in rx) and r[0] not in cand]
         rnd.shuffle(hits)
-        for r in hits[:need * 2]: cand[r[0]] = r
+        for r in hits[:need]: cand[r[0]] = r   # round 1: as many as the concept still needs; later rounds take more
     ents = [{'id': i, 'name': n, 'text': t} for i, n, t in cand.values()]
     json.dump(ents, open(os.path.join(d, 'cov_entries.json'), 'w'), indent=0)
     for f in glob.glob(os.path.join(d, 'cov_*.txt')): os.remove(f)

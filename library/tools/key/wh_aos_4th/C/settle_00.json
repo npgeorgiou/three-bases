@@ -1,0 +1,834 @@
+{
+"791023": [
+[
+"immunity",
+"cannot be targeted by shooting attacks"
+],
+[
+"terrain",
+"this terrain feature"
+]
+],
+"791063": [
+[
+"scoring_objectives",
+"You complete this battle tactic"
+],
+[
+"zone_control",
+"you control more objectives than your opponent"
+],
+[
+"comeback",
+"you are the underdog this battle round"
+],
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"condition_count",
+"at least half of the friendly units on the battlefield"
+],
+[
+"positional",
+"wholly within each large quarter of the battlefield"
+]
+],
+"791119": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"multi_attack",
+"can use 2 Fight abilities this phase"
+],
+[
+"debuff",
+"this unit has Strike-last for the rest of the turn"
+]
+],
+"791136": [
+[
+"aura",
+"Enemy units within 12\" of this unit"
+],
+[
+"disruption",
+"cannot be healed and cannot have slain models returned to them"
+]
+],
+"791147": [
+[
+"passive",
+"Timing: Passive"
+],
+[
+"multi_attack",
+"Add 1 to the Attacks characteristic of weapons"
+],
+[
+"tribal",
+"friendly Blades of Khorne units"
+],
+[
+"on_attack",
+"that charged in the same turn"
+]
+],
+"791150": [
+[
+"turn_end",
+"End of Your Turn"
+],
+[
+"scope_multi",
+"each enemy unit"
+],
+[
+"condition_life",
+"had any damage points allocated to it this turn by this unit's combat attacks"
+],
+[
+"random_effect",
+"Roll a D3 for each target"
+],
+[
+"damage",
+"inflict an amount of mortal damage"
+]
+],
+"791152": [
+[
+"buff",
+"Add X to charge rolls"
+],
+[
+"condition_count",
+"the number of friendly Blades of Khorne Cavalry or Monster units that have already charged this phase"
+],
+[
+"tribal",
+"Blades of Khorne"
+],
+[
+"combo_sequence",
+"that have already charged this phase"
+]
+],
+"791159": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"on_kill",
+"that enemy Hero has been destroyed"
+],
+[
+"multi_attack",
+"add 1 to the Attacks characteristic of this unit's melee weapons"
+],
+[
+"permanent_growth",
+"This unit can be affected by this ability multiple times and the effects are cumulative"
+]
+],
+"791316": [
+[
+"coin_economy",
+"Spend 1 fate point"
+],
+[
+"suppress",
+"cannot use commands for the rest of the turn"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+],
+[
+"tribal",
+"Change-cult Hero"
+]
+],
+"791425": [
+[
+"on_attack",
+"If this unit charged this phase"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"stat_condition",
+"If the roll is greater than the target's control characteristic"
+],
+[
+"debuff",
+"Subtract 1 from hit rolls for the target's combat attacks"
+],
+[
+"mark_target",
+"Add 1 to hit rolls for combat attacks made by friendly units that target that enemy unit"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+]
+],
+"791455": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"multi_attack",
+"Add 3 to the Attacks characteristic of this unit's melee weapons"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+]
+],
+"791483": [
+[
+"saving_throws",
+"WArd (6+)"
+],
+[
+"condition_life",
+"While this unit has no damage points"
+],
+[
+"aura",
+"while they are wholly within 9\" of this unit"
+],
+[
+"tribal",
+"Droggz's Gitmob units"
+]
+],
+"791525": [
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"on_kill",
+"If a friendly Twin destroyed an enemy unit in the previous turn"
+],
+[
+"buff",
+"add 1 to hit rolls for combat attacks"
+],
+[
+"temporary_buff",
+"For the rest of the turn"
+]
+],
+"791582": [
+[
+"random_effect",
+"unmodified charge roll, casting roll, unbinding roll or banishment roll"
+],
+[
+"type_grant",
+"that unit has the Euphoric keyword"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+],
+[
+"aura",
+"wholly within 12\" of this unit"
+]
+],
+"791804": [
+[
+"protection",
+"Subtract 1 from hit rolls for attacks that target friendly Kharadron Overlords Infantry units"
+],
+[
+"aura",
+"wholly within 6\" of a friendly Arkanaut Ironclad or Arkanaut Frigate"
+],
+[
+"tribal",
+"Kharadron Overlords Infantry units"
+]
+],
+"791845": [
+[
+"stat_loss",
+"Subtract 2 from the control scores of enemy units"
+],
+[
+"aura",
+"while they are in combat with this unit"
+]
+],
+"791890": [
+[
+"tribal",
+"Sons of Behemat Priest"
+],
+[
+"random_effect",
+"chanting roll of D6"
+],
+[
+"scope_multi",
+"second target"
+],
+[
+"debuff",
+"each target has Strike-last"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+]
+],
+"791908": [
+[
+"summon",
+"Set up a Soulstealer Carrion"
+],
+[
+"tribal",
+"Ossiarch Bonereapers Wizard"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"play_restriction",
+"If there is not a friendly Soulstealer Carrion on the battlefield"
+]
+],
+"791949": [
+[
+"random_effect",
+"chanting roll of D6"
+],
+[
+"buff",
+"Add 2 to charge rolls for the target"
+],
+[
+"temporary_buff",
+"until the start of your next turn"
+]
+],
+"791950": [
+[
+"random_effect",
+"chanting roll of D6"
+],
+[
+"rule_change",
+"can use a Retreat ability and still use Shoot and/or Charge abilities later in the turn"
+],
+[
+"aoe_damage",
+"inflict D3 mortal damage on each enemy unit that was in combat with the target"
+],
+[
+"protection",
+"No mortal damage is inflicted on the target by Retreat abilities"
+],
+[
+"temporary_buff",
+"Until the start of your next turn"
+]
+],
+"791973": [
+[
+"tribal",
+"Beasts of Chaos Wizard"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"damage",
+"Inflict D3 mortal damage on the target"
+],
+[
+"suppress",
+"the target cannot use commands"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+]
+],
+"791991": [
+[
+"tribal",
+"Cities of Sigmar Priest"
+],
+[
+"random_effect",
+"chanting roll of D6"
+],
+[
+"scope_multi",
+"second target"
+],
+[
+"stat_loss",
+"enemy units have a maximum control score of 1"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+]
+],
+"792023": [
+[
+"summon",
+"Set up a Runic Fyrewall"
+],
+[
+"tribal",
+"Fyreslayers Priest"
+],
+[
+"random_effect",
+"chanting roll of D6"
+],
+[
+"play_restriction",
+"If there is not a friendly Runic Fyrewall on the battlefield"
+]
+],
+"792033": [
+[
+"tribal",
+"Ogor Mawtribes Priest"
+],
+[
+"random_effect",
+"chanting roll of D6"
+],
+[
+"protection",
+"subtract 1 from wound rolls for attacks that target that friendly unit"
+],
+[
+"damage_reduction",
+"subtract 1 from the Rend characteristic of weapons used for attacks that target that friendly unit"
+],
+[
+"temporary_buff",
+"Until the start of your next turn"
+]
+],
+"792045": [
+[
+"summon",
+"Set up a Bloodwrack Viper"
+],
+[
+"tribal",
+"Daughters of Khaine Wizard"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"play_restriction",
+"If there is not a friendly Bloodwrack Viper on the battlefield"
+]
+],
+"792070": [
+[
+"tribal",
+"Disciples of Tzeentch Wizard"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"condition_count",
+"a number of dice equal to the number of fate points you have"
+],
+[
+"flexibility",
+"Roll either 5 dice or"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"play_restriction",
+"that has not been picked to be the target of this spell this turn"
+]
+],
+"792079": [
+[
+"summon",
+"Set up a Wheels of Excruciation endless spell"
+],
+[
+"tribal",
+"Hedonites of Slaanesh Wizard"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"play_restriction",
+"If there is not a friendly Wheels of Excruciation endless spell on the battlefield"
+]
+],
+"792087": [
+[
+"tribal",
+"Lumineth Realm‑lords Wizard"
+],
+[
+"random_effect",
+"Roll a dice for each model in the target unit"
+],
+[
+"condition_count",
+"for each model in the target unit"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+]
+],
+"792094": [
+[
+"summon",
+"Set up a Realmscourge Rupture"
+],
+[
+"tribal",
+"Slaves to Darkness Wizard"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"play_restriction",
+"If there is not a friendly Realmscourge Rupture on the battlefield"
+]
+],
+"792099": [
+[
+"summon",
+"Set up a Scrapskuttle's Arachnacauldron"
+],
+[
+"tribal",
+"Gloomspite Gitz Wizard"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"play_restriction",
+"If there is not a friendly Scrapskuttle's Arachnacauldron on the battlefield"
+]
+],
+"792148": [
+[
+"tribal",
+"Ossiarch Bonereapers Wizard"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"multi_attack",
+"Add 1 to the Attacks characteristic of the target's melee weapons"
+],
+[
+"temporary_buff",
+"until the start of your next turn"
+]
+],
+"792200": [
+[
+"tribal",
+"Matriarch's Mob unit"
+],
+[
+"random_effect",
+"casting roll of 2D6"
+],
+[
+"movement",
+"use the 'Normal Move' ability"
+],
+[
+"speed",
+"as if it were your movement phase"
+]
+],
+"792249": [
+[
+"tribal",
+"Sylvaneth Priest"
+],
+[
+"random_effect",
+"chanting roll of D6"
+],
+[
+"scope_multi",
+"second target"
+],
+[
+"piercing",
+"add 1 to the Rend characteristic of the target(s) melee weapons"
+],
+[
+"temporary_buff",
+"Until the start of your next turn"
+]
+],
+"792368": [
+[
+"scope_multi",
+"Pick each enemy unit within 3\" of any friendly Feculent Gnarlmaws"
+],
+[
+"random_effect",
+"Roll a D3 for each target"
+],
+[
+"aoe_damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+]
+],
+"792432": [
+[
+"multi_attack",
+"Add 1 to the Attacks characteristic of this unit's melee weapons"
+],
+[
+"condition_count",
+"for each non-Faction Terrain terrain feature that is being contested by friendly units"
+],
+[
+"zone_control",
+"being contested by friendly units"
+],
+[
+"terrain",
+"terrain feature"
+]
+],
+"792634": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"variable_stats",
+"add the target's Control characteristic, to a maximum of 5, to the Attacks characteristic"
+],
+[
+"multi_attack",
+"to the Attacks characteristic of the Sacrificial Weapon"
+],
+[
+"targeting_rules",
+"all of its combat attacks must target that enemy unit"
+],
+[
+"temporary_buff",
+"For the rest of the turn"
+]
+],
+"792672": [
+[
+"damage_reduction",
+"Ignore the first damage point that would be allocated to this unit in each phase"
+]
+],
+"792722": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"on_attack",
+"You declared a Shoot ability for this unit"
+],
+[
+"multi_attack",
+"this unit can use a second Shoot ability"
+],
+[
+"ranged",
+"Shoot ability"
+]
+],
+"792750": [
+[
+"on_attack",
+"If this unit charged this turn"
+],
+[
+"stat_gain",
+"add 5 to its control score"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+]
+],
+"792811": [
+[
+"damage_reduction",
+"Ignore the first damage point that would be allocated to this unit in each phase"
+]
+],
+"792827": [
+[
+"reactions",
+"Opponent declared a Fight ability that targeted this unit"
+],
+[
+"protection",
+"Subtract 1 from hit rolls and wound rolls for attacks that target this unit"
+],
+[
+"damage_reduction",
+"Subtract 1 from the Rend characteristic and Damage characteristic of weapons used for attacks that target this unit"
+],
+[
+"stat_loss",
+"Subtract 1 from this unit's power level"
+],
+[
+"temporary_effect",
+"Until the end of the next turn"
+]
+],
+"792863": [
+[
+"saving_throws",
+"Ward (4+)"
+],
+[
+"damage_types",
+"against damage points inflicted by Shoot abilities"
+]
+],
+"792879": [
+[
+"multi_attack",
+"Add 1 to the Attacks characteristic of melee weapons"
+],
+[
+"aura",
+"while they are wholly within 12\" of the Ushoran"
+]
+],
+"792929": [
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"on_kill",
+"is destroyed by a unit in this Regiment of Renown"
+],
+[
+"stat_gain",
+"add 10 to the control score of each unit"
+]
+],
+"792977": [
+[
+"buff",
+"Add 1 to wound rolls"
+]
+],
+"792988": [
+[
+"reactions",
+"Opponent declared the 'Rally' command"
+],
+[
+"resource_advantage",
+"No command points are spent to use that command"
+]
+],
+"793065": [
+[
+"saving_throws",
+"re-roll ward rolls of 1 or 2"
+],
+[
+"advantage",
+"You can re-roll ward rolls"
+]
+],
+"793093": [
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"piercing",
+"subtract 1 from save rolls for the target"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+]
+],
+"793122": [
+[
+"saving_throws",
+"This unit has Ward (6+)"
+],
+[
+"heal",
+"Heal (1) this unit"
+]
+],
+"793180": [
+[
+"type_grant",
+"This unit has the Pledged to Slaanesh keyword"
+],
+[
+"on_attack",
+"if this unit charged this turn"
+],
+[
+"multi_attack",
+"add 1 to the Attacks characteristic of this unit's melee weapons"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+]
+]
+}

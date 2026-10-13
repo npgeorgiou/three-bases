@@ -1,0 +1,997 @@
+[
+{
+"id": 748760,
+"name": "Slamma Sticker",
+"text": "After you summon a Beast in combat, double its Attack."
+},
+{
+"id": 750138,
+"name": "I'm Still Just a Rat in a Cage",
+"text": "Give a minion +2 Attack, then double its Attack."
+},
+{
+"id": 748695,
+"name": "Mellow Mirage",
+"text": "Triple the Health of all minions in the Tavern."
+},
+{
+"id": 748172,
+"name": "Tamuzo",
+"text": "After you summon a minion in combat, double its stats."
+},
+{
+"id": 748428,
+"name": "Sore Loser",
+"text": "Your other Undead have extra Attack equal to your Tier."
+},
+{
+"id": 748998,
+"name": "Carrier",
+"text": "Avenge (4): Summon a Y/Y Interceptor. Then improve this permanently."
+},
+{
+"id": 748371,
+"name": "Blade Collector",
+"text": "Also damages the enemies next to whomever this attacks."
+},
+{
+"id": 749007,
+"name": "Ultralisk",
+"text": "Also damages adjacent minions. Start of Combat: Double this minion's stats. (Morphs each turn!)X[x]Also damages adjacent minions. Start of Combat: Double this minion's stats."
+},
+{
+"id": 749981,
+"name": "Foe Reaper",
+"text": "Also damages the minions next to whomever it attacks."
+},
+{
+"id": 749587,
+"name": "Timewarped Ultralisk",
+"text": "Also damages adjacent minions. Start of Combat: Double this minion's stats."
+},
+{
+"id": 749990,
+"name": "Cave Hydra",
+"text": "Also damages the minions next to whomever this attacks."
+},
+{
+"id": 750122,
+"name": "Wildfire Elemental",
+"text": "After this attacks and kills a minion, deal excess damage to an adjacent enemy."
+},
+{
+"id": 748439,
+"name": "Tide Oracle Morgl",
+"text": "Poisonous. When this attacks and kills a minion, give its maximum stats to a minion in your hand."
+},
+{
+"id": 750366,
+"name": "Bonus Keyword",
+"text": "Gains a random keyword (Divine Shield, Reborn, Stealth, Taunt, Venomous or Windfury)."
+},
+{
+"id": 748451,
+"name": "Big League",
+"text": "Only Tavern Tiers 3, 4, 5, and 6 exist. Start with 10 extra Armor."
+},
+{
+"id": 749149,
+"name": "Shadowy Elixir",
+"text": "Gain 5 Armor. After you play a Demon, deal 1 damage to your hero."
+},
+{
+"id": 748474,
+"name": "Secrets of Norgannon",
+"text": "Tavern Tier 7 exists. Start with 10 extra Armor."
+},
+{
+"id": 749578,
+"name": "Timewarped Armor Stash",
+"text": "Casts When Bought Gain X Armor."
+},
+{
+"id": 748542,
+"name": "Armor Stash",
+"text": "Set your Armor to 5."
+},
+{
+"id": 749586,
+"name": "Timewarped Viper",
+"text": "Venomous Immune while attacking."
+},
+{
+"id": 748186,
+"name": "Warpwing",
+"text": "Immune while attacking."
+},
+{
+"id": 749925,
+"name": "Invulnerability",
+"text": "Immune while attacking."
+},
+{
+"id": 750182,
+"name": "Eclipsion Illidari",
+"text": "Your first minion that attacks has \"Immune while Attacking\" for one attack only."
+},
+{
+"id": 748331,
+"name": "Just Keep Swimming",
+"text": "Give a minion +X/+Y and Stealth until next turn."
+},
+{
+"id": 749242,
+"name": "Raptor Elder",
+"text": "Stealth. Your Beasts have +X/+Y. (Improved by each Beast you've summoned this combat!)"
+},
+{
+"id": 749207,
+"name": "Primeval Monstrosity",
+"text": "Stealth. Whenever a friendly Rally minion attacks, give a friendly minion of each type +X/+Y permanently."
+},
+{
+"id": 749954,
+"name": "Cursed Shadow",
+"text": "Stealth"
+},
+{
+"id": 748488,
+"name": "Everything's on Fire!",
+"text": "At the start of the game, take 25 damage. After another hero dies, regain 5 Health."
+},
+{
+"id": 750141,
+"name": "Friends and Family Discount",
+"text": "Minions in the Tavern cost (2) this game."
+},
+{
+"id": 749675,
+"name": "Electrode Attractor",
+"text": "Magnetic Mechs cost (2). The Tavern offers an extra one whenever it is Refreshed."
+},
+{
+"id": 749680,
+"name": "Chillmere Mosaic",
+"text": "Spellcraft: Refresh the Tavern with Battlecry minions. They cost (1)."
+},
+{
+"id": 748621,
+"name": "Reliquary Research",
+"text": "Every third Tavern spell you buy costs (0). (X left!)X[x]Every third Tavern spell you buy costs (0). (Active!)"
+},
+{
+"id": 748773,
+"name": "Mystery Cube",
+"text": "Choose from 2 new Lesser Trinkets to replace this for free. At the start of each turn, repeat this."
+},
+{
+"id": 749660,
+"name": "Jewelry Box",
+"text": "Get a Blood Gem that gives a Quilboar Taunt, Divine Shield, or Reborn. At the start of each turn, repeat this."
+},
+{
+"id": 749609,
+"name": "Redtusk Thornraiser",
+"text": "At the end of your turn, get a Blood Gem that also gives a Quilboar Reborn."
+},
+{
+"id": 749579,
+"name": "Timewarped Corpse",
+"text": "Discover a Deathrattle minion from Tier 5 or higher. Give it Reborn."
+},
+{
+"id": 748109,
+"name": "Mantid Queen",
+"text": "Venomous. Start of Combat: For each of your minion types gain +5/+5, Windfury, Reborn, or Taunt."
+},
+{
+"id": 748533,
+"name": "Moroes, Steward of Death",
+"text": "Reborn. Deathrattle: Give your Undead +4/+6."
+},
+{
+"id": 748141,
+"name": "Broodmother",
+"text": "Avenge (4): Summon a X/X Whelp that attacks immediately. Improve this by +1/+1."
+},
+{
+"id": 750102,
+"name": "Scallywag",
+"text": "Deathrattle: Summon a 1/1 Pirate. It attacks immediately."
+},
+{
+"id": 749669,
+"name": "Powder Keg",
+"text": "Start of Combat: Give X friendly Pirates \"Deathrattle: Summon a 1/1 Sky Pirate and give it this minion's Attack. It attacks immediately.\""
+},
+{
+"id": 749023,
+"name": "Sharptooth Snapper",
+"text": "When you have space in combat, summon a 3/1 Beast. It attacks immediately."
+},
+{
+"id": 749326,
+"name": "Twilight Hatchling",
+"text": "Deathrattle: Summon a X/Y Whelp that attacks immediately."
+},
+{
+"id": 748252,
+"name": "Essence of Zerus",
+"text": "At the end of your turn, get a Shifter Zerus which transforms into random minions."
+},
+{
+"id": 750275,
+"name": "King of Beasts",
+"text": "Discover a Beast. Swaps type each turn."
+},
+{
+"id": 750278,
+"name": "King of Demons",
+"text": "Discover a Demon. Swaps type each turn."
+},
+{
+"id": 748575,
+"name": "Fluidity",
+"text": "Swap a friendly non-Golden minion with a random one in the Tavern."
+},
+{
+"id": 748262,
+"name": "Kidnap Sack",
+"text": "Spellcraft: Choose a non-Golden card. Move it to your hand."
+},
+{
+"id": 750135,
+"name": "The Unlimited Coin",
+"text": "Gain 1 Gold. Return this to your hand at end of turn."
+},
+{
+"id": 750149,
+"name": "Repeat Customer",
+"text": "Return a friendly non-Golden minion to your hand. Give it +X/+Y."
+},
+{
+"id": 750137,
+"name": "Raise the Stakes",
+"text": "Make a friendly minion Golden and return it to your hand."
+},
+{
+"id": 748698,
+"name": "Volcanic Visitor",
+"text": "Spellcraft: Choose One - Give your minions +4 Attack; or +4 Health."
+},
+{
+"id": 748933,
+"name": "Time Management",
+"text": "Choose One - Give your minions +X/+Y; or At the start of your next turn, give your minions +X/+Y twice."
+},
+{
+"id": 750151,
+"name": "Mindflayer Goggles",
+"text": "Steal all cards from the Tavern, then Refresh it."
+},
+{
+"id": 748574,
+"name": "Plunder Seeker",
+"text": "Steal a random card from the Tavern for each Pirate you control."
+},
+{
+"id": 748946,
+"name": "Marauder's Contract",
+"text": "Steal a random Pirate from the Tavern."
+},
+{
+"id": 750293,
+"name": "Graveyard Shift",
+"text": "Steal a card from the Tavern. Take 2 damage."
+},
+{
+"id": 748353,
+"name": "Imposing Percussionist",
+"text": "Battlecry: Discover a Demon. Deal damage to your hero equal to its Tier."
+},
+{
+"id": 748085,
+"name": "Mechano-Tank",
+"text": "Avenge (2): Deal 5 damage to the highest-Health enemy minion."
+},
+{
+"id": 749960,
+"name": "Tunnel Blaster",
+"text": "Taunt Deathrattle: Deal 3 damage to all minions."
+},
+{
+"id": 749806,
+"name": "Boom-in-a-Box",
+"text": "Taunt Start of Combat: Deal X damage to all other minions."
+},
+{
+"id": 748682,
+"name": "Irate Rooster",
+"text": "Start of Combat: Deal 1 damage to adjacent minions and give them +X Attack."
+},
+{
+"id": 750287,
+"name": "Nefarious Fire",
+"text": "Start of Combat: Deal 1 damage to all enemy minions."
+},
+{
+"id": 749192,
+"name": "Silent Enforcer",
+"text": "Taunt Deathrattle: Deal X damage to all minions (except friendly Demons)."
+},
+{
+"id": 748413,
+"name": "Dreadbeard",
+"text": "At the end of your turn, deal 1 damage to your hero and get a Tavern Coin."
+},
+{
+"id": 750012,
+"name": "Two-Faced Doomguard",
+"text": "At the end of your turn, deal 3 damage to your hero and give your team's minions +3/+3."
+},
+{
+"id": 749310,
+"name": "Rabid Panther",
+"text": "After you play a Beast, give your Beasts +X/+Y and deal 1 damage to them."
+},
+{
+"id": 748653,
+"name": "Rampager",
+"text": "Rally: Deal 1 damage to your other minions."
+},
+{
+"id": 749353,
+"name": "Felhorn",
+"text": "Battlecry: Give your other Demons and Beasts +X/+Y and deal 1 damage to them, twice."
+},
+{
+"id": 749075,
+"name": "Dream Inquisitor",
+"text": "Whenever you cast a Tavern spell, deal 1 damage to your hero and give your Demons +1/+1."
+},
+{
+"id": 748652,
+"name": "Spiked Savior",
+"text": "Taunt. Reborn. Deathrattle: Give your minions +1 Health and deal 1 damage to them."
+},
+{
+"id": 748313,
+"name": "Shadowy Construct",
+"text": "Whenever a friendly minion dies, gain its maximum stats. (Once per combat.)"
+},
+{
+"id": 748520,
+"name": "Accelerator",
+"text": "Transform a minion into one from a Tier higher."
+},
+{
+"id": 749638,
+"name": "Lesser Crystal Ball",
+"text": "When you buy a Lesser Trinket, this transforms into a copy of it."
+},
+{
+"id": 748980,
+"name": "Mini-Zerek",
+"text": "Battlecry: Choose a minion in the Tavern. Transform into a copy of it."
+},
+{
+"id": 749120,
+"name": "Shrine of Evolution",
+"text": "Transform all your minions into random Tier 4 minions."
+},
+{
+"id": 748959,
+"name": "Continuing Education",
+"text": "At the start of each turn, get an Evolving Scroll. Each turn, it transforms into a Tavern spell from a Tier higher."
+},
+{
+"id": 748051,
+"name": "Spirit Swap",
+"text": "Choose 2 minions. They gain each other's Attack until next turn."
+},
+{
+"id": 748163,
+"name": "Uther the Lightbringer",
+"text": "Battlecry: Set a minion's Attack and Health to 15."
+},
+{
+"id": 749114,
+"name": "Innkeeper's Hearth",
+"text": "Discover a minion of your Tier. Set its stats to 12/12."
+},
+{
+"id": 748472,
+"name": "Blood of Sargeras",
+"text": "At the start of your turn, set your hero's Health to 12."
+},
+{
+"id": 749577,
+"name": "Timewarped Evolution",
+"text": "Choose a minion. Discover a Tier 6 minion to transform it into. Set its stats to 30/30."
+},
+{
+"id": 750249,
+"name": "Stay Frosty",
+"text": "Minions cost (2). The Tavern offers one fewer minion and Freezes at the end of each turn."
+},
+{
+"id": 750195,
+"name": "Thawed Champion",
+"text": "At the end of your turn, make a random Frozen minion in the Tavern Golden."
+},
+{
+"id": 748132,
+"name": "Twice as Nice",
+"text": "After the Tavern is Refreshed, copy its highest-Tier minion and Freeze them both."
+},
+{
+"id": 749477,
+"name": "Timewarped Snow Elemental",
+"text": "The Tavern offers an extra Frozen Elemental whenever it is Refreshed."
+},
+{
+"id": 748422,
+"name": "Adaptable Barricade",
+"text": "Taunt. Whenever this is attacked, it shifts its stats to survive with 1 Health (if possible)."
+},
+{
+"id": 749360,
+"name": "Tide Raiser",
+"text": "Taunt Deathrattle: Cast Shifting Tide on an adjacent minion."
+},
+{
+"id": 749706,
+"name": "Leapfrogger Portrait",
+"text": "Get a Timewarped Leapfrogger."
+},
+{
+"id": 749058,
+"name": "Slumber Sorcerer",
+"text": "Deathrattle: Get a Shifting Tide."
+},
+{
+"id": 748357,
+"name": "Rock Rock",
+"text": "After you play an Elemental, give your minions +2 Attack. (Swaps to Health next turn!)X[x]After you play an Elemental, give your minions +2 Health. (Swaps to Attack next turn!)"
+},
+{
+"id": 749718,
+"name": "Mindbender Ghur'sha",
+"text": "Whenever you discard a card, give your other minions +X/+Y."
+},
+{
+"id": 749760,
+"name": "Mindbending Recruiter",
+"text": "Activate (X): Discard a card to get a random Aberration."
+},
+{
+"id": 749721,
+"name": "Wandering Willbreaker",
+"text": "When you sell this, get 2 random Tavern spells. When you play one, discard the other.X[x]When you sell this, get 2 random Tavern spells. When you play or Pass one, discard the other."
+},
+{
+"id": 749790,
+"name": "Energizing Chamber",
+"text": "Give your Deity +X/+Y. If you discard this, cast it twice."
+},
+{
+"id": 748563,
+"name": "Snarling Conductor",
+"text": "At the start of your turn, discard a spell to gain 4 Gold."
+},
+{
+"id": 750290,
+"name": "Lead Explorer",
+"text": "Discover a minion from your Tier. Costs (1) more after each use."
+},
+{
+"id": 750298,
+"name": "Manastorm",
+"text": "Minions and Refreshes cost 2 Gold. Upgrading the Tavern costs (1) more."
+},
+{
+"id": 749802,
+"name": "Lockbox",
+"text": "Unplayable. In 5 turns, break this open and get a random Golden minion with a type! (X turns left!)"
+},
+{
+"id": 750270,
+"name": "Bananarama",
+"text": "At the start of your turn, get 2 Bananas and give everyone else one."
+},
+{
+"id": 800873,
+"name": "The Beast",
+"text": "Deathrattle: Summon a 3/3 Pip Quickwit for your opponent."
+},
+{
+"id": 749758,
+"name": "Faceless Operative",
+"text": "When you sell this, get 2 random Aberrations. When you play one, discard the other.X[x]When you sell this, get 2 random Aberrations. When you play or Pass one, discard the other."
+},
+{
+"id": 750039,
+"name": "Voidpriest Cloner",
+"text": "After you discard a card, Pass a plain copy of it. (Once per turn.)"
+},
+{
+"id": 749756,
+"name": "Sludge Corrosion",
+"text": "Give your minions +X/+Y. If you discard this, cast it twice."
+},
+{
+"id": 749903,
+"name": "Willbreaker Sticker",
+"text": "Get 2 random Tavern spells. When you play one, discard the other. At the start of your turn, repeat this.X[x]Get 2 random Tavern spells. When you play or Pass one, discard the other. At the start of your turn, repeat this."
+},
+{
+"id": 748927,
+"name": "Archimonde",
+"text": "After your hero takes damage, rewind it and reduce the Cost of your next Tavern spell by (1)."
+},
+{
+"id": 749072,
+"name": "Ashen Corruptor",
+"text": "After your hero takes damage, rewind it and give minions in the Tavern +X/+Y this turn."
+},
+{
+"id": 750194,
+"name": "Unearthed Underling",
+"text": "Whenever your hero takes damage, rewind it and gain stats equal to that amount."
+},
+{
+"id": 748796,
+"name": "Rewinder Portrait",
+"text": "Get a Soul Rewinder and a Wrath Weaver. Your Soul Rewinders also gain Attack."
+},
+{
+"id": 749436,
+"name": "Timewarped Rewinder",
+"text": "After your hero takes damage, rewind it and give your Demons +Z Health."
+},
+{
+"id": 749691,
+"name": "Safety Patch",
+"text": "Cast Ice Block. Gain X Gold."
+},
+{
+"id": 748243,
+"name": "Devils in the Details",
+"text": "At the end of your turn, your left and right-most minions consume a minion in the Tavern to gain its stats."
+},
+{
+"id": 748063,
+"name": "Westfall",
+"text": "In 1 turn, get a random 1-Cost Tavern spell. (X turns left!)"
+},
+{
+"id": 749837,
+"name": "Lionfish Portrait",
+"text": "Get a Lurking Lionfish. Whenever a friendly Beast attacks, give it +X/+Y."
+},
+{
+"id": 748387,
+"name": "Akali, Rock Rhino",
+"text": "At the end of every 2 turns, get a plain copy of the left-most card in your hand. (X turns left!)X[x]At the end of every 2 turns, get a plain copy of the left-most card in your hand. (End of this turn!)"
+},
+{
+"id": 749572,
+"name": "Timewarped B.A.N.A.N.A.S.",
+"text": "Fill your hand with Tavern Dish Bananas. Your Tavern spells give an extra +X/+Y this game."
+},
+{
+"id": 749581,
+"name": "Timewarped Special",
+"text": "Fill your hand with random Spellcraft spells."
+},
+{
+"id": 750139,
+"name": "B.A.N.A.N.A.S.",
+"text": "Fill your hand with Tavern Dish Bananas."
+},
+{
+"id": 748223,
+"name": "Crack the Case",
+"text": "Quest: Have friendly minions attack X times."
+},
+{
+"id": 748624,
+"name": "Fill the Cauldron",
+"text": "Quest: Cast X spells."
+},
+{
+"id": 748222,
+"name": "Hire an Investigator",
+"text": "Quest: End your turn with unspent Gold X times."
+},
+{
+"id": 749132,
+"name": "Curator Sticker",
+"text": "Get a Golden Mishmash and a X/X Amalgam with Venomous."
+},
+{
+"id": 748173,
+"name": "Tentacular",
+"text": "When you have space in combat, summon a X/X Tentacle with Taunt. (Gains +1/+1 after you sell a minion!)"
+},
+{
+"id": 748364,
+"name": "Octosari, Wrap God",
+"text": "Deathrattle: Summon a X/X Tentacle. (It gains +4/+4 permanently after you summon a minion in combat!)"
+},
+{
+"id": 750186,
+"name": "Elder Taggawag",
+"text": "Start of Combat: If you control 4 minions with different types, gain your minions' highest Attack and Health."
+},
+{
+"id": 749514,
+"name": "Timewarped Mythrax",
+"text": "Start of Combat: Gain the stats of 3 friendly minions of different types (except Timewarped Mythrax)."
+},
+{
+"id": 750109,
+"name": "Menagerie Mug",
+"text": "Battlecry: Give 3 friendly minions of different types +1/+1."
+},
+{
+"id": 748192,
+"name": "Tea Master Theotar",
+"text": "After you play a minion with no type, give 3 friendly minions of different types +2/+2."
+},
+{
+"id": 748612,
+"name": "Bazaar Dealer",
+"text": "One Tavern spell each turn costs Health instead of Gold to buy. (X left!)"
+},
+{
+"id": 749137,
+"name": "Pilgrimp Sticker",
+"text": "One Demon each turn costs Health instead of Gold to buy. (X left!)"
+},
+{
+"id": 749076,
+"name": "Bounding Felstalker",
+"text": "Battlecry: Refresh the Tavern with 2 extra Tavern spells. They cost Health instead of Gold."
+},
+{
+"id": 748354,
+"name": "Backstage Security",
+"text": "Battlecry: Deal 1 damage to your hero."
+},
+{
+"id": 749278,
+"name": "Quaint Boutique",
+"text": "At the start of your next turn, gain 4 Gold and choose a Lesser Trinket to buy."
+},
+{
+"id": 750307,
+"name": "Verdant Spheres",
+"text": "After you buy 3 minions, get a Tavern Coin."
+},
+{
+"id": 750315,
+"name": "Friendly Wager",
+"text": "Guess which player will win their next combat. If you're correct, get 3 Tavern Coins."
+},
+{
+"id": 748504,
+"name": "Match Fixing",
+"text": "Guess which player will win your next combat. If you're correct, get 3 Gold Coins."
+},
+{
+"id": 748476,
+"name": "No Place Like Holmes",
+"text": "Each turn, look at 2 minions. Guess which one your next opponent had last combat for a Coin."
+},
+{
+"id": 748395,
+"name": "Gilded Gargoyle",
+"text": "Deathrattle: Add a Coin to your hand."
+},
+{
+"id": 750365,
+"name": "Timewarp",
+"text": "A special shop visited on set turns where Chronum, a second currency that carries over, buys minions and spells (Claude inference from the cards that use it)."
+},
+{
+"id": 749375,
+"name": "Twisting Hourglass",
+"text": "All 4 Chronum this game can be spent at the Minor Timewarp. Any unspent carries over to the Major Timewarp."
+},
+{
+"id": 748448,
+"name": "Prudence of Amitus",
+"text": "Unspent Gold carries over to your next turn. If you saved at least 5, gain 1 extra."
+},
+{
+"id": 749575,
+"name": "Timewarped Enchanted Lasso",
+"text": "Steal all minions from the Tavern, then Refresh it."
+},
+{
+"id": 748200,
+"name": "Patient Scout",
+"text": "When you sell this, Discover a Tier X minion. (Improves each turn!)"
+},
+{
+"id": 749602,
+"name": "Twisted Wrathguard",
+"text": "After you sell a minion, add a Fodder to your next Refresh."
+},
+{
+"id": 749815,
+"name": "Trapped Clapper",
+"text": "Deathrattle: Add a Fodder to your next X Refreshes."
+},
+{
+"id": 748360,
+"name": "Manasaber",
+"text": "Deathrattle: Summon two 0/1 Cublings with Taunt."
+},
+{
+"id": 750064,
+"name": "C'Thun",
+"text": "Deity. After this awakens, give this minion's stats split amongst your other minions."
+},
+{
+"id": 748183,
+"name": "Nathanos Blightcaller",
+"text": "Battlecry: Sell a friendly minion. Split its stats evenly amongst its neighbors."
+},
+{
+"id": 748501,
+"name": "The Golden Arena",
+"text": "ALL minions are Golden, but you do not get Triple Rewards."
+},
+{
+"id": 748471,
+"name": "Temperance of Aman'Thul",
+"text": "Start at Tavern Tier 3 with 9 Gold. All cards in your first shop are Tier 3."
+},
+{
+"id": 748694,
+"name": "Malevolent Mirage",
+"text": "Triple the Attack of all minions in the Tavern."
+},
+{
+"id": 749783,
+"name": "Dark Paradox",
+"text": "This has a different Dark Gift, stats, and Tier each game!"
+},
+{
+"id": 749316,
+"name": "Relentless Deflector",
+"text": "Has Taunt while this has Divine Shield. Avenge (X): Gain Divine Shield."
+},
+{
+"id": 749443,
+"name": "Timewarped Shivarra",
+"text": "Whenever a minion is consumed, this gains its stats."
+},
+{
+"id": 749284,
+"name": "Sepulchral Sergeant",
+"text": "Deathrattle: Give your other minions +X Health. (Improves permanently after this gains Attack!)"
+},
+{
+"id": 750198,
+"name": "Mishmash",
+"text": "Whenever your Amalgam gains stats, this gains them too."
+},
+{
+"id": 748494,
+"name": "Summoning of Champions",
+"text": "At the start of the game, all players Discover a Tier 6 minion from the same choices."
+},
+{
+"id": 748473,
+"name": "The Yogg-iseum",
+"text": "At the start of each turn, ALL players spin the SAME Wheel of Yogg-Saron."
+},
+{
+"id": 748972,
+"name": "Eject!",
+"text": "Choose a minion. Permanently remove all copies of it from your pool. (Twice per turn.)"
+},
+{
+"id": 748176,
+"name": "Detective for Hire",
+"text": "Look at 2 minions. Guess which one your next opponent had last combat for a Tavern Coin."
+},
+{
+"id": 749640,
+"name": "Greater Crystal Ball",
+"text": "When you buy a Greater Trinket, this transforms into a copy of it."
+},
+{
+"id": 750351,
+"name": "Trinket",
+"text": "Battlegrounds items bought for lasting bonuses."
+},
+{
+"id": 748727,
+"name": "Fantastic Treasure",
+"text": "On Turn 5, choose a Lesser Trinket to buy. (X turns left!)X[x]On Turn 5, choose a Lesser Trinket to buy. (Done!)"
+},
+{
+"id": 749096,
+"name": "Ornate Clock",
+"text": "Gain 2 Gold. Buy your Greater Trinket next turn instead of Turn 9."
+},
+{
+"id": 748803,
+"name": "Trip Vouchers",
+"text": "In 2 turns, choose a Greater Trinket to buy and replace this. (2 turns left!)X[x]In 2 turns, choose a Greater Trinket to buy and replace this. (Next turn!)"
+},
+{
+"id": 750062,
+"name": "Investment Contract",
+"text": "After you Pass, reduce the Cost of upgrading the Tavern by (1)."
+},
+{
+"id": 750251,
+"name": "Murloc King",
+"text": "At the start of next combat, give your minions \"Deathrattle: Summon a 1/1 Murloc.\""
+},
+{
+"id": 750297,
+"name": "I'll Take That!",
+"text": "Next combat, get a plain copy of the first minion you kill."
+},
+{
+"id": 750040,
+"name": "C'Thrax Wrecker",
+"text": "Battlecry, Deathrattle, and Rally: Give your team's Deities +X/+Y."
+},
+{
+"id": 749635,
+"name": "Anomalous Timeline",
+"text": "Start with 'Alternate Timeline' as your second Hero Power."
+},
+{
+"id": 750261,
+"name": "Menagerist",
+"text": "Start the game with a 2/2 Amalgam with Venomous and all minion types."
+},
+{
+"id": 748638,
+"name": "Totally Normal Horse",
+"text": "This has all minion types."
+},
+{
+"id": 800849,
+"name": "Amalgamation",
+"text": "Has all minion types."
+},
+{
+"id": 750300,
+"name": "Adventure!",
+"text": "At the start of the game, Discover a Hero Power."
+},
+{
+"id": 748816,
+"name": "Ceremonial Sword",
+"text": "Whenever a friendly minion attacks, give it +4 Attack."
+},
+{
+"id": 749197,
+"name": "Twilight Watcher",
+"text": "Whenever a friendly Dragon attacks, give your Dragons +X/+Y."
+},
+{
+"id": 748651,
+"name": "Trigore the Lasher",
+"text": "Whenever another friendly Beast takes damage, gain +Y Health permanently."
+},
+{
+"id": 748650,
+"name": "Iridescent Skyblazer",
+"text": "Whenever a friendly Beast takes damage, give a friendly Beast other than it +X/+Y permanently."
+},
+{
+"id": 749429,
+"name": "Timewarped Pagle",
+"text": "Once per combat, when this attacks and kills a minion, get a Triple Reward."
+},
+{
+"id": 748423,
+"name": "Murcules",
+"text": "Whenever this kills a minion, give a minion in your hand +2/+2."
+},
+{
+"id": 749428,
+"name": "Timewarped Murcules",
+"text": "Divine Shield Whenever this kills a minion, give the left-most minion in your hand +X/+Y."
+},
+{
+"id": 748981,
+"name": "Cloning Gallery",
+"text": "Once per game, summon an exact copy of a friendly minion.X[x]Once per game, summon an exact copy of a friendly minion. (Except Timewarped minions.)"
+},
+{
+"id": 749125,
+"name": "Worn Treasure Map",
+"text": "In two turns, gain 10 Gold. (Once per game.)X[x]In two turns, gain 10 Gold. (X turns left!)"
+},
+{
+"id": 750292,
+"name": "Battle Brand",
+"text": "After you buy 4 Battlecry minions, get a Brann Bronzebeard. (Once per game.)X[x]After you buy 4 Battlecry minions, get a Brann Bronzebeard. (X left!)"
+},
+{
+"id": 750289,
+"name": "Gonna Be Rich!",
+"text": "Once per game, make a friendly minion Golden.X[x]Once per game, make a friendly minion Golden. (Except Timewarped minions.)"
+},
+{
+"id": 748513,
+"name": "Choose Your Champion",
+"text": "Passive. At the start of the game, Discover a Tier 7 minion to get after you spend 60 Gold. (X left!)X[x]Passive. At the start of the game, Discover a Tier 7 minion to get after you spend 60 Gold. (Done!)"
+},
+{
+"id": 749300,
+"name": "Old Soul",
+"text": "After Y friendly minions die while this is in your hand, make this Golden. (X left!)"
+},
+{
+"id": 748120,
+"name": "Aim Right!",
+"text": "Passive. Start of Combat: Deal Y damage to the right-most enemy minion."
+},
+{
+"id": 748119,
+"name": "Aim High!",
+"text": "Passive. Start of Combat: Deal Y damage to the highest- Health enemy minion."
+},
+{
+"id": 749636,
+"name": "Anomalous Expedition",
+"text": "At the start of the game, Discover minions from Tiers 6, 4, and 2 to get at those Tiers."
+},
+{
+"id": 750046,
+"name": "",
+"text": "Start of Game: Copy your teammate's Hero Power."
+},
+{
+"id": 749834,
+"name": "Void Power",
+"text": "At the start of the game, Discover a Tier 5 minion with a Dark Gift. It unlocks on Turn 7. (X turns left!)X[x]At the start of the game, Discover a Tier 5 minion with a Dark Gift. It unlocks on Turn 7. (Done!)"
+},
+{
+"id": 750164,
+"name": "Better Venomstrike Trap",
+"text": "Secret: When one of your minions is attacked, summon a 2/3 Poisonous Cobra and give it Reborn."
+},
+{
+"id": 750167,
+"name": "Effigy",
+"text": "Secret: When a friendly minion dies, summon a random minion with the same Cost."
+},
+{
+"id": 750254,
+"name": "Prestidigitation",
+"text": "Choose a Secret. Put it into the battlefield."
+},
+{
+"id": 750173,
+"name": "Hand of Salvation",
+"text": "Secret: When your second minion dies in a turn, return it to life."
+},
+{
+"id": 748503,
+"name": "Anomalous Evidence",
+"text": "At the start of each turn, choose from 2 new Quest Rewards. (Unlocks on Turn 4.)XAt the start of each turn, choose from 2 new Quest Rewards."
+},
+{
+"id": 749831,
+"name": "Dark Gifts!",
+"text": "Starting Turn 3, you may spend 3 Gold to Discover a minion with a Dark Gift. (3 times per game!)"
+},
+{
+"id": 750255,
+"name": "Snicker-snack",
+"text": "Trigger a friendly minion's Battlecry. (Unlocks on Turn 3.)"
+}
+]

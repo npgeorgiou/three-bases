@@ -1,0 +1,50 @@
+758650 | Haze | Apply 4 Poison to ALL enemies. Sly.
+758946 | Untouchable | Gain 6 Block. Sly.
+758863 | Sneaky | Whenever another player attacks an enemy, gain 1 Block. Sly.
+758842 | Shadow Step | Discard your Hand. Next turn, Attacks deal double damage.
+759035 | Driftwood | You may reroll each card reward once.
+759634 | Lagavulin Matriarch | Actions: Slash (19 damage); Slash2Move (12 damage); Disembowel (9 damage); Sleep (sleep); Slash (attack, 19 damage); Slash2 (attack, defend, 12 damage, block 12); Disembowel (multi_attack, 9 damage); Soul Siphon (debuff, buff, power, power, power)
+758719 | Mimic | Gain Block equal to the Block on another player. Exhaust.
+759639 | Louse Progenitor | Actions: Web Cannon (attack, debuff, 9 damage, power); Pounce (attack, 14 damage); Curl and Grow (defend, buff, power, block 14)
+759577 | Nimble | Increases Block gained from this card by X.
+758626 | Genetic Algorithm | Gain 1 Block. Permanently increase this card's Block by 3. Exhaust.
+759632 | Kin Priest | Actions: Orb of Frailty (8 damage); Orb of Weakness (8 damage); Soul Beam (3 damage x3); Orb of Frailty (attack, debuff, 8 damage, power); Orb of Weakness (attack, debuff, 8 damage, power); Soul Beam (multi_attack, 3 damage); Dark Ritual (buff, power)
+759093 | Kunai | Every time you play 3 Attacks in a single turn, gain 1 Dexterity.
+759140 | Ornamental Fan | Every time you play 3 Attacks in a single turn, gain 4 Block.
+759204 | Shuriken | Every time you play 3 Attacks in a single turn, gain 1 Strength.
+758804 | Rebound | Deal 9 damage. Put the next card you play this turn on top of your Draw Pile.
+759710 | Infested Automaton | Choices: Study: Obtain a random Power. | Touch the Core: Obtain a random 0 cost card.
+759678 | Thieving Hopper | Actions: Nab (14 damage); Hat Trick (21 damage); Thievery (attack, debuff, 17 damage); Nab (attack, 14 damage); Hat Trick (attack, 21 damage); Flutter (buff, power); Escape (escape)
+759532 | Surrounded | Receive 50% more damage if attacked from behind. Use targeting cards or potions to change your orientation.
+759336 | Back Attack | Deals 50% more damage when it is attacking you from behind.
+758828 | Scrawl | Draw cards until your Hand is full. Exhaust.
+816436 | Scrawl+ | Retain. Draw cards until your Hand is full. Exhaust.
+759264 | Ashwater | Exhaust any number of cards in your Hand.
+759711 | Jungle Maze Adventure | Choices: Join Forces: Gain 50 Gold. | Solo Quest: Gain 150 Gold. Lose 18 HP.
+759208 | Sling of Courage | Start each Elite combat with 2 Strength.
+759213 | Sparkling Rouge | At the start of your 3rd turn, gain 1 Strength and 1 Dexterity.
+758772 | Poisoned Stab | Deal 6 damage. Apply 3 Poison.
+759391 | Envenom | Whenever you deal unblocked attack damage, apply 1 Poison.
+758527 | Dark Shackles | Enemy loses 9 Strength this turn. Exhaust.
+758635 | Gold Axe | Deal damage equal to the number of cards played this combat.
+758880 | Stack | Gain Block equal to the number of cards in your Discard Pile.
+816420 | Stack+ | Gain Block equal to the number of cards in your Discard Pile +3.
+816431 | Gold Axe+ | Retain. Deal damage equal to the number of cards played this combat.
+758720 | Mind Blast | Deal damage equal to the number of cards in your Draw Pile. Innate.
+759701 | Crystal Sphere | Choices: Payment Plan: Gain a Debt. Divine 6 times. | Uncover Future: Pay 50 Gold. Divine 3 times.
+759713 | Luminous Choir | Choices: Offer Tribute: Pay 149 Gold. Obtain a random Relic. | Reach into the Flesh: Remove 2 cards from your Deck. Add Spore Mind to your Deck.
+759200 | Seal of Gold | At the start of your turn, spend 5 Gold to gain energy.
+759733 | Tea Master | Choices: Bone Tea: Pay 50 Gold. Bone Tea | Ember Tea: Pay 150 Gold. Ember Tea | Tea of Discourtesy: Tea of Discourtesy
+758515 | Cosmic Indifference | Gain 6 Block. Put a card from your Discard Pile on top of your Draw Pile.
+758754 | Overclock | Draw 2 cards. Add a Burn into your Discard Pile.
+759331 | Aggression | At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it for the rest of combat.
+758665 | Howl from Beyond | Deal 16 damage to ALL enemies. At the end of your turn, if this is in your Exhaust Pile, play it.
+759321 | Star Potion | Gain 3 stars.
+759342 | Black Hole | Whenever you spend or gain star, deal 3 damage to ALL enemies.
+758847 | Shining Strike | Deal 8 damage. Gain 2 stars. Put this card on top of your Draw Pile.
+758659 | Hidden Cache | Gain star. Next turn, gain 3 stars.
+758492 | Child of the Stars | Whenever you spend star, gain 2 Block for each star spent.
+759149 | Pael's Tears | If you end your turn with unspent energy, gain an additional 2 energy next turn.
+758645 | Hand of Greed | Deal 20 damage. If Fatal, gain 20 Gold.
+759715 | Neow | Choices: Arcane Scroll: Upon pickup, obtain a random Rare Card to add to your Deck. | Booming Conch: At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards} and gain {Energy:energyIcons()}. | Fishing Rod: Every {Combats:plural:normal combat|{} normal combats}, Upgrade a random card in your Deck. | Golden Pearl: Upon pickup, gain {Gold} Gold. | Kaleidoscope: Upon pickup, obtain {Cards} {Cards:plural:card reward|card rewards} from other characters. | Lead Paperweight: Upon pickup, choose 1 of 2 Colorless cards to add to your Deck. | Lost Coffer: Upon pickup, gain 1 card reward and procure 1 random potion. | Massive Scroll: Upon pickup, choose 1 of 3 Multiplayer Cards to add to your Deck. | Neow's Torment: Upon pickup, add 1 Neow's Fury to your Deck. | New Leaf: Upon pickup, Transform {Cards} {Cards:plural:card|cards}. | Phial Holster: Upon pickup, gain {PotionSlots} potion {PotionSlots:plural:slot|slots} and procure {Potions} random {Potions:plural:potion|potions}. | Precise Scissors: Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck. | Scroll Boxes: Upon pickup, choose 1 of 2 packs of cards to add to your Deck. | Winged Boots: You may ignore paths when choosing the next rooms to travel to {Rooms} times. | Cursed Pearl: Upon pickup, receive Greed. Gain {Gold} Gold. | Hefty Tablet: Upon pickup, choose 1 of {Cards} Rare cards to add to your Deck, and add 1 Injury to your Deck. | Large Capsule: Upon pickup, obtain {Relics} random {Relics:plural:Relic|Relics}. Add an additional Strike and Defend to your Deck. | Leafy Poultice: Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose {MaxHp} Max HP. | Neow's Bones: Upon pickup, gain {Relics} random Neow {Relics:plural:Relic|Relics}. Add {Curses} random {Curses:plural:Curse|Curses} to your Deck. | Precarious Shears: Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck and lose {Damage} HP. | Silken Tress: Upon pickup, lose all Gold. Enchant all cards in the first card reward with Glam. | Silver Crucible: The first {Cards} card rewards you see are Upgraded. The first Treasure Chest you open is empty. | Lava Rock: The Act 1 Boss drops {Relics} Relics. | Neow's Talisman: Upon pickup, Upgrade 1 of your Strikes and 1 of your Defends. | Nutritious Oyster: Upon pickup, raise your Max HP by {MaxHp}. | Pomander: Upon pickup, Upgrade a card. | Small Capsule: Upon pickup, obtain a random Relic. | Stone Humidifier: Whenever you Rest at a Rest Site, raise your Max HP by {MaxHp}.
+759318 | Soldier's Stew | All cards containing Strike gain 1 Replay this combat.
