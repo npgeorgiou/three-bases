@@ -1,0 +1,938 @@
+{
+"761449": [
+[
+"ranged",
+"Make a ranged spell attack"
+],
+[
+"damage",
+"takes 1d8 Cold damage"
+],
+[
+"damage_types",
+"Cold damage"
+],
+[
+"stat_loss",
+"its Speed is reduced by 10 feet"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+]
+],
+"762584": [
+[
+"damage",
+"5 (1d6 + 2) Piercing damage"
+],
+[
+"immobilize",
+"it has the Grappled condition"
+],
+[
+"saving_throws",
+"escape DC 11"
+],
+[
+"damage_types",
+"Acid damage"
+],
+[
+"damage_over_time",
+"At the end of the frog"
+]
+],
+"761299": [
+[
+"ranged",
+"Make a ranged spell attack"
+],
+[
+"damage",
+"takes 1d10 Force damage"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"multi_attack",
+"The spell creates two beams at level 5"
+],
+[
+"target_choice",
+"You can direct the beams at the same target or at different ones"
+]
+],
+"761701": [
+[
+"damage_types",
+"Resistance to one damage type"
+],
+[
+"random_effect",
+"determines randomly by rolling on the following table"
+]
+],
+"761414": [
+[
+"summon",
+"Three illusory duplicates of yourself appear in your space"
+],
+[
+"bodyguard",
+"one of the duplicates is hit instead of you"
+],
+[
+"random_effect",
+"roll a d6 for each of your remaining duplicates"
+],
+[
+"immunity",
+"The duplicates otherwise ignore all other damage and effects"
+],
+[
+"concentration",
+"Until the spell ends"
+]
+],
+"762433": [
+[
+"multi_attack",
+"The dragon makes three Rend attacks"
+],
+[
+"damage",
+"11 (2d6 + 4) Slashing damage"
+],
+[
+"damage_types",
+"7 (2d6) Poison damage"
+],
+[
+"saving_throws",
+"Constitution Saving Throw"
+],
+[
+"aoe_damage",
+"each creature in a 30-foot Cone"
+],
+[
+"area_templates",
+"30-foot Cone"
+]
+],
+"762314": [
+[
+"flexibility",
+"choose three cantrips from any class's spell list"
+],
+[
+"activated",
+"you can cast those cantrips at will"
+]
+],
+"762386": [
+[
+"multi_attack",
+"The chuul makes two Pincer attacks"
+],
+[
+"immobilize",
+"it has the Grappled condition"
+],
+[
+"saving_throws",
+"Constitution Saving Throw"
+],
+[
+"disable",
+"the target has the Paralyzed condition"
+],
+[
+"damage",
+"9 (1d10 + 4) Bludgeoning damage"
+]
+],
+"815547": [
+[
+"board_limit",
+"You can have three such devices in existence at a time"
+],
+[
+"self_destruct",
+"each falls apart 8 hours after its creation"
+],
+[
+"activated",
+"takes a Bonus Action to activate it with a touch"
+],
+[
+"flexibility",
+"choosing one effect from Prestidigitation"
+]
+],
+"762035": [
+[
+"damage_types",
+"Resistance to lightning damage"
+]
+],
+"761608": [
+[
+"advantage",
+"Advantage on Intelligence (Investigation) checks"
+],
+[
+"light_level",
+"Darkvision within that range"
+]
+],
+"761362": [
+[
+"concentration",
+"Concentration."
+],
+[
+"immunity",
+"immune to the Frightened condition"
+],
+[
+"stat_gain",
+"gains Temporary Hit Points"
+],
+[
+"turn_start",
+"at the start of each of its turns"
+],
+[
+"scope_multi",
+"target one additional creature"
+]
+],
+"762418": [
+[
+"movement",
+"move through other creatures and objects"
+],
+[
+"multi_attack",
+"The ghost makes two Withering Touch attacks"
+],
+[
+"damage",
+"19 (3d10 + 3) Necrotic damage"
+],
+[
+"area_templates",
+"60-foot Cone"
+],
+[
+"saving_throws",
+"Wisdom Saving Throw"
+],
+[
+"disable",
+"the target has the Incapacitated condition"
+],
+[
+"steal",
+"The ghost now controls the body"
+],
+[
+"immunity",
+"The target is immune to this"
+]
+],
+"761225": [
+[
+"concentration",
+"Concentration."
+],
+[
+"saving_throws",
+"must succeed on a Wisdom saving throw"
+],
+[
+"advantage",
+"Disadvantage on ability checks and saving throws"
+],
+[
+"modal_choice",
+"one of the following effects of your choice"
+],
+[
+"damage",
+"extra 1d8 Necrotic damage"
+],
+[
+"suppress",
+"forced to take the Dodge action on that turn"
+]
+],
+"762079": [
+[
+"random_effect",
+"you can reroll the die"
+]
+],
+"762235": [
+[
+"advantage",
+"made with disadvantage"
+],
+[
+"zone_of_control",
+"Opportunity attacks against you"
+]
+],
+"762663": [
+[
+"advantage",
+"advantage on Wisdom (Perception) checks"
+],
+[
+"damage",
+"1 slashing damage"
+]
+],
+"761167": [
+[
+"advantage",
+"Disadvantage on ability checks and attack rolls"
+],
+[
+"debuff",
+"You have Disadvantage on ability checks and attack rolls"
+],
+[
+"immobilize",
+"You can't willingly move closer to the source of your fear"
+]
+],
+"762295": [
+[
+"stealth",
+"become invisible"
+],
+[
+"light_level",
+"area of dim light or darkness"
+],
+[
+"activated",
+"you can use your action"
+]
+],
+"761724": [
+[
+"stat_gain",
+"+1 bonus to Armor Class"
+],
+[
+"reactions",
+"take a Reaction to expend 1 charge"
+],
+[
+"protection",
+"turn the failed save into a successful one"
+],
+[
+"advantage",
+"Advantage on saving throws against spells"
+],
+[
+"self_destruct",
+"crumbles into powder and is destroyed"
+],
+[
+"saving_throws",
+"fail a saving throw"
+]
+],
+"761647": [
+[
+"advantage",
+"Advantage on saving throws against spells"
+],
+[
+"saving_throws",
+"saving throws against spells"
+]
+],
+"762629": [
+[
+"stealth",
+"indistinguishable from a normal shrub"
+],
+[
+"damage",
+"1 (1d4 - 1) slashing damage"
+]
+],
+"761379": [
+[
+"concentration",
+"Concentration."
+],
+[
+"saving_throws",
+"must make a Wisdom saving throw"
+],
+[
+"immobilize",
+"must spend all its movement to dance in place"
+],
+[
+"advantage",
+"Disadvantage on Dexterity saving throws and attack rolls"
+],
+[
+"temporary_effect",
+"until the end of its next turn"
+],
+[
+"disable",
+"the target has the Charmed condition"
+]
+],
+"761850": [
+[
+"information",
+"leave hidden messages"
+]
+],
+"761229": [
+[
+"damage",
+"taking 8d8 Necrotic damage"
+],
+[
+"saving_throws",
+"makes a Constitution saving throw"
+],
+[
+"damage_types",
+"Necrotic damage"
+],
+[
+"destroy",
+"it simply withers and dies"
+]
+],
+"761211": [
+[
+"concentration",
+"Concentration."
+],
+[
+"stealth",
+"Invisible, invulnerable eye"
+],
+[
+"immunity",
+"invulnerable"
+],
+[
+"movement",
+"you can move the eye up to 30 feet in any direction"
+],
+[
+"information",
+"You mentally receive visual information from the eye"
+],
+[
+"light_level",
+"Darkvision with a range of 30 feet"
+]
+],
+"761219": [
+[
+"transform",
+"it becomes a Plant creature"
+],
+[
+"stat_gain",
+"The target gains an Intelligence of 10"
+],
+[
+"disable",
+"The awakened target has the Charmed condition for 30 days"
+]
+],
+"815543": [
+[
+"resource_advantage",
+"without expending a spell slot"
+],
+[
+"flexibility",
+"replace one of those spells"
+],
+[
+"free_play",
+"you can cast them at will"
+]
+],
+"762527": [
+[
+"stat_multiply",
+"deals double damage to objects and structures"
+],
+[
+"multi_attack",
+"The treant makes two Slam attacks"
+],
+[
+"ranged",
+"Ranged Attack Roll: +10, range 180 ft."
+],
+[
+"summon",
+"animates up to two trees"
+],
+[
+"autonomous_units",
+"it obeys the treant"
+],
+[
+"self_destruct",
+"A tree remains animate for 1 day"
+]
+],
+"761181": [
+[
+"multi_attack",
+"you can make one extra attack as a Bonus Action later on the same turn"
+],
+[
+"debuff",
+"you don't add your ability modifier to the extra attack's damage"
+]
+],
+"762040": [
+[
+"evasion",
+"you have a Fly Speed equal to your Speed"
+],
+[
+"temporary_effect",
+"last for 10 minutes"
+],
+[
+"activated",
+"As a Bonus Action, you sprout spectral wings"
+],
+[
+"cooldowns",
+"you can't use it again until you finish a Long Rest"
+]
+],
+"761622": [
+[
+"light_level",
+"you have Darkvision out to 60 feet"
+]
+],
+"762200": [
+[
+"immunity",
+"you can't be aged magically"
+]
+],
+"761226": [
+[
+"concentration",
+"Concentration."
+],
+[
+"terrain",
+"turn the ground in that area into Difficult Terrain"
+],
+[
+"area_templates",
+"20-foot square"
+],
+[
+"aoe_damage",
+"Each creature in that area"
+],
+[
+"damage",
+"3d6 Bludgeoning damage"
+],
+[
+"saving_throws",
+"makes a Strength saving throw"
+],
+[
+"immobilize",
+"has the Restrained condition"
+]
+],
+"762499": [
+[
+"multi_attack",
+"The roper makes two Tentacle attacks"
+],
+[
+"ranged",
+"reach 60 ft."
+],
+[
+"immobilize",
+"The target has the Grappled condition (escape DC 14)"
+],
+[
+"forced_movement",
+"pulls each creature Grappled by it up to 30 feet straight toward it"
+],
+[
+"damage",
+"17 (3d8 + 4) Piercing damage"
+],
+[
+"regeneration",
+"a destroyed tentacle regrows"
+],
+[
+"immunity",
+"Immunity to Poison and Psychic damage"
+]
+],
+"761633": [
+[
+"summon",
+"warrior spirits from the plane of Ysgard appear in unoccupied spaces"
+],
+[
+"self_destruct",
+"returns to Ysgard after 1 hour"
+],
+[
+"immunity",
+"Immunity to the Charmed and Frightened conditions"
+],
+[
+"cooldowns",
+"it can't be used again until 7 days have passed"
+],
+[
+"random_effect",
+"determines it randomly by rolling on the following table"
+],
+[
+"friendly_fire",
+"the summoned spirits attack you"
+],
+[
+"activated",
+"take a Magic action to blow this horn"
+]
+],
+"762254": [
+[
+"flexibility",
+"you choose one type of dragon as your ancestor"
+],
+[
+"tribal",
+"interacting with dragons"
+],
+[
+"stat_multiply",
+"your proficiency bonus is doubled"
+]
+],
+"762434": [
+[
+"saving_throws",
+"If the dragon fails a saving throw, it can choose to succeed instead"
+],
+[
+"legendary_actions",
+"Legendary actions"
+],
+[
+"multi_attack",
+"The dragon makes three Rend attacks"
+],
+[
+"area_templates",
+"60-foot Cone"
+],
+[
+"stat_loss",
+"penalty to AC"
+],
+[
+"temporary_effect",
+"until the end of its next turn"
+],
+[
+"cooldowns",
+"again until the start of its next turn"
+],
+[
+"movement",
+"moves up to half its Speed"
+],
+[
+"damage",
+"15 (2d8 + 6) Slashing damage"
+]
+],
+"762551": [
+[
+"multi_attack",
+"The weretiger makes two attacks"
+],
+[
+"transform",
+"shape-shifts into a Large tiger-humanoid hybrid"
+],
+[
+"saving_throws",
+"Constitution Saving Throw"
+],
+[
+"zone_of_control",
+"without provoking Opportunity Attacks"
+],
+[
+"stealth",
+"take the Hide action"
+],
+[
+"immunity",
+"The target is immune to this weretiger"
+],
+[
+"damage",
+"12 (2d8 + 3) Piercing damage"
+]
+],
+"761656": [
+[
+"random_effect",
+"draw them randomly"
+],
+[
+"draw",
+"as soon as you draw a card from the deck"
+],
+[
+"exhaust",
+"Once a card is drawn, it disappears"
+],
+[
+"debuff",
+"-2 penalty to saving throws"
+],
+[
+"information",
+"declare how many cards you intend to draw"
+]
+],
+"761929": [
+[
+"aura",
+"Your Aura of Protection is now a 30-foot Emanation"
+],
+[
+"area_templates",
+"30-foot Emanation"
+]
+],
+"761651": [
+[
+"stat_gain",
+"your Dexterity increases by 2"
+],
+[
+"exhaust",
+"The manual then loses its magic"
+],
+[
+"delayed",
+"regains it in a century"
+]
+],
+"761627": [
+[
+"aura",
+"emits a 30-foot Emanation"
+],
+[
+"damage",
+"takes 1d6 Radiant damage"
+],
+[
+"damage_reduction",
+"Resistance to Fire damage"
+],
+[
+"self_destruct",
+"The gem is destroyed when the spell is cast"
+],
+[
+"activated",
+"you can take a Magic action to cause one weapon you are holding to burst into flames"
+],
+[
+"light_level",
+"Bright Light in a 10-foot radius"
+]
+],
+"762360": [
+[
+"multi_attack",
+"The behir makes one Bite attack and uses Constrict"
+],
+[
+"immobilize",
+"it has the Restrained condition until the grapple ends"
+],
+[
+"area_templates",
+"90-foot-long"
+],
+[
+"saving_throws",
+"Dexterity Saving Throw"
+],
+[
+"damage",
+"66 (12d10) Lightning damage"
+],
+[
+"damage_over_time",
+"at the start of each of the behir"
+],
+[
+"damage_types",
+"Lightning damage"
+]
+],
+"761772": [
+[
+"activated",
+"you can expend 1 charge to cast Web"
+],
+[
+"resource_gain",
+"regains 1d6 + 1 expended charges daily at dawn"
+],
+[
+"self_destruct",
+"the wand crumbles into ashes and is destroyed"
+],
+[
+"random_effect",
+"roll 1d20"
+]
+],
+"761210": [
+[
+"modal_choice",
+"choose whether it creates antipathy or sympathy"
+],
+[
+"saving_throws",
+"makes a Wisdom saving throw"
+],
+[
+"forced_movement",
+"must use its movement on its turns to get as far away as possible from the target"
+],
+[
+"tribal",
+"specify a kind of creature"
+],
+[
+"immobilize",
+"can't willingly move away"
+],
+[
+"temporary_effect",
+"immune to it for 1 minute"
+]
+],
+"762181": [
+[
+"saving_throws",
+"reroll a saving throw that you fail"
+],
+[
+"cooldowns",
+"can't use this feature again until you finish a long rest"
+]
+],
+"762558": [
+[
+"advantage",
+"Disadvantage on ability checks and attack rolls"
+],
+[
+"multi_attack",
+"The wight makes two attacks"
+],
+[
+"ranged",
+"range 150/600 ft."
+],
+[
+"stat_loss",
+"Hit Point maximum decreases by an amount equal to the damage taken"
+],
+[
+"summon",
+"rises 24 hours later as a Zombie"
+],
+[
+"board_limit",
+"no more than twelve zombies under its control at a time"
+],
+[
+"saving_throws",
+"Constitution Saving Throw"
+]
+],
+"815519": [
+[
+"card_quality",
+"choose any of your new prepared spells from the Bard, Cleric, Druid, and Wizard spell lists"
+],
+[
+"type_grant",
+"the chosen spells count as Bard spells for you"
+]
+],
+"761374": [
+[
+"saving_throws",
+"must make a Wisdom saving throw"
+],
+[
+"immunity",
+"it is immune to this spell for the next 24 hours"
+],
+[
+"modal_choice",
+"one of the following effects of your choice"
+],
+[
+"immobilize",
+"can't be moved by any means"
+],
+[
+"removal",
+"The target is trapped in a demiplane"
+],
+[
+"disable",
+"The target has the Unconscious conditio"
+]
+]
+}

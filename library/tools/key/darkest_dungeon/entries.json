@@ -1,0 +1,1172 @@
+[
+{
+"id": 759905,
+"name": "Dirk Stab",
+"text": "Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3. Moves self (back/forward) 0 1. Deals damage."
+},
+{
+"id": 760355,
+"name": "Stones Of Gelati Preziosi",
+"text": "+17% hp heal received percent with melee skills; +13% max HP while HP above 0.75; +0.05 crit while HP below 0.25; -0.05 accuracy while light below 26; -10% damage while in rank ; -10% damage while in rank ; -0.06 dodge"
+},
+{
+"id": 760689,
+"name": "Stalwart",
+"text": "+20% stun resistance; +20% poison resistance; +20% bleed resistance; +20% disease resistance; +20% debuff resistance; +20% move resistance; -50% stress dmg received percent while virtued. Acts on its own: attack friendly, attack self, bark stress, block buff, block combat retreat, block effect, block heal, block item, block move, buff party, buff random party member, change pos, comment ally attack hit, comment ally attack missed, comment ally hit, comment ally missed, comment curio interaction, comment move, comment self hit, comment self missed, comment trap triggered, heal self, ignore command, mark self, random command, retreat from combat, stress heal party, stress heal self"
+},
+{
+"id": 760621,
+"name": "Plutomania",
+"text": "Manic for money.. Interacts with Treasure curios"
+},
+{
+"id": 760574,
+"name": "Clutch Hitter",
+"text": "+0.03 crit while HP below 0.5"
+},
+{
+"id": 759831,
+"name": "Stress",
+"text": "Many actions and experiences cause stress. stress damage appears above heroes' heads, in black type. stress can also be healed, and that appears in white type."
+},
+{
+"id": 760029,
+"name": "Defensive Growth",
+"text": "Skills: Grand Guard: Melee skill. Usable from ranks 4, 3, 2, 1. Targets ally ranks 4, 3, 2, 1. Effects: guard target ally for 2 rounds; +33% protection (self). | Bolster: Melee skill. Usable from ranks 4, 3, 2, 1. Targets ally ranks 1, 2, 3, 4. Effects: +10% accuracy, +10% crit. | Ritualistic Restoration: Melee skill. Usable from ranks 4, 3, 2. Targets ally ranks 1, 2, 3, 4. Heals 10 18. | Unbearable Tremors: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3, 4. Effects: stress +7."
+},
+{
+"id": 759888,
+"name": "Breakthrough",
+"text": "Melee skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3. Moves self (back/forward) 0 1. Deals damage (modifier -55%). Effects: -20% damage, -15% dodge (self)."
+},
+{
+"id": 760280,
+"name": "Lahzarels Phylactery",
+"text": "+0.03 crit with ranged skills; +0.05 protection while HP below 0.25; +4% monsters surprise chance; -10% max HP"
+},
+{
+"id": 760568,
+"name": "Second Wind",
+"text": "+10% damage while HP below 0.5; +10% damage while HP below 0.5"
+},
+{
+"id": 760233,
+"name": "Skullyfm",
+"text": "+10% damage; +10% damage; -10% stress dmg received percent; -13% hp heal received percent while in rank ; -13% hp heal percent while in rank "
+},
+{
+"id": 760256,
+"name": "Keljores Lost Valor",
+"text": "+0.06 protection; +6% death_blow resistance; -13% stress dmg received percent while light below 26; -0.06 dodge while light above 75; -4 speed while HP below 0.25; +50% food consumption percent while light above 75"
+},
+{
+"id": 760440,
+"name": "Arkenhelm",
+"text": "-5% stress dmg received percent; +10% hp heal received percent while light above 75; -8% stress dmg received percent while HP above 0.75; -10% disease resistance while HP below 0.25"
+},
+{
+"id": 760158,
+"name": "Stalwart Buckle",
+"text": "+0.02 crit; +5% stress dmg received percent; -3% resolve check percent. Class: highwayman"
+},
+{
+"id": 760607,
+"name": "Tapeworm",
+"text": "+1 food consumption percent. Interacts with Food curios"
+},
+{
+"id": 759982,
+"name": "Polyp",
+"text": "Skills: Venomous Phlegm: Ranged skill. Usable from ranks 4, 3, 2. Targets enemy ranks 2, 3, 4. Deals damage 4-9. Effects: blight 6 per round for 3 rounds; mark target for 3 rounds. | Violent Hack: Ranged skill. Usable from ranks 1. Targets enemy ranks 1, 2, 3, 4. Moves self (back/forward) 3 0. Deals damage 1-3. | Banish: Melee skill. Usable from ranks 4, 3, 2. Targets enemy ranks 1, 2. Deals damage 4-9. Effects: push back 2 ranks."
+},
+{
+"id": 759864,
+"name": "Mark for Death",
+"text": "Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage (modifier -100%). Effects: mark target for 3 rounds; -20.0% protection for 3 rounds."
+},
+{
+"id": 760272,
+"name": "The Eidolons Will",
+"text": "-10% stress dmg received percent; +10% max HP; +0.06 protection; -13% hp heal received percent; -8% resolve check percent; -6% death_blow resistance"
+},
+{
+"id": 759792,
+"name": "Shovel",
+"text": "A type of provision. Used to clear obstacles to prevent taking DMG and stress."
+},
+{
+"id": 760740,
+"name": "TIGER'S EYE",
+"text": "Camping skill. buff: +0.1 accuracy (individual); buff: +0.05 crit (individual). Uses per camp: 1."
+},
+{
+"id": 760658,
+"name": "Eldritch Slayer",
+"text": "+0.1 accuracy vs eldritch enemies; +0.03 crit vs eldritch enemies"
+},
+{
+"id": 760169,
+"name": "Man Slayer's Ring",
+"text": "+25% damage vs man enemies; +25% damage vs man enemies; -0.02 dodge"
+},
+{
+"id": 760215,
+"name": "Talisman of the Flame",
+"text": "-1 stress dmg received percent with skill darkest_eye; +1 protection with skill darkest_eye"
+},
+{
+"id": 760395,
+"name": "Cloak Of Shadows",
+"text": "+0.05 dodge; +4 speed while light below 26; +8% trap resistance; -10% max HP; -8% resolve check percent while light below 26"
+},
+{
+"id": 760570,
+"name": "Last Gasp",
+"text": "+1 speed while HP below 0.5"
+},
+{
+"id": 760579,
+"name": "Lygophobia",
+"text": "+20% stress dmg received percent while light below 26"
+},
+{
+"id": 759761,
+"name": "Antivenom",
+"text": "A type of provision used to remove Blight. It also has uses on many dungeon curios."
+},
+{
+"id": 760485,
+"name": "Kucorus Regard",
+"text": "+0.05 accuracy while in rank ; +10% damage while in rank ; +10% damage while in rank ; +13% hp heal received percent while HP below 0.25; +10% stress dmg received percent while HP below 0.25; -10% stun resistance while in rank "
+},
+{
+"id": 760229,
+"name": "Stone Of Hearth",
+"text": "-15% stress dmg received percent; -13% hp heal percent"
+},
+{
+"id": 760040,
+"name": "Ancestor's Map",
+"text": "+25% trap resistance; +25% scouting chance; +10% stress dmg received percent"
+},
+{
+"id": 760511,
+"name": "Concealed Dagger",
+"text": "+3 speed in the first round; +0.03 crit in the first round; +5% damage; +5% damage; -0.06 protection"
+},
+{
+"id": 760823,
+"name": "Tutorial Food",
+"text": "Possible outcomes: Loot 100.00% (P)"
+},
+{
+"id": 760002,
+"name": "Rabid Gnasher",
+"text": "Skills: Rabid Rush: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Moves self (back/forward) 0 3. Deals damage 1-3. Effects: inflict disease rabies; bleed 1 per round for 3 rounds."
+},
+{
+"id": 760378,
+"name": "Trials Of The Trinity The Relicants",
+"text": "+8% debuff resistance; +4 speed not in the first round; -8% stress dmg received percent; -10% move resistance in the first round; -10% trap resistance while light above 75"
+},
+{
+"id": 759872,
+"name": "Stunning Blow",
+"text": "Melee skill. Usable from ranks 2, 1. Targets enemy ranks 1, 2. Deals damage (modifier -75%). Effects: stun."
+},
+{
+"id": 760752,
+"name": "THE QUICKENING",
+"text": "Camping skill. buff: +5 speed (self). Uses per camp: 1."
+},
+{
+"id": 760094,
+"name": "Haste Chalice",
+"text": "+8 speed in the first round; +1 speed not in the first round; -25% stun chance. Class: vestal"
+},
+{
+"id": 759794,
+"name": "SPD",
+"text": "Short for \"speed\". Speed influences the order in which combatants act. Initiative is re-rolled each round."
+},
+{
+"id": 759785,
+"name": "Obstacle",
+"text": "An object found in dungeons that impedes the party's progress. They can be removed by hand or with a Shovel. Clearing an obstacle by hand inflicts DMG and stress on the entire party."
+},
+{
+"id": 759789,
+"name": "Resistance",
+"text": "A stat that influences how likely a hero is to resist a particular status, such as Stun or Bleed."
+},
+{
+"id": 760438,
+"name": "Soul Of The Neverborn",
+"text": "+10% max HP; +0.05 crit while light below 26; +0.06 protection; -10% debuff resistance while light above 75; +10% stress dmg received percent while light above 75; -4 speed while light above 75"
+},
+{
+"id": 760327,
+"name": "Cloak Of The Overwatch",
+"text": "+5% damage; +5% damage; +0.03 dodge; +4% monsters surprise chance; +50% starving damage percent in the first round"
+},
+{
+"id": 759768,
+"name": "Corpse",
+"text": "Most dead monsters leave a temporary corpse. Corpses preserve the enemy order for a time and require heroes to use skills to attack around the corpses, move other enemies in reach, and so on. Alternatively, corpses can be attacked and cleared manually."
+},
+{
+"id": 760728,
+"name": "DARK STRENGTH",
+"text": "Camping skill. buff: +20% damage (individual); buff: +20% damage (individual); stress damage amount 15 (self). Uses per camp: 1."
+},
+{
+"id": 760160,
+"name": "Evasion Incense",
+"text": "+0.08 dodge; -1 speed. Class: occultist"
+},
+{
+"id": 760475,
+"name": "Nictybenmas",
+"text": "+0.06 crit; -10% move resistance in the first round"
+},
+{
+"id": 759989,
+"name": "Inchoate Flesh",
+"text": "Skills: Undulating Invasion: Melee skill. Usable from ranks 3, 4. Targets enemy ranks 3, 4. Deals damage 5-9. Effects: blight 2 per round for 3 rounds."
+},
+{
+"id": 760203,
+"name": "Candle of Life",
+"text": "+50% hp heal percent. Class: antiquarian"
+},
+{
+"id": 760516,
+"name": "The True Knot",
+"text": "+15% disease resistance; -6% death_blow resistance not in the first round"
+},
+{
+"id": 760807,
+"name": "Barnacle Crusted Chest",
+"text": "Possible outcomes: Nothing 25.00%; Loot 50.00%; Effect 25.00% (Bleed 1); use shovel: Loot (A)"
+},
+{
+"id": 760313,
+"name": "Reapers Hourglass",
+"text": "+5 speed while HP above 0.75; +0.08 dodge while HP above 0.75; +0.05 crit while HP above 0.75; -4 speed while HP below 0.25; -0.06 dodge while HP below 0.25; -0.05 accuracy while HP below 0.25"
+},
+{
+"id": 759995,
+"name": "Wizened Hag",
+"text": "Takes 2 ranks. Acts 2 times per round. Skills: Into the Pot!: Ranged skill. Usable from ranks 1, 2, 3, 4. Targets enemy ranks 1, 2, 3, 4. Effects: capture target. | Meat Tenderizer: Melee skill. Usable from ranks 1, 2, 3, 4. Targets all of enemy ranks 1, 2, 3, 4. Deals damage 2-4. | Season to Perfection: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 1-1. Effects: -10% accuracy, -25% damage; stress +10. | Taste the Stew: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 1-1. Effects: stress +10; heal 6 (self)."
+},
+{
+"id": 760822,
+"name": "Tutorial Holy",
+"text": "Possible outcomes: Loot 100.00% (HOLYONLY)"
+},
+{
+"id": 760221,
+"name": "Fuseman's Matchstick",
+"text": "+2 speed; +10% damage with ranged skills; +10% damage with ranged skills; +0.025 crit with ranged skills"
+},
+{
+"id": 760818,
+"name": "Secret Stash",
+"text": "Possible outcomes: Loot 100.00%; use skeleton_key: Loot (COLLECTOR)"
+},
+{
+"id": 760339,
+"name": "Scent Of Sarnath",
+"text": "+0.09 protection vs eldritch enemies; +0.09 dodge while light below 26; -10% disease resistance vs beast enemies; -8% monsters surprise chance while light below 26"
+},
+{
+"id": 760006,
+"name": "Siren",
+"text": "Takes 2 ranks. Acts 2 times per round. Summons allies. Skills: Song of Desire: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Effects: take control of target. | High Tide: Ranged skill. Usable from ranks 1, 2, 3, 4. Effects: summon jellyfish_A fishman_harpoon_A octotank_A. | Pressure Crash: Ranged skill. Usable from ranks 1, 2, 3, 4. Targets all of enemy ranks 1, 2, 3, 4. Deals damage 1-1. Effects: stress +10. | Devour: Ranged skill. Usable from ranks 1, 2, 3, 4. Targets all of enemy ranks 1, 2, 3, 4. Deals damage 1-1. Effects: bleed 1 per round for 3 rounds."
+},
+{
+"id": 760122,
+"name": "Tenacity Ring",
+"text": "+10% death_blow resistance; +0.05 dodge; -0.01 crit"
+},
+{
+"id": 760004,
+"name": "Shambler Sycophant",
+"text": "Skills: Clapperclaw: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 2-4. Effects: stress +10; +20% accuracy, +3% crit, +50% damage, +3 speed, +25% protection (self)."
+},
+{
+"id": 760466,
+"name": "Final Memento",
+"text": "+9% death_blow resistance; -8% resolve check percent"
+},
+{
+"id": 759992,
+"name": "Fungal Scratcher",
+"text": "Skills: Groping Swipe: Melee skill. Usable from ranks 2, 1. Targets enemy ranks 1, 2. Deals damage 3-5. | Rend the Marked: Melee skill. Usable from ranks 2, 1. Targets enemy ranks 1, 2. Deals damage 3-5. Effects: only if target is tagged, +50% damage (self). | Harmless Swipe: Melee skill. Usable from ranks 4, 3. Targets enemy ranks 1, 2. Moves self (back/forward) 0 1. Deals damage 2-4."
+},
+{
+"id": 760817,
+"name": "Bas Relief",
+"text": "Possible outcomes: Quirk 100.00% (positive); use shovel: Effect (Stress 5)"
+},
+{
+"id": 760243,
+"name": "Fools Bane",
+"text": "+0.04 crit; +0.05 accuracy; +10% damage; +10% damage; -0.06 protection; +50% starving damage percent; -10% bleed resistance"
+},
+{
+"id": 760065,
+"name": "Sun Ring",
+"text": "+15% damage while light above 75; +15% damage while light above 75; +0.1 accuracy while light above 75; +10% stress dmg received percent"
+},
+{
+"id": 760786,
+"name": "Bookshelf",
+"text": "Possible outcomes: Nothing 22.22%; Loot 11.11% (JOURNALONLY); Quirk 22.22% (positive); Effect 22.22% (Stress 2); Scouting 22.22% (0 - curios)"
+},
+{
+"id": 760197,
+"name": "Lock of Fury",
+"text": "+10% damage; +10% damage; +3 speed; -10% max HP. Class: abomination"
+},
+{
+"id": 760660,
+"name": "Man Slayer",
+"text": "+0.1 accuracy vs man enemies; +0.03 crit vs man enemies"
+},
+{
+"id": 760342,
+"name": "Braveheart",
+"text": "+0.06 protection; +10% max HP; +8% resolve check percent; -0.06 dodge while in rank ; -0.04 crit while in rank ; -0.04 crit while in rank "
+},
+{
+"id": 760430,
+"name": "Guise Of The Harbinger",
+"text": "+5% damage; +5% damage; +0.02 accuracy; +0.02 crit; +10% stress dmg received percent at Death's Door"
+},
+{
+"id": 759870,
+"name": "Smite",
+"text": "Melee skill. Usable from ranks 2, 1. Targets enemy ranks 1, 2. Deals damage. Effects: +35% damage (self)."
+},
+{
+"id": 759958,
+"name": "Brigand Fusilier",
+"text": "Skills: Blanket Fire: Ranged skill. Usable from ranks 2, 3, 4. Targets all of enemy ranks 1, 2, 3, 4. Deals damage 1-3. Effects: -2% dodge for 2 rounds. | Rushed Shot: Melee skill. Usable from ranks 1. Targets enemy ranks 1, 2, 3. Moves self (back/forward) 1 0. Deals damage 2-4."
+},
+{
+"id": 760417,
+"name": "Sieg Stories",
+"text": "-10% stress dmg received percent; +0.05 accuracy; +0.04 crit; -0.04 crit in the first round; -0.05 accuracy in the first round; -0.06 protection in the first round"
+},
+{
+"id": 760514,
+"name": "Trenche Fist",
+"text": "+0.06 dodge; +10% damage; +10% damage; +10% max HP; -0.05 accuracy while light below 26; -10% damage while light below 26; -10% damage while light below 26; -6% death_blow resistance while light below 26"
+},
+{
+"id": 760704,
+"name": "TRACKING",
+"text": "Camping skill. buff: +10% party surprise chance (self); buff: +10% monsters surprise chance (self). Uses per camp: 1."
+},
+{
+"id": 760072,
+"name": "Life Crystal",
+"text": "+20% max HP; -1 speed"
+},
+{
+"id": 759891,
+"name": "Wicked Slice",
+"text": "Melee skill. Usable from ranks 3, 2, 1. Targets enemy ranks 1, 2. Deals damage (modifier 15%)."
+},
+{
+"id": 760537,
+"name": "Deadly",
+"text": "+0.01 crit"
+},
+{
+"id": 760109,
+"name": "Seer Stone",
+"text": "+20% scouting chance; -1 speed"
+},
+{
+"id": 760794,
+"name": "Moonshine Barrel",
+"text": "Possible outcomes: Nothing 22.22%; Loot 33.33% (P); Quirk 11.11% (alcoholism); Effect 33.33% (Blight 1); use medicinal_herbs: Effect (Curio Damage BuffStrong)"
+},
+{
+"id": 760501,
+"name": "Thraximundars Rage",
+"text": "+10% damage; +10% damage; +10% max HP; +0.04 crit; -10% bleed resistance in the first round; -10% disease resistance in the first round; -13% hp heal percent in the first round"
+},
+{
+"id": 760285,
+"name": "Dark Night Of The Soul",
+"text": "-13% stress dmg received percent while light below 26; +0.08 protection while light below 26; +0.08 protection while light below 26; -16% resolve xp bonus percent; -16% resolve xp bonus percent; -16% resolve xp bonus percent"
+},
+{
+"id": 760777,
+"name": "Sconce",
+"text": "Possible outcomes: Loot 100.00% (TORCHONLY)"
+},
+{
+"id": 760292,
+"name": "Deus Da Morte Egito",
+"text": "+17% hp heal received percent at Death's Door; +0.08 protection vs eldritch enemies; -13% stress dmg received percent while HP below 0.25; +10% stress dmg received percent; -0.06 dodge while in rank ; -10% bleed resistance while in rank "
+},
+{
+"id": 760652,
+"name": "Fear of Mankind",
+"text": "+15% stress dmg received percent vs man enemies; -0.1 accuracy vs man enemies"
+},
+{
+"id": 760459,
+"name": "Pavlovs Bell",
+"text": "+10% damage in the first round; +10% damage in the first round; +0.05 accuracy in the first round; +0.04 crit in the first round; +50% starving damage percent; +50% food consumption percent"
+},
+{
+"id": 759962,
+"name": "Carrion Eater",
+"text": "Skills: Munch: Melee skill. Usable from ranks 1, 2, 3, 4. Targets enemy ranks 1, 2, 3, 4. Deals damage 2-4. Effects: blight 1 per round for 3 rounds; only if target is tagged, +100% damage (self)."
+},
+{
+"id": 760079,
+"name": "Bull's Eye Bandana",
+"text": "+0.08 accuracy; +0.02 crit; -0.04 dodge. Class: arbalest"
+},
+{
+"id": 760059,
+"name": "Holy Orders",
+"text": "+15% resolve check percent; -20% stress dmg received percent; +12% death_blow resistance; -10% poison resistance; -10% bleed resistance. Class: crusader"
+},
+{
+"id": 760374,
+"name": "Wadmalaw",
+"text": "+10% max HP; -10% stress dmg received percent; -6% death_blow resistance vs eldritch enemies; -10% debuff resistance"
+},
+{
+"id": 760284,
+"name": "Nagelring",
+"text": "-10% stress dmg received percent while light below 26; +0.06 dodge while light above 75; +6% resolve check percent; -10% max HP; -0.04 crit"
+},
+{
+"id": 760688,
+"name": "Irrational",
+"text": "-15% stun resistance; -15% poison resistance; -15% bleed resistance; -15% disease resistance; -15% debuff resistance; -15% move resistance; -15% trap resistance; -10% max HP; -0.05 accuracy; -10% damage; -10% damage; -0.05 dodge; +2 speed. Acts on its own: attack friendly, attack self, bark stress, block buff, block combat retreat, block effect, block heal, block item, block move, buff party, buff random party member, change pos, comment ally attack hit, comment ally attack missed, comment ally hit, comment ally missed, comment curio interaction, comment move, comment self hit, comment self missed, comment trap triggered, heal self, ignore command, mark self, random command, retreat from combat, stress heal party, stress heal self"
+},
+{
+"id": 760290,
+"name": "Dippys Little Black Book",
+"text": "-10% stress dmg received percent; +10% max HP; -8% resolve check percent while light below 26"
+},
+{
+"id": 760172,
+"name": "Chirurgeons Charm",
+"text": "+15% hp heal percent"
+},
+{
+"id": 760376,
+"name": "Things To Remember",
+"text": "-10% stress dmg received percent; +10% max HP; -13% hp heal received percent in the first round"
+},
+{
+"id": 760696,
+"name": "PEP TALK",
+"text": "Camping skill. buff: -30% stress dmg received percent (individual). Uses per camp: 1."
+},
+{
+"id": 759798,
+"name": "Torch",
+"text": "A type of provision. Used to increase the current torchlight within a dungeon."
+},
+{
+"id": 760264,
+"name": "Ajs Growling Tome Of Madness",
+"text": "+10% damage; +10% damage; +13% hp heal received percent; -4 speed in the first round"
+},
+{
+"id": 760016,
+"name": "Webber",
+"text": "Skills: Web: Ranged skill. Usable from ranks 1, 2, 3, 4. Targets enemy ranks 1, 2, 3, 4. Deals damage 1-1. Effects: stun; mark target for 3 rounds; Webber Web Debuff 1. | Bite: Melee skill. Usable from ranks 1, 2, 3, 4. Targets enemy ranks 1, 2, 3, 4. Deals damage 1-3. Effects: blight 1 per round for 3 rounds; only if target is tagged, +100% damage (self)."
+},
+{
+"id": 760538,
+"name": "Misses the Spot",
+"text": "-0.01 crit"
+},
+{
+"id": 760616,
+"name": "Ablutomania",
+"text": "Obsessed with cleanliness.. Interacts with Fountain curios"
+},
+{
+"id": 760184,
+"name": "Bleed Charm",
+"text": "+20% bleed resistance; -0.02 dodge"
+},
+{
+"id": 760195,
+"name": "Padlock of Transference",
+"text": "+30% stun chance; +30% poison chance. Class: abomination"
+},
+{
+"id": 760453,
+"name": "The Cagoule",
+"text": "+0.06 dodge; +0.04 crit; +0.05 accuracy; -13% hp heal percent while light below 26; -10% move resistance while in rank ; -10% trap resistance while light below 26"
+},
+{
+"id": 759945,
+"name": "Illumination",
+"text": "Ranged skill. Usable from ranks 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage (modifier -50%). Effects: -30% dodge; increase light 10 (global)."
+},
+{
+"id": 760144,
+"name": "Drifter's Buckle",
+"text": "+10% trap resistance; +0.04 dodge; -5% stress heal received percent. Class: highwayman"
+},
+{
+"id": 760334,
+"name": "Thorwans Blood",
+"text": "+0.08 protection while in rank ; +10% debuff resistance; +50% food consumption percent"
+},
+{
+"id": 760492,
+"name": "Beneath The Dark",
+"text": "-13% stress dmg received percent while light below 26; +16% resolve xp bonus percent; -0.06 dodge in the first round"
+},
+{
+"id": 760590,
+"name": "The Runs",
+"text": "-0.2 dodge; -10% max HP"
+},
+{
+"id": 760463,
+"name": "The Reflectorum",
+"text": "+0.06 protection; +8% death_blow resistance at Death's Door; -13% hp heal percent vs beast enemies"
+},
+{
+"id": 760529,
+"name": "Natural Eye",
+"text": "+0.05 accuracy with ranged skills"
+},
+{
+"id": 760152,
+"name": "Bloodied Fetish",
+"text": "+20% poison resistance; +20% bleed resistance; -20% disease resistance"
+},
+{
+"id": 759856,
+"name": "Sniper Shot",
+"text": "Ranged skill. Usable from ranks 4, 3. Targets enemy ranks 2, 3, 4. Deals damage. Effects: only if target is tagged, +100% damage, +10% crit (self)."
+},
+{
+"id": 760222,
+"name": "Prophet's Eye",
+"text": "+0.1 accuracy while in rank ; +2 speed while in rank ; -10% stress dmg received percent while in rank "
+},
+{
+"id": 760452,
+"name": "Adamant",
+"text": "+0.06 protection; +10% move resistance; -0.06 dodge; -4 speed"
+},
+{
+"id": 760293,
+"name": "Wrath Of Khan",
+"text": "+0.04 crit; +0.05 accuracy; +10% damage; +10% damage; -4 speed; -13% hp heal received percent; -0.06 protection"
+},
+{
+"id": 759878,
+"name": "Lunge",
+"text": "Melee skill. Usable from ranks 4, 3. Targets enemy ranks 1, 2, 3. Moves self (back/forward) 0 2. Deals damage (modifier 40%)."
+},
+{
+"id": 760593,
+"name": "Rabies",
+"text": "-0.1 accuracy; +15% damage; +15% damage"
+},
+{
+"id": 759935,
+"name": "Blinding Gas",
+"text": "Ranged skill. Usable from ranks 4, 3. Targets all of enemy ranks 3, 4. Deals damage (modifier -100%). Effects: stun."
+},
+{
+"id": 760306,
+"name": "Dorans Dice",
+"text": "+5% death_blow resistance while HP below 0.25; +5% damage; +5% damage; +0.05 dodge while in rank ; -10% bleed resistance in the first round"
+},
+{
+"id": 760666,
+"name": "Ruins Adventurer",
+"text": "-20% stress dmg received percent in dungeons"
+},
+{
+"id": 760723,
+"name": "TACTICS",
+"text": "Camping skill. buff: +0.1 dodge (self); buff: +0.05 crit (self); buff: +0.1 dodge (party_other); buff: +0.05 crit (party_other). Uses per camp: 1."
+},
+{
+"id": 760148,
+"name": "Lucky Dice",
+"text": "+0.04 accuracy; +0.04 dodge. Class: jester"
+},
+{
+"id": 760274,
+"name": "Violets Pet",
+"text": "+3 speed; +0.04 crit with melee skills; +0.05 accuracy with melee skills; +50% starving damage percent; +50% food consumption percent"
+},
+{
+"id": 760523,
+"name": "Quick Reflexes",
+"text": "+2 speed"
+},
+{
+"id": 759793,
+"name": "Skeleton Key",
+"text": "A type of provision used on curios in dungeons."
+},
+{
+"id": 760253,
+"name": "Aakeskiol",
+"text": "+4% resolve check percent; +3% death_blow resistance; +0.03 protection; -4 speed while in rank "
+},
+{
+"id": 759807,
+"name": "Completing a Quest",
+"text": "After you've completed the requirements of a quest, you have the option to return to town at any time--just click the crest. You don't need to return to the starting room of the dungeon to exit."
+},
+{
+"id": 760084,
+"name": "Book of Sanity",
+"text": "-20% stress dmg received percent"
+},
+{
+"id": 760493,
+"name": "Brace Of Thorns",
+"text": "+26% hp heal received percent while HP below 0.25; -10% max HP"
+},
+{
+"id": 760402,
+"name": "Oath-Breakers Sheathe",
+"text": "+6 speed while light below 26; +0.07 accuracy while light below 26; -8% resolve check percent; -0.06 protection while light above 75"
+},
+{
+"id": 760380,
+"name": "Mine",
+"text": "+0.05 accuracy; +13% damage while light below 26; +13% damage while light below 26; -13% hp heal received percent in the first round"
+},
+{
+"id": 760365,
+"name": "Le Roi En Jaune",
+"text": "+24% resolve xp bonus percent; -15% stress dmg received percent; -8% monsters surprise chance while in rank ; -8% resolve check percent while light below 26; -0.05 accuracy vs eldritch enemies"
+},
+{
+"id": 760173,
+"name": "Quickening Satchel",
+"text": "+2 speed; +20% move resistance. Class: grave_robber"
+},
+{
+"id": 760435,
+"name": "Goliath Killer",
+"text": "+0.06 accuracy while in rank ; +13% damage while in rank ; +13% damage while in rank ; +0.05 crit while in rank ; -10% trap resistance while in rank ; -8% monsters surprise chance while in rank ; -13% hp heal percent while in rank "
+},
+{
+"id": 759942,
+"name": "Dazzling Light",
+"text": "Ranged skill. Usable from ranks 3, 4. Targets enemy ranks 1, 2, 3. Deals damage (modifier -75%). Effects: stun; increase light 6 (global)."
+},
+{
+"id": 759940,
+"name": "Mace Bash",
+"text": "Melee skill. Usable from ranks 2, 1. Targets enemy ranks 1, 2. Deals damage."
+},
+{
+"id": 760287,
+"name": "Hope In Hand",
+"text": "+0.06 accuracy not in the first round; -13% stress dmg received percent not in the first round; +50% food consumption percent in the first round"
+},
+{
+"id": 760000,
+"name": "Pelagic Guardian",
+"text": "Skills: Octocestus: Melee skill. Usable from ranks 3, 2, 1. Targets enemy ranks 1, 2. Deals damage 3-5. Effects: bleed 2 per round for 3 rounds. | Barnacle Barrier: Melee skill. Usable from ranks 4, 3, 2, 1. Targets ally ranks 4, 3, 2, 1. Effects: guard target ally for 2 rounds; +25% protection (self) for 2 rounds."
+},
+{
+"id": 759771,
+"name": "Death's Door",
+"text": "A hero with 0 HP is at Death's Door. Each subsequent hit taken while at Death's Door has a chance of permanently killing the hero."
+},
+{
+"id": 760584,
+"name": "Automatonophobia",
+"text": "+20% stress dmg received percent vs man enemies"
+},
+{
+"id": 759972,
+"name": "Ascended Witch",
+"text": "Skills: Fate's Pull: Ranged skill. Usable from ranks 2, 3, 4. Targets enemy ranks 3, 4. Deals damage 1-3. Effects: pull forward 2 ranks; stress +8. | Fate's Push: Ranged skill. Usable from ranks 1, 2, 3, 4. Targets enemy ranks 1, 2. Deals damage 1-3. Effects: push back 2 ranks; stress +8. | Fate's Reveal: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 1-3. Effects: stress +20; decrease light 10 (global); mark target for 1 rounds."
+},
+{
+"id": 760325,
+"name": "Black Design",
+"text": "+0.05 crit while HP above 0.75; +6% death_blow resistance; +0.05 accuracy; +50% food consumption percent; -0.06 protection while light below 26; -13% hp heal percent while light below 26"
+},
+{
+"id": 760709,
+"name": "ZEALOUS SPEECH",
+"text": "Camping skill. stress heal amount 15 (party_other); stress heal amount 15 (self); buff: -30% stress dmg received percent (party_other). Uses per camp: 1."
+},
+{
+"id": 760005,
+"name": "Shuffling Horror",
+"text": "Takes 3 ranks. Acts 2 times per round. Skills: Lacerate: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 5-9. Effects: bleed 4 per round for 3 rounds. | Echoing Dissassembly: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3, 4. Deals damage 1-3. Effects: stress +15; summon cultist_shrouded_D totem_guard_D; decrease light 25 (global). | Undulations: 0 skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3, 4. Effects: Shuffler Shuffle Party."
+},
+{
+"id": 760185,
+"name": "Stun Stone",
+"text": "+20% stun chance; -0.02 dodge"
+},
+{
+"id": 760299,
+"name": "Corwyns Cape",
+"text": "+0.03 crit with ranged skills; +8% damage with ranged skills; +8% damage with ranged skills; +0.04 accuracy with ranged skills; +50% starving damage percent at Death's Door"
+},
+{
+"id": 760121,
+"name": "Camper's Helmet",
+"text": "+20% stress heal received percent while camping; +10% scouting chance. Class: bounty_hunter"
+},
+{
+"id": 760364,
+"name": "Spidersilk Cloak",
+"text": "+0.06 dodge; +0.04 crit; -8% monsters surprise chance while light below 26"
+},
+{
+"id": 760130,
+"name": "Swordsman's Crest",
+"text": "+15% damage with melee skills; +15% damage with melee skills; -10% hp heal percent. Class: crusader"
+},
+{
+"id": 760759,
+"name": "Spikes",
+"text": "On failure: Stress 2. On success: Heal Stress TrapD. HP change -25%."
+},
+{
+"id": 760043,
+"name": "Ancestor's Bottle",
+"text": "+25% max HP; +10% stress dmg received percent"
+},
+{
+"id": 760448,
+"name": "Ralackks Visage",
+"text": "+0.02 accuracy; +0.03 protection; +6% monsters surprise chance while in rank ; -10% trap resistance while in rank "
+},
+{
+"id": 760651,
+"name": "Fear of Unholy",
+"text": "+15% stress dmg received percent vs unholy enemies; -0.1 accuracy vs unholy enemies"
+},
+{
+"id": 760396,
+"name": "Shigless Requium",
+"text": "+0.06 accuracy while in rank ; +0.05 crit while HP below 0.25; +0.08 dodge at Death's Door; -10% bleed resistance vs targets with tagged; -10% disease resistance while light below 26; -10% move resistance while in rank "
+},
+{
+"id": 760519,
+"name": "Tough",
+"text": "+10% max HP"
+},
+{
+"id": 759764,
+"name": "Bleed",
+"text": "Heroes or enemies with Bleed take damage each combat round or hallway step. It will eventually go away but can be cured early with bandages, combat skills, and Camping skills."
+},
+{
+"id": 760162,
+"name": "Rotgut Censer",
+"text": "+0.08 accuracy; -5% max HP. Class: plague_doctor"
+},
+{
+"id": 760600,
+"name": "Vampiric Spirits",
+"text": "-50% debuff resistance"
+},
+{
+"id": 760533,
+"name": "Slugger",
+"text": "+10% damage with melee skills; +10% damage with melee skills"
+},
+{
+"id": 760297,
+"name": "Sacra Fracti",
+"text": "-15% stress dmg received percent; +20% hp heal received percent; -0.05 accuracy while light below 26; -0.06 dodge while light below 26; -10% disease resistance while in rank "
+},
+{
+"id": 760628,
+"name": "Tippler",
+"text": "In town, will only Drink."
+},
+{
+"id": 759900,
+"name": "Target Whistle",
+"text": "Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage (modifier -100%). Effects: mark target for 3 rounds; -30% protection."
+},
+{
+"id": 760304,
+"name": "The Rolled Bones",
+"text": "+0.03 crit at Death's Door; +0.03 crit while HP below 0.25; +0.03 crit while light below 26; -0.05 accuracy"
+},
+{
+"id": 760592,
+"name": "Tetanus",
+"text": "-0.05 accuracy; -0.05 crit"
+},
+{
+"id": 760347,
+"name": "The Serpents Eye",
+"text": "+10% damage; +10% damage; +0.06 accuracy while light below 26; +50% food consumption percent while HP below 0.25"
+},
+{
+"id": 759978,
+"name": "Drowned Puller",
+"text": "Skills: Heave to!: Melee skill. Usable from ranks 1. Targets enemy ranks 1. Effects: capture target."
+},
+{
+"id": 760207,
+"name": "Sturdy Boots",
+"text": "+30% move resistance; +30% move chance; -1 speed. Class: musketeer"
+},
+{
+"id": 759823,
+"name": "The Benefits of Camping",
+"text": "Camping consists of two parts: Meal phase and Skill phase.\n\nDuring the Meal phase, you choose how much they eat, which determines recovery. Make sure you have enough food!\n\nSkill Phase allows you to spend Rest Points on different hero skills used for recuperation."
+},
+{
+"id": 760265,
+"name": "The Harbinger",
+"text": "+5% damage; +5% damage; +0.03 protection; +0.03 protection; +50% starving damage percent while camping"
+},
+{
+"id": 760142,
+"name": "Flashfire Gunpowder",
+"text": "+10% damage with ranged skills; +10% damage with ranged skills; -20% stun resistance. Class: highwayman"
+},
+{
+"id": 760356,
+"name": "Dead Mans Will",
+"text": "+8% resolve check percent; +6% death_blow resistance; +8% death_blow resistance at Death's Door; -13% hp heal percent; -10% damage in the first round; -10% damage in the first round; -13% hp heal received percent while in rank "
+},
+{
+"id": 760340,
+"name": "Danger Zone",
+"text": "+0.06 crit while in rank ; +0.07 accuracy while in rank ; +50% food consumption percent while light below 26; +10% stress dmg received percent while in rank "
+},
+{
+"id": 760653,
+"name": "Fear of Beasts",
+"text": "+15% stress dmg received percent vs beast enemies; -0.1 accuracy vs beast enemies"
+},
+{
+"id": 760289,
+"name": "Shroud Of The Midnight Charmer",
+"text": "+5% death_blow resistance; +10% max HP while in rank ; +6% resolve check percent; -10% damage while light below 26; -10% damage while light below 26; -10% poison resistance in the first round"
+},
+{
+"id": 760194,
+"name": "Lock of Patience",
+"text": "+15% resolve check percent. Class: abomination"
+},
+{
+"id": 760269,
+"name": "Scales Of Justice",
+"text": "+10% damage; +10% damage; +0.05 accuracy; +0.06 protection; -0.04 crit; -0.06 dodge; -4 speed"
+},
+{
+"id": 760134,
+"name": "Wounding Helmet",
+"text": "+20% damage with melee skills; +20% damage with melee skills; -25% move chance. Class: bounty_hunter"
+},
+{
+"id": 760714,
+"name": "PILFER",
+"text": "Camping skill. loot S 1 (self). Uses per camp: 1."
+},
+{
+"id": 760123,
+"name": "Medic's Greaves",
+"text": "+33% hp heal percent. Class: arbalest"
+},
+{
+"id": 759760,
+"name": "Affliction",
+"text": "A temporary condition that may be triggered when a hero reaches 100 stress. Afflicted heroes act on their own and suffer stat penalties. Afflictions can be cured in town by reducing the hero's stress at the Abbey or the Tavern."
+},
+{
+"id": 760324,
+"name": "Zephyr",
+"text": "+13% hp heal percent; +4 speed; -10% stress dmg received percent; -0.04 crit in the first round; -10% damage vs beast enemies; -10% damage vs beast enemies; -0.05 accuracy vs unholy enemies"
+},
+{
+"id": 760326,
+"name": "Canis Doctrine",
+"text": "-5% stress dmg received percent; +10% hp heal percent while camping; +6% monsters surprise chance while in rank ; -8% resolve check percent while light below 26"
+},
+{
+"id": 760411,
+"name": "Beneficence",
+"text": "-15% stress dmg received percent; -13% hp heal percent while light below 26"
+},
+{
+"id": 760604,
+"name": "Scurvy",
+"text": "-40% bleed resistance; -40% move resistance"
+},
+{
+"id": 760400,
+"name": "Starbreaker",
+"text": "+4 speed; +4 speed; +4 speed; -13% hp heal percent in the first round; -13% hp heal percent in the first round; -13% hp heal percent in the first round"
+},
+{
+"id": 760108,
+"name": "Cursed Incense",
+"text": "+40% debuff chance; +20% move chance; -5% max HP. Class: occultist"
+},
+{
+"id": 760242,
+"name": "The Spade Of Aces",
+"text": "+6% death_blow resistance; +0.05 crit at Death's Door; +17% hp heal received percent at Death's Door; -10% stun resistance in the first round; -10% debuff resistance while HP above 0.75; -8% resolve check percent while in rank "
+},
+{
+"id": 760387,
+"name": "Steel Toad",
+"text": "+0.03 protection; +0.05 dodge while in rank ; +0.04 accuracy while in rank ; -0.04 crit in the first round"
+},
+{
+"id": 759791,
+"name": "Resolve XP",
+"text": "Earning Resolve XP progresses a hero towards the next Resolve Level. Resolve XP can only be earned by completing quests. Heroes do not earn Resolve XP if they abandon or fail quests."
+},
+{
+"id": 760003,
+"name": "Shambler",
+"text": "Takes 2 ranks. Skills: Obdurous Advancement: Melee skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3, 4. Moves self (back/forward) 0 1. Deals damage 1-1. Effects: bleed 2 per round for 3 rounds; summon shambler_tentacle_A. | Undulating Withdrawal: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3, 4. Moves self (back/forward) 1 0. Deals damage 1-1. Effects: blight 2 per round for 3 rounds; summon shambler_tentacle_A. | Stentorious Lament: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3, 4. Deals damage 1-1. Effects: stress +10; Shuffle Party 1."
+},
+{
+"id": 760423,
+"name": "Kistras Prayer Book",
+"text": "+10% hp heal percent; -10% stress dmg received percent while light above 75; +10% move resistance while light above 75; -10% damage; -10% damage; +10% stress dmg received percent while HP below 0.25"
+},
+{
+"id": 759949,
+"name": "Heart of Darkness",
+"text": "Takes 4 ranks. Skills: Come Unto Your Maker: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 11-23. Effects: kill. | Know This: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Effects: stress +22. | Puncture: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 13-16. Effects: bleed 5 per round for 3 rounds; stress +10. | Dissolution: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 13-16. Effects: stun; blight 5 per round for 3 rounds; stress +10."
+},
+{
+"id": 760336,
+"name": "Brutal Hairpin",
+"text": "+15% damage; +15% damage; -10% bleed resistance while camping"
+},
+{
+"id": 760371,
+"name": "Bulwark Of Faith",
+"text": "+7% hp heal percent; +8% stun resistance not in the first round; +0.05 protection while in rank ; -4% scouting chance while light below 26"
+},
+{
+"id": 759953,
+"name": "Drowned Thrall",
+"text": "Skills: Gargling Grab: Melee skill. Usable from ranks 1, 2, 3, 4. Targets enemy ranks 1, 2. Deals damage 5-9. Effects: stress +10. | The Revenge: Melee skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 4, 3, 2, 1. Deals damage 5-13. Effects: kill (self); stress +5."
+},
+{
+"id": 759861,
+"name": "Battlefield Bandage",
+"text": "Skill. Usable from ranks 4, 3. Targets ally ranks 1, 2, 3. Heals 4 5. Effects: Arb Stacking Heal 5."
+},
+{
+"id": 760337,
+"name": "Knights Folly",
+"text": "+6% resolve check percent; +0.04 crit while in rank ; +10% damage while in rank ; +10% damage while in rank ; -0.06 dodge while light below 26; -0.06 protection while light below 26"
+},
+{
+"id": 760820,
+"name": "Tutorial Shovel",
+"text": "Possible outcomes: Loot 100.00% (SHOVELONLY)"
+},
+{
+"id": 759796,
+"name": "Stun",
+"text": "An effect that forces the hero or enemy to pass on his/her next turn."
+},
+{
+"id": 760462,
+"name": "Tome Of Agh Be",
+"text": "+15% max HP; -13% hp heal received percent"
+},
+{
+"id": 760042,
+"name": "Ancestor's Tentacle Idol",
+"text": "+25% resolve check percent"
+},
+{
+"id": 760447,
+"name": "Leaders Crest",
+"text": "+0.05 protection; -10% stress dmg received percent while in rank ; +10% damage while in rank ; +10% damage while in rank ; -0.05 accuracy while in rank ; -10% damage while in rank ; -10% damage while in rank "
+},
+{
+"id": 760733,
+"name": "SELF-MEDICATE",
+"text": "Camping skill. stress heal amount 10 (self); health heal max health percent 0.2 (self); remove poison (self); remove bleeding (self); buff: +0.1 accuracy (self). Uses per camp: 1."
+},
+{
+"id": 760518,
+"name": "T Doh Teddy Bear",
+"text": "-15% stress dmg received percent; -10% trap resistance not in the first round"
+},
+{
+"id": 760161,
+"name": "Blood Charm",
+"text": "+30% bleed resistance"
+},
+{
+"id": 760296,
+"name": "The Glass Of Milk",
+"text": "+10% max HP; +0.06 protection; +10% stress dmg received percent; +10% stress dmg received percent"
+},
+{
+"id": 760627,
+"name": "Compulsive",
+"text": "Suffers intense need to do specific actions.. Interacts with All curios"
+},
+{
+"id": 759899,
+"name": "Hound's Harry",
+"text": "Ranged skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3, 4. Deals damage (modifier -80%). Effects: bleed 3 per round for 3 rounds."
+},
+{
+"id": 760303,
+"name": "Vial Of Tears",
+"text": "+10% damage; +10% damage; +13% debuff resistance while light above 75; +0.05 accuracy; -8% monsters surprise chance; -13% hp heal received percent; -6% death_blow resistance while light above 75"
+},
+{
+"id": 760346,
+"name": "Trouble",
+"text": "+10% damage with melee skills; +10% damage with melee skills; +0.04 crit while in rank ; +6% resolve check percent; -0.06 dodge while in rank ; -10% move resistance while in rank "
+},
+{
+"id": 760206,
+"name": "Medic's Boots",
+"text": "+33% hp heal percent. Class: musketeer"
+},
+{
+"id": 760141,
+"name": "Deteriorating Bracer",
+"text": "+0.1 dodge while HP above 0.75; -0.06 dodge while HP below 0.5"
+},
+{
+"id": 760193,
+"name": "Disease Charm",
+"text": "+20% disease resistance; -0.02 dodge"
+},
+{
+"id": 760268,
+"name": "Philosophers Wisdom",
+"text": "+8% resolve check percent; +0.06 accuracy while in rank ; +10% stress dmg received percent"
+},
+{
+"id": 760133,
+"name": "Slippery Boots",
+"text": "+0.04 dodge; -20% move resistance"
+},
+{
+"id": 760323,
+"name": "Avalon",
+"text": "+6 speed; +0.06 crit; -0.06 protection in the first round; -10% disease resistance while in rank ; -10% poison resistance while in rank "
+},
+{
+"id": 760410,
+"name": "Bloodstained Bounty List",
+"text": "+0.05 crit vs targets with tagged; +13% damage vs targets with tagged; +13% damage vs targets with tagged; -0.05 accuracy vs targets with tagged"
+},
+{
+"id": 760603,
+"name": "Hysterical Blindness",
+"text": "-0.2 accuracy while stress above 70"
+},
+{
+"id": 760399,
+"name": "Torchwood",
+"text": "+0.05 protection while in rank ; +0.05 protection while in rank ; +8% move resistance while in rank ; -10% max HP"
+},
+{
+"id": 760107,
+"name": "Longevity Eyepatch",
+"text": "+15% max HP; -1 speed. Class: man_at_arms"
+},
+{
+"id": 760241,
+"name": "Tome Of The Dawn",
+"text": "+0.11 protection while light below 26; +23% hp heal percent while light below 26; -10% debuff resistance while in rank ; -8% resolve check percent while in rank ; -8% monsters surprise chance while in rank "
+},
+{
+"id": 760386,
+"name": "Rough-Hewn Heart",
+"text": "+10% max HP; +16% resolve xp bonus percent; +0.06 protection; -0.06 dodge; -10% trap resistance; -8% monsters surprise chance"
+},
+{
+"id": 760422,
+"name": "Danos Glory",
+"text": "+0.04 crit; +0.05 accuracy; +4 speed; -4% scouting chance in the first round; -10% stun resistance in the first round; -8% resolve check percent in the first round"
+},
+{
+"id": 759948,
+"name": "Imperfect Reflection",
+"text": "Skills: It Chooses: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 1-3. Effects: mark target for 3 rounds; stun. | We Are the Same: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 2-2. Effects: stress +8."
+},
+{
+"id": 760335,
+"name": "Arbalest Accolade",
+"text": "+0.03 dodge; +5% damage; +5% damage; +4% resolve check percent; -10% move resistance in the first round"
+},
+{
+"id": 759952,
+"name": "Ancestor",
+"text": "Summons allies. Skills: Perfect Replication: Ranged skill. Usable from ranks 1, 2, 3, 4. Effects: summon ancestor_perfect_D. | Sporadic Reproduction: Ranged skill. Usable from ranks 1, 2, 3, 4. Effects: summon ancestor_perfect_D ancestor_flawed_D. | Imperfect Reproduction: Ranged skill. Usable from ranks 1, 2, 3, 4. Effects: summon ancestor_perfect_D ancestor_flawed_D. | Time Heals All: Ranged skill. Usable from ranks 4, 3, 2. Targets all of ally ranks 1, 2, 3, 4. Heals 7 11. | kill self: Ranged skill. Usable from ranks 1, 2, 3, 4."
+},
+{
+"id": 759860,
+"name": "Blindfire",
+"text": "Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage (modifier -10%). Effects: +8 speed (self)."
+},
+{
+"id": 760461,
+"name": "Amiga",
+"text": "+0.06 protection; +4 speed; +5 speed while HP below 0.25; -10% damage; -10% damage; -0.04 crit; -13% hp heal percent while light below 26"
+},
+{
+"id": 760599,
+"name": "Vertigo",
+"text": "-50% move resistance"
+},
+{
+"id": 760532,
+"name": "Clumsy",
+"text": "-0.05 dodge"
+},
+{
+"id": 760591,
+"name": "Wasting Sickness",
+"text": "Life drains with each step...; -50% disease resistance"
+},
+{
+"id": 759977,
+"name": "Mammoth Cyst",
+"text": "Takes 3 ranks. Acts 2 times per round. Summons allies. Skills: Bulging Gaze: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 8-13. Effects: stress +15; -20% damage. | Digestion: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 8-17. Effects: blight 8 per round for 3 rounds. | Revivify: Melee skill. Usable from ranks 4, 3, 2, 1. Heals 10 20. Effects: +25% damage (self). | Summon: Melee skill. Usable from ranks 4, 3, 2, 1. Targets ally ranks 1, 2, 3, 4. Effects: summon cell_white_D."
+},
+{
+"id": 760288,
+"name": "Silent",
+"text": "+13% damage while HP above 0.75; +13% damage while HP above 0.75; +0.06 accuracy while light above 75; +4 speed; -0.06 protection while light below 26; -0.06 dodge vs beast enemies; -0.06 protection at Death's Door"
+},
+{
+"id": 760370,
+"name": "Lost Ring Of The Serpent",
+"text": "+20% poison resistance; -8% resolve check percent; -6% death_blow resistance at Death's Door; -13% hp heal received percent while camping"
+}
+]

@@ -1,0 +1,590 @@
+{
+"740614": [
+[
+"enemy_benefit",
+"gains 1 Power"
+],
+[
+"stat_gain",
+"gains 1 Power"
+]
+],
+"740617": [
+[
+"aura",
+"Other creatures within a circuit completed by a card bearing this sigil gain 1 Power"
+],
+[
+"stat_gain",
+"gain 1 Power"
+],
+[
+"link_formation",
+"within a circuit"
+]
+],
+"740621": [
+[
+"multi_attack",
+"attacks twice in a single turn"
+],
+[
+"multi_target_attack",
+"strike each opposing space to the left and right"
+]
+],
+"740623": [
+[
+"death_trigger",
+"perishes"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+],
+[
+"buff",
+"gain the Detonator sigil"
+]
+],
+"740630": [
+[
+"death_trigger",
+"perishes"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+],
+[
+"debuff",
+"gain the Brittle sigil"
+]
+],
+"740643": [
+[
+"activated",
+"Activate: Pay 1 Energy"
+],
+[
+"damage",
+"deal 1 damage to the creature across"
+],
+[
+"ping",
+"deal 1 damage"
+]
+],
+"740644": [
+[
+"activated",
+"Activate: Pay 2 Bones"
+],
+[
+"stat_gain",
+"increase the Power and Health"
+],
+[
+"scope_self",
+"of a card bearing this sigil"
+]
+],
+"740646": [
+[
+"transform",
+"hatches when drawn"
+],
+[
+"deck_condition",
+"in the Health of creatures in your deck"
+],
+[
+"variety_payoff",
+"the numbers 1 to 5 are represented"
+]
+],
+"740647": [
+[
+"transform",
+"grow into a more powerful form"
+],
+[
+"delayed",
+"after 1 turn on the board"
+],
+[
+"turn_start",
+"At the beginning of the owner's turn"
+]
+],
+"740652": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"shield",
+"gain Nano Armor"
+],
+[
+"scope_multi",
+"all Gem Vessels"
+]
+],
+"740661": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"permanent_loss",
+"really deleted from your Hard Drive"
+]
+],
+"740663": [
+[
+"on_damaged",
+"When a card bearing this sigil would be struck"
+],
+[
+"summon",
+"a Tail is created in its place"
+],
+[
+"movement",
+"a card bearing this sigil moves to the right"
+],
+[
+"protection",
+"evade a direct hit"
+]
+],
+"740664": [
+[
+"direct_damage",
+"deals damage directly"
+],
+[
+"draw",
+"draw a card for each damage dealt"
+]
+],
+"740666": [
+[
+"sacrifice",
+"is sacrificed"
+],
+[
+"cheat_death",
+"it does not perish"
+],
+[
+"transform",
+"sacrificing the card enough times will cause it to transform"
+]
+],
+"740667": [
+[
+"activated",
+"Activate: Pay 2 Bones"
+],
+[
+"heal",
+"to heal a card bearing this sigil"
+],
+[
+"scope_self",
+"a card bearing this sigil"
+]
+],
+"740668": [
+[
+"on_play",
+"is played"
+],
+[
+"draw",
+"the player will draw cards equal to the number of Mox Cards"
+],
+[
+"condition_count",
+"equal to the number of Mox Cards"
+]
+],
+"740671": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"resource_gain",
+"a (Green, Orange, or Blue) Gem is provided to the owner"
+],
+[
+"multiple_resources",
+"Green, Orange, or Blue"
+]
+],
+"740673": [
+[
+"multi_target_attack",
+"strike each opposing space that is occupied by a creature"
+],
+[
+"direct_damage",
+"It will strike directly"
+]
+],
+"740679": [
+[
+"immunity",
+"If a creature would attack a card bearing this sigil, it does not"
+]
+],
+"740681": [
+[
+"aura",
+"opposing creatures also grant Bones upon death"
+],
+[
+"resource_gain",
+"opposing creatures also grant Bones upon death"
+]
+],
+"740684": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+],
+[
+"shield",
+"gain the Nano Armor sigil"
+]
+],
+"740696": [
+[
+"turn_start",
+"At the beginning of its owner's turn"
+],
+[
+"friendly_fire",
+"Squirrels and Rabbits on the player's side of the field to be removed from play"
+]
+],
+"740698": [
+[
+"stances",
+"will transform to, or from, Beast mode"
+],
+[
+"turn_start",
+"At the beginning of your turn"
+]
+],
+"740700": [
+[
+"link_formation",
+"within a circuit"
+],
+[
+"multi_target_attack",
+"strike each opposing space to the left, right and center of it"
+],
+[
+"multi_attack",
+"strike each opposing space to the left, right and center of it"
+]
+],
+"740703": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"revive",
+"return to the owner's hand after death"
+]
+],
+"740704": [
+[
+"on_damaged",
+"Once a card bearing this sigil is struck"
+],
+[
+"draw",
+"draw a card from your Empty Vessel pile"
+],
+[
+"side_deck",
+"Empty Vessel pile"
+]
+],
+"740705": [
+[
+"stealth",
+"submerged for the enemy's turn"
+],
+[
+"transform",
+"it transforms into a random Tentacle card"
+],
+[
+"random_effect",
+"random Tentacle card"
+]
+],
+"740706": [
+[
+"sacrifice",
+"when sacrificed"
+],
+[
+"resource_gain",
+"count as 3 Blood rather than 1 Blood when sacrificed"
+]
+],
+"740710": [
+[
+"variable_stats",
+"Power equal to the number of ants on their side of the board"
+],
+[
+"tribal",
+"number of ants on their side of the board"
+]
+],
+"740735": [
+[
+"sacrifice",
+"Worthy Sacrifice"
+],
+[
+"resource_gain",
+"Worthy Sacrifice"
+]
+],
+"740747": [
+[
+"sacrifice",
+"Worthy Sacrifice"
+],
+[
+"resource_gain",
+"Worthy Sacrifice"
+],
+[
+"generate_cards",
+"A black goat is created in your hand"
+]
+],
+"740748": [
+[
+"death_trigger",
+"Frozen Away"
+],
+[
+"summon",
+"Frozen Away"
+],
+[
+"generate_cards",
+"A frozen opossum is created in your hand"
+]
+],
+"740755": [
+[
+"counterattack",
+"Sharp Quills"
+],
+[
+"adjacency",
+"If placed on the left of the right Obol"
+],
+[
+"resource_gain",
+"gives the player one Ancient Obol"
+]
+],
+"740756": [
+[
+"resource_gain",
+"Bone King"
+],
+[
+"adjacency",
+"If placed on the right of the left Obol"
+],
+[
+"resource_gain",
+"gives the player one Ancient Obol"
+]
+],
+"740757": [
+[
+"aura",
+"Attack Conduit"
+],
+[
+"stat_gain",
+"Attack Conduit"
+],
+[
+"link_formation",
+"Attack Conduit"
+]
+],
+"740768": [
+[
+"revive",
+"Unkillable"
+]
+],
+"740775": [
+[
+"discard",
+"Handy"
+],
+[
+"draw",
+"Handy"
+]
+],
+"740778": [
+[
+"multi_attack",
+"Bifurcated Strike"
+],
+[
+"multi_target_attack",
+"Bifurcated Strike"
+]
+],
+"740779": [
+[
+"death_trigger",
+"Frozen Away"
+],
+[
+"summon",
+"Frozen Away"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740789": [
+[
+"resource_advantage",
+"Energy Conduit"
+],
+[
+"link_formation",
+"Energy Conduit"
+]
+],
+"740800": [
+[
+"immunity",
+"Repulsive"
+]
+],
+"740803": [
+[
+"death_trigger",
+"Frozen Away"
+],
+[
+"summon",
+"Frozen Away"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740804": [
+[
+"stances",
+"Transformer"
+]
+],
+"740833": [
+[
+"multi_attack",
+"Bifurcated Strike"
+],
+[
+"multi_target_attack",
+"Bifurcated Strike"
+],
+[
+"multi_attack",
+"Trifurcated Strike"
+],
+[
+"multi_target_attack",
+"Trifurcated Strike"
+]
+],
+"740834": [
+[
+"immunity",
+"Repulsive"
+]
+],
+"740849": [
+[
+"sacrifice",
+"Worthy Sacrifice"
+],
+[
+"resource_gain",
+"Worthy Sacrifice"
+]
+],
+"740854": [
+[
+"multi_attack",
+"Bifurcated Strike"
+],
+[
+"multi_target_attack",
+"Bifurcated Strike"
+]
+],
+"740860": [
+[
+"death_trigger",
+"Frozen Away"
+],
+[
+"summon",
+"Frozen Away"
+]
+],
+"740862": [
+[
+"movement",
+"Burrower"
+],
+[
+"blocking",
+"block any landborne attacker"
+]
+],
+"740867": [
+[
+"movement",
+"Hefty"
+],
+[
+"forced_movement",
+"Hefty"
+]
+]
+}

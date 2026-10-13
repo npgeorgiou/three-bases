@@ -1,0 +1,368 @@
+{
+"740713": [
+[
+"variable_stats",
+"causes a card's attack stat to increase the closer it is to the combat bell"
+],
+[
+"adjacency",
+"each Chime adjacent to it"
+]
+],
+"740714": [
+[
+"variable_stats",
+"Power equal to the Power of a card opposing it"
+]
+],
+"740715": [
+[
+"blocking",
+"Mighty Leap"
+]
+],
+"740716": [
+[
+"movement",
+"Sprinter"
+]
+],
+"740717": [
+[
+"deathtouch",
+"Touch of Death"
+]
+],
+"740718": [
+[
+"enemy_benefit",
+"Annoying"
+]
+],
+"740719": [
+[
+"aura",
+"Leader"
+]
+],
+"740720": [],
+"740722": [
+[
+"random_ability",
+"Amorphous"
+]
+],
+"740723": [
+[
+"random_ability",
+"Amorphous"
+]
+],
+"740724": [
+[
+"enemy_benefit",
+"Annoying"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740725": [
+[
+"generate_cards",
+"Ant Spawner"
+]
+],
+"740726": [
+[
+"stealth",
+"Waterborne"
+]
+],
+"740728": [
+[
+"terrain",
+"Terrain"
+]
+],
+"740729": [
+[
+"evasion",
+"Airborne"
+]
+],
+"740730": [
+[
+"evasion",
+"Airborne"
+]
+],
+"740731": [
+[
+"summon",
+"Dam Builder"
+]
+],
+"740733": [
+[
+"generate_cards",
+"Bees Within"
+]
+],
+"740734": [],
+"740735": [
+[
+"sacrifice",
+"Worthy Sacrifice"
+]
+],
+"740736": [
+[
+"resource_gain",
+"Blue Mox"
+],
+[
+"resource_gain",
+"Green Mox"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740737": [
+[
+"resource_gain",
+"Green Mox"
+],
+[
+"resource_gain",
+"Blue Mox"
+]
+],
+"740738": [
+[
+"movement",
+"Guardian"
+]
+],
+"740739": [
+[
+"draw",
+"Mental Gemnastics"
+]
+],
+"740740": [
+[
+"draw",
+"Mental Gemnastics"
+]
+],
+"740741": [
+[
+"movement",
+"Guardian"
+]
+],
+"740742": [
+[
+"death_trigger",
+"Bomb Latch"
+]
+],
+"740743": [
+[
+"stat_gain",
+"Enlarge"
+]
+],
+"740744": [
+[
+"resource_conversion",
+"Bonehorn"
+]
+],
+"740745": [
+[
+"movement",
+"Guardian"
+]
+],
+"740747": [
+[
+"sacrifice",
+"Worthy Sacrifice"
+],
+[
+"generate_cards",
+"A black goat is created in your hand"
+]
+],
+"740748": [
+[
+"summon",
+"Frozen Away"
+],
+[
+"generate_cards",
+"A frozen opossum is created in your hand"
+]
+],
+"740749": [
+[
+"immunity",
+"Made of Stone"
+],
+[
+"generate_cards",
+"A boulder is created in your hand"
+]
+],
+"740750": [
+[
+"immunity",
+"Made Of Stone"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740752": [
+[
+"terrain",
+"Terrain"
+]
+],
+"740753": [
+[
+"aoe_damage",
+"Detonator"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740754": [
+[
+"terrain",
+"Terrain"
+]
+],
+"740755": [
+[
+"counterattack",
+"Sharp Quills"
+],
+[
+"adjacency",
+"If placed on the left of the right Obol"
+],
+[
+"resource_gain",
+"gives the player one Ancient Obol"
+]
+],
+"740756": [
+[
+"resource_gain",
+"Bone King"
+],
+[
+"adjacency",
+"If placed on the right of the left Obol"
+],
+[
+"resource_gain",
+"gives the player one Ancient Obol"
+]
+],
+"740757": [
+[
+"stat_gain",
+"Attack Conduit"
+],
+[
+"link_formation",
+"Attack Conduit"
+]
+],
+"740758": [
+[
+"blocking",
+"Mighty Leap"
+]
+],
+"740759": [
+[
+"movement",
+"Burrower"
+],
+[
+"destroy",
+"Steel Trap"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740760": [
+[
+"draw",
+"Vessel Printer"
+]
+],
+"740761": [
+[
+"terrain",
+"Terrain"
+]
+],
+"740762": [
+[
+"cheat_death",
+"Many Lives"
+]
+],
+"740764": [
+[
+"cheat_death",
+"Many Lives"
+]
+],
+"740765": [
+[
+"evasion",
+"Airborne"
+],
+[
+"cheat_death",
+"Many Lives"
+]
+],
+"740768": [
+[
+"revive",
+"Unkillable"
+]
+],
+"740769": [
+[
+"link_formation",
+"Null Conduit"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740770": [
+[
+"free_play",
+"Corpse Eater"
+]
+]
+}

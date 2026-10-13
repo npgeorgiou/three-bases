@@ -1,0 +1,150 @@
+760829 | Flying | Flying units can be positioned at any terrain tile, except mountains and other units. Mountains and unfriendly units can be overflown. Flying mechs cannot be waterlogged, and all flying units are not affected by lava or A.C.I.D. tiles, because they don't submerge. Flying units are not immune to A.C.I.D. pools, fire, or emerging Vek.
+   A: [["movement", "Flying units can be positioned at any terrain tile"], ["immunity", "cannot be waterlogged"]]
+   B: [["terrain", "Flying units can be positioned at any terrain tile"], ["evasion", "Mountains and unfriendly units can be overflown"], ["immunity", "Flying mechs cannot be waterlogged"], ["immunity", "not affected by lava or A.C.I.D. tiles"]]
+760835 | Boost | This unit's damage is increased by 1 on its next attack. Affects all targets of the attack, including self damage. Removed upon any ability use, including non-damaging abilities and repairing; repairing while Boosted will heal 2 points.
+   A: [["stat_gain", "damage is increased by 1"], ["heal", "will heal 2 points"]]
+   B: [["buff", "This unit's damage is increased by 1 on its next attack"], ["heal", "repairing while Boosted will heal 2 points"]]
+760837 | Frozen | Units that are frozen are unable to move or attack, but can free themselves by repairing. Any damage to a frozen unit is negated, but will free the unit.
+   A: [["disable", "unable to move or attack"], ["immunity", "Any damage to a frozen unit is negated"]]
+   B: [["disable", "unable to move or attack"], ["shield", "Any damage to a frozen unit is negated"]]
+760848 | Explosive Decay | Explodes on death, dealing 1 damage to adjacent tiles. This damage ignores Armor!
+   A: [["death_trigger", "Explodes on death"], ["aoe_damage", "dealing 1 damage to adjacent tiles"], ["piercing", "ignores Armor"], ["adjacency", "adjacent tiles"]]
+   B: [["death_trigger", "Explodes on death"], ["aoe_damage", "dealing 1 damage to adjacent tiles"], ["piercing", "This damage ignores Armor"]]
+760851 | Hive Targeted | The Psion Tyrant will do 1 damage all friendly units every turn.
+   A: [["friendly_fire", "1 damage all friendly units"]]
+   B: [["aoe_damage", "do 1 damage all friendly units every turn"]]
+760852 | Invigorating Spores | The Soldier Psion is providing +1 HP to all Vek.
+   A: [["aura", "providing +1 HP to all Vek"]]
+   B: [["aura", "providing +1 HP to all Vek"], ["stat_gain", "+1 HP"]]
+760853 | Massive | Massive units can walk in Water (but Water will prevent shooting).
+   A: [["movement", "walk in Water"]]
+   B: [["movement", "Massive units can walk in Water"], ["suppress", "Water will prevent shooting"]]
+760854 | Overpowered | The Psion Abomination is enhancing all Vek. They gain +1 HP, regeneration, and explode on death.
+   A: [["aura", "enhancing all Vek"], ["regeneration", "regeneration"], ["death_trigger", "explode on death"]]
+   B: [["aura", "enhancing all Vek"], ["stat_gain", "+1 HP"], ["regeneration", "regeneration"], ["death_trigger", "explode on death"]]
+760856 | Self-Repairing | If damaged, this unit will Shield itself and prepare to heal.
+   A: [["on_damaged", "If damaged"], ["shield", "Shield itself"], ["delayed", "prepare to heal"]]
+   B: [["on_damaged", "If damaged"], ["shield", "Shield itself"], ["heal", "prepare to heal"]]
+760861 | Defense Mech | Health 2, move 4. Weapons/skills: Attraction Pulse: Pull target towards you 1 tile. | Shield Projector: Shield tiles from damage. (2 uses per battle.). Special: Flying: Flying units can move over any terrain tile..
+   A: [["forced_movement", "Pull target towards you 1 tile"], ["protection", "Shield tiles from damage"], ["exhaust", "2 uses per battle"], ["movement", "move over any terrain tile"]]
+   B: [["forced_movement", "Pull target towards you 1 tile"], ["protection", "Shield tiles from damage"], ["movement", "Flying units can move over any terrain tile"]]
+760862 | Jet Mech | Health 2, move 4. Weapons/skills: Aerial Bombs: Fly over a target, dropping an explosive smoke bomb.. Special: Flying: Flying units can move over any terrain tile..
+   A: [["movement", "Fly over a target"]]
+   B: [["damage", "dropping an explosive smoke bomb"], ["movement", "Flying units can move over any terrain tile"]]
+760865 | Artillery Mech | Health 2, move 3. Weapons/skills: Artemis Artillery: Powerful artillery strike, damaging a single tile and pushing adjacent tiles..
+   A: [["ranged", "Powerful artillery strike"], ["damage", "damaging a single tile"], ["multi_target_attack", "pushing adjacent tiles"], ["forced_movement", "pushing adjacent tiles"]]
+   B: [["ranged", "Artemis Artillery"], ["damage", "damaging a single tile"], ["forced_movement", "pushing adjacent tiles"]]
+760867 | Water Tile | Units cannot attack in Water. Most non-flying enemies die in Water.
+   A: [["suppress", "Units cannot attack in Water"], ["terrain", "Most non-flying enemies die in Water"]]
+   B: [["terrain", "Water Tile"], ["suppress", "Units cannot attack in Water"], ["destroy", "Most non-flying enemies die in Water"]]
+760870 | Forest Tile | If damaged, lights on Fire.; Lights units on Fire.
+   A: [["on_damaged", "If damaged"], ["damage_over_time", "Lights units on Fire"], ["terrain", "Forest Tile"]]
+   B: [["terrain", "Forest Tile"], ["on_damaged", "If damaged"]]
+760878 | Vek | The Vek are the main enemies encountered in Into The Breach. Gameplay: The main goal of Into the Breach is to make sure that the Vek do not destroy all of the grid power. Each island has a set variety of Vek that can spawn, one of which is a Psion, a supporting unit that grants a passive bonus to others. They emerge from the ground on certain tiles, which can be intercepted at the cost of 1 health during the enemy turn. Before the player turn any active Vek will move to a certain tile and prepare to attack it, aiming for either a mech, building or objective. These attacks are executed during the enemy turn unless they are cancelled or the Vek is killed beforehand. Vek are divided into five main groups: *Common Vek are those that can spawn on any island and make up most of the spawns on a mission. All of them have a soft limit on spawns per mission that can be bypassed if the spawning algorithm needs to. * Rare Vek are those whose attacks are more unique than common ones and do not appear on early islands. *Psions, which provide passive bonuses to other Vek when spawned. Note that the Psion itself does not benefit from the passive bonus. *Minor Vek, which are spawned by other Vek, are typically very weak, and bypass the spawning algorithm. They are not worth any experience and are not affected by Psion bonuses. *Hive Leaders, bosses found on the final mission of each island, the Volcanic Hive and normal missions on the fourth island in Unfair difficulty. Rare Vek and Psions ha
+   A: [["summon", "spawned by other Vek"], ["aura", "provide passive bonuses to other Vek"], ["telegraphed_threats", "prepare to attack it"], ["boss_phases", "Hive Leaders, bosses"]]
+   B: [["life_track", "make sure that the Vek do not destroy all of the grid power"], ["spawn_blocking", "which can be intercepted"], ["telegraphed_threats", "prepare to attack it"]]
+760879 | Alpha Beetle | Health 5, move 2. Weapons/skills: Sharpened Pincers: Charge forward to deal 3 damage and push the target.. The Alpha Beetle charges forward in a line, dealing 3 damage and pushing the first target it hits.
+   A: [["damage", "deal 3 damage"], ["forced_movement", "push the target"], ["area_templates", "charges forward in a line"]]
+   B: [["damage", "deal 3 damage"], ["forced_movement", "push the target"]]
+760881 | Beetle | Health 4, move 2. Weapons/skills: Pincers: Charge forward to deal 1 damage and push the target.. The Beetle charges forward in a line, dealing 1 damage and pushing the first target it hits. Its 4 health is the most of any non-Alpha Vek.
+   A: [["damage", "deal 1 damage"], ["forced_movement", "push the target"], ["area_templates", "charges forward in a line"]]
+   B: [["damage", "deal 1 damage"], ["forced_movement", "push the target"]]
+760890 | Ralph Karlsson | Pilot ability: Experienced: Gain +2 bonus XP per kill.
+   A: [["resource_gain", "+2 bonus XP"], ["on_kill", "per kill"]]
+   B: [["stat_gain", "Gain +2 bonus XP per kill"], ["on_kill", "per kill"]]
+760892 | Movement | Movement describes on how many tiles a Mech can move each turn.
+   A: [["movement", "how many tiles a Mech can move each turn"]]
+   B: []
+760894 | Grid Power | Grid Power is reduced when Civilian Buildings are damaged. When it reaches zero, the player loses and the current run ends. The Power Grid indicator shows how much Grid Power remains. The player begins the game with 5 Grid Power and may have up to 7. If Grid Power would be increased beyond 7, Grid Defense increases instead. Increases and decreases to Grid Power persist between Islands. Gaining Grid Power: Grid Power can be regained by the following means: * Some missions grant Grid Power as a Resource reward for completing bonus objective(s). * *After finishing a Corporate Island, the player can buy 1 Grid Power for every 1 Corporate Reputation point spent. * *When completing a Perfect Island, the player can choose +2 Grid Power as their reward. * *The Grid Charger weapon, if found, restores 1 Grid Power when used successfully. (* On Unfair difficulty, this gain is doubled.) Grid Defense: Grid Defense is the percentage chance that a building tile will resist damage. Grid Defense starts at 15%. (On Unfair difficulty, Grid Defense starts at 0% but can still be increased.) Grid Defense can be increased by the following means: * Overpower Bonus. Each point of Grid Power obtained when the Power Grid is full increases Grid Defense by 2% (the first 5 times), then by 1%, up to a maximum of +25%. *Pilot Bonus. While equipped, a pilot with the +3 Grid DEF skill increases Grid Defense by that amount. With three pilots, this bonus can reach +9%. Combined, these bonuses can raise Grid Def
+   A: [["life_track", "When it reaches zero, the player loses"], ["resource_gain", "Grid Power can be regained"], ["saving_throws", "chance that a building tile will resist damage"], ["run_structure", "persist between Islands"]]
+   B: [["life_track", "When it reaches zero, the player loses and the current run ends"], ["resource_gain", "Grid Power can be regained"], ["saving_throws", "Grid Defense is the percentage chance that a building tile will resist damage"], ["run_structure", "persist between Islands"], ["difficulty_modifiers", "On Unfair difficulty"]]
+760895 | Corporate Reputation | Corporate Reputation is one of the Resources in Into the Breach. Corporate Reputation Points are earned for successfully completing objectives during Missions. The Corporate Store becomes available after fighting the Hive Leader of an island. Corporate Reputation Points cannot be carried over to another island. Corporate Store: There are always 2-4 Weapons available at a cost of 2 Corporate Reputation. Reactor Cores can be bought for 3 Corporate Reputation each. Grid Power can be purchased for 1 Corporate Reputation each to repair the Power Grid or to Overpower Grid Defense. Weapons can be donated for 1 Corporate Reputation. Pilots can be donated for 1 Corporate Reputation, unless they have Popular Hero, in which case they will be donated for 4 instead.
+   A: [["resource_gain", "earned for successfully completing objectives"], ["shop_gold", "Corporate Store"], ["resource_conversion", "Grid Power can be purchased for 1 Corporate Reputation"]]
+   B: [["shop_gold", "Corporate Store"], ["resource_conversion", "Grid Power can be purchased for 1 Corporate Reputation each"], ["donate", "Weapons can be donated for 1 Corporate Reputation"], ["resource_gain", "Corporate Reputation Points are earned for successfully completing objectives"]]
+760897 | Bethany Jones | Pilot ability: Starting Shield: Mech starts every mission with a Shield.
+   A: [["shield", "Mech starts every mission with a Shield"]]
+   B: [["shield", "Mech starts every mission with a Shield"], ["start_of_game", "starts every mission"]]
+760899 | Harold Schmidt | Pilot ability: Frenzied Repair: Push adjacent tiles when repairing.
+   A: [["forced_movement", "Push adjacent tiles when repairing"], ["adjacency", "adjacent tiles"]]
+   B: [["forced_movement", "Push adjacent tiles when repairing"]]
+760900 | Prospero | Pilot ability: Flying: Mech gains Flying. Requires 1 Power.
+   A: [["buff", "Mech gains Flying"]]
+   B: [["evasion", "Mech gains Flying"], ["resource_gain", "Requires 1 Power"]]
+760901 | Lily Reed | Pilot ability: Impulsive: Gain +3 Move on first turn of every mission.
+   A: [["stat_gain", "+3 Move"], ["turn_number", "first turn of every mission"]]
+   B: [["temporary_buff", "Gain +3 Move on first turn of every mission"]]
+760905 | Gana | Pilot ability: Preemptive Strike: Deploy anywhere on the map, damaging adjacent enemies. Requires 1 Power.
+   A: [["placement_rules", "Deploy anywhere on the map"], ["damage", "damaging adjacent enemies"], ["adjacency", "adjacent enemies"]]
+   B: [["placement_rules", "Deploy anywhere on the map"], ["damage", "damaging adjacent enemies"], ["start_of_game", "Preemptive Strike"]]
+760907 | Archimedes | Pilot ability: Fire-and-Forget: Move again after shooting. Requires 1 Power. Promotions: +3 Grid DEF, +1 Mech Mobility
+   A: [["extra_turn", "Move again after shooting"]]
+   B: [["movement", "Move again after shooting"]]
+760914 | Artemis Artillery | Powerful artillery strike, damaging a single tile and pushing adjacent tiles. Deals 1 damage to the target. Class: Ranged. Upgrades: * Buildings Immune (1 Reactor Core ) - This attack will no longer damage Grid Buildings. * +2 Damage (3 Reactor Cores ) - Increases damage by 2. Availability: Damage 1. Upgrade: Buildings Immune (cost 1); Upgrade: +2 Damage (cost 3).
+   A: [["ranged", "Powerful artillery strike"], ["damage", "damaging a single tile"], ["multi_target_attack", "pushing adjacent tiles"], ["forced_movement", "pushing adjacent tiles"], ["upgrade", "Upgrade: Buildings Immune"]]
+   B: [["ranged", "Powerful artillery strike"], ["forced_movement", "pushing adjacent tiles"], ["upgrade", "Upgrades"], ["protection", "This attack will no longer damage Grid Buildings"]]
+760915 | Siege Mech | Health 2, move 3. Weapons/skills: Cluster Artillery: Protect a tile by damaging and pushing adjacent tiles..
+   A: [["ranged", "Cluster Artillery"], ["damage", "damaging and pushing adjacent tiles"], ["forced_movement", "damaging and pushing adjacent tiles"], ["protection", "Protect a tile"]]
+   B: [["ranged", "Cluster Artillery"], ["protection", "Protect a tile"], ["forced_movement", "damaging and pushing adjacent tiles"]]
+760916 | Rocket Mech | Health 3, move 3. Weapons/skills: Rocket Artillery: Fires a pushing artillery and creates Smoke behind the shooter. | Storm Generator: All Smoke deals damage to enemy units every turn..
+   A: [["ranged", "Fires a pushing artillery"], ["forced_movement", "pushing artillery"], ["terrain", "creates Smoke behind the shooter"], ["damage_over_time", "All Smoke deals damage to enemy units every turn"]]
+   B: [["ranged", "Fires a pushing artillery"], ["forced_movement", "Fires a pushing artillery"], ["damage_over_time", "All Smoke deals damage to enemy units every turn"]]
+760917 | Pulse Mech | Health 3, move 4. Weapons/skills: Repulse: Push all adjacent tiles..
+   A: [["forced_movement", "Push all adjacent tiles"], ["adjacency", "adjacent tiles"]]
+   B: [["forced_movement", "Push all adjacent tiles"], ["aoe_damage", "Push all adjacent tiles"]]
+760919 | Meteor Mech | Health 3, move 3. Weapons/skills: Vulcan Artillery: Light the target on Fire and push adjacent tiles..
+   A: [["ranged", "Vulcan Artillery"], ["damage_over_time", "Light the target on Fire"], ["forced_movement", "push adjacent tiles"], ["adjacency", "adjacent tiles"]]
+   B: [["damage_over_time", "Light the target on Fire"], ["forced_movement", "push adjacent tiles"], ["ranged", "Vulcan Artillery"]]
+760921 | Laser Mech | Health 3, move 3. Weapons/skills: Burst Beam: Fire a piercing beam that decreases in damage the further it goes..
+   A: [["multi_target_attack", "Fire a piercing beam"], ["variable_stats", "decreases in damage the further it goes"]]
+   B: [["piercing", "Fire a piercing beam"], ["ranged", "Burst Beam"], ["damage", "decreases in damage the further it goes"]]
+760925 | Ice Mech | Health 2, move 3. Weapons/skills: Cryo-Launcher: Freeze yourself and the target.. Special: Flying: Flying units can move over any terrain tile..
+   A: [["disable", "Freeze yourself and the target"], ["friendly_fire", "Freeze yourself"]]
+   B: [["disable", "Freeze yourself and the target"], ["friendly_fire", "Freeze yourself"], ["movement", "Flying units can move over any terrain tile"]]
+760926 | Lightning Mech | Health 3, move 3. Weapons/skills: Electric Whip: Chain damage through adjacent targets..
+   A: [["multi_target_attack", "Chain damage through adjacent targets"], ["adjacency", "adjacent targets"]]
+   B: [["multi_target_attack", "Chain damage through adjacent targets"]]
+760928 | Boulder Mech | Health 2, move 3. Weapons/skills: Rock Accelerator: Launch a rock at a tile, pushing adjacent tiles..
+   A: [["ranged", "Launch a rock at a tile"], ["forced_movement", "pushing adjacent tiles"], ["adjacency", "adjacent tiles"]]
+   B: [["ranged", "Launch a rock at a tile"], ["forced_movement", "pushing adjacent tiles"]]
+760929 | Leap Mech | Health 3, move 4. Weapons/skills: Hydraulic Legs: Leap to a tile, damaging self and adjacent tiles..
+   A: [["movement", "Leap to a tile"], ["friendly_fire", "damaging self"], ["adjacency", "adjacent tiles"]]
+   B: [["movement", "Leap to a tile"], ["friendly_fire", "damaging self and adjacent tiles"], ["aoe_damage", "damaging self and adjacent tiles"]]
+760930 | Unstable Mech | Health 3, move 3. Weapons/skills: Unstable Cannon: Powerful projectile that causes damage to shooter as well as target..
+   A: [["damage", "Powerful projectile"], ["friendly_fire", "causes damage to shooter as well as target"]]
+   B: [["friendly_fire", "causes damage to shooter as well as target"], ["ranged", "Powerful projectile"]]
+760931 | Nano Mech | Health 2, move 4. Weapons/skills: A.C.I.D. Projector: Fire a projectile that applies A.C.I.D. and pushes. | Viscera Nanobots: Mechs heal 1 damage when they deal a killing blow.. Special: Flying: Flying units can move over any terrain tile..
+   A: [["debuff", "applies A.C.I.D."], ["forced_movement", "and pushes"], ["heal", "Mechs heal 1 damage"], ["on_kill", "when they deal a killing blow"]]
+   B: [["debuff", "applies A.C.I.D."], ["forced_movement", "and pushes"], ["heal", "Mechs heal 1 damage when they deal a killing blow"], ["on_kill", "when they deal a killing blow"], ["movement", "Flying units can move over any terrain tile"]]
+760933 | Techno-Hornet | Health 2, move 4. Weapons/skills: Needle Shot: Throw needles at the enemy, pushing the furthest hit tile. (Starts with 1-tile range.). Special: Flying: Flying units can move over any terrain tile..
+   A: [["ranged", "Throw needles at the enemy"], ["forced_movement", "pushing the furthest hit tile"]]
+   B: [["ranged", "Throw needles at the enemy"], ["forced_movement", "pushing the furthest hit tile"], ["movement", "Flying units can move over any terrain tile"]]
+760934 | Techno-Scarab | Health 2, move 3. Weapons/skills: Explosive Goo: Artillery attack that damages a tile and pushes adjacent tiles away..
+   A: [["ranged", "Artillery attack"], ["damage", "damages a tile"], ["forced_movement", "pushes adjacent tiles away"], ["adjacency", "adjacent tiles"]]
+   B: [["ranged", "Artillery attack that damages a tile"], ["forced_movement", "pushes adjacent tiles away"]]
+760935 | Rock Mech | Health 3, move 3. Weapons/skills: Rock Launcher: Throw a rock at a chosen target. Rock remains as an obstacle..
+   A: [["ranged", "Throw a rock at a chosen target"], ["target_choice", "chosen target"], ["summon", "Rock remains as an obstacle"]]
+   B: [["ranged", "Throw a rock at a chosen target"], ["target_choice", "chosen target"], ["terrain", "Rock remains as an obstacle"]]
+760936 | Passives | Passives are pieces of Mech equipment in Into the Breach. Description: Passives confer a constant benefit to all Mechs in the squad, without the need of activating them during an encounter. Since an action does not need to be used to activate passives, their effects will persist even when the Mech equipped with a passive is submerged into Water, a Lava Tile, an A.C.I.D. Tile, affected by Smoke, or even if the Mech is downed and disabled. Some Mechs come equipped with Passives by default. All Passives are treated as Any Class equipment, and can be equipped without penalty by any Mech Class (except Cyborg). Some Passives come with an upgrade or two, at the cost of additional Reactor Core usage. Upgrades are not purchased separately, they are included. Note that powering Upgrade 1 is never a prerequisite for powering Upgrade 2. Mechs with Passives in Custom Squads: When creating a Custom Squad, it is possible to choose a Mech which has a passive equipped multiple times. In this case, the duplicate Mechs will have the passive removed in their loadout, and only one Mech will keep the Passive for the Custom Squad. List:
+   A: [["passive", "constant benefit to all Mechs in the squad"], ["upgrade", "Some Passives come with an upgrade or two"]]
+   B: [["passive", "Passives confer a constant benefit to all Mechs in the squad"], ["upgrade", "Some Passives come with an upgrade or two"], ["deckbuilding_effect", "Mechs with Passives in Custom Squads"], ["aura", "a constant benefit to all Mechs in the squad"]]
+760938 | Storm Generator | All Smoke deals damage to enemy units every turn. Class: Any. Upgrades: * +1 Damage - Increases Smoke damage by 1. Availability: Upgrade: +1 Damage (cost 3).
+   A: [["damage_over_time", "All Smoke deals damage to enemy units every turn"], ["upgrade", "Upgrade: +1 Damage"]]
+   B: [["damage_over_time", "All Smoke deals damage to enemy units every turn"], ["spell_power", "Increases Smoke damage by 1"]]
+760939 | Viscera Nanobots | Mechs heal 1 damage when they deal a killing blow. Repairing Mechs happens after all damage calculations have been performed. A Mech that hits 0HP from an attack which disables them will be repaired back online if they also get at least 1 kill. The amount of health healed will correspond to the number of enemies killed as well; for example, an attack that kills two enemies will heal the Mech for 1 Upgrade: +1 Heal (cost 2).
+   A: [["heal", "Mechs heal 1 damage"], ["on_kill", "when they deal a killing blow"], ["upgrade", "Upgrade: +1 Heal"]]
+   B: [["heal", "Mechs heal 1 damage when they deal a killing blow"], ["on_kill", "when they deal a killing blow"]]
+760940 | Networked Armor | All Mechs gain +1 HP. Costs 1 Reactor Core to power. Class: Any. Upgrades: * +1 Health - Increases health bonus to 2. Availability: Upgrade: +1 Health (cost 2).
+   A: [["stat_gain", "All Mechs gain +1 HP"], ["upgrade", "Upgrade: +1 Health"]]
+   B: [["stat_gain", "All Mechs gain +1 HP"], ["aura", "All Mechs gain +1 HP"]]
+760941 | Repair Field | Repairing one Mech will affect all Mechs. Disabled Mechs will also be repaired, which will bring the Mech back online and save the pilot. Class: Any. Upgrades: Repair Field has no upgrades. Availability:
+   A: [["heal", "Repairing one Mech will affect all Mechs"], ["revive", "bring the Mech back online and save the pilot"]]
+   B: [["heal", "Repairing one Mech will affect all Mechs"], ["cheat_death", "bring the Mech back online and save the pilot"]]
+760942 | Stabilizers | Mechs no longer take damage when blocking emerging Vek. Class: Any. Upgrades: Stabilizers has no upgrades. Availability:
+   A: [["damage_prevention", "no longer take damage when blocking emerging Vek"], ["spawn_blocking", "blocking emerging Vek"]]
+   B: [["immunity", "Mechs no longer take damage when blocking emerging Vek"]]
+760944 | Kickoff Boosters | Mechs gain +1 move if they start their turn adjacent to each other. Mechs affected by Kickoff Boosters receive the temporary status effect "Kickoff Boosters" . Note: the status effect will always say "+2 Move this turn", even if the Passive has not been upgraded. The passive still behaves correctly and grants +1 when not upgraded, and +2 when upgraded. Class: Any. Upgrades: * +1 Movement - Movemen Upgrade: +1 Movement (cost 2).
+   A: [["stat_gain", "gain +1 move"], ["adjacency", "start their turn adjacent to each other"], ["temporary_buff", "temporary status effect"], ["upgrade", "Upgrade: +1 Movement"]]
+   B: [["stat_gain", "Mechs gain +1 move"], ["adjacency", "if they start their turn adjacent to each other"], ["turn_start", "start their turn"], ["temporary_buff", "+2 Move this turn"], ["upgrade", "Upgrade: +1 Movement"]]
+760947 | Force Amp | All Vek take +1 damage from Bumps and blocking emerging Vek. Note that the additional damage does not apply to Sentient Weapons; most notably the Bot Leader. Class: Any. Upgrades: Force Amp has no upgrades. Availability:
+   A: [["spell_power", "All Vek take +1 damage from Bumps"], ["collision_damage", "Bumps"], ["spawn_blocking", "blocking emerging Vek"]]
+   B: [["spell_power", "All Vek take +1 damage from Bumps"], ["collision_damage", "Bumps"]]

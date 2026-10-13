@@ -1,0 +1,50 @@
+760184 | Bleed Charm | +20% bleed resistance; -0.02 dodge
+760195 | Padlock of Transference | +30% stun chance; +30% poison chance. Class: abomination
+760453 | The Cagoule | +0.06 dodge; +0.04 crit; +0.05 accuracy; -13% hp heal percent while light below 26; -10% move resistance while in rank ; -10% trap resistance while light below 26
+759945 | Illumination | Ranged skill. Usable from ranks 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage (modifier -50%). Effects: -30% dodge; increase light 10 (global).
+760144 | Drifter's Buckle | +10% trap resistance; +0.04 dodge; -5% stress heal received percent. Class: highwayman
+760334 | Thorwans Blood | +0.08 protection while in rank ; +10% debuff resistance; +50% food consumption percent
+760492 | Beneath The Dark | -13% stress dmg received percent while light below 26; +16% resolve xp bonus percent; -0.06 dodge in the first round
+760590 | The Runs | -0.2 dodge; -10% max HP
+760463 | The Reflectorum | +0.06 protection; +8% death_blow resistance at Death's Door; -13% hp heal percent vs beast enemies
+760529 | Natural Eye | +0.05 accuracy with ranged skills
+760152 | Bloodied Fetish | +20% poison resistance; +20% bleed resistance; -20% disease resistance
+759856 | Sniper Shot | Ranged skill. Usable from ranks 4, 3. Targets enemy ranks 2, 3, 4. Deals damage. Effects: only if target is tagged, +100% damage, +10% crit (self).
+760222 | Prophet's Eye | +0.1 accuracy while in rank ; +2 speed while in rank ; -10% stress dmg received percent while in rank 
+760452 | Adamant | +0.06 protection; +10% move resistance; -0.06 dodge; -4 speed
+760293 | Wrath Of Khan | +0.04 crit; +0.05 accuracy; +10% damage; +10% damage; -4 speed; -13% hp heal received percent; -0.06 protection
+759878 | Lunge | Melee skill. Usable from ranks 4, 3. Targets enemy ranks 1, 2, 3. Moves self (back/forward) 0 2. Deals damage (modifier 40%).
+760593 | Rabies | -0.1 accuracy; +15% damage; +15% damage
+759935 | Blinding Gas | Ranged skill. Usable from ranks 4, 3. Targets all of enemy ranks 3, 4. Deals damage (modifier -100%). Effects: stun.
+760306 | Dorans Dice | +5% death_blow resistance while HP below 0.25; +5% damage; +5% damage; +0.05 dodge while in rank ; -10% bleed resistance in the first round
+760666 | Ruins Adventurer | -20% stress dmg received percent in dungeons
+760723 | TACTICS | Camping skill. buff: +0.1 dodge (self); buff: +0.05 crit (self); buff: +0.1 dodge (party_other); buff: +0.05 crit (party_other). Uses per camp: 1.
+760148 | Lucky Dice | +0.04 accuracy; +0.04 dodge. Class: jester
+760274 | Violets Pet | +3 speed; +0.04 crit with melee skills; +0.05 accuracy with melee skills; +50% starving damage percent; +50% food consumption percent
+760523 | Quick Reflexes | +2 speed
+759793 | Skeleton Key | A type of provision used on curios in dungeons.
+760253 | Aakeskiol | +4% resolve check percent; +3% death_blow resistance; +0.03 protection; -4 speed while in rank 
+759807 | Completing a Quest | After you've completed the requirements of a quest, you have the option to return to town at any time--just click the crest. You don't need to return to the starting room of the dungeon to exit.
+760084 | Book of Sanity | -20% stress dmg received percent
+760493 | Brace Of Thorns | +26% hp heal received percent while HP below 0.25; -10% max HP
+760402 | Oath-Breakers Sheathe | +6 speed while light below 26; +0.07 accuracy while light below 26; -8% resolve check percent; -0.06 protection while light above 75
+760380 | Mine | +0.05 accuracy; +13% damage while light below 26; +13% damage while light below 26; -13% hp heal received percent in the first round
+760365 | Le Roi En Jaune | +24% resolve xp bonus percent; -15% stress dmg received percent; -8% monsters surprise chance while in rank ; -8% resolve check percent while light below 26; -0.05 accuracy vs eldritch enemies
+760173 | Quickening Satchel | +2 speed; +20% move resistance. Class: grave_robber
+760435 | Goliath Killer | +0.06 accuracy while in rank ; +13% damage while in rank ; +13% damage while in rank ; +0.05 crit while in rank ; -10% trap resistance while in rank ; -8% monsters surprise chance while in rank ; -13% hp heal percent while in rank 
+759942 | Dazzling Light | Ranged skill. Usable from ranks 3, 4. Targets enemy ranks 1, 2, 3. Deals damage (modifier -75%). Effects: stun; increase light 6 (global).
+759940 | Mace Bash | Melee skill. Usable from ranks 2, 1. Targets enemy ranks 1, 2. Deals damage.
+760287 | Hope In Hand | +0.06 accuracy not in the first round; -13% stress dmg received percent not in the first round; +50% food consumption percent in the first round
+760000 | Pelagic Guardian | Skills: Octocestus: Melee skill. Usable from ranks 3, 2, 1. Targets enemy ranks 1, 2. Deals damage 3-5. Effects: bleed 2 per round for 3 rounds. | Barnacle Barrier: Melee skill. Usable from ranks 4, 3, 2, 1. Targets ally ranks 4, 3, 2, 1. Effects: guard target ally for 2 rounds; +25% protection (self) for 2 rounds.
+759771 | Death's Door | A hero with 0 HP is at Death's Door. Each subsequent hit taken while at Death's Door has a chance of permanently killing the hero.
+760584 | Automatonophobia | +20% stress dmg received percent vs man enemies
+759972 | Ascended Witch | Skills: Fate's Pull: Ranged skill. Usable from ranks 2, 3, 4. Targets enemy ranks 3, 4. Deals damage 1-3. Effects: pull forward 2 ranks; stress +8. | Fate's Push: Ranged skill. Usable from ranks 1, 2, 3, 4. Targets enemy ranks 1, 2. Deals damage 1-3. Effects: push back 2 ranks; stress +8. | Fate's Reveal: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 1-3. Effects: stress +20; decrease light 10 (global); mark target for 1 rounds.
+760325 | Black Design | +0.05 crit while HP above 0.75; +6% death_blow resistance; +0.05 accuracy; +50% food consumption percent; -0.06 protection while light below 26; -13% hp heal percent while light below 26
+760709 | ZEALOUS SPEECH | Camping skill. stress heal amount 15 (party_other); stress heal amount 15 (self); buff: -30% stress dmg received percent (party_other). Uses per camp: 1.
+760005 | Shuffling Horror | Takes 3 ranks. Acts 2 times per round. Skills: Lacerate: Melee skill. Usable from ranks 4, 3, 2, 1. Targets enemy ranks 1, 2, 3, 4. Deals damage 5-9. Effects: bleed 4 per round for 3 rounds. | Echoing Dissassembly: Ranged skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3, 4. Deals damage 1-3. Effects: stress +15; summon cultist_shrouded_D totem_guard_D; decrease light 25 (global). | Undulations: 0 skill. Usable from ranks 4, 3, 2, 1. Targets all of enemy ranks 1, 2, 3, 4. Effects: Shuffler Shuffle Party.
+760185 | Stun Stone | +20% stun chance; -0.02 dodge
+760299 | Corwyns Cape | +0.03 crit with ranged skills; +8% damage with ranged skills; +8% damage with ranged skills; +0.04 accuracy with ranged skills; +50% starving damage percent at Death's Door
+760121 | Camper's Helmet | +20% stress heal received percent while camping; +10% scouting chance. Class: bounty_hunter
+760364 | Spidersilk Cloak | +0.06 dodge; +0.04 crit; -8% monsters surprise chance while light below 26
+760130 | Swordsman's Crest | +15% damage with melee skills; +15% damage with melee skills; -10% hp heal percent. Class: crusader
+760759 | Spikes | On failure: Stress 2. On success: Heal Stress TrapD. HP change -25%.

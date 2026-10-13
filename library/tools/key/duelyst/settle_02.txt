@@ -1,0 +1,30 @@
+742310 | Deathmark | Deal 1 damage to an enemy minion. After it is attacked this turn, destroy it.
+   A: [["damage", "Deal 1 damage to an enemy minion"], ["mark_target", "After it is attacked this turn"], ["destroy", "destroy it"], ["temporary_effect", "this turn"]]
+   B: [["ping", "Deal 1 damage to an enemy minion"], ["mark_target", "After it is attacked this turn"], ["destroy", "destroy it"]]
+742313 | Horrific Visage | Give all enemy minions -4 Attack until your next turn.
+   A: [["stat_loss", "-4 Attack"], ["temporary_effect", "until your next turn"], ["scope_multi", "all enemy minions"]]
+   B: [["debuff", "Give all enemy minions -4 Attack"], ["temporary_buff", "until your next turn"]]
+742316 | Embryotic Insight | If you have an Egg, draw 2 cards.
+   A: [["draw", "draw 2 cards"]]
+   B: [["draw", "draw 2 cards"], ["condition_count", "If you have an Egg"]]
+742319 | Gigaloth | Build: (2). / Whenever this minion attacks, other friendly minions gain +3/+3.
+   A: [["delayed", "Build: (2)"], ["on_attack", "Whenever this minion attacks"], ["stat_gain", "gain +3/+3"], ["scope_multi", "other friendly minions"]]
+   B: [["delayed", "Build: (2)"], ["on_attack", "Whenever this minion attacks"], ["stat_gain", "other friendly minions gain +3/+3"]]
+742321 | Armada | Blood Surge: Deal 5 damage to the closest enemy.
+   A: [["damage", "Deal 5 damage to the closest enemy"], ["targeting_rules", "closest enemy"]]
+   B: [["damage", "Deal 5 damage to the closest enemy"]]
+742332 | Hydrogarm | Blood Surge: Deal 1 damage to enemy minions in this row and Stun them.
+   A: [["aoe_damage", "Deal 1 damage to enemy minions in this row"], ["disable", "Stun them"], ["area_templates", "in this row"]]
+   B: [["aoe_damage", "Deal 1 damage to enemy minions in this row"], ["disable", "Stun them"]]
+742337 | Animus Plate | Your General gains +2 Attack. / Whenever your General attacks or counterattacks, give all friendly Vespyr minions +2/+2.
+   A: [["stat_gain", "gains +2 Attack"], ["on_attack", "Whenever your General attacks or counterattacks"], ["permanent_growth", "give all friendly Vespyr minions +2/+2"], ["tribal", "Vespyr"]]
+   B: [["stat_gain", "Your General gains +2 Attack"], ["on_attack", "Whenever your General attacks or counterattacks"], ["stat_gain", "give all friendly Vespyr minions +2/+2"]]
+742338 | Auroraboros | Give friendly minions "Dying Wish: Re-summon this minion on this space."
+   A: [["death_trigger", "Dying Wish"], ["revive", "Re-summon this minion on this space"], ["scope_multi", "friendly minions"]]
+   B: [["death_trigger", "Dying Wish"], ["revive", "Re-summon this minion on this space"]]
+742341 | Denadoro | Your minions are always infiltrated.
+   A: [["territory_trigger", "infiltrated"], ["passive", "always"]]
+   B: [["territory_trigger", "Your minions are always infiltrated"]]
+742355 | Rescue-RX | Build: (2). / When this minion is built, restore 5 Health to your General.
+   A: [["delayed", "Build: (2)"], ["heal", "restore 5 Health to your General"]]
+   B: [["delayed", "Build: (2)"], ["on_play", "When this minion is built"], ["heal", "restore 5 Health to your General"]]

@@ -1,0 +1,1002 @@
+[
+{
+"id": 791647,
+"name": "The First Wave",
+"text": "This unit can immediately use the 'Normal Move' ability as if it were your movement phase."
+},
+{
+"id": 793681,
+"name": "Khainite Shadowstalkers (Scourge of Aqshy)",
+"text": "Shadow Lariat: Timing: Once Per Turn (Army), End of Any Turn Declare: If this unit is not in combat, pick a visible enemy Infantry or Cavalry Hero that has no more than 1 model and is within 12\" of this unit to be the target. If the target is more than 3\" from all other enemy units, apply the effect below. Otherwise, roll a dice. On a 3+, apply the effect below. Your opponent must remove the target from the battlefield and set it up again in combat with this unit."
+},
+{
+"id": 815268,
+"name": "Favoured of the Pantheon",
+"text": "If this unit is picked as the target of the 'Eye of the Gods' ability, it gains 3 Dark Apotheosis points."
+},
+{
+"id": 815083,
+"name": "Memories of Hate",
+"text": "Monster only. Replace this hero's 'Battle Damaged' ability with the 'Memories of Hate' ability."
+},
+{
+"id": 794510,
+"name": "Dais Arcanum",
+"text": "Arcane Enhancement: While the unit that was picked to be the target of the 'Summon Dais Arcanum' ability is on the platform of this Manifestation: \u2022 That unit has Ward (5+) and Fly. \u2022 If that unit is a Wizard, add 1 to that unit's power level. \u2022 That unit cannot use Move abilities and remains on this Manifestation each time it moves. \u2022 If that unit is picked to make a pile-in move, move this Manifestation instead. \u2022 Instead of measuring range or visibility to that unit, measure to this Manifestation instead. \u2022 This Manifestation cannot be picked to be the target of abilities other than Banish abilities. If this Manifestation is banished, before removing it from the battlefield, set up the unit on its platform on the battlefield within 3\" of it. That unit can only be set up in combat with units it was already in combat with when this Manifestation was banished. If it is not possible to set up that unit, it is destroyed. If the unit on the platform is removed from the battlefield, immediately remove this Manifestation from play."
+},
+{
+"id": 791316,
+"name": "Overtaken by Events",
+"text": "Timing: Once Per Turn (Army), Any Hero Phase Declare: Spend 1 fate point. Then, pick an enemy unit within 24\" of and visible to a friendly Change-cult Hero to be the target. The target cannot use commands for the rest of the turn."
+},
+{
+"id": 792200,
+"name": "Mystical Demands",
+"text": "Timing: Your Hero Phase Declare: Pick the friendly Ma Maegran to cast this spell, pick a visible friendly Matriarch's Mob unit wholly within 18\" of her to be the target, then make a casting roll of 2D6. If the target is in combat, it can use the 'Retreat' ability as if it were your movement phase. If the target is not in combat, it can use the 'Normal Move' ability as if it were your movement phase. In both cases, the target must end that move no further from the caster than it was at the start of the move. Keywords: Spell"
+},
+{
+"id": 791568,
+"name": "In Search Of Sin",
+"text": "Timing: Once Per Turn (Army), End of Any Turn Declare: Pick up to 3 friendly Hedonites of Slaanesh Infantry units to be the targets. Each target can move D6\". It can only end that move in combat with units it was in combat with at the start of the move."
+},
+{
+"id": 793356,
+"name": "Entropic Screech",
+"text": "Timing: Once Per Turn (Army), Any Combat Phase Declare: Pick a friendly Ruination Chamber Monster that has not used any Rampage abilities this turn to use this ability. Then, pick up to 3 enemy units in combat with it to be the targets. Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. The unit using this ability cannot use any more Rampage abilities for the rest of the turn. Keywords: Rampage"
+},
+{
+"id": 794498,
+"name": "Stormstrike Chariot",
+"text": "Celestial Blaze: When this unit uses the 'Power Through' command, inflict an additional D3 mortal damage on the target and add D6\" to the distance this unit can move as part of that ability Azyr Unleashed: Timing: Any Charge Phase Declare: If this unit charged this phase, pick an enemy unit within 1\" of it to be the target. Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Weapon abilities: Anti-Infantry (+1 Rend), Charge (+1 Damage), Companion, Crit (2 Hits)."
+},
+{
+"id": 793142,
+"name": "The Grimroot Order",
+"text": "Add 1 to this unit's Health characteristic."
+},
+{
+"id": 793245,
+"name": "Brute Spirituality",
+"text": "Timing: Once Per Turn (Army), Your Hero Phase Declare: Pick a friendly Big or Little unit to use this ability, then pick an enemy Wizard or Priest within 18\" of it to be the target. Make a rampage roll of D6. If the roll equals or exceeds the target's Control characteristic: \u2022 The target has a maximum power level of 1 until the start of your next turn. \u2022 All Manifestations that were summoned by the target are banished and removed from play. Keywords: Rampage"
+},
+{
+"id": 794030,
+"name": "Ydrilan Riverblades",
+"text": "Relentless as the Driving Current: Timing: Once Per Turn (Army), Any Combat Phase If this unit is in combat, it can move 2D6\". It can pass through models in enemy units but must end that move in combat. Travel the Waterways: Timing: Once Per Turn (Army), Your Movement Phase Remove this unit from the battlefield and set it up again on the battlefield wholly within 6\" of a battlefield edge and more than 9\" from all enemy units. If you picked to depict Ydriliqui, Rune of the River on your battle scripture this battle round, you can instead set up this unit anywhere on the battlefield more than 9\" from all enemy units. Weapon abilities: Shoot in Combat."
+},
+{
+"id": 792797,
+"name": "Heard by the Divine",
+"text": "Timing: Once Per Turn, Reaction: You declared a Summon Prayer ability for this unit Add 1 to the chanting roll for that prayer."
+},
+{
+"id": 815027,
+"name": "Wild Enthusiasm",
+"text": "This unit can use the 'Power Through' command even if it has not charged this turn. In addition, when you pick a target for that command, the target does not have to have a lower Health characteristic than this unit."
+},
+{
+"id": 791991,
+"name": "Reckoning of Sinners",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Cities of Sigmar Priest to chant this prayer, pick a visible friendly Cities of Sigmar unit wholly within 12\" of them to be the target, then make a chanting roll of D6. If the chanting roll was 10+, you can pick another eligible unit to be a second target. Until the start of your next turn, enemy units have a maximum control score of 1 while they are in combat with any of the targets. Keywords: Prayer"
+},
+{
+"id": 791455,
+"name": "Draught of the Finest Magmalt",
+"text": "Timing: Once Per Battle, Any Combat Phase Add 3 to the Attacks characteristic of this unit's melee weapons for the rest of the turn."
+},
+{
+"id": 793318,
+"name": "The Incarnadine Killers",
+"text": "Timing: End of Any Turn If this unit is not in combat and an enemy unit was destroyed by its combat attacks this turn, this unit can move up to D6\". It can end that move in combat."
+},
+{
+"id": 791150,
+"name": "Butcher's Blade",
+"text": "Timing: End of Your Turn Declare: Pick each enemy unit that had any damage points allocated to it this turn by this unit's combat attacks to be the targets. Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+},
+{
+"id": 815220,
+"name": "Bloodthirsty Arrogance",
+"text": "Each time you make an unmodified save roll of 1 for a combat attack that targets a friendly Meatfist Infantry unit that did not charge in the same turn, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved."
+},
+{
+"id": 792863,
+"name": "Live on the Edge",
+"text": "This unit has Ward (4+) against damage points inflicted by Shoot abilities."
+},
+{
+"id": 793065,
+"name": "Escape Artist",
+"text": "You can re-roll ward rolls of 1 or 2 for this unit."
+},
+{
+"id": 793844,
+"name": "Sporesplatta Fanatics (Scourge of Ghyran)",
+"text": "Choking Spore-clouds: Subtract 1 from the Attacks characteristic of weapons used by enemy units while they are in combat with this unit. Spinning Loons: Timing: Once Per Turn (Army), End of Any Turn If this unit was not set up this phase, this unit can move 2D6\". It can move through the combat ranges of enemy units and can finish that move in combat."
+},
+{
+"id": 794504,
+"name": "Vanguard-Palladors with Starstrike Javelins",
+"text": "Charging Volley: Timing: Your Charge Phase Declare: If this unit charged this phase, pick an enemy unit in combat with it to be the target. This unit can immediately use a Shoot ability as if it were your shooting phase, but all of its attacks must target that enemy unit. In addition, unit's Starstrike Javelins have Shoot in Combat this phase. Weapon abilities: Companion, Shoot in Combat."
+},
+{
+"id": 794524,
+"name": "Lord-Castellant",
+"text": "Loyal Companion: Timing: Once Per Battle, Any Combat Phase For the rest of the turn, this unit has Ward (4+). Remove this unit's Gryph-hound from the battlefield at the end of the turn. Dutiful Gryph-hound: This unit's Gryph-hound is a token. If this unit's Gryph-hound has been removed, it can no longer attack with its Gryph-hound's Beak and it cannot use the 'Loyal Companion' ability Warding Lantern: Timing: Your Hero Phase Declare: Pick an objective within 12\" of this unit to be the target. For the rest of the turn: \u2022 Friendly Stormcast Eternals units have Ward (6+) while they are contesting the target. \u2022 Ward rolls cannot be made for enemy units while they are contesting the target. Weapon abilities: Companion, Crit (Auto-wound)."
+},
+{
+"id": 791023,
+"name": "Obscuring",
+"text": "A unit cannot be targeted by shooting attacks made by enemy units that are not within its combat range if it is behind or wholly on this terrain feature, unless it has the Fly keyword."
+},
+{
+"id": 794214,
+"name": "Landmark of Ghyran",
+"text": "Defensive Boltholes: Subtract 1 from hit rolls for shooting attacks that target friendly units while they are wholly within 6\" of this terrain feature. Ley Line Node: Add 1 to ward rolls for friendly Manifestations while they are wholly within 12\" of this terrain feature. Uplifting Aura: Add 3 to the control scores of friendly units while they are wholly within 12\" of this terrain feature. Toughened Exterior: Subtract 1 from the Rend characteristic of weapons used for attacks that target this terrain feature. Decrepit and Crumbling: Timing: Once Per Turn (Army), End of Your Turn Declare: You must use this ability. Allocate 1 damage point to this terrain feature (ward rolls cannot be made for that damage point). Dreary Form: Each time a friendly unit wholly within 12\" of this unit uses the 'Rally' command, you must make 3 fewer rally rolls of D6. Stark Presence: Friendly units cannot be set up within 6\" of this terrain feature. Root of Enmity: While an enemy unit is in combat with this terrain feature, that enemy unit has Strike-first. Inspiring: Add 3 to the control scores of friendly units while they are wholly within 12\" of this terrain feature. Nebulous: Enemy models cannot be set up within 9\" of this terrain feature. Hidden Within: Timing: Once Per Battle, End of Your Turn Declare: Pick a friendly non-Unique unit that has been destroyed to be the target. Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 7\" of this terrain feature and more than 3\" from all enemy units. If the target is a Hero, War Machine or Monster, you must spend an additional command point to use this ability and if the target has a unit size of 1, you must allocate a number of damage points to the replacement unit equal to half its Health characteristic. Deadly: Timing: Any Combat Phase Declare: Pick an enemy unit that charged this turn and is in combat with this terrain feature to be the target. Roll a dice. On a 1, 1 model in the target unit is slain. Sinister: Timing: Once Per Turn, Reaction: Opponent declared a command for a unit within 12\" of this terrain feature Roll a dice. On a 5+, that command has no effect, it still counts as having been used, and the command points spent to use the command are still lost. Trusted Curator: Timing: Your Hero Phase Declare: If this terrain feature does not have a Curator, pick a friendly Infantry Hero within 3\" of it and not in combat to be the target. Place the target on this terrain feature. The target is now the Curator (see 'Ensconced'). Abandon Position: Timing: Your Movement Phase If this terrain feature has a Curator that was not placed on it this turn, set up the Curator on the battlefield wholly within 6\" of this terrain feature and not in combat. That unit is no longer the Curator. Ensconced: While this terrain feature has a Curator: \u2022 The Curator cannot use Move abilities. \u2022 Instead of measuring the range or visibility to the Curator, measure to this terrain feature instead. \u2022 All attacks that would target the Curator target this terrain feature instead. \u2022 If this terrain feature is destroyed, before removing it from the battlefield, inflict D3 mortal damage on the Curator. Then, set up the Curator on the battlefield within 3\" of this terrain feature and not in combat. That unit is no longer the Curator. If it is not possible to set up the Curator, it is slain. Conduit of Power: Add 1 to casting rolls and chanting rolls for the Curator. Chained Magic: If this terrain feature has a Curator when it is destroyed, after setting up the Curator on the battlefield, set up a friendly Manifestation that can be summoned using a Summon spell from your Arcane Tome on the battlefield within 3\" of this unit and not in combat. If that Manifestation has multiple parts, all parts must be set up within 3\" of that unit. That unit has summoned that Manifestation. If there is already a friendly Manifestation of the same type on the battlefield, it is immediately banished and removed from play before being set up as described above. Life Tap: Timing: Your Hero Phase Declare: If this terrain feature has a Curator, pick a visible terrain feature within 9\" of it to be the target. Roll a dice. On a 3+, Heal (X) this terrain feature, where X is an amount equal to the roll. Then, the target is contaminated to both players' armies. Curator Tunnel: Timing: Once Per Battle, Enemy Movement Phase If this terrain feature has a Curator that was not placed on it this turn, set up the Curator on the battlefield, wholly within 3\" of a terrain feature and not in combat. That unit is no longer the Curator. Weapon abilities: Companion, Crit (2 Hits)."
+},
+{
+"id": 793122,
+"name": "Marked for Greatness",
+"text": "This unit has Ward (6+). In addition, each time an unmodified ward roll of 6 is made for this unit, Heal (1) this unit."
+},
+{
+"id": 792249,
+"name": "Song Of War",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Sylvaneth Priest to chant this prayer, pick a friendly Sylvaneth unit that is wholly within the creeping overgrowth or that is visible to them and wholly within 12\" of them to be the target, then make a chanting roll of D6. If the chanting roll was 10+, you can pick another eligible unit to be a second target. Until the start of your next turn, add 1 to the Rend characteristic of the target(s) melee weapons. Keywords: Prayer"
+},
+{
+"id": 794329,
+"name": "Varanguard",
+"text": "Relentless Killers: Timing: Once Per Battle, Any Combat Phase This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn. Weapon abilities: Charge (+1 Damage), Companion, Crit (Mortal)."
+},
+{
+"id": 815081,
+"name": "Base Size",
+"text": "2/10 40mm (Champion) 2/10 32mm 3/10 28.5mm 3/10 25mm"
+},
+{
+"id": 792079,
+"name": "Summon Wheels of Excruciation",
+"text": "Timing: Your Hero Phase Declare: If there is not a friendly Wheels of Excruciation endless spell on the battlefield, pick a friendly Hedonites of Slaanesh Wizard to cast this spell, then make a casting roll of 2D6. Set up a Wheels of Excruciation endless spell wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. Keywords: Spell, Summon"
+},
+{
+"id": 793773,
+"name": "Doomseeker",
+"text": "Runic Power: Add 1 to the Damage characteristic of this unit's melee weapons while this unit has 1 damage point. Add 2 to the Damage characteristic of this unit's melee weapons instead while this unit has 2 or more damage points. Oathbound: Timing: Deployment Phase Declare: Pick an enemy unit to be this unit's quarry. You can pick a unit that has been deployed in reserve. Add 1 to hit rolls and wound rolls for attacks made by this unit that target its quarry. If this unit is destroyed while it is in combat with its quarry, inflict 3 mortal damage on this unit's quarry immediately after the ability that destroyed this unit has been resolved."
+},
+{
+"id": 791494,
+"name": "Notorious and Vicious",
+"text": "Subtract 2 from the control scores of enemy units while they are contesting the same objective as this unit."
+},
+{
+"id": 792501,
+"name": "The Crusherguts",
+"text": "Timing: Once Per Turn (Army), Any Combat Phase Declare: If this unit charged this turn, pick an enemy unit in combat with it to be the target. Roll a dice. If the roll exceeds the target's Health characteristic, 1 model in the target unit is automatically slain and the target cannot make pile-in moves for the rest of the turn."
+},
+{
+"id": 791159,
+"name": "Skull Collector",
+"text": "Timing: End of Any Turn If any damage points were allocated to an enemy Hero by this unit's combat attacks this turn and that enemy Hero has been destroyed, add 1 to the Attacks characteristic of this unit's melee weapons for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative."
+},
+{
+"id": 791123,
+"name": "Savage Conquerors",
+"text": "Add 1 to wound rolls for this unit's attacks that target an enemy unit contesting an objective that you do not control."
+},
+{
+"id": 791136,
+"name": "Crown of the Slaughterborn",
+"text": "Enemy units within 12\" of this unit cannot be healed and cannot have slain models returned to them."
+},
+{
+"id": 794021,
+"name": "Vanari Bladelords",
+"text": "Masters of Combat: Add 1 to the Rend characteristic of this unit's Sunmental Blades for each instance of Varinor, Rune of Strength depicted on your battle scripture. Guardians of the Scinari: While any friendly Scinari Heroes are wholly within this unit's combat range, both this unit and those friendly units have Ward (5+). Weapon abilities: Crit (Mortal)."
+},
+{
+"id": 793560,
+"name": "Allies of the Free Cities Vulkyn Flameseekers",
+"text": "Allies Drothmasters: Timing: Any Combat Phase Declare: Pick an enemy Monster in combat with this unit to be the target. If this unit is under orders, apply the effect below. Otherwise, roll a dice. On a 3+, apply the effect below. Subtract 2 from the Damage characteristic of the target's Companion melee weapons for the rest of the turn. Weapon abilities: Anti-Monster (+1 Rend), Companion, Crit (Mortal)."
+},
+{
+"id": 791063,
+"name": "Wrathful Cycles",
+"text": "Defiant Surge: You complete this battle tactic at the end of your turn if you control more objectives than your opponent. Daring Resurgence: You complete this battle tactic at the end of your turn if you are the underdog this battle round, there is at least 1 friendly unit on the battlefield, and at least half of the friendly units on the battlefield (rounding up) used a Fight ability this turn. Master of Strategy: You complete this battle tactic at the end of your turn if there is a different friendly unit wholly within each large quarter of the battlefield, you control more objectives than your opponent, and there are no enemy units contesting any objectives that you control."
+},
+{
+"id": 792811,
+"name": "Frothing",
+"text": "Ignore the first damage point that would be allocated to this unit in each phase."
+},
+{
+"id": 794175,
+"name": "Morkspit Marsh",
+"text": "Tricksy Footing: Subtract 3 from the control score of enemy units while they are within 6\" of this Manifestation. Grasping Gunge: Enemy units cannot use Run abilities while they are within 6\" of this Manifestation."
+},
+{
+"id": 792023,
+"name": "Summon Runic Fyrewall",
+"text": "Timing: Your Hero Phase Declare: If there is not a friendly Runic Fyrewall on the battlefield, pick a friendly Fyreslayers Priest to chant this prayer, then make a chanting roll of D6. Set up a Runic Fyrewall wholly within 12\" of the chanter and visible to them. Keywords: Prayer, Summon"
+},
+{
+"id": 793015,
+"name": "Soothing Pulse",
+"text": "Timing: Your Hero Phase Declare: Pick the Branchwych in this Regiment of Renown to cast this spell, pick a visible friendly unit wholly within 12\" of them to be the target, then make a casting roll of 2D6. Heal (3) the target Keywords: Spell"
+},
+{
+"id": 794347,
+"name": "Chaos Chariot",
+"text": "Swift Death: Timing: Any Charge Phase Declare: If this unit charged this phase, pick an enemy unit within 1\" of it to be the target. Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Weapon abilities: Companion."
+},
+{
+"id": 791152,
+"name": "Obliterating Charge",
+"text": "Add X to charge rolls for friendly Blades of Khorne units, where X is the number of friendly Blades of Khorne Cavalry or Monster units that have already charged this phase and that are wholly within 12\" of the unit being rolled for."
+},
+{
+"id": 793500,
+"name": "Grashrak's Despoilers",
+"text": "Grashrak Fellhoof: While this unit's Grashrak Fellhoof is on the battlefield, it has Wizard (1). Violent Despoilers: Add 1 to hit rolls for this unit's attacks while it is wholly outside friendly territory."
+},
+{
+"id": 792045,
+"name": "Summon Bloodwrack Viper",
+"text": "Timing: Your Hero Phase Declare: If there is not a friendly Bloodwrack Viper on the battlefield, pick a friendly Daughters of Khaine Wizard to cast this spell, then make a casting roll of 2D6. Set up a Bloodwrack Viper wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units Keywords: Spell, Summon"
+},
+{
+"id": 793087,
+"name": "Icon of Great-total Supremacy",
+"text": "Timing: Once Per Battle, Your Hero Phase You can return up to D3 slain models to each friendly Gnawhore Infantry unit with a Health characteristic of up to 3."
+},
+{
+"id": 793357,
+"name": "Temper the Flaw",
+"text": "Timing: Once Per Turn (Army), End of Any Turn Declare: You must use this ability at the end of each turn. Each friendly non-Hero Ruination Chamber unit that used a Fight ability this turn is a target. For each target, pick 1 of the following effects: \u2022 *Guided:* If the target is wholly within 12\" of any friendly Ruination Chamber Heroes, return 1 slain model to it. \u2022 *Tormented:* If the target is not wholly within 12\" of any friendly Ruination Chamber Heroes, it becomes tormented until the end of the next turn. While a unit is tormented, add 1 to the Attacks characteristic of its melee weapons but it cannot contest objectives or use commands."
+},
+{
+"id": 793610,
+"name": "Assassin",
+"text": "Hidden Murderer: While this unit is within the combat range of a friendly Infantry unit that has 5 or more models and there are no enemy units within this unit's combat range, this unit is not visible to enemy units. In for the Kill: Timing: Once Per Turn (Army), Any Combat Phase This unit has Strike-first if it charged in the same turn. Weapon abilities: Anti-Hero (+1 Rend), Crit (Mortal)."
+},
+{
+"id": 792099,
+"name": "Summon Scrapskuttle's Arachnacauldron",
+"text": "Timing: Your Hero Phase Declare: If there is not a friendly Scrapskuttle's Arachnacauldron on the battlefield, pick a friendly Gloomspite Gitz Wizard to cast this spell, then make a casting roll of 2D6. Set up a Scrapskuttle's Arachnacauldron wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. Keywords: Spell, Summon"
+},
+{
+"id": 792632,
+"name": "The Wilderness Demands",
+"text": "Timing: Any Combat Phase If this unit did not charge this turn, it can move 3\". It can move into combat."
+},
+{
+"id": 792087,
+"name": "Piercing Refraction",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Lumineth Realm\u2011lords Wizard to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6. Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target. Keywords: Spell"
+},
+{
+"id": 794135,
+"name": "Gluttons",
+"text": "Wall of Meat: Add 1 to save rolls for this unit if it has not charged this turn."
+},
+{
+"id": 792033,
+"name": "Fortifying Hoarfrost",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Ogor Mawtribes Priest to chant this prayer, pick a visible friendly Ogor Mawtribes unit wholly within 12\" of them to be the target, then make a chanting roll of D6. Until the start of your next turn, subtract 1 from wound rolls for attacks that target that friendly unit. In addition, if the chanting roll was 8+, until the start of your next turn, subtract 1 from the Rend characteristic of weapons used for attacks that target that friendly unit. Keywords: Prayer"
+},
+{
+"id": 793187,
+"name": "The World Titan's Prophet",
+"text": "While any other friendly Brodd's Stomp units are within a friendly King Brodd's combat range: \u2022 That friendly King Brodd has Ward (5+). \u2022 Each time you make a successful ward roll for that friendly King Brodd, allocate 1 damage point to another friendly Brodd's Stomp unit within its combat range after the damage sequence for that friendly King Brodd has been resolved (ward rolls cannot be made for those damage points)."
+},
+{
+"id": 792368,
+"name": "Putrescent Sap",
+"text": "Timing: Once Per Turn (Army), Your Combat Phase Declare: Pick each enemy unit within 3\" of any friendly Feculent Gnarlmaws to be the targets. Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+},
+{
+"id": 791119,
+"name": "Whirlwind of Annihilation",
+"text": "Timing: Once Per Battle, Any Combat Phase This unit can use 2 Fight abilities this phase. After the first is used, this unit has Strike-last for the rest of the turn."
+},
+{
+"id": 792988,
+"name": "Famed Courage",
+"text": "Timing: Reaction: Opponent declared the 'Rally' command for a unit within 12\" of and visible to a unit in this Regiment of Ghyran After that ability has been resolved, that friendly unit can immediately use the 'Rally' command. No command points are spent to use that command."
+},
+{
+"id": 815227,
+"name": "Path Restrictions",
+"text": "Ossiarch Bonereapers Hero only"
+},
+{
+"id": 793627,
+"name": "Jacobus Vyne, the Jade Wizard",
+"text": "Verdant Growth: Timing: Your Hero Phase Declare: Pick an objective or visible non-Faction Terrain terrain feature within 12\" of this unit to be the target. Then, make a casting roll of 2D6. For the rest of the battle, subtract 1 from hit rolls for shooting attacks that target friendly Infantry or Cavalry units while they are wholly within 3\" of the target. Summon Wisper: Timing: Your Movement Phase If there is not a friendly Wisper on the battlefield, set up a friendly Wisper wholly within 12\" of this unit, visible to it and more than 9\" from all enemy units. This unit has summoned that Manifestation. Weapon abilities: Anti-Faction Terrain (+1 Rend)."
+},
+{
+"id": 793990,
+"name": "Gobsprakk, the Mouth of Mork",
+"text": "Battle Damaged: While this unit has 10 or more damage points, the Attacks characteristic of Killabeak's Talons and Beak is 5. Screamin' Mandrakk: Timing: Reaction: Opponent declared a Spell ability This unit uses the 'Unbind' ability but the unbinding roll is 3D6 instead of 2D6. Crush to Death: Timing: Once Per Turn (Army), Any Combat Phase Declare: Pick an enemy unit in combat with this unit to be the target. Roll a dice. If the roll exceeds the target's Health characteristic, 1 model in the target unit is slain. Keywords: Rampage Mork Sez No!: Each time this unit unbinds a spell, inflict D3 mortal damage on the caster. If the unbinding roll was 10+, inflict D6 mortal damage on the caster instead. Strangle Hex: Timing: Your Hero Phase Declare: Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6. Roll a number of dice equal to the target's Health characteristic, to a maximum of 10. For each 4+, inflict 1 mortal damage on the target. Keywords: Spell Weapon abilities: Anti-Wizard (+1 Rend), Companion, Crit (Mortal)."
+},
+{
+"id": 791483,
+"name": "Plucky Git",
+"text": "While this unit has no damage points, friendly Droggz's Gitmob units have WArd (6+) while they are wholly within 9\" of this unit."
+},
+{
+"id": 791890,
+"name": "Vocal Tectonics",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Sons of Behemat Priest to chant this prayer, pick a visible enemy unit within 12\" of them to be the target, then make a chanting roll of D6. If the chanting roll was 10+, you can pick another eligible unit to be a second target. Until the start of your next turn, each target has Strike-last. Keywords: Prayer"
+},
+{
+"id": 793935,
+"name": "Ikon of the Storm",
+"text": "Storm of Blades: Timing: Once Per Battle, Any Combat Phase This unit can use 2 Fight abilities this phase. After the first is used, however, this unit has Strike-last for the rest of the turn. Whirlpool's Fury: Enemy units cannot use Retreat abilities while they are in combat with this unit. Friendly units that use a Retreat ability while they are wholly within 12\" of this unit can still use Shoot and/or Charge abilities later in the turn. No mortal damage is inflicted on friendly Idoneth Deepkin units by Retreat abilities while they are wholly within 12\" of this unit."
+},
+{
+"id": 794338,
+"name": "Ogroid Myrmidon",
+"text": "Myrmidon Rage: While this unit is damaged, add 2 to the Attacks characteristic of its melee weapons. Pit Master: Timing: Reaction: You declared a Fight ability for this unit Pick a friendly Ogroid Theridons unit that has not used a Fight ability this turn and is within this unit's combat range to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target's attacks for the rest of the turn. Weapon abilities: Anti-Monster (+1 Rend)."
+},
+{
+"id": 816556,
+"name": "Hobgrot Slittaz",
+"text": "Scrap-bang: Roll a dice. On a 3+: \u2022 Inflict 1 mortal damage on the target. \u2022 This unit can immediately use the 'Retreat' ability as if it were your movement phase without any mortal damage being inflicted on it. Weapon abilities: Shoot in Combat."
+},
+{
+"id": 792400,
+"name": "Grim Judge",
+"text": "Timing: Once Per Turn (Army), Any Hero Phase Declare: Pick an enemy unit in combat with this unit, and each accused enemy unit within 12\" of this unit, to be the targets. Ward rolls cannot be made for the targets for the rest of the turn."
+},
+{
+"id": 791582,
+"name": "The Need For Perfection",
+"text": "The first time each turn that an unmodified charge roll, casting roll, unbinding roll or banishment roll for a friendly non-Euphoric unit wholly within 12\" of this unit is 5 or less, that unit has the Euphoric keyword for the rest of the turn."
+},
+{
+"id": 794420,
+"name": "Radukar the Wolf",
+"text": "Master of the Pack: Timing: Your Hero Phase Declare: Make a casting roll of 2D6. Until the start of your next turn, you can re-roll charge rolls for friendly Soulblight Gravelords Infantry units while they are wholly within 12\" of this unit. Keywords: Spell Call to the Hunt: If this unit charged this turn, for the rest of the turn, add 1 to wound rolls for combat attacks made by friendly Deathrattle and Deadwalkers units while they are wholly within 12\" of this unit. Weapon abilities: Crit (Mortal)."
+},
+{
+"id": 792573,
+"name": "Honed Gear",
+"text": "Add 1 to the Rend characteristic of this unit's melee weapons."
+},
+{
+"id": 794283,
+"name": "Doomwheel",
+"text": "Rolling Doom: Timing: Your Movement Phase This unit can move a distance up to its Move characteristic. This unit can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat. Then, pick up to 3 enemy units that this unit passed across during that move to be the targets. Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Designer's Note: *This unit can use this ability even if it is in combat.* Keywords: Core, Move Weapon abilities: Charge (+1 Damage), Shoot in Combat."
+},
+{
+"id": 793379,
+"name": "Shock and Awe",
+"text": "Each time this unit is set up using the 'Scions of the Storm' ability, subtract 1 from hit rolls for attacks that target this unit for the rest of the battle round. In addition, each time a friendly Stormcast Eternals unit is set up wholly within 12\" of this unit using the 'Scions of the Storm' ability, subtract 1 from hit rolls for attacks that target that unit for the rest of the battle round."
+},
+{
+"id": 793411,
+"name": "Heart of the Forest",
+"text": "You cannot allocate more than 10 damage points per phase to a friendly Soulpod Guardians unit while it is wholly within 12\" of your Soulpod Grove (remaining damage points inflicted on it in that phase have no effect)."
+},
+{
+"id": 815196,
+"name": "Silver Wand",
+"text": "If this unit is not a Wizard, it can use the 'Unbind' ability as if it had Wizard (1). Otherwise, add 1 to casting rolls for this unit."
+},
+{
+"id": 794107,
+"name": "Bladegheist Revenants",
+"text": "Thrashing Desperation: While this unit contests an objective you control, enemy units cannot finish a charge move within 1/2\" of a model in this unit unless the unmodified charge roll was 7 or more. Weapon abilities: Crit (Auto-wound)."
+},
+{
+"id": 791908,
+"name": "Summon Soulstealer Carrion",
+"text": "Timing: Your Hero Phase Declare: If there is not a friendly Soulstealer Carrion on the battlefield, pick a friendly Ossiarch Bonereapers Wizard to cast this spell, then make a casting roll of 2D6. Set up a Soulstealer Carrion wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. Keywords: Spell, Summon"
+},
+{
+"id": 792432,
+"name": "Tombstone of the Penitent",
+"text": "Add 1 to the Attacks characteristic of this unit's melee weapons for each non-Faction Terrain terrain feature that is being contested by friendly units, to a maximum of 8."
+},
+{
+"id": 792342,
+"name": "Burgeoning Filth",
+"text": "Subtract 3 from the control scores of enemy units wihle they are in combat with any friendly Cycle of Corruption units. Keywords: Cycle"
+},
+{
+"id": 793758,
+"name": "Abhorrant Ghoul King (Scourge of Ghyran)",
+"text": "Long Live the King: If this unit would be destroyed, before removing it from play, friendly non-Unique Flesh-eater Courts units wholly within 12\" of this unit become enraged until the start of your next turn. Melee weapons used by friendly enraged units have Crit (Auto-wound) and score critical hits on unmodified hit rolls of 5+, even if this unit has been destroyed. The King's Court: Add 1 to the Attacks characteristic of melee weapons used by other friendly non-Monster Flesh-eater Courts Heroes while they are wholly within 12\" of this unit. In addition, add 1 to the Attacks characteristic of this unit's melee weapons for each other friendly non-Monster Flesh-eater Courts Hero wholly within 12\" of this unit, to a maximum of +3. Weapon abilities: Anti-Hero (+1 Rend)."
+},
+{
+"id": 793372,
+"name": "Peerless Manoeuvres",
+"text": "Timing: Once Per Turn (Army), Your Movement Phase Declare: Pick a friendly Vanguard Chamber unit that did not use a Move ability this turn and is not in combat. Roll a dice. On a 3+, remove that unit from the battlefield and set it up again anywhere on the battlefield more than 9\" from all enemy units."
+},
+{
+"id": 815263,
+"name": "Ferrium Plate",
+"text": "Each phase, the first damage point inflicted on this unit is ignored."
+},
+{
+"id": 793399,
+"name": "The Old Stag's Roar",
+"text": "Add the number of enemy units that have been destroyed this battle to this unit's Move characteristic, to a maximum of +4\"."
+},
+{
+"id": 792879,
+"name": "Maddening Radiance",
+"text": "Add 1 to the Attacks characteristic of melee weapons used by units in this Regiment of Renown while they are wholly within 12\" of the Ushoran in this Regiment of Renown."
+},
+{
+"id": 793764,
+"name": "Auric Flamekeeper",
+"text": "Masterflame Rune: Timing: Once Per Turn (Army), Your Hero Phase Declare: If any friendly units have been destroyed during the battle, pick a friendly Fyreslayers Infantry unit wholly within 12\" of this unit to be the target. Roll a dice. If the roll is equal to or less than the number of Fyreslayers units that have been destroyed during the battle, pick 1 of the following effects to apply until the start of your next turn: *Grimnir's Grit:* The target has Ward (5+). *Grimnir's Resolve:* Add 2 to charge rolls for the target. *Grimnir's Vengeance:* Add 1 to the Damage characteristic of the target's melee weapons."
+},
+{
+"id": 815292,
+"name": "Path Restrictions",
+"text": "Stormcast Eternals Hero only"
+},
+{
+"id": 791176,
+"name": "One Wiv Da Beast",
+"text": "Timing: Once Per Battle (Army), Any Hero Phase The next time this phase that this unit uses a Spell ability, instead of making a casting roll for this unit, you can use a value of 6 for the roll that cannot be modified."
+},
+{
+"id": 793280,
+"name": "Unholy Presence",
+"text": "Timing: Once Per Battle, Any Combat Phase Declare: Pick an enemy unit in combat with this unit to be the target. Inflict D3 mortal damage on the target. If the target is a Priest, inflict 3 mortal damage on it instead."
+},
+{
+"id": 792148,
+"name": "Invigorate the Ranks",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Ossiarch Bonereapers Wizard to cast this spell, pick a visible friendly Ossiarch Bonereapers unit wholly within 12\" of them to be the target, then make a casting roll of 2D6. Add 1 to the Attacks characteristic of the target's melee weapons until the start of your next turn. Keywords: Spell"
+},
+{
+"id": 794423,
+"name": "Kosargi Nightguard",
+"text": "A Pact Maintained: While a friendly Radukar the Wolf or Radukar the Beast is within this unit's combat range, both that unit and this unit have Ward (5+)."
+},
+{
+"id": 815063,
+"name": "Shadowmeld",
+"text": "Fly only. Add the 'Shadowmeld' ability to yout hero's warscroll."
+},
+{
+"id": 792929,
+"name": "A Quest Well Done",
+"text": "Timing: Once Per Battle (Army), End of Any Turn If the enemy Enemy of the Everchosen unit is destroyed by a unit in this Regiment of Renown, add 10 to the control score of each unit in this Regiment of Renown for the rest of the battle."
+},
+{
+"id": 792981,
+"name": "Forest Dwellers",
+"text": "Add 1 to charge rolls for units in this Regiment of Ghyran."
+},
+{
+"id": 794084,
+"name": "Pestigors",
+"text": "Bestial Desecration: Add 1 to the Rend characteristic of this unit's melee weapons while it is not within enemy territory."
+},
+{
+"id": 791824,
+"name": "Shrewd Opportunist",
+"text": "Timing: Deployment Phase Declare: Pick this unit and up to 2 other friendly Kharadron Overlords non-Hero Infantry units to be the targets. Each target can immediately use the 'Normal Move' ability as if it were your movement phase."
+},
+{
+"id": 792735,
+"name": "Veteran's Eye",
+"text": "Add 1 to hit rolls for this unit's combat attacks."
+},
+{
+"id": 793593,
+"name": "Ironbreakers",
+"text": "Gromril Shieldwall: If this unit has not used a Move ability this turn and was not set up this turn, attacks that target this unit cannot score critical hits (treat them as regular hits instead)."
+},
+{
+"id": 794246,
+"name": "Terradon Riders",
+"text": "Attack from On High: Subtract 1 from hit rolls for shooting attacks that target this unit. Deadly Cargo: Timing: Your Movement Phase Declare: Pick an enemy unit that this unit passed across this phase to be the target. Roll a dice for each model in this unit, and add 2 to each roll if this unit is within the combat ranges of any friendly Terradon Chief units. For each 5+: \u2022 Inflict 1 mortal damage on the target. \u2022 If any damage points are allocated by this ability and the target does not have Fly, the target cannot use Run abilities until the start of your next turn. Dispersed Formation: This unit has a coherency range of 2\". Weapon abilities: Companion, Crit (Auto-wound)."
+},
+{
+"id": 794561,
+"name": "Drycha Hamadreth",
+"text": "Terror Of The Deep Woods: Enemy units cannot use Run or Retreat abilities while they are within 9\" of this unit. Enrage The Spites: Timing: Your Hero Phase Declare: Pick up to 3 enemy units that are visible to and within 12\" of this unit or that are within the creeping overgrowth to be the targets, then make a casting roll of 2D6. Inflict D3 mortal damage on each target. Keywords: Spell Merciless Ambush: Timing: Your Charge Phase Declare: If this unit is not in combat and has not used a Run or Retreat ability this turn, make a charge roll of 2D6. You can remove this unit from the battlefield and set it up again within 1/2\" of an enemy unit and wholly within X\" of a terrain feature that has a friendly overgrown token, where X is equal to the charge roll. If you do so, this unit has charged. Keywords: Core, Move, Charge, Rampage Weapon abilities: Companion, Crit (2 Hits), Crit (Mortal)."
+},
+{
+"id": 794125,
+"name": "Black Coach (Scourge of Ghyran)",
+"text": "Spectral Carriage: Timing: Your Charge Phase For the rest of the phase, add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3. One Stop, No Return: Timing: Once Per Turn (Army), Any Hero Phase Declare: Pick an objective you do not control to be the target. For the rest of the turn, while enemy units are contesting the target objective, they cannot score critical hits while this unit is also contesting it (hit rolls that would be critical hits score hits instead). Evocation of Death: Timing: Once Per Turn (Army), Any Hero Phase Pick 1 of the following to apply for the rest of the turn: *Noble Blade:* This unit's melee weapons, including Companion weapons, have Crit (Mortal) instead of Crit (Auto-wound). *Unholy Grail:* Pick a friendly Nighthaunt unit wholly within 12\" of this unit. Each time that unit uses the 'Rally' command, you receive 3 additional rally points. *Tome of Undead Lore:* This unit has Wizard (1). Weapon abilities: Charge (+1 Damage), Companion, Crit (Auto-wound)."
+},
+{
+"id": 794400,
+"name": "Ma Maegran, Chooser of the Mighty",
+"text": "Battle Damaged: While this unit has 10 or more damage points, the Attacks characteristic of its Spear of Krum Kalda is 3. Shepherdess: Timing: Once Per Turn (Army), Your Hero Phase Declare: Pick a visible friendly Ancient Ghyrochs unit wholly within 12\" of this unit to be the target. If the target is within this unit's combat range, pick 1 of the effects below. Otherwise, make a rampage roll of D6. On a 3+, pick 1 of the effects below. *Gore their Guts!*: If the target is in combat, add 1 to the Damage characteristic of the target's Mighty Horns and Hooves for the rest of the turn. *Ghyroch Rush*: If the target is not in combat, it can move 3\". It can move into combat. *Reservoirs of Jade Energy*: Add 1 to this unit's casting power level until the start of your next turn. Keywords: Rampage Creepy Cantrips: Timing: Your Hero Phase Declare: Pick a visible friendly Sons of Behemat Monster unit wholly within 18\" of this unit to be the target, then make a casting roll of 2D6. Until the start of your next turn, add 1 to rampage rolls for the target and add 1 to hit rolls for the target's combat attacks. Keywords: Spell The Wandering Witch: While this unit is wholly within 12\" of another friendly Sons of Behemat Monster unit, this unit is not visible to enemy units more than 12\" away from it. Chooser of the Mighty: Timing: Once Per Battle, Any Movement Phase Declare: Pick another visible friendly Little unit wholly within 12\" of this unit to be mighty. Pick 1 of the following effects: \u2022 For the rest of the turn, each time you make an unmodified wound roll of 6 for a combat attack made by the mighty unit, inflict 1 mortal damage on the target of the attack after the Fight ability has been resolved. \u2022 Pick a point on the battlefield within 1\" of the mighty unit, then pick a friendly non-Unique Big unit that has been destroyed to be the target. Set up a replacement unit identical to the target within 1\" of that point, then allocate 10 damage points to it (ward rolls cannot be made for those damage points). The replacement unit can only be set up in combat with units that the mighty unit was in combat with when it was picked to be mighty. Then, 1 model in the mighty unit is slain."
+},
+{
+"id": 792772,
+"name": "Supreme Conjurer",
+"text": "Timing: Once Per Battle (Army), Reaction: You declared a Summon Spell ability for this unit Change the casting roll for that spell to a value of 8 that cannot be modified. In addition, set up the Manifestation on the battlefield wholly within 6\" of this unit and visible to them."
+},
+{
+"id": 791425,
+"name": "The Grisly Pennant",
+"text": "Timing: Any Combat Phase Declare: If this unit charged this phase, pick an enemy unit in combat with it to be the target. Roll a dice. If the roll is greater than the target's control characteristic or is a 6, the following effects apply for the rest of the turn: \u2022 Subtract 1 from hit rolls for the target's combat attacks. \u2022 Add 1 to hit rolls for combat attacks made by friendly units that target that enemy unit."
+},
+{
+"id": 793093,
+"name": "Warpstone Charm",
+"text": "Timing: Any Combat Phase Declare: Pick an enemy unit in combat with this unit to be the target. Roll a dice. On a 3+, subtract 1 from save rolls for the target for the rest of the turn."
+},
+{
+"id": 794080,
+"name": "Shaman Foulhoof",
+"text": "Purulent Profusion: Timing: Your Hero Phase Declare: Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6. Subtract 1 from the Rend characteristic of the target's melee weapons until the start of your next turn. Keywords: Spell Rampant Defilement: Timing: Any Combat Phase Declare: Pick a friendly Pestigors unit wholly within 12\" of this unit to be the target. Roll a dice. On a 3+, add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn."
+},
+{
+"id": 793414,
+"name": "Song of the Hunt",
+"text": "The following cumulative effects apply to friendly Evergreen Hunt units depending on the number of chords you have: 1 chord \u2013 *Simple:* Add 1 to run rolls and charge rolls for friendly units wholly within the same quarter of the battlefield as the quarry. 2 chords \u2013 *Tuneful:* Add 1 to hit rolls and wound rolls for friendly units' combat attacks that target an enemy unit wholly within the same quarter of the battlefield as the quarry. 3-5 chords \u2013 *Melodic:* Add 1 to the Attacks characteristic of melee weapons used by friendly units while they are in combat with the quarry. 6+ chords \u2013 *Mellifluous:* While a friendly unit is in combat with the quarry, the quarry has Strike-last."
+},
+{
+"id": 791525,
+"name": "The More Glorious Slaughter",
+"text": "Timing: Once Per Turn, Start of Any Turn Declare: If a friendly Twin destroyed an enemy unit in the previous turn and the other did not, pick the one that did not to use this ability. For the rest of the turn, add 1 to hit rolls for combat attacks made by units in the regiment of the unit using this abiltiy."
+},
+{
+"id": 794572,
+"name": "Gossamid Archers",
+"text": "Forest Fighters: This unit has a coherency range of 2\". Zephyrspites: Timing: Reaction: You declared a Shoot ability for this unit After that Shoot ability has been resolved, this unit can move up to D6\". It cannot move into combat during any part of that move. Keywords: Move Weapon abilities: Crit (Auto-wound), Shoot in Combat."
+},
+{
+"id": 791783,
+"name": "Gattlesson's Collossal Detonation Ammo",
+"text": "Timing: Once Per Battle, Start of Any Battle Round Declare: Pick 1 of this unit's ranged weapons. For the rest of the battle round: \u2022 Double the Attacks characteristic of that weapon. \u2022 For each unmodified hit roll of 1 for a shooting attack made by this unit, allocate 1 damage point to this unit after the Shoot ability has been resolved (ward rolls cannot be made for those damage points)."
+},
+{
+"id": 793469,
+"name": "Emerald Lifeswarm",
+"text": "Restored Vigour: Timing: End of Any Turn Heal (3) this Manifestation. Bounteous Healing: Timing: Your Movement Phase Declare: Pick a friendly unit within 3\" of this Manifestation to be the target. Heal (3) the target. Weapon abilities: Anti-Infantry (+1 Rend)."
+},
+{
+"id": 815237,
+"name": "Gnawhole",
+"text": "The following universal terrain abilities apply to this terrain feature (Terrain, 1.2): Cover"
+},
+{
+"id": 792878,
+"name": "Bulwark of the Necropolis",
+"text": "Timing: Once Per Turn (Army), Any Charge Phase Declare: Pick an enemy unit in combat with a unit in this Regiment of Renown to be the target. Roll a dice. On a 3+, the target cannot use commands for the rest of the turn."
+},
+{
+"id": 792750,
+"name": "Terrifying Stampede",
+"text": "If this unit charged this turn, add 5 to its control score for the rest of the turn."
+},
+{
+"id": 793328,
+"name": "Shields of the Warden",
+"text": "While any friendly Stormdrake Guard units are within a friendly Ionus Cryptborn's combat range: \u2022 That friendly Ionus Cryptborn has Ward (4+). \u2022 Each time you make a successful ward roll for that friendly Ionus Cryptborn, allocate 1 damage point to a friendly Stormdrake Guard unit within its combat range after the damage sequence for that friendly Ionus Cryptborn has been resolved (ward rolls cannot be made for those damage points)."
+},
+{
+"id": 794377,
+"name": "Corvus Cabal",
+"text": "Strike from the Shadows: Timing: Your Movement Phase Declare: Pick this unit if it is lurking in the shadows. Set up this unit anywhere on the battlefield more than 9\" from all enemy units. Then, add 1 to charge rolls for this unit for the rest of the turn. Shadow-lurkers: Timing: Deployment Phase Declare: Pick this unit if it has not been deployed. Set up this unit in reserve lurking in the shadows. It has now been deployed. Keywords: Deploy Weapon abilities: Crit (2 Hits), Shoot in Combat."
+},
+{
+"id": 791155,
+"name": "Tireless Conquerors",
+"text": "Add 1 to hit rolls for combat attacks made by friendly Bloodbound units that target an enemy unit that is contesting an objective you do not control."
+},
+{
+"id": 793233,
+"name": "Massive Stuffin' Sack",
+"text": "Timing: Any Combat Phase Declare: Pick an enemy unit in combat with this unit to be the target. Roll 3 dice. For each roll that is at least double the target's Health characteristic, 1 model in the target unit is automatically slain."
+},
+{
+"id": 791222,
+"name": "Commodore de Gra\u00e7on",
+"text": "Timing: Deployment Phase This unit and up to 1 other friendly Iron March War Machine within this unit's combat range can use the 'Normal Move' ability as if it were your movement phase."
+},
+{
+"id": 792458,
+"name": "Gore-Offal Dumplings",
+"text": "Timing: Once Per Turn (Army), End of Any Turn Declare: Spend 10 raw ingredients. Each friendly Gollop unit that is wholly within 12\" of and visible to a friendly Feastmaster can immediately use a Charge ability as if it were your charge phase, but subtract 1 from the number of dice rolled when making the charge roll for that unit."
+},
+{
+"id": 794248,
+"name": "Stegadon",
+"text": "Battle Damaged: While this unit has 10 or more damage points, the Attacks characteristic of its Stegadon's Horns and Jaws is 4. Unstoppable Stampede: Timing: Once Per Turn (Army), Any Charge Phase Declare: If this unit charged this phase, pick an enemy Infantry unit in combat with it to be the target. Inflict D3 mortal damage on the target. Then, this unit can move 2D6\". This unit can pass through models in the target unit but must end that move in combat. Keywords: Rampage Weapon abilities: Anti\u2011Infantry (+1 Rend), Anti\u2011Monster (+1 Rend), Charge (+1 Damage), Companion, Crit (2 Hits), Shoot in Combat."
+},
+{
+"id": 815271,
+"name": "Timberrrrr!",
+"text": "Each time a friendly Big or Little model is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3\" of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3\" of that point that has a lower Health characteristic than that model."
+},
+{
+"id": 793875,
+"name": "Dreadful Visage",
+"text": "Flensing Tongues: Timing: Any Hero Phase Declare: Pick a visible enemy unit within 12\" of this Manifestation to be the target. Until this Manifestation is banished or destroyed, the target is tongue-tied while it is within 12\" of this Manifestation. While the target is tongue-tied: \u2022 It cannot use Run abilities. \u2022 Your opponent must roll a D6 instead of a D3 when determining the amount of mortal damage inflicted on the target when it uses a Retreat ability. Weapon abilities: Crit (2 Hits)."
+},
+{
+"id": 793783,
+"name": "Magmic Battleforge",
+"text": "Spending the Forge: Timing: Once Per Battle (Army), Your Hero Phase Declare: Pick a friendly Fyreslayers Priest within this terrain feature's combat range to expend the power of the forge. Heal (D3) each friendly Fyreslayers unit on the battlefield. Once this ability has been used, this terrain feature cannot use the 'Molten Blessing' abiity for the rest of the battle. Molten Blessing: Timing: Start of Any Turn Declare: Pick a friendly Fyreslayers Priest within this terrain feature's combat range to be the target. Add 1 to chanting rolls for the target for the rest of the turn. In addition, the target can use the 'Unbind' ability this turn as if it had Wizard (1)."
+},
+{
+"id": 793719,
+"name": "Kairic Acolytes (Scourge of Ghyran)",
+"text": "Empowered by Magic: Add 1 to the Damage characteristic of this unit's melee weapons while this unit is wholly within 12\" of any Manifestations (friendly or enemy). Vulcharc: Timing: Once Per Turn (Army), Your Shooting Phase Declare: Pick a visible enemy unit within 12\" of this unit to be the target. For the rest of the turn, add 1 to the Rend characteristic of melee weapons used by friendly Kairic Acolytes units for attacks that target that enemy unit."
+},
+{
+"id": 792880,
+"name": "Deranged Transformation",
+"text": "Timing: Your Hero Phase Declare: Pick the Ushoran in this Regiment of Renown to cast this spell, pick another visible unit in this Regiment of Renown wholly within 12\" of them to be the target, then make a casting roll of 2D6. Until the start of your next turn: \u2022 Add 2\" to the target's Move characteristic. \u2022 Add 1 to wound rolls for the target's combat attacks Keywords: Spell, Unlimited"
+},
+{
+"id": 794011,
+"name": "Swampboss Skumdrekk (Scourge of Ghyran)",
+"text": "Battle Damaged: While this unit has 10 or more damage points, the Attacks characteristic of Sloppklaw's Bite and Talons is 4. Rigged Odds: The first time you fail a dirty trick roll each turn, give this unit 1 betting chip. Each time you make a dirty trick roll for an ability that targets a unit wholly within 12\" of this unit, you can spend any number of betting chips after seeing the result of the roll. For each betting chip you spend, add 1 to that dirty trick roll. Thrashing Tail: Timing: Once Per Turn (Army), Any Combat Phase Declare: Pick an enemy unit in combat with this unit to be the target. Roll a dice. If the roll is less than or equal to the number of models in the target unit, for the rest of the turn, each time this unit uses an Attack ability, if all of the attacks target that enemy unit, those attacks score critical hits on unmodified hit rolls of 5+. This ability also affects Companion weapons. Keywords: Rampage Weapon abilities: Companion, Crit (Mortal)."
+},
+{
+"id": 791812,
+"name": "Emberstone Flare",
+"text": "Timing: Once Per Battle, Your Movement Phase Declare: Pick a friendly Kharadron Overlords unit that has Fly and is not in combat to be the target. Remove the target from the battlefield and set it up again wholly within 9\" of this unit and more than 9\" from all enemy units."
+},
+{
+"id": 791804,
+"name": "Skyvessel Cover",
+"text": "Subtract 1 from hit rolls for attacks that target friendly Kharadron Overlords Infantry units that have not charged in the same turn while they are wholly within 6\" of a friendly Arkanaut Ironclad or Arkanaut Frigate that has not charged in the same turn."
+},
+{
+"id": 793385,
+"name": "Pyrotechnic Souls",
+"text": "When this unit is destroyed, gain 3 rage dice."
+},
+{
+"id": 792070,
+"name": "Infernal Gateway",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Disciples of Tzeentch Wizard to cast this spell, pick a visible enemy unit within 18\" of them that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6. Roll either 5 dice or a number of dice equal to the number of fate points you have. For each 4+, inflict 1 mortal damage on the target. Keywords: Spell. Unlimited"
+},
+{
+"id": 791076,
+"name": "Activate Place of Power",
+"text": "Timing: Start of Any Turn Declare: Pick a friendly Hero within 3\" of a Place of Power to use this ability, then pick that Place of Power to be the target. Roll a dice. On a 1, inflict D3 mortal damage on that Hero. On a 2+: \u2022 If that Hero is a Wizard or Priest, add 1 to casting rolls or chanting rolls for that Hero this turn. \u2022 If that Hero is not a Wizard or Priest, they can use the 'Unbind' or 'Banish Manifestation' ability this turn as if they had Wizard (1). Keywords: Core"
+},
+{
+"id": 794538,
+"name": "Retributors",
+"text": "Crushing Counter-blow: If this unit is damaged or if any models in this unit were slain this turn, add 1 to hit rolls for this unit's attacks for the rest of the turn. Weapon abilities: Crit (Mortal)."
+},
+{
+"id": 791949,
+"name": "Leaping Embers",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Priest to chant this prayer, pick a visible friendly unit wholly within 12\" of them to be the target, then make a chanting roll of D6. Add 2 to charge rolls for the target until the start of your next turn. If the chanting roll was 8+, add 4 to charge rolls for the target until the start of your next turn instead. Keywords: Prayer"
+},
+{
+"id": 793552,
+"name": "Savage Orruk Arrowboys",
+"text": "Aim Fer Its Eyes: Timing: Once Per Battle Round (Army), Any Shooting Phase Declare: If all of the attacks made with this unit's Stinga Bows this turn targeted the same enemy unit, pick that enemy unit to be the target. Roll a dice. Add 1 to the roll if the target is a Beast or Cavalry unit, or add 2 to the roll if the target is a Monster. On a 4+, subtract 1 from the Attacks characteristic of the target's Companion weapons for the rest of the turn. Weapon abilities: Crit (Auto-wound)."
+},
+{
+"id": 816557,
+"name": "The Light of Eltharion",
+"text": "Supreme Swordmaster: Ignore negative modifiers to hit rolls and wound rolls for this unit's attacks. Valorous Intervention: Remove this unit from the battlefield and set it up again within 1\" of the target, within 1\" of an enemy unit and in combat. This unit has charged. Weapon abilities: Anti-Hero (+1 Rend), Anti-Monster (+1 Rend), Crit (2 Hits), Shoot in Combat."
+},
+{
+"id": 793591,
+"name": "Longbeards",
+"text": "'I Thought Duardin Were Made of Sterner Stuff!': Timing: Once Per Turn (Army), Any Combat Phase Declare: Pick another friendly Cities of Sigmar Duardin unit wholly within 12\" of this unit to be the target. You cannot pick a Longbeards unit. Roll a dice. On a 3+, add 1 to wound rolls for the target's combat attacks for the rest of the turn."
+},
+{
+"id": 792094,
+"name": "Summon Realmscourge Rupture",
+"text": "Timing: Your Hero Phase Declare: If there is not a friendly Realmscourge Rupture on the battlefield, pick a friendly Slaves to Darkness Wizard to cast this spell, then make a casting roll of 2D6. Set up a Realmscourge Rupture wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. Keywords: Spell, Summon"
+},
+{
+"id": 792930,
+"name": "Ominous Fog",
+"text": "Units in this Regiment of Renown are not visible to enemy units more than 12\" from them while they are wholly within 9\" of the Treelord in this Regiment of Renown."
+},
+{
+"id": 793438,
+"name": "Nature's Titans",
+"text": "When using the 'Endless Growth' ability, do not roll a D3 for Monster targets. Instead Heal (3) each of those targets."
+},
+{
+"id": 792625,
+"name": "A Ghost in the Trees",
+"text": "Timing: Your Movement Phase If this unit is wholly within 3\" of a terrain feature, remove it from the battlefield and set it up again wholly within friendly territory and more than 9\" from all enemy units."
+},
+{
+"id": 793717,
+"name": "Ephilim's Pandaemonium",
+"text": "Power Leech: Timing: Once Per Turn, Any Shooting Phase Roll a D3. Allocate a number of damage points to this unit equal to the roll (ward rolls cannot be made for those damage points). Then, add 2 to the Attacks characteristic of this unit's ranged weapons for the rest of the turn. Keeper of the Pandaemonium: You can return D3 slain models to this unit. Weapon abilities: Anti-Unique (+1 Rend)."
+},
+{
+"id": 792672,
+"name": "Barkflesh Shield",
+"text": "Ignore the first damage point that would be allocated to this unit in each phase."
+},
+{
+"id": 793185,
+"name": "Brand of Apoplexy",
+"text": "While your fury level is 7, add 1 to the Damage characteristic of this unit's weapons."
+},
+{
+"id": 792266,
+"name": "These Realms Are Ours",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Allies of the Free Cities Wizard to cast this spell, pick an objective within 12\" of them to be the target, then make a casting roll of 2D6. For the rest of the turn, melee weapons used by friendly Allies of the Free Cities units have Charge (+1 Damage) for attacks that target enemy units that are contesting the target objective. Keywords: Spell, Unlimited."
+},
+{
+"id": 794062,
+"name": "Gutrot Spume",
+"text": "Pestilential Beachhead: Timing: Your Movement Phase Declare: Pick this unit if it is aboard the Slime Fleet. Set up this unit on the battlefield, wholly within 7\" of a battlefield edge and more than 9\" from all enemy units. Then set up every other friendly unit that is aboard the Slime Fleet on the battlefield wholly within 7\" of a battlefield edge, wholly within 7\" of this unit and more than 9\" from all enemy units. Flailing Tentacles: Timing: Any Combat Phase Declare: Pick an enemy Infantry Hero in combat with this unit to be the target. Roll a dice. On a 3+, the target has Strike-last for the rest of the turn. Master of the Slime Fleet: Timing: Deployment Phase Declare: Pick a regiment led by this unit to be the target if no units from that regiment have been deployed. Each unit in the target regiment is set up in reserve aboard the Slime Fleet. Those units have now been deployed. Keywords: Deploy Weapon abilities: Anti-Hero (+1 Rend), Crit (Mortal)."
+},
+{
+"id": 793590,
+"name": "Freeguild Fusiliers",
+"text": "Blackpowder Squire: Timing: Once Per Battle, Reaction: You declared a Shoot ability for this unit and this unit is in combat This unit's Blackpowder Squire is a token. Remove this unit's Blackpowder Squire from the battlefield, then add 1 to the Rend characteristic of this unit's ranged weapons for the rest of the turn. Fortified Position: While this unit is under orders: \u2022 This unit's ranged weapons have Shoot in Combat. \u2022 Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit."
+},
+{
+"id": 793850,
+"name": "Dexcessa, the Talon of Slaanesh",
+"text": "Joyous Battle Fury: Timing: End of Any Turn If any enemy models were slain by this unit's combat attacks this turn, Heal (D3) this unit, and add 1 to the Attacks characteristic of this unit's Impaling Talons for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative. Redolence of Violence: Timing: Once Per Turn (Army), End of Any Turn Declare: Pick an enemy unit in combat with this unit to be the target. Roll 2D6. If this unit charged this turn, add 2 to the roll. If the roll exceeds the target's Health characteristic, 1 model in the target is automatically slain. If the target is a Manifestation and the roll exceeds its banishment value, it is banished and removed from play. Keywords: Rampage Fleeting Dance of Death: This unit can use Charge abilities even if it is in combat. Scion of Slaanesh: Timing: Reaction: You declared a Fight Ability for this unit Pick a friendly Paragon that has not used a Fight ability this turn and is within this unit's combat range and visible to this unit to be the target. The target can be picked to use a Fight ability immediately after the Fight ability used by this unit has been resolved. Weapon abilities: Charge (+1 Damage)."
+},
+{
+"id": 794362,
+"name": "Eightfold Doom-sigil",
+"text": "Empowered by Atrocity: If 2 or more units (friendly or enemy) were destroyed this turn, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly Slaves to Darkness units while they are wholly within 12\" of this Manifestation."
+},
+{
+"id": 791044,
+"name": "Brutal Strikes",
+"text": "Pick 1 of this unit's weapons. Add 1 to that weapon's Damage characteristic."
+},
+{
+"id": 792827,
+"name": "Shield of Eldritch Flame",
+"text": "Timing: Reaction: Opponent declared a Fight ability that targeted this unit Until the end of the next turn: \u2022 Subtract 1 from hit rolls and wound rolls for attacks that target this unit. \u2022 Subtract 1 from the Rend characteristic and Damage characteristic of weapons used for attacks that target this unit. \u2022 Subtract 1 from this unit's power level, to a minimum of 0."
+},
+{
+"id": 794593,
+"name": "Grombrindal, the White Dwarf",
+"text": "Armour of Glimril Scales: If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate D3 damage points to it (ward rolls cannot be made for those damage points). Rune Axe of Grimnir: The attacks characteristic of this unit's Rune Axe of Grimnir is 7 if this unit charged this turn. As Stern As Stone: Friendly Duardin units have Ward (5+) while they are wholly within 12\" of this unit. Living Legend: Add 2 to the control scores of friendly Duardin Infantry units while they are wholly within 12\" of this unit. Weapon abilities: Crit (2 Hits)."
+},
+{
+"id": 816544,
+"name": "Flesh Hounds",
+"text": "Beast: This unit has a maximum control score of 1. Hunters of Mystics: If the casting roll for an enemy Wizard within 12\" of this unit contains 2 or more results of 1 or 2, the spell is miscast. If the chanting roll for an enemy Priest within 12\" of this unit is an unmodified 2, the prayer fails and its effect is not resolved. In addition, your opponent cannot give that Priest any ritual points for the rest of the phase. Weapon abilities: Blood-hungry, Companion."
+},
+{
+"id": 815157,
+"name": "Path Restrictions",
+"text": "Kruleboyz Hero only"
+},
+{
+"id": 794410,
+"name": "Nagash, Supreme Lord of the Undead",
+"text": "Battle Damaged: While this unit has 10 or more damage points, subtract 3 from its power level. The Staff of Power: Add 2 to casting rolls for this unit while it has not miscast any spells this turn. If this unit miscasts a spell, ignore the restriction that would stop this unit from casting any more spells this turn. Hand of Dust: Timing: Once Per Turn (Army), End of Any Turn Declare: Pick a visible enemy Hero or Monster in combat with this unit to be the target. Hide a dice in one of your hands or under one of two appropriate containers. Your opponent must pick one of your hands or containers. If they pick the one hiding the dice, this ability has no effect. If they pick the empty one, the target is automatically destroyed. Keywords: Rampage Supreme Lord of the Undead: Timing: Once Per Battle, Your Hero Phase Declare: Pick a friendly non-Hero non-Unique Death unit that has been destroyed to be the target. Set up a replacement unit identical to the target wholly within 12\" of this unit and more than 9\" from all enemy units. Invocation of Nagash: Timing: Your Hero Phase Declare: This unit can cast this spell more than once per phase. Pick a visible unit wholly within 18\" of this unit that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6. If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly Death unit, pick 1 of the following effects: \u2022 Return a number of slain models to the target unit with a combined Health characteristic of up to 3. \u2022 The target has Ward (5+) until the start of your next turn. Keywords: Spell"
+},
+{
+"id": 793432,
+"name": "Wychwood Glaive",
+"text": "Timing: End of Any Turn Declare: Pick an enemy unit that had any damage points allocated to it by this unit's combat attacks this turn to be the target. Subtract 1 from save rolls for the target for the rest of the battle. This unit can use this ability even if it has been destroyed."
+},
+{
+"id": 815111,
+"name": "Body of Hardened Obsidian",
+"text": "For the purposes of the 'Daemonic Resilience' ability, this unit always counts as having 1 more daemonic power point than the number it actually has, to a maximum of 3."
+},
+{
+"id": 791622,
+"name": "Experimental Munitions",
+"text": "Ranged weapons used by friendly Helsmiths of Hashut units have Crit (2 Hits) while they have 2 or more daemonic power points."
+},
+{
+"id": 793459,
+"name": "Soulsnare Shackles",
+"text": "Bound for the Great Oubliette: Timing: Any Hero Phase Declare: For each part of this Manifestation, you can pick an enemy unit within 3\" of that part to be the targets. You cannot pick the same unit to be the target of this ability more than once per turn. Roll a D3 for each target. On a 2+: \u2022 Inflict an amount of mortal damage on the target equal to the roll. \u2022 Subtract a number of inches equal to the roll from the target's Move characteristic for the rest of the turn. Multiple Parts: When a number of damage points equal to this Manifestation's Health characteristic are allocated to it, this Manifestation is destroyed and all its parts are removed from play."
+},
+{
+"id": 794568,
+"name": "Kurnoth Hunters with Kurnoth Greatbows",
+"text": "Hunter's Endurance: Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit while it is wholly within the creeping overgrowth. Steady Aim: Timing: Once Per Turn (Army), Your Shooting Phase If this unit has not used a Move ability this turn and was not set up this turn, add 1 to hit rolls for this unit's shooting attacks for the rest of the turn. Weapon abilities: Anti-Cavalry (+1 Rend)."
+},
+{
+"id": 793649,
+"name": "Morathi-Khaine",
+"text": "Surge of Hatred: Timing: Your Hero Phase Declare: Pick either a friendly Shadow Queen wholly within 12\" of this unit and in combat or a visible friendly non-Hero Daughters of Khaine unit wholly within 12\" of this unit and in combat to be the target, then make a casting roll of 2D6. If the target is a friendly Shadow Queen, it can immediately use a Fight ability as if it were your combat phase. Otherwise, inflict D3 mortal damage on each enemy unit in combat with the target. Keywords: Spell The Iron Heart of Khaine: Each time you perform a blood rite, immediately after the ability that destroyed a unit has been resolved, pick 1 of the following effects: \u2022 Until the start of your next turn, this unit is only visible to enemy units while those units are within its combat range. \u2022 Heal (D6) this unit or a friendly Shadow Queen. \u2022 A friendly Shadow Queen can immediately use the 'Normal Move' or 'Retreat' ability as if it was your movement phase even if it has already used that ability or another Core ability this phase. Designer's Note: *If the Shadow Queen retreats with the 'Iron Heart of Khaine' ability, she cannot subsequently use the 'Fight' ability in the same combat phase.* \u2022 Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units. \u2022 For the rest of the turn, set this unit's Control characteristic to 5 and a friendly Shadow Queen's Control characteristic to 15. Divine Matriarch: Timing: Your Hero Phase Declare: Pick a visible friendly Daughters of Khaine Priest or Wizard wholly within 12\" of this unit to be the target. Add 1 to casting rolls and chanting rolls for the target until the start of your next turn."
+},
+{
+"id": 791973,
+"name": "Viletide",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Beasts of Chaos Wizard to cast this spell, pick a visible enemy unit within 12\" of them to be the target, then make a casting roll of 2D6. Inflict D3 mortal damage on the target. In addition, until the start of your next turn, the target cannot use commands. Keywords: Spell, Unlimited"
+},
+{
+"id": 793037,
+"name": "Incandescent Rectrices",
+"text": "Timing: Any Hero Phase Heal (D3) this unit."
+},
+{
+"id": 791281,
+"name": "Skilled Skirmishers",
+"text": "Timing: Once Per Turn (Army), Any Charge Phase Declare: Pick a friendly Croneseer's Pariahs Cavalry unit that has not charged this turn and is in combat with an enemy unit that charged this turn to be the target. Roll a dice. On 3+, the target can immediately use a Retreat ability as if it were your movement phase. In addition, no mortal damage is inflicted on the target by that Retreat ability."
+},
+{
+"id": 793286,
+"name": "The Queen's Prize",
+"text": "Timing: Once Per Turn (Army), Your Hero Phase Declare: You can only use this ability if you have not used any Exquisite Plot abilities this turn. Pick a friendly unit to be the target. For the rest of the turn, add 5 to the target's control score. In addition, at the end of this turn, after determining control of objectives, if the target is contesting an objective that you control and that was controlled by your opponent at the start of this turn, add 5 to the target's control score for the rest of the battle. Keywords: Exquisite Plot"
+},
+{
+"id": 792722,
+"name": "Trained Hands",
+"text": "Timing: Once Per Battle, Reaction: You declared a Shoot ability for this unit Immediately after the Shoot ability has been resolved, this unit can use a second Shoot ability."
+},
+{
+"id": 793684,
+"name": "Kairos Fateweaver",
+"text": "Battle Damaged: While this unit has 10 or more damage points, subtract 1 from its power level. Master of Destiny: If this unit has not already engineered the outcome this battle round, instead of making a casting roll, unbinding roll, banishment roll, hit roll, wound roll, or save roll for a visible friendly Disciples of Tzeentch unit wholly within 12\" of this unit, this unit can engineer the outcome. If the roll would have been a D6 roll, you can use a value of 6 for the roll, you can use a value of 6 for it that cannot be modified. If the roll would have been a 2D6 roll, you can use a value of 9 for it that cannot be modified. Mastery of Magic: When you make a casting roll for this unit, you can change the lowest D6 to match the highest D6. Fateful Reverse: Timing: Your Hero Phase Declare: Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6. Until the start of your next turn: \u2022 If the target charged in the same turn, friendly Disciples of Tzeentch units in combat with the target have Strike-first. \u2022 The target's weapons cannot be affected by the Charge (+1 Damage) weapon ability. Keywords: Spell Beacon of Sorcery: Add 1 to casting rolls and unbinding rolls for friendly Disciples of Tzeentch Wizards while they are wholly within 12\" of this unit. In addition, if a friendly Disciples of Tzeentch Wizard wholly within 12\" of this unit unbinds a spell, no command points are spent for that Wizard to use the 'Magical Intervention' command in that phase."
+},
+{
+"id": 793616,
+"name": "Toll's Companions",
+"text": "Hidden Agents: Timing: Deployment Phase Declare: Pick this unit and a friendly Callis and Toll unit if those units have not been deployed. Set up those units in reserve in the shadows. They have now been deployed. Keywords: Deploy Emerge from the Shadows: Timing: Your Movement Phase Declare: Pick this unit if it is in the shadows. Set up this unit anywhere on the battlefield more than 6\" from the enemy mark and more than 9\" from all other enemy units. Then, set up the Callis and Toll unit in the shadows wholly within 6\" of this unit, more than 6\" from the enemy mark and more than 9\" from all other enemy units. Saviours of Cinderfall: While a friendly Callis and Toll unit is wholly within this unit's combat range, both this unit and that friendly unit have Ward (5+). Weapon abilities: Anti\u2011Wizard (+1 Rend)."
+},
+{
+"id": 791950,
+"name": "Trail of Lava",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Priest to chant this prayer, pick a visible friendly unit wholly within 12\" of them to be the target, then make a chanting roll of D6. Until the start of your next turn: \u2022 The target can use a Retreat ability and still use Shoot and/or Charge abilities later in the turn. If the chanting roll was 8+, after the Retreat ability has been resolved, inflict D3 mortal damage on each enemy unit that was in combat with the target at the start of the move. \u2022 No mortal damage is inflicted on the target by Retreat abilities. Keywords: Prayer"
+},
+{
+"id": 793396,
+"name": "Spirit-step",
+"text": "Timing: Any Movement Phase If this unit is in combat, it can make a pile-in move. Then, you can pick an enemy unit in combat with this unit and roll a D3. On a 2+, inflict an amount of mortal damage on the enemy unit equal to the roll."
+},
+{
+"id": 792977,
+"name": "Dirty Brawlers",
+"text": "Add 1 to wound rolls for units in this Regiment of Ghyran that did not charge in the same turn and are not in combat with any enemy units that charged in the same turn."
+},
+{
+"id": 793303,
+"name": "Tide of Bones and Blades",
+"text": "Add 1 to the Rend characteristic of melee weapons used by friendly Deathrattle units that charged in the same turn for attacks that target a unit that has fewer models than the attacking unit."
+},
+{
+"id": 815128,
+"name": "Enhancement Restrictions",
+"text": "Ethersea Companions are unique enhancements that can be given to non-Hero Idoneth Deepkin units. A unit can only have 1 Ethersea Companion."
+},
+{
+"id": 792688,
+"name": "Abject Apathy",
+"text": "Ignore the effects of Strike-first and Strike-last on this unit."
+},
+{
+"id": 792634,
+"name": "Marked for the Altar",
+"text": "Timing: Once Per Battle, Any Combat Phase Declare: Pick an enemy unit in combat with this unit to be the target. Then pick 1 of this unit's melee weapons to be the Sacrificial Weapon. For the rest of the turn, add the target's Control characteristic, to a maximum of 5, to the Attacks characteristic of the Sacrificial Weapon, but all of its combat attacks must target that enemy unit."
+},
+{
+"id": 791021,
+"name": "Cover",
+"text": "Subtract 1 from hit rolls for attacks that target a unit that is behind or wholly on this terrain feature, unless that unit charged this turn or has the Fly keyword."
+},
+{
+"id": 793547,
+"name": "Wardokk",
+"text": "Primal Hex: Timing: Once Per Turn (Army), Your Hero Phase Declare: Pick an enemy Wizard within 24\" of this unit to be the target. Roll a dice. On a 3+, until the start of your next turn, each time the target uses a Spell or Unbind ability, this unit gains 1 ritual point."
+},
+{
+"id": 793554,
+"name": "Savage Orruks",
+"text": "The Savage Hordes: Add 10 to the control score of this unit while it is in combat with any enemy units that charged this turn."
+},
+{
+"id": 793911,
+"name": "Lotann, Warden of the Soul Ledgers",
+"text": "Fount of Willpower: Timing: Once Per Turn, Reaction: You declared a Spell ability for a friendly Isharann unit wholly within 12\" of this unit Remove 1 of this unit's soul-quota tokens. Then, you can re-roll the casting roll. Catalogue of Souls: Each time an enemy unit is destroyed, give this unit a soul-quota token. Empowered by Memory: Timing: Your Hero Phase Declare: Pick a visible friendly Idoneth Deepkin unit wholly within 18\" of this unit to be the target, then make a casting roll of 2D6. The target's melee weapons have Crit (Auto-wound) for the rest of the turn. Keywords: Spell Weapon abilities: Companion."
+},
+{
+"id": 815018,
+"name": "Hatred's Edge",
+"text": "Roll 2D6. On an 8+, 1 model in the target unit is slain."
+},
+{
+"id": 793865,
+"name": "Blissbarb Seekers",
+"text": "Adrenaline Archers: Timing: Once Per Turn (Army), Your Movement Phase This unit can use Shoot abilities this turn even if it used a Retreat ability in the same turn. In addition, for the rest of the turn, no mortal damage is inflicted on this unit by Retreat abilities. Weapon abilities: Companion."
+},
+{
+"id": 792566,
+"name": "Utterly Unquestioning",
+"text": "Each time this unit uses a Relentless Discipline ability, roll a dice as a reaction. On a 5+, subtract 1 from the number of relentless discipline points that must be spent to use that ability."
+},
+{
+"id": 793180,
+"name": "The Banner of Screaming Flesh",
+"text": "This unit has the Pledged to Slaanesh keyword. In addition, while this unit includes any standard bearers, if this unit charged this turn, add 1 to the Attacks characteristic of this unit's melee weapons for the rest of the turn. Keywords: Ensorcelled Banner"
+},
+{
+"id": 793813,
+"name": "Snarlfang Riders",
+"text": "Can't Catch Us!: Timing: Once Per Turn (Army), Enemy Movement Phase If this unit is not in combat, this unit can move D6\". It cannot end that move in combat. Weapon abilities: Companion."
+},
+{
+"id": 791147,
+"name": "Slaughter Triumphant",
+"text": "Timing: Passive Add 1 to the Attacks characteristic of weapons used by friendly Blades of Khorne units that charged in the same turn. Keywords: Blood Tithe"
+},
+{
+"id": 815092,
+"name": "Enhancement Restrictions",
+"text": "Marks of Vulcatrix are enhancements that can only be given to Magmadroths."
+},
+{
+"id": 792082,
+"name": "Hysterical Frenzy",
+"text": "Timing: Your Hero Phase Declare: Pick a friendly Hedonites of Slaanesh Wizard to cast this spell, pick a friendly Hedonites of Slaanesh unit wholly within 12\" of them to be the target, then make a casting roll of 2D6. Add 1 to wound rolls for the target's combat attacks until the start of your next turn. Keywords: Spell, Unlimited"
+},
+{
+"id": 793962,
+"name": "Weirdbrute Wrekkaz (Scourge of Ghyran)",
+"text": "Propa Wonky: Timing: Once Per Turn (Army), Any Combat Phase Declare: If this unit is in combat, pick a friendly Ironjawz unit wholly within 12\" of this unit to be the target. Add 1 to hit rolls for the target's combat attacks for the rest of the turn. Weapon abilities: Anti-Infantry (+1 Rend)."
+},
+{
+"id": 791845,
+"name": "Boo! Haw Haw Haw...",
+"text": "Subtract 2 from the control scores of enemy units while they are in combat with this unit."
+},
+{
+"id": 793601,
+"name": "Sorceress on Black Dragon",
+"text": "Battle Damaged: While this unit has 10 or more damage points, the Attacks characteristic of its Black Dragon's Claws is 4. Command Underlings: Timing: Once Per Turn (Army), Your Hero Phase Declare: Pick up to 3 friendly Cities of Sigmar Aelf Infantry units wholly within 12\" of this unit to be targets. Add 3\" to the Move characteristic of each target for the rest of the turn. Feed on Life Force: Timing: Once Per Turn (Army), End of Any Turn Declare: Pick an enemy unit in combat with this unit to be the target. Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If any enemy models are slain by this ability, place a dark sorcery token next to this unit for the rest of the battle, to a maximum of 3 tokens. Keywords: Rampage Dark Sorcery: Add 1 to casting rolls for this unit for each dark sorcery token it has. Weapon abilities: Companion, Shoot in Combat."
+},
+{
+"id": 793744,
+"name": "Royal Decapitator (Scourge of Aqshy)",
+"text": "Executioner and Enforcer: Timing: Once Per Turn (Army), Your Hero Phase Declare: Pick another friendly Flesh-eater Courts Infantry unit within this unit's combat range to be the target. 1 model in the target unit is automatically slain. Then, until the start of your next turn, ignore the first damage point that would be allocated to each visible friendly Flesh-eater Courts unit in each phase while it is wholly within 12\" of this unit. Heads on Pikes: Timing: Once Per Turn (Army), End of Any Turn Declare: If any damage points were allocated to an enemy Hero by this unit's combat attacks this turn and that enemy Hero has been destroyed, pick an objective or terrain feature within 6\" of this unit to be the target. Spend 1 rage dice. If your opponent's fury level is lower than yours, they must increase their fury level by 1, to a maximum of 7. Then, for the rest of the turn, subtract 5 from the control scores of enemy units while they are contesting the target objective or terrain feature."
+},
+{
+"id": 791861,
+"name": "Sneaky Sneakin'",
+"text": "Timing: Once Per Turn (Army), Any Hero Phase Declare: Pick a friendly Kruleboyz Infantry unit that has 10 or fewer models, is not in combat and has not been the target of a Dirty Trick ability this turn to be the target, then make a dirty trick roll. Remove the target from the battlefield and set it up again wholly within 3\" of a terrain feature and more than 9\" from all enemy units. Keywords: Dirty Trick"
+},
+{
+"id": 816560,
+"name": "Warpfire Throwers",
+"text": "Hidden Weapon Team: While this unit is within the combat range of a friendly Clanrats unit that has 5 or more models, and there are no other friendly Weapon Team units within that unit's combat range, this unit is not visible to enemy units more than 13\" away. Weapon abilities: Shoot in Combat."
+},
+{
+"id": 791446,
+"name": "Searing Claws",
+"text": "Timing: Once Per Turn (Army), Any Combat Phase Declare: Pick a friendly Drothkeepers Monster that has not used a Rampage ability this turn to use this ability, then pick an enemy unit in combat with it to be the target Roll a dice. On a 3+, for the rest of the turn, add 1 to the Rend characteristic of melee weapons used for attacks that target that enemy unit. Keywords: Rampage"
+},
+{
+"id": 815067,
+"name": "A Thousand Cuts",
+"text": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll and the target cannot use Rampage abilities for the rest of the turn."
+},
+{
+"id": 793603,
+"name": "Bleakswords",
+"text": "Merciless Conquerors: Timing: Once Per Turn (Army), Any Combat Phase For the rest of the turn, add 1 to the Attacks characteristic of this unit's melee weapons while it is contesting an objective you do not control. Weapon abilities: Crit (2 Hits)."
+},
+{
+"id": 815061,
+"name": "Enhancement Restrictions",
+"text": "Cannonade Cogfort and Conqueror Cogfort only"
+},
+{
+"id": 815283,
+"name": "Horror Unending",
+"text": "You can pick 1 additional target when using the 'Deathly Invocation' ability."
+},
+{
+"id": 815141,
+"name": "Oversized Propellers",
+"text": "Add 2\" to your Flagship's Move characteristic."
+}
+]

@@ -1,0 +1,678 @@
+{
+"760829": [
+[
+"movement",
+"Flying units can be positioned at any terrain tile"
+],
+[
+"immunity",
+"cannot be waterlogged"
+],
+[
+"immunity",
+"not affected by lava or A.C.I.D. tiles"
+]
+],
+"760835": [
+[
+"temporary_buff",
+"damage is increased by 1 on its next attack"
+],
+[
+"heal",
+"will heal 2 points"
+]
+],
+"760837": [
+[
+"disable",
+"unable to move or attack"
+],
+[
+"shield",
+"Any damage to a frozen unit is negated"
+]
+],
+"760848": [
+[
+"death_trigger",
+"Explodes on death"
+],
+[
+"aoe_damage",
+"dealing 1 damage to adjacent tiles"
+],
+[
+"piercing",
+"ignores Armor"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760851": [
+[
+"aoe_damage",
+"do 1 damage all friendly units every turn"
+]
+],
+"760852": [
+[
+"aura",
+"providing +1 HP to all Vek"
+],
+[
+"stat_gain",
+"+1 HP"
+]
+],
+"760853": [
+[
+"movement",
+"Massive units can walk in Water"
+]
+],
+"760854": [
+[
+"aura",
+"enhancing all Vek"
+],
+[
+"stat_gain",
+"+1 HP"
+],
+[
+"regeneration",
+"regeneration"
+],
+[
+"death_trigger",
+"explode on death"
+]
+],
+"760856": [
+[
+"on_damaged",
+"If damaged"
+],
+[
+"shield",
+"Shield itself"
+],
+[
+"heal",
+"prepare to heal"
+],
+[
+"delayed",
+"prepare to heal"
+]
+],
+"760861": [
+[
+"forced_movement",
+"Pull target towards you 1 tile"
+],
+[
+"protection",
+"Shield tiles from damage"
+],
+[
+"exhaust",
+"2 uses per battle"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"760862": [
+[
+"movement",
+"Fly over a target"
+],
+[
+"damage",
+"dropping an explosive smoke bomb"
+]
+],
+"760865": [
+[
+"ranged",
+"Powerful artillery strike"
+],
+[
+"damage",
+"damaging a single tile"
+],
+[
+"multi_target_attack",
+"pushing adjacent tiles"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+]
+],
+"760867": [
+[
+"terrain",
+"Water Tile"
+],
+[
+"suppress",
+"Units cannot attack in Water"
+],
+[
+"destroy",
+"Most non-flying enemies die in Water"
+]
+],
+"760870": [
+[
+"terrain",
+"Forest Tile"
+],
+[
+"on_damaged",
+"If damaged"
+],
+[
+"damage_over_time",
+"Lights units on Fire"
+]
+],
+"760878": [
+[
+"life_track",
+"make sure that the Vek do not destroy all of the grid power"
+],
+[
+"spawn_blocking",
+"which can be intercepted"
+],
+[
+"telegraphed_threats",
+"prepare to attack it"
+],
+[
+"summon",
+"spawned by other Vek"
+],
+[
+"aura",
+"provide passive bonuses to other Vek"
+],
+[
+"boss_phases",
+"Hive Leaders, bosses"
+]
+],
+"760879": [
+[
+"damage",
+"deal 3 damage"
+],
+[
+"forced_movement",
+"push the target"
+]
+],
+"760881": [
+[
+"damage",
+"deal 1 damage"
+],
+[
+"forced_movement",
+"push the target"
+]
+],
+"760890": [
+[
+"resource_gain",
+"+2 bonus XP"
+],
+[
+"on_kill",
+"per kill"
+]
+],
+"760892": [
+[
+"movement",
+"how many tiles a Mech can move each turn"
+]
+],
+"760894": [
+[
+"life_track",
+"When it reaches zero, the player loses"
+],
+[
+"resource_gain",
+"Grid Power can be regained"
+],
+[
+"saving_throws",
+"chance that a building tile will resist damage"
+],
+[
+"run_structure",
+"persist between Islands"
+],
+[
+"difficulty_modifiers",
+"On Unfair difficulty"
+]
+],
+"760895": [
+[
+"resource_gain",
+"earned for successfully completing objectives"
+],
+[
+"shop_gold",
+"Corporate Store"
+],
+[
+"resource_conversion",
+"Grid Power can be purchased for 1 Corporate Reputation"
+]
+],
+"760897": [
+[
+"shield",
+"Mech starts every mission with a Shield"
+],
+[
+"start_of_game",
+"starts every mission"
+]
+],
+"760899": [
+[
+"forced_movement",
+"Push adjacent tiles when repairing"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760900": [
+[
+"buff",
+"Mech gains Flying"
+]
+],
+"760901": [
+[
+"temporary_buff",
+"Gain +3 Move on first turn of every mission"
+],
+[
+"turn_number",
+"first turn of every mission"
+]
+],
+"760905": [
+[
+"placement_rules",
+"Deploy anywhere on the map"
+],
+[
+"damage",
+"damaging adjacent enemies"
+],
+[
+"adjacency",
+"adjacent enemies"
+]
+],
+"760907": [
+[
+"movement",
+"Move again after shooting"
+]
+],
+"760914": [
+[
+"ranged",
+"Powerful artillery strike"
+],
+[
+"damage",
+"Deals 1 damage to the target"
+],
+[
+"multi_target_attack",
+"pushing adjacent tiles"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: +2 Damage"
+],
+[
+"protection",
+"This attack will no longer damage Grid Buildings"
+]
+],
+"760915": [
+[
+"ranged",
+"Cluster Artillery"
+],
+[
+"protection",
+"Protect a tile"
+],
+[
+"damage",
+"damaging and pushing adjacent tiles"
+],
+[
+"forced_movement",
+"damaging and pushing adjacent tiles"
+]
+],
+"760916": [
+[
+"ranged",
+"Fires a pushing artillery"
+],
+[
+"forced_movement",
+"pushing artillery"
+],
+[
+"terrain",
+"creates Smoke behind the shooter"
+],
+[
+"damage_over_time",
+"All Smoke deals damage to enemy units every turn"
+]
+],
+"760917": [
+[
+"forced_movement",
+"Push all adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760919": [
+[
+"ranged",
+"Vulcan Artillery"
+],
+[
+"damage_over_time",
+"Light the target on Fire"
+],
+[
+"forced_movement",
+"push adjacent tiles"
+]
+],
+"760921": [
+[
+"multi_target_attack",
+"Fire a piercing beam"
+],
+[
+"ranged",
+"Burst Beam"
+],
+[
+"damage",
+"decreases in damage the further it goes"
+]
+],
+"760925": [
+[
+"disable",
+"Freeze yourself and the target"
+],
+[
+"friendly_fire",
+"Freeze yourself"
+],
+[
+"movement",
+"Flying units can move over any terrain tile"
+]
+],
+"760926": [
+[
+"multi_target_attack",
+"Chain damage through adjacent targets"
+]
+],
+"760928": [
+[
+"ranged",
+"Launch a rock at a tile"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+]
+],
+"760929": [
+[
+"movement",
+"Leap to a tile"
+],
+[
+"friendly_fire",
+"damaging self"
+],
+[
+"aoe_damage",
+"damaging self and adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760930": [
+[
+"ranged",
+"Powerful projectile"
+],
+[
+"damage",
+"causes damage to shooter as well as target"
+],
+[
+"friendly_fire",
+"causes damage to shooter as well as target"
+]
+],
+"760931": [
+[
+"ranged",
+"Fire a projectile"
+],
+[
+"debuff",
+"applies A.C.I.D."
+],
+[
+"forced_movement",
+"and pushes"
+],
+[
+"heal",
+"Mechs heal 1 damage"
+],
+[
+"on_kill",
+"when they deal a killing blow"
+],
+[
+"movement",
+"Flying units can move over any terrain tile"
+]
+],
+"760933": [
+[
+"ranged",
+"Throw needles at the enemy"
+],
+[
+"forced_movement",
+"pushing the furthest hit tile"
+],
+[
+"movement",
+"Flying units can move over any terrain tile"
+]
+],
+"760934": [
+[
+"ranged",
+"Artillery attack"
+],
+[
+"damage",
+"damages a tile"
+],
+[
+"forced_movement",
+"pushes adjacent tiles away"
+]
+],
+"760935": [
+[
+"ranged",
+"Throw a rock at a chosen target"
+],
+[
+"target_choice",
+"chosen target"
+],
+[
+"terrain",
+"Rock remains as an obstacle"
+]
+],
+"760936": [
+[
+"passive",
+"constant benefit to all Mechs in the squad"
+],
+[
+"upgrade",
+"Some Passives come with an upgrade or two"
+],
+[
+"deckbuilding_effect",
+"Mechs with Passives in Custom Squads"
+]
+],
+"760938": [
+[
+"damage_over_time",
+"All Smoke deals damage to enemy units every turn"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760939": [
+[
+"heal",
+"Mechs heal 1 damage"
+],
+[
+"on_kill",
+"when they deal a killing blow"
+],
+[
+"cheat_death",
+"will be repaired back online"
+],
+[
+"upgrade",
+"Upgrade: +1 Heal"
+]
+],
+"760940": [
+[
+"stat_gain",
+"All Mechs gain +1 HP"
+],
+[
+"aura",
+"All Mechs gain +1 HP"
+],
+[
+"upgrade",
+"Upgrade: +1 Health"
+]
+],
+"760941": [
+[
+"heal",
+"Repairing one Mech will affect all Mechs"
+],
+[
+"revive",
+"bring the Mech back online and save the pilot"
+]
+],
+"760942": [
+[
+"immunity",
+"no longer take damage when blocking emerging Vek"
+],
+[
+"spawn_blocking",
+"blocking emerging Vek"
+]
+],
+"760944": [
+[
+"temporary_buff",
+"Mechs gain +1 move"
+],
+[
+"adjacency",
+"start their turn adjacent to each other"
+],
+[
+"turn_start",
+"start their turn"
+],
+[
+"upgrade",
+"Upgrade: +1 Movement"
+]
+],
+"760947": [
+[
+"spell_power",
+"All Vek take +1 damage from Bumps"
+],
+[
+"collision_damage",
+"Bumps"
+],
+[
+"spawn_blocking",
+"blocking emerging Vek"
+]
+]
+}

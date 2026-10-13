@@ -1,0 +1,568 @@
+{
+"760884": [
+[
+"ranged",
+"Lob an artillery shot at a single tile"
+],
+[
+"damage",
+"for 1 damage"
+]
+],
+"760885": [
+[
+"immobilize",
+"restrict units' mobility with webbing"
+],
+[
+"damage",
+"stab it for 1 damage"
+],
+[
+"delayed",
+"preparing to stab it"
+]
+],
+"760887": [
+[
+"random_effect",
+"chance for a pod to appear from the future, dropping it onto a random tile"
+],
+[
+"quests",
+"A new objective is added when this event happens: Protect the Time Pod"
+],
+[
+"resource_gain",
+"Protecting or rescuing the Pod always grants a Reactor Core"
+],
+[
+"items_consumables",
+"Time Pods may also contain a Pilot, a Weapon, or a piece of Passive equipment"
+]
+],
+"760890": [
+[
+"stat_gain",
+"Gain +2 bonus XP per kill"
+],
+[
+"on_kill",
+"per kill"
+]
+],
+"760892": [],
+"760893": [],
+"760894": [
+[
+"life_track",
+"When it reaches zero, the player loses and the current run ends"
+],
+[
+"resource_gain",
+"Grid Power can be regained"
+],
+[
+"saving_throws",
+"Grid Defense is the percentage chance that a building tile will resist damage"
+],
+[
+"run_structure",
+"persist between Islands"
+],
+[
+"difficulty_modifiers",
+"On Unfair difficulty"
+]
+],
+"760895": [
+[
+"shop_gold",
+"Corporate Store"
+],
+[
+"resource_conversion",
+"Grid Power can be purchased for 1 Corporate Reputation each"
+],
+[
+"donate",
+"Weapons can be donated for 1 Corporate Reputation"
+],
+[
+"resource_gain",
+"Corporate Reputation Points are earned for successfully completing objectives"
+]
+],
+"760897": [
+[
+"shield",
+"Mech starts every mission with a Shield"
+],
+[
+"start_of_game",
+"starts every mission"
+]
+],
+"760898": [
+[
+"damage_reduction",
+"Mech gains Armored"
+]
+],
+"760899": [
+[
+"forced_movement",
+"Push adjacent tiles when repairing"
+]
+],
+"760900": [
+[
+"evasion",
+"Mech gains Flying"
+],
+[
+"resource_gain",
+"Requires 1 Power"
+]
+],
+"760901": [
+[
+"temporary_buff",
+"Gain +3 Move on first turn of every mission"
+]
+],
+"760903": [
+[
+"movement",
+"Mech can move through enemy units"
+]
+],
+"760904": [
+[
+"immunity",
+"Mech unaffected by Webbing and Smoke"
+]
+],
+"760905": [
+[
+"placement_rules",
+"Deploy anywhere on the map"
+],
+[
+"damage",
+"damaging adjacent enemies"
+],
+[
+"start_of_game",
+"Preemptive Strike"
+]
+],
+"760906": [
+[
+"multi_attack",
+"Mech can act twice if it does not move"
+]
+],
+"760907": [
+[
+"movement",
+"Move again after shooting"
+]
+],
+"760908": [
+[
+"damage",
+"2 damage melee attack"
+]
+],
+"760909": [
+[
+"resource_gain",
+"+1 Reactor Core"
+],
+[
+"stat_loss",
+"Reduce Mech HP to 1"
+],
+[
+"shield",
+"Gain Shield every turn"
+]
+],
+"760910": [
+[
+"stat_gain",
+"+3 Health"
+],
+[
+"immunity",
+"immune to Fire"
+]
+],
+"760911": [
+[
+"shield",
+"A shield will absorb any non-fatal damage once"
+],
+[
+"immunity",
+"prevent status effects while it is active"
+]
+],
+"760912": [
+[
+"damage",
+"damaging and pushing it"
+],
+[
+"forced_movement",
+"damaging and pushing it"
+],
+[
+"upgrade",
+"Upgrade: Dash"
+]
+],
+"760913": [
+[
+"damage",
+"damages and pushes its target"
+],
+[
+"forced_movement",
+"damages and pushes its target"
+],
+[
+"ranged",
+"Fires a powerful projectile"
+],
+[
+"upgrade",
+"Upgrades"
+]
+],
+"760914": [
+[
+"ranged",
+"Powerful artillery strike"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+],
+[
+"upgrade",
+"Upgrades"
+],
+[
+"protection",
+"This attack will no longer damage Grid Buildings"
+]
+],
+"760915": [
+[
+"ranged",
+"Cluster Artillery"
+],
+[
+"protection",
+"Protect a tile"
+],
+[
+"forced_movement",
+"damaging and pushing adjacent tiles"
+]
+],
+"760916": [
+[
+"ranged",
+"Fires a pushing artillery"
+],
+[
+"forced_movement",
+"Fires a pushing artillery"
+],
+[
+"damage_over_time",
+"All Smoke deals damage to enemy units every turn"
+]
+],
+"760917": [
+[
+"forced_movement",
+"Push all adjacent tiles"
+],
+[
+"aoe_damage",
+"Push all adjacent tiles"
+]
+],
+"760918": [
+[
+"forced_movement",
+"Push target tile"
+],
+[
+"damage_over_time",
+"light tiles on Fire"
+],
+[
+"immunity",
+"All Mechs are immune to Fire"
+]
+],
+"760919": [
+[
+"damage_over_time",
+"Light the target on Fire"
+],
+[
+"forced_movement",
+"push adjacent tiles"
+],
+[
+"ranged",
+"Vulcan Artillery"
+]
+],
+"760920": [
+[
+"swap",
+"Swap places with a nearby tile"
+],
+[
+"movement",
+"Flying units can move over any terrain tile"
+]
+],
+"760921": [
+[
+"piercing",
+"Fire a piercing beam"
+],
+[
+"ranged",
+"Burst Beam"
+],
+[
+"damage",
+"decreases in damage the further it goes"
+]
+],
+"760922": [
+[
+"forced_movement",
+"pushing it"
+],
+[
+"friendly_fire",
+"hurting yourself"
+],
+[
+"movement",
+"Fly in a line"
+]
+],
+"760925": [
+[
+"disable",
+"Freeze yourself and the target"
+],
+[
+"friendly_fire",
+"Freeze yourself"
+],
+[
+"movement",
+"Flying units can move over any terrain tile"
+]
+],
+"760926": [
+[
+"multi_target_attack",
+"Chain damage through adjacent targets"
+]
+],
+"760927": [
+[
+"forced_movement",
+"pull Mech towards objects, or units to the Mech"
+],
+[
+"damage_reduction",
+"Weapon damage to this unit is reduced by 1"
+]
+],
+"760928": [
+[
+"ranged",
+"Launch a rock at a tile"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+]
+],
+"760929": [
+[
+"movement",
+"Leap to a tile"
+],
+[
+"friendly_fire",
+"damaging self and adjacent tiles"
+],
+[
+"aoe_damage",
+"damaging self and adjacent tiles"
+]
+],
+"760930": [
+[
+"friendly_fire",
+"causes damage to shooter as well as target"
+],
+[
+"ranged",
+"Powerful projectile"
+]
+],
+"760931": [
+[
+"debuff",
+"applies A.C.I.D."
+],
+[
+"forced_movement",
+"and pushes"
+],
+[
+"heal",
+"Mechs heal 1 damage when they deal a killing blow"
+],
+[
+"on_kill",
+"when they deal a killing blow"
+],
+[
+"movement",
+"Flying units can move over any terrain tile"
+]
+],
+"760932": [
+[
+"movement",
+"Dash across the map"
+],
+[
+"damage",
+"damaging and pushing the target tile"
+],
+[
+"forced_movement",
+"damaging and pushing the target tile"
+]
+],
+"760933": [
+[
+"ranged",
+"Throw needles at the enemy"
+],
+[
+"forced_movement",
+"pushing the furthest hit tile"
+],
+[
+"movement",
+"Flying units can move over any terrain tile"
+]
+],
+"760934": [
+[
+"ranged",
+"Artillery attack that damages a tile"
+],
+[
+"forced_movement",
+"pushes adjacent tiles away"
+]
+],
+"760935": [
+[
+"ranged",
+"Throw a rock at a chosen target"
+],
+[
+"target_choice",
+"chosen target"
+],
+[
+"terrain",
+"Rock remains as an obstacle"
+]
+],
+"760936": [
+[
+"passive",
+"Passives confer a constant benefit to all Mechs in the squad"
+],
+[
+"upgrade",
+"Some Passives come with an upgrade or two"
+],
+[
+"deckbuilding_effect",
+"Mechs with Passives in Custom Squads"
+],
+[
+"aura",
+"a constant benefit to all Mechs in the squad"
+]
+],
+"760937": [
+[
+"immunity",
+"All Mechs are immune to Fire"
+]
+],
+"760938": [
+[
+"damage_over_time",
+"All Smoke deals damage to enemy units every turn"
+],
+[
+"spell_power",
+"Increases Smoke damage by 1"
+]
+],
+"760939": [
+[
+"heal",
+"Mechs heal 1 damage when they deal a killing blow"
+],
+[
+"on_kill",
+"when they deal a killing blow"
+]
+],
+"760940": [
+[
+"stat_gain",
+"All Mechs gain +1 HP"
+],
+[
+"aura",
+"All Mechs gain +1 HP"
+]
+],
+"760941": [
+[
+"heal",
+"Repairing one Mech will affect all Mechs"
+],
+[
+"cheat_death",
+"bring the Mech back online and save the pilot"
+]
+]
+}

@@ -1,0 +1,1172 @@
+[
+{
+"id": 795531,
+"name": "Devil Dinosaur",
+"text": "Ongoing: +2 Power for each card in your hand."
+},
+{
+"id": 796006,
+"name": "Summoning Ritual 2",
+"text": "On Reveal: Dormammu steals 1 Power from EACH card here to continue. (step 2/3)"
+},
+{
+"id": 796300,
+"name": "Sakaar",
+"text": "After this turn, put a card from each player's hand here."
+},
+{
+"id": 796251,
+"name": "Mindscape",
+"text": "At the start of turn 6, swap hands."
+},
+{
+"id": 796211,
+"name": "Flooded",
+"text": "Cards can't be played here."
+},
+{
+"id": 795455,
+"name": "Beast",
+"text": "On Reveal: Return your other cards here to your hand. They cost 1 less next turn."
+},
+{
+"id": 795668,
+"name": "Illusion!",
+"text": ""
+},
+{
+"id": 795514,
+"name": "Cyclops",
+"text": ""
+},
+{
+"id": 795930,
+"name": "Scorn",
+"text": "When Discarded: Put this back and give +2 Power to itself and one of your cards in play."
+},
+{
+"id": 796208,
+"name": "Eternity Range",
+"text": "After turn 3, add a Rock to the losing player's side."
+},
+{
+"id": 795877,
+"name": "Professor X Doomsday",
+"text": ""
+},
+{
+"id": 795902,
+"name": "Red Wolf Fractured Frontier",
+"text": "On Reveal: +1 Power for each card in your hand. Quickdraw: Give your hand +1 Power."
+},
+{
+"id": 796095,
+"name": "Wade Wilson",
+"text": "When Destroyed: Replace this with a 1-Cost card from your hand or deck with +2 Power."
+},
+{
+"id": 795802,
+"name": "Morbius",
+"text": "Ongoing: +2 Power for each time you discarded a card this game."
+},
+{
+"id": 796237,
+"name": "Kvch",
+"text": "Add a random Activate card here for each player."
+},
+{
+"id": 795613,
+"name": "Ghost-Spider - Spider-Verse",
+"text": "On Reveal: The last card you played moves here. If it's a Spider-Verse card, this gains +2 Power."
+},
+{
+"id": 795489,
+"name": "CaptainAmericaAvengers",
+"text": "Ongoing: Your other Avengers here have +2 Power."
+},
+{
+"id": 795921,
+"name": "Sandstorm",
+"text": "On Reveal: Add 2 Rocks to your hand. Give them +1 Power for each of your front-Row characters."
+},
+{
+"id": 795419,
+"name": "Agony",
+"text": "After you play a card here, merge this into it."
+},
+{
+"id": 796351,
+"name": "Titan",
+"text": "6-Cost cards cost 1 less."
+},
+{
+"id": 796288,
+"name": "Positivity Zone",
+"text": "Cards here have +1 Power for EACH Snap this game."
+},
+{
+"id": 795814,
+"name": "Mystique - Brotherhood of Mutants",
+"text": "On Reveal: Copy the text of one of your Brotherhood cards here."
+},
+{
+"id": 795859,
+"name": "Overdrive Reactor Effect10",
+"text": ""
+},
+{
+"id": 796047,
+"name": "The Thing First Steps",
+"text": "End of Turn: +2 Power. Once per game, if your side here is full, destroy an enemy card here with less Power."
+},
+{
+"id": 796209,
+"name": "F.E.A.S.T.",
+"text": "After you play a card here, ALL players get +1 Energy next turn."
+},
+{
+"id": 796214,
+"name": "Fractured Frontier",
+"text": "Your rightmost card has -2 Cost this turn."
+},
+{
+"id": 795392,
+"name": "Activate",
+"text": "An effect the player triggers once, on a later turn of their choosing, after the card is revealed."
+},
+{
+"id": 796141,
+"name": "Zombie Nova",
+"text": "On Reveal and When Destroyed: Horde +3."
+},
+{
+"id": 795873,
+"name": "Power Stone",
+"text": "Ongoing: If you've played all 6 stones, Thanos has +10 Power. (wherever he is)"
+},
+{
+"id": 795681,
+"name": "Iron Patriot",
+"text": "On Reveal: Add a random 4-Cost or more card to your hand. If you're winning here after next turn, give it -3 Cost."
+},
+{
+"id": 796167,
+"name": "Avengers Compound",
+"text": "On turn 5, all cards must be played here."
+},
+{
+"id": 796382,
+"name": "Simultaneous turns and reveal order",
+"text": "Both players play cards face down at the same time; then cards are revealed, all of the player who is winning more locations first (a coin flip on ties), in the order played."
+},
+{
+"id": 795638,
+"name": "Hela",
+"text": "On Reveal: For each different Cost among them, resurrect a card you discarded to a random location."
+},
+{
+"id": 796029,
+"name": "Terrax the Tamer",
+"text": "On Reveal: For each location, shuffle a Rock into the losing player's deck."
+},
+{
+"id": 795498,
+"name": "Clea",
+"text": "When this is Empowered, add Flames of the Faltine to your hand. (if in hand or in play)"
+},
+{
+"id": 795735,
+"name": "Lockheed",
+"text": "End of Turn: If you played a 1-Cost card this turn, afflict an enemy card here with -2 Power."
+},
+{
+"id": 795421,
+"name": "Air-Walker",
+"text": "When Destroyed: Replace this with a 4-Cost card from your hand or deck."
+},
+{
+"id": 795412,
+"name": "Adamantium Infusion",
+"text": "On Reveal: Banish this to revive your highest-Power destroyed card here with its Power doubled."
+},
+{
+"id": 795416,
+"name": "Agent 13",
+"text": "On Reveal: Add a random card to your hand."
+},
+{
+"id": 796093,
+"name": "Viv Vision",
+"text": "Start of Turn: Give all cards in your hand +1 Power if you're winning here. Otherwise, move this to another location."
+},
+{
+"id": 795977,
+"name": "Spider-Ham",
+"text": "Activate: Replace the text of a random character in your opponent's hand with \"oink!\""
+},
+{
+"id": 795399,
+"name": "Moveable",
+"text": "The card can be moved once per turn by its player (a move ability on the card)."
+},
+{
+"id": 796337,
+"name": "The Raft",
+"text": "First to fill this breaks out a 6-Cost card. It costs 0."
+},
+{
+"id": 795804,
+"name": "Morgan le Fay",
+"text": "On Reveal: Return all your discarded and destroyed cards to hand with +3 Power."
+},
+{
+"id": 796131,
+"name": "Yondu",
+"text": "On Reveal: Banish the card that costs the least in your opponent's deck."
+},
+{
+"id": 795621,
+"name": "Gorgon",
+"text": "Ongoing: Your opponent's created cards cost 1 more. (maximum 6)"
+},
+{
+"id": 795847,
+"name": "Optic Blast",
+"text": ""
+},
+{
+"id": 796172,
+"name": "Boardwalk",
+"text": "End of Turn: Give the lowest-Power card(s) here +1 Power."
+},
+{
+"id": 796366,
+"name": "Weapon X Facility",
+"text": "Discard a card to draw a card."
+},
+{
+"id": 795963,
+"name": "Skill 01 Ms. Marvel Champion",
+"text": "! On Reveal: Add a random character to your hand with a different Cost than your characters in play. Give it +2 Power."
+},
+{
+"id": 795629,
+"name": "H.E.R.B.I.E.",
+"text": "Each turn this is in play, swap to a new Activate ability until one is used."
+},
+{
+"id": 796381,
+"name": "Winning a location",
+"text": "Whoever has more total power at a location at the end of the game wins it; winning 2 of the 3 locations wins the game; a tie is broken by total power across all locations."
+},
+{
+"id": 795864,
+"name": "Phastos",
+"text": "On Reveal: Give each card in your deck -1 Cost or +2 Power."
+},
+{
+"id": 796377,
+"name": "Yashida Base",
+"text": "At the end of the game, destroy the last card to get here."
+},
+{
+"id": 795990,
+"name": "Stardust",
+"text": "Ongoing: Cards can't be added to locations except by playing or moving them."
+},
+{
+"id": 795642,
+"name": "Hellion",
+"text": "On Reveal: Next turn, your cards are Moveable to this location."
+},
+{
+"id": 795764,
+"name": "Master Mold",
+"text": "On Reveal: Add 2 Sentinel to your opponent's hand."
+},
+{
+"id": 795640,
+"name": "Hellcow",
+"text": "Activate: Discard a card from your hand."
+},
+{
+"id": 796121,
+"name": "Wolverine",
+"text": "When Discarded or Destroyed: Regenerate this with +2 Power at a random location."
+},
+{
+"id": 795624,
+"name": "Grapple Arrow",
+"text": "On Reveal: After you play your next card, move it to this location."
+},
+{
+"id": 796375,
+"name": "X-Mansion Ruins",
+"text": ""
+},
+{
+"id": 795889,
+"name": "Quinjet",
+"text": "Ongoing: Your created cards cost 1 less. (minimum 1)"
+},
+{
+"id": 795706,
+"name": "Karen Page",
+"text": "On Reveal: Give one of your 1, 2, and 3-Cost characters +2 Power each."
+},
+{
+"id": 796344,
+"name": "The Triskelion",
+"text": "Fill each player's hand with random cards."
+},
+{
+"id": 795841,
+"name": "Okoye",
+"text": "On Reveal: Give every card in your deck +1 Power."
+},
+{
+"id": 796290,
+"name": "Project Unicorn",
+"text": "Add Gwenpool to both sides."
+},
+{
+"id": 795993,
+"name": "Starlord - Guardians of the Galaxy",
+"text": "On Reveal: If your opponent played a card here this turn, give +1 Power to your Guardians in hand and play."
+},
+{
+"id": 796085,
+"name": "Venom",
+"text": "On Reveal: Destroy your other cards here. Add their Power to this card."
+},
+{
+"id": 795496,
+"name": "Chameleon",
+"text": "On Reveal: Copy the text of another card here you revealed this turn."
+},
+{
+"id": 795586,
+"name": "Fin Fang Foom",
+"text": "On Reveal: Gain the Power of a front-row enemy card here."
+},
+{
+"id": 796071,
+"name": "Ultron Power Stone",
+"text": "On Reveal: Double Infinity Ultron's Power."
+},
+{
+"id": 796170,
+"name": "Baxter Building",
+"text": "Whoever is winning this location gets +4 Power at the others."
+},
+{
+"id": 795713,
+"name": "Kingpin",
+"text": "When an enemy card moves here, afflict it with -2 Power."
+},
+{
+"id": 795517,
+"name": "Dagger",
+"text": "When this moves to a location, +2 Power for each enemy card there."
+},
+{
+"id": 796189,
+"name": "Counter-Earth",
+"text": "After you play a card here, create a copy at this location."
+},
+{
+"id": 795751,
+"name": "Major Victory",
+"text": "On Reveal: Add 2 members of the Guardians crew to your hand."
+},
+{
+"id": 796353,
+"name": "Transia",
+"text": "Swap the positions of each location."
+},
+{
+"id": 796157,
+"name": "Fractured Frontier",
+"text": "Marvel Snap cards of the Fractured Frontier group, and cards that care about them."
+},
+{
+"id": 795935,
+"name": "Selene",
+"text": "On Reveal: Afflict the lowest-Power card in each player's hand with -3 Power."
+},
+{
+"id": 796335,
+"name": "The Peak",
+"text": "Steal the leftmost card from your opponent's hand."
+},
+{
+"id": 795942,
+"name": "Sera",
+"text": "Ongoing: Cards in your hand cost 1 less. (minimum 1)"
+},
+{
+"id": 796282,
+"name": "Pet Mansion",
+"text": "This turn, all cards must be played here."
+},
+{
+"id": 796114,
+"name": "Wild Child",
+"text": "Ongoing: +4 Power if you've discarded a card. +4 Power if one of your cards has been destroyed."
+},
+{
+"id": 795590,
+"name": "Flame On",
+"text": "On Reveal: Add your Champion's Power to the top card of your deck."
+},
+{
+"id": 795720,
+"name": "Kraglin",
+"text": "On Reveal: Banish the top card of your deck. If it was 4-Cost or more, +2 Energy next turn, otherwise give this +4 Power."
+},
+{
+"id": 795700,
+"name": "Jubilee Silver Surfer",
+"text": "When you draw a card, add this card's Power to it."
+},
+{
+"id": 796025,
+"name": "Taskmaster - Thunderbolts",
+"text": "On Reveal: Gains Power equal to your other highest-Power Thunderbolt."
+},
+{
+"id": 795934,
+"name": "Sebastian Shaw",
+"text": "When this is Empowered, gain an additional +2 Power. (if in hand, in deck, or in play)"
+},
+{
+"id": 795940,
+"name": "Sentry",
+"text": "You can't play this at the right location. On Reveal: Add a -9 Power Void to the right location."
+},
+{
+"id": 795817,
+"name": "Namora",
+"text": "On Reveal: Give +5 Power to each of your cards alone at another location."
+},
+{
+"id": 796027,
+"name": "Techno-Organic Virus Infection",
+"text": "Ongoing: +1 Power for each Techno-Organic Virus you've played. (+0)"
+},
+{
+"id": 795425,
+"name": "Angel",
+"text": "When one of your cards is destroyed, this flies out of your hand or deck to replace it."
+},
+{
+"id": 795913,
+"name": "Rockslide",
+"text": "On Reveal: Shuffle 2 Rocks into your opponent's deck."
+},
+{
+"id": 795653,
+"name": "Howard the Duck",
+"text": "Ongoing: Tap this to see the top card of your deck."
+},
+{
+"id": 796190,
+"name": "Crimson Citadel",
+"text": "Your next play here steals 2 Power from a random enemy."
+},
+{
+"id": 796246,
+"name": "Luke's Bar",
+"text": "After you play a card here, return it to your hand."
+},
+{
+"id": 795828,
+"name": "Nico Minoru Spell 05",
+"text": "On Reveal: After you play your next card, replace that card's location."
+},
+{
+"id": 795839,
+"name": "Nova Frankie Raye",
+"text": "After the next time you play a 6-Cost card, double this card's Power."
+},
+{
+"id": 796108,
+"name": "White Queen - Brotherhood of Mutants",
+"text": "On Reveal: Copy the top card of your opponent's deck into your hand. While you're winning here, it costs 2 less."
+},
+{
+"id": 795573,
+"name": "Evolved Hulk",
+"text": "End of Turn: If you have unspent Energy, +2 Power. (if in hand or in play)"
+},
+{
+"id": 795788,
+"name": "Mjolnir",
+"text": "On Reveal: Give Thor +7 Power."
+},
+{
+"id": 795984,
+"name": "Spider-Woman",
+"text": "On Reveal: Afflict all enemy cards here with -1 Power."
+},
+{
+"id": 796148,
+"name": "X-Men",
+"text": "Marvel Snap cards of the X-Men group, and cards that care about them."
+},
+{
+"id": 796224,
+"name": "Hospice",
+"text": "Changes to card Power are doubled here."
+},
+{
+"id": 796118,
+"name": "Winter Soldier - Thunderbolts",
+"text": "You can only play this at a location you're losing."
+},
+{
+"id": 796184,
+"name": "Chronosphere Sphinx",
+"text": "Copy the highest-Cost card in your deck into your hand."
+},
+{
+"id": 795797,
+"name": "Monstro",
+"text": "This card's cost is reduced by the cost of your deck's top card."
+},
+{
+"id": 795480,
+"name": "Caiera",
+"text": "Ongoing: Your 1 and 6-Cost cards can't be destroyed."
+},
+{
+"id": 795865,
+"name": "Phoenix Force",
+"text": "On Reveal: Revive one of your destroyed cards and merge this into it. It gains Moveable."
+},
+{
+"id": 796107,
+"name": "White Queen",
+"text": "On Reveal: Copy the card that costs the most from your opponent's hand into your hand."
+},
+{
+"id": 795943,
+"name": "Sersi",
+"text": "On Reveal: Transform your other characters here into random ones that cost 1 more. (if possible)"
+},
+{
+"id": 795504,
+"name": "Colossus",
+"text": "Ongoing: Can't be destroyed, moved, or have its Power reduced."
+},
+{
+"id": 796227,
+"name": "Isle of Shhhhh",
+"text": "After each Snap, move a card away from here."
+},
+{
+"id": 795563,
+"name": "Elixir",
+"text": "On Reveal: One of your cards destroyed last turn gets revived here."
+},
+{
+"id": 795956,
+"name": "Silver Samurai",
+"text": "On Reveal: Each player discards the lowest-Power character from their hand."
+},
+{
+"id": 796316,
+"name": "Stark Industries",
+"text": "After turn 4, split +8 Power among ALL cards here."
+},
+{
+"id": 795792,
+"name": "Moira X",
+"text": "When Destroyed: Get a copy of your opening hand."
+},
+{
+"id": 795923,
+"name": "Sauron",
+"text": "On Reveal: Remove the abilities from all Ongoing cards in your deck."
+},
+{
+"id": 796179,
+"name": "Castle Zemo",
+"text": "The next card you play here switches sides."
+},
+{
+"id": 795420,
+"name": "Agony - Spider-Verse",
+"text": "After you play a card here, merge this with it. If it's a Spider-Verse card, move it away from here."
+},
+{
+"id": 795899,
+"name": "Red Onslaught",
+"text": "Ongoing: Has 3 random Ongoing abilities."
+},
+{
+"id": 795435,
+"name": "Arachnid Acrobatics",
+"text": "On Reveal: Your Champion gets +2 Power for each time one of your cards moved this game. (0 times.)"
+},
+{
+"id": 795725,
+"name": "Lady Sif",
+"text": "On Reveal: Discard the card that costs the most from your hand."
+},
+{
+"id": 796149,
+"name": "Guardians of the Galaxy",
+"text": "Marvel Snap cards of the Guardians of the Galaxy group, and cards that care about them."
+},
+{
+"id": 796056,
+"name": "Time Shot",
+"text": "Reduce the cost of your cards in hand by 1."
+},
+{
+"id": 796031,
+"name": "Thanos",
+"text": "Game Start: Shuffle the six Infinity Stones into your deck."
+},
+{
+"id": 796016,
+"name": "Swarm",
+"text": "When Discarded: Add two copies of this that cost 0 to your hand."
+},
+{
+"id": 795818,
+"name": "Namorita",
+"text": "When you draw a card, give it -1 Cost if this is your only card here."
+},
+{
+"id": 796090,
+"name": "Viper",
+"text": "On Reveal: One of your other cards here with the lowest Power switches sides."
+},
+{
+"id": 795570,
+"name": "Eson",
+"text": "End of Turn: Put a created card from your hand here."
+},
+{
+"id": 795568,
+"name": "Entropic Havok",
+"text": "Start of Turn: Steal 1 bonus Energy from your opponent. (if they have any)"
+},
+{
+"id": 795937,
+"name": "Selene Horseman of Famine",
+"text": "Objective: Have 3 cards with no abilities in play Steal 5 Power from an enemy card here. (0/3)"
+},
+{
+"id": 795636,
+"name": "Headpool",
+"text": "When Destroyed: Return this to your hand, then give all cards in your hand +1 Power."
+},
+{
+"id": 795402,
+"name": "Horde",
+"text": "Adds power to a separate Zombie Horde of its player (a mode mechanic; its exact rules are not in the source)."
+},
+{
+"id": 796218,
+"name": "Grand Central",
+"text": "After turn 5, put a card from each player's hand here."
+},
+{
+"id": 795601,
+"name": "Galactus First Steps",
+"text": "My Herald is the next character I see you play. End of Turn: +2 Power if you're winning my Herald's location. (if in hand or in play)"
+},
+{
+"id": 795975,
+"name": "Speed",
+"text": "Ongoing: +1 Power for each turn in which you spent all your Energy."
+},
+{
+"id": 796278,
+"name": "Otto's Lab",
+"text": "The next card you play here pulls a card to the enemy side from their hand."
+},
+{
+"id": 795641,
+"name": "Hellcow Fractured Frontier",
+"text": "End of Turn: Afflict ALL other cards here with -1 Power. Then destroy your other cards here with 0 Power or less."
+},
+{
+"id": 795829,
+"name": "Nico Minoru Spell 06",
+"text": "On Reveal: After you play your next card, add a copy of it to your hand."
+},
+{
+"id": 795949,
+"name": "She-Hulk",
+"text": "Costs 1 less for each unspent Energy last turn."
+},
+{
+"id": 795763,
+"name": "Massive Arsenal",
+"text": "On Reveal: Banish this to move your Champion here. Repeat its On Reveal and add a copy of this to your hand."
+},
+{
+"id": 796015,
+"name": "Surtur",
+"text": "After you play a card with 10 or more Power, this gains +2 Power."
+},
+{
+"id": 795772,
+"name": "Mercury",
+"text": "Moveable once. Ongoing: Enemy cards here can't move."
+},
+{
+"id": 796320,
+"name": "Strange Academy",
+"text": "After turn 5, move all cards here to other random locations."
+},
+{
+"id": 795684,
+"name": "J. Jonah Jameson",
+"text": "Ongoing: Your text emotes are ruder."
+},
+{
+"id": 796103,
+"name": "Weapon X Wolverine",
+"text": ""
+},
+{
+"id": 796239,
+"name": "Lake Hellas",
+"text": "1-Cost cards here have +2 Power."
+},
+{
+"id": 796049,
+"name": "The Void",
+"text": ""
+},
+{
+"id": 796175,
+"name": "Camp Lehigh",
+"text": "Add a random 3-Cost card to each player's hand."
+},
+{
+"id": 795395,
+"name": "Game Start",
+"text": "Triggers at the start of the game, from the deck or hand."
+},
+{
+"id": 795806,
+"name": "Mother Askani",
+"text": "On Reveal: Copy the leftmost card in your hand. Give the copy -1 Cost and +2 Power."
+},
+{
+"id": 796187,
+"name": "Clubhouse",
+"text": "Fill this to give your cards at other locations +1 Power."
+},
+{
+"id": 795947,
+"name": "Shang-Chi, Master of the Rings",
+"text": "Game Start: The Ten Rings starts in your hand. On Reveal: Unlock their potential."
+},
+{
+"id": 795526,
+"name": "Death Fractured Frontier",
+"text": "On Reveal: Resurrect all your destroyed characters to random locations."
+},
+{
+"id": 795954,
+"name": "Silk",
+"text": "After ANY card is played here, move this to another location."
+},
+{
+"id": 795998,
+"name": "Storm Horseman of Famine",
+"text": "Objective: End 2 turns in a row with unspent Energy Give your other cards here and in your hand +2 Power. (0/2)"
+},
+{
+"id": 795608,
+"name": "Ghost",
+"text": "On Reveal: Remove the abilities from all End of Turn cards here."
+},
+{
+"id": 795852,
+"name": "Overdrive Reactor Effect03",
+"text": "Move random cards to the left 4 times."
+},
+{
+"id": 795448,
+"name": "Awesome Andy",
+"text": "Activate: Give one of your cards at each other location +2 Power."
+},
+{
+"id": 795914,
+"name": "Rogue",
+"text": "On Reveal: Steal the text from an enemy Ongoing card here."
+},
+{
+"id": 795786,
+"name": "Mister Sinister",
+"text": "On Reveal: Add a Sinister Clone here with the same Power."
+},
+{
+"id": 796007,
+"name": "Summoning Ritual 3",
+"text": "On Reveal: Destroy 2 of your characters here to summon Dormammu. (step 3/3)"
+},
+{
+"id": 795991,
+"name": "Starhawk",
+"text": "On Reveal: +1 Power to your cards at the left location if it's an odd turn, otherwise give to the right location."
+},
+{
+"id": 796241,
+"name": "Lechuguilla",
+"text": "After you play a card here, shuffle 3 rocks into your deck."
+},
+{
+"id": 795939,
+"name": "Sentinel Champion",
+"text": "On Reveal: Add another Sentinel to your hand."
+},
+{
+"id": 795838,
+"name": "Nova",
+"text": "When Destroyed: Give your cards +1 Power."
+},
+{
+"id": 795918,
+"name": "Sage",
+"text": "On Reveal: +2 Power for each different Power among all other cards here."
+},
+{
+"id": 795776,
+"name": "Miles Morales Spider-Man",
+"text": "If a card moved last turn, this costs 1."
+},
+{
+"id": 796298,
+"name": "Round Table",
+"text": "4-Cost or more cards cost 1 less."
+},
+{
+"id": 795765,
+"name": "Master of Magnetism",
+"text": "On Reveal: Move all enemy 3 and 4-Cost cards to this location. If either side here is full, double your Champion's Power."
+},
+{
+"id": 795391,
+"name": "Ongoing",
+"text": "A continuous effect that applies while the card is on the board."
+},
+{
+"id": 795974,
+"name": "Spectrum",
+"text": "On Reveal: Give your Ongoing cards +2 Power."
+},
+{
+"id": 795976,
+"name": "Spider Sense",
+"text": "On Reveal: Give your characters here +3 Power. Costs 1 less for each Moveable card you've played."
+},
+{
+"id": 796065,
+"name": "Triton",
+"text": "On Reveal: Give the last character EACH player played last turn +3 Power."
+},
+{
+"id": 796054,
+"name": "Thundering Hammer",
+"text": "On Reveal: Shuffle Mjolnir into your deck. Draw a card."
+},
+{
+"id": 795750,
+"name": "Majestic Wingbeat",
+"text": "On Reveal: Give the leftmost card in your hand +3 Power. If it's 5-Cost or more, -1 Cost too."
+},
+{
+"id": 795888,
+"name": "Quicksilver",
+"text": "Starts in your opening hand."
+},
+{
+"id": 796039,
+"name": "The Hood",
+"text": "On Reveal: Add a Demon to your hand."
+},
+{
+"id": 795418,
+"name": "Agent Venom",
+"text": "On Reveal: Set the Power of all cards in your deck to 3."
+},
+{
+"id": 795639,
+"name": "Helicarrier",
+"text": "When Discarded: Fill your hand with random cards."
+},
+{
+"id": 796078,
+"name": "Valentina - Thunderbolts",
+"text": "On Reveal: Add a random Thunderbolt to your hand. Give it -1 Cost."
+},
+{
+"id": 795577,
+"name": "Evolved Wasp",
+"text": "On Reveal: Afflict an enemy card here with -1 Power."
+},
+{
+"id": 795986,
+"name": "Squirrel Girl",
+"text": "On Reveal: Add a 1-Power Squirrel to each other location."
+},
+{
+"id": 796022,
+"name": "Tao Mandala",
+"text": "On Reveal: Copy the text of one of your Ongoing cards here onto your other characters here."
+},
+{
+"id": 795581,
+"name": "Fan Fei",
+"text": "Activate: Give your other cards here +1 Power and move them to the right."
+},
+{
+"id": 795486,
+"name": "Captain Britain",
+"text": "After you play a 4-Cost or more card, give it +2 Power and a card in your hand -1 Cost."
+},
+{
+"id": 795988,
+"name": "Star-Lord, Master of the Sun",
+"text": "On Reveal: Next turn, you get +1 Energy for each turn you've ended with unspent Energy. (0 turns.)"
+},
+{
+"id": 796379,
+"name": "Zenn-La",
+"text": "Add a 3-Cost card from your deck here."
+},
+{
+"id": 795423,
+"name": "Alioth",
+"text": "On Reveal: Remove the text from all unrevealed enemy characters here."
+},
+{
+"id": 796117,
+"name": "Winter Soldier",
+"text": ""
+},
+{
+"id": 795464,
+"name": "Black Swan",
+"text": "Activate: Until the end of next turn, your 1-Cost cards cost 0."
+},
+{
+"id": 795477,
+"name": "Bug",
+"text": ""
+},
+{
+"id": 795407,
+"name": "Afflict",
+"text": "Lowers the power of cards (as an ongoing or one-time debuff)."
+},
+{
+"id": 795880,
+"name": "Proxima Midnight",
+"text": "When Discarded: This jumps to your lowest-Power location. (that isn't full)"
+},
+{
+"id": 795404,
+"name": "Discard",
+"text": "Removes a card from a hand."
+},
+{
+"id": 795697,
+"name": "John Walker Doomsday",
+"text": ""
+},
+{
+"id": 795662,
+"name": "Hydra Bob",
+"text": "End of Turn: This moves if a player Snapped."
+},
+{
+"id": 796231,
+"name": "Jotunheim",
+"text": "End of Turn: Cards here lose 1 Power."
+},
+{
+"id": 795506,
+"name": "Corvus Glaive",
+"text": "On Reveal: Discard 2 cards from your hand to get +1 Max Energy."
+},
+{
+"id": 796069,
+"name": "Ultron",
+"text": "On Reveal: Deploy four 2-Power Drones to each other location."
+},
+{
+"id": 796051,
+"name": "Thor",
+"text": "On Reveal: Shuffle Mjolnir into your deck."
+},
+{
+"id": 796248,
+"name": "Madripoor",
+"text": "End of Turn: Give each highest-Cost card here +2 Power."
+},
+{
+"id": 795994,
+"name": "Stature",
+"text": "Costs 1 if your opponent discarded a card this game."
+},
+{
+"id": 795972,
+"name": "Space Stone",
+"text": "On Reveal: Draw Thanos. Ongoing: Nothing can stop you from playing Thanos."
+},
+{
+"id": 795810,
+"name": "Muse",
+"text": "Ongoing: +3 Power for each location where one of your cards has been destroyed."
+},
+{
+"id": 796286,
+"name": "Plunder Castle",
+"text": "Only cards that cost 6 can be played here."
+},
+{
+"id": 795798,
+"name": "Moon Girl",
+"text": "On Reveal: Copy your hand."
+},
+{
+"id": 796030,
+"name": "Thaddeus Ross",
+"text": "End of Turn: If your opponent has unspent Energy, draw a card with 10 or more Power."
+},
+{
+"id": 796033,
+"name": "Thanos Fractured Frontier",
+"text": "Game Start: Your cards have \"Quickdraw: Thanos loads an Infinity Shot.\" On Reveal: Fire all loaded Shots."
+},
+{
+"id": 796132,
+"name": "Zabu",
+"text": "On Reveal: Give each 4-Cost card in your deck -1 Cost."
+},
+{
+"id": 796102,
+"name": "Weapon H",
+"text": "When Discarded: Put this back with -2 Cost."
+},
+{
+"id": 795660,
+"name": "Human Torch First Steps",
+"text": "End of Turn: +1 Power. Once per game, if your side here is full, double this card's Power instead."
+},
+{
+"id": 796145,
+"name": "Zombie Venom",
+"text": "On Reveal: Destroy your first other card here. After one of your other cards is destroyed, Horde +2."
+},
+{
+"id": 795592,
+"name": "Flatman",
+"text": "Ongoing: Adjacent locations have +1 Power."
+},
+{
+"id": 796044,
+"name": "The Ten Rings",
+"text": "On Reveal: Give one of your other cards here +1 Power."
+},
+{
+"id": 795597,
+"name": "Friendly Neighborhood Carnage",
+"text": "On Reveal: Move your other cards here to the right. +2 Power for each moved."
+},
+{
+"id": 795492,
+"name": "Cassandra Nova",
+"text": "On Reveal: Steal 1 Power from each card in your opponent's deck."
+},
+{
+"id": 796045,
+"name": "The Ten Rings Upgraded",
+"text": "End of Turn: Give your other cards here +1 Power."
+},
+{
+"id": 796380,
+"name": "Locations",
+"text": "Three lanes called locations. One is revealed on each of turns 1, 2 and 3; each carries its own rule that changes play there (most are random each game)."
+},
+{
+"id": 795424,
+"name": "America Chavez",
+"text": "On Reveal: Give the top card of your deck +3 Power."
+},
+{
+"id": 795467,
+"name": "Blink",
+"text": "On Reveal: Swap the last card you played with a card that costs the same or more from your deck."
+},
+{
+"id": 795482,
+"name": "Cannonball",
+"text": "On Reveal: Move the highest-Power enemy card here away. If you can't, destroy it with a Rock."
+},
+{
+"id": 795686,
+"name": "Jane Foster Fractured Frontier",
+"text": "On Reveal: Judge 4 other random characters. +1 Power (if yours) or -1 Power (enemies). Quickdraw: Judge the worthy again."
+},
+{
+"id": 796238,
+"name": "Kyln",
+"text": "You can't play cards here after turn 4."
+},
+{
+"id": 795512,
+"name": "Crystal",
+"text": "On Reveal: Each player draws a card."
+},
+{
+"id": 796133,
+"name": "Zero",
+"text": "On Reveal: Remove the abilities on the next card you play."
+},
+{
+"id": 796242,
+"name": "Lemuria",
+"text": "No cards are revealed this turn."
+},
+{
+"id": 795730,
+"name": "Leech",
+"text": "On Reveal: Remove the text from 6-Cost cards in your opponent's hand."
+},
+{
+"id": 795466,
+"name": "Blade",
+"text": "On Reveal: Discard the rightmost card from your hand."
+},
+{
+"id": 796196,
+"name": "Dark Dimension",
+"text": "Cards here are not revealed until the game ends."
+},
+{
+"id": 796334,
+"name": "The Nexus",
+"text": "Your Power here is granted to other locations as well."
+},
+{
+"id": 796252,
+"name": "Miniaturized Lab",
+"text": "On turns 3, 4, and 5, no cards can be added here."
+},
+{
+"id": 795712,
+"name": "King Eitri",
+"text": "Activate: Draw a created card from your deck."
+}
+]

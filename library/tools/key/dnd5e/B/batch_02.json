@@ -1,0 +1,994 @@
+{
+"762524": [
+[
+"saving_throws",
+"If the tarrasque fails a saving throw, it can choose to succeed instead"
+],
+[
+"advantage",
+"Advantage on saving throws against spells and other magical effects"
+],
+[
+"counter_spell",
+"the tarrasque is unaffected and reflects the spell"
+],
+[
+"random_effect",
+"roll 1d6"
+],
+[
+"stat_multiply",
+"deals double damage to objects and structures"
+],
+[
+"multi_attack",
+"makes one Bite attack and three other attacks"
+],
+[
+"immobilize",
+"has the Restrained condition"
+],
+[
+"damage",
+"36 (4d12 + 10) Piercing damage"
+]
+],
+"762541": [
+[
+"multi_attack",
+"The werebear makes two attacks"
+],
+[
+"transform",
+"shape-shifts into a Large bear-humanoid hybrid form"
+],
+[
+"saving_throws",
+"Constitution Saving Throw"
+],
+[
+"immunity",
+"The target is immune to this werebear"
+],
+[
+"ranged",
+"Melee or Ranged Attack Roll"
+],
+[
+"damage",
+"17 (2d12 + 4) Piercing damage"
+]
+],
+"761654": [
+[
+"immunity",
+"Immunity to Poison and Psychic damage"
+],
+[
+"damage_types",
+"Vulnerability to Bludgeoning damage"
+],
+[
+"self_destruct",
+"It shatters and is destroyed when reduced to 0 Hit Points"
+],
+[
+"activated",
+"you can take a Magic action and use a command word to activate it"
+],
+[
+"saving_throws",
+"must succeed on a DC 15 Charisma saving throw"
+],
+[
+"advantage",
+"makes the save with Advantage"
+],
+[
+"removal",
+"be trapped, along with anything"
+]
+],
+"762119": [
+[
+"steal",
+"allow some measure of control over dragons"
+]
+],
+"762471": [
+[
+"immobilize",
+"has the Grappled condition (escape DC 13)"
+],
+[
+"advantage",
+"Ability checks made to escape this grapple have Disadvantage"
+],
+[
+"advantage",
+"with Advantage if the target is Grappled by the mimic"
+],
+[
+"transform",
+"shape-shifts to resemble a Medium or Small object"
+],
+[
+"damage",
+"4 (1d8) Acid damage"
+]
+],
+"761926": [
+[
+"aura",
+"while in your Aura of Protection"
+],
+[
+"immunity",
+"Immunity to the Frightened condition"
+],
+[
+"scope_multi",
+"You and your allies"
+]
+],
+"762602": [
+[
+"damage",
+"1 Piercing damage"
+]
+],
+"761954": [
+[
+"flexibility",
+"You gain one of the following feature options of your choice"
+],
+[
+"stances",
+"you can replace the chosen option with the other one"
+],
+[
+"condition_life",
+"if it's missing any of its Hit Points"
+],
+[
+"multi_target_attack",
+"make another attack with the same weapon against a different creature"
+],
+[
+"damage",
+"extra 1d8 damage"
+]
+],
+"762359": [
+[
+"advantage",
+"Advantage on saving throws against spells and other magical effects"
+],
+[
+"multi_attack",
+"The devil makes one Beard attack and one Infernal Glaive attack"
+],
+[
+"debuff",
+"the target has the Poisoned condition"
+],
+[
+"damage_over_time",
+"the target loses 5 (1d10) Hit Points at the start of each of its turns"
+],
+[
+"saving_throws",
+"Constitution Saving Throw"
+],
+[
+"damage",
+"7 (1d8 + 3) Piercing damage"
+]
+],
+"761730": [
+[
+"advantage",
+"Advantage on saving throws against spells and other magical effects"
+],
+[
+"advantage",
+"spell attack rolls have Disadvantage against you"
+]
+],
+"815605": [
+[
+"on_damaged",
+"When a creature hits you with an attack"
+],
+[
+"stat_gain",
+"you gain a +4 bonus to AC"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+]
+],
+"762666": [
+[
+"advantage",
+"disadvantage on attack rolls"
+],
+[
+"light_level",
+"While in sunlight"
+],
+[
+"advantage",
+"advantage on an attack roll against a creature"
+],
+[
+"assists_support",
+"if at least one of the kobold"
+],
+[
+"ranged",
+"Ranged Weapon Attack"
+],
+[
+"damage",
+"4 (1d4 + 2) piercing damage"
+]
+],
+"761174": [
+[
+"advantage",
+"You have Disadvantage on attack rolls"
+],
+[
+"immobilize",
+"Your only movement options are to crawl"
+],
+[
+"advantage",
+"An attack roll against you has Advantage if the attacker is within 5 feet of you"
+]
+],
+"762046": [
+[
+"modal_choice",
+"Choose one of the following benefits"
+],
+[
+"cooldowns",
+"you regain all expended uses when you finish a Long Rest"
+],
+[
+"movement",
+"you magically teleport up to 30 feet to an unoccupied space"
+],
+[
+"damage",
+"1d10 Fire damage"
+],
+[
+"stat_loss",
+"reduce its Speed by 10 feet"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"debuff",
+"you can give that target the Prone condition"
+],
+[
+"reactions",
+"take a Reaction to roll 1d12"
+],
+[
+"damage_reduction",
+"reduce the damage by that total"
+],
+[
+"on_attack",
+"When you hit a target with an attack roll"
+]
+],
+"762468": [
+[
+"advantage",
+"Attack rolls against the mephit are made with Disadvantage"
+],
+[
+"death_trigger",
+"The mephit explodes when it dies"
+],
+[
+"aoe_damage",
+"each creature in a 5-foot Emanation"
+],
+[
+"area_templates",
+"15-foot Cone"
+],
+[
+"saving_throws",
+"Dexterity Saving Throw"
+],
+[
+"damage",
+"2 (1d4) Slashing damage"
+],
+[
+"stat_loss",
+"Speed decreases by 10 feet"
+]
+],
+"761438": [
+[
+"area_templates",
+"up to 90 feet long, 30 feet high"
+],
+[
+"light_level",
+"Bright Light within 100 feet"
+],
+[
+"protection",
+"You and creatures you designate when you cast the spell can pass through and be near the wall without harm"
+],
+[
+"saving_throws",
+"must succeed on a Constitution saving throw"
+],
+[
+"disable",
+"the Blinded condition for 1 minute"
+]
+],
+"762481": [
+[
+"multi_attack",
+"The otyugh makes one Bite attack and two Tentacle attacks"
+],
+[
+"stat_loss",
+"Hit Point maximum decreases by 5 (1d10)"
+],
+[
+"disable",
+"the Stunned condition"
+],
+[
+"immobilize",
+"it has the Grappled condition (escape DC 13)"
+],
+[
+"saving_throws",
+"Constitution Saving Throw"
+],
+[
+"damage",
+"12 (2d8 + 3) Piercing damage"
+]
+],
+"762568": [
+[
+"condition_life",
+"While Bloodied, the boar has Advantage on attack rolls"
+],
+[
+"advantage",
+"has Advantage on attack rolls"
+],
+[
+"damage",
+"4 (1d6 + 1) Piercing damage"
+],
+[
+"debuff",
+"has the Prone condition"
+]
+],
+"761599": [
+[
+"area_templates",
+"30-footEmanation"
+],
+[
+"friendly_fire",
+"forcing yourself and every creature"
+],
+[
+"saving_throws",
+"DC 15 Constitution saving throw"
+],
+[
+"immunity",
+"Constructs, Elementals, Oozes, Plants, and Undead succeed on the save automatically"
+],
+[
+"disable",
+"it has the Incapacitated condition"
+],
+[
+"items_consumables",
+"enough of it for one use"
+],
+[
+"activated",
+"As a Utilize action"
+]
+],
+"762209": [
+[
+"on_attack",
+"when you hit a creature with a melee weapon attack"
+],
+[
+"cost_type",
+"you can expend one spell slot"
+],
+[
+"damage",
+"deal radiant damage to the target"
+],
+[
+"tribal",
+"if the target is an undead or a fiend"
+]
+],
+"761284": [
+[
+"damage",
+"10d6 + 40 Force damage"
+],
+[
+"saving_throws",
+"makes a Dexterity saving throw"
+],
+[
+"destroy",
+"disintegrated into gray dust"
+],
+[
+"revive",
+"can be revived only by a True Resurrection or a Wish spell"
+]
+],
+"762404": [
+[
+"advantage",
+"Disadvantage on ability checks and attack rolls"
+],
+[
+"multi_attack",
+"The drider makes three attacks"
+],
+[
+"ranged",
+"Ranged Attack Roll"
+],
+[
+"damage",
+"13 (3d6 + 3) Poison damage"
+],
+[
+"movement",
+"ignores movement restrictions caused by webs"
+],
+[
+"information",
+"knows the location of any other creature in contact with the same web"
+]
+],
+"761983": [
+[
+"resource_gain",
+"You have 2 Sorcery Points"
+],
+[
+"resource_conversion",
+"Converting Spell Slots to Sorcery Points"
+],
+[
+"cooldowns",
+"You regain all expended Sorcery Points when you finish a Long Rest"
+],
+[
+"activated",
+"As a Bonus Action, you can transform unexpended Sorcery Points into one spell slot"
+]
+],
+"762586": [
+[
+"damage",
+"6 (1d8 + 2) Piercing damage"
+]
+],
+"762554": [
+[
+"advantage",
+"Advantage on an attack roll against a creature"
+],
+[
+"assists_support",
+"if at least one of the werewolf"
+],
+[
+"multi_attack",
+"The werewolf makes two attacks"
+],
+[
+"transform",
+"shape-shifts into a Large wolf-humanoid hybrid"
+],
+[
+"saving_throws",
+"Constitution Saving Throw"
+],
+[
+"immunity",
+"The target is immune to this werewolf"
+]
+],
+"761588": [
+[
+"activated",
+"You can take a Bonus Action to toss this magic weapon into the air"
+],
+[
+"autonomous_units",
+"the weapon begins to hover, flies up to 30 feet, and attacks"
+],
+[
+"target_choice",
+"attacks one creature of your choice"
+],
+[
+"movement",
+"cause it to fly up to 30 feet to another spot"
+],
+[
+"self_destruct",
+"After the hovering weapon attacks for the fourth"
+],
+[
+"return_to_hand",
+"flies back to you"
+]
+],
+"762452": [
+[
+"stealth",
+"The stalker has the Invisible condition"
+],
+[
+"movement",
+"and stop there"
+],
+[
+"multi_attack",
+"The stalker makes three Wind Swipe attacks"
+],
+[
+"damage",
+"11 (2d6 + 4) Force damage"
+],
+[
+"immobilize",
+"has the Grappled condition (escape DC 13)"
+],
+[
+"silence",
+"cast spells with a Verbal component"
+],
+[
+"damage_over_time",
+"takes 7 (2d6) Thunder damage at the start of each of the stalker"
+]
+],
+"762172": [
+[
+"stat_gain",
+"a +2 bonus to attack rolls"
+],
+[
+"ranged",
+"ranged weapons"
+]
+],
+"762412": [
+[
+"advantage",
+"it has Disadvantage on attack rolls and ability checks"
+],
+[
+"condition_life",
+"Whenever the golem starts its turn Bloodied"
+],
+[
+"random_effect",
+"roll 1d6"
+],
+[
+"autonomous_units",
+"the golem attacks the nearest creature it can see"
+],
+[
+"temporary_effect",
+"until the end of its next turn"
+]
+],
+"761966": [
+[
+"modal_choice",
+"you can add one of the following Cunning Strike effects"
+],
+[
+"cost_type",
+"the number of Sneak Attack damage dice you must forgo"
+],
+[
+"saving_throws",
+"forcing the target to make a Constitution saving throw"
+],
+[
+"debuff",
+"the target has the Poisoned condition for 1 minute"
+],
+[
+"on_attack",
+"When you deal Sneak Attack damage"
+]
+],
+"761932": [
+[
+"cost_type",
+"expend one use of your Channel Divinity"
+],
+[
+"stat_gain",
+"you add your Charisma modifier to attack rolls"
+],
+[
+"temporary_effect",
+"For 10 minutes"
+],
+[
+"light_level",
+"Bright Light in a 20-foot radius"
+],
+[
+"damage_types",
+"Radiant damage"
+]
+],
+"761166": [
+[
+"stacking_keyword",
+"This condition is cumulative"
+],
+[
+"stat_loss",
+"the roll is reduced by 2 times your Exhaustion level"
+],
+[
+"permanent_loss",
+"You die if your Exhaustion level is 6"
+],
+[
+"rest_phase",
+"Finishing a Long Rest removes 1 of your Exhaustion levels"
+]
+],
+"762521": [
+[
+"advantage",
+"Advantage on saving throws against spells and other magical effects"
+],
+[
+"multi_attack",
+"The golem makes two attacks"
+],
+[
+"ranged",
+"Ranged Attack Roll"
+],
+[
+"damage",
+"22 (4d10) Force damage"
+],
+[
+"debuff",
+"The golem casts the Slow spell"
+]
+],
+"762525": [
+[
+"advantage",
+"Advantage on an attack roll against a creature"
+],
+[
+"assists_support",
+"if at least one of the tough"
+],
+[
+"ranged",
+"Ranged Attack Roll"
+],
+[
+"damage",
+"5 (1d6 + 2) Bludgeoning damage"
+]
+],
+"762696": [
+[
+"turn_structure",
+"organizes the chaos of combat into a cycle of rounds and turns"
+],
+[
+"reveal_order",
+"The order of turns is determined at the beginning of a combat encounter, when everyone rolls initiative"
+],
+[
+"information",
+"Determine surprise"
+]
+],
+"762673": [
+[
+"advantage",
+"advantage on Dexterity (Stealth) checks"
+],
+[
+"stealth",
+"Underwater Camouflage"
+],
+[
+"immobilize",
+"the target is grappled (escape DC 10)"
+],
+[
+"light_level",
+"The area is heavily obscured for 1 minute"
+],
+[
+"speed",
+"can use the Dash action as a bonus action"
+],
+[
+"area_templates",
+"5-foot-radius cloud of ink"
+]
+],
+"761890": [
+[
+"resource_gain",
+"represented by Focus Points"
+],
+[
+"cost_type",
+"You can expend these points"
+],
+[
+"cooldowns",
+"you regain all your expended points"
+],
+[
+"multi_attack",
+"make two Unarmed Strikes as a Bonus Action"
+],
+[
+"speed",
+"You can take the Disengage action as a Bonus Action"
+]
+],
+"762357": [
+[
+"counterattack",
+"deals 5 (1d10) Piercing damage to any creature it is grappling or any creature grappling it"
+],
+[
+"turn_start",
+"At the start of each of its turns"
+],
+[
+"revive",
+"reviving with all its Hit Points somewhere in the Nine Hells"
+],
+[
+"advantage",
+"Advantage on saving throws against spells and other magical effects"
+],
+[
+"multi_attack",
+"The devil makes one Claws attack and one Tail attack"
+],
+[
+"immobilize",
+"it has the Grappled condition (escape DC 13)"
+],
+[
+"ranged",
+"Ranged Attack Roll"
+],
+[
+"damage",
+"14 (2d10 + 3) Slashing damage"
+]
+],
+"762647": [
+[
+"advantage",
+"advantage on Wisdom (Perception) checks that rely on smell"
+],
+[
+"multi_attack",
+"The badger makes two attacks"
+],
+[
+"damage",
+"6 (2d4 + 1) slashing damage"
+]
+],
+"761224": [
+[
+"damage",
+"10d12 Psychic damage"
+],
+[
+"saving_throws",
+"makes an Intelligence saving throw"
+],
+[
+"silence",
+"can't cast spells or take the Magic action"
+],
+[
+"delayed",
+"At the end of every 30 days"
+]
+],
+"761649": [
+[
+"stat_gain",
+"increases by 2, to a maximum of 30"
+],
+[
+"exhaust",
+"The manual then loses its magic"
+],
+[
+"delayed",
+"regains it in a century"
+]
+],
+"762726": [
+[
+"terrain",
+"A trap can be either mechanical or magical in nature"
+],
+[
+"trap_secret",
+"A net hidden among the trees might drop on travelers who pass underneath"
+]
+],
+"761541": [
+[
+"immunity",
+"you can't be targeted by Divination spells"
+],
+[
+"stealth",
+"perceived through magical scrying sensors unless you allow it"
+]
+],
+"762546": [
+[
+"multi_attack",
+"The wererat makes two attacks"
+],
+[
+"ranged",
+"Hand Crossbow: Ranged Attack Roll"
+],
+[
+"transform",
+"shape-shifts into a Medium rat-humanoid hybrid"
+],
+[
+"damage",
+"6 (1d6 + 3) Slashing damage"
+]
+],
+"762615": [
+[
+"movement",
+"the swarm can move through any opening large enough for a Tiny bat"
+],
+[
+"condition_life",
+"if the swarm is Bloodied"
+],
+[
+"damage",
+"5 (2d4) Piercing damage"
+]
+],
+"761549": [
+[
+"stat_gain",
+"+2 bonus to Armor Class against ranged attack rolls"
+],
+[
+"reactions",
+"you can take a Reaction to become the target of the attack instead"
+],
+[
+"ranged",
+"ranged attack rolls"
+]
+],
+"761357": [
+[
+"heal",
+"restoring 70 Hit Points"
+],
+[
+"heal",
+"ends the Blinded, Deafened, and Poisoned conditions on the target"
+]
+],
+"762547": [
+[
+"multi_attack",
+"The wererat makes two attacks"
+],
+[
+"transform",
+"shape-shifts into a Medium rat-humanoid hybrid"
+],
+[
+"saving_throws",
+"Constitution Saving Throw"
+],
+[
+"immunity",
+"The target is immune to this wererat"
+],
+[
+"ranged",
+"Hand Crossbow: Ranged Attack Roll"
+],
+[
+"damage",
+"8 (2d4 + 3) Piercing damage"
+]
+],
+"761233": [
+[
+"area_templates",
+"15-foot Cone"
+],
+[
+"aoe_damage",
+"Each creature in a 15-foot Cone"
+],
+[
+"saving_throws",
+"makes a Dexterity saving throw"
+],
+[
+"damage",
+"3d6 Fire damage"
+]
+],
+"761314": [
+[
+"scope_multi",
+"Choose up to five falling creatures within range"
+],
+[
+"protection",
+"the creature takes no damage from the fall"
+]
+]
+}

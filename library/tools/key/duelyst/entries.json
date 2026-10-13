@@ -1,0 +1,1037 @@
+[
+{
+"id": 741662,
+"name": "Keshrai Fanblade",
+"text": "Opening Gambit: Next turn, opponent's spells cost 2 more to cast"
+},
+{
+"id": 742113,
+"name": "Earth Sister Taygete",
+"text": "Whenever this minion takes damage, deal that much damage to all nearby enemies."
+},
+{
+"id": 742355,
+"name": "Rescue-RX",
+"text": "Build: (2).\nWhen this minion is built, restore 5 Health to your General."
+},
+{
+"id": 742316,
+"name": "Embryotic Insight",
+"text": "If you have an Egg, draw 2 cards."
+},
+{
+"id": 741587,
+"name": "Necrotic Sphere",
+"text": "Destroy ALL minions nearby your General and summon Wraithlings in their place."
+},
+{
+"id": 741789,
+"name": "Overload",
+"text": "Give your General +1 Attack."
+},
+{
+"id": 741645,
+"name": "Kaleos Xaan",
+"text": "Bloodbound Spell: Teleport a friendly minion up to 2 spaces."
+},
+{
+"id": 742037,
+"name": "Boulder Hurl",
+"text": "Deal 1 damage to an enemy."
+},
+{
+"id": 742313,
+"name": "Horrific Visage",
+"text": "Give all enemy minions -4 Attack until your next turn."
+},
+{
+"id": 741990,
+"name": "Oblivion Sickle",
+"text": "Whenever your General destroys an enemy, turn that space into Exhuming Sand."
+},
+{
+"id": 742013,
+"name": "Vaath's Brutality",
+"text": "Stun an enemy minion. Give your General +1 Attack."
+},
+{
+"id": 742198,
+"name": "Dex",
+"text": "Celerity"
+},
+{
+"id": 741917,
+"name": "Dagger Kiri",
+"text": "Celerity"
+},
+{
+"id": 742341,
+"name": "Denadoro",
+"text": "Your minions are always infiltrated."
+},
+{
+"id": 741741,
+"name": "Blood Siren",
+"text": "Opening Gambit: Give a nearby enemy -2 attack this turn."
+},
+{
+"id": 741620,
+"name": "Azurite Lion",
+"text": "Celerity"
+},
+{
+"id": 742029,
+"name": "Vespyrian Might",
+"text": "Give a Vespyr minion +2/+2 for each friendly Vespyr."
+},
+{
+"id": 741552,
+"name": "Backstab",
+"text": "When attacking from behind, this deals extra damage and can\u2019t be counterattacked."
+},
+{
+"id": 741928,
+"name": "Syvrel the Exile",
+"text": "Ranged\nMinions damaged by Syvrel are pulled in front of him."
+},
+{
+"id": 741973,
+"name": "Mizuchi",
+"text": "Sentinel: General attacks.\nFlying\nBackstab: (2)."
+},
+{
+"id": 742153,
+"name": "Psychic Conduit",
+"text": "Reactivate and take control of an enemy minion with 2 or less Attack until end of turn."
+},
+{
+"id": 742314,
+"name": "Abhorrent Unbirth",
+"text": "Destroy all friendly minions to summon a 1/1 Abomination that gains their Attack, Health, and keywords."
+},
+{
+"id": 742319,
+"name": "Gigaloth",
+"text": "Build: (2).\nWhenever this minion attacks, other friendly minions gain +3/+3."
+},
+{
+"id": 741524,
+"name": "Blood Surge",
+"text": "Triggers an effect after you activate your Bloodbound Spell."
+},
+{
+"id": 742243,
+"name": "Cascading Rebirth",
+"text": "Destroy a friendly minion to summon a random Magmar minion that costs 1 more."
+},
+{
+"id": 741986,
+"name": "Cataclysmic Fault",
+"text": "Turn the entire center column into Exhuming Sand."
+},
+{
+"id": 741800,
+"name": "Earth Sphere",
+"text": "Restore 8 Health to your General."
+},
+{
+"id": 742270,
+"name": "Call to Arms",
+"text": "Your General gains, \"Minions you summon nearby gain +3/+3.\""
+},
+{
+"id": 741762,
+"name": "Ritual Banishing",
+"text": "Destroy a friendly minion to destroy an enemy minion."
+},
+{
+"id": 742136,
+"name": "Crimson Coil",
+"text": "Deal 2 damage to a minion. Activate your Battle Pets."
+},
+{
+"id": 741629,
+"name": "Lasting Judgement",
+"text": "Give ANY minion +3 Attack, but -3 Health."
+},
+{
+"id": 741854,
+"name": "Cryogenesis",
+"text": "Deal 4 damage to an enemy minion. Draw a Vespyr minion from your deck."
+},
+{
+"id": 741554,
+"name": "Build",
+"text": "Summon as a 0/10 Structure that transforms into its true form after a number of turns."
+},
+{
+"id": 741545,
+"name": "Structure",
+"text": "This minion cannot move or attack."
+},
+{
+"id": 741549,
+"name": "Anti-Magic Field",
+"text": "Cannot be targeted or damaged by spells."
+},
+{
+"id": 742196,
+"name": "Fog",
+"text": "Dying Wish: Draw a random battle pet."
+},
+{
+"id": 742085,
+"name": "Keeper of the Vale",
+"text": "Opening Gambit: Summon a random friendly minion destroyed this game nearby this minion."
+},
+{
+"id": 741531,
+"name": "Exhuming Sand",
+"text": "Summons a 2/2 Iron Dervish when its owner summons a minion from their action bar"
+},
+{
+"id": 741919,
+"name": "Chaos Elemental",
+"text": "Whenever this minion takes damage, it randomly teleports."
+},
+{
+"id": 742233,
+"name": "Thunderclap",
+"text": "When your General destroys a minion, summon a copy of it nearby."
+},
+{
+"id": 741748,
+"name": "Spectral Revenant",
+"text": "Rush\nWhenever this damages an enemy minion, deal 4 damage to the enemy General."
+},
+{
+"id": 741962,
+"name": "Channeled Breath",
+"text": "Restore 2 Health to your General for each friendly minion."
+},
+{
+"id": 742275,
+"name": "Suzumebachi",
+"text": "Whenever you cast a spell, this minion gains +1 Attack until your next turn."
+},
+{
+"id": 742348,
+"name": "Redsteel Minos",
+"text": "Blood Surge: Gains +2/+2."
+},
+{
+"id": 742071,
+"name": "Ironclad",
+"text": "Dying Wish: Dispel all enemy minions."
+},
+{
+"id": 741754,
+"name": "Daemonic Lure",
+"text": "Deal 1 damage to an enemy minion and teleport it anywhere."
+},
+{
+"id": 795371,
+"name": "Structure",
+"text": "Structure: 11 entities of this type."
+},
+{
+"id": 741978,
+"name": "Spiral Counter",
+"text": "Deal 8 damage to an enemy minion that attacked last turn."
+},
+{
+"id": 742358,
+"name": "S.I.L.V.E.R.",
+"text": "Whenever you summon this or another Mech, friendly Mechs gain all keywords of other friendly Mechs."
+},
+{
+"id": 742097,
+"name": "Sunset Paragon",
+"text": "Opening Gambit: ALL nearby minions deal damage to themselves equal to their Attack."
+},
+{
+"id": 741766,
+"name": "Shadow Reflection",
+"text": "Give a friendly minion +5 Attack."
+},
+{
+"id": 741882,
+"name": "Sword of MECHAZ0R",
+"text": "Frenzy\nOpening Gambit: Progresses MECHAZ0R build by +20%."
+},
+{
+"id": 741764,
+"name": "Dark Seed",
+"text": "Deal 1 damage to the enemy General for each card in the opponent's action bar."
+},
+{
+"id": 742224,
+"name": "Sparrowhawk",
+"text": "Bond: Put a Mist Dragon Seal into your action bar."
+},
+{
+"id": 741751,
+"name": "Abyssal Scar",
+"text": "Deal 1 damage to a minion. If it dies this turn, the space turns into Shadow Creep."
+},
+{
+"id": 742000,
+"name": "Watchful Sentinel",
+"text": "Sentinel: This transforms into a powerful minion if its hidden condition is met."
+},
+{
+"id": 741825,
+"name": "Razorback",
+"text": "Opening Gambit: Give all friendly minions +2 Attack this turn."
+},
+{
+"id": 742332,
+"name": "Hydrogarm",
+"text": "Blood Surge: Deal 1 damage to enemy minions in this row and Stun them."
+},
+{
+"id": 741956,
+"name": "Auroara",
+"text": "Whenever you summon a minion with 2 or less Attack, this minion gains +2 Attack."
+},
+{
+"id": 742100,
+"name": "Skywing",
+"text": "Flying\nYour other minions with Flying cost 1 less."
+},
+{
+"id": 742188,
+"name": "Frostiva",
+"text": "Forcefield\nWhenever this minion attacks or is attacked, summon a 3/3 Vespyr Night Howler nearby."
+},
+{
+"id": 741627,
+"name": "Decimate",
+"text": "Destroy ALL minions that are not nearby any General."
+},
+{
+"id": 741717,
+"name": "Auroras Tears",
+"text": "This turn, your General gains +2 Attack for every equipped artifact."
+},
+{
+"id": 742175,
+"name": "Mandrake",
+"text": "Costs 1 less for each minion summoned from ANY player's action bar this game."
+},
+{
+"id": 742273,
+"name": "Dauntless Advance",
+"text": "Your General and nearby friendly minions gain, \"Takes no damage this turn.\""
+},
+{
+"id": 741832,
+"name": "Blazing Spines",
+"text": "Wall"
+},
+{
+"id": 741648,
+"name": "Heartseeker",
+"text": "Ranged"
+},
+{
+"id": 742292,
+"name": "Silica Weaver",
+"text": "Opening Gambit: Progresses MECHAZ0R build by +40%."
+},
+{
+"id": 741869,
+"name": "Swamp Entangler",
+"text": "Provoke"
+},
+{
+"id": 742338,
+"name": "Auroraboros",
+"text": "Give friendly minions \"Dying Wish: Re-summon this minion on this space.\""
+},
+{
+"id": 742260,
+"name": "Lesson of Courage",
+"text": "Give your General +1 Attack."
+},
+{
+"id": 742043,
+"name": "Saberspine Cub",
+"text": "Rush"
+},
+{
+"id": 742324,
+"name": "Homeostatic Rebuke",
+"text": "ALL minions attack themselves."
+},
+{
+"id": 742050,
+"name": "Moro",
+"text": "As long as there is a Spriggin, this minion has +3 Attack."
+},
+{
+"id": 742217,
+"name": "Calculator",
+"text": "Opening Gambit: Gain the combined Attack and Health of all Battle Pets in your action bar."
+},
+{
+"id": 741721,
+"name": "Scion's First Wish",
+"text": "Give a friendly minion +1/+1. Draw a card."
+},
+{
+"id": 741839,
+"name": "Bonechill Barrier",
+"text": "Summon three joined 0/2 Vespyr Walls.  Minions that attack these walls are Stunned."
+},
+{
+"id": 741819,
+"name": "Frosthorn Rhyno",
+"text": "Infiltrate: Gain +1 Attack and Celerity."
+},
+{
+"id": 742132,
+"name": "Ki Beholder",
+"text": "Ranged\nOpening Gambit: An enemy minion cannot move next turn."
+},
+{
+"id": 742042,
+"name": "Letigress",
+"text": "Ranged\nWhenever your General attacks, a cub joins the pack."
+},
+{
+"id": 742048,
+"name": "Binky",
+"text": "Flying\nWhenever this damages a minion, restore 2 Health to your General."
+},
+{
+"id": 741931,
+"name": "Tombstone",
+"text": "Provoke"
+},
+{
+"id": 742134,
+"name": "Battle Panddo",
+"text": "Whenever this minion takes damage, deal 1 damage to all enemies."
+},
+{
+"id": 741558,
+"name": "Spellshield",
+"text": "Cannot be targeted by ANY spells"
+},
+{
+"id": 742021,
+"name": "Luminous Charge",
+"text": "Dying Wish: Deal 2 damage to nearby enemies."
+},
+{
+"id": 741776,
+"name": "Earth Walker",
+"text": "Grow: +1/+1"
+},
+{
+"id": 741942,
+"name": "Captain Hank Hart",
+"text": "Ranged\nWhenever this minion deals damage, restore that much Health to it."
+},
+{
+"id": 741954,
+"name": "Sunrise Cleric",
+"text": "Opening Gambit: Turn a nearby space into Hallowed Ground."
+},
+{
+"id": 742211,
+"name": "Inquisitor Kron",
+"text": "Provoke\nWhenever you replace a card, summon a 2/2 Prisoner with a random ability nearby."
+},
+{
+"id": 741704,
+"name": "Dunecaster",
+"text": "Opening Gambit: Give +2/+2 to a friendly Dervish. If it is a Wind Dervish, it no longer disappears."
+},
+{
+"id": 741904,
+"name": "Sarlac the Eternal",
+"text": "Dying Wish: Re-summon this minion on a random space."
+},
+{
+"id": 742092,
+"name": "Tethermancer",
+"text": "Provoke\nDispel any minion that deals damage to this one."
+},
+{
+"id": 742251,
+"name": "Feralu",
+"text": "Friendly minions from any tribe have +1/+1."
+},
+{
+"id": 742221,
+"name": "Sol Pontiff",
+"text": "Zeal: Your Golems have +2 Attack."
+},
+{
+"id": 741912,
+"name": "Crossbones",
+"text": "Opening Gambit: Destroy an enemy minion with Ranged."
+},
+{
+"id": 741611,
+"name": "Arclyte Sentinel",
+"text": "Opening Gambit: Give ANY nearby minion +2 Attack, but -2 Health"
+},
+{
+"id": 741979,
+"name": "Bombard",
+"text": "Reactivate your minions with Ranged."
+},
+{
+"id": 742210,
+"name": "Sol",
+"text": "Opening Gambit: Activate a friendly Battle Pet."
+},
+{
+"id": 742051,
+"name": "Dagona",
+"text": "Opening Gambit: Devour ANY minion, anywhere.\nDying Wish: Spit out the devoured minion on this space."
+},
+{
+"id": 741635,
+"name": "Circle of Life",
+"text": "Deal 5 damage to an enemy minion. Restore 5 Health to your General."
+},
+{
+"id": 741694,
+"name": "Wind Shrike",
+"text": "Flying\nDying Wish: Draw a card."
+},
+{
+"id": 742064,
+"name": "Riddle",
+"text": "While you have the Riddle, you cannot replace. Cast to give your opponent a Riddle."
+},
+{
+"id": 742282,
+"name": "Assassination Protocol",
+"text": "Reactivate an exhausted friendly minion. It cannot damage or attack Generals this turn."
+},
+{
+"id": 741908,
+"name": "Azure Horn Shaman",
+"text": "Dying Wish: Give +4 Health to friendly minions around it."
+},
+{
+"id": 742031,
+"name": "Flawless Reflection",
+"text": "Choose a minion. Transform ALL nearby minions into copies of it."
+},
+{
+"id": 741553,
+"name": "Invulnerable",
+"text": "Cannot die or be affected by ANYTHING"
+},
+{
+"id": 742010,
+"name": "Grandmaster Kraigon",
+"text": "Forcefield, Frenzy, Grow: +7/+7.\nYour General has:\nForcefield, Frenzy, Grow: +7/+7."
+},
+{
+"id": 741567,
+"name": "Prism Barrier",
+"text": "Give a friendly minion Forcefield."
+},
+{
+"id": 741844,
+"name": "Avalanche",
+"text": "Deal 4 damage to everything on your starting side of the battlefield and Stun them."
+},
+{
+"id": 742252,
+"name": "Boulder Breacher",
+"text": "Bond: Enemies can't counterattack this turn."
+},
+{
+"id": 742160,
+"name": "Blood Baronette",
+"text": "Opening Gambit: Double a nearby Wraithling's Attack and Health."
+},
+{
+"id": 742138,
+"name": "Pandamonium",
+"text": "Transform ALL minions into 0/2 Panddo that cannot be attacked until end of turn."
+},
+{
+"id": 742123,
+"name": "Sky Burial",
+"text": "Destroy a minion that is not nearby any General."
+},
+{
+"id": 741932,
+"name": "Maw",
+"text": "Opening Gambit: Deal 2 damage to a nearby enemy minion."
+},
+{
+"id": 742193,
+"name": "Winter's Wake",
+"text": "Give all friendly Wall minions +4/+4. Those minions can now move."
+},
+{
+"id": 741701,
+"name": "Fireblaze Obelysk",
+"text": "Summon Dervish\nYour dervishes have +1 Attack."
+},
+{
+"id": 741699,
+"name": "Imperial Mechanyst",
+"text": "Opening Gambit: Repair all of your artifacts to full durability."
+},
+{
+"id": 742045,
+"name": "Thunderhorn",
+"text": "Whenever this minion damages an enemy, it also damages all joined enemies."
+},
+{
+"id": 741759,
+"name": "Breath Of The Unborn",
+"text": "Deal 2 damage to all enemy minions. Fully heal all friendly minions."
+},
+{
+"id": 741534,
+"name": "Grow",
+"text": "Gets bigger at the start of your turn."
+},
+{
+"id": 741731,
+"name": "Wildfire Ankh",
+"text": "Your General gains Blast."
+},
+{
+"id": 742083,
+"name": "Prophet of the White Palm",
+"text": "Opening Gambit: Prevent ALL spell damage until your next turn."
+},
+{
+"id": 742272,
+"name": "Invincible",
+"text": "Give a friendly minion with full Health +4/+4."
+},
+{
+"id": 741765,
+"name": "Grasp of Agony",
+"text": "Choose an enemy minion. When it dies, it deals 3 damage to enemies around it."
+},
+{
+"id": 741943,
+"name": "Rook",
+"text": "At the end of your turn, this minion gains a random Faction ability."
+},
+{
+"id": 742057,
+"name": "Blood Taura",
+"text": "Provoke\nThis minion's cost is your General's health."
+},
+{
+"id": 741881,
+"name": "Cannon of MECHAZ0R",
+"text": "Ranged\nOpening Gambit: Progresses MECHAZ0R build by +20%."
+},
+{
+"id": 742122,
+"name": "Ironcliffe Heart",
+"text": "Transform a friendly minion into an Ironcliffe Guardian."
+},
+{
+"id": 741890,
+"name": "Sand Burrower",
+"text": "When this minion survives damage, it returns to your action bar."
+},
+{
+"id": 742310,
+"name": "Deathmark",
+"text": "Deal 1 damage to an enemy minion. After it is attacked this turn, destroy it."
+},
+{
+"id": 741803,
+"name": "Metamorphosis",
+"text": "Transform all enemy minions into 1/1 Magma with no abilities until the end of your opponent's turn."
+},
+{
+"id": 742206,
+"name": "Soboro",
+"text": "Whenever this damages a neutral minion, destroy that minion."
+},
+{
+"id": 742240,
+"name": "Godhammer",
+"text": "Your minions have \"Grow: +1/+1.\""
+},
+{
+"id": 742154,
+"name": "Corpse Combustion",
+"text": "Summon all friendly minions with Dying Wish destroyed since your last turn on random spaces."
+},
+{
+"id": 741527,
+"name": "Deathwatch",
+"text": "Triggers effect whenever ANY minion dies."
+},
+{
+"id": 741921,
+"name": "Pandora",
+"text": "At the end of your turn, summon a 3/3 Spirit Wolf with a random ability into a nearby space."
+},
+{
+"id": 742055,
+"name": "Frostfire Snowchaser",
+"text": "Ranged"
+},
+{
+"id": 741657,
+"name": "Chakri Avatar",
+"text": "Whenever you cast a spell, this minion gains +1/+1"
+},
+{
+"id": 742062,
+"name": "Grove Lion",
+"text": "While this minion is on the battlefield, your General has Forcefield."
+},
+{
+"id": 742105,
+"name": "Shiro Puppydragon",
+"text": "At the end of your turn, give each nearby friendly minion +1 Attack."
+},
+{
+"id": 741737,
+"name": "Abyssal Juggernaut",
+"text": "This minion has +1/+1 for each friendly Shadow Creep."
+},
+{
+"id": 741966,
+"name": "Flamewreath",
+"text": "Whenever this minion is moved for any reason, it deals 2 damage to all enemies around it."
+},
+{
+"id": 741580,
+"name": "Grandmaster Nosh-Rak",
+"text": "Blast\nFlying\nThe enemy General takes double damage."
+},
+{
+"id": 742022,
+"name": "Shivers",
+"text": "Flying\nInfiltrate: When this minion attacks, permanently gain 1 mana crystal."
+},
+{
+"id": 741902,
+"name": "Archon Spellbinder",
+"text": "Your opponent's non-Bloodbound spells cost 1 more to cast."
+},
+{
+"id": 742114,
+"name": "Wind Sister Maia",
+"text": "Friendly minions with Infiltrate have +1/+1."
+},
+{
+"id": 742098,
+"name": "Arrow Whistler",
+"text": "Ranged\nYour other minions with Ranged get +1 Attack."
+},
+{
+"id": 742242,
+"name": "Juggernaut",
+"text": "Grow: +5/+5\nWhenever this minion takes damage, summon that many random Golem Eggs nearby."
+},
+{
+"id": 742047,
+"name": "Glub",
+"text": "Whenever a Spriggin is destroyed, this minion gains +3/+3."
+},
+{
+"id": 741953,
+"name": "Pureblade Enforcer",
+"text": "Whenever your opponent casts a spell, this minion gains +1/+1."
+},
+{
+"id": 742026,
+"name": "Freeblade",
+"text": "Sentinel: Minion summoned.\nThis switches positions with the minion that transformed it."
+},
+{
+"id": 741894,
+"name": "Silvertongue Corsair",
+"text": "Takes no damage from Generals."
+},
+{
+"id": 742276,
+"name": "Second-sword Sarugi",
+"text": "Your spells cost 2 less."
+},
+{
+"id": 741883,
+"name": "Chassis of MECHAZ0R",
+"text": "Forcefield\nOpening Gambit: Progresses MECHAZ0R build by +20%."
+},
+{
+"id": 741523,
+"name": "Blast",
+"text": "Attack all enemy minions and Generals in one straight line."
+},
+{
+"id": 742082,
+"name": "Sun Elemental",
+"text": "Opening Gambit: Give two random friendly minions +2 Health."
+},
+{
+"id": 742084,
+"name": "Araki Headhunter",
+"text": "Whenever you summon a minion with Opening Gambit from your action bar, gain +2 Attack."
+},
+{
+"id": 742169,
+"name": "Ghost Azalea",
+"text": "Your General gains +1 Attack for each friendly Shadow Creep."
+},
+{
+"id": 742158,
+"name": "Gor",
+"text": "Dying Wish: Re-summon this minion in a random corner."
+},
+{
+"id": 741868,
+"name": "Rogue Warden",
+"text": "Ranged"
+},
+{
+"id": 741999,
+"name": "Doom",
+"text": "The enemy General is DOOMED and will die after three turns."
+},
+{
+"id": 742145,
+"name": "Pax",
+"text": "Dying Wish: Summon two 2/2 Iron Dervishes nearby."
+},
+{
+"id": 741551,
+"name": "Zeal",
+"text": "Gains a bonus effect when nearby your General."
+},
+{
+"id": 741763,
+"name": "Dark Transformation",
+"text": "Destroy an enemy minion and summon a 1/1 Wraithling on that space."
+},
+{
+"id": 742181,
+"name": "Flaming Stampede",
+"text": "Deal 8 damage to ALL non-Egg minions and Generals."
+},
+{
+"id": 741708,
+"name": "Oserix",
+"text": "Flying\nDying Wish: Equip 2 random artifacts from your deck."
+},
+{
+"id": 742094,
+"name": "Sapphire Seer",
+"text": "Forcefield"
+},
+{
+"id": 742129,
+"name": "Xho",
+"text": "Dying Wish: Put a random Songhai spell into your action bar. It costs 1 less."
+},
+{
+"id": 741712,
+"name": "Dominate Will",
+"text": "Take control of an enemy minion nearby your General."
+},
+{
+"id": 741617,
+"name": "Elyx Stormblade",
+"text": "Provoke\nYour minions and General may move an additional space"
+},
+{
+"id": 742095,
+"name": "Sunsteel Defender",
+"text": "Forcefield"
+},
+{
+"id": 795369,
+"name": "Arcanyst",
+"text": "Arcanyst: 30 entities of this type."
+},
+{
+"id": 741556,
+"name": "Airdrop",
+"text": "Summon this minion anywhere on the battlefield."
+},
+{
+"id": 741595,
+"name": "Valknu's Seal",
+"text": "Summon an Egg that hatches into a copy of your General."
+},
+{
+"id": 741608,
+"name": "Windblade Adept",
+"text": "Zeal: Gains +1 Attack"
+},
+{
+"id": 741540,
+"name": "Primal Flourish",
+"text": "Friendly minions standing on it have \"Grow: +2/+2\""
+},
+{
+"id": 741993,
+"name": "Phantasm",
+"text": "Whenever your opponent summons a minion, give a minion in your action bar +1 Attack."
+},
+{
+"id": 741536,
+"name": "Infiltrate",
+"text": "Gains a bonus while on the enemy side of the battlefield."
+},
+{
+"id": 741816,
+"name": "Fenrir Warmaster",
+"text": "Dying Wish: Summon a 3/2 Ghost Wolf on this space."
+},
+{
+"id": 741783,
+"name": "Primordial Gazer",
+"text": "Opening Gambit: Give a nearby friendly minion +2/+2."
+},
+{
+"id": 742232,
+"name": "Sirocco",
+"text": "Opening Gambit: Summon a Skyrock Golem on random spaces for each other Golem you've summoned this game."
+},
+{
+"id": 741637,
+"name": "Holy Immolation",
+"text": "Restore 4 Health to a friendly minion. Deal 4 damage to enemies around it."
+},
+{
+"id": 742170,
+"name": "Gro",
+"text": "Grow: +1/+1"
+},
+{
+"id": 741716,
+"name": "Astral Phasing",
+"text": "Give a friendly minion +5 Health and Flying."
+},
+{
+"id": 742236,
+"name": "Nocturne",
+"text": "Whenever you make Shadow Creep or a Wraithling, instead make both."
+},
+{
+"id": 741826,
+"name": "Ancient Grove",
+"text": "Provoke\nOpening Gambit: Your minions gain \"Dying Wish: Summon a 1/1 Treant with Provoke\"."
+},
+{
+"id": 741594,
+"name": "Entropic Gaze",
+"text": "Deal 2 damage to the enemy General. Both players draw a card."
+},
+{
+"id": 741698,
+"name": "Orb Weaver",
+"text": "Opening Gambit: Summon a copy of this minion on a nearby space."
+},
+{
+"id": 741690,
+"name": "Bloodrage Mask",
+"text": "Whenever you cast a spell, deal 1 damage to the enemy General."
+},
+{
+"id": 742191,
+"name": "Vespyric Call",
+"text": "Put a random Vespyr minion into your action bar. It costs 1 less and has +1/+1."
+},
+{
+"id": 742321,
+"name": "Armada",
+"text": "Blood Surge: Deal 5 damage to the closest enemy."
+},
+{
+"id": 742247,
+"name": "Ghost Seraphim",
+"text": "The first spell you cast each turn costs 5 less."
+},
+{
+"id": 741807,
+"name": "Mind Steal",
+"text": "Steal a random minion from your opponent's deck and summon it."
+},
+{
+"id": 741830,
+"name": "Whyte Drake",
+"text": "Flying"
+},
+{
+"id": 741995,
+"name": "Inkling Surge",
+"text": "Summon a 1/1 Wraithling. If you have another Wraithling, draw a card."
+},
+{
+"id": 741858,
+"name": "Fire Spitter",
+"text": "Ranged"
+},
+{
+"id": 742038,
+"name": "Sinister Silhouette",
+"text": "Cannot be attacked."
+},
+{
+"id": 742015,
+"name": "Evolutionary Apex",
+"text": "BOTH players put all minions in their action bars onto the battlefield nearby their General."
+},
+{
+"id": 741641,
+"name": "Magnetize",
+"text": "Pull ANY minion to the space in front of your General."
+},
+{
+"id": 741547,
+"name": "Summon Dervish",
+"text": "At the start of your turn, summon a 2/2 Wind Dervish with Rush nearby. It disappears at the end of your turn."
+},
+{
+"id": 742353,
+"name": "Reliquarian",
+"text": "Opening Gambit: Forge a friendly minion into a Faction artifact with equal Attack."
+},
+{
+"id": 742228,
+"name": "Joseki",
+"text": "Each player steals a random card from their opponent's deck."
+},
+{
+"id": 741848,
+"name": "Aspect of the Ravager",
+"text": "Transform ANY minion into a 3/3 Ravager with no abilities."
+},
+{
+"id": 741924,
+"name": "Wrath",
+"text": "Celerity"
+},
+{
+"id": 741880,
+"name": "Wings of MECHAZ0R",
+"text": "Airdrop\nOpening Gambit: Progresses MECHAZ0R build by +20%."
+},
+{
+"id": 742187,
+"name": "Huldra",
+"text": "Opening Gambit: Give a friendly Vespyr minion Celerity."
+},
+{
+"id": 742337,
+"name": "Animus Plate",
+"text": "Your General gains +2 Attack.\nWhenever your General attacks or counterattacks, give all friendly Vespyr minions +2/+2."
+}
+]

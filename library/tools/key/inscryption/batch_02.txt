@@ -1,0 +1,50 @@
+740713 | Bell Ringer | The Bell Ringer symbol. / Bell Ringer is a variable stat which causes a card's attack stat to increase the closer it is to the combat bell, the value equal to the space number, plus 1 more for each Chime adjacent to it. The Bell Tentacle is the only card to possess this trait.
+740714 | M!rror r0rriM | M!rror r0rriM is a Variable Stat, representing the Power of certain cards. A card with this variable stat has Power equal to the Power of a card opposing it. If unopposed, Power equals to 0. The Mirror Tentacle is the only card with this variable stat.  /  / Deathcards with this variable stat can also be created if Mirror Tentacle is selected for its Power and Health stats. /  / In the Trial of Power, M!rror r0rriM contributes 0 Power.
+740715 | !CORRUPTED | Sigils: Mighty Leap.
+740716 | 49er | Sigils: Sprinter.
+740717 | Adder | Sigils: Touch of Death. Traits: KillsSurvivors.
+740718 | Alarm Bot | Sigils: Annoying.
+740719 | Alpha | Sigils: Leader.
+740720 | Amalgam | Traits: Ant.
+740722 | Amoeba | Sigils: Amorphous.
+740723 | Amoebot | Sigils: Amorphous.
+740724 | Annoy FM | Sigils: Annoying. Traits: Terrain.
+740725 | Ant Queen | Sigils: Ant Spawner. Traits: Ant.
+740726 | Aquasquirrel | Sigils: Waterborne.
+740728 | Bait Bucket | Traits: Terrain.
+740729 | Banshee | Sigils: Airborne.
+740730 | Bat | Sigils: Airborne.
+740731 | Beaver | Sigils: Dam Builder.
+740733 | Beehive | Sigils: Bees Within.
+740734 | Bell Tentacle | 
+740735 | Black Goat | Sigils: Worthy Sacrifice. Traits: Goat.
+740736 | Bleene's Mox | Sigils: Blue Mox, Green Mox. Traits: Terrain, Mox Card.
+740737 | Bleene's Vessel | Sigils: Green Mox, Blue Mox. Traits: Mox Card.
+740738 | Bloodhound | Sigils: Guardian.
+740739 | Blue Mage | Sigils: Mental Gemnastics.
+740740 | Blue Sporemage | Sigils: Mental Gemnastics, Mental Gemnastics. Traits: Fused.
+740741 | Bolthound | Sigils: Guardian.
+740742 | Bomb Latcher | Sigils: Bomb Latch.
+740743 | Bone Heap | Sigils: Enlarge.
+740744 | Bone Lord's Horn | Sigils: Bonehorn.
+740745 | Bonehound | Sigils: Guardian.
+740747 | Black Goat | Sigils: Worthy Sacrifice. A black goat is created in your hand. A black goat is defined as: 0 Power, 1 Health, Worthy Sacrifice.
+740748 | Frozen Opossum | Sigils: Frozen Away. Traits: Cannot be sacrificed. A frozen opossum is created in your hand. A frozen opossum is defined as: 0 Power, 5 Health, Frozen Away.
+740749 | Boulder | Sigils: Made of Stone, Kaycee's Mod. Traits: Cannot be sacrificed. A boulder is created in your hand. A boulder is defined as: 0 Power, 5 Health.
+740750 | Boulder | Sigils: Made Of Stone, Kaycee's Mod. Traits: Terrain.
+740752 | Bridge Rails | Traits: Terrain.
+740753 | Broken Bot | Sigils: Detonator. Traits: Terrain.
+740754 | Broken Egg | Traits: Terrain.
+740755 | Left | Sigils: Sharp Quills. Traits: If placed on the left of the right Obol, gives the player one Ancient Obol..
+740756 | Right | Sigils: Bone King. Traits: If placed on the right of the left Obol, gives the player one Ancient Obol..
+740757 | Buff Conduit | Sigils: Attack Conduit.
+740758 | Bullfrog | Sigils: Mighty Leap.
+740759 | Burrowing Trap | Sigils: Burrower, Steel Trap. Traits: Terrain.
+740760 | Busted 3D Printer | Sigils: Vessel Printer.
+740761 | Caged Wolf | Traits: Terrain, DeathcardCreationNonOption. Special behaviour: CagedWolf.
+740762 | Normal | Sigils: Many Lives. Special behaviour: Cat.
+740764 | Dormant | Sigils: Many Lives. Traits: JeresyDevilCat.
+740765 | Awakened | Sigils: Airborne, Many Lives. Traits: Child 13Limited Lives.
+740768 | Cockroach | Sigils: Unkillable.
+740769 | Conduit Tower | Sigils: Null Conduit (sigil). Traits: Terrain.
+740770 | Corpse Maggots | Sigils: Corpse Eater.

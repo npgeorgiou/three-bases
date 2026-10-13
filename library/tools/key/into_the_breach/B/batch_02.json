@@ -1,0 +1,746 @@
+{
+"760942": [
+[
+"immunity",
+"Mechs no longer take damage when blocking emerging Vek"
+]
+],
+"760944": [
+[
+"stat_gain",
+"Mechs gain +1 move"
+],
+[
+"adjacency",
+"if they start their turn adjacent to each other"
+],
+[
+"turn_start",
+"start their turn"
+],
+[
+"temporary_buff",
+"+2 Move this turn"
+],
+[
+"upgrade",
+"Upgrade: +1 Movement"
+]
+],
+"760945": [
+[
+"cheat_death",
+"All Pilots survive death"
+]
+],
+"760946": [
+[
+"aura",
+"Enemies do +1 Damage against other enemies"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760947": [
+[
+"spell_power",
+"All Vek take +1 damage from Bumps"
+],
+[
+"collision_damage",
+"Bumps"
+]
+],
+"760948": [
+[
+"shield",
+"all buildings gain a Shield"
+],
+[
+"low_life",
+"If Power Grid is reduced to 1"
+]
+],
+"760949": [
+[
+"multi_target_attack",
+"Chain damage through adjacent targets"
+],
+[
+"upgrade",
+"Upgrade: Building Chain"
+]
+],
+"760950": [
+[
+"piercing",
+"Fire a piercing beam"
+],
+[
+"damage",
+"decreases in damage the further it goes"
+],
+[
+"friendly_fire",
+"Friendly units will not take damage from this attack"
+],
+[
+"upgrade",
+"Upgrade: Ally Immune"
+]
+],
+"760951": [
+[
+"damage",
+"Bash the enemy"
+],
+[
+"forced_movement",
+"flipping its attack direction"
+],
+[
+"shield",
+"Gain a Shield when bashing"
+],
+[
+"upgrade",
+"Upgrade: Gain Shield"
+]
+],
+"760952": [
+[
+"ranged",
+"Throw a rock at a chosen target"
+],
+[
+"target_choice",
+"chosen target"
+],
+[
+"terrain",
+"Rock remains as an obstacle"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760953": [
+[
+"damage",
+"damaging and pushing it to the left"
+],
+[
+"forced_movement",
+"pushing it to the left"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760954": [
+[
+"damage",
+"Punch an adjacent tile"
+],
+[
+"ranged",
+"Launch the fist"
+],
+[
+"upgrade",
+"Upgrade: Rocket"
+]
+],
+"760955": [
+[
+"forced_movement",
+"Grab a unit and toss it behind you"
+],
+[
+"friendly_fire",
+"Upgrade: Ally Immune"
+],
+[
+"upgrade",
+"Upgrade: +2 Damage"
+]
+],
+"760956": [
+[
+"forced_movement",
+"Push target tile"
+],
+[
+"damage_over_time",
+"light tiles on Fire"
+],
+[
+"condition_life",
+"If the target is on Fire, deals 2 damage to the target"
+],
+[
+"upgrade",
+"Upgrade: +1 Range"
+]
+],
+"760957": [
+[
+"aoe_damage",
+"Blast (and push) all adjacent tiles"
+],
+[
+"forced_movement",
+"Blast (and push) all adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760958": [
+[
+"multi_target_attack",
+"Stab multiple tiles"
+],
+[
+"forced_movement",
+"push the farthest hit tile"
+],
+[
+"debuff",
+"Adds A.C.I.D. to the furthest hit enemy"
+],
+[
+"upgrade",
+"Upgrade: A.C.I.D. Tip"
+],
+[
+"resource_gain",
+"Costs 1 Reactor Core to power"
+]
+],
+"760959": [
+[
+"movement",
+"Leap to a tile"
+],
+[
+"friendly_fire",
+"1 self-damage to Mech"
+],
+[
+"aoe_damage",
+"damaging self and adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage Each"
+]
+],
+"760960": [
+[
+"aoe_damage",
+"Damage and Push all adjacent tiles to the left"
+],
+[
+"forced_movement",
+"Push all adjacent tiles to the left"
+],
+[
+"friendly_fire",
+"1 self damage to the user"
+],
+[
+"upgrade",
+"Upgrade: -1 Self Damage"
+]
+],
+"760961": [
+[
+"multi_target_attack",
+"damage and push 3 tiles"
+],
+[
+"forced_movement",
+"damage and push 3 tiles"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760962": [
+[
+"aoe_damage",
+"dealing huge damage and pushing adjacent tiles"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760963": [
+[
+"movement",
+"Fly over a target"
+],
+[
+"damage",
+"Deals 1 damage to the target"
+],
+[
+"placement_rules",
+"must have an empty tile to land on the opposite side"
+],
+[
+"upgrade",
+"Upgrade: +1 Range"
+]
+],
+"760964": [
+[
+"multi_target_attack",
+"Fire two projectiles in opposite directions"
+],
+[
+"forced_movement",
+"Pushes targets"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760965": [
+[
+"evasion",
+"Shoot a projectile that phases through objects"
+],
+[
+"forced_movement",
+"Pushes target"
+],
+[
+"shield",
+"Applies a Shield to buildings it passes through"
+],
+[
+"upgrade",
+"Upgrade: Phase Shield"
+]
+],
+"760966": [
+[
+"forced_movement",
+"pull Mech towards immovable objects, or units to the Mech"
+],
+[
+"shield",
+"it gives them a Shield"
+],
+[
+"upgrade",
+"Upgrade: Shield Ally"
+]
+],
+"760967": [
+[
+"forced_movement",
+"pushes tiles around the target"
+],
+[
+"no_damage_output",
+"non-damaging projectile"
+]
+],
+"760968": [
+[
+"variable_stats",
+"does more damage to targets that are further away"
+],
+[
+"forced_movement",
+"Pushes the target"
+],
+[
+"ranged",
+"Projectile"
+],
+[
+"upgrade",
+"Upgrade: +1 Max Damage"
+]
+],
+"760969": [
+[
+"multi_target_attack",
+"hits 2 tiles"
+],
+[
+"forced_movement",
+"pushing them in opposite directions"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760970": [
+[
+"forced_movement",
+"pushing it and hurting yourself"
+],
+[
+"friendly_fire",
+"1 self damage to the user"
+],
+[
+"movement",
+"Fly in a line"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage Each"
+]
+],
+"760971": [
+[
+"friendly_fire",
+"causes damage to shooter as well as target"
+],
+[
+"forced_movement",
+"Pushes target"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage Each"
+]
+],
+"760972": [
+[
+"ranged",
+"Fire a projectile"
+],
+[
+"forced_movement",
+"pushes adjacent tiles"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760973": [
+[
+"multi_target_attack",
+"the targeted tile, and the tiles to its left and right"
+],
+[
+"forced_movement",
+"damages and pushes"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760974": [
+[
+"aoe_damage",
+"dropping a bomb on each tile you pass"
+],
+[
+"movement",
+"Leap over any distance"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760975": [
+[
+"movement",
+"Dash in a line"
+],
+[
+"forced_movement",
+"pushing adjacent tiles away"
+]
+],
+"760976": [
+[
+"ranged",
+"Launch a rock at a tile"
+],
+[
+"forced_movement",
+"pushing tiles to the left and right"
+],
+[
+"terrain",
+"it will stay in the tile as a 1 HP obstacle"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760977": [
+[
+"protection",
+"Protect a tile"
+],
+[
+"aoe_damage",
+"Deals 1 damage to all adjacent tiles to the target"
+],
+[
+"friendly_fire",
+"This attack will no longer damage Grid Buildings"
+],
+[
+"upgrade",
+"Upgrade: Buildings Immune"
+]
+],
+"760978": [
+[
+"ranged",
+"Fires a pushing artillery"
+],
+[
+"forced_movement",
+"Fires a pushing artillery"
+],
+[
+"terrain",
+"creates Smoke behind the shooter"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760979": [
+[
+"damage_over_time",
+"Light the target on Fire"
+],
+[
+"forced_movement",
+"push adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: Backburn"
+]
+],
+"760980": [
+[
+"multi_target_attack",
+"launch multiple small projectiles"
+],
+[
+"ranged",
+"Artillery"
+],
+[
+"upgrade",
+"Upgrade: +2 Tiles"
+]
+],
+"760981": [
+[
+"multi_target_attack",
+"Deals damage to two tiles"
+],
+[
+"forced_movement",
+"pushing one forwards and one backwards"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760982": [
+[
+"disable",
+"Freeze yourself and the target"
+],
+[
+"friendly_fire",
+"Freeze yourself"
+]
+],
+"760983": [
+[
+"ranged",
+"Artillery shot"
+],
+[
+"suppress",
+"applies Smoke"
+],
+[
+"forced_movement",
+"pushes two adjacent tiles"
+]
+],
+"760984": [
+[
+"damage_over_time",
+"sets 5 tiles on Fire"
+],
+[
+"friendly_fire",
+"Deals 1 self-damage to the shooter"
+],
+[
+"upgrade",
+"No Self Damage"
+]
+],
+"760985": [
+[
+"aoe_damage",
+"damages everything it passes"
+],
+[
+"friendly_fire",
+"Deals 1 self-damage to the shooter"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage Each"
+]
+],
+"760986": [
+[
+"aoe_damage",
+"damages a large area"
+],
+[
+"area_templates",
+"five targets in a cross shape"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760987": [
+[
+"multi_target_attack",
+"Launch two missiles"
+],
+[
+"forced_movement",
+"damaging and pushing two targets"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760988": [
+[
+"ranged",
+"Fires a projectile"
+],
+[
+"forced_movement",
+"pulling target towards you 1 tile"
+]
+],
+"760989": [
+[
+"ranged",
+"Artillery weapon"
+],
+[
+"forced_movement",
+"pulls its target towards you"
+]
+],
+"760990": [
+[
+"forced_movement",
+"Push all adjacent tiles"
+],
+[
+"shield",
+"Creates a personal Shield when used"
+],
+[
+"upgrade",
+"Upgrade: Shield Self"
+]
+],
+"760991": [
+[
+"swap",
+"Swap places with a nearby tile"
+],
+[
+"debuff",
+"the other unit will become webbed"
+],
+[
+"upgrade",
+"Upgrade: +1 Range"
+]
+],
+"760992": [
+[
+"debuff",
+"applies A.C.I.D."
+],
+[
+"forced_movement",
+"and pushes"
+],
+[
+"ranged",
+"Fire a projectile"
+]
+]
+}

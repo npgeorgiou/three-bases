@@ -1,0 +1,578 @@
+{
+"813566": [
+[
+"retain",
+"Retain"
+],
+[
+"resource_gain",
+"Gain 2 energy"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"757938": [
+[
+"comeback",
+"If you lost HP during the previous turn"
+],
+[
+"turn_start",
+"at the start of your turn"
+],
+[
+"slots_queue",
+"trigger the passive ability of all Orbs"
+]
+],
+"813559": [
+[
+"generate_cards",
+"Shuffle an Omega into draw pile"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758058": [
+[
+"damage_reduction",
+"lose 1 less"
+]
+],
+"757726": [
+[
+"selection",
+"Scry 1"
+],
+[
+"block_armor",
+"Gain 2 Block"
+],
+[
+"damage",
+"Deal 3 damage"
+]
+],
+"757843": [
+[
+"damage",
+"Deal 7 damage"
+]
+],
+"757724": [
+[
+"destroy",
+"set their HP to 0"
+],
+[
+"condition_life",
+"If the enemy has 30 or less HP"
+]
+],
+"758193": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stances",
+"if you are in Calm"
+],
+[
+"block_armor",
+"gain X Block"
+]
+],
+"757712": [
+[
+"aoe_damage",
+"Deal 21 damage to ALL enemies"
+],
+[
+"junk_cards",
+"Add a Burn into your discard pile"
+]
+],
+"813558": [
+[
+"protection",
+"Gain 1 Intangible"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"757960": [
+[
+"resource_banking",
+"Energy is now conserved between turns"
+]
+],
+"757785": [
+[
+"damage",
+"Deal 8 damage"
+],
+[
+"in_hand_buff",
+"Increase this card's damage by 5 this combat"
+]
+],
+"813527": [
+[
+"shield",
+"Prevent the next 2 times you would lose HP"
+]
+],
+"757916": [
+[
+"items_consumables",
+"brews 5 random potions"
+],
+[
+"random_effect",
+"random potions"
+]
+],
+"758372": [
+[
+"modal_choice",
+"Choices: Lose a Potion"
+]
+],
+"758061": [
+[
+"draw",
+"draw a card"
+],
+[
+"hand_size",
+"no cards in hand"
+]
+],
+"758150": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"resource_gain",
+"gain X Energy"
+],
+[
+"permanent_growth",
+"increase this by 1"
+]
+],
+"757590": [
+[
+"generate_cards",
+"Shuffle 3 random Skills into your draw pile"
+],
+[
+"random_effect",
+"random Skills"
+],
+[
+"cost_set",
+"They cost 0 this combat"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"757678": [
+[
+"block_armor",
+"Gain 12 Block"
+],
+[
+"counterattack",
+"deal 4 damage back"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"758136": [
+[
+"turn_start",
+"At the start of your next turn"
+],
+[
+"generate_cards",
+"put a Miracle+ into your hand"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"758249": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"draw",
+"draw X card"
+],
+[
+"discard",
+"discard X"
+]
+],
+"757792": [
+[
+"slots_queue",
+"Evoke your next Orb"
+]
+],
+"757611": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"generate_cards",
+"add a random Power card into your hand"
+],
+[
+"random_effect",
+"random Power card"
+]
+],
+"758273": [
+[
+"damage",
+"Heavy Slash (attack, 16 damage)"
+],
+[
+"block_armor",
+"15 block"
+],
+[
+"multi_attack",
+"10 damage x2"
+],
+[
+"damage",
+"Face Slap (attack debuff, 12 damage)"
+],
+[
+"debuff",
+"Taunt (debuff)"
+],
+[
+"buff",
+"Gloat (buff)"
+],
+[
+"buff",
+"Anger (buff)"
+]
+],
+"757829": [
+[
+"block_armor",
+"Gain 6 Block"
+]
+],
+"813535": [
+[
+"generate_cards",
+"add to your hand"
+],
+[
+"selection",
+"Choose 1 of 3 Attacks of any color"
+],
+[
+"cost_set",
+"It costs 0 this turn"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758235": [
+[
+"death_trigger",
+"On death"
+],
+[
+"debuff",
+"applies X Vulnerable"
+]
+],
+"758002": [
+[
+"combat_start",
+"At the start of Boss combats"
+],
+[
+"heal",
+"heal 25 HP"
+]
+],
+"813518": [
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"block_armor",
+"gain 1 Block"
+]
+],
+"758010": [
+[
+"items_consumables",
+"gain 2 Potion slots"
+]
+],
+"758364": [
+[
+"modal_choice",
+"Choices: Heal to full HP."
+],
+[
+"heal",
+"Heal to full HP"
+],
+[
+"permanent_loss",
+"Lose Max HP"
+]
+],
+"758184": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"generate_cards",
+"add X random Common cards into your hand"
+],
+[
+"random_effect",
+"random Common cards"
+]
+],
+"757682": [
+[
+"damage",
+"Deal 4 damage"
+],
+[
+"recycle",
+"return this from the discard pile to your hand"
+],
+[
+"stances",
+"change Stances"
+]
+],
+"757799": [
+[
+"damage",
+"Deal damage"
+],
+[
+"on_kill",
+"If Fatal"
+],
+[
+"in_hand_buff",
+"permanently increase this card's damage by 3"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"757779": [
+[
+"multi_attack",
+"Deal 2 damage 4 times"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758093": [
+[
+"damage",
+"Deal 20 damage"
+]
+],
+"758001": [
+[
+"transform",
+"Transform all Strike and Defend cards"
+],
+[
+"deck_modification",
+"Transform all Strike and Defend cards"
+]
+],
+"758008": [
+[
+"resource_gain",
+"Gain energy"
+],
+[
+"turn_start",
+"at the start of your turn"
+],
+[
+"enemy_benefit",
+"ALL enemies start combat with 1 Strength"
+]
+],
+"757892": [
+[
+"block_armor",
+"Start each combat with 10 Block"
+],
+[
+"combat_start",
+"Start each combat"
+]
+],
+"758095": [
+[
+"stat_gain",
+"Gain 5 Max HP"
+]
+],
+"757523": [
+[
+"transform",
+"Transformed cards become a random card of any rarity"
+],
+[
+"random_effect",
+"random card"
+]
+],
+"757981": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"aoe_damage",
+"deal 3 damage to ALL enemies"
+]
+],
+"757736": [
+[
+"cost_set",
+"Reduce the cost of a random card in your hand to 0 this combat"
+],
+[
+"random_effect",
+"random card"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758274": [
+[
+"damage",
+"Zap (attack, 18 damage)"
+],
+[
+"debuff",
+"Drain (debuff)"
+],
+[
+"damage",
+"Debilitate (attack debuff, 10 damage)"
+],
+[
+"debuff",
+"Hex (strong debuff)"
+],
+[
+"multi_attack",
+"5 damage x2"
+]
+],
+"758331": [
+[
+"modal_choice",
+"Choices: Receive Apparitions."
+],
+[
+"permanent_loss",
+"Lose Max HP"
+]
+],
+"757903": [
+[
+"rule_change",
+"Unplayable Curse cards can now be played"
+],
+[
+"life_payment",
+"lose 1 HP"
+],
+[
+"exhaust",
+"Exhaust it"
+]
+],
+"757914": [
+[
+"junk_cards",
+"obtain a unique Curse"
+]
+],
+"758175": [
+[
+"counterattack",
+"When attacked, deals X damage back"
+]
+],
+"757665": [
+[
+"cost_reduction",
+"Costs 1 less energy for each card discarded this turn"
+],
+[
+"multi_attack",
+"Deal 7 damage 3 times"
+]
+],
+"757865": [
+[
+"free_play",
+"Play all of your cards"
+],
+[
+"random_effect",
+"Targets are chosen randomly"
+],
+[
+"exhaust",
+"Exhaust"
+]
+]
+}

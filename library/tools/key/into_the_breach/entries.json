@@ -1,0 +1,1577 @@
+[
+{
+"id": 760827,
+"name": "Energy Shield",
+"text": "Shields block damage and prevent new negative status effects (Fire, Freezing, A.C.I.D, etc.). Only direct damage will remove the Shield."
+},
+{
+"id": 760828,
+"name": "Fire Immunity",
+"text": "This unit cannot be set on Fire."
+},
+{
+"id": 760829,
+"name": "Flying",
+"text": "Flying units can be positioned at any terrain tile, except mountains and other units. Mountains and unfriendly units can be overflown. Flying mechs cannot be waterlogged, and all flying units are not affected by lava or A.C.I.D. tiles, because they don't submerge. Flying units are not immune to A.C.I.D. pools, fire, or emerging Vek."
+},
+{
+"id": 760830,
+"name": "Kickoff Boosters",
+"text": "+2 Move this turn."
+},
+{
+"id": 760831,
+"name": "Natural Armor",
+"text": "Weapon damage to this unit is reduced by 1, including Psionic Tyrant's Hive Targeted ability. All other damage (Push, Blocking, Fire, etc.) is unaffected."
+},
+{
+"id": 760832,
+"name": "Smoke Immunity",
+"text": "This unit is unaffected by Smoke. Note that an enemy unit with this special ability will still be damaged by electric smoke (for e.g., the ACID Storm Controller)."
+},
+{
+"id": 760834,
+"name": "A.C.I.D.",
+"text": "Weapon damage against this unit is doubled and Natural Armor is disabled. All other damage (Push, Blocking, Fire, etc.) is unaffected. Repairing removes the effect."
+},
+{
+"id": 760835,
+"name": "Boost",
+"text": "This unit's damage is increased by 1 on its next attack. Affects all targets of the attack, including self damage. Removed upon any ability use, including non-damaging abilities and repairing; repairing while Boosted will heal 2 points."
+},
+{
+"id": 760836,
+"name": "Fire",
+"text": "Units on Fire take 1 damage at the start of every turn. Repairing removes the effect, so does ending a movement Submerged in Water or in Smoke. Flying units cannot submerge in Water."
+},
+{
+"id": 760837,
+"name": "Frozen",
+"text": "Units that are frozen are unable to move or attack, but can free themselves by repairing. Any damage to a frozen unit is negated, but will free the unit."
+},
+{
+"id": 760839,
+"name": "Webbed",
+"text": "Units webbed by the Vek cannot move, but they can still attack."
+},
+{
+"id": 760842,
+"name": "Smoke",
+"text": "Units in Smoke cannot attack or repair."
+},
+{
+"id": 760843,
+"name": "Submerged",
+"text": "Weapons do not work when submerged in Water."
+},
+{
+"id": 760846,
+"name": "Alpha Unit",
+"text": "Alpha units are more powerful than their standard counterparts"
+},
+{
+"id": 760847,
+"name": "Burrower",
+"text": "This Vek will hide underground after taking one or more damage."
+},
+{
+"id": 760848,
+"name": "Explosive Decay",
+"text": "Explodes on death, dealing 1 damage to adjacent tiles. This damage ignores Armor!"
+},
+{
+"id": 760849,
+"name": "Hardened Carapace",
+"text": "The Shell Psion is providing Armor to all Vek, reducing incoming weapon damage by 1. All other damage (Push, Blocking, Fire, etc.) is unaffected."
+},
+{
+"id": 760850,
+"name": "Hive Leader",
+"text": "These are the most powerful Vek. Immune to water, they can be more challenging to kill."
+},
+{
+"id": 760851,
+"name": "Hive Targeted",
+"text": "The Psion Tyrant will do 1 damage all friendly units every turn."
+},
+{
+"id": 760852,
+"name": "Invigorating Spores",
+"text": "The Soldier Psion is providing +1 HP to all Vek."
+},
+{
+"id": 760853,
+"name": "Massive",
+"text": "Massive units can walk in Water (but Water will prevent shooting)."
+},
+{
+"id": 760854,
+"name": "Overpowered",
+"text": "The Psion Abomination is enhancing all Vek. They gain +1 HP, regeneration, and explode on death."
+},
+{
+"id": 760855,
+"name": "Regeneration",
+"text": "The Blood Psion is healing all Vek 1 point every turn."
+},
+{
+"id": 760856,
+"name": "Self-Repairing",
+"text": "If damaged, this unit will Shield itself and prepare to heal."
+},
+{
+"id": 760857,
+"name": "Stable",
+"text": "Cannot be moved by any weapon effect (Push, Teleport, etc.)."
+},
+{
+"id": 760858,
+"name": "Spawner",
+"text": "Spawns two Medium Goos on death."
+},
+{
+"id": 760859,
+"name": "Minor",
+"text": "This unit does not grant XP to pilots on kill."
+},
+{
+"id": 760860,
+"name": "Mine Immunity",
+"text": "This unit avoids mines."
+},
+{
+"id": 760861,
+"name": "Defense Mech",
+"text": "Health 2, move 4. Weapons/skills: Attraction Pulse: Pull target towards you 1 tile. | Shield Projector: Shield tiles from damage. (2 uses per battle.). Special: Flying: Flying units can move over any terrain tile.."
+},
+{
+"id": 760862,
+"name": "Jet Mech",
+"text": "Health 2, move 4. Weapons/skills: Aerial Bombs: Fly over a target, dropping an explosive smoke bomb.. Special: Flying: Flying units can move over any terrain tile.."
+},
+{
+"id": 760863,
+"name": "Cannon Mech",
+"text": "Health 3, move 3. Weapons/skills: Taurus Cannon: Fires a powerful projectile that damages and pushes its target.."
+},
+{
+"id": 760864,
+"name": "Judo Mech",
+"text": "Health 3, move 4. Weapons/skills: Vice Fist: Grab a unit and toss it behind you.. Special: Natural Armor: Weapon damage to this unit is reduced by 1. All other damage (Push, Blocking, Fire, etc.) is unaffected.."
+},
+{
+"id": 760865,
+"name": "Artillery Mech",
+"text": "Health 2, move 3. Weapons/skills: Artemis Artillery: Powerful artillery strike, damaging a single tile and pushing adjacent tiles.."
+},
+{
+"id": 760866,
+"name": "Weapons",
+"text": "The various Weapons from Into The Breach. Description: Each of the Mechs have a Weapon equipped, and will do different things depending on how you want to use them. Note that all weapons have friendly fire ON (unless an exception is mentioned) so if you don't plan properly you can damage your own Mechs. Most weapons come with an upgrade or two, at the cost of additional Reactor Core usage. Upgrades are not purchased separately from their base weapons, they are included. Note that powering Upgrade 1 is never a prerequisite for powering Upgrade 2. List of weapons: Prime-class: Brute-class: Ranged-class: Science-class: Any Class: Deployables: Cyborg-class:"
+},
+{
+"id": 760867,
+"name": "Water Tile",
+"text": "Units cannot attack in Water. Most non-flying enemies die in Water."
+},
+{
+"id": 760869,
+"name": "Squads",
+"text": "Squads in Into The Breach determine the Mechs you can take with you onto the battlefield. You start with the Rift Walkers squad. Additional squads are unlocked by completing Achievements. Each completed achivement earns 1 coin. Each squad has a custom paint job. Unlocked mech colors can be applied to other squads. Random Squads and Custom Squads: Once a second squad is acquired, the option to create a randomized squad or a customized squad opens up. A Custom Squad allows for the selection of any Mechs that have been unlocked, including multiple of the same class as well as multiple of the same Mech. A Random Squad is created out of all the unlocked Mechs. * The Balanced Roll option selects three unique Mechs from three of the five different classes (Prime, Brute, Ranged, Science, and Cyborg). The balanced squad won't have more than 4 weapons so this prevents the Flame Mech, Rocket Mech, Defense Mech, Gravity Mech, Nano Mech, Smog Mech, and Napalm Mech from appearing together in a balanced squad. * The Chaos Roll option has no restrictions on class, weaponry, or Mech combinations so you get a truly random squad. However, if you get duplicate Mechs with the same Passive ability, one of the duplicate Mechs will have the Passive and any power associated with it removed. Secret Squad: The Secret Squad becomes available after unlocking the 8 named squads. 25 Coins are required to unlock the Secret Squad. With the Advance Edition release, it is no longer needed to complete all Gl"
+},
+{
+"id": 760870,
+"name": "Forest Tile",
+"text": "If damaged, lights on Fire.; Lights units on Fire."
+},
+{
+"id": 760871,
+"name": "Coal Plant",
+"text": "Your bonus objective is to defend this structure."
+},
+{
+"id": 760872,
+"name": "High Tide",
+"text": "This tile will become Water at the start of the enemy turn."
+},
+{
+"id": 760873,
+"name": "Civilian Building",
+"text": "Your Power Grid is reduced when Grid Structures are damaged.; Building Rubble Your Power Grid is reduced when Civilian Buildings are damaged. Civilian Buildings are structures which blocks grounded movement and line of sight projectiles. Buildings have a chance to resist damage based on your Grid Defense. It's possible for there to be multiple Civilian Buildings in a given tile. The amount of buildings corresponds to the amount of Grid Power they are worth. Most buildings have 1 Grid Power or 2 Grid Power; and very rarely, it is possible for one to have 3 Grid Power. Losi"
+},
+{
+"id": 760874,
+"name": "Mountain Tile",
+"text": "Mountain Tile.; Damaged Mountain Tile.; Mountain Rubble Tile."
+},
+{
+"id": 760875,
+"name": "Emerging",
+"text": "Vek will emerge here next turn. Any unit blocking this space will take one damage."
+},
+{
+"id": 760876,
+"name": "Combat Mech",
+"text": "Health 3, move 3. Weapons/skills: Titan Fist: Punch an adjacent tile, damaging and pushing it.."
+},
+{
+"id": 760877,
+"name": "Gravity Mech",
+"text": "Health 3, move 4. Weapons/skills: Grav Well: Artillery weapon that pulls its target towards you. | Vek Hormones: Enemies do +1 Damage against other enemies.."
+},
+{
+"id": 760878,
+"name": "Vek",
+"text": "The Vek are the main enemies encountered in Into The Breach. Gameplay: The main goal of Into the Breach is to make sure that the Vek do not destroy all of the grid power. Each island has a set variety of Vek that can spawn, one of which is a Psion, a supporting unit that grants a passive bonus to others. They emerge from the ground on certain tiles, which can be intercepted at the cost of 1 health during the enemy turn. Before the player turn any active Vek will move to a certain tile and prepare to attack it, aiming for either a mech, building or objective. These attacks are executed during the enemy turn unless they are cancelled or the Vek is killed beforehand. Vek are divided into five main groups: *Common Vek are those that can spawn on any island and make up most of the spawns on a mission. All of them have a soft limit on spawns per mission that can be bypassed if the spawning algorithm needs to. * Rare Vek are those whose attacks are more unique than common ones and do not appear on early islands. *Psions, which provide passive bonuses to other Vek when spawned. Note that the Psion itself does not benefit from the passive bonus. *Minor Vek, which are spawned by other Vek, are typically very weak, and bypass the spawning algorithm. They are not worth any experience and are not affected by Psion bonuses. *Hive Leaders, bosses found on the final mission of each island, the Volcanic Hive and normal missions on the fourth island in Unfair difficulty. Rare Vek and Psions ha"
+},
+{
+"id": 760879,
+"name": "Alpha Beetle",
+"text": "Health 5, move 2. Weapons/skills: Sharpened Pincers: Charge forward to deal 3 damage and push the target.. The Alpha Beetle charges forward in a line, dealing 3 damage and pushing the first target it hits."
+},
+{
+"id": 760880,
+"name": "Alpha Firefly",
+"text": "Health 5, move 2. Weapons/skills: Enhanced Thorax: Launch a volatile mass of goo dealing 3 damage.. The Alpha Firefly shoots projectiles in a direct line, similar to the Taurus Cannon weapon without push."
+},
+{
+"id": 760881,
+"name": "Beetle",
+"text": "Health 4, move 2. Weapons/skills: Pincers: Charge forward to deal 1 damage and push the target.. The Beetle charges forward in a line, dealing 1 damage and pushing the first target it hits. Its 4 health is the most of any non-Alpha Vek."
+},
+{
+"id": 760882,
+"name": "Firefly",
+"text": "Health 3, move 2. Weapons/skills: Accelerating Thorax: Launch a volatile mass of goo dealing 1 damage.. The Firefly shoots projectiles in a direct line, similar to the Taurus Cannon weapon without push."
+},
+{
+"id": 760883,
+"name": "Hornet",
+"text": "Health 2, move 5. Weapons/skills: Stinger: Stab the target for 1 damage.. Special: Flying: Flying units can move over any terrain tile.. Its appearance is a wasp that moves through the air to attack using its stinger ability."
+},
+{
+"id": 760884,
+"name": "Scarab",
+"text": "Health 2, move 3. Weapons/skills: Spitting Glands: Lob an artillery shot at a single tile for 1 damage (5 tile range).. Scarabs are shaped like soft-shelled beetles. They attack similarly to artillery style Mech weapons. Scarabs will aim in a straight line at a tile and shoot over any tiles in between them and their target."
+},
+{
+"id": 760885,
+"name": "Scorpion",
+"text": "Health 3, move 3. Weapons/skills: Stinging Spinneret: Web an adjacent target, preparing to stab it for 1 damage.. The Scorpion resembles the creature it is named after, stinger included. It is able to be encountered from the start as a regular enemy. Its goal is to restrict units' mobility with webbing, then attack them."
+},
+{
+"id": 760887,
+"name": "Time Pod",
+"text": "The Time Pod is a special item in Into The Breach that can randomly drop during missions. Description: During each Mission, there is a chance for a pod to appear from the future, dropping it onto a random tile. This can happen in any Mission except for ones with the Protect the Corporate Tower objective. A new objective is added when this event happens: Protect the Time Pod. The 1st and 2nd islands in a timeline will always have one Time Pod. The 3rd and 4th island will always have two Time Pods. Note that this number also includes the appearance of a Strange Pod, which has a 15% chance of replacing a Time Pod in the 2nd, 3rd or 4th island. Protecting or rescuing the Pod always grants a Reactor Core. Time Pods may also contain a Pilot, a Weapon, or a piece of Passive equipment. If the Vek end on the tile where the Pod is, or if it takes damage from a Mech or a Vek attack, the Pod will be destroyed. Projectile weapons can pass safely over the pod, but not piercing/beam weapons. A Pod is still destroyed if the Vek who steps on it has Flying. If the Pod remains untouched until the end of the mission, it is recovered as well. Media:"
+},
+{
+"id": 760890,
+"name": "Ralph Karlsson",
+"text": "Pilot ability: Experienced: Gain +2 bonus XP per kill."
+},
+{
+"id": 760892,
+"name": "Movement",
+"text": "Movement describes on how many tiles a Mech can move each turn."
+},
+{
+"id": 760893,
+"name": "Health",
+"text": "Health is how much damage a Mech can take before being damaged."
+},
+{
+"id": 760894,
+"name": "Grid Power",
+"text": "Grid Power is reduced when Civilian Buildings are damaged. When it reaches zero, the player loses and the current run ends. The Power Grid indicator shows how much Grid Power remains. The player begins the game with 5 Grid Power and may have up to 7. If Grid Power would be increased beyond 7, Grid Defense increases instead. Increases and decreases to Grid Power persist between Islands. Gaining Grid Power: Grid Power can be regained by the following means: * Some missions grant Grid Power as a Resource reward for completing bonus objective(s). * *After finishing a Corporate Island, the player can buy 1 Grid Power for every 1 Corporate Reputation point spent. * *When completing a Perfect Island, the player can choose +2 Grid Power as their reward. * *The Grid Charger weapon, if found, restores 1 Grid Power when used successfully. (* On Unfair difficulty, this gain is doubled.) Grid Defense: Grid Defense is the percentage chance that a building tile will resist damage. Grid Defense starts at 15%. (On Unfair difficulty, Grid Defense starts at 0% but can still be increased.) Grid Defense can be increased by the following means: * Overpower Bonus. Each point of Grid Power obtained when the Power Grid is full increases Grid Defense by 2% (the first 5 times), then by 1%, up to a maximum of +25%. *Pilot Bonus. While equipped, a pilot with the +3 Grid DEF skill increases Grid Defense by that amount. With three pilots, this bonus can reach +9%. Combined, these bonuses can raise Grid Def"
+},
+{
+"id": 760895,
+"name": "Corporate Reputation",
+"text": "Corporate Reputation is one of the Resources in Into the Breach. Corporate Reputation Points are earned for successfully completing objectives during Missions. The Corporate Store becomes available after fighting the Hive Leader of an island. Corporate Reputation Points cannot be carried over to another island. Corporate Store: There are always 2-4 Weapons available at a cost of 2 Corporate Reputation. Reactor Cores can be bought for 3 Corporate Reputation each. Grid Power can be purchased for 1 Corporate Reputation each to repair the Power Grid or to Overpower Grid Defense. Weapons can be donated for 1 Corporate Reputation. Pilots can be donated for 1 Corporate Reputation, unless they have Popular Hero, in which case they will be donated for 4 instead."
+},
+{
+"id": 760897,
+"name": "Bethany Jones",
+"text": "Pilot ability: Starting Shield: Mech starts every mission with a Shield."
+},
+{
+"id": 760898,
+"name": "Abe Isamu",
+"text": "Pilot ability: Armored: Mech gains Armored."
+},
+{
+"id": 760899,
+"name": "Harold Schmidt",
+"text": "Pilot ability: Frenzied Repair: Push adjacent tiles when repairing."
+},
+{
+"id": 760900,
+"name": "Prospero",
+"text": "Pilot ability: Flying: Mech gains Flying. Requires 1 Power."
+},
+{
+"id": 760901,
+"name": "Lily Reed",
+"text": "Pilot ability: Impulsive: Gain +3 Move on first turn of every mission."
+},
+{
+"id": 760903,
+"name": "Henry Kwan",
+"text": "Pilot ability: Maneuverable: Mech can move through enemy units."
+},
+{
+"id": 760904,
+"name": "Camila Vera",
+"text": "Pilot ability: Evasion: Mech unaffected by Webbing and Smoke."
+},
+{
+"id": 760905,
+"name": "Gana",
+"text": "Pilot ability: Preemptive Strike: Deploy anywhere on the map, damaging adjacent enemies. Requires 1 Power."
+},
+{
+"id": 760906,
+"name": "Silica",
+"text": "Pilot ability: Double Shot: Mech can act twice if it does not move. Requires 2 Power."
+},
+{
+"id": 760907,
+"name": "Archimedes",
+"text": "Pilot ability: Fire-and-Forget: Move again after shooting. Requires 1 Power. Promotions: +3 Grid DEF, +1 Mech Mobility"
+},
+{
+"id": 760908,
+"name": "Kazaaakpleth",
+"text": "Pilot ability: Mantis: 2 damage melee attack replaces Repair."
+},
+{
+"id": 760909,
+"name": "Mafan",
+"text": "Pilot ability: Zoltan: +1 Reactor Core. Reduce Mech HP to 1. Gain Shield every turn."
+},
+{
+"id": 760910,
+"name": "Ariadne",
+"text": "Pilot ability: Rockman: +3 Health and immune to Fire."
+},
+{
+"id": 760911,
+"name": "Shield",
+"text": "A shield will absorb any non-fatal damage once, and prevent status effects while it is active. Shields can be applied on Mechs, Veks, structures, other allied/enemy units, and mountains. A shield can be applied on the Supply Train, but it's considered one shield even though train has two units; attacking on any part of the train removes shield from whole train and conversely, applying shield on any part of the train grants shield on the whole train. The shield persists through turns indefinitely, only disappearing once damage removes it. Any status effects such as Fire and A.C.I.D that th"
+},
+{
+"id": 760912,
+"name": "Titan Fist",
+"text": "Punch an adjecent tile, damaging and pushing it Damage 2. Upgrade: Dash - Charge any distance before punching the target (cost 2); Upgrade: +2 Damage - Increases damage by 2 (cost 3)."
+},
+{
+"id": 760913,
+"name": "Taurus Cannon",
+"text": "Fires a powerful projectile that damages and pushes its target. Deals 1 damage to the target. Class: Brute. Upgrades: * +1 Damage (2 Reactor Cores ) - Increases damage by 1. * +1 Damage (3 Reactor Cores ) - Increases damage by 1. Availability: Damage 1. Upgrade: +1 Damage (cost 2); Upgrade: +1 Damage (cost 3)."
+},
+{
+"id": 760914,
+"name": "Artemis Artillery",
+"text": "Powerful artillery strike, damaging a single tile and pushing adjacent tiles. Deals 1 damage to the target. Class: Ranged. Upgrades: * Buildings Immune (1 Reactor Core ) - This attack will no longer damage Grid Buildings. * +2 Damage (3 Reactor Cores ) - Increases damage by 2. Availability: Damage 1. Upgrade: Buildings Immune (cost 1); Upgrade: +2 Damage (cost 3)."
+},
+{
+"id": 760915,
+"name": "Siege Mech",
+"text": "Health 2, move 3. Weapons/skills: Cluster Artillery: Protect a tile by damaging and pushing adjacent tiles.."
+},
+{
+"id": 760916,
+"name": "Rocket Mech",
+"text": "Health 3, move 3. Weapons/skills: Rocket Artillery: Fires a pushing artillery and creates Smoke behind the shooter. | Storm Generator: All Smoke deals damage to enemy units every turn.."
+},
+{
+"id": 760917,
+"name": "Pulse Mech",
+"text": "Health 3, move 4. Weapons/skills: Repulse: Push all adjacent tiles.."
+},
+{
+"id": 760918,
+"name": "Flame Mech",
+"text": "Health 3, move 3. Weapons/skills: Flame Thrower: Push target tile and light tiles on Fire. Damage units already on Fire. | Flame Shielding: All Mechs are immune to Fire.."
+},
+{
+"id": 760919,
+"name": "Meteor Mech",
+"text": "Health 3, move 3. Weapons/skills: Vulcan Artillery: Light the target on Fire and push adjacent tiles.."
+},
+{
+"id": 760920,
+"name": "Swap Mech",
+"text": "Health 2, move 4. Weapons/skills: Teleporter: Swap places with a nearby tile.. Special: Flying: Flying units can move over any terrain tile.."
+},
+{
+"id": 760921,
+"name": "Laser Mech",
+"text": "Health 3, move 3. Weapons/skills: Burst Beam: Fire a piercing beam that decreases in damage the further it goes.."
+},
+{
+"id": 760922,
+"name": "Charge Mech",
+"text": "Health 3, move 3. Weapons/skills: Ramming Engines: Fly in a line and slam into the target, pushing it and hurting yourself.."
+},
+{
+"id": 760925,
+"name": "Ice Mech",
+"text": "Health 2, move 3. Weapons/skills: Cryo-Launcher: Freeze yourself and the target.. Special: Flying: Flying units can move over any terrain tile.."
+},
+{
+"id": 760926,
+"name": "Lightning Mech",
+"text": "Health 3, move 3. Weapons/skills: Electric Whip: Chain damage through adjacent targets.."
+},
+{
+"id": 760927,
+"name": "Hook Mech",
+"text": "Health 3, move 3. Weapons/skills: Grappling Hook: Use a grapple to pull Mech towards objects, or units to the Mech.. Special: Natural Armor: Weapon damage to this unit is reduced by 1. All other damage (Push, Blocking, Fire, etc.) is unaffected.."
+},
+{
+"id": 760928,
+"name": "Boulder Mech",
+"text": "Health 2, move 3. Weapons/skills: Rock Accelerator: Launch a rock at a tile, pushing adjacent tiles.."
+},
+{
+"id": 760929,
+"name": "Leap Mech",
+"text": "Health 3, move 4. Weapons/skills: Hydraulic Legs: Leap to a tile, damaging self and adjacent tiles.."
+},
+{
+"id": 760930,
+"name": "Unstable Mech",
+"text": "Health 3, move 3. Weapons/skills: Unstable Cannon: Powerful projectile that causes damage to shooter as well as target.."
+},
+{
+"id": 760931,
+"name": "Nano Mech",
+"text": "Health 2, move 4. Weapons/skills: A.C.I.D. Projector: Fire a projectile that applies A.C.I.D. and pushes. | Viscera Nanobots: Mechs heal 1 damage when they deal a killing blow.. Special: Flying: Flying units can move over any terrain tile.."
+},
+{
+"id": 760932,
+"name": "Techno-Beetle",
+"text": "Health 3, move 3. Weapons/skills: Ramming Speed: Dash across the map, damaging and pushing the target tile.."
+},
+{
+"id": 760933,
+"name": "Techno-Hornet",
+"text": "Health 2, move 4. Weapons/skills: Needle Shot: Throw needles at the enemy, pushing the furthest hit tile. (Starts with 1-tile range.). Special: Flying: Flying units can move over any terrain tile.."
+},
+{
+"id": 760934,
+"name": "Techno-Scarab",
+"text": "Health 2, move 3. Weapons/skills: Explosive Goo: Artillery attack that damages a tile and pushes adjacent tiles away.."
+},
+{
+"id": 760935,
+"name": "Rock Mech",
+"text": "Health 3, move 3. Weapons/skills: Rock Launcher: Throw a rock at a chosen target. Rock remains as an obstacle.."
+},
+{
+"id": 760936,
+"name": "Passives",
+"text": "Passives are pieces of Mech equipment in Into the Breach. Description: Passives confer a constant benefit to all Mechs in the squad, without the need of activating them during an encounter. Since an action does not need to be used to activate passives, their effects will persist even when the Mech equipped with a passive is submerged into Water, a Lava Tile, an A.C.I.D. Tile, affected by Smoke, or even if the Mech is downed and disabled. Some Mechs come equipped with Passives by default. All Passives are treated as Any Class equipment, and can be equipped without penalty by any Mech Class (except Cyborg). Some Passives come with an upgrade or two, at the cost of additional Reactor Core usage. Upgrades are not purchased separately, they are included. Note that powering Upgrade 1 is never a prerequisite for powering Upgrade 2. Mechs with Passives in Custom Squads: When creating a Custom Squad, it is possible to choose a Mech which has a passive equipped multiple times. In this case, the duplicate Mechs will have the passive removed in their loadout, and only one Mech will keep the Passive for the Custom Squad. List:"
+},
+{
+"id": 760937,
+"name": "Flame Shielding",
+"text": "All Mechs are immune to Fire. Class: Any. Upgrades: Flame Shielding has no upgrades. Availability:"
+},
+{
+"id": 760938,
+"name": "Storm Generator",
+"text": "All Smoke deals damage to enemy units every turn. Class: Any. Upgrades: * +1 Damage - Increases Smoke damage by 1. Availability: Upgrade: +1 Damage (cost 3)."
+},
+{
+"id": 760939,
+"name": "Viscera Nanobots",
+"text": "Mechs heal 1 damage when they deal a killing blow. Repairing Mechs happens after all damage calculations have been performed. A Mech that hits 0HP from an attack which disables them will be repaired back online if they also get at least 1 kill. The amount of health healed will correspond to the number of enemies killed as well; for example, an attack that kills two enemies will heal the Mech for 1 Upgrade: +1 Heal (cost 2)."
+},
+{
+"id": 760940,
+"name": "Networked Armor",
+"text": "All Mechs gain +1 HP. Costs 1 Reactor Core to power. Class: Any. Upgrades: * +1 Health - Increases health bonus to 2. Availability: Upgrade: +1 Health (cost 2)."
+},
+{
+"id": 760941,
+"name": "Repair Field",
+"text": "Repairing one Mech will affect all Mechs. Disabled Mechs will also be repaired, which will bring the Mech back online and save the pilot. Class: Any. Upgrades: Repair Field has no upgrades. Availability:"
+},
+{
+"id": 760942,
+"name": "Stabilizers",
+"text": "Mechs no longer take damage when blocking emerging Vek. Class: Any. Upgrades: Stabilizers has no upgrades. Availability:"
+},
+{
+"id": 760944,
+"name": "Kickoff Boosters",
+"text": "Mechs gain +1 move if they start their turn adjacent to each other. Mechs affected by Kickoff Boosters receive the temporary status effect \"Kickoff Boosters\" . Note: the status effect will always say \"+2 Move this turn\", even if the Passive has not been upgraded. The passive still behaves correctly and grants +1 when not upgraded, and +2 when upgraded. Class: Any. Upgrades: * +1 Movement - Movemen Upgrade: +1 Movement (cost 2)."
+},
+{
+"id": 760945,
+"name": "Medical Supplies",
+"text": "All Pilots survive death. Class: Any. Upgrades: Medical Supplies has no upgrades. Availability:"
+},
+{
+"id": 760946,
+"name": "Vek Hormones",
+"text": "Enemies do +1 Damage against other enemies. Class: Any. Upgrades: * +1 Damage - Increases damage by 1. * +1 Damage - Increases damage by 1. Availability: Upgrade: +1 Damage (cost 1); Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 760947,
+"name": "Force Amp",
+"text": "All Vek take +1 damage from Bumps and blocking emerging Vek. Note that the additional damage does not apply to Sentient Weapons; most notably the Bot Leader. Class: Any. Upgrades: Force Amp has no upgrades. Availability:"
+},
+{
+"id": 760948,
+"name": "Critical Shields",
+"text": "If Power Grid is reduced to 1, all buildings gain a Shield. Class: Any. Upgrades: Critical Shields has no upgrades. Availability:"
+},
+{
+"id": 760949,
+"name": "Electric Whip",
+"text": "Chain damage through adjacent targets Damage 2. Upgrade: Building Chain - Chain through Grid Buildings without causing damage. (cost 1); Upgrade: +1 Damage - Deals +1 damage to all affected tiles (cost 3)."
+},
+{
+"id": 760950,
+"name": "Burst Beam",
+"text": "Fire a piercing beam that decreases in damage the further it goes Damage 3-1. Upgrade: Ally Immune - Friendly units will not take damage from this attack (cost 1); Upgrade: +1 Damage - Increases the starting damage by 1 (cost 3)."
+},
+{
+"id": 760951,
+"name": "Spartan Shield",
+"text": "Bash the enemy, flipping its attack direction. Damage 2. Upgrade: Gain Shield - Gain a Shield when bashing (cost 1); Upgrade: +1 Damage - Increases damage by 1 (cost 2)."
+},
+{
+"id": 760952,
+"name": "Rock Launcher",
+"text": "Throw a rock at a chosen target. Rock remains as an obstacle. Class: Prime. Upgrades: * +1 Damage * +1 Damage Availability: Damage 2. Upgrade: +1 Damage (cost 2); Upgrade: +1 Damage (cost 3)."
+},
+{
+"id": 760953,
+"name": "Sidewinder Fist",
+"text": "Punch an adjacent tile, damaging and pushing it to the left. Damage 2. Upgrade: +1 Damage - Increases damage by 1. (cost 2); Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 760954,
+"name": "Rocket Fist",
+"text": "Punch an adjacent tile. Upgrades to launch as a projectile. Damage 2. Upgrade: Rocket - Launch the fist. (cost 1); Upgrade: +2 Damage - Increases damage by 2. (cost 2)."
+},
+{
+"id": 760955,
+"name": "Vice Fist",
+"text": "Grab a unit and toss it behind you. Damage 1. Upgrade: Ally Immune (cost 1); Upgrade: +2 Damage (cost 3)."
+},
+{
+"id": 760956,
+"name": "Flame Thrower",
+"text": "Push target tile and light tiles on Fire. Damage units already on Fire. If the target is on Fire, deals 2 damage to the target. When range is upgraded, only the last target is pushed away. Class: Prime. Upgrades: * +1 Range * +1 Range Availability: Damage 2 (if target is on Fire). Upgrade: +1 Range (cost 1); Upgrade: +1 Range (cost 3)."
+},
+{
+"id": 760957,
+"name": "Explosive Vents",
+"text": "Blast (and push) all adjacent tiles. Deals 1 damage to all targets. Class: Prime. Upgrades: * +1 Damage * +1 Damage Availability: Damage 1. Upgrade: +1 Damage (cost 2); Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 760958,
+"name": "Prime Spear",
+"text": "Stab multiple tiles and push the farthest hit tile. Starts with 2-tile range. Costs 1 Reactor Core to power. Class: Prime. Upgrades: * A.C.I.D. Tip - Adds A.C.I.D. to the furthest hit enemy. * +1 Range - Increases the maximum number of hit tiles by 1. Availability: Damage 2. Upgrade: A.C.I.D. Tip (cost 1); Upgrade: +1 Range (cost 2)."
+},
+{
+"id": 760959,
+"name": "Hydraulic Legs",
+"text": "Leap to a tile, damaging self and adjacent tiles. Starts with 1 damage to all targets, and 1 self-damage to Mech. Class: Prime. Upgrades: * +1 Damage Each - - Increases damage to self and targets by 1. * +1 Damage - - Increases damage to targets by 1. Availability: Damage 1 (1 self). Upgrade: +1 Damage Each (cost 1); Upgrade: +1 Damage (cost 3)."
+},
+{
+"id": 760960,
+"name": "Vortex Fist",
+"text": "Damage and Push all adjacent tiles to the left. Deals 2 damage to all targets, and 1 self damage to the user. Class: Prime. Upgrades: * -1 Self Damage (1 Reactor Core ) - Reduces the damage the Mech takes when using this weapon by 1. * +1 Damage (3 Reactor Cores ) - Increases the damage to targets by 1. Availability: Damage 2 (1 self). Upgrade: -1 Self Damage (cost 1); Upgrade: +1 Damage (cost 3)."
+},
+{
+"id": 760961,
+"name": "Titanite Blade",
+"text": "Swing a massive sword to damage and push 3 tiles. Single-use. Damage 2. Upgrade: +1 Use (cost 1); Upgrade: +2 Damage - Increases damage on each affected tile by 2. (cost 3)."
+},
+{
+"id": 760962,
+"name": "Mercury Fist",
+"text": "Smash the ground, dealing huge damage and pushing adjacent tiles. Single-use. Damage 4. Upgrade: +1 Use (cost 1); Upgrade: +1 Damage - Increases damage by 1. (cost 1)."
+},
+{
+"id": 760963,
+"name": "Aerial Bombs",
+"text": "Fly over a target, dropping an explosive smoke bomb. Deals 1 damage to the target. The Mech must have an empty tile to land on the opposite side of the target to land on; it will not be able to fire otherwise. Class: Brute. Upgrades: * +1 Damage (2 Reactor Cores ) - Increases damage by 1. * +1 Range (2 Reactor Cores ) - Allows jumping over and attacking an additional target. Availability: Damage 1. Upgrade: +1 Damage (cost 2); Upgrade: +1 Range (cost 2)."
+},
+{
+"id": 760964,
+"name": "Janus Cannon",
+"text": "Fire two projectiles in opposite directions. Deals 1 damage to both targets. Pushes targets. Class: Brute. Upgrades: * +1 Damage (1 Reactor Core ) * +1 Damage (3 Reactor Cores ) Availability: Damage 1. Upgrade: +1 Damage (cost 1); Upgrade: +1 Damage (cost 3)."
+},
+{
+"id": 760965,
+"name": "Phase Cannon",
+"text": "Shoot a projectile that phases through objects (rocks, explosive boulders, Grid Buildings, Mechs and Allied Units excluding Old Earth Dam and mountains). Deals 1 damage to target. Pushes target. Class: Brute. Upgrades: * Phase Shield (1 Reactor Core ) - Applies a Shield to buildings it passes through. * +1 Damage (2 Reactor Cores ) - Increases damage by 1. Availability: Damage 1. Upgrade: Phase Shield (cost 1); Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 760966,
+"name": "Grappling Hook",
+"text": "Use a grapple to pull Mech towards immovable objects, or units to the Mech. Class: Brute. Upgrades: * Shield Ally (1 Reactor Core ) - If used on an ally unit, it gives them a Shield. Availability: Upgrade: Shield Ally (cost 1)."
+},
+{
+"id": 760967,
+"name": "Def. Shrapnel",
+"text": "Fires a non-damaging projectile that pushes tiles around the target. Class: Brute. Upgrades: Def. Shrapnel has no upgrades. Availability:"
+},
+{
+"id": 760968,
+"name": "Rail Cannon",
+"text": "Projectile that does more damage to targets that are further away. Deals 0 damage to adjacent targets, and +1 damage for each tile the target is further away from the Mech, up to a max of 2 damage before upgrades. Pushes the target. Class: Brute. Upgrades: * +1 Max Damage (1 Reactor Core ) - Increases max damage by 1. * +2 Max Damage (2 Reactor Cores ) - Increases max damage by 2. Availability: Damage 0-2. Upgrade: +1 Max Damage (cost 1); Upgrade: +2 Max Damage (cost 2)."
+},
+{
+"id": 760969,
+"name": "Shock Cannon",
+"text": "Fire a projectile that hits 2 tiles, pushing them in opposite directions. Deals 1 damage to both targets to start. The first target is damaged and pushed towards the user, while the second target is damaged and pushed away. Class: Brute. Upgrades: * +1 Damage (1 Reactor Core ) - Increases damage by 1. * +1 Damage (2 Reactor Cores ) - Increases damage by 1. Availability: Damage 1. Upgrade: +1 Damage (cost 1); Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 760970,
+"name": "Ramming Engines",
+"text": "Fly in a line and slam into the target, pushing it and hurting yourself. Deals 2 damage to the target and 1 self damage to the user. The self damage is also considered as an attack to the terrain. If it does not hit a target, it will not cause self-damage. Class: Brute. Upgrades: * +1 Damage Each (1 Reactor Core ) * +1 Damage (3 Reactor Cores ) Availability: Damage 2 (1 self). Upgrade: +1 Damage Each (cost 1); Upgrade: +1 Damage (cost 3)."
+},
+{
+"id": 760971,
+"name": "Unstable Cannon",
+"text": "Powerful projectile that causes damage to shooter as well as target. Deals 2 damage to the target and 1 self damage to the user. Pushes target. User is pushed backwards. Class: Brute. Upgrades: * +1 Damage Each (1 Reactor Core ) * +1 Damage (3 Reactor Cores ) Availability: Damage 2 (1 self). Upgrade: +1 Damage Each (cost 1); Upgrade: +1 Damage (cost 3)."
+},
+{
+"id": 760972,
+"name": "Heavy Rocket",
+"text": "Fire a projectile that heavily damages a target and pushes adjacent tiles. Single-use. Deals 3 damage to the target. Class: Brute. Upgrades: * +1 Use (1 Reactor Core ) * +2 Damage (2 Reactor Cores ) Availability: Damage 3. Upgrade: +1 Use (cost 1); Upgrade: +2 Damage (cost 2)."
+},
+{
+"id": 760973,
+"name": "Shrapnel Cannon",
+"text": "Shoot a projectile that damages and pushes the targeted tile, and the tiles to its left and right. Single-use. Deals 2 damage to the target. Class: Brute. Upgrades: * +1 Use (1 Reactor Core ) * +2 Damage (2 Reactor Cores ) Availability: Damage 2. Upgrade: +1 Use (cost 1); Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 760974,
+"name": "Astra Bombs",
+"text": "Leap over any distance dropping a bomb on each tile you pass. Single-use. Deals 1 damage to all targets. Class: Brute. Upgrades: * +1 Use (1 Reactor Core ) * +2 Damage (3 Reactor Cores ) Availability: Damage 1. Upgrade: +1 Use (cost 1); Upgrade: +2 Damage (cost 3)."
+},
+{
+"id": 760975,
+"name": "Hermes Engines",
+"text": "Dash in a line, pushing adjacent tiles away. Class: Brute. Upgrades: Hermes Engine has no upgrades. Availability:"
+},
+{
+"id": 760976,
+"name": "Rock Accelerator",
+"text": "Launch a rock at a tile, pushing tiles to the left and right.. If the rock hits a target, it will be destroyed and deal 2 damage. If the rock does not hit a target, it will stay in the tile as a 1 HP obstacle to all units. Class: Ranged. Upgrades: * +1 Damage (2 Reactor Cores ) - Increases damage by 1. Availability: Damage 2. Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 760977,
+"name": "Cluster Artillery",
+"text": "Protect a tile by damaging and pushing adjacent tiles. Deals 1 damage to all adjacent tiles to the target. Class: Ranged. Upgrades: * Buildings Immune (1 Reactor Core ) - This attack will no longer damage Grid Buildings. * +1 Damage (3 Reactor Cores ) - Increases damage to adjacent tiles by 1. Availability: Damage 1. Upgrade: Buildings Immune (cost 1); Upgrade: +1 Damage (cost 3)."
+},
+{
+"id": 760978,
+"name": "Rocket Artillery",
+"text": "Fires a pushing artillery and creates Smoke behind the shooter. Deals 2 damage to the target. Class: Ranged. Upgrades: * +1 Damage (2 Reactor Cores ) - Increases damage by 1. * +1 Damage (2 Reactor Cores ) - Increases damage by 1. Availability: Damage 2. Upgrade: +1 Damage (cost 2); Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 760979,
+"name": "Vulcan Artillery",
+"text": "Light the target on Fire and push adjacent tiles. Class: Ranged. Upgrades: * Backburn (1 Reactor Core ) - Light the tile behind the Mech on Fire. * +2 Damage (3 Reactor Cores ) - Adds 2 damage to targeted tiles. Availability: Damage 0. Upgrade: Backburn (cost 1); Upgrade: +2 Damage (cost 3)."
+},
+{
+"id": 760980,
+"name": "Micro-Artillery",
+"text": "Artillery with potential to launch multiple small projectiles. Damage 1. Upgrade: +2 Tiles - Add additional missiles to hit adjacent tiles. (cost 1); Upgrade: +1 Damage - Increases damage to all tiles by 1. (cost 2)."
+},
+{
+"id": 760981,
+"name": "Aegon Mortar",
+"text": "Deals damage to two tiles, pushing one forwards and one backwards. Damage 1. Upgrade: +1 Damage - Increases damage to both tiles by 1. (cost 1); Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 760982,
+"name": "Cryo-Launcher",
+"text": "Freeze yourself and the target."
+},
+{
+"id": 760983,
+"name": "Smoke Mortar",
+"text": "Artillery shot that applies Smoke and pushes two adjacent tiles. Class: Ranged. Upgrades: Smoke Mortar has no upgrades. Availability:"
+},
+{
+"id": 760984,
+"name": "Burning Mortar",
+"text": "Artillery attack that sets 5 tiles on Fire. Deals 1 self-damage to the shooter. Class: Ranged. Upgrades: * No Self Damage (2 Reactor Core ) - This attack will no longer damage the Mech that uses it. Availability: Damage 0 (1 self). Upgrade: No Self Damage (cost 2)."
+},
+{
+"id": 760985,
+"name": "Raining Death",
+"text": "A dangerous projectile that damages everything it passes. Deals 2 damage to all tiles. Deals 1 self-damage to the shooter. Class: Ranged. Upgrades: * Buildings Immune (1 Reactor Core ) - This attack will no longer damage Grid Buildings. * +1 Damage Each (2 Reactor Cores ) - Increases damage to self and targets by 1. Availability: Damage 2 (1 self). Upgrade: Buildings Immune (cost 1); Upgrade: +1 Damage Each (cost 2)."
+},
+{
+"id": 760986,
+"name": "Heavy Artillery",
+"text": "Powerful attack that damages a large area. Single-use. Deals 2 damage to five targets in a cross shape. Class: Ranged. Upgrades: * +1 Use (1 Reactor Core ) - Increases uses per battle by 1. * +1 Damage (2 Reactor Cores ) - Increases damage by 1. Availability: Damage 2. Upgrade: +1 Use (cost 1); Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 760987,
+"name": "Gemini Missiles",
+"text": "Launch two missiles, damaging and pushing two targets. Single-use. Deals 3 damage to both targets. The targets are two squares apart, directly on the sides from the line of fire. Class: Ranged. Upgrades: * +1 Use (1 Reactor Core ) - Increases uses per battle by 1. * +1 Damage (1 Reactor Core ) - Increases damage by 1. Availability: Damage 3. Upgrade: +1 Use (cost 1); Upgrade: +1 Damage (cost 1)."
+},
+{
+"id": 760988,
+"name": "Attraction Pulse",
+"text": "Fires a projectile, pulling target towards you 1 tile. Class: Science. Upgrades: Attraction Pulse has no upgrades. Availability:"
+},
+{
+"id": 760989,
+"name": "Grav Well",
+"text": "Artillery weapon that pulls its target towards you. Class: Science. Upgrades: Grav Well has no upgrades. Availability:"
+},
+{
+"id": 760990,
+"name": "Repulse",
+"text": "Push all adjacent tiles. Class: Science. Upgrades: * Shield Self (1 Reactor Core ) - Creates a personal Shield when used. * Shield Friendly (2 Reactor Cores ) - Shield adjacent ally or Building. Availability: Upgrade: Shield Self (cost 1); Upgrade: Shield Friendly (cost 2)."
+},
+{
+"id": 760991,
+"name": "Teleporter",
+"text": "Swap places with a nearby tile. Starts with 1-tile range. If the Mech is webbed and swaps places with another unit, the other unit will become webbed. Class: Science. Upgrades: * +1 Range (1 Reactor Core ) - Extends range of the swap by 1 tile. * +2 Range (2 Reactor Cores ) - Extends range of the swap by 2 tiles. Availability: Upgrade: +1 Range (cost 1); Upgrade: +2 Range (cost 2)."
+},
+{
+"id": 760992,
+"name": "A.C.I.D. Projector",
+"text": "Fire a projectile that applies A.C.I.D. and pushes. Class: Science. Upgrades: A.C.I.D. Projector has no upgrades. Availability:"
+},
+{
+"id": 760993,
+"name": "Confuse Shot",
+"text": "Fire a projectile that flips a target's attack direction. Class: Science. Upgrades: Confuse Shot has no upgrades. Availability:"
+},
+{
+"id": 760994,
+"name": "Smoke Pellets",
+"text": "Surround yourself with Smoke to defend against nearby enemies. Single-use. Class: Science. Upgrades: * Ally Immune (1 Reactor Core ) - No longer applies Smoke on self or allies. * +1 Use (1 Reactor Core ) - Increases uses per battle by 1. Availability: Upgrade: Ally Immune (cost 1); Upgrade: +1 Use (cost 1)."
+},
+{
+"id": 760995,
+"name": "Shield Projector",
+"text": "Shield tiles from damage. 2 uses per battle. Shields are launched as artillery projectile to 2 adjacent tiles. Class: Science. Upgrades: * +1 Use (1 Reactor Core ) - Increases uses per battle by 1. * +3 Area (2 Reactor Cores ) - Shields 3 additional tiles. Tiles shielded by +3 Area include the ones adjacent to the closest target, shielding all targets in a cross shape. Availability: Upgrade: +1 Use (cost 2); Upgrade: +3 Area (cost 2)."
+},
+{
+"id": 760996,
+"name": "Fire Beam",
+"text": "Fire a beam that applies Fire in a line. Single-use. Class: Science. Upgrades: * +1 Use (1 Reactor Core ) - Increases uses per battle by 1. Availability: Upgrade: +1 Use (cost 1)."
+},
+{
+"id": 760997,
+"name": "Frost Beam",
+"text": "Fire a beam that Freezes everything in a line. Single-use. Requires 1 Reactor Core to power. Class: Science. Upgrades: * +1 Use (2 Reactor Core ) - Increases uses per battle by 1. Availability: Upgrade: +1 Use (cost 2)."
+},
+{
+"id": 760998,
+"name": "Shield Array",
+"text": "Apply a Shield on nearby tiles. Single-use. Class: Science. Upgrades: * +1 Size (1 Reactor Core ) - Area of effect increased by 2 tiles. * +1 Use (1 Reactor Core ) - Increases uses per battle by 1. Availability: Upgrade: +1 Size (cost 1); Upgrade: +1 Use (cost 1)."
+},
+{
+"id": 760999,
+"name": "Push Beam",
+"text": "Pushes all units in a line. Single-use. Class: Science. Upgrades: * Unlimited Use (1 Reactor Core ) - Removes use restriction in battles. Availability: Upgrade: Unlimited Use (cost 1)."
+},
+{
+"id": 761000,
+"name": "Boosters",
+"text": "Jump forward and push adjacent tiles away. Class: Any. Upgrades: Boosters has no upgrades. Availability:"
+},
+{
+"id": 761001,
+"name": "Smoke Bombs",
+"text": "Fly over the targets while dropping Smoke. Class: Any. Upgrades: * +1 Range (1 Reactor Core ) - Increases potential movement range by 1. * +1 Range (1 Reactor Core ) - Increases potential movement range by 1. Availability: Upgrade: +1 Range (cost 1); Upgrade: +1 Range (cost 1)."
+},
+{
+"id": 761002,
+"name": "Heat Converter",
+"text": "Freeze the tile in front but light the tile behind on Fire in the process. Single-use. Class: Any. Upgrades: * +1 Use (1 Reactor Core ) - Increases uses per battle by 1. Availability: Upgrade: +1 Use (cost 1)."
+},
+{
+"id": 761003,
+"name": "Self-Destruct",
+"text": "Mech explodes, killing self and anything adjacent to Mech. Single-use. Class: Any. Upgrades: Self-Destruct has no upgrades. Availability: Damage Kill."
+},
+{
+"id": 761004,
+"name": "Targeted Strike",
+"text": "Call in an air strike on a single tile anywhere on the map. Single-use. Deals 1 damage to the target tile, and pushes surrounding tiles away. Class: Any. Availability: Damage 1."
+},
+{
+"id": 761005,
+"name": "Smoke Drop",
+"text": "Drops Smoke on 5 tiles anywhere on the map. Single-use. Class: Any. Upgrades: Smoke Drop has no upgrades. Availability:"
+},
+{
+"id": 761006,
+"name": "Repair Drop",
+"text": "Heal all player units. This includes disabled Mechs. Single-use. Class: Any. Upgrades: Repair Drop has no upgrades. Availability:"
+},
+{
+"id": 761007,
+"name": "Missile Barrage",
+"text": "Fires a missile barrage that hits every enemy on the map. Single-use. Class: Any. Upgrade: * +1 Damage - Increases damage by 1. Availability: Damage 1. Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 761008,
+"name": "Wind Torrent",
+"text": "Push all units in a single direction. Single-use. Class: Any. Upgrades: * Unlimited Uses (1 Reactor Core ) - Removes use restriction in battles. Availability: Upgrade: Unlimited Uses (cost 1)."
+},
+{
+"id": 761009,
+"name": "Ice Generator",
+"text": "Freeze yourself and nearby tiles. Single-use. Class: Any. Upgrades: * +1 Size - Area of effect increased by 1 tile. * +1 Size - Area of effect increased by 1 tile. Availability: Upgrade: +1 Size (cost 1); Upgrade: +1 Size (cost 2)."
+},
+{
+"id": 761010,
+"name": "Needle Shot",
+"text": "Throw needles at the enemy, pushing the furthest hit tile. Deals 1 damage to the target. Starts with 1-tile range. Class: Cyborg. Upgrades: * Range & Damage - Increases potential hit tiles by 1 and damage on all tiles by 1. * Range & Damage - Increases potential hit tiles by 1 and damage on all tiles by 1. Availability: Damage 1. Upgrade: Range & Damage (cost 2); Upgrade: Range & Damage (cost 3)."
+},
+{
+"id": 761011,
+"name": "Explosive Goo",
+"text": "Artillery attack that damages a tile and pushes adjacent tiles away. Deals 1 damage to the target. Starts with 1-tile range. Class: Cyborg. Upgrades: * +1 Tile (1 Reactor Core ) - Increases area hit by 1 tile. * +2 Damage (3 Reactor Cores ) - Increases damage by 2. Availability: Damage 1. Upgrade: +1 Tile (cost 1); Upgrade: +2 Damage (cost 3)."
+},
+{
+"id": 761012,
+"name": "Missions",
+"text": "Missions are issued within each island you defend with your squads. Each mission has specific objectives, such as protecting or destroying certain units and buildings. Details: Missions are determined by the number of bonus objectives that can be fulfilled for either Corporate Reputation , Grid Power or Reactor Cores . A mission has at least one bonus objective and a maximum of three excluding newly-generated ones from a time pod. The number of objectives determines a sector's difficulty: * 1 objective: Defensive shields are placed on random buildings. These missions only have one objective, that gives out one power or reputation. * 2 objectives: No modifier applied. These missions either have two objectives, with each giving out one power, reputation or Reactor Core, or one objective that gives out two power or reputation. * 3 objectives: High-threat detected, meaning at least one alpha Vek and increased spawns. These missions can have up to three objectives, with the total rewards adding up to 3 of either Reactor Cores, power, or reputation. Usually a building that rewards a Reactor Core will be present. Time Pods can randomly appear in missions and require the player to protect it until the end of the mission or collect it using a mech or allied unit. They always reward a Reactor Core and have a chance of giving a weapon, passive or pilot. Upon landing a new objective called Protect the Time Pod will appear, which \"rewards\" the pod. A corporate island has five missions, fo"
+},
+{
+"id": 761013,
+"name": "Soldier Psion",
+"text": "Health 2, move 2. Weapons/skills: Invigorating Spores: All other Vek receive +1 HP as long as the Psion is living.. Special: Flying: Flying units can move over any terrain tile.. The jellyfish-like Psions act as support units, providing passive bonuses to the Vek. The Soldier Psion is distinguished by its pale blue coloration and bright green cranial nodes. This Psion provides a health bonus to all other Vek units on the field. Under Psionic Receiver, all of the players Mechs will gain an additional +1 HP while the Solider Psion is alive."
+},
+{
+"id": 761014,
+"name": "Marked tile",
+"text": "This special tile variant spawns already damaged at the start of a mission and has a faint, yellow glow originating from inside it. The tile will appear undamaged during the mission preview and will not actually crack until the mission is begun. Destroying the tile will reveal a \"strange object\" hidden inside it; upon being picked up it will broadcast a signal. After the end of that turn, a Strange Pod will fall from the sky, similarly to a Time Pod. Rescuing the Pod will unlock one of three spe"
+},
+{
+"id": 761015,
+"name": "Shell Psion",
+"text": "Health 2, move 2. Weapons/skills: Hardened Carapace: All other Vek have incoming weapon damage reduced by 1.. Special: Flying: Flying units can move over any terrain tile.. Shell Psions are identifiable by their squid-like silver body and purple bumps. This is important for choosing which island to save as the psion will be present on all missions in said island, making the initial Vek preview vital. As with most Psions except for the Psion Tyrant, the Shell Psion is encounterable from island 1. It grants all non-psion Vek the Hardened Carapace buff, reducing incoming weapon damage by 1 much like Abe Isamu's pilot ability. Psions can only spawn once per mission."
+},
+{
+"id": 761016,
+"name": "Leaper",
+"text": "Health 1, move 4. Weapons/skills: Fangs: Web a target, preparing to stab it for 3 damage.. Leapers jump to their destination and avoid all obstacles in the way. After they move they will web an adjacent target and prepare to stab it during the enemy turn for 3 damage. Leapers cannot spawn alongside the Scorpion."
+},
+{
+"id": 761017,
+"name": "Blood Psion",
+"text": "Health 2, move 2. Weapons/skills: Regeneration: All other Vek heal 1 at the start of their turn.. Special: Flying: Flying units can move over any terrain tile.. The jellyfish-like Psions act as support units, providing passive bonuses to the Vek. The Blood Psion is distinguished by its pale pink coloration and bright red cranial nodes. This Psion provides a regeneration bonus to all other Vek units on the field. If the Psionic Receiver is active, it will also heal the player units."
+},
+{
+"id": 761018,
+"name": "Cannon-Bot",
+"text": "Health 1, move 3. Weapons/skills: Cannon 8R Mark I: Projectile that causes target to burn and deals 1 damage.. A cylindrical shaped robot supported on pairs of 3 mechanical legs with a cannon protruding from the front."
+},
+{
+"id": 761019,
+"name": "Cannon-Mech",
+"text": "Health 1, move 3. Weapons/skills: Cannon 8R Mark II: Stronger projectile that causes target to burn and deals 3 damage.. A cylindrical shaped robot supported on pairs of 3 mechanical legs with a cannon protruding from the front."
+},
+{
+"id": 761020,
+"name": "Artillery-Bot",
+"text": "Health 1, move 3. Weapons/skills: Vk8 Rockets Mark I: Launch Rockets at 3 tiles dealing 1 damage to each (5 tile range).. A cylindrical shaped quadreped robot carrying a missile launcher behind it."
+},
+{
+"id": 761021,
+"name": "Artillery-Mech",
+"text": "Health 1, move 3. Weapons/skills: Vk8 Rockets Mark II: Launch Rockets at 3 tiles dealing 3 damage to each (5 tile range).. A cylindrical shaped quadreped robot carrying a missile launcher behind it."
+},
+{
+"id": 761022,
+"name": "Laser-Bot",
+"text": "Health 1, move 3. Weapons/skills: BKR Beam Mark I: Piercing beam, does 2 damage reduced by range (at least 1).. A cylindrical shaped quadreped robot carrying two laser shooting scopes, one on each side."
+},
+{
+"id": 761023,
+"name": "Laser-Mech",
+"text": "Health 1, move 3. Weapons/skills: BKR Beam Mark II: Piercing beam, does 4 damage reduced by range (at least 1).. A cylindrical shaped quadreped robot carrying two laser shooting scopes, one on each side."
+},
+{
+"id": 761024,
+"name": "Mine-Bot",
+"text": "Health 1, move 0. Weapons/skills: Minelayer: Deploy a single Freeze mine.. Special: Mine Immunity: This unit avoids mines. | Smoke Immunity: This unit is unaffected by Smoke.. A cylindrical shaped robot with six mechanical legs supporting it, crouching low to the ground."
+},
+{
+"id": 761025,
+"name": "Mine-Mech",
+"text": "Health 1, move 0. Weapons/skills: Minelayer: Deploy a single Freeze mine.. Special: Mine Immunity: This unit avoids mines. | Smoke Immunity: This unit is unaffected by Smoke.."
+},
+{
+"id": 761026,
+"name": "Bot Leader",
+"text": "Health 5 (1st/2nd island)6 (3rd/4th island), move 3. Weapons/skills: Vk8 Rockets Mark III: Launch Rockets at 3 tiles dealing 2 damage to each (5 tile range). | Vk8 Rockets Mark IV: Launch Rockets at 3 tiles dealing 4 damage to each (5 tile range).. Special: Self-Repair: If damaged, this unit will Shield itself and prepare to heal. | Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. The Bot Leader is a silver-coloured version of the Artillery-Bot and shares the same base attack. Its stats and weapon damage varies based on whether Pinnacle Island is done as one of the 1st/2nd island or 3rd/4th island in a given timeline; in the latter case, it will have +1 health and deal +2 damage per tile. The Bot-Leader will always spawn with 2 other hostile Sentient Weapons alongside it, both which start Frozen. If the Bot Leader is not at full health, it will activate a Shield after it moves and prepares to heal back to full health instead of firing its rockets. This repair removes fi"
+},
+{
+"id": 761027,
+"name": "Blobber",
+"text": "Health 3, move 2. Weapons/skills: Unstable Growths: Throw a sticky blob that will explode.. The Blobber maintains a safe distance from mechs, attempting to attack by spawning Blobs onto any tile across from them, in the row or columns they can move in. Blobs always explode last in the attack order during the enemy turn they were spawned, and damage all adjacent tiles for 1. Blobbers are capped at one spawn per mission (alphas included) and cannot spawn on island 1, nor can it co-exist with the normal and alpha variants of the Spider and Plasmodia."
+},
+{
+"id": 761028,
+"name": "Alpha Blobber",
+"text": "Health 4, move 2. Weapons/skills: Volatile Growths: Throw a massive blob that will explode.. The Alpha Blobber maintains a safe distance from mechs, attempting to attack by spawning Alpha Blobs onto any tile across from them, in the row or columns they can move in. Alpha Blobs always explode last in the attack order during the enemy turn they were spawned, and damage all adjacent tiles for 2. Alpha Blobbers are capped at one spawn per mission (regular Blobbers included) and cannot spawn on island 1, nor can it co-exist with the normal and alpha variants of the Spider and Plasmodia."
+},
+{
+"id": 761029,
+"name": "Blob",
+"text": "Health 1, move 0. Weapons/skills: Unstable Guts: Explode, killing itself and damaging adjacent tiles for 1 damage. Kill it first to stop it.. Special: Minor: This unit does not grant XP to pilots on kill.. The Blob is spawned by the Blobber's Unstable Growths system. On the Blob's turn, it explodes, dealing 1 damage to all tiles adjacent to it. If the Blob is destroyed before its turn by damaging it or displacing it into a hazardous tile such as water, or if it's smoked or frozen, it will not explode."
+},
+{
+"id": 761030,
+"name": "Large Goo",
+"text": "Health 3, move 3. Weapons/skills: Goo Attack: Attempt to squish the adjacent tile, dealing 4 damage.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing). | Spawner: Spawns two Medium Goos on death.. A massive sized gelatinous ooze resembling a similar fictional monster. This boss Vek can only appear in corporate islands with the \"Defeat 5 Goos\" objective alongside the HQ mission objective, and is excluded from the Volcanic Hive. When defeated, the Large Goo will split into 2 Medium Goos; when a Medium Goo is defeated, it will split into 2 Small Goos. The resulting enemies that come from the split will be launched and land on randomly determined tiles that the game determines as safe (i.e. avoiding tiles like fire and water, though still poss"
+},
+{
+"id": 761031,
+"name": "Medium Goo",
+"text": "Health 2, move 0. Weapons/skills: Goo Attack: Attempt to squish the adjacent tile, dealing 4 damage.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing). | Spawner: Spawns two Small Goos on death.. A massive sized gelatinous ooze resembling a similar fictional monster. This boss Vek can only appear in corporate islands with the \"Defeat 5 Goos\" objective alongside the HQ mission objective, and is excluded from the Volcanic Hive. When the Large Goo is defeated, it will split into 2 Medium Goos; when a Medium Goo is defeated, it will split into 2 Small Goos. The resulting enemies that come from the split will be launched and land on randomly determined tiles that the game determines as safe (i.e. avoiding tiles like fire and water, though stil"
+},
+{
+"id": 761032,
+"name": "Small Goo",
+"text": "Health 1, move 0. Weapons/skills: Goo Attack: Attempt to squish the adjacent tile, dealing 4 damage.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. A massive sized gelatinous ooze resembling a similar fictional monster. This boss Vek can only appear in corporate islands with the \"Defeat 5 Goos\" objective alongside the HQ mission objective, and is excluded from the Volcanic Hive. When the Large Goo is defeated, it will split into 2 Medium Goos; when a Medium Goo is defeated, it will split into 2 Small Goos. The resulting enemies that come from the split will be launched and land on randomly determined tiles that the game determines as safe (i.e. avoiding tiles like fire and water, though stil"
+},
+{
+"id": 761033,
+"name": "A.C.I.D. Scorpion",
+"text": "Health 4, move 3. Weapons/skills: Stinging Spinneret: Web an adjacent target, preparing to stab it for 1 damage and apply A.C.I.D..."
+},
+{
+"id": 761034,
+"name": "Alpha Scorpion",
+"text": "Health 5, move 3. Weapons/skills: Goring Spinneret: Web an adjacent target, preparing to stab it for 3 damage.. The Alpha Scorpion resembles the creature it is named after, stinger included. Its goal is to restrict units' mobility with webbing, then attack them."
+},
+{
+"id": 761035,
+"name": "Scorpion Leader",
+"text": "Health 7, move 3. Weapons/skills: Massive Spinneret: Web all targets, preparing to deal 2 damage to adjacent tiles.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. Can web and melee attack in all four directions around itself in a cross-shape pattern. Unlike most other Scorpions, this attack also pushes its target."
+},
+{
+"id": 761036,
+"name": "A.C.I.D. Firefly",
+"text": "Health 4, move 2. Weapons/skills: Accelerating Thorax: Launch a volatile mass of goo dealing 1 damage and applying A.C.I.D..."
+},
+{
+"id": 761037,
+"name": "Firefly Leader",
+"text": "Health 6, move 3. Weapons/skills: Burning Thorax: Launch goo projectiles in two directions, dealing 4 damage with each.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. The Firefly Leader attacks by firing two straight-shooting projectiles that damage for four each. It will prioritise targeting two units if possible."
+},
+{
+"id": 761038,
+"name": "Alpha Leaper",
+"text": "Health 3, move 4. Weapons/skills: Sharpened Fangs: Web a target, preparing to stab it for 5 damage.. Alpha Leapers jump to their destination and avoid all obstacles in the way. After they move they will web an adjacent target and prepare to stab it during the enemy turn for 5 damage. Leapers cannot spawn alongside the Scorpion."
+},
+{
+"id": 761039,
+"name": "Beetle Leader",
+"text": "Health 6, move 3. Weapons/skills: Flaming Abdomen: Charge, dealing 3 damage and pushing target, and light every tile in the path on Fire.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. The Beetle Leader charges forward in a line, dealing 3 damage and pushing the target. It also lights every tile it passes through while charging on Fire; note that this not include the last tile it stops on. Despite this, the Beetle Leader is not immune to being set on fire, and will still take damage every turn if it is afflicted with fire. Because it is a Massive enemy, it's immune to being drowned, which means it can also put itself out of fire if it charges and stops at a Water Tile (but will still be on fire if it simply passes through one)."
+},
+{
+"id": 761040,
+"name": "Alpha Scarab",
+"text": "Health 4, move 3. Weapons/skills: Spitting Glands: Lob a powerful artillery shot at a single tile for 3 damage (5 tile range).. Alpha Scarabs are shaped like soft-shelled beetles. They attack similarly to artillery style Mech weapons. Alpha Scarabs will aim in a straight line at a tile and shoot over any tiles in between them and their target."
+},
+{
+"id": 761041,
+"name": "Crab",
+"text": "Health 3, move 3. Weapons/skills: Explosive Expulsions: Launch artillery attack on 2 tiles for 1 damage (5 tile range).. Crabs fire a Scarab-like artillery attack that reaches up to five tiles in range. The projectile damages both the tile it lands on and one tile in front of it. Despite being named after an aquatic animal, it is capable of drowning. Crabs cannot appear on the first island and are limited to two spawns, including its alpha, per mission. Crabs also cannot appear with Scarabs or Moths."
+},
+{
+"id": 761042,
+"name": "Alpha Crab",
+"text": "Health 5, move 3. Weapons/skills: Explosive Expulsions: Launch artillery attack on 2 tiles for 3 damage (5 tile range).. Alpha Crabs fire a Scarab-like artillery attack that reaches up to five tiles in range. The projectile damages both the tile it lands on and one tile in front of it. Despite being named after an aquatic animal, it is capable of drowning. Alpha Crabs cannot appear on the first island and are limited to two spawns per mission. Alpha Crabs also cannot appear with Scarabs or Moths."
+},
+{
+"id": 761043,
+"name": "Centipede",
+"text": "Health 3, move 2. Weapons/skills: Acidic Vomit: Launch a volatile mass of goo, dealing 1 damage and applying A.C.I.D. on nearby units.. The Centipede shares the movement and health of the Firefly, but is armed with an acidic attack that applies A.C.I.D. to the targeted tile and the two tiles perpendicular to the direction of the projectile. Centipedes cannot appear on the first island and are limited to two spawns, including its alpha, per mission."
+},
+{
+"id": 761044,
+"name": "Alpha Centipede",
+"text": "Health 5, move 2. Weapons/skills: Corrosive Vomit: Launch a volatile mass of goo, dealing 2 damage and applying A.C.I.D. on nearby units.. The Alpha Centipede shares the movement and health of the Alpha Firefly, but is armed with an acidic attack that applies A.C.I.D. to the targeted tile and the two tiles perpendicular to the direction of the projectile. Alpha Centipedes cannot appear on the first island and are limited to two spawns per mission."
+},
+{
+"id": 761045,
+"name": "Digger",
+"text": "Health 2, move 3. Weapons/skills: Digging Tusks: Create a defensive rock wall before attacking adjacent tiles for 1 damage.. Before attacking, the Digger places a normal boulder on any empty adjacent tile. Diggers attack for 1 damage to all adjacent tiles, likely destroying the boulders in the process. Diggers cannot appear on the first island and are limited to one spawn, including its alpha, per mission."
+},
+{
+"id": 761046,
+"name": "Alpha Digger",
+"text": "Health 4, move 3. Weapons/skills: Digging Tusks: Create a defensive rock wall before attacking adjacent tiles for 2 damage.. Before attacking, the Alpha Digger places a normal boulder on any empty adjacent tile. Alpha Diggers attack for 2 damage to all adjacent tiles, likely destroying the boulders in the process. Alpha Diggers cannot appear on the first island and are limited to one spawn per mission."
+},
+{
+"id": 761047,
+"name": "A.C.I.D. Hornet",
+"text": "Health 3, move 5. Weapons/skills: Stinger: Stab the target for 1 damage and apply A.C.I.D.. Special: Flying: Flying units can move over any terrain tile.."
+},
+{
+"id": 761048,
+"name": "Alpha Hornet",
+"text": "Health 4, move 5. Weapons/skills: Launching Stinger: Stab 2 tiles in front of the unit for 2 damage.. Special: Flying: Flying units can move over any terrain tile.. The stronger variant of the regular Hornet with more health, damage and range. Flying mobility lets it move freely through mountains, cities and the players units. It cannot be drowned, so has to be killed through damage and damaging effects instead."
+},
+{
+"id": 761049,
+"name": "Hornet Leader",
+"text": "Health 6, move 3. Weapons/skills: Super Stinger: Stab three tiles in a row for 2 damage each.. Special: Flying: Flying units can move over any terrain tile.. A giant wasp that moves through the air to attack with its stinger."
+},
+{
+"id": 761050,
+"name": "Blast Psion",
+"text": "Health 2, move 2. Weapons/skills: Explosive Decay: All other Vek will explode on death, dealing 1 damage to adjacent tiles.. Special: Flying: Flying units can move over any terrain tile.. The jellyfish-like Psions act as support units, providing passive bonuses to the Vek. The Blast Psion is distinguished by its light grey coloration and bright orange cranial nodes. This Psion's presence causes other Vek to explode upon death, damaging adjacent tiles. The ability granted to the other Vek is called Explosive Decay. The Blast Psion can never spawn on missions with explosive mines, even if they are the Psion for the Archive, Inc. island."
+},
+{
+"id": 761051,
+"name": "Psion Tyrant",
+"text": "Health 2, move 2. Weapons/skills: Hive Targeting: All player units take 1 damage at the end of every turn.. Special: Flying: Flying units can move over any terrain tile.. The Psion Tyrant does not buff Vek and instead damages all player-controlled units every turn, including the Renfield Bomb and deployable tanks. It has a primarily orange body with dark purple bumps adorning its head. Psion Tyrants only spawn on the Volcanic Hive and are capped at one spawn per \"phase\" of the final mission. Under the Psionic Receiver, the Psion Tyrant also inflicts 1 damage to all Vek, the Tyrant itself included."
+},
+{
+"id": 761052,
+"name": "Psion Abomination",
+"text": "Health 5, move 3. Weapons/skills: Overpowered: All other Vek gain +1 HP, Regeneration, and explode on death.. Special: Flying: Flying units can move over any terrain tile.. The Psion Abomination does not attack but instead grants all other Vek \"overpowered\", combining the effects of the Soldier Psion, Blood Psion and Blast Psion. No other Psions can spawn if the mission contains a Psion Abomination. It will never replace the 4th island's Psion enemy during Unfair difficulty (unless it is the leader of the island for the HQ mission), nor replace the Psion Tyrant during the Volcanic Hive."
+},
+{
+"id": 761053,
+"name": "Spider",
+"text": "Health 2, move 2. Weapons/skills: Tiny Offspring: Throw a sticky egg that hatches into a Spiderling.. Spiders have very limited movement, but have the unique ability of throwing a Spiderling Egg on any column or row they are aligned with. This egg traps all surrounding entities in webs upon landing and will hatch into a Spiderling on the next turn. As a rare Vek, Spiders cannot spawn on the first island, and are limited to one spawn per mission (including its alpha)."
+},
+{
+"id": 761054,
+"name": "Alpha Spider",
+"text": "Health 4, move 2. Weapons/skills: Large Offspring: Throw a sticky egg that hatches into a Spiderling.. Alpha Spiders have very limited movement, but have the unique ability of throwing a Spiderling Egg on any column or row they are aligned with. This egg traps all surrounding entities in webs upon landing and will hatch into a Spiderling on the next turn. The Spiderling's stats from the Alpha Spider are identical to that of the regular Spiders. As a rare Vek, Alpha Spiders cannot spawn on the first island are are limited to one spawn per mission."
+},
+{
+"id": 761055,
+"name": "Spider Leader",
+"text": "Health 6, move 2. Weapons/skills: Plentiful Offspring: Throw out 2-3 Spiderling eggs.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. The Spider Leader starts with two spiderling eggs that hatch before the player turn. Each time the spider leader moves, it will throw two spiderling eggs onto random locations around the map. Unlike normal spiders these eggs do not immobilise adjacent units. Unlike all other leaders Spider Leaders can only appear in the boss mission of an island. On Unfair difficulty, they cannot appear on regular missions in the fourth island."
+},
+{
+"id": 761056,
+"name": "Spiderling Egg",
+"text": "Health 1, move 0. Weapons/skills: Spiderling Egg: Hatch into Spiderling.. Special: Smoke Immunity: This unit is unaffected by Smoke.. The Spiderling Eggs are spawned directly by Spiders, Alpha Spiders, and Spider Leaders; and spawned indirectly by Arachnid Psions, which cause other Vek to spawn eggs upon death. The eggs spawned by Spiders and Alpha Spiders appear larger and web adjacent targets upon being created. The egg will, on it's turn, kill itself and spawn a Spiderling"
+},
+{
+"id": 761057,
+"name": "Spiderling",
+"text": "Health 1, move 3. Weapons/skills: Tiny Mandibles: Weak 1 damage attack against a single adjacent target.. Spiderlings, spawned from Spiderling Eggs, are a very weak 1-health, 1-damage enemy that can quickly overwhelm the player with numbers."
+},
+{
+"id": 761058,
+"name": "Alpha Spiderling",
+"text": "Health 1, move 3. Weapons/skills: Tiny Mandibles: Weak 2 damage attack against a single adjacent target.."
+},
+{
+"id": 761059,
+"name": "Burrower",
+"text": "Health 3, move 4. Weapons/skills: Spiked Carapace: Slam against 3 tiles in a row, hitting each for 1 damage.. Special: Burrower: This Vek will hide underground after taking one or more damage. | Stable : Cannot be moved by any weapon effect (Push, Teleport, etc.).. Burrowers move underground to arrive at their destination and bypass any obstacles, much like a Leaper minus the jumping. When emerging they attack a 3-tile wide area in front of them perpendicular to where they are facing. Upon taking any damage, they will cancel their attack and retreat underground, re-emerging elsewhere (within 4 tiles of where they retreated from) on their next turn. Burrowers can not end their move on top of Ice Tiles. Burrowers are Stable and thus cannot be pushed or moved with physical force, however they can still be relocated by the Control Mech's Control Shot weapon."
+},
+{
+"id": 761060,
+"name": "Alpha Burrower",
+"text": "Health 5, move 4. Weapons/skills: Bladed Carapace: Slam against 3 tiles in a row, hitting each for 2 damage.. Special: Burrower: This Vek will hide underground after taking one or more damage. | Stable : Cannot be moved by any weapon effect (Push, Teleport, etc.).. Alpha Burrowers move underground to arrive at their destination and bypass any obstacles, much like a Leaper minus the jumping. When emerging they attack a 3-tile wide area in front of them perpendicular to where they are facing. Upon taking any damage, they will cancel their attack and retreat underground, re-emerging elsewhere (within 4 tiles of where they retreated from) on their next turn. Alpha Burrowers can not end their move on top of Ice Tiles. Alpha Burrowers are Stable and thus cannot be pushed or moved with physical force, however they can still be relocated by the Control Mech's Co"
+},
+{
+"id": 761062,
+"name": "Chasm Tile",
+"text": "Ground units pushed in will be destroyed."
+},
+{
+"id": 761063,
+"name": "Ice Tile",
+"text": "Turns into Water when destroyed. Must be hit twice.; Turns into Water when destroyed. Must be hit once."
+},
+{
+"id": 761064,
+"name": "Fire",
+"text": "Units that are on fire take 1 damage near the start of their turn. Units can be lit on fire if they are attacked while on a Forest Tile, or by any weapon that burns the target. A damaged Forest Tile will turn into a burning Forest tile, and will remain on fire until put out by another status effect. A weapon that burns the target will additionally burn the tile they are standing on, turning it into a Fire Tile. Fire Tiles can be placed on top of any non-liquid tiles, including Conveyor Belts. Units that are on fire take 1 damage near the start of their turn. An"
+},
+{
+"id": 761065,
+"name": "Sand Tile",
+"text": "If damaged, turns into Smoke. Units in Smoke cannot attack or repair."
+},
+{
+"id": 761066,
+"name": "A.C.I.D. Pool",
+"text": "Inflicts A.C.I.D. on the 1st unit that steps on this space."
+},
+{
+"id": 761067,
+"name": "A.C.I.D. Tile",
+"text": "Behaves like Water, but inflicts A.C.I.D. on surviving units."
+},
+{
+"id": 761068,
+"name": "Ramming Speed (weapon)",
+"text": "Dash across the map, damaging and pushing the target tile. Deals 1 damage to the target. Class: Cyborg. Upgrades: * Smoke Behind (1 Reactor Core ) - Tile behind you gains Smoke. * +2 Damage (3 Reactor Cores ) - Increases damage by 2. Availability: Damage 1. Upgrade: Smoke Behind (cost 1); Upgrade: +2 Damage (cost 3)."
+},
+{
+"id": 761069,
+"name": "Pull-Tank",
+"text": "Deploy a Pull-Tank that can pull targets with a projectile. Single-use. The Pull-Tank starts with 1 HP and 3 move points. Class: Any. Upgrades: * +2 Health (1 Reactor Core ) - Increases the Pull-Tank's max health to 3. * Flying - Gives the Pull-Tank the ability to fly. Availability: Upgrade: +2 Health (cost 1); Upgrade: Flying (cost 1)."
+},
+{
+"id": 761070,
+"name": "Kai Miller",
+"text": "Pilot ability: Arrogant Boost: Mech is Boosted if full health, otherwise -1 Move."
+},
+{
+"id": 761071,
+"name": "Rosie Rivets",
+"text": "Pilot ability: Reassuring Hand: After Move, Repair adjacent Mechs."
+},
+{
+"id": 761073,
+"name": "Adam",
+"text": "Pilot ability: Chosen One: On Reset Turn, gain Shield and +2 Move."
+},
+{
+"id": 761074,
+"name": "Pierce Mech",
+"text": "Health 3, move 4. Weapons/skills: AP Cannon: Fire a pushing projectile that pierces the first target and damages the second.."
+},
+{
+"id": 761076,
+"name": "Exchange Mech",
+"text": "Health 2, move 3. Weapons/skills: Force Swap: Force a nearby unit to swap places with any other unit.."
+},
+{
+"id": 761077,
+"name": "Bulk Mech",
+"text": "Health 3, move 3. Weapons/skills: Ricochet Rocket: Bounce a projectile off one target to hit another (pushes each target).."
+},
+{
+"id": 761079,
+"name": "Slide Mech",
+"text": "Health 2, move 4. Weapons/skills: Area Shift: Push self and all adjacent tiles.."
+},
+{
+"id": 761080,
+"name": "Thruster Mech",
+"text": "Health 3, move 4. Weapons/skills: Reverse Thrusters: Smoke and deal damage to a tile while dashing away. (Damage increases the further the Mech dashes away. Starts with 2-tile range.). Special: Flying: Flying units can move over any terrain tile.."
+},
+{
+"id": 761081,
+"name": "Smog Mech",
+"text": "Health 3, move 3. Weapons/skills: Smoldering Shells: Damage and apply Fire to a tile while adding Smoke to adjacent tiles. | Nanofilter Mending: Standing on Smoke repairs Mechs and removes Smoke.."
+},
+{
+"id": 761082,
+"name": "Control Mech",
+"text": "Health 2, move 4. Weapons/skills: Control Shot: Temporarily control a unit, moving it a short distance. (Starts with 2-tile distance). Special: Flying: Flying units can move over any terrain tile.."
+},
+{
+"id": 761083,
+"name": "Mosquito",
+"text": "Health 2, move 4. Weapons/skills: Smoked Tentacles: Smoke the target, preparing to whip it for 1 damage.. Special: Flying: Flying units can move over any terrain tile.. Much like the Hornet, Mosquitoes are 2-health flying Vek that have a weak melee attack. Unlike the Hornet, however, Mosquitoes have one less point of movement and apply Smoke to the targeted tile at the end of their movement. Mosquitoes cannot spawn on an island with any other flying Vek (Hornet, Moth) other than the island's Psion."
+},
+{
+"id": 761084,
+"name": "Alpha Mosquito",
+"text": "Health 4, move 4. Weapons/skills: Storm Tentacles: Smoke the target, preparing to whip it for 3 damage.. Special: Flying: Flying units can move over any terrain tile.. As a flying enemy with 4 health, the Mosquito is similar to the Alpha Hornet, trading 1 point of movement and the ability to attack 2 tiles for the ability to apply Smoke to the target tile and damage for three points. Mosquitoes and their alpha variant cannot spawn on an island with any other flying Vek (Hornet, Moth) other than the island's Psion."
+},
+{
+"id": 761085,
+"name": "Pitcher Mech",
+"text": "Health 4, move 4. Weapons/skills: Hydraulic Lifter: Throw an adjacent unit and damage it. (Starts with 2-tile range)."
+},
+{
+"id": 761086,
+"name": "Triptych Mech",
+"text": "Health 2, move 3. Weapons/skills: Tri-Rocket: Damage and push 3 tiles in a line.."
+},
+{
+"id": 761087,
+"name": "Drill Mech",
+"text": "Health 3, move 4. Weapons/skills: Seismic Capacitor: Damage and flip target. If target is killed, crack adjacent tiles.. Special: Flying: Flying units can move over any terrain tile.."
+},
+{
+"id": 761088,
+"name": "Moth",
+"text": "Health 3, move 3. Weapons/skills: Repulsive Pellets: Launch an artillery attack for 1 damage, pushing shooter and target.. Special: Flying: Flying units can move over any terrain tile.. The Moth is a 3-health, 3-move flying Vek that fires an artillery attack much like the Scarab, flying over any tiles to land on the target and deal 1 point of damage. This attack pushes the affected target and the Moth itself away by one tile. Moths cannot spawn on an island with any other flying Vek (Hornet, Mosquito) other than the island's Psion. In addition, they also cannot spawn with either Scarabs or Crabs."
+},
+{
+"id": 761089,
+"name": "Starfish",
+"text": "Health 2, move 3. Weapons/skills: Brittle Appendages: Deal 1 damage to four oblique tiles.. Starfish attack by striking the four corner tiles around them, much like a grounded 4-way Hornet. Despite being based off an aquatic creature they are capable of drowning. As a rare Vek, Starfish cannot spawn on the first island are are limited to two spawns per mission."
+},
+{
+"id": 761090,
+"name": "Plasmodia",
+"text": "Health 3, move 2. Weapons/skills: Splitting Spores: Launch a short-lived Spore.. Much like the Blobber and Spider, the Plasmodia is a slow-moving spawner Vek that fires a Spore using artillery range. The Spore destroys itself during the enemy turn to shoot a pushing projectile for 1 damage at a certain direction. As a rare Vek, Plasmodia cannot spawn on the first island and are limited to only one spawn per mission. Plasmodia also cannot spawn with either Blobbers, Spiders, the Blobber Leader, Spider Leader or Plasmodia Leader."
+},
+{
+"id": 761091,
+"name": "Tumblebug",
+"text": "Health 3, move 3. Weapons/skills: Explosive Prize: Create an explosive boulder, preparing to destroy it next turn by attacking it for 1 damage.. Tumblebugs attack by summoning an Unstable Boulder that will explode when damaged, then threatening to damage it and inflict 1 damage on all of its adjancent tiles, including the Tumblebug. These boulders do not explode if they are not damaged. If a Tumblebug is forced to attack a mech directly it will not summon an unstable boulder. As a rare Vek, Tumblebugs cannot appear on the first island and are restricted to two spawns per mission, including its alpha. They cannot spawn on missions with explosive mines."
+},
+{
+"id": 761092,
+"name": "Bouncer",
+"text": "Health 3, move 3. Weapons/skills: Energized Horns: Deal 1 damage to the target then bounce backwards.. Bouncers attack one tile in front of them, much like a Hornet without flight. What differentiates the Bouncer is that it will push the target tile and push themselves back by 1 tile, potentially resulting in a chain of collisions."
+},
+{
+"id": 761093,
+"name": "Nanofilter Mending",
+"text": "Standing on Smoke repairs mechs and removes Smoke. Class: Any. Upgrades: Nanofilter Mending has no upgrades. Availability:"
+},
+{
+"id": 761094,
+"name": "Gastropod",
+"text": "Health 3, move 2. Weapons/skills: Hooked Proboscis: Grapple for 1 damage, pulling the Vek towards objects or units to the Vek.. Gastropods fire a grappling hook that deals 1 damage to the target and either pulls it to the Gastropod or the other way around, depending on if the target is immovable. If the hook does not hit anything the Gastropod does not move. Despite being based off an aquatic animal they are able to drown."
+},
+{
+"id": 761095,
+"name": "Blobber Leader",
+"text": "Health 5, move 2. Weapons/skills: Eruptive Growths: Throw a sticky blob that will explode.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. Much like the standard Blobber the Blobber Leader maintains a safe distance from mechs, attempting to attack by spawning Blob Leaders onto any tile on the map. Blob Leaders have two points of health and explode during the enemy turn to damage itself by 1 and adjacent tiles by 2, meaning that they will detonate twice before they naturally die. Blobber Leaders prevent the spawning of both normal and alpha variants of the Blobber, Spider and Plasmodia. In Unfair difficulty during 3 or 4 island gameplay, it's possible for the Blobber Leader to replace an Alpha Blobber at the Volcanic Hive, if Adva"
+},
+{
+"id": 761096,
+"name": "Arachnid Psion",
+"text": "Health 2, move 2. Weapons/skills: Arachnid Host: All other Vek will spawn a Spiderling Egg on death.. Special: Flying: Flying units can move over any terrain tile.. Arachnid Psions are identifiable by their squid-like cyan body and pink bumps. While alive, they grant all other Vek except for any Blobs, Spores, Spiderlings and Spiderling Eggs the ability to spawn a Spiderling Egg on death. The Spiderling Egg matches those that spawn from the Spider Leader and does not web surrounding tiles. These eggs spawn even if the vek falls into water or a bottomless pit, with the egg flying out of the body of water or hole and landing on a nearby land tile. Psions can only spawn once per mission. The Psionic Receiver will force disabled Mechs to spawn enemy Spiderlin"
+},
+{
+"id": 761097,
+"name": "Raging Psion",
+"text": "Health 2, move 2. Weapons/skills: Raging Hormones: All other Vek are Boosted, providing +1 damage to attacks.. Special: Flying: Flying units can move over any terrain tile.. Raging Psions are identifiable by their squid-like black body and beige bumps. While alive, they grant all other Vek the boosted effect, increasing their damage by 1. Psions can only spawn once per mission. The Psionic Receiver boosts all mechs when a Raging Psion is present."
+},
+{
+"id": 761098,
+"name": "Smoldering Psion",
+"text": "Health 2, move 2. Weapons/skills: Burning Carapace: All other Vek are protected from Fire and leave Fire on death.. Special: Flying: Flying units can move over any terrain tile.. Smoldering Psions are identifiable by their squid-like pink body and blue bumps. While alive, it grant all other Vek fire immunity and make them leave a fire tile on death. Psions can only spawn once per mission. The Psionic Receiver grants fire resistance to all mechs under its presence."
+},
+{
+"id": 761099,
+"name": "Alpha Bouncer",
+"text": "Health 4, move 3. Weapons/skills: Powered Horns: Deal 3 damage to the target then bounce backwards.. Bouncers attack one tile in front of them, much like a Hornet without flight. What differentiates the Bouncer is that it will push the target tile and push themselves back by 1 tile, potentially resulting in a chain of collisions."
+},
+{
+"id": 761100,
+"name": "Alpha Gastropod",
+"text": "Health 4, move 3. Weapons/skills: Barbed Proboscis: Grapple for 3 damage, pulling the Vek towards objects or units to the Vek.. Alpha Gastropods fire a grappling hook that deals 3 damage to the target and either pulls it to the Alpha Gastropod or the other way around, depending on if the target is immovable. If the hook does not hit anything, the Alpha Gastropod does not move. Despite being based off an aquatic animal, they are able to drown."
+},
+{
+"id": 761101,
+"name": "Alpha Moth",
+"text": "Health 5, move 3. Weapons/skills: Repugnant Pellets: Launch an artillery attack for 3 damage, pushing shooter and target.. Special: Flying: Flying units can move over any terrain tile.. The is a 5-health, 3-move flying Vek that fires an artillery attack much like the Scarab, flying over any tiles to land on the target and deal 3 damage. This attack pushes the affected target and the Moth itself away by one tile. Alpha Moths cannot spawn on an island with any other flying Vek (Hornet, Mosquito) other than the island's Psion. In addition, they also cannot spawn with either Scarabs or Crabs."
+},
+{
+"id": 761102,
+"name": "Alpha Plasmodia",
+"text": "Health 5, move 2. Weapons/skills: Spawning Spores: Launch a short-lived Alpha Spore.. Much like the Blobber and Spider, the Alpha Plasmodia is a slow-moving spawner Vek that fires an Alpha Spore using artillery range. The Spore destroys itself during the enemy turn to shoot a pushing projectile for 3 damage at a certain direction. As a rare Vek, Alpha Plasmodia cannot spawn on the first island and are limited to one spawn per mission. Alpha Plasmodia also cannot spawn with either Blobbers, Spiders, the Blobber Leader, Spider Leader or Plasmodia Leader."
+},
+{
+"id": 761103,
+"name": "Alpha Starfish",
+"text": "Health 4, move 3. Weapons/skills: Lacerated Appendages: Deal 2 damage to four oblique tiles.. attack by striking the four corner tiles around them, much like a grounded 4-way Hornet. Despite being based off an aquatic creature they are capable of drowning. As a rare Vek, Starfish cannot spawn on the first island are are limited to a number of spawns per mission, depending on the number of Islands completed."
+},
+{
+"id": 761104,
+"name": "Alpha Tumblebug",
+"text": "Health 5, move 3. Weapons/skills: Explosive Prize: Create an explosive boulder, preparing to destroy it next turn by attacking it for 3 damage.. The attacks by summoning an Unstable Boulder and threatening to destroy it with a 3 damage attack, causing the boulder to inflict 1 damage to adjacent tiles (including the Tumblebug). These boulders do not explode if they are not damaged. If an is forced to attack an object or unit directly it will not summon an unstable boulder. As a rare Vek, Tumblebugs cannot appear on the first island and are restricted to two spawns per mission. They cannot spawn on missions with explosive mines."
+},
+{
+"id": 761105,
+"name": "Mosquito Leader",
+"text": "Health 5, move 4. Weapons/skills: Cloudburst Tentacles: Smoke and Web the target, preparing to whip it with a devastating attack. Kills target.. Special: Flying: Flying units can move over any terrain tile.. The Mosquito leader moves and attempts to attack a single adjacent tile, applying both smoke and webbing effects, waiting for one player turn before dealing Kill damage. This means that if a mech is targeted it cannot respond due to the combination of smoke and webs unless they are immune through Camila Vera's ability or Nanofilter Mending's smoke removal effect."
+},
+{
+"id": 761106,
+"name": "Tumblebug Leader",
+"text": "Health 6, move 3. Weapons/skills: Explosive Prizes: Create two explosive boulders, preparing to destroy one next turn by attacking it for 3 damage.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. The Tumblebug Leader attacks by spawning two Unstable Boulders in front of it and threatening to attack the tile in front for 3 damage. Unstable Boulders have the explosive decay effect, making them capable of damaging multiple buildings when just one of them sets off. These boulders also do not die off when the Tumblebug Leader is killed and remain as obstacles. If a Tumblebug has no space to make boulders it will simply attack an adjacent tile directly. Tumblebug Leaders cannot spawn on the Volcanic Hive, like most Advanced Edition Vek. They also cannot spawn on missions with explosive mines"
+},
+{
+"id": 761107,
+"name": "Bouncer Leader",
+"text": "Health 4, move 3. Weapons/skills: Sweeping Horns: Deal 2 damage to and push three tiles then bounce backwards.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing). | Natural Armor: Weapon damage to this unit is reduced by 1. All other damage (Push, Blocking, Fire, etc.) is unaffected.. The Bouncer Leader attacks in a 3x1 rectangle perpendicular to the direction it is facing and pushes them away, while bouncing itself backwards. It has Natural Armor like the Hook Mech and thus takes 1 less damage from weapons, but not from other damage sources such as blocking spawns, collisions or fire. Bouncer Leaders cannot spawn on the Volcanic Hive like all Advanced Edition vek."
+},
+{
+"id": 761108,
+"name": "Starfish Leader",
+"text": "Health 6, move 3. Weapons/skills: Scored Appendages: Deal 3 damage to 4 oblique tiles and push 4 others.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. The Starfish Leader attacks for 3 damage to the four corner tiles and pushes the four adjacent tiles outward."
+},
+{
+"id": 761109,
+"name": "Centipede Leader",
+"text": "Health 7, move 3. Weapons/skills: Caustic Vomit: Launch a volatile mass of goo for 3 damage, applying A.C.I.D. on nearby units and all tiles it passes through.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. The Centipede leader fires a projectile goo that damages the tile and the two nearby ones perpendicular to its direction, acidifying both the damaged tiles and all tiles that it passes through."
+},
+{
+"id": 761110,
+"name": "Dispersal Mech",
+"text": "Health 3, move 3. Weapons/skills: Thermal Discharger: Damage one or more tiles in a line and push away adjacent tiles. (Starts with 2-tile range)."
+},
+{
+"id": 761112,
+"name": "Napalm Mech",
+"text": "Health 2, move 4. Weapons/skills: Firestorm Generator: Flaming artillery that drops fire on the way to its target. (Starts with 2-tile range) | Heat Engines: Standing on Fire removes Fire and gives the Mech \"Boost\".."
+},
+{
+"id": 761113,
+"name": "Crab Leader",
+"text": "Health 6, move 3. Weapons/skills: Raining Expulsions: Launch 2 damage artillery attack that also deals 1 damage to every tile in its path.. Special: Massive: Massive units can walk in Water (but Water will prevent attacking or repairing).. The Crab Leader attacks by firing a lobbing projectile that damages each tile it passes for 1 damage each and the final tile for 2 damage. It will prioritize targeting as many units and buildings as possible. In Unfair difficulty during 3 or 4 island gameplay, it's possible for the Crab Leader to replace an Alpha Crab at the Volcanic Hive, if Advanced Enemies are turned on for that timeline."
+},
+{
+"id": 761114,
+"name": "Boom Cannon",
+"text": "Health 1, move 3. Weapons/skills: Cannon 8R Mark I: Projectile that causes target to burn and deals 1 damage.. Special: Explosive Decay: Explodes on death, dealing 1 damage to adjacent tiles.. An orange Cannon-Bot, identical in stats and weapon damage, with the distinct difference of exploding after being destroyed. They will only appear in the Destroy all Boom-Bots objective; 4 variants total, with 2 starting frozen. The player gains 1 per 2 boom bots destroyed, for a total of 2 possible reputation that can be earned."
+},
+{
+"id": 761115,
+"name": "Boom Artillery",
+"text": "Health 1, move 3. Weapons/skills: Vk8 Rockets Mark I: Launch Rockets at 3 tiles dealing 1 damage to each (5 tile range).. Special: Explosive Decay: Explodes on death, dealing 1 damage to adjacent tiles.. An orange Artillery-Bot, identical in stats and weapon damage, with the distinct difference of exploding after being destroyed. They will only appear in the Destroy all Boom-Bots objective; 4 variants total, with 2 starting frozen. The player gains 1 per 2 boom bots destroyed, for a total of 2 possible reputation that can be earned."
+},
+{
+"id": 761116,
+"name": "Boom Laser",
+"text": "Health 1, move 3. Weapons/skills: BKR Beam Mark I: Piercing beam, does 2 damage reduced by range (at least 1).. Special: Explosive Decay: Explodes on death, dealing 1 damage to adjacent tiles.. An orange Laser-Bot, identical in stats and weapon damage, with the distinct difference of exploding after being destroyed. They will only appear in the Destroy all Boom-Bots objective; 4 variants total, with 2 starting frozen. The player gains 1 per 2 boom bots destroyed, for a total of 2 possible reputation that can be earned."
+},
+{
+"id": 761117,
+"name": "Thermal Discharger",
+"text": "Damage one or more tiles in a line and push away adjacent tiles. (Starts with 2-tile range) The pushed tiles are to the left and right of the targeted tiles, much like Hermes Engines. Class: Prime. Upgrades: * +2 Range (2 Reactor Cores ) - Increases the maximum range by 2. * Add Fire (3 Reactor Cores ) - Adds Fire to all hit tiles. Availability: Damage 1. Upgrade: +2 Range (cost 2); Upgrade: Add Fire (cost 3)."
+},
+{
+"id": 761118,
+"name": "Refractor Laser",
+"text": "A laser that can bend, dealing more damage to nearby tiles. Pierces through units. Damages the first tile hit for 3 damage, the next tile for 2 damage, and subsequent tiles for 1 damage. Class: Prime. Upgrades: * Ally Immune (1 Reactor Core ) - Friendly units will not take damage from this attack. * +2 Damage (3 Reactor Cores ) - +2 maximum damage. Availability: Damage 3-1. Upgrade: Ally Immune (cost 1); Upgrade: +2 Damage (cost 3)."
+},
+{
+"id": 761119,
+"name": "The Big One",
+"text": "Fires a huge missile that damages in a large cone shape. Damage 3-1 (2 self). Upgrade: -1 Self Damage - Deals 1 less damage to the user. (cost 1); Upgrade: -1 Self Damage (cost 2)."
+},
+{
+"id": 761120,
+"name": "Prism Laser",
+"text": "Laser that increases in damage for each unit that it hits. Without any upgrades enabled; Prism Laser damages the first tiles and unit for 1 damage, then the following tiles and unit for 2 damage, and then the following units and tiles for a maximum of 3 damage. Class: Prime. Upgrades: * Ally Immune (1 Reactor Core ) - Friendly units will not take damage from this attack (but will still increase th Damage 1-3. Upgrade: Ally Immune (cost 1); Upgrade: No Max Damage (cost 2)."
+},
+{
+"id": 761121,
+"name": "Hydraulic Lifter",
+"text": "Throw an adjacent unit and damage it. Deals 1 damage. Starts with 2-tile range. Class: Prime. Upgrades: * +2 Range (1 Reactor Core ) - Increases the range of the throw by 2. * +2 Damage (2 Reactor Cores ) - Increases the damage of the throw by 2. Availability: Damage 1. Upgrade: +2 Range (cost 1); Upgrade: +2 Damage (cost 2)."
+},
+{
+"id": 761122,
+"name": "Spring-Loaded Legs",
+"text": "Leap and attack a tile (next to your landing point), dealing damage and pushing it. Starts with 2 damage to the target. Costs 1 Reactor Core to power. Class: Prime. Upgrades: * +2 Range (1 Reactor Core ) - Leap up to 4 tiles away * +2 Damage (3 Reactor Cores ) - Increases damage to the target by 2. Availability: Damage 2. Upgrade: +2 Range (cost 1); Upgrade: +2 Damage (cost 3)."
+},
+{
+"id": 761123,
+"name": "Fissure Fist",
+"text": "Heavily damage a tile, cracking tiles behind the target on kill. Single-use. Deals 3 damage to the target. Class: Prime. Upgrades: * +1 Damage (2 Reactor Cores ) - Increases damage to the target by 1. * +1 Use (1 Reactor Core ) - Increases the uses per battle by 1. Availability: Damage 3. Upgrade: +1 Damage (cost 2); Upgrade: +1 Use (cost 1)."
+},
+{
+"id": 761124,
+"name": "Grid Charger",
+"text": "Killing an enemy will charge the Power Grid 1 point. Single-use. Deals 1 damage, and costs 1 Reactor Core to power. Class: Any. Upgrades: Grid Charger has no upgrades. Availability: Damage 1."
+},
+{
+"id": 761125,
+"name": "Light Tank",
+"text": "Deploy a small tank to help in combat. Single-use. The Light Tank starts with 1 HP and 3 move points. It shoots a projectile that does no damage and pushes the target. Class: Any. Upgrades: * +2 Health (1 Reactor Core ) - Increases the Tank's max health to 3. * +2 Damage (3 Reactor Cores ) - Increases the Tank's attack damage to 2. Availability: Upgrade: +2 Health (cost 1); Upgrade: +2 Damage (cost 3)."
+},
+{
+"id": 761126,
+"name": "Shield-Tank",
+"text": "Deploy a Shield-Tank that can give Shields to allies. Single-use. The Shield-Tank starts with 1 HP and 3 move points. Class: Any. Upgrades: * +2 Health (1 Reactor Core ) - Increases the Shield-Tank's max health to 3. * Projectile (1 Reactor Core ) - The Shield-Tank instead fires a projectile, allowing you to Shield distant targets. Availability: Upgrade: +2 Health (cost 1); Upgrade: Projectile (cost 1)."
+},
+{
+"id": 761127,
+"name": "A.C.I.D. Tank",
+"text": "Deploy a Tank that can apply A.C.I.D. to targets. Single-use. The A.C.I.D. Tank starts with 1 HP and 3 move points. Class: Any. Upgrades: * +2 Health (1 Reactor Core ) - Increases the Tank's max health to 3. * Push (1 Reactor Core ) - The Tank's attack also pushes its target. Availability: Upgrade: +2 Health (cost 1); Upgrade: Push (cost 1)."
+},
+{
+"id": 761128,
+"name": "Corroding A.C.I.D.",
+"text": "Weapon damage against this unit is doubled. All other damage (Push, Blocking, Fire, etc.) is unaffected. Weapon damage against this unit is doubled. All other damage (Push, Blocking, Fire, etc.) is unaffected. Corroding A.C.I.D. can be inflicted on units through specific weapons, such as the A.C.I.D. Projector. It can also be present in the environment, on missions located in the Detritus Disposal island. Corroding A.C.I.D. will also disable Armor until the unit Repairs. A.C.I.D. applies to self-damage from weapons like Unstable Cannon, and doubles the increased damage taken resulting from a Booste"
+},
+{
+"id": 761129,
+"name": "Heat Engines",
+"text": "Standing on Fire removes Fire and gives the Mech a \"Boost\". Class: Any. Upgrades: Heat Engines has no upgrades. Availability:"
+},
+{
+"id": 761130,
+"name": "Networked Shielding",
+"text": "Mechs cannot take damage during the Player Turn. Costs 2 Reactor Cores to power. Class: Any. Upgrades: Networked Armor has no upgrades. Availability:"
+},
+{
+"id": 761131,
+"name": "Quick-Fire Rockets",
+"text": "Fire two projectiles in different directions. Starts with 1 damage to each target. Class: Brute. Upgrades: * Add Push - Will now push both targets. * +1 Damage - +1 damage to both targets. Availability: Damage 1. Upgrade: Add Push (cost 1); Upgrade: +1 Damage (cost 3)."
+},
+{
+"id": 761132,
+"name": "Firestorm Generator",
+"text": "Flaming artillery that drops fire on the way to its target. Burns all targets in its range. Pushes the final target away. Starts with 2-tile range. Class: Science. Upgrades: * +1 Range (1 Reactor Core ) - Maximum range is increased by 1. * +2 Range (2 Reactor Cores ) - Maximum range is increased by 2. Availability: Upgrade: +1 Rnage (cost 1); Upgrade: +2 Rnage (cost 2)."
+},
+{
+"id": 761133,
+"name": "Flood Drill",
+"text": "Convert any liquid Tile (e.g. Water, Lava) to a Hole, spreading the liquid to adjacent tiles. Single-use. Costs 1 Reactor Core to power. Class: Any. Upgrades: * +1 Use - Increases uses per battle by 1. Availability: Upgrade: +1 Use (cost 1)."
+},
+{
+"id": 761134,
+"name": "Void Shocker",
+"text": "If a Vek deals no damage to buildings or units when attacking, it takes 1 damage. Costs 2 Reactor Cores to power. Vek attacks that damage mountains or take down shields will still activate Void Shocker. The damage from Void Shocker is not affected by A.C.I.D. nor armor. Class: Any. Upgrades: Void Shocker has no upgrades. Availability:"
+},
+{
+"id": 761135,
+"name": "Smoldering Shells",
+"text": "Damage and apply Fire to a tile while adding Smoke to adjacent tiles. Deals 1 damage to the target that is lit on Fire. Smoke is spread to the side tiles, perpendicularly from the users line of fire. Class: Ranged. Upgrades: * More Smoke (2 Reactor Cores ) - Adds Smoke to more tiles (all surrounding tiles are now covered in Smoke) * +2 Damage (3 Reactor Cores ) - Increases the center tile damage b Damage 1. Upgrade: More Smoke (cost 2); Upgrade: +2 Damage (cost 3)."
+},
+{
+"id": 761136,
+"name": "Reverse Thrusters",
+"text": "Smoke and deal damage to a tile while dashing away. Damage is based on distance travelled. Deals 1 Self-Damage to the user. Starts with 2-tile range. Class: Brute. Upgrades: * +1 Range * +1 Range Availability: Damage 1-2 (1 self). Upgrade: +1 Range (cost 1); Upgrade: +1 Range (cost 3)."
+},
+{
+"id": 761137,
+"name": "EM Railgun",
+"text": "Pierce through any killed Enemies. Single-use. Deals 2 damage to the target, and continues to travel through any killed targets. Class: Brute. Upgrades: * +2 Damage - Deals 2 additional damage to all targets. * Building Immune - This attack will no longer damage Grid Buildings. Availability: Damage 2. Upgrade: +2 Damage (cost 1); Upgrade: Building Immune (cost 1)."
+},
+{
+"id": 761138,
+"name": "Ricochet Rocket",
+"text": "Bounce a projectile off one target to hit another. Deals 1 damage and pushes each target. Class: Brute. Upgrades: * +1 Damage * Ally Immune - Friendly units will not take damage from this attack. Availability: Damage 1. Upgrade: +1 Damage (cost 3); Upgrade: Ally Immune (cost 1)."
+},
+{
+"id": 761139,
+"name": "Guided Missile",
+"text": "A projectile that can turn once before hitting its target. Deals 2 damage to the target and pushes. Class: Brute. Upgrades: * +1 Damage * Smoke Line - After turning, adds Smoke to each tile passed through. Availability: Damage 2. Upgrade: +1 Damage (cost 3); Upgrade: Smoke Line (cost 1)."
+},
+{
+"id": 761140,
+"name": "AP Cannon",
+"text": "Fire a pushing projectile that pierces the first target, and damages the second. The first target is only pushed with no direct damage. The second target is dealt 2 damage and gets pushed. Class: Brute. Upgrades: * +1 Damage * +1 Damage Availability: Damage 2. Upgrade: +1 Damage (cost 2); Upgrade: +1 Damage (cost 2)."
+},
+{
+"id": 761141,
+"name": "Fracturing Shells",
+"text": "Fires a projectile that explodes on contact, damaging and pushing adjacent tiles. Deals 1 damage to 3 adjacent tiles. Class: Brute. Upgrades: * +2 Damage * Buildings Immune Availability: Damage 1. Upgrade: +2 Damage (cost 3); Upgrade: Buildings Immune (cost 1)."
+},
+{
+"id": 761142,
+"name": "Tri-Rocket",
+"text": "Damage and push 3 tiles in a line. Deals 1 damage to each target and pushes them away. Can aim at close tile. Class: Ranged. Upgrades: * +1 Damage (3 Reactor Cores ) - Deals 1 additional damage to all targets. * Building Immune (2 Reactor Cores ) - This attack will no longer damage Grid Buildings. Availability: Damage 1. Upgrade: +1 Damage (cost 3); Upgrade: Building Immune (cost 1)."
+},
+{
+"id": 761143,
+"name": "Bomb Dispenser",
+"text": "Launch a Walking Bomb. Unused bombs dismantle after the enemy turn. Class: Ranged. Upgrades: * 2 Bombs (3 Reactor Cores ) - Fire a second Walking Bomb in a different direction. Availability: Upgrade: 2 Bombs (cost 3)."
+},
+{
+"id": 761144,
+"name": "Arachnoid Injector",
+"text": "Damage target, creating a friendly robot spider on kill. Artillery attack starts at 1 damage. Class: Ranged. Upgrades: * +1 Damage - Increases the artillery attack damage by 1. * Acidic - Adds A.C.I.D. to the attack of the Arachnoid. Availability: Damage 1. Upgrade: +1 Damage (cost 2); Upgrade: Acidic (cost 1)."
+},
+{
+"id": 761145,
+"name": "Shield Placer",
+"text": "Shield target and push adjacent tiles away. Class: Science. Upgrades: * +1 Range (1 Reactor Core ) - Can target one additional tile away. * +2 Range* (2 Reactor Core ) - Can target two* additional tiles away. * Note; in game description is incorrect for the 2nd upgrade; it's actually +2 range. Availability: Upgrade: +1 Range (cost 1); Upgrade: +2 Range* (cost 2)."
+},
+{
+"id": 761146,
+"name": "Explosive Warp",
+"text": "Teleport to target and push nearby tiles away. Starts with 2 tile range. Target tile must not be occupied by another unit. Class: Science. Upgrades: * +2 Range (1 Reactor Core ) - Maximum range is increased by 2. * +2 Range (1 Reactor Core ) - Maximum range is increased by 2. Availability: Upgrade: +2 Range (cost 1); Upgrade: +2 Range (cost 1)."
+},
+{
+"id": 761147,
+"name": "Area Shift",
+"text": "Push self and all adjacent tiles. Class: Science. Upgrades: * Shield Self (1 Reactor Core ) - Shield the user when activated. * Shield Ally (2 Reactor Cores ) - Shield any Ally units affected by this skill. Availability: Upgrade: Shield Self (cost 1); Upgrade: Shield Ally (cost 2)."
+},
+{
+"id": 761148,
+"name": "Grid Assault",
+"text": "Overload the grid causing a building to damage and push an adjacent tile. Deals 1 damage to one tile next to any Civilian Building or Power Pilon in the map. The building is chosen first, then the adjacent tile to damage and push. Class: Any. Upgrades: * +1 Damage - Increases damage by 1. * +1 Damage - Increases damage by 1. Availability: Damage 1. Upgrade: +1 Damage (cost 1); Upgrade: +1 Damage (cost 1)."
+},
+{
+"id": 761149,
+"name": "Grid Repulse",
+"text": "Overload the grid causing a building to push away nearby units. Any Civilian Building or Power Pilon in the map can be chosen by the Mech to push away all nearby units. Class: Any. Upgrades: * Add Shield - The selected building also gains a shield. Availability: Upgrade: Add Shield (cost 1)."
+},
+{
+"id": 761150,
+"name": "Smoke Tile",
+"text": "Most units cannot attack in Smoke. Units in Smoke cannot attack or repair. A Sand Tile that is hit by weapon damage will turn into a Smoke Tile. Some weapons and enemy attacks are capable of creating their own Smoke Tiles as well. Units under Smoke will be denoted with the Smoke status, and will clear if the unit moves out of Smoke. If a unit is on Fire when it moves into a Smoke Tile, the fire will be put out. On the other hand, if a Smoke Tile is hit by an attack that does fire damage, the Smoke will be replaced by a Fire Tile."
+},
+{
+"id": 761151,
+"name": "Fire Tile",
+"text": "Lights units on Fire."
+},
+{
+"id": 761152,
+"name": "Spawn Tile",
+"text": "Vek will emerge here next turn. Any unit blocking this space will take one damage. Vek will emerge here next turn. Any unit blocking this space will take one damage."
+},
+{
+"id": 761153,
+"name": "Air Strike",
+"text": "Bombs will be dropped here, instantly killing any unit"
+},
+{
+"id": 761154,
+"name": "Emerging",
+"text": "Vek will emerge here next turn. Any unit blocking this space will take one damage."
+},
+{
+"id": 761155,
+"name": "Falling Rock",
+"text": "A rock will fall here, killing any unit."
+},
+{
+"id": 761156,
+"name": "High Tide",
+"text": "This tile will become Water at the start of the enemy turn."
+},
+{
+"id": 761157,
+"name": "Ice Storm",
+"text": "The storm causes anything present to become Frozen."
+},
+{
+"id": 761158,
+"name": "Lava Flow",
+"text": "The tile here will turn into Lava."
+},
+{
+"id": 761159,
+"name": "Lightning Strike",
+"text": "Lightning will strike here, killing any unit."
+},
+{
+"id": 761160,
+"name": "Seismic Activity",
+"text": "This tile will become a Chasm at the start of the enemy turn."
+},
+{
+"id": 761161,
+"name": "Tentacles",
+"text": "The unit here will die and the tile will turn into Lava."
+},
+{
+"id": 761162,
+"name": "Volcanic Projectile",
+"text": "A fireball will strike here, destroying anything present."
+}
+]

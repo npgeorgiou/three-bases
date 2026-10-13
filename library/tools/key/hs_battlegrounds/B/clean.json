@@ -1,0 +1,2532 @@
+{
+"748593": [
+[
+"stat_gain",
+"+X/+Y"
+],
+[
+"taunt",
+"Taunt"
+]
+],
+"748288": [
+[
+"on_ally_play",
+"After you summon a minion in combat"
+],
+[
+"stat_gain",
+"give your minions +3 Attack"
+]
+],
+"749111": [
+[
+"condition_count",
+"When you have Y Gold"
+],
+[
+"generate_cards",
+"get a random Golden Tier 5 minion"
+],
+[
+"random_effect",
+"random Golden Tier 5 minion"
+],
+[
+"once_per_game",
+"(Once per game.)"
+]
+],
+"748524": [
+[
+"selection",
+"Discover a non-Golden minion"
+],
+[
+"copy",
+"from your last opponent's warband"
+],
+[
+"turn_end",
+"After each combat"
+]
+],
+"750155": [
+[
+"cost_reduction",
+"Tavern spells cost (X) less this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"749947": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_play",
+"Battlecry"
+],
+[
+"taunt",
+"Give a minion Taunt"
+]
+],
+"750048": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"transform",
+"Transform it into your teammate's highest-Tier minion"
+],
+[
+"team_play",
+"your teammate's"
+],
+[
+"stat_condition",
+"highest-Tier"
+]
+],
+"749650": [
+[
+"death_count",
+"After Y friendly minions die"
+],
+[
+"generate_cards",
+"get a random Mech"
+],
+[
+"random_effect",
+"random Mech"
+],
+[
+"tribal",
+"Mech"
+]
+],
+"748916": [
+[
+"on_ally_play",
+"After you summon a different minion in combat"
+],
+[
+"summon",
+"summon an extra copy of it"
+],
+[
+"copy",
+"extra copy"
+]
+],
+"748417": [
+[
+"death_trigger",
+"After a friendly Beast dies"
+],
+[
+"summon",
+"summon this from your hand"
+],
+[
+"free_play",
+"summon this from your hand"
+],
+[
+"temporary_effect",
+"for this combat only"
+],
+[
+"tribal",
+"Beast"
+]
+],
+"750117": [
+[
+"shield",
+"Divine Shield"
+],
+[
+"multi_attack",
+"Windfury"
+]
+],
+"748142": [
+[
+"buff",
+"Give a minion +2 Attack"
+],
+[
+"temporary_buff",
+"until next turn"
+]
+],
+"749692": [
+[
+"selection",
+"Discover a Tier 7 minion"
+],
+[
+"retain",
+"Lock it in your hand"
+]
+],
+"749875": [
+[
+"on_ally_play",
+"After you summon Y minions"
+],
+[
+"transform",
+"replace this with a random Greater Undead Trinket"
+],
+[
+"random_effect",
+"random Greater Undead Trinket"
+]
+],
+"748030": [
+[
+"stat_gain",
+"give your other minions +2 Attack"
+],
+[
+"temporary_buff",
+"until next turn"
+],
+[
+"on_ally_play",
+"After a Blood Gem is played on this"
+]
+],
+"749930": [
+[
+"on_attack",
+"Rally"
+],
+[
+"junk_cards",
+"Add a Fodder to your next 3 Refreshes"
+]
+],
+"749159": [
+[
+"copy",
+"Get a copy of 'X'"
+]
+],
+"749002": [
+[
+"turn_end",
+"When you sell this"
+],
+[
+"selection",
+"Discover a Zerg minion"
+],
+[
+"stat_gain",
+"set its stats to 6/6"
+],
+[
+"tribal",
+"Zerg"
+]
+],
+"748452": [
+[
+"rule_change",
+"Only Tavern Tiers 1, 3, and 5 exist"
+],
+[
+"selection",
+"Discover a minion of your Tier"
+]
+],
+"749381": [
+[
+"on_ally_play",
+"After you play an Elemental"
+],
+[
+"stat_gain",
+"gain +X/+Y"
+],
+[
+"tribal",
+"Elemental"
+],
+[
+"upgrade",
+"improve this"
+]
+],
+"748151": [
+[
+"shield",
+"Give a minion Divine Shield"
+],
+[
+"temporary_buff",
+"until next turn"
+]
+],
+"748116": [
+[
+"removal",
+"Remove a minion in the Tavern"
+],
+[
+"random_effect",
+"random enemy minion"
+],
+[
+"damage",
+"fire it at a random enemy minion"
+]
+],
+"748129": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_gain",
+"+10 Health"
+]
+],
+"750361": [
+[
+"activated",
+"pay gold to use the effect"
+],
+[
+"shop_gold",
+"pay gold"
+]
+],
+"748060": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"stat_condition",
+"lowest-Attack minion"
+],
+[
+"stat_gain",
+"Give your other minions this minion's stats"
+]
+],
+"749657": [
+[
+"repeat_trigger",
+"After you trigger a Deathrattle"
+],
+[
+"death_trigger",
+"After you trigger a Deathrattle"
+],
+[
+"stat_gain",
+"your Blood Gems give an extra +Z/+"
+]
+],
+"748949": [
+[
+"stat_gain",
+"Set its Attack and Health to match the highest in your warband"
+]
+],
+"749829": [
+[
+"generate_cards",
+"Get 3 Pointy Arrows"
+]
+],
+"748144": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"generate_cards",
+"Get a Tavern Coin"
+]
+],
+"750302": [
+[
+"tribal",
+"extra Dragon"
+],
+[
+"resource_advantage",
+"offers an extra Dragon"
+]
+],
+"748971": [
+[
+"play_restriction",
+"Twice per turn"
+]
+],
+"749896": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"tribal",
+"Mech"
+]
+],
+"750156": [
+[
+"generate_cards",
+"Fill your hand with random Tavern spells"
+],
+[
+"random_effect",
+"random Tavern spells"
+]
+],
+"800845": [
+[
+"repeat_trigger",
+"Battlecries trigger an extra time"
+],
+[
+"tribal",
+"Your Dragons'"
+]
+],
+"749019": [
+[
+"merge_attach",
+"Magnetic"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_gain",
+"+1 Attack"
+],
+[
+"tribal",
+"other Mechs"
+]
+],
+"749507": [
+[
+"count_payoff",
+"After you sell Y Elementals"
+],
+[
+"generate_cards",
+"get a random Elemental"
+],
+[
+"tribal",
+"Elementals"
+]
+],
+"749010": [
+[
+"multi_attack",
+"Windfury"
+],
+[
+"on_attack",
+"Rally"
+],
+[
+"permanent_growth",
+"Gain Attack equal to your Tier permanently"
+],
+[
+"variable_stats",
+"Gain Attack equal to your Tier"
+],
+[
+"transform",
+"Morphs each turn"
+]
+],
+"748958": [
+[
+"generate_cards",
+"extra Tavern spell"
+]
+],
+"749991": [
+[
+"taunt",
+"Taunt"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"summon",
+"Summon three 1/3 Demons with Taunt"
+]
+],
+"749259": [
+[
+"stat_gain",
+"Give a Murloc +X/+Y"
+],
+[
+"condition_count",
+"Repeat for each Murloc you control"
+],
+[
+"tribal",
+"Murloc"
+]
+],
+"748113": [
+[
+"generate_cards",
+"Get 2 Buddies"
+],
+[
+"cost_reduction",
+"Costs 3 less"
+],
+[
+"comeback",
+"Loss - Costs 2 less"
+]
+],
+"749804": [
+[
+"condition_count",
+"After you spend Z Gold"
+],
+[
+"generate_cards",
+"get a Lockbox"
+],
+[
+"delayed",
+"it opens turns sooner"
+]
+],
+"800872": [
+[
+"taunt",
+"Taunt"
+]
+],
+"748442": [
+[
+"repeat_trigger",
+"Your Battlecries and Deathrattles trigger twice"
+]
+],
+"748814": [
+[
+"on_attack",
+"after 2 friendly Pirates attack"
+],
+[
+"resource_gain",
+"gain 1 Gold next turn"
+],
+[
+"tribal",
+"Pirates"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"749290": [
+[
+"merge_attach",
+"Magnetic"
+],
+[
+"on_play",
+"The first time this is played or Magnetized"
+],
+[
+"stat_gain",
+"your Volumizers have +Y Attack"
+]
+],
+"748537": [
+[
+"shield",
+"Divine Shield"
+],
+[
+"death_count",
+"Avenge (4)"
+],
+[
+"shield",
+"Give a random friendly minion Divine Shield"
+]
+],
+"749447": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"repeat_trigger",
+"trigger all friendly Battlecries"
+]
+],
+"750181": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"upgrade",
+"Replace cards in the Tavern with ones from a Tier higher"
+]
+],
+"750211": [
+[
+"taunt",
+"Taunt"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"upgrade",
+"Make your right-most minion Golden"
+]
+],
+"748830": [
+[
+"on_ally_play",
+"After you play an Elemental"
+],
+[
+"cost_reduction",
+"your next Tavern spell costs (1) less"
+],
+[
+"tribal",
+"Elemental"
+]
+],
+"749318": [
+[
+"stat_gain",
+"Give your minions +X/+Y"
+],
+[
+"variety_payoff",
+"for each different Bonus Keyword"
+]
+],
+"749235": [
+[
+"repeat_trigger",
+"Your Bounties cast twice"
+]
+],
+"750174": [
+[
+"trap_secret",
+"Secret"
+],
+[
+"cheat_death",
+"prevent it"
+],
+[
+"immunity",
+"become Immune this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"750199": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_gain",
+"give the minion to the left +X Health"
+],
+[
+"adjacency",
+"the minion to the left"
+],
+[
+"condition_life",
+"Improved by each Health your hero is missing"
+]
+],
+"749708": [
+[
+"buff",
+"Give a Beast +2/+2"
+],
+[
+"revive",
+"Reborn"
+],
+[
+"tribal",
+"Beast"
+]
+],
+"748167": [
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"resource_banking",
+"any unspent Gold"
+],
+[
+"stat_gain",
+"gain +1/+2"
+]
+],
+"750084": [
+[
+"turn_start",
+"At the start of each turn"
+],
+[
+"permanent_growth",
+"gain +1 Attack"
+]
+],
+"749059": [
+[
+"spell_power",
+"Your Tavern spells give an extra +X/+Y this game"
+]
+],
+"749752": [
+[
+"activated",
+"Activate (X)"
+],
+[
+"repeat_trigger",
+"Trigger a friendly minion's Rally"
+]
+],
+"749797": [
+[
+"on_spell",
+"Whenever you cast a spell on this"
+],
+[
+"stat_gain",
+"plays a Blood Gem on adjacent minions"
+],
+[
+"adjacency",
+"adjacent minions"
+]
+],
+"748761": [
+[
+"stat_gain",
+"Minions in the Tavern have +Y/+Y"
+],
+[
+"upgrade",
+"Improves every 3 times"
+],
+[
+"condition_count",
+"every 3 times your hero takes damage outside combat"
+]
+],
+"749599": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"junk_cards",
+"add a Fodder to your next X Refreshes"
+]
+],
+"800824": [
+[
+"type_grant",
+"Minions with no type have all minion types"
+]
+],
+"749630": [
+[
+"stat_gain",
+"Give four random friendly minions +X/+Y"
+],
+[
+"random_effect",
+"four random friendly minions"
+]
+],
+"748386": [
+[
+"stat_gain",
+"give a minion Health equal to your Tier"
+],
+[
+"variable_stats",
+"Health equal to your Tier"
+],
+[
+"play_restriction",
+"Twice per turn"
+]
+],
+"749900": [
+[
+"generate_cards",
+"get a random Tavern spell"
+],
+[
+"on_ally_play",
+"After you buy a Mech"
+],
+[
+"tribal",
+"Mech"
+]
+],
+"750215": [
+[
+"cost_reduction",
+"Two Refreshes each turn are free"
+]
+],
+"748477": [
+[
+"rule_change",
+"Tavern Tier 1 does not exist"
+],
+[
+"cost_set",
+"Minions cost Gold equal to their Tier"
+]
+],
+"748720": [
+[
+"copy",
+"Get a plain copy of a random minion from your last opponent's warband"
+],
+[
+"random_effect",
+"random minion"
+]
+],
+"750273": [
+[
+"steal",
+"Steal a random minion from the Tavern"
+],
+[
+"stat_multiply",
+"Double its Health"
+]
+],
+"749707": [
+[
+"on_ally_play",
+"Whenever you summon a Beast"
+],
+[
+"stat_gain",
+"give it +X/+Y"
+],
+[
+"tribal",
+"Beast"
+]
+],
+"749613": [
+[
+"on_ally_play",
+"Whenever you summon a Beast"
+],
+[
+"stat_gain",
+"give it +Y Attack"
+],
+[
+"upgrade",
+"improve this permanently"
+]
+],
+"750124": [
+[
+"deathtouch",
+"Venomous"
+]
+],
+"748147": [
+[
+"stat_gain",
+"Give a minion +X/+Y"
+],
+[
+"taunt",
+"Taunt"
+],
+[
+"temporary_buff",
+"until next turn"
+]
+],
+"750035": [
+[
+"copy",
+"get a new copy of it"
+],
+[
+"play_restriction",
+"Once per turn"
+]
+],
+"748205": [
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"quests",
+"Quests"
+],
+[
+"modal_choice",
+"choose one of two Quests"
+]
+],
+"749340": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"generate_cards",
+"Get a Blood Gem Barrage"
+]
+],
+"749709": [
+[
+"generate_cards",
+"Get X random Bounties"
+],
+[
+"random_effect",
+"random Bounties"
+],
+[
+"turn_start",
+"At the start of each turn"
+],
+[
+"repeat_trigger",
+"repeat this"
+]
+],
+"748748": [
+[
+"generate_cards",
+"Get a random Battlecry minion"
+],
+[
+"turn_start",
+"At the start of each turn"
+],
+[
+"random_effect",
+"random Battlecry minion"
+]
+],
+"748741": [
+[
+"selection",
+"Discover a Tavern spell"
+],
+[
+"turn_start",
+"At the start of each turn"
+]
+],
+"750187": [
+[
+"hero_power",
+"use your Hero Power"
+],
+[
+"stat_gain",
+"give your Divine Shield minions +2 Attack"
+]
+],
+"748994": [
+[
+"revive",
+"Reborn"
+],
+[
+"buff",
+"Give your Battlecruiser Reborn"
+]
+],
+"748074": [
+[
+"death_count",
+"Avenge (4)"
+],
+[
+"generate_cards",
+"Get a random Demon"
+],
+[
+"random_effect",
+"random Demon"
+]
+],
+"748871": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"repeat_trigger",
+"Trigger a friendly minion's end of turn effects"
+]
+],
+"750354": [],
+"800820": [
+[
+"repeat_trigger",
+"Your first spell each turn casts an extra time"
+]
+],
+"749015": [
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"stat_gain",
+"give your minions +1/+1"
+],
+[
+"transform",
+"Morphs each turn"
+]
+],
+"749753": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"repeat_trigger",
+"Cast Shiny Ring twice"
+]
+],
+"750242": [
+[
+"taunt",
+"Taunt"
+],
+[
+"permanent_growth",
+"give your minions +1/+1 permanently"
+],
+[
+"on_damaged",
+"is attacked"
+]
+],
+"749500": [
+[
+"shield",
+"Divine Shield"
+],
+[
+"stat_gain",
+"your Blood Gems give an extra +X Attack this game"
+],
+[
+"on_damaged",
+"loses Divine Shield"
+]
+],
+"749541": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"death_count",
+"Avenge (X)"
+],
+[
+"generate_cards",
+"Get a Tavern Tempest"
+]
+],
+"749989": [
+[
+"repeat_trigger",
+"Your Battlecries trigger twice"
+]
+],
+"749172": [
+[
+"generate_cards",
+"Get a Gritty Headhunter"
+],
+[
+"turn_start",
+"At the start of each turn"
+],
+[
+"repeat_trigger",
+"repeat this"
+]
+],
+"800819": [
+[
+"repeat_trigger",
+"Your next 2 Refreshes are helpful"
+]
+],
+"748045": [
+[
+"selection",
+"Choose a minion in the Tavern"
+],
+[
+"steal",
+"add it to your hand"
+],
+[
+"stat_gain",
+"Set its stats to 2"
+]
+],
+"749667": [
+[
+"generate_cards",
+"Get a Proud Privateer and X random Bounties"
+],
+[
+"turn_start",
+"At the start of each turn"
+]
+],
+"750237": [
+[
+"selection",
+"After you Discover a minion"
+],
+[
+"stat_gain",
+"give it +Y/+Y"
+],
+[
+"upgrade",
+"improve this"
+]
+],
+"748571": [
+[
+"sacrifice",
+"Destroy a friendly Undead"
+],
+[
+"stat_gain",
+"Your Undead have +X Attack this game"
+],
+[
+"tribal",
+"Undead"
+]
+],
+"750264": [
+[
+"deathtouch",
+"Venomous"
+]
+],
+"748897": [
+[
+"shield",
+"Divine Shield"
+],
+[
+"on_ally_play",
+"Whenever you play an Elemental"
+],
+[
+"shield",
+"give it Divine Shield"
+],
+[
+"temporary_buff",
+"until next turn"
+],
+[
+"tribal",
+"Elemental"
+]
+],
+"749846": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"shield",
+"Give your Rally minions Divine Shield"
+],
+[
+"on_attack",
+"Rally"
+]
+],
+"748259": [
+[
+"stat_gain",
+"+5/+5"
+],
+[
+"multi_attack",
+"Windfury"
+]
+],
+"750087": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"+X/+Y"
+],
+[
+"tribal",
+"Murlocs"
+],
+[
+"scope_multi",
+"all other Murlocs"
+]
+],
+"749589": [],
+"800856": [
+[
+"donate",
+"Pass a non-Golden minion"
+],
+[
+"team_play",
+"Pass a non-Golden minion"
+]
+],
+"748872": [
+[
+"modal_choice",
+"Choose One"
+],
+[
+"generate_cards",
+"Get X Blood Gems"
+]
+],
+"750197": [
+[
+"stat_gain",
+"gain +1/+1"
+],
+[
+"temporary_buff",
+"until next turn"
+],
+[
+"on_ally_play",
+"After a different friendly minion gains stats"
+]
+],
+"749793": [
+[
+"shield",
+"Divine Shield"
+],
+[
+"activated",
+"Activate (X)"
+],
+[
+"merge_attach",
+"Magnetization"
+],
+[
+"repeat_trigger",
+"happens an extra time"
+]
+],
+"750104": [
+[
+"shield",
+"Divine Shield"
+],
+[
+"on_ally_play",
+"Whenever you summon a Mech during combat"
+],
+[
+"stat_gain",
+"gain +X Attack"
+],
+[
+"tribal",
+"Mech"
+]
+],
+"749555": [
+[
+"on_spell",
+"After you cast a Tavern spell"
+],
+[
+"copy",
+"get an extra copy of it"
+],
+[
+"play_restriction",
+"(Y times per turn.)"
+]
+],
+"749509": [
+[
+"on_spell",
+"After you cast a Spellcraft spell from hand on a minion"
+],
+[
+"copy",
+"also cast a permanent copy on this"
+],
+[
+"play_restriction",
+"Twice per turn"
+]
+],
+"748028": [
+[
+"multi_attack",
+"Windfury"
+],
+[
+"on_attack",
+"Rally"
+],
+[
+"stat_gain",
+"This plays a Blood Gem on all your other minions"
+]
+],
+"750349": [
+[
+"random_effect",
+"Rerolls the tavern offers"
+]
+],
+"750356": [
+[
+"on_play",
+"Its effect happens when bought in the tavern"
+]
+],
+"749440": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"stat_gain",
+"Your Blood Gems give an extra +Y Health this game"
+]
+],
+"749984": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"Give a friendly minion +1/+1"
+]
+],
+"748140": [
+[
+"on_ally_play",
+"Whenever you summon a Whelp"
+],
+[
+"permanent_growth",
+"gain +2/+2 permanently"
+],
+[
+"tribal",
+"Whelp"
+]
+],
+"749005": [
+[
+"transform",
+"Your Zerg can morph into Tier 3 Zerg"
+],
+[
+"tribal",
+"Zerg"
+]
+],
+"748778": [
+[
+"count_payoff",
+"After you sell 5 minions"
+],
+[
+"generate_cards",
+"get a random Murloc"
+],
+[
+"tribal",
+"Murloc"
+]
+],
+"800836": [
+[
+"rule_change",
+"The Minor Timewarp offers X Golden minions this game"
+],
+[
+"tribal",
+"Golden minions"
+]
+],
+"748793": [
+[
+"aura",
+"Your minions from Tier 3 or lower have +7/+5"
+],
+[
+"stat_condition",
+"Tier 3 or lower"
+]
+],
+"748408": [
+[
+"on_spell",
+"Whenever you cast a Tavern spell"
+],
+[
+"stat_gain",
+"give your minions +X Attack"
+]
+],
+"800838": [
+[
+"turn_number",
+"On Turns 8 and 9"
+],
+[
+"rule_change",
+"There is no Minor Timewarp in this game"
+]
+],
+"749112": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"revive",
+"Reborn"
+],
+[
+"adjacency",
+"left and right-most Undead"
+],
+[
+"tribal",
+"Undead"
+]
+],
+"748158": [
+[
+"selection",
+"Discover 2 Naga"
+],
+[
+"tribal",
+"Naga"
+]
+],
+"748319": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"resource_gain",
+"Gain 1 Gold next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"748372": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"stat_gain",
+"This plays 3 Blood Gems on all your Quilboar"
+],
+[
+"tribal",
+"Quilboar"
+]
+],
+"748092": [
+[
+"death_count",
+"Avenge (X)"
+],
+[
+"generate_cards",
+"Get a random Battlecry minion"
+],
+[
+"random_effect",
+"random Battlecry minion"
+]
+],
+"749961": [
+[
+"merge_attach",
+"Magnetic"
+],
+[
+"revive",
+"Reborn"
+],
+[
+"tribal",
+"Mechs or Undead"
+]
+],
+"748083": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"Give a friendly Elemental stats equal to your Tier"
+],
+[
+"variable_stats",
+"stats equal to your Tier"
+],
+[
+"tribal",
+"Elemental"
+]
+],
+"749223": [
+[
+"taunt",
+"Taunt"
+],
+[
+"shield",
+"Divine Shield"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"generate_cards",
+"Get a Sanctify"
+]
+],
+"749087": [
+[
+"generate_cards",
+"Get a Dr. Boom's Monster"
+],
+[
+"turn_start",
+"At the start of every turn"
+]
+],
+"749170": [
+[
+"generate_cards",
+"extra Tavern spell"
+],
+[
+"cost_reduction",
+"costs (1) less"
+]
+],
+"748486": [
+[
+"turn_start",
+"At the start of each turn"
+],
+[
+"team_play",
+"one player chooses a card for ALL players"
+],
+[
+"symmetric_effect",
+"for ALL players"
+]
+],
+"748809": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"generate_cards",
+"Get a random Spellcraft spell"
+],
+[
+"tribal",
+"Naga"
+]
+],
+"749502": [
+[
+"shield",
+"Divine Shield"
+],
+[
+"on_damaged",
+"loses Divine Shield"
+],
+[
+"permanent_growth",
+"give your minions +X/+Y permanently"
+]
+],
+"749262": [
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"stat_gain",
+"give your minions +X Health"
+]
+],
+"748315": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"upgrade",
+"Make a Buddy Golden"
+]
+],
+"748736": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"generate_cards",
+"Get 2 Blood Gems"
+],
+[
+"tribal",
+"Quilboar"
+]
+],
+"748701": [
+[
+"stat_gain",
+"Give your minions +8 Health"
+]
+],
+"750301": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"permanent_growth",
+"+2 Attack permanently"
+],
+[
+"scope_global",
+"ALL minions"
+]
+],
+"748739": [
+[
+"generate_cards",
+"Get a Brann Bronzebeard and a random Battlecry minion"
+],
+[
+"type_grant",
+"both Murlocs and Dragons"
+]
+],
+"749188": [
+[
+"death_count",
+"Avenge (X)"
+],
+[
+"stat_gain",
+"Minions in the Tavern have +Y/+Z"
+],
+[
+"temporary_buff",
+"next turn"
+]
+],
+"749282": [
+[
+"copy",
+"Get a copy of 'X'"
+],
+[
+"repeat_trigger",
+"Your Rallies trigger an extra time"
+]
+],
+"749968": [
+[
+"deathtouch",
+"Poisonous"
+]
+],
+"749400": [
+[
+"shield",
+"Divine Shield"
+],
+[
+"on_ally_play",
+"Whenever you play a minion"
+],
+[
+"shield",
+"give it Divine Shield"
+]
+],
+"750162": [
+[
+"selection",
+"Choose a minion"
+],
+[
+"tribal",
+"minions of its type"
+]
+],
+"750056": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"summon",
+"Summon a copy of your teammate's highest-Health minion"
+],
+[
+"copy",
+"a copy of your teammate's"
+],
+[
+"team_play",
+"your teammate's"
+],
+[
+"stat_condition",
+"highest-Health"
+]
+],
+"748507": [
+[
+"start_of_game",
+"Start with"
+],
+[
+"hero_power",
+"second Hero Power"
+]
+],
+"748121": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"summon",
+"Call upon those Elements"
+]
+],
+"749354": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"stat_gain",
+"give a random minion in it +X/+Y"
+],
+[
+"random_effect",
+"random minion"
+]
+],
+"749679": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"stat_gain",
+"Give your Murlocs the Attack of the highest-Attack minion in your hand"
+],
+[
+"tribal",
+"Murlocs"
+],
+[
+"stat_condition",
+"highest-Attack"
+]
+],
+"749498": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"summon",
+"Summon five 1/1 Skeletons"
+],
+[
+"board_limit",
+"Any that don't fit"
+],
+[
+"stat_gain",
+"give your Undead +X Attack this game"
+],
+[
+"tribal",
+"Undead"
+]
+],
+"749825": [
+[
+"on_spell",
+"Whenever you cast a spell on a Mech"
+],
+[
+"merge_attach",
+"Magnetize a X/Y Satellite to it"
+],
+[
+"tribal",
+"Mech"
+]
+],
+"748823": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"summon",
+"Summon a Flourishing Frostling"
+],
+[
+"tribal",
+"Elementals"
+]
+],
+"749127": [
+[
+"spell_power",
+"Your Tavern spells give an extra +Y/+Z"
+],
+[
+"count_payoff",
+"After you cast 5 Tavern spells"
+],
+[
+"upgrade",
+"improve this"
+]
+],
+"748483": [
+[
+"resource_gain",
+"Gain 3 Gold"
+]
+],
+"749103": [
+[
+"generate_cards",
+"Get X different Magnetic Mechs of ANY Tier"
+],
+[
+"merge_attach",
+"Magnetic"
+],
+[
+"variety_payoff",
+"different Magnetic Mechs"
+],
+[
+"tribal",
+"Mechs"
+]
+],
+"750223": [
+[
+"generate_cards",
+"extra minion of a higher Tier"
+]
+],
+"748913": [
+[
+"buff",
+"Give a minion +2/+2"
+],
+[
+"revive",
+"Reborn"
+],
+[
+"temporary_buff",
+"until next turn"
+],
+[
+"tribal",
+"Naga"
+]
+],
+"749871": [
+[
+"discard",
+"After you discard a spell"
+],
+[
+"generate_cards",
+"get a random Aberration"
+],
+[
+"tribal",
+"Aberration"
+]
+],
+"748110": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"repeat_trigger",
+"trigger the Battlecries of adjacent minions"
+],
+[
+"adjacency",
+"adjacent minions"
+]
+],
+"748988": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"damage",
+"Deal X damage to the highest- Health enemy minion"
+],
+[
+"stat_condition",
+"highest- Health"
+]
+],
+"748097": [
+[
+"stat_gain",
+"Give Z random friendly minions +X/+Y"
+],
+[
+"random_effect",
+"random friendly minions"
+],
+[
+"modal_choice",
+"choose an improvement"
+]
+],
+"749724": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"generate_cards",
+"Get an Energizing Chamber"
+]
+],
+"748646": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"stat_gain",
+"your Blood Gems give an extra +1/+1 this game"
+]
+],
+"748170": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"consumes a minion in the Tavern to gain its stats"
+],
+[
+"tribal",
+"Demon"
+]
+],
+"748704": [
+[
+"on_ally_play",
+"After you buy a minion"
+],
+[
+"stat_gain",
+"gain stats equal to its Tier"
+],
+[
+"variable_stats",
+"stats equal to its Tier"
+]
+],
+"749931": [
+[
+"deathtouch",
+"Venomous"
+]
+],
+"750204": [
+[
+"stat_gain",
+"give their stats to your minions"
+],
+[
+"removal",
+"Consume all minions in the Tavern"
+]
+],
+"749849": [
+[
+"revive",
+"After a friendly minion is Reborn"
+],
+[
+"copy",
+"get a plain copy of it"
+],
+[
+"play_restriction",
+"(Y times per combat.)"
+]
+],
+"794971": [
+[
+"tribal",
+"Elemental"
+]
+],
+"748965": [
+[
+"rule_change",
+"The Tavern only offers cards of your Tier"
+]
+],
+"750253": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"damage",
+"Deal 8 damage to two random enemy minions"
+],
+[
+"random_effect",
+"two random enemy minions"
+]
+],
+"749952": [
+[
+"merge_attach",
+"Magnetic"
+],
+[
+"shield",
+"Divine Shield"
+],
+[
+"taunt",
+"Taunt"
+]
+],
+"748979": [
+[
+"copy",
+"Get a copy of the last Tavern spell you cast"
+],
+[
+"cost_reduction",
+"your next Hero Power costs (1) less"
+],
+[
+"hero_power",
+"Hero Power"
+]
+],
+"750285": [
+[
+"selection",
+"Discover an Aberration"
+],
+[
+"transform",
+"Swaps type each turn"
+],
+[
+"tribal",
+"Aberration"
+]
+],
+"749714": [
+[
+"generate_cards",
+"Get a Groundbreaker"
+],
+[
+"stat_gain",
+"give stats to the minion to their left"
+],
+[
+"adjacency",
+"minion to their left"
+]
+],
+"749396": [
+[
+"taunt",
+"Taunt"
+],
+[
+"shield",
+"Give a minion Divine Shield"
+]
+],
+"749847": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"repeat_trigger",
+"trigger all friendly Rallies"
+]
+],
+"748270": [
+[
+"variable_stats",
+"Has +X/+Y for each friendly Eternal Knight that died this game"
+],
+[
+"death_count",
+"that died this game"
+]
+],
+"749299": [
+[
+"generate_cards",
+"get a Tavern Coin"
+]
+],
+"748556": [
+[
+"variable_stats",
+"Has +2/+2 for each Tavern spell you've cast this game"
+],
+[
+"count_payoff",
+"each Tavern spell you've cast this game"
+]
+],
+"748925": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_spell",
+"After you cast a Tavern spell"
+],
+[
+"stat_gain",
+"minions in the Tavern have +1/+1"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"748221": [
+[
+"quests",
+"Quest: Win the game."
+]
+],
+"749330": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"generate_cards",
+"Get two random X-Cost Tavern spells"
+],
+[
+"random_effect",
+"two random X-Cost Tavern spells"
+],
+[
+"cost_condition",
+"X-Cost"
+]
+],
+"748320": [
+[
+"on_ally_play",
+"after you play a Murloc"
+],
+[
+"stat_gain",
+"gain +X/+Y"
+],
+[
+"tribal",
+"Murloc"
+],
+[
+"hand_position",
+"While this is in your hand"
+]
+],
+"748344": [
+[
+"death_trigger",
+"After a friendly Beast dies"
+],
+[
+"permanent_growth",
+"gain +1 Health permanently"
+],
+[
+"tribal",
+"Beast"
+]
+],
+"749348": [
+[
+"death_count",
+"Avenge (4)"
+],
+[
+"resource_gain",
+"Gain a free Refresh"
+]
+],
+"749296": [
+[
+"merge_attach",
+"After you Magnetize a minion"
+],
+[
+"stat_gain",
+"give your minions +X/+Y"
+]
+],
+"748696": [
+[
+"death_trigger",
+"When another friendly Elemental dies"
+],
+[
+"stat_gain",
+"gain its maximum stats"
+],
+[
+"once_per_game",
+"Once per combat"
+],
+[
+"tribal",
+"Elemental"
+]
+],
+"749098": [
+[
+"turn_end",
+"At the end of each turn"
+],
+[
+"stat_gain",
+"your Undead have +2 Attack this game"
+],
+[
+"tribal",
+"Undead"
+]
+],
+"748576": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"+2/+3"
+],
+[
+"random_effect",
+"random friendly minion"
+],
+[
+"in_hand_buff",
+"a minion in your hand"
+]
+],
+"748057": [
+[
+"on_ally_play",
+"After you buy a card"
+],
+[
+"stat_gain",
+"minions in the Tavern have +2/+2"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"748181": [
+[
+"steal",
+"Steal all cards from the Tavern"
+],
+[
+"cost_reduction",
+"your next Hero Power costs (1) less"
+],
+[
+"hero_power",
+"Hero Power"
+]
+],
+"748953": [
+[
+"buff",
+"Give a minion +Y/+Y"
+],
+[
+"temporary_buff",
+"until next turn"
+],
+[
+"count_payoff",
+"every 3 spells you've cast this game"
+]
+],
+"749997": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"Set this minion's Attack and Health to the highest in the battlefield"
+],
+[
+"stat_condition",
+"highest in the battlefield"
+]
+],
+"748755": [
+[
+"board_limit",
+"doesn't fit in your warband"
+],
+[
+"stat_gain",
+"give your minions +5 Attack"
+]
+],
+"750217": [
+[
+"stat_gain",
+"gains Attack during combat"
+],
+[
+"permanent_growth",
+"give it +1 Health permanently"
+]
+],
+"800839": [
+[
+"turn_number",
+"On Turn 8"
+],
+[
+"delayed",
+"(X turns left!)"
+]
+],
+"748179": [
+[
+"turn_start",
+"At the start of each turn"
+],
+[
+"generate_cards",
+"get a random Spellcraft spell"
+],
+[
+"random_effect",
+"random Spellcraft spell"
+]
+],
+"749644": [
+[
+"count_payoff",
+"After you Refresh Y times"
+],
+[
+"life_payment",
+"costs Health instead of Gold to buy"
+],
+[
+"stat_condition",
+"highest-Tier minion"
+]
+],
+"748875": [
+[
+"on_ally_play",
+"After you play a Choose One card"
+],
+[
+"stat_gain",
+"plays X Blood Gems on all your Quilboar"
+],
+[
+"tribal",
+"Quilboar"
+]
+],
+"749513": [
+[
+"transform",
+"transform into"
+],
+[
+"selection",
+"choose from three Golden Tier 7 minions"
+],
+[
+"delayed",
+"In two turns"
+]
+],
+"748438": [
+[
+"selection",
+"Discover two Tier 6 minions"
+]
+]
+}

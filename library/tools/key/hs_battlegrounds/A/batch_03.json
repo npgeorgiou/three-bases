@@ -1,0 +1,537 @@
+{
+"748121": [
+[
+"death_trigger",
+"Deathrattle"
+]
+],
+"749354": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"stat_gain",
+"+X/+Y"
+],
+[
+"random_effect",
+"random minion"
+]
+],
+"749679": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"stat_condition",
+"highest-Attack minion in your hand"
+]
+],
+"749498": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"summon",
+"Summon five 1/1 Skeletons"
+],
+[
+"stat_gain",
+"+X Attack this game"
+]
+],
+"749825": [
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"merge_attach",
+"Magnetize"
+]
+],
+"748823": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"summon",
+"Summon a Flourishing Frostling"
+]
+],
+"749127": [
+[
+"spell_power",
+"Your Tavern spells give an extra +Y/+Z"
+],
+[
+"condition_count",
+"After you cast 5 Tavern spells"
+]
+],
+"748483": [
+[
+"resource_gain",
+"Gain 3 Gold"
+]
+],
+"749103": [
+[
+"generate_cards",
+"Get X different"
+],
+[
+"merge_attach",
+"Magnetic"
+],
+[
+"variety_payoff",
+"different"
+]
+],
+"750223": [
+[
+"card_advantage",
+"extra minion of a higher Tier"
+]
+],
+"748913": [
+[
+"stat_gain",
+"+2/+2"
+],
+[
+"cheat_death",
+"Reborn"
+],
+[
+"temporary_effect",
+"until next turn"
+]
+],
+"749871": [
+[
+"discard",
+"After you discard a spell"
+],
+[
+"generate_cards",
+"get a random Aberration"
+]
+],
+"748110": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"repeat_trigger",
+"trigger the Battlecries"
+],
+[
+"adjacency",
+"adjacent minions"
+]
+],
+"748988": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"damage",
+"Deal X damage"
+],
+[
+"stat_condition",
+"highest- Health"
+]
+],
+"748097": [
+[
+"stat_gain",
+"+X/+Y"
+],
+[
+"random_effect",
+"random friendly minions"
+],
+[
+"modal_choice",
+"choose an improvement"
+]
+],
+"749724": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"generate_cards",
+"Get an Energizing Chamber"
+]
+],
+"748646": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"stat_gain",
+"+1/+1 this game"
+]
+],
+"748170": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"gain its stats"
+]
+],
+"748704": [
+[
+"stat_gain",
+"gain stats equal to its Tier"
+]
+],
+"749931": [
+[
+"deathtouch",
+"Venomous"
+]
+],
+"750204": [
+[
+"stat_gain",
+"give their stats to your minions"
+]
+],
+"749849": [
+[
+"cheat_death",
+"is Reborn"
+],
+[
+"copy",
+"plain copy"
+]
+],
+"794971": [],
+"748965": [
+[
+"rule_change",
+"The Tavern only offers cards of your Tier"
+]
+],
+"750253": [
+[
+"combat_start",
+"Start of Combat"
+],
+[
+"damage",
+"Deal 8 damage"
+],
+[
+"random_effect",
+"random enemy minions"
+]
+],
+"749952": [
+[
+"merge_attach",
+"Magnetic"
+],
+[
+"shield",
+"Divine Shield"
+],
+[
+"taunt",
+"Taunt"
+]
+],
+"748979": [
+[
+"copy",
+"Get a copy"
+],
+[
+"cost_reduction",
+"costs (1) less"
+],
+[
+"hero_power",
+"Hero Power"
+]
+],
+"750285": [
+[
+"selection",
+"Discover an Aberration"
+],
+[
+"transform",
+"Swaps type each turn"
+]
+],
+"749714": [
+[
+"generate_cards",
+"Get a Groundbreaker"
+],
+[
+"adjacency",
+"minion to their left"
+]
+],
+"749396": [
+[
+"taunt",
+"Taunt"
+],
+[
+"shield",
+"Divine Shield"
+]
+],
+"749847": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"repeat_trigger",
+"trigger all friendly Rallies"
+]
+],
+"748270": [
+[
+"variable_stats",
+"Has +X/+Y for each friendly Eternal Knight that died this game"
+],
+[
+"death_count",
+"Eternal Knight that died"
+]
+],
+"749299": [
+[
+"resource_gain",
+"get a Tavern Coin"
+]
+],
+"748556": [
+[
+"variable_stats",
+"Has +2/+2 for each Tavern spell"
+],
+[
+"count_payoff",
+"you've cast this game"
+]
+],
+"748925": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_spell",
+"After you cast a Tavern spell"
+],
+[
+"stat_gain",
+"+1/+1"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"748221": [
+[
+"quests",
+"Quest"
+],
+[
+"alt_wincon",
+"Win the game"
+]
+],
+"749330": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"generate_cards",
+"Get two random X-Cost Tavern spells"
+],
+[
+"random_effect",
+"random"
+]
+],
+"748320": [
+[
+"in_hand_buff",
+"While this is in your hand"
+],
+[
+"on_ally_play",
+"after you play a Murloc"
+],
+[
+"stat_gain",
+"gain +X/+Y"
+]
+],
+"748344": [
+[
+"death_trigger",
+"After a friendly Beast dies"
+],
+[
+"permanent_growth",
+"+1 Health permanently"
+]
+],
+"749348": [
+[
+"death_count",
+"Avenge (4)"
+],
+[
+"resource_gain",
+"Gain a free Refresh"
+]
+],
+"749296": [
+[
+"merge_attach",
+"Magnetize"
+],
+[
+"stat_gain",
+"+X/+Y"
+]
+],
+"748696": [
+[
+"death_trigger",
+"When another friendly Elemental dies"
+],
+[
+"stat_gain",
+"gain its maximum stats"
+]
+],
+"749098": [
+[
+"turn_end",
+"At the end of each turn"
+],
+[
+"stat_gain",
+"+2 Attack this game"
+]
+],
+"748576": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"+2/+3"
+],
+[
+"random_effect",
+"random friendly minion"
+],
+[
+"in_hand_buff",
+"a minion in your hand"
+]
+],
+"748057": [
+[
+"stat_gain",
+"+2/+2"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"748181": [
+[
+"steal",
+"Steal all cards"
+],
+[
+"cost_reduction",
+"costs (1) less"
+]
+],
+"748953": [
+[
+"stat_gain",
+"+Y/+Y"
+],
+[
+"temporary_effect",
+"until next turn"
+],
+[
+"count_payoff",
+"spells you've cast this game"
+]
+],
+"749997": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"stat_gain",
+"Set this minion's Attack and Health"
+],
+[
+"stat_condition",
+"highest in the battlefield"
+]
+],
+"748755": [
+[
+"board_limit",
+"doesn't fit in your warband"
+],
+[
+"stat_gain",
+"+5 Attack"
+]
+],
+"750217": [
+[
+"permanent_growth",
+"+1 Health permanently"
+]
+]
+}

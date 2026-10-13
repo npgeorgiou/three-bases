@@ -1,0 +1,259 @@
+{
+"794701": [
+[
+"activated",
+"they can declare a Chainsaw Attack Special Action"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"piercing",
+"applying a +3 modifier to the Armour Roll"
+],
+[
+"friendly_fire",
+"the Chainsaw will Kick-back and this player is Knocked Down instead"
+],
+[
+"debuff",
+"a +3 modifier is applied when the opposition Coach makes an Armour Roll for this player"
+]
+],
+"794704": [
+[
+"activated",
+"they can declare a Hypnotic Gaze Special Action"
+],
+[
+"movement",
+"first allowed to make a Move Action"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"suppress",
+"becomes Distracted"
+]
+],
+"794706": [
+[
+"activated",
+"they can declare a Kick Team-mate Special Action"
+],
+[
+"play_restriction",
+"only one player can declare this Special Action each Turn"
+],
+[
+"friendly_fire",
+"make an Injury Roll for the team-mate being kicked"
+]
+],
+"794707": [],
+"794708": [],
+"794709": [
+[
+"turn_start",
+"During the Start of Drive Sequence"
+],
+[
+"random_effect",
+"D3"
+],
+[
+"free_play",
+"set up and additional D3 Lineman players from their Reserves Box on the pitch"
+],
+[
+"board_limit",
+"more than the usual maximum of 11 players on the pitch"
+]
+],
+"794710": [
+[
+"turn_end",
+"At the end of each of the opposition's Turns"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"untap",
+"the Prone player may immediately stand up"
+]
+],
+"794713": [
+[
+"activated",
+"they can declare a Projectile Vomit Special Action"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"damage",
+"make an Armour Roll for the selected player"
+],
+[
+"friendly_fire",
+"this player covers themselves in acidic bile"
+]
+],
+"794714": [
+[
+"random_effect",
+"they must roll a D6"
+],
+[
+"assists_support",
+"Standing team-mates who are not Distracted"
+]
+],
+"794717": [
+[
+"activated",
+"they can declare a Stab Special Action"
+],
+[
+"damage",
+"make an Armour Roll for the selected player"
+]
+],
+"794719": [
+[
+"movement",
+"they may choose not to Scatter before landing"
+],
+[
+"random_effect",
+"Roll a D6 to determine the direction"
+]
+],
+"794720": [
+[
+"random_effect",
+"they must roll a D6"
+],
+[
+"immobilize",
+"may not leave their current square for any reason"
+],
+[
+"immunity",
+"cannot be Pushed Back"
+]
+],
+"794721": [
+[
+"buff",
+"apply a +1 modifier to the roll for standing up"
+],
+[
+"assists_support",
+"for each Open Standing team-mate adjacent to this player"
+],
+[
+"condition_count",
+"for each Open Standing team-mate"
+]
+],
+"794722": [
+[
+"buff",
+"apply a +1 modifier to the Agility Test when attempting to Dodge"
+]
+],
+"794724": [
+[
+"random_effect",
+"they must roll a D6"
+]
+],
+"794725": [],
+"794726": [
+[
+"tribal",
+"the same keyword as that shown in brackets"
+]
+],
+"794727": [
+[
+"turn_end",
+"At the end of a Drive"
+],
+[
+"self_destruct",
+"they are Sent-off for committing a Foul"
+]
+],
+"794729": [
+[
+"deckbuilding_effect",
+"must be hired as a pair"
+],
+[
+"assists_support",
+"Marked by both Dribl & Drull"
+],
+[
+"buff",
+"apply a +1 modifier to the roll"
+]
+],
+"794730": [
+[
+"traits_quirks",
+"Niggling Injury"
+],
+[
+"stacking_keyword",
+"for each Niggling Injury"
+],
+[
+"debuff",
+"apply a +1 modifier to the roll for each Niggling Injury"
+]
+],
+"794732": [
+[
+"random_effect",
+"roll a D6"
+],
+[
+"condition_count",
+"equal to or lower than the player's number of additional Skills"
+],
+[
+"upkeep",
+"you must spend gold pieces from your team's Treasury"
+],
+[
+"permanent_loss",
+"the player is removed from your Team Draft List"
+]
+],
+"794734": [
+[
+"resource_gain",
+"will earn 2 SPP"
+]
+],
+"794736": [
+[
+"resource_gain",
+"will earn 1 SPP"
+]
+],
+"794737": [
+[
+"cost_reduction",
+"discounted"
+]
+]
+}

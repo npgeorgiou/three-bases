@@ -1,0 +1,4473 @@
+{
+"760827": [
+[
+"shield",
+"Shields block damage"
+],
+[
+"immunity",
+"prevent new negative status effects"
+]
+],
+"760828": [
+[
+"immunity",
+"cannot be set on Fire"
+]
+],
+"760829": [
+[
+"movement",
+"Flying units can be positioned at any terrain tile"
+],
+[
+"immunity",
+"cannot be waterlogged"
+]
+],
+"760830": [
+[
+"temporary_buff",
+"+2 Move this turn"
+]
+],
+"760831": [
+[
+"damage_reduction",
+"reduced by 1"
+]
+],
+"760832": [
+[
+"immunity",
+"unaffected by Smoke"
+]
+],
+"760834": [
+[
+"debuff",
+"Weapon damage against this unit is doubled"
+],
+[
+"silence",
+"Natural Armor is disabled"
+]
+],
+"760835": [
+[
+"stat_gain",
+"damage is increased by 1"
+],
+[
+"heal",
+"will heal 2 points"
+]
+],
+"760836": [
+[
+"damage_over_time",
+"take 1 damage at the start of every turn"
+],
+[
+"turn_start",
+"start of every turn"
+]
+],
+"760837": [
+[
+"disable",
+"unable to move or attack"
+],
+[
+"immunity",
+"Any damage to a frozen unit is negated"
+]
+],
+"760839": [
+[
+"immobilize",
+"cannot move"
+]
+],
+"760842": [
+[
+"suppress",
+"cannot attack or repair"
+]
+],
+"760843": [
+[
+"suppress",
+"Weapons do not work"
+]
+],
+"760846": [],
+"760847": [
+[
+"stealth",
+"hide underground"
+],
+[
+"on_damaged",
+"after taking one or more damage"
+]
+],
+"760848": [
+[
+"death_trigger",
+"Explodes on death"
+],
+[
+"aoe_damage",
+"dealing 1 damage to adjacent tiles"
+],
+[
+"piercing",
+"ignores Armor"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760849": [
+[
+"aura",
+"providing Armor to all Vek"
+],
+[
+"damage_reduction",
+"reducing incoming weapon damage by 1"
+]
+],
+"760850": [
+[
+"immunity",
+"Immune to water"
+]
+],
+"760851": [
+[
+"friendly_fire",
+"1 damage all friendly units"
+]
+],
+"760852": [
+[
+"aura",
+"providing +1 HP to all Vek"
+]
+],
+"760853": [
+[
+"movement",
+"walk in Water"
+]
+],
+"760854": [
+[
+"aura",
+"enhancing all Vek"
+],
+[
+"regeneration",
+"regeneration"
+],
+[
+"death_trigger",
+"explode on death"
+]
+],
+"760855": [
+[
+"regeneration",
+"healing all Vek 1 point every turn"
+]
+],
+"760856": [
+[
+"on_damaged",
+"If damaged"
+],
+[
+"shield",
+"Shield itself"
+],
+[
+"delayed",
+"prepare to heal"
+]
+],
+"760857": [
+[
+"immunity",
+"Cannot be moved by any weapon effect"
+]
+],
+"760858": [
+[
+"summon",
+"Spawns two Medium Goos"
+],
+[
+"death_trigger",
+"on death"
+]
+],
+"760859": [],
+"760860": [
+[
+"immunity",
+"avoids mines"
+]
+],
+"760861": [
+[
+"forced_movement",
+"Pull target towards you 1 tile"
+],
+[
+"protection",
+"Shield tiles from damage"
+],
+[
+"exhaust",
+"2 uses per battle"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"760862": [
+[
+"movement",
+"Fly over a target"
+]
+],
+"760863": [
+[
+"ranged",
+"Fires a powerful projectile"
+],
+[
+"damage",
+"damages and pushes its target"
+],
+[
+"forced_movement",
+"pushes its target"
+]
+],
+"760864": [
+[
+"forced_movement",
+"toss it behind you"
+],
+[
+"damage_reduction",
+"reduced by 1"
+]
+],
+"760865": [
+[
+"ranged",
+"Powerful artillery strike"
+],
+[
+"damage",
+"damaging a single tile"
+],
+[
+"multi_target_attack",
+"pushing adjacent tiles"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+]
+],
+"760866": [
+[
+"friendly_fire",
+"friendly fire ON"
+],
+[
+"upgrade",
+"Most weapons come with an upgrade"
+]
+],
+"760867": [
+[
+"suppress",
+"Units cannot attack in Water"
+],
+[
+"terrain",
+"Most non-flying enemies die in Water"
+]
+],
+"760869": [
+[
+"deckbuilding_effect",
+"determine the Mechs you can take"
+],
+[
+"random_effect",
+"A Random Squad is created out of all the unlocked Mechs"
+]
+],
+"760870": [
+[
+"on_damaged",
+"If damaged"
+],
+[
+"damage_over_time",
+"Lights units on Fire"
+],
+[
+"terrain",
+"Forest Tile"
+]
+],
+"760871": [
+[
+"quests",
+"bonus objective is to defend this structure"
+]
+],
+"760872": [
+[
+"delayed",
+"will become Water"
+],
+[
+"turn_start",
+"start of the enemy turn"
+]
+],
+"760873": [
+[
+"life_track",
+"Your Power Grid is reduced"
+],
+[
+"saving_throws",
+"chance to resist damage"
+],
+[
+"terrain",
+"Civilian Building"
+]
+],
+"760874": [
+[
+"terrain",
+"Mountain Tile"
+]
+],
+"760875": [
+[
+"telegraphed_threats",
+"Vek will emerge here next turn"
+],
+[
+"damage",
+"will take one damage"
+],
+[
+"spawn_blocking",
+"Any unit blocking this space"
+]
+],
+"760876": [
+[
+"damage",
+"damaging and pushing it"
+],
+[
+"forced_movement",
+"damaging and pushing it"
+]
+],
+"760877": [
+[
+"ranged",
+"Artillery weapon"
+],
+[
+"forced_movement",
+"pulls its target towards you"
+],
+[
+"aura",
+"Enemies do +1 Damage against other enemies"
+]
+],
+"760878": [
+[
+"summon",
+"spawned by other Vek"
+],
+[
+"aura",
+"provide passive bonuses to other Vek"
+],
+[
+"telegraphed_threats",
+"prepare to attack it"
+],
+[
+"boss_phases",
+"Hive Leaders, bosses"
+]
+],
+"760879": [
+[
+"damage",
+"deal 3 damage"
+],
+[
+"forced_movement",
+"push the target"
+],
+[
+"area_templates",
+"charges forward in a line"
+]
+],
+"760880": [
+[
+"ranged",
+"shoots projectiles in a direct line"
+],
+[
+"damage",
+"dealing 3 damage"
+]
+],
+"760881": [
+[
+"damage",
+"deal 1 damage"
+],
+[
+"forced_movement",
+"push the target"
+],
+[
+"area_templates",
+"charges forward in a line"
+]
+],
+"760882": [
+[
+"ranged",
+"shoots projectiles in a direct line"
+],
+[
+"damage",
+"dealing 1 damage"
+]
+],
+"760883": [
+[
+"damage",
+"Stab the target for 1 damage"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"760884": [
+[
+"ranged",
+"Lob an artillery shot"
+],
+[
+"damage",
+"for 1 damage"
+],
+[
+"ranged",
+"shoot over any tiles in between them and their target"
+]
+],
+"760885": [
+[
+"immobilize",
+"restrict units' mobility with webbing"
+],
+[
+"damage",
+"stab it for 1 damage"
+],
+[
+"delayed",
+"preparing to stab it"
+]
+],
+"760887": [
+[
+"random_effect",
+"chance for a pod to appear"
+],
+[
+"quests",
+"Protect the Time Pod"
+],
+[
+"resource_gain",
+"always grants a Reactor Core"
+],
+[
+"items_consumables",
+"a Pilot, a Weapon, or a piece of Passive equipment"
+]
+],
+"760890": [
+[
+"resource_gain",
+"+2 bonus XP"
+],
+[
+"on_kill",
+"per kill"
+]
+],
+"760892": [
+[
+"movement",
+"how many tiles a Mech can move each turn"
+]
+],
+"760893": [],
+"760894": [
+[
+"life_track",
+"When it reaches zero, the player loses"
+],
+[
+"resource_gain",
+"Grid Power can be regained"
+],
+[
+"saving_throws",
+"chance that a building tile will resist damage"
+],
+[
+"run_structure",
+"persist between Islands"
+]
+],
+"760895": [
+[
+"resource_gain",
+"earned for successfully completing objectives"
+],
+[
+"shop_gold",
+"Corporate Store"
+],
+[
+"resource_conversion",
+"Grid Power can be purchased for 1 Corporate Reputation"
+]
+],
+"760897": [
+[
+"shield",
+"Mech starts every mission with a Shield"
+]
+],
+"760898": [
+[
+"damage_reduction",
+"Armored"
+]
+],
+"760899": [
+[
+"forced_movement",
+"Push adjacent tiles when repairing"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760900": [
+[
+"buff",
+"Mech gains Flying"
+]
+],
+"760901": [
+[
+"stat_gain",
+"+3 Move"
+],
+[
+"turn_number",
+"first turn of every mission"
+]
+],
+"760903": [
+[
+"movement",
+"Mech can move through enemy units"
+]
+],
+"760904": [
+[
+"immunity",
+"unaffected by Webbing and Smoke"
+]
+],
+"760905": [
+[
+"placement_rules",
+"Deploy anywhere on the map"
+],
+[
+"damage",
+"damaging adjacent enemies"
+],
+[
+"adjacency",
+"adjacent enemies"
+]
+],
+"760906": [
+[
+"multi_attack",
+"Mech can act twice if it does not move"
+]
+],
+"760907": [
+[
+"extra_turn",
+"Move again after shooting"
+]
+],
+"760908": [
+[
+"damage",
+"2 damage melee attack"
+]
+],
+"760909": [
+[
+"resource_gain",
+"+1 Reactor Core"
+],
+[
+"stat_loss",
+"Reduce Mech HP to 1"
+],
+[
+"shield",
+"Gain Shield every turn"
+]
+],
+"760910": [
+[
+"stat_gain",
+"+3 Health"
+],
+[
+"immunity",
+"immune to Fire"
+]
+],
+"760911": [
+[
+"shield",
+"absorb any non-fatal damage once"
+],
+[
+"immunity",
+"prevent status effects"
+]
+],
+"760912": [
+[
+"damage",
+"damaging and pushing it"
+],
+[
+"forced_movement",
+"damaging and pushing it"
+],
+[
+"upgrade",
+"Upgrade: Dash"
+]
+],
+"760913": [
+[
+"ranged",
+"Fires a powerful projectile"
+],
+[
+"damage",
+"Deals 1 damage"
+],
+[
+"forced_movement",
+"pushes its target"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760914": [
+[
+"ranged",
+"Powerful artillery strike"
+],
+[
+"damage",
+"damaging a single tile"
+],
+[
+"multi_target_attack",
+"pushing adjacent tiles"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: Buildings Immune"
+]
+],
+"760915": [
+[
+"ranged",
+"Cluster Artillery"
+],
+[
+"damage",
+"damaging and pushing adjacent tiles"
+],
+[
+"forced_movement",
+"damaging and pushing adjacent tiles"
+],
+[
+"protection",
+"Protect a tile"
+]
+],
+"760916": [
+[
+"ranged",
+"Fires a pushing artillery"
+],
+[
+"forced_movement",
+"pushing artillery"
+],
+[
+"terrain",
+"creates Smoke behind the shooter"
+],
+[
+"damage_over_time",
+"All Smoke deals damage to enemy units every turn"
+]
+],
+"760917": [
+[
+"forced_movement",
+"Push all adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760918": [
+[
+"forced_movement",
+"Push target tile"
+],
+[
+"damage_over_time",
+"light tiles on Fire"
+],
+[
+"damage",
+"Damage units already on Fire"
+],
+[
+"immunity",
+"All Mechs are immune to Fire"
+]
+],
+"760919": [
+[
+"ranged",
+"Vulcan Artillery"
+],
+[
+"damage_over_time",
+"Light the target on Fire"
+],
+[
+"forced_movement",
+"push adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760920": [
+[
+"swap",
+"Swap places with a nearby tile"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"760921": [
+[
+"multi_target_attack",
+"Fire a piercing beam"
+],
+[
+"variable_stats",
+"decreases in damage the further it goes"
+]
+],
+"760922": [
+[
+"movement",
+"Fly in a line"
+],
+[
+"forced_movement",
+"pushing it"
+],
+[
+"friendly_fire",
+"hurting yourself"
+]
+],
+"760925": [
+[
+"disable",
+"Freeze yourself and the target"
+],
+[
+"friendly_fire",
+"Freeze yourself"
+]
+],
+"760926": [
+[
+"multi_target_attack",
+"Chain damage through adjacent targets"
+],
+[
+"adjacency",
+"adjacent targets"
+]
+],
+"760927": [
+[
+"forced_movement",
+"pull Mech towards objects, or units to the Mech"
+],
+[
+"damage_reduction",
+"reduced by 1"
+]
+],
+"760928": [
+[
+"ranged",
+"Launch a rock at a tile"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760929": [
+[
+"movement",
+"Leap to a tile"
+],
+[
+"friendly_fire",
+"damaging self"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760930": [
+[
+"damage",
+"Powerful projectile"
+],
+[
+"friendly_fire",
+"causes damage to shooter as well as target"
+]
+],
+"760931": [
+[
+"debuff",
+"applies A.C.I.D."
+],
+[
+"forced_movement",
+"and pushes"
+],
+[
+"heal",
+"Mechs heal 1 damage"
+],
+[
+"on_kill",
+"when they deal a killing blow"
+]
+],
+"760932": [
+[
+"movement",
+"Dash across the map"
+],
+[
+"damage",
+"damaging and pushing the target tile"
+],
+[
+"forced_movement",
+"damaging and pushing the target tile"
+]
+],
+"760933": [
+[
+"ranged",
+"Throw needles at the enemy"
+],
+[
+"forced_movement",
+"pushing the furthest hit tile"
+]
+],
+"760934": [
+[
+"ranged",
+"Artillery attack"
+],
+[
+"damage",
+"damages a tile"
+],
+[
+"forced_movement",
+"pushes adjacent tiles away"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760935": [
+[
+"ranged",
+"Throw a rock at a chosen target"
+],
+[
+"target_choice",
+"chosen target"
+],
+[
+"summon",
+"Rock remains as an obstacle"
+]
+],
+"760936": [
+[
+"passive",
+"constant benefit to all Mechs in the squad"
+],
+[
+"upgrade",
+"Some Passives come with an upgrade or two"
+]
+],
+"760937": [
+[
+"immunity",
+"All Mechs are immune to Fire"
+]
+],
+"760938": [
+[
+"damage_over_time",
+"All Smoke deals damage to enemy units every turn"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760939": [
+[
+"heal",
+"Mechs heal 1 damage"
+],
+[
+"on_kill",
+"when they deal a killing blow"
+],
+[
+"upgrade",
+"Upgrade: +1 Heal"
+]
+],
+"760940": [
+[
+"stat_gain",
+"All Mechs gain +1 HP"
+],
+[
+"upgrade",
+"Upgrade: +1 Health"
+]
+],
+"760941": [
+[
+"heal",
+"Repairing one Mech will affect all Mechs"
+],
+[
+"revive",
+"bring the Mech back online and save the pilot"
+]
+],
+"760942": [
+[
+"damage_prevention",
+"no longer take damage when blocking emerging Vek"
+],
+[
+"spawn_blocking",
+"blocking emerging Vek"
+]
+],
+"760944": [
+[
+"stat_gain",
+"gain +1 move"
+],
+[
+"adjacency",
+"start their turn adjacent to each other"
+],
+[
+"temporary_buff",
+"temporary status effect"
+],
+[
+"upgrade",
+"Upgrade: +1 Movement"
+]
+],
+"760945": [
+[
+"cheat_death",
+"All Pilots survive death"
+]
+],
+"760946": [
+[
+"aura",
+"Enemies do +1 Damage against other enemies"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760947": [
+[
+"spell_power",
+"All Vek take +1 damage from Bumps"
+],
+[
+"collision_damage",
+"Bumps"
+],
+[
+"spawn_blocking",
+"blocking emerging Vek"
+]
+],
+"760948": [
+[
+"low_life",
+"If Power Grid is reduced to 1"
+],
+[
+"shield",
+"all buildings gain a Shield"
+]
+],
+"760949": [
+[
+"multi_target_attack",
+"Chain damage through adjacent targets"
+],
+[
+"adjacency",
+"adjacent targets"
+],
+[
+"upgrade",
+"Upgrade: Building Chain"
+]
+],
+"760950": [
+[
+"multi_target_attack",
+"Fire a piercing beam"
+],
+[
+"variable_stats",
+"decreases in damage the further it goes"
+],
+[
+"upgrade",
+"Upgrade: Ally Immune"
+],
+[
+"protection",
+"Friendly units will not take damage"
+]
+],
+"760951": [
+[
+"damage",
+"Damage 2"
+],
+[
+"forced_movement",
+"flipping its attack direction"
+],
+[
+"upgrade",
+"Upgrade: Gain Shield"
+],
+[
+"shield",
+"Gain a Shield when bashing"
+]
+],
+"760952": [
+[
+"ranged",
+"Throw a rock at a chosen target"
+],
+[
+"target_choice",
+"chosen target"
+],
+[
+"summon",
+"Rock remains as an obstacle"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760953": [
+[
+"damage",
+"damaging and pushing it to the left"
+],
+[
+"forced_movement",
+"pushing it to the left"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760954": [
+[
+"damage",
+"Punch an adjacent tile"
+],
+[
+"ranged",
+"launch as a projectile"
+],
+[
+"upgrade",
+"Upgrade: Rocket"
+]
+],
+"760955": [
+[
+"forced_movement",
+"toss it behind you"
+],
+[
+"upgrade",
+"Upgrade: Ally Immune"
+],
+[
+"protection",
+"Ally Immune"
+]
+],
+"760956": [
+[
+"forced_movement",
+"Push target tile"
+],
+[
+"damage_over_time",
+"light tiles on Fire"
+],
+[
+"damage",
+"deals 2 damage to the target"
+],
+[
+"condition_life",
+"If the target is on Fire"
+],
+[
+"upgrade",
+"Upgrade: +1 Range"
+]
+],
+"760957": [
+[
+"aoe_damage",
+"Blast (and push) all adjacent tiles"
+],
+[
+"forced_movement",
+"Blast (and push) all adjacent tiles"
+],
+[
+"adjacency",
+"all adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760958": [
+[
+"multi_target_attack",
+"Stab multiple tiles"
+],
+[
+"forced_movement",
+"push the farthest hit tile"
+],
+[
+"damage_over_time",
+"Adds A.C.I.D. to the furthest hit enemy"
+],
+[
+"upgrade",
+"Upgrade: A.C.I.D. Tip"
+]
+],
+"760959": [
+[
+"movement",
+"Leap to a tile"
+],
+[
+"friendly_fire",
+"damaging self"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage Each"
+]
+],
+"760960": [
+[
+"aoe_damage",
+"Damage and Push all adjacent tiles"
+],
+[
+"forced_movement",
+"Push all adjacent tiles to the left"
+],
+[
+"friendly_fire",
+"1 self damage to the user"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: -1 Self Damage"
+]
+],
+"760961": [
+[
+"multi_target_attack",
+"damage and push 3 tiles"
+],
+[
+"forced_movement",
+"damage and push 3 tiles"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760962": [
+[
+"damage",
+"dealing huge damage"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760963": [
+[
+"movement",
+"Fly over a target"
+],
+[
+"damage",
+"Deals 1 damage to the target"
+],
+[
+"placement_rules",
+"must have an empty tile to land on"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760964": [
+[
+"multi_target_attack",
+"Fire two projectiles in opposite directions"
+],
+[
+"damage",
+"Deals 1 damage to both targets"
+],
+[
+"forced_movement",
+"Pushes targets"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760965": [
+[
+"ranged",
+"Shoot a projectile"
+],
+[
+"evasion",
+"phases through objects"
+],
+[
+"damage",
+"Deals 1 damage to target"
+],
+[
+"forced_movement",
+"Pushes target"
+],
+[
+"shield",
+"Applies a Shield to buildings"
+],
+[
+"upgrade",
+"Upgrade: Phase Shield"
+]
+],
+"760966": [
+[
+"forced_movement",
+"pull Mech towards immovable objects, or units to the Mech"
+],
+[
+"shield",
+"it gives them a Shield"
+],
+[
+"upgrade",
+"Upgrade: Shield Ally"
+]
+],
+"760967": [
+[
+"no_damage_output",
+"non-damaging projectile"
+],
+[
+"forced_movement",
+"pushes tiles around the target"
+],
+[
+"ranged",
+"Fires a non-damaging projectile"
+]
+],
+"760968": [
+[
+"variable_stats",
+"does more damage to targets that are further away"
+],
+[
+"damage",
+"Deals 0 damage to adjacent targets"
+],
+[
+"forced_movement",
+"Pushes the target"
+],
+[
+"upgrade",
+"Upgrade: +1 Max Damage"
+]
+],
+"760969": [
+[
+"multi_target_attack",
+"hits 2 tiles"
+],
+[
+"forced_movement",
+"pushing them in opposite directions"
+],
+[
+"damage",
+"Deals 1 damage to both targets"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760970": [
+[
+"movement",
+"Fly in a line"
+],
+[
+"forced_movement",
+"pushing it"
+],
+[
+"friendly_fire",
+"hurting yourself"
+],
+[
+"damage",
+"Deals 2 damage to the target"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage Each"
+]
+],
+"760971": [
+[
+"damage",
+"Deals 2 damage to the target"
+],
+[
+"friendly_fire",
+"1 self damage to the user"
+],
+[
+"forced_movement",
+"Pushes target"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage Each"
+]
+],
+"760972": [
+[
+"ranged",
+"Fire a projectile"
+],
+[
+"damage",
+"heavily damages a target"
+],
+[
+"forced_movement",
+"pushes adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760973": [
+[
+"multi_target_attack",
+"the targeted tile, and the tiles to its left and right"
+],
+[
+"damage",
+"damages and pushes the targeted tile"
+],
+[
+"forced_movement",
+"damages and pushes the targeted tile"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760974": [
+[
+"movement",
+"Leap over any distance"
+],
+[
+"aoe_damage",
+"dropping a bomb on each tile you pass"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760975": [
+[
+"movement",
+"Dash in a line"
+],
+[
+"forced_movement",
+"pushing adjacent tiles away"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760976": [
+[
+"ranged",
+"Launch a rock at a tile"
+],
+[
+"forced_movement",
+"pushing tiles to the left and right"
+],
+[
+"damage",
+"deal 2 damage"
+],
+[
+"summon",
+"stay in the tile as a 1 HP obstacle"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760977": [
+[
+"ranged",
+"Protect a tile"
+],
+[
+"damage",
+"damaging and pushing adjacent tiles"
+],
+[
+"forced_movement",
+"damaging and pushing adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: Buildings Immune"
+]
+],
+"760978": [
+[
+"ranged",
+"Fires a pushing artillery"
+],
+[
+"forced_movement",
+"pushing artillery"
+],
+[
+"terrain",
+"creates Smoke behind the shooter"
+],
+[
+"damage",
+"Deals 2 damage to the target"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760979": [
+[
+"damage_over_time",
+"Light the target on Fire"
+],
+[
+"forced_movement",
+"push adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: Backburn"
+]
+],
+"760980": [
+[
+"ranged",
+"Artillery with potential to launch multiple small projectiles"
+],
+[
+"multi_target_attack",
+"multiple small projectiles"
+],
+[
+"damage",
+"Damage 1"
+],
+[
+"upgrade",
+"Upgrade: +2 Tiles"
+]
+],
+"760981": [
+[
+"multi_target_attack",
+"damage to two tiles"
+],
+[
+"forced_movement",
+"pushing one forwards and one backwards"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"760982": [
+[
+"disable",
+"Freeze yourself and the target"
+],
+[
+"friendly_fire",
+"Freeze yourself"
+]
+],
+"760983": [
+[
+"ranged",
+"Artillery shot"
+],
+[
+"suppress",
+"applies Smoke"
+],
+[
+"forced_movement",
+"pushes two adjacent tiles"
+],
+[
+"adjacency",
+"two adjacent tiles"
+]
+],
+"760984": [
+[
+"ranged",
+"Artillery attack"
+],
+[
+"damage_over_time",
+"sets 5 tiles on Fire"
+],
+[
+"friendly_fire",
+"Deals 1 self-damage to the shooter"
+],
+[
+"upgrade",
+"Upgrade: No Self Damage"
+]
+],
+"760985": [
+[
+"aoe_damage",
+"damages everything it passes"
+],
+[
+"damage",
+"Deals 2 damage to all tiles"
+],
+[
+"friendly_fire",
+"Deals 1 self-damage to the shooter"
+],
+[
+"upgrade",
+"Upgrade: Buildings Immune"
+]
+],
+"760986": [
+[
+"aoe_damage",
+"damages a large area"
+],
+[
+"area_templates",
+"five targets in a cross shape"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760987": [
+[
+"multi_target_attack",
+"Launch two missiles"
+],
+[
+"damage",
+"Deals 3 damage to both targets"
+],
+[
+"forced_movement",
+"damaging and pushing two targets"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760988": [
+[
+"ranged",
+"Fires a projectile"
+],
+[
+"forced_movement",
+"pulling target towards you 1 tile"
+]
+],
+"760989": [
+[
+"ranged",
+"Artillery weapon"
+],
+[
+"forced_movement",
+"pulls its target towards you"
+]
+],
+"760990": [
+[
+"forced_movement",
+"Push all adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"shield",
+"Creates a personal Shield when used"
+],
+[
+"upgrade",
+"Upgrade: Shield Self"
+]
+],
+"760991": [
+[
+"swap",
+"Swap places with a nearby tile"
+],
+[
+"upgrade",
+"Upgrade: +1 Range"
+]
+],
+"760992": [
+[
+"ranged",
+"Fire a projectile"
+],
+[
+"debuff",
+"applies A.C.I.D."
+],
+[
+"forced_movement",
+"and pushes"
+]
+],
+"760993": [
+[
+"ranged",
+"Fire a projectile"
+],
+[
+"forced_movement",
+"flips a target's attack direction"
+]
+],
+"760994": [
+[
+"suppress",
+"Surround yourself with Smoke to defend against nearby enemies"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: Ally Immune"
+]
+],
+"760995": [
+[
+"protection",
+"Shield tiles from damage"
+],
+[
+"exhaust",
+"2 uses per battle"
+],
+[
+"ranged",
+"launched as artillery projectile"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760996": [
+[
+"damage_over_time",
+"applies Fire in a line"
+],
+[
+"area_templates",
+"in a line"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760997": [
+[
+"disable",
+"Freezes everything in a line"
+],
+[
+"area_templates",
+"in a line"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760998": [
+[
+"protection",
+"Apply a Shield on nearby tiles"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Size"
+]
+],
+"760999": [
+[
+"forced_movement",
+"Pushes all units in a line"
+],
+[
+"area_templates",
+"in a line"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: Unlimited Use"
+]
+],
+"761000": [
+[
+"movement",
+"Jump forward"
+],
+[
+"forced_movement",
+"push adjacent tiles away"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"761001": [
+[
+"movement",
+"Fly over the targets"
+],
+[
+"suppress",
+"dropping Smoke"
+],
+[
+"upgrade",
+"Upgrade: +1 Range"
+]
+],
+"761002": [
+[
+"disable",
+"Freeze the tile in front"
+],
+[
+"damage_over_time",
+"light the tile behind on Fire"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"761003": [
+[
+"self_destruct",
+"Mech explodes, killing self"
+],
+[
+"aoe_damage",
+"anything adjacent to Mech"
+],
+[
+"adjacency",
+"adjacent to Mech"
+],
+[
+"exhaust",
+"Single-use"
+]
+],
+"761004": [
+[
+"ranged",
+"air strike on a single tile anywhere on the map"
+],
+[
+"damage",
+"Deals 1 damage to the target tile"
+],
+[
+"forced_movement",
+"pushes surrounding tiles away"
+],
+[
+"exhaust",
+"Single-use"
+]
+],
+"761005": [
+[
+"suppress",
+"Drops Smoke on 5 tiles"
+],
+[
+"exhaust",
+"Single-use"
+]
+],
+"761006": [
+[
+"heal",
+"Heal all player units"
+],
+[
+"revive",
+"This includes disabled Mechs"
+],
+[
+"exhaust",
+"Single-use"
+]
+],
+"761007": [
+[
+"board_wipe",
+"hits every enemy on the map"
+],
+[
+"damage",
+"Damage 1"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"761008": [
+[
+"forced_movement",
+"Push all units in a single direction"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: Unlimited Uses"
+]
+],
+"761009": [
+[
+"disable",
+"Freeze yourself and nearby tiles"
+],
+[
+"friendly_fire",
+"Freeze yourself"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Size"
+]
+],
+"761010": [
+[
+"ranged",
+"Throw needles at the enemy"
+],
+[
+"forced_movement",
+"pushing the furthest hit tile"
+],
+[
+"damage",
+"Deals 1 damage to the target"
+],
+[
+"upgrade",
+"Upgrade: Range & Damage"
+]
+],
+"761011": [
+[
+"ranged",
+"Artillery attack"
+],
+[
+"damage",
+"damages a tile"
+],
+[
+"forced_movement",
+"pushes adjacent tiles away"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: +1 Tile"
+]
+],
+"761012": [
+[
+"quests",
+"specific objectives, such as protecting or destroying certain units and buildings"
+],
+[
+"resource_gain",
+"rewards a Reactor Core"
+],
+[
+"difficulty_modifiers",
+"High-threat detected"
+],
+[
+"shield",
+"Defensive shields are placed on random buildings"
+],
+[
+"run_structure",
+"A corporate island has five missions"
+]
+],
+"761013": [
+[
+"aura",
+"All other Vek receive +1 HP"
+],
+[
+"passive",
+"as long as the Psion is living"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"761014": [
+[
+"delayed",
+"After the end of that turn, a Strange Pod will fall from the sky"
+],
+[
+"information",
+"will appear undamaged during the mission preview"
+],
+[
+"items_consumables",
+"Strange Pod"
+]
+],
+"761015": [
+[
+"aura",
+"All other Vek have incoming weapon damage reduced by 1"
+],
+[
+"damage_reduction",
+"incoming weapon damage reduced by 1"
+],
+[
+"board_limit",
+"Psions can only spawn once per mission"
+]
+],
+"761016": [
+[
+"movement",
+"jump to their destination and avoid all obstacles"
+],
+[
+"immobilize",
+"Web a target"
+],
+[
+"damage",
+"stab it for 3 damage"
+],
+[
+"delayed",
+"preparing to stab it"
+],
+[
+"adjacency",
+"adjacent target"
+]
+],
+"761017": [
+[
+"aura",
+"All other Vek heal 1 at the start of their turn"
+],
+[
+"regeneration",
+"heal 1 at the start of their turn"
+],
+[
+"turn_start",
+"at the start of their turn"
+]
+],
+"761018": [
+[
+"ranged",
+"Projectile"
+],
+[
+"damage_over_time",
+"causes target to burn"
+],
+[
+"damage",
+"deals 1 damage"
+]
+],
+"761019": [
+[
+"ranged",
+"Stronger projectile"
+],
+[
+"damage_over_time",
+"causes target to burn"
+],
+[
+"damage",
+"deals 3 damage"
+]
+],
+"761020": [
+[
+"ranged",
+"Launch Rockets at 3 tiles"
+],
+[
+"multi_target_attack",
+"3 tiles dealing 1 damage to each"
+]
+],
+"761021": [
+[
+"ranged",
+"Launch Rockets at 3 tiles"
+],
+[
+"multi_target_attack",
+"3 tiles dealing 3 damage to each"
+]
+],
+"761022": [
+[
+"multi_target_attack",
+"Piercing beam"
+],
+[
+"variable_stats",
+"2 damage reduced by range"
+]
+],
+"761023": [
+[
+"multi_target_attack",
+"Piercing beam"
+],
+[
+"variable_stats",
+"4 damage reduced by range"
+]
+],
+"761024": [
+[
+"summon",
+"Deploy a single Freeze mine"
+],
+[
+"immunity",
+"This unit avoids mines"
+]
+],
+"761025": [
+[
+"summon",
+"Deploy a single Freeze mine"
+],
+[
+"immunity",
+"This unit avoids mines"
+]
+],
+"761026": [
+[
+"ranged",
+"Launch Rockets at 3 tiles"
+],
+[
+"multi_target_attack",
+"3 tiles dealing 2 damage to each"
+],
+[
+"shield",
+"this unit will Shield itself"
+],
+[
+"on_damaged",
+"If damaged"
+],
+[
+"delayed",
+"prepare to heal"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"summon",
+"always spawn with 2 other hostile Sentient Weapons"
+]
+],
+"761027": [
+[
+"summon",
+"spawning Blobs onto any tile"
+],
+[
+"delayed",
+"Blobs always explode last in the attack order"
+],
+[
+"adjacency",
+"damage all adjacent tiles for 1"
+],
+[
+"board_limit",
+"capped at one spawn per mission"
+]
+],
+"761028": [
+[
+"summon",
+"spawning Alpha Blobs onto any tile"
+],
+[
+"delayed",
+"Alpha Blobs always explode last in the attack order"
+],
+[
+"adjacency",
+"damage all adjacent tiles for 2"
+],
+[
+"board_limit",
+"capped at one spawn per mission"
+]
+],
+"761029": [
+[
+"self_destruct",
+"Explode, killing itself"
+],
+[
+"adjacency",
+"damaging adjacent tiles for 1 damage"
+],
+[
+"aoe_damage",
+"damaging adjacent tiles for 1 damage"
+]
+],
+"761030": [
+[
+"damage",
+"dealing 4 damage"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"summon",
+"Spawns two Medium Goos on death"
+],
+[
+"death_trigger",
+"on death"
+],
+[
+"boss_phases",
+"This boss Vek"
+]
+],
+"761031": [
+[
+"damage",
+"dealing 4 damage"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"summon",
+"Spawns two Small Goos on death"
+],
+[
+"death_trigger",
+"on death"
+]
+],
+"761032": [
+[
+"damage",
+"dealing 4 damage"
+],
+[
+"movement",
+"Massive units can walk in Water"
+]
+],
+"761033": [
+[
+"immobilize",
+"Web an adjacent target"
+],
+[
+"damage",
+"stab it for 1 damage"
+],
+[
+"delayed",
+"preparing to stab it"
+],
+[
+"debuff",
+"apply A.C.I.D."
+]
+],
+"761034": [
+[
+"immobilize",
+"Web an adjacent target"
+],
+[
+"damage",
+"stab it for 3 damage"
+],
+[
+"delayed",
+"preparing to stab it"
+]
+],
+"761035": [
+[
+"immobilize",
+"Web all targets"
+],
+[
+"multi_target_attack",
+"Web all targets"
+],
+[
+"damage",
+"deal 2 damage to adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"forced_movement",
+"this attack also pushes its target"
+],
+[
+"movement",
+"Massive units can walk in Water"
+]
+],
+"761036": [
+[
+"ranged",
+"Launch a volatile mass of goo"
+],
+[
+"damage",
+"dealing 1 damage"
+],
+[
+"debuff",
+"applying A.C.I.D."
+]
+],
+"761037": [
+[
+"multi_target_attack",
+"Launch goo projectiles in two directions"
+],
+[
+"damage",
+"dealing 4 damage with each"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"target_choice",
+"prioritise targeting two units"
+]
+],
+"761038": [
+[
+"movement",
+"jump to their destination and avoid all obstacles"
+],
+[
+"immobilize",
+"Web a target"
+],
+[
+"damage",
+"stab it for 5 damage"
+],
+[
+"delayed",
+"preparing to stab it"
+]
+],
+"761039": [
+[
+"damage",
+"dealing 3 damage"
+],
+[
+"forced_movement",
+"pushing target"
+],
+[
+"damage_over_time",
+"light every tile in the path on Fire"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"immunity",
+"it's immune to being drowned"
+]
+],
+"761040": [
+[
+"ranged",
+"Lob a powerful artillery shot"
+],
+[
+"damage",
+"for 3 damage"
+],
+[
+"ranged",
+"shoot over any tiles in between them and their target"
+]
+],
+"761041": [
+[
+"ranged",
+"Launch artillery attack on 2 tiles"
+],
+[
+"multi_target_attack",
+"2 tiles for 1 damage"
+],
+[
+"board_limit",
+"limited to two spawns"
+]
+],
+"761042": [
+[
+"ranged",
+"Launch artillery attack on 2 tiles"
+],
+[
+"multi_target_attack",
+"2 tiles for 3 damage"
+],
+[
+"board_limit",
+"limited to two spawns per mission"
+]
+],
+"761043": [
+[
+"ranged",
+"Launch a volatile mass of goo"
+],
+[
+"damage",
+"dealing 1 damage"
+],
+[
+"debuff",
+"applying A.C.I.D. on nearby units"
+],
+[
+"board_limit",
+"limited to two spawns"
+]
+],
+"761044": [
+[
+"ranged",
+"Launch a volatile mass of goo"
+],
+[
+"damage",
+"dealing 2 damage"
+],
+[
+"debuff",
+"applying A.C.I.D. on nearby units"
+],
+[
+"board_limit",
+"limited to two spawns per mission"
+]
+],
+"761045": [
+[
+"summon",
+"Create a defensive rock wall"
+],
+[
+"damage",
+"attacking adjacent tiles for 1 damage"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"board_limit",
+"limited to one spawn"
+]
+],
+"761046": [
+[
+"summon",
+"Create a defensive rock wall"
+],
+[
+"damage",
+"attacking adjacent tiles for 2 damage"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"board_limit",
+"limited to one spawn per mission"
+]
+],
+"761047": [
+[
+"damage",
+"Stab the target for 1 damage"
+],
+[
+"debuff",
+"apply A.C.I.D."
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"761048": [
+[
+"multi_target_attack",
+"Stab 2 tiles in front of the unit for 2 damage"
+],
+[
+"movement",
+"move freely through mountains, cities and the players units"
+],
+[
+"immunity",
+"It cannot be drowned"
+]
+],
+"761049": [
+[
+"multi_target_attack",
+"Stab three tiles in a row for 2 damage each"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"761050": [
+[
+"aura",
+"All other Vek will explode on death"
+],
+[
+"death_trigger",
+"explode on death"
+],
+[
+"aoe_damage",
+"dealing 1 damage to adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"761051": [
+[
+"friendly_fire",
+"All player units take 1 damage at the end of every turn"
+],
+[
+"turn_end",
+"at the end of every turn"
+],
+[
+"boss_phases",
+"capped at one spawn"
+]
+],
+"761052": [
+[
+"aura",
+"All other Vek gain +1 HP, Regeneration, and explode on death"
+],
+[
+"stat_gain",
+"+1 HP"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"death_trigger",
+"explode on death"
+]
+],
+"761053": [
+[
+"summon",
+"hatches into a Spiderling"
+],
+[
+"immobilize",
+"traps all surrounding entities in webs"
+],
+[
+"delayed",
+"will hatch into a Spiderling on the next turn"
+],
+[
+"board_limit",
+"limited to one spawn per mission"
+]
+],
+"761054": [
+[
+"summon",
+"hatches into a Spiderling"
+],
+[
+"immobilize",
+"traps all surrounding entities in webs"
+],
+[
+"delayed",
+"will hatch into a Spiderling on the next turn"
+],
+[
+"board_limit",
+"limited to one spawn per mission"
+]
+],
+"761055": [
+[
+"summon",
+"Throw out 2-3 Spiderling eggs"
+],
+[
+"random_effect",
+"onto random locations around the map"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"boss_phases",
+"can only appear in the boss mission"
+]
+],
+"761056": [
+[
+"self_destruct",
+"kill itself and spawn a Spiderling"
+],
+[
+"summon",
+"spawn a Spiderling"
+],
+[
+"death_trigger",
+"spawn eggs upon death"
+],
+[
+"immunity",
+"unaffected by Smoke"
+]
+],
+"761057": [
+[
+"damage",
+"Weak 1 damage attack against a single adjacent target"
+],
+[
+"fodder",
+"very weak 1-health, 1-damage enemy"
+],
+[
+"board_presence",
+"quickly overwhelm the player with numbers"
+]
+],
+"761058": [
+[
+"damage",
+"Weak 2 damage attack against a single adjacent target"
+]
+],
+"761059": [
+[
+"multi_target_attack",
+"Slam against 3 tiles in a row"
+],
+[
+"stealth",
+"hide underground"
+],
+[
+"on_damaged",
+"after taking one or more damage"
+],
+[
+"immunity",
+"Cannot be moved by any weapon effect"
+],
+[
+"movement",
+"bypass any obstacles"
+]
+],
+"761060": [
+[
+"multi_target_attack",
+"Slam against 3 tiles in a row"
+],
+[
+"stealth",
+"hide underground"
+],
+[
+"on_damaged",
+"after taking one or more damage"
+],
+[
+"immunity",
+"Cannot be moved by any weapon effect"
+],
+[
+"movement",
+"bypass any obstacles"
+]
+],
+"761062": [
+[
+"terrain",
+"Ground units pushed in will be destroyed"
+]
+],
+"761063": [
+[
+"terrain",
+"Turns into Water when destroyed"
+]
+],
+"761064": [
+[
+"damage_over_time",
+"take 1 damage near the start of their turn"
+],
+[
+"turn_start",
+"near the start of their turn"
+],
+[
+"terrain",
+"A damaged Forest Tile will turn into a burning Forest tile"
+]
+],
+"761065": [
+[
+"terrain",
+"If damaged, turns into Smoke"
+],
+[
+"on_damaged",
+"If damaged"
+],
+[
+"suppress",
+"Units in Smoke cannot attack or repair"
+]
+],
+"761066": [
+[
+"debuff",
+"Inflicts A.C.I.D. on the 1st unit that steps on this space"
+],
+[
+"terrain",
+"A.C.I.D. Pool"
+]
+],
+"761067": [
+[
+"terrain",
+"Behaves like Water"
+],
+[
+"debuff",
+"inflicts A.C.I.D. on surviving units"
+]
+],
+"761068": [
+[
+"movement",
+"Dash across the map"
+],
+[
+"damage",
+"Deals 1 damage to the target"
+],
+[
+"forced_movement",
+"damaging and pushing the target tile"
+],
+[
+"upgrade",
+"Upgrade: Smoke Behind"
+]
+],
+"761069": [
+[
+"summon",
+"Deploy a Pull-Tank"
+],
+[
+"forced_movement",
+"pull targets with a projectile"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +2 Health"
+]
+],
+"761070": [
+[
+"buff",
+"Mech is Boosted if full health"
+],
+[
+"condition_life",
+"if full health"
+],
+[
+"debuff",
+"otherwise -1 Move"
+]
+],
+"761071": [
+[
+"heal",
+"Repair adjacent Mechs"
+],
+[
+"adjacency",
+"adjacent Mechs"
+]
+],
+"761073": [
+[
+"shield",
+"gain Shield"
+],
+[
+"stat_gain",
+"+2 Move"
+],
+[
+"rewind",
+"On Reset Turn"
+]
+],
+"761074": [
+[
+"ranged",
+"Fire a pushing projectile"
+],
+[
+"forced_movement",
+"pushing projectile"
+],
+[
+"multi_target_attack",
+"pierces the first target and damages the second"
+],
+[
+"piercing",
+"pierces the first target"
+]
+],
+"761076": [
+[
+"swap",
+"Force a nearby unit to swap places with any other unit"
+],
+[
+"forced_movement",
+"Force a nearby unit to swap places"
+]
+],
+"761077": [
+[
+"multi_target_attack",
+"Bounce a projectile off one target to hit another"
+],
+[
+"forced_movement",
+"pushes each target"
+]
+],
+"761079": [
+[
+"forced_movement",
+"Push self and all adjacent tiles"
+],
+[
+"adjacency",
+"all adjacent tiles"
+]
+],
+"761080": [
+[
+"movement",
+"dashing away"
+],
+[
+"suppress",
+"Smoke and deal damage to a tile"
+],
+[
+"variable_stats",
+"Damage increases the further the Mech dashes away"
+]
+],
+"761081": [
+[
+"damage_over_time",
+"apply Fire to a tile"
+],
+[
+"suppress",
+"adding Smoke to adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"heal",
+"Standing on Smoke repairs Mechs"
+]
+],
+"761082": [
+[
+"steal",
+"Temporarily control a unit"
+],
+[
+"forced_movement",
+"moving it a short distance"
+],
+[
+"temporary_effect",
+"Temporarily"
+]
+],
+"761083": [
+[
+"suppress",
+"Smoke the target"
+],
+[
+"damage",
+"whip it for 1 damage"
+],
+[
+"delayed",
+"preparing to whip it"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"761084": [
+[
+"suppress",
+"Smoke the target"
+],
+[
+"damage",
+"whip it for 3 damage"
+],
+[
+"delayed",
+"preparing to whip it"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"761085": [
+[
+"forced_movement",
+"Throw an adjacent unit"
+],
+[
+"damage",
+"damage it"
+],
+[
+"adjacency",
+"adjacent unit"
+]
+],
+"761086": [
+[
+"multi_target_attack",
+"Damage and push 3 tiles in a line"
+],
+[
+"forced_movement",
+"push 3 tiles in a line"
+],
+[
+"area_templates",
+"in a line"
+]
+],
+"761087": [
+[
+"damage",
+"Damage and flip target"
+],
+[
+"forced_movement",
+"flip target"
+],
+[
+"aoe_damage",
+"crack adjacent tiles"
+],
+[
+"on_kill",
+"If target is killed"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"761088": [
+[
+"ranged",
+"Launch an artillery attack"
+],
+[
+"damage",
+"for 1 damage"
+],
+[
+"forced_movement",
+"pushing shooter and target"
+],
+[
+"friendly_fire",
+"pushing shooter and target"
+]
+],
+"761089": [
+[
+"multi_target_attack",
+"Deal 1 damage to four oblique tiles"
+]
+],
+"761090": [
+[
+"summon",
+"Launch a short-lived Spore"
+],
+[
+"self_destruct",
+"destroys itself during the enemy turn"
+],
+[
+"forced_movement",
+"pushing projectile"
+],
+[
+"damage",
+"for 1 damage"
+],
+[
+"board_limit",
+"limited to only one spawn per mission"
+]
+],
+"761091": [
+[
+"summon",
+"Create an explosive boulder"
+],
+[
+"delayed",
+"preparing to destroy it next turn"
+],
+[
+"friendly_fire",
+"including the Tumblebug"
+],
+[
+"adjacency",
+"all of its adjancent tiles"
+]
+],
+"761092": [
+[
+"damage",
+"Deal 1 damage to the target"
+],
+[
+"forced_movement",
+"push the target tile and push themselves back by 1 tile"
+],
+[
+"collision_damage",
+"chain of collisions"
+]
+],
+"761093": [
+[
+"heal",
+"Standing on Smoke repairs mechs"
+]
+],
+"761094": [
+[
+"damage",
+"Grapple for 1 damage"
+],
+[
+"forced_movement",
+"pulling the Vek towards objects or units to the Vek"
+]
+],
+"761095": [
+[
+"summon",
+"spawning Blob Leaders onto any tile on the map"
+],
+[
+"delayed",
+"explode during the enemy turn"
+],
+[
+"adjacency",
+"adjacent tiles by 2"
+],
+[
+"friendly_fire",
+"damage itself by 1"
+],
+[
+"spawn_blocking",
+"prevent the spawning of both normal and alpha variants"
+]
+],
+"761096": [
+[
+"aura",
+"All other Vek will spawn a Spiderling Egg on death"
+],
+[
+"death_trigger",
+"on death"
+],
+[
+"summon",
+"spawn a Spiderling Egg"
+],
+[
+"board_limit",
+"Psions can only spawn once per mission"
+]
+],
+"761097": [
+[
+"aura",
+"All other Vek are Boosted, providing +1 damage to attacks"
+],
+[
+"stat_gain",
+"providing +1 damage to attacks"
+],
+[
+"board_limit",
+"Psions can only spawn once per mission"
+]
+],
+"761098": [
+[
+"aura",
+"All other Vek are protected from Fire and leave Fire on death"
+],
+[
+"immunity",
+"protected from Fire"
+],
+[
+"death_trigger",
+"leave Fire on death"
+]
+],
+"761099": [
+[
+"damage",
+"Deal 3 damage to the target"
+],
+[
+"forced_movement",
+"push the target tile and push themselves back by 1 tile"
+],
+[
+"collision_damage",
+"chain of collisions"
+]
+],
+"761100": [
+[
+"damage",
+"Grapple for 3 damage"
+],
+[
+"forced_movement",
+"pulling the Vek towards objects or units to the Vek"
+]
+],
+"761101": [
+[
+"ranged",
+"Launch an artillery attack"
+],
+[
+"damage",
+"for 3 damage"
+],
+[
+"forced_movement",
+"pushing shooter and target"
+],
+[
+"friendly_fire",
+"pushing shooter and target"
+]
+],
+"761102": [
+[
+"summon",
+"Launch a short-lived Alpha Spore"
+],
+[
+"self_destruct",
+"destroys itself during the enemy turn"
+],
+[
+"damage",
+"pushing projectile for 3 damage"
+],
+[
+"forced_movement",
+"pushing projectile"
+],
+[
+"board_limit",
+"limited to one spawn per mission"
+]
+],
+"761103": [
+[
+"multi_target_attack",
+"Deal 2 damage to four oblique tiles"
+],
+[
+"board_limit",
+"limited to a number of spawns per mission"
+]
+],
+"761104": [
+[
+"summon",
+"Create an explosive boulder"
+],
+[
+"delayed",
+"preparing to destroy it next turn"
+],
+[
+"friendly_fire",
+"including the Tumblebug"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"761105": [
+[
+"suppress",
+"Smoke and Web the target"
+],
+[
+"delayed",
+"preparing to whip it"
+],
+[
+"destroy",
+"Kills target"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"761106": [
+[
+"summon",
+"Create two explosive boulders"
+],
+[
+"delayed",
+"preparing to destroy one next turn"
+],
+[
+"death_trigger",
+"explosive decay effect"
+],
+[
+"movement",
+"Massive units can walk in Water"
+]
+],
+"761107": [
+[
+"multi_target_attack",
+"Deal 2 damage to and push three tiles"
+],
+[
+"forced_movement",
+"push three tiles"
+],
+[
+"damage_reduction",
+"Weapon damage to this unit is reduced by 1"
+],
+[
+"movement",
+"Massive units can walk in Water"
+]
+],
+"761108": [
+[
+"multi_target_attack",
+"Deal 3 damage to 4 oblique tiles and push 4 others"
+],
+[
+"forced_movement",
+"push 4 others"
+],
+[
+"movement",
+"Massive units can walk in Water"
+]
+],
+"761109": [
+[
+"ranged",
+"Launch a volatile mass of goo"
+],
+[
+"damage",
+"for 3 damage"
+],
+[
+"debuff",
+"applying A.C.I.D. on nearby units"
+],
+[
+"movement",
+"Massive units can walk in Water"
+]
+],
+"761110": [
+[
+"multi_target_attack",
+"Damage one or more tiles in a line"
+],
+[
+"forced_movement",
+"push away adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"area_templates",
+"in a line"
+]
+],
+"761112": [
+[
+"ranged",
+"Flaming artillery"
+],
+[
+"damage_over_time",
+"drops fire on the way to its target"
+],
+[
+"heal",
+"Standing on Fire removes Fire"
+],
+[
+"buff",
+"gives the Mech \"Boost\""
+]
+],
+"761113": [
+[
+"ranged",
+"Launch 2 damage artillery attack"
+],
+[
+"aoe_damage",
+"also deals 1 damage to every tile in its path"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"target_choice",
+"prioritize targeting as many units and buildings as possible"
+]
+],
+"761114": [
+[
+"ranged",
+"Projectile"
+],
+[
+"damage_over_time",
+"causes target to burn"
+],
+[
+"damage",
+"deals 1 damage"
+],
+[
+"death_trigger",
+"Explodes on death"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"quests",
+"Destroy all Boom-Bots objective"
+]
+],
+"761115": [
+[
+"ranged",
+"Launch Rockets at 3 tiles"
+],
+[
+"multi_target_attack",
+"3 tiles dealing 1 damage to each"
+],
+[
+"death_trigger",
+"Explodes on death"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"quests",
+"Destroy all Boom-Bots objective"
+]
+],
+"761116": [
+[
+"multi_target_attack",
+"Piercing beam"
+],
+[
+"variable_stats",
+"2 damage reduced by range"
+],
+[
+"death_trigger",
+"Explodes on death"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"quests",
+"Destroy all Boom-Bots objective"
+]
+],
+"761117": [
+[
+"multi_target_attack",
+"Damage one or more tiles in a line"
+],
+[
+"forced_movement",
+"push away adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: +2 Range"
+]
+],
+"761118": [
+[
+"multi_target_attack",
+"Pierces through units"
+],
+[
+"variable_stats",
+"Damages the first tile hit for 3 damage, the next tile for 2 damage"
+],
+[
+"protection",
+"Friendly units will not take damage"
+],
+[
+"upgrade",
+"Upgrade: Ally Immune"
+]
+],
+"761119": [
+[
+"area_templates",
+"damages in a large cone shape"
+],
+[
+"friendly_fire",
+"Deals 1 less damage to the user"
+],
+[
+"upgrade",
+"Upgrade: -1 Self Damage"
+]
+],
+"761120": [
+[
+"variable_stats",
+"increases in damage for each unit that it hits"
+],
+[
+"multi_target_attack",
+"Laser"
+],
+[
+"upgrade",
+"Upgrade: Ally Immune"
+]
+],
+"761121": [
+[
+"forced_movement",
+"Throw an adjacent unit"
+],
+[
+"damage",
+"Deals 1 damage"
+],
+[
+"adjacency",
+"adjacent unit"
+],
+[
+"upgrade",
+"Upgrade: +2 Range"
+]
+],
+"761122": [
+[
+"movement",
+"Leap and attack a tile"
+],
+[
+"forced_movement",
+"dealing damage and pushing it"
+],
+[
+"upgrade",
+"Upgrade: +2 Range"
+]
+],
+"761123": [
+[
+"damage",
+"Heavily damage a tile"
+],
+[
+"aoe_damage",
+"cracking tiles behind the target on kill"
+],
+[
+"on_kill",
+"on kill"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"761124": [
+[
+"on_kill",
+"Killing an enemy will charge the Power Grid 1 point"
+],
+[
+"resource_gain",
+"charge the Power Grid 1 point"
+],
+[
+"exhaust",
+"Single-use"
+]
+],
+"761125": [
+[
+"summon",
+"Deploy a small tank"
+],
+[
+"no_damage_output",
+"does no damage"
+],
+[
+"forced_movement",
+"pushes the target"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +2 Health"
+]
+],
+"761126": [
+[
+"summon",
+"Deploy a Shield-Tank"
+],
+[
+"shield",
+"give Shields to allies"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +2 Health"
+]
+],
+"761127": [
+[
+"summon",
+"Deploy a Tank"
+],
+[
+"debuff",
+"apply A.C.I.D. to targets"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +2 Health"
+]
+],
+"761128": [
+[
+"debuff",
+"Weapon damage against this unit is doubled"
+],
+[
+"silence",
+"disable Armor until the unit Repairs"
+]
+],
+"761129": [
+[
+"heal",
+"Standing on Fire removes Fire"
+],
+[
+"buff",
+"gives the Mech a \"Boost\""
+]
+],
+"761130": [
+[
+"immunity",
+"Mechs cannot take damage during the Player Turn"
+]
+],
+"761131": [
+[
+"multi_target_attack",
+"Fire two projectiles in different directions"
+],
+[
+"damage",
+"1 damage to each target"
+],
+[
+"upgrade",
+"Upgrade: Add Push"
+],
+[
+"forced_movement",
+"Will now push both targets"
+]
+],
+"761132": [
+[
+"ranged",
+"Flaming artillery"
+],
+[
+"damage_over_time",
+"drops fire on the way to its target"
+],
+[
+"aoe_damage",
+"Burns all targets in its range"
+],
+[
+"forced_movement",
+"Pushes the final target away"
+],
+[
+"upgrade",
+"Upgrades: * +1 Range"
+]
+],
+"761133": [
+[
+"terrain",
+"Convert any liquid Tile (e.g. Water, Lava) to a Hole"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"761134": [
+[
+"damage",
+"it takes 1 damage"
+],
+[
+"condition_count",
+"deals no damage to buildings or units"
+],
+[
+"telegraphed_threats",
+"when attacking"
+]
+],
+"761135": [
+[
+"damage_over_time",
+"apply Fire to a tile"
+],
+[
+"suppress",
+"adding Smoke to adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: More Smoke"
+]
+],
+"761136": [
+[
+"movement",
+"dashing away"
+],
+[
+"suppress",
+"Smoke and deal damage to a tile"
+],
+[
+"variable_stats",
+"Damage is based on distance travelled"
+],
+[
+"friendly_fire",
+"Deals 1 Self-Damage to the user"
+],
+[
+"upgrade",
+"Upgrade: +1 Range"
+]
+],
+"761137": [
+[
+"piercing",
+"Pierce through any killed Enemies"
+],
+[
+"damage",
+"Deals 2 damage to the target"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +2 Damage"
+]
+],
+"761138": [
+[
+"multi_target_attack",
+"Bounce a projectile off one target to hit another"
+],
+[
+"damage",
+"Deals 1 damage"
+],
+[
+"forced_movement",
+"pushes each target"
+],
+[
+"protection",
+"Friendly units will not take damage"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"761139": [
+[
+"ranged",
+"A projectile that can turn once before hitting its target"
+],
+[
+"damage",
+"Deals 2 damage to the target"
+],
+[
+"forced_movement",
+"pushes"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"761140": [
+[
+"multi_target_attack",
+"pierces the first target, and damages the second"
+],
+[
+"forced_movement",
+"Fire a pushing projectile"
+],
+[
+"piercing",
+"pierces the first target"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"761141": [
+[
+"aoe_damage",
+"explodes on contact, damaging and pushing adjacent tiles"
+],
+[
+"forced_movement",
+"damaging and pushing adjacent tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: +2 Damage"
+]
+],
+"761142": [
+[
+"multi_target_attack",
+"Damage and push 3 tiles in a line"
+],
+[
+"forced_movement",
+"pushes them away"
+],
+[
+"area_templates",
+"in a line"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"761143": [
+[
+"summon",
+"Launch a Walking Bomb"
+],
+[
+"self_destruct",
+"Unused bombs dismantle after the enemy turn"
+],
+[
+"upgrade",
+"Upgrade: 2 Bombs"
+]
+],
+"761144": [
+[
+"ranged",
+"Artillery attack"
+],
+[
+"damage",
+"Damage target"
+],
+[
+"summon",
+"creating a friendly robot spider on kill"
+],
+[
+"on_kill",
+"on kill"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"761145": [
+[
+"shield",
+"Shield target"
+],
+[
+"forced_movement",
+"push adjacent tiles away"
+],
+[
+"adjacency",
+"adjacent tiles"
+],
+[
+"upgrade",
+"Upgrade: +1 Range"
+]
+],
+"761146": [
+[
+"movement",
+"Teleport to target"
+],
+[
+"forced_movement",
+"push nearby tiles away"
+],
+[
+"placement_rules",
+"Target tile must not be occupied by another unit"
+],
+[
+"upgrade",
+"Upgrade: +2 Range"
+]
+],
+"761147": [
+[
+"forced_movement",
+"Push self and all adjacent tiles"
+],
+[
+"adjacency",
+"all adjacent tiles"
+],
+[
+"shield",
+"Shield the user when activated"
+],
+[
+"upgrade",
+"Upgrade: Shield Self"
+]
+],
+"761148": [
+[
+"damage",
+"Deals 1 damage to one tile"
+],
+[
+"forced_movement",
+"damage and push an adjacent tile"
+],
+[
+"target_choice",
+"The building is chosen first"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"761149": [
+[
+"forced_movement",
+"push away nearby units"
+],
+[
+"target_choice",
+"can be chosen by the Mech"
+],
+[
+"shield",
+"The selected building also gains a shield"
+],
+[
+"upgrade",
+"Upgrade: Add Shield"
+]
+],
+"761150": [
+[
+"suppress",
+"Units in Smoke cannot attack or repair"
+],
+[
+"terrain",
+"A Sand Tile that is hit by weapon damage will turn into a Smoke Tile"
+],
+[
+"heal",
+"the fire will be put out"
+]
+],
+"761151": [
+[
+"damage_over_time",
+"Lights units on Fire"
+]
+],
+"761152": [
+[
+"telegraphed_threats",
+"Vek will emerge here next turn"
+],
+[
+"damage",
+"will take one damage"
+],
+[
+"spawn_blocking",
+"Any unit blocking this space"
+]
+],
+"761153": [
+[
+"destroy",
+"instantly killing any unit"
+],
+[
+"telegraphed_threats",
+"Bombs will be dropped here"
+]
+],
+"761154": [
+[
+"telegraphed_threats",
+"Vek will emerge here next turn"
+],
+[
+"damage",
+"will take one damage"
+],
+[
+"spawn_blocking",
+"Any unit blocking this space"
+]
+],
+"761155": [
+[
+"destroy",
+"killing any unit"
+],
+[
+"telegraphed_threats",
+"A rock will fall here"
+]
+],
+"761156": [
+[
+"delayed",
+"will become Water"
+],
+[
+"turn_start",
+"start of the enemy turn"
+]
+],
+"761157": [
+[
+"disable",
+"anything present to become Frozen"
+]
+],
+"761158": [
+[
+"terrain",
+"will turn into Lava"
+]
+],
+"761159": [
+[
+"destroy",
+"killing any unit"
+],
+[
+"telegraphed_threats",
+"Lightning will strike here"
+]
+],
+"761160": [
+[
+"delayed",
+"will become a Chasm"
+],
+[
+"turn_start",
+"start of the enemy turn"
+]
+],
+"761161": [
+[
+"destroy",
+"The unit here will die"
+],
+[
+"terrain",
+"the tile will turn into Lava"
+]
+],
+"761162": [
+[
+"destroy",
+"destroying anything present"
+],
+[
+"telegraphed_threats",
+"A fireball will strike here"
+]
+]
+}

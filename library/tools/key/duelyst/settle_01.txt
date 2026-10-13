@@ -1,0 +1,150 @@
+742029 | Vespyrian Might | Give a Vespyr minion +2/+2 for each friendly Vespyr.
+   A: [["stat_gain", "+2/+2"], ["tribal", "Vespyr"], ["condition_count", "for each friendly Vespyr"]]
+   B: [["stat_gain", "Give a Vespyr minion +2/+2"], ["tribal", "for each friendly Vespyr"]]
+742031 | Flawless Reflection | Choose a minion. Transform ALL nearby minions into copies of it.
+   A: [["target_choice", "Choose a minion"], ["transform", "Transform ALL nearby minions into copies of it"], ["adjacency", "nearby minions"]]
+   B: [["transform", "Transform ALL nearby minions into copies of it"], ["modal_choice", "Choose a minion"]]
+742045 | Thunderhorn | Whenever this minion damages an enemy, it also damages all joined enemies.
+   A: [["multi_target_attack", "it also damages all joined enemies"], ["link_formation", "joined enemies"]]
+   B: [["on_damaged", "Whenever this minion damages an enemy"], ["multi_target_attack", "it also damages all joined enemies"]]
+742047 | Glub | Whenever a Spriggin is destroyed, this minion gains +3/+3.
+   A: [["death_trigger", "Whenever a Spriggin is destroyed"], ["permanent_growth", "gains +3/+3"], ["tribal", "Spriggin"]]
+   B: [["death_count", "Whenever a Spriggin is destroyed"], ["stat_gain", "gains +3/+3"]]
+742048 | Binky | Flying / Whenever this damages a minion, restore 2 Health to your General.
+   A: [["evasion", "Flying"], ["lifesteal", "Whenever this damages a minion, restore 2 Health to your General"]]
+   B: [["evasion", "Flying"], ["heal", "restore 2 Health to your General"]]
+742050 | Moro | As long as there is a Spriggin, this minion has +3 Attack.
+   A: [["stat_gain", "has +3 Attack"], ["passive", "As long as there is a Spriggin"], ["tribal", "Spriggin"]]
+   B: [["stat_gain", "has +3 Attack"], ["condition_count", "As long as there is a Spriggin"]]
+742051 | Dagona | Opening Gambit: Devour ANY minion, anywhere. / Dying Wish: Spit out the devoured minion on this space.
+   A: [["on_play", "Opening Gambit"], ["removal", "Devour ANY minion, anywhere"], ["death_trigger", "Dying Wish"], ["revive", "Spit out the devoured minion"]]
+   B: [["on_play", "Opening Gambit"], ["steal", "Devour ANY minion, anywhere"], ["death_trigger", "Dying Wish"], ["revive", "Spit out the devoured minion"]]
+742057 | Blood Taura | Provoke / This minion's cost is your General's health.
+   A: [["taunt", "Provoke"], ["cost_set", "cost is your General's health"]]
+   B: [["taunt", "Provoke"], ["variable_stats", "cost is your General's health"]]
+742064 | Riddle | While you have the Riddle, you cannot replace. Cast to give your opponent a Riddle.
+   A: [["play_restriction", "you cannot replace"], ["junk_cards", "give your opponent a Riddle"]]
+   B: [["play_restriction", "you cannot replace"], ["enemy_benefit", "give your opponent a Riddle"]]
+742071 | Ironclad | Dying Wish: Dispel all enemy minions.
+   A: [["death_trigger", "Dying Wish"], ["silence", "Dispel all enemy minions"], ["scope_multi", "all enemy minions"]]
+   B: [["death_trigger", "Dying Wish"], ["silence", "Dispel all enemy minions"]]
+742083 | Prophet of the White Palm | Opening Gambit: Prevent ALL spell damage until your next turn.
+   A: [["on_play", "Opening Gambit"], ["damage_prevention", "Prevent ALL spell damage"], ["temporary_effect", "until your next turn"], ["symmetric_effect", "ALL spell damage"]]
+   B: [["on_play", "Opening Gambit"], ["damage_prevention", "Prevent ALL spell damage until your next turn"], ["symmetric_effect", "ALL spell damage"]]
+742084 | Araki Headhunter | Whenever you summon a minion with Opening Gambit from your action bar, gain +2 Attack.
+   A: [["on_ally_play", "Whenever you summon a minion with Opening Gambit"], ["permanent_growth", "gain +2 Attack"]]
+   B: [["on_ally_play", "Whenever you summon a minion with Opening Gambit"], ["stat_gain", "gain +2 Attack"]]
+742085 | Keeper of the Vale | Opening Gambit: Summon a random friendly minion destroyed this game nearby this minion.
+   A: [["on_play", "Opening Gambit"], ["revive", "Summon a random friendly minion destroyed this game"], ["random_effect", "random"]]
+   B: [["on_play", "Opening Gambit"], ["revive", "Summon a random friendly minion destroyed this game"]]
+742097 | Sunset Paragon | Opening Gambit: ALL nearby minions deal damage to themselves equal to their Attack.
+   A: [["on_play", "Opening Gambit"], ["aoe_damage", "ALL nearby minions deal damage to themselves"], ["friendly_fire", "ALL nearby minions"], ["adjacency", "nearby"]]
+   B: [["on_play", "Opening Gambit"], ["friendly_fire", "ALL nearby minions deal damage to themselves"], ["variable_stats", "equal to their Attack"]]
+742098 | Arrow Whistler | Ranged / Your other minions with Ranged get +1 Attack.
+   A: [["ranged", "Ranged"], ["aura", "Your other minions with Ranged get +1 Attack"], ["stat_gain", "+1 Attack"]]
+   B: [["ranged", "Ranged"], ["aura", "Your other minions with Ranged get +1 Attack"]]
+742100 | Skywing | Flying / Your other minions with Flying cost 1 less.
+   A: [["evasion", "Flying"], ["cost_reduction", "cost 1 less"], ["aura", "Your other minions with Flying cost 1 less"]]
+   B: [["evasion", "Flying"], ["cost_reduction", "cost 1 less"]]
+742105 | Shiro Puppydragon | At the end of your turn, give each nearby friendly minion +1 Attack.
+   A: [["turn_end", "At the end of your turn"], ["permanent_growth", "give each nearby friendly minion +1 Attack"], ["adjacency", "nearby friendly minion"]]
+   B: [["turn_end", "At the end of your turn"], ["stat_gain", "give each nearby friendly minion +1 Attack"]]
+742113 | Earth Sister Taygete | Whenever this minion takes damage, deal that much damage to all nearby enemies.
+   A: [["on_damaged", "Whenever this minion takes damage"], ["aoe_damage", "deal that much damage to all nearby enemies"]]
+   B: [["on_damaged", "Whenever this minion takes damage"], ["aoe_damage", "deal that much damage to all nearby enemies"], ["variable_stats", "that much damage"]]
+742114 | Wind Sister Maia | Friendly minions with Infiltrate have +1/+1.
+   A: [["aura", "Friendly minions with Infiltrate have +1/+1"], ["stat_gain", "+1/+1"], ["territory_trigger", "Infiltrate"]]
+   B: [["aura", "Friendly minions with Infiltrate have +1/+1"], ["stat_gain", "+1/+1"]]
+742123 | Sky Burial | Destroy a minion that is not nearby any General.
+   A: [["destroy", "Destroy a minion"], ["targeting_rules", "not nearby any General"]]
+   B: [["destroy", "Destroy a minion that is not nearby any General"]]
+742129 | Xho | Dying Wish: Put a random Songhai spell into your action bar. It costs 1 less.
+   A: [["death_trigger", "Dying Wish"], ["generate_cards", "Put a random Songhai spell into your action bar"], ["random_effect", "random Songhai spell"], ["in_hand_buff", "It costs 1 less"]]
+   B: [["death_trigger", "Dying Wish"], ["generate_cards", "Put a random Songhai spell into your action bar"], ["cost_reduction", "It costs 1 less"], ["random_effect", "random Songhai spell"]]
+742132 | Ki Beholder | Ranged / Opening Gambit: An enemy minion cannot move next turn.
+   A: [["ranged", "Ranged"], ["on_play", "Opening Gambit"], ["immobilize", "cannot move next turn"], ["delayed", "next turn"]]
+   B: [["ranged", "Ranged"], ["on_play", "Opening Gambit"], ["immobilize", "An enemy minion cannot move next turn"]]
+742136 | Crimson Coil | Deal 2 damage to a minion. Activate your Battle Pets.
+   A: [["damage", "Deal 2 damage to a minion"], ["attack_now", "Activate your Battle Pets"]]
+   B: [["damage", "Deal 2 damage to a minion"], ["untap", "Activate your Battle Pets"]]
+742138 | Pandamonium | Transform ALL minions into 0/2 Panddo that cannot be attacked until end of turn.
+   A: [["polymorph", "Transform ALL minions into 0/2 Panddo"], ["immunity", "cannot be attacked until end of turn"], ["temporary_effect", "until end of turn"], ["friendly_fire", "ALL minions"]]
+   B: [["transform", "Transform ALL minions into 0/2 Panddo"], ["immunity", "cannot be attacked until end of turn"]]
+742145 | Pax | Dying Wish: Summon two 2/2 Iron Dervishes nearby.
+   A: [["death_trigger", "Dying Wish"], ["summon", "Summon two 2/2 Iron Dervishes"], ["adjacency", "nearby"]]
+   B: [["death_trigger", "Dying Wish"], ["summon", "Summon two 2/2 Iron Dervishes nearby"]]
+742153 | Psychic Conduit | Reactivate and take control of an enemy minion with 2 or less Attack until end of turn.
+   A: [["steal", "take control of an enemy minion"], ["untap", "Reactivate"], ["temporary_effect", "until end of turn"], ["stat_condition", "2 or less Attack"]]
+   B: [["steal", "take control of an enemy minion"], ["untap", "Reactivate"], ["temporary_effect", "until end of turn"]]
+742160 | Blood Baronette | Opening Gambit: Double a nearby Wraithling's Attack and Health.
+   A: [["on_play", "Opening Gambit"], ["stat_multiply", "Double a nearby Wraithling's Attack and Health"], ["tribal", "Wraithling"], ["adjacency", "nearby Wraithling"]]
+   B: [["on_play", "Opening Gambit"], ["stat_multiply", "Double a nearby Wraithling's Attack and Health"]]
+742169 | Ghost Azalea | Your General gains +1 Attack for each friendly Shadow Creep.
+   A: [["stat_gain", "+1 Attack"], ["condition_count", "for each friendly Shadow Creep"], ["terrain", "Shadow Creep"]]
+   B: [["stat_gain", "Your General gains +1 Attack"], ["condition_count", "for each friendly Shadow Creep"]]
+742175 | Mandrake | Costs 1 less for each minion summoned from ANY player's action bar this game.
+   A: [["cost_reduction", "Costs 1 less"], ["count_payoff", "for each minion summoned from ANY player's action bar this game"]]
+   B: [["cost_reduction", "Costs 1 less"], ["death_count", "for each minion summoned from ANY player's action bar this game"]]
+742187 | Huldra | Opening Gambit: Give a friendly Vespyr minion Celerity.
+   A: [["on_play", "Opening Gambit"], ["speed", "Celerity"], ["tribal", "Vespyr"]]
+   B: [["on_play", "Opening Gambit"], ["multi_attack", "Give a friendly Vespyr minion Celerity"]]
+742188 | Frostiva | Forcefield / Whenever this minion attacks or is attacked, summon a 3/3 Vespyr Night Howler nearby.
+   A: [["shield", "Forcefield"], ["on_attack", "Whenever this minion attacks or is attacked"], ["summon", "summon a 3/3 Vespyr Night Howler"], ["adjacency", "nearby"]]
+   B: [["shield", "Forcefield"], ["on_attack", "Whenever this minion attacks or is attacked"], ["summon", "summon a 3/3 Vespyr Night Howler"]]
+742191 | Vespyric Call | Put a random Vespyr minion into your action bar. It costs 1 less and has +1/+1.
+   A: [["generate_cards", "Put a random Vespyr minion into your action bar"], ["random_effect", "random Vespyr minion"], ["in_hand_buff", "It costs 1 less and has +1/+1"], ["tribal", "Vespyr"]]
+   B: [["generate_cards", "Put a random Vespyr minion into your action bar"], ["cost_reduction", "It costs 1 less"], ["stat_gain", "+1/+1"], ["random_effect", "random Vespyr minion"]]
+742193 | Winter's Wake | Give all friendly Wall minions +4/+4. Those minions can now move.
+   A: [["stat_gain", "+4/+4"], ["scope_multi", "all friendly Wall minions"], ["tribal", "Wall minions"]]
+   B: [["stat_gain", "+4/+4"], ["tribal", "Wall minions"]]
+742196 | Fog | Dying Wish: Draw a random battle pet.
+   A: [["death_trigger", "Dying Wish"], ["draw", "Draw a random battle pet"], ["random_effect", "random"]]
+   B: [["death_trigger", "Dying Wish"], ["generate_cards", "Draw a random battle pet"]]
+742198 | Dex | Celerity
+   A: [["speed", "Celerity"]]
+   B: [["multi_attack", "Celerity"]]
+742206 | Soboro | Whenever this damages a neutral minion, destroy that minion.
+   A: [["deathtouch", "Whenever this damages a neutral minion, destroy that minion"]]
+   B: [["on_damaged", "Whenever this damages a neutral minion"], ["destroy", "destroy that minion"]]
+742210 | Sol | Opening Gambit: Activate a friendly Battle Pet.
+   A: [["on_play", "Opening Gambit"], ["attack_now", "Activate a friendly Battle Pet"]]
+   B: [["on_play", "Opening Gambit"], ["untap", "Activate a friendly Battle Pet"]]
+742211 | Inquisitor Kron | Provoke / Whenever you replace a card, summon a 2/2 Prisoner with a random ability nearby.
+   A: [["taunt", "Provoke"], ["card_quality", "Whenever you replace a card"], ["summon", "summon a 2/2 Prisoner"], ["random_ability", "with a random ability"]]
+   B: [["taunt", "Provoke"], ["summon", "summon a 2/2 Prisoner"], ["random_effect", "random ability"]]
+742221 | Sol Pontiff | Zeal: Your Golems have +2 Attack.
+   A: [["aura", "Your Golems have +2 Attack"], ["tribal", "Golems"], ["stat_gain", "+2 Attack"]]
+   B: [["aura", "Your Golems have +2 Attack"], ["tribal", "Golems"]]
+742232 | Sirocco | Opening Gambit: Summon a Skyrock Golem on random spaces for each other Golem you've summoned this game.
+   A: [["on_play", "Opening Gambit"], ["summon", "Summon a Skyrock Golem"], ["random_effect", "random spaces"], ["count_payoff", "for each other Golem you've summoned this game"], ["tribal", "Golem"]]
+   B: [["on_play", "Opening Gambit"], ["summon", "Summon a Skyrock Golem on random spaces"], ["count_payoff", "for each other Golem you've summoned this game"], ["random_effect", "random spaces"]]
+742236 | Nocturne | Whenever you make Shadow Creep or a Wraithling, instead make both.
+   A: [["repeat_trigger", "instead make both"], ["terrain", "Shadow Creep"]]
+   B: [["rule_change", "instead make both"], ["on_ally_play", "Whenever you make Shadow Creep or a Wraithling"]]
+742242 | Juggernaut | Grow: +5/+5 / Whenever this minion takes damage, summon that many random Golem Eggs nearby.
+   A: [["permanent_growth", "Grow: +5/+5"], ["on_damaged", "Whenever this minion takes damage"], ["summon", "summon that many random Golem Eggs"], ["random_effect", "random Golem Eggs"], ["adjacency", "nearby"]]
+   B: [["permanent_growth", "Grow: +5/+5"], ["on_damaged", "Whenever this minion takes damage"], ["summon", "summon that many random Golem Eggs nearby"], ["random_effect", "random Golem Eggs"]]
+742247 | Ghost Seraphim | The first spell you cast each turn costs 5 less.
+   A: [["cost_reduction", "costs 5 less"], ["combo_sequence", "The first spell you cast each turn"]]
+   B: [["cost_reduction", "The first spell you cast each turn costs 5 less"]]
+742251 | Feralu | Friendly minions from any tribe have +1/+1.
+   A: [["aura", "Friendly minions from any tribe have +1/+1"], ["stat_gain", "+1/+1"], ["tribal", "any tribe"]]
+   B: [["aura", "Friendly minions from any tribe have +1/+1"], ["stat_gain", "+1/+1"]]
+742252 | Boulder Breacher | Bond: Enemies can't counterattack this turn.
+   A: [["temporary_effect", "this turn"]]
+   B: [["counterattack", "Enemies can't counterattack this turn"], ["temporary_effect", "this turn"]]
+742270 | Call to Arms | Your General gains, "Minions you summon nearby gain +3/+3."
+   A: [["on_ally_play", "Minions you summon"], ["stat_gain", "+3/+3"], ["adjacency", "nearby"]]
+   B: [["aura", "Minions you summon nearby gain +3/+3"], ["stat_gain", "gain +3/+3"]]
+742273 | Dauntless Advance | Your General and nearby friendly minions gain, "Takes no damage this turn."
+   A: [["protection", "Takes no damage this turn"], ["temporary_effect", "this turn"], ["adjacency", "nearby friendly minions"], ["scope_multi", "nearby friendly minions"]]
+   B: [["protection", "Takes no damage this turn"], ["temporary_effect", "this turn"], ["scope_multi", "Your General and nearby friendly minions"]]
+742275 | Suzumebachi | Whenever you cast a spell, this minion gains +1 Attack until your next turn.
+   A: [["on_spell", "Whenever you cast a spell"], ["stat_gain", "gains +1 Attack"], ["temporary_effect", "until your next turn"]]
+   B: [["on_spell", "Whenever you cast a spell"], ["temporary_buff", "gains +1 Attack until your next turn"]]
+742282 | Assassination Protocol | Reactivate an exhausted friendly minion. It cannot damage or attack Generals this turn.
+   A: [["untap", "Reactivate an exhausted friendly minion"], ["cant_attack", "cannot damage or attack Generals this turn"], ["temporary_effect", "this turn"]]
+   B: [["untap", "Reactivate an exhausted friendly minion"], ["no_damage_output", "cannot damage or attack Generals this turn"], ["temporary_effect", "this turn"]]
+742292 | Silica Weaver | Opening Gambit: Progresses MECHAZ0R build by +40%.
+   A: [["on_play", "Opening Gambit"], ["quests", "Progresses MECHAZ0R build by +40%"]]
+   B: [["on_play", "Opening Gambit"], ["delayed", "Progresses MECHAZ0R build by +40%"]]

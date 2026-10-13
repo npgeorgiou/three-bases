@@ -1,0 +1,513 @@
+{
+"757882": [
+[
+"retain",
+"Retain"
+],
+[
+"damage",
+"Deal 7 damage"
+],
+[
+"in_hand_buff",
+"increase its damage by 4 this combat"
+]
+],
+"758271": [
+[
+"multi_attack",
+"Peck (attack, 1 damage x5)"
+],
+[
+"damage",
+"Swoop (attack, 12 damage)"
+],
+[
+"disable",
+"Stunned (stun)"
+],
+[
+"buff",
+"Caw (buff)"
+],
+[
+"damage",
+"Headbutt (attack, 3 damage)"
+]
+],
+"758015": [
+[
+"card_quality",
+"1 additional card to choose from"
+]
+],
+"757620": [
+[
+"exhaust",
+"Whenever a card is Exhausted"
+],
+[
+"draw",
+"draw 1 card"
+]
+],
+"758022": [
+[
+"slots_queue",
+"3 additional Orb slots"
+],
+[
+"combat_start",
+"Start each combat"
+]
+],
+"758066": [
+[
+"upgrade",
+"Upgrade 2 random Skills"
+],
+[
+"random_effect",
+"random Skills"
+]
+],
+"757698": [
+[
+"block_armor",
+"Gain 6 Block"
+]
+],
+"757926": [
+[
+"combat_start",
+"At the start of each combat"
+],
+[
+"slots_queue",
+"Channel 1 Lightning"
+]
+],
+"757545": [
+[
+"play_restriction",
+"Unplayable"
+],
+[
+"permanent_loss",
+"Cannot be removed from your deck"
+]
+],
+"757982": [
+[
+"upgrade",
+"Upgrade it"
+]
+],
+"757863": [
+[
+"block_armor",
+"Gain 13 Block"
+],
+[
+"retain",
+"Retain your hand this turn"
+]
+],
+"758075": [
+[
+"upgrade",
+"Upgrade all cards in your hand for the rest of combat"
+]
+],
+"758059": [
+[
+"immunity",
+"You can no longer become Frail"
+]
+],
+"758318": [
+[
+"damage",
+"Bash (attack debuff, 12 damage)"
+],
+[
+"block_armor",
+"30 block"
+],
+[
+"damage",
+"Smash (attack defend, 34 damage, 99 block)"
+]
+],
+"758007": [
+[
+"count_payoff",
+"Every 10th Attack you play"
+],
+[
+"stat_multiply",
+"deals double damage"
+]
+],
+"757913": [
+[
+"block_armor",
+"lose 15 Block rather than all of your Block"
+],
+[
+"turn_start",
+"At the start of your turn"
+]
+],
+"757986": [
+[
+"stat_loss",
+"will have 1 HP"
+]
+],
+"757855": [
+[
+"damage",
+"Deal 7 damage to a random enemy"
+],
+[
+"random_effect",
+"random enemy"
+],
+[
+"count_payoff",
+"for each Lightning Channeled this combat"
+]
+],
+"758357": [
+[
+"upgrade",
+"Upgrade 2 random cards"
+],
+[
+"random_effect",
+"random cards"
+],
+[
+"friendly_fire",
+"Take 20% Max HP damage"
+]
+],
+"757844": [
+[
+"block_armor",
+"Gain 8 Block"
+],
+[
+"cost_set",
+"The next Attack you play costs 0"
+]
+],
+"757489": [
+[
+"block_armor",
+"prevents damage"
+]
+],
+"758043": [
+[
+"resource_gain",
+"gain energy energy"
+]
+],
+"758045": [
+[
+"stances",
+"Start each combat in Calm"
+],
+[
+"combat_start",
+"Start each combat"
+]
+],
+"758130": [
+[
+"block_armor",
+"Block is not removed"
+]
+],
+"758119": [
+[
+"on_spell",
+"Whenever you play a Skill"
+],
+[
+"stat_gain",
+"gains X Strength"
+]
+],
+"757828": [
+[
+"slots_queue",
+"Channel 1 Lightning"
+],
+[
+"on_damaged",
+"Whenever you receive unblocked attack damage"
+]
+],
+"757959": [
+[
+"discard",
+"you discard a card"
+],
+[
+"resource_gain",
+"gain energy"
+]
+],
+"758106": [],
+"757516": [
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"permanent_growth",
+"Gain Strength"
+]
+],
+"757723": [
+[
+"generate_cards",
+"Add 1 random Colorless card into your hand"
+],
+[
+"random_effect",
+"random Colorless card"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758143": [
+[
+"death_trigger",
+"On death"
+],
+[
+"aoe_damage",
+"deal damage equal to its Max HP to ALL enemies"
+]
+],
+"757669": [
+[
+"stat_gain",
+"Gain 3 Strength"
+],
+[
+"stat_gain",
+"Gain 3 Dexterity"
+],
+[
+"turn_start",
+"at the start of each turn"
+]
+],
+"758055": [
+[
+"discard",
+"you discard a card"
+],
+[
+"block_armor",
+"gain 3 Block"
+]
+],
+"758090": [
+[
+"aoe_damage",
+"Deal 10 damage to ALL enemies"
+]
+],
+"757673": [
+[
+"exhaust",
+"Exhaust your hand"
+],
+[
+"damage",
+"Deal 7 damage"
+],
+[
+"condition_count",
+"for each card Exhausted"
+]
+],
+"757581": [
+[
+"discard",
+"Discard your hand"
+],
+[
+"draw",
+"draw that many cards"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"758056": [
+[
+"upgrade",
+"Upgrade it"
+]
+],
+"813563": [
+[
+"retain",
+"Retain"
+],
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"757521": [
+[
+"spell_power",
+"Strength adds additional damage to attacks"
+]
+],
+"758187": [
+[
+"damage_reduction",
+"Reduce ALL damage taken and HP loss"
+]
+],
+"757560": [
+[
+"stat_gain",
+"Gain 4 Focus"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"stat_loss",
+"lose 1 Focus"
+]
+],
+"757573": [
+[
+"damage",
+"Deal 7 damage"
+],
+[
+"condition_count",
+"for each enemy in combat"
+]
+],
+"757505": [
+[
+"slots_queue",
+"Orb"
+],
+[
+"block_armor",
+"Gains Block"
+]
+],
+"757953": [
+[
+"combat_start",
+"Start each combat"
+],
+[
+"debuff",
+"1 Weak"
+]
+],
+"757502": [
+[
+"on_kill",
+"this card kills"
+]
+],
+"757776": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"recycle",
+"put a copy of this card on top of your draw pile"
+],
+[
+"copy",
+"a copy of this card"
+],
+[
+"exhaust",
+"Exhaust"
+]
+],
+"757743": [
+[
+"recycle",
+"Put a card from your discard pile into your hand"
+],
+[
+"retain",
+"Retain it"
+],
+[
+"stances",
+"Enter Calm"
+]
+],
+"758351": [
+[
+"modal_choice",
+"Choices: Upgrade a card in your deck."
+],
+[
+"upgrade",
+"Upgrade a card in your deck"
+],
+[
+"junk_cards",
+"Become Cursed - Pain"
+]
+],
+"757600": [
+[
+"damage",
+"Deal 7 damage"
+],
+[
+"draw",
+"Draw 1 card"
+],
+[
+"variety_payoff",
+"unique Orb"
+]
+],
+"758131": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"life_payment",
+"lose 1 HP"
+],
+[
+"draw",
+"draw 1 card"
+]
+]
+}

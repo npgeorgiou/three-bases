@@ -1,0 +1,2318 @@
+{
+"740614": [
+[
+"enemy_benefit",
+"gains 1 Power"
+],
+[
+"stat_gain",
+"gains 1 Power"
+]
+],
+"740617": [
+[
+"aura",
+"Other creatures within a circuit completed by a card bearing this sigil gain 1 Power"
+],
+[
+"stat_gain",
+"gain 1 Power"
+],
+[
+"link_formation",
+"within a circuit"
+]
+],
+"740621": [
+[
+"multi_attack",
+"attacks twice in a single turn"
+],
+[
+"multi_target_attack",
+"strike each opposing space to the left and right"
+]
+],
+"740623": [
+[
+"death_trigger",
+"perishes"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+],
+[
+"buff",
+"gain the Detonator sigil"
+]
+],
+"740630": [
+[
+"death_trigger",
+"perishes"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+],
+[
+"debuff",
+"gain the Brittle sigil"
+]
+],
+"740643": [
+[
+"activated",
+"Activate: Pay 1 Energy"
+],
+[
+"damage",
+"deal 1 damage to the creature across"
+],
+[
+"ping",
+"deal 1 damage"
+]
+],
+"740644": [
+[
+"activated",
+"Activate: Pay 2 Bones"
+],
+[
+"stat_gain",
+"increase the Power and Health"
+],
+[
+"scope_self",
+"of a card bearing this sigil"
+]
+],
+"740646": [
+[
+"transform",
+"hatches when drawn"
+],
+[
+"deck_condition",
+"in the Health of creatures in your deck"
+],
+[
+"variety_payoff",
+"the numbers 1 to 5 are represented"
+]
+],
+"740647": [
+[
+"transform",
+"grow into a more powerful form"
+],
+[
+"delayed",
+"after 1 turn on the board"
+],
+[
+"turn_start",
+"At the beginning of the owner's turn"
+]
+],
+"740652": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"shield",
+"gain Nano Armor"
+],
+[
+"scope_multi",
+"all Gem Vessels"
+]
+],
+"740661": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"permanent_loss",
+"really deleted from your Hard Drive"
+]
+],
+"740663": [
+[
+"on_damaged",
+"When a card bearing this sigil would be struck"
+],
+[
+"summon",
+"a Tail is created in its place"
+],
+[
+"movement",
+"a card bearing this sigil moves to the right"
+],
+[
+"protection",
+"evade a direct hit"
+]
+],
+"740664": [
+[
+"direct_damage",
+"deals damage directly"
+],
+[
+"draw",
+"draw a card for each damage dealt"
+]
+],
+"740666": [
+[
+"sacrifice",
+"is sacrificed"
+],
+[
+"cheat_death",
+"it does not perish"
+],
+[
+"transform",
+"sacrificing the card enough times will cause it to transform"
+]
+],
+"740667": [
+[
+"activated",
+"Activate: Pay 2 Bones"
+],
+[
+"heal",
+"to heal a card bearing this sigil"
+],
+[
+"scope_self",
+"a card bearing this sigil"
+]
+],
+"740668": [
+[
+"on_play",
+"is played"
+],
+[
+"draw",
+"the player will draw cards equal to the number of Mox Cards"
+],
+[
+"condition_count",
+"equal to the number of Mox Cards"
+]
+],
+"740671": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"resource_gain",
+"a (Green, Orange, or Blue) Gem is provided to the owner"
+],
+[
+"multiple_resources",
+"Green, Orange, or Blue"
+]
+],
+"740673": [
+[
+"multi_target_attack",
+"strike each opposing space that is occupied by a creature"
+],
+[
+"direct_damage",
+"It will strike directly"
+]
+],
+"740679": [
+[
+"immunity",
+"If a creature would attack a card bearing this sigil, it does not"
+]
+],
+"740681": [
+[
+"aura",
+"opposing creatures also grant Bones upon death"
+],
+[
+"resource_gain",
+"opposing creatures also grant Bones upon death"
+]
+],
+"740684": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+],
+[
+"shield",
+"gain the Nano Armor sigil"
+]
+],
+"740696": [
+[
+"turn_start",
+"At the beginning of its owner's turn"
+],
+[
+"friendly_fire",
+"Squirrels and Rabbits on the player's side of the field to be removed from play"
+]
+],
+"740698": [
+[
+"stances",
+"will transform to, or from, Beast mode"
+],
+[
+"turn_start",
+"At the beginning of your turn"
+]
+],
+"740700": [
+[
+"link_formation",
+"within a circuit"
+],
+[
+"multi_target_attack",
+"strike each opposing space to the left, right and center of it"
+],
+[
+"multi_attack",
+"strike each opposing space to the left, right and center of it"
+]
+],
+"740703": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"revive",
+"return to the owner's hand after death"
+]
+],
+"740704": [
+[
+"on_damaged",
+"Once a card bearing this sigil is struck"
+],
+[
+"draw",
+"draw a card from your Empty Vessel pile"
+],
+[
+"side_deck",
+"Empty Vessel pile"
+]
+],
+"740705": [
+[
+"stealth",
+"submerged for the enemy's turn"
+],
+[
+"transform",
+"it transforms into a random Tentacle card"
+],
+[
+"random_effect",
+"random Tentacle card"
+]
+],
+"740706": [
+[
+"sacrifice",
+"when sacrificed"
+],
+[
+"resource_gain",
+"count as 3 Blood rather than 1 Blood when sacrificed"
+]
+],
+"740710": [
+[
+"variable_stats",
+"Power equal to the number of ants on their side of the board"
+],
+[
+"tribal",
+"number of ants on their side of the board"
+]
+],
+"740735": [
+[
+"sacrifice",
+"Worthy Sacrifice"
+],
+[
+"resource_gain",
+"Worthy Sacrifice"
+]
+],
+"740747": [
+[
+"sacrifice",
+"Worthy Sacrifice"
+],
+[
+"resource_gain",
+"Worthy Sacrifice"
+],
+[
+"generate_cards",
+"A black goat is created in your hand"
+]
+],
+"740748": [
+[
+"death_trigger",
+"Frozen Away"
+],
+[
+"summon",
+"Frozen Away"
+],
+[
+"generate_cards",
+"A frozen opossum is created in your hand"
+]
+],
+"740755": [
+[
+"counterattack",
+"Sharp Quills"
+],
+[
+"adjacency",
+"If placed on the left of the right Obol"
+],
+[
+"resource_gain",
+"gives the player one Ancient Obol"
+]
+],
+"740756": [
+[
+"resource_gain",
+"Bone King"
+],
+[
+"adjacency",
+"If placed on the right of the left Obol"
+],
+[
+"resource_gain",
+"gives the player one Ancient Obol"
+]
+],
+"740757": [
+[
+"aura",
+"Attack Conduit"
+],
+[
+"stat_gain",
+"Attack Conduit"
+],
+[
+"link_formation",
+"Attack Conduit"
+]
+],
+"740768": [
+[
+"revive",
+"Unkillable"
+]
+],
+"740775": [
+[
+"discard",
+"Handy"
+],
+[
+"draw",
+"Handy"
+]
+],
+"740778": [
+[
+"multi_attack",
+"Bifurcated Strike"
+],
+[
+"multi_target_attack",
+"Bifurcated Strike"
+]
+],
+"740779": [
+[
+"death_trigger",
+"Frozen Away"
+],
+[
+"summon",
+"Frozen Away"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740789": [
+[
+"resource_advantage",
+"Energy Conduit"
+],
+[
+"link_formation",
+"Energy Conduit"
+]
+],
+"740800": [
+[
+"immunity",
+"Repulsive"
+]
+],
+"740803": [
+[
+"death_trigger",
+"Frozen Away"
+],
+[
+"summon",
+"Frozen Away"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740804": [
+[
+"stances",
+"Transformer"
+]
+],
+"740833": [
+[
+"multi_attack",
+"Bifurcated Strike"
+],
+[
+"multi_target_attack",
+"Bifurcated Strike"
+],
+[
+"multi_attack",
+"Trifurcated Strike"
+],
+[
+"multi_target_attack",
+"Trifurcated Strike"
+]
+],
+"740834": [
+[
+"immunity",
+"Repulsive"
+]
+],
+"740849": [
+[
+"sacrifice",
+"Worthy Sacrifice"
+],
+[
+"resource_gain",
+"Worthy Sacrifice"
+]
+],
+"740854": [
+[
+"multi_attack",
+"Bifurcated Strike"
+],
+[
+"multi_target_attack",
+"Bifurcated Strike"
+]
+],
+"740860": [
+[
+"death_trigger",
+"Frozen Away"
+],
+[
+"summon",
+"Frozen Away"
+]
+],
+"740862": [
+[
+"movement",
+"Burrower"
+],
+[
+"blocking",
+"block any landborne attacker"
+]
+],
+"740867": [
+[
+"movement",
+"Hefty"
+],
+[
+"forced_movement",
+"Hefty"
+]
+],
+"740877": [
+[
+"movement",
+"Hefty"
+],
+[
+"forced_movement",
+"Hefty"
+]
+],
+"740885": [
+[
+"revive",
+"Unkillable"
+]
+],
+"740886": [
+[
+"revive",
+"Unkillable"
+]
+],
+"740893": [
+[
+"sacrifice",
+"Worthy Sacrifice"
+],
+[
+"resource_gain",
+"Worthy Sacrifice"
+],
+[
+"cheat_death",
+"Many Lives"
+]
+],
+"740897": [
+[
+"movement",
+"Sprinter"
+],
+[
+"multi_attack",
+"Bifurcated Strike"
+],
+[
+"multi_target_attack",
+"Bifurcated Strike"
+]
+],
+"740899": [
+[
+"counterattack",
+"Sharp Quills"
+],
+[
+"stances",
+"Transformer"
+]
+],
+"740914": [
+[
+"stances",
+"Transformer"
+],
+[
+"evasion",
+"Airborne"
+]
+],
+"740920": [
+[
+"death_trigger",
+"Shield Latch"
+],
+[
+"shield",
+"Shield Latch"
+]
+],
+"740928": [
+[
+"protection",
+"Loose Tail"
+]
+],
+"740932": [
+[
+"multi_target_attack",
+"Trifurcated When Powered"
+],
+[
+"multi_attack",
+"Trifurcated When Powered"
+]
+],
+"740935": [
+[
+"immunity",
+"Repulsive"
+],
+[
+"evasion",
+"Airborne"
+]
+],
+"740952": [
+[
+"blocking",
+"Mighty Leap"
+],
+[
+"multi_target_attack",
+"Omni Strike"
+],
+[
+"friendly_fire",
+"Tidal Lock"
+],
+[
+"permanent_growth",
+"Increases its Power by 1 every turn"
+]
+],
+"740953": [
+[
+"immunity",
+"Made of Stone"
+],
+[
+"blocking",
+"Mighty Leap"
+],
+[
+"multi_target_attack",
+"Omni Strike"
+],
+[
+"friendly_fire",
+"Tidal Lock"
+],
+[
+"permanent_growth",
+"Increases its Power by 1 every turn"
+]
+],
+"740960": [
+[
+"immunity",
+"Repulsive"
+],
+[
+"terrain",
+"Terrain"
+]
+],
+"740972": [
+[
+"run_structure",
+"moves across a map to reach their goal"
+],
+[
+"shop_gold",
+"used to buy Pelts"
+],
+[
+"deck_modification",
+"building and improving your deck throughout your run"
+]
+],
+"740974": [
+[
+"lanes",
+"five card lanes"
+],
+[
+"shop_gold",
+"Robobucks as its primary currency"
+],
+[
+"items_consumables",
+"a Hammer which allows the player to destroy cards"
+],
+[
+"sacrifice",
+"destroy cards"
+]
+],
+"740975": [
+[
+"cost_type",
+"can be used to play Beast cards"
+],
+[
+"sacrifice",
+"Almost any card can be sacrificed to obtain 1 Blood"
+],
+[
+"resource_gain",
+"giving you 1 Bone"
+],
+[
+"cheat_death",
+"will not die when sacrificed"
+]
+],
+"740976": [
+[
+"cost_type",
+"Cards that cost Bones"
+],
+[
+"death_trigger",
+"Whenever a card on the players side perishes for any reason"
+],
+[
+"resource_gain",
+"they will receive 1 Bone"
+],
+[
+"resource_conversion",
+"converts 1 Energy into 3 Bones"
+],
+[
+"activated",
+"activate the special Sigils Enlarge and Disentomb"
+],
+[
+"variable_stats",
+"its power will be equal to half of the total number of Bones the player has"
+]
+],
+"740977": [
+[
+"summon",
+"places a Black Goat on the players side of the board"
+],
+[
+"start_of_game",
+"at the start of the battle"
+]
+],
+"740978": [
+[
+"draw",
+"draw twice at the beginning of your turn"
+],
+[
+"turn_start",
+"at the beginning of your turn"
+]
+],
+"740980": [
+[
+"summon",
+"places Grand Firs on all your spaces"
+],
+[
+"start_of_game",
+"at the start of the final battle"
+],
+[
+"transform",
+"turned into Gold Nuggets"
+],
+[
+"turn_number",
+"by your 3rd turn"
+]
+],
+"740982": [
+[
+"selection",
+"three out of the 5 boons will be offered, and the player may choose one"
+],
+[
+"run_structure",
+"do not carry over into your next run"
+],
+[
+"sacrifice",
+"sacrifice one of their cards"
+],
+[
+"permanent_loss",
+"permanently removing it from their deck"
+],
+[
+"deck_modification",
+"permanently removing it from their deck"
+],
+[
+"start_of_game",
+"You will start the battle with 8 Bones"
+],
+[
+"resource_gain",
+"You will start the battle with 8 Bones"
+],
+[
+"summon",
+"You will start the battle with a Black Goat on the board"
+],
+[
+"draw",
+"You may draw twice at the beginning of your turn"
+],
+[
+"tutor",
+"you may choose any card in your deck to draw"
+]
+],
+"740984": [
+[
+"stat_gain",
+"increasing either a creature's Power by 1 or its Health by 2"
+],
+[
+"modal_choice",
+"increasing either a creature's Power by 1 or its Health by 2"
+],
+[
+"random_effect",
+"a 22.5% chance on the second buff"
+],
+[
+"permanent_loss",
+"causing a loss of the card"
+],
+[
+"rest_phase",
+"warm one of their creatures by the fire"
+]
+],
+"740986": [
+[
+"draw",
+"you will draw 4 cards"
+],
+[
+"side_deck",
+"one Squirrel from your side deck"
+],
+[
+"turn_structure",
+"when you are finished you ring the bell to end your turn"
+],
+[
+"life_track",
+"the scales have been tipped 5 points"
+],
+[
+"items_consumables",
+"Items sit on the top right of the board"
+],
+[
+"lanes",
+"their lanes or back lanes"
+]
+],
+"740987": [
+[
+"selection",
+"The player is given a choice of three Cards and must select one of them"
+],
+[
+"information",
+"three face-down cards"
+],
+[
+"deck_modification",
+"select a card from their deck to be replaced by the new card"
+]
+],
+"740989": [
+[
+"random_effect",
+"two random cards"
+],
+[
+"deck_modification",
+"main method of obtaining cards"
+]
+],
+"740990": [
+[
+"deck_modification",
+"remove a card from your deck"
+],
+[
+"resource_conversion",
+"in exchange for Robobucks"
+]
+],
+"740991": [
+[
+"damage",
+"deal damage equal to their Power"
+],
+[
+"excess_damage",
+"the damage can overflow to another card behind your opponent's card"
+],
+[
+"life_track",
+"each point of damage will tip the scale toward your opponent's side by one"
+],
+[
+"draw",
+"you draw 3 cards from your deck and 1 Squirrel"
+],
+[
+"side_deck",
+"draw 1 card from your side deck"
+],
+[
+"fatigue",
+"multiple Starvation will start to be played by your opponent"
+],
+[
+"multiple_resources",
+"Blood or Bones"
+],
+[
+"cost_type",
+"The Cost of playing cards can either be Blood or Bones"
+],
+[
+"turn_structure",
+"When you end your turn by ringing the bell, the game enters the combat phase"
+],
+[
+"tribal",
+"cards may have a Tribe"
+],
+[
+"turn_end",
+"Energy is replenished at the end of each turn"
+],
+[
+"resource_gain",
+"Energy is replenished at the end of each turn"
+],
+[
+"deck_modification",
+"add or modify cards in your deck"
+],
+[
+"stat_gain",
+"Increase a card's Power by 1 or Health by 2"
+],
+[
+"random_effect",
+"one is chosen randomly at each encounter"
+],
+[
+"selection",
+"Choose 1 out of 3 Boulder Cards"
+],
+[
+"card_crafting",
+"create your own with its name, image, cost, Power, Health, and Sigils"
+],
+[
+"shop_gold",
+"individual cards can be purchased from The Trader"
+],
+[
+"transform",
+"all Squirrels will be replaced with Bees"
+]
+],
+"740993": [
+[
+"selection",
+"generate a new set of three cards to choose from"
+],
+[
+"hand_deck_swap",
+"redraw the opening hand"
+]
+],
+"740994": [
+[
+"items_consumables",
+"Consumable items are special objects"
+],
+[
+"exhaust",
+"Act I items are lost permanently when used"
+],
+[
+"generate_cards",
+"A Boulder is created in your hand"
+],
+[
+"generate_cards",
+"A Squirrel is created in your hand"
+],
+[
+"generate_cards",
+"A Black Goat is created in your hand"
+],
+[
+"generate_cards",
+"A Frozen Opossum is created in your hand"
+],
+[
+"destroy",
+"You may cut up one of your adversary's cards. It is destroyed"
+],
+[
+"steal",
+"Hook one of my cards and take it as your own"
+],
+[
+"disable",
+"Your adversary will entirely skip their next turn"
+],
+[
+"direct_damage",
+"You will place a weight on the scales"
+],
+[
+"resource_gain",
+"You will immediately gain 4 Bones"
+],
+[
+"evasion",
+"Your creatures will attack as though they have the Airborne Sigil this turn"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"silence",
+"My cards on the board will lose all of their sigils"
+],
+[
+"movement",
+"All creatures on the board will rotate one space clockwise"
+],
+[
+"tutor",
+"Allows the user to draw any one card from their deck"
+],
+[
+"resource_gain",
+"Replenishes Energy back up to the current maximum"
+],
+[
+"summon",
+"Place Explode Bots on all empty spaces"
+],
+[
+"shield",
+"Your bots on the board get Nano Armor"
+]
+],
+"740995": [
+[
+"cost_type",
+"four types of costs, Bones, Blood, Energy, and Mox"
+],
+[
+"multiple_resources",
+"four types of costs, Bones, Blood, Energy, and Mox"
+],
+[
+"free_play",
+"Some cards, like the Squirrel or the Geck, cost nothing"
+]
+],
+"740997": [
+[
+"card_crafting",
+"The first card selection decides the Deathcard's Cost"
+],
+[
+"run_structure",
+"You may then find the Deathcard in future runs"
+],
+[
+"random_effect",
+"each randomly chosen from your deck"
+]
+],
+"740998": [
+[
+"random_effect",
+"drawing 3 random cards from the player's deck"
+],
+[
+"quests",
+"If the cards drawn meet a given condition, the trial is passed"
+],
+[
+"random_ability",
+"each infused with a random additional Sigil"
+],
+[
+"condition_count",
+"must cost at least 5 Bones combined"
+],
+[
+"stat_condition",
+"must have at least 4 Power combined"
+],
+[
+"tribal",
+"at least 2 of the 3 cards drawn must be from the same tribe"
+]
+],
+"741000": [
+[
+"run_structure",
+"permanent effects on the current run"
+],
+[
+"shop_gold",
+"Exchange teeth for pelts with the Trapper"
+],
+[
+"upgrade",
+"Combine two versions of the same card together to create a stronger version"
+],
+[
+"deck_modification",
+"permanently remove from their deck"
+],
+[
+"copy",
+"Select a card to be duplicated by Goobert"
+],
+[
+"random_ability",
+"Give a card an additional Sigil from three random ones"
+],
+[
+"rest_phase",
+"rest a card at the fire"
+],
+[
+"items_consumables",
+"Choose between three Consumable Items"
+],
+[
+"card_crafting",
+"create your own card from scratch using a point-based stat-buy system"
+],
+[
+"sacrifice",
+"Sacrifice a card to transfer its sigils to another card"
+],
+[
+"selection",
+"Choose between three cards"
+]
+],
+"741002": [
+[
+"draw",
+"the player draws 3 cards from their deck and a Skeleton"
+],
+[
+"cost_type",
+"All cards cost Bones to play"
+],
+[
+"life_track",
+"there are health counters of 400"
+]
+],
+"741005": [
+[
+"random_ability",
+"randomized Sigils and stats"
+],
+[
+"boss_phases",
+"At the beginning of the second phase"
+],
+[
+"board_wipe",
+"removing all cards in play entirely"
+],
+[
+"card_crafting",
+"prompting the player to create a custom card"
+],
+[
+"summon",
+"place another Mole along with 2 more Friends/Mummy Lords in the back lane"
+]
+],
+"741008": [
+[
+"boss_phases",
+"At the start of the second phase"
+],
+[
+"board_wipe",
+"all of your cards on the table will be destroyed"
+],
+[
+"cost_set",
+"the cost reduced to 0"
+],
+[
+"revive",
+"it will be resurrected 2 turns later"
+],
+[
+"delayed",
+"it will be resurrected 2 turns later"
+],
+[
+"fatigue",
+"one of them will be destroyed and replaced by a Starvation"
+]
+],
+"741009": [
+[
+"damage",
+"dealing 100 damage to said card"
+],
+[
+"items_consumables",
+"The Hammer is a tool"
+],
+[
+"death_trigger",
+"activate any on death abilities"
+],
+[
+"sacrifice",
+"It can be used on any card on the player's side"
+]
+],
+"741011": [
+[
+"damage",
+"a Card's health drops equal to the Power of its attacker"
+],
+[
+"resource_gain",
+"When killed, creatures give you Bones"
+],
+[
+"cheat_death",
+"unless it has the Many Lives"
+]
+],
+"741013": [
+[
+"disable",
+"Your adversary will entirely skip their next turn"
+],
+[
+"extra_turn",
+"allowing you to take two turns in a row"
+],
+[
+"items_consumables",
+"The Hourglass is an item in Act I"
+]
+],
+"741014": [
+[
+"run_structure",
+"repeatable roguelike"
+],
+[
+"difficulty_modifiers",
+"15 different challenges"
+],
+[
+"randomness",
+"appear in a randomized order"
+]
+],
+"741015": [
+[
+"boss_phases",
+"After defeating his first phase"
+],
+[
+"board_wipe",
+"Destroy all cards on the player's side and replace them with Gold Nuggets"
+],
+[
+"steal",
+"Steal the most recently played card and move it to Leshy's side"
+],
+[
+"hand_disruption",
+"the player's hand is emptied"
+]
+],
+"741016": [
+[
+"quests",
+"at least one of them must satisfy the trial criteria"
+],
+[
+"selection",
+"choose between three different trials"
+],
+[
+"random_effect",
+"three cards will be drawn"
+],
+[
+"draw",
+"You may draw twice at the beginning of your turn"
+],
+[
+"turn_start",
+"at the beginning of your turn"
+],
+[
+"tutor",
+"you may choose any card in your deck to draw"
+],
+[
+"resource_gain",
+"You will start a battle with 8 Bones"
+],
+[
+"summon",
+"You will start the battle with a Black Goat on the board"
+],
+[
+"start_of_game",
+"You will start the battle with"
+]
+],
+"741018": [
+[
+"silence",
+"remove Sigils from cards"
+],
+[
+"boss_phases",
+"After the scale is tipped for the first time"
+]
+],
+"741021": [
+[
+"cost_type",
+"currency that can be used to play creatures that require Mox Cards"
+],
+[
+"multiple_resources",
+"There are three colors of Mox: Green, Orange, and Blue"
+],
+[
+"upgrade",
+"creatures can become Gemmified"
+],
+[
+"stat_gain",
+"Green Mox adds 2 Health"
+],
+[
+"cost_reduction",
+"Blue Mox decreases cost by 1 Energy"
+]
+],
+"741023": [
+[
+"upgrade",
+"they combine them into a special Spore variation of the card"
+],
+[
+"quests",
+"when you give them the 4 sets of cards, a special key will appear"
+]
+],
+"741024": [
+[
+"shield",
+"give all cards on your side of the board Nano Armor"
+],
+[
+"shop_gold",
+"bought from the shop for 26 coins"
+],
+[
+"items_consumables",
+"an Item in Act III"
+]
+],
+"741025": [
+[
+"boss_phases",
+"When its first phase is defeated"
+],
+[
+"forced_movement",
+"moving all cards clockwise"
+],
+[
+"turn_start",
+"at the start of the players turn"
+],
+[
+"copy",
+"fill all of its empty spaces with copies of it"
+]
+],
+"741027": [
+[
+"adjacency",
+"adjacency to a Leader"
+],
+[
+"stat_gain",
+"Power can be increased during a fight by adjacency to a Leader"
+],
+[
+"stat_loss",
+"weakened by opposition to a Stinky creature"
+],
+[
+"variable_stats",
+"Power defined by Variable Stats"
+],
+[
+"permanent_growth",
+"increase by 1 each time it perishes"
+]
+],
+"741033": [
+[
+"side_deck",
+"The Side Deck is a mechanic"
+],
+[
+"selection",
+"they have a choice between their main deck or their side deck"
+],
+[
+"turn_start",
+"at the start of their turn"
+],
+[
+"self_destruct",
+"the moment they attack they perish due to their Brittle Sigil"
+],
+[
+"resource_gain",
+"they generate Bones"
+]
+],
+"741034": [
+[
+"activated",
+"Activated Sigils that can be triggered anytime during the player's turn"
+],
+[
+"variable_stats",
+"symbols in place of their Power, which represent a variable number"
+],
+[
+"generate_cards",
+"a Rabbit is created in your hand"
+],
+[
+"generate_cards",
+"a Bee is created in your hand"
+],
+[
+"generate_cards",
+"an Ant enters your hand"
+],
+[
+"on_damaged",
+"When this card is struck"
+],
+[
+"turn_end",
+"At the end of the owner's turn"
+],
+[
+"movement",
+"this card moves in the sigil's direction"
+],
+[
+"deathtouch",
+"This card instantly kills any card it damages"
+],
+[
+"transform",
+"this card grows into a stronger form"
+],
+[
+"delayed",
+"After surviving for 1 turn"
+],
+[
+"summon",
+"Dams are created on adjacent empty spaces"
+],
+[
+"tutor",
+"choose a card from your deck to be drawn immediately"
+],
+[
+"movement",
+"This card will move to any empty space that is attacked by an enemy to block it"
+],
+[
+"copy",
+"a copy of it enters your hand"
+],
+[
+"summon",
+"a tail is created in its place"
+],
+[
+"free_play",
+"this card is played from your hand on its space"
+],
+[
+"resource_gain",
+"4 Bones are awarded instead of 1"
+],
+[
+"stealth",
+"creatures attacking this card's space attack directly"
+],
+[
+"counterattack",
+"the striker is dealt 1 damage"
+],
+[
+"forced_movement",
+"this and adjacent cards move in the sigil's direction"
+],
+[
+"evasion",
+"This card will ignore opposing cards and strike an opponent directly"
+],
+[
+"cheat_death",
+"When this card is sacrificed, it does not perish"
+],
+[
+"immunity",
+"If a creature would attack this card, it does not"
+],
+[
+"resource_gain",
+"This card counts as 3 Blood rather than 1 Blood when sacrificed"
+],
+[
+"blocking",
+"This card blocks opposing Airborne creatures"
+],
+[
+"multi_attack",
+"This card will strike each opposing space to the left and right of the spaces across it"
+],
+[
+"multi_attack",
+"This card will deal damage to the opposing spaces left, right, and opposite of it"
+],
+[
+"summon",
+"the creature inside takes its place"
+],
+[
+"items_consumables",
+"you will receive an item if you have room"
+],
+[
+"destroy",
+"the card opposing it also dies"
+],
+[
+"random_ability",
+"this sigil is replaced by a random sigil"
+],
+[
+"friendly_fire",
+"remove all Squirrels and Rabbits from the board"
+],
+[
+"multi_target_attack",
+"This card will strike all opposing creatures, or attack directly if there are none"
+],
+[
+"aura",
+"Creatures adjacent to this card gain 1 Power"
+],
+[
+"adjacency",
+"Creatures adjacent to this card"
+],
+[
+"stat_loss",
+"The creature opposing this card loses 1 Power"
+],
+[
+"enemy_benefit",
+"The creature opposing this card gains 1 Power"
+],
+[
+"resource_gain",
+"this card generates 1 Bone"
+],
+[
+"self_destruct",
+"After attacking, this card perishes"
+],
+[
+"summon",
+"plays a Skeleton in the space behind it"
+],
+[
+"resource_gain",
+"it provides a Green Gem"
+],
+[
+"resource_gain",
+"it provides all 3 Gems to its owner"
+],
+[
+"aura",
+"Mox cards on the owner's side of the board gain 1 Power"
+],
+[
+"summon",
+"a Ruby Mox replaces it"
+],
+[
+"draw",
+"you draw cards equal to the amount of your Mox cards played"
+],
+[
+"self_destruct",
+"If this card's owner controls no Mox cards, this card perishes"
+],
+[
+"discard",
+"discard your hand then draw 4 cards"
+],
+[
+"summon",
+"plays a Squirrel in the space behind it"
+],
+[
+"aura",
+"Other creatures within a circuit completed by this card gain 1 Power"
+],
+[
+"link_formation",
+"within a circuit"
+],
+[
+"summon",
+"play L33pB0ts at the end of the owner's turn"
+],
+[
+"resource_gain",
+"you gain an Energy Cell"
+],
+[
+"aoe_damage",
+"adjacent and opposing cards are dealt 10 damage"
+],
+[
+"damage",
+"they are dealt 1 damage"
+],
+[
+"resource_advantage",
+"your Energy never depletes"
+],
+[
+"summon",
+"fill all empty spaces with Explode Bots"
+],
+[
+"repeat_trigger",
+"When another creature you own dies, it dies again"
+],
+[
+"random_effect",
+"set the Power of this card randomly between 1 and 6"
+],
+[
+"activated",
+"Activate: Pay 1 Energy"
+],
+[
+"stat_gain",
+"increase the Power and Health of this card by 1"
+],
+[
+"draw",
+"draw a card for each damage dealt"
+],
+[
+"self_destruct",
+"destroy this card to draw 3 cards"
+],
+[
+"resource_conversion",
+"Pay 1 Energy to gain 3 Bones"
+],
+[
+"stealth",
+"Same as Waterborne, except that this card becomes a Tentacle card when it emerges"
+],
+[
+"target_choice",
+"You may choose which opposing spaces this card strikes"
+],
+[
+"shield",
+"The first time this card would take damage, prevent it"
+],
+[
+"stat_gain",
+"This card has 1 additional Power"
+],
+[
+"permanent_loss",
+"its removed from your deck if it dies"
+],
+[
+"buff",
+"give a card the Detonator sigil"
+],
+[
+"debuff",
+"give a card the Brittle sigil"
+],
+[
+"shield",
+"give a card the Nano Armor sigil"
+],
+[
+"direct_damage",
+"deal damage proportional to its size"
+],
+[
+"death_trigger",
+"When this card perishes"
+],
+[
+"stances",
+"this card toggles its Beast mode"
+],
+[
+"aoe_damage",
+"Gem Vessels now Detonate"
+],
+[
+"shield",
+"all Gem Vessels on the owner's side gain Nano Armor"
+],
+[
+"draw",
+"draw an Empty Vessel"
+],
+[
+"on_damaged",
+"After this card is dealt damage"
+],
+[
+"stat_gain",
+"swap its Power and Health"
+],
+[
+"generate_cards",
+"gain a random card"
+],
+[
+"random_effect",
+"gain a random card"
+],
+[
+"movement",
+"this card moves as close as possible to it"
+],
+[
+"on_ally_play",
+"When you play another card"
+],
+[
+"lifesteal",
+"When this card deals damage, it gains 1 Health for each damage dealt"
+],
+[
+"buff",
+"a card played in its previous space gains this card's sigils"
+],
+[
+"summon",
+"all empty spaces play Guts Cards"
+],
+[
+"stat_gain",
+"gains 1 Power when you speak"
+],
+[
+"free_play",
+"This card may be played without paying its cost"
+],
+[
+"board_clog",
+"an egg is created on the opposing space"
+],
+[
+"forced_movement",
+"Cards in the way will replace where it was previously"
+],
+[
+"immunity",
+"is immune to the effects of Touch of Death and Stinky"
+],
+[
+"multi_attack",
+"will strike the opposing space an extra time when attacking"
+],
+[
+"on_kill",
+"When this card kills an opposing card, it gains 1 Power"
+],
+[
+"stat_gain",
+"it transfers its stats onto the card it was sacrificed for"
+],
+[
+"transform",
+"This card hatches when drawn"
+],
+[
+"removal",
+"Drag nearby creatures into the card bearing this sigil and kill them"
+],
+[
+"heal",
+"Pay 2 Bones to heal this card"
+],
+[
+"regeneration",
+"are healed at the end of the owner's turn"
+],
+[
+"free_play",
+"Edaxio is played if you play cards the Head, Arms, Legs and Torso of Edaxio sigils"
+],
+[
+"random_ability",
+"Totem bottoms will select a random player obtainable sigil"
+],
+[
+"card_crafting",
+"The SP costs of various sigils during the Act III Build-A-Card event"
+],
+[
+"multi_target_attack",
+"This card will strike each opposing space to the left and right of the spaces across it"
+],
+[
+"multi_target_attack",
+"This card will deal damage to the opposing spaces left, right, and opposite of it"
+],
+[
+"passive",
+"Most Sigil effects are always in effect"
+],
+[
+"turn_end",
+"are healed at the end of the owner's turn"
+]
+],
+"741035": [
+[
+"destroy",
+"You may skin one of your adversary's cards. It is destroyed"
+],
+[
+"draw",
+"you draw a Pelt card"
+],
+[
+"items_consumables",
+"The Skinning Knife is an item"
+],
+[
+"shop_gold",
+"lets you buy for 7 teeth"
+],
+[
+"immunity",
+"cannot be skinned"
+]
+],
+"741036": [
+[
+"variable_stats",
+"Variable Stats (for example, Ant or BellProximity), that dynamically update card's Power"
+],
+[
+"transform",
+"A card will turn into Undead Cat when sacrificed 9 times"
+],
+[
+"random_effect",
+"replaced with a random unlocked card"
+],
+[
+"generate_cards",
+"player receives a Squirrel, a Card that Costs 1 Blood"
+],
+[
+"summon",
+"it spawns a Leaping Trap in its place"
+],
+[
+"board_wipe",
+"it clears all spaces on opponent's side of the board"
+],
+[
+"counterattack",
+"a card with this Behaviour will strike the offending card"
+],
+[
+"permanent_growth",
+"permanently incremented by 1 each time card perishes"
+],
+[
+"stealth",
+"only revealing itself when played"
+],
+[
+"free_play",
+"are played in adjacent slots for free"
+],
+[
+"death_trigger",
+"When a card perishes, it spawns a Leaping Trap in its place"
+]
+],
+"741037": [
+[
+"direct_damage",
+"it adds a weight worth 4 points to the scale in your favor"
+],
+[
+"items_consumables",
+"The Special Dagger is an item"
+]
+],
+"741038": [
+[
+"deckbuilding_effect",
+"The Starter Deck determines what the player begins each section of the game with"
+]
+],
+"741041": [
+[
+"steal",
+"he will hook the targeted card, dragging it to his side of the field"
+],
+[
+"forced_movement",
+"dragging it to his side of the field, pushing back any cards already in that space"
+],
+[
+"telegraphed_threats",
+"he aims his hook at a card every other turn"
+],
+[
+"boss_phases",
+"When his first candle is snuffed out"
+],
+[
+"summon",
+"summons Bait Buckets in front of each creature in play"
+]
+],
+"741042": [
+[
+"death_trigger",
+"When a Librarian is killed"
+],
+[
+"direct_damage",
+"a weight on the opponents side of the scale that will be created"
+],
+[
+"boss_phases",
+"At the start of the second phase"
+],
+[
+"card_crafting",
+"choose a file to create a card"
+],
+[
+"permanent_loss",
+"the chosen file will be deleted from your disc"
+]
+],
+"741043": [
+[
+"upgrade",
+"offer to fuse a pair of duplicate cards"
+],
+[
+"random_effect",
+"a random card that the player already owns"
+]
+],
+"741044": [
+[
+"rewind",
+"revert the game board to the state depicted in the photograph"
+],
+[
+"boss_phases",
+"At the beginning of its second phase"
+],
+[
+"summon",
+"playing five Shutterbugs on its second turn"
+],
+[
+"summon",
+"place Ancient Firs on all but one of the five available lanes"
+],
+[
+"turn_end",
+"At the end of each turn"
+]
+],
+"741045": [
+[
+"boss_phases",
+"He has two phases"
+],
+[
+"board_wipe",
+"kill all of your cards on the table, replacing them with Gold Nuggets"
+],
+[
+"random_effect",
+"A random unlocked Insect card with a random additional Sigil"
+]
+],
+"741046": [
+[
+"shop_gold",
+"trades cards for Pelts or Foils"
+],
+[
+"boss_phases",
+"After defeating his first phase"
+],
+[
+"random_ability",
+"random cards with random extra Sigils"
+],
+[
+"random_effect",
+"play random cards with random extra Sigils"
+]
+],
+"741047": [
+[
+"shop_gold",
+"offer the player Pelts in exchange for teeth"
+],
+[
+"boss_phases",
+"He has two phases"
+],
+[
+"summon",
+"starts with 2 Strange Frogs and 1 Leaping Trap on the board"
+],
+[
+"summon",
+"filling the board with Grizzly cards with the Mighty Leap Sigil"
+],
+[
+"random_effect",
+"play random cards with random extra Sigils"
+]
+],
+"741048": [
+[
+"rule_change",
+"create a special rule for them to use for the fight"
+],
+[
+"boss_phases",
+"When the second phase starts"
+],
+[
+"turn_start",
+"Everytime your turn starts"
+],
+[
+"death_trigger",
+"When a card dies"
+],
+[
+"damage",
+"A random card takes 5 damage"
+],
+[
+"on_ally_play",
+"When a card is played"
+],
+[
+"shield",
+"One of my cards gains Nano Armor"
+],
+[
+"random_effect",
+"A random card takes 5 damage"
+],
+[
+"summon",
+"I play a L33pB0t"
+],
+[
+"aoe_damage",
+"All cards take 1 damage"
+],
+[
+"direct_damage",
+"You lose 1 life"
+]
+],
+"741049": [
+[
+"buff",
+"gives an additional Sigil to a specified tribe during combat"
+],
+[
+"tribal",
+"a specified tribe"
+],
+[
+"random_ability",
+"The body of the Totem has a random sigil"
+]
+],
+"741050": [
+[
+"random_ability",
+"a Totem bearing a random sigil"
+],
+[
+"tribal",
+"the tribe head corresponding to the main tribe played in the battle"
+]
+],
+"741051": [
+[
+"stat_gain",
+"will increase the Power of cards with the Ants Variable Stat"
+],
+[
+"permanent_growth",
+"increases its Power by one every turn when you are out of cards"
+],
+[
+"deck_condition",
+"when you are out of cards"
+],
+[
+"immunity",
+"is immune to the Scissors, Fish Hook, and Skinning Knife"
+]
+],
+"741054": [
+[
+"rewind",
+"can revert it back to that state"
+],
+[
+"direct_damage",
+"The bigger the file you choose, the more damage it will do"
+],
+[
+"rule_change",
+"the gimmick of the fight"
+],
+[
+"boss_phases",
+"In Phase 2, you create a second gimmick"
+],
+[
+"random_effect",
+"A random card is played"
+],
+[
+"aoe_damage",
+"All cards take 1 damage"
+],
+[
+"board_wipe",
+"The board is wiped whenever a card dies"
+]
+],
+"741055": [
+[
+"variable_stats",
+"dynamically change Power of card bearing them"
+],
+[
+"tribal",
+"the number of cards with Ant Trait"
+],
+[
+"hand_size",
+"equal to the number of cards in your hand"
+]
+]
+}

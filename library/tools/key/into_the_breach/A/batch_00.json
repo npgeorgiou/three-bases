@@ -1,0 +1,484 @@
+{
+"760827": [
+[
+"shield",
+"Shields block damage"
+],
+[
+"immunity",
+"prevent new negative status effects"
+]
+],
+"760828": [
+[
+"immunity",
+"cannot be set on Fire"
+]
+],
+"760829": [
+[
+"movement",
+"Flying units can be positioned at any terrain tile"
+],
+[
+"immunity",
+"cannot be waterlogged"
+]
+],
+"760830": [
+[
+"temporary_buff",
+"+2 Move this turn"
+]
+],
+"760831": [
+[
+"damage_reduction",
+"reduced by 1"
+]
+],
+"760832": [
+[
+"immunity",
+"unaffected by Smoke"
+]
+],
+"760834": [
+[
+"debuff",
+"Weapon damage against this unit is doubled"
+],
+[
+"silence",
+"Natural Armor is disabled"
+]
+],
+"760835": [
+[
+"stat_gain",
+"damage is increased by 1"
+],
+[
+"heal",
+"will heal 2 points"
+]
+],
+"760836": [
+[
+"damage_over_time",
+"take 1 damage at the start of every turn"
+],
+[
+"turn_start",
+"start of every turn"
+]
+],
+"760837": [
+[
+"disable",
+"unable to move or attack"
+],
+[
+"immunity",
+"Any damage to a frozen unit is negated"
+]
+],
+"760839": [
+[
+"immobilize",
+"cannot move"
+]
+],
+"760842": [
+[
+"suppress",
+"cannot attack or repair"
+]
+],
+"760843": [
+[
+"suppress",
+"Weapons do not work"
+]
+],
+"760846": [],
+"760847": [
+[
+"stealth",
+"hide underground"
+],
+[
+"on_damaged",
+"after taking one or more damage"
+]
+],
+"760848": [
+[
+"death_trigger",
+"Explodes on death"
+],
+[
+"aoe_damage",
+"dealing 1 damage to adjacent tiles"
+],
+[
+"piercing",
+"ignores Armor"
+],
+[
+"adjacency",
+"adjacent tiles"
+]
+],
+"760849": [
+[
+"aura",
+"providing Armor to all Vek"
+],
+[
+"damage_reduction",
+"reducing incoming weapon damage by 1"
+]
+],
+"760850": [
+[
+"immunity",
+"Immune to water"
+]
+],
+"760851": [
+[
+"friendly_fire",
+"1 damage all friendly units"
+]
+],
+"760852": [
+[
+"aura",
+"providing +1 HP to all Vek"
+]
+],
+"760853": [
+[
+"movement",
+"walk in Water"
+]
+],
+"760854": [
+[
+"aura",
+"enhancing all Vek"
+],
+[
+"regeneration",
+"regeneration"
+],
+[
+"death_trigger",
+"explode on death"
+]
+],
+"760855": [
+[
+"regeneration",
+"healing all Vek 1 point every turn"
+]
+],
+"760856": [
+[
+"on_damaged",
+"If damaged"
+],
+[
+"shield",
+"Shield itself"
+],
+[
+"delayed",
+"prepare to heal"
+]
+],
+"760857": [
+[
+"immunity",
+"Cannot be moved by any weapon effect"
+]
+],
+"760858": [
+[
+"summon",
+"Spawns two Medium Goos"
+],
+[
+"death_trigger",
+"on death"
+]
+],
+"760859": [],
+"760860": [
+[
+"immunity",
+"avoids mines"
+]
+],
+"760861": [
+[
+"forced_movement",
+"Pull target towards you 1 tile"
+],
+[
+"protection",
+"Shield tiles from damage"
+],
+[
+"exhaust",
+"2 uses per battle"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+],
+"760862": [
+[
+"movement",
+"Fly over a target"
+]
+],
+"760863": [
+[
+"ranged",
+"Fires a powerful projectile"
+],
+[
+"damage",
+"damages and pushes its target"
+],
+[
+"forced_movement",
+"pushes its target"
+]
+],
+"760864": [
+[
+"forced_movement",
+"toss it behind you"
+],
+[
+"damage_reduction",
+"reduced by 1"
+]
+],
+"760865": [
+[
+"ranged",
+"Powerful artillery strike"
+],
+[
+"damage",
+"damaging a single tile"
+],
+[
+"multi_target_attack",
+"pushing adjacent tiles"
+],
+[
+"forced_movement",
+"pushing adjacent tiles"
+]
+],
+"760866": [
+[
+"friendly_fire",
+"friendly fire ON"
+],
+[
+"upgrade",
+"Most weapons come with an upgrade"
+]
+],
+"760867": [
+[
+"suppress",
+"Units cannot attack in Water"
+],
+[
+"terrain",
+"Most non-flying enemies die in Water"
+]
+],
+"760869": [
+[
+"deckbuilding_effect",
+"determine the Mechs you can take"
+],
+[
+"random_effect",
+"A Random Squad is created out of all the unlocked Mechs"
+]
+],
+"760870": [
+[
+"on_damaged",
+"If damaged"
+],
+[
+"damage_over_time",
+"Lights units on Fire"
+],
+[
+"terrain",
+"Forest Tile"
+]
+],
+"760871": [
+[
+"quests",
+"bonus objective is to defend this structure"
+]
+],
+"760872": [
+[
+"delayed",
+"will become Water"
+],
+[
+"turn_start",
+"start of the enemy turn"
+]
+],
+"760873": [
+[
+"life_track",
+"Your Power Grid is reduced"
+],
+[
+"saving_throws",
+"chance to resist damage"
+],
+[
+"terrain",
+"Civilian Building"
+]
+],
+"760874": [
+[
+"terrain",
+"Mountain Tile"
+]
+],
+"760875": [
+[
+"telegraphed_threats",
+"Vek will emerge here next turn"
+],
+[
+"damage",
+"will take one damage"
+],
+[
+"spawn_blocking",
+"Any unit blocking this space"
+]
+],
+"760876": [
+[
+"damage",
+"damaging and pushing it"
+],
+[
+"forced_movement",
+"damaging and pushing it"
+]
+],
+"760877": [
+[
+"ranged",
+"Artillery weapon"
+],
+[
+"forced_movement",
+"pulls its target towards you"
+],
+[
+"aura",
+"Enemies do +1 Damage against other enemies"
+]
+],
+"760878": [
+[
+"summon",
+"spawned by other Vek"
+],
+[
+"aura",
+"provide passive bonuses to other Vek"
+],
+[
+"telegraphed_threats",
+"prepare to attack it"
+],
+[
+"boss_phases",
+"Hive Leaders, bosses"
+]
+],
+"760879": [
+[
+"damage",
+"deal 3 damage"
+],
+[
+"forced_movement",
+"push the target"
+],
+[
+"area_templates",
+"charges forward in a line"
+]
+],
+"760880": [
+[
+"ranged",
+"shoots projectiles in a direct line"
+],
+[
+"damage",
+"dealing 3 damage"
+]
+],
+"760881": [
+[
+"damage",
+"deal 1 damage"
+],
+[
+"forced_movement",
+"push the target"
+],
+[
+"area_templates",
+"charges forward in a line"
+]
+],
+"760882": [
+[
+"ranged",
+"shoots projectiles in a direct line"
+],
+[
+"damage",
+"dealing 1 damage"
+]
+],
+"760883": [
+[
+"damage",
+"Stab the target for 1 damage"
+],
+[
+"movement",
+"move over any terrain tile"
+]
+]
+}

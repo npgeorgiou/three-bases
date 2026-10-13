@@ -1,0 +1,404 @@
+{
+"796047": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"once_per_game",
+"Once per game"
+],
+[
+"destroy",
+"destroy an enemy card here"
+],
+[
+"stat_condition",
+"with less Power"
+],
+[
+"board_presence",
+"if your side here is full"
+]
+],
+"796051": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Shuffle Mjolnir into your deck"
+]
+],
+"796054": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Shuffle Mjolnir into your deck"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"796065": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+3 Power"
+],
+[
+"combo_sequence",
+"last character"
+],
+[
+"symmetric_effect",
+"EACH player"
+],
+[
+"enemy_benefit",
+"Give the last character EACH player played last turn +3 Power"
+]
+],
+"796078": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add a random Thunderbolt to your hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"tribal",
+"Thunderbolt"
+],
+[
+"in_hand_buff",
+"Give it -1 Cost"
+]
+],
+"796093": [
+[
+"turn_start",
+"Start of Turn"
+],
+[
+"in_hand_buff",
+"Give all cards in your hand +1 Power"
+],
+[
+"control_reward",
+"if you're winning here"
+],
+[
+"movement",
+"move this to another location"
+]
+],
+"796095": [
+[
+"death_trigger",
+"When Destroyed"
+],
+[
+"free_play",
+"Replace this with a 1-Cost card from your hand or deck"
+],
+[
+"cost_condition",
+"1-Cost card"
+],
+[
+"stat_gain",
+"with +2 Power"
+]
+],
+"796102": [
+[
+"recycle",
+"Put this back"
+],
+[
+"in_hand_buff",
+"-2 Cost"
+]
+],
+"796108": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Copy the top card of your opponent's deck into your hand"
+],
+[
+"deck_position",
+"top card of your opponent's deck"
+],
+[
+"control_reward",
+"While you're winning here"
+],
+[
+"in_hand_buff",
+"it costs 2 less"
+]
+],
+"796114": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"+4 Power"
+],
+[
+"count_payoff",
+"if you've discarded a card"
+],
+[
+"death_count",
+"one of your cards has been destroyed"
+]
+],
+"796118": [
+[
+"play_restriction",
+"You can only play this at a location you're losing"
+],
+[
+"comeback",
+"a location you're losing"
+]
+],
+"796131": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"banish",
+"Banish the card that costs the least in your opponent's deck"
+],
+[
+"cost_condition",
+"costs the least"
+]
+],
+"796141": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"death_trigger",
+"When Destroyed"
+],
+[
+"stat_gain",
+"Horde +3"
+]
+],
+"796145": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"sacrifice",
+"Destroy your first other card here"
+],
+[
+"death_trigger",
+"After one of your other cards is destroyed"
+],
+[
+"stat_gain",
+"Horde +2"
+]
+],
+"796175": [
+[
+"generate_cards",
+"Add a random 3-Cost card to each player's hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"symmetric_effect",
+"each player's hand"
+]
+],
+"796179": [
+[
+"on_ally_play",
+"The next card you play here"
+],
+[
+"donate",
+"switches sides"
+]
+],
+"796190": [
+[
+"on_ally_play",
+"Your next play here"
+],
+[
+"steal",
+"steals 2 Power from a random enemy"
+],
+[
+"random_effect",
+"random enemy"
+]
+],
+"796214": [
+[
+"cost_reduction",
+"has -2 Cost"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"hand_position",
+"rightmost card"
+]
+],
+"796227": [
+[
+"stakes_wager",
+"After each Snap"
+],
+[
+"forced_movement",
+"move a card away from here"
+]
+],
+"796242": [
+[
+"rule_change",
+"No cards are revealed this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"796278": [
+[
+"on_ally_play",
+"The next card you play here"
+],
+[
+"forced_placement",
+"pulls a card to the enemy side from their hand"
+],
+[
+"hand_disruption",
+"from their hand"
+]
+],
+"796300": [
+[
+"delayed",
+"After this turn"
+],
+[
+"forced_placement",
+"put a card from each player's hand here"
+],
+[
+"symmetric_effect",
+"each player's hand"
+]
+],
+"796316": [
+[
+"turn_number",
+"After turn 4"
+],
+[
+"distribute",
+"split +8 Power among ALL cards here"
+]
+],
+"796337": [
+[
+"race_objective",
+"First to fill this"
+],
+[
+"free_play",
+"breaks out a 6-Cost card"
+],
+[
+"cost_set",
+"It costs 0"
+],
+[
+"high_cost",
+"6-Cost card"
+]
+],
+"796344": [
+[
+"generate_cards",
+"Fill each player's hand with random cards"
+],
+[
+"random_effect",
+"random cards"
+],
+[
+"symmetric_effect",
+"each player's hand"
+]
+],
+"796380": [
+[
+"lanes",
+"Three lanes called locations"
+],
+[
+"lane_rule",
+"each carries its own rule"
+],
+[
+"randomness",
+"most are random each game"
+]
+],
+"796381": [
+[
+"zone_control",
+"winning 2 of the 3 locations wins the game"
+],
+[
+"lanes",
+"3 locations"
+]
+]
+}

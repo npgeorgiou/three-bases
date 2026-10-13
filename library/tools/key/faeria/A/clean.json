@@ -1,0 +1,2712 @@
+{
+"741125": [
+[
+"stat_gain",
+"Has +2/+0"
+],
+[
+"condition_count",
+"while you control mountain mountain"
+],
+[
+"stat_gain",
+"+1/+1 while you control desert desert"
+]
+],
+"741351": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"transform",
+"Transform a land to"
+],
+[
+"steal",
+"Gain control of it"
+]
+],
+"741493": [
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Discover a Beast"
+],
+[
+"tribal",
+"Beast"
+],
+[
+"cost_type",
+"becomes wild land"
+]
+],
+"741470": [
+[
+"on_play",
+"Gift"
+],
+[
+"polymorph",
+"Transform an enemy creature into a 5/3"
+]
+],
+"741451": [
+[
+"on_play",
+"Gift"
+],
+[
+"in_hand_buff",
+"Reduce the cost of a random Beast in your hand by 5 faeria"
+],
+[
+"random_effect",
+"random Beast"
+],
+[
+"tribal",
+"Beast"
+]
+],
+"741089": [
+[
+"summon",
+"Summon three 2/2 Angry Yaks"
+],
+[
+"haste",
+"Haste"
+]
+],
+"741189": [
+[
+"taunt",
+"Taunt"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"terrain",
+"Create forest at random"
+],
+[
+"random_effect",
+"at random"
+]
+],
+"741117": [
+[
+"stat_gain",
+"give a random friendly creature +1/+1"
+],
+[
+"random_effect",
+"random friendly creature"
+]
+],
+"741313": [
+[
+"movement",
+"Dash 2"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"damage",
+"Deal 4 damage"
+],
+[
+"distribute",
+"randomly split among enemies"
+],
+[
+"random_effect",
+"randomly split"
+],
+[
+"stat_gain",
+"Give +4/+4"
+]
+],
+"741449": [
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"immobilize",
+"Enemy creatures can't move next turn"
+]
+],
+"741290": [
+[
+"evasion",
+"Flying"
+],
+[
+"stat_gain",
+"gains +3/+1"
+],
+[
+"movement",
+"Charge 3"
+]
+],
+"741301": [
+[
+"movement",
+"Charge 2"
+],
+[
+"stat_gain",
+"this drains its attack"
+],
+[
+"death_count",
+"Whenever a friendly creature dies"
+]
+],
+"741393": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"terrain",
+"Create a special land"
+],
+[
+"stat_gain",
+"+2/+0"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"741254": [
+[
+"damage",
+"Deal 2 damage to a creature"
+],
+[
+"direct_damage",
+"deal 2 damage to its controller"
+],
+[
+"on_kill",
+"If it dies"
+]
+],
+"741463": [
+[
+"on_play",
+"Gift"
+],
+[
+"deck_condition",
+"If you have no creature left in your deck"
+],
+[
+"generate_cards",
+"10 random neutral creatures into your deck"
+],
+[
+"in_hand_buff",
+"They gain +2/+2"
+],
+[
+"random_effect",
+"random neutral"
+]
+],
+"741164": [
+[
+"stat_loss",
+"Halve a creature's base Attack and Life"
+]
+],
+"741105": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"741309": [
+[
+"movement",
+"Charge 2"
+],
+[
+"on_spell",
+"Whenever you play an event"
+],
+[
+"stat_gain",
+"gains +2/+0"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"741071": [
+[
+"ranged",
+"Shoots in a straight line with line of sight"
+],
+[
+"area_templates",
+"straight line"
+]
+],
+"741487": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"movement",
+"Move this creature"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"territory_trigger",
+"if this is on an enemy land"
+]
+],
+"741259": [
+[
+"on_enemy_enter",
+"Whenever your opponent summons a creature"
+],
+[
+"damage",
+"deal 1 damage to this"
+]
+],
+"741281": [
+[
+"haste",
+"Haste"
+],
+[
+"movement",
+"Charge 3"
+],
+[
+"self_destruct",
+"dies at end of turn"
+],
+[
+"turn_end",
+"end of turn"
+]
+],
+"741371": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"permanent_growth",
+"this gains +2/+2 whenever an enemy creature harvests faeria"
+],
+[
+"delayed",
+"On your opponent's next turn"
+]
+],
+"741450": [
+[
+"on_attack",
+"Combat"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all adjacent enemies"
+],
+[
+"adjacency",
+"adjacent enemies"
+]
+],
+"741452": [
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"summon",
+"Summon a 4/3 Seifer's Fodder"
+],
+[
+"random_effect",
+"random adjacent land"
+],
+[
+"fodder",
+"Fodder"
+],
+[
+"adjacency",
+"adjacent"
+]
+],
+"741058": [
+[
+"death_trigger",
+"Triggers when the creature or structure is destroyed"
+]
+],
+"741416": [
+[
+"movement",
+"Dash 1"
+],
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"tutor",
+"Draw the top creature with 5 or more life in your deck"
+],
+[
+"stat_gain",
+"Give it +2/+2"
+]
+],
+"741288": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"stat_loss",
+"drains 2 Attack from each enemy creature"
+]
+],
+"741195": [
+[
+"terrain",
+"Create forest at random"
+],
+[
+"random_effect",
+"at random"
+]
+],
+"741429": [
+[
+"stat_gain",
+"+2/+0"
+],
+[
+"tribal",
+"friendly beast"
+],
+[
+"attack_now",
+"it fights an enemy creature"
+]
+],
+"795376": [],
+"741174": [
+[
+"permanent_growth",
+"Whenever an adjacent creature dies, this gains +1/+1"
+],
+[
+"adjacency",
+"adjacent creature"
+],
+[
+"death_count",
+"dies"
+]
+],
+"741362": [
+[
+"damage",
+"Deal 5 damage"
+],
+[
+"recycle",
+"Shuffle the Hammer into your deck"
+]
+],
+"741109": [
+[
+"generate_cards",
+"Add the four elemental Dragons to your hand"
+],
+[
+"cost_reduction",
+"cost 3 faeria less"
+],
+[
+"cost_type",
+"become wild land"
+]
+],
+"741222": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"+0/+2"
+]
+],
+"741072": [
+[
+"immunity",
+"Cannot be targeted by spells or abilities"
+]
+],
+"741068": [
+[
+"haste",
+"Can move, attack and harvest the turn it is played"
+]
+],
+"741070": [
+[
+"copy",
+"Creates a copy of a card"
+]
+],
+"741392": [
+[
+"on_play",
+"Gift"
+],
+[
+"attack_now",
+"This fights an enemy creature"
+],
+[
+"summon",
+"Summon a 2/2 Frog with Jump"
+],
+[
+"movement",
+"Jump"
+],
+[
+"random_effect",
+"random space"
+],
+[
+"adjacency",
+"adjacent to the target"
+]
+],
+"741337": [
+[
+"on_play",
+"Gift"
+],
+[
+"attack_now",
+"This may fight an enemy creature"
+]
+],
+"741061": [
+[
+"territory_trigger",
+"Triggers the first time this creature moves onto enemy land"
+]
+],
+"741255": [
+[
+"taunt",
+"Taunt"
+],
+[
+"turn_start",
+"Production"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all adjacent enemy creatures"
+],
+[
+"adjacency",
+"adjacent enemy creatures"
+]
+],
+"741411": [
+[
+"immunity",
+"Divine"
+],
+[
+"variable_stats",
+"Attack is always equal to his Life"
+],
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"lifesteal",
+"Drain 1 life from EVERYTHING"
+],
+[
+"friendly_fire",
+"EVERYTHING"
+]
+],
+"741167": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Change another friendly creature to 6/6"
+]
+],
+"741276": [
+[
+"friendly_fire",
+"Deal 2 damage to yourself"
+],
+[
+"resource_gain",
+"gain 2 faeria"
+]
+],
+"741431": [
+[
+"protection",
+"Protection"
+],
+[
+"immunity",
+"Divine"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"merge_attach",
+"swallows Majinata"
+],
+[
+"stat_gain",
+"+5/+5"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+]
+],
+"741508": [
+[
+"generate_cards",
+"Discover 2 non legendary cards"
+],
+[
+"cost_condition",
+"cost 7 faeria or more"
+],
+[
+"cost_type",
+"wild land"
+]
+],
+"741330": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"+1/+1"
+]
+],
+"741170": [
+[
+"steal",
+"Gain control of a creature"
+],
+[
+"stat_condition",
+"2 Attack or less"
+]
+],
+"795375": [],
+"741284": [
+[
+"cost_reduction",
+"Costs 2 faeria less if you attacked a god this turn"
+]
+],
+"741518": [
+[
+"immunity",
+"Divine"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Dash 5"
+],
+[
+"placement_rules",
+"Must be summoned next to a friendly creature"
+]
+],
+"741343": [
+[
+"extra_turn",
+"Take an extra turn after this one"
+]
+],
+"741176": [
+[
+"on_play",
+"Gift"
+],
+[
+"movement",
+"teleport another friendly creature to a forest you control"
+]
+],
+"741236": [
+[
+"permanent_growth",
+"Whenever a god is dealt damage, this gains that much Attack"
+]
+],
+"741175": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"stat_gain",
+"+3/+5"
+],
+[
+"random_effect",
+"random friendly creature"
+]
+],
+"741406": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"This gains +1/+1 for each well emptied"
+],
+[
+"condition_count",
+"for each well emptied"
+]
+],
+"741169": [
+[
+"cost_reduction",
+"costs 4 faeria less"
+],
+[
+"self_destruct",
+"It dies instantly"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"741517": [
+[
+"cost_reduction",
+"Cards in your hand cost 1 faeria less"
+]
+],
+"741295": [
+[
+"movement",
+"Charge 2"
+],
+[
+"permanent_growth",
+"Gains +1/+1 each time a friendly creature attacks a god"
+],
+[
+"in_hand_buff",
+"while in your deck or hand"
+]
+],
+"741207": [
+[
+"resource_gain",
+"gain 1 faeria"
+]
+],
+"741490": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"draw",
+"Draw 3 cards"
+],
+[
+"stat_gain",
+"this gains +2/+2"
+]
+],
+"741273": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"on_attack",
+"When Khalim attacks a god"
+],
+[
+"generate_cards",
+"add a Khalim's Follower to your hand"
+],
+[
+"cost_set",
+"It costs 0 faeria"
+]
+],
+"741344": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"generate_cards",
+"Add 3 random green cards to your hand"
+],
+[
+"random_effect",
+"random green cards"
+],
+[
+"cost_reduction",
+"They cost 3 faeria less"
+]
+],
+"741388": [
+[
+"immunity",
+"Divine"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"haste",
+"Haste"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"self_destruct",
+"destroy this creature"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"741108": [
+[
+"protection",
+"Protection"
+]
+],
+"741152": [
+[
+"evasion",
+"Flying"
+],
+[
+"stat_gain",
+"this gains +2/+2"
+],
+[
+"movement",
+"Charge 2"
+]
+],
+"741382": [
+[
+"on_play",
+"Gift"
+],
+[
+"tutor",
+"draw a non-blue creature from your deck"
+],
+[
+"condition_count",
+"For each enemy creature"
+]
+],
+"741430": [
+[
+"on_play",
+"Gift"
+],
+[
+"summon",
+"Summon a 1/1 Baby Yak"
+],
+[
+"taunt",
+"Taunt"
+]
+],
+"741210": [
+[
+"movement",
+"Dash 2"
+],
+[
+"cost_reduction",
+"costs 2 faeria less"
+],
+[
+"stat_condition",
+"5 Life or more"
+]
+],
+"741118": [
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Add a Campfire to your hand"
+]
+],
+"741440": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a 1/1 Rakoan where this died"
+]
+],
+"741230": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Gains +1/+1"
+],
+[
+"adjacency",
+"adjacent to an opponent's well"
+]
+],
+"741497": [
+[
+"movement",
+"Dash 1"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"cost_reduction",
+"reduce a card in your hand by 1 faeria"
+],
+[
+"territory_trigger",
+"if this is on an enemy land"
+]
+],
+"741424": [
+[
+"on_play",
+"Gift"
+],
+[
+"summon",
+"Summon two 4/4 Yak Guards"
+],
+[
+"taunt",
+"Taunt"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"adjacency",
+"adjacent to Mother of Yaks"
+],
+[
+"cost_reduction",
+"Costs 1 faeria less for each friendly yak that has died this game"
+],
+[
+"death_count",
+"for each friendly yak that has died this game"
+],
+[
+"tribal",
+"yak"
+]
+],
+"741316": [
+[
+"on_play",
+"Gift"
+],
+[
+"direct_damage",
+"Deal 2 damage to your opponent"
+]
+],
+"741482": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Give +2/+2"
+],
+[
+"immunity",
+"Divine"
+],
+[
+"stat_condition",
+"exactly 1 Attack"
+]
+],
+"741319": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Dash 3"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"heal",
+"Gain 1 Life for each card in your hand"
+],
+[
+"hand_size",
+"each card in your hand"
+]
+],
+"741403": [
+[
+"on_play",
+"Gift"
+],
+[
+"tutor",
+"Draw a green card, a blue card, a red card and a yellow card from your deck"
+]
+],
+"741154": [
+[
+"permanent_growth",
+"Whenever you harvest faeria from an opponent's well, this gains +1/+1"
+]
+],
+"741214": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"in_hand_buff",
+"Give all creatures in your deck and hand +1/+1"
+]
+],
+"741204": [
+[
+"movement",
+"Jump"
+],
+[
+"on_attack",
+"Whenever this attacks a god"
+],
+[
+"generate_cards",
+"add a random green creature to your hand"
+],
+[
+"random_effect",
+"random green creature"
+],
+[
+"cost_reduction",
+"It costs 2 faeria less"
+]
+],
+"741360": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 3"
+]
+],
+"741315": [
+[
+"evasion",
+"Flying"
+],
+[
+"haste",
+"Haste"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"on_attack",
+"Combat"
+],
+[
+"direct_damage",
+"Deal 3 damage to your opponent"
+]
+],
+"741318": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Dash 2"
+]
+],
+"741261": [
+[
+"board_wipe",
+"Destroy all creatures, structures, and lands on or adjacent to that space"
+],
+[
+"friendly_fire",
+"all creatures"
+]
+],
+"741361": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"damage",
+"Deal 3 damage"
+],
+[
+"aoe_damage",
+"Deal 3 damage to everything"
+]
+],
+"741074": [
+[
+"self_destruct",
+"drowns at end of turn on other land"
+],
+[
+"turn_end",
+"end of turn"
+]
+],
+"741305": [
+[
+"lifesteal",
+"Drain 2 Life from a creature"
+]
+],
+"741182": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Give a creature +2/+2"
+]
+],
+"741266": [
+[
+"haste",
+"Haste"
+],
+[
+"stat_gain",
+"Has +2/+0 against gods"
+]
+],
+"741272": [
+[
+"on_play",
+"Gift"
+],
+[
+"lifesteal",
+"You drain 2 Life from your opponent"
+]
+],
+"741400": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Dash 1"
+],
+[
+"movement",
+"brings its land with it"
+]
+],
+"741145": [],
+"741247": [
+[
+"evasion",
+"Flying"
+],
+[
+"stat_gain",
+"gains +3/+1"
+],
+[
+"ranged",
+"Ranged Attack"
+]
+],
+"741340": [
+[
+"lifesteal",
+"Drain 4 Life from your opponent"
+],
+[
+"aoe_damage",
+"deal 3 damage to all enemy creatures"
+],
+[
+"draw",
+"draw 2 cards"
+]
+],
+"741419": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"friendly_fire",
+"Deal 2 damage to yourself"
+]
+],
+"741405": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"stat_gain",
+"Gain +2/+2"
+]
+],
+"741251": [
+[
+"permanent_growth",
+"This gains +1/+1 whenever you summon a creature with higher Attack than Life"
+],
+[
+"stat_condition",
+"higher Attack than Life"
+],
+[
+"in_hand_buff",
+"while in your deck or hand"
+]
+],
+"741101": [
+[
+"aoe_damage",
+"Deal 1 damage to ALL creatures"
+],
+[
+"friendly_fire",
+"ALL creatures"
+]
+],
+"741476": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"in_hand_buff",
+"Give +1/+1 to all creatures in your hand"
+]
+],
+"741399": [
+[
+"copy",
+"copy it"
+],
+[
+"summon",
+"Summon a 2/2 Manta"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+]
+],
+"741320": [
+[
+"turn_start",
+"Production"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"resource_gain",
+"gain 1 faeria"
+],
+[
+"friendly_fire",
+"deal 2 damage to yourself"
+]
+],
+"741112": [
+[
+"draw",
+"Draw 2 cards"
+]
+],
+"741140": [
+[
+"copy",
+"Add a copy of a creature to your hand"
+],
+[
+"cost_reduction",
+"costs 5 faeria less"
+]
+],
+"741326": [
+[
+"friendly_fire",
+"Halve your Life"
+],
+[
+"board_wipe",
+"Destroy ALL creatures and structures"
+]
+],
+"741441": [
+[
+"on_attack",
+"Combat"
+],
+[
+"in_hand_buff",
+"Give a random Rakoan in your hand +1/+1"
+],
+[
+"random_effect",
+"random Rakoan"
+],
+[
+"tribal",
+"Rakoan"
+]
+],
+"741249": [
+[
+"permanent_growth",
+"Whenever an enemy creature dies, this gains +2/+1"
+]
+],
+"741310": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Gain Attack and Life equal to any creature's"
+]
+],
+"741491": [
+[
+"movement",
+"Jump"
+],
+[
+"permanent_growth",
+"Whenever you discover a Treasure, Fugoro gains +3/+3"
+]
+],
+"741300": [
+[
+"sacrifice",
+"Sacrifice a creature"
+],
+[
+"summon",
+"Summon a 6/3 Oblivion Rider"
+],
+[
+"movement",
+"Charge 3"
+]
+],
+"741079": [
+[
+"generate_cards",
+"Add two 2/3 Imperial Guards"
+],
+[
+"taunt",
+"Taunt"
+]
+],
+"741216": [
+[
+"generate_cards",
+"Add a random green creature to your hand"
+],
+[
+"random_effect",
+"random green creature"
+],
+[
+"stat_gain",
+"Give it +6/+6"
+]
+],
+"741374": [
+[
+"ranged",
+"Ranged Attack"
+],
+[
+"on_attack",
+"Whenever this attacks"
+],
+[
+"summon",
+"summon a 2/2 Angry Yak"
+],
+[
+"random_effect",
+"random space"
+],
+[
+"adjacency",
+"adjacent to the target"
+]
+],
+"741363": [
+[
+"on_play",
+"Gift"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all enemies"
+],
+[
+"stat_gain",
+"this gains +2/+2"
+],
+[
+"condition_count",
+"For each enemy destroyed"
+]
+],
+"741356": [
+[
+"stat_gain",
+"Change all friendly creatures to 6/6"
+]
+],
+"741420": [
+[
+"damage",
+"Deal 9 damage to an enemy creature or structure"
+]
+],
+"741391": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"stat_gain",
+"Gain +2/+0"
+],
+[
+"movement",
+"Gain Jump"
+],
+[
+"taunt",
+"Gain Taunt"
+]
+],
+"741144": [
+[
+"on_spell",
+"Whenever you play an event"
+],
+[
+"permanent_growth",
+"this gains +1/+1"
+]
+],
+"741143": [
+[
+"on_play",
+"Gift"
+],
+[
+"summon",
+"Summon a 1/1 Ruby Fish"
+]
+],
+"741317": [
+[
+"heal",
+"Gain 3 Life"
+],
+[
+"copy",
+"Copy the top 3 cards of your opponent's deck"
+],
+[
+"deck_position",
+"top 3 cards"
+],
+[
+"cost_reduction",
+"They cost 1 faeria less"
+],
+[
+"cost_type",
+"wild land"
+]
+],
+"741173": [
+[
+"movement",
+"Dash 2"
+]
+],
+"741063": [
+[
+"evasion",
+"Can move over ocean and land, but not through creatures or structures"
+]
+],
+"741159": [
+[
+"transform",
+"becomes a copy of it"
+]
+],
+"741336": [
+[
+"movement",
+"Charge 2"
+],
+[
+"permanent_growth",
+"this gains Attack and Life equal to that creature's"
+],
+[
+"cost_condition",
+"costs 1 faeria or less"
+],
+[
+"in_hand_buff",
+"while in your hand or deck"
+]
+],
+"741481": [
+[
+"resource_gain",
+"each player gains 1 faeria extra each turn"
+],
+[
+"symmetric_effect",
+"each player"
+]
+],
+"741471": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Gains +1/+0"
+],
+[
+"condition_count",
+"for each adjacent friendly triton"
+],
+[
+"adjacency",
+"adjacent friendly triton"
+],
+[
+"tribal",
+"triton"
+]
+],
+"741267": [
+[
+"movement",
+"Dash 1"
+],
+[
+"stat_gain",
+"Has +3/+0 against gods"
+]
+],
+"741323": [
+[
+"movement",
+"Jump"
+],
+[
+"targeting_rules",
+"Can only attack gods"
+]
+],
+"741472": [
+[
+"movement",
+"Jump"
+],
+[
+"placement_rules",
+"Can be summoned adjacent to friendly tritons"
+],
+[
+"stat_gain",
+"this gets +1/+1"
+],
+[
+"tribal",
+"tritons"
+]
+],
+"741355": [
+[
+"steal",
+"Gain control of an enemy creature"
+]
+],
+"741240": [
+[
+"on_play",
+"Gift"
+],
+[
+"damage",
+"Deal 4 damage to an adjacent enemy creature or structure"
+],
+[
+"adjacency",
+"adjacent enemy"
+]
+],
+"741467": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"+2/+0"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"tribal",
+"yaks"
+]
+],
+"741196": [
+[
+"cost_reduction",
+"costs 1 faeria less for each special land you have"
+],
+[
+"condition_count",
+"for each special land"
+]
+],
+"741401": [
+[
+"movement",
+"Dash 1"
+],
+[
+"aura",
+"Adjacent friendly creatures have +1/+0"
+],
+[
+"adjacency",
+"Adjacent friendly creatures"
+]
+],
+"741504": [
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Shuffle a Treasure Map into your deck"
+]
+],
+"741059": [
+[
+"turn_start",
+"Triggers at the start of each of its owner's turns"
+]
+],
+"741256": [
+[
+"damage",
+"Deal 4 damage to a creature or structure"
+]
+],
+"741322": [
+[
+"movement",
+"Jump"
+],
+[
+"on_attack",
+"Whenever this attacks a god"
+],
+[
+"heal",
+"you gain 5 Life"
+]
+],
+"741123": [
+[
+"stat_gain",
+"Has +2/+0"
+],
+[
+"condition_count",
+"while you control mountain mountain"
+],
+[
+"stat_gain",
+"+0/+2 while you control forest forest"
+]
+],
+"741325": [
+[
+"damage",
+"Deal 9 damage"
+],
+[
+"distribute",
+"randomly split among enemies"
+],
+[
+"random_effect",
+"randomly split"
+]
+],
+"741347": [
+[
+"turn_start",
+"Production"
+],
+[
+"resource_gain",
+"Refill each faeria well"
+],
+[
+"direct_damage",
+"deal 1 damage to your opponent"
+]
+],
+"741162": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"741278": [
+[
+"turn_start",
+"Production"
+],
+[
+"friendly_fire",
+"Deal 2 damage to yourself"
+]
+],
+"741085": [
+[
+"haste",
+"Haste"
+]
+],
+"741306": [
+[
+"destroy",
+"Destroy a creature with 3 Attack or less"
+],
+[
+"stat_condition",
+"3 Attack or less"
+]
+],
+"741246": [
+[
+"on_play",
+"Gift"
+],
+[
+"terrain",
+"Create mountain"
+]
+],
+"795378": [],
+"741474": [
+[
+"haste",
+"can harvest faeria the turn you play it"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"movement",
+"move this creature's land"
+]
+],
+"741448": [
+[
+"evasion",
+"Flying"
+],
+[
+"cost_type",
+"Cards in your hand are wild land"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Add a random Gagana crew member to your hand"
+],
+[
+"random_effect",
+"random Gagana crew member"
+],
+[
+"cost_set",
+"It costs 0 faeria"
+]
+],
+"741442": [
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Add a 1/1 Rakoan to your hand"
+],
+[
+"cost_set",
+"It costs 0 faeria"
+]
+],
+"741271": [
+[
+"placement_rules",
+"You can summon creatures on spaces adjacent to this structure"
+],
+[
+"activated",
+"Activate"
+],
+[
+"movement",
+"Move Wind Gate"
+]
+],
+"741308": [
+[
+"ranged",
+"Ranged Attack"
+],
+[
+"on_spell",
+"Whenever you play an event"
+],
+[
+"stat_gain",
+"this gains +1/+0"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"741242": [
+[
+"damage",
+"Deal 3 damage"
+]
+],
+"741435": [
+[
+"evasion",
+"Flying"
+],
+[
+"deathtouch",
+"Deathtouch"
+]
+],
+"741237": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"This gains +2/+2"
+],
+[
+"stat_condition",
+"higher Attack than Life"
+]
+],
+"741057": [
+[
+"on_play",
+"Triggers when the card is summoned"
+]
+],
+"741335": [
+[
+"modal_choice",
+"Give a target:"
+],
+[
+"stat_loss",
+"-2/-1"
+],
+[
+"damage",
+"3 damage"
+]
+],
+"741402": [
+[
+"evasion",
+"Flying"
+],
+[
+"taunt",
+"Taunt"
+],
+[
+"placement_rules",
+"Can be summoned anywhere"
+]
+],
+"741229": [
+[
+"on_attack",
+"Combat"
+],
+[
+"in_hand_buff",
+"A random card in your hand costs 7 faeria less"
+],
+[
+"random_effect",
+"random card"
+]
+],
+"741294": [
+[
+"aura",
+"All your flying creatures have +1/+0"
+]
+],
+"741480": [
+[
+"movement",
+"teleport him to a friendly forest"
+],
+[
+"stat_gain",
+"he gains +1/+1"
+]
+],
+"741495": [
+[
+"generate_cards",
+"Discover a creature with Taunt"
+],
+[
+"cost_type",
+"wild land"
+],
+[
+"stat_gain",
+"+0/+3"
+]
+],
+"741147": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"resource_gain",
+"Gain 10 faeria"
+]
+],
+"741341": [
+[
+"summon",
+"Summon three 2/4 Angry Prairie Yaks"
+],
+[
+"haste",
+"Haste"
+]
+],
+"741359": [
+[
+"on_play",
+"Gift"
+],
+[
+"friendly_fire",
+"Destroy your deck"
+]
+],
+"741149": [
+[
+"cost_reduction",
+"Costs 1 faeria less for each time you've harvested faeria from an enemy well this game"
+],
+[
+"count_payoff",
+"each time you've harvested faeria from an enemy well this game"
+]
+],
+"741103": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"generate_cards",
+"Add an Explore to your hand"
+]
+],
+"741342": [
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"destroy",
+"Destroy all adjacent creatures, structures and lands"
+],
+[
+"adjacency",
+"adjacent creatures"
+]
+],
+"741520": [
+[
+"generate_cards",
+"Discover a creature"
+],
+[
+"stat_gain",
+"+6/+6"
+],
+[
+"cost_type",
+"wild land"
+]
+],
+"741073": [
+[
+"deathtouch",
+"Any creature it damages dies"
+]
+],
+"741093": [
+[
+"cost_reduction",
+"Your Legends cost 1 faeria less"
+],
+[
+"tribal",
+"Legends"
+],
+[
+"turn_start",
+"Production"
+],
+[
+"generate_cards",
+"Add a random Legend to your hand"
+],
+[
+"random_effect",
+"random Legend"
+],
+[
+"cost_type",
+"wild land"
+]
+],
+"741099": [
+[
+"ranged",
+"Ranged Attack"
+],
+[
+"on_attack",
+"After this attacks"
+],
+[
+"permanent_growth",
+"it gains +1/+0"
+]
+],
+"741065": [
+[
+"movement",
+"Moves up to two tiles and can leap over obstacles"
+]
+],
+"741291": [
+[
+"activated",
+"Activate"
+],
+[
+"movement",
+"Charge 3"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"damage",
+"Deal 1 damage to this"
+]
+],
+"741064": [
+[
+"movement",
+"Can move several spaces in a straight line"
+]
+],
+"741202": [
+[
+"death_count",
+"Whenever another friendly creature dies"
+],
+[
+"in_hand_buff",
+"give a random creature in your hand +1/+1"
+],
+[
+"random_effect",
+"random creature"
+]
+],
+"741186": [
+[
+"on_damaged",
+"After this creature is dealt damage"
+],
+[
+"stat_multiply",
+"double its Attack"
+]
+],
+"741514": [
+[
+"movement",
+"Charge 3"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"gain +1/+1 for each map destroyed"
+],
+[
+"condition_count",
+"for each map destroyed"
+]
+],
+"741113": [
+[
+"stat_gain",
+"Has +2/+0"
+]
+],
+"741151": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"terrain",
+"Create lake"
+]
+],
+"741397": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"in_hand_buff",
+"Reduce the cost of all cards in your hand by 1 faeria"
+],
+[
+"recycle",
+"shuffle them into your deck"
+],
+[
+"draw",
+"draw that many cards"
+]
+],
+"741466": [
+[
+"on_play",
+"Gift"
+],
+[
+"terrain",
+"Create a prairie"
+],
+[
+"movement",
+"Dash 1"
+]
+],
+"741092": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_attack",
+"Combat"
+],
+[
+"resource_gain",
+"Gain 1 faeria"
+]
+],
+"741142": [
+[
+"generate_cards",
+"Add 2 random blue cards to your hand"
+],
+[
+"random_effect",
+"random blue cards"
+]
+],
+"741138": [
+[
+"polymorph",
+"Transform a creature into a 2/2 Frog"
+]
+],
+"741357": [
+[
+"generate_cards",
+"Shuffle 3 random Treasures into your deck"
+],
+[
+"random_effect",
+"random Treasures"
+]
+],
+"741479": [
+[
+"movement",
+"teleport it to a friendly forest"
+]
+],
+"741407": [
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"steal",
+"Gain control of this creature's land"
+]
+],
+"741198": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"terrain",
+"Create forest"
+]
+],
+"741209": [
+[
+"taunt",
+"Taunt"
+],
+[
+"movement",
+"Dash 2"
+],
+[
+"permanent_growth",
+"This gains +0/+1 for each time you've been dealt damage this game"
+],
+[
+"count_payoff",
+"for each time you've been dealt damage this game"
+]
+],
+"741292": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 3"
+],
+[
+"permanent_growth",
+"Whenever a friendly creature attacks a god, this gains +3/+0"
+]
+],
+"741224": [
+[
+"aura",
+"Adjacent friendly creatures have +2/+0"
+],
+[
+"adjacency",
+"Adjacent friendly creatures"
+]
+],
+"741314": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 3"
+],
+[
+"permanent_growth",
+"Gains +1/+1 for each friendly creature that has died this game"
+],
+[
+"death_count",
+"friendly creature that has died this game"
+],
+[
+"in_hand_buff",
+"while in your deck or hand"
+]
+],
+"741302": [
+[
+"evasion",
+"Flying"
+],
+[
+"immunity",
+"Can't be attacked"
+]
+],
+"741115": [
+[
+"deathtouch",
+"Deathtouch"
+]
+],
+"741069": [
+[
+"shield",
+"Prevents all damage from the next damage source, then is removed"
+]
+],
+"741218": [
+[
+"on_attack",
+"Combat"
+],
+[
+"resource_gain",
+"Gain 2 faeria"
+]
+],
+"741257": [
+[
+"aoe_damage",
+"Deal 3 damage to all enemy creatures on or adjacent to that space"
+],
+[
+"adjacency",
+"adjacent to that space"
+]
+],
+"741235": [
+[
+"on_play",
+"Gift"
+],
+[
+"damage",
+"Deal 1 damage to an enemy"
+]
+],
+"741437": [
+[
+"movement",
+"Charge 2"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"merge_attach",
+"Swallow another friendly Rakoan"
+],
+[
+"stat_gain",
+"+2/+0"
+],
+[
+"tribal",
+"Rakoan"
+]
+],
+"741453": [
+[
+"damage",
+"damage randomly split among enemies"
+],
+[
+"distribute",
+"randomly split among enemies"
+],
+[
+"random_effect",
+"randomly split"
+],
+[
+"count_payoff",
+"for each time you have selected +1 faeria from the power wheel this game"
+],
+[
+"in_hand_buff",
+"while in your hand or deck"
+]
+],
+"741475": [
+[
+"on_play",
+"Gift"
+],
+[
+"merge_attach",
+"Swallow a friendly creature"
+],
+[
+"permanent_growth",
+"Production - The swallowed creature gains +1/+1"
+],
+[
+"activated",
+"Activate"
+],
+[
+"self_destruct",
+"Destroy this"
+]
+],
+"741515": [
+[
+"on_play",
+"Gift"
+],
+[
+"merge_attach",
+"Swallow a friendly creature"
+],
+[
+"permanent_growth",
+"Production - The swallowed creature gains +4/+4"
+],
+[
+"activated",
+"Activate"
+],
+[
+"self_destruct",
+"Destroy this"
+]
+],
+"741457": [
+[
+"evasion",
+"Flying"
+],
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"generate_cards",
+"Add a Vile Bloatfly to your hand"
+]
+],
+"741483": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"tutor",
+"find a Treasure Map in your deck"
+],
+[
+"deck_position",
+"place it on top"
+],
+[
+"deck_condition",
+"If your deck has no Treasure Maps"
+],
+[
+"generate_cards",
+"shuffle one into it instead"
+]
+],
+"741461": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"hand_size",
+"4 or more cards in hand"
+],
+[
+"draw",
+"draw 1 card"
+],
+[
+"lifesteal",
+"drain 1 life from your opponent"
+]
+],
+"741353": [
+[
+"movement",
+"Dash 2"
+]
+],
+"741275": [
+[
+"destroy",
+"Destroy a creature"
+]
+]
+}

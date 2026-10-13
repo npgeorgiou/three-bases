@@ -1,0 +1,150 @@
+741063 | Flying | Can move over ocean and land, but not through creatures or structures.
+   A: [["evasion", "Can move over ocean and land, but not through creatures or structures"]]
+   B: [["terrain", "Can move over ocean and land"]]
+741065 | Jump | Moves up to two tiles and can leap over obstacles, creatures and ocean.
+   A: [["movement", "Moves up to two tiles and can leap over obstacles"]]
+   B: [["evasion", "leap over obstacles, creatures and ocean"], ["movement", "Moves up to two tiles"]]
+741071 | Ranged Attack | Shoots in a straight line with line of sight; takes no retaliation unless adjacent or shot by another ranged unit; cannot attack after moving normally.
+   A: [["ranged", "Shoots in a straight line with line of sight"], ["area_templates", "straight line"]]
+   B: [["ranged", "Shoots in a straight line"]]
+741074 | Aquatic | Can only travel over lakes and ocean; drowns at end of turn on other land.
+   A: [["self_destruct", "drowns at end of turn on other land"], ["turn_end", "end of turn"]]
+   B: [["terrain", "Can only travel over lakes and ocean"], ["self_destruct", "drowns at end of turn"], ["turn_end", "at end of turn"]]
+741079 | Hold the Line! | Add two 2/3 Imperial Guards with Taunt to your hand.
+   A: [["generate_cards", "Add two 2/3 Imperial Guards"], ["taunt", "Taunt"]]
+   B: [["generate_cards", "Add two 2/3 Imperial Guards with Taunt to your hand"]]
+741093 | Magda, Queen of Meroval | Your Legends cost 1 faeria less. / Production - Add a random Legend to your hand. It becomes wild land.
+   A: [["cost_reduction", "Your Legends cost 1 faeria less"], ["tribal", "Legends"], ["turn_start", "Production"], ["generate_cards", "Add a random Legend to your hand"], ["random_effect", "random Legend"], ["cost_type", "wild land"]]
+   B: [["cost_reduction", "Your Legends cost 1 faeria less"], ["turn_start", "Production"], ["generate_cards", "Add a random Legend to your hand"], ["random_effect", "random Legend"]]
+741101 | Famine | Deal 1 damage to ALL creatures.
+   A: [["aoe_damage", "Deal 1 damage to ALL creatures"], ["friendly_fire", "ALL creatures"]]
+   B: [["aoe_damage", "Deal 1 damage to ALL creatures"], ["scope_global", "ALL creatures"], ["friendly_fire", "ALL creatures"]]
+741109 | Day of the Dragons | Add the four elemental Dragons to your hand. They cost 3 faeria less and become wild land.
+   A: [["generate_cards", "Add the four elemental Dragons to your hand"], ["cost_reduction", "cost 3 faeria less"], ["cost_type", "become wild land"]]
+   B: [["generate_cards", "Add the four elemental Dragons to your hand"], ["in_hand_buff", "They cost 3 faeria less"]]
+741113 | War Yak | Has +2/+0 while your opponent has 10 Life or less.
+   A: [["stat_gain", "Has +2/+0"]]
+   B: [["stat_gain", "Has +2/+0"], ["low_life", "while your opponent has 10 Life or less"]]
+741123 | Taiga Explorer | Has +2/+0 while you control mountain mountain and +0/+2 while you control forest forest
+   A: [["stat_gain", "Has +2/+0"], ["condition_count", "while you control mountain mountain"], ["stat_gain", "+0/+2 while you control forest forest"]]
+   B: [["stat_gain", "Has +2/+0"], ["passive", "while you control mountain mountain"]]
+741125 | Sandstone Explorer | Has +2/+0 while you control mountain mountain and +1/+1 while you control desert desert
+   A: [["stat_gain", "Has +2/+0"], ["condition_count", "while you control mountain mountain"], ["stat_gain", "+1/+1 while you control desert desert"]]
+   B: [["stat_gain", "Has +2/+0"], ["passive", "while you control mountain mountain"]]
+741140 | Aurora's Creation | Add a copy of a creature to your hand. It costs 5 faeria less.
+   A: [["copy", "Add a copy of a creature to your hand"], ["cost_reduction", "costs 5 faeria less"]]
+   B: [["copy", "Add a copy of a creature to your hand"], ["in_hand_buff", "It costs 5 faeria less"]]
+741143 | Gabrian Noble | Gift - Summon a 1/1 Ruby Fish (you may summon it on an ocean tile).
+   A: [["on_play", "Gift"], ["summon", "Summon a 1/1 Ruby Fish"]]
+   B: [["on_play", "Gift"], ["summon", "Summon a 1/1 Ruby Fish"], ["placement_rules", "you may summon it on an ocean tile"]]
+741144 | Aurora's Disciple | Whenever you play an event, this gains +1/+1.
+   A: [["on_spell", "Whenever you play an event"], ["permanent_growth", "this gains +1/+1"]]
+   B: [["stat_gain", "gains +1/+1"], ["permanent_growth", "Whenever you play an event"], ["on_spell", "Whenever you play an event"]]
+741151 | Water Elemental | Jump / Gift - Create lake
+   A: [["movement", "Jump"], ["on_play", "Gift"], ["terrain", "Create lake"]]
+   B: [["on_play", "Gift"], ["terrain", "Create lake"]]
+741152 | Gemsilk Faerie | Flying / The first time you draw an event, this gains +2/+2, and Charge 2.
+   A: [["evasion", "Flying"], ["stat_gain", "this gains +2/+2"], ["movement", "Charge 2"]]
+   B: [["evasion", "Flying"], ["stat_gain", "gains +2/+2"]]
+741159 | Egg of Wonders | The first time you draw a non-legendary creature, Egg of Wonders becomes a copy of it.
+   A: [["transform", "becomes a copy of it"]]
+   B: [["transform", "becomes a copy of it"], ["copy", "becomes a copy of it"]]
+741162 | Shifting Tide | Choose one: Move a land / Draw a card. / - Move a land. / - Draw a card.
+   A: [["modal_choice", "Choose one"], ["draw", "Draw a card"]]
+   B: [["modal_choice", "Choose one"], ["draw", "Draw a card"], ["movement", "Move a land"]]
+741173 | Sagami Warrior | Dash 2
+   A: [["movement", "Dash 2"]]
+   B: []
+741202 | Spirit of Rebirth | Whenever another friendly creature dies, give a random creature in your hand +1/+1.
+   A: [["death_count", "Whenever another friendly creature dies"], ["in_hand_buff", "give a random creature in your hand +1/+1"], ["random_effect", "random creature"]]
+   B: [["on_ally_play", "Whenever another friendly creature dies"], ["death_count", "Whenever another friendly creature dies"], ["in_hand_buff", "give a random creature in your hand +1/+1"], ["random_effect", "random creature"]]
+741204 | Ruunin's Messenger | Jump / Whenever this attacks a god, add a random green creature to your hand. It costs 2 faeria less.
+   A: [["movement", "Jump"], ["on_attack", "Whenever this attacks a god"], ["generate_cards", "add a random green creature to your hand"], ["random_effect", "random green creature"], ["cost_reduction", "It costs 2 faeria less"]]
+   B: [["on_attack", "Whenever this attacks a god"], ["generate_cards", "add a random green creature to your hand"], ["random_effect", "random green creature"], ["in_hand_buff", "It costs 2 faeria less"]]
+741207 | Weeping Idol | Whenever you are dealt damage, gain 1 faeria.
+   A: [["resource_gain", "gain 1 faeria"]]
+   B: [["resource_gain", "gain 1 faeria"], ["on_damaged", "Whenever you are dealt damage"]]
+741209 | Wild Avenger | Taunt, Dash 2 / This gains +0/+1 for each time you've been dealt damage this game.
+   A: [["taunt", "Taunt"], ["movement", "Dash 2"], ["permanent_growth", "This gains +0/+1 for each time you've been dealt damage this game"], ["count_payoff", "for each time you've been dealt damage this game"]]
+   B: [["taunt", "Taunt"], ["stat_gain", "gains +0/+1"], ["permanent_growth", "for each time you've been dealt damage this game"], ["count_payoff", "for each time you've been dealt damage this game"]]
+741210 | Ancient Boar | Dash 2 / If you control a creature with 5 Life or more, costs 2 faeria less.
+   A: [["movement", "Dash 2"], ["cost_reduction", "costs 2 faeria less"], ["stat_condition", "5 Life or more"]]
+   B: [["cost_reduction", "costs 2 faeria less"], ["stat_condition", "5 Life or more"]]
+741216 | Ruunin's Presence | Add a random green creature to your hand. Give it +6/+6.
+   A: [["generate_cards", "Add a random green creature to your hand"], ["random_effect", "random green creature"], ["stat_gain", "Give it +6/+6"]]
+   B: [["generate_cards", "Add a random green creature to your hand"], ["random_effect", "random green creature"], ["in_hand_buff", "Give it +6/+6"]]
+741236 | Lord of Terror | Whenever a god is dealt damage, this gains that much Attack.
+   A: [["permanent_growth", "Whenever a god is dealt damage, this gains that much Attack"]]
+   B: [["stat_gain", "gains that much Attack"], ["permanent_growth", "Whenever a god is dealt damage"]]
+741249 | Bloodfire Wisp | Whenever an enemy creature dies, this gains +2/+1.
+   A: [["permanent_growth", "Whenever an enemy creature dies, this gains +2/+1"]]
+   B: [["stat_gain", "gains +2/+1"], ["permanent_growth", "Whenever an enemy creature dies"], ["death_count", "Whenever an enemy creature dies"]]
+741251 | Firebringer | This gains +1/+1 whenever you summon a creature with higher Attack than Life (while in your deck or hand).
+   A: [["permanent_growth", "This gains +1/+1 whenever you summon a creature with higher Attack than Life"], ["stat_condition", "higher Attack than Life"], ["in_hand_buff", "while in your deck or hand"]]
+   B: [["stat_gain", "gains +1/+1"], ["permanent_growth", "whenever you summon a creature"], ["on_ally_play", "whenever you summon a creature"], ["in_hand_buff", "while in your deck or hand"], ["stat_condition", "higher Attack than Life"]]
+741254 | Seifer's Wrath | Deal 2 damage to a creature. If it dies, deal 2 damage to its controller.
+   A: [["damage", "Deal 2 damage to a creature"], ["direct_damage", "deal 2 damage to its controller"], ["on_kill", "If it dies"]]
+   B: [["damage", "Deal 2 damage to a creature"], ["direct_damage", "deal 2 damage to its controller"]]
+741255 | Devouring Plant | Taunt / Production - Deal 2 damage to all adjacent enemy creatures.
+   A: [["taunt", "Taunt"], ["turn_start", "Production"], ["aoe_damage", "Deal 2 damage to all adjacent enemy creatures"], ["adjacency", "adjacent enemy creatures"]]
+   B: [["taunt", "Taunt"], ["aoe_damage", "Deal 2 damage to all adjacent enemy creatures"], ["adjacency", "adjacent"]]
+741259 | Crumbling Golem | Whenever your opponent summons a creature, deal 1 damage to this.
+   A: [["on_enemy_enter", "Whenever your opponent summons a creature"], ["damage", "deal 1 damage to this"]]
+   B: [["on_enemy_enter", "Whenever your opponent summons a creature"]]
+741261 | Meteor | Choose a space. Destroy all creatures, structures, and lands on or adjacent to that space.
+   A: [["board_wipe", "Destroy all creatures, structures, and lands on or adjacent to that space"], ["friendly_fire", "all creatures"]]
+   B: [["board_wipe", "Destroy all creatures, structures, and lands"], ["adjacency", "adjacent to that space"]]
+741267 | Oradrim Templar | Dash 1 / Has +3/+0 against gods.
+   A: [["movement", "Dash 1"], ["stat_gain", "Has +3/+0 against gods"]]
+   B: [["stat_gain", "Has +3/+0 against gods"]]
+741272 | Malevolent Spirit | Gift - You drain 2 Life from your opponent.
+   A: [["on_play", "Gift"], ["lifesteal", "You drain 2 Life from your opponent"]]
+   B: [["on_play", "Gift"], ["lifesteal", "drain 2 Life from your opponent"], ["direct_damage", "from your opponent"]]
+741273 | Khalim, Sky Prodigy | Flying, Charge 2 / When Khalim attacks a god, add a Khalim's Follower to your hand. It costs 0 faeria.
+   A: [["evasion", "Flying"], ["movement", "Charge 2"], ["on_attack", "When Khalim attacks a god"], ["generate_cards", "add a Khalim's Follower to your hand"], ["cost_set", "It costs 0 faeria"]]
+   B: [["evasion", "Flying"], ["on_attack", "When Khalim attacks a god"], ["generate_cards", "add a Khalim's Follower to your hand"], ["cost_set", "It costs 0 faeria"]]
+741276 | Soul Pact | Deal 2 damage to yourself and gain 2 faeria.
+   A: [["friendly_fire", "Deal 2 damage to yourself"], ["resource_gain", "gain 2 faeria"]]
+   B: [["life_payment", "Deal 2 damage to yourself"], ["resource_gain", "gain 2 faeria"]]
+741281 | Wind Soldier | Haste, Charge 3 / Wind Soldier dies at end of turn.
+   A: [["haste", "Haste"], ["movement", "Charge 3"], ["self_destruct", "dies at end of turn"], ["turn_end", "end of turn"]]
+   B: [["haste", "Haste"], ["self_destruct", "dies at end of turn"], ["turn_end", "at end of turn"]]
+741288 | Azarai, Wrath of the Desert | Flying, Charge 2 / Gift - Azarai drains 2 Attack from each enemy creature.
+   A: [["evasion", "Flying"], ["movement", "Charge 2"], ["on_play", "Gift"], ["stat_loss", "drains 2 Attack from each enemy creature"]]
+   B: [["evasion", "Flying"], ["on_play", "Gift"], ["stat_loss", "drains 2 Attack from each enemy creature"], ["scope_multi", "each enemy creature"]]
+741290 | Sunsilk Faerie | Flying / The first time you draw an event, this gains +3/+1 and Charge 3.
+   A: [["evasion", "Flying"], ["stat_gain", "gains +3/+1"], ["movement", "Charge 3"]]
+   B: [["evasion", "Flying"], ["stat_gain", "gains +3/+1"]]
+741291 | Celestial Tower | Activate - Give a creature Charge 3 this turn. Deal 1 damage to this.
+   A: [["activated", "Activate"], ["movement", "Charge 3"], ["temporary_effect", "this turn"], ["damage", "Deal 1 damage to this"]]
+   B: [["activated", "Activate"], ["buff", "Give a creature Charge 3"], ["temporary_buff", "this turn"]]
+741292 | Wind Wisp | Flying, Charge 3 / Whenever a friendly creature attacks a god, this gains +3/+0.
+   A: [["evasion", "Flying"], ["movement", "Charge 3"], ["permanent_growth", "Whenever a friendly creature attacks a god, this gains +3/+0"]]
+   B: [["evasion", "Flying"], ["stat_gain", "gains +3/+0"], ["permanent_growth", "Whenever a friendly creature attacks a god"]]
+741294 | Golden Aviary | All your flying creatures have +1/+0.
+   A: [["aura", "All your flying creatures have +1/+0"]]
+   B: [["aura", "All your flying creatures have +1/+0"], ["tribal", "flying creatures"]]
+741295 | Zealous Crusader | Charge 2 / Gains +1/+1 each time a friendly creature attacks a god (while in your deck or hand).
+   A: [["movement", "Charge 2"], ["permanent_growth", "Gains +1/+1 each time a friendly creature attacks a god"], ["in_hand_buff", "while in your deck or hand"]]
+   B: [["permanent_growth", "Gains +1/+1 each time"], ["in_hand_buff", "while in your deck or hand"]]
+741300 | Oath to Oblivion | Sacrifice a creature. Summon a 6/3 Oblivion Rider with Charge 3 in its place.
+   A: [["sacrifice", "Sacrifice a creature"], ["summon", "Summon a 6/3 Oblivion Rider"], ["movement", "Charge 3"]]
+   B: [["sacrifice", "Sacrifice a creature"], ["summon", "Summon a 6/3 Oblivion Rider"]]
+741301 | Shaytan Monstrosity | Charge 2 / Whenever a friendly creature dies, this drains its attack.
+   A: [["movement", "Charge 2"], ["stat_gain", "this drains its attack"], ["death_count", "Whenever a friendly creature dies"]]
+   B: [["stat_gain", "drains its attack"], ["death_count", "Whenever a friendly creature dies"]]
+741309 | Windstorm Charger | Charge 2 / Whenever you play an event, this gains +2/+0 this turn (limit +6/+0).
+   A: [["movement", "Charge 2"], ["on_spell", "Whenever you play an event"], ["stat_gain", "gains +2/+0"], ["temporary_buff", "this turn"]]
+   B: [["stat_gain", "gains +2/+0"], ["temporary_buff", "this turn"], ["on_spell", "Whenever you play an event"]]
+741310 | Apex Predator | Jump / Gift - Gain Attack and Life equal to any creature's.
+   A: [["movement", "Jump"], ["on_play", "Gift"], ["stat_gain", "Gain Attack and Life equal to any creature's"]]
+   B: [["on_play", "Gift"], ["stat_gain", "Gain Attack and Life equal to any creature's"]]
+741313 | Crackthorn Beast | Dash 2 / Gift - Deal 4 damage randomly split among enemies. Give +4/+4 randomly split among allies.
+   A: [["movement", "Dash 2"], ["on_play", "Gift"], ["damage", "Deal 4 damage"], ["distribute", "randomly split among enemies"], ["random_effect", "randomly split"], ["stat_gain", "Give +4/+4"]]
+   B: [["on_play", "Gift"], ["damage", "Deal 4 damage randomly split among enemies"], ["distribute", "randomly split among allies"], ["stat_gain", "+4/+4"], ["random_effect", "randomly split"]]
+741314 | Soul Eater | Flying, Charge 3 / Gains +1/+1 for each friendly creature that has died this game (while in your deck or hand).
+   A: [["evasion", "Flying"], ["movement", "Charge 3"], ["permanent_growth", "Gains +1/+1 for each friendly creature that has died this game"], ["death_count", "friendly creature that has died this game"], ["in_hand_buff", "while in your deck or hand"]]
+   B: [["evasion", "Flying"], ["stat_gain", "Gains +1/+1"], ["count_payoff", "for each friendly creature that has died this game"], ["in_hand_buff", "while in your deck or hand"]]
+741315 | Scourgeflame Specter | Flying, Haste, Charge 2 / Combat - Deal 3 damage to your opponent.
+   A: [["evasion", "Flying"], ["haste", "Haste"], ["movement", "Charge 2"], ["on_attack", "Combat"], ["direct_damage", "Deal 3 damage to your opponent"]]
+   B: [["evasion", "Flying"], ["haste", "Haste"], ["on_attack", "Combat"], ["direct_damage", "Deal 3 damage to your opponent"]]

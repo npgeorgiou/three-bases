@@ -1,0 +1,3427 @@
+{
+"741057": {
+"tags": [
+[
+"on_play",
+"Triggers when the card is summoned"
+]
+],
+"by": "A=B"
+},
+"741058": {
+"tags": [
+[
+"death_trigger",
+"Triggers when the creature or structure is destroyed"
+]
+],
+"by": "A=B"
+},
+"741059": {
+"tags": [
+[
+"turn_start",
+"Triggers at the start of each of its owner's turns"
+]
+],
+"by": "A=B"
+},
+"741061": {
+"tags": [
+[
+"territory_trigger",
+"Triggers the first time this creature moves onto enemy land"
+]
+],
+"by": "A=B"
+},
+"741063": {
+"tags": [
+[
+"movement",
+"Can move over ocean and land"
+],
+[
+"terrain",
+"ocean"
+]
+],
+"by": "C"
+},
+"741064": {
+"tags": [
+[
+"movement",
+"Can move several spaces in a straight line"
+]
+],
+"by": "A=B"
+},
+"741065": {
+"tags": [
+[
+"movement",
+"Moves up to two tiles"
+],
+[
+"terrain",
+"leap over obstacles"
+]
+],
+"by": "C"
+},
+"741068": {
+"tags": [
+[
+"haste",
+"Can move, attack and harvest the turn it is played"
+]
+],
+"by": "A=B"
+},
+"741069": {
+"tags": [
+[
+"shield",
+"Prevents all damage from the next damage source, then is removed"
+]
+],
+"by": "A=B"
+},
+"741070": {
+"tags": [
+[
+"copy",
+"Creates a copy of a card"
+]
+],
+"by": "A=B"
+},
+"741071": {
+"tags": [
+[
+"ranged",
+"Shoots in a straight line"
+],
+[
+"targeting_rules",
+"with line of sight"
+]
+],
+"by": "C"
+},
+"741072": {
+"tags": [
+[
+"immunity",
+"Cannot be targeted by spells or abilities"
+]
+],
+"by": "A=B"
+},
+"741073": {
+"tags": [
+[
+"deathtouch",
+"Any creature it damages dies"
+]
+],
+"by": "A=B"
+},
+"741074": {
+"tags": [
+[
+"terrain",
+"Can only travel over lakes and ocean"
+],
+[
+"self_destruct",
+"drowns at end of turn"
+],
+[
+"turn_end",
+"at end of turn"
+]
+],
+"by": "C"
+},
+"741079": {
+"tags": [
+[
+"generate_cards",
+"Add two 2/3 Imperial Guards with Taunt to your hand"
+]
+],
+"by": "C"
+},
+"741085": {
+"tags": [
+[
+"haste",
+"Haste"
+]
+],
+"by": "A=B"
+},
+"741089": {
+"tags": [
+[
+"summon",
+"Summon three 2/2 Angry Yaks"
+],
+[
+"haste",
+"Haste"
+]
+],
+"by": "A=B"
+},
+"741092": {
+"tags": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_attack",
+"Combat"
+],
+[
+"resource_gain",
+"Gain 1 faeria"
+]
+],
+"by": "A=B"
+},
+"741093": {
+"tags": [
+[
+"cost_reduction",
+"Your Legends cost 1 faeria less"
+],
+[
+"tribal",
+"Legends"
+],
+[
+"turn_start",
+"Production"
+],
+[
+"generate_cards",
+"Add a random Legend to your hand"
+],
+[
+"random_effect",
+"random Legend"
+]
+],
+"by": "C"
+},
+"741099": {
+"tags": [
+[
+"ranged",
+"Ranged Attack"
+],
+[
+"on_attack",
+"After this attacks"
+],
+[
+"permanent_growth",
+"it gains +1/+0"
+]
+],
+"by": "A=B"
+},
+"741101": {
+"tags": [
+[
+"aoe_damage",
+"Deal 1 damage to ALL creatures"
+],
+[
+"scope_global",
+"ALL creatures"
+],
+[
+"friendly_fire",
+"ALL creatures"
+]
+],
+"by": "C"
+},
+"741103": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"generate_cards",
+"Add an Explore to your hand"
+]
+],
+"by": "A=B"
+},
+"741105": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "A=B"
+},
+"741108": {
+"tags": [
+[
+"protection",
+"Protection"
+]
+],
+"by": "A=B"
+},
+"741109": {
+"tags": [
+[
+"generate_cards",
+"Add the four elemental Dragons to your hand"
+],
+[
+"in_hand_buff",
+"They cost 3 faeria less"
+]
+],
+"by": "C"
+},
+"741112": {
+"tags": [
+[
+"draw",
+"Draw 2 cards"
+]
+],
+"by": "A=B"
+},
+"741113": {
+"tags": [
+[
+"stat_gain",
+"Has +2/+0"
+],
+[
+"finisher",
+"while your opponent has 10 Life or less"
+]
+],
+"by": "C"
+},
+"741115": {
+"tags": [
+[
+"deathtouch",
+"Deathtouch"
+]
+],
+"by": "A=B"
+},
+"741117": {
+"tags": [
+[
+"stat_gain",
+"give a random friendly creature +1/+1"
+],
+[
+"random_effect",
+"random friendly creature"
+]
+],
+"by": "A=B"
+},
+"741118": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Add a Campfire to your hand"
+]
+],
+"by": "A=B"
+},
+"741123": {
+"tags": [
+[
+"stat_gain",
+"Has +2/+0"
+],
+[
+"condition_count",
+"while you control mountain mountain"
+],
+[
+"stat_gain",
+"+0/+2 while you control forest forest"
+]
+],
+"by": "C"
+},
+"741125": {
+"tags": [
+[
+"stat_gain",
+"Has +2/+0"
+],
+[
+"condition_count",
+"while you control mountain mountain"
+],
+[
+"stat_gain",
+"+1/+1 while you control desert desert"
+]
+],
+"by": "C"
+},
+"741138": {
+"tags": [
+[
+"polymorph",
+"Transform a creature into a 2/2 Frog"
+]
+],
+"by": "A=B"
+},
+"741140": {
+"tags": [
+[
+"copy",
+"Add a copy of a creature to your hand"
+],
+[
+"in_hand_buff",
+"It costs 5 faeria less"
+]
+],
+"by": "C"
+},
+"741142": {
+"tags": [
+[
+"generate_cards",
+"Add 2 random blue cards to your hand"
+],
+[
+"random_effect",
+"random blue cards"
+]
+],
+"by": "A=B"
+},
+"741143": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"summon",
+"Summon a 1/1 Ruby Fish"
+],
+[
+"placement_rules",
+"you may summon it on an ocean tile"
+]
+],
+"by": "C"
+},
+"741144": {
+"tags": [
+[
+"on_spell",
+"Whenever you play an event"
+],
+[
+"permanent_growth",
+"this gains +1/+1"
+]
+],
+"by": "C"
+},
+"741145": {
+"tags": [],
+"by": "A=B"
+},
+"741147": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"resource_gain",
+"Gain 10 faeria"
+]
+],
+"by": "A=B"
+},
+"741149": {
+"tags": [
+[
+"cost_reduction",
+"Costs 1 faeria less for each time you've harvested faeria from an enemy well this game"
+],
+[
+"count_payoff",
+"each time you've harvested faeria from an enemy well this game"
+]
+],
+"by": "A=B"
+},
+"741151": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"terrain",
+"Create lake"
+]
+],
+"by": "C"
+},
+"741152": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"stat_gain",
+"this gains +2/+2"
+],
+[
+"movement",
+"Charge 2"
+]
+],
+"by": "C"
+},
+"741154": {
+"tags": [
+[
+"permanent_growth",
+"Whenever you harvest faeria from an opponent's well, this gains +1/+1"
+]
+],
+"by": "A=B"
+},
+"741159": {
+"tags": [
+[
+"transform",
+"becomes a copy of it"
+]
+],
+"by": "C"
+},
+"741162": {
+"tags": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"terrain",
+"Move a land"
+]
+],
+"by": "C"
+},
+"741164": {
+"tags": [
+[
+"stat_loss",
+"Halve a creature's base Attack and Life"
+]
+],
+"by": "A=B"
+},
+"741167": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Change another friendly creature to 6/6"
+]
+],
+"by": "A=B"
+},
+"741169": {
+"tags": [
+[
+"cost_reduction",
+"costs 4 faeria less"
+],
+[
+"self_destruct",
+"It dies instantly"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "A=B"
+},
+"741170": {
+"tags": [
+[
+"steal",
+"Gain control of a creature"
+],
+[
+"stat_condition",
+"2 Attack or less"
+]
+],
+"by": "A=B"
+},
+"741173": {
+"tags": [
+[
+"movement",
+"Dash 2"
+]
+],
+"by": "C"
+},
+"741174": {
+"tags": [
+[
+"permanent_growth",
+"Whenever an adjacent creature dies, this gains +1/+1"
+],
+[
+"adjacency",
+"adjacent creature"
+],
+[
+"death_count",
+"dies"
+]
+],
+"by": "A=B"
+},
+"741175": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"stat_gain",
+"+3/+5"
+],
+[
+"random_effect",
+"random friendly creature"
+]
+],
+"by": "A=B"
+},
+"741176": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"movement",
+"teleport another friendly creature to a forest you control"
+]
+],
+"by": "A=B"
+},
+"741182": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Give a creature +2/+2"
+]
+],
+"by": "A=B"
+},
+"741186": {
+"tags": [
+[
+"on_damaged",
+"After this creature is dealt damage"
+],
+[
+"stat_multiply",
+"double its Attack"
+]
+],
+"by": "A=B"
+},
+"741189": {
+"tags": [
+[
+"taunt",
+"Taunt"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"terrain",
+"Create forest at random"
+],
+[
+"random_effect",
+"at random"
+]
+],
+"by": "A=B"
+},
+"741195": {
+"tags": [
+[
+"terrain",
+"Create forest at random"
+],
+[
+"random_effect",
+"at random"
+]
+],
+"by": "A=B"
+},
+"741196": {
+"tags": [
+[
+"cost_reduction",
+"costs 1 faeria less for each special land you have"
+],
+[
+"condition_count",
+"for each special land"
+]
+],
+"by": "A=B"
+},
+"741198": {
+"tags": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"terrain",
+"Create forest"
+]
+],
+"by": "A=B"
+},
+"741202": {
+"tags": [
+[
+"death_trigger",
+"Whenever another friendly creature dies"
+],
+[
+"in_hand_buff",
+"give a random creature in your hand +1/+1"
+],
+[
+"random_effect",
+"random creature"
+]
+],
+"by": "C"
+},
+"741204": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"on_attack",
+"Whenever this attacks a god"
+],
+[
+"generate_cards",
+"add a random green creature to your hand"
+],
+[
+"random_effect",
+"random green creature"
+],
+[
+"in_hand_buff",
+"It costs 2 faeria less"
+]
+],
+"by": "C"
+},
+"741207": {
+"tags": [
+[
+"resource_gain",
+"gain 1 faeria"
+],
+[
+"on_damaged",
+"Whenever you are dealt damage"
+]
+],
+"by": "C"
+},
+"741209": {
+"tags": [
+[
+"taunt",
+"Taunt"
+],
+[
+"movement",
+"Dash 2"
+],
+[
+"permanent_growth",
+"This gains +0/+1 for each time you've been dealt damage this game"
+],
+[
+"count_payoff",
+"for each time you've been dealt damage this game"
+]
+],
+"by": "C"
+},
+"741210": {
+"tags": [
+[
+"movement",
+"Dash 2"
+],
+[
+"cost_reduction",
+"costs 2 faeria less"
+],
+[
+"stat_condition",
+"5 Life or more"
+]
+],
+"by": "C"
+},
+"741214": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"in_hand_buff",
+"Give all creatures in your deck and hand +1/+1"
+]
+],
+"by": "A=B"
+},
+"741216": {
+"tags": [
+[
+"generate_cards",
+"Add a random green creature to your hand"
+],
+[
+"random_effect",
+"random green creature"
+],
+[
+"in_hand_buff",
+"Give it +6/+6"
+]
+],
+"by": "C"
+},
+"741218": {
+"tags": [
+[
+"on_attack",
+"Combat"
+],
+[
+"resource_gain",
+"Gain 2 faeria"
+]
+],
+"by": "A=B"
+},
+"741222": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"+0/+2"
+]
+],
+"by": "A=B"
+},
+"741224": {
+"tags": [
+[
+"aura",
+"Adjacent friendly creatures have +2/+0"
+],
+[
+"adjacency",
+"Adjacent friendly creatures"
+]
+],
+"by": "A=B"
+},
+"741229": {
+"tags": [
+[
+"on_attack",
+"Combat"
+],
+[
+"in_hand_buff",
+"A random card in your hand costs 7 faeria less"
+],
+[
+"random_effect",
+"random card"
+]
+],
+"by": "A=B"
+},
+"741230": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Gains +1/+1"
+],
+[
+"adjacency",
+"adjacent to an opponent's well"
+]
+],
+"by": "A=B"
+},
+"741235": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"damage",
+"Deal 1 damage to an enemy"
+]
+],
+"by": "A=B"
+},
+"741236": {
+"tags": [
+[
+"permanent_growth",
+"Whenever a god is dealt damage, this gains that much Attack"
+]
+],
+"by": "C"
+},
+"741237": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"This gains +2/+2"
+],
+[
+"stat_condition",
+"higher Attack than Life"
+]
+],
+"by": "A=B"
+},
+"741240": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"damage",
+"Deal 4 damage to an adjacent enemy creature or structure"
+],
+[
+"adjacency",
+"adjacent enemy"
+]
+],
+"by": "A=B"
+},
+"741242": {
+"tags": [
+[
+"damage",
+"Deal 3 damage"
+]
+],
+"by": "A=B"
+},
+"741246": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"terrain",
+"Create mountain"
+]
+],
+"by": "A=B"
+},
+"741247": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"stat_gain",
+"gains +3/+1"
+],
+[
+"ranged",
+"Ranged Attack"
+]
+],
+"by": "A=B"
+},
+"741249": {
+"tags": [
+[
+"permanent_growth",
+"Whenever an enemy creature dies, this gains +2/+1"
+],
+[
+"death_trigger",
+"Whenever an enemy creature dies"
+]
+],
+"by": "C"
+},
+"741251": {
+"tags": [
+[
+"in_hand_buff",
+"This gains +1/+1 whenever you summon a creature"
+],
+[
+"on_ally_play",
+"whenever you summon a creature"
+],
+[
+"stat_condition",
+"higher Attack than Life"
+]
+],
+"by": "C"
+},
+"741254": {
+"tags": [
+[
+"damage",
+"Deal 2 damage to a creature"
+],
+[
+"direct_damage",
+"deal 2 damage to its controller"
+]
+],
+"by": "C"
+},
+"741255": {
+"tags": [
+[
+"taunt",
+"Taunt"
+],
+[
+"turn_start",
+"Production"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all adjacent enemy creatures"
+],
+[
+"adjacency",
+"adjacent enemy creatures"
+]
+],
+"by": "C"
+},
+"741256": {
+"tags": [
+[
+"damage",
+"Deal 4 damage to a creature or structure"
+]
+],
+"by": "A=B"
+},
+"741257": {
+"tags": [
+[
+"aoe_damage",
+"Deal 3 damage to all enemy creatures on or adjacent to that space"
+],
+[
+"adjacency",
+"adjacent to that space"
+]
+],
+"by": "A=B"
+},
+"741259": {
+"tags": [
+[
+"on_enemy_enter",
+"Whenever your opponent summons a creature"
+],
+[
+"self_destruct",
+"deal 1 damage to this"
+]
+],
+"by": "C"
+},
+"741261": {
+"tags": [
+[
+"board_wipe",
+"Destroy all creatures, structures, and lands on or adjacent to that space"
+],
+[
+"adjacency",
+"adjacent to that space"
+],
+[
+"friendly_fire",
+"all creatures"
+],
+[
+"area_templates",
+"on or adjacent to that space"
+]
+],
+"by": "C"
+},
+"741266": {
+"tags": [
+[
+"haste",
+"Haste"
+],
+[
+"stat_gain",
+"Has +2/+0 against gods"
+]
+],
+"by": "A=B"
+},
+"741267": {
+"tags": [
+[
+"movement",
+"Dash 1"
+],
+[
+"stat_gain",
+"Has +3/+0 against gods"
+]
+],
+"by": "C"
+},
+"741271": {
+"tags": [
+[
+"placement_rules",
+"You can summon creatures on spaces adjacent to this structure"
+],
+[
+"activated",
+"Activate"
+],
+[
+"movement",
+"Move Wind Gate"
+]
+],
+"by": "A=B"
+},
+"741272": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"lifesteal",
+"You drain 2 Life from your opponent"
+],
+[
+"direct_damage",
+"drain 2 Life from your opponent"
+]
+],
+"by": "C"
+},
+"741273": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"on_attack",
+"When Khalim attacks a god"
+],
+[
+"generate_cards",
+"add a Khalim's Follower to your hand"
+],
+[
+"cost_set",
+"It costs 0 faeria"
+]
+],
+"by": "C"
+},
+"741275": {
+"tags": [
+[
+"destroy",
+"Destroy a creature"
+]
+],
+"by": "A=B"
+},
+"741276": {
+"tags": [
+[
+"life_payment",
+"Deal 2 damage to yourself"
+],
+[
+"resource_gain",
+"gain 2 faeria"
+]
+],
+"by": "C"
+},
+"741278": {
+"tags": [
+[
+"turn_start",
+"Production"
+],
+[
+"friendly_fire",
+"Deal 2 damage to yourself"
+]
+],
+"by": "A=B"
+},
+"741281": {
+"tags": [
+[
+"haste",
+"Haste"
+],
+[
+"movement",
+"Charge 3"
+],
+[
+"self_destruct",
+"dies at end of turn"
+],
+[
+"turn_end",
+"at end of turn"
+]
+],
+"by": "C"
+},
+"741284": {
+"tags": [
+[
+"cost_reduction",
+"Costs 2 faeria less if you attacked a god this turn"
+]
+],
+"by": "A=B"
+},
+"741288": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"stat_loss",
+"drains 2 Attack from each enemy creature"
+],
+[
+"scope_multi",
+"each enemy creature"
+]
+],
+"by": "C"
+},
+"741290": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"stat_gain",
+"gains +3/+1"
+],
+[
+"movement",
+"Charge 3"
+]
+],
+"by": "C"
+},
+"741291": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"movement",
+"Give a creature Charge 3 this turn"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"self_destruct",
+"Deal 1 damage to this"
+]
+],
+"by": "C"
+},
+"741292": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 3"
+],
+[
+"permanent_growth",
+"Whenever a friendly creature attacks a god, this gains +3/+0"
+]
+],
+"by": "C"
+},
+"741294": {
+"tags": [
+[
+"aura",
+"All your flying creatures have +1/+0"
+]
+],
+"by": "C"
+},
+"741295": {
+"tags": [
+[
+"movement",
+"Charge 2"
+],
+[
+"in_hand_buff",
+"Gains +1/+1 each time a friendly creature attacks a god"
+],
+[
+"permanent_growth",
+"Gains +1/+1 each time"
+]
+],
+"by": "C"
+},
+"741300": {
+"tags": [
+[
+"sacrifice",
+"Sacrifice a creature"
+],
+[
+"summon",
+"Summon a 6/3 Oblivion Rider"
+],
+[
+"movement",
+"Charge 3"
+]
+],
+"by": "C"
+},
+"741301": {
+"tags": [
+[
+"movement",
+"Charge 2"
+],
+[
+"permanent_growth",
+"this drains its attack"
+],
+[
+"death_trigger",
+"Whenever a friendly creature dies"
+]
+],
+"by": "C"
+},
+"741302": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"immunity",
+"Can't be attacked"
+]
+],
+"by": "A=B"
+},
+"741305": {
+"tags": [
+[
+"lifesteal",
+"Drain 2 Life from a creature"
+]
+],
+"by": "A=B"
+},
+"741306": {
+"tags": [
+[
+"destroy",
+"Destroy a creature with 3 Attack or less"
+],
+[
+"stat_condition",
+"3 Attack or less"
+]
+],
+"by": "A=B"
+},
+"741308": {
+"tags": [
+[
+"ranged",
+"Ranged Attack"
+],
+[
+"on_spell",
+"Whenever you play an event"
+],
+[
+"stat_gain",
+"this gains +1/+0"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"by": "A=B"
+},
+"741309": {
+"tags": [
+[
+"movement",
+"Charge 2"
+],
+[
+"on_spell",
+"Whenever you play an event"
+],
+[
+"stat_gain",
+"gains +2/+0"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"by": "C"
+},
+"741310": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Gain Attack and Life equal to any creature's"
+]
+],
+"by": "C"
+},
+"741313": {
+"tags": [
+[
+"movement",
+"Dash 2"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"damage",
+"Deal 4 damage"
+],
+[
+"distribute",
+"randomly split among enemies"
+],
+[
+"random_effect",
+"randomly split"
+],
+[
+"stat_gain",
+"Give +4/+4"
+]
+],
+"by": "C"
+},
+"741314": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 3"
+],
+[
+"in_hand_buff",
+"Gains +1/+1 for each friendly creature that has died this game"
+],
+[
+"death_count",
+"friendly creature that has died this game"
+]
+],
+"by": "C"
+},
+"741315": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"haste",
+"Haste"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"on_attack",
+"Combat"
+],
+[
+"direct_damage",
+"Deal 3 damage to your opponent"
+]
+],
+"by": "C"
+},
+"741316": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"direct_damage",
+"Deal 2 damage to your opponent"
+]
+],
+"by": "A=B"
+},
+"741317": {
+"tags": [
+[
+"heal",
+"Gain 3 Life"
+],
+[
+"copy",
+"Copy the top 3 cards of your opponent's deck"
+],
+[
+"deck_position",
+"top 3 cards of your opponent's deck"
+],
+[
+"in_hand_buff",
+"They cost 1 faeria less"
+]
+],
+"by": "C"
+},
+"741318": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Dash 2"
+]
+],
+"by": "C"
+},
+"741319": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Dash 3"
+],
+[
+"cost_set",
+"faeria cost equals your Life"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"heal",
+"Gain 1 Life for each card in your hand"
+],
+[
+"hand_size",
+"each card in your hand"
+]
+],
+"by": "C"
+},
+"741320": {
+"tags": [
+[
+"turn_start",
+"Production"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"resource_gain",
+"gain 1 faeria"
+],
+[
+"life_payment",
+"deal 2 damage to yourself"
+]
+],
+"by": "C"
+},
+"741322": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"on_attack",
+"Whenever this attacks a god"
+],
+[
+"heal",
+"you gain 5 Life"
+]
+],
+"by": "C"
+},
+"741323": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"targeting_rules",
+"Can only attack gods"
+]
+],
+"by": "C"
+},
+"741325": {
+"tags": [
+[
+"damage",
+"Deal 9 damage"
+],
+[
+"distribute",
+"randomly split among enemies"
+],
+[
+"random_effect",
+"randomly split"
+]
+],
+"by": "A=B"
+},
+"741326": {
+"tags": [
+[
+"life_payment",
+"Halve your Life"
+],
+[
+"board_wipe",
+"Destroy ALL creatures and structures"
+],
+[
+"friendly_fire",
+"Destroy ALL creatures"
+]
+],
+"by": "C"
+},
+"741330": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"+1/+1"
+],
+[
+"tribal",
+"Jump creature"
+]
+],
+"by": "C"
+},
+"741335": {
+"tags": [
+[
+"modal_choice",
+"Give a target:"
+],
+[
+"stat_loss",
+"-2/-1"
+],
+[
+"damage",
+"3 damage"
+]
+],
+"by": "A=B"
+},
+"741336": {
+"tags": [
+[
+"movement",
+"Charge 2"
+],
+[
+"in_hand_buff",
+"this gains Attack and Life equal to that creature's"
+],
+[
+"on_ally_play",
+"Whenever you summon a creature"
+],
+[
+"cost_condition",
+"costs 1 faeria or less"
+]
+],
+"by": "C"
+},
+"741337": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"attack_now",
+"This may fight an enemy creature"
+]
+],
+"by": "A=B"
+},
+"741340": {
+"tags": [
+[
+"lifesteal",
+"Drain 4 Life from your opponent"
+],
+[
+"aoe_damage",
+"deal 3 damage to all enemy creatures"
+],
+[
+"draw",
+"draw 2 cards"
+]
+],
+"by": "A=B"
+},
+"741341": {
+"tags": [
+[
+"summon",
+"Summon three 2/4 Angry Prairie Yaks"
+],
+[
+"haste",
+"Haste"
+]
+],
+"by": "A=B"
+},
+"741342": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"board_wipe",
+"Destroy all adjacent creatures, structures and lands"
+],
+[
+"adjacency",
+"adjacent creatures"
+],
+[
+"friendly_fire",
+"Destroy all adjacent creatures"
+]
+],
+"by": "C"
+},
+"741343": {
+"tags": [
+[
+"extra_turn",
+"Take an extra turn after this one"
+]
+],
+"by": "A=B"
+},
+"741344": {
+"tags": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"generate_cards",
+"Add 3 random cards of that color to your hand"
+],
+[
+"random_effect",
+"random cards"
+],
+[
+"in_hand_buff",
+"They cost 3 faeria less"
+]
+],
+"by": "C"
+},
+"741347": {
+"tags": [
+[
+"turn_start",
+"Production"
+],
+[
+"resource_gain",
+"Refill each faeria well"
+],
+[
+"direct_damage",
+"deal 1 damage to your opponent"
+]
+],
+"by": "A=B"
+},
+"741351": {
+"tags": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"terrain",
+"Transform a land"
+],
+[
+"steal",
+"Gain control of it"
+]
+],
+"by": "C"
+},
+"741353": {
+"tags": [
+[
+"movement",
+"Dash 2"
+]
+],
+"by": "C"
+},
+"741355": {
+"tags": [
+[
+"steal",
+"Gain control of an enemy creature"
+]
+],
+"by": "A=B"
+},
+"741356": {
+"tags": [
+[
+"stat_gain",
+"Change all friendly creatures to 6/6"
+],
+[
+"scope_multi",
+"all friendly creatures"
+]
+],
+"by": "C"
+},
+"741357": {
+"tags": [
+[
+"generate_cards",
+"Shuffle 3 random Treasures into your deck"
+],
+[
+"random_effect",
+"random Treasures"
+]
+],
+"by": "A=B"
+},
+"741359": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"self_mill",
+"Destroy your deck"
+]
+],
+"by": "C"
+},
+"741360": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 3"
+]
+],
+"by": "C"
+},
+"741361": {
+"tags": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"damage",
+"Deal 3 damage"
+],
+[
+"aoe_damage",
+"Deal 3 damage to everything"
+]
+],
+"by": "A=B"
+},
+"741362": {
+"tags": [
+[
+"damage",
+"Deal 5 damage"
+],
+[
+"recycle",
+"Shuffle the Hammer into your deck"
+]
+],
+"by": "A=B"
+},
+"741363": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all enemies"
+],
+[
+"stat_gain",
+"this gains +2/+2"
+],
+[
+"condition_count",
+"For each enemy destroyed"
+]
+],
+"by": "A=B"
+},
+"741371": {
+"tags": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"permanent_growth",
+"this gains +2/+2 whenever an enemy creature harvests faeria"
+],
+[
+"delayed",
+"On your opponent's next turn"
+]
+],
+"by": "C"
+},
+"741374": {
+"tags": [
+[
+"ranged",
+"Ranged Attack"
+],
+[
+"on_attack",
+"Whenever this attacks"
+],
+[
+"summon",
+"summon a 2/2 Angry Yak"
+],
+[
+"random_effect",
+"random space"
+],
+[
+"adjacency",
+"adjacent to the target"
+]
+],
+"by": "A=B"
+},
+"741382": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"tutor",
+"draw a non-blue creature from your deck"
+],
+[
+"condition_count",
+"For each enemy creature"
+]
+],
+"by": "A=B"
+},
+"741388": {
+"tags": [
+[
+"immunity",
+"Divine"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"haste",
+"Haste"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"self_destruct",
+"destroy this creature"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "C"
+},
+"741391": {
+"tags": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"stat_gain",
+"Gain +2/+0"
+],
+[
+"movement",
+"Gain Jump"
+],
+[
+"taunt",
+"Gain Taunt"
+]
+],
+"by": "C"
+},
+"741392": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"attack_now",
+"This fights an enemy creature"
+],
+[
+"summon",
+"Summon a 2/2 Frog with Jump"
+],
+[
+"random_effect",
+"random space"
+],
+[
+"adjacency",
+"adjacent to the target"
+]
+],
+"by": "C"
+},
+"741393": {
+"tags": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"terrain",
+"Create a special land"
+],
+[
+"stat_gain",
+"+2/+0"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "C"
+},
+"741397": {
+"tags": [
+[
+"taunt",
+"Taunt"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"in_hand_buff",
+"Reduce the cost of all cards in your hand by 1 faeria"
+],
+[
+"recycle",
+"shuffle them into your deck"
+],
+[
+"draw",
+"draw that many cards"
+]
+],
+"by": "A=B"
+},
+"741399": {
+"tags": [
+[
+"copy",
+"When you draw this card, copy it"
+],
+[
+"summon",
+"Summon a 2/2 Manta"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+]
+],
+"by": "C"
+},
+"741400": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Dash 1"
+],
+[
+"terrain",
+"brings its land with it"
+]
+],
+"by": "C"
+},
+"741401": {
+"tags": [
+[
+"movement",
+"Dash 1"
+],
+[
+"aura",
+"Adjacent friendly creatures have +1/+0"
+],
+[
+"adjacency",
+"Adjacent friendly creatures"
+]
+],
+"by": "C"
+},
+"741402": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"taunt",
+"Taunt"
+],
+[
+"placement_rules",
+"Can be summoned anywhere"
+]
+],
+"by": "A=B"
+},
+"741403": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"tutor",
+"Draw a green card, a blue card, a red card and a yellow card from your deck"
+]
+],
+"by": "A=B"
+},
+"741405": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"stat_gain",
+"Gain +2/+2"
+]
+],
+"by": "C"
+},
+"741406": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"disruption",
+"Empty all faeria wells"
+],
+[
+"stat_gain",
+"This gains +1/+1 for each well emptied"
+],
+[
+"condition_count",
+"for each well emptied"
+]
+],
+"by": "C"
+},
+"741407": {
+"tags": [
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"steal",
+"Gain control of this creature's land"
+]
+],
+"by": "A=B"
+},
+"741411": {
+"tags": [
+[
+"immunity",
+"Divine"
+],
+[
+"variable_stats",
+"Attack is always equal to his Life"
+],
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"lifesteal",
+"Drain 1 life from EVERYTHING"
+],
+[
+"aoe_damage",
+"Drain 1 life from EVERYTHING"
+],
+[
+"scope_global",
+"EVERYTHING"
+],
+[
+"friendly_fire",
+"EVERYTHING"
+]
+],
+"by": "C"
+},
+"741416": {
+"tags": [
+[
+"movement",
+"Dash 1"
+],
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"tutor",
+"Draw the top creature with 5 or more life in your deck"
+],
+[
+"stat_condition",
+"5 or more life"
+],
+[
+"in_hand_buff",
+"Give it +2/+2"
+]
+],
+"by": "C"
+},
+"741419": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"friendly_fire",
+"Deal 2 damage to yourself"
+]
+],
+"by": "A=B"
+},
+"741420": {
+"tags": [
+[
+"damage",
+"Deal 9 damage to an enemy creature or structure"
+]
+],
+"by": "A=B"
+},
+"741424": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"summon",
+"Summon two 4/4 Yak Guards"
+],
+[
+"taunt",
+"Taunt"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"adjacency",
+"adjacent to Mother of Yaks"
+],
+[
+"cost_reduction",
+"Costs 1 faeria less"
+],
+[
+"death_count",
+"for each friendly yak that has died this game"
+],
+[
+"tribal",
+"yak"
+]
+],
+"by": "C"
+},
+"741429": {
+"tags": [
+[
+"stat_gain",
+"+2/+0"
+],
+[
+"tribal",
+"friendly beast"
+],
+[
+"attack_now",
+"it fights an enemy creature"
+]
+],
+"by": "C"
+},
+"741430": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"summon",
+"Summon a 1/1 Baby Yak"
+],
+[
+"taunt",
+"Taunt"
+]
+],
+"by": "A=B"
+},
+"741431": {
+"tags": [
+[
+"protection",
+"Protection"
+],
+[
+"immunity",
+"Divine"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"merge_attach",
+"swallows Majinata"
+],
+[
+"stat_gain",
+"+5/+5"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Charge 2"
+]
+],
+"by": "C"
+},
+"741435": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"deathtouch",
+"Deathtouch"
+]
+],
+"by": "A=B"
+},
+"741437": {
+"tags": [
+[
+"movement",
+"Charge 2"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"merge_attach",
+"Swallow another friendly Rakoan"
+],
+[
+"stat_gain",
+"+2/+0"
+],
+[
+"tribal",
+"Rakoan"
+]
+],
+"by": "C"
+},
+"741440": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a 1/1 Rakoan where this died"
+]
+],
+"by": "A=B"
+},
+"741441": {
+"tags": [
+[
+"on_attack",
+"Combat"
+],
+[
+"in_hand_buff",
+"Give a random Rakoan in your hand +1/+1"
+],
+[
+"random_effect",
+"random Rakoan"
+],
+[
+"tribal",
+"Rakoan"
+]
+],
+"by": "C"
+},
+"741442": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Add a 1/1 Rakoan to your hand"
+],
+[
+"cost_set",
+"It costs 0 faeria"
+]
+],
+"by": "A=B"
+},
+"741448": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"cost_type",
+"Cards in your hand are wild land"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Add a random Gagana crew member to your hand"
+],
+[
+"random_effect",
+"random Gagana crew member"
+],
+[
+"cost_set",
+"It costs 0 faeria"
+]
+],
+"by": "C"
+},
+"741449": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"immobilize",
+"Enemy creatures can't move next turn"
+]
+],
+"by": "A=B"
+},
+"741450": {
+"tags": [
+[
+"on_attack",
+"Combat"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all adjacent enemies"
+],
+[
+"adjacency",
+"adjacent enemies"
+]
+],
+"by": "A=B"
+},
+"741451": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"in_hand_buff",
+"Reduce the cost of a random Beast in your hand by 5 faeria"
+],
+[
+"random_effect",
+"random Beast"
+],
+[
+"tribal",
+"Beast"
+]
+],
+"by": "C"
+},
+"741452": {
+"tags": [
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"summon",
+"Summon a 4/3 Seifer's Fodder"
+],
+[
+"random_effect",
+"random adjacent land"
+],
+[
+"adjacency",
+"adjacent land"
+]
+],
+"by": "C"
+},
+"741453": {
+"tags": [
+[
+"damage",
+"damage randomly split among enemies"
+],
+[
+"distribute",
+"randomly split among enemies"
+],
+[
+"random_effect",
+"randomly split"
+],
+[
+"in_hand_buff",
+"Deals +1 damage"
+],
+[
+"count_payoff",
+"for each time you have selected +1 faeria from the power wheel this game"
+]
+],
+"by": "C"
+},
+"741457": {
+"tags": [
+[
+"evasion",
+"Flying"
+],
+[
+"territory_trigger",
+"Corrupt"
+],
+[
+"generate_cards",
+"Add a Vile Bloatfly to your hand"
+]
+],
+"by": "A=B"
+},
+"741461": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"hand_size",
+"4 or more cards in hand"
+],
+[
+"draw",
+"draw 1 card"
+],
+[
+"lifesteal",
+"drain 1 life from your opponent"
+]
+],
+"by": "A=B"
+},
+"741463": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"deck_condition",
+"If you have no creature left in your deck"
+],
+[
+"generate_cards",
+"10 random neutral creatures into your deck"
+],
+[
+"random_effect",
+"random neutral creatures"
+],
+[
+"in_hand_buff",
+"They gain +2/+2"
+]
+],
+"by": "C"
+},
+"741466": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"terrain",
+"Create a prairie"
+],
+[
+"movement",
+"Dash 1"
+]
+],
+"by": "C"
+},
+"741467": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"+2/+0"
+],
+[
+"movement",
+"Charge 2"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"tribal",
+"yaks"
+]
+],
+"by": "C"
+},
+"741470": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"polymorph",
+"Transform an enemy creature into a 5/3"
+]
+],
+"by": "A=B"
+},
+"741471": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Gains +1/+0"
+],
+[
+"condition_count",
+"for each adjacent friendly triton"
+],
+[
+"adjacency",
+"adjacent friendly triton"
+],
+[
+"tribal",
+"triton"
+]
+],
+"by": "C"
+},
+"741472": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"placement_rules",
+"Can be summoned adjacent to friendly tritons"
+],
+[
+"stat_gain",
+"this gets +1/+1"
+],
+[
+"adjacency",
+"adjacent to friendly tritons"
+],
+[
+"tribal",
+"tritons"
+]
+],
+"by": "C"
+},
+"741474": {
+"tags": [
+[
+"haste",
+"can harvest faeria the turn you play it"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"movement",
+"move this creature's land"
+]
+],
+"by": "A=B"
+},
+"741475": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"merge_attach",
+"Swallow a friendly creature"
+],
+[
+"turn_start",
+"Production"
+],
+[
+"permanent_growth",
+"The swallowed creature gains +1/+1"
+],
+[
+"activated",
+"Activate"
+],
+[
+"self_destruct",
+"Destroy this"
+]
+],
+"by": "C"
+},
+"741476": {
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"in_hand_buff",
+"Give +1/+1 to all creatures in your hand"
+]
+],
+"by": "A=B"
+},
+"741479": {
+"tags": [
+[
+"movement",
+"teleport it to a friendly forest"
+]
+],
+"by": "A=B"
+},
+"741480": {
+"tags": [
+[
+"movement",
+"teleport him to a friendly forest"
+],
+[
+"stat_gain",
+"he gains +1/+1"
+]
+],
+"by": "A=B"
+},
+"741481": {
+"tags": [
+[
+"resource_gain",
+"each player gains 1 faeria extra each turn"
+],
+[
+"symmetric_effect",
+"each player"
+]
+],
+"by": "C"
+},
+"741482": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"stat_gain",
+"Give +2/+2"
+],
+[
+"immunity",
+"Divine"
+],
+[
+"stat_condition",
+"exactly 1 Attack"
+]
+],
+"by": "A=B"
+},
+"741483": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"tutor",
+"find a Treasure Map in your deck"
+],
+[
+"deck_position",
+"place it on top"
+],
+[
+"deck_condition",
+"If your deck has no Treasure Maps"
+],
+[
+"generate_cards",
+"shuffle one into it instead"
+]
+],
+"by": "C"
+},
+"741487": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"movement",
+"Move this creature"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"territory_trigger",
+"if this is on an enemy land"
+]
+],
+"by": "A=B"
+},
+"741490": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"draw",
+"Draw 3 cards"
+],
+[
+"stat_gain",
+"this gains +2/+2"
+]
+],
+"by": "C"
+},
+"741491": {
+"tags": [
+[
+"movement",
+"Jump"
+],
+[
+"permanent_growth",
+"Whenever you discover a Treasure, Fugoro gains +3/+3"
+]
+],
+"by": "C"
+},
+"741493": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Discover a Beast"
+],
+[
+"selection",
+"Discover"
+],
+[
+"tribal",
+"Beast"
+],
+[
+"cost_type",
+"becomes wild land"
+]
+],
+"by": "C"
+},
+"741495": {
+"tags": [
+[
+"generate_cards",
+"Discover a creature with Taunt"
+],
+[
+"selection",
+"Discover"
+],
+[
+"cost_type",
+"wild land"
+],
+[
+"in_hand_buff",
+"gets +0/+3"
+]
+],
+"by": "C"
+},
+"741497": {
+"tags": [
+[
+"movement",
+"Dash 1"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"in_hand_buff",
+"reduce a card in your hand by 1 faeria"
+],
+[
+"territory_trigger",
+"if this is on an enemy land"
+]
+],
+"by": "C"
+},
+"741504": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"generate_cards",
+"Shuffle a Treasure Map into your deck"
+]
+],
+"by": "A=B"
+},
+"741508": {
+"tags": [
+[
+"generate_cards",
+"Discover 2 non legendary cards"
+],
+[
+"selection",
+"Discover"
+],
+[
+"cost_condition",
+"cost 7 faeria or more"
+],
+[
+"cost_type",
+"wild land"
+]
+],
+"by": "C"
+},
+"741514": {
+"tags": [
+[
+"movement",
+"Charge 3"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"Gift"
+],
+[
+"self_mill",
+"Destroy all Treasure Maps in your deck"
+],
+[
+"stat_gain",
+"gain +1/+1 for each map destroyed"
+],
+[
+"condition_count",
+"for each map destroyed"
+]
+],
+"by": "C"
+},
+"741515": {
+"tags": [
+[
+"on_play",
+"Gift"
+],
+[
+"merge_attach",
+"Swallow a friendly creature"
+],
+[
+"turn_start",
+"Production"
+],
+[
+"permanent_growth",
+"The swallowed creature gains +4/+4"
+],
+[
+"activated",
+"Activate"
+],
+[
+"self_destruct",
+"Destroy this"
+]
+],
+"by": "C"
+},
+"741517": {
+"tags": [
+[
+"cost_reduction",
+"Cards in your hand cost 1 faeria less"
+]
+],
+"by": "C"
+},
+"741518": {
+"tags": [
+[
+"immunity",
+"Divine"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"movement",
+"Dash 5"
+],
+[
+"placement_rules",
+"Must be summoned next to a friendly creature"
+]
+],
+"by": "C"
+},
+"741520": {
+"tags": [
+[
+"generate_cards",
+"Discover a creature"
+],
+[
+"selection",
+"Discover"
+],
+[
+"in_hand_buff",
+"gains +6/+6"
+],
+[
+"cost_type",
+"wild land"
+]
+],
+"by": "C"
+},
+"795375": {
+"tags": [],
+"by": "A=B"
+},
+"795376": {
+"tags": [],
+"by": "A=B"
+},
+"795378": {
+"tags": [],
+"by": "A=B"
+}
+}

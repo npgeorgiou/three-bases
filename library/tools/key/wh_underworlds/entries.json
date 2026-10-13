@@ -1,0 +1,1242 @@
+[
+{
+"id": 763334,
+"name": "Scragged",
+"text": "Score this immediately if an enemy fighter is taken out of action while adjacent to three or more friendly fighters."
+},
+{
+"id": 765178,
+"name": "Phantom Theft",
+"text": "Reaction: Play this after an enemy fighter is given an Illusion upgrade. That fighter's player must pick one: discard one glory point or break that card."
+},
+{
+"id": 796454,
+"name": "Condemners Inspire",
+"text": "After an Attack roll or Save roll for a friendly fighter that shows a certain result (the symbol did not extract): Inspire that fighter."
+},
+{
+"id": 763000,
+"name": "Fearless",
+"text": "Score this in an end phase if there are at least three enemy fighters adjacent to the same friendly fighter."
+},
+{
+"id": 763853,
+"name": "Despoilers",
+"text": "Surge: Score this immediately after an activation if your warband holds three or more objectives."
+},
+{
+"id": 763261,
+"name": "Disarming Blow",
+"text": "Reaction: After an Attack action made by an adjacent enemy fighter that targets this fighter and fails, roll a defence dice. On a roll of :dfBlock: or :dfCrit:, select an Attack action upgrade on the attacking fighter. That upgrade is discarded."
+},
+{
+"id": 764873,
+"name": "Methodical Attacks",
+"text": "Reaction: Play this after an activation in which a friendly fighter made a failed Attack action. That fighter makes an Attack action."
+},
+{
+"id": 796442,
+"name": "Behind Enemy Lines",
+"text": "Once per game, after your Action step: give a Guard token to a damaged friendly fighter in enemy territory."
+},
+{
+"id": 764676,
+"name": "Delicious Morsel",
+"text": "Choose one fighter. Heal (1) that fighter. If that fighter has any Hunger counters, instead Heal (2) that fighter and remove two of that fighter's Hunger counters, or one Hunger counter if the fighter only has one."
+},
+{
+"id": 764774,
+"name": "Hungering Harpoon",
+"text": "[:Hex: 3 - :atFury: 1 - :boom: 2] When you give a fighter this upgrade, give that fighter one Hunger counter. +2 Dice to this Attack action if this fighter has three or more Hunger counters."
+},
+{
+"id": 765523,
+"name": "Gloomdrinker",
+"text": "Attack action, Domain [:Hex: 1 - :atSmash: 2 - :boom: 2] +1 Dice and Ensnare to this Attack action during a round in which one or more Domain gambits were played."
+},
+{
+"id": 764380,
+"name": "Mark of the Dark Prince",
+"text": "Reaction: During this fighter's Range 1 Attack action, before the attack roll, deal 1 damage to this fighter. If you do, choose Cleave or Ensnare. The Attack action has that ability until it has been resolved."
+},
+{
+"id": 763659,
+"name": "Crown of Avarice",
+"text": "(Errata update) Reaction: During an opponent's gambit or during an enemy fighter's Attack action that will take this fighter out of action, after the deal damage step, pick one opponent and take up to one of their unspent glory points."
+},
+{
+"id": 763146,
+"name": "Light-footed",
+"text": "Reaction: During an Attack action that could drive this fighter back (whether or not your opponent chose to), you can instead push them one hex."
+},
+{
+"id": 764839,
+"name": "Greatbow Block",
+"text": "Play this only in your power step. Each time a friendly fighter other than Sleek is dealt damage in the next activation, reduce that damage to 1."
+},
+{
+"id": 762850,
+"name": "Aspiring Boss",
+"text": "Reaction: During an Attack action by this fighter that targets an enemy leader and fails, you can re-roll one attack dice."
+},
+{
+"id": 764424,
+"name": "Instinctive Tactics",
+"text": "Surge: Score this immediately after resolving your warband's second or subsequent reaction in the same phase."
+},
+{
+"id": 764606,
+"name": "Immortal Hunger",
+"text": "Dual: Score this in the third end phase if: The number of surviving friendly fighters is greater or equal to the number of friendly fighters out of action And: Each surviving friendly fighter has four or more Hunger counters."
+},
+{
+"id": 765339,
+"name": "Hack and Slash",
+"text": "Score this in an end phase if two or more successful Attack actions were made during your activations in the previous phase."
+},
+{
+"id": 796448,
+"name": "Hammertide",
+"text": "Only while your leader is on the battlefield with no Charge tokens: draw a line from the leader through an adjacent hex to the battlefield edge; the first enemy on it takes 1 damage and a Stagger token (blocked hexes stop the line)."
+},
+{
+"id": 814417,
+"name": "Insensate",
+"text": "The first friendly fighter who suffers any amount of damage in the next activation only suffers one damage."
+},
+{
+"id": 762737,
+"name": "Stagger",
+"text": ""
+},
+{
+"id": 765709,
+"name": "Raise the Walls",
+"text": "Dual: Score this in an end phase if: Three or more feature tokens are adjacent to one or more other feature tokens And: Three or more of those tokens are within 1 hex of no one's territory."
+},
+{
+"id": 764658,
+"name": "Underdog",
+"text": "Hybrid: Score this in an end phase if: An opponent has the Primacy token Or: Each opponent has scored 3 or more objective cards more than you."
+},
+{
+"id": 763901,
+"name": "Strike in Concert",
+"text": "The first Range 1 or Range 2 Attack action made by a friendly fighter in the next activation has +1 Damage for each friendly supporting fighter."
+},
+{
+"id": 765815,
+"name": "Howling Gales",
+"text": "Gambit Spell (:MagFocus:): If cast, choose two enemy fighters in the same territory. Push each chosen fighter up to 1 hex closer to the other chosen fighter. If the chosen fighters are not adjacent, stagger the chosen fighters."
+},
+{
+"id": 763742,
+"name": "Spark of Sentience",
+"text": "Reaction: After this fighter's activation, draw a power card."
+},
+{
+"id": 765271,
+"name": "Nowhere to Hide",
+"text": "Surge, Dual: Score this immediately after a friendly fighter's Attack action if: The target was taken out of action And: The attacker and/or the defender was in a cover hex."
+},
+{
+"id": 763192,
+"name": "Khorne's Chosen",
+"text": "Score this in an end phase if your leader is the only surviving fighter."
+},
+{
+"id": 764116,
+"name": "Blaze a Trail",
+"text": "Surge: Score this immediately after an activation if each surviving friendly fighter is in enemy territory and adjacent to no enemy fighters."
+},
+{
+"id": 762860,
+"name": "A Grim Promise",
+"text": "Score this in an end phase if your warband took an enemy leader out of action in the preceding action phase."
+},
+{
+"id": 762824,
+"name": "Focused Attack",
+"text": "[:Hex: 1 - :atSmash: 2 - :boom: 2] If you roll at least one :atCrit: this Attack action has Cleave."
+},
+{
+"id": 762838,
+"name": "Too Dumb to Die",
+"text": "Score this immediately if a friendly fighter suffers 3 or more damage in a single attack and is not take out of action."
+},
+{
+"id": 765515,
+"name": "Dark Strength",
+"text": "+1 Damage to this fighter's Range 1 Attack actions if this fighter is in a cover hex."
+},
+{
+"id": 765063,
+"name": "Land Grab",
+"text": "Manoeuvre Push up to two friendly fighters up to 2 hexes. After each push, that fighter must be in no one's territory."
+},
+{
+"id": 762768,
+"name": "Terrifying Howl",
+"text": "Action: Push each adjacent enemy fighter one hex."
+},
+{
+"id": 764388,
+"name": "Brutal Desecration",
+"text": "Surge: Score this immediately after your warband desecrates an objective (see Desecration Tokens)."
+},
+{
+"id": 765670,
+"name": "Stubborn to the Bone",
+"text": "Enemy warbands cannot push this fighter. In addition, while this fighter is savage, you can re-roll one dice in this fighter's defence rolls."
+},
+{
+"id": 763690,
+"name": "Paradox Armour",
+"text": "When the target of an Attack action, this fighter counts rolls of :dfDodge: and :dfBlock: as successes, but does not count rolls or :dfCrit: as successes or critical successes."
+},
+{
+"id": 764561,
+"name": "Cloud of Midnight",
+"text": "Choose one friendly fighter. Until the end of the next activation, that fighter cannot be the target of Attack actions, cannot be chosen or damaged by gambits, and cannot be pushed."
+},
+{
+"id": 765835,
+"name": "Glorious Change",
+"text": "Hybrid: Score this in an end phase if: Two or more surviving friendly changers each have one or more upgrades Or: Two or more enemy fighters each have two or more wound counters and/or are out of action."
+},
+{
+"id": 762852,
+"name": "Brutal Swing",
+"text": "(Errata update) The Scything keyword replaces the similar ability on this card. [:Hex: 1 - :atFury: 3 - :boom: 2] Targets all adjacent enemy fighters - roll for each."
+},
+{
+"id": 765007,
+"name": "Grand Theft",
+"text": "The first Range 1 Attack action made by a friendly fighter in the next activation has Ensnare. Gain one Swag counter after resolving that Attack action."
+},
+{
+"id": 763712,
+"name": "Tome of Diseases",
+"text": "Katophrane Tome Action: Choose an adjacent enemy fighter. They suffer 1 damage."
+},
+{
+"id": 764627,
+"name": "Primal Assertion",
+"text": "Surge: Score this immediately after you discard the Primacy token if your warband holds more objectives than any other warband."
+},
+{
+"id": 764874,
+"name": "Somnolent Beat",
+"text": "Play this only in your power step. -1 Move from enemy fighters in the next activation (to a minimum of 0)."
+},
+{
+"id": 765110,
+"name": "Heave Ho",
+"text": "This fighter's Range 1 and Range 2 Attack actions have Knockback 1. Reaction: During this fighter's Attack action, after the drive back step, if the target was driven back 2 or more hexes, deal 1 damage to the target."
+},
+{
+"id": 763759,
+"name": "Strange Demise",
+"text": "Score this immediately when an enemy fighter is taken out of action by a spell that damaged them or by a spell Attack action that damaged them."
+},
+{
+"id": 764238,
+"name": "Hunter's Talisman",
+"text": "+1 Dice to this fighter's Attack actions. If the target is a Quarry, you can re-roll one attack dice in the attack roll."
+},
+{
+"id": 763750,
+"name": "Champions All",
+"text": "Score this immediately when a second or subsequent enemy fighter is taken out of action in this phase, and each one was taken out of action by an Attack action made by a different friendly fighter."
+},
+{
+"id": 765630,
+"name": "Claim Jumper",
+"text": "This fighter is an explorer. Fighters adjacent to this fighter cannot be given Guard tokens or be on Guard."
+},
+{
+"id": 763699,
+"name": "Regenerative Charm",
+"text": "Remove up to one wound token from this fighter's fighter card at the beginning of each round."
+},
+{
+"id": 764718,
+"name": "Primal Power",
+"text": "You can re-roll one dice in your warband's next casting roll. In addition, if you have the Primacy token, roll one extra dice in that roll. This effect persists until after your warband's next attempt to cast a spell."
+},
+{
+"id": 763999,
+"name": "Fly Swarm",
+"text": "-1 Dice (to a minimum of 1) from Attack actions with a Range of 3 or more that target this fighter."
+},
+{
+"id": 762821,
+"name": "Assumed Command",
+"text": "Each friendly fighter that supports this fighter is considered to be two supporting fighters."
+},
+{
+"id": 764537,
+"name": "Artificer's Blade",
+"text": "This fighter's Range 1 and Range 2 Attack actions have Cleave."
+},
+{
+"id": 765126,
+"name": "Going in for the Kill",
+"text": "Dual: Score this in an end phase if: Each surviving fighter is in enemy territory And: There are more surviving friendly fighters than surviving enemy fighters."
+},
+{
+"id": 765484,
+"name": "Purified Waters",
+"text": "Reaction: Play this card after one or more Domain cards are discarded. Choose one friendly fighter. Heal (2) the chosen fighter."
+},
+{
+"id": 763183,
+"name": "Coveted Trophy",
+"text": "Reaction: Play this when your leader takes an enemy leader out of action. Gain a glory point."
+},
+{
+"id": 763552,
+"name": "Tireless Slayer",
+"text": "Score this in an end phase if a single friendly fighter took three or more enemy fighters out of action in the preceding action phase."
+},
+{
+"id": 765429,
+"name": "Chum the Waters",
+"text": "Dual: Score this in an end phase if: One or more enemy fighters are each on a feature token And: One or more of those fighters have one or more wound counters."
+},
+{
+"id": 765824,
+"name": "Electrokinesis",
+"text": "Attack action [:Hex: 3 - :atFury: 3 - :boom: 1 -(Knockback 2)-] Reaction: During this Attack action, after the drive back step, stagger each enemy fighter within 1 hex of the target."
+},
+{
+"id": 764029,
+"name": "Quick Snack",
+"text": "Reaction: Play this after an enemy fighter adjacent to your leader is taken out of action. If the enemy fighter's Wounds characteristic is 4 or more, Heal (2) your leader, otherwise Heal (1) your leader."
+},
+{
+"id": 763274,
+"name": "Take the City",
+"text": "Score this in an end phase if you hold all objectives on one or more game boards."
+},
+{
+"id": 765910,
+"name": "Hidden Lair",
+"text": "Pick one objective token in the same hex as an enemy fighter. That objective cannot be held. This effect persists until the end of the round or until the objective marker is flipped."
+},
+{
+"id": 764178,
+"name": "Flash of Foresight",
+"text": "Pick one: Pick one objective card in an opponent's hand. That opponent must reveal that card to you. Or: Look at the top card of your power or objective deck (without revealing it) and then put it back."
+},
+{
+"id": 765773,
+"name": "Packmasters",
+"text": "Dual: Score this in an end phase if: Three or more friendly fighters are in enemy territory And: Each of those fighters is a beast, companion, minion and/or has one or more Denizen upgrades."
+},
+{
+"id": 764895,
+"name": "Dark Sacrifice",
+"text": "Reaction: Play this after a gambit or Attack action that takes one or more friendly fighters out of action. Draw two power cards."
+},
+{
+"id": 764923,
+"name": "The Seal of Retris",
+"text": "Seal of Power Reaction: After an upgrade this fighter has is discarded, give this fighter that upgrade. Then discard this card."
+},
+{
+"id": 765601,
+"name": "Fell Enchantments",
+"text": "Reaction: After an enemy fighter's failed Attack action that targeted this fighter, give the attacker one Curse counter. While a fighter has one or more Curse counters, that fighter has -1 Defence, to a minimum of 1, and -1 Dice from that fighter's Attack actions, to a minimum of 1. Clear all Curse counters at the end of the phase."
+},
+{
+"id": 763569,
+"name": "Baffling Illusion",
+"text": "The first time a fighter would make a Move action in the next activation, their player instead Scatters X from the hex that fighter occupies, and pushes the fighter along the chain to the end hex. X is the fighter's Move characteristic. If the fighter cannot be pushed into a hex, the push ends in the last hex in the chain they can occupy. Place a Move token next to that fighter."
+},
+{
+"id": 764058,
+"name": "Fanatical Faith",
+"text": "The first time a friendly fighter would be dealt any amount of damage in the next activation, that fighter is dealt 1 damage instead."
+},
+{
+"id": 763976,
+"name": "Quickdrop Venom",
+"text": "Reaction: After this fighter's successful Attack action (other than a Snarlfang's Jaws Attack action), roll one attack dice. On a :atSmash: or :atCrit: the target of that Attack action is dealt 1 damage."
+},
+{
+"id": 765256,
+"name": "Way of the Slinking Rat",
+"text": "Reaction: Play this after a friendly fighter's Attack action that took the target out of action. Place that friendly fighter on a starting hex in your territory."
+},
+{
+"id": 764889,
+"name": "A Hard Death",
+"text": "Reaction: Play this during an enemy fighter's Attack action, after the deal damage step, if that Attack action dealt enough damage to a friendly fighter to take that fighter out of action. Roll one magic dice for each enemy fighter adjacent to that friendly fighter. On a roll of :MagChannel:, deal 1 damage to that fighter and give that fighter one Move token."
+},
+{
+"id": 764913,
+"name": "Insanely Territorial",
+"text": "You can re-roll any number of dice in this fighter's defence rolls and any number of attack dice in attack rolls for this fighter's Range 1 and Range 2 Attack actions. This fighter cannot make Move actions."
+},
+{
+"id": 764440,
+"name": "The Hunter's Steed",
+"text": "Asterism +1 Move to friendly fighters. This effect persists until the end of the round or until any player plays another Asterism card."
+},
+{
+"id": 765262,
+"name": "Ricocheting Triskele",
+"text": "Ricochet (Reaction): After this fighter's Trifang Triskele and Net Attack action, if it succeeded, choose one other enemy fighter within 2 hexes of the target. Deal 1 damage to the chosen fighter."
+},
+{
+"id": 762877,
+"name": "We Shall Not Be Moved",
+"text": "Friendly fighters holding objectives cannot be driven back by the first Attack action in the next activation."
+},
+{
+"id": 764807,
+"name": "Silent Shield",
+"text": "Silent Relic This fighter is a Quarry. If this fighter is a Quarry and in no one's territory, their Defence characteristic is :dfBlock: 2. This fighter is on Guard if this fighter has three or more Silent Relics."
+},
+{
+"id": 763802,
+"name": "Outflank",
+"text": "Choose a friendly fighter adjacent to another fighter and push them up to two hexes."
+},
+{
+"id": 765913,
+"name": "Keep the Forest at Bay",
+"text": "Choose one enemy fighter in enemy territory and up to two friendly fighters. Push each chosen friendly fighter 1 hex closer to the chosen enemy fighter."
+},
+{
+"id": 764487,
+"name": "Eye of Gorkamorka",
+"text": "Dual: Score this in an end phase if: You have the Primacy token And: Your leader holds an objective."
+},
+{
+"id": 764530,
+"name": "Exceptional Efficiency",
+"text": "When you play this card, pick one opponent. That opponent picks one: you gain two tithe counters, or in the next activation, you can re-roll any number of dice in friendly Morteks' attack rolls."
+},
+{
+"id": 765578,
+"name": "Hereditary Claims",
+"text": "Dual: Score this in an end phase if: Your warband holds two or more objectives And: One or more of those objectives is not in your territory."
+},
+{
+"id": 763495,
+"name": "Extreme Flank",
+"text": "Score this in an end phase if there is a friendly fighter on an edge hex and another friendly fighter on an edge hex on the opposite edge of the battlefield to the first fighter. Where there is more than one opposite edge, it must be the furthest of these edges."
+},
+{
+"id": 764328,
+"name": "Perfect Formation",
+"text": "Surge: Score this immediately after an activation if your warband holds three or more objectives."
+},
+{
+"id": 765093,
+"name": "Reborn in Darkness",
+"text": "Reaction: Play this after you give a friendly fighter a Raise token. Place that fighter in a cover hex."
+},
+{
+"id": 765739,
+"name": "Faultless Display",
+"text": "Surge: Score this immediately after a friendly fighter's successful Attack action if the attack roll contained only successes."
+},
+{
+"id": 814454,
+"name": "Enchanted Greaves",
+"text": "This fighter treats lethal hexes as normal hexes."
+},
+{
+"id": 765618,
+"name": "Uncovered Secrets",
+"text": "Surge: Score this immediately after a power step if your Exploration count is 10 or more."
+},
+{
+"id": 765890,
+"name": "Quintok's Reactive Shunter",
+"text": "Reaction: Use this after this fighter is pushed by an enemy fighter, if they started that push on a feature token or in a hazard hex. Stagger this fighter, then push this fighter 1 hex."
+},
+{
+"id": 764360,
+"name": "Excess of Gluttony",
+"text": "Surge: Score this immediately after an activation if one or more friendly fighters are each adjacent to two or more enemy fighters."
+},
+{
+"id": 763108,
+"name": "Tantalising Prize",
+"text": "The first friendly fighter to take a Move action in the next activation can move up to an additional two hexes if they end their move on an objective."
+},
+{
+"id": 764631,
+"name": "Prize Beyond Measure",
+"text": "Surge: Score this immediately after an activation if one or more surviving friendly fighters hold an objective and each have three or more upgrades."
+},
+{
+"id": 765574,
+"name": "Wily Hunter",
+"text": "Reaction: After this fighter's activation, if this fighter made one or more Attack actions, push this fighter 1 hex."
+},
+{
+"id": 764926,
+"name": "The Setup",
+"text": "[:Hex: 1 - :atSmash: 2 - :boom: 1 -(Combo)-] This Attack action's characteristics cannot be modified. Skip the defence roll in the combat sequence for this Attack action: the target is considered to have rolled 0 successes in their defence roll."
+},
+{
+"id": 763219,
+"name": "No Retreat",
+"text": "Reaction: Play this during an Attack action that targets your leader, after the dice are rolled. Your leader cannot be driven back by the Attack action."
+},
+{
+"id": 814467,
+"name": "Invert Terrain",
+"text": "Gambit Spell (:MagFocus:): If cast, pick one feature token within five hexes of the caster. Flip that token."
+},
+{
+"id": 763456,
+"name": "Mesmerising Gaze",
+"text": "Choose an enemy fighter adjacent to a friendly fighter and choose one: remove the enemy fighter's Guard tokens, or place a Move token next to the enemy fighter."
+},
+{
+"id": 764977,
+"name": "Murk Lurkers",
+"text": "Give one Guard token to each friendly fighter in a cover hex."
+},
+{
+"id": 764439,
+"name": "The Great Drake",
+"text": "Asterism +1 Dice to friendly fighters' Range 1 Attack actions. This effect persists until the end of the round or until any player plays another Asterism card."
+},
+{
+"id": 764342,
+"name": "Surety of Purpose",
+"text": "+1 Damage to the first Attack action made as part of a Charge action by a friendly fighter in the next activation."
+},
+{
+"id": 764847,
+"name": "Cool Head",
+"text": "You can re-roll one dice in this fighter's attack rolls."
+},
+{
+"id": 765866,
+"name": "Magisterial Might",
+"text": "Suge, Dual: Score this immediately after a power step if: One or more friendly wizards each hold an objective in enemy territory And: One or more of those wizards has a wizard level of 2 or greater."
+},
+{
+"id": 762856,
+"name": "Headlong Rush",
+"text": "This fighter's Attack actions gain Knockback 1 in a phase in which they make a Charge action."
+},
+{
+"id": 764760,
+"name": "Earthing Staff",
+"text": "This fighter is a Quarry. If this fighter is a Quarry, backlash and gambit spells cannot deal damage to this fighter."
+},
+{
+"id": 762917,
+"name": "All the Better to Slay Them",
+"text": "Score this immediately if all friendly fighters (at least three) are adjacent to a different enemy fighter."
+},
+{
+"id": 764079,
+"name": "In Their Element",
+"text": "Score this in an end phase if each surviving friendly fighter is Inspired."
+},
+{
+"id": 765741,
+"name": "Har Kuron Hurricane",
+"text": "Hybrid: Score this in an end phase if: Three or more friendly fighters are in enemy territory Or: Each surviving friendly fighter is Inspired."
+},
+{
+"id": 765370,
+"name": "Disciplined Strike",
+"text": "The first Attack action made by a friendly fighter in the next activation step has Innate (:atSup1:). If that fighter is an assassin, that fighter is considered to have one additional supporting fighter."
+},
+{
+"id": 765279,
+"name": "Abyssal Summoning",
+"text": "Gambit Spell (:MagChannel:): If cast, give one shadow counter to one fighter within 3 hexes of the caster. Fighters with one or more shadow counters treat the hex they are in as a cover hex, in addition to other hex types. Discard all shadow counters at the end of the phase."
+},
+{
+"id": 765217,
+"name": "Phantom Fathomer",
+"text": "Attack action [:Hex: 1 - :atSmash: 1 - :boom: 2 -(Grievous)-] This Attack action has +1 Dice for each upgrade the target has."
+},
+{
+"id": 764441,
+"name": "Adaptive Camouflage",
+"text": "-1 Dice (to a minimum of 1) from Attack actions that target this fighter if the attacker is not adjacent."
+},
+{
+"id": 765505,
+"name": "Cursed Boarding Axe",
+"text": "Attack action [:Hex: 1 - :atFury: 4 - :boom: 2 -(Cleave)-] The bounty gained when an enemy fighter is taken out of action by this Attack action is spent glory unless this fighter is on a feature token."
+},
+{
+"id": 763483,
+"name": "Catching Up",
+"text": "Score this in an end phase if you have fewer glory points than an opponent."
+},
+{
+"id": 763476,
+"name": "Arcane Torrent",
+"text": "Score this immediately if a friendly fighter successfully casts a spell and there are two or more :MagCrit: in the casting roll."
+},
+{
+"id": 764901,
+"name": "Lights Out!",
+"text": "Reaction: Play this after a friendly fighter's successful Attack action with Combo. Give the target one Charge token."
+},
+{
+"id": 763734,
+"name": "Petty Vindication",
+"text": "Score this in an end phase if you scored two or more other objective cards in this round."
+},
+{
+"id": 762781,
+"name": "Heroic Guard",
+"text": "Choose a friendly fighter and put them on Guard."
+},
+{
+"id": 814431,
+"name": "Ethereal Shield",
+"text": "This fighter's Defence characteristic changes to :dfBlock:."
+},
+{
+"id": 763611,
+"name": "Razormaw Swarm",
+"text": "Gambit Spell (:MagCrit:): If this spell is cast, Scatter 3 from the caster's hex. Any fighter in any hex in the chain suffers 2 damage."
+},
+{
+"id": 765056,
+"name": "Elimination Order",
+"text": "Surge, Hybrid: Score this immediately after: A friendly assassin's Attack action that takes the target out of action Or: A friendly fighter's Attack action that takes an enemy leader out of action, if no other enemy fighters are out of action."
+},
+{
+"id": 765091,
+"name": "Partial Resurrection",
+"text": "Place one friendly fighter that is out of action on a starting hex in your territory. Give that fighter one Raise token. Then give that fighter wound counters until that fighter is vulnerable."
+},
+{
+"id": 763755,
+"name": "Overpower",
+"text": "Score this immediately when a friendly fighter successfully casts a spell if there were one or more :MagCrit: in the casting roll."
+},
+{
+"id": 764488,
+"name": "Great Hunters",
+"text": "Hybrid: Score this in the third end phase if: Each surviving friendly fighter is in enemy territory and you have the Primacy token Or: There is no more than one surviving enemy fighter."
+},
+{
+"id": 764948,
+"name": "Walk it Off",
+"text": "Reaction: Play this after an enemy fighter's Attack action that targeted a friendly fighter, if the target is now vulnerable. Heal (2) the target and give the target one Move token."
+},
+{
+"id": 764230,
+"name": "Cryptic Companion",
+"text": "This fighter is a Quarry. If this fighter is a Quarry and is holding an objective at the end of an action phase, gain 1 glory point."
+},
+{
+"id": 765215,
+"name": "Penumbral Pendulum",
+"text": "This fighter has line of sight to each fighter in a cover hex and/or edge hex. (This does not change this fighter's distance from those fighters, or the Range of this fighter's Attack actions.)"
+},
+{
+"id": 764271,
+"name": "Vortex Stone",
+"text": "Reaction: After this fighter's activation, choose an enemy fighter within 3 hexes and push the chosen fighter up to 2 hexes. This push must bring the chosen fighter closer to this fighter each time the chosen fighter leaves a hex. Then discard this card."
+},
+{
+"id": 764716,
+"name": "Predatory Impulse",
+"text": "Choose one friendly fighter. In the next activation that fighter has +1 Move and that fighter's Range 1 Attack actions have Ensnare."
+},
+{
+"id": 763914,
+"name": "Charnel House",
+"text": "Hybrid: Score this in the third end phase If: All surviving friendly fighters are in enemy territory Or: There are no enemy fighters in your territory."
+},
+{
+"id": 765556,
+"name": "Fierce Competition",
+"text": "+1 Dice to the first Attack action made by a friendly fighter in the next activation. +2 Dice instead if that fighter is supported by one or more friendly beasts and/or Inspired fighters."
+},
+{
+"id": 765090,
+"name": "Death's Dues",
+"text": "Pick one player. For each Illusion upgrade their surviving fighters have, that player picks one: spend 1 glory point, or break that card (if that player cannot spend a glory point, they must break that card)."
+},
+{
+"id": 765345,
+"name": "Brazen-edged Fury",
+"text": "Choose one friendly fighter and pick one of the following effects: The first Attack action made by the chosen fighter in the next activation has Cleave. Or, re-roll one attack dice in the attack roll for the first Attack action made by the chosen fighter in the next activation. When you play this card you can remove one of the chosen fighter's blood tithe counters. If you do, gain both effects."
+},
+{
+"id": 765849,
+"name": "Shared Mutations",
+"text": "Gambit Spell (:MagChannel::MagChannel:): If cast, deal 1 damage to each enemy fighter that is adjacent to one or more friendly fighters."
+},
+{
+"id": 762752,
+"name": "Blood Offering",
+"text": "Choose a friendly fighter. They suffer 1 damage. Roll two extra attack dice for their first Attack action in the next activation."
+},
+{
+"id": 764398,
+"name": "Razed Realm",
+"text": "Score this in an end phase if there are two or more Desecration tokens on the battlefield."
+},
+{
+"id": 814491,
+"name": "Long Ranged",
+"text": "+1 Range to this fighter's Thunderhead Greatbow Attack action."
+},
+{
+"id": 765900,
+"name": "Lone Claim",
+"text": "Dual: Score this in an end phase if: Your warband holds one or more objectives in no one's or your territory And: Each other warband holds no objectives."
+},
+{
+"id": 764943,
+"name": "Crushing Momentum",
+"text": "Reaction: Play this during a friendly fighter's Range 1 Attack action made as part of a Charge action, after the declare Attack action step. Remove the target's Guard tokens. The Attack action has Cleave until it has been resolved."
+},
+{
+"id": 763311,
+"name": "Eidetic Memory",
+"text": "Reaction: Play this after an Attack action made by friendly K'charik that fails. They can make another Attack action which targets the same fighter."
+},
+{
+"id": 764968,
+"name": "Superior Skulkers",
+"text": "Score this in an end phase if one or more surviving friendly fighters are in cover hexes that are not in your territory."
+},
+{
+"id": 814462,
+"name": "Shield Slash",
+"text": "[:Hex: 1 - :atSmash: 2 - :boom: 3]"
+},
+{
+"id": 765146,
+"name": "Reckless Swing",
+"text": "Surge: Score this immediately after an activation step in which a friendly fighter made a Range 1 Attack action that targeted a fighter with more supporting fighters than the attacker."
+},
+{
+"id": 763639,
+"name": "Unfocused Blast",
+"text": "Gambit Spell (:MagChannel:): If this spell is cast, do the following. Scatter 1 from the caster's hex: any fighter in the end hex suffers 1 damage. Do this two more times, scattering from the caster's hex each time."
+},
+{
+"id": 764579,
+"name": "Absolute Dominance",
+"text": "Dual: Score this in an end phase if: There are two or more surviving friendly fighters And: No more than one surviving enemy fighter."
+},
+{
+"id": 762969,
+"name": "Lone Warrior",
+"text": "Rolls of :dfSup1: made for this fighter when they are targeted by an Attack action also count as successes when they are adjacent to no friendly fighters."
+},
+{
+"id": 764810,
+"name": "Soultooth Dagger",
+"text": "(Errata update) The Grievous 1 keyword replaces the similar ability on this card. This fighter is a Hunter. [:Hex: 1 - :atFury: 3 - :boom: 2] +1 Damage on a critical hit. You can re-roll one dice in the attack roll if the target has one or more Move and/or Charge tokens."
+},
+{
+"id": 764318,
+"name": "Spiteful Lunge",
+"text": "Reaction: When there are enough wound tokens on this fighter's fighter card for them to be taken out of action, but before they are taken out of action, roll one attack dice. On a :atCrit:, Choose one enemy fighter within 3 hexes of this fighter. That enemy fighter is taken out of action."
+},
+{
+"id": 765181,
+"name": "Rising Water",
+"text": "-2 from each fighter's Move characteristic, to a minimum of 0, in the next activation step."
+},
+{
+"id": 765117,
+"name": "Contest of Equals",
+"text": "Surge: Score this immediately after a failed Attack action if the attack roll and the defence roll contained the same number of successes (including critical successes)."
+},
+{
+"id": 763612,
+"name": "Regal Vision",
+"text": "Choose a friendly fighter that is holding an objective. That fighter becomes Inspired."
+},
+{
+"id": 764911,
+"name": "Fortress of Arrogance",
+"text": "+2 Wounds During Attack actions that target this fighter, skip the attack and defence roll: no dice are rolled. Instead each Attack action that targets this fighter results in a critical hit."
+},
+{
+"id": 764526,
+"name": "Walking Mass Grave",
+"text": "Score this in an end phase if each surviving friendly fighter has one or more Move and/or Charge tokens."
+},
+{
+"id": 764827,
+"name": "Crucial Objective",
+"text": "Surge: Score this immediately after an opponent's activation if your warband holds objective 2 or 4."
+},
+{
+"id": 764286,
+"name": "Cold Fury",
+"text": "Reaction: Play this after you place a Raise counter on a friendly fighter's fighter card. +1 Damage and you can re-roll one attack dice in the attack roll for that fighter's next Range 1 or Range 2 Attack action. This effect persists until that fighter is taken out of action or until they make an Attack action."
+},
+{
+"id": 764240,
+"name": "Hunting Companion",
+"text": "Reaction: During this fighter's successful Range 1 or Range 2 Attack action in which you rolled one or more :atSup2: in the attack roll, after the deal damage step, the target is dealt 1 damage."
+},
+{
+"id": 762735,
+"name": "Ensnare",
+"text": ""
+},
+{
+"id": 765051,
+"name": "Prison of Grief",
+"text": "Spell Reaction (:MagFocus:): Use this after an enemy fighter's activation, if that fighter is within 3 hexes. If cast, stagger that fighter."
+},
+{
+"id": 765058,
+"name": "Path of Order",
+"text": "Dual: Score this in an end phase if: Your warband holds two or more objectives And: Two or more enemy fighters are out of action."
+},
+{
+"id": 765405,
+"name": "Grave Baron",
+"text": "Action: Pick one card in your objective discard pile (not your scored objective pile) and add it to your hand. Then discard one objective card. This fighter can only make this action once per round."
+},
+{
+"id": 814505,
+"name": "Significant Find",
+"text": "Pick one: Place one available feature token in an empty hex 2 or more hexes from each fighter, or increase your Exploration count by 1 if one or more surviving friendly explorers are not in your territory."
+},
+{
+"id": 765360,
+"name": "Sharpened by Rage",
+"text": "In the declare Attack action step, you can remove one of this fighter's blood tithe counters. If you do, pick one of Cleave, Ensnare or Knockback 1. This fighter's Range 1 and Range 2 Attack actions have that ability until that Attack action is resolved."
+},
+{
+"id": 764172,
+"name": "Dragged into the Darkness",
+"text": "Choose one enemy fighter that has one or more Move tokens. The chosen fighter is dealt 1 damage if that damage would take the chosen fighter out of action."
+},
+{
+"id": 764712,
+"name": "More Muscle",
+"text": "The player who has the most surviving friendly fighters adjacent to enemy fighters gains the Primacy token."
+},
+{
+"id": 765308,
+"name": "Tools of the Faithful",
+"text": "Dual: Score this in an end phase if: There are three or more surviving friendly fighters And: Each surviving friendly fighter has one or more upgrades."
+},
+{
+"id": 762848,
+"name": "Scrag 'Em",
+"text": "Each friendly fighter that supports the first Attack action in the next activation is considered to be two supporting fighters."
+},
+{
+"id": 763745,
+"name": "Disciplined Retreat",
+"text": "Reaction: After this fighter's Attack action, push them up to two hexes."
+},
+{
+"id": 765454,
+"name": "Purging the Abyss",
+"text": "Score this in an end phase if more enemy fighters were taken out of action in this round than there are objective tokens on the battlefield."
+},
+{
+"id": 763512,
+"name": "Keep Moving",
+"text": "Score this in an end phase if your warband made a Move action in four or more activations in the preceding action phase."
+},
+{
+"id": 765101,
+"name": "No Nice Things",
+"text": "Score this in an end phase if there are one or more upgrade cards in one or more opponents' discard piles."
+},
+{
+"id": 765242,
+"name": "Rattled",
+"text": "Score this in an end phase if two or more enemy fighters have Stagger tokens."
+},
+{
+"id": 763527,
+"name": "Nowhere to Go",
+"text": "Score this immediately if each hex adjacent to an enemy fighter is either occupied, blocked or lethal."
+},
+{
+"id": 763130,
+"name": "Ghostblade",
+"text": "[:Hex: 1 - :atSmash: 2 - :boom: 1] When rolling defence dice, only rolls of :dfCrit: are successes for the target of this Attack action. This Attack action can never cause more than 1 damage to a target."
+},
+{
+"id": 765103,
+"name": "Scant Rewards",
+"text": "Hybrid: Score this in an end phase if: There are no feature tokens in your territory and in no-one's territory Or: There are no objective tokens on the battlefield."
+},
+{
+"id": 763854,
+"name": "Killing Blow",
+"text": "Surge: Score this immediately when a friendly fighter's Attack action that targets a fighter that has no wound tokens takes the target fighter out of action."
+},
+{
+"id": 762867,
+"name": "Unstoppable Advance",
+"text": "Score this in an end phase if all of your surviving fighters are in enemy territory."
+},
+{
+"id": 765613,
+"name": "Sleepless Sentries",
+"text": "Score this in an end phase if each enemy fighter is within 2 hexes of one or more friendly fighters."
+},
+{
+"id": 763035,
+"name": "Swift Advance",
+"text": "Score this in an end phase if all of your surviving fighters are in enemy territory."
+},
+{
+"id": 763092,
+"name": "Reflected Injury",
+"text": "Choose a friendly fighter with at least one wound token, and an adjacent enemy fighter. The enemy fighter suffers 1 damage."
+},
+{
+"id": 762801,
+"name": "Battle Without End",
+"text": "(Errata update) Score this in an end phase if one or more friendly fighters returned to the battlefield in the preceding action phase, and a friendly fighter had already returned to the battlefield in that phase."
+},
+{
+"id": 764690,
+"name": "Hopesink",
+"text": "Trap Reaction: Play this after an enemy fighter's Move action. That fighter is a Quarry and has -1 Defence (to a minimum of 1). This effect persists until that fighter is taken out of action."
+},
+{
+"id": 762792,
+"name": "Block",
+"text": "Action: This fighter and all adjacent friendly fighters go on Guard."
+},
+{
+"id": 796414,
+"name": "Sneaky Traps",
+"text": "Power step, once per game: until the end of the battle round, hexes adjacent to friendly fighters also count as stagger hexes."
+},
+{
+"id": 796420,
+"name": "Mob Mentality",
+"text": "Once per game, after a friendly fighter is picked as a melee target while another friendly fighter is adjacent to it: its Save is 2 for that Attack."
+},
+{
+"id": 763964,
+"name": "Unbridled Ferocity",
+"text": "Reaction: Play this after a friendly fighter's failed Snarlfang's Jaws Attack action. That fighter makes a Snarlfang's Jaws Attack action."
+},
+{
+"id": 763831,
+"name": "Dissipate",
+"text": "Reaction: Play this during an Attack action, before the attack roll. Choose a friendly fighter. That fighter gains Innate (:dfDodge:). This persists until the Attack action ends or until that friendly fighter is taken out of action."
+},
+{
+"id": 763912,
+"name": "Vicious Darts",
+"text": "(Errata update) The Grievous 1 keyword replaces the similar ability on this card. [:Hex: 3 - :MagFocus: - - :boom: 1] Ensnare. On a critical hit this Attack action has +1 Damage."
+},
+{
+"id": 763225,
+"name": "Commanding Presence",
+"text": "This fighter is considered to be two supporting fighters when it supports another fighter."
+},
+{
+"id": 765411,
+"name": "Whirling Wreckers",
+"text": "Dual: Score this in an end phase if: There are two or more surviving friendly fighters And: Each surviving friendly fighter has one or more Scything Attack actions."
+},
+{
+"id": 763545,
+"name": "Stand Firm",
+"text": "Score this immediately if all surviving friendly fighters (at least three) have one or more Guard tokens."
+},
+{
+"id": 764232,
+"name": "Finishing Blow",
+"text": "[:Hex: 1 - :atSmash: 2 - :boom: 2] Reaction: After this fighter's successful Attack action with Combo, make this Attack action. It must target the same fighter. +2 Damage to this Attack action when made in this way."
+},
+{
+"id": 764002,
+"name": "Living Plague",
+"text": "Reaction: After an enemy fighter's successful Range 1 Attack action that targets this fighter, roll one defence dice. On a roll of :dfBlock: or :dfCrit: that enemy fighter is dealt 1 damage."
+},
+{
+"id": 763030,
+"name": "Scent of Victory",
+"text": "Score this in an end phase if all surviving enemy fighters (at least three) have at least one wound token."
+},
+{
+"id": 763471,
+"name": "Warding Stance",
+"text": "+1 Defence."
+},
+{
+"id": 763439,
+"name": "Paymaster",
+"text": "You can re-roll one dice in each Attack roll made for friendly fighters adjacent to this fighter."
+},
+{
+"id": 765006,
+"name": "Gold Rush",
+"text": "Choose up to two friendly fighters other than your leader. Push each chosen fighter up to 2 hexes towards the feature token that is closest to that fighter and in enemy territory."
+},
+{
+"id": 763474,
+"name": "All or Nothing",
+"text": "Score this in the third end phase if you have scored no objective cards this game. If you do, you cannot score any other objective cards."
+},
+{
+"id": 765545,
+"name": "Oath of Slaughter",
+"text": "Surge, Hybrid: You may reveal this card at the start of your first turn in a round, then return it to your hand. Score this immediately after: A second or subsequent enemy fighter is taken out of action in the same round Or: a Large enemy fighter is taken out of action. If you revealed this card, gain one additional glory point."
+},
+{
+"id": 765192,
+"name": "Vaults Mysterium",
+"text": "Waypoint +1 wizard level to each wizard. A wizard suffers backlash if their casting roll contains one or more :MagCrit:, and when a wizard is dealt damage by backlash, backlash deals 1 additional damage to that wizard. This effect persists until another Waypoint is played."
+},
+{
+"id": 765128,
+"name": "Illusory Nemesis",
+"text": "Surge, Hybrid: Score this immediately after: A power step if one or more opponents played one or more Illusion upgrades in that power step Or: You play your third or subsequent Illusion upgrade in the same phase."
+},
+{
+"id": 763625,
+"name": "Sphere of Ghyran",
+"text": "Gambit Spell (:MagChannel::MagChannel:): If this spell is cast, choose the caster or a friendly fighter adjacent to the caster. Remove 1 wound token from that fighter's fighter card."
+},
+{
+"id": 764922,
+"name": "The Seal of Primus",
+"text": "Seal of Power This fighter's Attack actions that target an adjacent fighter have Cleave and Ensnare. After this fighter is taken out of action, pick one opponent. That opponent gains 1 glory point."
+},
+{
+"id": 764838,
+"name": "Distracting Shot",
+"text": "Play this only in your power step. -1 Dice from enemy fighter's Attack actions in the next activation (to a minimum of 1)."
+},
+{
+"id": 764297,
+"name": "Revel in Death",
+"text": "Reaction: Play this after you place a Raise counter on a friendly fighter's fighter card. Roll two magic dice. If you roll one or more :MagChannel:, gain 1 glory point."
+},
+{
+"id": 764251,
+"name": "Predatory Instinct",
+"text": "This fighter is a Hunter. You can re-roll one dice in the attack rolls for this fighter's Attack actions that target a Quarry."
+},
+{
+"id": 762747,
+"name": "It Begins",
+"text": "Score this in an end phase if at least one fighter from each warband is out of action."
+},
+{
+"id": 765062,
+"name": "Drilled Determination",
+"text": "Heal (1) each friendly fighter that is adjacent to one or more enemy fighters and/or has one or more Guard tokens."
+},
+{
+"id": 765069,
+"name": "Shared Glory",
+"text": "When a friendly fighter's Attack action takes an enemy fighter out of action, if this fighter was supporting that fighter, gain 1 spent glory point."
+},
+{
+"id": 765416,
+"name": "Opportunistic Mob",
+"text": "Reaction: Play this after a friendly fighter's Attack action that took the target out of action, if that friendly fighter had one or more supporting fighters. Draw two power cards."
+},
+{
+"id": 765371,
+"name": "Martial Discipline",
+"text": "In the next activation step, you can re-roll results of :atSup1: and :atSup2: in friendly fighters' attack and defence rolls."
+},
+{
+"id": 764183,
+"name": "Honest Scrap",
+"text": "Players cannot re-roll dice until the end of the next activation."
+},
+{
+"id": 764723,
+"name": "Sanity Siphon",
+"text": "Trap Reaction: Play this after an enemy fighter's Move action made as part of a Charge action. Roll one magic dice: on a roll of :MagChannel:, choose one friendly fighter that could be the target of one of that fighter's Attack actions. The enemy fighter must target the chosen fighter with the Attack action made as a part of their Charge action."
+},
+{
+"id": 765319,
+"name": "Ward of Martyr's Blood",
+"text": "In the next activation, the characteristics of enemy fighters' Attack actions cannot be modified, and Cleave and Ensnare cannot affect friendly fighters' defence rolls."
+},
+{
+"id": 762861,
+"name": "Ferocious Charge",
+"text": "Score this immediately if a friendly fighter takes an enemy fighter out of action with a Charge action."
+},
+{
+"id": 763756,
+"name": "Shortcut",
+"text": "Score this immediately when a friendly fighter is taken out of one hex and immediately placed in a different hex, but not as a result of a push or a Move action."
+},
+{
+"id": 765465,
+"name": "Barging Forward",
+"text": "Choose one friendly fighter. Scatter 5 from the chosen fighter's hex and push the chosen fighter along the chain to the end hex. If the chain is interrupted, or if that fighter would be pushed into a hex that is blocked or occupied, do not push them any further. After the push, if the chosen fighter is a brawler, deal 1 damage to one enemy fighter adjacent to the chosen fighter."
+},
+{
+"id": 763523,
+"name": "Master of Terrain",
+"text": "Score this immediately if an enemy fighter is taken out of action by a lethal hex."
+},
+{
+"id": 765112,
+"name": "Troggoth's Blood",
+"text": "Give this only to a fighter with a Wounds characteristic of 4 or less. This fighter is a hunter. Reaction: After this fighter is given an upgrade, heal (1) this fighter."
+},
+{
+"id": 765254,
+"name": "Sweep the Leg",
+"text": "Choose one enemy fighter that is adjacent to one or more friendly fighters. Stagger the chosen fighter."
+},
+{
+"id": 763538,
+"name": "Scorched Earth",
+"text": "Score this immediately if your warband removes an objective from the battlefield."
+},
+{
+"id": 763151,
+"name": "Shadeglass Axe",
+"text": "(Errata update) The Grievous 1 keyword replaces the similar ability on this card. [:Hex: 1 - :atSmash: 2 - :boom: 2] When this Attack action is successful, discard this upgrade. On a critical hit, this Attack action has +1 Damage. [:Hex: 3 - :atSmash: 2 - :boom: 2] After a fighter makes this Attack action, discard this upgrade. On a critical hit, this Attack action has +1 Damage."
+},
+{
+"id": 765115,
+"name": "Change of Priorities",
+"text": "Surge: Score this immediately after your gambit which chose one or more friendly fighters who each had two or more Illusion upgrades."
+},
+{
+"id": 763865,
+"name": "Blood Taunt",
+"text": "Choose a friendly fighter. They are dealt 1 damage. Give them a Guard token. +2 Dice to the first Attack action made by that fighter in the next activation."
+},
+{
+"id": 762880,
+"name": "Defiant Strike",
+"text": "[:Hex: 1 - :atFury: 3 - :boom: 1] Reaction: During an Attack action that succeeds against this fighter, this fighter cannot be driven back and makes this Attack action. It must target the attacker."
+},
+{
+"id": 765625,
+"name": "Spiritsnare Cavern",
+"text": "Domain After a fighter's Charge action, that fighter's player rolls one attack dice for each fighter in their warband that is out of action. If they roll one or more :atCrit:, deal 1 damage to the fighter that made the Charge action. This effect persists until the end of the round or until another Domain gambit is played."
+},
+{
+"id": 763049,
+"name": "War of Attrition",
+"text": "Score this in an end phase if the same number of fighters (at least one) from each warband are out of action."
+},
+{
+"id": 763105,
+"name": "Sprint",
+"text": "Double the move characteristic of the first friendly fighter to make a Move action in the next activation. They may not make a Charge action. Once they have moved, they cannot be activated again in this phase."
+},
+{
+"id": 762813,
+"name": "Danse Macabre",
+"text": "Any friendly fighters that make a Move action in the next activation can move one additional hex."
+},
+{
+"id": 764701,
+"name": "Irresistible Hunger",
+"text": "Choose one friendly fighter. Give that fighter one Hunger counter, then push one enemy fighter within 2 hexes of that fighter 1 hex towards that fighter, or if that friendly fighter has two or more Hunger counters, push each enemy fighter within 2 hexes of that fighter up to 1 hex towards that fighter."
+},
+{
+"id": 762804,
+"name": "March of the Dead",
+"text": "Score this in an end phase if all of your surviving fighters (at least five) made a Move action in the preceding action phase."
+},
+{
+"id": 796425,
+"name": "Gravebreakers",
+"text": "Immediately after a friendly minion Delves: either that minion uses Unearth (draw Power cards equal to the number of slain friendly fighters) or a friendly leader uses Exhume (raise a slain friendly minion and place it adjacent to the fighter that Delved)."
+},
+{
+"id": 796431,
+"name": "Spiteclaw Inspire",
+"text": "After resolving a Ploy that picked a friendly fighter: Inspire that fighter."
+},
+{
+"id": 763975,
+"name": "Pack Leader",
+"text": "You can re-roll any number of dice in this fighter's attack rolls for the Snarlfang's Jaws Attack action."
+},
+{
+"id": 763842,
+"name": "Hollow Hatred",
+"text": "You can re-roll one dice in the attack roll of the first Attack action this fighter makes in each round."
+},
+{
+"id": 763923,
+"name": "Pervasive Delusion",
+"text": "Surge: Score this immediately when you play your third or subsequent gambit card in a single round."
+},
+{
+"id": 763237,
+"name": "Treacherous Second",
+"text": "Reaction: After an action or ploy that takes your leader out of action, if this fighter is on the battlefield, gain 1 glory point."
+},
+{
+"id": 765422,
+"name": "Tenacious Survivor",
+"text": "If this fighter is vulnerable, this fighter cannot be dealt damage except by Attack actions."
+},
+{
+"id": 763558,
+"name": "Witch-Slayer",
+"text": "Score this immediately if your leader takes an enemy wizard out of action."
+},
+{
+"id": 764244,
+"name": "Keila's Choking Coil",
+"text": "(Errata update) The Grievous 1 keyword replaces the similar ability on this card. Lost page [:Hex: 3 - :MagFocus: - - :boom: 1] On a critical hit, this Attack action has +1 Damage."
+},
+{
+"id": 764015,
+"name": "Flush Them Out",
+"text": "Surge: Score this immediately if your warband pushes an enemy fighter that is not adjacent to your leader, and after the push they are adjacent to your leader."
+},
+{
+"id": 763045,
+"name": "Unbroken Wall",
+"text": "Score this in an end phase if all surviving friendly fighters (at least three) are in a single group with each friendly fighter adjacent to another friendly fighter."
+},
+{
+"id": 763482,
+"name": "Calculated Risk",
+"text": "Score this immediately if a friendly fighter makes a Move action through a lethal hex that damages them but doesn't take them out of action."
+},
+{
+"id": 763450,
+"name": "Strike Swiftly",
+"text": "Score this immediately if a friendly fighter takes an enemy fighter out of action with a Charge action."
+},
+{
+"id": 765017,
+"name": "More Shot",
+"text": "Reaction: Use this after this fighter's Grundebuss Attack action. When you do, do the following twice: Scatter 1 from the target's hex, then deal 1 damage to any fighter in the end hex that has not already been dealt damage by this reaction in this step."
+},
+{
+"id": 763485,
+"name": "Combination Strike",
+"text": "Score this in an end phase if you scored at least two objective cards in the preceding action phase."
+},
+{
+"id": 763941,
+"name": "Right-hand Ghoul",
+"text": "Reaction: After a friendly Crakmarrow's Move action, if this fighter has no Move or Charge tokens, this fighter makes a Move action. This fighter must end the Move action adjacent to a friendly Crakmarrow"
+}
+]

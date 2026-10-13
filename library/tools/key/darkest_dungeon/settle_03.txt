@@ -1,0 +1,150 @@
+760422 | Danos Glory | +0.04 crit; +0.05 accuracy; +4 speed; -4% scouting chance in the first round; -10% stun resistance in the first round; -8% resolve check percent in the first round
+   A: [["stat_gain", "+0.04 crit"], ["stat_gain", "+0.05 accuracy"], ["stat_gain", "+4 speed"], ["stat_loss", "-4% scouting chance in the first round"], ["turn_number", "in the first round"], ["stat_loss", "-10% stun resistance"], ["stat_loss", "-8% resolve check percent"]]
+   B: [["passive", "+0.04 crit"], ["stat_gain", "+0.04 crit"], ["speed", "+4 speed"], ["information", "scouting chance"], ["turn_number", "in the first round"], ["stat_loss", "-10% stun resistance"]]
+760423 | Kistras Prayer Book | +10% hp heal percent; -10% stress dmg received percent while light above 75; +10% move resistance while light above 75; -10% damage; -10% damage; +10% stress dmg received percent while HP below 0.25
+   A: [["stat_gain", "+10% hp heal percent"], ["stress_morale", "-10% stress dmg received percent"], ["light_level", "while light above 75"], ["stat_gain", "+10% move resistance"], ["stat_loss", "-10% damage"], ["condition_life", "while HP below 0.25"]]
+   B: [["passive", "+10% hp heal percent"], ["heal", "+10% hp heal percent"], ["stress_morale", "stress dmg received percent"], ["light_level", "while light above 75"], ["saving_throws", "move resistance"], ["stat_loss", "-10% damage"], ["condition_life", "while HP below 0.25"]]
+760430 | Guise Of The Harbinger | +5% damage; +5% damage; +0.02 accuracy; +0.02 crit; +10% stress dmg received percent at Death's Door
+   A: [["stat_gain", "+5% damage"], ["stat_gain", "+0.02 accuracy"], ["stress_morale", "+10% stress dmg received percent"], ["condition_life", "at Death's Door"]]
+   B: [["passive", "+5% damage"], ["stat_gain", "+5% damage"], ["stress_morale", "stress dmg received percent"], ["condition_life", "at Death's Door"]]
+760435 | Goliath Killer | +0.06 accuracy while in rank ; +13% damage while in rank ; +13% damage while in rank ; +0.05 crit while in rank ; -10% trap resistance while in rank ; -8% monsters surprise chance while in rank ; -13% hp heal percent while in rank 
+   A: [["stat_gain", "+0.06 accuracy"], ["rank_positions", "while in rank"], ["stat_gain", "+13% damage"], ["stat_gain", "+0.05 crit"], ["stat_loss", "-10% trap resistance"], ["stat_loss", "-13% hp heal percent"]]
+   B: [["passive", "+0.06 accuracy while in rank"], ["stat_gain", "+0.06 accuracy"], ["rank_positions", "while in rank"], ["stat_loss", "-10% trap resistance"], ["information", "surprise chance"]]
+760438 | Soul Of The Neverborn | +10% max HP; +0.05 crit while light below 26; +0.06 protection; -10% debuff resistance while light above 75; +10% stress dmg received percent while light above 75; -4 speed while light above 75
+   A: [["stat_gain", "+10% max HP"], ["stat_gain", "+0.05 crit"], ["light_level", "while light below 26"], ["stat_gain", "+0.06 protection"], ["stat_loss", "-10% debuff resistance"], ["stress_morale", "+10% stress dmg received percent"], ["stat_loss", "-4 speed"]]
+   B: [["passive", "+10% max HP"], ["stat_gain", "+10% max HP"], ["light_level", "while light below 26"], ["damage_reduction", "+0.06 protection"], ["stat_loss", "-10% debuff resistance"], ["stress_morale", "stress dmg received percent"]]
+760440 | Arkenhelm | -5% stress dmg received percent; +10% hp heal received percent while light above 75; -8% stress dmg received percent while HP above 0.75; -10% disease resistance while HP below 0.25
+   A: [["stress_morale", "-5% stress dmg received percent"], ["light_level", "while light above 75"], ["condition_life", "while HP above 0.75"], ["stat_loss", "-10% disease resistance"]]
+   B: [["passive", "-5% stress dmg received percent"], ["stress_morale", "stress dmg received percent"], ["heal", "+10% hp heal received percent"], ["light_level", "while light above 75"], ["condition_life", "while HP above 0.75"], ["stat_loss", "-10% disease resistance"]]
+760447 | Leaders Crest | +0.05 protection; -10% stress dmg received percent while in rank ; +10% damage while in rank ; +10% damage while in rank ; -0.05 accuracy while in rank ; -10% damage while in rank ; -10% damage while in rank 
+   A: [["stat_gain", "+0.05 protection"], ["stress_morale", "-10% stress dmg received percent"], ["rank_positions", "while in rank"], ["stat_gain", "+10% damage"], ["stat_loss", "-0.05 accuracy"], ["stat_loss", "-10% damage"]]
+   B: [["passive", "+0.05 protection"], ["damage_reduction", "+0.05 protection"], ["stress_morale", "stress dmg received percent"], ["rank_positions", "while in rank"], ["stat_gain", "+10% damage"], ["stat_loss", "-0.05 accuracy"]]
+760448 | Ralackks Visage | +0.02 accuracy; +0.03 protection; +6% monsters surprise chance while in rank ; -10% trap resistance while in rank 
+   A: [["stat_gain", "+0.02 accuracy"], ["stat_gain", "+0.03 protection"], ["rank_positions", "while in rank"], ["stat_loss", "-10% trap resistance"]]
+   B: [["passive", "+0.02 accuracy"], ["stat_gain", "+0.02 accuracy"], ["damage_reduction", "+0.03 protection"], ["information", "surprise chance"], ["rank_positions", "while in rank"], ["stat_loss", "-10% trap resistance"]]
+760452 | Adamant | +0.06 protection; +10% move resistance; -0.06 dodge; -4 speed
+   A: [["stat_gain", "+0.06 protection"], ["stat_gain", "+10% move resistance"], ["stat_loss", "-0.06 dodge"], ["stat_loss", "-4 speed"]]
+   B: [["passive", "+0.06 protection"], ["damage_reduction", "+0.06 protection"], ["saving_throws", "move resistance"], ["stat_loss", "-0.06 dodge"]]
+760453 | The Cagoule | +0.06 dodge; +0.04 crit; +0.05 accuracy; -13% hp heal percent while light below 26; -10% move resistance while in rank ; -10% trap resistance while light below 26
+   A: [["stat_gain", "+0.06 dodge"], ["stat_gain", "+0.04 crit"], ["stat_loss", "-13% hp heal percent"], ["light_level", "while light below 26"], ["rank_positions", "while in rank"], ["stat_loss", "-10% trap resistance"]]
+   B: [["passive", "+0.06 dodge"], ["stat_gain", "+0.06 dodge"], ["stat_loss", "-13% hp heal percent"], ["light_level", "while light below 26"], ["rank_positions", "while in rank"]]
+760459 | Pavlovs Bell | +10% damage in the first round; +10% damage in the first round; +0.05 accuracy in the first round; +0.04 crit in the first round; +50% starving damage percent; +50% food consumption percent
+   A: [["stat_gain", "+10% damage in the first round"], ["turn_number", "in the first round"], ["stat_gain", "+0.05 accuracy"], ["stat_gain", "+0.04 crit"], ["stat_gain", "+50% starving damage percent"], ["upkeep", "+50% food consumption percent"]]
+   B: [["passive", "+10% damage in the first round"], ["stat_gain", "+10% damage"], ["turn_number", "in the first round"], ["upkeep", "starving damage percent"]]
+760461 | Amiga | +0.06 protection; +4 speed; +5 speed while HP below 0.25; -10% damage; -10% damage; -0.04 crit; -13% hp heal percent while light below 26
+   A: [["stat_gain", "+0.06 protection"], ["stat_gain", "+4 speed"], ["stat_gain", "+5 speed while HP below 0.25"], ["condition_life", "while HP below 0.25"], ["stat_loss", "-10% damage"], ["stat_loss", "-0.04 crit"], ["stat_loss", "-13% hp heal percent"], ["light_level", "while light below 26"]]
+   B: [["passive", "+0.06 protection"], ["damage_reduction", "+0.06 protection"], ["speed", "+4 speed"], ["condition_life", "while HP below 0.25"], ["stat_loss", "-10% damage"], ["light_level", "while light below 26"]]
+760462 | Tome Of Agh Be | +15% max HP; -13% hp heal received percent
+   A: [["stat_gain", "+15% max HP"], ["stat_loss", "-13% hp heal received percent"]]
+   B: [["passive", "+15% max HP"], ["stat_gain", "+15% max HP"], ["stat_loss", "-13% hp heal received percent"]]
+760463 | The Reflectorum | +0.06 protection; +8% death_blow resistance at Death's Door; -13% hp heal percent vs beast enemies
+   A: [["stat_gain", "+0.06 protection"], ["stat_gain", "+8% death_blow resistance"], ["condition_life", "at Death's Door"], ["stat_loss", "-13% hp heal percent vs beast enemies"], ["tribal", "vs beast enemies"]]
+   B: [["passive", "+0.06 protection"], ["damage_reduction", "+0.06 protection"], ["cheat_death", "death_blow resistance"], ["condition_life", "at Death's Door"], ["stat_loss", "-13% hp heal percent"], ["tribal", "vs beast enemies"]]
+760466 | Final Memento | +9% death_blow resistance; -8% resolve check percent
+   A: [["stat_gain", "+9% death_blow resistance"], ["stat_loss", "-8% resolve check percent"]]
+   B: [["passive", "+9% death_blow resistance"], ["cheat_death", "death_blow resistance"], ["stat_loss", "-8% resolve check percent"]]
+760475 | Nictybenmas | +0.06 crit; -10% move resistance in the first round
+   A: [["stat_gain", "+0.06 crit"], ["stat_loss", "-10% move resistance in the first round"], ["turn_number", "in the first round"]]
+   B: [["passive", "+0.06 crit"], ["stat_gain", "+0.06 crit"], ["stat_loss", "-10% move resistance"], ["turn_number", "in the first round"]]
+760485 | Kucorus Regard | +0.05 accuracy while in rank ; +10% damage while in rank ; +10% damage while in rank ; +13% hp heal received percent while HP below 0.25; +10% stress dmg received percent while HP below 0.25; -10% stun resistance while in rank 
+   A: [["stat_gain", "+0.05 accuracy"], ["rank_positions", "while in rank"], ["stat_gain", "+10% damage"], ["condition_life", "while HP below 0.25"], ["stress_morale", "+10% stress dmg received percent"], ["stat_loss", "-10% stun resistance"]]
+   B: [["passive", "+0.05 accuracy while in rank"], ["stat_gain", "+0.05 accuracy"], ["rank_positions", "while in rank"], ["heal", "+13% hp heal received percent"], ["condition_life", "while HP below 0.25"], ["stress_morale", "stress dmg received percent"], ["stat_loss", "-10% stun resistance"]]
+760492 | Beneath The Dark | -13% stress dmg received percent while light below 26; +16% resolve xp bonus percent; -0.06 dodge in the first round
+   A: [["stress_morale", "-13% stress dmg received percent"], ["light_level", "while light below 26"], ["stat_gain", "+16% resolve xp bonus percent"], ["stat_loss", "-0.06 dodge in the first round"], ["turn_number", "in the first round"]]
+   B: [["passive", "-13% stress dmg received percent while light below 26"], ["stress_morale", "stress dmg received percent"], ["light_level", "while light below 26"], ["stat_loss", "-0.06 dodge"], ["turn_number", "in the first round"]]
+760493 | Brace Of Thorns | +26% hp heal received percent while HP below 0.25; -10% max HP
+   A: [["stat_gain", "+26% hp heal received percent"], ["condition_life", "while HP below 0.25"], ["stat_loss", "-10% max HP"]]
+   B: [["passive", "+26% hp heal received percent while HP below 0.25"], ["heal", "+26% hp heal received percent"], ["condition_life", "while HP below 0.25"], ["stat_loss", "-10% max HP"]]
+760501 | Thraximundars Rage | +10% damage; +10% damage; +10% max HP; +0.04 crit; -10% bleed resistance in the first round; -10% disease resistance in the first round; -13% hp heal percent in the first round
+   A: [["stat_gain", "+10% damage"], ["stat_gain", "+10% max HP"], ["stat_gain", "+0.04 crit"], ["stat_loss", "-10% bleed resistance in the first round"], ["turn_number", "in the first round"], ["stat_loss", "-13% hp heal percent"]]
+   B: [["passive", "+10% damage"], ["stat_gain", "+10% damage"], ["stat_loss", "-10% bleed resistance"], ["turn_number", "in the first round"]]
+760511 | Concealed Dagger | +3 speed in the first round; +0.03 crit in the first round; +5% damage; +5% damage; -0.06 protection
+   A: [["stat_gain", "+3 speed in the first round"], ["turn_number", "in the first round"], ["stat_gain", "+0.03 crit"], ["stat_gain", "+5% damage"], ["stat_loss", "-0.06 protection"]]
+   B: [["passive", "+3 speed in the first round"], ["speed", "+3 speed"], ["turn_number", "in the first round"], ["stat_gain", "+0.03 crit"], ["stat_loss", "-0.06 protection"]]
+760514 | Trenche Fist | +0.06 dodge; +10% damage; +10% damage; +10% max HP; -0.05 accuracy while light below 26; -10% damage while light below 26; -10% damage while light below 26; -6% death_blow resistance while light below 26
+   A: [["stat_gain", "+0.06 dodge"], ["stat_gain", "+10% damage"], ["stat_gain", "+10% max HP"], ["stat_loss", "-0.05 accuracy"], ["light_level", "while light below 26"], ["stat_loss", "-10% damage while light below 26"], ["stat_loss", "-6% death_blow resistance"]]
+   B: [["passive", "+0.06 dodge"], ["stat_gain", "+0.06 dodge"], ["stat_loss", "-0.05 accuracy"], ["light_level", "while light below 26"]]
+760516 | The True Knot | +15% disease resistance; -6% death_blow resistance not in the first round
+   A: [["stat_gain", "+15% disease resistance"], ["stat_loss", "-6% death_blow resistance"], ["turn_number", "not in the first round"]]
+   B: [["passive", "+15% disease resistance"], ["saving_throws", "disease resistance"], ["stat_loss", "-6% death_blow resistance"], ["turn_number", "not in the first round"]]
+760518 | T Doh Teddy Bear | -15% stress dmg received percent; -10% trap resistance not in the first round
+   A: [["stress_morale", "-15% stress dmg received percent"], ["stat_loss", "-10% trap resistance"], ["turn_number", "not in the first round"]]
+   B: [["passive", "-15% stress dmg received percent"], ["stress_morale", "stress dmg received percent"], ["stat_loss", "-10% trap resistance"], ["turn_number", "not in the first round"]]
+760519 | Tough | +10% max HP
+   A: [["stat_gain", "+10% max HP"]]
+   B: [["passive", "+10% max HP"], ["stat_gain", "+10% max HP"]]
+760523 | Quick Reflexes | +2 speed
+   A: [["stat_gain", "+2 speed"]]
+   B: [["passive", "+2 speed"], ["speed", "+2 speed"]]
+760529 | Natural Eye | +0.05 accuracy with ranged skills
+   A: [["stat_gain", "+0.05 accuracy with ranged skills"], ["ranged", "ranged skills"]]
+   B: [["passive", "+0.05 accuracy with ranged skills"], ["stat_gain", "+0.05 accuracy"]]
+760532 | Clumsy | -0.05 dodge
+   A: [["stat_loss", "-0.05 dodge"]]
+   B: [["passive", "-0.05 dodge"], ["stat_loss", "-0.05 dodge"]]
+760533 | Slugger | +10% damage with melee skills; +10% damage with melee skills
+   A: [["stat_gain", "+10% damage with melee skills"]]
+   B: [["passive", "+10% damage with melee skills"], ["stat_gain", "+10% damage"]]
+760537 | Deadly | +0.01 crit
+   A: [["stat_gain", "+0.01 crit"]]
+   B: [["passive", "+0.01 crit"], ["stat_gain", "+0.01 crit"]]
+760538 | Misses the Spot | -0.01 crit
+   A: [["stat_loss", "-0.01 crit"]]
+   B: [["passive", "-0.01 crit"], ["stat_loss", "-0.01 crit"]]
+760568 | Second Wind | +10% damage while HP below 0.5; +10% damage while HP below 0.5
+   A: [["stat_gain", "+10% damage"], ["condition_life", "while HP below 0.5"]]
+   B: [["passive", "+10% damage while HP below 0.5"], ["stat_gain", "+10% damage"], ["condition_life", "while HP below 0.5"]]
+760570 | Last Gasp | +1 speed while HP below 0.5
+   A: [["stat_gain", "+1 speed while HP below 0.5"], ["condition_life", "while HP below 0.5"]]
+   B: [["passive", "+1 speed while HP below 0.5"], ["speed", "+1 speed"], ["condition_life", "while HP below 0.5"]]
+760574 | Clutch Hitter | +0.03 crit while HP below 0.5
+   A: [["stat_gain", "+0.03 crit"], ["condition_life", "while HP below 0.5"]]
+   B: [["passive", "+0.03 crit while HP below 0.5"], ["stat_gain", "+0.03 crit"], ["condition_life", "while HP below 0.5"]]
+760579 | Lygophobia | +20% stress dmg received percent while light below 26
+   A: [["traits_quirks", "Lygophobia"], ["stress_morale", "+20% stress dmg received percent"], ["light_level", "while light below 26"]]
+   B: [["passive", "+20% stress dmg received percent while light below 26"], ["stress_morale", "stress dmg received percent"], ["light_level", "while light below 26"]]
+760584 | Automatonophobia | +20% stress dmg received percent vs man enemies
+   A: [["stress_morale", "+20% stress dmg received percent"], ["tribal", "vs man enemies"], ["traits_quirks", "Automatonophobia"]]
+   B: [["passive", "+20% stress dmg received percent vs man enemies"], ["stress_morale", "stress dmg received percent"], ["tribal", "vs man enemies"]]
+760590 | The Runs | -0.2 dodge; -10% max HP
+   A: [["stat_loss", "-0.2 dodge"], ["stat_loss", "-10% max HP"]]
+   B: [["passive", "-0.2 dodge"], ["stat_loss", "-0.2 dodge"]]
+760591 | Wasting Sickness | Life drains with each step...; -50% disease resistance
+   A: [["stat_loss", "-50% disease resistance"], ["traits_quirks", "Wasting Sickness"]]
+   B: [["damage_over_time", "Life drains with each step"], ["stat_loss", "-50% disease resistance"]]
+760592 | Tetanus | -0.05 accuracy; -0.05 crit
+   A: [["stat_loss", "-0.05 accuracy"]]
+   B: [["passive", "-0.05 accuracy"], ["stat_loss", "-0.05 accuracy"]]
+760593 | Rabies | -0.1 accuracy; +15% damage; +15% damage
+   A: [["stat_loss", "-0.1 accuracy"], ["stat_gain", "+15% damage"]]
+   B: [["passive", "-0.1 accuracy"], ["stat_loss", "-0.1 accuracy"], ["stat_gain", "+15% damage"]]
+760599 | Vertigo | -50% move resistance
+   A: [["stat_loss", "-50% move resistance"]]
+   B: [["passive", "-50% move resistance"], ["stat_loss", "-50% move resistance"]]
+760600 | Vampiric Spirits | -50% debuff resistance
+   A: [["stat_loss", "-50% debuff resistance"]]
+   B: [["passive", "-50% debuff resistance"], ["stat_loss", "-50% debuff resistance"]]
+760603 | Hysterical Blindness | -0.2 accuracy while stress above 70
+   A: [["stat_loss", "-0.2 accuracy while stress above 70"], ["stress_morale", "while stress above 70"], ["traits_quirks", "Hysterical Blindness"]]
+   B: [["passive", "-0.2 accuracy while stress above 70"], ["stat_loss", "-0.2 accuracy"], ["stress_morale", "while stress above 70"]]
+760604 | Scurvy | -40% bleed resistance; -40% move resistance
+   A: [["stat_loss", "-40% bleed resistance"]]
+   B: [["passive", "-40% bleed resistance"], ["stat_loss", "-40% bleed resistance"]]
+760607 | Tapeworm | +1 food consumption percent. Interacts with Food curios
+   A: [["upkeep", "+1 food consumption percent"], ["items_consumables", "Interacts with Food curios"]]
+   B: [["passive", "+1 food consumption percent. Interacts with Food curios"], ["upkeep", "food consumption percent"], ["traits_quirks", "Interacts with"]]
+760628 | Tippler | In town, will only Drink.
+   A: [["traits_quirks", "will only Drink"], ["play_restriction", "will only Drink"]]
+   B: [["traits_quirks", "will only Drink"]]
+760651 | Fear of Unholy | +15% stress dmg received percent vs unholy enemies; -0.1 accuracy vs unholy enemies
+   A: [["stress_morale", "+15% stress dmg received percent"], ["tribal", "vs unholy enemies"], ["stat_loss", "-0.1 accuracy vs unholy enemies"]]
+   B: [["passive", "+15% stress dmg received percent vs unholy enemies"], ["stress_morale", "stress dmg received percent"], ["tribal", "vs unholy enemies"], ["stat_loss", "-0.1 accuracy"]]
+760652 | Fear of Mankind | +15% stress dmg received percent vs man enemies; -0.1 accuracy vs man enemies
+   A: [["stress_morale", "+15% stress dmg received percent"], ["tribal", "vs man enemies"], ["stat_loss", "-0.1 accuracy vs man enemies"]]
+   B: [["passive", "+15% stress dmg received percent vs man enemies"], ["stress_morale", "stress dmg received percent"], ["tribal", "vs man enemies"], ["stat_loss", "-0.1 accuracy"]]
+760653 | Fear of Beasts | +15% stress dmg received percent vs beast enemies; -0.1 accuracy vs beast enemies
+   A: [["stress_morale", "+15% stress dmg received percent"], ["tribal", "vs beast enemies"], ["stat_loss", "-0.1 accuracy vs beast enemies"]]
+   B: [["passive", "+15% stress dmg received percent vs beast enemies"], ["stress_morale", "stress dmg received percent"], ["tribal", "vs beast enemies"], ["stat_loss", "-0.1 accuracy"]]
+760658 | Eldritch Slayer | +0.1 accuracy vs eldritch enemies; +0.03 crit vs eldritch enemies
+   A: [["stat_gain", "+0.1 accuracy vs eldritch enemies"], ["tribal", "vs eldritch enemies"]]
+   B: [["passive", "+0.1 accuracy vs eldritch enemies"], ["stat_gain", "+0.1 accuracy"], ["tribal", "vs eldritch enemies"]]

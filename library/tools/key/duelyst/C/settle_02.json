@@ -1,0 +1,146 @@
+{
+"742310": [
+[
+"damage",
+"Deal 1 damage to an enemy minion"
+],
+[
+"mark_target",
+"After it is attacked this turn"
+],
+[
+"destroy",
+"destroy it"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"742313": [
+[
+"stat_loss",
+"-4 Attack"
+],
+[
+"temporary_effect",
+"until your next turn"
+],
+[
+"scope_multi",
+"all enemy minions"
+]
+],
+"742316": [
+[
+"draw",
+"draw 2 cards"
+],
+[
+"condition_count",
+"If you have an Egg"
+]
+],
+"742319": [
+[
+"delayed",
+"Build: (2)"
+],
+[
+"on_attack",
+"Whenever this minion attacks"
+],
+[
+"stat_gain",
+"gain +3/+3"
+],
+[
+"scope_multi",
+"other friendly minions"
+]
+],
+"742321": [
+[
+"on_spell",
+"Blood Surge"
+],
+[
+"damage",
+"Deal 5 damage to the closest enemy"
+],
+[
+"targeting_rules",
+"closest enemy"
+]
+],
+"742332": [
+[
+"on_spell",
+"Blood Surge"
+],
+[
+"aoe_damage",
+"Deal 1 damage to enemy minions in this row"
+],
+[
+"disable",
+"Stun them"
+],
+[
+"area_templates",
+"in this row"
+]
+],
+"742337": [
+[
+"stat_gain",
+"gains +2 Attack"
+],
+[
+"on_attack",
+"Whenever your General attacks or counterattacks"
+],
+[
+"permanent_growth",
+"give all friendly Vespyr minions +2/+2"
+],
+[
+"tribal",
+"Vespyr"
+]
+],
+"742338": [
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"revive",
+"Re-summon this minion on this space"
+],
+[
+"scope_multi",
+"friendly minions"
+]
+],
+"742341": [
+[
+"territory_trigger",
+"Your minions are always infiltrated"
+]
+],
+"742355": [
+[
+"delayed",
+"Build: (2)"
+],
+[
+"on_play",
+"When this minion is built"
+],
+[
+"heal",
+"restore 5 Health to your General"
+]
+]
+}

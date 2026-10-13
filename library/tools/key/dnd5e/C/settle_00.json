@@ -1,0 +1,1038 @@
+{
+"761166": [
+[
+"stat_loss",
+"Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level"
+],
+[
+"destroy",
+"You die if your Exhaustion level is 6"
+],
+[
+"stacking_keyword",
+"This condition is cumulative"
+],
+[
+"rest_phase",
+"Finishing a Long Rest removes 1 of your Exhaustion levels"
+],
+[
+"condition_count",
+"Exhaustion level is 6"
+]
+],
+"761174": [
+[
+"advantage",
+"An attack roll against you has Advantage if the attacker is within 5 feet of you"
+],
+[
+"immobilize",
+"Your only movement options are to crawl"
+]
+],
+"761181": [
+[
+"multi_attack",
+"you can make one extra attack as a Bonus Action later on the same turn"
+],
+[
+"on_attack",
+"When you take the Attack action on your turn"
+]
+],
+"761188": [
+[
+"multi_target_attack",
+"you can make a melee attack roll with the weapon against a second creature within 5 feet of the first"
+],
+[
+"adjacency",
+"within 5 feet of the first"
+],
+[
+"on_attack",
+"If you hit a creature with a melee attack roll"
+]
+],
+"761192": [
+[
+"temporary_effect",
+"before the start of your next turn"
+],
+[
+"on_attack",
+"If you hit a creature with this weapon"
+],
+[
+"advantage",
+"has Disadvantage on its next attack roll"
+]
+],
+"761200": [
+[
+"scope_multi",
+"Choose up to three creatures within range"
+],
+[
+"stat_gain",
+"Hit Point maximum and current Hit Points increase by 5"
+],
+[
+"spell_power",
+"for each spell slot level above 2"
+]
+],
+"761202": [
+[
+"concentration",
+"Concentration."
+],
+[
+"modal_choice",
+"Choose one of the following options"
+],
+[
+"stances",
+"replace the option you chose with a different one"
+],
+[
+"transform",
+"You alter your physical form"
+]
+],
+"761208": [
+[
+"concentration",
+"Concentration."
+],
+[
+"aura",
+"An aura extends from you in a 10-foot Emanation"
+],
+[
+"area_templates",
+"10-foot Emanation"
+],
+[
+"protection",
+"prevents creatures other than Constructs and Undead from passing or reaching through it"
+],
+[
+"tribal",
+"other than Constructs and Undead"
+]
+],
+"761210": [
+[
+"modal_choice",
+"choose whether it creates antipathy or sympathy"
+],
+[
+"forced_movement",
+"must use its movement on its turns to get as far away as possible from the target"
+],
+[
+"saving_throws",
+"makes a Wisdom saving throw"
+],
+[
+"immobilize",
+"the creature can't willingly move away"
+],
+[
+"immunity",
+"immune to it for 1 minute"
+],
+[
+"tribal",
+"specify a kind of creature"
+]
+],
+"761211": [
+[
+"concentration",
+"Concentration."
+],
+[
+"stealth",
+"Invisible, invulnerable eye"
+],
+[
+"immunity",
+"invulnerable eye"
+],
+[
+"movement",
+"you can move the eye up to 30 feet in any direction"
+],
+[
+"information",
+"You mentally receive visual information from the eye"
+]
+],
+"761215": [
+[
+"type_grant",
+"Spells and other magical effects treat the target as if it were a creature of the chosen type"
+],
+[
+"information",
+"make a nonmagical object appear magical"
+]
+],
+"761224": [
+[
+"damage",
+"the target takes 10d12 Psychic damage"
+],
+[
+"suppress",
+"can't cast spells or take the Magic action"
+],
+[
+"saving_throws",
+"makes an Intelligence saving throw"
+],
+[
+"damage_types",
+"Psychic damage"
+]
+],
+"761225": [
+[
+"concentration",
+"Concentration."
+],
+[
+"saving_throws",
+"must succeed on a Wisdom saving throw"
+],
+[
+"advantage",
+"The target has Disadvantage on attack rolls against you"
+],
+[
+"modal_choice",
+"the target suffers one of the following effects of your choice"
+],
+[
+"damage",
+"the target takes an extra 1d8 Necrotic damage"
+],
+[
+"spell_power",
+"you can maintain Concentration on it for up to 10 minutes"
+],
+[
+"suppress",
+"forced to take the Dodge action on that turn"
+]
+],
+"761227": [
+[
+"concentration",
+"Concentration."
+],
+[
+"area_templates",
+"up to 100 feet long, 20 feet high, and 5 feet thick"
+],
+[
+"aoe_damage",
+"Any creature in the wall's space makes a Dexterity saving throw"
+],
+[
+"damage",
+"taking 6d10 Force damage on a failed save"
+],
+[
+"terrain",
+"its space is Difficult Terrain"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"protection",
+"Three-Quarters Cover"
+]
+],
+"761229": [
+[
+"damage",
+"taking 8d8 Necrotic damage on a failed save"
+],
+[
+"saving_throws",
+"makes a Constitution saving throw"
+],
+[
+"destroy",
+"it simply withers and dies"
+],
+[
+"spell_power",
+"The damage increases by 1d8 for each spell slot level above 4"
+],
+[
+"damage_types",
+"Necrotic damage"
+]
+],
+"761233": [
+[
+"aoe_damage",
+"Each creature in a 15-foot Cone makes a Dexterity saving throw"
+],
+[
+"area_templates",
+"15-foot Cone"
+],
+[
+"damage",
+"taking 3d6 Fire damage on a failed save"
+],
+[
+"spell_power",
+"The damage increases by 1d6 for each spell slot level above 1"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"damage_types",
+"Fire damage"
+]
+],
+"761239": [
+[
+"damage",
+"the target takes 1d10 Necrotic damage"
+],
+[
+"damage_types",
+"Necrotic damage"
+],
+[
+"temporary_effect",
+"until the end of your next turn"
+]
+],
+"761257": [
+[
+"concentration",
+"Concentration."
+],
+[
+"aura",
+"in a 15-foot Emanation"
+],
+[
+"buff",
+"any attack you make deals an extra 2d8 damage"
+],
+[
+"terrain",
+"the ground in the Emanation is Difficult Terrain for your enemies"
+],
+[
+"modal_choice",
+"Acid, Cold, Fire, or Lightning (your choice when you make the attack)"
+],
+[
+"spell_power",
+"The damage increases by 1d8 for each spell slot level above 4"
+],
+[
+"area_templates",
+"15-foot Emanation"
+],
+[
+"damage_types",
+"Acid, Cold, Fire, or Lightning"
+]
+],
+"761284": [
+[
+"damage",
+"the target takes 10d6 + 40 Force damage"
+],
+[
+"destroy",
+"disintegrated into gray dust"
+],
+[
+"saving_throws",
+"makes a Dexterity saving throw"
+],
+[
+"spell_power",
+"The damage increases by 3d6 for each spell slot level above 6"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"banish",
+"disintegrated into gray dust"
+]
+],
+"761299": [
+[
+"damage",
+"the target takes 1d10 Force damage"
+],
+[
+"ranged",
+"Make a ranged spell attack"
+],
+[
+"multi_attack",
+"three beams at level 11"
+],
+[
+"damage_types",
+"Force damage"
+],
+[
+"target_choice",
+"You can direct the beams at the same target or at different ones"
+]
+],
+"761312": [
+[
+"spell_power",
+"You gain 5 additional Temporary Hit Points for each spell slot level above 1"
+],
+[
+"block_armor",
+"Temporary Hit Points"
+]
+],
+"761314": [
+[
+"scope_multi",
+"Choose up to five falling creatures within range"
+],
+[
+"protection",
+"the creature takes no damage from the fall"
+]
+],
+"761340": [
+[
+"concentration",
+"Concentration."
+],
+[
+"summon",
+"You summon a giant centipede, spider, or wasp"
+],
+[
+"self_destruct",
+"The creature disappears when it drops to 0 Hit Points or when the spell ends"
+],
+[
+"autonomous_units",
+"If you don't issue any, it takes the Dodge action"
+],
+[
+"spell_power",
+"Use the spell slot's level for the spell's level in the stat block"
+],
+[
+"modal_choice",
+"chosen when you cast the spell"
+],
+[
+"multi_attack",
+"The insect makes a number of attacks equal to half this spell's level"
+],
+[
+"damage",
+"1d6 + 3 plus the spell's level Piercing damage"
+],
+[
+"ranged",
+"Ranged Attack Roll"
+],
+[
+"immobilize",
+"the target's Speed is reduced to 0"
+],
+[
+"saving_throws",
+"Constitution Saving Throw: Your spell save DC"
+]
+],
+"761347": [
+[
+"heal",
+"magically remove one of the following effects from it"
+],
+[
+"modal_choice",
+"one of the following effects"
+],
+[
+"rewind",
+"Any reduction to one of the target's ability scores"
+]
+],
+"761357": [
+[
+"heal",
+"restoring 70 Hit Points"
+],
+[
+"spell_power",
+"The healing increases by 10 for each spell slot level above 6"
+]
+],
+"761362": [
+[
+"concentration",
+"Concentration."
+],
+[
+"immunity",
+"the creature is immune to the Frightened condition"
+],
+[
+"turn_start",
+"at the start of each of its turns"
+],
+[
+"scope_multi",
+"You can target one additional creature for each spell slot level above 1"
+],
+[
+"block_armor",
+"gains Temporary Hit Points"
+]
+],
+"761374": [
+[
+"saving_throws",
+"The target must make a Wisdom saving throw"
+],
+[
+"immobilize",
+"The target has the Restrained condition and can't be moved by any means"
+],
+[
+"disable",
+"The target has the Unconscious condition and can't be awoken"
+],
+[
+"removal",
+"The target is trapped in a demiplane"
+],
+[
+"modal_choice",
+"one of the following effects of your choice"
+],
+[
+"immunity",
+"it is immune to this spell for the next 24 hours"
+]
+],
+"761379": [
+[
+"concentration",
+"Concentration."
+],
+[
+"saving_throws",
+"must make a Wisdom saving throw"
+],
+[
+"advantage",
+"other creatures have Advantage on attack rolls against it"
+],
+[
+"immobilize",
+"must spend all its movement to dance in place"
+],
+[
+"temporary_effect",
+"until the end of its next turn"
+]
+],
+"761394": [
+[
+"area_templates",
+"10-foot-radius, 20-foot-tall Cylinder"
+],
+[
+"immobilize",
+"The creature can't willingly enter the Cylinder by nonmagical means"
+],
+[
+"advantage",
+"The creature has Disadvantage on attack rolls against targets within the Cylinder"
+],
+[
+"immunity",
+"can't be possessed by or gain the Charmed or Frightened condition"
+],
+[
+"saving_throws",
+"succeed on a Charisma saving throw"
+],
+[
+"spell_power",
+"The duration increases by 1 hour for each spell slot level above 3"
+],
+[
+"tribal",
+"Celestials, Elementals, Fey, Fiends, or Undead"
+],
+[
+"flexibility",
+"you can cause its magic to operate in the reverse direction"
+]
+],
+"761395": [
+[
+"steal",
+"attempting to possess a Humanoid's body"
+],
+[
+"saving_throws",
+"The target makes a Charisma saving throw"
+],
+[
+"disable",
+"it can't move and it is Incapacitated"
+],
+[
+"immunity",
+"creatures warded by a Protection from Evil and Good or Magic Circle spell can't be possessed"
+],
+[
+"immobilize",
+"You can't move or take Reactions"
+]
+],
+"761397": [
+[
+"trap_secret",
+"a message that is uttered when a trigger condition is met"
+],
+[
+"repeat_trigger",
+"remain and repeat its message whenever the trigger occurs"
+],
+[
+"delayed",
+"when a trigger condition is met"
+]
+],
+"761406": [
+[
+"stealth",
+"Nothing of your presence remains visible or otherwise detectable by nonmagical senses"
+],
+[
+"immobilize",
+"You otherwise can't move"
+],
+[
+"friendly_fire",
+"deals 6d6 Force damage to you"
+],
+[
+"advantage",
+"made with Disadvantage"
+]
+],
+"761414": [
+[
+"random_effect",
+"roll a d6 for each of your remaining duplicates"
+],
+[
+"shield",
+"one of the duplicates is hit instead of you"
+]
+],
+"761438": [
+[
+"saving_throws",
+"must succeed on a Constitution saving throw"
+],
+[
+"damage",
+"12d6 Acid damage"
+],
+[
+"immobilize",
+"the target has the Restrained condition"
+],
+[
+"disable",
+"it has the Petrified condition"
+],
+[
+"area_templates",
+"up to 90 feet long, 30 feet high, and 1 inch thick"
+],
+[
+"protection",
+"can pass through and be near the wall without harm"
+],
+[
+"damage_types",
+"Acid damage"
+]
+],
+"761473": [
+[
+"concentration",
+"Concentration."
+],
+[
+"stat_gain",
+"a +2 bonus to AC for the duration"
+]
+],
+"761500": [
+[
+"aoe_damage",
+"Each creature in the Sphere makes a Constitution saving throw"
+],
+[
+"area_templates",
+"60-foot-radius Sphere"
+],
+[
+"damage",
+"takes 12d6 Radiant damage"
+],
+[
+"disable",
+"has the Blinded condition for 1 minute"
+],
+[
+"saving_throws",
+"Constitution saving throw"
+]
+],
+"761502": [
+[
+"concentration",
+"Concentration."
+],
+[
+"forced_movement",
+"you move it up to 30 feet in any direction"
+],
+[
+"immobilize",
+"the creature has the Restrained condition"
+],
+[
+"saving_throws",
+"The target must succeed on a Strength saving throw"
+],
+[
+"target_choice",
+"you can exert your will on one creature or object that you can see within range"
+],
+[
+"temporary_effect",
+"Until the end of your next turn"
+]
+],
+"761512": [
+[
+"movement",
+"move from inside it to inside another tree of the same kind within 500 feet"
+],
+[
+"concentration",
+"Concentration."
+],
+[
+"information",
+"You instantly know the location of all other trees"
+]
+],
+"761520": [
+[
+"saving_throws",
+"must succeed on a Wisdom saving throw"
+],
+[
+"damage",
+"take 1d6 Psychic damage"
+],
+[
+"temporary_effect",
+"before the end of its next turn"
+],
+[
+"damage_types",
+"Psychic damage"
+],
+[
+"advantage",
+"Disadvantage on the next attack roll it makes"
+]
+],
+"761522": [
+[
+"concentration",
+"Concentration."
+],
+[
+"aoe_damage",
+"each creature in its area makes a Dexterity saving throw"
+],
+[
+"damage",
+"taking 5d8 Fire damage on a failed save"
+],
+[
+"area_templates",
+"up to 60 feet long, 20 feet high, and 1 foot thick"
+],
+[
+"damage_over_time",
+"each creature that ends its turn within 10 feet of that side or inside the wall"
+],
+[
+"spell_power",
+"The damage increases by 1d8 for each spell slot level above 4"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"turn_end",
+"ends its turn within 10 feet of that side"
+]
+],
+"761523": [
+[
+"concentration",
+"Concentration."
+],
+[
+"immunity",
+"It is immune to all damage"
+],
+[
+"forced_movement",
+"the creature is pushed to one side of the wall"
+],
+[
+"stealth",
+"An Invisible wall of force"
+],
+[
+"area_templates",
+"hemispherical dome or a globe with a radius of up to 10 feet"
+]
+],
+"761526": [
+[
+"concentration",
+"Concentration."
+],
+[
+"aoe_damage",
+"each creature in its area makes a Dexterity saving throw"
+],
+[
+"damage",
+"taking 7d8 Piercing damage on a failed save"
+],
+[
+"terrain",
+"it must spend 4 feet of movement"
+],
+[
+"spell_power",
+"Both types of damage increase by 1d8 for each spell slot level above 6"
+],
+[
+"saving_throws",
+"Dexterity saving throw"
+],
+[
+"area_templates",
+"up to 60 feet long, 10 feet high"
+]
+],
+"761533": [
+[
+"concentration",
+"Concentration."
+],
+[
+"aoe_damage",
+"each creature in its area makes a Strength saving throw"
+],
+[
+"damage",
+"taking 4d8 Bludgeoning damage on a failed save"
+],
+[
+"protection",
+"deflected upward and miss automatically"
+],
+[
+"area_templates",
+"50 feet long, 15 feet high, and 1 foot thick"
+],
+[
+"saving_throws",
+"Strength saving throw"
+]
+],
+"761541": [
+[
+"immunity",
+"you can't be targeted by Divination spells"
+],
+[
+"stealth",
+"or perceived through magical scrying sensors"
+],
+[
+"passive",
+"While wearing this amulet"
+],
+[
+"items_consumables",
+"Wondrous Item"
+]
+],
+"761549": [
+[
+"stat_gain",
+"+2 bonus to Armor Class against ranged attack rolls"
+],
+[
+"bodyguard",
+"you can take a Reaction to become the target of the attack instead"
+],
+[
+"reactions",
+"you can take a Reaction"
+],
+[
+"items_consumables",
+"Armor (Shield)"
+]
+],
+"761557": [
+[
+"stat_gain",
+"+1 bonus to attack rolls and damage rolls"
+],
+[
+"forced_attack",
+"go berserk"
+],
+[
+"saving_throws",
+"succeed on a DC 15 Wisdom saving throw"
+],
+[
+"random_effect",
+"choose one at random"
+],
+[
+"items_consumables",
+"Weapon"
+],
+[
+"variable_stats",
+"increases by 1 for each level you have attained"
+],
+[
+"advantage",
+"Disadvantage on attack rolls with weapons other than this one"
+]
+],
+"761559": [
+[
+"passive",
+"While you wear these boots"
+],
+[
+"items_consumables",
+"Wondrous Item"
+],
+[
+"movement",
+"you can cast Levitate on yourself"
+]
+],
+"761564": [
+[
+"stat_gain",
+"a +2 bonus to damage rolls made with such weapons"
+],
+[
+"passive",
+"While wearing these bracers"
+],
+[
+"items_consumables",
+"Wondrous Item"
+]
+],
+"761567": [
+[
+"damage_types",
+"Resistance to Force damage"
+],
+[
+"immunity",
+"Immunity to damage from the Magic Missile spell"
+],
+[
+"passive",
+"While wearing this brooch"
+]
+],
+"761587": [
+[
+"stat_gain",
+"+1 bonus to attack rolls and damage rolls"
+],
+[
+"damage",
+"take 2d10 Poison damage"
+],
+[
+"cooldowns",
+"can't be used this way again until the next dawn"
+],
+[
+"saving_throws",
+"succeed on a DC 15 Constitution saving throw"
+],
+[
+"items_consumables",
+"Weapon (Dagger)"
+],
+[
+"activated",
+"You can take a Bonus Action"
+],
+[
+"debuff",
+"have the Poisoned condition for 1 minute"
+]
+]
+}

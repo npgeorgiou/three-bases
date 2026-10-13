@@ -1,0 +1,150 @@
+760072 | Life Crystal | +20% max HP; -1 speed
+   A: [["stat_gain", "+20% max HP"], ["stat_loss", "-1 speed"]]
+   B: [["passive", "+20% max HP"], ["stat_gain", "+20% max HP"], ["stat_loss", "-1 speed"]]
+760079 | Bull's Eye Bandana | +0.08 accuracy; +0.02 crit; -0.04 dodge. Class: arbalest
+   A: [["stat_gain", "+0.08 accuracy"], ["stat_gain", "+0.02 crit"], ["stat_loss", "-0.04 dodge"], ["tribal", "Class: arbalest"]]
+   B: [["passive", "+0.08 accuracy"], ["stat_gain", "+0.08 accuracy"], ["stat_loss", "-0.04 dodge"], ["tribal", "Class: arbalest"]]
+760084 | Book of Sanity | -20% stress dmg received percent
+   A: [["stress_morale", "-20% stress dmg received percent"]]
+   B: [["passive", "-20% stress dmg received percent"], ["stress_morale", "stress dmg received percent"]]
+760094 | Haste Chalice | +8 speed in the first round; +1 speed not in the first round; -25% stun chance. Class: vestal
+   A: [["stat_gain", "+8 speed in the first round"], ["turn_number", "in the first round"], ["stat_loss", "-25% stun chance"], ["tribal", "Class: vestal"]]
+   B: [["passive", "+8 speed in the first round"], ["speed", "+8 speed"], ["turn_number", "in the first round"], ["disable", "stun chance"], ["tribal", "Class: vestal"]]
+760107 | Longevity Eyepatch | +15% max HP; -1 speed. Class: man_at_arms
+   A: [["stat_gain", "+15% max HP"], ["stat_loss", "-1 speed"], ["tribal", "Class: man_at_arms"]]
+   B: [["passive", "+15% max HP"], ["stat_gain", "+15% max HP"], ["stat_loss", "-1 speed"], ["tribal", "Class: man_at_arms"]]
+760108 | Cursed Incense | +40% debuff chance; +20% move chance; -5% max HP. Class: occultist
+   A: [["stat_gain", "+40% debuff chance"], ["stat_loss", "-5% max HP"], ["tribal", "Class: occultist"]]
+   B: [["passive", "+40% debuff chance"], ["debuff", "debuff chance"], ["stat_loss", "-5% max HP"], ["tribal", "Class: occultist"]]
+760109 | Seer Stone | +20% scouting chance; -1 speed
+   A: [["stat_gain", "+20% scouting chance"], ["stat_loss", "-1 speed"]]
+   B: [["passive", "+20% scouting chance"], ["information", "scouting chance"], ["stat_loss", "-1 speed"]]
+760121 | Camper's Helmet | +20% stress heal received percent while camping; +10% scouting chance. Class: bounty_hunter
+   A: [["rest_phase", "while camping"], ["stat_gain", "+10% scouting chance"], ["tribal", "Class: bounty_hunter"]]
+   B: [["passive", "+20% stress heal received percent while camping"], ["rest_phase", "while camping"], ["information", "scouting chance"], ["tribal", "Class: bounty_hunter"]]
+760122 | Tenacity Ring | +10% death_blow resistance; +0.05 dodge; -0.01 crit
+   A: [["stat_gain", "+10% death_blow resistance"], ["stat_gain", "+0.05 dodge"], ["stat_loss", "-0.01 crit"]]
+   B: [["passive", "+10% death_blow resistance"], ["cheat_death", "death_blow resistance"], ["stat_gain", "+0.05 dodge"], ["stat_loss", "-0.01 crit"]]
+760123 | Medic's Greaves | +33% hp heal percent. Class: arbalest
+   A: [["stat_gain", "+33% hp heal percent"], ["tribal", "Class: arbalest"]]
+   B: [["passive", "+33% hp heal percent."], ["heal", "+33% hp heal percent"], ["tribal", "Class: arbalest"]]
+760130 | Swordsman's Crest | +15% damage with melee skills; +15% damage with melee skills; -10% hp heal percent. Class: crusader
+   A: [["stat_gain", "+15% damage with melee skills"], ["stat_loss", "-10% hp heal percent"], ["tribal", "Class: crusader"]]
+   B: [["passive", "+15% damage with melee skills"], ["stat_gain", "+15% damage"], ["stat_loss", "-10% hp heal percent"], ["tribal", "Class: crusader"]]
+760133 | Slippery Boots | +0.04 dodge; -20% move resistance
+   A: [["stat_gain", "+0.04 dodge"], ["stat_loss", "-20% move resistance"]]
+   B: [["passive", "+0.04 dodge"], ["stat_gain", "+0.04 dodge"], ["stat_loss", "-20% move resistance"]]
+760134 | Wounding Helmet | +20% damage with melee skills; +20% damage with melee skills; -25% move chance. Class: bounty_hunter
+   A: [["stat_gain", "+20% damage with melee skills"], ["stat_loss", "-25% move chance"], ["tribal", "Class: bounty_hunter"]]
+   B: [["passive", "+20% damage with melee skills"], ["stat_gain", "+20% damage"], ["tribal", "Class: bounty_hunter"]]
+760141 | Deteriorating Bracer | +0.1 dodge while HP above 0.75; -0.06 dodge while HP below 0.5
+   A: [["stat_gain", "+0.1 dodge"], ["condition_life", "while HP above 0.75"], ["stat_loss", "-0.06 dodge"], ["condition_life", "while HP below 0.5"]]
+   B: [["passive", "+0.1 dodge while HP above 0.75"], ["stat_gain", "+0.1 dodge"], ["condition_life", "while HP above 0.75"], ["stat_loss", "-0.06 dodge"]]
+760142 | Flashfire Gunpowder | +10% damage with ranged skills; +10% damage with ranged skills; -20% stun resistance. Class: highwayman
+   A: [["stat_gain", "+10% damage with ranged skills"], ["ranged", "ranged skills"], ["stat_loss", "-20% stun resistance"], ["tribal", "Class: highwayman"]]
+   B: [["passive", "+10% damage with ranged skills"], ["stat_gain", "+10% damage"], ["stat_loss", "-20% stun resistance"], ["tribal", "Class: highwayman"]]
+760144 | Drifter's Buckle | +10% trap resistance; +0.04 dodge; -5% stress heal received percent. Class: highwayman
+   A: [["stat_gain", "+10% trap resistance"], ["stat_gain", "+0.04 dodge"], ["stat_loss", "-5% stress heal received percent"], ["tribal", "Class: highwayman"]]
+   B: [["passive", "+10% trap resistance"], ["saving_throws", "trap resistance"], ["stat_gain", "+0.04 dodge"], ["tribal", "Class: highwayman"]]
+760148 | Lucky Dice | +0.04 accuracy; +0.04 dodge. Class: jester
+   A: [["stat_gain", "+0.04 accuracy"], ["stat_gain", "+0.04 dodge"], ["tribal", "Class: jester"]]
+   B: [["passive", "+0.04 accuracy"], ["stat_gain", "+0.04 accuracy"], ["tribal", "Class: jester"]]
+760152 | Bloodied Fetish | +20% poison resistance; +20% bleed resistance; -20% disease resistance
+   A: [["stat_gain", "+20% poison resistance"], ["stat_loss", "-20% disease resistance"]]
+   B: [["passive", "+20% poison resistance"], ["saving_throws", "poison resistance"], ["stat_loss", "-20% disease resistance"]]
+760158 | Stalwart Buckle | +0.02 crit; +5% stress dmg received percent; -3% resolve check percent. Class: highwayman
+   A: [["stat_gain", "+0.02 crit"], ["stress_morale", "+5% stress dmg received percent"], ["stat_loss", "-3% resolve check percent"], ["tribal", "Class: highwayman"]]
+   B: [["passive", "+0.02 crit"], ["stat_gain", "+0.02 crit"], ["stress_morale", "stress dmg received percent"], ["stat_loss", "-3% resolve check percent"], ["tribal", "Class: highwayman"]]
+760160 | Evasion Incense | +0.08 dodge; -1 speed. Class: occultist
+   A: [["stat_gain", "+0.08 dodge"], ["stat_loss", "-1 speed"], ["tribal", "Class: occultist"]]
+   B: [["passive", "+0.08 dodge"], ["stat_gain", "+0.08 dodge"], ["stat_loss", "-1 speed"], ["tribal", "Class: occultist"]]
+760161 | Blood Charm | +30% bleed resistance
+   A: [["stat_gain", "+30% bleed resistance"]]
+   B: [["passive", "+30% bleed resistance"], ["saving_throws", "bleed resistance"]]
+760162 | Rotgut Censer | +0.08 accuracy; -5% max HP. Class: plague_doctor
+   A: [["stat_gain", "+0.08 accuracy"], ["stat_loss", "-5% max HP"], ["tribal", "Class: plague_doctor"]]
+   B: [["passive", "+0.08 accuracy"], ["stat_gain", "+0.08 accuracy"], ["stat_loss", "-5% max HP"], ["tribal", "Class: plague_doctor"]]
+760169 | Man Slayer's Ring | +25% damage vs man enemies; +25% damage vs man enemies; -0.02 dodge
+   A: [["stat_gain", "+25% damage vs man enemies"], ["tribal", "vs man enemies"], ["stat_loss", "-0.02 dodge"]]
+   B: [["passive", "+25% damage vs man enemies"], ["stat_gain", "+25% damage"], ["tribal", "vs man enemies"], ["stat_loss", "-0.02 dodge"]]
+760172 | Chirurgeons Charm | +15% hp heal percent
+   A: [["stat_gain", "+15% hp heal percent"]]
+   B: [["passive", "+15% hp heal percent"], ["heal", "+15% hp heal percent"]]
+760173 | Quickening Satchel | +2 speed; +20% move resistance. Class: grave_robber
+   A: [["stat_gain", "+2 speed"], ["stat_gain", "+20% move resistance"], ["tribal", "Class: grave_robber"]]
+   B: [["passive", "+2 speed"], ["speed", "+2 speed"], ["saving_throws", "move resistance"], ["tribal", "Class: grave_robber"]]
+760184 | Bleed Charm | +20% bleed resistance; -0.02 dodge
+   A: [["stat_gain", "+20% bleed resistance"], ["stat_loss", "-0.02 dodge"]]
+   B: [["passive", "+20% bleed resistance"], ["saving_throws", "bleed resistance"], ["stat_loss", "-0.02 dodge"]]
+760185 | Stun Stone | +20% stun chance; -0.02 dodge
+   A: [["stat_gain", "+20% stun chance"], ["stat_loss", "-0.02 dodge"]]
+   B: [["passive", "+20% stun chance"], ["disable", "stun chance"], ["stat_loss", "-0.02 dodge"]]
+760193 | Disease Charm | +20% disease resistance; -0.02 dodge
+   A: [["stat_gain", "+20% disease resistance"], ["stat_loss", "-0.02 dodge"]]
+   B: [["passive", "+20% disease resistance"], ["saving_throws", "disease resistance"], ["stat_loss", "-0.02 dodge"]]
+760194 | Lock of Patience | +15% resolve check percent. Class: abomination
+   A: [["stat_gain", "+15% resolve check percent"], ["tribal", "Class: abomination"]]
+   B: [["passive", "+15% resolve check percent."], ["saving_throws", "resolve check percent"], ["tribal", "Class: abomination"]]
+760195 | Padlock of Transference | +30% stun chance; +30% poison chance. Class: abomination
+   A: [["stat_gain", "+30% stun chance"], ["tribal", "Class: abomination"]]
+   B: [["passive", "+30% stun chance"], ["disable", "stun chance"], ["damage_over_time", "poison chance"], ["tribal", "Class: abomination"]]
+760197 | Lock of Fury | +10% damage; +10% damage; +3 speed; -10% max HP. Class: abomination
+   A: [["stat_gain", "+10% damage"], ["stat_gain", "+3 speed"], ["stat_loss", "-10% max HP"], ["tribal", "Class: abomination"]]
+   B: [["passive", "+10% damage"], ["stat_gain", "+10% damage"], ["speed", "+3 speed"], ["stat_loss", "-10% max HP"], ["tribal", "Class: abomination"]]
+760203 | Candle of Life | +50% hp heal percent. Class: antiquarian
+   A: [["stat_gain", "+50% hp heal percent"], ["tribal", "Class: antiquarian"]]
+   B: [["passive", "+50% hp heal percent."], ["heal", "+50% hp heal percent"], ["tribal", "Class: antiquarian"]]
+760206 | Medic's Boots | +33% hp heal percent. Class: musketeer
+   A: [["stat_gain", "+33% hp heal percent"], ["tribal", "Class: musketeer"]]
+   B: [["passive", "+33% hp heal percent."], ["heal", "+33% hp heal percent"], ["tribal", "Class: musketeer"]]
+760207 | Sturdy Boots | +30% move resistance; +30% move chance; -1 speed. Class: musketeer
+   A: [["stat_gain", "+30% move resistance"], ["stat_loss", "-1 speed"], ["tribal", "Class: musketeer"]]
+   B: [["passive", "+30% move resistance"], ["saving_throws", "move resistance"], ["stat_loss", "-1 speed"], ["tribal", "Class: musketeer"]]
+760215 | Talisman of the Flame | -1 stress dmg received percent with skill darkest_eye; +1 protection with skill darkest_eye
+   A: [["stress_morale", "-1 stress dmg received percent with skill darkest_eye"], ["stat_gain", "+1 protection with skill darkest_eye"]]
+   B: [["passive", "-1 stress dmg received percent with skill darkest_eye"], ["stress_morale", "stress dmg received percent"], ["damage_reduction", "+1 protection"]]
+760221 | Fuseman's Matchstick | +2 speed; +10% damage with ranged skills; +10% damage with ranged skills; +0.025 crit with ranged skills
+   A: [["stat_gain", "+2 speed"], ["stat_gain", "+10% damage with ranged skills"], ["ranged", "ranged skills"]]
+   B: [["passive", "+2 speed"], ["speed", "+2 speed"], ["stat_gain", "+10% damage"]]
+760222 | Prophet's Eye | +0.1 accuracy while in rank ; +2 speed while in rank ; -10% stress dmg received percent while in rank 
+   A: [["stat_gain", "+0.1 accuracy"], ["rank_positions", "while in rank"], ["stat_gain", "+2 speed"], ["stress_morale", "-10% stress dmg received percent"]]
+   B: [["passive", "+0.1 accuracy while in rank"], ["stat_gain", "+0.1 accuracy"], ["rank_positions", "while in rank"], ["speed", "+2 speed"], ["stress_morale", "stress dmg received percent"]]
+760229 | Stone Of Hearth | -15% stress dmg received percent; -13% hp heal percent
+   A: [["stress_morale", "-15% stress dmg received percent"], ["stat_loss", "-13% hp heal percent"]]
+   B: [["passive", "-15% stress dmg received percent"], ["stress_morale", "stress dmg received percent"], ["stat_loss", "-13% hp heal percent"]]
+760233 | Skullyfm | +10% damage; +10% damage; -10% stress dmg received percent; -13% hp heal received percent while in rank ; -13% hp heal percent while in rank 
+   A: [["stat_gain", "+10% damage"], ["stress_morale", "-10% stress dmg received percent"], ["stat_loss", "-13% hp heal received percent"], ["rank_positions", "while in rank"]]
+   B: [["passive", "+10% damage"], ["stat_gain", "+10% damage"], ["stress_morale", "stress dmg received percent"], ["stat_loss", "-13% hp heal received percent"], ["rank_positions", "while in rank"]]
+760241 | Tome Of The Dawn | +0.11 protection while light below 26; +23% hp heal percent while light below 26; -10% debuff resistance while in rank ; -8% resolve check percent while in rank ; -8% monsters surprise chance while in rank 
+   A: [["stat_gain", "+0.11 protection"], ["light_level", "while light below 26"], ["stat_gain", "+23% hp heal percent"], ["stat_loss", "-10% debuff resistance"], ["rank_positions", "while in rank"], ["stat_loss", "-8% resolve check percent"]]
+   B: [["passive", "+0.11 protection while light below 26"], ["damage_reduction", "+0.11 protection"], ["light_level", "while light below 26"], ["heal", "+23% hp heal percent"], ["stat_loss", "-10% debuff resistance"], ["rank_positions", "while in rank"], ["information", "surprise chance"]]
+760242 | The Spade Of Aces | +6% death_blow resistance; +0.05 crit at Death's Door; +17% hp heal received percent at Death's Door; -10% stun resistance in the first round; -10% debuff resistance while HP above 0.75; -8% resolve check percent while in rank 
+   A: [["stat_gain", "+6% death_blow resistance"], ["stat_gain", "+0.05 crit at Death's Door"], ["condition_life", "at Death's Door"], ["stat_loss", "-10% stun resistance in the first round"], ["turn_number", "in the first round"], ["stat_loss", "-10% debuff resistance while HP above 0.75"], ["rank_positions", "while in rank"]]
+   B: [["passive", "+6% death_blow resistance"], ["cheat_death", "death_blow resistance"], ["stat_gain", "+0.05 crit"], ["condition_life", "at Death's Door"], ["heal", "+17% hp heal received percent"], ["stat_loss", "-10% stun resistance"], ["turn_number", "in the first round"], ["rank_positions", "while in rank"]]
+760243 | Fools Bane | +0.04 crit; +0.05 accuracy; +10% damage; +10% damage; -0.06 protection; +50% starving damage percent; -10% bleed resistance
+   A: [["stat_gain", "+0.04 crit"], ["stat_gain", "+0.05 accuracy"], ["stat_gain", "+10% damage"], ["stat_loss", "-0.06 protection"], ["stat_gain", "+50% starving damage percent"], ["stat_loss", "-10% bleed resistance"]]
+   B: [["passive", "+0.04 crit"], ["stat_gain", "+0.04 crit"], ["stat_loss", "-0.06 protection"], ["upkeep", "starving damage percent"]]
+760253 | Aakeskiol | +4% resolve check percent; +3% death_blow resistance; +0.03 protection; -4 speed while in rank 
+   A: [["stat_gain", "+4% resolve check percent"], ["stat_gain", "+0.03 protection"], ["stat_loss", "-4 speed"], ["rank_positions", "while in rank"]]
+   B: [["passive", "+4% resolve check percent"], ["saving_throws", "resolve check percent"], ["cheat_death", "death_blow resistance"], ["damage_reduction", "+0.03 protection"], ["stat_loss", "-4 speed"], ["rank_positions", "while in rank"]]
+760256 | Keljores Lost Valor | +0.06 protection; +6% death_blow resistance; -13% stress dmg received percent while light below 26; -0.06 dodge while light above 75; -4 speed while HP below 0.25; +50% food consumption percent while light above 75
+   A: [["stat_gain", "+0.06 protection"], ["stat_gain", "+6% death_blow resistance"], ["stress_morale", "-13% stress dmg received percent"], ["light_level", "while light below 26"], ["stat_loss", "-0.06 dodge"], ["stat_loss", "-4 speed"], ["condition_life", "while HP below 0.25"], ["upkeep", "+50% food consumption percent"]]
+   B: [["passive", "+0.06 protection"], ["damage_reduction", "+0.06 protection"], ["cheat_death", "death_blow resistance"], ["stress_morale", "stress dmg received percent"], ["light_level", "while light below 26"], ["stat_loss", "-0.06 dodge"], ["condition_life", "while HP below 0.25"], ["upkeep", "food consumption percent"]]
+760264 | Ajs Growling Tome Of Madness | +10% damage; +10% damage; +13% hp heal received percent; -4 speed in the first round
+   A: [["stat_gain", "+10% damage"], ["stat_gain", "+13% hp heal received percent"], ["stat_loss", "-4 speed in the first round"], ["turn_number", "in the first round"]]
+   B: [["passive", "+10% damage"], ["stat_gain", "+10% damage"], ["heal", "+13% hp heal received percent"], ["stat_loss", "-4 speed"], ["turn_number", "in the first round"]]
+760265 | The Harbinger | +5% damage; +5% damage; +0.03 protection; +0.03 protection; +50% starving damage percent while camping
+   A: [["stat_gain", "+5% damage"], ["stat_gain", "+0.03 protection"], ["stat_gain", "+50% starving damage percent while camping"], ["rest_phase", "while camping"]]
+   B: [["passive", "+5% damage"], ["stat_gain", "+5% damage"], ["damage_reduction", "+0.03 protection"], ["upkeep", "starving damage percent"], ["rest_phase", "while camping"]]
+760268 | Philosophers Wisdom | +8% resolve check percent; +0.06 accuracy while in rank ; +10% stress dmg received percent
+   A: [["stat_gain", "+8% resolve check percent"], ["stat_gain", "+0.06 accuracy"], ["rank_positions", "while in rank"], ["stress_morale", "+10% stress dmg received percent"]]
+   B: [["passive", "+8% resolve check percent"], ["saving_throws", "resolve check percent"], ["stat_gain", "+0.06 accuracy"], ["rank_positions", "while in rank"], ["stress_morale", "stress dmg received percent"]]
+760269 | Scales Of Justice | +10% damage; +10% damage; +0.05 accuracy; +0.06 protection; -0.04 crit; -0.06 dodge; -4 speed
+   A: [["stat_gain", "+10% damage"], ["stat_gain", "+0.05 accuracy"], ["stat_gain", "+0.06 protection"], ["stat_loss", "-0.04 crit"], ["stat_loss", "-0.06 dodge"], ["stat_loss", "-4 speed"]]
+   B: [["passive", "+10% damage"], ["stat_gain", "+10% damage"], ["damage_reduction", "+0.06 protection"], ["stat_loss", "-0.04 crit"]]
+760272 | The Eidolons Will | -10% stress dmg received percent; +10% max HP; +0.06 protection; -13% hp heal received percent; -8% resolve check percent; -6% death_blow resistance
+   A: [["stress_morale", "-10% stress dmg received percent"], ["stat_gain", "+10% max HP"], ["stat_gain", "+0.06 protection"], ["stat_loss", "-13% hp heal received percent"], ["stat_loss", "-8% resolve check percent"], ["stat_loss", "-6% death_blow resistance"]]
+   B: [["passive", "-10% stress dmg received percent"], ["stress_morale", "stress dmg received percent"], ["stat_gain", "+10% max HP"], ["damage_reduction", "+0.06 protection"], ["stat_loss", "-13% hp heal received percent"]]
+760274 | Violets Pet | +3 speed; +0.04 crit with melee skills; +0.05 accuracy with melee skills; +50% starving damage percent; +50% food consumption percent
+   A: [["stat_gain", "+3 speed"], ["stat_gain", "+0.04 crit with melee skills"], ["stat_gain", "+50% starving damage percent"], ["upkeep", "+50% food consumption percent"]]
+   B: [["passive", "+3 speed"], ["speed", "+3 speed"], ["stat_gain", "+0.04 crit"], ["upkeep", "starving damage percent"]]

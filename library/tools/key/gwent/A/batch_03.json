@@ -1,0 +1,748 @@
+{
+"756198": [
+[
+"turn_start",
+"At the beginning of the round"
+],
+[
+"recycle",
+"move this card from the graveyard to the top of its owner's deck"
+],
+[
+"graveyard",
+"from the graveyard"
+],
+[
+"deck_position",
+"top of its owner's deck"
+]
+],
+"756617": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"distribute",
+"Split 3 damage randomly between all enemy units"
+],
+[
+"random_effect",
+"randomly"
+]
+],
+"757452": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"boost it by 1"
+],
+[
+"on_ally_play",
+"whenever an Elven Deadeye enters your side of the battlefield"
+],
+[
+"variety_payoff",
+"at least 4 unique Traps"
+]
+],
+"756509": [
+[
+"damage",
+"Damage a unit by 3"
+],
+[
+"on_kill",
+"Deathblow:"
+],
+[
+"aoe_damage",
+"Also damage adjacent units by 3"
+],
+[
+"adjacency",
+"adjacent units"
+]
+],
+"757278": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"untap",
+"reset the Order of all allied Mages"
+],
+[
+"delayed",
+"At the end of this turn"
+]
+],
+"757347": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"sacrifice",
+"Consume an allied unit"
+],
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn and play Arachas Nest"
+],
+[
+"death_trigger",
+"Deathwish:"
+],
+[
+"copy",
+"Spawn a base copy of the Consumed unit"
+]
+],
+"756517": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"sacrifice",
+"Destroy an adjacent allied unit"
+],
+[
+"adjacency",
+"adjacent allied unit"
+],
+[
+"damage",
+"damage an enemy unit by the destroyed unit's power"
+]
+],
+"756330": [
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn and play Woodland Spirit"
+],
+[
+"deckbuilding_effect",
+"adds 16 provisions to your deck's provisions limit"
+]
+],
+"757279": [
+[
+"activated",
+"Order (Ranged):"
+],
+[
+"delayed",
+"At the end of this turn"
+]
+],
+"756207": [
+[
+"permanent_growth",
+"Boost self by 1"
+],
+[
+"on_ally_play",
+"whenever you play a non-Neutral unit"
+],
+[
+"variety_payoff",
+"primary category is unique among all of your units"
+]
+],
+"795353": [],
+"756286": [
+[
+"activated",
+"Order:"
+],
+[
+"rewind",
+"Reset the power of a unit"
+],
+[
+"damage_over_time",
+"give it Bleeding equal to the amount of boost it lost"
+]
+],
+"756313": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"cooldowns",
+"Reduce the Cooldown of an allied unit by 1"
+],
+[
+"stat_gain",
+"Boost an allied unit by 1"
+],
+[
+"haste",
+"Give an allied unit Zeal"
+]
+],
+"756175": [
+[
+"adjacency",
+"between two Soldiers"
+]
+],
+"757078": [
+[
+"coin_economy",
+"Fee 2"
+],
+[
+"block_armor",
+"Gain 2 Armor"
+],
+[
+"self_destruct",
+"Destroy self"
+]
+],
+"756170": [
+[
+"donate",
+"played on the opposite side of the battlefield"
+]
+],
+"756723": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage an enemy unit by 1"
+]
+],
+"756659": [
+[
+"destroy",
+"Destroy the unit with the highest base power"
+],
+[
+"stat_condition",
+"highest base power"
+]
+],
+"756698": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"summon",
+"Summons the highest-provision cost unit from their deck"
+],
+[
+"symmetric_effect",
+"Each player Summons"
+],
+[
+"cost_condition",
+"highest-provision cost unit"
+]
+],
+"756369": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage an enemy unit by [5]"
+],
+[
+"count_payoff",
+"for each Construct you played this game"
+]
+],
+"757430": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Summon self from your deck to its row"
+]
+],
+"756525": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage self by 3"
+],
+[
+"heal",
+"Heal self"
+]
+],
+"756853": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost all allied Witch Hunters by 1"
+],
+[
+"coin_economy",
+"Tribute 3"
+],
+[
+"in_hand_buff",
+"in hand, deck and on the battlefield"
+]
+],
+"756742": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"cast_from_zone",
+"Play a special card from your deck"
+],
+[
+"activated",
+"Order:"
+],
+[
+"transform",
+"Transform a special card in your hand into a random unit"
+],
+[
+"random_effect",
+"random unit"
+]
+],
+"756284": [
+[
+"silence",
+"Lock a unit"
+],
+[
+"damage",
+"damage it by 3"
+]
+],
+"756489": [
+[
+"activated",
+"Order:"
+],
+[
+"ping",
+"Damage a unit by 1"
+],
+[
+"on_ally_play",
+"Whenever you play a Tactic"
+]
+],
+"756473": [
+[
+"on_play",
+"Deploy (Melee):"
+],
+[
+"deck_position",
+"on top of your opponent's deck"
+],
+[
+"disruption",
+"Spawn The Guardian on top of your opponent's deck"
+]
+],
+"756491": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"ping",
+"Damage an enemy unit by 1"
+],
+[
+"on_kill",
+"Deathblow:"
+],
+[
+"block_armor",
+"Gain 1 Armor"
+]
+],
+"795319": [],
+"756706": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order (Melee):"
+],
+[
+"banish",
+"Banish a card from your opponent's graveyard"
+],
+[
+"cooldowns",
+"Cooldown: 1"
+]
+],
+"757478": [
+[
+"on_play",
+"Deploy (Ranged):"
+],
+[
+"damage",
+"Damage self down to 1"
+],
+[
+"cast_from_zone",
+"play all copies of Freya's Blessing from your graveyard"
+],
+[
+"start_of_game",
+"At the start of the game"
+],
+[
+"stat_gain",
+"increase own base power"
+],
+[
+"condition_count",
+"for each Alchemy in your starting deck"
+]
+],
+"813649": [
+[
+"stat_gain",
+"Boost an allied unit by 4"
+]
+],
+"756751": [
+[
+"stat_gain",
+"boost a unit by 12"
+],
+[
+"delayed",
+"Once both players have passed, damage self by 12"
+]
+],
+"757082": [
+[
+"activated",
+"Order:"
+],
+[
+"summon",
+"Spawn and play Tempering"
+],
+[
+"in_hand_buff",
+"All Dwarves in your starting deck get 1 Armor"
+],
+[
+"deckbuilding_effect",
+"adds 18 provisions to your deck's provision limit"
+]
+],
+"813630": [
+[
+"summon",
+"Spawn an Operative on each enemy row"
+],
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"steal",
+"Seize all Spying Operatives"
+],
+[
+"turn_start",
+"At the start of the round"
+],
+[
+"transform",
+"evolve"
+]
+],
+"756807": [
+[
+"haste",
+"Formation."
+],
+[
+"activated",
+"Order:"
+],
+[
+"selection",
+"Look at 3 random cards from your deck"
+],
+[
+"random_effect",
+"3 random cards"
+],
+[
+"deck_position",
+"move 1 to the top of it"
+],
+[
+"cooldowns",
+"Cooldown: 2"
+]
+],
+"757167": [
+[
+"turn_end",
+"At the end of the round"
+],
+[
+"donate",
+"move self to your opponent's graveyard"
+],
+[
+"mill",
+"Banish the lowest-cost card from it"
+],
+[
+"graveyard",
+"while in the graveyard"
+],
+[
+"summon",
+"Summon self to a random enemy row"
+],
+[
+"random_effect",
+"random enemy row"
+]
+],
+"757121": [
+[
+"coin_economy",
+"Profit 3"
+],
+[
+"summon",
+"Spawn a Flaming Rose Footman on an allied row"
+]
+],
+"756379": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"return_to_hand",
+"Move an allied Trap back to your hand"
+],
+[
+"trap_secret",
+"Trap"
+]
+],
+"756189": [
+[
+"stat_condition",
+"highest unit on the battlefield"
+]
+],
+"756786": [
+[
+"donate",
+"Disloyal."
+],
+[
+"selection",
+"Look at 2 random gold cards from your deck"
+],
+[
+"random_effect",
+"2 random gold cards"
+]
+],
+"756941": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"stat_gain",
+"Boost an allied unit by 6"
+],
+[
+"activated",
+"Order:"
+],
+[
+"block_armor",
+"Give an allied unit 3 Armor"
+]
+],
+"756851": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage an enemy unit by 2"
+],
+[
+"graveyard",
+"in your graveyard"
+],
+[
+"coin_economy",
+"Fee 1"
+],
+[
+"damage_over_time",
+"Bleeding (1)"
+]
+],
+"757013": [
+[
+"on_play",
+"Deploy:"
+],
+[
+"damage",
+"Damage an enemy unit by the number of units you control"
+],
+[
+"condition_count",
+"the number of units you control"
+]
+],
+"756532": [
+[
+"on_play",
+"Deploy (Ranged):"
+],
+[
+"generate_cards",
+"Create and play a special card from any faction"
+]
+],
+"756677": [
+[
+"haste",
+"Zeal."
+],
+[
+"activated",
+"Order:"
+],
+[
+"repeat_trigger",
+"Trigger the end of turn abilities of 2 allied bronze Soldiers"
+]
+],
+"756367": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"permanent_growth",
+"boost self by 1"
+]
+],
+"756667": [
+[
+"damage",
+"Damage an enemy unit by 4"
+],
+[
+"forced_movement",
+"move it to the other row"
+]
+],
+"813687": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"death_trigger",
+"Deathwish:"
+],
+[
+"revive",
+"Summon the lowest-power bronze Deathwish unit from your graveyard"
+],
+[
+"stat_gain",
+"Boost all allied units on this row by 1"
+],
+[
+"row_effects",
+"Spawn Storm on the opposite row for 2 turns"
+],
+[
+"aoe_damage",
+"Damage the 2 lowest-power enemy units by 2"
+],
+[
+"copy",
+"Spawn a base copy of self in your hand"
+]
+],
+"757195": [
+[
+"damage",
+"Damage an enemy unit by 2"
+],
+[
+"summon",
+"Spawn 3 Witcher Students on the opposite row"
+],
+[
+"block_armor",
+"give them 1 Armor"
+]
+]
+}

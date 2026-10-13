@@ -1,0 +1,1102 @@
+[
+{
+"id": 743477,
+"name": "Ritual of Doom",
+"text": "Destroy a friendly minion. If you had 5 or more, summon a 5/5 Demon."
+},
+{
+"id": 747077,
+"name": "Colaque",
+"text": "Colossal +1 Immune while you control Colaque's Shell."
+},
+{
+"id": 799160,
+"name": "Windrunner's Bow (created)",
+"text": "After your hero attacks, summon three reinforcements."
+},
+{
+"id": 798629,
+"name": "Zarog's Crown",
+"text": "Discover a Legendary minion. Summon two copies of it."
+},
+{
+"id": 798224,
+"name": "Bad Omen (created)",
+"text": "In 2 turns, summon two 6/6 Demons with Taunt."
+},
+{
+"id": 742884,
+"name": "Storm Chaser",
+"text": "Battlecry: Draw a spell from your deck that costs (5) or more."
+},
+{
+"id": 744479,
+"name": "The Nameless One",
+"text": "Battlecry: Choose a minion. Become a 4/4 copy of it, then Silence it."
+},
+{
+"id": 743341,
+"name": "Grimestreet Informant",
+"text": "Battlecry: Discover a Hunter, Paladin, or Warrior card."
+},
+{
+"id": 746468,
+"name": "SI:7 Assassin",
+"text": "Costs (1) less for each SI:7 card you've played this game. Combo: Destroy an enemy minion."
+},
+{
+"id": 798196,
+"name": "Moonfire",
+"text": "Deal 2 damage."
+},
+{
+"id": 746089,
+"name": "Rotten Rodent",
+"text": "Battlecry: Reduce the Cost of all Deathrattle cards in your deck by (1)."
+},
+{
+"id": 746277,
+"name": "Argent Braggart",
+"text": "Battlecry: Set this minion's Attack and Health to the highest in the battlefield."
+},
+{
+"id": 747756,
+"name": "Imployee of the Month",
+"text": "Battlecry: Give a friendly minion Lifesteal."
+},
+{
+"id": 745506,
+"name": "Release the Beasts",
+"text": "Give minions in your hand +1/+1. Legendary minions get an extra +2/+1."
+},
+{
+"id": 798481,
+"name": "Murlocs Escaping!",
+"text": "Summon two random Murlocs."
+},
+{
+"id": 744106,
+"name": "Master's Call",
+"text": "Discover a minion from your deck. If all 3 are Beasts, draw them all instead."
+},
+{
+"id": 743137,
+"name": "Supreme Abyssal",
+"text": "Can't attack heroes."
+},
+{
+"id": 746406,
+"name": "Auctioneer Jaxon",
+"text": "Whenever you Trade, Discover a card from your deck to draw instead."
+},
+{
+"id": 742594,
+"name": "Magister Dawngrasp",
+"text": "Battlecry: Recast a spell from each spell school you've cast this game."
+},
+{
+"id": 799662,
+"name": "Empower Zin-Azshari",
+"text": "The minions summoned by Zin-Azshari will have doubled stats. Destroy The Well of Eternity."
+},
+{
+"id": 799037,
+"name": "Alarm the Forest",
+"text": "Summon four 2/2 Treant Totems with Rush. Overload: (2)"
+},
+{
+"id": 745592,
+"name": "Moragg",
+"text": "Prepare. Deathrattle: Summon a random Demon from your deck. Give it \"Deathrattle: Summon Moragg.\""
+},
+{
+"id": 745951,
+"name": "Xaril, Poisoned Mind",
+"text": "Battlecry and Deathrattle: Add a random Toxin card to your hand."
+},
+{
+"id": 747393,
+"name": "Embalming Ritual",
+"text": "Give a minion Reborn."
+},
+{
+"id": 798212,
+"name": "Offensive Formation",
+"text": "Deal damage equal to the Starship's Attack randomly split between all enemies."
+},
+{
+"id": 798264,
+"name": "Blunderbuss",
+"text": "Also damages the minions next to whomever your hero attacks."
+},
+{
+"id": 742376,
+"name": "Reborn",
+"text": "The first time it dies, returns with 1 Health."
+},
+{
+"id": 797364,
+"name": "Haywire",
+"text": "Casts When Drawn You take 4 damage."
+},
+{
+"id": 746054,
+"name": "Smokescreen",
+"text": "Draw 5 cards. Trigger any Deathrattles drawn."
+},
+{
+"id": 744572,
+"name": "Gyrocopter",
+"text": "Rush Windfury"
+},
+{
+"id": 797761,
+"name": "Grueling Trial (created)",
+"text": "The trial finishes at the start of your next turn."
+},
+{
+"id": 798623,
+"name": "Unstable Evolution (created)",
+"text": "Transform a friendly minion into one that costs (1) more. Repeatable this turn."
+},
+{
+"id": 744264,
+"name": "Azerite Elemental",
+"text": "At the start of your turn, gain Spell Damage +2."
+},
+{
+"id": 747259,
+"name": "Time-Lost Protodrake",
+"text": "Taunt When you draw this, add a random Dragon to your hand."
+},
+{
+"id": 800163,
+"name": "Brann's Saddle",
+"text": "Give a friendly Beast +3/+3 and \"Deathrattle: Give Brann's Saddle to another friendly Beast.\""
+},
+{
+"id": 743210,
+"name": "Selfless Protector",
+"text": "Taunt Takes one extra damage from all sources."
+},
+{
+"id": 799744,
+"name": "Titanographer Osk (created)",
+"text": "Battlecry: Send all other minions into the Twisting Nether."
+},
+{
+"id": 744992,
+"name": "Questing Adventurer",
+"text": "Whenever you play a card, gain +1/+1."
+},
+{
+"id": 742612,
+"name": "Ice Trap",
+"text": "Secret: When your opponent casts a spell, return it to their hand instead. It costs (1) more."
+},
+{
+"id": 742544,
+"name": "Frost Giant",
+"text": "Costs (1) less for each time you used your Hero Power this game."
+},
+{
+"id": 742570,
+"name": "Gnome Private",
+"text": "Honorable Kill: Gain +2 Attack."
+},
+{
+"id": 747740,
+"name": "Ivory Rook",
+"text": "Battlecry: Discover a Taunt minion. Gain Armor equal to its Cost."
+},
+{
+"id": 746847,
+"name": "Careless Crafter",
+"text": "Deathrattle: Get two 0-Cost Bandages that restore 3 Health."
+},
+{
+"id": 742434,
+"name": "Arcane Blast",
+"text": "Deal 2 damage to a minion. This spell gets double bonus from Spell Damage."
+},
+{
+"id": 800104,
+"name": "Disks of Legend",
+"text": "Passive After you play a Legendary minion, summon a copy of it."
+},
+{
+"id": 799542,
+"name": "Superior Efficiency",
+"text": "Caye reduces the cost of your Hero Power by (1)."
+},
+{
+"id": 745519,
+"name": "Tower of Ghouls",
+"text": "After this minion takes damage, summon two 1/1 Frail Ghouls."
+},
+{
+"id": 797245,
+"name": "Armor Scrap",
+"text": "Give a minion +2 Health."
+},
+{
+"id": 744162,
+"name": "Savage Roar",
+"text": "Give your characters +2 Attack this turn."
+},
+{
+"id": 800439,
+"name": "Cosmic Anomaly",
+"text": "Spell Damage +2"
+},
+{
+"id": 745861,
+"name": "Buy One, Get One Freeze",
+"text": "Freeze a minion. Summon a Frozen copy of it."
+},
+{
+"id": 797807,
+"name": "Blue Aspect Essence",
+"text": "Draw 3 spells. Cast every adjoining Aspect Essence."
+},
+{
+"id": 742599,
+"name": "Lightforged Cariel",
+"text": "Battlecry: Deal 2 damage to all enemies. Equip a 2/5 Immovable Object."
+},
+{
+"id": 746733,
+"name": "Ready the Fleet",
+"text": "Give +1/+2 to a friendly minion and your other minions that share a type with it."
+},
+{
+"id": 744205,
+"name": "Hagatha's Scheme",
+"text": "Deal $ damage to all minions. (Upgrades each turn!)"
+},
+{
+"id": 745993,
+"name": "Southsea Squidface",
+"text": "Deathrattle: Give your weapon +2 Attack."
+},
+{
+"id": 746471,
+"name": "Sow the Soil",
+"text": "Choose One - Give your minions +1 Attack; or Summon a 2/2 Treant."
+},
+{
+"id": 746943,
+"name": "Endgame",
+"text": "Resurrect your last Demon that died."
+},
+{
+"id": 744299,
+"name": "Call to Adventure",
+"text": "Draw the lowest Cost minion from your deck. Give it +2/+2."
+},
+{
+"id": 745227,
+"name": "Spontaneous Combustion",
+"text": "Deal 4 damage to a random enemy. If you played an Elemental last turn, choose the target."
+},
+{
+"id": 744281,
+"name": "Power of Creation",
+"text": "Discover a 6-Cost minion. Summon two copies of it."
+},
+{
+"id": 747965,
+"name": "Curse of Flesh",
+"text": "Enemy minions cost Health instead of Mana next turn."
+},
+{
+"id": 744181,
+"name": "Razorfen Hunter",
+"text": "Battlecry: Summon a 1/1 Boar."
+},
+{
+"id": 746174,
+"name": "Scourge Tamer",
+"text": "Battlecry: Craft a custom Zombeast."
+},
+{
+"id": 800264,
+"name": "Carress, Cabaret Star (created)",
+"text": "Battlecry: Gain +2/+2 and Taunt. Freeze three random enemy minions."
+},
+{
+"id": 744765,
+"name": "Divination",
+"text": "Destroy a friendly Wisp to draw 3 cards."
+},
+{
+"id": 799971,
+"name": "Control the Makers",
+"text": "Both heroes have +1 Attack on their turns."
+},
+{
+"id": 742538,
+"name": "Master Jouster",
+"text": "Battlecry: Reveal a minion in each deck. If yours costs more, gain Taunt and Divine Shield."
+},
+{
+"id": 745812,
+"name": "Dragoncaller Alanna",
+"text": "Battlecry: Summon a 5/5 Dragon for each spell you cast this game that costs (5) or more."
+},
+{
+"id": 799057,
+"name": "Burgle (created)",
+"text": "Add 2 random cards to your hand (from your opponent's class)."
+},
+{
+"id": 799883,
+"name": "Naga Tonguelasher",
+"text": "Battlecry: Overload 3 of your opponent's Mana Crystals."
+},
+{
+"id": 746972,
+"name": "Griftah",
+"text": "Battlecry: Discover two cards. Give one to your opponent at random."
+},
+{
+"id": 799932,
+"name": "Behemoth's Lure (created)",
+"text": "At the end of your turn, force a random enemy minion to attack the Blackwater Behemoth."
+},
+{
+"id": 747680,
+"name": "Griftah, Trusted Vendor",
+"text": "Battlecry: Discover an amazing Amulet to give to both players. (The enemy's is a phony version!)"
+},
+{
+"id": 743192,
+"name": "Ragnaros, the Great Fire",
+"text": "Colossal +2 At the end of your turn, trigger your minions' Deathrattles."
+},
+{
+"id": 743907,
+"name": "Undercity Huckster",
+"text": "Deathrattle: Get a random card (from your opponent's class)."
+},
+{
+"id": 747573,
+"name": "Sensory Deprivation",
+"text": "Summon a copy of an enemy minion. If you have 20 or less Health, destroy the original."
+},
+{
+"id": 800779,
+"name": "Stegodon",
+"text": "Taunt"
+},
+{
+"id": 797781,
+"name": "Schism (created)",
+"text": "Shattered Summon a copy of a friendly minion."
+},
+{
+"id": 799283,
+"name": "Ensnare Soul",
+"text": "Deal 3 damage to your hero. Return two friendly minions that died this game to your hand."
+},
+{
+"id": 744820,
+"name": "Enduring Roach",
+"text": "After you use your Hero Power, refresh 2 Mana Crystals."
+},
+{
+"id": 743366,
+"name": "Kabal Chemist",
+"text": "Battlecry: Add a random Potion to your hand."
+},
+{
+"id": 798004,
+"name": "Deepholm Geode",
+"text": "At the end of your turn, deal 2 damage to all enemies."
+},
+{
+"id": 745119,
+"name": "Ashleaf Pixie",
+"text": "Battlecry: If you're holding a spell that costs (5) or more, gain Divine Shield and Lifesteal."
+},
+{
+"id": 799682,
+"name": "Broll, Blood Fighter",
+"text": "Taunt Deathrattle: Summon a Blood Fighter from your hand. Give it +5/+5 and Taunt."
+},
+{
+"id": 800499,
+"name": "Flametongue Totem",
+"text": "Adjacent minions have +2 Attack."
+},
+{
+"id": 797531,
+"name": "Gelbin's Coil",
+"text": "After you play a spell, deal 1 damage to a random enemy minion."
+},
+{
+"id": 746513,
+"name": "Polymorph: Jellyfish",
+"text": "Transform a minion into a 4/1 Jellyfish with Spell Damage +2."
+},
+{
+"id": 800079,
+"name": "Inferno!",
+"text": "Summon two 6/6 Infernals from the Twisting Nether."
+},
+{
+"id": 800413,
+"name": "Clockwork Knight",
+"text": "Battlecry: Give a friendly Mech +1/+1."
+},
+{
+"id": 746570,
+"name": "Devious Coyote",
+"text": "Stealth. Costs (1) less for each time the enemy hero took damage this turn."
+},
+{
+"id": 798967,
+"name": "Elfgate of Silvermoon",
+"text": "Sylvanas is Immune. Deathrattle: Summon the Inner Gate of Quel'Thalas._"
+},
+{
+"id": 799831,
+"name": "Wardruid Loti (created)",
+"text": "Spell Damage +1"
+},
+{
+"id": 747912,
+"name": "Splish-Splash Whelp",
+"text": "Battlecry: If you're holding a Dragon, gain an empty Mana Crystal."
+},
+{
+"id": 743941,
+"name": "Cathedral of Atonement",
+"text": "Give a minion +2/+1 and draw a card."
+},
+{
+"id": 744877,
+"name": "Cowbell Soloist",
+"text": "Battlecry: If you control no other minions, deal 2 damage."
+},
+{
+"id": 744719,
+"name": "Tyrande",
+"text": "Battlecry: The next 3 spells you play cast twice."
+},
+{
+"id": 747230,
+"name": "Wing Welding",
+"text": "Discard your highest Cost card. Deal damage equal to its Cost to all minions."
+},
+{
+"id": 800503,
+"name": "Explosive Sheep",
+"text": "Deathrattle: Deal 2 damage to all minions."
+},
+{
+"id": 799558,
+"name": "True Heroism",
+"text": "Give Halus Deathrattle: Restore 15 Health to random friendly characters."
+},
+{
+"id": 746501,
+"name": "Ancient Krakenbane",
+"text": "Battlecry: If you've cast three spells while holding this, deal 5 damage. ( left!) (Ready!)"
+},
+{
+"id": 799150,
+"name": "Sam the Wise",
+"text": "At the start of your turn, restore 3 Health to himself. Deathrattle: Gift the Metal Brew and advance fight."
+},
+{
+"id": 800125,
+"name": "Explorer Retraining",
+"text": "Choose a new starting Hero Power."
+},
+{
+"id": 746550,
+"name": "Entropic Continuity",
+"text": "Give your minions +1/+1. Shuffle 2 Shreds of Time into your deck."
+},
+{
+"id": 745624,
+"name": "Remixed Rhapsody",
+"text": "Deal 3 damage to all minions. Gains an extra effect in your hand that changes each turn."
+},
+{
+"id": 747242,
+"name": "Flame Revenant",
+"text": "After you summon an Elemental, give it +1/+1."
+},
+{
+"id": 799218,
+"name": "Spirit of Air",
+"text": "Elusive Deathrattle: Advance fight and restore 15 Health to Thrall."
+},
+{
+"id": 742645,
+"name": "Wildpaw Gnoll",
+"text": "Rush Costs (1) less for each non-Rogue Class card added to your hand this game."
+},
+{
+"id": 746344,
+"name": "Coerce",
+"text": "Destroy a damaged minion. Combo: Destroy any minion."
+},
+{
+"id": 744378,
+"name": "Fool's Gold",
+"text": "Get a random Golden Pirate and Elemental from other classes."
+},
+{
+"id": 798014,
+"name": "The Egg of Khelos (created)",
+"text": "Deathrattle: Summon a very cracked Egg. (Break 3 times to hatch a 20/20 Beast with Taunt!)"
+},
+{
+"id": 798572,
+"name": "The Steel Sentinel",
+"text": "This minion can only take 1 damage at a time."
+},
+{
+"id": 745713,
+"name": "Ancient Shade",
+"text": "Battlecry: Shuffle an 'Ancient Curse' into your deck that deals 7 damage to you when drawn."
+},
+{
+"id": 745797,
+"name": "Val'anyr",
+"text": "Deathrattle: Give a minion in your hand +4/+2. When it dies, reequip this."
+},
+{
+"id": 747865,
+"name": "Oasis Outlaws",
+"text": "Discover a Naga. If you've played a Naga while holding this, reduce its Cost by (1)."
+},
+{
+"id": 743800,
+"name": "Necrotic Geist",
+"text": "Whenever one of your other minions dies, summon a 2/2 Ghoul."
+},
+{
+"id": 745404,
+"name": "One-eyed Cheat",
+"text": "Whenever you summon a Pirate, gain Stealth."
+},
+{
+"id": 746909,
+"name": "Wind-Up Sapling",
+"text": "Tradeable Battlecry: Refresh Mana Crystals. (Trade to upgrade!)"
+},
+{
+"id": 799561,
+"name": "Vespers Cannon",
+"text": "At the start of your turn, Grace summons a 2/2 Vespers Cannon."
+},
+{
+"id": 797430,
+"name": "Dawngrasp (created)",
+"text": "At the end of your turn, deal 4 damage to a random enemy minion. Deathrattle: Go Dormant for 2 turns."
+},
+{
+"id": 798356,
+"name": "Army of the Frozen Throne",
+"text": "Remove the top 5 cards of your deck. Summon any minions removed."
+},
+{
+"id": 747946,
+"name": "Boompistol Bully",
+"text": "Battlecry: Enemy Battlecry cards cost (5) more next turn."
+},
+{
+"id": 797938,
+"name": "Dr. Boom's Remote",
+"text": "Passive At the start of the game, summon three 1/1 Boom Bots."
+},
+{
+"id": 745466,
+"name": "Blingtron 3000",
+"text": "Battlecry: Equip a random weapon for each player."
+},
+{
+"id": 743076,
+"name": "Apexis Blast",
+"text": "Deal 5 damage. If your deck has no minions, summon a random 5-Cost minion."
+},
+{
+"id": 746001,
+"name": "Twilight Geomancer",
+"text": "Taunt Battlecry: Give your C'Thun +1/+1 and Taunt (wherever it is)."
+},
+{
+"id": 747857,
+"name": "Holy Springwater",
+"text": "Restore 8 Health to a damaged character. Save any excess in a 1-Cost Bottle."
+},
+{
+"id": 746576,
+"name": "Time Skipper",
+"text": "At the end of each player's turn, give them a Coin."
+},
+{
+"id": 743258,
+"name": "Armored Bloodletter",
+"text": "Rush Battlecry: Herald ."
+},
+{
+"id": 798383,
+"name": "Bone Spike",
+"text": "At the start of your turn, deal 15 damage to the enemy hero."
+},
+{
+"id": 743722,
+"name": "Snowfury Giant",
+"text": "Costs (1) less for each Mana Crystal you've Overloaded this game."
+},
+{
+"id": 746678,
+"name": "City Chief Esho",
+"text": "Battlecry: If every minion in your deck shares a minion type, give your other minions +2/+2 (wherever they are)."
+},
+{
+"id": 799084,
+"name": "Elemental Rift",
+"text": "At the end of your turn, summon two random Elementals. Deathrattle: Destroy all Elemental minions."
+},
+{
+"id": 745623,
+"name": "Through Fel and Flames",
+"text": "Give a minion Rush. Finale: And +1/+1."
+},
+{
+"id": 745432,
+"name": "Cobalt Guardian",
+"text": "Whenever you summon a Mech, gain Divine Shield."
+},
+{
+"id": 746421,
+"name": "Northshire Farmer",
+"text": "Battlecry: Choose a friendly Beast. Shuffle three 3/3 copies into your deck."
+},
+{
+"id": 797889,
+"name": "The Box",
+"text": "Each turn this is in your hand, transform it into a random treasure."
+},
+{
+"id": 742604,
+"name": "Siphon Mana",
+"text": "Deal 2 damage. Honorable Kill: Reduce the Cost of spells in your hand by (1)."
+},
+{
+"id": 746253,
+"name": "Construct Pylons",
+"text": "Your next Protoss card this turn costs (2) less."
+},
+{
+"id": 742720,
+"name": "Gruntled Patron",
+"text": "Frenzy: Summon another Gruntled Patron."
+},
+{
+"id": 744919,
+"name": "Altered Chord",
+"text": "Lifesteal Deal 6 damage to a minion. Costs (3) less if you're Overloaded."
+},
+{
+"id": 797433,
+"name": "Kurtrus Ashfallen (created)",
+"text": "Rush Deathrattle: Return this to your hand."
+},
+{
+"id": 799168,
+"name": "Future Gladiator",
+"text": "Quest: Kill the Training Totem. Reward: Victory!"
+},
+{
+"id": 800632,
+"name": "Spectral Knight",
+"text": "Elusive"
+},
+{
+"id": 747453,
+"name": "Mirage Caller",
+"text": "Battlecry: Choose a minion. Summon a 1/1 copy of it."
+},
+{
+"id": 747276,
+"name": "Relentless Worg",
+"text": "Rush After this attacks and kills a minion, restore this to full Health."
+},
+{
+"id": 747153,
+"name": "Priestess Valishj",
+"text": "Battlecry: Refresh an empty Mana Crystal for each spell you've cast this turn. ()"
+},
+{
+"id": 745626,
+"name": "Tough Crowd",
+"text": "Outcast: Return a minion to its owner's hand."
+},
+{
+"id": 747720,
+"name": "Durnholde Imposter",
+"text": "Each turn this is in your hand, transform it into a random 3-Cost minion that gains Poisonous."
+},
+{
+"id": 743778,
+"name": "Abominable Bowman",
+"text": "Deathrattle: Summon a random friendly Beast that died this game."
+},
+{
+"id": 743764,
+"name": "Skulking Geist",
+"text": "Battlecry: Destroy all 1-Cost spells in both hands and decks."
+},
+{
+"id": 746525,
+"name": "Coilfang Constrictor",
+"text": "Battlecry: Look at 3 cards in your opponent's hand and choose one. It can't be played next turn."
+},
+{
+"id": 744249,
+"name": "Nine Lives",
+"text": "Discover a friendly Deathrattle minion that died this game. Also trigger its Deathrattle."
+},
+{
+"id": 800617,
+"name": "Starfire",
+"text": "Deal 5 damage. Draw a card."
+},
+{
+"id": 742460,
+"name": "Cutpurse",
+"text": "Whenever this minion attacks a hero, add the Coin to your hand."
+},
+{
+"id": 798306,
+"name": "Caltrops",
+"text": "Passive After your opponent plays a minion, deal 1 damage to it."
+},
+{
+"id": 744021,
+"name": "Crud Caretaker",
+"text": "Battlecry: Summon a 3/5 Elemental with Taunt."
+},
+{
+"id": 746832,
+"name": "Hemet, Foam Marksman",
+"text": "After a friendly Beast dies, get a random Legendary Beast from the past. It costs (2) less."
+},
+{
+"id": 799914,
+"name": "Lobstrok Tastetester",
+"text": "After you cast a spell, draw a spell from your deck. It costs (2) less."
+},
+{
+"id": 799286,
+"name": "Forgotten Clan Shaman (created)",
+"text": "Battlecry: Return all enemy minions to your opponent's hand."
+},
+{
+"id": 746905,
+"name": "Fly Off the Shelves",
+"text": "Deal 1 damage to all enemy minions. Repeat for each Dragon you're holding."
+},
+{
+"id": 744291,
+"name": "Magic Trick",
+"text": "Discover a spell that costs (3) or less."
+},
+{
+"id": 745715,
+"name": "Everyfin is Awesome",
+"text": "Give your minions +2/+2. Costs (1) less for each Murloc you control."
+},
+{
+"id": 746619,
+"name": "Quel'dorei Fletcher",
+"text": "Your Hero Power costs (0) while your hand has 3 or less cards."
+},
+{
+"id": 745211,
+"name": "Perplexing Anomaly",
+"text": "Rush, Taunt, ...Stealth?"
+},
+{
+"id": 800266,
+"name": "Carress, Cabaret Star (created)",
+"text": "Battlecry: Destroy two random enemy minions. Freeze three random enemy minions."
+},
+{
+"id": 747150,
+"name": "Azsharan Sweeper",
+"text": "Battlecry: Put a 'Sunken Sweeper' on the bottom of your deck."
+},
+{
+"id": 745290,
+"name": "Emeriss",
+"text": "Battlecry: Double the Attack and Health of all minions in your hand."
+},
+{
+"id": 746170,
+"name": "Sister Svalna",
+"text": "Battlecry: Permanently add a Vision of Darkness to your hand."
+},
+{
+"id": 799827,
+"name": "Tabletop Roleplayer (created)",
+"text": "Mini Battlecry: Give a friendly Demon +2 Attack and Immune this turn."
+},
+{
+"id": 744596,
+"name": "Kronx Dragonhoof",
+"text": "Battlecry: Draw Galakrond. If you're already Galakrond, unleash a Devastation."
+},
+{
+"id": 747819,
+"name": "Spirit of the Badlands",
+"text": "Battlecry: If your deck started with no duplicates, get a permanent Mirage."
+},
+{
+"id": 746903,
+"name": "Splendiferous Whizbang",
+"text": "You start the game with one of Whizbang's Experimental Decks!"
+},
+{
+"id": 747405,
+"name": "Anka, the Buried",
+"text": "Battlecry: Change each Deathrattle minion in your hand into a 1/1 that costs (1)."
+},
+{
+"id": 800311,
+"name": "Amulet of Warding (created)",
+"text": "Deal 6 damage."
+},
+{
+"id": 797846,
+"name": "Shadowhoof Slayer",
+"text": "Battlecry: Give your hero +1 Attack this turn."
+},
+{
+"id": 742405,
+"name": "Dark Gift",
+"text": "A random bonus effect on a discovered minion."
+},
+{
+"id": 745540,
+"name": "Getaway Hogdriver",
+"text": "Battlecry: Draw 2 cards. If they're both minions, gain Charge."
+},
+{
+"id": 798428,
+"name": "Mystery Dispense-o-bot",
+"text": "Battlecry: Get two random Mage Secrets. (Changes each turn.)@Battlecry: Get two random Mage Secrets."
+},
+{
+"id": 799252,
+"name": "Naisha",
+"text": "Stealth At the end of your turn, summon a 1/1 Huntress."
+},
+{
+"id": 798813,
+"name": "Fel Unstable Energy",
+"text": "Can't attack. Deathrattle: Deal 2 damage to ALL minions."
+},
+{
+"id": 800285,
+"name": "Seabreeze Chalice (created)",
+"text": "Deal 2 damage randomly split among all enemy minions. (Last Drink!)"
+},
+{
+"id": 799596,
+"name": "Eastern Plaguelands",
+"text": "In 5 turns, deal 12 damage randomly split among enemies."
+},
+{
+"id": 800098,
+"name": "Crook and Flail",
+"text": "Passive After you cast a spell, put a minion from your deck into the battlefield."
+},
+{
+"id": 797960,
+"name": "Twist - The Carts",
+"text": "Both players can only have four minions."
+},
+{
+"id": 746609,
+"name": "Hounds of Fury",
+"text": "Summon two 3/2 Demons. If your deck has no minions, they attack the lowest Health enemy."
+},
+{
+"id": 798694,
+"name": "Treant",
+"text": "Battlecry: Cast X."
+},
+{
+"id": 743434,
+"name": "Unlicensed Apothecary",
+"text": "After you summon a minion, deal 5 damage to your hero."
+},
+{
+"id": 746660,
+"name": "Gladiatorial Combat",
+"text": "Summon a random minion from your deck. Summon a 5/5 Tiger with Stealth for your opponent."
+},
+{
+"id": 798373,
+"name": "Blood Tap (created)",
+"text": "The next spell you cast this turn costs (0)."
+},
+{
+"id": 747012,
+"name": "Emberscale Drake",
+"text": "Battlecry: If you're holding a Dragon, gain 5 Armor."
+},
+{
+"id": 744070,
+"name": "Demonic Studies",
+"text": "Discover a Demon. Your next one costs (1) less."
+},
+{
+"id": 745895,
+"name": "Captain Greenskin",
+"text": "Battlecry: Give your weapon +1/+1."
+},
+{
+"id": 800240,
+"name": "Choose Your Path",
+"text": "Discover a card."
+},
+{
+"id": 742823,
+"name": "Tamsin Roame",
+"text": "Whenever you cast a Shadow spell that costs (1) or more, add a copy to your hand that costs (0)."
+},
+{
+"id": 746351,
+"name": "Goody Two-Shields",
+"text": "Divine Shield Spellburst: Gain Divine Shield."
+},
+{
+"id": 799378,
+"name": "Dredge Lord",
+"text": "Give Faelin Spellburst: Add a Dredge spell to your hand."
+},
+{
+"id": 745383,
+"name": "Lady in White",
+"text": "Battlecry: Cast 'Inner Fire' on every minion in your deck (set Attack equal to Health)."
+},
+{
+"id": 747084,
+"name": "Mecha-Shark",
+"text": "After you summon a Mech, deal 3 damage randomly split among all enemies."
+},
+{
+"id": 746955,
+"name": "Sketch Artist",
+"text": "Battlecry: Draw a Shadow spell. Get a Temporary copy of it."
+},
+{
+"id": 800636,
+"name": "Furious Ettin",
+"text": "Taunt"
+},
+{
+"id": 798321,
+"name": "Detective Murloc Holmes",
+"text": "Whenever your opponent draws a card, add a copy to your hand."
+},
+{
+"id": 799927,
+"name": "Minion Counter",
+"text": "Counter the next minion your opponent plays."
+},
+{
+"id": 799303,
+"name": "Teron'gor",
+"text": "Battlecry: Destroy a minion. If drawn this turn, instead destroy all enemy minions."
+},
+{
+"id": 800278,
+"name": "Carress, Cabaret Star (created)",
+"text": "Battlecry: Deal 6 damage to the enemy hero. Freeze three random enemy minions."
+},
+{
+"id": 799839,
+"name": "Krag'wa's Lure",
+"text": "Shrine After you Overload, give your minions that much Attack."
+},
+{
+"id": 800329,
+"name": "Culling of Stratholme",
+"text": "Casts When Drawn Deal 2 damage to all enemies."
+},
+{
+"id": 797872,
+"name": "Rapid Fire (created)",
+"text": "Deal 2 damage."
+},
+{
+"id": 798440,
+"name": "Wailing Rhapsody",
+"text": "Deal 3 damage to all minions. Summon a 5/5 Demon. (Changes each turn.)"
+},
+{
+"id": 799265,
+"name": "Way of the Archdruid",
+"text": "Choose One - Deal 8 damage to random enemies or restore 8 Health to random friendly characters."
+},
+{
+"id": 798825,
+"name": "Stonebound Gargon (created)",
+"text": "Infused Rush. Also damages the minions next to whomever this attacks."
+},
+{
+"id": 800303,
+"name": "Delicious Cheese",
+"text": "Summon three random"
+},
+{
+"id": 799612,
+"name": "Defend the Squirrels",
+"text": "Questline: Gain 5 Attack with your hero. Reward: Gain 5 Armor and draw a card."
+},
+{
+"id": 800115,
+"name": "Upgraded Pack Mule",
+"text": "Reduce the Cost of all cards in your deck by (1)."
+},
+{
+"id": 797994,
+"name": "Improvised Explosive",
+"text": "Casts When Drawn Take 3 damage."
+},
+{
+"id": 798707,
+"name": "Flickering Lightbot (created)",
+"text": "Gigantic Costs (1) less for each Holy spell you've cast this game."
+},
+{
+"id": 798386,
+"name": "Val'kyr Shadowguard",
+"text": "At the start of your turn, destroy a random enemy minion and this one."
+},
+{
+"id": 800252,
+"name": "Eruption",
+"text": "Casts When Drawn Deal $@ damage to all enemies."
+},
+{
+"id": 799398,
+"name": "Finley's Dad",
+"text": "Immune Gain +2/+2 if Finley's Mum is present."
+},
+{
+"id": 744024,
+"name": "Serrated Bone Spike",
+"text": "Deal 3 damage to a minion. If it dies, your next card this turn costs (2) less."
+}
+]

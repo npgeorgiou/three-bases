@@ -1,0 +1,81 @@
+796047 | The Thing First Steps | End of Turn: +2 Power. Once per game, if your side here is full, destroy an enemy card here with less Power.
+   A: [["turn_end", "End of Turn"], ["stat_gain", "+2 Power"], ["once_per_game", "Once per game"], ["destroy", "destroy an enemy card here"], ["stat_condition", "with less Power"], ["board_presence", "if your side here is full"]]
+   B: [["turn_end", "End of Turn:"], ["stat_gain", "+2 Power"], ["once_per_game", "Once per game"], ["destroy", "destroy an enemy card here"], ["stat_condition", "with less Power"]]
+796051 | Thor | On Reveal: Shuffle Mjolnir into your deck.
+   A: [["on_play", "On Reveal"], ["deck_modification", "Shuffle Mjolnir into your deck"]]
+   B: [["on_play", "On Reveal:"], ["generate_cards", "Shuffle Mjolnir into your deck"]]
+796054 | Thundering Hammer | On Reveal: Shuffle Mjolnir into your deck. Draw a card.
+   A: [["on_play", "On Reveal"], ["deck_modification", "Shuffle Mjolnir into your deck"], ["draw", "Draw a card"]]
+   B: [["on_play", "On Reveal:"], ["generate_cards", "Shuffle Mjolnir into your deck"], ["draw", "Draw a card"]]
+796065 | Triton | On Reveal: Give the last character EACH player played last turn +3 Power.
+   A: [["on_play", "On Reveal"], ["stat_gain", "+3 Power"], ["symmetric_effect", "EACH player"]]
+   B: [["on_play", "On Reveal:"], ["stat_gain", "+3 Power"], ["combo_sequence", "last character"], ["symmetric_effect", "EACH player"]]
+796078 | Valentina - Thunderbolts | On Reveal: Add a random Thunderbolt to your hand. Give it -1 Cost.
+   A: [["on_play", "On Reveal"], ["generate_cards", "Add a random Thunderbolt to your hand"], ["random_effect", "random"], ["tribal", "Thunderbolt"], ["cost_reduction", "-1 Cost"]]
+   B: [["on_play", "On Reveal:"], ["generate_cards", "Add a random Thunderbolt to your hand"], ["tribal", "Thunderbolt"], ["cost_reduction", "-1 Cost"]]
+796093 | Viv Vision | Start of Turn: Give all cards in your hand +1 Power if you're winning here. Otherwise, move this to another location.
+   A: [["turn_start", "Start of Turn"], ["in_hand_buff", "Give all cards in your hand +1 Power"], ["movement", "move this to another location"]]
+   B: [["turn_start", "Start of Turn:"], ["in_hand_buff", "Give all cards in your hand +1 Power"], ["zone_control", "if you're winning here"], ["movement", "move this to another location"]]
+796095 | Wade Wilson | When Destroyed: Replace this with a 1-Cost card from your hand or deck with +2 Power.
+   A: [["death_trigger", "When Destroyed"], ["free_play", "Replace this with a 1-Cost card from your hand or deck"], ["cost_condition", "1-Cost card"], ["stat_gain", "+2 Power"]]
+   B: [["death_trigger", "When Destroyed:"], ["cost_condition", "1-Cost card"], ["stat_gain", "with +2 Power"]]
+796102 | Weapon H | When Discarded: Put this back with -2 Cost.
+   A: [["death_trigger", "When Discarded"], ["recycle", "Put this back"], ["cost_reduction", "-2 Cost"]]
+   B: [["recycle", "Put this back"], ["cost_reduction", "-2 Cost"]]
+796108 | White Queen - Brotherhood of Mutants | On Reveal: Copy the top card of your opponent's deck into your hand. While you're winning here, it costs 2 less.
+   A: [["on_play", "On Reveal"], ["copy", "Copy the top card of your opponent's deck into your hand"], ["deck_position", "top card of your opponent's deck"], ["cost_reduction", "it costs 2 less"]]
+   B: [["on_play", "On Reveal:"], ["copy", "Copy the top card of your opponent's deck into your hand"], ["deck_position", "top card of your opponent's deck"], ["zone_control", "While you're winning here"], ["cost_reduction", "it costs 2 less"]]
+796114 | Wild Child | Ongoing: +4 Power if you've discarded a card. +4 Power if one of your cards has been destroyed.
+   A: [["passive", "Ongoing"], ["stat_gain", "+4 Power"], ["count_payoff", "if you've discarded a card"], ["death_count", "one of your cards has been destroyed"]]
+   B: [["passive", "Ongoing:"], ["count_payoff", "+4 Power if you've discarded a card"], ["death_count", "one of your cards has been destroyed"]]
+796118 | Winter Soldier - Thunderbolts | You can only play this at a location you're losing.
+   A: [["play_restriction", "You can only play this at a location you're losing"]]
+   B: [["play_restriction", "You can only play this at a location you're losing"], ["comeback", "a location you're losing"]]
+796131 | Yondu | On Reveal: Banish the card that costs the least in your opponent's deck.
+   A: [["on_play", "On Reveal"], ["banish", "Banish the card that costs the least in your opponent's deck"]]
+   B: [["on_play", "On Reveal:"], ["banish", "Banish the card that costs the least in your opponent's deck"], ["cost_condition", "costs the least"]]
+796141 | Zombie Nova | On Reveal and When Destroyed: Horde +3.
+   A: [["on_play", "On Reveal"], ["death_trigger", "When Destroyed"]]
+   B: [["on_play", "On Reveal"], ["death_trigger", "When Destroyed:"], ["stat_gain", "Horde +3"]]
+796145 | Zombie Venom | On Reveal: Destroy your first other card here. After one of your other cards is destroyed, Horde +2.
+   A: [["on_play", "On Reveal"], ["sacrifice", "Destroy your first other card here"], ["death_trigger", "After one of your other cards is destroyed"]]
+   B: [["on_play", "On Reveal:"], ["sacrifice", "Destroy your first other card here"], ["death_trigger", "After one of your other cards is destroyed"], ["stat_gain", "Horde +2"]]
+796175 | Camp Lehigh | Add a random 3-Cost card to each player's hand.
+   A: [["generate_cards", "Add a random 3-Cost card to each player's hand"], ["random_effect", "random"], ["symmetric_effect", "each player's hand"], ["cost_condition", "3-Cost card"]]
+   B: [["generate_cards", "Add a random 3-Cost card to each player's hand"], ["random_effect", "random"], ["symmetric_effect", "each player's hand"]]
+796179 | Castle Zemo | The next card you play here switches sides.
+   A: [["rule_change", "The next card you play here switches sides"], ["donate", "switches sides"]]
+   B: [["donate", "The next card you play here switches sides"]]
+796190 | Crimson Citadel | Your next play here steals 2 Power from a random enemy.
+   A: [["steal", "steals 2 Power from a random enemy"], ["random_effect", "random enemy"], ["on_ally_play", "Your next play here"]]
+   B: [["steal", "steals 2 Power from a random enemy"], ["random_effect", "random enemy"], ["delayed", "Your next play here"]]
+796214 | Fractured Frontier | Your rightmost card has -2 Cost this turn.
+   A: [["cost_reduction", "-2 Cost"], ["temporary_effect", "this turn"], ["hand_position", "rightmost card"]]
+   B: [["cost_reduction", "has -2 Cost"], ["temporary_effect", "this turn"], ["positional", "rightmost card"]]
+796227 | Isle of Shhhhh | After each Snap, move a card away from here.
+   A: [["movement", "move a card away from here"], ["reactions", "After each Snap"]]
+   B: [["forced_movement", "move a card away from here"], ["delayed", "After each Snap"]]
+796242 | Lemuria | No cards are revealed this turn.
+   A: [["disruption", "No cards are revealed this turn"], ["temporary_effect", "this turn"]]
+   B: [["rule_change", "No cards are revealed this turn"], ["temporary_effect", "this turn"]]
+796278 | Otto's Lab | The next card you play here pulls a card to the enemy side from their hand.
+   A: [["forced_movement", "pulls a card to the enemy side from their hand"], ["on_ally_play", "The next card you play here"]]
+   B: [["delayed", "The next card you play here"], ["forced_placement", "pulls a card to the enemy side from their hand"]]
+796300 | Sakaar | After this turn, put a card from each player's hand here.
+   A: [["forced_placement", "put a card from each player's hand here"], ["symmetric_effect", "each player's hand"]]
+   B: [["delayed", "After this turn"], ["forced_placement", "put a card from each player's hand here"], ["symmetric_effect", "each player's hand"]]
+796316 | Stark Industries | After turn 4, split +8 Power among ALL cards here.
+   A: [["turn_number", "After turn 4"], ["distribute", "split +8 Power among ALL cards here"]]
+   B: [["turn_number", "After turn 4"], ["distribute", "split +8 Power among ALL cards here"], ["scope_global", "ALL cards here"]]
+796337 | The Raft | First to fill this breaks out a 6-Cost card. It costs 0.
+   A: [["race_objective", "First to fill this"], ["cost_set", "It costs 0"], ["high_cost", "6-Cost card"]]
+   B: [["race_objective", "First to fill this"], ["free_play", "breaks out a 6-Cost card"], ["cost_set", "It costs 0"]]
+796344 | The Triskelion | Fill each player's hand with random cards.
+   A: [["hand_deck_swap", "Fill each player's hand with random cards"], ["random_effect", "random cards"], ["symmetric_effect", "each player's hand"]]
+   B: [["generate_cards", "Fill each player's hand with random cards"], ["random_effect", "random cards"], ["symmetric_effect", "each player's hand"]]
+796380 | Locations | Three lanes called locations. One is revealed on each of turns 1, 2 and 3; each carries its own rule that changes play there (most are random each game).
+   A: [["lanes", "Three lanes called locations"], ["lane_rule", "each carries its own rule"], ["random_effect", "most are random each game"]]
+   B: [["lanes", "Three lanes called locations"], ["lane_rule", "each carries its own rule"], ["randomness", "most are random each game"]]
+796381 | Winning a location | Whoever has more total power at a location at the end of the game wins it; winning 2 of the 3 locations wins the game; a tie is broken by total power across all locations.
+   A: [["zone_control", "winning 2 of the 3 locations wins the game"], ["points_scoring", "more total power at a location"]]
+   B: [["zone_control", "Whoever has more total power at a location"], ["lanes", "3 locations"]]

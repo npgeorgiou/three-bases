@@ -1,0 +1,150 @@
+741317 | Three Wishes | Gain 3 Life. Copy the top 3 cards of your opponent's deck. They cost 1 faeria less and are wild land. You cannot wish for more wishes.
+   A: [["heal", "Gain 3 Life"], ["copy", "Copy the top 3 cards of your opponent's deck"], ["deck_position", "top 3 cards"], ["cost_reduction", "They cost 1 faeria less"], ["cost_type", "wild land"]]
+   B: [["heal", "Gain 3 Life"], ["copy", "Copy the top 3 cards of your opponent's deck"], ["in_hand_buff", "They cost 1 faeria less"], ["deck_position", "top 3 cards of your opponent's deck"]]
+741318 | Rebel Glider | Flying, Dash 2 / Can't harvest faeria.
+   A: [["evasion", "Flying"], ["movement", "Dash 2"]]
+   B: [["evasion", "Flying"]]
+741319 | Radiance, Imperial Airship | Flying, Dash 3 / Radiance's faeria cost equals your Life. / Gift - Gain 1 Life for each card in your hand.
+   A: [["evasion", "Flying"], ["movement", "Dash 3"], ["on_play", "Gift"], ["heal", "Gain 1 Life for each card in your hand"], ["hand_size", "each card in your hand"]]
+   B: [["evasion", "Flying"], ["variable_stats", "faeria cost equals your Life"], ["on_play", "Gift"], ["heal", "Gain 1 Life"], ["condition_count", "for each card in your hand"]]
+741320 | Forbidden Library | Production - Draw a card, gain 1 faeria, and deal 2 damage to yourself.
+   A: [["turn_start", "Production"], ["draw", "Draw a card"], ["resource_gain", "gain 1 faeria"], ["friendly_fire", "deal 2 damage to yourself"]]
+   B: [["draw", "Draw a card"], ["resource_gain", "gain 1 faeria"], ["friendly_fire", "deal 2 damage to yourself"]]
+741322 | Feral Kodama | Jump / Can't harvest faeria. / Whenever this attacks a god, you gain 5 Life.
+   A: [["movement", "Jump"], ["on_attack", "Whenever this attacks a god"], ["heal", "you gain 5 Life"]]
+   B: [["on_attack", "Whenever this attacks a god"], ["heal", "you gain 5 Life"]]
+741323 | God Hunter | Jump / Can only attack gods. / Can't harvest faeria.
+   A: [["movement", "Jump"], ["targeting_rules", "Can only attack gods"]]
+   B: [["targeting_rules", "Can only attack gods"]]
+741326 | Doomsday | Set your faeria to 0 faeria. Halve your Life (rounded down). Destroy ALL creatures and structures. End the turn.
+   A: [["friendly_fire", "Halve your Life"], ["board_wipe", "Destroy ALL creatures and structures"]]
+   B: [["cost_set", "Set your faeria to 0 faeria"], ["life_payment", "Halve your Life"], ["board_wipe", "Destroy ALL creatures and structures"], ["friendly_fire", "Destroy ALL creatures"]]
+741330 | Triton Trainer | Jump / Gift - Give the next Jump creature you summon +1/+1.
+   A: [["movement", "Jump"], ["on_play", "Gift"], ["stat_gain", "+1/+1"]]
+   B: [["on_play", "Gift"], ["stat_gain", "+1/+1"]]
+741336 | Illusion of Grandeur | Charge 2 / Whenever you summon a creature that costs 1 faeria or less, this gains Attack and Life equal to that creature's (while in your hand or deck).
+   A: [["movement", "Charge 2"], ["permanent_growth", "this gains Attack and Life equal to that creature's"], ["cost_condition", "costs 1 faeria or less"], ["in_hand_buff", "while in your hand or deck"]]
+   B: [["stat_gain", "gains Attack and Life equal to that creature's"], ["permanent_growth", "Whenever you summon a creature"], ["on_ally_play", "Whenever you summon a creature"], ["cost_condition", "costs 1 faeria or less"], ["in_hand_buff", "while in your hand or deck"]]
+741342 | Astral Weapon | Flying / Gift - Destroy all adjacent creatures, structures and lands.
+   A: [["evasion", "Flying"], ["on_play", "Gift"], ["destroy", "Destroy all adjacent creatures, structures and lands"], ["adjacency", "adjacent creatures"]]
+   B: [["evasion", "Flying"], ["on_play", "Gift"], ["board_wipe", "Destroy all adjacent creatures, structures and lands"], ["adjacency", "adjacent"], ["friendly_fire", "Destroy all adjacent creatures"]]
+741344 | Djinn's Lamp | Choose one: Add 3 random green cards to your hand. They cost {faeria / 3. less|Add 3 random blue cards to your hand. They cost 3 faeria less|Add 3 random red cards to your hand. They cost 3 faeria less|Add 3 random yellow cards to your hand. They cost 3 faeria less} / Choose a color. Add 3 random cards of that color to your hand. They cost 3 faeria less.
+   A: [["modal_choice", "Choose one"], ["generate_cards", "Add 3 random green cards to your hand"], ["random_effect", "random green cards"], ["cost_reduction", "They cost 3 faeria less"]]
+   B: [["modal_choice", "Choose one"], ["generate_cards", "Add 3 random blue cards to your hand"], ["random_effect", "random blue cards"], ["in_hand_buff", "They cost 3 faeria less"]]
+741351 | Ring of Dominion | Choose one: Transform a land to {green.. Gain control of it.|Transform a land to lake. Gain control of it.|Transform a land to mountain. Gain control of it.|Transform a land to desert. Gain control of it.} / Transform a land into the color of your choice. Gain control of it.
+   A: [["modal_choice", "Choose one"], ["transform", "Transform a land to"], ["steal", "Gain control of it"]]
+   B: [["modal_choice", "Choose one"], ["steal", "Gain control of it"]]
+741353 | Clockwork Yak | Dash 2
+   A: [["movement", "Dash 2"]]
+   B: []
+741356 | Aurora's Teapot | Change all friendly creatures to 6/6.
+   A: [["stat_gain", "Change all friendly creatures to 6/6"]]
+   B: [["stat_gain", "Change all friendly creatures to 6/6"], ["scope_multi", "all friendly creatures"]]
+741359 | Void Guardian | Gift - Destroy your deck.
+   A: [["on_play", "Gift"], ["friendly_fire", "Destroy your deck"]]
+   B: [["on_play", "Gift"], ["self_mill", "Destroy your deck"]]
+741360 | Crystal Dragon | Flying, Charge 3
+   A: [["evasion", "Flying"], ["movement", "Charge 3"]]
+   B: [["evasion", "Flying"]]
+741371 | Monkey Genius | Taunt / Gift - On your opponent's next turn, this gains +2/+2 whenever an enemy creature harvests faeria.
+   A: [["taunt", "Taunt"], ["on_play", "Gift"], ["permanent_growth", "this gains +2/+2 whenever an enemy creature harvests faeria"], ["delayed", "On your opponent's next turn"]]
+   B: [["taunt", "Taunt"], ["on_play", "Gift"], ["stat_gain", "gains +2/+2"], ["temporary_effect", "On your opponent's next turn"]]
+741388 | Flash Salmon | Divine, Flying, Haste, Charge 2 / Can't harvest faeria. / At the end of your turn, destroy this creature and draw a card.
+   A: [["immunity", "Divine"], ["evasion", "Flying"], ["haste", "Haste"], ["movement", "Charge 2"], ["turn_end", "At the end of your turn"], ["self_destruct", "destroy this creature"], ["draw", "draw a card"]]
+   B: [["immunity", "Divine"], ["evasion", "Flying"], ["haste", "Haste"], ["turn_end", "At the end of your turn"], ["self_destruct", "destroy this creature"], ["draw", "draw a card"]]
+741391 | Shifting Octopus | Choose one: Gain +2/+0. / Gain +0/+2. / Gain {jump..|Gain Taunt.}, twice: / - Gain +2/+0 / - Gain +0/+2 / - Gain Jump / - Gain Taunt
+   A: [["modal_choice", "Choose one"], ["stat_gain", "Gain +2/+0"], ["movement", "Gain Jump"], ["taunt", "Gain Taunt"]]
+   B: [["modal_choice", "Choose one"], ["stat_gain", "Gain +2/+0"]]
+741392 | Frog-Tosser | Gift - This fights an enemy creature. Summon a 2/2 Frog with Jump in a random space adjacent to the target.
+   A: [["on_play", "Gift"], ["attack_now", "This fights an enemy creature"], ["summon", "Summon a 2/2 Frog with Jump"], ["movement", "Jump"], ["random_effect", "random space"], ["adjacency", "adjacent to the target"]]
+   B: [["on_play", "Gift"], ["attack_now", "This fights an enemy creature"], ["summon", "Summon a 2/2 Frog"], ["adjacency", "adjacent to the target"], ["random_effect", "random space"]]
+741393 | Path to Paradise | Choose one: Create {green.|Create lake |Create mountain |Create desert } - Create a special land. / Give the first creature summoned on it this turn +2/+0.
+   A: [["modal_choice", "Choose one"], ["terrain", "Create a special land"], ["stat_gain", "+2/+0"], ["temporary_effect", "this turn"]]
+   B: [["modal_choice", "Choose one"], ["terrain", "Create a special land"], ["stat_gain", "+2/+0"], ["temporary_buff", "this turn"]]
+741399 | Flight of the Mantas | When you draw this card, copy it. / Summon a 2/2 Manta with Flying and Charge 2.
+   A: [["copy", "copy it"], ["summon", "Summon a 2/2 Manta"], ["evasion", "Flying"], ["movement", "Charge 2"]]
+   B: [["copy", "When you draw this card, copy it"], ["summon", "Summon a 2/2 Manta"], ["evasion", "Flying"]]
+741400 | Oversky Towship | Flying, Dash 1 / Whenever this would leave land, it brings its land with it.
+   A: [["evasion", "Flying"], ["movement", "Dash 1"], ["movement", "brings its land with it"]]
+   B: [["evasion", "Flying"]]
+741401 | Rakoan Chieftain | Dash 1 / Adjacent friendly creatures have +1/+0.
+   A: [["movement", "Dash 1"], ["aura", "Adjacent friendly creatures have +1/+0"], ["adjacency", "Adjacent friendly creatures"]]
+   B: [["aura", "Adjacent friendly creatures have +1/+0"], ["adjacency", "Adjacent friendly creatures"]]
+741405 | Imperial Drakerider | Flying, Charge 2 / Corrupt - Gain +2/+2.
+   A: [["evasion", "Flying"], ["movement", "Charge 2"], ["territory_trigger", "Corrupt"], ["stat_gain", "Gain +2/+2"]]
+   B: [["evasion", "Flying"], ["territory_trigger", "Corrupt"], ["stat_gain", "Gain +2/+2"]]
+741406 | Deranged Monkey | Gift - Empty all faeria wells. This gains +1/+1 for each well emptied.
+   A: [["on_play", "Gift"], ["stat_gain", "This gains +1/+1 for each well emptied"], ["condition_count", "for each well emptied"]]
+   B: [["on_play", "Gift"], ["disruption", "Empty all faeria wells"], ["stat_gain", "gains +1/+1"], ["condition_count", "for each well emptied"]]
+741411 | Kaios, Demented Overmind | Divine / Kaios' Attack is always equal to his Life. / Corrupt - Drain 1 life from EVERYTHING.
+   A: [["immunity", "Divine"], ["variable_stats", "Attack is always equal to his Life"], ["territory_trigger", "Corrupt"], ["lifesteal", "Drain 1 life from EVERYTHING"], ["friendly_fire", "EVERYTHING"]]
+   B: [["immunity", "Divine"], ["variable_stats", "Attack is always equal to his Life"], ["territory_trigger", "Corrupt"], ["aoe_damage", "Drain 1 life from EVERYTHING"], ["friendly_fire", "EVERYTHING"]]
+741416 | Rotting Boar | Dash 1 / Corrupt - Draw the top creature with 5 or more life in your deck. Give it +2/+2.
+   A: [["movement", "Dash 1"], ["territory_trigger", "Corrupt"], ["tutor", "Draw the top creature with 5 or more life in your deck"], ["stat_gain", "Give it +2/+2"]]
+   B: [["territory_trigger", "Corrupt"], ["tutor", "Draw the top creature with 5 or more life in your deck"], ["stat_gain", "+2/+2"]]
+741424 | Mother of All Yaks | Gift - Summon two 4/4 Yak Guards with Taunt and Flying adjacent to Mother of Yaks. / Costs 1 faeria less for each friendly yak that has died this game.
+   A: [["on_play", "Gift"], ["summon", "Summon two 4/4 Yak Guards"], ["taunt", "Taunt"], ["evasion", "Flying"], ["adjacency", "adjacent to Mother of Yaks"], ["cost_reduction", "Costs 1 faeria less for each friendly yak that has died this game"], ["death_count", "for each friendly yak that has died this game"], ["tribal", "yak"]]
+   B: [["on_play", "Gift"], ["summon", "Summon two 4/4 Yak Guards"], ["taunt", "Taunt"], ["adjacency", "adjacent to Mother of Yaks"], ["cost_reduction", "Costs 1 faeria less"], ["count_payoff", "for each friendly yak that has died this game"]]
+741429 | Hunt Down | Give a friendly beast +2/+0. Then it fights an enemy creature.
+   A: [["stat_gain", "+2/+0"], ["tribal", "friendly beast"], ["attack_now", "it fights an enemy creature"]]
+   B: [["stat_gain", "+2/+0"], ["attack_now", "fights an enemy creature"]]
+741431 | Majinata, Spirit of Everlife | Protection, Divine / Gift - A friendly creature swallows Majinata. Give it +5/+5, Flying and Charge 2.
+   A: [["protection", "Protection"], ["immunity", "Divine"], ["on_play", "Gift"], ["merge_attach", "swallows Majinata"], ["stat_gain", "+5/+5"], ["evasion", "Flying"], ["movement", "Charge 2"]]
+   B: [["protection", "Protection"], ["immunity", "Divine"], ["on_play", "Gift"], ["merge_attach", "swallows Majinata"], ["stat_gain", "+5/+5"], ["evasion", "Flying"]]
+741437 | Rakoan War Machine | Charge 2 / Gift - This may Swallow another friendly Rakoan to gain +2/+0.
+   A: [["movement", "Charge 2"], ["on_play", "Gift"], ["merge_attach", "Swallow another friendly Rakoan"], ["stat_gain", "+2/+0"], ["tribal", "Rakoan"]]
+   B: [["on_play", "Gift"], ["sacrifice", "Swallow another friendly Rakoan"], ["stat_gain", "+2/+0"]]
+741441 | Rakoan Warleader | Combat - Give a random Rakoan in your hand +1/+1.
+   A: [["on_attack", "Combat"], ["in_hand_buff", "Give a random Rakoan in your hand +1/+1"], ["random_effect", "random Rakoan"], ["tribal", "Rakoan"]]
+   B: [["on_attack", "Combat"], ["in_hand_buff", "Give a random Rakoan in your hand +1/+1"], ["random_effect", "random Rakoan"]]
+741448 | Gagana, Rainbow Birdship | Flying / Cards in your hand are wild land. / Gift - Add a random Gagana crew member to your hand. It costs 0 faeria.
+   A: [["evasion", "Flying"], ["cost_type", "Cards in your hand are wild land"], ["on_play", "Gift"], ["generate_cards", "Add a random Gagana crew member to your hand"], ["random_effect", "random Gagana crew member"], ["cost_set", "It costs 0 faeria"]]
+   B: [["evasion", "Flying"], ["on_play", "Gift"], ["generate_cards", "Add a random Gagana crew member to your hand"], ["cost_set", "It costs 0 faeria"], ["random_effect", "random Gagana crew member"]]
+741451 | Beast Trainer | Gift - Reduce the cost of a random Beast in your hand by 5 faeria.
+   A: [["on_play", "Gift"], ["in_hand_buff", "Reduce the cost of a random Beast in your hand by 5 faeria"], ["random_effect", "random Beast"], ["tribal", "Beast"]]
+   B: [["on_play", "Gift"], ["in_hand_buff", "Reduce the cost of a random Beast in your hand by 5 faeria"], ["random_effect", "random Beast"]]
+741452 | Kobold Smuggler | Corrupt - Summon a 4/3 Seifer's Fodder in a random adjacent land.
+   A: [["territory_trigger", "Corrupt"], ["summon", "Summon a 4/3 Seifer's Fodder"], ["random_effect", "random adjacent land"], ["fodder", "Fodder"], ["adjacency", "adjacent"]]
+   B: [["territory_trigger", "Corrupt"], ["summon", "Summon a 4/3 Seifer's Fodder"], ["adjacency", "adjacent land"], ["random_effect", "random"]]
+741453 | Wrath of Ignus | Deal dynamic_number damage randomly split among enemies. / Deals +1 damage for each time you have selected +1 faeria from the power wheel this game (while in your hand or deck).
+   A: [["damage", "damage randomly split among enemies"], ["distribute", "randomly split among enemies"], ["random_effect", "randomly split"], ["count_payoff", "for each time you have selected +1 faeria from the power wheel this game"], ["in_hand_buff", "while in your hand or deck"]]
+   B: [["damage", "damage randomly split among enemies"], ["distribute", "randomly split among enemies"], ["random_effect", "randomly split"], ["spell_power", "Deals +1 damage"], ["count_payoff", "for each time you have selected +1 faeria"]]
+741463 | Banon, Captain of the Radiance | Gift - If you have no creature left in your deck, shuffle Radiance, Imperial Airship and 10 random neutral creatures into your deck. They gain +2/+2.
+   A: [["on_play", "Gift"], ["deck_condition", "If you have no creature left in your deck"], ["generate_cards", "10 random neutral creatures into your deck"], ["in_hand_buff", "They gain +2/+2"], ["random_effect", "random neutral"]]
+   B: [["on_play", "Gift"], ["deck_condition", "If you have no creature left in your deck"], ["generate_cards", "10 random neutral creatures"], ["stat_gain", "+2/+2"], ["random_effect", "random neutral creatures"]]
+741466 | Roaming Yak | Gift - Create a prairie. / Dash 1
+   A: [["on_play", "Gift"], ["terrain", "Create a prairie"], ["movement", "Dash 1"]]
+   B: [["on_play", "Gift"], ["terrain", "Create a prairie"]]
+741467 | Yak Shepherd | Gift - Give 2 friendly yaks +2/+0 and Charge 2 until end of turn.
+   A: [["on_play", "Gift"], ["stat_gain", "+2/+0"], ["movement", "Charge 2"], ["temporary_buff", "until end of turn"], ["tribal", "yaks"]]
+   B: [["on_play", "Gift"], ["stat_gain", "+2/+0"], ["temporary_buff", "until end of turn"]]
+741471 | Triton Tactician | Jump / Gift - Gains +1/+0 for each adjacent friendly triton.
+   A: [["movement", "Jump"], ["on_play", "Gift"], ["stat_gain", "Gains +1/+0"], ["condition_count", "for each adjacent friendly triton"], ["adjacency", "adjacent friendly triton"], ["tribal", "triton"]]
+   B: [["on_play", "Gift"], ["stat_gain", "Gains +1/+0"], ["adjacency", "adjacent friendly triton"], ["condition_count", "for each adjacent friendly triton"]]
+741472 | Tide Lord | Jump / Can be summoned adjacent to friendly tritons. If it is, this gets +1/+1.
+   A: [["movement", "Jump"], ["placement_rules", "Can be summoned adjacent to friendly tritons"], ["stat_gain", "this gets +1/+1"], ["tribal", "tritons"]]
+   B: [["placement_rules", "Can be summoned adjacent to friendly tritons"], ["stat_gain", "this gets +1/+1"], ["adjacency", "adjacent to friendly tritons"]]
+741475 | Chrysalis | Gift - Swallow a friendly creature. / Production - The swallowed creature gains +1/+1. / Activate - Destroy this.
+   A: [["on_play", "Gift"], ["merge_attach", "Swallow a friendly creature"], ["permanent_growth", "Production - The swallowed creature gains +1/+1"], ["activated", "Activate"], ["self_destruct", "Destroy this"]]
+   B: [["on_play", "Gift"], ["merge_attach", "Swallow a friendly creature"], ["turn_start", "Production"], ["stat_gain", "gains +1/+1"], ["activated", "Activate"], ["self_destruct", "Destroy this"]]
+741481 | Victory Celebration | For the rest of the game, each player gains 1 faeria extra each turn.
+   A: [["resource_gain", "each player gains 1 faeria extra each turn"], ["symmetric_effect", "each player"]]
+   B: [["resource_gain", "each player gains 1 faeria extra each turn"], ["symmetric_effect", "each player"], ["rule_change", "For the rest of the game"]]
+741483 | Compass of Gagana | At the end of your turn, find a Treasure Map in your deck and place it on top. If your deck has no Treasure Maps, shuffle one into it instead.
+   A: [["turn_end", "At the end of your turn"], ["tutor", "find a Treasure Map in your deck"], ["deck_position", "place it on top"], ["deck_condition", "If your deck has no Treasure Maps"], ["generate_cards", "shuffle one into it instead"]]
+   B: [["turn_end", "At the end of your turn"], ["tutor", "find a Treasure Map in your deck"], ["deck_position", "place it on top"], ["deck_condition", "If your deck has no Treasure Maps"]]
+741490 | Triton Stargazer | Jump / Gift - Draw 3 cards. If any of them are a Treasure Map, this gains +2/+2.
+   A: [["movement", "Jump"], ["on_play", "Gift"], ["draw", "Draw 3 cards"], ["stat_gain", "this gains +2/+2"]]
+   B: [["on_play", "Gift"], ["draw", "Draw 3 cards"], ["stat_gain", "gains +2/+2"]]
+741491 | Fugoro, Captain of the Gagana | Jump / Whenever you discover a Treasure, Fugoro gains +3/+3.
+   A: [["movement", "Jump"], ["permanent_growth", "Whenever you discover a Treasure, Fugoro gains +3/+3"]]
+   B: [["stat_gain", "gains +3/+3"], ["permanent_growth", "Whenever you discover a Treasure"]]
+741493 | Tiki Zoologist | Gift - Discover a Beast. It becomes wild land.
+   A: [["on_play", "Gift"], ["generate_cards", "Discover a Beast"], ["tribal", "Beast"], ["cost_type", "becomes wild land"]]
+   B: [["on_play", "Gift"], ["generate_cards", "Discover a Beast"]]
+741495 | Seek Shelter | Discover a creature with Taunt. It becomes wild land and gets +0/+3.
+   A: [["generate_cards", "Discover a creature with Taunt"], ["cost_type", "wild land"], ["stat_gain", "+0/+3"]]
+   B: [["selection", "Discover a creature with Taunt"], ["stat_gain", "gets +0/+3"]]
+741497 | Ogre Adventurer | Dash 1 / At the end of your turn, reduce a card in your hand by 1 faeria if this is on an enemy land.
+   A: [["movement", "Dash 1"], ["turn_end", "At the end of your turn"], ["cost_reduction", "reduce a card in your hand by 1 faeria"], ["territory_trigger", "if this is on an enemy land"]]
+   B: [["turn_end", "At the end of your turn"], ["in_hand_buff", "reduce a card in your hand by 1 faeria"], ["territory_trigger", "on an enemy land"]]

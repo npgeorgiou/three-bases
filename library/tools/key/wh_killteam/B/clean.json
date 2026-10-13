@@ -1,0 +1,2976 @@
+{
+"789311": [
+[
+"buff",
+"gains the Rending critical hit rule"
+]
+],
+"788955": [
+[
+"buff",
+"gains the following improvements"
+],
+[
+"stat_gain",
+"Add 1 to its Critical Damage characteristic"
+],
+[
+"piercing",
+"AP1 special rule"
+]
+],
+"789908": [
+[
+"terrain",
+"pieces of terrain you can booby trap"
+]
+],
+"789234": [
+[
+"activated",
+"Stun Grenade (1AP)"
+],
+[
+"random_effect",
+"Roll one D6"
+],
+[
+"stat_loss",
+"subtract 1 from that operative's APL"
+],
+[
+"scope_multi",
+"each operative within 2\u2b24 of that point"
+],
+[
+"once_per_game",
+"can only perform this action once"
+],
+[
+"play_restriction",
+"cannot perform this action while within Engagement Range of an enemy operative"
+]
+],
+"791009": [
+[
+"buff",
+"scores 2 hits instead of 1"
+],
+[
+"saving_throws",
+"3+ invulnerable save"
+]
+],
+"790771": [
+[
+"reactions",
+"Whenever an enemy operative within 8\" of this operative shoots this operative"
+],
+[
+"counterattack",
+"this operative can perform a free Shoot action"
+],
+[
+"variable_stats",
+"you only roll a number of attack dice equal to the opponent's discarded attack dice plus one"
+]
+],
+"790880": [
+[
+"piercing",
+"improve the AP of that attack by 1"
+]
+],
+"790472": [
+[
+"extra_turn",
+"you must then activate one other ready friendly DEATH KORPS TROOPER operative"
+],
+[
+"tribal",
+"DEATH KORPS TROOPER"
+]
+],
+"789688": [
+[
+"cooldowns",
+"Once per turning point"
+],
+[
+"tribal",
+"SPECTRE SQUAD"
+]
+],
+"789117": [
+[
+"terrain",
+"terrain feature"
+],
+[
+"movement",
+"they can move through it as if it were not there"
+]
+],
+"790964": [
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"combat_start",
+"At the beginning of the Fight phase"
+],
+[
+"suppress",
+"That enemy model cannot fight"
+],
+[
+"target_choice",
+"you can pick a single enemy model"
+]
+],
+"788790": [
+[
+"turn_start",
+"In the Ready step of each Strategy phase"
+],
+[
+"resource_gain",
+"you gain 1 Fieldcraft point"
+],
+[
+"coin_economy",
+"spend 1 of your Fieldcraft points"
+],
+[
+"reactions",
+"you can spend 1 of your Fieldcraft points to interrupt that activation"
+],
+[
+"extra_turn",
+"can perform a free Shoot (excluding Guard), Dash or Reposition action"
+],
+[
+"tribal",
+"SPECTRE SQUAD"
+]
+],
+"790515": [
+[
+"death_trigger",
+"When this operative is incapacitated"
+],
+[
+"random_effect",
+"roll one D6 separately"
+],
+[
+"aoe_damage",
+"each enemy operative visible to and within 2\" of it"
+],
+[
+"damage",
+"inflict 1 damage"
+]
+],
+"790701": [
+[
+"piercing",
+"Piercing x"
+]
+],
+"788673": [
+[
+"cheat_death",
+"it gains a Frenzy token instead"
+],
+[
+"tribal",
+"FELLGOR RAVAGER"
+],
+[
+"stat_loss",
+"Treat its APL characteristic as 1"
+],
+[
+"self_destruct",
+"Its activation ends."
+],
+[
+"scoring_objectives",
+"Scoring VPs from Tac Ops"
+]
+],
+"790754": [
+[
+"piercing",
+"Piercing x"
+]
+],
+"789965": [
+[
+"damage_reduction",
+"On a 5+ that wound is not lost"
+],
+[
+"random_effect",
+"Roll a D6"
+],
+[
+"on_damaged",
+"each time this model loses a wound"
+]
+],
+"789779": [
+[
+"activated",
+"Turn (1AP)"
+],
+[
+"movement",
+"Pivot the active operative up to 45\u00b0"
+]
+],
+"789161": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"activated",
+"it can use this ability"
+],
+[
+"damage_reduction",
+"that wound is not lost"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"immunity",
+"It cannot be injured"
+],
+[
+"temporary_effect",
+"until the end of the Turning Point"
+]
+],
+"790205": [],
+"788800": [
+[
+"on_attack",
+"is shooting, fighting or retaliating"
+],
+[
+"resource_gain",
+"you gain one Wrecka point"
+],
+[
+"coin_economy",
+"You can spend up to 2 of your Wrecka points"
+],
+[
+"tribal",
+"WRECKA KREW"
+]
+],
+"788764": [
+[
+"buff",
+"change one of your normal successes to a critical success"
+]
+],
+"788777": [
+[
+"mark_target",
+"enemy operative that has any of your Markerlight tokens"
+],
+[
+"tribal",
+"PATHFINDER"
+],
+[
+"stacking_keyword",
+"These are cumulative"
+],
+[
+"condition_count",
+"determined by the number of your Markerlight tokens the target has"
+]
+],
+"814982": [
+[
+"damage_reduction",
+"the damage is ignored and the model does not lose a wound"
+],
+[
+"random_effect",
+"Roll a D6"
+],
+[
+"aura",
+"within 6\" of a friendly SYNAPSE model"
+]
+],
+"788703": [
+[
+"once_per_game",
+"can only be selected for use once per battle"
+]
+],
+"790479": [
+[
+"disable",
+"cannot be activated or perform actions"
+],
+[
+"delayed",
+"In the following Firefight phase"
+],
+[
+"random_effect",
+"then roll one D6"
+],
+[
+"cost_set",
+"costs you 0CP"
+],
+[
+"target_choice",
+"Select one enemy operative"
+]
+],
+"789722": [
+[
+"cooldowns",
+"Once per turning point"
+],
+[
+"tribal",
+"XV26 STEALTH BATTLESUIT"
+],
+[
+"modal_choice",
+"select one of the following"
+],
+[
+"buff",
+"that weapon has the Torrent 2\" weapon rule"
+],
+[
+"temporary_buff",
+"Until the end of that action"
+]
+],
+"790653": [
+[
+"piercing",
+"Piercing x"
+],
+[
+"multi_target_attack",
+"Blast x"
+]
+],
+"788792": [
+[
+"start_of_game",
+"When setting up a TEMPESTUS AQUILON kill team before the battle"
+],
+[
+"tribal",
+"TEMPESTUS AQUILON"
+],
+[
+"reserve_bench",
+"can be set up above"
+],
+[
+"movement",
+"you can move your Drop markers up to 4\""
+],
+[
+"turn_number",
+"first and second turning point"
+],
+[
+"placement_rules",
+"Within 3\" of one of your Drop markers"
+],
+[
+"stealth",
+"It\u2019s obscured"
+],
+[
+"self_destruct",
+"operatives still set up above are incapacitated at the end of the second turning point"
+]
+],
+"814900": [
+[
+"on_attack",
+"After this operative uses this weapon"
+],
+[
+"random_effect",
+"roll 2D6"
+],
+[
+"condition_life",
+"remaining wounds"
+],
+[
+"destroy",
+"the target is incapacitated"
+]
+],
+"789744": [
+[
+"buff",
+"You can re-roll failed hit rolls"
+],
+[
+"temporary_effect",
+"in a battle round in which it charged or was charged"
+]
+],
+"790723": [
+[
+"damage_reduction",
+"each of your blocks can be allocated to block two unresolved successes"
+],
+[
+"multi_target_attack",
+"Blast x"
+]
+],
+"814729": [
+[
+"damage",
+"The target suffers 3 mortal wounds"
+]
+],
+"816512": [
+[
+"damage_reduction",
+"one additional dice can be retained as a successful normal save as a result of Cover"
+]
+],
+"789801": [
+[
+"debuff",
+"subtract 1 from hit rolls"
+],
+[
+"temporary_effect",
+"Until the start of the next Psychic phase"
+],
+[
+"target_choice",
+"select an enemy model within 12\" of and visible to the psyker"
+]
+],
+"790329": [
+[
+"reactions",
+"performs an Overwatch action"
+],
+[
+"piercing",
+"AP1"
+]
+],
+"789788": [
+[
+"suppress",
+"cannot fire Overwatch"
+],
+[
+"stat_loss",
+"must subtract 1 from its hit rolls"
+],
+[
+"temporary_effect",
+"Until the start of the next Psychic phase"
+]
+],
+"789731": [
+[
+"damage_reduction",
+"on a 5+ the model does not lose that wound"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"on_damaged",
+"Each time a model with this ability loses a wound"
+]
+],
+"790814": [
+[
+"stealth",
+"can perform the Charge action while it has a Conceal order"
+],
+[
+"on_attack",
+"Whenever this operative performs the Fight action"
+],
+[
+"extra_turn",
+"it can immediately perform a free Dash or Fall Back action afterwards"
+],
+[
+"activated",
+"Assassinate (2AP)"
+],
+[
+"attack_now",
+"immediately perform a free Fight action"
+],
+[
+"first_strike",
+"(before your opponent)"
+],
+[
+"mark_target",
+"that enemy operative gains one of your Soulsight tokens"
+],
+[
+"buff",
+"its Sanctus bio-dagger has the Brutal and Balanced weapon rules"
+],
+[
+"play_restriction",
+"cannot perform this action while it has an Engage order"
+]
+],
+"790086": [
+[
+"piercing",
+"AP2"
+],
+[
+"multi_target_attack",
+"Blast \u2b24"
+]
+],
+"788761": [
+[
+"condition_count",
+"a number of times in the battle equal to *x*"
+],
+[
+"exhaust",
+"they no longer have it"
+]
+],
+"790627": [
+[
+"zone_of_control",
+"performs the Fall Back action while within control range of this operative"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"suppress",
+"that enemy operative cannot perform that action"
+],
+[
+"on_kill",
+"it incapacitated an enemy operative during that sequence"
+],
+[
+"heal",
+"it regains D3+3 lost wounds"
+]
+],
+"816530": [
+[
+"type_grant",
+"it gains the LEADER keyword"
+],
+[
+"extra_turn",
+"activate that operative"
+],
+[
+"tribal",
+"VETERAN GUARDSMAN"
+]
+],
+"789149": [
+[
+"stealth",
+"it is always treated as having a Conceal order"
+],
+[
+"cost_reduction",
+"for one less action point"
+]
+],
+"789574": [
+[
+"cooldowns",
+"Once per turning point"
+],
+[
+"on_enemy_enter",
+"when an enemy operative ends the Charge action with friendly HIEROTEK CIRCLE operatives within its control range"
+],
+[
+"damage",
+"inflict D3+1 damage"
+],
+[
+"tribal",
+"HIEROTEK CIRCLE"
+]
+],
+"790115": [
+[
+"aura",
+"within 2\u2b24 of this operative"
+],
+[
+"protection",
+"you can re-roll one of your defence dice"
+],
+[
+"cooldowns",
+"Once per Turning Point"
+],
+[
+"cost_reduction",
+"for one less action point"
+],
+[
+"activated",
+"Voltagheist Field (0AP)"
+],
+[
+"temporary_effect",
+"Until the end of the Turning Point"
+],
+[
+"on_enemy_enter",
+"each time an enemy operative ends a move within \u2b24 of this operative"
+],
+[
+"damage",
+"inflict D6 mortal wounds"
+],
+[
+"random_effect",
+"D6 mortal wounds"
+],
+[
+"buff",
+"gains the Lethal 4+ special rule"
+],
+[
+"multi_target_attack",
+"Splash 1"
+],
+[
+"tribal",
+"ELUCIDIAN STARSTRIDERS"
+],
+[
+"play_restriction",
+"cannot perform this action while within Engagement Range of an enemy operative"
+]
+],
+"789248": [
+[
+"buff",
+"gains the Balanced special rule"
+]
+],
+"790276": [
+[
+"stealth",
+"always treated as having a Conceal order"
+],
+[
+"activated",
+"Grappling Hook (1AP)"
+],
+[
+"movement",
+"Perform a free Normal Move action"
+],
+[
+"terrain",
+"terrain feature"
+]
+],
+"814762": [
+[
+"play_restriction",
+"cannot move more 3\u2b24 in the same activation in which it performs the Shoot action"
+]
+],
+"814802": [
+[
+"territory_trigger",
+"wholly within your opponent\u2019s territory"
+]
+],
+"789593": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"tribal",
+"INQUISITORIAL AGENT"
+],
+[
+"combo_sequence",
+"if you\u2019ve used the Quarry strategy ploy during this turning point"
+],
+[
+"mark_target",
+"select a new enemy operative to be your quarry"
+],
+[
+"temporary_effect",
+"until the end of the turning point"
+]
+],
+"790144": [
+[
+"cooldowns",
+"Once in each Strategy phase"
+],
+[
+"tribal",
+"FELLGOR RAVAGER"
+],
+[
+"extra_turn",
+"can immediately perform a free Dash action"
+],
+[
+"scope_multi",
+"all friendly FELLGOR RAVAGER operatives Visible to and within \u2b24 of it"
+],
+[
+"piercing",
+"AP1"
+]
+],
+"790055": [
+[
+"piercing",
+"AP1"
+],
+[
+"multi_target_attack",
+"Blast \u2b24"
+]
+],
+"814753": [
+[
+"on_attack",
+"Each time this operative fights in combat"
+],
+[
+"buff",
+"this weapon gains the Ceaseless special rule"
+],
+[
+"temporary_effect",
+"for that combat"
+]
+],
+"814785": [
+[
+"on_attack",
+"Each time after this operative fights in combat"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"damage",
+"suffers 2 mortal wounds"
+]
+],
+"790530": [
+[
+"activated",
+"Accelerated Appraisal (1AP)"
+],
+[
+"modal_choice",
+"Place either your Attack or Defence marker"
+],
+[
+"tribal",
+"HEARTHKYN SALVAGER"
+],
+[
+"buff",
+"that friendly operative's weapons have the Balanced weapon rule"
+],
+[
+"protection",
+"you can re-roll one of your defence dice"
+],
+[
+"turn_start",
+"In the Ready step of the next Strategy phase"
+],
+[
+"play_restriction",
+"cannot perform this action while within control range of an enemy operative"
+]
+],
+"788818": [
+[
+"multi_attack",
+"it can make an extra shot with the same weapon"
+]
+],
+"790926": [
+[
+"death_trigger",
+"If this model is taken out of action in the Fight phase"
+],
+[
+"attack_now",
+"you can immediately fight with them"
+],
+[
+"combat_start",
+"At the start of each Fight phase"
+],
+[
+"stances",
+"you must choose a combat stance for this model to adopt"
+],
+[
+"stat_gain",
+"add 1 to wound rolls for the model's attacks for that phase"
+],
+[
+"temporary_effect",
+"for that phase"
+],
+[
+"target_choice",
+"pick a friendly model within 8\" of the psyker"
+]
+],
+"789848": [
+[
+"immunity",
+"automatically passes Nerve tests"
+],
+[
+"temporary_effect",
+"Until the start of the next Psychic phase"
+],
+[
+"target_choice",
+"select a friendly model within 18\" of the psyker"
+]
+],
+"790577": [
+[
+"cost_set",
+"costs you 0CP"
+],
+[
+"tribal",
+"KASRKIN"
+],
+[
+"activated",
+"Auspex Scan (1AP)"
+],
+[
+"mark_target",
+"that enemy operative is being scanned"
+],
+[
+"play_restriction",
+"cannot perform this action while within control range of an enemy operative"
+]
+],
+"790620": [
+[
+"ranged",
+"Range x"
+]
+],
+"789515": [
+[
+"transform",
+"when they turn into another operative type"
+],
+[
+"tribal",
+"CHAOS CULT"
+],
+[
+"traits_quirks",
+"ACCURSED GIFTS are rules that friendly CHAOS CULT operatives gain"
+]
+],
+"790419": [
+[
+"piercing",
+"Piercing x"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"ranged",
+"Range x"
+]
+],
+"816495": [
+[
+"damage_reduction",
+"one additional dice can be retained as a successful normal save as a result of Cover"
+]
+],
+"790451": [
+[
+"damage_reduction",
+"you can retain one additional cover save"
+],
+[
+"immunity",
+"Ignore the Saturate weapon rule"
+]
+],
+"789083": [
+[
+"aura",
+"within \u2b1f of this operative"
+],
+[
+"debuff",
+"your opponent must re-roll one of their successful critical hits"
+]
+],
+"790727": [
+[
+"activated",
+"Slingshot (1AP)"
+],
+[
+"movement",
+"Remove this operative from the killzone and set it back up wholly within 6\" horizontally"
+],
+[
+"terrain",
+"terrain feature"
+],
+[
+"play_restriction",
+"cannot perform this action while within control range of an enemy operative"
+]
+],
+"814806": [
+[
+"damage_reduction",
+"each of your blocks can be allocated to block two unresolved successes"
+]
+],
+"789187": [
+[
+"stat_gain",
+"This operative has a 4+ Save characteristic"
+]
+],
+"789470": [
+[
+"aura",
+"While an enemy operative is Visible to and within \u2b1f of a friendly operative with this ability"
+]
+],
+"814867": [
+[
+"aura",
+"Whenever a friendly HUNTER CLADE INFILTRATOR operative is within 3\" of this operative"
+],
+[
+"tribal",
+"HUNTER CLADE INFILTRATOR"
+],
+[
+"immunity",
+"cannot be selected as a valid target"
+]
+],
+"790529": [
+[
+"activated",
+"Signal (1AP)"
+],
+[
+"assists_support",
+"SUPPORT"
+],
+[
+"stat_gain",
+"add 1 to its APL stat"
+],
+[
+"tribal",
+"HEARTHKYN SALVAGER"
+],
+[
+"disable",
+"it cannot be activated until each enemy operative without one is expended"
+],
+[
+"play_restriction",
+"cannot perform this action while within control range of an enemy operative"
+]
+],
+"790433": [
+[
+"play_restriction",
+"cannot use any weapons that aren\u2019t on its datacard"
+],
+[
+"immunity",
+"it cannot be selected as a valid target"
+],
+[
+"cost_reduction",
+"Fall Back action for 1 less AP"
+],
+[
+"extra_turn",
+"you must then activate one other ready friendly BROOD BROTHER PSYCHIC FAMILIAR operative"
+],
+[
+"tribal",
+"BROOD BROTHER PSYCHIC FAMILIAR"
+],
+[
+"movement",
+"It can move through enemy operatives"
+]
+],
+"790980": [
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"damage_reduction",
+"on a 5+ the model does not lose that wound"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"on_damaged",
+"each time a model with a shield generator loses a wound"
+]
+],
+"788796": [
+[
+"movement",
+"remove it from the killzone and set it back up wholly within a distance equal to its Move stat"
+],
+[
+"tribal",
+"VESPID STINGWING"
+]
+],
+"790866": [
+[
+"aura",
+"within 6\" of any models equipped with an Instrument of Khorne"
+],
+[
+"stat_gain",
+"Add 1 to Advance and charge rolls"
+],
+[
+"tribal",
+"BLOODLETTERS"
+]
+],
+"788860": [
+[
+"combat_start",
+"At the start of each Fight phase"
+],
+[
+"random_effect",
+"roll 2 dice"
+],
+[
+"protection",
+"that hit roll fails"
+],
+[
+"temporary_effect",
+"Until the end of the phase"
+]
+],
+"790166": [
+[
+"piercing",
+"AP1"
+],
+[
+"ranged",
+"Rng \u2b1f"
+],
+[
+"multi_target_attack",
+"Splash 1"
+]
+],
+"790531": [
+[
+"activated",
+"Spot (1AP)"
+],
+[
+"assists_support",
+"SUPPORT"
+],
+[
+"temporary_effect",
+"Until the end of the turning point"
+],
+[
+"buff",
+"ranged weapons have the Seek Light weapon rule"
+],
+[
+"mark_target",
+"Place your Pan Spectral Scan marker in the killzone"
+],
+[
+"play_restriction",
+"cannot perform this action while within control range of an enemy operative"
+],
+[
+"tribal",
+"HEARTHKYN SALVAGER"
+]
+],
+"789504": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"tribal",
+"CANOPTEK CIRCLE"
+],
+[
+"type_grant",
+"is treated as your fourth OBELISK NODE marker"
+],
+[
+"temporary_effect",
+"until the end of that activation/counteraction"
+]
+],
+"789494": [
+[
+"cooldowns",
+"Once per turning point"
+],
+[
+"tribal",
+"BLADES OF KHAINE"
+],
+[
+"condition_count",
+"if you roll two or more fails"
+],
+[
+"buff",
+"retain another as a normal success"
+]
+],
+"814770": [
+[
+"trap_secret",
+"Melta Mine token"
+],
+[
+"on_enemy_enter",
+"The first time an enemy operative moves within \u2b24 of this operative's Melta Mine token"
+],
+[
+"aoe_damage",
+"make a shooting attack against each operative within \u2b24 of that token"
+],
+[
+"self_destruct",
+"remove that token"
+]
+],
+"789769": [
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"stat_loss",
+"you must halve the result of the dice rolled when determining how far it Advances"
+]
+],
+"788716": [
+[
+"saving_throws",
+"successful saves are determined differently"
+],
+[
+"piercing",
+"Invulnerable saves cannot be used"
+]
+],
+"789639": [
+[
+"cooldowns",
+"Once per turning point"
+],
+[
+"extra_turn",
+"you can use up to two ACTS OF FAITH during a sequence"
+],
+[
+"variety_payoff",
+"each one must be different"
+],
+[
+"rule_change",
+"This takes precedence over the normal ACTS OF FAITH rules"
+]
+],
+"814967": [
+[
+"death_trigger",
+"If this model is taken out of action in the Fight phase"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"counterattack",
+"the enemy model that made the attack that took this model out of action suffers 1 mortal wound"
+]
+],
+"816492": [
+[
+"activated",
+"Markerlight (1AP)"
+],
+[
+"mark_target",
+"That enemy operative gains one Markerlight token"
+],
+[
+"temporary_effect",
+"until the end of the Turning Point"
+],
+[
+"play_restriction",
+"cannot perform this action within Engagement Range of enemy operatives"
+],
+[
+"buff",
+"you can re-roll one of your attack dice"
+]
+],
+"789796": [
+[
+"stat_gain",
+"Add 1 to wound rolls you make forthat model's Melee weapons"
+],
+[
+"temporary_effect",
+"until the start of the next Psychic phase"
+],
+[
+"target_choice",
+"pick a friendly model within 12\" of the psyker"
+]
+],
+"790578": [
+[
+"damage_reduction",
+"you can retain one additional cover save"
+],
+[
+"immunity",
+"Ignore the Saturate weapon rule"
+],
+[
+"activated",
+"Auspex Scan (1AP)"
+],
+[
+"mark_target",
+"whenever a friendly INQUISITORIAL AGENT operative is shooting an enemy operative within 8\" of this operative, that enemy operative cannot be obscured"
+],
+[
+"tribal",
+"INQUISITORIAL AGENT"
+],
+[
+"once_per_game",
+"only use this weapon the first time it\u2019s performing the Shoot action during the battle"
+]
+],
+"814833": [
+[
+"extra_turn",
+"you can activate a ready friendly EXACTION SQUAD R-VR CYBER-MASTIFF operative at the same time"
+],
+[
+"tribal",
+"EXACTION SQUAD R-VR CYBER-MASTIFF"
+]
+],
+"790322": [],
+"790361": [
+[
+"piercing",
+"AP1"
+],
+[
+"ranged",
+"Rng \u2b1f"
+],
+[
+"multi_target_attack",
+"Torrent \u2b24"
+]
+],
+"790812": [
+[
+"extra_turn",
+"you must then activate one other ready friendly WYRMBLADE WARRIOR operative"
+],
+[
+"tribal",
+"WYRMBLADE WARRIOR"
+]
+],
+"789986": [
+[
+"stat_gain",
+"Add 1 to this model's Wounds characteristic"
+]
+],
+"816491": [
+[
+"protection",
+"this operative is always treated as being in Cover"
+],
+[
+"stealth",
+"it is always treated as having a Conceal order"
+]
+],
+"788689": [
+[
+"start_of_game",
+"You start the battle with a pool of 10 Elite points"
+],
+[
+"resource_gain",
+"add 2 Elite points to your pool"
+],
+[
+"turn_start",
+"In each Strategy phase"
+],
+[
+"coin_economy",
+"you can spend one or more of your Elite points"
+],
+[
+"stat_gain",
+"add 1 to the dice result"
+],
+[
+"tribal",
+"KASRKIN"
+]
+],
+"790489": [
+[
+"activated",
+"Energise (1AP)"
+],
+[
+"buff",
+"all profiles of its accelerator bow have the Lethal 5+ weapon rule"
+],
+[
+"temporary_effect",
+"Until the end of the turning point"
+],
+[
+"play_restriction",
+"cannot perform this action while within control range of an enemy operative"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Piercing x"
+]
+],
+"814827": [
+[
+"on_attack",
+"Whenever this operative performs the Fight action with this weapon profile"
+],
+[
+"multi_attack",
+"it can immediately perform a free Fight action afterwards"
+]
+],
+"789286": [
+[
+"buff",
+"it can move an additional \u25b2 for that action"
+]
+],
+"814854": [
+[
+"start_of_game",
+"At the end of the Select Operatives step"
+],
+[
+"modal_choice",
+"select one of the following COMBAT DRUG rules"
+],
+[
+"tribal",
+"HAND OF THE ARCHON"
+],
+[
+"on_damaged",
+"Whenever an attack dice inflicts damage of 3 or more on this operative"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"damage_reduction",
+"subtract 1 from that inflicted damage"
+],
+[
+"turn_start",
+"In the Ready step of each Strategy phase"
+],
+[
+"resource_gain",
+"gain one of your Pain tokens"
+],
+[
+"immunity",
+"ignore any changes to this operative\u2019s Move stat from being injured"
+]
+],
+"789667": [
+[
+"targeting_rules",
+"Whenever your opponent is selecting a valid target"
+],
+[
+"terrain",
+"Light terrain"
+]
+],
+"790672": [
+[
+"multi_attack",
+"can perform two Fight actions during each of its activations"
+]
+],
+"788918": [
+[
+"activated",
+"Use this Aspect Technique"
+],
+[
+"tribal",
+"DIRE AVENGER"
+],
+[
+"damage_reduction",
+"Select one of your failed saves to be retained as a successful normal save instead"
+]
+],
+"790931": [],
+"790409": [
+[
+"immunity",
+"ignore the Saturate weapon rule"
+],
+[
+"damage_reduction",
+"retain two cover saves"
+],
+[
+"activated",
+"Optics (1AP)"
+],
+[
+"play_restriction",
+"cannot perform this action while within control range of an enemy operative"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"ranged",
+"Range x"
+]
+],
+"816520": [
+[
+"turn_start",
+"In the Ready Operatives step of each Turning Point"
+],
+[
+"regeneration",
+"this operative regains up to 2 lost wounds"
+],
+[
+"multi_target_attack",
+"Splash x"
+],
+[
+"ranged",
+"Rng x"
+],
+[
+"piercing",
+"APx"
+]
+],
+"789640": [
+[
+"tribal",
+"NOVITIATE"
+],
+[
+"coin_economy",
+"if you spend a Faith point"
+],
+[
+"piercing",
+"Piercing Crits 1 weapon rule"
+],
+[
+"temporary_effect",
+"until the end of that sequence"
+]
+],
+"814782": [
+[
+"target_choice",
+"Select one enemy operative"
+],
+[
+"stat_loss",
+"Subtract 1 from its APL"
+]
+],
+"790616": [
+[
+"activated",
+"Get It Dun! (1AP)"
+],
+[
+"assists_support",
+"SUPPORT"
+],
+[
+"tribal",
+"KOMMANDO"
+],
+[
+"stat_gain",
+"add 1 to its APL stat"
+],
+[
+"temporary_effect",
+"Until the end of that operative\u2019s next activation"
+],
+[
+"multi_attack",
+"can perform two Fight actions during its activation"
+],
+[
+"play_restriction",
+"cannot perform this action while within control range of an enemy operative"
+]
+],
+"790949": [
+[
+"turn_start",
+"At the start of the Movement phase"
+],
+[
+"target_choice",
+"pick one other GRETCHIN model"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"damage",
+"suffers 1 mortal wound"
+],
+[
+"buff",
+"treat that model as being armed with stikkbombs"
+],
+[
+"aura",
+"While this model is on the battlefield"
+],
+[
+"stat_gain",
+"add 1 to hit rolls"
+],
+[
+"tribal",
+"if every model in your kill team is a GRETCHIN"
+]
+],
+"790377": [
+[
+"piercing",
+"AP1"
+],
+[
+"ranged",
+"Rng \u2b1f"
+]
+],
+"790331": [],
+"788671": [
+[
+"damage_reduction",
+"Retain one additional dice as a successful normal save as a result of Cover"
+],
+[
+"modal_choice",
+"you can do one of the following"
+],
+[
+"immunity",
+"the No Cover special rule has no effect"
+]
+],
+"814959": [
+[
+"play_restriction",
+"cannot use this weapon during an activation in which it moved more than 3\""
+]
+],
+"814971": [
+[
+"on_kill",
+"takes an enemy model out of action in the Shooting phase"
+]
+],
+"790270": [
+[
+"piercing",
+"AP2"
+],
+[
+"ranged",
+"Rng \u2b1f"
+]
+],
+"790808": [
+[
+"play_restriction",
+"cannot perform any actions other than Charge, Dash, Fight, Reposition and Shoot"
+],
+[
+"death_trigger",
+"Whenever this operative is incapacitated"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"fodder",
+"Expendable"
+]
+],
+"788788": [
+[
+"tribal",
+"SACTIFIER"
+],
+[
+"type_grant",
+"that operative has the ORATOR keyword"
+],
+[
+"aura",
+"Whenever a friendly SANCTIFIER operative is within 3\" of a friendly ORATOR operative"
+],
+[
+"damage_reduction",
+"inflicts 1 less damage on it"
+],
+[
+"stat_condition",
+"Normal and Critical Dmg of 4 or more"
+]
+],
+"789782": [
+[
+"cooldowns",
+"Once per turning point"
+],
+[
+"tribal",
+"EXODITE DRAGON MASTER"
+],
+[
+"piercing",
+"Piercing 1 weapon rule"
+],
+[
+"temporary_effect",
+"until the end of that activation"
+]
+],
+"789534": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"recycle",
+"you can select one that's already been used during the battle"
+],
+[
+"rule_change",
+"This takes precedence over the normal PRIVATEER SUPPORT ASSET rules"
+]
+],
+"816503": [
+[
+"multi_attack",
+"can perform two Fight actions during its activation"
+]
+],
+"789549": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"tribal",
+"GELLERPOX INFECTED"
+],
+[
+"buff",
+"select one additional TECHNO-CURSE for that operative to gain"
+],
+[
+"temporary_effect",
+"until the end of the turning point"
+],
+[
+"variety_payoff",
+"it must be different from your existing TECHNO-CURSE"
+]
+],
+"789106": [
+[
+"stat_gain",
+"Add 1 to the Normal Damage characteristic of that weapon"
+]
+],
+"816505": [
+[
+"stealth",
+"perform a Charge action while it has a Conceal order"
+]
+],
+"789909": [
+[
+"stat_gain",
+"add 1 to Injury rolls"
+]
+],
+"788808": [
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"cheat_death",
+"On a roll of 6 they are restored to 1 wound remaining"
+],
+[
+"play_restriction",
+"cannot Retreat or Fall Back unless there is a COMMANDER"
+]
+],
+"788993": [
+[
+"zone_control",
+"determining control of an objective marker"
+],
+[
+"stat_gain",
+"treat this operative's APL characteristic as being 1 higher"
+]
+],
+"789066": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"activated",
+"you can use this ability"
+],
+[
+"stat_gain",
+"add 1 to this operative's APL"
+]
+],
+"788739": [
+[
+"tribal",
+"DEATHWATCH"
+],
+[
+"multi_attack",
+"it can perform either two Shoot or two Fight actions"
+],
+[
+"reactions",
+"can counteract regardless of its order"
+],
+[
+"extra_turn",
+"it can perform an additional 1AP action for free"
+],
+[
+"play_restriction",
+"you cannot perform a Fight and Shoot action during the same counteraction"
+]
+],
+"790785": [
+[
+"multi_target_attack",
+"Torrent x"
+]
+],
+"788727": [
+[
+"start_of_game",
+"When selecting your kill team for the battle"
+],
+[
+"tribal",
+"VOID-DANCER TROUPE"
+],
+[
+"quests",
+"Keep a Performance tally"
+],
+[
+"condition_count",
+"When you add the fourth mark to your Performance tally"
+],
+[
+"resource_gain",
+"You gain 1 Command Point"
+],
+[
+"information",
+"reveal it to your opponent"
+]
+],
+"790043": [
+[
+"piercing",
+"AP1"
+],
+[
+"multi_target_attack",
+"Blast \u2b24"
+],
+[
+"ranged",
+"Rng \u2b1f"
+]
+],
+"789883": [
+[
+"aura",
+"enemy models within 6\" of this model"
+]
+],
+"789983": [
+[
+"damage_reduction",
+"Halve the Damage characteristic of each weapon used to attack this model"
+]
+],
+"789195": [
+[
+"stat_gain",
+"Add 1 to this operative's Wounds characteristic"
+]
+],
+"789569": [
+[
+"cooldowns",
+"Once per turning point"
+],
+[
+"tribal",
+"HERNKYN YAEGIR"
+],
+[
+"buff",
+"that weapon has the Blast 1\" weapon rule"
+],
+[
+"temporary_effect",
+"until the end of that action"
+]
+],
+"790324": [
+[
+"activated",
+"System Jam (1AP)"
+],
+[
+"target_choice",
+"Select one enemy operative Visible to this operative"
+],
+[
+"stat_loss",
+"Subtract 1 from its APL"
+],
+[
+"play_restriction",
+"cannot perform this action if it has a Conceal order"
+]
+],
+"790089": [
+[
+"activated",
+"Faolchu (1AP)"
+],
+[
+"target_choice",
+"Select one enemy operative with a Conceal order"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"condition_count",
+"adding one to the result for each of the following"
+],
+[
+"tribal",
+"CORSAIR VOIDSCARRED"
+],
+[
+"mark_target",
+"treat that enemy operative as if it has an Engage order"
+],
+[
+"temporary_effect",
+"until the end of the Turning Point"
+],
+[
+"play_restriction",
+"cannot perform this action if it is within Engagement Range of an enemy operative"
+]
+],
+"788989": [
+[
+"on_attack",
+"Each time this operative fights in combat"
+],
+[
+"buff",
+"you can re-roll one of your attack dice"
+]
+],
+"789488": [
+[
+"on_attack",
+"Whenever this operative performs the Fight action"
+],
+[
+"damage",
+"inflict 2 damage"
+]
+],
+"789445": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"reactions",
+"when a shooting attack is made against this operative"
+],
+[
+"saving_throws",
+"3+ invulnerable save"
+],
+[
+"temporary_effect",
+"until the end of the Turning Point"
+]
+],
+"814899": [
+[
+"damage_reduction",
+"each of its blocks can be allocated to block two unresolved successes"
+],
+[
+"damage_reduction",
+"weapons that have the Piercing 1 weapon rule have the Piercing Crits 1 weapon rule instead"
+]
+],
+"789492": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"on_damaged",
+"when an attack dice inflicts Normal Dmg on a friendly BLADES OF KHAINE operative"
+],
+[
+"shield",
+"you can ignore that inflicted damage"
+],
+[
+"tribal",
+"BLADES OF KHAINE"
+]
+],
+"790002": [
+[
+"buff",
+"Re-roll hit and wound rolls of 1"
+]
+],
+"790107": [
+[
+"piercing",
+"AP2"
+],
+[
+"ranged",
+"Rng \u2b1f"
+],
+[
+"multi_target_attack",
+"Torrent \u2b24"
+]
+],
+"790793": [
+[
+"on_attack",
+"The first time this operative performs the Fight action"
+],
+[
+"multi_attack",
+"it can immediately perform a free Fight action afterwards"
+],
+[
+"target_choice",
+"you don't have to select the same enemy operative to fight against"
+]
+],
+"790231": [],
+"814735": [
+[
+"buff",
+"Add \u2b24 to the distance"
+]
+],
+"790890": [],
+"789217": [
+[
+"damage_reduction",
+"subtract 1 from both Damage characteristics of that enemy operative's weapons"
+]
+],
+"788769": [
+[
+"stealth",
+"perform the Charge action while it has a Conceal order"
+],
+[
+"tribal",
+"KOMMANDO"
+]
+],
+"790182": [
+[
+"on_damaged",
+"Each time this operative would lose a wound as a result of a ranged weapon"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"damage_reduction",
+"on a 4+, that wound is not lost"
+],
+[
+"activated",
+"Vayr-3 Utility Grenade (1AP)"
+],
+[
+"modal_choice",
+"select one of the following effects"
+],
+[
+"temporary_effect",
+"until the end of the Turning Point"
+],
+[
+"disruption",
+"It costs operatives an additional \u2b24 to move"
+],
+[
+"aura",
+"While an operative is within \u2b1b of your Utility Grenade token"
+],
+[
+"buff",
+"its ranged weapons gain the Rng \u2b1f special rule"
+],
+[
+"play_restriction",
+"cannot perform this action while within Engagement Range of an enemy operative"
+],
+[
+"piercing",
+"AP1"
+],
+[
+"multi_target_attack",
+"Blast \u25b2"
+],
+[
+"ranged",
+"Rng \u2b24"
+]
+],
+"790501": [
+[
+"first_strike",
+"you can resolve one of your successes before the normal order"
+],
+[
+"activated",
+"Cleaver Flurry (2AP)"
+],
+[
+"movement",
+"Perform a free Reposition action with this operative"
+],
+[
+"aoe_damage",
+"Inflict D3+1 damage on each enemy operative"
+],
+[
+"random_effect",
+"D3+1"
+],
+[
+"play_restriction",
+"cannot perform this action while it has a Conceal order"
+]
+],
+"790320": [
+[
+"aura",
+"if it is within \u2b1f of this operative"
+],
+[
+"suppress",
+"it cannot generate more than 2AP for that activation"
+],
+[
+"disruption",
+"1 additional AP must be subtracted to perform that action"
+]
+],
+"790649": [
+[
+"start_of_game",
+"When setting up this operative before the battle"
+],
+[
+"reserve_bench",
+"set it up in the warp instead"
+],
+[
+"turn_number",
+"In the first Firefight phase"
+],
+[
+"delayed",
+"In the second Firefight phase"
+],
+[
+"placement_rules",
+"wholly within your drop zone"
+],
+[
+"play_restriction",
+"you cannot spend more than 2AP for it"
+],
+[
+"tribal",
+"MURDERWING"
+]
+],
+"789585": [
+[
+"assists_support",
+"SUPPORT"
+],
+[
+"target_choice",
+"Select one enemy operative visible to this operative"
+],
+[
+"temporary_effect",
+"Until the end of the turning point"
+],
+[
+"tribal",
+"HUNTER CLADE"
+],
+[
+"buff",
+"ranged weapons have the Seek Light weapon rule"
+],
+[
+"play_restriction",
+"cannot perform this action while within control range of an enemy operative"
+]
+],
+"789923": [
+[
+"game_end_trigger",
+"At the end of any battle in which you were victorious"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"traits_quirks",
+"you gain 1 Intelligence"
+]
+],
+"789191": [
+[
+"activated",
+"Stun Grenade (1AP)"
+],
+[
+"random_effect",
+"Roll one D6"
+],
+[
+"stat_loss",
+"subtract 1 from that operative's APL"
+],
+[
+"scope_multi",
+"each operative within \u2b24 of that point"
+],
+[
+"once_per_game",
+"can only perform this action once"
+],
+[
+"play_restriction",
+"cannot perform this action while within Engagement Range of an enemy operative"
+]
+],
+"789901": [
+[
+"random_effect",
+"Roll a D6"
+],
+[
+"resource_advantage",
+"the Command Points spent on that Tactic are immediately refunded"
+]
+],
+"814813": [
+[
+"on_attack",
+"Whenever this operative is fighting or retaliating with this weapon"
+],
+[
+"resource_gain",
+"you gain one Blooded token"
+]
+],
+"789684": [
+[
+"activated",
+"STRATEGIC GAMBIT"
+],
+[
+"tribal",
+"SPECTRE SQUAD"
+],
+[
+"extra_turn",
+"can immediately perform a free Stun Grenade action"
+],
+[
+"exhaust",
+"you cannot use this equipment for the rest of the battle"
+]
+],
+"790697": [
+[
+"on_attack",
+"Whenever this operative is shooting, fighting or retaliating"
+],
+[
+"on_kill",
+"an enemy operative is incapacitated"
+],
+[
+"resource_advantage",
+"the Faith points spent on that ACT OF FAITH are refunded"
+]
+],
+"788758": [
+[
+"piercing",
+"The defender cannot retain cover saves"
+]
+],
+"789762": [
+[
+"saving_throws",
+"5+ invulnerable save"
+]
+],
+"788744": [
+[
+"play_restriction",
+"cannot perform any actions other than Charge, Dash, Fall Back, Fight, Reposition and Shoot"
+],
+[
+"cost_reduction",
+"Fall Back action for 1 less AP"
+],
+[
+"fodder",
+"are ignored for your opponent\u2019s kill/elimination op"
+],
+[
+"movement",
+"Operatives can move through MUTOID VERMIN operatives"
+],
+[
+"zone_of_control",
+"enemy operatives can leave MUTOID VERMIN operatives' control range"
+]
+],
+"790547": [
+[
+"piercing",
+"Piercing x"
+],
+[
+"ranged",
+"Range x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+]
+],
+"789374": [
+[
+"movement",
+"ascends or descends a terrain feature while climbing"
+],
+[
+"terrain",
+"terrain feature"
+]
+],
+"788821": [
+[
+"random_effect",
+"roll a D3 (instead of a D6)"
+],
+[
+"stress_morale",
+"When you take a Nerve test for a model in your kill team"
+]
+],
+"789449": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"turn_start",
+"at the start of the Strategy phase"
+]
+],
+"790755": [
+[
+"assists_support",
+"if a friendly LOADER operative is within its control range"
+],
+[
+"buff",
+"all profiles of its missile launcher have the Heavy (Dash only) weapon rule"
+],
+[
+"temporary_effect",
+"until the end of that activation"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Piercing x"
+]
+],
+"814792": [
+[
+"type_grant",
+"it gains the LEADER keyword"
+]
+],
+"790674": [
+[
+"autonomous_units",
+"This NPO fight if necessary"
+],
+[
+"targeting_rules",
+"Whenever you're selecting a valid target"
+],
+[
+"stat_gain",
+"treat this operative's APL stat as 3"
+],
+[
+"zone_control",
+"determining control of a marker"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+]
+],
+"816472": [
+[
+"saving_throws",
+"5+ invulnerable save"
+],
+[
+"piercing",
+"APx"
+],
+[
+"ranged",
+"Rng x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+]
+],
+"789738": [
+[
+"saving_throws",
+"6+ invulnerable save"
+]
+],
+"814845": [
+[
+"tribal",
+"GOREMONGER"
+],
+[
+"start_of_game",
+"They start the battle at half"
+],
+[
+"on_kill",
+"incapacitates an operative within its control range"
+],
+[
+"resource_gain",
+"you can increase its GORE TANK"
+],
+[
+"coin_economy",
+"uses a SANGUAVITAE rule, you must decrease its GORE TANK"
+]
+],
+"790776": [
+[
+"cooldowns",
+"Once during each enemy operative\u2019s activation"
+],
+[
+"on_enemy_enter",
+"as soon as it\u2019s within 2\" of one of your Neutron Fallout markers"
+],
+[
+"damage",
+"inflict D3 damage on it"
+],
+[
+"random_effect",
+"D3 damage"
+],
+[
+"multi_target_attack",
+"Blast x"
+]
+],
+"789751": [
+[
+"target_choice",
+"choose a model within 12\" of the psyker"
+],
+[
+"stat_gain",
+"add 1 to saving throws made for that model"
+],
+[
+"stat_loss",
+"must subtract 1 from saving throws made for that model"
+],
+[
+"temporary_effect",
+"until the next Psychic phase"
+]
+],
+"814882": [
+[
+"play_restriction",
+"cannot use this weapon in an activation or counteraction in which it moved"
+]
+],
+"790537": [
+[
+"buff",
+"this weapon has the Ceaseless weapon rule"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Piercing x"
+]
+],
+"790227": [
+[
+"cooldowns",
+"Once per Turning Point"
+],
+[
+"cost_reduction",
+"for one less AP"
+]
+],
+"790673": [
+[
+"piercing",
+"Piercing x"
+],
+[
+"ranged",
+"Range x"
+]
+],
+"788932": [
+[
+"reactions",
+"performs the Overwatch action"
+]
+],
+"790124": [
+[
+"cooldowns",
+"Once per Turning Point"
+],
+[
+"cost_reduction",
+"for one less action point"
+],
+[
+"activated",
+"Veriscant (1AP)"
+],
+[
+"target_choice",
+"Select one enemy operative in this operative's Line of Sight"
+],
+[
+"temporary_effect",
+"Until the end of the Turning Point"
+],
+[
+"tribal",
+"EXACTION SQUAD"
+],
+[
+"buff",
+"you can retain one of your successful normal hits as a critical hit instead"
+],
+[
+"play_restriction",
+"cannot perform this action while within Engagement Range of an enemy operative"
+]
+],
+"789271": [
+[
+"play_restriction",
+"cannot move more than 3\u2b24 in the same activation"
+]
+],
+"789698": [
+[
+"cooldowns",
+"Once per turning point"
+],
+[
+"tribal",
+"VOID-DANCER TROUPE"
+],
+[
+"buff",
+"that weapon has the Devastating 1 weapon rule"
+],
+[
+"temporary_effect",
+"until the end of that action"
+]
+],
+"788878": [
+[
+"buff",
+"You can re-roll a single failed hit roll and a single failed wound roll in each phase"
+]
+],
+"790157": [
+[
+"zone_of_control",
+"would perform a Fall Back action while within Engagement Range of this operative"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stat_condition",
+"Wounds characteristic of 8 or less"
+],
+[
+"suppress",
+"that enemy operative cannot Fall Back"
+],
+[
+"multi_attack",
+"you can fight in combat with this weapon profile against another enemy operative"
+],
+[
+"ranged",
+"Rng \u2b1b"
+]
+],
+"788996": [
+[
+"buff",
+"this weapon has the Lethal 4+ special rule for that attack"
+],
+[
+"stat_condition",
+"Save characteristic of 3+ or better"
+]
+],
+"789024": [
+[
+"reactions",
+"performs an Overwatch action"
+]
+],
+"790176": [
+[
+"piercing",
+"AP2"
+],
+[
+"multi_target_attack",
+"Blast \u2b24"
+]
+],
+"790121": [
+[
+"cooldowns",
+"Once per Turning Point"
+],
+[
+"tribal",
+"EXACTION SQUAD"
+],
+[
+"revive",
+"this operative can revive it"
+],
+[
+"extra_turn",
+"can then perform a free Dash action"
+],
+[
+"stat_loss",
+"Subtract 1 from both operatives' API"
+],
+[
+"activated",
+"Medi-kit (1AP)"
+],
+[
+"heal",
+"regains 2D3 lost wounds"
+],
+[
+"random_effect",
+"2D3"
+],
+[
+"play_restriction",
+"cannot perform this action while within Engagement Range of an enemy operative"
+]
+],
+"789436": [
+[
+"extra_turn",
+"activate that operative"
+],
+[
+"tribal",
+"VETERAN GUARDSMAN"
+]
+],
+"789896": [
+[
+"buff",
+"You can re-roll any failed charge rolls"
+]
+],
+"789293": [
+[
+"on_kill",
+"Each time this operative incapacitates an enemy operative"
+],
+[
+"heal",
+"regain a number of lost wounds"
+],
+[
+"tribal",
+"MANDRAKE"
+]
+],
+"788700": [
+[
+"piercing",
+"enemy operatives are not in Cover"
+]
+],
+"788834": [
+[
+"stress_morale",
+"When an opponent takes a Nerve test for a model from their kill team"
+],
+[
+"condition_count",
+"for each of your models"
+],
+[
+"adjacency",
+"within 3\" of that model"
+]
+],
+"789726": [
+[
+"stat_loss",
+"Subtract 1 from the Leadership characteristic of DAEMON models"
+],
+[
+"aura",
+"whilst they are within 6\" of any models equipped with a Brazier of Holy Fire"
+],
+[
+"once_per_game",
+"once per battle"
+],
+[
+"reactions",
+"fires Overwatch"
+],
+[
+"target_choice",
+"select one enemy model that is within 12\" of this model"
+],
+[
+"aoe_damage",
+"up to 2 other enemy models that are within 2\" of that model"
+],
+[
+"damage",
+"suffers 1 mortal wound"
+],
+[
+"tribal",
+"DAEMON"
+]
+],
+"790819": [
+[
+"cooldowns",
+"Once per turning point"
+],
+[
+"reactions",
+"when an enemy operative is performing the Shoot action"
+],
+[
+"immunity",
+"Ignore the Piercing weapon rule"
+],
+[
+"stealth",
+"That friendly operative is obscured"
+],
+[
+"tribal",
+"XV26 STEALTH BATTLESUIT"
+],
+[
+"turn_start",
+"In the Ready step of each Strategy phase"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"condition_count",
+"adding 1 to the result for each objective marker"
+],
+[
+"resource_gain",
+"you gain 1CP"
+]
+],
+"789509": [
+[
+"friendly_fire",
+"inflict damage on that operative equal to half the result"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"type_grant",
+"that operative also becomes INSPIRING"
+],
+[
+"cooldowns",
+"per turning point"
+]
+],
+"814808": [
+[
+"stealth",
+"perform the Charge action while it has a Conceal order"
+],
+[
+"death_trigger",
+"If this operative is incapacitated during the Fight action"
+],
+[
+"counterattack",
+"you can strike the enemy operative in that sequence"
+]
+]
+}

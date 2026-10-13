@@ -1,0 +1,750 @@
+{
+"760993": [
+[
+"forced_movement",
+"flips a target's attack direction"
+],
+[
+"ranged",
+"Fire a projectile"
+]
+],
+"760994": [
+[
+"protection",
+"Surround yourself with Smoke to defend against nearby enemies"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760995": [
+[
+"protection",
+"Shield tiles from damage"
+],
+[
+"ranged",
+"launched as artillery projectile"
+],
+[
+"area_templates",
+"shielding all targets in a cross shape"
+],
+[
+"upgrade",
+"Upgrade: +3 Area"
+]
+],
+"760996": [
+[
+"damage_over_time",
+"applies Fire in a line"
+],
+[
+"area_templates",
+"in a line"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760997": [
+[
+"disable",
+"Freezes everything in a line"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Use"
+]
+],
+"760998": [
+[
+"shield",
+"Apply a Shield on nearby tiles"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Size"
+]
+],
+"760999": [
+[
+"forced_movement",
+"Pushes all units in a line"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Unlimited Use"
+]
+],
+"761000": [
+[
+"movement",
+"Jump forward"
+],
+[
+"forced_movement",
+"push adjacent tiles away"
+]
+],
+"761001": [
+[
+"movement",
+"Fly over the targets"
+],
+[
+"suppress",
+"dropping Smoke"
+],
+[
+"upgrade",
+"Upgrade: +1 Range"
+]
+],
+"761002": [
+[
+"disable",
+"Freeze the tile in front"
+],
+[
+"damage_over_time",
+"light the tile behind on Fire"
+],
+[
+"exhaust",
+"Single-use"
+]
+],
+"761003": [
+[
+"self_destruct",
+"Mech explodes, killing self"
+],
+[
+"aoe_damage",
+"anything adjacent to Mech"
+],
+[
+"exhaust",
+"Single-use"
+]
+],
+"761004": [
+[
+"ranged",
+"Call in an air strike on a single tile anywhere on the map"
+],
+[
+"forced_movement",
+"pushes surrounding tiles away"
+],
+[
+"exhaust",
+"Single-use"
+]
+],
+"761005": [
+[
+"suppress",
+"Drops Smoke on 5 tiles"
+],
+[
+"exhaust",
+"Single-use"
+]
+],
+"761006": [
+[
+"heal",
+"Heal all player units"
+],
+[
+"exhaust",
+"Single-use"
+]
+],
+"761007": [
+[
+"aoe_damage",
+"hits every enemy on the map"
+],
+[
+"scope_global",
+"every enemy on the map"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"761008": [
+[
+"forced_movement",
+"Push all units in a single direction"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Unlimited Uses"
+]
+],
+"761009": [
+[
+"disable",
+"Freeze yourself and nearby tiles"
+],
+[
+"friendly_fire",
+"Freeze yourself"
+],
+[
+"exhaust",
+"Single-use"
+],
+[
+"upgrade",
+"Upgrade: +1 Size"
+]
+],
+"761010": [
+[
+"ranged",
+"Throw needles at the enemy"
+],
+[
+"forced_movement",
+"pushing the furthest hit tile"
+],
+[
+"upgrade",
+"Range & Damage"
+]
+],
+"761011": [
+[
+"ranged",
+"Artillery attack"
+],
+[
+"forced_movement",
+"pushes adjacent tiles away"
+],
+[
+"upgrade",
+"Upgrade: +1 Tile"
+]
+],
+"761012": [
+[
+"quests",
+"Each mission has specific objectives"
+],
+[
+"difficulty_modifiers",
+"The number of objectives determines a sector's difficulty"
+],
+[
+"shield",
+"Defensive shields are placed on random buildings"
+],
+[
+"random_effect",
+"Time Pods can randomly appear in missions"
+],
+[
+"resource_gain",
+"They always reward a Reactor Core"
+],
+[
+"run_structure",
+"Missions are issued within each island you defend"
+]
+],
+"761013": [
+[
+"aura",
+"All other Vek receive +1 HP as long as the Psion is living"
+],
+[
+"stat_gain",
+"+1 HP"
+],
+[
+"movement",
+"Flying units can move over any terrain tile"
+]
+],
+"761014": [
+[
+"telegraphed_threats",
+"The tile will appear undamaged during the mission preview"
+],
+[
+"delayed",
+"After the end of that turn, a Strange Pod will fall from the sky"
+],
+[
+"start_of_game",
+"spawns already damaged at the start of a mission"
+],
+[
+"information",
+"hidden inside it"
+]
+],
+"761015": [
+[
+"aura",
+"All other Vek have incoming weapon damage reduced by 1"
+],
+[
+"damage_reduction",
+"incoming weapon damage reduced by 1"
+],
+[
+"movement",
+"Flying units can move over any terrain tile"
+]
+],
+"761016": [
+[
+"immobilize",
+"Web a target"
+],
+[
+"delayed",
+"preparing to stab it for 3 damage"
+],
+[
+"movement",
+"Leapers jump to their destination and avoid all obstacles in the way"
+]
+],
+"761017": [
+[
+"aura",
+"All other Vek heal 1 at the start of their turn"
+],
+[
+"regeneration",
+"heal 1 at the start of their turn"
+],
+[
+"turn_start",
+"at the start of their turn"
+],
+[
+"movement",
+"Flying units can move over any terrain tile"
+]
+],
+"761018": [
+[
+"ranged",
+"Projectile that causes target to burn"
+],
+[
+"damage_over_time",
+"causes target to burn"
+],
+[
+"damage",
+"deals 1 damage"
+]
+],
+"761019": [
+[
+"ranged",
+"Stronger projectile that causes target to burn"
+],
+[
+"damage_over_time",
+"causes target to burn"
+],
+[
+"damage",
+"deals 3 damage"
+]
+],
+"761020": [
+[
+"multi_target_attack",
+"Launch Rockets at 3 tiles dealing 1 damage to each"
+],
+[
+"ranged",
+"5 tile range"
+]
+],
+"761021": [
+[
+"multi_target_attack",
+"Launch Rockets at 3 tiles dealing 3 damage to each"
+],
+[
+"ranged",
+"5 tile range"
+]
+],
+"761022": [
+[
+"piercing",
+"Piercing beam"
+],
+[
+"damage",
+"does 2 damage reduced by range"
+]
+],
+"761023": [
+[
+"piercing",
+"Piercing beam"
+],
+[
+"damage",
+"does 4 damage reduced by range"
+]
+],
+"761024": [
+[
+"disable",
+"Deploy a single Freeze mine"
+],
+[
+"immunity",
+"This unit avoids mines"
+],
+[
+"immunity",
+"This unit is unaffected by Smoke"
+]
+],
+"761025": [
+[
+"disable",
+"Deploy a single Freeze mine"
+],
+[
+"immunity",
+"This unit avoids mines"
+],
+[
+"immunity",
+"This unit is unaffected by Smoke"
+]
+],
+"761026": [
+[
+"multi_target_attack",
+"Launch Rockets at 3 tiles dealing 2 damage to each"
+],
+[
+"ranged",
+"5 tile range"
+],
+[
+"shield",
+"this unit will Shield itself"
+],
+[
+"heal",
+"prepare to heal"
+],
+[
+"on_damaged",
+"If damaged"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"summon",
+"will always spawn with 2 other hostile Sentient Weapons"
+]
+],
+"761027": [
+[
+"ranged",
+"Throw a sticky blob that will explode"
+],
+[
+"summon",
+"spawning Blobs onto any tile"
+],
+[
+"delayed",
+"Blobs always explode last in the attack order"
+],
+[
+"aoe_damage",
+"damage all adjacent tiles for 1"
+]
+],
+"761028": [
+[
+"ranged",
+"Throw a massive blob that will explode"
+],
+[
+"summon",
+"spawning Alpha Blobs onto any tile"
+],
+[
+"delayed",
+"Alpha Blobs always explode last in the attack order"
+],
+[
+"aoe_damage",
+"damage all adjacent tiles for 2"
+]
+],
+"761029": [
+[
+"self_destruct",
+"Explode, killing itself"
+],
+[
+"aoe_damage",
+"damaging adjacent tiles for 1 damage"
+],
+[
+"turn_start",
+"On the Blob's turn, it explodes"
+]
+],
+"761030": [
+[
+"damage",
+"dealing 4 damage"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"death_trigger",
+"Spawns two Medium Goos on death"
+],
+[
+"summon",
+"Spawns two Medium Goos on death"
+],
+[
+"random_effect",
+"land on randomly determined tiles"
+]
+],
+"761031": [
+[
+"damage",
+"dealing 4 damage"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"death_trigger",
+"Spawns two Small Goos on death"
+],
+[
+"summon",
+"Spawns two Small Goos on death"
+],
+[
+"random_effect",
+"land on randomly determined tiles"
+]
+],
+"761032": [
+[
+"damage",
+"dealing 4 damage"
+],
+[
+"movement",
+"Massive units can walk in Water"
+],
+[
+"random_effect",
+"land on randomly determined tiles"
+]
+],
+"761033": [
+[
+"immobilize",
+"Web an adjacent target"
+],
+[
+"delayed",
+"preparing to stab it for 1 damage"
+],
+[
+"debuff",
+"apply A.C.I.D."
+]
+],
+"761034": [
+[
+"immobilize",
+"restrict units' mobility with webbing"
+],
+[
+"delayed",
+"preparing to stab it for 3 damage"
+]
+],
+"761035": [
+[
+"multi_target_attack",
+"Web all targets"
+],
+[
+"delayed",
+"preparing to deal 2 damage to adjacent tiles"
+],
+[
+"forced_movement",
+"this attack also pushes its target"
+],
+[
+"area_templates",
+"cross-shape pattern"
+],
+[
+"movement",
+"Massive units can walk in Water"
+]
+],
+"761036": [
+[
+"ranged",
+"Launch a volatile mass of goo"
+],
+[
+"damage",
+"dealing 1 damage"
+],
+[
+"debuff",
+"applying A.C.I.D."
+]
+],
+"761037": [
+[
+"multi_target_attack",
+"Launch goo projectiles in two directions"
+],
+[
+"damage",
+"dealing 4 damage with each"
+],
+[
+"movement",
+"Massive units can walk in Water"
+]
+],
+"761038": [
+[
+"immobilize",
+"Web a target"
+],
+[
+"delayed",
+"preparing to stab it for 5 damage"
+],
+[
+"movement",
+"Alpha Leapers jump to their destination and avoid all obstacles in the way"
+]
+],
+"761039": [
+[
+"damage_over_time",
+"light every tile in the path on Fire"
+],
+[
+"forced_movement",
+"pushing target"
+],
+[
+"damage",
+"dealing 3 damage"
+],
+[
+"movement",
+"Massive units can walk in Water"
+]
+],
+"761040": [
+[
+"ranged",
+"Lob a powerful artillery shot at a single tile"
+],
+[
+"damage",
+"for 3 damage"
+]
+],
+"761041": [
+[
+"ranged",
+"Launch artillery attack on 2 tiles"
+],
+[
+"multi_target_attack",
+"Launch artillery attack on 2 tiles"
+],
+[
+"damage",
+"for 1 damage"
+]
+],
+"761042": [
+[
+"ranged",
+"Launch artillery attack on 2 tiles"
+],
+[
+"multi_target_attack",
+"Launch artillery attack on 2 tiles"
+],
+[
+"damage",
+"for 3 damage"
+]
+]
+}

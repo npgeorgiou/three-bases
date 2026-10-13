@@ -1,0 +1,3605 @@
+{
+"795391": {
+"tags": [
+[
+"passive",
+"A continuous effect that applies while the card is on the board"
+]
+],
+"by": "A=B"
+},
+"795392": {
+"tags": [
+[
+"activated",
+"An effect the player triggers once"
+]
+],
+"by": "C"
+},
+"795395": {
+"tags": [
+[
+"start_of_game",
+"Triggers at the start of the game"
+]
+],
+"by": "A=B"
+},
+"795399": {
+"tags": [
+[
+"movement",
+"can be moved once per turn"
+]
+],
+"by": "A=B"
+},
+"795402": {
+"tags": [
+[
+"stat_gain",
+"Adds power"
+]
+],
+"by": "C"
+},
+"795404": {
+"tags": [
+[
+"discard",
+"Removes a card from a hand"
+]
+],
+"by": "A=B"
+},
+"795407": {
+"tags": [
+[
+"stat_loss",
+"Lowers the power of cards"
+]
+],
+"by": "A=B"
+},
+"795412": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"banish",
+"Banish this"
+],
+[
+"revive",
+"revive your highest-Power destroyed card"
+],
+[
+"stat_multiply",
+"Power doubled"
+],
+[
+"stat_condition",
+"highest-Power"
+]
+],
+"by": "A=B"
+},
+"795416": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add a random card to your hand"
+],
+[
+"random_effect",
+"random"
+]
+],
+"by": "A=B"
+},
+"795418": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Set the Power of all cards in your deck to 3"
+]
+],
+"by": "C"
+},
+"795419": {
+"tags": [
+[
+"on_ally_play",
+"After you play a card here"
+],
+[
+"merge_attach",
+"merge this into it"
+]
+],
+"by": "A=B"
+},
+"795420": {
+"tags": [
+[
+"on_ally_play",
+"After you play a card here"
+],
+[
+"merge_attach",
+"merge this with it"
+],
+[
+"tribal",
+"Spider-Verse card"
+],
+[
+"movement",
+"move it away from here"
+]
+],
+"by": "A=B"
+},
+"795421": {
+"tags": [
+[
+"death_trigger",
+"When Destroyed"
+],
+[
+"free_play",
+"Replace this with a 4-Cost card from your hand or deck"
+],
+[
+"cost_condition",
+"4-Cost card"
+]
+],
+"by": "A=B"
+},
+"795423": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"silence",
+"Remove the text from all unrevealed enemy characters here"
+]
+],
+"by": "A=B"
+},
+"795424": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Give the top card of your deck +3 Power"
+],
+[
+"deck_position",
+"top card of your deck"
+]
+],
+"by": "A=B"
+},
+"795425": {
+"tags": [
+[
+"death_trigger",
+"When one of your cards is destroyed"
+],
+[
+"free_play",
+"flies out of your hand or deck to replace it"
+]
+],
+"by": "C"
+},
+"795435": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"count_payoff",
+"for each time one of your cards moved this game"
+]
+],
+"by": "A=B"
+},
+"795448": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"cross_lane",
+"at each other location"
+]
+],
+"by": "A=B"
+},
+"795455": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"return_to_hand",
+"Return your other cards here to your hand"
+],
+[
+"cost_reduction",
+"They cost 1 less next turn"
+]
+],
+"by": "A=B"
+},
+"795464": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"cost_set",
+"your 1-Cost cards cost 0"
+],
+[
+"temporary_effect",
+"Until the end of next turn"
+]
+],
+"by": "A=B"
+},
+"795466": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"discard",
+"Discard the rightmost card from your hand"
+],
+[
+"hand_position",
+"rightmost card"
+]
+],
+"by": "A=B"
+},
+"795467": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"swap",
+"Swap the last card you played with a card that costs the same or more from your deck"
+],
+[
+"combo_sequence",
+"the last card you played"
+],
+[
+"cost_condition",
+"costs the same or more"
+]
+],
+"by": "C"
+},
+"795477": {
+"tags": [],
+"by": "A=B"
+},
+"795480": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"protection",
+"can't be destroyed"
+],
+[
+"cost_condition",
+"1 and 6-Cost cards"
+]
+],
+"by": "A=B"
+},
+"795482": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"forced_movement",
+"Move the highest-Power enemy card here away"
+],
+[
+"stat_condition",
+"highest-Power"
+],
+[
+"destroy",
+"destroy it with a Rock"
+]
+],
+"by": "A=B"
+},
+"795486": {
+"tags": [
+[
+"on_ally_play",
+"After you play a 4-Cost or more card"
+],
+[
+"stat_gain",
+"give it +2 Power"
+],
+[
+"in_hand_buff",
+"a card in your hand -1 Cost"
+],
+[
+"cost_condition",
+"4-Cost or more"
+]
+],
+"by": "C"
+},
+"795489": {
+"tags": [
+[
+"aura",
+"Your other Avengers here have +2 Power"
+],
+[
+"tribal",
+"Avengers"
+]
+],
+"by": "A=B"
+},
+"795492": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"steal",
+"Steal 1 Power from each card in your opponent's deck"
+]
+],
+"by": "A=B"
+},
+"795496": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Copy the text of another card here"
+]
+],
+"by": "A=B"
+},
+"795498": {
+"tags": [
+[
+"generate_cards",
+"add Flames of the Faltine to your hand"
+]
+],
+"by": "A=B"
+},
+"795504": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"immunity",
+"Can't be destroyed, moved, or have its Power reduced"
+]
+],
+"by": "A=B"
+},
+"795506": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"discard",
+"Discard 2 cards from your hand"
+],
+[
+"resource_gain",
+"+1 Max Energy"
+]
+],
+"by": "A=B"
+},
+"795512": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"draw",
+"Each player draws a card"
+],
+[
+"symmetric_effect",
+"Each player"
+]
+],
+"by": "A=B"
+},
+"795514": {
+"tags": [],
+"by": "A=B"
+},
+"795517": {
+"tags": [
+[
+"movement",
+"When this moves to a location"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"condition_count",
+"for each enemy card there"
+]
+],
+"by": "C"
+},
+"795526": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"revive",
+"Resurrect all your destroyed characters"
+],
+[
+"random_effect",
+"random locations"
+]
+],
+"by": "A=B"
+},
+"795531": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"hand_size",
+"for each card in your hand"
+]
+],
+"by": "C"
+},
+"795563": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"revive",
+"gets revived here"
+]
+],
+"by": "C"
+},
+"795568": {
+"tags": [
+[
+"turn_start",
+"Start of Turn"
+],
+[
+"steal",
+"Steal 1 bonus Energy from your opponent"
+]
+],
+"by": "A=B"
+},
+"795570": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"free_play",
+"Put a created card from your hand here"
+]
+],
+"by": "A=B"
+},
+"795573": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"resource_banking",
+"unspent Energy"
+],
+[
+"stat_gain",
+"+2 Power"
+]
+],
+"by": "A=B"
+},
+"795577": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_loss",
+"-1 Power"
+]
+],
+"by": "A=B"
+},
+"795581": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"movement",
+"move them to the right"
+]
+],
+"by": "A=B"
+},
+"795586": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"Gain the Power of a front-row enemy card"
+],
+[
+"rows",
+"front-row"
+]
+],
+"by": "A=B"
+},
+"795590": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Add your Champion's Power to the top card of your deck"
+],
+[
+"deck_position",
+"top card of your deck"
+]
+],
+"by": "A=B"
+},
+"795592": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"Adjacent locations have +1 Power"
+],
+[
+"adjacency",
+"Adjacent locations"
+]
+],
+"by": "A=B"
+},
+"795597": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"movement",
+"Move your other cards here to the right"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"condition_count",
+"for each moved"
+]
+],
+"by": "C"
+},
+"795601": {
+"tags": [
+[
+"combo_sequence",
+"next character I see you play"
+],
+[
+"turn_end",
+"End of Turn"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"control_reward",
+"if you're winning my Herald's location"
+]
+],
+"by": "C"
+},
+"795608": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"silence",
+"Remove the abilities from all End of Turn cards here"
+]
+],
+"by": "A=B"
+},
+"795613": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"movement",
+"The last card you played moves here"
+],
+[
+"combo_sequence",
+"The last card you played"
+],
+[
+"tribal",
+"Spider-Verse card"
+],
+[
+"stat_gain",
+"+2 Power"
+]
+],
+"by": "A=B"
+},
+"795621": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"cost_increase",
+"created cards cost 1 more"
+]
+],
+"by": "A=B"
+},
+"795624": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"combo_sequence",
+"After you play your next card"
+],
+[
+"movement",
+"move it to this location"
+]
+],
+"by": "C"
+},
+"795629": {
+"tags": [
+[
+"turn_start",
+"Each turn this is in play"
+],
+[
+"activated",
+"Activate ability"
+]
+],
+"by": "C"
+},
+"795636": {
+"tags": [
+[
+"death_trigger",
+"When Destroyed"
+],
+[
+"return_to_hand",
+"Return this to your hand"
+],
+[
+"in_hand_buff",
+"give all cards in your hand +1 Power"
+]
+],
+"by": "A=B"
+},
+"795638": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"revive",
+"resurrect a card you discarded"
+],
+[
+"random_effect",
+"random location"
+],
+[
+"variety_payoff",
+"For each different Cost"
+]
+],
+"by": "A=B"
+},
+"795639": {
+"tags": [
+[
+"generate_cards",
+"Fill your hand with random cards"
+],
+[
+"random_effect",
+"random cards"
+]
+],
+"by": "C"
+},
+"795640": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"discard",
+"Discard a card from your hand"
+]
+],
+"by": "A=B"
+},
+"795641": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"stat_loss",
+"-1 Power"
+],
+[
+"friendly_fire",
+"ALL other cards here"
+],
+[
+"sacrifice",
+"destroy your other cards here with 0 Power or less"
+],
+[
+"stat_condition",
+"with 0 Power or less"
+]
+],
+"by": "C"
+},
+"795642": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"movement",
+"your cards are Moveable to this location"
+],
+[
+"delayed",
+"Next turn"
+]
+],
+"by": "A=B"
+},
+"795653": {
+"tags": [
+[
+"activated",
+"Tap this"
+],
+[
+"deck_position",
+"top card of your deck"
+]
+],
+"by": "C"
+},
+"795660": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"once_per_game",
+"Once per game"
+],
+[
+"stat_multiply",
+"double this card's Power"
+],
+[
+"board_presence",
+"if your side here is full"
+]
+],
+"by": "C"
+},
+"795662": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"movement",
+"This moves if a player Snapped"
+]
+],
+"by": "A=B"
+},
+"795668": {
+"tags": [],
+"by": "A=B"
+},
+"795681": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add a random 4-Cost or more card to your hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"cost_condition",
+"4-Cost or more"
+],
+[
+"control_reward",
+"If you're winning here"
+],
+[
+"delayed",
+"after next turn"
+],
+[
+"in_hand_buff",
+"give it -3 Cost"
+]
+],
+"by": "C"
+},
+"795684": {
+"tags": [
+[
+"passive",
+"Ongoing"
+]
+],
+"by": "A=B"
+},
+"795686": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"stat_loss",
+"-1 Power"
+],
+[
+"random_effect",
+"random characters"
+]
+],
+"by": "A=B"
+},
+"795697": {
+"tags": [],
+"by": "A=B"
+},
+"795700": {
+"tags": [
+[
+"in_hand_buff",
+"add this card's Power to it"
+]
+],
+"by": "C"
+},
+"795706": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"cost_condition",
+"1, 2, and 3-Cost characters"
+]
+],
+"by": "A=B"
+},
+"795712": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"draw",
+"Draw a created card from your deck"
+]
+],
+"by": "A=B"
+},
+"795713": {
+"tags": [
+[
+"on_enemy_enter",
+"When an enemy card moves here"
+],
+[
+"stat_loss",
+"-2 Power"
+]
+],
+"by": "A=B"
+},
+"795720": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"banish",
+"Banish the top card of your deck"
+],
+[
+"deck_position",
+"top card of your deck"
+],
+[
+"resource_gain",
+"+2 Energy next turn"
+],
+[
+"cost_condition",
+"4-Cost or more"
+],
+[
+"stat_gain",
+"+4 Power"
+]
+],
+"by": "A=B"
+},
+"795725": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"discard",
+"Discard the card that costs the most from your hand"
+],
+[
+"cost_condition",
+"costs the most"
+]
+],
+"by": "C"
+},
+"795730": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"silence",
+"Remove the text from 6-Cost cards in your opponent's hand"
+],
+[
+"hand_disruption",
+"in your opponent's hand"
+],
+[
+"cost_condition",
+"6-Cost cards"
+]
+],
+"by": "C"
+},
+"795735": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"cost_condition",
+"1-Cost card"
+],
+[
+"stat_loss",
+"-2 Power"
+]
+],
+"by": "A=B"
+},
+"795750": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Give the leftmost card in your hand +3 Power"
+],
+[
+"hand_position",
+"leftmost card"
+],
+[
+"cost_condition",
+"5-Cost or more"
+],
+[
+"cost_reduction",
+"-1 Cost"
+]
+],
+"by": "A=B"
+},
+"795751": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add 2 members of the Guardians crew to your hand"
+],
+[
+"tribal",
+"Guardians"
+]
+],
+"by": "A=B"
+},
+"795763": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"banish",
+"Banish this"
+],
+[
+"movement",
+"move your Champion here"
+],
+[
+"repeat_trigger",
+"Repeat its On Reveal"
+],
+[
+"copy",
+"add a copy of this to your hand"
+]
+],
+"by": "A=B"
+},
+"795764": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"enemy_benefit",
+"Add 2 Sentinel to your opponent's hand"
+]
+],
+"by": "A=B"
+},
+"795765": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"forced_movement",
+"Move all enemy 3 and 4-Cost cards to this location"
+],
+[
+"cost_condition",
+"3 and 4-Cost cards"
+],
+[
+"stat_multiply",
+"double your Champion's Power"
+],
+[
+"board_presence",
+"either side here is full"
+]
+],
+"by": "C"
+},
+"795772": {
+"tags": [
+[
+"movement",
+"Moveable once"
+],
+[
+"passive",
+"Ongoing"
+],
+[
+"immobilize",
+"Enemy cards here can't move"
+]
+],
+"by": "A=B"
+},
+"795776": {
+"tags": [
+[
+"cost_set",
+"this costs 1"
+]
+],
+"by": "C"
+},
+"795786": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"summon",
+"Add a Sinister Clone here"
+]
+],
+"by": "C"
+},
+"795788": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+7 Power"
+]
+],
+"by": "A=B"
+},
+"795792": {
+"tags": [
+[
+"death_trigger",
+"When Destroyed"
+],
+[
+"copy",
+"Get a copy of your opening hand"
+]
+],
+"by": "A=B"
+},
+"795797": {
+"tags": [
+[
+"cost_reduction",
+"This card's cost is reduced by the cost of your deck's top card"
+],
+[
+"deck_position",
+"your deck's top card"
+]
+],
+"by": "A=B"
+},
+"795798": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Copy your hand"
+]
+],
+"by": "A=B"
+},
+"795802": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"count_payoff",
+"for each time you discarded a card this game"
+]
+],
+"by": "C"
+},
+"795804": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"revive",
+"Return all your discarded and destroyed cards to hand"
+],
+[
+"stat_gain",
+"+3 Power"
+]
+],
+"by": "A=B"
+},
+"795806": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Copy the leftmost card in your hand"
+],
+[
+"hand_position",
+"leftmost card"
+],
+[
+"cost_reduction",
+"-1 Cost"
+],
+[
+"stat_gain",
+"+2 Power"
+]
+],
+"by": "A=B"
+},
+"795810": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"+3 Power"
+],
+[
+"death_count",
+"for each location where one of your cards has been destroyed"
+],
+[
+"cross_lane",
+"for each location"
+]
+],
+"by": "C"
+},
+"795814": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Copy the text of one of your Brotherhood cards"
+],
+[
+"tribal",
+"Brotherhood cards"
+]
+],
+"by": "A=B"
+},
+"795817": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+5 Power"
+],
+[
+"lone_unit",
+"alone at another location"
+],
+[
+"cross_lane",
+"another location"
+]
+],
+"by": "A=B"
+},
+"795818": {
+"tags": [
+[
+"in_hand_buff",
+"give it -1 Cost"
+],
+[
+"lone_unit",
+"if this is your only card here"
+]
+],
+"by": "C"
+},
+"795828": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"forced_placement",
+"replace that card's location"
+],
+[
+"combo_sequence",
+"After you play your next card"
+]
+],
+"by": "A=B"
+},
+"795829": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"add a copy of it to your hand"
+],
+[
+"combo_sequence",
+"After you play your next card"
+]
+],
+"by": "A=B"
+},
+"795838": {
+"tags": [
+[
+"death_trigger",
+"When Destroyed"
+],
+[
+"stat_gain",
+"+1 Power"
+]
+],
+"by": "A=B"
+},
+"795839": {
+"tags": [
+[
+"on_ally_play",
+"After the next time you play a 6-Cost card"
+],
+[
+"cost_condition",
+"6-Cost card"
+],
+[
+"stat_multiply",
+"double this card's Power"
+]
+],
+"by": "C"
+},
+"795841": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Give every card in your deck +1 Power"
+]
+],
+"by": "A=B"
+},
+"795847": {
+"tags": [],
+"by": "A=B"
+},
+"795852": {
+"tags": [
+[
+"forced_movement",
+"Move random cards to the left 4 times"
+],
+[
+"random_effect",
+"random cards"
+]
+],
+"by": "A=B"
+},
+"795859": {
+"tags": [],
+"by": "A=B"
+},
+"795864": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Give each card in your deck -1 Cost or +2 Power"
+],
+[
+"modal_choice",
+"-1 Cost or +2 Power"
+]
+],
+"by": "A=B"
+},
+"795865": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"revive",
+"Revive one of your destroyed cards"
+],
+[
+"merge_attach",
+"merge this into it"
+],
+[
+"movement",
+"It gains Moveable"
+]
+],
+"by": "A=B"
+},
+"795873": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"condition_count",
+"If you've played all 6 stones"
+],
+[
+"stat_gain",
+"Thanos has +10 Power"
+]
+],
+"by": "C"
+},
+"795877": {
+"tags": [],
+"by": "A=B"
+},
+"795880": {
+"tags": [
+[
+"movement",
+"jumps to your lowest-Power location"
+],
+[
+"stat_condition",
+"lowest-Power"
+]
+],
+"by": "C"
+},
+"795888": {
+"tags": [
+[
+"start_of_game",
+"Starts in your opening hand"
+]
+],
+"by": "A=B"
+},
+"795889": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"cost_reduction",
+"created cards cost 1 less"
+]
+],
+"by": "A=B"
+},
+"795899": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"random_ability",
+"Has 3 random Ongoing abilities"
+]
+],
+"by": "A=B"
+},
+"795902": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"hand_size",
+"for each card in your hand"
+],
+[
+"in_hand_buff",
+"Give your hand +1 Power"
+]
+],
+"by": "C"
+},
+"795913": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"junk_cards",
+"Shuffle 2 Rocks into your opponent's deck"
+]
+],
+"by": "A=B"
+},
+"795914": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"steal",
+"Steal the text from an enemy Ongoing card here"
+]
+],
+"by": "A=B"
+},
+"795918": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"variety_payoff",
+"for each different Power"
+]
+],
+"by": "A=B"
+},
+"795921": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add 2 Rocks to your hand"
+],
+[
+"in_hand_buff",
+"Give them +1 Power"
+],
+[
+"condition_count",
+"for each of your front-Row characters"
+],
+[
+"rows",
+"front-Row"
+]
+],
+"by": "C"
+},
+"795923": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"silence",
+"Remove the abilities from all Ongoing cards in your deck"
+]
+],
+"by": "A=B"
+},
+"795930": {
+"tags": [
+[
+"recycle",
+"Put this back"
+],
+[
+"stat_gain",
+"give +2 Power to itself and one of your cards in play"
+]
+],
+"by": "C"
+},
+"795934": {
+"tags": [
+[
+"stat_gain",
+"gain an additional +2 Power"
+]
+],
+"by": "A=B"
+},
+"795935": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_loss",
+"-3 Power"
+],
+[
+"hand_disruption",
+"in each player's hand"
+],
+[
+"stat_condition",
+"lowest-Power"
+],
+[
+"symmetric_effect",
+"each player's hand"
+]
+],
+"by": "A=B"
+},
+"795937": {
+"tags": [
+[
+"quests",
+"Objective: Have 3 cards with no abilities in play"
+],
+[
+"steal",
+"Steal 5 Power from an enemy card here"
+],
+[
+"null_body",
+"3 cards with no abilities"
+]
+],
+"by": "A=B"
+},
+"795939": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add another Sentinel to your hand"
+]
+],
+"by": "A=B"
+},
+"795940": {
+"tags": [
+[
+"play_restriction",
+"You can't play this at the right location"
+],
+[
+"on_play",
+"On Reveal"
+],
+[
+"summon",
+"Add a -9 Power Void to the right location"
+],
+[
+"lane_identity",
+"right location"
+]
+],
+"by": "C"
+},
+"795942": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"cost_reduction",
+"cost 1 less"
+]
+],
+"by": "A=B"
+},
+"795943": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"transform",
+"Transform your other characters here into random ones"
+],
+[
+"random_effect",
+"random ones"
+],
+[
+"cost_condition",
+"cost 1 more"
+]
+],
+"by": "A=B"
+},
+"795947": {
+"tags": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"generate_cards",
+"The Ten Rings starts in your hand"
+],
+[
+"on_play",
+"On Reveal"
+]
+],
+"by": "C"
+},
+"795949": {
+"tags": [
+[
+"cost_reduction",
+"Costs 1 less"
+],
+[
+"resource_banking",
+"for each unspent Energy last turn"
+]
+],
+"by": "A=B"
+},
+"795954": {
+"tags": [
+[
+"on_ally_play",
+"After ANY card is played here"
+],
+[
+"movement",
+"move this to another location"
+]
+],
+"by": "A=B"
+},
+"795956": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"discard",
+"Each player discards the lowest-Power character"
+],
+[
+"symmetric_effect",
+"Each player discards"
+],
+[
+"stat_condition",
+"lowest-Power"
+]
+],
+"by": "A=B"
+},
+"795963": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add a random character to your hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"variety_payoff",
+"a different Cost"
+],
+[
+"in_hand_buff",
+"Give it +2 Power"
+]
+],
+"by": "C"
+},
+"795972": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"tutor",
+"Draw Thanos"
+],
+[
+"passive",
+"Ongoing"
+],
+[
+"rule_change",
+"Nothing can stop you from playing Thanos"
+]
+],
+"by": "C"
+},
+"795974": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+2 Power"
+]
+],
+"by": "A=B"
+},
+"795975": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"count_payoff",
+"for each turn in which you spent all your Energy"
+]
+],
+"by": "A=B"
+},
+"795976": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+3 Power"
+],
+[
+"cost_reduction",
+"Costs 1 less"
+],
+[
+"count_payoff",
+"for each Moveable card you've played"
+]
+],
+"by": "C"
+},
+"795977": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"silence",
+"Replace the text of a random character"
+],
+[
+"random_effect",
+"random"
+],
+[
+"hand_disruption",
+"in your opponent's hand"
+]
+],
+"by": "A=B"
+},
+"795984": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_loss",
+"-1 Power"
+],
+[
+"scope_multi",
+"all enemy cards here"
+]
+],
+"by": "A=B"
+},
+"795986": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"summon",
+"Add a 1-Power Squirrel to each other location"
+],
+[
+"cross_lane",
+"each other location"
+]
+],
+"by": "A=B"
+},
+"795988": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"delayed",
+"Next turn"
+],
+[
+"resource_gain",
+"+1 Energy"
+],
+[
+"count_payoff",
+"for each turn you've ended with unspent Energy"
+],
+[
+"resource_banking",
+"unspent Energy"
+]
+],
+"by": "C"
+},
+"795990": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"rule_change",
+"Cards can't be added to locations except by playing or moving them"
+]
+],
+"by": "C"
+},
+"795991": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"turn_number",
+"if it's an odd turn"
+],
+[
+"adjacency",
+"left location"
+]
+],
+"by": "A=B"
+},
+"795993": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"reactions",
+"If your opponent played a card here this turn"
+],
+[
+"stat_gain",
+"give +1 Power to your Guardians"
+],
+[
+"in_hand_buff",
+"your Guardians in hand"
+],
+[
+"tribal",
+"Guardians"
+]
+],
+"by": "C"
+},
+"795994": {
+"tags": [
+[
+"cost_set",
+"Costs 1"
+]
+],
+"by": "C"
+},
+"795998": {
+"tags": [
+[
+"quests",
+"Objective: End 2 turns in a row with unspent Energy"
+],
+[
+"resource_banking",
+"unspent Energy"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"in_hand_buff",
+"Give your other cards here and in your hand +2 Power"
+]
+],
+"by": "C"
+},
+"796006": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"steal",
+"steals 1 Power from EACH card here"
+],
+[
+"stat_loss",
+"steals 1 Power"
+],
+[
+"scope_multi",
+"EACH card here"
+]
+],
+"by": "C"
+},
+"796007": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"sacrifice",
+"Destroy 2 of your characters here"
+],
+[
+"summon",
+"to summon Dormammu"
+]
+],
+"by": "A=B"
+},
+"796015": {
+"tags": [
+[
+"on_ally_play",
+"After you play a card with 10 or more Power"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"stat_condition",
+"10 or more Power"
+]
+],
+"by": "A=B"
+},
+"796016": {
+"tags": [
+[
+"generate_cards",
+"Add two copies of this that cost 0 to your hand"
+],
+[
+"cost_set",
+"cost 0"
+]
+],
+"by": "C"
+},
+"796022": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Copy the text of one of your Ongoing cards"
+]
+],
+"by": "A=B"
+},
+"796025": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"variable_stats",
+"Gains Power equal to"
+],
+[
+"tribal",
+"Thunderbolt"
+],
+[
+"stat_condition",
+"highest-Power"
+]
+],
+"by": "C"
+},
+"796027": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"count_payoff",
+"for each Techno-Organic Virus you've played"
+]
+],
+"by": "C"
+},
+"796029": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"junk_cards",
+"shuffle a Rock into the losing player's deck"
+],
+[
+"cross_lane",
+"For each location"
+]
+],
+"by": "C"
+},
+"796030": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"tutor",
+"draw a card with 10 or more Power"
+],
+[
+"stat_condition",
+"10 or more Power"
+]
+],
+"by": "C"
+},
+"796031": {
+"tags": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"generate_cards",
+"Shuffle the six Infinity Stones into your deck"
+]
+],
+"by": "C"
+},
+"796033": {
+"tags": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"on_play",
+"On Reveal"
+]
+],
+"by": "A=B"
+},
+"796039": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add a Demon to your hand"
+]
+],
+"by": "A=B"
+},
+"796044": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+1 Power"
+]
+],
+"by": "A=B"
+},
+"796045": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"stat_gain",
+"+1 Power"
+]
+],
+"by": "A=B"
+},
+"796047": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"once_per_game",
+"Once per game"
+],
+[
+"destroy",
+"destroy an enemy card here"
+],
+[
+"stat_condition",
+"with less Power"
+],
+[
+"board_presence",
+"if your side here is full"
+]
+],
+"by": "C"
+},
+"796049": {
+"tags": [],
+"by": "A=B"
+},
+"796051": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Shuffle Mjolnir into your deck"
+]
+],
+"by": "C"
+},
+"796054": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Shuffle Mjolnir into your deck"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "C"
+},
+"796056": {
+"tags": [
+[
+"cost_reduction",
+"Reduce the cost of your cards in hand by 1"
+]
+],
+"by": "A=B"
+},
+"796065": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+3 Power"
+],
+[
+"combo_sequence",
+"last character"
+],
+[
+"symmetric_effect",
+"EACH player"
+],
+[
+"enemy_benefit",
+"Give the last character EACH player played last turn +3 Power"
+]
+],
+"by": "C"
+},
+"796069": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"summon",
+"Deploy four 2-Power Drones to each other location"
+],
+[
+"cross_lane",
+"each other location"
+]
+],
+"by": "A=B"
+},
+"796071": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_multiply",
+"Double Infinity Ultron's Power"
+]
+],
+"by": "A=B"
+},
+"796078": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add a random Thunderbolt to your hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"tribal",
+"Thunderbolt"
+],
+[
+"in_hand_buff",
+"Give it -1 Cost"
+]
+],
+"by": "C"
+},
+"796085": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"sacrifice",
+"Destroy your other cards here"
+],
+[
+"stat_gain",
+"Add their Power to this card"
+]
+],
+"by": "A=B"
+},
+"796090": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"donate",
+"switches sides"
+],
+[
+"stat_condition",
+"lowest Power"
+]
+],
+"by": "A=B"
+},
+"796093": {
+"tags": [
+[
+"turn_start",
+"Start of Turn"
+],
+[
+"in_hand_buff",
+"Give all cards in your hand +1 Power"
+],
+[
+"control_reward",
+"if you're winning here"
+],
+[
+"movement",
+"move this to another location"
+]
+],
+"by": "C"
+},
+"796095": {
+"tags": [
+[
+"death_trigger",
+"When Destroyed"
+],
+[
+"free_play",
+"Replace this with a 1-Cost card from your hand or deck"
+],
+[
+"cost_condition",
+"1-Cost card"
+],
+[
+"stat_gain",
+"with +2 Power"
+]
+],
+"by": "C"
+},
+"796102": {
+"tags": [
+[
+"recycle",
+"Put this back"
+],
+[
+"in_hand_buff",
+"-2 Cost"
+]
+],
+"by": "C"
+},
+"796103": {
+"tags": [],
+"by": "A=B"
+},
+"796107": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Copy the card that costs the most from your opponent's hand into your hand"
+],
+[
+"cost_condition",
+"costs the most"
+]
+],
+"by": "A=B"
+},
+"796108": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Copy the top card of your opponent's deck into your hand"
+],
+[
+"deck_position",
+"top card of your opponent's deck"
+],
+[
+"control_reward",
+"While you're winning here"
+],
+[
+"in_hand_buff",
+"it costs 2 less"
+]
+],
+"by": "C"
+},
+"796114": {
+"tags": [
+[
+"passive",
+"Ongoing"
+],
+[
+"stat_gain",
+"+4 Power"
+],
+[
+"count_payoff",
+"if you've discarded a card"
+],
+[
+"death_count",
+"one of your cards has been destroyed"
+]
+],
+"by": "C"
+},
+"796117": {
+"tags": [],
+"by": "A=B"
+},
+"796118": {
+"tags": [
+[
+"play_restriction",
+"You can only play this at a location you're losing"
+],
+[
+"comeback",
+"a location you're losing"
+]
+],
+"by": "C"
+},
+"796121": {
+"tags": [
+[
+"death_trigger",
+"When Discarded or Destroyed"
+],
+[
+"revive",
+"Regenerate this"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"random_effect",
+"random location"
+]
+],
+"by": "A=B"
+},
+"796131": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"banish",
+"Banish the card that costs the least in your opponent's deck"
+],
+[
+"cost_condition",
+"costs the least"
+]
+],
+"by": "C"
+},
+"796132": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Give each 4-Cost card in your deck -1 Cost"
+],
+[
+"cost_condition",
+"4-Cost card"
+]
+],
+"by": "A=B"
+},
+"796133": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"silence",
+"Remove the abilities on the next card you play"
+]
+],
+"by": "A=B"
+},
+"796141": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"death_trigger",
+"When Destroyed"
+],
+[
+"stat_gain",
+"Horde +3"
+]
+],
+"by": "C"
+},
+"796145": {
+"tags": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"sacrifice",
+"Destroy your first other card here"
+],
+[
+"death_trigger",
+"After one of your other cards is destroyed"
+],
+[
+"stat_gain",
+"Horde +2"
+]
+],
+"by": "C"
+},
+"796148": {
+"tags": [
+[
+"tribal",
+"Marvel Snap cards of the X-Men group"
+]
+],
+"by": "A=B"
+},
+"796149": {
+"tags": [
+[
+"tribal",
+"Marvel Snap cards of the Guardians of the Galaxy group"
+]
+],
+"by": "A=B"
+},
+"796157": {
+"tags": [
+[
+"tribal",
+"Marvel Snap cards of the Fractured Frontier group"
+]
+],
+"by": "A=B"
+},
+"796167": {
+"tags": [
+[
+"turn_number",
+"On turn 5"
+],
+[
+"forced_placement",
+"all cards must be played here"
+]
+],
+"by": "A=B"
+},
+"796170": {
+"tags": [
+[
+"control_reward",
+"Whoever is winning this location gets +4 Power"
+],
+[
+"cross_lane",
+"at the others"
+]
+],
+"by": "A=B"
+},
+"796172": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"stat_condition",
+"lowest-Power"
+]
+],
+"by": "A=B"
+},
+"796175": {
+"tags": [
+[
+"generate_cards",
+"Add a random 3-Cost card to each player's hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"symmetric_effect",
+"each player's hand"
+]
+],
+"by": "C"
+},
+"796179": {
+"tags": [
+[
+"on_ally_play",
+"The next card you play here"
+],
+[
+"donate",
+"switches sides"
+]
+],
+"by": "C"
+},
+"796184": {
+"tags": [
+[
+"copy",
+"Copy the highest-Cost card in your deck into your hand"
+],
+[
+"cost_condition",
+"highest-Cost card"
+]
+],
+"by": "A=B"
+},
+"796187": {
+"tags": [
+[
+"control_reward",
+"Fill this to give your cards at other locations +1 Power"
+],
+[
+"cross_lane",
+"at other locations"
+]
+],
+"by": "A=B"
+},
+"796189": {
+"tags": [
+[
+"on_ally_play",
+"After you play a card here"
+],
+[
+"copy",
+"create a copy"
+]
+],
+"by": "A=B"
+},
+"796190": {
+"tags": [
+[
+"on_ally_play",
+"Your next play here"
+],
+[
+"steal",
+"steals 2 Power from a random enemy"
+],
+[
+"random_effect",
+"random enemy"
+]
+],
+"by": "C"
+},
+"796196": {
+"tags": [
+[
+"information",
+"Cards here are not revealed until the game ends"
+]
+],
+"by": "A=B"
+},
+"796208": {
+"tags": [
+[
+"turn_number",
+"After turn 3"
+],
+[
+"board_clog",
+"add a Rock to the losing player's side"
+]
+],
+"by": "A=B"
+},
+"796209": {
+"tags": [
+[
+"on_ally_play",
+"After you play a card here"
+],
+[
+"resource_gain",
+"+1 Energy next turn"
+],
+[
+"symmetric_effect",
+"ALL players"
+]
+],
+"by": "A=B"
+},
+"796211": {
+"tags": [
+[
+"lane_closure",
+"Cards can't be played here"
+],
+[
+"play_restriction",
+"Cards can't be played here"
+]
+],
+"by": "A=B"
+},
+"796214": {
+"tags": [
+[
+"cost_reduction",
+"has -2 Cost"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"hand_position",
+"rightmost card"
+]
+],
+"by": "C"
+},
+"796218": {
+"tags": [
+[
+"turn_number",
+"After turn 5"
+],
+[
+"forced_placement",
+"put a card from each player's hand here"
+],
+[
+"symmetric_effect",
+"each player's hand"
+]
+],
+"by": "A=B"
+},
+"796224": {
+"tags": [
+[
+"stat_multiply",
+"Changes to card Power are doubled here"
+]
+],
+"by": "A=B"
+},
+"796227": {
+"tags": [
+[
+"stakes_wager",
+"After each Snap"
+],
+[
+"forced_movement",
+"move a card away from here"
+]
+],
+"by": "C"
+},
+"796231": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"stat_loss",
+"lose 1 Power"
+]
+],
+"by": "A=B"
+},
+"796237": {
+"tags": [
+[
+"generate_cards",
+"Add a random Activate card"
+],
+[
+"random_effect",
+"random"
+],
+[
+"symmetric_effect",
+"for each player"
+]
+],
+"by": "A=B"
+},
+"796238": {
+"tags": [
+[
+"play_restriction",
+"You can't play cards here after turn 4"
+],
+[
+"turn_number",
+"after turn 4"
+]
+],
+"by": "A=B"
+},
+"796239": {
+"tags": [
+[
+"cost_condition",
+"1-Cost cards"
+],
+[
+"stat_gain",
+"+2 Power"
+]
+],
+"by": "A=B"
+},
+"796241": {
+"tags": [
+[
+"on_ally_play",
+"After you play a card here"
+],
+[
+"junk_cards",
+"shuffle 3 rocks into your deck"
+]
+],
+"by": "A=B"
+},
+"796242": {
+"tags": [
+[
+"rule_change",
+"No cards are revealed this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "C"
+},
+"796246": {
+"tags": [
+[
+"on_ally_play",
+"After you play a card here"
+],
+[
+"return_to_hand",
+"return it to your hand"
+]
+],
+"by": "A=B"
+},
+"796248": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"cost_condition",
+"highest-Cost card"
+]
+],
+"by": "A=B"
+},
+"796251": {
+"tags": [
+[
+"turn_number",
+"At the start of turn 6"
+],
+[
+"hand_deck_swap",
+"swap hands"
+]
+],
+"by": "A=B"
+},
+"796252": {
+"tags": [
+[
+"turn_number",
+"On turns 3, 4, and 5"
+],
+[
+"play_restriction",
+"no cards can be added here"
+]
+],
+"by": "A=B"
+},
+"796278": {
+"tags": [
+[
+"on_ally_play",
+"The next card you play here"
+],
+[
+"forced_placement",
+"pulls a card to the enemy side from their hand"
+],
+[
+"hand_disruption",
+"from their hand"
+]
+],
+"by": "C"
+},
+"796282": {
+"tags": [
+[
+"forced_placement",
+"all cards must be played here"
+],
+[
+"temporary_effect",
+"This turn"
+]
+],
+"by": "A=B"
+},
+"796286": {
+"tags": [
+[
+"play_restriction",
+"Only cards that cost 6 can be played here"
+],
+[
+"cost_condition",
+"cost 6"
+]
+],
+"by": "A=B"
+},
+"796288": {
+"tags": [
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"count_payoff",
+"EACH Snap this game"
+]
+],
+"by": "A=B"
+},
+"796290": {
+"tags": [
+[
+"summon",
+"Add Gwenpool to both sides"
+],
+[
+"symmetric_effect",
+"both sides"
+]
+],
+"by": "A=B"
+},
+"796298": {
+"tags": [
+[
+"cost_reduction",
+"cost 1 less"
+],
+[
+"cost_condition",
+"4-Cost or more cards"
+]
+],
+"by": "A=B"
+},
+"796300": {
+"tags": [
+[
+"delayed",
+"After this turn"
+],
+[
+"forced_placement",
+"put a card from each player's hand here"
+],
+[
+"symmetric_effect",
+"each player's hand"
+]
+],
+"by": "C"
+},
+"796316": {
+"tags": [
+[
+"turn_number",
+"After turn 4"
+],
+[
+"distribute",
+"split +8 Power among ALL cards here"
+]
+],
+"by": "C"
+},
+"796320": {
+"tags": [
+[
+"turn_number",
+"After turn 5"
+],
+[
+"forced_movement",
+"move all cards here to other random locations"
+],
+[
+"random_effect",
+"random locations"
+]
+],
+"by": "A=B"
+},
+"796334": {
+"tags": [
+[
+"cross_lane",
+"Your Power here is granted to other locations as well"
+]
+],
+"by": "A=B"
+},
+"796335": {
+"tags": [
+[
+"steal",
+"Steal the leftmost card from your opponent's hand"
+],
+[
+"hand_position",
+"leftmost"
+]
+],
+"by": "A=B"
+},
+"796337": {
+"tags": [
+[
+"race_objective",
+"First to fill this"
+],
+[
+"free_play",
+"breaks out a 6-Cost card"
+],
+[
+"cost_set",
+"It costs 0"
+],
+[
+"high_cost",
+"6-Cost card"
+]
+],
+"by": "C"
+},
+"796344": {
+"tags": [
+[
+"generate_cards",
+"Fill each player's hand with random cards"
+],
+[
+"random_effect",
+"random cards"
+],
+[
+"symmetric_effect",
+"each player's hand"
+]
+],
+"by": "C"
+},
+"796351": {
+"tags": [
+[
+"cost_reduction",
+"6-Cost cards cost 1 less"
+],
+[
+"cost_condition",
+"6-Cost cards"
+]
+],
+"by": "A=B"
+},
+"796353": {
+"tags": [
+[
+"swap",
+"Swap the positions of each location"
+]
+],
+"by": "A=B"
+},
+"796366": {
+"tags": [
+[
+"discard",
+"Discard a card"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "A=B"
+},
+"796375": {
+"tags": [],
+"by": "A=B"
+},
+"796377": {
+"tags": [
+[
+"game_end_trigger",
+"At the end of the game"
+],
+[
+"destroy",
+"destroy the last card"
+]
+],
+"by": "A=B"
+},
+"796379": {
+"tags": [
+[
+"free_play",
+"Add a 3-Cost card from your deck here"
+],
+[
+"cost_condition",
+"3-Cost card"
+]
+],
+"by": "A=B"
+},
+"796380": {
+"tags": [
+[
+"lanes",
+"Three lanes called locations"
+],
+[
+"lane_rule",
+"each carries its own rule"
+],
+[
+"randomness",
+"most are random each game"
+]
+],
+"by": "C"
+},
+"796381": {
+"tags": [
+[
+"zone_control",
+"winning 2 of the 3 locations wins the game"
+],
+[
+"lanes",
+"3 locations"
+]
+],
+"by": "C"
+},
+"796382": {
+"tags": [
+[
+"simultaneous_play",
+"Both players play cards face down at the same time"
+],
+[
+"reveal_order",
+"all of the player who is winning more locations first"
+],
+[
+"random_effect",
+"a coin flip on ties"
+]
+],
+"by": "A=B"
+}
+}

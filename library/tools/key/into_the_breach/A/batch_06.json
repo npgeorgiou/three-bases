@@ -1,0 +1,168 @@
+{
+"761148": [
+[
+"damage",
+"Deals 1 damage to one tile"
+],
+[
+"forced_movement",
+"damage and push an adjacent tile"
+],
+[
+"target_choice",
+"The building is chosen first"
+],
+[
+"upgrade",
+"Upgrade: +1 Damage"
+]
+],
+"761149": [
+[
+"forced_movement",
+"push away nearby units"
+],
+[
+"target_choice",
+"can be chosen by the Mech"
+],
+[
+"shield",
+"The selected building also gains a shield"
+],
+[
+"upgrade",
+"Upgrade: Add Shield"
+]
+],
+"761150": [
+[
+"suppress",
+"Units in Smoke cannot attack or repair"
+],
+[
+"terrain",
+"A Sand Tile that is hit by weapon damage will turn into a Smoke Tile"
+],
+[
+"heal",
+"the fire will be put out"
+]
+],
+"761151": [
+[
+"damage_over_time",
+"Lights units on Fire"
+]
+],
+"761152": [
+[
+"telegraphed_threats",
+"Vek will emerge here next turn"
+],
+[
+"damage",
+"will take one damage"
+],
+[
+"spawn_blocking",
+"Any unit blocking this space"
+]
+],
+"761153": [
+[
+"destroy",
+"instantly killing any unit"
+],
+[
+"telegraphed_threats",
+"Bombs will be dropped here"
+]
+],
+"761154": [
+[
+"telegraphed_threats",
+"Vek will emerge here next turn"
+],
+[
+"damage",
+"will take one damage"
+],
+[
+"spawn_blocking",
+"Any unit blocking this space"
+]
+],
+"761155": [
+[
+"destroy",
+"killing any unit"
+],
+[
+"telegraphed_threats",
+"A rock will fall here"
+]
+],
+"761156": [
+[
+"delayed",
+"will become Water"
+],
+[
+"turn_start",
+"start of the enemy turn"
+]
+],
+"761157": [
+[
+"disable",
+"anything present to become Frozen"
+]
+],
+"761158": [
+[
+"terrain",
+"will turn into Lava"
+]
+],
+"761159": [
+[
+"destroy",
+"killing any unit"
+],
+[
+"telegraphed_threats",
+"Lightning will strike here"
+]
+],
+"761160": [
+[
+"delayed",
+"will become a Chasm"
+],
+[
+"turn_start",
+"start of the enemy turn"
+]
+],
+"761161": [
+[
+"destroy",
+"The unit here will die"
+],
+[
+"terrain",
+"the tile will turn into Lava"
+]
+],
+"761162": [
+[
+"destroy",
+"destroying anything present"
+],
+[
+"telegraphed_threats",
+"A fireball will strike here"
+]
+]
+}

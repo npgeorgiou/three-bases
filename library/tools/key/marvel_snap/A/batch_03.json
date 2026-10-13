@@ -1,0 +1,595 @@
+{
+"795395": [
+[
+"start_of_game",
+"Triggers at the start of the game"
+]
+],
+"795806": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Copy the leftmost card in your hand"
+],
+[
+"hand_position",
+"leftmost card"
+],
+[
+"cost_reduction",
+"-1 Cost"
+],
+[
+"stat_gain",
+"+2 Power"
+]
+],
+"796187": [
+[
+"control_reward",
+"Fill this to give your cards at other locations +1 Power"
+],
+[
+"cross_lane",
+"at other locations"
+]
+],
+"795947": [
+[
+"start_of_game",
+"Game Start"
+],
+[
+"generate_cards",
+"The Ten Rings starts in your hand"
+],
+[
+"on_play",
+"On Reveal"
+],
+[
+"upgrade",
+"Unlock their potential"
+]
+],
+"795526": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"revive",
+"Resurrect all your destroyed characters"
+],
+[
+"random_effect",
+"random locations"
+]
+],
+"795954": [
+[
+"on_ally_play",
+"After ANY card is played here"
+],
+[
+"movement",
+"move this to another location"
+]
+],
+"795998": [
+[
+"quests",
+"Objective: End 2 turns in a row with unspent Energy"
+],
+[
+"in_hand_buff",
+"Give your other cards here and in your hand +2 Power"
+],
+[
+"resource_banking",
+"unspent Energy"
+]
+],
+"795608": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"silence",
+"Remove the abilities from all End of Turn cards here"
+]
+],
+"795852": [
+[
+"forced_movement",
+"Move random cards to the left 4 times"
+],
+[
+"random_effect",
+"random cards"
+]
+],
+"795448": [
+[
+"activated",
+"Activate"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"cross_lane",
+"at each other location"
+]
+],
+"795914": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"steal",
+"Steal the text from an enemy Ongoing card here"
+]
+],
+"795786": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Add a Sinister Clone here with the same Power"
+]
+],
+"796007": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"sacrifice",
+"Destroy 2 of your characters here"
+],
+[
+"summon",
+"to summon Dormammu"
+]
+],
+"795991": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"turn_number",
+"if it's an odd turn"
+],
+[
+"adjacency",
+"left location"
+]
+],
+"796241": [
+[
+"on_ally_play",
+"After you play a card here"
+],
+[
+"junk_cards",
+"shuffle 3 rocks into your deck"
+]
+],
+"795939": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add another Sentinel to your hand"
+]
+],
+"795838": [
+[
+"death_trigger",
+"When Destroyed"
+],
+[
+"stat_gain",
+"+1 Power"
+]
+],
+"795918": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"variety_payoff",
+"for each different Power"
+]
+],
+"795776": [
+[
+"cost_set",
+"this costs 1"
+],
+[
+"reactions",
+"If a card moved last turn"
+]
+],
+"796298": [
+[
+"cost_reduction",
+"cost 1 less"
+],
+[
+"cost_condition",
+"4-Cost or more cards"
+]
+],
+"795765": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"forced_movement",
+"Move all enemy 3 and 4-Cost cards to this location"
+],
+[
+"cost_condition",
+"3 and 4-Cost cards"
+],
+[
+"stat_multiply",
+"double your Champion's Power"
+],
+[
+"board_presence",
+"either side here is full"
+]
+],
+"795391": [
+[
+"passive",
+"A continuous effect that applies while the card is on the board"
+]
+],
+"795974": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+2 Power"
+]
+],
+"795976": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+3 Power"
+],
+[
+"cost_reduction",
+"Costs 1 less"
+],
+[
+"condition_count",
+"for each Moveable card you've played"
+]
+],
+"796065": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"+3 Power"
+],
+[
+"symmetric_effect",
+"EACH player"
+]
+],
+"796054": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"deck_modification",
+"Shuffle Mjolnir into your deck"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"795750": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"in_hand_buff",
+"Give the leftmost card in your hand +3 Power"
+],
+[
+"hand_position",
+"leftmost card"
+],
+[
+"cost_condition",
+"5-Cost or more"
+],
+[
+"cost_reduction",
+"-1 Cost"
+]
+],
+"795888": [
+[
+"start_of_game",
+"Starts in your opening hand"
+]
+],
+"796039": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add a Demon to your hand"
+]
+],
+"795418": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_gain",
+"Set the Power of all cards in your deck to 3"
+],
+[
+"in_hand_buff",
+"all cards in your deck"
+]
+],
+"795639": [
+[
+"death_trigger",
+"When Discarded"
+],
+[
+"hand_deck_swap",
+"Fill your hand with random cards"
+],
+[
+"random_effect",
+"random cards"
+]
+],
+"796078": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"generate_cards",
+"Add a random Thunderbolt to your hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"tribal",
+"Thunderbolt"
+],
+[
+"cost_reduction",
+"-1 Cost"
+]
+],
+"795577": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"stat_loss",
+"-1 Power"
+]
+],
+"795986": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"summon",
+"Add a 1-Power Squirrel to each other location"
+],
+[
+"cross_lane",
+"each other location"
+]
+],
+"796022": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"copy",
+"Copy the text of one of your Ongoing cards"
+]
+],
+"795581": [
+[
+"activated",
+"Activate"
+],
+[
+"stat_gain",
+"+1 Power"
+],
+[
+"movement",
+"move them to the right"
+]
+],
+"795486": [
+[
+"on_ally_play",
+"After you play a 4-Cost or more card"
+],
+[
+"stat_gain",
+"+2 Power"
+],
+[
+"in_hand_buff",
+"a card in your hand -1 Cost"
+],
+[
+"cost_condition",
+"4-Cost or more"
+]
+],
+"795988": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"resource_gain",
+"+1 Energy"
+],
+[
+"count_payoff",
+"for each turn you've ended with unspent Energy"
+],
+[
+"delayed",
+"Next turn"
+]
+],
+"796379": [
+[
+"free_play",
+"Add a 3-Cost card from your deck here"
+],
+[
+"cost_condition",
+"3-Cost card"
+]
+],
+"795423": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"silence",
+"Remove the text from all unrevealed enemy characters here"
+]
+],
+"796117": [],
+"795464": [
+[
+"activated",
+"Activate"
+],
+[
+"cost_set",
+"your 1-Cost cards cost 0"
+],
+[
+"temporary_effect",
+"Until the end of next turn"
+]
+],
+"795477": [],
+"795407": [
+[
+"stat_loss",
+"Lowers the power of cards"
+]
+],
+"795880": [
+[
+"death_trigger",
+"When Discarded"
+],
+[
+"movement",
+"This jumps to your lowest-Power location"
+]
+],
+"795404": [
+[
+"discard",
+"Removes a card from a hand"
+]
+],
+"795697": [],
+"795662": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"movement",
+"This moves if a player Snapped"
+]
+],
+"796231": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"stat_loss",
+"lose 1 Power"
+]
+],
+"795506": [
+[
+"on_play",
+"On Reveal"
+],
+[
+"discard",
+"Discard 2 cards from your hand"
+],
+[
+"resource_gain",
+"+1 Max Energy"
+]
+]
+}

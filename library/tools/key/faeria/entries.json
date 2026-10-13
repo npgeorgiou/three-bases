@@ -1,0 +1,1047 @@
+[
+{
+"id": 741125,
+"name": "Sandstone Explorer",
+"text": "Has +2/+0 while you control mountain mountain and +1/+1 while you control desert desert"
+},
+{
+"id": 741351,
+"name": "Ring of Dominion",
+"text": "Choose one: Transform a land to {green.. Gain control of it.|Transform a land to lake. Gain control of it.|Transform a land to mountain. Gain control of it.|Transform a land to desert. Gain control of it.}\nTransform a land into the color of your choice. Gain control of it."
+},
+{
+"id": 741493,
+"name": "Tiki Zoologist",
+"text": "Gift - Discover a Beast. It becomes wild land."
+},
+{
+"id": 741470,
+"name": "Looking Glass Phantasm",
+"text": "Gift - Transform an enemy creature into a 5/3 msatnahP ssalG gnikooL."
+},
+{
+"id": 741451,
+"name": "Beast Trainer",
+"text": "Gift - Reduce the cost of a random Beast in your hand by 5 faeria."
+},
+{
+"id": 741089,
+"name": "Yak Attack",
+"text": "Summon three 2/2 Angry Yaks with Haste."
+},
+{
+"id": 741189,
+"name": "Vine Wall",
+"text": "Taunt\nLast Words - Create forest at random."
+},
+{
+"id": 741117,
+"name": "Fortune Hunter",
+"text": "Whenever this harvests faeria, give a random friendly creature +1/+1."
+},
+{
+"id": 741313,
+"name": "Crackthorn Beast",
+"text": "Dash 2\nGift - Deal 4 damage randomly split among enemies. Give +4/+4 randomly split among allies."
+},
+{
+"id": 741449,
+"name": "Radiance, Scourge of Oversky",
+"text": "Flying\nGift - Enemy creatures can't move next turn."
+},
+{
+"id": 741290,
+"name": "Sunsilk Faerie",
+"text": "Flying\nThe first time you draw an event, this gains +3/+1 and Charge 3."
+},
+{
+"id": 741301,
+"name": "Shaytan Monstrosity",
+"text": "Charge 2\nWhenever a friendly creature dies, this drains its attack."
+},
+{
+"id": 741393,
+"name": "Path to Paradise",
+"text": "Choose one: Create {green.|Create lake |Create mountain |Create desert } - Create a special land.\nGive the first creature summoned on it this turn +2/+0."
+},
+{
+"id": 741254,
+"name": "Seifer's Wrath",
+"text": "Deal 2 damage to a creature. If it dies, deal 2 damage to its controller."
+},
+{
+"id": 741463,
+"name": "Banon, Captain of the Radiance",
+"text": "Gift - If you have no creature left in your deck, shuffle Radiance, Imperial Airship and 10 random neutral creatures into your deck. They gain +2/+2."
+},
+{
+"id": 741164,
+"name": "Humbling Vision",
+"text": "Halve a creature's base Attack and Life (rounded down)."
+},
+{
+"id": 741105,
+"name": "Village Elder",
+"text": "Last Words - Draw a card."
+},
+{
+"id": 741309,
+"name": "Windstorm Charger",
+"text": "Charge 2\nWhenever you play an event, this gains +2/+0 this turn (limit +6/+0)."
+},
+{
+"id": 741071,
+"name": "Ranged Attack",
+"text": "Shoots in a straight line with line of sight; takes no retaliation unless adjacent or shot by another ranged unit; cannot attack after moving normally."
+},
+{
+"id": 741487,
+"name": "Triton Adventurer",
+"text": "Jump\nGift - Move this creature.\nAt the end of your turn, draw a card if this is on an enemy land."
+},
+{
+"id": 741259,
+"name": "Crumbling Golem",
+"text": "Whenever your opponent summons a creature, deal 1 damage to this."
+},
+{
+"id": 741281,
+"name": "Wind Soldier",
+"text": "Haste, Charge 3\nWind Soldier dies at end of turn."
+},
+{
+"id": 741371,
+"name": "Monkey Genius",
+"text": "Taunt\nGift - On your opponent's next turn, this gains +2/+2 whenever an enemy creature harvests faeria."
+},
+{
+"id": 741450,
+"name": "Bursting Hippo",
+"text": "Combat - Deal 2 damage to all adjacent enemies."
+},
+{
+"id": 741452,
+"name": "Kobold Smuggler",
+"text": "Corrupt - Summon a 4/3 Seifer's Fodder in a random adjacent land."
+},
+{
+"id": 741058,
+"name": "Last Words",
+"text": "Triggers when the creature or structure is destroyed."
+},
+{
+"id": 741416,
+"name": "Rotting Boar",
+"text": "Dash 1\nCorrupt - Draw the top creature with 5 or more life in your deck. Give it +2/+2."
+},
+{
+"id": 741288,
+"name": "Azarai, Wrath of the Desert",
+"text": "Flying, Charge 2\nGift - Azarai drains 2 Attack from each enemy creature."
+},
+{
+"id": 741195,
+"name": "Wild Growth",
+"text": "Create forest at random."
+},
+{
+"id": 741429,
+"name": "Hunt Down",
+"text": "Give a friendly beast +2/+0. Then it fights an enemy creature."
+},
+{
+"id": 795376,
+"name": "triton",
+"text": "triton: 16 entities of this type."
+},
+{
+"id": 741174,
+"name": "Bone Collector",
+"text": "Whenever an adjacent creature dies, this gains +1/+1."
+},
+{
+"id": 741362,
+"name": "Hammer of Destruction",
+"text": "Deal 5 damage. Shuffle the Hammer into your deck."
+},
+{
+"id": 741109,
+"name": "Day of the Dragons",
+"text": "Add the four elemental Dragons to your hand. They cost 3 faeria less and become wild land."
+},
+{
+"id": 741222,
+"name": "Architect",
+"text": "Gift - Give a structure +0/+2."
+},
+{
+"id": 741072,
+"name": "Divine",
+"text": "Cannot be targeted by spells or abilities from either player (still attackable and hit by area effects)."
+},
+{
+"id": 741068,
+"name": "Haste",
+"text": "Can move, attack and harvest the turn it is played."
+},
+{
+"id": 741070,
+"name": "Discover",
+"text": "Creates a copy of a card."
+},
+{
+"id": 741392,
+"name": "Frog-Tosser",
+"text": "Gift - This fights an enemy creature. Summon a 2/2 Frog with Jump in a random space adjacent to the target."
+},
+{
+"id": 741337,
+"name": "Deepwood Stalker",
+"text": "Gift - This may fight an enemy creature."
+},
+{
+"id": 741061,
+"name": "Corrupt",
+"text": "Triggers the first time this creature moves onto enemy land, on a turn after it was played."
+},
+{
+"id": 741255,
+"name": "Devouring Plant",
+"text": "Taunt\nProduction - Deal 2 damage to all adjacent enemy creatures."
+},
+{
+"id": 741411,
+"name": "Kaios, Demented Overmind",
+"text": "Divine\nKaios' Attack is always equal to his Life.\nCorrupt - Drain 1 life from EVERYTHING."
+},
+{
+"id": 741167,
+"name": "Aurora, Myth Maker",
+"text": "Gift - Change another friendly creature to 6/6."
+},
+{
+"id": 741276,
+"name": "Soul Pact",
+"text": "Deal 2 damage to yourself and gain 2 faeria."
+},
+{
+"id": 741431,
+"name": "Majinata, Spirit of Everlife",
+"text": "Protection, Divine\nGift - A friendly creature swallows Majinata. Give it +5/+5, Flying and Charge 2."
+},
+{
+"id": 741508,
+"name": "Crystal Spice",
+"text": "Discover 2 non legendary cards that cost 7 faeria or more. They become wild land."
+},
+{
+"id": 741330,
+"name": "Triton Trainer",
+"text": "Jump\nGift - Give the next Jump creature you summon +1/+1."
+},
+{
+"id": 741170,
+"name": "Aurora's Trick",
+"text": "Gain control of a creature with 2 Attack or less."
+},
+{
+"id": 795375,
+"name": "yak",
+"text": "yak: 10 entities of this type."
+},
+{
+"id": 741284,
+"name": "Shaytan Scavenger",
+"text": "Costs 2 faeria less if you attacked a god this turn."
+},
+{
+"id": 741518,
+"name": "Spear of the Guardians",
+"text": "Divine,Flying,Dash 5\nMust be summoned next to a friendly creature."
+},
+{
+"id": 741343,
+"name": "Ocarina",
+"text": "Take an extra turn after this one."
+},
+{
+"id": 741176,
+"name": "Sagami Grovecaller",
+"text": "Gift - You may teleport another friendly creature to a forest you control."
+},
+{
+"id": 741236,
+"name": "Lord of Terror",
+"text": "Whenever a god is dealt damage, this gains that much Attack."
+},
+{
+"id": 741175,
+"name": "Soulbound Sagami",
+"text": "Last Words - Give a random friendly creature +3/+5."
+},
+{
+"id": 741406,
+"name": "Deranged Monkey",
+"text": "Gift - Empty all faeria wells. This gains +1/+1 for each well emptied."
+},
+{
+"id": 741169,
+"name": "Failed Experiment",
+"text": "The next creature you play this turn costs 4 faeria less. It dies instantly."
+},
+{
+"id": 741517,
+"name": "Simulacrum of Obedience",
+"text": "Cards in your hand cost 1 faeria less."
+},
+{
+"id": 741295,
+"name": "Zealous Crusader",
+"text": "Charge 2\nGains +1/+1 each time a friendly creature attacks a god (while in your deck or hand)."
+},
+{
+"id": 741207,
+"name": "Weeping Idol",
+"text": "Whenever you are dealt damage, gain 1 faeria."
+},
+{
+"id": 741490,
+"name": "Triton Stargazer",
+"text": "Jump\nGift - Draw 3 cards. If any of them are a Treasure Map, this gains +2/+2."
+},
+{
+"id": 741273,
+"name": "Khalim, Sky Prodigy",
+"text": "Flying, Charge 2\nWhen Khalim attacks a god, add a Khalim's Follower to your hand. It costs 0 faeria."
+},
+{
+"id": 741344,
+"name": "Djinn's Lamp",
+"text": "Choose one: Add 3 random green cards to your hand. They cost {faeria / 3. less|Add 3 random blue cards to your hand. They cost 3 faeria less|Add 3 random red cards to your hand. They cost 3 faeria less|Add 3 random yellow cards to your hand. They cost 3 faeria less}\nChoose a color. Add 3 random cards of that color to your hand. They cost 3 faeria less."
+},
+{
+"id": 741388,
+"name": "Flash Salmon",
+"text": "Divine, Flying, Haste, Charge 2\nCan't harvest faeria.\nAt the end of your turn, destroy this creature and draw a card."
+},
+{
+"id": 741108,
+"name": "King's Faithful",
+"text": "Protection"
+},
+{
+"id": 741152,
+"name": "Gemsilk Faerie",
+"text": "Flying\nThe first time you draw an event, this gains +2/+2, and Charge 2."
+},
+{
+"id": 741382,
+"name": "Curious Biomancer",
+"text": "Gift - For each enemy creature, draw a non-blue creature from your deck."
+},
+{
+"id": 741430,
+"name": "Emerald Yak",
+"text": "Gift - Summon a 1/1 Baby Yak with Taunt and Can't harvest faeria on a prairie you control."
+},
+{
+"id": 741210,
+"name": "Ancient Boar",
+"text": "Dash 2\nIf you control a creature with 5 Life or more, costs 2 faeria less."
+},
+{
+"id": 741118,
+"name": "Outland Ranger",
+"text": "Gift - Add a Campfire to your hand."
+},
+{
+"id": 741440,
+"name": "Rakoan Shield Mates",
+"text": "Last Words - Summon a 1/1 Rakoan where this died."
+},
+{
+"id": 741230,
+"name": "Axe Grinder",
+"text": "Gift - Gains +1/+1 if summoned adjacent to an opponent's well."
+},
+{
+"id": 741497,
+"name": "Ogre Adventurer",
+"text": "Dash 1\nAt the end of your turn, reduce a card in your hand by 1 faeria if this is on an enemy land."
+},
+{
+"id": 741424,
+"name": "Mother of All Yaks",
+"text": "Gift - Summon two 4/4 Yak Guards with Taunt and Flying adjacent to Mother of Yaks.\nCosts 1 faeria less for each friendly yak that has died this game."
+},
+{
+"id": 741316,
+"name": "Rebel Slinger",
+"text": "Gift - Deal 2 damage to your opponent."
+},
+{
+"id": 741482,
+"name": "Savior of the Meek",
+"text": "Gift - Give +2/+2 and Divine to another friendly creature with exactly 1 Attack."
+},
+{
+"id": 741319,
+"name": "Radiance, Imperial Airship",
+"text": "Flying, Dash 3\nRadiance's faeria cost equals your Life.\nGift - Gain 1 Life for each card in your hand."
+},
+{
+"id": 741403,
+"name": "Ulani, Oversky Shaman",
+"text": "Gift - Draw a green card, a blue card, a red card and a yellow card from your deck."
+},
+{
+"id": 741154,
+"name": "Azure Wisp",
+"text": "Whenever you harvest faeria from an opponent's well, this gains +1/+1."
+},
+{
+"id": 741214,
+"name": "Eredon, Voice of All",
+"text": "Last Words - Give all creatures in your deck and hand +1/+1."
+},
+{
+"id": 741204,
+"name": "Ruunin's Messenger",
+"text": "Jump\nWhenever this attacks a god, add a random green creature to your hand. It costs 2 faeria less."
+},
+{
+"id": 741360,
+"name": "Crystal Dragon",
+"text": "Flying, Charge 3"
+},
+{
+"id": 741315,
+"name": "Scourgeflame Specter",
+"text": "Flying, Haste, Charge 2\nCombat - Deal 3 damage to your opponent."
+},
+{
+"id": 741318,
+"name": "Rebel Glider",
+"text": "Flying, Dash 2\nCan't harvest faeria."
+},
+{
+"id": 741261,
+"name": "Meteor",
+"text": "Choose a space. Destroy all creatures, structures, and lands on or adjacent to that space."
+},
+{
+"id": 741361,
+"name": "Flame Burst Ruby",
+"text": "Choose one: Deal 3 damage. / Deal 3 damage to everything..\n- Deal 3 damage.\n- Deal 3 damage to everything."
+},
+{
+"id": 741074,
+"name": "Aquatic",
+"text": "Can only travel over lakes and ocean; drowns at end of turn on other land."
+},
+{
+"id": 741305,
+"name": "Soul Drain",
+"text": "Drain 2 Life from a creature."
+},
+{
+"id": 741182,
+"name": "Tiki Caretaker",
+"text": "Gift - Give a creature +2/+2."
+},
+{
+"id": 741266,
+"name": "Khalim's Follower",
+"text": "Haste\nHas +2/+0 against gods."
+},
+{
+"id": 741272,
+"name": "Malevolent Spirit",
+"text": "Gift - You drain 2 Life from your opponent."
+},
+{
+"id": 741400,
+"name": "Oversky Towship",
+"text": "Flying, Dash 1\nWhenever this would leave land, it brings its land with it."
+},
+{
+"id": 741145,
+"name": "Sturdy Shell",
+"text": "Aquatic"
+},
+{
+"id": 741247,
+"name": "Flamesilk Faerie",
+"text": "Flying\nThe first time you draw an event, this gains +3/+1 and Ranged Attack."
+},
+{
+"id": 741340,
+"name": "Dark Crystal",
+"text": "Drain 4 Life from your opponent, deal 3 damage to all enemy creatures, and draw 2 cards."
+},
+{
+"id": 741419,
+"name": "Spite Sprite",
+"text": "Last Words - Deal 2 damage to yourself."
+},
+{
+"id": 741405,
+"name": "Imperial Drakerider",
+"text": "Flying, Charge 2\nCorrupt - Gain +2/+2."
+},
+{
+"id": 741251,
+"name": "Firebringer",
+"text": "This gains +1/+1 whenever you summon a creature with higher Attack than Life (while in your deck or hand)."
+},
+{
+"id": 741101,
+"name": "Famine",
+"text": "Deal 1 damage to ALL creatures."
+},
+{
+"id": 741476,
+"name": "Verduran Emissary ",
+"text": "Last Words - Give +1/+1 to all creatures in your hand."
+},
+{
+"id": 741399,
+"name": "Flight of the Mantas",
+"text": "When you draw this card, copy it.\nSummon a 2/2 Manta with Flying and Charge 2."
+},
+{
+"id": 741320,
+"name": "Forbidden Library",
+"text": "Production - Draw a card, gain 1 faeria, and deal 2 damage to yourself."
+},
+{
+"id": 741112,
+"name": "Wisdom",
+"text": "Draw 2 cards."
+},
+{
+"id": 741140,
+"name": "Aurora's Creation",
+"text": "Add a copy of a creature to your hand. It costs 5 faeria less."
+},
+{
+"id": 741326,
+"name": "Doomsday",
+"text": "Set your faeria to 0 faeria. Halve your Life (rounded down). Destroy ALL creatures and structures. End the turn."
+},
+{
+"id": 741441,
+"name": "Rakoan Warleader",
+"text": "Combat - Give a random Rakoan in your hand +1/+1."
+},
+{
+"id": 741249,
+"name": "Bloodfire Wisp",
+"text": "Whenever an enemy creature dies, this gains +2/+1."
+},
+{
+"id": 741310,
+"name": "Apex Predator",
+"text": "Jump\nGift - Gain Attack and Life equal to any creature's."
+},
+{
+"id": 741491,
+"name": "Fugoro, Captain of the Gagana",
+"text": "Jump\nWhenever you discover a Treasure, Fugoro gains +3/+3."
+},
+{
+"id": 741300,
+"name": "Oath to Oblivion",
+"text": "Sacrifice a creature. Summon a 6/3 Oblivion Rider with Charge 3 in its place."
+},
+{
+"id": 741079,
+"name": "Hold the Line!",
+"text": "Add two 2/3 Imperial Guards with Taunt to your hand."
+},
+{
+"id": 741216,
+"name": "Ruunin's Presence",
+"text": "Add a random green creature to your hand. Give it +6/+6."
+},
+{
+"id": 741374,
+"name": "Yakkapult",
+"text": "Ranged Attack\nWhenever this attacks, summon a 2/2 Angry Yak in a random space adjacent to the target."
+},
+{
+"id": 741363,
+"name": "Earthfire Shaker",
+"text": "Gift - Deal 2 damage to all enemies. For each enemy destroyed, this gains +2/+2."
+},
+{
+"id": 741356,
+"name": "Aurora's Teapot",
+"text": "Change all friendly creatures to 6/6."
+},
+{
+"id": 741420,
+"name": "Havoc",
+"text": "Deal 9 damage to an enemy creature or structure."
+},
+{
+"id": 741391,
+"name": "Shifting Octopus",
+"text": "Choose one: Gain +2/+0. / Gain +0/+2. / Gain {jump..|Gain Taunt.}, twice:\n- Gain +2/+0\n- Gain +0/+2\n- Gain Jump\n- Gain Taunt"
+},
+{
+"id": 741144,
+"name": "Aurora's Disciple",
+"text": "Whenever you play an event, this gains +1/+1."
+},
+{
+"id": 741143,
+"name": "Gabrian Noble",
+"text": "Gift - Summon a 1/1 Ruby Fish (you may summon it on an ocean tile)."
+},
+{
+"id": 741317,
+"name": "Three Wishes",
+"text": "Gain 3 Life. Copy the top 3 cards of your opponent's deck. They cost 1 faeria less and are wild land. You cannot wish for more wishes."
+},
+{
+"id": 741173,
+"name": "Sagami Warrior",
+"text": "Dash 2"
+},
+{
+"id": 741063,
+"name": "Flying",
+"text": "Can move over ocean and land, but not through creatures or structures."
+},
+{
+"id": 741159,
+"name": "Egg of Wonders",
+"text": "The first time you draw a non-legendary creature, Egg of Wonders becomes a copy of it."
+},
+{
+"id": 741336,
+"name": "Illusion of Grandeur",
+"text": "Charge 2\nWhenever you summon a creature that costs 1 faeria or less, this gains Attack and Life equal to that creature's (while in your hand or deck)."
+},
+{
+"id": 741481,
+"name": "Victory Celebration",
+"text": "For the rest of the game, each player gains 1 faeria extra each turn."
+},
+{
+"id": 741471,
+"name": "Triton Tactician",
+"text": "Jump\nGift - Gains +1/+0 for each adjacent friendly triton."
+},
+{
+"id": 741267,
+"name": "Oradrim Templar",
+"text": "Dash 1\nHas +3/+0 against gods."
+},
+{
+"id": 741323,
+"name": "God Hunter",
+"text": "Jump\nCan only attack gods.\nCan't harvest faeria."
+},
+{
+"id": 741472,
+"name": "Tide Lord",
+"text": "Jump\nCan be summoned adjacent to friendly tritons. If it is, this gets +1/+1."
+},
+{
+"id": 741355,
+"name": "Magda's Rose",
+"text": "Gain control of an enemy creature."
+},
+{
+"id": 741240,
+"name": "Bomb Slinger",
+"text": "Gift - Deal 4 damage to an adjacent enemy creature or structure."
+},
+{
+"id": 741467,
+"name": "Yak Shepherd",
+"text": "Gift - Give 2 friendly yaks +2/+0 and Charge 2 until end of turn."
+},
+{
+"id": 741196,
+"name": "Primeval Colossus",
+"text": "This costs 1 faeria less for each special land you have (minimum cost: 6 faeria)."
+},
+{
+"id": 741401,
+"name": "Rakoan Chieftain",
+"text": "Dash 1\nAdjacent friendly creatures have +1/+0."
+},
+{
+"id": 741504,
+"name": "Amai Mapdealer",
+"text": "Gift - Shuffle a Treasure Map into your deck."
+},
+{
+"id": 741059,
+"name": "Production",
+"text": "Triggers at the start of each of its owner's turns."
+},
+{
+"id": 741256,
+"name": "Firebomb",
+"text": "Deal 4 damage to a creature or structure."
+},
+{
+"id": 741322,
+"name": "Feral Kodama",
+"text": "Jump\nCan't harvest faeria.\nWhenever this attacks a god, you gain 5 Life."
+},
+{
+"id": 741123,
+"name": "Taiga Explorer",
+"text": "Has +2/+0 while you control mountain mountain and +0/+2 while you control forest forest"
+},
+{
+"id": 741325,
+"name": "Hellfire",
+"text": "Deal 9 damage randomly split among enemies."
+},
+{
+"id": 741347,
+"name": "Bloodstone Golem",
+"text": "Production - Refill each faeria well.\nWhenever faeria is harvested, deal 1 damage to your opponent."
+},
+{
+"id": 741162,
+"name": "Shifting Tide",
+"text": "Choose one: Move a land / Draw a card.\n- Move a land.\n- Draw a card."
+},
+{
+"id": 741278,
+"name": "Shaytan Demon",
+"text": "Production - Deal 2 damage to yourself."
+},
+{
+"id": 741085,
+"name": "Freedom Fighter",
+"text": "Haste"
+},
+{
+"id": 741306,
+"name": "Choking Sand",
+"text": "Destroy a creature with 3 Attack or less."
+},
+{
+"id": 741246,
+"name": "Fire Elemental",
+"text": "Gift - Create mountain"
+},
+{
+"id": 795378,
+"name": "mecha",
+"text": "mecha: 11 entities of this type."
+},
+{
+"id": 741474,
+"name": "Coral Polliwog",
+"text": "This creature can harvest faeria the turn you play it.\nGift - You may move this creature's land."
+},
+{
+"id": 741448,
+"name": "Gagana, Rainbow Birdship",
+"text": "Flying\nCards in your hand are wild land.\nGift - Add a random Gagana crew member to your hand. It costs 0 faeria."
+},
+{
+"id": 741442,
+"name": "Rakoan Recruiter",
+"text": "Gift - Add a 1/1 Rakoan to your hand. It costs 0 faeria."
+},
+{
+"id": 741271,
+"name": "Wind Gate",
+"text": "You can summon creatures on spaces adjacent to this structure.\nActivate - Move Wind Gate."
+},
+{
+"id": 741308,
+"name": "Windstorm Archer",
+"text": "Ranged Attack\nWhenever you play an event, this gains +1/+0 this turn."
+},
+{
+"id": 741242,
+"name": "Flame Burst",
+"text": "Deal 3 damage."
+},
+{
+"id": 741435,
+"name": "Lion Fish",
+"text": "Flying, Deathtouch"
+},
+{
+"id": 741237,
+"name": "Shedim Pest",
+"text": "Gift - This gains +2/+2 if you have another creature with higher Attack than Life."
+},
+{
+"id": 741057,
+"name": "Gift",
+"text": "Triggers when the card is summoned."
+},
+{
+"id": 741335,
+"name": "The Emperor's Command",
+"text": "Give a target:\n- creature: -2/-1\n- structure: 3 damage\n- god: 4 Life"
+},
+{
+"id": 741402,
+"name": "Sky Anemone",
+"text": "Flying, Taunt\nCan be summoned anywhere."
+},
+{
+"id": 741229,
+"name": "Krog, the Ogre King",
+"text": "Combat - A random card in your hand costs 7 faeria less."
+},
+{
+"id": 741294,
+"name": "Golden Aviary",
+"text": "All your flying creatures have +1/+0."
+},
+{
+"id": 741480,
+"name": "Dwordia, Chief of the Bright Fox Tribe",
+"text": "Whenever Dwordia moves into a forest, you may teleport him to a friendly forest. If you do he gains +1/+1."
+},
+{
+"id": 741495,
+"name": "Seek Shelter",
+"text": "Discover a creature with Taunt. It becomes wild land and gets +0/+3."
+},
+{
+"id": 741147,
+"name": "Stormspawn",
+"text": "Last Words - Gain 10 faeria."
+},
+{
+"id": 741341,
+"name": "Yakhorn Warhorn",
+"text": "Summon three 2/4 Angry Prairie Yaks with Haste."
+},
+{
+"id": 741359,
+"name": "Void Guardian",
+"text": "Gift - Destroy your deck."
+},
+{
+"id": 741149,
+"name": "Wavecrash Colossus",
+"text": "Costs 1 faeria less for each time you've harvested faeria from an enemy well this game (minimum cost: 4 faeria)."
+},
+{
+"id": 741103,
+"name": "Cartographer",
+"text": "Last Words - Add an Explore to your hand."
+},
+{
+"id": 741342,
+"name": "Astral Weapon",
+"text": "Flying\nGift - Destroy all adjacent creatures, structures and lands."
+},
+{
+"id": 741520,
+"name": "Key of the Giants",
+"text": "Discover a creature. It gains +6/+6 and becomes wild land."
+},
+{
+"id": 741073,
+"name": "Deathtouch",
+"text": "Any creature it damages dies."
+},
+{
+"id": 741093,
+"name": "Magda, Queen of Meroval",
+"text": "Your Legends cost 1 faeria less.\nProduction - Add a random Legend to your hand. It becomes wild land."
+},
+{
+"id": 741099,
+"name": "Siege Engine",
+"text": "Ranged Attack\nAfter this attacks, it gains +1/+0."
+},
+{
+"id": 741065,
+"name": "Jump",
+"text": "Moves up to two tiles and can leap over obstacles, creatures and ocean."
+},
+{
+"id": 741291,
+"name": "Celestial Tower",
+"text": "Activate - Give a creature Charge 3 this turn. Deal 1 damage to this."
+},
+{
+"id": 741064,
+"name": "Charge",
+"text": "Can move several spaces in a straight line."
+},
+{
+"id": 741202,
+"name": "Spirit of Rebirth",
+"text": "Whenever another friendly creature dies, give a random creature in your hand +1/+1."
+},
+{
+"id": 741186,
+"name": "Possessed Ursus",
+"text": "After this creature is dealt damage, double its Attack."
+},
+{
+"id": 741514,
+"name": "Ancient Gargoyle",
+"text": "Charge 3, Flying Gift - Destroy all Treasure Maps in your deck and gain +1/+1 for each map destroyed.\nMaps destroyed:dynamic_number."
+},
+{
+"id": 741113,
+"name": "War Yak",
+"text": "Has +2/+0 while your opponent has 10 Life or less."
+},
+{
+"id": 741151,
+"name": "Water Elemental",
+"text": "Jump\nGift - Create lake"
+},
+{
+"id": 741397,
+"name": "Dream Keeper",
+"text": "Taunt\nGift - Reduce the cost of all cards in your hand by 1 faeria, then shuffle them into your deck and draw that many cards."
+},
+{
+"id": 741466,
+"name": "Roaming Yak",
+"text": "Gift - Create a prairie.\nDash 1"
+},
+{
+"id": 741092,
+"name": "Queen's Guard",
+"text": "Taunt\nCombat - Gain 1 faeria."
+},
+{
+"id": 741142,
+"name": "Spellwhirl",
+"text": "Add 2 random blue cards to your hand."
+},
+{
+"id": 741138,
+"name": "Frogify",
+"text": "Transform a creature into a 2/2 Frog with Jump."
+},
+{
+"id": 741357,
+"name": "Stone of Fair Fortune",
+"text": "Shuffle 3 random Treasures into your deck."
+},
+{
+"id": 741479,
+"name": "Zephyr Vulpine",
+"text": "Whenever this moves into a forest, you may teleport it to a friendly forest"
+},
+{
+"id": 741407,
+"name": "Imperial Trooper",
+"text": "Corrupt - Gain control of this creature's land."
+},
+{
+"id": 741198,
+"name": "Wood Elemental",
+"text": "Taunt\nGift - Create forest"
+},
+{
+"id": 741209,
+"name": "Wild Avenger",
+"text": "Taunt, Dash 2\nThis gains +0/+1 for each time you've been dealt damage this game."
+},
+{
+"id": 741292,
+"name": "Wind Wisp",
+"text": "Flying, Charge 3\nWhenever a friendly creature attacks a god, this gains +3/+0."
+},
+{
+"id": 741224,
+"name": "Kobold Barracks",
+"text": "Adjacent friendly creatures have +2/+0."
+},
+{
+"id": 741314,
+"name": "Soul Eater",
+"text": "Flying, Charge 3\nGains +1/+1 for each friendly creature that has died this game (while in your deck or hand)."
+},
+{
+"id": 741302,
+"name": "Iona, Beloved by All",
+"text": "Flying\nCan't be attacked."
+},
+{
+"id": 741115,
+"name": "Queen's Assassin",
+"text": "Deathtouch"
+},
+{
+"id": 741069,
+"name": "Protection",
+"text": "Prevents all damage from the next damage source, then is removed."
+},
+{
+"id": 741218,
+"name": "Underground Brigand",
+"text": "Combat - Gain 2 faeria."
+},
+{
+"id": 741257,
+"name": "Firestorm",
+"text": "Choose a space. Deal 3 damage to all enemy creatures on or adjacent to that space."
+},
+{
+"id": 741235,
+"name": "Flame Spitter",
+"text": "Gift - Deal 1 damage to an enemy."
+},
+{
+"id": 741437,
+"name": "Rakoan War Machine",
+"text": "Charge 2\nGift - This may Swallow another friendly Rakoan to gain +2/+0."
+},
+{
+"id": 741453,
+"name": "Wrath of Ignus",
+"text": "Deal dynamic_number damage randomly split among enemies.\nDeals +1 damage for each time you have selected +1 faeria from the power wheel this game (while in your hand or deck)."
+},
+{
+"id": 741475,
+"name": "Chrysalis",
+"text": "Gift - Swallow a friendly creature.\nProduction - The swallowed creature gains +1/+1.\nActivate - Destroy this."
+},
+{
+"id": 741515,
+"name": "Crystalis",
+"text": "Gift - Swallow a friendly creature.\nProduction - The swallowed creature gains +4/+4.\nActivate - Destroy this."
+},
+{
+"id": 741457,
+"name": "Vile Bloatfly",
+"text": "Flying\nCorrupt - Add a Vile Bloatfly to your hand."
+},
+{
+"id": 741483,
+"name": "Compass of Gagana",
+"text": "At the end of your turn, find a Treasure Map in your deck and place it on top. If your deck has no Treasure Maps, shuffle one into it instead."
+},
+{
+"id": 741461,
+"name": "Haunted Husk",
+"text": "At the end of your turn, if your opponent has 4 or more cards in hand, draw 1 card and drain 1 life from your opponent."
+},
+{
+"id": 741353,
+"name": "Clockwork Yak",
+"text": "Dash 2"
+},
+{
+"id": 741275,
+"name": "Last Nightmare",
+"text": "Destroy a creature."
+}
+]

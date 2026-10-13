@@ -1,0 +1,316 @@
+{
+"794701": [
+[
+"activated",
+"declare a Chainsaw Attack Special Action"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"piercing",
+"applying a +3 modifier to the Armour Roll"
+],
+[
+"friendly_fire",
+"the Chainsaw will Kick-back and this player is Knocked Down instead"
+],
+[
+"debuff",
+"a +3 modifier is applied when the opposition Coach makes an Armour Roll for this player"
+]
+],
+"794702": [
+[
+"debuff",
+"Apply a +1 modifier to any Casualty Roll made against this player"
+]
+],
+"794703": [
+[
+"debuff",
+"applies a -1 modifier to test whenever they attempt to Rush"
+]
+],
+"794704": [
+[
+"activated",
+"declare a Hypnotic Gaze Special Action"
+],
+[
+"movement",
+"make a Move Action"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"disable",
+"becomes Distracted"
+]
+],
+"794705": [
+[
+"deckbuilding_effect",
+"you may not include more players with this Trait"
+]
+],
+"794706": [
+[
+"activated",
+"declare a Kick Team-mate Special Action"
+]
+],
+"794707": [],
+"794708": [],
+"794709": [
+[
+"free_play",
+"set up and additional D3 Lineman players from their Reserves Box on the pitch"
+],
+[
+"random_effect",
+"D3"
+],
+[
+"board_limit",
+"more than the usual maximum of 11 players on the pitch"
+]
+],
+"794710": [
+[
+"turn_end",
+"At the end of each of the opposition's Turns"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"untap",
+"the Prone player may immediately stand up"
+]
+],
+"794711": [
+[
+"once_per_game",
+"Once per game"
+],
+[
+"summon",
+"add one new Lineman player"
+],
+[
+"death_trigger",
+"suffers a Dead result"
+]
+],
+"794712": [
+[
+"movement",
+"attempt to Pogo over a single adjacent square"
+]
+],
+"794713": [
+[
+"activated",
+"declare a Projectile Vomit Special Action"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"damage",
+"make an Armour Roll for the selected player"
+],
+[
+"friendly_fire",
+"this player covers themselves in acidic bile"
+]
+],
+"794714": [
+[
+"random_effect",
+"they must roll a D6"
+],
+[
+"adjacency",
+"adjacent to them"
+]
+],
+"794715": [
+[
+"random_effect",
+"roll a D6"
+],
+[
+"cheat_death",
+"this player regenerates and ignores the Casualty"
+]
+],
+"794716": [],
+"794717": [
+[
+"activated",
+"declare a Stab Special Action"
+],
+[
+"damage",
+"make an Armour Roll for the selected player"
+]
+],
+"794718": [
+[
+"immunity",
+"they do not suffer any negative modifiers to their Agility Test for being Marked"
+],
+[
+"debuff",
+"applies a -1 modifier to the Agility Test when attempting to Intercept the ball"
+]
+],
+"794719": [
+[
+"movement",
+"they may choose not to Scatter before landing"
+],
+[
+"random_effect",
+"Roll a D6"
+]
+],
+"794720": [
+[
+"random_effect",
+"they must roll a D6"
+],
+[
+"immobilize",
+"may not leave their current square for any reason"
+]
+],
+"794721": [
+[
+"stat_gain",
+"apply a +1 modifier to the roll for standing up"
+],
+[
+"condition_count",
+"for each Open Standing team-mate adjacent to this player"
+],
+[
+"adjacency",
+"adjacent to this player"
+]
+],
+"794722": [
+[
+"stat_gain",
+"may apply a +1 modifier to the Agility Test when attempting to Dodge"
+]
+],
+"794723": [
+[
+"reactions",
+"Whenever an opposition player attempts to perform a Block Action against this player"
+],
+[
+"movement",
+"placed in any other unoccupied square adjacent to the player performing the Action"
+]
+],
+"794724": [
+[
+"random_effect",
+"they must roll a D6"
+]
+],
+"794725": [],
+"794726": [
+[
+"tribal",
+"same keyword as that shown in brackets"
+]
+],
+"794727": [
+[
+"turn_end",
+"At the end of a Drive"
+],
+[
+"self_destruct",
+"they are Sent-off for committing a Foul"
+]
+],
+"794729": [
+[
+"stat_gain",
+"apply a +1 modifier to the roll"
+],
+[
+"deckbuilding_effect",
+"must be hired as a pair"
+]
+],
+"794730": [
+[
+"traits_quirks",
+"Niggling Injury"
+],
+[
+"debuff",
+"apply a +1 modifier to the roll for each Niggling Injury"
+],
+[
+"condition_count",
+"for each Niggling Injury"
+]
+],
+"794731": [
+[
+"once_per_game",
+"Once per game"
+]
+],
+"794732": [
+[
+"random_effect",
+"roll a D6"
+],
+[
+"condition_count",
+"equal to or lower than the player's number of additional Skills"
+],
+[
+"permanent_loss",
+"the player is removed from your Team Draft List"
+]
+],
+"794734": [],
+"794736": [],
+"794737": [
+[
+"cost_reduction",
+"discounted"
+]
+],
+"794738": [],
+"794739": [],
+"794740": [],
+"794741": [],
+"794742": [],
+"794743": [],
+"794744": [],
+"794745": [],
+"794746": [],
+"794747": [],
+"794748": [],
+"794749": [],
+"794750": [],
+"794751": [],
+"794752": [],
+"794753": []
+}

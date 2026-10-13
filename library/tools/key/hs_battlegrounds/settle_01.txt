@@ -1,0 +1,150 @@
+749010 | Hydralisk | Windfury Rally: Gain Attack equal to your Tier permanently. (Morphs each turn!)X[x]Windfury Rally: Gain Attack equal to your Tier permanently.
+   A: [["multi_attack", "Windfury"], ["on_attack", "Rally"], ["permanent_growth", "Gain Attack equal to your Tier permanently"], ["transform", "Morphs each turn"]]
+   B: [["multi_attack", "Windfury"], ["on_attack", "Rally"], ["permanent_growth", "Gain Attack equal to your Tier permanently"], ["variable_stats", "Gain Attack equal to your Tier"], ["transform", "Morphs each turn"]]
+749019 | Springy Spriggan | Magnetic At the end of your turn, give your other Mechs +1 Attack.
+   A: [["merge_attach", "Magnetic"], ["turn_end", "At the end of your turn"], ["stat_gain", "+1 Attack"]]
+   B: [["merge_attach", "Magnetic"], ["turn_end", "At the end of your turn"], ["stat_gain", "+1 Attack"], ["tribal", "other Mechs"]]
+749098 | Enigmatic Headstone | At the end of each turn, your Undead have +2 Attack this game (wherever they are).
+   A: [["turn_end", "At the end of each turn"], ["stat_gain", "+2 Attack this game"]]
+   B: [["turn_end", "At the end of each turn"], ["stat_gain", "your Undead have +2 Attack this game"], ["tribal", "Undead"]]
+749103 | Turbocharged Drill | Get X different Magnetic Mechs of ANY Tier.
+   A: [["generate_cards", "Get X different"], ["merge_attach", "Magnetic"], ["variety_payoff", "different"]]
+   B: [["generate_cards", "Get X different Magnetic Mechs of ANY Tier"], ["merge_attach", "Magnetic"], ["variety_payoff", "different Magnetic Mechs"], ["tribal", "Mechs"]]
+749111 | Splinter of Aurum | When you have Y Gold, get a random Golden Tier 5 minion. (Once per game.)
+   A: [["generate_cards", "get a random Golden Tier 5 minion"], ["once_per_game", "Once per game"], ["random_effect", "random"]]
+   B: [["condition_count", "When you have Y Gold"], ["generate_cards", "get a random Golden Tier 5 minion"], ["random_effect", "random Golden Tier 5 minion"], ["once_per_game", "(Once per game.)"]]
+749112 | Baleful Incense | Start of Combat: Give your left and right-most Undead Reborn.
+   A: [["combat_start", "Start of Combat"], ["cheat_death", "Reborn"]]
+   B: [["combat_start", "Start of Combat"], ["revive", "Reborn"], ["adjacency", "left and right-most Undead"], ["tribal", "Undead"]]
+749127 | Heart of the Forest | Your Tavern spells give an extra +Y/+Z. After you cast 5 Tavern spells, improve this. (X left!)
+   A: [["spell_power", "Your Tavern spells give an extra +Y/+Z"], ["condition_count", "After you cast 5 Tavern spells"]]
+   B: [["spell_power", "Your Tavern spells give an extra +Y/+Z"], ["count_payoff", "After you cast 5 Tavern spells"], ["upgrade", "improve this"]]
+749170 | Lubber Sticker | The Tavern offers an extra Tavern spell whenever it is Refreshed. The first one you buy each turn costs (1) less.
+   A: [["card_advantage", "extra Tavern spell"], ["cost_reduction", "costs (1) less"]]
+   B: [["generate_cards", "extra Tavern spell"], ["cost_reduction", "costs (1) less"]]
+749172 | Gritty Portrait | Get a Gritty Headhunter that gives a Marauder's Contract. At the start of each turn, repeat this.
+   A: [["generate_cards", "Get a Gritty Headhunter"], ["turn_start", "At the start of each turn"]]
+   B: [["generate_cards", "Get a Gritty Headhunter"], ["turn_start", "At the start of each turn"], ["repeat_trigger", "repeat this"]]
+749188 | Improviser | Avenge (X): Minions in the Tavern have +Y/+Z next turn.
+   A: [["death_count", "Avenge (X)"], ["stat_gain", "+Y/+Z"], ["temporary_effect", "next turn"]]
+   B: [["death_count", "Avenge (X)"], ["stat_gain", "Minions in the Tavern have +Y/+Z"], ["temporary_buff", "next turn"]]
+749259 | Murky's Fish | Give a Murloc +X/+Y. Repeat for each Murloc you control.
+   A: [["stat_gain", "+X/+Y"], ["condition_count", "for each Murloc you control"]]
+   B: [["stat_gain", "Give a Murloc +X/+Y"], ["condition_count", "Repeat for each Murloc you control"], ["tribal", "Murloc"]]
+749290 | Red Volumizer | Magnetic. The first time this is played or Magnetized, your Volumizers have +Y Attack this game (wherever they are).
+   A: [["merge_attach", "Magnetic"], ["stat_gain", "+Y Attack this game"]]
+   B: [["merge_attach", "Magnetic"], ["on_play", "The first time this is played or Magnetized"], ["stat_gain", "your Volumizers have +Y Attack"]]
+749299 | Minted Corsair | When you sell this, get a Tavern Coin.
+   A: [["resource_gain", "get a Tavern Coin"]]
+   B: [["generate_cards", "get a Tavern Coin"]]
+749330 | Blue Chromadrake | Battlecry: Get two random X-Cost Tavern spells.
+   A: [["on_play", "Battlecry"], ["generate_cards", "Get two random X-Cost Tavern spells"], ["random_effect", "random"]]
+   B: [["on_play", "Battlecry"], ["generate_cards", "Get two random X-Cost Tavern spells"], ["random_effect", "two random X-Cost Tavern spells"], ["cost_condition", "X-Cost"]]
+749381 | Timewarped Molten Rock | After you play an Elemental, gain +X/+Y and improve this.
+   A: [["on_ally_play", "After you play an Elemental"], ["stat_gain", "gain +X/+Y"]]
+   B: [["on_ally_play", "After you play an Elemental"], ["stat_gain", "gain +X/+Y"], ["tribal", "Elemental"], ["upgrade", "improve this"]]
+749498 | Timewarped Caretaker | Deathrattle: Summon five 1/1 Skeletons. Any that don't fit give your Undead +X Attack this game (wherever they are).
+   A: [["death_trigger", "Deathrattle"], ["summon", "Summon five 1/1 Skeletons"], ["stat_gain", "+X Attack this game"]]
+   B: [["death_trigger", "Deathrattle"], ["summon", "Summon five 1/1 Skeletons"], ["board_limit", "Any that don't fit"], ["stat_gain", "give your Undead +X Attack this game"], ["tribal", "Undead"]]
+749500 | Timewarped Gemsplitter | Divine Shield. After a friendly minion loses Divine Shield, your Blood Gems give an extra +X Attack this game.
+   A: [["shield", "Divine Shield"], ["stat_gain", "+X Attack this game"]]
+   B: [["shield", "Divine Shield"], ["stat_gain", "your Blood Gems give an extra +X Attack this game"], ["on_damaged", "loses Divine Shield"]]
+749502 | Timewarped Grease Bot | Divine Shield. After a friendly minion loses Divine Shield, give your minions +X/+Y permanently.
+   A: [["shield", "Divine Shield"], ["stat_gain", "+X/+Y permanently"]]
+   B: [["shield", "Divine Shield"], ["on_damaged", "loses Divine Shield"], ["permanent_growth", "give your minions +X/+Y permanently"]]
+749507 | Timewarped Trumpeter | After you sell Y Elementals, get a random Elemental. (X left!)
+   A: [["condition_count", "After you sell Y Elementals"], ["generate_cards", "get a random Elemental"]]
+   B: [["count_payoff", "After you sell Y Elementals"], ["generate_cards", "get a random Elemental"], ["tribal", "Elementals"]]
+749509 | Timewarped Lava Lurker | After you cast a Spellcraft spell from hand on a minion, also cast a permanent copy on this. (Twice per turn.) X[x]After you cast a Spellcraft spell from hand on a minion, also cast a permanent copy on this. (X left!)
+   A: [["on_spell", "After you cast a Spellcraft spell"], ["copy", "permanent copy"]]
+   B: [["on_spell", "After you cast a Spellcraft spell from hand on a minion"], ["copy", "also cast a permanent copy on this"], ["play_restriction", "Twice per turn"]]
+749555 | Timewarped Centurion | After you cast a Tavern spell, get an extra copy of it. (Y times per turn.)X[x]After you cast a Tavern spell, get an extra copy of it. (X left!)
+   A: [["on_spell", "After you cast a Tavern spell"], ["copy", "extra copy"]]
+   B: [["on_spell", "After you cast a Tavern spell"], ["copy", "get an extra copy of it"], ["play_restriction", "(Y times per turn.)"]]
+749599 | Woodland Defiler | At the end of your turn, add a Fodder to your next X Refreshes.
+   A: [["turn_end", "At the end of your turn"], ["fodder", "add a Fodder"]]
+   B: [["turn_end", "At the end of your turn"], ["junk_cards", "add a Fodder to your next X Refreshes"]]
+749613 | Lurking Leviathan | Whenever you summon a Beast, give it +Y Attack and improve this permanently.
+   A: [["on_ally_play", "Whenever you summon a Beast"], ["permanent_growth", "improve this permanently"], ["stat_gain", "+Y Attack"]]
+   B: [["on_ally_play", "Whenever you summon a Beast"], ["stat_gain", "give it +Y Attack"], ["upgrade", "improve this permanently"]]
+749644 | Demonic Tapestry | After you Refresh Y times, the highest-Tier minion in the Tavern costs Health instead of Gold to buy. (X left!)
+   A: [["life_payment", "costs Health instead of Gold"], ["condition_count", "After you Refresh Y times"]]
+   B: [["count_payoff", "After you Refresh Y times"], ["life_payment", "costs Health instead of Gold to buy"], ["stat_condition", "highest-Tier minion"]]
+749650 | Stormcoil Sticker | After Y friendly minions die, get a random Mech. (X left!)
+   A: [["death_count", "After Y friendly minions die"], ["generate_cards", "get a random Mech"], ["random_effect", "random"]]
+   B: [["death_count", "After Y friendly minions die"], ["generate_cards", "get a random Mech"], ["random_effect", "random Mech"], ["tribal", "Mech"]]
+749657 | Thornspike Pauldron | After you trigger a Deathrattle, your Blood Gems give an extra +Z/+ until next combat.
+   A: [["death_trigger", "After you trigger a Deathrattle"], ["stat_gain", "extra +Z/+"]]
+   B: [["repeat_trigger", "After you trigger a Deathrattle"], ["death_trigger", "After you trigger a Deathrattle"], ["stat_gain", "your Blood Gems give an extra +Z/+"]]
+749679 | Dramaloc Sticker | Start of Combat: Give your Murlocs the Attack of the highest-Attack minion in your hand.
+   A: [["combat_start", "Start of Combat"], ["stat_condition", "highest-Attack minion in your hand"]]
+   B: [["combat_start", "Start of Combat"], ["stat_gain", "Give your Murlocs the Attack of the highest-Attack minion in your hand"], ["tribal", "Murlocs"], ["stat_condition", "highest-Attack"]]
+749692 | Kaleidoscope | Discover a Tier 7 minion. Lock it in your hand for X |4 (turn, turns).
+   A: [["selection", "Discover"], ["delayed", "for X |4 (turn, turns)"]]
+   B: [["selection", "Discover a Tier 7 minion"], ["retain", "Lock it in your hand"]]
+749707 | Mama Bear Sticker | Whenever you summon a Beast, give it +X/+Y.
+   A: [["on_ally_play", "Whenever you summon a Beast"], ["stat_gain", "+X/+Y"]]
+   B: [["on_ally_play", "Whenever you summon a Beast"], ["stat_gain", "give it +X/+Y"], ["tribal", "Beast"]]
+749708 | Ophidian Staff | Spellcraft: Give a Beast +2/+2 and Reborn.
+   A: [["stat_gain", "+2/+2"], ["cheat_death", "Reborn"]]
+   B: [["buff", "Give a Beast +2/+2"], ["revive", "Reborn"], ["tribal", "Beast"]]
+749709 | Sunken Anchor | Get X random Bounties. At the start of each turn, repeat this.
+   A: [["generate_cards", "Get X random Bounties"], ["turn_start", "At the start of each turn"], ["random_effect", "random"]]
+   B: [["generate_cards", "Get X random Bounties"], ["random_effect", "random Bounties"], ["turn_start", "At the start of each turn"], ["repeat_trigger", "repeat this"]]
+749714 | Groundbreaker Portrait | Get a Groundbreaker. Your Groundbreakers also give stats to the minion to their left.
+   A: [["generate_cards", "Get a Groundbreaker"], ["adjacency", "minion to their left"]]
+   B: [["generate_cards", "Get a Groundbreaker"], ["stat_gain", "give stats to the minion to their left"], ["adjacency", "minion to their left"]]
+749797 | Vigilant Bristlemane | Whenever you cast a spell on this, it plays a Blood Gem on adjacent minions.
+   A: [["on_spell", "Whenever you cast a spell on this"], ["adjacency", "adjacent minions"]]
+   B: [["on_spell", "Whenever you cast a spell on this"], ["stat_gain", "plays a Blood Gem on adjacent minions"], ["adjacency", "adjacent minions"]]
+749825 | Glambot | Whenever you cast a spell on a Mech, Magnetize a X/Y Satellite to it.
+   A: [["on_spell", "Whenever you cast a spell"], ["merge_attach", "Magnetize"]]
+   B: [["on_spell", "Whenever you cast a spell on a Mech"], ["merge_attach", "Magnetize a X/Y Satellite to it"], ["tribal", "Mech"]]
+749846 | Lightfeather Sticker | Start of Combat: Give your Rally minions Divine Shield.
+   A: [["combat_start", "Start of Combat"], ["shield", "Divine Shield"]]
+   B: [["combat_start", "Start of Combat"], ["shield", "Give your Rally minions Divine Shield"], ["on_attack", "Rally"]]
+749849 | Funeral Wreath | After a friendly minion is Reborn, get a plain copy of it. (Y times per combat.)X[x]After a friendly minion is Reborn, get a plain copy of it. (X left!)
+   A: [["cheat_death", "is Reborn"], ["copy", "plain copy"]]
+   B: [["revive", "After a friendly minion is Reborn"], ["copy", "get a plain copy of it"], ["play_restriction", "(Y times per combat.)"]]
+749871 | Shath'Yar Shrine | After you discard a spell, get a random Aberration.
+   A: [["discard", "After you discard a spell"], ["generate_cards", "get a random Aberration"]]
+   B: [["discard", "After you discard a spell"], ["generate_cards", "get a random Aberration"], ["tribal", "Aberration"]]
+749875 | Soul Battery | After you summon Y minions, replace this with a random Greater Undead Trinket. (X left!)
+   A: [["condition_count", "After you summon Y minions"], ["transform", "replace this with"]]
+   B: [["on_ally_play", "After you summon Y minions"], ["transform", "replace this with a random Greater Undead Trinket"], ["random_effect", "random Greater Undead Trinket"]]
+749896 | Emergency Gearblade | At the end of your turn, cast Repair Job on your left-most Mech.
+   A: [["turn_end", "At the end of your turn"]]
+   B: [["turn_end", "At the end of your turn"], ["tribal", "Mech"]]
+749900 | Secret Schematic | After you buy a Mech, get a random Tavern spell.
+   A: [["generate_cards", "get a random Tavern spell"], ["random_effect", "random"]]
+   B: [["generate_cards", "get a random Tavern spell"], ["on_ally_play", "After you buy a Mech"], ["tribal", "Mech"]]
+749930 | Demonology | Rally: Add a Fodder to your next 3 Refreshes.
+   A: [["on_attack", "Rally"], ["fodder", "Add a Fodder"]]
+   B: [["on_attack", "Rally"], ["junk_cards", "Add a Fodder to your next 3 Refreshes"]]
+749961 | Prosthetic Hand | Magnetic, Reborn Can Magnetize to Mechs or Undead.
+   A: [["merge_attach", "Magnetic"], ["cheat_death", "Reborn"]]
+   B: [["merge_attach", "Magnetic"], ["revive", "Reborn"], ["tribal", "Mechs or Undead"]]
+749989 | Brann Bronzebeard | Your Battlecries trigger twice.
+   A: [["repeat_trigger", "trigger twice"], ["on_play", "Battlecries"]]
+   B: [["repeat_trigger", "Your Battlecries trigger twice"]]
+750035 | Storm Splitter | Once per turn, after you Pass a Tavern spell, get a new copy of it.
+   A: [["copy", "get a new copy of it"]]
+   B: [["copy", "get a new copy of it"], ["play_restriction", "Once per turn"]]
+750048 | Glorious Gloop | Choose a friendly minion. Start of Combat: Transform it into your teammate's highest-Tier minion.
+   A: [["combat_start", "Start of Combat"], ["transform", "Transform it"]]
+   B: [["combat_start", "Start of Combat"], ["transform", "Transform it into your teammate's highest-Tier minion"], ["team_play", "your teammate's"], ["stat_condition", "highest-Tier"]]
+750056 | Summoning Sphere | Start of Combat: Summon a copy of your teammate's highest-Health minion.
+   A: [["combat_start", "Start of Combat"], ["copy", "Summon a copy"], ["summon", "Summon a copy"], ["team_play", "your teammate's"]]
+   B: [["combat_start", "Start of Combat"], ["summon", "Summon a copy of your teammate's highest-Health minion"], ["copy", "a copy of your teammate's"], ["team_play", "your teammate's"], ["stat_condition", "highest-Health"]]
+750087 | King Bagurgle | Battlecry: Give all other Murlocs in your hand and board +X/+Y.
+   A: [["on_play", "Battlecry"], ["stat_gain", "+X/+Y"]]
+   B: [["on_play", "Battlecry"], ["stat_gain", "+X/+Y"], ["tribal", "Murlocs"], ["scope_multi", "all other Murlocs"]]
+750104 | Deflect-o-Bot | Divine Shield Whenever you summon a Mech during combat, gain +X Attack and Divine Shield.
+   A: [["shield", "Divine Shield"], ["on_ally_play", "Whenever you summon a Mech"], ["stat_gain", "+X Attack"]]
+   B: [["shield", "Divine Shield"], ["on_ally_play", "Whenever you summon a Mech during combat"], ["stat_gain", "gain +X Attack"], ["tribal", "Mech"]]
+750162 | Lost Staff of Hamuul | Choose a minion. Refresh the Tavern with minions of its type.
+   A: [["tribal", "of its type"]]
+   B: [["selection", "Choose a minion"], ["tribal", "minions of its type"]]
+750174 | Ice Block | Secret: When your hero takes fatal damage, prevent it and become Immune this turn.
+   A: [["trap_secret", "Secret"], ["cheat_death", "prevent it"], ["immunity", "become Immune this turn"]]
+   B: [["trap_secret", "Secret"], ["cheat_death", "prevent it"], ["immunity", "become Immune this turn"], ["temporary_effect", "this turn"]]

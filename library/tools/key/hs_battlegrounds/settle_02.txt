@@ -1,0 +1,63 @@
+750181 | Apostle of Galakrond | Battlecry: Replace cards in the Tavern with ones from a Tier higher.
+   A: [["on_play", "Battlecry"]]
+   B: [["on_play", "Battlecry"], ["upgrade", "Replace cards in the Tavern with ones from a Tier higher"]]
+750197 | Tentacle of C'Thun | After a different friendly minion gains stats, gain +1/+1 until next turn.
+   A: [["stat_gain", "gain +1/+1"], ["temporary_effect", "until next turn"]]
+   B: [["stat_gain", "gain +1/+1"], ["temporary_buff", "until next turn"], ["on_ally_play", "After a different friendly minion gains stats"]]
+750199 | Weebomination | At the end of your turn, give the minion to the left +X Health. (Improved by each Health your hero is missing!)
+   A: [["turn_end", "At the end of your turn"], ["stat_gain", "+X Health"], ["adjacency", "the minion to the left"], ["low_life", "each Health your hero is missing"]]
+   B: [["turn_end", "At the end of your turn"], ["stat_gain", "give the minion to the left +X Health"], ["adjacency", "the minion to the left"], ["condition_life", "Improved by each Health your hero is missing"]]
+750204 | Devouring Hunger | Consume all minions in the Tavern and give their stats to your minions. Then Refresh it.
+   A: [["stat_gain", "give their stats to your minions"]]
+   B: [["stat_gain", "give their stats to your minions"], ["removal", "Consume all minions in the Tavern"]]
+750215 | Magnus Manastorm | Two Refreshes each turn are free. (X left!)
+   A: [["resource_advantage", "Two Refreshes each turn are free"]]
+   B: [["cost_reduction", "Two Refreshes each turn are free"]]
+750217 | Sinestra | Whenever a friendly minion gains Attack during combat, give it +1 Health permanently.
+   A: [["permanent_growth", "+1 Health permanently"]]
+   B: [["stat_gain", "gains Attack during combat"], ["permanent_growth", "give it +1 Health permanently"]]
+750223 | Sklibb, Demon Hunter | The Tavern offers an extra minion of a higher Tier whenever it is Refreshed.
+   A: [["card_advantage", "extra minion of a higher Tier"]]
+   B: [["generate_cards", "extra minion of a higher Tier"]]
+750237 | Burth | After you Discover a minion, give it +Y/+Y and improve this.
+   A: [["selection", "After you Discover a minion"], ["stat_gain", "+Y/+Y"], ["permanent_growth", "improve this"]]
+   B: [["selection", "After you Discover a minion"], ["stat_gain", "give it +Y/+Y"], ["upgrade", "improve this"]]
+750242 | Wandering Treant | Whenever a friendly Taunt minion is attacked, give your minions +1/+1 permanently.
+   A: [["on_damaged", "Whenever a friendly Taunt minion is attacked"], ["permanent_growth", "+1/+1 permanently"]]
+   B: [["taunt", "Taunt"], ["permanent_growth", "give your minions +1/+1 permanently"], ["on_damaged", "is attacked"]]
+750285 | King of Aberrations | Discover an Aberration. Swaps type each turn.
+   A: [["selection", "Discover an Aberration"], ["transform", "Swaps type each turn"]]
+   B: [["selection", "Discover an Aberration"], ["transform", "Swaps type each turn"], ["tribal", "Aberration"]]
+750301 | ALL Will Burn! | Start of Combat: Give ALL minions +2 Attack permanently.
+   A: [["combat_start", "Start of Combat"], ["stat_gain", "+2 Attack permanently"], ["scope_global", "ALL minions"]]
+   B: [["combat_start", "Start of Combat"], ["permanent_growth", "+2 Attack permanently"], ["scope_global", "ALL minions"]]
+750302 | Dream Portal | The Tavern offers an extra Dragon whenever it is Refreshed.
+   A: [["card_advantage", "extra Dragon"]]
+   B: [["tribal", "extra Dragon"], ["resource_advantage", "offers an extra Dragon"]]
+750354 | Stealth | 
+   A: [["stealth", "Stealth"]]
+   B: []
+750361 | Activate | Once per recruit turn, pay gold to use the effect.
+   A: [["activated", "pay gold to use the effect"]]
+   B: [["activated", "pay gold to use the effect"], ["shop_gold", "pay gold"]]
+794971 | Elemental | Elemental: 81 entities of this type.
+   A: []
+   B: [["tribal", "Elemental"]]
+800819 | Knockoff Wisdomball | Your next 2 Refreshes are helpful! (@ left!)
+   A: []
+   B: [["repeat_trigger", "Your next 2 Refreshes are helpful"]]
+800820 | Replica Cathedral | Your first spell each turn casts an extra time.
+   A: [["repeat_trigger", "casts an extra time"], ["combo_sequence", "Your first spell each turn"]]
+   B: [["repeat_trigger", "Your first spell each turn casts an extra time"]]
+800836 | Minor Goldthorn Potion | The Minor Timewarp offers X Golden minions this game. They do not give Triple Rewards.
+   A: []
+   B: [["rule_change", "The Minor Timewarp offers X Golden minions this game"], ["tribal", "Golden minions"]]
+800838 | Major Waygate | On Turns 8 and 9, visit the Major Timewarp. There is no Minor Timewarp in this game.
+   A: [["turn_number", "On Turns 8 and 9"]]
+   B: [["turn_number", "On Turns 8 and 9"], ["rule_change", "There is no Minor Timewarp in this game"]]
+800845 | Dragon's Eye | Your Dragons' Battlecries trigger an extra time.
+   A: [["repeat_trigger", "trigger an extra time"]]
+   B: [["repeat_trigger", "Battlecries trigger an extra time"], ["tribal", "Your Dragons'"]]
+800856 | Efficient Exchange | Pass a non-Golden minion.
+   A: [["donate", "Pass a non-Golden minion"]]
+   B: [["donate", "Pass a non-Golden minion"], ["team_play", "Pass a non-Golden minion"]]

@@ -1,0 +1,866 @@
+{
+"760184": [
+[
+"stat_gain",
+"+20% bleed resistance"
+],
+[
+"stat_loss",
+"-0.02 dodge"
+]
+],
+"760195": [
+[
+"stat_gain",
+"+30% stun chance"
+],
+[
+"tribal",
+"Class: abomination"
+]
+],
+"760453": [
+[
+"stat_gain",
+"+0.06 dodge"
+],
+[
+"stat_gain",
+"+0.04 crit"
+],
+[
+"stat_loss",
+"-13% hp heal percent"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+]
+],
+"759945": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 3, 2, 1"
+],
+[
+"no_damage_output",
+"Deals damage (modifier -50%)"
+],
+[
+"stat_loss",
+"-30% dodge"
+],
+[
+"light_level",
+"increase light 10 (global)"
+]
+],
+"760144": [
+[
+"stat_gain",
+"+10% trap resistance"
+],
+[
+"stat_gain",
+"+0.04 dodge"
+],
+[
+"stat_loss",
+"-5% stress heal received percent"
+],
+[
+"tribal",
+"Class: highwayman"
+]
+],
+"760334": [
+[
+"stat_gain",
+"+0.08 protection"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"stat_gain",
+"+10% debuff resistance"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+]
+],
+"760492": [
+[
+"stress_morale",
+"-13% stress dmg received percent"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"stat_gain",
+"+16% resolve xp bonus percent"
+],
+[
+"stat_loss",
+"-0.06 dodge in the first round"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760590": [
+[
+"stat_loss",
+"-0.2 dodge"
+],
+[
+"stat_loss",
+"-10% max HP"
+]
+],
+"760463": [
+[
+"stat_gain",
+"+0.06 protection"
+],
+[
+"stat_gain",
+"+8% death_blow resistance"
+],
+[
+"condition_life",
+"at Death's Door"
+],
+[
+"stat_loss",
+"-13% hp heal percent vs beast enemies"
+],
+[
+"tribal",
+"vs beast enemies"
+]
+],
+"760529": [
+[
+"stat_gain",
+"+0.05 accuracy with ranged skills"
+],
+[
+"ranged",
+"ranged skills"
+]
+],
+"760152": [
+[
+"stat_gain",
+"+20% poison resistance"
+],
+[
+"stat_loss",
+"-20% disease resistance"
+]
+],
+"759856": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3"
+],
+[
+"damage",
+"Deals damage"
+],
+[
+"mark_target",
+"only if target is tagged"
+],
+[
+"stat_gain",
+"+100% damage"
+]
+],
+"760222": [
+[
+"stat_gain",
+"+0.1 accuracy"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"stat_gain",
+"+2 speed"
+],
+[
+"stress_morale",
+"-10% stress dmg received percent"
+]
+],
+"760452": [
+[
+"stat_gain",
+"+0.06 protection"
+],
+[
+"stat_gain",
+"+10% move resistance"
+],
+[
+"stat_loss",
+"-0.06 dodge"
+],
+[
+"stat_loss",
+"-4 speed"
+]
+],
+"760293": [
+[
+"stat_gain",
+"+0.04 crit"
+],
+[
+"stat_gain",
+"+10% damage"
+],
+[
+"stat_loss",
+"-4 speed"
+],
+[
+"stat_loss",
+"-13% hp heal received percent"
+],
+[
+"stat_loss",
+"-0.06 protection"
+]
+],
+"759878": [
+[
+"rank_positions",
+"Usable from ranks 4, 3"
+],
+[
+"movement",
+"Moves self (back/forward) 0 2"
+],
+[
+"damage",
+"Deals damage (modifier 40%)"
+]
+],
+"760593": [
+[
+"stat_loss",
+"-0.1 accuracy"
+],
+[
+"stat_gain",
+"+15% damage"
+]
+],
+"759935": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 3, 4"
+],
+[
+"no_damage_output",
+"Deals damage (modifier -100%)"
+],
+[
+"disable",
+"stun"
+]
+],
+"760306": [
+[
+"stat_gain",
+"+5% death_blow resistance"
+],
+[
+"condition_life",
+"while HP below 0.25"
+],
+[
+"stat_gain",
+"+5% damage"
+],
+[
+"stat_gain",
+"+0.05 dodge"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"stat_loss",
+"-10% bleed resistance in the first round"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760666": [
+[
+"stress_morale",
+"-20% stress dmg received percent"
+]
+],
+"760723": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"buff",
+"+0.1 dodge (self)"
+],
+[
+"buff",
+"+0.1 dodge (party_other)"
+]
+],
+"760148": [
+[
+"stat_gain",
+"+0.04 accuracy"
+],
+[
+"stat_gain",
+"+0.04 dodge"
+],
+[
+"tribal",
+"Class: jester"
+]
+],
+"760274": [
+[
+"stat_gain",
+"+3 speed"
+],
+[
+"stat_gain",
+"+0.04 crit with melee skills"
+],
+[
+"stat_gain",
+"+50% starving damage percent"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+]
+],
+"760523": [
+[
+"stat_gain",
+"+2 speed"
+]
+],
+"759793": [
+[
+"items_consumables",
+"A type of provision"
+],
+[
+"cast_from_zone",
+"used on curios in dungeons"
+]
+],
+"760253": [
+[
+"stat_gain",
+"+4% resolve check percent"
+],
+[
+"stat_gain",
+"+0.03 protection"
+],
+[
+"stat_loss",
+"-4 speed"
+],
+[
+"rank_positions",
+"while in rank"
+]
+],
+"759807": [
+[
+"quests",
+"After you've completed the requirements of a quest"
+],
+[
+"run_structure",
+"return to town at any time"
+]
+],
+"760084": [
+[
+"stress_morale",
+"-20% stress dmg received percent"
+]
+],
+"760493": [
+[
+"stat_gain",
+"+26% hp heal received percent"
+],
+[
+"condition_life",
+"while HP below 0.25"
+],
+[
+"stat_loss",
+"-10% max HP"
+]
+],
+"760402": [
+[
+"stat_gain",
+"+6 speed"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"stat_gain",
+"+0.07 accuracy"
+],
+[
+"stat_loss",
+"-8% resolve check percent"
+],
+[
+"stat_loss",
+"-0.06 protection"
+]
+],
+"760380": [
+[
+"stat_gain",
+"+0.05 accuracy"
+],
+[
+"stat_gain",
+"+13% damage"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"stat_loss",
+"-13% hp heal received percent"
+],
+[
+"turn_number",
+"in the first round"
+]
+],
+"760365": [
+[
+"stat_gain",
+"+24% resolve xp bonus percent"
+],
+[
+"stress_morale",
+"-15% stress dmg received percent"
+],
+[
+"stat_loss",
+"-8% resolve check percent"
+],
+[
+"light_level",
+"while light below 26"
+],
+[
+"stat_loss",
+"-0.05 accuracy vs eldritch enemies"
+],
+[
+"tribal",
+"vs eldritch enemies"
+]
+],
+"760173": [
+[
+"stat_gain",
+"+2 speed"
+],
+[
+"stat_gain",
+"+20% move resistance"
+],
+[
+"tribal",
+"Class: grave_robber"
+]
+],
+"760435": [
+[
+"stat_gain",
+"+0.06 accuracy"
+],
+[
+"rank_positions",
+"while in rank"
+],
+[
+"stat_gain",
+"+13% damage"
+],
+[
+"stat_gain",
+"+0.05 crit"
+],
+[
+"stat_loss",
+"-10% trap resistance"
+],
+[
+"stat_loss",
+"-13% hp heal percent"
+]
+],
+"759942": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"rank_positions",
+"Usable from ranks 3, 4"
+],
+[
+"no_damage_output",
+"Deals damage (modifier -75%)"
+],
+[
+"disable",
+"stun"
+],
+[
+"light_level",
+"increase light 6 (global)"
+]
+],
+"759940": [
+[
+"rank_positions",
+"Usable from ranks 2, 1"
+],
+[
+"damage",
+"Deals damage"
+]
+],
+"760287": [
+[
+"stat_gain",
+"+0.06 accuracy"
+],
+[
+"turn_number",
+"not in the first round"
+],
+[
+"stress_morale",
+"-13% stress dmg received percent"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+]
+],
+"760000": [
+[
+"rank_positions",
+"Usable from ranks 3, 2, 1"
+],
+[
+"damage",
+"Deals damage 3-5"
+],
+[
+"damage_over_time",
+"bleed 2 per round for 3 rounds"
+],
+[
+"bodyguard",
+"guard target ally for 2 rounds"
+],
+[
+"stat_gain",
+"+25% protection (self) for 2 rounds"
+]
+],
+"759771": [
+[
+"condition_life",
+"A hero with 0 HP is at Death's Door"
+],
+[
+"permanent_loss",
+"permanently killing the hero"
+],
+[
+"random_effect",
+"has a chance of permanently killing the hero"
+]
+],
+"760584": [
+[
+"stress_morale",
+"+20% stress dmg received percent"
+],
+[
+"tribal",
+"vs man enemies"
+],
+[
+"traits_quirks",
+"Automatonophobia"
+]
+],
+"759972": [
+[
+"ranged",
+"Ranged skill"
+],
+[
+"damage",
+"Deals damage 1-3"
+],
+[
+"forced_movement",
+"pull forward 2 ranks"
+],
+[
+"forced_movement",
+"push back 2 ranks"
+],
+[
+"stress_morale",
+"stress +8"
+],
+[
+"light_level",
+"decrease light 10 (global)"
+],
+[
+"mark_target",
+"mark target for 1 rounds"
+],
+[
+"rank_positions",
+"Usable from ranks 2, 3, 4"
+]
+],
+"760325": [
+[
+"stat_gain",
+"+0.05 crit"
+],
+[
+"condition_life",
+"while HP above 0.75"
+],
+[
+"stat_gain",
+"+6% death_blow resistance"
+],
+[
+"upkeep",
+"+50% food consumption percent"
+],
+[
+"stat_loss",
+"-0.06 protection"
+],
+[
+"light_level",
+"while light below 26"
+]
+],
+"760709": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"stress_morale",
+"stress heal amount 15 (party_other)"
+],
+[
+"scope_multi",
+"(party_other)"
+]
+],
+"760005": [
+[
+"board_presence",
+"Takes 3 ranks"
+],
+[
+"multi_attack",
+"Acts 2 times per round"
+],
+[
+"damage",
+"Deals damage 5-9"
+],
+[
+"damage_over_time",
+"bleed 4 per round for 3 rounds"
+],
+[
+"aoe_damage",
+"Targets all of enemy ranks 1, 2, 3, 4"
+],
+[
+"stress_morale",
+"stress +15"
+],
+[
+"summon",
+"summon cultist_shrouded_D totem_guard_D"
+],
+[
+"light_level",
+"decrease light 25 (global)"
+],
+[
+"rank_positions",
+"Usable from ranks 4, 3, 2, 1"
+]
+],
+"760185": [
+[
+"stat_gain",
+"+20% stun chance"
+],
+[
+"stat_loss",
+"-0.02 dodge"
+]
+],
+"760299": [
+[
+"stat_gain",
+"+0.03 crit with ranged skills"
+],
+[
+"ranged",
+"ranged skills"
+],
+[
+"stat_gain",
+"+8% damage with ranged skills"
+],
+[
+"stat_gain",
+"+0.04 accuracy with ranged skills"
+],
+[
+"stat_gain",
+"+50% starving damage percent at Death's Door"
+],
+[
+"condition_life",
+"at Death's Door"
+]
+],
+"760121": [
+[
+"rest_phase",
+"while camping"
+],
+[
+"stat_gain",
+"+10% scouting chance"
+],
+[
+"tribal",
+"Class: bounty_hunter"
+]
+],
+"760364": [
+[
+"stat_gain",
+"+0.06 dodge"
+],
+[
+"stat_gain",
+"+0.04 crit"
+],
+[
+"light_level",
+"while light below 26"
+]
+],
+"760130": [
+[
+"stat_gain",
+"+15% damage with melee skills"
+],
+[
+"stat_loss",
+"-10% hp heal percent"
+],
+[
+"tribal",
+"Class: crusader"
+]
+],
+"760759": [
+[
+"stress_morale",
+"On failure: Stress 2"
+],
+[
+"random_effect",
+"On failure"
+],
+[
+"damage",
+"HP change -25%"
+]
+]
+}

@@ -1,0 +1,1222 @@
+[
+{
+"id": 784909,
+"name": "Wrathful Aura",
+"text": "Double this model's Objective Control characteristic."
+},
+{
+"id": 787238,
+"name": "Wraithseer [Legends]",
+"text": "Invulnerable Save: This unit has a 5+ Invulnerable save Horrify (Psychic): In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle-shock test. Weapon abilities: Anti-Infantry 2+, Blast, Devastating Wounds, Precision, Psychic, Sustained Hits 1, Torrent. Special rules: Anti-, Battle Focus, Blast, Deadly Demise, Devastating Wounds, Precision, Psychic, Sustained Hits, Torrent."
+},
+{
+"id": 788389,
+"name": "Plasmancer",
+"text": "Leader: This model can be attached to the following units: \u25a0 IMMORTALS \u25a0 NECRON WARRIORS You can attach this model to one of the above units even if one ROYAL WARDEN or NOBLE model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. Harbinger of Destruction: While this model is leading a unit, each time a model in that unit makes a ranged attack, a successful unmodifed Hit roll of 5+ scores a Critical Hit. Living Lightning: In your Shooting phase, select one enemy unit within 18\" of and visible to this model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of this model) and roll four D6: for each 4+, that enemy unit suffers 1 mortal wound. Special rules: Leader, Reanimation Protocols."
+},
+{
+"id": 788201,
+"name": "Deimos Predator [Legends]",
+"text": "Armoured Spearhead: Each time this model makes an attack that targets an enemy unit, re-roll a Hit roll of 1 and, if that unit is within range of an objective marker you do not control, you can re-roll the Hit roll instead. Weapon abilities: Blast, Conversion, Hazardous, Ignores Cover, Melta 4, Sustained Hits D3, Torrent. Special rules: Blast, Conversion, Deadly Demise, Hazardous, Ignores Cover, Melta, Oath of Moment, Sustained Hits, Templar Vows, Torrent."
+},
+{
+"id": 788041,
+"name": "Grand Master in Nemesis Dreadknight",
+"text": "Surge of Wrath (Psychic): Each time this model makes a melee attack that targets a Monster or Vehicle unit, you can re-roll the Hit roll, you can re-roll the Wound roll and you can re-roll the Damage roll. Special rules: Deadly Demise, Deep Strike, Gate of Infinity."
+},
+{
+"id": 784563,
+"name": "Precision",
+"text": "Weapons with [PRECISION] in their profile are known as Precision weapons. Each time an attack made with such a weapon successfully wounds an Attached unit, if a Character model in that unit is visible to the attacking model, the attacking model\u2019s player can choose to have that attack allocated to that Character model instead of following the normal attack sequence."
+},
+{
+"id": 785566,
+"name": "Fierce Conqueror",
+"text": "At the start of the Fight phase, until the end of the phase, add 2 to the Attacks characteristic of melee weapons equipped by the bearer for every 5 enemy models within 6\" of the bearer (rounding down)."
+},
+{
+"id": 784826,
+"name": "Discordant Disruption (Aura)",
+"text": "While an enemy Psyker unit is within 12\" of this model, Psychic weapons equipped by models in that unit have the [Hazardous] ability."
+},
+{
+"id": 786839,
+"name": "Totemic Infusions - Other",
+"text": "While that Shaper model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+},
+{
+"id": 788028,
+"name": "Deathwatch Veteran w/ stalker bolt rifle",
+"text": "Weapon abilities: Heavy, Lethal Hits, Precision. Special rules: Heavy, Lethal Hits, Precision."
+},
+{
+"id": 786611,
+"name": "Fear of the Unseen (Aura)",
+"text": "While an enemy unit is within 6\" of this model, worsen the Leadership characteristic of models in that unit by 1. In addition, in the Battle-shock step of your opponent's Command phase, if such an enemy unit is below its Starting Strength, it must take a Battle-shock test."
+},
+{
+"id": 786723,
+"name": "Ferocious Show Off",
+"text": "Orks Infantry model only. Each time the bearer fights, while resolving those attacks, add 1 to the Strength characteristic of the bearer's melee weapons. If the bearer's unit contains 10 or more models, while resolving those attacks, add 3 to the Strength characteristic instead."
+},
+{
+"id": 787577,
+"name": "Brayherd Chieftain [Crucible]",
+"text": "Leader: This model can be attached to the following unit: Tzaangors Invulnerable Save (5+): This model has a 5+ invulnerable save. Fate's Guide: If this unit starts the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third turn, regardless of any mission rules. If this unit is in Strategic Reserves, for the purposes of setting up this unit on the battlefield, treat the current battle round number as being one higher than it actually is. Special rules: Cabal of Sorcerers, Leader, Scouts."
+},
+{
+"id": 786210,
+"name": "Master of the Codex",
+"text": "Once per battle, after you have selected your Oath of Moment target, select a second enemy unit. Until the start of your next Command phase, that second enemy unit also counts as your Oath of Moment target."
+},
+{
+"id": 788144,
+"name": "Eliminator Squad",
+"text": "Reposition Under Covering Fire: In your Shooting phase, after this unit has shot, if it contains an Eliminator Sergeant equipped with an instigator bolt carbine, this unit can make a Normal move. If it does so, until the end of the turn, this unit is not eligible to declare a charge. Mark the Target: Each time this unit Remains Stationary, until the start of your next Movement phase, ranged weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability. Weapon abilities: Heavy, Precision. Special rules: Heavy, Infiltrators, Oath of Moment, Precision, Stealth, Templar Vows."
+},
+{
+"id": 785331,
+"name": "Favoured of Khorne",
+"text": "Each time you make a Blessings of Khorne roll, if the bearer is on the battlefield, you can re-roll up to 2 of the D6 rolled."
+},
+{
+"id": 784700,
+"name": "Battlewraiths",
+"text": "In your Shooting phase, after this unit has shot, it can make a Normal move of up to D6\". If it does, until the end of the turn, this unit is not eligible to declare a charge."
+},
+{
+"id": 786801,
+"name": "Guardian Drone",
+"text": "Each time a model makes a ranged attack that targets the bearer\u2019s unit, subtract 1 from the Wound roll."
+},
+{
+"id": 784397,
+"name": "Armoured Fist",
+"text": "Each time an Astra Militarum model from your army makes a ranged attack in a turn in which it disembarked from a Transport, add 1 to the Wound roll."
+},
+{
+"id": 788579,
+"name": "Orca Dropship [Legends]",
+"text": "Jet Pack Insertion: At the end of your opponent\u2019s Movement phase, one or more units embarked within this TRANSPORT can disembark from it, provided every model in each of those disembarking units has the Deep Strike ability. Damaged: 1-9 Wounds Remaining: While this model has 1-9 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. Orca Dropship [Legends]: This model has a transport capacity of 48 T\u2019AU EMPIRE INFANTRY models. This model can also transport up to 6 BATTLESUIT models (these models take up the space of a number of models equal to their Wounds characteristic, e.g. a BATTLESUIT with a Wounds characteristic of 8 would take up the space of 8 models). This model cannot transport KROOT or VESPID STINGWINGS models. Special rules: Deadly Demise, For The Greater Good, Hover."
+},
+{
+"id": 788339,
+"name": "Mastodon [Legends]",
+"text": "Damaged: 1-10 wounds remaining: While this model has 1-10 wounds remaining, subtract 6 from this model\u2019s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. Inviolable Transport: Once per battle round, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0. Mastodon: This model has a transport capacity of 45 <FACTION> INFANTRY models. Each JUMP PACK, WULFEN, GRAVIS, POSSESSED or TERMINATOR model takes up the space of 2 models and each CENTURION or OBLITERATOR model takes up the space of 3 models. This model can also transport up to 2 DREADNOUGHT or HELBRUTE models (these models take up the space of a number of models equal to their Wounds characteristic e.g. A DREADNOUGHT with a Wounds characteristic of 8 would take up the space of 8 models). Weapon abilities: Anti-FLY 4+, Melta 2. Special rules: Anti-, Deadly Demise, Melta, Oath of Moment, Templar Vows."
+},
+{
+"id": 786259,
+"name": "Cunning Hunters",
+"text": "Each time this unit declares a charge, if it was set up on the battlefield from Strategic Reserves this turn, you can re-roll the Charge roll."
+},
+{
+"id": 786525,
+"name": "Biophagic Flow (Aura)",
+"text": "Tyranids model only. While a friendly Harvester model is within 12\" of the bearer, when using the Feed the Swarm ability, that Harvester model can Regenerate one friendly Tyranids unit that is within 9\" instead of one within 6\"."
+},
+{
+"id": 787396,
+"name": "Cultist Mob",
+"text": "For the Dark Gods: At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn. Weapon abilities: Pistol. Special rules: Dark Pacts, Pistol."
+},
+{
+"id": 788035,
+"name": "Brotherhood Chaplain",
+"text": "Zealous Path: While this model is leading a unit, you can re-roll Charge rolls made for that unit. Leader: This model can be attached to the following units: \u25a0 Brotherhood Terminator Squad \u25a0 Paladin Squad Special rules: Deep Strike, Gate of Infinity, Leader."
+},
+{
+"id": 788056,
+"name": "Purgation Squad",
+"text": "Righteous Persecution: In your Shooting phase, after this unit has shot, select one enemy unit (excluding Monsters or Vehicles) hit by one or more of those attacks; until the start of your next turn, that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit's Move characteristic and subtract 2 from Charge rolls made for it. Special rules: Deep Strike, Gate of Infinity."
+},
+{
+"id": 784276,
+"name": "Acrobatic Onslaught",
+"text": "Each time a Harlequins model from your army makes a Charge move, it can move through enemy models."
+},
+{
+"id": 787759,
+"name": "Hastarii Exterminators",
+"text": "Attached Unit: If a Character unit from your army can be attached to a Skitarii Rangers unit, it can be attached to this unit instead Broad\u2011spectrum Targeting Augurs: Each time a model in this unit makes an attack with an eradication caster that targets a unit (excluding Monster and Vehicle units), that attack has the [SUSTAINED HITS 1] ability. Special rules: Doctrina Imperatives, Sustained Hits."
+},
+{
+"id": 786588,
+"name": "Balemind Membrane",
+"text": "Model with one or more Psychic weapons only. Each time the bearer makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll."
+},
+{
+"id": 785623,
+"name": "Voices in the Code",
+"text": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test."
+},
+{
+"id": 787866,
+"name": "Tempestus Scions",
+"text": "Storm Troopers: Each time a model in this unit makes an attack, re-roll a Wound roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead. Special rules: Deep Strike."
+},
+{
+"id": 788198,
+"name": "Thunderhawk Gunship",
+"text": "Aerial Assault: Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn. Damaged: 1-10 wounds remaining: While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. Thunderhawk Gunship: This model has a transport capacity of 30 ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED models. Each JUMP PACK, WULFEN, GRAVIS or TERMINATOR model takes up the space of 2 models. Each CENTURION model takes up the space of 3 models. Each MOUNTED model takes up the space of 4 models. Thunderhawk Cluster Bombs: Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound. Weapon abilities: Anti-FLY 4+, Blast. Special rules: Anti-, Blast, Deadly Demise, Hover, Oath of Moment, Templar Vows."
+},
+{
+"id": 785432,
+"name": "Massed Firearms",
+"text": "Each time a model in this unit makes a ranged attack, re-roll a Hit roll of 1. Each time a model in this unit makes a ranged attack that targets its Crossfire target, that attack has the [SUSTAINED HITS 1] ability."
+},
+{
+"id": 787329,
+"name": "Plague Drones",
+"text": "Invulnerable Save: Models in this unit have a 5+ invulnerable save. Death\u2019s Heads: In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly NURGLE LEGIONES DAEMONICA unit makes an attack that targets that unit, you can re-roll the Wound roll. Weapon abilities: Blast, Extra Attacks, Lethal Hits. Special rules: Blast, Deep Strike, Extra Attacks, Lethal Hits, The Shadow of Chaos, Warp Rifts."
+},
+{
+"id": 784754,
+"name": "Leader",
+"text": "This model can be attached to the following units: \u25a0 Hellions"
+},
+{
+"id": 788612,
+"name": "Pyrovores",
+"text": "Burning Spray: In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover. Weapon abilities: Ignores Cover, Torrent, Twin-linked. Special rules: Deadly Demise, Ignores Cover, Synapse, Torrent, Twin-linked."
+},
+{
+"id": 785903,
+"name": "Tactical Haruspexy",
+"text": "Once per battle, when the bearer declares a charge, it can use this Enhancement. If it does, it can select units that are not visible to it as targets of that charge, provided they are within 9\" of it."
+},
+{
+"id": 784412,
+"name": "Duty Before All",
+"text": "Grey Knights Terminator units from your army are eligible to shoot and declare a charge in a turn in which they Fell Back."
+},
+{
+"id": 784371,
+"name": "Assemblage of Might",
+"text": "At the start of your Command phase, select one unit from your opponent\u2019s army. Until the start of your next Command phase, each time a model in an Adeptus Custodes Character unit from your army makes an attack that targets that enemy unit, add 1 to the Wound roll."
+},
+{
+"id": 784384,
+"name": "Murderous Imperative",
+"text": "Each time a model in a Skitarii unit from your army makes an attack: - If the Protector Imperative is active for that unit, re\u2011roll a Hit roll of 1. - If the Conqueror Imperative is active for that unit, re\u2011roll a Wound roll of 1."
+},
+{
+"id": 787569,
+"name": "Kairos Fateweaver",
+"text": "Invulnerable Save: This model has a 4+ invulnerable save. One Head Looks Forward: At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP. One Head Looks Back (Aura): Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP. Damaged: 1-7 wounds remaining: While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. Weapon abilities: Blast, Hazardous, Indirect Fire, Psychic. Special rules: Blast, Deadly Demise, Deep Strike, Hazardous, Indirect Fire, Psychic."
+},
+{
+"id": 787117,
+"name": "Personal Teleporter",
+"text": "The bearer has the Deep Strike ability."
+},
+{
+"id": 784311,
+"name": "Raiders and Reavers",
+"text": "Ranged weapons equipped by Heretic Astartes models from your army have the [ASSAULT] ability, and each time a Heretic Astartes model from your army makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1."
+},
+{
+"id": 815497,
+"name": "Deadly Combatant",
+"text": "All melee weapon equipped by Character models in this unit have the [SUSTAINED HITS 1] ability."
+},
+{
+"id": 788529,
+"name": "Da Red Gobbo's Tinboy [Legends]",
+"text": "Redistributin' da Gifts: Once in each of your Shooting phases, you can target this unit with the Grenade Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase. Special rules: Deadly Demise, Lone Operative, Scouts, Waaagh!."
+},
+{
+"id": 786218,
+"name": "Roused to Fury",
+"text": "Once per battle, at the start of either player's Command phase, this unit can use this ability. If it does, until the end of the turn, add 1 to the Attacks characteristic of weapons equipped by models in this unit."
+},
+{
+"id": 787720,
+"name": "Archaeopter Fusilave",
+"text": "Bomb Rack: Each time this model finishes a Normal move, you can select one enemy unit it moved across and roll six D6: for each 4+, that unit suffers 1 mortal wound. Chaff Launcher: The bearer has the Smoke keyword. Command Uplink: Each time you select the bearer\u2019s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP. Special rules: Deadly Demise, Doctrina Imperatives, Hover."
+},
+{
+"id": 785362,
+"name": "Red Haze",
+"text": "Each time a melee attack with a Damage characteristic of 1 is allocated to a model in this unit, that model has the Feel No Pain 5+ ability against that attack."
+},
+{
+"id": 786437,
+"name": "First Knife",
+"text": "Each time the bearer makes a melee attack, you can re-roll the Hit roll and you can re-roll the Wound roll. At the end of the Fight phase, you can select one enemy unit within Engagement Range of the bearer and spend up to 4 Yield points. Roll one D6 for each point spent: for each 2+, that enemy unit suffers 1 mortal wound."
+},
+{
+"id": 787884,
+"name": "Crassus [Legends]",
+"text": "Fire Support: In your Shooting phase, after this model has shot, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll. Crassus: This model has a transport capacity of 35 ASTRA MILITARUM INFANTRY models. Each Heavy Weapons Team model and Veteran Heavy Weapons Team model takes up the space of 2 models. Each OGRYN model takes up the space of 3 models. It cannot transport ARTILLERY models. Special rules: Deadly Demise."
+},
+{
+"id": 784399,
+"name": "Masters of Camouflage",
+"text": "Astra Militarum Walker and Regiment models from your army have the Benefit of Cover. While such a model has the Benefit of Cover for any other reason (e.g. because it is wholly within a Ruin), improve the Save characteristic of that model by 1 (to a maximum of 3+)."
+},
+{
+"id": 787027,
+"name": "Stealthy Arrival",
+"text": "Each time this unit is set up on the battlefield using the Deep Strike ability, until the end of your next turn, this unit has the Stealth ability and enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit. Designer's Note: *Only units that are set up using the Deep Strike ability with benefit from this Battle Trait.*"
+},
+{
+"id": 785388,
+"name": "Bellowed Challenge",
+"text": "Melee weapons (excluding Devastating Wounds weapons) equipped by models in this unit gain the [ANTI-MONSTER 3+] and [ANTI-VEHICLE 3+] abilities."
+},
+{
+"id": 786548,
+"name": "Synaptic Strategy",
+"text": "Tyranids model only. Once per battle, you can target the bearer\u2019s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+},
+{
+"id": 786840,
+"name": "Esteemed Leader",
+"text": "When rolling for this model\u2019s Coordinated Leadership ability, add 1 to the result."
+},
+{
+"id": 787171,
+"name": "Karandras [Legends]",
+"text": "Invulnerable Save (Phoenix Lord): Karandras has a 4+ Invulnerable save Leader: This model can be attached to the following unit: \u25a0 Striking Scorpions Shadow Hunter: While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll. Sustained Assault: Each time this model makes a melee attack, if it made a Charge move this turn, a successful unmodified Hit roll of 4+ scores a Critical Hit The Scorpion's Bite: Melee weapons equipped by the bearer have the [DEVASTATING WOUNDS] ability when targeting units without the Titanic keyword Weapon abilities: Assault, Pistol, Sustained Hits 1. Special rules: Assault, Battle Focus, Infiltrators, Leader, Pistol, Sustained Hits."
+},
+{
+"id": 785454,
+"name": "Dirtcycle",
+"text": "Change this model's Move characteristic to 12\", its Toughness characteristic to 4, remove the Infantry keyword, and add the Mounted keyword. Remove the Deep Strike and Infiltrators abilities (if applicable), it gains the Scouts 9\" and Stealth abilities, and replace the list of units this model can be attached to: Atalan Jackals."
+},
+{
+"id": 786047,
+"name": "Stubborn Tenacity",
+"text": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength."
+},
+{
+"id": 785444,
+"name": "Elixir of the Prime Specimen",
+"text": "Biophagus model only. The bearer can use their Alchemicus Familiar ability one additional time during the battle (this must be in different turns)."
+},
+{
+"id": 787681,
+"name": "Celestian Insidiants",
+"text": "Invulnerable Save: Models in this unit have an Invulnerable save of 5+. Rituale Nullificatus: Models in this unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds. Virtue of Intolerance: At the start of the battle, select one unit from your opponent\u2019s army to be this unit\u2019s quarry. Each time a model in this unit makes an attack that targets its quarry, that attack has the [Precision] ability and you can re\u2011roll the Hit roll. This ability can be used even if this unit is embarked within a Transport. Attached Unit: If a Character unit from your army can be attached to a Dominion Squad unit, it can be attached to this unit instead. Denuncia Oratory: Each time the bearer\u2019s unit\u2019s quarry is destroyed, you can select a new unit from your opponent\u2019s army to be its quarry. Simulacrum Imperialis: At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6: on a 4+, you gain 1 Miracle dice showing a value equal to that result. Weapon abilities: Anti-PSYKER 4+, Devastating Wounds, Lethal Hits. Special rules: Acts of Faith, Anti-, Devastating Wounds, Lethal Hits."
+},
+{
+"id": 785374,
+"name": "Bloodstep Blade",
+"text": "Each time the bearer's unit destroys one or more units in the Fight phase, if there are no enemy units within 3\" of the bearer's unit at the Consolidate step, you can choose to remove the bearer's unit from the battlefield and place it into Strategic Reserves. If you do, until after the bearer's unit has been set back up on the battlefield, models in the bearer's unit have the Deep Strike."
+},
+{
+"id": 786657,
+"name": "Martial Apotheosis",
+"text": "Each time this model makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+},
+{
+"id": 785750,
+"name": "Master of Spies",
+"text": "Each time you start a Shadow Operation, you start with 1 Investigation point. Each time you roll on the Plot Twist table, you can re-roll the result."
+},
+{
+"id": 815403,
+"name": "Pennant of Silvered Fury",
+"text": "Imperial Knights model only. When the bearer is selected to fight, it can use this Enhancement. If it does, this Enhancement is expended, then until the end of the phase, melee equipped by the bearer have the [SUSTAINED HITS 2] ability."
+},
+{
+"id": 784368,
+"name": "Martial Mastery",
+"text": "At the start of the battle round, you can select one of the bullet points below. If you do, until the start of the next battle round, that bullet point\u2019s effects apply. - Each time an Adeptus Custodes model from your army with the Martial Ka'tah ability makes a melee attack, a successful unmodified attack roll of 5+ scores a Critical Hit. - Improve the Armour Penetration characteristic of melee weapons equipped by Adeptus Custodes models from your army with the Martial Ka'tah ability by 1."
+},
+{
+"id": 786404,
+"name": "Dead Reckoning",
+"text": "Leagues of Votann model only. At the end of the turn, if the bearer is on the battlefield and you spent no YP in that turn, you gain 1YP."
+},
+{
+"id": 788347,
+"name": "Kytan Ravager [Legends]",
+"text": "Damaged: 1-8 wounds remaining: While this model has 1-8 wounds remaining, subtract 5 from this model\u2019s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. Bloodlust: Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [SUSTAINED HITS 1] ability. In addition, once per battle, this model is eligible to declare a charge in a turn in which it Advanced. Invulnerable Save: This model has a 5+ invulnerable save. Special rules: Deadly Demise, Super-Heavy Walker."
+},
+{
+"id": 815333,
+"name": "Amulet of Tainted Vigour",
+"text": "In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit."
+},
+{
+"id": 787186,
+"name": "Swooping Hawks",
+"text": "Invulnerable Save: This unit has a 5+ Invulnerable save Grenade Pack Flyover: Once per turn, in your Movement phase, when this unit is set-up on the battlefield or ends a Normal, Advance or Fall Back move, it can use this ability. If it does, select one enemy unit within 8\" of and visible to this unit and roll one D6 for each Swooping Hawks model in this unit. For each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds). Each time this unit uses this ability , until the end of the turn, you cannot target this unit with the Grenades Stratagem. Weapon abilities: Assault, Lethal Hits, Pistol, Sustained Hits 1. Special rules: Assault, Battle Focus, Deep Strike, Lethal Hits, Pistol, Sustained Hits."
+},
+{
+"id": 815369,
+"name": "Conviction of Faith",
+"text": "At the start of the battle, you gain 1 miracle dice. If this model is your Blessed Orator, then you start the battle with 2 Miracle dice instead."
+},
+{
+"id": 787539,
+"name": "Chaos Land Raider",
+"text": "Assault Ramp: Each time a unit disembarks from this Transport after it has made a Normal move, that unit is still eligible to declare a charge this turn. Chaos Land Raider: This model has a transport capacity of 12 Thousand Sons Infantry models. Each Terminator model takes up the space of 2 models. Special rules: Deadly Demise."
+},
+{
+"id": 784745,
+"name": "Scent of the Kill",
+"text": "Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\"."
+},
+{
+"id": 785203,
+"name": "Dark Majesty",
+"text": "Improve this model's Leadership characteristic by 1 and its Objective Control characteristic by 2. At the end of the battle, if this model is within range of an objective marker you control that is wholly within your opponent's deployment zone, you gain 1 Rare ingredient."
+},
+{
+"id": 787486,
+"name": "Chaos Land Raider",
+"text": "Assault Ramp: Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn. Chaos Land Raider: This model has a transport capacity of 14 Death Guard Infantry models. Each Terminator model takes up the space of 2 models. Special rules: Deadly Demise, Nurgle's Gift (Aura)."
+},
+{
+"id": 787875,
+"name": "Malcador Defender [Legends]",
+"text": "Armoured Defender: Each time you target this model with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ while resolving that Stratagem. Weapon abilities: Blast. Special rules: Blast, Deadly Demise."
+},
+{
+"id": 788440,
+"name": "Beast Snagga Boyz",
+"text": "Monster Hunters: Each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, you can re-roll the Hit roll. Weapon abilities: Blast. Special rules: Blast, Feel No Pain, Waaagh!."
+},
+{
+"id": 785786,
+"name": "Stalwart's Honours",
+"text": "Officer model only. While the bearer is leading a unit, when that unit is issued an Order, it is also affected by the Take Cover! Order."
+},
+{
+"id": 784848,
+"name": "Veil of Medrengard",
+"text": "The bearer has a 4+ invulnerable save against ranged attacks, and a 5+ invulnerable save against melee attacks."
+},
+{
+"id": 787954,
+"name": "Sword Brethren Squad",
+"text": "Exploit Their Cowardice: Each time an enemy unit within Engagement Range of this unit is selected to Fall Back, after it ends that Fall Back move, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move. Weapon abilities: Devastating Wounds, Lethal Hits, Sustained Hits 1, Twin-linked. Special rules: Lethal Hits, Sustained Hits, Templar Vows, Twin-linked."
+},
+{
+"id": 785975,
+"name": "Hunter's Eye",
+"text": "Imperial Knights model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability."
+},
+{
+"id": 788588,
+"name": "Crisis Sunforge Battlesuits",
+"text": "Sunforge: Each time a model in this unit makes a ranged attack that targets a Monster or Vehicle unit, you can re-roll the Wound roll and you can re-roll the Damage roll. Special rules: Deep Strike, For The Greater Good."
+},
+{
+"id": 787823,
+"name": "Cadian Command Squad",
+"text": "Orders: This unit\u2019s Officer can issue 1 Order to a Regiment unit. Cadia Stands!: While this unit contains an Officer, each time a ranged attack targets this unit, if this unit is within range of an objective marker you control, models in this unit have the Benefit of Cover against that attack. Leader: This model can be attached to the following unit: Cadian Shock Troops Special rules: Leader, Voice Of Command."
+},
+{
+"id": 786895,
+"name": "Predatory Swiftness",
+"text": "You can re-roll Advance and Charge rolls made for this unit."
+},
+{
+"id": 815474,
+"name": "Shokka Hull",
+"text": "In the Fight phase, each time an enemy unit is selected to fight, if this unit was selected as the target of one or more of the attack unit's attacks, after those attacks have been resolved, roll one D6: on a 4+, that enemy unit suffers D3 mortal wounds."
+},
+{
+"id": 786926,
+"name": "Tidewall Cover",
+"text": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack."
+},
+{
+"id": 788315,
+"name": "Relic Contemptor Dreadnought [Legends]",
+"text": "Even In Death I Serve: The first time this model is destroyed, remove it from play without resolving its Deadly Demise ability. Then, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining. Invulnerable Save: This model has a 5+ invulnerable save. Weapon abilities: Anti-VEHICLE 3+, Anti-Vehicle 2+, Blast, Conversion, Devastating Wounds, Hazardous, Rapid Fire 2, Sustained Hits D3. Special rules: Anti-, Blast, Conversion, Deadly Demise, Devastating Wounds, Hazardous, Oath of Moment, Rapid Fire, Sustained Hits, Templar Vows."
+},
+{
+"id": 788654,
+"name": "The Archivist [Legends]",
+"text": "Fearsome Assault: At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test. Disruptive Influence (Aura): While an enemy unit is within 6\" of this model, each time that unit takes a Battle-shock or Leadership test, subtract 1 from that test. Weapon abilities: Ignores Cover, Pistol. Special rules: Ignores Cover, Lone Operative, Pistol."
+},
+{
+"id": 787654,
+"name": "Hospitaller",
+"text": "Leader: This model can be attached to the following units: \u25a0 Battle Sisters Squad \u25a0 Celestian Sacresants \u25a0 Dominion Squad \u25a0 Retributor Squad \u25a0 Sisters Novitiate Squad This model can be attached to a Battle Sisters Squad, even if one Canoness, Palatine, Junith Eruita, or Aestred Thurga unit has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. Medicus Ministorum: While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. Sacred Healing: While this model is leading a unit, in your Command phase, you can return up to 1 destroyed model (excluding Character models) to that unit. If you wish, you first discard 1 Miracle dice; if you do, you can return up to D3+1 destroyed models (excluding Character models) to that unit instead. Invulnerable Save: This model has an invulnerable save of 6+ Invulnerable Save: This model has an invulnerable save of 6+ Special rules: Acts of Faith, Leader."
+},
+{
+"id": 785220,
+"name": "Doombolt (Psychic)",
+"text": "Select one enemy unit within 24\" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead."
+},
+{
+"id": 785818,
+"name": "Star of Terra",
+"text": "Infantry Officer model only. Models in the bearer's unit have a 5+ invulnerable save, and each time an attack targets the bearer's unit, subtract 1 from the Wound roll."
+},
+{
+"id": 785713,
+"name": "Formidable Resolve",
+"text": "Improve the bearer's Leadership and Wounds characteristics by 1. Once per battle, at the start of any phase, you can select one friendly Battle-shocked unit within 12\" of the bearer. That unit is no longer Battle-shocked."
+},
+{
+"id": 787314,
+"name": "Pink Horrors",
+"text": "Invulnerable Save: Models in this unit have a 4+ invulnerable save. Split: Each time a Pink Horror or Blue Horror model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a Pink Horror, add two Blue Horror models to this unit, and if it was a Blue Horror, add one Brimstone Horror model to this unit. Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.: If, at any point, this unit contains no Pink Horrors models, use the Blue Horrors datasheet for this unit. _Designer\u2019s Note: While this unit contains one or more Pink Horrors models, the Cackling Horrors and Exploding Horrors abilities from the Blue Horrors datasheet do not apply to this unit._ Weapon abilities: Pistol, Psychic. Special rules: Deep Strike, Pistol, Psychic, The Shadow of Chaos, Warp Rifts."
+},
+{
+"id": 788534,
+"name": "Commander Shadowsun",
+"text": "Agile Combatant: This model is eligible to shoot in a turn in which it Fell Back. Hero of the Empire (Aura): While a friendly T\u2019au Empire unit is within 6\" of this model, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1. Advanced Guardian Drone: Each time a ranged attack targets the bearer, subtract 1 from the Wound roll. Command-link Drone (Aura): While a friendly T\u2019au Empire unit is within 6\" of the bearer, each time you select that unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP. Supreme Commander: If this model is in your army, it must be your Warlord. Weapon abilities: Melta 2. Special rules: For The Greater Good, Infiltrators, Lone Operative, Melta, Stealth."
+},
+{
+"id": 786886,
+"name": "Serenity (Aura)",
+"text": "Ethereal model only. While a friendly T'au Empire unit is within 6\" of this model, add 1 to that unit\u2019s Leadership characteristic."
+},
+{
+"id": 788384,
+"name": "Catacomb Command Barge",
+"text": "Invulnerable Save: This model has a 4+ invulnerable save. Carrier Wave (Aura): While a friendly NECRONS unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit. Advanced Quantum Shielding: Each time an attack targets this model, if the Strength characteristic of that attack is greater than this model\u2019s Toughness characteristic, subtract 1 from the Wound roll. Resurrection orb: Once per battle, at the end of any phase, select one friendly NECRONS INFANTRY or NECRONS MOUNTED unit within 6\" of the bearer and resurrect that unit. When you do, that unit\u2019s Reanimation Protocols are activated reanimating D6 wounds instead of D3 when doing so. You cannot resurrect more than one unit per turn. Weapon abilities: Lethal Hits, Sustained Hits 2. Special rules: Deadly Demise, Lethal Hits, Reanimation Protocols, Sustained Hits."
+},
+{
+"id": 816463,
+"name": "Lesser Daemons (Unbound Adversaries)",
+"text": "Invulnerable Save (5+): Models in this unit have a 5+ invulnerable save."
+},
+{
+"id": 786916,
+"name": "Cunning Ambush",
+"text": "After both players have deployed their armies, you can redeploy this model's unit and one other friendly T'au Empire unit. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+},
+{
+"id": 786282,
+"name": "Savage Orator",
+"text": "Wolf Priest model only. While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+},
+{
+"id": 787320,
+"name": "Great Unclean One",
+"text": "Invulnerable Save: This model has a 4+ invulnerable save. Daemon Lord of Nurgle (Aura): While a friendly Nurgle Legiones Daemonica unit is within 6\" of this model, add 1 to the Toughness characteristic of models in that unit. Nurgle\u2019s Rot (Psychic): At the end of your Movement phase, you can select one enemy unit within 12\" of this model. Until the start of your next Movement phase, subtract 1 from the Toughness characteristic of models in that unit. Weapon abilities: Extra Attacks, Ignores Cover, Lethal Hits, Reverberating Summons, Torrent. Special rules: Deadly Demise, Deep Strike, Extra Attacks, Feel No Pain, Ignores Cover, Lethal Hits, The Shadow of Chaos, Torrent, Warp Rifts."
+},
+{
+"id": 788413,
+"name": "Lokhust Heavy Destroyers",
+"text": "Optimised for Slaughter: Each time a model in this unit makes an attack with an enmitic exterminator that targets a unit (excluding MONSTERS and VEHICLES), re-roll a Wound roll of 1. Each time a model in this unit makes an attack with a gauss destructor against a MONSTER or VEHICLE unit, re-roll a Wound roll of 1. Weapon abilities: Heavy, Lethal Hits, Rapid Fire 6, Sustained Hits 1. Special rules: Heavy, Lethal Hits, Rapid Fire, Reanimation Protocols, Sustained Hits."
+},
+{
+"id": 784430,
+"name": "Knightly Teachings",
+"text": "Each time a model from your army uses its Bondsman ability, if no other model from your army has used that Bondsman ability that turn, you can select up to three friendly Armiger models (instead of one) within 12\" of that model, or within 15\" of that model while your army is Honoured (you still cannot select a model that is already being affected by a Bondsman ability). Until the start of your next Command phase, those models are affected by that Bondsman ability."
+},
+{
+"id": 786763,
+"name": "'Elmet Rack",
+"text": "Each time this model's unit takes a Battle-shock or Leadership test, you can ignore any or all modifiers to that test."
+},
+{
+"id": 785503,
+"name": "Holy Crusader",
+"text": "Gain 3 Saint points at the end of a battle if this model is wholly within your opponent's deployment zone."
+},
+{
+"id": 787957,
+"name": "Gladiator Lancer",
+"text": "Aquilon Optics: Each time this model is selected to shoot, you can re-roll one Hit roll, you can re-roll one Wound roll and you can re-roll one Damage roll when resolving its attacks Weapon abilities: Heavy. Special rules: Deadly Demise, Heavy, Templar Vows."
+},
+{
+"id": 788180,
+"name": "Librarian with Jump Pack [Legends]",
+"text": "Might of Heroes [Pyschic]: While this model is leading a unit, improve the Strength and Armour Penetration characteristic of melee weapons equipped by models in that unit by 1. Leader: This model can be attached to the following units: \u25a0 Assault Squad with Jump Packs \u25a0 Vanguard Veteran Squad with Jump Packs Special rules: Leader, Oath of Moment."
+},
+{
+"id": 786350,
+"name": "Mk X Gravis Armour",
+"text": "Infantry only. Change this model's Move characteristic to 5\", its Toughness characteristic to 6 and its Wounds characteristic to 5. Remove the Tacticus keyword, add the Gravis keyword and replace the list of units this model can be attached to: Gravis (excluding Fly)."
+},
+{
+"id": 786397,
+"name": "Ironskein",
+"text": "Add 2 to the bearer\u2019s Wounds characteristic."
+},
+{
+"id": 787631,
+"name": "Nexos",
+"text": "Battlefield Analysis: Once per battle round, one model from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP. Cult Infiltration: At the start of each player\u2019s Command phase, if this model is on the battlefield, you can select one of your Cult Ambush markers that is on the battlefield and has not been moved this turn and move it up to 6\" Leader: This model can be attached to the following units: - ACOLYTE HYBRIDS - HYBRID METAMORPHS - NEOPHYTE HYBRIDS You can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. Special rules: Deep Strike, Leader."
+},
+{
+"id": 785120,
+"name": "Malicious Calculations",
+"text": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack's Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll."
+},
+{
+"id": 786147,
+"name": "Spiritus Ferrum",
+"text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer\u2019s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer\u2019s unit as well."
+},
+{
+"id": 787154,
+"name": "Corsair Voidscarred",
+"text": "Piratical Raiders: At the start of the battle, select one unit from your opponent\u2019s army. Each time a model in this unit makes an attack that targets that unit, that attack has the [LETHAL HITS] and [PRECISION] abilities. Channeler stones: Once per turn, the first time a saving throw is failed for the bearer\u2019s unit, change the Damage characteristic of that attack to 0. Faolch\u00fa: Ranged weapons equipped by models in the bearer\u2019s unit have the [IGNORES COVER] ability. Mistshield: The bearer has a 4+ invulnerable save. Weapon abilities: Anti-Infantry 2+, Assault, Heavy, Lethal Hits, Melta 2, Pistol, Precision, Psychic, Rapid Fire 1, Torrent, Twin-Linked. Special rules: Anti-, Assault, Battle Focus, Heavy, Lethal Hits, Melta, Pistol, Precision, Psychic, Rapid Fire, Scouts, Torrent, Twin-linked."
+},
+{
+"id": 788535,
+"name": "Commander Farsight",
+"text": "Way of the Short Blade: While this model is leading a unit, each time a model in that unit makes an attack that targets an enemy unit within 9\", add 1 to the Wound roll. Puretide's Teachings: Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP. Leader: This model can be attached to the following units: - Crisis Sunforge Battlesuits - Crisis Fireknife Battlesuits - Crisis Starscythe Battlesuits Special rules: Deep Strike, For The Greater Good, Leader."
+},
+{
+"id": 787788,
+"name": "Sisters of Battle Squad",
+"text": "Simulacrum Imperialis: Improve the Leadership characteristic of models in the bearer's unit by 1. Defenders of the Faith: If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models in range of it, until your opponent controls it at the start or end of any turn. Incensor Cherub: Once per battle, you can target this unit with the Command Re-roll Stratagem for 0CP and can do so if you have already targeted a different unit with that Stratagem this phase. Invulnerable Save: Models in this unit have a 6+ invulnerable save. Weapon abilities: Anti-Infantry 4+, Anti-Psyker 2+, Devastating Wounds, Hazardous, Heavy, Ignores Cover, Melta 2, Pistol, Precision, Rapid Fire 1, Sustained Hits 1, Torrent. Special rules: Anti-, Devastating Wounds, Hazardous, Heavy, Ignores Cover, Melta, Pistol, Precision, Rapid Fire, Sustained Hits, Torrent."
+},
+{
+"id": 788091,
+"name": "Knight Destrier",
+"text": "Damaged: 1-6 Wounds Remaining: While this model has 1-6 wounds remaining, subtract 4 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. Thundercharge: If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model. Ram Jets: Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3\" to the Move characteristic of this model. Saturation Fire: Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability. Weapon abilities: Assault, Blast, Rapid Fire 3, Rapid Fire D6+3. Special rules: Assault, Blast, Code Chivalric, Deadly Demise, Rapid Fire, Super-Heavy Walker."
+},
+{
+"id": 787671,
+"name": "Zephyrim Squad",
+"text": "Sacred Banner: You can re-roll Advance and Charge rolls made for the bearer\u2019s unit. Embodied Prophecy: Each time this unit is selected to fight, select one of the following abilities to apply to melee weapons equipped by models in this unit until the end of the phase: - Sustained Hits 1 - Lethal Hits If this unit made a Charge move this turn, until the end of the phase, select both abilities above to apply to melee weapons equipped by models in this unit instead. Invulnerable Save: Models in this unit have an Invulnerable save of 5+. Special rules: Acts of Faith, Deep Strike."
+},
+{
+"id": 787934,
+"name": "Rogal Dorn Commander",
+"text": "Called Shots: Each time this model is selected to shoot, you can re-roll one Hit roll, you can re-roll one Wound roll and you can re-roll one Damage roll when resolving its attacks. Vox-net: Each time this model issues an Order, it can issue it to an eligible unit up to 12\" away Orders: This Officer can issue 2 Orders to Squadron units. Special rules: Deadly Demise, Voice Of Command."
+},
+{
+"id": 786187,
+"name": "Marksman's Honours",
+"text": "Improve the Ballistic Skill characteristics of ranged weapons equipped by models in this unit by 1."
+},
+{
+"id": 784663,
+"name": "Gift of Foresight",
+"text": "Asuryani model only. Once per battle round, you can target the bearer's unit with the Command Re-roll Stratagem for 0CP."
+},
+{
+"id": 786552,
+"name": "Mutagenic Regeneration",
+"text": "Abominant, Biophagus or Patriarch model only. In each Command phase, one model in the bearer's unit regains 1 lost wound."
+},
+{
+"id": 787627,
+"name": "Kelermorph",
+"text": "Hypersensory Abilities: Once per turn, in your opponent's Movement phase, when an enemy unit ends a Normal, Advance, or Fall Back move within 9\" of this model, if this unit is not within Engagement Range of one or more enemy units, it can shoot at that unit as if it were your Shooting phase, and then make a Normal move of up to D6\" (it cannot embark within a TRANSPORT as part of this move) Heroic Fusillade: Once per turn, after one model from your army with this ability has shot, you can select one INFANTRY unit hit by one or more of those attacks. That unit must take a Battle-shock test. Weapon abilities: Devastating Wounds, Pistol. Special rules: Deep Strike, Devastating Wounds, Lone Operative, Pistol."
+},
+{
+"id": 786929,
+"name": "Bio-minefield",
+"text": "Enemy units cannot start or end an Advance move within 6\" of this unit."
+},
+{
+"id": 784782,
+"name": "Daemonic Icon",
+"text": "Models in the bearer\u2019s unit have a Leadership characteristic of 6+."
+},
+{
+"id": 788102,
+"name": "Intercessor Squad",
+"text": "Objective Secured: If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn. Target Elimination: Each time this unit is selected to shoot, it can use this ability. If it does, until the end of the phase, add 2 to the Attacks characteristic of bolt rifles equipped by models in this unit and you can only select one enemy unit as the target of all of this unit's attacks Special rules: Oath of Moment, Templar Vows."
+},
+{
+"id": 785068,
+"name": "Tendrilous Emissions",
+"text": "While the bearer is within 3\" of one or more friendly Death Guard Vehicle units, the bearer has the Lone Operative ability, and each time one of those Vehicle units makes a ranged attack that targets an enemy unit visible to the bearer, re-roll a Wound roll of 1."
+},
+{
+"id": 786993,
+"name": "Reaper",
+"text": "Each time a model in this unit makes an attack that targets an Infantry or Mounted unit, re-roll a Hit roll of 1."
+},
+{
+"id": 788357,
+"name": "Gargoyles",
+"text": "Winged Swarm: In your Shooting phase, after this unit has shot, if it is not within Engagement Range of any enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, this unit is not eligible to declare a charge. Weapon abilities: Assault. Special rules: Assault, Deep Strike, Synapse."
+},
+{
+"id": 786280,
+"name": "Black Howl",
+"text": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test."
+},
+{
+"id": 786168,
+"name": "Hero of the Chapter",
+"text": "Adeptus Astartes model only. While the bearer is leading a unit, the bearer has the Battleline keyword."
+},
+{
+"id": 786812,
+"name": "Strike Swiftly",
+"text": "T\u2019au Empire model only. At the start of the battle, before any moves are made using the Scouts ability, you can select up to two friendly T\u2019au Empire units within 6\" of the bearer that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability."
+},
+{
+"id": 787912,
+"name": "Heavy Quad Launcher Team [Legends]",
+"text": "Suppression Bombardment: In your Shooting phase, after this model has shot, select one enemy unit (excluding Monster and Vehicle units) hit by one or more of those attacks. Unit the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll. Weapon abilities: Blast, Indirect Fire. Special rules: Blast, Indirect Fire."
+},
+{
+"id": 784405,
+"name": "Get Down!",
+"text": "Each time an Astra Militarum unit from your army is selected to shoot, you can select one other friendly Astra Militarum unit (excluding Ogryn units). Until the end of the phase, models in the attacking unit can ignore models in that friendly unit for the purposes of determining visibility."
+},
+{
+"id": 786710,
+"name": "Kustom Force Field",
+"text": "While the bearer is leading a unit, models in that unit have a 4+ invulnerable save against ranged attacks."
+},
+{
+"id": 784470,
+"name": "Target Sighted",
+"text": "Each time a Tank Ace unit from your army (see below) Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a Tank Ace unit from your army shoots in your Shooting phase, if that unit did not Advance this turn, you can re\u2011roll the Damage roll. Adeptus Astartes Vehicle units from your army (excluding Fortifications, Drop Pods, Walkers and units that can Fly) have the Tank Ace keyword. In the Muster Armies step, you can select up to three Tank Ace units from your army to gain the Character keyword. Designer\u2019s Note: This means that the selected units can be given enhancements, and one of them can be selected as your Warlord."
+},
+{
+"id": 785848,
+"name": "Merit of the Strategium",
+"text": "After both players have deployed their armies, you can redeploy this unit. When doing so, this unit can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+},
+{
+"id": 787790,
+"name": "Daemonhost [Legends]",
+"text": "Malefic Warding: While an INQUISITOR model is leading a unit that contains one or more DAEMONHOST models, models in this unit have a 5+ invulnerable save. Invulnerable Save: Models in this unit have a 5+ invulnerable save. Bound Daemon: While an INQUISITOR model is leading a unit that includes one or more DAEMONHOST models, the Objective Control characteristic of DAEMONHOST models in that unit is 1. Inquisitorial Retinue: If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1. At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an INQUISITOR model (a unit cannot have more than one DAEMONHOST unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit\u2019s Starting Strength is increased accordingly. Weapon abilities: Lethal Hits, Psychic. Special rules: Lethal Hits, Psychic."
+},
+{
+"id": 788392,
+"name": "Canoptek Reanimator",
+"text": "Nanoscarab Reanimation Beam (Aura): While a friendly NECRONS unit is within 3\" of this model, each time that unit\u2019s Reanimation Protocols activate, that unit reanimates an additional D3 wounds. Special rules: Feel No Pain, Reanimation Protocols."
+},
+{
+"id": 787426,
+"name": "Plague Marines",
+"text": "Infused with the Blessings of Nurgle: In your Shooting phase, each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that unit is Afflicted. Icon of Despair: While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1. Weapon abilities: Anti-INFANTRY 2+, Anti-INFANTRY 4+, Blast, Ignores Cover, Lethal Hits, Torrent. Special rules: Anti-, Blast, Hazardous, Ignores Cover, Lethal Hits, Rapid Fire, Torrent."
+},
+{
+"id": 787337,
+"name": "Tormentbringer",
+"text": "Invulnerable Save: This model has a 4+ invulnerable save. Tormentbringer (Aura): While a friendly Slaanesh Legions Daemonica unit is within 6\" of this model, melee weapons in that unit have the [SUSTAINED HITS 1] ability. Hysterical Frenzy: Each time a model in this model\u2019s unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play. Leader: This model can be attached to the following unit: - Hellflayers Weapon abilities: Anti-INFANTRY 3+, Assault, Devastating Wounds, Extra Attacks, Lethal Hits, Pistol. Special rules: Anti-, Assault, Deep Strike, Devastating Wounds, Extra Attacks, Leader, Lethal Hits, Pistol, The Shadow of Chaos, Warp Rifts."
+},
+{
+"id": 787276,
+"name": "Kabalite Agent with stimm-needler",
+"text": "Stimm-needler: Once per turn, the first time a saving throw is failed for a model in the bearer's unit, change the Damage characteristic of that attack to 0. Weapon abilities: Anti-Infantry 3+, Assault. Special rules: Anti-, Assault, Pistol."
+},
+{
+"id": 786286,
+"name": "Crux Obsidian",
+"text": "Once per turn, the first time a saving throw is failed for the bearer, change the Damage characteristic of that attack to 0."
+},
+{
+"id": 787559,
+"name": "Daemon Prince of Tzeentch with wings",
+"text": "Invulnerable Save: This model has a 4+ invulnerable save. Aetherstride (Psychic): In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does: - It can be set up anywhere on the battlefield more than 6\" horizontally away from all enemy units. - Until the end of the turn, its Dark Blessing has the [Sustained Hits D3] ability. - Until the end of the turn, it is not eligible to declare a charge. Hunter of Souls: Each time this model makes an attack that targets a Character unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a Psyker Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a Character unit, this model regains up to D3 lost wounds (if that Character unit was a Psyker, this model regains up to 3 lost wounds instead). Weapon abilities: Devastating Wounds, Ignores Cover, Psychic, Sustained Hits 1. Special rules: Cabal of Sorcerers, Deadly Demise, Deep Strike, Devastating Wounds, Ignores Cover, Psychic, Sustained Hits."
+},
+{
+"id": 785102,
+"name": "Touch of Rot",
+"text": "Improve the Armour Penetration characteristic of melee weapons equipped by this model by 1."
+},
+{
+"id": 785094,
+"name": "Foulforged Armour",
+"text": "The bearer has a Save characteristic of 2+."
+},
+{
+"id": 786902,
+"name": "Shiverquills",
+"text": "Ranged weapons equipped by models in this unit have the [IGNORES COVER] ability."
+},
+{
+"id": 785410,
+"name": "Pennant of Ascension (Aura)",
+"text": "Acolyte Iconward model only. While a friendly Genestealer Cults Infantry or Genestealer Cults Mounted unit is within 6\" of the bearer, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
+},
+{
+"id": 784325,
+"name": "Dark Pacts",
+"text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit\u2019s weapons to gain until the end of the phase: \u25a0 [LETHAL HITS] \u25a0 [SUSTAINED HITS 1]"
+},
+{
+"id": 788070,
+"name": "Canis Rex",
+"text": "Chainbreaker: Once per battle, at the start of any phase, you can select one friendly Imperium unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked. Legendary Freeblade: Once per turn, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP. Using Sir Hekhtur: If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed. Weapon abilities: Blast, Pistol, Sustained Hits 1. Special rules: Blast, Code Chivalric, Deadly Demise, Lone Operative, Super-Heavy Walker, Sustained Hits."
+},
+{
+"id": 785267,
+"name": "Seer's Bane",
+"text": "Each time the bearer makes an attack with a Psychic melee weapon, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1. Each time the bearer makes an attack with a Psychic melee weapon that targets a Psyker unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2 instead."
+},
+{
+"id": 787096,
+"name": "Nodal Map",
+"text": "While the bearer is within range of an objective marker, if the bearer's unit is Battle-shocked, change the Objective Control characteristic of models in that unit to 1, instead of 0."
+},
+{
+"id": 815355,
+"name": "Avenger's Crown",
+"text": "If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+},
+{
+"id": 788441,
+"name": "Beastboss",
+"text": "Beastboss: While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll. Ferocious Rage: Each time this model makes a Charge move, until the end of the turn, melee weapons it is equipped with have the [DEVASTATING WOUNDS] ability. Leader: This model can be attached to the following unit: - Beast Snagga Boyz Weapon abilities: Anti-Monster 4+, Anti-Vehicle 4+, Rapid Fire 1. Special rules: Anti-, Devastating Wounds, Feel No Pain, Leader, Rapid Fire, Waaagh!."
+},
+{
+"id": 787152,
+"name": "Baharroth",
+"text": "Invulnerable Save (Baharroth): Baharroth has a 4+ Invulnerable save Leader: This model can be attached to the following unit: \u25a0 Swooping Hawks Cry of the Wind: Each time this model is set-up on the battlefield, until the end of the turn, each time this model makes a ranged attack, a successful unmodified Hit roll scores a Critical Hit. Cloudstrider: While this model is leading a unit, at the end of your opponent's turn, if that unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves. In addition, while this model is leading a unit, when that unit is set-up on the battlefield using the Deep Strike ability, in your Movement phase, it can use this ability. if it does, that unit can be set-up anywhere on the battlefield that is more than 6\" horizontally away from all enemy models, but until the end of the turn, it is not eligible to declare a charge. Weapon abilities: Assault, Lethal Hits, Sustained Hits 1. Special rules: Assault, Battle Focus, Deep Strike, Leader, Lethal Hits, Sustained Hits."
+},
+{
+"id": 785450,
+"name": "Psychic Spoor",
+"text": "At the start of the first battle round, select one enemy unit to be this model's prey. Each time this model makes an attack that targets it prey, you can re-roll the Hit roll and you can re-roll the Wound roll."
+},
+{
+"id": 786351,
+"name": "Mk X Phobos Armour",
+"text": "Infantry only. This model gains the Infiltrators and Stealth abilities, remove the Tacticus keyword, add the Phobos keyword, and replace the list of units this model can be attached to: Eliminator Squad, Incursor Squad, Infiltrator Squad, Reiver Squad, Scout Squad."
+},
+{
+"id": 786958,
+"name": "Natural Leader",
+"text": "Each time you take a Battle-shock or Leadership test for this unit, you can re-roll that test."
+},
+{
+"id": 786040,
+"name": "Rage-Fuelled Warrior",
+"text": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer's melee weapons have the [SUSTAINED HITS 3] ability."
+},
+{
+"id": 787274,
+"name": "Kabalite Agent with pain sculptors",
+"text": "Weapon abilities: Anti-Infantry 4+, Twin-Linked. Special rules: Anti-, Twin-linked."
+},
+{
+"id": 786079,
+"name": "Champion of the Deathwing",
+"text": "Deathwing model only. Melee weapons equipped by the bearer have the [LETHAL HITS] ability, and each time the bearer makes a melee attack, if it is within range of your Vowed objective marker, a Critical Hit is scored on an unmodified Hit roll of 5+."
+},
+{
+"id": 786655,
+"name": "Cursed Circlet",
+"text": "Each time an enemy unit is selected to shoot, after that unit has shot, if any models from the bearer\u2019s unit were destroyed as a result of those attacks, the bearer\u2019s unit can make a Surge move. To do so, roll one D6: the bearer\u2019s unit can be moved a number of inches up to the result, but the bearer\u2019s unit must finish that move as close as possible to the closest enemy unit (excluding Aircraft). When doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Surge move while it is Battle\u2011shocked."
+},
+{
+"id": 788652,
+"name": "Skyshield Landing Pad [Legends]",
+"text": "Skyshield: Friendly Infantry models and friendly units that can Fly can be set up or end any type of move on top of the platform section of this Fortification. While such a model is on the platform section of this Fortification, that model has a 5+ invulnerable save against ranged attacks Repair Aircraft: At the end of your Movement phase, if there is a friendly Aircraft model on top of this Fortification, that Aircraft regains up to D3 lost wounds Special rules: Deadly Demise."
+},
+{
+"id": 785635,
+"name": "Magos",
+"text": "At the end of your Command phase, if the bearer is within range of your Acquisition objective marker, roll one D6: on a 4+, you gain 1CP."
+},
+{
+"id": 787609,
+"name": "Bloodletters",
+"text": "Invulnerable Save: Models in this unit have a 5+ invulnerable save. Bane of Cowards: Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests. Special rules: Deep Strike."
+},
+{
+"id": 787151,
+"name": "Avatar of Khaine",
+"text": "Molten Form: Each time an attack is allocated to this model, halve the Damage characteristic of that attack. The Bloody Handed (Aura): While a friendly Aeldari unit is within 6\" of this model, add 1 to Advance and Charge rolls made for that unit. Damaged: 1-5 Wounds Remaining: While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. Invulnerable Save (Avatar): The Avatar of Khaine has a 4+ Invulnerable save Weapon abilities: Sustained Hits D3. Special rules: Battle Focus, Deadly Demise, Sustained Hits."
+},
+{
+"id": 787402,
+"name": "Venomcrawler",
+"text": "Invulnerable Save: This model has a 5+ invulnerable save Soul Eater: At the end of the Fight phase, if one or more attacks made by this model that phase destroyed one or more enemy units, until the end of the battle, add 1 to the Attacks characteristic of this model\u2019s weapons. Special rules: Dark Pacts, Deadly Demise."
+},
+{
+"id": 787898,
+"name": "Dominus Armoured Siege Bombard [Legends]",
+"text": "Pinning Bombardment: In your Shooting phase, after this model has shot, if one or more of those attacks made with its Dominus triple bombard scored a hit against an enemy Infantry unit, that unit must take a Battle-shock test. Weapon abilities: Blast, Indirect Fire. Special rules: Blast, Deadly Demise, Indirect Fire."
+},
+{
+"id": 784295,
+"name": "Murdercall",
+"text": "Each time an enemy unit (excluding AIRCRAFT) ends a Normal or Advance move within 6\" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a Surge move towards that enemy unit. To do so, roll one D6: models in your unit move a number of inches up to this result, but your unit must end that move as close as possible to that enemy unit. When doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Surge move while it is within Engagement Range of one or more enemy units."
+},
+{
+"id": 786229,
+"name": "Inescapable",
+"text": "Each time a model in this unit makes a ranged attack, you can ignore any or all modifiers to that attack's Ballistic Skill characteristic and/or to the Hit roll."
+},
+{
+"id": 788123,
+"name": "Dreadnought",
+"text": "Wisdom of the Ancients [Aura]: While a friendly Adeptus Astartes Infantry unit is within 6\" of this model, each time a model in that unit makes an attack, re-roll a Hit roll of 1. Special rules: Deadly Demise, Oath of Moment, Templar Vows."
+},
+{
+"id": 788428,
+"name": "Gauss Pylon [Legends]",
+"text": "Invulnerable Save: This model has a 5+ invulnerable save. Phase Shift Generator (Aura): While a friendly NECRONS unit is within 3\" of this Fortification, models in that unit have a 5+ invulnerable save against ranged attacks. Phase-shifted Cover: Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack. Damaged: 1-7 wounds remaining: While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. Weapon abilities: Anti-FLY 2+, Lethal Hits, Sustained Hits 2. Special rules: Anti-, Deadly Demise, Lethal Hits, Reanimation Protocols, Sustained Hits."
+},
+{
+"id": 788276,
+"name": "Sergeant Telion [Legends]",
+"text": "Voice of Experience: While this model is leading a unit, improve the Objective Control characteristic of models in that unit by 1 and each time a model in that unit makes an attack, add 1 to the Hit roll. Guiding Hand: While this model is leading a unit, each time that unit is selected to shoot or fight, select one of the following abilities to apply to weapons equipped by models in that unit until the end of the phase: \u25a0 [LETHAL HITS] \u25a0 [PRECISION] \u25a0 [SUSTAINED HITS 1] Leader: This model can be attached to the following units: \u25a0 Scout Squad \u25a0 Scout Sniper Squad Weapon abilities: Precision. Special rules: Infiltrators, Leader, Oath of Moment, Precision, Scouts, Stealth."
+},
+{
+"id": 788549,
+"name": "Crisis Battlesuits [Legends]",
+"text": "Turbo-jets: Each time this unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit. Crisis Bodyguard: If a Character unit from your army with the Leader ability can be attached to a Crisis Fireknife Battlesuit unit, it can be attached to this unit instead. Special rules: Deep Strike, For The Greater Good."
+},
+{
+"id": 815491,
+"name": "Ambushed",
+"text": "At the start of the first turn, your Warlord suffers D3 mortal wounds."
+},
+{
+"id": 787944,
+"name": "Sentinel Commander [Crucible]",
+"text": "Mobile Firebase: Ranged weapons equipped by models in this unit have the [ASSAULT] ability. Leader: This model can be attached to the following units: - Armoured Sentinels - Scout Sentinels* Orders: This Officer can issue up to 1 Order to Squadron units. Special rules: Crucible, Deadly Demise, Leader, Scouts, Voice Of Command."
+},
+{
+"id": 786952,
+"name": "Disgraced",
+"text": "You cannot use any Stratagems to affect this unit and this unit cannot be Marked for Greatness."
+},
+{
+"id": 788230,
+"name": "Bjorn the Fell-Handed",
+"text": "Legendary Tenacity: Each time an attack is allocated to this model, if the Strength characteristic of that attack is greater than this model's Toughness characteristic, subtract 1 from the Wound roll. Ancient Tactician: At the start of your Command phase, if this model is on the battlefield, you gain 1 CP Invulnerable Save: 5+ Weapon abilities: Devastating Wounds, Lethal Hits, Melta 2, Torrent. Special rules: Deadly Demise, Devastating Wounds, Feel No Pain, Lethal Hits, Melta, Oath of Moment, Torrent."
+},
+{
+"id": 784888,
+"name": "Vox-symbiote",
+"text": "Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+},
+{
+"id": 786983,
+"name": "Horror-hardened",
+"text": "You can target this unit with Stratagems even while it is Battle-shocked."
+},
+{
+"id": 788098,
+"name": "Captain in Gravis Armour",
+"text": "Refuse to Yield: Each time an attack is allocated to this model, halve the Damage characteristic of that attack. Leader: This model can be attached to the following units: \u25a0 Aggressor Squad \u25a0 Eradicator Squad \u25a0 Heavy Intercessor Squad Weapon abilities: Assault, Extra Attacks, Heavy. Special rules: Assault, Extra Attacks, Heavy, Leader, Oath of Moment, Templar Vows."
+},
+{
+"id": 787206,
+"name": "Cronos",
+"text": "Pain Engine (Aura): Each time you spend 1 Pain token to Empower a friendly unit within 9\" of this unit, roll one D6, adding 1 to the result if one or more models in this unit are not equipped with a spirit vortex: on a 5+, you gain 1 Pain token. Designer's Note: Pain tokens you spend for reasons other than Empowering a unit do not trigger this ability. Invulnerable Save: This unit has a 6+ Invulnerable save Pain Parasite (Pain): In your Shooting phase or the Fight phase, when you select this unit to shoot or fight, you can spend 1 Pain token to Empower this unit. While Empowered, each time this unit shoots or fights, after it has resolved its attacks, if one or more enemy models were destroyed as a result of those attacks, one model in this unit regains up to 3 lost wounds (if all models in this unit have their starting number of wounds and this unit is below its Starting Strength, 1 model is returned to this unit with 3 wounds remaining). Weapon abilities: Anti-Infantry 2+, Blast, Ignores Cover, Torrent. Special rules: Anti-, Blast, Deadly Demise, Feel No Pain, Ignores Cover, Power from Pain, Torrent."
+},
+{
+"id": 785306,
+"name": "Binding Tendrils (Psychic)",
+"text": "In your Shooting phase, after this model has shot, select one enemy Infantry unit hit by one or more of those attacks made with a Psychic weapon. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2 from its Move characteristic and subtrsact 2 from Charge rolls made for it."
+},
+{
+"id": 786490,
+"name": "War-wrought",
+"text": "You can ignore any or all modifiers to the Leadership characteristic of models in this unit, and you can re-roll failed Out of Action tests taken for this unit."
+},
+{
+"id": 784532,
+"name": "Dakka! Dakka! Dakka!",
+"text": "Ranged weapons equipped by Orks Infantry and Orks Walker models from your army have the [ASSAULT] ability. While the Waaagh! is active for your army, during your Shooting phase, ranged weapons equipped by Orks Infantry and Orks Walker models from your army have the [SUSTAINED HITS 1] ability."
+},
+{
+"id": 786766,
+"name": "Rezmekka's Redder Paint",
+"text": "Mounted Waaagh!boss model only. Add 2\" to the Move characteristic of models in the bearer's unit, and models in the bearer's unit have the Fights First ability."
+},
+{
+"id": 788481,
+"name": "Shokkjump Dragsta",
+"text": "Shokk Tunnel: Each time this model is selected to Advance, you can remove it from the battlefield and set it up again anywhere on the battlefield that is more than 9\" horizontally away from all enemy models instead of making an Advance move (this model is still considered to have Advanced this turn). Weapon abilities: Devastating Wounds, Hazardous, Precision. Special rules: Deadly Demise, Devastating Wounds, Hazardous, Precision, Waaagh!."
+},
+{
+"id": 786133,
+"name": "Orb of the Emperor's Aegis",
+"text": "ADEPTUS ASTARTES model only. Models in the bearer's unit have the Deep Strike ability"
+},
+{
+"id": 787241,
+"name": "Bonesinger [Legends]",
+"text": "Leader: This model can be attached to the following units: \u25a0 Wraithblades \u25a0 Wraithguard \u25a0 Wraithlord Invulnerable Save (Bonesinger): A Bonesinger has a 4+ Invulnerable save Way of the Shaper (Psychic): While this model is leading a unit, Wraith Construct models in that unit have the Feel No Pain 6+ ability. Bonesinger: While this model is within 3\" of one or more friendly Wraith Construct or Asuryani Vehicle units, unless it is leading a unit, this model has the Lone Operative ability. Psytronome Shaper: In your Command phase, you can select one friendly Wraith Construct or Asuryani Vehicle model within 3\" of this model. That Wraith Construct or Asuryani Vehicle model regains up to D3 lost wounds. Weapon abilities: Psychic. Special rules: Battle Focus, Leader, Psychic."
+},
+{
+"id": 787177,
+"name": "Shining Spears",
+"text": "Shimmershield: The bearer has a 4+ invulnerable save. Invulnerable Save: This unit has a 5+ Invulnerable Save. Extreme Mobility: Each time this unit makes a Normal, Advance, Fall Back or Charge move, ignore any vertical distance when determining the total distance models in this unit can be moved during that move. Weapon abilities: Anti-Monster 3+, Anti-Vehicle 3+, Assault, Lance, Lethal Hits, Twin Linked. Special rules: Anti-, Assault, Battle Focus, Lance, Sustained Hits, Twin-linked."
+},
+{
+"id": 785270,
+"name": "Shadow Puppeteer (Psychic)",
+"text": "Select one enemy unit within 24\" of and visible to the manifesting model. Until the start of your next Shooting phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll. If the Psychic test result for this Ritual was 12+, subtract 1 from the Wound roll as well."
+},
+{
+"id": 786914,
+"name": "Ritual Butchery",
+"text": "Kinband Champion only. While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+},
+{
+"id": 786392,
+"name": "Teleport crest",
+"text": "While the bearer is leading a unit, models in that unit have the Deep Strike ability."
+},
+{
+"id": 786789,
+"name": "Warbike",
+"text": "Hordeboss or Warphead only. Change this model's Move characteristic to 12\", its Toughness and Wounds characteristic to 6, its Save characteristic to 4+, and it is equipped with 1 twin dakkagun in addition to the weapons you choose in Step 4. Remove the Infantry keyword, add the Mountedkeyword, and replace the list of units this model can be attached to: Warbikers."
+},
+{
+"id": 788247,
+"name": "Wulfen Dreadnought",
+"text": "Bestial Rage: Each time an enemy unit is selected to shoot, after that unit has shot, if this model lost one or more wounds as a result of those attacks, this model can make a Bestial Rage move. To do so, roll one D6, adding 2 to the result: this model can be moved a number of inches up to the result, but must finish that move as close as possible to the closest enemy unit(excluding AIRCRAFT). When doing so, this model can be moved within Engagement Range of that enemy unit. Each model can only make one Bestial Rage move per phase. Violent Fury: If this model is equipped with two melee weapons, those weapon profiles have the TWIN-LINKED ability. Special rules: Curse of the Wulfen, Deadly Demise, Feel No Pain, Oath of Moment."
+},
+{
+"id": 786094,
+"name": "Prescience",
+"text": "Adeptus Astartes Psyker model only (excluding Terminator models). Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of the bearer\u2019s unit, the bearer\u2019s unit can make a Normal move of up to D6\", or up to 6\" instead if the Divination Discipline is active for your army"
+},
+{
+"id": 786049,
+"name": "Pennant of Remembrance",
+"text": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit is Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead."
+},
+{
+"id": 784274,
+"name": "Shepherds of the Dead",
+"text": "Each time an Asuryani Psyker model from your army is destroyed by an enemy unit, that unit gains a Vengeful Dead token. Each time a Wraith Construct model from your army makes an attack that targets a unit with one or more Vengeful Dead tokens, add 1 to the Hit roll and add 1 to the Wound roll. Asuryani Psyker models from your army have the following ability: Spirit Guides (Aura): while a Wraithblades, Wraithguard or Wraithlord unit from your army is within 12\" of this model, that unit has the Battle Focus ability. Wraithblades and Wraithguard units from your army gains the Battleline keyword."
+},
+{
+"id": 787089,
+"name": "Predatory Senses",
+"text": "Each time a model in this unit makes a ranged attack, re-roll a Hit roll of 1."
+},
+{
+"id": 787099,
+"name": "Empathic Disinclinator",
+"text": "At the start of the battle, select one objective marker. While the bearer is on the battlefield, friendly units within range of that objective marker have a 5+ invulnerable save."
+},
+{
+"id": 787462,
+"name": "Daemon Prince of Nurgle",
+"text": "Death Guard Defenders: While this model is within 3\" of one or more friendly Death Guard Infantry units, this model has the Lone Operative ability. Invulnerable Save: This model has a 4+ invulnerable save. Fevered Strategist: Once per Battle Round, one model from your army with this ability can use it when a friendly Death Guard unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP. Miasma of Pestilence (Aura): While a friendly Death Guard unit is within 6\" of this model, each time a ranged attack targets that unit, models in that unit have the Benefit of Cover against that attack. Special rules: Deadly Demise, Nurgle's Gift (Aura)."
+},
+{
+"id": 788135,
+"name": "Suppressor Squad",
+"text": "Suppression Fire: In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks made with an accelerator autocannon. Until the start of your next turn, while this unit is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll. Weapon abilities: Heavy. Special rules: Deep Strike, Heavy, Oath of Moment, Templar Vows."
+},
+{
+"id": 787416,
+"name": "Chaos Vindicator",
+"text": "Siege Shield: When making ranged attacks with its demolisher cannon, this model can target enemy units within Engagement Range of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units. Weapon abilities: Blast. Special rules: Blast, Dark Pacts, Deadly Demise."
+},
+{
+"id": 788439,
+"name": "Battlewagon",
+"text": "Ramshackle but Rugged: Each time an attack is allocated to this model, worsen the Armour Penetration characteristic of that attack by 1. Battlewagon: This model has a transport capacity of 22 Orks Infantry models. If this model is equipped with a killkannon, it has a transport capacity of 12 Orks Infantry models. Each Mega Armour or Jump Pack model takes up the space of 2 models. The Ghazghkull Thraka model takes up the space of 4 models. \u2019Ard Case: Add 2 to the bearer\u2019s Toughness characteristic, but it no longer has the Firing Deck ability. Weapon abilities: Anti-Vehicle 4+, Blast. Special rules: Anti-, Blast, Deadly Demise, Firing Deck, Waaagh!."
+},
+{
+"id": 787150,
+"name": "Autarch Wayleaper",
+"text": "Path of Command: Once per battle round, one model from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that stratagem by 1CP. Invulnerable Save (Autarch): An Autarch Wayleaper has a 4+ Invulnerable save Indomitable Strength of Will: While this model is leading a unit, each time you spend a Battle Focus token to enable that unit to perform an Agile Manoeuvre, roll one D6: on a 3+ you gain 1 Battle Focus token. Leader: This model can be attached to the following units: \u25a0 Swooping Hawks \u25a0 Warp Spiders Weapon abilities: Anti-Infantry 3+, Assault, Heavy, Ignores Cover, Melta 3, Pistol, Sustained Hits 1, Torrent. Special rules: Anti-, Assault, Battle Focus, Deep Strike, Heavy, Ignores Cover, Leader, Melta, Pistol, Sustained Hits, Torrent."
+},
+{
+"id": 785449,
+"name": "Insidious Evasion",
+"text": "At the end of your opponent's Fight phase, if this unit is not within Engagement Range of any enemy units, once per battle, you may remove this unit from the battlefield and place it into Strategic Reserves."
+},
+{
+"id": 786956,
+"name": "Born Hunter",
+"text": "This unit has the Scouts 9\" ability."
+},
+{
+"id": 786039,
+"name": "Speed of the Primarch",
+"text": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability"
+},
+{
+"id": 787271,
+"name": "Kabalite Agent with special weapon",
+"text": "Weapon abilities: Assault, Torrent. Special rules: Assault, Torrent."
+},
+{
+"id": 786078,
+"name": "Eye of the Unseen",
+"text": "Deathwing model only. Each time you target the bearer's unit with a Stratagem, roll one D6, adding 1 if the bearer is within range of your Vowed objective marker: on a 5+ you gain 1CP."
+},
+{
+"id": 786653,
+"name": "Murdermind",
+"text": "The bearer has the Destroyer Cult keyword and during the Declare Battle Formations step, the bearer can be attached to a Destroyer Cult unit (excluding Character units). If you do, the bearer\u2019s unit cannot contain any models without the Destroyer Cult keyword. Add 3\" to the Move characteristic of the bearer."
+},
+{
+"id": 788650,
+"name": "Plasma Obliterator [Legends]",
+"text": "Emergency Plasma Vents: Each time this FORTIFICATION suffers a mortal wound as the result of a failed Hazardous test, roll one D6: on a 4+, that wound is not lost. Plasma Obliterator: This FORTIFICATION has a transport capacity of 20 INFANTRY models. Each model with a Wounds characteristic of 3 or more takes up the space of 2 models. It cannot transport non-CHARACTER models with a Wounds characteristic of 4 or more. Weapon abilities: Blast, Hazardous. Special rules: Blast, Deadly Demise, Firing Deck, Hazardous."
+},
+{
+"id": 785634,
+"name": "Autoclavic Denounciation",
+"text": "Ranged weapons equipped by the bearer have the [ANTI-INFANTRY 2+] and [ANTI-MONSTER 4+] abilities."
+},
+{
+"id": 787607,
+"name": "Skarbrand",
+"text": "Invulnerable Save: This model has a 4+ invulnerable save. Rage Embodied (Aura): While a friendly Blood Legions unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. Murderlust: This unit is eligible to declare a charge in a turn in which it Advanced. Damaged: 1-7 wounds remaining: While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model\u2019s Slaughter and Carnage. Weapon abilities: Ignores Cover, Torrent. Special rules: Deadly Demise, Deep Strike, Ignores Cover, Torrent."
+},
+{
+"id": 787149,
+"name": "Autarch",
+"text": "Superlative Strategist: While this model is leading a unit, you can re-roll Advance rolls made for that unit, and you can re-roll any rolls made for that unit while it is performing an Agile Manoeuvre. Path of Command: Once per battle round, one model from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that stratagem by 1CP. Leader: This model can be attached to the following units: \u25a0 Dark Reapers \u25a0 Dire Avengers \u25a0 Fire Dragons \u25a0 Guardian Defenders \u25a0 Howling Banshees \u25a0 Storm Guardians \u25a0 Striking Scorpions Invulnerable Save (Autarch): An Autarch has a 4+ Invulnerable save Aspect Training: While this model is leading a Howling Banshees unit, it has the Fights First ability. While this model is leading a Striking Scorpions unit, it has the Infiltrators, Scouts 7\" and Stealth abilities. Weapon abilities: Anti-Infantry 3+, Assault, Heavy, Ignores Cover, Melta 3, Pistol, Sustained Hits 1, Torrent. Special rules: Anti-, Assault, Battle Focus, Heavy, Ignores Cover, Leader, Melta, Pistol, Sustained Hits, Torrent."
+},
+{
+"id": 787400,
+"name": "Possessed",
+"text": "Invulnerable Save: Models in this unit have a 5+ invulnerable save. Unholy Bloodshed: Once per battle, when this unit makes a Dark Pact, until the end of the phase, weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability. Special rules: Dark Pacts."
+},
+{
+"id": 787896,
+"name": "Valkyrie Sky Talon [Legends]",
+"text": "Transport: This model has a transport capacity of 1 TAUROS model or 2 ASTRA MILITARUM WALKER models. Fire Support: In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll. Special rules: Deadly Demise, Hover."
+},
+{
+"id": 786228,
+"name": "Death On Dark Wings",
+"text": "Each time a ranged attack targets this unit, if this unit Advanced in your previous Movement phase, subtract 1 from the Hit roll."
+},
+{
+"id": 788121,
+"name": "Centurion Devastator Squad",
+"text": "Decimator Protocols: Each time a model in this unit makes a ranged attack, re-roll a Hit roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Hit roll instead. Weapon abilities: Anti-Vehicle 2+, Anti-vehicle 2+. Special rules: Anti-, Heavy, Oath of Moment, Templar Vows."
+},
+{
+"id": 788426,
+"name": "Tesseract Ark [Legends]",
+"text": "Invulnerable Save: Models in this unit have a 4+ invulnerable save. Gravitational Field: Each time an enemy unit selects this model as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other reductions to that Charge roll). Weapon abilities: Blast, Devastating Wounds, Ignores Cover, Lethal Hits, Sustained Hits 2, Torrent. Special rules: Blast, Deadly Demise, Devastating Wounds, Ignores Cover, Lethal Hits, Reanimation Protocols, Sustained Hits, Torrent."
+},
+{
+"id": 788274,
+"name": "Roboute Guilliman",
+"text": "Author of the Codex: At the Start of your Command phase, select two Author of the Codex abilities (see left). Until the start of your next Command phase, this model has those abilities.\u2019 Primarch of the XIII (Aura): While a friendly Adeptus Astartes unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and you can re-roll Battle-shock and Leadership tests taken for that unit. Master of Battle: After you have selected an enemy unit using the Oath of Moment ability, select a second enemy unit. Until the start of your next Command phase, if your Oath of Moment target is destroyed, that second enemy unit becomes your Oath of Moment target until you select a new one. Supreme Strategist: Once per battle round, you can target one friendly ADEPTUS ASTARTES unit within 12\" of this model with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP. Ultramarines Bodyguard: While this model is within 3\" of one or more friendly Adeptus Astartes Infantry units, this model has the Lone Operative ability Armour of Fate: The first time this model is destroyed, roll one D6 at the end of the phase: on a 3+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy models, with 6 wounds remaining. Supreme Commander: If this model is in your army, it must be your Warlord. Weapon abilities: Devastating Wounds, Lethal Hits, Rapid Fire 2. Special rules: Devastating Wounds, Lethal Hits, Oath of Moment, Rapid Fire."
+},
+{
+"id": 788547,
+"name": "Kroot Carnivores",
+"text": "Fieldcraft: At the end of the your Command phase, if this unit within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn. Bodyguard: If this unit has a Starting Strength of 20, you can attach up to two Leader units to it instead of one, provided those Leaders are not duplicates (e.g. you cannot attach two WAR SHAPERS to this unit). If you do, and this unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths. Special rules: Scouts, Stealth."
+},
+{
+"id": 815485,
+"name": "Rules Adaptions",
+"text": "- Kroot Carnivores units can perform the Secure Site Tactical Manoeuvre as if they had the Battleline keyword. - Each time you set up a Kroot Carnivores unit in an Entry Zone, you can set up a Kroot Hounds unit and/or a Krootox Riders unit in that same Entry Zone. - If a Kroot Carnivores or Kroot Farstalkers unit from your army destroys an enemy unit while receiving the benefits of the Kroot Flesh Shaper's Rites of Feasting ability, the Feel No Pain 5+ ability they gain stays in effect, even after they stop receiving the benefit of that ability. - The Kroot Carnivores unit loses the Fieldcraft ability. - The Kroot Hounds unit loses the Loping Pounce ability. - The Krootox Riders unit loses the Kroot Packmates ability."
+},
+{
+"id": 787942,
+"name": "Front-line Commander [Crucible]",
+"text": "Get Back in the Fight: While this model is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back. Leader: This model can be attached to the following units: - Astra Militarum Battleline - Kasrkin - Krieg Combat Engineers - Tempestus Scions Orders: This Officer can issue up to 2 Orders to Regiment units. Special rules: Crucible, Leader, Voice Of Command."
+},
+{
+"id": 786949,
+"name": "Battle-weary",
+"text": "Each time this unit takes a Battle-shock, Leadership, Desperate Escape or Out of Action test, subtract 1 from that test."
+},
+{
+"id": 788228,
+"name": "Logan Grimnar on Stormrider [Legends]",
+"text": "Leader: This model can be attached to the following unit: \u25a0 Thunderwolf Cavalry Logan Grimnar: Your army cannot contain both Logan Grimnar and Logan Grimnar on Stormrider Weapon abilities: Extra Attacks. Special rules: Deadly Demise, Extra Attacks, Leader, Oath of Moment."
+},
+{
+"id": 784887,
+"name": "Warp Optics",
+"text": "Ranged weapons equipped by this model have the [IGNORES COVER] ability."
+},
+{
+"id": 786981,
+"name": "Blur of Speed",
+"text": "Models in this unit have the Stealth ability."
+},
+{
+"id": 788096,
+"name": "Adrax Agatone",
+"text": "Unto the Anvil: While this model is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll. Lord of the Pyroclasts: While an enemy unit is within Engagement Range of this model, halve the Objective Control characteristic of models in that enemy unit Leader: This model can be attached to the following units: \u25a0 Assault Intercessor Squad \u25a0 Bladeguard Veteran Squad \u25a0 Company Heroes \u25a0 Infernus Squad \u25a0 Intercessor Squad \u25a0 Sternguard Veteran Squad \u25a0 Tactical Squad Weapon abilities: Ignores Cover, Pistol, Torrent. Special rules: Ignores Cover, Leader, Oath of Moment, Pistol, Torrent."
+},
+{
+"id": 787204,
+"name": "Beastmaster [Legends]",
+"text": "Beastmaster: While this unit contains a Beastmaster model, you can re-roll Charge rolls made for this unit. Invulnerable Save: This unit has a 6+ Invulnerable save Goaded Savagery (Pain): In the Fight phase, when you select this unit to fight, you can spend 1 of your Pain tokens to Empower this unit. While this unit is Empowered, if it contains a Beastmaster model, each time a Beast model in this unit makes a melee attack, you can re-roll the Hit roll and you can re-roll the Wound roll. Weapon abilities: Anti-Infantry 3+, Assault, Devastating Wounds, Lethal Hits, Sustained Hits 1, Twin-Linked. Special rules: Anti-, Assault, Devastating Wounds, Lethal Hits, Power from Pain, Scouts, Sustained Hits, Twin-linked."
+},
+{
+"id": 785305,
+"name": "Arcane Shield (Psychic)",
+"text": "While this model is leading a unit, models in that unit have a 4+ invulnerable save."
+},
+{
+"id": 786488,
+"name": "Strafing Run",
+"text": "Once per battle, in your Shooting phase, after this unit has shot, it can make a Normal move of up to 6\". If it does until the ned of the turn, this unit is not eligible to declare a charge."
+},
+{
+"id": 786764,
+"name": "Ded 'Ard Armour",
+"text": "Infantry* or Mounted model only. \u25a0 Add 1 to the bearer's Wounds characteristic. \u25a0 Each time an attack is allocated to the bearer, worsen the Armour Penetration of that attack by 1."
+},
+{
+"id": 788479,
+"name": "Painboy",
+"text": "Dok\u2019s Toolz: While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. Hold Still and Say \u2018Aargh!\u2019: Each time an attack made by this model with its \u2019urty syringe scores a Critical Wound against a unit (excluding VEHICLE units), that unit suffers D6 mortal wounds. Grot Orderly: Once per battle, in your Command phase, if the bearer is leading a unit that is below its Starting Strength, you can return up to D3 destroyed Bodyguard models to that unit. Designer\u2019s Note: *Place a Grot Orderly token next to the unit, removing it once this ability has been used.* Leader: This model can be attached to the following units: - BOYZ - NOBZ - LOOTAS - BURNA BOYZ - TANKBUSTAS Special rules: Leader, Waaagh!."
+},
+{
+"id": 786131,
+"name": "Imperialis of the Eternal Crusade",
+"text": "ANCIENT model only. Each time an enemy unit selects the bearer's unit as a target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll)"
+},
+{
+"id": 787239,
+"name": "Tantalus [Legends]",
+"text": "Invulnerable Save: This unit has a 5+ Invulnerable save Damaged: 1-6 Wounds Remaining: While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. Scything Charge: Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds. Tantalus: This model has a transport capacity of 16 Drukhari Infantry models. Each Grotesque model takes up the space of 3 models. This model cannot transport models that can Fly. Engine of Destruction (Pain): In your Shooting phase, when you select this model to shoot, you can spend 1 Pain token to Empower this model. While Empowered, this model\u2019s pulse disintegrators have the [RAPID FIRE 8] ability. Weapon abilities: Assault. Special rules: Assault, Deadly Demise, Deep Strike, Firing Deck, Power from Pain."
+},
+{
+"id": 787175,
+"name": "Rangers",
+"text": "Invulnerable Save: Models in this unit have a 5+ invulnerable save against ranged attacks only. Path of the Outcast: Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, it can make a Normal move of up to D6\". Weapon abilities: Heavy, Precision. Special rules: Battle Focus, Heavy, Infiltrators, Precision, Stealth."
+},
+{
+"id": 816462,
+"name": "Neurogaunts",
+"text": "Neurocytes: While this unit is within Synapse Range of your friendly Tyranids unit (excluding Neurogaunt units), it has the Synapse keyword. Weapon abilities: Assault. Special rules: Synapse, Sustained Hits, Scouts, Feel No Pain, Stealth, Assault, Infiltrators, Fights First, Ignores Cover, Deep Strike, Lethal Hits, Precision, Lone Operative, Devastating Wounds, Anti-."
+},
+{
+"id": 786912,
+"name": "Unifier",
+"text": "Improve the Leadership and Objective Control characteristics of the bearer by 1."
+},
+{
+"id": 786391,
+"name": "Rampart crest",
+"text": "While the bearer is leading a unit, models in that unit have a 5+ invulnerable save."
+},
+{
+"id": 786787,
+"name": "Stompamatic Pistons",
+"text": "Walker model only (excluding Killa Kans). - Add 2\" to this model's Move characteristic. - Add 1 to Advance and Charge rolls made for this model."
+},
+{
+"id": 788245,
+"name": "Hounds of Morkai [Legends]",
+"text": "Morkai\u2019s Howl: In your Shooting phase, you can select one enemy unit within 12\" of this unit (if a LIEUTENANT IN REIVER ARMOUR is leading this unit, you can select one enemy unit within 18\" instead). That unit must take a Battle-shock test, subtracting 1 from the result if it is a PSYKER unit. If that test is failed, in addition to being Battle-shocked, that unit is Stunned until the start of your next Shooting phase. While a unit is Stunned, each time a model in that unit makes a Psychic Attack, subtract 1 from the Hit roll. Invulnerable Save: Models in this unit have a 6+ invulnerable save. This invulnerable save is improved to 4+ against Psychic Attacks. Attached Unit: If a CHARACTER unit from your army with the Leader ability can be attached to a REIVER SQUAD, it can instead be attached to this unit. Weapon abilities: Anti-PSYKER 4+, Devastating Wounds, Pistol, Precision. Special rules: Anti-, Devastating Wounds, Oath of Moment, Pistol, Precision, Scouts."
+},
+{
+"id": 786093,
+"name": "Fulgus Magna",
+"text": "Deathwing model only. Once per battle, at the end of your opponent\u2019s turn, if the bearer\u2019s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer\u2019s unit from the battlefield and place it into Strategic Reserves."
+},
+{
+"id": 786048,
+"name": "Weapons of the First Legion",
+"text": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer\u2019s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer\u2019s melee weapons instead."
+},
+{
+"id": 787086,
+"name": "Indomitable Stature",
+"text": "Each time a ranged attack is made against this unit, if the Strength characteristic of that attack is greater than this unit's Toughness characteristic, subtract 1 from that attack's Wound roll."
+},
+{
+"id": 787460,
+"name": "Defiler",
+"text": "Scuttling Walker: Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding Titanic models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed. Daemonforge: Each time this unit makes a Dark Pact, until the end of the phase, each time this model makes an attack, re-roll a Wound roll of 1. In addition, once per battle, when this unit makes a Dark Pact, before making the resulting Leadership test, you can declare it will overcharge its daemonforge. If it does: - If the resulting Leadership test is failed, this model suffers 3 mortal wounds instead of D3 mortal wounds. - Until the end of the phase, each time this model makes an attack, you can re-roll the Wound roll. Weapon abilities: Blast, Ignores Cover, Melta 2, Torrent. Special rules: Blast, Dark Pacts, Deadly Demise, Ignores Cover, Melta, Precision, Torrent."
+},
+{
+"id": 788133,
+"name": "Bike Squad [Legends]",
+"text": "Turbo Boost: Each time this unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit Special rules: Oath of Moment, Templar Vows."
+}
+]
