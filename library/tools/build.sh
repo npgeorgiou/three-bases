@@ -41,6 +41,7 @@ steps() {   # $1 = db
   $P relations_added.py "$D"
   $P pattern_fix.py "$D"
   $P kw_links.py "$D"
+  $P trigger_pairs.py "$D"   # again after the tree move: pairs for the tags added since (new patterns, key wins)
   $P parent_rule.py "$D"
   $P final_revert.py "$D"
   $P key_wins.py apply "$D"
