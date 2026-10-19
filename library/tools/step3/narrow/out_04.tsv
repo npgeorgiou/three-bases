@@ -1,0 +1,1 @@
+damage|does|wh_aos_4th|\bmortal damage\b|\bcrit \(mortal\)|\binflict (\d|d3|d6)( mortal)? damage\b	wh_aos_4th	(?:(?<=amount of )|(?<=allocate 1 ))\bmortal damage\b|\binflict (\d|d3|d6)( mortal)? damage\b

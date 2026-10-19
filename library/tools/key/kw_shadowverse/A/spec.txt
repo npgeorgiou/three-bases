@@ -1,0 +1,19 @@
+752300 | on_play | Fanfare
+752301 | taunt | Ward
+752302 | death_trigger | Last Words
+752304 | kicker | Enhance
+752305 | haste | Rush
+752306 | haste | Storm
+752307 | delayed | Countdown
+752308 | deathtouch | Bane
+752311 | in_hand_buff | Spellboost
+752312 | modal_choice | Choose
+752321 | revive | Reanimate
+752323 | lifesteal | Drain
+752317 | stealth | Ambush
+752327 | stacking_keyword | Stack
+752313 | low_life | Vengeance
+752331 | turn_number | played on turn X or later
+752331 | condition_count | each allied evolution lowers X by 1
+752332 | turn_number | later turn threshold
+752333 | tribal | names follower types

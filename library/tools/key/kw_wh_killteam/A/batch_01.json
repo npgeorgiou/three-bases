@@ -1,0 +1,122 @@
+{
+"788771": [
+[
+"lifesteal",
+"For each attack dice you resolve during that step that inflicts damage, that friendly operative regains 1 lost wound"
+],
+[
+"cooldowns",
+"more than once per turning point"
+]
+],
+"788782": [
+[
+"damage_over_time",
+"Whenever an operative that has one of your Poison tokens is activated, inflict 1 damage on it"
+]
+],
+"788783": [
+[
+"stat_gain",
+"add 1 to both Dmg stats of this weapon"
+]
+],
+"788789": [
+[
+"damage_over_time",
+"Whenever an operative that has one of your Blaze tokens is activated, inflict D3 damage on it"
+],
+[
+"random_effect",
+"Roll one D6"
+]
+],
+"788797": [
+[
+"immunity",
+"ignore the Piercing weapon rule"
+],
+[
+"zone_of_control",
+"can move within control range of enemy operatives"
+]
+],
+"788814": [
+[
+"modal_choice",
+"pick which Canticle of the Omnissiah"
+],
+[
+"random_effect",
+"randomly determine which Canticle of the Omnissiah is in effect"
+],
+[
+"turn_start",
+"At the start of each battle round"
+]
+],
+"788830": [
+[
+"summon",
+"you can set up 2 Blue Horrors"
+],
+[
+"death_trigger",
+"taken out of action"
+],
+[
+"transform",
+"replace that model with 1 Pair of Brimstone Horrors model"
+]
+],
+"788843": [
+[
+"random_effect",
+"roll on the table below"
+],
+[
+"stat_gain",
+"+1 to Attacks characteristic"
+]
+],
+"788844": [
+[
+"deckbuilding_effect",
+"cannot be drawn from a Kabal, Wych Cult or Haemonculus Coven"
+]
+],
+"788861": [
+[
+"movement",
+"move across other models as if they were not there"
+],
+[
+"immunity",
+"never suffers falling damage"
+]
+],
+"788862": [
+[
+"saving_throws",
+"4+ invulnerable save"
+]
+],
+"788863": [
+[
+"buff",
+"You may roll 3D6 instead of 2D6"
+]
+],
+"788904": [
+[
+"reactions",
+"may fire Overwatch as if they were also targeted"
+]
+],
+"788906": [
+[
+"play_restriction",
+"Drones cannot be specialists"
+]
+]
+}

@@ -1,0 +1,109 @@
+{
+"795390": [
+[
+"on_play",
+"when the card is revealed"
+]
+],
+"795391": [
+[
+"passive",
+"A continuous effect that applies while the card is on the board"
+]
+],
+"795392": [
+[
+"activated",
+"An effect the player triggers once, on a later turn of their choosing"
+]
+],
+"795393": [
+[
+"turn_end",
+"at the end of each turn"
+]
+],
+"795394": [
+[
+"turn_start",
+"at the start of each turn"
+]
+],
+"795395": [
+[
+"start_of_game",
+"at the start of the game"
+]
+],
+"795396": [
+[
+"death_trigger",
+"when the card is destroyed"
+]
+],
+"795397": [
+[
+"discard",
+"discarded from hand"
+]
+],
+"795398": [
+[
+"quests",
+"A goal written on the card with a progress counter"
+]
+],
+"795399": [
+[
+"movement",
+"The card can be moved once per turn by its player"
+]
+],
+"795400": [],
+"795401": [
+[
+"stat_gain",
+"gains power"
+]
+],
+"795402": [
+[
+"stat_gain",
+"Adds power"
+]
+],
+"795403": [
+[
+"destroy",
+"Removes a card from the board"
+]
+],
+"795404": [
+[
+"discard",
+"Removes a card from a hand"
+]
+],
+"795405": [
+[
+"movement",
+"A card changes location"
+]
+],
+"795406": [
+[
+"merge_attach",
+"Two cards become one"
+],
+[
+"stat_gain",
+"adding their power"
+]
+],
+"795407": [
+[
+"stat_loss",
+"Lowers the power of cards"
+]
+]
+}

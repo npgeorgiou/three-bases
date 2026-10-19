@@ -1,0 +1,42 @@
+760827 | shield | Shields block damage
+760827 | immunity | prevent new negative status effects
+760828 | immunity | cannot be set on Fire
+760829 | placement_rules | positioned at any terrain tile, except mountains and other units
+760829 | immunity | not affected by lava or A.C.I.D. tiles
+760830 | temporary_buff | +2 Move this turn
+760831 | damage_reduction | Weapon damage to this unit is reduced by 1
+760832 | immunity | unaffected by Smoke
+760834 | debuff | Weapon damage against this unit is doubled
+760834 | silence | Natural Armor is disabled
+760835 | buff | damage is increased by 1 on its next attack
+760835 | heal | repairing while Boosted will heal 2 points
+760836 | damage_over_time | take 1 damage at the start of every turn
+760836 | turn_start | at the start of every turn
+760837 | disable | unable to move or attack
+760837 | shield | Any damage to a frozen unit is negated
+760839 | immobilize | cannot move
+760842 | attack_lock | cannot attack or repair
+760843 | no_damage_output | Weapons do not work when submerged in Water
+760847 | stealth | hide underground
+760847 | on_damaged | after taking one or more damage
+760848 | death_trigger | Explodes on death
+760848 | aoe_damage | dealing 1 damage to adjacent tiles
+760848 | piercing | This damage ignores Armor
+760849 | aura | providing Armor to all Vek
+760849 | damage_reduction | reducing incoming weapon damage by 1
+760850 | immunity | Immune to water
+760851 | damage_over_time | 1 damage all friendly units every turn
+760852 | aura | providing +1 HP to all Vek
+760853 | terrain | walk in Water
+760854 | aura | enhancing all Vek
+760854 | regeneration | regeneration
+760854 | death_trigger | explode on death
+760855 | regeneration | healing all Vek 1 point every turn
+760856 | on_damaged | If damaged
+760856 | shield | Shield itself
+760856 | heal | prepare to heal
+760857 | immunity | Cannot be moved by any weapon effect
+760858 | summon | Spawns two Medium Goos
+760858 | death_trigger | on death
+760860 | immunity | avoids mines
+NOTKW 760846 760850 760859

@@ -239,10 +239,95 @@ def trial(p, newpat, games=None):
         print(f'{gg:18} matches {len(om):5} -> {len(nm):5}  known kept {len(kn):3} right {sum(kn):3} ({100 * sum(kn) / max(len(kn), 1):.0f}%)  '
               f'known dropped {len(dropped_known):3} of them right {lost_right}  new matches {len(nm - om)}')
 
+
+def decisions_raw():
+    out = []
+    for f in sorted(glob.glob(os.path.join(HERE, 'narrow', 'out_*.tsv'))):
+        for line in open(f, encoding='utf-8'):
+            parts = line.rstrip('\n').split('\t')
+            if len(parts) == 3 and parts[0].count('|') >= 3: out.append((parts[0], [g.strip() for g in parts[1].split(',') if g.strip()], parts[2]))
+    return out
+
+def dropsample():
+    """Up to 10 known matches each narrowing drops per game: the known ones count, the rest are sampled (seed 1) as new questions
+    -> judge/dNNN.txt (one reader)."""
+    c, ents, raw, pats = load(DB); ky = keys(); Q = json.load(open(os.path.join(HERE, 'questions.json')))
+    Qs, ans, A, B = answers()
+    have = {(e, k): q for q, (e, k, d) in Q['q'].items()}
+    newq = []
+    for p, games, new in decisions_raw():
+        if new == 'keep': continue
+        k, role, g, pat = p.split('|', 3)
+        try: o, n = re.compile(pat, re.I), re.compile(new, re.I)
+        except re.error: continue
+        for gg in games:
+            kk = ky.get(gg, {})
+            dropped = [i for i, t in ents[gg] if o.search(t) and not n.search(t)]
+            known = [i for i in dropped if i in kk or ans.get(have.get((i, k))) is not None]
+            rest = sorted(i for i in dropped if i not in kk and (i, k) not in have)
+            need = max(0, 10 - len(known))
+            for e in (rest if len(rest) <= need else random.Random(1).sample(rest, need)):
+                qid = str(len(Q['q'])); Q['q'][qid] = [e, k, False]; have[(e, k)] = qid; newq.append(qid)
+            Q['pairs'][f'DROP {p}@{gg}'] = [have[(i, k)] for i in dropped if (i, k) in have]
+    json.dump(Q, open(os.path.join(HERE, 'questions.json'), 'w'))
+    newq.sort(key=lambda q: (raw[Q['q'][q][0]][0], Q['q'][q][1]))
+    for b in range(0, len(newq), 80):
+        part = newq[b:b + 80]; ks = sorted({Q['q'][q][1] for q in part})
+        with open(os.path.join(HERE, 'judge', f'd{b // 80:03d}.txt'), 'w') as fh:
+            fh.write('# definitions\n')
+            for k in ks: fh.write(f"{k} | {TREE[k]['name']} | {TREE[k]['counts']} | Not: {TREE[k]['no']}\n")
+            fh.write('# questions: qid | concept | game | name | text\n')
+            for q in part:
+                e, k, d = Q['q'][q]; g, nm, t = raw[e]; tt = t.replace(chr(10), ' / '); tt = tt if len(tt) <= 700 else tt[:700] + ' ...'
+                fh.write(f"{q} | {k} | {g} | {nm} | {tt}\n")
+    print('dropped-match questions', len(newq), 'batches', (len(newq) + 79) // 80)
+
+def accept():
+    """Narrowings whose known dropped matches are 90%+ wrong in a game -> decisions.tsv; matches the patterns still cannot tell
+    apart -> to_read/<game>.txt (Step 5)."""
+    c, ents, raw, pats = load(DB); ky = keys(); Q, ans, A, B = answers()
+    have = {(e, k): q for q, (e, k, d) in Q['q'].items()}
+    lines = ['# Step 3 decisions (patterns3.py accept): narrow <pattern> <games> <new regex>']; toread = collections.defaultdict(set); log = []
+    for p, games, new in decisions_raw():
+        k, role, g, pat = p.split('|', 3); o = re.compile(pat, re.I)
+        okg = []
+        for gg in games:
+            kk = ky.get(gg, {})
+            if new == 'keep':
+                for i, t in ents[gg]:
+                    if o.search(t) and i not in kk: toread[gg].add((i, k))
+                log.append((p, gg, 'keep')); continue
+            n = re.compile(new, re.I)
+            dropped = [i for i, t in ents[gg] if o.search(t) and not n.search(t)]
+            lab = [right(k, kk[i]) if i in kk else ans.get(have.get((i, k))) for i in dropped]
+            lab = [x for x in lab if x is not None]
+            wrong_share = (len(lab) - sum(lab)) / len(lab) if lab else 1.0
+            kept = [i for i, t in ents[gg] if n.search(t) and i in kk]; kr = sum(right(k, kk[i]) for i in kept)
+            if wrong_share >= 0.9: okg.append(gg); verdict = 'narrowed'
+            else:
+                verdict = 'rejected'
+                for i, t in ents[gg]:
+                    if o.search(t) and i not in kk: toread[gg].add((i, k))
+            if verdict == 'narrowed' and kept and kr / len(kept) < 0.9:
+                for i, t in ents[gg]:
+                    if n.search(t) and i not in kk: toread[gg].add((i, k))
+            log.append((p, gg, f'{verdict} dropped {len(dropped)} known {len(lab)} wrong {100 * wrong_share:.0f}% key kept {kr}/{len(kept)}'))
+        if okg: lines.append('\t'.join(['narrow', p, ','.join(okg), new]))
+    open(os.path.join(HERE, 'decisions.tsv'), 'w').write('\n'.join(lines) + '\n')
+    os.makedirs(os.path.join(HERE, 'to_read'), exist_ok=True)
+    for gg, xs in toread.items():
+        with open(os.path.join(HERE, 'to_read', f'{gg}.txt'), 'w') as fh:
+            for i, k in sorted(xs): fh.write(f'{i}\t{k}\n')
+    with open(os.path.join(HERE, 'accept_log.tsv'), 'w') as fh:
+        for r in log: fh.write('\t'.join(r) + '\n')
+    print('decisions', len(lines) - 1, collections.Counter(r[2].split()[0] for r in log), 'to-read', sum(len(v) for v in toread.values()))
+
 if __name__ == '__main__':
     cmd, *a = sys.argv[1:]
     if cmd == 'eval': evaluate(a[0] if a else DB)
     elif cmd == 'sample': sample(DB, int(a[0]) if a else 50)
     elif cmd == 'results': results()
     elif cmd == 'pack': pack()
+    elif cmd == 'dropsample': dropsample()
+    elif cmd == 'accept': accept()
     elif cmd == 'try': trial(a[0], a[1], a[2].split(',') if len(a) > 2 else None)

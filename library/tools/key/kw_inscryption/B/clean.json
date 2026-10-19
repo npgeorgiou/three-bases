@@ -1,0 +1,969 @@
+{
+"740612": [
+[
+"evasion",
+"strike an opponent directly, even if there is a creature opposing it"
+]
+],
+"740613": [
+[
+"random_ability",
+"this sigil is replaced with another sigil at random"
+]
+],
+"740614": [
+[
+"enemy_benefit",
+"The creature opposing a card bearing this sigil gains 1 Power"
+]
+],
+"740615": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"generate_cards",
+"an Ant is created in your hand"
+]
+],
+"740616": [
+[
+"shield",
+"prevent that damage"
+]
+],
+"740617": [
+[
+"link_formation",
+"within a circuit"
+],
+[
+"aura",
+"gain 1 Power"
+]
+],
+"740618": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"resource_gain",
+"it provides an Energy Cell to its owner"
+]
+],
+"740619": [
+[
+"on_damaged",
+"Once a card bearing this sigil is struck"
+],
+[
+"generate_cards",
+"a Bee is created in your hand"
+]
+],
+"740620": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"summon",
+"a Chime is created on each empty adjacent space"
+]
+],
+"740621": [
+[
+"multi_target_attack",
+"strike each opposing space to the left and right"
+]
+],
+"740622": [
+[
+"on_kill",
+"kills an opposing card"
+],
+[
+"stat_gain",
+"will gain 1 Power"
+],
+[
+"temporary_effect",
+"This power is removed after a battle ends"
+]
+],
+"740623": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"merge_attach",
+"gain the Detonator sigil"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+]
+],
+"740624": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"summon",
+"fill all empty spaces with Explode Bots"
+]
+],
+"740625": [
+[
+"random_effect",
+"random whole number from 1 to 6"
+],
+[
+"activated",
+"when activated for 1 Bone"
+]
+],
+"740626": [
+[
+"turn_end",
+"At the end of the owner's turn"
+],
+[
+"resource_gain",
+"will generate 1 bone"
+]
+],
+"740627": [
+[
+"death_trigger",
+"When a card bearing this sigil dies"
+],
+[
+"resource_gain",
+"4 Bones are awarded instead of 1"
+]
+],
+"740628": [
+[
+"activated",
+"Activate: Pay 1 Energy"
+],
+[
+"resource_conversion",
+"Pay 1 Energy to gain 3 Bones"
+]
+],
+"740629": [
+[
+"on_attack",
+"After attacking"
+],
+[
+"self_destruct",
+"a card bearing this sigil perishes"
+]
+],
+"740630": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"merge_attach",
+"gain the Brittle sigil"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+]
+],
+"740631": [
+[
+"on_play",
+"When a card bearing this Sigil is played"
+],
+[
+"board_clog",
+"an Egg is created on the opposing space"
+]
+],
+"740632": [
+[
+"stat_gain",
+"it gains 2 Power"
+],
+[
+"link_formation",
+"within a circuit"
+]
+],
+"740633": [
+[
+"bodyguard",
+"will move to that space to receive the strike instead"
+]
+],
+"740634": [
+[
+"movement",
+"will move towards them as far as possible"
+],
+[
+"on_ally_play",
+"When one of your creatures is placed in a space"
+]
+],
+"740635": [
+[
+"free_play",
+"automatically played in the place of the first of the player's cards to perish"
+]
+],
+"740636": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"summon",
+"a Dam is created on each empty adjacent space"
+]
+],
+"740637": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"direct_damage",
+"Place damage on the scales"
+]
+],
+"740638": [
+[
+"death_trigger",
+"When a Card bearing this Sigil dies"
+],
+[
+"aoe_damage",
+"all adjacent cards"
+],
+[
+"adjacency",
+"those to the left, right and front of the card"
+]
+],
+"740639": [
+[
+"activated",
+"Activate: Pay 1 Bone"
+],
+[
+"generate_cards",
+"create a Skeleton in your hand"
+]
+],
+"740640": [
+[
+"death_trigger",
+"When another creature you own dies"
+],
+[
+"repeat_trigger",
+"dies again immediately"
+]
+],
+"740641": [
+[
+"multi_attack",
+"strike the opposing space an extra time"
+]
+],
+"740642": [
+[
+"link_formation",
+"part of a completed circuit"
+],
+[
+"resource_gain",
+"your Energy never depletes"
+]
+],
+"740643": [
+[
+"activated",
+"Activate: Pay 1 Energy"
+],
+[
+"damage",
+"deal 1 damage to the creature across"
+]
+],
+"740644": [
+[
+"activated",
+"Activate: Pay 2 Bones"
+],
+[
+"stat_gain",
+"increase the Power and Health of a card bearing this sigil by 1"
+]
+],
+"740645": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"copy",
+"a copy of it is created in your hand"
+]
+],
+"740646": [
+[
+"transform",
+"transforms a card into a Hydra"
+],
+[
+"deck_condition",
+"represented in the Health of creatures in your deck"
+],
+[
+"variety_payoff",
+"a creature of each tribe in your deck"
+]
+],
+"740647": [
+[
+"transform",
+"grow into a more powerful form"
+],
+[
+"delayed",
+"after 1 turn on the board"
+]
+],
+"740648": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"summon",
+"the creature inside is released in its place"
+]
+],
+"740649": [
+[
+"aura",
+"Mox cards on the owner's side of the board gain 1 Power"
+]
+],
+"740650": [
+[
+"self_destruct",
+"a card bearing this sigil perishes"
+]
+],
+"740651": [
+[
+"death_trigger",
+"When Gem Vessels on the owner's side of the board die"
+],
+[
+"aoe_damage",
+"are dealt 10 damage"
+],
+[
+"friendly_fire",
+"adjacent friendly creatures"
+]
+],
+"740652": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"protection",
+"all Gem Vessels on the owners' side of the board gain Nano Armor"
+]
+],
+"740653": [
+[
+"summon",
+"spawn Gem Vessels at the end of the owner's turn"
+],
+[
+"turn_end",
+"at the end of the owner's turn"
+],
+[
+"link_formation",
+"within a circuit"
+]
+],
+"740654": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"generate_cards",
+"a random card is created in your hand"
+],
+[
+"random_effect",
+"a random card"
+]
+],
+"740655": [
+[
+"death_trigger",
+"when it perishes"
+],
+[
+"generate_cards",
+"a random card is created in your hand"
+],
+[
+"link_formation",
+"within a circuit"
+],
+[
+"random_effect",
+"a random card"
+]
+],
+"740656": [
+[
+"on_enemy_enter",
+"When an opposing creature is placed opposite to an empty space"
+],
+[
+"movement",
+"will move to that empty space"
+]
+],
+"740657": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"hand_deck_swap",
+"discard your hand then draw a new hand of 4 cards"
+]
+],
+"740658": [
+[
+"heal",
+"are healed at the end of the owners turn"
+],
+[
+"link_formation",
+"within a circuit"
+]
+],
+"740659": [
+[
+"movement",
+"move in the direction inscribed in the sigil"
+],
+[
+"forced_movement",
+"pushing any cards in the way"
+],
+[
+"turn_end",
+"at the end of the owner's turn"
+]
+],
+"740660": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"tutor",
+"search your deck for any card"
+]
+],
+"740661": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"permanent_loss",
+"is really deleted from your Hard Drive"
+]
+],
+"740662": [
+[
+"aura",
+"Creatures adjacent to a card bearing this sigil gain 1 Power"
+],
+[
+"adjacency",
+"Creatures adjacent to a card"
+]
+],
+"740663": [
+[
+"summon",
+"a Tail is created in its place"
+],
+[
+"movement",
+"a card bearing this sigil moves to the right"
+]
+],
+"740664": [
+[
+"draw",
+"draw a card for each damage dealt"
+],
+[
+"direct_damage",
+"deals damage directly"
+]
+],
+"740665": [
+[
+"immunity",
+"immune to the effects of Touch of Death and Stinky"
+]
+],
+"740666": [
+[
+"cheat_death",
+"it does not perish"
+]
+],
+"740667": [
+[
+"activated",
+"Activate: Pay 2 Bones"
+],
+[
+"heal",
+"heal a card bearing this sigil"
+]
+],
+"740668": [
+[
+"on_play",
+"When a card bearing the Mental Gemnastics sigil is played"
+],
+[
+"draw",
+"draw cards equal to the number of Mox Cards"
+]
+],
+"740669": [
+[
+"blocking",
+"will block an opposing creature bearing the Airborne sigil"
+]
+],
+"740670": [
+[
+"sacrifice",
+"is sacrificed"
+],
+[
+"stat_gain",
+"adds its stat values to the card it was sacrificed for"
+]
+],
+"740671": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"resource_gain",
+"a (Green, Orange, or Blue) Gem is provided to the owner"
+]
+],
+"740672": [
+[
+"link_formation",
+"complete a circuit"
+]
+],
+"740673": [
+[
+"multi_target_attack",
+"strike each opposing space that is occupied by a creature"
+]
+],
+"740674": [
+[
+"variable_stats",
+"causes a cards Power to equal half the Bones the player carries"
+]
+],
+"740675": [
+[
+"stat_gain",
+"increased power"
+],
+[
+"death_trigger",
+"if a card bearing this sigil perishes"
+],
+[
+"permanent_loss",
+"permanently removed from your deck"
+]
+],
+"740676": [
+[
+"activated",
+"Activate: Pay 1 Energy"
+],
+[
+"random_effect",
+"randomly between 1 and 6"
+]
+],
+"740677": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"generate_cards",
+"a Rabbit is created in your hand"
+]
+],
+"740678": [
+[
+"movement",
+"move in the direction inscribed on the sigil"
+],
+[
+"forced_movement",
+"Creatures in the way will be thrown back"
+],
+[
+"turn_end",
+"At the end of the owner's turn"
+]
+],
+"740679": [
+[
+"immunity",
+"If a creature would attack a card bearing this sigil, it does not"
+]
+],
+"740680": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"summon",
+"a Ruby Mox is created in its place"
+]
+],
+"740681": [
+[
+"resource_gain",
+"opposing creatures also grant Bones upon death"
+]
+],
+"740682": [
+[
+"on_enemy_enter",
+"When a creature moves into the space opposing a card bearing this sigil"
+],
+[
+"damage",
+"they are dealt 1 damage"
+]
+],
+"740683": [
+[
+"counterattack",
+"deal 1 point of damage to an attacker"
+]
+],
+"740684": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"merge_attach",
+"gain the Nano Armor sigil"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+]
+],
+"740686": [
+[
+"turn_end",
+"At the end of the owner's turn"
+],
+[
+"movement",
+"move in the direction inscribed in the sigil"
+],
+[
+"summon",
+"drop a Skeleton in its old space"
+]
+],
+"740687": [
+[
+"target_choice",
+"You may choose which opposing space a card bearing this sigil strikes"
+]
+],
+"740688": [
+[
+"summon",
+"spawn L33pB0ts at the end of the owner's turn"
+],
+[
+"turn_end",
+"at the end of the owner's turn"
+],
+[
+"link_formation",
+"within a circuit"
+]
+],
+"740689": [
+[
+"variable_stats",
+"equal to the number of sacrifices made during your turn"
+]
+],
+"740690": [
+[
+"turn_end",
+"At the end of the owner's turn"
+],
+[
+"movement",
+"move in the direction inscribed in the sigil"
+]
+],
+"740691": [
+[
+"turn_end",
+"At the end of the owner's turn"
+],
+[
+"movement",
+"move in the direction inscribed in the sigil"
+],
+[
+"summon",
+"drop a Squirrel in its old space"
+]
+],
+"740692": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"destroy",
+"the creature opposing it perishes as well"
+],
+[
+"generate_cards",
+"A Pelt is created in your hand"
+]
+],
+"740693": [
+[
+"activated",
+"Activate: Pay 3 Energy"
+],
+[
+"stat_gain",
+"increase the Power and Health of a card bearing this sigil by 1"
+]
+],
+"740694": [
+[
+"stat_loss",
+"loses 1 Power"
+]
+],
+"740695": [
+[
+"on_damaged",
+"After a card bearing this sigil is dealt damage"
+],
+[
+"stat_gain",
+"swap its Power and Health"
+]
+],
+"740696": [
+[
+"turn_start",
+"At the beginning of its owner's turn"
+],
+[
+"forced_movement",
+"pull small creatures, like Squirrels, into its orbit"
+]
+],
+"740697": [
+[
+"deathtouch",
+"that creature perishes"
+]
+],
+"740698": [
+[
+"turn_start",
+"At the beginning of your turn"
+],
+[
+"transform",
+"transform to, or from, Beast mode"
+]
+],
+"740699": [
+[
+"multi_target_attack",
+"strike each opposing space to the left and right"
+]
+],
+"740700": [
+[
+"multi_target_attack",
+"strike each opposing space to the left, right and center of it"
+],
+[
+"link_formation",
+"within a circuit"
+]
+],
+"740701": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"items_consumables",
+"a random item"
+],
+[
+"random_effect",
+"random item"
+]
+],
+"740702": [
+[
+"activated",
+"Activate: If you have a Blue gem"
+],
+[
+"sacrifice",
+"sacrifice a card bearing this sigil"
+],
+[
+"draw",
+"draw 3 cards"
+]
+],
+"740703": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"revive",
+"a copy of it is created in your hand"
+]
+],
+"740704": [
+[
+"on_damaged",
+"Once a card bearing this sigil is struck"
+],
+[
+"draw",
+"draw a card from your Empty Vessel pile"
+],
+[
+"side_deck",
+"Empty Vessel side deck"
+]
+],
+"740705": [
+[
+"stealth",
+"submerged for the enemy's turn"
+]
+],
+"740706": [
+[
+"sacrifice",
+"count as 3 Blood rather than 1 Blood when sacrificed"
+]
+],
+"740707": [
+[
+"tribal",
+"Cards bearing this trait are counted for the Ants Power stat"
+]
+],
+"740708": [
+[
+"immunity",
+"cannot be cut with Scissors"
+]
+],
+"740709": [],
+"740710": [
+[
+"variable_stats",
+"Power equal to the number of ants on their side"
+]
+],
+"740711": [
+[
+"variable_stats",
+"Power equal to the number of cards in player's hand"
+],
+[
+"hand_size",
+"cards in player's hand"
+]
+],
+"740712": [
+[
+"variable_stats",
+"the number of cards giving a Green Mox"
+]
+],
+"740713": [
+[
+"variable_stats",
+"causes a card's attack stat to increase the closer it is to the combat bell"
+]
+],
+"740714": [
+[
+"variable_stats",
+"Power equal to the Power of a card opposing it"
+]
+]
+}

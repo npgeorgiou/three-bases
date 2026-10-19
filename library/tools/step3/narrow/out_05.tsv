@@ -1,0 +1,2 @@
+destroy|does|*|out of action	wh_killteam,wh_underworlds,wh_40k_10e	keep
+turn_end|does|wh_underworlds|\bscore this in (an|the third) end phase\b	wh_underworlds	\bscore this in an end phase\b

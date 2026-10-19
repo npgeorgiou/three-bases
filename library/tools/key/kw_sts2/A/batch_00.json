@@ -1,0 +1,52 @@
+{
+"758397": [
+[
+"immunity",
+"Cannot be removed or transformed"
+]
+],
+"758398": [
+[
+"exhaust",
+"it is Exhausted"
+],
+[
+"turn_end",
+"at the end of this turn"
+]
+],
+"758399": [
+[
+"exhaust",
+"Removed until the end of combat"
+]
+],
+"758400": [
+[
+"combat_start",
+"Start each combat with this card in your Hand"
+]
+],
+"758401": [
+[
+"retain",
+"Retained cards are not discarded at the end of turn"
+]
+],
+"758402": [
+[
+"free_play",
+"play it for free"
+],
+[
+"discard",
+"discarded from your Hand"
+]
+],
+"758403": [
+[
+"play_restriction",
+"Unplayable cards cannot be played"
+]
+]
+}

@@ -1,0 +1,440 @@
+{
+"788670": [
+[
+"targeting_rules",
+"can have other friendly operatives within Engagement Range and still be selected as a valid target"
+],
+[
+"piercing",
+"that ranged weapon has the P1 critical hit rule"
+]
+],
+"788671": [
+[
+"protection",
+"Retain one additional dice as a successful normal save as a result of Cover"
+],
+[
+"immunity",
+"the No Cover special rule has no effect"
+]
+],
+"788672": [
+[
+"play_restriction",
+"cannot move more than 3⬤ in the same activation in which it performs a Shoot action"
+]
+],
+"788673": [
+[
+"cheat_death",
+"would be incapacitated, it gains a Frenzy token instead"
+],
+[
+"stat_loss",
+"Treat its APL characteristic as 1"
+]
+],
+"788674": [
+[
+"saving_throws",
+"roll one D6: on a 5+, that wound is not lost"
+]
+],
+"788676": [],
+"788683": [
+[
+"regeneration",
+"regains up to 2 lost wounds"
+],
+[
+"turn_start",
+"Ready Operatives step of each initiative phase"
+]
+],
+"788684": [
+[
+"condition_life",
+"if it is injured"
+],
+[
+"adjacency",
+"within ⬟ of a friendly HIVE FLEET SYNAPSE operative"
+],
+[
+"immunity",
+"do not worsen the Ballistic Skill and Weapon Skill"
+]
+],
+"788685": [
+[
+"play_restriction",
+"cannot perform mission actions or the Pick Up action"
+],
+[
+"stat_loss",
+"treat this operative's APL as 1 lower"
+],
+[
+"debuff",
+"defence dice cannot be automatically retained as a result of Cover"
+],
+[
+"play_restriction",
+"cannot be equipped with equipment"
+]
+],
+"788686": [
+[
+"bodyguard",
+"make that shooting attack against that friendly DRONE operative instead"
+],
+[
+"temporary_effect",
+"until the end of the Turning Point"
+]
+],
+"788687": [
+[
+"immunity",
+"unaffected by the Splash critical rule"
+],
+[
+"protection",
+"you can re-roll one of your defence dice"
+]
+],
+"788688": [
+[
+"tribal",
+"INTERROGATOR and TOME-SKULL operatives fulfil each other’s Group Activation requirements"
+]
+],
+"788689": [
+[
+"resource_gain",
+"You start the battle with a pool of 10 Elite points"
+],
+[
+"turn_start",
+"In each Strategy phase"
+]
+],
+"788690": [
+[
+"piercing",
+"subtract x from the Defence of the target"
+]
+],
+"788691": [
+[
+"terrain",
+"hidden by a terrain feature from directly above"
+]
+],
+"788692": [
+[
+"random_effect",
+"you can re-roll one of your attack dice"
+]
+],
+"788693": [
+[
+"multi_target_attack",
+"make a shooting attack with this weapon (using the same profile) against each other operative Visible to and within X of the original target"
+],
+[
+"piercing",
+"cannot be in Cover"
+],
+[
+"play_restriction",
+"cannot make a shooting attack with this weapon by performing an Overwatch action"
+]
+],
+"788694": [
+[
+"blocking",
+"your opponent can only parry with critical hits"
+]
+],
+"788695": [
+[
+"random_effect",
+"you can re-roll any or all of your attack dice results of 1"
+]
+],
+"788696": [
+[
+"friendly_fire",
+"that operative suffers 3 mortal wounds"
+]
+],
+"788697": [
+[
+"multi_target_attack",
+"against each other valid target within x of the original target"
+]
+],
+"788698": [
+[
+"targeting_rules",
+"only operatives within x are a valid target"
+]
+],
+"788699": [
+[
+"play_restriction",
+"cannot perform a Charge, Fall Back or Normal Move action in the same activation"
+]
+],
+"788700": [
+[
+"piercing",
+"enemy operatives are not in Cover"
+]
+],
+"788702": [],
+"788703": [
+[
+"exhaust",
+"can only be selected for use once per battle"
+]
+],
+"788704": [
+[
+"damage",
+"inflict x mortal wounds on the target"
+]
+],
+"788705": [
+[
+"piercing",
+"defence dice cannot be automatically retained as a result of Cover"
+]
+],
+"788706": [
+[
+"piercing",
+"the weapon gains the APx rule"
+]
+],
+"788707": [
+[
+"aoe_damage",
+"inflict x mortal wounds on each other enemy operative"
+]
+],
+"788708": [
+[
+"random_effect",
+"re-roll any or all of your attack dice"
+]
+],
+"788709": [],
+"788710": [
+[
+"stealth",
+"While an operative has a Conceal order, it can perform Shoot actions"
+]
+],
+"788711": [
+[
+"aoe_damage",
+"inflict x mortal wounds on the target and each other operative Visible to"
+]
+],
+"788712": [
+[
+"stat_loss",
+"subtract 1 from the target's APL"
+]
+],
+"788713": [
+[
+"play_restriction",
+"It cannot make a shooting attack with this weapon by performing an Overwatch action"
+]
+],
+"788714": [
+[
+"distribute",
+"Distribute your attack dice between the targets you have selected"
+],
+[
+"multi_target_attack",
+"you can select any number of other valid targets"
+]
+],
+"788715": [
+[
+"free_play",
+"use a Strategic Ploy without spending any CPs"
+],
+[
+"cooldowns",
+"Once per Turning Point"
+]
+],
+"788716": [
+[
+"piercing",
+"Invulnerable saves cannot be used"
+],
+[
+"stat_condition",
+"equal to or less than the target's APL"
+]
+],
+"788719": [
+[
+"debuff",
+"the enemy operative gains one of your Terrorchem tokens"
+]
+],
+"788720": [
+[
+"damage_over_time",
+"At the end of each Turning Point, roll one D6 for each Inferno token"
+],
+[
+"turn_end",
+"At the end of each Turning Point"
+]
+],
+"788728": [
+[
+"random_effect",
+"you can re-roll any or all of your attack dice results of one result"
+],
+[
+"stealth",
+"it wasn't Visible to enemy operatives at the start of that activation"
+]
+],
+"788729": [
+[
+"play_restriction",
+"cannot be equipped with equipment"
+],
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"protection",
+"Retain an additional dice as a successful normal save as a result of Cover"
+]
+],
+"788735": [
+[
+"tribal",
+"an operative that has the PSYKER keyword"
+],
+[
+"buff",
+"it has the Lethal 5+ weapon rule"
+]
+],
+"788736": [
+[
+"buff",
+"that weapon has the Accurate 1 weapon rule"
+]
+],
+"788742": [
+[
+"damage_reduction",
+"block two unresolved successes"
+],
+[
+"reveal_order",
+"you resolve the first attack dice"
+]
+],
+"788744": [
+[
+"play_restriction",
+"cannot perform any actions other than Charge, Dash, Fall Back, Fight, Reposition and Shoot"
+],
+[
+"cost_reduction",
+"perform the Fall Back action for 1 less AP"
+]
+],
+"788745": [
+[
+"debuff",
+"cannot use Light terrain for cover"
+],
+[
+"play_restriction",
+"cannot perform unique actions"
+]
+],
+"788749": [
+[
+"assists_support",
+"another friendly HIEROTEK CIRCLE APPRENTEK or HIEROTEK CIRCLE CRYPTEK operative"
+],
+[
+"temporary_buff",
+"this weapon has the Ceaseless weapon rule until the end of that action"
+]
+],
+"788755": [
+[
+"damage",
+"immediately inflicts *x* damage on the operative this weapon is being used against"
+],
+[
+"aoe_damage",
+"inflict *x* damage on that operative and each other operative visible to and within that distance of it"
+]
+],
+"788756": [
+[
+"piercing",
+"The defender collects *x* less defence dice"
+]
+],
+"788757": [
+[
+"targeting_rules",
+"Only operatives within *x* of the active operative can be valid targets"
+]
+],
+"788758": [
+[
+"piercing",
+"The defender cannot retain cover saves"
+]
+],
+"788759": [
+[
+"buff",
+"retain up to *x* attack dice as normal successes without rolling them"
+]
+],
+"788760": [],
+"788761": [
+[
+"exhaust",
+"they no longer have it"
+]
+],
+"788762": [],
+"788763": [
+[
+"piercing",
+"operatives cannot use terrain for cover"
+]
+],
+"788764": [],
+"788765": [
+[
+"damage_prevention",
+"discard one of your opponent's unresolved normal successes"
+]
+]
+}

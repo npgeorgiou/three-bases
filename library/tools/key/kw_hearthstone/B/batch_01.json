@@ -1,0 +1,81 @@
+{
+"742419": [
+[
+"condition_count",
+"Bonus if you have enough mana crystals"
+]
+],
+"742420": [
+[
+"summon",
+"Summons a random minion from your deck"
+],
+[
+"random_effect",
+"random minion from your deck"
+]
+],
+"742421": [
+[
+"heal",
+"healed above maximum Health"
+]
+],
+"742422": [
+[
+"deckbuilding_effect",
+"adding it also adds synergistic uncollectible cards to the deck"
+]
+],
+"742423": [
+[
+"hand_position",
+"both ends of the hand"
+],
+[
+"copy",
+"splits into two halves"
+]
+],
+"742424": [
+[
+"counter_spell",
+"Prevents a played card from taking effect"
+]
+],
+"742425": [
+[
+"condition_life",
+"While damaged, gains an effect"
+]
+],
+"742426": [
+[
+"copy",
+"Also gives an 8-mana 8/8 copy of itself when played"
+]
+],
+"742427": [
+[
+"multi_attack",
+"Can attack four times each turn"
+]
+],
+"742428": [
+[
+"free_play",
+"Automatically cast for free when drawn"
+],
+[
+"draw",
+"when drawn"
+]
+],
+"742429": [
+[
+"generate_cards",
+"1-mana spells with minor benefits"
+]
+],
+"742430": []
+}

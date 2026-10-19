@@ -13,6 +13,7 @@ for l in open(spec):
     if not l or l.startswith('#'): continue
     parts=l.split(';')
     i=parts[0].strip()
+    if i not in ents: continue
     if i=='NOTKW':
         continue
     for t in parts[1:]:
