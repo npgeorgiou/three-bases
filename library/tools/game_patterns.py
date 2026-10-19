@@ -34,7 +34,8 @@ for f in sorted(os.listdir(d)):
     gone = [(con, role, p) for con, role, p in c.execute("select concept, role, pattern from concept_patterns where game=?", (g,)).fetchall() if (con, role, p) not in newset]
     if gone:
         import csv
-        keep = {(int(r['entity']), r['concept']) for r in csv.DictReader(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present'}
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from concept_tree import to_old as _to_old
+        keep = {(int(r['entity']), _to_old(r['concept'])) for r in csv.DictReader(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present'}
         for con, role, p in gone:
             rest = [re.compile(x, re.I) for x, in c.execute("select pattern from concept_patterns where concept=? and role=? and game is null", (con, role))] + [re.compile(x, re.I) for cc, rr, x in rows if cc == con and rr == role]
             bad = re.compile(p, re.I)

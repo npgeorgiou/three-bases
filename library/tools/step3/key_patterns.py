@@ -24,8 +24,8 @@ from concept_tree import primary, REMOVED
 mk = dict(c.execute('SELECT old_id, kept_id FROM merged_entities'))
 absent = collections.defaultdict(set)   # (game, concept) -> entities a hand review says must not have it (regression.tsv)
 for r in csv.DictReader(open(os.path.join(TOOLS, 'regression.tsv'), encoding='utf-8'), delimiter='\t'):
-    if r['expect'] == 'absent' and r['concept'] not in REMOVED:   # the lines name old concepts: their first new id, as regression.py checks
-        absent[r['game'], primary(r['concept'])[0]].add(mk.get(int(r['entity']), int(r['entity'])))
+    if r['expect'] == 'absent':
+        absent[r['game'], r['concept']].add(mk.get(int(r['entity']), int(r['entity'])))
 ent = {i: (g, n, t) for i, g, n, t in c.execute('SELECT id, game, name, text FROM entities')}
 
 def rx(phrase):
@@ -68,7 +68,7 @@ for g in P.GAMES:
         out.append(f'new\t{k}|{role(k)}|{g}|key\t{g}\t{p}')
     print(f'{g:18} key {len(ids):4}  concepts {len(kept):3}  patterns {sum(len(v) for v in kept.values()):4}')
 D = os.path.join(HERE, 'decisions.tsv')
-keep = [l for l in open(D, encoding='utf-8') if not l.startswith('new\t') and not l.startswith('# key_patterns')]
+keep = [l for l in open(D, encoding='utf-8') if not (l.startswith('new\t') and l.split('\t')[1].endswith('|key')) and not l.startswith('# key_patterns')]   # other scripts' new lines stay
 with open(D, 'w', encoding='utf-8') as fh:
     fh.writelines(keep)
     fh.write('# key_patterns.py (patterns from the answer key quotes, 90%+ right on held-out key entries): new <concept|role|game|key> <game> <regex>\n')

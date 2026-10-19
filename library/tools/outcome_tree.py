@@ -68,7 +68,8 @@ comp = {k: [re.compile(p, re.I) for p in v] for k, v in PATS.items()}
 # tags a hand review confirmed are kept even when an older pattern made them (regression set, 'present' lines)
 import csv, os
 kept = dict(q('SELECT old_id, kept_id FROM merged_entities')) if q("SELECT 1 FROM sqlite_master WHERE name='merged_entities'") else {}
-reviewed = {(kept.get(int(r['entity']), int(r['entity'])), r['concept']) for r in csv.DictReader(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present'}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from concept_tree import to_old as _to_old
+reviewed = {(kept.get(int(r['entity']), int(r['entity'])), _to_old(r['concept'])) for r in csv.DictReader(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present'}
 for e, k in q("SELECT entity, concept FROM entity_concepts WHERE method='text_pattern' AND concept IN (%s)" % ','.join('?' * len(PATS)), *PATS):
     if (e, k) not in reviewed: c.execute("DELETE FROM entity_concepts WHERE entity=? AND concept=? AND method='text_pattern'", (e, k))
 n = {k: 0 for k in PATS}; moved = 0; tb = 0

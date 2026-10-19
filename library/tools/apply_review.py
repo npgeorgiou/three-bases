@@ -1,11 +1,17 @@
 """Apply a Claude review file to one game. The file maps an entity id (or, for Marvel Snap, a name) to {add:[concept[:role]], drop:[...]}.
 Each decision also applies to every other entry of the same game and category with the very same text (a potion and a card
-with the same words are different things: a card does not inherit 'items_consumables' from the potion). Usage: apply_review.py <db> <game> <review.json>
+with the same words are different things: a card does not inherit 'items_consumables' from the potion). Usage: apply_review.py <db> <game> <review.json> [old|new]
 An explicit drop removes the concept whatever method added it (the reviewer has read the text)."""
 import json, sqlite3, sys
 db, game, path = sys.argv[1:4]
 c = sqlite3.connect(db); q = lambda s, *a: c.execute(s, a).fetchall()
 rv = json.load(open(path, encoding='utf-8'))
+# the review files are in the tree v3 ids (fixes/f15). Run with 'old' before concept_tree.py apply: each concept is read in the old
+# ids the earlier steps use (stat_gain -> old buff), and the new groups buff/debuff wait for the run with 'new' after the move.
+if sys.argv[4:] == ['old']:
+    import os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from concept_tree import to_old
+    cv = lambda xs: [':'.join([to_old(x.split(':')[0])] + x.split(':')[1:]) for x in xs if to_old(x.split(':')[0])]
+    rv = {k: dict(v, add=cv(v.get('add', [])), drop=cv(v.get('drop', []))) for k, v in rv.items() if isinstance(v, dict)}
 bytext = {}
 for i, t, k in q("select id,text,category from entities where game=? and text is not null", game): bytext.setdefault((t, k), []).append(i)
 text = {i: (t, k) for i, t, k in q("select id,text,category from entities where game=?", game)}

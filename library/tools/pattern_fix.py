@@ -44,10 +44,10 @@ from concept_tree import primary
 mk = dict(q('SELECT old_id, kept_id FROM merged_entities'))
 for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t'):
     if r['expect'] == 'present':
-        for k in primary(r['concept']): known[k].add(mk.get(int(r['entity']), int(r['entity'])))
+        for k in [r['concept']]: known[k].add(mk.get(int(r['entity']), int(r['entity'])))
 from concept_tree import REMOVED
-dropped = {(mk.get(int(r['entity']), int(r['entity'])), primary(r['concept'])[0]) for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'absent' and r['concept'] not in REMOVED}
-reviewed = {(mk.get(int(r['entity']), int(r['entity'])), x) for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present' for x in primary(r['concept'])}
+dropped = {(mk.get(int(r['entity']), int(r['entity'])), r['concept']) for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'absent'}
+reviewed = {(mk.get(int(r['entity']), int(r['entity'])), x) for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present' for x in [r['concept']]}
 ents = collections.defaultdict(list)
 for i, g, n, t in q('SELECT id, game, name, text FROM entities'): ents[g].append((i, P.norm_text(g, n, t)))
 games_all = [g for g, in q('SELECT id FROM games')]

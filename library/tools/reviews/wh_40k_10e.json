@@ -1,2229 +1,2284 @@
 {
-"784557": {
-"add": [
-"tribal",
-"piercing"
-],
-"drop": []
-},
-"784562": {
-"add": [
-"aoe_damage",
-"random_effect"
-],
-"drop": [
-"condition_count"
-]
-},
-"784553": {
-"add": [
-"damage"
-],
-"drop": []
-},
-"784552": {
-"add": [],
-"drop": [
-"support",
-"destroy"
-]
-},
-"784566": {
-"add": [
-"advantage"
-],
-"drop": [
-"random_effect"
-]
-},
-"784560": {
-"add": [
-"piercing"
-],
-"drop": []
-},
-"784550": {
-"add": [],
-"drop": [
-"zone_of_control"
-]
-},
-"784570": {
-"add": [],
-"drop": [
-"symmetric_effect"
-]
-},
-"784574": {
-"add": [
-"damage_reduction",
-"stealth"
-],
-"drop": [
-"protection"
-]
-},
-"784558": {
-"add": [
-"advantage"
-],
-"drop": [
-"random_effect"
-]
-},
-"784569": {
-"add": [
-"advantage"
-],
-"drop": [
-"damage"
-]
-},
-"784556": {
-"add": [
-"advantage"
-],
-"drop": [
-"random_effect"
-]
-},
-"784290": {
-"add": [],
-"drop": [
-"activated",
-"bodyguard"
-]
-},
-"784392": {
-"add": [],
-"drop": [
-"movement",
-"terrain"
-]
-},
-"784385": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"784300": {
-"add": [
-"reserve_bench"
-],
-"drop": []
-},
-"784561": {
-"add": [],
-"drop": [
-"damage"
-]
-},
-"786634": {
-"add": [],
-"drop": [
-"drawback"
-]
-},
-"784576": {
-"add": [],
-"drop": [
-"merge_attach"
-]
-},
-"786949": {
-"add": [
-"drawback"
-],
-"drop": [
-"destroy"
-]
-},
-"786888": {
-"add": [
-"drawback"
-],
-"drop": [
-"destroy"
-]
-},
-"786604": {
-"add": [],
-"drop": [
-"stealth"
-]
-},
-"785244": {
-"add": [
-"heal"
-],
-"drop": []
-},
-"785871": {
-"add": [],
-"drop": [
-"graveyard"
-]
-},
-"784863": {
-"add": [],
-"drop": [
-"damage"
-]
-},
-"785112": {
-"add": [
-"drawback"
-],
-"drop": [
-"advantage",
-"piercing"
-]
-},
-"785114": {
-"add": [
-"drawback"
-],
-"drop": [
-"advantage",
-"piercing"
-]
-},
-"785116": {
-"add": [
-"drawback"
-],
-"drop": [
-"advantage",
-"piercing:benefits"
-]
-},
-"787018": {
-"add": [],
-"drop": [
-"piercing"
-]
-},
-"786009": {
-"add": [
-"drawback"
-],
-"drop": [
-"zone_of_control"
-]
-},
-"786952": {
-"add": [
-"drawback"
-],
-"drop": [
-"mark_target",
-"zone_of_control"
-]
-},
-"786676": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"785454": {
-"add": [],
-"drop": [
-"damage_reduction",
-"ranged:counters"
-]
-},
-"784573": {
-"add": [],
-"drop": [
-"destroy"
-]
-},
-"786182": {
-"add": [
-"start_of_game",
-"placement_rules"
-],
-"drop": []
-},
-"786840": {
-"add": [
-"random_effect:benefits"
-],
-"drop": [
-"stress_morale"
-]
-},
-"785920": {
-"add": [
-"attack_mod"
-],
-"drop": []
-},
-"786047": {
-"add": [
-"attack_mod"
-],
-"drop": []
-},
-"786252": {
-"add": [
-"buff"
-],
-"drop": [
-"advantage"
-]
-},
-"785096": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"785081": {
-"add": [
-"attack_mod"
-],
-"drop": []
-},
-"786931": {
-"add": [
-"self_destruct"
-],
-"drop": []
-},
-"786384": {
-"add": [
-"aura"
-],
-"drop": []
-},
-"785085": {
-"add": [],
-"drop": [
-"turn_start",
-"zone_of_control"
-]
-},
-"786597": {
-"add": [],
-"drop": [
-"terrain"
-]
-},
-"786398": {
-"add": [
-"debuff"
-],
-"drop": [
-"delayed",
-"passive"
-]
-},
-"815318": {
-"add": [
-"type_grant"
-],
-"drop": []
-},
-"815335": {
-"add": [
-"type_grant"
-],
-"drop": []
-},
-"815380": {
-"add": [
-"spawn_blocking"
-],
-"drop": []
-},
-"815306": {
-"add": [
-"deckbuilding_effect",
-"type_grant"
-],
-"drop": []
-},
-"815405": {
-"add": [
-"type_grant"
-],
-"drop": []
-},
-"815406": {
-"add": [
-"attack_mod"
-],
-"drop": []
-},
-"815469": {
-"add": [
-"type_grant"
-],
-"drop": []
-},
-"784908": {
-"add": [
-"zone_of_control",
-"condition",
-"reserve_bench",
-"turn_end"
-],
-"drop": []
-},
-"787236": {
-"add": [
-"attack_mod",
-"aoe_damage",
-"condition_life",
-"damage_reduction",
-"death_trigger",
-"drawback",
-"movement",
-"multi_attack",
-"passive",
-"piercing",
-"ranged",
-"temporary_effect",
-"terrain",
-"zone_control"
-],
-"drop": [
-"advantage",
-"on_attack",
-"tribal",
-"zone_of_control"
-]
-},
-"788387": {
-"add": [
-"aura",
-"condition_life",
-"merge_attach",
-"stress_morale",
-"turn_start"
-],
-"drop": [
-"cooldowns",
-"ranged"
-]
-},
-"788198": {
-"add": [
-"attack_mod",
-"damage",
-"aoe_damage",
-"condition_count",
-"condition_life",
-"death_trigger",
-"drawback",
-"movement",
-"multi_attack",
-"passive",
-"piercing",
-"placement_rules:benefits",
-"random_effect",
-"ranged",
-"reserve_bench",
-"reserve_bench:benefits",
-"tribal"
-],
-"drop": [
-"on_attack"
-]
-},
-"788039": {
-"add": [
-"buff",
-"advantage",
-"bodyguard:counters",
-"damage",
-"merge_attach",
-"merge_attach:benefits",
-"passive",
-"piercing",
-"placement_rules",
-"reserve_bench",
-"saving_throws:counters",
-"target_choice",
-"terrain:counters",
-"tribal"
-],
-"drop": [
-"on_attack",
-"spell_power:benefits"
-]
-},
-"784563": {
-"add": [
-"bodyguard:counters",
-"target_choice"
-],
-"drop": [
-"piercing",
-"merge_attach:does"
-]
-},
-"785565": {
-"add": [
-"immunity",
-"ranged:counters",
-"stealth"
-],
-"drop": [
-"damage_reduction"
-]
-},
-"788026": {
-"add": [
-"on_play",
-"temporary_buff",
-"advantage",
-"drawback",
-"merge_attach",
-"merge_attach:benefits",
-"movement",
-"multi_attack",
-"piercing",
-"placement_rules",
-"ranged",
-"reserve_bench"
-],
-"drop": [
-"damage",
-"on_attack",
-"temporary_effect"
-]
-},
-"786721": {
-"add": [
-"attack_mod",
-"damage",
-"random_effect",
-"stress_morale",
-"temporary_effect"
-],
-"drop": [
-"debuff"
-]
-},
-"787575": {
-"add": [
-"damage_reduction",
-"immunity",
-"random_effect",
-"regeneration",
-"turn_start"
-],
-"drop": [
-"stealth"
-]
-},
-"786209": {
-"add": [
-"advantage"
-],
-"drop": [
-"on_attack"
-]
-},
-"788142": {
-"add": [
-"mark_target",
-"attack_mod",
-"tribal",
-"aoe_damage",
-"death_trigger",
-"placement_rules",
-"ranged",
-"reserve_bench",
-"temporary_effect"
-],
-"drop": [
-"buff",
-"multi_attack:benefits",
-"random_effect",
-"terrain",
-"turn_start"
-]
-},
-"784397": {
-"add": [
-"attack_mod",
-"ranged"
-],
-"drop": [
-"buff"
-]
-},
-"788577": {
-"add": [
-"condition",
-"advantage",
-"death_trigger",
-"passive",
-"piercing",
-"saving_throws:counters"
-],
-"drop": [
-"aoe_damage",
-"tribal"
-]
-},
-"788337": {
-"add": [
-"damage_reduction",
-"advantage",
-"aoe_damage",
-"condition",
-"death_trigger",
-"multi_attack",
-"ranged",
-"terrain",
-"terrain:counters"
-],
-"drop": [
-"buff"
-]
-},
-"787394": {
-"add": [
-"attack_mod",
-"temporary_buff",
-"advantage",
-"damage_reduction",
-"drawback",
-"merge_attach",
-"movement",
-"multi_attack",
-"once_per_game",
-"passive",
-"piercing",
-"ranged",
-"saving_throws:counters"
-],
-"drop": [
-"on_attack",
-"damage",
-"spell_power:benefits",
-"temporary_effect"
-]
-},
-"788033": {
-"add": [
-"cheat_death",
-"on_attack",
-"damage",
-"merge_attach",
-"passive",
-"placement_rules",
-"random_effect",
-"reserve_bench"
-],
-"drop": [
-"turn_end",
-"zone_of_control",
-"spell_power:benefits"
-]
-},
-"788054": {
-"add": [
-"aoe_damage",
-"death_trigger",
-"movement",
-"placement_rules",
-"random_effect",
-"ranged",
-"reserve_bench"
-],
-"drop": [
-"spell_power:benefits"
-]
-},
-"787757": {
-"add": [
-"aoe_damage",
-"damage_reduction",
-"death_trigger",
-"merge_attach",
-"piercing",
-"piercing:grants",
-"random_effect",
-"ranged",
-"ranged:counters",
-"stealth",
-"terrain",
-"terrain:counters"
-],
-"drop": [
-"on_attack",
-"temporary_buff",
-"turn_start",
-"type_grant",
-"movement"
-]
-},
-"786585": {
-"add": [
-"on_kill",
-"summon",
-"piercing:grants",
-"piercing"
-],
-"drop": [
-"on_attack",
-"damage"
-]
-},
-"785622": {
-"add": [
-"attack_mod",
-"aura",
-"tribal",
-"passive"
-],
-"drop": [
-"buff"
-]
-},
-"787864": {
-"add": [
-"aoe_damage",
-"death_trigger",
-"movement",
-"random_effect"
-],
-"drop": [
-"ranged"
-]
-},
-"788196": {
-"add": [
-"stat_set",
-"damage",
-"items_consumables",
-"merge_attach",
-"piercing",
-"ranged",
-"saving_throws:counters"
-],
-"drop": [
-"movement"
-]
-},
-"785430": {
-"add": [
-"reactions:counters",
-"ranged"
-],
-"drop": []
-},
-"787327": {
-"add": [
-"attack_mod",
-"aura",
-"damage_reduction",
-"piercing",
-"placement_rules",
-"reserve_bench",
-"temporary_effect"
-],
-"drop": [
-"advantage",
-"territory_trigger",
-"zone_of_control",
-"debuff"
-]
-},
-"784753": {
-"add": [
-"stat_set",
-"type_grant",
-"merge_attach",
-"movement",
-"placement_rules",
-"reserve_bench"
-],
-"drop": []
-},
-"788610": {
-"add": [
-"attack_mod",
-"merge_attach",
-"passive",
-"stress_morale",
-"temporary_effect"
-],
-"drop": [
-"debuff",
-"spell_power:benefits"
-]
-},
-"785902": {
-"add": [
-"temporary_buff",
-"buff",
-"once_per_game",
-"turn_start"
-],
-"drop": [
-"temporary_effect"
-]
-},
-"784371": {
-"add": [
-"attack_mod",
-"mark_target",
-"temporary_buff",
-"turn_start"
-],
-"drop": [
-"buff",
-"temporary_effect"
-]
-},
-"784384": {
-"add": [
-"advantage"
-],
-"drop": [
-"on_attack"
-]
-},
-"787567": {
-"add": [
-"cost_set",
-"damage",
-"damage_reduction",
-"piercing",
-"placement_rules",
-"ranged",
-"ranged:counters",
-"stealth",
-"terrain:counters"
-],
-"drop": [
-"cooldowns",
-"once_per_game",
-"advantage",
-"condition",
-"territory_trigger"
-]
-},
-"784311": {
-"add": [
-"movement:grants",
-"piercing",
-"ranged",
-"zone_control"
-],
-"drop": [
-"buff"
-]
-},
-"815493": {
-"add": [
-"mark_target",
-"buff",
-"movement",
-"temporary_effect"
-],
-"drop": []
-},
-"788527": {
-"add": [
-"advantage",
-"drawback",
-"merge_attach",
-"merge_attach:benefits",
-"movement",
-"piercing",
-"saving_throws:counters",
-"tribal"
-],
-"drop": [
-"on_attack",
-"damage"
-]
-},
-"787718": {
-"add": [
-"damage_reduction",
-"merge_attach",
-"movement",
-"passive",
-"random_effect",
-"start_of_game"
-],
-"drop": [
-"spell_power:benefits",
-"turn_start"
-]
-},
-"786435": {
-"add": [
-"cheat_death",
-"random_effect"
-],
-"drop": [
-"turn_end",
-"zone_of_control"
-]
-},
-"787882": {
-"add": [
-"attack_mod",
-"aoe_damage",
-"death_trigger",
-"multi_attack",
-"ranged"
-],
-"drop": [
-"advantage",
-"zone_of_control"
-]
-},
-"787169": {
-"add": [
-"targeting_rules",
-"advantage",
-"bodyguard:counters",
-"condition",
-"damage",
-"damage_reduction",
-"merge_attach",
-"merge_attach:benefits",
-"movement",
-"passive",
-"piercing",
-"placement_rules",
-"ranged",
-"ranged:counters",
-"saving_throws:counters",
-"stealth",
-"target_choice"
-],
-"drop": [
-"territory_trigger",
-"death_trigger"
-]
-},
-"785453": {
-"add": [
-"merge_attach",
-"passive"
-],
-"drop": [
-"advantage"
-]
-},
-"786046": {
-"add": [
-"cheat_death",
-"random_effect",
-"stress_morale"
-],
-"drop": [
-"turn_end",
-"zone_of_control"
-]
-},
-"785443": {
-"add": [
-"damage_over_time",
-"once_per_game",
-"random_effect",
-"ranged",
-"turn_start"
-],
-"drop": [
-"condition_count"
-]
-},
-"787679": {
-"add": [
-"temporary_buff",
-"advantage",
-"buff",
-"damage",
-"damage_reduction",
-"immunity",
-"on_attack",
-"once_per_game",
-"piercing",
-"stealth"
-],
-"drop": [
-"temporary_effect",
-"turn_start"
-]
-},
-"785373": {
-"add": [
-"buff",
-"damage",
-"random_effect"
-],
-"drop": [
-"zone_of_control"
-]
-},
-"786655": {
-"add": [
-"reactions",
-"movement",
-"random_effect",
-"ranged"
-],
-"drop": [
-"passive",
-"zone_of_control"
-]
-},
-"785749": {
-"add": [
-"damage_reduction",
-"immunity",
-"placement_rules",
-"ranged:counters",
-"stealth"
-],
-"drop": [
-"territory_trigger"
-]
-},
-"784368": {
-"add": [
-"modal_choice",
-"temporary_buff",
-"buff"
-],
-"drop": [
-"run_structure",
-"stances:benefits",
-"piercing:benefits",
-"temporary_effect",
-"turn_start"
-]
-},
-"786403": {
-"add": [
-"attack_mod"
-],
-"drop": [
-"buff"
-]
-},
-"788345": {
-"add": [
-"temporary_buff",
-"aoe_damage",
-"damage_reduction",
-"death_trigger",
-"movement",
-"piercing"
-],
-"drop": [
-"advantage",
-"tribal",
-"temporary_effect"
-]
-},
-"815331": {
-"add": [
-"copy",
-"temporary_buff",
-"turn_start",
-"type_grant"
-],
-"drop": []
-},
-"787184": {
-"add": [
-"damage_reduction",
-"movement",
-"multi_attack",
-"passive",
-"placement_rules",
-"ranged",
-"ranged:counters",
-"start_of_game",
-"stealth"
-],
-"drop": [
-"turn_start",
-"territory_trigger",
-"advantage"
-]
-},
-"815367": {
-"add": [
-"resource_gain",
-"on_kill"
-],
-"drop": [
-"destroy",
-"destroy:benefits",
-"resource_banking"
-]
-},
-"787537": {
-"add": [
-"attack_mod",
-"aoe_damage",
-"bodyguard:counters",
-"condition_life",
-"death_trigger",
-"merge_attach",
-"merge_attach:benefits",
-"movement",
-"multi_attack",
-"piercing",
-"ranged",
-"target_choice",
-"terrain",
-"terrain:counters"
-],
-"drop": [
-"on_attack",
-"zone_of_control",
-"advantage"
-]
-},
-"784743": {
-"add": [
-"coin_economy",
-"activated",
-"ranged",
-"terrain",
-"terrain:counters"
-],
-"drop": [
-"passive",
-"resource_banking",
-"upgrade"
-]
-},
-"785190": {
-"add": [
-"game_end_trigger",
-"passive",
-"stress_morale"
-],
-"drop": [
-"turn_end",
-"turn_start",
-"zone_of_control"
-]
-},
-"787484": {
-"add": [
-"aoe_damage",
-"aura",
-"damage_reduction",
-"death_trigger",
-"movement",
-"piercing",
-"ranged",
-"terrain:counters"
-],
-"drop": [
-"advantage",
-"tribal"
-]
-},
-"787873": {
-"add": [
-"aoe_damage",
-"damage_reduction",
-"death_trigger",
-"ranged"
-],
-"drop": [
-"multi_attack",
-"random_effect",
-"piercing"
-]
-},
-"788438": {
-"add": [
-"aoe_damage",
-"damage_reduction",
-"death_trigger",
-"movement",
-"random_effect",
-"ranged",
-"start_of_game",
-"temporary_effect",
-"terrain",
-"terrain:counters"
-],
-"drop": [
-"turn_start",
-"passive"
-]
-},
-"785785": {
-"add": [
-"reactions:counters"
-],
-"drop": [
-"ranged"
-]
-},
-"787952": {
-"add": [
-"condition_count",
-"damage",
-"merge_attach",
-"passive",
-"piercing",
-"random_effect",
-"saving_throws:counters"
-],
-"drop": [
-"movement",
-"ranged",
-"zone_of_control",
-"tribal",
-"turn_start"
-]
-},
-"785974": {
-"add": [
-"attack_mod"
-],
-"drop": [
-"buff"
-]
-},
-"787821": {
-"add": [
-"damage_reduction"
-],
-"drop": [
-"random_effect",
-"terrain"
-]
-},
-"786893": {
-"add": [
-"turn_number",
-"reserve_bench"
-],
-"drop": []
-},
-"815471": {
-"add": [
-"silence"
-],
-"drop": [
-"movement",
-"placement_rules",
-"reserve_bench",
-"territory_trigger"
-]
-},
-"788313": {
-"add": [
-"targeting_rules",
-"aoe_damage",
-"death_trigger",
-"multi_attack",
-"piercing",
-"ranged",
-"saving_throws:counters"
-],
-"drop": [
-"lone_unit",
-"on_attack",
-"buff",
-"advantage",
-"zone_of_control"
-]
-},
-"787652": {
-"add": [
-"reactions",
-"condition",
-"damage",
-"damage_reduction",
-"movement",
-"multi_attack",
-"passive",
-"piercing",
-"ranged",
-"start_of_game",
-"terrain:counters"
-],
-"drop": [
-"turn_start",
-"cooldowns",
-"advantage",
-"zone_of_control"
-]
-},
-"785219": {
-"add": [
-"movement",
-"temporary_effect"
-],
-"drop": [
-"zone_of_control",
-"spell_power:benefits"
-]
-},
-"787312": {
-"add": [
-"damage_reduction",
-"merge_attach",
-"passive",
-"placement_rules",
-"ranged",
-"reserve_bench",
-"stress_morale"
-],
-"drop": [
-"advantage",
-"spell_power:benefits"
-]
-},
-"788532": {
-"add": [
-"damage_reduction",
-"merge_attach",
-"passive",
-"placement_rules",
-"ranged:counters",
-"stealth"
-],
-"drop": [
-"deckbuilding_effect",
-"upgrade",
-"territory_trigger"
-]
-},
-"788382": {
-"add": [
-"advantage",
-"condition_life",
-"damage",
-"damage_reduction",
-"merge_attach",
-"passive",
-"piercing",
-"ranged",
-"saving_throws:counters"
-],
-"drop": [
-"on_attack"
-]
-},
-"816461": {
-"add": [
-"aoe_damage",
-"bodyguard:counters",
-"condition",
-"damage_reduction",
-"first_strike",
-"immunity",
-"merge_attach",
-"merge_attach:benefits",
-"movement",
-"multi_attack",
-"passive",
-"piercing",
-"placement_rules",
-"ranged",
-"ranged:counters",
-"reserve_bench",
-"saving_throws:counters",
-"start_of_game",
-"stealth",
-"target_choice",
-"terrain:counters"
-],
-"drop": [
-"turn_start",
-"temporary_buff",
-"territory_trigger",
-"advantage"
-]
-},
-"786914": {
-"add": [
-"merge_attach",
-"passive"
-],
-"drop": [
-"advantage"
-]
-},
-"786280": {
-"add": [
-"stress_morale"
-],
-"drop": [
-"turn_start"
-]
-},
-"787318": {
-"add": [
-"damage",
-"damage_reduction",
-"multi_attack",
-"piercing",
-"placement_rules",
-"ranged",
-"reserve_bench",
-"temporary_effect",
-"terrain",
-"terrain:counters"
-],
-"drop": [
-"tribal",
-"spell_power:benefits"
-]
-},
-"788411": {
-"add": [
-"temporary_buff",
-"aoe_damage",
-"condition_life",
-"damage_reduction",
-"death_trigger",
-"drawback",
-"multi_attack",
-"passive",
-"piercing",
-"ranged"
-],
-"drop": [
-"on_attack",
-"buff",
-"advantage",
-"temporary_effect"
-]
-},
-"784430": {
-"add": [
-"scope_multi",
-"temporary_effect"
-],
-"drop": [
-"condition_count",
-"passive",
-"tribal"
-]
-},
-"786761": {
-"add": [
-"piercing:grants",
-"buff"
-],
-"drop": [
-"advantage",
-"multi_attack"
-]
-},
-"785502": {
-"add": [
-"activated",
-"damage_reduction",
-"temporary_effect"
-],
-"drop": [
-"resource_banking"
-]
-},
-"787955": {
-"add": [
-"damage_prevention",
-"temporary_buff",
-"attack_mod",
-"bodyguard:counters",
-"cooldowns",
-"damage",
-"merge_attach",
-"merge_attach:benefits",
-"movement",
-"once_per_game",
-"piercing",
-"target_choice"
-],
-"drop": [
-"attack_zero",
-"immunity",
-"stealth",
-"tribal",
-"zone_of_control",
-"ranged",
-"saving_throws",
-"temporary_effect"
-]
-},
-"788178": {
-"add": [
-"targeting_rules",
-"immunity",
-"merge_attach",
-"passive",
-"placement_rules",
-"ranged",
-"ranged:counters",
-"stealth"
-],
-"drop": [
-"territory_trigger",
-"spell_power:benefits"
-]
-},
-"786349": {
-"add": [
-"stat_set",
-"type_grant",
-"merge_attach",
-"movement",
-"placement_rules",
-"reserve_bench"
-],
-"drop": [
-"ranged"
-]
-},
-"786395": {
-"add": [
-"coin_economy",
-"damage_reduction",
-"ranged",
-"temporary_effect"
-],
-"drop": [
-"activated",
-"piercing"
-]
-},
-"787629": {
-"add": [
-"attack_mod",
-"damage",
-"debuff",
-"merge_attach",
-"once_per_game",
-"placement_rules",
-"random_effect",
-"ranged",
-"reserve_bench",
-"stress_morale",
-"temporary_effect",
-"turn_start"
-],
-"drop": [
-"steal",
-"spell_power:benefits"
-]
-},
-"785119": {
-"add": [
-"attack_mod",
-"merge_attach",
-"passive"
-],
-"drop": [
-"piercing:grants"
-]
-},
-"787152": {
-"add": [
-"temporary_buff",
-"damage_reduction",
-"merge_attach",
-"movement",
-"multi_attack",
-"passive",
-"piercing",
-"placement_rules",
-"ranged",
-"reserve_bench",
-"temporary_effect"
-],
-"drop": [
-"advantage",
-"turn_end",
-"zone_of_control"
-]
-},
-"788533": {
-"add": [
-"modal_choice",
-"aoe_damage",
-"bodyguard:counters",
-"death_trigger",
-"heal",
-"immunity",
-"merge_attach",
-"merge_attach:benefits",
-"movement",
-"multi_attack",
-"piercing",
-"placement_rules",
-"ranged",
-"reserve_bench",
-"stealth",
-"target_choice",
-"temporary_effect",
-"terrain"
-],
-"drop": [
-"turn_start",
-"zone_of_control",
-"advantage",
-"on_attack"
-]
-},
-"787786": {
-"add": [
-"aoe_damage",
-"death_trigger",
-"movement",
-"multi_attack",
-"ranged"
-],
-"drop": [
-"random_effect",
-"temporary_buff"
-]
-},
-"788089": {
-"add": [
-"aoe_damage",
-"cost_set",
-"death_trigger",
-"multi_attack",
-"piercing",
-"ranged",
-"saving_throws:counters",
-"terrain:counters"
-],
-"drop": [
-"advantage",
-"tribal"
-]
-},
-"787669": {
-"add": [
-"regeneration",
-"aoe_damage",
-"damage_reduction",
-"death_trigger",
-"movement",
-"turn_start"
-],
-"drop": [
-"random_effect",
-"ranged",
-"temporary_buff",
-"heal"
-]
-},
-"787932": {
-"add": [
-"cheat_death",
-"damage",
-"damage_reduction",
-"merge_attach",
-"movement",
-"multi_attack",
-"piercing",
-"random_effect",
-"saving_throws:counters",
-"temporary_effect"
-],
-"drop": [
-"turn_end",
-"zone_of_control",
-"tribal"
-]
-},
-"784663": {
-"add": [
-"cooldowns",
-"cost_set"
-],
-"drop": [
-"once_per_game",
-"advantage"
-]
-},
-"786551": {
-"add": [
-"buff"
-],
-"drop": [
-"piercing"
-]
-},
-"787625": {
-"add": [
-"reactions",
-"damage_reduction",
-"movement",
-"placement_rules",
-"random_effect",
-"ranged",
-"reserve_bench",
-"start_of_game",
-"stress_morale"
-],
-"drop": [
-"passive",
-"turn_start",
-"zone_of_control"
-]
-},
-"786927": {
-"add": [
-"cooldowns",
-"cost_reduction"
-],
-"drop": [
-"once_per_game"
-]
-},
-"788100": {
-"add": [
-"advantage",
-"merge_attach",
-"movement",
-"placement_rules",
-"reserve_bench"
-],
-"drop": [
-"items_consumables",
-"ranged"
-]
-},
-"785067": {
-"add": [
-"cooldowns",
-"cost_set"
-],
-"drop": [
-"once_per_game"
-]
-},
-"788355": {
-"add": [
-"cheat_death",
-"counterattack",
-"merge_attach",
-"passive",
-"placement_rules",
-"ranged",
-"reserve_bench"
-],
-"drop": [
-"advantage",
-"death_trigger"
-]
-},
-"786278": {
-"add": [
-"merge_attach",
-"movement",
-"passive"
-],
-"drop": [
-"immunity"
-]
-},
-"786167": {
-"add": [
-"target_choice",
-"ranged"
-],
-"drop": [
-"piercing"
-]
-},
-"786809": {
-"add": [
-"start_of_game",
-"reserve_bench"
-],
-"drop": []
-},
-"787910": {
-"add": [
-"aoe_damage",
-"condition",
-"multi_attack",
-"passive",
-"ranged",
-"terrain:counters"
-],
-"drop": [
-"buff",
-"advantage"
-]
-},
-"784405": {
-"add": [
-"ranged"
-],
-"drop": [
-"temporary_effect"
-]
-},
-"786705": {
-"add": [
-"cooldowns",
-"cost_reduction"
-],
-"drop": [
-"once_per_game"
-]
-},
-"784470": {
-"add": [
-"advantage",
-"deckbuilding_effect",
-"movement",
-"ranged",
-"type_grant"
-],
-"drop": [
-"temporary_buff"
-]
-},
-"785847": {
-"add": [
-"permanent_growth"
-],
-"drop": [
-"zone_of_control"
-]
-},
-"787788": {
-"add": [
-"bodyguard:counters",
-"cost_set",
-"damage",
-"damage_reduction",
-"merge_attach",
-"merge_attach:benefits",
-"movement",
-"multi_attack",
-"on_attack",
-"once_per_game",
-"piercing",
-"ranged",
-"saving_throws:counters",
-"stress_morale",
-"target_choice",
-"terrain:counters",
-"zone_control"
-],
-"drop": [
-"turn_end",
-"advantage",
-"tribal",
-"drawback"
-]
-},
-"788390": {
-"add": [
-"multi_attack",
-"piercing",
-"regeneration"
-],
-"drop": [
-"activated",
-"advantage",
-"ranged"
-]
-},
-"787424": {
-"add": [
-"reactions",
-"drawback",
-"movement",
-"random_effect",
-"stress_morale"
-],
-"drop": [
-"buff",
-"damage",
-"on_attack",
-"ranged",
-"passive",
-"zone_of_control"
-]
-},
-"787335": {
-"add": [
-"cheat_death",
-"damage",
-"damage_reduction",
-"drawback",
-"merge_attach",
-"movement",
-"multi_attack",
-"on_attack",
-"passive",
-"piercing",
-"placement_rules",
-"ranged",
-"reserve_bench",
-"saving_throws:counters",
-"terrain:counters"
-],
-"drop": [
-"turn_end",
-"zone_of_control",
-"spell_power:benefits",
-"advantage"
-]
-},
-"787274": {
-"add": [
-"piercing"
-],
-"drop": [
-"advantage",
-"damage",
-"tribal"
-]
-},
-"786282": {
-"add": [
-"attack_mod",
-"merge_attach",
-"passive"
-],
-"drop": []
-},
-"787557": {
-"add": [
-"attack_mod",
-"mark_target",
-"temporary_buff",
-"damage",
-"damage_reduction",
-"merge_attach",
-"piercing",
-"placement_rules",
-"ranged",
-"reserve_bench",
-"saving_throws:counters",
-"turn_start"
-],
-"drop": [
-"zone_of_control",
-"tribal",
-"spell_power:benefits",
-"temporary_effect"
-]
-},
-"785091": {
-"add": [
-"damage_reduction"
-],
-"drop": [
-"random_effect"
-]
-},
-"786899": {
-"add": [
-"movement",
-"terrain"
-],
-"drop": [
-"zone_of_control"
-]
-},
-"784325": {
-"add": [
-"modal_choice",
-"life_payment:cost",
-"damage",
-"ranged",
-"temporary_buff"
-],
-"drop": [
-"advantage",
-"stress_morale"
-]
-},
-"788068": {
-"add": [
-"buff",
-"merge_attach",
-"passive",
-"piercing",
-"ranged"
-],
-"drop": [
-"terrain",
-"tribal",
-"on_attack",
-"damage"
-]
-},
-"787094": {
-"add": [
-"damage",
-"random_effect"
-],
-"drop": [
-"zone_of_control"
-]
-},
-"815350": {
-"add": [
-"resource_gain",
-"random_effect"
-],
-"drop": []
-},
-"784825": {
-"add": [
-"buff",
-"passive",
-"stress_morale",
-"zone_control"
-],
-"drop": []
-},
-"786837": {
-"add": [
-"buff",
-"passive"
-],
-"drop": []
-},
-"786609": {
-"add": [
-"passive",
-"stress_morale"
-],
-"drop": []
-},
-"785330": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"784700": {
-"add": [
-"movement",
-"ranged",
-"temporary_effect"
-],
-"drop": []
-},
-"786799": {
-"add": [
-"merge_attach",
-"merge_attach:benefits"
-],
-"drop": []
-},
-"786258": {
-"add": [
-"buff"
-],
-"drop": []
-},
-"786524": {
-"add": [
-"regeneration"
-],
-"drop": []
-},
-"784276": {
-"add": [
-"movement"
-],
-"drop": []
-},
-"784412": {
-"add": [
-"movement",
-"ranged"
-],
-"drop": []
-},
-"787115": {
-"add": [
-"movement"
-],
-"drop": []
-},
-"786217": {
-"add": [
-"damage_reduction",
-"temporary_effect"
-],
-"drop": []
-},
-"785360": {
-"add": [
-"permanent_growth"
-],
-"drop": []
-},
-"784399": {
-"add": [
-"buff",
-"damage_reduction",
-"passive",
-"terrain",
-"terrain:counters"
-],
-"drop": []
-},
-"787025": {
-"add": [
-"buff"
-],
-"drop": []
-},
-"785387": {
-"add": [
-"merge_attach"
-],
-"drop": []
-},
-"786547": {
-"add": [
-"buff",
-"type_grant"
-],
-"drop": []
-},
-"786838": {
-"add": [
-"buff",
-"passive"
-],
-"drop": []
-},
-"815401": {
-"add": [
-"cost_set"
-],
-"drop": []
-},
-"784847": {
-"add": [
-"advantage"
-],
-"drop": []
-},
-"788586": {
-"add": [
-"aura",
-"random_effect",
-"ranged",
-"resource_gain",
-"terrain",
-"terrain:counters"
-],
-"drop": []
-},
-"786924": {
-"add": [
-"ranged"
-],
-"drop": []
-},
-"788652": {
-"add": [
-"aoe_damage",
-"damage_reduction",
-"death_trigger",
-"heal",
-"movement",
-"passive",
-"random_effect",
-"ranged",
-"turn_end"
-],
-"drop": []
-},
-"785817": {
-"add": [
-"buff",
-"damage_reduction",
-"stress_morale",
-"zone_control"
-],
-"drop": []
-},
-"785712": {
-"add": [
-"damage",
-"piercing",
-"ranged"
-],
-"drop": []
-},
-"786881": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"786146": {
-"add": [
-"reserve_bench"
-],
-"drop": []
-},
-"786186": {
-"add": [
-"cooldowns",
-"reserve_bench",
-"temporary_effect"
-],
-"drop": []
-},
-"784781": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"786991": {
-"add": [
-"movement",
-"terrain"
-],
-"drop": []
-},
-"785101": {
-"add": [
-"buff"
-],
-"drop": []
-},
-"785409": {
-"add": [
-"debuff",
-"passive",
-"stress_morale",
-"zone_control"
-],
-"drop": []
-},
-"785265": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-}
+ "784557": {
+  "add": [
+   "tribal",
+   "piercing"
+  ],
+  "drop": []
+ },
+ "784562": {
+  "add": [
+   "aoe_damage",
+   "random_effect"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "784553": {
+  "add": [
+   "damage"
+  ],
+  "drop": []
+ },
+ "784552": {
+  "add": [],
+  "drop": [
+   "support",
+   "destroy"
+  ]
+ },
+ "784566": {
+  "add": [
+   "advantage"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "784560": {
+  "add": [
+   "piercing"
+  ],
+  "drop": []
+ },
+ "784550": {
+  "add": [],
+  "drop": [
+   "zone_of_control"
+  ]
+ },
+ "784570": {
+  "add": [],
+  "drop": [
+   "symmetric_effect"
+  ]
+ },
+ "784574": {
+  "add": [
+   "damage_reduction",
+   "stealth"
+  ],
+  "drop": [
+   "protection"
+  ]
+ },
+ "784558": {
+  "add": [
+   "advantage"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "784569": {
+  "add": [
+   "advantage"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "784556": {
+  "add": [
+   "advantage"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "784290": {
+  "add": [],
+  "drop": [
+   "activated",
+   "bodyguard"
+  ]
+ },
+ "784392": {
+  "add": [],
+  "drop": [
+   "movement",
+   "terrain"
+  ]
+ },
+ "784385": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "784300": {
+  "add": [
+   "reserve_bench"
+  ],
+  "drop": []
+ },
+ "784561": {
+  "add": [],
+  "drop": [
+   "damage"
+  ]
+ },
+ "786634": {
+  "add": [],
+  "drop": [
+   "drawback"
+  ]
+ },
+ "784576": {
+  "add": [],
+  "drop": [
+   "merge_attach"
+  ]
+ },
+ "786949": {
+  "add": [
+   "drawback"
+  ],
+  "drop": [
+   "destroy"
+  ]
+ },
+ "786888": {
+  "add": [
+   "drawback"
+  ],
+  "drop": [
+   "destroy"
+  ]
+ },
+ "786604": {
+  "add": [],
+  "drop": [
+   "stealth"
+  ]
+ },
+ "785244": {
+  "add": [
+   "heal"
+  ],
+  "drop": []
+ },
+ "785871": {
+  "add": [],
+  "drop": [
+   "graveyard"
+  ]
+ },
+ "784863": {
+  "add": [],
+  "drop": [
+   "damage"
+  ]
+ },
+ "785112": {
+  "add": [
+   "drawback"
+  ],
+  "drop": [
+   "advantage",
+   "piercing"
+  ]
+ },
+ "785114": {
+  "add": [
+   "drawback"
+  ],
+  "drop": [
+   "advantage",
+   "piercing"
+  ]
+ },
+ "785116": {
+  "add": [
+   "drawback"
+  ],
+  "drop": [
+   "advantage",
+   "piercing:benefits"
+  ]
+ },
+ "787018": {
+  "add": [],
+  "drop": [
+   "piercing"
+  ]
+ },
+ "786009": {
+  "add": [
+   "drawback"
+  ],
+  "drop": [
+   "zone_of_control"
+  ]
+ },
+ "786952": {
+  "add": [
+   "drawback"
+  ],
+  "drop": [
+   "mark_target",
+   "zone_of_control"
+  ]
+ },
+ "786676": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "785454": {
+  "add": [],
+  "drop": [
+   "damage_reduction",
+   "ranged:counters"
+  ]
+ },
+ "784573": {
+  "add": [],
+  "drop": [
+   "destroy"
+  ]
+ },
+ "786182": {
+  "add": [
+   "start_of_game",
+   "placement_rules"
+  ],
+  "drop": []
+ },
+ "786840": {
+  "add": [
+   "random_effect:benefits"
+  ],
+  "drop": [
+   "stress_morale"
+  ]
+ },
+ "785920": {
+  "add": [
+   "buff"
+  ],
+  "drop": []
+ },
+ "786047": {
+  "add": [
+   "buff"
+  ],
+  "drop": []
+ },
+ "786252": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": [
+   "advantage"
+  ]
+ },
+ "785096": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "785081": {
+  "add": [
+   "buff"
+  ],
+  "drop": []
+ },
+ "786931": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "786384": {
+  "add": [
+   "aura",
+   "buff"
+  ],
+  "drop": []
+ },
+ "785085": {
+  "add": [],
+  "drop": [
+   "turn_start",
+   "zone_of_control"
+  ]
+ },
+ "786597": {
+  "add": [],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "786398": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": [
+   "delayed",
+   "passive"
+  ]
+ },
+ "815318": {
+  "add": [
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "815335": {
+  "add": [
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "815380": {
+  "add": [
+   "spawn_blocking"
+  ],
+  "drop": []
+ },
+ "815306": {
+  "add": [
+   "deckbuilding_effect",
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "815405": {
+  "add": [
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "815406": {
+  "add": [
+   "buff",
+   "debuff"
+  ],
+  "drop": []
+ },
+ "815469": {
+  "add": [
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "784908": {
+  "add": [
+   "zone_of_control",
+   "condition",
+   "reserve_bench",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "787236": {
+  "add": [
+   "buff",
+   "debuff",
+   "aoe_damage",
+   "condition_life",
+   "damage_reduction",
+   "death_trigger",
+   "drawback",
+   "movement",
+   "multi_attack",
+   "passive",
+   "piercing",
+   "ranged",
+   "temporary_effect",
+   "terrain",
+   "zone_control"
+  ],
+  "drop": [
+   "advantage",
+   "on_attack",
+   "tribal",
+   "zone_of_control"
+  ]
+ },
+ "788387": {
+  "add": [
+   "aura",
+   "debuff",
+   "condition_life",
+   "buff",
+   "merge_attach",
+   "stress_morale",
+   "turn_start"
+  ],
+  "drop": [
+   "cooldowns",
+   "ranged"
+  ]
+ },
+ "788198": {
+  "add": [
+   "debuff",
+   "damage",
+   "aoe_damage",
+   "condition_count",
+   "condition_life",
+   "death_trigger",
+   "drawback",
+   "forced_movement",
+   "multi_attack",
+   "passive",
+   "piercing",
+   "placement_rules:benefits",
+   "random_effect",
+   "ranged",
+   "reserve_bench",
+   "reserve_bench:benefits",
+   "tribal"
+  ],
+  "drop": [
+   "on_attack"
+  ]
+ },
+ "788039": {
+  "add": [
+   "stat_gain",
+   "advantage",
+   "bodyguard:counters",
+   "damage",
+   "buff",
+   "merge_attach",
+   "buff:benefits",
+   "merge_attach:benefits",
+   "passive",
+   "piercing",
+   "placement_rules",
+   "reserve_bench",
+   "saving_throws:counters",
+   "target_choice",
+   "terrain:counters",
+   "tribal"
+  ],
+  "drop": [
+   "on_attack",
+   "spell_power:benefits"
+  ]
+ },
+ "784563": {
+  "add": [
+   "bodyguard:counters",
+   "target_choice"
+  ],
+  "drop": [
+   "piercing",
+   "merge_attach:does"
+  ]
+ },
+ "785565": {
+  "add": [
+   "immunity",
+   "ranged:counters",
+   "stealth"
+  ],
+  "drop": [
+   "damage_reduction"
+  ]
+ },
+ "788026": {
+  "add": [
+   "on_play",
+   "temporary_buff",
+   "advantage",
+   "drawback",
+   "buff",
+   "merge_attach",
+   "buff:benefits",
+   "merge_attach:benefits",
+   "movement",
+   "multi_attack",
+   "piercing",
+   "placement_rules",
+   "ranged",
+   "reserve_bench"
+  ],
+  "drop": [
+   "damage",
+   "on_attack",
+   "temporary_effect"
+  ]
+ },
+ "786721": {
+  "add": [
+   "debuff",
+   "damage",
+   "random_effect",
+   "stress_morale",
+   "temporary_effect"
+  ],
+  "drop": [
+   "stat_loss"
+  ]
+ },
+ "787575": {
+  "add": [
+   "damage_reduction",
+   "immunity",
+   "random_effect",
+   "regeneration",
+   "turn_start"
+  ],
+  "drop": [
+   "stealth"
+  ]
+ },
+ "786209": {
+  "add": [
+   "advantage"
+  ],
+  "drop": [
+   "on_attack"
+  ]
+ },
+ "788142": {
+  "add": [
+   "mark_target",
+   "buff",
+   "tribal",
+   "aoe_damage",
+   "death_trigger",
+   "placement_rules",
+   "ranged",
+   "reserve_bench",
+   "temporary_effect"
+  ],
+  "drop": [
+   "stat_gain",
+   "multi_attack:benefits",
+   "random_effect",
+   "terrain",
+   "turn_start"
+  ]
+ },
+ "784397": {
+  "add": [
+   "buff",
+   "ranged"
+  ],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "788577": {
+  "add": [
+   "condition",
+   "advantage",
+   "death_trigger",
+   "passive",
+   "piercing",
+   "saving_throws:counters"
+  ],
+  "drop": [
+   "aoe_damage",
+   "tribal"
+  ]
+ },
+ "788337": {
+  "add": [
+   "damage_reduction",
+   "advantage",
+   "aoe_damage",
+   "condition",
+   "death_trigger",
+   "multi_attack",
+   "ranged",
+   "terrain",
+   "terrain:counters"
+  ],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "787394": {
+  "add": [
+   "buff",
+   "temporary_buff",
+   "advantage",
+   "damage_reduction",
+   "drawback",
+   "merge_attach",
+   "movement",
+   "multi_attack",
+   "once_per_game",
+   "passive",
+   "piercing",
+   "ranged",
+   "saving_throws:counters"
+  ],
+  "drop": [
+   "on_attack",
+   "damage",
+   "spell_power:benefits",
+   "temporary_effect"
+  ]
+ },
+ "788033": {
+  "add": [
+   "cheat_death",
+   "on_attack",
+   "damage",
+   "buff",
+   "merge_attach",
+   "passive",
+   "placement_rules",
+   "random_effect",
+   "reserve_bench"
+  ],
+  "drop": [
+   "turn_end",
+   "zone_of_control",
+   "spell_power:benefits"
+  ]
+ },
+ "788054": {
+  "add": [
+   "aoe_damage",
+   "death_trigger",
+   "movement",
+   "placement_rules",
+   "random_effect",
+   "ranged",
+   "reserve_bench"
+  ],
+  "drop": [
+   "spell_power:benefits"
+  ]
+ },
+ "787757": {
+  "add": [
+   "aoe_damage",
+   "damage_reduction",
+   "death_trigger",
+   "buff",
+   "merge_attach",
+   "piercing",
+   "piercing:grants",
+   "random_effect",
+   "ranged",
+   "ranged:counters",
+   "stealth",
+   "terrain",
+   "terrain:counters"
+  ],
+  "drop": [
+   "on_attack",
+   "temporary_buff",
+   "turn_start",
+   "type_grant",
+   "movement"
+  ]
+ },
+ "786585": {
+  "add": [
+   "on_kill",
+   "summon",
+   "piercing:grants",
+   "piercing"
+  ],
+  "drop": [
+   "on_attack",
+   "damage"
+  ]
+ },
+ "785622": {
+  "add": [
+   "buff",
+   "aura",
+   "tribal",
+   "passive"
+  ],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "787864": {
+  "add": [
+   "aoe_damage",
+   "death_trigger",
+   "movement",
+   "random_effect"
+  ],
+  "drop": [
+   "ranged"
+  ]
+ },
+ "788196": {
+  "add": [
+   "stat_gain",
+   "stat_loss",
+   "damage",
+   "items_consumables",
+   "debuff",
+   "merge_attach",
+   "piercing",
+   "ranged",
+   "saving_throws:counters"
+  ],
+  "drop": [
+   "movement"
+  ]
+ },
+ "785430": {
+  "add": [
+   "reactions:counters",
+   "ranged"
+  ],
+  "drop": []
+ },
+ "787327": {
+  "add": [
+   "debuff",
+   "aura",
+   "buff",
+   "damage_reduction",
+   "piercing",
+   "placement_rules",
+   "reserve_bench",
+   "temporary_effect"
+  ],
+  "drop": [
+   "advantage",
+   "territory_trigger",
+   "zone_of_control",
+   "stat_loss"
+  ]
+ },
+ "784753": {
+  "add": [
+   "stat_gain",
+   "stat_loss",
+   "type_grant",
+   "buff",
+   "merge_attach",
+   "movement",
+   "placement_rules",
+   "reserve_bench"
+  ],
+  "drop": []
+ },
+ "788610": {
+  "add": [
+   "buff",
+   "debuff",
+   "merge_attach",
+   "passive",
+   "stress_morale",
+   "temporary_effect"
+  ],
+  "drop": [
+   "stat_loss",
+   "spell_power:benefits"
+  ]
+ },
+ "785902": {
+  "add": [
+   "temporary_buff",
+   "stat_gain",
+   "once_per_game",
+   "turn_start"
+  ],
+  "drop": [
+   "temporary_effect"
+  ]
+ },
+ "784371": {
+  "add": [
+   "buff",
+   "mark_target",
+   "temporary_buff",
+   "turn_start"
+  ],
+  "drop": [
+   "stat_gain",
+   "temporary_effect"
+  ]
+ },
+ "784384": {
+  "add": [
+   "advantage"
+  ],
+  "drop": [
+   "on_attack"
+  ]
+ },
+ "787567": {
+  "add": [
+   "cost_set",
+   "damage",
+   "damage_reduction",
+   "piercing",
+   "placement_rules",
+   "ranged",
+   "ranged:counters",
+   "stealth",
+   "terrain:counters"
+  ],
+  "drop": [
+   "cooldowns",
+   "once_per_game",
+   "advantage",
+   "condition",
+   "territory_trigger"
+  ]
+ },
+ "784311": {
+  "add": [
+   "movement:grants",
+   "piercing",
+   "ranged",
+   "zone_control"
+  ],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "815493": {
+  "add": [
+   "mark_target",
+   "stat_gain",
+   "movement",
+   "temporary_effect"
+  ],
+  "drop": []
+ },
+ "788527": {
+  "add": [
+   "advantage",
+   "drawback",
+   "buff",
+   "merge_attach",
+   "buff:benefits",
+   "merge_attach:benefits",
+   "movement",
+   "piercing",
+   "saving_throws:counters",
+   "tribal"
+  ],
+  "drop": [
+   "on_attack",
+   "damage"
+  ]
+ },
+ "787718": {
+  "add": [
+   "damage_reduction",
+   "buff",
+   "merge_attach",
+   "movement",
+   "passive",
+   "random_effect",
+   "start_of_game"
+  ],
+  "drop": [
+   "spell_power:benefits",
+   "turn_start"
+  ]
+ },
+ "786435": {
+  "add": [
+   "cheat_death",
+   "random_effect"
+  ],
+  "drop": [
+   "turn_end",
+   "zone_of_control"
+  ]
+ },
+ "787882": {
+  "add": [
+   "debuff",
+   "aoe_damage",
+   "death_trigger",
+   "multi_attack",
+   "ranged"
+  ],
+  "drop": [
+   "advantage",
+   "zone_of_control"
+  ]
+ },
+ "787169": {
+  "add": [
+   "targeting_rules",
+   "advantage",
+   "bodyguard:counters",
+   "condition",
+   "damage",
+   "damage_reduction",
+   "buff",
+   "merge_attach",
+   "buff:benefits",
+   "merge_attach:benefits",
+   "movement",
+   "passive",
+   "piercing",
+   "placement_rules",
+   "ranged",
+   "ranged:counters",
+   "saving_throws:counters",
+   "stealth",
+   "target_choice"
+  ],
+  "drop": [
+   "territory_trigger",
+   "death_trigger"
+  ]
+ },
+ "785453": {
+  "add": [
+   "buff",
+   "merge_attach",
+   "passive"
+  ],
+  "drop": [
+   "advantage"
+  ]
+ },
+ "786046": {
+  "add": [
+   "cheat_death",
+   "random_effect",
+   "stress_morale"
+  ],
+  "drop": [
+   "turn_end",
+   "zone_of_control"
+  ]
+ },
+ "785443": {
+  "add": [
+   "damage_over_time",
+   "once_per_game",
+   "random_effect",
+   "ranged",
+   "turn_start"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "787679": {
+  "add": [
+   "temporary_buff",
+   "advantage",
+   "stat_gain",
+   "damage",
+   "damage_reduction",
+   "immunity",
+   "on_attack",
+   "once_per_game",
+   "piercing",
+   "stealth"
+  ],
+  "drop": [
+   "temporary_effect",
+   "turn_start"
+  ]
+ },
+ "785373": {
+  "add": [
+   "stat_gain",
+   "damage",
+   "random_effect"
+  ],
+  "drop": [
+   "zone_of_control"
+  ]
+ },
+ "786655": {
+  "add": [
+   "reactions",
+   "movement",
+   "random_effect",
+   "ranged"
+  ],
+  "drop": [
+   "passive",
+   "zone_of_control"
+  ]
+ },
+ "785749": {
+  "add": [
+   "damage_reduction",
+   "immunity",
+   "placement_rules",
+   "ranged:counters",
+   "stealth"
+  ],
+  "drop": [
+   "territory_trigger"
+  ]
+ },
+ "784368": {
+  "add": [
+   "modal_choice",
+   "temporary_buff",
+   "stat_gain"
+  ],
+  "drop": [
+   "run_structure",
+   "stances:benefits",
+   "piercing:benefits",
+   "temporary_effect",
+   "turn_start"
+  ]
+ },
+ "786403": {
+  "add": [
+   "buff"
+  ],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "788345": {
+  "add": [
+   "temporary_buff",
+   "aoe_damage",
+   "damage_reduction",
+   "death_trigger",
+   "movement",
+   "piercing"
+  ],
+  "drop": [
+   "advantage",
+   "tribal",
+   "temporary_effect"
+  ]
+ },
+ "815331": {
+  "add": [
+   "copy",
+   "temporary_buff",
+   "turn_start",
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "787184": {
+  "add": [
+   "damage_reduction",
+   "movement",
+   "multi_attack",
+   "passive",
+   "placement_rules",
+   "ranged",
+   "ranged:counters",
+   "start_of_game",
+   "stealth"
+  ],
+  "drop": [
+   "turn_start",
+   "territory_trigger",
+   "advantage"
+  ]
+ },
+ "815367": {
+  "add": [
+   "resource_gain",
+   "on_kill"
+  ],
+  "drop": [
+   "destroy",
+   "destroy:benefits",
+   "resource_banking"
+  ]
+ },
+ "787537": {
+  "add": [
+   "buff",
+   "aoe_damage",
+   "bodyguard:counters",
+   "condition_life",
+   "death_trigger",
+   "merge_attach",
+   "buff:benefits",
+   "merge_attach:benefits",
+   "forced_movement",
+   "movement",
+   "multi_attack",
+   "piercing",
+   "ranged",
+   "target_choice",
+   "terrain",
+   "terrain:counters"
+  ],
+  "drop": [
+   "on_attack",
+   "zone_of_control",
+   "advantage"
+  ]
+ },
+ "784743": {
+  "add": [
+   "coin_economy",
+   "activated",
+   "ranged",
+   "terrain",
+   "terrain:counters"
+  ],
+  "drop": [
+   "passive",
+   "resource_banking",
+   "upgrade"
+  ]
+ },
+ "785190": {
+  "add": [
+   "game_end_trigger",
+   "passive",
+   "stress_morale"
+  ],
+  "drop": [
+   "turn_end",
+   "turn_start",
+   "zone_of_control"
+  ]
+ },
+ "787484": {
+  "add": [
+   "aoe_damage",
+   "aura",
+   "buff",
+   "damage_reduction",
+   "death_trigger",
+   "movement",
+   "piercing",
+   "ranged",
+   "terrain:counters"
+  ],
+  "drop": [
+   "advantage",
+   "tribal"
+  ]
+ },
+ "787873": {
+  "add": [
+   "aoe_damage",
+   "damage_reduction",
+   "death_trigger",
+   "ranged"
+  ],
+  "drop": [
+   "multi_attack",
+   "random_effect",
+   "piercing"
+  ]
+ },
+ "788438": {
+  "add": [
+   "aoe_damage",
+   "damage_reduction",
+   "death_trigger",
+   "movement",
+   "random_effect",
+   "ranged",
+   "start_of_game",
+   "temporary_effect",
+   "terrain",
+   "terrain:counters"
+  ],
+  "drop": [
+   "turn_start",
+   "passive"
+  ]
+ },
+ "785785": {
+  "add": [
+   "reactions:counters"
+  ],
+  "drop": [
+   "ranged"
+  ]
+ },
+ "787952": {
+  "add": [
+   "condition_count",
+   "damage",
+   "buff",
+   "merge_attach",
+   "passive",
+   "piercing",
+   "random_effect",
+   "saving_throws:counters"
+  ],
+  "drop": [
+   "movement",
+   "ranged",
+   "zone_of_control",
+   "tribal",
+   "turn_start"
+  ]
+ },
+ "785974": {
+  "add": [
+   "buff"
+  ],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "787821": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": [
+   "random_effect",
+   "terrain"
+  ]
+ },
+ "786893": {
+  "add": [
+   "turn_number",
+   "reserve_bench"
+  ],
+  "drop": []
+ },
+ "815471": {
+  "add": [
+   "silence"
+  ],
+  "drop": [
+   "movement",
+   "placement_rules",
+   "reserve_bench",
+   "territory_trigger"
+  ]
+ },
+ "788313": {
+  "add": [
+   "targeting_rules",
+   "aoe_damage",
+   "death_trigger",
+   "multi_attack",
+   "piercing",
+   "ranged",
+   "saving_throws:counters"
+  ],
+  "drop": [
+   "lone_unit",
+   "on_attack",
+   "stat_gain",
+   "advantage",
+   "zone_of_control"
+  ]
+ },
+ "787652": {
+  "add": [
+   "reactions",
+   "condition",
+   "damage",
+   "damage_reduction",
+   "movement",
+   "multi_attack",
+   "passive",
+   "piercing",
+   "ranged",
+   "start_of_game",
+   "terrain:counters"
+  ],
+  "drop": [
+   "turn_start",
+   "cooldowns",
+   "advantage",
+   "zone_of_control"
+  ]
+ },
+ "785219": {
+  "add": [
+   "movement",
+   "temporary_effect"
+  ],
+  "drop": [
+   "zone_of_control",
+   "spell_power:benefits"
+  ]
+ },
+ "787312": {
+  "add": [
+   "damage_reduction",
+   "buff",
+   "merge_attach",
+   "passive",
+   "placement_rules",
+   "ranged",
+   "reserve_bench",
+   "stress_morale"
+  ],
+  "drop": [
+   "advantage",
+   "spell_power:benefits"
+  ]
+ },
+ "788532": {
+  "add": [
+   "damage_reduction",
+   "buff",
+   "merge_attach",
+   "passive",
+   "placement_rules",
+   "ranged:counters",
+   "stealth"
+  ],
+  "drop": [
+   "deckbuilding_effect",
+   "upgrade",
+   "territory_trigger"
+  ]
+ },
+ "788382": {
+  "add": [
+   "advantage",
+   "condition_life",
+   "damage",
+   "damage_reduction",
+   "buff",
+   "merge_attach",
+   "passive",
+   "piercing",
+   "ranged",
+   "saving_throws:counters"
+  ],
+  "drop": [
+   "on_attack"
+  ]
+ },
+ "816461": {
+  "add": [
+   "aoe_damage",
+   "bodyguard:counters",
+   "condition",
+   "damage_reduction",
+   "first_strike",
+   "immunity",
+   "buff",
+   "merge_attach",
+   "buff:benefits",
+   "merge_attach:benefits",
+   "movement",
+   "multi_attack",
+   "passive",
+   "piercing",
+   "placement_rules",
+   "ranged",
+   "ranged:counters",
+   "reserve_bench",
+   "saving_throws:counters",
+   "start_of_game",
+   "stealth",
+   "target_choice",
+   "terrain:counters"
+  ],
+  "drop": [
+   "turn_start",
+   "temporary_buff",
+   "territory_trigger",
+   "advantage"
+  ]
+ },
+ "786914": {
+  "add": [
+   "buff",
+   "merge_attach",
+   "passive"
+  ],
+  "drop": [
+   "advantage"
+  ]
+ },
+ "786280": {
+  "add": [
+   "stress_morale"
+  ],
+  "drop": [
+   "turn_start"
+  ]
+ },
+ "787318": {
+  "add": [
+   "damage",
+   "damage_reduction",
+   "multi_attack",
+   "piercing",
+   "placement_rules",
+   "ranged",
+   "reserve_bench",
+   "temporary_effect",
+   "terrain",
+   "terrain:counters"
+  ],
+  "drop": [
+   "tribal",
+   "spell_power:benefits"
+  ]
+ },
+ "788411": {
+  "add": [
+   "temporary_buff",
+   "aoe_damage",
+   "condition_life",
+   "damage_reduction",
+   "death_trigger",
+   "drawback",
+   "multi_attack",
+   "passive",
+   "piercing",
+   "ranged"
+  ],
+  "drop": [
+   "on_attack",
+   "stat_gain",
+   "advantage",
+   "temporary_effect"
+  ]
+ },
+ "784430": {
+  "add": [
+   "scope_multi",
+   "temporary_effect"
+  ],
+  "drop": [
+   "condition_count",
+   "passive",
+   "tribal"
+  ]
+ },
+ "786761": {
+  "add": [
+   "piercing:grants",
+   "stat_gain"
+  ],
+  "drop": [
+   "advantage",
+   "multi_attack"
+  ]
+ },
+ "785502": {
+  "add": [
+   "activated",
+   "damage_reduction",
+   "temporary_effect"
+  ],
+  "drop": [
+   "resource_banking"
+  ]
+ },
+ "787955": {
+  "add": [
+   "damage_prevention",
+   "temporary_buff",
+   "buff",
+   "bodyguard:counters",
+   "cooldowns",
+   "damage",
+   "merge_attach",
+   "buff:benefits",
+   "merge_attach:benefits",
+   "movement",
+   "once_per_game",
+   "piercing",
+   "target_choice"
+  ],
+  "drop": [
+   "attack_zero",
+   "immunity",
+   "stealth",
+   "tribal",
+   "zone_of_control",
+   "ranged",
+   "saving_throws",
+   "temporary_effect"
+  ]
+ },
+ "788178": {
+  "add": [
+   "targeting_rules",
+   "immunity",
+   "buff",
+   "merge_attach",
+   "passive",
+   "placement_rules",
+   "ranged",
+   "ranged:counters",
+   "stealth"
+  ],
+  "drop": [
+   "territory_trigger",
+   "spell_power:benefits"
+  ]
+ },
+ "786349": {
+  "add": [
+   "stat_gain",
+   "stat_loss",
+   "type_grant",
+   "buff",
+   "merge_attach",
+   "movement",
+   "placement_rules",
+   "reserve_bench"
+  ],
+  "drop": [
+   "ranged"
+  ]
+ },
+ "786395": {
+  "add": [
+   "coin_economy",
+   "damage_reduction",
+   "ranged",
+   "temporary_effect"
+  ],
+  "drop": [
+   "activated",
+   "piercing"
+  ]
+ },
+ "787629": {
+  "add": [
+   "buff",
+   "debuff",
+   "damage",
+   "stat_loss",
+   "merge_attach",
+   "once_per_game",
+   "placement_rules",
+   "random_effect",
+   "ranged",
+   "reserve_bench",
+   "stress_morale",
+   "temporary_effect",
+   "turn_start"
+  ],
+  "drop": [
+   "steal",
+   "spell_power:benefits"
+  ]
+ },
+ "785119": {
+  "add": [
+   "buff",
+   "debuff",
+   "merge_attach",
+   "passive"
+  ],
+  "drop": [
+   "piercing:grants"
+  ]
+ },
+ "787152": {
+  "add": [
+   "temporary_buff",
+   "damage_reduction",
+   "buff",
+   "merge_attach",
+   "movement",
+   "multi_attack",
+   "passive",
+   "piercing",
+   "placement_rules",
+   "ranged",
+   "reserve_bench",
+   "temporary_effect"
+  ],
+  "drop": [
+   "advantage",
+   "turn_end",
+   "zone_of_control"
+  ]
+ },
+ "788533": {
+  "add": [
+   "modal_choice",
+   "aoe_damage",
+   "bodyguard:counters",
+   "death_trigger",
+   "heal",
+   "immunity",
+   "buff",
+   "merge_attach",
+   "buff:benefits",
+   "merge_attach:benefits",
+   "movement",
+   "multi_attack",
+   "piercing",
+   "placement_rules",
+   "ranged",
+   "reserve_bench",
+   "stealth",
+   "target_choice",
+   "temporary_effect",
+   "terrain"
+  ],
+  "drop": [
+   "turn_start",
+   "zone_of_control",
+   "advantage",
+   "on_attack"
+  ]
+ },
+ "787786": {
+  "add": [
+   "aoe_damage",
+   "death_trigger",
+   "movement",
+   "multi_attack",
+   "ranged"
+  ],
+  "drop": [
+   "random_effect",
+   "temporary_buff"
+  ]
+ },
+ "788089": {
+  "add": [
+   "aoe_damage",
+   "cost_set",
+   "death_trigger",
+   "multi_attack",
+   "piercing",
+   "ranged",
+   "saving_throws:counters",
+   "terrain:counters"
+  ],
+  "drop": [
+   "advantage",
+   "tribal"
+  ]
+ },
+ "787669": {
+  "add": [
+   "regeneration",
+   "aoe_damage",
+   "damage_reduction",
+   "death_trigger",
+   "movement",
+   "turn_start"
+  ],
+  "drop": [
+   "random_effect",
+   "ranged",
+   "temporary_buff",
+   "heal"
+  ]
+ },
+ "787932": {
+  "add": [
+   "cheat_death",
+   "damage",
+   "damage_reduction",
+   "buff",
+   "merge_attach",
+   "movement",
+   "multi_attack",
+   "piercing",
+   "random_effect",
+   "saving_throws:counters",
+   "temporary_effect"
+  ],
+  "drop": [
+   "turn_end",
+   "zone_of_control",
+   "tribal"
+  ]
+ },
+ "784663": {
+  "add": [
+   "cooldowns",
+   "cost_set"
+  ],
+  "drop": [
+   "once_per_game",
+   "advantage"
+  ]
+ },
+ "786551": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": [
+   "piercing"
+  ]
+ },
+ "787625": {
+  "add": [
+   "reactions",
+   "damage_reduction",
+   "movement",
+   "placement_rules",
+   "random_effect",
+   "ranged",
+   "reserve_bench",
+   "start_of_game",
+   "stress_morale"
+  ],
+  "drop": [
+   "passive",
+   "turn_start",
+   "zone_of_control"
+  ]
+ },
+ "786927": {
+  "add": [
+   "cooldowns",
+   "cost_reduction"
+  ],
+  "drop": [
+   "once_per_game"
+  ]
+ },
+ "788100": {
+  "add": [
+   "advantage",
+   "buff",
+   "merge_attach",
+   "movement",
+   "placement_rules",
+   "reserve_bench"
+  ],
+  "drop": [
+   "items_consumables",
+   "ranged"
+  ]
+ },
+ "785067": {
+  "add": [
+   "cooldowns",
+   "cost_set"
+  ],
+  "drop": [
+   "once_per_game"
+  ]
+ },
+ "788355": {
+  "add": [
+   "cheat_death",
+   "counterattack",
+   "buff",
+   "merge_attach",
+   "passive",
+   "placement_rules",
+   "ranged",
+   "reserve_bench"
+  ],
+  "drop": [
+   "advantage",
+   "death_trigger"
+  ]
+ },
+ "786278": {
+  "add": [
+   "buff",
+   "merge_attach",
+   "movement",
+   "passive"
+  ],
+  "drop": [
+   "immunity"
+  ]
+ },
+ "786167": {
+  "add": [
+   "target_choice",
+   "ranged"
+  ],
+  "drop": [
+   "piercing"
+  ]
+ },
+ "786809": {
+  "add": [
+   "start_of_game",
+   "reserve_bench"
+  ],
+  "drop": []
+ },
+ "787910": {
+  "add": [
+   "aoe_damage",
+   "condition",
+   "multi_attack",
+   "passive",
+   "ranged",
+   "terrain:counters"
+  ],
+  "drop": [
+   "stat_gain",
+   "advantage"
+  ]
+ },
+ "784405": {
+  "add": [
+   "ranged"
+  ],
+  "drop": [
+   "temporary_effect"
+  ]
+ },
+ "786705": {
+  "add": [
+   "cooldowns",
+   "cost_reduction"
+  ],
+  "drop": [
+   "once_per_game"
+  ]
+ },
+ "784470": {
+  "add": [
+   "advantage",
+   "deckbuilding_effect",
+   "movement",
+   "ranged",
+   "type_grant"
+  ],
+  "drop": [
+   "temporary_buff"
+  ]
+ },
+ "785847": {
+  "add": [
+   "permanent_growth"
+  ],
+  "drop": [
+   "zone_of_control"
+  ]
+ },
+ "787788": {
+  "add": [
+   "bodyguard:counters",
+   "cost_set",
+   "damage",
+   "damage_reduction",
+   "buff",
+   "merge_attach",
+   "buff:benefits",
+   "merge_attach:benefits",
+   "movement",
+   "multi_attack",
+   "on_attack",
+   "once_per_game",
+   "piercing",
+   "ranged",
+   "saving_throws:counters",
+   "stress_morale",
+   "target_choice",
+   "terrain:counters",
+   "zone_control"
+  ],
+  "drop": [
+   "turn_end",
+   "advantage",
+   "tribal",
+   "drawback"
+  ]
+ },
+ "788390": {
+  "add": [
+   "multi_attack",
+   "piercing",
+   "regeneration"
+  ],
+  "drop": [
+   "activated",
+   "advantage",
+   "ranged"
+  ]
+ },
+ "787424": {
+  "add": [
+   "reactions",
+   "drawback",
+   "movement",
+   "random_effect",
+   "stress_morale"
+  ],
+  "drop": [
+   "stat_gain",
+   "damage",
+   "on_attack",
+   "ranged",
+   "passive",
+   "zone_of_control"
+  ]
+ },
+ "787335": {
+  "add": [
+   "cheat_death",
+   "damage",
+   "damage_reduction",
+   "drawback",
+   "buff",
+   "merge_attach",
+   "movement",
+   "multi_attack",
+   "on_attack",
+   "passive",
+   "piercing",
+   "placement_rules",
+   "ranged",
+   "reserve_bench",
+   "saving_throws:counters",
+   "terrain:counters"
+  ],
+  "drop": [
+   "turn_end",
+   "zone_of_control",
+   "spell_power:benefits",
+   "advantage"
+  ]
+ },
+ "787274": {
+  "add": [
+   "piercing"
+  ],
+  "drop": [
+   "advantage",
+   "damage",
+   "tribal"
+  ]
+ },
+ "786282": {
+  "add": [
+   "buff",
+   "merge_attach",
+   "passive"
+  ],
+  "drop": []
+ },
+ "787557": {
+  "add": [
+   "buff",
+   "mark_target",
+   "temporary_buff",
+   "damage",
+   "damage_reduction",
+   "merge_attach",
+   "piercing",
+   "placement_rules",
+   "ranged",
+   "reserve_bench",
+   "saving_throws:counters",
+   "turn_start"
+  ],
+  "drop": [
+   "zone_of_control",
+   "tribal",
+   "spell_power:benefits",
+   "temporary_effect"
+  ]
+ },
+ "785091": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "786899": {
+  "add": [
+   "forced_movement",
+   "terrain"
+  ],
+  "drop": [
+   "zone_of_control"
+  ]
+ },
+ "784325": {
+  "add": [
+   "modal_choice",
+   "life_payment:cost",
+   "damage",
+   "ranged",
+   "temporary_buff"
+  ],
+  "drop": [
+   "advantage",
+   "stress_morale"
+  ]
+ },
+ "788068": {
+  "add": [
+   "stat_gain",
+   "buff",
+   "merge_attach",
+   "passive",
+   "piercing",
+   "ranged"
+  ],
+  "drop": [
+   "terrain",
+   "tribal",
+   "on_attack",
+   "damage"
+  ]
+ },
+ "787094": {
+  "add": [
+   "damage",
+   "random_effect"
+  ],
+  "drop": [
+   "zone_of_control"
+  ]
+ },
+ "815350": {
+  "add": [
+   "resource_gain",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "784825": {
+  "add": [
+   "stat_gain",
+   "passive",
+   "stress_morale",
+   "zone_control"
+  ],
+  "drop": []
+ },
+ "786837": {
+  "add": [
+   "stat_gain",
+   "passive"
+  ],
+  "drop": []
+ },
+ "786609": {
+  "add": [
+   "passive",
+   "stress_morale"
+  ],
+  "drop": []
+ },
+ "785330": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "784700": {
+  "add": [
+   "movement",
+   "ranged",
+   "temporary_effect"
+  ],
+  "drop": []
+ },
+ "786799": {
+  "add": [
+   "buff",
+   "merge_attach",
+   "buff:benefits",
+   "merge_attach:benefits"
+  ],
+  "drop": []
+ },
+ "786258": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "786524": {
+  "add": [
+   "regeneration"
+  ],
+  "drop": []
+ },
+ "784276": {
+  "add": [
+   "forced_movement",
+   "movement"
+  ],
+  "drop": []
+ },
+ "784412": {
+  "add": [
+   "movement",
+   "ranged"
+  ],
+  "drop": []
+ },
+ "787115": {
+  "add": [
+   "movement"
+  ],
+  "drop": []
+ },
+ "786217": {
+  "add": [
+   "damage_reduction",
+   "temporary_effect"
+  ],
+  "drop": []
+ },
+ "785360": {
+  "add": [
+   "permanent_growth"
+  ],
+  "drop": []
+ },
+ "784399": {
+  "add": [
+   "stat_gain",
+   "damage_reduction",
+   "passive",
+   "terrain",
+   "terrain:counters"
+  ],
+  "drop": []
+ },
+ "787025": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "785387": {
+  "add": [
+   "buff",
+   "merge_attach"
+  ],
+  "drop": []
+ },
+ "786547": {
+  "add": [
+   "stat_gain",
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "786838": {
+  "add": [
+   "stat_gain",
+   "passive"
+  ],
+  "drop": []
+ },
+ "815401": {
+  "add": [
+   "cost_set"
+  ],
+  "drop": []
+ },
+ "784847": {
+  "add": [
+   "advantage"
+  ],
+  "drop": []
+ },
+ "788586": {
+  "add": [
+   "aura",
+   "buff",
+   "random_effect",
+   "ranged",
+   "resource_gain",
+   "terrain",
+   "terrain:counters"
+  ],
+  "drop": []
+ },
+ "786924": {
+  "add": [
+   "ranged"
+  ],
+  "drop": []
+ },
+ "788652": {
+  "add": [
+   "aoe_damage",
+   "damage_reduction",
+   "death_trigger",
+   "heal",
+   "movement",
+   "passive",
+   "random_effect",
+   "ranged",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "785817": {
+  "add": [
+   "stat_gain",
+   "damage_reduction",
+   "stress_morale",
+   "zone_control"
+  ],
+  "drop": []
+ },
+ "785712": {
+  "add": [
+   "damage",
+   "piercing",
+   "ranged"
+  ],
+  "drop": []
+ },
+ "786881": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "786146": {
+  "add": [
+   "reserve_bench"
+  ],
+  "drop": []
+ },
+ "786186": {
+  "add": [
+   "cooldowns",
+   "reserve_bench",
+   "temporary_effect"
+  ],
+  "drop": []
+ },
+ "784781": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "786991": {
+  "add": [
+   "movement",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "785101": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "785409": {
+  "add": [
+   "stat_loss",
+   "passive",
+   "stress_morale",
+   "zone_control"
+  ],
+  "drop": []
+ },
+ "785265": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ }
 }

@@ -1,4038 +1,4049 @@
 {
-"749685": {
-"add": [
-"items_consumables"
-],
-"drop": [
-"evasion:counters",
-"ranged"
-]
-},
-"749144": {
-"add": [
-"sacrifice",
-"items_consumables"
-],
-"drop": []
-},
-"749671": {
-"add": [
-"sacrifice",
-"revive",
-"items_consumables"
-],
-"drop": []
-},
-"748841": {
-"add": [
-"random_effect",
-"items_consumables"
-],
-"drop": []
-},
-"749887": {
-"add": [
-"upgrade",
-"items_consumables"
-],
-"drop": [
-"death_count",
-"generate_cards"
-]
-},
-"749692": {
-"add": [
-"delayed",
-"items_consumables",
-"generate_cards",
-"selection"
-],
-"drop": []
-},
-"749695": {
-"add": [
-"delayed",
-"items_consumables"
-],
-"drop": []
-},
-"749117": {
-"add": [
-"repeat_trigger",
-"items_consumables"
-],
-"drop": []
-},
-"748810": {
-"add": [
-"repeat_trigger",
-"items_consumables"
-],
-"drop": []
-},
-"749122": {
-"add": [
-"repeat_trigger",
-"items_consumables"
-],
-"drop": []
-},
-"750294": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"750312": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"750334": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"749653": {
-"add": [
-"sacrifice",
-"items_consumables"
-],
-"drop": []
-},
-"748314": {
-"add": [
-"sacrifice",
-"revive"
-],
-"drop": []
-},
-"750270": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"750315": {
-"add": [
-"stakes_wager"
-],
-"drop": []
-},
-"748139": {
-"add": [
-"delayed",
-"drawback"
-],
-"drop": []
-},
-"750288": {
-"add": [
-"delayed",
-"drawback"
-],
-"drop": []
-},
-"748067": {
-"add": [
-"sacrifice",
-"buff"
-],
-"drop": []
-},
-"748051": {
-"add": [
-"swap"
-],
-"drop": []
-},
-"750298": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"750249": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"748116": {
-"add": [
-"damage",
-"delayed",
-"random_effect",
-"shop_gold"
-],
-"drop": []
-},
-"748053": {
-"add": [
-"selection"
-],
-"drop": []
-},
-"748728": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748729": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748730": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748731": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748732": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748733": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748734": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748735": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748736": {
-"add": [
-"items_consumables",
-"tribal",
-"combat_start",
-"generate_cards"
-],
-"drop": [
-"death_trigger"
-]
-},
-"748737": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748738": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748739": {
-"add": [
-"items_consumables",
-"type_grant",
-"generate_cards",
-"random_effect"
-],
-"drop": [
-"on_play"
-]
-},
-"748740": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748741": {
-"add": [
-"items_consumables",
-"generate_cards",
-"selection",
-"shop_gold",
-"turn_start"
-],
-"drop": []
-},
-"748742": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748743": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748744": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748745": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748746": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748747": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748748": {
-"add": [
-"items_consumables",
-"generate_cards",
-"random_effect",
-"turn_start"
-],
-"drop": [
-"on_play"
-]
-},
-"748749": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748750": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748751": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748754": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748755": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748756": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748757": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748758": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748759": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748760": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748761": {
-"add": [
-"items_consumables",
-"condition_count",
-"buff",
-"shop_gold"
-],
-"drop": []
-},
-"748762": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748763": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748764": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748765": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748766": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748767": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748768": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748769": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748770": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748771": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748772": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748773": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748774": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748775": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748776": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748777": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748778": {
-"add": [
-"items_consumables",
-"generate_cards",
-"tribal",
-"condition_count",
-"shop_gold",
-"random_effect"
-],
-"drop": []
-},
-"748779": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748780": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748781": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748783": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748784": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748785": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748786": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748787": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748788": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748789": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748790": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748791": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748792": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748793": {
-"add": [
-"items_consumables",
-"cost_condition",
-"buff"
-],
-"drop": []
-},
-"748794": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748795": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748796": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748797": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748798": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748799": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748800": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748801": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748802": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748803": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748804": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748805": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748806": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748807": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748808": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748809": {
-"add": [
-"items_consumables",
-"tribal",
-"combat_start",
-"generate_cards",
-"random_effect"
-],
-"drop": [
-"death_trigger",
-"on_spell",
-"turn_start"
-]
-},
-"748811": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748812": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748813": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748814": {
-"add": [
-"items_consumables",
-"on_attack",
-"tribal",
-"delayed",
-"resource_gain",
-"shop_gold"
-],
-"drop": []
-},
-"748815": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748816": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748817": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748818": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748819": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748820": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748821": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748822": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748823": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748824": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748825": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748826": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748827": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748828": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748829": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748830": {
-"add": [
-"items_consumables",
-"tribal",
-"cost_reduction",
-"on_ally_play",
-"shop_gold"
-],
-"drop": [
-"summon:benefits"
-]
-},
-"748831": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748832": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748833": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748834": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748835": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748836": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748837": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748838": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748839": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748840": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748842": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748843": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748844": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748845": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748846": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748847": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749016": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749084": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749085": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749086": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749087": {
-"add": [
-"items_consumables",
-"generate_cards",
-"turn_start"
-],
-"drop": []
-},
-"749088": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749089": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749090": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749091": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749092": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749093": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749094": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749095": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749096": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749097": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749098": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749099": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749100": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749101": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749102": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749103": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749104": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749105": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749106": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749108": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749110": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749111": {
-"add": [
-"items_consumables",
-"generate_cards",
-"once_per_game",
-"random_effect",
-"shop_gold"
-],
-"drop": []
-},
-"749112": {
-"add": [
-"items_consumables",
-"tribal",
-"combat_start",
-"positional",
-"revive:grants"
-],
-"drop": []
-},
-"749113": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749114": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749115": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749116": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749120": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749121": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749123": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749124": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749125": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749126": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749127": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749128": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749129": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749130": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749131": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749132": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749133": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749134": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749135": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749136": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749137": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749138": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749139": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749140": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749141": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749142": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749143": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749145": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749146": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749147": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749148": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749149": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749150": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749151": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749152": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749153": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749154": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749155": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749156": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749157": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749158": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749159": {
-"add": [
-"items_consumables",
-"copy",
-"generate_cards"
-],
-"drop": []
-},
-"749161": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749162": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749163": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749164": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749165": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749166": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749167": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749168": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749169": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749170": {
-"add": [
-"items_consumables",
-"cost_reduction",
-"shop_gold"
-],
-"drop": []
-},
-"749171": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749172": {
-"add": [
-"items_consumables",
-"generate_cards",
-"turn_start"
-],
-"drop": []
-},
-"749173": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749174": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749175": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749176": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749177": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749178": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749642": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749643": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749644": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749645": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749646": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749647": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749648": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749649": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749650": {
-"add": [
-"items_consumables",
-"death_count",
-"generate_cards",
-"condition_count",
-"random_effect"
-],
-"drop": []
-},
-"749651": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749652": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749654": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749655": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749656": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749657": {
-"add": [
-"items_consumables",
-"temporary_buff"
-],
-"drop": [
-"run_structure",
-"death_trigger"
-]
-},
-"749658": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749659": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749660": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749661": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749662": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749663": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749664": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749665": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749666": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749667": {
-"add": [
-"items_consumables",
-"generate_cards",
-"random_effect",
-"turn_start"
-],
-"drop": []
-},
-"749668": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749669": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749670": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749672": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749673": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749674": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749675": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749676": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749677": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749678": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749679": {
-"add": [
-"items_consumables",
-"tribal",
-"combat_start",
-"stat_condition"
-],
-"drop": []
-},
-"749680": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749681": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749682": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749683": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749686": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749687": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749688": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749690": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749691": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749693": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749694": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749697": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749698": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749699": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749700": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749701": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749702": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749703": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749704": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749705": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749706": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749707": {
-"add": [
-"items_consumables",
-"tribal",
-"buff",
-"on_ally_play",
-"summon:benefits"
-],
-"drop": []
-},
-"749708": {
-"add": [
-"items_consumables",
-"tribal",
-"buff",
-"generate_cards",
-"revive:grants"
-],
-"drop": [
-"on_spell",
-"turn_start"
-]
-},
-"749709": {
-"add": [
-"items_consumables",
-"generate_cards",
-"random_effect",
-"turn_start"
-],
-"drop": []
-},
-"749710": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749711": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749712": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749713": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749714": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749715": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749716": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749717": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749836": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749837": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749838": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749839": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749840": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749841": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749842": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749843": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749844": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749845": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749846": {
-"add": [
-"items_consumables",
-"on_attack:benefits",
-"combat_start",
-"shield:grants"
-],
-"drop": [
-"on_attack:grants"
-]
-},
-"749847": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749849": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749850": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749851": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749852": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749853": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749854": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749855": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749856": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749858": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749859": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749860": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749861": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749862": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749863": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749864": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749865": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749866": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749867": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749868": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749869": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749870": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749871": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749872": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749873": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749874": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749875": {
-"add": [
-"transform",
-"condition_count",
-"random_effect"
-],
-"drop": [
-"items_consumables:grants"
-]
-},
-"749876": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749877": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749878": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749879": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749880": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749881": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749882": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749883": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749884": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749885": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749886": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749888": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749889": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749890": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749891": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749892": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749893": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749894": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749895": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749896": {
-"add": [
-"items_consumables",
-"tribal",
-"positional",
-"turn_end"
-],
-"drop": []
-},
-"749897": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749898": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749899": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749900": {
-"add": [
-"items_consumables",
-"generate_cards",
-"tribal",
-"random_effect",
-"shop_gold"
-],
-"drop": []
-},
-"749901": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749902": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"749903": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"750054": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"750056": {
-"add": [
-"items_consumables",
-"combat_start",
-"copy",
-"stat_condition",
-"summon",
-"team_play"
-],
-"drop": []
-},
-"750057": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"750058": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"750060": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"750061": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"750062": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"750063": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"748262": {
-"add": [],
-"drop": [
-"movement"
-]
-},
-"748450": {
-"add": [
-"drawback",
-"damage_reduction"
-],
-"drop": [
-"life_payment:cost"
-]
-},
-"748488": {
-"add": [
-"life_payment:cost",
-"heal"
-],
-"drop": []
-},
-"748484": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"748502": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"748230": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"748234": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"748521": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"749282": {
-"add": [
-"repeat_trigger",
-"on_attack:benefits",
-"generate_cards"
-],
-"drop": []
-},
-"748522": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"748626": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"748508": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"748493": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"748254": {
-"add": [
-"self_destruct",
-"drawback"
-],
-"drop": []
-},
-"748501": {
-"add": [
-"upgrade"
-],
-"drop": [
-"scope_global"
-]
-},
-"748473": {
-"add": [
-"random_effect"
-],
-"drop": []
-},
-"748237": {
-"add": [
-"random_effect"
-],
-"drop": []
-},
-"748448": {
-"add": [
-"resource_banking"
-],
-"drop": []
-},
-"750041": {
-"add": [
-"team_play",
-"upgrade"
-],
-"drop": []
-},
-"748471": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"749945": {
-"add": [
-"adjacency"
-],
-"drop": []
-},
-"750139": {
-"add": [
-"hand_size"
-],
-"drop": [
-"slot_filler"
-]
-},
-"748571": {
-"add": [
-"sacrifice",
-"buff",
-"tribal"
-],
-"drop": [
-"destroy"
-]
-},
-"750160": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"749260": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"750204": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"750130": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"748694": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"748695": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"750151": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"748920": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"748604": {
-"add": [
-"stakes_wager"
-],
-"drop": []
-},
-"749802": {
-"add": [
-"delayed",
-"upgrade"
-],
-"drop": []
-},
-"748548": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"750135": {
-"add": [
-"recycle"
-],
-"drop": [
-"return_to_hand"
-]
-},
-"748213": {
-"add": [
-"positional"
-],
-"drop": []
-},
-"749358": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"749575": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"748535": {
-"add": [
-"sacrifice",
-"revive"
-],
-"drop": []
-},
-"748927": {
-"add": [
-"heal"
-],
-"drop": []
-},
-"749072": {
-"add": [
-"heal"
-],
-"drop": []
-},
-"749011": {
-"add": [
-"transform"
-],
-"drop": []
-},
-"749622": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"749806": {
-"add": [
-"friendly_fire",
-"symmetric_effect"
-],
-"drop": []
-},
-"748618": {
-"add": [
-"random_effect"
-],
-"drop": []
-},
-"749798": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"748532": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"750016": {
-"add": [],
-"drop": [
-"activated"
-]
-},
-"749298": {
-"add": [
-"repeat_trigger",
-"merge_attach"
-],
-"drop": []
-},
-"748871": {
-"add": [
-"turn_end",
-"repeat_trigger",
-"on_play"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749783": {
-"add": [
-"random_effect"
-],
-"drop": []
-},
-"749353": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"748396": {
-"add": [
-"self_destruct",
-"drawback"
-],
-"drop": []
-},
-"749959": {
-"add": [
-"repeat_trigger",
-"summon"
-],
-"drop": []
-},
-"750184": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"749362": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"748705": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"750051": {
-"add": [
-"team_play"
-],
-"drop": []
-},
-"750053": {
-"add": [
-"team_play"
-],
-"drop": []
-},
-"748682": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"749742": {
-"add": [
-"enemy_benefit",
-"drawback"
-],
-"drop": []
-},
-"748360": {
-"add": [
-"null_body"
-],
-"drop": []
-},
-"749043": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"748183": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"749235": {
-"add": [
-"repeat_trigger"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748653": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"749310": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"749192": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"748277": {
-"add": [
-"silence"
-],
-"drop": []
-},
-"748652": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"748686": {
-"add": [
-"enemy_benefit",
-"symmetric_effect"
-],
-"drop": []
-},
-"750101": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"748957": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"749985": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"749553": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"749474": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"750256": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"748428": {
-"add": [],
-"drop": [
-"multi_attack"
-]
-},
-"749960": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"749974": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"749735": {
-"add": [
-"null_body"
-],
-"drop": []
-},
-"750017": {
-"add": [
-"team_play"
-],
-"drop": []
-},
-"750194": {
-"add": [
-"heal"
-],
-"drop": []
-},
-"749436": {
-"add": [
-"heal"
-],
-"drop": []
-},
-"749587": {
-"add": [
-"multi_target_attack"
-],
-"drop": []
-},
-"749007": {
-"add": [
-"multi_target_attack"
-],
-"drop": []
-},
-"Pass": {
-"add": [
-"team_play"
-],
-"drop": []
-},
-"Buddy": {
-"add": [
-"generate_cards"
-],
-"drop": []
-},
-"Timewarp": {
-"add": [
-"shop_gold",
-"multiple_resources"
-],
-"drop": []
-},
-"800812": {
-"add": [
-"quests"
-],
-"drop": []
-},
-"800829": {
-"add": [
-"shop_gold"
-],
-"drop": []
-},
-"800846": {
-"add": [
-"modal_choice:benefits"
-],
-"drop": []
-},
-"800804": {
-"add": [
-"shop_gold",
-"random_effect"
-],
-"drop": []
-},
-"800819": {
-"add": [
-"shop_gold"
-],
-"drop": []
-},
-"748709": {
-"add": [
-"generate_cards"
-],
-"drop": []
-},
-"748524": {
-"add": [
-"copy",
-"generate_cards",
-"selection"
-],
-"drop": []
-},
-"750155": {
-"add": [
-"temporary_effect",
-"cost_reduction",
-"shop_gold"
-],
-"drop": []
-},
-"749947": {
-"add": [
-"taunt:grants",
-"on_play",
-"taunt"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"750048": {
-"add": [
-"cost_condition",
-"combat_start",
-"team_play",
-"transform"
-],
-"drop": []
-},
-"748417": {
-"add": [
-"death_trigger",
-"tribal",
-"free_play",
-"temporary_effect",
-"auto_battle:benefits"
-],
-"drop": [
-"death_count",
-"sacrifice:benefits"
-]
-},
-"750117": {
-"add": [
-"multi_attack",
-"shield"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748142": {
-"add": [
-"temporary_buff",
-"generate_cards"
-],
-"drop": [
-"auto_battle:benefits",
-"on_spell",
-"turn_start",
-"delayed",
-"buff"
-]
-},
-"748030": {
-"add": [
-"temporary_buff"
-],
-"drop": [
-"permanent_growth",
-"delayed",
-"auto_battle:benefits"
-]
-},
-"749002": {
-"add": [
-"tribal",
-"generate_cards",
-"selection",
-"shop_gold",
-"stat_set"
-],
-"drop": [
-"auto_battle:benefits",
-"transform"
-]
-},
-"748452": {
-"add": [
-"rule_change",
-"generate_cards",
-"selection",
-"shop_gold"
-],
-"drop": []
-},
-"749381": {
-"add": [
-"permanent_growth",
-"tribal",
-"upgrade",
-"on_ally_play"
-],
-"drop": [
-"summon:benefits",
-"auto_battle:benefits",
-"buff"
-]
-},
-"748151": {
-"add": [
-"temporary_effect",
-"shield:grants"
-],
-"drop": [
-"delayed"
-]
-},
-"748129": {
-"add": [
-"buff",
-"positional",
-"turn_end"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748060": {
-"add": [
-"combat_start",
-"stat_condition"
-],
-"drop": [
-"death_trigger"
-]
-},
-"748949": {
-"add": [
-"stat_set",
-"stat_condition"
-],
-"drop": []
-},
-"748144": {
-"add": [
-"shop_gold",
-"generate_cards",
-"on_play"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"750302": {
-"add": [
-"tribal",
-"shop_gold"
-],
-"drop": []
-},
-"748971": {
-"add": [
-"shop_gold"
-],
-"drop": [
-"copy"
-]
-},
-"749019": {
-"add": [
-"buff",
-"tribal",
-"merge_attach",
-"turn_end"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749507": {
-"add": [
-"generate_cards",
-"tribal",
-"condition_count",
-"random_effect"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749010": {
-"add": [
-"multi_attack",
-"on_attack",
-"permanent_growth",
-"transform"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749991": {
-"add": [
-"taunt:grants",
-"death_trigger",
-"summon",
-"taunt"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748113": {
-"add": [
-"condition",
-"cost_reduction",
-"generate_cards"
-],
-"drop": []
-},
-"749804": {
-"add": [
-"generate_cards",
-"condition_count",
-"shop_gold"
-],
-"drop": [
-"activated",
-"auto_battle:benefits"
-]
-},
-"748442": {
-"add": [
-"on_play:benefits"
-],
-"drop": [
-"auto_battle:benefits",
-"death_trigger",
-"repeat_trigger:benefits"
-]
-},
-"749290": {
-"add": [
-"on_play",
-"buff",
-"merge_attach"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748537": {
-"add": [
-"shield:grants",
-"death_count",
-"random_effect",
-"shield"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749447": {
-"add": [
-"repeat_trigger",
-"on_play:benefits",
-"turn_end"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"750181": {
-"add": [
-"on_play",
-"shop_gold"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"750211": {
-"add": [
-"death_trigger",
-"positional",
-"taunt",
-"upgrade"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749318": {
-"add": [
-"buff",
-"variety_payoff",
-"condition_count"
-],
-"drop": [
-"random_ability"
-]
-},
-"750174": {
-"add": [
-"cheat_death",
-"immunity",
-"temporary_effect",
-"trap_secret"
-],
-"drop": []
-},
-"750199": {
-"add": [
-"positional",
-"buff",
-"turn_end"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748167": {
-"add": [
-"permanent_growth",
-"resource_banking",
-"shop_gold",
-"turn_end"
-],
-"drop": [
-"auto_battle:benefits",
-"buff"
-]
-},
-"750084": {
-"add": [
-"permanent_growth",
-"turn_start"
-],
-"drop": [
-"auto_battle:benefits",
-"buff"
-]
-},
-"749059": {
-"add": [
-"spell_power",
-"generate_cards",
-"shop_gold"
-],
-"drop": [
-"auto_battle:benefits",
-"on_spell",
-"turn_start",
-"buff"
-]
-},
-"749752": {
-"add": [
-"repeat_trigger",
-"activated",
-"shop_gold:cost"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749797": {
-"add": [
-"adjacency",
-"on_spell",
-"permanent_growth"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749599": {
-"add": [
-"fodder",
-"turn_end"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"800860": {
-"add": [
-"cost_condition",
-"upgrade"
-],
-"drop": []
-},
-"748386": {
-"add": [
-"buff"
-],
-"drop": [
-"delayed"
-]
-},
-"750215": {
-"add": [
-"shop_gold"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748477": {
-"add": [
-"rule_change",
-"cost_condition",
-"shop_gold"
-],
-"drop": []
-},
-"749613": {
-"add": [
-"tribal",
-"buff",
-"on_ally_play",
-"permanent_growth",
-"summon:benefits"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"750124": {
-"add": [
-"deathtouch"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748147": {
-"add": [
-"temporary_buff",
-"taunt:grants"
-],
-"drop": [
-"delayed",
-"buff"
-]
-},
-"750035": {
-"add": [
-"copy",
-"shop_gold",
-"team_play"
-],
-"drop": [
-"activated",
-"auto_battle:benefits"
-]
-},
-"748205": {
-"add": [
-"quests",
-"modal_choice",
-"selection",
-"start_of_game"
-],
-"drop": [
-"turn_start"
-]
-},
-"749340": {
-"add": [
-"death_trigger",
-"generate_cards",
-"on_play"
-],
-"drop": [
-"auto_battle:benefits",
-"permanent_growth"
-]
-},
-"750187": {
-"add": [
-"shield:benefits",
-"buff",
-"hero_power"
-],
-"drop": [
-"auto_battle:benefits",
-"shield:grants"
-]
-},
-"748994": {
-"add": [],
-"drop": [
-"revive"
-]
-},
-"748074": {
-"add": [
-"tribal",
-"death_count",
-"generate_cards",
-"random_effect"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"800805": {
-"add": [
-"selection",
-"turn_start"
-],
-"drop": []
-},
-"800858": {
-"add": [
-"shop_gold",
-"team_play"
-],
-"drop": []
-},
-"749015": {
-"add": [
-"buff",
-"on_ally_play",
-"transform"
-],
-"drop": [
-"auto_battle:benefits",
-"summon:benefits"
-]
-},
-"749753": {
-"add": [
-"repeat_trigger",
-"combat_start"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"750242": {
-"add": [
-"permanent_growth"
-],
-"drop": [
-"auto_battle:benefits",
-"taunt"
-]
-},
-"749500": {
-"add": [
-"shield:benefits"
-],
-"drop": [
-"auto_battle:benefits",
-"shield:counters",
-"buff"
-]
-},
-"749541": {
-"add": [
-"death_count",
-"death_trigger",
-"generate_cards"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749989": {
-"add": [
-"on_play:benefits"
-],
-"drop": [
-"auto_battle:benefits",
-"repeat_trigger:benefits"
-]
-},
-"800857": {
-"add": [
-"on_ally_play",
-"team_play"
-],
-"drop": []
-},
-"748045": {
-"add": [
-"stat_set",
-"generate_cards",
-"shop_gold"
-],
-"drop": []
-},
-"750237": {
-"add": [
-"upgrade",
-"buff",
-"generate_cards",
-"generate_cards:benefits",
-"selection"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"750264": {
-"add": [
-"deathtouch"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748897": {
-"add": [
-"shield:grants",
-"temporary_effect",
-"tribal",
-"on_ally_play",
-"shield"
-],
-"drop": [
-"auto_battle:benefits",
-"delayed"
-]
-},
-"750087": {
-"add": [
-"tribal",
-"buff",
-"in_hand_buff",
-"on_play"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748872": {
-"add": [
-"generate_cards",
-"modal_choice"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"750197": {
-"add": [
-"temporary_buff"
-],
-"drop": [
-"auto_battle:benefits",
-"buff",
-"delayed"
-]
-},
-"749793": {
-"add": [
-"repeat_trigger",
-"activated",
-"shield",
-"shop_gold:cost"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"750104": {
-"add": [
-"tribal",
-"auto_battle:benefits",
-"buff",
-"on_ally_play",
-"shield"
-],
-"drop": []
-},
-"749555": {
-"add": [
-"on_spell",
-"copy",
-"shop_gold"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749509": {
-"add": [
-"copy",
-"on_spell"
-],
-"drop": [
-"auto_battle:benefits",
-"generate_cards",
-"turn_start"
-]
-},
-"748028": {
-"add": [
-"multi_attack",
-"on_attack",
-"permanent_growth"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"800808": {
-"add": [
-"shop_gold",
-"turn_number"
-],
-"drop": []
-},
-"749440": {
-"add": [
-"death_trigger"
-],
-"drop": [
-"auto_battle:benefits",
-"buff"
-]
-},
-"749984": {
-"add": [
-"buff",
-"on_play"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748140": {
-"add": [
-"tribal",
-"on_ally_play",
-"permanent_growth",
-"summon:benefits"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749005": {
-"add": [
-"tribal",
-"transform"
-],
-"drop": []
-},
-"748408": {
-"add": [
-"buff",
-"on_spell",
-"shop_gold"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748158": {
-"add": [
-"tribal",
-"generate_cards",
-"selection"
-],
-"drop": []
-},
-"748319": {
-"add": [
-"delayed",
-"on_play",
-"resource_gain",
-"shop_gold"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748372": {
-"add": [
-"tribal",
-"buff",
-"death_trigger"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748092": {
-"add": [
-"death_count",
-"generate_cards",
-"random_effect"
-],
-"drop": [
-"auto_battle:benefits",
-"on_play"
-]
-},
-"749961": {
-"add": [
-"tribal",
-"merge_attach",
-"revive"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748083": {
-"add": [
-"buff",
-"tribal",
-"on_play"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749223": {
-"add": [
-"death_trigger",
-"generate_cards",
-"shield",
-"taunt"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749502": {
-"add": [
-"permanent_growth",
-"shield:benefits"
-],
-"drop": [
-"auto_battle:benefits",
-"shield:counters"
-]
-},
-"749262": {
-"add": [
-"buff",
-"on_spell"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748315": {
-"add": [
-"on_play",
-"upgrade"
-],
-"drop": [
-"auto_battle:benefits",
-"generate_cards"
-]
-},
-"750301": {
-"add": [
-"scope_global",
-"combat_start",
-"permanent_growth"
-],
-"drop": []
-},
-"749188": {
-"add": [
-"buff",
-"death_count",
-"delayed",
-"shop_gold"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749968": {
-"add": [
-"deathtouch"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749400": {
-"add": [
-"shield:grants",
-"on_ally_play",
-"shield"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"750162": {
-"add": [
-"tribal",
-"selection",
-"shop_gold"
-],
-"drop": []
-},
-"748121": {
-"add": [
-"death_trigger"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749354": {
-"add": [
-"buff",
-"death_trigger",
-"random_effect",
-"shop_gold"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749498": {
-"add": [
-"tribal",
-"buff",
-"death_trigger",
-"summon"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"749825": {
-"add": [
-"tribal",
-"merge_attach",
-"on_spell"
-],
-"drop": [
-"auto_battle:benefits"
-]
-},
-"748593": {
-"add": [
-"buff",
-"taunt:grants"
-],
-"drop": []
-},
-"748288": {
-"add": [
-"auto_battle:benefits",
-"buff",
-"on_ally_play",
-"summon:benefits"
-],
-"drop": []
-},
-"748916": {
-"add": [
-"auto_battle:benefits",
-"copy",
-"on_ally_play",
-"summon",
-"summon:benefits"
-],
-"drop": []
-},
-"749930": {
-"add": [
-"fodder",
-"on_attack"
-],
-"drop": []
-},
-"749829": {
-"add": [
-"generate_cards"
-],
-"drop": []
-},
-"750156": {
-"add": [
-"generate_cards",
-"hand_size",
-"random_effect",
-"shop_gold"
-],
-"drop": []
-},
-"748958": {
-"add": [
-"shop_gold"
-],
-"drop": []
-},
-"749259": {
-"add": [
-"buff",
-"condition_count",
-"tribal"
-],
-"drop": []
-},
-"749630": {
-"add": [
-"buff",
-"random_effect"
-],
-"drop": []
-},
-"748720": {
-"add": [
-"copy",
-"generate_cards",
-"random_effect"
-],
-"drop": []
-},
-"750273": {
-"add": [
-"random_effect",
-"shop_gold",
-"stat_multiply"
-],
-"drop": []
-},
-"748259": {
-"add": [
-"buff",
-"multi_attack:grants"
-],
-"drop": []
-},
-"749589": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"750365": {
-"add": [
-"multiple_resources",
-"shop_gold"
-],
-"drop": []
-},
-"748486": {
-"add": [
-"enemy_benefit",
-"symmetric_effect",
-"turn_start"
-],
-"drop": []
-},
-"748701": {
-"add": [
-"buff"
-],
-"drop": []
-},
-"748507": {
-"add": [
-"hero_power"
-],
-"drop": []
-}
+ "749685": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": [
+   "evasion:counters",
+   "ranged"
+  ]
+ },
+ "749144": {
+  "add": [
+   "sacrifice",
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749671": {
+  "add": [
+   "sacrifice",
+   "revive",
+   "summon",
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748841": {
+  "add": [
+   "random_effect",
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749887": {
+  "add": [
+   "upgrade",
+   "items_consumables"
+  ],
+  "drop": [
+   "death_count",
+   "generate_cards"
+  ]
+ },
+ "749692": {
+  "add": [
+   "delayed",
+   "items_consumables",
+   "generate_cards",
+   "selection"
+  ],
+  "drop": []
+ },
+ "749695": {
+  "add": [
+   "delayed",
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749117": {
+  "add": [
+   "repeat_trigger",
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748810": {
+  "add": [
+   "repeat_trigger",
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749122": {
+  "add": [
+   "repeat_trigger",
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "750294": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "750312": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "750334": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "749653": {
+  "add": [
+   "sacrifice",
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748314": {
+  "add": [
+   "sacrifice",
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "750270": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "750315": {
+  "add": [
+   "stakes_wager"
+  ],
+  "drop": []
+ },
+ "748139": {
+  "add": [
+   "delayed",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "750288": {
+  "add": [
+   "delayed",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "748067": {
+  "add": [
+   "sacrifice",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "748051": {
+  "add": [
+   "swap"
+  ],
+  "drop": []
+ },
+ "750298": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "750249": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "748116": {
+  "add": [
+   "damage",
+   "delayed",
+   "random_effect",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "748053": {
+  "add": [
+   "selection"
+  ],
+  "drop": []
+ },
+ "748728": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748729": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748730": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748731": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748732": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748733": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748734": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748735": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748736": {
+  "add": [
+   "items_consumables",
+   "tribal",
+   "combat_start",
+   "generate_cards"
+  ],
+  "drop": [
+   "death_trigger"
+  ]
+ },
+ "748737": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748738": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748739": {
+  "add": [
+   "items_consumables",
+   "type_grant",
+   "generate_cards",
+   "random_effect"
+  ],
+  "drop": [
+   "on_play"
+  ]
+ },
+ "748740": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748741": {
+  "add": [
+   "items_consumables",
+   "generate_cards",
+   "selection",
+   "shop_gold",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "748742": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748743": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748744": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748745": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748746": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748747": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748748": {
+  "add": [
+   "items_consumables",
+   "generate_cards",
+   "random_effect",
+   "turn_start"
+  ],
+  "drop": [
+   "on_play"
+  ]
+ },
+ "748749": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748750": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748751": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748754": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748755": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748756": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748757": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748758": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748759": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748760": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748761": {
+  "add": [
+   "items_consumables",
+   "condition_count",
+   "stat_gain",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "748762": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748763": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748764": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748765": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748766": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748767": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748768": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748769": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748770": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748771": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748772": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748773": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748774": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748775": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748776": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748777": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748778": {
+  "add": [
+   "items_consumables",
+   "generate_cards",
+   "tribal",
+   "condition_count",
+   "shop_gold",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "748779": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748780": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748781": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748783": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748784": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748785": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748786": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748787": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748788": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748789": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748790": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748791": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748792": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748793": {
+  "add": [
+   "items_consumables",
+   "cost_condition",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "748794": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748795": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748796": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748797": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748798": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748799": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748800": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748801": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748802": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748803": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748804": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748805": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748806": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748807": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748808": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748809": {
+  "add": [
+   "items_consumables",
+   "tribal",
+   "combat_start",
+   "generate_cards",
+   "random_effect"
+  ],
+  "drop": [
+   "death_trigger",
+   "on_spell",
+   "turn_start"
+  ]
+ },
+ "748811": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748812": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748813": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748814": {
+  "add": [
+   "items_consumables",
+   "on_attack",
+   "tribal",
+   "delayed",
+   "resource_gain",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "748815": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748816": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748817": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748818": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748819": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748820": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748821": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748822": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748823": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748824": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748825": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748826": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748827": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748828": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748829": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748830": {
+  "add": [
+   "items_consumables",
+   "tribal",
+   "cost_reduction",
+   "on_ally_play",
+   "shop_gold"
+  ],
+  "drop": [
+   "summon:benefits"
+  ]
+ },
+ "748831": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748832": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748833": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748834": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748835": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748836": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748837": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748838": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748839": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748840": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748842": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748843": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748844": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748845": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748846": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748847": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749016": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749084": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749085": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749086": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749087": {
+  "add": [
+   "items_consumables",
+   "generate_cards",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "749088": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749089": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749090": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749091": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749092": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749093": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749094": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749095": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749096": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749097": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749098": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749099": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749100": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749101": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749102": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749103": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749104": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749105": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749106": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749108": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749110": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749111": {
+  "add": [
+   "items_consumables",
+   "generate_cards",
+   "once_per_game",
+   "random_effect",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "749112": {
+  "add": [
+   "items_consumables",
+   "tribal",
+   "combat_start",
+   "positional",
+   "revive:grants",
+   "summon:grants"
+  ],
+  "drop": []
+ },
+ "749113": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749114": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749115": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749116": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749120": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749121": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749123": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749124": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749125": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749126": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749127": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749128": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749129": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749130": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749131": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749132": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749133": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749134": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749135": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749136": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749137": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749138": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749139": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749140": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749141": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749142": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749143": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749145": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749146": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749147": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749148": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749149": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749150": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749151": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749152": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749153": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749154": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749155": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749156": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749157": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749158": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749159": {
+  "add": [
+   "items_consumables",
+   "copy",
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "749161": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749162": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749163": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749164": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749165": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749166": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749167": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749168": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749169": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749170": {
+  "add": [
+   "items_consumables",
+   "cost_reduction",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "749171": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749172": {
+  "add": [
+   "items_consumables",
+   "generate_cards",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "749173": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749174": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749175": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749176": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749177": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749178": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749642": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749643": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749644": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749645": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749646": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749647": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749648": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749649": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749650": {
+  "add": [
+   "items_consumables",
+   "death_count",
+   "generate_cards",
+   "condition_count",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "749651": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749652": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749654": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749655": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749656": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749657": {
+  "add": [
+   "items_consumables",
+   "temporary_buff"
+  ],
+  "drop": [
+   "run_structure",
+   "death_trigger"
+  ]
+ },
+ "749658": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749659": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749660": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749661": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749662": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749663": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749664": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749665": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749666": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749667": {
+  "add": [
+   "items_consumables",
+   "generate_cards",
+   "random_effect",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "749668": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749669": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749670": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749672": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749673": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749674": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749675": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749676": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749677": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749678": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749679": {
+  "add": [
+   "items_consumables",
+   "tribal",
+   "combat_start",
+   "stat_condition"
+  ],
+  "drop": []
+ },
+ "749680": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749681": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749682": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749683": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749686": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749687": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749688": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749690": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749691": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749693": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749694": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749697": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749698": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749699": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749700": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749701": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749702": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749703": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749704": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749705": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749706": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749707": {
+  "add": [
+   "items_consumables",
+   "tribal",
+   "stat_gain",
+   "on_ally_play",
+   "summon:benefits"
+  ],
+  "drop": []
+ },
+ "749708": {
+  "add": [
+   "items_consumables",
+   "tribal",
+   "stat_gain",
+   "generate_cards",
+   "revive:grants",
+   "summon:grants"
+  ],
+  "drop": [
+   "on_spell",
+   "turn_start"
+  ]
+ },
+ "749709": {
+  "add": [
+   "items_consumables",
+   "generate_cards",
+   "random_effect",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "749710": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749711": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749712": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749713": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749714": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749715": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749716": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749717": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749836": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749837": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749838": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749839": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749840": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749841": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749842": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749843": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749844": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749845": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749846": {
+  "add": [
+   "items_consumables",
+   "on_attack:benefits",
+   "combat_start",
+   "shield:grants"
+  ],
+  "drop": [
+   "on_attack:grants"
+  ]
+ },
+ "749847": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749849": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749850": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749851": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749852": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749853": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749854": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749855": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749856": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749858": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749859": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749860": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749861": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749862": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749863": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749864": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749865": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749866": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749867": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749868": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749869": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749870": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749871": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749872": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749873": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749874": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749875": {
+  "add": [
+   "transform",
+   "condition_count",
+   "random_effect"
+  ],
+  "drop": [
+   "items_consumables:grants"
+  ]
+ },
+ "749876": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749877": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749878": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749879": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749880": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749881": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749882": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749883": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749884": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749885": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749886": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749888": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749889": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749890": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749891": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749892": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749893": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749894": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749895": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749896": {
+  "add": [
+   "items_consumables",
+   "tribal",
+   "positional",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "749897": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749898": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749899": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749900": {
+  "add": [
+   "items_consumables",
+   "generate_cards",
+   "tribal",
+   "random_effect",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "749901": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749902": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "749903": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "750054": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "750056": {
+  "add": [
+   "items_consumables",
+   "combat_start",
+   "copy",
+   "stat_condition",
+   "summon",
+   "team_play"
+  ],
+  "drop": []
+ },
+ "750057": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "750058": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "750060": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "750061": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "750062": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "750063": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "748262": {
+  "add": [],
+  "drop": [
+   "movement"
+  ]
+ },
+ "748450": {
+  "add": [
+   "drawback",
+   "damage_reduction"
+  ],
+  "drop": [
+   "life_payment:cost"
+  ]
+ },
+ "748488": {
+  "add": [
+   "life_payment:cost",
+   "heal"
+  ],
+  "drop": []
+ },
+ "748484": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "748502": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "748230": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "748234": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "748521": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "749282": {
+  "add": [
+   "repeat_trigger",
+   "on_attack:benefits",
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "748522": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "748626": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "748508": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "748493": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "748254": {
+  "add": [
+   "self_destruct",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "748501": {
+  "add": [
+   "upgrade"
+  ],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "748473": {
+  "add": [
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "748237": {
+  "add": [
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "748448": {
+  "add": [
+   "resource_banking"
+  ],
+  "drop": []
+ },
+ "750041": {
+  "add": [
+   "team_play",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "748471": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "749945": {
+  "add": [
+   "adjacency"
+  ],
+  "drop": []
+ },
+ "750139": {
+  "add": [
+   "hand_size"
+  ],
+  "drop": [
+   "slot_filler"
+  ]
+ },
+ "748571": {
+  "add": [
+   "sacrifice",
+   "stat_gain",
+   "tribal"
+  ],
+  "drop": [
+   "destroy"
+  ]
+ },
+ "750160": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "749260": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "750204": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "750130": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "748694": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "748695": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "750151": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "748920": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "748604": {
+  "add": [
+   "stakes_wager"
+  ],
+  "drop": []
+ },
+ "749802": {
+  "add": [
+   "delayed",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "748548": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "750135": {
+  "add": [
+   "recycle"
+  ],
+  "drop": [
+   "return_to_hand"
+  ]
+ },
+ "748213": {
+  "add": [
+   "positional"
+  ],
+  "drop": []
+ },
+ "749358": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "749575": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "748535": {
+  "add": [
+   "sacrifice",
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "748927": {
+  "add": [
+   "heal"
+  ],
+  "drop": []
+ },
+ "749072": {
+  "add": [
+   "heal"
+  ],
+  "drop": []
+ },
+ "749011": {
+  "add": [
+   "transform"
+  ],
+  "drop": []
+ },
+ "749622": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "749806": {
+  "add": [
+   "friendly_fire",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "748618": {
+  "add": [
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "749798": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "748532": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "750016": {
+  "add": [],
+  "drop": [
+   "activated"
+  ]
+ },
+ "749298": {
+  "add": [
+   "repeat_trigger",
+   "buff",
+   "merge_attach"
+  ],
+  "drop": []
+ },
+ "748871": {
+  "add": [
+   "turn_end",
+   "repeat_trigger",
+   "on_play"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749783": {
+  "add": [
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "749353": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "748396": {
+  "add": [
+   "self_destruct",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "749959": {
+  "add": [
+   "repeat_trigger",
+   "summon"
+  ],
+  "drop": []
+ },
+ "750184": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "749362": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "748705": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "750051": {
+  "add": [
+   "team_play"
+  ],
+  "drop": []
+ },
+ "750053": {
+  "add": [
+   "team_play"
+  ],
+  "drop": []
+ },
+ "748682": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "749742": {
+  "add": [
+   "enemy_benefit",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "748360": {
+  "add": [
+   "null_body"
+  ],
+  "drop": []
+ },
+ "749043": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "748183": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "749235": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748653": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "749310": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "749192": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "748277": {
+  "add": [
+   "silence"
+  ],
+  "drop": []
+ },
+ "748652": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "748686": {
+  "add": [
+   "enemy_benefit",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "750101": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "748957": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "749985": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "749553": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "749474": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "750256": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "748428": {
+  "add": [],
+  "drop": [
+   "multi_attack"
+  ]
+ },
+ "749960": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "749974": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "749735": {
+  "add": [
+   "null_body"
+  ],
+  "drop": []
+ },
+ "750017": {
+  "add": [
+   "team_play"
+  ],
+  "drop": []
+ },
+ "750194": {
+  "add": [
+   "heal"
+  ],
+  "drop": []
+ },
+ "749436": {
+  "add": [
+   "heal"
+  ],
+  "drop": []
+ },
+ "749587": {
+  "add": [
+   "multi_target_attack"
+  ],
+  "drop": []
+ },
+ "749007": {
+  "add": [
+   "multi_target_attack"
+  ],
+  "drop": []
+ },
+ "Pass": {
+  "add": [
+   "team_play"
+  ],
+  "drop": []
+ },
+ "Buddy": {
+  "add": [
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "Timewarp": {
+  "add": [
+   "shop_gold",
+   "multiple_resources"
+  ],
+  "drop": []
+ },
+ "800812": {
+  "add": [
+   "quests"
+  ],
+  "drop": []
+ },
+ "800829": {
+  "add": [
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "800846": {
+  "add": [
+   "modal_choice:benefits"
+  ],
+  "drop": []
+ },
+ "800804": {
+  "add": [
+   "shop_gold",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "800819": {
+  "add": [
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "748709": {
+  "add": [
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "748524": {
+  "add": [
+   "copy",
+   "generate_cards",
+   "selection"
+  ],
+  "drop": []
+ },
+ "750155": {
+  "add": [
+   "temporary_effect",
+   "cost_reduction",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "749947": {
+  "add": [
+   "taunt:grants",
+   "on_play",
+   "taunt"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "750048": {
+  "add": [
+   "cost_condition",
+   "combat_start",
+   "team_play",
+   "transform"
+  ],
+  "drop": []
+ },
+ "748417": {
+  "add": [
+   "death_trigger",
+   "tribal",
+   "free_play",
+   "temporary_effect",
+   "auto_battle:benefits"
+  ],
+  "drop": [
+   "death_count",
+   "sacrifice:benefits"
+  ]
+ },
+ "750117": {
+  "add": [
+   "multi_attack",
+   "shield"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748142": {
+  "add": [
+   "temporary_buff",
+   "generate_cards"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "on_spell",
+   "turn_start",
+   "delayed",
+   "stat_gain"
+  ]
+ },
+ "748030": {
+  "add": [
+   "temporary_buff"
+  ],
+  "drop": [
+   "permanent_growth",
+   "delayed",
+   "auto_battle:benefits"
+  ]
+ },
+ "749002": {
+  "add": [
+   "tribal",
+   "generate_cards",
+   "selection",
+   "shop_gold",
+   "stat_gain"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "transform"
+  ]
+ },
+ "748452": {
+  "add": [
+   "rule_change",
+   "generate_cards",
+   "selection",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "749381": {
+  "add": [
+   "permanent_growth",
+   "tribal",
+   "upgrade",
+   "on_ally_play"
+  ],
+  "drop": [
+   "summon:benefits",
+   "auto_battle:benefits",
+   "stat_gain"
+  ]
+ },
+ "748151": {
+  "add": [
+   "temporary_effect",
+   "shield:grants"
+  ],
+  "drop": [
+   "delayed"
+  ]
+ },
+ "748129": {
+  "add": [
+   "stat_gain",
+   "positional",
+   "turn_end"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748060": {
+  "add": [
+   "combat_start",
+   "stat_condition"
+  ],
+  "drop": [
+   "death_trigger"
+  ]
+ },
+ "748949": {
+  "add": [
+   "stat_gain",
+   "stat_condition"
+  ],
+  "drop": []
+ },
+ "748144": {
+  "add": [
+   "shop_gold",
+   "generate_cards",
+   "on_play"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "750302": {
+  "add": [
+   "tribal",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "748971": {
+  "add": [
+   "shop_gold"
+  ],
+  "drop": [
+   "copy"
+  ]
+ },
+ "749019": {
+  "add": [
+   "stat_gain",
+   "tribal",
+   "buff",
+   "merge_attach",
+   "turn_end"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749507": {
+  "add": [
+   "generate_cards",
+   "tribal",
+   "condition_count",
+   "random_effect"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749010": {
+  "add": [
+   "multi_attack",
+   "on_attack",
+   "permanent_growth",
+   "transform"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749991": {
+  "add": [
+   "taunt:grants",
+   "death_trigger",
+   "summon",
+   "taunt"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748113": {
+  "add": [
+   "condition",
+   "cost_reduction",
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "749804": {
+  "add": [
+   "generate_cards",
+   "condition_count",
+   "shop_gold"
+  ],
+  "drop": [
+   "activated",
+   "auto_battle:benefits"
+  ]
+ },
+ "748442": {
+  "add": [
+   "on_play:benefits"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "death_trigger",
+   "repeat_trigger:benefits"
+  ]
+ },
+ "749290": {
+  "add": [
+   "on_play",
+   "stat_gain",
+   "buff",
+   "merge_attach"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748537": {
+  "add": [
+   "shield:grants",
+   "death_count",
+   "random_effect",
+   "shield"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749447": {
+  "add": [
+   "repeat_trigger",
+   "on_play:benefits",
+   "turn_end"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "750181": {
+  "add": [
+   "on_play",
+   "shop_gold"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "750211": {
+  "add": [
+   "death_trigger",
+   "positional",
+   "taunt",
+   "upgrade"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749318": {
+  "add": [
+   "stat_gain",
+   "variety_payoff",
+   "condition_count"
+  ],
+  "drop": [
+   "random_ability"
+  ]
+ },
+ "750174": {
+  "add": [
+   "cheat_death",
+   "immunity",
+   "temporary_effect",
+   "trap_secret"
+  ],
+  "drop": []
+ },
+ "750199": {
+  "add": [
+   "positional",
+   "stat_gain",
+   "turn_end"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748167": {
+  "add": [
+   "permanent_growth",
+   "resource_banking",
+   "shop_gold",
+   "turn_end"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "stat_gain"
+  ]
+ },
+ "750084": {
+  "add": [
+   "permanent_growth",
+   "turn_start"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "stat_gain"
+  ]
+ },
+ "749059": {
+  "add": [
+   "spell_power",
+   "generate_cards",
+   "shop_gold"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "on_spell",
+   "turn_start",
+   "stat_gain"
+  ]
+ },
+ "749752": {
+  "add": [
+   "repeat_trigger",
+   "activated",
+   "shop_gold:cost"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749797": {
+  "add": [
+   "adjacency",
+   "on_spell",
+   "permanent_growth"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749599": {
+  "add": [
+   "fodder",
+   "turn_end"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "800860": {
+  "add": [
+   "cost_condition",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "748386": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": [
+   "delayed"
+  ]
+ },
+ "750215": {
+  "add": [
+   "shop_gold"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748477": {
+  "add": [
+   "rule_change",
+   "cost_condition",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "749613": {
+  "add": [
+   "tribal",
+   "stat_gain",
+   "on_ally_play",
+   "permanent_growth",
+   "summon:benefits"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "750124": {
+  "add": [
+   "deathtouch"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748147": {
+  "add": [
+   "temporary_buff",
+   "taunt:grants"
+  ],
+  "drop": [
+   "delayed",
+   "stat_gain"
+  ]
+ },
+ "750035": {
+  "add": [
+   "copy",
+   "shop_gold",
+   "team_play"
+  ],
+  "drop": [
+   "activated",
+   "auto_battle:benefits"
+  ]
+ },
+ "748205": {
+  "add": [
+   "quests",
+   "modal_choice",
+   "selection",
+   "start_of_game"
+  ],
+  "drop": [
+   "turn_start"
+  ]
+ },
+ "749340": {
+  "add": [
+   "death_trigger",
+   "generate_cards",
+   "on_play"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "permanent_growth"
+  ]
+ },
+ "750187": {
+  "add": [
+   "shield:benefits",
+   "stat_gain",
+   "hero_power"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "shield:grants"
+  ]
+ },
+ "748994": {
+  "add": [],
+  "drop": [
+   "revive"
+  ]
+ },
+ "748074": {
+  "add": [
+   "tribal",
+   "death_count",
+   "generate_cards",
+   "random_effect"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "800805": {
+  "add": [
+   "selection",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "800858": {
+  "add": [
+   "shop_gold",
+   "team_play"
+  ],
+  "drop": []
+ },
+ "749015": {
+  "add": [
+   "stat_gain",
+   "on_ally_play",
+   "transform"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "summon:benefits"
+  ]
+ },
+ "749753": {
+  "add": [
+   "repeat_trigger",
+   "combat_start"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "750242": {
+  "add": [
+   "permanent_growth"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "taunt"
+  ]
+ },
+ "749500": {
+  "add": [
+   "shield:benefits"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "shield:counters",
+   "stat_gain"
+  ]
+ },
+ "749541": {
+  "add": [
+   "death_count",
+   "death_trigger",
+   "generate_cards"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749989": {
+  "add": [
+   "on_play:benefits"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "repeat_trigger:benefits"
+  ]
+ },
+ "800857": {
+  "add": [
+   "on_ally_play",
+   "team_play"
+  ],
+  "drop": []
+ },
+ "748045": {
+  "add": [
+   "stat_gain",
+   "generate_cards",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "750237": {
+  "add": [
+   "upgrade",
+   "stat_gain",
+   "generate_cards",
+   "generate_cards:benefits",
+   "selection"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "750264": {
+  "add": [
+   "deathtouch"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748897": {
+  "add": [
+   "shield:grants",
+   "temporary_effect",
+   "tribal",
+   "on_ally_play",
+   "shield"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "delayed"
+  ]
+ },
+ "750087": {
+  "add": [
+   "tribal",
+   "stat_gain",
+   "in_hand_buff",
+   "on_play"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748872": {
+  "add": [
+   "generate_cards",
+   "modal_choice"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "750197": {
+  "add": [
+   "temporary_buff"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "stat_gain",
+   "delayed"
+  ]
+ },
+ "749793": {
+  "add": [
+   "repeat_trigger",
+   "activated",
+   "shield",
+   "shop_gold:cost"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "750104": {
+  "add": [
+   "tribal",
+   "auto_battle:benefits",
+   "stat_gain",
+   "on_ally_play",
+   "shield"
+  ],
+  "drop": []
+ },
+ "749555": {
+  "add": [
+   "on_spell",
+   "copy",
+   "shop_gold"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749509": {
+  "add": [
+   "copy",
+   "on_spell"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "generate_cards",
+   "turn_start"
+  ]
+ },
+ "748028": {
+  "add": [
+   "multi_attack",
+   "on_attack",
+   "permanent_growth"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "800808": {
+  "add": [
+   "shop_gold",
+   "turn_number"
+  ],
+  "drop": []
+ },
+ "749440": {
+  "add": [
+   "death_trigger"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "stat_gain"
+  ]
+ },
+ "749984": {
+  "add": [
+   "stat_gain",
+   "on_play"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748140": {
+  "add": [
+   "tribal",
+   "on_ally_play",
+   "permanent_growth",
+   "summon:benefits"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749005": {
+  "add": [
+   "tribal",
+   "transform"
+  ],
+  "drop": []
+ },
+ "748408": {
+  "add": [
+   "stat_gain",
+   "on_spell",
+   "shop_gold"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748158": {
+  "add": [
+   "tribal",
+   "generate_cards",
+   "selection"
+  ],
+  "drop": []
+ },
+ "748319": {
+  "add": [
+   "delayed",
+   "on_play",
+   "resource_gain",
+   "shop_gold"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748372": {
+  "add": [
+   "tribal",
+   "stat_gain",
+   "death_trigger"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748092": {
+  "add": [
+   "death_count",
+   "generate_cards",
+   "random_effect"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "on_play"
+  ]
+ },
+ "749961": {
+  "add": [
+   "tribal",
+   "buff",
+   "merge_attach",
+   "revive",
+   "summon"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748083": {
+  "add": [
+   "stat_gain",
+   "tribal",
+   "on_play"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749223": {
+  "add": [
+   "death_trigger",
+   "generate_cards",
+   "shield",
+   "taunt"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749502": {
+  "add": [
+   "permanent_growth",
+   "shield:benefits"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "shield:counters"
+  ]
+ },
+ "749262": {
+  "add": [
+   "stat_gain",
+   "on_spell"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748315": {
+  "add": [
+   "on_play",
+   "upgrade"
+  ],
+  "drop": [
+   "auto_battle:benefits",
+   "generate_cards"
+  ]
+ },
+ "750301": {
+  "add": [
+   "scope_global",
+   "combat_start",
+   "permanent_growth"
+  ],
+  "drop": []
+ },
+ "749188": {
+  "add": [
+   "stat_gain",
+   "death_count",
+   "delayed",
+   "shop_gold"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749968": {
+  "add": [
+   "deathtouch"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749400": {
+  "add": [
+   "shield:grants",
+   "on_ally_play",
+   "shield"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "750162": {
+  "add": [
+   "tribal",
+   "selection",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "748121": {
+  "add": [
+   "death_trigger"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749354": {
+  "add": [
+   "stat_gain",
+   "death_trigger",
+   "random_effect",
+   "shop_gold"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749498": {
+  "add": [
+   "tribal",
+   "stat_gain",
+   "death_trigger",
+   "summon"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "749825": {
+  "add": [
+   "tribal",
+   "buff",
+   "merge_attach",
+   "on_spell"
+  ],
+  "drop": [
+   "auto_battle:benefits"
+  ]
+ },
+ "748593": {
+  "add": [
+   "stat_gain",
+   "taunt:grants"
+  ],
+  "drop": []
+ },
+ "748288": {
+  "add": [
+   "auto_battle:benefits",
+   "stat_gain",
+   "on_ally_play",
+   "summon:benefits"
+  ],
+  "drop": []
+ },
+ "748916": {
+  "add": [
+   "auto_battle:benefits",
+   "copy",
+   "on_ally_play",
+   "summon",
+   "summon:benefits"
+  ],
+  "drop": []
+ },
+ "749930": {
+  "add": [
+   "fodder",
+   "on_attack"
+  ],
+  "drop": []
+ },
+ "749829": {
+  "add": [
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "750156": {
+  "add": [
+   "generate_cards",
+   "hand_size",
+   "random_effect",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "748958": {
+  "add": [
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "749259": {
+  "add": [
+   "stat_gain",
+   "condition_count",
+   "tribal"
+  ],
+  "drop": []
+ },
+ "749630": {
+  "add": [
+   "stat_gain",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "748720": {
+  "add": [
+   "copy",
+   "generate_cards",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "750273": {
+  "add": [
+   "random_effect",
+   "shop_gold",
+   "stat_multiply"
+  ],
+  "drop": []
+ },
+ "748259": {
+  "add": [
+   "stat_gain",
+   "multi_attack:grants"
+  ],
+  "drop": []
+ },
+ "749589": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "750365": {
+  "add": [
+   "multiple_resources",
+   "shop_gold"
+  ],
+  "drop": []
+ },
+ "748486": {
+  "add": [
+   "enemy_benefit",
+   "symmetric_effect",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "748701": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "748507": {
+  "add": [
+   "hero_power"
+  ],
+  "drop": []
+ }
 }

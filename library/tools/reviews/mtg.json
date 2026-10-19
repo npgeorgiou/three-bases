@@ -1,1746 +1,1785 @@
 {
-"802891": {
-"add": [],
-"drop": [
-"rows"
-]
-},
-"806574": {
-"add": [],
-"drop": [
-"stat_multiply"
-]
-},
-"768669": {
-"add": [
-"disable",
-"random_effect"
-],
-"drop": []
-},
-"815843": {
-"add": [
-"type_grant"
-],
-"drop": []
-},
-"816029": {
-"add": [
-"type_grant"
-],
-"drop": []
-},
-"770505": {
-"add": [
-"blocking",
-"cost_reduction",
-"damage:counters",
-"damage_reduction",
-"evasion:counters",
-"graveyard",
-"high_cost:benefits",
-"immunity"
-],
-"drop": [
-"death_count",
-"ranged"
-]
-},
-"768144": {
-"add": [
-"death_trigger",
-"death_count",
-"evasion",
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": [
-"sacrifice:benefits"
-]
-},
-"774522": {
-"add": [
-"death_trigger",
-"turn_end",
-"steal",
-"banish",
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": [
-"death_count",
-"destroy:benefits",
-"sacrifice:benefits",
-"turn_start"
-]
-},
-"782512": {
-"add": [
-"cost_type:cost",
-"damage",
-"graveyard"
-],
-"drop": [
-"banish",
-"condition"
-]
-},
-"780984": {
-"add": [
-"cost_reduction",
-"on_play",
-"permanent_growth",
-"stacking_keyword",
-"support"
-],
-"drop": [
-"passive"
-]
-},
-"781745": {
-"add": [
-"free_play",
-"graveyard",
-"sacrifice",
-"sacrifice:cost",
-"tutor"
-],
-"drop": [
-"summon"
-]
-},
-"778663": {
-"add": [
-"condition",
-"permanent_growth",
-"stacking_keyword",
-"support",
-"turn_start",
-"tutor"
-],
-"drop": [
-"temporary_effect",
-"variable_stats"
-]
-},
-"773017": {
-"add": [
-"turn_end",
-"condition",
-"discard:benefits",
-"summon"
-],
-"drop": [
-"turn_start"
-]
-},
-"782262": {
-"add": [
-"protection:grants",
-"buff",
-"activated",
-"items_consumables",
-"merge_attach"
-],
-"drop": [
-"destroy:counters",
-"immunity:grants"
-]
-},
-"766984": {
-"add": [
-"turn_end",
-"activated",
-"attack_now",
-"copy",
-"on_attack",
-"permanent_growth",
-"sacrifice",
-"stacking_keyword",
-"summon",
-"transform"
-],
-"drop": [
-"turn_start"
-]
-},
-"779004": {
-"add": [
-"ping",
-"death_trigger",
-"activated",
-"direct_damage"
-],
-"drop": [
-"graveyard"
-]
-},
-"780429": {
-"add": [
-"damage_over_time",
-"direct_damage",
-"cost_type:cost",
-"merge_attach",
-"turn_start",
-"upkeep"
-],
-"drop": [
-"aura",
-"damage"
-]
-},
-"766042": {
-"add": [
-"information",
-"transform"
-],
-"drop": [
-"stealth"
-]
-},
-"780847": {
-"add": [
-"fodder",
-"resource_gain",
-"sacrifice",
-"summon"
-],
-"drop": []
-},
-"774895": {
-"add": [
-"counter_spell",
-"evasion"
-],
-"drop": []
-},
-"773641": {
-"add": [
-"on_play",
-"removal",
-"blocking",
-"blocking:counters",
-"deck_position",
-"evasion",
-"summon"
-],
-"drop": []
-},
-"769445": {
-"add": [
-"selection",
-"deck_position",
-"immunity",
-"information",
-"on_attack"
-],
-"drop": [
-"damage",
-"random_effect",
-"recycle"
-]
-},
-"776597": {
-"add": [
-"on_attack",
-"permanent_growth",
-"cost_increase",
-"discard",
-"draw",
-"evasion",
-"immunity",
-"shield"
-],
-"drop": [
-"buff"
-]
-},
-"767060": {
-"add": [
-"silence",
-"counter_spell",
-"spell_speed",
-"temporary_effect"
-],
-"drop": [
-"passive",
-"activated"
-]
-},
-"766784": {
-"add": [
-"disable",
-"on_attack",
-"temporary_buff"
-],
-"drop": [
-"blocking"
-]
-},
-"766887": {
-"add": [
-"cast_from_zone",
-"banish",
-"on_play",
-"on_spell",
-"temporary_buff"
-],
-"drop": []
-},
-"766343": {
-"add": [
-"drawback",
-"stat_condition",
-"on_attack",
-"lifesteal:grants",
-"permanent_growth",
-"summon",
-"temporary_buff",
-"tribal",
-"turn_start"
-],
-"drop": [
-"damage_over_time",
-"life_payment:cost"
-]
-},
-"778716": {
-"add": [
-"condition_count",
-"draw",
-"evasion",
-"hand_size",
-"return_to_hand",
-"variable_stats"
-],
-"drop": []
-},
-"773237": {
-"add": [
-"activated",
-"condition_count",
-"items_consumables",
-"resource_gain",
-"summon"
-],
-"drop": []
-},
-"767007": {
-"add": [
-"condition",
-"debuff",
-"first_strike",
-"multi_attack",
-"stacking_keyword"
-],
-"drop": [
-"copy",
-"damage"
-]
-},
-"783591": {
-"add": [
-"ping",
-"activated",
-"direct_damage",
-"on_play",
-"tutor"
-],
-"drop": [
-"information"
-]
-},
-"782524": {
-"add": [
-"copy",
-"repeat_trigger",
-"summon",
-"type_grant"
-],
-"drop": []
-},
-"804027": {
-"add": [
-"graveyard",
-"mill",
-"on_play",
-"return_to_hand"
-],
-"drop": [
-"revive"
-]
-},
-"777533": {
-"add": [
-"direct_damage",
-"reactions",
-"draw",
-"evasion"
-],
-"drop": [
-"damage"
-]
-},
-"773711": {
-"add": [
-"blocking",
-"evasion:counters",
-"temporary_buff",
-"trigger"
-],
-"drop": [
-"ranged",
-"resource_gain"
-]
-},
-"773309": {
-"add": [
-"condition_count",
-"buff",
-"evasion",
-"graveyard",
-"passive"
-],
-"drop": []
-},
-"781322": {
-"add": [
-"condition_count",
-"excess_damage",
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": [
-"blocking"
-]
-},
-"775679": {
-"add": [
-"cost_type",
-"delayed",
-"haste:grants",
-"on_play",
-"temporary_buff"
-],
-"drop": []
-},
-"779878": {
-"add": [
-"banish",
-"cast_from_zone",
-"cost_increase",
-"evasion",
-"first_strike",
-"graveyard",
-"immunity",
-"shield",
-"transform"
-],
-"drop": [
-"activated",
-"damage",
-"revive:counters"
-]
-},
-"806450": {
-"add": [
-"on_play",
-"activated",
-"free_play",
-"haste",
-"passive",
-"resource_gain",
-"transform",
-"tutor",
-"type_grant"
-],
-"drop": [
-"blocking",
-"summon"
-]
-},
-"772218": {
-"add": [
-"cost_type",
-"excess_damage"
-],
-"drop": []
-},
-"775899": {
-"add": [
-"activated",
-"blocking",
-"blocking:counters",
-"merge_attach"
-],
-"drop": [
-"aura"
-]
-},
-"770062": {
-"add": [
-"direct_damage",
-"on_play",
-"deathtouch",
-"draw",
-"heal",
-"on_attack"
-],
-"drop": [
-"damage"
-]
-},
-"777106": {
-"add": [
-"stat_set",
-"evasion:counters",
-"excess_damage",
-"immunity",
-"modal_choice",
-"ranged",
-"temporary_buff"
-],
-"drop": []
-},
-"782691": {
-"add": [
-"condition",
-"haste",
-"lifesteal",
-"passive"
-],
-"drop": []
-},
-"772349": {
-"add": [
-"cost_reduction",
-"information",
-"selection"
-],
-"drop": [
-"random_effect",
-"recycle"
-]
-},
-"775488": {
-"add": [
-"drawback",
-"activated",
-"untap"
-],
-"drop": []
-},
-"782643": {
-"add": [
-"selection",
-"tribal",
-"first_strike",
-"on_play"
-],
-"drop": [
-"damage",
-"information"
-]
-},
-"782839": {
-"add": [
-"banish",
-"blink",
-"buff",
-"condition_count",
-"deck_position",
-"delayed",
-"evasion:counters",
-"graveyard",
-"transform",
-"tutor"
-],
-"drop": [
-"ranged",
-"blocking",
-"information"
-]
-},
-"779120": {
-"add": [
-"condition",
-"condition_count",
-"first_strike",
-"multi_attack",
-"passive"
-],
-"drop": [
-"damage"
-]
-},
-"767191": {
-"add": [
-"turn_end",
-"free_play",
-"revive",
-"evasion",
-"graveyard",
-"haste:grants",
-"on_play",
-"return_to_hand"
-],
-"drop": [
-"turn_start"
-]
-},
-"774111": {
-"add": [
-"drawback",
-"draw",
-"hand_size",
-"on_ally_play"
-],
-"drop": [
-"summon:benefits"
-]
-},
-"779817": {
-"add": [
-"information",
-"temporary_effect",
-"blocking",
-"on_play",
-"transform"
-],
-"drop": [
-"stealth"
-]
-},
-"771793": {
-"add": [
-"protection",
-"condition",
-"activated",
-"passive",
-"summon"
-],
-"drop": [
-"immunity",
-"destroy:counters",
-"blocking:grants"
-]
-},
-"778247": {
-"add": [
-"condition_count",
-"copy",
-"summon",
-"trigger"
-],
-"drop": [
-"resource_gain"
-]
-},
-"801546": {
-"add": [
-"multi_attack",
-"on_attack",
-"stacking_keyword"
-],
-"drop": [
-"attack_now",
-"damage",
-"stat_multiply",
-"first_strike"
-]
-},
-"768922": {
-"add": [
-"copy",
-"on_attack",
-"on_spell",
-"resource_gain"
-],
-"drop": [
-"passive"
-]
-},
-"780635": {
-"add": [
-"tribal",
-"aura",
-"buff",
-"evasion:grants"
-],
-"drop": [
-"passive",
-"passive:grants"
-]
-},
-"782945": {
-"add": [
-"cast_from_zone",
-"delayed",
-"graveyard",
-"play_restriction",
-"return_to_hand",
-"temporary_effect"
-],
-"drop": [
-"modal_choice"
-]
-},
-"769634": {
-"add": [
-"activated",
-"first_strike",
-"free_play",
-"tutor"
-],
-"drop": [
-"damage",
-"summon"
-]
-},
-"771483": {
-"add": [
-"first_strike:grants",
-"multi_attack:grants",
-"temporary_buff"
-],
-"drop": [
-"damage"
-]
-},
-"783369": {
-"add": [
-"condition",
-"cost_type:cost",
-"summon"
-],
-"drop": []
-},
-"779117": {
-"add": [
-"deck_position",
-"condition",
-"activated",
-"free_play",
-"haste",
-"information",
-"on_attack",
-"passive",
-"selection",
-"stat_condition",
-"temporary_effect"
-],
-"drop": [
-"summon",
-"support"
-]
-},
-"778360": {
-"add": [
-"turn_end",
-"tribal",
-"cost_reduction",
-"generate_cards",
-"random_effect"
-],
-"drop": [
-"turn_start"
-]
-},
-"782323": {
-"add": [
-"free_play",
-"merge_attach",
-"on_attack",
-"tutor"
-],
-"drop": [
-"damage",
-"damage:benefits",
-"summon"
-]
-},
-"781647": {
-"add": [
-"cant_attack",
-"discard",
-"discard:benefits",
-"graveyard",
-"return_to_hand",
-"sacrifice"
-],
-"drop": [
-"revive",
-"tank"
-]
-},
-"767489": {
-"add": [
-"direct_damage",
-"activated",
-"aoe_damage",
-"sacrifice",
-"symmetric_effect"
-],
-"drop": []
-},
-"776303": {
-"add": [
-"drawback",
-"cheat_death",
-"evasion",
-"excess_damage",
-"regeneration",
-"sacrifice",
-"sacrifice:cost",
-"turn_start"
-],
-"drop": []
-},
-"779128": {
-"add": [
-"permanent_growth",
-"activated"
-],
-"drop": [
-"buff"
-]
-},
-"771704": {
-"add": [
-"disruption",
-"stacking_keyword"
-],
-"drop": [
-"summon"
-]
-},
-"782739": {
-"add": [
-"information",
-"selection"
-],
-"drop": [
-"recycle"
-]
-},
-"773581": {
-"add": [
-"condition_count",
-"cheat_death",
-"graveyard",
-"mill",
-"permanent_growth",
-"regeneration",
-"stacking_keyword"
-],
-"drop": [
-"death_count"
-]
-},
-"766446": {
-"add": [
-"disable",
-"activated",
-"evasion",
-"free_play",
-"on_attack",
-"scope_global"
-],
-"drop": [
-"banish",
-"summon"
-]
-},
-"772670": {
-"add": [
-"symmetric_effect",
-"haste:grants",
-"scope_global",
-"steal",
-"temporary_buff",
-"untap"
-],
-"drop": []
-},
-"783988": {
-"add": [
-"condition",
-"heal",
-"return_to_hand"
-],
-"drop": []
-},
-"801146": {
-"add": [
-"activated",
-"banish",
-"deathtouch",
-"draw",
-"excess_damage",
-"first_strike",
-"graveyard",
-"haste",
-"immunity",
-"lifesteal",
-"mill",
-"multi_attack",
-"on_play",
-"passive",
-"return_to_hand",
-"sacrifice",
-"sacrifice:cost",
-"transform",
-"variable_stats"
-],
-"drop": [
-"destroy:counters",
-"evasion:counters",
-"ranged",
-"revive"
-]
-},
-"773756": {
-"add": [
-"cost_type:cost",
-"draw"
-],
-"drop": [
-"discard"
-]
-},
-"779490": {
-"add": [
-"cant_block",
-"removal",
-"banish",
-"temporary_effect"
-],
-"drop": [
-"blocking",
-"blocking:counters"
-]
-},
-"777471": {
-"add": [
-"tribal",
-"on_attack",
-"draw",
-"evasion",
-"excess_damage",
-"haste",
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": [
-"blocking"
-]
-},
-"816116": {
-"add": [
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": [
-"heal"
-]
-},
-"777791": {
-"add": [
-"condition_count",
-"activated",
-"graveyard",
-"mill",
-"on_attack",
-"sacrifice",
-"summon"
-],
-"drop": [
-"resource_gain"
-]
-},
-"781306": {
-"add": [
-"steal",
-"cast_from_zone",
-"banish",
-"deathtouch",
-"information",
-"selection"
-],
-"drop": [
-"passive",
-"random_effect",
-"recycle"
-]
-},
-"784266": {
-"add": [
-"buff",
-"condition",
-"activated",
-"direct_damage",
-"excess_damage",
-"items_consumables",
-"merge_attach",
-"return_to_hand"
-],
-"drop": [
-"passive"
-]
-},
-"766228": {
-"add": [
-"removal",
-"banish",
-"cost_reduction",
-"on_play",
-"support"
-],
-"drop": [
-"passive"
-]
-},
-"778799": {
-"add": [
-"condition",
-"information",
-"selection"
-],
-"drop": [
-"generate_cards"
-]
-},
-"783083": {
-"add": [
-"on_ally_play",
-"stat_condition",
-"temporary_buff"
-],
-"drop": []
-},
-"770338": {
-"add": [
-"death_trigger",
-"summon"
-],
-"drop": [
-"death_count",
-"on_attack",
-"sacrifice:benefits"
-]
-},
-"783292": {
-"add": [
-"board_wipe",
-"destroy"
-],
-"drop": [
-"regeneration",
-"symmetric_effect"
-]
-},
-"772869": {
-"add": [
-"drawback",
-"delayed",
-"banish",
-"blink",
-"discard",
-"disruption",
-"draw",
-"lifesteal",
-"turn_start"
-],
-"drop": [
-"damage_over_time",
-"life_payment:cost"
-]
-},
-"780209": {
-"add": [
-"hand_deck_swap",
-"self_destruct",
-"activated",
-"draw",
-"graveyard",
-"recycle",
-"resource_gain",
-"stacking_keyword",
-"turn_start"
-],
-"drop": [
-"banish"
-]
-},
-"767913": {
-"add": [
-"condition",
-"draw",
-"sacrifice",
-"sacrifice:cost",
-"summon"
-],
-"drop": [
-"activated"
-]
-},
-"815757": {
-"add": [
-"multi_attack"
-],
-"drop": [
-"damage",
-"first_strike"
-]
-},
-"804988": {
-"add": [
-"banish",
-"cast_from_zone",
-"cost_type",
-"graveyard",
-"revive",
-"turn_structure"
-],
-"drop": [
-"stacking_keyword"
-]
-},
-"782820": {
-"add": [
-"condition",
-"damage",
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": []
-},
-"782166": {
-"add": [
-"permanent_growth",
-"deck_position",
-"first_strike",
-"on_play",
-"selection"
-],
-"drop": [
-"damage",
-"buff"
-]
-},
-"777909": {
-"add": [
-"graveyard",
-"tutor"
-],
-"drop": [
-"generate_cards"
-]
-},
-"777546": {
-"add": [
-"condition",
-"drawback",
-"evasion",
-"heal",
-"on_play",
-"sacrifice"
-],
-"drop": []
-},
-"766015": {
-"add": [
-"death_trigger",
-"condition",
-"permanent_growth",
-"revive"
-],
-"drop": []
-},
-"783950": {
-"add": [
-"random_effect",
-"attack_now",
-"condition_count",
-"on_attack",
-"summon"
-],
-"drop": [
-"coin_economy"
-]
-},
-"784005": {
-"add": [
-"reactions",
-"condition",
-"ping"
-],
-"drop": [
-"draw",
-"draw:benefits"
-]
-},
-"777054": {
-"add": [
-"condition",
-"summon"
-],
-"drop": [
-"alt_wincon:grants",
-"cast_from_zone:grants",
-"cost_type:grants",
-"damage_over_time",
-"damage_over_time:grants",
-"graveyard:grants",
-"passive"
-]
-},
-"781274": {
-"add": [
-"buff",
-"activated",
-"evasion:grants",
-"items_consumables",
-"merge_attach"
-],
-"drop": []
-},
-"766972": {
-"add": [
-"turn_end",
-"cost_reduction",
-"excess_damage",
-"in_hand_buff"
-],
-"drop": [
-"turn_start"
-]
-},
-"773668": {
-"add": [
-"stat_condition",
-"damage",
-"delayed",
-"stat_set",
-"summon",
-"type_grant",
-"type_grant:grants"
-],
-"drop": []
-},
-"771930": {
-"add": [
-"death_trigger",
-"condition",
-"mark_target",
-"deathtouch",
-"draw",
-"heal",
-"turn_start"
-],
-"drop": [
-"stacking_keyword"
-]
-},
-"802852": {
-"add": [
-"buff",
-"destroy",
-"merge_attach",
-"sacrifice"
-],
-"drop": [
-"aura",
-"board_wipe"
-]
-},
-"772048": {
-"add": [
-"tribal",
-"summon",
-"copy",
-"kicker",
-"on_play",
-"temporary_buff"
-],
-"drop": [
-"aura"
-]
-},
-"769092": {
-"add": [
-"drawback",
-"condition",
-"banish",
-"permanent_growth",
-"sacrifice",
-"stacking_keyword"
-],
-"drop": []
-},
-"774529": {
-"add": [
-"in_hand_buff",
-"activated",
-"cost_reduction",
-"drawback",
-"life_payment:cost"
-],
-"drop": []
-},
-"767122": {
-"add": [
-"turn_end",
-"on_play",
-"condition_count",
-"summon"
-],
-"drop": [
-"turn_start"
-]
-},
-"768387": {
-"add": [
-"activated",
-"banish",
-"tribal"
-],
-"drop": []
-},
-"766594": {
-"add": [
-"tribal",
-"on_play",
-"summon",
-"transform"
-],
-"drop": [
-"activated",
-"delayed",
-"blocking:grants"
-]
-},
-"781103": {
-"add": [
-"resource_gain",
-"activated",
-"on_attack",
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": [
-"damage"
-]
-},
-"775390": {
-"add": [
-"banish",
-"copy",
-"evasion:grants",
-"on_attack",
-"random_effect",
-"summon"
-],
-"drop": [
-"damage",
-"damage:benefits"
-]
-},
-"774971": {
-"add": [
-"stat_condition",
-"condition",
-"activated",
-"destroy",
-"heal"
-],
-"drop": [
-"discard",
-"selection"
-]
-},
-"769685": {
-"add": [
-"condition",
-"buff",
-"counter_spell:counters",
-"passive"
-],
-"drop": []
-},
-"777491": {
-"add": [
-"aoe_damage",
-"direct_damage",
-"graveyard",
-"tutor"
-],
-"drop": [
-"damage",
-"information"
-]
-},
-"775696": {
-"add": [
-"untap",
-"activated",
-"merge_attach"
-],
-"drop": []
-},
-"768356": {
-"add": [
-"ping"
-],
-"drop": [
-"damage"
-]
-},
-"771608": {
-"add": [
-"condition_count",
-"activated",
-"heal",
-"items_consumables",
-"on_play",
-"resource_gain",
-"sacrifice",
-"summon",
-"temporary_buff"
-],
-"drop": [
-"upkeep"
-]
-},
-"771347": {
-"add": [
-"deck_modification",
-"buff",
-"copy",
-"generate_cards",
-"haste",
-"random_effect"
-],
-"drop": [
-"temporary_effect",
-"support"
-]
-},
-"774526": {
-"add": [
-"condition_count",
-"destroy",
-"evasion:grants",
-"graveyard",
-"permanent_growth",
-"stacking_keyword",
-"temporary_buff"
-],
-"drop": [
-"death_count"
-]
-},
-"783583": {
-"add": [
-"hand_disruption",
-"discard",
-"evasion",
-"on_attack"
-],
-"drop": []
-},
-"771630": {
-"add": [
-"stat_condition",
-"removal",
-"banish",
-"damage_reduction"
-],
-"drop": [
-"damage:counters"
-]
-},
-"815726": {
-"add": [
-"excess_damage",
-"haste"
-],
-"drop": []
-},
-"769964": {
-"add": [
-"activated",
-"destroy",
-"on_play",
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": []
-},
-"769167": {
-"add": [
-"temporary_effect",
-"type_grant"
-],
-"drop": []
-},
-"784048": {
-"add": [
-"activated",
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": []
-},
-"780073": {
-"add": [
-"cast_from_zone",
-"deathtouch",
-"deck_position",
-"information",
-"life_payment:cost",
-"lifesteal",
-"on_attack",
-"selection",
-"temporary_effect"
-],
-"drop": []
-},
-"773405": {
-"add": [
-"damage",
-"distribute"
-],
-"drop": []
-},
-"780600": {
-"add": [
-"damage",
-"distribute",
-"sacrifice",
-"sacrifice:cost",
-"stealth",
-"transform"
-],
-"drop": []
-},
-"773786": {
-"add": [
-"cost_type:cost",
-"debuff",
-"on_play",
-"summon"
-],
-"drop": []
-},
-"766757": {
-"add": [
-"activated",
-"counter_spell"
-],
-"drop": []
-},
-"769370": {
-"add": [
-"banish",
-"cost_type",
-"delayed",
-"direct_damage",
-"stacking_keyword",
-"turn_start"
-],
-"drop": []
-},
-"782919": {
-"add": [
-"return_to_hand"
-],
-"drop": []
-},
-"776130": {
-"add": [
-"condition_count",
-"cost_increase",
-"haste:grants",
-"scope_multi",
-"steal",
-"temporary_buff",
-"untap"
-],
-"drop": []
-},
-"782010": {
-"add": [
-"graveyard",
-"graveyard:benefits",
-"heal"
-],
-"drop": []
-},
-"779484": {
-"add": [
-"activated",
-"deathtouch:grants",
-"items_consumables",
-"lifesteal",
-"merge_attach",
-"on_attack",
-"temporary_buff"
-],
-"drop": []
-},
-"778500": {
-"add": [
-"cost_type",
-"delayed",
-"evasion",
-"on_play",
-"return_to_hand",
-"turn_start"
-],
-"drop": []
-},
-"767026": {
-"add": [
-"cost_increase",
-"immunity",
-"on_spell",
-"permanent_growth",
-"shield",
-"stacking_keyword"
-],
-"drop": []
-},
-"816138": {
-"add": [
-"activated",
-"direct_damage",
-"on_play",
-"resource_gain"
-],
-"drop": []
-},
-"771646": {
-"add": [
-"combo_sequence",
-"draw:benefits",
-"summon"
-],
-"drop": []
-},
-"783126": {
-"add": [
-"summon"
-],
-"drop": []
-},
-"774992": {
-"add": [
-"activated",
-"counter_spell:counters",
-"evasion",
-"temporary_buff"
-],
-"drop": []
-},
-"810045": {
-"add": [
-"activated",
-"banish",
-"free_play",
-"graveyard",
-"mill",
-"revive",
-"tutor"
-],
-"drop": []
-},
-"782039": {
-"add": [
-"banish",
-"death_trigger",
-"discard",
-"graveyard",
-"on_play",
-"revive"
-],
-"drop": []
-},
-"778169": {
-"add": [
-"activated",
-"haste:grants",
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": []
-},
-"772681": {
-"add": [
-"temporary_buff"
-],
-"drop": []
-},
-"779787": {
-"add": [
-"permanent_growth",
-"stacking_keyword"
-],
-"drop": []
-},
-"779820": {
-"add": [
-"activated",
-"cheat_death",
-"evasion",
-"life_payment:cost",
-"regeneration"
-],
-"drop": []
-},
-"802991": {
-"add": [
-"copy",
-"type_grant"
-],
-"drop": []
-},
-"768816": {
-"add": [
-"activated",
-"heal",
-"sacrifice",
-"sacrifice:cost",
-"turn_start"
-],
-"drop": []
-},
-"766522": {
-"add": [
-"banish",
-"deck_position",
-"graveyard",
-"resource_gain",
-"selection",
-"turn_start"
-],
-"drop": []
-},
-"774337": {
-"add": [
-"delayed",
-"direct_damage",
-"forced_attack",
-"resource_gain",
-"temporary_effect"
-],
-"drop": []
-},
-"772175": {
-"add": [
-"play_restriction",
-"symmetric_effect"
-],
-"drop": []
-}
+ "802891": {
+  "add": [],
+  "drop": [
+   "rows"
+  ]
+ },
+ "806574": {
+  "add": [],
+  "drop": [
+   "stat_multiply"
+  ]
+ },
+ "768669": {
+  "add": [
+   "disable",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "815843": {
+  "add": [
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "816029": {
+  "add": [
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "770505": {
+  "add": [
+   "blocking",
+   "cost_reduction",
+   "damage:counters",
+   "damage_reduction",
+   "evasion:counters",
+   "graveyard",
+   "high_cost:benefits",
+   "immunity"
+  ],
+  "drop": [
+   "death_count",
+   "ranged"
+  ]
+ },
+ "768144": {
+  "add": [
+   "death_trigger",
+   "death_count",
+   "evasion",
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "sacrifice:benefits"
+  ]
+ },
+ "774522": {
+  "add": [
+   "death_trigger",
+   "turn_end",
+   "steal",
+   "banish",
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "death_count",
+   "destroy:benefits",
+   "sacrifice:benefits",
+   "turn_start"
+  ]
+ },
+ "782512": {
+  "add": [
+   "cost_type:cost",
+   "damage",
+   "graveyard"
+  ],
+  "drop": [
+   "banish",
+   "condition"
+  ]
+ },
+ "780984": {
+  "add": [
+   "cost_reduction",
+   "on_play",
+   "permanent_growth",
+   "stacking_keyword",
+   "support"
+  ],
+  "drop": [
+   "passive"
+  ]
+ },
+ "781745": {
+  "add": [
+   "free_play",
+   "graveyard",
+   "sacrifice",
+   "sacrifice:cost",
+   "tutor"
+  ],
+  "drop": [
+   "summon"
+  ]
+ },
+ "778663": {
+  "add": [
+   "condition",
+   "permanent_growth",
+   "stacking_keyword",
+   "support",
+   "turn_start",
+   "tutor"
+  ],
+  "drop": [
+   "temporary_effect",
+   "variable_stats"
+  ]
+ },
+ "773017": {
+  "add": [
+   "turn_end",
+   "condition",
+   "discard:benefits",
+   "summon"
+  ],
+  "drop": [
+   "turn_start"
+  ]
+ },
+ "782262": {
+  "add": [
+   "protection:grants",
+   "stat_gain",
+   "activated",
+   "items_consumables",
+   "buff",
+   "merge_attach"
+  ],
+  "drop": [
+   "destroy:counters",
+   "immunity:grants"
+  ]
+ },
+ "766984": {
+  "add": [
+   "turn_end",
+   "activated",
+   "attack_now",
+   "copy",
+   "on_attack",
+   "permanent_growth",
+   "sacrifice",
+   "stacking_keyword",
+   "summon",
+   "transform"
+  ],
+  "drop": [
+   "turn_start"
+  ]
+ },
+ "779004": {
+  "add": [
+   "ping",
+   "death_trigger",
+   "activated",
+   "direct_damage"
+  ],
+  "drop": [
+   "graveyard"
+  ]
+ },
+ "780429": {
+  "add": [
+   "damage_over_time",
+   "direct_damage",
+   "cost_type:cost",
+   "buff",
+   "merge_attach",
+   "turn_start",
+   "upkeep"
+  ],
+  "drop": [
+   "aura",
+   "damage"
+  ]
+ },
+ "766042": {
+  "add": [
+   "information",
+   "transform"
+  ],
+  "drop": [
+   "stealth"
+  ]
+ },
+ "780847": {
+  "add": [
+   "fodder",
+   "resource_gain",
+   "cost_type",
+   "sacrifice",
+   "summon"
+  ],
+  "drop": []
+ },
+ "774895": {
+  "add": [
+   "counter_spell",
+   "evasion"
+  ],
+  "drop": []
+ },
+ "773641": {
+  "add": [
+   "on_play",
+   "removal",
+   "blocking",
+   "blocking:counters",
+   "deck_position",
+   "evasion",
+   "summon"
+  ],
+  "drop": []
+ },
+ "769445": {
+  "add": [
+   "selection",
+   "deck_position",
+   "immunity",
+   "information",
+   "on_attack"
+  ],
+  "drop": [
+   "damage",
+   "random_effect",
+   "recycle"
+  ]
+ },
+ "776597": {
+  "add": [
+   "on_attack",
+   "permanent_growth",
+   "cost_increase",
+   "discard",
+   "draw",
+   "evasion",
+   "immunity",
+   "shield"
+  ],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "767060": {
+  "add": [
+   "silence",
+   "counter_spell",
+   "spell_speed",
+   "temporary_effect"
+  ],
+  "drop": [
+   "passive",
+   "activated"
+  ]
+ },
+ "766784": {
+  "add": [
+   "disable",
+   "on_attack",
+   "temporary_buff"
+  ],
+  "drop": [
+   "blocking"
+  ]
+ },
+ "766887": {
+  "add": [
+   "cast_from_zone",
+   "banish",
+   "on_play",
+   "on_spell",
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "766343": {
+  "add": [
+   "drawback",
+   "stat_condition",
+   "on_attack",
+   "lifesteal:grants",
+   "permanent_growth",
+   "summon",
+   "temporary_buff",
+   "tribal",
+   "turn_start"
+  ],
+  "drop": [
+   "damage_over_time",
+   "life_payment:cost"
+  ]
+ },
+ "778716": {
+  "add": [
+   "condition_count",
+   "draw",
+   "evasion",
+   "hand_size",
+   "return_to_hand",
+   "variable_stats"
+  ],
+  "drop": []
+ },
+ "773237": {
+  "add": [
+   "activated",
+   "condition_count",
+   "items_consumables",
+   "resource_gain",
+   "summon"
+  ],
+  "drop": []
+ },
+ "767007": {
+  "add": [
+   "condition",
+   "stat_loss",
+   "first_strike",
+   "multi_attack",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "copy",
+   "damage"
+  ]
+ },
+ "783591": {
+  "add": [
+   "ping",
+   "activated",
+   "direct_damage",
+   "on_play",
+   "draw",
+   "tutor"
+  ],
+  "drop": [
+   "information"
+  ]
+ },
+ "782524": {
+  "add": [
+   "copy",
+   "repeat_trigger",
+   "summon",
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "804027": {
+  "add": [
+   "graveyard",
+   "self_mill",
+   "on_play",
+   "return_to_hand"
+  ],
+  "drop": [
+   "revive"
+  ]
+ },
+ "777533": {
+  "add": [
+   "direct_damage",
+   "reactions",
+   "draw",
+   "evasion"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "773711": {
+  "add": [
+   "blocking",
+   "evasion:counters",
+   "temporary_buff",
+   "trigger"
+  ],
+  "drop": [
+   "ranged",
+   "resource_gain"
+  ]
+ },
+ "773309": {
+  "add": [
+   "condition_count",
+   "stat_gain",
+   "evasion",
+   "graveyard",
+   "passive"
+  ],
+  "drop": []
+ },
+ "781322": {
+  "add": [
+   "condition_count",
+   "excess_damage",
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "blocking"
+  ]
+ },
+ "775679": {
+  "add": [
+   "cost_type",
+   "delayed",
+   "haste:grants",
+   "on_play",
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "779878": {
+  "add": [
+   "banish",
+   "cast_from_zone",
+   "cost_increase",
+   "evasion",
+   "first_strike",
+   "graveyard",
+   "immunity",
+   "shield",
+   "transform"
+  ],
+  "drop": [
+   "activated",
+   "damage",
+   "revive:counters"
+  ]
+ },
+ "806450": {
+  "add": [
+   "on_play",
+   "activated",
+   "free_play",
+   "haste",
+   "passive",
+   "resource_gain",
+   "transform",
+   "tutor",
+   "type_grant"
+  ],
+  "drop": [
+   "blocking",
+   "summon"
+  ]
+ },
+ "772218": {
+  "add": [
+   "cost_type",
+   "excess_damage"
+  ],
+  "drop": []
+ },
+ "775899": {
+  "add": [
+   "activated",
+   "blocking",
+   "blocking:counters",
+   "debuff",
+   "merge_attach"
+  ],
+  "drop": [
+   "aura"
+  ]
+ },
+ "770062": {
+  "add": [
+   "direct_damage",
+   "on_play",
+   "deathtouch",
+   "draw",
+   "heal",
+   "on_attack"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "777106": {
+  "add": [
+   "stat_gain",
+   "stat_loss",
+   "evasion:counters",
+   "excess_damage",
+   "immunity",
+   "modal_choice",
+   "ranged",
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "782691": {
+  "add": [
+   "condition",
+   "haste",
+   "lifesteal",
+   "passive"
+  ],
+  "drop": []
+ },
+ "772349": {
+  "add": [
+   "cost_reduction",
+   "information",
+   "selection"
+  ],
+  "drop": [
+   "random_effect",
+   "recycle"
+  ]
+ },
+ "775488": {
+  "add": [
+   "drawback",
+   "activated",
+   "untap"
+  ],
+  "drop": []
+ },
+ "782643": {
+  "add": [
+   "selection",
+   "tribal",
+   "first_strike",
+   "on_play"
+  ],
+  "drop": [
+   "damage",
+   "information"
+  ]
+ },
+ "782839": {
+  "add": [
+   "banish",
+   "blink",
+   "stat_gain",
+   "condition_count",
+   "deck_position",
+   "delayed",
+   "evasion:counters",
+   "graveyard",
+   "transform",
+   "draw",
+   "tutor"
+  ],
+  "drop": [
+   "ranged",
+   "blocking",
+   "information"
+  ]
+ },
+ "779120": {
+  "add": [
+   "condition",
+   "condition_count",
+   "first_strike",
+   "multi_attack",
+   "passive"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "767191": {
+  "add": [
+   "turn_end",
+   "free_play",
+   "revive",
+   "summon",
+   "evasion",
+   "graveyard",
+   "haste:grants",
+   "on_play",
+   "return_to_hand"
+  ],
+  "drop": [
+   "turn_start"
+  ]
+ },
+ "774111": {
+  "add": [
+   "drawback",
+   "draw",
+   "hand_size",
+   "on_ally_play"
+  ],
+  "drop": [
+   "summon:benefits"
+  ]
+ },
+ "779817": {
+  "add": [
+   "information",
+   "temporary_effect",
+   "blocking",
+   "on_play",
+   "transform"
+  ],
+  "drop": [
+   "stealth"
+  ]
+ },
+ "771793": {
+  "add": [
+   "protection",
+   "condition",
+   "activated",
+   "passive",
+   "summon"
+  ],
+  "drop": [
+   "immunity",
+   "destroy:counters",
+   "blocking:grants"
+  ]
+ },
+ "778247": {
+  "add": [
+   "condition_count",
+   "copy",
+   "summon",
+   "trigger"
+  ],
+  "drop": [
+   "resource_gain"
+  ]
+ },
+ "801546": {
+  "add": [
+   "multi_attack",
+   "on_attack",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "attack_now",
+   "damage",
+   "stat_multiply",
+   "first_strike"
+  ]
+ },
+ "768922": {
+  "add": [
+   "copy",
+   "on_attack",
+   "on_spell",
+   "resource_gain"
+  ],
+  "drop": [
+   "passive"
+  ]
+ },
+ "780635": {
+  "add": [
+   "tribal",
+   "aura",
+   "buff",
+   "stat_gain",
+   "evasion:grants"
+  ],
+  "drop": [
+   "passive",
+   "passive:grants"
+  ]
+ },
+ "782945": {
+  "add": [
+   "cast_from_zone",
+   "delayed",
+   "graveyard",
+   "play_restriction",
+   "bounce_enemy",
+   "return_to_hand",
+   "temporary_effect"
+  ],
+  "drop": [
+   "modal_choice"
+  ]
+ },
+ "769634": {
+  "add": [
+   "activated",
+   "first_strike",
+   "free_play",
+   "tutor"
+  ],
+  "drop": [
+   "damage",
+   "summon"
+  ]
+ },
+ "771483": {
+  "add": [
+   "first_strike:grants",
+   "multi_attack:grants",
+   "temporary_buff"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "783369": {
+  "add": [
+   "condition",
+   "cost_type:cost",
+   "summon"
+  ],
+  "drop": []
+ },
+ "779117": {
+  "add": [
+   "deck_position",
+   "condition",
+   "activated",
+   "free_play",
+   "haste",
+   "information",
+   "on_attack",
+   "passive",
+   "selection",
+   "stat_condition",
+   "temporary_effect"
+  ],
+  "drop": [
+   "summon",
+   "support"
+  ]
+ },
+ "778360": {
+  "add": [
+   "turn_end",
+   "tribal",
+   "cost_reduction",
+   "generate_cards",
+   "random_effect"
+  ],
+  "drop": [
+   "turn_start"
+  ]
+ },
+ "782323": {
+  "add": [
+   "free_play",
+   "buff",
+   "merge_attach",
+   "on_attack",
+   "tutor"
+  ],
+  "drop": [
+   "damage",
+   "damage:benefits",
+   "summon"
+  ]
+ },
+ "781647": {
+  "add": [
+   "cant_attack",
+   "discard",
+   "discard:benefits",
+   "graveyard",
+   "return_to_hand",
+   "sacrifice"
+  ],
+  "drop": [
+   "revive",
+   "tank"
+  ]
+ },
+ "767489": {
+  "add": [
+   "direct_damage",
+   "activated",
+   "aoe_damage",
+   "cost_type",
+   "sacrifice",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "776303": {
+  "add": [
+   "drawback",
+   "cheat_death",
+   "evasion",
+   "excess_damage",
+   "regeneration",
+   "cost_type",
+   "sacrifice",
+   "cost_type:cost",
+   "sacrifice:cost",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "779128": {
+  "add": [
+   "permanent_growth",
+   "activated"
+  ],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "771704": {
+  "add": [
+   "disruption",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "summon"
+  ]
+ },
+ "782739": {
+  "add": [
+   "information",
+   "selection"
+  ],
+  "drop": [
+   "recycle"
+  ]
+ },
+ "773581": {
+  "add": [
+   "condition_count",
+   "cheat_death",
+   "graveyard",
+   "self_mill",
+   "permanent_growth",
+   "regeneration",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "death_count"
+  ]
+ },
+ "766446": {
+  "add": [
+   "disable",
+   "activated",
+   "evasion",
+   "free_play",
+   "on_attack",
+   "scope_global"
+  ],
+  "drop": [
+   "banish",
+   "summon"
+  ]
+ },
+ "772670": {
+  "add": [
+   "symmetric_effect",
+   "haste:grants",
+   "scope_global",
+   "steal",
+   "temporary_buff",
+   "untap"
+  ],
+  "drop": []
+ },
+ "783988": {
+  "add": [
+   "condition",
+   "heal",
+   "bounce_enemy",
+   "return_to_hand"
+  ],
+  "drop": []
+ },
+ "801146": {
+  "add": [
+   "activated",
+   "banish",
+   "deathtouch",
+   "draw",
+   "excess_damage",
+   "first_strike",
+   "graveyard",
+   "haste",
+   "immunity",
+   "lifesteal",
+   "self_mill",
+   "multi_attack",
+   "on_play",
+   "passive",
+   "return_to_hand",
+   "sacrifice",
+   "sacrifice:cost",
+   "transform",
+   "variable_stats"
+  ],
+  "drop": [
+   "destroy:counters",
+   "evasion:counters",
+   "ranged",
+   "revive"
+  ]
+ },
+ "773756": {
+  "add": [
+   "cost_type:cost",
+   "draw"
+  ],
+  "drop": [
+   "discard"
+  ]
+ },
+ "779490": {
+  "add": [
+   "cant_block",
+   "removal",
+   "banish",
+   "temporary_effect"
+  ],
+  "drop": [
+   "blocking",
+   "blocking:counters"
+  ]
+ },
+ "777471": {
+  "add": [
+   "tribal",
+   "on_attack",
+   "draw",
+   "evasion",
+   "excess_damage",
+   "haste",
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "blocking"
+  ]
+ },
+ "816116": {
+  "add": [
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "heal"
+  ]
+ },
+ "777791": {
+  "add": [
+   "condition_count",
+   "activated",
+   "graveyard",
+   "self_mill",
+   "on_attack",
+   "cost_type",
+   "sacrifice",
+   "summon"
+  ],
+  "drop": [
+   "resource_gain"
+  ]
+ },
+ "781306": {
+  "add": [
+   "steal",
+   "cast_from_zone",
+   "banish",
+   "deathtouch",
+   "information",
+   "selection"
+  ],
+  "drop": [
+   "passive",
+   "random_effect",
+   "recycle"
+  ]
+ },
+ "784266": {
+  "add": [
+   "stat_gain",
+   "condition",
+   "activated",
+   "direct_damage",
+   "excess_damage",
+   "items_consumables",
+   "buff",
+   "merge_attach",
+   "bounce_enemy",
+   "return_to_hand"
+  ],
+  "drop": [
+   "passive"
+  ]
+ },
+ "766228": {
+  "add": [
+   "removal",
+   "banish",
+   "cost_reduction",
+   "on_play",
+   "support"
+  ],
+  "drop": [
+   "passive"
+  ]
+ },
+ "778799": {
+  "add": [
+   "condition",
+   "information",
+   "selection"
+  ],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "783083": {
+  "add": [
+   "on_ally_play",
+   "stat_condition",
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "770338": {
+  "add": [
+   "death_trigger",
+   "summon"
+  ],
+  "drop": [
+   "death_count",
+   "on_attack",
+   "sacrifice:benefits"
+  ]
+ },
+ "783292": {
+  "add": [
+   "board_wipe",
+   "destroy"
+  ],
+  "drop": [
+   "regeneration",
+   "symmetric_effect"
+  ]
+ },
+ "772869": {
+  "add": [
+   "drawback",
+   "delayed",
+   "banish",
+   "blink",
+   "hand_disruption",
+   "disruption",
+   "draw",
+   "lifesteal",
+   "turn_start"
+  ],
+  "drop": [
+   "damage_over_time",
+   "life_payment:cost"
+  ]
+ },
+ "780209": {
+  "add": [
+   "hand_deck_swap",
+   "self_destruct",
+   "activated",
+   "draw",
+   "graveyard",
+   "recycle",
+   "resource_gain",
+   "stacking_keyword",
+   "turn_start"
+  ],
+  "drop": [
+   "banish"
+  ]
+ },
+ "767913": {
+  "add": [
+   "condition",
+   "draw",
+   "cost_type",
+   "sacrifice",
+   "cost_type:cost",
+   "sacrifice:cost",
+   "summon"
+  ],
+  "drop": [
+   "activated"
+  ]
+ },
+ "815757": {
+  "add": [
+   "multi_attack"
+  ],
+  "drop": [
+   "damage",
+   "first_strike"
+  ]
+ },
+ "804988": {
+  "add": [
+   "banish",
+   "cast_from_zone",
+   "cost_type",
+   "graveyard",
+   "revive",
+   "summon",
+   "turn_structure"
+  ],
+  "drop": [
+   "stacking_keyword"
+  ]
+ },
+ "782820": {
+  "add": [
+   "condition",
+   "damage",
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": []
+ },
+ "782166": {
+  "add": [
+   "permanent_growth",
+   "deck_position",
+   "first_strike",
+   "on_play",
+   "selection"
+  ],
+  "drop": [
+   "damage",
+   "stat_gain"
+  ]
+ },
+ "777909": {
+  "add": [
+   "graveyard",
+   "draw",
+   "tutor"
+  ],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "777546": {
+  "add": [
+   "condition",
+   "drawback",
+   "evasion",
+   "heal",
+   "on_play",
+   "cost_type",
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "766015": {
+  "add": [
+   "death_trigger",
+   "condition",
+   "permanent_growth",
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "783950": {
+  "add": [
+   "random_effect",
+   "attack_now",
+   "condition_count",
+   "on_attack",
+   "summon"
+  ],
+  "drop": [
+   "coin_economy"
+  ]
+ },
+ "784005": {
+  "add": [
+   "reactions",
+   "condition",
+   "ping"
+  ],
+  "drop": [
+   "draw",
+   "draw:benefits"
+  ]
+ },
+ "777054": {
+  "add": [
+   "condition",
+   "summon"
+  ],
+  "drop": [
+   "alt_wincon:grants",
+   "cast_from_zone:grants",
+   "cost_type:grants",
+   "damage_over_time",
+   "damage_over_time:grants",
+   "graveyard:grants",
+   "passive"
+  ]
+ },
+ "781274": {
+  "add": [
+   "stat_gain",
+   "activated",
+   "evasion:grants",
+   "items_consumables",
+   "buff",
+   "merge_attach"
+  ],
+  "drop": []
+ },
+ "766972": {
+  "add": [
+   "turn_end",
+   "cost_reduction",
+   "excess_damage",
+   "in_hand_buff"
+  ],
+  "drop": [
+   "turn_start"
+  ]
+ },
+ "773668": {
+  "add": [
+   "stat_condition",
+   "damage",
+   "delayed",
+   "stat_gain",
+   "stat_loss",
+   "summon",
+   "type_grant",
+   "type_grant:grants"
+  ],
+  "drop": []
+ },
+ "771930": {
+  "add": [
+   "death_trigger",
+   "condition",
+   "mark_target",
+   "deathtouch",
+   "draw",
+   "heal",
+   "turn_start"
+  ],
+  "drop": [
+   "stacking_keyword"
+  ]
+ },
+ "802852": {
+  "add": [
+   "stat_gain",
+   "destroy",
+   "buff",
+   "merge_attach",
+   "cost_type",
+   "sacrifice"
+  ],
+  "drop": [
+   "aura",
+   "board_wipe"
+  ]
+ },
+ "772048": {
+  "add": [
+   "tribal",
+   "summon",
+   "copy",
+   "kicker",
+   "on_play",
+   "temporary_buff"
+  ],
+  "drop": [
+   "aura"
+  ]
+ },
+ "769092": {
+  "add": [
+   "drawback",
+   "condition",
+   "banish",
+   "permanent_growth",
+   "sacrifice",
+   "stacking_keyword"
+  ],
+  "drop": []
+ },
+ "774529": {
+  "add": [
+   "in_hand_buff",
+   "activated",
+   "cost_reduction",
+   "drawback",
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "767122": {
+  "add": [
+   "turn_end",
+   "on_play",
+   "condition_count",
+   "summon"
+  ],
+  "drop": [
+   "turn_start"
+  ]
+ },
+ "768387": {
+  "add": [
+   "activated",
+   "banish",
+   "tribal"
+  ],
+  "drop": []
+ },
+ "766594": {
+  "add": [
+   "tribal",
+   "on_play",
+   "summon",
+   "transform"
+  ],
+  "drop": [
+   "activated",
+   "delayed",
+   "blocking:grants"
+  ]
+ },
+ "781103": {
+  "add": [
+   "resource_gain",
+   "activated",
+   "on_attack",
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "775390": {
+  "add": [
+   "banish",
+   "copy",
+   "evasion:grants",
+   "on_attack",
+   "random_effect",
+   "summon"
+  ],
+  "drop": [
+   "damage",
+   "damage:benefits"
+  ]
+ },
+ "774971": {
+  "add": [
+   "stat_condition",
+   "condition",
+   "activated",
+   "destroy",
+   "heal"
+  ],
+  "drop": [
+   "discard",
+   "selection"
+  ]
+ },
+ "769685": {
+  "add": [
+   "condition",
+   "stat_gain",
+   "counter_spell:counters",
+   "passive"
+  ],
+  "drop": []
+ },
+ "777491": {
+  "add": [
+   "aoe_damage",
+   "direct_damage",
+   "graveyard",
+   "draw",
+   "tutor"
+  ],
+  "drop": [
+   "damage",
+   "information"
+  ]
+ },
+ "775696": {
+  "add": [
+   "untap",
+   "activated",
+   "buff",
+   "merge_attach"
+  ],
+  "drop": []
+ },
+ "768356": {
+  "add": [
+   "ping"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "771608": {
+  "add": [
+   "condition_count",
+   "activated",
+   "heal",
+   "items_consumables",
+   "on_play",
+   "resource_gain",
+   "cost_type",
+   "sacrifice",
+   "summon",
+   "temporary_buff"
+  ],
+  "drop": [
+   "upkeep"
+  ]
+ },
+ "771347": {
+  "add": [
+   "deck_modification",
+   "stat_gain",
+   "copy",
+   "generate_cards",
+   "haste",
+   "random_effect"
+  ],
+  "drop": [
+   "temporary_effect",
+   "support"
+  ]
+ },
+ "774526": {
+  "add": [
+   "condition_count",
+   "destroy",
+   "evasion:grants",
+   "graveyard",
+   "permanent_growth",
+   "stacking_keyword",
+   "temporary_buff"
+  ],
+  "drop": [
+   "death_count"
+  ]
+ },
+ "783583": {
+  "add": [
+   "hand_disruption",
+   "discard",
+   "evasion",
+   "on_attack"
+  ],
+  "drop": []
+ },
+ "771630": {
+  "add": [
+   "stat_condition",
+   "removal",
+   "banish",
+   "damage_reduction"
+  ],
+  "drop": [
+   "damage:counters"
+  ]
+ },
+ "815726": {
+  "add": [
+   "excess_damage",
+   "haste"
+  ],
+  "drop": []
+ },
+ "769964": {
+  "add": [
+   "activated",
+   "destroy",
+   "on_play",
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": []
+ },
+ "769167": {
+  "add": [
+   "temporary_effect",
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "784048": {
+  "add": [
+   "activated",
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": []
+ },
+ "780073": {
+  "add": [
+   "cast_from_zone",
+   "deathtouch",
+   "deck_position",
+   "information",
+   "life_payment:cost",
+   "lifesteal",
+   "on_attack",
+   "selection",
+   "temporary_effect"
+  ],
+  "drop": []
+ },
+ "773405": {
+  "add": [
+   "damage",
+   "distribute"
+  ],
+  "drop": []
+ },
+ "780600": {
+  "add": [
+   "damage",
+   "distribute",
+   "sacrifice",
+   "sacrifice:cost",
+   "stealth",
+   "transform"
+  ],
+  "drop": []
+ },
+ "773786": {
+  "add": [
+   "cost_type:cost",
+   "stat_loss",
+   "on_play",
+   "summon"
+  ],
+  "drop": []
+ },
+ "766757": {
+  "add": [
+   "activated",
+   "counter_spell"
+  ],
+  "drop": []
+ },
+ "769370": {
+  "add": [
+   "banish",
+   "cost_type",
+   "delayed",
+   "direct_damage",
+   "stacking_keyword",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "782919": {
+  "add": [
+   "bounce_enemy",
+   "return_to_hand"
+  ],
+  "drop": []
+ },
+ "776130": {
+  "add": [
+   "condition_count",
+   "cost_increase",
+   "haste:grants",
+   "scope_multi",
+   "steal",
+   "temporary_buff",
+   "untap"
+  ],
+  "drop": []
+ },
+ "782010": {
+  "add": [
+   "graveyard",
+   "graveyard:benefits",
+   "heal"
+  ],
+  "drop": []
+ },
+ "779484": {
+  "add": [
+   "activated",
+   "deathtouch:grants",
+   "items_consumables",
+   "lifesteal",
+   "buff",
+   "merge_attach",
+   "on_attack",
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "778500": {
+  "add": [
+   "cost_type",
+   "delayed",
+   "evasion",
+   "on_play",
+   "bounce_enemy",
+   "return_to_hand",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "767026": {
+  "add": [
+   "cost_increase",
+   "immunity",
+   "on_spell",
+   "permanent_growth",
+   "shield",
+   "stacking_keyword"
+  ],
+  "drop": []
+ },
+ "816138": {
+  "add": [
+   "activated",
+   "direct_damage",
+   "on_play",
+   "resource_gain"
+  ],
+  "drop": []
+ },
+ "771646": {
+  "add": [
+   "combo_sequence",
+   "draw:benefits",
+   "summon"
+  ],
+  "drop": []
+ },
+ "783126": {
+  "add": [
+   "summon"
+  ],
+  "drop": []
+ },
+ "774992": {
+  "add": [
+   "activated",
+   "counter_spell:counters",
+   "evasion",
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "810045": {
+  "add": [
+   "activated",
+   "banish",
+   "free_play",
+   "graveyard",
+   "self_mill",
+   "revive",
+   "summon",
+   "draw",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "782039": {
+  "add": [
+   "banish",
+   "death_trigger",
+   "discard",
+   "graveyard",
+   "on_play",
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "778169": {
+  "add": [
+   "activated",
+   "haste:grants",
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": []
+ },
+ "772681": {
+  "add": [
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "779787": {
+  "add": [
+   "permanent_growth",
+   "stacking_keyword"
+  ],
+  "drop": []
+ },
+ "779820": {
+  "add": [
+   "activated",
+   "cheat_death",
+   "evasion",
+   "life_payment:cost",
+   "regeneration"
+  ],
+  "drop": []
+ },
+ "802991": {
+  "add": [
+   "copy",
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "768816": {
+  "add": [
+   "activated",
+   "heal",
+   "cost_type",
+   "sacrifice",
+   "cost_type:cost",
+   "sacrifice:cost",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "766522": {
+  "add": [
+   "banish",
+   "deck_position",
+   "graveyard",
+   "resource_gain",
+   "selection",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "774337": {
+  "add": [
+   "delayed",
+   "direct_damage",
+   "forced_attack",
+   "resource_gain",
+   "temporary_effect"
+  ],
+  "drop": []
+ },
+ "772175": {
+  "add": [
+   "play_restriction",
+   "symmetric_effect"
+  ],
+  "drop": []
+ }
 }

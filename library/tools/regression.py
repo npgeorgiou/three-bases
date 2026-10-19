@@ -59,32 +59,31 @@ if mode == 'make':
         sys.path.insert(0, here); from concept_tree import primary as _pr, REMOVED as _rm
         _mk = dict(q('select old_id, kept_id from merged_entities'))
         kw = {(int(r['entity']), r['concept']) for r in csv.DictReader(open(kwf, encoding='utf-8'), delimiter='\t')}
-        final = [r for r in final if r[3] in _rm or (_mk.get(int(r[1]), int(r[1])), _pr(r[3])[0]) not in kw]
+        final = [r for r in final if (_mk.get(int(r[1]), int(r[1])), r[3]) not in kw]
     with open(out, 'w', newline='', encoding='utf-8') as fh:
         w = csv.writer(fh, delimiter='\t'); w.writerow(['game', 'entity', 'name', 'concept', 'role', 'expect'])
         for r in sorted(final, key=lambda r: (r[0], r[1], r[3])): w.writerow(r)
     print('regression lines:', len(final))
-elif mode == 'enforce':
+elif mode in ('enforce', 'enforce_new'):   # enforce: before concept_tree.py apply (old ids, via to_old); enforce_new: after it
     # re-applies the reviewed drops after kw_sync/propagate, which re-inherit keyword concepts the reviewer had removed
     n = 0
     for r in csv.DictReader(open(out, encoding='utf-8'), delimiter='\t'):
         if r['expect'] != 'absent': continue
         rs = [] if r['role'] == '*' else [r['role']]
-        n += c.execute('delete from entity_concepts where entity=? and concept=?' + (' and role=?' if rs else ''), (res(r['entity']), r['concept'], *rs)).rowcount
-        if not rs: c.execute('delete from trigger_effect where entity=? and (trigger=? or effect=?)', (res(r['entity']), r['concept'], r['concept']))
+        if mode == 'enforce':
+            sys.path.insert(0, here); from concept_tree import to_old
+            k = to_old(r['concept'])
+            if k is None: continue
+        else: k = r['concept']
+        n += c.execute('delete from entity_concepts where entity=? and concept=?' + (' and role=?' if rs else ''), (res(r['entity']), k, *rs)).rowcount
+        if not rs: c.execute('delete from trigger_effect where entity=? and (trigger=? or effect=?)', (res(r['entity']), k, k))
     c.commit(); print('reviewed drops re-applied:', n)
 else:
     bad = []; n = 0
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from concept_tree import primary, REMOVED   # the lines name the old concepts; concept_tree.py moved them (Step 1, 13 Oct 2026)
     for r in csv.DictReader(open(out, encoding='utf-8'), delimiter='\t'):
         n += 1
-        if r['expect'] == 'absent':   # a reviewed drop: the old concept's own new id must be absent (a removed mechanism has none),
-            if r['concept'] in REMOVED: continue   # unless it came from the plan's rule for the removed mechanisms (stat_set...)
-            ks = primary(r['concept'])[:1]
-            if q("select 1 from sqlite_master where name='tree_v3_added'") and q('select 1 from tree_v3_added where entity=? and concept=? and source in (%s)' % ','.join('?' * len(REMOVED)), res(r['entity']), ks[0], *REMOVED) \
-               and not q("select 1 from entity_concepts ec where entity=? and concept=? and not exists (select 1 from tree_v3_added a where a.entity=ec.entity and a.concept=ec.concept and a.role=ec.role)", res(r['entity']), ks[0]):
-                continue
-        else: ks = primary(r['concept'])   # a reviewed add: kept by any concept it moved to
+        ks = [r['concept']]   # the lines are in the tree v3 ids (fixes/f15)
         have = False
         for k in ks:
             args = [res(r['entity']), k] + ([] if r['role'] == '*' else [r['role']])

@@ -1,3225 +1,3279 @@
 {
-"752303": {
-"add": [
-"multiple_resources:cost"
-],
-"drop": []
-},
-"754786": {
-"add": [
-"sacrifice",
-"symmetric_effect"
-],
-"drop": []
-},
-"752719": {
-"add": [
-"self_destruct"
-],
-"drop": []
-},
-"755805": {
-"add": [
-"transform",
-"symmetric_effect"
-],
-"drop": []
-},
-"755182": {
-"add": [
-"cost_reduction",
-"enemy_benefit"
-],
-"drop": [
-"debuff"
-]
-},
-"754467": {
-"add": [
-"transform",
-"removal"
-],
-"drop": []
-},
-"753418": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753644": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"753898": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"753820": {
-"add": [
-"symmetric_effect"
-],
-"drop": []
-},
-"754892": {
-"add": [
-"sacrifice",
-"death_trigger",
-"delayed",
-"on_play",
-"summon"
-],
-"drop": []
-},
-"754889": {
-"add": [
-"destroy",
-"removal"
-],
-"drop": []
-},
-"752583": {
-"add": [
-"self_destruct"
-],
-"drop": []
-},
-"754404": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"754494": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"752375": {
-"add": [
-"taunt:counters"
-],
-"drop": [
-"taunt"
-]
-},
-"753623": {
-"add": [
-"enemy_benefit",
-"drawback"
-],
-"drop": []
-},
-"752850": {
-"add": [
-"symmetric_effect",
-"enemy_benefit"
-],
-"drop": []
-},
-"754240": {
-"add": [
-"destroy",
-"removal"
-],
-"drop": []
-},
-"753413": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"754323": {
-"add": [
-"symmetric_effect",
-"friendly_fire",
-"aoe_damage"
-],
-"drop": []
-},
-"753188": {
-"add": [
-"mill"
-],
-"drop": [
-"copy",
-"generate_cards",
-"transform",
-"tutor"
-]
-},
-"752345": {
-"add": [
-"deck_modification",
-"cost_reduction"
-],
-"drop": []
-},
-"753525": {
-"add": [
-"friendly_fire",
-"enemy_benefit"
-],
-"drop": []
-},
-"755582": {
-"add": [
-"symmetric_effect",
-"friendly_fire",
-"aoe_damage"
-],
-"drop": []
-},
-"754717": {
-"add": [
-"friendly_fire",
-"symmetric_effect",
-"board_wipe"
-],
-"drop": []
-},
-"754716": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"754941": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"752665": {
-"add": [
-"drawback"
-],
-"drop": [
-"generate_cards"
-]
-},
-"753399": {
-"add": [
-"taunt:counters"
-],
-"drop": [
-"taunt"
-]
-},
-"752568": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"753408": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"752340": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"754556": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"752656": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"754313": {
-"add": [
-"removal"
-],
-"drop": [
-"life_payment:cost"
-]
-},
-"755389": {
-"add": [
-"symmetric_effect"
-],
-"drop": []
-},
-"754721": {
-"add": [
-"removal"
-],
-"drop": [
-"board_wipe"
-]
-},
-"752620": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"755224": {
-"add": [
-"transform",
-"removal"
-],
-"drop": []
-},
-"752964": {
-"add": [
-"removal"
-],
-"drop": [
-"hand_disruption"
-]
-},
-"753173": {
-"add": [
-"return_to_hand"
-],
-"drop": []
-},
-"752847": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"753628": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"752652": {
-"add": [
-"life_payment:cost"
-],
-"drop": []
-},
-"754944": {
-"add": [
-"destroy",
-"removal"
-],
-"drop": [
-"generate_cards"
-]
-},
-"752529": {
-"add": [
-"mill"
-],
-"drop": [
-"generate_cards",
-"tutor"
-]
-},
-"753538": {
-"add": [
-"mill"
-],
-"drop": [
-"generate_cards"
-]
-},
-"752607": {
-"add": [
-"silence"
-],
-"drop": []
-},
-"752608": {
-"add": [
-"silence"
-],
-"drop": []
-},
-"755804": {
-"add": [
-"summon",
-"slot_filler"
-],
-"drop": [
-"tutor",
-"random_effect"
-]
-},
-"755137": {
-"add": [
-"removal",
-"return_to_hand"
-],
-"drop": [
-"hand_disruption"
-]
-},
-"752702": {
-"add": [
-"sacrifice",
-"removal"
-],
-"drop": []
-},
-"752845": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"755627": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"755989": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"755142": {
-"add": [
-"symmetric_effect",
-"enemy_benefit"
-],
-"drop": []
-},
-"755136": {
-"add": [
-"symmetric_effect",
-"removal"
-],
-"drop": []
-},
-"753537": {
-"add": [
-"mill"
-],
-"drop": [
-"generate_cards",
-"tutor"
-]
-},
-"755078": {
-"add": [
-"free_play"
-],
-"drop": []
-},
-"753401": {
-"add": [
-"summon"
-],
-"drop": []
-},
-"755903": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"754344": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"753713": {
-"add": [
-"sacrifice",
-"tribal",
-"copy",
-"generate_cards",
-"on_play"
-],
-"drop": [
-"delayed",
-"destroy"
-]
-},
-"755065": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753856": {
-"add": [
-"self_destruct"
-],
-"drop": []
-},
-"755959": {
-"add": [
-"self_destruct"
-],
-"drop": []
-},
-"755664": {
-"add": [
-"generate_cards"
-],
-"drop": []
-},
-"753442": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"755969": {
-"add": [
-"symmetric_effect",
-"heal",
-"damage"
-],
-"drop": []
-},
-"756083": {
-"add": [
-"symmetric_effect",
-"friendly_fire",
-"drawback"
-],
-"drop": []
-},
-"754299": {
-"add": [
-"friendly_fire",
-"symmetric_effect"
-],
-"drop": []
-},
-"754789": {
-"add": [
-"life_payment:cost",
-"drawback"
-],
-"drop": []
-},
-"755230": {
-"add": [
-"drawback",
-"life_payment:cost"
-],
-"drop": []
-},
-"754796": {
-"add": [
-"life_payment:cost"
-],
-"drop": []
-},
-"755637": {
-"add": [
-"deck_modification"
-],
-"drop": []
-},
-"754976": {
-"add": [
-"destroy",
-"removal"
-],
-"drop": []
-},
-"755552": {
-"add": [
-"drawback",
-"life_payment:cost"
-],
-"drop": []
-},
-"755817": {
-"add": [
-"friendly_fire",
-"destroy"
-],
-"drop": []
-},
-"755309": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"754736": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"755554": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"755881": {
-"add": [
-"symmetric_effect",
-"enemy_benefit"
-],
-"drop": []
-},
-"754008": {
-"add": [
-"silence"
-],
-"drop": []
-},
-"755869": {
-"add": [
-"transform",
-"symmetric_effect",
-"removal"
-],
-"drop": []
-},
-"752807": {
-"add": [
-"recycle"
-],
-"drop": []
-},
-"755592": {
-"add": [
-"symmetric_effect",
-"enemy_benefit"
-],
-"drop": []
-},
-"753369": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755192": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753318": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755255": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"755242": {
-"add": [
-"life_payment:cost"
-],
-"drop": []
-},
-"755781": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"756100": {
-"add": [
-"damage_reduction",
-"multi_attack"
-],
-"drop": [
-"damage"
-]
-},
-"755894": {
-"add": [
-"win_condition"
-],
-"drop": []
-},
-"752587": {
-"add": [
-"taunt:counters"
-],
-"drop": [
-"taunt"
-]
-},
-"754251": {
-"add": [
-"drawback",
-"cant_attack"
-],
-"drop": []
-},
-"752547": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"755191": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753676": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755651": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"754097": {
-"add": [
-"enemy_benefit",
-"drawback"
-],
-"drop": []
-},
-"753768": {
-"add": [
-"taunt:counters"
-],
-"drop": [
-"taunt"
-]
-},
-"754133": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"754109": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"753794": {
-"add": [
-"taunt:counters"
-],
-"drop": [
-"taunt"
-]
-},
-"752873": {
-"add": [
-"taunt:counters"
-],
-"drop": [
-"taunt"
-]
-},
-"755652": {
-"add": [
-"sacrifice",
-"count_payoff",
-"aoe_damage",
-"condition_count",
-"destroy",
-"on_play",
-"random_effect",
-"taunt"
-],
-"drop": [
-"modal_choice"
-]
-},
-"755279": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"752886": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"754368": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"755358": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753393": {
-"add": [
-"enemy_benefit",
-"damage",
-"death_trigger",
-"kicker",
-"on_attack",
-"on_play",
-"summon",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"754052": {
-"add": [
-"transform",
-"removal"
-],
-"drop": []
-},
-"754642": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"753866": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"755397": {
-"add": [
-"hand_size"
-],
-"drop": []
-},
-"754761": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"753358": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"754022": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"755809": {
-"add": [
-"life_payment:cost",
-"drawback"
-],
-"drop": []
-},
-"755945": {
-"add": [
-"symmetric_effect",
-"friendly_fire",
-"board_wipe"
-],
-"drop": []
-},
-"753501": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753336": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"756112": {
-"add": [
-"transform",
-"symmetric_effect"
-],
-"drop": []
-},
-"752689": {
-"add": [
-"self_destruct"
-],
-"drop": []
-},
-"755675": {
-"add": [
-"destroy",
-"removal"
-],
-"drop": []
-},
-"755661": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"754950": {
-"add": [
-"friendly_fire",
-"drawback"
-],
-"drop": []
-},
-"755855": {
-"add": [
-"sacrifice",
-"drawback"
-],
-"drop": []
-},
-"754822": {
-"add": [
-"drawback",
-"buff",
-"cant_attack",
-"destroy",
-"heal",
-"random_effect",
-"turn_end"
-],
-"drop": [
-"combo_sequence",
-"on_attack"
-]
-},
-"754126": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"755528": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755962": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755814": {
-"add": [
-"life_payment:cost"
-],
-"drop": []
-},
-"753717": {
-"add": [
-"silence",
-"deck_condition",
-"draw",
-"on_play",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"753755": {
-"add": [
-"merge_attach"
-],
-"drop": []
-},
-"753756": {
-"add": [
-"merge_attach"
-],
-"drop": []
-},
-"755350": {
-"add": [
-"sacrifice",
-"removal"
-],
-"drop": []
-},
-"755495": {
-"add": [
-"sacrifice",
-"removal"
-],
-"drop": []
-},
-"753869": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"754692": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"755873": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"754366": {
-"add": [
-"symmetric_effect",
-"friendly_fire",
-"aoe_damage"
-],
-"drop": []
-},
-"755934": {
-"add": [
-"sacrifice",
-"free_play",
-"cost_condition",
-"condition_count",
-"destroy",
-"high_cost:benefits",
-"on_play",
-"random_effect",
-"tutor"
-],
-"drop": [
-"cost_increase",
-"upgrade"
-]
-},
-"754630": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"756044": {
-"add": [
-"drawback",
-"life_payment:cost"
-],
-"drop": []
-},
-"755966": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753570": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"754673": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"754708": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"755146": {
-"add": [
-"friendly_fire",
-"drawback"
-],
-"drop": []
-},
-"753478": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755501": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"753674": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"755780": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755095": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"754953": {
-"add": [
-"friendly_fire",
-"symmetric_effect"
-],
-"drop": []
-},
-"752647": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"753211": {
-"add": [
-"discard:benefits"
-],
-"drop": []
-},
-"752958": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"756010": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"755659": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"754350": {
-"add": [
-"enemy_benefit",
-"symmetric_effect"
-],
-"drop": [
-"scope_global"
-]
-},
-"754369": {
-"add": [
-"destroy",
-"removal"
-],
-"drop": []
-},
-"755318": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"754872": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"755201": {
-"add": [
-"taunt:counters"
-],
-"drop": [
-"taunt"
-]
-},
-"755782": {
-"add": [
-"death_count"
-],
-"drop": []
-},
-"756080": {
-"add": [
-"destroy",
-"friendly_fire"
-],
-"drop": []
-},
-"753846": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755950": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"754641": {
-"add": [
-"enemy_benefit",
-"drawback"
-],
-"drop": []
-},
-"754224": {
-"add": [
-"steal"
-],
-"drop": []
-},
-"755643": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"754198": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753687": {
-"add": [
-"silence",
-"symmetric_effect"
-],
-"drop": []
-},
-"752957": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"752899": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"755381": {
-"add": [
-"deck_modification"
-],
-"drop": []
-},
-"753034": {
-"add": [
-"enemy_benefit",
-"drawback"
-],
-"drop": []
-},
-"754584": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"755074": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"754803": {
-"add": [
-"life_payment:cost"
-],
-"drop": []
-},
-"753553": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"754182": {
-"add": [
-"graveyard"
-],
-"drop": [
-"graveyard:cost"
-]
-},
-"754733": {
-"add": [
-"sacrifice",
-"removal"
-],
-"drop": []
-},
-"754817": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755636": {
-"add": [
-"deck_modification",
-"mill"
-],
-"drop": []
-},
-"755674": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"755596": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"755522": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"754453": {
-"add": [
-"drawback",
-"damage",
-"haste",
-"on_attack"
-],
-"drop": []
-},
-"755557": {
-"add": [
-"life_payment:cost"
-],
-"drop": []
-},
-"754988": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"752601": {
-"add": [
-"transform",
-"removal"
-],
-"drop": [
-"generate_cards"
-]
-},
-"755163": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755556": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"755955": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"753355": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"756082": {
-"add": [
-"deck_modification"
-],
-"drop": []
-},
-"754421": {
-"add": [
-"deck_modification"
-],
-"drop": []
-},
-"756114": {
-"add": [
-"sacrifice",
-"upgrade"
-],
-"drop": []
-},
-"752683": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"756097": {
-"add": [
-"mill",
-"deck_modification"
-],
-"drop": [
-"board_wipe",
-"scope_global",
-"tutor"
-]
-},
-"754620": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"754098": {
-"add": [
-"drawback",
-"self_destruct"
-],
-"drop": []
-},
-"753766": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"752738": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"754046": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"754502": {
-"add": [
-"return_to_hand",
-"removal"
-],
-"drop": []
-},
-"753095": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"752419": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755613": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"754773": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755382": {
-"add": [
-"drawback",
-"generate_cards"
-],
-"drop": []
-},
-"753327": {
-"add": [
-"silence"
-],
-"drop": []
-},
-"753331": {
-"add": [
-"silence"
-],
-"drop": []
-},
-"753431": {
-"add": [
-"life_payment:cost",
-"drawback"
-],
-"drop": []
-},
-"755431": {
-"add": [
-"slot_filler",
-"summon"
-],
-"drop": []
-},
-"754416": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"755167": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753782": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"755458": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"753390": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"754120": {
-"add": [
-"mill"
-],
-"drop": [
-"board_wipe"
-]
-},
-"754792": {
-"add": [
-"life_payment:cost"
-],
-"drop": []
-},
-"755436": {
-"add": [
-"win_condition"
-],
-"drop": []
-},
-"755927": {
-"add": [
-"transform",
-"removal"
-],
-"drop": []
-},
-"755874": {
-"add": [
-"sacrifice",
-"removal",
-"friendly_fire"
-],
-"drop": []
-},
-"753613": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"752787": {
-"add": [
-"removal",
-"return_to_hand"
-],
-"drop": [
-"hand_disruption"
-]
-},
-"754438": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753437": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"754105": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"752783": {
-"add": [
-"symmetric_effect",
-"drawback"
-],
-"drop": []
-},
-"754218": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"754115": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"753907": {
-"add": [],
-"drop": [
-"enemy_benefit"
-]
-},
-"754429": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"753225": {
-"add": [
-"friendly_fire",
-"damage",
-"on_play",
-"random_effect"
-],
-"drop": [
-"ping"
-]
-},
-"754341": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"756026": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"814335": {
-"add": [
-"stat_set"
-],
-"drop": []
-},
-"813966": {
-"add": [
-"self_destruct"
-],
-"drop": [
-"banish"
-]
-},
-"813801": {
-"add": [
-"stat_set"
-],
-"drop": []
-},
-"813904": {
-"add": [
-"deathtouch:grants"
-],
-"drop": []
-},
-"814105": {
-"add": [
-"cost_set",
-"stat_set",
-"in_hand_buff"
-],
-"drop": []
-},
-"752849": {
-"add": [
-"variety_payoff",
-"damage",
-"draw",
-"multiple_resources",
-"random_effect",
-"resource_gain"
-],
-"drop": [
-"copy"
-]
-},
-"753300": {
-"add": [
-"cost_reduction",
-"generate_cards",
-"return_to_hand",
-"temporary_effect"
-],
-"drop": []
-},
-"813969": {
-"add": [
-"damage",
-"direct_damage"
-],
-"drop": [
-"ping"
-]
-},
-"756021": {
-"add": [
-"cost_condition",
-"buff",
-"discard",
-"on_play"
-],
-"drop": []
-},
-"755447": {
-"add": [
-"count_payoff",
-"tribal",
-"free_play",
-"multi_attack",
-"support",
-"turn_start",
-"upgrade"
-],
-"drop": [
-"summon",
-"condition_count"
-]
-},
-"754055": {
-"add": [
-"tribal",
-"damage",
-"generate_cards",
-"on_ally_play",
-"on_play",
-"random_effect",
-"resource_gain",
-"upgrade"
-],
-"drop": [
-"activated"
-]
-},
-"753103": {
-"drop": [
-"generate_cards"
-],
-"add": [
-"on_play",
-"on_spell:benefits",
-"random_effect",
-"tutor",
-"upgrade:benefits"
-]
-},
-"813898": {
-"add": [
-"draw",
-"tribal",
-"death_trigger",
-"random_effect",
-"tutor"
-],
-"drop": [
-"generate_cards"
-]
-},
-"752564": {
-"add": [
-"heal",
-"count_payoff",
-"death_trigger",
-"on_play",
-"summon"
-],
-"drop": []
-},
-"755884": {
-"add": [
-"resource_gain",
-"count_payoff",
-"multiple_resources",
-"on_ally_play",
-"on_play"
-],
-"drop": []
-},
-"755987": {
-"drop": [],
-"add": [
-"cost_type",
-"damage",
-"death_trigger",
-"deathtouch",
-"delayed",
-"draw",
-"haste",
-"haste:grants",
-"on_play",
-"summon",
-"upgrade"
-]
-},
-"754211": {
-"add": [
-"buff",
-"tribal",
-"kicker",
-"on_play",
-"summon",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"753172": {
-"add": [
-"in_hand_buff",
-"on_spell",
-"ping",
-"upgrade"
-],
-"drop": []
-},
-"754937": {
-"drop": [
-"multiple_resources:cost"
-],
-"add": [
-"generate_cards",
-"on_play",
-"resource_gain",
-"upgrade"
-]
-},
-"752582": {
-"add": [
-"transform",
-"cost_condition",
-"condition",
-"haste:grants",
-"in_hand_buff",
-"on_ally_play",
-"on_play"
-],
-"drop": [
-"economy"
-]
-},
-"752514": {
-"drop": [
-"multiple_resources:cost"
-],
-"add": [
-"cost_reduction",
-"generate_cards",
-"on_play",
-"upgrade"
-]
-},
-"752540": {
-"drop": [
-"sacrifice:cost"
-],
-"add": [
-"random_effect",
-"summon",
-"tutor"
-]
-},
-"752407": {
-"add": [
-"temporary_effect",
-"condition_count",
-"damage_reduction",
-"on_play"
-],
-"drop": []
-},
-"754110": {
-"drop": [
-"multiple_resources:cost"
-],
-"add": [
-"condition",
-"on_play",
-"ping",
-"resource_gain",
-"upgrade"
-]
-},
-"755796": {
-"add": [
-"repeat_trigger",
-"cost_type",
-"damage",
-"death_trigger",
-"delayed",
-"draw",
-"graveyard",
-"high_cost:benefits",
-"on_play",
-"random_effect",
-"revive",
-"sacrifice:cost",
-"taunt"
-],
-"drop": [
-"activated",
-"modal_choice"
-]
-},
-"752569": {
-"add": [
-"turn_number",
-"generate_cards",
-"resource_gain"
-],
-"drop": []
-},
-"754152": {
-"add": [
-"condition_count",
-"damage",
-"draw",
-"kicker"
-],
-"drop": []
-},
-"755926": {
-"add": [
-"condition_count",
-"cost_set",
-"cost_condition",
-"direct_damage",
-"discard",
-"draw",
-"in_hand_buff",
-"on_play",
-"on_spell",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost",
-"summon:benefits",
-"on_ally_play"
-]
-},
-"755169": {
-"drop": [
-"multiple_resources:cost"
-],
-"add": [
-"generate_cards",
-"on_damaged",
-"on_play",
-"upgrade"
-]
-},
-"754228": {
-"add": [
-"cost_set",
-"tribal",
-"deathtouch:grants",
-"generate_cards",
-"graveyard",
-"in_hand_buff",
-"kicker",
-"lifesteal:grants",
-"on_play",
-"sacrifice:cost",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"754128": {
-"add": [
-"stat_condition",
-"draw",
-"in_hand_buff",
-"on_play"
-],
-"drop": [
-"condition_count"
-]
-},
-"756104": {
-"drop": [
-"modal_choice"
-],
-"add": [
-"cost_type",
-"discard",
-"draw",
-"haste",
-"on_play",
-"summon"
-]
-},
-"754710": {
-"drop": [
-"multiple_resources:cost"
-],
-"add": [
-"damage",
-"draw",
-"on_play",
-"upgrade"
-]
-},
-"752508": {
-"add": [
-"draw",
-"random_effect",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"755748": {
-"add": [
-"stat_condition",
-"permanent_growth",
-"banish",
-"buff",
-"cant_attack",
-"cost_condition",
-"direct_damage",
-"on_play",
-"random_effect",
-"turn_end",
-"turn_start"
-],
-"drop": [
-"condition_count"
-]
-},
-"753154": {
-"add": [
-"count_payoff",
-"temporary_effect",
-"debuff",
-"generate_cards",
-"on_attack",
-"on_play",
-"summon"
-],
-"drop": [
-"condition_count"
-]
-},
-"753858": {
-"add": [
-"on_ally_play",
-"tribal",
-"generate_cards",
-"heal",
-"on_play",
-"summon",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"755063": {
-"add": [
-"tribal",
-"direct_damage",
-"on_attack",
-"on_play"
-],
-"drop": []
-},
-"814021": {
-"drop": [
-"terrain"
-],
-"add": [
-"delayed",
-"summon",
-"turn_end"
-]
-},
-"814095": {
-"drop": [
-"shop_gold"
-],
-"add": [
-"buff",
-"draw",
-"on_ally_play",
-"temporary_effect"
-]
-},
-"814065": {
-"add": [
-"cost_condition",
-"banish",
-"random_effect",
-"stealth",
-"support"
-],
-"drop": [
-"condition_count"
-]
-},
-"755561": {
-"add": [
-"stat_condition",
-"condition_life",
-"cost_type",
-"delayed",
-"destroy",
-"life_payment:cost",
-"on_play",
-"turn_start"
-],
-"drop": [
-"ping",
-"modal_choice"
-]
-},
-"752614": {
-"add": [
-"variety_payoff",
-"tribal",
-"revive",
-"copy",
-"cost_condition",
-"draw",
-"graveyard:cost",
-"kicker",
-"summon"
-],
-"drop": []
-},
-"813831": {
-"add": [
-"count_payoff",
-"buff",
-"haste"
-],
-"drop": [
-"condition_count"
-]
-},
-"754325": {
-"add": [
-"deck_condition",
-"upgrade",
-"random_effect",
-"summon",
-"tutor"
-],
-"drop": []
-},
-"755650": {
-"add": [
-"count_payoff",
-"aoe_damage",
-"free_play",
-"haste",
-"on_attack",
-"turn_start"
-],
-"drop": [
-"summon",
-"condition_count"
-]
-},
-"755733": {
-"add": [
-"buff",
-"cost_reduction",
-"on_spell",
-"upgrade"
-],
-"drop": []
-},
-"753753": {
-"add": [
-"count_payoff",
-"multiple_resources",
-"resource_gain"
-],
-"drop": [
-"condition_count"
-]
-},
-"755345": {
-"add": [
-"on_ally_play",
-"tribal",
-"generate_cards",
-"on_play",
-"summon",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"755407": {
-"add": [
-"haste:grants",
-"buff",
-"condition_count",
-"haste",
-"on_play"
-],
-"drop": []
-},
-"814103": {
-"add": [
-"damage",
-"deck_condition",
-"direct_damage"
-],
-"drop": []
-},
-"753219": {
-"add": [
-"tribal",
-"on_play",
-"transform"
-],
-"drop": []
-},
-"753677": {
-"add": [
-"protection",
-"tribal",
-"on_play"
-],
-"drop": [
-"destroy:counters"
-]
-},
-"814252": {
-"add": [
-"reactions",
-"self_destruct",
-"death_trigger",
-"draw",
-"heal"
-],
-"drop": [
-"destroy"
-]
-},
-"755560": {
-"add": [
-"draw",
-"tribal",
-"aoe_damage",
-"cost_type",
-"death_trigger",
-"delayed",
-"on_play",
-"random_effect",
-"tutor"
-],
-"drop": [
-"generate_cards"
-]
-},
-"755373": {
-"drop": [
-"modal_choice"
-],
-"add": [
-"buff",
-"cost_type",
-"on_play"
-]
-},
-"752574": {
-"add": [
-"tribal",
-"random_effect",
-"tutor"
-],
-"drop": [
-"generate_cards"
-]
-},
-"813735": {
-"add": [
-"play_restriction",
-"board_wipe",
-"destroy"
-],
-"drop": [
-"placement_rules"
-]
-},
-"752688": {
-"add": [
-"death_trigger",
-"delayed",
-"delayed:benefits",
-"on_play",
-"random_effect",
-"tutor"
-],
-"drop": [
-"death_count",
-"cost_type:benefits"
-]
-},
-"754864": {
-"add": [
-"hand_size",
-"cost_type",
-"death_trigger",
-"delayed",
-"haste",
-"on_play",
-"summon"
-],
-"drop": []
-},
-"755563": {
-"drop": [
-"combo_sequence",
-"damage"
-],
-"add": [
-"debuff",
-"on_attack",
-"on_play",
-"summon",
-"taunt:grants",
-"upgrade"
-]
-},
-"753731": {
-"add": [
-"count_payoff",
-"cost_condition",
-"on_play",
-"random_effect",
-"tutor",
-"upgrade"
-],
-"drop": [
-"generate_cards",
-"condition_count",
-"multiple_resources:cost"
-]
-},
-"754196": {
-"drop": [
-"multiple_resources:cost"
-],
-"add": [
-"death_trigger",
-"graveyard",
-"kicker",
-"on_play",
-"revive",
-"upgrade"
-]
-},
-"753970": {
-"add": [
-"count_payoff",
-"on_play",
-"summon"
-],
-"drop": [
-"condition_count"
-]
-},
-"814164": {
-"drop": [
-"damage"
-],
-"add": [
-"haste",
-"on_attack",
-"summon"
-]
-},
-"755154": {
-"add": [
-"tribal",
-"cost_reduction",
-"on_play"
-],
-"drop": []
-},
-"755232": {
-"add": [
-"direct_damage",
-"passive"
-],
-"drop": []
-},
-"754542": {
-"add": [
-"deck_condition",
-"variety_payoff",
-"damage",
-"draw",
-"on_play"
-],
-"drop": [
-"condition_count"
-]
-},
-"752378": {
-"add": [
-"heal",
-"count_payoff",
-"generate_cards"
-],
-"drop": []
-},
-"755481": {
-"add": [
-"stat_condition",
-"banish",
-"board_wipe",
-"sacrifice:cost"
-],
-"drop": []
-},
-"755829": {
-"drop": [],
-"add": [
-"death_trigger",
-"deathtouch",
-"direct_damage",
-"haste",
-"taunt"
-]
-},
-"813839": {
-"add": [
-"count_payoff",
-"damage",
-"direct_damage"
-],
-"drop": [
-"condition_count"
-]
-},
-"753973": {
-"drop": [
-"damage"
-],
-"add": [
-"draw",
-"generate_cards",
-"haste",
-"on_attack",
-"on_play",
-"stealth"
-]
-},
-"755725": {
-"drop": [
-"multiple_resources:cost",
-"delayed"
-],
-"add": [
-"cost_type",
-"draw",
-"immunity",
-"on_play",
-"sacrifice:cost",
-"stacking_keyword",
-"summon",
-"upgrade"
-]
-},
-"813872": {
-"add": [
-"count_payoff",
-"damage",
-"direct_damage",
-"random_effect"
-],
-"drop": [
-"condition_count"
-]
-},
-"755260": {
-"add": [
-"condition",
-"aoe_damage",
-"life_payment:cost",
-"lifesteal",
-"on_play",
-"upgrade"
-],
-"drop": [
-"condition_count",
-"haste"
-]
-},
-"755173": {
-"add": [
-"damage",
-"combo_sequence",
-"direct_damage",
-"on_play",
-"random_effect",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"752344": {
-"add": [
-"condition",
-"direct_damage",
-"heal",
-"turn_end"
-],
-"drop": [
-"condition_count"
-]
-},
-"755050": {
-"add": [
-"buff",
-"tribal",
-"free_play",
-"cost_condition",
-"random_effect",
-"turn_end",
-"tutor",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"756092": {
-"add": [
-"damage",
-"aoe_damage",
-"cost_type",
-"haste",
-"multi_attack"
-],
-"drop": [
-"modal_choice"
-]
-},
-"752561": {
-"add": [
-"stat_condition",
-"haste",
-"on_play",
-"upgrade"
-],
-"drop": [
-"condition_count",
-"multiple_resources:cost"
-]
-},
-"753787": {
-"add": [
-"banish",
-"kicker",
-"on_play",
-"random_effect",
-"summon",
-"turn_end",
-"upgrade"
-],
-"drop": [
-"damage_over_time"
-]
-},
-"753085": {
-"add": [
-"condition",
-"tribal",
-"damage",
-"direct_damage",
-"draw",
-"heal",
-"random_effect"
-],
-"drop": []
-},
-"754428": {
-"add": [
-"count_payoff",
-"variable_stats",
-"haste",
-"on_play"
-],
-"drop": [
-"buff"
-]
-},
-"752597": {
-"add": [
-"count_payoff",
-"buff",
-"death_trigger",
-"haste",
-"on_play"
-],
-"drop": [
-"condition_count",
-"graveyard"
-]
-},
-"752911": {
-"add": [
-"kicker",
-"buff",
-"condition_count",
-"draw",
-"heal",
-"on_play"
-],
-"drop": [
-"delayed"
-]
-},
-"752468": {
-"add": [
-"tribal",
-"generate_cards",
-"random_effect",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost",
-"on_ally_play"
-]
-},
-"756049": {
-"add": [
-"damage",
-"aoe_damage",
-"condition",
-"cost_type",
-"discard",
-"draw",
-"on_play"
-],
-"drop": [
-"modal_choice"
-]
-},
-"752451": {
-"add": [
-"return_to_hand:benefits",
-"death_trigger",
-"delayed",
-"generate_cards",
-"ping",
-"random_effect",
-"turn_end"
-],
-"drop": []
-},
-"754640": {
-"add": [
-"count_payoff",
-"damage",
-"kicker",
-"on_play",
-"resource_gain",
-"sacrifice:cost",
-"summon",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"754381": {
-"add": [
-"revive",
-"copy",
-"heal",
-"on_play",
-"random_effect",
-"summon",
-"taunt",
-"turn_end",
-"upgrade"
-],
-"drop": [
-"condition_count",
-"multiple_resources:cost"
-]
-},
-"753231": {
-"drop": [
-"draw"
-],
-"add": [
-"generate_cards",
-"on_play",
-"random_effect"
-]
-},
-"753848": {
-"drop": [
-"damage"
-],
-"add": [
-"condition_count",
-"damage_reduction",
-"multi_attack",
-"on_attack",
-"on_play",
-"taunt",
-"temporary_effect",
-"upgrade"
-]
-},
-"755159": {
-"drop": [
-"damage:benefits"
-],
-"add": [
-"draw",
-"on_damaged"
-]
-},
-"752903": {
-"add": [
-"tribal",
-"draw",
-"on_play",
-"return_to_hand",
-"taunt"
-],
-"drop": []
-},
-"753707": {
-"drop": [
-"multiple_resources:cost"
-],
-"add": [
-"generate_cards",
-"on_play",
-"upgrade"
-]
-},
-"753643": {
-"drop": [
-"summon:benefits"
-],
-"add": [
-"generate_cards",
-"on_ally_play",
-"on_play",
-"resource_gain"
-]
-},
-"754427": {
-"drop": [
-"draw"
-],
-"add": [
-"death_trigger",
-"generate_cards",
-"taunt"
-]
-},
-"754572": {
-"add": [
-"free_play",
-"cost_condition",
-"tribal",
-"random_effect",
-"turn_end",
-"tutor"
-],
-"drop": []
-},
-"754749": {
-"drop": [
-"activated"
-],
-"add": [
-"generate_cards",
-"on_play",
-"turn_end"
-]
-},
-"756063": {
-"add": [
-"condition",
-"direct_damage",
-"cost_type",
-"damage",
-"death_trigger",
-"delayed",
-"draw",
-"life_payment:cost",
-"on_play",
-"random_effect"
-],
-"drop": [
-"condition_count"
-]
-},
-"754974": {
-"add": [
-"count_payoff",
-"damage",
-"aoe_damage",
-"on_play",
-"taunt",
-"upgrade"
-],
-"drop": [
-"multiple_resources:cost"
-]
-},
-"813773": {
-"add": [
-"self_destruct",
-"haste",
-"turn_end"
-],
-"drop": [
-"destroy"
-]
-},
-"755505": {
-"add": [
-"stat_condition",
-"tribal",
-"cost_type",
-"direct_damage",
-"on_play",
-"random_effect",
-"tutor"
-],
-"drop": [
-"condition_count",
-"modal_choice"
-]
-},
-"755150": {
-"add": [
-"buff",
-"permanent_growth",
-"cost_condition",
-"discard",
-"random_effect",
-"turn_end"
-],
-"drop": [
-"in_hand_buff"
-]
-},
-"755787": {
-"add": [
-"free_play",
-"cost_condition",
-"death_trigger",
-"heal",
-"on_play",
-"random_effect",
-"sacrifice:benefits"
-],
-"drop": [
-"tutor",
-"death_count",
-"destroy:benefits"
-]
-},
-"753876": {
-"add": [
-"cost_reduction",
-"generate_cards",
-"modal_choice",
-"on_play"
-],
-"drop": []
-},
-"754413": {
-"add": [
-"tribal",
-"buff",
-"on_play",
-"targeting_rules"
-],
-"drop": []
-},
-"814122": {
-"add": [
-"variable_stats",
-"buff",
-"direct_damage",
-"on_attack"
-],
-"drop": []
-},
-"753436": {
-"add": [
-"targeting_rules"
-],
-"drop": []
-},
-"754426": {
-"add": [
-"modal_choice",
-"on_play",
-"summon"
-],
-"drop": []
-},
-"813760": {
-"add": [
-"multiple_resources",
-"resource_gain"
-],
-"drop": []
-},
-"755532": {
-"add": [
-"on_play",
-"summon",
-"taunt"
-],
-"drop": []
-},
-"752349": {
-"add": [
-"generate_cards"
-],
-"drop": []
-},
-"754518": {
-"add": [
-"aoe_damage",
-"draw",
-"on_attack",
-"on_play",
-"ping"
-],
-"drop": []
-},
-"755460": {
-"add": [
-"generate_cards",
-"on_play"
-],
-"drop": []
-},
-"814334": {
-"add": [
-"condition_count",
-"delayed",
-"generate_cards"
-],
-"drop": []
-},
-"813972": {
-"add": [
-"damage",
-"heal",
-"kicker"
-],
-"drop": []
-},
-"754246": {
-"add": [
-"damage",
-"life_payment:cost",
-"on_play"
-],
-"drop": []
-},
-"754765": {
-"add": [
-"death_trigger",
-"kicker",
-"on_play",
-"summon",
-"taunt",
-"upgrade"
-],
-"drop": []
-},
-"753325": {
-"add": [
-"death_trigger",
-"summon"
-],
-"drop": []
-},
-"753891": {
-"add": [
-"buff",
-"kicker",
-"summon"
-],
-"drop": []
-},
-"754664": {
-"add": [
-"copy",
-"summon",
-"taunt:grants"
-],
-"drop": []
-},
-"814009": {
-"add": [
-"banish",
-"copy",
-"draw",
-"on_play",
-"taunt"
-],
-"drop": []
-},
-"753043": {
-"add": [
-"multiple_resources",
-"on_play",
-"summon",
-"upgrade"
-],
-"drop": []
-},
-"813913": {
-"add": [
-"damage_reduction",
-"direct_damage"
-],
-"drop": []
-},
-"814035": {
-"add": [
-"death_trigger",
-"delayed",
-"heal",
-"on_play"
-],
-"drop": []
-},
-"752432": {
-"add": [
-"generate_cards"
-],
-"drop": []
-},
-"754238": {
-"add": [
-"graveyard:cost",
-"haste:grants",
-"summon"
-],
-"drop": []
-},
-"814149": {
-"add": [
-"death_trigger",
-"delayed",
-"summon"
-],
-"drop": []
-},
-"814226": {
-"add": [
-"banish",
-"haste",
-"on_play"
-],
-"drop": []
-},
-"754019": {
-"add": [
-"condition_count",
-"generate_cards",
-"on_play",
-"random_effect"
-],
-"drop": []
-},
-"752792": {
-"add": [
-"generate_cards",
-"on_play",
-"random_effect"
-],
-"drop": []
-},
-"755325": {
-"add": [
-"death_trigger",
-"delayed",
-"summon"
-],
-"drop": []
-},
-"814060": {
-"add": [
-"generate_cards",
-"haste",
-"on_play"
-],
-"drop": []
-},
-"754217": {
-"add": [
-"on_play",
-"summon"
-],
-"drop": []
-},
-"753816": {
-"add": [
-"destroy",
-"direct_damage"
-],
-"drop": []
-},
-"753016": {
-"add": [
-"discard",
-"draw",
-"on_play"
-],
-"drop": []
-},
-"754537": {
-"add": [
-"condition_count",
-"haste",
-"on_play",
-"summon"
-],
-"drop": []
-},
-"754715": {
-"add": [
-"cost_condition",
-"discard",
-"draw",
-"random_effect"
-],
-"drop": []
-},
-"814328": {
-"add": [
-"aoe_damage",
-"on_attack",
-"ping"
-],
-"drop": []
-},
-"813980": {
-"add": [
-"haste"
-],
-"drop": []
-},
-"753270": {
-"add": [
-"death_trigger",
-"haste",
-"summon"
-],
-"drop": []
-},
-"752525": {
-"add": [
-"summon"
-],
-"drop": []
-},
-"754048": {
-"add": [
-"aoe_damage",
-"death_trigger",
-"on_play",
-"sacrifice:cost",
-"summon"
-],
-"drop": []
-}
+ "752303": {
+  "add": [
+   "multiple_resources:cost"
+  ],
+  "drop": []
+ },
+ "754786": {
+  "add": [
+   "sacrifice",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "752719": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "755805": {
+  "add": [
+   "polymorph",
+   "transform",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "755182": {
+  "add": [
+   "cost_reduction",
+   "enemy_benefit"
+  ],
+  "drop": [
+   "stat_loss"
+  ]
+ },
+ "754467": {
+  "add": [
+   "polymorph",
+   "removal"
+  ],
+  "drop": []
+ },
+ "753418": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753644": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "753898": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "753820": {
+  "add": [
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "754892": {
+  "add": [
+   "sacrifice",
+   "death_trigger",
+   "delayed",
+   "on_play",
+   "summon"
+  ],
+  "drop": []
+ },
+ "754889": {
+  "add": [
+   "destroy",
+   "removal"
+  ],
+  "drop": []
+ },
+ "752583": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "754404": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "754494": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "752375": {
+  "add": [
+   "taunt:counters"
+  ],
+  "drop": [
+   "taunt"
+  ]
+ },
+ "753623": {
+  "add": [
+   "enemy_benefit",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "752850": {
+  "add": [
+   "symmetric_effect",
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "754240": {
+  "add": [
+   "destroy",
+   "removal"
+  ],
+  "drop": []
+ },
+ "753413": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "754323": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire",
+   "aoe_damage"
+  ],
+  "drop": []
+ },
+ "753188": {
+  "add": [
+   "mill"
+  ],
+  "drop": [
+   "copy",
+   "generate_cards",
+   "transform",
+   "tutor"
+  ]
+ },
+ "752345": {
+  "add": [
+   "deck_modification",
+   "cost_reduction"
+  ],
+  "drop": []
+ },
+ "753525": {
+  "add": [
+   "friendly_fire",
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "755582": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire",
+   "aoe_damage"
+  ],
+  "drop": []
+ },
+ "754717": {
+  "add": [
+   "friendly_fire",
+   "symmetric_effect",
+   "board_wipe"
+  ],
+  "drop": []
+ },
+ "754716": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754941": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "752665": {
+  "add": [
+   "drawback"
+  ],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "753399": {
+  "add": [
+   "taunt:counters"
+  ],
+  "drop": [
+   "taunt"
+  ]
+ },
+ "752568": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "753408": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "752340": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "754556": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "752656": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "754313": {
+  "add": [
+   "removal"
+  ],
+  "drop": [
+   "life_payment:cost"
+  ]
+ },
+ "755389": {
+  "add": [
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "754721": {
+  "add": [
+   "removal"
+  ],
+  "drop": [
+   "board_wipe"
+  ]
+ },
+ "752620": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "755224": {
+  "add": [
+   "transform",
+   "removal"
+  ],
+  "drop": []
+ },
+ "752964": {
+  "add": [
+   "removal"
+  ],
+  "drop": [
+   "hand_disruption"
+  ]
+ },
+ "753173": {
+  "add": [
+   "bounce_enemy",
+   "return_to_hand"
+  ],
+  "drop": []
+ },
+ "752847": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "753628": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "752652": {
+  "add": [
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "754944": {
+  "add": [
+   "destroy",
+   "removal"
+  ],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "752529": {
+  "add": [
+   "mill"
+  ],
+  "drop": [
+   "generate_cards",
+   "tutor"
+  ]
+ },
+ "753538": {
+  "add": [
+   "mill"
+  ],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "752607": {
+  "add": [
+   "silence"
+  ],
+  "drop": []
+ },
+ "752608": {
+  "add": [
+   "silence"
+  ],
+  "drop": []
+ },
+ "755804": {
+  "add": [
+   "summon",
+   "slot_filler"
+  ],
+  "drop": [
+   "tutor",
+   "random_effect"
+  ]
+ },
+ "755137": {
+  "add": [
+   "removal",
+   "bounce_enemy"
+  ],
+  "drop": [
+   "hand_disruption"
+  ]
+ },
+ "752702": {
+  "add": [
+   "sacrifice",
+   "removal"
+  ],
+  "drop": []
+ },
+ "752845": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "755627": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "755989": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "755142": {
+  "add": [
+   "symmetric_effect",
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "755136": {
+  "add": [
+   "symmetric_effect",
+   "removal"
+  ],
+  "drop": []
+ },
+ "753537": {
+  "add": [
+   "mill"
+  ],
+  "drop": [
+   "generate_cards",
+   "tutor"
+  ]
+ },
+ "755078": {
+  "add": [
+   "free_play"
+  ],
+  "drop": []
+ },
+ "753401": {
+  "add": [
+   "summon"
+  ],
+  "drop": []
+ },
+ "755903": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754344": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "753713": {
+  "add": [
+   "sacrifice",
+   "tribal",
+   "copy",
+   "generate_cards",
+   "on_play"
+  ],
+  "drop": [
+   "delayed",
+   "destroy"
+  ]
+ },
+ "755065": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753856": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "755959": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "755664": {
+  "add": [
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "753442": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "755969": {
+  "add": [
+   "symmetric_effect",
+   "heal",
+   "damage"
+  ],
+  "drop": []
+ },
+ "756083": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754299": {
+  "add": [
+   "friendly_fire",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "754789": {
+  "add": [
+   "life_payment:cost",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "755230": {
+  "add": [
+   "drawback",
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "754796": {
+  "add": [
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "755637": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": []
+ },
+ "754976": {
+  "add": [
+   "destroy",
+   "removal"
+  ],
+  "drop": []
+ },
+ "755552": {
+  "add": [
+   "drawback",
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "755817": {
+  "add": [
+   "friendly_fire",
+   "destroy"
+  ],
+  "drop": []
+ },
+ "755309": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "754736": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "755554": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "755881": {
+  "add": [
+   "symmetric_effect",
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "754008": {
+  "add": [
+   "silence"
+  ],
+  "drop": []
+ },
+ "755869": {
+  "add": [
+   "polymorph",
+   "transform",
+   "symmetric_effect",
+   "removal"
+  ],
+  "drop": []
+ },
+ "752807": {
+  "add": [
+   "recycle"
+  ],
+  "drop": []
+ },
+ "755592": {
+  "add": [
+   "symmetric_effect",
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "753369": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755192": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753318": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755255": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "755242": {
+  "add": [
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "755781": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "756100": {
+  "add": [
+   "damage_reduction",
+   "multi_attack"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "755894": {
+  "add": [
+   "win_condition"
+  ],
+  "drop": []
+ },
+ "752587": {
+  "add": [
+   "taunt:counters"
+  ],
+  "drop": [
+   "taunt"
+  ]
+ },
+ "754251": {
+  "add": [
+   "drawback",
+   "cant_attack"
+  ],
+  "drop": []
+ },
+ "752547": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "755191": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753676": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755651": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "754097": {
+  "add": [
+   "enemy_benefit",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "753768": {
+  "add": [
+   "taunt:counters"
+  ],
+  "drop": [
+   "taunt"
+  ]
+ },
+ "754133": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "754109": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "753794": {
+  "add": [
+   "taunt:counters"
+  ],
+  "drop": [
+   "taunt"
+  ]
+ },
+ "752873": {
+  "add": [
+   "taunt:counters"
+  ],
+  "drop": [
+   "taunt"
+  ]
+ },
+ "755652": {
+  "add": [
+   "sacrifice",
+   "count_payoff",
+   "aoe_damage",
+   "condition_count",
+   "destroy",
+   "on_play",
+   "random_effect",
+   "taunt"
+  ],
+  "drop": [
+   "modal_choice"
+  ]
+ },
+ "755279": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "752886": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754368": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "755358": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753393": {
+  "add": [
+   "enemy_benefit",
+   "damage",
+   "death_trigger",
+   "kicker",
+   "on_attack",
+   "on_play",
+   "summon",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "754052": {
+  "add": [
+   "polymorph",
+   "removal"
+  ],
+  "drop": []
+ },
+ "754642": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "753866": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "755397": {
+  "add": [
+   "hand_size"
+  ],
+  "drop": []
+ },
+ "754761": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "753358": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "754022": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "755809": {
+  "add": [
+   "life_payment:cost",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "755945": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire",
+   "board_wipe"
+  ],
+  "drop": []
+ },
+ "753501": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753336": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "756112": {
+  "add": [
+   "polymorph",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "752689": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "755675": {
+  "add": [
+   "destroy",
+   "removal"
+  ],
+  "drop": []
+ },
+ "755661": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "754950": {
+  "add": [
+   "friendly_fire",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "755855": {
+  "add": [
+   "sacrifice",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754822": {
+  "add": [
+   "drawback",
+   "stat_gain",
+   "cant_attack",
+   "destroy",
+   "heal",
+   "random_effect",
+   "turn_end"
+  ],
+  "drop": [
+   "combo_sequence",
+   "on_attack"
+  ]
+ },
+ "754126": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "755528": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755962": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755814": {
+  "add": [
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "753717": {
+  "add": [
+   "silence",
+   "deck_condition",
+   "draw",
+   "on_play",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "753755": {
+  "add": [
+   "buff",
+   "merge_attach"
+  ],
+  "drop": []
+ },
+ "753756": {
+  "add": [
+   "buff",
+   "merge_attach"
+  ],
+  "drop": []
+ },
+ "755350": {
+  "add": [
+   "sacrifice",
+   "removal"
+  ],
+  "drop": []
+ },
+ "755495": {
+  "add": [
+   "sacrifice",
+   "removal"
+  ],
+  "drop": []
+ },
+ "753869": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "754692": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "755873": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "754366": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire",
+   "aoe_damage"
+  ],
+  "drop": []
+ },
+ "755934": {
+  "add": [
+   "sacrifice",
+   "free_play",
+   "cost_condition",
+   "condition_count",
+   "destroy",
+   "high_cost:benefits",
+   "on_play",
+   "random_effect",
+   "tutor"
+  ],
+  "drop": [
+   "cost_increase",
+   "upgrade"
+  ]
+ },
+ "754630": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "756044": {
+  "add": [
+   "drawback",
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "755966": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753570": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "754673": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754708": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "755146": {
+  "add": [
+   "friendly_fire",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "753478": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755501": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "753674": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "755780": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755095": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "754953": {
+  "add": [
+   "friendly_fire",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "752647": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "753211": {
+  "add": [
+   "discard:benefits"
+  ],
+  "drop": []
+ },
+ "752958": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "756010": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "755659": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754350": {
+  "add": [
+   "enemy_benefit",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "754369": {
+  "add": [
+   "destroy",
+   "removal"
+  ],
+  "drop": []
+ },
+ "755318": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "754872": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "755201": {
+  "add": [
+   "taunt:counters"
+  ],
+  "drop": [
+   "taunt"
+  ]
+ },
+ "755782": {
+  "add": [
+   "death_count"
+  ],
+  "drop": []
+ },
+ "756080": {
+  "add": [
+   "destroy",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "753846": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755950": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "754641": {
+  "add": [
+   "enemy_benefit",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754224": {
+  "add": [
+   "steal"
+  ],
+  "drop": []
+ },
+ "755643": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "754198": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753687": {
+  "add": [
+   "silence",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "752957": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "752899": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "755381": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": []
+ },
+ "753034": {
+  "add": [
+   "enemy_benefit",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754584": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "755074": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "754803": {
+  "add": [
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "753553": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "754182": {
+  "add": [
+   "graveyard"
+  ],
+  "drop": [
+   "graveyard:cost"
+  ]
+ },
+ "754733": {
+  "add": [
+   "sacrifice",
+   "removal"
+  ],
+  "drop": []
+ },
+ "754817": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755636": {
+  "add": [
+   "deck_modification",
+   "mill"
+  ],
+  "drop": []
+ },
+ "755674": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "755596": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "755522": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "754453": {
+  "add": [
+   "drawback",
+   "damage",
+   "haste",
+   "on_attack"
+  ],
+  "drop": []
+ },
+ "755557": {
+  "add": [
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "754988": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "752601": {
+  "add": [
+   "polymorph",
+   "removal"
+  ],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "755163": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755556": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "755955": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "753355": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "756082": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": []
+ },
+ "754421": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": []
+ },
+ "756114": {
+  "add": [
+   "sacrifice",
+   "buff",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "752683": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "756097": {
+  "add": [
+   "mill",
+   "deck_modification"
+  ],
+  "drop": [
+   "board_wipe",
+   "scope_global",
+   "tutor"
+  ]
+ },
+ "754620": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754098": {
+  "add": [
+   "drawback",
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "753766": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "752738": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "754046": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "754502": {
+  "add": [
+   "bounce_enemy",
+   "return_to_hand",
+   "removal"
+  ],
+  "drop": []
+ },
+ "753095": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "752419": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755613": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "754773": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755382": {
+  "add": [
+   "drawback",
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "753327": {
+  "add": [
+   "silence"
+  ],
+  "drop": []
+ },
+ "753331": {
+  "add": [
+   "silence"
+  ],
+  "drop": []
+ },
+ "753431": {
+  "add": [
+   "life_payment:cost",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "755431": {
+  "add": [
+   "slot_filler",
+   "summon"
+  ],
+  "drop": []
+ },
+ "754416": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "755167": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753782": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "755458": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "753390": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "754120": {
+  "add": [
+   "mill"
+  ],
+  "drop": [
+   "board_wipe"
+  ]
+ },
+ "754792": {
+  "add": [
+   "life_payment:cost"
+  ],
+  "drop": []
+ },
+ "755436": {
+  "add": [
+   "win_condition"
+  ],
+  "drop": []
+ },
+ "755927": {
+  "add": [
+   "polymorph",
+   "removal"
+  ],
+  "drop": []
+ },
+ "755874": {
+  "add": [
+   "sacrifice",
+   "removal",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "753613": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "752787": {
+  "add": [
+   "removal",
+   "bounce_enemy"
+  ],
+  "drop": [
+   "hand_disruption"
+  ]
+ },
+ "754438": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753437": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754105": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "752783": {
+  "add": [
+   "symmetric_effect",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "754218": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "754115": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "753907": {
+  "add": [],
+  "drop": [
+   "enemy_benefit"
+  ]
+ },
+ "754429": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "753225": {
+  "add": [
+   "friendly_fire",
+   "damage",
+   "on_play",
+   "random_effect"
+  ],
+  "drop": [
+   "ping"
+  ]
+ },
+ "754341": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "756026": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "814335": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "813966": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": [
+   "banish"
+  ]
+ },
+ "813801": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "813904": {
+  "add": [
+   "deathtouch:grants"
+  ],
+  "drop": []
+ },
+ "814105": {
+  "add": [
+   "cost_set",
+   "stat_loss",
+   "in_hand_buff"
+  ],
+  "drop": []
+ },
+ "752849": {
+  "add": [
+   "variety_payoff",
+   "damage",
+   "draw",
+   "multiple_resources",
+   "random_effect",
+   "resource_gain"
+  ],
+  "drop": [
+   "copy"
+  ]
+ },
+ "753300": {
+  "add": [
+   "cost_reduction",
+   "generate_cards",
+   "return_to_hand",
+   "temporary_effect"
+  ],
+  "drop": []
+ },
+ "813969": {
+  "add": [
+   "damage",
+   "direct_damage"
+  ],
+  "drop": [
+   "ping"
+  ]
+ },
+ "756021": {
+  "add": [
+   "cost_condition",
+   "stat_gain",
+   "discard",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "755447": {
+  "add": [
+   "count_payoff",
+   "tribal",
+   "free_play",
+   "multi_attack",
+   "support",
+   "turn_start",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "summon",
+   "condition_count"
+  ]
+ },
+ "754055": {
+  "add": [
+   "tribal",
+   "damage",
+   "generate_cards",
+   "on_ally_play",
+   "on_play",
+   "random_effect",
+   "resource_gain",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "activated"
+  ]
+ },
+ "753103": {
+  "drop": [
+   "generate_cards"
+  ],
+  "add": [
+   "on_play",
+   "on_spell:benefits",
+   "random_effect",
+   "draw",
+   "tutor",
+   "upgrade:benefits"
+  ]
+ },
+ "813898": {
+  "add": [
+   "draw",
+   "tribal",
+   "death_trigger",
+   "random_effect",
+   "tutor"
+  ],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "752564": {
+  "add": [
+   "heal",
+   "count_payoff",
+   "death_trigger",
+   "on_play",
+   "summon"
+  ],
+  "drop": []
+ },
+ "755884": {
+  "add": [
+   "resource_gain",
+   "count_payoff",
+   "multiple_resources",
+   "on_ally_play",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "755987": {
+  "drop": [],
+  "add": [
+   "cost_type",
+   "damage",
+   "death_trigger",
+   "deathtouch",
+   "delayed",
+   "draw",
+   "haste",
+   "haste:grants",
+   "on_play",
+   "summon",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "754211": {
+  "add": [
+   "stat_gain",
+   "tribal",
+   "kicker",
+   "on_play",
+   "summon",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "753172": {
+  "add": [
+   "in_hand_buff",
+   "on_spell",
+   "ping",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "754937": {
+  "drop": [
+   "multiple_resources:cost"
+  ],
+  "add": [
+   "generate_cards",
+   "on_play",
+   "resource_gain",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "752582": {
+  "add": [
+   "transform",
+   "cost_condition",
+   "condition",
+   "haste:grants",
+   "in_hand_buff",
+   "on_ally_play",
+   "on_play"
+  ],
+  "drop": [
+   "economy"
+  ]
+ },
+ "752514": {
+  "drop": [
+   "multiple_resources:cost"
+  ],
+  "add": [
+   "cost_reduction",
+   "generate_cards",
+   "on_play",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "752540": {
+  "drop": [
+   "sacrifice:cost"
+  ],
+  "add": [
+   "random_effect",
+   "summon",
+   "draw",
+   "tutor"
+  ]
+ },
+ "752407": {
+  "add": [
+   "temporary_effect",
+   "condition_count",
+   "damage_reduction",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "754110": {
+  "drop": [
+   "multiple_resources:cost"
+  ],
+  "add": [
+   "condition",
+   "on_play",
+   "ping",
+   "resource_gain",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "755796": {
+  "add": [
+   "repeat_trigger",
+   "cost_type",
+   "damage",
+   "death_trigger",
+   "delayed",
+   "draw",
+   "graveyard",
+   "high_cost:benefits",
+   "on_play",
+   "random_effect",
+   "revive",
+   "summon",
+   "sacrifice:cost",
+   "taunt"
+  ],
+  "drop": [
+   "activated",
+   "modal_choice"
+  ]
+ },
+ "752569": {
+  "add": [
+   "turn_number",
+   "generate_cards",
+   "resource_gain"
+  ],
+  "drop": []
+ },
+ "754152": {
+  "add": [
+   "condition_count",
+   "damage",
+   "draw",
+   "kicker"
+  ],
+  "drop": []
+ },
+ "755926": {
+  "add": [
+   "condition_count",
+   "cost_set",
+   "cost_condition",
+   "direct_damage",
+   "discard",
+   "draw",
+   "in_hand_buff",
+   "on_play",
+   "on_spell",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost",
+   "summon:benefits",
+   "on_ally_play"
+  ]
+ },
+ "755169": {
+  "drop": [
+   "multiple_resources:cost"
+  ],
+  "add": [
+   "generate_cards",
+   "on_damaged",
+   "on_play",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "754228": {
+  "add": [
+   "cost_set",
+   "tribal",
+   "deathtouch:grants",
+   "generate_cards",
+   "graveyard",
+   "in_hand_buff",
+   "kicker",
+   "lifesteal:grants",
+   "on_play",
+   "sacrifice:cost",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "754128": {
+  "add": [
+   "stat_condition",
+   "draw",
+   "in_hand_buff",
+   "stat_gain",
+   "on_play"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "756104": {
+  "drop": [
+   "modal_choice"
+  ],
+  "add": [
+   "cost_type",
+   "discard",
+   "draw",
+   "haste",
+   "on_play",
+   "summon"
+  ]
+ },
+ "754710": {
+  "drop": [
+   "multiple_resources:cost"
+  ],
+  "add": [
+   "damage",
+   "draw",
+   "on_play",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "752508": {
+  "add": [
+   "draw",
+   "random_effect",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "755748": {
+  "add": [
+   "stat_condition",
+   "permanent_growth",
+   "banish",
+   "stat_gain",
+   "cant_attack",
+   "cost_condition",
+   "direct_damage",
+   "on_play",
+   "random_effect",
+   "turn_end",
+   "turn_start"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "753154": {
+  "add": [
+   "count_payoff",
+   "temporary_effect",
+   "stat_loss",
+   "generate_cards",
+   "on_attack",
+   "on_play",
+   "summon"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "753858": {
+  "add": [
+   "on_ally_play",
+   "tribal",
+   "generate_cards",
+   "heal",
+   "on_play",
+   "summon",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "755063": {
+  "add": [
+   "tribal",
+   "direct_damage",
+   "on_attack",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "814021": {
+  "drop": [
+   "terrain"
+  ],
+  "add": [
+   "delayed",
+   "summon",
+   "turn_end"
+  ]
+ },
+ "814095": {
+  "drop": [
+   "shop_gold"
+  ],
+  "add": [
+   "stat_gain",
+   "draw",
+   "on_ally_play",
+   "temporary_effect"
+  ]
+ },
+ "814065": {
+  "add": [
+   "cost_condition",
+   "banish",
+   "random_effect",
+   "stealth",
+   "support"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "755561": {
+  "add": [
+   "stat_condition",
+   "low_life",
+   "cost_type",
+   "delayed",
+   "destroy",
+   "life_payment:cost",
+   "on_play",
+   "turn_start"
+  ],
+  "drop": [
+   "ping",
+   "modal_choice"
+  ]
+ },
+ "752614": {
+  "add": [
+   "variety_payoff",
+   "tribal",
+   "revive",
+   "summon",
+   "copy",
+   "cost_condition",
+   "draw",
+   "graveyard:cost",
+   "kicker"
+  ],
+  "drop": []
+ },
+ "813831": {
+  "add": [
+   "count_payoff",
+   "stat_gain",
+   "haste"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "754325": {
+  "add": [
+   "deck_condition",
+   "buff",
+   "upgrade",
+   "random_effect",
+   "summon",
+   "draw",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "755650": {
+  "add": [
+   "count_payoff",
+   "aoe_damage",
+   "free_play",
+   "haste",
+   "on_attack",
+   "turn_start"
+  ],
+  "drop": [
+   "summon",
+   "condition_count"
+  ]
+ },
+ "755733": {
+  "add": [
+   "stat_gain",
+   "cost_reduction",
+   "on_spell",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "753753": {
+  "add": [
+   "count_payoff",
+   "multiple_resources",
+   "resource_gain"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "755345": {
+  "add": [
+   "on_ally_play",
+   "tribal",
+   "generate_cards",
+   "on_play",
+   "summon",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "755407": {
+  "add": [
+   "haste:grants",
+   "stat_gain",
+   "condition_count",
+   "haste",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "814103": {
+  "add": [
+   "damage",
+   "deck_condition",
+   "direct_damage"
+  ],
+  "drop": []
+ },
+ "753219": {
+  "add": [
+   "tribal",
+   "on_play",
+   "polymorph",
+   "transform"
+  ],
+  "drop": []
+ },
+ "753677": {
+  "add": [
+   "protection",
+   "tribal",
+   "on_play"
+  ],
+  "drop": [
+   "destroy:counters"
+  ]
+ },
+ "814252": {
+  "add": [
+   "reactions",
+   "self_destruct",
+   "death_trigger",
+   "draw",
+   "heal"
+  ],
+  "drop": [
+   "destroy"
+  ]
+ },
+ "755560": {
+  "add": [
+   "draw",
+   "tribal",
+   "aoe_damage",
+   "cost_type",
+   "death_trigger",
+   "delayed",
+   "on_play",
+   "random_effect",
+   "tutor"
+  ],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "755373": {
+  "drop": [
+   "modal_choice"
+  ],
+  "add": [
+   "stat_gain",
+   "cost_type",
+   "on_play"
+  ]
+ },
+ "752574": {
+  "add": [
+   "tribal",
+   "random_effect",
+   "draw",
+   "tutor"
+  ],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "813735": {
+  "add": [
+   "disruption",
+   "play_restriction",
+   "board_wipe",
+   "destroy"
+  ],
+  "drop": [
+   "placement_rules"
+  ]
+ },
+ "752688": {
+  "add": [
+   "death_trigger",
+   "delayed",
+   "delayed:benefits",
+   "on_play",
+   "random_effect",
+   "draw",
+   "tutor"
+  ],
+  "drop": [
+   "death_count",
+   "cost_type:benefits"
+  ]
+ },
+ "754864": {
+  "add": [
+   "hand_size",
+   "cost_type",
+   "death_trigger",
+   "delayed",
+   "haste",
+   "on_play",
+   "summon"
+  ],
+  "drop": []
+ },
+ "755563": {
+  "drop": [
+   "combo_sequence",
+   "damage"
+  ],
+  "add": [
+   "stat_loss",
+   "on_attack",
+   "on_play",
+   "summon",
+   "taunt:grants",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "753731": {
+  "add": [
+   "count_payoff",
+   "cost_condition",
+   "on_play",
+   "random_effect",
+   "draw",
+   "tutor",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "generate_cards",
+   "condition_count",
+   "multiple_resources:cost"
+  ]
+ },
+ "754196": {
+  "drop": [
+   "multiple_resources:cost"
+  ],
+  "add": [
+   "death_trigger",
+   "graveyard",
+   "kicker",
+   "on_play",
+   "revive",
+   "summon",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "753970": {
+  "add": [
+   "count_payoff",
+   "on_play",
+   "summon"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "814164": {
+  "drop": [
+   "damage"
+  ],
+  "add": [
+   "haste",
+   "on_attack",
+   "summon"
+  ]
+ },
+ "755154": {
+  "add": [
+   "tribal",
+   "cost_reduction",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "755232": {
+  "add": [
+   "direct_damage",
+   "passive"
+  ],
+  "drop": []
+ },
+ "754542": {
+  "add": [
+   "deck_condition",
+   "variety_payoff",
+   "damage",
+   "draw",
+   "on_play"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "752378": {
+  "add": [
+   "heal",
+   "count_payoff",
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "755481": {
+  "add": [
+   "stat_condition",
+   "banish",
+   "board_wipe",
+   "sacrifice:cost"
+  ],
+  "drop": []
+ },
+ "755829": {
+  "drop": [],
+  "add": [
+   "death_trigger",
+   "deathtouch",
+   "direct_damage",
+   "haste",
+   "taunt"
+  ]
+ },
+ "813839": {
+  "add": [
+   "count_payoff",
+   "damage",
+   "direct_damage"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "753973": {
+  "drop": [
+   "damage"
+  ],
+  "add": [
+   "draw",
+   "generate_cards",
+   "haste",
+   "on_attack",
+   "on_play",
+   "stealth"
+  ]
+ },
+ "755725": {
+  "drop": [
+   "multiple_resources:cost",
+   "delayed"
+  ],
+  "add": [
+   "cost_type",
+   "draw",
+   "immunity",
+   "on_play",
+   "sacrifice:cost",
+   "stacking_keyword",
+   "summon",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "813872": {
+  "add": [
+   "count_payoff",
+   "damage",
+   "direct_damage",
+   "random_effect"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "755260": {
+  "add": [
+   "condition",
+   "aoe_damage",
+   "life_payment:cost",
+   "lifesteal",
+   "on_play",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "condition_count",
+   "haste"
+  ]
+ },
+ "755173": {
+  "add": [
+   "damage",
+   "combo_sequence",
+   "direct_damage",
+   "on_play",
+   "random_effect",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "752344": {
+  "add": [
+   "condition",
+   "direct_damage",
+   "heal",
+   "turn_end"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "755050": {
+  "add": [
+   "stat_gain",
+   "tribal",
+   "free_play",
+   "cost_condition",
+   "random_effect",
+   "turn_end",
+   "tutor",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "756092": {
+  "add": [
+   "damage",
+   "aoe_damage",
+   "cost_type",
+   "haste",
+   "multi_attack"
+  ],
+  "drop": [
+   "modal_choice"
+  ]
+ },
+ "752561": {
+  "add": [
+   "stat_condition",
+   "haste",
+   "on_play",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "condition_count",
+   "multiple_resources:cost"
+  ]
+ },
+ "753787": {
+  "add": [
+   "banish",
+   "kicker",
+   "on_play",
+   "random_effect",
+   "summon",
+   "turn_end",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "damage_over_time"
+  ]
+ },
+ "753085": {
+  "add": [
+   "condition",
+   "tribal",
+   "damage",
+   "direct_damage",
+   "draw",
+   "heal",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "754428": {
+  "add": [
+   "count_payoff",
+   "variable_stats",
+   "haste",
+   "on_play"
+  ],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "752597": {
+  "add": [
+   "count_payoff",
+   "stat_gain",
+   "death_trigger",
+   "haste",
+   "on_play"
+  ],
+  "drop": [
+   "condition_count",
+   "graveyard"
+  ]
+ },
+ "752911": {
+  "add": [
+   "kicker",
+   "stat_gain",
+   "condition_count",
+   "draw",
+   "heal",
+   "on_play"
+  ],
+  "drop": [
+   "delayed"
+  ]
+ },
+ "752468": {
+  "add": [
+   "tribal",
+   "generate_cards",
+   "random_effect",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost",
+   "on_ally_play"
+  ]
+ },
+ "756049": {
+  "add": [
+   "damage",
+   "aoe_damage",
+   "condition",
+   "cost_type",
+   "discard",
+   "draw",
+   "on_play"
+  ],
+  "drop": [
+   "modal_choice"
+  ]
+ },
+ "752451": {
+  "add": [
+   "return_to_hand:benefits",
+   "death_trigger",
+   "delayed",
+   "generate_cards",
+   "ping",
+   "random_effect",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "754640": {
+  "add": [
+   "count_payoff",
+   "damage",
+   "kicker",
+   "on_play",
+   "resource_gain",
+   "sacrifice:cost",
+   "summon",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "754381": {
+  "add": [
+   "revive",
+   "summon",
+   "copy",
+   "heal",
+   "on_play",
+   "random_effect",
+   "taunt",
+   "turn_end",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "condition_count",
+   "multiple_resources:cost"
+  ]
+ },
+ "753231": {
+  "drop": [
+   "draw"
+  ],
+  "add": [
+   "generate_cards",
+   "on_play",
+   "random_effect"
+  ]
+ },
+ "753848": {
+  "drop": [
+   "damage"
+  ],
+  "add": [
+   "condition_count",
+   "damage_reduction",
+   "multi_attack",
+   "on_attack",
+   "on_play",
+   "taunt",
+   "temporary_effect",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "755159": {
+  "drop": [
+   "damage:benefits"
+  ],
+  "add": [
+   "draw",
+   "on_damaged"
+  ]
+ },
+ "752903": {
+  "add": [
+   "tribal",
+   "draw",
+   "on_play",
+   "return_to_hand",
+   "taunt"
+  ],
+  "drop": []
+ },
+ "753707": {
+  "drop": [
+   "multiple_resources:cost"
+  ],
+  "add": [
+   "generate_cards",
+   "on_play",
+   "buff",
+   "upgrade"
+  ]
+ },
+ "753643": {
+  "drop": [
+   "summon:benefits"
+  ],
+  "add": [
+   "generate_cards",
+   "on_ally_play",
+   "on_play",
+   "resource_gain"
+  ]
+ },
+ "754427": {
+  "drop": [
+   "draw"
+  ],
+  "add": [
+   "death_trigger",
+   "generate_cards",
+   "taunt"
+  ]
+ },
+ "754572": {
+  "add": [
+   "free_play",
+   "cost_condition",
+   "tribal",
+   "random_effect",
+   "turn_end",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "754749": {
+  "drop": [
+   "activated"
+  ],
+  "add": [
+   "generate_cards",
+   "on_play",
+   "turn_end"
+  ]
+ },
+ "756063": {
+  "add": [
+   "condition",
+   "direct_damage",
+   "cost_type",
+   "damage",
+   "death_trigger",
+   "delayed",
+   "draw",
+   "life_payment:cost",
+   "on_play",
+   "random_effect"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "754974": {
+  "add": [
+   "count_payoff",
+   "damage",
+   "aoe_damage",
+   "on_play",
+   "taunt",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "multiple_resources:cost"
+  ]
+ },
+ "813773": {
+  "add": [
+   "self_destruct",
+   "haste",
+   "turn_end"
+  ],
+  "drop": [
+   "destroy"
+  ]
+ },
+ "755505": {
+  "add": [
+   "stat_condition",
+   "tribal",
+   "cost_type",
+   "direct_damage",
+   "on_play",
+   "random_effect",
+   "draw",
+   "tutor"
+  ],
+  "drop": [
+   "condition_count",
+   "modal_choice"
+  ]
+ },
+ "755150": {
+  "add": [
+   "stat_gain",
+   "permanent_growth",
+   "cost_condition",
+   "discard",
+   "random_effect",
+   "turn_end"
+  ],
+  "drop": [
+   "in_hand_buff"
+  ]
+ },
+ "755787": {
+  "add": [
+   "free_play",
+   "cost_condition",
+   "death_trigger",
+   "heal",
+   "on_play",
+   "random_effect",
+   "sacrifice:benefits"
+  ],
+  "drop": [
+   "tutor",
+   "death_count",
+   "destroy:benefits"
+  ]
+ },
+ "753876": {
+  "add": [
+   "cost_reduction",
+   "generate_cards",
+   "modal_choice",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "754413": {
+  "add": [
+   "tribal",
+   "stat_gain",
+   "on_play",
+   "targeting_rules"
+  ],
+  "drop": []
+ },
+ "814122": {
+  "add": [
+   "variable_stats",
+   "stat_gain",
+   "direct_damage",
+   "on_attack"
+  ],
+  "drop": []
+ },
+ "753436": {
+  "add": [
+   "targeting_rules"
+  ],
+  "drop": []
+ },
+ "754426": {
+  "add": [
+   "modal_choice",
+   "on_play",
+   "summon"
+  ],
+  "drop": []
+ },
+ "813760": {
+  "add": [
+   "multiple_resources",
+   "resource_gain"
+  ],
+  "drop": []
+ },
+ "755532": {
+  "add": [
+   "on_play",
+   "summon",
+   "taunt"
+  ],
+  "drop": []
+ },
+ "752349": {
+  "add": [
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "754518": {
+  "add": [
+   "aoe_damage",
+   "draw",
+   "on_attack",
+   "on_play",
+   "ping"
+  ],
+  "drop": []
+ },
+ "755460": {
+  "add": [
+   "generate_cards",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "814334": {
+  "add": [
+   "condition_count",
+   "delayed",
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "813972": {
+  "add": [
+   "damage",
+   "heal",
+   "kicker"
+  ],
+  "drop": []
+ },
+ "754246": {
+  "add": [
+   "damage",
+   "life_payment:cost",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "754765": {
+  "add": [
+   "death_trigger",
+   "kicker",
+   "on_play",
+   "summon",
+   "taunt",
+   "buff",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "753325": {
+  "add": [
+   "death_trigger",
+   "summon"
+  ],
+  "drop": []
+ },
+ "753891": {
+  "add": [
+   "stat_gain",
+   "kicker",
+   "summon"
+  ],
+  "drop": []
+ },
+ "754664": {
+  "add": [
+   "copy",
+   "summon",
+   "taunt:grants"
+  ],
+  "drop": []
+ },
+ "814009": {
+  "add": [
+   "banish",
+   "copy",
+   "generate_cards",
+   "draw",
+   "on_play",
+   "taunt"
+  ],
+  "drop": []
+ },
+ "753043": {
+  "add": [
+   "multiple_resources",
+   "on_play",
+   "summon",
+   "buff",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "813913": {
+  "add": [
+   "damage_reduction",
+   "direct_damage"
+  ],
+  "drop": []
+ },
+ "814035": {
+  "add": [
+   "death_trigger",
+   "delayed",
+   "heal",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "752432": {
+  "add": [
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "754238": {
+  "add": [
+   "graveyard:cost",
+   "haste:grants",
+   "summon"
+  ],
+  "drop": []
+ },
+ "814149": {
+  "add": [
+   "death_trigger",
+   "delayed",
+   "summon"
+  ],
+  "drop": []
+ },
+ "814226": {
+  "add": [
+   "banish",
+   "haste",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "754019": {
+  "add": [
+   "condition_count",
+   "generate_cards",
+   "on_play",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "752792": {
+  "add": [
+   "generate_cards",
+   "on_play",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "755325": {
+  "add": [
+   "death_trigger",
+   "delayed",
+   "summon"
+  ],
+  "drop": []
+ },
+ "814060": {
+  "add": [
+   "generate_cards",
+   "haste",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "754217": {
+  "add": [
+   "on_play",
+   "summon"
+  ],
+  "drop": []
+ },
+ "753816": {
+  "add": [
+   "destroy",
+   "direct_damage"
+  ],
+  "drop": []
+ },
+ "753016": {
+  "add": [
+   "discard",
+   "draw",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "754537": {
+  "add": [
+   "condition_count",
+   "haste",
+   "on_play",
+   "summon"
+  ],
+  "drop": []
+ },
+ "754715": {
+  "add": [
+   "cost_condition",
+   "discard",
+   "draw",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "814328": {
+  "add": [
+   "aoe_damage",
+   "on_attack",
+   "ping"
+  ],
+  "drop": []
+ },
+ "813980": {
+  "add": [
+   "haste"
+  ],
+  "drop": []
+ },
+ "753270": {
+  "add": [
+   "death_trigger",
+   "haste",
+   "summon"
+  ],
+  "drop": []
+ },
+ "752525": {
+  "add": [
+   "summon"
+  ],
+  "drop": []
+ },
+ "754048": {
+  "add": [
+   "aoe_damage",
+   "death_trigger",
+   "on_play",
+   "sacrifice:cost",
+   "summon"
+  ],
+  "drop": []
+ }
 }

@@ -23,12 +23,12 @@ steps() {   # $1 = db
   $P drop_untagged.py "$D"
   $P fix_grants.py "$D"
   $P fixes/f03_grant_not_does.py "$D"
-  for f in reviews/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f"; done
+  for f in reviews/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f" old; done
   $P kw_sync.py "$D" wh_bloodbowl3 wh_killteam wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:wh_underworlds h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th
   $P propagate.py "$D"
   $P keyword_defs.py "$D"
   $P outcome_tree.py "$D"
-  for f in reviews_outcome/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f"; done
+  for f in reviews_outcome/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f" old; done
   $P condition_roles.py "$D"
   $P link_types.py "$D"
   $P engine_links.py "$D"
@@ -36,6 +36,8 @@ steps() {   # $1 = db
   $P trigger_pairs.py "$D"
   $P regression.py "$D" enforce
   $P concept_tree.py "$D" apply
+  for f in reviews/*.json reviews_outcome/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f" new; done   # reviews are in the new ids (fixes/f15)
+  $P regression.py "$D" enforce_new
   $P pattern_fix.py "$D"
   $P kw_links.py "$D"
   $P parent_rule.py "$D"

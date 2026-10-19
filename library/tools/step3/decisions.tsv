@@ -97,11 +97,13 @@ narrow	banish|does|*|\bexile	mtg	(?!)
 narrow	blocking|counters|*|can't block	runeterra	(?!)
 narrow	blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	runeterra	(?!)
 narrow	buff|does|wh_40k_10e|(add|subtract) 1 (to|from) the (hit|wound) roll	wh_40k_10e	(?!)
-narrow	cant_attack|does|*|\bdefender\b	wh_40k_10e	(?!)
+narrow	cant_attack|does|*|\bdefender\b	hearthstone,wh_40k_10e	(?!)
+narrow	cant_attack|does|*|can't attack	hearthstone	(?!)
 narrow	coin_economy|does|*|\bcoins?\b	gwent	(?!)
 narrow	condition_count|does|*|\bfor each\b	gwent,mtg,shadowverse,wh_40k_10e,wh_aos_4th,wh_underworlds	(?!)
 narrow	condition_count|does|*|at least \d+	runeterra,shadowverse,wh_aos_4th,wh_killteam	(?!)
 narrow	condition_count|does|*|equal to the number of	mtg,wh_aos_4th	(?!)
+narrow	copy|does|*|\bcopy\b	faeria	(?!)
 narrow	cost_reduction|does|*|costs? \(?\d+\)? less	hearthstone	(?!)
 narrow	cost_reduction|does|*|reduce .{0,20}cost	hearthstone,runeterra	(?!)
 narrow	count_payoff|does|shadowverse|(at least \d+|equals? the number|x is at least)[^.]*this match	shadowverse	(?!)
@@ -119,13 +121,13 @@ narrow	damage|does|*|\b\d+ damage\b	gwent,hearthstone,into_the_breach,mtg,runete
 narrow	damage|does|*|\bdamage (a|an|all|self|it|the|each|\d|by|enemy|highest|lowest|adjacent)\b	dnd5e,hearthstone,into_the_breach,mtg,runeterra,sts1,wh_aos_4th	(?!)
 narrow	damage|does|*|\bdamage to\b	dnd5e,gwent,hearthstone,into_the_breach,mtg,runeterra,shadowverse,wh_killteam	(?!)
 narrow	damage|does|*|\bdeal \d+ to\b	runeterra	(?!)
-narrow	damage|does|*|\bdeal damage	dnd5e,duelyst,hearthstone,mtg,runeterra	(?!)
-narrow	damage|does|*|\bstrikes?\b	dnd5e,gwent,hearthstone,into_the_breach,runeterra,shadowverse,sts1,wh_40k_10e,wh_aos_4th,wh_killteam	(?!)
+narrow	damage|does|*|\bdeal damage	dnd5e,duelyst,hearthstone,mtg,runeterra,sts2	(?!)
+narrow	damage|does|*|\bstrikes?\b	dnd5e,gwent,hearthstone,into_the_breach,runeterra,shadowverse,sts1,sts2,wh_40k_10e,wh_aos_4th,wh_killteam	(?!)
 narrow	damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	hearthstone,runeterra	(?!)
 narrow	damage|does|dnd5e|\b\d+d\d+( ?[+-] ?\d+)? [a-z]+ damage\b|\(\d+d\d+( ?[+-] ?\d+)?\) [a-z]+ damage\b|\btakes? [^.]{0,30}\bdamage\b|\bdeals? [^.]{0,30}\bdamage\b	dnd5e	(?!)
 narrow	damage|does|wh_40k_10e|\b(suffers?|inflicts?|deals?|inflicting|suffering) (up to )?(\d+|d3|d6|2d3|\w+ )?(additional )?mortal wounds?\b|\[devastating wounds\]	wh_40k_10e	(?!)
 narrow	death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	hs_battlegrounds,shadowverse	(?!)
-narrow	death_trigger|does|*|when .{0,20}(dies|perishes)	dnd5e,inscryption	(?!)
+narrow	death_trigger|does|*|when .{0,20}(dies|perishes)	dnd5e,inscryption,runeterra	(?!)
 narrow	delayed|does|*|\bcountdown	shadowverse	(?!)
 narrow	delayed|does|*|next turn	shadowverse	(?!)
 narrow	destroy|counters|*|\bindestructible\b	mtg	(?!)
@@ -156,8 +158,8 @@ narrow	merge_attach|does|*|\battach	mtg,runeterra	(?!)
 narrow	modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	dnd5e,wh_40k_10e,wh_killteam	(?!)
 narrow	movement|does|*|\badvance\b	wh_40k_10e,wh_aos_4th,wh_killteam	(?!)
 narrow	movement|does|*|\bcharge rolls?	wh_40k_10e,wh_aos_4th,wh_killteam	(?!)
-narrow	movement|does|*|\bmoves?\b	darkest_dungeon,duelyst,faeria,inscryption,into_the_breach,wh_40k_10e,wh_aos_4th,wh_killteam,wh_underworlds	(?!)
-narrow	movement|does|*|\bpush	darkest_dungeon,duelyst,inscryption,into_the_breach,wh_40k_10e,wh_underworlds	(?!)
+narrow	movement|does|*|\bmoves?\b	darkest_dungeon,duelyst,faeria,inscryption,into_the_breach,wh_40k_10e,wh_aos_4th,wh_bloodbowl3,wh_killteam,wh_underworlds	(?!)
+narrow	movement|does|*|\bpush	darkest_dungeon,duelyst,inscryption,into_the_breach,wh_40k_10e,wh_bloodbowl3,wh_underworlds	(?!)
 narrow	movement|does|wh_killteam|\b(normal move|dash|fall back|reposition|charge) action\b	wh_killteam	(?!)
 narrow	on_ally_play|does|*|whenever (you play|you summon|another .{0,30}(enters|is summoned|is played))	gwent,sts2	(?!)
 narrow	on_attack|does|*|whenever .{0,20}attacks	shadowverse	(?!)
@@ -177,10 +179,11 @@ narrow	random_effect|does|*|\bdice\b	mtg,wh_40k_10e,wh_bloodbowl3,wh_killteam,wh
 narrow	random_effect|does|*|\brandom	mtg	(?!)
 narrow	random_effect|does|*|\broll	sts1,sts2,wh_40k_10e,wh_aos_4th,wh_killteam,wh_underworlds	(?!)
 narrow	random_effect|does|wh_aos_4th|\broll (a|\d+) dice\b|\bon a \d\+|\b(casting|chanting|charge|run) rolls?\b|\b2d6\b|\bd3\b|\bd6\b	wh_aos_4th	(?!)
-narrow	ranged|does|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	dnd5e	(?!)
+narrow	ranged|does|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	dnd5e,wh_aos_4th	(?!)
 narrow	ranged|does|*|\branged attack	dnd5e,wh_40k_10e	(?!)
-narrow	ranged|does|*|\branged\b	dnd5e,into_the_breach,wh_40k_10e	(?!)
-narrow	ranged|does|*|\bshoot	into_the_breach,wh_40k_10e	(?!)
+narrow	ranged|does|*|\branged\b	dnd5e,into_the_breach,wh_40k_10e,wh_aos_4th	(?!)
+narrow	ranged|does|*|\bshoot	into_the_breach,wh_40k_10e,wh_aos_4th	(?!)
+narrow	ranged|does|wh_aos_4th|\bshooting attacks?\b|\bshoot\b	wh_aos_4th	(?!)
 narrow	reactions|does|*|\breaction\b	wh_aos_4th	(?!)
 narrow	recycle|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	gwent	(?!)
 narrow	regeneration|does|*|\bregenerat	wh_40k_10e	(?!)
@@ -243,30 +246,35 @@ new	delayed|does|into_the_breach|key	into_the_breach	\bpreparing\s+to\s+stab\s+i
 new	exhaust|does|into_the_breach|key	into_the_breach	\bsingle\-use\b
 new	forced_movement|does|into_the_breach|key	into_the_breach	(?:\band\s+pushes\b)|(?:\bpush\s+adjacent\s+tiles\b)|(?:\bpushes\b)|(?:\bpushing\s+adjacent\s+tiles\b)
 new	friendly_fire|does|into_the_breach|key	into_the_breach	\b\d+\s+self\b
+new	immunity|does|into_the_breach|key	into_the_breach	(?:\bflying\b)|(?:\bthis\s+unit\s+is\s+unaffected\s+by\s+smoke\b)
 new	movement|does|into_the_breach|key	into_the_breach	(?:\bflying\s+units\s+can\s+move\s+over\s+any\s+terrain\s+tile\b)|(?:\bmassive\b)|(?:\bmassive\s+units\s+can\s+walk\s+in\s+water\b)|(?:\bmove\s+over\s+any\s+terrain\s+tile\b)
 new	multi_target_attack|does|into_the_breach|key	into_the_breach	\blaunch\s+rockets\s+at\s+\d+\s+tiles\s+dealing\s+\d+\s+damage\s+to\s+each\b
 new	placement_rules|does|into_the_breach|key	into_the_breach	\bflying\b
 new	ranged|does|into_the_breach|key	into_the_breach	(?:\b\d+\s+tile\s+range\b)|(?:\bartillery\s+attack\b)|(?:\blaunch\s+a\s+volatile\s+mass\s+of\s+goo\b)
 new	stat_gain|does|into_the_breach|key	into_the_breach	\+\d+\s+hp\b
 new	telegraphed_threats|does|into_the_breach|key	into_the_breach	\bpreparing\s+to\s+stab\s+it\b
-new	upgrade|does|into_the_breach|key	into_the_breach	(?:\bupgrade:\s+\+\d+\s+damage\s+each\b)|(?:\bupgrade:\s+\+\d+\s+health\b)|(?:\bupgrade:\s+\+\d+\s+range\b)|(?:\bupgrade:\s+\+\d+\s+use\b)
-new	activated|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bbombardier\b)|(?:\bchainsaw\b)|(?:\bprojectile\s+vomit\b)
-new	adjacency|does|wh_bloodbowl3|key	wh_bloodbowl3	\breally\s+stupid\b
+new	upgrade|does|into_the_breach|key	into_the_breach	(?:\bupgrade:\s+\+\d+\s+damage\b)|(?:\bupgrade:\s+\+\d+\s+damage\s+each\b)|(?:\bupgrade:\s+\+\d+\s+health\b)|(?:\bupgrade:\s+\+\d+\s+range\b)|(?:\bupgrade:\s+\+\d+\s+use\b)
+new	activated|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bbombardier\b)|(?:\bchainsaw\b)|(?:\bdeclare\s+a\s+name\s+special\s+action\b)|(?:\bhypnotic\s+gaze\b)|(?:\bprojectile\s+vomit\b)|(?:\bthey\s+can\s+declare\s+a\s+name\s+special\s+action\b)
+new	adjacency|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\breally\s+stupid\b)|(?:\btimmm\-ber!)
 new	advantage|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bbrawler\b)|(?:\bdodge\b)|(?:\bhatred\s+\(x\))|(?:\bsure\s+feet\b)|(?:\bsure\s+hands\b)
 new	assists_support|does|wh_bloodbowl3|key	wh_bloodbowl3	\bguard\b
+new	aura|does|wh_bloodbowl3|key	wh_bloodbowl3	\bdisturbing\s+presence\b
 new	buff|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\baccurate\b)|(?:\bdirty\s+player\b)|(?:\bmighty\s+blow\b)|(?:\bstrong\s+arm\b)|(?:\btimmm\-ber!)|(?:\btitchy\b)
 new	counter_spell|does|wh_bloodbowl3|key	wh_bloodbowl3	\bfoul\s+appearance\b
 new	damage|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bchainsaw\b)|(?:\bprojectile\s+vomit\b)
 new	debuff|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bdisturbing\s+presence\b)|(?:\bprehensile\s+tail\b)|(?:\bstunty\b)
-new	disable|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\banimosity\s+\(x\))|(?:\bbone\s+head\b)|(?:\bhypnotic\s+gaze\b)|(?:\breally\s+stupid\b)|(?:\bunchannelled\s+fury\b)
+new	disable|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\banimosity\s+\(x\))|(?:\bbone\s+head\b)|(?:\bhypnotic\s+gaze\b)|(?:\breally\s+stupid\b)|(?:\bunchannelled\s+fury\b)|(?:\bwrestle\b)
 new	flexibility|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bjuggernaut\b)|(?:\bwrestle\b)
 new	friendly_fire|does|wh_bloodbowl3|key	wh_bloodbowl3	\balways\s+hungry\b
+new	immunity|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bnerves\s+of\s+steel\b)|(?:\bsneaky\s+git\b)|(?:\bstunty\b)|(?:\bsure\s+hands\b)
+new	movement|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bpogo\b)|(?:\bshadowing\b)
 new	on_kill|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bmighty\s+blow\b)|(?:\bplague\s+ridden\b)
 new	once_per_game|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bonce\s+per\s+game\b)|(?:\bplague\s+ridden\b)
 new	play_restriction|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bbombardier\b)|(?:\bno\s+ball\b)|(?:\bstrong\s+arm\b)|(?:\bunsteady\b)
 new	protection|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bstand\s+firm\b)|(?:\bsteady\s+footing\b)|(?:\bthick\s+skull\b)
 new	random_effect|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\balways\s+hungry\b)|(?:\banimosity\s+\(x\))|(?:\bbloodlust\s+\(x\+\))|(?:\bbone\s+head\b)|(?:\bchainsaw\b)|(?:\bdauntless\b)|(?:\bfoul\s+appearance\b)|(?:\bhypnotic\s+gaze\b)|(?:\bloner\s+\(x\+\))|(?:\bprojectile\s+vomit\b)|(?:\breally\s+stupid\b)|(?:\bregeneration\b)|(?:\broll\s+a\s+d\d+\b)|(?:\bshadowing\b)|(?:\bsteady\s+footing\b)|(?:\bthey\s+must\s+roll\s+a\s+d\d+\b)|(?:\bunchannelled\s+fury\b)
 new	ranged|does|wh_bloodbowl3|key	wh_bloodbowl3	\bbombardier\b
+new	self_destruct|does|wh_bloodbowl3|key	wh_bloodbowl3	\bsecret\s+weapon\b
 new	silence|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bdefensive\b)|(?:\bjuggernaut\b)
 new	speed|does|wh_bloodbowl3|key	wh_bloodbowl3	\bsprint\b
 new	stat_condition|does|wh_bloodbowl3|key	wh_bloodbowl3	\bdauntless\b
@@ -275,6 +283,8 @@ new	summon|does|wh_bloodbowl3|key	wh_bloodbowl3	\bplague\s+ridden\b
 new	suppress|does|wh_bloodbowl3|key	wh_bloodbowl3	\bfend\b
 new	target_choice|does|wh_bloodbowl3|key	wh_bloodbowl3	\bsidestep\b
 new	tribal|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\banimosity\s+\(x\))|(?:\bhatred\s+\(x\))
+new	turn_end|does|wh_bloodbowl3|key	wh_bloodbowl3	\bsecret\s+weapon\b
+new	turnover|does|wh_bloodbowl3|key	wh_bloodbowl3	\bsteady\s+footing\b
 new	untap|does|wh_bloodbowl3|key	wh_bloodbowl3	\bjump\s+up\b
 new	zone_of_control|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bprehensile\s+tail\b)|(?:\bshadowing\b)
 new	death_trigger|does|inscryption|key	inscryption	(?:\bwhen\s+a\s+card\s+bearing\s+this\s+sigil\s+dies\b)|(?:\bwhen\s+a\s+card\s+bearing\s+this\s+sigil\s+perishes\b)
@@ -288,11 +298,13 @@ new	resource_gain|does|inscryption|key	inscryption	(?:\bbattery\s+bearer\b)|(?:\
 new	terrain|does|inscryption|key	inscryption	\bterrain\b
 new	turn_end|does|inscryption|key	inscryption	\bbone\s+digger\b
 new	activated|does|faeria|key	faeria	\bactivate\b
+new	copy|does|faeria|key	faeria	\bdiscover\b
 new	cost_set|does|faeria|key	faeria	\bit\s+costs\s+\d+\s+faeria\b
 new	death_trigger|does|faeria|key	faeria	\blast\s+words\b
 new	deathtouch|does|faeria|key	faeria	\bdeathtouch\b
 new	direct_damage|does|faeria|key	faeria	\bdeal\s+\d+\s+damage\s+to\s+your\s+opponent\b
 new	draw|does|faeria|key	faeria	\bdraw\s+a\s+card\b
+new	haste|does|faeria|key	faeria	\bhaste\b
 new	immunity|does|faeria|key	faeria	\bdivine\b
 new	modal_choice|does|faeria|key	faeria	\bchoose\s+one\b
 new	movement|does|faeria|key	faeria	(?:\bcharge\b)|(?:\bcharge\s+\d+\b)|(?:\bdash\b)|(?:\bdash\s+\d+\b)|(?:\bjump\b)
@@ -339,7 +351,7 @@ new	turn_end|does|duelyst|key	duelyst	\bat\s+the\s+end\s+of\s+your\s+turn\b
 new	turn_start|does|duelyst|key	duelyst	\bat\s+the\s+start\s+of\s+your\s+turn\b
 new	untap|does|duelyst|key	duelyst	\breactivate\b
 new	aoe_damage|does|sts1|key	sts1	\bdeal\s+\d+\s+damage\s+to\s+all\s+enemies\b
-new	block_armor|does|sts1|key	sts1	(?:\b\d+\s+block\b)|(?:\bgain\s+\d+\s+block\b)
+new	block_armor|does|sts1|key	sts1	(?:\b\d+\s+block\b)|(?:\bblock\b)|(?:\bgain\s+\d+\s+block\b)
 new	buff|does|sts1|key	sts1	\bdefend\s+buff\b
 new	combat_start|does|sts1|key	sts1	(?:\bat\s+the\s+start\s+of\s+each\s+combat\b)|(?:\binnate\b)|(?:\bstart\s+each\s+combat\b)
 new	cost_set|does|sts1|key	sts1	\bit\s+costs\s+\d+\s+this\s+turn\b
@@ -415,7 +427,7 @@ new	tribal|does|darkest_dungeon|key	darkest_dungeon	(?:\bvs\s+beast\s+enemies\b)
 new	turn_number|does|darkest_dungeon|key	darkest_dungeon	(?:\bin\s+the\s+first\s+round\b)|(?:\bnot\s+in\s+the\s+first\s+round\b)
 new	upkeep|does|darkest_dungeon|key	darkest_dungeon	(?:\+\d+%\s+food\s+consumption\s+percent\b)|(?:\+\d+%\s+starving\s+damage\s+percent\b)
 new	activated|does|dnd5e|key	dnd5e	\bas\s+a\s+magic\s+action\b
-new	advantage|does|dnd5e|key	dnd5e	(?:\badvantage\s+on\s+wisdom\s+\(perception\)\s+checks\b)|(?:\bare\s+made\s+with\s+disadvantage\b)|(?:\bdisadvantage\s+on\s+ability\s+checks\s+and\s+attack\s+rolls\b)|(?:\bhas\s+advantage\s+on\s+an\s+attack\s+roll\b)
+new	advantage|does|dnd5e|key	dnd5e	(?:\badvantage\s+on\s+saving\s+throws\s+against\s+spells\b)|(?:\badvantage\s+on\s+saving\s+throws\s+against\s+spells\s+and\s+other\s+magical\s+effects\b)|(?:\badvantage\s+on\s+wisdom\s+\(perception\)\s+checks\b)|(?:\bare\s+made\s+with\s+disadvantage\b)|(?:\bdisadvantage\s+on\s+ability\s+checks\s+and\s+attack\s+rolls\b)|(?:\bhas\s+advantage\b)|(?:\bhas\s+advantage\s+on\s+an\s+attack\s+roll\b)
 new	aoe_damage|does|dnd5e|key	dnd5e	(?:\beach\s+creature\s+in\s+a\s+\d+\-foot\s+emanation\b)|(?:\beach\s+creature\s+in\s+a\s+\d+\-foot\s+emanation\s+originating\s+from\s+the\s+mephit\b)
 new	area_templates|does|dnd5e|key	dnd5e	(?:\b\d+\-foot\-radius\s+sphere\b)|(?:\b\d+\-foot\s+cone\b)|(?:\b\d+\-foot\s+emanation\b)|(?:\ba\s+\d+\-foot\s+emanation\b)
 new	condition_life|does|dnd5e|key	dnd5e	\bbloodied\b
@@ -434,7 +446,7 @@ new	multi_attack|does|dnd5e|key	dnd5e	\bthe\s+dragon\s+makes\s+three\s+rend\s+at
 new	ping|does|dnd5e|key	dnd5e	\bhit:\s+\d+\s+piercing\s+damage\b
 new	ranged|does|dnd5e|key	dnd5e	(?:\bmake\s+a\s+ranged\s+spell\s+attack\b)|(?:\bmelee\s+or\s+ranged\s+attack\s+roll\b)|(?:\brange\s+\d+/\d+\s+ft\b)|(?:\brange\s+\d+\s+ft\b)|(?:\branged\s+attack\s+roll:\s+\+\d+,\s+range\s+\d+/\d+\s+ft\b)|(?:\branged\s+attack\s+roll:\s+\+\d+,\s+range\s+\d+\s+ft\b)|(?:\branged\s+spell\s+attack\b)|(?:\branged\s+weapon\s+attack\b)
 new	reactions|does|dnd5e|key	dnd5e	\byou\s+can\s+take\s+a\s+reaction\b
-new	saving_throws|does|dnd5e|key	dnd5e	(?:\bcharisma\s+saving\s+throw\b)|(?:\bconstitution\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bdc\s+\d+\s+constitution\s+saving\s+throw\b)|(?:\bdc\s+\d+\s+wisdom\s+saving\s+throw\b)|(?:\bdexterity\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bdexterity\s+saving\s+throw\b)|(?:\bif\s+the\s+dragon\s+fails\s+a\s+saving\s+throw,\s+it\s+can\s+choose\s+to\s+succeed\s+instead\b)|(?:\bit\s+can\s+choose\s+to\s+succeed\s+instead\b)|(?:\bmakes\s+a\s+constitution\s+saving\s+throw\b)|(?:\bmakes\s+a\s+dexterity\s+saving\s+throw\b)|(?:\bmust\s+succeed\s+on\s+a\s+wisdom\s+saving\s+throw\b)|(?:\bstrength\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bstrength\s+saving\s+throw\b)|(?:\bsucceed\s+on\s+a\s+dc\s+\d+\s+constitution\s+saving\s+throw\b)|(?:\bwisdom\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bwisdom\s+saving\s+throw\b)
+new	saving_throws|does|dnd5e|key	dnd5e	(?:\bcharisma\s+saving\s+throw\b)|(?:\bconstitution\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bconstitution\s+saving\s+throw\b)|(?:\bdc\s+\d+\s+constitution\s+saving\s+throw\b)|(?:\bdc\s+\d+\s+wisdom\s+saving\s+throw\b)|(?:\bdexterity\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bdexterity\s+saving\s+throw\b)|(?:\bif\s+the\s+dragon\s+fails\s+a\s+saving\s+throw,\s+it\s+can\s+choose\s+to\s+succeed\s+instead\b)|(?:\bit\s+can\s+choose\s+to\s+succeed\s+instead\b)|(?:\bmakes\s+a\s+constitution\s+saving\s+throw\b)|(?:\bmakes\s+a\s+dexterity\s+saving\s+throw\b)|(?:\bmust\s+succeed\s+on\s+a\s+wisdom\s+saving\s+throw\b)|(?:\bstrength\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bstrength\s+saving\s+throw\b)|(?:\bsucceed\s+on\s+a\s+dc\s+\d+\s+constitution\s+saving\s+throw\b)|(?:\bwisdom\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bwisdom\s+saving\s+throw\b)
 new	scope_multi|does|dnd5e|key	dnd5e	\byou\s+can\s+target\s+one\s+additional\s+creature\b
 new	stat_gain|does|dnd5e|key	dnd5e	(?:\+\d+\s+bonus\s+to\s+attack\s+rolls\s+and\s+damage\s+rolls\b)|(?:\ba\s+\+\d+\s+bonus\s+to\s+attack\s+rolls\s+and\s+damage\s+rolls\b)|(?:\byou\s+gain\s+a\s+\+\d+\s+bonus\s+to\s+armor\s+class\b)
 new	turn_end|does|dnd5e|key	dnd5e	\bends\s+its\s+turn\s+there\b
@@ -442,6 +454,7 @@ new	zone_of_control|does|dnd5e|key	dnd5e	\bopportunity\s+attack\b
 new	aoe_damage|does|sts2|key	sts2	\bdeal\s+\d+\s+damage\s+to\s+all\s+enemies\b
 new	block_armor|does|sts2|key	sts2	(?:\bblock\s+\d+\b)|(?:\bgain\s+\d+\s+block\b)|(?:\bgain\s+block\b)
 new	combat_start|does|sts2|key	sts2	(?:\bat\s+the\s+start\s+of\s+each\s+combat\b)|(?:\binnate\b)
+new	damage|does|sts2|key	sts2	\bdeal\s+\d+\s+damage\b
 new	damage_over_time|does|sts2|key	sts2	\bapply\s+\d+\s+poison\b
 new	debuff|does|sts2|key	sts2	(?:\bapply\s+that\s+much\s+doom\b)|(?:\bdebuff\b)
 new	deck_position|does|sts2|key	sts2	\bon\s+top\s+of\s+your\s+draw\s+pile\b
@@ -467,7 +480,7 @@ new	condition_count|does|gwent|key	gwent	\bsabbath\b
 new	cooldowns|does|gwent|key	gwent	(?:\bcooldown:\s+\d+\b)|(?:\bcooldown\b)|(?:\border\b)
 new	count_payoff|does|gwent|key	gwent	\bfor\s+each\s+construct\s+you\s+played\s+this\s+game\b
 new	damage|does|gwent|key	gwent	(?:\bdamage\s+a\s+unit\s+by\s+\d+\b)|(?:\bdamage\s+an\s+enemy\s+unit\b)|(?:\bdamage\s+an\s+enemy\s+unit\s+by\s+\d+\b)
-new	damage_over_time|does|gwent|key	gwent	\bpoison\b
+new	damage_over_time|does|gwent|key	gwent	(?:\bbleeding\b)|(?:\bbleeding\s+\(\d+\))|(?:\bgive\s+an\s+enemy\s+unit\s+bleeding\s+\(\d+\))|(?:\bpoison\b)
 new	damage_reduction|does|gwent|key	gwent	(?:\bflanking\b)|(?:\bgain\s+\d+\s+armor\b)
 new	death_trigger|does|gwent|key	gwent	\bdeathwish\b
 new	deckbuilding_effect|does|gwent|key	gwent	\badds\s+\d+\s+provisions\s+to\s+your\s+deck's\s+provisions\s+limit\b
@@ -484,7 +497,7 @@ new	haste|does|gwent|key	gwent	(?:\bformation\b)|(?:\bzeal\b)
 new	heal|does|gwent|key	gwent	\bheal\b
 new	immunity|does|gwent|key	gwent	(?:\bgain\s+immunity\b)|(?:\bimmunity\b)|(?:\bveil\b)
 new	kicker|does|gwent|key	gwent	\btribute\s+\d+\b
-new	on_ally_play|does|gwent|key	gwent	(?:\bharmony\b)|(?:\bwhenever\s+you\s+play\s+a\s+unit\b)
+new	on_ally_play|does|gwent|key	gwent	(?:\bharmony\b)|(?:\bintimidate\b)|(?:\bwhenever\s+you\s+play\s+a\s+unit\b)
 new	on_kill|does|gwent|key	gwent	\bdeathblow\b
 new	on_play|does|gwent|key	gwent	(?:\bdeploy\b)|(?:\bdeploy\s+\(melee\))|(?:\bdeploy\s+\(ranged\))|(?:\bprofit\b)|(?:\btribute\b)
 new	permanent_growth|does|gwent|key	gwent	\bintimidate\b
@@ -501,17 +514,19 @@ new	self_destruct|does|gwent|key	gwent	\bdestroy\s+self\b
 new	shield|does|gwent|key	gwent	\bshield\b
 new	start_of_game|does|gwent|key	gwent	\bat\s+the\s+start\s+of\s+the\s+game\b
 new	stat_condition|does|gwent|key	gwent	(?:\b\d+\s+or\s+less\s+power\b)|(?:\bberserk\b)|(?:\bhighest\-power\s+enemy\s+unit\b)|(?:\blowest\-power\b)|(?:\blowest\-power\s+allied\s+unit\b)
-new	stat_gain|does|gwent|key	gwent	(?:\ban\s+allied\s+unit\s+by\s+\d+\b)|(?:\bboost\s+an\s+allied\s+unit\s+by\s+\d+\b)|(?:\bboost\s+it\s+by\s+\d+\b)|(?:\bboost\s+self\s+by\s+\d+\s+for\s+each\b)|(?:\bboost\s+self\s+by\s+its\s+power\b)|(?:\bformation\b)
+new	stat_gain|does|gwent|key	gwent	(?:\ban\s+allied\s+unit\s+by\s+\d+\b)|(?:\bboost\s+an\s+allied\s+unit\s+by\s+\d+\b)|(?:\bboost\s+it\s+by\s+\d+\b)|(?:\bboost\s+self\s+by\s+\d+\s+for\s+each\b)|(?:\bboost\s+self\s+by\s+its\s+power\b)|(?:\bconsume\b)|(?:\bformation\b)
 new	targeting_rules|does|gwent|key	gwent	\bdefender\b
 new	taunt|does|gwent|key	gwent	\bdefender\b
 new	transform|does|gwent|key	gwent	\btransform\b
 new	tribal|does|gwent|key	gwent	(?:\balchemy\b)|(?:\bconstruct\b)|(?:\bdwarf\b)|(?:\bintimidate\b)|(?:\bsoldier\b)
 new	turn_end|does|gwent|key	gwent	(?:\bat\s+the\s+end\s+of\s+your\s+turn\b)|(?:\bflanking\b)
+new	turn_start|does|gwent|key	gwent	\becho\b
 new	variety_payoff|does|gwent|key	gwent	\bharmony\b
 new	attack_now|does|hs_battlegrounds|key	hs_battlegrounds	\battacks\s+immediately\b
 new	cheat_death|does|hs_battlegrounds|key	hs_battlegrounds	\breborn\b
 new	combat_start|does|hs_battlegrounds|key	hs_battlegrounds	\bstart\s+of\s+combat\b
 new	death_count|does|hs_battlegrounds|key	hs_battlegrounds	(?:\bavenge\b)|(?:\bavenge\s+\(\d+\))
+new	death_trigger|does|hs_battlegrounds|key	hs_battlegrounds	\bdeathrattle\b
 new	deathtouch|does|hs_battlegrounds|key	hs_battlegrounds	\bvenomous\b
 new	fodder|does|hs_battlegrounds|key	hs_battlegrounds	\bfodder\b
 new	hero_power|does|hs_battlegrounds|key	hs_battlegrounds	\bhero\s+power\b
@@ -569,9 +584,10 @@ new	blocking|does|runeterra|key	runeterra	(?:\bchallenger\b)|(?:\bvulnerable\b)
 new	combo_sequence|does|runeterra|key	runeterra	\bnightfall\b
 new	condition_count|does|runeterra|key	runeterra	\bempowered\s+\d+\b
 new	cost_increase|does|runeterra|key	runeterra	\bcurse\b
-new	cost_reduction|does|runeterra|key	runeterra	\bi\s+cost\s+\d+\s+less\b
+new	cost_reduction|does|runeterra|key	runeterra	(?:\bi\s+cost\s+\d+\s+less\b)|(?:\bupdraft\b)
 new	damage|does|runeterra|key	runeterra	\bdeal\s+\d+\s+to\s+a\s+unit\b
 new	damage_reduction|does|runeterra|key	runeterra	\btough\b
+new	death_trigger|does|runeterra|key	runeterra	\blast\s+breath\b
 new	deck_position|does|runeterra|key	runeterra	(?:\bthe\s+top\s+\d+\s+cards\s+of\s+the\s+enemy\s+deck\b)|(?:\btop\s+\d+\s+cards\b)|(?:\btop\s+\d+\s+cards\s+of\s+the\s+enemy\s+deck\b)
 new	delayed|does|runeterra|key	runeterra	(?:\bcountdown\b)|(?:\bcountdown\s+\d+\b)
 new	direct_damage|does|runeterra|key	runeterra	(?:\b\d+\s+to\s+the\s+enemy\s+nexus\b)|(?:\bdeal\s+\d+\s+to\s+the\s+enemy\s+nexus\b)|(?:\bdrain\s+\d+\s+from\s+the\s+enemy\s+nexus\b)|(?:\bthe\s+enemy\s+nexus\b)
@@ -579,6 +595,7 @@ new	disable|does|runeterra|key	runeterra	\bstun\b
 new	discard|benefits|runeterra|key	runeterra	\bdiscard\s+\d+\b
 new	draw|does|runeterra|key	runeterra	\bdraw\s+\d+\b
 new	evasion|does|runeterra|key	runeterra	(?:\belusive\b)|(?:\bfearsome\b)
+new	excess_damage|does|runeterra|key	runeterra	\boverwhelm\b
 new	first_strike|does|runeterra|key	runeterra	\bquick\s+attack\b
 new	generate_cards|does|runeterra|key	runeterra	(?:\bcreate\s+\d+\s+coins\s+in\s+hand\b)|(?:\bcreate\s+a\s+stance\s+swap\s+in\s+hand\b)
 new	in_hand_buff|does|runeterra|key	runeterra	\breduce\s+its\s+cost\s+by\s+\d+\b
@@ -589,8 +606,10 @@ new	on_play|does|runeterra|key	runeterra	\bwhen\s+i'm\s+summoned\b
 new	on_spell|does|runeterra|key	runeterra	(?:\bimbue\b)|(?:\bwhen\s+you\s+play\s+a\s+spell\b)
 new	random_effect|does|runeterra|key	runeterra	\brandom\b
 new	reactions|does|runeterra|key	runeterra	\bskill\b
+new	regeneration|does|runeterra|key	runeterra	\bregeneration\b
 new	return_to_hand|does|runeterra|key	runeterra	\brecall\b
 new	sacrifice|does|runeterra|key	runeterra	\bkill\s+an\s+ally\b
+new	shield|does|runeterra|key	runeterra	\bspellshield\b
 new	silence|does|runeterra|key	runeterra	\bsilence\s+it\b
 new	spell_speed|does|runeterra|key	runeterra	(?:\bburst\b)|(?:\bfast\b)
 new	stat_condition|does|runeterra|key	runeterra	(?:\b\d+\s+or\s+less\s+power\b)|(?:\bempowered\b)|(?:\bempowered\s+\d+\b)|(?:\bstrongest\b)|(?:\bstrongest\s+ally\b)|(?:\bstrongest\s+enemy\b)|(?:\bthe\s+strongest\s+enemy\b)|(?:\bweakest\s+enemy\b)
@@ -640,9 +659,10 @@ new	modal_choice|does|wh_aos_4th|key	wh_aos_4th	(?:\bpick\s+\d+\s+of\s+the\s+fol
 new	movement|does|wh_aos_4th|key	wh_aos_4th	(?:\bremove\s+this\s+unit\s+from\s+the\s+battlefield\s+and\s+set\s+it\s+up\s+again\b)|(?:\bset\s+it\s+up\s+again\s+on\s+the\s+battlefield\b)|(?:\bthis\s+unit\s+can\s+move\s+\d+d\d+\b)|(?:\buse\s+the\s+'normal\s+move'\s+ability\b)|(?:\buse\s+the\s+'normal\s+move'\s+ability\s+as\s+if\s+it\s+were\s+your\s+movement\s+phase\b)|(?:\buse\s+the\s+'retreat'\s+ability\b)
 new	multi_attack|does|wh_aos_4th|key	wh_aos_4th	\bcan\s+use\s+\d+\s+fight\s+abilities\s+this\s+phase\b
 new	once_per_game|does|wh_aos_4th|key	wh_aos_4th	\bonce\s+per\s+battle\s+\(army\)
-new	piercing|does|wh_aos_4th|key	wh_aos_4th	(?:\badd\s+\d+\s+to\s+the\s+rend\s+characteristic\b)|(?:\banti\-cavalry\s+\(\+\d+\s+rend\))|(?:\banti\-monster\s+\(\+\d+\s+rend\))
+new	piercing|does|wh_aos_4th|key	wh_aos_4th	(?:\(\+\d+\s+rend\))|(?:\badd\s+\d+\s+to\s+the\s+rend\s+characteristic\b)|(?:\banti\-cavalry\s+\(\+\d+\s+rend\))|(?:\banti\-hero\s+\(\+\d+\s+rend\))|(?:\banti\-infantry\s+\(\+\d+\s+rend\))|(?:\banti\-monster\s+\(\+\d+\s+rend\))|(?:\bcrit\s+\(mortal\))
 new	placement_rules|does|wh_aos_4th|key	wh_aos_4th	\bwholly\s+within\s+\d+"\s+of\s+a\s+battlefield\s+edge\s+and\s+more\s+than\s+\d+"\s+from\s+all\s+enemy\s+units\b
 new	random_effect|does|wh_aos_4th|key	wh_aos_4th	(?:\bcasting\s+roll\s+of\s+\d+d\d+\b)|(?:\bchanting\s+roll\s+of\s+d\d+\b)|(?:\bmake\s+a\s+casting\s+roll\s+of\s+\d+d\d+\b)|(?:\bon\s+a\s+\d+\+)|(?:\bon\s+a\s+\d+\b)|(?:\brampage\s+roll\s+of\s+d\d+\b)|(?:\broll\s+\d+\s+dice\b)|(?:\broll\s+\d+d\d+\b)|(?:\broll\s+a\s+d\d+\.\s+on\s+a\s+\d+\+)|(?:\broll\s+a\s+d\d+\s+for\s+each\s+target\b)|(?:\broll\s+a\s+dice\.\s+on\s+a\s+\d+\+)|(?:\broll\s+a\s+dice\b)|(?:\broll\s+a\s+dice\s+for\s+each\s+model\s+in\s+the\s+target\s+unit\b)|(?:\broll\s+a\s+dice\s+for\s+each\s+target\b)
+new	ranged|does|wh_aos_4th|key	wh_aos_4th	\bshoot\s+in\s+combat\b
 new	reactions|does|wh_aos_4th|key	wh_aos_4th	(?:\benemy\s+hero\s+phase\b)|(?:\breaction:\s+opponent\s+declared\s+a\s+spell\s+ability\b)
 new	regeneration|does|wh_aos_4th|key	wh_aos_4th	\bheal\s+\(d\d+\)\s+this\s+unit\b
 new	reserve_bench|does|wh_aos_4th|key	wh_aos_4th	\bset\s+up\s+this\s+unit\s+in\s+reserve\b
@@ -658,7 +678,7 @@ new	suppress|does|wh_aos_4th|key	wh_aos_4th	(?:\bcannot\s+use\s+commands\s+for\s
 new	temporary_buff|does|wh_aos_4th|key	wh_aos_4th	(?:\bfor\s+the\s+rest\s+of\s+the\s+phase\b)|(?:\bto\s+apply\s+for\s+the\s+rest\s+of\s+the\s+turn\b)
 new	terrain|does|wh_aos_4th|key	wh_aos_4th	\bthis\s+terrain\s+feature\b
 new	territory_trigger|does|wh_aos_4th|key	wh_aos_4th	\bwholly\s+outside\s+friendly\s+territory\b
-new	tribal|does|wh_aos_4th|key	wh_aos_4th	(?:\bfriendly\s+deathrattle\s+or\s+deadwalkers\s+unit\b)|(?:\bfriendly\s+fyreslayers\s+units\b)
+new	tribal|does|wh_aos_4th|key	wh_aos_4th	(?:\ban\s+enemy\s+monster\b)|(?:\benemy\s+monster\b)|(?:\bfriendly\s+deathrattle\s+or\s+deadwalkers\s+unit\b)|(?:\bfriendly\s+fyreslayers\s+units\b)
 new	turn_end|does|wh_aos_4th|key	wh_aos_4th	(?:\bat\s+the\s+end\s+of\s+your\s+turn\b)|(?:\bend\s+of\s+any\s+turn\b)|(?:\bend\s+of\s+your\s+turn\b)
 new	turn_start|does|wh_aos_4th|key	wh_aos_4th	(?:\bstart\s+of\s+any\s+turn\b)|(?:\bstart\s+of\s+battle\s+round\b)
 new	zone_control|does|wh_aos_4th|key	wh_aos_4th	(?:\badd\s+\d+\s+to\s+this\s+unit's\s+control\s+score\b)|(?:\bcontesting\s+an\s+objective\s+you\s+do\s+not\s+control\b)|(?:\bsubtract\s+\d+\s+from\s+the\s+control\s+scores\s+of\s+enemy\s+units\b)
@@ -691,7 +711,7 @@ new	modal_choice|does|wh_40k_10e|key	wh_40k_10e	(?:\bdoctrina\s+imperatives\b)|(
 new	movement|does|wh_40k_10e|key	wh_40k_10e	(?:\bit\s+can\s+make\s+a\s+normal\s+move\b)|(?:\bit\s+can\s+make\s+a\s+normal\s+move\s+of\s+up\s+to\s+d\d+")|(?:\bit\s+can\s+make\s+a\s+normal\s+move\s+of\s+up\s+to\s+d\d+\b)|(?:\bmake\s+a\s+normal\s+move\s+of\s+up\s+to\s+d\d+")|(?:\bredeploy\s+them\b)|(?:\bsuper\-heavy\s+walker\b)
 new	on_enemy_enter|does|wh_40k_10e|key	wh_40k_10e	\bwhen\s+an\s+enemy\s+unit\s+ends\s+a\s+normal,\s+advance\s+or\s+fall\s+back\s+move\s+within\s+\d+\b
 new	on_kill|does|wh_40k_10e|key	wh_40k_10e	(?:\bdestroys\s+an\s+enemy\s+unit\b)|(?:\bpower\s+from\s+pain\b)
-new	piercing|does|wh_40k_10e|key	wh_40k_10e	(?:\[ignores\s+cover\])|(?:\[ignores\s+cover\]\s+ability\b)|(?:\bdevastating\s+wounds\b)|(?:\bignores\s+cover\b)
+new	piercing|does|wh_40k_10e|key	wh_40k_10e	(?:\[ignores\s+cover\])|(?:\[ignores\s+cover\]\s+ability\b)|(?:\bdevastating\s+wounds\b)|(?:\bignores\s+cover\b)|(?:\bimprove\s+the\s+armour\s+penetration\s+characteristic\b)
 new	placement_rules|does|wh_40k_10e|key	wh_40k_10e	(?:\bdeep\s+strike\s+ability\b)|(?:\bwarp\s+rifts\b)
 new	play_restriction|does|wh_40k_10e|key	wh_40k_10e	(?:\bblast\b)|(?:\bcrucible\b)
 new	protection|does|wh_40k_10e|key	wh_40k_10e	(?:\bsubtract\s+\d+\s+from\s+the\s+wound\s+roll\b)|(?:\bthis\s+model\s+has\s+the\s+lone\s+operative\s+ability\b)
@@ -705,15 +725,15 @@ new	saving_throws|does|wh_40k_10e|key	wh_40k_10e	(?:\b\d+\+\s+invulnerable\s+sav
 new	shield|does|wh_40k_10e|key	wh_40k_10e	(?:\bchange\s+the\s+damage\s+characteristic\s+of\s+that\s+attack\s+to\s+\d+\b)|(?:\byou\s+can\s+change\s+the\s+damage\s+characteristic\s+of\s+that\s+attack\s+to\s+\d+\b)
 new	stances|does|wh_40k_10e|key	wh_40k_10e	\bhover\b
 new	start_of_game|does|wh_40k_10e|key	wh_40k_10e	(?:\bafter\s+both\s+players\s+have\s+deployed\s+their\s+armies\b)|(?:\bat\s+the\s+start\s+of\s+the\s+declare\s+battle\s+formations\s+step\b)|(?:\bat\s+the\s+start\s+of\s+the\s+first\s+battle\s+round\b)
-new	stat_gain|does|wh_40k_10e|key	wh_40k_10e	(?:\badd\s+\d+\s+to\s+the\s+attacks\s+characteristic\b)|(?:\badd\s+\d+\s+to\s+the\s+objective\s+control\s+characteristic\b)|(?:\badd\s+\d+\s+to\s+the\s+toughness\s+characteristic\b)|(?:\bdoctrina\s+imperatives\b)|(?:\bhover\b)
+new	stat_gain|does|wh_40k_10e|key	wh_40k_10e	(?:\badd\s+\d+\s+to\s+the\s+attacks\s+characteristic\b)|(?:\badd\s+\d+\s+to\s+the\s+objective\s+control\s+characteristic\b)|(?:\badd\s+\d+\s+to\s+the\s+toughness\s+characteristic\b)|(?:\bdoctrina\s+imperatives\b)|(?:\bhover\b)|(?:\bmelta\b)
 new	stress_morale|does|wh_40k_10e|key	wh_40k_10e	(?:\bbattle\-shock\b)|(?:\bbattle\-shock\s+test\b)|(?:\bbattle\-shocked\b)|(?:\bmust\s+take\s+a\s+battle\-shock\s+test\b)|(?:\bthat\s+unit\s+is\s+no\s+longer\s+battle\-shocked\b)|(?:\bthat\s+unit\s+must\s+take\s+a\s+battle\-shock\s+test\b)
 new	target_choice|does|wh_40k_10e|key	wh_40k_10e	(?:\[precision\])|(?:\bprecision\b)
 new	targeting_rules|does|wh_40k_10e|key	wh_40k_10e	\btargets\s+a\s+unit\s+that\s+can\s+fly\b
-new	temporary_buff|does|wh_40k_10e|key	wh_40k_10e	(?:\bpower\s+from\s+pain\b)|(?:\buntil\s+the\s+end\s+of\s+the\s+turn\b)|(?:\buntil\s+the\s+start\s+of\s+the\s+next\s+battle\s+round\b)
-new	temporary_effect|does|wh_40k_10e|key	wh_40k_10e	(?:\bdoctrina\s+imperatives\b)|(?:\buntil\s+the\s+start\s+of\s+your\s+next\s+turn\b)
+new	temporary_buff|does|wh_40k_10e|key	wh_40k_10e	(?:\bpower\s+from\s+pain\b)|(?:\buntil\s+the\s+end\s+of\s+the\s+phase,\s+add\s+\d+\b)|(?:\buntil\s+the\s+end\s+of\s+the\s+phase\b)|(?:\buntil\s+the\s+end\s+of\s+the\s+turn\b)|(?:\buntil\s+the\s+start\s+of\s+the\s+next\s+battle\s+round\b)
+new	temporary_effect|does|wh_40k_10e|key	wh_40k_10e	(?:\bdoctrina\s+imperatives\b)|(?:\buntil\s+the\s+start\s+of\s+the\s+next\s+battle\s+round\b)|(?:\buntil\s+the\s+start\s+of\s+your\s+next\s+turn\b)
 new	tribal|does|wh_40k_10e|key	wh_40k_10e	(?:\badeptus\s+astartes\s+model\s+only\b)|(?:\benemy\s+infantry\s+unit\b)|(?:\bfriendly\s+tyranids\s+unit\b)|(?:\bmonster\s+or\s+vehicle\s+unit\b)|(?:\btargets\s+a\s+monster\s+or\s+vehicle\s+unit\b)|(?:\btyranids\s+model\b)|(?:\btyranids\s+model\s+only\b)
 new	turn_end|does|wh_40k_10e|key	wh_40k_10e	(?:\bat\s+the\s+end\s+of\s+the\s+fight\s+phase\b)|(?:\bat\s+the\s+end\s+of\s+your\s+movement\s+phase\b)
-new	turn_start|does|wh_40k_10e|key	wh_40k_10e	\bpower\s+from\s+pain\b
+new	turn_start|does|wh_40k_10e|key	wh_40k_10e	(?:\bat\s+the\s+start\s+of\s+the\s+battle\s+round\b)|(?:\bpower\s+from\s+pain\b)
 new	zone_control|does|wh_40k_10e|key	wh_40k_10e	(?:\bthat\s+objective\s+marker\s+remains\s+under\s+your\s+control\b)|(?:\bwithin\s+range\s+of\s+an\s+objective\s+marker\b)|(?:\bwithin\s+range\s+of\s+an\s+objective\s+marker\s+you\s+control\b)
 new	aoe_damage|does|shadowverse|key	shadowverse	\bdeal\s+\d+\s+damage\s+to\s+all\s+enemy\s+followers\b
 new	banish|does|shadowverse|key	shadowverse	\bbanish\s+an\s+enemy\s+follower\b
@@ -737,7 +757,7 @@ new	draw|does|shadowverse|key	shadowverse	(?:\bdraw\s+\d+\s+cards\b)|(?:\bdraw\s
 new	free_play|does|shadowverse|key	shadowverse	(?:\bfrom\s+your\s+deck\s+into\s+play\b)|(?:\binvoke\s+this\s+card\b)
 new	friendly_fire|does|shadowverse|key	shadowverse	(?:\ball\s+other\s+followers\b)|(?:\bdeal\s+\d+\s+damage\s+to\s+your\s+leader\b)
 new	generate_cards|does|shadowverse|key	shadowverse	(?:\bput\s+a\s+name\s+into\s+your\s+hand\b)|(?:\bput\s+a\s+naterran\s+great\s+tree\s+into\s+your\s+hand\b)|(?:\bput\s+a\s+paradigm\s+shift\s+into\s+your\s+hand\b)
-new	graveyard|does|shadowverse|key	shadowverse	\bnecromancy\s+\(\d+\)
+new	graveyard|does|shadowverse|key	shadowverse	(?:\bnecromancy\b)|(?:\bnecromancy\s+\(\d+\))
 new	haste|does|shadowverse|key	shadowverse	(?:\bgain\s+storm\b)|(?:\brush\b)
 new	heal|does|shadowverse|key	shadowverse	\brestore\s+\d+\s+defense\s+to\s+your\s+leader\b
 new	immunity|does|shadowverse|key	shadowverse	(?:\bcan't\s+be\s+attacked\b)|(?:\breduce\s+damage\s+from\s+effects\s+to\s+\d+\b)
@@ -774,6 +794,7 @@ new	aoe_damage|does|hearthstone|key	hearthstone	(?:\bdeal\s+\d+\s+damage\s+to\s+
 new	attack_now|does|hearthstone|key	hearthstone	\battacks\s+a\s+random\s+enemy\b
 new	block_armor|does|hearthstone|key	hearthstone	\bgain\s+\d+\s+armor\b
 new	boss_phases|does|hearthstone|key	hearthstone	\badvance\s+fight\b
+new	cant_attack|does|hearthstone|key	hearthstone	\bcan't\s+attack\b
 new	copy|does|hearthstone|key	hearthstone	\bsummon\s+a\s+copy\s+of\s+it\b
 new	cost_reduction|does|hearthstone|key	hearthstone	\bcosts\s+\(\d+\)\s+less\b
 new	cost_type|cost|hearthstone|key	hearthstone	\bspend\s+\d+\s+corpses\b
@@ -790,6 +811,7 @@ new	friendly_fire|does|hearthstone|key	hearthstone	\bdeal\s+\d+\s+damage\s+to\s+
 new	hand_position|does|hearthstone|key	hearthstone	\boutcast\b
 new	haste|does|hearthstone|key	hearthstone	(?:\bcharge\b)|(?:\brush\b)
 new	heal|does|hearthstone|key	hearthstone	\brestore\s+\d+\s+health\b
+new	hero_power|does|hearthstone|key	hearthstone	\bhero\s+power\b
 new	immunity|does|hearthstone|key	hearthstone	\belusive\b
 new	kicker|does|hearthstone|key	hearthstone	\bspend\s+\d+\s+corpses\b
 new	lifesteal|does|hearthstone|key	hearthstone	\blifesteal\b

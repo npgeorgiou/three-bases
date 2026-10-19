@@ -1,3618 +1,3642 @@
 {
-"761537": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761538": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761539": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"762109": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761540": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761541": {
-"add": [
-"items_consumables",
-"immunity",
-"passive"
-],
-"drop": []
-},
-"761542": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761543": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761544": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761545": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761546": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761547": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761548": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"762110": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"762111": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761549": {
-"add": [
-"items_consumables",
-"bodyguard",
-"damage_reduction",
-"ranged",
-"reactions"
-],
-"drop": [
-"passive",
-"random_effect"
-]
-},
-"761780": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761550": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761551": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761552": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761553": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761554": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761555": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761556": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761557": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761558": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761559": {
-"add": [
-"items_consumables",
-"activated"
-],
-"drop": [
-"passive"
-]
-},
-"761560": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761561": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761562": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761563": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761564": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761565": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761566": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761567": {
-"add": [
-"items_consumables",
-"damage_reduction",
-"damage_types",
-"immunity",
-"passive"
-],
-"drop": []
-},
-"761568": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761781": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761569": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761570": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761571": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761572": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761573": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761574": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761575": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761576": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761577": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761578": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761579": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761580": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761782": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761581": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761582": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761583": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761584": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761585": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761586": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761587": {
-"add": [
-"items_consumables",
-"attack_mod",
-"cooldowns",
-"damage",
-"damage_types",
-"on_attack",
-"saving_throws"
-],
-"drop": [
-"damage_over_time",
-"debuff:grants",
-"spell_speed"
-]
-},
-"761588": {
-"add": [
-"items_consumables",
-"activated",
-"damage",
-"movement"
-],
-"drop": [
-"passive",
-"random_effect",
-"spell_speed"
-]
-},
-"761589": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761590": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"762112": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761591": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761592": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761593": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761594": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761595": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761596": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761597": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761598": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761599": {
-"add": [
-"items_consumables",
-"area_templates",
-"friendly_fire",
-"self_destruct",
-"disable",
-"saving_throws",
-"turn_end"
-],
-"drop": [
-"concentration",
-"information",
-"reactions",
-"scope_global",
-"once_per_game"
-]
-},
-"761600": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761601": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761602": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761603": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761604": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761605": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761783": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761606": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761607": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761608": {
-"add": [
-"items_consumables",
-"advantage",
-"passive"
-],
-"drop": []
-},
-"761609": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761610": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761611": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761612": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761613": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761614": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761615": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761616": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761617": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761618": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761619": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"762113": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761620": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761621": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761622": {
-"add": [
-"items_consumables",
-"passive"
-],
-"drop": []
-},
-"761623": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761624": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761625": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761626": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761627": {
-"add": [
-"items_consumables",
-"damage_reduction",
-"aoe_damage",
-"area_templates",
-"damage_types",
-"passive"
-],
-"drop": [
-"spell_speed"
-]
-},
-"761628": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761629": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761630": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761631": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761632": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761633": {
-"add": [
-"items_consumables",
-"summon",
-"cooldowns",
-"drawback",
-"debuff:counters",
-"immunity",
-"random_effect"
-],
-"drop": [
-"advantage:counters",
-"condition_life",
-"control:counters",
-"control:grants",
-"debuff:grants",
-"spell_speed",
-"tribal"
-]
-},
-"761635": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761634": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761636": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761637": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761638": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761639": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"762114": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761640": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761641": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761642": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761643": {
-"add": [
-"items_consumables",
-"attack_mod",
-"cooldowns",
-"advantage",
-"saving_throws"
-],
-"drop": [
-"disable:grants",
-"passive"
-]
-},
-"761644": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761645": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761646": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761784": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761647": {
-"add": [
-"items_consumables",
-"advantage",
-"passive",
-"saving_throws"
-],
-"drop": []
-},
-"761648": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761649": {
-"add": [
-"items_consumables",
-"buff"
-],
-"drop": [
-"activated"
-]
-},
-"761650": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761651": {
-"add": [
-"items_consumables",
-"buff"
-],
-"drop": [
-"activated"
-]
-},
-"761652": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761653": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761785": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761654": {
-"add": [
-"items_consumables",
-"banish",
-"activated",
-"immunity",
-"passive",
-"saving_throws"
-],
-"drop": [
-"condition_life",
-"damage_over_time",
-"damage_types"
-]
-},
-"761655": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761656": {
-"add": [
-"items_consumables",
-"random_effect",
-"summon",
-"advantage",
-"condition_life",
-"damage",
-"damage_types",
-"debuff",
-"draw",
-"multi_attack"
-],
-"drop": []
-},
-"761657": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761658": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761659": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761660": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761661": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761662": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761663": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761664": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761786": {
-"add": [
-"items_consumables",
-"on_damaged",
-"disable",
-"saving_throws"
-],
-"drop": [
-"damage_over_time",
-"debuff:grants",
-"on_attack",
-"passive"
-]
-},
-"762119": {
-"add": [
-"items_consumables",
-"activated",
-"drawback"
-],
-"drop": [
-"advantage:cost",
-"control:cost",
-"passive"
-]
-},
-"761787": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761665": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761666": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761667": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761668": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761669": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761670": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761671": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761672": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761673": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761674": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761675": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761676": {
-"add": [
-"items_consumables",
-"advantage"
-],
-"drop": []
-},
-"761677": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761678": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761681": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761683": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761679": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"762115": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761682": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761684": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761685": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761686": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761687": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761688": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761689": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761680": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761788": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"762116": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761690": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761691": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761692": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761693": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761694": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761695": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761696": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761697": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761698": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761699": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761700": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761701": {
-"add": [
-"items_consumables",
-"damage_reduction",
-"damage_types",
-"passive",
-"random_effect"
-],
-"drop": []
-},
-"761702": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761703": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761704": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761705": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761706": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761708": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761709": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761710": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761711": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761707": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761712": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761713": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761714": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761716": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761715": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761717": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761718": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761719": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761720": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761721": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761722": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761723": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761724": {
-"add": [
-"items_consumables",
-"advantage",
-"damage_reduction",
-"passive",
-"reactions",
-"saving_throws"
-],
-"drop": [
-"damage_types"
-]
-},
-"761725": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761789": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761726": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761727": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761728": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761729": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761731": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761730": {
-"add": [
-"items_consumables",
-"advantage",
-"passive",
-"saving_throws"
-],
-"drop": [
-"damage_reduction",
-"debuff"
-]
-},
-"761732": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761790": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761733": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761734": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761735": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761736": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761737": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761738": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761739": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761743": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761744": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761740": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761741": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761742": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761745": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761746": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761747": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761748": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761749": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761750": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761751": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761753": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761752": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761754": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761755": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761756": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761791": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761757": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761792": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761758": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761759": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761760": {
-"add": [
-"items_consumables",
-"attack_mod",
-"deathtouch",
-"damage",
-"damage_types",
-"immunity",
-"piercing"
-],
-"drop": [
-"damage_reduction",
-"random_effect"
-]
-},
-"761761": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761762": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761763": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761764": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761765": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761766": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761767": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761768": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761769": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761770": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761772": {
-"add": [
-"items_consumables",
-"saving_throws"
-],
-"drop": [
-"passive"
-]
-},
-"761773": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761771": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"762117": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761774": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761775": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"762118": {
-"add": [
-"items_consumables",
-"attack_mod"
-],
-"drop": [
-"random_effect"
-]
-},
-"761776": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761777": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761778": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761779": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761793": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"761870": {
-"add": [],
-"drop": [
-"forced_movement",
-"movement"
-]
-},
-"762178": {
-"add": [],
-"drop": [
-"forced_movement",
-"movement"
-]
-},
-"761925": {
-"add": [],
-"drop": [
-"excess_damage"
-]
-},
-"761883": {
-"add": [
-"on_attack"
-],
-"drop": [
-"reactions"
-]
-},
-"761994": {
-"add": [
-"activated",
-"cooldowns"
-],
-"drop": [
-"evasion",
-"spell_speed"
-]
-},
-"762265": {
-"add": [
-"resource_conversion"
-],
-"drop": [
-"transform"
-]
-},
-"761245": {
-"add": [],
-"drop": [
-"aoe_damage",
-"delayed"
-]
-},
-"762188": {
-"add": [
-"multi_attack"
-],
-"drop": []
-},
-"815620": {
-"add": [
-"ranged",
-"spell_power"
-],
-"drop": []
-},
-"761451": {
-"add": [],
-"drop": [
-"multi_attack",
-"damage_over_time",
-"delayed"
-]
-},
-"761391": {
-"add": [
-"movement",
-"buff"
-],
-"drop": []
-},
-"762190": {
-"add": [
-"zone_of_control:counters"
-],
-"drop": [
-"zone_of_control:does"
-]
-},
-"761877": {
-"add": [
-"debuff"
-],
-"drop": [
-"movement"
-]
-},
-"761380": {
-"add": [],
-"drop": [
-"damage",
-"random_effect"
-]
-},
-"761826": {
-"add": [
-"resource_gain"
-],
-"drop": [
-"comeback"
-]
-},
-"762055": {
-"add": [
-"free_play"
-],
-"drop": []
-},
-"761906": {
-"add": [
-"resource_gain"
-],
-"drop": []
-},
-"761484": {
-"add": [
-"cheat_death"
-],
-"drop": []
-},
-"762041": {
-"add": [],
-"drop": [
-"on_attack"
-]
-},
-"815519": {
-"add": [
-"deckbuilding_effect",
-"type_grant"
-],
-"drop": []
-},
-"815533": {
-"add": [
-"information",
-"stealth:counters"
-],
-"drop": []
-},
-"815536": {
-"add": [
-"deckbuilding_effect"
-],
-"drop": []
-},
-"815537": {
-"add": [
-"deckbuilding_effect"
-],
-"drop": []
-},
-"815544": {
-"add": [
-"information"
-],
-"drop": []
-},
-"815545": {
-"add": [
-"information"
-],
-"drop": []
-},
-"815592": {
-"add": [
-"upgrade"
-],
-"drop": []
-},
-"815593": {
-"add": [
-"upgrade"
-],
-"drop": []
-},
-"815596": {
-"add": [
-"upgrade"
-],
-"drop": []
-},
-"815600": {
-"add": [
-"upgrade",
-"aura:benefits"
-],
-"drop": []
-},
-"815601": {
-"add": [
-"upgrade"
-],
-"drop": []
-},
-"815639": {
-"add": [
-"upgrade"
-],
-"drop": []
-},
-"815640": {
-"add": [
-"upgrade"
-],
-"drop": []
-},
-"815642": {
-"add": [
-"information"
-],
-"drop": []
-},
-"815643": {
-"add": [
-"attack_mod"
-],
-"drop": []
-},
-"761378": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"815505": {
-"add": [
-"information"
-],
-"drop": []
-},
-"815509": {
-"add": [
-"information"
-],
-"drop": []
-},
-"815511": {
-"add": [
-"movement"
-],
-"drop": []
-},
-"815512": {
-"add": [
-"information",
-"stealth:counters"
-],
-"drop": []
-},
-"815513": {
-"add": [
-"terrain:benefits"
-],
-"drop": []
-},
-"761449": {
-"add": [
-"debuff",
-"damage",
-"damage_types",
-"ranged",
-"temporary_effect",
-"upgrade"
-],
-"drop": [
-"delayed",
-"multi_attack"
-]
-},
-"762584": {
-"add": [
-"damage",
-"damage_types",
-"delayed",
-"disable",
-"movement",
-"on_attack",
-"passive",
-"turn_end"
-],
-"drop": [
-"debuff:benefits",
-"debuff:counters",
-"destroy",
-"graveyard",
-"terrain",
-"saving_throws"
-]
-},
-"761299": {
-"add": [
-"target_choice",
-"damage",
-"damage_types",
-"multi_attack",
-"ranged",
-"upgrade"
-],
-"drop": [
-"condition_count",
-"random_effect"
-]
-},
-"761414": {
-"add": [
-"damage_reduction",
-"random_effect"
-],
-"drop": [
-"condition_count",
-"debuff",
-"movement"
-]
-},
-"762433": {
-"add": [
-"damage_types",
-"aoe_damage",
-"area_templates",
-"multi_attack",
-"saving_throws"
-],
-"drop": [
-"damage_over_time",
-"damage_reduction"
-]
-},
-"762314": {
-"add": [
-"type_grant",
-"passive"
-],
-"drop": [
-"cooldowns"
-]
-},
-"762386": {
-"add": [
-"immobilize",
-"damage",
-"debuff",
-"disable",
-"multi_attack",
-"on_attack",
-"passive",
-"saving_throws",
-"turn_end"
-],
-"drop": [
-"damage_over_time"
-]
-},
-"815547": {
-"add": [
-"activated",
-"modal_choice",
-"spell_speed"
-],
-"drop": [
-"selection"
-]
-},
-"761362": {
-"add": [
-"block_armor",
-"concentration",
-"debuff:counters",
-"immunity",
-"turn_start",
-"upgrade"
-],
-"drop": [
-"condition_count",
-"stress_morale"
-]
-},
-"762418": {
-"add": [
-"steal",
-"aoe_damage",
-"area_templates",
-"damage_types",
-"debuff",
-"disable",
-"immunity",
-"movement",
-"multi_attack",
-"passive",
-"saving_throws",
-"terrain"
-],
-"drop": [
-"concentration",
-"condition_life",
-"reactions"
-]
-},
-"762235": {
-"add": [
-"advantage",
-"reactions"
-],
-"drop": [
-"debuff"
-]
-},
-"762663": {
-"add": [
-"damage",
-"advantage"
-],
-"drop": [
-"on_attack"
-]
-},
-"761167": {
-"add": [
-"debuff",
-"passive"
-],
-"drop": []
-},
-"762295": {
-"add": [
-"stealth"
-],
-"drop": [
-"movement",
-"reactions"
-]
-},
-"762629": {
-"add": [
-"damage",
-"passive"
-],
-"drop": [
-"on_attack"
-]
-},
-"761379": {
-"add": [
-"immobilize",
-"advantage",
-"concentration",
-"control",
-"debuff",
-"saving_throws"
-],
-"drop": [
-"on_attack",
-"passive"
-]
-},
-"761850": {
-"add": [
-"information",
-"passive"
-],
-"drop": [
-"saving_throws",
-"stealth",
-"trap_secret"
-]
-},
-"761229": {
-"add": [
-"damage",
-"damage_types",
-"saving_throws",
-"upgrade"
-],
-"drop": [
-"condition_count"
-]
-},
-"761211": {
-"add": [
-"concentration",
-"immunity",
-"movement",
-"spell_speed"
-],
-"drop": [
-"shield"
-]
-},
-"761219": {
-"add": [
-"control",
-"transform"
-],
-"drop": [
-"advantage",
-"damage",
-"movement",
-"spell_speed"
-]
-},
-"815543": {
-"add": [
-"cooldowns",
-"free_play"
-],
-"drop": [
-"spell_speed"
-]
-},
-"762527": {
-"add": [
-"summon",
-"damage",
-"multi_attack",
-"ranged",
-"stat_multiply",
-"turn_structure"
-],
-"drop": [
-"random_effect"
-]
-},
-"762040": {
-"add": [
-"activated",
-"cooldowns"
-],
-"drop": [
-"concentration",
-"disable",
-"disable:grants",
-"reactions"
-]
-},
-"762200": {
-"add": [],
-"drop": []
-},
-"761226": {
-"add": [
-"aoe_damage",
-"concentration",
-"saving_throws",
-"terrain"
-],
-"drop": [
-"cooldowns",
-"debuff:benefits",
-"disable"
-]
-},
-"762499": {
-"add": [
-"damage",
-"immobilize",
-"forced_movement",
-"damage_types",
-"debuff",
-"delayed",
-"immunity",
-"multi_attack",
-"on_attack",
-"turn_start"
-],
-"drop": [
-"damage_over_time",
-"damage_prevention",
-"death_trigger",
-"movement",
-"disable",
-"saving_throws"
-]
-},
-"762434": {
-"add": [
-"debuff",
-"temporary_effect",
-"aoe_damage",
-"area_templates",
-"damage_types",
-"delayed",
-"legendary_actions",
-"movement",
-"multi_attack",
-"saving_throws"
-],
-"drop": [
-"damage_over_time",
-"damage_reduction"
-]
-},
-"762551": {
-"add": [
-"damage",
-"immunity",
-"movement",
-"multi_attack",
-"saving_throws",
-"transform"
-],
-"drop": [
-"condition_life",
-"reactions",
-"debuff"
-]
-},
-"762360": {
-"add": [
-"damage_over_time",
-"area_templates",
-"aoe_damage",
-"damage_types",
-"disable",
-"multi_attack",
-"saving_throws",
-"terrain",
-"turn_start"
-],
-"drop": [
-"advantage",
-"damage_reduction",
-"debuff:counters",
-"graveyard",
-"on_attack:counters",
-"passive"
-]
-},
-"761210": {
-"add": [
-"forced_movement",
-"saving_throws"
-],
-"drop": [
-"advantage",
-"advantage:benefits",
-"control:benefits",
-"debuff:benefits",
-"movement"
-]
-},
-"762558": {
-"add": [
-"summon",
-"advantage",
-"damage_types",
-"debuff",
-"multi_attack",
-"passive",
-"ranged",
-"saving_throws"
-],
-"drop": [
-"lifesteal"
-]
-},
-"761374": {
-"add": [
-"modal_choice",
-"immobilize",
-"debuff",
-"delayed",
-"disable",
-"immunity",
-"movement",
-"saving_throws"
-],
-"drop": [
-"on_spell",
-"summon",
-"passive"
-]
-},
-"762708": {
-"add": [
-"ranged"
-],
-"drop": [
-"forced_movement",
-"passive"
-]
-},
-"761893": {
-"add": [
-"counterattack",
-"damage",
-"damage_reduction",
-"ranged",
-"reactions",
-"saving_throws"
-],
-"drop": [
-"debuff",
-"terrain"
-]
-},
-"762444": {
-"add": [
-"assists_support",
-"damage_types",
-"advantage",
-"damage",
-"ranged"
-],
-"drop": [
-"concentration",
-"disable",
-"disable:grants",
-"reactions"
-]
-},
-"762458": {
-"add": [
-"delayed",
-"damage",
-"revive"
-],
-"drop": [
-"random_effect"
-]
-},
-"815641": {
-"add": [
-"cost_set",
-"cooldowns",
-"free_play"
-],
-"drop": []
-},
-"761805": {
-"add": [
-"movement"
-],
-"drop": [
-"spell_speed"
-]
-},
-"762622": {
-"add": [
-"assists_support",
-"advantage",
-"damage"
-],
-"drop": [
-"concentration",
-"disable",
-"disable:grants",
-"reactions"
-]
-},
-"762441": {
-"add": [
-"assists_support",
-"advantage",
-"aoe_damage",
-"area_templates",
-"damage_types",
-"multi_attack",
-"saving_throws"
-],
-"drop": [
-"concentration",
-"damage_reduction",
-"disable",
-"disable:grants",
-"reactions"
-]
-},
-"762453": {
-"add": [
-"on_damaged",
-"advantage",
-"aoe_damage",
-"area_templates",
-"damage_types",
-"heal",
-"multi_attack",
-"ranged",
-"saving_throws"
-],
-"drop": [
-"damage_over_time",
-"damage_reduction",
-"movement"
-]
-},
-"762095": {
-"add": [
-"buff",
-"immobilize",
-"advantage",
-"immobilize:benefits",
-"movement"
-],
-"drop": [
-"cooldowns",
-"debuff:benefits",
-"on_attack:benefits",
-"permanent_growth",
-"damage"
-]
-},
-"762625": {
-"add": [
-"damage",
-"advantage",
-"aoe_damage",
-"area_templates",
-"damage_types",
-"debuff",
-"immunity",
-"legendary_actions",
-"multi_attack",
-"saving_throws",
-"turn_end"
-],
-"drop": [
-"damage_over_time",
-"damage_reduction",
-"evasion",
-"on_attack"
-]
-},
-"761237": {
-"add": [
-"steal",
-"saving_throws",
-"upgrade"
-],
-"drop": [
-"advantage:benefits",
-"condition_count",
-"control:benefits",
-"damage"
-]
-},
-"762402": {
-"add": [
-"damage",
-"aoe_damage",
-"area_templates",
-"damage_types",
-"debuff",
-"multi_attack",
-"saving_throws"
-],
-"drop": [
-"advantage",
-"damage_reduction",
-"on_attack"
-]
-},
-"762174": {
-"add": [
-"lone_unit",
-"buff"
-],
-"drop": [
-"random_effect"
-]
-},
-"815626": {
-"add": [
-"debuff",
-"cooldowns"
-],
-"drop": []
-},
-"761533": {
-"add": [
-"area_templates",
-"concentration",
-"damage",
-"saving_throws",
-"terrain"
-],
-"drop": [
-"evasion"
-]
-},
-"762542": {
-"add": [
-"damage",
-"immunity",
-"multi_attack",
-"saving_throws",
-"transform"
-],
-"drop": [
-"condition_life",
-"movement",
-"debuff"
-]
-},
-"762025": {
-"add": [
-"block_armor",
-"movement",
-"cooldowns"
-],
-"drop": [
-"spell_speed"
-]
-},
-"761347": {
-"add": [
-"rewind"
-],
-"drop": [
-"items_consumables"
-]
-},
-"762267": {
-"add": [
-"cost_type",
-"activated",
-"saving_throws"
-],
-"drop": [
-"on_spell"
-]
-},
-"815624": {
-"add": [],
-"drop": [
-"free_play"
-]
-},
-"762460": {
-"add": [
-"counter_spell",
-"damage",
-"damage_types",
-"multi_attack",
-"ranged",
-"reactions"
-],
-"drop": [
-"saving_throws"
-]
-},
-"761394": {
-"add": [
-"immunity",
-"advantage",
-"area_templates",
-"control",
-"debuff",
-"modal_choice",
-"saving_throws",
-"upgrade"
-],
-"drop": [
-"movement",
-"on_attack"
-]
-},
-"762485": {
-"add": [
-"revive",
-"aoe_damage",
-"advantage",
-"area_templates",
-"aura",
-"damage_over_time",
-"damage_reduction",
-"damage_types",
-"debuff",
-"multi_attack",
-"on_attack",
-"saving_throws",
-"turn_end",
-"turn_start"
-],
-"drop": [
-"concentration",
-"disable",
-"disable:grants",
-"heal",
-"reactions",
-"immunity"
-]
-},
-"762009": {
-"add": [
-"temporary_effect",
-"cooldowns",
-"damage",
-"disable",
-"on_attack",
-"saving_throws"
-],
-"drop": [
-"concentration",
-"reactions"
-]
-},
-"762421": {
-"add": [
-"reactions",
-"damage_reduction",
-"damage",
-"debuff",
-"multi_attack",
-"ranged",
-"saving_throws"
-],
-"drop": [
-"advantage",
-"on_attack",
-"passive"
-]
-},
-"761227": {
-"add": [
-"area_templates",
-"aoe_damage",
-"concentration",
-"damage",
-"damage_types",
-"saving_throws",
-"terrain"
-],
-"drop": [
-"cooldowns"
-]
-},
-"762380": {
-"add": [
-"advantage",
-"damage",
-"debuff",
-"immobilize",
-"movement",
-"multi_attack",
-"on_attack",
-"ranged",
-"saving_throws"
-],
-"drop": [
-"disable:grants"
-]
-},
-"761257": {
-"add": [
-"damage_types",
-"area_templates",
-"concentration",
-"damage",
-"on_attack",
-"terrain",
-"upgrade"
-],
-"drop": [
-"condition_count",
-"summon"
-]
-},
-"761817": {
-"add": [
-"buff",
-"cooldowns",
-"random_effect",
-"upgrade"
-],
-"drop": [
-"spell_speed"
-]
-},
-"762678": {
-"add": [
-"immobilize",
-"damage_over_time",
-"damage_reduction",
-"damage",
-"debuff",
-"disable",
-"on_attack",
-"passive",
-"turn_start"
-],
-"drop": [
-"concentration",
-"reactions",
-"saving_throws"
-]
-},
-"762633": {
-"add": [
-"damage",
-"advantage",
-"passive"
-],
-"drop": [
-"on_attack"
-]
-},
-"762603": {
-"add": [
-"reactions",
-"damage",
-"area_templates",
-"movement",
-"passive"
-],
-"drop": [
-"random_effect"
-]
-},
-"762096": {
-"add": [
-"attack_mod",
-"ranged"
-],
-"drop": [
-"random_effect"
-]
-},
-"761526": {
-"add": [
-"area_templates",
-"aoe_damage",
-"damage_types",
-"concentration",
-"damage",
-"movement",
-"saving_throws",
-"terrain",
-"upgrade"
-],
-"drop": [
-"cooldowns",
-"counterattack"
-]
-},
-"761523": {
-"add": [
-"area_templates",
-"concentration",
-"forced_movement",
-"immunity",
-"terrain"
-],
-"drop": [
-"shield"
-]
-},
-"762447": {
-"add": [
-"heal:counters",
-"advantage",
-"damage_over_time",
-"damage_reduction",
-"damage_types",
-"multi_attack",
-"passive",
-"ranged",
-"saving_throws",
-"turn_start"
-],
-"drop": [
-"condition_life"
-]
-},
-"761188": {
-"add": [
-"damage",
-"multi_target_attack",
-"on_attack"
-],
-"drop": [
-"cooldowns"
-]
-},
-"762524": {
-"add": [
-"aoe_damage",
-"damage_over_time",
-"counter_spell",
-"area_templates",
-"damage",
-"damage_reduction",
-"damage_types",
-"disable",
-"legendary_actions",
-"multi_attack",
-"saving_throws",
-"stat_multiply",
-"turn_start"
-],
-"drop": [
-"advantage:benefits",
-"concentration",
-"debuff:benefits",
-"debuff:counters",
-"graveyard",
-"on_attack",
-"on_attack:benefits",
-"on_attack:counters",
-"ranged",
-"terrain",
-"movement"
-]
-},
-"762541": {
-"add": [
-"damage",
-"immunity",
-"multi_attack",
-"ranged",
-"saving_throws",
-"transform"
-],
-"drop": [
-"condition_life",
-"movement",
-"debuff"
-]
-},
-"762471": {
-"add": [
-"immobilize",
-"advantage",
-"damage",
-"damage_types",
-"debuff",
-"on_attack"
-],
-"drop": [
-"disable",
-"movement",
-"passive",
-"saving_throws"
-]
-},
-"761926": {
-"add": [
-"aura",
-"debuff:counters",
-"immunity"
-],
-"drop": [
-"debuff:benefits",
-"debuff:grants"
-]
-},
-"762602": {
-"add": [
-"damage"
-],
-"drop": [
-"random_effect"
-]
-},
-"761954": {
-"add": [
-"modal_choice",
-"condition_life",
-"multi_target_attack",
-"damage",
-"on_attack"
-],
-"drop": [
-"cooldowns",
-"multi_attack"
-]
-},
-"762359": {
-"add": [
-"advantage",
-"damage_over_time",
-"damage_types",
-"debuff",
-"multi_attack",
-"on_attack",
-"saving_throws",
-"turn_start"
-],
-"drop": [
-"condition_life",
-"damage_reduction",
-"delayed",
-"passive"
-]
-},
-"815605": {
-"add": [
-"damage_reduction",
-"on_damaged",
-"temporary_effect"
-],
-"drop": [
-"block_armor"
-]
-},
-"762666": {
-"add": [
-"assists_support",
-"advantage",
-"damage",
-"ranged"
-],
-"drop": [
-"concentration:counters",
-"debuff",
-"disable:counters",
-"on_attack",
-"passive",
-"reactions:counters"
-]
-},
-"761174": {
-"add": [
-"advantage",
-"debuff",
-"passive"
-],
-"drop": [
-"on_attack"
-]
-},
-"762046": {
-"add": [
-"damage",
-"damage_reduction",
-"counterattack",
-"cooldowns",
-"modal_choice",
-"movement",
-"on_attack",
-"reactions",
-"temporary_effect"
-],
-"drop": [
-"damage_over_time",
-"delayed",
-"random_effect",
-"selection"
-]
-},
-"762468": {
-"add": [
-"temporary_effect",
-"aoe_damage",
-"area_templates",
-"damage_types",
-"death_trigger",
-"debuff",
-"saving_throws"
-],
-"drop": [
-"damage_reduction",
-"delayed"
-]
-},
-"761438": {
-"add": [
-"area_templates",
-"immobilize",
-"damage",
-"damage_types",
-"disable",
-"saving_throws",
-"terrain",
-"turn_end"
-],
-"drop": [
-"debuff:grants",
-"movement",
-"on_spell",
-"transform"
-]
-},
-"762481": {
-"add": [
-"damage",
-"immobilize",
-"disable",
-"multi_attack",
-"saving_throws"
-],
-"drop": [
-"cooldowns",
-"damage_over_time:benefits",
-"damage_reduction",
-"debuff:benefits",
-"debuff:counters",
-"delayed",
-"on_attack",
-"on_attack:benefits",
-"on_attack:counters"
-]
-},
-"762568": {
-"add": [
-"movement",
-"advantage",
-"condition_life",
-"damage",
-"debuff"
-],
-"drop": [
-"passive",
-"on_attack"
-]
-},
-"762209": {
-"add": [
-"cost_type",
-"damage_types",
-"tribal",
-"damage",
-"on_attack"
-],
-"drop": [
-"condition_count"
-]
-},
-"761284": {
-"add": [
-"banish",
-"damage",
-"damage_types",
-"saving_throws",
-"upgrade"
-],
-"drop": [
-"condition_count",
-"condition_life",
-"terrain"
-]
-},
-"762404": {
-"add": [
-"damage",
-"damage_types",
-"advantage",
-"debuff",
-"multi_attack",
-"passive",
-"ranged"
-],
-"drop": [
-"damage_over_time",
-"saving_throws"
-]
-},
-"761983": {
-"add": [
-"resource_conversion",
-"multiple_resources",
-"cooldowns"
-],
-"drop": [
-"spell_speed",
-"transform"
-]
-},
-"762586": {
-"add": [
-"damage"
-],
-"drop": [
-"random_effect"
-]
-},
-"762554": {
-"add": [
-"assists_support",
-"advantage",
-"damage",
-"immunity",
-"multi_attack",
-"saving_throws",
-"transform"
-],
-"drop": [
-"concentration",
-"condition_life",
-"disable",
-"disable:grants",
-"reactions",
-"movement",
-"debuff"
-]
-},
-"762452": {
-"add": [
-"immobilize",
-"damage_over_time",
-"damage",
-"damage_types",
-"debuff",
-"disable",
-"movement",
-"multi_attack",
-"play_restriction",
-"saving_throws",
-"stealth",
-"turn_start"
-],
-"drop": [
-"advantage",
-"on_attack"
-]
-},
-"762172": {
-"add": [
-"attack_mod",
-"ranged"
-],
-"drop": [
-"random_effect"
-]
-},
-"762412": {
-"add": [
-"on_damaged",
-"random_effect",
-"autonomous_units",
-"temporary_effect",
-"advantage",
-"condition_life",
-"damage",
-"damage_types",
-"debuff",
-"heal",
-"movement",
-"multi_attack",
-"on_attack",
-"passive",
-"saving_throws"
-],
-"drop": [
-"death_count",
-"damage_reduction",
-"delayed"
-]
-},
-"761966": {
-"add": [
-"modal_choice",
-"movement",
-"damage_over_time",
-"saving_throws",
-"turn_end"
-],
-"drop": [
-"debuff:benefits",
-"debuff:grants",
-"on_attack:benefits",
-"advantage",
-"reactions"
-]
-},
-"761932": {
-"add": [
-"attack_mod",
-"damage_types",
-"damage"
-],
-"drop": [
-"area_templates",
-"once_per_game",
-"random_effect"
-]
-},
-"761166": {
-"add": [
-"debuff",
-"fatigue",
-"passive",
-"stacking_keyword"
-],
-"drop": [
-"cooldowns"
-]
-},
-"762521": {
-"add": [
-"debuff",
-"advantage",
-"damage",
-"damage_reduction",
-"damage_types",
-"multi_attack",
-"ranged",
-"saving_throws"
-],
-"drop": [
-"movement",
-"spell_speed"
-]
-},
-"762525": {
-"add": [
-"assists_support",
-"advantage",
-"damage",
-"ranged"
-],
-"drop": [
-"concentration",
-"disable",
-"disable:grants",
-"reactions"
-]
-},
-"762696": {
-"add": [
-"reveal_order",
-"turn_structure",
-"passive",
-"random_effect",
-"reactions"
-],
-"drop": [
-"multi_attack",
-"selection",
-"symmetric_effect",
-"turn_end",
-"turn_start"
-]
-},
-"762673": {
-"add": [
-"immobilize",
-"movement",
-"advantage",
-"area_templates",
-"on_attack",
-"passive",
-"stealth"
-],
-"drop": [
-"saving_throws",
-"spell_speed",
-"debuff",
-"disable"
-]
-},
-"761890": {
-"add": [
-"multi_attack",
-"movement",
-"cooldowns",
-"kicker",
-"saving_throws"
-],
-"drop": [
-"damage",
-"spell_speed",
-"zone_of_control"
-]
-},
-"762357": {
-"add": [
-"immobilize",
-"revive",
-"ping",
-"advantage",
-"damage_over_time",
-"damage_reduction",
-"damage_types",
-"multi_attack",
-"on_attack",
-"ranged",
-"turn_start"
-],
-"drop": [
-"debuff",
-"disable",
-"saving_throws"
-]
-},
-"762647": {
-"add": [
-"advantage",
-"damage",
-"multi_attack"
-],
-"drop": [
-"on_attack"
-]
-},
-"761224": {
-"add": [
-"silence",
-"damage",
-"damage_types",
-"play_restriction",
-"saving_throws"
-],
-"drop": [
-"turn_end"
-]
-},
-"762726": {
-"add": [
-"stealth",
-"trap_secret"
-],
-"drop": [
-"damage_over_time",
-"damage_reduction",
-"forced_movement",
-"multi_target_attack",
-"passive",
-"activated"
-]
-},
-"762546": {
-"add": [
-"transform",
-"damage",
-"multi_attack",
-"ranged"
-],
-"drop": [
-"movement",
-"random_effect"
-]
-},
-"762615": {
-"add": [
-"condition_life",
-"damage",
-"movement"
-],
-"drop": [
-"random_effect"
-]
-},
-"761357": {
-"add": [
-"heal",
-"debuff:counters",
-"upgrade"
-],
-"drop": [
-"condition_count",
-"damage_over_time"
-]
-},
-"762547": {
-"add": [
-"damage",
-"immunity",
-"multi_attack",
-"ranged",
-"saving_throws",
-"transform"
-],
-"drop": [
-"condition_life",
-"movement",
-"debuff"
-]
-},
-"761233": {
-"add": [
-"aoe_damage",
-"area_templates",
-"damage_types",
-"saving_throws",
-"upgrade"
-],
-"drop": [
-"condition_count",
-"damage_over_time",
-"ranged"
-]
-},
-"761314": {
-"add": [],
-"drop": [
-"damage",
-"terrain"
-]
-},
-"762035": {
-"add": [
-"damage_reduction",
-"damage_types"
-],
-"drop": []
-},
-"761225": {
-"add": [
-"advantage",
-"concentration",
-"damage",
-"damage_types",
-"debuff",
-"modal_choice",
-"on_attack",
-"saving_throws",
-"turn_start",
-"upgrade"
-],
-"drop": []
-},
-"762079": {
-"add": [
-"advantage"
-],
-"drop": []
-},
-"761181": {
-"add": [
-"multi_attack",
-"spell_speed"
-],
-"drop": []
-},
-"762254": {
-"add": [
-"modal_choice"
-],
-"drop": []
-},
-"761929": {
-"add": [
-"area_templates",
-"aura"
-],
-"drop": []
-},
-"762181": {
-"add": [
-"advantage",
-"cooldowns",
-"saving_throws"
-],
-"drop": []
-},
-"761420": {
-"add": [
-"immunity"
-],
-"drop": []
-},
-"761512": {
-"add": [
-"concentration",
-"movement"
-],
-"drop": []
-}
+ "761537": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761538": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761539": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "762109": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761540": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761541": {
+  "add": [
+   "items_consumables",
+   "immunity",
+   "passive"
+  ],
+  "drop": []
+ },
+ "761542": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761543": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761544": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761545": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761546": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761547": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761548": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "762110": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "762111": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761549": {
+  "add": [
+   "items_consumables",
+   "bodyguard",
+   "damage_reduction",
+   "ranged",
+   "reactions"
+  ],
+  "drop": [
+   "passive",
+   "random_effect"
+  ]
+ },
+ "761780": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761550": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761551": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761552": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761553": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761554": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761555": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761556": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761557": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761558": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761559": {
+  "add": [
+   "items_consumables",
+   "activated"
+  ],
+  "drop": [
+   "passive"
+  ]
+ },
+ "761560": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761561": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761562": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761563": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761564": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761565": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761566": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761567": {
+  "add": [
+   "items_consumables",
+   "damage_reduction",
+   "damage_types",
+   "immunity",
+   "passive"
+  ],
+  "drop": []
+ },
+ "761568": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761781": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761569": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761570": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761571": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761572": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761573": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761574": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761575": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761576": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761577": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761578": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761579": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761580": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761782": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761581": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761582": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761583": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761584": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761585": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761586": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761587": {
+  "add": [
+   "items_consumables",
+   "buff",
+   "cooldowns",
+   "damage",
+   "damage_types",
+   "on_attack",
+   "saving_throws"
+  ],
+  "drop": [
+   "damage_over_time",
+   "stat_loss:grants",
+   "spell_speed"
+  ]
+ },
+ "761588": {
+  "add": [
+   "items_consumables",
+   "activated",
+   "damage",
+   "movement"
+  ],
+  "drop": [
+   "passive",
+   "random_effect",
+   "spell_speed"
+  ]
+ },
+ "761589": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761590": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "762112": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761591": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761592": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761593": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761594": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761595": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761596": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761597": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761598": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761599": {
+  "add": [
+   "items_consumables",
+   "area_templates",
+   "friendly_fire",
+   "self_destruct",
+   "disable",
+   "saving_throws",
+   "turn_end"
+  ],
+  "drop": [
+   "concentration",
+   "information",
+   "reactions",
+   "scope_global",
+   "once_per_game"
+  ]
+ },
+ "761600": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761601": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761602": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761603": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761604": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761605": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761783": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761606": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761607": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761608": {
+  "add": [
+   "items_consumables",
+   "advantage",
+   "passive"
+  ],
+  "drop": []
+ },
+ "761609": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761610": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761611": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761612": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761613": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761614": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761615": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761616": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761617": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761618": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761619": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "762113": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761620": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761621": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761622": {
+  "add": [
+   "items_consumables",
+   "passive"
+  ],
+  "drop": []
+ },
+ "761623": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761624": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761625": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761626": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761627": {
+  "add": [
+   "items_consumables",
+   "damage_reduction",
+   "aoe_damage",
+   "area_templates",
+   "damage_types",
+   "passive"
+  ],
+  "drop": [
+   "spell_speed"
+  ]
+ },
+ "761628": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761629": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761630": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761631": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761632": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761633": {
+  "add": [
+   "items_consumables",
+   "summon",
+   "cooldowns",
+   "drawback",
+   "stat_loss:counters",
+   "immunity",
+   "random_effect"
+  ],
+  "drop": [
+   "advantage:counters",
+   "condition_life",
+   "stat_loss:grants",
+   "spell_speed",
+   "tribal"
+  ]
+ },
+ "761635": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761634": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761636": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761637": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761638": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761639": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "762114": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761640": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761641": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761642": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761643": {
+  "add": [
+   "items_consumables",
+   "buff",
+   "cooldowns",
+   "advantage",
+   "saving_throws"
+  ],
+  "drop": [
+   "disable:grants",
+   "passive"
+  ]
+ },
+ "761644": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761645": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761646": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761784": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761647": {
+  "add": [
+   "items_consumables",
+   "advantage",
+   "passive",
+   "saving_throws"
+  ],
+  "drop": []
+ },
+ "761648": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761649": {
+  "add": [
+   "items_consumables",
+   "stat_gain"
+  ],
+  "drop": [
+   "activated"
+  ]
+ },
+ "761650": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761651": {
+  "add": [
+   "items_consumables",
+   "stat_gain"
+  ],
+  "drop": [
+   "activated"
+  ]
+ },
+ "761652": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761653": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761785": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761654": {
+  "add": [
+   "items_consumables",
+   "banish",
+   "activated",
+   "immunity",
+   "passive",
+   "saving_throws"
+  ],
+  "drop": [
+   "condition_life",
+   "damage_over_time",
+   "damage_types"
+  ]
+ },
+ "761655": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761656": {
+  "add": [
+   "items_consumables",
+   "random_effect",
+   "summon",
+   "advantage",
+   "condition_life",
+   "damage",
+   "damage_types",
+   "stat_loss",
+   "draw",
+   "multi_attack"
+  ],
+  "drop": []
+ },
+ "761657": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761658": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761659": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761660": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761661": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761662": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761663": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761664": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761786": {
+  "add": [
+   "items_consumables",
+   "on_damaged",
+   "disable",
+   "saving_throws"
+  ],
+  "drop": [
+   "damage_over_time",
+   "stat_loss:grants",
+   "on_attack",
+   "passive"
+  ]
+ },
+ "762119": {
+  "add": [
+   "items_consumables",
+   "activated",
+   "drawback"
+  ],
+  "drop": [
+   "advantage:cost",
+   "passive"
+  ]
+ },
+ "761787": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761665": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761666": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761667": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761668": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761669": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761670": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761671": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761672": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761673": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761674": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761675": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761676": {
+  "add": [
+   "items_consumables",
+   "advantage"
+  ],
+  "drop": []
+ },
+ "761677": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761678": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761681": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761683": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761679": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "762115": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761682": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761684": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761685": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761686": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761687": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761688": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761689": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761680": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761788": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "762116": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761690": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761691": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761692": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761693": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761694": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761695": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761696": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761697": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761698": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761699": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761700": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761701": {
+  "add": [
+   "items_consumables",
+   "damage_reduction",
+   "damage_types",
+   "passive",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "761702": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761703": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761704": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761705": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761706": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761708": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761709": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761710": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761711": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761707": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761712": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761713": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761714": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761716": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761715": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761717": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761718": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761719": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761720": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761721": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761722": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761723": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761724": {
+  "add": [
+   "items_consumables",
+   "advantage",
+   "damage_reduction",
+   "passive",
+   "reactions",
+   "saving_throws"
+  ],
+  "drop": [
+   "damage_types"
+  ]
+ },
+ "761725": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761789": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761726": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761727": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761728": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761729": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761731": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761730": {
+  "add": [
+   "items_consumables",
+   "advantage",
+   "passive",
+   "saving_throws"
+  ],
+  "drop": [
+   "damage_reduction",
+   "stat_loss"
+  ]
+ },
+ "761732": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761790": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761733": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761734": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761735": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761736": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761737": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761738": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761739": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761743": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761744": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761740": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761741": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761742": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761745": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761746": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761747": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761748": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761749": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761750": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761751": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761753": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761752": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761754": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761755": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761756": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761791": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761757": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761792": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761758": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761759": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761760": {
+  "add": [
+   "items_consumables",
+   "buff",
+   "deathtouch",
+   "damage",
+   "damage_types",
+   "immunity",
+   "piercing"
+  ],
+  "drop": [
+   "damage_reduction",
+   "random_effect"
+  ]
+ },
+ "761761": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761762": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761763": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761764": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761765": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761766": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761767": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761768": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761769": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761770": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761772": {
+  "add": [
+   "items_consumables",
+   "saving_throws"
+  ],
+  "drop": [
+   "passive"
+  ]
+ },
+ "761773": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761771": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "762117": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761774": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761775": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "762118": {
+  "add": [
+   "items_consumables",
+   "buff"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "761776": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761777": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761778": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761779": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761793": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "761870": {
+  "add": [],
+  "drop": [
+   "forced_movement",
+   "movement"
+  ]
+ },
+ "762178": {
+  "add": [],
+  "drop": [
+   "forced_movement",
+   "movement"
+  ]
+ },
+ "761925": {
+  "add": [],
+  "drop": [
+   "excess_damage"
+  ]
+ },
+ "761883": {
+  "add": [
+   "on_attack"
+  ],
+  "drop": [
+   "reactions"
+  ]
+ },
+ "761994": {
+  "add": [
+   "activated",
+   "cooldowns"
+  ],
+  "drop": [
+   "evasion",
+   "spell_speed"
+  ]
+ },
+ "762265": {
+  "add": [
+   "resource_conversion"
+  ],
+  "drop": [
+   "transform"
+  ]
+ },
+ "761245": {
+  "add": [],
+  "drop": [
+   "aoe_damage",
+   "delayed"
+  ]
+ },
+ "762188": {
+  "add": [
+   "multi_attack"
+  ],
+  "drop": []
+ },
+ "815620": {
+  "add": [
+   "ranged",
+   "spell_power"
+  ],
+  "drop": []
+ },
+ "761451": {
+  "add": [],
+  "drop": [
+   "multi_attack",
+   "damage_over_time",
+   "delayed"
+  ]
+ },
+ "761391": {
+  "add": [
+   "movement",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "762190": {
+  "add": [
+   "zone_of_control:counters"
+  ],
+  "drop": [
+   "zone_of_control:does"
+  ]
+ },
+ "761877": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": [
+   "movement"
+  ]
+ },
+ "761380": {
+  "add": [],
+  "drop": [
+   "damage",
+   "random_effect"
+  ]
+ },
+ "761826": {
+  "add": [
+   "resource_gain"
+  ],
+  "drop": [
+   "comeback"
+  ]
+ },
+ "762055": {
+  "add": [
+   "free_play"
+  ],
+  "drop": []
+ },
+ "761906": {
+  "add": [
+   "resource_gain"
+  ],
+  "drop": []
+ },
+ "761484": {
+  "add": [
+   "cheat_death"
+  ],
+  "drop": []
+ },
+ "762041": {
+  "add": [],
+  "drop": [
+   "on_attack"
+  ]
+ },
+ "815519": {
+  "add": [
+   "deckbuilding_effect",
+   "type_grant"
+  ],
+  "drop": []
+ },
+ "815533": {
+  "add": [
+   "information",
+   "stealth:counters"
+  ],
+  "drop": []
+ },
+ "815536": {
+  "add": [
+   "deckbuilding_effect"
+  ],
+  "drop": []
+ },
+ "815537": {
+  "add": [
+   "deckbuilding_effect"
+  ],
+  "drop": []
+ },
+ "815544": {
+  "add": [
+   "information"
+  ],
+  "drop": []
+ },
+ "815545": {
+  "add": [
+   "information"
+  ],
+  "drop": []
+ },
+ "815592": {
+  "add": [
+   "buff",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "815593": {
+  "add": [
+   "buff",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "815596": {
+  "add": [
+   "buff",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "815600": {
+  "add": [
+   "buff",
+   "upgrade",
+   "aura:benefits",
+   "buff:benefits"
+  ],
+  "drop": []
+ },
+ "815601": {
+  "add": [
+   "buff",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "815639": {
+  "add": [
+   "buff",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "815640": {
+  "add": [
+   "buff",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "815642": {
+  "add": [
+   "information"
+  ],
+  "drop": []
+ },
+ "815643": {
+  "add": [
+   "buff",
+   "debuff"
+  ],
+  "drop": []
+ },
+ "761378": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "815505": {
+  "add": [
+   "information"
+  ],
+  "drop": []
+ },
+ "815509": {
+  "add": [
+   "information"
+  ],
+  "drop": []
+ },
+ "815511": {
+  "add": [
+   "movement"
+  ],
+  "drop": []
+ },
+ "815512": {
+  "add": [
+   "information",
+   "stealth:counters"
+  ],
+  "drop": []
+ },
+ "815513": {
+  "add": [
+   "terrain:benefits"
+  ],
+  "drop": []
+ },
+ "761449": {
+  "add": [
+   "stat_loss",
+   "damage",
+   "damage_types",
+   "ranged",
+   "temporary_effect",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "delayed",
+   "multi_attack"
+  ]
+ },
+ "762584": {
+  "add": [
+   "damage",
+   "damage_types",
+   "delayed",
+   "disable",
+   "movement",
+   "on_attack",
+   "passive",
+   "turn_end"
+  ],
+  "drop": [
+   "stat_loss:benefits",
+   "stat_loss:counters",
+   "destroy",
+   "graveyard",
+   "terrain",
+   "saving_throws"
+  ]
+ },
+ "761299": {
+  "add": [
+   "target_choice",
+   "damage",
+   "damage_types",
+   "multi_attack",
+   "ranged",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "condition_count",
+   "random_effect"
+  ]
+ },
+ "761414": {
+  "add": [
+   "damage_reduction",
+   "random_effect"
+  ],
+  "drop": [
+   "condition_count",
+   "stat_loss",
+   "movement"
+  ]
+ },
+ "762433": {
+  "add": [
+   "damage_types",
+   "aoe_damage",
+   "area_templates",
+   "multi_attack",
+   "saving_throws"
+  ],
+  "drop": [
+   "damage_over_time",
+   "damage_reduction"
+  ]
+ },
+ "762314": {
+  "add": [
+   "type_grant",
+   "passive"
+  ],
+  "drop": [
+   "cooldowns"
+  ]
+ },
+ "762386": {
+  "add": [
+   "immobilize",
+   "damage",
+   "stat_loss",
+   "disable",
+   "multi_attack",
+   "on_attack",
+   "passive",
+   "saving_throws",
+   "turn_end"
+  ],
+  "drop": [
+   "damage_over_time"
+  ]
+ },
+ "815547": {
+  "add": [
+   "activated",
+   "modal_choice",
+   "spell_speed"
+  ],
+  "drop": [
+   "selection"
+  ]
+ },
+ "761362": {
+  "add": [
+   "block_armor",
+   "concentration",
+   "stat_loss:counters",
+   "immunity",
+   "turn_start",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "condition_count",
+   "stress_morale"
+  ]
+ },
+ "762418": {
+  "add": [
+   "steal",
+   "aoe_damage",
+   "area_templates",
+   "damage_types",
+   "stat_loss",
+   "disable",
+   "immunity",
+   "movement",
+   "multi_attack",
+   "passive",
+   "saving_throws",
+   "terrain"
+  ],
+  "drop": [
+   "concentration",
+   "condition_life",
+   "reactions"
+  ]
+ },
+ "762235": {
+  "add": [
+   "advantage",
+   "reactions"
+  ],
+  "drop": [
+   "stat_loss"
+  ]
+ },
+ "762663": {
+  "add": [
+   "damage",
+   "advantage"
+  ],
+  "drop": [
+   "on_attack"
+  ]
+ },
+ "761167": {
+  "add": [
+   "stat_loss",
+   "passive"
+  ],
+  "drop": []
+ },
+ "762295": {
+  "add": [
+   "stealth"
+  ],
+  "drop": [
+   "movement",
+   "reactions"
+  ]
+ },
+ "762629": {
+  "add": [
+   "damage",
+   "passive"
+  ],
+  "drop": [
+   "on_attack"
+  ]
+ },
+ "761379": {
+  "add": [
+   "immobilize",
+   "advantage",
+   "concentration",
+   "steal",
+   "stat_loss",
+   "saving_throws"
+  ],
+  "drop": [
+   "on_attack",
+   "passive"
+  ]
+ },
+ "761850": {
+  "add": [
+   "information",
+   "passive"
+  ],
+  "drop": [
+   "saving_throws",
+   "stealth",
+   "trap_secret"
+  ]
+ },
+ "761229": {
+  "add": [
+   "damage",
+   "damage_types",
+   "saving_throws",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "761211": {
+  "add": [
+   "concentration",
+   "immunity",
+   "movement",
+   "spell_speed"
+  ],
+  "drop": [
+   "shield"
+  ]
+ },
+ "761219": {
+  "add": [
+   "steal",
+   "transform"
+  ],
+  "drop": [
+   "advantage",
+   "damage",
+   "movement",
+   "spell_speed"
+  ]
+ },
+ "815543": {
+  "add": [
+   "cooldowns",
+   "free_play"
+  ],
+  "drop": [
+   "spell_speed"
+  ]
+ },
+ "762527": {
+  "add": [
+   "summon",
+   "damage",
+   "multi_attack",
+   "ranged",
+   "stat_multiply",
+   "turn_structure"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "762040": {
+  "add": [
+   "activated",
+   "cooldowns"
+  ],
+  "drop": [
+   "concentration",
+   "disable",
+   "disable:grants",
+   "reactions"
+  ]
+ },
+ "762200": {
+  "add": [],
+  "drop": []
+ },
+ "761226": {
+  "add": [
+   "aoe_damage",
+   "concentration",
+   "saving_throws",
+   "terrain"
+  ],
+  "drop": [
+   "cooldowns",
+   "stat_loss:benefits",
+   "disable"
+  ]
+ },
+ "762499": {
+  "add": [
+   "damage",
+   "immobilize",
+   "forced_movement",
+   "damage_types",
+   "stat_loss",
+   "delayed",
+   "immunity",
+   "multi_attack",
+   "on_attack",
+   "turn_start"
+  ],
+  "drop": [
+   "damage_over_time",
+   "damage_prevention",
+   "death_trigger",
+   "movement",
+   "disable",
+   "saving_throws"
+  ]
+ },
+ "762434": {
+  "add": [
+   "stat_loss",
+   "temporary_effect",
+   "aoe_damage",
+   "area_templates",
+   "damage_types",
+   "delayed",
+   "legendary_actions",
+   "movement",
+   "multi_attack",
+   "saving_throws"
+  ],
+  "drop": [
+   "damage_over_time",
+   "damage_reduction"
+  ]
+ },
+ "762551": {
+  "add": [
+   "damage",
+   "immunity",
+   "movement",
+   "multi_attack",
+   "saving_throws",
+   "transform"
+  ],
+  "drop": [
+   "condition_life",
+   "reactions",
+   "stat_loss"
+  ]
+ },
+ "762360": {
+  "add": [
+   "damage_over_time",
+   "area_templates",
+   "aoe_damage",
+   "damage_types",
+   "disable",
+   "multi_attack",
+   "saving_throws",
+   "terrain",
+   "turn_start"
+  ],
+  "drop": [
+   "advantage",
+   "damage_reduction",
+   "stat_loss:counters",
+   "graveyard",
+   "on_attack:counters",
+   "passive"
+  ]
+ },
+ "761210": {
+  "add": [
+   "forced_movement",
+   "saving_throws"
+  ],
+  "drop": [
+   "advantage",
+   "advantage:benefits",
+   "stat_loss:benefits",
+   "movement"
+  ]
+ },
+ "762558": {
+  "add": [
+   "summon",
+   "advantage",
+   "damage_types",
+   "stat_loss",
+   "multi_attack",
+   "passive",
+   "ranged",
+   "saving_throws"
+  ],
+  "drop": [
+   "lifesteal"
+  ]
+ },
+ "761374": {
+  "add": [
+   "modal_choice",
+   "immobilize",
+   "stat_loss",
+   "delayed",
+   "disable",
+   "immunity",
+   "movement",
+   "saving_throws"
+  ],
+  "drop": [
+   "on_spell",
+   "summon",
+   "passive"
+  ]
+ },
+ "762708": {
+  "add": [
+   "ranged"
+  ],
+  "drop": [
+   "forced_movement",
+   "passive"
+  ]
+ },
+ "761893": {
+  "add": [
+   "counterattack",
+   "damage",
+   "damage_reduction",
+   "ranged",
+   "reactions",
+   "saving_throws"
+  ],
+  "drop": [
+   "stat_loss",
+   "terrain"
+  ]
+ },
+ "762444": {
+  "add": [
+   "assists_support",
+   "damage_types",
+   "advantage",
+   "damage",
+   "ranged"
+  ],
+  "drop": [
+   "concentration",
+   "disable",
+   "disable:grants",
+   "reactions"
+  ]
+ },
+ "762458": {
+  "add": [
+   "delayed",
+   "damage",
+   "revive",
+   "summon"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "815641": {
+  "add": [
+   "cost_set",
+   "cooldowns",
+   "free_play"
+  ],
+  "drop": []
+ },
+ "761805": {
+  "add": [
+   "movement"
+  ],
+  "drop": [
+   "spell_speed"
+  ]
+ },
+ "762622": {
+  "add": [
+   "assists_support",
+   "advantage",
+   "damage"
+  ],
+  "drop": [
+   "concentration",
+   "disable",
+   "disable:grants",
+   "reactions"
+  ]
+ },
+ "762441": {
+  "add": [
+   "assists_support",
+   "advantage",
+   "aoe_damage",
+   "area_templates",
+   "damage_types",
+   "multi_attack",
+   "saving_throws"
+  ],
+  "drop": [
+   "concentration",
+   "damage_reduction",
+   "disable",
+   "disable:grants",
+   "reactions"
+  ]
+ },
+ "762453": {
+  "add": [
+   "on_damaged",
+   "advantage",
+   "aoe_damage",
+   "area_templates",
+   "damage_types",
+   "heal",
+   "multi_attack",
+   "ranged",
+   "saving_throws"
+  ],
+  "drop": [
+   "damage_over_time",
+   "damage_reduction",
+   "movement"
+  ]
+ },
+ "762095": {
+  "add": [
+   "stat_gain",
+   "immobilize",
+   "advantage",
+   "immobilize:benefits",
+   "movement"
+  ],
+  "drop": [
+   "cooldowns",
+   "stat_loss:benefits",
+   "on_attack:benefits",
+   "permanent_growth",
+   "damage"
+  ]
+ },
+ "762625": {
+  "add": [
+   "damage",
+   "advantage",
+   "aoe_damage",
+   "area_templates",
+   "damage_types",
+   "stat_loss",
+   "immunity",
+   "legendary_actions",
+   "multi_attack",
+   "saving_throws",
+   "turn_end"
+  ],
+  "drop": [
+   "damage_over_time",
+   "damage_reduction",
+   "evasion",
+   "on_attack"
+  ]
+ },
+ "761237": {
+  "add": [
+   "steal",
+   "saving_throws",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "advantage:benefits",
+   "condition_count",
+   "damage"
+  ]
+ },
+ "762402": {
+  "add": [
+   "damage",
+   "aoe_damage",
+   "area_templates",
+   "damage_types",
+   "stat_loss",
+   "multi_attack",
+   "saving_throws"
+  ],
+  "drop": [
+   "advantage",
+   "damage_reduction",
+   "on_attack"
+  ]
+ },
+ "762174": {
+  "add": [
+   "lone_unit",
+   "stat_gain"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "815626": {
+  "add": [
+   "stat_loss",
+   "cooldowns"
+  ],
+  "drop": []
+ },
+ "761533": {
+  "add": [
+   "area_templates",
+   "concentration",
+   "damage",
+   "saving_throws",
+   "terrain"
+  ],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "762542": {
+  "add": [
+   "damage",
+   "immunity",
+   "multi_attack",
+   "saving_throws",
+   "transform"
+  ],
+  "drop": [
+   "condition_life",
+   "movement",
+   "stat_loss"
+  ]
+ },
+ "762025": {
+  "add": [
+   "block_armor",
+   "movement",
+   "cooldowns"
+  ],
+  "drop": [
+   "spell_speed"
+  ]
+ },
+ "761347": {
+  "add": [
+   "rewind"
+  ],
+  "drop": [
+   "items_consumables"
+  ]
+ },
+ "762267": {
+  "add": [
+   "cost_type",
+   "activated",
+   "saving_throws"
+  ],
+  "drop": [
+   "on_spell"
+  ]
+ },
+ "815624": {
+  "add": [],
+  "drop": [
+   "free_play"
+  ]
+ },
+ "762460": {
+  "add": [
+   "counter_spell",
+   "damage",
+   "damage_types",
+   "multi_attack",
+   "ranged",
+   "reactions"
+  ],
+  "drop": [
+   "saving_throws"
+  ]
+ },
+ "761394": {
+  "add": [
+   "immunity",
+   "advantage",
+   "area_templates",
+   "steal",
+   "stat_loss",
+   "modal_choice",
+   "saving_throws",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "movement",
+   "on_attack"
+  ]
+ },
+ "762485": {
+  "add": [
+   "revive",
+   "summon",
+   "aoe_damage",
+   "advantage",
+   "area_templates",
+   "aura",
+   "buff",
+   "damage_over_time",
+   "damage_reduction",
+   "damage_types",
+   "stat_loss",
+   "multi_attack",
+   "on_attack",
+   "saving_throws",
+   "turn_end",
+   "turn_start"
+  ],
+  "drop": [
+   "concentration",
+   "disable",
+   "disable:grants",
+   "heal",
+   "reactions",
+   "immunity"
+  ]
+ },
+ "762009": {
+  "add": [
+   "temporary_effect",
+   "cooldowns",
+   "damage",
+   "disable",
+   "on_attack",
+   "saving_throws"
+  ],
+  "drop": [
+   "concentration",
+   "reactions"
+  ]
+ },
+ "762421": {
+  "add": [
+   "reactions",
+   "damage_reduction",
+   "damage",
+   "stat_loss",
+   "multi_attack",
+   "ranged",
+   "saving_throws"
+  ],
+  "drop": [
+   "advantage",
+   "on_attack",
+   "passive"
+  ]
+ },
+ "761227": {
+  "add": [
+   "area_templates",
+   "aoe_damage",
+   "concentration",
+   "damage",
+   "damage_types",
+   "saving_throws",
+   "terrain"
+  ],
+  "drop": [
+   "cooldowns"
+  ]
+ },
+ "762380": {
+  "add": [
+   "advantage",
+   "damage",
+   "stat_loss",
+   "immobilize",
+   "movement",
+   "multi_attack",
+   "on_attack",
+   "ranged",
+   "saving_throws"
+  ],
+  "drop": [
+   "disable:grants"
+  ]
+ },
+ "761257": {
+  "add": [
+   "damage_types",
+   "area_templates",
+   "concentration",
+   "damage",
+   "on_attack",
+   "terrain",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "condition_count",
+   "summon"
+  ]
+ },
+ "761817": {
+  "add": [
+   "stat_gain",
+   "cooldowns",
+   "random_effect",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "spell_speed"
+  ]
+ },
+ "762678": {
+  "add": [
+   "immobilize",
+   "damage_over_time",
+   "damage_reduction",
+   "damage",
+   "stat_loss",
+   "disable",
+   "on_attack",
+   "passive",
+   "turn_start"
+  ],
+  "drop": [
+   "concentration",
+   "reactions",
+   "saving_throws"
+  ]
+ },
+ "762633": {
+  "add": [
+   "damage",
+   "advantage",
+   "passive"
+  ],
+  "drop": [
+   "on_attack"
+  ]
+ },
+ "762603": {
+  "add": [
+   "reactions",
+   "damage",
+   "area_templates",
+   "movement",
+   "passive"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "762096": {
+  "add": [
+   "buff",
+   "ranged"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "761526": {
+  "add": [
+   "area_templates",
+   "aoe_damage",
+   "damage_types",
+   "concentration",
+   "damage",
+   "movement",
+   "saving_throws",
+   "terrain",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "cooldowns",
+   "counterattack"
+  ]
+ },
+ "761523": {
+  "add": [
+   "area_templates",
+   "concentration",
+   "forced_movement",
+   "immunity",
+   "terrain"
+  ],
+  "drop": [
+   "shield"
+  ]
+ },
+ "762447": {
+  "add": [
+   "heal:counters",
+   "advantage",
+   "damage_over_time",
+   "damage_reduction",
+   "damage_types",
+   "multi_attack",
+   "passive",
+   "ranged",
+   "saving_throws",
+   "turn_start"
+  ],
+  "drop": [
+   "condition_life"
+  ]
+ },
+ "761188": {
+  "add": [
+   "damage",
+   "multi_target_attack",
+   "on_attack"
+  ],
+  "drop": [
+   "cooldowns"
+  ]
+ },
+ "762524": {
+  "add": [
+   "aoe_damage",
+   "damage_over_time",
+   "counter_spell",
+   "area_templates",
+   "damage",
+   "damage_reduction",
+   "damage_types",
+   "disable",
+   "legendary_actions",
+   "multi_attack",
+   "saving_throws",
+   "stat_multiply",
+   "turn_start"
+  ],
+  "drop": [
+   "advantage:benefits",
+   "concentration",
+   "stat_loss:benefits",
+   "stat_loss:counters",
+   "graveyard",
+   "on_attack",
+   "on_attack:benefits",
+   "on_attack:counters",
+   "ranged",
+   "terrain",
+   "movement"
+  ]
+ },
+ "762541": {
+  "add": [
+   "damage",
+   "immunity",
+   "multi_attack",
+   "ranged",
+   "saving_throws",
+   "transform"
+  ],
+  "drop": [
+   "condition_life",
+   "movement",
+   "stat_loss"
+  ]
+ },
+ "762471": {
+  "add": [
+   "immobilize",
+   "advantage",
+   "damage",
+   "damage_types",
+   "stat_loss",
+   "on_attack"
+  ],
+  "drop": [
+   "disable",
+   "movement",
+   "passive",
+   "saving_throws"
+  ]
+ },
+ "761926": {
+  "add": [
+   "aura",
+   "buff",
+   "stat_loss:counters",
+   "immunity"
+  ],
+  "drop": [
+   "stat_loss:benefits",
+   "stat_loss:grants"
+  ]
+ },
+ "762602": {
+  "add": [
+   "damage"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "761954": {
+  "add": [
+   "modal_choice",
+   "condition_life",
+   "multi_target_attack",
+   "damage",
+   "on_attack"
+  ],
+  "drop": [
+   "cooldowns",
+   "multi_attack"
+  ]
+ },
+ "762359": {
+  "add": [
+   "advantage",
+   "damage_over_time",
+   "damage_types",
+   "stat_loss",
+   "multi_attack",
+   "on_attack",
+   "saving_throws",
+   "turn_start"
+  ],
+  "drop": [
+   "condition_life",
+   "damage_reduction",
+   "delayed",
+   "passive"
+  ]
+ },
+ "815605": {
+  "add": [
+   "damage_reduction",
+   "on_damaged",
+   "temporary_effect"
+  ],
+  "drop": [
+   "block_armor"
+  ]
+ },
+ "762666": {
+  "add": [
+   "assists_support",
+   "advantage",
+   "damage",
+   "ranged"
+  ],
+  "drop": [
+   "concentration:counters",
+   "stat_loss",
+   "disable:counters",
+   "on_attack",
+   "passive",
+   "reactions:counters"
+  ]
+ },
+ "761174": {
+  "add": [
+   "advantage",
+   "stat_loss",
+   "passive"
+  ],
+  "drop": [
+   "on_attack"
+  ]
+ },
+ "762046": {
+  "add": [
+   "damage",
+   "damage_reduction",
+   "counterattack",
+   "cooldowns",
+   "modal_choice",
+   "movement",
+   "on_attack",
+   "reactions",
+   "temporary_effect"
+  ],
+  "drop": [
+   "damage_over_time",
+   "delayed",
+   "random_effect",
+   "selection"
+  ]
+ },
+ "762468": {
+  "add": [
+   "temporary_effect",
+   "aoe_damage",
+   "area_templates",
+   "damage_types",
+   "death_trigger",
+   "stat_loss",
+   "saving_throws"
+  ],
+  "drop": [
+   "damage_reduction",
+   "delayed"
+  ]
+ },
+ "761438": {
+  "add": [
+   "area_templates",
+   "immobilize",
+   "damage",
+   "damage_types",
+   "disable",
+   "saving_throws",
+   "terrain",
+   "turn_end"
+  ],
+  "drop": [
+   "stat_loss:grants",
+   "movement",
+   "on_spell",
+   "transform"
+  ]
+ },
+ "762481": {
+  "add": [
+   "damage",
+   "immobilize",
+   "disable",
+   "multi_attack",
+   "saving_throws"
+  ],
+  "drop": [
+   "cooldowns",
+   "damage_over_time:benefits",
+   "damage_reduction",
+   "stat_loss:benefits",
+   "stat_loss:counters",
+   "delayed",
+   "on_attack",
+   "on_attack:benefits",
+   "on_attack:counters"
+  ]
+ },
+ "762568": {
+  "add": [
+   "movement",
+   "advantage",
+   "condition_life",
+   "damage",
+   "stat_loss"
+  ],
+  "drop": [
+   "passive",
+   "on_attack"
+  ]
+ },
+ "762209": {
+  "add": [
+   "cost_type",
+   "damage_types",
+   "tribal",
+   "damage",
+   "on_attack"
+  ],
+  "drop": [
+   "condition_count"
+  ]
+ },
+ "761284": {
+  "add": [
+   "banish",
+   "damage",
+   "damage_types",
+   "saving_throws",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "condition_count",
+   "condition_life",
+   "terrain"
+  ]
+ },
+ "762404": {
+  "add": [
+   "damage",
+   "damage_types",
+   "advantage",
+   "stat_loss",
+   "multi_attack",
+   "passive",
+   "ranged"
+  ],
+  "drop": [
+   "damage_over_time",
+   "saving_throws"
+  ]
+ },
+ "761983": {
+  "add": [
+   "resource_conversion",
+   "multiple_resources",
+   "cooldowns"
+  ],
+  "drop": [
+   "spell_speed",
+   "transform"
+  ]
+ },
+ "762586": {
+  "add": [
+   "damage"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "762554": {
+  "add": [
+   "assists_support",
+   "advantage",
+   "damage",
+   "immunity",
+   "multi_attack",
+   "saving_throws",
+   "transform"
+  ],
+  "drop": [
+   "concentration",
+   "condition_life",
+   "disable",
+   "disable:grants",
+   "reactions",
+   "movement",
+   "stat_loss"
+  ]
+ },
+ "762452": {
+  "add": [
+   "immobilize",
+   "damage_over_time",
+   "damage",
+   "damage_types",
+   "stat_loss",
+   "disable",
+   "movement",
+   "multi_attack",
+   "disruption",
+   "play_restriction",
+   "saving_throws",
+   "stealth",
+   "turn_start"
+  ],
+  "drop": [
+   "advantage",
+   "on_attack"
+  ]
+ },
+ "762172": {
+  "add": [
+   "buff",
+   "ranged"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "762412": {
+  "add": [
+   "on_damaged",
+   "random_effect",
+   "autonomous_units",
+   "temporary_effect",
+   "advantage",
+   "condition_life",
+   "damage",
+   "damage_types",
+   "stat_loss",
+   "heal",
+   "movement",
+   "multi_attack",
+   "on_attack",
+   "passive",
+   "saving_throws"
+  ],
+  "drop": [
+   "death_count",
+   "damage_reduction",
+   "delayed"
+  ]
+ },
+ "761966": {
+  "add": [
+   "modal_choice",
+   "movement",
+   "damage_over_time",
+   "saving_throws",
+   "turn_end"
+  ],
+  "drop": [
+   "stat_loss:benefits",
+   "stat_loss:grants",
+   "on_attack:benefits",
+   "advantage",
+   "reactions"
+  ]
+ },
+ "761932": {
+  "add": [
+   "buff",
+   "damage_types",
+   "damage"
+  ],
+  "drop": [
+   "area_templates",
+   "once_per_game",
+   "random_effect"
+  ]
+ },
+ "761166": {
+  "add": [
+   "stat_loss",
+   "fatigue",
+   "passive",
+   "stacking_keyword"
+  ],
+  "drop": [
+   "cooldowns"
+  ]
+ },
+ "762521": {
+  "add": [
+   "stat_loss",
+   "advantage",
+   "damage",
+   "damage_reduction",
+   "damage_types",
+   "multi_attack",
+   "ranged",
+   "saving_throws"
+  ],
+  "drop": [
+   "movement",
+   "spell_speed"
+  ]
+ },
+ "762525": {
+  "add": [
+   "assists_support",
+   "advantage",
+   "damage",
+   "ranged"
+  ],
+  "drop": [
+   "concentration",
+   "disable",
+   "disable:grants",
+   "reactions"
+  ]
+ },
+ "762696": {
+  "add": [
+   "reveal_order",
+   "turn_structure",
+   "passive",
+   "random_effect",
+   "reactions"
+  ],
+  "drop": [
+   "multi_attack",
+   "selection",
+   "symmetric_effect",
+   "turn_end",
+   "turn_start"
+  ]
+ },
+ "762673": {
+  "add": [
+   "immobilize",
+   "movement",
+   "advantage",
+   "area_templates",
+   "on_attack",
+   "passive",
+   "stealth"
+  ],
+  "drop": [
+   "saving_throws",
+   "spell_speed",
+   "stat_loss",
+   "disable"
+  ]
+ },
+ "761890": {
+  "add": [
+   "multi_attack",
+   "movement",
+   "cooldowns",
+   "kicker",
+   "saving_throws"
+  ],
+  "drop": [
+   "damage",
+   "spell_speed",
+   "zone_of_control"
+  ]
+ },
+ "762357": {
+  "add": [
+   "immobilize",
+   "revive",
+   "summon",
+   "ping",
+   "advantage",
+   "damage_over_time",
+   "damage_reduction",
+   "damage_types",
+   "multi_attack",
+   "on_attack",
+   "ranged",
+   "turn_start"
+  ],
+  "drop": [
+   "stat_loss",
+   "disable",
+   "saving_throws"
+  ]
+ },
+ "762647": {
+  "add": [
+   "advantage",
+   "damage",
+   "multi_attack"
+  ],
+  "drop": [
+   "on_attack"
+  ]
+ },
+ "761224": {
+  "add": [
+   "silence",
+   "damage",
+   "damage_types",
+   "play_restriction",
+   "saving_throws"
+  ],
+  "drop": [
+   "turn_end"
+  ]
+ },
+ "762726": {
+  "add": [
+   "stealth",
+   "trap_secret"
+  ],
+  "drop": [
+   "damage_over_time",
+   "damage_reduction",
+   "forced_movement",
+   "multi_target_attack",
+   "passive",
+   "activated"
+  ]
+ },
+ "762546": {
+  "add": [
+   "transform",
+   "damage",
+   "multi_attack",
+   "ranged"
+  ],
+  "drop": [
+   "movement",
+   "random_effect"
+  ]
+ },
+ "762615": {
+  "add": [
+   "condition_life",
+   "damage",
+   "movement"
+  ],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "761357": {
+  "add": [
+   "heal",
+   "stat_loss:counters",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "condition_count",
+   "damage_over_time"
+  ]
+ },
+ "762547": {
+  "add": [
+   "damage",
+   "immunity",
+   "multi_attack",
+   "ranged",
+   "saving_throws",
+   "transform"
+  ],
+  "drop": [
+   "condition_life",
+   "movement",
+   "stat_loss"
+  ]
+ },
+ "761233": {
+  "add": [
+   "aoe_damage",
+   "area_templates",
+   "damage_types",
+   "saving_throws",
+   "buff",
+   "upgrade"
+  ],
+  "drop": [
+   "condition_count",
+   "damage_over_time",
+   "ranged"
+  ]
+ },
+ "761314": {
+  "add": [],
+  "drop": [
+   "damage",
+   "terrain"
+  ]
+ },
+ "762035": {
+  "add": [
+   "damage_reduction",
+   "damage_types"
+  ],
+  "drop": []
+ },
+ "761225": {
+  "add": [
+   "advantage",
+   "concentration",
+   "damage",
+   "damage_types",
+   "stat_loss",
+   "modal_choice",
+   "on_attack",
+   "saving_throws",
+   "turn_start",
+   "buff",
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "762079": {
+  "add": [
+   "advantage"
+  ],
+  "drop": []
+ },
+ "761181": {
+  "add": [
+   "multi_attack",
+   "spell_speed"
+  ],
+  "drop": []
+ },
+ "762254": {
+  "add": [
+   "modal_choice"
+  ],
+  "drop": []
+ },
+ "761929": {
+  "add": [
+   "area_templates",
+   "aura",
+   "buff"
+  ],
+  "drop": []
+ },
+ "762181": {
+  "add": [
+   "advantage",
+   "cooldowns",
+   "saving_throws"
+  ],
+  "drop": []
+ },
+ "761420": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ },
+ "761512": {
+  "add": [
+   "concentration",
+   "movement"
+  ],
+  "drop": []
+ }
 }

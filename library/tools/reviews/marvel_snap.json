@@ -1,1739 +1,1747 @@
 {
-"795546": {
-"add": [
-"passive",
-"aura",
-"tribal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795457": {
-"add": [
-"deck_modification",
-"generate_cards",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795522": {
-"add": [
-"cross_lane",
-"board_limit",
-"buff",
-"condition_count",
-"passive",
-"scope_global",
-"slot_filler:benefits"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795983": {
-"add": [
-"movement",
-"movement:benefits",
-"stat_condition",
-"steal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795934": {
-"add": [
-"buff",
-"buff:benefits"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795958": {
-"add": [
-"condition",
-"copy",
-"on_play:benefits",
-"turn_end",
-"zone_control"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795837": {
-"add": [
-"lane_rule",
-"movement",
-"movement:benefits",
-"random_effect",
-"transform"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795635": {
-"add": [
-"scope_global",
-"debuff",
-"friendly_fire",
-"on_play",
-"symmetric_effect"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795496": {
-"add": [
-"copy",
-"on_play",
-"repeat_trigger"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795975": {
-"add": [
-"buff",
-"count_payoff",
-"passive"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795420": {
-"add": [
-"merge_attach",
-"movement",
-"on_ally_play",
-"tribal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"summon:benefits"
-]
-},
-"795853": {
-"add": [
-"transform"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"cost_increase"
-]
-},
-"795914": {
-"add": [
-"on_play",
-"passive:counters",
-"steal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796112": {
-"add": [
-"disruption",
-"draw:counters",
-"junk_cards",
-"passive"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795929": {
-"add": [
-"temporary_effect",
-"cost_set",
-"generate_cards",
-"random_effect",
-"turn_start"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"cost_reduction"
-]
-},
-"795705": {
-"add": [
-"copy",
-"cost_condition",
-"random_effect",
-"start_of_game",
-"transform"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795659": {
-"add": [
-"stat_multiply"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"movement"
-]
-},
-"796092": {
-"add": [
-"movement",
-"passive",
-"tribal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795504": {
-"add": [
-"protection",
-"destroy:counters",
-"passive"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"immunity"
-]
-},
-"795762": {
-"add": [
-"buff",
-"movement:benefits",
-"turn_end"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795422": {
-"add": [
-"buff",
-"condition_count",
-"debuff:benefits",
-"passive",
-"scope_global"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795413": {
-"add": [
-"combo_sequence",
-"forced_movement",
-"forced_placement",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795417": {
-"add": [
-"cost_condition",
-"generate_cards",
-"on_play",
-"random_effect"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796034": {
-"add": [
-"generate_cards",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795839": {
-"add": [
-"cost_condition",
-"on_ally_play",
-"stat_multiply"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795642": {
-"add": [
-"delayed",
-"movement",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795898": {
-"add": [
-"buff",
-"condition_count",
-"debuff",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796018": {
-"add": [
-"buff",
-"condition",
-"passive"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795648": {
-"add": [
-"cross_lane",
-"movement"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795919": {
-"add": [
-"cross_lane",
-"movement",
-"on_play",
-"passive",
-"summon"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"null_body"
-]
-},
-"796068": {
-"add": [
-"information",
-"lane_rule:benefits",
-"lanes",
-"start_of_game"
-],
-"drop": [
-"points_scoring:benefits"
-]
-},
-"796293": {
-"add": [
-"lane_rule",
-"on_ally_play",
-"stat_set",
-"symmetric_effect"
-],
-"drop": [
-"stat_swap",
-"summon:benefits"
-]
-},
-"796174": {
-"add": [
-"stat_set",
-"lane_rule",
-"symmetric_effect",
-"turn_number"
-],
-"drop": [
-"stat_swap"
-]
-},
-"796246": {
-"add": [
-"lane_rule",
-"on_ally_play",
-"recycle",
-"return_to_hand",
-"symmetric_effect"
-],
-"drop": [
-"summon:benefits"
-]
-},
-"796383": {
-"add": [
-"game_length",
-"resource_gain",
-"turn_structure"
-],
-"drop": []
-},
-"796209": {
-"add": [
-"delayed",
-"lane_rule",
-"on_ally_play",
-"resource_gain",
-"symmetric_effect"
-],
-"drop": [
-"resource_banking",
-"summon:benefits"
-]
-},
-"796050": {
-"add": [
-"buff",
-"condition",
-"turn_end"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795664": {
-"add": [
-"cost_set",
-"deck_position",
-"disruption",
-"on_play",
-"symmetric_effect"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795797": {
-"add": [
-"cost_reduction",
-"deck_condition",
-"deck_position"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795662": {
-"add": [
-"autonomous_units",
-"movement",
-"turn_end"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795645": {
-"add": [
-"activated",
-"buff",
-"cross_lane",
-"once_per_game"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795944": {
-"add": [
-"on_play",
-"rewind",
-"scope_global"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"buff",
-"debuff"
-]
-},
-"795729": {
-"add": [
-"copy",
-"on_play",
-"stat_condition"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"simultaneous_play:benefits"
-]
-},
-"795891": {
-"add": [
-"deck_condition",
-"on_play",
-"random_effect",
-"variable_stats"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796054": {
-"add": [
-"deck_modification",
-"draw",
-"generate_cards",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795502": {
-"add": [
-"cost_condition",
-"discard",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795602": {
-"add": [
-"destroy",
-"discard",
-"discard:cost",
-"on_play",
-"random_effect"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796138": {
-"add": [
-"on_play",
-"summon",
-"tribal",
-"variable_stats"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"permanent_growth",
-"scope_self"
-]
-},
-"795737": {
-"add": [
-"in_hand_buff",
-"cost_reduction",
-"deck_modification",
-"hand_deck_swap",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"cost_condition",
-"steal"
-]
-},
-"795525": {
-"add": [
-"cost_reduction",
-"count_payoff",
-"death_count",
-"destroy:benefits"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"scope_global"
-]
-},
-"795777": {
-"add": [
-"draw"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795990": {
-"add": [
-"board_clog:counters",
-"disruption",
-"passive",
-"rule_change",
-"summon:counters"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795997": {
-"add": [
-"lane_closure",
-"on_play",
-"turn_number"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"placement_rules"
-]
-},
-"795609": {
-"add": [
-"count_payoff",
-"comeback",
-"cost_reduction",
-"zone_control"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"scope_global",
-"condition_count"
-]
-},
-"795745": {
-"add": [
-"lane_rule",
-"on_play",
-"transform",
-"turn_number"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"game_length"
-]
-},
-"795723": {
-"add": [
-"destroy",
-"friendly_fire",
-"on_play",
-"stat_condition"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"symmetric_effect"
-]
-},
-"796088": {
-"add": [
-"buff",
-"delayed",
-"on_play",
-"resource_gain",
-"stat_condition"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"resource_banking"
-]
-},
-"795989": {
-"add": [
-"passive",
-"cross_lane",
-"enemy_benefit"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"aura"
-]
-},
-"795995": {
-"add": [
-"adjacency",
-"cross_lane",
-"forced_movement",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"forced_placement"
-]
-},
-"795862": {
-"add": [
-"discard:benefits",
-"free_play",
-"movement",
-"on_play",
-"stat_condition",
-"steal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"tribal"
-]
-},
-"796090": {
-"add": [
-"donate",
-"on_play",
-"stat_condition"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"board_clog"
-]
-},
-"795426": {
-"add": [
-"on_ally_play",
-"permanent_growth"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"summon:benefits"
-]
-},
-"795967": {
-"add": [
-"condition_count",
-"debuff",
-"drawback",
-"passive"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795678": {
-"add": [
-"copy",
-"deck_condition",
-"deck_position",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795875": {
-"add": [
-"rule_change",
-"lane_closure",
-"passive"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"disable",
-"protection"
-]
-},
-"795889": {
-"add": [
-"cost_reduction",
-"generate_cards:benefits",
-"passive"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795587": {
-"add": [
-"destroy:benefits",
-"on_play:benefits",
-"repeat_trigger"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795823": {
-"add": [
-"combo_sequence",
-"on_ally_play",
-"on_play",
-"random_ability"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796042": {
-"add": [
-"stat_set",
-"on_play",
-"stat_condition"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"buff",
-"debuff"
-]
-},
-"795831": {
-"add": [
-"discard:benefits",
-"graveyard",
-"on_play",
-"return_to_hand"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"revive",
-"scope_global",
-"generate_cards"
-]
-},
-"795486": {
-"add": [
-"buff",
-"cost_condition",
-"cost_reduction",
-"in_hand_buff",
-"on_ally_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"summon:benefits"
-]
-},
-"796377": {
-"add": [
-"destroy",
-"game_end_trigger",
-"lane_rule",
-"symmetric_effect"
-],
-"drop": [
-"turn_end"
-]
-},
-"796164": {
-"add": [
-"draw",
-"hand_deck_swap",
-"lane_rule",
-"symmetric_effect",
-"turn_number"
-],
-"drop": [
-"deck_modification"
-]
-},
-"796193": {
-"add": [
-"draw",
-"hand_deck_swap",
-"lane_rule",
-"symmetric_effect"
-],
-"drop": [
-"deck_modification"
-]
-},
-"796271": {
-"add": [
-"cost_set",
-"generate_cards",
-"lane_rule",
-"symmetric_effect"
-],
-"drop": [
-"cost_reduction"
-]
-},
-"796337": {
-"add": [
-"cost_condition",
-"cost_set",
-"lane_rule",
-"race_objective",
-"slot_filler",
-"symmetric_effect"
-],
-"drop": [
-"cost_reduction"
-]
-},
-"796236": {
-"add": [
-"deck_position",
-"in_hand_buff",
-"lane_rule",
-"symmetric_effect"
-],
-"drop": [
-"deck_condition"
-]
-},
-"796197": {
-"add": [
-"lane_rule",
-"on_ally_play",
-"symmetric_effect"
-],
-"drop": [
-"sacrifice",
-"destroy:benefits",
-"summon:benefits"
-]
-},
-"796272": {
-"add": [
-"generate_cards",
-"lane_rule",
-"on_ally_play",
-"symmetric_effect"
-],
-"drop": [
-"summon:benefits"
-]
-},
-"796263": {
-"add": [
-"buff",
-"lane_rule",
-"symmetric_effect",
-"turn_end"
-],
-"drop": [
-"permanent_growth"
-]
-},
-"795920": {
-"add": [
-"cost_increase",
-"delayed",
-"on_play",
-"symmetric_effect"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795998": {
-"add": [
-"buff",
-"in_hand_buff",
-"quests",
-"resource_banking"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795510": {
-"add": [
-"on_play",
-"rows",
-"steal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795577": {
-"add": [
-"debuff",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796011": {
-"add": [
-"information",
-"delayed",
-"game_end_trigger",
-"on_play",
-"simultaneous_play",
-"symmetric_effect"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795827": {
-"add": [
-"buff",
-"combo_sequence",
-"on_ally_play",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795977": {
-"add": [
-"activated",
-"hand_disruption",
-"once_per_game",
-"random_effect",
-"silence",
-"transform"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795421": {
-"add": [
-"cost_condition",
-"death_trigger",
-"free_play",
-"summon",
-"tutor"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795955": {
-"add": [
-"deck_position",
-"on_play",
-"steal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795436": {
-"add": [
-"activated",
-"adjacency",
-"buff",
-"combo_sequence",
-"cross_lane",
-"lane_identity",
-"movement",
-"on_ally_play",
-"once_per_game"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795751": {
-"add": [
-"generate_cards",
-"on_play",
-"tribal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796120": {
-"add": [
-"buff",
-"condition_count",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796094": {
-"add": [
-"buff"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"movement"
-]
-},
-"796079": {
-"add": [
-"stat_set",
-"on_play",
-"symmetric_effect"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"stat_swap"
-]
-},
-"795863": {
-"add": [
-"delayed",
-"generate_cards",
-"merge_attach",
-"on_play",
-"resource_gain"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"resource_banking"
-]
-},
-"795584": {
-"add": [
-"debuff",
-"destroy",
-"on_play",
-"sacrifice",
-"stat_condition"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795582": {
-"add": [
-"activated",
-"buff",
-"once_per_game",
-"turn_end:benefits"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795992": {
-"add": [
-"buff",
-"condition_count",
-"on_play",
-"tribal",
-"zone_control"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"scope_global"
-]
-},
-"795655": {
-"add": [
-"buff",
-"condition_count",
-"on_play",
-"tribal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795621": {
-"add": [
-"cost_increase",
-"generate_cards:counters",
-"passive"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796031": {
-"add": [
-"deck_modification",
-"generate_cards",
-"start_of_game"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"tribal"
-]
-},
-"795663": {
-"add": [
-"buff",
-"count_payoff",
-"movement:benefits",
-"passive"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795876": {
-"add": [
-"condition_count",
-"resource_gain",
-"tribal",
-"turn_start"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796004": {
-"add": [
-"modal_choice",
-"cost_reduction",
-"generate_cards:benefits",
-"in_hand_buff",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"cost_condition"
-]
-},
-"795794": {
-"add": [
-"stat_set",
-"banish",
-"deck_condition",
-"deck_position",
-"generate_cards",
-"null_body",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"stat_swap",
-"slot_filler"
-]
-},
-"796078": {
-"add": [
-"cost_reduction",
-"generate_cards",
-"on_play",
-"random_effect",
-"tribal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"cost_condition"
-]
-},
-"795805": {
-"add": [
-"copy",
-"hand_disruption",
-"on_play",
-"transform"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795708": {
-"add": [
-"stat_set",
-"cross_lane",
-"graveyard",
-"on_play",
-"revive"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"stat_swap"
-]
-},
-"796113": {
-"add": [
-"board_limit",
-"destroy",
-"null_body",
-"self_destruct"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"debuff"
-]
-},
-"795841": {
-"add": [
-"in_hand_buff",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"deck_condition",
-"scope_global"
-]
-},
-"796002": {
-"add": [
-"cost_condition",
-"quests",
-"repeat_trigger"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795538": {
-"add": [
-"forced_placement",
-"hand_disruption",
-"on_play",
-"stat_condition"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"forced_movement"
-]
-},
-"796009": {
-"add": [
-"activated",
-"on_play",
-"steal"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"796060": {
-"add": [
-"cross_lane",
-"destroy",
-"on_play",
-"sacrifice",
-"stat_condition"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795629": {
-"add": [
-"activated",
-"random_ability"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795902": {
-"add": [
-"buff",
-"condition_count",
-"hand_size",
-"in_hand_buff",
-"on_play"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"scope_global"
-]
-},
-"795449": {
-"add": [
-"disruption",
-"cost_increase",
-"deck_position",
-"on_play",
-"turn_number"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795968": {
-"add": [
-"destroy",
-"stat_condition"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits"
-]
-},
-"795821": {
-"add": [
-"buff",
-"on_ally_play",
-"on_spell"
-],
-"drop": [
-"lanes:benefits",
-"points_scoring:benefits",
-"summon:benefits"
-]
-},
-"796282": {
-"add": [
-"temporary_effect",
-"forced_placement",
-"lane_rule",
-"symmetric_effect"
-],
-"drop": []
-},
-"795395": {
-"add": [
-"start_of_game"
-],
-"drop": [
-"turn_start"
-]
-},
-"796335": {
-"add": [
-"hand_disruption",
-"hand_position",
-"lane_rule",
-"steal",
-"symmetric_effect"
-],
-"drop": []
-},
-"795693": {
-"add": [
-"buff",
-"condition",
-"delayed",
-"lanes",
-"lanes:benefits",
-"on_play",
-"points_scoring:benefits"
-],
-"drop": []
-},
-"796290": {
-"add": [
-"lane_rule",
-"summon",
-"symmetric_effect"
-],
-"drop": []
-},
-"796321": {
-"add": [
-"junk_cards",
-"lane_rule",
-"null_body",
-"symmetric_effect"
-],
-"drop": []
-},
-"796291": {
-"add": [
-"buff",
-"lane_rule",
-"symmetric_effect"
-],
-"drop": []
-},
-"796296": {
-"add": [
-"board_wipe",
-"condition",
-"destroy",
-"lane_rule",
-"symmetric_effect",
-"turn_end"
-],
-"drop": []
-},
-"795392": {
-"add": [
-"activated",
-"once_per_game"
-],
-"drop": []
-},
-"796219": {
-"add": [
-"generate_cards",
-"lane_rule",
-"random_effect",
-"stat_condition",
-"symmetric_effect"
-],
-"drop": []
-},
-"796172": {
-"add": [
-"lane_rule",
-"permanent_growth",
-"stat_condition",
-"symmetric_effect",
-"turn_end"
-],
-"drop": []
-},
-"795399": {
-"add": [
-"activated",
-"movement"
-],
-"drop": []
-},
-"796251": {
-"add": [
-"hand_deck_swap",
-"lane_rule",
-"symmetric_effect",
-"turn_number",
-"turn_start"
-],
-"drop": []
-},
-"796366": {
-"add": [
-"discard",
-"draw",
-"lane_rule",
-"symmetric_effect"
-],
-"drop": []
-},
-"796382": {
-"add": [
-"reveal_order",
-"simultaneous_play"
-],
-"drop": []
-},
-"796378": {
-"add": [
-"buff",
-"cross_lane",
-"lane_rule",
-"symmetric_effect",
-"turn_end"
-],
-"drop": []
-},
-"796200": {
-"add": [
-"hand_deck_swap",
-"lane_rule",
-"random_effect",
-"symmetric_effect"
-],
-"drop": []
-},
-"796345": {
-"add": [
-"lane_closure",
-"lane_rule",
-"symmetric_effect",
-"turn_number"
-],
-"drop": []
-},
-"796249": {
-"add": [
-"lane_rule",
-"stat_multiply",
-"symmetric_effect",
-"turn_number"
-],
-"drop": []
-},
-"796356": {
-"add": [
-"cost_condition",
-"cost_reduction",
-"lane_rule",
-"symmetric_effect"
-],
-"drop": []
-},
-"796187": {
-"add": [
-"buff",
-"cross_lane",
-"lane_rule",
-"slot_filler:benefits",
-"symmetric_effect"
-],
-"drop": []
-},
-"796227": {
-"add": [
-"forced_movement",
-"lane_rule",
-"movement:benefits",
-"stakes_wager:benefits",
-"symmetric_effect"
-],
-"drop": []
-},
-"796186": {
-"add": [
-"adjacency",
-"buff",
-"comeback",
-"cross_lane",
-"lane_rule",
-"symmetric_effect",
-"zone_control"
-],
-"drop": []
-},
-"796332": {
-"add": [
-"generate_cards",
-"lane_rule",
-"random_effect",
-"symmetric_effect"
-],
-"drop": []
-},
-"796258": {
-"add": [
-"buff",
-"lane_rule",
-"rows",
-"symmetric_effect",
-"turn_end"
-],
-"drop": []
-},
-"796228": {
-"add": [
-"lane_rule",
-"passive:counters",
-"silence",
-"symmetric_effect"
-],
-"drop": []
-},
-"796169": {
-"add": [
-"alt_wincon",
-"control_reward",
-"debuff:benefits",
-"lane_rule",
-"stat_condition",
-"symmetric_effect"
-],
-"drop": []
-},
-"795402": {
-"add": [
-"permanent_growth",
-"summon"
-],
-"drop": []
-},
-"796322": {
-"add": [
-"condition",
-"control_reward",
-"draw",
-"lane_rule",
-"permanent_growth",
-"summon",
-"symmetric_effect",
-"turn_number"
-],
-"drop": []
-},
-"796182": {
-"add": [
-"cost_condition",
-"cost_reduction",
-"lane_rule",
-"stat_condition",
-"symmetric_effect",
-"turn_number"
-],
-"drop": []
-},
-"796307": {
-"add": [
-"lane_rule",
-"slot_filler",
-"summon",
-"symmetric_effect"
-],
-"drop": []
-}
+ "795546": {
+  "add": [
+   "passive",
+   "aura",
+   "buff",
+   "tribal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795457": {
+  "add": [
+   "deck_modification",
+   "generate_cards",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795522": {
+  "add": [
+   "cross_lane",
+   "board_limit",
+   "stat_gain",
+   "condition_count",
+   "passive",
+   "scope_global",
+   "slot_filler:benefits"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795983": {
+  "add": [
+   "movement",
+   "movement:benefits",
+   "stat_condition",
+   "steal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795934": {
+  "add": [
+   "stat_gain",
+   "stat_gain:benefits"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795958": {
+  "add": [
+   "condition",
+   "copy",
+   "on_play:benefits",
+   "turn_end",
+   "zone_control"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795837": {
+  "add": [
+   "lane_rule",
+   "movement",
+   "movement:benefits",
+   "random_effect",
+   "transform"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795635": {
+  "add": [
+   "scope_global",
+   "stat_loss",
+   "friendly_fire",
+   "on_play",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795496": {
+  "add": [
+   "copy",
+   "on_play",
+   "repeat_trigger"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795975": {
+  "add": [
+   "stat_gain",
+   "count_payoff",
+   "passive"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795420": {
+  "add": [
+   "buff",
+   "merge_attach",
+   "movement",
+   "on_ally_play",
+   "tribal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "summon:benefits"
+  ]
+ },
+ "795853": {
+  "add": [
+   "transform"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "cost_increase"
+  ]
+ },
+ "795914": {
+  "add": [
+   "on_play",
+   "passive:counters",
+   "steal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796112": {
+  "add": [
+   "disruption",
+   "draw:counters",
+   "drawback",
+   "junk_cards",
+   "passive"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795929": {
+  "add": [
+   "temporary_effect",
+   "cost_set",
+   "generate_cards",
+   "random_effect",
+   "turn_start"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "cost_reduction"
+  ]
+ },
+ "795705": {
+  "add": [
+   "copy",
+   "cost_condition",
+   "random_effect",
+   "start_of_game",
+   "transform"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795659": {
+  "add": [
+   "stat_multiply"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "movement"
+  ]
+ },
+ "796092": {
+  "add": [
+   "movement",
+   "passive",
+   "tribal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795504": {
+  "add": [
+   "protection",
+   "destroy:counters",
+   "passive"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "immunity"
+  ]
+ },
+ "795762": {
+  "add": [
+   "stat_gain",
+   "movement:benefits",
+   "turn_end"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795422": {
+  "add": [
+   "stat_gain",
+   "condition_count",
+   "stat_loss:benefits",
+   "passive",
+   "scope_global"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795413": {
+  "add": [
+   "combo_sequence",
+   "forced_movement",
+   "forced_placement",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795417": {
+  "add": [
+   "cost_condition",
+   "generate_cards",
+   "on_play",
+   "random_effect"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796034": {
+  "add": [
+   "generate_cards",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795839": {
+  "add": [
+   "cost_condition",
+   "on_ally_play",
+   "stat_multiply"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795642": {
+  "add": [
+   "delayed",
+   "movement",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795898": {
+  "add": [
+   "stat_gain",
+   "condition_count",
+   "stat_loss",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796018": {
+  "add": [
+   "stat_gain",
+   "condition",
+   "passive"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795648": {
+  "add": [
+   "cross_lane",
+   "movement"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795919": {
+  "add": [
+   "cross_lane",
+   "movement",
+   "on_play",
+   "passive",
+   "summon"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "null_body"
+  ]
+ },
+ "796068": {
+  "add": [
+   "information",
+   "lane_rule:benefits",
+   "lanes",
+   "start_of_game"
+  ],
+  "drop": [
+   "points_scoring:benefits"
+  ]
+ },
+ "796293": {
+  "add": [
+   "lane_rule",
+   "on_ally_play",
+   "stat_gain",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "summon:benefits"
+  ]
+ },
+ "796174": {
+  "add": [
+   "stat_gain",
+   "stat_loss",
+   "lane_rule",
+   "symmetric_effect",
+   "turn_number"
+  ],
+  "drop": []
+ },
+ "796246": {
+  "add": [
+   "lane_rule",
+   "on_ally_play",
+   "recycle",
+   "return_to_hand",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "summon:benefits"
+  ]
+ },
+ "796383": {
+  "add": [
+   "game_length",
+   "resource_gain",
+   "turn_structure"
+  ],
+  "drop": []
+ },
+ "796209": {
+  "add": [
+   "delayed",
+   "lane_rule",
+   "on_ally_play",
+   "resource_gain",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "resource_banking",
+   "summon:benefits"
+  ]
+ },
+ "796050": {
+  "add": [
+   "stat_gain",
+   "condition",
+   "turn_end"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795664": {
+  "add": [
+   "cost_set",
+   "deck_position",
+   "disruption",
+   "on_play",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795797": {
+  "add": [
+   "cost_reduction",
+   "deck_condition",
+   "deck_position"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795662": {
+  "add": [
+   "autonomous_units",
+   "movement",
+   "turn_end"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795645": {
+  "add": [
+   "activated",
+   "stat_gain",
+   "cross_lane",
+   "once_per_game"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795944": {
+  "add": [
+   "on_play",
+   "rewind",
+   "scope_global"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "stat_gain",
+   "stat_loss"
+  ]
+ },
+ "795729": {
+  "add": [
+   "copy",
+   "on_play",
+   "stat_condition"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "simultaneous_play:benefits"
+  ]
+ },
+ "795891": {
+  "add": [
+   "deck_condition",
+   "on_play",
+   "random_effect",
+   "variable_stats"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796054": {
+  "add": [
+   "deck_modification",
+   "draw",
+   "generate_cards",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795502": {
+  "add": [
+   "cost_condition",
+   "discard",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795602": {
+  "add": [
+   "destroy",
+   "discard",
+   "discard:cost",
+   "on_play",
+   "random_effect"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796138": {
+  "add": [
+   "on_play",
+   "summon",
+   "tribal",
+   "variable_stats"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "permanent_growth",
+   "scope_self"
+  ]
+ },
+ "795737": {
+  "add": [
+   "in_hand_buff",
+   "cost_reduction",
+   "deck_modification",
+   "hand_deck_swap",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "cost_condition",
+   "steal"
+  ]
+ },
+ "795525": {
+  "add": [
+   "cost_reduction",
+   "count_payoff",
+   "death_count",
+   "destroy:benefits"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "scope_global"
+  ]
+ },
+ "795777": {
+  "add": [
+   "draw"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795990": {
+  "add": [
+   "board_clog:counters",
+   "disruption",
+   "passive",
+   "rule_change",
+   "summon:counters"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795997": {
+  "add": [
+   "lane_closure",
+   "on_play",
+   "turn_number"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "placement_rules"
+  ]
+ },
+ "795609": {
+  "add": [
+   "count_payoff",
+   "comeback",
+   "cost_reduction",
+   "zone_control"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "scope_global",
+   "condition_count"
+  ]
+ },
+ "795745": {
+  "add": [
+   "lane_rule",
+   "on_play",
+   "transform",
+   "turn_number"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "game_length"
+  ]
+ },
+ "795723": {
+  "add": [
+   "destroy",
+   "friendly_fire",
+   "on_play",
+   "stat_condition"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "symmetric_effect"
+  ]
+ },
+ "796088": {
+  "add": [
+   "stat_gain",
+   "delayed",
+   "on_play",
+   "resource_gain",
+   "stat_condition"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "resource_banking"
+  ]
+ },
+ "795989": {
+  "add": [
+   "passive",
+   "cross_lane",
+   "enemy_benefit"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "aura"
+  ]
+ },
+ "795995": {
+  "add": [
+   "adjacency",
+   "cross_lane",
+   "forced_movement",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "forced_placement"
+  ]
+ },
+ "795862": {
+  "add": [
+   "discard:benefits",
+   "free_play",
+   "movement",
+   "on_play",
+   "stat_condition",
+   "steal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "tribal"
+  ]
+ },
+ "796090": {
+  "add": [
+   "donate",
+   "on_play",
+   "stat_condition"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "board_clog"
+  ]
+ },
+ "795426": {
+  "add": [
+   "on_ally_play",
+   "permanent_growth"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "summon:benefits"
+  ]
+ },
+ "795967": {
+  "add": [
+   "condition_count",
+   "stat_loss",
+   "drawback",
+   "passive"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795678": {
+  "add": [
+   "copy",
+   "deck_condition",
+   "deck_position",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795875": {
+  "add": [
+   "rule_change",
+   "lane_closure",
+   "passive"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "disable",
+   "protection"
+  ]
+ },
+ "795889": {
+  "add": [
+   "cost_reduction",
+   "generate_cards:benefits",
+   "passive"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795587": {
+  "add": [
+   "destroy:benefits",
+   "on_play:benefits",
+   "repeat_trigger"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795823": {
+  "add": [
+   "combo_sequence",
+   "on_ally_play",
+   "on_play",
+   "random_ability"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796042": {
+  "add": [
+   "stat_gain",
+   "stat_loss",
+   "on_play",
+   "stat_condition"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "stat_gain",
+   "stat_loss"
+  ]
+ },
+ "795831": {
+  "add": [
+   "discard:benefits",
+   "graveyard",
+   "on_play",
+   "bounce_enemy",
+   "return_to_hand"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "revive",
+   "scope_global",
+   "generate_cards"
+  ]
+ },
+ "795486": {
+  "add": [
+   "stat_gain",
+   "cost_condition",
+   "cost_reduction",
+   "in_hand_buff",
+   "on_ally_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "summon:benefits"
+  ]
+ },
+ "796377": {
+  "add": [
+   "destroy",
+   "game_end_trigger",
+   "lane_rule",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "turn_end"
+  ]
+ },
+ "796164": {
+  "add": [
+   "draw",
+   "hand_deck_swap",
+   "lane_rule",
+   "symmetric_effect",
+   "turn_number"
+  ],
+  "drop": [
+   "deck_modification"
+  ]
+ },
+ "796193": {
+  "add": [
+   "draw",
+   "hand_deck_swap",
+   "lane_rule",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "deck_modification"
+  ]
+ },
+ "796271": {
+  "add": [
+   "cost_set",
+   "generate_cards",
+   "lane_rule",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "cost_reduction"
+  ]
+ },
+ "796337": {
+  "add": [
+   "cost_condition",
+   "cost_set",
+   "lane_rule",
+   "race_objective",
+   "slot_filler",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "cost_reduction"
+  ]
+ },
+ "796236": {
+  "add": [
+   "deck_position",
+   "in_hand_buff",
+   "lane_rule",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "deck_condition"
+  ]
+ },
+ "796197": {
+  "add": [
+   "lane_rule",
+   "on_ally_play",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "sacrifice",
+   "destroy:benefits",
+   "summon:benefits"
+  ]
+ },
+ "796272": {
+  "add": [
+   "generate_cards",
+   "lane_rule",
+   "on_ally_play",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "summon:benefits"
+  ]
+ },
+ "796263": {
+  "add": [
+   "stat_gain",
+   "lane_rule",
+   "symmetric_effect",
+   "turn_end"
+  ],
+  "drop": [
+   "permanent_growth"
+  ]
+ },
+ "795920": {
+  "add": [
+   "cost_increase",
+   "delayed",
+   "on_play",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795998": {
+  "add": [
+   "stat_gain",
+   "in_hand_buff",
+   "quests",
+   "resource_banking"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795510": {
+  "add": [
+   "on_play",
+   "rows",
+   "steal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795577": {
+  "add": [
+   "stat_loss",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796011": {
+  "add": [
+   "information",
+   "delayed",
+   "game_end_trigger",
+   "on_play",
+   "simultaneous_play",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795827": {
+  "add": [
+   "stat_gain",
+   "combo_sequence",
+   "on_ally_play",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795977": {
+  "add": [
+   "activated",
+   "hand_disruption",
+   "once_per_game",
+   "random_effect",
+   "silence",
+   "transform"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795421": {
+  "add": [
+   "cost_condition",
+   "death_trigger",
+   "free_play",
+   "summon",
+   "tutor"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795955": {
+  "add": [
+   "deck_position",
+   "on_play",
+   "steal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795436": {
+  "add": [
+   "activated",
+   "adjacency",
+   "stat_gain",
+   "combo_sequence",
+   "cross_lane",
+   "lane_identity",
+   "movement",
+   "on_ally_play",
+   "once_per_game"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795751": {
+  "add": [
+   "generate_cards",
+   "on_play",
+   "tribal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796120": {
+  "add": [
+   "stat_gain",
+   "condition_count",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796094": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "movement"
+  ]
+ },
+ "796079": {
+  "add": [
+   "stat_gain",
+   "stat_loss",
+   "on_play",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795863": {
+  "add": [
+   "delayed",
+   "generate_cards",
+   "buff",
+   "merge_attach",
+   "on_play",
+   "resource_gain"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "resource_banking"
+  ]
+ },
+ "795584": {
+  "add": [
+   "stat_loss",
+   "destroy",
+   "on_play",
+   "sacrifice",
+   "stat_condition"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795582": {
+  "add": [
+   "activated",
+   "stat_gain",
+   "once_per_game",
+   "turn_end:benefits"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795992": {
+  "add": [
+   "stat_gain",
+   "condition_count",
+   "on_play",
+   "tribal",
+   "zone_control"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "scope_global"
+  ]
+ },
+ "795655": {
+  "add": [
+   "stat_gain",
+   "condition_count",
+   "on_play",
+   "tribal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795621": {
+  "add": [
+   "cost_increase",
+   "generate_cards:counters",
+   "passive"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796031": {
+  "add": [
+   "deck_modification",
+   "generate_cards",
+   "start_of_game"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "tribal"
+  ]
+ },
+ "795663": {
+  "add": [
+   "stat_gain",
+   "count_payoff",
+   "movement:benefits",
+   "passive"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795876": {
+  "add": [
+   "condition_count",
+   "resource_gain",
+   "tribal",
+   "turn_start"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796004": {
+  "add": [
+   "modal_choice",
+   "cost_reduction",
+   "generate_cards:benefits",
+   "in_hand_buff",
+   "stat_gain",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "cost_condition"
+  ]
+ },
+ "795794": {
+  "add": [
+   "stat_gain",
+   "stat_loss",
+   "banish",
+   "deck_condition",
+   "deck_position",
+   "generate_cards",
+   "null_body",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "slot_filler"
+  ]
+ },
+ "796078": {
+  "add": [
+   "cost_reduction",
+   "generate_cards",
+   "on_play",
+   "random_effect",
+   "tribal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "cost_condition"
+  ]
+ },
+ "795805": {
+  "add": [
+   "copy",
+   "generate_cards",
+   "hand_disruption",
+   "on_play",
+   "transform"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795708": {
+  "add": [
+   "stat_gain",
+   "stat_loss",
+   "cross_lane",
+   "graveyard",
+   "on_play",
+   "revive",
+   "summon"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796113": {
+  "add": [
+   "board_limit",
+   "destroy",
+   "null_body",
+   "self_destruct"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "stat_loss"
+  ]
+ },
+ "795841": {
+  "add": [
+   "in_hand_buff",
+   "stat_gain",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "deck_condition",
+   "scope_global"
+  ]
+ },
+ "796002": {
+  "add": [
+   "cost_condition",
+   "quests",
+   "repeat_trigger"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795538": {
+  "add": [
+   "forced_placement",
+   "hand_disruption",
+   "on_play",
+   "stat_condition"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "forced_movement"
+  ]
+ },
+ "796009": {
+  "add": [
+   "activated",
+   "on_play",
+   "steal"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "796060": {
+  "add": [
+   "cross_lane",
+   "destroy",
+   "on_play",
+   "sacrifice",
+   "stat_condition"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795629": {
+  "add": [
+   "activated",
+   "random_ability"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795902": {
+  "add": [
+   "stat_gain",
+   "condition_count",
+   "hand_size",
+   "in_hand_buff",
+   "on_play"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "scope_global"
+  ]
+ },
+ "795449": {
+  "add": [
+   "disruption",
+   "cost_increase",
+   "deck_position",
+   "on_play",
+   "turn_number"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795968": {
+  "add": [
+   "destroy",
+   "stat_condition"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits"
+  ]
+ },
+ "795821": {
+  "add": [
+   "stat_gain",
+   "on_ally_play",
+   "on_spell"
+  ],
+  "drop": [
+   "lanes:benefits",
+   "points_scoring:benefits",
+   "summon:benefits"
+  ]
+ },
+ "796282": {
+  "add": [
+   "temporary_effect",
+   "forced_placement",
+   "lane_rule",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "795395": {
+  "add": [
+   "start_of_game"
+  ],
+  "drop": [
+   "turn_start"
+  ]
+ },
+ "796335": {
+  "add": [
+   "hand_disruption",
+   "hand_position",
+   "lane_rule",
+   "steal",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "795693": {
+  "add": [
+   "stat_gain",
+   "condition",
+   "delayed",
+   "lanes",
+   "lanes:benefits",
+   "on_play",
+   "points_scoring:benefits"
+  ],
+  "drop": []
+ },
+ "796290": {
+  "add": [
+   "lane_rule",
+   "summon",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796321": {
+  "add": [
+   "junk_cards",
+   "lane_rule",
+   "null_body",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796291": {
+  "add": [
+   "stat_gain",
+   "lane_rule",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796296": {
+  "add": [
+   "board_wipe",
+   "condition",
+   "destroy",
+   "lane_rule",
+   "symmetric_effect",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "795392": {
+  "add": [
+   "activated",
+   "once_per_game"
+  ],
+  "drop": []
+ },
+ "796219": {
+  "add": [
+   "generate_cards",
+   "lane_rule",
+   "random_effect",
+   "stat_condition",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796172": {
+  "add": [
+   "lane_rule",
+   "permanent_growth",
+   "stat_condition",
+   "symmetric_effect",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "795399": {
+  "add": [
+   "activated",
+   "movement"
+  ],
+  "drop": []
+ },
+ "796251": {
+  "add": [
+   "hand_deck_swap",
+   "lane_rule",
+   "symmetric_effect",
+   "turn_number",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "796366": {
+  "add": [
+   "discard",
+   "draw",
+   "lane_rule",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796382": {
+  "add": [
+   "reveal_order",
+   "simultaneous_play"
+  ],
+  "drop": []
+ },
+ "796378": {
+  "add": [
+   "stat_gain",
+   "cross_lane",
+   "lane_rule",
+   "symmetric_effect",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "796200": {
+  "add": [
+   "hand_deck_swap",
+   "lane_rule",
+   "random_effect",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796345": {
+  "add": [
+   "lane_closure",
+   "lane_rule",
+   "symmetric_effect",
+   "turn_number"
+  ],
+  "drop": []
+ },
+ "796249": {
+  "add": [
+   "lane_rule",
+   "stat_multiply",
+   "symmetric_effect",
+   "turn_number"
+  ],
+  "drop": []
+ },
+ "796356": {
+  "add": [
+   "cost_condition",
+   "cost_reduction",
+   "lane_rule",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796187": {
+  "add": [
+   "stat_gain",
+   "cross_lane",
+   "lane_rule",
+   "slot_filler:benefits",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796227": {
+  "add": [
+   "forced_movement",
+   "lane_rule",
+   "movement:benefits",
+   "stakes_wager:benefits",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796186": {
+  "add": [
+   "adjacency",
+   "stat_gain",
+   "comeback",
+   "cross_lane",
+   "lane_rule",
+   "symmetric_effect",
+   "zone_control"
+  ],
+  "drop": []
+ },
+ "796332": {
+  "add": [
+   "generate_cards",
+   "lane_rule",
+   "random_effect",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796258": {
+  "add": [
+   "stat_gain",
+   "lane_rule",
+   "rows",
+   "symmetric_effect",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "796228": {
+  "add": [
+   "lane_rule",
+   "passive:counters",
+   "silence",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "796169": {
+  "add": [
+   "alt_wincon",
+   "control_reward",
+   "stat_loss:benefits",
+   "lane_rule",
+   "stat_condition",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "795402": {
+  "add": [
+   "permanent_growth",
+   "summon"
+  ],
+  "drop": []
+ },
+ "796322": {
+  "add": [
+   "condition",
+   "control_reward",
+   "draw",
+   "lane_rule",
+   "permanent_growth",
+   "summon",
+   "symmetric_effect",
+   "turn_number"
+  ],
+  "drop": []
+ },
+ "796182": {
+  "add": [
+   "cost_condition",
+   "cost_reduction",
+   "lane_rule",
+   "stat_condition",
+   "symmetric_effect",
+   "turn_number"
+  ],
+  "drop": []
+ },
+ "796307": {
+  "add": [
+   "lane_rule",
+   "slot_filler",
+   "summon",
+   "symmetric_effect"
+  ],
+  "drop": []
+ }
 }

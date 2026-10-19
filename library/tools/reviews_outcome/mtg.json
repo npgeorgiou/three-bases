@@ -1,22 +1,22 @@
 {
-"766161": {
-"add": [
-"temporary_effect"
-],
-"drop": []
-},
-"765929": {
-"add": [
-"cant_block"
-],
-"drop": [
-"debuff"
-]
-},
-"766155": {
-"add": [
-"permanent_loss"
-],
-"drop": []
-}
+ "766161": {
+  "add": [
+   "temporary_effect"
+  ],
+  "drop": []
+ },
+ "765929": {
+  "add": [
+   "cant_block"
+  ],
+  "drop": [
+   "stat_loss"
+  ]
+ },
+ "766155": {
+  "add": [
+   "permanent_loss"
+  ],
+  "drop": []
+ }
 }

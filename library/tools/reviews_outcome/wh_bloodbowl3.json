@@ -1,25 +1,25 @@
 {
-"794704": {
-"add": [
-"cant_block",
-"zone_of_control:counters"
-],
-"drop": [
-"disable"
-]
-},
-"794674": {
-"add": [
-"immobilize"
-],
-"drop": [
-"disable"
-]
-},
-"794665": {
-"add": [],
-"drop": [
-"immobilize"
-]
-}
+ "794704": {
+  "add": [
+   "cant_block",
+   "zone_of_control:counters"
+  ],
+  "drop": [
+   "disable"
+  ]
+ },
+ "794674": {
+  "add": [
+   "immobilize"
+  ],
+  "drop": [
+   "disable"
+  ]
+ },
+ "794665": {
+  "add": [],
+  "drop": [
+   "immobilize"
+  ]
+ }
 }

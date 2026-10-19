@@ -1,2031 +1,2052 @@
 {
-"741238": {
-"add": [],
-"drop": [
-"on_attack",
-"on_damaged"
-]
-},
-"741291": {
-"add": [],
-"drop": [
-"ping"
-]
-},
-"741200": {
-"add": [],
-"drop": [
-"ping"
-]
-},
-"741444": {
-"add": [],
-"drop": [
-"ping"
-]
-},
-"741153": {
-"add": [],
-"drop": [
-"ping"
-]
-},
-"741248": {
-"add": [],
-"drop": [
-"ping"
-]
-},
-"741128": {
-"add": [],
-"drop": [
-"ping"
-]
-},
-"741119": {
-"add": [
-"disruption",
-"symmetric_effect"
-],
-"drop": [
-"ping"
-]
-},
-"741350": {
-"add": [
-"aura"
-],
-"drop": []
-},
-"741483": {
-"add": [
-"deck_position",
-"tutor"
-],
-"drop": []
-},
-"741373": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"741307": {
-"add": [
-"transform",
-"count_payoff"
-],
-"drop": []
-},
-"741446": {
-"add": [
-"aura"
-],
-"drop": []
-},
-"741191": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"741207": {
-"add": [
-"on_damaged",
-"resource_gain"
-],
-"drop": []
-},
-"741271": {
-"add": [
-"placement_rules"
-],
-"drop": []
-},
-"741156": {
-"add": [
-"cost_set",
-"hand_size"
-],
-"drop": [
-"scope_global"
-]
-},
-"741170": {
-"add": [
-"stat_condition",
-"steal"
-],
-"drop": []
-},
-"741324": {
-"add": [],
-"drop": [
-"generate_cards"
-]
-},
-"741306": {
-"add": [
-"stat_condition",
-"destroy"
-],
-"drop": []
-},
-"741364": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"741447": {
-"add": [
-"condition"
-],
-"drop": [
-"evasion"
-]
-},
-"741326": {
-"add": [
-"life_payment",
-"drawback",
-"board_wipe",
-"destroy",
-"symmetric_effect"
-],
-"drop": [
-"debuff"
-]
-},
-"741349": {
-"add": [
-"in_hand_buff"
-],
-"drop": []
-},
-"741169": {
-"add": [
-"self_destruct",
-"combo_sequence",
-"cost_reduction"
-],
-"drop": []
-},
-"741101": {
-"add": [
-"symmetric_effect",
-"friendly_fire",
-"aoe_damage"
-],
-"drop": []
-},
-"741361": {
-"add": [
-"symmetric_effect",
-"aoe_damage",
-"friendly_fire",
-"damage",
-"modal_choice"
-],
-"drop": []
-},
-"741293": {
-"add": [
-"kicker"
-],
-"drop": [
-"activated"
-]
-},
-"741138": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"741220": {
-"add": [
-"condition"
-],
-"drop": []
-},
-"741385": {
-"add": [],
-"drop": [
-"drawback:grants"
-]
-},
-"741079": {
-"add": [
-"taunt:grants",
-"generate_cards"
-],
-"drop": [
-"blocking",
-"taunt:benefits",
-"zone_of_control:benefits"
-]
-},
-"741429": {
-"add": [
-"damage",
-"tribal",
-"buff"
-],
-"drop": []
-},
-"741346": {
-"add": [
-"generate_cards"
-],
-"drop": []
-},
-"741339": {
-"add": [
-"draw",
-"tutor"
-],
-"drop": [
-"evasion",
-"movement",
-"terrain"
-]
-},
-"741265": {
-"add": [
-"condition",
-"play_restriction"
-],
-"drop": []
-},
-"741261": {
-"add": [
-"area_templates",
-"symmetric_effect",
-"adjacency",
-"destroy",
-"terrain"
-],
-"drop": [
-"scope_global",
-"board_wipe"
-]
-},
-"741260": {
-"add": [],
-"drop": [
-"generate_cards"
-]
-},
-"741090": {
-"add": [
-"condition"
-],
-"drop": []
-},
-"741254": {
-"add": [
-"direct_damage",
-"damage",
-"condition"
-],
-"drop": []
-},
-"741357": {
-"add": [
-"deck_modification"
-],
-"drop": [
-"recycle"
-]
-},
-"741488": {
-"add": [
-"deck_modification"
-],
-"drop": [
-"recycle"
-]
-},
-"741133": {
-"add": [],
-"drop": [
-"scope_global"
-]
-},
-"741352": {
-"add": [
-"condition"
-],
-"drop": []
-},
-"741317": {
-"add": [
-"information",
-"deck_position",
-"copy",
-"cost_reduction",
-"heal"
-],
-"drop": [
-"terrain"
-]
-},
-"741329": {
-"add": [
-"tutor"
-],
-"drop": []
-},
-"741481": {
-"add": [
-"resource_gain",
-"enemy_benefit"
-],
-"drop": [
-"permanent_growth"
-]
-},
-"741504": {
-"add": [
-"deck_modification"
-],
-"drop": [
-"recycle"
-]
-},
-"741503": {
-"add": [
-"enemy_benefit",
-"selection",
-"cost_condition",
-"evasion",
-"generate_cards",
-"movement",
-"on_play"
-],
-"drop": [
-"return_to_hand",
-"hand_disruption",
-"copy",
-"terrain"
-]
-},
-"741177": {
-"add": [
-"stat_condition"
-],
-"drop": []
-},
-"741210": {
-"add": [
-"stat_condition",
-"condition",
-"cost_reduction",
-"movement",
-"on_play"
-],
-"drop": []
-},
-"741514": {
-"add": [
-"deck_modification"
-],
-"drop": [
-"in_hand_buff"
-]
-},
-"741165": {
-"add": [
-"stat_condition"
-],
-"drop": []
-},
-"741473": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"741327": {
-"add": [
-"drawback",
-"revive"
-],
-"drop": []
-},
-"741310": {
-"add": [
-"variable_stats",
-"movement",
-"on_play"
-],
-"drop": [
-"copy"
-]
-},
-"Combat": {
-"add": [
-"combat"
-],
-"drop": [
-"on_damaged"
-]
-},
-"741342": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"741230": {
-"add": [
-"positional",
-"condition",
-"adjacency",
-"buff",
-"on_play"
-],
-"drop": []
-},
-"741288": {
-"add": [
-"debuff",
-"evasion",
-"lifesteal",
-"movement",
-"on_play"
-],
-"drop": [
-"terrain"
-]
-},
-"741154": {
-"add": [
-"condition",
-"permanent_growth",
-"buff",
-"scope_self"
-],
-"drop": []
-},
-"741463": {
-"add": [
-"deck_condition",
-"deck_modification",
-"buff",
-"on_play",
-"random_effect"
-],
-"drop": []
-},
-"741111": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"741456": {
-"add": [
-"direct_damage",
-"damage"
-],
-"drop": []
-},
-"741460": {
-"add": [
-"stat_condition"
-],
-"drop": []
-},
-"741258": {
-"add": [
-"direct_damage"
-],
-"drop": []
-},
-"741409": {
-"add": [
-"life_payment"
-],
-"drop": []
-},
-"741458": {
-"add": [
-"condition"
-],
-"drop": []
-},
-"741469": {
-"add": [
-"enemy_benefit",
-"merge_attach",
-"movement"
-],
-"drop": [
-"banish"
-]
-},
-"741347": {
-"add": [
-"symmetric_effect",
-"resource_gain",
-"enemy_benefit",
-"direct_damage",
-"turn_start"
-],
-"drop": []
-},
-"741241": {
-"add": [
-"placement_rules",
-"summon"
-],
-"drop": []
-},
-"741485": {
-"add": [
-"variety_payoff",
-"evasion",
-"death_trigger",
-"deck_condition",
-"haste",
-"movement",
-"on_play",
-"recycle",
-"shield"
-],
-"drop": [
-"terrain"
-]
-},
-"741259": {
-"add": [
-"drawback",
-"on_enemy_enter",
-"damage"
-],
-"drop": [
-"summon",
-"life_payment:cost"
-]
-},
-"741114": {
-"add": [
-"condition",
-"comeback"
-],
-"drop": []
-},
-"741406": {
-"add": [
-"disruption",
-"symmetric_effect",
-"buff",
-"condition_count",
-"on_play",
-"scope_self"
-],
-"drop": []
-},
-"741334": {
-"add": [
-"protection"
-],
-"drop": []
-},
-"741397": {
-"add": [
-"hand_deck_swap"
-],
-"drop": [
-"scope_global"
-]
-},
-"741321": {
-"add": [
-"life_track"
-],
-"drop": []
-},
-"741223": {
-"add": [
-"condition_life"
-],
-"drop": []
-},
-"741388": {
-"add": [
-"self_destruct",
-"evasion",
-"drawback",
-"draw",
-"haste",
-"immunity",
-"movement",
-"turn_end"
-],
-"drop": [
-"terrain",
-"destroy"
-]
-},
-"741392": {
-"add": [
-"damage",
-"adjacency",
-"movement:benefits",
-"on_play",
-"random_effect",
-"summon"
-],
-"drop": []
-},
-"741383": {
-"add": [
-"tutor"
-],
-"drop": []
-},
-"741160": {
-"add": [
-"count_payoff"
-],
-"drop": []
-},
-"741448": {
-"add": [
-"rule_change"
-],
-"drop": []
-},
-"741323": {
-"add": [
-"targeting_rules",
-"drawback",
-"movement"
-],
-"drop": []
-},
-"741116": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"741078": {
-"add": [
-"repeat_trigger"
-],
-"drop": []
-},
-"741372": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"741411": {
-"add": [
-"symmetric_effect",
-"friendly_fire",
-"variable_stats",
-"immunity",
-"lifesteal",
-"movement:benefits",
-"territory_trigger"
-],
-"drop": []
-},
-"741502": {
-"add": [
-"deck_modification"
-],
-"drop": [
-"recycle"
-]
-},
-"741338": {
-"add": [
-"tutor"
-],
-"drop": []
-},
-"741465": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"741328": {
-"add": [
-"in_hand_buff"
-],
-"drop": []
-},
-"741470": {
-"add": [
-"removal",
-"on_play",
-"transform"
-],
-"drop": []
-},
-"741516": {
-"add": [
-"hand_size"
-],
-"drop": [
-"slot_filler"
-]
-},
-"741088": {
-"add": [
-"in_hand_buff"
-],
-"drop": []
-},
-"741376": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"741414": {
-"add": [
-"self_destruct"
-],
-"drop": []
-},
-"741424": {
-"add": [
-"taunt:grants",
-"evasion:grants",
-"tribal",
-"adjacency",
-"cost_reduction",
-"death_count",
-"on_play",
-"summon"
-],
-"drop": [
-"blocking",
-"movement:benefits",
-"terrain:benefits",
-"taunt:benefits",
-"zone_of_control:benefits"
-]
-},
-"741497": {
-"add": [
-"cost_reduction",
-"territory_trigger"
-],
-"drop": []
-},
-"741150": {
-"add": [
-"upgrade",
-"random_effect"
-],
-"drop": [
-"cost_increase"
-]
-},
-"741468": {
-"add": [
-"condition_count"
-],
-"drop": []
-},
-"741098": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"741319": {
-"add": [
-"cost_reduction",
-"condition_life",
-"evasion",
-"condition_count",
-"hand_size",
-"heal",
-"movement",
-"on_play"
-],
-"drop": [
-"terrain"
-]
-},
-"741449": {
-"add": [
-"immobilize",
-"temporary_effect",
-"evasion",
-"movement",
-"on_play"
-],
-"drop": [
-"delayed",
-"disable",
-"terrain"
-]
-},
-"741427": {
-"add": [
-"junk_cards",
-"hand_size"
-],
-"drop": [
-"drawback"
-]
-},
-"741416": {
-"add": [
-"tutor",
-"stat_condition",
-"buff",
-"movement",
-"movement:benefits",
-"on_play",
-"territory_trigger"
-],
-"drop": []
-},
-"741102": {
-"add": [],
-"drop": [
-"draw"
-]
-},
-"741379": {
-"add": [
-"self_destruct"
-],
-"drop": []
-},
-"741228": {
-"add": [
-"permanent_growth"
-],
-"drop": []
-},
-"741100": {
-"add": [
-"immunity"
-],
-"drop": []
-},
-"741301": {
-"add": [
-"lifesteal",
-"death_trigger",
-"movement",
-"sacrifice:benefits"
-],
-"drop": [
-"death_count",
-"destroy:benefits"
-]
-},
-"741284": {
-"add": [
-"condition",
-"cost_reduction"
-],
-"drop": []
-},
-"741237": {
-"add": [
-"condition"
-],
-"drop": []
-},
-"741391": {
-"add": [
-"buff",
-"immobilize",
-"modal_choice",
-"movement",
-"taunt",
-"zone_of_control"
-],
-"drop": [
-"activated"
-]
-},
-"741423": {
-"add": [
-"disruption"
-],
-"drop": []
-},
-"741314": {
-"add": [
-"in_hand_buff"
-],
-"drop": []
-},
-"741518": {
-"add": [
-"placement_rules",
-"evasion",
-"adjacency",
-"immunity",
-"movement"
-],
-"drop": [
-"on_play",
-"terrain"
-]
-},
-"741489": {
-"add": [
-"deck_modification"
-],
-"drop": [
-"recycle"
-]
-},
-"741106": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"741206": {
-"add": [
-"scope_global"
-],
-"drop": [
-"slot_filler"
-]
-},
-"741462": {
-"add": [
-"condition",
-"evasion",
-"damage",
-"movement",
-"on_play",
-"terrain"
-],
-"drop": []
-},
-"741464": {
-"add": [
-"lone_unit"
-],
-"drop": []
-},
-"741096": {
-"add": [
-"condition"
-],
-"drop": []
-},
-"741212": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"741331": {
-"add": [
-"stat_swap"
-],
-"drop": []
-},
-"741359": {
-"add": [
-"mill",
-"drawback"
-],
-"drop": []
-},
-"741168": {
-"add": [
-"disruption"
-],
-"drop": []
-},
-"741281": {
-"add": [
-"self_destruct",
-"haste",
-"movement"
-],
-"drop": []
-},
-"741113": {
-"add": [
-"condition_life"
-],
-"drop": []
-},
-"741125": {
-"add": [
-"condition",
-"buff",
-"passive",
-"terrain"
-],
-"drop": []
-},
-"741493": {
-"add": [
-"selection",
-"generate_cards",
-"on_play"
-],
-"drop": [
-"copy",
-"terrain"
-]
-},
-"741451": {
-"add": [
-"in_hand_buff",
-"tribal",
-"cost_reduction",
-"on_play",
-"random_effect"
-],
-"drop": []
-},
-"741089": {
-"add": [
-"haste:grants",
-"summon"
-],
-"drop": [
-"haste:benefits"
-]
-},
-"741290": {
-"add": [
-"evasion",
-"buff",
-"movement",
-"scope_self"
-],
-"drop": [
-"terrain"
-]
-},
-"741309": {
-"add": [
-"on_spell",
-"movement",
-"scope_self",
-"temporary_buff"
-],
-"drop": [
-"on_ally_play",
-"summon:benefits"
-]
-},
-"741487": {
-"add": [
-"condition",
-"draw",
-"movement",
-"on_play",
-"terrain",
-"turn_end"
-],
-"drop": []
-},
-"741174": {
-"add": [
-"death_trigger",
-"adjacency",
-"buff",
-"sacrifice:benefits",
-"scope_self"
-],
-"drop": [
-"death_count",
-"destroy:benefits"
-]
-},
-"741109": {
-"add": [
-"cost_reduction",
-"generate_cards"
-],
-"drop": [
-"terrain"
-]
-},
-"741337": {
-"add": [
-"damage",
-"on_play"
-],
-"drop": []
-},
-"741276": {
-"add": [
-"life_payment:cost",
-"resource_gain"
-],
-"drop": [
-"damage"
-]
-},
-"741431": {
-"add": [
-"merge_attach",
-"evasion:grants",
-"buff",
-"immunity",
-"movement:grants",
-"on_play",
-"shield"
-],
-"drop": [
-"terrain:grants"
-]
-},
-"741330": {
-"add": [
-"combo_sequence",
-"buff",
-"movement",
-"on_play"
-],
-"drop": []
-},
-"741513": {
-"add": [
-"evasion",
-"adjacency",
-"aoe_damage",
-"death_trigger",
-"movement"
-],
-"drop": [
-"terrain"
-]
-},
-"741343": {
-"add": [
-"extra_turn"
-],
-"drop": []
-},
-"741236": {
-"add": [
-"permanent_growth",
-"damage:benefits",
-"on_damaged",
-"scope_self"
-],
-"drop": []
-},
-"741512": {
-"add": [
-"adjacency",
-"aoe_damage",
-"movement"
-],
-"drop": [
-"terrain"
-]
-},
-"741295": {
-"add": [
-"permanent_growth",
-"buff",
-"movement",
-"passive"
-],
-"drop": []
-},
-"741273": {
-"add": [
-"evasion",
-"cost_set",
-"generate_cards",
-"movement",
-"on_attack"
-],
-"drop": [
-"terrain"
-]
-},
-"741152": {
-"add": [
-"evasion",
-"buff",
-"movement",
-"scope_self"
-],
-"drop": [
-"terrain"
-]
-},
-"741430": {
-"add": [
-"taunt:grants",
-"drawback",
-"on_play",
-"summon"
-],
-"drop": [
-"taunt:benefits",
-"zone_of_control:benefits"
-]
-},
-"741492": {
-"add": [
-"condition",
-"adjacency",
-"buff",
-"movement",
-"on_play",
-"terrain",
-"turn_end"
-],
-"drop": []
-},
-"741477": {
-"add": [
-"in_hand_buff",
-"delayed",
-"buff",
-"on_play"
-],
-"drop": []
-},
-"741360": {
-"add": [
-"evasion",
-"movement"
-],
-"drop": [
-"terrain"
-]
-},
-"741315": {
-"add": [
-"evasion",
-"direct_damage",
-"haste",
-"movement",
-"on_attack"
-],
-"drop": [
-"terrain"
-]
-},
-"741318": {
-"add": [
-"evasion",
-"drawback",
-"movement",
-"on_play"
-],
-"drop": [
-"terrain"
-]
-},
-"741266": {
-"add": [
-"condition",
-"buff",
-"haste"
-],
-"drop": []
-},
-"741400": {
-"add": [
-"evasion",
-"movement",
-"on_play",
-"terrain"
-],
-"drop": []
-},
-"741247": {
-"add": [
-"evasion",
-"buff",
-"movement",
-"ranged",
-"scope_self"
-],
-"drop": [
-"terrain",
-"counterattack",
-"drawback"
-]
-},
-"741340": {
-"add": [
-"aoe_damage",
-"draw",
-"lifesteal"
-],
-"drop": []
-},
-"741419": {
-"add": [
-"drawback",
-"damage",
-"death_trigger"
-],
-"drop": [
-"life_payment:cost"
-]
-},
-"741405": {
-"add": [
-"evasion",
-"buff",
-"movement",
-"movement:benefits",
-"territory_trigger"
-],
-"drop": [
-"terrain"
-]
-},
-"741251": {
-"add": [
-"stat_condition",
-"permanent_growth",
-"buff",
-"on_ally_play",
-"passive",
-"scope_self"
-],
-"drop": []
-},
-"741471": {
-"add": [
-"tribal",
-"adjacency",
-"buff",
-"condition_count",
-"movement",
-"on_play"
-],
-"drop": []
-},
-"741399": {
-"add": [
-"evasion:grants",
-"draw:benefits",
-"copy",
-"movement:benefits",
-"summon"
-],
-"drop": [
-"terrain:benefits"
-]
-},
-"741320": {
-"add": [
-"drawback",
-"draw",
-"resource_gain",
-"turn_start"
-],
-"drop": [
-"damage",
-"life_payment:cost"
-]
-},
-"741436": {
-"add": [
-"condition",
-"tribal",
-"adjacency",
-"haste",
-"placement_rules",
-"scope_self"
-],
-"drop": []
-},
-"741249": {
-"add": [
-"death_trigger",
-"buff",
-"scope_self"
-],
-"drop": [
-"death_count",
-"destroy:benefits",
-"sacrifice:benefits"
-]
-},
-"741486": {
-"add": [
-"evasion",
-"condition_count",
-"deck_modification",
-"hand_deck_swap",
-"hand_size",
-"movement",
-"on_play",
-"recycle"
-],
-"drop": [
-"terrain"
-]
-},
-"741374": {
-"add": [
-"adjacency",
-"on_attack",
-"random_effect",
-"ranged",
-"summon"
-],
-"drop": [
-"counterattack",
-"drawback"
-]
-},
-"741144": {
-"add": [
-"on_spell",
-"buff",
-"scope_self"
-],
-"drop": [
-"on_ally_play",
-"summon:benefits"
-]
-},
-"741063": {
-"add": [
-"evasion",
-"movement",
-"terrain"
-],
-"drop": []
-},
-"741159": {
-"add": [
-"copy",
-"transform"
-],
-"drop": []
-},
-"741336": {
-"add": [
-"cost_condition",
-"movement",
-"on_ally_play",
-"passive",
-"scope_self",
-"summon:benefits"
-],
-"drop": []
-},
-"741426": {
-"add": [
-"condition",
-"tribal",
-"buff",
-"movement",
-"passive"
-],
-"drop": []
-},
-"741466": {
-"add": [
-"terrain",
-"movement",
-"on_play"
-],
-"drop": []
-},
-"741267": {
-"add": [
-"condition",
-"buff",
-"movement",
-"on_play"
-],
-"drop": []
-},
-"741467": {
-"add": [
-"tribal",
-"movement:grants",
-"on_play",
-"temporary_buff"
-],
-"drop": []
-},
-"741355": {
-"add": [
-"steal"
-],
-"drop": []
-},
-"741396": {
-"add": [
-"evasion",
-"adjacency",
-"death_count",
-"movement",
-"on_play",
-"placement_rules",
-"summon"
-],
-"drop": [
-"terrain"
-]
-},
-"741325": {
-"add": [
-"damage",
-"distribute",
-"random_effect"
-],
-"drop": []
-},
-"741278": {
-"add": [
-"drawback",
-"turn_start"
-],
-"drop": [
-"damage",
-"life_payment:cost"
-]
-},
-"741520": {
-"add": [
-"selection",
-"buff",
-"generate_cards"
-],
-"drop": [
-"copy",
-"terrain"
-]
-},
-"741398": {
-"add": [
-"copy",
-"cost_reduction",
-"draw",
-"on_play"
-],
-"drop": []
-},
-"741351": {
-"add": [
-"modal_choice",
-"steal",
-"terrain",
-"transform"
-],
-"drop": []
-},
-"741189": {
-"add": [
-"death_trigger",
-"immobilize",
-"random_effect",
-"taunt",
-"terrain",
-"zone_of_control"
-],
-"drop": []
-},
-"741117": {
-"add": [
-"buff",
-"random_effect"
-],
-"drop": []
-},
-"741313": {
-"add": [
-"buff",
-"damage",
-"distribute",
-"movement",
-"on_play",
-"random_effect"
-],
-"drop": []
-},
-"741393": {
-"add": [
-"buff",
-"modal_choice",
-"terrain"
-],
-"drop": []
-},
-"741164": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"741105": {
-"add": [
-"death_trigger",
-"draw"
-],
-"drop": []
-},
-"741071": {
-"add": [
-"counterattack",
-"drawback",
-"ranged"
-],
-"drop": []
-},
-"741371": {
-"add": [
-"buff",
-"delayed",
-"immobilize",
-"on_play",
-"scope_self",
-"taunt",
-"zone_of_control"
-],
-"drop": []
-},
-"741450": {
-"add": [
-"adjacency",
-"aoe_damage",
-"combat",
-"on_attack"
-],
-"drop": []
-},
-"741452": {
-"add": [
-"adjacency",
-"movement:benefits",
-"random_effect",
-"summon",
-"terrain",
-"territory_trigger"
-],
-"drop": []
-},
-"741058": {
-"add": [
-"death_trigger"
-],
-"drop": []
-},
-"741195": {
-"add": [
-"random_effect",
-"terrain"
-],
-"drop": []
-},
-"741362": {
-"add": [
-"damage",
-"recycle"
-],
-"drop": []
-},
-"741222": {
-"add": [
-"buff",
-"on_play"
-],
-"drop": []
-},
-"741072": {
-"add": [
-"immunity"
-],
-"drop": []
-},
-"741068": {
-"add": [
-"haste"
-],
-"drop": []
-},
-"741070": {
-"add": [
-"copy",
-"generate_cards"
-],
-"drop": []
-},
-"741061": {
-"add": [
-"movement:benefits",
-"territory_trigger"
-],
-"drop": []
-},
-"741255": {
-"add": [
-"aoe_damage",
-"immobilize",
-"taunt",
-"turn_start",
-"zone_of_control"
-],
-"drop": []
-},
-"741167": {
-"add": [
-"on_play",
-"stat_set"
-],
-"drop": []
-},
-"741517": {
-"add": [
-"cost_reduction",
-"in_hand_buff"
-],
-"drop": []
-},
-"741176": {
-"add": [
-"movement",
-"on_play",
-"terrain"
-],
-"drop": []
-},
-"741175": {
-"add": [
-"buff",
-"death_trigger",
-"random_effect"
-],
-"drop": []
-},
-"741344": {
-"add": [
-"cost_reduction",
-"generate_cards",
-"modal_choice",
-"random_effect"
-],
-"drop": []
-},
-"741108": {
-"add": [
-"shield"
-],
-"drop": []
-},
-"741382": {
-"add": [
-"condition_count",
-"on_play",
-"tutor"
-],
-"drop": []
-},
-"741118": {
-"add": [
-"generate_cards",
-"on_play"
-],
-"drop": []
-},
-"741440": {
-"add": [
-"death_trigger",
-"summon"
-],
-"drop": []
-},
-"741316": {
-"add": [
-"direct_damage",
-"on_play"
-],
-"drop": []
-},
-"741403": {
-"add": [
-"on_play",
-"tutor"
-],
-"drop": []
-},
-"741214": {
-"add": [
-"death_trigger",
-"in_hand_buff"
-],
-"drop": []
-},
-"741204": {
-"add": [
-"cost_reduction",
-"generate_cards",
-"movement",
-"on_attack",
-"random_effect"
-],
-"drop": []
-},
-"741074": {
-"add": [
-"drawback",
-"movement",
-"terrain"
-],
-"drop": []
-},
-"741305": {
-"add": [
-"lifesteal"
-],
-"drop": []
-},
-"741182": {
-"add": [
-"buff",
-"on_play"
-],
-"drop": []
-},
-"741272": {
-"add": [
-"lifesteal",
-"on_play"
-],
-"drop": []
-},
-"741145": {
-"add": [
-"drawback",
-"movement",
-"terrain"
-],
-"drop": []
-},
-"741112": {
-"add": [
-"draw"
-],
-"drop": []
-},
-"741140": {
-"add": [
-"copy",
-"cost_reduction",
-"generate_cards"
-],
-"drop": []
-},
-"741300": {
-"add": [
-"movement:benefits",
-"sacrifice",
-"sacrifice:cost",
-"summon"
-],
-"drop": []
-},
-"741216": {
-"add": [
-"buff",
-"generate_cards",
-"random_effect"
-],
-"drop": []
-},
-"741363": {
-"add": [
-"aoe_damage",
-"buff",
-"condition_count",
-"on_play",
-"scope_self"
-],
-"drop": []
-},
-"741356": {
-"add": [
-"stat_set"
-],
-"drop": []
-},
-"741415": {
-"add": [
-"immobilize",
-"taunt",
-"zone_of_control"
-],
-"drop": []
-},
-"741143": {
-"add": [
-"on_play",
-"summon",
-"terrain"
-],
-"drop": []
-},
-"741173": {
-"add": [
-"movement",
-"on_play"
-],
-"drop": []
-},
-"741240": {
-"add": [
-"adjacency",
-"damage",
-"on_play"
-],
-"drop": []
-},
-"741196": {
-"add": [
-"condition_count",
-"cost_reduction",
-"high_cost:benefits",
-"terrain"
-],
-"drop": []
-},
-"741499": {
-"add": [
-"adjacency",
-"combat",
-"on_attack",
-"random_effect",
-"summon"
-],
-"drop": []
-},
-"741059": {
-"add": [
-"turn_start"
-],
-"drop": []
-},
-"741256": {
-"add": [
-"damage"
-],
-"drop": []
-},
-"741322": {
-"add": [
-"drawback",
-"heal",
-"movement",
-"on_attack"
-],
-"drop": []
-},
-"741123": {
-"add": [
-"buff",
-"passive",
-"terrain"
-],
-"drop": []
-},
-"741162": {
-"add": [
-"draw",
-"modal_choice",
-"movement",
-"terrain"
-],
-"drop": []
-},
-"741085": {
-"add": [
-"haste"
-],
-"drop": []
-},
-"741246": {
-"add": [
-"on_play",
-"terrain"
-],
-"drop": []
-}
+ "741238": {
+  "add": [],
+  "drop": [
+   "on_attack",
+   "on_damaged"
+  ]
+ },
+ "741291": {
+  "add": [],
+  "drop": [
+   "ping"
+  ]
+ },
+ "741200": {
+  "add": [],
+  "drop": [
+   "ping"
+  ]
+ },
+ "741444": {
+  "add": [],
+  "drop": [
+   "ping"
+  ]
+ },
+ "741153": {
+  "add": [],
+  "drop": [
+   "ping"
+  ]
+ },
+ "741248": {
+  "add": [],
+  "drop": [
+   "ping"
+  ]
+ },
+ "741128": {
+  "add": [],
+  "drop": [
+   "ping"
+  ]
+ },
+ "741119": {
+  "add": [
+   "disruption",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "ping"
+  ]
+ },
+ "741350": {
+  "add": [
+   "aura",
+   "buff"
+  ],
+  "drop": []
+ },
+ "741483": {
+  "add": [
+   "deck_position",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "741373": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "741307": {
+  "add": [
+   "transform",
+   "count_payoff"
+  ],
+  "drop": []
+ },
+ "741446": {
+  "add": [
+   "aura",
+   "buff"
+  ],
+  "drop": []
+ },
+ "741191": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "741207": {
+  "add": [
+   "on_damaged",
+   "resource_gain"
+  ],
+  "drop": []
+ },
+ "741271": {
+  "add": [
+   "placement_rules"
+  ],
+  "drop": []
+ },
+ "741156": {
+  "add": [
+   "cost_set",
+   "hand_size"
+  ],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "741170": {
+  "add": [
+   "stat_condition",
+   "steal"
+  ],
+  "drop": []
+ },
+ "741324": {
+  "add": [],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "741306": {
+  "add": [
+   "stat_condition",
+   "destroy"
+  ],
+  "drop": []
+ },
+ "741364": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "741447": {
+  "add": [
+   "condition"
+  ],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741326": {
+  "add": [
+   "life_payment",
+   "drawback",
+   "board_wipe",
+   "destroy",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "stat_loss"
+  ]
+ },
+ "741349": {
+  "add": [
+   "in_hand_buff",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "741169": {
+  "add": [
+   "self_destruct",
+   "combo_sequence",
+   "cost_reduction"
+  ],
+  "drop": []
+ },
+ "741101": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire",
+   "aoe_damage"
+  ],
+  "drop": []
+ },
+ "741361": {
+  "add": [
+   "symmetric_effect",
+   "aoe_damage",
+   "friendly_fire",
+   "damage",
+   "modal_choice"
+  ],
+  "drop": []
+ },
+ "741293": {
+  "add": [
+   "kicker"
+  ],
+  "drop": [
+   "activated"
+  ]
+ },
+ "741138": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "741220": {
+  "add": [
+   "condition"
+  ],
+  "drop": []
+ },
+ "741385": {
+  "add": [],
+  "drop": [
+   "drawback:grants"
+  ]
+ },
+ "741079": {
+  "add": [
+   "taunt:grants",
+   "generate_cards"
+  ],
+  "drop": [
+   "blocking",
+   "taunt:benefits",
+   "zone_of_control:benefits"
+  ]
+ },
+ "741429": {
+  "add": [
+   "damage",
+   "tribal",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "741346": {
+  "add": [
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "741339": {
+  "add": [
+   "draw",
+   "tutor"
+  ],
+  "drop": [
+   "evasion",
+   "movement",
+   "terrain"
+  ]
+ },
+ "741265": {
+  "add": [
+   "condition",
+   "play_restriction"
+  ],
+  "drop": []
+ },
+ "741261": {
+  "add": [
+   "area_templates",
+   "symmetric_effect",
+   "adjacency",
+   "destroy",
+   "terrain"
+  ],
+  "drop": [
+   "scope_global",
+   "board_wipe"
+  ]
+ },
+ "741260": {
+  "add": [],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "741090": {
+  "add": [
+   "condition"
+  ],
+  "drop": []
+ },
+ "741254": {
+  "add": [
+   "direct_damage",
+   "damage",
+   "condition"
+  ],
+  "drop": []
+ },
+ "741357": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": [
+   "recycle"
+  ]
+ },
+ "741488": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": [
+   "recycle"
+  ]
+ },
+ "741133": {
+  "add": [],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "741352": {
+  "add": [
+   "condition"
+  ],
+  "drop": []
+ },
+ "741317": {
+  "add": [
+   "information",
+   "deck_position",
+   "copy",
+   "cost_reduction",
+   "heal"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741329": {
+  "add": [
+   "draw",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "741481": {
+  "add": [
+   "resource_gain",
+   "enemy_benefit"
+  ],
+  "drop": [
+   "permanent_growth"
+  ]
+ },
+ "741504": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": [
+   "recycle"
+  ]
+ },
+ "741503": {
+  "add": [
+   "enemy_benefit",
+   "selection",
+   "cost_condition",
+   "evasion",
+   "generate_cards",
+   "movement",
+   "on_play"
+  ],
+  "drop": [
+   "bounce_enemy",
+   "return_to_hand",
+   "hand_disruption",
+   "copy",
+   "terrain"
+  ]
+ },
+ "741177": {
+  "add": [
+   "stat_condition"
+  ],
+  "drop": []
+ },
+ "741210": {
+  "add": [
+   "stat_condition",
+   "condition",
+   "cost_reduction",
+   "movement",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741514": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": [
+   "in_hand_buff"
+  ]
+ },
+ "741165": {
+  "add": [
+   "stat_condition"
+  ],
+  "drop": []
+ },
+ "741473": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "741327": {
+  "add": [
+   "drawback",
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "741310": {
+  "add": [
+   "variable_stats",
+   "movement",
+   "on_play"
+  ],
+  "drop": [
+   "copy"
+  ]
+ },
+ "Combat": {
+  "add": [
+   "combat"
+  ],
+  "drop": [
+   "on_damaged"
+  ]
+ },
+ "741342": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "741230": {
+  "add": [
+   "positional",
+   "condition",
+   "adjacency",
+   "stat_gain",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741288": {
+  "add": [
+   "stat_loss",
+   "evasion",
+   "lifesteal",
+   "movement",
+   "on_play"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741154": {
+  "add": [
+   "condition",
+   "permanent_growth",
+   "stat_gain",
+   "scope_self"
+  ],
+  "drop": []
+ },
+ "741463": {
+  "add": [
+   "deck_condition",
+   "deck_modification",
+   "stat_gain",
+   "on_play",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "741111": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "741456": {
+  "add": [
+   "direct_damage",
+   "damage"
+  ],
+  "drop": []
+ },
+ "741460": {
+  "add": [
+   "stat_condition"
+  ],
+  "drop": []
+ },
+ "741258": {
+  "add": [
+   "direct_damage"
+  ],
+  "drop": []
+ },
+ "741409": {
+  "add": [
+   "life_payment"
+  ],
+  "drop": []
+ },
+ "741458": {
+  "add": [
+   "condition"
+  ],
+  "drop": []
+ },
+ "741469": {
+  "add": [
+   "enemy_benefit",
+   "buff",
+   "merge_attach",
+   "movement"
+  ],
+  "drop": [
+   "banish"
+  ]
+ },
+ "741347": {
+  "add": [
+   "symmetric_effect",
+   "resource_gain",
+   "enemy_benefit",
+   "direct_damage",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "741241": {
+  "add": [
+   "placement_rules",
+   "summon"
+  ],
+  "drop": []
+ },
+ "741485": {
+  "add": [
+   "variety_payoff",
+   "evasion",
+   "death_trigger",
+   "deck_condition",
+   "haste",
+   "movement",
+   "on_play",
+   "recycle",
+   "shield"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741259": {
+  "add": [
+   "drawback",
+   "on_enemy_enter",
+   "damage"
+  ],
+  "drop": [
+   "summon",
+   "life_payment:cost"
+  ]
+ },
+ "741114": {
+  "add": [
+   "condition",
+   "comeback"
+  ],
+  "drop": []
+ },
+ "741406": {
+  "add": [
+   "disruption",
+   "symmetric_effect",
+   "stat_gain",
+   "condition_count",
+   "on_play",
+   "scope_self"
+  ],
+  "drop": []
+ },
+ "741334": {
+  "add": [
+   "protection"
+  ],
+  "drop": []
+ },
+ "741397": {
+  "add": [
+   "hand_deck_swap"
+  ],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "741321": {
+  "add": [
+   "life_track"
+  ],
+  "drop": []
+ },
+ "741223": {
+  "add": [
+   "condition_life"
+  ],
+  "drop": []
+ },
+ "741388": {
+  "add": [
+   "self_destruct",
+   "evasion",
+   "drawback",
+   "draw",
+   "haste",
+   "immunity",
+   "movement",
+   "turn_end"
+  ],
+  "drop": [
+   "terrain",
+   "destroy"
+  ]
+ },
+ "741392": {
+  "add": [
+   "damage",
+   "adjacency",
+   "movement:benefits",
+   "on_play",
+   "random_effect",
+   "summon"
+  ],
+  "drop": []
+ },
+ "741383": {
+  "add": [
+   "draw",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "741160": {
+  "add": [
+   "count_payoff"
+  ],
+  "drop": []
+ },
+ "741448": {
+  "add": [
+   "rule_change"
+  ],
+  "drop": []
+ },
+ "741323": {
+  "add": [
+   "targeting_rules",
+   "drawback",
+   "movement"
+  ],
+  "drop": []
+ },
+ "741116": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "741078": {
+  "add": [
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "741372": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "741411": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire",
+   "variable_stats",
+   "immunity",
+   "lifesteal",
+   "movement:benefits",
+   "territory_trigger"
+  ],
+  "drop": []
+ },
+ "741502": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": [
+   "recycle"
+  ]
+ },
+ "741338": {
+  "add": [
+   "draw",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "741465": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "741328": {
+  "add": [
+   "in_hand_buff",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "741470": {
+  "add": [
+   "removal",
+   "on_play",
+   "polymorph"
+  ],
+  "drop": []
+ },
+ "741516": {
+  "add": [
+   "hand_size"
+  ],
+  "drop": [
+   "slot_filler"
+  ]
+ },
+ "741088": {
+  "add": [
+   "in_hand_buff",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "741376": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "741414": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "741424": {
+  "add": [
+   "taunt:grants",
+   "evasion:grants",
+   "tribal",
+   "adjacency",
+   "cost_reduction",
+   "death_count",
+   "on_play",
+   "summon"
+  ],
+  "drop": [
+   "blocking",
+   "movement:benefits",
+   "terrain:benefits",
+   "taunt:benefits",
+   "zone_of_control:benefits"
+  ]
+ },
+ "741497": {
+  "add": [
+   "cost_reduction",
+   "territory_trigger"
+  ],
+  "drop": []
+ },
+ "741150": {
+  "add": [
+   "upgrade",
+   "random_effect"
+  ],
+  "drop": [
+   "cost_increase"
+  ]
+ },
+ "741468": {
+  "add": [
+   "condition_count"
+  ],
+  "drop": []
+ },
+ "741098": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "741319": {
+  "add": [
+   "cost_reduction",
+   "low_life",
+   "evasion",
+   "condition_count",
+   "hand_size",
+   "heal",
+   "movement",
+   "on_play"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741449": {
+  "add": [
+   "immobilize",
+   "temporary_effect",
+   "evasion",
+   "movement",
+   "on_play"
+  ],
+  "drop": [
+   "delayed",
+   "disable",
+   "terrain"
+  ]
+ },
+ "741427": {
+  "add": [
+   "junk_cards",
+   "hand_size"
+  ],
+  "drop": [
+   "drawback"
+  ]
+ },
+ "741416": {
+  "add": [
+   "draw",
+   "tutor",
+   "stat_condition",
+   "stat_gain",
+   "movement",
+   "movement:benefits",
+   "on_play",
+   "territory_trigger"
+  ],
+  "drop": []
+ },
+ "741102": {
+  "add": [],
+  "drop": [
+   "draw"
+  ]
+ },
+ "741379": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "741228": {
+  "add": [
+   "permanent_growth"
+  ],
+  "drop": []
+ },
+ "741100": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ },
+ "741301": {
+  "add": [
+   "lifesteal",
+   "death_trigger",
+   "movement",
+   "sacrifice:benefits"
+  ],
+  "drop": [
+   "death_count",
+   "destroy:benefits"
+  ]
+ },
+ "741284": {
+  "add": [
+   "condition",
+   "cost_reduction"
+  ],
+  "drop": []
+ },
+ "741237": {
+  "add": [
+   "condition"
+  ],
+  "drop": []
+ },
+ "741391": {
+  "add": [
+   "stat_gain",
+   "immobilize",
+   "modal_choice",
+   "movement",
+   "taunt",
+   "zone_of_control"
+  ],
+  "drop": [
+   "activated"
+  ]
+ },
+ "741423": {
+  "add": [
+   "disruption"
+  ],
+  "drop": []
+ },
+ "741314": {
+  "add": [
+   "in_hand_buff",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "741518": {
+  "add": [
+   "placement_rules",
+   "evasion",
+   "adjacency",
+   "immunity",
+   "movement"
+  ],
+  "drop": [
+   "on_play",
+   "terrain"
+  ]
+ },
+ "741489": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": [
+   "recycle"
+  ]
+ },
+ "741106": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "741206": {
+  "add": [
+   "scope_global"
+  ],
+  "drop": [
+   "slot_filler"
+  ]
+ },
+ "741462": {
+  "add": [
+   "condition",
+   "evasion",
+   "damage",
+   "movement",
+   "on_play",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741464": {
+  "add": [
+   "lone_unit"
+  ],
+  "drop": []
+ },
+ "741096": {
+  "add": [
+   "condition"
+  ],
+  "drop": []
+ },
+ "741212": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "741331": {
+  "add": [
+   "stat_gain",
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "741359": {
+  "add": [
+   "mill",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "741168": {
+  "add": [
+   "disruption"
+  ],
+  "drop": []
+ },
+ "741281": {
+  "add": [
+   "self_destruct",
+   "haste",
+   "movement"
+  ],
+  "drop": []
+ },
+ "741113": {
+  "add": [
+   "condition_life"
+  ],
+  "drop": []
+ },
+ "741125": {
+  "add": [
+   "condition",
+   "stat_gain",
+   "passive",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741493": {
+  "add": [
+   "selection",
+   "generate_cards",
+   "on_play"
+  ],
+  "drop": [
+   "copy",
+   "terrain"
+  ]
+ },
+ "741451": {
+  "add": [
+   "in_hand_buff",
+   "tribal",
+   "cost_reduction",
+   "on_play",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "741089": {
+  "add": [
+   "haste:grants",
+   "summon"
+  ],
+  "drop": [
+   "haste:benefits"
+  ]
+ },
+ "741290": {
+  "add": [
+   "evasion",
+   "stat_gain",
+   "movement",
+   "scope_self"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741309": {
+  "add": [
+   "on_spell",
+   "movement",
+   "scope_self",
+   "temporary_buff"
+  ],
+  "drop": [
+   "on_ally_play",
+   "summon:benefits"
+  ]
+ },
+ "741487": {
+  "add": [
+   "condition",
+   "draw",
+   "movement",
+   "on_play",
+   "terrain",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "741174": {
+  "add": [
+   "death_trigger",
+   "adjacency",
+   "stat_gain",
+   "sacrifice:benefits",
+   "scope_self"
+  ],
+  "drop": [
+   "death_count",
+   "destroy:benefits"
+  ]
+ },
+ "741109": {
+  "add": [
+   "cost_reduction",
+   "generate_cards"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741337": {
+  "add": [
+   "damage",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741276": {
+  "add": [
+   "life_payment:cost",
+   "resource_gain"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "741431": {
+  "add": [
+   "buff",
+   "merge_attach",
+   "evasion:grants",
+   "stat_gain",
+   "immunity",
+   "movement:grants",
+   "on_play",
+   "shield"
+  ],
+  "drop": [
+   "terrain:grants"
+  ]
+ },
+ "741330": {
+  "add": [
+   "combo_sequence",
+   "stat_gain",
+   "movement",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741513": {
+  "add": [
+   "evasion",
+   "adjacency",
+   "aoe_damage",
+   "death_trigger",
+   "movement"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741343": {
+  "add": [
+   "extra_turn"
+  ],
+  "drop": []
+ },
+ "741236": {
+  "add": [
+   "permanent_growth",
+   "damage:benefits",
+   "on_damaged",
+   "scope_self"
+  ],
+  "drop": []
+ },
+ "741512": {
+  "add": [
+   "adjacency",
+   "aoe_damage",
+   "movement"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741295": {
+  "add": [
+   "permanent_growth",
+   "stat_gain",
+   "movement",
+   "passive"
+  ],
+  "drop": []
+ },
+ "741273": {
+  "add": [
+   "evasion",
+   "cost_set",
+   "generate_cards",
+   "movement",
+   "on_attack"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741152": {
+  "add": [
+   "evasion",
+   "stat_gain",
+   "movement",
+   "scope_self"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741430": {
+  "add": [
+   "taunt:grants",
+   "drawback",
+   "on_play",
+   "summon"
+  ],
+  "drop": [
+   "taunt:benefits",
+   "zone_of_control:benefits"
+  ]
+ },
+ "741492": {
+  "add": [
+   "condition",
+   "adjacency",
+   "stat_gain",
+   "movement",
+   "on_play",
+   "terrain",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "741477": {
+  "add": [
+   "in_hand_buff",
+   "stat_gain",
+   "delayed",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741360": {
+  "add": [
+   "evasion",
+   "movement"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741315": {
+  "add": [
+   "evasion",
+   "direct_damage",
+   "haste",
+   "movement",
+   "on_attack"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741318": {
+  "add": [
+   "evasion",
+   "drawback",
+   "movement",
+   "on_play"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741266": {
+  "add": [
+   "condition",
+   "stat_gain",
+   "haste"
+  ],
+  "drop": []
+ },
+ "741400": {
+  "add": [
+   "evasion",
+   "movement",
+   "on_play",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741247": {
+  "add": [
+   "evasion",
+   "stat_gain",
+   "movement",
+   "ranged",
+   "scope_self"
+  ],
+  "drop": [
+   "terrain",
+   "counterattack",
+   "drawback"
+  ]
+ },
+ "741340": {
+  "add": [
+   "aoe_damage",
+   "draw",
+   "lifesteal"
+  ],
+  "drop": []
+ },
+ "741419": {
+  "add": [
+   "drawback",
+   "damage",
+   "death_trigger"
+  ],
+  "drop": [
+   "life_payment:cost"
+  ]
+ },
+ "741405": {
+  "add": [
+   "evasion",
+   "stat_gain",
+   "movement",
+   "movement:benefits",
+   "territory_trigger"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741251": {
+  "add": [
+   "stat_condition",
+   "permanent_growth",
+   "stat_gain",
+   "on_ally_play",
+   "passive",
+   "scope_self"
+  ],
+  "drop": []
+ },
+ "741471": {
+  "add": [
+   "tribal",
+   "adjacency",
+   "stat_gain",
+   "condition_count",
+   "movement",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741399": {
+  "add": [
+   "evasion:grants",
+   "draw:benefits",
+   "copy",
+   "movement:benefits",
+   "summon"
+  ],
+  "drop": [
+   "terrain:benefits"
+  ]
+ },
+ "741320": {
+  "add": [
+   "drawback",
+   "draw",
+   "resource_gain",
+   "turn_start"
+  ],
+  "drop": [
+   "damage",
+   "life_payment:cost"
+  ]
+ },
+ "741436": {
+  "add": [
+   "condition",
+   "tribal",
+   "adjacency",
+   "haste",
+   "placement_rules",
+   "scope_self"
+  ],
+  "drop": []
+ },
+ "741249": {
+  "add": [
+   "death_trigger",
+   "stat_gain",
+   "scope_self"
+  ],
+  "drop": [
+   "death_count",
+   "destroy:benefits",
+   "sacrifice:benefits"
+  ]
+ },
+ "741486": {
+  "add": [
+   "evasion",
+   "condition_count",
+   "deck_modification",
+   "hand_deck_swap",
+   "hand_size",
+   "movement",
+   "on_play",
+   "recycle"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741374": {
+  "add": [
+   "adjacency",
+   "on_attack",
+   "random_effect",
+   "ranged",
+   "summon"
+  ],
+  "drop": [
+   "counterattack",
+   "drawback"
+  ]
+ },
+ "741144": {
+  "add": [
+   "on_spell",
+   "stat_gain",
+   "scope_self"
+  ],
+  "drop": [
+   "on_ally_play",
+   "summon:benefits"
+  ]
+ },
+ "741063": {
+  "add": [
+   "evasion",
+   "movement",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741159": {
+  "add": [
+   "copy",
+   "transform"
+  ],
+  "drop": []
+ },
+ "741336": {
+  "add": [
+   "cost_condition",
+   "movement",
+   "on_ally_play",
+   "passive",
+   "scope_self",
+   "summon:benefits"
+  ],
+  "drop": []
+ },
+ "741426": {
+  "add": [
+   "condition",
+   "tribal",
+   "stat_gain",
+   "movement",
+   "passive"
+  ],
+  "drop": []
+ },
+ "741466": {
+  "add": [
+   "terrain",
+   "movement",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741267": {
+  "add": [
+   "condition",
+   "stat_gain",
+   "movement",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741467": {
+  "add": [
+   "tribal",
+   "movement:grants",
+   "on_play",
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "741355": {
+  "add": [
+   "steal"
+  ],
+  "drop": []
+ },
+ "741396": {
+  "add": [
+   "evasion",
+   "adjacency",
+   "death_count",
+   "movement",
+   "on_play",
+   "placement_rules",
+   "summon"
+  ],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741325": {
+  "add": [
+   "damage",
+   "distribute",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "741278": {
+  "add": [
+   "drawback",
+   "turn_start"
+  ],
+  "drop": [
+   "damage",
+   "life_payment:cost"
+  ]
+ },
+ "741520": {
+  "add": [
+   "selection",
+   "stat_gain",
+   "generate_cards"
+  ],
+  "drop": [
+   "copy",
+   "terrain"
+  ]
+ },
+ "741398": {
+  "add": [
+   "copy",
+   "cost_reduction",
+   "draw",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741351": {
+  "add": [
+   "modal_choice",
+   "steal",
+   "terrain",
+   "polymorph",
+   "transform"
+  ],
+  "drop": []
+ },
+ "741189": {
+  "add": [
+   "death_trigger",
+   "immobilize",
+   "random_effect",
+   "taunt",
+   "terrain",
+   "zone_of_control"
+  ],
+  "drop": []
+ },
+ "741117": {
+  "add": [
+   "stat_gain",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "741313": {
+  "add": [
+   "stat_gain",
+   "damage",
+   "distribute",
+   "movement",
+   "on_play",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "741393": {
+  "add": [
+   "stat_gain",
+   "modal_choice",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741164": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "741105": {
+  "add": [
+   "death_trigger",
+   "draw"
+  ],
+  "drop": []
+ },
+ "741071": {
+  "add": [
+   "counterattack",
+   "drawback",
+   "ranged"
+  ],
+  "drop": []
+ },
+ "741371": {
+  "add": [
+   "stat_gain",
+   "delayed",
+   "immobilize",
+   "on_play",
+   "scope_self",
+   "taunt",
+   "zone_of_control"
+  ],
+  "drop": []
+ },
+ "741450": {
+  "add": [
+   "adjacency",
+   "aoe_damage",
+   "combat",
+   "on_attack"
+  ],
+  "drop": []
+ },
+ "741452": {
+  "add": [
+   "adjacency",
+   "movement:benefits",
+   "random_effect",
+   "summon",
+   "terrain",
+   "territory_trigger"
+  ],
+  "drop": []
+ },
+ "741058": {
+  "add": [
+   "death_trigger"
+  ],
+  "drop": []
+ },
+ "741195": {
+  "add": [
+   "random_effect",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741362": {
+  "add": [
+   "damage",
+   "recycle"
+  ],
+  "drop": []
+ },
+ "741222": {
+  "add": [
+   "stat_gain",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741072": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ },
+ "741068": {
+  "add": [
+   "haste"
+  ],
+  "drop": []
+ },
+ "741070": {
+  "add": [
+   "copy",
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "741061": {
+  "add": [
+   "forced_movement:benefits",
+   "territory_trigger"
+  ],
+  "drop": []
+ },
+ "741255": {
+  "add": [
+   "aoe_damage",
+   "immobilize",
+   "taunt",
+   "turn_start",
+   "zone_of_control"
+  ],
+  "drop": []
+ },
+ "741167": {
+  "add": [
+   "on_play",
+   "stat_gain",
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "741517": {
+  "add": [
+   "cost_reduction",
+   "in_hand_buff"
+  ],
+  "drop": []
+ },
+ "741176": {
+  "add": [
+   "movement",
+   "on_play",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741175": {
+  "add": [
+   "stat_gain",
+   "death_trigger",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "741344": {
+  "add": [
+   "cost_reduction",
+   "generate_cards",
+   "modal_choice",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "741108": {
+  "add": [
+   "shield"
+  ],
+  "drop": []
+ },
+ "741382": {
+  "add": [
+   "condition_count",
+   "on_play",
+   "draw",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "741118": {
+  "add": [
+   "generate_cards",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741440": {
+  "add": [
+   "death_trigger",
+   "summon"
+  ],
+  "drop": []
+ },
+ "741316": {
+  "add": [
+   "direct_damage",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741403": {
+  "add": [
+   "on_play",
+   "draw",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "741214": {
+  "add": [
+   "death_trigger",
+   "in_hand_buff",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "741204": {
+  "add": [
+   "cost_reduction",
+   "generate_cards",
+   "movement",
+   "on_attack",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "741074": {
+  "add": [
+   "drawback",
+   "movement",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741305": {
+  "add": [
+   "lifesteal"
+  ],
+  "drop": []
+ },
+ "741182": {
+  "add": [
+   "stat_gain",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741272": {
+  "add": [
+   "lifesteal",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741145": {
+  "add": [
+   "drawback",
+   "movement",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741112": {
+  "add": [
+   "draw"
+  ],
+  "drop": []
+ },
+ "741140": {
+  "add": [
+   "copy",
+   "generate_cards",
+   "cost_reduction"
+  ],
+  "drop": []
+ },
+ "741300": {
+  "add": [
+   "movement:benefits",
+   "sacrifice",
+   "sacrifice:cost",
+   "summon"
+  ],
+  "drop": []
+ },
+ "741216": {
+  "add": [
+   "stat_gain",
+   "generate_cards",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "741363": {
+  "add": [
+   "aoe_damage",
+   "stat_gain",
+   "condition_count",
+   "on_play",
+   "scope_self"
+  ],
+  "drop": []
+ },
+ "741356": {
+  "add": [
+   "stat_gain",
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "741415": {
+  "add": [
+   "immobilize",
+   "taunt",
+   "zone_of_control"
+  ],
+  "drop": []
+ },
+ "741143": {
+  "add": [
+   "on_play",
+   "summon",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741173": {
+  "add": [
+   "movement",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741240": {
+  "add": [
+   "adjacency",
+   "damage",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741196": {
+  "add": [
+   "condition_count",
+   "cost_reduction",
+   "high_cost:benefits",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741499": {
+  "add": [
+   "adjacency",
+   "combat",
+   "on_attack",
+   "random_effect",
+   "summon"
+  ],
+  "drop": []
+ },
+ "741059": {
+  "add": [
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "741256": {
+  "add": [
+   "damage"
+  ],
+  "drop": []
+ },
+ "741322": {
+  "add": [
+   "drawback",
+   "heal",
+   "movement",
+   "on_attack"
+  ],
+  "drop": []
+ },
+ "741123": {
+  "add": [
+   "stat_gain",
+   "passive",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741162": {
+  "add": [
+   "draw",
+   "modal_choice",
+   "movement",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741085": {
+  "add": [
+   "haste"
+  ],
+  "drop": []
+ },
+ "741246": {
+  "add": [
+   "on_play",
+   "terrain"
+  ],
+  "drop": []
+ }
 }

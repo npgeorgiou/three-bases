@@ -1,50 +1,50 @@
 {
-"761168": {
-"add": [
-"immobilize"
-],
-"drop": [
-"disable"
-]
-},
-"761175": {
-"add": [
-"immobilize"
-],
-"drop": [
-"disable"
-]
-},
-"761169": {
-"add": [],
-"drop": [
-"spell_speed",
-"debuff"
-]
-},
-"761172": {
-"add": [],
-"drop": [
-"debuff"
-]
-},
-"761183": {
-"add": [],
-"drop": [
-"debuff"
-]
-},
-"761180": {
-"add": [],
-"drop": [
-"debuff",
-"ranged"
-]
-},
-"761170": {
-"add": [],
-"drop": [
-"debuff"
-]
-}
+ "761168": {
+  "add": [
+   "immobilize"
+  ],
+  "drop": [
+   "disable"
+  ]
+ },
+ "761175": {
+  "add": [
+   "immobilize"
+  ],
+  "drop": [
+   "disable"
+  ]
+ },
+ "761169": {
+  "add": [],
+  "drop": [
+   "spell_speed",
+   "stat_loss"
+  ]
+ },
+ "761172": {
+  "add": [],
+  "drop": [
+   "stat_loss"
+  ]
+ },
+ "761183": {
+  "add": [],
+  "drop": [
+   "stat_loss"
+  ]
+ },
+ "761180": {
+  "add": [],
+  "drop": [
+   "stat_loss",
+   "ranged"
+  ]
+ },
+ "761170": {
+  "add": [],
+  "drop": [
+   "stat_loss"
+  ]
+ }
 }

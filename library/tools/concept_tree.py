@@ -173,6 +173,10 @@ PRIMARY = {'buff': ['stat_gain'], 'debuff': ['stat_loss'], 'stat_set': ['stat_ga
 REMOVED = {'stat_set', 'stat_swap', 'attack_mod', 'control'}
 
 def primary(k): return PRIMARY.get(k, [k])
+# The review records (tools/reviews*, snap_review.json, regression.tsv) are in the tree v3 ids since 19 Oct 2026 (fixes/f15).
+# Build steps that run before 'apply' still work in the old ids; they read a reviewed concept through to_old(): stat_gain and
+# stat_loss were old 'buff' and 'debuff'; the new groups 'buff' and 'debuff' have no old id (None: applied after the move).
+def to_old(k): return None if k in ('buff', 'debuff') else {'stat_gain': 'buff', 'stat_loss': 'debuff'}.get(k, k)
 # a concept relation about old 'buff' / 'debuff' ("buff synergizes stat_condition") holds for the whole new group, which still
 # covers stat gain and stat loss through the tree
 def rel_primary(k): return {'buff': ['buff'], 'debuff': ['debuff']}.get(k) or primary(k)
@@ -227,7 +231,7 @@ def apply(c):
     rev = [r for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t')]
     for r in rev: r['e'] = kept.get(int(r['entity']), int(r['entity']))
     # a split rule never adds a concept a hand review dropped from that entry (except the plan's own rule for the removed mechanisms)
-    dropped = {(r['e'], primary(r['concept'])[0]) for r in rev if r['expect'] == 'absent' and r['concept'] not in REMOVED}
+    dropped = {(r['e'], r['concept']) for r in rev if r['expect'] == 'absent'}
     moved = {}
     for rid, e, k, role, m, ev in q('SELECT rowid, entity, concept, role, method, evidence FROM entity_concepts WHERE concept IN (%s)' % ','.join('?' * len(old)), *old):
         new = targets(k, text.get(e))
@@ -248,11 +252,11 @@ def apply(c):
     kept_n = 0
     for r in rev:
         if r['expect'] != 'present' or r['e'] not in text: continue
-        e, k = r['e'], r['concept']; ps = primary(k)
+        e, k = r['e'], r['concept']; ps = [k]
         roles = {ro for _, ro in have.get(e, ())} if r['role'] == '*' else {r['role']}
         if any((d, ro) in have.get(e, ()) for p in ps for d in desc.get(p, {p}) for ro in roles): continue
         ok = [p for p in ps if (e, p) not in dropped] or ps[:1]
-        new = (targets(k, text.get(e)) & set(ok)) or set(ok[:1])
+        new = set(ok[:1])
         role = r['role'] if r['role'] != '*' else 'does'
         for n in new:
             if c.execute('INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)', (e, n, role, 'claude_review', 'hand review, kept through the concept tree move')).rowcount:

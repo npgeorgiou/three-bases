@@ -22,17 +22,17 @@ if mode == 'make':
     acts = set(); keep = []; n = collections.Counter()
     for r in rows:
         e = mk.get(int(r['entity']), int(r['entity']))
-        if e not in keys or (r['concept'] in REMOVED and r['expect'] != 'present'): keep.append(r); continue
+        if e not in keys: keep.append(r); continue
         ks = keys[e]
         if r['expect'] == 'present':   # a removed old concept is checked as any of its new ids (as regression.py does)
-            pk = primary(r['concept'])
+            pk = [r['concept']]
             if any(k in ks or k in K.GROUPS for k in pk): keep.append(r); continue
             rel = {x for x in ks for k in pk if k in K.ANC[x] or k in K.DESC[x]}
             for k in pk: acts.add((e, k, 'drop', 'review concept broader or narrower than the key\'s' if rel else 'review tag the key calls wrong'))
             for x in rel: acts.add((e, x, 'add', 'key concept'))
             n['nested' if rel else 'review adds, key lacks'] += 1
             continue
-        k = primary(r['concept'])[0]
+        k = r['concept']
         if True:
             if k in ks:
                 acts.add((e, k, 'add', 'review dropped a key concept')); n['review drops, key has'] += 1

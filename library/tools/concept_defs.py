@@ -76,7 +76,8 @@ for cid, ps in PATS.items():
     c.execute("DELETE FROM concept_patterns WHERE concept=? AND game IS NULL", (cid,))
     for p in ps: c.execute("INSERT INTO concept_patterns VALUES(?,?,?,NULL)", (cid, role(cid), p))
 kept = dict(q('SELECT old_id, kept_id FROM merged_entities')) if q("SELECT 1 FROM sqlite_master WHERE name='merged_entities'") else {}
-reviewed = {(kept.get(int(r['entity']), int(r['entity'])), r['concept']) for r in csv.DictReader(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present'}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from concept_tree import to_old as _to_old
+reviewed = {(kept.get(int(r['entity']), int(r['entity'])), _to_old(r['concept'])) for r in csv.DictReader(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present'}
 pats = {}
 for con, p in q("SELECT concept, pattern FROM concept_patterns WHERE game IS NULL AND concept IN (%s)" % ','.join('?' * len(PATS)), *PATS): pats.setdefault(con, []).append((None, re.compile(p, re.I)))
 for con, s in filep.items():

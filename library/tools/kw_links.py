@@ -144,8 +144,8 @@ mk = dict(q('SELECT old_id, kept_id FROM merged_entities'))
 rev_absent = set()
 for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t'):
     e = mk.get(int(r['entity']), int(r['entity']))
-    if r['expect'] == 'present': known[e] |= set(primary(r['concept']))
-    elif r['concept'] not in REMOVED: rev_absent.add((e, primary(r['concept'])[0]))
+    if r['expect'] == 'present': known[e].add(r['concept'])
+    else: rev_absent.add((e, r['concept']))
 ent = {i: (g, n, t) for i, g, n, t in q('SELECT id, game, name, text FROM entities')}
 removed = kept = added = 0
 have = collections.defaultdict(set)

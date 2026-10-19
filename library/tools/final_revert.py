@@ -27,7 +27,7 @@ for qid, (e, k, d) in Qs['q'].items():
     if ans.get(qid) is True: known[e].add(k)
 mk = dict(q('SELECT old_id, kept_id FROM merged_entities'))
 for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t'):
-    if r['expect'] == 'present': known[mk.get(int(r['entity']), int(r['entity']))] |= set(primary(r['concept']))
+    if r['expect'] == 'present': known[mk.get(int(r['entity']), int(r['entity']))] |= {r['concept']}
 game = dict(q('SELECT id, game FROM entities'))
 put = rem = 0
 for r in rows:

@@ -34,7 +34,7 @@ drop = collections.Counter(); add = collections.Counter(); keep = collections.Co
 for r in rows:
     e = kept_id.get(int(r['entity']), int(r['entity']))
     if e not in game: continue
-    for k in primary(r['concept']):   # the regression set names the old concepts (concept_tree.py, Step 1)
+    for k in [r['concept']]:   # the regression set is in the tree v3 ids (fixes/f15)
         if r['expect'] == 'absent':
             if fires(e, game[e], k): drop[game[e], k] += 1   # a reviewed drop counts while a current pattern still makes it
         elif r['expect'] == 'present': add[game[e], k] += 1

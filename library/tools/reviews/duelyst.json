@@ -1,2740 +1,2769 @@
 {
-"741642": {
-"add": [
-"items_consumables",
-"adjacency",
-"aura"
-],
-"drop": []
-},
-"741643": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741644": {
-"add": [
-"items_consumables",
-"damage_reduction"
-],
-"drop": [
-"damage"
-]
-},
-"741688": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741689": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741690": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741730": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741731": {
-"add": [
-"items_consumables",
-"area_templates",
-"multi_target_attack"
-],
-"drop": [
-"lanes"
-]
-},
-"741732": {
-"add": [
-"items_consumables",
-"debuff"
-],
-"drop": []
-},
-"741770": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741771": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741772": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741810": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741811": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741812": {
-"add": [
-"items_consumables"
-],
-"drop": [
-"on_damaged"
-]
-},
-"741855": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741856": {
-"add": [
-"items_consumables",
-"adjacency"
-],
-"drop": [
-"damage_over_time"
-]
-},
-"741857": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741958": {
-"add": [
-"items_consumables",
-"adjacency",
-"aura"
-],
-"drop": []
-},
-"741969": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741990": {
-"add": [
-"items_consumables",
-"on_kill",
-"terrain"
-],
-"drop": [
-"summon"
-]
-},
-"741997": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742018": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742023": {
-"add": [
-"items_consumables",
-"forced_movement"
-],
-"drop": []
-},
-"742128": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742141": {
-"add": [
-"items_consumables",
-"spell_power"
-],
-"drop": []
-},
-"742156": {
-"add": [
-"items_consumables",
-"on_kill"
-],
-"drop": []
-},
-"742169": {
-"add": [
-"items_consumables",
-"terrain:benefits"
-],
-"drop": [
-"damage",
-"turn_end"
-]
-},
-"742182": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742195": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742223": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742227": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742233": {
-"add": [
-"items_consumables",
-"adjacency",
-"copy",
-"on_kill",
-"summon"
-],
-"drop": []
-},
-"742238": {
-"add": [
-"items_consumables",
-"revive",
-"adjacency",
-"random_effect"
-],
-"drop": []
-},
-"742240": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742249": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742274": {
-"add": [
-"items_consumables",
-"adjacency",
-"positional"
-],
-"drop": []
-},
-"742277": {
-"add": [
-"items_consumables",
-"draw",
-"on_spell"
-],
-"drop": []
-},
-"742299": {
-"add": [
-"items_consumables",
-"damage_reduction",
-"immunity"
-],
-"drop": []
-},
-"742312": {
-"add": [
-"items_consumables"
-],
-"drop": [
-"on_damaged"
-]
-},
-"742327": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742337": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"Infiltrate": {
-"add": [],
-"drop": [
-"board_clog"
-]
-},
-"MECHAZ0R": {
-"add": [
-"count_payoff"
-],
-"drop": []
-},
-"Sentinel": {
-"add": [
-"trap_secret"
-],
-"drop": []
-},
-"Shadow Creep": {
-"add": [
-"damage_over_time"
-],
-"drop": []
-},
-"Wall": {
-"add": [
-"zone_control"
-],
-"drop": []
-},
-"742314": {
-"add": [
-"sacrifice",
-"merge_attach",
-"summon"
-],
-"drop": [
-"destroy"
-]
-},
-"741584": {
-"add": [
-"terrain:benefits"
-],
-"drop": [
-"damage",
-"turn_end"
-]
-},
-"741751": {
-"add": [
-"condition",
-"ping",
-"terrain"
-],
-"drop": [
-"transform",
-"damage_over_time",
-"turn_end"
-]
-},
-"742124": {
-"add": [
-"condition"
-],
-"drop": []
-},
-"741963": {
-"add": [
-"area_templates"
-],
-"drop": [
-"scope_global",
-"board_wipe"
-]
-},
-"741684": {
-"add": [
-"items_consumables:counters",
-"removal"
-],
-"drop": []
-},
-"741850": {
-"add": [
-"aoe_damage",
-"adjacency"
-],
-"drop": []
-},
-"741848": {
-"add": [
-"silence",
-"removal"
-],
-"drop": []
-},
-"742151": {
-"add": [
-"generate_cards"
-],
-"drop": [
-"draw"
-]
-},
-"742338": {
-"add": [
-"revive"
-],
-"drop": []
-},
-"741717": {
-"add": [
-"condition_count",
-"items_consumables:benefits",
-"temporary_buff"
-],
-"drop": [
-"buff"
-]
-},
-"741579": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741844": {
-"add": [
-"positional",
-"friendly_fire",
-"symmetric_effect",
-"aoe_damage",
-"disable"
-],
-"drop": [
-"damage"
-]
-},
-"742284": {
-"add": [
-"null_body",
-"removal",
-"hand_size"
-],
-"drop": [
-"slot_filler"
-]
-},
-"741840": {
-"add": [
-"zone_control"
-],
-"drop": []
-},
-"742033": {
-"add": [
-"disable"
-],
-"drop": [
-"delayed",
-"movement"
-]
-},
-"741715": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"742230": {
-"add": [
-"steal"
-],
-"drop": []
-},
-"741727": {
-"add": [
-"adjacency"
-],
-"drop": []
-},
-"741839": {
-"add": [
-"disable",
-"summon"
-],
-"drop": [
-"zone_control",
-"drawback"
-]
-},
-"741801": {
-"add": [],
-"drop": [
-"fodder"
-]
-},
-"742295": {
-"add": [
-"life_payment"
-],
-"drop": []
-},
-"741845": {
-"add": [
-"immunity"
-],
-"drop": []
-},
-"742270": {
-"add": [
-"aura",
-"buff",
-"on_ally_play",
-"adjacency"
-],
-"drop": []
-},
-"742243": {
-"add": [
-"cost_condition",
-"tribal",
-"random_effect",
-"sacrifice",
-"summon"
-],
-"drop": [
-"cost_increase",
-"destroy"
-]
-},
-"742005": {
-"add": [
-"terrain:benefits"
-],
-"drop": [
-"damage",
-"turn_end"
-]
-},
-"741841": {
-"add": [
-"terrain"
-],
-"drop": []
-},
-"741573": {
-"add": [
-"direct_damage"
-],
-"drop": []
-},
-"741598": {
-"add": [
-"immunity"
-],
-"drop": [
-"delayed"
-]
-},
-"741769": {
-"add": [
-"revive"
-],
-"drop": []
-},
-"742006": {
-"add": [
-"direct_damage"
-],
-"drop": []
-},
-"742154": {
-"add": [
-"revive",
-"death_trigger:benefits",
-"random_effect"
-],
-"drop": []
-},
-"742136": {
-"add": [
-"autonomous_units",
-"damage"
-],
-"drop": [
-"activated",
-"extra_turn"
-]
-},
-"741754": {
-"add": [
-"forced_movement",
-"ping"
-],
-"drop": []
-},
-"741763": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"742273": {
-"add": [
-"protection",
-"adjacency",
-"damage:counters",
-"temporary_effect"
-],
-"drop": [
-"immunity"
-]
-},
-"741681": {
-"add": [
-"deathtouch"
-],
-"drop": []
-},
-"741711": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"742313": {
-"add": [
-"debuff",
-"temporary_effect"
-],
-"drop": [
-"delayed"
-]
-},
-"741796": {
-"add": [],
-"drop": [
-"on_damaged"
-]
-},
-"741999": {
-"add": [
-"alt_wincon"
-],
-"drop": []
-},
-"741566": {
-"add": [
-"friendly_fire",
-"life_payment"
-],
-"drop": []
-},
-"741992": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742166": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"741675": {
-"add": [
-"spell_power"
-],
-"drop": []
-},
-"742316": {
-"add": [
-"condition",
-"draw"
-],
-"drop": []
-},
-"741599": {
-"add": [
-"symmetric_effect"
-],
-"drop": []
-},
-"742331": {
-"add": [
-"generate_cards",
-"copy",
-"disable"
-],
-"drop": [
-"draw"
-]
-},
-"742015": {
-"add": [
-"free_play"
-],
-"drop": []
-},
-"742125": {
-"add": [],
-"drop": [
-"draw"
-]
-},
-"742177": {
-"add": [],
-"drop": [
-"draw"
-]
-},
-"742164": {
-"add": [],
-"drop": [
-"draw"
-]
-},
-"741977": {
-"add": [
-"lifesteal",
-"direct_damage",
-"condition_count"
-],
-"drop": []
-},
-"742181": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"741975": {
-"add": [
-"flanking"
-],
-"drop": []
-},
-"742354": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742024": {
-"add": [
-"symmetric_effect"
-],
-"drop": []
-},
-"741838": {
-"add": [
-"zone_control",
-"tank"
-],
-"drop": []
-},
-"741852": {
-"add": [
-"removal"
-],
-"drop": []
-},
-"742324": {
-"add": [
-"symmetric_effect"
-],
-"drop": []
-},
-"742032": {
-"add": [
-"placement_rules"
-],
-"drop": []
-},
-"742272": {
-"add": [
-"condition"
-],
-"drop": []
-},
-"742228": {
-"add": [],
-"drop": [
-"generate_cards"
-]
-},
-"741683": {
-"add": [
-"movement"
-],
-"drop": []
-},
-"742290": {
-"add": [
-"disable"
-],
-"drop": [
-"movement"
-]
-},
-"741809": {
-"add": [
-"friendly_fire"
-],
-"drop": [
-"scope_global"
-]
-},
-"742140": {
-"add": [
-"deck_modification",
-"cost_set"
-],
-"drop": [
-"cost_condition"
-]
-},
-"741629": {
-"add": [
-"debuff",
-"buff"
-],
-"drop": []
-},
-"742178": {
-"add": [
-"condition"
-],
-"drop": []
-},
-"742298": {
-"add": [
-"lone_unit:counters"
-],
-"drop": []
-},
-"742126": {
-"add": [
-"condition"
-],
-"drop": []
-},
-"742020": {
-"add": [
-"zone_control"
-],
-"drop": []
-},
-"742163": {
-"add": [
-"cost_reduction",
-"in_hand_buff"
-],
-"drop": [
-"death_trigger",
-"scope_global"
-]
-},
-"742288": {
-"add": [],
-"drop": [
-"random_effect"
-]
-},
-"741752": {
-"add": [
-"life_payment"
-],
-"drop": []
-},
-"742248": {
-"add": [],
-"drop": [
-"deck_modification",
-"permanent_growth"
-]
-},
-"741847": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"741630": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"741846": {
-"add": [
-"forced_movement"
-],
-"drop": []
-},
-"741803": {
-"add": [
-"silence",
-"removal",
-"temporary_effect",
-"transform"
-],
-"drop": []
-},
-"741666": {
-"add": [
-"delayed"
-],
-"drop": []
-},
-"741587": {
-"add": [
-"summon",
-"adjacency",
-"destroy",
-"symmetric_effect"
-],
-"drop": [
-"scope_global",
-"board_wipe"
-]
-},
-"741755": {
-"add": [
-"revive"
-],
-"drop": []
-},
-"742004": {
-"add": [
-"terrain:benefits"
-],
-"drop": [
-"damage",
-"turn_end"
-]
-},
-"742168": {
-"add": [
-"sacrifice"
-],
-"drop": [
-"turn_end"
-]
-},
-"741679": {
-"add": [
-"null_body",
-"removal"
-],
-"drop": []
-},
-"742138": {
-"add": [
-"null_body",
-"symmetric_effect",
-"immunity",
-"temporary_effect",
-"transform"
-],
-"drop": []
-},
-"741665": {
-"add": [],
-"drop": [
-"draw"
-]
-},
-"742315": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"742064": {
-"add": [
-"junk_cards",
-"play_restriction",
-"recycle"
-],
-"drop": [
-"passive"
-]
-},
-"742323": {
-"add": [
-"economy"
-],
-"drop": []
-},
-"741720": {
-"add": [
-"disable"
-],
-"drop": [
-"movement"
-]
-},
-"741722": {
-"add": [
-"immunity"
-],
-"drop": []
-},
-"742137": {
-"add": [
-"cost_reduction",
-"in_hand_buff"
-],
-"drop": [
-"scope_global",
-"damage:grants"
-]
-},
-"741996": {
-"add": [
-"flanking"
-],
-"drop": []
-},
-"742123": {
-"add": [
-"positional",
-"removal",
-"adjacency",
-"destroy"
-],
-"drop": []
-},
-"742165": {
-"add": [
-"damage_over_time"
-],
-"drop": []
-},
-"741978": {
-"add": [
-"condition",
-"damage"
-],
-"drop": []
-},
-"741853": {
-"add": [
-"positional"
-],
-"drop": []
-},
-"741726": {
-"add": [
-"zone_control"
-],
-"drop": [
-"rows"
-]
-},
-"742285": {
-"add": [
-"movement"
-],
-"drop": []
-},
-"741991": {
-"add": [
-"fodder",
-"zone_control"
-],
-"drop": []
-},
-"741668": {
-"add": [
-"forced_movement"
-],
-"drop": []
-},
-"741568": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"742180": {
-"add": [
-"delayed"
-],
-"drop": []
-},
-"741674": {
-"add": [
-"delayed"
-],
-"drop": [
-"generate_cards"
-]
-},
-"741964": {
-"add": [
-"revive",
-"terrain:benefits"
-],
-"drop": [
-"heal",
-"turn_end"
-]
-},
-"742167": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"742190": {
-"add": [
-"territory_trigger"
-],
-"drop": []
-},
-"742103": {
-"add": [
-"cost_reduction",
-"in_hand_buff"
-],
-"drop": []
-},
-"741736": {
-"add": [
-"damage_over_time"
-],
-"drop": []
-},
-"741946": {
-"add": [
-"recycle"
-],
-"drop": []
-},
-"741959": {
-"add": [
-"deck_condition",
-"items_consumables"
-],
-"drop": []
-},
-"742161": {
-"add": [
-"cost_set"
-],
-"drop": []
-},
-"741902": {
-"add": [
-"cost_increase"
-],
-"drop": [
-"hero_power"
-]
-},
-"742088": {
-"add": [
-"recycle"
-],
-"drop": []
-},
-"742102": {
-"add": [],
-"drop": [
-"regeneration"
-]
-},
-"742058": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"741741": {
-"add": [
-"debuff",
-"temporary_effect",
-"adjacency",
-"on_play"
-],
-"drop": []
-},
-"742057": {
-"add": [
-"cost_reduction",
-"adjacency",
-"immobilize",
-"taunt"
-],
-"drop": [
-"condition_life"
-]
-},
-"742150": {
-"add": [
-"life_payment",
-"drawback"
-],
-"drop": []
-},
-"742090": {
-"add": [],
-"drop": [
-"damage_over_time"
-]
-},
-"742351": {
-"add": [
-"donate",
-"drawback",
-"death_trigger"
-],
-"drop": [
-"destroy:benefits",
-"death_count",
-"sacrifice:benefits"
-]
-},
-"741942": {
-"add": [
-"lifesteal",
-"ranged"
-],
-"drop": [
-"damage:benefits"
-]
-},
-"742008": {
-"add": [
-"symmetric_effect"
-],
-"drop": []
-},
-"742261": {
-"add": [
-"resource_gain"
-],
-"drop": []
-},
-"741659": {
-"add": [
-"deathtouch"
-],
-"drop": []
-},
-"742059": {
-"add": [
-"comeback"
-],
-"drop": []
-},
-"742246": {
-"add": [
-"generate_cards"
-],
-"drop": []
-},
-"741876": {
-"add": [
-"on_enemy_enter"
-],
-"drop": []
-},
-"741834": {
-"add": [],
-"drop": [
-"deck_modification",
-"permanent_growth"
-]
-},
-"742051": {
-"add": [
-"removal",
-"banish",
-"death_trigger",
-"on_play"
-],
-"drop": []
-},
-"742237": {
-"add": [
-"revive"
-],
-"drop": []
-},
-"742267": {
-"add": [
-"condition",
-"buff",
-"passive"
-],
-"drop": []
-},
-"741740": {
-"add": [
-"sacrifice"
-],
-"drop": []
-},
-"742339": {
-"add": [
-"disable"
-],
-"drop": []
-},
-"742089": {
-"add": [
-"recycle",
-"life_payment"
-],
-"drop": []
-},
-"742253": {
-"add": [
-"items_consumables:counters"
-],
-"drop": []
-},
-"741968": {
-"add": [
-"null_body",
-"removal"
-],
-"drop": []
-},
-"741948": {
-"add": [
-"enemy_benefit",
-"symmetric_effect"
-],
-"drop": []
-},
-"741780": {
-"add": [
-"life_payment"
-],
-"drop": []
-},
-"742107": {
-"add": [
-"forced_movement"
-],
-"drop": []
-},
-"741980": {
-"add": [],
-"drop": [
-"draw"
-]
-},
-"742072": {
-"add": [],
-"drop": [
-"draw"
-]
-},
-"741909": {
-"add": [
-"symmetric_effect",
-"friendly_fire"
-],
-"drop": []
-},
-"741966": {
-"add": [
-"movement:benefits",
-"adjacency",
-"aoe_damage"
-],
-"drop": []
-},
-"742026": {
-"add": [
-"swap",
-"transform",
-"trap_secret"
-],
-"drop": [
-"stealth"
-]
-},
-"741901": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"742076": {
-"add": [
-"forced_movement"
-],
-"drop": []
-},
-"742158": {
-"add": [
-"revive"
-],
-"drop": []
-},
-"741601": {
-"add": [
-"zone_control",
-"disable"
-],
-"drop": []
-},
-"741619": {
-"add": [
-"cheat_death"
-],
-"drop": []
-},
-"742135": {
-"add": [
-"autonomous_units",
-"disable"
-],
-"drop": []
-},
-"742297": {
-"add": [],
-"drop": [
-"rows"
-]
-},
-"741661": {
-"add": [
-"life_payment",
-"drawback"
-],
-"drop": [
-"damage_over_time"
-]
-},
-"741824": {
-"add": [
-"movement"
-],
-"drop": []
-},
-"741699": {
-"add": [
-"items_consumables",
-"on_play"
-],
-"drop": []
-},
-"742211": {
-"add": [
-"adjacency",
-"immobilize",
-"random_ability",
-"summon",
-"taunt"
-],
-"drop": [
-"selection",
-"selection:benefits",
-"recycle"
-]
-},
-"742071": {
-"add": [
-"scope_multi",
-"death_trigger",
-"silence"
-],
-"drop": []
-},
-"741892": {
-"add": [
-"positional"
-],
-"drop": []
-},
-"742081": {
-"add": [
-"positional"
-],
-"drop": []
-},
-"742085": {
-"add": [
-"revive",
-"adjacency",
-"on_play",
-"random_effect"
-],
-"drop": []
-},
-"742132": {
-"add": [
-"immobilize",
-"delayed",
-"on_play",
-"ranged"
-],
-"drop": [
-"movement",
-"disable"
-]
-},
-"742162": {
-"add": [
-"damage_over_time"
-],
-"drop": []
-},
-"742202": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"742034": {
-"add": [
-"drawback"
-],
-"drop": []
-},
-"742239": {
-"add": [
-"damage"
-],
-"drop": []
-},
-"741927": {
-"add": [],
-"drop": [
-"regeneration"
-]
-},
-"742279": {
-"add": [],
-"drop": [
-"buff"
-]
-},
-"742019": {
-"add": [
-"protection"
-],
-"drop": [
-"cant_attack",
-"disable"
-]
-},
-"742039": {
-"add": [
-"items_consumables:counters"
-],
-"drop": []
-},
-"742342": {
-"add": [
-"tribal",
-"condition"
-],
-"drop": []
-},
-"741941": {
-"add": [],
-"drop": [
-"swap"
-]
-},
-"742075": {
-"add": [
-"movement:benefits"
-],
-"drop": []
-},
-"742173": {
-"add": [],
-"drop": [
-"symmetric_effect"
-]
-},
-"742066": {
-"add": [
-"disable",
-"haste:counters"
-],
-"drop": []
-},
-"742305": {
-"add": [
-"deck_modification"
-],
-"drop": []
-},
-"742236": {
-"add": [
-"terrain:benefits",
-"repeat_trigger",
-"terrain"
-],
-"drop": [
-"damage",
-"turn_end",
-"damage_over_time"
-]
-},
-"742131": {
-"add": [
-"movement:benefits"
-],
-"drop": []
-},
-"741708": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741653": {
-"add": [
-"null_body"
-],
-"drop": []
-},
-"742142": {
-"add": [
-"count_payoff",
-"variety_payoff"
-],
-"drop": []
-},
-"741993": {
-"add": [
-"on_enemy_enter"
-],
-"drop": []
-},
-"742317": {
-"add": [
-"positional",
-"on_play",
-"summon"
-],
-"drop": []
-},
-"742346": {
-"add": [
-"count_payoff"
-],
-"drop": []
-},
-"742349": {
-"add": [
-"deck_modification"
-],
-"drop": []
-},
-"742067": {
-"add": [
-"damage_reduction"
-],
-"drop": []
-},
-"742119": {
-"add": [],
-"drop": [
-"regeneration"
-]
-},
-"741745": {
-"add": [
-"steal"
-],
-"drop": []
-},
-"742352": {
-"add": [
-"forced_movement"
-],
-"drop": []
-},
-"742353": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"742199": {
-"add": [
-"drawback"
-],
-"drop": [
-"movement"
-]
-},
-"741943": {
-"add": [
-"random_ability",
-"turn_end"
-],
-"drop": []
-},
-"741916": {
-"add": [
-"items_consumables:counters"
-],
-"drop": []
-},
-"741890": {
-"add": [
-"on_damaged",
-"return_to_hand"
-],
-"drop": []
-},
-"741904": {
-"add": [
-"revive",
-"death_trigger",
-"random_effect"
-],
-"drop": []
-},
-"742022": {
-"add": [
-"condition",
-"movement",
-"on_attack",
-"resource_gain",
-"territory_trigger"
-],
-"drop": [
-"deck_modification",
-"permanent_growth",
-"passive"
-]
-},
-"742001": {
-"add": [
-"debuff"
-],
-"drop": []
-},
-"742294": {
-"add": [
-"generate_cards",
-"items_consumables"
-],
-"drop": []
-},
-"742206": {
-"add": [
-"deathtouch"
-],
-"drop": []
-},
-"742210": {
-"add": [
-"autonomous_units",
-"on_play"
-],
-"drop": [
-"activated",
-"extra_turn",
-"turn_start"
-]
-},
-"742147": {
-"add": [
-"deathtouch"
-],
-"drop": []
-},
-"742063": {
-"add": [
-"junk_cards"
-],
-"drop": []
-},
-"741787": {
-"add": [
-"friendly_fire",
-"symmetric_effect"
-],
-"drop": [
-"damage_over_time"
-]
-},
-"742046": {
-"add": [
-"enemy_benefit"
-],
-"drop": []
-},
-"741660": {
-"add": [
-"generate_cards"
-],
-"drop": []
-},
-"742110": {
-"add": [
-"spell_power"
-],
-"drop": []
-},
-"742303": {
-"add": [
-"in_hand_buff",
-"death_trigger"
-],
-"drop": [
-"death_count"
-]
-},
-"742097": {
-"add": [
-"symmetric_effect",
-"friendly_fire",
-"adjacency",
-"damage",
-"on_play"
-],
-"drop": []
-},
-"741615": {
-"add": [
-"silence"
-],
-"drop": []
-},
-"741928": {
-"add": [
-"forced_movement",
-"ranged"
-],
-"drop": [
-"rows",
-"lanes"
-]
-},
-"742357": {
-"add": [
-"delayed"
-],
-"drop": []
-},
-"741569": {
-"add": [
-"forced_movement"
-],
-"drop": []
-},
-"742101": {
-"add": [
-"free_play"
-],
-"drop": []
-},
-"741781": {
-"add": [
-"friendly_fire"
-],
-"drop": []
-},
-"741878": {
-"add": [
-"on_enemy_enter"
-],
-"drop": []
-},
-"741983": {
-"add": [
-"self_destruct"
-],
-"drop": []
-},
-"742146": {
-"add": [
-"cost_reduction",
-"in_hand_buff"
-],
-"drop": []
-},
-"742231": {
-"add": [
-"items_consumables"
-],
-"drop": []
-},
-"741949": {
-"add": [
-"revive"
-],
-"drop": []
-},
-"742113": {
-"add": [
-"aoe_damage",
-"adjacency",
-"on_damaged"
-],
-"drop": [
-"damage:benefits",
-"damage"
-]
-},
-"742198": {
-"add": [
-"multi_attack"
-],
-"drop": [
-"activated"
-]
-},
-"741917": {
-"add": [
-"multi_attack"
-],
-"drop": [
-"activated"
-]
-},
-"741620": {
-"add": [
-"multi_attack"
-],
-"drop": [
-"activated"
-]
-},
-"742029": {
-"add": [
-"tribal",
-"buff",
-"condition_count"
-],
-"drop": []
-},
-"741973": {
-"add": [
-"flanking",
-"movement",
-"stealth",
-"transform",
-"trap_secret"
-],
-"drop": [
-"counterattack",
-"damage"
-]
-},
-"742153": {
-"add": [
-"untap",
-"stat_condition",
-"steal",
-"temporary_effect"
-],
-"drop": [
-"extra_turn"
-]
-},
-"741986": {
-"add": [
-"area_templates",
-"terrain"
-],
-"drop": [
-"summon"
-]
-},
-"741854": {
-"add": [
-"tribal",
-"damage",
-"tutor"
-],
-"drop": []
-},
-"742196": {
-"add": [
-"death_trigger",
-"draw",
-"random_effect"
-],
-"drop": [
-"activated",
-"turn_start",
-"autonomous_units"
-]
-},
-"741531": {
-"add": [
-"on_ally_play",
-"summon",
-"terrain"
-],
-"drop": []
-},
-"741919": {
-"add": [
-"movement",
-"on_damaged",
-"random_effect"
-],
-"drop": [
-"damage:benefits"
-]
-},
-"741748": {
-"add": [
-"direct_damage",
-"haste"
-],
-"drop": [
-"attack_now"
-]
-},
-"742275": {
-"add": [
-"on_spell",
-"temporary_buff"
-],
-"drop": [
-"delayed"
-]
-},
-"741882": {
-"add": [
-"adjacency",
-"delayed",
-"multi_target_attack",
-"on_play",
-"transform"
-],
-"drop": [
-"on_damaged",
-"count_payoff"
-]
-},
-"742000": {
-"add": [
-"transform",
-"trap_secret"
-],
-"drop": [
-"stealth"
-]
-},
-"742325": {
-"add": [
-"transform",
-"death_trigger",
-"on_attack",
-"revive"
-],
-"drop": [
-"counterattack",
-"delayed"
-]
-},
-"742175": {
-"add": [
-"cost_reduction",
-"count_payoff"
-],
-"drop": []
-},
-"741832": {
-"add": [
-"cant_attack",
-"drawback",
-"tank"
-],
-"drop": [
-"terrain",
-"zone_control"
-]
-},
-"742050": {
-"add": [
-"condition",
-"buff",
-"passive"
-],
-"drop": []
-},
-"742217": {
-"add": [
-"buff",
-"autonomous_units",
-"on_play"
-],
-"drop": []
-},
-"741819": {
-"add": [
-"buff",
-"condition",
-"multi_attack",
-"territory_trigger"
-],
-"drop": [
-"activated",
-"passive"
-]
-},
-"742042": {
-"add": [
-"summon",
-"on_attack",
-"ranged"
-],
-"drop": []
-},
-"742134": {
-"add": [
-"aoe_damage",
-"on_damaged",
-"ping"
-],
-"drop": [
-"damage:benefits"
-]
-},
-"742021": {
-"add": [
-"aoe_damage",
-"adjacency",
-"death_trigger"
-],
-"drop": [
-"damage"
-]
-},
-"741954": {
-"add": [
-"adjacency",
-"on_play",
-"terrain"
-],
-"drop": [
-"heal",
-"turn_end"
-]
-},
-"741704": {
-"add": [
-"tribal",
-"condition",
-"buff",
-"on_play"
-],
-"drop": []
-},
-"742092": {
-"add": [
-"on_damaged",
-"adjacency",
-"immobilize",
-"silence",
-"taunt"
-],
-"drop": [
-"damage"
-]
-},
-"742251": {
-"add": [
-"aura",
-"buff",
-"tribal"
-],
-"drop": []
-},
-"742221": {
-"add": [
-"tribal",
-"adjacency",
-"buff",
-"condition"
-],
-"drop": []
-},
-"741611": {
-"add": [
-"debuff",
-"adjacency",
-"buff",
-"on_play"
-],
-"drop": []
-},
-"741979": {
-"add": [
-"untap",
-"ranged:benefits"
-],
-"drop": [
-"extra_turn"
-]
-},
-"742031": {
-"add": [
-"adjacency",
-"copy",
-"transform"
-],
-"drop": []
-},
-"742010": {
-"add": [
-"multi_target_attack",
-"permanent_growth",
-"shield",
-"turn_start"
-],
-"drop": [
-"adjacency",
-"on_damaged"
-]
-},
-"742193": {
-"add": [
-"tribal",
-"buff",
-"movement"
-],
-"drop": [
-"cant_attack:grants",
-"tank:grants",
-"terrain"
-]
-},
-"741701": {
-"add": [
-"tribal",
-"aura",
-"buff",
-"summon"
-],
-"drop": [
-"adjacency",
-"turn_end",
-"turn_start"
-]
-},
-"742083": {
-"add": [
-"damage:counters",
-"on_play",
-"temporary_effect"
-],
-"drop": [
-"delayed",
-"spell_power",
-"spell_power:benefits",
-"damage_reduction:benefits",
-"temporary_buff:benefits"
-]
-},
-"741765": {
-"add": [
-"aoe_damage",
-"adjacency",
-"death_trigger"
-],
-"drop": [
-"damage"
-]
-},
-"741881": {
-"add": [
-"delayed",
-"on_play",
-"ranged",
-"transform"
-],
-"drop": [
-"count_payoff"
-]
-},
-"741527": {
-"add": [
-"death_trigger"
-],
-"drop": [
-"death_count"
-]
-},
-"741921": {
-"add": [
-"adjacency",
-"random_ability",
-"summon",
-"turn_end"
-],
-"drop": []
-},
-"742062": {
-"add": [
-"passive"
-],
-"drop": []
-},
-"741737": {
-"add": [
-"buff",
-"condition_count",
-"terrain"
-],
-"drop": [
-"damage_over_time",
-"turn_end"
-]
-},
-"741580": {
-"add": [
-"area_templates",
-"movement",
-"multi_target_attack",
-"stat_multiply"
-],
-"drop": [
-"debuff",
-"lanes"
-]
-},
-"742114": {
-"add": [
-"aura",
-"buff",
-"positional:benefits",
-"territory_trigger"
-],
-"drop": [
-"condition:benefits"
-]
-},
-"742098": {
-"add": [
-"aura",
-"buff",
-"ranged"
-],
-"drop": []
-},
-"742047": {
-"add": [
-"death_trigger",
-"tribal",
-"buff"
-],
-"drop": [
-"death_count",
-"destroy:benefits",
-"sacrifice:benefits"
-]
-},
-"741953": {
-"add": [
-"reactions",
-"buff"
-],
-"drop": []
-},
-"741894": {
-"add": [
-"damage_reduction"
-],
-"drop": [
-"damage:counters"
-]
-},
-"742271": {
-"add": [
-"aoe_damage",
-"area_templates",
-"heal",
-"rows"
-],
-"drop": [
-"damage"
-]
-},
-"741662": {
-"add": [
-"cost_increase",
-"delayed",
-"on_play"
-],
-"drop": []
-},
-"742355": {
-"add": [
-"delayed",
-"heal",
-"transform"
-],
-"drop": []
-},
-"741789": {
-"add": [
-"buff"
-],
-"drop": []
-},
-"741645": {
-"add": [
-"hero_power",
-"movement"
-],
-"drop": []
-},
-"742037": {
-"add": [
-"ping"
-],
-"drop": []
-},
-"742013": {
-"add": [
-"buff",
-"disable"
-],
-"drop": []
-},
-"742341": {
-"add": [
-"aura",
-"positional:grants",
-"territory_trigger"
-],
-"drop": []
-},
-"741552": {
-"add": [
-"counterattack",
-"damage",
-"flanking"
-],
-"drop": []
-},
-"742319": {
-"add": [
-"buff",
-"delayed",
-"on_attack",
-"transform"
-],
-"drop": []
-},
-"741524": {
-"add": [
-"hero_power",
-"on_spell"
-],
-"drop": []
-},
-"741800": {
-"add": [
-"heal"
-],
-"drop": []
-},
-"741762": {
-"add": [
-"destroy",
-"sacrifice"
-],
-"drop": []
-},
-"741554": {
-"add": [
-"delayed",
-"transform"
-],
-"drop": []
-},
-"741545": {
-"add": [
-"cant_attack",
-"drawback"
-],
-"drop": []
-},
-"741549": {
-"add": [
-"immunity"
-],
-"drop": []
-},
-"741962": {
-"add": [
-"condition_count",
-"heal"
-],
-"drop": []
-},
-"742345": {
-"add": [
-"on_play",
-"tutor"
-],
-"drop": []
-},
-"741766": {
-"add": [
-"buff"
-],
-"drop": []
-},
-"741764": {
-"add": [
-"condition_count",
-"direct_damage",
-"ping"
-],
-"drop": []
-},
-"742224": {
-"add": [
-"generate_cards",
-"on_play",
-"tribal"
-],
-"drop": []
-},
-"741825": {
-"add": [
-"on_play",
-"temporary_buff"
-],
-"drop": []
-},
-"741956": {
-"add": [
-"buff",
-"on_ally_play",
-"stat_condition",
-"summon:benefits"
-],
-"drop": []
-},
-"742100": {
-"add": [
-"cost_reduction",
-"movement"
-],
-"drop": []
-},
-"742188": {
-"add": [
-"adjacency",
-"on_attack",
-"shield",
-"summon"
-],
-"drop": []
-},
-"741627": {
-"add": [
-"adjacency",
-"board_wipe",
-"destroy",
-"symmetric_effect"
-],
-"drop": []
-},
-"741648": {
-"add": [
-"ranged"
-],
-"drop": []
-},
-"741869": {
-"add": [
-"adjacency",
-"immobilize",
-"taunt"
-],
-"drop": []
-},
-"742260": {
-"add": [
-"buff"
-],
-"drop": []
-},
-"742043": {
-"add": [
-"attack_now",
-"haste"
-],
-"drop": []
-},
-"741721": {
-"add": [
-"buff",
-"draw"
-],
-"drop": []
-},
-"742048": {
-"add": [
-"heal",
-"movement"
-],
-"drop": []
-},
-"741931": {
-"add": [
-"adjacency",
-"immobilize",
-"taunt"
-],
-"drop": []
-},
-"741558": {
-"add": [
-"immunity"
-],
-"drop": []
-},
-"741776": {
-"add": [
-"permanent_growth",
-"turn_start"
-],
-"drop": []
-},
-"741912": {
-"add": [
-"destroy",
-"on_play",
-"ranged:counters"
-],
-"drop": []
-},
-"741635": {
-"add": [
-"damage",
-"heal"
-],
-"drop": []
-},
-"741694": {
-"add": [
-"death_trigger",
-"draw",
-"movement"
-],
-"drop": []
-},
-"741908": {
-"add": [
-"adjacency",
-"buff",
-"death_trigger"
-],
-"drop": []
-},
-"741553": {
-"add": [
-"immunity"
-],
-"drop": []
-},
-"741567": {
-"add": [
-"shield:grants"
-],
-"drop": []
-},
-"742160": {
-"add": [
-"adjacency",
-"on_play",
-"stat_multiply"
-],
-"drop": []
-},
-"741932": {
-"add": [
-"adjacency",
-"damage",
-"on_play"
-],
-"drop": []
-},
-"742045": {
-"add": [
-"multi_target_attack"
-],
-"drop": []
-},
-"741759": {
-"add": [
-"aoe_damage",
-"heal"
-],
-"drop": []
-},
-"741534": {
-"add": [
-"permanent_growth",
-"turn_start"
-],
-"drop": []
-},
-"742122": {
-"add": [
-"transform"
-],
-"drop": []
-},
-"742055": {
-"add": [
-"ranged"
-],
-"drop": []
-},
-"741657": {
-"add": [
-"buff",
-"on_spell"
-],
-"drop": []
-},
-"742105": {
-"add": [
-"adjacency",
-"buff",
-"turn_end"
-],
-"drop": []
-}
+ "741642": {
+  "add": [
+   "items_consumables",
+   "adjacency",
+   "aura",
+   "buff"
+  ],
+  "drop": []
+ },
+ "741643": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741644": {
+  "add": [
+   "items_consumables",
+   "damage_reduction"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "741688": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741689": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741690": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741730": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741731": {
+  "add": [
+   "items_consumables",
+   "area_templates",
+   "multi_target_attack"
+  ],
+  "drop": [
+   "lanes"
+  ]
+ },
+ "741732": {
+  "add": [
+   "items_consumables",
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "741770": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741771": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741772": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741810": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741811": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741812": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": [
+   "on_damaged"
+  ]
+ },
+ "741855": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741856": {
+  "add": [
+   "items_consumables",
+   "adjacency"
+  ],
+  "drop": [
+   "damage_over_time"
+  ]
+ },
+ "741857": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741958": {
+  "add": [
+   "items_consumables",
+   "adjacency",
+   "aura",
+   "buff"
+  ],
+  "drop": []
+ },
+ "741969": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741990": {
+  "add": [
+   "items_consumables",
+   "on_kill",
+   "terrain"
+  ],
+  "drop": [
+   "summon"
+  ]
+ },
+ "741997": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742018": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742023": {
+  "add": [
+   "items_consumables",
+   "forced_movement"
+  ],
+  "drop": []
+ },
+ "742128": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742141": {
+  "add": [
+   "items_consumables",
+   "spell_power"
+  ],
+  "drop": []
+ },
+ "742156": {
+  "add": [
+   "items_consumables",
+   "on_kill"
+  ],
+  "drop": []
+ },
+ "742169": {
+  "add": [
+   "items_consumables",
+   "terrain:benefits"
+  ],
+  "drop": [
+   "damage",
+   "turn_end"
+  ]
+ },
+ "742182": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742195": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742223": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742227": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742233": {
+  "add": [
+   "items_consumables",
+   "adjacency",
+   "copy",
+   "on_kill",
+   "summon"
+  ],
+  "drop": []
+ },
+ "742238": {
+  "add": [
+   "items_consumables",
+   "revive",
+   "summon",
+   "adjacency",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "742240": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742249": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742274": {
+  "add": [
+   "items_consumables",
+   "adjacency",
+   "positional"
+  ],
+  "drop": []
+ },
+ "742277": {
+  "add": [
+   "items_consumables",
+   "draw",
+   "on_spell"
+  ],
+  "drop": []
+ },
+ "742299": {
+  "add": [
+   "items_consumables",
+   "damage_reduction",
+   "immunity"
+  ],
+  "drop": []
+ },
+ "742312": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": [
+   "on_damaged"
+  ]
+ },
+ "742327": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742337": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "Infiltrate": {
+  "add": [],
+  "drop": [
+   "board_clog"
+  ]
+ },
+ "MECHAZ0R": {
+  "add": [
+   "count_payoff"
+  ],
+  "drop": []
+ },
+ "Sentinel": {
+  "add": [
+   "trap_secret"
+  ],
+  "drop": []
+ },
+ "Shadow Creep": {
+  "add": [
+   "damage_over_time"
+  ],
+  "drop": []
+ },
+ "Wall": {
+  "add": [
+   "zone_control"
+  ],
+  "drop": []
+ },
+ "742314": {
+  "add": [
+   "sacrifice",
+   "buff",
+   "merge_attach",
+   "summon"
+  ],
+  "drop": [
+   "destroy"
+  ]
+ },
+ "741584": {
+  "add": [
+   "terrain:benefits"
+  ],
+  "drop": [
+   "damage",
+   "turn_end"
+  ]
+ },
+ "741751": {
+  "add": [
+   "condition",
+   "ping",
+   "terrain"
+  ],
+  "drop": [
+   "transform",
+   "damage_over_time",
+   "turn_end"
+  ]
+ },
+ "742124": {
+  "add": [
+   "condition"
+  ],
+  "drop": []
+ },
+ "741963": {
+  "add": [
+   "area_templates"
+  ],
+  "drop": [
+   "scope_global",
+   "board_wipe"
+  ]
+ },
+ "741684": {
+  "add": [
+   "items_consumables:counters",
+   "removal"
+  ],
+  "drop": []
+ },
+ "741850": {
+  "add": [
+   "aoe_damage",
+   "adjacency"
+  ],
+  "drop": []
+ },
+ "741848": {
+  "add": [
+   "silence",
+   "removal"
+  ],
+  "drop": []
+ },
+ "742151": {
+  "add": [
+   "generate_cards"
+  ],
+  "drop": [
+   "draw"
+  ]
+ },
+ "742338": {
+  "add": [
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "741717": {
+  "add": [
+   "condition_count",
+   "items_consumables:benefits",
+   "temporary_buff"
+  ],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "741579": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741844": {
+  "add": [
+   "positional",
+   "friendly_fire",
+   "symmetric_effect",
+   "aoe_damage",
+   "disable"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "742284": {
+  "add": [
+   "null_body",
+   "removal",
+   "hand_size"
+  ],
+  "drop": [
+   "slot_filler"
+  ]
+ },
+ "741840": {
+  "add": [
+   "zone_control"
+  ],
+  "drop": []
+ },
+ "742033": {
+  "add": [
+   "disable"
+  ],
+  "drop": [
+   "delayed",
+   "movement"
+  ]
+ },
+ "741715": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "742230": {
+  "add": [
+   "steal"
+  ],
+  "drop": []
+ },
+ "741727": {
+  "add": [
+   "adjacency"
+  ],
+  "drop": []
+ },
+ "741839": {
+  "add": [
+   "disable",
+   "summon"
+  ],
+  "drop": [
+   "zone_control",
+   "drawback"
+  ]
+ },
+ "741801": {
+  "add": [],
+  "drop": [
+   "fodder"
+  ]
+ },
+ "742295": {
+  "add": [
+   "life_payment"
+  ],
+  "drop": []
+ },
+ "741845": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ },
+ "742270": {
+  "add": [
+   "aura",
+   "buff",
+   "stat_gain",
+   "on_ally_play",
+   "adjacency"
+  ],
+  "drop": []
+ },
+ "742243": {
+  "add": [
+   "cost_condition",
+   "tribal",
+   "random_effect",
+   "sacrifice",
+   "summon"
+  ],
+  "drop": [
+   "cost_increase",
+   "destroy"
+  ]
+ },
+ "742005": {
+  "add": [
+   "terrain:benefits"
+  ],
+  "drop": [
+   "damage",
+   "turn_end"
+  ]
+ },
+ "741841": {
+  "add": [
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741573": {
+  "add": [
+   "direct_damage"
+  ],
+  "drop": []
+ },
+ "741598": {
+  "add": [
+   "immunity"
+  ],
+  "drop": [
+   "delayed"
+  ]
+ },
+ "741769": {
+  "add": [
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "742006": {
+  "add": [
+   "direct_damage"
+  ],
+  "drop": []
+ },
+ "742154": {
+  "add": [
+   "revive",
+   "summon",
+   "death_trigger:benefits",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "742136": {
+  "add": [
+   "autonomous_units",
+   "damage"
+  ],
+  "drop": [
+   "activated",
+   "extra_turn"
+  ]
+ },
+ "741754": {
+  "add": [
+   "forced_movement",
+   "ping"
+  ],
+  "drop": []
+ },
+ "741763": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "742273": {
+  "add": [
+   "protection",
+   "adjacency",
+   "damage:counters",
+   "temporary_effect"
+  ],
+  "drop": [
+   "immunity"
+  ]
+ },
+ "741681": {
+  "add": [
+   "deathtouch"
+  ],
+  "drop": []
+ },
+ "741711": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "742313": {
+  "add": [
+   "stat_loss",
+   "temporary_effect"
+  ],
+  "drop": [
+   "delayed"
+  ]
+ },
+ "741796": {
+  "add": [],
+  "drop": [
+   "on_damaged"
+  ]
+ },
+ "741999": {
+  "add": [
+   "alt_wincon"
+  ],
+  "drop": []
+ },
+ "741566": {
+  "add": [
+   "friendly_fire",
+   "life_payment"
+  ],
+  "drop": []
+ },
+ "741992": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742166": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "741675": {
+  "add": [
+   "spell_power"
+  ],
+  "drop": []
+ },
+ "742316": {
+  "add": [
+   "condition",
+   "draw"
+  ],
+  "drop": []
+ },
+ "741599": {
+  "add": [
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "742331": {
+  "add": [
+   "generate_cards",
+   "copy",
+   "disable"
+  ],
+  "drop": [
+   "draw"
+  ]
+ },
+ "742015": {
+  "add": [
+   "free_play"
+  ],
+  "drop": []
+ },
+ "742125": {
+  "add": [],
+  "drop": [
+   "draw"
+  ]
+ },
+ "742177": {
+  "add": [],
+  "drop": [
+   "draw"
+  ]
+ },
+ "742164": {
+  "add": [],
+  "drop": [
+   "draw"
+  ]
+ },
+ "741977": {
+  "add": [
+   "lifesteal",
+   "direct_damage",
+   "condition_count"
+  ],
+  "drop": []
+ },
+ "742181": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "741975": {
+  "add": [
+   "flanking"
+  ],
+  "drop": []
+ },
+ "742354": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742024": {
+  "add": [
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "741838": {
+  "add": [
+   "zone_control",
+   "tank"
+  ],
+  "drop": []
+ },
+ "741852": {
+  "add": [
+   "removal"
+  ],
+  "drop": []
+ },
+ "742324": {
+  "add": [
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "742032": {
+  "add": [
+   "placement_rules"
+  ],
+  "drop": []
+ },
+ "742272": {
+  "add": [
+   "condition"
+  ],
+  "drop": []
+ },
+ "742228": {
+  "add": [],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "741683": {
+  "add": [
+   "movement"
+  ],
+  "drop": []
+ },
+ "742290": {
+  "add": [
+   "disable"
+  ],
+  "drop": [
+   "movement"
+  ]
+ },
+ "741809": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": [
+   "scope_global"
+  ]
+ },
+ "742140": {
+  "add": [
+   "deck_modification",
+   "cost_set"
+  ],
+  "drop": [
+   "cost_condition"
+  ]
+ },
+ "741629": {
+  "add": [
+   "stat_loss",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "742178": {
+  "add": [
+   "condition"
+  ],
+  "drop": []
+ },
+ "742298": {
+  "add": [
+   "lone_unit:counters"
+  ],
+  "drop": []
+ },
+ "742126": {
+  "add": [
+   "condition"
+  ],
+  "drop": []
+ },
+ "742020": {
+  "add": [
+   "zone_control"
+  ],
+  "drop": []
+ },
+ "742163": {
+  "add": [
+   "cost_reduction",
+   "in_hand_buff"
+  ],
+  "drop": [
+   "death_trigger",
+   "scope_global"
+  ]
+ },
+ "742288": {
+  "add": [],
+  "drop": [
+   "random_effect"
+  ]
+ },
+ "741752": {
+  "add": [
+   "life_payment"
+  ],
+  "drop": []
+ },
+ "742248": {
+  "add": [],
+  "drop": [
+   "deck_modification",
+   "permanent_growth"
+  ]
+ },
+ "741847": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "741630": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "741846": {
+  "add": [
+   "forced_movement"
+  ],
+  "drop": []
+ },
+ "741803": {
+  "add": [
+   "silence",
+   "removal",
+   "temporary_effect",
+   "polymorph"
+  ],
+  "drop": []
+ },
+ "741666": {
+  "add": [
+   "delayed"
+  ],
+  "drop": []
+ },
+ "741587": {
+  "add": [
+   "summon",
+   "adjacency",
+   "destroy",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "scope_global",
+   "board_wipe"
+  ]
+ },
+ "741755": {
+  "add": [
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "742004": {
+  "add": [
+   "terrain:benefits"
+  ],
+  "drop": [
+   "damage",
+   "turn_end"
+  ]
+ },
+ "742168": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": [
+   "turn_end"
+  ]
+ },
+ "741679": {
+  "add": [
+   "null_body",
+   "removal"
+  ],
+  "drop": []
+ },
+ "742138": {
+  "add": [
+   "null_body",
+   "symmetric_effect",
+   "immunity",
+   "temporary_effect",
+   "polymorph",
+   "transform"
+  ],
+  "drop": []
+ },
+ "741665": {
+  "add": [],
+  "drop": [
+   "draw"
+  ]
+ },
+ "742315": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "742064": {
+  "add": [
+   "junk_cards",
+   "play_restriction",
+   "recycle"
+  ],
+  "drop": [
+   "passive"
+  ]
+ },
+ "742323": {
+  "add": [
+   "economy"
+  ],
+  "drop": []
+ },
+ "741720": {
+  "add": [
+   "disable"
+  ],
+  "drop": [
+   "movement"
+  ]
+ },
+ "741722": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ },
+ "742137": {
+  "add": [
+   "cost_reduction",
+   "in_hand_buff",
+   "stat_gain"
+  ],
+  "drop": [
+   "scope_global",
+   "damage:grants"
+  ]
+ },
+ "741996": {
+  "add": [
+   "flanking"
+  ],
+  "drop": []
+ },
+ "742123": {
+  "add": [
+   "positional",
+   "removal",
+   "adjacency",
+   "destroy"
+  ],
+  "drop": []
+ },
+ "742165": {
+  "add": [
+   "damage_over_time"
+  ],
+  "drop": []
+ },
+ "741978": {
+  "add": [
+   "condition",
+   "damage"
+  ],
+  "drop": []
+ },
+ "741853": {
+  "add": [
+   "positional"
+  ],
+  "drop": []
+ },
+ "741726": {
+  "add": [
+   "zone_control"
+  ],
+  "drop": [
+   "rows"
+  ]
+ },
+ "742285": {
+  "add": [
+   "movement"
+  ],
+  "drop": []
+ },
+ "741991": {
+  "add": [
+   "fodder",
+   "zone_control"
+  ],
+  "drop": []
+ },
+ "741668": {
+  "add": [
+   "forced_movement"
+  ],
+  "drop": []
+ },
+ "741568": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "742180": {
+  "add": [
+   "delayed"
+  ],
+  "drop": []
+ },
+ "741674": {
+  "add": [
+   "delayed"
+  ],
+  "drop": [
+   "generate_cards"
+  ]
+ },
+ "741964": {
+  "add": [
+   "revive",
+   "summon",
+   "terrain:benefits"
+  ],
+  "drop": [
+   "heal",
+   "turn_end"
+  ]
+ },
+ "742167": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "742190": {
+  "add": [
+   "territory_trigger"
+  ],
+  "drop": []
+ },
+ "742103": {
+  "add": [
+   "cost_reduction",
+   "in_hand_buff"
+  ],
+  "drop": []
+ },
+ "741736": {
+  "add": [
+   "damage_over_time"
+  ],
+  "drop": []
+ },
+ "741946": {
+  "add": [
+   "recycle"
+  ],
+  "drop": []
+ },
+ "741959": {
+  "add": [
+   "deck_condition",
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742161": {
+  "add": [
+   "cost_set"
+  ],
+  "drop": []
+ },
+ "741902": {
+  "add": [
+   "cost_increase"
+  ],
+  "drop": [
+   "hero_power"
+  ]
+ },
+ "742088": {
+  "add": [
+   "recycle"
+  ],
+  "drop": []
+ },
+ "742102": {
+  "add": [],
+  "drop": [
+   "regeneration"
+  ]
+ },
+ "742058": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "741741": {
+  "add": [
+   "stat_loss",
+   "temporary_effect",
+   "adjacency",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "742057": {
+  "add": [
+   "cost_reduction",
+   "adjacency",
+   "immobilize",
+   "taunt"
+  ],
+  "drop": [
+   "condition_life"
+  ]
+ },
+ "742150": {
+  "add": [
+   "life_payment",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "742090": {
+  "add": [],
+  "drop": [
+   "damage_over_time"
+  ]
+ },
+ "742351": {
+  "add": [
+   "board_clog",
+   "donate",
+   "drawback",
+   "death_trigger"
+  ],
+  "drop": [
+   "destroy:benefits",
+   "death_count",
+   "sacrifice:benefits"
+  ]
+ },
+ "741942": {
+  "add": [
+   "lifesteal",
+   "ranged"
+  ],
+  "drop": [
+   "damage:benefits"
+  ]
+ },
+ "742008": {
+  "add": [
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "742261": {
+  "add": [
+   "resource_gain"
+  ],
+  "drop": []
+ },
+ "741659": {
+  "add": [
+   "deathtouch"
+  ],
+  "drop": []
+ },
+ "742059": {
+  "add": [
+   "comeback"
+  ],
+  "drop": []
+ },
+ "742246": {
+  "add": [
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "741876": {
+  "add": [
+   "on_enemy_enter"
+  ],
+  "drop": []
+ },
+ "741834": {
+  "add": [],
+  "drop": [
+   "deck_modification",
+   "permanent_growth"
+  ]
+ },
+ "742051": {
+  "add": [
+   "removal",
+   "banish",
+   "death_trigger",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "742237": {
+  "add": [
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "742267": {
+  "add": [
+   "condition",
+   "stat_gain",
+   "passive"
+  ],
+  "drop": []
+ },
+ "741740": {
+  "add": [
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "742339": {
+  "add": [
+   "disable"
+  ],
+  "drop": []
+ },
+ "742089": {
+  "add": [
+   "recycle",
+   "life_payment"
+  ],
+  "drop": []
+ },
+ "742253": {
+  "add": [
+   "items_consumables:counters"
+  ],
+  "drop": []
+ },
+ "741968": {
+  "add": [
+   "null_body",
+   "removal"
+  ],
+  "drop": []
+ },
+ "741948": {
+  "add": [
+   "enemy_benefit",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "741780": {
+  "add": [
+   "life_payment"
+  ],
+  "drop": []
+ },
+ "742107": {
+  "add": [
+   "forced_movement"
+  ],
+  "drop": []
+ },
+ "741980": {
+  "add": [],
+  "drop": [
+   "draw"
+  ]
+ },
+ "742072": {
+  "add": [],
+  "drop": [
+   "draw"
+  ]
+ },
+ "741909": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "741966": {
+  "add": [
+   "movement:benefits",
+   "adjacency",
+   "aoe_damage"
+  ],
+  "drop": []
+ },
+ "742026": {
+  "add": [
+   "swap",
+   "transform",
+   "trap_secret"
+  ],
+  "drop": [
+   "stealth"
+  ]
+ },
+ "741901": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "742076": {
+  "add": [
+   "forced_movement"
+  ],
+  "drop": []
+ },
+ "742158": {
+  "add": [
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "741601": {
+  "add": [
+   "zone_control",
+   "disable"
+  ],
+  "drop": []
+ },
+ "741619": {
+  "add": [
+   "cheat_death"
+  ],
+  "drop": []
+ },
+ "742135": {
+  "add": [
+   "autonomous_units",
+   "disable"
+  ],
+  "drop": []
+ },
+ "742297": {
+  "add": [],
+  "drop": [
+   "rows"
+  ]
+ },
+ "741661": {
+  "add": [
+   "life_payment",
+   "drawback"
+  ],
+  "drop": [
+   "damage_over_time"
+  ]
+ },
+ "741824": {
+  "add": [
+   "movement"
+  ],
+  "drop": []
+ },
+ "741699": {
+  "add": [
+   "items_consumables",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "742211": {
+  "add": [
+   "adjacency",
+   "immobilize",
+   "random_ability",
+   "summon",
+   "taunt"
+  ],
+  "drop": [
+   "selection",
+   "selection:benefits",
+   "recycle"
+  ]
+ },
+ "742071": {
+  "add": [
+   "scope_multi",
+   "death_trigger",
+   "silence"
+  ],
+  "drop": []
+ },
+ "741892": {
+  "add": [
+   "positional"
+  ],
+  "drop": []
+ },
+ "742081": {
+  "add": [
+   "positional"
+  ],
+  "drop": []
+ },
+ "742085": {
+  "add": [
+   "revive",
+   "summon",
+   "adjacency",
+   "on_play",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "742132": {
+  "add": [
+   "immobilize",
+   "delayed",
+   "on_play",
+   "ranged"
+  ],
+  "drop": [
+   "movement",
+   "disable"
+  ]
+ },
+ "742162": {
+  "add": [
+   "damage_over_time"
+  ],
+  "drop": []
+ },
+ "742202": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "742034": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "742239": {
+  "add": [
+   "damage"
+  ],
+  "drop": []
+ },
+ "741927": {
+  "add": [],
+  "drop": [
+   "regeneration"
+  ]
+ },
+ "742279": {
+  "add": [],
+  "drop": [
+   "stat_gain"
+  ]
+ },
+ "742019": {
+  "add": [
+   "protection"
+  ],
+  "drop": [
+   "cant_attack",
+   "disable"
+  ]
+ },
+ "742039": {
+  "add": [
+   "items_consumables:counters"
+  ],
+  "drop": []
+ },
+ "742342": {
+  "add": [
+   "tribal",
+   "condition"
+  ],
+  "drop": []
+ },
+ "741941": {
+  "add": [],
+  "drop": [
+   "swap"
+  ]
+ },
+ "742075": {
+  "add": [
+   "movement:benefits"
+  ],
+  "drop": []
+ },
+ "742173": {
+  "add": [],
+  "drop": [
+   "symmetric_effect"
+  ]
+ },
+ "742066": {
+  "add": [
+   "disable",
+   "haste:counters"
+  ],
+  "drop": []
+ },
+ "742305": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": []
+ },
+ "742236": {
+  "add": [
+   "terrain:benefits",
+   "repeat_trigger",
+   "terrain"
+  ],
+  "drop": [
+   "damage",
+   "turn_end",
+   "damage_over_time"
+  ]
+ },
+ "742131": {
+  "add": [
+   "movement:benefits"
+  ],
+  "drop": []
+ },
+ "741708": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741653": {
+  "add": [
+   "null_body"
+  ],
+  "drop": []
+ },
+ "742142": {
+  "add": [
+   "count_payoff",
+   "variety_payoff"
+  ],
+  "drop": []
+ },
+ "741993": {
+  "add": [
+   "on_enemy_enter"
+  ],
+  "drop": []
+ },
+ "742317": {
+  "add": [
+   "positional",
+   "on_play",
+   "summon"
+  ],
+  "drop": []
+ },
+ "742346": {
+  "add": [
+   "count_payoff"
+  ],
+  "drop": []
+ },
+ "742349": {
+  "add": [
+   "deck_modification"
+  ],
+  "drop": []
+ },
+ "742067": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "742119": {
+  "add": [],
+  "drop": [
+   "regeneration"
+  ]
+ },
+ "741745": {
+  "add": [
+   "steal"
+  ],
+  "drop": []
+ },
+ "742352": {
+  "add": [
+   "forced_movement"
+  ],
+  "drop": []
+ },
+ "742353": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742199": {
+  "add": [
+   "drawback"
+  ],
+  "drop": [
+   "movement"
+  ]
+ },
+ "741943": {
+  "add": [
+   "random_ability",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "741916": {
+  "add": [
+   "items_consumables:counters"
+  ],
+  "drop": []
+ },
+ "741890": {
+  "add": [
+   "on_damaged",
+   "bounce_enemy",
+   "return_to_hand"
+  ],
+  "drop": []
+ },
+ "741904": {
+  "add": [
+   "revive",
+   "summon",
+   "death_trigger",
+   "random_effect"
+  ],
+  "drop": []
+ },
+ "742022": {
+  "add": [
+   "condition",
+   "movement",
+   "on_attack",
+   "resource_gain",
+   "territory_trigger"
+  ],
+  "drop": [
+   "deck_modification",
+   "permanent_growth",
+   "passive"
+  ]
+ },
+ "742001": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "742294": {
+  "add": [
+   "generate_cards",
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "742206": {
+  "add": [
+   "deathtouch"
+  ],
+  "drop": []
+ },
+ "742210": {
+  "add": [
+   "autonomous_units",
+   "on_play"
+  ],
+  "drop": [
+   "activated",
+   "extra_turn",
+   "turn_start"
+  ]
+ },
+ "742147": {
+  "add": [
+   "deathtouch"
+  ],
+  "drop": []
+ },
+ "742063": {
+  "add": [
+   "junk_cards"
+  ],
+  "drop": []
+ },
+ "741787": {
+  "add": [
+   "friendly_fire",
+   "symmetric_effect"
+  ],
+  "drop": [
+   "damage_over_time"
+  ]
+ },
+ "742046": {
+  "add": [
+   "enemy_benefit"
+  ],
+  "drop": []
+ },
+ "741660": {
+  "add": [
+   "generate_cards"
+  ],
+  "drop": []
+ },
+ "742110": {
+  "add": [
+   "spell_power"
+  ],
+  "drop": []
+ },
+ "742303": {
+  "add": [
+   "in_hand_buff",
+   "stat_gain",
+   "death_trigger"
+  ],
+  "drop": [
+   "death_count"
+  ]
+ },
+ "742097": {
+  "add": [
+   "symmetric_effect",
+   "friendly_fire",
+   "adjacency",
+   "damage",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741615": {
+  "add": [
+   "silence"
+  ],
+  "drop": []
+ },
+ "741928": {
+  "add": [
+   "forced_movement",
+   "ranged"
+  ],
+  "drop": [
+   "rows",
+   "lanes"
+  ]
+ },
+ "742357": {
+  "add": [
+   "delayed"
+  ],
+  "drop": []
+ },
+ "741569": {
+  "add": [
+   "forced_movement"
+  ],
+  "drop": []
+ },
+ "742101": {
+  "add": [
+   "free_play"
+  ],
+  "drop": []
+ },
+ "741781": {
+  "add": [
+   "friendly_fire"
+  ],
+  "drop": []
+ },
+ "741878": {
+  "add": [
+   "on_enemy_enter"
+  ],
+  "drop": []
+ },
+ "741983": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "742146": {
+  "add": [
+   "cost_reduction",
+   "in_hand_buff"
+  ],
+  "drop": []
+ },
+ "742231": {
+  "add": [
+   "items_consumables"
+  ],
+  "drop": []
+ },
+ "741949": {
+  "add": [
+   "revive",
+   "summon"
+  ],
+  "drop": []
+ },
+ "742113": {
+  "add": [
+   "aoe_damage",
+   "adjacency",
+   "on_damaged"
+  ],
+  "drop": [
+   "damage:benefits",
+   "damage"
+  ]
+ },
+ "742198": {
+  "add": [
+   "multi_attack"
+  ],
+  "drop": [
+   "activated"
+  ]
+ },
+ "741917": {
+  "add": [
+   "multi_attack"
+  ],
+  "drop": [
+   "activated"
+  ]
+ },
+ "741620": {
+  "add": [
+   "multi_attack"
+  ],
+  "drop": [
+   "activated"
+  ]
+ },
+ "742029": {
+  "add": [
+   "tribal",
+   "stat_gain",
+   "condition_count"
+  ],
+  "drop": []
+ },
+ "741973": {
+  "add": [
+   "flanking",
+   "movement",
+   "stealth",
+   "transform",
+   "trap_secret"
+  ],
+  "drop": [
+   "counterattack",
+   "damage"
+  ]
+ },
+ "742153": {
+  "add": [
+   "untap",
+   "stat_condition",
+   "steal",
+   "temporary_effect"
+  ],
+  "drop": [
+   "extra_turn"
+  ]
+ },
+ "741986": {
+  "add": [
+   "area_templates",
+   "terrain"
+  ],
+  "drop": [
+   "summon"
+  ]
+ },
+ "741854": {
+  "add": [
+   "tribal",
+   "damage",
+   "draw",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "742196": {
+  "add": [
+   "death_trigger",
+   "draw",
+   "random_effect"
+  ],
+  "drop": [
+   "activated",
+   "turn_start",
+   "autonomous_units"
+  ]
+ },
+ "741531": {
+  "add": [
+   "on_ally_play",
+   "summon",
+   "terrain"
+  ],
+  "drop": []
+ },
+ "741919": {
+  "add": [
+   "movement",
+   "on_damaged",
+   "random_effect"
+  ],
+  "drop": [
+   "damage:benefits"
+  ]
+ },
+ "741748": {
+  "add": [
+   "direct_damage",
+   "haste"
+  ],
+  "drop": [
+   "attack_now"
+  ]
+ },
+ "742275": {
+  "add": [
+   "on_spell",
+   "temporary_buff"
+  ],
+  "drop": [
+   "delayed"
+  ]
+ },
+ "741882": {
+  "add": [
+   "adjacency",
+   "delayed",
+   "multi_target_attack",
+   "on_play",
+   "transform"
+  ],
+  "drop": [
+   "on_damaged",
+   "count_payoff"
+  ]
+ },
+ "742000": {
+  "add": [
+   "transform",
+   "trap_secret"
+  ],
+  "drop": [
+   "stealth"
+  ]
+ },
+ "742325": {
+  "add": [
+   "transform",
+   "death_trigger",
+   "on_attack",
+   "revive",
+   "summon"
+  ],
+  "drop": [
+   "counterattack",
+   "delayed"
+  ]
+ },
+ "742175": {
+  "add": [
+   "cost_reduction",
+   "count_payoff"
+  ],
+  "drop": []
+ },
+ "741832": {
+  "add": [
+   "cant_attack",
+   "drawback",
+   "tank"
+  ],
+  "drop": [
+   "terrain",
+   "zone_control"
+  ]
+ },
+ "742050": {
+  "add": [
+   "condition",
+   "stat_gain",
+   "passive"
+  ],
+  "drop": []
+ },
+ "742217": {
+  "add": [
+   "stat_gain",
+   "autonomous_units",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741819": {
+  "add": [
+   "stat_gain",
+   "condition",
+   "multi_attack",
+   "territory_trigger"
+  ],
+  "drop": [
+   "activated",
+   "passive"
+  ]
+ },
+ "742042": {
+  "add": [
+   "summon",
+   "on_attack",
+   "ranged"
+  ],
+  "drop": []
+ },
+ "742134": {
+  "add": [
+   "aoe_damage",
+   "on_damaged",
+   "ping"
+  ],
+  "drop": [
+   "damage:benefits"
+  ]
+ },
+ "742021": {
+  "add": [
+   "aoe_damage",
+   "adjacency",
+   "death_trigger"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "741954": {
+  "add": [
+   "adjacency",
+   "on_play",
+   "terrain"
+  ],
+  "drop": [
+   "heal",
+   "turn_end"
+  ]
+ },
+ "741704": {
+  "add": [
+   "tribal",
+   "condition",
+   "stat_gain",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "742092": {
+  "add": [
+   "on_damaged",
+   "adjacency",
+   "immobilize",
+   "silence",
+   "taunt"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "742251": {
+  "add": [
+   "aura",
+   "buff",
+   "stat_gain",
+   "tribal"
+  ],
+  "drop": []
+ },
+ "742221": {
+  "add": [
+   "tribal",
+   "adjacency",
+   "stat_gain",
+   "condition"
+  ],
+  "drop": []
+ },
+ "741611": {
+  "add": [
+   "stat_loss",
+   "adjacency",
+   "stat_gain",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "741979": {
+  "add": [
+   "untap",
+   "ranged:benefits"
+  ],
+  "drop": [
+   "extra_turn"
+  ]
+ },
+ "742031": {
+  "add": [
+   "adjacency",
+   "copy",
+   "polymorph",
+   "transform"
+  ],
+  "drop": []
+ },
+ "742010": {
+  "add": [
+   "multi_target_attack",
+   "permanent_growth",
+   "shield",
+   "turn_start"
+  ],
+  "drop": [
+   "adjacency",
+   "on_damaged"
+  ]
+ },
+ "742193": {
+  "add": [
+   "tribal",
+   "stat_gain",
+   "movement"
+  ],
+  "drop": [
+   "cant_attack:grants",
+   "tank:grants",
+   "terrain"
+  ]
+ },
+ "741701": {
+  "add": [
+   "tribal",
+   "aura",
+   "buff",
+   "stat_gain",
+   "summon"
+  ],
+  "drop": [
+   "adjacency",
+   "turn_end",
+   "turn_start"
+  ]
+ },
+ "742083": {
+  "add": [
+   "damage:counters",
+   "on_play",
+   "temporary_effect"
+  ],
+  "drop": [
+   "delayed",
+   "spell_power",
+   "spell_power:benefits",
+   "damage_reduction:benefits",
+   "temporary_buff:benefits"
+  ]
+ },
+ "741765": {
+  "add": [
+   "aoe_damage",
+   "adjacency",
+   "death_trigger"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "741881": {
+  "add": [
+   "delayed",
+   "on_play",
+   "ranged",
+   "transform"
+  ],
+  "drop": [
+   "count_payoff"
+  ]
+ },
+ "741527": {
+  "add": [
+   "death_trigger"
+  ],
+  "drop": [
+   "death_count"
+  ]
+ },
+ "741921": {
+  "add": [
+   "adjacency",
+   "random_ability",
+   "summon",
+   "turn_end"
+  ],
+  "drop": []
+ },
+ "742062": {
+  "add": [
+   "passive"
+  ],
+  "drop": []
+ },
+ "741737": {
+  "add": [
+   "stat_gain",
+   "condition_count",
+   "terrain"
+  ],
+  "drop": [
+   "damage_over_time",
+   "turn_end"
+  ]
+ },
+ "741580": {
+  "add": [
+   "area_templates",
+   "movement",
+   "multi_target_attack",
+   "stat_multiply"
+  ],
+  "drop": [
+   "stat_loss",
+   "lanes"
+  ]
+ },
+ "742114": {
+  "add": [
+   "aura",
+   "buff",
+   "stat_gain",
+   "positional:benefits",
+   "territory_trigger"
+  ],
+  "drop": [
+   "condition:benefits"
+  ]
+ },
+ "742098": {
+  "add": [
+   "aura",
+   "buff",
+   "stat_gain",
+   "ranged"
+  ],
+  "drop": []
+ },
+ "742047": {
+  "add": [
+   "death_trigger",
+   "tribal",
+   "stat_gain"
+  ],
+  "drop": [
+   "death_count",
+   "destroy:benefits",
+   "sacrifice:benefits"
+  ]
+ },
+ "741953": {
+  "add": [
+   "reactions",
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "741894": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": [
+   "damage:counters"
+  ]
+ },
+ "742271": {
+  "add": [
+   "aoe_damage",
+   "area_templates",
+   "heal",
+   "rows"
+  ],
+  "drop": [
+   "damage"
+  ]
+ },
+ "741662": {
+  "add": [
+   "cost_increase",
+   "delayed",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "742355": {
+  "add": [
+   "delayed",
+   "heal",
+   "transform"
+  ],
+  "drop": []
+ },
+ "741789": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "741645": {
+  "add": [
+   "hero_power",
+   "movement"
+  ],
+  "drop": []
+ },
+ "742037": {
+  "add": [
+   "ping"
+  ],
+  "drop": []
+ },
+ "742013": {
+  "add": [
+   "stat_gain",
+   "disable"
+  ],
+  "drop": []
+ },
+ "742341": {
+  "add": [
+   "aura",
+   "buff",
+   "positional:grants",
+   "territory_trigger"
+  ],
+  "drop": []
+ },
+ "741552": {
+  "add": [
+   "counterattack",
+   "damage",
+   "flanking"
+  ],
+  "drop": []
+ },
+ "742319": {
+  "add": [
+   "stat_gain",
+   "delayed",
+   "on_attack",
+   "transform"
+  ],
+  "drop": []
+ },
+ "741524": {
+  "add": [
+   "hero_power",
+   "on_spell"
+  ],
+  "drop": []
+ },
+ "741800": {
+  "add": [
+   "heal"
+  ],
+  "drop": []
+ },
+ "741762": {
+  "add": [
+   "destroy",
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "741554": {
+  "add": [
+   "delayed",
+   "transform"
+  ],
+  "drop": []
+ },
+ "741545": {
+  "add": [
+   "cant_attack",
+   "drawback"
+  ],
+  "drop": []
+ },
+ "741549": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ },
+ "741962": {
+  "add": [
+   "condition_count",
+   "heal"
+  ],
+  "drop": []
+ },
+ "742345": {
+  "add": [
+   "on_play",
+   "draw",
+   "tutor"
+  ],
+  "drop": []
+ },
+ "741766": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "741764": {
+  "add": [
+   "condition_count",
+   "direct_damage",
+   "ping"
+  ],
+  "drop": []
+ },
+ "742224": {
+  "add": [
+   "generate_cards",
+   "on_play",
+   "tribal"
+  ],
+  "drop": []
+ },
+ "741825": {
+  "add": [
+   "on_play",
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "741956": {
+  "add": [
+   "stat_gain",
+   "on_ally_play",
+   "stat_condition",
+   "summon:benefits"
+  ],
+  "drop": []
+ },
+ "742100": {
+  "add": [
+   "cost_reduction",
+   "movement"
+  ],
+  "drop": []
+ },
+ "742188": {
+  "add": [
+   "adjacency",
+   "on_attack",
+   "shield",
+   "summon"
+  ],
+  "drop": []
+ },
+ "741627": {
+  "add": [
+   "adjacency",
+   "board_wipe",
+   "destroy",
+   "symmetric_effect"
+  ],
+  "drop": []
+ },
+ "741648": {
+  "add": [
+   "ranged"
+  ],
+  "drop": []
+ },
+ "741869": {
+  "add": [
+   "adjacency",
+   "immobilize",
+   "taunt"
+  ],
+  "drop": []
+ },
+ "742260": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "742043": {
+  "add": [
+   "attack_now",
+   "haste"
+  ],
+  "drop": []
+ },
+ "741721": {
+  "add": [
+   "stat_gain",
+   "draw"
+  ],
+  "drop": []
+ },
+ "742048": {
+  "add": [
+   "heal",
+   "movement"
+  ],
+  "drop": []
+ },
+ "741931": {
+  "add": [
+   "adjacency",
+   "immobilize",
+   "taunt"
+  ],
+  "drop": []
+ },
+ "741558": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ },
+ "741776": {
+  "add": [
+   "permanent_growth",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "741912": {
+  "add": [
+   "destroy",
+   "on_play",
+   "ranged:counters"
+  ],
+  "drop": []
+ },
+ "741635": {
+  "add": [
+   "damage",
+   "heal"
+  ],
+  "drop": []
+ },
+ "741694": {
+  "add": [
+   "death_trigger",
+   "draw",
+   "movement"
+  ],
+  "drop": []
+ },
+ "741908": {
+  "add": [
+   "adjacency",
+   "stat_gain",
+   "death_trigger"
+  ],
+  "drop": []
+ },
+ "741553": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ },
+ "741567": {
+  "add": [
+   "shield:grants"
+  ],
+  "drop": []
+ },
+ "742160": {
+  "add": [
+   "adjacency",
+   "on_play",
+   "stat_multiply"
+  ],
+  "drop": []
+ },
+ "741932": {
+  "add": [
+   "adjacency",
+   "damage",
+   "on_play"
+  ],
+  "drop": []
+ },
+ "742045": {
+  "add": [
+   "multi_target_attack"
+  ],
+  "drop": []
+ },
+ "741759": {
+  "add": [
+   "aoe_damage",
+   "heal"
+  ],
+  "drop": []
+ },
+ "741534": {
+  "add": [
+   "permanent_growth",
+   "turn_start"
+  ],
+  "drop": []
+ },
+ "742122": {
+  "add": [
+   "transform"
+  ],
+  "drop": []
+ },
+ "742055": {
+  "add": [
+   "ranged"
+  ],
+  "drop": []
+ },
+ "741657": {
+  "add": [
+   "stat_gain",
+   "on_spell"
+  ],
+  "drop": []
+ },
+ "742105": {
+  "add": [
+   "adjacency",
+   "stat_gain",
+   "turn_end"
+  ],
+  "drop": []
+ }
 }
