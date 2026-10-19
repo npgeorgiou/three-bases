@@ -58,7 +58,7 @@ else:
         e, k = int(r['entity']), r['concept']
         if e not in live: continue
         if r['action'] == 'drop':
-            drop += c.execute('DELETE FROM entity_concepts WHERE entity=? AND concept=?', (e, k)).rowcount
+            drop += c.execute("DELETE FROM entity_concepts WHERE entity=? AND concept=? AND role NOT IN ('benefits', 'counters')", (e, k)).rowcount   # payoff and answer tags stay
             c.execute('DELETE FROM trigger_effect WHERE entity=? AND (trigger=? OR effect=?)', (e, k, k))
         elif not c.execute('SELECT 1 FROM entity_concepts WHERE entity=? AND concept=?', (e, k)).fetchone():
             add += c.execute('INSERT INTO entity_concepts VALUES(?,?,?,?,?)', (e, k, role.get(k, 'does'), 'answer_key', 'key wins over review (19 Oct 2026)')).rowcount
