@@ -1,0 +1,19 @@
+signature	Northern Realms	block_armor	armour absorbs damage	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
+signature	Monster	aoe_damage	weather hurts enemy side	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
+signature	Monster	sacrifice	consume / kill own units	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
+signature	Skellige	revive	resurrects from graveyard	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+signature	Skellige	condition_life	self-wounding for bonuses	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+signature	Nilfgaard	donate	disloyal units on opponent side	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
+signature	Nilfgaard	deck_position	Xarthisius views opponent deck top	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
+signature	Nilfgaard	tutor	Emissary/Rainfarn fetch deck cards	https://masters.playgwent.com/en/news/22010/the-evolution-of-gwents-factions
+signature	Syndicate	coin_economy	cards generate and spend coins	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+signature	Scoiatael	tribal	dwarf and elf families	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
+archetype	Monster	swarm	swarm and devour	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+archetype	Skellige	graveyard	resurrection, graveyard interaction	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+archetype	Nilfgaard	control	locking, spying, counterplay	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+archetype	Northern Realms	fortress	armour, boosted hard-to-remove units	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
+archetype	Scoiatael	control	Old Schirru control	https://masters.playgwent.com/en/news/22010/the-evolution-of-gwents-factions
+archetype	Scoiatael	spellslinger	special-heavy spell deck	https://masters.playgwent.com/en/news/22010/the-evolution-of-gwents-factions
+archetype	Monster	sacrifice	kill own units deck	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
+combo	Vattier de Rideaux	Mangonel	reveals trigger Mangonel damage	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
+combo	Letho	Fake Ciri	Letho absorbs and destroys Fake Ciri	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
