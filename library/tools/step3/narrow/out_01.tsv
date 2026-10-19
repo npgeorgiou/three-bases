@@ -1,0 +1,2 @@
+forced_movement|does|*|\bmoves?\b	wh_bloodbowl3,faeria,duelyst,sts1,sts2,gwent,wh_killteam,runeterra,wh_underworlds,wh_aos_4th,wh_40k_10e,hearthstone,mtg,inscryption	\bmoves?\b(?= (?:the |a |an )?(?:last played )?(?:enemy|target|opposing|each enemy|all enemy)|.{0,30}\b(?:to the other row|away|toward))
+forced_movement|does|*|\bmoves?\b	into_the_breach,darkest_dungeon,dnd5e	keep
