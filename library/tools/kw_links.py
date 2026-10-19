@@ -51,10 +51,14 @@ def is_action(kid):
     ks = read.get(kid, (set(), False))[0] or {k for k, in q("SELECT concept FROM entity_concepts WHERE entity=?", kid)}
     return bool(ks & ACTION)
 
+# Games where the rule test (kw_rule_test.txt, 19 Oct 2026) showed the dropped links' tags as right as the kept ones: the
+# position rule is not applied there (not-real keywords still lose their links).
+SKIP = {'hearthstone', 'into_the_breach'}
 links = q("SELECT l.rowid, l.src, l.dst, l.evidence FROM entity_links l WHERE l.rel='has_keyword'")
 drop = []
 for rid, s, d, ev in links:
     if d not in kws: continue
+    if kws[d][0] in SKIP and not read.get(d, (None, False))[1]: continue
     if read.get(d, (None, False))[1]: drop.append(rid); continue
     if ev and FIELD.search(ev): continue
     if not valid(txt.get(s), kws[d][1], is_action(d)): drop.append(rid)

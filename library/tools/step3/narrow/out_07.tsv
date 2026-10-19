@@ -8,3 +8,8 @@ forced_movement|does|*|\bcharge rolls?	wh_killteam,wh_aos_4th,wh_40k_10e	(?!)
 condition|does|mtg|(?<!for )\bas long as (you|your|there|this|it|equipped|enchanted|an?|defending|no)\b	mtg	keep
 shield|does|*|\bshield\b	dnd5e,runeterra,wh_underworlds,wh_40k_10e,shadowverse,hearthstone,mtg	\bdivine shield\b|\bshield counters?\b
 shield|does|*|\bshield\b	inscryption,hs_battlegrounds,wh_killteam,wh_aos_4th	keep
+stat_gain|does|darkest_dungeon|\+\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit|max hp)\b|\bbuff: \+	darkest_dungeon	keep
+buff|does|wh_40k_10e|(add|subtract) 1 (to|from) the (hit|wound) roll	wh_40k_10e	add 1 to the (hit|wound) roll
+debuff|does|wh_40k_10e|(add|subtract) 1 (to|from) the (hit|wound) roll	wh_40k_10e	subtract 1 from the hit roll
+condition_count|does|*|equal to the number of	wh_underworlds,mtg,gwent	(?<!less than or )(?<!is )(?<!are )(?<!be )(?<!each )(?<!hexes )equal to the number of
+condition_count|does|*|equal to the number of	inscryption,sts1,sts2	keep

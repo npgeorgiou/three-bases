@@ -37,6 +37,7 @@ steps() {   # $1 = db
   $P regression.py "$D" enforce
   $P concept_tree.py "$D" apply
   $P pattern_fix.py "$D"
+  $P kw_links.py "$D"
   $P parent_rule.py "$D"
   $P dedupe.py "$D"
   $P frequency.py "$D"
@@ -61,6 +62,7 @@ $P finalize.py "$OUT"
 $P regression.py "$OUT" check
 $P combo_check.py "$OUT"
 $P trigger_pairs.py "$OUT" check
+$P realworld.py "$OUT"
 $P compact_text.py "$OUT" compact
 python3 -I -c "import sqlite3,sys; c=sqlite3.connect(sys.argv[1], isolation_level=None); c.execute(\"insert into entity_fts(entity_fts) values('integrity-check')\"); c.execute('vacuum'); print(c.execute('pragma integrity_check').fetchone())" "$OUT"
 $P test_query.py "$OUT"

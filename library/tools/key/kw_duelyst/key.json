@@ -1,0 +1,443 @@
+{
+"741522": {
+"tags": [
+[
+"movement",
+"Move anywhere on the battlefield"
+]
+],
+"by": "A=B"
+},
+"741523": {
+"tags": [
+[
+"multi_target_attack",
+"Attack all enemy minions and Generals in one straight line"
+],
+[
+"area_templates",
+"one straight line"
+]
+],
+"by": "A=B"
+},
+"741524": {
+"tags": [
+[
+"on_spell",
+"after you activate your Bloodbound Spell"
+]
+],
+"by": "A=B"
+},
+"741525": {
+"tags": [
+[
+"on_play",
+"Triggers an effect when summoned"
+],
+[
+"tribal",
+"same tribe"
+]
+],
+"by": "A=B"
+},
+"741526": {
+"tags": [
+[
+"multi_attack",
+"may activate twice per turn"
+]
+],
+"by": "A=B"
+},
+"741527": {
+"tags": [
+[
+"death_trigger",
+"whenever ANY minion dies"
+]
+],
+"by": "A=B"
+},
+"741528": {
+"tags": [
+[
+"on_damaged",
+"Whenever your General takes damage"
+],
+[
+"self_destruct",
+"It's destroyed at 0 Durability"
+]
+],
+"by": "C"
+},
+"741529": {
+"tags": [
+[
+"death_trigger",
+"when this minion dies"
+]
+],
+"by": "A=B"
+},
+"741530": {
+"tags": [
+[
+"self_destruct",
+"Only exists until end of turn"
+],
+[
+"temporary_effect",
+"until end of turn"
+]
+],
+"by": "C"
+},
+"741531": {
+"tags": [
+[
+"summon",
+"Summons a 2/2 Iron Dervish"
+],
+[
+"on_ally_play",
+"when its owner summons a minion from their action bar"
+]
+],
+"by": "A=B"
+},
+"741532": {
+"tags": [
+[
+"shield",
+"Cancel the first damage taken each turn"
+]
+],
+"by": "A=B"
+},
+"741533": {
+"tags": [
+[
+"multi_target_attack",
+"simultaneously strike all other nearby enemies"
+]
+],
+"by": "A=B"
+},
+"741534": {
+"tags": [
+[
+"permanent_growth",
+"Gets bigger"
+],
+[
+"turn_start",
+"at the start of your turn"
+]
+],
+"by": "A=B"
+},
+"741535": {
+"tags": [
+[
+"heal",
+"Restores 1 Health"
+],
+[
+"turn_end",
+"at the end of owner's turn"
+],
+[
+"terrain",
+"Hallowed Ground"
+]
+],
+"by": "A=B"
+},
+"741536": {
+"tags": [
+[
+"territory_trigger",
+"while on the enemy side of the battlefield"
+],
+[
+"buff",
+"Gains a bonus"
+]
+],
+"by": "C"
+},
+"741538": {
+"tags": [],
+"by": "A=B"
+},
+"741539": {
+"tags": [
+[
+"on_play",
+"Triggers an effect when summoned from your action bar"
+]
+],
+"by": "A=B"
+},
+"741540": {
+"tags": [
+[
+"aura",
+"Friendly minions standing on it have"
+],
+[
+"permanent_growth",
+"Grow: +2/+2"
+]
+],
+"by": "A=B"
+},
+"741541": {
+"tags": [
+[
+"ranged",
+"Attack from anywhere on the battlefield"
+]
+],
+"by": "A=B"
+},
+"741542": {
+"tags": [
+[
+"death_trigger",
+"When this dies"
+],
+[
+"summon",
+"leaves behind a 0/1 Egg"
+],
+[
+"revive",
+"hatches into the same minion"
+],
+[
+"delayed",
+"before your next turn"
+]
+],
+"by": "C"
+},
+"741543": {
+"tags": [
+[
+"transform",
+"transform into its true form"
+],
+[
+"reactions",
+"if a specific event occurs on opponent's turn"
+]
+],
+"by": "A=B"
+},
+"741544": {
+"tags": [
+[
+"damage",
+"Deals damage to enemy minions and Generals"
+],
+[
+"turn_end",
+"at the end of owner's turn"
+],
+[
+"terrain",
+"Shadow Creep"
+]
+],
+"by": "A=B"
+},
+"741545": {
+"tags": [
+[
+"cant_attack",
+"This minion cannot move or attack"
+]
+],
+"by": "A=B"
+},
+"741546": {
+"tags": [
+[
+"disable",
+"lose their next action"
+]
+],
+"by": "A=B"
+},
+"741547": {
+"tags": [
+[
+"summon",
+"summon a 2/2 Wind Dervish"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"haste",
+"with Rush"
+],
+[
+"self_destruct",
+"It disappears at the end of your turn"
+]
+],
+"by": "A=B"
+},
+"741548": {
+"tags": [
+[
+"turn_start",
+"Activates at the start of your turn"
+],
+[
+"autonomous_units",
+"moves to attack the nearest enemy"
+]
+],
+"by": "A=B"
+},
+"741549": {
+"tags": [
+[
+"immunity",
+"Cannot be targeted or damaged by spells"
+]
+],
+"by": "A=B"
+},
+"741550": {
+"tags": [],
+"by": "A=B"
+},
+"741551": {
+"tags": [
+[
+"adjacency",
+"nearby your General"
+],
+[
+"buff",
+"Gains a bonus effect"
+]
+],
+"by": "A=B"
+},
+"741552": {
+"tags": [
+[
+"flanking",
+"When attacking from behind"
+],
+[
+"damage",
+"extra damage"
+]
+],
+"by": "C"
+},
+"741553": {
+"tags": [
+[
+"immunity",
+"Cannot die or be affected by ANYTHING"
+]
+],
+"by": "A=B"
+},
+"741554": {
+"tags": [
+[
+"summon",
+"Summon as a 0/10 Structure"
+],
+[
+"transform",
+"transforms into its true form"
+],
+[
+"delayed",
+"after a number of turns"
+]
+],
+"by": "C"
+},
+"741555": {
+"tags": [
+[
+"haste",
+"Can move and attack immediately"
+]
+],
+"by": "A=B"
+},
+"741556": {
+"tags": [
+[
+"placement_rules",
+"Summon this minion anywhere on the battlefield"
+]
+],
+"by": "A=B"
+},
+"741557": {
+"tags": [
+[
+"taunt",
+"They must attack this first"
+],
+[
+"immobilize",
+"Stops nearby enemy minions and Generals from moving"
+]
+],
+"by": "A=B"
+},
+"741558": {
+"tags": [
+[
+"immunity",
+"Cannot be targeted by ANY spells"
+]
+],
+"by": "A=B"
+},
+"741559": {
+"tags": [
+[
+"taunt",
+"Ranged attackers must attack this minion first"
+]
+],
+"by": "A=B"
+},
+"741560": {
+"tags": [
+[
+"silence",
+"Nullifies all abilities and enchantments"
+]
+],
+"by": "A=B"
+},
+"741561": {
+"tags": [
+[
+"immunity",
+"cannot be targeted"
+]
+],
+"by": "A=B"
+}
+}

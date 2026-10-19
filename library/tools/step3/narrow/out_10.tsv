@@ -9,3 +9,9 @@ aura|does|*|\baura\b	hearthstone,shadowverse	(?!)\baura\b
 aura|does|*|\baura\b	dnd5e,wh_killteam,wh_aos_4th,mtg	keep
 damage_types|does|*|\bresistance\b	wh_aos_4th	(?!)\bresistance\b
 damage_types|does|*|\bresistance\b	darkest_dungeon,dnd5e	keep
+ranged|does|wh_aos_4th|\bshooting attacks?\b|\bshoot\b	wh_aos_4th	\bshoot(?= in combat)|(?<=unit's )shooting attacks?|(?<=uses a )shoot\b
+piercing|does|*|\bpierc	into_the_breach,dnd5e,wh_aos_4th,mtg	(?!)\bpierc
+piercing|does|*|\bpierc	sts2,wh_killteam	keep
+damage_reduction|does|wh_aos_4th|\bward \(\d\+\)|\b(has|have|gain|gains|with) ward\b|\bsubtract 1 from (the )?(hit|wound) rolls? for (combat |shooting )?attacks that target\b|\bdamage points? allocated to this unit\b	wh_aos_4th	keep
+polymorph|does|*|\bbecomes? a\b	mtg	(?<=abilities and )becomes? a\b|(?<=creature, it )becomes? a\b
+polymorph|does|*|\bbecomes? a\b	inscryption,dnd5e,gwent,hs_battlegrounds,wh_killteam,runeterra,shadowverse,hearthstone	(?!)\bbecomes? a\b

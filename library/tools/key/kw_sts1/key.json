@@ -1,0 +1,478 @@
+{
+"757488": {
+"tags": [
+[
+"shield",
+"Negates the next debuff"
+]
+],
+"by": "A=B"
+},
+"757489": {
+"tags": [
+[
+"block_armor",
+"prevents damage"
+]
+],
+"by": "A=B"
+},
+"757490": {
+"tags": [
+[
+"junk_cards",
+"unplayable status cards"
+],
+[
+"damage",
+"damage you"
+]
+],
+"by": "C"
+},
+"757491": {
+"tags": [
+[
+"stances",
+"Stance"
+],
+[
+"resource_gain",
+"gain 2 Energy"
+]
+],
+"by": "A=B"
+},
+"757492": {
+"tags": [
+[
+"slots_queue",
+"puts it into your first empty slot"
+]
+],
+"by": "A=B"
+},
+"757493": {
+"tags": [
+[
+"random_effect",
+"randomize its cost"
+]
+],
+"by": "A=B"
+},
+"757494": {
+"tags": [
+[
+"junk_cards",
+"negative cards that stay in your deck"
+]
+],
+"by": "A=B"
+},
+"757495": {
+"tags": [
+[
+"permanent_growth",
+"Increases damage every turn"
+],
+[
+"slots_queue",
+"Orb"
+],
+[
+"damage",
+"deals damage to the enemy with the least HP"
+],
+[
+"stat_condition",
+"least HP"
+]
+],
+"by": "C"
+},
+"757496": {
+"tags": [
+[
+"junk_cards",
+"unplayable status cards"
+]
+],
+"by": "A=B"
+},
+"757497": {
+"tags": [
+[
+"spell_power",
+"improves Block gained from cards"
+]
+],
+"by": "A=B"
+},
+"757498": {
+"tags": [
+[
+"stances",
+"this stance"
+],
+[
+"resource_gain",
+"gain 3 Energy"
+],
+[
+"stat_multiply",
+"triple damage"
+],
+[
+"turn_start",
+"start of your next turn"
+]
+],
+"by": "C"
+},
+"757499": {
+"tags": [
+[
+"exhaust",
+"it is exhausted"
+],
+[
+"turn_end",
+"at the end of turn"
+]
+],
+"by": "A=B"
+},
+"757500": {
+"tags": [
+[
+"slots_queue",
+"Consume your rightmost Orb"
+]
+],
+"by": "A=B"
+},
+"757501": {
+"tags": [
+[
+"exhaust",
+"Removed until end of combat"
+]
+],
+"by": "A=B"
+},
+"757502": {
+"tags": [
+[
+"on_kill",
+"Triggers whenever this card kills"
+]
+],
+"by": "A=B"
+},
+"757503": {
+"tags": [
+[
+"spell_power",
+"increases the effectiveness of Channeled Orbs"
+]
+],
+"by": "A=B"
+},
+"757504": {
+"tags": [
+[
+"debuff",
+"gain 25% less Block"
+]
+],
+"by": "A=B"
+},
+"757505": {
+"tags": [
+[
+"block_armor",
+"Gains Block"
+],
+[
+"slots_queue",
+"Orb"
+]
+],
+"by": "C"
+},
+"757506": {
+"tags": [
+[
+"combat_start",
+"Start each combat with this card in your hand"
+]
+],
+"by": "A=B"
+},
+"757507": {
+"tags": [
+[
+"damage_reduction",
+"Reduce ALL damage taken and HP loss to 1"
+]
+],
+"by": "A=B"
+},
+"757508": {
+"tags": [
+[
+"damage",
+"Deals damage to random enemies"
+],
+[
+"random_effect",
+"random enemies"
+],
+[
+"slots_queue",
+"Orb"
+]
+],
+"by": "C"
+},
+"757509": {
+"tags": [
+[
+"mark_target",
+"Lock-On targets receive 50% more damage from Orbs"
+]
+],
+"by": "A=B"
+},
+"757510": {
+"tags": [
+[
+"play_restriction",
+"may only be played as the first card each turn"
+]
+],
+"by": "A=B"
+},
+"757511": {
+"tags": [
+[
+"resource_gain",
+"Gains Energy"
+],
+[
+"slots_queue",
+"Orb"
+]
+],
+"by": "C"
+},
+"757512": {
+"tags": [
+[
+"damage_over_time",
+"lose HP at the start of their turn"
+],
+[
+"turn_start",
+"at the start of their turn"
+]
+],
+"by": "C"
+},
+"757513": {
+"tags": [
+[
+"condition_count",
+"When you obtain 10 Mantra"
+]
+],
+"by": "A=B"
+},
+"757514": {
+"tags": [
+[
+"regeneration",
+"heals HP at the end of your turn"
+],
+[
+"turn_end",
+"at the end of your turn"
+]
+],
+"by": "C"
+},
+"757515": {
+"tags": [
+[
+"retain",
+"Retained cards are not discarded at the end of turn"
+]
+],
+"by": "A=B"
+},
+"757516": {
+"tags": [
+[
+"permanent_growth",
+"Gain Strength at the end of your turn"
+],
+[
+"turn_end",
+"at the end of your turn"
+]
+],
+"by": "C"
+},
+"757517": {
+"tags": [
+[
+"selection",
+"Look at the top X cards of your draw pile"
+],
+[
+"deck_position",
+"top X cards"
+]
+],
+"by": "A=B"
+},
+"757518": {
+"tags": [
+[
+"cost_set",
+"0 cost"
+],
+[
+"exhaust",
+"which Exhaust"
+]
+],
+"by": "C"
+},
+"757519": {
+"tags": [
+[
+"stances",
+"You can only have one stance at a time"
+]
+],
+"by": "A=B"
+},
+"757520": {
+"tags": [
+[
+"junk_cards",
+"Status cards are removed at the end of combat"
+]
+],
+"by": "A=B"
+},
+"757521": {
+"tags": [
+[
+"stat_gain",
+"Strength adds additional damage to attacks"
+]
+],
+"by": "A=B"
+},
+"757522": {
+"tags": [
+[
+"counterattack",
+"deals damage back"
+]
+],
+"by": "A=B"
+},
+"757523": {
+"tags": [
+[
+"transform",
+"Transformed cards become a random card of any rarity"
+],
+[
+"random_effect",
+"random card"
+]
+],
+"by": "A=B"
+},
+"757524": {
+"tags": [
+[
+"play_restriction",
+"cannot be played from your hand"
+]
+],
+"by": "A=B"
+},
+"757525": {
+"tags": [
+[
+"upgrade",
+"Upgrading cards makes them more powerful"
+]
+],
+"by": "A=B"
+},
+"757526": {
+"tags": [
+[
+"stat_gain",
+"Your next Attack deals additional damage"
+]
+],
+"by": "C"
+},
+"757527": {
+"tags": [
+[
+"junk_cards",
+"unplayable status cards"
+]
+],
+"by": "A=B"
+},
+"757528": {
+"tags": [
+[
+"debuff",
+"take 50% more damage from Attacks"
+]
+],
+"by": "A=B"
+},
+"757529": {
+"tags": [
+[
+"debuff",
+"deal 25% less damage with Attacks"
+]
+],
+"by": "A=B"
+},
+"757530": {
+"tags": [
+[
+"junk_cards",
+"unplayable status cards"
+]
+],
+"by": "A=B"
+},
+"757531": {
+"tags": [
+[
+"stances",
+"In this Stance"
+],
+[
+"stat_multiply",
+"deal and receive double attack damage"
+]
+],
+"by": "A=B"
+}
+}

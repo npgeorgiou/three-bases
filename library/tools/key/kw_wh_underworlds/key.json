@@ -1,0 +1,82 @@
+{
+"762729": {
+"tags": [],
+"by": "A=B"
+},
+"762730": {
+"tags": [],
+"by": "C"
+},
+"762731": {
+"tags": [],
+"by": "A=B"
+},
+"762732": {
+"tags": [],
+"by": "C"
+},
+"762733": {
+"tags": [],
+"by": "C"
+},
+"762734": {
+"tags": [
+[
+"forced_movement",
+"Push"
+]
+],
+"by": "A=B"
+},
+"762735": {
+"tags": [
+[
+"immobilize",
+"Ensnare"
+]
+],
+"by": "C"
+},
+"762736": {
+"tags": [],
+"by": "A=B"
+},
+"762737": {
+"tags": [],
+"by": "A=B"
+},
+"762738": {
+"tags": [],
+"by": "A=B"
+},
+"762739": {
+"tags": [
+[
+"forced_movement",
+"Knockback"
+]
+],
+"by": "A=B"
+},
+"762740": {
+"tags": [],
+"by": "C"
+},
+"762741": {
+"tags": [
+[
+"mark_target",
+"marked as Quarry"
+],
+[
+"buff",
+"gain bonuses"
+]
+],
+"by": "A=B"
+},
+"762742": {
+"tags": [],
+"by": "A=B"
+}
+}

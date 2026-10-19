@@ -1,0 +1,493 @@
+{
+"784290": {
+"tags": [
+[
+"resource_gain",
+"you gain Pain tokens as follows"
+],
+[
+"turn_start",
+"at the start of your Command phase"
+],
+[
+"on_kill",
+"each time an enemy unit is destroyed"
+],
+[
+"temporary_buff",
+"until the end of the phase, that unit is Empowered"
+]
+],
+"by": "C"
+},
+"784291": {
+"tags": [
+[
+"deckbuilding_effect",
+"When mustering you army, you can include Harlequins units"
+]
+],
+"by": "A=B"
+},
+"784300": {
+"tags": [
+[
+"placement_rules",
+"it can be set up anywhere"
+]
+],
+"by": "A=B"
+},
+"784359": {
+"tags": [
+[
+"exhaust",
+"can only shoot with this weapon once per battle"
+]
+],
+"by": "C"
+},
+"784376": {
+"tags": [
+[
+"stances",
+"select one of the Ka'tah stances below"
+],
+[
+"buff",
+"Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability"
+]
+],
+"by": "C"
+},
+"784385": {
+"tags": [
+[
+"modal_choice",
+"select one of the Doctrina Imperatives below"
+],
+[
+"turn_start",
+"At the start of the battle round"
+],
+[
+"temporary_effect",
+"Until the end of the battle round"
+],
+[
+"stat_gain",
+"Improve the Ballistic Skill characteristic of ranged weapons"
+]
+],
+"by": "C"
+},
+"784392": {
+"tags": [
+[
+"stat_condition",
+"use the Toughness characteristic of the majority of the models"
+],
+[
+"type_grant",
+"all models in units with this ability are considered Infantry models"
+]
+],
+"by": "C"
+},
+"784423": {
+"tags": [
+[
+"buff",
+"that Armiger model is affected by that Bondsman ability"
+],
+[
+"temporary_effect",
+"Until the start of your next Command phase"
+],
+[
+"turn_start",
+"In your Command phase"
+]
+],
+"by": "C"
+},
+"784471": {
+"tags": [
+[
+"stat_gain",
+"add 1 to the Objective Control characteristic of INFANTRY models"
+]
+],
+"by": "A=B"
+},
+"784480": {
+"tags": [
+[
+"buff",
+"scores a Critical Hit"
+]
+],
+"by": "A=B"
+},
+"784482": {
+"tags": [
+[
+"buff",
+"scores a Critical Hit"
+]
+],
+"by": "A=B"
+},
+"784550": {
+"tags": [
+[
+"ranged",
+"eligible to shoot"
+],
+[
+"flexibility",
+"it can either shoot with its Pistols or with all of its other ranged weapons"
+]
+],
+"by": "C"
+},
+"784551": {
+"tags": [
+[
+"friendly_fire",
+"that unit suffers 3 mortal wounds"
+],
+[
+"random_effect",
+"roll one D6"
+]
+],
+"by": "A=B"
+},
+"784552": {
+"tags": [
+[
+"merge_attach",
+"it is known as an Attached unit"
+],
+[
+"bodyguard",
+"that attack cannot be allocated to a Character model in that unit"
+]
+],
+"by": "C"
+},
+"784553": {
+"tags": [
+[
+"piercing",
+"no saving throw of any kind can be made against that attack"
+],
+[
+"damage",
+"inflicts a number of mortal wounds on the target"
+]
+],
+"by": "C"
+},
+"784554": {
+"tags": [
+[
+"ranged",
+"it is still eligible to shoot in this turn\u2019s Shooting phase"
+]
+],
+"by": "A=B"
+},
+"784555": {
+"tags": [
+[
+"multi_attack",
+"it makes attacks with each of the Extra Attacks melee weapons"
+]
+],
+"by": "A=B"
+},
+"784556": {
+"tags": [
+[
+"random_effect",
+"you can re-roll that attack\u2019s Wound roll"
+]
+],
+"by": "C"
+},
+"784557": {
+"tags": [
+[
+"tribal",
+"against a target with the keyword"
+]
+],
+"by": "C"
+},
+"784558": {
+"tags": [
+[
+"damage",
+"that attack scores a number of additional hits"
+]
+],
+"by": "C"
+},
+"784559": {
+"tags": [
+[
+"buff",
+"add 1 to that attack\u2019s Hit roll"
+]
+],
+"by": "A=B"
+},
+"784560": {
+"tags": [
+[
+"stat_gain",
+"Damage characteristic is increased by the amount denoted by \u2018x\u2019"
+]
+],
+"by": "A=B"
+},
+"784561": {
+"tags": [
+[
+"damage_reduction",
+"that wound is ignored and is not lost"
+],
+[
+"saving_throws",
+"roll one D6"
+]
+],
+"by": "C"
+},
+"784562": {
+"tags": [
+[
+"random_effect",
+"a random number of attacks"
+],
+[
+"condition_count",
+"for every five models"
+],
+[
+"play_restriction",
+"can never be used to make attacks against a unit that is within Engagement Range"
+]
+],
+"by": "C"
+},
+"784563": {
+"tags": [
+[
+"target_choice",
+"the attacking model\u2019s player can choose to have that attack allocated to that Character model"
+]
+],
+"by": "A=B"
+},
+"784564": {
+"tags": [
+[
+"ranged",
+"attacks can be made with them even if the target is not visible"
+],
+[
+"debuff",
+"subtract 1 from that attack\u2019s Hit roll"
+]
+],
+"by": "C"
+},
+"784565": {
+"tags": [
+[
+"buff",
+"add 1 to that attack\u2019s Wound roll"
+]
+],
+"by": "A=B"
+},
+"784566": {
+"tags": [
+[
+"buff",
+"a Critical Hit automatically wounds the target"
+]
+],
+"by": "A=B"
+},
+"784567": {
+"tags": [
+[
+"piercing",
+"the target cannot have the Benefit of Cover against that attack"
+]
+],
+"by": "A=B"
+},
+"784568": {
+"tags": [
+[
+"stat_gain",
+"the Attacks characteristic of that weapon is increased"
+]
+],
+"by": "C"
+},
+"784569": {
+"tags": [
+[
+"buff",
+"that attack automatically hits the target"
+]
+],
+"by": "A=B"
+},
+"784570": {
+"tags": [
+[
+"movement",
+"it can make a Normal move"
+],
+[
+"start_of_game",
+"at the start of the first battle round, before the first turn begins"
+]
+],
+"by": "C"
+},
+"784571": {
+"tags": [
+[
+"placement_rules",
+"it can be set up anywhere on the battlefield"
+],
+[
+"start_of_game",
+"During deployment"
+]
+],
+"by": "A=B"
+},
+"784572": {
+"tags": [
+[
+"placement_rules",
+"you can set up this unit anywhere on the battlefield"
+],
+[
+"reserve_bench",
+"set it up in Reserves"
+]
+],
+"by": "C"
+},
+"784573": {
+"tags": [
+[
+"death_trigger",
+"When such a model is destroyed"
+],
+[
+"aoe_damage",
+"suffers a number of mortal wounds"
+],
+[
+"random_effect",
+"roll one D6"
+]
+],
+"by": "C"
+},
+"784574": {
+"tags": [
+[
+"debuff",
+"subtract 1 from that attack\u2019s Hit roll"
+]
+],
+"by": "C"
+},
+"784575": {
+"tags": [
+[
+"movement",
+"it can move through models"
+]
+],
+"by": "C"
+},
+"784576": {
+"tags": [
+[
+"targeting_rules",
+"can only be selected as the target of a ranged attack"
+]
+],
+"by": "C"
+},
+"784577": {
+"tags": [
+[
+"stances",
+"declare which models from your army with this ability will be in Hover mode"
+],
+[
+"stat_gain",
+"its Move characteristic is changed"
+]
+],
+"by": "C"
+},
+"784578": {
+"tags": [
+[
+"first_strike",
+"Fights First"
+]
+],
+"by": "C"
+},
+"784579": {
+"tags": [
+[
+"play_restriction",
+"can only be used by Psykers"
+],
+[
+"damage_types",
+"Psychic Attack"
+]
+],
+"by": "C"
+},
+"784580": {
+"tags": [
+[
+"ranged",
+"select one ranged weapon that embarked model is equipped with"
+]
+],
+"by": "C"
+},
+"784581": {
+"tags": [
+[
+"deckbuilding_effect",
+"Your army may include up to three units with the Crucible ability"
+],
+[
+"play_restriction",
+"these units cannot be given Enhancements"
+]
+],
+"by": "C"
+}
+}

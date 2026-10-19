@@ -17,3 +17,11 @@ terrain|does|*|\bterrain	into_the_breach	(?!)
 terrain|does|*|\bterrain	inscryption	(?<=traits: )terrain
 terrain|does|*|\bterrain	wh_killteam,wh_aos_4th,dnd5e	keep
 generate_cards|does|hs_battlegrounds|\bget (a|an|another|\d+|x|two|three) (random |new |plain )?[a-z]	hs_battlegrounds	\bget (a|an|another|\d+|x|two|three) (random )?(?!c(?:opy|ard)|extra copy|e(?=xtra)|gold|new c|plain c)[a-z]
+ranged|does|*|\branged attack	dnd5e	\branged attack(?= roll)
+ranged|does|*|\branged attack	wh_40k_10e	keep
+forced_movement|does|*|\bpush	into_the_breach	(?<!\()(?<!\* )(?<!cannot be )(?<!can )(?<!you )(?<!another )(?<!, )\bpush(?! on)(?! this fighter)(?! that fighter 3)(?! yourself)(?! a different)(?! \()
+forced_movement|does|*|\bpush	wh_40k_10e	(?!)
+forced_movement|does|*|\bpush	wh_bloodbowl3,inscryption,dnd5e,wh_underworlds	keep
+forced_movement|does|*|\bpush(ing|es|ed)?\b	into_the_breach	(?<!\()(?<!\* )(?<!cannot be )(?<!can )(?<!you )(?<!another )(?<!, )\bpush(ing|es|ed)?\b(?! on)(?! this fighter)(?! that fighter 3)(?! yourself)(?! a different)(?! \()
+forced_movement|does|*|\bpush(ing|es|ed)?\b	wh_40k_10e	(?!)
+forced_movement|does|*|\bpush(ing|es|ed)?\b	wh_bloodbowl3,inscryption,dnd5e,wh_underworlds	keep

@@ -1,0 +1,2976 @@
+{
+"765927": {
+"tags": [
+[
+"excess_damage",
+"excess combat damage"
+]
+],
+"by": "A=B"
+},
+"765928": {
+"tags": [
+[
+"generate_cards",
+"Conjure"
+]
+],
+"by": "A=B"
+},
+"765929": {
+"tags": [],
+"by": "A=B"
+},
+"765930": {
+"tags": [],
+"by": "A=B"
+},
+"765931": {
+"tags": [
+[
+"evasion",
+"can't be blocked except by creatures with flying or reach"
+]
+],
+"by": "C"
+},
+"765932": {
+"tags": [
+[
+"stat_gain",
+"Adapt"
+]
+],
+"by": "A=B"
+},
+"765933": {
+"tags": [
+[
+"resource_gain",
+"Treasure"
+]
+],
+"by": "A=B"
+},
+"765934": {
+"tags": [
+[
+"on_ally_play",
+"Landfall"
+]
+],
+"by": "C"
+},
+"765935": {
+"tags": [
+[
+"deathtouch",
+"enough to destroy it"
+]
+],
+"by": "C"
+},
+"765936": {
+"tags": [
+[
+"protection",
+"Protection"
+]
+],
+"by": "C"
+},
+"765937": {
+"tags": [
+[
+"merge_attach",
+"Attach to target creature you control"
+],
+[
+"activated",
+"{2}: Attach"
+]
+],
+"by": "A=B"
+},
+"765938": {
+"tags": [
+[
+"card_quality",
+"Connive"
+]
+],
+"by": "C"
+},
+"765939": {
+"tags": [
+[
+"on_damaged",
+"Enrage"
+]
+],
+"by": "C"
+},
+"765940": {
+"tags": [
+[
+"cost_type",
+"Your creatures can help cast this spell"
+]
+],
+"by": "C"
+},
+"765941": {
+"tags": [
+[
+"stat_gain",
+"enters with three +1/+1 counters on it"
+]
+],
+"by": "C"
+},
+"765942": {
+"tags": [
+[
+"kicker",
+"You may pay an additional"
+]
+],
+"by": "A=B"
+},
+"765943": {
+"tags": [
+[
+"untap",
+"Attacking doesn't cause this creature to tap"
+]
+],
+"by": "A=B"
+},
+"765944": {
+"tags": [
+[
+"condition_count",
+"Corrupted"
+]
+],
+"by": "C"
+},
+"765945": {
+"tags": [
+[
+"selection",
+"look at the top two cards of your library"
+],
+[
+"self_mill",
+"put any number of them into your graveyard"
+]
+],
+"by": "C"
+},
+"765946": {
+"tags": [
+[
+"summon",
+"create a blue Jace planeswalker token"
+]
+],
+"by": "A=B"
+},
+"765947": {
+"tags": [
+[
+"spell_speed",
+"any time you could cast an instant"
+]
+],
+"by": "A=B"
+},
+"765948": {
+"tags": [
+[
+"evasion",
+"can't be blocked except by two or more creatures"
+]
+],
+"by": "A=B"
+},
+"765949": {
+"tags": [
+[
+"stat_gain",
+"Amass"
+]
+],
+"by": "C"
+},
+"765950": {
+"tags": [
+[
+"discard",
+"Discard this card"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"activated",
+"{3}{R}, Discard this card"
+]
+],
+"by": "C"
+},
+"765951": {
+"tags": [
+[
+"on_spell",
+"Whenever you cast a noncreature spell"
+],
+[
+"temporary_buff",
+"+1/+1 until end of turn"
+]
+],
+"by": "A=B"
+},
+"765952": {
+"tags": [],
+"by": "C"
+},
+"765953": {
+"tags": [
+[
+"activated",
+"Tap any number of creatures you control with total power 3 or more"
+],
+[
+"transform",
+"becomes an artifact creature"
+],
+[
+"temporary_effect",
+"until end of turn"
+]
+],
+"by": "C"
+},
+"765954": {
+"tags": [
+[
+"stat_loss",
+"-1/-1 counters"
+],
+[
+"damage_over_time",
+"poison counters"
+]
+],
+"by": "C"
+},
+"765955": {
+"tags": [
+[
+"heal",
+"Heal"
+]
+],
+"by": "C"
+},
+"765956": {
+"tags": [
+[
+"cheat_death",
+"Regenerate"
+]
+],
+"by": "A=B"
+},
+"765957": {
+"tags": [
+[
+"damage",
+"Fight"
+]
+],
+"by": "C"
+},
+"765958": {
+"tags": [
+[
+"first_strike",
+"deals combat damage before creatures without first strike"
+]
+],
+"by": "A=B"
+},
+"765959": {
+"tags": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"by": "C"
+},
+"765960": {
+"tags": [
+[
+"death_trigger",
+"When this creature dies"
+],
+[
+"cheat_death",
+"return it to the battlefield"
+]
+],
+"by": "A=B"
+},
+"765961": {
+"tags": [
+[
+"cast_from_zone",
+"Cast it as a sorcery on a later turn"
+],
+[
+"free_play",
+"without paying its mana cost"
+],
+[
+"delayed",
+"on a later turn"
+]
+],
+"by": "C"
+},
+"765962": {
+"tags": [
+[
+"kicker",
+"any number of times"
+]
+],
+"by": "A=B"
+},
+"765963": {
+"tags": [
+[
+"stat_gain",
+"four +1/+1 counters"
+],
+[
+"transform",
+"becomes a 0/0 Elemental creature"
+],
+[
+"haste",
+"with haste"
+]
+],
+"by": "A=B"
+},
+"765964": {
+"tags": [
+[
+"modal_choice",
+"Choose one or more additional costs."
+]
+],
+"by": "A=B"
+},
+"765965": {
+"tags": [
+[
+"on_spell",
+"Heroic"
+]
+],
+"by": "C"
+},
+"765966": {
+"tags": [
+[
+"evasion",
+"Landwalk"
+]
+],
+"by": "A=B"
+},
+"765967": {
+"tags": [
+[
+"evasion",
+"can't be blocked as long as defending player controls an Island"
+]
+],
+"by": "A=B"
+},
+"765968": {
+"tags": [
+[
+"selection",
+"Scry"
+]
+],
+"by": "A=B"
+},
+"765969": {
+"tags": [
+[
+"cost_reduction",
+"Affinity"
+]
+],
+"by": "A=B"
+},
+"765970": {
+"tags": [
+[
+"generate_cards",
+"Draft from a spellbook"
+],
+[
+"selection",
+"Draft from a spellbook"
+]
+],
+"by": "C"
+},
+"765971": {
+"tags": [
+[
+"tutor",
+"exile cards from the top of your library until you exile a nonland card"
+],
+[
+"free_play",
+"Cast it without paying its mana cost"
+],
+[
+"cost_condition",
+"mana value 10 or less"
+]
+],
+"by": "C"
+},
+"765972": {
+"tags": [
+[
+"on_ally_play",
+"Eerie"
+]
+],
+"by": "C"
+},
+"765973": {
+"tags": [
+[
+"cast_from_zone",
+"You may cast this card from your graveyard"
+],
+[
+"banish",
+"Then exile it"
+]
+],
+"by": "C"
+},
+"765974": {
+"tags": [
+[
+"lifesteal",
+"also causes you to gain that much life"
+]
+],
+"by": "A=B"
+},
+"765975": {
+"tags": [
+[
+"haste",
+"can attack and {T} as soon as it comes under your control"
+]
+],
+"by": "A=B"
+},
+"765976": {
+"tags": [
+[
+"card_advantage",
+"Investigate"
+]
+],
+"by": "C"
+},
+"765977": {
+"tags": [
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"lifesteal",
+"each opponent loses 1 life and you gain that much life"
+]
+],
+"by": "A=B"
+},
+"765978": {
+"tags": [],
+"by": "A=B"
+},
+"765979": {
+"tags": [
+[
+"tutor",
+"Seek"
+]
+],
+"by": "A=B"
+},
+"765980": {
+"tags": [
+[
+"immunity",
+"can't be the target of spells or abilities your opponents control"
+]
+],
+"by": "A=B"
+},
+"765981": {
+"tags": [
+[
+"upkeep",
+"pay its echo cost"
+],
+[
+"turn_start",
+"At the beginning of your upkeep"
+]
+],
+"by": "A=B"
+},
+"765982": {
+"tags": [
+[
+"death_count",
+"Morbid"
+]
+],
+"by": "C"
+},
+"765983": {
+"tags": [
+[
+"life_payment",
+"2 life"
+]
+],
+"by": "A=B"
+},
+"765984": {
+"tags": [
+[
+"revive",
+"Return this card from your graveyard to the battlefield"
+],
+[
+"haste",
+"It gains haste"
+],
+[
+"self_destruct",
+"Exile it at the beginning of the next end step"
+]
+],
+"by": "A=B"
+},
+"765985": {
+"tags": [
+[
+"first_strike",
+"deals both first-strike and regular combat damage"
+],
+[
+"multi_attack",
+"both first-strike and regular combat damage"
+]
+],
+"by": "C"
+},
+"765986": {
+"tags": [
+[
+"evasion",
+"can't be blocked except by creatures with horsemanship"
+]
+],
+"by": "A=B"
+},
+"765987": {
+"tags": [
+[
+"cast_from_zone",
+"You may cast this card from your graveyard"
+],
+[
+"cost_reduction",
+"reduce that cost"
+],
+[
+"banish",
+"Then exile this spell"
+]
+],
+"by": "C"
+},
+"765988": {
+"tags": [
+[
+"immunity",
+"don't destroy this creature"
+]
+],
+"by": "A=B"
+},
+"765989": {
+"tags": [
+[
+"stat_gain",
+"This creature enters with two +1/+1 counters on it"
+],
+[
+"on_ally_play",
+"Whenever another creature enters"
+]
+],
+"by": "C"
+},
+"765990": {
+"tags": [
+[
+"team_play",
+"Another player can pay up to {5}"
+]
+],
+"by": "A=B"
+},
+"765991": {
+"tags": [
+[
+"blocking",
+"can block creatures with flying"
+]
+],
+"by": "A=B"
+},
+"765992": {
+"tags": [
+[
+"evasion",
+"can't be blocked except by artifact creatures and/or black creatures"
+]
+],
+"by": "A=B"
+},
+"765993": {
+"tags": [
+[
+"cant_attack",
+"can't attack"
+]
+],
+"by": "A=B"
+},
+"765994": {
+"tags": [
+[
+"cast_from_zone",
+"you may cast this card from exile"
+],
+[
+"free_play",
+"without paying its mana cost"
+],
+[
+"turn_start",
+"At the beginning of your next upkeep"
+]
+],
+"by": "C"
+},
+"765995": {
+"tags": [
+[
+"discard",
+"If you discard this card"
+],
+[
+"cost_type",
+"madness cost"
+]
+],
+"by": "C"
+},
+"765996": {
+"tags": [
+[
+"transform",
+"Transform"
+]
+],
+"by": "A=B"
+},
+"765997": {
+"tags": [
+[
+"cast_from_zone",
+"Escape"
+]
+],
+"by": "A=B"
+},
+"765998": {
+"tags": [
+[
+"deck_position",
+"Clash"
+]
+],
+"by": "C"
+},
+"765999": {
+"tags": [
+[
+"banish",
+"exile it instead"
+],
+[
+"graveyard",
+"Descend"
+]
+],
+"by": "C"
+},
+"766000": {
+"tags": [
+[
+"activated",
+"Channel"
+]
+],
+"by": "C"
+},
+"766001": {
+"tags": [
+[
+"temporary_buff",
+"+2/+2 until end of turn"
+]
+],
+"by": "A=B"
+},
+"766002": {
+"tags": [
+[
+"on_spell",
+"Magecraft"
+]
+],
+"by": "A=B"
+},
+"766003": {
+"tags": [
+[
+"activated",
+"Tap another creature you control"
+],
+[
+"transform",
+"It's an artifact creature at 9+"
+]
+],
+"by": "C"
+},
+"766004": {
+"tags": [
+[
+"mill",
+"Mill"
+]
+],
+"by": "A=B"
+},
+"766005": {
+"tags": [
+[
+"sacrifice",
+"Offering"
+],
+[
+"cost_reduction",
+"Offering"
+]
+],
+"by": "C"
+},
+"766006": {
+"tags": [],
+"by": "A=B"
+},
+"766007": {
+"tags": [
+[
+"modal_choice",
+"your choice of a +1/+1 counter or haste"
+],
+[
+"haste",
+"haste"
+],
+[
+"stat_gain",
+"a +1/+1 counter"
+]
+],
+"by": "C"
+},
+"766008": {
+"tags": [
+[
+"removal",
+"Airbend"
+]
+],
+"by": "C"
+},
+"766009": {
+"tags": [
+[
+"cast_from_zone",
+"Aftermath"
+]
+],
+"by": "A=B"
+},
+"766010": {
+"tags": [
+[
+"stacking_keyword",
+"give each another counter of each kind already there"
+]
+],
+"by": "A=B"
+},
+"766011": {
+"tags": [
+[
+"on_ally_play",
+"Alliance"
+]
+],
+"by": "C"
+},
+"766012": {
+"tags": [
+[
+"graveyard",
+"Threshold"
+]
+],
+"by": "C"
+},
+"766013": {
+"tags": [
+[
+"transform",
+"Specialize"
+]
+],
+"by": "C"
+},
+"766014": {
+"tags": [
+[
+"modal_choice",
+"cast one or both halves"
+]
+],
+"by": "A=B"
+},
+"766015": {
+"tags": [
+[
+"death_trigger",
+"When this creature dies"
+],
+[
+"cheat_death",
+"return it to the battlefield"
+]
+],
+"by": "A=B"
+},
+"766016": {
+"tags": [
+[
+"summon",
+"create a 0/0 black Phyrexian Germ creature token"
+],
+[
+"merge_attach",
+"attach this to it"
+],
+[
+"on_play",
+"When this Equipment enters"
+]
+],
+"by": "A=B"
+},
+"766017": {
+"tags": [
+[
+"delayed",
+"remove a time counter"
+],
+[
+"free_play",
+"cast it without paying its mana cost"
+],
+[
+"turn_start",
+"At the beginning of your upkeep"
+]
+],
+"by": "C"
+},
+"766018": {
+"tags": [
+[
+"graveyard",
+"Collect evidence"
+]
+],
+"by": "C"
+},
+"766019": {
+"tags": [
+[
+"enemy_benefit",
+"Gift"
+]
+],
+"by": "C"
+},
+"766020": {
+"tags": [
+[
+"enemy_benefit",
+"an opponent of your choice may put two +1/+1 counters on it"
+]
+],
+"by": "C"
+},
+"766021": {
+"tags": [
+[
+"delayed",
+"remove a time counter"
+],
+[
+"self_destruct",
+"sacrifice it"
+],
+[
+"turn_start",
+"At the beginning of your upkeep"
+]
+],
+"by": "A=B"
+},
+"766022": {
+"tags": [
+[
+"summon",
+"create an Incubator token"
+],
+[
+"transform",
+"Transform this token"
+]
+],
+"by": "A=B"
+},
+"766023": {
+"tags": [
+[
+"lone_unit",
+"attacks alone"
+],
+[
+"temporary_buff",
+"+1/+1 until end of turn"
+]
+],
+"by": "A=B"
+},
+"766024": {
+"tags": [
+[
+"condition_count",
+"Pack tactics"
+]
+],
+"by": "C"
+},
+"766025": {
+"tags": [
+[
+"immunity",
+"can't be the target of spells or abilities"
+]
+],
+"by": "A=B"
+},
+"766026": {
+"tags": [
+[
+"cast_from_zone",
+"You may cast this card from your graveyard"
+],
+[
+"discard",
+"discarding a land card"
+]
+],
+"by": "C"
+},
+"766027": {
+"tags": [
+[
+"counter_spell",
+"counter it unless that player pays {2}"
+],
+[
+"cost_increase",
+"unless that player pays {2}"
+],
+[
+"protection",
+"becomes the target of a spell or ability an opponent controls"
+]
+],
+"by": "C"
+},
+"766028": {
+"tags": [
+[
+"variety_payoff",
+"Coven"
+]
+],
+"by": "C"
+},
+"766029": {
+"tags": [
+[
+"on_play",
+"When you cast this spell"
+],
+[
+"free_play",
+"You may cast it without paying its mana cost"
+],
+[
+"cost_condition",
+"a nonland card that costs less"
+],
+[
+"random_effect",
+"in a random order"
+]
+],
+"by": "C"
+},
+"766030": {
+"tags": [
+[
+"haste",
+"it gains haste"
+],
+[
+"return_to_hand",
+"returned from the battlefield to its owner's hand"
+],
+[
+"cost_type",
+"cast this spell for its dash cost"
+],
+[
+"turn_end",
+"at the beginning of the next end step"
+]
+],
+"by": "C"
+},
+"766031": {
+"tags": [
+[
+"discard",
+"Bloodrush"
+],
+[
+"activated",
+"Bloodrush"
+]
+],
+"by": "C"
+},
+"766032": {
+"tags": [
+[
+"condition_count",
+"If you control ten or more permanents"
+]
+],
+"by": "C"
+},
+"766033": {
+"tags": [
+[
+"summon",
+"Manifest"
+]
+],
+"by": "C"
+},
+"766034": {
+"tags": [
+[
+"selection",
+"look at the top two cards of your library"
+],
+[
+"self_mill",
+"the other into your graveyard"
+],
+[
+"summon",
+"face down as a 2/2 creature"
+]
+],
+"by": "A=B"
+},
+"766035": {
+"tags": [
+[
+"haste",
+"it gains haste"
+],
+[
+"death_trigger",
+"When this creature dies"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"self_destruct",
+"Sacrifice it at the beginning of the next end step"
+],
+[
+"cost_type",
+"blitz cost"
+]
+],
+"by": "C"
+},
+"766036": {
+"tags": [
+[
+"cost_type",
+"cast this spell for its cleave cost"
+]
+],
+"by": "A=B"
+},
+"766037": {
+"tags": [
+[
+"activated",
+"Boast"
+]
+],
+"by": "C"
+},
+"766038": {
+"tags": [
+[
+"immunity",
+"Hexproof from"
+]
+],
+"by": "A=B"
+},
+"766039": {
+"tags": [],
+"by": "C"
+},
+"766040": {
+"tags": [
+[
+"sacrifice",
+"You may sacrifice an artifact, enchantment, or token"
+],
+[
+"kicker",
+"as you cast this spell"
+]
+],
+"by": "C"
+},
+"766041": {
+"tags": [
+[
+"modal_choice",
+"Choose both if you pay the entwine cost"
+]
+],
+"by": "A=B"
+},
+"766042": {
+"tags": [
+[
+"cost_type",
+"You may cast this card face down for {3}"
+],
+[
+"transform",
+"Turn it face up any time"
+],
+[
+"protection",
+"ward {2}"
+]
+],
+"by": "C"
+},
+"766043": {
+"tags": [
+[
+"activated",
+"{2}{U}, Return an unblocked attacker you control to hand"
+],
+[
+"return_to_hand",
+"Return an unblocked attacker you control to hand"
+],
+[
+"attack_now",
+"tapped and attacking"
+]
+],
+"by": "C"
+},
+"766044": {
+"tags": [
+[
+"tutor",
+"Search your library for a card with the same mana value"
+],
+[
+"activated",
+"{1}{U}{U}, Discard this card"
+],
+[
+"discard",
+"Discard this card"
+]
+],
+"by": "C"
+},
+"766045": {
+"tags": [
+[
+"sacrifice",
+"you may sacrifice a creature with power 1 or greater"
+],
+[
+"copy",
+"copy this spell"
+]
+],
+"by": "A=B"
+},
+"766046": {
+"tags": [],
+"by": "A=B"
+},
+"766047": {
+"tags": [
+[
+"link_formation",
+"attack in a band"
+],
+[
+"blocking",
+"Bands are blocked as a group"
+],
+[
+"distribute",
+"you divide that creature's combat damage"
+]
+],
+"by": "C"
+},
+"766048": {
+"tags": [
+[
+"graveyard",
+"Each card you exile from your graveyard"
+],
+[
+"cost_reduction",
+"pays for {1}"
+]
+],
+"by": "C"
+},
+"766049": {
+"tags": [
+[
+"on_attack",
+"Whenever this creature attacks"
+],
+[
+"permanent_growth",
+"put a +1/+1 counter on this creature"
+],
+[
+"stat_condition",
+"another creature with greater power"
+]
+],
+"by": "C"
+},
+"766050": {
+"tags": [
+[
+"variety_payoff",
+"Delirium"
+]
+],
+"by": "C"
+},
+"766051": {
+"tags": [
+[
+"on_attack",
+"Whenever this creature attacks"
+],
+[
+"resource_gain",
+"add {R}"
+],
+[
+"temporary_effect",
+"lasts until end of combat"
+]
+],
+"by": "C"
+},
+"766052": {
+"tags": [
+[
+"condition_count",
+"Chroma"
+]
+],
+"by": "C"
+},
+"766053": {
+"tags": [
+[
+"merge_attach",
+"put it over or under target non-Human creature"
+],
+[
+"cost_type",
+"cast this spell for its mutate cost"
+]
+],
+"by": "C"
+},
+"766054": {
+"tags": [
+[
+"graveyard",
+"Spell mastery"
+]
+],
+"by": "C"
+},
+"766055": {
+"tags": [
+[
+"damage_over_time",
+"poison counter"
+]
+],
+"by": "C"
+},
+"766056": {
+"tags": [
+[
+"upgrade",
+"Power-up"
+]
+],
+"by": "C"
+},
+"766057": {
+"tags": [
+[
+"tribal",
+"Kinship"
+]
+],
+"by": "C"
+},
+"766058": {
+"tags": [
+[
+"combo_sequence",
+"Flurry"
+]
+],
+"by": "C"
+},
+"766059": {
+"tags": [
+[
+"cost_type",
+"for its foretell cost"
+],
+[
+"delayed",
+"on a later turn"
+],
+[
+"cast_from_zone",
+"Cast it on a later turn for its foretell cost"
+]
+],
+"by": "C"
+},
+"766060": {
+"tags": [
+[
+"discard",
+"Grandeur"
+]
+],
+"by": "C"
+},
+"766061": {
+"tags": [
+[
+"merge_attach",
+"Attach to target creature you control"
+],
+[
+"activated",
+"{5}: Attach to target creature you control"
+]
+],
+"by": "C"
+},
+"766062": {
+"tags": [],
+"by": "A=B"
+},
+"766063": {
+"tags": [
+[
+"cast_from_zone",
+"cast this card from your graveyard"
+],
+[
+"transform",
+"transformed"
+]
+],
+"by": "A=B"
+},
+"766064": {
+"tags": [],
+"by": "C"
+},
+"766065": {
+"tags": [
+[
+"deck_position",
+"Explore"
+],
+[
+"stat_gain",
+"Explore"
+]
+],
+"by": "C"
+},
+"766066": {
+"tags": [],
+"by": "A=B"
+},
+"766068": {
+"tags": [
+[
+"cost_type",
+"cast this card face down as a 2/2 creature for {3}"
+],
+[
+"transform",
+"Turn it face up any time for its morph cost"
+]
+],
+"by": "C"
+},
+"766069": {
+"tags": [
+[
+"delayed",
+"remove a fade counter"
+],
+[
+"self_destruct",
+"sacrifice it"
+],
+[
+"turn_start",
+"At the beginning of your upkeep"
+]
+],
+"by": "A=B"
+},
+"766070": {
+"tags": [
+[
+"evasion",
+"can't be blocked by creatures with greater power"
+]
+],
+"by": "A=B"
+},
+"766071": {
+"tags": [
+[
+"rule_change",
+"it becomes night next turn"
+]
+],
+"by": "C"
+},
+"766072": {
+"tags": [
+[
+"rule_change",
+"it becomes day next turn"
+],
+[
+"condition_count",
+"at least two spells"
+]
+],
+"by": "C"
+},
+"766073": {
+"tags": [
+[
+"upgrade",
+"Level Up"
+]
+],
+"by": "A=B"
+},
+"766074": {
+"tags": [
+[
+"variety_payoff",
+"Vivid"
+]
+],
+"by": "C"
+},
+"766075": {
+"tags": [
+[
+"play_restriction",
+"players can't cast spells or activate abilities"
+],
+[
+"spell_speed",
+"Split second"
+]
+],
+"by": "C"
+},
+"766076": {
+"tags": [
+[
+"evasion",
+"can't be blocked as long as defending player controls a Swamp"
+]
+],
+"by": "A=B"
+},
+"766077": {
+"tags": [
+[
+"flexibility",
+"different mana cost, color, and size"
+]
+],
+"by": "C"
+},
+"766078": {
+"tags": [
+[
+"on_attack",
+"Whenever this creature attacks"
+],
+[
+"stat_gain",
+"put a +1/+1 counter on target attacking creature"
+],
+[
+"stat_condition",
+"lesser power"
+]
+],
+"by": "C"
+},
+"766079": {
+"tags": [
+[
+"stat_gain",
+"Monstrosity"
+]
+],
+"by": "A=B"
+},
+"766080": {
+"tags": [
+[
+"death_trigger",
+"When this creature dies"
+],
+[
+"summon",
+"create two 1/1 white and black Spirit creature tokens"
+]
+],
+"by": "A=B"
+},
+"766081": {
+"tags": [
+[
+"cost_type",
+"cast this card face down as a 2/2 creature for {3}"
+],
+[
+"transform",
+"Turn it face up any time for its megamorph cost"
+],
+[
+"stat_gain",
+"put a +1/+1 counter on it"
+]
+],
+"by": "C"
+},
+"766082": {
+"tags": [
+[
+"kicker",
+"You may pay an additional"
+],
+[
+"copy",
+"create a 1/1 token copy of it"
+],
+[
+"on_play",
+"when this creature enters"
+]
+],
+"by": "C"
+},
+"766083": {
+"tags": [
+[
+"flexibility",
+"Read Ahead"
+]
+],
+"by": "C"
+},
+"766084": {
+"tags": [
+[
+"condition_count",
+"If you control three or more artifacts"
+]
+],
+"by": "A=B"
+},
+"766085": {
+"tags": [
+[
+"copy",
+"create a token copy"
+],
+[
+"haste",
+"They gain haste"
+],
+[
+"self_destruct",
+"Sacrifice them at the beginning of the next end step"
+],
+[
+"activated",
+"{7}{R}{R}, Exile this card from your graveyard"
+]
+],
+"by": "A=B"
+},
+"766086": {
+"tags": [
+[
+"cost_type",
+"for its evoke cost"
+],
+[
+"self_destruct",
+"it's sacrificed when it enters"
+]
+],
+"by": "A=B"
+},
+"766087": {
+"tags": [
+[
+"variety_payoff",
+"Domain"
+]
+],
+"by": "C"
+},
+"766088": {
+"tags": [
+[
+"upkeep",
+"pay its upkeep cost"
+],
+[
+"turn_start",
+"At the beginning of your upkeep"
+],
+[
+"stacking_keyword",
+"age counter"
+]
+],
+"by": "A=B"
+},
+"766089": {
+"tags": [],
+"by": "A=B"
+},
+"766090": {
+"tags": [
+[
+"cost_type",
+"for its spectacle cost rather than its mana cost"
+]
+],
+"by": "C"
+},
+"766091": {
+"tags": [
+[
+"variety_payoff",
+"Converge"
+]
+],
+"by": "C"
+},
+"766092": {
+"tags": [
+[
+"quests",
+"Venture into the dungeon"
+]
+],
+"by": "C"
+},
+"766093": {
+"tags": [
+[
+"cast_from_zone",
+"from your graveyard"
+],
+[
+"discard",
+"if you discarded it this turn"
+]
+],
+"by": "A=B"
+},
+"766094": {
+"tags": [
+[
+"stat_gain",
+"put three +1/+1 counters on it"
+],
+[
+"stat_condition",
+"creature with the least toughness"
+]
+],
+"by": "A=B"
+},
+"766095": {
+"tags": [
+[
+"stat_gain",
+"put a +1/+1 counter on it for each Zombie card you reveal"
+],
+[
+"tribal",
+"Zombie"
+]
+],
+"by": "A=B"
+},
+"766096": {
+"tags": [
+[
+"kicker",
+"You may pay an additional {3}"
+],
+[
+"recycle",
+"put this card into your hand as it resolves"
+]
+],
+"by": "A=B"
+},
+"766097": {
+"tags": [
+[
+"on_attack",
+"As this creature attacks"
+],
+[
+"temporary_buff",
+"until end of turn"
+]
+],
+"by": "A=B"
+},
+"766098": {
+"tags": [
+[
+"play_restriction",
+"you can't cast spells"
+],
+[
+"copy",
+"copy this spell"
+],
+[
+"turn_start",
+"At the beginning of each of your upkeeps"
+]
+],
+"by": "A=B"
+},
+"766099": {
+"tags": [
+[
+"cost_type",
+"You may cast this spell for {2}{W}{B}"
+],
+[
+"return_to_hand",
+"return an unblocked attacker you control to hand"
+],
+[
+"attack_now",
+"It enters tapped and attacking"
+]
+],
+"by": "C"
+},
+"766100": {
+"tags": [
+[
+"merge_attach",
+"it's an Aura spell with enchant creature"
+],
+[
+"transform",
+"It becomes a creature again"
+],
+[
+"cost_type",
+"bestow cost"
+]
+],
+"by": "C"
+},
+"766101": {
+"tags": [
+[
+"condition_count",
+"Metalcraft"
+]
+],
+"by": "C"
+},
+"766102": {
+"tags": [
+[
+"on_attack",
+"Whenever this creature attacks"
+],
+[
+"summon",
+"create a tapped and attacking 1/1 red Warrior creature token"
+],
+[
+"self_destruct",
+"Sacrifice it at the beginning of the next end step"
+]
+],
+"by": "A=B"
+},
+"766103": {
+"tags": [
+[
+"cost_reduction",
+"you can tap your artifacts and creatures to help"
+]
+],
+"by": "A=B"
+},
+"766104": {
+"tags": [
+[
+"flanking",
+"Flanking"
+],
+[
+"stat_loss",
+"gets -1/-1 until end of turn"
+]
+],
+"by": "A=B"
+},
+"766105": {
+"tags": [
+[
+"on_play",
+"When this enchantment enters"
+],
+[
+"selection",
+"look at the top five cards of your library"
+]
+],
+"by": "C"
+},
+"766106": {
+"tags": [
+[
+"condition_count",
+"Battalion"
+]
+],
+"by": "C"
+},
+"766107": {
+"tags": [
+[
+"graveyard",
+"Fathomless descent"
+]
+],
+"by": "C"
+},
+"766108": {
+"tags": [
+[
+"cost_type",
+"for its miracle cost"
+],
+[
+"draw",
+"when you draw it"
+]
+],
+"by": "A=B"
+},
+"766109": {
+"tags": [
+[
+"return_to_hand",
+"return a tapped creature you control to its owner's hand"
+],
+[
+"cost_type",
+"You may cast this spell for {R}{G}"
+]
+],
+"by": "A=B"
+},
+"766110": {
+"tags": [
+[
+"stat_gain",
+"Endure"
+]
+],
+"by": "C"
+},
+"766111": {
+"tags": [
+[
+"on_ally_play",
+"Constellation"
+]
+],
+"by": "C"
+},
+"766112": {
+"tags": [
+[
+"stat_gain",
+"Put a +1/+1 counter on each of up to two target creatures"
+],
+[
+"scope_multi",
+"each of up to two target creatures"
+]
+],
+"by": "A=B"
+},
+"766113": {
+"tags": [
+[
+"merge_attach",
+"Splice"
+]
+],
+"by": "C"
+},
+"766114": {
+"tags": [
+[
+"temporary_buff",
+"+2/+2 until end of turn"
+]
+],
+"by": "A=B"
+},
+"766115": {
+"tags": [
+[
+"cost_reduction",
+"Your artifacts can help cast this spell"
+]
+],
+"by": "A=B"
+},
+"766116": {
+"tags": [
+[
+"stat_gain",
+"enters with a +1/+1 counter on it for each color of mana spent to cast it"
+],
+[
+"variety_payoff",
+"for each color of mana spent"
+]
+],
+"by": "C"
+},
+"766117": {
+"tags": [],
+"by": "A=B"
+},
+"766118": {
+"tags": [],
+"by": "A=B"
+},
+"766119": {
+"tags": [
+[
+"cost_type",
+"for its warp cost"
+],
+[
+"cast_from_zone",
+"cast it from exile on a later turn"
+],
+[
+"delayed",
+"on a later turn"
+]
+],
+"by": "C"
+},
+"766120": {
+"tags": [],
+"by": "C"
+},
+"766121": {
+"tags": [
+[
+"steal",
+"Heist"
+]
+],
+"by": "C"
+},
+"766122": {
+"tags": [
+[
+"activated",
+"Tap any number of other creatures you control with total power 3 or more"
+],
+[
+"temporary_effect",
+"until end of turn"
+]
+],
+"by": "A=B"
+},
+"766123": {
+"tags": [
+[
+"on_play",
+"When you cast this spell"
+],
+[
+"copy",
+"copy it for each time you paid its replicate cost"
+]
+],
+"by": "C"
+},
+"766124": {
+"tags": [
+[
+"stat_loss",
+"Blight"
+]
+],
+"by": "C"
+},
+"766125": {
+"tags": [],
+"by": "C"
+},
+"766126": {
+"tags": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"modal_choice",
+"put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens"
+],
+[
+"summon",
+"create two 1/1 colorless Servo artifact creature tokens"
+]
+],
+"by": "C"
+},
+"766127": {
+"tags": [],
+"by": "C"
+},
+"766128": {
+"tags": [
+[
+"type_grant",
+"This card is every creature type"
+]
+],
+"by": "A=B"
+},
+"766129": {
+"tags": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"sacrifice",
+"you may sacrifice a creature"
+]
+],
+"by": "A=B"
+},
+"766130": {
+"tags": [
+[
+"on_attack",
+"Whenever this creature attacks"
+],
+[
+"destroy",
+"defending player sacrifices two permanents of their choice"
+]
+],
+"by": "C"
+},
+"766131": {
+"tags": [
+[
+"direct_damage",
+"defending player loses 4 life"
+]
+],
+"by": "A=B"
+},
+"766132": {
+"tags": [
+[
+"transform",
+"Living metal"
+]
+],
+"by": "C"
+},
+"766133": {
+"tags": [
+[
+"transform",
+"Convert"
+]
+],
+"by": "C"
+},
+"766134": {
+"tags": [
+[
+"transform",
+"More Than Meets the Eye"
+]
+],
+"by": "C"
+},
+"766135": {
+"tags": [
+[
+"card_quality",
+"Learn"
+]
+],
+"by": "C"
+},
+"766136": {
+"tags": [
+[
+"once_per_game",
+"Exhaust"
+]
+],
+"by": "C"
+},
+"766137": {
+"tags": [],
+"by": "A=B"
+},
+"766138": {
+"tags": [
+[
+"activated",
+"{W}, {T}: Put a +1/+1 counter on this creature"
+],
+[
+"stat_gain",
+"Put a +1/+1 counter on this creature"
+]
+],
+"by": "C"
+},
+"766139": {
+"tags": [],
+"by": "C"
+},
+"766140": {
+"tags": [
+[
+"stat_condition",
+"Ferocious"
+]
+],
+"by": "C"
+},
+"766141": {
+"tags": [],
+"by": "C"
+},
+"766142": {
+"tags": [
+[
+"stat_gain",
+"put a +1/+1 counter on it"
+]
+],
+"by": "A=B"
+},
+"766143": {
+"tags": [
+[
+"sacrifice",
+"you may sacrifice any number of creatures"
+],
+[
+"stat_gain",
+"three times that many +1/+1 counters"
+]
+],
+"by": "A=B"
+},
+"766144": {
+"tags": [
+[
+"on_ally_play",
+"Rally"
+]
+],
+"by": "C"
+},
+"766145": {
+"tags": [
+[
+"transform",
+"Target land you control becomes a 0/0 creature"
+],
+[
+"haste",
+"with haste"
+],
+[
+"stat_gain",
+"Put X +1/+1 counters on it"
+],
+[
+"death_trigger",
+"When it dies or is exiled"
+],
+[
+"cheat_death",
+"return it to the battlefield tapped"
+]
+],
+"by": "C"
+},
+"766146": {
+"tags": [
+[
+"scope_multi",
+"Strive"
+]
+],
+"by": "C"
+},
+"766147": {
+"tags": [
+[
+"on_ally_play",
+"Whenever a creature you control enters"
+],
+[
+"stat_condition",
+"greater power or toughness than this creature"
+],
+[
+"permanent_growth",
+"put a +1/+1 counter on this creature"
+]
+],
+"by": "C"
+},
+"766148": {
+"tags": [
+[
+"on_attack",
+"When this creature attacks"
+],
+[
+"copy",
+"conjure a duplicate into your hand"
+]
+],
+"by": "C"
+},
+"766149": {
+"tags": [
+[
+"hand_size",
+"Hellbent"
+]
+],
+"by": "C"
+},
+"766150": {
+"tags": [
+[
+"copy",
+"copy it for each spell cast before it this turn"
+],
+[
+"count_payoff",
+"each spell cast before it this turn"
+],
+[
+"on_play",
+"When you cast this spell"
+]
+],
+"by": "C"
+},
+"766151": {
+"tags": [
+[
+"activated",
+"Forecast"
+]
+],
+"by": "C"
+},
+"766152": {
+"tags": [],
+"by": "C"
+},
+"766153": {
+"tags": [
+[
+"modal_choice",
+"for each mode chosen beyond the first"
+]
+],
+"by": "A=B"
+},
+"766154": {
+"tags": [
+[
+"cost_type",
+"for its overload cost"
+],
+[
+"scope_multi",
+"change \"target\" in its text to \"each.\""
+]
+],
+"by": "A=B"
+},
+"766155": {
+"tags": [
+[
+"stat_loss",
+"-1/-1 counters"
+]
+],
+"by": "A=B"
+},
+"766156": {
+"tags": [],
+"by": "C"
+},
+"766157": {
+"tags": [
+[
+"scope_multi",
+"Radiance"
+]
+],
+"by": "C"
+},
+"766158": {
+"tags": [
+[
+"copy",
+"Create a token that's a copy of it"
+],
+[
+"activated",
+"{5}{R}, Exile this card from your graveyard"
+]
+],
+"by": "A=B"
+},
+"766159": {
+"tags": [
+[
+"transform",
+"Meld"
+]
+],
+"by": "C"
+},
+"766160": {
+"tags": [],
+"by": "C"
+},
+"766161": {
+"tags": [
+[
+"suppress",
+"Detain"
+]
+],
+"by": "C"
+},
+"766162": {
+"tags": [
+[
+"activated",
+"Renew"
+]
+],
+"by": "C"
+},
+"766163": {
+"tags": [
+[
+"evasion",
+"can't be blocked except by artifact creatures and/or creatures that share a color with it"
+]
+],
+"by": "A=B"
+},
+"766164": {
+"tags": [
+[
+"on_spell",
+"Repartee"
+]
+],
+"by": "C"
+},
+"766165": {
+"tags": [
+[
+"sacrifice",
+"by sacrificing a creature"
+],
+[
+"cost_reduction",
+"paying the emerge cost reduced by"
+]
+],
+"by": "A=B"
+},
+"766166": {
+"tags": [
+[
+"cheat_death",
+"instead remove all damage from it and destroy this Aura"
+],
+[
+"merge_attach",
+"enchanted creature"
+]
+],
+"by": "C"
+},
+"766167": {
+"tags": [
+[
+"activated",
+"Craft"
+]
+],
+"by": "C"
+},
+"766168": {
+"tags": [
+[
+"death_trigger",
+"When this creature dies"
+],
+[
+"revive",
+"return target Spirit card with mana value 7 or less from your graveyard to your hand"
+],
+[
+"tribal",
+"Spirit"
+]
+],
+"by": "A=B"
+},
+"766169": {
+"tags": [
+[
+"summon",
+"For Mirrodin!"
+]
+],
+"by": "C"
+},
+"766170": {
+"tags": [
+[
+"link_formation",
+"pair this creature with another unpaired creature"
+]
+],
+"by": "A=B"
+},
+"766171": {
+"tags": [
+[
+"sacrifice",
+"Forage"
+]
+],
+"by": "C"
+},
+"766172": {
+"tags": [
+[
+"free_play",
+"cast a copy of the encoded card without paying its mana cost"
+],
+[
+"merge_attach",
+"encoded on a creature you control"
+],
+[
+"copy",
+"cast a copy of the encoded card"
+]
+],
+"by": "A=B"
+},
+"766173": {
+"tags": [
+[
+"graveyard",
+"Undergrowth"
+]
+],
+"by": "C"
+},
+"766174": {
+"tags": [
+[
+"cost_type",
+"for its impending cost"
+],
+[
+"delayed",
+"remove a time counter from it"
+],
+[
+"turn_end",
+"At the beginning of your end step"
+]
+],
+"by": "A=B"
+},
+"766175": {
+"tags": [
+[
+"on_spell",
+"Opus"
+]
+],
+"by": "C"
+},
+"766176": {
+"tags": [
+[
+"permanent_growth",
+"Intensity"
+]
+],
+"by": "C"
+},
+"766177": {
+"tags": [],
+"by": "A=B"
+},
+"766178": {
+"tags": [],
+"by": "A=B"
+},
+"766179": {
+"tags": [
+[
+"blink",
+"This phases in or out"
+],
+[
+"immunity",
+"While it's phased out, it's treated as though it doesn't exist"
+]
+],
+"by": "C"
+},
+"766180": {
+"tags": [
+[
+"death_trigger",
+"When this creature dies"
+],
+[
+"merge_attach",
+"exile it haunting target creature"
+]
+],
+"by": "C"
+},
+"766181": {
+"tags": [
+[
+"stat_gain",
+"two +1/+1 counters"
+],
+[
+"death_trigger",
+"When it dies"
+]
+],
+"by": "A=B"
+},
+"766182": {
+"tags": [
+[
+"evasion",
+"This creature can block or be blocked by only creatures with shadow"
+],
+[
+"blocking",
+"This creature can block or be blocked by only creatures with shadow"
+]
+],
+"by": "C"
+},
+"766183": {
+"tags": [
+[
+"copy",
+"Create a token that's a copy of it"
+],
+[
+"activated",
+"{5}{U}{U}, Exile this card from your graveyard"
+]
+],
+"by": "A=B"
+},
+"766184": {
+"tags": [
+[
+"temporary_buff",
+"Battle Cry"
+],
+[
+"on_attack",
+"Battle Cry"
+]
+],
+"by": "C"
+},
+"766185": {
+"tags": [
+[
+"cost_type",
+"for its surge cost"
+],
+[
+"team_play",
+"or a teammate"
+]
+],
+"by": "A=B"
+},
+"766186": {
+"tags": [
+[
+"on_spell",
+"Valiant"
+]
+],
+"by": "C"
+},
+"766187": {
+"tags": [
+[
+"stat_condition",
+"Formidable"
+]
+],
+"by": "C"
+},
+"766188": {
+"tags": [
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"permanent_growth",
+"put a +1/+1 counter on this creature"
+],
+[
+"stat_condition",
+"greater than this creature's power or toughness"
+]
+],
+"by": "C"
+},
+"766189": {
+"tags": [
+[
+"on_play",
+"When this Equipment enters"
+],
+[
+"summon",
+"create a 1/1 colorless Hero creature token"
+],
+[
+"merge_attach",
+"attach this to it"
+]
+],
+"by": "A=B"
+},
+"766190": {
+"tags": [
+[
+"summon",
+"Cloak"
+]
+],
+"by": "C"
+},
+"766191": {
+"tags": [
+[
+"cost_type",
+"for its prowl cost"
+],
+[
+"tribal",
+"Rogue"
+]
+],
+"by": "A=B"
+},
+"766192": {
+"tags": [
+[
+"self_mill",
+"mill three cards"
+],
+[
+"recycle",
+"return this card from your graveyard to your hand"
+]
+],
+"by": "A=B"
+},
+"766193": {
+"tags": [
+[
+"evasion",
+"can't be blocked as long as defending player controls a Forest"
+]
+],
+"by": "A=B"
+},
+"766194": {
+"tags": [],
+"by": "A=B"
+},
+"766195": {
+"tags": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"stat_gain",
+"put a +1/+1 counter on target creature"
+],
+[
+"temporary_buff",
+"until end of turn"
+]
+],
+"by": "A=B"
+},
+"766196": {
+"tags": [
+[
+"cast_from_zone",
+"You may cast this card from your graveyard"
+],
+[
+"discard",
+"discarding a card"
+],
+[
+"banish",
+"Then exile this card"
+]
+],
+"by": "C"
+},
+"766197": {
+"tags": [
+[
+"copy",
+"create a token that's a copy of a creature token you control"
+]
+],
+"by": "A=B"
+},
+"766198": {
+"tags": [
+[
+"banish",
+"Then exile this spell"
+],
+[
+"cast_from_zone",
+"cast a copy of it from exile"
+],
+[
+"free_play",
+"without paying its mana cost"
+],
+[
+"turn_start",
+"at the beginning of each of your first main phases"
+]
+],
+"by": "C"
+}
+}
