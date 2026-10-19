@@ -155,7 +155,9 @@ def _anc(c):
 FEEDS = {   # which effects set off which triggers (Claude's mapping)
     'on_ally_play': {'summon', 'revive', 'free_play'}, 'death_count': {'sacrifice', 'destroy', 'self_destruct', 'board_wipe', 'aoe_damage'},
     'on_damaged': {'damage', 'friendly_fire'}, 'on_attack': {'attack_now', 'haste', 'multi_attack', 'forced_attack'},
-    'on_kill': {'destroy', 'deathtouch'}, 'on_play': {'blink', 'copy', 'return_to_hand'}, 'death_trigger': {'sacrifice', 'self_destruct', 'destroy'}}
+    'on_kill': {'destroy', 'deathtouch'}, 'on_play': {'blink', 'copy', 'return_to_hand'}, 'death_trigger': {'sacrifice', 'self_destruct', 'destroy'},
+    'on_life_loss': {'life_payment', 'friendly_fire'}, 'on_lifegain': {'heal', 'lifesteal'}, 'on_draw': {'draw', 'tutor'}, 'on_discard': {'discard'},
+    'on_sacrifice': {'sacrifice'}, 'on_targeted': set(), 'on_block': set()}
 
 def connections(ia, ib):
     """Every known connection between two entities, by layer: link, type, keyword, role (exact), role (concept tree), relation, engine."""
@@ -181,9 +183,11 @@ def connections(ia, ib):
     # engine: one card's trigger is the other's effect (enabler -> payoff), from trigger_effect
     for x, y, lx, ly in ((ia, ib, 'A', 'B'), (ib, ia, 'B', 'A')):
         trig_ids = {i for (i,) in q("SELECT id FROM concept_tree WHERE root='trigger'")}
-        eff = {e for (e,) in q('SELECT effect FROM trigger_effect WHERE entity=?', x)} | {c for c, r in q('SELECT concept, role FROM entity_concepts WHERE entity=?', x) if r in ('does', 'grants') and c not in trig_ids}
+        eff = {e for (e,) in q('SELECT effect FROM trigger_effect WHERE entity=?', x)} | {c for c, r in q('SELECT concept, role FROM entity_concepts WHERE entity=?', x) if r in ('does', 'grants', 'cost') and c not in trig_ids}   # paying a cost (life, a unit) is doing it
         cat = q('SELECT category FROM entities WHERE id=?', x)[0][0]
-        for t, e in q('SELECT DISTINCT trigger, effect FROM trigger_effect WHERE entity=?', y):
+        tp = q('SELECT DISTINCT trigger, effect FROM trigger_effect WHERE entity=?', y)
+        tp += [(t, 'its effect') for (t,) in q("SELECT concept FROM entity_concepts WHERE entity=? AND role='trigger'", y) if t not in {a for a, _ in tp}]   # a trigger tag without a stored pair
+        for t, e in tp:
             m = sorted(c for c in eff if t in _anc(c) or (FEEDS.get(t, set()) & _anc(c)))
             if t == 'on_spell' and cat == 'spell': m = m or ['a spell']
             if m: out.append(('engine', f'{lx} does {m[0]} -> {ly} triggers on {t} ({e})'))

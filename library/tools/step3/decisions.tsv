@@ -87,7 +87,7 @@ narrow	upgrade|does|shadowverse|\bevolve (it|this|an?|target|all|that|them)\b|\b
 narrow	reactions|does|*|\breaction\b	dnd5e	(?<!or a )(?<!require a )(?<!action or )\breaction\b(?! to deliver)(?! to cast)
 # manual (Claude, 20 Oct 2026, asked by Kaptain): Magic exile of your own permanents or of the card itself is not banish (sacrifice / cost)
 narrow	banish|does|*|\bexile	mtg	\bexile(?!s?\s+(?:a|an|another|one|two|x|all|any number of|up to \w+)?\s*(?:other\s+)?(?:target\s+)?(?:[\w-]+\s+){0,2}?(?:creatures?|permanents?|artifacts?|tokens?|lands?)\s+you control\b)(?!s?\s+(?:this|name)\b)
-# switch_off.py: old patterns right less than half the time switched off
+# switch_off.py: old patterns right less than half the time switched off, and pointed at the concept the key shows them right for
 narrow	activated|does|*|\bactivate	duelyst,inscryption,runeterra,wh_40k_10e,wh_killteam	(?!)
 narrow	activated|does|*|\bactivated	runeterra,shadowverse,wh_underworlds	(?!)
 narrow	activated|does|*|\bspend \d	dnd5e,hearthstone,hs_battlegrounds,runeterra,wh_40k_10e,wh_aos_4th,wh_killteam	(?!)
@@ -242,6 +242,117 @@ narrow	variable_stats|does|*|equal to the number of	gwent	(?!)
 narrow	zone_control|does|*|\bobjective	into_the_breach	(?!)
 narrow	zone_of_control|does|*|\bengagement range	wh_40k_10e,wh_killteam	(?!)
 narrow	zone_of_control|does|wh_aos_4th|\bin combat\b|\bcombat range\b	wh_aos_4th	(?!)
+new	kicker|does|runeterra|redirect	runeterra	\bspend \d
+new	turn_start|does|wh_40k_10e|redirect	wh_40k_10e	\bspend \d
+new	kicker|does|hearthstone|redirect	hearthstone	\bspend \d
+new	modal_choice|does|sts2|redirect	sts2	\{[^}]+\}.{0,30}:
+new	buff|does|mtg|redirect	mtg	(other|all|each) .{0,30}(you control|allies|friendly) .{0,15}(get|have) \+
+new	random_effect|does|wh_aos_4th|redirect	wh_aos_4th	\baura\b
+new	saving_throws|does|wh_aos_4th|redirect	wh_aos_4th	\bbanish
+new	cant_block|counters|mtg|redirect	mtg	can't block
+new	block_armor|does|sts1|redirect	sts1	(?<!\d )(?<!gain )(?<!stat )\bblocks?\b
+new	stat_gain|does|darkest_dungeon|redirect	darkest_dungeon	(?<!\d )(?<!gain )(?<!stat )\bblocks?\b
+new	removal|does|gwent|redirect	gwent	(destroy|kill|exile|banish) (all|each) (other )?(enemy |non-?\w+ )?(creatures|minions|units|followers|permanents|cards|fighters)
+new	generate_cards|does|hearthstone|redirect	hearthstone	put .{0,30}on the (top|bottom) of
+new	recycle|does|sts1|redirect	sts1	return .{0,40}to (your|their|its) hand
+new	recycle|does|sts2|redirect	sts2	return .{0,40}to (your|their|its) hand
+new	card_quality|does|hs_battlegrounds|redirect	hs_battlegrounds	return .{0,40}to (your|their|its) hand
+new	return_to_hand|does|shadowverse|redirect	shadowverse	return .{0,40}to (your|their|its) hand
+new	card_quality|does|gwent|redirect	gwent	shuffle .{0,40}into (your|their|its owner.s) (deck|library)
+new	card_flow|does|mtg|redirect	mtg	shuffle .{0,40}into (your|their|its owner.s) (deck|library)
+new	taunt|does|gwent|redirect	gwent	\bdefender\b
+new	generate_cards|does|runeterra|redirect	runeterra	\bcoins?\b
+new	random_effect|does|mtg|redirect	mtg	\bcoins?\b
+new	random_effect|does|wh_40k_10e|redirect	wh_40k_10e	\bfor each\b
+new	random_ability|does|inscryption|redirect	inscryption	at least \d+
+new	cost_set|does|sts1|redirect	sts1	reduce .{0,20}cost
+new	card_quality|does|runeterra|redirect	runeterra	reduce .{0,20}cost
+new	alt_wincon|does|mtg|redirect	mtg	\bpoison(?!ous)
+new	aoe_damage|does|sts2|redirect	sts2	at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)
+new	life_payment|does|hs_battlegrounds|redirect	hs_battlegrounds	at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)
+new	saving_throws|does|darkest_dungeon|redirect	darkest_dungeon	\bresist
+new	saving_throws|does|wh_aos_4th|redirect	wh_aos_4th	\bresist
+new	saving_throws|does|wh_killteam|redirect	wh_killteam	invulnerable save
+new	saving_throws|does|wh_40k_10e|redirect	wh_40k_10e	invulnerable save
+new	saving_throws|does|wh_killteam|redirect	wh_killteam	invulnerable saves?
+new	saving_throws|does|wh_40k_10e|redirect	wh_40k_10e	invulnerable saves?
+new	saving_throws|does|wh_aos_4th|redirect	wh_aos_4th	\bward \(\d\+\)|\b(has|have|gain|gains|with) ward\b|\bsubtract 1 from (the )?(hit|wound) rolls? for (combat |shooting )?attacks that target\b|\bdamage points? allocated to this unit\b
+new	saving_throws|does|darkest_dungeon|redirect	darkest_dungeon	(fire|frost|nature|shadow|holy|arcane|fel|cold|lightning|poison|physical|magic) (damage|weakness|resistance)
+new	passive|does|darkest_dungeon|redirect	darkest_dungeon	\bresistance\b
+new	permanent_growth|benefits|hs_battlegrounds|redirect	hs_battlegrounds	whenever .{0,40}(deals|takes|is dealt) damage
+new	distribute|does|gwent|redirect	gwent	\b\d+ damage\b
+new	death|does|faeria|redirect	faeria	whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)
+new	death_trigger|does|shadowverse|redirect	shadowverse	whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)
+new	death_trigger|does|hearthstone|redirect	hearthstone	whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)
+new	death|does|mtg|redirect	mtg	whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)
+new	tribal|does|wh_aos_4th|redirect	wh_aos_4th	\bdeathrattle
+new	scoring_objectives|benefits|wh_underworlds|redirect	wh_underworlds	\bscore (this|it)\b[^\n]*?\bout of action\b
+new	protection|counters|mtg|redirect	mtg	\bindestructible\b
+new	stat_loss|does|wh_40k_10e|redirect	wh_40k_10e	\bstun
+new	advantage|does|wh_aos_4th|redirect	wh_aos_4th	\bdiscards?\b(?! piles?\b)
+new	positional|does|into_the_breach|redirect	into_the_breach	\bflying\b
+new	activated|does|mtg|redirect	mtg	\bexhaust
+new	untap|does|mtg|redirect	mtg	(?<!t )\buntap (target|it|all|up to|another|each|that)\b
+new	card_flow|does|mtg|redirect	mtg	\bput .{0,30}onto the battlefield
+new	selection|does|hs_battlegrounds|redirect	hs_battlegrounds	\bdiscover\b
+new	tutor|does|mtg|redirect	mtg	\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b
+new	card_flow|does|wh_underworlds|redirect	wh_underworlds	add .{0,40}to your hand
+new	advantage|does|wh_aos_4th|redirect	wh_aos_4th	\bdiscards?\b(?! piles?\b)
+new	card_flow|does|wh_underworlds|redirect	wh_underworlds	\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)
+new	card_flow|does|mtg|redirect	mtg	look at
+new	tutor|does|inscryption|redirect	inscryption	choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))
+new	damage|does|sts1|redirect	sts1	\bmoves?\b
+new	positional|does|into_the_breach|redirect	into_the_breach	\bpush
+new	forced_movement|does|darkest_dungeon|redirect	darkest_dungeon	\bpush
+new	saving_throws|does|dnd5e|redirect	dnd5e	\bstrike:
+new	aoe_damage|does|wh_40k_10e|redirect	wh_40k_10e	\bstrike:
+new	random_effect|does|wh_bloodbowl3|redirect	wh_bloodbowl3	\bpassive
+new	slots_queue|does|sts1|redirect	sts1	\bpassive
+new	repeat_trigger|does|sts2|redirect	sts2	\bpassive
+new	buff|does|mtg|redirect	mtg	\+1/\+1 counter
+new	variety_payoff|does|runeterra|redirect	runeterra	\bevolve
+new	multi_attack|does|sts2|redirect	sts2	\bpierc
+new	start_of_game|does|wh_killteam|redirect	wh_killteam	\bdeployment
+new	start_of_game|does|wh_aos_4th|redirect	wh_aos_4th	\bdeployment
+new	random_effect|does|wh_aos_4th|redirect	wh_aos_4th	\bscore(s|d)? (\d+|victory|glory|points?|this|that|one|an? objective)\b
+new	on_attack|does|wh_40k_10e|redirect	wh_40k_10e	\bscore(s|d)? (\d+|victory|glory|points?|this|that|one|an? objective)\b
+new	positional|does|wh_killteam|redirect	wh_killteam	\bobjective\b
+new	positional|does|wh_aos_4th|redirect	wh_aos_4th	\bobjective\b
+new	generate_cards|does|runeterra|redirect	runeterra	\bcoin
+new	random_effect|does|hearthstone|redirect	hearthstone	\bshoot
+new	generate_cards|does|hearthstone|redirect	hearthstone	put .{0,30}on the (top|bottom) of
+new	recycle|does|sts1|redirect	sts1	return .{0,40}to (your|their|its) hand
+new	recycle|does|sts2|redirect	sts2	return .{0,40}to (your|their|its) hand
+new	buff|does|into_the_breach|redirect	into_the_breach	\brows?\b
+new	tribal|does|hearthstone|redirect	hearthstone	\brows?\b
+new	upgrade|does|into_the_breach|redirect	into_the_breach	\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))
+new	friendly_fire|does|faeria|redirect	faeria	\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))
+new	scope_multi|does|gwent|redirect	gwent	\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))
+new	friendly_fire|does|runeterra|redirect	runeterra	\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))
+new	scope_multi|does|hearthstone|redirect	hearthstone	\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))
+new	random_effect|does|wh_aos_4th|redirect	wh_aos_4th	\bward\b
+new	targeting_rules|does|shadowverse|redirect	shadowverse	\bward\b
+new	temporary_buff|does|wh_aos_4th|redirect	wh_aos_4th	\bgold\b(?! card)
+new	card_advantage|does|shadowverse|redirect	shadowverse	\bgold\b(?! card)
+new	upgrade|does|into_the_breach|redirect	into_the_breach	\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b
+new	upgrade|does|into_the_breach|redirect	into_the_breach	\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)
+new	buff|does|hs_battlegrounds|redirect	hs_battlegrounds	gains? \+\d+
+new	random_effect|does|dnd5e|redirect	dnd5e	\bstress\b
+new	generate_cards|does|gwent|redirect	gwent	\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)
+new	card_flow|does|mtg|redirect	mtg	\bput .{0,30}(onto|into) the battlefield
+new	piercing|does|wh_bloodbowl3|redirect	wh_bloodbowl3	\bspawn
+new	scope_multi|does|faeria|redirect	faeria	\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b
+new	scope_multi|does|hearthstone|redirect	hearthstone	\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b
+new	board_wipe|does|mtg|redirect	mtg	\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b
+new	buff|counters|wh_40k_10e|redirect	wh_40k_10e	\[ignores cover\]|\bignores cover\b|\bbenefit of cover\b(?! to)
+new	buff|does|wh_40k_10e|redirect	wh_40k_10e	\bcover\b
+new	saving_throws|does|wh_aos_4th|redirect	wh_aos_4th	\blands?\b
+new	swap|does|into_the_breach|redirect	into_the_breach	\bterrain
+new	movement|does|wh_40k_10e|redirect	wh_40k_10e	\bterrain
+new	piercing|does|wh_aos_4th|redirect	wh_aos_4th	\banti-[a-z]
+new	zone_control|does|wh_aos_4th|redirect	wh_aos_4th	at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b
+new	damage_types|does|dnd5e|redirect	dnd5e	\bupgrade
+new	modal_choice|does|wh_killteam|redirect	wh_killteam	\bupgrade
 # key_patterns.py (patterns from the answer key quotes, 90%+ right on held-out key entries): new <concept|role|game|key> <game> <regex>
 new	adjacency|does|into_the_breach|key	into_the_breach	\ball\s+adjacent\s+tiles\b
 new	damage|does|into_the_breach|key	into_the_breach	(?:\b\d+\s+damage\s+each\b)|(?:\bdealing\s+\d+\s+damage\b)|(?:\bdeals\s+\d+\s+damage\s+to\s+the\s+target\b)|(?:\bfor\s+\d+\s+damage\b)|(?:\bstab\s+it\s+for\s+\d+\s+damage\b)
