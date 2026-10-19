@@ -1,0 +1,68 @@
+"""Step 3b of the tag-fix plan (19 Oct 2026): new wording patterns built from the answer key's quoted words.
+For each game, the key (tools/key/<game>/key.json) is split 50/50 with seed 1. Every quoted phrase of one half becomes a candidate regex
+for its concept: read as the patterns read text (lower case, the entry's own name as 'name', Magic without reminder text), escaped,
+spaces as \\s+, numbers as \\d+, word boundaries at word ends. A candidate is tested on the other half (the entries it was not built
+from) and kept only if it matches there at least MIN times and is 90%+ right (right as key.py scores: the key's concepts, a narrower or
+a broader one below the four branches). Both directions are run; the kept candidates of a game and concept are joined into one regex.
+Claude's choices (not in the plan): numbers as \\d+, a phrase must be at least 4 characters and not only the name, MIN = 3 held-out
+matches, and the role is the concept's most common role among the existing patterns ('does' when it has none).
+Writes the 'new' lines of tools/step3/decisions.tsv (narrow lines are kept as they are) and prints counts only.
+Usage: key_patterns.py [db]"""
+import collections, json, os, random, re, sqlite3, sys
+HERE = os.path.dirname(os.path.abspath(__file__)); TOOLS = os.path.dirname(HERE)
+sys.path.insert(0, HERE); sys.path.insert(0, TOOLS)
+import patterns3 as P
+K = P.K
+DB = sys.argv[1] if len(sys.argv) > 1 else P.DB
+MIN, PREC = 3, 0.9
+c = sqlite3.connect(DB)
+roles = collections.defaultdict(collections.Counter)
+for k, r in c.execute('SELECT concept, role FROM concept_patterns'): roles[k][r] += 1
+role = lambda k: roles[k].most_common(1)[0][0] if roles[k] else 'does'
+ent = {i: (g, n, t) for i, g, n, t in c.execute('SELECT id, game, name, text FROM entities')}
+
+def rx(phrase):
+    s = re.escape(phrase)
+    s = re.sub(r'(\\ )+', r'\\s+', s)
+    s = re.sub(r'\d+', r'\\d+', s)
+    if re.match(r'\w', phrase): s = r'\b' + s
+    if re.search(r'\w$', phrase): s = s + r'\b'
+    return s
+
+out = []; stats = collections.Counter()
+for g in P.GAMES:
+    f = os.path.join(TOOLS, 'key', g, 'key.json')
+    if not os.path.exists(f): continue
+    raw = json.load(open(f, encoding='utf-8'))
+    ids = sorted(int(i) for i in raw if int(i) in ent)
+    keyset = {i: K.narrow({k for k, _ in raw[str(i)]['tags']}) for i in ids}
+    text = {i: P.norm_text(g, ent[i][1], ent[i][2]) for i in ids}
+    sh = ids[:]; random.Random(1).shuffle(sh); half = [set(sh[:len(sh) // 2]), set(sh[len(sh) // 2:])]
+    kept = collections.defaultdict(set)
+    for a, b in ((0, 1), (1, 0)):
+        cand = set()
+        for i in half[a]:
+            for k, words in raw[str(i)]['tags']:
+                if k not in K.TREE or k in K.GROUPS: continue
+                w = re.sub(r'\s+', ' ', P.norm_text(g, ent[i][1], words)).strip(' .,;:')
+                if len(w) < 4 or w == 'name' or not re.search(rx(w), text[i], re.I): continue
+                cand.add((k, rx(w)))
+        for k, p in cand:
+            r = re.compile(p, re.I); n = ok = 0
+            for i in half[b]:
+                if r.search(text[i]):
+                    n += 1; ok += P.right(k, keyset[i])
+            stats['candidates'] += 1
+            if n >= MIN and ok >= PREC * n: kept[k].add(p)
+    for k in sorted(kept):
+        ps = sorted(kept[k]); stats['kept'] += len(ps); stats['concepts'] += 1
+        p = '|'.join('(?:%s)' % x for x in ps) if len(ps) > 1 else ps[0]
+        out.append(f'new\t{k}|{role(k)}|{g}|key\t{g}\t{p}')
+    print(f'{g:18} key {len(ids):4}  concepts {len(kept):3}  patterns {sum(len(v) for v in kept.values()):4}')
+D = os.path.join(HERE, 'decisions.tsv')
+keep = [l for l in open(D, encoding='utf-8') if not l.startswith('new\t') and not l.startswith('# key_patterns')]
+with open(D, 'w', encoding='utf-8') as fh:
+    fh.writelines(keep)
+    fh.write('# key_patterns.py (patterns from the answer key quotes, 90%+ right on held-out key entries): new <concept|role|game|key> <game> <regex>\n')
+    for l in out: fh.write(l + '\n')
+print(dict(stats))
