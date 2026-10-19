@@ -19,3 +19,7 @@ Keep any helper script in `judge/<letter>/` with a name that includes your batch
 
 Reader B gets `b_NNN.txt` files that hold only the questions marked `*`; it writes `judge/B/b_NNN.json`. Reader C gets `settle_NNN.txt` files listing
 questions where A and B differ, with both answers; write the final answer to `judge/C/settle_NNN.json`.
+
+## Second round files
+Reader A: `judge/rNNN.txt` -> `judge/A/rNNN.json`. Reader B: `judge/rb_NNN.txt` -> `judge/B/rb_NNN.json`. Write the json with one
+short python or shell command per batch; keep reasoning brief.

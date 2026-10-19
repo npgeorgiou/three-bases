@@ -1,0 +1,437 @@
+[
+{
+"id": 756141,
+"name": "Deploy",
+"text": "Trigger this ability when played."
+},
+{
+"id": 756142,
+"name": "Initiative",
+"text": "Trigger this ability if you haven't used an Order, Fee or Spring ability this turn."
+},
+{
+"id": 756143,
+"name": "Order",
+"text": "An ability triggered manually by the player. Cards with Order cannot be used for 1 turn after being placed on the battlefield."
+},
+{
+"id": 756144,
+"name": "Melee",
+"text": "This ability can only be used while on the melee row."
+},
+{
+"id": 756145,
+"name": "Drain",
+"text": "Damage ignoring the target's armor, then boost self by the damage dealt."
+},
+{
+"id": 756146,
+"name": "Ranged",
+"text": "This ability can only be used while on the ranged row."
+},
+{
+"id": 756147,
+"name": "Reveal",
+"text": "Show a card to both players, then hide it back in the hand or deck."
+},
+{
+"id": 756148,
+"name": "Lineage",
+"text": "At the start of the game, boost self by the number of Dragons in your starting deck."
+},
+{
+"id": 756149,
+"name": "Timer",
+"text": "Before the end of your turn, lower the number by 1. When the number reaches 0, trigger the ability."
+},
+{
+"id": 756150,
+"name": "Spawn",
+"text": "Add a card to the game."
+},
+{
+"id": 756151,
+"name": "Zeal",
+"text": "An Order ability can be used on the same turn the card is placed on the battlefield."
+},
+{
+"id": 756152,
+"name": "Cooldown",
+"text": "The number of turns before an Order or Fee ability can be reused."
+},
+{
+"id": 756153,
+"name": "Adrenaline",
+"text": "Trigger this ability if you have specified number or fewer cards in your hand. Cards with Adrenaline are highlighted when their effect is stronger."
+},
+{
+"id": 756154,
+"name": "Summon",
+"text": "Move automatically to the battlefield (not considered played)."
+},
+{
+"id": 756155,
+"name": "Charge",
+"text": "The number of times an Order ability can be used. Only cards with Charge: X can gain additional Charges."
+},
+{
+"id": 756156,
+"name": "Cataclysm",
+"text": "At the start of the owner's turn, split 3 damage randomly between units in this row."
+},
+{
+"id": 756157,
+"name": "Heal",
+"text": "If a unit's current power is lower than its base power, restore it either to base power or by the amount specified."
+},
+{
+"id": 756158,
+"name": "Banish",
+"text": "Remove from the game. Note: Does not count as being destroyed."
+},
+{
+"id": 756159,
+"name": "Doomed",
+"text": "Status that removes the card from the game after it leaves the battlefield."
+},
+{
+"id": 756160,
+"name": "Storm",
+"text": "At the start of the owner's turn, damage all units on this row by 1."
+},
+{
+"id": 756161,
+"name": "Veil",
+"text": "Status that prevents unit from gaining other statuses."
+},
+{
+"id": 756162,
+"name": "Frost",
+"text": "At the start of the owner's turn, damage the highest power unit in this row by 2."
+},
+{
+"id": 756163,
+"name": "Fog",
+"text": "At the start of the owner's turn, damage the lowest power unit in this row by 2."
+},
+{
+"id": 756164,
+"name": "Rain",
+"text": "At the start of the owner's turn, damage 2 random units in this row by 1."
+},
+{
+"id": 756165,
+"name": "Bloodthirst",
+"text": "Number of damaged enemy units required to trigger this ability."
+},
+{
+"id": 756166,
+"name": "Lock",
+"text": "Status that disables a unit's abilities."
+},
+{
+"id": 756167,
+"name": "Formation",
+"text": "If played on the melee row, gain Zeal. If played on the ranged row, boost self by 1."
+},
+{
+"id": 756168,
+"name": "Inspired",
+"text": "Trigger this ability if this unit's current power is higher than its base power."
+},
+{
+"id": 756169,
+"name": "Bleeding",
+"text": "Status that damages the unit by 1 at the end of its turn. Note: Bleeding turns can accumulate, 1 turn of Bleeding cancels out 1 turn of Vitality. Bleeding ignores armor."
+},
+{
+"id": 756170,
+"name": "Disloyal",
+"text": "This card is played on the opposite side of the battlefield, then gains Spying."
+},
+{
+"id": 756171,
+"name": "Coin",
+"text": "The Novigradian underworld's currency of choice for paying Fees and Tributes. You may possess a maximum of 9 Coins. Your Coin-count is reduced by half (rounded down) when carried over into the next round."
+},
+{
+"id": 756172,
+"name": "Patience",
+"text": "At the end of your turn, if Order is not used, increase the card's specified value by 1 for the rest of the game."
+},
+{
+"id": 756173,
+"name": "Deathwish",
+"text": "Trigger this ability when destroyed and moved from the battlefield to the graveyard. Note: Banished units are not sent to the graveyard."
+},
+{
+"id": 756174,
+"name": "Armor",
+"text": "Protects the unit from damage. This value doesn't count towards your score and/or the unit's power."
+},
+{
+"id": 756175,
+"name": "Crew",
+"text": "Trigger this ability if this unit is between two Soldiers."
+},
+{
+"id": 756176,
+"name": "Resupply",
+"text": "Whenever you play a Warfare card, reduce this card's Cooldown by 1."
+},
+{
+"id": 756177,
+"name": "Vitality",
+"text": "Status that boosts this unit by 1 on its turn end. Note: Vitality turns can accumulate; 1 turn of Vitality cancels out 1 turn of Bleeding."
+},
+{
+"id": 756178,
+"name": "Barricade",
+"text": "Trigger this ability if the unit has armor."
+},
+{
+"id": 756179,
+"name": "Exposed",
+"text": "Trigger this ability whenever the unit loses its Armor."
+},
+{
+"id": 756180,
+"name": "Grace",
+"text": "The first time this unit's power is equal to or higher than the specified amount, trigger the ability. If the condition is already met when it enters the battlefield, trigger it immediately."
+},
+{
+"id": 756181,
+"name": "Shield",
+"text": "Status that blocks the next instance of damage dealt to a unit."
+},
+{
+"id": 756182,
+"name": "Devotion",
+"text": "Trigger this ability if your starting deck has no neutral cards."
+},
+{
+"id": 756183,
+"name": "Purify",
+"text": "Remove all statuses."
+},
+{
+"id": 756184,
+"name": "Immunity",
+"text": "Status whereby this card cannot be manually targeted."
+},
+{
+"id": 756185,
+"name": "Consume",
+"text": "Destroy a unit and boost self by its power. If target is in the graveyard, Banish it instead."
+},
+{
+"id": 756186,
+"name": "Seize",
+"text": "Move an enemy unit to the opposite row and give it Spying. If it already had Spying, remove Spying instead."
+},
+{
+"id": 756187,
+"name": "Thrive",
+"text": "Boost this unit by 1 or the specified amount whenever you play a unit with higher power."
+},
+{
+"id": 756188,
+"name": "Infused",
+"text": "Status that adds effects or categories to a card. Removing the status also removes all added effects and categories. Lock disables Infused abilities."
+},
+{
+"id": 756189,
+"name": "Dominance",
+"text": "Trigger this ability if you control the highest unit on the battlefield."
+},
+{
+"id": 756190,
+"name": "Bonded",
+"text": "Trigger this ability if you control a copy of this card."
+},
+{
+"id": 756191,
+"name": "Resilience",
+"text": "Status that allows a unit to remain on the battlefield at the end of the round, then disappears.\\nNote: Boost and Armor are not carried over to the next round."
+},
+{
+"id": 756192,
+"name": "Deathblow",
+"text": "Trigger this ability if this card destroys a unit."
+},
+{
+"id": 756193,
+"name": "Ambush",
+"text": "Played face down, then flips over when the ability's condition is met."
+},
+{
+"id": 756194,
+"name": "Spring",
+"text": "Manual activation of a face-down Trap. Spring is activated automatically on a Trap played next to an Artifact. Cards with Spring are flipped over after use."
+},
+{
+"id": 756195,
+"name": "Discard",
+"text": "Move a card from your hand to the graveyard. Note: Related abilities are not triggered when discarding manually."
+},
+{
+"id": 756196,
+"name": "Veteran",
+"text": "At the start of the second and third round, increase the base power of this unit by 1."
+},
+{
+"id": 756197,
+"name": "Berserk",
+"text": "Trigger this ability whenever power is equal to or lower than the specified amount."
+},
+{
+"id": 756198,
+"name": "Echo",
+"text": "At the beginning of the round, move this card from the graveyard to the top of its owner's deck. Give it Doomed."
+},
+{
+"id": 756199,
+"name": "Conspiracy",
+"text": "Trigger this ability if target unit has Spying status."
+},
+{
+"id": 756200,
+"name": "Flanking",
+"text": "If this unit is adjacent to only one card: on your Melee row, its end of turn ability is triggered twice; on your Ranged row, gain 1 Armor at the end of your turn."
+},
+{
+"id": 756201,
+"name": "Create",
+"text": "Spawn one of three randomly selected cards from the specified source."
+},
+{
+"id": 756202,
+"name": "Poison",
+"text": "Status - if a unit receives two instances of Poison, destroy it."
+},
+{
+"id": 756203,
+"name": "Predator",
+"text": "This ability can only target units with power lower than own."
+},
+{
+"id": 756204,
+"name": "Symbiosis",
+"text": "Whenever you play a Nature card, Spawn a Wandering Treant on a random allied row and set its power equal to number of Symbioses you control."
+},
+{
+"id": 756205,
+"name": "Might",
+"text": "Trigger this ability if you control a unit with 10 or more power on each of your rows."
+},
+{
+"id": 756206,
+"name": "Duel",
+"text": "Units take turns dealing damage equal to their power until one of them is destroyed."
+},
+{
+"id": 756207,
+"name": "Harmony",
+"text": "Boost self by 1 or the specified amount whenever you play a non-Neutral unit, whose primary category is unique among all of your units."
+},
+{
+"id": 756208,
+"name": "Dragon's Dream",
+"text": "At the start of the owner's turn, when timer expires, damage all units in this row by 3."
+},
+{
+"id": 756209,
+"name": "Blood Moon",
+"text": "At the start of the owner's turn, give a random unit in this row Bleeding (2). If the unit is already Bleeding, damage it by 2 instead."
+},
+{
+"id": 756210,
+"name": "Assimilate",
+"text": "Boost self by 1 or the specified amount whenever you play a card that is not from your starting deck."
+},
+{
+"id": 756211,
+"name": "Tribute",
+"text": "On Deploy, you may choose to spend the specified amount of Coins to trigger this ability."
+},
+{
+"id": 756212,
+"name": "Profit",
+"text": "Gain a specified number of Coins when this card is played. You may possess a maximum of 9 Coins."
+},
+{
+"id": 756213,
+"name": "Fee",
+"text": "Trigger this ability by spending the specified number of Coins."
+},
+{
+"id": 756214,
+"name": "Bounty",
+"text": "When a unit with this status is destroyed or banished, opponent gains coins equal to its base power. There can be only one unit with Bounty status on each side of the board at given time."
+},
+{
+"id": 756215,
+"name": "Intimidate",
+"text": "Boost self by 1 or the specified amount whenever you play a Crime card."
+},
+{
+"id": 756216,
+"name": "Insanity",
+"text": "If you have insufficient Coins, damage this unit by its Fee amount, ignoring its Armor, to trigger its Fee ability.\\nNote: Insanity cannot be used if it would destroy the unit and works only if damage is inflicted."
+},
+{
+"id": 756217,
+"name": "Hoard",
+"text": "Trigger this ability if you possess the specified number of Coins or more."
+},
+{
+"id": 756218,
+"name": "Defender",
+"text": "Status that prevents the opponent from targeting other cards in this row."
+},
+{
+"id": 756219,
+"name": "Rupture",
+"text": "At the end of owner's turn, damage this unit equal to its base power, then remove this status."
+},
+{
+"id": 756220,
+"name": "Clash",
+"text": "Units simultanously damage each other by their power."
+},
+{
+"id": 756221,
+"name": "Sabbath",
+"text": "Trigger this ability if at least one of your rows has a total of 25 or more points."
+},
+{
+"id": 756222,
+"name": "Vice",
+"text": "Trigger this ability after you spent the specified amount of Coins, then reset own counter."
+},
+{
+"id": 756223,
+"name": "Counter",
+"text": "Reduce the Counter whenever the given condition is met. Reset the Counter when the Unit leaves the Board. (2020 definition)"
+},
+{
+"id": 756224,
+"name": "Crown",
+"text": "The unit of Novigradian currency required to pay Fees and Tributes. You may possess a maximum of 9 Crowns. Your Crown-count is reduced by half (rounded down) when carried over into the next round. (2020 definition)"
+},
+{
+"id": 756225,
+"name": "Reset",
+"text": "Restore a unit to its base power. (2020 definition)"
+},
+{
+"id": 756226,
+"name": "Spend",
+"text": "The amount of Crowns needed to trigger this ability. (2020 definition)"
+},
+{
+"id": 756227,
+"name": "Swap",
+"text": "Move a card from hand to deck and draw another in its place during your turn. (2020 definition)"
+}
+]

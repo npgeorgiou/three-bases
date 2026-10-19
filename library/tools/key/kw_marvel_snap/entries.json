@@ -1,0 +1,92 @@
+[
+{
+"id": 795390,
+"name": "On Reveal",
+"text": "Triggers once, when the card is revealed after being played."
+},
+{
+"id": 795391,
+"name": "Ongoing",
+"text": "A continuous effect that applies while the card is on the board."
+},
+{
+"id": 795392,
+"name": "Activate",
+"text": "An effect the player triggers once, on a later turn of their choosing, after the card is revealed."
+},
+{
+"id": 795393,
+"name": "End of Turn",
+"text": "Triggers at the end of each turn while the card is on the board."
+},
+{
+"id": 795394,
+"name": "Start of Turn",
+"text": "Triggers at the start of each turn while the card is on the board."
+},
+{
+"id": 795395,
+"name": "Game Start",
+"text": "Triggers at the start of the game, from the deck or hand."
+},
+{
+"id": 795396,
+"name": "When Destroyed",
+"text": "Triggers when the card is destroyed."
+},
+{
+"id": 795397,
+"name": "When Discarded",
+"text": "Triggers when the card is discarded from hand."
+},
+{
+"id": 795398,
+"name": "Objective",
+"text": "A goal written on the card with a progress counter; reaching it gives the reward that follows."
+},
+{
+"id": 795399,
+"name": "Moveable",
+"text": "The card can be moved once per turn by its player (a move ability on the card)."
+},
+{
+"id": 795400,
+"name": "Quickdraw",
+"text": "An alternative, stronger effect written after the word, which applies under a condition the game sets (the condition is not in the source)."
+},
+{
+"id": 795401,
+"name": "Empowered",
+"text": "Triggers when the card gains power while in hand, deck or play (as written on the card)."
+},
+{
+"id": 795402,
+"name": "Horde",
+"text": "Adds power to a separate Zombie Horde of its player (a mode mechanic; its exact rules are not in the source)."
+},
+{
+"id": 795403,
+"name": "Destroy",
+"text": "Removes a card from the board."
+},
+{
+"id": 795404,
+"name": "Discard",
+"text": "Removes a card from a hand."
+},
+{
+"id": 795405,
+"name": "Move",
+"text": "A card changes location after it is revealed."
+},
+{
+"id": 795406,
+"name": "Merge",
+"text": "Two cards become one, adding their power."
+},
+{
+"id": 795407,
+"name": "Afflict",
+"text": "Lowers the power of cards (as an ongoing or one-time debuff)."
+}
+]

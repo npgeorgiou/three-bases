@@ -16,6 +16,7 @@ cd "$(dirname "$0")"
 P="python3 -I"
 steps() {   # $1 = db
   D="$1"
+  $P compact_text.py "$D" expand
   $P concept_tree.py "$D" restore
   $P concept_defs.py "$D"
   $P game_patterns.py "$D" patterns
@@ -35,6 +36,7 @@ steps() {   # $1 = db
   $P trigger_pairs.py "$D"
   $P regression.py "$D" enforce
   $P concept_tree.py "$D" apply
+  $P pattern_fix.py "$D"
   $P parent_rule.py "$D"
   $P dedupe.py "$D"
   $P frequency.py "$D"
@@ -48,7 +50,8 @@ if [ $# -gt 0 ]; then
   steps "$BASE"
   for a in "$@"; do $P load_cards.py "$OUT" "${a%%=*}" "${a#*=}"; done
   steps "$OUT"
-  $P keep_old.py "$OUT" "$IN" "$BASE"; rm -f "$BASE"
+  INX="$OUT.in"; rm -f "$INX"; cp "$IN" "$INX"; $P compact_text.py "$INX" expand   # keep_old reads the text columns
+  $P keep_old.py "$OUT" "$INX" "$BASE"; rm -f "$BASE" "$INX"
 else
   steps "$OUT"
 fi
@@ -58,5 +61,6 @@ $P finalize.py "$OUT"
 $P regression.py "$OUT" check
 $P combo_check.py "$OUT"
 $P trigger_pairs.py "$OUT" check
+$P compact_text.py "$OUT" compact
 python3 -I -c "import sqlite3,sys; c=sqlite3.connect(sys.argv[1], isolation_level=None); c.execute(\"insert into entity_fts(entity_fts) values('integrity-check')\"); c.execute('vacuum'); print(c.execute('pragma integrity_check').fetchone())" "$OUT"
 $P test_query.py "$OUT"

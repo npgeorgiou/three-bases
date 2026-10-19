@@ -1,0 +1,297 @@
+{
+"759759": [],
+"759760": [
+[
+"stress_morale",
+"reaches 100 stress"
+],
+[
+"autonomous_units",
+"act on their own"
+],
+[
+"stat_loss",
+"stat penalties"
+]
+],
+"759761": [
+[
+"items_consumables",
+"A type of provision"
+]
+],
+"759762": [
+[
+"upgrade",
+"can be upgraded"
+]
+],
+"759763": [
+[
+"items_consumables",
+"A type of provision"
+]
+],
+"759764": [
+[
+"damage_over_time",
+"take damage each combat round"
+]
+],
+"759765": [
+[
+"damage_over_time",
+"take damage each combat round"
+]
+],
+"759766": [
+[
+"temporary_buff",
+"A temporary stat increase"
+]
+],
+"759767": [
+[
+"rest_phase",
+"during Camping"
+]
+],
+"759768": [
+[
+"death_trigger",
+"Most dead monsters leave a temporary corpse"
+],
+[
+"targeting_rules",
+"attack around the corpses"
+]
+],
+"759769": [
+[
+"stress_morale",
+"stress relief"
+]
+],
+"759770": [
+[
+"permanent_loss",
+"permanently kills the hero"
+]
+],
+"759771": [
+[
+"cheat_death",
+"A hero with 0 HP is at Death's Door"
+],
+[
+"random_effect",
+"has a chance of permanently killing the hero"
+]
+],
+"759772": [
+[
+"stat_loss",
+"A temporary stat decrease"
+],
+[
+"temporary_effect",
+"temporary"
+]
+],
+"759773": [
+[
+"saving_throws",
+"resisting incoming debuffs"
+]
+],
+"759774": [
+[
+"debuff",
+"debilitates the hero"
+],
+[
+"rest_phase",
+"treated in town at the Sanitarium"
+]
+],
+"759775": [],
+"759776": [
+[
+"merge_attach",
+"equipped to a hero"
+],
+[
+"upgrade",
+"can be upgraded"
+]
+],
+"759777": [
+[
+"items_consumables",
+"A type of provision"
+],
+[
+"heal",
+"small boost in HP"
+]
+],
+"759782": [
+[
+"items_consumables",
+"A type of provision"
+]
+],
+"759783": [
+[
+"forced_movement",
+"moves the target forward or backward in the party lineup"
+]
+],
+"759784": [
+[
+"saving_throws",
+"resisting enemy moves"
+]
+],
+"759785": [
+[
+"terrain",
+"An object found in dungeons that impedes the party's progress"
+],
+[
+"friendly_fire",
+"inflicts DMG and stress on the entire party"
+]
+],
+"759786": [
+[
+"damage_reduction",
+"what percentage of incoming damage is mitigated"
+],
+[
+"piercing",
+"DOTs (bleed, blight) ignore PROT"
+]
+],
+"759787": [
+[
+"items_consumables",
+"An item that can be added to the player's inventory"
+]
+],
+"759788": [
+[
+"traits_quirks",
+"A character trait on a hero"
+]
+],
+"759789": [
+[
+"saving_throws",
+"how likely a hero is to resist a particular status"
+]
+],
+"759790": [
+[
+"stress_morale",
+"better resist stress"
+]
+],
+"759791": [],
+"759792": [
+[
+"items_consumables",
+"A type of provision"
+]
+],
+"759793": [
+[
+"items_consumables",
+"A type of provision"
+]
+],
+"759794": [
+[
+"reveal_order",
+"influences the order in which combatants act"
+]
+],
+"759795": [
+[
+"stress_morale",
+"Accrues as heroes travel through dungeons"
+]
+],
+"759796": [
+[
+"disable",
+"forces the hero or enemy to pass on his/her next turn"
+]
+],
+"759797": [
+[
+"saving_throws",
+"resisting stunning attacks"
+]
+],
+"759798": [
+[
+"items_consumables",
+"A type of provision"
+],
+[
+"light_level",
+"increase the current torchlight"
+]
+],
+"759799": [
+[
+"light_level",
+"The amount of light in a dungeon"
+]
+],
+"759800": [
+[
+"saving_throws",
+"avoiding or disarming traps"
+]
+],
+"759801": [
+[
+"buff",
+"Virtued heroes have buffs"
+],
+[
+"temporary_effect",
+"A temporary condition"
+]
+],
+"759802": [
+[
+"upgrade",
+"Weapons can be upgraded"
+]
+],
+"759803": [
+[
+"stress_morale",
+"reaches 100 Stress"
+]
+],
+"759804": [
+[
+"combat_start",
+"Made at the beginning of each battle"
+],
+[
+"reveal_order",
+"Surprised enemies act last in the round"
+]
+],
+"759805": [
+[
+"terrain",
+"An interactive prop found in a dungeon"
+]
+]
+}

@@ -10,6 +10,9 @@ Scripts print counts and sampled lines only.
   patterns3.py results            judgments + key -> step3/results.tsv (pattern, game, matches, key n/right, sample n/right, verdict)
                                   and step3/to_read/<game>.txt (matches a weak pattern still cannot tell apart)
 
+Token saving (19 Oct 2026, Kaptain asked to save tokens): outside samples are judged only where the pattern has fewer than 10
+key matches in the game; with 10 or more the key decides (samples already judged still count). Judges since then run on a smaller
+model.
 Verdicts per pattern and game: 'ok' (90%+ right), 'weak' (below 90%: narrow), 'thin' (one or two key matches and no sample).
 When a pattern has one or two key matches in a game, it passes or fails on the outside sample alone, and that sample gets two
 readers and a third for disagreements (agreed with Kaptain, 13 Oct 2026)."""
@@ -155,7 +158,8 @@ def results():
         if qs is None: continue
         vals = [ans[q] for q in qs if ans.get(q) is not None]
         kn, kr = int(kn), int(kr); sn, sr = len(vals), sum(vals)
-        if any(ans.get(q) is None for q in qs): verdict = 'pending'
+        # token saving (19 Oct 2026): with 10+ key matches in the game the key decides, plus any samples already judged
+        if kn < 10 and any(ans.get(q) is None for q in qs): verdict = 'pending'
         elif kn <= 2: verdict = ('ok' if sr >= 0.9 * sn else 'weak') if sn else 'thin'
         else:
             n, r = kn + sn, kr + sr
@@ -201,7 +205,10 @@ def pack(n_per_file=12):
     weak = collections.defaultdict(list)
     for p, g, m, kn, kr, sn, sr, v in res:
         if v == 'weak': weak[p].append(g)
-    todo = [p for p in order if p in weak]
+    wm = collections.Counter()
+    for p, g, m, kn, kr, sn, sr, v in res:
+        if v == 'weak': wm[p] += int(m)
+    todo = [p for p, _ in wm.most_common(140)]   # token saving: the 140 patterns with the most weak matches (88% of them)
     d = os.path.join(HERE, 'narrow'); os.makedirs(d, exist_ok=True)
     for f in glob.glob(os.path.join(d, '[0-9]*.md')): os.remove(f)
     for b in range(0, len(todo), n_per_file):

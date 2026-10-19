@@ -1,0 +1,12 @@
+stat_gain|does|*|\+\d+/\+\d+	faeria,duelyst,hs_battlegrounds,shadowverse,hearthstone,mtg	keep
+random_effect|does|*|\broll	wh_aos_4th,wh_40k_10e	\b(?<!hit )(?<!wound )(?<!charge )(?<!advance )(?<!save )(?<!attack )(?<!defence )(?<!armour )(?<!casting )(?<!run )(?<!ward )(?<!chanting )(?<!unbinding )(?<!priority )(?<!charging )roll(?!s? made)(?!s of)(?!s? for)(?!s cannot)(?!ed)(?!s? that)
+random_effect|does|*|\broll	wh_bloodbowl3,wh_killteam	(?<!re-)\broll(?= (?:a |an |one |two |three |\d+ )?(?:d\d|dice|die|\d*d\d))
+random_effect|does|*|\broll	sts1,sts2,dnd5e,wh_underworlds	keep
+damage|does|*|\bdamage to\b	hs_battlegrounds,shadowverse,hearthstone,faeria	\bdamage to\b(?! (?:your|you\b|this|its|it\b|them\b|him\b|me\b|my\b))
+damage|does|*|\bdamage to\b	mtg	(?<!combat )\bdamage to\b(?! (?:your|you\b|this|its|it\b|them\b|him\b|me\b|my\b))
+damage|does|*|\bdamage to\b	wh_underworlds	(?<!combat )\bdamage to (?:target|any|each|up to|all|another|that)\b
+damage|does|*|\bdamage to\b	into_the_breach,inscryption,dnd5e,gwent,wh_killteam,runeterra	keep
+damage|does|*|\b\d+ damage\b	hs_battlegrounds,wh_underworlds,gwent,hearthstone,mtg,shadowverse,faeria,runeterra,dnd5e	(?<![+-])(?<!take )(?<!suffer )(?<!dealt )(?<!allocate )(?<!split )(?<!than )\b\d+ damage\b(?! points?)(?! to (?:your|you\b|this|its|it\b|them\b|me\b|my\b|that fighter|the attacker))
+damage|does|*|\b\d+ damage\b	into_the_breach,wh_killteam,wh_aos_4th	keep
+passive|does|*|\bwhile\b	shadowverse	(?:^|[.:;] )while\b
+passive|does|*|\bwhile\b	into_the_breach,inscryption,faeria,duelyst,sts1,dnd5e,sts2,gwent,hs_battlegrounds,wh_killteam,runeterra,wh_underworlds,wh_aos_4th,wh_40k_10e,hearthstone,mtg	keep

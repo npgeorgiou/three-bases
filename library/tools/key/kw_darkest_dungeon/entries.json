@@ -1,0 +1,217 @@
+[
+{
+"id": 759759,
+"name": "ACC",
+"text": "Short for \"accuracy\". Base chance to hit is ACC minus the enemy's DODGE."
+},
+{
+"id": 759760,
+"name": "Affliction",
+"text": "A temporary condition that may be triggered when a hero reaches 100 stress. Afflicted heroes act on their own and suffer stat penalties. Afflictions can be cured in town by reducing the hero's stress at the Abbey or the Tavern."
+},
+{
+"id": 759761,
+"name": "Antivenom",
+"text": "A type of provision used to remove Blight. It also has uses on many dungeon curios."
+},
+{
+"id": 759762,
+"name": "Armor",
+"text": "A hero's armor determines her base DODGE and MAX HP. Armor can be upgraded at the Blacksmith."
+},
+{
+"id": 759763,
+"name": "Bandage",
+"text": "A type of provision used to remove Bleed. It also has uses on many dungeon curios."
+},
+{
+"id": 759764,
+"name": "Bleed",
+"text": "Heroes or enemies with Bleed take damage each combat round or hallway step. It will eventually go away but can be cured early with bandages, combat skills, and Camping skills."
+},
+{
+"id": 759765,
+"name": "Blight",
+"text": "Heroes or enemies with Blight take damage each combat round or hallway step. It will eventually go away but can be cured early with antivenom, combat skills, and Camping skills."
+},
+{
+"id": 759766,
+"name": "Buff",
+"text": "A temporary stat increase."
+},
+{
+"id": 759767,
+"name": "Camping Skill",
+"text": "An ability used by a hero during Camping."
+},
+{
+"id": 759768,
+"name": "Corpse",
+"text": "Most dead monsters leave a temporary corpse. Corpses preserve the enemy order for a time and require heroes to use skills to attack around the corpses, move other enemies in reach, and so on. Alternatively, corpses can be attacked and cleared manually."
+},
+{
+"id": 759769,
+"name": "CRIT",
+"text": "Short for \"critical hit chance\". Critical hits do extra damage and provide stress relief (when a hero crits) or stress damage (when a monster crits)."
+},
+{
+"id": 759770,
+"name": "Death Blow",
+"text": "A hit taken by a hero on Death's Door that permanently kills the hero."
+},
+{
+"id": 759771,
+"name": "Death's Door",
+"text": "A hero with 0 HP is at Death's Door. Each subsequent hit taken while at Death's Door has a chance of permanently killing the hero."
+},
+{
+"id": 759772,
+"name": "Debuff",
+"text": "A temporary stat decrease."
+},
+{
+"id": 759773,
+"name": "Debuff Resistance",
+"text": "Bonus towards resisting incoming debuffs."
+},
+{
+"id": 759774,
+"name": "Disease",
+"text": "A temporary sickness that debilitates the hero in some way. Can be cured by some combat skills or Camping skills, but usually needs treated in town at the Sanitarium."
+},
+{
+"id": 759775,
+"name": "DODGE",
+"text": "Dodge gets removed from the enemy's Accuracy to determine base chance to hit."
+},
+{
+"id": 759776,
+"name": "Equipment",
+"text": "Commonly refers to the weapon and armor equipped to a hero, but can also include Trinkets. Weapons and armor cannot be unequipped but can be upgraded."
+},
+{
+"id": 759777,
+"name": "Food",
+"text": "A type of provision used for Camping meals and other meals while wandering. Can be fed individually to a hero for a small boost in HP."
+},
+{
+"id": 759782,
+"name": "Medicinal Herbs",
+"text": "A type of provision used to cure a hero's combat debuffs. Also can be used on dungeon curios."
+},
+{
+"id": 759783,
+"name": "Move (effect)",
+"text": "An effect that moves the target forward or backward in the party lineup."
+},
+{
+"id": 759784,
+"name": "Move Resistance",
+"text": "Bonus towards resisting enemy moves that cause a position change."
+},
+{
+"id": 759785,
+"name": "Obstacle",
+"text": "An object found in dungeons that impedes the party's progress. They can be removed by hand or with a Shovel. Clearing an obstacle by hand inflicts DMG and stress on the entire party."
+},
+{
+"id": 759786,
+"name": "PROT",
+"text": "Short for \"protection\". Indicates what percentage of incoming damage is mitigated. DOTs (bleed, blight) ignore PROT."
+},
+{
+"id": 759787,
+"name": "Provision",
+"text": "An item that can be added to the player's inventory before embarking on a quest."
+},
+{
+"id": 759788,
+"name": "Quirk",
+"text": "A character trait on a hero. Quirks can be beneficial (positive) or hindering (negative). Heroes may start with some quirks but acquire more through adventuring."
+},
+{
+"id": 759789,
+"name": "Resistance",
+"text": "A stat that influences how likely a hero is to resist a particular status, such as Stun or Bleed."
+},
+{
+"id": 759790,
+"name": "Resolve Level",
+"text": "The veteran level of a hero. A hero with higher Resolve Level can better resist stress, learn higher level skills and wield higher level equipment. Higher Resolve Level heroes will not waste their time on lower level quests. Low Resolve Level heroes adventuring in higher level dungeons will find it more stressful."
+},
+{
+"id": 759791,
+"name": "Resolve XP",
+"text": "Earning Resolve XP progresses a hero towards the next Resolve Level. Resolve XP can only be earned by completing quests. Heroes do not earn Resolve XP if they abandon or fail quests."
+},
+{
+"id": 759792,
+"name": "Shovel",
+"text": "A type of provision. Used to clear obstacles to prevent taking DMG and stress."
+},
+{
+"id": 759793,
+"name": "Skeleton Key",
+"text": "A type of provision used on curios in dungeons."
+},
+{
+"id": 759794,
+"name": "SPD",
+"text": "Short for \"speed\". Speed influences the order in which combatants act. Initiative is re-rolled each round."
+},
+{
+"id": 759795,
+"name": "Stress",
+"text": "Accrues as heroes travel through dungeons and engage in combat. When a hero reaches 100 stress, she acquires either an Affliction or a Virtue. At 200 stress, the hero suffers a heart attack."
+},
+{
+"id": 759796,
+"name": "Stun",
+"text": "An effect that forces the hero or enemy to pass on his/her next turn."
+},
+{
+"id": 759797,
+"name": "Stun Resistance",
+"text": "Bonus towards resisting stunning attacks."
+},
+{
+"id": 759798,
+"name": "Torch",
+"text": "A type of provision. Used to increase the current torchlight within a dungeon."
+},
+{
+"id": 759799,
+"name": "Torchlight",
+"text": "The amount of light in a dungeon. Adventuring in brightness is safer but less rewarding, while adventuring in darknesss is more dangerous but more rewarding. Can be increased by using torches."
+},
+{
+"id": 759800,
+"name": "Trap Resistance",
+"text": "A bonus towards avoiding or disarming traps."
+},
+{
+"id": 759801,
+"name": "Virtue",
+"text": "A temporary condition of increased effectiveness that a hero acquires after passing an Affliction Check. Virtued heroes have buffs and may buff or otherwise increase the power of their allies."
+},
+{
+"id": 759802,
+"name": "Weapon",
+"text": "A type of equipment used by a hero to combat the dangers found in dungeons. A hero's weapon determines his/her base DMG, CRIT and SPD. Weapons can be upgraded at the Blacksmith."
+},
+{
+"id": 759803,
+"name": "Affliction Check",
+"text": "Made whenever a hero reaches 100 Stress and results in an Affliction or Virtue state."
+},
+{
+"id": 759804,
+"name": "Surprise Check",
+"text": "Made at the beginning of each battle to determine which group is surprised. Surprised heroes have their order jumbled. Surprised enemies act last in the round."
+},
+{
+"id": 759805,
+"name": "Curio",
+"text": "An interactive prop found in a dungeon hallway or room."
+}
+]

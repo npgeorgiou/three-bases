@@ -1,0 +1,27 @@
+756201 | Create | Spawn one of three randomly selected cards from the specified source.
+756202 | Poison | Status - if a unit receives two instances of Poison, destroy it.
+756203 | Predator | This ability can only target units with power lower than own.
+756204 | Symbiosis | Whenever you play a Nature card, Spawn a Wandering Treant on a random allied row and set its power equal to number of Symbioses you control.
+756205 | Might | Trigger this ability if you control a unit with 10 or more power on each of your rows.
+756206 | Duel | Units take turns dealing damage equal to their power until one of them is destroyed.
+756207 | Harmony | Boost self by 1 or the specified amount whenever you play a non-Neutral unit, whose primary category is unique among all of your units.
+756208 | Dragon's Dream | At the start of the owner's turn, when timer expires, damage all units in this row by 3.
+756209 | Blood Moon | At the start of the owner's turn, give a random unit in this row Bleeding (2). If the unit is already Bleeding, damage it by 2 instead.
+756210 | Assimilate | Boost self by 1 or the specified amount whenever you play a card that is not from your starting deck.
+756211 | Tribute | On Deploy, you may choose to spend the specified amount of Coins to trigger this ability.
+756212 | Profit | Gain a specified number of Coins when this card is played. You may possess a maximum of 9 Coins.
+756213 | Fee | Trigger this ability by spending the specified number of Coins.
+756214 | Bounty | When a unit with this status is destroyed or banished, opponent gains coins equal to its base power. There can be only one unit with Bounty status on each side of the board at given time.
+756215 | Intimidate | Boost self by 1 or the specified amount whenever you play a Crime card.
+756216 | Insanity | If you have insufficient Coins, damage this unit by its Fee amount, ignoring its Armor, to trigger its Fee ability.\nNote: Insanity cannot be used if it would destroy the unit and works only if damage is inflicted.
+756217 | Hoard | Trigger this ability if you possess the specified number of Coins or more.
+756218 | Defender | Status that prevents the opponent from targeting other cards in this row.
+756219 | Rupture | At the end of owner's turn, damage this unit equal to its base power, then remove this status.
+756220 | Clash | Units simultanously damage each other by their power.
+756221 | Sabbath | Trigger this ability if at least one of your rows has a total of 25 or more points.
+756222 | Vice | Trigger this ability after you spent the specified amount of Coins, then reset own counter.
+756223 | Counter | Reduce the Counter whenever the given condition is met. Reset the Counter when the Unit leaves the Board. (2020 definition)
+756224 | Crown | The unit of Novigradian currency required to pay Fees and Tributes. You may possess a maximum of 9 Crowns. Your Crown-count is reduced by half (rounded down) when carried over into the next round. (2020 definition)
+756225 | Reset | Restore a unit to its base power. (2020 definition)
+756226 | Spend | The amount of Crowns needed to trigger this ability. (2020 definition)
+756227 | Swap | Move a card from hand to deck and draw another in its place during your turn. (2020 definition)

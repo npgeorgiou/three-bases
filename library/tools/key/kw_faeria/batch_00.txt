@@ -1,0 +1,19 @@
+741057 | Gift | Triggers when the card is summoned.
+741058 | Last Words | Triggers when the creature or structure is destroyed.
+741059 | Production | Triggers at the start of each of its owner's turns.
+741060 | Combat | Triggers whenever it exchanges attacks with creatures, structures or the enemy orb (not when shot by a ranged creature).
+741061 | Corrupt | Triggers the first time this creature moves onto enemy land, on a turn after it was played.
+741062 | Activate | Structures only: use the ability once per turn.
+741063 | Flying | Can move over ocean and land, but not through creatures or structures.
+741064 | Charge | Can move several spaces in a straight line.
+741065 | Jump | Moves up to two tiles and can leap over obstacles, creatures and ocean.
+741066 | Taunt | Adjacent enemy creatures cannot move and can only attack the taunt.
+741067 | Dash | When summoned, moves X spaces in a straight line.
+741068 | Haste | Can move, attack and harvest the turn it is played.
+741069 | Protection | Prevents all damage from the next damage source, then is removed.
+741070 | Discover | Creates a copy of a card.
+741071 | Ranged Attack | Shoots in a straight line with line of sight; takes no retaliation unless adjacent or shot by another ranged unit; cannot attack after moving normally.
+741072 | Divine | Cannot be targeted by spells or abilities from either player (still attackable and hit by area effects).
+741073 | Deathtouch | Any creature it damages dies.
+741074 | Aquatic | Can only travel over lakes and ocean; drowns at end of turn on other land.
+741075 | Swallow | Removes a creature from the game until the swallower dies, then releases it.

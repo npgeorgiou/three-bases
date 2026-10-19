@@ -54,6 +54,8 @@ What is in, beyond the cards each source lists as playable:
 - **variant_of:** the same mechanic in another faction, and a Slay the Spire upgrade to its base card.
 - **equivalent_keyword:** the same keyword in another game.
 
+**Text positions (Step 6, 19 Oct 2026)**: tag evidence and pair clauses are stored as positions in the entry's own text (`ev_form/ev_pos/ev_len`, `cl_form/cl_pos/cl_len`; form 0 the stored text, 1 the text as patterns read it, 2 a note in `text_notes`). `tools/compact_text.py` explains the forms and cuts the text back out (`evidence_text`, `clause_text`); the build expands them first and compacts them last.
+
 **trigger_effect**: about 71,000 "when X, do Y" pairs, from every clause of every entry and from the entry's keywords. Each pair has a **frequency** limit and its basis:
 - **per_card:** a spell, a Place/on-play effect, the card's own death, or once per game.
 - **per_round:** a once-per-turn cap, or the card's own turn start/end, attack, kill or tap ability.

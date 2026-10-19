@@ -1,0 +1,43 @@
+759759 | ACC | Short for "accuracy". Base chance to hit is ACC minus the enemy's DODGE.
+759760 | Affliction | A temporary condition that may be triggered when a hero reaches 100 stress. Afflicted heroes act on their own and suffer stat penalties. Afflictions can be cured in town by reducing the hero's stress at the Abbey or the Tavern.
+759761 | Antivenom | A type of provision used to remove Blight. It also has uses on many dungeon curios.
+759762 | Armor | A hero's armor determines her base DODGE and MAX HP. Armor can be upgraded at the Blacksmith.
+759763 | Bandage | A type of provision used to remove Bleed. It also has uses on many dungeon curios.
+759764 | Bleed | Heroes or enemies with Bleed take damage each combat round or hallway step. It will eventually go away but can be cured early with bandages, combat skills, and Camping skills.
+759765 | Blight | Heroes or enemies with Blight take damage each combat round or hallway step. It will eventually go away but can be cured early with antivenom, combat skills, and Camping skills.
+759766 | Buff | A temporary stat increase.
+759767 | Camping Skill | An ability used by a hero during Camping.
+759768 | Corpse | Most dead monsters leave a temporary corpse. Corpses preserve the enemy order for a time and require heroes to use skills to attack around the corpses, move other enemies in reach, and so on. Alternatively, corpses can be attacked and cleared manually.
+759769 | CRIT | Short for "critical hit chance". Critical hits do extra damage and provide stress relief (when a hero crits) or stress damage (when a monster crits).
+759770 | Death Blow | A hit taken by a hero on Death's Door that permanently kills the hero.
+759771 | Death's Door | A hero with 0 HP is at Death's Door. Each subsequent hit taken while at Death's Door has a chance of permanently killing the hero.
+759772 | Debuff | A temporary stat decrease.
+759773 | Debuff Resistance | Bonus towards resisting incoming debuffs.
+759774 | Disease | A temporary sickness that debilitates the hero in some way. Can be cured by some combat skills or Camping skills, but usually needs treated in town at the Sanitarium.
+759775 | DODGE | Dodge gets removed from the enemy's Accuracy to determine base chance to hit.
+759776 | Equipment | Commonly refers to the weapon and armor equipped to a hero, but can also include Trinkets. Weapons and armor cannot be unequipped but can be upgraded.
+759777 | Food | A type of provision used for Camping meals and other meals while wandering. Can be fed individually to a hero for a small boost in HP.
+759782 | Medicinal Herbs | A type of provision used to cure a hero's combat debuffs. Also can be used on dungeon curios.
+759783 | Move (effect) | An effect that moves the target forward or backward in the party lineup.
+759784 | Move Resistance | Bonus towards resisting enemy moves that cause a position change.
+759785 | Obstacle | An object found in dungeons that impedes the party's progress. They can be removed by hand or with a Shovel. Clearing an obstacle by hand inflicts DMG and stress on the entire party.
+759786 | PROT | Short for "protection". Indicates what percentage of incoming damage is mitigated. DOTs (bleed, blight) ignore PROT.
+759787 | Provision | An item that can be added to the player's inventory before embarking on a quest.
+759788 | Quirk | A character trait on a hero. Quirks can be beneficial (positive) or hindering (negative). Heroes may start with some quirks but acquire more through adventuring.
+759789 | Resistance | A stat that influences how likely a hero is to resist a particular status, such as Stun or Bleed.
+759790 | Resolve Level | The veteran level of a hero. A hero with higher Resolve Level can better resist stress, learn higher level skills and wield higher level equipment. Higher Resolve Level heroes will not waste their time on lower level quests. Low Resolve Level heroes adventuring in higher level dungeons will find it more stressful.
+759791 | Resolve XP | Earning Resolve XP progresses a hero towards the next Resolve Level. Resolve XP can only be earned by completing quests. Heroes do not earn Resolve XP if they abandon or fail quests.
+759792 | Shovel | A type of provision. Used to clear obstacles to prevent taking DMG and stress.
+759793 | Skeleton Key | A type of provision used on curios in dungeons.
+759794 | SPD | Short for "speed". Speed influences the order in which combatants act. Initiative is re-rolled each round.
+759795 | Stress | Accrues as heroes travel through dungeons and engage in combat. When a hero reaches 100 stress, she acquires either an Affliction or a Virtue. At 200 stress, the hero suffers a heart attack.
+759796 | Stun | An effect that forces the hero or enemy to pass on his/her next turn.
+759797 | Stun Resistance | Bonus towards resisting stunning attacks.
+759798 | Torch | A type of provision. Used to increase the current torchlight within a dungeon.
+759799 | Torchlight | The amount of light in a dungeon. Adventuring in brightness is safer but less rewarding, while adventuring in darknesss is more dangerous but more rewarding. Can be increased by using torches.
+759800 | Trap Resistance | A bonus towards avoiding or disarming traps.
+759801 | Virtue | A temporary condition of increased effectiveness that a hero acquires after passing an Affliction Check. Virtued heroes have buffs and may buff or otherwise increase the power of their allies.
+759802 | Weapon | A type of equipment used by a hero to combat the dangers found in dungeons. A hero's weapon determines his/her base DMG, CRIT and SPD. Weapons can be upgraded at the Blacksmith.
+759803 | Affliction Check | Made whenever a hero reaches 100 Stress and results in an Affliction or Virtue state.
+759804 | Surprise Check | Made at the beginning of each battle to determine which group is surprised. Surprised heroes have their order jumbled. Surprised enemies act last in the round.
+759805 | Curio | An interactive prop found in a dungeon hallway or room.

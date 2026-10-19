@@ -1,0 +1,18 @@
+795390 | On Reveal | Triggers once, when the card is revealed after being played.
+795391 | Ongoing | A continuous effect that applies while the card is on the board.
+795392 | Activate | An effect the player triggers once, on a later turn of their choosing, after the card is revealed.
+795393 | End of Turn | Triggers at the end of each turn while the card is on the board.
+795394 | Start of Turn | Triggers at the start of each turn while the card is on the board.
+795395 | Game Start | Triggers at the start of the game, from the deck or hand.
+795396 | When Destroyed | Triggers when the card is destroyed.
+795397 | When Discarded | Triggers when the card is discarded from hand.
+795398 | Objective | A goal written on the card with a progress counter; reaching it gives the reward that follows.
+795399 | Moveable | The card can be moved once per turn by its player (a move ability on the card).
+795400 | Quickdraw | An alternative, stronger effect written after the word, which applies under a condition the game sets (the condition is not in the source).
+795401 | Empowered | Triggers when the card gains power while in hand, deck or play (as written on the card).
+795402 | Horde | Adds power to a separate Zombie Horde of its player (a mode mechanic; its exact rules are not in the source).
+795403 | Destroy | Removes a card from the board.
+795404 | Discard | Removes a card from a hand.
+795405 | Move | A card changes location after it is revealed.
+795406 | Merge | Two cards become one, adding their power.
+795407 | Afflict | Lowers the power of cards (as an ongoing or one-time debuff).

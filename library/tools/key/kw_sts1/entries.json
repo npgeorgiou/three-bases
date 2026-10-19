@@ -1,0 +1,222 @@
+[
+{
+"id": 757488,
+"name": "Artifact",
+"text": "Negates the next debuff."
+},
+{
+"id": 757489,
+"name": "Block",
+"text": "Until next turn, prevents damage."
+},
+{
+"id": 757490,
+"name": "Burn",
+"text": "Burns are unplayable status cards that damage you."
+},
+{
+"id": 757491,
+"name": "Calm",
+"text": "Upon exiting this Stance, gain 2 Energy."
+},
+{
+"id": 757492,
+"name": "Channel",
+"text": "Channeling an Orb puts it into your first empty slot. If you have no empty slots, your first Orb is automatically Evoked to make room."
+},
+{
+"id": 757493,
+"name": "Confused",
+"text": "Whenever you draw a card, randomize its cost."
+},
+{
+"id": 757494,
+"name": "Curse",
+"text": "Curse cards are negative cards that stay in your deck."
+},
+{
+"id": 757495,
+"name": "Dark",
+"text": "Orb: Increases damage every turn. When Evoked, deals damage to the enemy with the least HP."
+},
+{
+"id": 757496,
+"name": "Dazed",
+"text": "Dazed are unplayable status cards."
+},
+{
+"id": 757497,
+"name": "Dexterity",
+"text": "Dexterity improves Block gained from cards."
+},
+{
+"id": 757498,
+"name": "Divinity",
+"text": "Upon entering this stance, gain 3 Energy. Attacks deal triple damage. Exit this Stance at the start of your next turn."
+},
+{
+"id": 757499,
+"name": "Ethereal",
+"text": "If this card is in your hand at the end of turn, it is exhausted. Exhausted cards are removed from your deck until the end of combat."
+},
+{
+"id": 757500,
+"name": "Evoke",
+"text": "Consume your rightmost Orb and use its Evoke effect."
+},
+{
+"id": 757501,
+"name": "Exhaust",
+"text": "Removed until end of combat."
+},
+{
+"id": 757502,
+"name": "Fatal",
+"text": "Triggers whenever this card kills a non-minion enemy."
+},
+{
+"id": 757503,
+"name": "Focus",
+"text": "Focus increases the effectiveness of Channeled Orbs."
+},
+{
+"id": 757504,
+"name": "Frail",
+"text": "While Frail, gain 25% less Block from cards."
+},
+{
+"id": 757505,
+"name": "Frost",
+"text": "Orb: Gains Block."
+},
+{
+"id": 757506,
+"name": "Innate",
+"text": "Start each combat with this card in your hand."
+},
+{
+"id": 757507,
+"name": "Intangible",
+"text": "Reduce ALL damage taken and HP loss to 1."
+},
+{
+"id": 757508,
+"name": "Lightning",
+"text": "Orb: Deals damage to random enemies."
+},
+{
+"id": 757509,
+"name": "Lock-On",
+"text": "Lock-On targets receive 50% more damage from Orbs."
+},
+{
+"id": 757510,
+"name": "Opener",
+"text": "Opener cards may only be played as the first card each turn."
+},
+{
+"id": 757511,
+"name": "Plasma",
+"text": "Orb: Gains Energy."
+},
+{
+"id": 757512,
+"name": "Poison",
+"text": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1."
+},
+{
+"id": 757513,
+"name": "Mantra",
+"text": "When you obtain 10 Mantra, enter Divinity."
+},
+{
+"id": 757514,
+"name": "Regen",
+"text": "Regen heals HP at the end of your turn. Each turn, Regen is reduced by 1."
+},
+{
+"id": 757515,
+"name": "Retain",
+"text": "Retained cards are not discarded at the end of turn."
+},
+{
+"id": 757516,
+"name": "Ritual",
+"text": "Gain Strength at the end of your turn."
+},
+{
+"id": 757517,
+"name": "Scry",
+"text": "Look at the top X cards of your draw pile. You may discard any of them."
+},
+{
+"id": 757518,
+"name": "Shiv",
+"text": "Shivs are 0 cost Attack cards which Exhaust."
+},
+{
+"id": 757519,
+"name": "Stance",
+"text": "You can only have one stance at a time."
+},
+{
+"id": 757520,
+"name": "Status",
+"text": "Status cards are removed at the end of combat."
+},
+{
+"id": 757521,
+"name": "Strength",
+"text": "Strength adds additional damage to attacks."
+},
+{
+"id": 757522,
+"name": "Thorns",
+"text": "When receiving Attack damage, deals damage back."
+},
+{
+"id": 757523,
+"name": "Transform",
+"text": "Transformed cards become a random card of any rarity."
+},
+{
+"id": 757524,
+"name": "Unplayable",
+"text": "Unplayable cards cannot be played from your hand."
+},
+{
+"id": 757525,
+"name": "Upgrade",
+"text": "Upgrading cards makes them more powerful. Cards can only be upgraded once."
+},
+{
+"id": 757526,
+"name": "Vigor",
+"text": "Your next Attack deals additional damage."
+},
+{
+"id": 757527,
+"name": "Void",
+"text": "Voids are unplayable status cards that consume energy when drawn."
+},
+{
+"id": 757528,
+"name": "Vulnerable",
+"text": "Vulnerable creatures take 50% more damage from Attacks."
+},
+{
+"id": 757529,
+"name": "Weak",
+"text": "Weakened creatures deal 25% less damage with Attacks."
+},
+{
+"id": 757530,
+"name": "Wound",
+"text": "Wounds are unplayable status cards."
+},
+{
+"id": 757531,
+"name": "Wrath",
+"text": "In this Stance, you deal and receive double attack damage."
+}
+]

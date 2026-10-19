@@ -1,0 +1,8 @@
+# definitions
+free_play | Put into play for free | A card enters play without its cost being paid, by an effect or automatically. | Not: A dead unit coming back is revive.
+in_hand_buff | Improve cards in hand or deck | Cards still in hand or deck get more power, a lower cost or better text before they are played. | Not: A discount on whatever is played this turn is cost_reduction.
+# questions: qid | concept | game | name | text   (then the answers of A and B)
+8433* | free_play | mtg | Thunderblade Charge | Thunderblade Charge deals 3 damage to any target. / Whenever one or more creatures you control deal combat damage to a player, if this card is in your graveyard, you may pay {2}{R}{R}{R}. If you do, you may cast it without paying its mana cost.
+   A: yes  B: no
+8967* | in_hand_buff | mtg | Painful Bond | Draw two cards, then nonland cards in your hand with mana value 3 or less perpetually gain "When you cast this spell, you lose 1 life."
+   A: yes  B: no

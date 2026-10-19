@@ -1,0 +1,60 @@
+750368 | Overwhelm | Inflicts damage beyond what would kill the target(s) to the enemy Nexus.
+750369 | Burst | Can be played whenever you may act. Happens instantly and allows you to continue to play other cards.
+750370 | Countdown | Round Start: I count down 1. At 0, activate the Countdown effect, then destroy me.
+750371 | Play | Get this effect when you play this unit from hand.
+750372 | Landmark | Landmarks take up a space on the board. They can't attack, block, or take damage.
+750373 | Capture | A Captured card is removed from the game. It returns when the Capturing unit leaves play.
+750374 | Attack | Get this effect when this unit attacks.
+750375 | Story: Slow | Activatable once per round. When activated, play the skill of the current Act at Slow speed, then transform me to the next Act.
+750376 | Attach | Attach me to an ally to give it my stats and keywords while I'm attached. When that ally leaves play, Recall me.
+750377 | Story: Focus | Activatable once per round. When activated, play the skill of the current Act at Focus speed, then transform me to the next Act.
+750378 | Fleeting | Fleeting cards discard from hand when the round ends.
+750379 | Elemental Skill | A unit's spell-like effect that allows enemy reactions. It's elemental!
+750380 | Nab | Draw a non-champion card from the bottom of the enemy deck.
+750381 | Focus | Can be played outside combat or when no other spells or skills are pending. Happens instantly and allows you to continue to play other cards.
+750382 | Enlightened | You're Enlightened when you have 10 max mana.
+750383 | Invoke | Pick a Celestial card from among 3 to create in hand.
+750384 | Flow | A card activates its Flow on Round Start if you played 2+ spells or skills last round.
+750385 | Boon | Attaches to another card in a deck. When that card is drawn, activate the effect.
+750386 | Trap | Attaches to another card in a deck. When that card is drawn, activate the effect.
+750387 | Drain | Heal your Nexus for the amount of damage dealt
+750388 | Last Breath | These abilities take effect when the unit dies.
+750389 | Level Up | A champion in play levels up everywhere once this condition is met. Some champions must be in play to see their condition progress.
+750390 | Fast | Can be played whenever you may act. Happens after your opponent has a chance to react.
+750391 | Recall | Return a unit to hand and remove all effects applied to it.
+750392 | Weakest | Lowest Power, with ties broken by lowest Health then lowest Cost
+750393 | Support | Attacking with a support unit will buff the unit to its right.
+750394 | Slow | Can be played outside of combat when no spells or skills are pending. Happens after your opponent has a chance to react.
+750395 | Imbue | These abilities trigger when you resolve a spell.
+750396 | Equipment | Equip to a unit to grant the listed bonuses. If the unit leaves play, the equipment will return to your hand. You may play each equipment at most once per round.
+750397 | Nightfall | Bonus if this is NOT the first card you play in a round.
+750398 | Attune | When I'm summoned, refill 1 spell mana.
+750399 | Daybreak | Bonus if this is the FIRST card you play in a round.
+750400 | Skill | A unit's spell-like effect that allows enemy reactions.
+750401 | Plunder | A card activates its plunder ability when played if you damaged the enemy Nexus this round.
+750402 | Double Attack | While attacking, it strikes both before AND at the same time as its blocker.
+750403 | Vulnerable | The enemy can challenge this unit, forcing it to block.
+750404 | Elusive | Can only be blocked by an Elusive unit.
+750405 | Stun | Remove a unit from combat. It can't attack or block for the rest of the round.
+750406 | Curse | Applies a negative effect as long as it's in hand. Multiples of the same curse on a unit combine, increasing their cost and effect. Cannot be targeted in hand.
+750407 | Fated | Each round, the first time an allied card targets me, grant me +1|+1.
+750408 | Sharpsight | Can block Elusive units
+750409 | Fury | When I kill a unit, grant me +1|+1.
+750410 | Barrier | Negates the next damage the unit would take. Lasts one round.
+750411 | Immobile | Can't attack or block.
+750412 | Hallowed | After I die, for the rest of the game when allies attack, hallow your first attacker giving it +1|+0 that round
+750413 | Evolve | I have +2|+2 once you've had Units with 6+ other unique positive keywords in play this game.
+750414 | Frostbite | Set a unit's Power to 0 this round. It can be changed after.
+750415 | Quick Attack | While attacking, strikes before its blocker.
+750416 | Spirit | This unit has +1|+1. This keyword can stack.
+750417 | Tough | Takes 1 less damage from all sources.
+750418 | Regeneration | Heals fully at the end of each round.
+750419 | Silenced | Removes all text and keywords from a unit.
+750420 | SpellShield | Negates the next enemy spell or skill that would affect me.
+750421 | Lifesteal | Damage this unit deals heals its Nexus that amount.
+750422 | Gloom | This unit has -1|-1. This keyword can stack.
+750423 | Augment | When you play a created card, grant me +1|+0.
+750424 | Impact | When this strikes while attacking, it deals 1 to the enemy Nexus. This keyword can stack.
+750425 | Scout | The first time only Scout units attack each round, ready your attack.
+750426 | Ephemeral | This unit dies when it strikes or when the round ends.
+750427 | Lurk | When you attack while I'm on top of your deck, I Lurk, granting Lurker allies everywhere +1|+0. Max once per round.

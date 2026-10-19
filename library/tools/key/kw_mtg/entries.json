@@ -1,0 +1,1357 @@
+[
+{
+"id": 765927,
+"name": "Trample",
+"text": "This creature can deal excess combat damage to the player or planeswalker it's attacking."
+},
+{
+"id": 765928,
+"name": "Conjure",
+"text": ""
+},
+{
+"id": 765929,
+"name": "Suspect",
+"text": ""
+},
+{
+"id": 765930,
+"name": "Food",
+"text": ""
+},
+{
+"id": 765931,
+"name": "Flying",
+"text": "This creature can't be blocked except by creatures with flying or reach."
+},
+{
+"id": 765932,
+"name": "Adapt",
+"text": ""
+},
+{
+"id": 765933,
+"name": "Treasure",
+"text": ""
+},
+{
+"id": 765934,
+"name": "Landfall",
+"text": ""
+},
+{
+"id": 765935,
+"name": "Deathtouch",
+"text": "Any amount of damage this deals to a creature is enough to destroy it."
+},
+{
+"id": 765936,
+"name": "Protection",
+"text": ""
+},
+{
+"id": 765937,
+"name": "Equip",
+"text": "{2}: Attach to target creature you control. Equip only as a sorcery."
+},
+{
+"id": 765938,
+"name": "Connive",
+"text": ""
+},
+{
+"id": 765939,
+"name": "Enrage",
+"text": ""
+},
+{
+"id": 765940,
+"name": "Convoke",
+"text": "Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color."
+},
+{
+"id": 765941,
+"name": "Bloodthirst",
+"text": "If an opponent was dealt damage this turn, this creature enters with three +1/+1 counters on it."
+},
+{
+"id": 765942,
+"name": "Kicker",
+"text": "You may pay an additional {B} and/or {R} as you cast this spell."
+},
+{
+"id": 765943,
+"name": "Vigilance",
+"text": "Attacking doesn't cause this creature to tap."
+},
+{
+"id": 765944,
+"name": "Corrupted",
+"text": ""
+},
+{
+"id": 765945,
+"name": "Surveil",
+"text": "To surveil 2, look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order."
+},
+{
+"id": 765946,
+"name": "Empower Jace",
+"text": "Put two loyalty counters on a Jace token you control. If you don't control one, first create a blue Jace planeswalker token with \"[\u22121]: Surveil 1\" and \"[\u22123]: Draw a card.\""
+},
+{
+"id": 765947,
+"name": "Flash",
+"text": "You may cast this spell any time you could cast an instant."
+},
+{
+"id": 765948,
+"name": "Menace",
+"text": "This creature can't be blocked except by two or more creatures."
+},
+{
+"id": 765949,
+"name": "Amass",
+"text": ""
+},
+{
+"id": 765950,
+"name": "Cycling",
+"text": "{3}{R}, Discard this card: Draw a card."
+},
+{
+"id": 765951,
+"name": "Prowess",
+"text": "Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn."
+},
+{
+"id": 765952,
+"name": "Revolt",
+"text": ""
+},
+{
+"id": 765953,
+"name": "Crew",
+"text": "Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn."
+},
+{
+"id": 765954,
+"name": "Infect",
+"text": "This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters."
+},
+{
+"id": 765955,
+"name": "Heal",
+"text": ""
+},
+{
+"id": 765956,
+"name": "Regenerate",
+"text": ""
+},
+{
+"id": 765957,
+"name": "Fight",
+"text": ""
+},
+{
+"id": 765958,
+"name": "First strike",
+"text": "This creature deals combat damage before creatures without first strike."
+},
+{
+"id": 765959,
+"name": "Enchant",
+"text": ""
+},
+{
+"id": 765960,
+"name": "Persist",
+"text": "When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it."
+},
+{
+"id": 765961,
+"name": "Plot",
+"text": "You may pay {2}{B} and exile this card from your hand. Cast it as a sorcery on a later turn without paying its mana cost. Plot only as a sorcery."
+},
+{
+"id": 765962,
+"name": "Multikicker",
+"text": "You may pay an additional {1}{U} any number of times as you cast this spell."
+},
+{
+"id": 765963,
+"name": "Awaken",
+"text": "If you cast this spell for {4}{W}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land."
+},
+{
+"id": 765964,
+"name": "Spree",
+"text": "Choose one or more additional costs."
+},
+{
+"id": 765965,
+"name": "Heroic",
+"text": ""
+},
+{
+"id": 765966,
+"name": "Landwalk",
+"text": ""
+},
+{
+"id": 765967,
+"name": "Islandwalk",
+"text": "This creature can't be blocked as long as defending player controls an Island."
+},
+{
+"id": 765968,
+"name": "Scry",
+"text": "{S} is mana from a snow source."
+},
+{
+"id": 765969,
+"name": "Affinity",
+"text": ""
+},
+{
+"id": 765970,
+"name": "Draft from a spellbook",
+"text": ""
+},
+{
+"id": 765971,
+"name": "Discover",
+"text": "To discover 10, exile cards from the top of your library until you exile a nonland card with mana value 10 or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order."
+},
+{
+"id": 765972,
+"name": "Eerie",
+"text": ""
+},
+{
+"id": 765973,
+"name": "Flashback",
+"text": "You may cast this card from your graveyard for its flashback cost. Then exile it."
+},
+{
+"id": 765974,
+"name": "Lifelink",
+"text": "Damage dealt by this creature also causes you to gain that much life."
+},
+{
+"id": 765975,
+"name": "Haste",
+"text": "This creature can attack and {T} as soon as it comes under your control."
+},
+{
+"id": 765976,
+"name": "Investigate",
+"text": ""
+},
+{
+"id": 765977,
+"name": "Extort",
+"text": "Whenever you cast a spell, you may pay {W/B}. If you do, each opponent loses 1 life and you gain that much life."
+},
+{
+"id": 765978,
+"name": "Devoid",
+"text": "This card has no color."
+},
+{
+"id": 765979,
+"name": "Seek",
+"text": ""
+},
+{
+"id": 765980,
+"name": "Hexproof",
+"text": "This creature can't be the target of spells or abilities your opponents control."
+},
+{
+"id": 765981,
+"name": "Echo",
+"text": "At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost."
+},
+{
+"id": 765982,
+"name": "Morbid",
+"text": ""
+},
+{
+"id": 765983,
+"name": "Compleated",
+"text": "{G/U/P} can be paid with {G}, {U}, or 2 life. If life was paid, this planeswalker enters with two fewer loyalty counters."
+},
+{
+"id": 765984,
+"name": "Unearth",
+"text": "{5}{B}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery."
+},
+{
+"id": 765985,
+"name": "Double strike",
+"text": "This creature deals both first-strike and regular combat damage."
+},
+{
+"id": 765986,
+"name": "Horsemanship",
+"text": "This creature can't be blocked except by creatures with horsemanship."
+},
+{
+"id": 765987,
+"name": "Harmonize",
+"text": "You may cast this card from your graveyard for its harmonize cost. You may tap a creature you control to reduce that cost by an amount of generic mana equal to its power. Then exile this spell."
+},
+{
+"id": 765988,
+"name": "Indestructible",
+"text": "Damage and effects that say \"destroy\" don't destroy this creature."
+},
+{
+"id": 765989,
+"name": "Graft",
+"text": "This creature enters with two +1/+1 counters on it. Whenever another creature enters, you may move a +1/+1 counter from this creature onto it."
+},
+{
+"id": 765990,
+"name": "Assist",
+"text": "Another player can pay up to {5} of this spell's cost."
+},
+{
+"id": 765991,
+"name": "Reach",
+"text": "This creature can block creatures with flying."
+},
+{
+"id": 765992,
+"name": "Fear",
+"text": "This creature can't be blocked except by artifact creatures and/or black creatures."
+},
+{
+"id": 765993,
+"name": "Defender",
+"text": "This creature can't attack."
+},
+{
+"id": 765994,
+"name": "Rebound",
+"text": "If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost."
+},
+{
+"id": 765995,
+"name": "Madness",
+"text": "If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard."
+},
+{
+"id": 765996,
+"name": "Transform",
+"text": ""
+},
+{
+"id": 765997,
+"name": "Escape",
+"text": ""
+},
+{
+"id": 765998,
+"name": "Clash",
+"text": ""
+},
+{
+"id": 765999,
+"name": "Descend",
+"text": "If a creature with a finality counter on it would die, exile it instead."
+},
+{
+"id": 766000,
+"name": "Channel",
+"text": ""
+},
+{
+"id": 766001,
+"name": "Bushido",
+"text": "Whenever this creature blocks or becomes blocked, it gets +2/+2 until end of turn."
+},
+{
+"id": 766002,
+"name": "Magecraft",
+"text": ""
+},
+{
+"id": 766003,
+"name": "Station",
+"text": "Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 9+."
+},
+{
+"id": 766004,
+"name": "Mill",
+"text": ""
+},
+{
+"id": 766005,
+"name": "Offering",
+"text": ""
+},
+{
+"id": 766006,
+"name": "Prepared",
+"text": ""
+},
+{
+"id": 766007,
+"name": "Riot",
+"text": "This creature enters with your choice of a +1/+1 counter or haste."
+},
+{
+"id": 766008,
+"name": "Airbend",
+"text": ""
+},
+{
+"id": 766009,
+"name": "Aftermath",
+"text": ""
+},
+{
+"id": 766010,
+"name": "Proliferate",
+"text": "To proliferate, choose any number of permanents and/or players, then give each another counter of each kind already there."
+},
+{
+"id": 766011,
+"name": "Alliance",
+"text": ""
+},
+{
+"id": 766012,
+"name": "Threshold",
+"text": ""
+},
+{
+"id": 766013,
+"name": "Specialize",
+"text": ""
+},
+{
+"id": 766014,
+"name": "Fuse",
+"text": "You may cast one or both halves of this card from your hand."
+},
+{
+"id": 766015,
+"name": "Undying",
+"text": "When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it."
+},
+{
+"id": 766016,
+"name": "Living weapon",
+"text": "When this Equipment enters, create a 0/0 black Phyrexian Germ creature token, then attach this to it."
+},
+{
+"id": 766017,
+"name": "Suspend",
+"text": "Rather than cast this card from your hand, pay {0} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost."
+},
+{
+"id": 766018,
+"name": "Collect evidence",
+"text": ""
+},
+{
+"id": 766019,
+"name": "Gift",
+"text": ""
+},
+{
+"id": 766020,
+"name": "Tribute",
+"text": "As this creature enters, an opponent of your choice may put two +1/+1 counters on it."
+},
+{
+"id": 766021,
+"name": "Vanishing",
+"text": "This creature enters with a time counter on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it."
+},
+{
+"id": 766022,
+"name": "Incubate",
+"text": "To incubate X, create an Incubator token with X +1/+1 counters on it and \"{2}: Transform this token.\" It transforms into a 0/0 Phyrexian artifact creature."
+},
+{
+"id": 766023,
+"name": "Exalted",
+"text": "Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn."
+},
+{
+"id": 766024,
+"name": "Pack tactics",
+"text": ""
+},
+{
+"id": 766025,
+"name": "Shroud",
+"text": "This creature can't be the target of spells or abilities."
+},
+{
+"id": 766026,
+"name": "Retrace",
+"text": "You may cast this card from your graveyard by discarding a land card in addition to paying its other costs."
+},
+{
+"id": 766027,
+"name": "Ward",
+"text": "Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}."
+},
+{
+"id": 766028,
+"name": "Coven",
+"text": ""
+},
+{
+"id": 766029,
+"name": "Cascade",
+"text": "When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order."
+},
+{
+"id": 766030,
+"name": "Dash",
+"text": "You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step."
+},
+{
+"id": 766031,
+"name": "Bloodrush",
+"text": ""
+},
+{
+"id": 766032,
+"name": "Ascend",
+"text": "If you control ten or more permanents, you get the city's blessing for the rest of the game."
+},
+{
+"id": 766033,
+"name": "Manifest",
+"text": ""
+},
+{
+"id": 766034,
+"name": "Manifest dread",
+"text": "To manifest dread, look at the top two cards of your library, then put one onto the battlefield face down as a 2/2 creature and the other into your graveyard. Turn it face up any time for its mana cost if it's a creature card."
+},
+{
+"id": 766035,
+"name": "Blitz",
+"text": "If you cast this spell for its blitz cost, it gains haste and \"When this creature dies, draw a card.\" Sacrifice it at the beginning of the next end step."
+},
+{
+"id": 766036,
+"name": "Cleave",
+"text": "You may cast this spell for its cleave cost. If you do, remove the words in square brackets."
+},
+{
+"id": 766037,
+"name": "Boast",
+"text": ""
+},
+{
+"id": 766038,
+"name": "Hexproof from",
+"text": ""
+},
+{
+"id": 766039,
+"name": "Infusion",
+"text": ""
+},
+{
+"id": 766040,
+"name": "Bargain",
+"text": "You may sacrifice an artifact, enchantment, or token as you cast this spell."
+},
+{
+"id": 766041,
+"name": "Entwine",
+"text": "Choose both if you pay the entwine cost."
+},
+{
+"id": 766042,
+"name": "Disguise",
+"text": "You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost."
+},
+{
+"id": 766043,
+"name": "Ninjutsu",
+"text": "{2}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking."
+},
+{
+"id": 766044,
+"name": "Transmute",
+"text": "{1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery."
+},
+{
+"id": 766045,
+"name": "Casualty",
+"text": "As you cast this spell, you may sacrifice a creature with power 1 or greater. When you do, copy this spell and you may choose a new target for the copy."
+},
+{
+"id": 766046,
+"name": "Start your engines!",
+"text": ""
+},
+{
+"id": 766047,
+"name": "Banding",
+"text": "Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking."
+},
+{
+"id": 766048,
+"name": "Delve",
+"text": "Each card you exile from your graveyard while casting this spell pays for {1}."
+},
+{
+"id": 766049,
+"name": "Training",
+"text": "Whenever this creature attacks with another creature with greater power, put a +1/+1 counter on this creature."
+},
+{
+"id": 766050,
+"name": "Delirium",
+"text": ""
+},
+{
+"id": 766051,
+"name": "Firebending",
+"text": "Whenever this creature attacks, add {R}. This mana lasts until end of combat."
+},
+{
+"id": 766052,
+"name": "Chroma",
+"text": ""
+},
+{
+"id": 766053,
+"name": "Mutate",
+"text": "If you cast this spell for its mutate cost, put it over or under target non-Human creature you own. They mutate into the creature on top plus all abilities from under it."
+},
+{
+"id": 766054,
+"name": "Spell mastery",
+"text": ""
+},
+{
+"id": 766055,
+"name": "Toxic",
+"text": "Players dealt combat damage by this creature also get a poison counter."
+},
+{
+"id": 766056,
+"name": "Power-up",
+"text": ""
+},
+{
+"id": 766057,
+"name": "Kinship",
+"text": ""
+},
+{
+"id": 766058,
+"name": "Flurry",
+"text": ""
+},
+{
+"id": 766059,
+"name": "Foretell",
+"text": "During your turn, you may pay {2} and exile this card from your hand face down. Cast it on a later turn for its foretell cost."
+},
+{
+"id": 766060,
+"name": "Grandeur",
+"text": ""
+},
+{
+"id": 766061,
+"name": "Reconfigure",
+"text": "{5}: Attach to target creature you control; or unattach from a creature. Reconfigure only as a sorcery. While attached, this isn't a creature."
+},
+{
+"id": 766062,
+"name": "Role token",
+"text": ""
+},
+{
+"id": 766063,
+"name": "Disturb",
+"text": "You may cast this card from your graveyard transformed for its disturb cost."
+},
+{
+"id": 766064,
+"name": "Adamant",
+"text": ""
+},
+{
+"id": 766065,
+"name": "Explore",
+"text": ""
+},
+{
+"id": 766066,
+"name": "Exert",
+"text": ""
+},
+{
+"id": 766068,
+"name": "Morph",
+"text": "You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost."
+},
+{
+"id": 766069,
+"name": "Fading",
+"text": "This enchantment enters with five fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it."
+},
+{
+"id": 766070,
+"name": "Skulk",
+"text": "This creature can't be blocked by creatures with greater power."
+},
+{
+"id": 766071,
+"name": "Daybound",
+"text": "If a player casts no spells during their own turn, it becomes night next turn."
+},
+{
+"id": 766072,
+"name": "Nightbound",
+"text": "If a player casts at least two spells during their own turn, it becomes day next turn."
+},
+{
+"id": 766073,
+"name": "Level Up",
+"text": ""
+},
+{
+"id": 766074,
+"name": "Vivid",
+"text": ""
+},
+{
+"id": 766075,
+"name": "Split second",
+"text": "As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities."
+},
+{
+"id": 766076,
+"name": "Swampwalk",
+"text": "This creature can't be blocked as long as defending player controls a Swamp."
+},
+{
+"id": 766077,
+"name": "Prototype",
+"text": "You may cast this spell with different mana cost, color, and size. It keeps its abilities and types."
+},
+{
+"id": 766078,
+"name": "Mentor",
+"text": "Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power."
+},
+{
+"id": 766079,
+"name": "Monstrosity",
+"text": ""
+},
+{
+"id": 766080,
+"name": "Afterlife",
+"text": "When this creature dies, create two 1/1 white and black Spirit creature tokens with flying."
+},
+{
+"id": 766081,
+"name": "Megamorph",
+"text": "You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it."
+},
+{
+"id": 766082,
+"name": "Offspring",
+"text": "You may pay an additional {1}{U} as you cast this spell. If you do, when this creature enters, create a 1/1 token copy of it."
+},
+{
+"id": 766083,
+"name": "Read Ahead",
+"text": ""
+},
+{
+"id": 766084,
+"name": "Storied",
+"text": "If you control three or more artifacts, legendaries, and/or Sagas, you have an enduring story for the rest of the game."
+},
+{
+"id": 766085,
+"name": "Encore",
+"text": "{7}{R}{R}, Exile this card from your graveyard: For each opponent, create a token copy that attacks that opponent this turn if able. They gain haste. Sacrifice them at the beginning of the next end step. Activate only as a sorcery."
+},
+{
+"id": 766086,
+"name": "Evoke",
+"text": "You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters."
+},
+{
+"id": 766087,
+"name": "Domain",
+"text": ""
+},
+{
+"id": 766088,
+"name": "Cumulative upkeep",
+"text": "At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it."
+},
+{
+"id": 766089,
+"name": "Solved",
+"text": ""
+},
+{
+"id": 766090,
+"name": "Spectacle",
+"text": "You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn."
+},
+{
+"id": 766091,
+"name": "Converge",
+"text": ""
+},
+{
+"id": 766092,
+"name": "Venture into the dungeon",
+"text": ""
+},
+{
+"id": 766093,
+"name": "Mayhem",
+"text": "You may cast this card from your graveyard for {1}{B} if you discarded it this turn."
+},
+{
+"id": 766094,
+"name": "Bolster",
+"text": "Choose a creature with the least toughness among creatures you control and put three +1/+1 counters on it."
+},
+{
+"id": 766095,
+"name": "Amplify",
+"text": "As this creature enters, put a +1/+1 counter on it for each Zombie card you reveal in your hand."
+},
+{
+"id": 766096,
+"name": "Buyback",
+"text": "You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves."
+},
+{
+"id": 766097,
+"name": "Enlist",
+"text": "As this creature attacks, you may tap a nonattacking creature you control without summoning sickness. When you do, add its power to this creature's until end of turn."
+},
+{
+"id": 766098,
+"name": "Epic",
+"text": "For the rest of the game, you can't cast spells. At the beginning of each of your upkeeps, copy this spell except for its epic ability. You may choose a new target for the copy."
+},
+{
+"id": 766099,
+"name": "Sneak",
+"text": "You may cast this spell for {2}{W}{B} if you also return an unblocked attacker you control to hand during the declare blockers step. It enters tapped and attacking."
+},
+{
+"id": 766100,
+"name": "Bestow",
+"text": "If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached."
+},
+{
+"id": 766101,
+"name": "Metalcraft",
+"text": ""
+},
+{
+"id": 766102,
+"name": "Mobilize",
+"text": "Whenever this creature attacks, create a tapped and attacking 1/1 red Warrior creature token. Sacrifice it at the beginning of the next end step."
+},
+{
+"id": 766103,
+"name": "Waterbend",
+"text": "While paying a waterbend cost, you can tap your artifacts and creatures to help. Each one pays for {1}."
+},
+{
+"id": 766104,
+"name": "Flanking",
+"text": "Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn."
+},
+{
+"id": 766105,
+"name": "Hideaway",
+"text": "When this enchantment enters, look at the top five cards of your library, exile one face down, then put the rest on the bottom in a random order."
+},
+{
+"id": 766106,
+"name": "Battalion",
+"text": ""
+},
+{
+"id": 766107,
+"name": "Fathomless descent",
+"text": ""
+},
+{
+"id": 766108,
+"name": "Miracle",
+"text": "You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn."
+},
+{
+"id": 766109,
+"name": "Web-slinging",
+"text": "You may cast this spell for {R}{G} if you also return a tapped creature you control to its owner's hand."
+},
+{
+"id": 766110,
+"name": "Endure",
+"text": ""
+},
+{
+"id": 766111,
+"name": "Constellation",
+"text": ""
+},
+{
+"id": 766112,
+"name": "Support",
+"text": "Put a +1/+1 counter on each of up to two target creatures."
+},
+{
+"id": 766113,
+"name": "Splice",
+"text": ""
+},
+{
+"id": 766114,
+"name": "Rampage",
+"text": "Whenever this creature becomes blocked, it gets +2/+2 until end of turn for each creature blocking it beyond the first."
+},
+{
+"id": 766115,
+"name": "Improvise",
+"text": "Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}."
+},
+{
+"id": 766116,
+"name": "Sunburst",
+"text": "This creature enters with a +1/+1 counter on it for each color of mana spent to cast it."
+},
+{
+"id": 766117,
+"name": "Survival",
+"text": ""
+},
+{
+"id": 766118,
+"name": "Champion",
+"text": ""
+},
+{
+"id": 766119,
+"name": "Warp",
+"text": "You may cast this card from your hand for its warp cost. Exile this enchantment at the beginning of the next end step, then you may cast it from exile on a later turn."
+},
+{
+"id": 766120,
+"name": "Void",
+"text": ""
+},
+{
+"id": 766121,
+"name": "Heist",
+"text": ""
+},
+{
+"id": 766122,
+"name": "Saddle",
+"text": "Tap any number of other creatures you control with total power 3 or more: This Mount becomes saddled until end of turn. Saddle only as a sorcery."
+},
+{
+"id": 766123,
+"name": "Replicate",
+"text": "When you cast this spell, copy it for each time you paid its replicate cost. You may choose new targets for the copies."
+},
+{
+"id": 766124,
+"name": "Blight",
+"text": ""
+},
+{
+"id": 766125,
+"name": "Behold",
+"text": ""
+},
+{
+"id": 766126,
+"name": "Fabricate",
+"text": "When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens."
+},
+{
+"id": 766127,
+"name": "Raid",
+"text": ""
+},
+{
+"id": 766128,
+"name": "Changeling",
+"text": "This card is every creature type."
+},
+{
+"id": 766129,
+"name": "Exploit",
+"text": "When this creature enters, you may sacrifice a creature."
+},
+{
+"id": 766130,
+"name": "Annihilator",
+"text": "Whenever this creature attacks, defending player sacrifices two permanents of their choice."
+},
+{
+"id": 766131,
+"name": "Afflict",
+"text": "Whenever this creature becomes blocked, defending player loses 4 life."
+},
+{
+"id": 766132,
+"name": "Living metal",
+"text": ""
+},
+{
+"id": 766133,
+"name": "Convert",
+"text": ""
+},
+{
+"id": 766134,
+"name": "More Than Meets the Eye",
+"text": ""
+},
+{
+"id": 766135,
+"name": "Learn",
+"text": ""
+},
+{
+"id": 766136,
+"name": "Exhaust",
+"text": ""
+},
+{
+"id": 766137,
+"name": "Max speed",
+"text": ""
+},
+{
+"id": 766138,
+"name": "Outlast",
+"text": "{W}, {T}: Put a +1/+1 counter on this creature. Outlast only as a sorcery."
+},
+{
+"id": 766139,
+"name": "Celebration",
+"text": ""
+},
+{
+"id": 766140,
+"name": "Ferocious",
+"text": ""
+},
+{
+"id": 766141,
+"name": "Inspired",
+"text": ""
+},
+{
+"id": 766142,
+"name": "Renown",
+"text": "When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned."
+},
+{
+"id": 766143,
+"name": "Devour",
+"text": "As this creature enters, you may sacrifice any number of creatures. It enters with three times that many +1/+1 counters on it."
+},
+{
+"id": 766144,
+"name": "Rally",
+"text": ""
+},
+{
+"id": 766145,
+"name": "Earthbend",
+"text": "Target land you control becomes a 0/0 creature with haste that's still a land. Put X +1/+1 counters on it. When it dies or is exiled, return it to the battlefield tapped."
+},
+{
+"id": 766146,
+"name": "Strive",
+"text": ""
+},
+{
+"id": 766147,
+"name": "Evolve",
+"text": "Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature."
+},
+{
+"id": 766148,
+"name": "Double team",
+"text": "When this creature attacks, conjure a duplicate into your hand, then both of them perpetually lose double team."
+},
+{
+"id": 766149,
+"name": "Hellbent",
+"text": ""
+},
+{
+"id": 766150,
+"name": "Storm",
+"text": "When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies."
+},
+{
+"id": 766151,
+"name": "Forecast",
+"text": ""
+},
+{
+"id": 766152,
+"name": "Imprint",
+"text": ""
+},
+{
+"id": 766153,
+"name": "Escalate",
+"text": "Pay this cost for each mode chosen beyond the first."
+},
+{
+"id": 766154,
+"name": "Overload",
+"text": "You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\""
+},
+{
+"id": 766155,
+"name": "Wither",
+"text": "This deals damage to creatures in the form of -1/-1 counters."
+},
+{
+"id": 766156,
+"name": "Disappear",
+"text": ""
+},
+{
+"id": 766157,
+"name": "Radiance",
+"text": ""
+},
+{
+"id": 766158,
+"name": "Embalm",
+"text": "{5}{R}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Manticore with no mana cost. Embalm only as a sorcery."
+},
+{
+"id": 766159,
+"name": "Meld",
+"text": ""
+},
+{
+"id": 766160,
+"name": "Addendum",
+"text": ""
+},
+{
+"id": 766161,
+"name": "Detain",
+"text": ""
+},
+{
+"id": 766162,
+"name": "Renew",
+"text": ""
+},
+{
+"id": 766163,
+"name": "Intimidate",
+"text": "This creature can't be blocked except by artifact creatures and/or creatures that share a color with it."
+},
+{
+"id": 766164,
+"name": "Repartee",
+"text": ""
+},
+{
+"id": 766165,
+"name": "Emerge",
+"text": "You may cast this spell by sacrificing a creature and paying the emerge cost reduced by that creature's mana value."
+},
+{
+"id": 766166,
+"name": "Umbra armor",
+"text": "If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura."
+},
+{
+"id": 766167,
+"name": "Craft",
+"text": ""
+},
+{
+"id": 766168,
+"name": "Soulshift",
+"text": "When this creature dies, you may return target Spirit card with mana value 7 or less from your graveyard to your hand."
+},
+{
+"id": 766169,
+"name": "For Mirrodin!",
+"text": ""
+},
+{
+"id": 766170,
+"name": "Soulbond",
+"text": "You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them."
+},
+{
+"id": 766171,
+"name": "Forage",
+"text": ""
+},
+{
+"id": 766172,
+"name": "Cipher",
+"text": "Then you may exile this spell card encoded on a creature you control. Whenever that creature deals combat damage to a player, its controller may cast a copy of the encoded card without paying its mana cost."
+},
+{
+"id": 766173,
+"name": "Undergrowth",
+"text": ""
+},
+{
+"id": 766174,
+"name": "Impending",
+"text": "If you cast this spell for its impending cost, it enters with four time counters and isn't a creature until the last is removed. At the beginning of your end step, remove a time counter from it."
+},
+{
+"id": 766175,
+"name": "Opus",
+"text": ""
+},
+{
+"id": 766176,
+"name": "Intensity",
+"text": ""
+},
+{
+"id": 766177,
+"name": "Recruit",
+"text": ""
+},
+{
+"id": 766178,
+"name": "Incorporate",
+"text": ""
+},
+{
+"id": 766179,
+"name": "Phasing",
+"text": "This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist."
+},
+{
+"id": 766180,
+"name": "Haunt",
+"text": "When this creature dies, exile it haunting target creature."
+},
+{
+"id": 766181,
+"name": "Modular",
+"text": "This creature enters with two +1/+1 counters on it. When it dies, you may put its +1/+1 counters on target artifact creature."
+},
+{
+"id": 766182,
+"name": "Shadow",
+"text": "This creature can block or be blocked by only creatures with shadow."
+},
+{
+"id": 766183,
+"name": "Eternalize",
+"text": "{5}{U}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a 4/4 black Zombie Snake Wizard with no mana cost. Eternalize only as a sorcery."
+},
+{
+"id": 766184,
+"name": "Battle Cry",
+"text": ""
+},
+{
+"id": 766185,
+"name": "Surge",
+"text": "You may cast this spell for its surge cost if you or a teammate has cast another spell this turn."
+},
+{
+"id": 766186,
+"name": "Valiant",
+"text": ""
+},
+{
+"id": 766187,
+"name": "Formidable",
+"text": ""
+},
+{
+"id": 766188,
+"name": "Increment",
+"text": "Whenever you cast a spell, if the amount of mana you spent is greater than this creature's power or toughness, put a +1/+1 counter on this creature."
+},
+{
+"id": 766189,
+"name": "Job select",
+"text": "When this Equipment enters, create a 1/1 colorless Hero creature token, then attach this to it."
+},
+{
+"id": 766190,
+"name": "Cloak",
+"text": ""
+},
+{
+"id": 766191,
+"name": "Prowl",
+"text": "You may cast this for its prowl cost if you dealt combat damage to a player this turn with a Rogue."
+},
+{
+"id": 766192,
+"name": "Dredge",
+"text": "If you would draw a card, you may mill three cards instead. If you do, return this card from your graveyard to your hand."
+},
+{
+"id": 766193,
+"name": "Forestwalk",
+"text": "This creature can't be blocked as long as defending player controls a Forest."
+},
+{
+"id": 766194,
+"name": "Jump",
+"text": ""
+},
+{
+"id": 766195,
+"name": "Backup",
+"text": "When this creature enters, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn."
+},
+{
+"id": 766196,
+"name": "Jump-start",
+"text": "You may cast this card from your graveyard by discarding a card in addition to paying its other costs. Then exile this card."
+},
+{
+"id": 766197,
+"name": "Populate",
+"text": "To populate, create a token that's a copy of a creature token you control. Do this X times."
+},
+{
+"id": 766198,
+"name": "Paradigm",
+"text": "Then exile this spell. After you first resolve a spell with this name, you may cast a copy of it from exile without paying its mana cost at the beginning of each of your first main phases."
+}
+]

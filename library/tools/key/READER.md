@@ -38,3 +38,10 @@ write the full final list for every entry to `C/<batch name>.json`. Same progres
 ## Helper scripts
 If you write a helper script, keep it in your own folder with a name that includes your game and reader (never in a shared
 scratchpad or /tmp): other readers run at the same time and would overwrite it.
+
+## Keyword entries (Step 4)
+Folders `kw_<game>/` hold a game's glossary keywords (Taunt, Flying, Deathrattle...). Read them exactly like key entries: tag what
+the keyword itself does, with exact words. In addition, list in `kw_<game>/<reader>/notkw.json` (a JSON list of ids) every entry
+that is not a real keyword of that game: a game term that is not printed on cards as a keyword or ability word, a card name, a
+plain description, or a duplicate made by mistake. Judge from the entry and your knowledge of the game; when unsure, it is real.
+Check with `python3 library/tools/key/key.py check kw_<game> <reader>`.

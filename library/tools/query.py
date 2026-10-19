@@ -1,6 +1,8 @@
 """Search helpers for the Three Bases inspiration library.
 Usage: python3 query.py <command> <args>   (see SEARCH_GUIDE.md)"""
 import sqlite3, json, sys, collections, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from compact_text import clause_text, evidence_text   # Step 6: evidence and clauses are positions in the entry's text
 DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'three-bases-library.sqlite'))  # the database sits next to tools/
 db = sqlite3.connect(DB)
 q = lambda s, *a: db.execute(s, a).fetchall()
@@ -208,7 +210,7 @@ def grid(trigger=None, effect=None, game=None, examples=3, freq=None):
     for r in q(f'SELECT trigger, effect, count(*), count(DISTINCT game) FROM trigger_effect WHERE {w} GROUP BY 1,2 ORDER BY 3 DESC LIMIT 40', *args): print(f'  {r[0]:18} -> {r[1]:20} entries {r[2]:5} games {r[3]}')
     for g, in q(f'SELECT DISTINCT game FROM trigger_effect WHERE {w}', *args):
         print('--', g)
-        for c, in q(f'SELECT clause FROM trigger_effect WHERE {w} AND game=? ORDER BY random() LIMIT ?', *args, g, examples): print('    ', c[:160])
+        for e, f, p, l in q(f'SELECT entity, cl_form, cl_pos, cl_len FROM trigger_effect WHERE {w} AND game=? ORDER BY random() LIMIT ?', *args, g, examples): print('    ', (clause_text(db, e, f, p, l) or '')[:160])
 
 def unused_pairs(trigger):
     """Effects that no game pairs with this trigger (gaps in the design space)."""
@@ -245,8 +247,8 @@ def frequency(bound=None, trigger=None, effect=None, game=None, examples=3):
         print(f'  {t:18} -> {e:20} games {len(d):2}  mean share {sum(n / tot[g] for g, n in d.items()) / len(d):.3f}  entries {sum(d.values())}')
     for g, in q(f'SELECT DISTINCT game FROM trigger_effect WHERE {w}', *args):
         print('--', g)
-        for n, cl, b in q(f'SELECT x.name, t.clause, t.basis FROM trigger_effect t JOIN entities x ON x.id=t.entity WHERE {w.replace("game=?", "t.game=?")} AND t.game=? ORDER BY random() LIMIT ?', *args, g, examples):
-            print(f'    {n}: {cl[:130]}  [{b}]')
+        for n, e, f, p, l, b in q(f'SELECT x.name, t.entity, t.cl_form, t.cl_pos, t.cl_len, t.basis FROM trigger_effect t JOIN entities x ON x.id=t.entity WHERE {w.replace("game=?", "t.game=?")} AND t.game=? ORDER BY random() LIMIT ?', *args, g, examples):
+            print(f'    {n}: {(clause_text(db, e, f, p, l) or "")[:130]}  [{b}]')
 
 def signature(game, faction=None, per=3):
     """Per source faction: its signature mechanics (with example cards) and the other factions' mechanics it splashes."""

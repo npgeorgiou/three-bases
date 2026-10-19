@@ -1,0 +1,32 @@
+750336 | Deathrattle | 
+750337 | Battlecry | 
+750338 | Taunt | 
+750339 | Divine Shield | 
+750340 | Discover | 
+750341 | Start of Combat | Triggers at the start of each combat.
+750342 | Rally | Triggers whenever this minion attacks.
+750343 | Blood Gem | Spell that gives a minion +1/+1.
+750344 | Reborn | 
+750345 | Avenge | Triggers after a number of friendly minions die in the same combat.
+750346 | Spellcraft | Gives a temporary spell when played and at the start of each recruit phase.
+750347 | Magnetic | 
+750348 | Windfury | 
+750349 | Refresh | Rerolls the tavern offers.
+750350 | Venomous | The first minion it damages each combat is destroyed.
+750351 | Trinket | Battlegrounds items bought for lasting bonuses.
+750352 | Choose One | 
+750353 | Quest | 
+750354 | Stealth | 
+750355 | Secret | 
+750356 | Casts When Bought | Its effect happens when bought in the tavern.
+750357 | Dark Gift | 
+750358 | Immune | 
+750359 | Poisonous | 
+750360 | Freeze | 
+750361 | Activate | Once per recruit turn, pay gold to use the effect.
+750362 | Pass | Duos: give a card from your hand to your teammate (Claude inference from the cards that use it).
+750363 | Deity | Randomly assigned; added to hand after three friendly aberrations die.
+750364 | Buddy | A minion tied to your hero, earned or Discovered and added to your hand (Claude inference from the cards that use it).
+750365 | Timewarp | A special shop visited on set turns where Chronum, a second currency that carries over, buys minions and spells (Claude inference from the cards that use it).
+750366 | Bonus Keyword | Gains a random keyword (Divine Shield, Reborn, Stealth, Taunt, Venomous or Windfury).
+750367 | Bounty | Tavern spells that appear only in lobbies with pirates.
