@@ -53,6 +53,13 @@ if mode == 'make':
     # a role-less drop next to a role-specific add of the same concept on one entry: the add is the narrower decision, keep it
     pres = {(r[1], r[3]) for r in final if r[5] == 'present'}
     final = [r for r in final if not (r[5] == 'absent' and r[4] == '*' and (r[1], r[3]) in pres)]
+    # the answer key wins over the reviews where they conflict (key_wins.py, 19 Oct 2026): those lines stay out
+    kwf = os.path.join(here, 'key', 'key_wins.tsv')
+    if os.path.exists(kwf):
+        sys.path.insert(0, here); from concept_tree import primary as _pr, REMOVED as _rm
+        _mk = dict(q('select old_id, kept_id from merged_entities'))
+        kw = {(int(r['entity']), r['concept']) for r in csv.DictReader(open(kwf, encoding='utf-8'), delimiter='\t')}
+        final = [r for r in final if r[3] in _rm or (_mk.get(int(r[1]), int(r[1])), _pr(r[3])[0]) not in kw]
     with open(out, 'w', newline='', encoding='utf-8') as fh:
         w = csv.writer(fh, delimiter='\t'); w.writerow(['game', 'entity', 'name', 'concept', 'role', 'expect'])
         for r in sorted(final, key=lambda r: (r[0], r[1], r[3])): w.writerow(r)
