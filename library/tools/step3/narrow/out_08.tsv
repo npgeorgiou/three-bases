@@ -7,3 +7,6 @@ information|does|*|look at	darkest_dungeon	keep
 random_effect|does|*|\brandom	mtg	\brandom(?! order)
 random_effect|does|*|\brandom	inscryption	\brandom(?!ness)(?! order)(?!ized map)(?!ized by the mod)
 random_effect|does|*|\brandom	into_the_breach	keep
+draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	hearthstone	(?<!you )(?<!opponent )(?<!quest: )(?<!questline: )\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?(?! in one turn)
+draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	runeterra	(?<!when you )(?<!seen you )(?<!opponent )\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?
+draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	inscryption	(?<!to )(?<!and )\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?

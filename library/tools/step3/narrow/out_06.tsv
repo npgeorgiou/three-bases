@@ -17,3 +17,4 @@ variable_stats|does|*|equal to the number of	inscryption,sts1,sts2,wh_killteam,w
 variable_stats|does|*|equal to the number of	gwent,runeterra,hearthstone	keep
 summon|does|*|\bput .{0,30}(onto|into) the battlefield	hearthstone	\bput (?![^.]{0,30}secret)(?=[^.]{0,30}\bfrom your).{0,30}(onto|into) the battlefield
 summon|does|*|\bput .{0,30}(onto|into) the battlefield	mtg	keep
+adjacency|does|*|\badjacent	into_the_breach,wh_bloodbowl3,inscryption,hs_battlegrounds,wh_underworlds	keep
