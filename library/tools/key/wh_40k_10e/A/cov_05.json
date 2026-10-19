@@ -1,0 +1,940 @@
+{
+"788171": [
+[
+"damage_reduction",
+"subtract 1 from the Damage characteristic of that attack"
+],
+[
+"board_limit",
+"transport capacity of 12"
+],
+[
+"aoe_damage",
+"Blast"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"evasion",
+"Hover"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"785873": [
+[
+"stat_gain",
+"change its Toughness characteristic to 4"
+],
+[
+"type_grant",
+"add the Mounted keyword"
+],
+[
+"merge_attach",
+"add to the list of units this model can be attached to"
+]
+],
+"788270": [
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"movement",
+"Scouts 6\""
+],
+[
+"reactions",
+"when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model"
+],
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"deathtouch",
+"Lethal Hits"
+]
+],
+"788421": [
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"condition_life",
+"1-6 wounds remaining"
+],
+[
+"stat_loss",
+"halve the Attacks characteristic"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+],
+[
+"turn_start",
+"At the start of the battle round"
+],
+[
+"modal_choice",
+"select one Triarch ability"
+],
+[
+"temporary_effect",
+"Until the start of the next battle round"
+],
+[
+"aura",
+"The Silent King (Aura)"
+],
+[
+"random_effect",
+"re-roll a Hit roll of 1"
+],
+[
+"stat_gain",
+"add 1 to the Strength characteristic of that attack"
+],
+[
+"death_trigger",
+"If this unit’s Szarekh model is destroyed"
+],
+[
+"self_destruct",
+"remaining Triarchal Menhir models are also destroyed"
+],
+[
+"deathtouch",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Indirect Fire"
+],
+[
+"revive",
+"Reanimation Protocols"
+]
+],
+"787551": [
+[
+"condition_life",
+"While this model has 1-6 wounds remaining"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+],
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"turn_start",
+"At the start of the battle round"
+],
+[
+"modal_choice",
+"select one of the abilities in the Crimson King section"
+],
+[
+"multi_attack",
+"attempt up to 2 Rituals per turn instead of one"
+],
+[
+"spell_power",
+"add 2 to the Psychic test result"
+],
+[
+"damage_reduction",
+"subtract 1 from the Damage characteristic of that attack"
+],
+[
+"friendly_fire",
+"[HAZARDOUS]"
+],
+[
+"temporary_effect",
+"Until the end of the phase"
+],
+[
+"aura",
+"Time Flux (Aura, Psychic)"
+],
+[
+"stat_gain",
+"add 2\" to the Move characteristic"
+],
+[
+"aoe_damage",
+"Blast"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"784363": [
+[
+"turn_start",
+"At the start of the battle round"
+],
+[
+"modal_choice",
+"select one of the following Vows of Atonement"
+],
+[
+"once_per_game",
+"You can only select each Vow of Atonement once per battle"
+],
+[
+"tribal",
+"PENITENT model"
+],
+[
+"stat_gain",
+"Add 3\" to the Move characteristic"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"cheat_death",
+"do not remove it from play"
+],
+[
+"death_trigger",
+"is destroyed by a melee attack"
+],
+[
+"random_effect",
+"roll one D6"
+]
+],
+"788476": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"turn_start",
+"at the start of the battle round"
+],
+[
+"temporary_buff",
+"until the start of the next battle round"
+],
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"stat_gain",
+"Objective Control characteristic of 5"
+],
+[
+"merge_attach",
+"This model can be attached to the following units"
+]
+],
+"785470": [
+[
+"tribal",
+"PENITENT model only"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"turn_start",
+"at the start of the battle round"
+],
+[
+"repeat_trigger",
+"even if you have already selected that Vow of Atonement this battle"
+],
+[
+"temporary_buff",
+"Until the start of the next battle round"
+]
+],
+"784646": [
+[
+"tribal",
+"Harlequins or Drukhari model only"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"comeback",
+"if that unit is currently losing the wager"
+],
+[
+"random_effect",
+"re‑roll Charge rolls"
+],
+[
+"temporary_buff",
+"until the end of the turn"
+]
+],
+"784271": [
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"on_kill",
+"destroys an enemy unit"
+],
+[
+"tribal",
+"Drukhari units from your army"
+],
+[
+"comeback",
+"If that model's unit is losing the wager"
+],
+[
+"random_effect",
+"re-roll a Hit roll of 1"
+]
+],
+"784879": [
+[
+"ranged",
+"Add 3\" to the Range characteristic"
+],
+[
+"piercing",
+"[IGNORES COVER]"
+]
+],
+"787500": [
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"targeting_rules",
+"cannot be targeted by ranged attacks unless the attacking unit is within 18\""
+],
+[
+"deathtouch",
+"Lethal Hits"
+]
+],
+"787491": [
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"stat_gain",
+"add 1 to the Objective Control characteristic"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"rewind",
+"That unit is no longer Battle-shocked"
+],
+[
+"deathtouch",
+"Lethal Hits"
+]
+],
+"787476": [
+[
+"on_kill",
+"The first time this model's unit destroys an enemy unit"
+],
+[
+"stat_gain",
+"add 6 to the Objective Control characteristic"
+],
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"deathtouch",
+"[Lethal Hits]"
+],
+[
+"buff",
+"a Critical Hit is scored on an unmodified Hit roll of 5+"
+],
+[
+"tribal",
+"Anti-INFANTRY 2+"
+],
+[
+"aoe_damage",
+"Blast"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"787488": [
+[
+"mark_target",
+"select one enemy unit (excluding Monsters and Vehicles) hit by one or more of those attacks"
+],
+[
+"piercing",
+"improve the Armour Penetration characteristic of that attack by 1"
+],
+[
+"temporary_effect",
+"Until the end of the phase"
+],
+[
+"deathtouch",
+"Lethal Hits"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"787324": [
+[
+"saving_throws",
+"5+ invulnerable save"
+],
+[
+"merge_attach",
+"This model can be attached to the following unit"
+],
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"stat_gain",
+"add 1 to the Move characteristic"
+],
+[
+"random_effect",
+"re-roll Advance rolls"
+],
+[
+"combat_start",
+"At the start of the Fight phase"
+],
+[
+"debuff",
+"must take a Battle-shock test"
+],
+[
+"aoe_damage",
+"every enemy unit (excluding Monsters and Vehicles) within 6\" of this model"
+],
+[
+"deathtouch",
+"Lethal Hits"
+]
+],
+"787996": [
+[
+"on_damaged",
+"if this model was hit by one or more of those attacks"
+],
+[
+"reactions",
+"In your opponent's Shooting phase, each time an enemy unit has shot"
+],
+[
+"movement",
+"this model moves a number of inches up to the result"
+],
+[
+"random_effect",
+"roll one D6 and add 2 to the roll"
+],
+[
+"targeting_rules",
+"must finish as close as possible to the closest enemy unit"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"787219": [
+[
+"saving_throws",
+"5+ Invulnerable save"
+],
+[
+"movement",
+"it can make a Normal move of up to 6\""
+],
+[
+"resource_conversion",
+"spend 1 Pain token to Empower this unit"
+],
+[
+"random_effect",
+"you can re-roll the Hit roll"
+],
+[
+"tribal",
+"Anti-Infantry 3+"
+],
+[
+"deathtouch",
+"Devastating Wounds"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"784495": [
+[
+"death_trigger",
+"were destroyed as a result of those attacks"
+],
+[
+"reactions",
+"Each time an enemy unit is selected to shoot"
+],
+[
+"movement",
+"that unit can be moved a distance in inches up to the result"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"targeting_rules",
+"must end that move as close as possible to the closest enemy unit"
+]
+],
+"788591": [
+[
+"start_of_game",
+"After both players have deployed their armies"
+],
+[
+"movement",
+"redeploy this model's unit and one other friendly KROOT unit"
+],
+[
+"reserve_bench",
+"placed into Strategic Reserves"
+],
+[
+"reactions",
+"when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model's unit"
+],
+[
+"merge_attach",
+"This model can be attached to the following unit"
+],
+[
+"stealth",
+"Stealth"
+]
+],
+"784377": [
+[
+"mark_target",
+"select one enemy unit hit by one or more of those attacks"
+],
+[
+"stat_loss",
+"worsen the Weapon Skill characteristic"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+]
+],
+"787375": [
+[
+"saving_throws",
+"5+ invulnerable save"
+],
+[
+"stat_loss",
+"subtract 2 from that unit’s Move characteristic"
+],
+[
+"debuff",
+"subtract 2 from Advance and Charge rolls"
+],
+[
+"temporary_effect",
+"until the end of your opponent’s next turn"
+],
+[
+"aura",
+"Preysight (Aura)"
+],
+[
+"piercing",
+"[IGNORES COVER]"
+],
+[
+"tribal",
+"Anti-INFANTRY 2+"
+],
+[
+"aoe_damage",
+"Blast"
+],
+[
+"deathtouch",
+"Devastating Wounds"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"787391": [
+[
+"adjacency",
+"within 3\" of one or more friendly Heretic Astartes Vehicle units"
+],
+[
+"immunity",
+"Lone Operative"
+],
+[
+"heal",
+"regains up to D3 lost wounds"
+],
+[
+"buff",
+"add 1 to the Hit roll"
+],
+[
+"turn_end",
+"At the end of your Movement phase"
+],
+[
+"debuff",
+"must take a Battle-shock test"
+],
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"piercing",
+"Ignores Cover"
+]
+],
+"787597": [
+[
+"counterattack",
+"each time an enemy unit targets this model, after that unit has finished making its attacks, this model can either shoot or fight"
+],
+[
+"reactions",
+"In your opponent's Shooting phase"
+],
+[
+"stat_gain",
+"add 2 to the Attacks characteristic"
+],
+[
+"aoe_damage",
+"Blast"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"784353": [
+[
+"on_kill",
+"destroys an enemy unit"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"resource_gain",
+"you gain 1 Blood Tithe point (BTP)"
+],
+[
+"resource_banking",
+"you can spend 1 or more of your BTP"
+],
+[
+"modal_choice",
+"activate one of the following abilities until the end of the battle"
+],
+[
+"saving_throws",
+"Feel No Pain 5+"
+],
+[
+"damage_types",
+"against Psychic Attacks and mortal wounds"
+],
+[
+"tribal",
+"Blood Legions units from your army"
+],
+[
+"turn_start",
+"At the start of the Command phase"
+]
+],
+"788628": [
+[
+"mark_target",
+"select one enemy unit hit by one or more of those attacks"
+],
+[
+"piercing",
+"improve the Armour Penetration characteristic of that attack by 1"
+],
+[
+"temporary_effect",
+"Until the end of the turn"
+],
+[
+"condition_life",
+"below its Starting Strength"
+],
+[
+"buff",
+"add 1 to the Hit roll"
+],
+[
+"tribal",
+"Anti-Psyker 4+"
+],
+[
+"deathtouch",
+"Devastating Wounds"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"788663": [
+[
+"play_restriction",
+"cannot attempt to operate Hatchways and cannot perform Tactical Manoeuvres"
+],
+[
+"placement_rules",
+"you can set this model up alongside that unit as if it was part of it"
+],
+[
+"death_trigger",
+"When the bearer is destroyed"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"aoe_damage",
+"each other unit within 3\" of and visible to the bearer suffers 1 mortal wound"
+],
+[
+"activated",
+"the bearer can trigger its bombs"
+],
+[
+"self_destruct",
+"The bearer is then destroyed"
+],
+[
+"terrain",
+"Open each Hatchway"
+],
+[
+"friendly_fire",
+"each other unit within 3\""
+]
+],
+"788012": [
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"buff",
+"ignore any or all modifiers"
+],
+[
+"mark_target",
+"targets your Oath of Moment target"
+],
+[
+"merge_attach",
+"it can be attached to this unit instead"
+],
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"cost_set",
+"for 0CP"
+],
+[
+"once_per_game",
+"once per battle"
+],
+[
+"placement_rules",
+"set this unit up within 3\" horizontally of that token"
+],
+[
+"damage_types",
+"against mortal wounds"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"tribal",
+"Anti-Vehicle 3+"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"784638": [
+[
+"tribal",
+"Asuryani model only"
+],
+[
+"start_of_game",
+"In the Deploy Armies step"
+],
+[
+"placement_rules",
+"Infiltrators"
+]
+],
+"787641": [
+[
+"once_per_game",
+"Once per battle round"
+],
+[
+"cost_reduction",
+"reduce the CP cost of that use of that Stratagem by 1CP"
+],
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"immunity",
+"Lone Operative"
+],
+[
+"stealth",
+"Stealth"
+]
+],
+"787203": [
+[
+"stat_gain",
+"Add 1 to the Attacks and Strength characteristics"
+],
+[
+"on_kill",
+"The first time the bearer makes a melee attack that destroys an enemy model"
+],
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"rewind",
+"That unit is no longer Battle-shocked"
+],
+[
+"cost_reduction",
+"reduce the CP cost of that use of that Stratagem by 1CP"
+],
+[
+"saving_throws",
+"2+ invulnerable save"
+],
+[
+"resource_conversion",
+"spend 1 Pain token to Empower that unit"
+],
+[
+"random_effect",
+"you can re-roll the Hit roll"
+],
+[
+"tribal",
+"Anti-Infantry 3+"
+],
+[
+"deathtouch",
+"Devastating Wounds"
+]
+]
+}

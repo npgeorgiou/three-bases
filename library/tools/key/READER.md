@@ -34,3 +34,7 @@ with one line: `finished <game> <reader>: <number of batches> batches`.
 If you are reader C, your batch files are `settle_NN.txt` (or `covsettle_NN.txt`). Each entry shows the text and the tags of
 readers A and B. Decide the entry's correct tags against the definitions (keep, drop or add), with exact words as above, and
 write the full final list for every entry to `C/<batch name>.json`. Same progress note and check (`... check <game> C`).
+
+## Helper scripts
+If you write a helper script, keep it in your own folder with a name that includes your game and reader (never in a shared
+scratchpad or /tmp): other readers run at the same time and would overwrite it.

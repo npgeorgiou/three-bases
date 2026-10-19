@@ -1,0 +1,666 @@
+{
+"753518": [
+[
+"summon",
+"Summon 2 Forest Bats"
+]
+],
+"754252": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Give +1/+0 to allied Forest Bats"
+],
+[
+"tribal",
+"Forest Bats"
+]
+],
+"813851": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"hand_size",
+"there are 3 or less Curse of the Black Dragons in your hand"
+],
+[
+"information",
+"reveal this card"
+],
+[
+"friendly_fire",
+"deal 1 damage to your leader"
+],
+[
+"resource_gain",
+"If Overflow is active for you"
+],
+[
+"damage",
+"deal 2 damage to a random enemy"
+],
+[
+"random_effect",
+"a random enemy"
+]
+],
+"814272": [
+[
+"transform",
+"Evolve all unevolved allied Machina followers"
+],
+[
+"tribal",
+"Machina followers"
+]
+],
+"755509": [
+[
+"haste",
+"Storm"
+],
+[
+"passive",
+"whenever this follower's attack or defense is increased by an effect or this follower evolves"
+],
+[
+"combo_sequence",
+"activate 1 of the following effects in order"
+],
+[
+"resource_gain",
+"Recover 2 play points"
+],
+[
+"destroy",
+"Destroy a random enemy follower"
+],
+[
+"random_effect",
+"a random enemy follower"
+],
+[
+"immunity",
+"Can't be attacked"
+],
+[
+"immunity",
+"Reduce damage from effects to 0"
+]
+],
+"813844": [
+[
+"cost_type",
+"can be used to activate Earth Rite effects"
+]
+],
+"755117": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"hand_size",
+"there are 3 or less Ghios, Sparkling Prisms in your hand"
+],
+[
+"count_payoff",
+"If this card has been Spellboosted at least 5 times"
+],
+[
+"information",
+"reveal it"
+],
+[
+"summon",
+"summon an Owlcat"
+],
+[
+"summon",
+"summon a Mist Dragon"
+],
+[
+"summon",
+"summon an Incandescent Dragon"
+],
+[
+"transform",
+"evolve it"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"protection",
+"Can't be destroyed by effects"
+]
+],
+"813761": [
+[
+"hand_size",
+"If there are at least 4 cards in your hand"
+],
+[
+"discard",
+"discard 3"
+],
+[
+"discard",
+"discard your hand"
+],
+[
+"generate_cards",
+"Put a The Nightmare Begins, Bloody Claw, and Cursed Aura into your hand"
+],
+[
+"count_payoff",
+"If you've played any other A Horrible Nights this match"
+],
+[
+"aoe_damage",
+"deal 3 damage to all allies and enemies"
+],
+[
+"friendly_fire",
+"all allies"
+]
+],
+"755861": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Gullian Aura and a Gullian Howl into your hand"
+],
+[
+"on_damaged",
+"Whenever this follower takes damage, if this follower is not destroyed"
+],
+[
+"summon",
+"summon an Assembly Droid"
+]
+],
+"755870": [
+[
+"cost_type",
+"Accelerate (0)"
+],
+[
+"modal_choice",
+"Choose - Put a Gullian Howl or Gullian Aura into your hand"
+],
+[
+"generate_cards",
+"Put a Gullian Howl or Gullian Aura into your hand"
+],
+[
+"haste",
+"Storm"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"revive",
+"Randomly summon copies of different allied Machina followers destroyed this match"
+],
+[
+"random_effect",
+"Randomly summon"
+],
+[
+"tribal",
+"Machina followers"
+],
+[
+"variety_payoff",
+"different allied Machina followers"
+]
+],
+"755303": [
+[
+"cost_type",
+"Crystallize (3)"
+],
+[
+"delayed",
+"Countdown (4)"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"condition_count",
+"if you have more evolution points than your opponent"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Xeno Vohu Manah"
+],
+[
+"cost_reduction",
+"Can evolve for 0 evolution points"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"regeneration",
+"restore 4 defense to this follower"
+],
+[
+"on_damaged",
+"Whenever this follower takes damage, if it's not destroyed"
+],
+[
+"immunity",
+"Can't be attacked"
+],
+[
+"temporary_effect",
+"until the end of your opponent's turn"
+]
+],
+"753440": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"on_damaged",
+"Whenever your leader takes damage during your turn"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+]
+],
+"754264": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"on_damaged",
+"Whenever your leader takes damage during your turn"
+],
+[
+"resource_gain",
+"recover 1 play point"
+]
+],
+"754701": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"resource_gain",
+"If Overflow is active for you"
+],
+[
+"cheat_death",
+"survive on 1 defense"
+],
+[
+"temporary_effect",
+"until the end of your opponent's turn"
+],
+[
+"count_payoff",
+"Skybound Art (10)"
+],
+[
+"aoe_damage",
+"Deal 2 damage to all enemies"
+],
+[
+"multi_attack",
+"Gain the ability to attack 3 times per turn"
+]
+],
+"753223": [
+[
+"on_damaged",
+"Whenever this follower takes damage, if this follower is not destroyed"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"755810": [
+[
+"haste",
+"Rush"
+],
+[
+"on_kill",
+"Whenever this follower attacks and destroys an enemy follower"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"755055": [
+[
+"haste",
+"Rush"
+],
+[
+"on_kill",
+"Whenever this follower attacks and destroys an enemy follower"
+],
+[
+"transform",
+"evolve it"
+],
+[
+"deathtouch",
+"Bane"
+]
+],
+"755441": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (8)"
+],
+[
+"cost_reduction",
+"Gain the ability to evolve for 0 evolution points"
+],
+[
+"on_kill",
+"Whenever this follower attacks and destroys an enemy follower"
+],
+[
+"resource_gain",
+"recover 2 play points"
+],
+[
+"multi_attack",
+"gain the ability to attack 2 times this turn"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"stat_loss",
+"Give -4/-0 to an enemy follower"
+]
+],
+"754273": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"low_life",
+"If Vengeance is active for you"
+],
+[
+"cost_reduction",
+"gain the ability to evolve for 0 evolution points"
+],
+[
+"on_enemy_enter",
+"Whenever an enemy follower comes into play"
+],
+[
+"direct_damage",
+"deal 1 damage to the enemy leader"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+],
+[
+"on_kill",
+"Whenever this follower attacks and destroys an enemy follower"
+],
+[
+"heal",
+"restore 4 defense to this follower"
+]
+],
+"752511": [
+[
+"on_ally_play",
+"Whenever you play a follower"
+],
+[
+"permanent_growth",
+"gain +0/+1"
+],
+[
+"on_spell",
+"Whenever you play a spell"
+],
+[
+"permanent_growth",
+"gain +2/+0"
+]
+],
+"753096": [
+[
+"on_spell",
+"Whenever you play a spell"
+],
+[
+"temporary_buff",
+"gain +1/+0 until the end of the turn"
+]
+],
+"755112": [
+[
+"on_spell",
+"Whenever you play a spell"
+],
+[
+"summon",
+"summon a Happy Pig"
+],
+[
+"transform",
+"Evolve all allied Happy Pigs"
+]
+],
+"756095": [
+[
+"on_spell",
+"Spellboost"
+],
+[
+"in_hand_buff",
+"Subtract 1 from the cost of this card"
+],
+[
+"tribal",
+"Mysteria card"
+],
+[
+"on_spell",
+"Whenever you play a spell"
+],
+[
+"aoe_damage",
+"deal 1 damage to all enemy followers"
+],
+[
+"ping",
+"deal 1 damage to all enemy followers"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+]
+],
+"755145": [
+[
+"on_spell",
+"Whenever you play a spell"
+],
+[
+"stat_gain",
+"give +1/+0 to all allied followers"
+]
+],
+"755739": [
+[
+"free_play",
+"invoke this card"
+],
+[
+"turn_number",
+"At the start of your tenth turn or later"
+],
+[
+"cost_type",
+"lose 1 evolution point"
+],
+[
+"aura",
+"While this amulet is in play"
+],
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"damage",
+"deal 2 damage to a random enemy"
+],
+[
+"random_effect",
+"a random enemy"
+],
+[
+"deck_condition",
+"if there are no followers in your deck"
+],
+[
+"resource_gain",
+"recover 1 play point"
+]
+],
+"814347": [
+[
+"aura",
+"While this amulet is in play"
+],
+[
+"damage_reduction",
+"can't take more than 4 damage at a time"
+]
+],
+"755297": [
+[
+"cost_type",
+"Accelerate (2)"
+],
+[
+"summon",
+"Summon a Somnolent Strength"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_gain",
+"Give all other allied followers +1/+1"
+],
+[
+"taunt",
+"and Ward"
+],
+[
+"aura",
+"While this follower is in play"
+],
+[
+"damage_reduction",
+"Can't take more than 3 damage at a time"
+]
+],
+"814075": [
+[
+"taunt",
+"Ward"
+],
+[
+"deathtouch",
+"Gain Bane"
+],
+[
+"synergy_payoff",
+"while an allied Irate Forest Beast is in play"
+]
+],
+"755585": [
+[
+"aura",
+"While this follower is in play"
+],
+[
+"rule_change",
+"This follower deals damage equal to its defense"
+],
+[
+"stat_condition",
+"deals damage equal to its defense"
+]
+],
+"754573": [
+[
+"stealth",
+"Ambush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose - Put an Evyn, Novice Agent or Infiltration into your hand"
+],
+[
+"generate_cards",
+"Put an Evyn, Novice Agent or Infiltration into your hand"
+]
+]
+}

@@ -1,0 +1,1178 @@
+{
+"791575": [
+[
+"zone_control",
+"Pick an objective within 6\" of this unit"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+],
+[
+"stealth",
+"are not visible to enemy units more than 9\" from them"
+],
+[
+"tribal",
+"friendly Hedonites of Slaanesh units"
+]
+],
+"791067": [
+[
+"scoring_objectives",
+"You complete this battle tactic"
+],
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"territory_trigger",
+"wholly outside friendly territory"
+],
+[
+"condition_count",
+"2 or more friendly units"
+],
+[
+"zone_control",
+"if you control an objective within enemy territory"
+],
+[
+"positional",
+"within 3\" of the centre of the battlefield"
+]
+],
+"794343": [
+[
+"stat_gain",
+"Add 1 to the Damage characteristic of this unit's melee weapons"
+],
+[
+"tribal",
+"attacks that target Heroes or Monsters"
+],
+[
+"piercing",
+"Anti-Hero (+1 Rend)"
+]
+],
+"792586": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"zone_control",
+"contesting an objective that you do not control"
+],
+[
+"random_effect",
+"Add D3"
+],
+[
+"stat_gain",
+"Add D3 to this Hero's control score this turn"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"791069": [
+[
+"scoring_objectives",
+"You complete this battle tactic"
+],
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"on_kill",
+"was destroyed by a combat attack made by a friendly unit that charged this turn"
+],
+[
+"condition_count",
+"2 or more friendly Heroes"
+],
+[
+"zone_control",
+"if you control an objective wholly outside your territory"
+]
+],
+"794187": [
+[
+"debuff",
+"Subtract 1 from wound rolls for combat attacks made by enemy units"
+],
+[
+"aoe_damage",
+"Pick each enemy unit in combat with this unit to be the targets"
+],
+[
+"random_effect",
+"Roll a D3 for each target"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"resource_gain",
+"you gain a number of relentless discipline points"
+]
+],
+"793904": [
+[
+"stat_gain",
+"the Damage characteristic of this unit's Hashu-Zharr Rockets is 5"
+],
+[
+"tribal",
+"if the target is a Monster or War Machine"
+],
+[
+"temporary_buff",
+"For the rest of the turn"
+],
+[
+"on_attack",
+"You declared a Shoot ability for this unit"
+],
+[
+"condition_count",
+"equal to the number of daemonic power points this unit has"
+],
+[
+"aoe_damage",
+"for each other enemy unit within the combat range of the target"
+],
+[
+"damage",
+"inflict 1 mortal damage on the enemy unit being rolled for"
+],
+[
+"ranged",
+"shooting attacks"
+]
+],
+"794061": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"on_attack",
+"If this unit charged this turn"
+],
+[
+"random_effect",
+"roll a dice"
+],
+[
+"condition_count",
+"equal to the number of models in the target unit"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"spell_power",
+"Add 1 to casting rolls for friendly Maggotkin of Nurgle units"
+],
+[
+"aoe_damage",
+"Inflict 1 mortal damage on each enemy target"
+],
+[
+"heal",
+"Heal (1) each friendly target"
+],
+[
+"play_restriction",
+"that ability does not heal any damage points or return any slain models to it"
+]
+],
+"815110": [
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"start_of_game",
+"before the battle"
+]
+],
+"794271": [
+[
+"condition_life",
+"While this unit is damaged"
+],
+[
+"stat_gain",
+"add 3 to the Attacks characteristic of its Warpforged Blade"
+],
+[
+"on_attack",
+"You declared a Fight ability for this unit"
+],
+[
+"attack_now",
+"The target can be picked to use a Fight ability immediately"
+],
+[
+"temporary_buff",
+"add 1 to hit rolls for the target's attacks for the rest of the turn"
+],
+[
+"tribal",
+"Verminus Infantry unit"
+]
+],
+"793761": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"protection",
+"Subtract 1 from wound rolls for shooting attacks that target this unit"
+],
+[
+"random_effect",
+"if you roll a 1-3"
+],
+[
+"lone_unit",
+"not being contested by any other friendly units"
+],
+[
+"piercing",
+"Subtract 1 from ward rolls for enemy units"
+],
+[
+"suppress",
+"This unit cannot use commands while it is in combat"
+],
+[
+"debuff",
+"Subtract 3 from the control scores of enemy units"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the difference"
+],
+[
+"stat_gain",
+"Add 2 to the Attacks characteristic of this unit's Companion melee weapons"
+],
+[
+"death_trigger",
+"If this unit is destroyed, before removing it from play"
+],
+[
+"aoe_damage",
+"roll a D3 for each enemy unit in combat with it"
+],
+[
+"on_attack",
+"If this unit charged this turn"
+],
+[
+"reactions",
+"Reaction: Opponent declared a command"
+],
+[
+"counter_spell",
+"the command has no effect"
+],
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"revive",
+"return 1 slain model to the target unit"
+],
+[
+"spell_power",
+"Add 1 to casting rolls and banishment rolls for this unit"
+]
+],
+"791962": [
+[
+"play_restriction",
+"If there is not a friendly Corpsemare Stampede on the battlefield"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"summon",
+"Set up a Corpsemare Stampede"
+],
+[
+"placement_rules",
+"more than 9\" from all enemy units"
+]
+],
+"793745": [
+[
+"condition_count",
+"Roll 2 dice for each model in this unit"
+],
+[
+"tribal",
+"if the target is Cavalry"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"piercing",
+"Anti-Cavalry (+1 Rend)"
+]
+],
+"794092": [
+[
+"modal_choice",
+"Pick either this unit or a visible enemy unit"
+],
+[
+"life_payment",
+"allocate 1 damage point to this unit"
+],
+[
+"spell_power",
+"add 1 to casting rolls for this unit for the rest of the turn"
+],
+[
+"random_effect",
+"roll a dice"
+],
+[
+"damage",
+"inflict 1 mortal damage on that enemy unit"
+],
+[
+"tribal",
+"if the target is a Priest or a Wizard"
+],
+[
+"stat_gain",
+"Add 1 to hit rolls and wound rolls for attacks made with this unit's Fellreaper"
+],
+[
+"on_kill",
+"If any models are slain as a result of this ability"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+]
+],
+"791188": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"mark_target",
+"that was the target of all this unit's shooting attacks this turn"
+],
+[
+"cost_increase",
+"unless they spend 1 additional command point to use that command"
+],
+[
+"counter_spell",
+"the command has no effect"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+]
+],
+"793465": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"condition_count",
+"if this unit has 6 maelstrom points"
+],
+[
+"aoe_damage",
+"Pick each unit (friendly and enemy) within 9\" of it to be the targets"
+],
+[
+"friendly_fire",
+"(friendly and enemy)"
+],
+[
+"random_effect",
+"Roll a dice for each target"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"self_destruct",
+"this Manifestation is destroyed"
+],
+[
+"on_spell",
+"A unit successfully casts a spell while it is within 12\" of this Manifestation"
+],
+[
+"death_count",
+"A model is slain within 12\" of this Manifestation"
+],
+[
+"stacking_keyword",
+"Give this Manifestation 1 maelstrom point each time"
+]
+],
+"793149": [
+[
+"coin_economy",
+"Spend 2 oath points"
+],
+[
+"tribal",
+"friendly Snow Peaks unit"
+],
+[
+"multi_attack",
+"The target can use 2 Fight abilities this phase"
+],
+[
+"debuff",
+"the target has Strike-last for the rest of the turn"
+]
+],
+"794364": [
+[
+"on_spell",
+"Each time a spell is successfully cast by a unit within 12\" of this Manifestation"
+],
+[
+"stacking_keyword",
+"give this Manifestation 1 ruinous energy point, to a maximum of 6"
+],
+[
+"stat_gain",
+"add 1 to the Attacks characteristic of its Darkfire Torrent for each ruinous energy point it has"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"791449": [
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"play_restriction",
+"if you have not used any Ur-gold Rune abilities this battle round"
+],
+[
+"protection",
+"Friendly Fyreslayers units have Ward (5+) for the rest of the battle round"
+],
+[
+"temporary_effect",
+"for the rest of the battle round"
+]
+],
+"793769": [
+[
+"on_spell",
+"Each time a Prayer chanted by this unit is answered"
+],
+[
+"coin_economy",
+"Remove 3 of this unit's magmic power tokens"
+],
+[
+"reactions",
+"Reaction: You declared an Ur-gold Rune ability"
+],
+[
+"stat_gain",
+"add 1 to wound rolls for combat attacks made by friendly Fyreslayers units"
+],
+[
+"damage_reduction",
+"Add 1 to save rolls for friendly Fyreslayers units"
+],
+[
+"piercing",
+"Add 1 to the Rend characteristic of melee weapons used by friendly Fyreslayers units"
+],
+[
+"temporary_buff",
+"for the rest of the battle round"
+],
+[
+"spell_power",
+"Increase the range of the 'Rune of Farsight' ability to 16\""
+]
+],
+"791452": [
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"play_restriction",
+"if you have not used any Ur-gold Rune abilities this battle round"
+],
+[
+"buff",
+"Melee weapons used by friendly Fyreslayers units have Crit (Mortal)"
+],
+[
+"temporary_buff",
+"for the rest of the battle round"
+]
+],
+"791028": [
+[
+"merge_attach",
+"Add the Ghyranite Mount's Teeth, Hooves, or Claws weapon to your Regiment Hero's warscroll"
+],
+[
+"stat_gain",
+"Change the Move characteristic to 12\""
+],
+[
+"type_grant",
+"Replace the Infantry keyword with the Cavalry keyword"
+],
+[
+"deckbuilding_effect",
+"Non-Hero Infantry only"
+]
+],
+"791453": [
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"turn_start",
+"Start of Any Turn"
+],
+[
+"play_restriction",
+"if you have not used any Ur-gold Rune abilities this battle round"
+],
+[
+"first_strike",
+"friendly Fyreslayers units have Strike-first"
+],
+[
+"temporary_buff",
+"For the rest of the battle round"
+]
+],
+"794425": [
+[
+"reserve_bench",
+"Set up this unit in reserve lying in wait"
+],
+[
+"placement_rules",
+"Set up this unit wholly within enemy territory and more than 9\" from all enemy units"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"condition_life",
+"was allocated any damage points inflicted by this unit's combat attacks this turn"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"debuff",
+"subtract 1 from save rolls for the target for the rest of the battle"
+],
+[
+"start_of_game",
+"Deployment Phase"
+]
+],
+"793899": [
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"movement",
+"This unit can immediately use the 'Normal Move' ability"
+]
+],
+"794133": [
+[
+"on_kill",
+"If an enemy unit that was in combat with this unit this turn is destroyed"
+],
+[
+"modal_choice",
+"Pick 1 of the following effects"
+],
+[
+"protection",
+"The target has Ward (5+) for the rest of the turn"
+],
+[
+"stat_gain",
+"Add 1 to the Attacks characteristic of the target's melee weapons"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+],
+[
+"tribal",
+"friendly Mawseekers unit"
+]
+],
+"792978": [
+[
+"turn_start",
+"Start of Battle Round"
+],
+[
+"condition_count",
+"1 swift point for each unit"
+],
+[
+"distribute",
+"Divide those swift points among those units in any combination"
+],
+[
+"random_effect",
+"rolling a number of D3"
+],
+[
+"movement",
+"The target can move a number of inches equal to the swift move roll"
+],
+[
+"resource_banking",
+"your swift points are reset to 0 (any that have not been used are lost)"
+]
+],
+"792955": [
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"reserve_bench",
+"Set up all of those units in reserve plying the winds"
+]
+],
+"792918": [
+[
+"scope_multi",
+"pick all units in this Regiment of Renown that are not in combat to be the targets"
+],
+[
+"mark_target",
+"add 1 to hit rolls for attacks made by this Regiment of Renown's Lord-Aquilor and Vanguard-Palladors units that target a Hunted enemy unit"
+]
+],
+"792713": [
+[
+"turn_end",
+"End of Your Turn"
+],
+[
+"terrain",
+"within 1\" of any terrain features"
+],
+[
+"aoe_damage",
+"Pick all units (friendly and enemy)"
+],
+[
+"friendly_fire",
+"(friendly and enemy)"
+],
+[
+"random_effect",
+"Roll a dice for each target"
+],
+[
+"damage",
+"inflict D6 mortal damage on the target"
+]
+],
+"792944": [
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"reserve_bench",
+"Set up those units in reserve prowlin' around"
+]
+],
+"793051": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"turn_end",
+"End of Your Turn"
+],
+[
+"symmetric_effect",
+"Reduce your and your opponent's fury levels by up to 3"
+]
+],
+"791011": [
+[
+"symmetric_effect",
+"Each player can use one of the following Honour Guard abilities"
+],
+[
+"once_per_game",
+"in each battle"
+],
+[
+"bodyguard",
+"they must pick a unit in their general's regiment to be the honour guard"
+]
+],
+"794224": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"stat_loss",
+"The Attacks characteristic of its Crushing Iron Feet is 3"
+],
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"reserve_bench",
+"Set up those units in reserve as this unit's passengers"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"placement_rules",
+"Set up each target wholly within 6\" of this unit and more than 9\" from all enemy units"
+],
+[
+"temporary_buff",
+"the targets' melee weapons have Charge (+1 Damage) for the rest of the turn"
+],
+[
+"piercing",
+"Anti-Infantry (+1 Rend)"
+]
+],
+"791337": [
+[
+"turn_start",
+"Start of Battle Round"
+],
+[
+"condition_count",
+"corresponds to the number of Wyrdpyres on the battlefield"
+],
+[
+"terrain",
+"within 3\" of any Wyrdpyres"
+],
+[
+"aoe_damage",
+"Inflict 1 mortal damage on each unit within 3\" of any Wyrdpyres"
+],
+[
+"friendly_fire",
+"friendly units that were allocated any of that damage"
+],
+[
+"on_damaged",
+"friendly units that were allocated any of that damage"
+],
+[
+"temporary_buff",
+"for the rest of the battle round"
+],
+[
+"stat_gain",
+"Add 1 to the Attacks characteristic of melee weapons used by friendly units that were allocated any of that damage"
+],
+[
+"lane_closure",
+"remove that terrain feature from the battlefield"
+],
+[
+"forced_movement",
+"Each player must remove all models that are on that terrain feature and set them up again within 3\" of it"
+],
+[
+"destroy",
+"Models that cannot be set up in this manner are slain"
+]
+],
+"793507": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"random_effect",
+"Both player's roll off"
+],
+[
+"forced_attack",
+"Your opponent must resolve combat attacks for the target using the melee weapon you picked against the unit they picked"
+],
+[
+"aura",
+"add 1 to the Attacks characteristic of melee weapons used by friendly Bloodbound units"
+],
+[
+"tribal",
+"friendly Bloodbound units"
+]
+],
+"793238": [
+[
+"random_effect",
+"Both players roll off"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the number of roll-offs"
+],
+[
+"targeting_rules",
+"Pick an enemy non-Monster Hero"
+]
+],
+"794316": [
+[
+"scope_multi",
+"Pick up to 4 other friendly non-Skryre Moulder units"
+],
+[
+"stat_loss",
+"Subtract 1 from the Attacks characteristic of this unit's Loosely Attached Bladed Limbs"
+],
+[
+"stat_gain",
+"Add 1 to hit rolls for the targets' attacks"
+],
+[
+"temporary_buff",
+"for the rest of the phase"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"regeneration",
+"Heal (D6) this unit"
+]
+],
+"794534": [
+[
+"self_destruct",
+"Remove this unit's Gryph-hound from the battlefield after the Shoot ability has been resolved"
+],
+[
+"buff",
+"this unit's shooting attacks score critical hits on unmodified hit rolls of 5+"
+],
+[
+"ranged",
+"add 3\" to the Range characteristic"
+],
+[
+"stat_gain",
+"add 1 to hit rolls for this unit's shooting attacks"
+],
+[
+"on_attack",
+"Reaction: You declared a Shoot ability for this unit"
+]
+],
+"794537": [
+[
+"control_reward",
+"If this unit is contesting an objective you control"
+],
+[
+"modal_choice",
+"pick 1 of the following effects"
+],
+[
+"immunity",
+"weapon abilities for attacks that target this unit have no effect"
+],
+[
+"buff",
+"This unit's combat attacks score critical hits on unmodified hit rolls of 5+"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+]
+],
+"792439": [
+[
+"reactions",
+"Enemy Hero Phase"
+],
+[
+"debuff",
+"Subtract 1 from save rolls for the target for the rest of the turn"
+],
+[
+"tribal",
+"friendly Nighthaunt units"
+]
+],
+"793217": [
+[
+"scope_multi",
+"Pick any number of friendly Big or Little units"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"condition_count",
+"If the roll is lower than the number of targets picked"
+],
+[
+"modal_choice",
+"pick an effect for each target"
+],
+[
+"damage",
+"inflict an amount of mortal damage on that enemy unit equal to the roll"
+],
+[
+"stances",
+"it is no longer building momentum and is getting ready"
+],
+[
+"movement",
+"add 3\" to the distance it can move"
+]
+],
+"791094": [
+[
+"repeat_trigger",
+"you can use the 'Rituals of Ruin' ability twice per turn"
+],
+[
+"play_restriction",
+"You cannot pick the same effect more than once per turn"
+]
+],
+"794262": [
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"turn_number",
+"Pick a battle round"
+],
+[
+"symmetric_effect",
+"set your and your opponent's fury levels to 7"
+],
+[
+"delayed",
+"at the start of the battle round after the one you picked"
+],
+[
+"coin_economy",
+"Spend up to 3 rage dice"
+],
+[
+"stat_gain",
+"add X to the Damage characteristic of the target's melee weapons"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"silence",
+"weapon abilities for the target's attacks have no effect"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+]
+],
+"793099": [
+[
+"scope_multi",
+"Pick up to 3 friendly Verminus units"
+],
+[
+"on_attack",
+"that charged this turn"
+],
+[
+"piercing",
+"Add 1 to the Rend characteristic of the targets' melee weapons"
+],
+[
+"temporary_buff",
+"for the rest of the turn"
+]
+],
+"793713": [
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"protection",
+"This unit has Ward (4+)"
+],
+[
+"friendly_fire",
+"allocate 1 damage point to the target"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+],
+[
+"spell_power",
+"the spell is successfully cast and cannot be unbound"
+]
+],
+"791219": [
+[
+"stat_gain",
+"Add 2 to the Attacks characteristic of this unit's Crew's Leadshotters"
+],
+[
+"death_trigger",
+"if this unit is destroyed, before removing it from play"
+],
+[
+"random_effect",
+"roll a dice"
+],
+[
+"summon",
+"you can set up a Freeguild Marshal and Relic Envoy"
+],
+[
+"type_grant",
+"That unit has the Iron March keyword"
+]
+],
+"793614": [
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"on_attack",
+"You declared a Fight ability for this unit"
+],
+[
+"attack_now",
+"The target can be picked to use a Fight ability immediately"
+],
+[
+"multi_attack",
+"the target can use 2 Fight abilities this phase"
+],
+[
+"debuff",
+"the target has Strike-last for the rest of the turn"
+],
+[
+"merge_attach",
+"Place this unit's Relic Envoy next to the target"
+],
+[
+"buff",
+"the target is under orders"
+],
+[
+"tribal",
+"friendly Sigmarite unit"
+]
+],
+"794529": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"reactions",
+"Reaction: Opponent declared a Spell ability"
+],
+[
+"counter_spell",
+"The spell is unbound and its effect is not resolved"
+],
+[
+"debuff",
+"subtract 1 from casting rolls for enemy units when they use Summon abilities"
+]
+],
+"794474": [
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"piercing",
+"subtract 1 from ward rolls made by the target"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+],
+[
+"ranged",
+"within 12\" of this unit"
+]
+]
+}
