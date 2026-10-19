@@ -4,3 +4,7 @@ stat_gain|does|*|gets? \+\d+	mtg	(?<!this creature )(?<!it )(?<!flying )(?<!abil
 summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	mtg	\bcreate (?!.{0,50}\bin (your )?hand)(?!(?:a |an )?(?:clue|food|treasure|mutagen|gold|lander|blood|powerstone|map|junk|shard)\b)(?!a token that.s a copy)(a|an|\d+|two|three|x)? ?(?:(?!\.|,|;).){0,40}(token|creature|unit|minion)
 summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	dnd5e	\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}token
 summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	gwent	\bcreate (?=and play)(?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)
+sacrifice|does|*|\bsacrific	mtg	(?<!opponent )(?<!opponents )\bsacrific(?!(?:es|e|ed) (?:it|name|this (?:aura|enchantment|saga)|.{0,80}unless)\b)(?!e (?:it|name)\b)
+sacrifice|does|*|\bsacrific	inscryption,wh_aos_4th	keep
+banish|does|*|\bexile	mtg	\bexile(?:s)? (?:target (?!creature card from a graveyard)(?!.{0,100}then return)|all |it(?: instead|\.|,)|name\b|up to one (?!.{0,100}then return))
+banish|does|*|\bexile	runeterra,wh_aos_4th	\bexile(?=s? (?:target|up to|all|each|it\b|that|another))(?<=\bnever\bexile)

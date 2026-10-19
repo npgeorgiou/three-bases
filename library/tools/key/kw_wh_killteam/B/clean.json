@@ -1,0 +1,517 @@
+{
+"788670": [
+[
+"targeting_rules",
+"in the Select Valid Target step of that shooting attack"
+]
+],
+"788671": [
+[
+"modal_choice",
+"you can do one of the following"
+],
+[
+"terrain",
+"if it is in Cover"
+]
+],
+"788672": [
+[
+"play_restriction",
+"in the same activation in which it performs a Shoot action with this ranged weapon"
+]
+],
+"788673": [
+[
+"cheat_death",
+"would be incapacitated, it gains a Frenzy token instead"
+]
+],
+"788674": [
+[
+"damage_reduction",
+"that wound is not lost"
+],
+[
+"random_effect",
+"roll one D6"
+]
+],
+"788676": [
+[
+"merge_attach",
+"is also equipped with a shoota"
+]
+],
+"788683": [
+[
+"regeneration",
+"regains up to 2 lost wounds"
+],
+[
+"turn_start",
+"In the Ready Operatives step of each initiative phase"
+]
+],
+"788684": [
+[
+"aura",
+"friendly HIVE FLEET SYNAPSE operative"
+]
+],
+"788685": [
+[
+"play_restriction",
+"cannot perform mission actions"
+],
+[
+"stat_loss",
+"treat this operative's APL as 1 lower"
+]
+],
+"788686": [
+[
+"bodyguard",
+"friendly DRONE operative with this ability"
+]
+],
+"788687": [
+[
+"immunity",
+"unaffected by the Splash critical rule"
+]
+],
+"788688": [
+[
+"team_play",
+"INTERROGATOR and TOME-SKULL operatives"
+]
+],
+"788689": [
+[
+"resource_gain",
+"You start the battle with a pool of 10 Elite points"
+],
+[
+"coin_economy",
+"spend one or more of your Elite points"
+]
+],
+"788690": [
+[
+"piercing",
+"subtract x from the Defence of the target"
+]
+],
+"788691": [
+[
+"piercing",
+"the automatic retention of defence dice as a result of cover is determined differently"
+]
+],
+"788692": [
+[
+"advantage",
+"you can re-roll one of your attack dice"
+]
+],
+"788693": [
+[
+"multi_target_attack",
+"make a shooting attack with this weapon (using the same profile) against each other operative"
+]
+],
+"788694": [
+[
+"debuff",
+"your opponent can only parry with critical hits"
+]
+],
+"788695": [
+[
+"advantage",
+"re-roll any or all of your attack dice results of 1"
+]
+],
+"788696": [
+[
+"friendly_fire",
+"that operative suffers 3 mortal wounds"
+]
+],
+"788697": [
+[
+"multi_target_attack",
+"against each other valid target within x of the original target"
+]
+],
+"788698": [
+[
+"targeting_rules",
+"only operatives within x are a valid target"
+]
+],
+"788699": [
+[
+"play_restriction",
+"cannot perform a Charge, Fall Back or Normal Move action in the same activation"
+]
+],
+"788700": [
+[
+"piercing",
+"enemy operatives are not in Cover"
+]
+],
+"788702": [
+[
+"buff",
+"successful hits are critical hits"
+]
+],
+"788703": [
+[
+"once_per_game",
+"only be selected for use once per battle"
+]
+],
+"788704": [
+[
+"damage",
+"inflict x mortal wounds on the target"
+]
+],
+"788705": [
+[
+"piercing",
+"defence dice cannot be automatically retained as a result of Cover"
+]
+],
+"788706": [
+[
+"piercing",
+"the weapon gains the APx rule"
+]
+],
+"788707": [
+[
+"aoe_damage",
+"inflict x mortal wounds on each other enemy operative"
+]
+],
+"788708": [
+[
+"advantage",
+"re-roll any or all of your attack dice"
+]
+],
+"788709": [
+[
+"buff",
+"retain one normal hit as a critical hit"
+]
+],
+"788710": [
+[
+"stealth",
+"While an operative has a Conceal order, it can perform Shoot actions"
+]
+],
+"788711": [
+[
+"aoe_damage",
+"inflict x mortal wounds on the target and each other operative"
+]
+],
+"788712": [
+[
+"stat_loss",
+"subtract 1 from the target's APL"
+]
+],
+"788713": [
+[
+"cost_type",
+"an extra AP is subtracted to perform a Shoot action"
+],
+[
+"play_restriction",
+"It cannot make a shooting attack with this weapon by performing an Overwatch action"
+]
+],
+"788714": [
+[
+"distribute",
+"Distribute your attack dice between the targets you have selected"
+],
+[
+"multi_target_attack",
+"select any number of other valid targets"
+]
+],
+"788715": [
+[
+"free_play",
+"use a Strategic Ploy without spending any CPs"
+],
+[
+"cooldowns",
+"Once per Turning Point"
+]
+],
+"788716": [
+[
+"piercing",
+"Invulnerable saves cannot be used"
+]
+],
+"788719": [
+[
+"debuff",
+"the enemy operative gains one of your Terrorc"
+]
+],
+"788720": [
+[
+"damage_over_time",
+"the target gains x Inferno tokens"
+]
+],
+"788728": [
+[
+"stealth",
+"changed from Conceal to Engage"
+]
+],
+"788729": [
+[
+"saving_throws",
+"This operative has a 4+ invulnerable save"
+]
+],
+"788735": [
+[
+"tribal",
+"operative that has the PSYKER keyword"
+],
+[
+"buff",
+"it has the Lethal 5+ weapon rule"
+]
+],
+"788736": [
+[
+"tribal",
+"CORSAIR VOIDSCARRED operative"
+],
+[
+"buff",
+"that weapon has the Accurate 1 weapon rule"
+]
+],
+"788742": [
+[
+"damage_reduction",
+"Each of your blocks can be allocated to block two unresolved successes"
+],
+[
+"first_strike",
+"you resolve the first attack dice"
+]
+],
+"788744": [
+[
+"play_restriction",
+"cannot perform any actions other than Charge"
+],
+[
+"cost_reduction",
+"for 1 less AP"
+]
+],
+"788745": [
+[
+"debuff",
+"cannot use Light terrain for cover"
+]
+],
+"788749": [
+[
+"assists_support",
+"another friendly HIEROTEK CIRCLE APPRENTEK or HIEROTEK CIRCLE CRYPTEK operative"
+]
+],
+"788755": [
+[
+"damage",
+"immediately inflicts"
+],
+[
+"aoe_damage",
+"each other operative visible"
+]
+],
+"788756": [
+[
+"piercing",
+"The defender collects *x* less defence dice"
+]
+],
+"788757": [
+[
+"targeting_rules",
+"Only operatives within *x* of the active operative can be valid targets"
+]
+],
+"788758": [
+[
+"piercing",
+"The defender cannot retain cover saves"
+]
+],
+"788759": [
+[
+"buff",
+"You can retain up to *x* attack dice as normal successes without rolling them"
+]
+],
+"788760": [
+[
+"buff",
+"are critical successes"
+]
+],
+"788761": [
+[
+"exhaust",
+"they no longer have it"
+]
+],
+"788762": [
+[
+"buff",
+"you can retain one of your fails as a normal success"
+]
+],
+"788763": [
+[
+"piercing",
+"operatives cannot use terrain for cover"
+]
+],
+"788764": [
+[
+"buff",
+"you can change one of your normal successes to a critical success"
+]
+],
+"788765": [
+[
+"debuff",
+"also discard one of your opponent's unresolved normal successes"
+]
+],
+"788771": [
+[
+"target_choice",
+"select one friendly LEGIONARY operative"
+]
+],
+"788782": [
+[
+"damage_over_time",
+"gains one of your Poison tokens"
+]
+],
+"788783": [
+[
+"stat_gain",
+"add 1 to both Dmg stats of this weapon"
+]
+],
+"788789": [
+[
+"damage_over_time",
+"gains one of your Blaze tokens"
+]
+],
+"788797": [
+[
+"immunity",
+"ignore the Piercing weapon rule"
+],
+[
+"movement",
+"climbing up"
+]
+],
+"788814": [
+[
+"modal_choice",
+"pick which Canticle of the Omnissiah from the table below"
+],
+[
+"turn_start",
+"At the start of each battle round"
+],
+[
+"temporary_effect",
+"for the duration of the battle round"
+]
+],
+"788830": [
+[
+"death_trigger",
+"taken out of action when reduced to 0 wounds"
+]
+],
+"788843": [
+[
+"buff",
+"gain a bonus during the battle"
+],
+[
+"random_effect",
+"roll on the table below"
+],
+[
+"start_of_game",
+"Before the battle"
+]
+],
+"788844": [
+[
+"deckbuilding_effect",
+"can be included in a Drukhari kill team"
+]
+],
+"788861": [
+[
+"movement",
+"move across other models as if they were not there"
+],
+[
+"immunity",
+"never suffers falling damage"
+]
+],
+"788862": [
+[
+"saving_throws",
+"4+ invulnerable save"
+]
+],
+"788863": [
+[
+"random_effect",
+"roll 3D6 instead of 2D6"
+]
+],
+"788904": [
+[
+"reactions",
+"When an enemy model declares a charge against a model from your kill team"
+]
+],
+"788906": []
+}

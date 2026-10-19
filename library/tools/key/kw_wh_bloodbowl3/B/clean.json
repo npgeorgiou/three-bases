@@ -1,0 +1,760 @@
+{
+"794614": [
+[
+"advantage",
+"re-roll any failed Agility Test"
+]
+],
+"794615": [
+[
+"advantage",
+"re-roll a single Agility Test"
+]
+],
+"794616": [
+[
+"protection",
+"choose not to be Knocked Down"
+]
+],
+"794617": [
+[
+"assists_support",
+"provide Offensive and Defensive Assists"
+]
+],
+"794618": [
+[
+"protection",
+"they can choose to not be Pushed Back"
+]
+],
+"794619": [
+[
+"on_kill",
+"Knocks Down an opposition player"
+],
+[
+"buff",
+"apply a +1 modifier to either the Armour Roll or Injury Roll"
+]
+],
+"794620": [
+[
+"buff",
+"apply a +1 modifier to the Passing Ability Test"
+]
+],
+"794621": [
+[
+"turnover",
+"This will not cause a Turnover"
+]
+],
+"794622": [
+[
+"immunity",
+"ignore any modifiers for being Marked"
+]
+],
+"794623": [
+[
+"advantage",
+"re-roll any failed Passing Ability Test"
+]
+],
+"794624": [
+[
+"buff",
+"apply a +1 modifier to either the Armour Roll or Injury Roll"
+]
+],
+"794625": [
+[
+"zone_of_control",
+"attempts to Dodge out of a square within this player's Tackle Zone"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"movement",
+"immediately placed into the square"
+]
+],
+"794626": [
+[
+"immunity",
+"is not Sent-off when performing a Foul Action"
+]
+],
+"794627": [
+[
+"advantage",
+"re-roll the D6 when attempting to pick up the ball"
+],
+[
+"immunity",
+"Strip Ball Skill cannot be used against this player"
+]
+],
+"794628": [
+[
+"target_choice",
+"may choose any adjacent unoccupied square"
+]
+],
+"794629": [
+[
+"piercing",
+"any roll of a natural 8+ on the Armour Roll will break the opposition player's armour"
+]
+],
+"794630": [
+[
+"immunity",
+"cannot apply any modifiers when making an Armour Roll against this player"
+]
+],
+"794636": [
+[
+"random_effect",
+"they must roll a D6"
+]
+],
+"794637": [
+[
+"random_effect",
+"they must roll a D6"
+],
+[
+"disable",
+"the player becomes Distracted"
+]
+],
+"794638": [
+[
+"protection",
+"they will only be Knocked-out on the roll of a 9"
+]
+],
+"794639": [
+[
+"activated",
+"declare the Throw Team-mate Action"
+]
+],
+"794640": [
+[
+"silence",
+"cannot use the Guard or Put the Boot In Skills"
+]
+],
+"794641": [],
+"794642": [
+[
+"debuff",
+"apply a -2 modifier"
+],
+[
+"zone_of_control",
+"attempts to leave this player's Tackle Zone"
+]
+],
+"794643": [
+[
+"movement",
+"move one free square ignoring Tackle Zones"
+]
+],
+"794644": [
+[
+"untap",
+"stand up for free"
+]
+],
+"794645": [
+[
+"movement",
+"attempt to Leap over a single adjacent square"
+]
+],
+"794646": [],
+"794647": [
+[
+"speed",
+"Rush one additional time"
+]
+],
+"794648": [
+[
+"advantage",
+"re-roll a single D6 when attempting to Rush"
+]
+],
+"794649": [
+[
+"disruption",
+"cannot provide Offensive or Defensive Assists"
+]
+],
+"794650": [
+[
+"buff",
+"may apply a +1 modifier"
+]
+],
+"794651": [
+[
+"lone_unit",
+"if there are no players providing an Offensive or Defensive Assist"
+],
+[
+"advantage",
+"re-roll a failed Armour Roll"
+]
+],
+"794653": [
+[
+"assists_support",
+"provide Offensive Assists"
+]
+],
+"794654": [
+[
+"speed",
+"activation does not end after performing a Foul Action"
+]
+],
+"794655": [
+[
+"reactions",
+"When this player is Knocked Down as a result of an opposition player's Block Action"
+],
+[
+"random_effect",
+"roll a D6"
+]
+],
+"794657": [
+[
+"stat_condition",
+"opposition player with a higher Strength Characteristic"
+],
+[
+"stat_gain",
+"add their own Strength Characteristic"
+],
+[
+"random_effect",
+"roll a D6"
+]
+],
+"794658": [
+[
+"suppress",
+"the opposition player may not Follow-up"
+]
+],
+"794659": [
+[
+"multi_attack",
+"must perform a second Block Action"
+]
+],
+"794661": [
+[
+"advantage",
+"attempt to re-roll a single dice"
+],
+[
+"random_effect",
+"the player must roll a D6"
+]
+],
+"794662": [
+[
+"protection",
+"this player does not get Knocked Down or Fall Over"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"turnover",
+"no Turnover will be caused"
+]
+],
+"794663": [
+[
+"disruption",
+"they will drop the ball"
+]
+],
+"794664": [
+[
+"silence",
+"they cannot use the Dodge Skill"
+]
+],
+"794665": [
+[
+"forced_movement",
+"make the opposition player Follow-up"
+]
+],
+"794666": [
+[
+"disable",
+"both players in the Block Action are Placed Prone"
+]
+],
+"794668": [
+[
+"debuff",
+"applies a -1 modifier to the Passing Ability Test"
+]
+],
+"794669": [
+[
+"buff",
+"applies a +1 modifier to the Agility Test"
+]
+],
+"794670": [
+[
+"random_effect",
+"they must roll a D6"
+]
+],
+"794671": [
+[
+"stat_gain",
+"apply a +1 modifier to their Strength Characteristic"
+]
+],
+"794672": [
+[
+"activated",
+"may declare a Chomp Special Action"
+]
+],
+"794673": [
+[
+"debuff",
+"apply an additional -1 modifier to the Agility Test"
+],
+[
+"zone_of_control",
+"attempts to Dodge, Jump or Leap away from a square in this player's Tackle Zone"
+]
+],
+"794674": [
+[
+"zone_of_control",
+"attempts to Dodge, Jump or Leap away from a square in this player's Tackle Zone"
+],
+[
+"random_effect",
+"roll a D6"
+]
+],
+"794675": [
+[
+"buff",
+"apply a +1 modifier to the Agility Test"
+]
+],
+"794677": [
+[
+"buff",
+"apply a +1 modifier to the Passing Ability Test"
+]
+],
+"794678": [
+[
+"suppress",
+"opposition players may not attempt to Intercept the ball"
+]
+],
+"794679": [
+[
+"reactions",
+"Whenever an opposition player attempts to perform a Block Action against this player"
+]
+],
+"794680": [
+[
+"speed",
+"their activation does not end"
+]
+],
+"794681": [
+[
+"ranged",
+"declare any square on the pitch as the target square"
+]
+],
+"794682": [
+[
+"resource_gain",
+"gain a single extra Team Re-roll"
+]
+],
+"794683": [
+[
+"reactions",
+"When an opposition player performs a Pass Action"
+],
+[
+"movement",
+"move up to 3 squares"
+]
+],
+"794684": [
+[
+"activated",
+"declare a Punt Special Action"
+],
+[
+"play_restriction",
+"only a single player may declare a Punt Special Action each Turn"
+]
+],
+"794685": [
+[
+"turnover",
+"No Turnover is caused"
+]
+],
+"794686": [
+[
+"zone_of_control",
+"this player's Tackle Zone"
+],
+[
+"buff",
+"apply a +1 modifier to either the Armour Roll or Injury Roll"
+]
+],
+"794687": [
+[
+"advantage",
+"re-roll a single Both Down result"
+]
+],
+"794688": [
+[
+"buff",
+"apply a +1 modifier to the Agility Test"
+],
+[
+"stat_condition",
+"if they have a Strength Characteristic of 3 or lower"
+]
+],
+"794689": [
+[
+"placement_rules",
+"will instead land in the target square"
+]
+],
+"794690": [
+[
+"target_choice",
+"may choose any unoccupied square adjacent to the target"
+],
+[
+"forced_movement",
+"for them to be pushed back into"
+]
+],
+"794691": [
+[
+"flexibility",
+"may treat any result of Both Down as Pushed Back"
+]
+],
+"794692": [
+[
+"multi_attack",
+"perform two Block Actions each targeting a different opposition player"
+],
+[
+"stat_loss",
+"reduce their Strength Characteristic by 2"
+]
+],
+"794693": [
+[
+"buff",
+"apply a +1 modifier to the Passing Ability Test"
+]
+],
+"794694": [
+[
+"random_effect",
+"they must roll a D6"
+],
+[
+"sacrifice",
+"attempt to eat their team-mate"
+]
+],
+"794695": [
+[
+"random_effect",
+"they must roll a D6"
+],
+[
+"buff",
+"apply a +2 modifier to the roll"
+]
+],
+"794696": [
+[
+"random_effect",
+"roll a D6"
+],
+[
+"tribal",
+"same Keyword"
+]
+],
+"794697": [
+[
+"autonomous_units",
+"the only action they can declare is a Ball & Chain Special Action"
+]
+],
+"794698": [
+[
+"random_effect",
+"they must roll a D6"
+]
+],
+"794699": [
+[
+"activated",
+"declare a Throw Bomb Special Action"
+],
+[
+"play_restriction",
+"only one player can declare this Special Action each Turn"
+]
+],
+"794700": [
+[
+"activated",
+"declare a Breathe Fire Special Action"
+]
+],
+"794701": [
+[
+"activated",
+"declare a Chainsaw Attack Special Action"
+],
+[
+"random_effect",
+"roll a D6"
+]
+],
+"794702": [
+[
+"debuff",
+"Apply a +1 modifier to any Casualty Roll made against this player"
+]
+],
+"794703": [
+[
+"debuff",
+"applies a -1 modifier to test whenever they attempt to Rush"
+]
+],
+"794704": [
+[
+"activated",
+"declare a Hypnotic Gaze Special Action"
+]
+],
+"794705": [
+[
+"deckbuilding_effect",
+"When creating a Team Draft List"
+]
+],
+"794706": [
+[
+"activated",
+"declare a Kick Team-mate Special Action"
+],
+[
+"play_restriction",
+"only one player can declare this Special Action each Turn"
+]
+],
+"794707": [
+[
+"play_restriction",
+"may not willingly give up the ball"
+]
+],
+"794708": [
+[
+"play_restriction",
+"may never have possession of the ball"
+]
+],
+"794710": [
+[
+"turn_end",
+"At the end of each of the opposition's Turns"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"untap",
+"the Prone player may immediately stand up"
+]
+],
+"794711": [
+[
+"once_per_game",
+"Once per game"
+]
+],
+"794712": [
+[
+"movement",
+"Pogo over a single adjacent square"
+]
+],
+"794713": [
+[
+"activated",
+"declare a Projectile Vomit Special Action"
+]
+],
+"794714": [
+[
+"random_effect",
+"they must roll a D6"
+],
+[
+"adjacency",
+"adjacent to them"
+]
+],
+"794715": [
+[
+"regeneration",
+"this player regenerates"
+],
+[
+"random_effect",
+"roll a D6"
+]
+],
+"794716": [
+[
+"team_play",
+"can be thrown by a team-mate"
+]
+],
+"794717": [
+[
+"activated",
+"declare a Stab Special Action"
+]
+],
+"794718": [
+[
+"immunity",
+"do not suffer any negative modifiers to their Agility Test for being Marked"
+],
+[
+"debuff",
+"applies a -1 modifier to the Agility Test when attempting to Intercept the ball"
+]
+],
+"794719": [
+[
+"random_effect",
+"Roll a D6 to determine the direction"
+]
+],
+"794720": [
+[
+"random_effect",
+"must roll a D6"
+],
+[
+"disable",
+"the player becomes Rooted"
+]
+],
+"794721": [
+[
+"buff",
+"apply a +1 modifier to the roll for standing up"
+],
+[
+"adjacency",
+"adjacent to this player"
+]
+],
+"794722": [
+[
+"buff",
+"apply a +1 modifier to the Agility Test"
+]
+],
+"794723": [
+[
+"reactions",
+"Whenever an opposition player attempts to perform a Block Action against this player"
+]
+],
+"794724": [
+[
+"random_effect",
+"they must roll a D6"
+]
+],
+"794725": [
+[
+"play_restriction",
+"may not declare Secure the Ball Actions"
+]
+],
+"794726": [
+[
+"advantage",
+"re-roll a single Player Down result"
+],
+[
+"tribal",
+"same keyword"
+]
+],
+"794727": [
+[
+"turn_end",
+"At the end of a Drive"
+]
+],
+"794729": [
+[
+"deckbuilding_effect",
+"must be hired as a pair"
+],
+[
+"buff",
+"apply a +1 modifier to the roll"
+]
+]
+}

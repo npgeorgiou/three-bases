@@ -1,0 +1,150 @@
+766030 | Dash | You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.
+   A: [["haste", "it gains haste"], ["return_to_hand", "returned from the battlefield to its owner's hand"], ["cost_type", "cast this spell for its dash cost"]]
+   B: [["haste", "it gains haste"], ["return_to_hand", "it's returned from the battlefield to its owner's hand"], ["cost_type", "dash cost"], ["turn_end", "next end step"]]
+766031 | Bloodrush | 
+   A: []
+   B: [["discard", "Bloodrush"], ["activated", "Bloodrush"]]
+766032 | Ascend | If you control ten or more permanents, you get the city's blessing for the rest of the game.
+   A: [["condition_count", "If you control ten or more permanents"]]
+   B: [["board_presence", "If you control ten or more permanents"]]
+766033 | Manifest | 
+   A: []
+   B: [["summon", "Manifest"]]
+766035 | Blitz | If you cast this spell for its blitz cost, it gains haste and "When this creature dies, draw a card." Sacrifice it at the beginning of the next end step.
+   A: [["haste", "it gains haste"], ["death_trigger", "When this creature dies"], ["draw", "draw a card"], ["self_destruct", "Sacrifice it at the beginning of the next end step"]]
+   B: [["haste", "it gains haste"], ["death_trigger", "When this creature dies"], ["draw", "draw a card"], ["self_destruct", "Sacrifice it at the beginning of the next end step"], ["cost_type", "blitz cost"]]
+766037 | Boast | 
+   A: []
+   B: [["activated", "Boast"]]
+766039 | Infusion | 
+   A: []
+   B: [["count_payoff", "Infusion"]]
+766040 | Bargain | You may sacrifice an artifact, enchantment, or token as you cast this spell.
+   A: [["sacrifice", "You may sacrifice an artifact, enchantment, or token"]]
+   B: [["sacrifice", "You may sacrifice an artifact, enchantment, or token"], ["kicker", "You may sacrifice an artifact, enchantment, or token"]]
+766042 | Disguise | You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.
+   A: [["stealth", "face down for {3} as a 2/2 creature"], ["protection", "ward {2}"]]
+   B: [["cost_type", "You may cast this card face down for {3}"], ["transform", "Turn it face up any time"]]
+766043 | Ninjutsu | {2}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.
+   A: [["return_to_hand", "Return an unblocked attacker you control to hand"], ["attack_now", "tapped and attacking"]]
+   B: [["activated", "{2}{U}, Return an unblocked attacker you control to hand"], ["return_to_hand", "Return an unblocked attacker you control to hand"], ["attack_now", "tapped and attacking"]]
+766044 | Transmute | {1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.
+   A: [["tutor", "Search your library for a card with the same mana value"], ["activated", "{1}{U}{U}, Discard this card"]]
+   B: [["tutor", "Search your library for a card with the same mana value"], ["discard", "Discard this card"], ["cost_condition", "same mana value as this card"]]
+766047 | Banding | Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.
+   A: [["link_formation", "attack in a band"], ["distribute", "you divide that creature's combat damage"]]
+   B: [["blocking", "Bands are blocked as a group"], ["distribute", "you divide that creature's combat damage"]]
+766048 | Delve | Each card you exile from your graveyard while casting this spell pays for {1}.
+   A: [["cost_reduction", "Each card you exile from your graveyard while casting this spell pays for {1}"]]
+   B: [["graveyard", "Each card you exile from your graveyard"], ["cost_reduction", "pays for {1}"]]
+766049 | Training | Whenever this creature attacks with another creature with greater power, put a +1/+1 counter on this creature.
+   A: [["on_attack", "Whenever this creature attacks"], ["stat_gain", "put a +1/+1 counter on this creature"]]
+   B: [["on_attack", "Whenever this creature attacks"], ["permanent_growth", "put a +1/+1 counter on this creature"], ["stat_condition", "another creature with greater power"]]
+766050 | Delirium | 
+   A: []
+   B: [["variety_payoff", "Delirium"]]
+766051 | Firebending | Whenever this creature attacks, add {R}. This mana lasts until end of combat.
+   A: [["on_attack", "Whenever this creature attacks"], ["resource_gain", "add {R}"]]
+   B: [["on_attack", "Whenever this creature attacks"], ["resource_gain", "add {R}"], ["temporary_effect", "lasts until end of combat"]]
+766052 | Chroma | 
+   A: []
+   B: [["condition_count", "Chroma"]]
+766053 | Mutate | If you cast this spell for its mutate cost, put it over or under target non-Human creature you own. They mutate into the creature on top plus all abilities from under it.
+   A: [["merge_attach", "put it over or under target non-Human creature"], ["cost_type", "cast this spell for its mutate cost"]]
+   B: [["merge_attach", "put it over or under target non-Human creature you own"], ["cost_type", "mutate cost"], ["transform", "They mutate into the creature on top"]]
+766054 | Spell mastery | 
+   A: []
+   B: [["graveyard", "Spell mastery"]]
+766055 | Toxic | Players dealt combat damage by this creature also get a poison counter.
+   A: [["stacking_keyword", "poison counter"]]
+   B: [["damage_over_time", "poison counter"]]
+766056 | Power-up | 
+   A: []
+   B: [["upgrade", "Power-up"]]
+766057 | Kinship | 
+   A: []
+   B: [["tribal", "Kinship"]]
+766058 | Flurry | 
+   A: []
+   B: [["count_payoff", "Flurry"]]
+766059 | Foretell | During your turn, you may pay {2} and exile this card from your hand face down. Cast it on a later turn for its foretell cost.
+   A: [["cost_type", "for its foretell cost"], ["delayed", "Cast it on a later turn"], ["information", "exile this card from your hand face down"]]
+   B: [["cast_from_zone", "Cast it on a later turn for its foretell cost"], ["delayed", "on a later turn"]]
+766060 | Grandeur | 
+   A: []
+   B: [["discard", "Grandeur"]]
+766061 | Reconfigure | {5}: Attach to target creature you control; or unattach from a creature. Reconfigure only as a sorcery. While attached, this isn't a creature.
+   A: [["merge_attach", "Attach to target creature you control"], ["activated", "{5}: Attach"]]
+   B: [["merge_attach", "Attach to target creature you control"], ["activated", "{5}: Attach to target creature you control"], ["transform", "While attached, this isn't a creature"]]
+766064 | Adamant | 
+   A: []
+   B: [["condition_count", "Adamant"]]
+766065 | Explore | 
+   A: []
+   B: [["selection", "Explore"]]
+766068 | Morph | You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.
+   A: [["stealth", "face down as a 2/2 creature"]]
+   B: [["cost_type", "cast this card face down as a 2/2 creature for {3}"], ["transform", "Turn it face up any time for its morph cost"]]
+766071 | Daybound | If a player casts no spells during their own turn, it becomes night next turn.
+   A: [["rule_change", "it becomes night next turn"]]
+   B: [["stances", "it becomes night next turn"]]
+766072 | Nightbound | If a player casts at least two spells during their own turn, it becomes day next turn.
+   A: [["rule_change", "it becomes day next turn"]]
+   B: [["stances", "it becomes day next turn"], ["condition_count", "at least two spells"]]
+766074 | Vivid | 
+   A: []
+   B: [["variety_payoff", "Vivid"]]
+766075 | Split second | As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.
+   A: [["play_restriction", "players can't cast spells or activate abilities"]]
+   B: [["play_restriction", "players can't cast spells or activate abilities that aren't mana abilities"], ["spell_speed", "Split second"]]
+766077 | Prototype | You may cast this spell with different mana cost, color, and size. It keeps its abilities and types.
+   A: [["flexibility", "different mana cost, color, and size"]]
+   B: [["cost_type", "different mana cost, color, and size"]]
+766078 | Mentor | Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.
+   A: [["on_attack", "Whenever this creature attacks"], ["stat_gain", "put a +1/+1 counter on target attacking creature"]]
+   B: [["on_attack", "Whenever this creature attacks"], ["stat_gain", "put a +1/+1 counter on target attacking creature with lesser power"], ["stat_condition", "lesser power"]]
+766081 | Megamorph | You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.
+   A: [["stealth", "face down as a 2/2 creature"], ["stat_gain", "put a +1/+1 counter on it"]]
+   B: [["cost_type", "cast this card face down as a 2/2 creature for {3}"], ["transform", "Turn it face up any time for its megamorph cost"], ["stat_gain", "put a +1/+1 counter on it"]]
+766082 | Offspring | You may pay an additional {1}{U} as you cast this spell. If you do, when this creature enters, create a 1/1 token copy of it.
+   A: [["kicker", "You may pay an additional"], ["copy", "token copy of it"]]
+   B: [["kicker", "You may pay an additional {1}{U}"], ["copy", "create a 1/1 token copy of it"], ["on_play", "when this creature enters"]]
+766083 | Read Ahead | 
+   A: []
+   B: [["flexibility", "Read Ahead"]]
+766087 | Domain | 
+   A: []
+   B: [["variety_payoff", "Domain"]]
+766090 | Spectacle | You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.
+   A: [["cost_type", "for its spectacle cost"], ["count_payoff", "if an opponent lost life this turn"]]
+   B: [["cost_type", "spectacle cost rather than its mana cost"]]
+766091 | Converge | 
+   A: []
+   B: [["variety_payoff", "Converge"]]
+766092 | Venture into the dungeon | 
+   A: []
+   B: [["quests", "Venture into the dungeon"]]
+766099 | Sneak | You may cast this spell for {2}{W}{B} if you also return an unblocked attacker you control to hand during the declare blockers step. It enters tapped and attacking.
+   A: [["return_to_hand", "return an unblocked attacker you control to hand"], ["attack_now", "It enters tapped and attacking"]]
+   B: [["cost_type", "You may cast this spell for {2}{W}{B}"], ["return_to_hand", "return an unblocked attacker you control to hand"], ["attack_now", "It enters tapped and attacking"]]
+766100 | Bestow | If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.
+   A: [["merge_attach", "it's an Aura spell with enchant creature"], ["transform", "It becomes a creature again"]]
+   B: [["merge_attach", "it's an Aura spell with enchant creature"], ["transform", "It becomes a creature again if it's not attached"], ["cost_type", "bestow cost"]]
+766101 | Metalcraft | 
+   A: []
+   B: [["condition_count", "Metalcraft"]]
+766105 | Hideaway | When this enchantment enters, look at the top five cards of your library, exile one face down, then put the rest on the bottom in a random order.
+   A: [["on_play", "When this enchantment enters"], ["selection", "look at the top five cards of your library"]]
+   B: [["selection", "look at the top five cards of your library"], ["random_effect", "in a random order"]]
+766106 | Battalion | 
+   A: []
+   B: [["condition_count", "Battalion"]]
+766107 | Fathomless descent | 
+   A: []
+   B: [["graveyard", "Fathomless descent"]]
+766110 | Endure | 
+   A: []
+   B: [["stat_gain", "Endure"]]
+766111 | Constellation | 
+   A: []
+   B: [["on_ally_play", "Constellation"]]

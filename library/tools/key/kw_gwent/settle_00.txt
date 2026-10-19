@@ -1,0 +1,117 @@
+756149 | Timer | Before the end of your turn, lower the number by 1. When the number reaches 0, trigger the ability.
+   A: [["delayed", "lower the number by 1"]]
+   B: [["turn_end", "Before the end of your turn"], ["delayed", "When the number reaches 0, trigger the ability"]]
+756154 | Summon | Move automatically to the battlefield (not considered played).
+   A: [["summon", "Move automatically to the battlefield"]]
+   B: [["free_play", "Move automatically to the battlefield (not considered played)"]]
+756156 | Cataclysm | At the start of the owner's turn, split 3 damage randomly between units in this row.
+   A: [["turn_start", "At the start of the owner's turn"], ["distribute", "split 3 damage randomly between units in this row"], ["row_effects", "units in this row"]]
+   B: [["turn_start", "At the start of the owner's turn"], ["distribute", "split 3 damage randomly between units in this row"], ["random_effect", "randomly"], ["row_effects", "units in this row"]]
+756162 | Frost | At the start of the owner's turn, damage the highest power unit in this row by 2.
+   A: [["turn_start", "At the start of the owner's turn"], ["damage", "damage the highest power unit in this row by 2"], ["stat_condition", "highest power unit"]]
+   B: [["turn_start", "At the start of the owner's turn"], ["damage", "damage the highest power unit in this row by 2"], ["row_effects", "in this row"]]
+756163 | Fog | At the start of the owner's turn, damage the lowest power unit in this row by 2.
+   A: [["turn_start", "At the start of the owner's turn"], ["damage", "damage the lowest power unit in this row by 2"], ["stat_condition", "lowest power unit"]]
+   B: [["turn_start", "At the start of the owner's turn"], ["damage", "damage the lowest power unit in this row by 2"], ["row_effects", "in this row"]]
+756164 | Rain | At the start of the owner's turn, damage 2 random units in this row by 1.
+   A: [["turn_start", "At the start of the owner's turn"], ["aoe_damage", "damage 2 random units in this row by 1"], ["random_effect", "random units"]]
+   B: [["turn_start", "At the start of the owner's turn"], ["aoe_damage", "damage 2 random units in this row by 1"], ["random_effect", "random units"], ["row_effects", "in this row"]]
+756167 | Formation | If played on the melee row, gain Zeal. If played on the ranged row, boost self by 1.
+   A: [["rows", "If played on the melee row"]]
+   B: [["rows", "If played on the melee row"], ["haste", "gain Zeal"], ["stat_gain", "boost self by 1"]]
+756169 | Bleeding | Status that damages the unit by 1 at the end of its turn. Note: Bleeding turns can accumulate, 1 turn of Bleeding cancels out 1 turn of Vitality. Bleeding ignores armor.
+   A: [["damage_over_time", "damages the unit by 1 at the end of its turn"], ["piercing", "Bleeding ignores armor"]]
+   B: [["damage_over_time", "damages the unit by 1 at the end of its turn"], ["turn_end", "at the end of its turn"], ["piercing", "Bleeding ignores armor"]]
+756174 | Armor | Protects the unit from damage. This value doesn't count towards your score and/or the unit's power.
+   A: [["block_armor", "Protects the unit from damage"]]
+   B: [["damage_reduction", "Protects the unit from damage"]]
+756177 | Vitality | Status that boosts this unit by 1 on its turn end. Note: Vitality turns can accumulate; 1 turn of Vitality cancels out 1 turn of Bleeding.
+   A: [["regeneration", "boosts this unit by 1 on its turn end"]]
+   B: [["permanent_growth", "boosts this unit by 1 on its turn end"], ["turn_end", "on its turn end"]]
+756178 | Barricade | Trigger this ability if the unit has armor.
+   A: []
+   B: [["damage_reduction", "if the unit has armor"]]
+756185 | Consume | Destroy a unit and boost self by its power. If target is in the graveyard, Banish it instead.
+   A: [["destroy", "Destroy a unit"], ["stat_gain", "boost self by its power"], ["banish", "Banish it instead"]]
+   B: [["destroy", "Destroy a unit"], ["stat_gain", "boost self by its power"], ["banish", "Banish it instead"], ["graveyard", "If target is in the graveyard"]]
+756186 | Seize | Move an enemy unit to the opposite row and give it Spying. If it already had Spying, remove Spying instead.
+   A: [["forced_movement", "Move an enemy unit to the opposite row"], ["rows", "opposite row"]]
+   B: [["forced_movement", "Move an enemy unit to the opposite row"]]
+756187 | Thrive | Boost this unit by 1 or the specified amount whenever you play a unit with higher power.
+   A: [["on_ally_play", "whenever you play a unit with higher power"], ["stat_gain", "Boost this unit by 1"]]
+   B: [["on_ally_play", "whenever you play a unit with higher power"], ["permanent_growth", "Boost this unit by 1"], ["stat_condition", "higher power"]]
+756188 | Infused | Status that adds effects or categories to a card. Removing the status also removes all added effects and categories. Lock disables Infused abilities.
+   A: []
+   B: [["upgrade", "adds effects or categories to a card"]]
+756190 | Bonded | Trigger this ability if you control a copy of this card.
+   A: []
+   B: [["condition_count", "control a copy of this card"]]
+756196 | Veteran | At the start of the second and third round, increase the base power of this unit by 1.
+   A: [["stat_gain", "increase the base power of this unit by 1"], ["turn_number", "second and third round"]]
+   B: [["permanent_growth", "increase the base power of this unit by 1"], ["turn_number", "start of the second and third round"]]
+756198 | Echo | At the beginning of the round, move this card from the graveyard to the top of its owner's deck. Give it Doomed.
+   A: [["revive", "move this card from the graveyard to the top of its owner's deck"], ["turn_start", "At the beginning of the round"]]
+   B: [["recycle", "move this card from the graveyard to the top of its owner's deck"], ["turn_start", "At the beginning of the round"]]
+756199 | Conspiracy | Trigger this ability if target unit has Spying status.
+   A: []
+   B: [["targeting_rules", "if target unit has Spying status"]]
+756200 | Flanking | If this unit is adjacent to only one card: on your Melee row, its end of turn ability is triggered twice; on your Ranged row, gain 1 Armor at the end of your turn.
+   A: [["adjacency", "adjacent to only one card"], ["repeat_trigger", "its end of turn ability is triggered twice"], ["block_armor", "gain 1 Armor"], ["rows", "on your Ranged row"]]
+   B: [["adjacency", "adjacent to only one card"], ["repeat_trigger", "its end of turn ability is triggered twice"], ["damage_reduction", "gain 1 Armor"]]
+756202 | Poison | Status - if a unit receives two instances of Poison, destroy it.
+   A: [["destroy", "destroy it"]]
+   B: [["destroy", "destroy it"], ["stacking_keyword", "receives two instances of Poison"]]
+756204 | Symbiosis | Whenever you play a Nature card, Spawn a Wandering Treant on a random allied row and set its power equal to number of Symbioses you control.
+   A: [["on_ally_play", "Whenever you play a Nature card"], ["summon", "Spawn a Wandering Treant"], ["variable_stats", "set its power equal to number of Symbioses"]]
+   B: [["on_ally_play", "Whenever you play a Nature card"], ["summon", "Spawn a Wandering Treant on a random allied row"], ["variable_stats", "set its power equal to number of Symbioses you control"], ["tribal", "Nature card"]]
+756205 | Might | Trigger this ability if you control a unit with 10 or more power on each of your rows.
+   A: [["condition_count", "10 or more power on each of your rows"]]
+   B: [["stat_condition", "control a unit with 10 or more power on each of your rows"]]
+756207 | Harmony | Boost self by 1 or the specified amount whenever you play a non-Neutral unit, whose primary category is unique among all of your units.
+   A: [["on_ally_play", "whenever you play a non-Neutral unit"], ["stat_gain", "Boost self by 1"], ["variety_payoff", "primary category is unique"]]
+   B: [["on_ally_play", "whenever you play a non-Neutral unit"], ["permanent_growth", "Boost self by 1"], ["variety_payoff", "primary category is unique among all of your units"]]
+756209 | Blood Moon | At the start of the owner's turn, give a random unit in this row Bleeding (2). If the unit is already Bleeding, damage it by 2 instead.
+   A: [["turn_start", "At the start of the owner's turn"], ["damage_over_time", "give a random unit in this row Bleeding (2)"], ["random_effect", "random unit"]]
+   B: [["turn_start", "At the start of the owner's turn"], ["random_effect", "a random unit in this row"], ["damage_over_time", "give a random unit in this row Bleeding (2)"], ["row_effects", "in this row"]]
+756210 | Assimilate | Boost self by 1 or the specified amount whenever you play a card that is not from your starting deck.
+   A: [["on_ally_play", "whenever you play a card that is not from your starting deck"], ["stat_gain", "Boost self by 1"]]
+   B: [["permanent_growth", "Boost self by 1 or the specified amount"], ["on_ally_play", "whenever you play a card"], ["deck_condition", "not from your starting deck"]]
+756211 | Tribute | On Deploy, you may choose to spend the specified amount of Coins to trigger this ability.
+   A: [["on_play", "On Deploy"], ["cost_type", "spend the specified amount of Coins"]]
+   B: [["on_play", "On Deploy"], ["coin_economy", "spend the specified amount of Coins"]]
+756213 | Fee | Trigger this ability by spending the specified number of Coins.
+   A: [["cost_type", "spending the specified number of Coins"]]
+   B: [["coin_economy", "spending the specified number of Coins"]]
+756214 | Bounty | When a unit with this status is destroyed or banished, opponent gains coins equal to its base power. There can be only one unit with Bounty status on each side of the board at given time.
+   A: [["mark_target", "When a unit with this status is destroyed or banished"]]
+   B: [["enemy_benefit", "opponent gains coins equal to its base power"], ["mark_target", "When a unit with this status is destroyed or banished"]]
+756215 | Intimidate | Boost self by 1 or the specified amount whenever you play a Crime card.
+   A: [["on_ally_play", "whenever you play a Crime card"], ["stat_gain", "Boost self by 1"]]
+   B: [["on_ally_play", "whenever you play a Crime card"], ["permanent_growth", "Boost self by 1"], ["tribal", "Crime card"]]
+756216 | Insanity | If you have insufficient Coins, damage this unit by its Fee amount, ignoring its Armor, to trigger its Fee ability.\nNote: Insanity cannot be used if it would destroy the unit and works only if damage is inflicted.
+   A: [["life_payment", "damage this unit by its Fee amount, ignoring its Armor"]]
+   B: [["life_payment", "damage this unit by its Fee amount"], ["coin_economy", "insufficient Coins"], ["piercing", "ignoring its Armor"]]
+756217 | Hoard | Trigger this ability if you possess the specified number of Coins or more.
+   A: [["condition_count", "possess the specified number of Coins or more"]]
+   B: [["resource_banking", "possess the specified number of Coins or more"]]
+756218 | Defender | Status that prevents the opponent from targeting other cards in this row.
+   A: [["taunt", "prevents the opponent from targeting other cards in this row"]]
+   B: [["protection", "prevents the opponent from targeting other cards in this row"]]
+756219 | Rupture | At the end of owner's turn, damage this unit equal to its base power, then remove this status.
+   A: [["turn_end", "At the end of owner's turn"], ["damage", "damage this unit equal to its base power"]]
+   B: [["turn_end", "At the end of owner's turn"], ["self_destruct", "damage this unit equal to its base power"]]
+756222 | Vice | Trigger this ability after you spent the specified amount of Coins, then reset own counter.
+   A: [["condition_count", "after you spent the specified amount of Coins"]]
+   B: [["coin_economy", "after you spent the specified amount of Coins"]]
+756224 | Crown | The unit of Novigradian currency required to pay Fees and Tributes. You may possess a maximum of 9 Crowns. Your Crown-count is reduced by half (rounded down) when carried over into the next round. (2020 definition)
+   A: [["coin_economy", "required to pay Fees and Tributes"], ["round_carryover", "carried over into the next round"]]
+   B: [["coin_economy", "required to pay Fees and Tributes"]]
+756225 | Reset | Restore a unit to its base power. (2020 definition)
+   A: [["heal", "Restore a unit to its base power"]]
+   B: [["rewind", "Restore a unit to its base power"]]
+756226 | Spend | The amount of Crowns needed to trigger this ability. (2020 definition)
+   A: [["cost_type", "amount of Crowns needed to trigger this ability"]]
+   B: [["coin_economy", "The amount of Crowns needed to trigger this ability"]]
+756227 | Swap | Move a card from hand to deck and draw another in its place during your turn. (2020 definition)
+   A: [["recycle", "Move a card from hand to deck"], ["draw", "draw another"]]
+   B: [["card_quality", "Move a card from hand to deck and draw another in its place"]]
