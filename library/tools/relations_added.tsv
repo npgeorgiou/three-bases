@@ -1,0 +1,3 @@
+a	rel	b	note
+sacrifice	synergizes	cast_from_zone	a card that comes back from exile or the discard pile feeds a sacrifice outlet again (loops)
+life_payment	enables	on_life_loss	paying or losing your own life fires effects that reward losing life

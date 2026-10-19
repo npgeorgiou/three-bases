@@ -38,6 +38,7 @@ steps() {   # $1 = db
   $P concept_tree.py "$D" apply
   for f in reviews/*.json reviews_outcome/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f" new; done   # reviews are in the new ids (fixes/f15)
   $P regression.py "$D" enforce_new
+  $P relations_added.py "$D"
   $P pattern_fix.py "$D"
   $P kw_links.py "$D"
   $P parent_rule.py "$D"

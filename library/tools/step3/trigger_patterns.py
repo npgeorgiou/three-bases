@@ -31,8 +31,11 @@ CANDIDATES = [
     ('on_block', 'trigger', ST + r"(?:(?:this creature|name|i|it|this player|a player|this unit|an enemy|an ally) (?:blocks?|becomes blocked|is blocked|performs a block)\b)"),
     ('on_targeted', 'trigger', ST + r"(?:(?:" + IT + r"|they|it|i) (?:becomes?|is|are|i'm) (?:the |a )?target(?:ed)?\b|(?:" + IT + r") is selected as the target\b|(?:an? |the )?(?:enemy|opponent|attack|spell|ability)\b[^.,:\n]{0,25}\btargets (?:this|name|me|it|them)\b)"),
     ('on_sacrifice', 'trigger', ST + r"(?:" + PL + r" sacrifices?\b|(?:" + IT + r" )?(?:is |are |i'm |i am )?sacrificed\b)"),
+    ('on_life_loss', 'trigger', ST + r"(?:you|your hero|your nexus|your general|your leader|your champion|your avatar|i) (?:would )?(?:lose|loses|lost|take|takes|took|is dealt|are dealt|suffer|suffers)\b[^.,:\n]{0,25}?\b(?:hp|life|health|damage)\b"),
+    ('sacrifice', 'does', r"\b(?:exiles?|banish(?:es)?|consumes?|devours?|obliterates?)\s+(?:(?:a|an|another|one|two|three|\d+|all|x|up to \d+|any number of)\s+)?(?:other\s+)?(?:(?:allied|friendly)\s+(?:units?|followers?|minions?|creatures?|characters?)|(?:[\w-]+\s+){0,2}?(?:creatures?|permanents?|artifacts?|units?|minions?|followers?|tokens?)\s+you control|an? ally|allies)\b(?![^\n]{0,140}?\breturn (?:it|that card|those cards|them|the exiled \w+)\b[^.\n]{0,40}\bbattlefield)"),   # exiled and returned is blink, not sacrifice
+    ('sacrifice', 'does', r"\bexile (?:a|an|another|one|two|x) (?:[\w-]+\s+){0,2}?(?:creatures?|permanents?|artifacts?) you control\s*:|\badditional cost to cast this spell, exile (?:a|an|another) (?:[\w-]+\s+){0,2}?(?:creature|permanent|artifact)s? you control\b"),   # Magic: own permanent exiled as a cost
 ]
-DROP = set()   # (pattern index, game) pairs Claude judged wrong; filled after 'check'
+DROP = {(17, 'mtg')}   # (pattern index, game) pairs Claude judged wrong: in Magic the general own-unit exile pattern also catches temporary exile, the cost-only line below replaces it
 DB = sys.argv[2] if len(sys.argv) > 2 else P.DB
 c = sqlite3.connect(DB)
 ents = collections.defaultdict(list)
@@ -58,6 +61,6 @@ for j, (k, role, p) in enumerate(CANDIDATES):
 if mode == 'write':
     D = os.path.join(HERE, 'decisions.tsv')
     keep = [l for l in open(D, encoding='utf-8') if not (l.startswith('new\t') and l.split('\t')[1].endswith('|trigger')) and not l.startswith('# trigger_patterns')]
-    keep.append('# trigger_patterns.py: trigger wording no trigger pattern covered (Claude\'s regexes, checked on the key and on samples)\n')
+    keep.append('# trigger_patterns.py: trigger wording no trigger pattern covered, and own units given up by exiling, banishing, consuming or obliterating them (sacrifice) (Claude\'s regexes, checked on the key and on samples)\n')
     open(D, 'w', encoding='utf-8').writelines(keep + [l + '\n' for l in out])
     print('trigger pattern lines', len(out))

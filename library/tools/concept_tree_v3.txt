@@ -289,6 +289,7 @@ on_lifegain | When life or health is restored | trigger | trigger | Triggers whe
 on_block | When it blocks or is blocked | trigger | trigger | Triggers when the unit blocks or becomes blocked. (Added 19 Oct 2026, Claude's.) | When it attacks is on_attack.
 on_targeted | When it becomes a target | trigger | trigger | Triggers when the unit or card becomes the target of a spell or ability. (Added 19 Oct 2026, Claude's.) | When it is damaged is on_damaged.
 on_sacrifice | When a unit is sacrificed | trigger | trigger | Triggers when the owner sacrifices a unit or permanent. (Added 19 Oct 2026, Claude's.) | Sacrificing as a cost is the sacrifice concept.
+on_life_loss | When I lose life | trigger | trigger | Triggers when the owner's player or hero loses life or takes damage. (Added 20 Oct 2026, Claude's.) | A unit being damaged is on_damaged; paying life as a cost is life_payment.
 once_per_game | Once per game | trigger | trigger | The effect can be used only once per game. | Waiting turns between uses is cooldowns.
 passive | Passive / always on | trigger | trigger | The effect is always on while the card is in play. | Effects that fire on an event are triggers.
 reactions | Reactions on the opponent's turn | trigger | trigger,spell_speed | The effect answers the opponent's actions: interrupts, after your opponent plays. | Hidden traps are trap_secret.

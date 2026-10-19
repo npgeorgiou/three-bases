@@ -5,3 +5,4 @@ on_lifegain
 on_block
 on_targeted
 on_sacrifice
+on_life_loss
