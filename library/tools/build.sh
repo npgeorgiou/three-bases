@@ -40,6 +40,7 @@ steps() {   # $1 = db
   $P kw_links.py "$D"
   $P parent_rule.py "$D"
   $P final_revert.py "$D"
+  $P key_wins.py apply "$D"
   $P dedupe.py "$D"
   $P frequency.py "$D"
   $P fixes/f07_keywords_structure.py "$D"

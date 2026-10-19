@@ -17,17 +17,17 @@ CANDIDATES = [
     ('on_attack', 'trigger', r"\bwhenever (?:you attack|this creature attacks|name attacks)\b"),
     ('turn_start', 'trigger', r"\bat the (?:start|beginning) of (?:the |your |each |its |their |the owner's |its owner's |the opponent's |each player's )?(?:next )?(?:turn|round|battle round|upkeep)\b"),
     ('turn_end', 'trigger', r"\bat the end of (?:the |your |each |its |their |the owner's |its owner's |the opponent's |each player's )?(?:next )?(?:turn|round|battle round)\b"),
-    ('on_spell', 'trigger', r"\bwhenever (?:you|a player|an opponent) casts? (?:a|an|your)\b[^.,:\n]{0,30}?\b(?:spell|instant|sorcery)\b"),
+    ('on_spell', 'trigger', r"\bwhenever (?:you|a player|an opponent) casts? (?:[\w-]+ ){0,5}?(?:spells?|instants?|sorcer(?:y|ies))\b"),
     ('on_ally_play', 'trigger', r"\bwhenever (?:one or more )?(?:another |other )?(?:creatures?|artifacts?|permanents?|tokens?)\b[^.,:\n]{0,30}?\byou control enters?\b"),
     ('on_ally_play', 'trigger', r"\bwhen(?:ever)? you play an?\b"),
     ('on_damaged', 'trigger', r"\beach time an? (?:ranged |melee |shooting )?attack (?:is made against|targets) (?:this|that)\b"),
     ('on_enemy_enter', 'trigger', r"\beach time an enemy (?:unit|operative|model)\b[^.,:\n]{0,40}?\bends? an? (?:normal|advance|fall back|charge|reposition|dash) move\b"),
-    ('on_draw', 'trigger', r"\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b"),
-    ('on_discard', 'trigger', r"\bwhen(?:ever)? (?:you|a player|an opponent) discards? (?:a|an|one|this)\b|\bwhen(?:ever)? (?:this|name) is discarded\b"),
-    ('on_lifegain', 'trigger', r"\bwhen(?:ever)? (?:you|a player|your hero) gains? (?:\d+ )?life\b|\bwhen(?:ever)? your hero is healed\b"),
+    ('on_draw', 'trigger', r"\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b"),
+    ('on_discard', 'trigger', r"\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) discards?\b|\bwhen(?:ever)? (?:this|name|this card|a card) is discarded\b"),
+    ('on_lifegain', 'trigger', r"\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) gains? (?:\d+ |that much |\w+ )?life\b|\bwhen(?:ever)? (?:your hero|you) (?:is|are) healed\b"),
     ('on_block', 'trigger', r"\bwhen(?:ever)? (?:this creature|name) blocks\b|\bwhen(?:ever)? (?:this creature|name) becomes blocked\b"),
     ('on_targeted', 'trigger', r"\bwhen(?:ever)? (?:this (?:creature|permanent|unit|minion)|name) becomes the target of\b"),
-    ('on_sacrifice', 'trigger', r"\bwhen(?:ever)? you sacrifice (?:a|an|another|one or more)\b"),
+    ('on_sacrifice', 'trigger', r"\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) sacrifices?\b"),
 ]
 DROP = set()   # (pattern index, game) pairs Claude judged wrong; filled after 'check'
 DB = sys.argv[2] if len(sys.argv) > 2 else P.DB

@@ -889,10 +889,10 @@ new	turn_end|trigger|wh_underworlds|trigger	wh_underworlds	\bat the end of (?:th
 new	turn_end|trigger|wh_40k_10e|trigger	wh_40k_10e	\bat the end of (?:the |your |each |its |their |the owner's |its owner's |the opponent's |each player's )?(?:next )?(?:turn|round|battle round)\b
 new	turn_end|trigger|wh_killteam|trigger	wh_killteam	\bat the end of (?:the |your |each |its |their |the owner's |its owner's |the opponent's |each player's )?(?:next )?(?:turn|round|battle round)\b
 new	turn_end|trigger|marvel_snap|trigger	marvel_snap	\bat the end of (?:the |your |each |its |their |the owner's |its owner's |the opponent's |each player's )?(?:next )?(?:turn|round|battle round)\b
-new	on_spell|trigger|duelyst|trigger	duelyst	\bwhenever (?:you|a player|an opponent) casts? (?:a|an|your)\b[^.,:\n]{0,30}?\b(?:spell|instant|sorcery)\b
-new	on_spell|trigger|hearthstone|trigger	hearthstone	\bwhenever (?:you|a player|an opponent) casts? (?:a|an|your)\b[^.,:\n]{0,30}?\b(?:spell|instant|sorcery)\b
-new	on_spell|trigger|hs_battlegrounds|trigger	hs_battlegrounds	\bwhenever (?:you|a player|an opponent) casts? (?:a|an|your)\b[^.,:\n]{0,30}?\b(?:spell|instant|sorcery)\b
-new	on_spell|trigger|dnd5e|trigger	dnd5e	\bwhenever (?:you|a player|an opponent) casts? (?:a|an|your)\b[^.,:\n]{0,30}?\b(?:spell|instant|sorcery)\b
+new	on_spell|trigger|duelyst|trigger	duelyst	\bwhenever (?:you|a player|an opponent) casts? (?:[\w-]+ ){0,5}?(?:spells?|instants?|sorcer(?:y|ies))\b
+new	on_spell|trigger|hearthstone|trigger	hearthstone	\bwhenever (?:you|a player|an opponent) casts? (?:[\w-]+ ){0,5}?(?:spells?|instants?|sorcer(?:y|ies))\b
+new	on_spell|trigger|hs_battlegrounds|trigger	hs_battlegrounds	\bwhenever (?:you|a player|an opponent) casts? (?:[\w-]+ ){0,5}?(?:spells?|instants?|sorcer(?:y|ies))\b
+new	on_spell|trigger|dnd5e|trigger	dnd5e	\bwhenever (?:you|a player|an opponent) casts? (?:[\w-]+ ){0,5}?(?:spells?|instants?|sorcer(?:y|ies))\b
 new	on_ally_play|trigger|mtg|trigger	mtg	\bwhenever (?:one or more )?(?:another |other )?(?:creatures?|artifacts?|permanents?|tokens?)\b[^.,:\n]{0,30}?\byou control enters?\b
 new	on_ally_play|trigger|duelyst|trigger	duelyst	\bwhen(?:ever)? you play an?\b
 new	on_ally_play|trigger|hearthstone|trigger	hearthstone	\bwhen(?:ever)? you play an?\b
@@ -901,25 +901,28 @@ new	on_ally_play|trigger|mtg|trigger	mtg	\bwhen(?:ever)? you play an?\b
 new	on_ally_play|trigger|marvel_snap|trigger	marvel_snap	\bwhen(?:ever)? you play an?\b
 new	on_damaged|trigger|wh_aos_4th|trigger	wh_aos_4th	\beach time an? (?:ranged |melee |shooting )?attack (?:is made against|targets) (?:this|that)\b
 new	on_enemy_enter|trigger|wh_40k_10e|trigger	wh_40k_10e	\beach time an enemy (?:unit|operative|model)\b[^.,:\n]{0,40}?\bends? an? (?:normal|advance|fall back|charge|reposition|dash) move\b
-new	on_draw|trigger|faeria|trigger	faeria	\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b
-new	on_draw|trigger|duelyst|trigger	duelyst	\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b
-new	on_draw|trigger|hearthstone|trigger	hearthstone	\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b
-new	on_draw|trigger|runeterra|trigger	runeterra	\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b
-new	on_draw|trigger|gwent|trigger	gwent	\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b
-new	on_draw|trigger|sts1|trigger	sts1	\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b
-new	on_draw|trigger|sts2|trigger	sts2	\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b
-new	on_draw|trigger|mtg|trigger	mtg	\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b
-new	on_draw|trigger|wh_40k_10e|trigger	wh_40k_10e	\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b
-new	on_draw|trigger|marvel_snap|trigger	marvel_snap	\bwhen(?:ever)? (?:you|a player|an opponent|your opponent) draws? (?:a|an|your|one|two|\d)\b
-new	on_discard|trigger|hearthstone|trigger	hearthstone	\bwhen(?:ever)? (?:you|a player|an opponent) discards? (?:a|an|one|this)\b|\bwhen(?:ever)? (?:this|name) is discarded\b
-new	on_discard|trigger|hs_battlegrounds|trigger	hs_battlegrounds	\bwhen(?:ever)? (?:you|a player|an opponent) discards? (?:a|an|one|this)\b|\bwhen(?:ever)? (?:this|name) is discarded\b
-new	on_discard|trigger|gwent|trigger	gwent	\bwhen(?:ever)? (?:you|a player|an opponent) discards? (?:a|an|one|this)\b|\bwhen(?:ever)? (?:this|name) is discarded\b
-new	on_discard|trigger|sts1|trigger	sts1	\bwhen(?:ever)? (?:you|a player|an opponent) discards? (?:a|an|one|this)\b|\bwhen(?:ever)? (?:this|name) is discarded\b
-new	on_discard|trigger|sts2|trigger	sts2	\bwhen(?:ever)? (?:you|a player|an opponent) discards? (?:a|an|one|this)\b|\bwhen(?:ever)? (?:this|name) is discarded\b
-new	on_discard|trigger|mtg|trigger	mtg	\bwhen(?:ever)? (?:you|a player|an opponent) discards? (?:a|an|one|this)\b|\bwhen(?:ever)? (?:this|name) is discarded\b
-new	on_discard|trigger|marvel_snap|trigger	marvel_snap	\bwhen(?:ever)? (?:you|a player|an opponent) discards? (?:a|an|one|this)\b|\bwhen(?:ever)? (?:this|name) is discarded\b
-new	on_lifegain|trigger|hearthstone|trigger	hearthstone	\bwhen(?:ever)? (?:you|a player|your hero) gains? (?:\d+ )?life\b|\bwhen(?:ever)? your hero is healed\b
-new	on_lifegain|trigger|mtg|trigger	mtg	\bwhen(?:ever)? (?:you|a player|your hero) gains? (?:\d+ )?life\b|\bwhen(?:ever)? your hero is healed\b
+new	on_draw|trigger|inscryption|trigger	inscryption	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|faeria|trigger	faeria	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|duelyst|trigger	duelyst	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|hearthstone|trigger	hearthstone	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|runeterra|trigger	runeterra	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|gwent|trigger	gwent	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|sts1|trigger	sts1	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|sts2|trigger	sts2	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|dnd5e|trigger	dnd5e	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|mtg|trigger	mtg	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|wh_40k_10e|trigger	wh_40k_10e	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_draw|trigger|marvel_snap|trigger	marvel_snap	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b
+new	on_discard|trigger|hearthstone|trigger	hearthstone	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) discards?\b|\bwhen(?:ever)? (?:this|name|this card|a card) is discarded\b
+new	on_discard|trigger|hs_battlegrounds|trigger	hs_battlegrounds	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) discards?\b|\bwhen(?:ever)? (?:this|name|this card|a card) is discarded\b
+new	on_discard|trigger|shadowverse|trigger	shadowverse	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) discards?\b|\bwhen(?:ever)? (?:this|name|this card|a card) is discarded\b
+new	on_discard|trigger|gwent|trigger	gwent	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) discards?\b|\bwhen(?:ever)? (?:this|name|this card|a card) is discarded\b
+new	on_discard|trigger|sts1|trigger	sts1	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) discards?\b|\bwhen(?:ever)? (?:this|name|this card|a card) is discarded\b
+new	on_discard|trigger|sts2|trigger	sts2	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) discards?\b|\bwhen(?:ever)? (?:this|name|this card|a card) is discarded\b
+new	on_discard|trigger|mtg|trigger	mtg	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) discards?\b|\bwhen(?:ever)? (?:this|name|this card|a card) is discarded\b
+new	on_discard|trigger|marvel_snap|trigger	marvel_snap	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) discards?\b|\bwhen(?:ever)? (?:this|name|this card|a card) is discarded\b
+new	on_lifegain|trigger|hearthstone|trigger	hearthstone	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) gains? (?:\d+ |that much |\w+ )?life\b|\bwhen(?:ever)? (?:your hero|you) (?:is|are) healed\b
+new	on_lifegain|trigger|mtg|trigger	mtg	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) gains? (?:\d+ |that much |\w+ )?life\b|\bwhen(?:ever)? (?:your hero|you) (?:is|are) healed\b
 new	on_block|trigger|mtg|trigger	mtg	\bwhen(?:ever)? (?:this creature|name) blocks\b|\bwhen(?:ever)? (?:this creature|name) becomes blocked\b
 new	on_targeted|trigger|mtg|trigger	mtg	\bwhen(?:ever)? (?:this (?:creature|permanent|unit|minion)|name) becomes the target of\b
-new	on_sacrifice|trigger|mtg|trigger	mtg	\bwhen(?:ever)? you sacrifice (?:a|an|another|one or more)\b
+new	on_sacrifice|trigger|mtg|trigger	mtg	\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) sacrifices?\b
