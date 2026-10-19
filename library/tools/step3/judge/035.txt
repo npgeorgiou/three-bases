@@ -1,0 +1,67 @@
+# definitions
+delayed | Delayed / countdown | The effect happens later: next turn, after N turns, countdowns. | Not: A set turn number is turn_number.
+destroy | Destroy outright | A unit is destroyed or killed regardless of its health. | Not: Killing by damage is damage; destroying my own unit for value is sacrifice.
+direct_damage | Damage to the player or base | Damage goes straight to the enemy player, hero or base. | Not: Damage to units is damage.
+discard | Discard my own cards | The owner discards cards from their own hand, as a cost or to fuel effects. | Not: Making the opponent discard is hand_disruption.
+draw | Draw cards | Cards are drawn from the owner's deck into hand. | Not: Searching the deck for a chosen kind of card is tutor; making a new card is generate_cards.
+# questions: qid | concept | game | name | text
+2434 | delayed | hearthstone | Sigil of Summoning | At the start of your next turn, summon two 2/2 Demons with Taunt.
+2435 | delayed | hearthstone | Ravenous Flock | At the start of your next turn, summon three 2/1 Hatchlings.
+2436 | delayed | hearthstone | Chronikar | Battlecry: Give your hero +3 Attack this turn, next turn, and the turn after.
+1753 | destroy | hearthstone | Chaos Creation | Deal 6 damage. Summon a random 6-Cost minion. Destroy the bottom 6 cards of your deck.
+1754 | destroy | hearthstone | Natalie Seline | Battlecry: Destroy a minion and gain its Health.
+1755 | destroy | hearthstone | Elder Nadox | Battlecry: Destroy a friendly Undead. Your minions gain its Attack.
+1756 | destroy | hearthstone | Deathwing the Destroyer | Battlecry: Destroy all other minions. Discard a card for each destroyed.
+1757 | destroy | hearthstone | Flame Crash | Destroy an enemy minion and deal damage equal to its Health to the enemy hero.
+1758 | destroy | hearthstone | Naga Repellent | Destroy all Hungry Naga.
+1759 | destroy | hearthstone | Vampiric Fangs | Destroy a minion. Restore its Health to your hero.
+1760 | destroy | hearthstone | Blast Charge | Destroy a damaged enemy minion. Excavate a treasure.
+1761 | destroy | hearthstone | Patchwerk | Battlecry: Destroy a random minion in your opponent's hand, deck, and battlefield.
+1762 | destroy | hearthstone | Doomsayer | At the start of your turn, destroy ALL minions.
+7047 | destroy | hearthstone | Instrument Smasher | Whenever your weapon is destroyed, equip a random Demon Hunter weapon.
+7048 | destroy | hearthstone | Disturbed Spirit | Whenever a minion dies, gain +1/+1.
+7049 | destroy | hearthstone | Flesheating Ghoul | Whenever a minion dies, gain +1 Attack.
+7050 | destroy | hearthstone | Mekgineer Thermaplugg | Whenever an enemy minion dies, summon a Leper Gnome.
+7051 | destroy | hearthstone | Jumbo Imp | Costs (1) less whenever a friendly Demon dies while this is in your hand.
+7052 | destroy | hearthstone | Junkbot | Whenever a friendly Mech dies, gain +2/+2.
+7053 | destroy | hearthstone | Blood Herald | Whenever a friendly minion dies while this is in your hand, gain +1/+1.
+7054 | destroy | hearthstone | Razorgore's Claws | Whenever a Corrupted Egg dies, gain +1 Attack.
+7055 | destroy | hearthstone | Floop's Glorious Gloop (created) | Whenever a minion dies this turn, gain 1 Mana Crystal this turn only.
+7056 | destroy | hearthstone | Usher of Souls | Whenever a minion dies, give your C'Thun +1/+1 (wherever it is).
+3559 | direct_damage | hearthstone | Eye for an Eye | Secret: When your hero takes damage, deal that much damage to the enemy hero.
+3560 | direct_damage | hearthstone | Unchained Magic | Deal 3 damage to the enemy hero for each spell in their hand.
+3561 | direct_damage | hearthstone | Future Gnomeregan | Give a minion +2/+1, Divine Shield, and "Deathrattle: Deal 2 damage to the enemy hero."
+3562 | direct_damage | hearthstone | Fire Elemental | Whenever your opponent plays a card, deal 4 damage to the enemy hero.
+3563 | direct_damage | hearthstone | Bloodclaw Dragon (created) | Taunt, Charge Whenever this minion takes damage, deal 2 damage to the enemy hero.
+3564 | direct_damage | hearthstone | Axe Flinger | Whenever this minion takes damage, deal 2 damage to the enemy hero.
+3565 | direct_damage | hearthstone | Grace of the Greatwolf | Choose One - Deal 4 damage to the enemy hero; or Summon two 3/2 Wolves with Rush.
+3566 | direct_damage | hearthstone | Earthen Drake | At the end of your turn, deal 4 damage to the enemy hero.
+3567 | direct_damage | hearthstone | Firesworn | Deathrattle: Deal 1 damage to the enemy hero for each Firesworn that died this turn.
+3568 | direct_damage | hearthstone | Carress, Cabaret Star (created) | Battlecry: Deal 6 damage to the enemy hero. Restore 6 Health to your hero.
+6429 | direct_damage | hearthstone | Wretched Tiller | Whenever this minion attacks, deal 2 damage to the enemy hero.
+6430 | direct_damage | hearthstone | Kul Tiran Footman | Spell Damage +2 Deathrattle: Deal 3 damage to the enemy hero.
+6431 | direct_damage | hearthstone | Xal'atath | After you cast a spell, deal 2 damage to the enemy hero and lose 1 Durability.
+6432 | direct_damage | hearthstone | Present Gnomeregan | Give a minion +2/+1 and "Deathrattle: Deal 2 damage to the enemy hero." Advance to the future!
+6433 | direct_damage | hearthstone | Mind Sear | Deal 2 damage to a minion. If it dies, deal 3 damage to the enemy hero.
+6434 | direct_damage | hearthstone | Lifedrinker | Battlecry: Deal 3 damage to the enemy hero. Restore 3 Health to your hero.
+6435 | direct_damage | hearthstone | Movement of Desire | Lifesteal Deal 6 damage to the enemy hero.
+6436 | direct_damage | hearthstone | Hectic Tour | Get 2 random cards that can potentially deal damage to the enemy hero.
+1903 | discard | hearthstone | Deathwing the Destroyer | Battlecry: Destroy all other minions. Discard a card for each destroyed.
+1904 | discard | hearthstone | Destructive Phoenix | Battlecry: Choose a card in your hand to set on fire. In 3 turns, discard it and summon a copy of this.
+1905 | discard | hearthstone | Grimtotem Buzzkill | Battlecry: Discard a weapon to draw 3 cards.
+1906 | discard | hearthstone | Gemstone Hoarder | Battlecry: Choose a card in your hand to discard. Deathrattle: Get it back. It costs (1) less.
+1907 | discard | hearthstone | Zuramat's Prison | Choose a card to discard to summon a 5/5 Taunt. Deathrattle: Free Zuramat who plays one each turn!
+1908 | discard | hearthstone | Platysaur | Battlecry: Draw a card. Deathrattle: Discard it.
+1909 | discard | hearthstone | Smoldering Ascent | Deal $ damage to all enemy minions. (Upgrades each turn, but discards after !)Deal $ damage to all enemy minions. (Discards this turn!)
+1910 | discard | hearthstone | Ancient Augur | Battlecry: Look at 3 cards in your opponent's hand and secretly choose one. Deathrattle: Discard it.
+1911 | discard | hearthstone | Savage Ymirjar | Rush Battlecry: Discard 2 cards.
+1912 | discard | hearthstone | Overheat | Give your minions +1/+1. Discard a random Nature spell to give them +1/+1 more.
+519 | draw | hearthstone | Hullbreaker | Battlecry and Deathrattle: Draw a spell. Your hero takes damage equal to its Cost.
+520 | draw | hearthstone | Maintain Order | Give your weapon "After your hero attacks, draw a card."
+521 | draw | hearthstone | Morchok | Battlecry: Draw a card and reduce its Cost by (10). Repeat this with excess Cost reduction.
+522 | draw | hearthstone | Costumed Singer | At the end of your turn, draw a Secret.
+523 | draw | hearthstone | Service Bell | Discover a Class card from your deck and draw all copies of it.
+524 | draw | hearthstone | Eat the Mushroom | Draw a card.
+525 | draw | hearthstone | Treasure Guard | Taunt Deathrattle: Draw a card.
+526 | draw | hearthstone | Battle Rage | Draw a card for each damaged friendly character.
+831 | draw | hearthstone | Shield Block | Gain 5 Armor. Draw a card.

@@ -1,0 +1,67 @@
+# definitions
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+ranged | Ranged attack / long reach | The unit attacks from a distance, from the back row or over other units. | Not: Damage from a spell is damage.
+stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+stat_loss | Stat loss (-power, -health) | A unit's power, attack, health or other stat goes down, or is set or swapped to a lower value. | Not: Not being able to attack is attack_lock or cant_attack.
+# questions: qid | concept | game | name | text
+546 | passive | darkest_dungeon | Brawler's Gloves | +25% damage while in rank ; +25% damage while in rank ; -0.03 crit; -2 speed
+547 | passive | darkest_dungeon | The Black Swordsmans Guantlet | +0.07 accuracy while in rank ; -15% stress dmg received percent while light below 26; -4 speed; -10% bleed resistance
+548 | passive | darkest_dungeon | The Bloodied Shroud | +13% damage while HP below 0.25; +13% damage while HP below 0.25; +0.08 dodge while HP below 0.25; -13% hp heal received percent
+549 | passive | darkest_dungeon | Golf Gun | +13% damage with ranged skills; +13% damage with ranged skills; +0.06 accuracy with ranged skills; -4 speed while camping
+550 | passive | darkest_dungeon | The Exiles Tears | -8% stress dmg received percent while HP below 0.25; +12% resolve xp bonus percent while HP below 0.25; +0.05 protection while HP below 0.25; -10% damage while HP below 0.25; -10% damage while HP below 0.25
+551 | passive | darkest_dungeon | Bears Breath | +10% max HP; +0.04 crit; +10% stun resistance; -8% resolve check percent while in rank ; -16% resolve xp bonus percent at Death's Door; -0.05 accuracy with ranged skills
+552 | passive | darkest_dungeon | Photomania | -20% stress dmg received percent while light above 75
+553 | passive | darkest_dungeon | Talins Tale | +0.06 protection while in rank ; +8% max HP; +6% resolve check percent; -10% damage while in rank ; -10% damage while in rank ; -0.05 accuracy with ranged skills
+4932 | passive | darkest_dungeon | Worrystone | +10% resolve check percent; -10% stress dmg received percent; -2 speed
+4933 | passive | darkest_dungeon | Moonleafs Torture | +15% move resistance while in rank ; +15% damage with melee skills; +15% damage with melee skills; -10% bleed resistance; +10% stress dmg received percent while in rank 
+4934 | passive | darkest_dungeon | Feather Crystal | +2 speed; +0.08 dodge; -20% stun resistance; -20% move resistance
+4935 | passive | darkest_dungeon | Barristan's Head | +0.125 protection; +20% stress dmg received percent
+4936 | passive | darkest_dungeon | Dodgy Sheath | +0.08 dodge; +2 speed; -0.06 accuracy with ranged skills. Class: highwayman
+4937 | passive | darkest_dungeon | The Face Of Frost | +10% bleed resistance at Death's Door; +0.06 dodge at Death's Door; +13% hp heal received percent at Death's Door; -4 speed; +10% stress dmg received percent
+4938 | passive | darkest_dungeon | Dagnabits Crown | +0.06 accuracy with melee skills; -13% stress dmg received percent while in rank ; +13% hp heal received percent; -0.05 accuracy while in rank ; +10% stress dmg received percent with ranged skills; -8% resolve check percent at Death's Door
+4939 | passive | darkest_dungeon | Lewd Vial | +0.06 accuracy while camping; +5 speed while camping; -13% stress dmg received percent while camping; -0.06 protection while camping; -10% disease resistance while camping; -10% trap resistance while camping
+4940 | passive | darkest_dungeon | Nervous | +10% stress dmg received percent
+4941 | passive | darkest_dungeon | Silken Sheath | +10% damage while in rank ; +10% damage while in rank ; +0.04 crit while in rank ; +0.06 protection while HP above 0.75; -4 speed vs beast enemies; -0.06 dodge in the first round
+693 | random_effect | darkest_dungeon | Pile Of Bones | Possible outcomes: Nothing 25.00%; Loot 25.00%; Quirk 25.00% (bloodthirsty); Disease 25.00% (random); use holy_water: Loot (A)
+694 | random_effect | darkest_dungeon | Shallow Grave | Possible outcomes: Effect 50.00% (Blight 1); Disease 50.00% (random); use shovel: Loot (GH)
+695 | random_effect | darkest_dungeon | Brackish Tidepool | Possible outcomes: Effect 75.00% (brackish_tidepool); Disease 25.00% (random); use antivenom: Effect (HealSelf 3)
+2015* | random_effect | darkest_dungeon | Brigand Cutthroat | Skills: Slice and Dice: Melee skill. Usable from ranks 1, 2, 3. Targets all of enemy ranks 1, 2. Deals damage 3-5. Effects: Cutthroat Slice Debuff 1. | Uppercut Slice: Melee skill. Usable from ranks 1, 2. Targets enemy ranks 1, 2, 3. Deals damage 2-4. Effects: push back 1 ranks. | Shank: Melee skill. Usable from ranks 1, 2, 3. Targets enemy ranks 1, 2, 3, 4. Deals damage 4-8. Effects: bleed 1 per round for 3 rounds. | Harmless Poke: Melee skill. Usable from ranks 4. Targets enemy ranks 1, 2, 3, 4. Moves self (back/forward) 0 1. Deals damage 2-4. Effects: +2 speed (self).
+2016* | random_effect | darkest_dungeon | Brigand Raider | Skills: Slice and Dice: Melee skill. Usable from ranks 1, 2, 3. Targets all of enemy ranks 1, 2. Deals damage 6-11. Effects: Cutthroat Slice Debuff 6. | Uppercut Slice: Melee skill. Usable from ranks 1, 2. Targets enemy ranks 1, 2, 3. Deals damage 4-9. Effects: push back 1 ranks. | Shank: Melee skill. Usable from ranks 1, 2, 3. Targets enemy ranks 1, 2, 3, 4. Deals damage 8-16. Effects: bleed 3 per round for 3 rounds; mark target for 3 rounds. | Harmless Poke: Melee skill. Usable from ranks 4. Targets enemy ranks 1, 2, 3, 4. Moves self (back/forward) 0 1. Deals damage 4-9. Effects: +2 speed (self).
+2491 | ranged | darkest_dungeon | Point Blank Shot | Ranged skill. Usable from ranks 1. Targets enemy ranks 1. Moves self (back/forward) 1 0. Deals damage (modifier 50%). Effects: push back 1 ranks.
+2492 | ranged | darkest_dungeon | Talins Tale | +0.06 protection while in rank ; +8% max HP; +6% resolve check percent; -10% damage while in rank ; -10% damage while in rank ; -0.05 accuracy with ranged skills
+2493 | ranged | darkest_dungeon | Sniper's Mark | Ranged skill. Usable from ranks 4, 3. Targets enemy ranks 2, 3, 4. Deals damage (modifier -100%). Effects: mark target for 3 rounds; -30% dodge.
+2494 | ranged | darkest_dungeon | Plague Grenade | Ranged skill. Usable from ranks 4, 3. Targets all of enemy ranks 3, 4. Deals damage (modifier -90%). Effects: blight 6 per round for 3 rounds.
+2495 | ranged | darkest_dungeon | Thrown Dagger | Ranged skill. Usable from ranks 4, 3, 2. Targets enemy ranks 2, 3, 4. Deals damage. Effects: +10% accuracy (self); only if target is tagged, +25% damage (self).
+2496 | ranged | darkest_dungeon | Aurora Pendant | +0.06 accuracy with ranged skills; +10% resolve check percent while light above 75; -8% resolve check percent while light below 26
+2497 | ranged | darkest_dungeon | Gunslinger's Buckle | +20% damage with ranged skills; +20% damage with ranged skills; +0.15 accuracy with ranged skills; -20% damage with melee skills; -20% damage with melee skills; -0.02 crit with melee skills. Class: highwayman
+2498 | ranged | darkest_dungeon | Dodgy Sheath | +0.08 dodge; +2 speed; -0.06 accuracy with ranged skills. Class: highwayman
+2499 | ranged | darkest_dungeon | Bone Courtier | Skills: Tempting Goblet: Ranged skill. Usable from ranks 4, 3, 2. Targets enemy ranks 1, 2, 3, 4. Deals damage 2-4. Effects: stress +15. | Knife in the Dark: Melee skill. Usable from ranks 2, 1. Targets enemy ranks 1, 2. Deals damage 2-4.
+2500 | ranged | darkest_dungeon | Bolster | Ranged skill. Usable from ranks 1, 2, 3, 4. Targets all of ally ranks 1, 2, 3, 4. Deals damage. Effects: +9% dodge, +5 speed.
+3866 | stat_gain | darkest_dungeon | Heaven's Hairpin | -25% stress dmg received percent while light above 75; +0.1 accuracy while light above 75. Class: hellion
+3867 | stat_gain | darkest_dungeon | Svallin | +0.09 protection while light above 75; +15% max HP while light above 75; -0.06 dodge vs beast enemies; -4 speed vs beast enemies
+3868 | stat_gain | darkest_dungeon | On Guard | +4 speed in the first round; +0.05 dodge in the first round
+3869 | stat_gain | darkest_dungeon | Bowmens End | +8% damage; +8% damage; +0.05 accuracy with ranged skills; +0.04 crit vs man enemies; -13% hp heal percent while HP above 0.75; -4 speed while HP below 0.25
+3870 | stat_gain | darkest_dungeon | Des Chanceux | +0.04 accuracy while light above 75; +0.03 crit while light above 75; +3 speed while light above 75; -16% resolve xp bonus percent while light below 26
+3871 | stat_gain | darkest_dungeon | Blasphemous Vial | +0.15 accuracy with ranged skills; +40% stun chance; +20% poison chance; +15% stress dmg received percent. Class: plague_doctor
+3872 | stat_gain | darkest_dungeon | Fleet Florin | +4 speed. Class: antiquarian
+3873 | stat_gain | darkest_dungeon | Lucky Talisman | +0.12 dodge; +0.1 accuracy with ranged skills; +10% stress dmg received percent. Class: grave_robber
+3874 | stat_gain | darkest_dungeon | The Silver Mountain | +13% bleed resistance while in rank ; -13% stress dmg received percent while in rank ; +0.05 crit while in rank ; -4% scouting chance while camping; -10% trap resistance while in rank ; -10% trap resistance while in rank 
+3875 | stat_gain | darkest_dungeon | Huichis Bracelet | +0.04 accuracy; +0.03 crit; +0.03 crit; +10% stress dmg received percent while HP below 0.25; +50% food consumption percent while HP below 0.25
+5921 | stat_gain | darkest_dungeon | Shimmering Cloak | +0.08 dodge; -33% hp heal received percent
+5922 | stat_gain | darkest_dungeon | BANDIT'S SENSE | Camping skill. reduce ambush chance 1.0 (self); buff: +10% party surprise chance (self); buff: +10% monsters surprise chance (self). Uses per camp: 1.
+5923 | stat_gain | darkest_dungeon | Ancestor's Coat | +0.15 dodge; +10% stress dmg received percent
+5924 | stat_gain | darkest_dungeon | Pet Rock | +5% damage; +5% damage; -5% stress dmg received percent; +0.02 crit; +50% food consumption percent while HP below 0.25
+5925 | stat_gain | darkest_dungeon | Sniper's Ring | +0.15 accuracy while in rank ; -2 speed
+5926 | stat_gain | darkest_dungeon | Tetsuo | +0.02 crit; +5% damage; +5% damage; +0.02 accuracy; +10% stress dmg received percent while in rank 
+5927 | stat_gain | darkest_dungeon | Eldritch Trophy | +8% damage vs eldritch enemies; +8% damage vs eldritch enemies; +6% resolve check percent while light above 75; +3% death_blow resistance; -8% resolve check percent while light below 26
+5928 | stat_gain | darkest_dungeon | Nicholas Shield Of Honour | +10% damage; +10% damage; +0.05 crit while HP below 0.25; +13% max HP while light below 26; -4 speed; -13% hp heal percent while light above 75; +10% stress dmg received percent vs eldritch enemies
+6346* | stat_gain | darkest_dungeon | The Torch | The light is fading! The current torch level greatly affects many mechanics in the game. The darker it gets, the harder things get but the better the rewards. [RIGHT-CLICK] on a torch from inventory to boost the light back up.
+8520 | stat_loss | darkest_dungeon | Cleansing Eyepatch | +30% poison resistance; +20% disease resistance; -0.02 dodge. Class: man_at_arms
+8521 | stat_loss | darkest_dungeon | The Ague | -10% damage; -10% damage; -3 speed; -10% max HP
+8522 | stat_loss | darkest_dungeon | Bleed Amulet | +30% bleed chance; +20% bleed resistance; -0.04 dodge
+8523 | stat_loss | darkest_dungeon | The Radies | -13% stress dmg received percent at Death's Door; +0.05 accuracy; +0.08 dodge while light below 26; +50% food consumption percent while light above 75; -0.06 protection in the first round; -10% move resistance at Death's Door
+8524 | stat_loss | darkest_dungeon | Defender's Seal | +0.05 protection; -0.01 crit. Class: crusader
+8525 | stat_loss | darkest_dungeon | Grythepinnen | +0.04 crit; +0.08 protection while in rank ; -13% stress dmg received percent with melee skills; -0.05 accuracy while HP below 0.25; -10% poison resistance at Death's Door; -10% move resistance with ranged skills
+8526 | stat_loss | darkest_dungeon | Bears Breath | +10% max HP; +0.04 crit; +10% stun resistance; -8% resolve check percent while in rank ; -16% resolve xp bonus percent at Death's Door; -0.05 accuracy with ranged skills
+8527 | stat_loss | darkest_dungeon | Kalmas Last Chance | +0.08 accuracy while HP below 0.25; +0.09 dodge; -0.06 protection while light below 26; -10% damage while light below 26; -10% damage while light below 26; -0.04 crit while light below 26

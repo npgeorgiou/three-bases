@@ -1,0 +1,68 @@
+# definitions
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+damage_over_time | Damage over time (poison, burn) | Damage repeats over turns: poison, burn, bleed. | Not: One-time damage is damage.
+damage_reduction | Take less damage (armour) | Damage a unit or player takes is reduced by an amount or a share. | Not: Absorbing one whole hit is shield; points that wear off are block_armor.
+death_count | Counts deaths | The effect counts or scales with how many units died. | Not: A single death trigger is death_trigger.
+death_trigger | When it dies (deathrattle) | Effects when a unit dies or is destroyed. | Not: Counting deaths is death_count.
+delayed | Delayed / countdown | The effect happens later: next turn, after N turns, countdowns. | Not: A set turn number is turn_number.
+# questions: qid | concept | game | name | text
+7639 | damage | hearthstone | Cleansing Lightspawn | Lifesteal Battlecry: Deal damage to an enemy minion equal to this minion's Health.
+6602* | damage_over_time | hearthstone | Swinetusk Shank | After you play a Poison, gain +1 Durability.
+6603* | damage_over_time | hearthstone | Apothecary Helbrim | Battlecry and Deathrattle: Add a random Poison to your hand.
+8832 | damage_over_time | hearthstone | Baron Geddon | At the end of your turn, deal 2 damage to ALL other characters.
+8833 | damage_over_time | hearthstone | Gronn Trap | Taunt Can't Attack. At the start of your turn, deal 4 damage to the enemy hero.
+8834 | damage_over_time | hearthstone | Missile Launcher | Magnetic At the end of your turn, deal 1 damage to all other characters.
+8835 | damage_over_time | hearthstone | Arkwing Pilot | At the end of your turn, deal 3 damage to a random enemy. Spellburst: Summon an Arkwing Pilot.
+8836 | damage_over_time | hearthstone | Earthen Drake | At the end of your turn, deal 4 damage to the enemy hero.
+8837 | damage_over_time | hearthstone | Warlock on Fire | At the end of your turn, deal 1 damage to this minion.
+8838 | damage_over_time | hearthstone | Toxitron | At the start of your turn, deal 1 damage to all other minions.
+8839 | damage_over_time | hearthstone | Cannoneer | At the end of your turn, deal 1 damage to a random enemy.
+8840 | damage_over_time | hearthstone | Hideous Amalgamation | At the end of your turn, deal 1 damage to all enemies for each Corrupted Blood you control.
+8841 | damage_over_time | hearthstone | Desert Obelisk | If you control 3 of these at the end of your turn, deal 5 damage to a random enemy.
+4912 | damage_reduction | hearthstone | Cargo Guard | At the end of your turn, gain 3 Armor.
+4913 | damage_reduction | hearthstone | The True King | Gain 100 Armor.
+4914 | damage_reduction | hearthstone | Armorsmith | Whenever a friendly minion takes damage, gain 1 Armor.
+4915 | damage_reduction | hearthstone | Siege Engine | Whenever you gain Armor, give this minion +1 Attack.
+4916 | damage_reduction | hearthstone | Feral Rage | Choose One - Give your hero +4 Attack this turn; or Gain 8 Armor.
+4917 | damage_reduction | hearthstone | Pride of the Frostwolves | Gain 5 Armor. Equip a random weapon.
+4918 | damage_reduction | hearthstone | Sleep Under the Stars | Choose Thrice - Draw 2 cards; Gain 5 Armor; Refresh 3 Mana Crystals.
+4919 | damage_reduction | hearthstone | Steel Beetle | Battlecry: If you're holding a spell that costs (5) or more, gain 5 Armor.
+4920 | damage_reduction | hearthstone | Warchief Rafaam | Battlecry: Gain 5 Armor. If you're holding another Rafaam, gain 5 more.
+4921 | damage_reduction | hearthstone | Lab Patron | Whenever you gain Armor, summon another Lab Patron (once per turn).
+5327 | death_count | hearthstone | Fel Lord Betrug | Whenever you draw a minion, summon a copy with Rush that dies at end of turn.
+5328 | death_count | hearthstone | Jaws | Whenever a minion with Deathrattle dies, gain +2 Attack.
+5329 | death_count | hearthstone | Flesheating Ghoul | Whenever a minion dies, gain +1 Attack.
+5330 | death_count | hearthstone | Junkbot | Whenever a friendly Mech dies, gain +2/+2.
+5331 | death_count | hearthstone | Jumbo Imp | Costs (1) less whenever a friendly Demon dies while this is in your hand.
+5332 | death_count | hearthstone | Razorgore's Claws | Whenever a Corrupted Egg dies, gain +1 Attack.
+5333 | death_count | hearthstone | Fel Guardians | Summon three 1/2 Demons with Taunt. Costs (1) less whenever a friendly minion dies.
+5334 | death_count | hearthstone | Bolvar Fordragon | Whenever a friendly minion dies while this is in your hand, gain +1 Attack.
+5335 | death_count | hearthstone | Blood Herald | Whenever a friendly minion dies while this is in your hand, gain +1/+1.
+5336 | death_count | hearthstone | Corridor Creeper | Costs (1) less whenever a minion dies while this is in your hand.
+2322 | death_trigger | hearthstone | Baron Rivendare | Your minions trigger their Deathrattles twice.
+2323 | death_trigger | hearthstone | Containment Unit | Magnetic Deathrattle: Summon a random 8-Cost minion.
+2324 | death_trigger | hearthstone | High Seas Revenge | Gives Grace Deathrattle: Draw a card for each enemy minion on the board.
+2325 | death_trigger | hearthstone | Spirit of the Wilds (created) | Immune to Nature spells. At the start of your turn, give a random friendly minion +1/+1. Deathrattle: Restore 2 Health to all friendly characters.
+2326 | death_trigger | hearthstone | Stuffed Sack | Deathrattle: Return your stolen minion!
+2327 | death_trigger | hearthstone | Majordomo Executus | Deathrattle: Replace your hero with Ragnaros the Firelord.
+2328 | death_trigger | hearthstone | Archdruid of Thorns | Battlecry: Gain the Deathrattles of your minions that died this turn.
+2329 | death_trigger | hearthstone | Ulfar | Battlecry: Give your other minions "Deathrattle: Summon a minion with this minion's Cost."
+2330 | death_trigger | hearthstone | Timeway Warden | Battlecry: Imprison an enemy minion. It goes Dormant for 10,000 turns. Deathrattle: Awaken it.
+2331 | death_trigger | hearthstone | Haratha | Taunt Deathrattle: Deal 2 damage to all enemy minions.
+5287* | death_trigger | hearthstone | Spikeridged Steed | Give a minion +2/+6 and Taunt. When it dies, summon a Stegodon.
+5288* | death_trigger | hearthstone | Camouflage Mount | Give a minion +3/+3 and a random Bonus Effect. When it dies, summon a Chameleon.
+5289* | death_trigger | hearthstone | Avenge | Secret: When one of your minions dies, give a random friendly minion +3/+2.
+5290* | death_trigger | hearthstone | Dreaded Mount | Give a minion +1/+1. When it dies, summon an endless Dreadsteed.
+5291* | death_trigger | hearthstone | [CORE 2024] Cheat Death | Secret: When a friendly minion dies, return it to your hand. It costs (2) less.
+5292* | death_trigger | hearthstone | Volcanomancy | Choose a minion. When it dies, deal 3 damage to all other minions.
+5293* | death_trigger | hearthstone | Silk Stitching | Choose a friendly minion. Discover a spell that costs (4) or less for it to cast when it dies.
+5294* | death_trigger | hearthstone | Hand of Salvation | Secret: When your second minion dies in a turn, return it to life.
+5295* | death_trigger | hearthstone | Ramming Mount | Give a minion +2/+2 and Immune while attacking. When it dies, summon a Ram.
+5296* | death_trigger | hearthstone | Duplicate | Secret: When a friendly minion dies, put 2 copies of it into your hand.
+2427 | delayed | hearthstone | Lazul's Scheme | Reduce the Attack of an enemy minion by until your next turn. (Upgrades each turn!)
+2428 | delayed | hearthstone | Titanographer Osk (created) | Battlecry: Enemy cards cost (1) more next turn.
+2429 | delayed | hearthstone | Harsh Sentence | Enemy minions cost (2) more next turn. Put two 3/3 Imp-formants into the enemy deck.
+2430 | delayed | hearthstone | Emberscarred Whelp | Battlecry: Discover a 5-Cost card. Gain 1 Mana Crystal next turn only.
+2431 | delayed | hearthstone | Cult Neophyte | Battlecry: Your opponent's spells cost (1) more next turn.
+2432 | delayed | hearthstone | Back to Back | Kurtrus and Cariel are both Immune until your next turn.
+2433 | delayed | hearthstone | Trail Mix | Gain 2 Mana Crystals next turn only.

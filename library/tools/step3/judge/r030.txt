@@ -1,0 +1,96 @@
+# definitions
+generate_cards | Create new cards | New cards that were not in the deck are put into hand or deck. | Not: Units made on the board are summon.
+hand_disruption | Attack the opponent's hand | Cards in the opponent's hand are discarded, taken, weakened, made dearer or looked at. | Not: Discarding my own cards is discard.
+heal | Restore health (heal) | Lost health of a unit, hero or player is restored. | Not: Preventing damage before it happens is protection.
+in_hand_buff | Improve cards in hand or deck | Cards still in hand or deck get more power, a lower cost or better text before they are played. | Not: A discount on whatever is played this turn is cost_reduction.
+on_attack | When it attacks | Triggers when the unit attacks or strikes. | Not: When it is attacked is on_damaged or counterattack.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+return_to_hand | Return my unit to hand | The owner returns their own unit to hand, to replay it or save it. | Not: Sending an enemy unit back is bounce_enemy.
+stat_multiply | Double or multiply stats | A stat or a total is doubled, tripled or multiplied. | Not: Adding a fixed amount is stat_gain.
+summon | Summon units / tokens | New units are put onto the owner's side of the board. | Not: Units put on the opponent's side are board_clog; units back from death are revive.
+symmetric_effect | Both players alike | The effect touches both players the same way: each player draws. | Not: Only my side is the effect itself.
+temporary_effect | This turn / round only | It lasts only this turn or round: a bonus, a penalty or a lock. | Not: Lasting changes are the effect itself.
+turn_end | End of turn / round | Effects at the end of a turn or round. | Not: Start of turn is turn_start.
+tutor | Search the deck for a card (tutor) | The owner searches the deck for a card of a stated kind and takes it. | Not: Drawing the top card is draw.
+# questions: qid | concept | game | name | text
+5795 | generate_cards | sts2 | Jack of All Trades | Add 1 random Colorless card into your Hand. Exhaust.
+5796 | generate_cards | sts2 | Crossbow | At the start of your turn, add a random Attack into your Hand. It's free to play this turn.
+5797 | generate_cards | sts2 | Hello World+ | Innate. At the start of your turn, add a random Common card into your Hand.
+1933 | hand_disruption | sts2 | Acrobatics | Draw 3 cards. Discard 1 card.
+1934 | hand_disruption | sts2 | Calculated Gamble | Discard your Hand, then draw that many cards. Exhaust.
+1935 | hand_disruption | sts2 | Dagger Throw | Deal 9 damage. Draw 1 card. Discard 1 card.
+1936 | hand_disruption | sts2 | Hidden Daggers | Discard 2 cards. Add 2 Shivs into your Hand.
+1937 | hand_disruption | sts2 | Prepared | Draw 1 card. Discard 1 card.
+1938 | hand_disruption | sts2 | Storm of Steel | Discard your Hand. Add 1 Shiv into your Hand for each card discarded.
+1939 | hand_disruption | sts2 | Runic Pyramid | At the end of your turn, you no longer discard your Hand.
+1940 | hand_disruption | sts2 | Tingsha | Whenever you discard a card during your turn, deal 3 damage to a random enemy for each card discarded.
+1941 | hand_disruption | sts2 | Gambler's Brew | Discard any number of cards, then draw that many.
+1942 | hand_disruption | sts2 | Tools of the Trade | At the start of your turn, draw 1 card and discard 1 card.
+3491 | heal | sts2 | Blood Vial | At the start of each combat, heal 2 HP.
+3492 | heal | sts2 | Spiraling Whirlpool | Choices: Drink: Heal 33% of Max HP. | Observe: Enchant a Basic Strike or Defend with Spiral. | Reach In: Obtain a random Relic. Add Writhe to your Deck.
+3493 | heal | sts2 | Black Blood | At the end of combat, heal 12 HP.
+3494 | heal | sts2 | Eternal Feather | For every 5 cards in your Deck, heal 3 HP whenever you enter a Rest Site.
+3495 | heal | sts2 | Spirit Grafter | Choices: Let It In: Heal 25 HP. Add Metamorphosis to your Deck. | Rejection: Lose 10 HP. Upgrade a card.
+3496 | heal | sts2 | Book of Five Rings | Every 5 cards you add to your Deck, heal 20 HP.
+3497 | heal | sts2 | Planisphere | Whenever you enter a ? room, heal 5 HP.
+3498 | heal | sts2 | Pantograph | At the start of each Boss combat, heal 25 HP.
+3499 | heal | sts2 | Sapphire Seed | Choices: Consume: Heal 9 HP. Upgrade a card in your Deck. | Plant and Nourish: Enchant a card with Sown.
+3500 | heal | sts2 | Spur | Summon 3. Osty heals 5 HP. Retain.
+8936* | in_hand_buff | sts2 | Clash | Can only be played if every card in your Hand is an Attack. Deal 14 damage.
+2915 | on_attack | sts2 | Bone Flute | Whenever Osty attacks, gain 2 Block.
+564* | passive | sts2 | Belt Buckle | While you have no potions, you have 2 additional Dexterity.
+565* | passive | sts2 | Constrict | While the Slithering Strangler is alive, at the end of your turn, take 1 damage.
+566* | passive | sts2 | Frail | While Frail, gain 25% less Block from cards.
+567* | passive | sts2 | Hex | While Spectral Knight is alive, ALL your cards are Ethereal.
+8071 | passive | sts2 | Darkness | Channel 1 Dark. Trigger the passive ability of all Dark Orbs.
+8072 | passive | sts2 | Gold-Plated Cables | Your rightmost Orb triggers its passive an additional time.
+8073 | passive | sts2 | Loop | At the start of your turn, trigger the passive ability of your next Orb.
+8074 | passive | sts2 | Loop+ | At the start of your turn, trigger the passive ability of your rightmost Orb 2 times.
+71* | random_effect | sts2 | Curl Up | When damaged, rolls up and gains block. (Once per combat)
+72* | random_effect | sts2 | Slumbering Beetle | Actions: Snore (sleep); Roll Out (attack, buff, 16 damage, power)
+7199 | return_to_hand | sts2 | Feral | The first time you play a 0 energy Attack each turn, return it to your Hand.
+8587 | stat_multiply | sts2 | Hang | Deal 10 damage. Double the damage ALL Hang cards deal to this enemy.
+8588 | stat_multiply | sts2 | Knockdown | Deal 10 damage. The enemy takes double damage from other players this turn.
+8589 | stat_multiply | sts2 | Tracking | Weak enemies take double damage from Attacks.
+8590 | stat_multiply | sts2 | Vitruvian Minion | Cards containing “Minion” deal double damage and gain double Block.
+8591 | stat_multiply | sts2 | Conqueror | Sovereign Blade deals double damage to the enemy this turn.
+8592 | stat_multiply | sts2 | Shadow Step | Next turn, Attacks deal double damage.
+8593 | stat_multiply | sts2 | Gremlin Merc | Actions: Double Smash (6 damage); Hehe (8 damage); Gimme (multi_attack, 7 damage); Double Smash (multi_attack, debuff, 6 damage, power); Hehe (attack, buff, 8 damage, power)
+996* | summon | sts2 | Devour Life | Whenever you play a Soul, Summon 1.
+997* | summon | sts2 | Spur | Summon 3. Osty heals 5 HP. Retain.
+998* | summon | sts2 | Bone Brew | Summon 15.
+999* | summon | sts2 | Bodyguard | Summon 5.
+1000* | summon | sts2 | Invoke | Next turn, Summon 2 and gain 2 energy.
+1001* | summon | sts2 | Phylactery Unbound | At the start of each combat, Summon 5. At the start of your turn, Summon 2.
+1002* | summon | sts2 | Pull Aggro | Summon 4. Gain 7 Block.
+1003* | summon | sts2 | Sic 'Em | Osty deals 5 damage. Whenever Osty hits this enemy this turn, Summon 3.
+1004* | summon | sts2 | Dirge | Summon 3 X times. Add X Souls into your Draw Pile. Exhaust.
+1005* | summon | sts2 | Legion of Bone | ALL players Summon 6. Exhaust.
+6707* | summon | sts2 | Swarming Elites | Elites spawn more often.
+3607 | symmetric_effect | sts2 | Legion of Bone | ALL players Summon 6. Exhaust.
+3608 | symmetric_effect | sts2 | Rally | ALL players gain 12 Block.
+3609 | symmetric_effect | sts2 | Plot | Next turn, ALL players draw 2 cards.
+3380 | temporary_effect | sts2 | FTL | Deal 5 damage. If you have played fewer than 3 cards this turn, draw 1 card.
+3381 | temporary_effect | sts2 | Knockdown+ | Deal 14 damage. The enemy takes triple damage from other players this turn.
+3382 | temporary_effect | sts2 | Evil Eye | Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn.
+3383 | temporary_effect | sts2 | Normality | You cannot play more than 3 cards this turn. Unplayable.
+3384 | temporary_effect | sts2 | Focused Strike | Deal 9 damage. Gain 1 Focus this turn.
+3385 | temporary_effect | sts2 | Anticipate | Gain 2 Dexterity this turn.
+3386 | temporary_effect | sts2 | No Energy Gain | You cannot gain additional energy this turn.
+3387 | temporary_effect | sts2 | Monologue | Whenever you play a card this turn, gain 1 Strength this turn.
+3388 | temporary_effect | sts2 | Shadowmeld | Double your Block gain this turn.
+3389 | temporary_effect | sts2 | Lunar Blast | Deal 4 damage for each Skill already played this turn.
+2751 | turn_end | sts2 | Decay | At the end of your turn, if this is in your Hand, take 2 damage. Unplayable.
+2752 | turn_end | sts2 | Speed Potion | Gain 5 Dexterity. At the end of your turn, lose 5 Dexterity.
+2753 | turn_end | sts2 | Ritual | Gain Strength at the end of your turn.
+2754 | turn_end | sts2 | Consuming Shadow | Channel 2 Dark. At the end of your turn, Evoke your leftmost Orb.
+2755 | turn_end | sts2 | I Am Invincible | Gain 10 Block. At the end of your turn, if this is on top of your Draw Pile, play it.
+2756 | turn_end | sts2 | Debt | At the end of your turn, if this is in your Hand, lose 10 Gold. Unplayable.
+2757 | turn_end | sts2 | Lunar Pastry | At the end of your turn, gain star.
+2758 | turn_end | sts2 | Bookmark | At the end of each turn, lower the cost of a random Retained card by 1 until played.
+2759 | turn_end | sts2 | Consuming Shadow | At the end of your turn, Evoke your leftmost Orb.
+2760 | turn_end | sts2 | Toxic | At the end of your turn, if this is in your Hand, take 5 damage. Exhaust.
+4552 | tutor | sts2 | Anointed | Put every Rare card from your Draw Pile into your Hand. Exhaust.
+4553 | tutor | sts2 | Catastrophe | Play 2 random cards from your Draw Pile.
+4554 | tutor | sts2 | Secret Technique | Put a Skill from your Draw Pile into your Hand. Exhaust.

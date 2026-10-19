@@ -1,0 +1,106 @@
+# definitions
+activated | Activated ability (pay to use) | The player chooses when to use an ability: activate, tap, pay to use. | Not: Abilities that fire on their own are triggers.
+aoe_damage | Damage to many at once | Damage hits several units, a row, a lane or an area at once. | Not: One unit's attack hitting several is multi_target_attack.
+cost_reduction | Cards cost less | The owner's cards cost less by an amount. | Not: A play that costs nothing at all is free_play; a cost set to a number is cost_set.
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+heal | Restore health (heal) | Lost health of a unit, hero or player is restored. | Not: Preventing damage before it happens is protection.
+in_hand_buff | Improve cards in hand or deck | Cards still in hand or deck get more power, a lower cost or better text before they are played. | Not: A discount on whatever is played this turn is cost_reduction.
+information | Hidden and revealed information | Hidden and revealed information: face-down cards, looking at the opponent's hand. | Not: Hidden units are stealth.
+modal_choice | Choose one of several effects | The card offers several effects and the owner picks one or more. | Not: Switching a unit between lasting forms is stances.
+movement | Move my units (reposition) | The owner moves their own unit to another space, row, lane or location. | Not: Moving enemy units is forced_movement.
+on_play | When played (battlecry, on reveal) | Triggers when the card is played or revealed: battlecry, on reveal, enters. | Not: When another card is played is on_ally_play.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+ping | Small repeatable damage | A small amount of damage (1 or 2) that can be dealt again and again. | Not: One big hit is damage.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+resource_gain | Gain resources (ramp) | The owner gains extra mana, energy, supply or another resource, now or for good. | Not: Cards costing less is cost_reduction.
+return_to_hand | Return my unit to hand | The owner returns their own unit to hand, to replay it or save it. | Not: Sending an enemy unit back is bounce_enemy.
+shield | Absorb one hit (shield, ward) | The next hit or damage instance is fully absorbed or cancelled. | Not: Damage lowered by an amount is damage_reduction.
+spell_speed | Speed / reaction timing | Spells and actions have speeds: instant, fast, slow, responses. | Not: Reacting to the opponent is reactions.
+stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+symmetric_effect | Both players alike | The effect touches both players the same way: each player draws. | Not: Only my side is the effect itself.
+temporary_effect | This turn / round only | It lasts only this turn or round: a bonus, a penalty or a lock. | Not: Lasting changes are the effect itself.
+transform | Transform my card into another | The owner's own card or unit turns into a different one: evolve, flip, become. | Not: Turning an enemy into something weaker is polymorph.
+tribal | Tribe / type matters | The effect cares about a tribe, type, team or family of cards. | Not: Counting as another type is type_grant.
+tutor | Search the deck for a card (tutor) | The owner searches the deck for a card of a stated kind and takes it. | Not: Drawing the top card is draw.
+upgrade | Upgrade / level up a card | A card is upgraded, levelled up or enhanced into a better version of itself. | Not: A plain stat rise on the board is stat_gain.
+# questions: qid | concept | game | name | text
+3518* | heal | runeterra | Astral Protection | Heal an ally 4 and grant it +0|+4.
+8943* | in_hand_buff | runeterra | Starlit Seer | Keywords: Imbue. When you play a spell, grant the top ally in your deck +1|+1.
+8944* | in_hand_buff | runeterra | Voices of the Old Ones | Get 2 empty mana gems.
+8945* | in_hand_buff | runeterra | Revna, the Lorekeeper | When I'm summoned, grant units in your deck my stats, then draw a unit with 5+ Power.
+8946* | in_hand_buff | runeterra | Glacial Saurian | Keywords: Overwhelm. When I'm summoned, grant the top 3 units in your deck +1|+1. If an ally has a different subtype than me, draw 1 of those units.
+2866* | information | runeterra | The Tidedancer | When I'm summoned, draw a Nilah.
+4126* | modal_choice | runeterra | Improvise | Choose one of two random options from a depleting pool of equipment and equip it to this ally. If the ally wasn't played from hand, it equips a random equipment instead.
+1372* | movement | runeterra | Draven's Biggest Fan | When I'm summoned, move Draven to the top of your deck if you don't have him in hand or in play.
+1373* | movement | runeterra | Bone Skewer | An ally strikes an enemy, then moves to the top of your deck.
+1374* | movement | runeterra | Sharesies | Give an ally with an attachment the stats and keywords of its attachment this round and move the attachment to another ally.
+3722* | passive | runeterra | Curse | Applies a negative effect as long as it's in hand. Multiples of the same curse on a unit combine, increasing their cost and effect. Cannot be targeted in hand.
+3989* | ping | runeterra | Ziggs | Attack: I deal 1 damage to my blocker and the enemy Nexus. Level up: You've destroyed 4+ allied landmarks.
+3990* | ping | runeterra | Flashbomb Trap | Keywords: Trap. Deal 1 damage to a random ally.
+6964* | polymorph | runeterra | Ripper's Bay | Keywords: Lurk, Landmark. When allies attack, before activating Lurk, grant the top ally in your deck Lurk and it becomes a Lurker.
+7327* | resource_gain | runeterra | Ottrani Dragon-Worshiper | When I'm summoned, heal your Nexus 2 and gain an extra mana gem next round.
+7200* | return_to_hand | runeterra | Equipment | Equip to a unit to grant the listed bonuses. If the unit leaves play, the equipment will return to your hand. You may play each equipment at most once per round.
+7201* | return_to_hand | runeterra | Equip | Equipping an Item to a unit grants it the listed bonuses. If the unit leaves play, the Item will return to your hand. You may play each item at most once per round.
+5434* | shield | runeterra | Yordle Squire | Play: Create a Tiny Spear or a Tiny Shield in hand.
+5435* | shield | runeterra | Sentinel's Hoard | Keywords: Fleeting, Focus. Play a The Absolver's Resurrection, a Fount of Power, or a Shield of the Sentinels.
+6309* | spell_speed | runeterra | Three Sisters | Create a Fleeting Flash Freeze, Fury of the North, or Entomb in hand.
+2685* | stat_gain | runeterra | Charging Sigil I | +1 damage
+2686* | stat_gain | runeterra | Charging Sigil III | +4 damage
+2687* | stat_gain | runeterra | Charging Sigil II | +2 damage
+6359* | stat_gain | runeterra | The Light of Demacia | Keywords: Landmark. I: Grant an ally Spirit.
+6360* | stat_gain | runeterra | Incandescence | Boost all units.
+6361* | stat_gain | runeterra | Rising Light | Boost all units 3 times.
+6362* | stat_gain | runeterra | Smoldering Smirk | Boost 2 allies, then they Strike an enemy one after another.
+6363* | stat_gain | runeterra | Tree Sprites | Keywords: Spirit. Play: Boost all other units.
+6364* | stat_gain | runeterra | The Family Reunion | Keywords: Landmark. I: Grant a unit Gloom.
+6365* | stat_gain | runeterra | Hearts Incandescent | Keywords: Skill, Focus. Boost all allies.
+6366* | stat_gain | runeterra | Lux's Incandescence | Keywords: Fast. Boost all units.  Create a Lux: Illuminated in your deck.
+6367* | stat_gain | runeterra | Bandle Bright | Keywords: Skill. Boost all other units.
+6368* | stat_gain | runeterra | Ms. Vex | Keywords: Skill, Slow. Boost 2 units.
+3610* | symmetric_effect | runeterra | Veteran Investigator | When I'm summoned, ALL players draw 1.
+3611* | symmetric_effect | runeterra | Targon's Peak | Keywords: Landmark. Round Start: Reduce the cost of a random card in ALL players' hands to 0 this round.
+3612* | symmetric_effect | runeterra | Aloof Travelers | When I’m summoned, ALL players draw 1, then your opponent discards their highest cost card.
+3613* | symmetric_effect | runeterra | Charlatan Fishmonger | Round Start: ALL players draw 1, then grant your opponent's card Fleeting.
+8121* | symmetric_effect | runeterra | Ember Maiden | Round Start: Deal 1 to EVERYTHING.
+8122* | symmetric_effect | runeterra | Ice Shard | Deal 1 to EVERYTHING.
+8123* | symmetric_effect | runeterra | Spirits Unleashed | Grant allies everywhere +1|+1. Then deal 1 to EVERYTHING.
+8124* | symmetric_effect | runeterra | Fracture | Deal 1 to EVERYTHING or destroy a unit's equipment.
+8125* | symmetric_effect | runeterra | Udyr's Spirits Unleashed | Keywords: Slow. Grant allies everywhere +1|+1. Then deal 1 to EVERYTHING. Create an Udyr in your deck.
+8126* | symmetric_effect | runeterra | Ram Stance | Keywords: Slow. Pick an ally. Deal 1 to EVERYTHING else.
+8127* | symmetric_effect | runeterra | Fracture (created) | Keywords: Slow. Deal 1 to EVERYTHING.
+3395* | temporary_effect | runeterra | Survival Skills | Allies can't drop below 1 health this round.
+3396* | temporary_effect | runeterra | Eager Dedicant | Keywords: Brash, Missing Translation. I have +1|+0 for each card you've drawn this round.
+3397* | temporary_effect | runeterra | Annie's Disintegrate | Keywords: Fast. Pick a unit. The next time it takes 1 or more damage this round, kill it. Create an Annie in your deck.
+3398* | temporary_effect | runeterra | Thresh's The Box | Keywords: Fast. Deal 3 to each enemy that was summoned this round. Create a Thresh in your deck.
+3399* | temporary_effect | runeterra | Fresh Offerings | If 3+ allies have died this round, summon Vilemaw.
+3400* | temporary_effect | runeterra | Lamb's Respite | Give the weakest ally "I can't take damage or die" this round.
+3401* | temporary_effect | runeterra | The Box | Deal 3 to each enemy that was summoned this round.
+3402* | temporary_effect | runeterra | Divine Judgment | Give an ally "I can't take damage or die" this round. 
+3403* | temporary_effect | runeterra | Reveler's Feast | Deal 2 to an ally to give allies +2|+0 this round.
+3404* | temporary_effect | runeterra | Crystal Carrier | Round Start: Get an extra mana gem this round.
+6930* | transform | runeterra | Ripper's Bay | Keywords: Lurk, Landmark. When allies attack, before activating Lurk, grant the top ally in your deck Lurk and it becomes a Lurker.
+6455* | tribal | runeterra | Shyvana | Keywords: Fury. Attack: Give me +1|+1 this round. Level up: Dragon allies have dealt 16+ damage.
+6456* | tribal | runeterra | Spider Queen Elise (level 2) | Keywords: Fearsome, Challenger, Missing Translation. Other Spider allies have Challenger and Fearsome.
+4572* | tutor | runeterra | Warmother's Call | Summon the top ally from your deck now and EACH Round Start.
+4573* | tutor | runeterra | Zap Sprayfin | Keywords: Elusive, Attune. When I'm summoned, draw a spell that costs 3 or less from your deck.
+4574* | tutor | runeterra | Vaults of Helia | Keywords: Landmark. Round Start: If you can, kill your most expensive ally to summon an ally from your deck that costs 1 more.
+4575* | tutor | runeterra | Gluttony | Kill an ally with Last Breath to summon a follower from your deck that costs 1 more.
+4576* | tutor | runeterra | The Kingfisher | When I'm summoned, draw 1 of each champion from your deck.
+4577* | tutor | runeterra | Thresh (level 2) | Keywords: Challenger. The first time I attack this game, summon another attacking champion from your deck or hand.
+5162* | upgrade | runeterra | Viktor | Keywords: Augment. When I'm summoned or Round Start: Create a Hex Core Upgrade in hand. Level up: You've played 7+ created cards.
+5163* | upgrade | runeterra | Viktor (level 2) | Keywords: Augment, Missing Translation. Your created cards cost 1 less. When I'm summoned or Round Start: Create a Hex Core Upgrade in hand.
+427* | activated | shadowverse | Castelle's Ultimate | Put a Purgation's Blessing into your hand. Give your leader the following effect: At the start of your every other turn, put a Purgation's Blessing into your hand. (This effect lasts for the rest of the match.)<<${me.inplay.class.load_turn_skill_id=9301440901}>0&{me.main_place.class.is_buff_detail=true.count}>0? (Turn given: )?>>
+2167* | activated | shadowverse | Postapocalyptic Girls | During your turn, when this card is added to your hand from your deck, if X is at least 1, subtract X from its cost and reveal it. X equals the number of times Resonance has been activated for you this match. ---------- Accelerate (1): Put 2 Analyzing Artifacts and a Postapocalyptic Girls into your deck. At the end of this turn, draw a card. ---------- Fanfare: Restore 5 defense to your leader. Give your leader the following effect - The next time your leader takes damage, reduce that damage to 0.
+2643* | activated | shadowverse | Loxis, Homestead Pioneer | Ward. During your turn, whenever an allied amulet comes into play, recover 1 play point. During your turn, whenever an allied amulet leaves play, randomly summon a Dutiful Steed, Bullet Bike, or Arcane Personnel Carrier. Each of these amulets can be summoned only once per turn with this effect. (Transformation doesn't count as leaving play.) Evolved: (Same as the unevolved form.)
+7184* | activated | shadowverse | Yuwan, Dimensional Avenger | Fanfare: Banish a card in your hand and put a copy of it into your deck. Draw a card. At the start of your opponent's turn, if Resonance has been activated for you at least 5 times this match, deal 4 damage to a random enemy follower. Then, if it has been activated at least 10 times, deal 4 damage to the enemy leader. Evolved: Evolve: Summon an Analyzing Artifact. At the start of your opponent's turn, if Resonance has been activated for you at least 5 times this match, deal 4 damage to a random enemy follower. Then, if it has been activated at least 10 times, deal 4 damage to the enemy leader.
+7185* | activated | shadowverse | Rulenye, Omen of Silence | Fanfare: Necromancy (3) - Until the start of your next turn, add 3 to the original cost of spells in your opponent's hand. (Only affects cards in hand at the time this effect is activated.)
+7186* | activated | shadowverse | Automachina Maiden | Invocation: At the end of your turn, if Resonance has been activated for you at least 10 times this match, invoke this card. ---------- Ward. Fanfare and Last Words: Draw a card. Evolved: (Same as the unevolved form, excluding Fanfare.)
+7187* | activated | shadowverse | Magna Zero | Fanfare: Deal 3 damage to all enemies. If Resonance has been activated for you at least 10 times this match, deal 10 damage instead. If it has been activated for you at least 20 times, deal 20 damage instead.
+7188* | activated | shadowverse | Infernal Gaze | Until the start of your next turn, add 10 to the original cost of spells in your opponent's hand. (Only affects cards in hand at the time this effect is activated.) Draw a card.
+8152* | aoe_damage | shadowverse | Foul Tempest | Deal 1 damage to each enemy follower. Necromancy (6): Deal 3 damage instead.
+6046* | cost_reduction | shadowverse | Diabolic Drain | If Vengeance is active for you, this card costs 4 less. ---------- Deal 4 damage to an enemy follower. Restore 2 defense to your leader.
+6047* | cost_reduction | shadowverse | Revelation | If Vengeance is active for you, this card costs 4 less. ---------- Deal 8 damage to all followers.
+6048* | cost_reduction | shadowverse | Lord Atomy | If 4 allied cards are in play, this follower costs 8 less play points. ---------- Fanfare: If 4 other allied cards are in play, destroy all other allied cards.
+4256* | damage | shadowverse | Avowed Strike | Deal X damage to an enemy follower. X equals the number of other Dragoncraft cards in your hand. Enhance (7): Draw 2 cards and deal damage 2 times the number of other Dragoncraft cards in your hand instead.
+4257* | damage | shadowverse | Burst Shot | Deal 1 damage to a random enemy follower. Do this 4 times. Enhance (10): Deal damage to the enemy leader instead. Deal damage 1 more time for every 2 allied Fairies that have been destroyed this match.
+8807* | on_play | shadowverse | Whitefrost Blizzard | Deal damage to enemy followers in the order they came into play: Deal 4 damage to the first, 3 damage to the second, 2 damage to the third, and 1 damage to the fourth. If Overflow is active for you, draw a card.

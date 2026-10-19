@@ -1,0 +1,72 @@
+# definitions
+activated | Activated ability (pay to use) | The player chooses when to use an ability: activate, tap, pay to use. | Not: Abilities that fire on their own are triggers.
+resource_gain | Gain resources (ramp) | The owner gains extra mana, energy, supply or another resource, now or for good. | Not: Cards costing less is cost_reduction.
+sacrifice | Sacrifice my own units | The owner destroys or gives up their own unit, as a cost or for value. | Not: An enemy being made to sacrifice is destroy.
+scope_global | Whole board / all players | The effect touches the whole board or all players. | Not: Several but not all is scope_multi.
+stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+summon | Summon units / tokens | New units are put onto the owner's side of the board. | Not: Units put on the opponent's side are board_clog; units back from death are revive.
+taunt | Taunt (enemies must attack it) | Enemies must attack or target this unit before other units. | Not: Shielding one chosen ally is bodyguard.
+terrain | Terrain / board features | Terrain and features on the board. | Not: A lane's rule is lane_rule.
+turn_end | End of turn / round | Effects at the end of a turn or round. | Not: Start of turn is turn_start.
+tutor | Search the deck for a card (tutor) | The owner searches the deck for a card of a stated kind and takes it. | Not: Drawing the top card is draw.
+# questions: qid | concept | game | name | text
+7281 | resource_gain | faeria | Rakoan Reveller | Last Words - Gain 1 faeria equal to this creature's attack.
+7282 | resource_gain | faeria | Ruunin's Shrine | Gift - Gain 2 faeria. / Last Words - Your opponent gains 2 faeria.
+7283 | resource_gain | faeria | Oradrim Sagittarius | Ranged Attack / Whenever a friendly creature attacks a god, gain 1 faeria.
+7284 | resource_gain | faeria | Khalim's Prayer | Gain 2 faeria and draw a card. Play only if you attacked a god this turn. You may pray only once each turn.
+7285 | resource_gain | faeria | Lord of the Wastes | Gift - You may sacrifice another creature to gain 3 faeria.
+7286 | resource_gain | faeria | Tax Collector | Combat - Gain 1 faeria.
+1557 | sacrifice | faeria | Lord of the Wastes | Gift - You may sacrifice another creature to gain 3 faeria.
+1558 | sacrifice | faeria | Death Walker | Deathtouch / You must sacrifice another creature to summon this creature.
+3899 | scope_global | faeria | Tale of the Old Turtle | Draw 3 cards. All creatures drawn this way cost 2 faeria less.
+0 | stat_gain | faeria | Savannah Explorer | Has +1/+1 while you control desert desert and +0/+2 while you control forest forest
+1 | stat_gain | faeria | Emerald Salamander | Gift - Deal 2 damage to adjacent enemy creatures. Give adjacent friendly creatures +2/+2.
+2 | stat_gain | faeria | Wandering Monk | Whenever you draw a card, this gains +1/+0.
+3 | stat_gain | faeria | Shamanic Dance | Give a creature +0/+4 and Taunt.
+4 | stat_gain | faeria | Caldera Explorer | Has +1/+1 while you control lake lake and +2/+0 while you control mountain mountain
+5 | stat_gain | faeria | Eredon's Drum | Give all your creatures +2/+2, wherever they are.
+6 | stat_gain | faeria | Khalim's Training | Give a creature +1/+0, Flying and Charge 2.
+7 | stat_gain | faeria | Windborne Emissary | Flying / Has +2/+0 while you control another flying creature.
+8 | stat_gain | faeria | Flamestoker | Whenever you select +1 faeria from the power wheel, this gains +1/+1.
+9 | stat_gain | faeria | Seedling | Production - If this has less than 5 Life, it gains +1/+1.
+3284 | stat_gain | faeria | Mystic Beast | Gift - Gains +2/+0 and Jump if summoned adjacent to an enemy well.
+3285 | stat_gain | faeria | Daring Adventurer | Gift - Gains +2/+2 for each adjacent enemy creature.
+3286 | stat_gain | faeria | Flowersilk Faerie | Flying / The first time you draw an event, this gains +1/+4, Taunt and Charge 2.
+3287 | stat_gain | faeria | Gaea's Grace | A creature gains +0/+3. Gain 3 Life.
+3288 | stat_gain | faeria | Demonic Salmon | Haste, Flying, Charge 2 / Can't harvest faeria. / Whenever this attacks a god, it gains +1/+1.
+3289 | stat_gain | faeria | Rakoan Champion | Dash 2 / Gift - Gains +1/+1 for each other friendly Rakoan in play.
+3290 | stat_gain | faeria | Exalted Ogre | Gift - If your opponent has 10 Life or less, this gains +2/+2.
+3291 | stat_gain | faeria | Gabrian Archon | Charge 2 / Gains +2/+2 if you've played two cards with a base cost of 7 faeria or higher this game.
+3292 | stat_gain | faeria | Lore Thief | Choose one: Gains +2/+2 / Draw 2 cards.. / - Gains +2/+2. / - Draw 2 cards.
+973 | summon | faeria | Twinsoul Spirit | Flying / Can be summoned adjacent to friendly creatures. / Gift - Summon another Twinsoul Spirit.
+974 | summon | faeria | Doom Scythe | Destroy a creature. Summon a 6/1 Slaughtering Shadow in its place.
+975 | summon | faeria | Manta Rider | Flying / Last Words - Summon a 2/2 Manta with Flying and Charge 2 where this died.
+976 | summon | faeria | Swarming Carassius | Flying / Can be summoned adjacent to friendly creatures. / Gift - Summon a Swarming Carassius for each friendly one that died this game.
+977 | summon | faeria | Laya, Lady of Sorrows | Deathtouch / Last Words - Summon a Shimmering Statue in Laya's place.
+978 | summon | faeria | Rain of Fish | Summon 6 Ruby Fish in random spaces. Each fish that hits a land deals 1 damage to adjacent enemies.
+979 | summon | faeria | Monstrous Hydra | Corrupt - Summon a 2/1 Hydra Head with Haste in each adjacent land. They die at end of turn.
+980 | summon | faeria | Fragmenter | Combat - Summon a 4/2 Mecha in a random adjacent space.
+981 | summon | faeria | Key of the Guardians | Summon two 5/5 Guardians with Taunt and Divine.
+3089 | taunt | faeria | Tiki Chieftain | Gift - Give a creature Taunt.
+3090 | taunt | faeria | Ogre Battler | Taunt
+3091 | taunt | faeria | Skyward Swordfish | Flying, Taunt, Dash 1
+3092 | taunt | faeria | Court Jester | Taunt / Gift - Give a random creature in your hand +2/+2.
+3093 | taunt | faeria | Key of the Guardians | Summon two 5/5 Guardians with Taunt and Divine.
+3094 | taunt | faeria | Icerock Behemoth | Taunt, Protection
+3095 | taunt | faeria | Flowersilk Faerie | Flying / The first time you draw an event, this gains +1/+4, Taunt and Charge 2.
+3096 | taunt | faeria | Shimmering Statue | Taunt / Production - Gain 1 Life.
+1793 | terrain | faeria | Time of Legends | Draw the top legend in your deck. If there are no legends to answer the call, add 1 random legend to your hand. It becomes wild land.
+1794 | terrain | faeria | Barter | Discover an event from your opponent's deck. It becomes wild land and costs 2 faeria less.
+1795 | terrain | faeria | Cannon Carrier | Gift - Launch a 4/2 Mecha in a straight line onto any land.
+1796 | terrain | faeria | Seed of Paradise | Flying, Dash 1 / Gift - Choose one: When this creature harvests over the ocean, it dies and creates {green.|When this creature harvests over the ocean, it dies and creates lake |When this creature harvests over the ocean, it dies and creates mountain |When this creature harvests over the ocean, it dies and creates desert } / When this creature harvests over the ocean, it dies and creates a land of the chosen color.
+1797 | terrain | faeria | Thyrian Expedition | Discover a card with 5 or higher total land cost. It becomes wild land and costs 1 faeria less.
+1798 | terrain | faeria | Monstrous Hydra | Corrupt - Summon a 2/1 Hydra Head with Haste in each adjacent land. They die at end of turn.
+1799 | terrain | faeria | Rain of Fish | Summon 6 Ruby Fish in random spaces. Each fish that hits a land deals 1 damage to adjacent enemies.
+1800 | terrain | faeria | Wheel of Chaos | Choose one: Destroy 2 unoccupied lands. / Destroy a creature with 5 Attack or less. / Gain 7 Life.. / - Destroy 2 unoccupied lands. / - Destroy a creature with 5 Attack or less. / - Gain 7 Life.
+1801 | terrain | faeria | Grappling Hook | Give a creature Ranged Attack this turn. After it attacks, you may move it to a land adjacent to the target.
+1802 | terrain | faeria | Sorocco, First Mate | Jump / Deal 3 damage to all adjacent enemies where this lands.
+2733 | turn_end | faeria | Animated Banquet | Dash 1 / At the end of your turn, a random adjacent friendly creature swallows this and gains +1/+1.
+2734 | turn_end | faeria | Tiki Adventurer | Dash 1 / At the end of your turn, give +1/+1 to all adjacent friendly creatures if this is on an enemy land.
+2735 | turn_end | faeria | Junkfeet, the Scrapheap | At the end of your turn, give all other friendly Mecha +1/+1 and this takes 1 damage.
+4547 | tutor | faeria | Shadowsilk Faerie | Flying, Charge 2, Protection / Corrupt - Draw 2 events from your deck.
+2598* | activated | gwent | Casimir Bassi | Veil. Profit 3. Deploy: Spend all your Coins, then boost self by the number of Coins spent. Once per turn, when you reach 0 Coins, Spawn Explosives on this row.

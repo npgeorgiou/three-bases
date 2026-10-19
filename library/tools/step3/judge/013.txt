@@ -1,0 +1,67 @@
+# definitions
+aoe_damage | Damage to many at once | Damage hits several units, a row, a lane or an area at once. | Not: One unit's attack hitting several is multi_target_attack.
+condition_count | Counts / thresholds | The effect needs or scales with a number: for each, N or more. | Not: Counts of past events this game are count_payoff.
+copy | Copy cards or units | A copy of a card, unit or effect is made for the owner. | Not: Doing a trigger again is repeat_trigger; a copy given to the opponent is enemy_benefit.
+cost_reduction | Cards cost less | The owner's cards cost less by an amount. | Not: A play that costs nothing at all is free_play; a cost set to a number is cost_set.
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+# questions: qid | concept | game | name | text
+6835 | aoe_damage | duelyst | Thunderbomb | Deal 3 damage to an enemy and 1 damage to all enemies around it.
+8148* | aoe_damage | duelyst | Night Fiend | Opening Gambit: Deal 2 damage to each enemy on or near friendly Shadow Creep.
+1085 | condition_count | duelyst | Ancestral Divination | Draw a card for each friendly minion.
+1086 | condition_count | duelyst | Deepfire Devourer | Frenzy / Opening Gambit: Destroy friendly minions around it and gain +2/+2 for each minion.
+1087 | condition_count | duelyst | The High Hand | Opening Gambit: Gains +1/+1 for each card in your opponent's action bar.
+1088 | condition_count | duelyst | Fortified Assault | Turn an enemy minion's space into Hallowed Ground. Deal it 1 damage for each friendly Hallowed Ground.
+1089 | condition_count | duelyst | Blood Rage | Give a friendly minion +1/+1 for each time damage was dealt this turn.
+1090 | condition_count | duelyst | Fealty | Draw a card for each friendly minion nearby your General.
+1091 | condition_count | duelyst | Upper Hand | Deal 1 damage to an enemy minion for each card in your opponent's action bar.
+1092 | condition_count | duelyst | Project Ω | This minion gains +2/+2 for each other Mech minion you summoned this game.
+2195 | copy | duelyst | Mirage Master | Opening Gambit: This minion transforms into a copy of an enemy minion.
+2196 | copy | duelyst | Twilight Sorcerer | Opening Gambit: Put a copy of a random spell you cast this game into your action bar.
+2197 | copy | duelyst | Mind-Cage Oni | Sentinel: Spell cast. / Whenever your opponent casts a spell, put a copy of that spell into your action bar.
+2198 | copy | duelyst | Bound Tormentor | Sentinel: Minion summoned. / Put a copy of the minion that transformed this into your action bar. It costs 2 less.
+2199 | copy | duelyst | Zyx | Opening Gambit: Summon a copy of this minion on a random nearby space.
+2200 | copy | duelyst | Echo Deliverant | Whenever you summon another Mech, summon a copy of it nearby.
+2201 | copy | duelyst | Essence Sculpt | Choose a Stunned minion. Put a copy of that card into your action bar.
+2202 | copy | duelyst | Bloodbound Mentor | Blood Surge: Put a copy of your Bloodbound Spell into your action bar.
+7846* | copy | duelyst | Fractal Replication | Summon two copies of a friendly minion nearby that minion.
+7847* | copy | duelyst | Ash Mephyt | Opening Gambit: Summon two copies of this minion on random spaces.
+7848* | copy | duelyst | Superior Mirage | Summon three copies of an enemy minion nearby it. They disappear when attacked.
+6013 | cost_reduction | duelyst | Kujata | Your minions cost 1 less to summon and take 1 damage when summoned from your action bar.
+6014 | cost_reduction | duelyst | Monolithic Vision | Transform your action bar into six random Vetruvian cards that cost 4 less.
+6015 | cost_reduction | duelyst | Darkfire Sacrifice | Destroy a friendly minion. Your next minion costs 2 less.
+6016 | cost_reduction | duelyst | Golem Metallurgist | The first Golem you summon each turn costs 1 less.
+6017 | cost_reduction | duelyst | Mana Vortex | The next spell you cast this turn costs 1 less.
+6018 | cost_reduction | duelyst | Manaforger | The first non-Bloodbound spell you cast each turn costs 1 less.
+6019 | cost_reduction | duelyst | Twilight Reiki | Put 3 random Songhai minions into your action bar. They cost 1 less.
+6020 | cost_reduction | duelyst | Chakkram | This minion costs 2 less if your General took damage on opponent's last turn.
+6021 | cost_reduction | duelyst | Lost Artificer | The first artifact you equip each turn costs 1 less.
+6022 | cost_reduction | duelyst | Grincher | Opening Gambit: Add a random artifact to your action bar. It costs 3 less.
+136 | damage | duelyst | Sunriser | Whenever anything is healed, deal 2 damage to all nearby enemies.
+137 | damage | duelyst | Blinding Snowstorm | Deal 1 damage to all enemies. Those enemies can only move 1 space next turn.
+138 | damage | duelyst | Infest | Choose an enemy minion. When it dies, give this effect to all nearby enemy minions and deal 2 damage to the enemy General.
+139 | damage | duelyst | Thunderbomb | Deal 3 damage to an enemy and 1 damage to all enemies around it.
+140 | damage | duelyst | Cobra Strike | Deal 3 damage to an enemy minion AND the enemy General.
+141 | damage | duelyst | Shadowdancer | Deathwatch: Deal 1 damage to the enemy General, and restore 1 Health to your General.
+142 | damage | duelyst | Meltdown | Blood Surge: Deal 6 damage to a random enemy.
+143 | damage | duelyst | Eclipse | Whenever this minion takes damage, it deals that much damage to the enemy General.
+144 | damage | duelyst | Flameblood Warlock | Opening Gambit: Deal 3 damage to BOTH Generals.
+145 | damage | duelyst | Deathblighter | Opening Gambit: Deal 3 damage to all enemy minions around it.
+250 | damage | duelyst | True Strike | Deal 2 damage to a minion.
+251 | damage | duelyst | Blistering Skorn | Opening Gambit: Deal 1 damage to everything (including itself).
+252 | damage | duelyst | Phoenix Fire | Deal 3 damage to anything.
+253 | damage | duelyst | Malice | Destroy a friendly minion to summon a 4/4 Husk nearby. Deal 2 damage to your General.
+254 | damage | duelyst | Purgatos, The Realmkeeper | Whenever this minion deals damage, either deal 3 damage to the enemy General OR restore 3 Health to your General.
+355 | damage | duelyst | Night Fiend | Opening Gambit: Deal 2 damage to each enemy on or near friendly Shadow Creep.
+356 | damage | duelyst | Void Pulse | Deal 2 damage to enemy General. Restore 3 Health to your General.
+357 | damage | duelyst | Glacial Fissure | Deal 8 damage to EVERYTHING in the center column.
+358 | damage | duelyst | Frostbone Naga | Opening Gambit: Deal 2 damage to everything around it.
+359 | damage | duelyst | Maehv Skinsolder | Bloodbound Spell: Destroy a friendly minion to summon a 4/4 Husk nearby. Deal 2 damage to your General.
+1591* | damage | duelyst | Frenzy | When attacking in melee range, simultaneously strike all other nearby enemies.
+1592* | damage | duelyst | Sun Sister Sterope | Whenever anything is healed, put a True Strike into your action bar.
+4198* | damage | duelyst | Arclyte Regalia | Your General gains +2 Attack. The first time your General takes damage each turn, prevent 2 of it.
+7419 | damage | duelyst | Horn of the Forsaken | Whenever your General deals damage, summon a 1/1 Wraithling nearby your General.
+7420 | damage | duelyst | Morin-Khur | Your General gains +3 Attack. Whenever your General deals damage, hatch all friendly Eggs.
+7421 | damage | duelyst | Lionheart Blessing | Give a friendly minion, "Zeal: Whenever this minion deals damage, draw a card."
+7422 | damage | duelyst | Sworn Avenger | Ranged / Whenever your General takes damage, this minion gains +1 Attack.
+7423 | damage | duelyst | Storm Kage | Whenever one of your spells deals damage, put a Kage Lightning in your action bar.
+7424 | damage | duelyst | Sojourner | Whenever this minion deals damage, draw a card.

@@ -1,0 +1,71 @@
+# definitions
+exhaust | One use (exhausted for the battle) | A card is removed for the rest of the battle after use, or other cards of mine are. | Not: Removing a card from the game for good is banish.
+generate_cards | Create new cards | New cards that were not in the deck are put into hand or deck. | Not: Units made on the board are summon.
+hand_disruption | Attack the opponent's hand | Cards in the opponent's hand are discarded, taken, weakened, made dearer or looked at. | Not: Discarding my own cards is discard.
+heal | Restore health (heal) | Lost health of a unit, hero or player is restored. | Not: Preventing damage before it happens is protection.
+in_hand_buff | Improve cards in hand or deck | Cards still in hand or deck get more power, a lower cost or better text before they are played. | Not: A discount on whatever is played this turn is cost_reduction.
+modal_choice | Choose one of several effects | The card offers several effects and the owner picks one or more. | Not: Switching a unit between lasting forms is stances.
+on_ally_play | When I play another card | Triggers when the owner plays or summons another card or unit. | Not: When this card is played is on_play.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+# questions: qid | concept | game | name | text
+7506 | exhaust | sts1 | Chill+ | Innate. Channel 1 Frost for each enemy in combat. Exhaust.
+7507 | exhaust | sts1 | Burning Pact | Exhaust 1 card. Draw 2 cards.
+7508 | exhaust | sts1 | Infernal Blade | Add a random Attack into your hand. It costs 0 this turn. Exhaust.
+7509 | exhaust | sts1 | Dark Shackles | Enemy loses 9 Strength this turn. Exhaust.
+7510 | exhaust | sts1 | Strange Spoon | Cards which Exhaust when played will instead discard 50% of the time.
+7511 | exhaust | sts1 | True Grit | Gain 7 Block. Exhaust 1 card at random.
+7512 | exhaust | sts1 | Charon's Ashes | Whenever you Exhaust a card, deal 3 damage to ALL enemies.
+7513 | exhaust | sts1 | Seeing Red | Gain energy energy. Exhaust.
+7514 | exhaust | sts1 | Feel No Pain | Whenever a card is Exhausted, gain 3 Block.
+5779 | generate_cards | sts1 | Dual Wield | Choose an Attack or Power card. Add a copy of that card into your hand.
+5780 | generate_cards | sts1 | Discovery+ | Choose 1 of 3 random cards to add into your hand. It costs 0 this turn.
+5781 | generate_cards | sts1 | Deceive Reality | Gain 4 Block. Add a Safety into your hand.
+5782 | generate_cards | sts1 | Power Through | Add 2 Wounds into your hand. Gain 15 Block.
+5783 | generate_cards | sts1 | Distraction | Add a random Skill into your hand. It costs 0 this turn. Exhaust.
+5784 | generate_cards | sts1 | Magnetism | At the start of your turn, add X%s random Colorless card into your hand.At the start of your turn, add X%s random Colorless cards into your hand.
+5785 | generate_cards | sts1 | Battle Hymn | At the start of your turn, add X Smites into your hand.
+5786 | generate_cards | sts1 | Nightmare | Choose a card. Next turn, add 3 copies of that card into your hand. Exhaust.
+5787 | generate_cards | sts1 | Holy Water | Replaces Pure Water. At the start of each combat, add 3 Miracles into your hand.
+5788 | generate_cards | sts1 | Infernal Blade | Add a random Attack into your hand. It costs 0 this turn. Exhaust.
+1923 | hand_disruption | sts1 | Acrobatics | Draw 3 cards. Discard 1 card.
+1924 | hand_disruption | sts1 | All-Out Attack | Deal 10 damage to ALL enemies. Discard 1 card at random.
+1925 | hand_disruption | sts1 | Concentrate | Discard 3 cards. Gain energy energy.
+1926 | hand_disruption | sts1 | Prepared | Draw 1 card. Discard 1 card.
+1927 | hand_disruption | sts1 | Survivor | Gain 8 Block. Discard 1 card.
+1928 | hand_disruption | sts1 | Tools of the Trade | At the start of your turn, draw 1 card and discard 1 card.
+1929 | hand_disruption | sts1 | Unload | Deal 14 damage. Discard all non-Attack cards in your hand.
+1930 | hand_disruption | sts1 | Gambling Chip | At the start of each combat, discard any number of cards, then draw that many cards.
+1931 | hand_disruption | sts1 | Strange Spoon | Cards which Exhaust when played will instead discard 50% of the time.
+1932 | hand_disruption | sts1 | Calculated Gamble+ | Discard your hand, then draw that many cards.
+3468 | heal | sts1 | Bandage Up | Heal 4 HP. Exhaust.
+3469 | heal | sts1 | Bite | Deal 7 damage. Heal 2 HP.
+3470 | heal | sts1 | Self Repair | At the end of combat, heal 7 HP.
+3471 | heal | sts1 | Bird-Faced Urn | Whenever you play a Power card, heal 2 HP.
+3472 | heal | sts1 | Bloody Idol | Whenever you gain Gold, heal 5 HP.
+3473 | heal | sts1 | Blood Vial | At the start of each combat, heal 2 HP.
+3474 | heal | sts1 | Burning Blood | At the end of combat, heal 6 HP.
+3475 | heal | sts1 | Meal Ticket | Whenever you enter a shop, heal 15 HP.
+3476 | heal | sts1 | Regal Pillow | Whenever you Rest, heal an additional 15 HP.
+3477 | heal | sts1 | Toy Ornithopter | Whenever you use a potion, heal 5 HP.
+8935* | in_hand_buff | sts1 | Clash | Can only be played if every card in your hand is an Attack. Deal 14 damage.
+4099* | modal_choice | sts1 | Wish | Choose one: Gain 6 Plated Armor, 3 Strength, or 25 Gold. Exhaust.
+5495 | on_ally_play | sts1 | Rage | Whenever you play an Attack this turn, gain 3 Block.
+5496 | on_ally_play | sts1 | Skill Burn | For X turn, whenever you play a Skill, Exhaust it.
+5497 | on_ally_play | sts1 | Corruption | Skills cost 0. Whenever you play a Skill, Exhaust it.
+5498 | on_ally_play | sts1 | Medical Kit | Unplayable Status cards can now be played. Whenever you play a Status card, Exhaust it.
+5499 | on_ally_play | sts1 | Heatsinks | Whenever you play a Power card, draw 1 card.
+5500 | on_ally_play | sts1 | Heatsink | Whenever you play a Power card, draw X card.
+5501 | on_ally_play | sts1 | Curiosity | Whenever you play a Power card, gains X Strength.
+5502 | on_ally_play | sts1 | Time Warp | Whenever you play X cards, ends your turn and gains X
+5503 | on_ally_play | sts1 | Choked | Whenever you play a card this turn, loses X HP.
+5504 | on_ally_play | sts1 | Rage | Whenever you play an Attack this turn, gain X Block.
+543 | passive | sts1 | Red Skull | While your HP is at or below 50%, you have 3 additional Strength.
+8067 | passive | sts1 | Loop | At the start of your turn, trigger the passive ability of your next Orb.At the start of your turn, trigger the passive ability of your next Orb X
+60* | random_effect | sts1 | Curl Up | On receiving attack damage, rolls up and gains X Block. (Once per combat)
+683 | random_effect | sts1 | Lesson Learned | Deal 10 damage. If Fatal, Upgrade a random card in your deck. Exhaust.
+684 | random_effect | sts1 | Discovery | Choose 1 of 3 random cards to add into your hand. It costs 0 this turn. Exhaust.
+685 | random_effect | sts1 | Violence | Put 3 random Attacks from your draw pile into your hand. Exhaust.
+686 | random_effect | sts1 | Infernal Blade | Add a random Attack into your hand. It costs 0 this turn. Exhaust.
+687 | random_effect | sts1 | True Grit | Gain 7 Block. Exhaust 1 card at random.
+688 | random_effect | sts1 | Entropic Brew | Fill all your empty potion slots with random potions.

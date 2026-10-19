@@ -1,0 +1,71 @@
+# definitions
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+damage_over_time | Damage over time (poison, burn) | Damage repeats over turns: poison, burn, bleed. | Not: One-time damage is damage.
+damage_reduction | Take less damage (armour) | Damage a unit or player takes is reduced by an amount or a share. | Not: Absorbing one whole hit is shield; points that wear off are block_armor.
+death_count | Counts deaths | The effect counts or scales with how many units died. | Not: A single death trigger is death_trigger.
+deck_position | Top or bottom of the deck matters | The top or bottom card of a deck matters: looked at, revealed or changed. | Not: Searching the whole deck is tutor.
+destroy | Destroy outright | A unit is destroyed or killed regardless of its health. | Not: Killing by damage is damage; destroying my own unit for value is sacrifice.
+discard | Discard my own cards | The owner discards cards from their own hand, as a cost or to fuel effects. | Not: Making the opponent discard is hand_disruption.
+draw | Draw cards | Cards are drawn from the owner's deck into hand. | Not: Searching the deck for a chosen kind of card is tutor; making a new card is generate_cards.
+forced_movement | Move enemy units (push, pull) | Enemy units are moved against their will: push, pull, knockback, sent to another lane. | Not: Moving my own units is movement.
+# questions: qid | concept | game | name | text
+7433 | damage | gwent | Heymaey Protector | Whenever an adjacent unit takes damage, boost self by 1.
+7434 | damage | gwent | Dagur Two Blades | Melee: Whenever an enemy unit takes damage, boost self by 1.
+7435 | damage | gwent | Kelpie | Deploy: Spawn Rain on an enemy row for 0 turns. This value is increased by 1 for every 3 Beasts in your starting deck. Whenever an enemy unit takes damage from Rain or Storm, boost a random unboosted allied Beast by 1.
+6562 | damage_over_time | gwent | Treant Mantis: Stalk | Ambush: When your opponent plays a unit on their side of the battlefield, Poison it and transform self into Treant Mantis: Strike. Spring: Transform into Treant Mantis: Strike.
+6563 | damage_over_time | gwent | Fallen Rayla | Veil. Profit 3. Tribute 3: Remove Poison from an allied unit, then boost self by 5. Whenever your opponent plays a unit, Poison it and remove a Counter. When the Counter reaches 0, the Tribute becomes a Fee. Counter: 2
+6564 | damage_over_time | gwent | Stolen Mutagens | Choose a mutagen: Red - Damage an enemy unit by 4. Blue - Poison an allied unit and gain 5 Coins. Green - Boost an allied unit by 4 and give it Veil. If you control at least 2 Salamandra units, also choose an additional mutagen.
+6565 | damage_over_time | gwent | Fangs of the Empire | Deploy: Poison an enemy unit.
+6566 | damage_over_time | gwent | Wretched Addict | At the end of your turn, if Poisoned, boost self by 2.
+6567 | damage_over_time | gwent | Weeping Willow | Harmony. Order (Melee): Boost self by the number of unique primary categories among units you control. Deploy (Ranged): Poison an enemy unit.
+6568 | damage_over_time | gwent | Basilisk Venom | Order: Poison a unit.
+6569 | damage_over_time | gwent | Roland Bleinheim | Whenever a unit gains Poison, gain 2 Coins.
+6570 | damage_over_time | gwent | Mutant | When Poisoned, Spawn a base copy of self on this row. Counter: 1
+4879 | damage_reduction | gwent | An Craite Armorsmith | Deploy: Boost an allied unit by 1 for every 2 Armor on the highest-Armor unit in your hand.
+4880 | damage_reduction | gwent | Queen Meve | Deploy: Reduce the Timer by 1 for each adjacent unit with an Inspired ability. Timer 3: Boost all allied units by 1 and reset the Timer. Whenever this unit receives a boost, gain 1 Armor.
+4881 | damage_reduction | gwent | Dennis Cranmer | Deploy: Boost adjacent units by an amount equal to their Armor.
+4882 | damage_reduction | gwent | Mantlet | Melee: Whenever you play a unit, give it 1 Armor. Barricade: Give it 2 Armor instead.
+4883 | damage_reduction | gwent | Dwarven Skirmisher | Deploy (Melee): Damage an enemy unit by 3. If it survived, gain 1 Armor. Order (Barricade): Damage an enemy unit by 3.
+4884 | damage_reduction | gwent | Dryad Enchantress | Symbiosis. Deploy (Melee): Give an allied unit 4 Armor. Deploy (Ranged): Give an allied unit Vitality (4).
+4885 | damage_reduction | gwent | Boatbuilders | Deploy: Give an allied unit 2 Armor. If you control a Ship, also gain Zeal. Order: Give an allied unit 1 Armor. Cooldown: 1
+4886 | damage_reduction | gwent | Miner | Order: Boost an allied unit by 2. If it's a Dwarf, also give it 4 Armor.
+4887 | damage_reduction | gwent | Battle Preparation | Boost an allied unit by 4 and give it 2 Armor. If it's a Soldier, boost by 6 and give 2 Armor instead.
+4888 | damage_reduction | gwent | Vlodimir von Everec | Deploy: Swap a unit's power with Armor.
+5307 | death_count | gwent | Ignatius Hale | At the start of the game, or when Spawned, set own power to 1. While in hand, deck, or on the battlefield, whenever an enemy unit with a Bounty is destroyed, Heal self by its base power.
+5308 | death_count | gwent | Boholt | Formation. Order: Spawn a base copy of an allied bronze Soldier on its row. Whenever you Spawn a Soldier, boost self by 2.
+5309 | death_count | gwent | Viraxas: King | Veil. / Formation. / Order: Reset an allied non-Neutral unit's Order ability and give it Zeal. / Whenever you play a Soldier, boost it by 1.
+8916* | deck_position | gwent | Vivaldi Bank | Profit 4. Look at the top card from your deck plus an additional card for each Coin you have. Play the top card for free, or play another card for a Coin cost equal to its distance from the top, then shuffle the remaining cards back into your deck.
+8917* | deck_position | gwent | War Council | Resilience. Deploy: Look at the first 3 cards from the top of your deck and play one of them. Order: Spawn and play Battle Preparation.
+1711 | destroy | gwent | Serpent Trap | Ambush: When your opponent plays a special card, destroy the highest-power enemy unit. Spring: Destroy the lowest-power enemy unit.
+1712 | destroy | gwent | Champion of Svalblod | Order: Destroy an allied unit, then Heal self.
+1713 | destroy | gwent | Imlerith's Wrath | Damage an enemy unit by the power of your highest-power unit. If it was on a row with Frost, destroy it instead.
+1714 | destroy | gwent | Dandelion: Vainglory | Deploy: Destroy an enemy Beast.
+1715 | destroy | gwent | Ele'yas | Deploy: Destroy an allied unit, then Spawn 2 Elven Deadeyes on this row.
+1716 | destroy | gwent | Lonely Champion | Immunity. Zeal. Order: Destroy all Firesworn Tokens on this row, then boost self by their total power. Cooldown: 2
+1717 | destroy | gwent | Vincent van Moorlehem | Deploy: Destroy an enemy unit with a status.
+1718 | destroy | gwent | Geralt: Professional | Deploy: Damage 3 units by 1. If you control another Witcher, also gain Zeal. Order: Damage an enemy unit by 3. If its power is a multiple of 3, destroy it instead.
+1719 | destroy | gwent | Cutthroat | Deploy: Destroy an enemy unit with 2 or less power. Bonded: Destroy an enemy unit with 4 or less power instead.
+1720 | destroy | gwent | Leo Bonhart | Deploy (Melee): Destroy an enemy unit with 9 or more power. Deploy (Ranged): Destroy an enemy Witcher.
+7029 | destroy | gwent | Ignatius Hale | At the start of the game, or when Spawned, set own power to 1. While in hand, deck, or on the battlefield, whenever an enemy unit with a Bounty is destroyed, Heal self by its base power.
+1851 | discard | gwent | Iris' Companions | Deploy: Draw a card of your choice, then Discard a random card. If you have Iris in your hand, choose which card to Discard instead.
+1852 | discard | gwent | Tyr: Master of An Skellig | Doomed. / Deploy: Move a bronze non-Neutral unit from your graveyard to your hand, then Discard a card. / The first time a bronze unit leaves your graveyard each allied turn, boost it by its base power.
+477 | draw | gwent | Chironex | Deploy: Damage an enemy unit by 3. If you control Unicorn, damage it by 6 instead. If you have Unicorn in your hand, also play it, then draw a card.
+478 | draw | gwent | Fercart | Deploy: Play a special card from your hand, then draw a card. Whenever you play a special card, give Spying to a random non-Spying enemy unit.
+479 | draw | gwent | Myrgtabrakke | Lineage. Deploy: Draw a Dragon, then move a card from your hand to the bottom of your deck. Order: Damage an enemy unit by 1. Charges: 0 At the start of the game, set the number of Charges to match your Lineage [0].
+480 | draw | gwent | Pincer Maneuver | Order: Draw a non-Neutral card of your choice, then shuffle a card from your hand back into the deck and Spawn a Volunteer on your Melee row. Charges: 2 This ability adds 15 provisions to your deck's provisions limit.
+481 | draw | gwent | Unicorn | Deploy: Boost an allied unit by 3. If you control Chironex, boost it by 6 instead. If you have Chironex in your hand, also play it, then draw a card.
+482 | draw | gwent | Emhyr var Emreis | Deploy: Play a bronze Soldier or Aristocrat from your hand, then draw a card. Whenever your opponent plays a unit, give it Spying. Order: Seize a 1-power enemy unit with Spying. Devotion: At the end of your turn, refresh this card's Order.
+483 | draw | gwent | Selective Mutation | Draw a card with Adrenaline of your choice, then shuffle a card from your hand back into your deck. Spawn a Witcher Student on each allied row.
+484 | draw | gwent | Iris' Companions | Deploy: Draw a card of your choice, then Discard a random card. If you have Iris in your hand, choose which card to Discard instead.
+485 | draw | gwent | Doadrick Leumaerts | Deploy: If you control an Agent, gain Zeal. Order (Ranged): Draw a card, then move a card from your hand to the bottom of your deck. Cooldown: 1
+486 | draw | gwent | Magne Division | Deploy: Play a Tactic from your hand, then draw a card.
+814 | draw | gwent | Abordage | Damage an enemy unit by 2. Bloodthirst 2: Also play a Pirate from your hand, then draw a card.
+815 | draw | gwent | Eavesdrop | Profit 5. Draw a card, then move a card from your hand to the bottom of your deck.
+816 | draw | gwent | Siege Master | Order: Reduce an allied unit's Cooldown by 1. When you play a Siege Engine, Summon self from your hand to the left of it, then draw a card.
+817 | draw | gwent | Sunset Wanderers | This card starts in the leftmost position of your hand. At the start of your turn, while in hand, move self one position to the right, then boost self by 1. At the end of your turn, if you haven't passed and there are no cards to the right of this card, Summon self from your hand to a random allied row, then draw a card.
+1452 | forced_movement | gwent | Vrihedd Dragoon | Deploy: Move a unit to the other row. If it's an enemy, damage it by 1. If it's allied, boost it by 2.
+1453 | forced_movement | gwent | Stygga Castle | Resilience. Deploy: Spawn and play a Cat Witcher Adept, Cat Witcher, Cat Witcher Mentor, or Cat Witcher Saboteur. Order: Move 3 allied units to the other row.
+1454 | forced_movement | gwent | Frog | Doomed. / At the end of your turn, trigger Vitality for adjacent units. / Order: Move self to the other row.
+1455 | forced_movement | gwent | Kraken | Disloyal. Deploy: Move 3 enemy units to this row, damage them by 2 and Spawn Storm for 3 turns on this row. Deathwish: At the end of this turn, Summon self to the opposite row and boost self by the number of unique allied Beasts.
+1456 | forced_movement | gwent | Magic Compass | Echo. Look at the top 3 cards in your deck. Play one, then move the rest to your graveyard. If there are fewer than 3 cards in your deck, Spawn and play a legendary card from your faction that was not in your starting deck instead.
+1457 | forced_movement | gwent | Myrgtabrakke | Lineage. Deploy: Draw a Dragon, then move a card from your hand to the bottom of your deck. Order: Damage an enemy unit by 1. Charges: 0 At the start of the game, set the number of Charges to match your Lineage [0].

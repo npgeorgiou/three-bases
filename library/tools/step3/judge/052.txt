@@ -1,0 +1,66 @@
+# definitions
+shield | Absorb one hit (shield, ward) | The next hit or damage instance is fully absorbed or cancelled. | Not: Damage lowered by an amount is damage_reduction.
+shop_gold | Shops and gold | Gold is spent in shops to buy cards or items. | Not: A currency spent in battle is coin_economy.
+stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+stat_multiply | Double or multiply stats | A stat or a total is doubled, tripled or multiplied. | Not: Adding a fixed amount is stat_gain.
+# questions: qid | concept | game | name | text
+5415 | shield | hs_battlegrounds | Annoy-o-Troupe | Taunt, Divine Shield Deathrattle: Summon three 1/2 Mechs with Taunt and Divine Shield.
+5416 | shield | hs_battlegrounds | Timewarped Expeditioner | Taunt, Divine Shield. After this gains stats, also give the stats to the two left-most minions in your hand.
+5417 | shield | hs_battlegrounds | Boon of Light | Give a minion Divine Shield.
+5418 | shield | hs_battlegrounds | Buy the Holy Light | Give a friendly minion +X Attack and Divine Shield.
+5419 | shield | hs_battlegrounds | Glowscale | Taunt Spellcraft: Give a minion Divine Shield until next turn.
+5420 | shield | hs_battlegrounds | Sun Screener | Start of Combat: Give you and your opponent's 3 left- most minions Divine Shield.
+5421 | shield | hs_battlegrounds | Shield of the Legion | Divine Shield Can Magnetize to Mechs and Demons.
+5422 | shield | hs_battlegrounds | Metal Dispenser | Divine Shield Avenge (X): Magnetize a random Volumizer to this. Get a copy of it.
+5423 | shield | hs_battlegrounds | Sanctify | Give your minions with Divine Shield +X Attack.X[x]Give your minions with Divine Shield +X/+Y.
+5424 | shield | hs_battlegrounds | Righteous Charge | Start of Combat: Your left-most minion gains Divine Shield and attacks immediately.
+6503 | shop_gold | hs_battlegrounds | Golden Touch | Make a random minion in the Tavern Golden.
+6504 | shop_gold | hs_battlegrounds | New Recruit | The Tavern offers an extra minion with +X/+Y this game.
+6505 | shop_gold | hs_battlegrounds | Oops, All Demons! | Only Demons are in the Tavern.
+6506 | shop_gold | hs_battlegrounds | Magic Prize | Discover a Tavern spell from Tier X.
+6507 | shop_gold | hs_battlegrounds | Corrupted Cupcakes | Choose a friendly Demon. It consumes 3 random minions in the Tavern to gain their stats.
+6508 | shop_gold | hs_battlegrounds | Lurking Lionfish | Activate (X): Choose a card in the Tavern. Replace it with a Fishbait for your left-most Beast to attack.
+6509 | shop_gold | hs_battlegrounds | Consummate Conqueror | Whenever a minion is consumed, give minions in the Tavern +X/+Y this turn.
+6510 | shop_gold | hs_battlegrounds | Felburned Ledger | After your hero takes damage, your Tavern spells give an extra +X/+Y this turn.
+6511 | shop_gold | hs_battlegrounds | Acid Rainfall | After the Tavern is Refreshed Y times, gain the stats of its right-most minion. (X left!)
+6512 | shop_gold | hs_battlegrounds | Peacebloom Candle | The first Y Tavern spells you buy each turn are free. (X left!)
+8695 | shop_gold | hs_battlegrounds | Underhanded Dealer | After you gain Gold, gain +X/+Y.
+8696 | shop_gold | hs_battlegrounds | Timewarped Plunderer | Deathrattle: Increase your maximum Gold by X.
+8697 | shop_gold | hs_battlegrounds | Smart Savings | After you sell a minion, gain 1 Gold next turn.X[x]After you sell a minion, gain 1 Gold next turn. (X Gold saved.)
+8698 | shop_gold | hs_battlegrounds | Warden's Treasure | Gain 1 Gold.
+8699 | shop_gold | hs_battlegrounds | Hidden Treasure Vault | At the start of each turn, gain X Gold. (Improves each turn!)
+8700 | shop_gold | hs_battlegrounds | Strike Oil | Increase your maximum Gold by 1.
+8701 | shop_gold | hs_battlegrounds | Record Smuggler | At the start of your turn, gain 2 Gold. If you control at least three Pirates, gain 2 more.
+8702 | shop_gold | hs_battlegrounds | Jumbo Warehouse | At the start of your next turn, gain 4 Gold and choose a Greater Trinket to buy.
+8703 | shop_gold | hs_battlegrounds | Bazaar Sticker | One Tavern spell each turn costs Health instead of Gold to buy. (X left!)
+8704 | shop_gold | hs_battlegrounds | Wealthy Bounty | Gain 2 Gold.
+20 | stat_gain | hs_battlegrounds | Magmaloc | At the end of your turn, gain +1/+1. Repeat for each minion you played this turn.
+21 | stat_gain | hs_battlegrounds | Wingmen | Start of Combat: Your left- and right-most minions gain +2/+1 and attack immediately.
+22 | stat_gain | hs_battlegrounds | Red Hand | At the start of each turn, give a minion in your hand +12/+12.
+23 | stat_gain | hs_battlegrounds | Harvested Pearl | Give a minion +30/+30 until next turn.
+24 | stat_gain | hs_battlegrounds | Hungering Abomination | Avenge (1): Gain +1/+2 permanently.
+25 | stat_gain | hs_battlegrounds | Razorgore, the Untamed | At the end of your turn, gain +1/+2 for each other friendly Dragon.
+26 | stat_gain | hs_battlegrounds | Southsea Captain | Your other Pirates have +1/+1.
+27 | stat_gain | hs_battlegrounds | Puddle Prancer | After this is Passed, gain +4/+4.
+28 | stat_gain | hs_battlegrounds | Perpetual Incantation | Your Tavern spells give an extra +/+Y. (+2/+1 can be earned endlessly!)
+29 | stat_gain | hs_battlegrounds | Assistant Guard | Battlecry: Give a minion Taunt. Then give your Taunt minions +2/+3.
+2666 | stat_gain | hs_battlegrounds | General Drakkisath | Battlecry: Get a 2/1 Smolderwing with "Battlecry: Give a Dragon +5 Attack."
+2667 | stat_gain | hs_battlegrounds | Skeletal Sidekick | Battlecry: Give a friendly Undead +2 Attack.
+2668 | stat_gain | hs_battlegrounds | Dozy Whelp | Taunt. Whenever this is attacked, gain +1 Attack permanently.
+2669 | stat_gain | hs_battlegrounds | Crow's Nest Sentry | Battlecry: Give your other Pirates +4 Health.
+2670 | stat_gain | hs_battlegrounds | Cyborg Drake | Divine Shield Your minions with Divine Shield have +6 Attack.
+2671 | stat_gain | hs_battlegrounds | Defensive Sacrifice | +10 Health. Deathrattle: Give this minion's max Health to another friendly minion.
+2672 | stat_gain | hs_battlegrounds | Giant Dewdrop | Your Tavern spells give an extra +2 Health this game.
+2673 | stat_gain | hs_battlegrounds | Ride-or-Die | Reborn Your other Undead have +1 Attack.
+2674 | stat_gain | hs_battlegrounds | Arm Day | Your Blood Gems give an extra +1 Attack this game.
+2675 | stat_gain | hs_battlegrounds | Sunborne Val'kyr | Battlecry: Give adjacent minions +2 Health.
+3302 | stat_gain | hs_battlegrounds | Blazing Skyfin | After you trigger a Battlecry, gain +1/+1.
+3303 | stat_gain | hs_battlegrounds | Pogo-Hopper | Battlecry: Gain +2/+2 for each other Pogo-Hopper you played this game.
+3304 | stat_gain | hs_battlegrounds | Sandstone Drake | At the end of your turn, gain +1 Attack. Repeat for each card you played this turn. (X)
+3305 | stat_gain | hs_battlegrounds | Toughened Shield | Whenever you play a card, gain +3 Health.
+3306 | stat_gain | hs_battlegrounds | Prodigious Stormdrake | Whenever a friendly Rally minion attacks, gain +2/+2.
+3307 | stat_gain | hs_battlegrounds | Sharpened Sword | Whenever you play a card, gain +3 Attack.
+3308 | stat_gain | hs_battlegrounds | Implant Subject | Stealth. Whenever a friendly minion loses a Bonus Keyword in combat, gain +1/+1 permanently.
+3309 | stat_gain | hs_battlegrounds | Shade of Naxxramas | Stealth. At the start of your turn, gain +1/+1.
+8594 | stat_multiply | hs_battlegrounds | Mirage Conjurer | Choose One - Double the Attack of all minions in the Tavern; or Double their Health.
+8595 | stat_multiply | hs_battlegrounds | Myrmidon Sticker | Start of Combat: Double your left and right-most Naga's stats.

@@ -1,0 +1,67 @@
+# definitions
+condition_count | Counts / thresholds | The effect needs or scales with a number: for each, N or more. | Not: Counts of past events this game are count_payoff.
+copy | Copy cards or units | A copy of a card, unit or effect is made for the owner. | Not: Doing a trigger again is repeat_trigger; a copy given to the opponent is enemy_benefit.
+cost_condition | Cost matters | The effect cares about a card's cost: 1-cost cards, odd or even cost, N or more. | Not: Changing costs is cost_reduction or cost_set.
+cost_reduction | Cards cost less | The owner's cards cost less by an amount. | Not: A play that costs nothing at all is free_play; a cost set to a number is cost_set.
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+# questions: qid | concept | game | name | text
+1161 | condition_count | runeterra | Pathless Ancient | I cost 2 less for each unit you've Recalled this round.
+1162 | condition_count | runeterra | Corina Veraza | Play: Obliterate the top 5 cards of your deck to deal 1 to all enemies and the enemy Nexus for each spell obliterated.
+3794* | condition_count | runeterra | Reputation | Activates if allies have struck for 5+ damage at least 4 times this game.
+3795* | condition_count | runeterra | Subpurrsible | Keywords: Elusive. When I'm summoned, draw 1. / Then, if you've played at least 10 other new cards this game, grant me +4|+0.
+2233 | copy | runeterra | Iterative Improvement | Pick a follower. Create a copy of it in hand with +1|+1.
+2234 | copy | runeterra | Conservator's Judgment | Keywords: Skill. Kill an enemy follower. If you've slain 13+ units this game, kill all enemy followers, then summon a copy of me instead.
+2235 | copy | runeterra | Midenstokke Henchmen | Nexus Strike: Summon an exact copy of me.
+2236 | copy | runeterra | Reborn Grenadier | Keywords: Ephemeral. To play, discard 1. / When I'm discarded, summon an exact copy of me.
+2237 | copy | runeterra | Nautilus | Keywords: Tough, Fearsome. Level up: When you are Deep.  When I level up, copy Tossed allies that cost 4+ into your deck.
+2238 | copy | runeterra | Taliyah (level 2) | Play: Summon an exact copy of an allied landmark.  Attack: I deal 2 damage to my blocker 3 times. If it's dead or gone, I deal 2 damage to the enemy Nexus instead.
+2239 | copy | runeterra | Doubling Dice | 50% chance to create a copy of me in hand that costs 0 this round.
+2240 | copy | runeterra | Eye of the Aspect | When I'm destroyed, create a copy of me in hand.
+2241 | copy | runeterra | Shackled Ghasts | Keywords: Last Breath. Last Breath: The next time you revive an ally, create a copy of me in hand.
+2242 | copy | runeterra | Eye of the Ra-Horak | Keywords: Countdown, Landmark. Countdown 1: Stun the 2 weakest enemies. / Daybreak: Summon a copy of me with Countdown 2.
+7874 | copy | runeterra | Go Hard | Drain 1 from a unit. / Create 2 copies of Go Hard in your deck. Every third time this happens, transform all copies of me everywhere into Pack Your Bags.
+7875 | copy | runeterra | Counterfeit Copies | Pick a card in hand. Create 4 exact copies of it in your deck.
+7876 | copy | runeterra | Evil Imperfectionist | Play: Pick a card in hand. Create 4 exact copies of it in your deck and reduce their costs by 1.
+7877 | copy | runeterra | Iceborn Legacy | Grant an ally and all allied copies of it everywhere +2|+2.
+7878 | copy | runeterra | Khahiri the Returned | Keywords: Fearsome. When I'm summoned, create a copy of me in your deck. When you see me in a Prediction, grant all allied copies of me everywhere +2|+2.
+7879 | copy | runeterra | Malmutation | Pick an allied follower. Summon 2 Hungry Owlcats then transform allies into exact copies of the chosen ally.
+7880 | copy | runeterra | Stasis Statue | Keywords: Countdown, Landmark. Countdown 1: Summon exact copies of the units and landmarks stored inside.
+7881 | copy | runeterra | Pack Your Bags | Keywords: Slow. Deal 5 to all enemies and the enemy Nexus. Transform all copies of me everywhere back to Go Hard.
+7882 | copy | runeterra | Soul Cleave | Kill an ally to summon 2 Ephemeral copies of it.
+7883 | copy | runeterra | Practical Perfectionist | Play: Predict. Create 3 copies of the chosen card in your deck.
+7794 | cost_condition | runeterra | Mystifying Magician | Play: Transform an ally into a random 5 cost follower.
+7795 | cost_condition | runeterra | Ante Up | -2 cost and Fleeting
+7796 | cost_condition | runeterra | Crescendum | Keywords: Slow. Summon a random 2 cost follower from your regions. Phase Calibrum or Severum.
+7797 | cost_condition | runeterra | Trail of Evidence | Create in hand a random 2 cost card from your regions. It costs 2 less this round.
+7798 | cost_condition | runeterra | Marai Warden | When I'm summoned, summon a random 1 cost follower.
+7799 | cost_condition | runeterra | Petty Officer | Play: Summon a Powder Keg or a random 1 cost follower.
+7800 | cost_condition | runeterra | Condense | Pick a follower. Create a 1 cost copy of it in hand and set its stats to 1|1.
+7801 | cost_condition | runeterra | Crowd Pleaser | Keywords: Flow. Give an ally +2|+0 and Quick Attack this round. / Flow: Create a new 2 cost spell in hand.
+7802 | cost_condition | runeterra | Father Fury | Keywords: Plunder, Elusive. Plunder: Refill 1 spell mana and create a random 1 cost spell from your regions in hand.
+7803 | cost_condition | runeterra | Poro Snax | When I'm summoned, summon a random 1 cost Poro.
+6036 | cost_reduction | runeterra | Monster Harpoon | Keywords: Plunder. Plunder: I cost 2 less. / Deal 5 to a unit.
+6037 | cost_reduction | runeterra | Pocket Aces | When drawn, I cost 1 less this round. / Grant an ally +2|+1.
+6038 | cost_reduction | runeterra | Captive Yeti | Reputation: I cost 4 less.
+6039 | cost_reduction | runeterra | Herald of Dragons | Keywords: Missing Translation. Dragon allies cost 1 less.
+6040 | cost_reduction | runeterra | Duskpetal Dust | Keywords: Burst. The next card with Nightfall you play this round costs 1 less.
+6041 | cost_reduction | runeterra | Power Riff | Costs 1 less for each card you've drawn this round.
+6042 | cost_reduction | runeterra | Aphelios (level 2) | Keywords: Quick Attack, Missing Translation. Nightfall: Pick a Moon Weapon to create in hand. Each round, the first time you play 2 other cards or Round Start: Create the Phased Moon Weapon in hand if you don't already have one. Your Moon Weapons cost 1 less.
+6043 | cost_reduction | runeterra | Momentous Choice | If you've Equipped an ally this game, I cost 1 less. / Give an ally +2|+0 or +0|+2 this round.
+6044 | cost_reduction | runeterra | Sigil of Malice | Reputation: I cost 2 less.  / Deal 2 to anything.
+6045 | cost_reduction | runeterra | Pirouette | Keywords: Plunder. Plunder: I cost 2 less. / Deal 1 to anything and Stun an enemy.
+7972 | cost_reduction | runeterra | Targon's Peak | Keywords: Landmark. Round Start: Reduce the cost of a random card in ALL players' hands to 0 this round.
+7973 | cost_reduction | runeterra | Herald's Favor | When I'm summoned, reduce the cost of the most expensive unit in your hand by 2.
+7974 | cost_reduction | runeterra | Progress Day! | Draw 3, then reduce those cards' costs by 1.
+7975 | cost_reduction | runeterra | Evil Imperfectionist | Play: Pick a card in hand. Create 4 exact copies of it in your deck and reduce their costs by 1.
+7976 | cost_reduction | runeterra | Black Market Merchant | Keywords: Plunder. When you draw an enemy card, reduce its cost by 1. / Plunder: Nab 1.
+7977 | cost_reduction | runeterra | The Heart of the Tree | Keywords: Landmark. I: Heal your Nexus 3 and summon Spritelings. / II: Grant allies Everywhere Spirit. / III: Manifest a card that costs 8 or more and reduce its cost by half, rounded up.
+7978 | cost_reduction | runeterra | Cloud Drake | Keywords: Fury. When I'm summoned, reduce the cost of all allied units in hand by 1.
+7979 | cost_reduction | runeterra | The Rootbound Path | Keywords: Landmark. I-II: Draw 1. / III: Reduce the cost of cards in your hand by 1 this round.
+7980 | cost_reduction | runeterra | Lillia (level 2) | Keywords: Quick Attack, Spirit. When I'm summoned or Strike: Create a Dream-Laden Bough in hand or, if you have one, reduce its cost by 1. When you Sleep another ally, immediately wake it up and grant it Spirit.
+7981 | cost_reduction | runeterra | Vayne | When I'm summoned or Round Start: Create a Tumble in hand or if you have one, reduce its cost by 1. Level up: I've seen you attack 4 times.
+190* | damage | runeterra | Ziggs | Attack: I deal 1 damage to my blocker and the enemy Nexus. Level up: You've destroyed 4+ allied landmarks.
+191 | damage | runeterra | Broadbacked Protector | Round Start: Heal your Nexus 3. Deal damage to me equal to the amount healed.
+192 | damage | runeterra | Bloodprice Prism | I cost 0. Deal damage to your Nexus equal to my original cost.
+193 | damage | runeterra | Furious Faefolk | Keywords: Quick Attack. When I'm summoned, if you've dealt damage to the enemy Nexus 4+ times this game, grant me 4 Impact.
+194* | damage | runeterra | Formless Blade | Deal 2 damage to a unit. It can't drop below 1 Health from this damage.
+195 | damage | runeterra | Taliyah (level 2) | Play: Summon an exact copy of an allied landmark.  Attack: I deal 2 damage to my blocker 3 times. If it's dead or gone, I deal 2 damage to the enemy Nexus instead.

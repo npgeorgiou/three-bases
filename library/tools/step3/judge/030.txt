@@ -1,0 +1,66 @@
+# definitions
+aoe_damage | Damage to many at once | Damage hits several units, a row, a lane or an area at once. | Not: One unit's attack hitting several is multi_target_attack.
+aura | Aura (ongoing effect on others) | While the source is in play, other units are continuously changed: anthem, lord. | Not: A one-time change is the effect itself.
+board_wipe | Board wipe | Most or all units on the board, or in a lane, are destroyed or removed. | Not: Damage to several that may leave survivors is aoe_damage.
+bounce_enemy | Send an enemy unit back (bounce) | An enemy unit is returned to its owner's hand or deck. | Not: Returning my own unit is return_to_hand.
+# questions: qid | concept | game | name | text
+4301 | aoe_damage | hearthstone | Dragonfire Potion | Deal 5 damage to all minions except Dragons.
+4302 | aoe_damage | hearthstone | A Mother's Vow | If you've restored Health this turn, deal that much damage to all enemy minions.
+4303 | aoe_damage | hearthstone | Tidal Wave | Lifesteal Deal 3 damage to all minions.
+4304 | aoe_damage | hearthstone | Enflamed Golem | Deathrattle: Deal 3 damage to all minions and summon a Sanctum Golem.
+4305 | aoe_damage | hearthstone | Soul Rend | Deal 5 damage to all minions. Destroy a card in your deck for each killed.
+4306 | aoe_damage | hearthstone | Sheep Mask | Set a minion's stats to 1/1 and give it "Deathrattle: Deal 2 damage to all minions."
+4307 | aoe_damage | hearthstone | Broxigar's Last Stand | Deal 1 damage to all minions. Draw a card for each that died.
+4308 | aoe_damage | hearthstone | Tomb Traitor | Battlecry: Destroy a Plague in your opponent's deck to deal 3 damage to all enemy minions.
+4309 | aoe_damage | hearthstone | Sunken Trident | After your hero attacks, deal 2 damage to all enemy minions.
+4310 | aoe_damage | hearthstone | Caustic Fumes | Destroy an enemy minion. Kindred: Deal 2 damage to all minions.
+6867 | aoe_damage | hearthstone | Blood Razor | Battlecry and Deathrattle: Deal 1 damage to all minions.
+6868 | aoe_damage | hearthstone | Murloc Menace (created) | At the end of each turn, deal 1-4 damage to all enemies. Deathrattle: Your opponent gains an empty Mana crystal.
+6869 | aoe_damage | hearthstone | Revenge | Deal 1 damage to all minions. If you have 12 or less Health, deal 3 damage instead.
+6870 | aoe_damage | hearthstone | Flame Leviathan | Rush When you draw this, deal 2 damage to all characters except Mechs.
+6871 | aoe_damage | hearthstone | Consecration | Deal 2 damage to all enemies.
+6872 | aoe_damage | hearthstone | Star of Origination | Once this is next to Star of Conclusion, deal 5 damage to all enemies.
+6873 | aoe_damage | hearthstone | Unbeakered Lightning | Deal 8 damage to all minions.
+6874 | aoe_damage | hearthstone | Heart of C'Thun | Piece of C'Thun (@/4) Deal 3 damage to all minions.
+6875 | aoe_damage | hearthstone | Pufferfist | After your hero attacks, deal 1 damage to all enemies.
+6876 | aoe_damage | hearthstone | Ominous Nightmares | Choose One - Deal 1 damage to all minions; or Give a damaged minion +2/+2.
+8153* | aoe_damage | hearthstone | Spawn of Shadows | Battlecry and Inspire: Deal 4 damage to each hero.
+8154* | aoe_damage | hearthstone | Lightbomb | Deal damage to each minion equal to its Attack.
+8155* | aoe_damage | hearthstone | Shadowbomber | Battlecry: Deal 3 damage to each hero.
+8156* | aoe_damage | hearthstone | Psyfiend | After you cast a Shadow spell, deal 2 damage to each hero.
+8157* | aoe_damage | hearthstone | Knife Vendor | Battlecry: Deal 4 damage to each hero.
+5008 | aura | hearthstone | Gelbin of Tomorrow | Fabled Battlecry: Put one of each Aura from your deck into the battlefield.
+7675 | board_wipe | hearthstone | Shadowreaper Anduin | Battlecry: Destroy all minions with 5 or more Attack.
+7676 | board_wipe | hearthstone | Plague | Destroy all non-Skeleton minions.
+7677 | board_wipe | hearthstone | Warmaster Blackhorn | Battlecry: Destroy all cards that cost (2) or less in both players' decks.
+7678 | board_wipe | hearthstone | V'ama, Looming Death | Battlecry: Destroy all non-Paladin minions.
+7679 | board_wipe | hearthstone | Brawl | Destroy all minions except one. (chosen randomly)
+7680 | board_wipe | hearthstone | Devouring Hunger | Destroy all other minions. Gain their Attack and Health.
+7681 | board_wipe | hearthstone | Eternal Layover | Give ALL minions Reborn, then destroy all minions.
+7682 | board_wipe | hearthstone | Big Boomba | Destroy ALL minions. Do it again at the start of your next turn.
+7683 | board_wipe | hearthstone | Staff of the Endbringer | Deathrattle: Destroy all minions.
+7684 | board_wipe | hearthstone | Poison Seeds | Destroy all minions and summon 2/2 Treants to replace them.
+5744* | bounce_enemy | hearthstone | Shadowcrafter Scabbs | Battlecry: Return all minions to their owner's hands. Summon two 4/2 Shadows with Stealth.
+5745* | bounce_enemy | hearthstone | Blackjack Stunner | Battlecry: If you control a Secret, return a minion to its owner's hand. It costs (2) more.
+5746* | bounce_enemy | hearthstone | Twilight Mistress | Battlecry: Return all enemy minions to their owner's hand.
+5747* | bounce_enemy | hearthstone | Freezing Trap | Secret: When an enemy minion attacks, return it to its owner's hand. It costs (2) more.
+5748* | bounce_enemy | hearthstone | Vanish | Return all minions to their owner's hand.
+5749* | bounce_enemy | hearthstone | Kidnapper | Combo: Return a minion to its owner's hand.
+5750* | bounce_enemy | hearthstone | Dream | Return a minion to its owner's hand.
+5751* | bounce_enemy | hearthstone | Canary | Battlecry: Return an enemy minion to its owner's hand.
+7247 | bounce_enemy | hearthstone | Krag'wa, the Frog | Battlecry: Return all spells you played last turn to your hand.
+7248 | bounce_enemy | hearthstone | Corpsicle | Deal 3 damage. Spend 3 Corpses to return this to your hand at the end of your turn.
+7249 | bounce_enemy | hearthstone | Kidnapper's Sack | Deathrattle: Return your opponent's kidnapped minion to their hand.
+7250 | bounce_enemy | hearthstone | Waggle Pick | Deathrattle: Return a random friendly minion to your hand. It costs (2) less.
+7251 | bounce_enemy | hearthstone | Infinitize the Maxitude | Discover a spell. Reduce its Cost by (1). Finale: Return this to your hand at end of turn.
+7252 | bounce_enemy | hearthstone | [CORE 2024] Cheat Death | Secret: When a friendly minion dies, return it to your hand. It costs (2) less.
+7253 | bounce_enemy | hearthstone | X-21 Repairbot | Deathrattle: Return any Mechs Magnetized to this to your hand.
+7254 | bounce_enemy | hearthstone | Pen Flinger | Battlecry: Deal 1 damage to a minion. Spellburst: Return this to your hand.
+7255 | bounce_enemy | hearthstone | Bog Slosher | Battlecry: Return a friendly minion to your hand and give it +2/+2.
+7256 | bounce_enemy | hearthstone | Dawngrasp (created) | Deathrattle: Return this to your hand and summon a 2/4 Aquarrior.
+8218 | bounce_enemy | hearthstone | Ysera, Unleashed | Battlecry: Shuffle 7 Dream Portals into your deck. When drawn, summon a random Dragon.
+8219 | bounce_enemy | hearthstone | Sheltered Survivor | Battlecry: Choose a card in your hand to shuffle into your deck. Draw a card.
+8220 | bounce_enemy | hearthstone | Soul Shear | Deal 3 damage to a minion. Shuffle 2 Soul Fragments into your deck.
+8221 | bounce_enemy | hearthstone | Crystal Tusk | Battlecry: Shuffle the left- most card in your hand into your deck. Deathrattle: Draw 2 cards.
+8222 | bounce_enemy | hearthstone | High King's Hammer | Windfury Deathrattle: Shuffle this into your deck with +2 Attack permanently.
+8223 | bounce_enemy | hearthstone | Lor'themar Theron (created) | At the end of your turn, give another random friendly minion +1/+1. Deathrattle: Shuffle into your deck.

@@ -1,0 +1,76 @@
+# definitions
+activated | Activated ability (pay to use) | The player chooses when to use an ability: activate, tap, pay to use. | Not: Abilities that fire on their own are triggers.
+aoe_damage | Damage to many at once | Damage hits several units, a row, a lane or an area at once. | Not: One unit's attack hitting several is multi_target_attack.
+bounce_enemy | Send an enemy unit back (bounce) | An enemy unit is returned to its owner's hand or deck. | Not: Returning my own unit is return_to_hand.
+cant_attack | Can't attack (my own unit) | The unit itself can't attack: defender, wall. | Not: A lock put on an enemy is attack_lock.
+condition_count | Counts / thresholds | The effect needs or scales with a number: for each, N or more. | Not: Counts of past events this game are count_payoff.
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+deck_position | Top or bottom of the deck matters | The top or bottom card of a deck matters: looked at, revealed or changed. | Not: Searching the whole deck is tutor.
+generate_cards | Create new cards | New cards that were not in the deck are put into hand or deck. | Not: Units made on the board are summon.
+in_hand_buff | Improve cards in hand or deck | Cards still in hand or deck get more power, a lower cost or better text before they are played. | Not: A discount on whatever is played this turn is cost_reduction.
+on_play | When played (battlecry, on reveal) | Triggers when the card is played or revealed: battlecry, on reveal, enters. | Not: When another card is played is on_ally_play.
+ping | Small repeatable damage | A small amount of damage (1 or 2) that can be dealt again and again. | Not: One big hit is damage.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+transform | Transform my card into another | The owner's own card or unit turns into a different one: evolve, flip, become. | Not: Turning an enemy into something weaker is polymorph.
+tribal | Tribe / type matters | The effect cares about a tribe, type, team or family of cards. | Not: Counting as another type is type_grant.
+# questions: qid | concept | game | name | text
+8916* | deck_position | gwent | Vivaldi Bank | Profit 4. Look at the top card from your deck plus an additional card for each Coin you have. Play the top card for free, or play another card for a Coin cost equal to its distance from the top, then shuffle the remaining cards back into your deck.
+8917* | deck_position | gwent | War Council | Resilience. Deploy: Look at the first 3 cards from the top of your deck and play one of them. Order: Spawn and play Battle Preparation.
+5798* | generate_cards | gwent | Vanadáin | Deploy: Move up to 2 cards from your hand to the bottom of your deck. Add Waylay to your hand for each card moved that way. Whenever you play Waylay, Spawn an Elven Deadeye on this row.
+8875* | in_hand_buff | gwent | Crach an Craite | Deploy: Give 3 Pirates or Ships in your hand 2 Armor. Order: Damage a unit by 1. Cooldown: 2 Whenever you play a Pirate or Ship next to Crach, it Clashes with the lowest-power enemy unit.
+1683* | on_play | gwent | Morkvarg | When this unit enters your graveyard during the round, Summon it to your Melee row and give it Doomed.
+1684* | on_play | gwent | Saov Ainmhi'dh | Boost an allied unit by 5. When this card enters your graveyard, transform self into Saov Ainmhi'dh: Unity.
+3984* | ping | gwent | Yennefer: Conjurer | Zeal. Order: Deal 1 damage to the highest-power enemy unit(s). Cooldown: 1
+6961* | polymorph | gwent | Fallen Rayla | Veil. Profit 3. Tribute 3: Remove Poison from an allied unit, then boost self by 5. Whenever your opponent plays a unit, Poison it and remove a Counter. When the Counter reaches 0, the Tribute becomes a Fee. Counter: 2
+6927* | transform | gwent | Fallen Rayla | Veil. Profit 3. Tribute 3: Remove Poison from an allied unit, then boost self by 5. Whenever your opponent plays a unit, Poison it and remove a Counter. When the Counter reaches 0, the Tribute becomes a Fee. Counter: 2
+6442* | tribal | gwent | Villentretenmerth | Lineage. Timer 3: Destroy the highest-power unit(s) on the battlefield, excluding Dragons you control.
+6443* | tribal | gwent | Bloody Flail | Give an enemy unit Bleeding (8). For each Soldier you control, decrease the Bleeding duration by 1 and damage by 1 instead.
+6444* | tribal | gwent | Knighthood | Play a Knight from your deck and boost it by 1 for each Knight you control.
+2176* | activated | hearthstone | Torga | Battlecry: Draw a Kindred card and another card that activates it.
+2177* | activated | hearthstone | Mind Control Crystal | Activate the Crystal to control the Understudies!
+2178* | activated | hearthstone | Eye of Sargeras | Can't Attack Spend 50 Mana to activate this and destroy the Lich King. (
+2179* | activated | hearthstone | Fuel Tank (created) | Activated The fuel is flowing and ready to go!
+2180* | activated | hearthstone | Boiler (created) | Activated The boiler is ready to receive some fuel!
+2181* | activated | hearthstone | Pressure Valves | Inactive Tap on this to activate it.
+2182* | activated | hearthstone | Pressure Valves (created) | Activated Ready to operate!
+2183* | activated | hearthstone | Underfel Rift (created) | Select the Rift to activate. Throw a card in to summon 2 random Fel Beasts. (Once per turn.)
+2644* | activated | hearthstone | Lab Patron | Whenever you gain Armor, summon another Lab Patron (once per turn).
+2645* | activated | hearthstone | Underfel Rift | Open a Rift to the Underfel. Throw a card in to summon 2 random Fel Beasts. (Once per turn.)
+8153* | aoe_damage | hearthstone | Spawn of Shadows | Battlecry and Inspire: Deal 4 damage to each hero.
+8154* | aoe_damage | hearthstone | Lightbomb | Deal damage to each minion equal to its Attack.
+8155* | aoe_damage | hearthstone | Shadowbomber | Battlecry: Deal 3 damage to each hero.
+8156* | aoe_damage | hearthstone | Psyfiend | After you cast a Shadow spell, deal 2 damage to each hero.
+8157* | aoe_damage | hearthstone | Knife Vendor | Battlecry: Deal 4 damage to each hero.
+5744* | bounce_enemy | hearthstone | Shadowcrafter Scabbs | Battlecry: Return all minions to their owner's hands. Summon two 4/2 Shadows with Stealth.
+5745* | bounce_enemy | hearthstone | Blackjack Stunner | Battlecry: If you control a Secret, return a minion to its owner's hand. It costs (2) more.
+5746* | bounce_enemy | hearthstone | Twilight Mistress | Battlecry: Return all enemy minions to their owner's hand.
+5747* | bounce_enemy | hearthstone | Freezing Trap | Secret: When an enemy minion attacks, return it to its owner's hand. It costs (2) more.
+5748* | bounce_enemy | hearthstone | Vanish | Return all minions to their owner's hand.
+5749* | bounce_enemy | hearthstone | Kidnapper | Combo: Return a minion to its owner's hand.
+5750* | bounce_enemy | hearthstone | Dream | Return a minion to its owner's hand.
+5751* | bounce_enemy | hearthstone | Canary | Battlecry: Return an enemy minion to its owner's hand.
+8757* | cant_attack | hearthstone | Templar Captain | Rush. After this attacks a minion, summon a 5/5 Defender with Taunt.
+8758* | cant_attack | hearthstone | Protect the Innocent | Summon a 5/5 Defender with Taunt. If your hero was healed this turn, summon another.
+8759* | cant_attack | hearthstone | Turalyon, the Tenured | Rush. Whenever this attacks a minion, set the defender's Attack and Health to 3.
+3824* | condition_count | hearthstone | The Dark Portal | Draw a minion. If you have at least 8 cards in hand, it costs (5) less.
+3825* | condition_count | hearthstone | Ironbark | Give a minion +1/+3 and Taunt. Costs (0) if you have at least 7 Mana Crystals.
+3826* | condition_count | hearthstone | Bouldering Buddy | Rush, Taunt Costs (1) if you have at least 10 Mana Crystals.
+3827* | condition_count | hearthstone | Tower Sergeant | Battlecry: If you control at least 2 other minions, gain +2/+2.
+3828* | condition_count | hearthstone | Sacred Trial | Secret: After your opponent has at least 3 minions and plays another, destroy it.
+3829* | condition_count | hearthstone | Furious Howl | Draw a card. Repeat until you have at least 3 cards.
+3830* | condition_count | hearthstone | Ancient Shieldbearer | Battlecry: If your C'Thun has at least 10 Attack, gain 10 Armor.
+3831* | condition_count | hearthstone | Mimiron's Head | At the start of your turn, if you have at least 3 Mechs, destroy them all and form V-07-TR-0N.
+3832* | condition_count | hearthstone | Bogbeam | Deal 3 damage to a minion. Costs (0) if you have at least 7 Mana Crystals.
+3833* | condition_count | hearthstone | Package Runner | Can only attack if you have at least 8 cards in hand.
+1670* | damage | hearthstone | Arthas's Gift | Discover a Temporary Dark Transformation, Howling Blast, or Death Strike.
+1671* | damage | hearthstone | Illidan's Gift | Discover a Temporary Fel Barrage, Chaos Strike, or Chaos Nova.
+1672* | damage | hearthstone | Gnomish Hammer | Used to strike an area. Battlecry: The next Mech you play costs (0).
+4258* | damage | hearthstone | Darkmoon Tonk | Deathrattle: Fire four missiles at random enemies that deal 2 damage each.
+4259* | damage | hearthstone | Corrupted Blood | Deathrattle: Fire three missiles at random enemies that deal 2 damage each.
+4260* | damage | hearthstone | Goliath, Sneed's Masterpiece | Battlecry: Fire five rockets at enemy minions that deal 2 damage each. (You pick the targets!)
+4261* | damage | hearthstone | Soul Immolation | Your Hero Power becomes 'Collapsing Star'. If it already is, increase its damage by 1.
+4262* | damage | hearthstone | Greater Arcane Missiles | Shoot three missiles at random enemies that deal 3 damage each.
+4263* | damage | hearthstone | The Skeleton Key | Discover a spell, or refresh your options (20% chance to take 5 damage each refresh!)
+4264* | damage | hearthstone | Domino Effect | Deal 2 damage to a minion. Repeat to the left or right, dealing 1 more damage each time.
+4265* | damage | hearthstone | Shudderblock | Miniaturize Battlecry: Your next Battlecry triggers 3 times, but can't damage the enemy hero.
+4266* | damage | hearthstone | Shudderblock (created) | Mini Battlecry: Your next Battlecry triggers 3 times, but can't damage the enemy hero.

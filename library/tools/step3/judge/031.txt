@@ -1,0 +1,67 @@
+# definitions
+bounce_enemy | Send an enemy unit back (bounce) | An enemy unit is returned to its owner's hand or deck. | Not: Returning my own unit is return_to_hand.
+cant_attack | Can't attack (my own unit) | The unit itself can't attack: defender, wall. | Not: A lock put on an enemy is attack_lock.
+coin_economy | Second currency for abilities | A second currency (coins, crowns) is spent on abilities. | Not: Shop gold between fights is shop_gold.
+condition | Conditions | An effect works only if, unless or when something is true. | Not: When it happens is a trigger.
+condition_count | Counts / thresholds | The effect needs or scales with a number: for each, N or more. | Not: Counts of past events this game are count_payoff.
+# questions: qid | concept | game | name | text
+8224 | bounce_enemy | hearthstone | Unleashed Terrorguard | Battlecry: Shuffle a Soul Fragment into your deck for each friendly minion on the board.
+8225 | bounce_enemy | hearthstone | Envoy Rustwix | Deathrattle: Shuffle 3 random Prime Legendary minions into your deck.
+8226 | bounce_enemy | hearthstone | Entomb | Choose an enemy minion. Shuffle it into your deck.
+8227 | bounce_enemy | hearthstone | Dispose of Evidence | Give your hero +3 Attack this turn. Pick from 3 cards in your hand to shuffle into your deck.
+8288 | bounce_enemy | hearthstone | Azsharan Scavenger | Battlecry: Put a 'Sunken Scavenger' on the bottom of your deck.
+8289 | bounce_enemy | hearthstone | Azsharan Trident | Deathrattle: Put a 'Sunken Trident' on the bottom of your deck.
+8290 | bounce_enemy | hearthstone | Azsharan Saber | Rush. Deathrattle: Put a 'Sunken Saber' on the bottom of your deck.
+8291 | bounce_enemy | hearthstone | Bootstrap Sunkeneer | Combo: Put an enemy minion on the bottom of your opponent's deck.
+8292 | bounce_enemy | hearthstone | Meadowstrider | Taunt. Deathrattle: Put a Meadowstrider on the bottom of your deck. It costs (1).
+8293 | bounce_enemy | hearthstone | Sunken Spirit | Spell Damage +1 Deathrattle: Put a 'Priestess' Memory' on the bottom of your deck.
+8294 | bounce_enemy | hearthstone | Azsharan Gardens | Give all minions in your hand +1/+1. Put a 'Sunken Gardens' on the bottom of your deck.
+8295 | bounce_enemy | hearthstone | Azsharan Scroll | Discover a Fire, Frost or Nature spell. Put a 'Sunken Scroll' on the bottom of your deck.
+8296 | bounce_enemy | hearthstone | Azsharan Ritual | Silence a minion and summon a copy of it. Put a 'Sunken Ritual' on the bottom of your deck.
+8297 | bounce_enemy | hearthstone | Kaldorei Cultivator | Battlecry: Discover 2 Beasts. Put them on the bottom of your deck with +5/+5.
+8048 | cant_attack | hearthstone | Bladed Gauntlet | Has Attack equal to your Armor. Can't attack heroes.
+8049 | cant_attack | hearthstone | Divine Bell | Can't attack. Give friendly minions +1/+1 and Rush.
+8050 | cant_attack | hearthstone | Mor'shan Watch Post | Can't attack. After your opponent plays a minion, summon a 2/2 Grunt.
+8051 | cant_attack | hearthstone | Specter of Despair | Taunt Can't attack.
+8052 | cant_attack | hearthstone | Ragnaros the Firelord | Can't attack. At the end of your turn, deal 8 damage to a random enemy.
+8053 | cant_attack | hearthstone | Portable Ice Wall | Taunt. Can't Attack. Freeze any character damaged by this minion.
+8054 | cant_attack | hearthstone | A. F. Kay (created) | Can't attack.
+8055 | cant_attack | hearthstone | Sleep | Target minion can't attack until the start of your next turn.
+8056 | cant_attack | hearthstone | Annoying Fan | Battlecry: Choose a minion. It can't attack while this is alive.
+8757* | cant_attack | hearthstone | Templar Captain | Rush. After this attacks a minion, summon a 5/5 Defender with Taunt.
+8758* | cant_attack | hearthstone | Protect the Innocent | Summon a 5/5 Defender with Taunt. If your hero was healed this turn, summon another.
+8759* | cant_attack | hearthstone | Turalyon, the Tenured | Rush. Whenever this attacks a minion, set the defender's Attack and Health to 3.
+9137 | coin_economy | hearthstone | Blackpaw's Whip | Costs (1) less for each Coin you're holding. Deathrattle: Draw a card.
+9138 | coin_economy | hearthstone | Soldier of Fortune | Whenever this minion attacks, give your opponent a Coin.
+9139 | coin_economy | hearthstone | Dig for Treasure | Draw a minion. If it's a Pirate, get a Coin.
+9140 | coin_economy | hearthstone | Trade Prince Gallywix | Whenever your opponent casts a spell, gain a copy of it and give them a Coin.
+9141 | coin_economy | hearthstone | Avatar of the Coin | You lost the coin flip, but gained a friend.
+9142 | coin_economy | hearthstone | Lucrative Contract | Destroy a minion. Add 2 Coins to your hand.
+9143 | coin_economy | hearthstone | Loan Shark | Battlecry: Give your opponent a Coin. Deathrattle: You get two.
+9144 | coin_economy | hearthstone | Oh, Manager! | Deal 2 damage. Combo: Get a Coin.
+9145 | coin_economy | hearthstone | Gilded Gargoyle | Deathrattle: Add a Coin to your hand.
+9146 | coin_economy | hearthstone | Licensed Adventurer | Battlecry: If you control a Quest, add a Coin to your hand.
+5565 | condition | hearthstone | Medivh's Triumph | Deal 4 damage to all minions. Costs (1) if you control a Legendary card.
+5566 | condition | hearthstone | Thor | Battlecry: Deal 5 damage. (Transforms if you launched a Starship this game.)
+5567 | condition | hearthstone | Rheastrasza | Battlecry: If your deck started with no duplicates, summon the Purified Dragon Nest.
+5568 | condition | hearthstone | Bouldering Buddy | Rush, Taunt Costs (1) if you have at least 10 Mana Crystals.
+5569 | condition | hearthstone | Reno the Relicologist | Battlecry: If your deck has no duplicates, deal 10 damage randomly split among all enemy minions.
+5570 | condition | hearthstone | Drest’agath | Deathrattle: Draw an Old God. If you can't, get a random Old God.
+5571 | condition | hearthstone | Sir Finley, the Intrepid | Battlecry: If you've Excavated twice, transform all enemy minions into 1/1 Murlocs.
+5572 | condition | hearthstone | Glaivebound Adept | Battlecry: If your hero attacked this turn, deal 4 damage.
+5573 | condition | hearthstone | Twilight Acolyte | Battlecry: If you're holding a Dragon, swap this minion's Attack with another minion's.
+5574 | condition | hearthstone | Questing Explorer | Battlecry: If you control a Quest, draw a card.
+1203 | condition_count | hearthstone | Violet Spellsword | Battlecry: Gain +1 Attack for each spell in your hand.
+1204 | condition_count | hearthstone | Broxigar's Last Stand | Deal 1 damage to all minions. Draw a card for each that died.
+1205 | condition_count | hearthstone | Defias Wannabe | Prepare Combo: Gain +1/+1 for each other card played this turn. ()
+1206 | condition_count | hearthstone | Gigantotem | Costs (1) less for each Totem you've summoned this game.
+1207 | condition_count | hearthstone | Hideous Amalgamation | At the end of your turn, deal 1 damage to all enemies for each Corrupted Blood you control.
+1208 | condition_count | hearthstone | Frenzied Felwing | Costs (1) less for each damage dealt to your opponent this turn.
+1209 | condition_count | hearthstone | Unchained Magic | Deal 3 damage to the enemy hero for each spell in their hand.
+1210 | condition_count | hearthstone | Chum Bucket | Give all Murlocs in your hand +1/+1. Repeat for each Murloc you control.
+1211 | condition_count | hearthstone | Battle Rage | Draw a card for each damaged friendly character.
+1212 | condition_count | hearthstone | Blood-Queen Lana'thel | Lifesteal Has +1 Attack for each card you've discarded this game.
+3824* | condition_count | hearthstone | The Dark Portal | Draw a minion. If you have at least 8 cards in hand, it costs (5) less.
+3825* | condition_count | hearthstone | Ironbark | Give a minion +1/+3 and Taunt. Costs (0) if you have at least 7 Mana Crystals.
+3826* | condition_count | hearthstone | Bouldering Buddy | Rush, Taunt Costs (1) if you have at least 10 Mana Crystals.
+3827* | condition_count | hearthstone | Tower Sergeant | Battlecry: If you control at least 2 other minions, gain +2/+2.

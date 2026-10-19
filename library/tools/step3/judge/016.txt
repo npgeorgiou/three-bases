@@ -1,0 +1,70 @@
+# definitions
+on_spell | When a spell is played | Triggers when a spell or action is played. | Not: When a unit is played is on_ally_play.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+ping | Small repeatable damage | A small amount of damage (1 or 2) that can be dealt again and again. | Not: One big hit is damage.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+ranged | Ranged attack / long reach | The unit attacks from a distance, from the back row or over other units. | Not: Damage from a spell is damage.
+scope_global | Whole board / all players | The effect touches the whole board or all players. | Not: Several but not all is scope_multi.
+stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+# questions: qid | concept | game | name | text
+8450 | on_spell | duelyst | Owlbeast Sage | Whenever you cast a spell, your Arcanyst minions gain +2 Health.
+8451 | on_spell | duelyst | Firestarter | Whenever you cast a spell, summon a 1/1 Spellspark with Rush on a random nearby space.
+8452 | on_spell | duelyst | The Scientist | Whenever you play a spell that targets a friendly minion, draw a card.
+8453 | on_spell | duelyst | Kindling | Whenever you cast a spell, your Arcanyst minions gain +1 Attack.
+8454 | on_spell | duelyst | Circulus | Whenever you cast a spell, add a 2/1 Illusion to your action bar.
+8455 | on_spell | duelyst | Blue Conjurer | Whenever you cast a spell, put a random Arcanyst into your action bar.
+8456 | on_spell | duelyst | Ornate Hiogi | Whenever you cast a spell, draw a card.
+542 | passive | duelyst | Decorated Enlistee | While at full Health, this minion has +3 Attack.
+3978 | ping | duelyst | Shadowdancer | Deathwatch: Deal 1 damage to the enemy General, and restore 1 Health to your General.
+3979 | ping | duelyst | Flash Freeze | Deal 1 damage to a minion and Stun it.
+3980 | ping | duelyst | Blinding Snowstorm | Deal 1 damage to all enemies. Those enemies can only move 1 space next turn.
+3981 | ping | duelyst | Blistering Skorn | Opening Gambit: Deal 1 damage to everything (including itself).
+3982 | ping | duelyst | Bloodfire Totem | At end of turn, deal 1 damage to your General.
+3983 | ping | duelyst | Upper Hand | Deal 1 damage to an enemy minion for each card in your opponent's action bar.
+4747 | polymorph | duelyst | Onyx Bear Seal | Transform an enemy minion into a 0/2 Panddo that cannot be attacked.
+4748 | polymorph | duelyst | Blood of Air | Transform an enemy minion into a friendly Wind Dervish.
+4749 | polymorph | duelyst | Horror Burster | Dying Wish: Transform a random friendly minion into a 6/6 Horror.
+4750 | polymorph | duelyst | Aspect of the Wyrm | Transform ANY minion into a 4/4 Whyte Drake with Flying. Nearby friendly minions gain Flying.
+4751 | polymorph | duelyst | Ironcliffe Monument | Build: (2). / Whenever you summon a minion nearby this, transform that minion into an Ironcliffe Guardian.
+4752 | polymorph | duelyst | Bur | When this minion survives damage, transform it into a different Battle Pet.
+4753 | polymorph | duelyst | Thumping Wave | Give a minion +5 Attack. At end of turn, transform it into a 3/3 Kin.
+4754 | polymorph | duelyst | Mirage Master | Opening Gambit: This minion transforms into a copy of an enemy minion.
+4755 | polymorph | duelyst | Aspect of the Mountains | Transform ANY minion into a 5/5 Seismic Elemental. Deal 5 damage to enemy minions around it.
+4756 | polymorph | duelyst | Penumbraxx | Build: (2). / Backstab: (2). / Whenever this backstabs, transform it into a building with Build (1).
+673 | random_effect | duelyst | Iron Shroud | Summon a 2/2 Iron Dervish on a random space nearby your General.
+674 | random_effect | duelyst | Envybaer | Whenever this minion damages an enemy, teleport that enemy to a random corner.
+675 | random_effect | duelyst | Monolithic Vision | Transform your action bar into six random Vetruvian cards that cost 4 less.
+676 | random_effect | duelyst | Kindred Hunter | Bond: Summon a 3/3 Night Howler on a random nearby space.
+677 | random_effect | duelyst | Gold Vitriol | Whenever anything is healed, deal 2 damage to a random enemy.
+678 | random_effect | duelyst | Grandmaster Embla | Opening Gambit: Surround the enemy General with random Walls.
+679 | random_effect | duelyst | Glacial Elemental | Whenever you summon a Vespyr minion, deal 2 damage to a random enemy minion.
+680 | random_effect | duelyst | Zirix Starstrider | Bloodbound Spell: Summon a 2/2 Iron Dervish on a random space nearby your General.
+681 | random_effect | duelyst | Zyx | Opening Gambit: Summon a copy of this minion on a random nearby space.
+682 | random_effect | duelyst | Cacophynos | Dying Wish: Destroy a random nearby enemy minion.
+2483 | ranged | duelyst | Vale Hunter | Ranged
+2484 | ranged | duelyst | Drake Dowager | Sentinel: General attacks. / Ranged / Whenever this attacks, summon a 4/4 Flying Drake nearby.
+2485 | ranged | duelyst | Cyclone Mask | Your General gains Ranged.
+2486 | ranged | duelyst | Jaxi | Dying Wish: Summon a 1/1 Ranged Mini-Jax in a random corner.
+2487 | ranged | duelyst | Solpiercer | Zeal: Ranged
+2488 | ranged | duelyst | MECHAZ0R! | Airdrop, Forcefield, Frenzy, Ranged
+2489 | ranged | duelyst | Jax Truesight | Ranged / Opening Gambit: Summon a 1/1 Ranged Mini-Jax in each corner.
+2490 | ranged | duelyst | Sworn Avenger | Ranged / Whenever your General takes damage, this minion gains +1 Attack.
+3900 | scope_global | duelyst | Enfeeble | All minions become 1/1.
+3901 | scope_global | duelyst | Kinetic Equilibrium | Deal 2 damage to ALL minions in a 3x3 area. Friendly minions in the area also gain +2 Attack.
+3902 | scope_global | duelyst | Shadow Waltz | Lower the cost of all minions with Backstab in your action bar by 1 and give them +1/+1.
+3903 | scope_global | duelyst | Lurking Fear | Lower the cost of all minions with Dying Wish in your action bar and deck by 1.
+3904 | scope_global | duelyst | EMP | Opening Gambit: Dispel ALL minions and Generals, and destroy ALL artifacts.
+4484 | scope_global | duelyst | Spelljammer | Each player draws an additional card at the end of their turns.
+10 | stat_gain | duelyst | Scion's Third Wish | Give a friendly Dervish minion +3/+3 and Flying.
+11 | stat_gain | duelyst | Iceblade Dryad | Opening Gambit: Give a friendly Vespyr minion +1/+1 and Flying.
+12 | stat_gain | duelyst | Mist Dragon Seal | Give a friendly minion +1/+1 and teleport it anywhere.
+13 | stat_gain | duelyst | Greater Fortitude | Give a friendly minion +2/+2.
+14 | stat_gain | duelyst | Scion's Second Wish | Give a friendly minion +2/+2. It takes no damage from Generals.
+15 | stat_gain | duelyst | Onyx Jaguar | Whenever a friendly unit is moved for any reason, it gains +1/+1.
+16 | stat_gain | duelyst | Moonlit Basilysk | Sentinel: Spell cast. / Whenever your opponent casts a spell, this minion gains +3/+3.
+17 | stat_gain | duelyst | Afterblaze | Give a friendly minion +2/+4. If that minion has Zeal, draw a card.
+18 | stat_gain | duelyst | Empyreal Congregation | Give friendly minions in a 2x2 area +2/+2.
+19 | stat_gain | duelyst | Grimrock | Grow: +2/+2
+2656 | stat_gain | duelyst | Sunstone Bracers | Your General gains +1 Attack.
+2657 | stat_gain | duelyst | Unbounded Energy Amulet | Your General gains +1 Attack. / Your General may move an additional space.

@@ -125,7 +125,8 @@ def sample(db, n):
             fh.write('# questions: qid | concept | game | name | text\n')
             for q in part:
                 e, k, dbl = Q['q'][q]; g, nm, t = raw[e]
-                fh.write(f"{q}{'*' if dbl else ''} | {k} | {g} | {nm} | {t.replace(chr(10), ' / ')}\n")
+                tt = t.replace(chr(10), ' / '); tt = tt if len(tt) <= 700 else tt[:700] + ' ...'
+                fh.write(f"{q}{'*' if dbl else ''} | {k} | {g} | {nm} | {tt}\n")
     print('patterns sampled', len(todo), ' questions so far', len(Q['q']), ' new', len(newq), ' new batches', (len(newq) + 59) // 60)
 
 def answers():
@@ -165,8 +166,76 @@ def results():
         for r in res: fh.write('\t'.join(map(str, r)) + '\n')
     print(collections.Counter(r[-1] for r in res))
 
+# ---------- narrowing (after the sample judgments are in) ----------
+def snippet(low, rx, w=90):
+    m = rx.search(low)
+    if not m: return low[:2 * w]
+    a = max(0, m.start() - w); b = min(len(low), m.end() + w)
+    return ('...' if a else '') + low[a:m.start()] + '[[' + low[m.start():m.end()] + ']]' + low[m.end():b] + ('...' if b < len(low) else '')
+
+def labelled(p, games, ents, raw, ky, Q, ans):
+    """Known right/wrong matches of pattern p in the games: key entries and judged sample entries."""
+    k, role, g, pat = p.split('|', 3); rx = re.compile(pat, re.I)
+    q_of = {}
+    for qid, (e, kk, d) in Q['q'].items():
+        if kk == k: q_of[e] = qid
+    textq = {}
+    for qid, (e, kk, d) in Q['q'].items():
+        if kk == k: textq[(raw[e][2].strip().lower(), raw[e][0])] = qid
+    out = []
+    for gg in games:
+        kk = ky.get(gg, {})
+        for i, t in ents[gg]:
+            if not rx.search(t): continue
+            if i in kk: out.append((gg, i, right(k, kk[i]), 'key', t))
+            else:
+                qid = q_of.get(i) or textq.get((raw[i][2].strip().lower(), gg))
+                if qid is not None and ans.get(qid) is not None: out.append((gg, i, ans[qid], 'judged', t))
+    return out
+
+def pack(n_per_file=12):
+    """Weak patterns (results.tsv), in plan order -> narrow/NN.md work files with labelled examples."""
+    c, ents, raw, pats = load(DB); ky = keys(); Q, ans, A, B = answers()
+    res = [l.rstrip('\n').split('\t') for l in open(os.path.join(HERE, 'results.tsv'))][1:]
+    rows, order = plan_order()
+    weak = collections.defaultdict(list)
+    for p, g, m, kn, kr, sn, sr, v in res:
+        if v == 'weak': weak[p].append(g)
+    todo = [p for p in order if p in weak]
+    d = os.path.join(HERE, 'narrow'); os.makedirs(d, exist_ok=True)
+    for f in glob.glob(os.path.join(d, '[0-9]*.md')): os.remove(f)
+    for b in range(0, len(todo), n_per_file):
+        with open(os.path.join(d, f'{b // n_per_file:02d}.md'), 'w') as fh:
+            for p in todo[b:b + n_per_file]:
+                k, role, g, pat = p.split('|', 3); rx = re.compile(pat, re.I)
+                lab = labelled(p, weak[p], ents, raw, ky, Q, ans)
+                fh.write(f"\n## PATTERN {p}\nconcept {k}: {TREE[k]['counts']} Not: {TREE[k]['no']}\nweak in: {', '.join(weak[p])}\n")
+                rnd = random.Random(1)
+                for lbl, val in (('WRONG', False), ('RIGHT', True)):
+                    xs = [x for x in lab if x[2] == val]; rnd.shuffle(xs)
+                    fh.write(f"{lbl} ({len(xs)} known):\n")
+                    for gg, i, ok, src, t in xs[:14]: fh.write(f"  {gg} {i}: {snippet(t, rx)}\n")
+    print('weak patterns', len(todo), 'files', (len(todo) + n_per_file - 1) // n_per_file)
+
+def trial(p, newpat, games=None):
+    """Compare a narrowed regex with the old one on the known (key + judged) matches and count what it drops."""
+    c, ents, raw, pats = load(DB); ky = keys(); Q, ans, A, B = answers()
+    k, role, g, pat = p.split('|', 3); old = re.compile(pat, re.I); new = re.compile(newpat, re.I)
+    games = games or ([g] if g != '*' else [x for x in GAMES if x != 'marvel_snap'])
+    lab = {(gg, i): ok for gg, i, ok, src, t in labelled(p, games, ents, raw, ky, Q, ans)}
+    tot = [0, 0, 0, 0, 0, 0]
+    for gg in games:
+        om = {i for i, t in ents[gg] if old.search(t)}; nm = {i for i, t in ents[gg] if new.search(t)}
+        if not om: continue
+        kn = [lab[(gg, i)] for i in nm if (gg, i) in lab]; lost_right = sum(1 for i in om - nm if lab.get((gg, i)) is True)
+        dropped_known = [lab[(gg, i)] for i in om - nm if (gg, i) in lab]
+        print(f'{gg:18} matches {len(om):5} -> {len(nm):5}  known kept {len(kn):3} right {sum(kn):3} ({100 * sum(kn) / max(len(kn), 1):.0f}%)  '
+              f'known dropped {len(dropped_known):3} of them right {lost_right}  new matches {len(nm - om)}')
+
 if __name__ == '__main__':
     cmd, *a = sys.argv[1:]
     if cmd == 'eval': evaluate(a[0] if a else DB)
-    elif cmd == 'sample': sample(a[0] if a else DB, int(a[1]) if len(a) > 1 else 50)
+    elif cmd == 'sample': sample(DB, int(a[0]) if a else 50)
     elif cmd == 'results': results()
+    elif cmd == 'pack': pack()
+    elif cmd == 'try': trial(a[0], a[1], a[2].split(',') if len(a) > 2 else None)

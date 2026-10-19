@@ -1,0 +1,70 @@
+# definitions
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+death_trigger | When it dies (deathrattle) | Effects when a unit dies or is destroyed. | Not: Counting deaths is death_count.
+delayed | Delayed / countdown | The effect happens later: next turn, after N turns, countdowns. | Not: A set turn number is turn_number.
+destroy | Destroy outright | A unit is destroyed or killed regardless of its health. | Not: Killing by damage is damage; destroying my own unit for value is sacrifice.
+direct_damage | Damage to the player or base | Damage goes straight to the enemy player, hero or base. | Not: Damage to units is damage.
+disable | Can't act at all (stun, freeze) | The unit can't act at all: stun, freeze, sleep, skip its turn. | Not: Losing only its attack is attack_lock.
+draw | Draw cards | Cards are drawn from the owner's deck into hand. | Not: Searching the deck for a chosen kind of card is tutor; making a new card is generate_cards.
+evasion | Hard to block (flying, unblockable) | The unit can't be blocked, can be blocked only by some units, or hits the player past blockers. | Not: Can't be targeted is immunity; hidden until it acts is stealth.
+# questions: qid | concept | game | name | text
+7425 | damage | duelyst | Khymera | Whenever this minion takes damage, summon a random token minion nearby.
+7426 | damage | duelyst | Ruby Rifter | Whenever your General takes damage, draw a card and give this minion +2 Attack.
+7427 | damage | duelyst | Red Synja | Whenever your General takes damage, deal 7 damage to a random nearby enemy minion.
+7587* | damage | duelyst | Eight Gates | Spells you cast this turn that deal damage deal +2 damage.
+7588* | damage | duelyst | Storm Sister Alkyone | Spells you cast that deal damage deal +1 damage.
+7589* | damage | duelyst | Crescent Spear | Your General gains +1 Attack. Spells you cast that deal damage deal +1 damage.
+5270 | death_trigger | duelyst | Dying Wish | Triggers an effect when this minion dies.
+5271 | death_trigger | duelyst | Grandmaster Z'ir | When your General dies, Grandmaster Z'ir becomes your General.
+5272 | death_trigger | duelyst | Infest | Choose an enemy minion. When it dies, give this effect to all nearby enemy minions and deal 2 damage to the enemy General.
+2342 | delayed | duelyst | Concealing Shroud | Your General takes no damage until your next turn.
+2343 | delayed | duelyst | Ciphyron Ascendant | Bloodbound Spell: Give an enemy minion -2 Attack until your next turn.
+2344 | delayed | duelyst | Descension | Give an enemy minion -2 Attack until your next turn.
+2345 | delayed | duelyst | Blinding Snowstorm | Deal 1 damage to all enemies. Those enemies can only move 1 space next turn.
+1701 | destroy | duelyst | Artifact Defiler | Destroy all artifacts on the enemy General.
+1702 | destroy | duelyst | Obliterate | Destroy all friendly Shadow Creep to deal that much damage to all enemies.
+1703 | destroy | duelyst | Celestial Phantom | Destroy any minion damaged by this minion.
+1704 | destroy | duelyst | Maehv Skinsolder | Bloodbound Spell: Destroy a friendly minion to summon a 4/4 Husk nearby. Deal 2 damage to your General.
+1705 | destroy | duelyst | Deathstrike Seal | Give a friendly minion, "Destroy any minion damaged by this minion."
+1706 | destroy | duelyst | Corporeal Cadence | Destroy a friendly minion to deal its Attack to the enemy General.
+1707 | destroy | duelyst | Choking Tendrils | Destroy an enemy minion on friendly Shadow Creep.
+1708 | destroy | duelyst | Iceshatter Gauntlet | Whenever your General attacks a Stunned minion, destroy it instantly.
+1709 | destroy | duelyst | Rust Crawler | Opening Gambit: Destroy a random artifact on the enemy General.
+1710 | destroy | duelyst | Rasha's Curse | Destroy a random artifact on the enemy General. Summon a Wind Dervish with Rush near them.
+6411 | direct_damage | duelyst | Whiplash | Blood Surge: Deal 2 damage to the enemy General.
+6412 | direct_damage | duelyst | Aymara Healer | Provoke / Dying Wish: Deal 5 damage to the enemy General. Restore 5 Health to your General.
+6413 | direct_damage | duelyst | Bone Swarm | Deal 2 damage to the enemy General and all enemy minions around them.
+6414 | direct_damage | duelyst | Shadowdancer | Deathwatch: Deal 1 damage to the enemy General, and restore 1 Health to your General.
+6415 | direct_damage | duelyst | Eclipse | Whenever this minion takes damage, it deals that much damage to the enemy General.
+6416 | direct_damage | duelyst | Purgatos, The Realmkeeper | Whenever this minion deals damage, either deal 3 damage to the enemy General OR restore 3 Health to your General.
+6417 | direct_damage | duelyst | Decimus | Whenever your opponent draws a card, deal 2 damage to the enemy General.
+6418 | direct_damage | duelyst | Infest | Choose an enemy minion. When it dies, give this effect to all nearby enemy minions and deal 2 damage to the enemy General.
+5949 | disable | duelyst | Ilena Cryobyte | Bloodbound Spell: Stun a nearby enemy minion.
+5950 | disable | duelyst | Saurian Finality | Stun the enemy General. / Your General gains +3 Attack. / Both players lose 3 mana. / Restore 10 Health to your General.
+5951 | disable | duelyst | Beam Shock | Stun an enemy.
+5952 | disable | duelyst | Crystallize | Stun a nearby enemy minion.
+5953 | disable | duelyst | Essence Sculpt | Choose a Stunned minion. Put a copy of that card into your action bar.
+5954 | disable | duelyst | Icy | Opening Gambit: Stun a nearby enemy.
+5955 | disable | duelyst | Winterblade | Your General gains +2 Attack. Enemy minions damaged by your General are Stunned.
+5956 | disable | duelyst | Bonechill Barrier | Wall / Minions next to this minion that attack it are Stunned.
+5957 | disable | duelyst | Flash Freeze | Deal 1 damage to a minion and Stun it.
+5958 | disable | duelyst | Shatter | Destroy a Stunned enemy minion.
+448 | draw | duelyst | Twin Strike | Deal 2 damage to exactly two random enemy minions. Draw a card at end of turn.
+449 | draw | duelyst | Lionheart Blessing | Give a friendly minion, "Zeal: Whenever this minion deals damage, draw a card."
+450 | draw | duelyst | Artifact Hunter | Opening Gambit: Draw a random artifact from your deck.
+451 | draw | duelyst | Frigid Corona | Stun an enemy minion. Draw a card.
+452 | draw | duelyst | Sojourner | Whenever this minion deals damage, draw a card.
+453 | draw | duelyst | Afterblaze | Give a friendly minion +2/+4. If that minion has Zeal, draw a card.
+454 | draw | duelyst | Blaze Hound | Opening Gambit: Both players draw a card.
+455 | draw | duelyst | Burden of Knowledge | Deal 3 damage to your General to draw a card.
+456 | draw | duelyst | Mogwai | After this moves, draw a card.
+457 | draw | duelyst | Starhorn the Seeker | Bloodbound Spell: Both players draw a card.
+799 | draw | duelyst | Seeking Eye | Both players draw a card.
+800 | draw | duelyst | Ornate Hiogi | Whenever you cast a spell, draw a card.
+5039* | draw | duelyst | Trinity Oath | Draw 3 cards and restore 3 Health to your General.
+5040* | draw | duelyst | Tectonic Spikes | Both players draw 3 cards. Deal 3 damage to both Generals.
+921 | evasion | duelyst | Aspect of the Wyrm | Transform ANY minion into a 4/4 Whyte Drake with Flying. Nearby friendly minions gain Flying.
+922 | evasion | duelyst | Reaper of the Nine Moons | Flying / Dying Wish: Summon a random minion from the opponent's deck on this space.
+923 | evasion | duelyst | Storm Aratha | Flying
+924 | evasion | duelyst | Wolfraven | Flying / Infiltrate: Gain +3 Attack.
+925 | evasion | duelyst | Young Flamewing | Flying.
