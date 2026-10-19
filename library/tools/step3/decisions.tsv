@@ -85,6 +85,8 @@ narrow	movement|does|*|\badvance\b	dnd5e,hearthstone,runeterra	(?!)\badvance\b
 narrow	forced_movement|does|*|\badvance\b	wh_killteam,runeterra,wh_aos_4th,wh_40k_10e,hearthstone	(?!)\badvance\b
 narrow	upgrade|does|shadowverse|\bevolve (it|this|an?|target|all|that|them)\b|\bcan evolve\b|\bwhen this follower evolves\b|\bthis follower evolves\b	shadowverse	(?!)\bevolve (it|this|an?|target|all|that|them)\b
 narrow	reactions|does|*|\breaction\b	dnd5e	(?<!or a )(?<!require a )(?<!action or )\breaction\b(?! to deliver)(?! to cast)
+# manual (Claude, 20 Oct 2026, asked by Kaptain): Magic exile of your own permanents or of the card itself is not banish (sacrifice / cost)
+narrow	banish|does|*|\bexile	mtg	\bexile(?!s?\s+(?:a|an|another|one|two|x|all|any number of|up to \w+)?\s*(?:other\s+)?(?:target\s+)?(?:[\w-]+\s+){0,2}?(?:creatures?|permanents?|artifacts?|tokens?|lands?)\s+you control\b)(?!s?\s+(?:this|name)\b)
 # switch_off.py: old patterns right less than half the time switched off
 narrow	activated|does|*|\bactivate	duelyst,inscryption,runeterra,wh_40k_10e,wh_killteam	(?!)
 narrow	activated|does|*|\bactivated	runeterra,shadowverse,wh_underworlds	(?!)
