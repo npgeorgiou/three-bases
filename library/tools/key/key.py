@@ -86,7 +86,7 @@ def check_tags(ent, tags):
 def check(g, r):
     ents = texts(g); clean = {}; nb = collections.Counter(); ex = []
     for f in sorted(glob.glob(os.path.join(gdir(g), r, '*.json'))):
-        if f.endswith('clean.json'): continue
+        if f.endswith(('clean.json', 'notkw.json')): continue
         for i, tags in json.load(open(f)).items():
             e = ents.get(int(i))
             if not e: nb['unknown entry'] += 1; continue

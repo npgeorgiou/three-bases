@@ -1,2 +1,12 @@
 summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	inscryption,duelyst,gwent,runeterra,hearthstone	(?<!you )(?<!opponent )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b(?![^.]{0,80}(for your opponent|from your hand|opposite row|from your deck to the opposite))
 summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	wh_40k_10e	(?!)\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b
+random_effect|does|*|\bdice\b	wh_aos_4th	(?<!miracle )(?<!rage )(?<![+-]\d )(?<!number of )\bdice\b(?! step)
+random_effect|does|*|\bdice\b	wh_underworlds	(?<=roll )((a|an|one|\d+|two|three) )?(\w+ )?\bdice\b
+random_effect|does|*|\bdice\b	wh_bloodbowl3,dnd5e,wh_killteam,wh_40k_10e,mtg	keep
+ranged|does|*|\bshoot	wh_aos_4th	\bshoot(?!ing)\b(?! abilit)
+ranged|does|*|\bshoot	dnd5e	\bshoots? (a|an|over|projectile|in)\b
+ranged|does|*|\bshoot	into_the_breach,wh_killteam,wh_40k_10e,hearthstone	keep
+discard|does|*|\bdiscards?\b(?! piles?\b)	inscryption,sts1,runeterra,shadowverse	\bdiscards? (a|an|one|any|up to|\d+|x|your|all cards|cards|two|three)\b(?! piles?)(?! (attack|shadow))
+discard|does|*|\bdiscards?\b(?! piles?\b)	wh_underworlds	\bdiscards? (a|an|one|any|up to|\d+|x|your|two|three)\b[^.]{0,30}\bcards?\b
+discard|does|*|\bdiscards?\b(?! piles?\b)	mtg	(?<!player )(?<!opponent )(?<!opponents )(?<!that player )(?<!each other player )\bdiscards?\b(?! piles?\b)(?! (this|that|the) )
+discard|does|*|\bdiscards?\b(?! piles?\b)	wh_killteam,wh_40k_10e	(?!)\bdiscards?\b(?! piles?\b)

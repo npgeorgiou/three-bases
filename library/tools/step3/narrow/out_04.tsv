@@ -1,1 +1,6 @@
 damage|does|wh_aos_4th|\bmortal damage\b|\bcrit \(mortal\)|\binflict (\d|d3|d6)( mortal)? damage\b	wh_aos_4th	(?:(?<=amount of )|(?<=allocate 1 ))\bmortal damage\b|\binflict (\d|d3|d6)( mortal)? damage\b
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	wh_bloodbowl3,darkest_dungeon,sts1,sts2,hearthstone,dnd5e	(?!)
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	inscryption,wh_killteam,runeterra,mtg	keep
+quests|does|*|\bobjective\b	wh_killteam,wh_40k_10e	(?!)
+quests|does|*|\bobjective\b	into_the_breach,wh_underworlds,wh_aos_4th	keep
+passive|does|*|\bas long as	inscryption,dnd5e,wh_killteam,mtg	keep

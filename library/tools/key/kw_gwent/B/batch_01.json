@@ -1,0 +1,256 @@
+{
+"756201": [
+[
+"generate_cards",
+"Spawn one of three randomly selected cards"
+],
+[
+"random_effect",
+"randomly selected cards"
+]
+],
+"756202": [
+[
+"destroy",
+"destroy it"
+],
+[
+"stacking_keyword",
+"receives two instances of Poison"
+]
+],
+"756203": [
+[
+"targeting_rules",
+"can only target units with power lower than own"
+]
+],
+"756204": [
+[
+"on_ally_play",
+"Whenever you play a Nature card"
+],
+[
+"summon",
+"Spawn a Wandering Treant on a random allied row"
+],
+[
+"variable_stats",
+"set its power equal to number of Symbioses you control"
+],
+[
+"tribal",
+"Nature card"
+]
+],
+"756205": [
+[
+"stat_condition",
+"control a unit with 10 or more power on each of your rows"
+]
+],
+"756206": [
+[
+"damage",
+"Units take turns dealing damage equal to their power until one of them is destroyed"
+]
+],
+"756207": [
+[
+"on_ally_play",
+"whenever you play a non-Neutral unit"
+],
+[
+"permanent_growth",
+"Boost self by 1"
+],
+[
+"variety_payoff",
+"primary category is unique among all of your units"
+]
+],
+"756208": [
+[
+"turn_start",
+"At the start of the owner's turn"
+],
+[
+"aoe_damage",
+"damage all units in this row by 3"
+],
+[
+"row_effects",
+"all units in this row"
+],
+[
+"delayed",
+"when timer expires"
+]
+],
+"756209": [
+[
+"turn_start",
+"At the start of the owner's turn"
+],
+[
+"random_effect",
+"a random unit in this row"
+],
+[
+"damage_over_time",
+"give a random unit in this row Bleeding (2)"
+],
+[
+"row_effects",
+"in this row"
+]
+],
+"756210": [
+[
+"permanent_growth",
+"Boost self by 1 or the specified amount"
+],
+[
+"on_ally_play",
+"whenever you play a card"
+],
+[
+"deck_condition",
+"not from your starting deck"
+]
+],
+"756211": [
+[
+"on_play",
+"On Deploy"
+],
+[
+"coin_economy",
+"spend the specified amount of Coins"
+]
+],
+"756212": [
+[
+"resource_gain",
+"Gain a specified number of Coins"
+],
+[
+"on_play",
+"when this card is played"
+]
+],
+"756213": [
+[
+"coin_economy",
+"spending the specified number of Coins"
+]
+],
+"756214": [
+[
+"enemy_benefit",
+"opponent gains coins equal to its base power"
+],
+[
+"mark_target",
+"When a unit with this status is destroyed or banished"
+]
+],
+"756215": [
+[
+"on_ally_play",
+"whenever you play a Crime card"
+],
+[
+"permanent_growth",
+"Boost self by 1"
+],
+[
+"tribal",
+"Crime card"
+]
+],
+"756216": [
+[
+"life_payment",
+"damage this unit by its Fee amount"
+],
+[
+"coin_economy",
+"insufficient Coins"
+],
+[
+"piercing",
+"ignoring its Armor"
+]
+],
+"756217": [
+[
+"resource_banking",
+"possess the specified number of Coins or more"
+]
+],
+"756218": [
+[
+"protection",
+"prevents the opponent from targeting other cards in this row"
+]
+],
+"756219": [
+[
+"turn_end",
+"At the end of owner's turn"
+],
+[
+"self_destruct",
+"damage this unit equal to its base power"
+]
+],
+"756220": [
+[
+"damage",
+"Units simultanously damage each other by their power"
+]
+],
+"756221": [
+[
+"condition_count",
+"at least one of your rows has a total of 25 or more points"
+]
+],
+"756222": [
+[
+"coin_economy",
+"after you spent the specified amount of Coins"
+]
+],
+"756223": [
+[
+"delayed",
+"Reduce the Counter whenever the given condition is met"
+]
+],
+"756224": [
+[
+"coin_economy",
+"required to pay Fees and Tributes"
+]
+],
+"756225": [
+[
+"rewind",
+"Restore a unit to its base power"
+]
+],
+"756226": [
+[
+"coin_economy",
+"The amount of Crowns needed to trigger this ability"
+]
+],
+"756227": [
+[
+"card_quality",
+"Move a card from hand to deck and draw another in its place"
+]
+]
+}

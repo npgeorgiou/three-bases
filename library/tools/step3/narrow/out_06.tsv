@@ -1,0 +1,3 @@
+damage|does|dnd5e|\b\d+d\d+( ?[+-] ?\d+)? [a-z]+ damage\b|\(\d+d\d+( ?[+-] ?\d+)?\) [a-z]+ damage\b|\btakes? [^.]{0,30}\bdamage\b|\bdeals? [^.]{0,30}\bdamage\b	dnd5e	\b\d+d\d+( ?[+-] ?\d+)? [a-z]+ damage\b|\(\d+d\d+( ?[+-] ?\d+)?\) [a-z]+ damage\b|\btakes? [^.]{0,30}\bdamage\b(?<!takes damage)(?<!takes any damage)(?<!take damage)|\bdeals? [^.]{0,30}\bdamage\b(?=[^.]{0,20}\d)
+damage_reduction|does|*|\barmou?r\b	wh_bloodbowl3,inscryption,darkest_dungeon,mtg	(?!)\barmou?r\b
+damage_reduction|does|*|\barmou?r\b	into_the_breach,dnd5e,gwent,wh_killteam,wh_aos_4th,wh_40k_10e,hearthstone	keep

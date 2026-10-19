@@ -1,2 +1,15 @@
 destroy|does|*|out of action	wh_killteam,wh_underworlds,wh_40k_10e	keep
 turn_end|does|wh_underworlds|\bscore this in (an|the third) end phase\b	wh_underworlds	\bscore this in an end phase\b
+piercing|does|*|\brend	inscryption,darkest_dungeon,dnd5e,wh_40k_10e	\(\+\d+ rend\)|\brend characteristic
+piercing|does|*|\brend	wh_killteam	keep
+piercing|does|*|\brend	wh_aos_4th	\(\+\d+ rend\)|\brend characteristic
+stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	hearthstone,duelyst	keep
+stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	hs_battlegrounds	^(?!.*(?:at the (?:start|end) of (?:each|your) turn|permanently|this turn)).*\+\d+ (attack|power|health|strength|wounds|toughness)
+stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	into_the_breach	(?<=pilot ability: rockman: )\+\d+ (attack|power|health|strength|wounds|toughness)
+stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	wh_killteam	(?<![\w+])(?:give|gain|gains)\b[^.]{0,40}\+\d+ (attack|power|health|strength|wounds|toughness)
+damage|does|*|loses? \d+ (life|health|hp)	sts1,sts2,hearthstone	loses? \d+ hp(?=[^|]{0,80}\bdeal\b)|enemy loses? \d+ hp|\bdeal\b[^|]{0,30}loses? \d+ hp
+damage|does|*|loses? \d+ (life|health|hp)	mtg	(?:each opponent|target opponent|that player|the enemy) loses? \d+ life
+generate_cards|does|*|\bdiscover\b	hearthstone	^(?!.*\b(?:summon|deal damage)\b).*\bdiscover\b
+generate_cards|does|*|\bdiscover\b	mtg	\bdiscover (?:a|an) card from\b
+generate_cards|does|*|\bdiscover\b	faeria,hs_battlegrounds	keep
+return_to_hand|does|mtg|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b	mtg	\breturn (?:another |this |that |it |one of them|two islands |a white or blue )?[^.]{0,40}\byou control to (its|their) owners?'?s?'? hands?\b|\breturn (?:it|this \w+|that card) to (its|their) owners?'?s?'? hands?\b

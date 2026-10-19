@@ -1,2 +1,6 @@
 forced_movement|does|*|\bmoves?\b	wh_bloodbowl3,faeria,duelyst,sts1,sts2,gwent,wh_killteam,runeterra,wh_underworlds,wh_aos_4th,wh_40k_10e,hearthstone,mtg,inscryption	\bmoves?\b(?= (?:the |a |an )?(?:last played )?(?:enemy|target|opposing|each enemy|all enemy)|.{0,30}\b(?:to the other row|away|toward))
 forced_movement|does|*|\bmoves?\b	into_the_breach,darkest_dungeon,dnd5e	keep
+stat_gain|does|*|gets? \+\d+	mtg	(?<!this creature )(?<!it )(?<!flying )(?<!abilities )(?<!perpetually )(?<!you control )gets? \+\d+
+summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	mtg	\bcreate (?!.{0,50}\bin (your )?hand)(?!(?:a |an )?(?:clue|food|treasure|mutagen|gold|lander|blood|powerstone|map|junk|shard)\b)(?!a token that.s a copy)(a|an|\d+|two|three|x)? ?(?:(?!\.|,|;).){0,40}(token|creature|unit|minion)
+summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	dnd5e	\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}token
+summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	gwent	\bcreate (?=and play)(?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)

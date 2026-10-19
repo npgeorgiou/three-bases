@@ -1,0 +1,4 @@
+ranged|does|*|\branged\b	duelyst	\branged\b(?! attackers)
+ranged|does|*|\branged\b	darkest_dungeon	(?<!with )\branged\b
+ranged|does|*|\branged\b	gwent	(?!)
+ranged|does|*|\branged\b	into_the_breach,dnd5e,wh_killteam,wh_aos_4th,wh_40k_10e	keep
