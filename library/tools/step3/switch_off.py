@@ -1,4 +1,4 @@
-"""Switch off weak old patterns where a key pattern now covers the concept (asked by Kaptain, 19 Oct 2026).
+"""Switch off old wording patterns that are right less than half the time (asked by Kaptain, 19-20 Oct 2026).
 An old wording pattern is switched off in a game when it is right less than half the time there (Kaptain, 20 Oct 2026): on the
 answer key where it matches 3+ key entries, else on the judged sample where that has 5+ matches (step3/results.tsv). Removing it
 then removes more wrong tags than right ones. Pairs that already have a judged
