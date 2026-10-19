@@ -87,6 +87,11 @@ narrow	upgrade|does|shadowverse|\bevolve (it|this|an?|target|all|that|them)\b|\b
 narrow	reactions|does|*|\breaction\b	dnd5e	(?<!or a )(?<!require a )(?<!action or )\breaction\b(?! to deliver)(?! to cast)
 # manual (Claude, 20 Oct 2026, asked by Kaptain): Magic exile of your own permanents or of the card itself is not banish (sacrifice / cost)
 narrow	banish|does|*|\bexile	mtg	\bexile(?!s?\s+(?:a|an|another|one|two|x|all|any number of|up to \w+)?\s*(?:other\s+)?(?:target\s+)?(?:[\w-]+\s+){0,2}?(?:creatures?|permanents?|artifacts?|tokens?|lands?)\s+you control\b)(?!s?\s+(?:this|name)\b)
+# manual (Claude, 20 Oct 2026): Magic replacement effects that make more of something ("that many plus one", "twice that many ... instead") benefit from that thing
+new	buff|benefits|mtg|manual	mtg	\b(?:[+\-\d/]+\s+)?counters? (?:would be|are|is) (?:put|placed)\b[^.\n]{0,90}?\b(?:plus one|plus that many|twice that many|that many plus)\b
+new	summon|benefits|mtg|manual	mtg	\btokens? would be created\b[^.\n]{0,90}?\b(?:twice that many|those tokens plus|plus an additional)\b|\bwould create (?:one or more )?tokens?\b[^.\n]{0,90}?\b(?:twice that many|those tokens plus|plus an additional)\b
+new	damage|benefits|mtg|manual	mtg	\bwould deal (?:non-?combat )?damage\b[^.\n]{0,90}?\b(?:double that damage|twice that much|that much damage plus)\b
+new	heal|benefits|mtg|manual	mtg	\bwould gain life\b[^.\n]{0,60}?\b(?:twice that much life|that much life plus)\b
 # switch_off.py: old patterns right less than half the time switched off, and pointed at the concept the key shows them right for
 narrow	activated|does|*|\bactivate	duelyst,inscryption,runeterra,wh_40k_10e,wh_killteam	(?!)
 narrow	activated|does|*|\bactivated	runeterra,shadowverse,wh_underworlds	(?!)
