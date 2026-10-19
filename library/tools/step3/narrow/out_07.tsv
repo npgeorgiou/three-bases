@@ -1,0 +1,10 @@
+free_play|does|*|\bput .{0,30}onto the battlefield	mtg	keep
+return_to_hand|does|*|return .{0,40}to (its|their) owner'?s? hand	mtg	return (?=(?:another|that|this|it|name|one of them)\b|(?:(?!to (?:its|their)).){0,40}you control).{0,40}to (its|their) owner'?s? hand
+return_to_hand|does|*|return .{0,40}to (its|their) owner'?s? hand	hearthstone	keep
+tribal|does|hs_battlegrounds|\b(murlocs?|beasts?|mechs?|demons?|dragons?|elementals?|pirates?|naga|quilboar|undead|zerg|whelps?)\b	hs_battlegrounds	(?<!\d/\d )(?<!x/y )(?<!x/x )(?<!random )(?<!greater )(?<!magnetic )(?<!discover a )(?<!different magnetic )\b(murlocs?|beasts?|mechs?|demons?|dragons?|elementals?|pirates?|naga|quilboar|undead|zerg|whelps?)\b
+bounce_enemy|does|*|return .{0,40}to (its|their) owner'?s? hand	mtg	return (?!(?:it|this|that|name|another)\b)(?!(?:(?!to (?:its|their)).){0,40}(?:you control|\b(?:lands?|artifacts?|enchantments?|auras?|equipment)\b))(?!.{0,5}\bcards?\b).{0,40}to (its|their) owner'?s? hand
+movement|does|*|\bcharge rolls?	wh_killteam,wh_aos_4th,wh_40k_10e	keep
+forced_movement|does|*|\bcharge rolls?	wh_killteam,wh_aos_4th,wh_40k_10e	(?!)
+condition|does|mtg|(?<!for )\bas long as (you|your|there|this|it|equipped|enchanted|an?|defending|no)\b	mtg	keep
+shield|does|*|\bshield\b	dnd5e,runeterra,wh_underworlds,wh_40k_10e,shadowverse,hearthstone,mtg	\bdivine shield\b|\bshield counters?\b
+shield|does|*|\bshield\b	inscryption,hs_battlegrounds,wh_killteam,wh_aos_4th	keep

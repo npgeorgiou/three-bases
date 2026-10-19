@@ -1,1 +1,9 @@
 stat_gain|does|*|\+\d+\|\+\d+	runeterra	keep
+movement|does|*|\bpush	wh_underworlds	\bpush(?= (?:each chosen|up to two friendly|that fighter \d|this fighter along|them\b))
+movement|does|*|\bpush	into_the_breach,wh_bloodbowl3,inscryption,duelyst,darkest_dungeon,dnd5e,wh_40k_10e	keep
+information|does|*|look at	mtg	look at(?= (?:target |your opponent|the creature cards in target)|[^.]{0,70}(?:face down|any time|opponent|target player))
+information|does|*|look at	gwent	look at(?= (?:target (?:face-down|player)|(?:the )?(?:top (?:card|\d+ cards?|three|\d+ units?)|first \d+ cards?)\b[^.]{0,30}(?:opponent|both)|your opponent|the creature cards in target opponent|the top (?:three|nine) cards of target))
+information|does|*|look at	darkest_dungeon	keep
+random_effect|does|*|\brandom	mtg	\brandom(?! order)
+random_effect|does|*|\brandom	inscryption	\brandom(?!ness)(?! order)(?!ized map)(?!ized by the mod)
+random_effect|does|*|\brandom	into_the_breach	keep

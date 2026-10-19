@@ -13,3 +13,7 @@ death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed
 death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	inscryption,faeria,gwent,hs_battlegrounds,shadowverse,hearthstone,mtg	keep
 condition|does|hearthstone|\bif (you|you.re|your)\b	hearthstone	(?!)\bif (you|you.re|your)\b
 reserve_bench|does|wh_40k_10e|\bdeep strike\b|\bstrategic reserves\b|\breserves\b	wh_40k_10e	\bstrategic reserves\b|\breserves\b
+variable_stats|does|*|equal to the number of	inscryption,sts1,sts2,wh_killteam,wh_underworlds,wh_aos_4th,wh_40k_10e,shadowverse,mtg	(?<=\bis )equal to the number of|(?<=\bare each )equal to the number of|(?<=\bbe )equal to the number of|(?<=\bhas power )equal to the number of|(?<=\bis a variable power stat)
+variable_stats|does|*|equal to the number of	gwent,runeterra,hearthstone	keep
+summon|does|*|\bput .{0,30}(onto|into) the battlefield	hearthstone	\bput (?![^.]{0,30}secret)(?=[^.]{0,30}\bfrom your).{0,30}(onto|into) the battlefield
+summon|does|*|\bput .{0,30}(onto|into) the battlefield	mtg	keep

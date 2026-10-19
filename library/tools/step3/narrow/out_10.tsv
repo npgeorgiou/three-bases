@@ -1,2 +1,7 @@
 mill|does|*|\bmill	mtg	\bmills\b
 self_mill|does|*|\bmill	mtg	\bmill(?!s)|each player mills
+damage_reduction|does|*|\bresist	into_the_breach,darkest_dungeon,dnd5e,sts2,wh_aos_4th	keep
+selection|does|*|look at the top	mtg	look at the top (?!card\b)(?!two cards of your library and put them back)
+destroy|counters|*|\bindestructible\b	mtg	keep
+damage_over_time|does|*|\bpoison(?!ous)	sts2	(?<=apply \d )\bpoison(?!ous)
+damage_over_time|does|*|\bpoison(?!ous)	darkest_dungeon,dnd5e,gwent,wh_killteam,runeterra,wh_underworlds,wh_aos_4th,hearthstone,mtg	keep

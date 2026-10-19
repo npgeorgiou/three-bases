@@ -1,0 +1,6 @@
+stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	subtract \d from .{0,25}(hit|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this|visible|those))
+stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	keep
+stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	wh_killteam,gwent	(?<!, )(?<!of )\bboost (self|a(?=n? )(?!n enemy)|an(?! enemy)|all|it|them|each|\d|by|allied|adjacent|the)
+stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	runeterra,darkest_dungeon	keep
+evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	dnd5e,wh_aos_4th,mtg	(?!)
+piercing|does|wh_aos_4th|\brend\b	wh_aos_4th	(?<!subtract 1 from the )(?<!subtract 1 from )\brend\b
