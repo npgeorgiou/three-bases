@@ -3165,7 +3165,6 @@ dnd5e	761639	Iron Bands	items_consumables	does	present
 dnd5e	761640	Iron Flask	items_consumables	does	present
 dnd5e	761641	Javelin of Lightning	items_consumables	does	present
 dnd5e	761642	Lantern of Revealing	items_consumables	does	present
-dnd5e	761643	Luck Blade	attack_mod	does	present
 dnd5e	761643	Luck Blade	cooldowns	does	present
 dnd5e	761643	Luck Blade	disable	grants	absent
 dnd5e	761643	Luck Blade	items_consumables	does	present
@@ -3298,7 +3297,6 @@ dnd5e	761756	Tome of Understanding	items_consumables	does	present
 dnd5e	761757	Trident of Fish Command	items_consumables	does	present
 dnd5e	761758	Universal Solvent	items_consumables	does	present
 dnd5e	761759	Vicious Weapon	items_consumables	does	present
-dnd5e	761760	Vorpal Sword	attack_mod	does	present
 dnd5e	761760	Vorpal Sword	damage	does	present
 dnd5e	761760	Vorpal Sword	damage_reduction	*	absent
 dnd5e	761760	Vorpal Sword	immunity	does	present
@@ -3379,7 +3377,6 @@ dnd5e	761926	Aura of Courage	immunity	does	present
 dnd5e	761929	Aura Expansion	area_templates	does	present
 dnd5e	761929	Aura Expansion	aura	does	present
 dnd5e	761932	Sacred Weapon	area_templates	*	absent
-dnd5e	761932	Sacred Weapon	attack_mod	does	present
 dnd5e	761932	Sacred Weapon	damage_types	does	present
 dnd5e	761932	Sacred Weapon	once_per_game	*	absent
 dnd5e	761932	Sacred Weapon	random_effect	*	absent
@@ -3443,7 +3440,6 @@ dnd5e	762095	Grappler	immobilize	does	present
 dnd5e	762095	Grappler	movement	does	present
 dnd5e	762095	Grappler	on_attack	benefits	absent
 dnd5e	762095	Grappler	permanent_growth	*	absent
-dnd5e	762096	Archery	attack_mod	does	present
 dnd5e	762096	Archery	random_effect	*	absent
 dnd5e	762096	Archery	ranged	does	present
 dnd5e	762109	Ammunition, +1, +2, or +3	items_consumables	does	present
@@ -3454,7 +3450,6 @@ dnd5e	762114	Iron Bands of Binding	items_consumables	does	present
 dnd5e	762115	Potion of Healing	items_consumables	does	present
 dnd5e	762116	Restorative Ointment	items_consumables	does	present
 dnd5e	762117	Wand of the War Mage, +1, +2, or +3	items_consumables	does	present
-dnd5e	762118	Weapon, +1, +2, or +3	attack_mod	does	present
 dnd5e	762118	Weapon, +1, +2, or +3	items_consumables	does	present
 dnd5e	762118	Weapon, +1, +2, or +3	random_effect	*	absent
 dnd5e	762119	Orb of Dragonkind	advantage	cost	absent
@@ -3462,7 +3457,6 @@ dnd5e	762119	Orb of Dragonkind	control	cost	absent
 dnd5e	762119	Orb of Dragonkind	drawback	does	present
 dnd5e	762119	Orb of Dragonkind	items_consumables	does	present
 dnd5e	762119	Orb of Dragonkind	passive	*	absent
-dnd5e	762172	Fighting Style: Archery	attack_mod	does	present
 dnd5e	762172	Fighting Style: Archery	random_effect	*	absent
 dnd5e	762172	Fighting Style: Archery	ranged	does	present
 dnd5e	762174	Fighting Style: Dueling	buff	does	present
@@ -4087,6 +4081,7 @@ duelyst	741800	Earth Sphere	heal	does	present
 duelyst	741801	Bounded Lifeforce	fodder	*	absent
 duelyst	741803	Metamorphosis	silence	does	present
 duelyst	741803	Metamorphosis	temporary_effect	does	present
+duelyst	741803	Metamorphosis	transform	does	present
 duelyst	741809	Kinetic Equilibrium	friendly_fire	does	present
 duelyst	741809	Kinetic Equilibrium	scope_global	*	absent
 duelyst	741810	Adamantite Claws	items_consumables	does	present
@@ -4393,6 +4388,7 @@ duelyst	742137	Shadow Waltz	in_hand_buff	does	present
 duelyst	742137	Shadow Waltz	scope_global	*	absent
 duelyst	742138	Pandamonium	immunity	does	present
 duelyst	742138	Pandamonium	temporary_effect	does	present
+duelyst	742138	Pandamonium	transform	does	present
 duelyst	742140	Koan of Horns	cost_condition	*	absent
 duelyst	742140	Koan of Horns	cost_set	does	present
 duelyst	742141	Crescent Spear	items_consumables	does	present
@@ -4934,6 +4930,7 @@ faeria	741355	Magda's Rose	steal	does	present
 faeria	741356	Aurora's Teapot	stat_set	does	present
 faeria	741357	Stone of Fair Fortune	recycle	*	absent
 faeria	741359	Void Guardian	drawback	does	present
+faeria	741359	Void Guardian	mill	does	present
 faeria	741360	Crystal Dragon	evasion	does	present
 faeria	741360	Crystal Dragon	movement	does	present
 faeria	741360	Crystal Dragon	terrain	*	absent
@@ -5132,6 +5129,7 @@ faeria	741469	Bloated Toad	enemy_benefit	does	present
 faeria	741469	Bloated Toad	merge_attach	does	present
 faeria	741469	Bloated Toad	movement	does	present
 faeria	741470	Looking Glass Phantasm	on_play	does	present
+faeria	741470	Looking Glass Phantasm	transform	does	present
 faeria	741471	Triton Tactician	adjacency	does	present
 faeria	741471	Triton Tactician	buff	does	present
 faeria	741471	Triton Tactician	condition_count	does	present
@@ -5324,6 +5322,7 @@ gwent	756426	Blueboy Lugos	counterattack	does	present
 gwent	756433	Jutta an Dimun	drawback	does	present
 gwent	756443	Dimun Pirate	counter_spell	*	absent
 gwent	756443	Dimun Pirate	drawback	does	present
+gwent	756443	Dimun Pirate	mill	does	present
 gwent	756452	An Craite Longship	on_enemy_enter	does	present
 gwent	756452	An Craite Longship	reactions	does	present
 gwent	756457	Hemdall	board_clog	*	absent
@@ -5907,6 +5906,7 @@ gwent	757335	Sir Scratch-a-Lot	stat_condition	*	absent
 gwent	757335	Sir Scratch-a-Lot	turn_start	*	absent
 gwent	757338	In Search of Forgotten Treasures	slot_filler	*	absent
 gwent	757348	Ardal aep Dahy	hand_disruption	*	absent
+gwent	757348	Ardal aep Dahy	return_to_hand	does	present
 gwent	757354	King of Beggars	buff	does	present
 gwent	757354	King of Beggars	coin_economy	does	present
 gwent	757354	King of Beggars	coin_economy	cost	present
@@ -6634,7 +6634,6 @@ hearthstone	744478	Revenant Rascal	symmetric_effect	does	present
 hearthstone	744479	The Nameless One	copy	does	present
 hearthstone	744479	The Nameless One	on_play	does	present
 hearthstone	744479	The Nameless One	silence	does	present
-hearthstone	744479	The Nameless One	stat_set	does	present
 hearthstone	744479	The Nameless One	transform	does	present
 hearthstone	744481	Tickatus	mill	does	present
 hearthstone	744495	Showstopper	symmetric_effect	does	present
@@ -6644,7 +6643,6 @@ hearthstone	744509	Oh My Yogg!	disruption	does	present
 hearthstone	744532	Circus Amalgam	scope_self	*	absent
 hearthstone	744534	Deck of Chaos	in_hand_buff	does	present
 hearthstone	744534	Deck of Chaos	movement	*	absent
-hearthstone	744534	Deck of Chaos	stat_swap	does	present
 hearthstone	744534	Deck of Chaos	swap	*	absent
 hearthstone	744551	Ritual Chopper	summon	*	absent
 hearthstone	744552	Ramming Speed	forced_attack	does	present
@@ -7000,6 +6998,7 @@ hearthstone	745624	Remixed Rhapsody	aoe_damage	does	present
 hearthstone	745624	Remixed Rhapsody	in_hand_buff	does	present
 hearthstone	745624	Remixed Rhapsody	transform	*	absent
 hearthstone	745626	Tough Crowd	hand_position	does	present
+hearthstone	745626	Tough Crowd	return_to_hand	does	present
 hearthstone	745635	Doomkin	disruption	does	present
 hearthstone	745635	Doomkin	resource_gain	*	absent
 hearthstone	745635	Doomkin	steal	does	present
@@ -7174,6 +7173,7 @@ hearthstone	746253	Construct Pylons	temporary_effect	does	present
 hearthstone	746253	Construct Pylons	tribal	does	present
 hearthstone	746254	Carrier	blocking	*	absent
 hearthstone	746254	Carrier	evasion	counters	absent
+hearthstone	746254	Carrier	forced_attack	does	present
 hearthstone	746255	Hallucination	stat_multiply	*	absent
 hearthstone	746261	Immortal	activated	*	absent
 hearthstone	746261	Immortal	coin_economy	*	absent
@@ -7530,7 +7530,6 @@ hearthstone	747444	Body Wrapper	revive	does	present
 hearthstone	747451	Sunkeeper Tarim	symmetric_effect	does	present
 hearthstone	747453	Mirage Caller	copy	does	present
 hearthstone	747453	Mirage Caller	on_play	does	present
-hearthstone	747453	Mirage Caller	stat_set	does	present
 hearthstone	747453	Mirage Caller	summon	does	present
 hearthstone	747455	Volcano	friendly_fire	does	present
 hearthstone	747475	Frozen Crusher	drawback	does	present
@@ -7559,6 +7558,7 @@ hearthstone	747563	Sleepy Resident	disable	does	present
 hearthstone	747563	Sleepy Resident	symmetric_effect	does	present
 hearthstone	747568	Catch of the Day	enemy_benefit	does	present
 hearthstone	747573	Sensory Deprivation	condition	does	present
+hearthstone	747573	Sensory Deprivation	condition_life	does	present
 hearthstone	747573	Sensory Deprivation	copy	does	present
 hearthstone	747573	Sensory Deprivation	destroy	does	present
 hearthstone	747575	Acupuncture	direct_damage	does	present
@@ -7838,7 +7838,6 @@ hs_battlegrounds	748030	Groundshaker	auto_battle	benefits	absent
 hs_battlegrounds	748030	Groundshaker	delayed	*	absent
 hs_battlegrounds	748030	Groundshaker	permanent_growth	*	absent
 hs_battlegrounds	748030	Groundshaker	temporary_buff	does	present
-hs_battlegrounds	748045	See the Light	stat_set	does	present
 hs_battlegrounds	748053	Power of the Storm	selection	does	present
 hs_battlegrounds	748060	Fragrant Phylactery	combat_start	does	present
 hs_battlegrounds	748060	Fragrant Phylactery	stat_condition	does	present
@@ -9299,12 +9298,12 @@ into_the_breach	760942	Stabilizers	spawn_blocking	does	present
 into_the_breach	760942	Stabilizers	upgrade	*	absent
 into_the_breach	760945	Medical Supplies	cheat_death	does	present
 into_the_breach	760945	Medical Supplies	upgrade	*	absent
-into_the_breach	760946	Vek Hormones	attack_mod	does	present
 into_the_breach	760946	Vek Hormones	buff	*	absent
 into_the_breach	760946	Vek Hormones	damage	*	absent
 into_the_breach	760947	Force Amp	buff	*	absent
 into_the_breach	760947	Force Amp	collision_damage	does	present
 into_the_breach	760947	Force Amp	upgrade	*	absent
+into_the_breach	760948	Critical Shields	condition_life	does	present
 into_the_breach	760948	Critical Shields	shield	does	present
 into_the_breach	760948	Critical Shields	upgrade	*	absent
 into_the_breach	760949	Electric Whip	combo_sequence	*	absent
@@ -9335,6 +9334,7 @@ into_the_breach	760963	Aerial Bombs	damage	does	present
 into_the_breach	760963	Aerial Bombs	movement	does	present
 into_the_breach	760963	Aerial Bombs	tribal	*	absent
 into_the_breach	760966	Grappling Hook	forced_movement	does	present
+into_the_breach	760966	Grappling Hook	movement	does	present
 into_the_breach	760966	Grappling Hook	shield	does	present
 into_the_breach	760967	Def. Shrapnel	forced_movement	does	present
 into_the_breach	760967	Def. Shrapnel	ranged	does	present
@@ -9588,6 +9588,7 @@ into_the_breach	761068	Ramming Speed (weapon)	forced_movement	does	present
 into_the_breach	761069	Pull-Tank	buff	*	absent
 into_the_breach	761069	Pull-Tank	exhaust	does	present
 into_the_breach	761069	Pull-Tank	forced_movement	does	present
+into_the_breach	761069	Pull-Tank	movement	grants	present
 into_the_breach	761069	Pull-Tank	summon	does	present
 into_the_breach	761070	Kai Miller	condition	does	present
 into_the_breach	761073	Adam	shield	does	present
@@ -9816,7 +9817,6 @@ marvel_snap	795417	Agent Coulson	on_play	does	present
 marvel_snap	795417	Agent Coulson	points_scoring	benefits	absent
 marvel_snap	795417	Agent Coulson	random_effect	does	present
 marvel_snap	795418	Agent Venom	in_hand_buff	does	present
-marvel_snap	795418	Agent Venom	stat_swap	does	present
 marvel_snap	795420	Agony - Spider-Verse	lanes	benefits	absent
 marvel_snap	795420	Agony - Spider-Verse	merge_attach	does	present
 marvel_snap	795420	Agony - Spider-Verse	movement	does	present
@@ -10351,7 +10351,6 @@ marvel_snap	795794	Mole Man	lanes	benefits	absent
 marvel_snap	795794	Mole Man	on_play	does	present
 marvel_snap	795794	Mole Man	points_scoring	benefits	absent
 marvel_snap	795794	Mole Man	slot_filler	*	absent
-marvel_snap	795794	Mole Man	stat_set	does	present
 marvel_snap	795794	Mole Man	stat_swap	*	absent
 marvel_snap	795797	Monstro	cost_reduction	does	present
 marvel_snap	795797	Monstro	deck_position	does	present
@@ -11015,6 +11014,7 @@ marvel_snap	796223	Hellfire Club	cost_condition	does	present
 marvel_snap	796225	Hotel Inferno	disruption	does	present
 marvel_snap	796226	Island Prison	movement	counters	present
 marvel_snap	796227	Isle of Shhhhh	forced_movement	does	present
+marvel_snap	796227	Isle of Shhhhh	movement	benefits	present
 marvel_snap	796227	Isle of Shhhhh	stakes_wager	benefits	present
 marvel_snap	796228	Isle of Silence	lane_rule	does	present
 marvel_snap	796228	Isle of Silence	passive	counters	present
@@ -12650,6 +12650,7 @@ runeterra	752136	Ante Up	cost_condition	*	absent
 runeterra	752136	Ante Up	cost_reduction	does	present
 runeterra	752151	Mark of Medarda	cost_condition	*	absent
 runeterra	752151	Mark of Medarda	cost_reduction	does	present
+runeterra	752158	Brain Worm	discard	does	present
 runeterra	752158	Brain Worm	generate_cards	*	absent
 runeterra	752158	Brain Worm	hand_disruption	does	present
 runeterra	752158	Brain Worm	random_effect	does	present
@@ -13010,6 +13011,7 @@ shadowverse	752738	Robopup	sacrifice	does	present
 shadowverse	752783	Wandering Bard Elta	drawback	does	present
 shadowverse	752783	Wandering Bard Elta	symmetric_effect	does	present
 shadowverse	752787	Tart Man	hand_disruption	*	absent
+shadowverse	752787	Tart Man	return_to_hand	does	present
 shadowverse	752792	Goblin Fighter	generate_cards	does	present
 shadowverse	752792	Goblin Fighter	on_play	does	present
 shadowverse	752792	Goblin Fighter	random_effect	does	present
@@ -14589,6 +14591,7 @@ sts1	757975	Maw Bank	items_consumables	does	present
 sts1	757975	Maw Bank	passive	does	present
 sts1	757976	Meal Ticket	items_consumables	does	present
 sts1	757976	Meal Ticket	passive	does	present
+sts1	757977	Meat on the Bone	condition_life	does	present
 sts1	757977	Meat on the Bone	regeneration	*	absent
 sts1	757978	Medical Kit	items_consumables	does	present
 sts1	757978	Medical Kit	passive	does	present
@@ -16081,6 +16084,7 @@ sts2	759113	Maw Bank	passive	does	present
 sts2	759115	Meat Cleaver	items_consumables	does	present
 sts2	759115	Meat Cleaver	passive	does	present
 sts2	759115	Meat Cleaver	rest_phase	does	present
+sts2	759116	Meat on the Bone	condition_life	does	present
 sts2	759117	Membership Card	items_consumables	does	present
 sts2	759117	Membership Card	passive	does	present
 sts2	759117	Membership Card	shop_gold	does	present
@@ -16243,6 +16247,7 @@ sts2	759180	Razor Tooth	passive	does	present
 sts2	759181	Red Mask	items_consumables	does	present
 sts2	759181	Red Mask	passive	does	present
 sts2	759182	Red Skull	buff	does	present
+sts2	759182	Red Skull	condition_life	does	present
 sts2	759183	Regal Pillow	items_consumables	does	present
 sts2	759183	Regal Pillow	passive	does	present
 sts2	759184	Regalite	generate_cards	benefits	present
@@ -16345,7 +16350,6 @@ sts2	759226	Tea of Discourtesy	items_consumables	does	present
 sts2	759226	Tea of Discourtesy	passive	does	present
 sts2	759227	The Abacus	items_consumables	does	present
 sts2	759227	The Abacus	passive	does	present
-sts2	759228	The Boot	attack_mod	does	present
 sts2	759228	The Boot	damage	benefits	absent
 sts2	759229	The Courier	items_consumables	does	present
 sts2	759229	The Courier	passive	does	present
@@ -16522,7 +16526,6 @@ sts2	759324	Touch of Insanity	cost_set	does	present
 sts2	759324	Touch of Insanity	in_hand_buff	does	present
 sts2	759324	Touch of Insanity	items_consumables	does	present
 sts2	759325	Vulnerable Potion	items_consumables	does	present
-sts2	759328	Accuracy	attack_mod	does	present
 sts2	759328	Accuracy	buff	*	absent
 sts2	759328	Accuracy	damage	*	absent
 sts2	759329	Adaptable	cheat_death	does	present
@@ -18077,7 +18080,6 @@ wh_aos_4th	791455	Draught of the Finest Magmalt	temporary_effect	*	absent
 wh_aos_4th	791483	Plucky Git	condition_life	does	present
 wh_aos_4th	791494	Notorious and Vicious	debuff	does	present
 wh_aos_4th	791494	Notorious and Vicious	zone_control	does	present
-wh_aos_4th	791525	The More Glorious Slaughter	attack_mod	does	present
 wh_aos_4th	791525	The More Glorious Slaughter	buff	*	absent
 wh_aos_4th	791525	The More Glorious Slaughter	destroy	*	absent
 wh_aos_4th	791525	The More Glorious Slaughter	turn_start	does	present
@@ -18302,7 +18304,6 @@ wh_aos_4th	793590	Freeguild Fusiliers	piercing	does	present
 wh_aos_4th	793590	Freeguild Fusiliers	ranged	does	present
 wh_aos_4th	793590	Freeguild Fusiliers	sacrifice	does	present
 wh_aos_4th	793590	Freeguild Fusiliers	zone_of_control	*	absent
-wh_aos_4th	793591	Longbeards	attack_mod	does	present
 wh_aos_4th	793591	Longbeards	buff	*	absent
 wh_aos_4th	793591	Longbeards	random_effect	does	present
 wh_aos_4th	793593	Ironbreakers	movement	*	absent
@@ -18448,7 +18449,6 @@ wh_aos_4th	794135	Gluttons	terrain	*	absent
 wh_aos_4th	794175	Morkspit Marsh	debuff	does	present
 wh_aos_4th	794175	Morkspit Marsh	summon	*	absent
 wh_aos_4th	794214	Landmark of Ghyran	advantage	*	absent
-wh_aos_4th	794214	Landmark of Ghyran	attack_mod	does	present
 wh_aos_4th	794214	Landmark of Ghyran	aura	does	present
 wh_aos_4th	794214	Landmark of Ghyran	bodyguard	does	present
 wh_aos_4th	794214	Landmark of Ghyran	counter_spell	does	present
@@ -18510,7 +18510,6 @@ wh_aos_4th	794377	Corvus Cabal	ranged	does	present
 wh_aos_4th	794377	Corvus Cabal	reserve_bench	does	present
 wh_aos_4th	794377	Corvus Cabal	start_of_game	does	present
 wh_aos_4th	794377	Corvus Cabal	zone_of_control	*	absent
-wh_aos_4th	794400	Ma Maegran, Chooser of the Mighty	attack_mod	does	present
 wh_aos_4th	794400	Ma Maegran, Chooser of the Mighty	condition_life	does	present
 wh_aos_4th	794400	Ma Maegran, Chooser of the Mighty	damage	does	present
 wh_aos_4th	794400	Ma Maegran, Chooser of the Mighty	delayed	*	absent
@@ -18549,7 +18548,6 @@ wh_aos_4th	794510	Dais Arcanum	zone_of_control	*	absent
 wh_aos_4th	794524	Lord-Castellant	advantage	*	absent
 wh_aos_4th	794524	Lord-Castellant	once_per_game	does	present
 wh_aos_4th	794524	Lord-Castellant	piercing	does	present
-wh_aos_4th	794538	Retributors	attack_mod	does	present
 wh_aos_4th	794538	Retributors	buff	*	absent
 wh_aos_4th	794538	Retributors	condition_life	does	present
 wh_aos_4th	794538	Retributors	damage	*	absent
@@ -18613,6 +18611,7 @@ wh_bloodbowl3	794611	Sports Wizard	delayed	*	absent
 wh_bloodbowl3	794611	Sports Wizard	modal_choice	does	present
 wh_bloodbowl3	794611	Sports Wizard	once_per_game	does	present
 wh_bloodbowl3	794611	Sports Wizard	piercing	*	absent
+wh_bloodbowl3	794611	Sports Wizard	transform	does	present
 wh_bloodbowl3	794611	Sports Wizard	turn_end	does	present
 wh_bloodbowl3	794613	Desperate Measures	copy	*	absent
 wh_bloodbowl3	794614	Catch	random_effect	*	absent
@@ -18650,7 +18649,6 @@ wh_bloodbowl3	794644	Jump Up	combat	*	absent
 wh_bloodbowl3	794646	Safe Pair of Hands	disable	*	absent
 wh_bloodbowl3	794649	Eye Gouge	activated	*	absent
 wh_bloodbowl3	794649	Eye Gouge	suppress	does	present
-wh_bloodbowl3	794650	Lethal Flight	attack_mod	does	present
 wh_bloodbowl3	794650	Lethal Flight	permanent_growth	*	absent
 wh_bloodbowl3	794650	Lethal Flight	team_play	*	absent
 wh_bloodbowl3	794652	Pile Driver (Active)	protection	*	absent
@@ -19419,7 +19417,6 @@ wh_killteam	788948	Chem-breather	disable	*	absent
 wh_killteam	788950	Incendiary Shells	items_consumables	does	present
 wh_killteam	788952	Wicked Blades	items_consumables	does	present
 wh_killteam	788952	Wicked Blades	shield	*	absent
-wh_killteam	788955	Cursed Rounds	attack_mod	does	present
 wh_killteam	788955	Cursed Rounds	buff	does	present
 wh_killteam	788955	Cursed Rounds	damage_types	*	absent
 wh_killteam	788955	Cursed Rounds	piercing	does	present
@@ -19874,7 +19871,6 @@ wh_killteam	789783	Spirit Stones	resource_gain	does	present
 wh_killteam	789789	2. Mind Control	multi_attack	*	absent
 wh_killteam	789789	2. Mind Control	random_effect	does	present
 wh_killteam	789789	2. Mind Control	steal	does	present
-wh_killteam	789796	Hammerhand	attack_mod	does	present
 wh_killteam	789804	Death Hex	damage_reduction	*	absent
 wh_killteam	789804	Death Hex	debuff	does	present
 wh_killteam	789813	Reanimation Protocols	cheat_death	does	present
@@ -20094,7 +20090,6 @@ wh_killteam	790525	Field Medic	heal	does	present
 wh_killteam	790525	Field Medic	movement	does	present
 wh_killteam	790525	Field Medic	passive	*	absent
 wh_killteam	790526	Grenadier	adjacency	*	absent
-wh_killteam	790526	Grenadier	attack_mod	does	present
 wh_killteam	790526	Grenadier	cost_increase	does	present
 wh_killteam	790526	Grenadier	disable	*	absent
 wh_killteam	790526	Grenadier	drawback	*	absent
@@ -20430,7 +20425,6 @@ wh_underworlds	762762	Berserk Charge	items_consumables	does	present
 wh_underworlds	762763	Bloodslick	items_consumables	does	present
 wh_underworlds	762764	Deadly Spin	items_consumables	does	present
 wh_underworlds	762765	Ever-Advancing	items_consumables	does	present
-wh_underworlds	762766	Frenzy	attack_mod	does	present
 wh_underworlds	762766	Frenzy	movement	*	absent
 wh_underworlds	762766	Frenzy	multi_attack	*	absent
 wh_underworlds	762766	Frenzy	random_effect	*	absent
@@ -21294,6 +21288,7 @@ wh_underworlds	764572	Hunter of Souls	items_consumables	does	present
 wh_underworlds	764573	Lurelight	adjacency	does	present
 wh_underworlds	764573	Lurelight	death_trigger	does	present
 wh_underworlds	764573	Lurelight	destroy	*	absent
+wh_underworlds	764573	Lurelight	discard	does	present
 wh_underworlds	764573	Lurelight	modal_choice	does	present
 wh_underworlds	764573	Lurelight	points_scoring	does	present
 wh_underworlds	764573	Lurelight	scoring_objectives	*	absent
