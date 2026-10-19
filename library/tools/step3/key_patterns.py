@@ -5,7 +5,7 @@ spaces as \\s+, numbers as \\d+, word boundaries at word ends. A candidate is te
 from) and kept only if it matches there at least MIN times and is 90%+ right (right as key.py scores: the key's concepts, a narrower or
 a broader one below the four branches). Both directions are run; the kept candidates of a game and concept are joined into one regex.
 Claude's choices (not in the plan): numbers as \\d+, a phrase must be at least 4 characters and not only the name, MIN = 3 held-out
-matches, and the role is the concept's most common role among the existing patterns ('does' when it has none).
+matches, never a candidate that matches an entry a hand review dropped the concept from (regression.tsv 'absent'), and the role is the concept's most common role among the existing patterns ('does' when it has none).
 Writes the 'new' lines of tools/step3/decisions.tsv (narrow lines are kept as they are) and prints counts only.
 Usage: key_patterns.py [db]"""
 import collections, json, os, random, re, sqlite3, sys
@@ -19,6 +19,13 @@ c = sqlite3.connect(DB)
 roles = collections.defaultdict(collections.Counter)
 for k, r in c.execute('SELECT concept, role FROM concept_patterns'): roles[k][r] += 1
 role = lambda k: roles[k].most_common(1)[0][0] if roles[k] else 'does'
+import csv
+from concept_tree import primary, REMOVED
+mk = dict(c.execute('SELECT old_id, kept_id FROM merged_entities'))
+absent = collections.defaultdict(set)   # (game, concept) -> entities a hand review says must not have it (regression.tsv)
+for r in csv.DictReader(open(os.path.join(TOOLS, 'regression.tsv'), encoding='utf-8'), delimiter='\t'):
+    if r['expect'] == 'absent' and r['concept'] not in REMOVED:   # the lines name old concepts: their first new id, as regression.py checks
+        absent[r['game'], primary(r['concept'])[0]].add(mk.get(int(r['entity']), int(r['entity'])))
 ent = {i: (g, n, t) for i, g, n, t in c.execute('SELECT id, game, name, text FROM entities')}
 
 def rx(phrase):
@@ -53,6 +60,7 @@ for g in P.GAMES:
                 if r.search(text[i]):
                     n += 1; ok += P.right(k, keyset[i])
             stats['candidates'] += 1
+            if any(r.search(P.norm_text(g, ent[e][1], ent[e][2])) for e in absent[g, k] if e in ent): stats['hit a reviewed drop'] += 1; continue
             if n >= MIN and ok >= PREC * n: kept[k].add(p)
     for k in sorted(kept):
         ps = sorted(kept[k]); stats['kept'] += len(ps); stats['concepts'] += 1

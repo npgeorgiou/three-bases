@@ -45,6 +45,8 @@ mk = dict(q('SELECT old_id, kept_id FROM merged_entities'))
 for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t'):
     if r['expect'] == 'present':
         for k in primary(r['concept']): known[k].add(mk.get(int(r['entity']), int(r['entity'])))
+from concept_tree import REMOVED
+dropped = {(mk.get(int(r['entity']), int(r['entity'])), primary(r['concept'])[0]) for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'absent' and r['concept'] not in REMOVED}
 ents = collections.defaultdict(list)
 for i, g, n, t in q('SELECT id, game, name, text FROM entities'): ents[g].append((i, P.norm_text(g, n, t)))
 games_all = [g for g, in q('SELECT id FROM games')]
@@ -67,9 +69,8 @@ for kind, p, games, new in dec:
         have = {e for e, in q("SELECT entity FROM entity_concepts WHERE concept=? AND role=? AND method='text_pattern'", k, role)}
         for e, t in ents[gg]:
             if not orx.search(t) or nrx.search(t): continue
-            if e in known[k]:
-                m = orx.search(t)
-                kept += c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, k, role, 'text_pattern', 'kept: judged right, step 3')).rowcount
+            if e in known[k]:   # never where a hand review dropped the concept (regression.tsv 'absent', applied earlier)
+                if (e, k) not in dropped: kept += c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, k, role, 'text_pattern', 'kept: judged right, step 3')).rowcount
                 continue
             if e in have and not any(o.search(t) for o in others):
                 removed += c.execute("DELETE FROM entity_concepts WHERE entity=? AND concept=? AND role=? AND method='text_pattern'", (e, k, role)).rowcount
