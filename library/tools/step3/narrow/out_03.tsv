@@ -28,3 +28,6 @@ zone_control|does|*|\bobjective	into_the_breach,dnd5e,mtg	(?!)
 damage_reduction|does|wh_40k_10e|\bfeel no pain\b|\binvulnerable save\b|\bsubtract 1 from the damage characteristic\b|\bworsen the armour penetration\b|\bdamage characteristic of that attack by 1\b	wh_40k_10e	\bsubtract 1 from the damage characteristic\b|\bworsen the armour penetration\b
 stat_gain|does|*|gains? \+\d+	duelyst,shadowverse,hearthstone	(?s)^(?!.*(whenever|at the (end|start) of|after (this|it|you)|each time|for each|swallowed|permanently|dies, )).*?gains? \+\d+
 stat_gain|does|*|gains? \+\d+	into_the_breach,faeria,hs_battlegrounds,inscryption	keep
+cooldowns|does|wh_aos_4th|\bonce per turn\b	wh_aos_4th	(?!)
+generate_cards|does|*|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b	shadowverse	\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)(?![^.]{0,60}\b(of (them|it|those)|among|pile|copies of|copy of|in your hand)\b)[^.]{0,60}\binto your hand\b
+generate_cards|does|*|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b	mtg	(?!)

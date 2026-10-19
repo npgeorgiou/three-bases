@@ -1,0 +1,270 @@
+{
+"740620": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"summon",
+"a Chime is created on each empty adjacent space"
+],
+[
+"adjacency",
+"each empty adjacent space"
+]
+],
+"740622": [
+[
+"on_kill",
+"When a card with this kills an opposing card"
+],
+[
+"temporary_buff",
+"This power is removed after a battle ends"
+]
+],
+"740623": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"merge_attach",
+"gain the Detonator sigil"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+]
+],
+"740629": [
+[
+"on_attack",
+"After attacking"
+],
+[
+"self_destruct",
+"a card bearing this sigil perishes"
+]
+],
+"740630": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"merge_attach",
+"gain the Brittle sigil"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+]
+],
+"740633": [
+[
+"movement",
+"will move to that space to receive the strike instead"
+],
+[
+"bodyguard",
+"will move to that space to receive the strike instead"
+]
+],
+"740638": [
+[
+"death_trigger",
+"When a Card bearing this Sigil dies"
+],
+[
+"aoe_damage",
+"all adjacent cards (those to the left, right and front of the card) are dealt 10 damage"
+],
+[
+"adjacency",
+"those to the left, right and front of the card"
+]
+],
+"740640": [
+[
+"death_trigger",
+"When another creature you own dies"
+],
+[
+"revive",
+"it is returned to life and dies again immediately"
+],
+[
+"repeat_trigger",
+"triggering any on-death effects an additional time"
+]
+],
+"740643": [
+[
+"activated",
+"Activate: Pay 1 Energy to deal 1 damage"
+],
+[
+"ping",
+"deal 1 damage to the creature across from a card bearing this sigil"
+]
+],
+"740646": [
+[
+"transform",
+"transforms a card into a Hydra"
+],
+[
+"deck_condition",
+"represented in the Health of creatures in your deck"
+],
+[
+"variety_payoff",
+"a creature of each tribe in your deck"
+]
+],
+"740651": [
+[
+"death_trigger",
+"When Gem Vessels on the owner's side of the board die"
+],
+[
+"aoe_damage",
+"are dealt 10 damage"
+],
+[
+"friendly_fire",
+"adjacent friendly creatures"
+]
+],
+"740654": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"generate_cards",
+"a random card is created in your hand"
+],
+[
+"random_effect",
+"a random card"
+]
+],
+"740655": [
+[
+"death_trigger",
+"when it perishes"
+],
+[
+"generate_cards",
+"a random card is created in your hand"
+],
+[
+"link_formation",
+"within a circuit"
+],
+[
+"random_effect",
+"a random card"
+]
+],
+"740657": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"hand_deck_swap",
+"discard your hand then draw a new hand of 4 cards"
+]
+],
+"740672": [
+[
+"link_formation",
+"complete a circuit"
+],
+[
+"null_body",
+"provides no effect"
+]
+],
+"740675": [
+[
+"stat_gain",
+"increased power"
+],
+[
+"death_trigger",
+"if a card bearing this sigil perishes"
+],
+[
+"permanent_loss",
+"permanently removed from your deck"
+]
+],
+"740679": [
+[
+"immunity",
+"If a creature would attack a card bearing this sigil, it does not"
+]
+],
+"740684": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"merge_attach",
+"gain the Nano Armor sigil"
+],
+[
+"target_choice",
+"its owner chooses a creature"
+]
+],
+"740695": [
+[
+"on_damaged",
+"After a card bearing this sigil is dealt damage"
+],
+[
+"stat_gain",
+"swap its Power and Health"
+]
+],
+"740701": [
+[
+"on_play",
+"When a card bearing this sigil is played"
+],
+[
+"items_consumables",
+"a random item"
+],
+[
+"random_effect",
+"random item"
+]
+],
+"740703": [
+[
+"death_trigger",
+"When a card bearing this sigil perishes"
+],
+[
+"revive",
+"a copy of it is created in your hand"
+]
+],
+"740706": [
+[
+"sacrifice",
+"when a card bearing it is sacrificed"
+],
+[
+"resource_gain",
+"count as 3 Blood rather than 1 Blood"
+]
+]
+}

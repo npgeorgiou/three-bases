@@ -1,0 +1,75 @@
+{
+"750346": [
+[
+"generate_cards",
+"Gives a temporary spell"
+],
+[
+"on_play",
+"when played"
+],
+[
+"turn_start",
+"start of each recruit phase"
+]
+],
+"750351": [
+[
+"items_consumables",
+"Battlegrounds items"
+],
+[
+"shop_gold",
+"bought"
+]
+],
+"750360": [],
+"750361": [
+[
+"activated",
+"pay gold to use the effect"
+],
+[
+"cooldowns",
+"Once per recruit turn"
+]
+],
+"750363": [
+[
+"random_effect",
+"Randomly assigned"
+],
+[
+"death_count",
+"after three friendly aberrations die"
+],
+[
+"generate_cards",
+"added to hand"
+]
+],
+"750365": [
+[
+"shop_gold",
+"A special shop"
+],
+[
+"coin_economy",
+"a second currency"
+],
+[
+"resource_banking",
+"carries over"
+],
+[
+"turn_number",
+"on set turns"
+]
+],
+"750367": [
+[
+"tribal",
+"only in lobbies with pirates"
+]
+]
+}

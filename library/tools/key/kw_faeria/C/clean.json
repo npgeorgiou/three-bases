@@ -1,0 +1,22 @@
+{
+"741074": [
+[
+"placement_rules",
+"Can only travel over lakes and ocean"
+],
+[
+"self_destruct",
+"drowns at end of turn on other land"
+]
+],
+"741075": [
+[
+"removal",
+"Removes a creature from the game"
+],
+[
+"death_trigger",
+"until the swallower dies"
+]
+]
+}

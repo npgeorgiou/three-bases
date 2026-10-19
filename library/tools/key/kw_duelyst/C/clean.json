@@ -1,0 +1,74 @@
+{
+"741528": [
+[
+"on_damaged",
+"Whenever your General takes damage"
+],
+[
+"self_destruct",
+"It's destroyed at 0 Durability"
+]
+],
+"741530": [
+[
+"self_destruct",
+"Only exists until end of turn"
+],
+[
+"temporary_effect",
+"until end of turn"
+]
+],
+"741536": [
+[
+"territory_trigger",
+"while on the enemy side of the battlefield"
+],
+[
+"buff",
+"Gains a bonus"
+]
+],
+"741542": [
+[
+"death_trigger",
+"When this dies"
+],
+[
+"summon",
+"leaves behind a 0/1 Egg"
+],
+[
+"revive",
+"hatches into the same minion"
+],
+[
+"delayed",
+"before your next turn"
+]
+],
+"741552": [
+[
+"flanking",
+"When attacking from behind"
+],
+[
+"damage",
+"extra damage"
+]
+],
+"741554": [
+[
+"summon",
+"Summon as a 0/10 Structure"
+],
+[
+"transform",
+"transforms into its true form"
+],
+[
+"delayed",
+"after a number of turns"
+]
+]
+}

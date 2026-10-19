@@ -1,0 +1,76 @@
+{
+"760829": [
+[
+"placement_rules",
+"positioned at any terrain tile, except mountains and other units"
+],
+[
+"immunity",
+"not affected by lava or A.C.I.D. tiles"
+]
+],
+"760834": [
+[
+"debuff",
+"Weapon damage against this unit is doubled"
+],
+[
+"silence",
+"Natural Armor is disabled"
+]
+],
+"760835": [
+[
+"stat_gain",
+"damage is increased by 1 on its next attack"
+],
+[
+"heal",
+"repairing while Boosted will heal 2 points"
+]
+],
+"760837": [
+[
+"disable",
+"unable to move or attack"
+],
+[
+"shield",
+"Any damage to a frozen unit is negated"
+]
+],
+"760851": [
+[
+"damage_over_time",
+"1 damage all friendly units every turn"
+],
+[
+"aoe_damage",
+"all friendly units"
+]
+],
+"760853": [
+[
+"movement",
+"can walk in Water"
+]
+],
+"760854": [
+[
+"aura",
+"enhancing all Vek"
+],
+[
+"stat_gain",
+"+1 HP"
+],
+[
+"regeneration",
+"regeneration"
+],
+[
+"death_trigger",
+"explode on death"
+]
+]
+}
