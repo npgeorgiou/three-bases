@@ -911,3 +911,5 @@ undo	sts2	on_damaged
 undo	runeterra	activated
 undo	faeria	stat_gain
 undo	marvel_snap	tempo
+undo	faeria	cost_set
+undo	faeria	tribal
