@@ -19,7 +19,6 @@
  },
  "741043": {
   "add": [
-   "buff",
    "merge_attach",
    "forced_movement",
    "boss_phases",
@@ -58,7 +57,6 @@
  },
  "741023": {
   "add": [
-   "buff",
    "merge_attach",
    "deck_modification"
   ],
@@ -98,7 +96,6 @@
  },
  "740975": {
   "add": [
-   "cost_type",
    "sacrifice"
   ],
   "drop": []
@@ -281,7 +278,6 @@
  "740640": {
   "add": [
    "revive",
-   "summon",
    "death_trigger",
    "death_trigger:benefits",
    "repeat_trigger"
@@ -356,9 +352,7 @@
    "graveyard:cost",
    "random_effect"
   ],
-  "drop": [
-   "stat_gain"
-  ]
+  "drop": []
  },
  "740678": {
   "add": [
@@ -1037,7 +1031,6 @@
   "add": [
    "null_body",
    "aura",
-   "buff",
    "multiple_resources:benefits"
   ],
   "drop": []
@@ -1213,8 +1206,7 @@
    "death_trigger",
    "bounce_enemy",
    "return_to_hand",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "death_count"
@@ -1590,8 +1582,7 @@
  "740719": {
   "add": [
    "adjacency",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
@@ -1708,7 +1699,6 @@
  "740660": {
   "add": [
    "on_play",
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -1819,7 +1809,6 @@
  "741019": {
   "add": [
    "items_consumables",
-   "draw",
    "tutor"
   ],
   "drop": []

@@ -345,18 +345,14 @@
  "789294": {
   "add": [
    "aura",
-   "debuff",
    "advantage:counters"
   ],
-  "drop": [
-   "advantage"
-  ]
+  "drop": []
  },
  "789940": {
   "add": [
    "stat_loss",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": [
    "advantage"
@@ -638,8 +634,7 @@
  "789813": {
   "add": [
    "cheat_death",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "destroy"
@@ -732,8 +727,7 @@
  },
  "789080": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "destroy"
@@ -889,8 +883,7 @@
  },
  "788682": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "destroy",
@@ -2920,7 +2913,6 @@
  "789116": {
   "add": [
    "aura",
-   "buff",
    "damage_reduction",
    "passive"
   ],
@@ -3762,7 +3754,6 @@
   "add": [
    "damage_prevention:counters",
    "cooldowns",
-   "cost_increase",
    "cost_set",
    "once_per_game"
   ],
@@ -3893,7 +3884,6 @@
   "add": [
    "damage_reduction",
    "aura",
-   "buff",
    "activated",
    "type_grant"
   ],
@@ -4157,8 +4147,7 @@
   ],
   "drop": [
    "aura",
-   "destroy",
-   "stat_loss"
+   "destroy"
   ]
  },
  "790876": {

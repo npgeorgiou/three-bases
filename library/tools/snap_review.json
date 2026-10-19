@@ -11,7 +11,6 @@
   "add": [
    "autonomous_units",
    "drawback",
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -59,8 +58,7 @@
   "add": [
    "recycle",
    "permanent_growth",
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": []
  },
@@ -195,8 +193,7 @@
  "Captain Carter": {
   "add": [
    "stat_gain",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
@@ -209,37 +206,32 @@
  },
  "Captain America": {
   "add": [
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
  "CaptainAmericaAvengers": {
   "add": [
    "aura",
-   "buff",
    "tribal"
   ],
   "drop": []
  },
  "Blue Marvel": {
   "add": [
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
  "Cerebro": {
   "add": [
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
  "DoomBot 2099": {
   "add": [
    "aura",
-   "buff",
    "tribal"
   ],
   "drop": []
@@ -320,8 +312,8 @@
  "Annihilus": {
   "add": [
    "stat_loss:benefits",
-   "board_clog",
-   "donate"
+   "donate",
+   "board_clog"
   ],
   "drop": [
    "steal"
@@ -364,9 +356,7 @@
    "board_limit",
    "slot_filler:benefits"
   ],
-  "drop": [
-   "slot_filler"
-  ]
+  "drop": []
  },
  "Emperor Hulkling": {
   "add": [
@@ -465,7 +455,6 @@
  "Ghost Rider": {
   "add": [
    "revive",
-   "summon",
    "discard:benefits",
    "graveyard"
   ],
@@ -537,9 +526,7 @@
    "upgrade",
    "null_body:benefits"
   ],
-  "drop": [
-   "null_body"
-  ]
+  "drop": []
  },
  "Havok": {
   "add": [
@@ -622,29 +609,25 @@
  },
  "Dum Dum Dugan": {
   "add": [
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
  "Excalibur": {
   "add": [
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
  "Ka-Zar": {
   "add": [
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
  "Lancelot": {
   "add": [
    "aura",
-   "buff",
    "stat_gain:benefits"
   ],
   "drop": []
@@ -652,7 +635,6 @@
  "Jack Flag": {
   "add": [
    "aura",
-   "buff",
    "stat_gain:benefits"
   ],
   "drop": []
@@ -739,7 +721,6 @@
  "Makkari": {
   "add": [
    "autonomous_units",
-   "random_effect",
    "movement",
    "free_play"
   ],
@@ -876,7 +857,6 @@
  "Omega Red": {
   "add": [
    "aura",
-   "buff",
    "control_reward"
   ],
   "drop": []
@@ -884,7 +864,6 @@
  "Ozymandias": {
   "add": [
    "aura",
-   "buff",
    "tribal",
    "null_body:benefits"
   ],
@@ -893,12 +872,9 @@
  "Patriot": {
   "add": [
    "aura",
-   "buff",
    "null_body:benefits"
   ],
-  "drop": [
-   "null_body"
-  ]
+  "drop": []
  },
  "Once And Future": {
   "add": [],
@@ -931,9 +907,7 @@
    "free_play",
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "Professor X": {
   "add": [
@@ -1189,7 +1163,6 @@
  },
  "Space Stone": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -1328,7 +1301,6 @@
  },
  "Temporal Manipulation": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -1361,7 +1333,6 @@
  "Thor - Avengers": {
   "add": [
    "generate_cards",
-   "draw",
    "tutor",
    "tribal"
   ],
@@ -1512,13 +1483,10 @@
  "Widow's Bite": {
   "add": [
    "draw:counters",
-   "drawback",
    "junk_cards",
    "disruption"
   ],
-  "drop": [
-   "draw"
-  ]
+  "drop": []
  },
  "Wilson Fisk": {
   "add": [
@@ -1531,7 +1499,6 @@
   "add": [
    "forced_movement",
    "adjacency",
-   "disruption",
    "forced_placement"
   ],
   "drop": []
@@ -1552,7 +1519,6 @@
  "Victoria Hand": {
   "add": [
    "aura",
-   "buff",
    "generate_cards:benefits"
   ],
   "drop": []
@@ -1580,7 +1546,6 @@
  "Spider-Man": {
   "add": [
    "forced_movement",
-   "disruption",
    "forced_placement"
   ],
   "drop": []
@@ -1711,9 +1676,7 @@
   "add": [
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "Alioth": {
   "add": [
@@ -1732,9 +1695,7 @@
   "add": [
    "slot_filler:benefits"
   ],
-  "drop": [
-   "slot_filler"
-  ]
+  "drop": []
  },
  "Anti-Venom": {
   "add": [
@@ -1951,7 +1912,6 @@
  },
  "Domino": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -2016,14 +1976,11 @@
   "add": [
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "Evolved Hulk": {
   "add": [
    "in_hand_buff",
-   "stat_gain",
    "permanent_growth"
   ],
   "drop": []
@@ -2122,8 +2079,7 @@
  },
  "Gwenpool": {
   "add": [
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": []
  },
@@ -2167,9 +2123,7 @@
    "slot_filler:benefits",
    "permanent_growth"
   ],
-  "drop": [
-   "slot_filler"
-  ]
+  "drop": []
  },
  "Hydro-Man": {
   "add": [
@@ -2191,9 +2145,7 @@
   "add": [
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "Invisible Woman First Steps": {
   "add": [
@@ -2220,13 +2172,11 @@
    "cost_set:benefits"
   ],
   "drop": [
-   "cost_reduction",
-   "cost_set"
+   "cost_reduction"
   ]
  },
  "Jean Grey": {
   "add": [
-   "disruption",
    "forced_placement",
    "symmetric_effect"
   ],
@@ -2360,7 +2310,6 @@
  },
  "Magneto": {
   "add": [
-   "disruption",
    "forced_placement"
   ],
   "drop": []
@@ -2388,9 +2337,7 @@
   "add": [
    "slot_filler:benefits"
   ],
-  "drop": [
-   "slot_filler"
-  ]
+  "drop": []
  },
  "Miles Morales Spider-Man": {
   "add": [
@@ -2500,7 +2447,6 @@
  },
  "Polaris": {
   "add": [
-   "disruption",
    "forced_placement"
   ],
   "drop": []
@@ -2522,9 +2468,7 @@
   "add": [
    "slot_filler:benefits"
   ],
-  "drop": [
-   "slot_filler"
-  ]
+  "drop": []
  },
  "Quake": {
   "add": [
@@ -2547,7 +2491,6 @@
  "Red Hulk": {
   "add": [
    "in_hand_buff",
-   "stat_gain",
    "permanent_growth"
   ],
   "drop": []
@@ -2631,9 +2574,7 @@
   "add": [
    "null_body:benefits"
   ],
-  "drop": [
-   "null_body"
-  ]
+  "drop": []
  },
  "Shang-Chi": {
   "add": [
@@ -2748,9 +2689,7 @@
   "add": [
    "slot_filler:benefits"
   ],
-  "drop": [
-   "slot_filler"
-  ]
+  "drop": []
  },
  "Thena": {
   "add": [
@@ -2781,9 +2720,7 @@
   "add": [
    "slot_filler:benefits"
   ],
-  "drop": [
-   "slot_filler"
-  ]
+  "drop": []
  },
  "Widow's Kiss": {
   "add": [
@@ -2928,9 +2865,7 @@
   "add": [
    "slot_filler:benefits"
   ],
-  "drop": [
-   "slot_filler"
-  ]
+  "drop": []
  },
  "Collapsed Mine": {
   "add": [
@@ -3012,9 +2947,7 @@
    "destroy",
    "sacrifice"
   ],
-  "drop": [
-   "destroy:benefits"
-  ]
+  "drop": []
  },
  "Great Web": {
   "add": [
@@ -3045,9 +2978,7 @@
   "add": [
    "movement:counters"
   ],
-  "drop": [
-   "movement"
-  ]
+  "drop": []
  },
  "Isle of Shhhhh": {
   "add": [
@@ -3108,8 +3039,8 @@
  },
  "Lechuguilla": {
   "add": [
-   "drawback",
-   "junk_cards"
+   "junk_cards",
+   "drawback"
   ],
   "drop": [
    "recycle"
@@ -3225,7 +3156,6 @@
  },
  "Otto's Lab": {
   "add": [
-   "disruption",
    "forced_placement",
    "hand_disruption"
   ],
@@ -3279,9 +3209,7 @@
   "add": [
    "slot_filler:benefits"
   ],
-  "drop": [
-   "slot_filler"
-  ]
+  "drop": []
  },
  "Rickety Bridge": {
   "add": [
@@ -3299,9 +3227,7 @@
   "add": [
    "slot_filler:benefits"
   ],
-  "drop": [
-   "slot_filler"
-  ]
+  "drop": []
  },
  "Sanctum Snaptorem": {
   "add": [
@@ -3385,8 +3311,7 @@
  },
  "Ta Lo": {
   "add": [
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": []
  },
@@ -3530,14 +3455,11 @@
    "destroy",
    "sacrifice"
   ],
-  "drop": [
-   "destroy:benefits"
-  ]
+  "drop": []
  },
  "Wakandan Embassy": {
   "add": [
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": []
  },

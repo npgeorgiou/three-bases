@@ -80,7 +80,6 @@
  },
  "757358": {
   "add": [
-   "board_clog",
    "donate",
    "enemy_benefit"
   ],
@@ -412,7 +411,6 @@
  },
  "757400": {
   "add": [
-   "deckbuilding_effect",
    "variety_payoff"
   ],
   "drop": []
@@ -935,7 +933,6 @@
  },
  "756544": {
   "add": [
-   "disruption",
    "forced_placement"
   ],
   "drop": [
@@ -1328,7 +1325,6 @@
    "stat_gain",
    "deckbuilding_effect",
    "copy",
-   "generate_cards",
    "hero_power",
    "rows",
    "summon"
@@ -1393,7 +1389,6 @@
   ],
   "drop": [
    "forced_placement",
-   "forced_movement",
    "stat_condition",
    "turn_start"
   ]
@@ -1577,7 +1572,6 @@
    "stat_gain",
    "condition",
    "copy",
-   "generate_cards",
    "free_play",
    "graveyard",
    "haste",
@@ -1859,8 +1853,7 @@
    "rows"
   ],
   "drop": [
-   "forced_placement",
-   "forced_movement"
+   "forced_placement"
   ]
  },
  "756955": {
@@ -1924,7 +1917,6 @@
    "banish",
    "stat_gain",
    "copy",
-   "generate_cards",
    "damage",
    "death_trigger",
    "delayed",
@@ -2169,7 +2161,6 @@
    "tribal",
    "free_play",
    "copy",
-   "generate_cards",
    "damage_reduction:grants",
    "on_play",
    "summon"
@@ -2350,7 +2341,6 @@
   "add": [
    "adjacency",
    "damage",
-   "board_clog",
    "donate",
    "enemy_benefit",
    "movement",
@@ -2418,9 +2408,7 @@
    "on_play",
    "rows"
   ],
-  "drop": [
-   "forced_movement"
-  ]
+  "drop": []
  },
  "757405": {
   "add": [
@@ -2429,7 +2417,6 @@
    "banish",
    "condition_count",
    "copy",
-   "generate_cards",
    "high_cost:benefits",
    "on_play",
    "summon"

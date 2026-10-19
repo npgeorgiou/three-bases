@@ -44,8 +44,7 @@
  },
  "791375": {
   "add": [
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
@@ -114,22 +113,19 @@
  },
  "793291": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
  "793276": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
  "791257": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -395,7 +391,6 @@
  "794214": {
   "add": [
    "revive",
-   "summon",
    "bodyguard",
    "buff",
    "debuff",
@@ -414,6 +409,7 @@
    "ranged",
    "reactions",
    "spell_power",
+   "summon",
    "symmetric_effect",
    "terrain",
    "zone_control"
@@ -514,7 +510,6 @@
  "791136": {
   "add": [
    "revive:counters",
-   "summon:counters",
    "heal:counters",
    "passive"
   ],
@@ -601,8 +596,7 @@
    "activated",
    "once_per_game",
    "random_effect",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "destroy"
@@ -615,7 +609,6 @@
    "stat_gain",
    "cooldowns",
    "revive",
-   "summon",
    "temporary_effect",
    "turn_end",
    "zone_control"
@@ -899,7 +892,6 @@
   "add": [
    "death_trigger",
    "aura",
-   "buff",
    "condition_count",
    "passive",
    "piercing",
@@ -941,7 +933,6 @@
  "792879": {
   "add": [
    "aura",
-   "buff",
    "stat_gain",
    "passive"
   ],
@@ -1100,7 +1091,6 @@
   "add": [
    "modal_choice",
    "revive",
-   "summon",
    "stat_gain",
    "stat_loss",
    "buff",
@@ -1584,7 +1574,6 @@
   "add": [
    "life_payment",
    "revive",
-   "summon",
    "cooldowns",
    "random_effect",
    "ranged"
@@ -1671,7 +1660,6 @@
   "add": [
    "death_count",
    "aura",
-   "buff",
    "passive",
    "temporary_effect"
   ],

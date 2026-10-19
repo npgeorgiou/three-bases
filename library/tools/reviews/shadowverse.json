@@ -106,9 +106,7 @@
   "add": [
    "taunt:counters"
   ],
-  "drop": [
-   "taunt"
-  ]
+  "drop": []
  },
  "753623": {
   "add": [
@@ -210,9 +208,7 @@
   "add": [
    "taunt:counters"
   ],
-  "drop": [
-   "taunt"
-  ]
+  "drop": []
  },
  "752568": {
   "add": [
@@ -665,9 +661,7 @@
   "add": [
    "taunt:counters"
   ],
-  "drop": [
-   "taunt"
-  ]
+  "drop": []
  },
  "754251": {
   "add": [
@@ -711,9 +705,7 @@
   "add": [
    "taunt:counters"
   ],
-  "drop": [
-   "taunt"
-  ]
+  "drop": []
  },
  "754133": {
   "add": [
@@ -731,17 +723,13 @@
   "add": [
    "taunt:counters"
   ],
-  "drop": [
-   "taunt"
-  ]
+  "drop": []
  },
  "752873": {
   "add": [
    "taunt:counters"
   ],
-  "drop": [
-   "taunt"
-  ]
+  "drop": []
  },
  "755652": {
   "add": [
@@ -791,7 +779,6 @@
    "on_attack",
    "on_play",
    "summon",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -953,7 +940,6 @@
    "deck_condition",
    "draw",
    "on_play",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -962,14 +948,12 @@
  },
  "753755": {
   "add": [
-   "buff",
    "merge_attach"
   ],
   "drop": []
  },
  "753756": {
   "add": [
-   "buff",
    "merge_attach"
   ],
   "drop": []
@@ -1179,9 +1163,7 @@
   "add": [
    "taunt:counters"
   ],
-  "drop": [
-   "taunt"
-  ]
+  "drop": []
  },
  "755782": {
   "add": [
@@ -1293,9 +1275,7 @@
   "add": [
    "graveyard"
   ],
-  "drop": [
-   "graveyard:cost"
-  ]
+  "drop": []
  },
  "754733": {
   "add": [
@@ -1404,7 +1384,6 @@
  "756114": {
   "add": [
    "sacrifice",
-   "buff",
    "upgrade"
   ],
   "drop": []
@@ -1756,7 +1735,6 @@
    "multi_attack",
    "support",
    "turn_start",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -1773,7 +1751,6 @@
    "on_play",
    "random_effect",
    "resource_gain",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -1788,7 +1765,6 @@
    "on_play",
    "on_spell:benefits",
    "random_effect",
-   "draw",
    "tutor",
    "upgrade:benefits"
   ]
@@ -1838,7 +1814,6 @@
    "haste:grants",
    "on_play",
    "summon",
-   "buff",
    "upgrade"
   ]
  },
@@ -1849,7 +1824,6 @@
    "kicker",
    "on_play",
    "summon",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -1873,7 +1847,6 @@
    "generate_cards",
    "on_play",
    "resource_gain",
-   "buff",
    "upgrade"
   ]
  },
@@ -1899,7 +1872,6 @@
    "cost_reduction",
    "generate_cards",
    "on_play",
-   "buff",
    "upgrade"
   ]
  },
@@ -1910,7 +1882,6 @@
   "add": [
    "random_effect",
    "summon",
-   "draw",
    "tutor"
   ]
  },
@@ -1932,7 +1903,6 @@
    "on_play",
    "ping",
    "resource_gain",
-   "buff",
    "upgrade"
   ]
  },
@@ -1949,7 +1919,6 @@
    "on_play",
    "random_effect",
    "revive",
-   "summon",
    "sacrifice:cost",
    "taunt"
   ],
@@ -1986,7 +1955,6 @@
    "in_hand_buff",
    "on_play",
    "on_spell",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2003,7 +1971,6 @@
    "generate_cards",
    "on_damaged",
    "on_play",
-   "buff",
    "upgrade"
   ]
  },
@@ -2019,7 +1986,6 @@
    "lifesteal:grants",
    "on_play",
    "sacrifice:cost",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2031,7 +1997,6 @@
    "stat_condition",
    "draw",
    "in_hand_buff",
-   "stat_gain",
    "on_play"
   ],
   "drop": [
@@ -2059,7 +2024,6 @@
    "damage",
    "draw",
    "on_play",
-   "buff",
    "upgrade"
   ]
  },
@@ -2067,7 +2031,6 @@
   "add": [
    "draw",
    "random_effect",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2114,7 +2077,6 @@
    "heal",
    "on_play",
    "summon",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2184,12 +2146,12 @@
    "variety_payoff",
    "tribal",
    "revive",
-   "summon",
    "copy",
    "cost_condition",
    "draw",
    "graveyard:cost",
-   "kicker"
+   "kicker",
+   "summon"
   ],
   "drop": []
  },
@@ -2206,11 +2168,9 @@
  "754325": {
   "add": [
    "deck_condition",
-   "buff",
    "upgrade",
    "random_effect",
    "summon",
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -2255,7 +2215,6 @@
    "generate_cards",
    "on_play",
    "summon",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2341,7 +2300,6 @@
   "add": [
    "tribal",
    "random_effect",
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -2350,7 +2308,6 @@
  },
  "813735": {
   "add": [
-   "disruption",
    "play_restriction",
    "board_wipe",
    "destroy"
@@ -2366,7 +2323,6 @@
    "delayed:benefits",
    "on_play",
    "random_effect",
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -2397,7 +2353,6 @@
    "on_play",
    "summon",
    "taunt:grants",
-   "buff",
    "upgrade"
   ]
  },
@@ -2407,9 +2362,7 @@
    "cost_condition",
    "on_play",
    "random_effect",
-   "draw",
    "tutor",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2428,8 +2381,6 @@
    "kicker",
    "on_play",
    "revive",
-   "summon",
-   "buff",
    "upgrade"
   ]
  },
@@ -2543,7 +2494,6 @@
    "sacrifice:cost",
    "stacking_keyword",
    "summon",
-   "buff",
    "upgrade"
   ]
  },
@@ -2565,7 +2515,6 @@
    "life_payment:cost",
    "lifesteal",
    "on_play",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2580,7 +2529,6 @@
    "direct_damage",
    "on_play",
    "random_effect",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2607,7 +2555,6 @@
    "random_effect",
    "turn_end",
    "tutor",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2631,7 +2578,6 @@
    "stat_condition",
    "haste",
    "on_play",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2647,7 +2593,6 @@
    "random_effect",
    "summon",
    "turn_end",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2708,7 +2653,6 @@
    "tribal",
    "generate_cards",
    "random_effect",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2751,7 +2695,6 @@
    "resource_gain",
    "sacrifice:cost",
    "summon",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2761,14 +2704,13 @@
  "754381": {
   "add": [
    "revive",
-   "summon",
    "copy",
    "heal",
    "on_play",
    "random_effect",
+   "summon",
    "taunt",
    "turn_end",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2798,7 +2740,6 @@
    "on_play",
    "taunt",
    "temporary_effect",
-   "buff",
    "upgrade"
   ]
  },
@@ -2828,7 +2769,6 @@
   "add": [
    "generate_cards",
    "on_play",
-   "buff",
    "upgrade"
   ]
  },
@@ -2898,7 +2838,6 @@
    "aoe_damage",
    "on_play",
    "taunt",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2923,7 +2862,6 @@
    "direct_damage",
    "on_play",
    "random_effect",
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -3070,7 +3008,6 @@
    "on_play",
    "summon",
    "taunt",
-   "buff",
    "upgrade"
   ],
   "drop": []
@@ -3102,7 +3039,6 @@
   "add": [
    "banish",
    "copy",
-   "generate_cards",
    "draw",
    "on_play",
    "taunt"
@@ -3114,7 +3050,6 @@
    "multiple_resources",
    "on_play",
    "summon",
-   "buff",
    "upgrade"
   ],
   "drop": []

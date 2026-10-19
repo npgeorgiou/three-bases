@@ -295,8 +295,7 @@
  },
  "786384": {
   "add": [
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
@@ -403,9 +402,7 @@
  "788387": {
   "add": [
    "aura",
-   "debuff",
    "condition_life",
-   "buff",
    "merge_attach",
    "stress_morale",
    "turn_start"
@@ -445,9 +442,7 @@
    "advantage",
    "bodyguard:counters",
    "damage",
-   "buff",
    "merge_attach",
-   "buff:benefits",
    "merge_attach:benefits",
    "passive",
    "piercing",
@@ -489,9 +484,7 @@
    "temporary_buff",
    "advantage",
    "drawback",
-   "buff",
    "merge_attach",
-   "buff:benefits",
    "merge_attach:benefits",
    "movement",
    "multi_attack",
@@ -625,7 +618,6 @@
    "cheat_death",
    "on_attack",
    "damage",
-   "buff",
    "merge_attach",
    "passive",
    "placement_rules",
@@ -657,7 +649,6 @@
    "aoe_damage",
    "damage_reduction",
    "death_trigger",
-   "buff",
    "merge_attach",
    "piercing",
    "piercing:grants",
@@ -716,7 +707,6 @@
    "stat_loss",
    "damage",
    "items_consumables",
-   "debuff",
    "merge_attach",
    "piercing",
    "ranged",
@@ -737,7 +727,6 @@
   "add": [
    "debuff",
    "aura",
-   "buff",
    "damage_reduction",
    "piercing",
    "placement_rules",
@@ -756,7 +745,6 @@
    "stat_gain",
    "stat_loss",
    "type_grant",
-   "buff",
    "merge_attach",
    "movement",
    "placement_rules",
@@ -853,9 +841,7 @@
   "add": [
    "advantage",
    "drawback",
-   "buff",
    "merge_attach",
-   "buff:benefits",
    "merge_attach:benefits",
    "movement",
    "piercing",
@@ -870,7 +856,6 @@
  "787718": {
   "add": [
    "damage_reduction",
-   "buff",
    "merge_attach",
    "movement",
    "passive",
@@ -913,9 +898,7 @@
    "condition",
    "damage",
    "damage_reduction",
-   "buff",
    "merge_attach",
-   "buff:benefits",
    "merge_attach:benefits",
    "movement",
    "passive",
@@ -934,7 +917,6 @@
  },
  "785453": {
   "add": [
-   "buff",
    "merge_attach",
    "passive"
   ],
@@ -1100,7 +1082,6 @@
    "condition_life",
    "death_trigger",
    "merge_attach",
-   "buff:benefits",
    "merge_attach:benefits",
    "forced_movement",
    "movement",
@@ -1147,7 +1128,6 @@
   "add": [
    "aoe_damage",
    "aura",
-   "buff",
    "damage_reduction",
    "death_trigger",
    "movement",
@@ -1203,7 +1183,6 @@
   "add": [
    "condition_count",
    "damage",
-   "buff",
    "merge_attach",
    "passive",
    "piercing",
@@ -1305,7 +1284,6 @@
  "787312": {
   "add": [
    "damage_reduction",
-   "buff",
    "merge_attach",
    "passive",
    "placement_rules",
@@ -1321,7 +1299,6 @@
  "788532": {
   "add": [
    "damage_reduction",
-   "buff",
    "merge_attach",
    "passive",
    "placement_rules",
@@ -1340,7 +1317,6 @@
    "condition_life",
    "damage",
    "damage_reduction",
-   "buff",
    "merge_attach",
    "passive",
    "piercing",
@@ -1359,9 +1335,7 @@
    "damage_reduction",
    "first_strike",
    "immunity",
-   "buff",
    "merge_attach",
-   "buff:benefits",
    "merge_attach:benefits",
    "movement",
    "multi_attack",
@@ -1386,7 +1360,6 @@
  },
  "786914": {
   "add": [
-   "buff",
    "merge_attach",
    "passive"
   ],
@@ -1480,7 +1453,6 @@
    "cooldowns",
    "damage",
    "merge_attach",
-   "buff:benefits",
    "merge_attach:benefits",
    "movement",
    "once_per_game",
@@ -1502,7 +1474,6 @@
   "add": [
    "targeting_rules",
    "immunity",
-   "buff",
    "merge_attach",
    "passive",
    "placement_rules",
@@ -1520,7 +1491,6 @@
    "stat_gain",
    "stat_loss",
    "type_grant",
-   "buff",
    "merge_attach",
    "movement",
    "placement_rules",
@@ -1578,7 +1548,6 @@
   "add": [
    "temporary_buff",
    "damage_reduction",
-   "buff",
    "merge_attach",
    "movement",
    "multi_attack",
@@ -1603,9 +1572,7 @@
    "death_trigger",
    "heal",
    "immunity",
-   "buff",
    "merge_attach",
-   "buff:benefits",
    "merge_attach:benefits",
    "movement",
    "multi_attack",
@@ -1675,7 +1642,6 @@
    "cheat_death",
    "damage",
    "damage_reduction",
-   "buff",
    "merge_attach",
    "movement",
    "multi_attack",
@@ -1738,7 +1704,6 @@
  "788100": {
   "add": [
    "advantage",
-   "buff",
    "merge_attach",
    "movement",
    "placement_rules",
@@ -1762,7 +1727,6 @@
   "add": [
    "cheat_death",
    "counterattack",
-   "buff",
    "merge_attach",
    "passive",
    "placement_rules",
@@ -1776,7 +1740,6 @@
  },
  "786278": {
   "add": [
-   "buff",
    "merge_attach",
    "movement",
    "passive"
@@ -1858,9 +1821,7 @@
    "cost_set",
    "damage",
    "damage_reduction",
-   "buff",
    "merge_attach",
-   "buff:benefits",
    "merge_attach:benefits",
    "movement",
    "multi_attack",
@@ -1916,7 +1877,6 @@
    "damage",
    "damage_reduction",
    "drawback",
-   "buff",
    "merge_attach",
    "movement",
    "multi_attack",
@@ -2009,7 +1969,6 @@
  "788068": {
   "add": [
    "stat_gain",
-   "buff",
    "merge_attach",
    "passive",
    "piercing",
@@ -2077,9 +2036,7 @@
  },
  "786799": {
   "add": [
-   "buff",
    "merge_attach",
-   "buff:benefits",
    "merge_attach:benefits"
   ],
   "drop": []
@@ -2147,7 +2104,6 @@
  },
  "785387": {
   "add": [
-   "buff",
    "merge_attach"
   ],
   "drop": []
@@ -2181,7 +2137,6 @@
  "788586": {
   "add": [
    "aura",
-   "buff",
    "random_effect",
    "ranged",
    "resource_gain",

@@ -195,8 +195,7 @@
  },
  "752299": {
   "add": [
-   "aura",
-   "debuff"
+   "aura"
   ],
   "drop": []
  },
@@ -1059,7 +1058,6 @@
  },
  "750714": {
   "add": [
-   "buff",
    "merge_attach"
   ],
   "drop": []
@@ -1324,7 +1322,6 @@
  },
  "751713": {
   "add": [
-   "drawback",
    "junk_cards"
   ],
   "drop": []
@@ -1344,8 +1341,7 @@
  "750826": {
   "add": [
    "damage",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
@@ -1404,8 +1400,7 @@
  "751151": {
   "add": [
    "count_payoff",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
@@ -1449,7 +1444,6 @@
    "generate_cards",
    "on_spell",
    "self_destruct",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -1477,8 +1471,7 @@
    "condition",
    "direct_damage:benefits",
    "draw",
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": [
    "spell_speed"
@@ -1533,7 +1526,6 @@
  "797155": {
   "add": [
    "revive",
-   "summon",
    "self_destruct",
    "spell_speed",
    "stat_condition"
@@ -1545,7 +1537,6 @@
  "750376": {
   "add": [
    "return_to_hand",
-   "buff",
    "merge_attach",
    "passive"
   ],
@@ -1701,7 +1692,6 @@
    "stat_gain",
    "on_attack",
    "cant_attack",
-   "buff",
    "merge_attach",
    "terrain"
   ],
@@ -1783,7 +1773,6 @@
    "stat_gain",
    "random_effect",
    "summon",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -1803,7 +1792,6 @@
  },
  "797066": {
   "add": [
-   "buff",
    "merge_attach",
    "attack_now",
    "cost_condition",
@@ -1923,9 +1911,8 @@
  "796711": {
   "add": [
    "in_hand_buff",
-   "stat_gain",
-   "draw",
    "tutor",
+   "draw",
    "spell_speed"
   ],
   "drop": [
@@ -1935,7 +1922,6 @@
  },
  "750830": {
   "add": [
-   "draw",
    "tutor",
    "on_play",
    "passive",
@@ -1962,8 +1948,7 @@
  "796765": {
   "add": [
    "attack_token",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "on_kill",
@@ -2001,7 +1986,6 @@
  "796541": {
   "add": [
    "stat_gain",
-   "buff",
    "merge_attach",
    "turn_start"
   ],
@@ -2022,7 +2006,6 @@
   "add": [
    "transform",
    "cost_type",
-   "buff",
    "merge_attach"
   ],
   "drop": [
@@ -2054,7 +2037,6 @@
  },
  "797024": {
   "add": [
-   "buff",
    "merge_attach"
   ],
   "drop": [
@@ -2100,7 +2082,6 @@
    "generate_cards",
    "on_attack",
    "turn_end",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2285,7 +2266,6 @@
   "add": [
    "cost_condition",
    "in_hand_buff",
-   "stat_gain",
    "random_effect",
    "summon"
   ],
@@ -2356,7 +2336,6 @@
  },
  "796847": {
   "add": [
-   "draw",
    "tutor",
    "spell_speed"
   ],
@@ -2407,7 +2386,6 @@
    "tribal",
    "discard",
    "on_play",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2427,7 +2405,6 @@
    "first_strike",
    "on_attack",
    "transform",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2607,7 +2584,6 @@
  "750491": {
   "add": [
    "in_hand_buff",
-   "stat_gain",
    "on_play"
   ],
   "drop": []

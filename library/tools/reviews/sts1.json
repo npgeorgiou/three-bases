@@ -3,8 +3,7 @@
   "add": [
    "telegraphed_threats",
    "boss_phases",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -524,8 +523,8 @@
    "items_consumables",
    "temporary_effect",
    "copy",
-   "generate_cards",
    "cost_set",
+   "generate_cards",
    "random_effect",
    "selection"
   ],
@@ -876,8 +875,7 @@
  "758278": {
   "add": [
    "telegraphed_threats",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -1523,7 +1521,6 @@
   "add": [
    "items_consumables",
    "passive",
-   "drawback:benefits",
    "junk_cards:benefits"
   ],
   "drop": [
@@ -2110,8 +2107,7 @@
    "stat_loss:benefits"
   ],
   "drop": [
-   "damage",
-   "stat_loss:counters"
+   "damage"
   ]
  },
  "758004": {
@@ -2121,7 +2117,6 @@
    "stat_loss:benefits"
   ],
   "drop": [
-   "stat_loss:counters",
    "run_structure"
   ]
  },
@@ -2789,9 +2784,7 @@
    "condition",
    "damage"
   ],
-  "drop": [
-   "damage_over_time"
-  ]
+  "drop": []
  },
  "757553": {
   "add": [
@@ -3043,9 +3036,7 @@
   "add": [
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "757650": {
   "add": [
@@ -3276,17 +3267,14 @@
    "stacking_keyword:benefits"
   ],
   "drop": [
-   "stat_gain",
-   "stacking_keyword"
+   "stat_gain"
   ]
  },
  "757707": {
   "add": [
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "757709": {
   "add": [
@@ -3411,8 +3399,7 @@
    "block_armor:counters"
   ],
   "drop": [
-   "blocking",
-   "block_armor"
+   "blocking"
   ]
  },
  "757749": {
@@ -3457,7 +3444,6 @@
  },
  "757758": {
   "add": [
-   "draw",
    "tutor",
    "repeat_trigger",
    "free_play"
@@ -3702,7 +3688,6 @@
  },
  "757809": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -3711,7 +3696,6 @@
  },
  "757810": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -3720,7 +3704,6 @@
  },
  "757812": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -3921,7 +3904,6 @@
  },
  "757871": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -4225,7 +4207,6 @@
   ],
   "drop": [
    "counter_spell",
-   "multi_attack",
    "random_effect"
   ]
  },
@@ -4660,7 +4641,6 @@
  },
  "813554": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -4669,7 +4649,6 @@
  },
  "813555": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": [

@@ -169,7 +169,6 @@
   ],
   "drop": [
    "activated",
-   "ranged",
    "symmetric_effect"
   ]
  },
@@ -471,8 +470,7 @@
  },
  "794609": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "destroy"
@@ -480,8 +478,7 @@
  },
  "794599": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "destroy"
@@ -997,7 +994,6 @@
   ],
   "drop": [
    "activated",
-   "forced_movement:benefits",
    "on_damaged",
    "tempo",
    "zone_of_control"
@@ -1745,7 +1741,6 @@
  "794937": {
   "add": [
    "aura",
-   "buff",
    "drawback",
    "forced_movement",
    "on_attack",
@@ -1828,7 +1823,6 @@
  "794826": {
   "add": [
    "aura",
-   "buff",
    "drawback",
    "forced_movement",
    "multi_attack",
@@ -1916,7 +1910,6 @@
   "add": [
    "advantage",
    "aura",
-   "buff",
    "cheat_death",
    "drawback",
    "evasion:counters",

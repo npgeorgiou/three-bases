@@ -19,7 +19,6 @@
   "add": [
    "sacrifice",
    "revive",
-   "summon",
    "items_consumables"
   ],
   "drop": []
@@ -106,8 +105,7 @@
  "748314": {
   "add": [
    "sacrifice",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -1089,8 +1087,7 @@
    "tribal",
    "combat_start",
    "positional",
-   "revive:grants",
-   "summon:grants"
+   "revive:grants"
   ],
   "drop": []
  },
@@ -1832,8 +1829,7 @@
    "tribal",
    "stat_gain",
    "generate_cards",
-   "revive:grants",
-   "summon:grants"
+   "revive:grants"
   ],
   "drop": [
    "on_spell",
@@ -1964,9 +1960,7 @@
    "combat_start",
    "shield:grants"
   ],
-  "drop": [
-   "on_attack:grants"
-  ]
+  "drop": []
  },
  "749847": {
   "add": [
@@ -2606,8 +2600,7 @@
  "748535": {
   "add": [
    "sacrifice",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -2669,7 +2662,6 @@
  "749298": {
   "add": [
    "repeat_trigger",
-   "buff",
    "merge_attach"
   ],
   "drop": []
@@ -3141,7 +3133,6 @@
   "add": [
    "stat_gain",
    "tribal",
-   "buff",
    "merge_attach",
    "turn_end"
   ],
@@ -3215,7 +3206,6 @@
   "add": [
    "on_play",
    "stat_gain",
-   "buff",
    "merge_attach"
   ],
   "drop": [
@@ -3457,8 +3447,7 @@
    "hero_power"
   ],
   "drop": [
-   "auto_battle:benefits",
-   "shield:grants"
+   "auto_battle:benefits"
   ]
  },
  "748994": {
@@ -3527,7 +3516,6 @@
   ],
   "drop": [
    "auto_battle:benefits",
-   "shield:counters",
    "stat_gain"
   ]
  },
@@ -3776,10 +3764,8 @@
  "749961": {
   "add": [
    "tribal",
-   "buff",
    "merge_attach",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "auto_battle:benefits"
@@ -3812,8 +3798,7 @@
    "shield:benefits"
   ],
   "drop": [
-   "auto_battle:benefits",
-   "shield:counters"
+   "auto_battle:benefits"
   ]
  },
  "749262": {
@@ -3913,7 +3898,6 @@
  "749825": {
   "add": [
    "tribal",
-   "buff",
    "merge_attach",
    "on_spell"
   ],

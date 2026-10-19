@@ -2923,7 +2923,6 @@ dnd5e	761257	Conjure Minor Elementals	condition_count	*	absent
 dnd5e	761257	Conjure Minor Elementals	damage_types	does	present
 dnd5e	761257	Conjure Minor Elementals	summon	*	absent
 dnd5e	761257	Conjure Minor Elementals	terrain	does	present
-dnd5e	761257	Conjure Minor Elementals	buff	does	present
 dnd5e	761284	Disintegrate	banish	does	present
 dnd5e	761284	Disintegrate	condition_count	*	absent
 dnd5e	761284	Disintegrate	condition_life	*	absent
@@ -3142,7 +3141,6 @@ dnd5e	761632	Horn of Blasting	items_consumables	does	present
 dnd5e	761633	Horn of Valhalla	advantage	counters	absent
 dnd5e	761633	Horn of Valhalla	condition_life	*	absent
 dnd5e	761633	Horn of Valhalla	cooldowns	does	present
-dnd5e	761633	Horn of Valhalla	stat_loss	grants	absent
 dnd5e	761633	Horn of Valhalla	drawback	does	present
 dnd5e	761633	Horn of Valhalla	immunity	does	present
 dnd5e	761633	Horn of Valhalla	random_effect	does	present
@@ -3364,8 +3362,6 @@ dnd5e	761893	Deflect Attacks	terrain	*	absent
 dnd5e	761906	Perfect Focus	resource_gain	does	present
 dnd5e	761925	Abjure Foes	excess_damage	*	absent
 dnd5e	761926	Aura of Courage	aura	does	present
-dnd5e	761926	Aura of Courage	stat_loss	benefits	absent
-dnd5e	761926	Aura of Courage	stat_loss	grants	absent
 dnd5e	761926	Aura of Courage	immunity	does	present
 dnd5e	761929	Aura Expansion	area_templates	does	present
 dnd5e	761929	Aura Expansion	aura	does	present
@@ -3458,7 +3454,6 @@ dnd5e	762178	Action Surge (1 use)	movement	*	absent
 dnd5e	762181	Indomitable (1 use)	cooldowns	does	present
 dnd5e	762181	Indomitable (1 use)	saving_throws	does	present
 dnd5e	762188	Flurry of Blows	multi_attack	does	present
-dnd5e	762190	Step of the Wind	zone_of_control	does	absent
 dnd5e	762190	Step of the Wind	zone_of_control	counters	present
 dnd5e	762209	Divine Smite	condition_count	*	absent
 dnd5e	762209	Divine Smite	damage	does	present
@@ -3883,15 +3878,10 @@ dnd5e	815544	Darkvision (60 ft.)	information	does	present
 dnd5e	815545	Darkvision (120 ft.)	information	does	present
 dnd5e	815547	Gnomish Lineage: Rock Gnome	activated	does	present
 dnd5e	815547	Gnomish Lineage: Rock Gnome	selection	*	absent
-dnd5e	815593	Monastic Tradition feature	buff	does	present
 dnd5e	815593	Monastic Tradition feature	upgrade	does	present
-dnd5e	815596	Sacred Oath	buff	does	present
 dnd5e	815596	Sacred Oath	upgrade	does	present
 dnd5e	815600	Aura improvements	aura	benefits	present
-dnd5e	815600	Aura improvements	buff	benefits	present
-dnd5e	815600	Aura improvements	buff	does	present
 dnd5e	815600	Aura improvements	upgrade	does	present
-dnd5e	815601	Spellcasting: Ranger	buff	does	present
 dnd5e	815601	Spellcasting: Ranger	upgrade	does	present
 dnd5e	815605	Defensive Tactics: Multiattack Defense	block_armor	*	absent
 dnd5e	815605	Defensive Tactics: Multiattack Defense	on_damaged	does	present
@@ -3899,9 +3889,7 @@ dnd5e	815605	Defensive Tactics: Multiattack Defense	temporary_effect	does	presen
 dnd5e	815620	Eldritch Invocation: Eldritch Spear	ranged	does	present
 dnd5e	815620	Eldritch Invocation: Eldritch Spear	spell_power	does	present
 dnd5e	815626	Eldritch Invocation: Mire the Mind	cooldowns	does	present
-dnd5e	815639	Arcane Tradition	buff	does	present
 dnd5e	815639	Arcane Tradition	upgrade	does	present
-dnd5e	815640	Arcane Tradition feature	buff	does	present
 dnd5e	815640	Arcane Tradition feature	upgrade	does	present
 dnd5e	815641	Signature Spell	cooldowns	does	present
 dnd5e	815641	Signature Spell	free_play	does	present
@@ -3975,7 +3963,6 @@ duelyst	741635	Circle of Life	damage	does	present
 duelyst	741635	Circle of Life	heal	does	present
 duelyst	741642	Skywind Glaives	adjacency	does	present
 duelyst	741642	Skywind Glaives	aura	does	present
-duelyst	741642	Skywind Glaives	buff	does	present
 duelyst	741642	Skywind Glaives	items_consumables	does	present
 duelyst	741643	Sunstone Bracers	items_consumables	does	present
 duelyst	741644	Arclyte Regalia	damage	*	absent
@@ -4057,7 +4044,6 @@ duelyst	741751	Abyssal Scar	turn_end	*	absent
 duelyst	741752	Malice	life_payment	does	present
 duelyst	741754	Daemonic Lure	forced_movement	does	present
 duelyst	741755	Nether Summoning	revive	does	present
-duelyst	741755	Nether Summoning	summon	does	present
 duelyst	741759	Breath Of The Unborn	aoe_damage	does	present
 duelyst	741759	Breath Of The Unborn	heal	does	present
 duelyst	741762	Ritual Banishing	destroy	does	present
@@ -4183,7 +4169,6 @@ duelyst	741943	Rook	turn_end	does	present
 duelyst	741948	Emerald Rejuvenator	enemy_benefit	does	present
 duelyst	741948	Emerald Rejuvenator	symmetric_effect	does	present
 duelyst	741949	Zurael, the Lifegiver	revive	does	present
-duelyst	741949	Zurael, the Lifegiver	summon	does	present
 duelyst	741954	Sunrise Cleric	heal	*	absent
 duelyst	741954	Sunrise Cleric	on_play	does	present
 duelyst	741954	Sunrise Cleric	terrain	does	present
@@ -4192,7 +4177,6 @@ duelyst	741956	Auroara	on_ally_play	does	present
 duelyst	741956	Auroara	stat_condition	does	present
 duelyst	741958	Halo Bulwark	adjacency	does	present
 duelyst	741958	Halo Bulwark	aura	does	present
-duelyst	741958	Halo Bulwark	buff	does	present
 duelyst	741958	Halo Bulwark	items_consumables	does	present
 duelyst	741959	Alabaster Titan	deck_condition	does	present
 duelyst	741959	Alabaster Titan	items_consumables	does	present
@@ -4203,7 +4187,6 @@ duelyst	741963	Aperion's Claim	board_wipe	*	absent
 duelyst	741963	Aperion's Claim	scope_global	*	absent
 duelyst	741964	Vale Ascension	heal	*	absent
 duelyst	741964	Vale Ascension	revive	does	present
-duelyst	741964	Vale Ascension	summon	does	present
 duelyst	741964	Vale Ascension	terrain	benefits	present
 duelyst	741964	Vale Ascension	turn_end	*	absent
 duelyst	741966	Flamewreath	adjacency	does	present
@@ -4390,7 +4373,6 @@ duelyst	742136	Crimson Coil	extra_turn	*	absent
 duelyst	742137	Shadow Waltz	cost_reduction	does	present
 duelyst	742137	Shadow Waltz	damage	grants	absent
 duelyst	742137	Shadow Waltz	in_hand_buff	does	present
-duelyst	742137	Shadow Waltz	stat_gain	does	present
 duelyst	742137	Shadow Waltz	scope_global	*	absent
 duelyst	742138	Pandamonium	immunity	does	present
 duelyst	742138	Pandamonium	temporary_effect	does	present
@@ -4499,12 +4481,10 @@ duelyst	742236	Nocturne	terrain	does	present
 duelyst	742236	Nocturne	terrain	benefits	present
 duelyst	742236	Nocturne	turn_end	*	absent
 duelyst	742237	Death Knell	revive	does	present
-duelyst	742237	Death Knell	summon	does	present
 duelyst	742238	The Releaser	adjacency	does	present
 duelyst	742238	The Releaser	items_consumables	does	present
 duelyst	742238	The Releaser	random_effect	does	present
 duelyst	742238	The Releaser	revive	does	present
-duelyst	742238	The Releaser	summon	does	present
 duelyst	742239	Lavaslasher	damage	does	present
 duelyst	742243	Cascading Rebirth	cost_increase	*	absent
 duelyst	742243	Cascading Rebirth	destroy	*	absent
@@ -4561,7 +4541,6 @@ duelyst	742299	Iris Barrier	items_consumables	does	present
 duelyst	742303	Stygian Observer	death_count	*	absent
 duelyst	742303	Stygian Observer	death_trigger	does	present
 duelyst	742303	Stygian Observer	in_hand_buff	does	present
-duelyst	742303	Stygian Observer	stat_gain	does	present
 duelyst	742312	Furor Chakram	items_consumables	does	present
 duelyst	742312	Furor Chakram	on_damaged	*	absent
 duelyst	742313	Horrific Visage	stat_loss	does	present
@@ -4585,7 +4564,6 @@ duelyst	742325	Erratic Raptyr	counterattack	*	absent
 duelyst	742325	Erratic Raptyr	death_trigger	does	present
 duelyst	742325	Erratic Raptyr	on_attack	does	present
 duelyst	742325	Erratic Raptyr	revive	does	present
-duelyst	742325	Erratic Raptyr	summon	does	present
 duelyst	742325	Erratic Raptyr	transform	does	present
 duelyst	742327	Rage Reactor	items_consumables	does	present
 duelyst	742331	Essence Sculpt	copy	does	present
@@ -4597,7 +4575,6 @@ duelyst	742341	Denadoro	territory_trigger	does	present
 duelyst	742342	Metaltooth	condition	does	present
 duelyst	742342	Metaltooth	tribal	does	present
 duelyst	742345	Replicant	on_play	does	present
-duelyst	742345	Replicant	draw	does	present
 duelyst	742345	Replicant	tutor	does	present
 duelyst	742346	Project Ω	count_payoff	does	present
 duelyst	742351	Capricious Marauder	death_count	*	absent
@@ -4629,7 +4606,6 @@ faeria	741074	Aquatic	terrain	does	present
 faeria	741078	Imperial Engineer	repeat_trigger	does	present
 faeria	741079	Hold the Line!	blocking	*	absent
 faeria	741079	Hold the Line!	generate_cards	does	present
-faeria	741079	Hold the Line!	taunt	benefits	absent
 faeria	741079	Hold the Line!	zone_of_control	benefits	absent
 faeria	741085	Freedom Fighter	haste	does	present
 faeria	741088	Master Swordsman	in_hand_buff	does	present
@@ -4903,10 +4879,7 @@ faeria	741326	Doomsday	drawback	does	present
 faeria	741326	Doomsday	life_payment	does	present
 faeria	741327	Annoying Gnat	drawback	does	present
 faeria	741327	Annoying Gnat	revive	does	present
-faeria	741327	Annoying Gnat	summon	does	present
 faeria	741328	Long-horned Yak	in_hand_buff	does	present
-faeria	741328	Long-horned Yak	stat_gain	does	present
-faeria	741329	Time of Legends	draw	does	present
 faeria	741329	Time of Legends	tutor	does	present
 faeria	741330	Triton Trainer	stat_gain	does	present
 faeria	741330	Triton Trainer	movement	does	present
@@ -4917,7 +4890,6 @@ faeria	741336	Illusion of Grandeur	cost_condition	does	present
 faeria	741336	Illusion of Grandeur	movement	does	present
 faeria	741336	Illusion of Grandeur	on_ally_play	does	present
 faeria	741337	Deepwood Stalker	on_play	does	present
-faeria	741338	Krog's Dinner	draw	does	present
 faeria	741338	Krog's Dinner	tutor	does	present
 faeria	741339	Iona's Smile	draw	does	present
 faeria	741339	Iona's Smile	evasion	*	absent
@@ -4937,9 +4909,7 @@ faeria	741347	Bloodstone Golem	direct_damage	does	present
 faeria	741347	Bloodstone Golem	resource_gain	does	present
 faeria	741347	Bloodstone Golem	turn_start	does	present
 faeria	741349	Eredon's Drum	in_hand_buff	does	present
-faeria	741349	Eredon's Drum	stat_gain	does	present
 faeria	741350	Cloud Machine	aura	does	present
-faeria	741350	Cloud Machine	buff	does	present
 faeria	741351	Ring of Dominion	modal_choice	does	present
 faeria	741351	Ring of Dominion	steal	does	present
 faeria	741351	Ring of Dominion	terrain	does	present
@@ -4978,7 +4948,6 @@ faeria	741379	Seed of Paradise	self_destruct	does	present
 faeria	741382	Curious Biomancer	condition_count	does	present
 faeria	741382	Curious Biomancer	on_play	does	present
 faeria	741382	Curious Biomancer	tutor	does	present
-faeria	741383	Fugoro, Merchant of Wonders	draw	does	present
 faeria	741383	Fugoro, Merchant of Wonders	tutor	does	present
 faeria	741385	Grappling Hook	drawback	grants	absent
 faeria	741388	Flash Salmon	destroy	*	absent
@@ -5098,7 +5067,6 @@ faeria	741440	Rakoan Shield Mates	death_trigger	does	present
 faeria	741440	Rakoan Shield Mates	summon	does	present
 faeria	741444	Tower of Curses	ping	*	absent
 faeria	741446	Imperial Outpost	aura	does	present
-faeria	741446	Imperial Outpost	buff	does	present
 faeria	741447	Destructive Volley	condition	does	present
 faeria	741447	Destructive Volley	evasion	*	absent
 faeria	741449	Radiance, Scourge of Oversky	delayed	*	absent
@@ -5145,7 +5113,6 @@ faeria	741467	Yak Shepherd	tribal	does	present
 faeria	741468	Oversky Yak	condition_count	does	present
 faeria	741469	Bloated Toad	banish	*	absent
 faeria	741469	Bloated Toad	enemy_benefit	does	present
-faeria	741469	Bloated Toad	buff	does	present
 faeria	741469	Bloated Toad	merge_attach	does	present
 faeria	741469	Bloated Toad	movement	does	present
 faeria	741470	Looking Glass Phantasm	on_play	does	present
@@ -5389,7 +5356,6 @@ gwent	756535	Shilard Fitz-Oesterlen	stat_condition	does	present
 gwent	756535	Shilard Fitz-Oesterlen	stat_loss	does	present
 gwent	756541	Iris' Companions	generate_cards	*	absent
 gwent	756544	Nivellen	board_clog	*	absent
-gwent	756544	Nivellen	disruption	does	present
 gwent	756544	Nivellen	forced_placement	does	present
 gwent	756545	Stregobor	stat_loss	does	present
 gwent	756546	Vincent Meis	stat_loss	does	present
@@ -5414,7 +5380,6 @@ gwent	756567	Onslaught	in_hand_buff	does	present
 gwent	756567	Onslaught	tribal	does	present
 gwent	756576	Mobilization	stat_gain	does	present
 gwent	756576	Mobilization	copy	does	present
-gwent	756576	Mobilization	generate_cards	does	present
 gwent	756576	Mobilization	deckbuilding_effect	does	present
 gwent	756576	Mobilization	summon	does	present
 gwent	756580	Skjall	self_destruct	does	present
@@ -5940,7 +5905,6 @@ gwent	757357	Arcane Tome	haste	does	present
 gwent	757357	Arcane Tome	movement	does	present
 gwent	757357	Arcane Tome	self_destruct	does	present
 gwent	757357	Arcane Tome	turn_end	does	present
-gwent	757358	Mysterious Puzzle Box	board_clog	does	present
 gwent	757358	Mysterious Puzzle Box	donate	does	present
 gwent	757358	Mysterious Puzzle Box	enemy_benefit	does	present
 gwent	757361	Ornate Censer	stat_gain	does	present
@@ -5972,7 +5936,6 @@ gwent	757398	Bart	on_ally_play	does	present
 gwent	757398	Bart	summon	benefits	absent
 gwent	757398	Bart	tribal	does	present
 gwent	757398	Bart	variety_payoff	does	present
-gwent	757400	Pulling the Strings	deckbuilding_effect	does	present
 gwent	757400	Pulling the Strings	variety_payoff	does	present
 gwent	757402	Triss: Meteor Shower	board_clog	*	absent
 gwent	757404	Ard Feainn	deck_position	does	present
@@ -6071,7 +6034,6 @@ gwent	813673	Blessing of Chastity	turn_end	does	present
 gwent	813687	Dagon: Risen	banish	does	present
 gwent	813687	Dagon: Risen	stat_gain	does	present
 gwent	813687	Dagon: Risen	copy	does	present
-gwent	813687	Dagon: Risen	generate_cards	does	present
 gwent	813687	Dagon: Risen	damage	does	present
 gwent	813687	Dagon: Risen	death_trigger	does	present
 gwent	813687	Dagon: Risen	delayed	does	present
@@ -6192,7 +6154,6 @@ hearthstone	742651	Dreadlich Tamsin	deck_modification	does	present
 hearthstone	742651	Dreadlich Tamsin	recycle	*	absent
 hearthstone	742661	Gift of the Naaru	symmetric_effect	does	present
 hearthstone	742663	Revive Pet	revive	does	present
-hearthstone	742663	Revive Pet	summon	does	present
 hearthstone	742670	Brasswing	damage_over_time	*	absent
 hearthstone	742684	Desecrated Graveyard	sacrifice	does	present
 hearthstone	742685	Iceblood Garrison	friendly_fire	does	present
@@ -6269,7 +6230,6 @@ hearthstone	742941	Reckless Experimenter	drawback	does	present
 hearthstone	742965	Gang Up	deck_modification	does	present
 hearthstone	742965	Gang Up	recycle	*	absent
 hearthstone	742975	Resurrect	revive	does	present
-hearthstone	742975	Resurrect	summon	does	present
 hearthstone	742980	Drakonid Crusher	condition_life	does	present
 hearthstone	742982	Gravelsnout Knight	enemy_benefit	does	present
 hearthstone	742993	Evocation	hand_size	does	present
@@ -6377,12 +6337,10 @@ hearthstone	743387	Pint-Size Potion	stat_loss	does	present
 hearthstone	743394	Mayor Noggenfogger	rule_change	does	present
 hearthstone	743394	Mayor Noggenfogger	symmetric_effect	does	present
 hearthstone	743398	Inkmaster Solia	copy	*	absent
-hearthstone	743398	Inkmaster Solia	deckbuilding_effect	does	present
 hearthstone	743398	Inkmaster Solia	variety_payoff	does	present
 hearthstone	743410	Sleep with the Fishes	friendly_fire	does	present
 hearthstone	743410	Sleep with the Fishes	symmetric_effect	does	present
 hearthstone	743412	Krul the Unshackled	copy	*	absent
-hearthstone	743412	Krul the Unshackled	deckbuilding_effect	does	present
 hearthstone	743412	Krul the Unshackled	variety_payoff	does	present
 hearthstone	743421	Dirty Rat	board_clog	*	absent
 hearthstone	743421	Dirty Rat	disruption	does	present
@@ -6443,10 +6401,8 @@ hearthstone	743729	Ticking Abomination	friendly_fire	does	present
 hearthstone	743733	Treachery	drawback	does	present
 hearthstone	743734	Devour Mind	information	does	present
 hearthstone	743736	Eternal Servitude	revive	does	present
-hearthstone	743736	Eternal Servitude	summon	does	present
 hearthstone	743738	Archbishop Benedictus	bounce_enemy	*	absent
 hearthstone	743746	Desperate Stand	revive	does	present
-hearthstone	743746	Desperate Stand	summon	does	present
 hearthstone	743762	Thrall, Deathseer	cost_increase	*	absent
 hearthstone	743762	Thrall, Deathseer	upgrade	does	present
 hearthstone	743764	Skulking Geist	cost_condition	does	present
@@ -6461,7 +6417,6 @@ hearthstone	743778	Abominable Bowman	random_effect	does	present
 hearthstone	743778	Abominable Bowman	revive	does	present
 hearthstone	743778	Abominable Bowman	tribal	does	present
 hearthstone	743783	Bloodreaver Gul'dan	revive	does	present
-hearthstone	743783	Bloodreaver Gul'dan	summon	does	present
 hearthstone	743789	Bring It On!	enemy_benefit	does	present
 hearthstone	743789	Bring It On!	hand_disruption	*	absent
 hearthstone	743790	Sindragosa	null_body	does	present
@@ -6475,7 +6430,6 @@ hearthstone	743801	Mindbreaker	disruption	does	present
 hearthstone	743801	Mindbreaker	symmetric_effect	does	present
 hearthstone	743805	Keening Banshee	drawback	does	present
 hearthstone	743822	Reno Jackson	copy	*	absent
-hearthstone	743822	Reno Jackson	deckbuilding_effect	does	present
 hearthstone	743822	Reno Jackson	variety_payoff	does	present
 hearthstone	743828	Elise Starseeker	deck_modification	does	present
 hearthstone	743828	Elise Starseeker	recycle	*	absent
@@ -6540,7 +6494,6 @@ hearthstone	744040	Ashen Elemental	drawback	*	absent
 hearthstone	744040	Ashen Elemental	life_payment	cost	absent
 hearthstone	744045	Corpse Explosion	symmetric_effect	does	present
 hearthstone	744052	Frostmourne	revive	does	present
-hearthstone	744052	Frostmourne	summon	does	present
 hearthstone	744052	Frostmourne	scope_global	*	absent
 hearthstone	744063	Alexandros Mograine	damage_over_time	does	present
 hearthstone	744063	Alexandros Mograine	permanent_growth	*	absent
@@ -6555,7 +6508,6 @@ hearthstone	744096	Jackpot!	generate_cards	does	present
 hearthstone	744106	Master's Call	generate_cards	*	absent
 hearthstone	744106	Master's Call	selection	does	present
 hearthstone	744106	Master's Call	tribal	does	present
-hearthstone	744106	Master's Call	draw	does	present
 hearthstone	744109	Halazzi, the Lynx	hand_size	does	present
 hearthstone	744109	Halazzi, the Lynx	slot_filler	*	absent
 hearthstone	744116	Mythical Terror	forced_attack	does	present
@@ -6604,7 +6556,6 @@ hearthstone	744281	Power of Creation	summon	does	present
 hearthstone	744282	Nozari	enemy_benefit	does	present
 hearthstone	744282	Nozari	heal	does	present
 hearthstone	744297	Mass Resurrection	revive	does	present
-hearthstone	744297	Mass Resurrection	summon	does	present
 hearthstone	744299	Call to Adventure	stat_gain	does	present
 hearthstone	744299	Call to Adventure	cost_condition	does	present
 hearthstone	744299	Call to Adventure	tutor	does	present
@@ -6694,7 +6645,6 @@ hearthstone	744587	Depth Charge	damage_over_time	*	absent
 hearthstone	744587	Depth Charge	friendly_fire	does	present
 hearthstone	744589	Tentacled Menace	movement	*	absent
 hearthstone	744592	Dragonqueen Alexstrasza	copy	*	absent
-hearthstone	744592	Dragonqueen Alexstrasza	deckbuilding_effect	does	present
 hearthstone	744592	Dragonqueen Alexstrasza	variety_payoff	does	present
 hearthstone	744598	Chenvaala	condition_count	does	present
 hearthstone	744604	Dark Skies	generate_cards	*	absent
@@ -6712,7 +6662,6 @@ hearthstone	744683	Typhoon	removal	does	present
 hearthstone	744683	Typhoon	scope_global	does	present
 hearthstone	744709	Briarspawn Drake	autonomous_units	*	absent
 hearthstone	744711	Succumb to Madness	revive	does	present
-hearthstone	744711	Succumb to Madness	summon	does	present
 hearthstone	744714	Afflicted Devastator	friendly_fire	does	present
 hearthstone	744719	Tyrande	on_play	does	present
 hearthstone	744719	Tyrande	repeat_trigger	does	present
@@ -6812,7 +6761,6 @@ hearthstone	744998	Arcane Golem	resource_gain	*	absent
 hearthstone	745001	Demolisher	damage_over_time	*	absent
 hearthstone	745003	Betrayal	removal	does	present
 hearthstone	745007	Redemption	revive	does	present
-hearthstone	745007	Redemption	summon	does	present
 hearthstone	745029	Felguard	drawback	does	present
 hearthstone	745029	Felguard	resource_gain	*	absent
 hearthstone	745032	Soulfire	generate_cards	*	absent
@@ -6839,13 +6787,11 @@ hearthstone	745119	Ashleaf Pixie	shield	does	present
 hearthstone	745124	Deathlord	board_clog	*	absent
 hearthstone	745124	Deathlord	enemy_benefit	does	present
 hearthstone	745126	Kel'Thuzad	revive	does	present
-hearthstone	745126	Kel'Thuzad	summon	does	present
 hearthstone	745130	Nerub'ar Weblord	on_play	grants	absent
 hearthstone	745130	Nerub'ar Weblord	symmetric_effect	does	present
 hearthstone	745131	Duplicate	draw	*	absent
 hearthstone	745131	Duplicate	generate_cards	does	present
 hearthstone	745136	Reincarnate	revive	does	present
-hearthstone	745136	Reincarnate	summon	does	present
 hearthstone	745142	Dimensional Core	death_trigger	*	absent
 hearthstone	745142	Dimensional Core	delayed	*	absent
 hearthstone	745143	Starship Schematic	death_trigger	*	absent
@@ -7005,7 +6951,6 @@ hearthstone	745519	Tower of Ghouls	damage	benefits	absent
 hearthstone	745519	Tower of Ghouls	stat_loss	*	absent
 hearthstone	745519	Tower of Ghouls	on_damaged	does	present
 hearthstone	745519	Tower of Ghouls	summon	does	present
-hearthstone	745521	Disguised Doctor	drawback	does	present
 hearthstone	745521	Disguised Doctor	junk_cards	does	present
 hearthstone	745522	The Living Plague	junk_cards	does	present
 hearthstone	745523	Sawbones	sacrifice	does	present
@@ -7124,7 +7069,6 @@ hearthstone	745861	Buy One, Get One Freeze	summon	does	present
 hearthstone	745866	Explodineer	donate	*	absent
 hearthstone	745866	Explodineer	junk_cards	does	present
 hearthstone	745870	INFERNAL!	drawback	does	present
-hearthstone	745872	Dust Bunny	drawback	does	present
 hearthstone	745872	Dust Bunny	junk_cards	does	present
 hearthstone	745877	Safety Expert	donate	*	absent
 hearthstone	745877	Safety Expert	junk_cards	does	present
@@ -7147,7 +7091,6 @@ hearthstone	745962	Embrace the Shadow	rule_change	does	present
 hearthstone	745965	Spreading Madness	friendly_fire	does	present
 hearthstone	745965	Spreading Madness	symmetric_effect	does	present
 hearthstone	745971	N'Zoth, the Corruptor	revive	does	present
-hearthstone	745971	N'Zoth, the Corruptor	summon	does	present
 hearthstone	745975	Corrupted Seer	friendly_fire	does	present
 hearthstone	745975	Corrupted Seer	symmetric_effect	does	present
 hearthstone	745977	Blood of The Ancient One	deck_modification	*	absent
@@ -7189,7 +7132,6 @@ hearthstone	746174	Scourge Tamer	on_play	does	present
 hearthstone	746180	Keeneye Spotter	cheat_death	*	absent
 hearthstone	746180	Keeneye Spotter	stat_loss	does	present
 hearthstone	746181	Hope of Quel'Thalas	in_hand_buff	does	present
-hearthstone	746181	Hope of Quel'Thalas	stat_gain	does	present
 hearthstone	746184	Plaguespreader	hand_disruption	does	present
 hearthstone	746184	Plaguespreader	junk_cards	does	present
 hearthstone	746191	Scourge Rager	self_destruct	does	present
@@ -7245,7 +7187,6 @@ hearthstone	746349	Lord Barov	stat_loss	does	present
 hearthstone	746349	Lord Barov	friendly_fire	does	present
 hearthstone	746368	Rattlegore	stat_loss	*	absent
 hearthstone	746368	Rattlegore	revive	does	present
-hearthstone	746368	Rattlegore	summon	does	present
 hearthstone	746372	Soul Shear	deck_modification	does	present
 hearthstone	746372	Soul Shear	recycle	*	absent
 hearthstone	746381	Educated Elekk	deck_modification	does	present
@@ -7256,7 +7197,6 @@ hearthstone	746388	Auctionhouse Gavel	on_play	*	absent
 hearthstone	746398	Two-Faced Investor	random_effect	does	present
 hearthstone	746406	Auctioneer Jaxon	generate_cards	*	absent
 hearthstone	746406	Auctioneer Jaxon	selection	does	present
-hearthstone	746406	Auctioneer Jaxon	draw	does	present
 hearthstone	746415	Package Runner	condition	does	present
 hearthstone	746415	Package Runner	drawback	does	present
 hearthstone	746421	Northshire Farmer	copy	does	present
@@ -7341,7 +7281,6 @@ hearthstone	746616	Arrow Retriever	draw	does	present
 hearthstone	746616	Arrow Retriever	hand_size	does	present
 hearthstone	746617	Wormhole	autonomous_units	*	absent
 hearthstone	746627	Memoriam Manifest	revive	does	present
-hearthstone	746627	Memoriam Manifest	summon	does	present
 hearthstone	746628	Chronochiller	drawback	does	present
 hearthstone	746637	Krona, Keeper of Eons	cost_set	does	present
 hearthstone	746637	Krona, Keeper of Eons	deck_position	does	present
@@ -7539,7 +7478,6 @@ hearthstone	747326	Razorscale	rule_change	does	present
 hearthstone	747326	Razorscale	symmetric_effect	does	present
 hearthstone	747340	BEEEES!!!	forced_attack	does	present
 hearthstone	747345	Elise the Enlightened	copy	*	absent
-hearthstone	747345	Elise the Enlightened	deckbuilding_effect	does	present
 hearthstone	747345	Elise the Enlightened	variety_payoff	does	present
 hearthstone	747352	Dinotamer Brann	copy	*	absent
 hearthstone	747352	Dinotamer Brann	variety_payoff	does	present
@@ -7553,7 +7491,6 @@ hearthstone	747379	Generous Mummy	drawback	does	present
 hearthstone	747379	Generous Mummy	enemy_benefit	does	present
 hearthstone	747383	Mischief Maker	disruption	does	present
 hearthstone	747386	Reno the Relicologist	copy	*	absent
-hearthstone	747386	Reno the Relicologist	deckbuilding_effect	does	present
 hearthstone	747386	Reno the Relicologist	variety_payoff	does	present
 hearthstone	747398	Overflow	enemy_benefit	does	present
 hearthstone	747398	Overflow	symmetric_effect	does	present
@@ -7575,7 +7512,6 @@ hearthstone	747439	Plague of Death	symmetric_effect	does	present
 hearthstone	747444	Body Wrapper	deck_modification	does	present
 hearthstone	747444	Body Wrapper	recycle	*	absent
 hearthstone	747444	Body Wrapper	revive	does	present
-hearthstone	747444	Body Wrapper	summon	does	present
 hearthstone	747451	Sunkeeper Tarim	symmetric_effect	does	present
 hearthstone	747453	Mirage Caller	copy	does	present
 hearthstone	747453	Mirage Caller	on_play	does	present
@@ -7595,7 +7531,6 @@ hearthstone	747503	Hemet, Jungle Hunter	scope_global	*	absent
 hearthstone	747506	Elise the Trailblazer	copy	*	absent
 hearthstone	747506	Elise the Trailblazer	deck_modification	does	present
 hearthstone	747506	Elise the Trailblazer	recycle	*	absent
-hearthstone	747506	Elise the Trailblazer	deckbuilding_effect	does	present
 hearthstone	747506	Elise the Trailblazer	variety_payoff	does	present
 hearthstone	747512	Raptor Hatchling	deck_modification	does	present
 hearthstone	747512	Raptor Hatchling	recycle	*	absent
@@ -7676,7 +7611,6 @@ hearthstone	747788	Bounty Board	permanent_growth	*	absent
 hearthstone	747788	Bounty Board	recycle	*	absent
 hearthstone	747788	Bounty Board	selection	*	absent
 hearthstone	747791	Doctor Holli'dae	copy	*	absent
-hearthstone	747791	Doctor Holli'dae	deckbuilding_effect	does	present
 hearthstone	747791	Doctor Holli'dae	variety_payoff	does	present
 hearthstone	747793	Azerite Giant	rows	*	absent
 hearthstone	747796	Disposal Assistant	recycle	*	absent
@@ -7698,14 +7632,12 @@ hearthstone	747842	Boomboss Tho'grun	donate	*	absent
 hearthstone	747842	Boomboss Tho'grun	junk_cards	does	present
 hearthstone	747843	Reska, the Pit Boss	steal	does	present
 hearthstone	747854	Elise, Badlands Savior	copy	*	absent
-hearthstone	747854	Elise, Badlands Savior	deckbuilding_effect	does	present
 hearthstone	747854	Elise, Badlands Savior	variety_payoff	does	present
 hearthstone	747857	Holy Springwater	cost_condition	*	absent
 hearthstone	747857	Holy Springwater	generate_cards	does	present
 hearthstone	747857	Holy Springwater	heal	does	present
 hearthstone	747862	Gunslinger Kurtrus	copy	*	absent
 hearthstone	747862	Gunslinger Kurtrus	hand_disruption	does	present
-hearthstone	747862	Gunslinger Kurtrus	deckbuilding_effect	does	present
 hearthstone	747862	Gunslinger Kurtrus	variety_payoff	does	present
 hearthstone	747865	Oasis Outlaws	condition	does	present
 hearthstone	747865	Oasis Outlaws	generate_cards	does	present
@@ -7720,7 +7652,6 @@ hearthstone	747912	Splish-Splash Whelp	resource_gain	does	present
 hearthstone	747912	Splish-Splash Whelp	tribal	does	present
 hearthstone	747913	Dragon Tales	cost_increase	*	absent
 hearthstone	747916	Rheastrasza	copy	*	absent
-hearthstone	747916	Rheastrasza	deckbuilding_effect	does	present
 hearthstone	747916	Rheastrasza	variety_payoff	does	present
 hearthstone	747928	The Amazing Reno	banish	does	present
 hearthstone	747928	The Amazing Reno	board_wipe	does	present
@@ -7746,7 +7677,6 @@ hearthstone	748021	Moonfang	damage	*	absent
 hearthstone	748021	Moonfang	damage_reduction	does	present
 hearthstone	748021	Moonfang	life_payment	cost	absent
 hearthstone	797261	More Supplies	cost_condition	does	present
-hearthstone	797261	More Supplies	draw	does	present
 hearthstone	797261	More Supplies	tutor	does	present
 hearthstone	797340	Fandral Staghelm	modal_choice	benefits	present
 hearthstone	797378	Xyrella's Prayer	heal	does	present
@@ -7755,7 +7685,6 @@ hearthstone	797443	Bru'kan on Ice	permanent_growth	*	absent
 hearthstone	797449	Dawngrasp (created)	attack_lock	does	present
 hearthstone	797449	Dawngrasp (created)	on_play	does	present
 hearthstone	797449	Dawngrasp (created)	revive	does	present
-hearthstone	797449	Dawngrasp (created)	summon	does	present
 hearthstone	797449	Dawngrasp (created)	temporary_effect	does	present
 hearthstone	797524	Breakout	haste	grants	present
 hearthstone	797524	Breakout	scope_multi	does	present
@@ -7779,7 +7708,6 @@ hearthstone	798026	Faire Arborist (created)	summon	does	present
 hearthstone	798213	Crew Transport	copy	does	present
 hearthstone	798213	Crew Transport	cost_set	does	present
 hearthstone	798213	Crew Transport	generate_cards	does	present
-hearthstone	798214	Starship Pieces	buff	does	present
 hearthstone	798214	Starship Pieces	merge_attach	does	present
 hearthstone	798224	Bad Omen (created)	delayed	does	present
 hearthstone	798224	Bad Omen (created)	summon	does	present
@@ -7809,7 +7737,6 @@ hearthstone	798642	Small Backpacks	start_of_game	does	present
 hearthstone	798642	Small Backpacks	turn_start	*	absent
 hearthstone	798986	Medivac	death_trigger	*	absent
 hearthstone	798986	Medivac	delayed	does	present
-hearthstone	798986	Medivac	buff	does	present
 hearthstone	798986	Medivac	merge_attach	does	present
 hearthstone	798986	Medivac	summon	does	present
 hearthstone	798986	Medivac	taunt	does	present
@@ -7817,7 +7744,6 @@ hearthstone	799054	Prisoner Baine	delayed	does	present
 hearthstone	799054	Prisoner Baine	immunity	does	present
 hearthstone	799074	Stuffed Sack	death_trigger	does	present
 hearthstone	799097	Warsong Commander (created)	aura	does	present
-hearthstone	799097	Warsong Commander (created)	buff	does	present
 hearthstone	799097	Warsong Commander (created)	stat_gain	*	absent
 hearthstone	799097	Warsong Commander (created)	haste	benefits	present
 hearthstone	799162	Assassin's Training	cost_reduction	does	present
@@ -7832,8 +7758,8 @@ hearthstone	799231	Warmaster Blackhorn (created)	taunt	does	present
 hearthstone	799231	Warmaster Blackhorn (created)	turn_start	does	present
 hearthstone	799243	Nightmare Fandral	cost_increase	does	present
 hearthstone	799299	Stormreaver Warlock	copy	does	present
-hearthstone	799299	Stormreaver Warlock	generate_cards	does	present
 hearthstone	799299	Stormreaver Warlock	cost_set	does	present
+hearthstone	799299	Stormreaver Warlock	generate_cards	does	present
 hearthstone	799299	Stormreaver Warlock	on_spell	does	present
 hearthstone	799363	Bold Charge	haste	grants	present
 hearthstone	799561	Vespers Cannon	summon	does	present
@@ -7855,7 +7781,6 @@ hearthstone	799843	Bwonsamdi's Sanctum	death_trigger	does	present
 hearthstone	799843	Bwonsamdi's Sanctum	repeat_trigger	does	present
 hearthstone	799895	Rallying Quilboar	adjacency	does	present
 hearthstone	799895	Rallying Quilboar	aura	does	present
-hearthstone	799895	Rallying Quilboar	buff	does	present
 hearthstone	799895	Rallying Quilboar	draw	does	present
 hearthstone	799895	Rallying Quilboar	start_of_game	does	present
 hearthstone	799895	Rallying Quilboar	turn_start	*	absent
@@ -7875,7 +7800,6 @@ hearthstone	800137	Crawling Claw	death_trigger	does	present
 hearthstone	800137	Crawling Claw	hand_disruption	does	present
 hearthstone	800137	Crawling Claw	haste	does	present
 hearthstone	800137	Crawling Claw	revive	does	present
-hearthstone	800137	Crawling Claw	summon	does	present
 hearthstone	800137	Crawling Claw	steal	does	present
 hearthstone	800175	Hiring Replacements	deck_modification	does	present
 hearthstone	800175	Hiring Replacements	generate_cards	does	present
@@ -7971,7 +7895,6 @@ hs_battlegrounds	748277	Sin'dorei Straight Shot	silence	does	present
 hs_battlegrounds	748288	Felstomper	stat_gain	does	present
 hs_battlegrounds	748288	Felstomper	on_ally_play	does	present
 hs_battlegrounds	748314	Rapid Reanimation	revive	does	present
-hs_battlegrounds	748314	Rapid Reanimation	summon	does	present
 hs_battlegrounds	748314	Rapid Reanimation	sacrifice	does	present
 hs_battlegrounds	748315	Talent Scout	auto_battle	benefits	absent
 hs_battlegrounds	748315	Talent Scout	generate_cards	*	absent
@@ -8027,7 +7950,6 @@ hs_battlegrounds	748524	Doppelganger's Locket	copy	does	present
 hs_battlegrounds	748524	Doppelganger's Locket	selection	does	present
 hs_battlegrounds	748532	Disguised Graverobber	sacrifice	does	present
 hs_battlegrounds	748535	Archlich Kel'Thuzad	revive	does	present
-hs_battlegrounds	748535	Archlich Kel'Thuzad	summon	does	present
 hs_battlegrounds	748535	Archlich Kel'Thuzad	sacrifice	does	present
 hs_battlegrounds	748537	Phaerix, Wrath of the Sun	auto_battle	benefits	absent
 hs_battlegrounds	748537	Phaerix, Wrath of the Sun	death_count	does	present
@@ -8352,7 +8274,6 @@ hs_battlegrounds	749290	Red Volumizer	auto_battle	benefits	absent
 hs_battlegrounds	749290	Red Volumizer	stat_gain	does	present
 hs_battlegrounds	749290	Red Volumizer	merge_attach	does	present
 hs_battlegrounds	749290	Red Volumizer	on_play	does	present
-hs_battlegrounds	749298	Double Demolisher	buff	does	present
 hs_battlegrounds	749298	Double Demolisher	merge_attach	does	present
 hs_battlegrounds	749298	Double Demolisher	repeat_trigger	does	present
 hs_battlegrounds	749310	Rabid Panther	friendly_fire	does	present
@@ -8460,7 +8381,6 @@ hs_battlegrounds	749668	Trusty Crowbar	items_consumables	does	present
 hs_battlegrounds	749670	Deathtouch Apple	items_consumables	does	present
 hs_battlegrounds	749671	Soul Fermenter	items_consumables	does	present
 hs_battlegrounds	749671	Soul Fermenter	revive	does	present
-hs_battlegrounds	749671	Soul Fermenter	summon	does	present
 hs_battlegrounds	749671	Soul Fermenter	sacrifice	does	present
 hs_battlegrounds	749672	Sky Golem Portrait	items_consumables	does	present
 hs_battlegrounds	749673	Beatboxer Portrait	items_consumables	does	present
@@ -8549,7 +8469,6 @@ hs_battlegrounds	749843	Floating Candle Set	items_consumables	does	present
 hs_battlegrounds	749844	Lovely Locket	items_consumables	does	present
 hs_battlegrounds	749845	Wolfhead Flail	items_consumables	does	present
 hs_battlegrounds	749846	Lightfeather Sticker	combat_start	does	present
-hs_battlegrounds	749846	Lightfeather Sticker	on_attack	grants	absent
 hs_battlegrounds	749846	Lightfeather Sticker	shield	grants	present
 hs_battlegrounds	749850	Glowing Crystal	items_consumables	does	present
 hs_battlegrounds	749851	Frigid Blossom	items_consumables	does	present
@@ -8701,7 +8620,6 @@ hs_battlegrounds	750184	Lucifron	repeat_trigger	does	present
 hs_battlegrounds	750187	Karl the Lost	auto_battle	benefits	absent
 hs_battlegrounds	750187	Karl the Lost	stat_gain	does	present
 hs_battlegrounds	750187	Karl the Lost	hero_power	does	present
-hs_battlegrounds	750187	Karl the Lost	shield	grants	absent
 hs_battlegrounds	750197	Tentacle of C'Thun	auto_battle	benefits	absent
 hs_battlegrounds	750197	Tentacle of C'Thun	delayed	*	absent
 hs_battlegrounds	750197	Tentacle of C'Thun	temporary_buff	does	present
@@ -9124,7 +9042,6 @@ inscryption	740973	Act II	shop_gold	does	present
 inscryption	740973	Act II	trap_secret	*	absent
 inscryption	740974	Act III	lanes	does	present
 inscryption	740974	Act III	shop_gold	does	present
-inscryption	740975	Blood	cost_type	does	present
 inscryption	740975	Blood	sacrifice	does	present
 inscryption	740978	Boon of the Ambidextrous	draw	does	present
 inscryption	740978	Boon of the Ambidextrous	turn_start	does	present
@@ -9872,7 +9789,6 @@ marvel_snap	795414	Agamotto	recycle	*	absent
 marvel_snap	795415	Agatha Harkness	autonomous_units	does	present
 marvel_snap	795415	Agatha Harkness	draw	*	absent
 marvel_snap	795415	Agatha Harkness	drawback	does	present
-marvel_snap	795415	Agatha Harkness	draw	does	present
 marvel_snap	795415	Agatha Harkness	tutor	does	present
 marvel_snap	795417	Agent Coulson	cost_condition	does	present
 marvel_snap	795417	Agent Coulson	generate_cards	does	present
@@ -9918,7 +9834,6 @@ marvel_snap	795431	Anti-Venom	stat_gain	does	present
 marvel_snap	795431	Anti-Venom	stat_loss	does	present
 marvel_snap	795432	Anti-Venom - Spider-Verse	tribal	does	present
 marvel_snap	795433	Apocalypse	in_hand_buff	does	present
-marvel_snap	795433	Apocalypse	stat_gain	does	present
 marvel_snap	795433	Apocalypse	permanent_growth	does	present
 marvel_snap	795433	Apocalypse	recycle	does	present
 marvel_snap	795434	Apocalypse, Celestials' Chosen	movement	*	absent
@@ -9979,7 +9894,6 @@ marvel_snap	795465	Black Widow	disruption	does	present
 marvel_snap	795467	Blink	movement	*	absent
 marvel_snap	795468	Blob	stat_gain	does	present
 marvel_snap	795469	Blue Marvel	aura	does	present
-marvel_snap	795469	Blue Marvel	buff	does	present
 marvel_snap	795470	Bolts of Balthakk	stat_gain	*	absent
 marvel_snap	795473	Brood	copy	does	present
 marvel_snap	795473	Brood	slot_filler	does	present
@@ -9992,7 +9906,6 @@ marvel_snap	795482	Cannonball	forced_movement	does	present
 marvel_snap	795483	Cap's Shield	null_body	does	present
 marvel_snap	795483	Cap's Shield	support	does	present
 marvel_snap	795484	Captain America	aura	does	present
-marvel_snap	795484	Captain America	buff	does	present
 marvel_snap	795486	Captain Britain	stat_gain	does	present
 marvel_snap	795486	Captain Britain	cost_condition	does	present
 marvel_snap	795486	Captain Britain	in_hand_buff	does	present
@@ -10001,12 +9914,10 @@ marvel_snap	795486	Captain Britain	on_ally_play	does	present
 marvel_snap	795486	Captain Britain	points_scoring	benefits	absent
 marvel_snap	795486	Captain Britain	summon	benefits	absent
 marvel_snap	795487	Captain Carter	aura	does	present
-marvel_snap	795487	Captain Carter	buff	does	present
 marvel_snap	795487	Captain Carter	stat_gain	does	present
 marvel_snap	795489	CaptainAmericaAvengers	aura	does	present
 marvel_snap	795489	CaptainAmericaAvengers	tribal	does	present
 marvel_snap	795494	Cerebro	aura	does	present
-marvel_snap	795494	Cerebro	buff	does	present
 marvel_snap	795496	Chameleon	copy	does	present
 marvel_snap	795496	Chameleon	lanes	benefits	absent
 marvel_snap	795496	Chameleon	on_play	does	present
@@ -10077,10 +9988,8 @@ marvel_snap	795538	Doctor Octopus	points_scoring	benefits	absent
 marvel_snap	795538	Doctor Octopus	stat_condition	does	present
 marvel_snap	795538	Doctor Octopus	summon	*	absent
 marvel_snap	795541	DoctorStrange - Avengers	tribal	does	present
-marvel_snap	795542	Domino	draw	does	present
 marvel_snap	795542	Domino	tutor	does	present
 marvel_snap	795546	DoomBot 2099	aura	does	present
-marvel_snap	795546	DoomBot 2099	buff	does	present
 marvel_snap	795546	DoomBot 2099	lanes	benefits	absent
 marvel_snap	795546	DoomBot 2099	passive	does	present
 marvel_snap	795546	DoomBot 2099	points_scoring	benefits	absent
@@ -10099,7 +10008,6 @@ marvel_snap	795555	Drax, Avatar Of Life	stat_condition	does	present
 marvel_snap	795556	Drone	fodder	does	present
 marvel_snap	795556	Drone	slot_filler	does	present
 marvel_snap	795557	Dum Dum Dugan	aura	does	present
-marvel_snap	795557	Dum Dum Dugan	buff	does	present
 marvel_snap	795558	Ebony Maw	drawback	does	present
 marvel_snap	795558	Ebony Maw	lane_closure	does	present
 marvel_snap	795558	Ebony Maw	tempo	does	present
@@ -10117,13 +10025,11 @@ marvel_snap	795569	Esme Cuckoo	stat_gain	does	present
 marvel_snap	795569	Esme Cuckoo	stat_loss	does	present
 marvel_snap	795570	Eson	free_play	does	present
 marvel_snap	795571	Evolved Abomination	stat_loss	benefits	present
-marvel_snap	795573	Evolved Hulk	stat_gain	does	present
 marvel_snap	795577	Evolved Wasp	stat_loss	does	present
 marvel_snap	795577	Evolved Wasp	lanes	benefits	absent
 marvel_snap	795577	Evolved Wasp	on_play	does	present
 marvel_snap	795577	Evolved Wasp	points_scoring	benefits	absent
 marvel_snap	795578	Excalibur	aura	does	present
-marvel_snap	795578	Excalibur	buff	does	present
 marvel_snap	795579	Ezekiel Sims	autonomous_units	does	present
 marvel_snap	795579	Ezekiel Sims	stat_condition	does	present
 marvel_snap	795582	Fantasticar	activated	does	present
@@ -10175,7 +10081,6 @@ marvel_snap	795609	Ghost - Thunderbolts	zone_control	does	present
 marvel_snap	795610	Ghost Rider	discard	benefits	present
 marvel_snap	795610	Ghost Rider	graveyard	does	present
 marvel_snap	795610	Ghost Rider	revive	does	present
-marvel_snap	795610	Ghost Rider	summon	does	present
 marvel_snap	795613	Ghost-Spider - Spider-Verse	tribal	does	present
 marvel_snap	795617	Gladiator	disruption	does	present
 marvel_snap	795617	Gladiator	forced_placement	does	present
@@ -10198,7 +10103,6 @@ marvel_snap	795627	Groot - Guardians of the Galaxy	drawback	does	present
 marvel_snap	795627	Groot - Guardians of the Galaxy	simultaneous_play	benefits	present
 marvel_snap	795627	Groot - Guardians of the Galaxy	tribal	does	present
 marvel_snap	795628	Gwenpool	in_hand_buff	does	present
-marvel_snap	795628	Gwenpool	stat_gain	does	present
 marvel_snap	795629	H.E.R.B.I.E.	activated	does	present
 marvel_snap	795629	H.E.R.B.I.E.	lanes	benefits	absent
 marvel_snap	795629	H.E.R.B.I.E.	movement	*	absent
@@ -10279,10 +10183,8 @@ marvel_snap	795678	Iron Lad	on_play	does	present
 marvel_snap	795678	Iron Lad	points_scoring	benefits	absent
 marvel_snap	795679	Iron Man	stat_gain	does	present
 marvel_snap	795685	Jack Flag	aura	does	present
-marvel_snap	795685	Jack Flag	buff	does	present
 marvel_snap	795685	Jack Flag	stat_gain	benefits	present
 marvel_snap	795687	Jane Foster Mighty Thor	cost_reduction	*	absent
-marvel_snap	795688	Jean Grey	disruption	does	present
 marvel_snap	795688	Jean Grey	forced_placement	does	present
 marvel_snap	795688	Jean Grey	symmetric_effect	does	present
 marvel_snap	795689	Jean Grey - X-Men	resource_gain	benefits	present
@@ -10309,7 +10211,6 @@ marvel_snap	795701	Juggernaut	disruption	does	present
 marvel_snap	795701	Juggernaut	forced_movement	does	present
 marvel_snap	795701	Juggernaut	simultaneous_play	counters	present
 marvel_snap	795703	Ka-Zar	aura	does	present
-marvel_snap	795703	Ka-Zar	buff	does	present
 marvel_snap	795704	Kahhori	hand_size	benefits	present
 marvel_snap	795704	Kahhori	in_hand_buff	*	absent
 marvel_snap	795705	Kang	copy	does	present
@@ -10329,7 +10230,6 @@ marvel_snap	795708	Khonshu Full	lanes	benefits	absent
 marvel_snap	795708	Khonshu Full	on_play	does	present
 marvel_snap	795708	Khonshu Full	points_scoring	benefits	absent
 marvel_snap	795708	Khonshu Full	revive	does	present
-marvel_snap	795708	Khonshu Full	summon	does	present
 marvel_snap	795708	Khonshu Full	stat_gain	does	present
 marvel_snap	795708	Khonshu Full	stat_loss	does	present
 marvel_snap	795709	Khonshu Waxing	graveyard	does	present
@@ -10354,7 +10254,6 @@ marvel_snap	795723	Lady Deathstrike	stat_condition	does	present
 marvel_snap	795723	Lady Deathstrike	symmetric_effect	*	absent
 marvel_snap	795724	Lady Deathstrike - Brotherhood of Mutants	tribal	does	present
 marvel_snap	795726	Lancelot	aura	does	present
-marvel_snap	795726	Lancelot	buff	does	present
 marvel_snap	795726	Lancelot	stat_gain	benefits	present
 marvel_snap	795728	Laufey	friendly_fire	does	present
 marvel_snap	795729	Leader	copy	does	present
@@ -10388,7 +10287,6 @@ marvel_snap	795745	Magik	points_scoring	benefits	absent
 marvel_snap	795745	Magik	transform	does	present
 marvel_snap	795745	Magik	turn_number	does	present
 marvel_snap	795745	Magik	turn_structure	*	absent
-marvel_snap	795746	Magneto	disruption	does	present
 marvel_snap	795746	Magneto	forced_placement	does	present
 marvel_snap	795749	Magus	in_hand_buff	*	absent
 marvel_snap	795751	Major Victory	generate_cards	does	present
@@ -10397,7 +10295,6 @@ marvel_snap	795751	Major Victory	on_play	does	present
 marvel_snap	795751	Major Victory	points_scoring	benefits	absent
 marvel_snap	795751	Major Victory	tribal	does	present
 marvel_snap	795752	Makkari	autonomous_units	does	present
-marvel_snap	795752	Makkari	random_effect	does	present
 marvel_snap	795752	Makkari	free_play	does	present
 marvel_snap	795752	Makkari	movement	does	present
 marvel_snap	795753	Malekith	free_play	does	present
@@ -10516,7 +10413,6 @@ marvel_snap	795841	Okoye	on_play	does	present
 marvel_snap	795841	Okoye	points_scoring	benefits	absent
 marvel_snap	795841	Okoye	scope_global	*	absent
 marvel_snap	795842	Omega Red	aura	does	present
-marvel_snap	795842	Omega Red	buff	does	present
 marvel_snap	795842	Omega Red	control_reward	does	present
 marvel_snap	795844	Omniversal Presence	lane_rule	does	present
 marvel_snap	795845	Once And Future	stat_gain	*	absent
@@ -10527,7 +10423,6 @@ marvel_snap	795853	Overdrive Reactor Effect04	lanes	benefits	absent
 marvel_snap	795853	Overdrive Reactor Effect04	points_scoring	benefits	absent
 marvel_snap	795853	Overdrive Reactor Effect04	transform	does	present
 marvel_snap	795860	Ozymandias	aura	does	present
-marvel_snap	795860	Ozymandias	buff	does	present
 marvel_snap	795860	Ozymandias	null_body	benefits	present
 marvel_snap	795860	Ozymandias	tribal	does	present
 marvel_snap	795861	Patriot	aura	does	present
@@ -10553,7 +10448,6 @@ marvel_snap	795863	Peni Parker	resource_gain	does	present
 marvel_snap	795866	Pig	null_body	does	present
 marvel_snap	795867	Pixie	cost_set	does	present
 marvel_snap	795867	Pixie	random_effect	does	present
-marvel_snap	795869	Polaris	disruption	does	present
 marvel_snap	795869	Polaris	forced_placement	does	present
 marvel_snap	795870	Polaris Horseman of Pestilence	free_play	does	present
 marvel_snap	795875	Professor X	disable	*	absent
@@ -10594,7 +10488,6 @@ marvel_snap	795892	Raptor	fodder	does	present
 marvel_snap	795892	Raptor	slot_filler	does	present
 marvel_snap	795893	Ravonna Renslayer	null_body	benefits	present
 marvel_snap	795897	Red Hulk	in_hand_buff	does	present
-marvel_snap	795897	Red Hulk	stat_gain	does	present
 marvel_snap	795897	Red Hulk	permanent_growth	does	present
 marvel_snap	795898	Red Hulk Fractured Frontier	stat_gain	does	present
 marvel_snap	795898	Red Hulk Fractured Frontier	condition_count	does	present
@@ -10740,7 +10633,6 @@ marvel_snap	795977	Spider-Ham	points_scoring	benefits	absent
 marvel_snap	795977	Spider-Ham	random_effect	does	present
 marvel_snap	795977	Spider-Ham	silence	does	present
 marvel_snap	795978	Spider-Man	forced_movement	does	present
-marvel_snap	795978	Spider-Man	disruption	does	present
 marvel_snap	795978	Spider-Man	forced_placement	does	present
 marvel_snap	795980	Spider-Man 2099 - Spider-Verse	synergy_payoff	does	present
 marvel_snap	795982	Spider-Man Noir	stat_gain	does	present
@@ -10816,7 +10708,6 @@ marvel_snap	796004	Subterranean Summons	cost_condition	*	absent
 marvel_snap	796004	Subterranean Summons	cost_reduction	does	present
 marvel_snap	796004	Subterranean Summons	generate_cards	benefits	present
 marvel_snap	796004	Subterranean Summons	in_hand_buff	does	present
-marvel_snap	796004	Subterranean Summons	stat_gain	does	present
 marvel_snap	796004	Subterranean Summons	lanes	benefits	absent
 marvel_snap	796004	Subterranean Summons	modal_choice	does	present
 marvel_snap	796004	Subterranean Summons	on_play	does	present
@@ -10850,7 +10741,6 @@ marvel_snap	796025	Taskmaster - Thunderbolts	tribal	does	present
 marvel_snap	796026	Techno-Organic Virus	silence	does	present
 marvel_snap	796026	Techno-Organic Virus	transform	does	present
 marvel_snap	796028	Temporal Manipulation	generate_cards	*	absent
-marvel_snap	796028	Temporal Manipulation	draw	does	present
 marvel_snap	796028	Temporal Manipulation	tutor	does	present
 marvel_snap	796029	Terrax the Tamer	junk_cards	does	present
 marvel_snap	796031	Thanos	generate_cards	does	present
@@ -10868,8 +10758,6 @@ marvel_snap	796036	The Fallen One	variable_stats	does	present
 marvel_snap	796037	The First Ghost Rider	drawback	does	present
 marvel_snap	796039	The Hood	drawback	does	present
 marvel_snap	796041	The Infinaut	turn_structure	*	absent
-marvel_snap	796042	The Inversion	stat_gain	*	absent
-marvel_snap	796042	The Inversion	stat_loss	*	absent
 marvel_snap	796042	The Inversion	lanes	benefits	absent
 marvel_snap	796042	The Inversion	on_play	does	present
 marvel_snap	796042	The Inversion	points_scoring	benefits	absent
@@ -10948,7 +10836,6 @@ marvel_snap	796088	Vibro-Shock Gauntlets	resource_banking	*	absent
 marvel_snap	796088	Vibro-Shock Gauntlets	resource_gain	does	present
 marvel_snap	796088	Vibro-Shock Gauntlets	stat_condition	does	present
 marvel_snap	796089	Victoria Hand	aura	does	present
-marvel_snap	796089	Victoria Hand	buff	does	present
 marvel_snap	796089	Victoria Hand	generate_cards	benefits	present
 marvel_snap	796090	Viper	board_clog	*	absent
 marvel_snap	796090	Viper	donate	does	present
@@ -10979,7 +10866,6 @@ marvel_snap	796109	White Tiger	summon	does	present
 marvel_snap	796110	White Widow	generate_cards	*	absent
 marvel_snap	796112	Widow's Bite	disruption	does	present
 marvel_snap	796112	Widow's Bite	draw	counters	present
-marvel_snap	796112	Widow's Bite	drawback	does	present
 marvel_snap	796112	Widow's Bite	junk_cards	does	present
 marvel_snap	796112	Widow's Bite	lanes	benefits	absent
 marvel_snap	796112	Widow's Bite	passive	does	present
@@ -10995,7 +10881,6 @@ marvel_snap	796115	Wilson Fisk	condition	does	present
 marvel_snap	796115	Wilson Fisk	cost_set	does	present
 marvel_snap	796116	Winds of Watoomb	adjacency	does	present
 marvel_snap	796116	Winds of Watoomb	forced_movement	does	present
-marvel_snap	796116	Winds of Watoomb	disruption	does	present
 marvel_snap	796116	Winds of Watoomb	forced_placement	does	present
 marvel_snap	796118	Winter Soldier - Thunderbolts	drawback	does	present
 marvel_snap	796120	Wolfsbane	stat_gain	does	present
@@ -11097,7 +10982,6 @@ marvel_snap	796209	F.E.A.S.T.	symmetric_effect	does	present
 marvel_snap	796210	Fisk Tower	movement	counters	present
 marvel_snap	796213	Fogwell's Gym	stakes_wager	does	present
 marvel_snap	796217	Genosha	destroy	does	present
-marvel_snap	796217	Genosha	destroy	benefits	absent
 marvel_snap	796217	Genosha	sacrifice	does	present
 marvel_snap	796219	Great Portal	generate_cards	does	present
 marvel_snap	796219	Great Portal	lane_rule	does	present
@@ -11230,7 +11114,6 @@ marvel_snap	796322	Survivor's Camp	symmetric_effect	does	present
 marvel_snap	796322	Survivor's Camp	turn_number	does	present
 marvel_snap	796323	T.A.H.I.T.I.	destroy	benefits	present
 marvel_snap	796324	Ta Lo	in_hand_buff	does	present
-marvel_snap	796324	Ta Lo	stat_gain	does	present
 marvel_snap	796328	The Bifrost	forced_movement	does	present
 marvel_snap	796328	The Bifrost	movement	benefits	absent
 marvel_snap	796331	The Grub	upkeep	*	absent
@@ -11272,11 +11155,9 @@ marvel_snap	796358	Valley of the Baby Hand	stakes_wager	does	present
 marvel_snap	796359	Valley Of The Hand	graveyard	does	present
 marvel_snap	796360	Vibranium Mines	generate_cards	does	present
 marvel_snap	796360	Vibranium Mines	recycle	*	absent
-marvel_snap	796361	Vormir	destroy	benefits	absent
 marvel_snap	796361	Vormir	destroy	does	present
 marvel_snap	796361	Vormir	sacrifice	does	present
 marvel_snap	796363	Wakandan Embassy	in_hand_buff	does	present
-marvel_snap	796363	Wakandan Embassy	stat_gain	does	present
 marvel_snap	796365	Washington D.C.	null_body	benefits	present
 marvel_snap	796366	Weapon X Facility	discard	does	present
 marvel_snap	796366	Weapon X Facility	draw	does	present
@@ -11304,7 +11185,6 @@ mtg	766015	Undying	condition	does	present
 mtg	766015	Undying	death_trigger	does	present
 mtg	766015	Undying	permanent_growth	does	present
 mtg	766015	Undying	revive	does	present
-mtg	766015	Undying	summon	does	present
 mtg	766042	Disguise	information	does	present
 mtg	766042	Disguise	stealth	*	absent
 mtg	766042	Disguise	transform	does	present
@@ -11406,21 +11286,17 @@ mtg	767191	Swift Warkite	haste	grants	present
 mtg	767191	Swift Warkite	on_play	does	present
 mtg	767191	Swift Warkite	return_to_hand	does	present
 mtg	767191	Swift Warkite	revive	does	present
-mtg	767191	Swift Warkite	summon	does	present
 mtg	767191	Swift Warkite	turn_end	does	present
 mtg	767191	Swift Warkite	turn_start	*	absent
 mtg	767489	Blockbuster	activated	does	present
 mtg	767489	Blockbuster	aoe_damage	does	present
 mtg	767489	Blockbuster	direct_damage	does	present
-mtg	767489	Blockbuster	cost_type	does	present
 mtg	767489	Blockbuster	sacrifice	does	present
 mtg	767489	Blockbuster	symmetric_effect	does	present
 mtg	767913	Splitting the Powerstone	activated	*	absent
 mtg	767913	Splitting the Powerstone	condition	does	present
 mtg	767913	Splitting the Powerstone	draw	does	present
-mtg	767913	Splitting the Powerstone	cost_type	cost	present
 mtg	767913	Splitting the Powerstone	sacrifice	cost	present
-mtg	767913	Splitting the Powerstone	cost_type	does	present
 mtg	767913	Splitting the Powerstone	sacrifice	does	present
 mtg	767913	Splitting the Powerstone	summon	does	present
 mtg	768144	Judge Magister Gabranth	death_count	does	present
@@ -11438,9 +11314,7 @@ mtg	768669	Entangling Trap	disable	does	present
 mtg	768669	Entangling Trap	random_effect	does	present
 mtg	768816	Life Chisel	activated	does	present
 mtg	768816	Life Chisel	heal	does	present
-mtg	768816	Life Chisel	cost_type	cost	present
 mtg	768816	Life Chisel	sacrifice	cost	present
-mtg	768816	Life Chisel	cost_type	does	present
 mtg	768816	Life Chisel	sacrifice	does	present
 mtg	768816	Life Chisel	turn_start	does	present
 mtg	768922	Fire Lord Azula	copy	does	present
@@ -11525,7 +11399,6 @@ mtg	771608	Night of the Sweets' Revenge	heal	does	present
 mtg	771608	Night of the Sweets' Revenge	items_consumables	does	present
 mtg	771608	Night of the Sweets' Revenge	on_play	does	present
 mtg	771608	Night of the Sweets' Revenge	resource_gain	does	present
-mtg	771608	Night of the Sweets' Revenge	cost_type	does	present
 mtg	771608	Night of the Sweets' Revenge	sacrifice	does	present
 mtg	771608	Night of the Sweets' Revenge	summon	does	present
 mtg	771608	Night of the Sweets' Revenge	temporary_buff	does	present
@@ -11707,14 +11580,12 @@ mtg	775679	Doomskar Titan	haste	grants	present
 mtg	775679	Doomskar Titan	on_play	does	present
 mtg	775679	Doomskar Titan	temporary_buff	does	present
 mtg	775696	Instill Energy	activated	does	present
-mtg	775696	Instill Energy	buff	does	present
 mtg	775696	Instill Energy	merge_attach	does	present
 mtg	775696	Instill Energy	untap	does	present
 mtg	775899	Convulsing Licid	activated	does	present
 mtg	775899	Convulsing Licid	aura	*	absent
 mtg	775899	Convulsing Licid	blocking	counters	present
 mtg	775899	Convulsing Licid	blocking	does	present
-mtg	775899	Convulsing Licid	debuff	does	present
 mtg	775899	Convulsing Licid	merge_attach	does	present
 mtg	776130	Harness by Force	condition_count	does	present
 mtg	776130	Harness by Force	cost_increase	does	present
@@ -11728,9 +11599,7 @@ mtg	776303	Devouring Strossus	drawback	does	present
 mtg	776303	Devouring Strossus	evasion	does	present
 mtg	776303	Devouring Strossus	excess_damage	does	present
 mtg	776303	Devouring Strossus	regeneration	does	present
-mtg	776303	Devouring Strossus	cost_type	cost	present
 mtg	776303	Devouring Strossus	sacrifice	cost	present
-mtg	776303	Devouring Strossus	cost_type	does	present
 mtg	776303	Devouring Strossus	sacrifice	does	present
 mtg	776303	Devouring Strossus	turn_start	does	present
 mtg	776597	Raffine, Scheming Seer	stat_gain	*	absent
@@ -11773,7 +11642,6 @@ mtg	777491	Chandra's Flame Wave	damage	*	absent
 mtg	777491	Chandra's Flame Wave	direct_damage	does	present
 mtg	777491	Chandra's Flame Wave	graveyard	does	present
 mtg	777491	Chandra's Flame Wave	information	*	absent
-mtg	777491	Chandra's Flame Wave	draw	does	present
 mtg	777491	Chandra's Flame Wave	tutor	does	present
 mtg	777533	Talion, the Kindly Lord	damage	*	absent
 mtg	777533	Talion, the Kindly Lord	direct_damage	does	present
@@ -11785,7 +11653,6 @@ mtg	777546	Azorius Herald	drawback	does	present
 mtg	777546	Azorius Herald	evasion	does	present
 mtg	777546	Azorius Herald	heal	does	present
 mtg	777546	Azorius Herald	on_play	does	present
-mtg	777546	Azorius Herald	cost_type	does	present
 mtg	777546	Azorius Herald	sacrifice	does	present
 mtg	777791	Return of the Mole Man	activated	does	present
 mtg	777791	Return of the Mole Man	condition_count	does	present
@@ -11793,12 +11660,10 @@ mtg	777791	Return of the Mole Man	graveyard	does	present
 mtg	777791	Return of the Mole Man	self_mill	does	present
 mtg	777791	Return of the Mole Man	on_attack	does	present
 mtg	777791	Return of the Mole Man	resource_gain	*	absent
-mtg	777791	Return of the Mole Man	cost_type	does	present
 mtg	777791	Return of the Mole Man	sacrifice	does	present
 mtg	777791	Return of the Mole Man	summon	does	present
 mtg	777909	Final Parting	generate_cards	*	absent
 mtg	777909	Final Parting	graveyard	does	present
-mtg	777909	Final Parting	draw	does	present
 mtg	777909	Final Parting	tutor	does	present
 mtg	778169	Invigorating Hot Spring	activated	does	present
 mtg	778169	Invigorating Hot Spring	haste	grants	present
@@ -11870,7 +11735,6 @@ mtg	779484	Reaper's Talisman	activated	does	present
 mtg	779484	Reaper's Talisman	deathtouch	grants	present
 mtg	779484	Reaper's Talisman	items_consumables	does	present
 mtg	779484	Reaper's Talisman	lifesteal	does	present
-mtg	779484	Reaper's Talisman	buff	does	present
 mtg	779484	Reaper's Talisman	merge_attach	does	present
 mtg	779484	Reaper's Talisman	on_attack	does	present
 mtg	779484	Reaper's Talisman	temporary_buff	does	present
@@ -11929,7 +11793,6 @@ mtg	780429	Maddening Wind	cost_type	cost	present
 mtg	780429	Maddening Wind	damage	*	absent
 mtg	780429	Maddening Wind	damage_over_time	does	present
 mtg	780429	Maddening Wind	direct_damage	does	present
-mtg	780429	Maddening Wind	buff	does	present
 mtg	780429	Maddening Wind	merge_attach	does	present
 mtg	780429	Maddening Wind	turn_start	does	present
 mtg	780429	Maddening Wind	upkeep	does	present
@@ -11940,7 +11803,6 @@ mtg	780600	Skirk Volcanist	sacrifice	cost	present
 mtg	780600	Skirk Volcanist	stealth	does	present
 mtg	780600	Skirk Volcanist	transform	does	present
 mtg	780635	Lord of Atlantis	aura	does	present
-mtg	780635	Lord of Atlantis	buff	does	present
 mtg	780635	Lord of Atlantis	stat_gain	does	present
 mtg	780635	Lord of Atlantis	evasion	grants	present
 mtg	780635	Lord of Atlantis	passive	grants	absent
@@ -11948,7 +11810,6 @@ mtg	780635	Lord of Atlantis	passive	*	absent
 mtg	780635	Lord of Atlantis	tribal	does	present
 mtg	780847	Skittering Invasion	fodder	does	present
 mtg	780847	Skittering Invasion	resource_gain	does	present
-mtg	780847	Skittering Invasion	cost_type	does	present
 mtg	780847	Skittering Invasion	sacrifice	does	present
 mtg	780847	Skittering Invasion	summon	does	present
 mtg	780984	Venerated Loxodon	cost_reduction	does	present
@@ -11967,7 +11828,6 @@ mtg	781274	Chitinous Cloak	activated	does	present
 mtg	781274	Chitinous Cloak	stat_gain	does	present
 mtg	781274	Chitinous Cloak	evasion	grants	present
 mtg	781274	Chitinous Cloak	items_consumables	does	present
-mtg	781274	Chitinous Cloak	buff	does	present
 mtg	781274	Chitinous Cloak	merge_attach	does	present
 mtg	781306	Gonti, Lord of Luxury	banish	does	present
 mtg	781306	Gonti, Lord of Luxury	cast_from_zone	does	present
@@ -12006,7 +11866,6 @@ mtg	782039	Body Snatcher	discard	does	present
 mtg	782039	Body Snatcher	graveyard	does	present
 mtg	782039	Body Snatcher	on_play	does	present
 mtg	782039	Body Snatcher	revive	does	present
-mtg	782039	Body Snatcher	summon	does	present
 mtg	782166	Emissary of Sunrise	stat_gain	*	absent
 mtg	782166	Emissary of Sunrise	damage	*	absent
 mtg	782166	Emissary of Sunrise	deck_position	does	present
@@ -12019,13 +11878,11 @@ mtg	782262	Hammer of Nazahn	stat_gain	does	present
 mtg	782262	Hammer of Nazahn	destroy	counters	absent
 mtg	782262	Hammer of Nazahn	immunity	grants	absent
 mtg	782262	Hammer of Nazahn	items_consumables	does	present
-mtg	782262	Hammer of Nazahn	buff	does	present
 mtg	782262	Hammer of Nazahn	merge_attach	does	present
 mtg	782262	Hammer of Nazahn	protection	grants	present
 mtg	782323	One with Nature	damage	benefits	absent
 mtg	782323	One with Nature	damage	*	absent
 mtg	782323	One with Nature	free_play	does	present
-mtg	782323	One with Nature	buff	does	present
 mtg	782323	One with Nature	merge_attach	does	present
 mtg	782323	One with Nature	on_attack	does	present
 mtg	782323	One with Nature	summon	*	absent
@@ -12068,7 +11925,6 @@ mtg	782839	Boseiju Reaches Skyward // Branch of Boseiju	graveyard	does	present
 mtg	782839	Boseiju Reaches Skyward // Branch of Boseiju	information	*	absent
 mtg	782839	Boseiju Reaches Skyward // Branch of Boseiju	ranged	*	absent
 mtg	782839	Boseiju Reaches Skyward // Branch of Boseiju	transform	does	present
-mtg	782839	Boseiju Reaches Skyward // Branch of Boseiju	draw	does	present
 mtg	782839	Boseiju Reaches Skyward // Branch of Boseiju	tutor	does	present
 mtg	782919	Hurkyl's Recall	bounce_enemy	does	present
 mtg	782919	Hurkyl's Recall	return_to_hand	does	present
@@ -12100,7 +11956,6 @@ mtg	783591	Embermage Goblin	direct_damage	does	present
 mtg	783591	Embermage Goblin	information	*	absent
 mtg	783591	Embermage Goblin	on_play	does	present
 mtg	783591	Embermage Goblin	ping	does	present
-mtg	783591	Embermage Goblin	draw	does	present
 mtg	783591	Embermage Goblin	tutor	does	present
 mtg	783950	Goblin Traprunner	attack_now	does	present
 mtg	783950	Goblin Traprunner	coin_economy	*	absent
@@ -12126,7 +11981,6 @@ mtg	784266	Toralf, God of Fury // Toralf's Hammer	condition	does	present
 mtg	784266	Toralf, God of Fury // Toralf's Hammer	direct_damage	does	present
 mtg	784266	Toralf, God of Fury // Toralf's Hammer	excess_damage	does	present
 mtg	784266	Toralf, God of Fury // Toralf's Hammer	items_consumables	does	present
-mtg	784266	Toralf, God of Fury // Toralf's Hammer	buff	does	present
 mtg	784266	Toralf, God of Fury // Toralf's Hammer	merge_attach	does	present
 mtg	784266	Toralf, God of Fury // Toralf's Hammer	passive	*	absent
 mtg	784266	Toralf, God of Fury // Toralf's Hammer	bounce_enemy	does	present
@@ -12165,9 +12019,7 @@ mtg	802852	Coils of the Medusa	aura	*	absent
 mtg	802852	Coils of the Medusa	board_wipe	*	absent
 mtg	802852	Coils of the Medusa	stat_gain	does	present
 mtg	802852	Coils of the Medusa	destroy	does	present
-mtg	802852	Coils of the Medusa	buff	does	present
 mtg	802852	Coils of the Medusa	merge_attach	does	present
-mtg	802852	Coils of the Medusa	cost_type	does	present
 mtg	802852	Coils of the Medusa	sacrifice	does	present
 mtg	802891	Commissar Severina Raine	rows	*	absent
 mtg	802991	Copy Land	copy	does	present
@@ -12182,7 +12034,6 @@ mtg	804988	From the Catacombs	cast_from_zone	does	present
 mtg	804988	From the Catacombs	cost_type	does	present
 mtg	804988	From the Catacombs	graveyard	does	present
 mtg	804988	From the Catacombs	revive	does	present
-mtg	804988	From the Catacombs	summon	does	present
 mtg	804988	From the Catacombs	stacking_keyword	*	absent
 mtg	804988	From the Catacombs	turn_structure	does	present
 mtg	806450	Invasion of Zendikar // Awakened Skyclave	activated	does	present
@@ -12203,8 +12054,6 @@ mtg	810045	Say Its Name	free_play	does	present
 mtg	810045	Say Its Name	graveyard	does	present
 mtg	810045	Say Its Name	self_mill	does	present
 mtg	810045	Say Its Name	revive	does	present
-mtg	810045	Say Its Name	summon	does	present
-mtg	810045	Say Its Name	draw	does	present
 mtg	810045	Say Its Name	tutor	does	present
 mtg	815726	Human Knight	excess_damage	does	present
 mtg	815726	Human Knight	haste	does	present
@@ -12308,7 +12157,6 @@ runeterra	750689	Tryndamere	cheat_death	does	present
 runeterra	750703	Yeti Yearling	deck_modification	does	present
 runeterra	750703	Yeti Yearling	on_damaged	*	absent
 runeterra	750713	Tarkaz the Tribeless	symmetric_effect	does	present
-runeterra	750714	Heart of the Fluft	buff	does	present
 runeterra	750714	Heart of the Fluft	merge_attach	does	present
 runeterra	750718	She Who Wanders	board_wipe	does	present
 runeterra	750718	She Who Wanders	hand_disruption	does	present
@@ -12342,7 +12190,6 @@ runeterra	750808	Devourer of the Depths	removal	does	present
 runeterra	750808	Devourer of the Depths	stat_condition	does	present
 runeterra	750813	Brash Gambler	discard	does	present
 runeterra	750826	The Dreadway	aura	does	present
-runeterra	750826	The Dreadway	buff	does	present
 runeterra	750826	The Dreadway	damage	does	present
 runeterra	750827	Slotbot	random_effect	does	present
 runeterra	750830	The Syren	damage	*	absent
@@ -12454,7 +12301,6 @@ runeterra	751136	Blossoming Blade	summon	does	present
 runeterra	751143	Sacred Protector	stat_gain	*	absent
 runeterra	751143	Sacred Protector	stat_multiply	*	absent
 runeterra	751151	Voice of the Risen	aura	does	present
-runeterra	751151	Voice of the Risen	buff	does	present
 runeterra	751151	Voice of the Risen	count_payoff	does	present
 runeterra	751159	Ancient Preparations	cant_attack	does	present
 runeterra	751159	Ancient Preparations	deck_position	does	present
@@ -12629,7 +12475,6 @@ runeterra	751673	The Darkin Ballista	activated	*	absent
 runeterra	751673	The Darkin Ballista	items_consumables	*	absent
 runeterra	751673	The Darkin Ballista	merge_attach	does	present
 runeterra	751695	Lawkeeper	stat_condition	does	present
-runeterra	751713	Gift of the Hearthblood	drawback	does	present
 runeterra	751713	Gift of the Hearthblood	junk_cards	does	present
 runeterra	751715	Pouty Poro	stat_gain	*	absent
 runeterra	751715	Pouty Poro	damage_reduction	does	present
@@ -12696,7 +12541,6 @@ runeterra	751906	Crimson Banquet Hall	friendly_fire	does	present
 runeterra	751908	Bonehide Tri-tail	variety_payoff	does	present
 runeterra	751915	Siren Song	cost_condition	does	present
 runeterra	751915	Siren Song	in_hand_buff	does	present
-runeterra	751915	Siren Song	stat_gain	does	present
 runeterra	751915	Siren Song	on_kill	*	absent
 runeterra	751915	Siren Song	random_effect	does	present
 runeterra	751915	Siren Song	summon	does	present
@@ -12816,7 +12660,6 @@ runeterra	752269	Pale Imitation	drawback	does	present
 runeterra	752269	Pale Imitation	self_destruct	does	present
 runeterra	752269	Pale Imitation	turn_end	*	absent
 runeterra	752299	Haunting Trophy	aura	does	present
-runeterra	752299	Haunting Trophy	debuff	does	present
 runeterra	796472	Vladimir (level 2)	adjacency	does	present
 runeterra	796472	Vladimir (level 2)	condition_count	does	present
 runeterra	796472	Vladimir (level 2)	direct_damage	does	present
@@ -12843,7 +12686,6 @@ runeterra	796500	Quinn (level 2)	stat_condition	does	present
 runeterra	796500	Quinn (level 2)	summon	does	present
 runeterra	796541	Yuumi (other form)	stat_gain	does	present
 runeterra	796541	Yuumi (other form)	immunity	*	absent
-runeterra	796541	Yuumi (other form)	buff	does	present
 runeterra	796541	Yuumi (other form)	merge_attach	does	present
 runeterra	796541	Yuumi (other form)	passive	*	absent
 runeterra	796541	Yuumi (other form)	turn_start	does	present
@@ -12904,7 +12746,6 @@ runeterra	796711	Written in Stars	stat_gain	*	absent
 runeterra	796711	Written in Stars	cost_reduction	*	absent
 runeterra	796711	Written in Stars	draw	does	present
 runeterra	796711	Written in Stars	in_hand_buff	does	present
-runeterra	796711	Written in Stars	stat_gain	does	present
 runeterra	796711	Written in Stars	spell_speed	does	present
 runeterra	796711	Written in Stars	tutor	does	present
 runeterra	796730	Gravitum	condition	does	present
@@ -12928,7 +12769,6 @@ runeterra	796756	Pack Your Bags	transform	does	present
 runeterra	796765	Chronobreak	attack_token	does	present
 runeterra	796765	Chronobreak	on_kill	*	absent
 runeterra	796765	Chronobreak	revive	does	present
-runeterra	796765	Chronobreak	summon	does	present
 runeterra	796765	Chronobreak	spell_speed	*	absent
 runeterra	796794	Taliyah's Stoneweaving	generate_cards	does	present
 runeterra	796794	Taliyah's Stoneweaving	spell_speed	does	present
@@ -12993,14 +12833,12 @@ runeterra	797022	Legionary Charge (created)	spell_speed	does	present
 runeterra	797022	Legionary Charge (created)	stat_condition	does	present
 runeterra	797024	Corrupted Form	activated	*	absent
 runeterra	797024	Corrupted Form	items_consumables	*	absent
-runeterra	797024	Corrupted Form	buff	does	present
 runeterra	797024	Corrupted Form	merge_attach	does	present
 runeterra	797050	Navori Longtail (created)	stat_gain	*	absent
 runeterra	797050	Navori Longtail (created)	on_play	does	present
 runeterra	797050	Navori Longtail (created)	temporary_buff	does	present
 runeterra	797066	Tumble	attack_now	does	present
 runeterra	797066	Tumble	cost_condition	does	present
-runeterra	797066	Tumble	buff	does	present
 runeterra	797066	Tumble	merge_attach	does	present
 runeterra	797066	Tumble	on_kill	*	absent
 runeterra	797066	Tumble	spell_speed	does	present
@@ -13020,7 +12858,6 @@ runeterra	797121	Cosmic Call (created)	spell_speed	does	present
 runeterra	797121	Cosmic Call (created)	tribal	does	present
 runeterra	797155	Undying Revenge	on_kill	*	absent
 runeterra	797155	Undying Revenge	revive	does	present
-runeterra	797155	Undying Revenge	summon	does	present
 runeterra	797155	Undying Revenge	self_destruct	does	present
 runeterra	797155	Undying Revenge	spell_speed	does	present
 runeterra	797155	Undying Revenge	stat_condition	does	present
@@ -13067,18 +12904,15 @@ shadowverse	752468	Adherent of Hollowness	multiple_resources	cost	absent
 shadowverse	752468	Adherent of Hollowness	on_ally_play	*	absent
 shadowverse	752468	Adherent of Hollowness	random_effect	does	present
 shadowverse	752468	Adherent of Hollowness	tribal	does	present
-shadowverse	752468	Adherent of Hollowness	buff	does	present
 shadowverse	752468	Adherent of Hollowness	upgrade	does	present
 shadowverse	752508	Precious Memories	draw	does	present
 shadowverse	752508	Precious Memories	multiple_resources	cost	absent
 shadowverse	752508	Precious Memories	random_effect	does	present
-shadowverse	752508	Precious Memories	buff	does	present
 shadowverse	752508	Precious Memories	upgrade	does	present
 shadowverse	752514	Maiser, Neighborhood Hero	cost_reduction	does	present
 shadowverse	752514	Maiser, Neighborhood Hero	generate_cards	does	present
 shadowverse	752514	Maiser, Neighborhood Hero	multiple_resources	cost	absent
 shadowverse	752514	Maiser, Neighborhood Hero	on_play	does	present
-shadowverse	752514	Maiser, Neighborhood Hero	buff	does	present
 shadowverse	752514	Maiser, Neighborhood Hero	upgrade	does	present
 shadowverse	752525	Commence Experiment	summon	does	present
 shadowverse	752529	Pursuit of Truth	generate_cards	*	absent
@@ -13087,7 +12921,6 @@ shadowverse	752529	Pursuit of Truth	tutor	*	absent
 shadowverse	752540	Familiar's Pact	random_effect	does	present
 shadowverse	752540	Familiar's Pact	sacrifice	cost	absent
 shadowverse	752540	Familiar's Pact	summon	does	present
-shadowverse	752540	Familiar's Pact	draw	does	present
 shadowverse	752540	Familiar's Pact	tutor	does	present
 shadowverse	752547	Disciple of Disdain	friendly_fire	does	present
 shadowverse	752561	Flame Pillar Dragonewt	condition_count	*	absent
@@ -13095,7 +12928,6 @@ shadowverse	752561	Flame Pillar Dragonewt	haste	does	present
 shadowverse	752561	Flame Pillar Dragonewt	multiple_resources	cost	absent
 shadowverse	752561	Flame Pillar Dragonewt	on_play	does	present
 shadowverse	752561	Flame Pillar Dragonewt	stat_condition	does	present
-shadowverse	752561	Flame Pillar Dragonewt	buff	does	present
 shadowverse	752561	Flame Pillar Dragonewt	upgrade	does	present
 shadowverse	752564	Mánagarmr Sentinel	count_payoff	does	present
 shadowverse	752564	Mánagarmr Sentinel	death_trigger	does	present
@@ -13109,7 +12941,6 @@ shadowverse	752569	Feral Aether	turn_number	does	present
 shadowverse	752574	Newfound Allies	generate_cards	*	absent
 shadowverse	752574	Newfound Allies	random_effect	does	present
 shadowverse	752574	Newfound Allies	tribal	does	present
-shadowverse	752574	Newfound Allies	draw	does	present
 shadowverse	752574	Newfound Allies	tutor	does	present
 shadowverse	752582	Dragonsong Flute	condition	does	present
 shadowverse	752582	Dragonsong Flute	cost_condition	does	present
@@ -13156,7 +12987,6 @@ shadowverse	752688	Cursed Maiden	delayed	does	present
 shadowverse	752688	Cursed Maiden	delayed	benefits	present
 shadowverse	752688	Cursed Maiden	on_play	does	present
 shadowverse	752688	Cursed Maiden	random_effect	does	present
-shadowverse	752688	Cursed Maiden	draw	does	present
 shadowverse	752688	Cursed Maiden	tutor	does	present
 shadowverse	752689	Fox of Fortune	self_destruct	does	present
 shadowverse	752702	Spiritual Blow	removal	does	present
@@ -13206,7 +13036,6 @@ shadowverse	753034	Naht's Henchman	enemy_benefit	does	present
 shadowverse	753043	Bladerights Lieutenant	multiple_resources	does	present
 shadowverse	753043	Bladerights Lieutenant	on_play	does	present
 shadowverse	753043	Bladerights Lieutenant	summon	does	present
-shadowverse	753043	Bladerights Lieutenant	buff	does	present
 shadowverse	753043	Bladerights Lieutenant	upgrade	does	present
 shadowverse	753085	Auction the Spoils	condition	does	present
 shadowverse	753085	Auction the Spoils	damage	does	present
@@ -13220,7 +13049,6 @@ shadowverse	753103	Freshman Lou	generate_cards	*	absent
 shadowverse	753103	Freshman Lou	on_play	does	present
 shadowverse	753103	Freshman Lou	on_spell	benefits	present
 shadowverse	753103	Freshman Lou	random_effect	does	present
-shadowverse	753103	Freshman Lou	draw	does	present
 shadowverse	753103	Freshman Lou	tutor	does	present
 shadowverse	753103	Freshman Lou	upgrade	benefits	present
 shadowverse	753154	Astrological Sorcerer	condition_count	*	absent
@@ -13279,7 +13107,6 @@ shadowverse	753393	Fangs in the Mirror	multiple_resources	cost	absent
 shadowverse	753393	Fangs in the Mirror	on_attack	does	present
 shadowverse	753393	Fangs in the Mirror	on_play	does	present
 shadowverse	753393	Fangs in the Mirror	summon	does	present
-shadowverse	753393	Fangs in the Mirror	buff	does	present
 shadowverse	753393	Fangs in the Mirror	upgrade	does	present
 shadowverse	753399	Ethereal Form	taunt	counters	present
 shadowverse	753401	Zombie Party	summon	does	present
@@ -13324,12 +13151,11 @@ shadowverse	753687	Mugnier, Purifying Light	symmetric_effect	does	present
 shadowverse	753707	False Puppeteer	generate_cards	does	present
 shadowverse	753707	False Puppeteer	multiple_resources	cost	absent
 shadowverse	753707	False Puppeteer	on_play	does	present
-shadowverse	753707	False Puppeteer	buff	does	present
 shadowverse	753707	False Puppeteer	upgrade	does	present
 shadowverse	753713	Adherent of Melody	copy	does	present
-shadowverse	753713	Adherent of Melody	generate_cards	does	present
 shadowverse	753713	Adherent of Melody	delayed	*	absent
 shadowverse	753713	Adherent of Melody	destroy	*	absent
+shadowverse	753713	Adherent of Melody	generate_cards	does	present
 shadowverse	753713	Adherent of Melody	on_play	does	present
 shadowverse	753713	Adherent of Melody	sacrifice	does	present
 shadowverse	753713	Adherent of Melody	tribal	does	present
@@ -13338,7 +13164,6 @@ shadowverse	753717	Gunslinger Automaton	draw	does	present
 shadowverse	753717	Gunslinger Automaton	multiple_resources	cost	absent
 shadowverse	753717	Gunslinger Automaton	on_play	does	present
 shadowverse	753717	Gunslinger Automaton	silence	does	present
-shadowverse	753717	Gunslinger Automaton	buff	does	present
 shadowverse	753717	Gunslinger Automaton	upgrade	does	present
 shadowverse	753731	Carnelia, Amnesic Attendant	condition_count	*	absent
 shadowverse	753731	Carnelia, Amnesic Attendant	cost_condition	does	present
@@ -13347,15 +13172,12 @@ shadowverse	753731	Carnelia, Amnesic Attendant	generate_cards	*	absent
 shadowverse	753731	Carnelia, Amnesic Attendant	multiple_resources	cost	absent
 shadowverse	753731	Carnelia, Amnesic Attendant	on_play	does	present
 shadowverse	753731	Carnelia, Amnesic Attendant	random_effect	does	present
-shadowverse	753731	Carnelia, Amnesic Attendant	draw	does	present
 shadowverse	753731	Carnelia, Amnesic Attendant	tutor	does	present
-shadowverse	753731	Carnelia, Amnesic Attendant	buff	does	present
 shadowverse	753731	Carnelia, Amnesic Attendant	upgrade	does	present
 shadowverse	753753	Nameless Impulse	condition_count	*	absent
 shadowverse	753753	Nameless Impulse	count_payoff	does	present
 shadowverse	753753	Nameless Impulse	multiple_resources	does	present
 shadowverse	753753	Nameless Impulse	resource_gain	does	present
-shadowverse	753755	Harnessed Flame	buff	does	present
 shadowverse	753755	Harnessed Flame	merge_attach	does	present
 shadowverse	753756	Harnessed Glass	merge_attach	does	present
 shadowverse	753766	Rapunzel	drawback	does	present
@@ -13368,7 +13190,6 @@ shadowverse	753787	Combustion Demon	on_play	does	present
 shadowverse	753787	Combustion Demon	random_effect	does	present
 shadowverse	753787	Combustion Demon	summon	does	present
 shadowverse	753787	Combustion Demon	turn_end	does	present
-shadowverse	753787	Combustion Demon	buff	does	present
 shadowverse	753787	Combustion Demon	upgrade	does	present
 shadowverse	753794	Dungeon Pathfinder	taunt	counters	present
 shadowverse	753816	Skewering Snare	destroy	does	present
@@ -13383,7 +13204,6 @@ shadowverse	753848	Irene, Harvest Defender	on_attack	does	present
 shadowverse	753848	Irene, Harvest Defender	on_play	does	present
 shadowverse	753848	Irene, Harvest Defender	taunt	does	present
 shadowverse	753848	Irene, Harvest Defender	temporary_effect	does	present
-shadowverse	753848	Irene, Harvest Defender	buff	does	present
 shadowverse	753848	Irene, Harvest Defender	upgrade	does	present
 shadowverse	753856	Alberta, the Autumnblade	self_destruct	does	present
 shadowverse	753858	Fairy Slugger	generate_cards	does	present
@@ -13393,7 +13213,6 @@ shadowverse	753858	Fairy Slugger	on_ally_play	does	present
 shadowverse	753858	Fairy Slugger	on_play	does	present
 shadowverse	753858	Fairy Slugger	summon	does	present
 shadowverse	753858	Fairy Slugger	tribal	does	present
-shadowverse	753858	Fairy Slugger	buff	does	present
 shadowverse	753858	Fairy Slugger	upgrade	does	present
 shadowverse	753866	Fairylight Guide	removal	does	present
 shadowverse	753869	Hozumi, Enchanting Hostess	sacrifice	does	present
@@ -13439,7 +13258,6 @@ shadowverse	754055	Tetra, Sapphire Leader	on_play	does	present
 shadowverse	754055	Tetra, Sapphire Leader	random_effect	does	present
 shadowverse	754055	Tetra, Sapphire Leader	resource_gain	does	present
 shadowverse	754055	Tetra, Sapphire Leader	tribal	does	present
-shadowverse	754055	Tetra, Sapphire Leader	buff	does	present
 shadowverse	754055	Tetra, Sapphire Leader	upgrade	does	present
 shadowverse	754097	Dramatic Dragonblader	drawback	does	present
 shadowverse	754097	Dramatic Dragonblader	enemy_benefit	does	present
@@ -13452,7 +13270,6 @@ shadowverse	754110	Annerose	multiple_resources	cost	absent
 shadowverse	754110	Annerose	on_play	does	present
 shadowverse	754110	Annerose	ping	does	present
 shadowverse	754110	Annerose	resource_gain	does	present
-shadowverse	754110	Annerose	buff	does	present
 shadowverse	754110	Annerose	upgrade	does	present
 shadowverse	754115	Whirlwind Pteranodon	sacrifice	does	present
 shadowverse	754120	Slaughtering Dragonewt	board_wipe	*	absent
@@ -13461,7 +13278,6 @@ shadowverse	754126	Godfire Phoenix	drawback	does	present
 shadowverse	754128	Whimsical Mermaid	condition_count	*	absent
 shadowverse	754128	Whimsical Mermaid	draw	does	present
 shadowverse	754128	Whimsical Mermaid	in_hand_buff	does	present
-shadowverse	754128	Whimsical Mermaid	stat_gain	does	present
 shadowverse	754128	Whimsical Mermaid	on_play	does	present
 shadowverse	754128	Whimsical Mermaid	stat_condition	does	present
 shadowverse	754133	Dragonskull Bludgeoner	damage_reduction	does	present
@@ -13476,8 +13292,6 @@ shadowverse	754196	Fighting Jiangshi	kicker	does	present
 shadowverse	754196	Fighting Jiangshi	multiple_resources	cost	absent
 shadowverse	754196	Fighting Jiangshi	on_play	does	present
 shadowverse	754196	Fighting Jiangshi	revive	does	present
-shadowverse	754196	Fighting Jiangshi	summon	does	present
-shadowverse	754196	Fighting Jiangshi	buff	does	present
 shadowverse	754196	Fighting Jiangshi	upgrade	does	present
 shadowverse	754198	Mummy Chef	sacrifice	does	present
 shadowverse	754211	Palespine Faithful	stat_gain	does	present
@@ -13486,7 +13300,6 @@ shadowverse	754211	Palespine Faithful	multiple_resources	cost	absent
 shadowverse	754211	Palespine Faithful	on_play	does	present
 shadowverse	754211	Palespine Faithful	summon	does	present
 shadowverse	754211	Palespine Faithful	tribal	does	present
-shadowverse	754211	Palespine Faithful	buff	does	present
 shadowverse	754211	Palespine Faithful	upgrade	does	present
 shadowverse	754217	Corpse Peddler	on_play	does	present
 shadowverse	754217	Corpse Peddler	summon	does	present
@@ -13503,7 +13316,6 @@ shadowverse	754228	Ghoul Wielder	multiple_resources	cost	absent
 shadowverse	754228	Ghoul Wielder	on_play	does	present
 shadowverse	754228	Ghoul Wielder	sacrifice	cost	present
 shadowverse	754228	Ghoul Wielder	tribal	does	present
-shadowverse	754228	Ghoul Wielder	buff	does	present
 shadowverse	754228	Ghoul Wielder	upgrade	does	present
 shadowverse	754238	Undead Stampede	graveyard	cost	present
 shadowverse	754238	Undead Stampede	haste	grants	present
@@ -13525,9 +13337,7 @@ shadowverse	754323	Corrupting Bloodlust	symmetric_effect	does	present
 shadowverse	754325	Crimson Talonstrike	deck_condition	does	present
 shadowverse	754325	Crimson Talonstrike	random_effect	does	present
 shadowverse	754325	Crimson Talonstrike	summon	does	present
-shadowverse	754325	Crimson Talonstrike	draw	does	present
 shadowverse	754325	Crimson Talonstrike	tutor	does	present
-shadowverse	754325	Crimson Talonstrike	buff	does	present
 shadowverse	754325	Crimson Talonstrike	upgrade	does	present
 shadowverse	754341	Zoe, Queen of Goldenia	friendly_fire	does	present
 shadowverse	754344	Aegina	damage_reduction	does	present
@@ -13550,7 +13360,6 @@ shadowverse	754381	Eschamali Advocate	revive	does	present
 shadowverse	754381	Eschamali Advocate	summon	does	present
 shadowverse	754381	Eschamali Advocate	taunt	does	present
 shadowverse	754381	Eschamali Advocate	turn_end	does	present
-shadowverse	754381	Eschamali Advocate	buff	does	present
 shadowverse	754381	Eschamali Advocate	upgrade	does	present
 shadowverse	754413	Jessica, Cheerful Cannoneer	stat_gain	does	present
 shadowverse	754413	Jessica, Cheerful Cannoneer	on_play	does	present
@@ -13615,7 +13424,6 @@ shadowverse	754640	Imperator of Magic	on_play	does	present
 shadowverse	754640	Imperator of Magic	resource_gain	does	present
 shadowverse	754640	Imperator of Magic	sacrifice	cost	present
 shadowverse	754640	Imperator of Magic	summon	does	present
-shadowverse	754640	Imperator of Magic	buff	does	present
 shadowverse	754640	Imperator of Magic	upgrade	does	present
 shadowverse	754641	Mirror Witch	drawback	does	present
 shadowverse	754641	Mirror Witch	enemy_benefit	does	present
@@ -13630,7 +13438,6 @@ shadowverse	754710	Dark Mermaid	damage	does	present
 shadowverse	754710	Dark Mermaid	draw	does	present
 shadowverse	754710	Dark Mermaid	multiple_resources	cost	absent
 shadowverse	754710	Dark Mermaid	on_play	does	present
-shadowverse	754710	Dark Mermaid	buff	does	present
 shadowverse	754710	Dark Mermaid	upgrade	does	present
 shadowverse	754715	Dragon Counsel	cost_condition	does	present
 shadowverse	754715	Dragon Counsel	discard	does	present
@@ -13655,7 +13462,6 @@ shadowverse	754765	Attendant of the Abyss	kicker	does	present
 shadowverse	754765	Attendant of the Abyss	on_play	does	present
 shadowverse	754765	Attendant of the Abyss	summon	does	present
 shadowverse	754765	Attendant of the Abyss	taunt	does	present
-shadowverse	754765	Attendant of the Abyss	buff	does	present
 shadowverse	754765	Attendant of the Abyss	upgrade	does	present
 shadowverse	754773	Ruler of the Necropolis	sacrifice	does	present
 shadowverse	754786	Fatal Fields	sacrifice	does	present
@@ -13709,7 +13515,6 @@ shadowverse	754974	Olivia & Sylvia, Wardens	damage	does	present
 shadowverse	754974	Olivia & Sylvia, Wardens	multiple_resources	cost	absent
 shadowverse	754974	Olivia & Sylvia, Wardens	on_play	does	present
 shadowverse	754974	Olivia & Sylvia, Wardens	taunt	does	present
-shadowverse	754974	Olivia & Sylvia, Wardens	buff	does	present
 shadowverse	754974	Olivia & Sylvia, Wardens	upgrade	does	present
 shadowverse	754976	Blau, the Valkyrie	destroy	does	present
 shadowverse	754976	Blau, the Valkyrie	removal	does	present
@@ -13722,7 +13527,6 @@ shadowverse	755050	Magnolia, Battlefield Muse	random_effect	does	present
 shadowverse	755050	Magnolia, Battlefield Muse	tribal	does	present
 shadowverse	755050	Magnolia, Battlefield Muse	turn_end	does	present
 shadowverse	755050	Magnolia, Battlefield Muse	tutor	does	present
-shadowverse	755050	Magnolia, Battlefield Muse	buff	does	present
 shadowverse	755050	Magnolia, Battlefield Muse	upgrade	does	present
 shadowverse	755063	Victorious Grappler	direct_damage	does	present
 shadowverse	755063	Victorious Grappler	on_attack	does	present
@@ -13763,7 +13567,6 @@ shadowverse	755173	Scorched-Earth Tyrant	direct_damage	does	present
 shadowverse	755173	Scorched-Earth Tyrant	multiple_resources	cost	absent
 shadowverse	755173	Scorched-Earth Tyrant	on_play	does	present
 shadowverse	755173	Scorched-Earth Tyrant	random_effect	does	present
-shadowverse	755173	Scorched-Earth Tyrant	buff	does	present
 shadowverse	755173	Scorched-Earth Tyrant	upgrade	does	present
 shadowverse	755182	Phoenix Roost	cost_reduction	does	present
 shadowverse	755182	Phoenix Roost	stat_loss	*	absent
@@ -13785,7 +13588,6 @@ shadowverse	755260	Howling Demon	haste	*	absent
 shadowverse	755260	Howling Demon	life_payment	cost	present
 shadowverse	755260	Howling Demon	lifesteal	does	present
 shadowverse	755260	Howling Demon	on_play	does	present
-shadowverse	755260	Howling Demon	buff	does	present
 shadowverse	755260	Howling Demon	upgrade	does	present
 shadowverse	755279	Eidolon of Madness	drawback	does	present
 shadowverse	755309	Boomerang Sister	removal	does	present
@@ -13800,7 +13602,6 @@ shadowverse	755345	Lucille, Keeper of Relics	on_ally_play	does	present
 shadowverse	755345	Lucille, Keeper of Relics	on_play	does	present
 shadowverse	755345	Lucille, Keeper of Relics	summon	does	present
 shadowverse	755345	Lucille, Keeper of Relics	tribal	does	present
-shadowverse	755345	Lucille, Keeper of Relics	buff	does	present
 shadowverse	755345	Lucille, Keeper of Relics	upgrade	does	present
 shadowverse	755350	Hermit of Destruction	removal	does	present
 shadowverse	755350	Hermit of Destruction	sacrifice	does	present
@@ -13829,7 +13630,6 @@ shadowverse	755447	Royal Fortress	summon	*	absent
 shadowverse	755447	Royal Fortress	support	does	present
 shadowverse	755447	Royal Fortress	tribal	does	present
 shadowverse	755447	Royal Fortress	turn_start	does	present
-shadowverse	755447	Royal Fortress	buff	does	present
 shadowverse	755447	Royal Fortress	upgrade	does	present
 shadowverse	755458	Shadow Witch	removal	does	present
 shadowverse	755460	Disaster Witch	generate_cards	does	present
@@ -13849,7 +13649,6 @@ shadowverse	755505	Rock Whale	on_play	does	present
 shadowverse	755505	Rock Whale	random_effect	does	present
 shadowverse	755505	Rock Whale	stat_condition	does	present
 shadowverse	755505	Rock Whale	tribal	does	present
-shadowverse	755505	Rock Whale	draw	does	present
 shadowverse	755505	Rock Whale	tutor	does	present
 shadowverse	755522	Odile, Black Swan	enemy_benefit	does	present
 shadowverse	755528	Gold Mine Necromancer	sacrifice	does	present
@@ -13888,7 +13687,6 @@ shadowverse	755563	Nerea, Beast Empress	on_attack	does	present
 shadowverse	755563	Nerea, Beast Empress	on_play	does	present
 shadowverse	755563	Nerea, Beast Empress	summon	does	present
 shadowverse	755563	Nerea, Beast Empress	taunt	grants	present
-shadowverse	755563	Nerea, Beast Empress	buff	does	present
 shadowverse	755563	Nerea, Beast Empress	upgrade	does	present
 shadowverse	755582	Demonic Storm	aoe_damage	does	present
 shadowverse	755582	Demonic Storm	friendly_fire	does	present
@@ -13936,7 +13734,6 @@ shadowverse	755725	Ruler of Rubble	on_play	does	present
 shadowverse	755725	Ruler of Rubble	sacrifice	cost	present
 shadowverse	755725	Ruler of Rubble	stacking_keyword	does	present
 shadowverse	755725	Ruler of Rubble	summon	does	present
-shadowverse	755725	Ruler of Rubble	buff	does	present
 shadowverse	755725	Ruler of Rubble	upgrade	does	present
 shadowverse	755733	Enchanted Sword	stat_gain	does	present
 shadowverse	755733	Enchanted Sword	cost_reduction	does	present
@@ -13980,7 +13777,6 @@ shadowverse	755796	Ceridwen, Eternal Duality	on_play	does	present
 shadowverse	755796	Ceridwen, Eternal Duality	random_effect	does	present
 shadowverse	755796	Ceridwen, Eternal Duality	repeat_trigger	does	present
 shadowverse	755796	Ceridwen, Eternal Duality	revive	does	present
-shadowverse	755796	Ceridwen, Eternal Duality	summon	does	present
 shadowverse	755796	Ceridwen, Eternal Duality	sacrifice	cost	present
 shadowverse	755796	Ceridwen, Eternal Duality	taunt	does	present
 shadowverse	755804	Spectral Cascade	random_effect	*	absent
@@ -14032,7 +13828,6 @@ shadowverse	755926	Sorcerer of Seven Forces	on_ally_play	*	absent
 shadowverse	755926	Sorcerer of Seven Forces	on_play	does	present
 shadowverse	755926	Sorcerer of Seven Forces	on_spell	does	present
 shadowverse	755926	Sorcerer of Seven Forces	summon	benefits	absent
-shadowverse	755926	Sorcerer of Seven Forces	buff	does	present
 shadowverse	755926	Sorcerer of Seven Forces	upgrade	does	present
 shadowverse	755927	Stalwart Snowman	removal	does	present
 shadowverse	755927	Stalwart Snowman	polymorph	does	present
@@ -14064,7 +13859,6 @@ shadowverse	755987	Astolfo, Lunar Paladin	haste	does	present
 shadowverse	755987	Astolfo, Lunar Paladin	haste	grants	present
 shadowverse	755987	Astolfo, Lunar Paladin	on_play	does	present
 shadowverse	755987	Astolfo, Lunar Paladin	summon	does	present
-shadowverse	755987	Astolfo, Lunar Paladin	buff	does	present
 shadowverse	755987	Astolfo, Lunar Paladin	upgrade	does	present
 shadowverse	756010	Mammoth God's Colosseum	friendly_fire	does	present
 shadowverse	756010	Mammoth God's Colosseum	symmetric_effect	does	present
@@ -14125,7 +13919,6 @@ shadowverse	756114	Purson	sacrifice	does	present
 shadowverse	813735	Tyrant's Order	board_wipe	does	present
 shadowverse	813735	Tyrant's Order	destroy	does	present
 shadowverse	813735	Tyrant's Order	placement_rules	*	absent
-shadowverse	813735	Tyrant's Order	disruption	does	present
 shadowverse	813735	Tyrant's Order	play_restriction	does	present
 shadowverse	813760	Mono's Resolve	multiple_resources	does	present
 shadowverse	813760	Mono's Resolve	resource_gain	does	present
@@ -14167,7 +13960,6 @@ shadowverse	813972	Ars Magna	kicker	does	present
 shadowverse	813980	Hellflame Dragon	haste	does	present
 shadowverse	814009	Buller, Heavensworn	banish	does	present
 shadowverse	814009	Buller, Heavensworn	copy	does	present
-shadowverse	814009	Buller, Heavensworn	generate_cards	does	present
 shadowverse	814009	Buller, Heavensworn	draw	does	present
 shadowverse	814009	Buller, Heavensworn	on_play	does	present
 shadowverse	814009	Buller, Heavensworn	taunt	does	present
@@ -14451,7 +14243,6 @@ sts1	757757	Offering	damage	*	absent
 sts1	757757	Offering	life_payment	cost	present
 sts1	757758	Omniscience	free_play	does	present
 sts1	757758	Omniscience	repeat_trigger	does	present
-sts1	757758	Omniscience	draw	does	present
 sts1	757758	Omniscience	tutor	does	present
 sts1	757760	Pain	drawback	does	present
 sts1	757760	Pain	on_ally_play	does	present
@@ -14565,7 +14356,6 @@ sts1	757869	Alchemize	exhaust	does	present
 sts1	757869	Alchemize	items_consumables	does	present
 sts1	757869	Alchemize	random_effect	does	present
 sts1	757871	Violence	draw	*	absent
-sts1	757871	Violence	draw	does	present
 sts1	757871	Violence	tutor	does	present
 sts1	757872	Void	drawback	does	present
 sts1	757873	Wallop	block_armor	does	present
@@ -14702,7 +14492,6 @@ sts1	757935	Dream Catcher	items_consumables	does	present
 sts1	757935	Dream Catcher	passive	does	present
 sts1	757936	Du-Vu Doll	stat_loss	*	absent
 sts1	757936	Du-Vu Doll	items_consumables	does	present
-sts1	757936	Du-Vu Doll	drawback	benefits	present
 sts1	757936	Du-Vu Doll	junk_cards	benefits	present
 sts1	757936	Du-Vu Doll	passive	does	present
 sts1	757937	Ectoplasm	drawback	does	present
@@ -14847,10 +14636,8 @@ sts1	758002	Pantograph	regeneration	*	absent
 sts1	758002	Pantograph	run_structure	*	absent
 sts1	758003	Paper Krane	damage	*	absent
 sts1	758003	Paper Krane	stat_loss	benefits	present
-sts1	758003	Paper Krane	stat_loss	counters	absent
 sts1	758003	Paper Krane	items_consumables	does	present
 sts1	758003	Paper Krane	passive	does	present
-sts1	758004	Paper Phrog	stat_loss	counters	absent
 sts1	758004	Paper Phrog	run_structure	*	absent
 sts1	758007	Pen Nib	count_payoff	does	present
 sts1	758008	Philosopher's Stone	stat_gain	counters	absent
@@ -15008,8 +14795,8 @@ sts1	758071	Duality	temporary_buff	does	present
 sts1	758072	Ambrosia	items_consumables	does	present
 sts1	758073	Ancient Potion	items_consumables	does	present
 sts1	758074	Attack Potion	copy	does	present
-sts1	758074	Attack Potion	generate_cards	does	present
 sts1	758074	Attack Potion	cost_set	does	present
+sts1	758074	Attack Potion	generate_cards	does	present
 sts1	758074	Attack Potion	random_effect	does	present
 sts1	758074	Attack Potion	run_structure	*	absent
 sts1	758074	Attack Potion	selection	does	present
@@ -15245,7 +15032,6 @@ sts1	758261	Acid Slime (M)	telegraphed_threats	does	present
 sts1	758262	Acid Slime (S)	telegraphed_threats	does	present
 sts1	758264	Awakened One	boss_phases	does	present
 sts1	758264	Awakened One	revive	does	present
-sts1	758264	Awakened One	summon	does	present
 sts1	758264	Awakened One	telegraphed_threats	does	present
 sts1	758268	Book of Stabbing	damage	does	present
 sts1	758269	Bronze Automaton	drawback	does	present
@@ -15264,7 +15050,6 @@ sts1	758276	Cultist	telegraphed_threats	does	present
 sts1	758277	Dagger	self_destruct	does	present
 sts1	758277	Dagger	telegraphed_threats	does	present
 sts1	758278	Darkling	revive	does	present
-sts1	758278	Darkling	summon	does	present
 sts1	758278	Darkling	telegraphed_threats	does	present
 sts1	758279	Deca	telegraphed_threats	does	present
 sts1	758280	Donu	telegraphed_threats	does	present
@@ -15533,7 +15318,6 @@ sts2	758457	Bone Shards	aoe_damage	does	present
 sts2	758457	Bone Shards	block_armor	does	present
 sts2	758457	Bone Shards	condition	does	present
 sts2	758457	Bone Shards	sacrifice	does	present
-sts2	758457	Bone Shards	summon	benefits	absent
 sts2	758458	Boost Away	block_armor	does	present
 sts2	758458	Boost Away	drawback	does	present
 sts2	758458	Boost Away	graveyard	*	absent
@@ -15564,7 +15348,6 @@ sts2	758482	Call of the Void	exhaust	*	absent
 sts2	758485	Capture Spirit	damage	does	present
 sts2	758487	Catastrophe	free_play	does	present
 sts2	758487	Catastrophe	generate_cards	*	absent
-sts2	758487	Catastrophe	draw	does	present
 sts2	758487	Catastrophe	tutor	does	present
 sts2	758490	CHARGE!!	transform	does	present
 sts2	758495	Clash	in_hand_buff	*	absent
@@ -15574,7 +15357,6 @@ sts2	758501	Collision Course	drawback	does	present
 sts2	758501	Collision Course	junk_cards	does	present
 sts2	758502	Colossus	damage_reduction	does	present
 sts2	758502	Colossus	stat_loss	benefits	present
-sts2	758504	Compact	drawback	benefits	present
 sts2	758504	Compact	junk_cards	benefits	present
 sts2	758505	Compile Driver	count_payoff	does	present
 sts2	758505	Compile Driver	variety_payoff	does	present
@@ -15621,7 +15403,6 @@ sts2	758571	Eidolon	sacrifice	does	present
 sts2	758573	Energy Surge	team_play	does	present
 sts2	758574	Enfeebling Touch	temporary_buff	does	present
 sts2	758576	Enthralled	immunity	*	absent
-sts2	758576	Enthralled	drawback	does	present
 sts2	758576	Enthralled	junk_cards	does	present
 sts2	758576	Enthralled	play_restriction	does	present
 sts2	758577	Entrench	block_armor	does	present
@@ -15773,7 +15554,6 @@ sts2	758752	Outbreak	count_payoff	does	present
 sts2	758754	Overclock	damage_over_time	*	absent
 sts2	758754	Overclock	drawback	does	present
 sts2	758755	Pact's End	condition	does	present
-sts2	758755	Pact's End	exhaust	grants	absent
 sts2	758756	Pagestorm	draw	does	present
 sts2	758758	Panache	aoe_damage	does	present
 sts2	758758	Panache	combo_sequence	*	absent
@@ -15795,7 +15575,6 @@ sts2	758775	Pounce	cost_set	does	present
 sts2	758775	Pounce	damage	does	present
 sts2	758776	Precise Cut	drawback	does	present
 sts2	758776	Precise Cut	hand_size	does	present
-sts2	758780	Primal Force	drawback	does	present
 sts2	758780	Primal Force	junk_cards	does	present
 sts2	758782	Prolong	block_armor	does	present
 sts2	758783	Prophesize	draw	does	present
@@ -15838,7 +15617,6 @@ sts2	758827	Scrape	scope_global	*	absent
 sts2	758829	Sculpting Strike	in_hand_buff	does	present
 sts2	758830	Seance	generate_cards	does	present
 sts2	758834	Seeker Strike	generate_cards	*	absent
-sts2	758834	Seeker Strike	draw	does	present
 sts2	758834	Seeker Strike	tutor	does	present
 sts2	758835	Seeking Edge	aoe_damage	does	present
 sts2	758836	Sentry Mode	generate_cards	does	present
@@ -15892,13 +15670,11 @@ sts2	758886	Storm	slots_queue	does	present
 sts2	758886	Storm	summon	benefits	absent
 sts2	758888	Strangle	on_ally_play	does	present
 sts2	758888	Strangle	summon	benefits	absent
-sts2	758889	Stratagem	draw	does	present
 sts2	758889	Stratagem	tutor	does	present
 sts2	758890	Strike	damage	does	present
 sts2	758893	Strike	damage	does	present
 sts2	758895	Subroutine	resource_gain	does	present
 sts2	758895	Subroutine	summon	benefits	absent
-sts2	758897	Summon Forth	draw	does	present
 sts2	758897	Summon Forth	tutor	does	present
 sts2	758900	Supermassive	generate_cards	benefits	present
 sts2	758907	Synchronize	count_payoff	does	present
@@ -15936,7 +15712,6 @@ sts2	758943	Unleash	count_payoff	does	present
 sts2	758945	Unrelenting	cost_set	does	present
 sts2	758945	Unrelenting	damage	does	present
 sts2	758949	Uproar	free_play	does	present
-sts2	758949	Uproar	draw	does	present
 sts2	758949	Uproar	tutor	does	present
 sts2	758950	Veilpiercer	exhaust	*	absent
 sts2	758950	Veilpiercer	self_destruct	benefits	present
@@ -16429,7 +16204,6 @@ sts2	759170	Power Cell	cost_condition	does	present
 sts2	759170	Power Cell	generate_cards	*	absent
 sts2	759170	Power Cell	items_consumables	does	present
 sts2	759170	Power Cell	passive	does	present
-sts2	759170	Power Cell	draw	does	present
 sts2	759170	Power Cell	tutor	does	present
 sts2	759171	Prayer Wheel	deckbuilding_effect	does	present
 sts2	759171	Prayer Wheel	items_consumables	does	present
@@ -16513,7 +16287,6 @@ sts2	759199	Sea Glass	selection	does	present
 sts2	759200	Seal of Gold	coin_economy	*	absent
 sts2	759200	Seal of Gold	resource_conversion	does	present
 sts2	759202	Sere Talon	items_consumables	does	present
-sts2	759202	Sere Talon	drawback	does	present
 sts2	759202	Sere Talon	junk_cards	does	present
 sts2	759202	Sere Talon	passive	does	present
 sts2	759206	Silken Tress	drawback	does	present
@@ -16678,7 +16451,6 @@ sts2	759277	Dexterity Potion	items_consumables	does	present
 sts2	759278	Distilled Chaos	cast_from_zone	does	present
 sts2	759279	Droplet of Precognition	generate_cards	*	absent
 sts2	759279	Droplet of Precognition	items_consumables	does	present
-sts2	759279	Droplet of Precognition	draw	does	present
 sts2	759279	Droplet of Precognition	tutor	does	present
 sts2	759280	Duplicator	items_consumables	does	present
 sts2	759281	Energy Potion	items_consumables	does	present
@@ -16765,7 +16537,6 @@ sts2	759355	Colossus	stat_loss	*	absent
 sts2	759356	Confused	stat_loss	does	present
 sts2	759356	Confused	drawback	does	present
 sts2	759358	Constrict	aura	does	present
-sts2	759358	Constrict	buff	does	present
 sts2	759358	Constrict	damage_over_time	*	absent
 sts2	759358	Constrict	stat_loss	does	present
 sts2	759364	Covered	bodyguard	does	present
@@ -16809,7 +16580,6 @@ sts2	759417	Hard to Kill	damage_reduction	does	present
 sts2	759419	Hatch	summon	does	present
 sts2	759421	Heist	death_trigger	does	present
 sts2	759424	Hex	aura	does	present
-sts2	759424	Hex	buff	does	present
 sts2	759424	Hex	stat_loss	does	present
 sts2	759424	Hex	passive	*	absent
 sts2	759426	Illusion	delayed	does	present
@@ -16824,7 +16594,6 @@ sts2	759433	Intercept	bodyguard	does	present
 sts2	759433	Intercept	taunt	*	absent
 sts2	759433	Intercept	team_play	does	present
 sts2	759438	Leadership	aura	does	present
-sts2	759438	Leadership	buff	does	present
 sts2	759438	Leadership	stat_gain	does	present
 sts2	759439	Lethality	temporary_buff	does	present
 sts2	759442	Machine Learning	draw	does	present
@@ -16847,7 +16616,6 @@ sts2	759464	Painful Stabs	on_damaged	does	present
 sts2	759467	Paper Cuts	on_attack	does	present
 sts2	759468	Parry	block_armor	grants	present
 sts2	759468	Parry	stat_gain	*	absent
-sts2	759469	Personal Hive	drawback	does	present
 sts2	759469	Personal Hive	junk_cards	does	present
 sts2	759469	Personal Hive	on_damaged	does	present
 sts2	759472	Plating	block_armor	does	present
@@ -16889,7 +16657,6 @@ sts2	759516	Spectrum Shift	random_effect	does	present
 sts2	759516	Spectrum Shift	turn_start	does	present
 sts2	759522	Steam Eruption	death_trigger	does	present
 sts2	759525	Strangle	damage_over_time	does	present
-sts2	759526	Stratagem	draw	does	present
 sts2	759526	Stratagem	tutor	does	present
 sts2	759527	Strength	stat_gain	does	present
 sts2	759527	Strength	damage	*	absent
@@ -16917,7 +16684,6 @@ sts2	759563	Waste Away	resource_gain	*	absent
 sts2	759564	Weak	damage	*	absent
 sts2	759564	Weak	stat_loss	does	present
 sts2	759566	Withering Presence	count_payoff	does	present
-sts2	759566	Withering Presence	drawback	does	present
 sts2	759566	Withering Presence	junk_cards	does	present
 sts2	759567	Wraith Form	drawback	does	present
 sts2	759568	Adroit	upgrade	does	present
@@ -17095,7 +16861,6 @@ sts2	759709	Hungry for Mushrooms	modal_choice	does	present
 sts2	759710	Infested Automaton	modal_choice	does	present
 sts2	759711	Jungle Maze Adventure	modal_choice	does	present
 sts2	759711	Jungle Maze Adventure	quests	*	absent
-sts2	759712	The Lost Wisp	drawback	does	present
 sts2	759712	The Lost Wisp	junk_cards	does	present
 sts2	759712	The Lost Wisp	modal_choice	does	present
 sts2	759713	Luminous Choir	modal_choice	does	present
@@ -17110,7 +16875,6 @@ sts2	759715	Neow	scope_global	*	absent
 sts2	759715	Neow	tutor	*	absent
 sts2	759716	Potion Courier	modal_choice	does	present
 sts2	759717	Punch Off	deck_position	*	absent
-sts2	759717	Punch Off	drawback	does	present
 sts2	759717	Punch Off	junk_cards	does	present
 sts2	759717	Punch Off	modal_choice	does	present
 sts2	759717	Punch Off	stakes_wager	does	present
@@ -17135,7 +16899,6 @@ sts2	759725	Slippery Bridge	life_payment	cost	present
 sts2	759725	Slippery Bridge	modal_choice	does	present
 sts2	759725	Slippery Bridge	random_effect	does	present
 sts2	759726	Spiraling Whirlpool	damage	*	absent
-sts2	759726	Spiraling Whirlpool	drawback	does	present
 sts2	759726	Spiraling Whirlpool	junk_cards	does	present
 sts2	759726	Spiraling Whirlpool	modal_choice	does	present
 sts2	759726	Spiraling Whirlpool	upgrade	does	present
@@ -17155,7 +16918,6 @@ sts2	759734	The Future of Potions?	modal_choice	does	present
 sts2	759735	The Lantern Key	modal_choice	does	present
 sts2	759735	The Lantern Key	shop_gold	does	present
 sts2	759736	The Legends Were True	modal_choice	does	present
-sts2	759737	This or That?	drawback	does	present
 sts2	759737	This or That?	junk_cards	does	present
 sts2	759737	This or That?	modal_choice	does	present
 sts2	759738	Trash Heap	deck_modification	does	present
@@ -17172,7 +16934,6 @@ sts2	759742	Waterlogged Scriptorium	modal_choice	does	present
 sts2	759743	Welcome to Wongo's	drawback	does	present
 sts2	759743	Welcome to Wongo's	generate_cards	*	absent
 sts2	759743	Welcome to Wongo's	modal_choice	does	present
-sts2	759744	Wellspring	drawback	does	present
 sts2	759744	Wellspring	junk_cards	does	present
 sts2	759744	Wellspring	modal_choice	does	present
 sts2	759745	Whispering Hollow	modal_choice	does	present
@@ -17318,7 +17079,6 @@ wh_40k_10e	784743	Inescapable (Pain)	resource_banking	*	absent
 wh_40k_10e	784743	Inescapable (Pain)	terrain	counters	present
 wh_40k_10e	784743	Inescapable (Pain)	terrain	does	present
 wh_40k_10e	784743	Inescapable (Pain)	upgrade	*	absent
-wh_40k_10e	784753	Skyboard	buff	does	present
 wh_40k_10e	784753	Skyboard	merge_attach	does	present
 wh_40k_10e	784753	Skyboard	movement	does	present
 wh_40k_10e	784753	Skyboard	placement_rules	does	present
@@ -17378,7 +17138,6 @@ wh_40k_10e	785373	Burning Plate	stat_gain	does	present
 wh_40k_10e	785373	Burning Plate	damage	does	present
 wh_40k_10e	785373	Burning Plate	random_effect	does	present
 wh_40k_10e	785373	Burning Plate	zone_of_control	*	absent
-wh_40k_10e	785387	Leader	buff	does	present
 wh_40k_10e	785387	Leader	merge_attach	does	present
 wh_40k_10e	785409	Sedition Field (Aura)	stat_loss	does	present
 wh_40k_10e	785409	Sedition Field (Aura)	passive	does	present
@@ -17392,7 +17151,6 @@ wh_40k_10e	785443	Wyrmtooth Rounds	once_per_game	does	present
 wh_40k_10e	785443	Wyrmtooth Rounds	random_effect	does	present
 wh_40k_10e	785443	Wyrmtooth Rounds	turn_start	does	present
 wh_40k_10e	785453	Twisted Science	advantage	*	absent
-wh_40k_10e	785453	Twisted Science	buff	does	present
 wh_40k_10e	785453	Twisted Science	merge_attach	does	present
 wh_40k_10e	785453	Twisted Science	passive	does	present
 wh_40k_10e	785454	Dirtcycle	damage_reduction	*	absent
@@ -17458,7 +17216,6 @@ wh_40k_10e	786252	Chalice of Baal	advantage	*	absent
 wh_40k_10e	786252	Chalice of Baal	stat_gain	does	present
 wh_40k_10e	786258	Deadly Predators	stat_gain	does	present
 wh_40k_10e	786278	Murk Stalker	immunity	*	absent
-wh_40k_10e	786278	Murk Stalker	buff	does	present
 wh_40k_10e	786278	Murk Stalker	merge_attach	does	present
 wh_40k_10e	786278	Murk Stalker	movement	does	present
 wh_40k_10e	786278	Murk Stalker	passive	does	present
@@ -17466,7 +17223,6 @@ wh_40k_10e	786280	Black Howl	stress_morale	does	present
 wh_40k_10e	786280	Black Howl	turn_start	*	absent
 wh_40k_10e	786282	Savage Orator	buff	does	present
 wh_40k_10e	786282	Savage Orator	merge_attach	does	present
-wh_40k_10e	786349	Jump Pack	buff	does	present
 wh_40k_10e	786349	Jump Pack	merge_attach	does	present
 wh_40k_10e	786349	Jump Pack	movement	does	present
 wh_40k_10e	786349	Jump Pack	placement_rules	does	present
@@ -17476,7 +17232,6 @@ wh_40k_10e	786349	Jump Pack	stat_gain	does	present
 wh_40k_10e	786349	Jump Pack	stat_loss	does	present
 wh_40k_10e	786349	Jump Pack	type_grant	does	present
 wh_40k_10e	786384	Astartes Tank Ace (Aura)	aura	does	present
-wh_40k_10e	786384	Astartes Tank Ace (Aura)	buff	does	present
 wh_40k_10e	786395	Bastion Shield	activated	*	absent
 wh_40k_10e	786395	Bastion Shield	coin_economy	does	present
 wh_40k_10e	786395	Bastion Shield	damage_reduction	does	present
@@ -17526,9 +17281,7 @@ wh_40k_10e	786761	Choppa of Da Great Waaagh!	advantage	*	absent
 wh_40k_10e	786761	Choppa of Da Great Waaagh!	stat_gain	does	present
 wh_40k_10e	786761	Choppa of Da Great Waaagh!	multi_attack	*	absent
 wh_40k_10e	786761	Choppa of Da Great Waaagh!	piercing	grants	present
-wh_40k_10e	786799	Speed Freeks	buff	does	present
 wh_40k_10e	786799	Speed Freeks	merge_attach	does	present
-wh_40k_10e	786799	Speed Freeks	buff	benefits	present
 wh_40k_10e	786799	Speed Freeks	merge_attach	benefits	present
 wh_40k_10e	786809	Solid-image Projection Unit	reserve_bench	does	present
 wh_40k_10e	786809	Solid-image Projection Unit	start_of_game	does	present
@@ -17546,7 +17299,6 @@ wh_40k_10e	786899	Steedbond	forced_movement	does	present
 wh_40k_10e	786899	Steedbond	terrain	does	present
 wh_40k_10e	786899	Steedbond	zone_of_control	*	absent
 wh_40k_10e	786914	Ritual Butchery	advantage	*	absent
-wh_40k_10e	786914	Ritual Butchery	buff	does	present
 wh_40k_10e	786914	Ritual Butchery	merge_attach	does	present
 wh_40k_10e	786924	Battlesuit Support System	ranged	does	present
 wh_40k_10e	786927	War Leader	cooldowns	does	present
@@ -17579,9 +17331,7 @@ wh_40k_10e	787169	Illic Nightspear [Legends]	condition	does	present
 wh_40k_10e	787169	Illic Nightspear [Legends]	damage	does	present
 wh_40k_10e	787169	Illic Nightspear [Legends]	damage_reduction	does	present
 wh_40k_10e	787169	Illic Nightspear [Legends]	death_trigger	*	absent
-wh_40k_10e	787169	Illic Nightspear [Legends]	buff	benefits	present
 wh_40k_10e	787169	Illic Nightspear [Legends]	merge_attach	benefits	present
-wh_40k_10e	787169	Illic Nightspear [Legends]	buff	does	present
 wh_40k_10e	787169	Illic Nightspear [Legends]	merge_attach	does	present
 wh_40k_10e	787169	Illic Nightspear [Legends]	movement	does	present
 wh_40k_10e	787169	Illic Nightspear [Legends]	passive	does	present
@@ -17629,7 +17379,6 @@ wh_40k_10e	787274	Kabalite Agent with pain sculptors	advantage	*	absent
 wh_40k_10e	787274	Kabalite Agent with pain sculptors	damage	*	absent
 wh_40k_10e	787312	Changecaster	advantage	*	absent
 wh_40k_10e	787312	Changecaster	damage_reduction	does	present
-wh_40k_10e	787312	Changecaster	buff	does	present
 wh_40k_10e	787312	Changecaster	merge_attach	does	present
 wh_40k_10e	787312	Changecaster	passive	does	present
 wh_40k_10e	787312	Changecaster	placement_rules	does	present
@@ -17652,7 +17401,6 @@ wh_40k_10e	787318	Burning Chariot	tribal	*	absent
 wh_40k_10e	787327	Nurglings	advantage	*	absent
 wh_40k_10e	787327	Nurglings	debuff	does	present
 wh_40k_10e	787327	Nurglings	aura	does	present
-wh_40k_10e	787327	Nurglings	buff	does	present
 wh_40k_10e	787327	Nurglings	damage_reduction	does	present
 wh_40k_10e	787327	Nurglings	stat_loss	*	absent
 wh_40k_10e	787327	Nurglings	piercing	does	present
@@ -17666,7 +17414,6 @@ wh_40k_10e	787335	Syll'esske	cheat_death	does	present
 wh_40k_10e	787335	Syll'esske	damage	does	present
 wh_40k_10e	787335	Syll'esske	damage_reduction	does	present
 wh_40k_10e	787335	Syll'esske	drawback	does	present
-wh_40k_10e	787335	Syll'esske	buff	does	present
 wh_40k_10e	787335	Syll'esske	merge_attach	does	present
 wh_40k_10e	787335	Syll'esske	movement	does	present
 wh_40k_10e	787335	Syll'esske	multi_attack	does	present
@@ -17712,7 +17459,6 @@ wh_40k_10e	787424	Khorne Berzerkers	zone_of_control	*	absent
 wh_40k_10e	787484	Foetid Bloat-drone	advantage	*	absent
 wh_40k_10e	787484	Foetid Bloat-drone	aoe_damage	does	present
 wh_40k_10e	787484	Foetid Bloat-drone	aura	does	present
-wh_40k_10e	787484	Foetid Bloat-drone	buff	does	present
 wh_40k_10e	787484	Foetid Bloat-drone	damage_reduction	does	present
 wh_40k_10e	787484	Foetid Bloat-drone	death_trigger	does	present
 wh_40k_10e	787484	Foetid Bloat-drone	movement	does	present
@@ -17726,7 +17472,6 @@ wh_40k_10e	787537	Defiler	buff	does	present
 wh_40k_10e	787537	Defiler	bodyguard	counters	present
 wh_40k_10e	787537	Defiler	condition_life	does	present
 wh_40k_10e	787537	Defiler	death_trigger	does	present
-wh_40k_10e	787537	Defiler	buff	benefits	present
 wh_40k_10e	787537	Defiler	merge_attach	benefits	present
 wh_40k_10e	787537	Defiler	merge_attach	does	present
 wh_40k_10e	787537	Defiler	forced_movement	does	present
@@ -17833,7 +17578,6 @@ wh_40k_10e	787679	Celestian Sacresant Aveline [Legends]	temporary_buff	does	pres
 wh_40k_10e	787679	Celestian Sacresant Aveline [Legends]	temporary_effect	*	absent
 wh_40k_10e	787679	Celestian Sacresant Aveline [Legends]	turn_start	*	absent
 wh_40k_10e	787718	Null Maiden [Crucible]	damage_reduction	does	present
-wh_40k_10e	787718	Null Maiden [Crucible]	buff	does	present
 wh_40k_10e	787718	Null Maiden [Crucible]	merge_attach	does	present
 wh_40k_10e	787718	Null Maiden [Crucible]	movement	does	present
 wh_40k_10e	787718	Null Maiden [Crucible]	passive	does	present
@@ -17844,7 +17588,6 @@ wh_40k_10e	787718	Null Maiden [Crucible]	turn_start	*	absent
 wh_40k_10e	787757	Ironstrider Alpha [Crucible]	aoe_damage	does	present
 wh_40k_10e	787757	Ironstrider Alpha [Crucible]	damage_reduction	does	present
 wh_40k_10e	787757	Ironstrider Alpha [Crucible]	death_trigger	does	present
-wh_40k_10e	787757	Ironstrider Alpha [Crucible]	buff	does	present
 wh_40k_10e	787757	Ironstrider Alpha [Crucible]	merge_attach	does	present
 wh_40k_10e	787757	Ironstrider Alpha [Crucible]	movement	*	absent
 wh_40k_10e	787757	Ironstrider Alpha [Crucible]	on_attack	*	absent
@@ -17918,7 +17661,6 @@ wh_40k_10e	787932	Lord Marshal Dreir	turn_end	*	absent
 wh_40k_10e	787932	Lord Marshal Dreir	zone_of_control	*	absent
 wh_40k_10e	787952	High Marshal Helbrecht	condition_count	does	present
 wh_40k_10e	787952	High Marshal Helbrecht	damage	does	present
-wh_40k_10e	787952	High Marshal Helbrecht	buff	does	present
 wh_40k_10e	787952	High Marshal Helbrecht	merge_attach	does	present
 wh_40k_10e	787952	High Marshal Helbrecht	movement	*	absent
 wh_40k_10e	787952	High Marshal Helbrecht	passive	does	present
@@ -17937,7 +17679,6 @@ wh_40k_10e	787955	Emperor's Champion	damage	does	present
 wh_40k_10e	787955	Emperor's Champion	damage_prevention	does	present
 wh_40k_10e	787955	Emperor's Champion	immunity	*	absent
 wh_40k_10e	787955	Emperor's Champion	merge_attach	does	present
-wh_40k_10e	787955	Emperor's Champion	buff	benefits	present
 wh_40k_10e	787955	Emperor's Champion	merge_attach	benefits	present
 wh_40k_10e	787955	Emperor's Champion	movement	does	present
 wh_40k_10e	787955	Emperor's Champion	once_per_game	does	present
@@ -17953,9 +17694,7 @@ wh_40k_10e	787955	Emperor's Champion	zone_of_control	*	absent
 wh_40k_10e	788026	Talonstrike Kill Team	advantage	does	present
 wh_40k_10e	788026	Talonstrike Kill Team	damage	*	absent
 wh_40k_10e	788026	Talonstrike Kill Team	drawback	does	present
-wh_40k_10e	788026	Talonstrike Kill Team	buff	benefits	present
 wh_40k_10e	788026	Talonstrike Kill Team	merge_attach	benefits	present
-wh_40k_10e	788026	Talonstrike Kill Team	buff	does	present
 wh_40k_10e	788026	Talonstrike Kill Team	merge_attach	does	present
 wh_40k_10e	788026	Talonstrike Kill Team	movement	does	present
 wh_40k_10e	788026	Talonstrike Kill Team	multi_attack	does	present
@@ -17969,7 +17708,6 @@ wh_40k_10e	788026	Talonstrike Kill Team	temporary_buff	does	present
 wh_40k_10e	788026	Talonstrike Kill Team	temporary_effect	*	absent
 wh_40k_10e	788033	Brother-Captain Stern [Legends]	cheat_death	does	present
 wh_40k_10e	788033	Brother-Captain Stern [Legends]	damage	does	present
-wh_40k_10e	788033	Brother-Captain Stern [Legends]	buff	does	present
 wh_40k_10e	788033	Brother-Captain Stern [Legends]	merge_attach	does	present
 wh_40k_10e	788033	Brother-Captain Stern [Legends]	on_attack	does	present
 wh_40k_10e	788033	Brother-Captain Stern [Legends]	passive	does	present
@@ -17983,9 +17721,7 @@ wh_40k_10e	788039	Castellan Crowe	advantage	does	present
 wh_40k_10e	788039	Castellan Crowe	bodyguard	counters	present
 wh_40k_10e	788039	Castellan Crowe	stat_gain	does	present
 wh_40k_10e	788039	Castellan Crowe	damage	does	present
-wh_40k_10e	788039	Castellan Crowe	buff	does	present
 wh_40k_10e	788039	Castellan Crowe	merge_attach	does	present
-wh_40k_10e	788039	Castellan Crowe	buff	benefits	present
 wh_40k_10e	788039	Castellan Crowe	merge_attach	benefits	present
 wh_40k_10e	788039	Castellan Crowe	on_attack	*	absent
 wh_40k_10e	788039	Castellan Crowe	passive	does	present
@@ -18007,7 +17743,6 @@ wh_40k_10e	788054	Nemesis Dreadknight	reserve_bench	does	present
 wh_40k_10e	788054	Nemesis Dreadknight	spell_power	benefits	absent
 wh_40k_10e	788068	Tor Garadon	stat_gain	does	present
 wh_40k_10e	788068	Tor Garadon	damage	*	absent
-wh_40k_10e	788068	Tor Garadon	buff	does	present
 wh_40k_10e	788068	Tor Garadon	merge_attach	does	present
 wh_40k_10e	788068	Tor Garadon	on_attack	*	absent
 wh_40k_10e	788068	Tor Garadon	passive	does	present
@@ -18046,7 +17781,6 @@ wh_40k_10e	788142	Land Speeder [Legends]	terrain	*	absent
 wh_40k_10e	788142	Land Speeder [Legends]	tribal	does	present
 wh_40k_10e	788142	Land Speeder [Legends]	turn_start	*	absent
 wh_40k_10e	788178	Librarian in Phobos Armour	immunity	does	present
-wh_40k_10e	788178	Librarian in Phobos Armour	buff	does	present
 wh_40k_10e	788178	Librarian in Phobos Armour	merge_attach	does	present
 wh_40k_10e	788178	Librarian in Phobos Armour	passive	does	present
 wh_40k_10e	788178	Librarian in Phobos Armour	placement_rules	does	present
@@ -18058,7 +17792,6 @@ wh_40k_10e	788178	Librarian in Phobos Armour	targeting_rules	does	present
 wh_40k_10e	788178	Librarian in Phobos Armour	territory_trigger	*	absent
 wh_40k_10e	788196	Captain	damage	does	present
 wh_40k_10e	788196	Captain	items_consumables	does	present
-wh_40k_10e	788196	Captain	debuff	does	present
 wh_40k_10e	788196	Captain	merge_attach	does	present
 wh_40k_10e	788196	Captain	movement	*	absent
 wh_40k_10e	788196	Captain	piercing	does	present
@@ -18106,7 +17839,6 @@ wh_40k_10e	788355	Winged Tyranid Prime	advantage	*	absent
 wh_40k_10e	788355	Winged Tyranid Prime	cheat_death	does	present
 wh_40k_10e	788355	Winged Tyranid Prime	counterattack	does	present
 wh_40k_10e	788355	Winged Tyranid Prime	death_trigger	*	absent
-wh_40k_10e	788355	Winged Tyranid Prime	buff	does	present
 wh_40k_10e	788355	Winged Tyranid Prime	merge_attach	does	present
 wh_40k_10e	788355	Winged Tyranid Prime	passive	does	present
 wh_40k_10e	788355	Winged Tyranid Prime	placement_rules	does	present
@@ -18116,7 +17848,6 @@ wh_40k_10e	788382	Lokhust Lord	advantage	does	present
 wh_40k_10e	788382	Lokhust Lord	condition_life	does	present
 wh_40k_10e	788382	Lokhust Lord	damage	does	present
 wh_40k_10e	788382	Lokhust Lord	damage_reduction	does	present
-wh_40k_10e	788382	Lokhust Lord	buff	does	present
 wh_40k_10e	788382	Lokhust Lord	merge_attach	does	present
 wh_40k_10e	788382	Lokhust Lord	on_attack	*	absent
 wh_40k_10e	788382	Lokhust Lord	passive	does	present
@@ -18124,10 +17855,8 @@ wh_40k_10e	788382	Lokhust Lord	piercing	does	present
 wh_40k_10e	788382	Lokhust Lord	ranged	does	present
 wh_40k_10e	788382	Lokhust Lord	saving_throws	counters	present
 wh_40k_10e	788387	Psychomancer	aura	does	present
-wh_40k_10e	788387	Psychomancer	debuff	does	present
 wh_40k_10e	788387	Psychomancer	condition_life	does	present
 wh_40k_10e	788387	Psychomancer	cooldowns	*	absent
-wh_40k_10e	788387	Psychomancer	buff	does	present
 wh_40k_10e	788387	Psychomancer	merge_attach	does	present
 wh_40k_10e	788387	Psychomancer	ranged	*	absent
 wh_40k_10e	788387	Psychomancer	stress_morale	does	present
@@ -18167,9 +17896,7 @@ wh_40k_10e	788438	Triarchal Overseer [Crucible]	turn_start	*	absent
 wh_40k_10e	788527	Breaka Boyz	advantage	does	present
 wh_40k_10e	788527	Breaka Boyz	damage	*	absent
 wh_40k_10e	788527	Breaka Boyz	drawback	does	present
-wh_40k_10e	788527	Breaka Boyz	buff	does	present
 wh_40k_10e	788527	Breaka Boyz	merge_attach	does	present
-wh_40k_10e	788527	Breaka Boyz	buff	benefits	present
 wh_40k_10e	788527	Breaka Boyz	merge_attach	benefits	present
 wh_40k_10e	788527	Breaka Boyz	movement	does	present
 wh_40k_10e	788527	Breaka Boyz	on_attack	*	absent
@@ -18178,7 +17905,6 @@ wh_40k_10e	788527	Breaka Boyz	saving_throws	counters	present
 wh_40k_10e	788527	Breaka Boyz	tribal	does	present
 wh_40k_10e	788532	Upstart Gretchin [Crucible]	damage_reduction	does	present
 wh_40k_10e	788532	Upstart Gretchin [Crucible]	deckbuilding_effect	*	absent
-wh_40k_10e	788532	Upstart Gretchin [Crucible]	buff	does	present
 wh_40k_10e	788532	Upstart Gretchin [Crucible]	merge_attach	does	present
 wh_40k_10e	788532	Upstart Gretchin [Crucible]	passive	does	present
 wh_40k_10e	788532	Upstart Gretchin [Crucible]	placement_rules	does	present
@@ -18192,9 +17918,7 @@ wh_40k_10e	788533	Wazdakka Gutsmek	bodyguard	counters	present
 wh_40k_10e	788533	Wazdakka Gutsmek	death_trigger	does	present
 wh_40k_10e	788533	Wazdakka Gutsmek	heal	does	present
 wh_40k_10e	788533	Wazdakka Gutsmek	immunity	does	present
-wh_40k_10e	788533	Wazdakka Gutsmek	buff	does	present
 wh_40k_10e	788533	Wazdakka Gutsmek	merge_attach	does	present
-wh_40k_10e	788533	Wazdakka Gutsmek	buff	benefits	present
 wh_40k_10e	788533	Wazdakka Gutsmek	merge_attach	benefits	present
 wh_40k_10e	788533	Wazdakka Gutsmek	modal_choice	does	present
 wh_40k_10e	788533	Wazdakka Gutsmek	movement	does	present
@@ -18219,7 +17943,6 @@ wh_40k_10e	788577	AX-1-0 Tiger Shark	piercing	does	present
 wh_40k_10e	788577	AX-1-0 Tiger Shark	saving_throws	counters	present
 wh_40k_10e	788577	AX-1-0 Tiger Shark	tribal	*	absent
 wh_40k_10e	788586	Remote Sensor Tower [Legends]	aura	does	present
-wh_40k_10e	788586	Remote Sensor Tower [Legends]	buff	does	present
 wh_40k_10e	788586	Remote Sensor Tower [Legends]	random_effect	does	present
 wh_40k_10e	788586	Remote Sensor Tower [Legends]	ranged	does	present
 wh_40k_10e	788586	Remote Sensor Tower [Legends]	resource_gain	does	present
@@ -18274,9 +17997,7 @@ wh_40k_10e	816461	Cadian Heavy Weapons Squad	condition	does	present
 wh_40k_10e	816461	Cadian Heavy Weapons Squad	damage_reduction	does	present
 wh_40k_10e	816461	Cadian Heavy Weapons Squad	first_strike	does	present
 wh_40k_10e	816461	Cadian Heavy Weapons Squad	immunity	does	present
-wh_40k_10e	816461	Cadian Heavy Weapons Squad	buff	does	present
 wh_40k_10e	816461	Cadian Heavy Weapons Squad	merge_attach	does	present
-wh_40k_10e	816461	Cadian Heavy Weapons Squad	buff	benefits	present
 wh_40k_10e	816461	Cadian Heavy Weapons Squad	merge_attach	benefits	present
 wh_40k_10e	816461	Cadian Heavy Weapons Squad	movement	does	present
 wh_40k_10e	816461	Cadian Heavy Weapons Squad	multi_attack	does	present
@@ -18334,7 +18055,6 @@ wh_aos_4th	791222	Commodore de Graçon	zone_of_control	*	absent
 wh_aos_4th	791251	Grapple-net Launcher	stat_loss	does	present
 wh_aos_4th	791251	Grapple-net Launcher	zone_of_control	*	absent
 wh_aos_4th	791257	Frenzied Restoration	revive	does	present
-wh_aos_4th	791257	Frenzied Restoration	summon	does	present
 wh_aos_4th	791297	Witchbrew	delayed	*	absent
 wh_aos_4th	791316	Overtaken by Events	coin_economy	cost	present
 wh_aos_4th	791316	Overtaken by Events	resource_banking	*	absent
@@ -18344,7 +18064,6 @@ wh_aos_4th	791351	Destined Arcana	coin_economy	does	present
 wh_aos_4th	791351	Destined Arcana	spell_power	does	present
 wh_aos_4th	791363	Inevitable Ending	coin_economy	does	present
 wh_aos_4th	791375	A Majestic Menagerie	aura	does	present
-wh_aos_4th	791375	A Majestic Menagerie	buff	does	present
 wh_aos_4th	791425	The Grisly Pennant	debuff	does	present
 wh_aos_4th	791425	The Grisly Pennant	stat_gain	*	absent
 wh_aos_4th	791425	The Grisly Pennant	random_effect	does	present
@@ -18521,12 +18240,10 @@ wh_aos_4th	793245	Brute Spirituality	summon	*	absent
 wh_aos_4th	793245	Brute Spirituality	temporary_effect	does	present
 wh_aos_4th	793255	Grave Sentinels	tribal	*	absent
 wh_aos_4th	793276	Eternal Champion	revive	does	present
-wh_aos_4th	793276	Eternal Champion	summon	does	present
 wh_aos_4th	793280	Unholy Presence	damage	does	present
 wh_aos_4th	793280	Unholy Presence	once_per_game	does	present
 wh_aos_4th	793280	Unholy Presence	zone_of_control	*	absent
 wh_aos_4th	793291	Keeper of the Royal Menagerie	revive	does	present
-wh_aos_4th	793291	Keeper of the Royal Menagerie	summon	does	present
 wh_aos_4th	793318	The Incarnadine Killers	movement	does	present
 wh_aos_4th	793318	The Incarnadine Killers	on_kill	does	present
 wh_aos_4th	793318	The Incarnadine Killers	turn_end	does	present
@@ -18738,9 +18455,9 @@ wh_aos_4th	794214	Landmark of Ghyran	once_per_game	does	present
 wh_aos_4th	794214	Landmark of Ghyran	reactions	does	present
 wh_aos_4th	794214	Landmark of Ghyran	resource_gain	*	absent
 wh_aos_4th	794214	Landmark of Ghyran	revive	does	present
-wh_aos_4th	794214	Landmark of Ghyran	summon	does	present
 wh_aos_4th	794214	Landmark of Ghyran	spell_power	does	present
 wh_aos_4th	794214	Landmark of Ghyran	stealth	*	absent
+wh_aos_4th	794214	Landmark of Ghyran	summon	does	present
 wh_aos_4th	794214	Landmark of Ghyran	temporary_effect	*	absent
 wh_aos_4th	794214	Landmark of Ghyran	terrain	does	present
 wh_aos_4th	794214	Landmark of Ghyran	tribal	*	absent
@@ -19349,7 +19066,6 @@ wh_bloodbowl3	794889	Akhorne The Squirrel	activated	*	absent
 wh_bloodbowl3	794889	Akhorne The Squirrel	advantage	does	present
 wh_bloodbowl3	794889	Akhorne The Squirrel	stat_gain	does	present
 wh_bloodbowl3	794889	Akhorne The Squirrel	drawback	does	present
-wh_bloodbowl3	794889	Akhorne The Squirrel	forced_movement	benefits	absent
 wh_bloodbowl3	794889	Akhorne The Squirrel	multi_attack	does	present
 wh_bloodbowl3	794889	Akhorne The Squirrel	on_damaged	*	absent
 wh_bloodbowl3	794889	Akhorne The Squirrel	piercing	does	present
@@ -19546,7 +19262,6 @@ wh_killteam	788682	Reanimation Protocols	adjacency	*	absent
 wh_killteam	788682	Reanimation Protocols	destroy	*	absent
 wh_killteam	788682	Reanimation Protocols	regeneration	*	absent
 wh_killteam	788682	Reanimation Protocols	revive	does	present
-wh_killteam	788682	Reanimation Protocols	summon	does	present
 wh_killteam	788683	Living Metal	turn_start	does	present
 wh_killteam	788684	Synapse	activated	*	absent
 wh_killteam	788684	Synapse	passive	*	absent
@@ -19740,7 +19455,6 @@ wh_killteam	789071	Corrupted Weapon	multi_target_attack	*	absent
 wh_killteam	789076	Uplinked Vid-feed	stat_loss	*	absent
 wh_killteam	789080	Vermin Infestation (1AP)	destroy	*	absent
 wh_killteam	789080	Vermin Infestation (1AP)	revive	does	present
-wh_killteam	789080	Vermin Infestation (1AP)	summon	does	present
 wh_killteam	789082	Unreal Aura	damage_reduction	does	present
 wh_killteam	789083	Scrapcode Emanator	advantage	*	absent
 wh_killteam	789084	Flesh Hunger	death_trigger	*	absent
@@ -19757,7 +19471,6 @@ wh_killteam	789104	Wicked blade	items_consumables	does	present
 wh_killteam	789109	Ghostplate Armour	items_consumables	does	present
 wh_killteam	789111	Clone Field	reactions	does	present
 wh_killteam	789116	Wavefield Crest	aura	does	present
-wh_killteam	789116	Wavefield Crest	buff	does	present
 wh_killteam	789116	Wavefield Crest	damage_reduction	does	present
 wh_killteam	789116	Wavefield Crest	passive	does	present
 wh_killteam	789118	Auto-calibrator	items_consumables	does	present
@@ -19851,7 +19564,6 @@ wh_killteam	789290	Malevolent Visage	destroy	*	absent
 wh_killteam	789292	Murderer's Blade	items_consumables	does	present
 wh_killteam	789294	Flayed Skin	advantage	counters	present
 wh_killteam	789294	Flayed Skin	aura	does	present
-wh_killteam	789294	Flayed Skin	debuff	does	present
 wh_killteam	789297	Macabre Adornments	turn_start	*	absent
 wh_killteam	789298	Elixir of Misery	death_count	does	present
 wh_killteam	789301	Chainweb	disable	does	present
@@ -20158,7 +19870,6 @@ wh_killteam	789804	Death Hex	stat_loss	does	present
 wh_killteam	789813	Reanimation Protocols	cheat_death	does	present
 wh_killteam	789813	Reanimation Protocols	destroy	*	absent
 wh_killteam	789813	Reanimation Protocols	revive	does	present
-wh_killteam	789813	Reanimation Protocols	summon	does	present
 wh_killteam	789825	Mind Raid	damage	does	present
 wh_killteam	789825	Mind Raid	resource_gain	*	absent
 wh_killteam	789843	Treason of Tzeentch	random_effect	does	present
@@ -20191,7 +19902,6 @@ wh_killteam	789938	Eagle-eye	drawback	*	absent
 wh_killteam	789938	Eagle-eye	movement	counters	absent
 wh_killteam	789940	Exultant	advantage	*	absent
 wh_killteam	789940	Exultant	aura	does	present
-wh_killteam	789940	Exultant	buff	does	present
 wh_killteam	789940	Exultant	stat_loss	does	present
 wh_killteam	789958	Master Tactician	cost_reduction	does	present
 wh_killteam	789958	Master Tactician	resource_gain	*	absent
@@ -20326,7 +20036,6 @@ wh_killteam	790372	Player (Leader)	debuff	does	present
 wh_killteam	790372	Player (Leader)	damage	*	absent
 wh_killteam	790405	Space Marine Captain	advantage	*	absent
 wh_killteam	790405	Space Marine Captain	cooldowns	does	present
-wh_killteam	790405	Space Marine Captain	cost_increase	does	present
 wh_killteam	790405	Space Marine Captain	cost_set	does	present
 wh_killteam	790405	Space Marine Captain	damage_prevention	counters	present
 wh_killteam	790405	Space Marine Captain	damage_reduction	*	absent
@@ -20519,7 +20228,6 @@ wh_killteam	790862	Wraithblade	temporary_buff	does	present
 wh_killteam	790876	Foul Blightspawn	once_per_game	does	present
 wh_killteam	790886	Gaius Acastian	aura	*	absent
 wh_killteam	790886	Gaius Acastian	cost_reduction	does	present
-wh_killteam	790886	Gaius Acastian	stat_loss	*	absent
 wh_killteam	790886	Gaius Acastian	destroy	*	absent
 wh_killteam	790886	Gaius Acastian	on_kill	does	present
 wh_killteam	790886	Gaius Acastian	random_effect	does	present
@@ -20737,7 +20445,6 @@ wh_underworlds	762798	Lightning Blast	items_consumables	does	present
 wh_underworlds	762799	Righteous Strike	items_consumables	does	present
 wh_underworlds	762800	Shield Bash	items_consumables	does	present
 wh_underworlds	762815	Restless Dead	revive	does	present
-wh_underworlds	762815	Restless Dead	summon	does	present
 wh_underworlds	762820	Ancient Commander	items_consumables	does	present
 wh_underworlds	762822	Deathly Charge	items_consumables	does	present
 wh_underworlds	762823	Fatal Strike	items_consumables	does	present
@@ -20792,7 +20499,6 @@ wh_underworlds	762890	Feast-feast	scoring_objectives	does	present
 wh_underworlds	762890	Feast-feast	turn_end	does	present
 wh_underworlds	762906	There Are Always More	heal	does	present
 wh_underworlds	762906	There Are Always More	revive	does	present
-wh_underworlds	762906	There Are Always More	summon	does	present
 wh_underworlds	762907	Black Hunger	items_consumables	does	present
 wh_underworlds	762908	Bodyguard for a Price	items_consumables	does	present
 wh_underworlds	762909	Expendable	items_consumables	does	present
@@ -20914,7 +20620,6 @@ wh_underworlds	763181	Steelheart's Second	items_consumables	does	present
 wh_underworlds	763185	Warden's Call	items_consumables	does	present
 wh_underworlds	763191	Krrk the Clawchief	items_consumables	does	present
 wh_underworlds	763191	Krrk the Clawchief	revive	does	present
-wh_underworlds	763191	Krrk the Clawchief	summon	does	present
 wh_underworlds	763193	Gory Visage	damage_reduction	does	present
 wh_underworlds	763193	Gory Visage	items_consumables	does	present
 wh_underworlds	763195	Raptor Strike	damage	*	absent
@@ -21005,7 +20710,6 @@ wh_underworlds	763383	Theddra's Path	items_consumables	does	present
 wh_underworlds	763384	Trained Killer	items_consumables	does	present
 wh_underworlds	763398	Hobble	disable	does	present
 wh_underworlds	763402	There the Whole Time	revive	does	present
-wh_underworlds	763402	There the Whole Time	summon	does	present
 wh_underworlds	763404	Blooming Spores	items_consumables	does	present
 wh_underworlds	763405	Foul Temper	items_consumables	does	present
 wh_underworlds	763406	Horrific Stench	items_consumables	does	present
@@ -21893,7 +21597,6 @@ wh_underworlds	765020	Thieving Grapple	items_consumables	does	present
 wh_underworlds	765021	Tiny Braggart	items_consumables	does	present
 wh_underworlds	765022	Troggoth Grease	items_consumables	does	present
 wh_underworlds	765044	Terrible Dynamism	revive	does	present
-wh_underworlds	765044	Terrible Dynamism	summon	does	present
 wh_underworlds	765045	Convert's Zeal	items_consumables	does	present
 wh_underworlds	765046	Crackling Field	items_consumables	does	present
 wh_underworlds	765047	Dynamic Bolt	items_consumables	does	present
@@ -22211,7 +21914,6 @@ wh_underworlds	765589	Father's Pride	movement	does	present
 wh_underworlds	765589	Father's Pride	on_attack	does	present
 wh_underworlds	765589	Father's Pride	reactions	does	present
 wh_underworlds	765592	Rise Again	revive	does	present
-wh_underworlds	765592	Rise Again	summon	does	present
 wh_underworlds	765593	Shyishan Infusion	damage_reduction	*	absent
 wh_underworlds	765597	Experience of Ages	items_consumables	does	present
 wh_underworlds	765598	Familial Bond	items_consumables	does	present
@@ -22230,7 +21932,6 @@ wh_underworlds	765626	Tangled Roots	drawback	does	present
 wh_underworlds	765626	Tangled Roots	symmetric_effect	does	present
 wh_underworlds	765629	All-terrain Gear	items_consumables	does	present
 wh_underworlds	765631	Conqueror's Circlet	aura	does	present
-wh_underworlds	765631	Conqueror's Circlet	buff	does	present
 wh_underworlds	765631	Conqueror's Circlet	items_consumables	does	present
 wh_underworlds	765631	Conqueror's Circlet	movement	*	absent
 wh_underworlds	765631	Conqueror's Circlet	stat_gain	does	present
@@ -22341,7 +22042,6 @@ wh_underworlds	765846	Grand Scheming	on_attack	benefits	absent
 wh_underworlds	765846	Grand Scheming	symmetric_effect	does	present
 wh_underworlds	765848	Mutative Siphon	life_payment	cost	present
 wh_underworlds	765851	Summoned Abomination	revive	does	present
-wh_underworlds	765851	Summoned Abomination	summon	does	present
 wh_underworlds	765853	Aether-tether	items_consumables	does	present
 wh_underworlds	765854	Arch-sorcerer	items_consumables	does	present
 wh_underworlds	765855	Aura of Mutability	items_consumables	does	present

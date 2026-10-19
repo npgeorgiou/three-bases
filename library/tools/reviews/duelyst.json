@@ -3,8 +3,7 @@
   "add": [
    "items_consumables",
    "adjacency",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
@@ -127,8 +126,7 @@
   "add": [
    "items_consumables",
    "adjacency",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
@@ -235,7 +233,6 @@
   "add": [
    "items_consumables",
    "revive",
-   "summon",
    "adjacency",
    "random_effect"
   ],
@@ -330,7 +327,6 @@
  "742314": {
   "add": [
    "sacrifice",
-   "buff",
    "merge_attach",
    "summon"
   ],
@@ -405,8 +401,7 @@
  },
  "742338": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -512,7 +507,6 @@
  "742270": {
   "add": [
    "aura",
-   "buff",
    "stat_gain",
    "on_ally_play",
    "adjacency"
@@ -563,8 +557,7 @@
  },
  "741769": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -577,7 +570,6 @@
  "742154": {
   "add": [
    "revive",
-   "summon",
    "death_trigger:benefits",
    "random_effect"
   ],
@@ -930,8 +922,7 @@
  },
  "741755": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -1015,8 +1006,7 @@
  "742137": {
   "add": [
    "cost_reduction",
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": [
    "scope_global",
@@ -1108,7 +1098,6 @@
  "741964": {
   "add": [
    "revive",
-   "summon",
    "terrain:benefits"
   ],
   "drop": [
@@ -1222,7 +1211,6 @@
  },
  "742351": {
   "add": [
-   "board_clog",
    "donate",
    "drawback",
    "death_trigger"
@@ -1296,8 +1284,7 @@
  },
  "742237": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -1411,8 +1398,7 @@
  },
  "742158": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -1501,7 +1487,6 @@
  "742085": {
   "add": [
    "revive",
-   "summon",
    "adjacency",
    "on_play",
    "random_effect"
@@ -1734,7 +1719,6 @@
  "741904": {
   "add": [
    "revive",
-   "summon",
    "death_trigger",
    "random_effect"
   ],
@@ -1826,7 +1810,6 @@
  "742303": {
   "add": [
    "in_hand_buff",
-   "stat_gain",
    "death_trigger"
   ],
   "drop": [
@@ -1910,8 +1893,7 @@
  },
  "741949": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -1995,7 +1977,6 @@
   "add": [
    "tribal",
    "damage",
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -2075,8 +2056,7 @@
    "transform",
    "death_trigger",
    "on_attack",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "counterattack",
@@ -2192,7 +2172,6 @@
  "742251": {
   "add": [
    "aura",
-   "buff",
    "stat_gain",
    "tribal"
   ],
@@ -2262,7 +2241,6 @@
   "add": [
    "tribal",
    "aura",
-   "buff",
    "stat_gain",
    "summon"
   ],
@@ -2356,7 +2334,6 @@
  "742114": {
   "add": [
    "aura",
-   "buff",
    "stat_gain",
    "positional:benefits",
    "territory_trigger"
@@ -2368,7 +2345,6 @@
  "742098": {
   "add": [
    "aura",
-   "buff",
    "stat_gain",
    "ranged"
   ],
@@ -2457,7 +2433,6 @@
  "742341": {
   "add": [
    "aura",
-   "buff",
    "positional:grants",
    "territory_trigger"
   ],
@@ -2530,7 +2505,6 @@
  "742345": {
   "add": [
    "on_play",
-   "draw",
    "tutor"
   ],
   "drop": []

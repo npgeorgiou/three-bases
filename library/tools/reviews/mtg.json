@@ -140,7 +140,6 @@
    "stat_gain",
    "activated",
    "items_consumables",
-   "buff",
    "merge_attach"
   ],
   "drop": [
@@ -181,7 +180,6 @@
    "damage_over_time",
    "direct_damage",
    "cost_type:cost",
-   "buff",
    "merge_attach",
    "turn_start",
    "upkeep"
@@ -204,7 +202,6 @@
   "add": [
    "fodder",
    "resource_gain",
-   "cost_type",
    "sacrifice",
    "summon"
   ],
@@ -347,7 +344,6 @@
    "activated",
    "direct_damage",
    "on_play",
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -475,7 +471,6 @@
    "activated",
    "blocking",
    "blocking:counters",
-   "debuff",
    "merge_attach"
   ],
   "drop": [
@@ -559,7 +554,6 @@
    "evasion:counters",
    "graveyard",
    "transform",
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -585,7 +579,6 @@
    "turn_end",
    "free_play",
    "revive",
-   "summon",
    "evasion",
    "graveyard",
    "haste:grants",
@@ -672,7 +665,6 @@
   "add": [
    "tribal",
    "aura",
-   "buff",
    "stat_gain",
    "evasion:grants"
   ],
@@ -759,7 +751,6 @@
  "782323": {
   "add": [
    "free_play",
-   "buff",
    "merge_attach",
    "on_attack",
    "tutor"
@@ -789,7 +780,6 @@
    "direct_damage",
    "activated",
    "aoe_damage",
-   "cost_type",
    "sacrifice",
    "symmetric_effect"
   ],
@@ -802,9 +792,7 @@
    "evasion",
    "excess_damage",
    "regeneration",
-   "cost_type",
    "sacrifice",
-   "cost_type:cost",
    "sacrifice:cost",
    "turn_start"
   ],
@@ -966,7 +954,6 @@
    "graveyard",
    "self_mill",
    "on_attack",
-   "cost_type",
    "sacrifice",
    "summon"
   ],
@@ -997,7 +984,6 @@
    "direct_damage",
    "excess_damage",
    "items_consumables",
-   "buff",
    "merge_attach",
    "bounce_enemy",
    "return_to_hand"
@@ -1094,9 +1080,7 @@
   "add": [
    "condition",
    "draw",
-   "cost_type",
    "sacrifice",
-   "cost_type:cost",
    "sacrifice:cost",
    "summon"
   ],
@@ -1120,7 +1104,6 @@
    "cost_type",
    "graveyard",
    "revive",
-   "summon",
    "turn_structure"
   ],
   "drop": [
@@ -1152,7 +1135,6 @@
  "777909": {
   "add": [
    "graveyard",
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -1166,7 +1148,6 @@
    "evasion",
    "heal",
    "on_play",
-   "cost_type",
    "sacrifice"
   ],
   "drop": []
@@ -1176,8 +1157,7 @@
    "death_trigger",
    "condition",
    "permanent_growth",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -1225,7 +1205,6 @@
    "activated",
    "evasion:grants",
    "items_consumables",
-   "buff",
    "merge_attach"
   ],
   "drop": []
@@ -1272,9 +1251,7 @@
   "add": [
    "stat_gain",
    "destroy",
-   "buff",
    "merge_attach",
-   "cost_type",
    "sacrifice"
   ],
   "drop": [
@@ -1401,7 +1378,6 @@
    "aoe_damage",
    "direct_damage",
    "graveyard",
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -1413,7 +1389,6 @@
   "add": [
    "untap",
    "activated",
-   "buff",
    "merge_attach"
   ],
   "drop": []
@@ -1434,7 +1409,6 @@
    "items_consumables",
    "on_play",
    "resource_gain",
-   "cost_type",
    "sacrifice",
    "summon",
    "temporary_buff"
@@ -1615,7 +1589,6 @@
    "deathtouch:grants",
    "items_consumables",
    "lifesteal",
-   "buff",
    "merge_attach",
    "on_attack",
    "temporary_buff"
@@ -1685,8 +1658,6 @@
    "graveyard",
    "self_mill",
    "revive",
-   "summon",
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -1698,8 +1669,7 @@
    "discard",
    "graveyard",
    "on_play",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -1746,9 +1716,7 @@
   "add": [
    "activated",
    "heal",
-   "cost_type",
    "sacrifice",
-   "cost_type:cost",
    "sacrifice:cost",
    "turn_start"
   ],

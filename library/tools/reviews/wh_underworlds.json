@@ -1083,8 +1083,7 @@
  "763191": {
   "add": [
    "items_consumables",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -5763,8 +5762,7 @@
    "piercing:counters"
   ],
   "drop": [
-   "multi_target_attack",
-   "piercing"
+   "multi_target_attack"
   ]
  },
  "765571": {
@@ -5868,7 +5866,6 @@
   "add": [
    "items_consumables",
    "aura",
-   "buff",
    "stat_gain",
    "stat_loss"
   ],
@@ -6827,9 +6824,7 @@
   "add": [
    "damage_reduction:counters"
   ],
-  "drop": [
-   "damage_reduction"
-  ]
+  "drop": []
  },
  "763595": {
   "add": [
@@ -6983,8 +6978,7 @@
  },
  "765091": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -7028,15 +7022,13 @@
  },
  "762815": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
  "765592": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -7190,15 +7182,13 @@
  "762906": {
   "add": [
    "revive",
-   "summon",
    "heal"
   ],
   "drop": []
  },
  "763402": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -7232,15 +7222,13 @@
  },
  "765851": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
  "765044": {
   "add": [
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },

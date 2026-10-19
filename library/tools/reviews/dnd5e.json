@@ -697,7 +697,6 @@
   "drop": [
    "advantage:counters",
    "condition_life",
-   "stat_loss:grants",
    "spell_speed",
    "tribal"
   ]
@@ -1839,9 +1838,7 @@
   "add": [
    "zone_of_control:counters"
   ],
-  "drop": [
-   "zone_of_control:does"
-  ]
+  "drop": []
  },
  "761877": {
   "add": [
@@ -1930,51 +1927,43 @@
  },
  "815592": {
   "add": [
-   "buff",
    "upgrade"
   ],
   "drop": []
  },
  "815593": {
   "add": [
-   "buff",
    "upgrade"
   ],
   "drop": []
  },
  "815596": {
   "add": [
-   "buff",
    "upgrade"
   ],
   "drop": []
  },
  "815600": {
   "add": [
-   "buff",
    "upgrade",
-   "aura:benefits",
-   "buff:benefits"
+   "aura:benefits"
   ],
   "drop": []
  },
  "815601": {
   "add": [
-   "buff",
    "upgrade"
   ],
   "drop": []
  },
  "815639": {
   "add": [
-   "buff",
    "upgrade"
   ],
   "drop": []
  },
  "815640": {
   "add": [
-   "buff",
    "upgrade"
   ],
   "drop": []
@@ -2036,7 +2025,6 @@
    "damage_types",
    "ranged",
    "temporary_effect",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2071,7 +2059,6 @@
    "damage_types",
    "multi_attack",
    "ranged",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2145,7 +2132,6 @@
    "stat_loss:counters",
    "immunity",
    "turn_start",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2247,7 +2233,6 @@
    "damage",
    "damage_types",
    "saving_throws",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2490,8 +2475,7 @@
   "add": [
    "delayed",
    "damage",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "random_effect"
@@ -2603,7 +2587,6 @@
   "add": [
    "steal",
    "saving_throws",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2726,7 +2709,6 @@
    "stat_loss",
    "modal_choice",
    "saving_throws",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2737,12 +2719,10 @@
  "762485": {
   "add": [
    "revive",
-   "summon",
    "aoe_damage",
    "advantage",
    "area_templates",
    "aura",
-   "buff",
    "damage_over_time",
    "damage_reduction",
    "damage_types",
@@ -2830,7 +2810,6 @@
    "damage",
    "on_attack",
    "terrain",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2843,7 +2822,6 @@
    "stat_gain",
    "cooldowns",
    "random_effect",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -2909,7 +2887,6 @@
    "movement",
    "saving_throws",
    "terrain",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -3020,14 +2997,10 @@
  "761926": {
   "add": [
    "aura",
-   "buff",
    "stat_loss:counters",
    "immunity"
   ],
-  "drop": [
-   "stat_loss:benefits",
-   "stat_loss:grants"
-  ]
+  "drop": []
  },
  "762602": {
   "add": [
@@ -3207,7 +3180,6 @@
    "damage",
    "damage_types",
    "saving_throws",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -3280,7 +3252,6 @@
    "disable",
    "movement",
    "multi_attack",
-   "disruption",
    "play_restriction",
    "saving_throws",
    "stealth",
@@ -3444,7 +3415,6 @@
   "add": [
    "immobilize",
    "revive",
-   "summon",
    "ping",
    "advantage",
    "damage_over_time",
@@ -3523,7 +3493,6 @@
   "add": [
    "heal",
    "stat_loss:counters",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -3552,7 +3521,6 @@
    "area_templates",
    "damage_types",
    "saving_throws",
-   "buff",
    "upgrade"
   ],
   "drop": [
@@ -3586,7 +3554,6 @@
    "on_attack",
    "saving_throws",
    "turn_start",
-   "buff",
    "upgrade"
   ],
   "drop": []
@@ -3613,8 +3580,7 @@
  "761929": {
   "add": [
    "area_templates",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },

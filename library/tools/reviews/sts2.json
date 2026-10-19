@@ -266,7 +266,6 @@
  "759717": {
   "add": [
    "modal_choice",
-   "drawback",
    "junk_cards",
    "stakes_wager"
   ],
@@ -336,7 +335,6 @@
  "759726": {
   "add": [
    "modal_choice",
-   "drawback",
    "junk_cards",
    "upgrade"
   ],
@@ -414,7 +412,6 @@
  "759712": {
   "add": [
    "modal_choice",
-   "drawback",
    "junk_cards"
   ],
   "drop": []
@@ -440,7 +437,6 @@
  "759737": {
   "add": [
    "modal_choice",
-   "drawback",
    "junk_cards"
   ],
   "drop": []
@@ -489,7 +485,6 @@
  "759744": {
   "add": [
    "modal_choice",
-   "drawback",
    "junk_cards"
   ],
   "drop": []
@@ -619,7 +614,6 @@
  "759279": {
   "add": [
    "items_consumables",
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -1662,8 +1656,8 @@
   "add": [
    "items_consumables",
    "passive",
-   "drawback",
-   "junk_cards"
+   "junk_cards",
+   "drawback"
   ],
   "drop": []
  },
@@ -1714,8 +1708,8 @@
   "add": [
    "items_consumables",
    "passive",
-   "drawback",
-   "junk_cards"
+   "junk_cards",
+   "drawback"
   ],
   "drop": []
  },
@@ -1740,9 +1734,7 @@
    "passive",
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "758993": {
   "add": [
@@ -1971,9 +1963,7 @@
    "passive",
    "junk_cards:benefits"
   ],
-  "drop": [
-   "junk_cards"
-  ]
+  "drop": []
  },
  "759023": {
   "add": [
@@ -2049,7 +2039,6 @@
    "items_consumables",
    "deck_modification",
    "copy",
-   "generate_cards",
    "run_structure"
   ],
   "drop": [
@@ -2363,8 +2352,8 @@
   "add": [
    "items_consumables",
    "passive",
-   "drawback",
-   "junk_cards"
+   "junk_cards",
+   "drawback"
   ],
   "drop": []
  },
@@ -2783,9 +2772,7 @@
    "passive",
    "upgrade:benefits"
   ],
-  "drop": [
-   "upgrade"
-  ]
+  "drop": []
  },
  "759128": {
   "add": [
@@ -3015,8 +3002,7 @@
    "stat_loss:benefits"
   ],
   "drop": [
-   "damage",
-   "stat_loss"
+   "damage"
   ]
  },
  "759155": {
@@ -3025,9 +3011,7 @@
    "passive",
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "759156": {
   "add": [
@@ -3148,7 +3132,6 @@
   "add": [
    "items_consumables",
    "passive",
-   "draw",
    "tutor",
    "cost_condition"
   ],
@@ -3182,8 +3165,8 @@
  "759174": {
   "add": [
    "items_consumables",
-   "drawback",
    "junk_cards",
+   "drawback",
    "deck_modification",
    "run_structure"
   ],
@@ -3413,7 +3396,6 @@
   "add": [
    "items_consumables",
    "passive",
-   "drawback",
    "junk_cards"
   ],
   "drop": []
@@ -3793,9 +3775,7 @@
    "damage_reduction",
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "759245": {
   "add": [
@@ -4081,9 +4061,7 @@
    "upgrade",
    "exhaust:counters"
   ],
-  "drop": [
-   "exhaust"
-  ]
+  "drop": []
  },
  "759584": {
   "add": [
@@ -4146,9 +4124,7 @@
   "add": [
    "heal:counters"
   ],
-  "drop": [
-   "heal"
-  ]
+  "drop": []
  },
  "758405": {
   "add": [
@@ -4276,8 +4252,8 @@
  },
  "758440": {
   "add": [
-   "drawback",
-   "junk_cards"
+   "junk_cards",
+   "drawback"
   ],
   "drop": []
  },
@@ -4344,9 +4320,7 @@
    "aoe_damage",
    "block_armor"
   ],
-  "drop": [
-   "summon:benefits"
-  ]
+  "drop": []
  },
  "758458": {
   "add": [
@@ -4390,9 +4364,7 @@
   "add": [
    "damage_over_time:benefits"
   ],
-  "drop": [
-   "damage_over_time"
-  ]
+  "drop": []
  },
  "758468": {
   "add": [
@@ -4412,9 +4384,7 @@
    "count_payoff",
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "758471": {
   "add": [
@@ -4453,7 +4423,6 @@
  "758487": {
   "add": [
    "free_play",
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -4490,8 +4459,8 @@
  },
  "758501": {
   "add": [
-   "drawback",
-   "junk_cards"
+   "junk_cards",
+   "drawback"
   ],
   "drop": []
  },
@@ -4500,13 +4469,10 @@
    "damage_reduction",
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "758504": {
   "add": [
-   "drawback:benefits",
    "junk_cards:benefits"
   ],
   "drop": []
@@ -4572,9 +4538,7 @@
   "add": [
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "758522": {
   "add": [
@@ -4602,9 +4566,7 @@
    "condition",
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "758534": {
   "add": [
@@ -4647,18 +4609,14 @@
   "add": [
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "758559": {
   "add": [
    "count_payoff",
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "758520": {
   "add": [
@@ -4748,7 +4706,6 @@
  },
  "758576": {
   "add": [
-   "drawback",
    "junk_cards",
    "play_restriction"
   ],
@@ -5392,9 +5349,7 @@
    "exhaust:benefits",
    "condition"
   ],
-  "drop": [
-   "exhaust:grants"
-  ]
+  "drop": []
  },
  "758756": {
   "add": [
@@ -5460,7 +5415,6 @@
  },
  "758780": {
   "add": [
-   "drawback",
    "junk_cards"
   ],
   "drop": []
@@ -5620,7 +5574,6 @@
  },
  "758834": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": [
@@ -5697,9 +5650,7 @@
   "add": [
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "758852": {
   "add": [
@@ -5826,7 +5777,6 @@
  },
  "758889": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -5842,7 +5792,6 @@
  },
  "758897": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -5946,8 +5895,8 @@
  },
  "758931": {
   "add": [
-   "drawback",
-   "junk_cards"
+   "junk_cards",
+   "drawback"
   ],
   "drop": []
  },
@@ -5956,8 +5905,7 @@
    "stat_loss:benefits"
   ],
   "drop": [
-   "stat_gain",
-   "stat_loss"
+   "stat_gain"
   ]
  },
  "758933": {
@@ -5990,7 +5938,6 @@
  "758949": {
   "add": [
    "free_play",
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -6000,17 +5947,14 @@
    "self_destruct:benefits"
   ],
   "drop": [
-   "exhaust",
-   "self_destruct"
+   "exhaust"
   ]
  },
  "758952": {
   "add": [
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "758953": {
   "add": [
@@ -6152,8 +6096,7 @@
  "759358": {
   "add": [
    "stat_loss",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": [
    "damage_over_time"
@@ -6193,7 +6136,6 @@
   "add": [
    "stat_loss",
    "aura",
-   "buff",
    "drawback"
   ],
   "drop": []
@@ -6302,8 +6244,7 @@
  "759424": {
   "add": [
    "stat_loss",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": [
    "passive"
@@ -6312,7 +6253,6 @@
  "759426": {
   "add": [
    "revive",
-   "summon",
    "delayed"
   ],
   "drop": []
@@ -6344,7 +6284,6 @@
  "759438": {
   "add": [
    "aura",
-   "buff",
    "stat_gain"
   ],
   "drop": []
@@ -6405,7 +6344,6 @@
  "759469": {
   "add": [
    "on_damaged",
-   "drawback",
    "junk_cards"
   ],
   "drop": []
@@ -6538,7 +6476,6 @@
  },
  "759526": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -6583,9 +6520,7 @@
    "stat_multiply",
    "stat_loss:benefits"
   ],
-  "drop": [
-   "stat_loss"
-  ]
+  "drop": []
  },
  "759559": {
   "add": [
@@ -6615,7 +6550,6 @@
  "759566": {
   "add": [
    "count_payoff",
-   "drawback",
    "junk_cards"
   ],
   "drop": []
@@ -7122,7 +7056,6 @@
  },
  "816438": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": []

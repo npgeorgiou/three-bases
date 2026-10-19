@@ -7010,9 +7010,7 @@
    "disable:counters",
    "mark_target:counters"
   ],
-  "drop": [
-   "disable"
-  ]
+  "drop": []
  },
  "759842": {
   "add": [

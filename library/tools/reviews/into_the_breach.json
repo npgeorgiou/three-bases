@@ -750,7 +750,6 @@
   "add": [
    "telegraphed_threats",
    "aura",
-   "buff",
    "movement"
   ],
   "drop": [
@@ -761,7 +760,6 @@
   "add": [
    "telegraphed_threats",
    "aura",
-   "buff",
    "damage_reduction",
    "movement"
   ],
@@ -1014,7 +1012,6 @@
    "movement",
    "piercing",
    "aura",
-   "buff",
    "passive"
   ],
   "drop": [
@@ -1027,7 +1024,6 @@
    "telegraphed_threats",
    "damage_over_time",
    "aura",
-   "buff",
    "movement",
    "turn_end"
   ],
@@ -1210,7 +1206,6 @@
    "movement",
    "terrain",
    "aura",
-   "buff",
    "summon:grants",
    "passive"
   ],
@@ -1222,7 +1217,6 @@
   "add": [
    "telegraphed_threats",
    "aura",
-   "buff",
    "movement"
   ],
   "drop": [
@@ -1235,7 +1229,6 @@
   "add": [
    "telegraphed_threats",
    "aura",
-   "buff",
    "damage_over_time",
    "damage_types",
    "immunity",
@@ -1452,8 +1445,7 @@
    "difficulty_modifiers",
    "movement",
    "boss_phases",
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": [
    "assists_support",
@@ -1969,7 +1961,6 @@
  "760855": {
   "add": [
    "aura",
-   "buff",
    "regeneration"
   ],
   "drop": []
@@ -2161,7 +2152,6 @@
  "760940": {
   "add": [
    "aura",
-   "buff",
    "stat_gain"
   ],
   "drop": []

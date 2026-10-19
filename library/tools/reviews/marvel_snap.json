@@ -3,7 +3,6 @@
   "add": [
    "passive",
    "aura",
-   "buff",
    "tribal"
   ],
   "drop": [
@@ -122,7 +121,6 @@
  },
  "795420": {
   "add": [
-   "buff",
    "merge_attach",
    "movement",
    "on_ally_play",
@@ -159,7 +157,6 @@
   "add": [
    "disruption",
    "draw:counters",
-   "drawback",
    "junk_cards",
    "passive"
   ],
@@ -824,9 +821,7 @@
   ],
   "drop": [
    "lanes:benefits",
-   "points_scoring:benefits",
-   "stat_gain",
-   "stat_loss"
+   "points_scoring:benefits"
   ]
  },
  "795831": {
@@ -1136,7 +1131,6 @@
   "add": [
    "delayed",
    "generate_cards",
-   "buff",
    "merge_attach",
    "on_play",
    "resource_gain"
@@ -1251,7 +1245,6 @@
    "cost_reduction",
    "generate_cards:benefits",
    "in_hand_buff",
-   "stat_gain",
    "on_play"
   ],
   "drop": [
@@ -1294,7 +1287,6 @@
  "795805": {
   "add": [
    "copy",
-   "generate_cards",
    "hand_disruption",
    "on_play",
    "transform"
@@ -1311,8 +1303,7 @@
    "cross_lane",
    "graveyard",
    "on_play",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": [
    "lanes:benefits",
@@ -1335,7 +1326,6 @@
  "795841": {
   "add": [
    "in_hand_buff",
-   "stat_gain",
    "on_play"
   ],
   "drop": [

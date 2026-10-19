@@ -53,8 +53,7 @@
  },
  "741350": {
   "add": [
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
@@ -80,8 +79,7 @@
  },
  "741446": {
   "add": [
-   "aura",
-   "buff"
+   "aura"
   ],
   "drop": []
  },
@@ -161,8 +159,7 @@
  },
  "741349": {
   "add": [
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": []
  },
@@ -225,7 +222,6 @@
   ],
   "drop": [
    "blocking",
-   "taunt:benefits",
    "zone_of_control:benefits"
   ]
  },
@@ -336,7 +332,6 @@
  },
  "741329": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -415,8 +410,7 @@
  "741327": {
   "add": [
    "drawback",
-   "revive",
-   "summon"
+   "revive"
   ],
   "drop": []
  },
@@ -526,7 +520,6 @@
  "741469": {
   "add": [
    "enemy_benefit",
-   "buff",
    "merge_attach",
    "movement"
   ],
@@ -651,7 +644,6 @@
  },
  "741383": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -716,7 +708,6 @@
  },
  "741338": {
   "add": [
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -729,8 +720,7 @@
  },
  "741328": {
   "add": [
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": []
  },
@@ -752,8 +742,7 @@
  },
  "741088": {
   "add": [
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": []
  },
@@ -784,7 +773,6 @@
    "blocking",
    "movement:benefits",
    "terrain:benefits",
-   "taunt:benefits",
    "zone_of_control:benefits"
   ]
  },
@@ -857,7 +845,6 @@
  },
  "741416": {
   "add": [
-   "draw",
    "tutor",
    "stat_condition",
    "stat_gain",
@@ -938,8 +925,7 @@
  },
  "741314": {
   "add": [
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": []
  },
@@ -1076,9 +1062,7 @@
    "haste:grants",
    "summon"
   ],
-  "drop": [
-   "haste:benefits"
-  ]
+  "drop": []
  },
  "741290": {
   "add": [
@@ -1154,7 +1138,6 @@
  },
  "741431": {
   "add": [
-   "buff",
    "merge_attach",
    "evasion:grants",
    "stat_gain",
@@ -1253,7 +1236,6 @@
    "summon"
   ],
   "drop": [
-   "taunt:benefits",
    "zone_of_control:benefits"
   ]
  },
@@ -1272,8 +1254,8 @@
  "741477": {
   "add": [
    "in_hand_buff",
-   "stat_gain",
    "delayed",
+   "stat_gain",
    "on_play"
   ],
   "drop": []
@@ -1812,7 +1794,6 @@
   "add": [
    "condition_count",
    "on_play",
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -1841,7 +1822,6 @@
  "741403": {
   "add": [
    "on_play",
-   "draw",
    "tutor"
   ],
   "drop": []
@@ -1849,8 +1829,7 @@
  "741214": {
   "add": [
    "death_trigger",
-   "in_hand_buff",
-   "stat_gain"
+   "in_hand_buff"
   ],
   "drop": []
  },
@@ -1909,8 +1888,8 @@
  "741140": {
   "add": [
    "copy",
-   "generate_cards",
-   "cost_reduction"
+   "cost_reduction",
+   "generate_cards"
   ],
   "drop": []
  },
