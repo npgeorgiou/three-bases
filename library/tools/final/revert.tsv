@@ -909,3 +909,5 @@ undo	marvel_snap	in_hand_buff
 undo	darkest_dungeon	passive
 undo	sts2	on_damaged
 undo	runeterra	activated
+undo	faeria	stat_gain
+undo	marvel_snap	tempo
