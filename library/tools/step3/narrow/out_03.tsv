@@ -10,3 +10,4 @@ stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wound
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	faeria,duelyst,sts1,dnd5e,gwent,wh_killteam,runeterra,wh_aos_4th,hearthstone	(?<!you )\bdraw (a|an|one|two|three|x|\d+)(?=\s*(cards?\b(?! (of|with|from|that|you|in))|s many|more|extra|\.|,|$|then|and\b|at\b))
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_underworlds	\bdraw (a|an|one|two|three|x|\d+) (power|objective) card
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	inscryption	keep
+zone_of_control|does|wh_aos_4th|\bin combat\b|\bcombat range\b	wh_aos_4th	(?!)

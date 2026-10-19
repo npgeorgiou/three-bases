@@ -1,0 +1,2 @@
+mill|does|*|\bmill	mtg	\bmills\b
+self_mill|does|*|\bmill	mtg	\bmill(?!s)|each player mills
