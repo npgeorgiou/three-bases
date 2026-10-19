@@ -1,0 +1,4603 @@
+{
+"752376": {
+"keywords": [
+752312
+],
+"tags": [
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"752395": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752397": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"752401": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752420": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752471": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752477": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752478": {
+"keywords": [
+752300,
+752312
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"752483": {
+"keywords": [
+752308,
+752310
+],
+"tags": [
+[
+"deathtouch",
+"Bane"
+],
+[
+"damage",
+"Strike"
+]
+]
+},
+"752519": {
+"keywords": [
+752300,
+752317
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"stealth",
+"Ambush"
+]
+]
+},
+"752521": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752543": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752551": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752552": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752559": {
+"keywords": [
+752300,
+752302
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"752590": {
+"keywords": [
+752300,
+752302,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"752607": {
+"keywords": [
+752304
+],
+"tags": [
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"752638": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752642": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752643": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"752683": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752689": {
+"keywords": [
+752317
+],
+"tags": [
+[
+"stealth",
+"Ambush"
+]
+]
+},
+"752695": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"752720": {
+"keywords": [
+752302,
+752307
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"752729": {
+"keywords": [
+752302
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"752754": {
+"keywords": [
+752312
+],
+"tags": [
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"752783": {
+"keywords": [
+752303
+],
+"tags": [
+[
+"transform",
+"Evolve"
+]
+]
+},
+"752787": {
+"keywords": [
+752303
+],
+"tags": [
+[
+"transform",
+"Evolve"
+]
+]
+},
+"752814": {
+"keywords": [
+752300,
+752302,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"752818": {
+"keywords": [
+752300,
+752301,
+752302,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"752824": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"752872": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752882": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752886": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752913": {
+"keywords": [
+752302
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"752922": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752929": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"752957": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"752960": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"752985": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"753048": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753054": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753055": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753070": {
+"keywords": [
+752300,
+752304,
+752305
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"753072": {
+"keywords": [
+752301,
+752303
+],
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"transform",
+"evolve"
+]
+]
+},
+"753115": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753123": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753141": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753146": {
+"keywords": [
+752300,
+752303,
+752323
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"lifesteal",
+"Drain"
+]
+]
+},
+"753167": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753194": {
+"keywords": [
+752312
+],
+"tags": [
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"753200": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753239": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753269": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"753331": {
+"keywords": [
+752300,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"753333": {
+"keywords": [
+752300,
+752304,
+752312
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"753362": {
+"keywords": [
+752300,
+752303,
+752314
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"graveyard",
+"Necromancy"
+]
+]
+},
+"753364": {
+"keywords": [
+752300,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"753372": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753385": {
+"keywords": [
+752300,
+752303,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"753404": {
+"keywords": [
+752321
+],
+"tags": [
+[
+"revive",
+"Reanimate"
+]
+]
+},
+"753440": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753444": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753472": {
+"keywords": [
+752300,
+752305
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"753504": {
+"keywords": [
+752300,
+752301,
+752310
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"damage",
+"Strike"
+]
+]
+},
+"753507": {
+"keywords": [
+752301
+],
+"tags": [
+[
+"taunt",
+"Ward"
+]
+]
+},
+"753512": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"evolve"
+]
+]
+},
+"753580": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"753601": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"753612": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753632": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"753640": {
+"keywords": [
+752302,
+752307
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"753646": {
+"keywords": [
+752302,
+752307
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"753648": {
+"keywords": [
+752302,
+752307
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"753676": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753682": {
+"keywords": [
+752300,
+752305
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"753686": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753700": {
+"keywords": [
+752300,
+752302
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"753710": {
+"keywords": [
+752300,
+752303,
+752312
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"753722": {
+"keywords": [
+752300,
+752304,
+752305
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"753756": {
+"keywords": [
+752310
+],
+"tags": [
+[
+"damage",
+"Strike"
+]
+]
+},
+"753785": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"753790": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753827": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753845": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"753885": {
+"keywords": [
+752304
+],
+"tags": [
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"753926": {
+"keywords": [
+752301,
+752303
+],
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"753939": {
+"keywords": [
+752300,
+752305
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"753942": {
+"keywords": [
+752300,
+752304,
+752305
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"753946": {
+"keywords": [
+752300,
+752312
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"753962": {
+"keywords": [
+752300,
+752312
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"753997": {
+"keywords": [
+752311
+],
+"tags": [
+[
+"in_hand_buff",
+"Spellboost"
+]
+]
+},
+"754017": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754021": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754024": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754030": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754032": {
+"keywords": [
+752300,
+752311
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"in_hand_buff",
+"Spellboost"
+]
+]
+},
+"754042": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754047": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754097": {
+"keywords": [
+752300,
+752301,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754112": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754118": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754121": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"754133": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754143": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754165": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"754179": {
+"keywords": [
+752300,
+752314
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"graveyard",
+"Necromancy"
+]
+]
+},
+"754186": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754197": {
+"keywords": [
+752300,
+752303,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"754207": {
+"keywords": [
+752300,
+752302,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754215": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754217": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754252": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754264": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754273": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754294": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754295": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"evolve"
+]
+]
+},
+"754303": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754310": {
+"keywords": [
+752300,
+752306,
+752308
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Storm"
+],
+[
+"deathtouch",
+"Bane"
+]
+]
+},
+"754350": {
+"keywords": [
+752300,
+752303,
+752310
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"damage",
+"Strike"
+]
+]
+},
+"754370": {
+"keywords": [
+752300,
+752301,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754373": {
+"keywords": [
+752300,
+752301,
+752302,
+752303,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"754395": {
+"keywords": [
+752302,
+752307
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"754396": {
+"keywords": [
+752300,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"754397": {
+"keywords": [
+752300,
+752307
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"754404": {
+"keywords": [
+752302,
+752304,
+752307
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"754430": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754436": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754449": {
+"keywords": [
+752300,
+752301,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"754487": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"754492": {
+"keywords": [
+752301,
+752302,
+752305,
+752308
+],
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"haste",
+"Rush"
+],
+[
+"deathtouch",
+"Bane"
+]
+]
+},
+"754506": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754511": {
+"keywords": [
+752305
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"754541": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754559": {
+"keywords": [
+752303,
+752304
+],
+"tags": [
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"754573": {
+"keywords": [
+752300,
+752312,
+752317
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"stealth",
+"Ambush"
+]
+]
+},
+"754609": {
+"keywords": [
+752300,
+752303,
+752306
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"evolve"
+],
+[
+"haste",
+"Storm"
+]
+]
+},
+"754629": {
+"keywords": [
+752300,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"754633": {
+"keywords": [
+752300,
+752303,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"754654": {
+"keywords": [
+752300,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"754679": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754684": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"754701": {
+"keywords": [
+752300,
+752305,
+752331,
+752332
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Rush"
+],
+[
+"turn_number",
+"Skybound Art"
+],
+[
+"condition_count",
+"Skybound Art"
+],
+[
+"turn_number",
+"Super Skybound Art"
+]
+]
+},
+"754734": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754746": {
+"keywords": [
+752300,
+752303,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"754748": {
+"keywords": [
+752300,
+752303,
+752304,
+752314
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"evolve"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"graveyard",
+"Necromancy"
+]
+]
+},
+"754752": {
+"keywords": [
+752300,
+752303,
+752308,
+752314
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"graveyard",
+"Necromancy"
+]
+]
+},
+"754777": {
+"keywords": [
+752314
+],
+"tags": [
+[
+"graveyard",
+"Necromancy"
+]
+]
+},
+"754783": {
+"keywords": [
+752314
+],
+"tags": [
+[
+"graveyard",
+"Necromancy"
+]
+]
+},
+"754791": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754815": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"evolve"
+]
+]
+},
+"754833": {
+"keywords": [
+752300,
+752304,
+752310
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"damage",
+"Strike"
+]
+]
+},
+"754846": {
+"keywords": [
+752303
+],
+"tags": [
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754848": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"754861": {
+"keywords": [
+752300,
+752304,
+752310
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"damage",
+"Strike"
+]
+]
+},
+"754879": {
+"keywords": [
+752300,
+752303,
+752304,
+752306,
+752310
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"haste",
+"Storm"
+],
+[
+"damage",
+"Strike"
+]
+]
+},
+"754891": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"754906": {
+"keywords": [
+752303
+],
+"tags": [
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754920": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754937": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"754958": {
+"keywords": [
+752300,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"754968": {
+"keywords": [
+752300,
+752310
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Strike"
+]
+]
+},
+"755003": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755018": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"755031": {
+"keywords": [
+752304
+],
+"tags": [
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"755055": {
+"keywords": [
+752305,
+752308
+],
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"deathtouch",
+"Bane"
+]
+]
+},
+"755074": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755094": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755101": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755112": {
+"keywords": [
+752303
+],
+"tags": [
+[
+"transform",
+"Evolve"
+]
+]
+},
+"755117": {
+"keywords": [
+752301
+],
+"tags": [
+[
+"taunt",
+"Ward"
+]
+]
+},
+"755119": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755123": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"755128": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"755149": {
+"keywords": [
+752302
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"755154": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755169": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"755199": {
+"keywords": [
+752300,
+752312
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"755201": {
+"keywords": [
+752306
+],
+"tags": [
+[
+"haste",
+"Storm"
+]
+]
+},
+"755294": {
+"keywords": [
+752300,
+752306
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Storm"
+]
+]
+},
+"755297": {
+"keywords": [
+752300,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"755303": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"755314": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"755336": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755342": {
+"keywords": [
+752300,
+752303,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"755347": {
+"keywords": [
+752300,
+752304
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"755356": {
+"keywords": [
+752300,
+752301,
+752302,
+752303,
+752305
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"755376": {
+"keywords": [
+752300,
+752301,
+752305,
+752308
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"haste",
+"Rush"
+],
+[
+"deathtouch",
+"Bane"
+]
+]
+},
+"755403": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"755412": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"evolve"
+]
+]
+},
+"755416": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755431": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755434": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755436": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755441": {
+"keywords": [
+752300,
+752303,
+752304,
+752305
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"evolve"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"755450": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"755473": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"755501": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755509": {
+"keywords": [
+752306
+],
+"tags": [
+[
+"haste",
+"Storm"
+]
+]
+},
+"755524": {
+"keywords": [
+752300,
+752310,
+752312
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"damage",
+"Strike"
+],
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"755529": {
+"keywords": [
+752300,
+752301,
+752303,
+752309,
+752321
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"transform",
+"evolve"
+],
+[
+"cost_type",
+"Accelerate"
+],
+[
+"revive",
+"Reanimate"
+]
+]
+},
+"755530": {
+"keywords": [
+752300,
+752321
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"revive",
+"Reanimate"
+]
+]
+},
+"755531": {
+"keywords": [
+752300,
+752302,
+752307,
+752321
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"revive",
+"Reanimate"
+]
+]
+},
+"755532": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"755534": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755543": {
+"keywords": [
+752300,
+752303,
+752305,
+752309,
+752314
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"haste",
+"Rush"
+],
+[
+"cost_type",
+"Accelerate"
+],
+[
+"graveyard",
+"Necromancy"
+]
+]
+},
+"755562": {
+"keywords": [
+752300,
+752301,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"755574": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755575": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"755593": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755598": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755619": {
+"keywords": [
+752300,
+752306,
+752307
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Storm"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"755621": {
+"keywords": [
+752300,
+752307
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"755622": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"755623": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"755645": {
+"keywords": [
+752300,
+752301,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"755661": {
+"keywords": [
+752300,
+752317,
+752323
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"stealth",
+"Ambush"
+],
+[
+"lifesteal",
+"Drain"
+]
+]
+},
+"755670": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"755694": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755702": {
+"keywords": [
+752300,
+752306,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Storm"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"755717": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755720": {
+"keywords": [
+752300,
+752301,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"755756": {
+"keywords": [
+752301,
+752306,
+752308
+],
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"haste",
+"Storm"
+],
+[
+"deathtouch",
+"Bane"
+]
+]
+},
+"755765": {
+"keywords": [
+752301,
+752302
+],
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"755766": {
+"keywords": [
+752300,
+752302,
+752306
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"haste",
+"Storm"
+]
+]
+},
+"755790": {
+"keywords": [
+752302,
+752307
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"755798": {
+"keywords": [
+752300,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"755800": {
+"keywords": [
+752300,
+752314
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"graveyard",
+"Necromancy"
+]
+]
+},
+"755810": {
+"keywords": [
+752305
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"755831": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755834": {
+"keywords": [
+752302
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"755840": {
+"keywords": [
+752301,
+752308,
+752309
+],
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"755844": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755851": {
+"keywords": [
+752300,
+752301,
+752303,
+752306,
+752310
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"transform",
+"evolve"
+],
+[
+"haste",
+"Storm"
+],
+[
+"damage",
+"Strike"
+]
+]
+},
+"755854": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755861": {
+"keywords": [
+752300,
+752305
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"755865": {
+"keywords": [
+752300,
+752301
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+]
+]
+},
+"755870": {
+"keywords": [
+752300,
+752306,
+752309,
+752312
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Storm"
+],
+[
+"cost_type",
+"Accelerate"
+],
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"755875": {
+"keywords": [
+752300,
+752305
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"755885": {
+"keywords": [
+752300,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"755892": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755895": {
+"keywords": [
+752310,
+752317
+],
+"tags": [
+[
+"damage",
+"Strike"
+],
+[
+"stealth",
+"Ambush"
+]
+]
+},
+"755903": {
+"keywords": [
+752305
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"755914": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755934": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755950": {
+"keywords": [
+752300,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"755956": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"755958": {
+"keywords": [
+752300,
+752321
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"revive",
+"Reanimate"
+]
+]
+},
+"755990": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"755999": {
+"keywords": [
+752300,
+752309,
+752312
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"cost_type",
+"Accelerate"
+],
+[
+"modal_choice",
+"Choose"
+]
+]
+},
+"756001": {
+"keywords": [
+752300,
+752301,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"756002": {
+"keywords": [
+752300,
+752301,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"756009": {
+"keywords": [
+752300,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"756017": {
+"keywords": [
+752300,
+752301,
+752303,
+752306,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"haste",
+"Storm"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"756027": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"756032": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"756041": {
+"keywords": [
+752302
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"756061": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"756066": {
+"keywords": [
+752300,
+752303,
+752306
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"haste",
+"Storm"
+]
+]
+},
+"756069": {
+"keywords": [
+752300,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"756073": {
+"keywords": [
+752302,
+752307
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"756082": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"756083": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"756087": {
+"keywords": [
+752300,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"756091": {
+"keywords": [
+752300,
+752301,
+752303,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"756095": {
+"keywords": [
+752311
+],
+"tags": [
+[
+"in_hand_buff",
+"Spellboost"
+]
+]
+},
+"756114": {
+"keywords": [
+752306,
+752308,
+752309
+],
+"tags": [
+[
+"haste",
+"Storm"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"756119": {
+"keywords": [
+752302,
+752307,
+752308
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"deathtouch",
+"Bane"
+]
+]
+},
+"756128": {
+"keywords": [
+752309,
+752310,
+752317
+],
+"tags": [
+[
+"cost_type",
+"Accelerate"
+],
+[
+"damage",
+"Strike"
+],
+[
+"stealth",
+"Ambush"
+]
+]
+},
+"756136": {
+"keywords": [
+752300,
+752303,
+752309
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"transform",
+"evolve"
+],
+[
+"cost_type",
+"Accelerate"
+]
+]
+},
+"756138": {
+"keywords": [
+752311
+],
+"tags": [
+[
+"in_hand_buff",
+"Spellboost"
+]
+]
+},
+"813773": {
+"keywords": [
+752305
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"813814": {
+"keywords": [
+752306
+],
+"tags": [
+[
+"haste",
+"Storm"
+]
+]
+},
+"813885": {
+"keywords": [
+752303
+],
+"tags": [
+[
+"transform",
+"Evolve"
+]
+]
+},
+"813916": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"813945": {
+"keywords": [
+752302
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"813972": {
+"keywords": [
+752304
+],
+"tags": [
+[
+"kicker",
+"Enhance"
+]
+]
+},
+"813998": {
+"keywords": [
+752308
+],
+"tags": [
+[
+"deathtouch",
+"Bane"
+]
+]
+},
+"814012": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"814013": {
+"keywords": [
+752300,
+752302,
+752303
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"transform",
+"Evolve"
+]
+]
+},
+"814023": {
+"keywords": [
+752302,
+752307
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"814025": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"814033": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"814036": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"814046": {
+"keywords": [
+752302
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"814074": {
+"keywords": [
+752306
+],
+"tags": [
+[
+"haste",
+"Storm"
+]
+]
+},
+"814075": {
+"keywords": [
+752301
+],
+"tags": [
+[
+"taunt",
+"Ward"
+]
+]
+},
+"814076": {
+"keywords": [
+752305
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"814091": {
+"keywords": [
+752301
+],
+"tags": [
+[
+"taunt",
+"Ward"
+]
+]
+},
+"814099": {
+"keywords": [
+752301
+],
+"tags": [
+[
+"taunt",
+"Ward"
+]
+]
+},
+"814122": {
+"keywords": [
+752305,
+752310
+],
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"damage",
+"Strike"
+]
+]
+},
+"814168": {
+"keywords": [
+752310,
+752333
+],
+"tags": [
+[
+"damage",
+"Strike"
+],
+[
+"tribal",
+"Maneuver"
+]
+]
+},
+"814170": {
+"keywords": [
+752303
+],
+"tags": [
+[
+"transform",
+"Evolve"
+]
+]
+},
+"814201": {
+"keywords": [
+752305,
+752308
+],
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"deathtouch",
+"Bane"
+]
+]
+},
+"814204": {
+"keywords": [
+752302,
+752307
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"814213": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"814252": {
+"keywords": [
+752302
+],
+"tags": [
+[
+"death_trigger",
+"Last Words"
+]
+]
+},
+"814257": {
+"keywords": [
+752301
+],
+"tags": [
+[
+"taunt",
+"Ward"
+]
+]
+},
+"814272": {
+"keywords": [
+752303
+],
+"tags": [
+[
+"transform",
+"Evolve"
+]
+]
+},
+"814286": {
+"keywords": [
+752305,
+752323
+],
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"lifesteal",
+"Drain"
+]
+]
+},
+"814297": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"814338": {
+"keywords": [
+752301,
+752306
+],
+"tags": [
+[
+"taunt",
+"Ward"
+],
+[
+"haste",
+"Storm"
+]
+]
+},
+"814382": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"814383": {
+"keywords": [
+752307
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+]
+]
+},
+"814391": {
+"keywords": [
+752333
+],
+"tags": [
+[
+"tribal",
+"Maneuver"
+]
+]
+},
+"814395": {
+"keywords": [
+752300
+],
+"tags": [
+[
+"on_play",
+"Fanfare"
+]
+]
+},
+"814409": {
+"keywords": [
+752306
+],
+"tags": [
+[
+"haste",
+"Storm"
+]
+]
+}
+}

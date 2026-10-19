@@ -1,0 +1,3089 @@
+{
+"742538": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"742566": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"742570": {
+"keywords": [
+742397
+],
+"tags": [
+[
+"on_kill",
+"Honorable Kill"
+]
+]
+},
+"742594": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"742599": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"742604": {
+"keywords": [
+742397
+],
+"tags": [
+[
+"on_kill",
+"Honorable Kill"
+]
+]
+},
+"742612": {
+"keywords": [
+742364
+],
+"tags": [
+[
+"trap_secret",
+"Secret"
+]
+]
+},
+"742618": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"742648": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"742711": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"742720": {
+"keywords": [
+742406
+],
+"tags": [
+[
+"on_damaged",
+"Frenzy"
+]
+]
+},
+"742799": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"742821": {
+"keywords": [
+742359,
+742365
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"lifesteal",
+"Lifesteal"
+]
+]
+},
+"742884": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"742897": {
+"keywords": [
+742369
+],
+"tags": [
+[
+"modal_choice",
+"Choose One"
+]
+]
+},
+"742899": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"742938": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"742970": {
+"keywords": [
+742359,
+742370
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"overload_debt",
+"Overload"
+]
+]
+},
+"743012": {
+"keywords": [
+742370
+],
+"tags": [
+[
+"overload_debt",
+"Overload"
+]
+]
+},
+"743102": {
+"keywords": [
+742362
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"743156": {
+"keywords": [
+742360,
+742362
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"743258": {
+"keywords": [
+742408
+],
+"tags": [
+[
+"summon",
+"Herald"
+],
+[
+"upgrade",
+"Herald"
+]
+]
+},
+"743272": {
+"keywords": [
+742381
+],
+"tags": [
+[
+"immunity",
+"Elusive"
+]
+]
+},
+"743297": {
+"keywords": [
+742359,
+742361
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"taunt",
+"Taunt"
+]
+]
+},
+"743316": {
+"keywords": [
+742401
+],
+"tags": [
+[
+"start_of_game",
+"Start of Game"
+]
+]
+},
+"743327": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"743332": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"743341": {
+"keywords": [
+742359,
+742363
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"743366": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"743485": {
+"keywords": [
+742373
+],
+"tags": [
+[
+"haste",
+"Charge"
+]
+]
+},
+"743528": {
+"keywords": [
+742363,
+742392
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+],
+[
+"combo_sequence",
+"Kindred"
+],
+[
+"tribal",
+"Kindred"
+]
+]
+},
+"743556": {
+"keywords": [
+742364
+],
+"tags": [
+[
+"trap_secret",
+"Secret"
+]
+]
+},
+"743592": {
+"keywords": [
+742359,
+742373
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"haste",
+"Charge"
+]
+]
+},
+"743627": {
+"keywords": [
+742364
+],
+"tags": [
+[
+"trap_secret",
+"Secret"
+]
+]
+},
+"743642": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"743648": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"743650": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"743654": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"743703": {
+"keywords": [
+742369
+],
+"tags": [
+[
+"modal_choice",
+"Choose One"
+]
+]
+},
+"743738": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"743754": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"743764": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"743778": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"743790": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"743863": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"743907": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"743927": {
+"keywords": [
+742359,
+742363
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"744019": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744021": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744029": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744039": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744059": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744070": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"744106": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"744181": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744201": {
+"keywords": [
+742401
+],
+"tags": [
+[
+"start_of_game",
+"Start of Game"
+]
+]
+},
+"744225": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744242": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"744249": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"744281": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"744291": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"744311": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744374": {
+"keywords": [
+742409
+],
+"tags": [
+[
+"generate_cards",
+"Excavate"
+],
+[
+"permanent_growth",
+"Excavate"
+]
+]
+},
+"744376": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744388": {
+"keywords": [
+742371
+],
+"tags": [
+[
+"disable",
+"Freeze"
+]
+]
+},
+"744413": {
+"keywords": [
+742359,
+742392
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"combo_sequence",
+"Kindred"
+],
+[
+"tribal",
+"Kindred"
+]
+]
+},
+"744455": {
+"keywords": [
+742390
+],
+"tags": [
+[
+"in_hand_buff",
+"Corrupt"
+],
+[
+"cost_condition",
+"Corrupt"
+]
+]
+},
+"744462": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744474": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744479": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744589": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744596": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744658": {
+"keywords": [
+742387
+],
+"tags": [
+[
+"quests",
+"Sidequest"
+]
+]
+},
+"744694": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744719": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744817": {
+"keywords": [
+742382
+],
+"tags": [
+[
+"hand_position",
+"Outcast"
+]
+]
+},
+"744839": {
+"keywords": [
+742370
+],
+"tags": [
+[
+"overload_debt",
+"Overload"
+]
+]
+},
+"744853": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744855": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744875": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744877": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"744886": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745011": {
+"keywords": [
+742369
+],
+"tags": [
+[
+"modal_choice",
+"Choose One"
+]
+]
+},
+"745023": {
+"keywords": [
+742383
+],
+"tags": [
+[
+"silence",
+"Silence"
+]
+]
+},
+"745108": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745119": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745157": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745188": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745211": {
+"keywords": [
+742362
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"745225": {
+"keywords": [
+742360,
+742383,
+742396
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"silence",
+"Silence"
+],
+[
+"on_spell",
+"Spellburst"
+]
+]
+},
+"745241": {
+"keywords": [
+742368
+],
+"tags": [
+[
+"combo_sequence",
+"Combo"
+]
+]
+},
+"745265": {
+"keywords": [
+742381
+],
+"tags": [
+[
+"immunity",
+"Elusive"
+]
+]
+},
+"745268": {
+"keywords": [
+742396
+],
+"tags": [
+[
+"on_spell",
+"Spellburst"
+]
+]
+},
+"745283": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745290": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745383": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745384": {
+"keywords": [
+742368
+],
+"tags": [
+[
+"combo_sequence",
+"Combo"
+]
+]
+},
+"745385": {
+"keywords": [
+742364
+],
+"tags": [
+[
+"trap_secret",
+"Secret"
+]
+]
+},
+"745466": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745521": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"745525": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745533": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745539": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745540": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745541": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745592": {
+"keywords": [
+742360,
+742404
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"cost_reduction",
+"Prepare"
+],
+[
+"play_restriction",
+"Prepare"
+]
+]
+},
+"745599": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"745623": {
+"keywords": [
+742395
+],
+"tags": [
+[
+"resource_banking",
+"Finale"
+]
+]
+},
+"745626": {
+"keywords": [
+742382
+],
+"tags": [
+[
+"hand_position",
+"Outcast"
+]
+]
+},
+"745713": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745781": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745797": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"745812": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745861": {
+"keywords": [
+742371
+],
+"tags": [
+[
+"disable",
+"Freeze"
+]
+]
+},
+"745877": {
+"keywords": [
+742360,
+742362
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"745895": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"745919": {
+"keywords": [
+742359,
+742399
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"selection",
+"Dredge"
+],
+[
+"deck_position",
+"Dredge"
+]
+]
+},
+"745993": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"746030": {
+"keywords": [
+742361
+],
+"tags": [
+[
+"taunt",
+"Taunt"
+]
+]
+},
+"746089": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746165": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746170": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746174": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746233": {
+"keywords": [
+742361
+],
+"tags": [
+[
+"taunt",
+"Taunt"
+]
+]
+},
+"746277": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746330": {
+"keywords": [
+742382
+],
+"tags": [
+[
+"hand_position",
+"Outcast"
+]
+]
+},
+"746344": {
+"keywords": [
+742368
+],
+"tags": [
+[
+"combo_sequence",
+"Combo"
+]
+]
+},
+"746373": {
+"keywords": [
+742382
+],
+"tags": [
+[
+"hand_position",
+"Outcast"
+]
+]
+},
+"746395": {
+"keywords": [
+742362
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"746400": {
+"keywords": [
+742388
+],
+"tags": [
+[
+"quests",
+"Questline"
+]
+]
+},
+"746414": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746421": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746468": {
+"keywords": [
+742368
+],
+"tags": [
+[
+"combo_sequence",
+"Combo"
+]
+]
+},
+"746471": {
+"keywords": [
+742369
+],
+"tags": [
+[
+"modal_choice",
+"Choose One"
+]
+]
+},
+"746501": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746524": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746525": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746543": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746549": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746570": {
+"keywords": [
+742367
+],
+"tags": [
+[
+"stealth",
+"Stealth"
+]
+]
+},
+"746623": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"746629": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746643": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746652": {
+"keywords": [
+742360,
+742422
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"deckbuilding_effect",
+"Fabled"
+]
+]
+},
+"746678": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746693": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"746709": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746727": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"746809": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746847": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"746850": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746878": {
+"keywords": [
+742359,
+742360
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"746895": {
+"keywords": [
+742363,
+742382
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+],
+[
+"hand_position",
+"Outcast"
+]
+]
+},
+"746940": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746947": {
+"keywords": [
+742366
+],
+"tags": [
+[
+"shield",
+"Divine Shield"
+]
+]
+},
+"746948": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"746955": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"746972": {
+"keywords": [
+742359,
+742363
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"746982": {
+"keywords": [
+742414
+],
+"tags": [
+[
+"excess_damage",
+"Overkill"
+]
+]
+},
+"747012": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747093": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747128": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747150": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747153": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747245": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"747304": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747352": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747405": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747429": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747440": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747453": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747595": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747655": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747656": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747679": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"747680": {
+"keywords": [
+742359,
+742363
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"747737": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747740": {
+"keywords": [
+742359,
+742363
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"747756": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747781": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747785": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"747794": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747803": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747819": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747850": {
+"keywords": [
+742362
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"747865": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"747884": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747912": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747946": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"747972": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"747991": {
+"keywords": [
+742361
+],
+"tags": [
+[
+"taunt",
+"Taunt"
+]
+]
+},
+"797302": {
+"keywords": [
+742371
+],
+"tags": [
+[
+"disable",
+"Freeze"
+]
+]
+},
+"797417": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"797430": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"797435": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"797498": {
+"keywords": [
+742360,
+742406
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"on_damaged",
+"Frenzy"
+]
+]
+},
+"797511": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"797522": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"797732": {
+"keywords": [
+742382
+],
+"tags": [
+[
+"hand_position",
+"Outcast"
+]
+]
+},
+"797846": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"797895": {
+"keywords": [
+742361,
+742401
+],
+"tags": [
+[
+"taunt",
+"Taunt"
+],
+[
+"start_of_game",
+"Start of Game"
+]
+]
+},
+"797910": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"797914": {
+"keywords": [
+742375
+],
+"tags": [
+[
+"deathtouch",
+"Poisonous"
+]
+]
+},
+"798014": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"798428": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"798629": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"798633": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"798694": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"798778": {
+"keywords": [
+742380
+],
+"tags": [
+[
+"multi_attack",
+"Windfury"
+]
+]
+},
+"798813": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"798967": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"798993": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"799037": {
+"keywords": [
+742370
+],
+"tags": [
+[
+"overload_debt",
+"Overload"
+]
+]
+},
+"799084": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"799132": {
+"keywords": [
+742360,
+742361
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"taunt",
+"Taunt"
+]
+]
+},
+"799133": {
+"keywords": [
+742360,
+742361,
+742380
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+],
+[
+"taunt",
+"Taunt"
+],
+[
+"multi_attack",
+"Windfury"
+]
+]
+},
+"799150": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"799157": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"799168": {
+"keywords": [
+742386
+],
+"tags": [
+[
+"quests",
+"Quest"
+]
+]
+},
+"799192": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"799265": {
+"keywords": [
+742369
+],
+"tags": [
+[
+"modal_choice",
+"Choose One"
+]
+]
+},
+"799286": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"799303": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"799320": {
+"keywords": [
+742371
+],
+"tags": [
+[
+"disable",
+"Freeze"
+]
+]
+},
+"799335": {
+"keywords": [
+742375
+],
+"tags": [
+[
+"deathtouch",
+"Poisonous"
+]
+]
+},
+"799345": {
+"keywords": [
+742382
+],
+"tags": [
+[
+"hand_position",
+"Outcast"
+]
+]
+},
+"799572": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"799599": {
+"keywords": [
+742388
+],
+"tags": [
+[
+"quests",
+"Questline"
+]
+]
+},
+"799612": {
+"keywords": [
+742388
+],
+"tags": [
+[
+"quests",
+"Questline"
+]
+]
+},
+"799673": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"799679": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"799737": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"799744": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"799750": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"799832": {
+"keywords": [
+742361
+],
+"tags": [
+[
+"taunt",
+"Taunt"
+]
+]
+},
+"799879": {
+"keywords": [
+742359,
+742401
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"start_of_game",
+"Start of Game"
+]
+]
+},
+"799883": {
+"keywords": [
+742359,
+742370
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"overload_debt",
+"Overload"
+]
+]
+},
+"799896": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"799903": {
+"keywords": [
+742401
+],
+"tags": [
+[
+"start_of_game",
+"Start of Game"
+]
+]
+},
+"799943": {
+"keywords": [
+742383
+],
+"tags": [
+[
+"silence",
+"Silence"
+]
+]
+},
+"800130": {
+"keywords": [
+742359,
+742360
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"800132": {
+"keywords": [
+742364
+],
+"tags": [
+[
+"trap_secret",
+"Secret"
+]
+]
+},
+"800138": {
+"keywords": [
+742401
+],
+"tags": [
+[
+"start_of_game",
+"Start of Game"
+]
+]
+},
+"800240": {
+"keywords": [
+742363
+],
+"tags": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+]
+},
+"800261": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"800264": {
+"keywords": [
+742359,
+742371
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"disable",
+"Freeze"
+]
+]
+},
+"800266": {
+"keywords": [
+742359,
+742371
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"disable",
+"Freeze"
+]
+]
+},
+"800278": {
+"keywords": [
+742359,
+742371
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+],
+[
+"disable",
+"Freeze"
+]
+]
+},
+"800289": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"800413": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"800427": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"800503": {
+"keywords": [
+742360
+],
+"tags": [
+[
+"death_trigger",
+"Deathrattle"
+]
+]
+},
+"800632": {
+"keywords": [
+742381
+],
+"tags": [
+[
+"immunity",
+"Elusive"
+]
+]
+},
+"800636": {
+"keywords": [
+742361
+],
+"tags": [
+[
+"taunt",
+"Taunt"
+]
+]
+},
+"800757": {
+"keywords": [
+742359
+],
+"tags": [
+[
+"on_play",
+"Battlecry"
+]
+]
+},
+"800779": {
+"keywords": [
+742361
+],
+"tags": [
+[
+"taunt",
+"Taunt"
+]
+]
+}
+}

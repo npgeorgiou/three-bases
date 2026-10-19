@@ -1,0 +1,1694 @@
+{
+"741564": {
+"keywords": [
+741526,
+741557
+],
+"tags": [
+[
+"multi_attack",
+"Celerity"
+],
+[
+"taunt",
+"Provoke"
+],
+[
+"immobilize",
+"Provoke"
+]
+]
+},
+"741580": {
+"keywords": [
+741522,
+741523
+],
+"tags": [
+[
+"movement",
+"Flying"
+],
+[
+"multi_target_attack",
+"Blast"
+],
+[
+"area_templates",
+"Blast"
+]
+]
+},
+"741608": {
+"keywords": [
+741551
+],
+"tags": [
+[
+"adjacency",
+"Zeal"
+],
+[
+"buff",
+"Zeal"
+]
+]
+},
+"741609": {
+"keywords": [
+741551
+],
+"tags": [
+[
+"adjacency",
+"Zeal"
+],
+[
+"buff",
+"Zeal"
+]
+]
+},
+"741611": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741617": {
+"keywords": [
+741557
+],
+"tags": [
+[
+"taunt",
+"Provoke"
+],
+[
+"immobilize",
+"Provoke"
+]
+]
+},
+"741620": {
+"keywords": [
+741526
+],
+"tags": [
+[
+"multi_attack",
+"Celerity"
+]
+]
+},
+"741633": {
+"keywords": [
+741560
+],
+"tags": [
+[
+"silence",
+"Dispel"
+]
+]
+},
+"741648": {
+"keywords": [
+741541
+],
+"tags": [
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"741654": {
+"keywords": [
+741555
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"741662": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741694": {
+"keywords": [
+741522,
+741529
+],
+"tags": [
+[
+"movement",
+"Flying"
+],
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"741698": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741699": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741702": {
+"keywords": [
+741530,
+741555
+],
+"tags": [
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"temporary_effect",
+"Ephemeral"
+],
+[
+"haste",
+"Rush"
+]
+]
+},
+"741704": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741708": {
+"keywords": [
+741522,
+741529
+],
+"tags": [
+[
+"movement",
+"Flying"
+],
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"741741": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741748": {
+"keywords": [
+741555
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"741776": {
+"keywords": [
+741534
+],
+"tags": [
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
+]
+]
+},
+"741783": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741816": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"741819": {
+"keywords": [
+741536
+],
+"tags": [
+[
+"territory_trigger",
+"Infiltrate"
+],
+[
+"buff",
+"Infiltrate"
+]
+]
+},
+"741821": {
+"keywords": [
+741536
+],
+"tags": [
+[
+"territory_trigger",
+"Infiltrate"
+],
+[
+"buff",
+"Infiltrate"
+]
+]
+},
+"741824": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741825": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741826": {
+"keywords": [
+741539,
+741557
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"taunt",
+"Provoke"
+],
+[
+"immobilize",
+"Provoke"
+]
+]
+},
+"741830": {
+"keywords": [
+741522
+],
+"tags": [
+[
+"movement",
+"Flying"
+]
+]
+},
+"741834": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"741858": {
+"keywords": [
+741541
+],
+"tags": [
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"741865": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741868": {
+"keywords": [
+741541
+],
+"tags": [
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"741869": {
+"keywords": [
+741557
+],
+"tags": [
+[
+"taunt",
+"Provoke"
+],
+[
+"immobilize",
+"Provoke"
+]
+]
+},
+"741880": {
+"keywords": [
+741539,
+741556
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"placement_rules",
+"Airdrop"
+]
+]
+},
+"741881": {
+"keywords": [
+741539,
+741541
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"741882": {
+"keywords": [
+741533,
+741539
+],
+"tags": [
+[
+"multi_target_attack",
+"Frenzy"
+],
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741883": {
+"keywords": [
+741532,
+741539
+],
+"tags": [
+[
+"shield",
+"Forcefield"
+],
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741898": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741904": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"741908": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"741910": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741911": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741912": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741917": {
+"keywords": [
+741526
+],
+"tags": [
+[
+"multi_attack",
+"Celerity"
+]
+]
+},
+"741920": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741924": {
+"keywords": [
+741526
+],
+"tags": [
+[
+"multi_attack",
+"Celerity"
+]
+]
+},
+"741927": {
+"keywords": [
+741541
+],
+"tags": [
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"741928": {
+"keywords": [
+741541
+],
+"tags": [
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"741931": {
+"keywords": [
+741557
+],
+"tags": [
+[
+"taunt",
+"Provoke"
+],
+[
+"immobilize",
+"Provoke"
+]
+]
+},
+"741932": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741942": {
+"keywords": [
+741541
+],
+"tags": [
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"741947": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741950": {
+"keywords": [
+741539,
+741556
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"placement_rules",
+"Airdrop"
+]
+]
+},
+"741954": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741971": {
+"keywords": [
+741543
+],
+"tags": [
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+]
+]
+},
+"741973": {
+"keywords": [
+741522,
+741543,
+741552
+],
+"tags": [
+[
+"movement",
+"Flying"
+],
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+],
+[
+"flanking",
+"Backstab"
+],
+[
+"damage",
+"Backstab"
+]
+]
+},
+"741987": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"741994": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"741998": {
+"keywords": [
+741529,
+741539
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742000": {
+"keywords": [
+741543
+],
+"tags": [
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+]
+]
+},
+"742010": {
+"keywords": [
+741532,
+741533,
+741534
+],
+"tags": [
+[
+"shield",
+"Forcefield"
+],
+[
+"multi_target_attack",
+"Frenzy"
+],
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
+]
+]
+},
+"742021": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"742022": {
+"keywords": [
+741522,
+741536
+],
+"tags": [
+[
+"movement",
+"Flying"
+],
+[
+"territory_trigger",
+"Infiltrate"
+],
+[
+"buff",
+"Infiltrate"
+]
+]
+},
+"742025": {
+"keywords": [
+741543
+],
+"tags": [
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+]
+]
+},
+"742026": {
+"keywords": [
+741543
+],
+"tags": [
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+]
+]
+},
+"742034": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742042": {
+"keywords": [
+741541
+],
+"tags": [
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"742043": {
+"keywords": [
+741555
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"742044": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742046": {
+"keywords": [
+741539,
+741557
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"taunt",
+"Provoke"
+],
+[
+"immobilize",
+"Provoke"
+]
+]
+},
+"742048": {
+"keywords": [
+741522
+],
+"tags": [
+[
+"movement",
+"Flying"
+]
+]
+},
+"742051": {
+"keywords": [
+741529,
+741539
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742055": {
+"keywords": [
+741541
+],
+"tags": [
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"742057": {
+"keywords": [
+741557
+],
+"tags": [
+[
+"taunt",
+"Provoke"
+],
+[
+"immobilize",
+"Provoke"
+]
+]
+},
+"742062": {
+"keywords": [
+741532
+],
+"tags": [
+[
+"shield",
+"Forcefield"
+]
+]
+},
+"742066": {
+"keywords": [
+741532
+],
+"tags": [
+[
+"shield",
+"Forcefield"
+]
+]
+},
+"742068": {
+"keywords": [
+741522,
+741539
+],
+"tags": [
+[
+"movement",
+"Flying"
+],
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742071": {
+"keywords": [
+741529,
+741560
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+],
+[
+"silence",
+"Dispel"
+]
+]
+},
+"742079": {
+"keywords": [
+741555
+],
+"tags": [
+[
+"haste",
+"Rush"
+]
+]
+},
+"742082": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742083": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742085": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742087": {
+"keywords": [
+741522
+],
+"tags": [
+[
+"movement",
+"Flying"
+]
+]
+},
+"742090": {
+"keywords": [
+741557
+],
+"tags": [
+[
+"taunt",
+"Provoke"
+],
+[
+"immobilize",
+"Provoke"
+]
+]
+},
+"742092": {
+"keywords": [
+741557,
+741560
+],
+"tags": [
+[
+"taunt",
+"Provoke"
+],
+[
+"immobilize",
+"Provoke"
+],
+[
+"silence",
+"Dispel"
+]
+]
+},
+"742094": {
+"keywords": [
+741532
+],
+"tags": [
+[
+"shield",
+"Forcefield"
+]
+]
+},
+"742095": {
+"keywords": [
+741532
+],
+"tags": [
+[
+"shield",
+"Forcefield"
+]
+]
+},
+"742097": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742098": {
+"keywords": [
+741541
+],
+"tags": [
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"742100": {
+"keywords": [
+741522
+],
+"tags": [
+[
+"movement",
+"Flying"
+]
+]
+},
+"742121": {
+"keywords": [
+741551
+],
+"tags": [
+[
+"adjacency",
+"Zeal"
+],
+[
+"buff",
+"Zeal"
+]
+]
+},
+"742129": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"742132": {
+"keywords": [
+741539,
+741541
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+],
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"742133": {
+"keywords": [
+741552
+],
+"tags": [
+[
+"flanking",
+"Backstab"
+],
+[
+"damage",
+"Backstab"
+]
+]
+},
+"742145": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"742158": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"742160": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742170": {
+"keywords": [
+741534
+],
+"tags": [
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
+]
+]
+},
+"742184": {
+"keywords": [
+741536
+],
+"tags": [
+[
+"territory_trigger",
+"Infiltrate"
+],
+[
+"buff",
+"Infiltrate"
+]
+]
+},
+"742187": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742188": {
+"keywords": [
+741532
+],
+"tags": [
+[
+"shield",
+"Forcefield"
+]
+]
+},
+"742196": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"742198": {
+"keywords": [
+741526
+],
+"tags": [
+[
+"multi_attack",
+"Celerity"
+]
+]
+},
+"742200": {
+"keywords": [
+741541
+],
+"tags": [
+[
+"ranged",
+"Ranged"
+]
+]
+},
+"742210": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742211": {
+"keywords": [
+741557
+],
+"tags": [
+[
+"taunt",
+"Provoke"
+],
+[
+"immobilize",
+"Provoke"
+]
+]
+},
+"742217": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742221": {
+"keywords": [
+741551
+],
+"tags": [
+[
+"adjacency",
+"Zeal"
+],
+[
+"buff",
+"Zeal"
+]
+]
+},
+"742224": {
+"keywords": [
+741525
+],
+"tags": [
+[
+"on_play",
+"Bond"
+],
+[
+"tribal",
+"Bond"
+]
+]
+},
+"742232": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742234": {
+"keywords": [
+741525
+],
+"tags": [
+[
+"on_play",
+"Bond"
+],
+[
+"tribal",
+"Bond"
+]
+]
+},
+"742242": {
+"keywords": [
+741534
+],
+"tags": [
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
+]
+]
+},
+"742252": {
+"keywords": [
+741525
+],
+"tags": [
+[
+"on_play",
+"Bond"
+],
+[
+"tribal",
+"Bond"
+]
+]
+},
+"742279": {
+"keywords": [
+741554
+],
+"tags": [
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
+]
+]
+},
+"742292": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742297": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742305": {
+"keywords": [
+741529
+],
+"tags": [
+[
+"death_trigger",
+"Dying Wish"
+]
+]
+},
+"742319": {
+"keywords": [
+741554
+],
+"tags": [
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
+]
+]
+},
+"742321": {
+"keywords": [
+741524
+],
+"tags": [
+[
+"on_spell",
+"Blood Surge"
+]
+]
+},
+"742325": {
+"keywords": [
+741542
+],
+"tags": [
+[
+"death_trigger",
+"Rebirth"
+],
+[
+"summon",
+"Rebirth"
+],
+[
+"revive",
+"Rebirth"
+],
+[
+"delayed",
+"Rebirth"
+]
+]
+},
+"742332": {
+"keywords": [
+741524
+],
+"tags": [
+[
+"on_spell",
+"Blood Surge"
+]
+]
+},
+"742339": {
+"keywords": [
+741554
+],
+"tags": [
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
+]
+]
+},
+"742348": {
+"keywords": [
+741524
+],
+"tags": [
+[
+"on_spell",
+"Blood Surge"
+]
+]
+},
+"742349": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742353": {
+"keywords": [
+741539
+],
+"tags": [
+[
+"on_play",
+"Opening Gambit"
+]
+]
+},
+"742355": {
+"keywords": [
+741554
+],
+"tags": [
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
+]
+]
+},
+"795371": {
+"keywords": [
+741545
+],
+"tags": [
+[
+"cant_attack",
+"Structure"
+]
+]
+}
+}

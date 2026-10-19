@@ -44,7 +44,7 @@ def keys():
     for g in GAMES:
         f = os.path.join(KEY, g, 'key.json')
         if os.path.exists(f):
-            out[g] = {int(i): K.narrow({k for k, _ in v['tags']}) for i, v in json.load(open(f)).items()}
+            out[g] = {int(i): K.narrow({k for k, _ in v['tags']}) for i, v in K.load(g).items()}
     return out
 
 def right(concept, kset):

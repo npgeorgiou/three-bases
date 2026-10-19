@@ -1,0 +1,897 @@
+{
+"759872": {
+"keywords": [
+759796
+],
+"tags": [
+[
+"disable",
+"stun"
+]
+]
+},
+"759899": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"759935": {
+"keywords": [
+759796
+],
+"tags": [
+[
+"disable",
+"stun"
+]
+]
+},
+"759939": {
+"keywords": [
+759796
+],
+"tags": [
+[
+"disable",
+"stun"
+]
+]
+},
+"759942": {
+"keywords": [
+759796
+],
+"tags": [
+[
+"disable",
+"stun"
+]
+]
+},
+"759947": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"759948": {
+"keywords": [
+759796
+],
+"tags": [
+[
+"disable",
+"stun"
+]
+]
+},
+"759949": {
+"keywords": [
+759764,
+759765,
+759796
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+],
+[
+"damage_over_time",
+"blight"
+],
+[
+"disable",
+"stun"
+]
+]
+},
+"759951": {
+"keywords": [
+759765
+],
+"tags": [
+[
+"damage_over_time",
+"blight"
+]
+]
+},
+"759961": {
+"keywords": [
+759796
+],
+"tags": [
+[
+"disable",
+"stun"
+]
+]
+},
+"759962": {
+"keywords": [
+759765
+],
+"tags": [
+[
+"damage_over_time",
+"blight"
+]
+]
+},
+"759966": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"759971": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"759975": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"759977": {
+"keywords": [
+759765
+],
+"tags": [
+[
+"damage_over_time",
+"blight"
+]
+]
+},
+"759979": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"759982": {
+"keywords": [
+759765
+],
+"tags": [
+[
+"damage_over_time",
+"blight"
+]
+]
+},
+"759987": {
+"keywords": [
+759796
+],
+"tags": [
+[
+"disable",
+"stun"
+]
+]
+},
+"759989": {
+"keywords": [
+759765
+],
+"tags": [
+[
+"damage_over_time",
+"blight"
+]
+]
+},
+"759993": {
+"keywords": [
+759796
+],
+"tags": [
+[
+"disable",
+"stun"
+]
+]
+},
+"759994": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"760000": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"760001": {
+"keywords": [
+759765,
+759796
+],
+"tags": [
+[
+"damage_over_time",
+"blight"
+],
+[
+"disable",
+"stun"
+]
+]
+},
+"760002": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"760003": {
+"keywords": [
+759764,
+759765
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+],
+[
+"damage_over_time",
+"blight"
+]
+]
+},
+"760005": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"760006": {
+"keywords": [
+759764
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+]
+]
+},
+"760016": {
+"keywords": [
+759765,
+759796
+],
+"tags": [
+[
+"damage_over_time",
+"blight"
+],
+[
+"disable",
+"stun"
+]
+]
+},
+"760019": {
+"keywords": [
+759796
+],
+"tags": [
+[
+"disable",
+"stun"
+]
+]
+},
+"760020": {
+"keywords": [
+759764,
+759796
+],
+"tags": [
+[
+"damage_over_time",
+"bleed"
+],
+[
+"disable",
+"stun"
+]
+]
+},
+"760023": {
+"keywords": [
+759796
+],
+"tags": [
+[
+"disable",
+"stun"
+]
+]
+},
+"760025": {
+"keywords": [
+759765,
+759796
+],
+"tags": [
+[
+"damage_over_time",
+"blight"
+],
+[
+"disable",
+"stun"
+]
+]
+},
+"760027": {
+"keywords": [
+759765
+],
+"tags": [
+[
+"damage_over_time",
+"blight"
+]
+]
+},
+"760696": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760697": {
+"keywords": [
+759767
+],
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760703": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760704": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760705": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760709": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760711": {
+"keywords": [
+759767
+],
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760714": {
+"keywords": [
+759767
+],
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760719": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760723": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760724": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760728": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760730": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760731": {
+"keywords": [
+759767
+],
+"tags": [
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760732": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760733": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760740": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760752": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760753": {
+"keywords": [
+759766,
+759767
+],
+"tags": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"rest_phase",
+"Camping skill"
+],
+[
+"activated",
+"Camping skill"
+]
+]
+},
+"760759": {
+"keywords": [
+759795
+],
+"tags": [
+[
+"stress_morale",
+"Stress"
+]
+]
+},
+"760780": {
+"keywords": [
+759788
+],
+"tags": [
+[
+"traits_quirks",
+"Quirk"
+]
+]
+},
+"760786": {
+"keywords": [
+759788
+],
+"tags": [
+[
+"traits_quirks",
+"Quirk"
+]
+]
+},
+"760791": {
+"keywords": [
+759788
+],
+"tags": [
+[
+"traits_quirks",
+"Quirk"
+]
+]
+},
+"760794": {
+"keywords": [
+759788
+],
+"tags": [
+[
+"traits_quirks",
+"Quirk"
+]
+]
+},
+"760797": {
+"keywords": [
+759788
+],
+"tags": [
+[
+"traits_quirks",
+"Quirk"
+]
+]
+},
+"760817": {
+"keywords": [
+759788
+],
+"tags": [
+[
+"traits_quirks",
+"Quirk"
+]
+]
+}
+}

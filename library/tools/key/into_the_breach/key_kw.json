@@ -1,0 +1,829 @@
+{
+"760861": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"760862": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"760864": {
+"keywords": [
+760831
+],
+"tags": [
+[
+"damage_reduction",
+"Natural Armor"
+]
+]
+},
+"760883": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"760900": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"760920": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"760925": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"760927": {
+"keywords": [
+760831
+],
+"tags": [
+[
+"damage_reduction",
+"Natural Armor"
+]
+]
+},
+"760931": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"760933": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761013": {
+"keywords": [
+760829,
+760852
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"aura",
+"Invigorating Spores"
+]
+]
+},
+"761015": {
+"keywords": [
+760829,
+760849
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"aura",
+"Hardened Carapace"
+],
+[
+"damage_reduction",
+"Hardened Carapace"
+]
+]
+},
+"761017": {
+"keywords": [
+760829,
+760855
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"regeneration",
+"Regeneration"
+]
+]
+},
+"761024": {
+"keywords": [
+760832,
+760860
+],
+"tags": [
+[
+"immunity",
+"Smoke Immunity"
+],
+[
+"immunity",
+"Mine Immunity"
+]
+]
+},
+"761025": {
+"keywords": [
+760832,
+760860
+],
+"tags": [
+[
+"immunity",
+"Smoke Immunity"
+],
+[
+"immunity",
+"Mine Immunity"
+]
+]
+},
+"761026": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761030": {
+"keywords": [
+760853,
+760858
+],
+"tags": [
+[
+"movement",
+"Massive"
+],
+[
+"summon",
+"Spawner"
+],
+[
+"death_trigger",
+"Spawner"
+]
+]
+},
+"761031": {
+"keywords": [
+760853,
+760858
+],
+"tags": [
+[
+"movement",
+"Massive"
+],
+[
+"summon",
+"Spawner"
+],
+[
+"death_trigger",
+"Spawner"
+]
+]
+},
+"761032": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761035": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761037": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761039": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761047": {
+"keywords": [
+760829,
+760834
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"debuff",
+"A.C.I.D."
+],
+[
+"silence",
+"A.C.I.D."
+]
+]
+},
+"761048": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761049": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761050": {
+"keywords": [
+760829,
+760848
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
+]
+]
+},
+"761051": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761052": {
+"keywords": [
+760829,
+760854
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"aura",
+"Overpowered"
+],
+[
+"stat_gain",
+"Overpowered"
+],
+[
+"regeneration",
+"Overpowered"
+],
+[
+"death_trigger",
+"Overpowered"
+]
+]
+},
+"761055": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761056": {
+"keywords": [
+760832,
+760842
+],
+"tags": [
+[
+"immunity",
+"Smoke Immunity"
+],
+[
+"attack_lock",
+"Smoke"
+]
+]
+},
+"761059": {
+"keywords": [
+760847
+],
+"tags": [
+[
+"stealth",
+"Burrower"
+],
+[
+"on_damaged",
+"Burrower"
+]
+]
+},
+"761060": {
+"keywords": [
+760847
+],
+"tags": [
+[
+"stealth",
+"Burrower"
+],
+[
+"on_damaged",
+"Burrower"
+]
+]
+},
+"761069": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761080": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761082": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761083": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761084": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761087": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761088": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761095": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761096": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761097": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761098": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761101": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761105": {
+"keywords": [
+760829
+],
+"tags": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+]
+},
+"761106": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761107": {
+"keywords": [
+760831,
+760853
+],
+"tags": [
+[
+"damage_reduction",
+"Natural Armor"
+],
+[
+"movement",
+"Massive"
+]
+]
+},
+"761108": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761109": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761113": {
+"keywords": [
+760853
+],
+"tags": [
+[
+"movement",
+"Massive"
+]
+]
+},
+"761114": {
+"keywords": [
+760848
+],
+"tags": [
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
+]
+]
+},
+"761115": {
+"keywords": [
+760848
+],
+"tags": [
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
+]
+]
+},
+"761116": {
+"keywords": [
+760848
+],
+"tags": [
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
+]
+]
+}
+}

@@ -22,19 +22,24 @@
   "wh_underworlds"
  ],
  "kw_links": [
-  "inscryption",
-  "duelyst",
-  "sts1",
   "darkest_dungeon",
   "dnd5e",
-  "sts2",
+  "duelyst",
   "gwent",
+  "hearthstone",
   "hs_battlegrounds",
-  "wh_killteam",
-  "wh_underworlds",
-  "wh_aos_4th",
+  "inscryption",
+  "into_the_breach",
+  "mtg",
+  "runeterra",
   "shadowverse",
-  "mtg"
+  "sts1",
+  "sts2",
+  "wh_40k_10e",
+  "wh_aos_4th",
+  "wh_bloodbowl3",
+  "wh_killteam",
+  "wh_underworlds"
  ],
- "_note": "final comparison 19 Oct 2026: kw_links is left out of games it made worse on the answer key (into_the_breach, wh_bloodbowl3, faeria, marvel_snap, runeterra, wh_40k_10e, hearthstone)"
+ "_note": "final comparison 19 Oct 2026, re-run with the keyword credit (KEY_BUG.md): kw_links is on where it lowers wrong+missed per 100 key entries (Claude's rule for mixed results), off for faeria, marvel_snap"
 }

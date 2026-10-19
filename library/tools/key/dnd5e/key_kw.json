@@ -1,0 +1,96 @@
+{
+"761207": {
+"keywords": [
+761164
+],
+"tags": [
+[
+"attack_lock",
+"Charmed"
+],
+[
+"targeting_rules",
+"Charmed"
+],
+[
+"advantage",
+"Charmed"
+]
+]
+},
+"761656": {
+"keywords": [
+761164
+],
+"tags": [
+[
+"attack_lock",
+"Charmed"
+],
+[
+"targeting_rules",
+"Charmed"
+],
+[
+"advantage",
+"Charmed"
+]
+]
+},
+"761903": {
+"keywords": [
+761164
+],
+"tags": [
+[
+"attack_lock",
+"Charmed"
+],
+[
+"targeting_rules",
+"Charmed"
+],
+[
+"advantage",
+"Charmed"
+]
+]
+},
+"762521": {
+"keywords": [
+761193
+],
+"tags": [
+[
+"stat_loss",
+"Slow"
+],
+[
+"temporary_effect",
+"Slow"
+]
+]
+},
+"762637": {
+"keywords": [
+761181
+],
+"tags": [
+[
+"multi_attack",
+"light"
+]
+]
+},
+"762708": {
+"keywords": [
+761191
+],
+"tags": [
+[
+"forced_movement",
+"push"
+]
+]
+}
+}

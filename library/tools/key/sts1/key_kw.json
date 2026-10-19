@@ -1,0 +1,554 @@
+{
+"757545": {
+"keywords": [
+757499,
+757524
+],
+"tags": [
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
+],
+[
+"play_restriction",
+"Unplayable"
+]
+]
+},
+"757581": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757584": {
+"keywords": [
+757499
+],
+"tags": [
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
+]
+]
+},
+"757590": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757592": {
+"keywords": [
+757501,
+757515
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+],
+[
+"retain",
+"Retain"
+]
+]
+},
+"757598": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757608": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757615": {
+"keywords": [
+757524
+],
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+]
+]
+},
+"757625": {
+"keywords": [
+757524
+],
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+]
+]
+},
+"757667": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"exhaust"
+]
+]
+},
+"757673": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757710": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757723": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757726": {
+"keywords": [
+757517
+],
+"tags": [
+[
+"selection",
+"Scry"
+],
+[
+"deck_position",
+"Scry"
+]
+]
+},
+"757732": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757736": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757749": {
+"keywords": [
+757506
+],
+"tags": [
+[
+"combat_start",
+"Innate"
+]
+]
+},
+"757755": {
+"keywords": [
+757524
+],
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+]
+]
+},
+"757760": {
+"keywords": [
+757524
+],
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+]
+]
+},
+"757763": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757776": {
+"keywords": [
+757501,
+757506
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+],
+[
+"combat_start",
+"Innate"
+]
+]
+},
+"757779": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757788": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757794": {
+"keywords": [
+757524
+],
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+]
+]
+},
+"757799": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757806": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757809": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757810": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757812": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757865": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757867": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757869": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757874": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757880": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"757882": {
+"keywords": [
+757515
+],
+"tags": [
+[
+"retain",
+"Retain"
+]
+]
+},
+"757889": {
+"keywords": [
+757506,
+757524
+],
+"tags": [
+[
+"combat_start",
+"Innate"
+],
+[
+"play_restriction",
+"Unplayable"
+]
+]
+},
+"757985": {
+"keywords": [
+757494
+],
+"tags": [
+[
+"junk_cards",
+"Curse"
+]
+]
+},
+"758357": {
+"keywords": [
+757525
+],
+"tags": [
+[
+"upgrade",
+"Upgrade"
+]
+]
+},
+"758369": {
+"keywords": [
+757523
+],
+"tags": [
+[
+"transform",
+"Transform"
+],
+[
+"random_effect",
+"Transform"
+]
+]
+},
+"813518": {
+"keywords": [
+757506
+],
+"tags": [
+[
+"combat_start",
+"Innate"
+]
+]
+},
+"813523": {
+"keywords": [
+757492
+],
+"tags": [
+[
+"slots_queue",
+"Channel"
+]
+]
+},
+"813535": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"813558": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"813559": {
+"keywords": [
+757501
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+]
+]
+},
+"813563": {
+"keywords": [
+757501,
+757515
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+],
+[
+"retain",
+"Retain"
+]
+]
+},
+"813566": {
+"keywords": [
+757501,
+757515
+],
+"tags": [
+[
+"exhaust",
+"Exhaust"
+],
+[
+"retain",
+"Retain"
+]
+]
+}
+}

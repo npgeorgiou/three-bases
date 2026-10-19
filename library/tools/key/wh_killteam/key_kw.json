@@ -1,0 +1,3956 @@
+{
+"789248": {
+"keywords": [
+788692
+],
+"tags": [
+[
+"advantage",
+"Balanced"
+]
+]
+},
+"789271": {
+"keywords": [
+788699
+],
+"tags": [
+[
+"play_restriction",
+"Heavy"
+]
+]
+},
+"789311": {
+"keywords": [
+788694
+],
+"tags": [
+[
+"debuff",
+"Brutal"
+]
+]
+},
+"790040": {
+"keywords": [
+788690,
+788696,
+788698
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+]
+]
+},
+"790043": {
+"keywords": [
+788690,
+788693,
+788696,
+788697,
+788698,
+788704
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"damage",
+"MWx"
+]
+]
+},
+"790046": {
+"keywords": [
+788702,
+788703
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"exhaust",
+"Limited"
+]
+]
+},
+"790049": {
+"keywords": [
+788692,
+788698
+],
+"tags": [
+[
+"advantage",
+"Balanced"
+],
+[
+"targeting_rules",
+"Rng x"
+]
+]
+},
+"790052": {
+"keywords": [
+788698,
+788702,
+788712
+],
+"tags": [
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+]
+]
+},
+"790053": {
+"keywords": [
+788708,
+788709
+],
+"tags": [
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
+]
+]
+},
+"790055": {
+"keywords": [
+788690,
+788693,
+788698,
+788702,
+788712
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+]
+]
+},
+"790084": {
+"keywords": [
+788690
+],
+"tags": [
+[
+"piercing",
+"APx"
+]
+]
+},
+"790086": {
+"keywords": [
+788690,
+788693,
+788709
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Rending"
+]
+]
+},
+"790088": {
+"keywords": [
+788702,
+788708
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"advantage",
+"Relentless"
+]
+]
+},
+"790094": {
+"keywords": [
+788690,
+788693,
+788695,
+788699,
+788706,
+788709,
+788714
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"play_restriction",
+"HEAVY"
+],
+[
+"piercing",
+"Px"
+],
+[
+"buff",
+"Rending"
+],
+[
+"distribute",
+"Fusillade"
+],
+[
+"multi_target_attack",
+"Fusillade"
+]
+]
+},
+"790107": {
+"keywords": [
+788690,
+788697,
+788698,
+788704,
+788708
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"damage",
+"MWx"
+],
+[
+"advantage",
+"Relentless"
+]
+]
+},
+"790113": {
+"keywords": [
+788708,
+788709
+],
+"tags": [
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
+]
+]
+},
+"790115": {
+"keywords": [
+788698,
+788709,
+788711
+],
+"tags": [
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"aoe_damage",
+"Splash x"
+]
+]
+},
+"790120": {
+"keywords": [
+788670,
+788709,
+788712
+],
+"tags": [
+[
+"targeting_rules",
+"Ruthless Efficiency"
+],
+[
+"piercing",
+"Ruthless Efficiency"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stat_loss",
+"Stun"
+]
+]
+},
+"790121": {
+"keywords": [
+788670
+],
+"tags": [
+[
+"targeting_rules",
+"Ruthless Efficiency"
+],
+[
+"piercing",
+"Ruthless Efficiency"
+]
+]
+},
+"790124": {
+"keywords": [
+788670
+],
+"tags": [
+[
+"targeting_rules",
+"Ruthless Efficiency"
+],
+[
+"piercing",
+"Ruthless Efficiency"
+]
+]
+},
+"790133": {
+"keywords": [
+788671,
+788692,
+788702
+],
+"tags": [
+[
+"protection",
+"Rogue"
+],
+[
+"modal_choice",
+"Rogue"
+],
+[
+"immunity",
+"Rogue"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"buff",
+"Lethal x"
+]
+]
+},
+"790140": {
+"keywords": [
+788671
+],
+"tags": [
+[
+"protection",
+"Rogue"
+],
+[
+"modal_choice",
+"Rogue"
+],
+[
+"immunity",
+"Rogue"
+]
+]
+},
+"790144": {
+"keywords": [
+788690,
+788692,
+788696,
+788698,
+788709
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Rending"
+]
+]
+},
+"790149": {
+"keywords": [
+788698,
+788702,
+788712
+],
+"tags": [
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+]
+]
+},
+"790151": {
+"keywords": [
+788696,
+788712
+],
+"tags": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"stat_loss",
+"Stun"
+]
+]
+},
+"790157": {
+"keywords": [
+788698,
+788714
+],
+"tags": [
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"distribute",
+"Fusillade"
+],
+[
+"multi_target_attack",
+"Fusillade"
+]
+]
+},
+"790158": {
+"keywords": [
+788702
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+]
+]
+},
+"790166": {
+"keywords": [
+788676,
+788690,
+788697,
+788698,
+788703,
+788709,
+788711
+],
+"tags": [
+[
+"merge_attach",
+"Kombi"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"buff",
+"Rending"
+],
+[
+"aoe_damage",
+"Splash x"
+]
+]
+},
+"790175": {
+"keywords": [
+788708
+],
+"tags": [
+[
+"advantage",
+"Relentless"
+]
+]
+},
+"790176": {
+"keywords": [
+788690,
+788693,
+788709
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Rending"
+]
+]
+},
+"790178": {
+"keywords": [
+788700,
+788705,
+788710
+],
+"tags": [
+[
+"piercing",
+"Indirect"
+],
+[
+"piercing",
+"No Cover"
+],
+[
+"stealth",
+"Silent"
+]
+]
+},
+"790181": {
+"keywords": [
+788702
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+]
+]
+},
+"790182": {
+"keywords": [
+788690,
+788693,
+788698,
+788700,
+788703
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast X"
+],
+[
+"piercing",
+"Blast X"
+],
+[
+"play_restriction",
+"Blast X"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"piercing",
+"Indirect"
+],
+[
+"exhaust",
+"Limited"
+]
+]
+},
+"790195": {
+"keywords": [
+788698,
+788703,
+788709,
+788710
+],
+"tags": [
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stealth",
+"Silent"
+]
+]
+},
+"790201": {
+"keywords": [
+788683,
+788690
+],
+"tags": [
+[
+"regeneration",
+"Living Metal"
+],
+[
+"turn_start",
+"Living Metal"
+],
+[
+"piercing",
+"APx"
+]
+]
+},
+"790205": {
+"keywords": [
+788684
+],
+"tags": [
+[
+"condition_life",
+"Synapse"
+],
+[
+"adjacency",
+"Synapse"
+],
+[
+"immunity",
+"Synapse"
+]
+]
+},
+"790220": {
+"keywords": [
+788685,
+788686
+],
+"tags": [
+[
+"play_restriction",
+"Artificial Intelligence"
+],
+[
+"stat_loss",
+"Artificial Intelligence"
+],
+[
+"debuff",
+"Artificial Intelligence"
+],
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+]
+]
+},
+"790223": {
+"keywords": [
+788685,
+788686,
+788699
+],
+"tags": [
+[
+"play_restriction",
+"Artificial Intelligence"
+],
+[
+"stat_loss",
+"Artificial Intelligence"
+],
+[
+"debuff",
+"Artificial Intelligence"
+],
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+],
+[
+"play_restriction",
+"Heavy"
+]
+]
+},
+"790231": {
+"keywords": [
+788699,
+788704,
+788710
+],
+"tags": [
+[
+"play_restriction",
+"Heavy"
+],
+[
+"damage",
+"MWx"
+],
+[
+"stealth",
+"Silent"
+]
+]
+},
+"790235": {
+"keywords": [
+788687
+],
+"tags": [
+[
+"immunity",
+"Void Armour"
+],
+[
+"protection",
+"Void Armour"
+]
+]
+},
+"790249": {
+"keywords": [
+788688
+],
+"tags": [
+[
+"team_play",
+"Group Activation"
+]
+]
+},
+"790270": {
+"keywords": [
+788690,
+788698,
+788704
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"damage",
+"MWx"
+]
+]
+},
+"790288": {
+"keywords": [
+788709
+],
+"tags": [
+[
+"buff",
+"Rending"
+]
+]
+},
+"790301": {
+"keywords": [
+788690,
+788694,
+788696,
+788698,
+788702,
+788709,
+788712
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stat_loss",
+"Stun"
+]
+]
+},
+"790316": {
+"keywords": [
+788702
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+]
+]
+},
+"790320": {
+"keywords": [
+788704,
+788706,
+788710,
+788712
+],
+"tags": [
+[
+"damage",
+"MWx"
+],
+[
+"piercing",
+"Px"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"stat_loss",
+"Stun"
+]
+]
+},
+"790322": {
+"keywords": [
+788710
+],
+"tags": [
+[
+"stealth",
+"Silent"
+]
+]
+},
+"790329": {
+"keywords": [
+788690,
+788702,
+788704,
+788710
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"MWx"
+],
+[
+"stealth",
+"Silent"
+]
+]
+},
+"790331": {
+"keywords": [
+788685,
+788686,
+788708
+],
+"tags": [
+[
+"play_restriction",
+"Artificial Intelligence"
+],
+[
+"stat_loss",
+"Artificial Intelligence"
+],
+[
+"debuff",
+"Artificial Intelligence"
+],
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+],
+[
+"advantage",
+"Relentless"
+]
+]
+},
+"790361": {
+"keywords": [
+788690,
+788697,
+788698
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+]
+]
+},
+"790377": {
+"keywords": [
+788690,
+788696,
+788698,
+788702
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+]
+]
+},
+"790382": {
+"keywords": [
+788690,
+788710
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"stealth",
+"Silent"
+]
+]
+},
+"790387": {
+"keywords": [
+788712
+],
+"tags": [
+[
+"stat_loss",
+"Stun"
+]
+]
+},
+"790391": {
+"keywords": [
+788690,
+788691,
+788693,
+788697,
+788698,
+788700,
+788702,
+788704,
+788705,
+788708,
+788709,
+788712
+],
+"tags": [
+[
+"piercing",
+"APx"
+],
+[
+"terrain",
+"Barrage"
+],
+[
+"piercing",
+"Barrage"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"piercing",
+"Indirect"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"MWx"
+],
+[
+"piercing",
+"No Cover"
+],
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stat_loss",
+"Stun"
+]
+]
+},
+"790394": {
+"keywords": [
+788709
+],
+"tags": [
+[
+"buff",
+"Rending"
+]
+]
+},
+"790409": {
+"keywords": [
+788693,
+788699,
+788710,
+788755,
+788756,
+788757,
+788758,
+788763
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"piercing",
+"Seek"
+]
+]
+},
+"790419": {
+"keywords": [
+788693,
+788696,
+788697,
+788755,
+788756,
+788757,
+788758,
+788760
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790431": {
+"keywords": [
+788692,
+788757
+],
+"tags": [
+[
+"advantage",
+"Balanced"
+],
+[
+"targeting_rules",
+"Range x"
+]
+]
+},
+"790433": {
+"keywords": [
+788688,
+788709,
+788763
+],
+"tags": [
+[
+"team_play",
+"Group Activation"
+],
+[
+"buff",
+"Rending"
+],
+[
+"piercing",
+"Seek"
+]
+]
+},
+"790434": {
+"keywords": [
+788702,
+788757,
+788760,
+788765
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790435": {
+"keywords": [
+788708,
+788709
+],
+"tags": [
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
+]
+]
+},
+"790439": {
+"keywords": [
+788702,
+788712,
+788756,
+788757,
+788760
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790440": {
+"keywords": [
+788693,
+788756
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"piercing",
+"Piercing x"
+]
+]
+},
+"790441": {
+"keywords": [
+788693,
+788712,
+788756,
+788763,
+788764,
+788765
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"piercing",
+"Seek"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790447": {
+"keywords": [
+788694,
+788702,
+788760
+],
+"tags": [
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790451": {
+"keywords": [
+788699,
+788710,
+788755
+],
+"tags": [
+[
+"play_restriction",
+"Heavy"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+]
+]
+},
+"790454": {
+"keywords": [
+788695,
+788702,
+788760
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790455": {
+"keywords": [
+788709,
+788710,
+788758,
+788763
+],
+"tags": [
+[
+"buff",
+"Rending"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"piercing",
+"Seek"
+]
+]
+},
+"790456": {
+"keywords": [
+788695,
+788702,
+788710,
+788757,
+788760
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790460": {
+"keywords": [
+788710,
+788712,
+788755,
+788764,
+788765
+],
+"tags": [
+[
+"stealth",
+"Silent"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790472": {
+"keywords": [
+788688
+],
+"tags": [
+[
+"team_play",
+"Group Activation"
+]
+]
+},
+"790475": {
+"keywords": [
+788694,
+788702,
+788760
+],
+"tags": [
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790479": {
+"keywords": [
+788702,
+788760
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790484": {
+"keywords": [
+788702,
+788756,
+788757,
+788760,
+788763
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"piercing",
+"Seek"
+]
+]
+},
+"790489": {
+"keywords": [
+788693,
+788702,
+788710,
+788756,
+788760
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790490": {
+"keywords": [
+788702,
+788709,
+788760
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790491": {
+"keywords": [
+788695,
+788702,
+788760
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790497": {
+"keywords": [
+788763
+],
+"tags": [
+[
+"piercing",
+"Seek"
+]
+]
+},
+"790501": {
+"keywords": [
+788673,
+788695
+],
+"tags": [
+[
+"cheat_death",
+"Frenzy"
+],
+[
+"stat_loss",
+"Frenzy"
+],
+[
+"advantage",
+"Ceaseless"
+]
+]
+},
+"790504": {
+"keywords": [
+788673,
+788702,
+788760
+],
+"tags": [
+[
+"cheat_death",
+"Frenzy"
+],
+[
+"stat_loss",
+"Frenzy"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790508": {
+"keywords": [
+788673,
+788694
+],
+"tags": [
+[
+"cheat_death",
+"Frenzy"
+],
+[
+"stat_loss",
+"Frenzy"
+],
+[
+"debuff",
+"Brutal"
+]
+]
+},
+"790513": {
+"keywords": [
+788688,
+788744
+],
+"tags": [
+[
+"team_play",
+"Group Activation"
+],
+[
+"play_restriction",
+"MUTOID VERMIN"
+],
+[
+"cost_reduction",
+"MUTOID VERMIN"
+]
+]
+},
+"790515": {
+"keywords": [
+788744,
+788755,
+788756,
+788757
+],
+"tags": [
+[
+"play_restriction",
+"Mutoid Vermin"
+],
+[
+"cost_reduction",
+"Mutoid Vermin"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+]
+]
+},
+"790520": {
+"keywords": [
+788695,
+788709,
+788755,
+788757
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Rending"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+]
+]
+},
+"790526": {
+"keywords": [
+788693,
+788699,
+788703,
+788756,
+788757,
+788758,
+788761
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"exhaust",
+"limited"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"exhaust",
+"Limited x"
+]
+]
+},
+"790530": {
+"keywords": [
+788692
+],
+"tags": [
+[
+"advantage",
+"Balanced"
+]
+]
+},
+"790536": {
+"keywords": [
+788695,
+788702,
+788757,
+788760
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790537": {
+"keywords": [
+788693,
+788695,
+788699,
+788756
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"piercing",
+"Piercing x"
+]
+]
+},
+"790540": {
+"keywords": [
+788703,
+788709,
+788710,
+788757,
+788761
+],
+"tags": [
+[
+"exhaust",
+"Limited"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"exhaust",
+"Limited x"
+]
+]
+},
+"790547": {
+"keywords": [
+788696,
+788697,
+788699,
+788709,
+788755,
+788756,
+788757,
+788760
+],
+"tags": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"buff",
+"Rending"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790549": {
+"keywords": [
+788763
+],
+"tags": [
+[
+"piercing",
+"Seek"
+]
+]
+},
+"790551": {
+"keywords": [
+788763
+],
+"tags": [
+[
+"piercing",
+"Seek"
+]
+]
+},
+"790558": {
+"keywords": [
+788692,
+788709
+],
+"tags": [
+[
+"advantage",
+"Balanced"
+],
+[
+"buff",
+"Rending"
+]
+]
+},
+"790560": {
+"keywords": [
+788757,
+788763
+],
+"tags": [
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Seek"
+]
+]
+},
+"790562": {
+"keywords": [
+788697,
+788757,
+788758
+],
+"tags": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+]
+]
+},
+"790578": {
+"keywords": [
+788699,
+788710,
+788755
+],
+"tags": [
+[
+"play_restriction",
+"Heavy"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+]
+]
+},
+"790616": {
+"keywords": [
+788694,
+788765
+],
+"tags": [
+[
+"debuff",
+"Brutal"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790617": {
+"keywords": [
+788693,
+788703,
+788761
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"exhaust",
+"Limited x"
+]
+]
+},
+"790620": {
+"keywords": [
+788697,
+788757,
+788758,
+788763
+],
+"tags": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"piercing",
+"Seek"
+]
+]
+},
+"790627": {
+"keywords": [
+788702,
+788760
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790633": {
+"keywords": [
+788715
+],
+"tags": [
+[
+"free_play",
+"Favoured of the Dark Gods"
+],
+[
+"cooldowns",
+"Favoured of the Dark Gods"
+]
+]
+},
+"790636": {
+"keywords": [
+788702,
+788760,
+788765
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790643": {
+"keywords": [
+788692,
+788694,
+788762,
+788764,
+788765
+],
+"tags": [
+[
+"advantage",
+"Balanced"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Punishing"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790649": {
+"keywords": [
+788695,
+788702,
+788709,
+788760
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790651": {
+"keywords": [
+788694,
+788696,
+788702,
+788756,
+788757,
+788760,
+788765
+],
+"tags": [
+[
+"debuff",
+"Brutal"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790653": {
+"keywords": [
+788693,
+788697,
+788699,
+788756
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"piercing",
+"Piercing x"
+]
+]
+},
+"790655": {
+"keywords": [
+788695,
+788702,
+788760
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790663": {
+"keywords": [
+788756,
+788757
+],
+"tags": [
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+]
+]
+},
+"790669": {
+"keywords": [
+788692,
+788702,
+788760
+],
+"tags": [
+[
+"advantage",
+"Balanced"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790670": {
+"keywords": [
+788695,
+788697,
+788755,
+788756,
+788757,
+788758
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+]
+]
+},
+"790672": {
+"keywords": [
+788702,
+788760
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790673": {
+"keywords": [
+788756,
+788757
+],
+"tags": [
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+]
+]
+},
+"790674": {
+"keywords": [
+788694,
+788697,
+788756,
+788762
+],
+"tags": [
+[
+"debuff",
+"Brutal"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"buff",
+"Punishing"
+]
+]
+},
+"790676": {
+"keywords": [
+788702,
+788709,
+788755,
+788757,
+788760,
+788764
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"buff",
+"Severe"
+]
+]
+},
+"790678": {
+"keywords": [
+788683
+],
+"tags": [
+[
+"regeneration",
+"Living Metal"
+],
+[
+"turn_start",
+"Living Metal"
+]
+]
+},
+"790689": {
+"keywords": [
+788695
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+]
+]
+},
+"790690": {
+"keywords": [
+788702,
+788712,
+788757,
+788760,
+788765
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790692": {
+"keywords": [
+788694,
+788695
+],
+"tags": [
+[
+"debuff",
+"Brutal"
+],
+[
+"advantage",
+"Ceaseless"
+]
+]
+},
+"790693": {
+"keywords": [
+788694,
+788764
+],
+"tags": [
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Severe"
+]
+]
+},
+"790695": {
+"keywords": [
+788697,
+788757,
+788758
+],
+"tags": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+]
+]
+},
+"790701": {
+"keywords": [
+788696,
+788702,
+788755,
+788756,
+788760
+],
+"tags": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790714": {
+"keywords": [
+788696,
+788702,
+788756,
+788757,
+788760,
+788764,
+788782,
+788783
+],
+"tags": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_over_time",
+"Poison"
+],
+[
+"stat_gain",
+"Toxic"
+]
+]
+},
+"790715": {
+"keywords": [
+788697,
+788712,
+788757,
+788758,
+788764,
+788765,
+788782
+],
+"tags": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+],
+[
+"damage_over_time",
+"Poison"
+]
+]
+},
+"790718": {
+"keywords": [
+788757
+],
+"tags": [
+[
+"targeting_rules",
+"Range x"
+]
+]
+},
+"790720": {
+"keywords": [
+788697,
+788757,
+788758,
+788764,
+788782
+],
+"tags": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_over_time",
+"Poison"
+]
+]
+},
+"790723": {
+"keywords": [
+788693,
+788765
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790735": {
+"keywords": [
+788693,
+788702,
+788757,
+788760,
+788782
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_over_time",
+"Poison"
+]
+]
+},
+"790738": {
+"keywords": [
+788694,
+788765
+],
+"tags": [
+[
+"debuff",
+"Brutal"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790741": {
+"keywords": [
+788710,
+788757
+],
+"tags": [
+[
+"stealth",
+"Silent"
+],
+[
+"targeting_rules",
+"Range x"
+]
+]
+},
+"790754": {
+"keywords": [
+788696,
+788702,
+788755,
+788756,
+788757,
+788760
+],
+"tags": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790755": {
+"keywords": [
+788693,
+788699,
+788756
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"piercing",
+"Piercing x"
+]
+]
+},
+"790771": {
+"keywords": [
+788695,
+788709,
+788757
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Rending"
+],
+[
+"targeting_rules",
+"Range x"
+]
+]
+},
+"790772": {
+"keywords": [
+788696,
+788702,
+788755,
+788756,
+788757,
+788760
+],
+"tags": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790776": {
+"keywords": [
+788693,
+788755
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+]
+]
+},
+"790780": {
+"keywords": [
+788702,
+788758,
+788760,
+788763
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"piercing",
+"Seek"
+]
+]
+},
+"790785": {
+"keywords": [
+788697,
+788699,
+788709,
+788797
+],
+"tags": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"buff",
+"Rending"
+],
+[
+"immunity",
+"Harlequin's Panoply"
+],
+[
+"zone_of_control",
+"Harlequin's Panoply"
+]
+]
+},
+"790786": {
+"keywords": [
+788693,
+788710,
+788712,
+788757,
+788763,
+788765
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Seek"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790793": {
+"keywords": [
+788694,
+788702,
+788709,
+788760
+],
+"tags": [
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790796": {
+"keywords": [
+788692,
+788757
+],
+"tags": [
+[
+"advantage",
+"Balanced"
+],
+[
+"targeting_rules",
+"Range x"
+]
+]
+},
+"790804": {
+"keywords": [
+788693,
+788697,
+788712,
+788757,
+788758,
+788763,
+788764,
+788765
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"piercing",
+"Seek"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790808": {
+"keywords": [
+788693,
+788703,
+788761
+],
+"tags": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"exhaust",
+"Limited x"
+]
+]
+},
+"790812": {
+"keywords": [
+788688
+],
+"tags": [
+[
+"team_play",
+"Group Activation"
+]
+]
+},
+"790814": {
+"keywords": [
+788692,
+788694,
+788702,
+788760,
+788765
+],
+"tags": [
+[
+"advantage",
+"Balanced"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790815": {
+"keywords": [
+788757,
+788759,
+788904
+],
+"tags": [
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Accurate X"
+],
+[
+"reactions",
+"For the Greater Good"
+]
+]
+},
+"790890": {
+"keywords": [
+788843
+],
+"tags": [
+[
+"random_effect",
+"Combat Drugs"
+],
+[
+"stat_gain",
+"Combat Drugs"
+],
+[
+"start_of_game",
+"Combat Drugs"
+]
+]
+},
+"790909": {
+"keywords": [
+788702,
+788760
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790910": {
+"keywords": [
+788702,
+788755,
+788760
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"buff",
+"Lethal x+"
+]
+]
+},
+"790911": {
+"keywords": [
+788697,
+788702,
+788712,
+788755,
+788757,
+788758,
+788760,
+788764,
+788765
+],
+"tags": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+]
+]
+},
+"790931": {
+"keywords": [
+788861,
+788862,
+788863
+],
+"tags": [
+[
+"movement",
+"Flip Belt"
+],
+[
+"immunity",
+"Flip Belt"
+],
+[
+"saving_throws",
+"Holo-suit"
+],
+[
+"buff",
+"Rising Crescendo"
+]
+]
+},
+"790980": {
+"keywords": [
+788686,
+788904,
+788906
+],
+"tags": [
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+],
+[
+"reactions",
+"For the Greater Good"
+],
+[
+"play_restriction",
+"Support Subroutines"
+]
+]
+},
+"814867": {
+"keywords": [
+788763
+],
+"tags": [
+[
+"piercing",
+"Seek"
+]
+]
+},
+"814882": {
+"keywords": [
+788699
+],
+"tags": [
+[
+"play_restriction",
+"Heavy"
+]
+]
+},
+"816466": {
+"keywords": [
+788698
+],
+"tags": [
+[
+"targeting_rules",
+"Rng x"
+]
+]
+},
+"816472": {
+"keywords": [
+788702
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+]
+]
+},
+"816480": {
+"keywords": [
+788690
+],
+"tags": [
+[
+"piercing",
+"APx"
+]
+]
+},
+"816488": {
+"keywords": [
+788698
+],
+"tags": [
+[
+"targeting_rules",
+"Rng x"
+]
+]
+},
+"816490": {
+"keywords": [
+788695
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+]
+]
+},
+"816491": {
+"keywords": [
+788695
+],
+"tags": [
+[
+"advantage",
+"Ceaseless"
+]
+]
+},
+"816492": {
+"keywords": [
+788692
+],
+"tags": [
+[
+"advantage",
+"Balanced"
+]
+]
+},
+"816495": {
+"keywords": [
+788709
+],
+"tags": [
+[
+"buff",
+"Rending"
+]
+]
+},
+"816496": {
+"keywords": [
+788699
+],
+"tags": [
+[
+"play_restriction",
+"Heavy"
+]
+]
+},
+"816501": {
+"keywords": [
+788697
+],
+"tags": [
+[
+"multi_target_attack",
+"Torrent x"
+]
+]
+},
+"816503": {
+"keywords": [
+788702
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+]
+]
+},
+"816505": {
+"keywords": [
+788698
+],
+"tags": [
+[
+"targeting_rules",
+"Rng x"
+]
+]
+},
+"816507": {
+"keywords": [
+788702
+],
+"tags": [
+[
+"buff",
+"Lethal x"
+]
+]
+},
+"816520": {
+"keywords": [
+788683,
+788690
+],
+"tags": [
+[
+"regeneration",
+"Living Metal"
+],
+[
+"turn_start",
+"Living Metal"
+],
+[
+"piercing",
+"APx"
+]
+]
+},
+"816530": {
+"keywords": [
+788698
+],
+"tags": [
+[
+"targeting_rules",
+"Rng x"
+]
+]
+}
+}

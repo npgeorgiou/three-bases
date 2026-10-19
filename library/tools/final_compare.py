@@ -35,7 +35,7 @@ PREV = [l.rstrip('\n').split('\t') for l in open(os.path.join(OUT, 'revert.tsv')
 done = {(r[1], r[2]) for r in PREV if r[0] == 'undo'}
 restore += [(int(r[1]), r[2], r[3]) for r in PREV if r[0] == 'restore']; undo += [(r[1], r[2]) for r in PREV if r[0] == 'undo']
 for g in K.GAMES:
-    key = json.load(open(os.path.join(HERE, 'key', g, 'key.json'))); ids = [int(i) for i in key]
+    key = K.load(g); ids = [int(i) for i in key]
     live = {i for i, in cn.execute('SELECT id FROM entities WHERE game=?', (g,))}; ids = [i for i in ids if i in live]
     To, Tn = tags(co, ids, True), tags(cn, ids, False)
     wo = wn = mo = mn = lost = 0; added_wrong = collections.Counter()

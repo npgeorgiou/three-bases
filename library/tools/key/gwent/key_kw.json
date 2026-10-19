@@ -1,0 +1,5886 @@
+{
+"756201": {
+"keywords": [
+756150
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+]
+]
+},
+"756228": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756230": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756231": {
+"keywords": [
+756141,
+756142
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"combo_sequence",
+"Initiative"
+]
+]
+},
+"756232": {
+"keywords": [
+756143,
+756145
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"piercing",
+"Drain"
+],
+[
+"stat_gain",
+"Drain"
+]
+]
+},
+"756242": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756244": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756259": {
+"keywords": [
+756159
+],
+"tags": [
+[
+"banish",
+"Doomed"
+]
+]
+},
+"756266": {
+"keywords": [
+756142
+],
+"tags": [
+[
+"combo_sequence",
+"Initiative"
+]
+]
+},
+"756268": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756277": {
+"keywords": [
+756142
+],
+"tags": [
+[
+"combo_sequence",
+"Initiative"
+]
+]
+},
+"756284": {
+"keywords": [
+756166
+],
+"tags": [
+[
+"silence",
+"Lock"
+]
+]
+},
+"756286": {
+"keywords": [
+756143,
+756167,
+756168
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+],
+[
+"stat_condition",
+"Inspired"
+]
+]
+},
+"756291": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756295": {
+"keywords": [
+756143,
+756167
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+]
+},
+"756298": {
+"keywords": [
+756170,
+756173
+],
+"tags": [
+[
+"donate",
+"Disloyal"
+],
+[
+"death_trigger",
+"Deathwish"
+]
+]
+},
+"756307": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756309": {
+"keywords": [
+756143,
+756152,
+756167,
+756176
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+],
+[
+"cooldowns",
+"Resupply"
+],
+[
+"on_ally_play",
+"Resupply"
+]
+]
+},
+"756313": {
+"keywords": [
+756141,
+756143
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756320": {
+"keywords": [
+756143,
+756167
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+]
+},
+"756324": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756330": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756335": {
+"keywords": [
+756173,
+756186
+],
+"tags": [
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
+]
+]
+},
+"756337": {
+"keywords": [
+756141,
+756158
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"banish",
+"Banish"
+]
+]
+},
+"756345": {
+"keywords": [
+756143,
+756151,
+756152
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+]
+},
+"756348": {
+"keywords": [
+756141,
+756181
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"shield",
+"Shield"
+]
+]
+},
+"756349": {
+"keywords": [
+756143,
+756152,
+756189
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"stat_condition",
+"Dominance"
+]
+]
+},
+"756353": {
+"keywords": [
+756149
+],
+"tags": [
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
+]
+]
+},
+"756354": {
+"keywords": [
+756143,
+756150,
+756151,
+756152
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+]
+},
+"756356": {
+"keywords": [
+756141,
+756161
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"immunity",
+"Veil"
+]
+]
+},
+"756360": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756366": {
+"keywords": [
+756150,
+756173
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
+]
+]
+},
+"756367": {
+"keywords": [
+756189
+],
+"tags": [
+[
+"stat_condition",
+"Dominance"
+]
+]
+},
+"756369": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756370": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756377": {
+"keywords": [
+756143,
+756184
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"immunity",
+"Immunity"
+]
+]
+},
+"756379": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756384": {
+"keywords": [
+756143,
+756151
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+]
+]
+},
+"756387": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756393": {
+"keywords": [
+756141,
+756143
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756410": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756414": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756420": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756421": {
+"keywords": [
+756141,
+756195
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"discard",
+"Discard"
+]
+]
+},
+"756422": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756424": {
+"keywords": [
+756143,
+756151
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+]
+]
+},
+"756435": {
+"keywords": [
+756141,
+756143,
+756151,
+756155
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Charge"
+]
+]
+},
+"756443": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756446": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756457": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756458": {
+"keywords": [
+756198
+],
+"tags": [
+[
+"recycle",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
+]
+]
+},
+"756464": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756469": {
+"keywords": [
+756184
+],
+"tags": [
+[
+"immunity",
+"Immunity"
+]
+]
+},
+"756472": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756473": {
+"keywords": [
+756141,
+756150
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+]
+]
+},
+"756480": {
+"keywords": [
+756141,
+756170
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
+]
+]
+},
+"756482": {
+"keywords": [
+756141,
+756170,
+756180
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
+],
+[
+"stat_condition",
+"Grace"
+]
+]
+},
+"756484": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756486": {
+"keywords": [
+756141,
+756143
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756489": {
+"keywords": [
+756143,
+756155
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+]
+]
+},
+"756491": {
+"keywords": [
+756143,
+756151,
+756155
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Charge"
+]
+]
+},
+"756492": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756494": {
+"keywords": [
+756143,
+756200
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
+]
+]
+},
+"756495": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756501": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756509": {
+"keywords": [
+756192
+],
+"tags": [
+[
+"on_kill",
+"Deathblow"
+]
+]
+},
+"756517": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756520": {
+"keywords": [
+756141,
+756196
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
+]
+]
+},
+"756521": {
+"keywords": [
+756143,
+756155,
+756181
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+],
+[
+"shield",
+"Shield"
+]
+]
+},
+"756525": {
+"keywords": [
+756141,
+756197
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Berserk"
+]
+]
+},
+"756527": {
+"keywords": [
+756143,
+756152,
+756175,
+756176
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"adjacency",
+"Crew"
+],
+[
+"tribal",
+"Crew"
+],
+[
+"cooldowns",
+"Resupply"
+],
+[
+"on_ally_play",
+"Resupply"
+]
+]
+},
+"756531": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756532": {
+"keywords": [
+756141,
+756201
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Create"
+],
+[
+"random_effect",
+"Create"
+]
+]
+},
+"756535": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756543": {
+"keywords": [
+756223
+],
+"tags": [
+[
+"delayed",
+"Counter"
+]
+]
+},
+"756545": {
+"keywords": [
+756149
+],
+"tags": [
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
+]
+]
+},
+"756552": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756554": {
+"keywords": [
+756144
+],
+"tags": [
+[
+"rows",
+"Melee"
+]
+]
+},
+"756555": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756556": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756566": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756567": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756568": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756570": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756574": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756575": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756576": {
+"keywords": [
+756143,
+756150
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+]
+]
+},
+"756589": {
+"keywords": [
+756193,
+756194
+],
+"tags": [
+[
+"trap_secret",
+"Ambush"
+],
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
+]
+]
+},
+"756590": {
+"keywords": [
+756141,
+756203
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"targeting_rules",
+"Predator"
+]
+]
+},
+"756591": {
+"keywords": [
+756141,
+756150,
+756190
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"condition_count",
+"Bonded"
+]
+]
+},
+"756595": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756600": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756608": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756611": {
+"keywords": [
+756144
+],
+"tags": [
+[
+"rows",
+"Melee"
+]
+]
+},
+"756615": {
+"keywords": [
+756141,
+756153
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+]
+},
+"756617": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756619": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756639": {
+"keywords": [
+756148
+],
+"tags": [
+[
+"start_of_game",
+"Lineage"
+],
+[
+"tribal",
+"Lineage"
+],
+[
+"stat_gain",
+"Lineage"
+]
+]
+},
+"756646": {
+"keywords": [
+756143,
+756167,
+756192
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+],
+[
+"on_kill",
+"Deathblow"
+]
+]
+},
+"756651": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756656": {
+"keywords": [
+756142,
+756192
+],
+"tags": [
+[
+"combo_sequence",
+"Initiative"
+],
+[
+"on_kill",
+"Deathblow"
+]
+]
+},
+"756663": {
+"keywords": [
+756141,
+756143,
+756191
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+]
+},
+"756664": {
+"keywords": [
+756143,
+756155,
+756157
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+],
+[
+"heal",
+"Heal"
+]
+]
+},
+"756665": {
+"keywords": [
+756193,
+756194
+],
+"tags": [
+[
+"trap_secret",
+"Ambush"
+],
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
+]
+]
+},
+"756670": {
+"keywords": [
+756193,
+756194
+],
+"tags": [
+[
+"trap_secret",
+"Ambush"
+],
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
+]
+]
+},
+"756677": {
+"keywords": [
+756143,
+756151
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+]
+]
+},
+"756684": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756693": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756696": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756697": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756698": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756704": {
+"keywords": [
+756141,
+756170
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
+]
+]
+},
+"756706": {
+"keywords": [
+756143,
+756151,
+756152,
+756158
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"banish",
+"Banish"
+]
+]
+},
+"756708": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756709": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756722": {
+"keywords": [
+756141,
+756190
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"condition_count",
+"Bonded"
+]
+]
+},
+"756723": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756732": {
+"keywords": [
+756143,
+756167,
+756168
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+],
+[
+"stat_condition",
+"Inspired"
+]
+]
+},
+"756741": {
+"keywords": [
+756158,
+756192,
+756198
+],
+"tags": [
+[
+"banish",
+"Banish"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"recycle",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
+]
+]
+},
+"756742": {
+"keywords": [
+756141,
+756143,
+756191
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+]
+},
+"756743": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756744": {
+"keywords": [
+756158
+],
+"tags": [
+[
+"banish",
+"Banish"
+]
+]
+},
+"756746": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756755": {
+"keywords": [
+756192
+],
+"tags": [
+[
+"on_kill",
+"Deathblow"
+]
+]
+},
+"756763": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756768": {
+"keywords": [
+756141,
+756143
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756769": {
+"keywords": [
+756141,
+756183
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"silence",
+"Purify"
+]
+]
+},
+"756779": {
+"keywords": [
+756143,
+756151,
+756152
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+]
+},
+"756783": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756786": {
+"keywords": [
+756141,
+756170
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
+]
+]
+},
+"756798": {
+"keywords": [
+756141,
+756143,
+756155
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+]
+]
+},
+"756807": {
+"keywords": [
+756143,
+756152,
+756167
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+]
+},
+"756825": {
+"keywords": [
+756141,
+756146
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"rows",
+"Ranged"
+]
+]
+},
+"756826": {
+"keywords": [
+756197
+],
+"tags": [
+[
+"stat_condition",
+"Berserk"
+]
+]
+},
+"756827": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756828": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756829": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756845": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756851": {
+"keywords": [
+756141,
+756213
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"coin_economy",
+"Fee"
+]
+]
+},
+"756852": {
+"keywords": [
+756212
+],
+"tags": [
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+]
+]
+},
+"756853": {
+"keywords": [
+756141,
+756211
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+]
+]
+},
+"756855": {
+"keywords": [
+756150,
+756211,
+756212
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+]
+]
+},
+"756856": {
+"keywords": [
+756143,
+756151,
+756202
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
+]
+]
+},
+"756863": {
+"keywords": [
+756143,
+756211,
+756215
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
+]
+]
+},
+"756866": {
+"keywords": [
+756141,
+756211
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+]
+]
+},
+"756869": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756874": {
+"keywords": [
+756152,
+756213
+],
+"tags": [
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"coin_economy",
+"Fee"
+]
+]
+},
+"756878": {
+"keywords": [
+756212,
+756213
+],
+"tags": [
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
+]
+]
+},
+"756897": {
+"keywords": [
+756158
+],
+"tags": [
+[
+"banish",
+"Banish"
+]
+]
+},
+"756898": {
+"keywords": [
+756141,
+756211
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+]
+]
+},
+"756906": {
+"keywords": [
+756150,
+756152,
+756212,
+756213
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
+]
+]
+},
+"756915": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756925": {
+"keywords": [
+756211,
+756215
+],
+"tags": [
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
+]
+]
+},
+"756928": {
+"keywords": [
+756212,
+756213,
+756215
+],
+"tags": [
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
+]
+]
+},
+"756935": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756941": {
+"keywords": [
+756141,
+756143,
+756191
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+]
+},
+"756945": {
+"keywords": [
+756190
+],
+"tags": [
+[
+"condition_count",
+"Bonded"
+]
+]
+},
+"756946": {
+"keywords": [
+756141,
+756150
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+]
+]
+},
+"756948": {
+"keywords": [
+756141,
+756143,
+756158,
+756179
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"banish",
+"Banish"
+],
+[
+"on_damaged",
+"Exposed"
+]
+]
+},
+"756954": {
+"keywords": [
+756181,
+756218
+],
+"tags": [
+[
+"shield",
+"Shield"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
+]
+]
+},
+"756955": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756963": {
+"keywords": [
+756141,
+756202
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
+]
+]
+},
+"756970": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756972": {
+"keywords": [
+756141,
+756149
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
+]
+]
+},
+"756978": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"756979": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"756981": {
+"keywords": [
+756141,
+756218
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
+]
+]
+},
+"756985": {
+"keywords": [
+756178,
+756200
+],
+"tags": [
+[
+"condition_count",
+"Barricade"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
+]
+]
+},
+"756989": {
+"keywords": [
+756197,
+756218
+],
+"tags": [
+[
+"stat_condition",
+"Berserk"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
+]
+]
+},
+"756999": {
+"keywords": [
+756207
+],
+"tags": [
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
+]
+]
+},
+"757001": {
+"keywords": [
+756143,
+756218
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
+]
+]
+},
+"757003": {
+"keywords": [
+756141,
+756143,
+756150,
+756152
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+]
+},
+"757012": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757013": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757014": {
+"keywords": [
+756141,
+756150,
+756190
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"condition_count",
+"Bonded"
+]
+]
+},
+"757015": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757023": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757024": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757033": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757035": {
+"keywords": [
+756141,
+756150
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+]
+]
+},
+"757037": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757047": {
+"keywords": [
+756141,
+756143,
+756185
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
+]
+]
+},
+"757049": {
+"keywords": [
+756150,
+756173
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
+]
+]
+},
+"757059": {
+"keywords": [
+756141,
+756207
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
+]
+]
+},
+"757063": {
+"keywords": [
+756141,
+756143,
+756152
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+]
+},
+"757071": {
+"keywords": [
+756159
+],
+"tags": [
+[
+"banish",
+"Doomed"
+]
+]
+},
+"757078": {
+"keywords": [
+756179,
+756213,
+756216
+],
+"tags": [
+[
+"on_damaged",
+"Exposed"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"life_payment",
+"Insanity"
+],
+[
+"coin_economy",
+"Insanity"
+],
+[
+"piercing",
+"Insanity"
+]
+]
+},
+"757081": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757082": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757085": {
+"keywords": [
+756141,
+756161
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"immunity",
+"Veil"
+]
+]
+},
+"757089": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757097": {
+"keywords": [
+756141,
+756189
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Dominance"
+]
+]
+},
+"757099": {
+"keywords": [
+756182
+],
+"tags": [
+[
+"deck_condition",
+"Devotion"
+]
+]
+},
+"757102": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757105": {
+"keywords": [
+756141,
+756161,
+756182
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"immunity",
+"Veil"
+],
+[
+"deck_condition",
+"Devotion"
+]
+]
+},
+"757110": {
+"keywords": [
+756143,
+756151,
+756161
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"immunity",
+"Veil"
+]
+]
+},
+"757112": {
+"keywords": [
+756161,
+756196
+],
+"tags": [
+[
+"immunity",
+"Veil"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
+]
+]
+},
+"757115": {
+"keywords": [
+756197
+],
+"tags": [
+[
+"stat_condition",
+"Berserk"
+]
+]
+},
+"757118": {
+"keywords": [
+756192,
+756198
+],
+"tags": [
+[
+"on_kill",
+"Deathblow"
+],
+[
+"recycle",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
+]
+]
+},
+"757121": {
+"keywords": [
+756150,
+756212
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+]
+]
+},
+"757126": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757134": {
+"keywords": [
+756143,
+756151,
+756182
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"deck_condition",
+"Devotion"
+]
+]
+},
+"757136": {
+"keywords": [
+756141,
+756143,
+756150,
+756151,
+756186
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
+]
+]
+},
+"757144": {
+"keywords": [
+756141,
+756170,
+756192
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
+],
+[
+"on_kill",
+"Deathblow"
+]
+]
+},
+"757148": {
+"keywords": [
+756198
+],
+"tags": [
+[
+"recycle",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
+]
+]
+},
+"757150": {
+"keywords": [
+756143,
+756151,
+756161
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"immunity",
+"Veil"
+]
+]
+},
+"757153": {
+"keywords": [
+756143,
+756161,
+756204
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"immunity",
+"Veil"
+],
+[
+"on_ally_play",
+"Symbiosis"
+],
+[
+"summon",
+"Symbiosis"
+],
+[
+"variable_stats",
+"Symbiosis"
+],
+[
+"tribal",
+"Symbiosis"
+]
+]
+},
+"757155": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757156": {
+"keywords": [
+756223
+],
+"tags": [
+[
+"delayed",
+"Counter"
+]
+]
+},
+"757158": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757165": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757166": {
+"keywords": [
+756141,
+756153,
+756227
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+],
+[
+"card_quality",
+"Swap"
+],
+[
+"draw",
+"Swap"
+]
+]
+},
+"757173": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757176": {
+"keywords": [
+756144,
+756146,
+756153
+],
+"tags": [
+[
+"rows",
+"Melee"
+],
+[
+"rows",
+"Ranged"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+]
+},
+"757177": {
+"keywords": [
+756143,
+756151
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+]
+]
+},
+"757179": {
+"keywords": [
+756141,
+756153
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+]
+},
+"757184": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757188": {
+"keywords": [
+756141,
+756143,
+756157,
+756191
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"heal",
+"Heal"
+],
+[
+"round_carryover",
+"Resilience"
+]
+]
+},
+"757190": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757192": {
+"keywords": [
+756141,
+756153
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+]
+},
+"757194": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757195": {
+"keywords": [
+756150
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+]
+]
+},
+"757200": {
+"keywords": [
+756150,
+756153
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+]
+},
+"757203": {
+"keywords": [
+756141,
+756143,
+756167
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+]
+},
+"757211": {
+"keywords": [
+756153,
+756173
+],
+"tags": [
+[
+"hand_size",
+"Adrenaline"
+],
+[
+"death_trigger",
+"Deathwish"
+]
+]
+},
+"757213": {
+"keywords": [
+756141,
+756153,
+756185
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
+]
+]
+},
+"757217": {
+"keywords": [
+756141,
+756143,
+756191
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+]
+},
+"757230": {
+"keywords": [
+756141,
+756196,
+756223
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
+],
+[
+"delayed",
+"Counter"
+]
+]
+},
+"757231": {
+"keywords": [
+756141,
+756178
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"condition_count",
+"Barricade"
+]
+]
+},
+"757237": {
+"keywords": [
+756141,
+756150,
+756213,
+756215
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
+]
+]
+},
+"757238": {
+"keywords": [
+756141,
+756182,
+756213,
+756216
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"deck_condition",
+"Devotion"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"life_payment",
+"Insanity"
+],
+[
+"coin_economy",
+"Insanity"
+],
+[
+"piercing",
+"Insanity"
+]
+]
+},
+"757239": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757244": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757255": {
+"keywords": [
+756221
+],
+"tags": [
+[
+"condition_count",
+"Sabbath"
+]
+]
+},
+"757256": {
+"keywords": [
+756221
+],
+"tags": [
+[
+"condition_count",
+"Sabbath"
+]
+]
+},
+"757257": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757259": {
+"keywords": [
+756141,
+756150
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+]
+]
+},
+"757273": {
+"keywords": [
+756141,
+756197
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Berserk"
+]
+]
+},
+"757274": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757278": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757279": {
+"keywords": [
+756143,
+756172
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"permanent_growth",
+"Patience"
+],
+[
+"turn_end",
+"Patience"
+]
+]
+},
+"757282": {
+"keywords": [
+756221
+],
+"tags": [
+[
+"condition_count",
+"Sabbath"
+]
+]
+},
+"757283": {
+"keywords": [
+756143,
+756151,
+756158,
+756221
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"banish",
+"Banish"
+],
+[
+"condition_count",
+"Sabbath"
+]
+]
+},
+"757284": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757286": {
+"keywords": [
+756141,
+756211,
+756213
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"coin_economy",
+"Fee"
+]
+]
+},
+"757293": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757300": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757316": {
+"keywords": [
+756141,
+756143,
+756191
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+]
+},
+"757318": {
+"keywords": [
+756159
+],
+"tags": [
+[
+"banish",
+"Doomed"
+]
+]
+},
+"757323": {
+"keywords": [
+756141,
+756143,
+756195,
+756196
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"discard",
+"Discard"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
+]
+]
+},
+"757326": {
+"keywords": [
+756159
+],
+"tags": [
+[
+"banish",
+"Doomed"
+]
+]
+},
+"757333": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757334": {
+"keywords": [
+756150,
+756159
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"banish",
+"Doomed"
+]
+]
+},
+"757335": {
+"keywords": [
+756141,
+756143
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757337": {
+"keywords": [
+756141,
+756185
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
+]
+]
+},
+"757338": {
+"keywords": [
+756159,
+756217
+],
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"resource_banking",
+"Hoard"
+]
+]
+},
+"757339": {
+"keywords": [
+756141,
+756150,
+756217,
+756223
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"resource_banking",
+"Hoard"
+],
+[
+"delayed",
+"Counter"
+]
+]
+},
+"757347": {
+"keywords": [
+756141,
+756143,
+756150,
+756173,
+756185
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
+]
+]
+},
+"757348": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757353": {
+"keywords": [
+756141,
+756145
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"piercing",
+"Drain"
+],
+[
+"stat_gain",
+"Drain"
+]
+]
+},
+"757354": {
+"keywords": [
+756213,
+756223
+],
+"tags": [
+[
+"coin_economy",
+"Fee"
+],
+[
+"delayed",
+"Counter"
+]
+]
+},
+"757356": {
+"keywords": [
+756198
+],
+"tags": [
+[
+"recycle",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
+]
+]
+},
+"757357": {
+"keywords": [
+756143,
+756151,
+756152
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+]
+},
+"757359": {
+"keywords": [
+756143,
+756151
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+]
+]
+},
+"757362": {
+"keywords": [
+756141,
+756158
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"banish",
+"Banish"
+]
+]
+},
+"757365": {
+"keywords": [
+756141,
+756153
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+]
+},
+"757374": {
+"keywords": [
+756191,
+756212,
+756213
+],
+"tags": [
+[
+"round_carryover",
+"Resilience"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
+]
+]
+},
+"757376": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757382": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757384": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757390": {
+"keywords": [
+756143,
+756167
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+]
+},
+"757391": {
+"keywords": [
+756143,
+756150,
+756190
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"condition_count",
+"Bonded"
+]
+]
+},
+"757395": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757397": {
+"keywords": [
+756141,
+756211
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+]
+]
+},
+"757405": {
+"keywords": [
+756141,
+756143,
+756158,
+756159
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"banish",
+"Banish"
+],
+[
+"banish",
+"Doomed"
+]
+]
+},
+"757407": {
+"keywords": [
+756141,
+756159,
+756192
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"on_kill",
+"Deathblow"
+]
+]
+},
+"757408": {
+"keywords": [
+756159,
+756207
+],
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
+]
+]
+},
+"757409": {
+"keywords": [
+756207
+],
+"tags": [
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
+]
+]
+},
+"757410": {
+"keywords": [
+756141,
+756150
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+]
+]
+},
+"757411": {
+"keywords": [
+756141,
+756143,
+756159,
+756184,
+756191,
+756201
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"immunity",
+"Immunity"
+],
+[
+"round_carryover",
+"Resilience"
+],
+[
+"generate_cards",
+"Create"
+],
+[
+"random_effect",
+"Create"
+]
+]
+},
+"757412": {
+"keywords": [
+756141,
+756143,
+756159,
+756185
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
+]
+]
+},
+"757414": {
+"keywords": [
+756141,
+756159
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"banish",
+"Doomed"
+]
+]
+},
+"757417": {
+"keywords": [
+756141,
+756143,
+756150
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+]
+]
+},
+"757427": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757430": {
+"keywords": [
+756143,
+756151,
+756183
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"silence",
+"Purify"
+]
+]
+},
+"757439": {
+"keywords": [
+756213
+],
+"tags": [
+[
+"coin_economy",
+"Fee"
+]
+]
+},
+"757440": {
+"keywords": [
+756141,
+756143,
+756191
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+]
+},
+"757442": {
+"keywords": [
+756143,
+756155,
+756200,
+756202
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
+],
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
+]
+]
+},
+"757445": {
+"keywords": [
+756143,
+756151,
+756200
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
+]
+]
+},
+"757452": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757453": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757455": {
+"keywords": [
+756193,
+756194
+],
+"tags": [
+[
+"trap_secret",
+"Ambush"
+],
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
+]
+]
+},
+"757456": {
+"keywords": [
+756141,
+756186
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
+]
+]
+},
+"757457": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757462": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"757464": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757466": {
+"keywords": [
+756141,
+756205
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Might"
+]
+]
+},
+"757469": {
+"keywords": [
+756141,
+756149
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
+]
+]
+},
+"757471": {
+"keywords": [
+756141,
+756213
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"coin_economy",
+"Fee"
+]
+]
+},
+"757476": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757478": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757479": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757481": {
+"keywords": [
+756150
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+]
+]
+},
+"757482": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"757485": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"813587": {
+"keywords": [
+756159
+],
+"tags": [
+[
+"banish",
+"Doomed"
+]
+]
+},
+"813595": {
+"keywords": [
+756141
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+]
+]
+},
+"813614": {
+"keywords": [
+756159,
+756218
+],
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
+]
+]
+},
+"813617": {
+"keywords": [
+756159
+],
+"tags": [
+[
+"banish",
+"Doomed"
+]
+]
+},
+"813622": {
+"keywords": [
+756141,
+756182
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"deck_condition",
+"Devotion"
+]
+]
+},
+"813626": {
+"keywords": [
+756159
+],
+"tags": [
+[
+"banish",
+"Doomed"
+]
+]
+},
+"813630": {
+"keywords": [
+756141,
+756143,
+756150,
+756151,
+756182,
+756186
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"deck_condition",
+"Devotion"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
+]
+]
+},
+"813631": {
+"keywords": [
+756141,
+756143,
+756150,
+756151,
+756161,
+756186
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"immunity",
+"Veil"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
+]
+]
+},
+"813632": {
+"keywords": [
+756184
+],
+"tags": [
+[
+"immunity",
+"Immunity"
+]
+]
+},
+"813648": {
+"keywords": [
+756202
+],
+"tags": [
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
+]
+]
+},
+"813660": {
+"keywords": [
+756143,
+756155,
+756159
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+],
+[
+"banish",
+"Doomed"
+]
+]
+},
+"813663": {
+"keywords": [
+756159
+],
+"tags": [
+[
+"banish",
+"Doomed"
+]
+]
+},
+"813669": {
+"keywords": [
+756143
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+]
+},
+"813671": {
+"keywords": [
+756143,
+756192
+],
+"tags": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"on_kill",
+"Deathblow"
+]
+]
+},
+"813678": {
+"keywords": [
+756152
+],
+"tags": [
+[
+"cooldowns",
+"Cooldown"
+]
+]
+},
+"813685": {
+"keywords": [
+756141,
+756159,
+756207
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
+]
+]
+},
+"813686": {
+"keywords": [
+756141,
+756143,
+756159,
+756184,
+756191
+],
+"tags": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"immunity",
+"Immunity"
+],
+[
+"round_carryover",
+"Resilience"
+]
+]
+},
+"813687": {
+"keywords": [
+756150,
+756159,
+756173,
+756223
+],
+"tags": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"banish",
+"Doomed"
+],
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"delayed",
+"Counter"
+]
+]
+},
+"813691": {
+"keywords": [
+756159,
+756213
+],
+"tags": [
+[
+"banish",
+"Doomed"
+],
+[
+"coin_economy",
+"Fee"
+]
+]
+}
+}

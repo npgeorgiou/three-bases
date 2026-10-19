@@ -1,0 +1,5326 @@
+{
+"750479": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"750489": {
+"keywords": [
+750415
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"750491": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"750493": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"750497": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"750501": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"750507": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"750508": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"750517": {
+"keywords": [
+750433
+],
+"tags": [
+[
+"on_play",
+"Allegiance"
+],
+[
+"deck_position",
+"Allegiance"
+]
+]
+},
+"750520": {
+"keywords": [
+750382,
+750421
+],
+"tags": [
+[
+"condition_count",
+"Enlightened"
+],
+[
+"lifesteal",
+"Lifesteal"
+]
+]
+},
+"750549": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"750554": {
+"keywords": [
+750368
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+]
+]
+},
+"750608": {
+"keywords": [
+750388
+],
+"tags": [
+[
+"death_trigger",
+"Last Breath"
+]
+]
+},
+"750619": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"750636": {
+"keywords": [
+750389,
+750415
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"750638": {
+"keywords": [
+750389,
+750395
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"on_spell",
+"Imbue"
+]
+]
+},
+"750639": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"750666": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"750669": {
+"keywords": [
+750433
+],
+"tags": [
+[
+"on_play",
+"Allegiance"
+],
+[
+"deck_position",
+"Allegiance"
+]
+]
+},
+"750670": {
+"keywords": [
+750395
+],
+"tags": [
+[
+"on_spell",
+"Imbue"
+]
+]
+},
+"750704": {
+"keywords": [
+750431
+],
+"tags": [
+[
+"target_choice",
+"Challenger"
+]
+]
+},
+"750716": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"750718": {
+"keywords": [
+750371,
+750418,
+750449
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"banish",
+"Obliterate"
+]
+]
+},
+"750724": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"750730": {
+"keywords": [
+750464
+],
+"tags": [
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"750734": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"750736": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"750737": {
+"keywords": [
+750368
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+]
+]
+},
+"750746": {
+"keywords": [
+750368,
+750374,
+750389
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+]
+]
+},
+"750756": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"750757": {
+"keywords": [
+750388
+],
+"tags": [
+[
+"death_trigger",
+"Last Breath"
+]
+]
+},
+"750761": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"750773": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"750796": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"750806": {
+"keywords": [
+750404,
+750432
+],
+"tags": [
+[
+"evasion",
+"Elusive"
+],
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"750830": {
+"keywords": [
+750425
+],
+"tags": [
+[
+"untap",
+"Scout"
+],
+[
+"on_attack",
+"Scout"
+]
+]
+},
+"750831": {
+"keywords": [
+750401
+],
+"tags": [
+[
+"count_payoff",
+"Plunder"
+]
+]
+},
+"750836": {
+"keywords": [
+750403,
+750404
+],
+"tags": [
+[
+"blocking",
+"Vulnerable"
+],
+[
+"evasion",
+"Elusive"
+]
+]
+},
+"750840": {
+"keywords": [
+750389,
+750395
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"on_spell",
+"Imbue"
+]
+]
+},
+"750855": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"750870": {
+"keywords": [
+750369,
+750401
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"count_payoff",
+"Plunder"
+]
+]
+},
+"750884": {
+"keywords": [
+750368
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+]
+]
+},
+"750887": {
+"keywords": [
+750389,
+750425
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"untap",
+"Scout"
+],
+[
+"on_attack",
+"Scout"
+]
+]
+},
+"750912": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"750918": {
+"keywords": [
+750447
+],
+"tags": [
+[
+"turn_end",
+"Round End"
+]
+]
+},
+"750941": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"750949": {
+"keywords": [
+750371,
+750420
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"shield",
+"SpellShield"
+]
+]
+},
+"750951": {
+"keywords": [
+750372,
+750447
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"turn_end",
+"Round End"
+]
+]
+},
+"750965": {
+"keywords": [
+750389,
+750415
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"750980": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"750985": {
+"keywords": [
+750409
+],
+"tags": [
+[
+"on_kill",
+"Fury"
+],
+[
+"permanent_growth",
+"Fury"
+]
+]
+},
+"750987": {
+"keywords": [
+750369,
+750397,
+750471
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"combo_sequence",
+"Nightfall"
+],
+[
+"silence",
+"Silence"
+]
+]
+},
+"750988": {
+"keywords": [
+750389,
+750404,
+750459
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"evasion",
+"Elusive"
+],
+[
+"direct_damage",
+"Nexus Strike"
+]
+]
+},
+"750990": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751019": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751043": {
+"keywords": [
+750372,
+750464
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"751046": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751049": {
+"keywords": [
+750397,
+750426,
+750432
+],
+"tags": [
+[
+"combo_sequence",
+"Nightfall"
+],
+[
+"self_destruct",
+"Ephemeral"
+],
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"751063": {
+"keywords": [
+750393,
+750410
+],
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"adjacency",
+"Support"
+],
+[
+"buff",
+"Support"
+],
+[
+"shield",
+"Barrier"
+],
+[
+"temporary_effect",
+"Barrier"
+]
+]
+},
+"751064": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751081": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"751091": {
+"keywords": [
+750382,
+750394
+],
+"tags": [
+[
+"condition_count",
+"Enlightened"
+],
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751093": {
+"keywords": [
+750389,
+750418
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"regeneration",
+"Regeneration"
+]
+]
+},
+"751101": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751105": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751109": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"751121": {
+"keywords": [
+750389,
+750415,
+750427
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_attack",
+"Lurk"
+],
+[
+"deck_position",
+"Lurk"
+],
+[
+"stat_gain",
+"Lurk"
+],
+[
+"tribal",
+"Lurk"
+]
+]
+},
+"751136": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"751141": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751142": {
+"keywords": [
+750390,
+750391
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+]
+},
+"751149": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751152": {
+"keywords": [
+750389,
+750427,
+750447
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"on_attack",
+"Lurk"
+],
+[
+"deck_position",
+"Lurk"
+],
+[
+"stat_gain",
+"Lurk"
+],
+[
+"tribal",
+"Lurk"
+],
+[
+"turn_end",
+"Round End"
+]
+]
+},
+"751154": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"751155": {
+"keywords": [
+750374,
+750432
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+],
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"751159": {
+"keywords": [
+750370,
+750371,
+750372,
+750477
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"on_play",
+"Play"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"selection",
+"Predict"
+],
+[
+"deck_position",
+"Predict"
+]
+]
+},
+"751161": {
+"keywords": [
+750432
+],
+"tags": [
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"751168": {
+"keywords": [
+750370,
+750372
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"751175": {
+"keywords": [
+750394,
+750461
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"count_payoff",
+"Reputation"
+]
+]
+},
+"751193": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751201": {
+"keywords": [
+750371,
+750432
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"751208": {
+"keywords": [
+750370,
+750372
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"751216": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751218": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"751240": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751241": {
+"keywords": [
+750389,
+750417
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"damage_reduction",
+"Tough"
+]
+]
+},
+"751250": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"751258": {
+"keywords": [
+750461
+],
+"tags": [
+[
+"count_payoff",
+"Reputation"
+]
+]
+},
+"751263": {
+"keywords": [
+750368,
+750371,
+750374
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"Play"
+],
+[
+"on_attack",
+"Attack"
+]
+]
+},
+"751268": {
+"keywords": [
+750389,
+750415,
+750447
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"turn_end",
+"Round End"
+]
+]
+},
+"751284": {
+"keywords": [
+750409
+],
+"tags": [
+[
+"on_kill",
+"Fury"
+],
+[
+"permanent_growth",
+"Fury"
+]
+]
+},
+"751288": {
+"keywords": [
+750409,
+750432
+],
+"tags": [
+[
+"on_kill",
+"Fury"
+],
+[
+"permanent_growth",
+"Fury"
+],
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"751294": {
+"keywords": [
+750370,
+750372,
+750449
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"banish",
+"Obliterate"
+]
+]
+},
+"751296": {
+"keywords": [
+750388
+],
+"tags": [
+[
+"death_trigger",
+"Last Breath"
+]
+]
+},
+"751300": {
+"keywords": [
+750369,
+750383
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"generate_cards",
+"Invoke"
+],
+[
+"selection",
+"Invoke"
+]
+]
+},
+"751303": {
+"keywords": [
+750369,
+750381,
+750397,
+750399
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"combo_sequence",
+"Nightfall"
+],
+[
+"combo_sequence",
+"Daybreak"
+]
+]
+},
+"751308": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751314": {
+"keywords": [
+750417
+],
+"tags": [
+[
+"damage_reduction",
+"Tough"
+]
+]
+},
+"751325": {
+"keywords": [
+750389,
+750415,
+750424
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"on_attack",
+"Impact"
+],
+[
+"direct_damage",
+"Impact"
+],
+[
+"stacking_keyword",
+"Impact"
+]
+]
+},
+"751326": {
+"keywords": [
+750447
+],
+"tags": [
+[
+"turn_end",
+"Round End"
+]
+]
+},
+"751330": {
+"keywords": [
+750389,
+750415,
+750447,
+750457
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"turn_end",
+"Round End"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
+]
+]
+},
+"751338": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751341": {
+"keywords": [
+750371,
+750389
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+]
+]
+},
+"751346": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751347": {
+"keywords": [
+750371,
+750417
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"damage_reduction",
+"Tough"
+]
+]
+},
+"751351": {
+"keywords": [
+750369,
+750473
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"generate_cards",
+"Manifest"
+],
+[
+"random_effect",
+"Manifest"
+]
+]
+},
+"751355": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751356": {
+"keywords": [
+750415
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"751364": {
+"keywords": [
+750372,
+750464
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"751380": {
+"keywords": [
+750447
+],
+"tags": [
+[
+"turn_end",
+"Round End"
+]
+]
+},
+"751388": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751396": {
+"keywords": [
+750398
+],
+"tags": [
+[
+"on_play",
+"Attune"
+],
+[
+"resource_gain",
+"Attune"
+]
+]
+},
+"751419": {
+"keywords": [
+750390,
+750391
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+]
+},
+"751422": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751425": {
+"keywords": [
+750371,
+750423
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"on_ally_play",
+"Augment"
+],
+[
+"stat_gain",
+"Augment"
+]
+]
+},
+"751429": {
+"keywords": [
+750374
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+]
+]
+},
+"751436": {
+"keywords": [
+750389
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+]
+]
+},
+"751437": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751440": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751441": {
+"keywords": [
+750368,
+750371
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"Play"
+]
+]
+},
+"751446": {
+"keywords": [
+750374,
+750389,
+750415
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"751447": {
+"keywords": [
+750369,
+750381,
+750391
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+]
+},
+"751448": {
+"keywords": [
+750371,
+750391,
+750404
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+],
+[
+"evasion",
+"Elusive"
+]
+]
+},
+"751451": {
+"keywords": [
+750390,
+750391
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+]
+},
+"751461": {
+"keywords": [
+750370,
+750372
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"751494": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"751504": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751505": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"751506": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"751509": {
+"keywords": [
+750389,
+750415,
+750457
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
+]
+]
+},
+"751512": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"751521": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751539": {
+"keywords": [
+750369,
+750381
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+]
+]
+},
+"751540": {
+"keywords": [
+750371,
+750417,
+750428
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"damage_reduction",
+"Tough"
+],
+[
+"variable_stats",
+"Formidable"
+]
+]
+},
+"751553": {
+"keywords": [
+750394,
+750405
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
+]
+]
+},
+"751557": {
+"keywords": [
+750432
+],
+"tags": [
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"751569": {
+"keywords": [
+750370,
+750372
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"751583": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"751584": {
+"keywords": [
+750369,
+750381
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+]
+]
+},
+"751595": {
+"keywords": [
+750372
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"751598": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751613": {
+"keywords": [
+750368,
+750374,
+750389,
+750441
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"summon",
+"Spawn"
+],
+[
+"stat_gain",
+"Spawn"
+]
+]
+},
+"751622": {
+"keywords": [
+750394,
+750441
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"summon",
+"Spawn"
+],
+[
+"stat_gain",
+"Spawn"
+]
+]
+},
+"751623": {
+"keywords": [
+750411,
+750464
+],
+"tags": [
+[
+"cant_attack",
+"Immobile"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"751632": {
+"keywords": [
+750389,
+750413
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"stat_gain",
+"Evolve"
+],
+[
+"variety_payoff",
+"Evolve"
+]
+]
+},
+"751642": {
+"keywords": [
+750413
+],
+"tags": [
+[
+"stat_gain",
+"Evolve"
+],
+[
+"variety_payoff",
+"Evolve"
+]
+]
+},
+"751648": {
+"keywords": [
+750370,
+750372
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"751651": {
+"keywords": [
+750369,
+750381,
+750389
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+]
+]
+},
+"751652": {
+"keywords": [
+750374,
+750387,
+750389,
+750412,
+750415
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+],
+[
+"lifesteal",
+"Drain"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"death_trigger",
+"Hallowed"
+],
+[
+"on_attack",
+"Hallowed"
+],
+[
+"temporary_buff",
+"Hallowed"
+],
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"751654": {
+"keywords": [
+750374,
+750412
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+],
+[
+"death_trigger",
+"Hallowed"
+],
+[
+"on_attack",
+"Hallowed"
+],
+[
+"temporary_buff",
+"Hallowed"
+]
+]
+},
+"751673": {
+"keywords": [
+750396
+],
+"tags": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+]
+},
+"751679": {
+"keywords": [
+750368,
+750460
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"stat_condition",
+"Empowered"
+]
+]
+},
+"751682": {
+"keywords": [
+750404,
+750447,
+750460
+],
+"tags": [
+[
+"evasion",
+"Elusive"
+],
+[
+"turn_end",
+"Round End"
+],
+[
+"stat_condition",
+"Empowered"
+]
+]
+},
+"751687": {
+"keywords": [
+750389,
+750415,
+750460,
+750464
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"stat_condition",
+"Empowered"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"751694": {
+"keywords": [
+750393,
+750396
+],
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"adjacency",
+"Support"
+],
+[
+"buff",
+"Support"
+],
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+]
+},
+"751712": {
+"keywords": [
+750368,
+750418,
+750460
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"stat_condition",
+"Empowered"
+]
+]
+},
+"751715": {
+"keywords": [
+750368,
+750460
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"stat_condition",
+"Empowered"
+]
+]
+},
+"751731": {
+"keywords": [
+750396
+],
+"tags": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+]
+},
+"751738": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751744": {
+"keywords": [
+750374,
+750396
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+],
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+]
+},
+"751761": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"751772": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"751778": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"751779": {
+"keywords": [
+750384,
+750464
+],
+"tags": [
+[
+"count_payoff",
+"Flow"
+],
+[
+"turn_start",
+"Flow"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"751780": {
+"keywords": [
+750396
+],
+"tags": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+]
+},
+"751786": {
+"keywords": [
+750374,
+750396,
+750432
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+],
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+],
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"751794": {
+"keywords": [
+750372
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"751803": {
+"keywords": [
+750464
+],
+"tags": [
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"751804": {
+"keywords": [
+750388,
+750396
+],
+"tags": [
+[
+"death_trigger",
+"Last Breath"
+],
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+]
+},
+"751808": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751822": {
+"keywords": [
+750396
+],
+"tags": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+]
+},
+"751824": {
+"keywords": [
+750417
+],
+"tags": [
+[
+"damage_reduction",
+"Tough"
+]
+]
+},
+"751826": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"751828": {
+"keywords": [
+750396
+],
+"tags": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+]
+},
+"751829": {
+"keywords": [
+750447
+],
+"tags": [
+[
+"turn_end",
+"Round End"
+]
+]
+},
+"751831": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751833": {
+"keywords": [
+750372,
+750464
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"751843": {
+"keywords": [
+750395
+],
+"tags": [
+[
+"on_spell",
+"Imbue"
+]
+]
+},
+"751849": {
+"keywords": [
+750368,
+750401
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"count_payoff",
+"Plunder"
+]
+]
+},
+"751862": {
+"keywords": [
+750401,
+750430
+],
+"tags": [
+[
+"count_payoff",
+"Plunder"
+],
+[
+"evasion",
+"Brash"
+]
+]
+},
+"751863": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751874": {
+"keywords": [
+750415
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"751877": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"751889": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751897": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"751903": {
+"keywords": [
+750372
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"751904": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751915": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751923": {
+"keywords": [
+750420,
+750474
+],
+"tags": [
+[
+"shield",
+"SpellShield"
+],
+[
+"stealth",
+"Ambush"
+],
+[
+"transform",
+"Ambush"
+]
+]
+},
+"751925": {
+"keywords": [
+750474
+],
+"tags": [
+[
+"stealth",
+"Ambush"
+],
+[
+"transform",
+"Ambush"
+]
+]
+},
+"751939": {
+"keywords": [
+750388
+],
+"tags": [
+[
+"death_trigger",
+"Last Breath"
+]
+]
+},
+"751941": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751952": {
+"keywords": [
+750371,
+750389,
+750431
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"target_choice",
+"Challenger"
+]
+]
+},
+"751956": {
+"keywords": [
+750388
+],
+"tags": [
+[
+"death_trigger",
+"Last Breath"
+]
+]
+},
+"751961": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"751976": {
+"keywords": [
+750430
+],
+"tags": [
+[
+"evasion",
+"Brash"
+]
+]
+},
+"751983": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"751990": {
+"keywords": [
+750372,
+750447,
+750464
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"turn_end",
+"Round End"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"751993": {
+"keywords": [
+750415
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"752006": {
+"keywords": [
+750395
+],
+"tags": [
+[
+"on_spell",
+"Imbue"
+]
+]
+},
+"752024": {
+"keywords": [
+750371,
+750389,
+750421
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"lifesteal",
+"Lifesteal"
+]
+]
+},
+"752026": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"752034": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"752035": {
+"keywords": [
+750371,
+750397,
+750399
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"combo_sequence",
+"Nightfall"
+],
+[
+"combo_sequence",
+"Daybreak"
+]
+]
+},
+"752036": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"752041": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"752048": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"752052": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"752055": {
+"keywords": [
+750371,
+750404
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"evasion",
+"Elusive"
+]
+]
+},
+"752062": {
+"keywords": [
+750388,
+750441
+],
+"tags": [
+[
+"death_trigger",
+"Last Breath"
+],
+[
+"summon",
+"Spawn"
+],
+[
+"stat_gain",
+"Spawn"
+]
+]
+},
+"752066": {
+"keywords": [
+750389,
+750393,
+750416
+],
+"tags": [
+[
+"upgrade",
+"Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"assists_support",
+"Support"
+],
+[
+"adjacency",
+"Support"
+],
+[
+"buff",
+"Support"
+],
+[
+"stat_gain",
+"Spirit"
+],
+[
+"stacking_keyword",
+"Spirit"
+]
+]
+},
+"752080": {
+"keywords": [
+750372,
+750451
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"cost_reduction",
+"Updraft"
+]
+]
+},
+"752081": {
+"keywords": [
+750371,
+750430,
+750451
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"evasion",
+"Brash"
+],
+[
+"cost_reduction",
+"Updraft"
+]
+]
+},
+"752111": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"752119": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"752133": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"752134": {
+"keywords": [
+750374
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+]
+]
+},
+"752154": {
+"keywords": [
+750415
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"752175": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"752202": {
+"keywords": [
+750431
+],
+"tags": [
+[
+"target_choice",
+"Challenger"
+]
+]
+},
+"752295": {
+"keywords": [
+750398
+],
+"tags": [
+[
+"on_play",
+"Attune"
+],
+[
+"resource_gain",
+"Attune"
+]
+]
+},
+"796469": {
+"keywords": [
+750374,
+750415
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+],
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"796472": {
+"keywords": [
+750371,
+750374,
+750418,
+750432
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"796474": {
+"keywords": [
+750415,
+750457
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
+]
+]
+},
+"796478": {
+"keywords": [
+750431
+],
+"tags": [
+[
+"target_choice",
+"Challenger"
+]
+]
+},
+"796479": {
+"keywords": [
+750415,
+750464
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"796480": {
+"keywords": [
+750404,
+750459
+],
+"tags": [
+[
+"evasion",
+"Elusive"
+],
+[
+"direct_damage",
+"Nexus Strike"
+]
+]
+},
+"796487": {
+"keywords": [
+750418,
+750431
+],
+"tags": [
+[
+"regeneration",
+"Regeneration"
+],
+[
+"target_choice",
+"Challenger"
+]
+]
+},
+"796490": {
+"keywords": [
+750432
+],
+"tags": [
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"796495": {
+"keywords": [
+750395,
+750459
+],
+"tags": [
+[
+"on_spell",
+"Imbue"
+],
+[
+"direct_damage",
+"Nexus Strike"
+]
+]
+},
+"796504": {
+"keywords": [
+750374
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+]
+]
+},
+"796517": {
+"keywords": [
+750415,
+750457
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
+]
+]
+},
+"796521": {
+"keywords": [
+750371,
+750464
+],
+"tags": [
+[
+"on_play",
+"play"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"796533": {
+"keywords": [
+750415,
+750447
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"turn_end",
+"Round End"
+]
+]
+},
+"796534": {
+"keywords": [
+750432,
+750464
+],
+"tags": [
+[
+"evasion",
+"Fearsome"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"796540": {
+"keywords": [
+750464
+],
+"tags": [
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"796550": {
+"keywords": [
+750374,
+750404,
+750415
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+],
+[
+"evasion",
+"Elusive"
+],
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"796559": {
+"keywords": [
+750415
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"796561": {
+"keywords": [
+750415,
+750457
+],
+"tags": [
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
+]
+]
+},
+"796567": {
+"keywords": [
+750374,
+750413
+],
+"tags": [
+[
+"on_attack",
+"attack"
+],
+[
+"stat_gain",
+"Evolve"
+],
+[
+"variety_payoff",
+"Evolve"
+]
+]
+},
+"796569": {
+"keywords": [
+750368,
+750402,
+750415,
+750460
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"first_strike",
+"Double Attack"
+],
+[
+"multi_attack",
+"Double Attack"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"stat_condition",
+"Empowered"
+]
+]
+},
+"796570": {
+"keywords": [
+750371,
+750374,
+750417
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"damage_reduction",
+"Tough"
+]
+]
+},
+"796572": {
+"keywords": [
+750374,
+750384,
+750415,
+750464
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+],
+[
+"count_payoff",
+"Flow"
+],
+[
+"turn_start",
+"Flow"
+],
+[
+"first_strike",
+"Quick Attack"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"796579": {
+"keywords": [
+750371,
+750374,
+750431
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"target_choice",
+"Challenger"
+]
+]
+},
+"796586": {
+"keywords": [
+750374,
+750432
+],
+"tags": [
+[
+"on_attack",
+"Attack"
+],
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"796593": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"796600": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"796607": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"796623": {
+"keywords": [
+750386
+],
+"tags": [
+[
+"merge_attach",
+"Trap"
+]
+]
+},
+"796636": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"796637": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"796640": {
+"keywords": [
+750400,
+750449
+],
+"tags": [
+[
+"reactions",
+"Skill"
+],
+[
+"banish",
+"Obliterate"
+]
+]
+},
+"796646": {
+"keywords": [
+750432
+],
+"tags": [
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"796653": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"796660": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"796661": {
+"keywords": [
+750400
+],
+"tags": [
+[
+"reactions",
+"Skill"
+]
+]
+},
+"796666": {
+"keywords": [
+750403,
+750411
+],
+"tags": [
+[
+"blocking",
+"Vulnerable"
+],
+[
+"cant_attack",
+"Immobile"
+]
+]
+},
+"796670": {
+"keywords": [
+750400
+],
+"tags": [
+[
+"reactions",
+"Skill"
+]
+]
+},
+"796677": {
+"keywords": [
+750390,
+750405
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
+]
+]
+},
+"796679": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"796683": {
+"keywords": [
+750425,
+750431
+],
+"tags": [
+[
+"untap",
+"Scout"
+],
+[
+"on_attack",
+"Scout"
+],
+[
+"target_choice",
+"Challenger"
+]
+]
+},
+"796689": {
+"keywords": [
+750400
+],
+"tags": [
+[
+"reactions",
+"Skill"
+]
+]
+},
+"796692": {
+"keywords": [
+750369,
+750378
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
+]
+]
+},
+"796699": {
+"keywords": [
+750378,
+750394
+],
+"tags": [
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
+],
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"796702": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"796709": {
+"keywords": [
+750368,
+750374,
+750431
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"target_choice",
+"Challenger"
+]
+]
+},
+"796714": {
+"keywords": [
+750394,
+750471
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"silence",
+"Silence"
+]
+]
+},
+"796717": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"796719": {
+"keywords": [
+750394,
+750405
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
+]
+]
+},
+"796727": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"796735": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"796736": {
+"keywords": [
+750394,
+750449
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"banish",
+"Obliterate"
+]
+]
+},
+"796746": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"796747": {
+"keywords": [
+750400
+],
+"tags": [
+[
+"reactions",
+"Skill"
+]
+]
+},
+"796758": {
+"keywords": [
+750387,
+750400
+],
+"tags": [
+[
+"lifesteal",
+"Drain"
+],
+[
+"reactions",
+"Skill"
+]
+]
+},
+"796760": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"796769": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"796775": {
+"keywords": [
+750390,
+750427
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"on_attack",
+"Lurk"
+],
+[
+"deck_position",
+"Lurk"
+],
+[
+"stat_gain",
+"Lurk"
+],
+[
+"tribal",
+"Lurk"
+]
+]
+},
+"796776": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"796778": {
+"keywords": [
+750400
+],
+"tags": [
+[
+"reactions",
+"Skill"
+]
+]
+},
+"796779": {
+"keywords": [
+750369,
+750378
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
+]
+]
+},
+"796786": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"796793": {
+"keywords": [
+750379
+],
+"tags": [
+[
+"reactions",
+"Elemental Skill"
+]
+]
+},
+"796808": {
+"keywords": [
+750370,
+750372
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"796819": {
+"keywords": [
+750400
+],
+"tags": [
+[
+"reactions",
+"Skill"
+]
+]
+},
+"796824": {
+"keywords": [
+750368,
+750378,
+750381
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
+],
+[
+"spell_speed",
+"Focus"
+]
+]
+},
+"796826": {
+"keywords": [
+750378,
+750381
+],
+"tags": [
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
+],
+[
+"spell_speed",
+"Focus"
+]
+]
+},
+"796833": {
+"keywords": [
+750381
+],
+"tags": [
+[
+"spell_speed",
+"Focus"
+]
+]
+},
+"796835": {
+"keywords": [
+750372
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"796847": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"796863": {
+"keywords": [
+750400
+],
+"tags": [
+[
+"reactions",
+"Skill"
+]
+]
+},
+"796864": {
+"keywords": [
+750400
+],
+"tags": [
+[
+"reactions",
+"Skill"
+]
+]
+},
+"796866": {
+"keywords": [
+750390,
+750405
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
+]
+]
+},
+"796869": {
+"keywords": [
+750370,
+750372
+],
+"tags": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"796875": {
+"keywords": [
+750368
+],
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+]
+]
+},
+"796877": {
+"keywords": [
+750424,
+750464
+],
+"tags": [
+[
+"on_attack",
+"Impact"
+],
+[
+"direct_damage",
+"Impact"
+],
+[
+"stacking_keyword",
+"Impact"
+],
+[
+"turn_start",
+"Round Start"
+]
+]
+},
+"796884": {
+"keywords": [
+750390,
+750405
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
+]
+]
+},
+"796888": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"796891": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"796900": {
+"keywords": [
+750376,
+750402
+],
+"tags": [
+[
+"merge_attach",
+"Attach"
+],
+[
+"return_to_hand",
+"Attach"
+],
+[
+"first_strike",
+"Double Attack"
+],
+[
+"multi_attack",
+"Double Attack"
+]
+]
+},
+"796927": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"796963": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"796966": {
+"keywords": [
+750371,
+750400
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"reactions",
+"Skill"
+]
+]
+},
+"796968": {
+"keywords": [
+750390
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+]
+]
+},
+"796990": {
+"keywords": [
+750404,
+750411
+],
+"tags": [
+[
+"evasion",
+"Elusive"
+],
+[
+"cant_attack",
+"Immobile"
+]
+]
+},
+"796998": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"797000": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"797013": {
+"keywords": [
+750381
+],
+"tags": [
+[
+"spell_speed",
+"Focus"
+]
+]
+},
+"797030": {
+"keywords": [
+750394,
+750465
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"stat_gain",
+"Forge"
+]
+]
+},
+"797037": {
+"keywords": [
+750385
+],
+"tags": [
+[
+"merge_attach",
+"Boon"
+]
+]
+},
+"797043": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"797050": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"797055": {
+"keywords": [
+750396,
+750415
+],
+"tags": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+],
+[
+"first_strike",
+"Quick Attack"
+]
+]
+},
+"797062": {
+"keywords": [
+750396
+],
+"tags": [
+[
+"merge_attach",
+"Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+]
+},
+"797065": {
+"keywords": [
+750400
+],
+"tags": [
+[
+"reactions",
+"Skill"
+]
+]
+},
+"797068": {
+"keywords": [
+750417,
+750431
+],
+"tags": [
+[
+"damage_reduction",
+"Tough"
+],
+[
+"target_choice",
+"Challenger"
+]
+]
+},
+"797070": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"797078": {
+"keywords": [
+750432
+],
+"tags": [
+[
+"evasion",
+"Fearsome"
+]
+]
+},
+"797095": {
+"keywords": [
+750390,
+750391
+],
+"tags": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+]
+},
+"797100": {
+"keywords": [
+750394
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+]
+]
+},
+"797114": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"797115": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"797126": {
+"keywords": [
+750369
+],
+"tags": [
+[
+"spell_speed",
+"Burst"
+]
+]
+},
+"797135": {
+"keywords": [
+750371,
+750451
+],
+"tags": [
+[
+"on_play",
+"Play"
+],
+[
+"cost_reduction",
+"Updraft"
+]
+]
+},
+"797138": {
+"keywords": [
+750372
+],
+"tags": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+]
+},
+"797141": {
+"keywords": [
+750381,
+750406
+],
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"hand_disruption",
+"Curse"
+],
+[
+"stacking_keyword",
+"Curse"
+],
+[
+"cost_increase",
+"Curse"
+]
+]
+},
+"797143": {
+"keywords": [
+750381,
+750406
+],
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"hand_disruption",
+"Curse"
+],
+[
+"stacking_keyword",
+"Curse"
+],
+[
+"cost_increase",
+"Curse"
+]
+]
+},
+"797146": {
+"keywords": [
+750371
+],
+"tags": [
+[
+"on_play",
+"Play"
+]
+]
+},
+"797147": {
+"keywords": [
+750381,
+750406
+],
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"hand_disruption",
+"Curse"
+],
+[
+"stacking_keyword",
+"Curse"
+],
+[
+"cost_increase",
+"Curse"
+]
+]
+},
+"797156": {
+"keywords": [
+750381,
+750400
+],
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"reactions",
+"Skill"
+]
+]
+},
+"797167": {
+"keywords": [
+750394,
+750400
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"reactions",
+"Skill"
+]
+]
+},
+"797170": {
+"keywords": [
+750394,
+750400
+],
+"tags": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"reactions",
+"Skill"
+]
+]
+},
+"797172": {
+"keywords": [
+750381,
+750400
+],
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"reactions",
+"Skill"
+]
+]
+},
+"797181": {
+"keywords": [
+750430,
+750451
+],
+"tags": [
+[
+"evasion",
+"Brash"
+],
+[
+"cost_reduction",
+"Updraft"
+]
+]
+},
+"797225": {
+"keywords": [
+750381,
+750400
+],
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"reactions",
+"Skill"
+]
+]
+},
+"797228": {
+"keywords": [
+750381,
+750383,
+750400
+],
+"tags": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"generate_cards",
+"Invoke"
+],
+[
+"selection",
+"Invoke"
+],
+[
+"reactions",
+"Skill"
+]
+]
+}
+}

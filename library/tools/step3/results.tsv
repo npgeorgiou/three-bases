@@ -11,10 +11,10 @@ damage|does|*|\b\d+ damage\b	hs_battlegrounds	29	16	4	10	4	weak
 damage|does|*|\b\d+ damage\b	wh_killteam	37	16	14	0	0	weak
 damage|does|*|\b\d+ damage\b	runeterra	11	0	0	10	7	weak
 damage|does|*|\b\d+ damage\b	wh_underworlds	390	58	30	0	0	weak
-damage|does|*|\b\d+ damage\b	wh_aos_4th	210	15	5	0	0	weak
+damage|does|*|\b\d+ damage\b	wh_aos_4th	210	44	16	0	0	weak
 damage|does|*|\b\d+ damage\b	shadowverse	1108	102	87	0	0	weak
 damage|does|*|\b\d+ damage\b	hearthstone	1079	82	66	10	10	weak
-damage|does|*|\b\d+ damage\b	mtg	1357	19	17	0	0	weak
+damage|does|*|\b\d+ damage\b	mtg	1357	48	43	0	0	weak
 damage|does|*|\bdamage (a|an|all|self|it|the|each|\d|by|enemy|highest|lowest|adjacent)\b	into_the_breach	76	76	58	0	0	weak
 damage|does|*|\bdamage (a|an|all|self|it|the|each|\d|by|enemy|highest|lowest|adjacent)\b	inscryption	6	6	2	0	0	weak
 damage|does|*|\bdamage (a|an|all|self|it|the|each|\d|by|enemy|highest|lowest|adjacent)\b	duelyst	1	0	0	0	0	pending
@@ -44,7 +44,7 @@ damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	runeterra	2
 damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	wh_underworlds	132	27	18	0	0	weak
 damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	shadowverse	1214	108	99	1	1	ok
 damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	hearthstone	1049	75	63	10	9	weak
-damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	mtg	1492	17	17	0	0	ok
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	mtg	1492	52	50	0	0	ok
 damage|does|*|\bdeal damage	into_the_breach	2	2	0	0	0	thin
 damage|does|*|\bdeal damage	inscryption	5	5	4	0	0	weak
 damage|does|*|\bdeal damage	duelyst	4	1	1	3	0	weak
@@ -56,7 +56,7 @@ damage|does|*|\bdeal damage	runeterra	15	3	2	10	9	weak
 damage|does|*|\bdeal damage	wh_underworlds	43	12	3	0	0	weak
 damage|does|*|\bdeal damage	shadowverse	19	5	5	10	10	ok
 damage|does|*|\bdeal damage	hearthstone	59	5	4	10	7	weak
-damage|does|*|\bdeal damage	mtg	120	3	1	10	8	weak
+damage|does|*|\bdeal damage	mtg	120	6	1	10	8	weak
 damage|does|*|\bdamage to\b	into_the_breach	76	76	54	0	0	weak
 damage|does|*|\bdamage to\b	inscryption	8	8	6	0	0	weak
 damage|does|*|\bdamage to\b	faeria	58	35	23	0	0	weak
@@ -70,9 +70,9 @@ damage|does|*|\bdamage to\b	wh_killteam	1	0	0	1	0	weak
 damage|does|*|\bdamage to\b	runeterra	22	3	3	10	7	weak
 damage|does|*|\bdamage to\b	wh_underworlds	241	36	18	0	0	weak
 damage|does|*|\bdamage to\b	wh_aos_4th	5	0	0	5	5	ok
-damage|does|*|\bdamage to\b	shadowverse	1289	115	102	0	0	weak
+damage|does|*|\bdamage to\b	shadowverse	1289	115	103	0	0	weak
 damage|does|*|\bdamage to\b	hearthstone	826	58	49	6	4	weak
-damage|does|*|\bdamage to\b	mtg	2434	35	20	0	0	weak
+damage|does|*|\bdamage to\b	mtg	2434	90	58	0	0	weak
 damage|does|*|\bstrikes?\b	into_the_breach	6	6	4	0	0	weak
 damage|does|*|\bstrikes?\b	inscryption	29	29	3	0	0	weak
 damage|does|*|\bstrikes?\b	duelyst	2	0	0	0	0	pending
@@ -81,17 +81,17 @@ damage|does|*|\bstrikes?\b	dnd5e	54	19	13	10	7	weak
 damage|does|*|\bstrikes?\b	sts2	21	9	3	10	5	weak
 damage|does|*|\bstrikes?\b	gwent	1	0	0	1	0	weak
 damage|does|*|\bstrikes?\b	wh_killteam	55	12	3	0	0	weak
-damage|does|*|\bstrikes?\b	runeterra	146	26	11	0	0	weak
-damage|does|*|\bstrikes?\b	wh_aos_4th	209	11	0	0	0	weak
-damage|does|*|\bstrikes?\b	wh_40k_10e	447	33	3	0	0	weak
-damage|does|*|\bstrikes?\b	shadowverse	213	19	8	0	0	weak
+damage|does|*|\bstrikes?\b	runeterra	146	26	18	0	0	weak
+damage|does|*|\bstrikes?\b	wh_aos_4th	209	44	12	0	0	weak
+damage|does|*|\bstrikes?\b	wh_40k_10e	447	85	43	0	0	weak
+damage|does|*|\bstrikes?\b	shadowverse	213	19	15	0	0	weak
 damage|does|*|\bstrikes?\b	hearthstone	3	0	0	3	0	weak
-damage|does|*|\bstrikes?\b	mtg	656	6	0	10	1	weak
+damage|does|*|\bstrikes?\b	mtg	656	22	0	10	1	weak
 damage|does|*|loses? \d+ (life|health|hp)	inscryption	1	1	1	0	0	thin
 damage|does|*|loses? \d+ (life|health|hp)	sts1	15	8	2	7	2	weak
 damage|does|*|loses? \d+ (life|health|hp)	sts2	39	11	3	0	0	weak
 damage|does|*|loses? \d+ (life|health|hp)	hearthstone	3	0	0	3	0	weak
-damage|does|*|loses? \d+ (life|health|hp)	mtg	552	6	3	10	0	weak
+damage|does|*|loses? \d+ (life|health|hp)	mtg	552	18	12	10	0	weak
 damage|benefits|*|whenever .{0,40}(deals|takes|is dealt) damage	faeria	3	3	2	0	0	weak
 damage|benefits|*|whenever .{0,40}(deals|takes|is dealt) damage	duelyst	27	7	4	3	1	pending
 damage|benefits|*|whenever .{0,40}(deals|takes|is dealt) damage	dnd5e	6	2	2	4	1	weak
@@ -99,16 +99,16 @@ damage|benefits|*|whenever .{0,40}(deals|takes|is dealt) damage	gwent	8	4	2	4	2	
 damage|benefits|*|whenever .{0,40}(deals|takes|is dealt) damage	hs_battlegrounds	20	3	0	10	0	weak
 damage|benefits|*|whenever .{0,40}(deals|takes|is dealt) damage	shadowverse	22	9	2	10	3	weak
 damage|benefits|*|whenever .{0,40}(deals|takes|is dealt) damage	hearthstone	47	1	0	10	1	weak
-damage|benefits|*|whenever .{0,40}(deals|takes|is dealt) damage	mtg	197	2	0	10	4	weak
+damage|benefits|*|whenever .{0,40}(deals|takes|is dealt) damage	mtg	197	11	3	10	4	weak
 damage|counters|*|prevent (all |the next )?.{0,20}damage	inscryption	2	2	1	0	0	thin
 damage|counters|*|prevent (all |the next )?.{0,20}damage	duelyst	1	1	0	0	0	thin
 damage|counters|*|prevent (all |the next )?.{0,20}damage	wh_underworlds	1	0	0	1	0	weak
-damage|counters|*|prevent (all |the next )?.{0,20}damage	mtg	291	4	0	10	1	weak
+damage|counters|*|prevent (all |the next )?.{0,20}damage	mtg	291	15	1	10	1	weak
 direct_damage|does|*|damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)	inscryption	1	1	0	0	0	thin
 direct_damage|does|*|damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)	faeria	12	6	6	6	5	ok
 direct_damage|does|*|damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)	runeterra	11	1	1	10	8	weak
 direct_damage|does|*|damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)	hearthstone	73	9	8	10	10	ok
-direct_damage|does|*|damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)	mtg	712	7	4	10	10	weak
+direct_damage|does|*|damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)	mtg	712	22	19	10	10	ok
 direct_damage|does|*|damage to (their|the enemy) (hero|face|leader|general|nexus)	duelyst	14	6	6	8	8	ok
 direct_damage|does|*|damage to (their|the enemy) (hero|face|leader|general|nexus)	runeterra	10	1	1	9	7	weak
 direct_damage|does|*|damage to (their|the enemy) (hero|face|leader|general|nexus)	shadowverse	314	26	26	0	0	ok
@@ -120,7 +120,7 @@ aoe_damage|does|*|damage to (all|each) (other )?(enem(y|ies) )?(creature|minion|
 aoe_damage|does|*|damage to (all|each) (other )?(enem(y|ies) )?(creature|minion|unit|character|follower|fighter|model)	wh_underworlds	12	4	4	8	8	ok
 aoe_damage|does|*|damage to (all|each) (other )?(enem(y|ies) )?(creature|minion|unit|character|follower|fighter|model)	shadowverse	211	16	16	0	0	ok
 aoe_damage|does|*|damage to (all|each) (other )?(enem(y|ies) )?(creature|minion|unit|character|follower|fighter|model)	hearthstone	214	8	8	10	10	ok
-aoe_damage|does|*|damage to (all|each) (other )?(enem(y|ies) )?(creature|minion|unit|character|follower|fighter|model)	mtg	190	1	1	10	10	ok
+aoe_damage|does|*|damage to (all|each) (other )?(enem(y|ies) )?(creature|minion|unit|character|follower|fighter|model)	mtg	190	5	5	10	10	ok
 aoe_damage|does|*|damage to all (enemies|units|minions|creatures|characters)	faeria	4	3	3	1	1	ok
 aoe_damage|does|*|damage to all (enemies|units|minions|creatures|characters)	duelyst	11	4	4	6	6	pending
 aoe_damage|does|*|damage to all (enemies|units|minions|creatures|characters)	sts1	31	12	12	0	0	ok
@@ -136,7 +136,7 @@ aoe_damage|does|*|deals? .{0,15}damage to each (?!opponent|player)	sts2	2	0	0	2	
 aoe_damage|does|*|deals? .{0,15}damage to each (?!opponent|player)	wh_underworlds	13	4	4	9	9	ok
 aoe_damage|does|*|deals? .{0,15}damage to each (?!opponent|player)	shadowverse	1	0	0	1	1	ok
 aoe_damage|does|*|deals? .{0,15}damage to each (?!opponent|player)	hearthstone	5	0	0	5	5	ok
-aoe_damage|does|*|deals? .{0,15}damage to each (?!opponent|player)	mtg	244	1	1	10	10	ok
+aoe_damage|does|*|deals? .{0,15}damage to each (?!opponent|player)	mtg	244	5	5	10	10	ok
 ping|does|*|deal 1 damage	into_the_breach	3	3	1	0	0	weak
 ping|does|*|deal 1 damage	inscryption	3	3	2	0	0	weak
 ping|does|*|deal 1 damage	faeria	19	15	3	0	0	weak
@@ -149,12 +149,12 @@ ping|does|*|deal 1 damage	runeterra	2	0	0	2	2	ok
 ping|does|*|deal 1 damage	wh_underworlds	115	26	13	0	0	weak
 ping|does|*|deal 1 damage	shadowverse	321	33	14	0	0	weak
 ping|does|*|deal 1 damage	hearthstone	167	13	10	0	0	weak
-ping|does|*|deal 1 damage	mtg	19	1	1	10	10	ok
+ping|does|*|deal 1 damage	mtg	19	2	2	10	10	ok
 excess_damage|does|*|\btrample\b	dnd5e	2	2	1	0	0	thin
 excess_damage|does|*|\btrample\b	wh_aos_4th	2	0	0	2	0	weak
-excess_damage|does|*|\btrample\b	wh_40k_10e	1	0	0	0	0	thin
+excess_damage|does|*|\btrample\b	wh_40k_10e	1	1	0	0	0	thin
 excess_damage|does|*|\btrample\b	shadowverse	1	1	0	0	0	thin
-excess_damage|does|*|\btrample\b	mtg	1095	17	16	0	0	ok
+excess_damage|does|*|\btrample\b	mtg	1095	30	28	0	0	ok
 damage_over_time|does|*|\bpoison(?!ous)	inscryption	1	1	0	0	0	thin
 damage_over_time|does|*|\bpoison(?!ous)	sts1	16	5	5	10	10	ok
 damage_over_time|does|*|\bpoison(?!ous)	darkest_dungeon	50	22	0	10	3	weak
@@ -164,10 +164,10 @@ damage_over_time|does|*|\bpoison(?!ous)	gwent	34	7	6	10	7	weak
 damage_over_time|does|*|\bpoison(?!ous)	wh_killteam	17	8	5	9	9	weak
 damage_over_time|does|*|\bpoison(?!ous)	runeterra	17	7	0	10	10	weak
 damage_over_time|does|*|\bpoison(?!ous)	wh_underworlds	35	8	0	10	10	weak
-damage_over_time|does|*|\bpoison(?!ous)	wh_aos_4th	3	0	0	2	0	weak
-damage_over_time|does|*|\bpoison(?!ous)	wh_40k_10e	3	0	0	0	0	thin
+damage_over_time|does|*|\bpoison(?!ous)	wh_aos_4th	3	1	1	2	0	weak
+damage_over_time|does|*|\bpoison(?!ous)	wh_40k_10e	3	3	3	0	0	ok
 damage_over_time|does|*|\bpoison(?!ous)	hearthstone	3	1	0	2	0	weak
-damage_over_time|does|*|\bpoison(?!ous)	mtg	52	0	0	10	7	weak
+damage_over_time|does|*|\bpoison(?!ous)	mtg	52	4	1	10	7	weak
 damage_over_time|does|*|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)	faeria	2	2	0	0	0	thin
 damage_over_time|does|*|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)	duelyst	7	7	1	0	0	weak
 damage_over_time|does|*|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)	sts1	7	5	0	2	1	weak
@@ -176,10 +176,10 @@ damage_over_time|does|*|at the (start|end|beginning) of .{0,30}(lose|take|deals?
 damage_over_time|does|*|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)	wh_underworlds	6	2	0	4	2	weak
 damage_over_time|does|*|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)	shadowverse	75	12	2	0	0	weak
 damage_over_time|does|*|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)	hearthstone	60	10	2	10	10	weak
-damage_over_time|does|*|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)	mtg	66	1	0	10	6	weak
+damage_over_time|does|*|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)	mtg	66	5	1	10	6	weak
 destroy|does|*|out of action	wh_killteam	31	9	0	10	0	weak
 destroy|does|*|out of action	wh_underworlds	605	70	1	0	0	weak
-destroy|does|*|out of action	wh_40k_10e	18	2	0	10	1	weak
+destroy|does|*|out of action	wh_40k_10e	18	3	0	10	1	weak
 destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	into_the_breach	6	6	0	0	0	weak
 destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	inscryption	4	4	0	0	0	weak
 destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	faeria	16	10	3	0	0	weak
@@ -189,10 +189,10 @@ destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	dnd5e	1	1	0	0	0	thin
 destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	gwent	54	16	13	10	7	weak
 destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	hs_battlegrounds	15	1	0	10	2	weak
 destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	runeterra	33	3	2	10	8	weak
-destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	wh_40k_10e	3	0	0	2	1	weak
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	wh_40k_10e	3	1	0	2	1	weak
 destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	shadowverse	325	27	16	0	0	weak
 destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	hearthstone	292	23	11	10	8	weak
-destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	mtg	973	15	12	0	0	weak
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	mtg	973	30	23	0	0	weak
 destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	inscryption	2	2	0	0	0	thin
 destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	faeria	6	6	0	0	0	weak
 destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	duelyst	5	5	0	0	0	weak
@@ -203,16 +203,16 @@ destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	hs_battleground
 destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	runeterra	1	1	0	0	0	thin
 destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	shadowverse	53	7	0	10	1	weak
 destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	hearthstone	23	3	0	10	0	weak
-destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	mtg	243	3	0	10	0	weak
+destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	mtg	243	7	0	10	0	weak
 destroy|counters|*|\bindestructible\b	dnd5e	1	1	1	0	0	thin
-destroy|counters|*|\bindestructible\b	mtg	368	6	0	10	1	weak
+destroy|counters|*|\bindestructible\b	mtg	368	10	0	10	1	weak
 heal|does|*|\byou gain .{0,12}life	faeria	1	1	1	0	0	thin
-heal|does|*|\byou gain .{0,12}life	mtg	971	20	20	0	0	ok
+heal|does|*|\byou gain .{0,12}life	mtg	971	32	32	0	0	ok
 heal|does|*|\bheal \(	into_the_breach	1	1	1	0	0	thin
 heal|does|*|\bheal \(	sts1	1	1	1	0	0	thin
 heal|does|*|\bheal \(	wh_killteam	1	0	0	1	1	ok
 heal|does|*|\bheal \(	wh_underworlds	66	11	11	0	0	ok
-heal|does|*|\bheal \(	wh_aos_4th	212	9	9	10	7	weak
+heal|does|*|\bheal \(	wh_aos_4th	212	43	43	10	7	ok
 heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	into_the_breach	5	5	4	0	0	weak
 heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	inscryption	1	1	1	0	0	thin
 heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	duelyst	31	11	11	10	10	ok
@@ -223,39 +223,39 @@ heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	sts2	20	8
 heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	gwent	11	3	2	8	8	ok
 heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	runeterra	23	1	1	10	9	ok
 heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	wh_underworlds	2	0	0	2	2	ok
-heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	wh_aos_4th	3	0	0	2	1	weak
+heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	wh_aos_4th	3	1	1	2	1	weak
 heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	shadowverse	484	51	51	0	0	ok
 heal|does|*|\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b	hearthstone	186	13	12	10	10	ok
 heal|does|*|gains? (?:\d+|x|an?|one|two|three|four|five) (life|health|hp)\b	inscryption	1	1	1	0	0	thin
 heal|does|*|gains? (?:\d+|x|an?|one|two|three|four|five) (life|health|hp)\b	faeria	13	5	5	8	8	ok
 heal|does|*|gains? (?:\d+|x|an?|one|two|three|four|five) (life|health|hp)\b	hs_battlegrounds	1	1	1	0	0	thin
-heal|does|*|gains? (?:\d+|x|an?|one|two|three|four|five) (life|health|hp)\b	mtg	843	21	21	0	0	ok
+heal|does|*|gains? (?:\d+|x|an?|one|two|three|four|five) (life|health|hp)\b	mtg	843	31	30	0	0	ok
 heal|does|*|regain	into_the_breach	1	1	0	0	0	thin
 heal|does|*|regain	inscryption	1	1	0	0	0	thin
 heal|does|*|regain	dnd5e	178	65	24	0	0	weak
 heal|does|*|regain	hs_battlegrounds	1	1	1	0	0	thin
 heal|does|*|regain	wh_killteam	90	24	24	0	0	ok
 heal|does|*|regain	wh_aos_4th	1	0	0	1	0	weak
-heal|does|*|regain	wh_40k_10e	95	5	5	10	10	ok
+heal|does|*|regain	wh_40k_10e	95	16	16	10	10	ok
 lifesteal|does|*|lifesteal	runeterra	28	4	4	10	10	ok
 lifesteal|does|*|lifesteal	hearthstone	220	12	11	10	10	ok
-lifesteal|does|*|lifelink	mtg	492	6	6	10	10	ok
+lifesteal|does|*|lifelink	mtg	492	10	10	10	10	ok
 regeneration|does|*|\bregenerat	into_the_breach	3	3	3	0	0	ok
-regeneration|does|*|\bregenerat	wh_bloodbowl3	42	42	0	0	0	weak
+regeneration|does|*|\bregenerat	wh_bloodbowl3	42	42	37	0	0	weak
 regeneration|does|*|\bregenerat	inscryption	1	1	0	0	0	thin
 regeneration|does|*|\bregenerat	dnd5e	5	5	5	0	0	ok
 regeneration|does|*|\bregenerat	wh_killteam	2	2	0	0	0	thin
 regeneration|does|*|\bregenerat	runeterra	23	7	7	10	10	ok
-regeneration|does|*|\bregenerat	wh_aos_4th	16	0	0	7	6	weak
-regeneration|does|*|\bregenerat	wh_40k_10e	14	1	1	8	5	weak
-regeneration|does|*|\bregenerat	mtg	259	5	0	10	5	weak
+regeneration|does|*|\bregenerat	wh_aos_4th	16	9	9	7	6	ok
+regeneration|does|*|\bregenerat	wh_40k_10e	14	6	5	8	5	weak
+regeneration|does|*|\bregenerat	mtg	259	15	1	10	5	weak
 revive|does|*|return .{0,40}from (your |the |a )?(graveyard|discard pile|discard)( to the (battlefield|board|field))?	sts1	2	2	0	0	0	thin
 revive|does|*|return .{0,40}from (your |the |a )?(graveyard|discard pile|discard)( to the (battlefield|board|field))?	sts2	1	1	0	0	0	thin
-revive|does|*|return .{0,40}from (your |the |a )?(graveyard|discard pile|discard)( to the (battlefield|board|field))?	mtg	644	9	8	10	10	ok
+revive|does|*|return .{0,40}from (your |the |a )?(graveyard|discard pile|discard)( to the (battlefield|board|field))?	mtg	644	19	12	10	10	weak
 shield|does|*|divine shield	hs_battlegrounds	122	18	16	0	0	weak
 shield|does|*|divine shield	wh_killteam	1	0	0	1	0	weak
 shield|does|*|divine shield	hearthstone	198	11	9	0	0	weak
-shield|does|*|\bshield\b	into_the_breach	18	18	18	0	0	ok
+shield|does|*|\bshield\b	into_the_breach	18	18	17	0	0	ok
 shield|does|*|\bshield\b	inscryption	3	3	2	0	0	weak
 shield|does|*|\bshield\b	sts1	1	1	1	0	0	thin
 shield|does|*|\bshield\b	darkest_dungeon	1	1	1	0	0	thin
@@ -266,25 +266,25 @@ shield|does|*|\bshield\b	hs_battlegrounds	122	18	16	0	0	weak
 shield|does|*|\bshield\b	wh_killteam	24	13	3	1	0	weak
 shield|does|*|\bshield\b	runeterra	2	0	0	2	0	weak
 shield|does|*|\bshield\b	wh_underworlds	4	4	0	0	0	weak
-shield|does|*|\bshield\b	wh_aos_4th	14	0	0	10	4	weak
-shield|does|*|\bshield\b	wh_40k_10e	48	1	0	10	0	weak
+shield|does|*|\bshield\b	wh_aos_4th	14	1	0	10	4	weak
+shield|does|*|\bshield\b	wh_40k_10e	48	9	0	10	0	weak
 shield|does|*|\bshield\b	shadowverse	13	1	0	10	0	weak
 shield|does|*|\bshield\b	hearthstone	200	12	9	0	0	weak
-shield|does|*|\bshield\b	mtg	19	0	0	10	7	weak
+shield|does|*|\bshield\b	mtg	19	2	2	10	7	weak
 shield|does|*|\bward\b	dnd5e	8	2	0	6	1	weak
 shield|does|*|\bward\b	wh_killteam	1	1	1	0	0	thin
-shield|does|*|\bward\b	wh_aos_4th	369	19	0	1	0	weak
+shield|does|*|\bward\b	wh_aos_4th	369	76	10	1	0	weak
 shield|does|*|\bward\b	wh_40k_10e	1	0	0	1	0	weak
 shield|does|*|\bward\b	shadowverse	620	57	1	0	0	weak
-shield|does|*|\bward\b	mtg	193	6	6	10	10	ok
+shield|does|*|\bward\b	mtg	193	10	10	10	10	ok
 damage_reduction|does|*|invulnerable saves?	wh_killteam	126	25	3	0	0	weak
-damage_reduction|does|*|invulnerable saves?	wh_40k_10e	636	46	7	0	0	weak
+damage_reduction|does|*|invulnerable saves?	wh_40k_10e	636	123	18	0	0	weak
 damage_reduction|does|*|invulnerable save	wh_killteam	126	25	3	0	0	weak
-damage_reduction|does|*|invulnerable save	wh_40k_10e	636	46	7	0	0	weak
+damage_reduction|does|*|invulnerable save	wh_40k_10e	636	123	18	0	0	weak
 damage_reduction|does|*|prevent .{0,15}damage	inscryption	2	2	0	0	0	thin
 damage_reduction|does|*|prevent .{0,15}damage	duelyst	1	1	0	0	0	thin
 damage_reduction|does|*|prevent .{0,15}damage	wh_underworlds	1	0	0	1	0	weak
-damage_reduction|does|*|prevent .{0,15}damage	mtg	285	4	2	10	8	weak
+damage_reduction|does|*|prevent .{0,15}damage	mtg	285	15	6	10	8	weak
 damage_reduction|does|*|\barmou?r\b	into_the_breach	9	9	4	0	0	weak
 damage_reduction|does|*|\barmou?r\b	wh_bloodbowl3	17	17	0	0	0	weak
 damage_reduction|does|*|\barmou?r\b	inscryption	10	10	0	0	0	weak
@@ -294,8 +294,8 @@ damage_reduction|does|*|\barmou?r\b	dnd5e	60	18	4	10	2	weak
 damage_reduction|does|*|\barmou?r\b	gwent	72	31	19	10	0	weak
 damage_reduction|does|*|\barmou?r\b	hs_battlegrounds	5	5	5	0	0	ok
 damage_reduction|does|*|\barmou?r\b	wh_killteam	18	1	0	10	2	weak
-damage_reduction|does|*|\barmou?r\b	wh_aos_4th	5	1	0	3	1	weak
-damage_reduction|does|*|\barmou?r\b	wh_40k_10e	171	9	2	10	0	weak
+damage_reduction|does|*|\barmou?r\b	wh_aos_4th	5	2	0	3	1	weak
+damage_reduction|does|*|\barmou?r\b	wh_40k_10e	171	17	5	10	0	weak
 damage_reduction|does|*|\barmou?r\b	hearthstone	195	7	7	10	8	weak
 damage_reduction|does|*|\barmou?r\b	mtg	14	0	0	10	0	weak
 damage_reduction|does|*|\bresist	into_the_breach	3	3	0	0	0	weak
@@ -304,56 +304,56 @@ damage_reduction|does|*|\bresist	darkest_dungeon	232	96	6	10	2	weak
 damage_reduction|does|*|\bresist	dnd5e	135	55	14	10	5	weak
 damage_reduction|does|*|\bresist	sts2	1	0	0	1	0	weak
 damage_reduction|does|*|\bresist	wh_killteam	1	1	0	0	0	thin
-damage_reduction|does|*|\bresist	wh_aos_4th	7	0	0	2	0	weak
-damage_reduction|does|*|\bresist	wh_40k_10e	2	0	0	0	0	thin
+damage_reduction|does|*|\bresist	wh_aos_4th	7	5	0	2	0	weak
+damage_reduction|does|*|\bresist	wh_40k_10e	2	2	2	0	0	thin
 stealth|does|*|\bstealth	dnd5e	15	4	2	10	1	weak
 stealth|does|*|\bstealth	gwent	1	1	1	0	0	thin
 stealth|does|*|\bstealth	hs_battlegrounds	17	5	4	10	10	ok
-stealth|does|*|\bstealth	wh_killteam	16	5	1	10	2	weak
-stealth|does|*|\bstealth	wh_40k_10e	139	11	2	0	0	weak
+stealth|does|*|\bstealth	wh_killteam	16	5	2	10	2	weak
+stealth|does|*|\bstealth	wh_40k_10e	139	26	3	0	0	weak
 stealth|does|*|\bstealth	hearthstone	146	15	14	10	10	ok
-taunt|does|*|\btaunt\b	wh_bloodbowl3	3	3	0	0	0	weak
+taunt|does|*|\btaunt\b	wh_bloodbowl3	3	3	2	0	0	weak
 taunt|does|*|\btaunt\b	inscryption	1	1	0	0	0	thin
 taunt|does|*|\btaunt\b	faeria	32	16	14	0	0	weak
 taunt|does|*|\btaunt\b	sts1	1	1	0	0	0	thin
 taunt|does|*|\btaunt\b	hs_battlegrounds	130	23	21	10	10	ok
 taunt|does|*|\btaunt\b	hearthstone	804	45	42	10	10	ok
 stat_gain|does|*|add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)	wh_killteam	48	9	9	10	5	weak
-stat_gain|does|*|add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)	wh_aos_4th	707	46	13	0	0	weak
-stat_gain|does|*|add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)	wh_40k_10e	469	21	15	0	0	weak
+stat_gain|does|*|add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)	wh_aos_4th	707	106	61	0	0	weak
+stat_gain|does|*|add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)	wh_40k_10e	469	69	55	0	0	weak
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	into_the_breach	63	63	3	0	0	weak
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	inscryption	2	2	1	0	0	thin
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	faeria	1	1	0	0	0	thin
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	duelyst	92	31	23	10	10	weak
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	hs_battlegrounds	100	18	13	1	1	weak
-stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	wh_killteam	22	7	2	10	1	weak
+stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	wh_killteam	22	7	3	10	1	weak
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	runeterra	3	0	0	3	3	ok
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	wh_underworlds	234	20	14	2	2	weak
-stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	wh_aos_4th	152	8	7	10	1	weak
+stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	wh_aos_4th	152	27	18	10	1	weak
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	shadowverse	7	4	1	3	0	weak
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	hearthstone	443	19	8	0	0	weak
 stat_gain|does|*|add \d to .{0,25}(hit|wound|save|charge|run|attacks?) (rolls?|characteristic)	wh_killteam	60	11	11	5	2	weak
-stat_gain|does|*|add \d to .{0,25}(hit|wound|save|charge|run|attacks?) (rolls?|characteristic)	wh_aos_4th	572	37	11	0	0	weak
-stat_gain|does|*|add \d to .{0,25}(hit|wound|save|charge|run|attacks?) (rolls?|characteristic)	wh_40k_10e	401	20	15	0	0	weak
-stat_gain|does|*|\bimprove (the )?.{0,50}(characteristic|skill|save)	wh_killteam	38	4	3	10	10	ok
+stat_gain|does|*|add \d to .{0,25}(hit|wound|save|charge|run|attacks?) (rolls?|characteristic)	wh_aos_4th	572	89	56	0	0	weak
+stat_gain|does|*|add \d to .{0,25}(hit|wound|save|charge|run|attacks?) (rolls?|characteristic)	wh_40k_10e	401	58	46	0	0	weak
+stat_gain|does|*|\bimprove (the )?.{0,50}(characteristic|skill|save)	wh_killteam	38	4	4	10	10	ok
 stat_gain|does|*|\bimprove (the )?.{0,50}(characteristic|skill|save)	wh_aos_4th	3	0	0	3	3	ok
-stat_gain|does|*|\bimprove (the )?.{0,50}(characteristic|skill|save)	wh_40k_10e	211	12	9	0	0	weak
+stat_gain|does|*|\bimprove (the )?.{0,50}(characteristic|skill|save)	wh_40k_10e	211	24	19	0	0	weak
 stat_gain|does|*|add \d+ to (the )?.{0,40}(toughness|wounds|strength|attacks|damage|move|save|characteristic|hit roll|wound roll)	wh_killteam	122	24	23	0	0	ok
-stat_gain|does|*|add \d+ to (the )?.{0,40}(toughness|wounds|strength|attacks|damage|move|save|characteristic|hit roll|wound roll)	wh_aos_4th	672	45	14	0	0	weak
-stat_gain|does|*|add \d+ to (the )?.{0,40}(toughness|wounds|strength|attacks|damage|move|save|characteristic|hit roll|wound roll)	wh_40k_10e	559	27	21	0	0	weak
+stat_gain|does|*|add \d+ to (the )?.{0,40}(toughness|wounds|strength|attacks|damage|move|save|characteristic|hit roll|wound roll)	wh_aos_4th	672	105	61	0	0	weak
+stat_gain|does|*|add \d+ to (the )?.{0,40}(toughness|wounds|strength|attacks|damage|move|save|characteristic|hit roll|wound roll)	wh_40k_10e	559	83	66	0	0	weak
 stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	into_the_breach	58	58	1	0	0	weak
 stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	faeria	1	1	0	0	0	thin
 stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	duelyst	3	0	0	3	1	weak
-stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	darkest_dungeon	358	127	117	10	10	ok
-stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	wh_killteam	20	6	2	10	0	weak
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	darkest_dungeon	358	127	118	10	10	ok
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	wh_killteam	20	6	3	10	0	weak
 stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	runeterra	3	0	0	3	3	ok
 stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	wh_underworlds	146	14	10	0	0	weak
-stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	wh_aos_4th	152	8	7	10	1	weak
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	wh_aos_4th	152	27	18	10	1	weak
 stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	shadowverse	7	4	1	3	0	weak
 stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	hearthstone	1	0	0	1	1	ok
 stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	inscryption	2	2	0	0	0	thin
 stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	darkest_dungeon	1	0	0	1	0	weak
-stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	gwent	398	114	86	10	9	weak
+stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	gwent	398	114	89	10	9	weak
 stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	wh_killteam	6	2	0	4	0	weak
 stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	runeterra	10	0	0	10	8	weak
 stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	wh_40k_10e	1	0	0	1	1	ok
@@ -363,13 +363,13 @@ stat_gain|does|*|\+\d+/\+\d+	duelyst	70	26	14	10	9	weak
 stat_gain|does|*|\+\d+/\+\d+	hs_battlegrounds	175	25	16	1	1	weak
 stat_gain|does|*|\+\d+/\+\d+	shadowverse	708	56	49	0	0	weak
 stat_gain|does|*|\+\d+/\+\d+	hearthstone	703	41	24	0	0	weak
-stat_gain|does|*|\+\d+/\+\d+	mtg	3941	43	20	0	0	weak
+stat_gain|does|*|\+\d+/\+\d+	mtg	3941	107	70	0	0	weak
 stat_gain|does|*|\+\d+\|\+\d+	runeterra	452	59	31	0	0	weak
 stat_gain|does|*|gets? \+\d+	faeria	2	2	1	0	0	thin
 stat_gain|does|*|gets? \+\d+	duelyst	1	1	1	0	0	thin
 stat_gain|does|*|gets? \+\d+	wh_underworlds	2	1	0	1	1	ok
 stat_gain|does|*|gets? \+\d+	hearthstone	1	0	0	1	1	ok
-stat_gain|does|*|gets? \+\d+	mtg	2258	20	8	0	0	weak
+stat_gain|does|*|gets? \+\d+	mtg	2258	54	36	0	0	weak
 stat_gain|does|*|gains? \+\d+	into_the_breach	6	6	3	0	0	weak
 stat_gain|does|*|gains? \+\d+	inscryption	1	1	0	0	0	thin
 stat_gain|does|*|gains? \+\d+	faeria	58	40	19	0	0	weak
@@ -390,43 +390,43 @@ aura|does|*|(other|all|each) .{0,30}(you control|allies|friendly) .{0,15}(get|ha
 aura|does|*|\baura\b	dnd5e	26	9	5	10	5	weak
 aura|does|*|\baura\b	wh_killteam	10	4	1	6	3	weak
 aura|does|*|\baura\b	wh_underworlds	1	1	0	0	0	thin
-aura|does|*|\baura\b	wh_aos_4th	15	1	1	10	3	weak
-aura|does|*|\baura\b	wh_40k_10e	196	16	15	0	0	ok
+aura|does|*|\baura\b	wh_aos_4th	15	5	2	10	3	weak
+aura|does|*|\baura\b	wh_40k_10e	196	43	38	0	0	weak
 aura|does|*|\baura\b	shadowverse	3	3	0	0	0	weak
 aura|does|*|\baura\b	hearthstone	5	4	0	1	0	weak
-aura|does|*|\baura\b	mtg	300	2	0	10	7	weak
-permanent_growth|does|*|\+1/\+1 counter	mtg	1750	25	12	0	0	weak
+aura|does|*|\baura\b	mtg	300	8	0	10	7	weak
+permanent_growth|does|*|\+1/\+1 counter	mtg	1750	55	21	0	0	weak
 permanent_growth|does|*|\bevolve	inscryption	3	3	0	0	0	weak
-permanent_growth|does|*|\bevolve	gwent	18	10	0	8	1	weak
+permanent_growth|does|*|\bevolve	gwent	18	10	1	8	1	weak
 permanent_growth|does|*|\bevolve	runeterra	9	3	0	6	0	weak
 permanent_growth|does|*|\bevolve	shadowverse	2407	216	4	0	0	weak
 permanent_growth|does|*|\bevolve	mtg	13	0	0	10	10	ok
 temporary_buff|does|*|(until|till) end of (turn|round)	faeria	1	1	1	0	0	thin
 temporary_buff|does|*|(until|till) end of (turn|round)	duelyst	3	2	2	1	0	weak
 temporary_buff|does|*|(until|till) end of (turn|round)	hearthstone	5	0	0	5	2	weak
-temporary_buff|does|*|(until|till) end of (turn|round)	mtg	2859	34	30	0	0	weak
+temporary_buff|does|*|(until|till) end of (turn|round)	mtg	2859	76	70	0	0	ok
 stat_loss|does|*|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_killteam	21	2	2	10	10	ok
-stat_loss|does|*|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	170	6	3	10	3	weak
-stat_loss|does|*|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	270	22	16	0	0	weak
+stat_loss|does|*|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	170	32	23	10	3	weak
+stat_loss|does|*|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	270	51	40	0	0	weak
 stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_killteam	16	2	2	10	10	ok
-stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	140	4	1	10	2	weak
-stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	281	23	16	0	0	weak
+stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	140	25	16	10	2	weak
+stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	281	56	44	0	0	weak
 stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_killteam	62	12	7	4	4	weak
-stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	144	7	6	10	5	weak
-stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	351	26	18	0	0	weak
+stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	144	28	22	10	5	weak
+stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	351	63	44	0	0	weak
 stat_loss|does|*|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)	sts1	1	1	1	0	0	thin
 stat_loss|does|*|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)	darkest_dungeon	219	69	69	10	10	ok
 stat_loss|does|*|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)	wh_killteam	1	1	0	0	0	thin
 stat_loss|does|*|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)	wh_underworlds	20	0	0	10	10	ok
-stat_loss|does|*|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)	wh_aos_4th	1	0	0	0	0	thin
+stat_loss|does|*|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)	wh_aos_4th	1	1	1	0	0	thin
 stat_loss|does|*|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)	hearthstone	8	0	0	8	0	weak
 stat_loss|does|*|-\d+/-\d+	faeria	3	3	3	0	0	ok
 stat_loss|does|*|-\d+/-\d+	shadowverse	64	8	8	10	10	ok
 stat_loss|does|*|-\d+/-\d+	hearthstone	6	1	1	5	5	ok
-stat_loss|does|*|-\d+/-\d+	mtg	427	4	4	10	9	ok
+stat_loss|does|*|-\d+/-\d+	mtg	427	9	9	10	9	ok
 stat_loss|does|*|gets? -\d+	wh_underworlds	1	0	0	1	1	ok
-stat_loss|does|*|gets? -\d+	mtg	312	3	3	10	10	ok
-disable|does|*|\bstun	wh_bloodbowl3	47	47	0	0	0	weak
+stat_loss|does|*|gets? -\d+	mtg	312	5	5	10	10	ok
+disable|does|*|\bstun	wh_bloodbowl3	47	47	8	0	0	weak
 disable|does|*|\bstun	inscryption	6	6	0	0	0	weak
 disable|does|*|\bstun	duelyst	18	5	5	10	8	weak
 disable|does|*|\bstun	sts1	4	4	4	0	0	ok
@@ -435,10 +435,10 @@ disable|does|*|\bstun	dnd5e	17	9	7	8	3	weak
 disable|does|*|\bstun	sts2	13	8	8	5	5	ok
 disable|does|*|\bstun	wh_killteam	142	37	4	0	0	weak
 disable|does|*|\bstun	runeterra	78	6	6	10	8	weak
-disable|does|*|\bstun	wh_aos_4th	3	0	0	1	0	weak
-disable|does|*|\bstun	wh_40k_10e	4	1	0	0	0	thin
-disable|does|*|\bstun	mtg	56	0	0	10	10	ok
-disable|does|*|\btap (target|it|that)	mtg	218	0	0	10	4	weak
+disable|does|*|\bstun	wh_aos_4th	3	2	0	1	0	weak
+disable|does|*|\bstun	wh_40k_10e	4	4	1	0	0	weak
+disable|does|*|\bstun	mtg	56	2	2	10	10	ok
+disable|does|*|\btap (target|it|that)	mtg	218	7	5	10	4	weak
 draw|does|*|\bdraws? (six|seven|eight|nine|ten|\d+) cards?	inscryption	5	5	5	0	0	ok
 draw|does|*|\bdraws? (six|seven|eight|nine|ten|\d+) cards?	faeria	9	5	5	4	4	ok
 draw|does|*|\bdraws? (six|seven|eight|nine|ten|\d+) cards?	duelyst	4	2	2	2	2	ok
@@ -447,7 +447,7 @@ draw|does|*|\bdraws? (six|seven|eight|nine|ten|\d+) cards?	sts2	77	24	24	0	0	ok
 draw|does|*|\bdraws? (six|seven|eight|nine|ten|\d+) cards?	runeterra	1	0	0	1	0	weak
 draw|does|*|\bdraws? (six|seven|eight|nine|ten|\d+) cards?	shadowverse	193	17	17	0	0	ok
 draw|does|*|\bdraws? (six|seven|eight|nine|ten|\d+) cards?	hearthstone	161	10	8	10	10	ok
-draw|does|*|\bdraws? (six|seven|eight|nine|ten|\d+) cards?	mtg	47	0	0	10	10	ok
+draw|does|*|\bdraws? (six|seven|eight|nine|ten|\d+) cards?	mtg	47	4	4	10	10	ok
 draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	inscryption	10	10	8	0	0	weak
 draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	faeria	32	20	19	4	4	ok
 draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	duelyst	45	11	10	10	10	ok
@@ -458,7 +458,7 @@ draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	gwent	29	12	
 draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	runeterra	5	0	0	5	2	weak
 draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	shadowverse	660	64	63	0	0	ok
 draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	hearthstone	427	21	18	10	9	weak
-draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	mtg	2107	35	35	0	0	ok
+draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	mtg	2107	73	69	0	0	ok
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	inscryption	11	11	9	0	0	weak
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	faeria	39	24	16	2	2	weak
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	duelyst	50	16	11	10	9	weak
@@ -469,13 +469,13 @@ draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	gwent	38	16	13	10	6	weak
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_killteam	3	3	0	0	0	weak
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	runeterra	185	24	19	0	0	weak
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_underworlds	42	12	8	0	0	weak
-draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_aos_4th	7	0	0	2	0	weak
-draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_40k_10e	2	0	0	0	0	thin
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_aos_4th	7	5	0	2	0	weak
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_40k_10e	2	2	0	0	0	thin
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	shadowverse	645	63	63	0	0	ok
 draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	hearthstone	642	26	17	10	7	weak
-draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	mtg	1880	33	33	0	0	ok
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	mtg	1880	64	61	0	0	ok
 tutor|does|*|search your (library|deck)	inscryption	2	2	2	0	0	thin
-tutor|does|*|search your (library|deck)	mtg	618	6	6	10	10	ok
+tutor|does|*|search your (library|deck)	mtg	618	16	16	10	10	ok
 tutor|does|*|(?:^|[.:!/])(?:(?!\b(?:remove|removes|removed|lose|loses|purge|purges|shuffle|shuffles)\b)[^.:!/])*\bfrom your (?:deck|draw pile)\b	inscryption	6	6	6	0	0	ok
 tutor|does|*|(?:^|[.:!/])(?:(?!\b(?:remove|removes|removed|lose|loses|purge|purges|shuffle|shuffles)\b)[^.:!/])*\bfrom your (?:deck|draw pile)\b	faeria	4	3	3	1	1	ok
 tutor|does|*|(?:^|[.:!/])(?:(?!\b(?:remove|removes|removed|lose|loses|purge|purges|shuffle|shuffles)\b)[^.:!/])*\bfrom your (?:deck|draw pile)\b	duelyst	8	5	5	3	3	ok
@@ -514,11 +514,11 @@ discard|does|*|\bdiscards?\b(?! piles?\b)	hs_battlegrounds	25	10	10	10	10	ok
 discard|does|*|\bdiscards?\b(?! piles?\b)	wh_killteam	23	18	0	0	0	weak
 discard|does|*|\bdiscards?\b(?! piles?\b)	runeterra	44	10	8	0	0	weak
 discard|does|*|\bdiscards?\b(?! piles?\b)	wh_underworlds	129	31	7	0	0	weak
-discard|does|*|\bdiscards?\b(?! piles?\b)	wh_aos_4th	3	0	0	0	0	thin
-discard|does|*|\bdiscards?\b(?! piles?\b)	wh_40k_10e	19	1	0	5	0	weak
+discard|does|*|\bdiscards?\b(?! piles?\b)	wh_aos_4th	3	3	0	0	0	weak
+discard|does|*|\bdiscards?\b(?! piles?\b)	wh_40k_10e	19	14	0	5	0	weak
 discard|does|*|\bdiscards?\b(?! piles?\b)	shadowverse	113	15	12	0	0	weak
 discard|does|*|\bdiscards?\b(?! piles?\b)	hearthstone	73	7	7	10	9	ok
-discard|does|*|\bdiscards?\b(?! piles?\b)	mtg	1198	13	10	0	0	weak
+discard|does|*|\bdiscards?\b(?! piles?\b)	mtg	1198	26	18	0	0	weak
 hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	inscryption	4	4	0	0	0	weak
 hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	sts1	22	12	0	0	0	weak
 hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	dnd5e	1	1	0	0	0	thin
@@ -528,13 +528,13 @@ hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	hs_battlegrounds	25	10	0	10	0	
 hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	wh_killteam	23	18	0	0	0	weak
 hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	runeterra	44	10	2	0	0	weak
 hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	wh_underworlds	129	31	2	0	0	weak
-hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	wh_aos_4th	3	0	0	0	0	thin
-hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	wh_40k_10e	19	1	0	5	0	weak
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	wh_aos_4th	3	3	0	0	0	weak
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	wh_40k_10e	19	14	0	5	0	weak
 hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	shadowverse	113	15	2	0	0	weak
 hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	hearthstone	73	7	1	10	1	weak
-hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	mtg	1198	13	5	0	0	weak
-mill|does|*|\bmill	mtg	379	5	1	10	5	weak
-self_mill|does|*|\bmill	mtg	379	5	5	10	7	weak
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	mtg	1198	26	8	0	0	weak
+mill|does|*|\bmill	mtg	379	8	8	10	5	weak
+self_mill|does|*|\bmill	mtg	379	8	7	10	7	weak
 copy|does|*|\bcopy\b	inscryption	9	9	4	0	0	weak
 copy|does|*|\bcopy\b	faeria	8	7	6	1	1	weak
 copy|does|*|\bcopy\b	duelyst	15	7	7	0	0	pending
@@ -546,7 +546,7 @@ copy|does|*|\bcopy\b	hs_battlegrounds	111	19	19	10	10	ok
 copy|does|*|\bcopy\b	runeterra	98	19	14	0	0	weak
 copy|does|*|\bcopy\b	shadowverse	96	11	8	0	0	weak
 copy|does|*|\bcopy\b	hearthstone	349	26	26	0	0	ok
-copy|does|*|\bcopy\b	mtg	579	9	8	10	10	ok
+copy|does|*|\bcopy\b	mtg	579	14	13	10	10	ok
 copy|does|*|\bcopies\b	inscryption	6	6	2	0	0	weak
 copy|does|*|\bcopies\b	faeria	1	0	0	1	1	ok
 copy|does|*|\bcopies\b	duelyst	5	2	0	0	0	pending
@@ -557,7 +557,7 @@ copy|does|*|\bcopies\b	hs_battlegrounds	16	2	0	10	6	weak
 copy|does|*|\bcopies\b	runeterra	27	8	3	10	7	weak
 copy|does|*|\bcopies\b	shadowverse	34	6	3	10	10	weak
 copy|does|*|\bcopies\b	hearthstone	98	6	6	10	9	ok
-copy|does|*|\bcopies\b	mtg	67	0	0	10	10	ok
+copy|does|*|\bcopies\b	mtg	67	1	1	10	10	ok
 summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	into_the_breach	2	2	0	0	0	thin
 summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	inscryption	3	3	2	0	0	weak
 summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	faeria	23	14	13	0	0	ok
@@ -568,14 +568,14 @@ summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|anothe
 summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	hs_battlegrounds	121	20	18	10	10	ok
 summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	runeterra	258	42	34	0	0	weak
 summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	wh_underworlds	1	1	1	0	0	thin
-summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	wh_40k_10e	6	0	0	2	0	weak
+summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	wh_40k_10e	6	4	0	2	0	weak
 summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	shadowverse	970	102	97	0	0	ok
 summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	hearthstone	1274	87	70	10	10	weak
 summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	dnd5e	11	3	0	8	0	weak
 summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	gwent	17	3	0	10	7	weak
-summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	mtg	2165	25	16	0	0	weak
+summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	mtg	2165	54	37	0	0	weak
 summon|does|*|\bspawn	into_the_breach	42	42	16	0	0	weak
-summon|does|*|\bspawn	wh_bloodbowl3	3	3	0	0	0	weak
+summon|does|*|\bspawn	wh_bloodbowl3	3	3	1	0	0	weak
 summon|does|*|\bspawn	inscryption	16	16	10	0	0	weak
 summon|does|*|\bspawn	sts1	4	4	3	0	0	weak
 summon|does|*|\bspawn	dnd5e	3	3	1	0	0	weak
@@ -589,7 +589,7 @@ summon|does|*|\bspawn	hearthstone	1	0	0	1	0	weak
 summon|does|*|\bspawn	mtg	22	0	0	10	9	ok
 summon|does|*|\bput .{0,30}(onto|into) the battlefield	hs_battlegrounds	1	1	0	0	0	thin
 summon|does|*|\bput .{0,30}(onto|into) the battlefield	hearthstone	14	1	0	10	3	weak
-summon|does|*|\bput .{0,30}(onto|into) the battlefield	mtg	503	8	0	10	3	weak
+summon|does|*|\bput .{0,30}(onto|into) the battlefield	mtg	503	18	1	10	3	weak
 transform|does|*|\btransforms?\b	inscryption	8	8	6	0	0	weak
 transform|does|*|\btransforms?\b	faeria	9	9	3	0	0	weak
 transform|does|*|\btransforms?\b	duelyst	27	14	7	0	0	weak
@@ -600,10 +600,10 @@ transform|does|*|\btransforms?\b	sts2	23	10	10	0	0	ok
 transform|does|*|\btransforms?\b	gwent	42	18	18	10	10	ok
 transform|does|*|\btransforms?\b	hs_battlegrounds	28	10	9	10	9	ok
 transform|does|*|\btransforms?\b	runeterra	64	19	15	0	0	weak
-transform|does|*|\btransforms?\b	wh_aos_4th	1	0	0	0	0	thin
+transform|does|*|\btransforms?\b	wh_aos_4th	1	1	1	0	0	thin
 transform|does|*|\btransforms?\b	shadowverse	63	9	4	10	7	weak
 transform|does|*|\btransforms?\b	hearthstone	143	12	8	10	9	weak
-transform|does|*|\btransforms?\b	mtg	168	1	1	10	10	ok
+transform|does|*|\btransforms?\b	mtg	168	5	5	10	10	ok
 polymorph|does|*|\btransforms?\b	inscryption	8	8	0	0	0	weak
 polymorph|does|*|\btransforms?\b	faeria	9	9	3	0	0	weak
 polymorph|does|*|\btransforms?\b	duelyst	27	14	7	10	2	weak
@@ -614,10 +614,10 @@ polymorph|does|*|\btransforms?\b	sts2	23	10	0	0	0	weak
 polymorph|does|*|\btransforms?\b	gwent	42	18	1	10	0	weak
 polymorph|does|*|\btransforms?\b	hs_battlegrounds	28	10	0	0	0	weak
 polymorph|does|*|\btransforms?\b	runeterra	64	19	4	0	0	weak
-polymorph|does|*|\btransforms?\b	wh_aos_4th	1	0	0	0	0	thin
+polymorph|does|*|\btransforms?\b	wh_aos_4th	1	1	0	0	0	thin
 polymorph|does|*|\btransforms?\b	shadowverse	63	9	2	10	6	weak
 polymorph|does|*|\btransforms?\b	hearthstone	143	12	4	0	0	weak
-polymorph|does|*|\btransforms?\b	mtg	168	1	0	10	0	weak
+polymorph|does|*|\btransforms?\b	mtg	168	5	0	10	0	weak
 transform|does|*|\bbecomes? a\b	into_the_breach	1	1	0	0	0	thin
 transform|does|*|\bbecomes? a\b	inscryption	3	3	1	0	0	weak
 transform|does|*|\bbecomes? a\b	faeria	2	2	2	0	0	thin
@@ -627,11 +627,11 @@ transform|does|*|\bbecomes? a\b	gwent	1	0	0	1	0	weak
 transform|does|*|\bbecomes? a\b	hs_battlegrounds	2	0	0	2	2	ok
 transform|does|*|\bbecomes? a\b	wh_killteam	3	3	0	0	0	weak
 transform|does|*|\bbecomes? a\b	runeterra	1	0	0	1	1	ok
-transform|does|*|\bbecomes? a\b	wh_aos_4th	1	0	0	0	0	thin
-transform|does|*|\bbecomes? a\b	wh_40k_10e	1	0	0	0	0	thin
+transform|does|*|\bbecomes? a\b	wh_aos_4th	1	1	0	0	0	thin
+transform|does|*|\bbecomes? a\b	wh_40k_10e	1	1	0	0	0	thin
 transform|does|*|\bbecomes? a\b	shadowverse	5	2	2	3	3	ok
 transform|does|*|\bbecomes? a\b	hearthstone	10	2	2	8	7	weak
-transform|does|*|\bbecomes? a\b	mtg	298	2	1	10	10	ok
+transform|does|*|\bbecomes? a\b	mtg	298	12	8	10	10	weak
 polymorph|does|*|\bbecomes? a\b	into_the_breach	1	1	0	0	0	thin
 polymorph|does|*|\bbecomes? a\b	inscryption	3	3	0	0	0	weak
 polymorph|does|*|\bbecomes? a\b	faeria	2	2	0	0	0	thin
@@ -641,11 +641,11 @@ polymorph|does|*|\bbecomes? a\b	gwent	1	0	0	1	0	weak
 polymorph|does|*|\bbecomes? a\b	hs_battlegrounds	2	0	0	2	0	weak
 polymorph|does|*|\bbecomes? a\b	wh_killteam	3	3	0	0	0	weak
 polymorph|does|*|\bbecomes? a\b	runeterra	1	0	0	1	0	weak
-polymorph|does|*|\bbecomes? a\b	wh_aos_4th	1	0	0	0	0	thin
-polymorph|does|*|\bbecomes? a\b	wh_40k_10e	1	0	0	0	0	thin
+polymorph|does|*|\bbecomes? a\b	wh_aos_4th	1	1	0	0	0	thin
+polymorph|does|*|\bbecomes? a\b	wh_40k_10e	1	1	0	0	0	thin
 polymorph|does|*|\bbecomes? a\b	shadowverse	5	2	0	3	0	weak
 polymorph|does|*|\bbecomes? a\b	hearthstone	10	2	0	8	0	weak
-polymorph|does|*|\bbecomes? a\b	mtg	298	2	0	10	0	weak
+polymorph|does|*|\bbecomes? a\b	mtg	298	12	2	10	0	weak
 upgrade|does|*|\bupgrade	into_the_breach	112	112	90	0	0	weak
 upgrade|does|*|\bupgrade	inscryption	10	10	2	0	0	weak
 upgrade|does|*|\bupgrade	sts1	24	11	11	0	0	ok
@@ -656,34 +656,34 @@ upgrade|does|*|\bupgrade	hs_battlegrounds	12	0	0	10	6	weak
 upgrade|does|*|\bupgrade	wh_killteam	3	3	0	0	0	weak
 upgrade|does|*|\bupgrade	runeterra	2	0	0	2	1	weak
 upgrade|does|*|\bupgrade	wh_underworlds	229	45	2	0	0	weak
-upgrade|does|*|\bupgrade	wh_aos_4th	1	0	0	0	0	thin
+upgrade|does|*|\bupgrade	wh_aos_4th	1	1	1	0	0	thin
 upgrade|does|*|\bupgrade	hearthstone	81	6	5	10	10	ok
 movement|does|*|\bcharge rolls?	wh_killteam	31	5	0	10	10	weak
-movement|does|*|\bcharge rolls?	wh_aos_4th	251	12	3	0	0	weak
-movement|does|*|\bcharge rolls?	wh_40k_10e	200	11	0	0	0	weak
+movement|does|*|\bcharge rolls?	wh_aos_4th	251	35	8	0	0	weak
+movement|does|*|\bcharge rolls?	wh_40k_10e	200	35	2	0	0	weak
 forced_movement|does|*|\bcharge rolls?	wh_killteam	31	5	0	10	0	weak
-forced_movement|does|*|\bcharge rolls?	wh_aos_4th	251	12	1	0	0	weak
-forced_movement|does|*|\bcharge rolls?	wh_40k_10e	200	11	0	0	0	weak
+forced_movement|does|*|\bcharge rolls?	wh_aos_4th	251	35	1	0	0	weak
+forced_movement|does|*|\bcharge rolls?	wh_40k_10e	200	35	0	0	0	weak
 movement|does|*|\badvance\b	into_the_breach	1	1	0	0	0	thin
 movement|does|*|\badvance\b	darkest_dungeon	1	1	0	0	0	thin
 movement|does|*|\badvance\b	dnd5e	3	1	0	2	0	weak
 movement|does|*|\badvance\b	wh_killteam	14	3	0	10	10	weak
 movement|does|*|\badvance\b	runeterra	23	8	0	10	0	weak
-movement|does|*|\badvance\b	wh_aos_4th	6	0	0	4	3	weak
-movement|does|*|\badvance\b	wh_40k_10e	261	18	7	0	0	weak
+movement|does|*|\badvance\b	wh_aos_4th	6	2	1	4	3	weak
+movement|does|*|\badvance\b	wh_40k_10e	261	53	24	0	0	weak
 movement|does|*|\badvance\b	hearthstone	39	9	0	10	0	weak
 forced_movement|does|*|\badvance\b	into_the_breach	1	1	0	0	0	thin
 forced_movement|does|*|\badvance\b	darkest_dungeon	1	1	0	0	0	thin
 forced_movement|does|*|\badvance\b	dnd5e	3	1	1	2	0	weak
 forced_movement|does|*|\badvance\b	wh_killteam	14	3	0	10	0	weak
 forced_movement|does|*|\badvance\b	runeterra	23	8	0	10	0	weak
-forced_movement|does|*|\badvance\b	wh_aos_4th	6	0	0	4	0	weak
-forced_movement|does|*|\badvance\b	wh_40k_10e	261	18	0	0	0	weak
+forced_movement|does|*|\badvance\b	wh_aos_4th	6	2	0	4	0	weak
+forced_movement|does|*|\badvance\b	wh_40k_10e	261	53	0	0	0	weak
 forced_movement|does|*|\badvance\b	hearthstone	39	9	0	10	0	weak
 movement|does|*|\bmoves?\b	into_the_breach	137	137	53	0	0	weak
 movement|does|*|\bmoves?\b	wh_bloodbowl3	13	13	6	0	0	weak
 movement|does|*|\bmoves?\b	inscryption	19	19	11	0	0	weak
-movement|does|*|\bmoves?\b	faeria	20	15	9	0	0	weak
+movement|does|*|\bmoves?\b	faeria	20	15	10	0	0	weak
 movement|does|*|\bmoves?\b	duelyst	22	7	1	10	4	weak
 movement|does|*|\bmoves?\b	sts1	5	5	0	0	0	weak
 movement|does|*|\bmoves?\b	darkest_dungeon	109	51	28	10	4	weak
@@ -694,10 +694,10 @@ movement|does|*|\bmoves?\b	hs_battlegrounds	1	1	0	0	0	thin
 movement|does|*|\bmoves?\b	wh_killteam	247	69	26	0	0	weak
 movement|does|*|\bmoves?\b	runeterra	4	1	0	3	0	weak
 movement|does|*|\bmoves?\b	wh_underworlds	338	41	5	0	0	weak
-movement|does|*|\bmoves?\b	wh_aos_4th	492	31	20	0	0	weak
-movement|does|*|\bmoves?\b	wh_40k_10e	588	42	16	0	0	weak
+movement|does|*|\bmoves?\b	wh_aos_4th	492	83	46	0	0	weak
+movement|does|*|\bmoves?\b	wh_40k_10e	588	109	45	0	0	weak
 movement|does|*|\bmoves?\b	hearthstone	2	0	0	2	0	weak
-movement|does|*|\bmoves?\b	mtg	25	0	0	10	0	weak
+movement|does|*|\bmoves?\b	mtg	25	5	0	10	0	weak
 forced_movement|does|*|\bmoves?\b	into_the_breach	137	137	43	0	0	weak
 forced_movement|does|*|\bmoves?\b	wh_bloodbowl3	13	13	0	0	0	weak
 forced_movement|does|*|\bmoves?\b	inscryption	19	19	4	0	0	weak
@@ -712,10 +712,10 @@ forced_movement|does|*|\bmoves?\b	hs_battlegrounds	1	1	0	0	0	thin
 forced_movement|does|*|\bmoves?\b	wh_killteam	247	69	3	0	0	weak
 forced_movement|does|*|\bmoves?\b	runeterra	4	1	0	3	0	weak
 forced_movement|does|*|\bmoves?\b	wh_underworlds	338	41	3	0	0	weak
-forced_movement|does|*|\bmoves?\b	wh_aos_4th	492	31	0	0	0	weak
-forced_movement|does|*|\bmoves?\b	wh_40k_10e	588	42	0	0	0	weak
+forced_movement|does|*|\bmoves?\b	wh_aos_4th	492	83	5	0	0	weak
+forced_movement|does|*|\bmoves?\b	wh_40k_10e	588	109	0	0	0	weak
 forced_movement|does|*|\bmoves?\b	hearthstone	2	0	0	2	0	weak
-forced_movement|does|*|\bmoves?\b	mtg	25	0	0	10	0	weak
+forced_movement|does|*|\bmoves?\b	mtg	25	5	0	10	0	weak
 movement|does|*|\bpush	into_the_breach	96	96	20	0	0	weak
 movement|does|*|\bpush	wh_bloodbowl3	12	12	2	0	0	weak
 movement|does|*|\bpush	inscryption	3	3	1	0	0	weak
@@ -730,23 +730,23 @@ forced_movement|does|*|\bpush	wh_bloodbowl3	12	12	2	0	0	weak
 forced_movement|does|*|\bpush	inscryption	3	3	2	0	0	weak
 forced_movement|does|*|\bpush	duelyst	2	1	1	1	1	ok
 forced_movement|does|*|\bpush	darkest_dungeon	22	7	7	10	10	ok
-forced_movement|does|*|\bpush	dnd5e	36	12	6	0	0	weak
+forced_movement|does|*|\bpush	dnd5e	36	12	7	0	0	weak
 forced_movement|does|*|\bpush	sts2	1	1	0	0	0	thin
-forced_movement|does|*|\bpush	wh_underworlds	279	37	11	0	0	weak
+forced_movement|does|*|\bpush	wh_underworlds	279	37	16	0	0	weak
 forced_movement|does|*|\bpush	wh_40k_10e	1	0	0	1	0	weak
 forced_movement|does|*|\bpush(ing|es|ed)?\b	into_the_breach	96	96	85	0	0	weak
 forced_movement|does|*|\bpush(ing|es|ed)?\b	wh_bloodbowl3	12	12	2	0	0	weak
 forced_movement|does|*|\bpush(ing|es|ed)?\b	inscryption	3	3	2	0	0	weak
 forced_movement|does|*|\bpush(ing|es|ed)?\b	duelyst	2	1	1	1	1	ok
 forced_movement|does|*|\bpush(ing|es|ed)?\b	darkest_dungeon	22	7	7	10	10	ok
-forced_movement|does|*|\bpush(ing|es|ed)?\b	dnd5e	36	12	6	0	0	weak
+forced_movement|does|*|\bpush(ing|es|ed)?\b	dnd5e	36	12	7	0	0	weak
 forced_movement|does|*|\bpush(ing|es|ed)?\b	sts2	1	1	0	0	0	thin
-forced_movement|does|*|\bpush(ing|es|ed)?\b	wh_underworlds	279	37	11	0	0	weak
+forced_movement|does|*|\bpush(ing|es|ed)?\b	wh_underworlds	279	37	16	0	0	weak
 forced_movement|does|*|\bpush(ing|es|ed)?\b	wh_40k_10e	1	0	0	1	0	weak
 return_to_hand|does|*|return .{0,40}to (its|their) owner'?s? hand	hearthstone	11	2	0	9	6	weak
-return_to_hand|does|*|return .{0,40}to (its|their) owner'?s? hand	mtg	478	4	2	10	8	weak
+return_to_hand|does|*|return .{0,40}to (its|their) owner'?s? hand	mtg	478	9	6	10	8	weak
 bounce_enemy|does|*|return .{0,40}to (its|their) owner'?s? hand	hearthstone	11	2	2	9	9	ok
-bounce_enemy|does|*|return .{0,40}to (its|their) owner'?s? hand	mtg	478	4	1	10	2	weak
+bounce_enemy|does|*|return .{0,40}to (its|their) owner'?s? hand	mtg	478	9	3	10	2	weak
 return_to_hand|does|*|return .{0,40}to (your|their|its) hand	inscryption	1	1	0	0	0	thin
 return_to_hand|does|*|return .{0,40}to (your|their|its) hand	faeria	2	2	0	0	0	thin
 return_to_hand|does|*|return .{0,40}to (your|their|its) hand	sts1	3	3	0	0	0	weak
@@ -756,7 +756,7 @@ return_to_hand|does|*|return .{0,40}to (your|their|its) hand	runeterra	2	0	0	2	0
 return_to_hand|does|*|return .{0,40}to (your|their|its) hand	wh_underworlds	12	11	0	0	0	weak
 return_to_hand|does|*|return .{0,40}to (your|their|its) hand	shadowverse	56	11	11	0	0	ok
 return_to_hand|does|*|return .{0,40}to (your|their|its) hand	hearthstone	58	6	5	10	7	weak
-return_to_hand|does|*|return .{0,40}to (your|their|its) hand	mtg	196	2	0	10	0	weak
+return_to_hand|does|*|return .{0,40}to (your|their|its) hand	mtg	196	9	0	10	0	weak
 bounce_enemy|does|*|return .{0,40}to (your|their|its) hand	inscryption	1	1	0	0	0	thin
 bounce_enemy|does|*|return .{0,40}to (your|their|its) hand	faeria	2	2	0	0	0	thin
 bounce_enemy|does|*|return .{0,40}to (your|their|its) hand	sts1	3	3	0	0	0	weak
@@ -766,19 +766,19 @@ bounce_enemy|does|*|return .{0,40}to (your|their|its) hand	runeterra	2	0	0	2	0	w
 bounce_enemy|does|*|return .{0,40}to (your|their|its) hand	wh_underworlds	12	11	0	0	0	weak
 bounce_enemy|does|*|return .{0,40}to (your|their|its) hand	shadowverse	56	11	1	0	0	weak
 bounce_enemy|does|*|return .{0,40}to (your|their|its) hand	hearthstone	58	6	0	10	1	weak
-bounce_enemy|does|*|return .{0,40}to (your|their|its) hand	mtg	196	2	0	10	0	weak
+bounce_enemy|does|*|return .{0,40}to (your|their|its) hand	mtg	196	9	1	10	0	weak
 banish|does|*|\bexile	runeterra	2	0	0	2	0	weak
 banish|does|*|\bexile	wh_aos_4th	2	0	0	2	0	weak
-banish|does|*|\bexile	mtg	2088	35	19	10	10	weak
+banish|does|*|\bexile	mtg	2088	68	37	10	10	weak
 banish|does|*|\bbanish	darkest_dungeon	1	1	0	0	0	thin
 banish|does|*|\bbanish	dnd5e	5	4	2	1	0	weak
 banish|does|*|\bbanish	gwent	37	17	16	0	0	ok
-banish|does|*|\bbanish	wh_aos_4th	75	8	1	10	4	weak
-banish|does|*|\bbanish	wh_40k_10e	1	0	0	0	0	thin
+banish|does|*|\bbanish	wh_aos_4th	75	22	5	10	4	weak
+banish|does|*|\bbanish	wh_40k_10e	1	1	0	0	0	thin
 banish|does|*|\bbanish	shadowverse	210	26	19	0	0	weak
-counter_spell|does|*|\bcounter target	mtg	278	3	3	10	10	ok
+counter_spell|does|*|\bcounter target	mtg	278	6	6	10	10	ok
 resource_gain|does|*|\badd \{	sts2	1	1	0	0	0	thin
-resource_gain|does|*|\badd \{	mtg	397	3	3	10	10	ok
+resource_gain|does|*|\badd \{	mtg	397	6	6	10	10	ok
 resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	inscryption	6	6	4	0	0	weak
 resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	faeria	22	10	10	0	0	ok
 resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	duelyst	4	4	4	0	0	ok
@@ -787,45 +787,45 @@ resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supp
 resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	hs_battlegrounds	65	9	8	10	9	weak
 resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	wh_killteam	16	1	1	10	10	ok
 resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	runeterra	1	0	0	1	1	ok
-resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	wh_aos_4th	3	0	0	2	2	ok
+resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	wh_aos_4th	3	1	1	2	2	ok
 resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	wh_40k_10e	3	0	0	3	2	weak
 resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	hearthstone	48	2	2	10	10	ok
 resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	mtg	6	0	0	6	1	weak
-extra_turn|does|*|(?<!t )\buntap (target|it|all|up to|another|each|that)\b	mtg	309	2	0	10	1	weak
+extra_turn|does|*|(?<!t )\buntap (target|it|all|up to|another|each|that)\b	mtg	309	13	1	10	1	weak
 multi_attack|does|*|multi_?attack	dnd5e	188	71	70	0	0	ok
 multi_attack|does|*|multi_?attack	sts2	47	13	13	0	0	ok
 multi_attack|does|*|double strike	inscryption	7	7	4	0	0	weak
 multi_attack|does|*|double strike	sts1	1	1	1	0	0	thin
-multi_attack|does|*|double strike	mtg	248	2	2	10	10	ok
-first_strike|does|*|first strike	mtg	436	4	4	10	10	ok
+multi_attack|does|*|double strike	mtg	248	12	12	10	10	ok
+first_strike|does|*|first strike	mtg	436	11	11	10	10	ok
 ranged|does|*|\branged\b	into_the_breach	16	16	8	0	0	weak
 ranged|does|*|\branged\b	faeria	12	6	6	6	5	ok
 ranged|does|*|\branged\b	duelyst	30	16	12	10	10	weak
 ranged|does|*|\branged\b	darkest_dungeon	134	49	42	10	5	weak
 ranged|does|*|\branged\b	dnd5e	127	53	45	0	0	weak
 ranged|does|*|\branged\b	gwent	130	37	0	10	2	weak
-ranged|does|*|\branged\b	wh_killteam	132	24	3	0	0	weak
-ranged|does|*|\branged\b	wh_aos_4th	54	4	3	10	10	ok
-ranged|does|*|\branged\b	wh_40k_10e	572	33	8	0	0	weak
+ranged|does|*|\branged\b	wh_killteam	132	24	2	0	0	weak
+ranged|does|*|\branged\b	wh_aos_4th	54	7	5	10	10	weak
+ranged|does|*|\branged\b	wh_40k_10e	572	76	31	0	0	weak
 ranged|does|*|\branged attack	faeria	10	5	5	5	5	ok
 ranged|does|*|\branged attack	duelyst	2	2	0	0	0	thin
 ranged|does|*|\branged attack	dnd5e	85	37	31	0	0	weak
 ranged|does|*|\branged attack	wh_killteam	2	0	0	2	2	ok
 ranged|does|*|\branged attack	wh_aos_4th	4	0	0	4	4	ok
-ranged|does|*|\branged attack	wh_40k_10e	343	23	4	0	0	weak
+ranged|does|*|\branged attack	wh_40k_10e	343	50	22	0	0	weak
 ranged|does|*|\bshoot	into_the_breach	22	22	14	0	0	weak
 ranged|does|*|\bshoot	inscryption	2	2	0	0	0	thin
 ranged|does|*|\bshoot	faeria	1	1	1	0	0	thin
 ranged|does|*|\bshoot	dnd5e	6	2	0	4	1	weak
-ranged|does|*|\bshoot	wh_killteam	625	142	26	0	0	weak
-ranged|does|*|\bshoot	wh_aos_4th	428	25	16	0	0	weak
-ranged|does|*|\bshoot	wh_40k_10e	531	36	9	0	0	weak
+ranged|does|*|\bshoot	wh_killteam	625	142	29	0	0	weak
+ranged|does|*|\bshoot	wh_aos_4th	428	69	46	0	0	weak
+ranged|does|*|\bshoot	wh_40k_10e	531	104	37	0	0	weak
 ranged|does|*|\bshoot	hearthstone	8	5	0	3	3	weak
 ranged|does|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	inscryption	1	1	0	0	0	thin
 ranged|does|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	darkest_dungeon	1	1	1	0	0	thin
 ranged|does|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	dnd5e	110	47	14	0	0	weak
 ranged|does|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	wh_aos_4th	1	0	0	1	0	weak
-ranged|does|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	mtg	304	4	4	10	10	ok
+ranged|does|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	mtg	304	8	4	10	10	weak
 evasion|does|*|\bflying\b	into_the_breach	32	32	1	0	0	weak
 evasion|does|*|\bflying\b	inscryption	6	6	1	0	0	weak
 evasion|does|*|\bflying\b	faeria	78	41	39	0	0	ok
@@ -833,17 +833,17 @@ evasion|does|*|\bflying\b	duelyst	30	11	9	10	9	weak
 evasion|does|*|\bflying\b	dnd5e	13	6	0	7	0	weak
 evasion|does|*|\bflying\b	wh_underworlds	15	5	3	10	9	weak
 evasion|does|*|\bflying\b	wh_aos_4th	1	0	0	1	0	weak
-evasion|does|*|\bflying\b	wh_40k_10e	1	0	0	0	0	thin
-evasion|does|*|\bflying\b	mtg	2837	38	37	0	0	ok
+evasion|does|*|\bflying\b	wh_40k_10e	1	1	0	0	0	thin
+evasion|does|*|\bflying\b	mtg	2837	75	71	0	0	ok
 evasion|does|*|can't be blocked	runeterra	1	1	1	0	0	thin
-evasion|does|*|can't be blocked	mtg	305	3	3	10	10	ok
-evasion|does|*|\bmenace\b	wh_aos_4th	1	0	0	0	0	thin
-evasion|does|*|\bmenace\b	mtg	396	7	7	10	10	ok
+evasion|does|*|can't be blocked	mtg	305	5	5	10	10	ok
+evasion|does|*|\bmenace\b	wh_aos_4th	1	1	0	0	0	thin
+evasion|does|*|\bmenace\b	mtg	396	14	14	10	10	ok
 evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	inscryption	1	1	0	0	0	thin
 evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	darkest_dungeon	1	1	0	0	0	thin
 evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	dnd5e	110	47	0	7	0	weak
 evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	wh_aos_4th	1	0	0	1	0	weak
-evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	mtg	304	4	0	10	0	weak
+evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	mtg	304	8	1	10	0	weak
 blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	into_the_breach	2	2	0	0	0	thin
 blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	wh_bloodbowl3	84	84	0	0	0	weak
 blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	inscryption	9	9	3	0	0	weak
@@ -853,44 +853,44 @@ blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	dnd5e	16	12	1	4	0	weak
 blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	sts2	55	19	0	0	0	weak
 blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	gwent	1	1	0	0	0	thin
 blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	hs_battlegrounds	1	1	0	0	0	thin
-blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	wh_killteam	15	14	2	0	0	weak
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	wh_killteam	15	14	3	0	0	weak
 blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	runeterra	29	7	0	10	1	weak
 blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	wh_underworlds	1	1	1	0	0	thin
 blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	hearthstone	3	3	0	0	0	weak
-blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	mtg	520	2	0	10	4	weak
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	mtg	520	23	5	10	4	weak
 blocking|counters|*|can't block	runeterra	20	4	0	10	3	weak
-blocking|counters|*|can't block	mtg	221	1	0	10	2	weak
+blocking|counters|*|can't block	mtg	221	9	0	10	2	weak
 deathtouch|does|*|\bdeathtouch	faeria	6	4	4	2	2	ok
-deathtouch|does|*|\bdeathtouch	mtg	370	3	2	10	10	ok
-piercing|does|*|\bpierc	into_the_breach	10	10	0	0	0	weak
+deathtouch|does|*|\bdeathtouch	mtg	370	12	11	10	10	ok
+piercing|does|*|\bpierc	into_the_breach	10	10	1	0	0	weak
 piercing|does|*|\bpierc	sts1	1	1	0	0	0	thin
 piercing|does|*|\bpierc	dnd5e	210	81	1	0	0	weak
 piercing|does|*|\bpierc	sts2	3	3	1	0	0	weak
-piercing|does|*|\bpierc	wh_killteam	129	35	22	0	0	weak
+piercing|does|*|\bpierc	wh_killteam	129	35	29	0	0	weak
 piercing|does|*|\bpierc	wh_aos_4th	3	0	0	3	0	weak
 piercing|does|*|\bpierc	mtg	1	0	0	1	0	weak
 piercing|does|*|\brend	inscryption	5	5	0	0	0	weak
 piercing|does|*|\brend	darkest_dungeon	4	4	0	0	0	weak
 piercing|does|*|\brend	dnd5e	55	13	0	0	0	weak
-piercing|does|*|\brend	wh_killteam	169	47	19	0	0	weak
-piercing|does|*|\brend	wh_aos_4th	408	27	22	0	0	weak
+piercing|does|*|\brend	wh_killteam	169	47	30	0	0	weak
+piercing|does|*|\brend	wh_aos_4th	408	77	71	0	0	ok
 piercing|does|*|\brend	wh_40k_10e	2	0	0	2	0	weak
 piercing|does|*|\brend	shadowverse	2	2	0	0	0	thin
-piercing|does|*|\brend	mtg	1	0	0	0	0	thin
+piercing|does|*|\brend	mtg	1	1	0	0	0	thin
 cant_attack|does|*|can't attack	dnd5e	9	8	6	1	1	weak
 cant_attack|does|*|can't attack	runeterra	3	3	2	0	0	weak
 cant_attack|does|*|can't attack	shadowverse	55	15	2	0	0	weak
 cant_attack|does|*|can't attack	hearthstone	53	8	8	10	7	weak
-cant_attack|does|*|can't attack	mtg	157	0	0	10	3	weak
+cant_attack|does|*|can't attack	mtg	157	9	4	10	3	weak
 cant_attack|does|*|\bdefender\b	gwent	6	5	0	1	1	weak
 cant_attack|does|*|\bdefender\b	wh_killteam	16	9	2	7	0	weak
 cant_attack|does|*|\bdefender\b	wh_underworlds	2	2	0	0	0	thin
-cant_attack|does|*|\bdefender\b	wh_aos_4th	1	0	0	0	0	thin
+cant_attack|does|*|\bdefender\b	wh_aos_4th	1	1	0	0	0	thin
 cant_attack|does|*|\bdefender\b	wh_40k_10e	2	1	0	1	0	weak
 cant_attack|does|*|\bdefender\b	hearthstone	4	1	0	3	0	weak
-cant_attack|does|*|\bdefender\b	mtg	210	0	0	10	10	ok
+cant_attack|does|*|\bdefender\b	mtg	210	6	4	10	10	weak
 death_trigger|does|*|\bdeathrattle	hs_battlegrounds	264	35	33	10	9	ok
-death_trigger|does|*|\bdeathrattle	wh_aos_4th	22	2	0	10	1	weak
+death_trigger|does|*|\bdeathrattle	wh_aos_4th	22	8	1	10	1	weak
 death_trigger|does|*|\bdeathrattle	hearthstone	1013	63	58	10	10	ok
 death_trigger|does|*|when .{0,20}(dies|perishes)	inscryption	14	14	12	0	0	weak
 death_trigger|does|*|when .{0,20}(dies|perishes)	duelyst	6	3	3	3	3	ok
@@ -900,23 +900,23 @@ death_trigger|does|*|when .{0,20}(dies|perishes)	sts2	3	3	3	0	0	ok
 death_trigger|does|*|when .{0,20}(dies|perishes)	hs_battlegrounds	5	2	2	3	3	ok
 death_trigger|does|*|when .{0,20}(dies|perishes)	runeterra	7	2	2	5	4	weak
 death_trigger|does|*|when .{0,20}(dies|perishes)	hearthstone	27	2	2	10	10	ok
-death_trigger|does|*|when .{0,20}(dies|perishes)	mtg	457	7	7	10	10	ok
+death_trigger|does|*|when .{0,20}(dies|perishes)	mtg	457	14	14	10	10	ok
 sacrifice|does|*|\bsacrific	inscryption	36	36	12	0	0	weak
 sacrifice|does|*|\bsacrific	faeria	7	5	5	2	2	ok
 sacrifice|does|*|\bsacrific	dnd5e	1	1	0	0	0	thin
 sacrifice|does|*|\bsacrific	sts2	2	2	0	0	0	thin
 sacrifice|does|*|\bsacrific	wh_killteam	2	2	0	0	0	thin
 sacrifice|does|*|\bsacrific	wh_underworlds	1	1	0	0	0	thin
-sacrifice|does|*|\bsacrific	wh_aos_4th	10	1	0	5	2	weak
-sacrifice|does|*|\bsacrific	wh_40k_10e	6	0	0	3	3	ok
+sacrifice|does|*|\bsacrific	wh_aos_4th	10	5	0	5	2	weak
+sacrifice|does|*|\bsacrific	wh_40k_10e	6	3	2	3	3	weak
 sacrifice|does|*|\bsacrific	hearthstone	1	1	1	0	0	thin
-sacrifice|does|*|\bsacrific	mtg	2100	28	20	0	0	weak
+sacrifice|does|*|\bsacrific	mtg	2100	61	38	0	0	weak
 sacrifice|cost|*|sacrifice (a|an|\d+|another|two|three)	inscryption	5	5	3	0	0	weak
 sacrifice|cost|*|sacrifice (a|an|\d+|another|two|three)	faeria	7	5	5	2	2	ok
-sacrifice|cost|*|sacrifice (a|an|\d+|another|two|three)	mtg	892	14	13	0	0	ok
+sacrifice|cost|*|sacrifice (a|an|\d+|another|two|three)	mtg	892	26	25	0	0	ok
 graveyard|does|*|\bgraveyard	darkest_dungeon	1	1	0	0	0	thin
 graveyard|does|*|\bgraveyard	gwent	94	29	27	10	10	ok
-graveyard|does|*|\bgraveyard	mtg	2688	46	22	0	0	weak
+graveyard|does|*|\bgraveyard	mtg	2688	85	44	0	0	weak
 death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	inscryption	3	3	0	0	0	weak
 death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	faeria	6	6	1	0	0	weak
 death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	duelyst	5	5	0	0	0	weak
@@ -929,40 +929,40 @@ death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed
 death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	runeterra	1	1	0	0	0	thin
 death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	shadowverse	55	7	1	10	10	weak
 death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	hearthstone	24	3	0	10	9	weak
-death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	mtg	412	6	0	10	1	weak
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	mtg	412	14	1	10	1	weak
 selection|does|*|\bscry	inscryption	10	10	1	0	0	weak
 selection|does|*|\bscry	sts1	10	2	2	8	8	ok
 selection|does|*|\bscry	dnd5e	11	8	0	3	0	weak
 selection|does|*|\bscry	wh_killteam	2	1	0	1	0	weak
-selection|does|*|\bscry	wh_aos_4th	6	0	0	5	0	weak
-selection|does|*|\bscry	wh_40k_10e	1	0	0	0	0	thin
+selection|does|*|\bscry	wh_aos_4th	6	1	0	5	0	weak
+selection|does|*|\bscry	wh_40k_10e	1	1	0	0	0	thin
 selection|does|*|\bscry	mtg	201	3	3	10	9	ok
 selection|does|*|look at the top	sts1	1	1	1	0	0	thin
 selection|does|*|look at the top	gwent	11	4	4	7	7	ok
 selection|does|*|look at the top	wh_underworlds	3	2	1	1	1	ok
-selection|does|*|look at the top	wh_40k_10e	1	0	0	0	0	thin
-selection|does|*|look at the top	mtg	369	5	3	10	8	weak
+selection|does|*|look at the top	wh_40k_10e	1	1	1	0	0	thin
+selection|does|*|look at the top	mtg	369	10	6	10	8	weak
 recycle|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	faeria	9	9	3	0	0	weak
 recycle|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	duelyst	1	1	0	0	0	thin
 recycle|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	gwent	20	7	6	10	4	weak
 recycle|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	runeterra	2	2	0	0	0	thin
 recycle|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	hearthstone	158	18	1	0	0	weak
-recycle|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	mtg	73	2	2	10	7	weak
+recycle|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	mtg	73	5	3	10	7	weak
 bounce_enemy|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	faeria	9	9	0	0	0	weak
 bounce_enemy|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	duelyst	1	1	0	0	0	thin
 bounce_enemy|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	gwent	20	7	1	10	0	weak
 bounce_enemy|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	runeterra	2	2	0	0	0	thin
 bounce_enemy|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	hearthstone	158	18	0	0	0	weak
-bounce_enemy|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	mtg	73	2	0	10	1	weak
+bounce_enemy|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|library)	mtg	73	5	0	10	1	weak
 recycle|does|*|put .{0,30}on the (top|bottom) of	gwent	1	1	0	0	0	thin
 recycle|does|*|put .{0,30}on the (top|bottom) of	wh_underworlds	2	2	0	0	0	thin
 recycle|does|*|put .{0,30}on the (top|bottom) of	hearthstone	20	4	0	10	9	weak
-recycle|does|*|put .{0,30}on the (top|bottom) of	mtg	236	3	0	10	2	weak
+recycle|does|*|put .{0,30}on the (top|bottom) of	mtg	236	4	0	10	2	weak
 bounce_enemy|does|*|put .{0,30}on the (top|bottom) of	gwent	1	1	0	0	0	thin
 bounce_enemy|does|*|put .{0,30}on the (top|bottom) of	wh_underworlds	2	2	0	0	0	thin
 bounce_enemy|does|*|put .{0,30}on the (top|bottom) of	hearthstone	20	4	0	10	1	weak
-bounce_enemy|does|*|put .{0,30}on the (top|bottom) of	mtg	236	3	1	10	1	weak
-life_payment|cost|*|pays? .{0,10}life	mtg	223	4	3	10	10	ok
+bounce_enemy|does|*|put .{0,30}on the (top|bottom) of	mtg	236	4	1	10	1	weak
+life_payment|cost|*|pays? .{0,10}life	mtg	223	8	5	10	10	weak
 shop_gold|does|*|\bgold\b(?! card)	wh_bloodbowl3	2	2	0	0	0	thin
 shop_gold|does|*|\bgold\b(?! card)	inscryption	4	4	0	0	0	weak
 shop_gold|does|*|\bgold\b(?! card)	sts1	32	13	7	0	0	weak
@@ -970,10 +970,10 @@ shop_gold|does|*|\bgold\b(?! card)	dnd5e	5	5	1	0	0	weak
 shop_gold|does|*|\bgold\b(?! card)	sts2	39	19	16	0	0	weak
 shop_gold|does|*|\bgold\b(?! card)	gwent	9	6	0	3	0	weak
 shop_gold|does|*|\bgold\b(?! card)	hs_battlegrounds	131	25	1	0	0	weak
-shop_gold|does|*|\bgold\b(?! card)	wh_aos_4th	6	0	0	2	0	weak
+shop_gold|does|*|\bgold\b(?! card)	wh_aos_4th	6	4	0	2	0	weak
 shop_gold|does|*|\bgold\b(?! card)	shadowverse	8	4	0	4	0	weak
 shop_gold|does|*|\bgold\b(?! card)	hearthstone	1	1	1	0	0	thin
-shop_gold|does|*|\bgold\b(?! card)	mtg	5	0	0	1	0	weak
+shop_gold|does|*|\bgold\b(?! card)	mtg	5	4	0	1	0	weak
 shop_gold|does|*|\btavern\b	darkest_dungeon	2	2	0	0	0	thin
 shop_gold|does|*|\btavern\b	dnd5e	1	1	0	0	0	thin
 shop_gold|does|*|\btavern\b	hs_battlegrounds	390	78	4	0	0	weak
@@ -989,16 +989,16 @@ information|does|*|\breveal	runeterra	3	2	2	1	0	weak
 information|does|*|\breveal	wh_underworlds	20	14	11	1	1	weak
 information|does|*|\breveal	shadowverse	24	4	4	10	10	ok
 information|does|*|\breveal	hearthstone	21	1	1	10	10	ok
-information|does|*|\breveal	mtg	935	11	3	0	0	weak
+information|does|*|\breveal	mtg	935	35	10	0	0	weak
 information|does|*|look at	inscryption	1	1	1	0	0	thin
 information|does|*|look at	sts1	1	1	0	0	0	thin
 information|does|*|look at	darkest_dungeon	1	0	0	1	0	weak
 information|does|*|look at	gwent	20	10	1	10	4	weak
 information|does|*|look at	hs_battlegrounds	2	2	2	0	0	thin
 information|does|*|look at	wh_underworlds	3	2	1	1	1	ok
-information|does|*|look at	wh_40k_10e	1	0	0	0	0	thin
+information|does|*|look at	wh_40k_10e	1	1	0	0	0	thin
 information|does|*|look at	hearthstone	20	2	2	10	9	ok
-information|does|*|look at	mtg	430	5	1	10	9	weak
+information|does|*|look at	mtg	430	11	3	10	9	weak
 adjacency|does|*|\badjacent	into_the_breach	74	74	27	0	0	weak
 adjacency|does|*|\badjacent	wh_bloodbowl3	16	16	2	0	0	weak
 adjacency|does|*|\badjacent	inscryption	11	11	7	0	0	weak
@@ -1007,26 +1007,26 @@ adjacency|does|*|\badjacent	gwent	66	20	20	0	0	ok
 adjacency|does|*|\badjacent	hs_battlegrounds	29	7	5	10	10	weak
 adjacency|does|*|\badjacent	wh_underworlds	376	59	50	0	0	weak
 adjacency|does|*|\badjacent	hearthstone	58	5	5	10	10	ok
-adjacency|does|*|\badjacent	mtg	1	0	0	0	0	thin
+adjacency|does|*|\badjacent	mtg	1	1	1	0	0	thin
 rows|does|*|\brows?\b	into_the_breach	7	7	0	0	0	weak
 rows|does|*|\brows?\b	inscryption	6	6	0	0	0	weak
 rows|does|*|\brows?\b	duelyst	4	4	2	0	0	weak
 rows|does|*|\brows?\b	dnd5e	3	3	0	0	0	weak
-rows|does|*|\brows?\b	gwent	361	99	6	10	10	weak
+rows|does|*|\brows?\b	gwent	361	99	11	10	10	weak
 rows|does|*|\brows?\b	hearthstone	5	5	0	0	0	weak
 terrain|does|*|\bterrain	into_the_breach	29	29	0	0	0	weak
 terrain|does|*|\bterrain	inscryption	28	28	24	0	0	weak
 terrain|does|*|\bterrain	dnd5e	47	17	14	0	0	weak
 terrain|does|*|\bterrain	wh_killteam	131	43	22	0	0	weak
 terrain|does|*|\bterrain	runeterra	1	1	0	0	0	thin
-terrain|does|*|\bterrain	wh_aos_4th	204	11	9	0	0	weak
-terrain|does|*|\bterrain	wh_40k_10e	53	1	0	10	9	ok
+terrain|does|*|\bterrain	wh_aos_4th	204	38	26	0	0	weak
+terrain|does|*|\bterrain	wh_40k_10e	53	4	0	10	9	weak
 terrain|does|*|\bcover\b	inscryption	1	1	0	0	0	thin
 terrain|does|*|\bcover\b	dnd5e	32	15	4	0	0	weak
-terrain|does|*|\bcover\b	wh_killteam	183	50	16	0	0	weak
+terrain|does|*|\bcover\b	wh_killteam	183	50	17	0	0	weak
 terrain|does|*|\bcover\b	wh_underworlds	81	12	11	0	0	ok
 terrain|does|*|\bcover\b	wh_aos_4th	8	1	1	7	6	weak
-terrain|does|*|\bcover\b	wh_40k_10e	322	26	3	0	0	weak
+terrain|does|*|\bcover\b	wh_40k_10e	322	48	4	0	0	weak
 terrain|does|*|\bcover\b	mtg	1	0	0	1	0	weak
 terrain|does|*|\blands?\b	into_the_breach	9	9	0	0	0	weak
 terrain|does|*|\blands?\b	wh_bloodbowl3	5	5	0	0	0	weak
@@ -1035,19 +1035,19 @@ terrain|does|*|\blands?\b	faeria	44	31	9	0	0	weak
 terrain|does|*|\blands?\b	dnd5e	16	6	1	10	0	weak
 terrain|does|*|\blands?\b	sts2	1	1	0	0	0	thin
 terrain|does|*|\blands?\b	wh_killteam	2	1	0	1	0	weak
-terrain|does|*|\blands?\b	wh_aos_4th	4	0	0	1	1	ok
-terrain|does|*|\blands?\b	wh_40k_10e	8	0	0	7	4	weak
-terrain|does|*|\blands?\b	mtg	1626	18	0	0	0	weak
+terrain|does|*|\blands?\b	wh_aos_4th	4	3	0	1	1	weak
+terrain|does|*|\blands?\b	wh_40k_10e	8	1	0	7	4	weak
+terrain|does|*|\blands?\b	mtg	1626	49	0	0	0	weak
 zone_control|does|*|\bobjective markers?	wh_killteam	68	21	17	0	0	weak
 zone_control|does|*|\bobjective markers?	wh_underworlds	1	1	0	0	0	thin
-zone_control|does|*|\bobjective markers?	wh_40k_10e	152	17	17	0	0	ok
+zone_control|does|*|\bobjective markers?	wh_40k_10e	152	31	31	0	0	ok
 zone_control|does|*|\bobjective	into_the_breach	12	12	1	0	0	weak
 zone_control|does|*|\bobjective	dnd5e	2	2	0	0	0	thin
 zone_control|does|*|\bobjective	wh_killteam	71	22	18	0	0	weak
 zone_control|does|*|\bobjective	wh_underworlds	318	41	23	0	0	weak
-zone_control|does|*|\bobjective	wh_aos_4th	188	13	11	0	0	weak
-zone_control|does|*|\bobjective	wh_40k_10e	321	26	17	0	0	weak
-zone_control|does|*|\bobjective	mtg	1	0	0	0	0	thin
+zone_control|does|*|\bobjective	wh_aos_4th	188	40	35	0	0	weak
+zone_control|does|*|\bobjective	wh_40k_10e	321	52	31	0	0	weak
+zone_control|does|*|\bobjective	mtg	1	1	0	0	0	thin
 scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	into_the_breach	3	3	0	0	0	weak
 scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	inscryption	23	23	0	0	0	weak
 scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	faeria	5	4	1	1	0	weak
@@ -1058,25 +1058,25 @@ scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|fr
 scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	gwent	27	10	2	10	3	weak
 scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	hs_battlegrounds	19	11	4	0	0	weak
 scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	runeterra	23	5	1	10	9	weak
-scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	wh_aos_4th	8	0	0	3	0	weak
-scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	wh_40k_10e	4	0	0	3	0	weak
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	wh_aos_4th	8	5	1	3	0	weak
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	wh_40k_10e	4	1	0	3	0	weak
 scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	shadowverse	6	1	0	5	1	weak
 scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	hearthstone	188	14	3	0	0	weak
-scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	mtg	371	6	2	10	7	weak
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	mtg	371	16	5	10	7	weak
 scope_global|does|*|\beach player	wh_bloodbowl3	4	4	0	0	0	weak
 scope_global|does|*|\beach player	faeria	5	5	5	0	0	ok
 scope_global|does|*|\beach player	duelyst	4	3	3	1	1	ok
 scope_global|does|*|\beach player	gwent	4	4	4	0	0	ok
 scope_global|does|*|\beach player	wh_underworlds	4	2	1	2	2	ok
-scope_global|does|*|\beach player	wh_aos_4th	3	0	0	0	0	thin
-scope_global|does|*|\beach player	wh_40k_10e	13	1	0	7	0	weak
+scope_global|does|*|\beach player	wh_aos_4th	3	3	1	0	0	weak
+scope_global|does|*|\beach player	wh_40k_10e	13	6	0	7	0	weak
 scope_global|does|*|\beach player	shadowverse	3	0	0	3	2	weak
 scope_global|does|*|\beach player	hearthstone	53	5	4	10	10	ok
-scope_global|does|*|\beach player	mtg	534	8	8	10	10	ok
-on_play|does|*|\bbattlecry	hs_battlegrounds	206	30	24	0	0	weak
+scope_global|does|*|\beach player	mtg	534	26	24	10	10	ok
+on_play|does|*|\bbattlecry	hs_battlegrounds	206	30	25	0	0	weak
 on_play|does|*|\bbattlecry	hearthstone	2209	152	152	0	0	ok
 on_play|does|*|\bplay:	runeterra	237	41	41	0	0	ok
-on_play|does|*|\bplay:	wh_40k_10e	1	0	0	0	0	thin
+on_play|does|*|\bplay:	wh_40k_10e	1	1	0	0	0	thin
 on_play|does|*|\bplay:	shadowverse	1	0	0	1	0	weak
 on_play|does|*|\bfanfare	dnd5e	1	1	0	0	0	thin
 on_play|does|*|\bfanfare	shadowverse	2376	228	227	0	0	ok
@@ -1089,13 +1089,13 @@ on_attack|does|*|whenever .{0,20}attacks	sts2	7	6	4	1	1	weak
 on_attack|does|*|whenever .{0,20}attacks	hs_battlegrounds	14	3	3	10	2	weak
 on_attack|does|*|whenever .{0,20}attacks	shadowverse	28	6	0	10	3	weak
 on_attack|does|*|whenever .{0,20}attacks	hearthstone	49	6	5	10	10	ok
-on_attack|does|*|whenever .{0,20}attacks	mtg	929	15	15	0	0	ok
+on_attack|does|*|whenever .{0,20}attacks	mtg	929	30	29	0	0	ok
 on_attack|does|*|\bstrike:	into_the_breach	1	1	0	0	0	thin
 on_attack|does|*|\bstrike:	dnd5e	5	4	0	1	0	weak
 on_attack|does|*|\bstrike:	wh_killteam	3	2	0	1	0	weak
 on_attack|does|*|\bstrike:	runeterra	69	10	10	0	0	ok
-on_attack|does|*|\bstrike:	wh_aos_4th	7	0	0	6	2	weak
-on_attack|does|*|\bstrike:	wh_40k_10e	9	0	0	5	4	weak
+on_attack|does|*|\bstrike:	wh_aos_4th	7	1	0	6	2	weak
+on_attack|does|*|\bstrike:	wh_40k_10e	9	4	1	5	4	weak
 on_attack|does|*|\bstrike:	shadowverse	205	19	19	0	0	ok
 turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	into_the_breach	1	1	1	0	0	thin
 turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	inscryption	11	11	5	0	0	weak
@@ -1107,11 +1107,11 @@ turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|roun
 turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	hs_battlegrounds	100	18	18	10	10	ok
 turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	wh_killteam	2	0	0	2	2	ok
 turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	wh_underworlds	15	5	4	10	6	weak
-turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	wh_aos_4th	4	0	0	1	1	ok
+turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	wh_aos_4th	4	3	0	1	1	weak
 turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	wh_40k_10e	4	0	0	4	1	weak
 turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	shadowverse	102	14	14	0	0	ok
 turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	hearthstone	98	12	12	10	10	ok
-turn_start|does|*|\bupkeep	mtg	1025	6	6	10	10	ok
+turn_start|does|*|\bupkeep	mtg	1025	29	23	10	10	weak
 turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	inscryption	5	5	3	0	0	weak
 turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	faeria	12	9	8	3	3	ok
 turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	duelyst	18	13	11	0	0	weak
@@ -1123,14 +1123,14 @@ turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	hs_battlegrou
 turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	wh_killteam	9	7	6	2	1	weak
 turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	runeterra	1	1	0	0	0	thin
 turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	wh_underworlds	2	1	1	1	1	ok
-turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	wh_aos_4th	23	3	2	10	10	ok
+turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	wh_aos_4th	23	13	10	10	10	weak
 turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	wh_40k_10e	3	1	1	2	2	ok
 turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	shadowverse	402	49	48	0	0	ok
 turn_end|does|*|at the end of (your|each|the|their)? ?(turn|round)	hearthstone	284	25	25	10	10	ok
 activated|does|*|\{[^}]+\}.{0,30}:	faeria	1	1	0	0	0	thin
 activated|does|*|\{[^}]+\}.{0,30}:	sts2	3	3	0	0	0	weak
 activated|does|*|\{[^}]+\}.{0,30}:	shadowverse	1	0	0	1	0	weak
-activated|does|*|\{[^}]+\}.{0,30}:	mtg	3917	45	45	10	10	ok
+activated|does|*|\{[^}]+\}.{0,30}:	mtg	3917	107	106	10	10	ok
 activated|does|*|\bactivate	into_the_breach	4	4	0	0	0	weak
 activated|does|*|\bactivate	wh_bloodbowl3	16	16	8	0	0	weak
 activated|does|*|\bactivate	inscryption	24	24	11	0	0	weak
@@ -1144,10 +1144,10 @@ activated|does|*|\bactivate	wh_killteam	159	55	27	0	0	weak
 activated|does|*|\bactivate	runeterra	37	13	2	3	1	weak
 activated|does|*|\bactivate	wh_underworlds	18	1	0	10	1	weak
 activated|does|*|\bactivate	wh_aos_4th	3	0	0	3	2	weak
-activated|does|*|\bactivate	wh_40k_10e	15	2	0	9	6	weak
+activated|does|*|\bactivate	wh_40k_10e	15	6	0	9	6	weak
 activated|does|*|\bactivate	shadowverse	103	15	0	1	1	weak
 activated|does|*|\bactivate	hearthstone	8	0	0	8	4	weak
-activated|does|*|\bactivate	mtg	921	14	14	10	7	weak
+activated|does|*|\bactivate	mtg	921	35	32	10	7	weak
 activated|does|*|\bactivated	into_the_breach	1	1	0	0	0	thin
 activated|does|*|\bactivated	wh_bloodbowl3	16	16	8	0	0	weak
 activated|does|*|\bactivated	inscryption	15	15	9	0	0	weak
@@ -1156,10 +1156,10 @@ activated|does|*|\bactivated	gwent	1	1	1	0	0	thin
 activated|does|*|\bactivated	wh_killteam	132	44	23	0	0	weak
 activated|does|*|\bactivated	runeterra	12	6	2	6	1	weak
 activated|does|*|\bactivated	wh_underworlds	17	1	0	10	1	weak
-activated|does|*|\bactivated	wh_40k_10e	4	1	0	2	2	ok
+activated|does|*|\bactivated	wh_40k_10e	4	2	0	2	2	ok
 activated|does|*|\bactivated	shadowverse	6	0	0	6	1	weak
 activated|does|*|\bactivated	hearthstone	3	0	0	3	0	weak
-activated|does|*|\bactivated	mtg	123	1	1	10	7	weak
+activated|does|*|\bactivated	mtg	123	2	1	10	7	weak
 activated|does|*|once per (turn|round)	wh_bloodbowl3	4	4	0	0	0	weak
 activated|does|*|once per (turn|round)	faeria	1	0	0	1	1	ok
 activated|does|*|once per (turn|round)	dnd5e	26	15	3	10	0	weak
@@ -1168,8 +1168,8 @@ activated|does|*|once per (turn|round)	hs_battlegrounds	11	2	0	9	1	weak
 activated|does|*|once per (turn|round)	wh_killteam	167	44	24	0	0	weak
 activated|does|*|once per (turn|round)	runeterra	5	3	2	2	2	weak
 activated|does|*|once per (turn|round)	wh_underworlds	4	1	1	3	3	ok
-activated|does|*|once per (turn|round)	wh_aos_4th	840	43	0	0	0	weak
-activated|does|*|once per (turn|round)	wh_40k_10e	125	8	0	10	10	weak
+activated|does|*|once per (turn|round)	wh_aos_4th	840	142	0	0	0	weak
+activated|does|*|once per (turn|round)	wh_40k_10e	125	28	1	10	10	weak
 activated|does|*|once per (turn|round)	shadowverse	1	0	0	1	0	weak
 activated|does|*|once per (turn|round)	hearthstone	3	0	0	3	2	weak
 activated|does|*|\bspend \d	wh_bloodbowl3	1	1	0	0	0	thin
@@ -1179,8 +1179,8 @@ activated|does|*|\bspend \d	hs_battlegrounds	7	2	0	5	0	weak
 activated|does|*|\bspend \d	wh_killteam	22	7	2	10	10	weak
 activated|does|*|\bspend \d	runeterra	16	10	0	0	0	weak
 activated|does|*|\bspend \d	wh_underworlds	11	2	0	9	8	weak
-activated|does|*|\bspend \d	wh_aos_4th	69	3	0	10	9	weak
-activated|does|*|\bspend \d	wh_40k_10e	58	3	0	10	10	weak
+activated|does|*|\bspend \d	wh_aos_4th	69	13	0	10	9	weak
+activated|does|*|\bspend \d	wh_40k_10e	58	16	0	10	10	weak
 activated|does|*|\bspend \d	hearthstone	39	11	0	0	0	weak
 passive|does|*|\bwhile\b	into_the_breach	16	16	4	0	0	weak
 passive|does|*|\bwhile\b	wh_bloodbowl3	1	1	0	0	0	thin
@@ -1196,21 +1196,21 @@ passive|does|*|\bwhile\b	hs_battlegrounds	12	7	0	5	2	weak
 passive|does|*|\bwhile\b	wh_killteam	434	117	21	0	0	weak
 passive|does|*|\bwhile\b	runeterra	31	18	0	0	0	weak
 passive|does|*|\bwhile\b	wh_underworlds	76	15	0	0	0	weak
-passive|does|*|\bwhile\b	wh_aos_4th	906	53	16	0	0	weak
-passive|does|*|\bwhile\b	wh_40k_10e	1087	78	21	0	0	weak
+passive|does|*|\bwhile\b	wh_aos_4th	906	159	44	0	0	weak
+passive|does|*|\bwhile\b	wh_40k_10e	1087	175	72	0	0	weak
 passive|does|*|\bwhile\b	shadowverse	38	9	6	10	10	weak
 passive|does|*|\bwhile\b	hearthstone	150	11	0	0	0	weak
-passive|does|*|\bwhile\b	mtg	79	1	0	10	4	weak
+passive|does|*|\bwhile\b	mtg	79	2	0	10	4	weak
 passive|does|*|\bas long as	into_the_breach	1	1	1	0	0	thin
 passive|does|*|\bas long as	inscryption	8	8	1	0	0	weak
 passive|does|*|\bas long as	duelyst	1	1	0	0	0	thin
 passive|does|*|\bas long as	dnd5e	24	10	1	0	0	weak
 passive|does|*|\bas long as	wh_killteam	35	4	2	10	8	weak
 passive|does|*|\bas long as	runeterra	1	0	0	1	1	ok
-passive|does|*|\bas long as	wh_40k_10e	1	0	0	0	0	thin
-passive|does|*|\bas long as	mtg	704	10	0	0	0	weak
+passive|does|*|\bas long as	wh_40k_10e	1	1	0	0	0	thin
+passive|does|*|\bas long as	mtg	704	18	1	0	0	weak
 passive|does|*|\bpassive	into_the_breach	9	9	5	0	0	weak
-passive|does|*|\bpassive	wh_bloodbowl3	161	161	0	0	0	weak
+passive|does|*|\bpassive	wh_bloodbowl3	161	161	14	0	0	weak
 passive|does|*|\bpassive	sts1	5	4	0	1	0	weak
 passive|does|*|\bpassive	dnd5e	9	6	0	3	0	weak
 passive|does|*|\bpassive	sts2	7	3	0	4	1	weak
@@ -1225,14 +1225,14 @@ on_ally_play|does|*|whenever (you play|you summon|another .{0,30}(enters|is summ
 on_ally_play|does|*|whenever (you play|you summon|another .{0,30}(enters|is summoned|is played))	hs_battlegrounds	25	7	7	10	10	ok
 on_ally_play|does|*|whenever (you play|you summon|another .{0,30}(enters|is summoned|is played))	shadowverse	101	11	7	0	0	weak
 on_ally_play|does|*|whenever (you play|you summon|another .{0,30}(enters|is summoned|is played))	hearthstone	37	5	5	10	10	ok
-on_ally_play|does|*|whenever (you play|you summon|another .{0,30}(enters|is summoned|is played))	mtg	164	2	2	10	10	ok
+on_ally_play|does|*|whenever (you play|you summon|another .{0,30}(enters|is summoned|is played))	mtg	164	6	6	10	10	ok
 on_spell|does|*|whenever you (cast|play) a (spell|instant|sorcery|tactic)	duelyst	13	5	5	8	8	ok
 on_spell|does|*|whenever you (cast|play) a (spell|instant|sorcery|tactic)	dnd5e	1	1	0	0	0	thin
 on_spell|does|*|whenever you (cast|play) a (spell|instant|sorcery|tactic)	gwent	3	3	3	0	0	ok
 on_spell|does|*|whenever you (cast|play) a (spell|instant|sorcery|tactic)	hs_battlegrounds	18	3	3	10	10	ok
 on_spell|does|*|whenever you (cast|play) a (spell|instant|sorcery|tactic)	shadowverse	17	6	6	10	10	ok
 on_spell|does|*|whenever you (cast|play) a (spell|instant|sorcery|tactic)	hearthstone	22	0	0	10	10	ok
-on_spell|does|*|whenever you (cast|play) a (spell|instant|sorcery|tactic)	mtg	179	1	1	10	10	ok
+on_spell|does|*|whenever you (cast|play) a (spell|instant|sorcery|tactic)	mtg	179	4	4	10	10	ok
 delayed|does|*|\bcountdown	runeterra	43	11	10	0	0	ok
 delayed|does|*|\bcountdown	shadowverse	317	33	27	0	0	weak
 delayed|does|*|next turn	into_the_breach	10	10	8	0	0	weak
@@ -1248,19 +1248,19 @@ delayed|does|*|next turn	gwent	1	1	0	0	0	thin
 delayed|does|*|next turn	hs_battlegrounds	79	20	5	10	6	weak
 delayed|does|*|next turn	wh_killteam	8	2	0	6	1	weak
 delayed|does|*|next turn	wh_underworlds	7	2	0	5	1	weak
-delayed|does|*|next turn	wh_aos_4th	439	24	0	0	0	weak
-delayed|does|*|next turn	wh_40k_10e	56	6	0	10	0	weak
+delayed|does|*|next turn	wh_aos_4th	439	62	7	0	0	weak
+delayed|does|*|next turn	wh_40k_10e	56	16	0	10	0	weak
 delayed|does|*|next turn	shadowverse	103	14	11	0	0	weak
 delayed|does|*|next turn	hearthstone	87	11	4	10	8	weak
-delayed|does|*|next turn	mtg	226	2	1	10	5	weak
+delayed|does|*|next turn	mtg	226	7	3	10	5	weak
 once_per_game|does|*|once per (game|battle|match|run)	wh_bloodbowl3	11	11	11	0	0	ok
 once_per_game|does|*|once per (game|battle|match|run)	inscryption	3	3	0	0	0	weak
 once_per_game|does|*|once per (game|battle|match|run)	gwent	1	1	1	0	0	thin
 once_per_game|does|*|once per (game|battle|match|run)	hs_battlegrounds	6	5	5	1	1	ok
 once_per_game|does|*|once per (game|battle|match|run)	wh_killteam	117	34	31	0	0	ok
 once_per_game|does|*|once per (game|battle|match|run)	wh_underworlds	44	13	12	0	0	ok
-once_per_game|does|*|once per (game|battle|match|run)	wh_aos_4th	468	20	19	0	0	ok
-once_per_game|does|*|once per (game|battle|match|run)	wh_40k_10e	385	26	18	0	0	weak
+once_per_game|does|*|once per (game|battle|match|run)	wh_aos_4th	468	67	60	0	0	weak
+once_per_game|does|*|once per (game|battle|match|run)	wh_40k_10e	385	69	57	0	0	weak
 once_per_game|does|*|once per (game|battle|match|run)	hearthstone	7	7	7	0	0	ok
 condition_count|does|*|\bfor each\b	into_the_breach	2	2	0	0	0	thin
 condition_count|does|*|\bfor each\b	wh_bloodbowl3	14	14	5	0	0	weak
@@ -1276,11 +1276,11 @@ condition_count|does|*|\bfor each\b	hs_battlegrounds	59	6	6	10	5	weak
 condition_count|does|*|\bfor each\b	wh_killteam	86	29	7	0	0	weak
 condition_count|does|*|\bfor each\b	runeterra	89	17	16	0	0	ok
 condition_count|does|*|\bfor each\b	wh_underworlds	66	11	4	0	0	weak
-condition_count|does|*|\bfor each\b	wh_aos_4th	426	17	9	0	0	weak
-condition_count|does|*|\bfor each\b	wh_40k_10e	169	7	0	10	9	weak
+condition_count|does|*|\bfor each\b	wh_aos_4th	426	76	33	0	0	weak
+condition_count|does|*|\bfor each\b	wh_40k_10e	169	27	12	10	9	weak
 condition_count|does|*|\bfor each\b	shadowverse	27	4	0	10	10	weak
 condition_count|does|*|\bfor each\b	hearthstone	297	20	18	0	0	ok
-condition_count|does|*|\bfor each\b	mtg	1156	13	12	0	0	ok
+condition_count|does|*|\bfor each\b	mtg	1156	30	24	0	0	weak
 condition_count|does|*|equal to the number of	inscryption	5	5	1	0	0	weak
 condition_count|does|*|equal to the number of	sts1	3	3	1	0	0	weak
 condition_count|does|*|equal to the number of	dnd5e	1	1	0	0	0	thin
@@ -1289,11 +1289,11 @@ condition_count|does|*|equal to the number of	gwent	8	6	4	2	2	weak
 condition_count|does|*|equal to the number of	wh_killteam	5	4	4	1	1	ok
 condition_count|does|*|equal to the number of	runeterra	2	2	1	0	0	thin
 condition_count|does|*|equal to the number of	wh_underworlds	8	7	3	1	1	weak
-condition_count|does|*|equal to the number of	wh_aos_4th	45	2	2	10	10	ok
-condition_count|does|*|equal to the number of	wh_40k_10e	1	0	0	0	0	thin
+condition_count|does|*|equal to the number of	wh_aos_4th	45	15	9	10	10	weak
+condition_count|does|*|equal to the number of	wh_40k_10e	1	1	0	0	0	thin
 condition_count|does|*|equal to the number of	shadowverse	2	2	2	0	0	thin
 condition_count|does|*|equal to the number of	hearthstone	2	2	2	0	0	thin
-condition_count|does|*|equal to the number of	mtg	442	9	6	10	10	weak
+condition_count|does|*|equal to the number of	mtg	442	14	7	10	10	weak
 condition_count|does|*|at least \d+	into_the_breach	4	4	1	0	0	weak
 condition_count|does|*|at least \d+	inscryption	3	3	1	0	0	weak
 condition_count|does|*|at least \d+	darkest_dungeon	1	1	0	0	0	thin
@@ -1304,10 +1304,10 @@ condition_count|does|*|at least \d+	hs_battlegrounds	1	1	0	0	0	thin
 condition_count|does|*|at least \d+	wh_killteam	3	0	0	3	2	weak
 condition_count|does|*|at least \d+	runeterra	2	0	0	2	1	weak
 condition_count|does|*|at least \d+	wh_underworlds	8	0	0	8	8	ok
-condition_count|does|*|at least \d+	wh_aos_4th	18	1	1	10	6	weak
+condition_count|does|*|at least \d+	wh_aos_4th	18	4	4	10	6	weak
 condition_count|does|*|at least \d+	shadowverse	654	73	57	0	0	weak
 condition_count|does|*|at least \d+	hearthstone	18	1	0	10	10	ok
-condition_count|does|*|at least \d+	mtg	10	0	0	9	9	ok
+condition_count|does|*|at least \d+	mtg	10	1	1	9	9	ok
 tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)	into_the_breach	4	4	0	0	0	weak
 tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)	inscryption	1	1	0	0	0	thin
 tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)	duelyst	1	0	0	1	1	ok
@@ -1319,7 +1319,7 @@ tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|m
 tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)	wh_40k_10e	2	0	0	2	2	ok
 tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)	shadowverse	2	0	0	2	0	weak
 tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)	hearthstone	25	2	2	10	10	ok
-tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)	mtg	323	5	5	10	10	ok
+tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)	mtg	323	7	7	10	10	ok
 random_effect|does|*|\brandom	into_the_breach	7	7	6	0	0	weak
 random_effect|does|*|\brandom	inscryption	29	29	25	0	0	weak
 random_effect|does|*|\brandom	faeria	44	24	24	0	0	ok
@@ -1334,39 +1334,39 @@ random_effect|does|*|\brandom	wh_killteam	3	1	1	2	2	ok
 random_effect|does|*|\brandom	runeterra	146	25	25	0	0	ok
 random_effect|does|*|\brandom	wh_underworlds	3	1	1	2	2	ok
 random_effect|does|*|\brandom	wh_aos_4th	5	0	0	5	5	ok
-random_effect|does|*|\brandom	wh_40k_10e	16	0	0	10	9	ok
+random_effect|does|*|\brandom	wh_40k_10e	16	3	3	10	9	ok
 random_effect|does|*|\brandom	shadowverse	882	88	80	0	0	ok
 random_effect|does|*|\brandom	hearthstone	1192	87	87	0	0	ok
-random_effect|does|*|\brandom	mtg	414	3	1	10	10	weak
+random_effect|does|*|\brandom	mtg	414	9	6	10	10	weak
 random_effect|does|*|\broll	into_the_breach	1	1	1	0	0	thin
 random_effect|does|*|\broll	wh_bloodbowl3	75	75	37	0	0	weak
 random_effect|does|*|\broll	inscryption	2	2	0	0	0	thin
 random_effect|does|*|\broll	sts1	2	1	0	1	0	weak
 random_effect|does|*|\broll	darkest_dungeon	1	1	1	0	0	thin
-random_effect|does|*|\broll	dnd5e	533	192	137	0	0	weak
+random_effect|does|*|\broll	dnd5e	533	192	138	0	0	weak
 random_effect|does|*|\broll	sts2	2	0	0	2	0	weak
 random_effect|does|*|\broll	hs_battlegrounds	2	0	0	2	2	ok
-random_effect|does|*|\broll	wh_killteam	701	162	94	0	0	weak
+random_effect|does|*|\broll	wh_killteam	701	162	101	0	0	weak
 random_effect|does|*|\broll	wh_underworlds	390	69	47	0	0	weak
-random_effect|does|*|\broll	wh_aos_4th	2074	112	77	0	0	weak
-random_effect|does|*|\broll	wh_40k_10e	1573	101	70	0	0	weak
+random_effect|does|*|\broll	wh_aos_4th	2074	290	224	0	0	weak
+random_effect|does|*|\broll	wh_40k_10e	1573	233	195	0	0	weak
 random_effect|does|*|\broll	hearthstone	1	0	0	1	1	ok
-random_effect|does|*|\broll	mtg	44	2	2	10	10	ok
+random_effect|does|*|\broll	mtg	44	4	4	10	10	ok
 random_effect|does|*|\bdice\b	wh_bloodbowl3	7	7	5	0	0	weak
 random_effect|does|*|\bdice\b	inscryption	4	4	4	0	0	ok
 random_effect|does|*|\bdice\b	darkest_dungeon	2	0	0	2	2	ok
 random_effect|does|*|\bdice\b	dnd5e	22	10	8	0	0	weak
-random_effect|does|*|\bdice\b	wh_killteam	341	85	33	0	0	weak
+random_effect|does|*|\bdice\b	wh_killteam	341	85	41	0	0	weak
 random_effect|does|*|\bdice\b	wh_underworlds	435	71	40	0	0	weak
-random_effect|does|*|\bdice\b	wh_aos_4th	778	30	26	0	0	weak
-random_effect|does|*|\bdice\b	wh_40k_10e	57	3	2	10	5	weak
+random_effect|does|*|\bdice\b	wh_aos_4th	778	125	115	0	0	ok
+random_effect|does|*|\bdice\b	wh_40k_10e	57	23	16	10	5	weak
 random_effect|does|*|\bdice\b	hearthstone	1	0	0	1	1	ok
-random_effect|does|*|\bdice\b	mtg	7	0	0	6	2	weak
+random_effect|does|*|\bdice\b	mtg	7	1	1	6	2	weak
 random_effect|does|*|\bd6\b	wh_bloodbowl3	35	35	33	0	0	ok
 random_effect|does|*|\bd6\b	dnd5e	4	2	2	2	1	weak
 random_effect|does|*|\bd6\b	wh_killteam	212	66	65	0	0	ok
-random_effect|does|*|\bd6\b	wh_aos_4th	303	19	14	0	0	weak
-random_effect|does|*|\bd6\b	wh_40k_10e	476	30	28	0	0	ok
+random_effect|does|*|\bd6\b	wh_aos_4th	303	44	37	0	0	weak
+random_effect|does|*|\bd6\b	wh_40k_10e	476	83	78	0	0	ok
 random_effect|does|*|\bd6\b	mtg	1	0	0	1	1	ok
 random_effect|does|*|\bcoin	into_the_breach	1	1	1	0	0	thin
 random_effect|does|*|\bcoin	inscryption	1	1	0	0	0	thin
@@ -1375,10 +1375,10 @@ random_effect|does|*|\bcoin	hs_battlegrounds	21	9	0	10	0	weak
 random_effect|does|*|\bcoin	runeterra	19	5	0	10	0	weak
 random_effect|does|*|\bcoin	shadowverse	1	1	0	0	0	thin
 random_effect|does|*|\bcoin	hearthstone	45	8	1	10	1	weak
-random_effect|does|*|\bcoin	mtg	70	0	0	10	10	ok
+random_effect|does|*|\bcoin	mtg	70	5	5	10	10	ok
 free_play|does|*|without paying	inscryption	1	1	1	0	0	thin
-free_play|does|*|without paying	mtg	255	1	1	10	10	ok
-free_play|does|*|\bput .{0,30}onto the battlefield	mtg	503	8	1	10	9	weak
+free_play|does|*|without paying	mtg	255	2	2	10	10	ok
+free_play|does|*|\bput .{0,30}onto the battlefield	mtg	503	18	7	10	9	weak
 variable_stats|does|*|equal to the number of	inscryption	5	5	4	0	0	weak
 variable_stats|does|*|equal to the number of	sts1	3	3	0	0	0	weak
 variable_stats|does|*|equal to the number of	dnd5e	1	1	0	0	0	thin
@@ -1387,11 +1387,11 @@ variable_stats|does|*|equal to the number of	gwent	8	6	1	2	2	weak
 variable_stats|does|*|equal to the number of	wh_killteam	5	4	0	1	0	weak
 variable_stats|does|*|equal to the number of	runeterra	2	2	1	0	0	thin
 variable_stats|does|*|equal to the number of	wh_underworlds	8	7	3	1	0	weak
-variable_stats|does|*|equal to the number of	wh_aos_4th	45	2	0	10	0	weak
-variable_stats|does|*|equal to the number of	wh_40k_10e	1	0	0	0	0	thin
+variable_stats|does|*|equal to the number of	wh_aos_4th	45	15	1	10	0	weak
+variable_stats|does|*|equal to the number of	wh_40k_10e	1	1	1	0	0	thin
 variable_stats|does|*|equal to the number of	shadowverse	2	2	0	0	0	thin
 variable_stats|does|*|equal to the number of	hearthstone	2	2	2	0	0	thin
-variable_stats|does|*|equal to the number of	mtg	442	9	3	10	3	weak
+variable_stats|does|*|equal to the number of	mtg	442	14	5	10	3	weak
 modal_choice|does|*|choose one\s*[:—-]	faeria	13	7	7	6	6	ok
 modal_choice|does|*|choose one\s*[:—-]	sts1	1	0	0	1	1	ok
 modal_choice|does|*|choose one\s*[:—-]	gwent	2	2	2	0	0	thin
@@ -1399,7 +1399,7 @@ modal_choice|does|*|choose one\s*[:—-]	hs_battlegrounds	22	3	3	10	10	ok
 modal_choice|does|*|choose one\s*[:—-]	wh_killteam	2	0	0	2	2	ok
 modal_choice|does|*|choose one\s*[:—-]	wh_underworlds	3	1	1	2	2	ok
 modal_choice|does|*|choose one\s*[:—-]	hearthstone	78	5	5	10	10	ok
-modal_choice|does|*|choose one\s*[:—-]	mtg	322	5	5	10	10	ok
+modal_choice|does|*|choose one\s*[:—-]	mtg	322	12	12	10	10	ok
 modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	wh_bloodbowl3	2	2	0	0	0	thin
 modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	inscryption	4	4	0	0	0	weak
 modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	faeria	13	7	7	6	6	ok
@@ -1410,18 +1410,18 @@ modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature
 modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	wh_killteam	15	10	4	2	2	weak
 modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	runeterra	1	0	0	1	1	ok
 modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	wh_underworlds	30	9	2	10	1	weak
-modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	wh_40k_10e	4	0	0	1	0	weak
+modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	wh_40k_10e	4	3	2	1	0	weak
 modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	hearthstone	94	8	5	10	9	weak
-modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	mtg	446	9	8	10	10	ok
+modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	mtg	446	17	16	10	10	ok
 placement_rules|does|*|\bdeployment	wh_killteam	22	3	1	10	1	weak
-placement_rules|does|*|\bdeployment	wh_aos_4th	181	6	0	10	4	weak
-placement_rules|does|*|\bdeployment	wh_40k_10e	57	2	0	10	4	weak
+placement_rules|does|*|\bdeployment	wh_aos_4th	181	34	10	10	4	weak
+placement_rules|does|*|\bdeployment	wh_40k_10e	57	12	6	10	4	weak
 haste|does|*|\bhaste\b	faeria	14	10	10	0	0	ok
 haste|does|*|\bhaste\b	sts1	1	1	0	0	0	thin
 haste|does|*|\bhaste\b	dnd5e	1	1	0	0	0	thin
-haste|does|*|\bhaste\b	wh_aos_4th	2	0	0	0	0	thin
-haste|does|*|\bhaste\b	wh_40k_10e	1	0	0	0	0	thin
-haste|does|*|\bhaste\b	mtg	1012	16	16	0	0	ok
+haste|does|*|\bhaste\b	wh_aos_4th	2	2	0	0	0	thin
+haste|does|*|\bhaste\b	wh_40k_10e	1	1	1	0	0	thin
+haste|does|*|\bhaste\b	mtg	1012	33	33	0	0	ok
 haste|does|*|\brush\b	wh_bloodbowl3	6	6	1	0	0	weak
 haste|does|*|\brush\b	duelyst	18	8	7	10	10	ok
 haste|does|*|\brush\b	sts1	1	1	0	0	0	thin
@@ -1438,52 +1438,52 @@ board_wipe|does|*|(destroy|kill|exile|banish) (all|each) (other )?(enemy |non-?\
 board_wipe|does|*|(destroy|kill|exile|banish) (all|each) (other )?(enemy |non-?\w+ )?(creatures|minions|units|followers|permanents|cards|fighters)	runeterra	9	4	4	5	5	ok
 board_wipe|does|*|(destroy|kill|exile|banish) (all|each) (other )?(enemy |non-?\w+ )?(creatures|minions|units|followers|permanents|cards|fighters)	shadowverse	59	9	9	10	8	weak
 board_wipe|does|*|(destroy|kill|exile|banish) (all|each) (other )?(enemy |non-?\w+ )?(creatures|minions|units|followers|permanents|cards|fighters)	hearthstone	46	5	4	10	9	weak
-board_wipe|does|*|(destroy|kill|exile|banish) (all|each) (other )?(enemy |non-?\w+ )?(creatures|minions|units|followers|permanents|cards|fighters)	mtg	181	3	2	10	8	weak
+board_wipe|does|*|(destroy|kill|exile|banish) (all|each) (other )?(enemy |non-?\w+ )?(creatures|minions|units|followers|permanents|cards|fighters)	mtg	181	9	6	10	8	weak
 quests|does|*|\bobjective\b	into_the_breach	11	11	6	0	0	weak
 quests|does|*|\bobjective\b	dnd5e	1	1	0	0	0	thin
 quests|does|*|\bobjective\b	wh_killteam	71	22	1	0	0	weak
 quests|does|*|\bobjective\b	wh_underworlds	219	29	16	0	0	weak
-quests|does|*|\bobjective\b	wh_aos_4th	154	11	0	0	0	weak
-quests|does|*|\bobjective\b	wh_40k_10e	319	26	1	0	0	weak
+quests|does|*|\bobjective\b	wh_aos_4th	154	35	7	0	0	weak
+quests|does|*|\bobjective\b	wh_40k_10e	319	52	10	0	0	weak
 merge_attach|does|*|\battach	dnd5e	4	4	3	0	0	weak
 merge_attach|does|*|\battach	wh_killteam	2	2	0	0	0	thin
 merge_attach|does|*|\battach	runeterra	18	4	3	10	8	weak
-merge_attach|does|*|\battach	wh_aos_4th	1	0	0	0	0	thin
-merge_attach|does|*|\battach	wh_40k_10e	615	35	34	0	0	ok
-merge_attach|does|*|\battach	mtg	288	4	4	10	9	ok
+merge_attach|does|*|\battach	wh_aos_4th	1	1	0	0	0	thin
+merge_attach|does|*|\battach	wh_40k_10e	615	107	104	0	0	ok
+merge_attach|does|*|\battach	mtg	288	10	7	10	9	weak
 damage_types|does|*|(fire|frost|nature|shadow|holy|arcane|fel|cold|lightning|poison|physical|magic) (damage|weakness|resistance)	into_the_breach	2	2	0	0	0	thin
 damage_types|does|*|(fire|frost|nature|shadow|holy|arcane|fel|cold|lightning|poison|physical|magic) (damage|weakness|resistance)	darkest_dungeon	41	19	0	10	10	weak
 damage_types|does|*|(fire|frost|nature|shadow|holy|arcane|fel|cold|lightning|poison|physical|magic) (damage|weakness|resistance)	dnd5e	201	61	42	10	10	weak
 damage_types|does|*|\bresistance\b	into_the_breach	1	1	0	0	0	thin
 damage_types|does|*|\bresistance\b	darkest_dungeon	225	95	0	10	4	weak
 damage_types|does|*|\bresistance\b	dnd5e	127	49	28	10	7	weak
-damage_types|does|*|\bresistance\b	wh_aos_4th	6	0	0	1	0	weak
-damage_types|does|*|\bresistance\b	wh_40k_10e	2	0	0	0	0	thin
+damage_types|does|*|\bresistance\b	wh_aos_4th	6	5	0	1	0	weak
+damage_types|does|*|\bresistance\b	wh_40k_10e	2	2	1	0	0	thin
 reserve_bench|does|*|\breserves?\b	wh_bloodbowl3	5	5	1	0	0	weak
 reserve_bench|does|*|\breserves?\b	dnd5e	1	1	0	0	0	thin
 reserve_bench|does|*|\breserves?\b	wh_killteam	6	4	4	2	2	ok
-reserve_bench|does|*|\breserves?\b	wh_aos_4th	92	4	3	10	9	weak
-reserve_bench|does|*|\breserves?\b	wh_40k_10e	155	8	8	10	8	weak
+reserve_bench|does|*|\breserves?\b	wh_aos_4th	92	20	17	10	9	weak
+reserve_bench|does|*|\breserves?\b	wh_40k_10e	155	28	28	10	8	ok
 spell_speed|does|*|\bflash\b	faeria	1	1	0	0	0	thin
 spell_speed|does|*|\bflash\b	dnd5e	4	1	0	3	0	weak
 spell_speed|does|*|\bflash\b	runeterra	1	0	0	1	0	weak
 spell_speed|does|*|\bflash\b	wh_aos_4th	3	0	0	3	0	weak
-spell_speed|does|*|\bflash\b	wh_40k_10e	4	0	0	3	0	weak
-spell_speed|does|*|\bflash\b	mtg	418	3	3	10	10	ok
+spell_speed|does|*|\bflash\b	wh_40k_10e	4	1	0	3	0	weak
+spell_speed|does|*|\bflash\b	mtg	418	14	14	10	10	ok
 deck_position|does|*|from the top	gwent	3	1	1	2	2	ok
 deck_position|does|*|from the top	runeterra	5	0	0	5	5	ok
 deck_position|does|*|from the top	wh_underworlds	2	2	2	0	0	thin
-deck_position|does|*|from the top	mtg	222	2	1	10	10	ok
+deck_position|does|*|from the top	mtg	222	4	3	10	10	ok
 stacking_keyword|does|*|\bcounters? on\b	wh_underworlds	24	6	3	10	7	weak
-stacking_keyword|does|*|\bcounters? on\b	mtg	2500	31	7	0	0	weak
+stacking_keyword|does|*|\bcounters? on\b	mtg	2500	81	19	0	0	weak
 kicker|does|*|\benhance\b	inscryption	1	1	0	0	0	thin
 kicker|does|*|\benhance\b	dnd5e	1	1	1	0	0	thin
-kicker|does|*|\benhance\b	wh_40k_10e	1	0	0	0	0	thin
+kicker|does|*|\benhance\b	wh_40k_10e	1	1	1	0	0	thin
 kicker|does|*|\benhance\b	shadowverse	443	31	31	0	0	ok
 points_scoring|does|*|\bscore(s|d)? (\d+|victory|glory|points?|this|that|one|an? objective)\b	wh_killteam	1	1	0	0	0	thin
 points_scoring|does|*|\bscore(s|d)? (\d+|victory|glory|points?|this|that|one|an? objective)\b	wh_underworlds	1085	118	117	0	0	ok
-points_scoring|does|*|\bscore(s|d)? (\d+|victory|glory|points?|this|that|one|an? objective)\b	wh_aos_4th	3	0	0	0	0	thin
-points_scoring|does|*|\bscore(s|d)? (\d+|victory|glory|points?|this|that|one|an? objective)\b	wh_40k_10e	6	1	0	0	0	thin
+points_scoring|does|*|\bscore(s|d)? (\d+|victory|glory|points?|this|that|one|an? objective)\b	wh_aos_4th	3	3	0	0	0	weak
+points_scoring|does|*|\bscore(s|d)? (\d+|victory|glory|points?|this|that|one|an? objective)\b	wh_40k_10e	6	6	0	0	0	weak
 coin_economy|does|*|\bcoins?\b	into_the_breach	1	1	0	0	0	thin
 coin_economy|does|*|\bcoins?\b	inscryption	1	1	0	0	0	thin
 coin_economy|does|*|\bcoins?\b	gwent	62	16	12	0	0	weak
@@ -1491,7 +1491,7 @@ coin_economy|does|*|\bcoins?\b	hs_battlegrounds	21	9	0	10	0	weak
 coin_economy|does|*|\bcoins?\b	runeterra	19	5	0	10	9	weak
 coin_economy|does|*|\bcoins?\b	shadowverse	1	1	0	0	0	thin
 coin_economy|does|*|\bcoins?\b	hearthstone	45	8	0	10	0	weak
-coin_economy|does|*|\bcoins?\b	mtg	70	0	0	10	0	weak
+coin_economy|does|*|\bcoins?\b	mtg	70	5	0	10	0	weak
 block_armor|does|*|\b\d+ block\b	sts1	87	30	30	0	0	ok
 block_armor|does|*|\b\d+ block\b	sts2	128	38	38	0	0	ok
 exhaust|does|*|\bexhaust	inscryption	1	1	0	0	0	thin
@@ -1499,27 +1499,27 @@ exhaust|does|*|\bexhaust	duelyst	3	3	0	0	0	weak
 exhaust|does|*|\bexhaust	sts1	118	36	36	0	0	ok
 exhaust|does|*|\bexhaust	dnd5e	14	12	1	0	0	weak
 exhaust|does|*|\bexhaust	sts2	153	45	41	0	0	ok
-exhaust|does|*|\bexhaust	wh_aos_4th	1	0	0	0	0	thin
-exhaust|does|*|\bexhaust	mtg	35	0	0	10	10	ok
-stress_morale|does|*|\bbattle-?shock	wh_40k_10e	332	20	19	0	0	ok
+exhaust|does|*|\bexhaust	wh_aos_4th	1	1	0	0	0	thin
+exhaust|does|*|\bexhaust	mtg	35	4	0	10	10	weak
+stress_morale|does|*|\bbattle-?shock	wh_40k_10e	332	49	40	0	0	weak
 stress_morale|does|*|\bstress\b	darkest_dungeon	291	102	100	10	10	ok
 stress_morale|does|*|\bstress\b	dnd5e	5	5	1	0	0	weak
 saving_throws|does|*|saving throw	dnd5e	484	168	142	0	0	weak
 saving_throws|does|*|saving throw	wh_killteam	11	3	1	8	8	weak
-saving_throws|does|*|saving throw	wh_40k_10e	53	3	1	10	10	weak
+saving_throws|does|*|saving throw	wh_40k_10e	53	10	2	10	10	weak
 saving_throws|does|*|\bdc \d+	dnd5e	300	115	90	0	0	weak
 reactions|does|*|\breaction\b	dnd5e	49	21	16	0	0	weak
 reactions|does|*|\breaction\b	wh_underworlds	548	90	87	0	0	ok
-reactions|does|*|\breaction\b	wh_aos_4th	295	13	4	0	0	weak
+reactions|does|*|\breaction\b	wh_aos_4th	295	46	35	0	0	weak
 scoring_objectives|does|*|^score this	wh_underworlds	547	52	52	0	0	ok
 scoring_objectives|does|*|\bscore this\b	wh_underworlds	1077	117	117	0	0	ok
-scoring_objectives|does|*|\bscore this\b	wh_aos_4th	1	0	0	0	0	thin
+scoring_objectives|does|*|\bscore this\b	wh_aos_4th	1	1	0	0	0	thin
 zone_of_control|does|*|\bengagement range	wh_killteam	183	48	2	0	0	weak
-zone_of_control|does|*|\bengagement range	wh_40k_10e	369	19	1	0	0	weak
+zone_of_control|does|*|\bengagement range	wh_40k_10e	369	57	3	0	0	weak
 generate_cards|does|*|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b	sts1	2	2	2	0	0	thin
 generate_cards|does|*|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b	shadowverse	697	73	64	0	0	weak
 generate_cards|does|*|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b	hearthstone	6	0	0	6	6	ok
-generate_cards|does|*|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b	mtg	131	1	0	10	0	weak
+generate_cards|does|*|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b	mtg	131	4	0	10	0	weak
 in_hand_buff|does|*|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)	inscryption	1	1	0	0	0	thin
 in_hand_buff|does|*|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)	faeria	9	4	3	5	5	weak
 in_hand_buff|does|*|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)	sts1	2	1	0	1	0	weak
@@ -1530,7 +1530,7 @@ in_hand_buff|does|*|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.
 in_hand_buff|does|*|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)	wh_underworlds	4	4	0	0	0	weak
 in_hand_buff|does|*|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)	shadowverse	46	6	0	10	2	weak
 in_hand_buff|does|*|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)	hearthstone	118	10	7	10	9	weak
-in_hand_buff|does|*|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)	mtg	31	0	0	10	8	weak
+in_hand_buff|does|*|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)	mtg	31	4	4	10	8	weak
 in_hand_buff|does|*|\b(give|gives)\b[^.]{0,50}\bin your (hand|deck)	faeria	7	4	4	3	3	ok
 in_hand_buff|does|*|\b(give|gives)\b[^.]{0,50}\bin your (hand|deck)	gwent	3	2	2	1	1	ok
 in_hand_buff|does|*|\b(give|gives)\b[^.]{0,50}\bin your (hand|deck)	hs_battlegrounds	26	5	5	10	9	ok
@@ -1547,11 +1547,11 @@ stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|stre
 stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	wh_killteam	2	2	2	0	0	thin
 stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	runeterra	26	6	4	10	3	weak
 stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	wh_underworlds	3	3	3	0	0	ok
-stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	wh_aos_4th	22	2	1	10	10	ok
-stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	wh_40k_10e	2	0	0	0	0	thin
+stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	wh_aos_4th	22	6	5	10	10	ok
+stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	wh_40k_10e	2	2	2	0	0	thin
 stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	shadowverse	6	5	5	1	1	ok
 stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	hearthstone	40	9	7	10	10	weak
-stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	mtg	75	1	1	10	6	weak
+stat_multiply|does|*|\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)	mtg	75	7	6	10	6	weak
 cost_condition|does|*|\b\d+[- ]cost\b	duelyst	1	1	0	0	0	thin
 cost_condition|does|*|\b\d+[- ]cost\b	sts1	1	1	0	0	0	thin
 cost_condition|does|*|\b\d+[- ]cost\b	sts2	1	1	1	0	0	thin
@@ -1568,22 +1568,22 @@ symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|chara
 symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	wh_killteam	8	8	0	0	0	weak
 symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	runeterra	6	2	2	4	4	ok
 symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	wh_underworlds	5	2	1	3	1	weak
-symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	wh_aos_4th	7	1	0	0	0	thin
-symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	wh_40k_10e	56	3	0	10	0	weak
+symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	wh_aos_4th	7	7	2	0	0	weak
+symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	wh_40k_10e	56	21	0	10	0	weak
 symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	shadowverse	13	2	2	10	7	weak
 symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	hearthstone	102	12	10	10	10	ok
-symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	mtg	539	8	8	10	10	ok
+symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)	mtg	539	27	24	10	10	ok
 symmetric_effect|does|*|\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b	faeria	5	5	1	0	0	weak
 symmetric_effect|does|*|\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b	duelyst	12	7	0	5	5	weak
 symmetric_effect|does|*|\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b	gwent	2	2	2	0	0	thin
 symmetric_effect|does|*|\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b	hs_battlegrounds	1	1	0	0	0	thin
 symmetric_effect|does|*|\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b	runeterra	7	0	0	7	7	ok
 symmetric_effect|does|*|\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b	hearthstone	153	8	0	10	10	weak
-symmetric_effect|does|*|\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b	mtg	92	2	0	10	10	ok
+symmetric_effect|does|*|\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b	mtg	92	4	1	10	10	weak
 on_play|does|*|\bwhen (this|~) (creature|permanent|artifact|enchantment|vehicle|land|minion|unit|follower|card) enters\b	gwent	2	0	0	2	0	weak
-on_play|does|*|\bwhen (this|~) (creature|permanent|artifact|enchantment|vehicle|land|minion|unit|follower|card) enters\b	mtg	1808	18	18	0	0	ok
-immunity|does|*|\bhexproof\b	mtg	257	3	3	10	9	ok
-cost_reduction|does|*|costs? \{\d+\} less	mtg	368	7	6	10	10	ok
+on_play|does|*|\bwhen (this|~) (creature|permanent|artifact|enchantment|vehicle|land|minion|unit|follower|card) enters\b	mtg	1808	47	47	0	0	ok
+immunity|does|*|\bhexproof\b	mtg	257	5	5	10	9	ok
+cost_reduction|does|*|costs? \{\d+\} less	mtg	368	14	11	10	10	weak
 cost_reduction|does|*|costs? \(?\d+\)? less	duelyst	19	8	5	0	0	pending
 cost_reduction|does|*|costs? \(?\d+\)? less	sts1	3	3	3	0	0	ok
 cost_reduction|does|*|costs? \(?\d+\)? less	sts2	3	0	0	3	3	ok
@@ -1599,10 +1599,10 @@ cost_reduction|does|*|reduce .{0,20}cost	sts2	8	5	0	3	3	weak
 cost_reduction|does|*|reduce .{0,20}cost	gwent	1	1	1	0	0	thin
 cost_reduction|does|*|reduce .{0,20}cost	hs_battlegrounds	11	2	2	9	9	ok
 cost_reduction|does|*|reduce .{0,20}cost	runeterra	65	15	6	0	0	weak
-cost_reduction|does|*|reduce .{0,20}cost	wh_40k_10e	32	7	7	10	9	ok
+cost_reduction|does|*|reduce .{0,20}cost	wh_40k_10e	32	10	10	10	9	ok
 cost_reduction|does|*|reduce .{0,20}cost	hearthstone	147	8	1	10	10	weak
 cost_reduction|does|*|reduce .{0,20}cost	mtg	8	0	0	8	8	ok
-stat_gain|does|darkest_dungeon|\+\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit|max hp)\b|\bbuff: \+	darkest_dungeon	474	173	155	10	9	weak
+stat_gain|does|darkest_dungeon|\+\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit|max hp)\b|\bbuff: \+	darkest_dungeon	474	173	156	10	9	ok
 stress_morale|does|darkest_dungeon|\bstress\b|\bresolve\b|\baffliction|\bvirtue	darkest_dungeon	350	125	104	10	9	weak
 condition|does|darkest_dungeon|\bonly if target is\b|\bwhile light (below|above)\b|\bwhile in rank\b	darkest_dungeon	219	74	0	10	10	weak
 passive|does|darkest_dungeon|^[+-]\d+(\.\d+)?%? [a-z]	darkest_dungeon	565	199	197	10	10	ok
@@ -1613,55 +1613,55 @@ condition|does|gwent|\bif\b	gwent	220	78	0	1	1	weak
 condition|does|hearthstone|\bif (you|you.re|your)\b	hearthstone	525	36	0	0	0	weak
 tribal|does|hs_battlegrounds|\b(murlocs?|beasts?|mechs?|demons?|dragons?|elementals?|pirates?|naga|quilboar|undead|zerg|whelps?)\b	hs_battlegrounds	484	77	65	10	10	weak
 generate_cards|does|hs_battlegrounds|\bget (a|an|another|\d+|x|two|three) (random |new |plain )?[a-z]	hs_battlegrounds	436	61	51	10	10	weak
-return_to_hand|does|mtg|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b	mtg	595	5	2	10	5	weak
-bounce_enemy|does|mtg|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b	mtg	595	5	2	10	5	weak
-counter_spell|does|mtg|(?<!opponent controls, )\bcounter (up to (one|two|three|four|x|\d+) )?(target|that|those|it|them|the (spell|ability)|all|each)\b(?! (creature|land|permanent|player|opponent|artifact|enchantment|planeswalker)s?\b)	mtg	289	3	3	10	10	ok
-damage|does|mtg|\bdeals? damage equal to\b	mtg	249	4	4	10	10	ok
-resource_gain|does|mtg|\badd (one|two|three|four|five|six|seven|eight|x|that much|an amount of) (mana|\{)|\badd x mana\b|\bproduces twice as much\b	mtg	270	5	5	10	10	ok
-cost_reduction|does|mtg|\bcosts? (\{[^}]+\})+ less\b	mtg	422	7	6	10	10	ok
-variable_stats|does|mtg|\b(power|toughness)( and toughness)? (is|are|are each) equal to\b	mtg	228	5	5	10	10	ok
-turn_end|does|mtg|at the beginning of (your|the next|each) end step	mtg	714	12	10	0	0	weak
-death_trigger|does|mtg|\bwhen(ever)? [^.]{0,60}\bdies\b	mtg	806	10	10	0	0	ok
-condition|does|mtg|(?<!for )\bas long as (you|your|there|this|it|equipped|enchanted|an?|defending|no)\b	mtg	482	7	0	10	10	weak
+return_to_hand|does|mtg|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b	mtg	595	11	6	10	5	weak
+bounce_enemy|does|mtg|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b	mtg	595	11	5	10	5	weak
+counter_spell|does|mtg|(?<!opponent controls, )\bcounter (up to (one|two|three|four|x|\d+) )?(target|that|those|it|them|the (spell|ability)|all|each)\b(?! (creature|land|permanent|player|opponent|artifact|enchantment|planeswalker)s?\b)	mtg	289	6	6	10	10	ok
+damage|does|mtg|\bdeals? damage equal to\b	mtg	249	8	8	10	10	ok
+resource_gain|does|mtg|\badd (one|two|three|four|five|six|seven|eight|x|that much|an amount of) (mana|\{)|\badd x mana\b|\bproduces twice as much\b	mtg	270	11	11	10	10	ok
+cost_reduction|does|mtg|\bcosts? (\{[^}]+\})+ less\b	mtg	422	16	13	10	10	weak
+variable_stats|does|mtg|\b(power|toughness)( and toughness)? (is|are|are each) equal to\b	mtg	228	8	8	10	10	ok
+turn_end|does|mtg|at the beginning of (your|the next|each) end step	mtg	714	26	19	0	0	weak
+death_trigger|does|mtg|\bwhen(ever)? [^.]{0,60}\bdies\b	mtg	806	24	24	0	0	ok
+condition|does|mtg|(?<!for )\bas long as (you|your|there|this|it|equipped|enchanted|an?|defending|no)\b	mtg	482	12	0	10	10	weak
 taunt|does|shadowverse|^ward\b|(?<!ignore )(?<!with )\bward\.	shadowverse	541	48	47	0	0	ok
 resource_gain|does|shadowverse|\brecover \d+ (play|evolution) points?\b|\bgain \d+ (empty )?play point orbs?\b	shadowverse	259	28	28	0	0	ok
 multiple_resources|does|shadowverse|\bevolution points?\b	shadowverse	254	29	0	0	0	weak
 upgrade|does|shadowverse|\bevolve (it|this|an?|target|all|that|them)\b|\bcan evolve\b|\bwhen this follower evolves\b|\bthis follower evolves\b	shadowverse	345	50	0	0	0	weak
 count_payoff|does|shadowverse|(at least \d+|equals? the number|x is at least)[^.]*this match	shadowverse	305	31	21	0	0	weak
-random_effect|does|wh_40k_10e|\broll (a|one|two|\d+)? ?d\d\b|\bon a \d\+|\broll off\b|\brandom number\b	wh_40k_10e	382	20	20	0	0	ok
-advantage|does|wh_40k_10e|\bre-?roll(s|ed)?\b|\[twin-linked\]	wh_40k_10e	493	38	36	0	0	ok
-once_per_game|does|wh_40k_10e|\bonce per (battle|game)\b	wh_40k_10e	385	26	18	0	0	weak
-cooldowns|does|wh_40k_10e|\bonce per (turn|phase|battle round)\b	wh_40k_10e	225	16	0	0	0	weak
-temporary_buff|does|wh_40k_10e|\buntil the (end|start) of (the|this|your|your opponent's|the next)( next)? (phase|turn|fight phase|shooting phase|command phase|battle round)\b	wh_40k_10e	696	41	38	0	0	ok
-damage_reduction|does|wh_40k_10e|\bfeel no pain\b|\binvulnerable save\b|\bsubtract 1 from the damage characteristic\b|\bworsen the armour penetration\b|\bdamage characteristic of that attack by 1\b	wh_40k_10e	876	57	9	0	0	weak
-damage|does|wh_40k_10e|\b(suffers?|inflicts?|deals?|inflicting|suffering) (up to )?(\d+|d3|d6|2d3|\w+ )?(additional )?mortal wounds?\b|\[devastating wounds\]	wh_40k_10e	317	17	9	0	0	weak
-terrain|counters|wh_40k_10e|\[ignores cover\]|\bignores cover\b|\bbenefit of cover\b(?! to)	wh_40k_10e	318	25	3	0	0	weak
-tribal|does|wh_40k_10e|\[anti.[a-z]|\banti.[a-z]+ \d\+	wh_40k_10e	286	23	5	0	0	weak
-reserve_bench|does|wh_40k_10e|\bdeep strike\b|\bstrategic reserves\b|\breserves\b	wh_40k_10e	525	39	8	0	0	weak
-zone_control|does|wh_40k_10e|\bobjective markers?\b|\bobjective control\b|\boc characteristic\b	wh_40k_10e	317	26	17	0	0	weak
-stress_morale|does|wh_40k_10e|\bbattle-shock(ed)?\b|\bleadership\b	wh_40k_10e	440	31	19	0	0	weak
-movement|does|wh_40k_10e|\bfall back\b|\badvance (move|roll)s?\b|\bcharge (move|roll)s?\b|\bnormal move\b|\bpile-in\b|\bconsolidat	wh_40k_10e	622	41	14	0	0	weak
-forced_movement|does|wh_40k_10e|\bfall back\b|\badvance (move|roll)s?\b|\bcharge (move|roll)s?\b|\bnormal move\b|\bpile-in\b|\bconsolidat	wh_40k_10e	622	41	0	0	0	weak
-merge_attach|does|wh_40k_10e|\bcan be attached to\b|\bwhile this model is leading a unit\b|\battached unit\b	wh_40k_10e	661	38	37	0	0	ok
-buff|does|wh_40k_10e|(add|subtract) 1 (to|from) the (hit|wound) roll	wh_40k_10e	472	29	16	0	0	weak
-debuff|does|wh_40k_10e|(add|subtract) 1 (to|from) the (hit|wound) roll	wh_40k_10e	472	29	13	0	0	weak
-passive|does|wh_aos_4th|(?s)^(?!.*\btiming:).*\S	wh_aos_4th	1183	82	12	0	0	weak
-activated|does|wh_aos_4th|\btiming:	wh_aos_4th	2357	118	0	0	0	weak
-cooldowns|does|wh_aos_4th|\bonce per turn\b	wh_aos_4th	840	43	0	0	0	weak
-temporary_buff|does|wh_aos_4th|\buntil the (start|end) of (your|the|this|your opponent's)( next)? (turn|phase|battle round)\b|\bfor the rest of the (turn|phase)\b	wh_aos_4th	1272	67	58	0	0	weak
-damage_reduction|does|wh_aos_4th|\bward \(\d\+\)|\b(has|have|gain|gains|with) ward\b|\bsubtract 1 from (the )?(hit|wound) rolls? for (combat |shooting )?attacks that target\b|\bdamage points? allocated to this unit\b	wh_aos_4th	355	20	7	1	1	weak
-random_effect|does|wh_aos_4th|\broll (a|\d+) dice\b|\bon a \d\+|\b(casting|chanting|charge|run) rolls?\b|\b2d6\b|\bd3\b|\bd6\b	wh_aos_4th	1764	94	69	0	0	weak
-advantage|does|wh_aos_4th|\bre-?roll|\bcrit \((2 hits|auto-wound)\)	wh_aos_4th	380	20	7	0	0	weak
-damage|does|wh_aos_4th|\bmortal damage\b|\bcrit \(mortal\)|\binflict (\d|d3|d6)( mortal)? damage\b	wh_aos_4th	808	41	26	0	0	weak
-piercing|does|wh_aos_4th|\brend\b	wh_aos_4th	408	27	22	0	0	weak
-tribal|does|wh_aos_4th|\banti-[a-z]	wh_aos_4th	242	13	5	0	0	weak
-zone_of_control|does|wh_aos_4th|\bin combat\b|\bcombat range\b	wh_aos_4th	1089	65	1	0	0	weak
-summon|does|wh_aos_4th|\bsummon(s|ed)?\b|\bmanifestations?\b|\bendless spells?\b	wh_aos_4th	275	20	9	0	0	weak
-ranged|does|wh_aos_4th|\bshooting attacks?\b|\bshoot\b	wh_aos_4th	357	22	15	0	0	weak
-destroy|does|wh_aos_4th|\bdestroy(s|ed)? (the|an?|that) (enemy )?(unit|model)\b|\bslain\b	wh_aos_4th	242	18	7	0	0	weak
+random_effect|does|wh_40k_10e|\broll (a|one|two|\d+)? ?d\d\b|\bon a \d\+|\broll off\b|\brandom number\b	wh_40k_10e	382	62	62	0	0	ok
+advantage|does|wh_40k_10e|\bre-?roll(s|ed)?\b|\[twin-linked\]	wh_40k_10e	493	76	73	0	0	ok
+once_per_game|does|wh_40k_10e|\bonce per (battle|game)\b	wh_40k_10e	385	69	57	0	0	weak
+cooldowns|does|wh_40k_10e|\bonce per (turn|phase|battle round)\b	wh_40k_10e	225	46	2	0	0	weak
+temporary_buff|does|wh_40k_10e|\buntil the (end|start) of (the|this|your|your opponent's|the next)( next)? (phase|turn|fight phase|shooting phase|command phase|battle round)\b	wh_40k_10e	696	126	117	0	0	ok
+damage_reduction|does|wh_40k_10e|\bfeel no pain\b|\binvulnerable save\b|\bsubtract 1 from the damage characteristic\b|\bworsen the armour penetration\b|\bdamage characteristic of that attack by 1\b	wh_40k_10e	876	154	39	0	0	weak
+damage|does|wh_40k_10e|\b(suffers?|inflicts?|deals?|inflicting|suffering) (up to )?(\d+|d3|d6|2d3|\w+ )?(additional )?mortal wounds?\b|\[devastating wounds\]	wh_40k_10e	317	49	38	0	0	weak
+terrain|counters|wh_40k_10e|\[ignores cover\]|\bignores cover\b|\bbenefit of cover\b(?! to)	wh_40k_10e	318	47	4	0	0	weak
+tribal|does|wh_40k_10e|\[anti.[a-z]|\banti.[a-z]+ \d\+	wh_40k_10e	286	66	60	0	0	ok
+reserve_bench|does|wh_40k_10e|\bdeep strike\b|\bstrategic reserves\b|\breserves\b	wh_40k_10e	525	98	90	0	0	ok
+zone_control|does|wh_40k_10e|\bobjective markers?\b|\bobjective control\b|\boc characteristic\b	wh_40k_10e	317	52	31	0	0	weak
+stress_morale|does|wh_40k_10e|\bbattle-shock(ed)?\b|\bleadership\b	wh_40k_10e	440	69	40	0	0	weak
+movement|does|wh_40k_10e|\bfall back\b|\badvance (move|roll)s?\b|\bcharge (move|roll)s?\b|\bnormal move\b|\bpile-in\b|\bconsolidat	wh_40k_10e	622	104	41	0	0	weak
+forced_movement|does|wh_40k_10e|\bfall back\b|\badvance (move|roll)s?\b|\bcharge (move|roll)s?\b|\bnormal move\b|\bpile-in\b|\bconsolidat	wh_40k_10e	622	104	0	0	0	weak
+merge_attach|does|wh_40k_10e|\bcan be attached to\b|\bwhile this model is leading a unit\b|\battached unit\b	wh_40k_10e	661	112	110	0	0	ok
+buff|does|wh_40k_10e|(add|subtract) 1 (to|from) the (hit|wound) roll	wh_40k_10e	472	73	65	0	0	weak
+debuff|does|wh_40k_10e|(add|subtract) 1 (to|from) the (hit|wound) roll	wh_40k_10e	472	73	36	0	0	weak
+passive|does|wh_aos_4th|(?s)^(?!.*\btiming:).*\S	wh_aos_4th	1183	131	14	0	0	weak
+activated|does|wh_aos_4th|\btiming:	wh_aos_4th	2357	320	0	0	0	weak
+cooldowns|does|wh_aos_4th|\bonce per turn\b	wh_aos_4th	840	142	0	0	0	weak
+temporary_buff|does|wh_aos_4th|\buntil the (start|end) of (your|the|this|your opponent's)( next)? (turn|phase|battle round)\b|\bfor the rest of the (turn|phase)\b	wh_aos_4th	1272	177	125	0	0	weak
+damage_reduction|does|wh_aos_4th|\bward \(\d\+\)|\b(has|have|gain|gains|with) ward\b|\bsubtract 1 from (the )?(hit|wound) rolls? for (combat |shooting )?attacks that target\b|\bdamage points? allocated to this unit\b	wh_aos_4th	355	65	18	1	1	weak
+random_effect|does|wh_aos_4th|\broll (a|\d+) dice\b|\bon a \d\+|\b(casting|chanting|charge|run) rolls?\b|\b2d6\b|\bd3\b|\bd6\b	wh_aos_4th	1764	248	205	0	0	weak
+advantage|does|wh_aos_4th|\bre-?roll|\bcrit \((2 hits|auto-wound)\)	wh_aos_4th	380	65	37	0	0	weak
+damage|does|wh_aos_4th|\bmortal damage\b|\bcrit \(mortal\)|\binflict (\d|d3|d6)( mortal)? damage\b	wh_aos_4th	808	131	91	0	0	weak
+piercing|does|wh_aos_4th|\brend\b	wh_aos_4th	408	77	71	0	0	ok
+tribal|does|wh_aos_4th|\banti-[a-z]	wh_aos_4th	242	48	21	0	0	weak
+zone_of_control|does|wh_aos_4th|\bin combat\b|\bcombat range\b	wh_aos_4th	1089	168	7	0	0	weak
+summon|does|wh_aos_4th|\bsummon(s|ed)?\b|\bmanifestations?\b|\bendless spells?\b	wh_aos_4th	275	53	16	0	0	weak
+ranged|does|wh_aos_4th|\bshooting attacks?\b|\bshoot\b	wh_aos_4th	357	60	45	0	0	weak
+destroy|does|wh_aos_4th|\bdestroy(s|ed)? (the|an?|that) (enemy )?(unit|model)\b|\bslain\b	wh_aos_4th	242	43	13	0	0	weak
 activated|does|wh_killteam|\(\d ?ap\)|\b\d ?ap\b(?= action)	wh_killteam	301	85	84	0	0	ok
-temporary_buff|does|wh_killteam|\buntil the (end|start) of (the|its|that|this operative's|your)( next)? (turning point|activation|battle round|phase|psychic phase|combat|shooting attack)\b	wh_killteam	228	58	55	0	0	ok
-advantage|does|wh_killteam|\bre-?roll\b|\bretain (one|up to|any)\b[^.]{0,40}\bas (a )?(normal |critical )?success|\bas a critical (hit|success) instead\b	wh_killteam	284	44	8	0	0	weak
+temporary_buff|does|wh_killteam|\buntil the (end|start) of (the|its|that|this operative's|your)( next)? (turning point|activation|battle round|phase|psychic phase|combat|shooting attack)\b	wh_killteam	228	58	54	0	0	ok
+advantage|does|wh_killteam|\bre-?roll\b|\bretain (one|up to|any)\b[^.]{0,40}\bas (a )?(normal |critical )?success|\bas a critical (hit|success) instead\b	wh_killteam	284	44	12	0	0	weak
 random_effect|does|wh_killteam|\broll (a|one|two|\d+)? ?d\d\b|\bon a \d\+|\broll off\b	wh_killteam	233	73	73	0	0	ok
 movement|does|wh_killteam|\b(normal move|dash|fall back|reposition|charge) action\b	wh_killteam	229	64	31	0	0	weak
 forced_movement|does|wh_killteam|\b(normal move|dash|fall back|reposition|charge) action\b	wh_killteam	229	64	3	0	0	weak
@@ -1676,10 +1676,10 @@ temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|roun
 temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	gwent	1	1	1	0	0	thin
 temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	wh_killteam	104	29	28	0	0	ok
 temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	wh_underworlds	86	6	6	10	10	ok
-temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	wh_40k_10e	176	10	7	0	0	weak
+temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	wh_40k_10e	176	23	19	0	0	weak
 temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	shadowverse	89	10	9	0	0	ok
 temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	hearthstone	7	0	0	7	7	ok
-temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	mtg	2859	34	30	0	0	weak
+temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	mtg	2859	76	70	0	0	ok
 temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	inscryption	2	2	2	0	0	thin
 temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	faeria	3	3	3	0	0	ok
 temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	duelyst	11	6	6	5	5	ok
@@ -1689,24 +1689,24 @@ temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|d
 temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	hs_battlegrounds	8	3	3	5	4	weak
 temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	runeterra	30	2	2	10	7	weak
 temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	wh_underworlds	5	1	0	4	2	weak
-temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	wh_aos_4th	221	13	4	0	0	weak
-temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	wh_40k_10e	13	2	0	9	2	weak
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	wh_aos_4th	221	29	6	0	0	weak
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	wh_40k_10e	13	4	0	9	2	weak
 temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	shadowverse	19	2	0	10	1	weak
 temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	hearthstone	68	3	3	10	10	ok
-temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	mtg	396	6	3	10	9	weak
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	mtg	396	17	13	10	9	weak
 temporary_effect|does|*|until (the start of )?your next turn	faeria	1	1	1	0	0	thin
 temporary_effect|does|*|until (the start of )?your next turn	duelyst	7	4	4	3	3	ok
 temporary_effect|does|*|until (the start of )?your next turn	dnd5e	23	7	6	10	8	weak
 temporary_effect|does|*|until (the start of )?your next turn	gwent	1	1	1	0	0	thin
-temporary_effect|does|*|until (the start of )?your next turn	wh_aos_4th	421	22	21	0	0	ok
-temporary_effect|does|*|until (the start of )?your next turn	wh_40k_10e	37	4	4	10	10	ok
+temporary_effect|does|*|until (the start of )?your next turn	wh_aos_4th	421	60	43	0	0	weak
+temporary_effect|does|*|until (the start of )?your next turn	wh_40k_10e	37	10	10	10	10	ok
 temporary_effect|does|*|until (the start of )?your next turn	shadowverse	21	2	2	10	10	ok
 temporary_effect|does|*|until (the start of )?your next turn	hearthstone	27	1	1	10	10	ok
-temporary_effect|does|*|until (the start of )?your next turn	mtg	100	2	1	10	10	ok
+temporary_effect|does|*|until (the start of )?your next turn	mtg	100	5	2	10	10	weak
 temporary_effect|does|*|\buntil the end of the (battle round|phase|turning point)	wh_killteam	119	33	32	0	0	ok
 temporary_effect|does|*|\buntil the end of the (battle round|phase|turning point)	wh_underworlds	22	3	2	10	10	ok
 temporary_effect|does|*|\buntil the end of the (battle round|phase|turning point)	wh_aos_4th	1	0	0	1	1	ok
-temporary_effect|does|*|\buntil the end of the (battle round|phase|turning point)	wh_40k_10e	369	19	19	0	0	ok
-untap|does|*|(?<!t )\buntap (target|it|all|up to|another|each|that|this|~|those|a|an|two|x)\b	mtg	430	3	3	10	10	ok
+temporary_effect|does|*|\buntil the end of the (battle round|phase|turning point)	wh_40k_10e	369	70	70	0	0	ok
+untap|does|*|(?<!t )\buntap (target|it|all|up to|another|each|that|this|~|those|a|an|two|x)\b	mtg	430	15	15	10	10	ok
 type_grant|does|*|\bin addition to (its|their) other (colors|colours|types|creature types)\b	wh_underworlds	2	1	0	1	1	ok
-type_grant|does|*|\bin addition to (its|their) other (colors|colours|types|creature types)\b	mtg	245	2	2	10	10	ok
+type_grant|does|*|\bin addition to (its|their) other (colors|colours|types|creature types)\b	mtg	245	8	6	10	10	weak
