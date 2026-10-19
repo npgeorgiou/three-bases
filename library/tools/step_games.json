@@ -1,0 +1,40 @@
+{
+ "pattern_fix": [
+  "darkest_dungeon",
+  "dnd5e",
+  "duelyst",
+  "faeria",
+  "gwent",
+  "hearthstone",
+  "hs_battlegrounds",
+  "inscryption",
+  "into_the_breach",
+  "marvel_snap",
+  "mtg",
+  "runeterra",
+  "shadowverse",
+  "sts1",
+  "sts2",
+  "wh_40k_10e",
+  "wh_aos_4th",
+  "wh_bloodbowl3",
+  "wh_killteam",
+  "wh_underworlds"
+ ],
+ "kw_links": [
+  "inscryption",
+  "duelyst",
+  "sts1",
+  "darkest_dungeon",
+  "dnd5e",
+  "sts2",
+  "gwent",
+  "hs_battlegrounds",
+  "wh_killteam",
+  "wh_underworlds",
+  "wh_aos_4th",
+  "shadowverse",
+  "mtg"
+ ],
+ "_note": "final comparison 19 Oct 2026: kw_links is left out of games it made worse on the answer key (into_the_breach, wh_bloodbowl3, faeria, marvel_snap, runeterra, wh_40k_10e, hearthstone)"
+}

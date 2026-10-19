@@ -209,7 +209,14 @@ def pack(n_per_file=12):
     for p, g, m, kn, kr, sn, sr, v in res:
         if v == 'weak': wm[p] += int(m)
     todo = [p for p, _ in wm.most_common(140)]   # token saving: the 140 patterns with the most weak matches (88% of them)
-    d = os.path.join(HERE, 'narrow'); os.makedirs(d, exist_ok=True)
+    r2 = os.path.join(HERE, 'round2.tsv')
+    if os.environ.get('ROUND2') and os.path.exists(r2):   # round 2: weak patterns behind the games that got worse
+        weak = collections.defaultdict(list)
+        for line in open(r2):
+            p, g = line.rstrip('\n').split('\t'); weak[p].append(g)
+        todo = list(dict.fromkeys(l.split('\t')[0] for l in open(r2)))
+        d2 = os.path.join(HERE, 'narrow2'); os.makedirs(d2, exist_ok=True)
+    d = os.path.join(HERE, 'narrow2' if os.environ.get('ROUND2') else 'narrow'); os.makedirs(d, exist_ok=True)
     for f in glob.glob(os.path.join(d, '[0-9]*.md')): os.remove(f)
     for b in range(0, len(todo), n_per_file):
         with open(os.path.join(d, f'{b // n_per_file:02d}.md'), 'w') as fh:
@@ -242,7 +249,7 @@ def trial(p, newpat, games=None):
 
 def decisions_raw():
     out = []
-    for f in sorted(glob.glob(os.path.join(HERE, 'narrow', 'out_*.tsv'))):
+    for f in sorted(glob.glob(os.path.join(HERE, 'narrow', 'out_*.tsv')) + glob.glob(os.path.join(HERE, 'narrow2', 'out_*.tsv'))):
         for line in open(f, encoding='utf-8'):
             parts = line.rstrip('\n').split('\t')
             if len(parts) == 3 and parts[0].count('|') >= 3: out.append((parts[0], [g.strip() for g in parts[1].split(',') if g.strip()], parts[2]))

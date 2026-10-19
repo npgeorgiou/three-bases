@@ -22,6 +22,10 @@ if os.path.exists(f):
         if not line.strip() or line.startswith('#'): continue
         kind, p, games, new = line.rstrip('\n').split('\t')
         dec.append((kind, p, games.split(','), new))
+sys.path.insert(0, HERE)
+from step_games import step_games
+ALLOW = step_games('pattern_fix')
+if ALLOW is not None: dec = [(k, p, [g for g in gs if g in ALLOW], n) for k, p, gs, n in dec]
 if not dec:
     print('pattern fixes: none'); sys.exit(0)
 import patterns3 as P
@@ -34,6 +38,13 @@ if os.path.exists(os.path.join(S3, 'questions.json')):
     Q, ans, _, _ = P.answers()
     for qid, (e, k, d) in Q['q'].items():
         if ans.get(qid) is True: known[k].add(e)
+import csv
+sys.path.insert(0, HERE)
+from concept_tree import primary
+mk = dict(q('SELECT old_id, kept_id FROM merged_entities'))
+for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t'):
+    if r['expect'] == 'present':
+        for k in primary(r['concept']): known[k].add(mk.get(int(r['entity']), int(r['entity'])))
 ents = collections.defaultdict(list)
 for i, g, n, t in q('SELECT id, game, name, text FROM entities'): ents[g].append((i, P.norm_text(g, n, t)))
 games_all = [g for g, in q('SELECT id FROM games')]

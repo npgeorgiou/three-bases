@@ -1,0 +1,22 @@
+signature	Xenos - Necrons	revive	Reanimation Protocols revive fallen Warriors	https://www.wargamer.com/warhammer-40k/factions
+signature	Xenos - Genestealer Cults	revive	units often return to play after dying	https://www.wargamer.com/warhammer-40k/factions
+signature	Imperium - Adepta Sororitas	resource_banking	Miracle Dice store results for later use	https://www.wargamer.com/warhammer-40k/factions
+signature	Xenos - Leagues of Votann	mark_target	Eye of the Ancestors makes enemies easier to hit and wound	https://www.wargamer.com/warhammer-40k/factions
+signature	Chaos - Death Guard	debuff	plague aura weakens enemies	https://www.wargamer.com/warhammer-40k/factions
+signature	Chaos - Chaos Space Marines	friendly_fire	Dark Pacts can disastrously backfire	https://www.wargamer.com/warhammer-40k/factions
+signature	Imperium - Adeptus Mechanicus	modal_choice	reconfigurable, pick the right tool at the right moment	https://www.wargamer.com/warhammer-40k/factions
+archetype	Xenos - Orks	swarm	relentless green tide of Boyz and Grots	https://www.wargamer.com/warhammer-40k/factions
+archetype	Xenos - Tyranids	swarm	swarms of Termagants and Hormagaunts	https://www.wargamer.com/warhammer-40k/factions
+archetype	Xenos - Necrons	fortress	slow but tough	https://www.wargamer.com/warhammer-40k/factions
+archetype	Chaos - Death Guard	fortress	slow hardy plague-carriers, very durable	https://www.wargamer.com/warhammer-40k/factions
+archetype	Imperium - Adeptus Custodes	fortress	extremely tough with top-tier defensive wargear	https://www.wargamer.com/warhammer-40k/factions
+archetype	Xenos - T'au Empire	positional	highly mobile battlesuits project force	https://www.wargamer.com/warhammer-40k/factions
+archetype	Chaos - Emperor's Children	aggro_tempo	fast aggressive melee specialists	https://www.wargamer.com/warhammer-40k/factions
+archetype	Chaos - Thousand Sons	spellslinger	psyker-driven army, strength in psychic abilities	https://www.wargamer.com/warhammer-40k/factions
+combo	Storm Speeder Thunderstrike	Eradicators	+1 to wound vs vehicles/monsters boosts Eradicators	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Storm Speeder Thunderstrike	Hellblasters	+1 to wound vs vehicles/monsters boosts Hellblasters	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Storm Speeder Thunderstrike	Redemptor Dreadnought	+1 to wound vs vehicles/monsters	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Impulsor	Hellblasters	Firing Deck lets them shoot from inside	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Impulsor	Sternguard Veteran Squad	Firing Deck lets them shoot from inside	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Judiciar	Bladeguard Veteran Squad	closest the melee options come to viable	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Ghazghkull Thraka	Meganobz	Ghaz can attach to Meganobz in Bully Boyz lists	https://www.belloflostsouls.net/2024/08/warhammer-40k-top-5-must-have-units-for-10ths-hot-armies.html

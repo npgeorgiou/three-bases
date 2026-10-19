@@ -1,0 +1,29 @@
+signature	Ironclad	stat_gain	Strength scaling (Demon Form, Inflame)	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Ironclad	exhaust	Exhaust builds (Feel No Pain, Dark Embrace)	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Ironclad	life_payment	self-damage with Rupture and Hemokinesis	https://www.gamecat.it.com/articles/slay-the-spire-2-best-builds
+signature	Silent	damage_over_time	Poison stacking	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Silent	discard	discard engine (Calculated Gamble, Acrobatics)	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Silent	generate_cards	Shivs made by Blade Dance and Infinite Blades	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Defect	slots_queue	Orb slots	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Watcher	stances	Calm, Wrath, Divinity	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Watcher	retain	Retain build (Establishment, Sands of Time)	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Watcher	selection	Scry build (Cut Through Fate, Third Eye)	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Ironclad	fortress	Bunker build with Barricade and Body Slam	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Ironclad	scaling	Strength scaling	https://slaythespire.gg/guides/slay-the-spire-best-character
+archetype	Silent	poison_attrition	Poison with Catalyst	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Silent	spellslinger	cheap-card chains (After Image, A Thousand Cuts)	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Silent	card_advantage	Discard and draw cycling	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Defect	fortress	Frost orb tank	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Defect	scaling	Claw scaling over the fight	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Watcher	transformation	stance dancing	https://slaythespire.gg/guides/slay-the-spire-best-character
+archetype	Watcher	card_advantage	Scry and card control	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Body Slam	Barricade	keep Block, convert it to damage	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Corruption	Feel No Pain	free exhausting skills give Block	https://www.gamecat.it.com/articles/slay-the-spire-2-best-builds
+combo	Limit Break	Inflame	Limit Break doubles stacked Strength	https://www.gamecat.it.com/articles/slay-the-spire-2-best-builds
+combo	Rupture	Hemokinesis	self-damage turns into Strength	https://www.gamecat.it.com/articles/slay-the-spire-2-best-builds
+combo	Noxious Fumes	Catalyst	Catalyst multiplies stacked Poison	https://www.gamecat.it.com/articles/slay-the-spire-2-best-builds
+combo	After Image	Blade Dance	free Shivs each give Block	https://www.gamecat.it.com/articles/slay-the-spire-2-best-builds
+combo	Loop	Defragment	Focus plus repeated orb passives	https://slaythespire.gg/guides/slay-the-spire-best-character
+combo	Flurry of Blows	Mental Fortress	stance changes recur and give Block	https://www.highgroundgaming.com/slay-the-spire-watcher-guide/
+combo	Worship	Brilliance	Mantra raises Brilliance damage	https://www.highgroundgaming.com/slay-the-spire-watcher-guide/
+combo	All for One	Claw	0-cost cards return and Claw grows	https://slaythespire.gg/guides/slay-the-spire-best-character

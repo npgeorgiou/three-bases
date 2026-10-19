@@ -1,0 +1,22 @@
+signature	Evocation	aoe_damage	Fireball and Meteor Swarm	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+signature	Conjuration	summon	Conjure Animals	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+signature	Enchantment	disable	Hold Person paralyzes	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+signature	Abjuration	counter_spell	Counterspell and Dispel Magic	https://rpgbot.net/dnd5/how-to-play/schools-of-magic
+signature	Abjuration	banish	Banishment	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+signature	Necromancy	revive	Create Undead, Animate Dead	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+signature	Illusion	stealth	Invisibility and Disguise Self	https://rpgbot.net/dnd5/how-to-play/schools-of-magic
+signature	Transmutation	transform	True Polymorph and Polymorph	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+signature	Divination	information	scrying and knowledge	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+signature	Divination	advantage	Foresight grants advantage	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+archetype	Necromancy	swarm	raises armies	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+archetype	Conjuration	swarm	summons many creatures	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+archetype	Abjuration	fortress	wards and barriers	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+archetype	Evocation	burn	elemental destruction	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+archetype	Enchantment	control	charm and compulsion	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+archetype	Illusion	trickery	deceiving the senses	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+archetype	Transmutation	transformation	changing forms	https://blackcitadelrpg.com/schools-of-magic-guide-5e/
+combo	Hold Person	Fireball	paralyzed targets fail Dex saves	https://www.enworld.org/threads/5e-d-d-5e-good-spell-combos.417168/
+combo	Forcecage	Moonbeam	trapped target takes persistent damage	https://www.enworld.org/threads/5e-d-d-5e-good-spell-combos.417168/
+combo	Enlarge/Reduce	Web	Reduce plus Web pinned a dragon	https://www.enworld.org/threads/5e-d-d-5e-good-spell-combos.417168/
+combo	Find Familiar	Fire Bolt	familiar Help gives advantage on spell attack	https://www.enworld.org/threads/5e-d-d-5e-good-spell-combos.417168/
+combo	Meld into Stone	Magic Jar	listed combo	https://www.enworld.org/threads/5e-d-d-5e-good-spell-combos.417168/
