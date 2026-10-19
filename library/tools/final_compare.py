@@ -20,7 +20,7 @@ def tags(c, ids, old):
     for e, k, r, m in c.execute('SELECT entity, concept, role, method FROM entity_concepts WHERE entity IN (%s)' % ','.join(map(str, ids))):
         if m in ('game_structure', 'data_rule'): continue
         for x in (targets(k, txt.get(e)) if old and (k in MAP or k in REMOVED) else {k}):
-            if x in K.TREE: out[e].add((x, r))
+            if x in K.TREE and x not in K.NOT_IN_KEY: out[e].add((x, r))
     return out
 
 def judge(Kc):

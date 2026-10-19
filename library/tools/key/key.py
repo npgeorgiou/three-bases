@@ -28,6 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); TOOLS = os.path.dirname(HERE)
 sys.path.insert(0, TOOLS)
 from concept_tree import TREE, targets, MAP, REMOVED
 DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(TOOLS), 'three-bases-library.sqlite'))
+NOT_IN_KEY = {l.strip() for l in open(os.path.join(HERE, 'added_concepts.txt'), encoding='utf-8') if l.strip() and not l.startswith('#')} if os.path.exists(os.path.join(HERE, 'added_concepts.txt')) else set()
 GROUPS = {'effect', 'helps_me', 'hurts_enemy', 'drawback', 'game_rules'} | {i for i, d in TREE.items() if not d['parents']}
 def gdir(g): d = os.path.join(HERE, g); os.makedirs(d, exist_ok=True); return d
 def norm(s): return re.sub(r'\s+', ' ', (s or '').lower().replace('’', "'").replace('‘', "'").replace('“', '"').replace('”', '"')).strip()
@@ -162,7 +163,7 @@ def lib_tags(c, ids, old=False):
     for e, k, m in c.execute(q):
         if m in ('game_structure', 'data_rule'): continue
         ks = targets(k, txt.get(e)) if (old and (k in MAP or k in REMOVED)) else {k}
-        out[e] |= {x for x in ks if x in TREE}
+        out[e] |= {x for x in ks if x in TREE and x not in NOT_IN_KEY}
     return out
 
 def score(dbpath, games):

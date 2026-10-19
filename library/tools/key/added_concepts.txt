@@ -1,0 +1,7 @@
+# Concepts added to the tree after the answer key was read (19 Oct 2026). The key has no tags for them, so the scorers leave them out.
+on_draw
+on_discard
+on_lifegain
+on_block
+on_targeted
+on_sacrifice
