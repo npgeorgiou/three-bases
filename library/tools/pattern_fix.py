@@ -47,6 +47,7 @@ for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf
         for k in primary(r['concept']): known[k].add(mk.get(int(r['entity']), int(r['entity'])))
 from concept_tree import REMOVED
 dropped = {(mk.get(int(r['entity']), int(r['entity'])), primary(r['concept'])[0]) for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'absent' and r['concept'] not in REMOVED}
+reviewed = {(mk.get(int(r['entity']), int(r['entity'])), x) for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present' and r['concept'] not in REMOVED for x in primary(r['concept'])}
 ents = collections.defaultdict(list)
 for i, g, n, t in q('SELECT id, game, name, text FROM entities'): ents[g].append((i, P.norm_text(g, n, t)))
 games_all = [g for g, in q('SELECT id FROM games')]
@@ -60,7 +61,7 @@ for kind, p, games, new in dec:
             c.execute('INSERT OR IGNORE INTO concept_patterns VALUES(?,?,?,?)', (k, role, new, gg))
             for e, t in ents[gg]:
                 m = nrx.search(t)
-                if m: added += c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, k, role, 'text_pattern', t[max(0, m.start() - 20): m.start() + 40])).rowcount
+                if m and (e, k) not in dropped: added += c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, k, role, 'text_pattern', t[max(0, m.start() - 20): m.start() + 40])).rowcount
             c.execute('INSERT INTO pattern_fixes VALUES(?,?,?,?,?,?)', ('new', k, role, gg, None, new))
         continue
     orx = re.compile(pat, re.I)
@@ -72,6 +73,7 @@ for kind, p, games, new in dec:
             if e in known[k]:   # never where a hand review dropped the concept (regression.tsv 'absent', applied earlier)
                 if (e, k) not in dropped: kept += c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, k, role, 'text_pattern', 'kept: judged right, step 3')).rowcount
                 continue
+            if any((e, x) in reviewed for x in P.K.ANC[k] - P.K.GROUPS): continue   # the tag is what keeps a reviewed broader concept
             if e in have and not any(o.search(t) for o in others):
                 removed += c.execute("DELETE FROM entity_concepts WHERE entity=? AND concept=? AND role=? AND method='text_pattern'", (e, k, role)).rowcount
                 if not q('SELECT 1 FROM entity_concepts WHERE entity=? AND concept=?', e, k):
