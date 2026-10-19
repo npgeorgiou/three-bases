@@ -285,7 +285,7 @@ on_play | When played (battlecry, on reveal) | trigger | trigger | Triggers when
 on_spell | When a spell is played | trigger | trigger | Triggers when a spell or action is played. | When a unit is played is on_ally_play.
 on_draw | When a card is drawn | trigger | trigger | Triggers when the owner or a player draws a card. (Added 19 Oct 2026, Claude's.) | Drawing cards as the effect is draw.
 on_discard | When a card is discarded | trigger | trigger | Triggers when the owner or a player discards a card, or when this card is discarded. (Added 19 Oct 2026, Claude's.) | Discarding as a cost is discard.
-on_lifegain | When life is gained | trigger | trigger | Triggers when the owner or a player gains life or the hero is healed. (Added 19 Oct 2026, Claude's.) | Gaining life as the effect is heal.
+on_lifegain | When life or health is restored | trigger | trigger | Triggers when a player gains life, or a hero or unit is healed. (Added 19 Oct 2026, Claude's.) | Gaining life as the effect is heal.
 on_block | When it blocks or is blocked | trigger | trigger | Triggers when the unit blocks or becomes blocked. (Added 19 Oct 2026, Claude's.) | When it attacks is on_attack.
 on_targeted | When it becomes a target | trigger | trigger | Triggers when the unit or card becomes the target of a spell or ability. (Added 19 Oct 2026, Claude's.) | When it is damaged is on_damaged.
 on_sacrifice | When a unit is sacrificed | trigger | trigger | Triggers when the owner sacrifices a unit or permanent. (Added 19 Oct 2026, Claude's.) | Sacrificing as a cost is the sacrifice concept.

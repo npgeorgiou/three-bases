@@ -11,6 +11,9 @@ sys.path.insert(0, HERE); sys.path.insert(0, TOOLS)
 import patterns3 as P
 K = P.K
 U = r"(?:a|an|this|that|the|one|another|any|each|a friendly|an enemy)\s+(?:model|unit|operative|fighter|creature|minion|follower|character)"
+ST = r"\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) "   # how a trigger clause starts
+PL = r"(?:you|i|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they)"   # who acts
+IT = r"(?:this card|this creature|this unit|this minion|this fighter|this model|this operative|this permanent|this|name|that card|a card(?: bearing this sigil)?|the card|a domain card|one or more \w+ cards?|it)"   # what it happens to
 CANDIDATES = [
     ('on_attack', 'trigger', r"\beach time " + U + r"\b[^.,:\n]{0,40}?\b(?:makes? an? (?:melee |ranged |shooting )?attack|fights?|shoots?|is selected to (?:fight|shoot))"),
     ('on_attack', 'trigger', r"\bafter (?:this|that) (?:model|unit|operative|fighter) has (?:shot|fought)\b"),
@@ -22,12 +25,12 @@ CANDIDATES = [
     ('on_ally_play', 'trigger', r"\bwhen(?:ever)? you play an?\b"),
     ('on_damaged', 'trigger', r"\beach time an? (?:ranged |melee |shooting )?attack (?:is made against|targets) (?:this|that)\b"),
     ('on_enemy_enter', 'trigger', r"\beach time an enemy (?:unit|operative|model)\b[^.,:\n]{0,40}?\bends? an? (?:normal|advance|fall back|charge|reposition|dash) move\b"),
-    ('on_draw', 'trigger', r"\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b"),
-    ('on_discard', 'trigger', r"\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) discards?\b|\bwhen(?:ever)? (?:this|name|this card|a card) is discarded\b"),
-    ('on_lifegain', 'trigger', r"\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) gains? (?:\d+ |that much |\w+ )?life\b|\bwhen(?:ever)? (?:your hero|you) (?:is|are) healed\b"),
-    ('on_block', 'trigger', r"\bwhen(?:ever)? (?:this creature|name) blocks\b|\bwhen(?:ever)? (?:this creature|name) becomes blocked\b"),
-    ('on_targeted', 'trigger', r"\bwhen(?:ever)? (?:this (?:creature|permanent|unit|minion)|name) becomes the target of\b"),
-    ('on_sacrifice', 'trigger', r"\bwhen(?:ever)? (?:you|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) sacrifices?\b"),
+    ('on_draw', 'trigger', ST + r"(?:" + PL + r" draws?\b|(?:" + IT + r" )?(?:is |are |gets |get |i'm |i am )?drawn\b)"),
+    ('on_discard', 'trigger', ST + r"(?:" + PL + r" discards?\b|(?:" + IT + r" )?(?:is |are |gets |get |i'm |i am )?discarded\b)"),
+    ('on_lifegain', 'trigger', ST + r"(?:" + PL + r" (?:gains? (?:\d+ |x |that much |\w+ )?life|heals?)\b|(?:" + IT + r" |anything |a character |an? (?:ally|allied|friendly) \w+ )?(?:is |are |i'm |i am )?healed\b)"),
+    ('on_block', 'trigger', ST + r"(?:(?:this creature|name|i|it|this player|a player|this unit|an enemy|an ally) (?:blocks?|becomes blocked|is blocked|performs a block)\b)"),
+    ('on_targeted', 'trigger', ST + r"(?:(?:" + IT + r"|they|it|i) (?:becomes?|is|are|i'm) (?:the |a )?target(?:ed)?\b|(?:" + IT + r") is selected as the target\b|(?:an? |the )?(?:enemy|opponent|attack|spell|ability)\b[^.,:\n]{0,25}\btargets (?:this|name|me|it|them)\b)"),
+    ('on_sacrifice', 'trigger', ST + r"(?:" + PL + r" sacrifices?\b|(?:" + IT + r" )?(?:is |are |i'm |i am )?sacrificed\b)"),
 ]
 DROP = set()   # (pattern index, game) pairs Claude judged wrong; filled after 'check'
 DB = sys.argv[2] if len(sys.argv) > 2 else P.DB
