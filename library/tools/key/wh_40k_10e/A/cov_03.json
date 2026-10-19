@@ -1,0 +1,1130 @@
+{
+"785502": [
+[
+"saving_throws",
+"The bearer has a 4+ invulnerable save"
+],
+[
+"reactions",
+"Each time the bearer's unit is selected as the target of an attack"
+],
+[
+"kicker",
+"you can discard 1 Miracle dice"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+]
+],
+"785521": [
+[
+"turn_start",
+"At the start of each battle round"
+],
+[
+"random_effect",
+"roll one D6 and consult the Hymns of Battle table"
+],
+[
+"kicker",
+"you can then choose to discard 1 Miracle dice"
+],
+[
+"temporary_buff",
+"until the end of the battle round"
+]
+],
+"785517": [
+[
+"kicker",
+"you can discard 1 Miracle die"
+],
+[
+"piercing",
+"[IGNORES COVER]"
+],
+[
+"target_choice",
+"[PRECISION]"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+]
+],
+"787660": [
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"deathtouch",
+"[LETHAL HITS]"
+],
+[
+"kicker",
+"you can discard 1 Miracle dice"
+],
+[
+"damage",
+"the target of that attack suffers 1 mortal wound in addition to any normal damage"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"saving_throws",
+"invulnerable save of 4+"
+]
+],
+"787789": [
+[
+"board_limit",
+"transport capacity of 6"
+],
+[
+"start_of_game",
+"At the start of the Declare Battle Formations step"
+],
+[
+"summon",
+"that unit is split into two units"
+],
+[
+"piercing",
+"that enemy unit cannot have the Benefit of Cover"
+],
+[
+"temporary_effect",
+"Until the end of the phase"
+],
+[
+"saving_throws",
+"6+ invulnerable save"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"787070": [
+[
+"saving_throws",
+"Feel No Pain 5+"
+],
+[
+"damage_types",
+"against mortal wounds and Psychic Attacks"
+],
+[
+"once_per_game",
+"once per battle"
+],
+[
+"resource_conversion",
+"you can remove one Warp counter the bearer has"
+],
+[
+"random_effect",
+"you can change one of the dice that were part of that roll to a dice result of your choosing"
+]
+],
+"815400": [
+[
+"silence",
+"loses the Vortex of Doom ability"
+]
+],
+"788331": [
+[
+"buff",
+"add 1 to the Hit roll"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"785943": [
+[
+"tribal",
+"Infantry only"
+],
+[
+"stat_gain",
+"Change this model's Move characteristic to 12\""
+],
+[
+"evasion",
+"add the Fly keyword"
+],
+[
+"merge_attach",
+"Replace the list of units this model can be attached to"
+]
+],
+"788169": [
+[
+"buff",
+"add 1 to the Hit roll"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"787232": [
+[
+"condition_life",
+"While this model has 1-4 wounds remaining"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+],
+[
+"buff",
+"add 1 to the Hit roll"
+]
+],
+"788639": [
+[
+"saving_throws",
+"Feel No Pain 4+"
+],
+[
+"damage_types",
+"against Mortal Wounds"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"788436": [
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"damage_reduction",
+"subtract 1 from the Damage characteristic of that attack"
+],
+[
+"regeneration",
+"Reanimation Protocols"
+]
+],
+"788555": [
+[
+"turn_end",
+"At the end of your opponent’s turn"
+],
+[
+"return_to_hand",
+"remove it from the battlefield and place it into Strategic Reserves"
+],
+[
+"reserve_bench",
+"Strategic Reserves"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"piercing",
+"[IGNORES COVER]"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"placement_rules",
+"Deep Strike"
+]
+],
+"788443": [
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"buff",
+"re-roll a Hit roll of 1"
+],
+[
+"turn_start",
+"in your Command phase"
+],
+[
+"revive",
+"return 1 destroyed Bodyguard model to that unit"
+],
+[
+"merge_attach",
+"This model can be attached to the following unit"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"turn_end",
+"at the end of your Movement phase"
+],
+[
+"heal",
+"regains D3 lost wounds"
+]
+],
+"788480": [
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stat_loss",
+"subtract 2\" from its Move characteristic"
+],
+[
+"debuff",
+"subtract 2 from Advance and Charge rolls"
+],
+[
+"delayed",
+"until the end of your opponent's next turn"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"turn_start",
+"at the start of any phase"
+],
+[
+"damage",
+"that enemy unit suffers D6 mortal wounds"
+],
+[
+"ranged",
+"Indirect Fire"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"787192": [
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"saving_throws",
+"4+ Invulnerable save"
+],
+[
+"reactions",
+"Each time an enemy unit declares a charge"
+],
+[
+"debuff",
+"subtract 2 from the Charge roll"
+],
+[
+"on_attack",
+"Each time this model is selected to shoot"
+],
+[
+"variable_stats",
+"add 1 to the Attacks and Strength characteristics of its Destructor weapon for each other friendly Aeldari Psyker model within 6\""
+],
+[
+"tribal",
+"friendly Aeldari Psyker model"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+]
+],
+"787193": [
+[
+"saving_throws",
+"4+ Invulnerable save"
+],
+[
+"aura",
+"While a Farseer model is leading this unit"
+],
+[
+"damage_reduction",
+"subtract 1 from the Wound roll"
+],
+[
+"variable_stats",
+"add 1 to the Attacks and Strength characteristics of that model's Destructor weapon for each other friendly Aeldari Psyker model"
+],
+[
+"tribal",
+"friendly Aeldari Psyker model"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"start_of_game",
+"At the start of the Declare Battle Formations step"
+],
+[
+"merge_attach",
+"this unit can join one Guardian Defenders or Storm Guardians unit"
+]
+],
+"787252": [
+[
+"variable_stats",
+"add 1 to the Attacks and Strength characteristics of that model's Destructor weapon for each other friendly Aeldari Psyker model"
+],
+[
+"tribal",
+"friendly Aeldari Psyker model"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"start_of_game",
+"At the start of the Declare Battle Formations step"
+],
+[
+"merge_attach",
+"this unit can join one Windriders unit"
+],
+[
+"piercing",
+"[Ignores Cover]"
+],
+[
+"saving_throws",
+"4+ Invulnerable save"
+]
+],
+"787670": [
+[
+"merge_attach",
+"This model can be attached to the following unit"
+],
+[
+"condition_life",
+"While this model has 1-6 wounds remaining"
+],
+[
+"stat_multiply",
+"the Attacks characteristics of all of its weapons are halved"
+],
+[
+"turn_start",
+"At the start of the battle round"
+],
+[
+"modal_choice",
+"select up to two of the abilities in the Relics of the Matriarchs section"
+],
+[
+"aura",
+"While a friendly Adepta Sororitas unit is within 6\" of this model"
+],
+[
+"tribal",
+"friendly Adepta Sororitas unit"
+],
+[
+"stat_gain",
+"add 2\" to that unit's Move characteristic"
+],
+[
+"repeat_trigger",
+"can perform up to two Acts of Faith per phase, instead of only one"
+],
+[
+"buff",
+"re-roll a Wound roll of 1"
+],
+[
+"piercing",
+"improve the Armour Penetration characteristic of melee weapons"
+],
+[
+"saving_throws",
+"Feel No Pain 6+"
+],
+[
+"random_effect",
+"do not roll one D6 to determine the value of that Miracle dice; it has a value of 6"
+]
+],
+"787287": [
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"aura",
+"While a friendly Khorne Legiones Daemonica unit is within 6\" of this model"
+],
+[
+"stat_gain",
+"add 1 to the Attacks characteristic"
+],
+[
+"speed",
+"eligible to declare a charge in a turn in which it Advanced"
+],
+[
+"condition_life",
+"While this model has 1-7 wounds remaining"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"784635": [
+[
+"tribal",
+"Death Jester model only"
+],
+[
+"condition_life",
+"below Half-strength"
+],
+[
+"buff",
+"each successful Hit scores a Critical Hit"
+]
+],
+"787501": [
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"aura",
+"While a friendly Plague Legions unit is within 6\" of this model"
+],
+[
+"stat_gain",
+"add 1 to the Toughness characteristic"
+],
+[
+"turn_end",
+"At the end of your Movement phase"
+],
+[
+"stat_loss",
+"subtract 1 from the Toughness characteristic"
+],
+[
+"condition_life",
+"While this model has 1-7 wounds remaining"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+],
+[
+"deathtouch",
+"Lethal Hits"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"788314": [
+[
+"condition_life",
+"not Below Half-strength"
+],
+[
+"buff",
+"you can re-roll the Hit roll"
+],
+[
+"saving_throws",
+"5+ invulnerable save"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"786485": [
+[
+"game_end_trigger",
+"At the end of each battle"
+],
+[
+"resource_gain",
+"increase the amount of the resource that is acquired by 10"
+],
+[
+"random_effect",
+"each time you roll a dice to see if a Rare Resource is acquired"
+]
+],
+"785365": [
+[
+"on_attack",
+"Each time this unit is selected to fight"
+],
+[
+"stat_gain",
+"add 2 to the Attacks characteristic"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"friendly_fire",
+"[HAZARDOUS]"
+]
+],
+"788350": [
+[
+"stat_gain",
+"add 8\" to the Move characteristic of this model"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"condition_life",
+"While this model has 1-13 wounds remaining"
+],
+[
+"stat_loss",
+"subtract 8 from this model’s Objective Control characteristic"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+],
+[
+"saving_throws",
+"5+ invulnerable save against ranged attacks only"
+],
+[
+"cost_increase",
+"you must spend twice that Stratagem’s stated CP cost"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"787196": [
+[
+"terrain",
+"because of this Fortification"
+],
+[
+"protection",
+"that model has the Benefit of Cover against that attack"
+],
+[
+"tribal",
+"friendly AELDARI unit"
+],
+[
+"reserve_bench",
+"arrives from Strategic Reserves"
+],
+[
+"placement_rules",
+"set it up anywhere on the battlefield that is wholly within 6\" of this FORTIFICATION"
+],
+[
+"haste",
+"is eligible to fight this turn"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"787240": [
+[
+"start_of_game",
+"after both players have deployed their armies and determined who has the first turn"
+],
+[
+"movement",
+"redeploy that unit"
+],
+[
+"reserve_bench",
+"Strategic Reserves"
+],
+[
+"once_per_game",
+"Once per turn"
+],
+[
+"on_enemy_enter",
+"when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model"
+],
+[
+"saving_throws",
+"4+ invulnerable save"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Infiltrators"
+]
+],
+"786823": [
+[
+"tribal",
+"Kroot Shaper model only"
+],
+[
+"start_of_game",
+"In the Declare Battle Formations step"
+],
+[
+"placement_rules",
+"Models in those units have the Deep Strike ability"
+]
+],
+"788186": [
+[
+"aura",
+"While a Techmarine model is leading this unit"
+],
+[
+"stat_gain",
+"improve the Ballistic Skill and Weapon Skill characteristics"
+],
+[
+"start_of_game",
+"At the start of the Declare Battle Formations step"
+],
+[
+"merge_attach",
+"this unit can join one other unit from your army"
+]
+],
+"786122": [
+[
+"tribal",
+"SPACE WOLVES model only"
+],
+[
+"stat_gain",
+"Add 2\" to the Move characteristic of the bearer"
+],
+[
+"start_of_game",
+"In the Declare Battle Formations step"
+],
+[
+"merge_attach",
+"the bearer can be attached to a WULFEN INFANTRY unit"
+]
+],
+"785718": [
+[
+"start_of_game",
+"At the start of the Declare Battle Formations step"
+],
+[
+"tribal",
+"AGENTS OF THE IMPERIUM INFANTRY units"
+],
+[
+"placement_rules",
+"those units gain the Infiltrators ability"
+]
+],
+"784934": [
+[
+"start_of_game",
+"In the Declare Battle Formations step"
+],
+[
+"reserve_bench",
+"you can set up the bearer in Reserves"
+],
+[
+"sacrifice",
+"The selected model is destroyed"
+],
+[
+"placement_rules",
+"the bearer is set up as close as possible to where that model was destroyed"
+],
+[
+"merge_attach",
+"The bearer now attaches to that unit as its Leader"
+]
+],
+"788158": [
+[
+"targeting_rules",
+"this model can target enemy units within Engagement Range of it"
+],
+[
+"buff",
+"does not suffer the penalty to its Hit rolls"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"784374": [
+[
+"tribal",
+"Adeptus Custodes unit"
+],
+[
+"lone_unit",
+"if there are no other friendly units within 6\" of that unit"
+],
+[
+"buff",
+"add 1 to the Hit roll and add 1 to the Wound roll"
+]
+],
+"784902": [
+[
+"targeting_rules",
+"this model can target enemy units within Engagement Range of it"
+]
+],
+"788313": [
+[
+"targeting_rules",
+"this model can target enemy units within Engagement Range of it"
+],
+[
+"buff",
+"does not suffer the penalty to its Hit rolls"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"784407": [
+[
+"tribal",
+"Astra Militarum Titanic or Astra Militarum Squadron unit"
+],
+[
+"targeting_rules",
+"models in that unit can target enemy units within Engagement Range of that unit"
+],
+[
+"buff",
+"do not suffer the penalty to their Hit rolls"
+]
+],
+"788250": [
+[
+"once_per_game",
+"Once per turn"
+],
+[
+"on_enemy_enter",
+"when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit"
+],
+[
+"movement",
+"it can make a Normal move of up to D6\""
+],
+[
+"aura",
+"While this unit is within 6\" of one or more SPACE WOLVES CHARACTER models"
+],
+[
+"stat_gain",
+"have an Objective Control characteristic of 1"
+]
+],
+"784517": [
+[
+"zone_control",
+"if you control at least half of the objective markers within No Man's Land"
+],
+[
+"control_reward",
+"No Man's Land is within your army's Power Matrix"
+],
+[
+"turn_start",
+"At the start of any phase"
+],
+[
+"tribal",
+"CRYPTEK or CANOPTEK unit"
+],
+[
+"buff",
+"re-roll a Hit roll of 1"
+],
+[
+"territory_trigger",
+"wholly within your Power Matrix"
+]
+],
+"786750": [
+[
+"tribal",
+"Warboss model only"
+],
+[
+"turn_start",
+"In your Command phase"
+],
+[
+"zone_control",
+"it is Secured by your army"
+]
+],
+"788574": [
+[
+"mark_target",
+"targets its Spotted unit"
+],
+[
+"buff",
+"re-roll a Hit roll of 1"
+],
+[
+"condition_life",
+"While this model has 1-10 wounds remaining"
+],
+[
+"stat_loss",
+"subtract 5 from this model’s Objective Control characteristic"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+],
+[
+"movement",
+"it can move through models"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"death_trigger",
+"Deadly Demise"
+]
+],
+"785697": [
+[
+"stat_gain",
+"Add 1 to the Objective Control characteristic"
+]
+],
+"787614": [
+[
+"saving_throws",
+"invulnerable save characteristic of 5+"
+],
+[
+"merge_attach",
+"This model can be attached to the following unit"
+]
+],
+"785595": [
+[
+"quests",
+"Win a battle by more than 10 Victory points"
+],
+[
+"condition_count",
+"more than 10 Victory points"
+]
+],
+"788283": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"combat_start",
+"at the start of the Fight phase"
+],
+[
+"stat_gain",
+"add 1 to the Strength and Attacks characteristics"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"merge_attach",
+"it can be attached to this unit instead"
+],
+[
+"aura",
+"While a Captain or Chapter Master model is leading this unit"
+],
+[
+"damage_reduction",
+"subtract 1 from the Wound roll"
+],
+[
+"death_trigger",
+"if any models from this unit were destroyed as a result of those attacks"
+],
+[
+"reactions",
+"In your opponent’s Shooting phase"
+],
+[
+"movement",
+"this unit can make a Surge move"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"target_choice",
+"Precision"
+]
+],
+"787810": [
+[
+"saving_throws",
+"5+ invulnerable save"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"stat_gain",
+"improve the Strength and Attacks characteristics of melee weapons equipped by this model by 3"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"aura",
+"While this model is leading a unit"
+]
+],
+"787392": [
+[
+"merge_attach",
+"This model can be attached to the following units"
+],
+[
+"aura",
+"While this model is leading a unit"
+],
+[
+"buff",
+"add 1 to the Hit roll"
+],
+[
+"stat_gain",
+"add D3 to the Strength characteristic"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"random_effect",
+"add D3"
+]
+],
+"787072": [
+[
+"death_trigger",
+"When the bearer's unit is destroyed"
+],
+[
+"random_effect",
+"roll on D6 for every enemy unit within 6\""
+],
+[
+"aoe_damage",
+"for every enemy unit within 6\""
+],
+[
+"damage",
+"that enemy unit suffers D3 mortal wounds"
+],
+[
+"summon",
+"you can set up one unit of Unbound Adversaries on the battlefield"
+],
+[
+"variable_stats",
+"The Power Level of this unit is equal to the number of Warp counters"
+]
+]
+}

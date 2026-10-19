@@ -1,0 +1,1614 @@
+{
+"793890": [
+[
+"damage",
+"Inflict D3 mortal damage on the target"
+],
+[
+"random_effect",
+"roll 2D6"
+],
+[
+"movement",
+"This unit can move a distance up to the value of the roll"
+],
+[
+"condition_count",
+"the number of daemonic power points this unit has"
+],
+[
+"protection",
+"This unit has Ward (6+)"
+],
+[
+"spell_power",
+"Add 1 to casting rolls for this unit"
+],
+[
+"damage_types",
+"against damage inflicted by Spells, Prayers"
+],
+[
+"area_templates",
+"Draw a line between the caster and the first point"
+],
+[
+"aoe_damage",
+"Each enemy unit the lines pass across is a target"
+],
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"resource_conversion",
+"allocate them to a different friendly non-Hobgrot Helsmiths of Hashut unit"
+],
+[
+"reactions",
+"Enemy Hero Phase"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"792022": [
+[
+"tribal",
+"friendly Seraphon Wizard"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"area_templates",
+"Draw a straight line"
+],
+[
+"aoe_damage",
+"Roll a D3 for each unit (friendly and enemy)"
+],
+[
+"friendly_fire",
+"(friendly and enemy)"
+],
+[
+"damage",
+"inflict an amount of mortal damage on that unit equal to the roll"
+]
+],
+"793581": [
+[
+"ranged",
+"within range"
+],
+[
+"area_templates",
+"draw a straight line"
+],
+[
+"aoe_damage",
+"Inflict D3 mortal damage on each visible unit"
+],
+[
+"friendly_fire",
+"(friendly and enemy)"
+],
+[
+"tribal",
+"friendly Cities of Sigmar unit"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"protection",
+"the target has Ward (6+)"
+]
+],
+"793474": [
+[
+"immunity",
+"This Manifestation cannot be targeted by shooting attacks"
+],
+[
+"protection",
+"a unit cannot be targeted by shooting attacks"
+],
+[
+"targeting_rules",
+"without that line passing across this Manifestation"
+]
+],
+"794046": [
+[
+"combo_sequence",
+"If you depicted Alaithi, Rune of the Mountain this battle round"
+],
+[
+"zone_control",
+"add 3 to the control scores of friendly Alarith units"
+],
+[
+"aura",
+"while they are wholly within 12"
+],
+[
+"buff",
+"Crit (Auto-wound)"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"movement",
+"'Normal Move' or 'Retreat' ability"
+],
+[
+"tribal",
+"friendly Lumineth Realm-lords unit"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"piercing",
+"Add 1 to the Rend characteristic of the target's melee weapons"
+],
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"spell_power",
+"Add 1 to casting rolls for this unit"
+],
+[
+"protection",
+"the attack fails and the attack sequence ends"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"reactions",
+"Reaction: You declared the 'Depict Rune' ability"
+],
+[
+"rule_change",
+"replace each rune on your battle scripture"
+],
+[
+"spell_power",
+"Add 1 to this unit's power level for the rest of the phase"
+],
+[
+"random_effect",
+"Roll a dice each time you declare a command"
+],
+[
+"debuff",
+"the target has Strike-last"
+],
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"modal_choice",
+"Pick 1 of the following runes"
+],
+[
+"condition_count",
+"Roll a number of dice equal to the unmodified charge roll"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"movement",
+"Remove this unit from the battlefield and set it up again anywhere on the battlefield"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"794270": [
+[
+"aura",
+"While this unit is on the battlefield, add 2\" to the distance friendly units can move"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"debuff",
+"the target has Strike-last"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"debuff",
+"subtract 1 from the number of dice rolled when making charge rolls for the target"
+],
+[
+"delayed",
+"Until the start of your next turn"
+]
+],
+"792344": [
+[
+"debuff",
+"Subtract 1 from charge rolls for enemy units"
+],
+[
+"scope_multi",
+"enemy units"
+]
+],
+"792341": [
+[
+"heal",
+"Heal (D3) each friendly Cycle of Corruption unit"
+],
+[
+"tribal",
+"Cycle of Corruption unit"
+],
+[
+"scope_multi",
+"each friendly Cycle of Corruption unit"
+]
+],
+"792340": [
+[
+"protection",
+"have Ward (4+)"
+],
+[
+"tribal",
+"Cycle of Corruption Heroes"
+]
+],
+"792346": [
+[
+"heal",
+"Heal (7) each friendly Feculent Gnarlmaw"
+],
+[
+"summon",
+"you can set up a Feculent Gnarlmaw on the battlefield"
+],
+[
+"terrain",
+"other terrain features"
+]
+],
+"794452": [
+[
+"modal_choice",
+"Pick 1 of the following to apply for the rest of the turn"
+],
+[
+"protection",
+"This unit has Ward (5+)"
+],
+[
+"piercing",
+"Crit (Mortal)"
+],
+[
+"spell_power",
+"Add 1 to this unit's power level"
+],
+[
+"advantage",
+"you can re-roll 1 of the dice"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"flexibility",
+"If the target is an enemy unit"
+],
+[
+"damage",
+"inflict D3 mortal damage on it"
+],
+[
+"protection",
+"subtract 1 from wound rolls for combat attacks that target that unit"
+],
+[
+"tribal",
+"friendly Deathrattle or Deadwalkers unit"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+]
+],
+"791886": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"modal_choice",
+"Pick empowered agent or sacrificial pawn"
+],
+[
+"stat_gain",
+"Add 2 to the Attacks characteristic"
+],
+[
+"piercing",
+"Add 1 to the Rend characteristic"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+],
+[
+"spell_power",
+"you can use a value of 7 for the roll that cannot be modified"
+],
+[
+"immunity",
+"that spell cannot be unbound"
+],
+[
+"friendly_fire",
+"allocate 3 damage points to this unit"
+]
+],
+"794100": [
+[
+"shield",
+"Ignore the first damage point that would be allocated to each friendly Nighthaunt unit"
+],
+[
+"tribal",
+"friendly Nighthaunt unit"
+],
+[
+"aura",
+"wholly within 12\" of this unit"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"791037": [
+[
+"merge_attach",
+"Add the Ghyranite Long-range Weapon to a unit's warscroll"
+],
+[
+"ranged",
+"ranged weapon"
+],
+[
+"play_restriction",
+"You cannot pick this upgrade for a unit that already has a ranged weapon"
+],
+[
+"deckbuilding_effect",
+"You cannot pick this upgrade"
+]
+],
+"791372": [
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"turn_start",
+"Start of Your Turn"
+],
+[
+"zone_control",
+"contesting an objective that you control"
+],
+[
+"territory_trigger",
+"wholly outside friendly territory"
+],
+[
+"comeback",
+"If you are the underdog"
+],
+[
+"coin_economy",
+"gain 1 fate point for each command point you have"
+],
+[
+"resource_conversion",
+"gain 1 fate point for each command point you have"
+],
+[
+"random_effect",
+"roll a dice for each command point you have"
+]
+],
+"815249": [
+[
+"random_effect",
+"Roll a dice each time you declare a command for this unit"
+],
+[
+"cost_increase",
+"unless you spend 1 additional command point"
+]
+],
+"791294": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"combo_sequence",
+"if you performed any blood rites this turn"
+],
+[
+"modal_choice",
+"Pick 1 of the following blessings that is not active"
+],
+[
+"tribal",
+"friendly Daughters of Khaine units"
+],
+[
+"aura",
+"its effect applies to friendly Daughters of Khaine units"
+],
+[
+"buff",
+"Add 1 to hit rolls"
+],
+[
+"stat_gain",
+"Add 3\" to those units' Move characteristic"
+],
+[
+"protection",
+"they have Ward (5+)"
+],
+[
+"protection",
+"Subtract 1 from hit rolls for shooting attacks that target those units"
+],
+[
+"rule_change",
+"can use Charge and/or Shoot abilities even if they have used a Retreat ability"
+],
+[
+"spell_power",
+"Add 1 to chanting rolls and casting rolls"
+]
+],
+"794422": [
+[
+"zone_control",
+"This unit has a maximum control score of 1"
+],
+[
+"buff",
+"Add 1 to the number of dice rolled when making charge rolls"
+],
+[
+"evasion",
+"as if it had Fly"
+],
+[
+"movement",
+"it can pass through terrain features and enemy models"
+]
+],
+"794419": [
+[
+"reactions",
+"Reaction: You declared a Fight ability for this unit"
+],
+[
+"tribal",
+"friendly Deathrattle Skeletons unit"
+],
+[
+"speed",
+"The target can be picked to use a Fight ability immediately after"
+],
+[
+"aura",
+"wholly within 12\" of this unit"
+],
+[
+"cost_set",
+"you can change that roll to a 4"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"794268": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"turn_number",
+"If the current battle round number is odd"
+],
+[
+"aura",
+"add 2\" to the Move characteristic of friendly Skaven units"
+],
+[
+"protection",
+"subtract 1 from hit rolls for attacks made by enemy units that target a friendly Skaven unit"
+],
+[
+"tribal",
+"friendly Skaven units"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"scope_multi",
+"Pick up to 3 visible friendly Skaven units"
+],
+[
+"heal",
+"Heal (D3) each target"
+],
+[
+"random_effect",
+"Make a casting roll of 2D6"
+],
+[
+"type_grant",
+"this unit counts as a friendly Gnawhole"
+],
+[
+"stat_gain",
+"Charge (+1 Damage)"
+]
+],
+"794315": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"turn_number",
+"If the current battle round number is odd"
+],
+[
+"aura",
+"add 2\" to the Move characteristic of friendly Skaven units"
+],
+[
+"protection",
+"subtract 1 from hit rolls for attacks made by enemy units that target a friendly Skaven unit"
+],
+[
+"tribal",
+"friendly Skaven units"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"scope_multi",
+"Pick each friendly Skaven unit"
+],
+[
+"heal",
+"Heal (D3) each target"
+],
+[
+"random_effect",
+"Make a casting roll of 2D6"
+],
+[
+"type_grant",
+"this unit counts as a friendly Gnawhole"
+],
+[
+"stat_gain",
+"Charge (+1 Damage)"
+]
+],
+"793436": [
+[
+"reactions",
+"Reaction: Opponent declared a Spell ability"
+],
+[
+"counter_spell",
+"it can use the 'Unbind' ability"
+],
+[
+"territory_trigger",
+"the caster is within the creeping overgrowth"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the caster"
+]
+],
+"792157": [
+[
+"tribal",
+"friendly Lumineth Realm-lords Wizard"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"shield",
+"ignore the first damage point allocated to friendly non-Monster Lumineth Realm-lords units each phase"
+],
+[
+"aura",
+"while they are wholly within 9"
+],
+[
+"count_payoff",
+"for each additional time this spell has been successfully cast"
+],
+[
+"delayed",
+"Until the start of your next turn"
+]
+],
+"794559": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"damage",
+"Inflict 2D3 mortal damage on the target"
+],
+[
+"on_kill",
+"If the target would be destroyed by this spell"
+],
+[
+"terrain",
+"give it a friendly overgrown token"
+],
+[
+"aoe_damage",
+"inflict D3 mortal damage on each enemy unit within 6\" of the target"
+],
+[
+"heal",
+"Heal (2D6) this unit"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"revive",
+"This unit can use this ability even if it has been destroyed"
+],
+[
+"turn_start",
+"Start of Battle Round"
+],
+[
+"modal_choice",
+"Pick 1 of the following effects"
+],
+[
+"play_restriction",
+"You cannot pick the effect that you picked in the previous battle round"
+],
+[
+"spell_power",
+"Add 1 to casting rolls and chanting rolls"
+],
+[
+"tribal",
+"friendly Sylvaneth units"
+],
+[
+"rule_change",
+"can use Charge abilities even if they used a Retreat ability"
+],
+[
+"scope_multi",
+"you can pick up to 3 targets instead of 1"
+],
+[
+"stat_gain",
+"Charge (+1 Damage)"
+]
+],
+"791064": [
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"quests",
+"You complete this battle tactic"
+],
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"condition_count",
+"3 or more friendly scout units"
+],
+[
+"territory_trigger",
+"wholly outside friendly territory"
+],
+[
+"zone_control",
+"that you control"
+],
+[
+"territory_trigger",
+"wholly within enemy territory"
+]
+],
+"794460": [
+[
+"adjacency",
+"within the combat range of a friendly Deathrattle or Deadwalkers unit"
+],
+[
+"protection",
+"This unit has Ward (4+)"
+],
+[
+"bodyguard",
+"allocate 1 damage point to a friendly Deathrattle or Deadwalkers unit"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"resource_gain",
+"you receive 1 command point"
+],
+[
+"reactions",
+"Reaction: You declared a Fight ability for this unit"
+],
+[
+"speed",
+"The target can be picked to use a Fight ability immediately after"
+],
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"transform",
+"Pick 1 of the following units to be this unit's beast form"
+],
+[
+"stances",
+"you can have the beast form unit transform back into this unit"
+],
+[
+"cheat_death",
+"If the beast form is destroyed, before it is removed from play, set up this unit"
+],
+[
+"spell_power",
+"add 1 to this unit's power level"
+],
+[
+"merge_attach",
+"you can immediately give it 1 artefact of power"
+],
+[
+"turn_start",
+"Start of Battle Round"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"silence",
+"any heroic trait they have has no effect"
+],
+[
+"turn_end",
+"End of Your Turn"
+],
+[
+"friendly_fire",
+"Allocate 1 damage point to this unit"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"piercing",
+"ward rolls cannot be made for the target"
+],
+[
+"stat_gain",
+"add 1 to the Damage characteristic"
+],
+[
+"zone_control",
+"Subtract 3 from the control scores of enemy units"
+],
+[
+"death_trigger",
+"When this unit is destroyed"
+],
+[
+"aoe_damage",
+"roll a D3 for each enemy unit in combat with it"
+],
+[
+"protection",
+"This unit has Ward (5+) while its Undying Companion is on the battlefield"
+],
+[
+"spell_power",
+"add 1 to casting rolls for this unit"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"792986": [
+[
+"target_choice",
+"Pick an enemy Manifestation"
+],
+[
+"random_effect",
+"make a banishment roll of 2D6"
+],
+[
+"modal_choice",
+"pick 1 of the following effects"
+],
+[
+"damage",
+"Inflict D3 mortal damage on the unit that summoned the target"
+],
+[
+"banish",
+"the target is banished and removed from play"
+],
+[
+"steal",
+"the target is treated as a friendly Manifestation by your army"
+],
+[
+"temporary_effect",
+"For the rest of the turn"
+]
+],
+"793986": [
+[
+"counter_spell",
+"This unit can use Unbind abilities"
+],
+[
+"immunity",
+"cannot be picked to be the target of enemy Rampage abilities"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"turn_end",
+"End of Your Turn"
+],
+[
+"movement",
+"This unit can move a distance up to its Move characteristic"
+],
+[
+"lone_unit",
+"not being contested by any other friendly units"
+],
+[
+"zone_control",
+"add 8 to this unit's control score"
+],
+[
+"aura",
+"Add 2\" to the Move characteristic of friendly Skyvessels"
+],
+[
+"protection",
+"This unit has Ward (4+)"
+],
+[
+"bodyguard",
+"allocate 1 damage point to a friendly Arkanaut Company unit"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"reactions",
+"Reaction: You declared a Shoot ability"
+],
+[
+"advantage",
+"re-roll hit rolls of 1"
+],
+[
+"targeting_rules",
+"all attacks made by this unit must target that enemy unit"
+],
+[
+"heal",
+"Heal (D3) the target"
+],
+[
+"destroy",
+"it is automatically destroyed"
+],
+[
+"play_restriction",
+"cannot use abilities that would summon that Manifestation"
+],
+[
+"debuff",
+"Enemy Manifestations have Strike-last"
+],
+[
+"mark_target",
+"Add 1 to wound rolls for shooting attacks made by friendly Skyfarer units that target that enemy unit"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"792904": [
+[
+"modal_choice",
+"pick 1 of the Manifestations from the list below"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"board_limit",
+"If there is already a friendly Manifestation from the list above on the battlefield, it is immediately banished"
+],
+[
+"summon",
+"set up the Manifestation you picked"
+]
+],
+"791924": [
+[
+"play_restriction",
+"If there is not a friendly The Burning Head endless spell on the battlefield"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"summon",
+"Set up a The Burning Head endless spell"
+]
+],
+"792169": [
+[
+"tribal",
+"friendly Pyrofane Wizard"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"summon",
+"Set up a Burning Sigil of Tzeentch"
+]
+],
+"792233": [
+[
+"tribal",
+"friendly Change-cult Wizard"
+],
+[
+"modal_choice",
+"pick 1 of the friendly Manifestations below"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"board_limit",
+"it is immediately banished and removed from play"
+],
+[
+"summon",
+"set up the Manifestation you picked"
+]
+],
+"792936": [
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"debuff",
+"The target has Strike-last until the start of your next turn"
+],
+[
+"tribal",
+"while the target has the Burning keyword"
+],
+[
+"debuff",
+"subtract 1 from hit rolls for the target"
+],
+[
+"delayed",
+"until the start of your next turn"
+]
+],
+"792802": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"banish",
+"the target is banished and removed from play"
+]
+],
+"794090": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"reactions",
+"Reaction: Opponent declared a Fight ability"
+],
+[
+"debuff",
+"Subtract 1 from hit rolls and wound rolls for that unit's combat attacks"
+],
+[
+"damage_reduction",
+"Subtract 1 from the Rend characteristic of ranged weapons used for shooting attacks that target this unit"
+],
+[
+"zone_control",
+"Add 7 to this unit's control score"
+],
+[
+"protection",
+"it has Ward (4+)"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"suppress",
+"the target cannot use commands for the rest of the turn"
+],
+[
+"turn_end",
+"End of Your Turn"
+],
+[
+"scope_multi",
+"Pick D3 enemy units"
+],
+[
+"tribal",
+"the target has the Diseased keyword"
+],
+[
+"damage",
+"inflict 1 mortal damage on the target"
+],
+[
+"piercing",
+"Ward rolls cannot be made for enemy units while they are in combat with this unit"
+],
+[
+"regeneration",
+"End of Any Turn Heal (3) this unit"
+],
+[
+"spell_power",
+"Add 1 to casting rolls and banishment rolls"
+]
+],
+"791144": [
+[
+"scope_multi",
+"Pick up to 4 enemy Manifestations"
+],
+[
+"random_effect",
+"Make a banishment roll of 2D6 for each target"
+],
+[
+"aoe_damage",
+"inflict D3 mortal damage on each enemy unit within 3\" of it"
+],
+[
+"banish",
+"it is banished and removed from play"
+]
+],
+"792230": [
+[
+"tribal",
+"friendly Aelementiri Conclave Wizard"
+],
+[
+"modal_choice",
+"pick 1 of the friendly Manifestations below"
+],
+[
+"random_effect",
+"make a casting roll of 2D6"
+],
+[
+"board_limit",
+"it is immediately banished and removed from play"
+],
+[
+"summon",
+"set up the Manifestation you picked"
+],
+[
+"link_formation",
+"with its 3 parts touching each other so that they form a ring"
+]
+],
+"794210": [
+[
+"coin_economy",
+"Spend any number of this unit's portions of truebone"
+],
+[
+"modal_choice",
+"pick 1 of the effects below"
+],
+[
+"permanent_growth",
+"the effects are cumulative"
+],
+[
+"spell_power",
+"Add 1 to casting rolls for this unit"
+],
+[
+"resource_gain",
+"Gain 1 relentless discipline point"
+],
+[
+"revive",
+"Return 1 slain model to this unit"
+],
+[
+"type_grant",
+"as if it had the Hero keyword"
+],
+[
+"death_trigger",
+"Each time a visible enemy unit within 12\" of this unit is destroyed"
+],
+[
+"random_effect",
+"roll a dice"
+],
+[
+"death_trigger",
+"Each time a visible friendly non-Beast Ossiarch Bonereapers unit"
+],
+[
+"stacking_keyword",
+"this unit gains 1 portion of truebone"
+]
+],
+"815139": [
+[
+"modal_choice",
+"This unit comprises 1 of the following"
+]
+],
+"793574": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"reactions",
+"Enemy Hero Phase"
+],
+[
+"tribal",
+"friendly Sigmarite Infantry unit"
+],
+[
+"movement",
+"'Normal Move' ability"
+],
+[
+"once_per_game",
+"Once Per Battle"
+],
+[
+"scope_multi",
+"pick each visible friendly Sigmarite unit"
+],
+[
+"buff",
+"Add 1 to hit rolls and wound rolls for the targets' combat attacks"
+],
+[
+"temporary_effect",
+"for the rest of the turn"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"stat_condition",
+"equal to or less than the target's Health characteristic"
+],
+[
+"debuff",
+"subtract 1 from wound rolls for the target's attacks"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"793984": [
+[
+"heal",
+"Heal (3) the target"
+],
+[
+"random_effect",
+"Make a repair roll of D6"
+],
+[
+"adjacency",
+"within 3\" of this terrain feature"
+],
+[
+"start_of_game",
+"Deployment Phase"
+],
+[
+"summon",
+"Set up a friendly Nullifier Auto-Endrin, Stuncloud Auto-Endrin and Grudgeblast Auto-Endrin"
+],
+[
+"revive",
+"set up a replacement Auto-Endrin"
+],
+[
+"terrain",
+"this terrain feature"
+]
+],
+"794380": [
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"random_effect",
+"Roll a D3"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"condition_count",
+"2 or more critical hits against the same enemy unit"
+],
+[
+"debuff",
+"that unit has Strike-last for the rest of the turn"
+],
+[
+"piercing",
+"Crit (Mortal)"
+]
+],
+"794166": [
+[
+"stealth",
+"This unit is not visible to enemy units"
+],
+[
+"terrain",
+"within 3\" of a terrain feature"
+]
+],
+"791462": [
+[
+"buff",
+"Add 1 to charge rolls"
+],
+[
+"tribal",
+"friendly Fyreslayers units"
+],
+[
+"aura",
+"while they are wholly within 12"
+]
+],
+"791304": [
+[
+"reactions",
+"Reaction: You declared the 'Redeploy' command"
+],
+[
+"tribal",
+"Daughters of Khaine unit"
+],
+[
+"cost_set",
+"you can use a value of 4 instead"
+]
+],
+"793690": [
+[
+"damage_reduction",
+"Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit"
+],
+[
+"adjacency",
+"wholly within 12\" of a friendly Argent Shard"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"mark_target",
+"place this unit's Idolarc next to the target"
+],
+[
+"stat_loss",
+"subtract 1\" from that enemy unit's Move characteristic for each fate point you have"
+],
+[
+"condition_count",
+"for each fate point you have"
+],
+[
+"piercing",
+"Anti-Faction Terrain (+1 Rend)"
+]
+],
+"793665": [
+[
+"reactions",
+"Reaction: You declared a Shoot ability for this unit"
+],
+[
+"movement",
+"this unit can move 2D6"
+],
+[
+"ranged",
+"Shoot ability"
+]
+],
+"794129": [
+[
+"lifesteal",
+"Heal (X) this unit, where X is the number of damage points allocated to enemy units"
+],
+[
+"once_per_game",
+"Once Per Battle (Army)"
+],
+[
+"random_effect",
+"Roll a dice"
+],
+[
+"stat_multiply",
+"negative modifiers to its control score are doubled"
+],
+[
+"piercing",
+"ignore positive modifiers to save rolls for the targets"
+],
+[
+"stat_gain",
+"add the roll to the Attacks characteristic of this unit's melee weapons"
+],
+[
+"advantage",
+"You can re-roll hit rolls"
+],
+[
+"tribal",
+"friendly Nighthaunt unit"
+],
+[
+"heal",
+"Heal (1) this unit"
+],
+[
+"immunity",
+"weapon abilities for attacks that target this unit have no effect"
+],
+[
+"turn_end",
+"End of Any Turn"
+],
+[
+"friendly_fire",
+"allocate 1 damage point to this unit"
+],
+[
+"damage",
+"inflict an amount of mortal damage on the target equal to the roll"
+],
+[
+"movement",
+"use the 'Retreat' ability"
+],
+[
+"buff",
+"add 1 to the number of dice rolled when making charge rolls"
+],
+[
+"reactions",
+"Reaction: Your opponent declared a Spell ability"
+],
+[
+"counter_spell",
+"this unit can use the 'Unbind' ability"
+],
+[
+"damage_over_time",
+"each time the target is picked to use a Core ability, roll a dice as a reaction"
+],
+[
+"silence",
+"weapon abilities for attacks made by enemy units have no effect"
+],
+[
+"debuff",
+"Discard the highest dice from that charge roll"
+],
+[
+"piercing",
+"Ward rolls cannot be made for damage points inflicted by this unit's combat attacks"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+],
+"793159": [
+[
+"tribal",
+"friendly Pledged to Slaanesh units"
+],
+[
+"selection",
+"you must discard 1 dice of your choice"
+],
+[
+"buff",
+"you can roll 1 additional dice"
+],
+[
+"temporary_effect",
+"For the rest of the turn"
+]
+],
+"793508": [
+[
+"condition_life",
+"While this unit has 10 or more damage points"
+],
+[
+"tribal",
+"enemy Monster"
+],
+[
+"taunt",
+"It must pick this unit to be the target of the pile-in move"
+],
+[
+"debuff",
+"Subtract 1 from hit rolls and wound rolls for attacks made as part of that Fight ability against this unit"
+],
+[
+"tribal",
+"friendly non-Unique Blades of Khorne Daemon unit"
+],
+[
+"selection",
+"discard 1 dice of your choice"
+],
+[
+"buff",
+"roll 1 additional dice"
+],
+[
+"piercing",
+"Anti-Monster (+1 Rend)"
+],
+[
+"ranged",
+"Shoot in Combat"
+]
+]
+}

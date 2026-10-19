@@ -1,0 +1,21 @@
+{
+"765925": [["play_restriction", "Play this only if there are one or more poison gambits in your power discard pile"], ["graveyard", "pick up to one poison gambit from your power discard pile"], ["reactions", "Reaction:"], ["on_attack", "After this fighter's successful Attack action"], ["recycle", "place the poison gambit beneath this card in your hand"], ["tribal", "poison gambit"]],
+"765926": [["reactions", "Reaction:"], ["on_spell", "After you play a poison gambit"], ["tribal", "poison gambit"], ["movement", "push this fighter 1 hex"], ["debuff", "stagger each enemy fighter adjacent to this fighter"], ["adjacency", "adjacent to this fighter"]],
+"796394": [["positional", "in friendly territory"], ["immunity", "cannot be Flanked or Surrounded"], ["flanking", "Flanked or Surrounded"]],
+"796402": [["once_per_game", "Once per game"], ["mark_target", "pick an enemy with a Stagger token"], ["temporary_buff", "+1 Attack dice"], ["temporary_effect", "until the next turn"]],
+"796416": [["turn_start", "Start of the first Action step each battle round"], ["graveyard", "Power discard pile"], ["recycle", "add a Ploy from your Power discard pile to your hand"]],
+"796418": [["once_per_game", "Once per game"], ["reactions", "immediately after an enemy Charges"], ["attack_now", "may Attack it"], ["adjacency", "adjacent to the charger"]],
+"796432": [["scope_multi", "Friendly melee weapons"], ["buff", "Grievous"], ["flanking", "Flanked or Surrounded"]],
+"796447": [["once_per_game", "once per game"], ["modal_choice", "its owner chooses"], ["rewind", "Uninspire it"], ["draw", "draw Power cards equal to the battle round"], ["turn_number", "equal to the battle round"]],
+"796449": [["combat_start", "At the start of each combat phase"], ["upgrade", "Inspire as many friendly fighters"], ["turn_number", "as the battle round number"], ["turn_start", "at the start of each round"], ["rewind", "Uninspire each friendly fighter"]],
+"796452": [["once_per_game", "Once per game"], ["tribal", "shield-bearer"], ["ranged", "+1 Range"], ["temporary_buff", "for that Attack"]],
+"796459": [["cost_type", "Instead of playing a Ploy"], ["discard", "discard Ploys"], ["condition_count", "add up"], ["temporary_effect", "until the end of your next turn"], ["stat_gain", "+1 Move"], ["flanking", "enemies are Flanked"], ["stat_gain", "+1 Attack dice"]],
+"796461": [["combat_start", "At the start of the combat phase"], ["modal_choice", "choose one hymn"], ["condition_count", "2 or more friendly fighters"], ["immunity", "friendly fighters cannot be Flanked"], ["flanking", "Flanked"], ["life_payment", "a fighter may take 1 damage"], ["buff", "friendly weapons have Stagger"]],
+"796466": [["start_of_game", "start the game Inspired"], ["upgrade", "Inspire it"], ["on_attack", "after a friendly fighter's successful Attack"], ["rewind", "Uninspire it"]],
+"814420": [["buff", "Defence characteristic changes to :dfBlock:"]],
+"814422": [["random_effect", "is a critical hit"], ["stat_multiply", "double its Damage characteristic"], ["temporary_buff", "in the next activation"]],
+"814428": [["random_effect", "is a critical hit"], ["stat_multiply", "double its Damage characteristic"], ["temporary_buff", "for that Attack action"]],
+"814444": [["buff", "Defence characteristic changes to :dfBlock:"]],
+"814473": [["rule_change", "Players cannot use reactions during this Attack action"]],
+"814483": [["temporary_buff", "In the next activation"], ["stat_gain", "Defence characteristic of :dfDodge: 3"], ["scope_multi", "friendly fighters"]]
+}

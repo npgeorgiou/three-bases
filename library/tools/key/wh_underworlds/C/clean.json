@@ -1,4 +1,2150 @@
 {
+"762741": [
+[
+"mark_target",
+"marked as Quarry"
+],
+[
+"buff",
+"gain bonuses against fighters marked as Quarry"
+],
+[
+"tribal",
+"Hunter fighters"
+]
+],
+"762931": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"death_trigger",
+"takes a fighter out of action"
+],
+[
+"temporary_buff",
+"+1 Defence in the next activation"
+],
+[
+"scope_multi",
+"All friendly fighters"
+]
+],
+"762933": [
+[
+"temporary_buff",
+"Roll one extra attack dice"
+]
+],
+"762997": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"territory_trigger",
+"at least one fighter in enemy territory"
+]
+],
+"763075": [
+[
+"discard",
+"Discard all power cards in your hand"
+],
+[
+"draw",
+"draw three power cards"
+],
+[
+"hand_deck_swap",
+"Discard all power cards in your hand and draw three power cards"
+]
+],
+"763086": [
+[
+"play_restriction",
+"No more power cards can be played"
+],
+[
+"symmetric_effect",
+"No more power cards can be played"
+],
+[
+"temporary_effect",
+"until after the next activation"
+]
+],
+"763100": [
+[
+"random_effect",
+"Roll an attack dice"
+],
+[
+"debuff",
+"that upgrade is discarded"
+]
+],
+"763113": [
+[
+"discard",
+"Discard any number of power cards"
+],
+[
+"draw",
+"draw up to that number of power cards"
+],
+[
+"card_quality",
+"Discard any number of power cards and draw"
+]
+],
+"763189": [
+[
+"temporary_buff",
+"+2 Move"
+],
+[
+"play_restriction",
+"You can only play this if your leader is on the battlefield"
+]
+],
+"763217": [
+[
+"movement",
+"push them up to one hex"
+],
+[
+"protection",
+"put them on Guard"
+],
+[
+"modal_choice",
+"or put them on Guard"
+],
+[
+"play_restriction",
+"You can only play this if your leader is on the battlefield"
+]
+],
+"763229": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"adjacency",
+"adjacent enemy fighter's"
+],
+[
+"bodyguard",
+"change the target of that Attack action to this fighter"
+],
+[
+"self_destruct",
+"discard this card"
+]
+],
+"763233": [
+[
+"turn_start",
+"at the beginning of the round"
+],
+[
+"draw",
+"draw one objective card"
+],
+[
+"discard",
+"discard one objective card"
+],
+[
+"card_quality",
+"If you do so, discard one objective card"
+]
+],
+"763360": [
+[
+"information",
+"reveal this card"
+],
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"death_count",
+"all enemy fighters are out of action"
+],
+[
+"kicker",
+"If you revealed this card, gain 1 additional glory point"
+]
+],
+"763361": [
+[
+"information",
+"reveal this card"
+],
+[
+"scoring_objectives",
+"Score this in the third end phase"
+],
+[
+"turn_number",
+"third end phase"
+],
+[
+"territory_trigger",
+"in enemy territory"
+],
+[
+"kicker",
+"If you revealed this card, gain 1 additional glory point"
+]
+],
+"763362": [
+[
+"information",
+"reveal this card"
+],
+[
+"scoring_objectives",
+"Score this in the third end phase"
+],
+[
+"turn_number",
+"third end phase"
+],
+[
+"zone_control",
+"no enemy fighters in your territory"
+],
+[
+"kicker",
+"If you revealed this card, gain 1 additional glory point"
+]
+],
+"763363": [
+[
+"information",
+"reveal this card"
+],
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"on_kill",
+"took an enemy leader out of action"
+],
+[
+"kicker",
+"If you revealed this card, gain 1 additional glory point"
+]
+],
+"763364": [
+[
+"information",
+"reveal this card"
+],
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"zone_control",
+"hold three or more objectives"
+],
+[
+"condition_count",
+"three or more objectives"
+],
+[
+"kicker",
+"If you revealed this card, gain 1 additional glory point"
+]
+],
+"763425": [
+[
+"play_restriction",
+"Play this only if there is a surviving friendly Thundrik"
+],
+[
+"play_restriction",
+"No more power cards can be played"
+],
+[
+"symmetric_effect",
+"No more power cards can be played"
+],
+[
+"temporary_effect",
+"until after the next activation"
+]
+],
+"763584": [
+[
+"random_effect",
+"If this spell is cast"
+],
+[
+"ranged",
+"within four hexes of the caster"
+],
+[
+"damage_over_time",
+"suffers 1 damage at the beginning of each round"
+],
+[
+"turn_start",
+"at the beginning of each round"
+]
+],
+"763595": [
+[
+"random_effect",
+"If this spell is cast"
+],
+[
+"graveyard",
+"choose one upgrade from your power discard pile"
+],
+[
+"recycle",
+"add it to your hand"
+]
+],
+"763618": [
+[
+"random_effect",
+"If this spell is cast"
+],
+[
+"graveyard",
+"choose one ploy from your discard pile"
+],
+[
+"recycle",
+"add it to your hand"
+]
+],
+"763683": [
+[
+"random_effect",
+"re-roll one dice"
+],
+[
+"tribal",
+"if the target is a wizard"
+],
+[
+"ranged",
+":Hex: 3"
+],
+[
+"self_destruct",
+"discard this upgrade"
+]
+],
+"763702": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_spell",
+"gambit spell is resolved"
+],
+[
+"self_destruct",
+"discard this card"
+],
+[
+"random_effect",
+"roll a magic dice"
+],
+[
+"recycle",
+"place the gambit spell on top of your power deck"
+],
+[
+"deck_position",
+"on top of your power deck"
+]
+],
+"763784": [
+[
+"ranged",
+":Hex: 3"
+],
+[
+"no_damage_output",
+"deals no damage when it is successful"
+],
+[
+"forced_movement",
+"Knockback X"
+],
+[
+"condition_count",
+"X is the number of successes"
+]
+],
+"763812": [
+[
+"piercing",
+"Cleave"
+],
+[
+"self_destruct",
+"discard this card"
+]
+],
+"763839": [
+[
+"activated",
+"Action:"
+],
+[
+"ranged",
+"within three hexes of this fighter"
+],
+[
+"debuff",
+"That upgrade is discarded"
+],
+[
+"random_effect",
+"Roll an attack dice"
+],
+[
+"self_destruct",
+"discard this card"
+]
+],
+"764013": [
+[
+"scoring_objectives",
+"Score this immediately"
+],
+[
+"on_enemy_enter",
+"an enemy fighter Moves into"
+]
+],
+"764025": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_attack",
+"successful Trap Launcher Attack action"
+],
+[
+"immobilize",
+"Give the target one Move token"
+]
+],
+"764059": [
+[
+"movement",
+"The chosen fighter makes a Move action"
+],
+[
+"extra_turn",
+"Do not give the chosen fighter a Move token"
+]
+],
+"764060": [
+[
+"temporary_buff",
+"In the next activation"
+],
+[
+"scope_multi",
+"friendly fighters other than Kyrae"
+],
+[
+"immunity",
+"treat lethal hexes as normal hexes"
+],
+[
+"terrain",
+"lethal hexes"
+]
+],
+"764088": [
+[
+"temporary_buff",
+"+1 Dice"
+],
+[
+"stacking_keyword",
+"Waaagh! counter"
+]
+],
+"764123": [
+[
+"scoring_objectives",
+"Score this immediately"
+],
+[
+"on_attack",
+"after a friendly fighter's successful Attack action"
+],
+[
+"stat_condition",
+"Defence characteristic of 2 or more"
+]
+],
+"764169": [
+[
+"damage",
+"is dealt 1 damage"
+],
+[
+"temporary_effect",
+"in the next activation"
+]
+],
+"764175": [
+[
+"adjacency",
+"adjacent to one or more friendly fighters"
+],
+[
+"stat_loss",
+"-1 Defence"
+],
+[
+"temporary_effect",
+"until the next power step"
+]
+],
+"764217": [
+[
+"ranged",
+":Hex: 3"
+],
+[
+"self_destruct",
+"discard this card"
+],
+[
+"on_kill",
+"If this Attack action takes an enemy fighter out of action"
+],
+[
+"points_scoring",
+"gain 1 glory point"
+]
+],
+"764218": [
+[
+"random_effect",
+"If there are one or more :atCrit:"
+],
+[
+"piercing",
+"this Attack action has Cleave"
+],
+[
+"on_kill",
+"If this Attack action takes an enemy fighter out of action"
+],
+[
+"self_destruct",
+"discard this card"
+],
+[
+"points_scoring",
+"gain 1 glory point"
+]
+],
+"764220": [
+[
+"random_effect",
+"re-roll any number of dice"
+],
+[
+"on_kill",
+"If this Attack action takes an enemy fighter out of action"
+],
+[
+"self_destruct",
+"discard this card"
+],
+[
+"points_scoring",
+"gain 1 glory point"
+]
+],
+"764242": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"combo_sequence",
+"successful Attack action with Combo"
+],
+[
+"multi_attack",
+"make this Attack action"
+],
+[
+"piercing",
+"has Cleave and Ensnare"
+]
+],
+"764261": [
+[
+"tribal",
+"Ur-grub Aspect"
+],
+[
+"stat_gain",
+"+1 Damage"
+],
+[
+"condition_count",
+"three or more Ur-grub Aspects"
+],
+[
+"banish",
+"remove those cards from the game"
+],
+[
+"upgrade",
+"give the Avatar of the Ur-grub upgrade"
+]
+],
+"764296": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_damaged",
+"after a friendly fighter is dealt damage"
+],
+[
+"damage_reduction",
+"reduce that damage by 1"
+]
+],
+"764307": [
+[
+"ranged",
+":Hex: 3"
+],
+[
+"self_destruct",
+"discard this upgrade"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"debuff",
+"Discard that upgrade"
+]
+],
+"764311": [
+[
+"tribal",
+"Mortis Relics"
+],
+[
+"condition_count",
+"two or more Mortis Relics"
+],
+[
+"stat_gain",
+"+1 Damage"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"cost_type",
+"spend 1 glory point"
+],
+[
+"forced_movement",
+"push one enemy fighter 1 hex"
+]
+],
+"764355": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"condition_count",
+"three or more surviving friendly fighters"
+],
+[
+"board_presence",
+"three or more surviving friendly fighters"
+],
+[
+"death_count",
+"Three or more enemy fighters are out of action"
+]
+],
+"764378": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"movement",
+"push this fighter 1 hex"
+],
+[
+"kicker",
+"or 2 hexes if you first deal 1 damage to this fighter"
+],
+[
+"life_payment",
+"deal 1 damage to this fighter"
+]
+],
+"764407": [
+[
+"random_effect",
+"If cast"
+],
+[
+"ranged",
+"within 3 hexes of the caster"
+],
+[
+"forced_movement",
+"Push that fighter up to 1 hex"
+],
+[
+"modal_choice",
+"pick one"
+],
+[
+"damage",
+"deal 1 damage to that fighter"
+],
+[
+"immobilize",
+"give that fighter one Move token"
+]
+],
+"764434": [
+[
+"reactions",
+"after an opponent plays a gambit"
+],
+[
+"damage_prevention",
+"That gambit deals no damage"
+]
+],
+"764463": [
+[
+"piercing",
+"Cleave and Ensnare"
+],
+[
+"mark_target",
+"each enemy fighter is a Quarry"
+],
+[
+"concentration",
+"persists until that fighter is given an upgrade"
+]
+],
+"764467": [
+[
+"turn_end",
+"at the end of the action phase"
+],
+[
+"regeneration",
+"Heal (1) that fighter each time"
+],
+[
+"stacking_keyword",
+"Hunger counter"
+],
+[
+"random_effect",
+"re-roll one dice"
+]
+],
+"764528": [
+[
+"tribal",
+"a friendly Mortek"
+],
+[
+"random_effect",
+"roll one defence dice"
+],
+[
+"shield",
+"that Attack action deals no damage"
+],
+[
+"self_destruct",
+"you discard this card"
+],
+[
+"temporary_effect",
+"until the end of the round"
+]
+],
+"764541": [
+[
+"random_effect",
+"re-roll one attack dice"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"damage_reduction",
+"reduce the Damage characteristic of that Attack action by 1"
+],
+[
+"self_destruct",
+"discard this card"
+]
+],
+"764546": [
+[
+"upgrade",
+"This fighter is Inspired"
+],
+[
+"random_effect",
+"re-roll one dice"
+]
+],
+"764569": [
+[
+"debuff",
+"-1 Dice from adjacent fighters' Attack actions"
+],
+[
+"adjacency",
+"adjacent fighters'"
+]
+],
+"764573": [
+[
+"death_trigger",
+"When an enemy fighter is taken out of action"
+],
+[
+"adjacency",
+"adjacent to this fighter"
+],
+[
+"modal_choice",
+"pick one"
+],
+[
+"points_scoring",
+"you gain 1 glory point"
+],
+[
+"hand_disruption",
+"that player discards one power card"
+]
+],
+"764578": [
+[
+"ranged",
+":Hex: 3"
+],
+[
+"random_effect",
+"On a critical hit"
+],
+[
+"immobilize",
+"give the target one Move token"
+]
+],
+"764610": [
+[
+"scoring_objectives",
+"Score this immediately"
+],
+[
+"on_kill",
+"took an enemy fighter out of action"
+]
+],
+"764713": [
+[
+"modal_choice",
+"or pick one opponent"
+],
+[
+"debuff",
+"Discard one of that fighter's upgrades"
+],
+[
+"random_effect",
+"at random"
+]
+],
+"764727": [
+[
+"trap_secret",
+"Trap"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"random_effect",
+"Scatter 1"
+],
+[
+"forced_movement",
+"push that enemy fighter to the end of the chain"
+]
+],
+"764738": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_spell",
+"after you play a Trap gambit"
+],
+[
+"modal_choice",
+"Pick one"
+],
+[
+"protection",
+"give the chosen fighter one Guard token"
+],
+[
+"movement",
+"push the chosen fighter up to 2 hexes"
+]
+],
+"764744": [
+[
+"forced_movement",
+"Knockback 1"
+],
+[
+"piercing",
+"Ensnare"
+],
+[
+"piercing",
+"Cleave"
+]
+],
+"764796": [
+[
+"type_grant",
+"This fighter is a Hunter"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"counterattack",
+"deal 1 damage to the attacker"
+]
+],
+"764804": [
+[
+"type_grant",
+"This fighter is a Quarry"
+],
+[
+"evasion",
+"can move through blocked and occupied hexes"
+],
+[
+"temporary_buff",
+"+2 Move for the duration of that action"
+],
+[
+"stat_gain",
+"+1 Move"
+],
+[
+"condition_count",
+"two or more Silent Relics"
+],
+[
+"tribal",
+"Silent Relics"
+]
+],
+"764806": [
+[
+"type_grant",
+"This fighter is a Quarry"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"hand_size",
+"three or fewer power cards in your hand"
+],
+[
+"draw",
+"draw one power card"
+],
+[
+"stat_gain",
+"+1 Dice"
+],
+[
+"condition_count",
+"two or more Silent Relics"
+],
+[
+"tribal",
+"Silent Relics"
+]
+],
+"764904": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_ally_play",
+"after you give a friendly fighter an Attack action upgrade"
+],
+[
+"combo_sequence",
+"upgrade with Combo"
+],
+[
+"attack_now",
+"That fighter makes that Attack action"
+]
+],
+"764916": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"death_trigger",
+"enough damage to this fighter to take them out of action"
+],
+[
+"immobilize",
+"Give the chosen fighter one Charge token"
+],
+[
+"self_destruct",
+"discard this card"
+]
+],
+"764973": [
+[
+"tribal",
+"Krookgrin"
+],
+[
+"ranged",
+"within 3 hexes"
+],
+[
+"random_effect",
+"roll one attack dice"
+],
+[
+"random_effect",
+"scatter 2 from that hex"
+],
+[
+"aoe_damage",
+"deal 1 damage to each fighter in or adjacent to that hex"
+],
+[
+"friendly_fire",
+"each fighter in or adjacent"
+]
+],
+"764978": [
+[
+"draw",
+"Draw one objective card"
+],
+[
+"selection",
+"pick one of your objective cards and put it on the bottom"
+],
+[
+"deck_position",
+"bottom of your objective deck"
+]
+],
+"765026": [
+[
+"scoring_objectives",
+"Score this immediately"
+]
+],
+"765037": [
+[
+"random_effect",
+"If cast"
+],
+[
+"modal_choice",
+"pick Move or Attack"
+],
+[
+"extra_turn",
+"can make an action of the kind you picked"
+],
+[
+"scope_multi",
+"Each friendly Inspired conductive fighter"
+],
+[
+"rule_change",
+"Players cannot use reactions"
+]
+],
+"765092": [
+[
+"graveyard",
+"Shuffle your power discard pile"
+],
+[
+"random_effect",
+"face down, then draw the top card"
+],
+[
+"recycle",
+"Return that card to your hand"
+]
+],
+"765113": [
+[
+"free_play",
+"Do not spend any glory points"
+],
+[
+"self_destruct",
+"break this card"
+],
+[
+"turn_end",
+"At the end of the action phase"
+],
+[
+"on_damaged",
+"is dealt damage"
+],
+[
+"type_grant",
+"This fighter is a hunter"
+],
+[
+"debuff",
+"-1 Dice from adjacent enemy fighter's Attack actions"
+],
+[
+"adjacency",
+"adjacent enemy fighter's"
+]
+],
+"765159": [
+[
+"modal_choice",
+"Pick one"
+],
+[
+"damage_prevention",
+"Gambits cannot deal damage"
+],
+[
+"symmetric_effect",
+"Gambits cannot deal damage"
+],
+[
+"temporary_effect",
+"until the end of the next power step"
+],
+[
+"movement",
+"Push one friendly fighter up to 2 hexes"
+],
+[
+"terrain",
+"cover hex"
+]
+],
+"765165": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_attack",
+"after a friendly fighter's Range 1 or Range 2 Attack action"
+],
+[
+"random_effect",
+"Scatter 4"
+],
+[
+"movement",
+"push that fighter up to 3 hexes"
+]
+],
+"765168": [
+[
+"deck_position",
+"Reveal cards from the top of your power deck"
+],
+[
+"tutor",
+"until you reveal an Illusion upgrade"
+],
+[
+"tribal",
+"Illusion upgrade"
+]
+],
+"765174": [
+[
+"row_effects",
+"Waypoint"
+],
+[
+"turn_end",
+"At the end of the action phase"
+],
+[
+"aoe_damage",
+"deal 1 damage to each fighter that is in an edge hex"
+],
+[
+"friendly_fire",
+"each fighter"
+],
+[
+"positional",
+"edge hex"
+]
+],
+"765187": [
+[
+"adjacency",
+"adjacent to that fighter"
+],
+[
+"random_effect",
+"Scatter 1"
+],
+[
+"movement",
+"push that fighter along the chain"
+],
+[
+"forced_movement",
+"one enemy fighter adjacent to that fighter"
+]
+],
+"765225": [
+[
+"free_play",
+"Do not spend any glory points"
+],
+[
+"self_destruct",
+"break this card"
+],
+[
+"turn_end",
+"At the end of the action phase"
+],
+[
+"on_damaged",
+"is dealt damage"
+],
+[
+"protection",
+"This fighter is on Guard"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"adjacency",
+"was adjacent"
+],
+[
+"random_effect",
+"one or more :dfCrit: in the defence roll"
+],
+[
+"counterattack",
+"deal 1 damage to the attacker"
+]
+],
+"765292": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_damaged",
+"after this fighter is dealt damage"
+],
+[
+"terrain",
+"cover hex"
+],
+[
+"damage",
+"Deal 1 damage to the chosen fighter"
+]
+],
+"765387": [
+[
+"modal_choice",
+"depending on which you picked"
+],
+[
+"stat_loss",
+"-1 Move"
+],
+[
+"stat_gain",
+"+1 Defence"
+],
+[
+"piercing",
+"Cleave"
+]
+],
+"765392": [
+[
+"multi_target_attack",
+"Scything"
+],
+[
+"variable_stats",
+"The Dice characteristic is equal to the number of adjacent enemy fighters"
+],
+[
+"adjacency",
+"adjacent enemy fighters"
+],
+[
+"tribal",
+"Nurgle fighter"
+],
+[
+"piercing",
+"Ensnare"
+]
+],
+"765420": [
+[
+"tribal",
+"if this fighter is a wizard"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_damaged",
+"After this fighter is dealt damage"
+],
+[
+"cheat_death",
+"before checking if this fighter is taken out of action"
+],
+[
+"heal",
+"Heal (X)"
+],
+[
+"condition_count",
+"the number of shield counters you removed"
+]
+],
+"765525": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_enemy_enter",
+"After an enemy fighter ends a Move action adjacent to this fighter"
+],
+[
+"random_effect",
+"roll one magic dice"
+],
+[
+"count_payoff",
+"one or more Domain gambits were played"
+],
+[
+"damage",
+"deal 1 damage to that enemy fighter"
+]
+],
+"765543": [
+[
+"information",
+"reveal this card"
+],
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"condition_count",
+"three or more surviving friendly fighters"
+],
+[
+"kicker",
+"If you revealed this card, gain one additional glory point"
+]
+],
+"765546": [
+[
+"information",
+"reveal this card"
+],
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"territory_trigger",
+"in enemy territory"
+],
+[
+"kicker",
+"If you revealed this card, gain one additional glory point"
+]
+],
+"765606": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"revive",
+"place one friendly Grave Guard that is out of action on a starting hex"
+],
+[
+"tribal",
+"Grave Guard"
+],
+[
+"friendly_fire",
+"give that fighter wound counters until that fighter is vulnerable"
+],
+[
+"stat_gain",
+"+1 Dice"
+]
+],
+"765621": [
+[
+"row_effects",
+"Domain"
+],
+[
+"play_restriction",
+"You cannot play this in the final power step"
+],
+[
+"turn_end",
+"At the end of the action phase"
+],
+[
+"aoe_damage",
+"deal 1 damage to each fighter adjacent to a feature token"
+],
+[
+"friendly_fire",
+"each fighter"
+],
+[
+"terrain",
+"feature token"
+]
+],
+"765635": [
+[
+"targeting_rules",
+"Blocked hexes do not block line of sight for this fighter"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_kill",
+"takes an enemy fighter out of action"
+],
+[
+"free_play",
+"This does not cost any glory points"
+]
+],
+"765666": [
+[
+"stat_gain",
+"+1 Dice"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_kill",
+"takes an enemy fighter out of action"
+],
+[
+"free_play",
+"This does not cost any glory points"
+]
+],
+"765674": [
+[
+"merge_attach",
+"give this to a friendly fighter"
+],
+[
+"death_trigger",
+"If this fighter is taken out of action"
+],
+[
+"recycle",
+"add this card to your hand"
+],
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"adjacency",
+"adjacent to two or more fighters"
+],
+[
+"condition_count",
+"two or more fighters"
+]
+],
+"765677": [
+[
+"merge_attach",
+"give this to a friendly fighter"
+],
+[
+"death_trigger",
+"If this fighter is taken out of action"
+],
+[
+"recycle",
+"add this card to your hand"
+],
+[
+"scoring_objectives",
+"Score this immediately"
+]
+],
+"765682": [
+[
+"merge_attach",
+"give this to a friendly fighter"
+],
+[
+"death_trigger",
+"If this fighter is taken out of action"
+],
+[
+"recycle",
+"add this card to your hand"
+],
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"zone_control",
+"holding an objective"
+],
+[
+"turn_number",
+"same number as the current round number"
+]
+],
+"765692": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"adjacency",
+"adjacent to one or more vulnerable enemy fighters"
+],
+[
+"assists_support",
+"adjacent to one or more other friendly fighters"
+],
+[
+"condition_life",
+"vulnerable enemy fighters"
+],
+[
+"damage",
+"deal 1 damage to the chosen fighter"
+]
+],
+"765715": [
+[
+"trap_secret",
+"Trap"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"terrain",
+"feature tokens"
+],
+[
+"adjacency",
+"adjacent to one or more feature tokens"
+],
+[
+"damage",
+"Deal 1 damage to that enemy fighter"
+]
+],
+"765789": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"deck_position",
+"reveal cards from the top of your power deck"
+],
+[
+"tutor",
+"until you reveal a Denizen upgrade"
+],
+[
+"tribal",
+"Denizen upgrade"
+]
+],
+"765791": [
+[
+"tribal",
+"Denizen upgrades"
+],
+[
+"piercing",
+"Ensnare"
+],
+[
+"variable_stats",
+"The Damage characteristic is equal to the number of Denizen upgrades"
+]
+],
+"765795": [
+[
+"turn_start",
+"At the start of the action phase"
+],
+[
+"deck_position",
+"draw the top card of your power deck"
+],
+[
+"information",
+"reveal it"
+],
+[
+"tribal",
+"Denizen upgrade"
+],
+[
+"free_play",
+"this does not cost any glory points"
+],
+[
+"draw",
+"add that card to your hand"
+]
+],
+"765839": [
+[
+"scoring_objectives",
+"Score this"
+],
+[
+"turn_end",
+"in an end phase"
+],
+[
+"count_payoff",
+"cast three or more spells"
+],
+[
+"hand_size",
+"You have no power cards in your hand"
+],
+[
+"graveyard",
+"three or more gambits in your power discard pile"
+]
+],
+"765859": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"random_effect",
+"defence roll contained one or more successes"
+],
+[
+"counterattack",
+"deal 1 damage to the attacker"
+]
+],
+"765916": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"debuff",
+"Stagger the attacker"
+],
+[
+"counterattack",
+"deal 1 damage to the attacker"
+],
+[
+"tribal",
+"poison upgrades"
+]
+],
+"765918": [
+[
+"immunity",
+"Cleave, Ensnare, Knockback and Stagger cannot affect this fighter"
+],
+[
+"tribal",
+"poison gambits"
+]
+],
+"765924": [
+[
+"piercing",
+"Cleave"
+]
+],
+"765925": [
+[
+"play_restriction",
+"Play this only if there are one or more poison gambits in your power discard pile"
+],
+[
+"graveyard",
+"pick up to one poison gambit from your power discard pile"
+],
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_attack",
+"After this fighter's successful Attack action"
+],
+[
+"recycle",
+"place the poison gambit beneath this card in your hand"
+],
+[
+"tribal",
+"poison gambit"
+]
+],
+"765926": [
+[
+"reactions",
+"Reaction:"
+],
+[
+"on_spell",
+"After you play a poison gambit"
+],
+[
+"tribal",
+"poison gambit"
+],
+[
+"movement",
+"push this fighter 1 hex"
+],
+[
+"debuff",
+"stagger each enemy fighter adjacent to this fighter"
+],
+[
+"adjacency",
+"adjacent to this fighter"
+]
+],
+"796394": [
+[
+"positional",
+"in friendly territory"
+],
+[
+"immunity",
+"cannot be Flanked or Surrounded"
+],
+[
+"flanking",
+"Flanked or Surrounded"
+]
+],
+"796402": [
+[
+"once_per_game",
+"Once per game"
+],
+[
+"mark_target",
+"pick an enemy with a Stagger token"
+],
+[
+"temporary_buff",
+"+1 Attack dice"
+],
+[
+"temporary_effect",
+"until the next turn"
+]
+],
+"796416": [
+[
+"turn_start",
+"Start of the first Action step each battle round"
+],
+[
+"graveyard",
+"Power discard pile"
+],
+[
+"recycle",
+"add a Ploy from your Power discard pile to your hand"
+]
+],
+"796418": [
+[
+"once_per_game",
+"Once per game"
+],
+[
+"reactions",
+"immediately after an enemy Charges"
+],
+[
+"attack_now",
+"may Attack it"
+],
+[
+"adjacency",
+"adjacent to the charger"
+]
+],
+"796432": [
+[
+"scope_multi",
+"Friendly melee weapons"
+],
+[
+"buff",
+"Grievous"
+],
+[
+"flanking",
+"Flanked or Surrounded"
+]
+],
+"796447": [
+[
+"once_per_game",
+"once per game"
+],
+[
+"modal_choice",
+"its owner chooses"
+],
+[
+"rewind",
+"Uninspire it"
+],
+[
+"draw",
+"draw Power cards equal to the battle round"
+],
+[
+"turn_number",
+"equal to the battle round"
+]
+],
+"796449": [
+[
+"combat_start",
+"At the start of each combat phase"
+],
+[
+"upgrade",
+"Inspire as many friendly fighters"
+],
+[
+"turn_number",
+"as the battle round number"
+],
+[
+"turn_start",
+"at the start of each round"
+],
+[
+"rewind",
+"Uninspire each friendly fighter"
+]
+],
+"796452": [
+[
+"once_per_game",
+"Once per game"
+],
+[
+"tribal",
+"shield-bearer"
+],
+[
+"ranged",
+"+1 Range"
+],
+[
+"temporary_buff",
+"for that Attack"
+]
+],
+"796459": [
+[
+"cost_type",
+"Instead of playing a Ploy"
+],
+[
+"discard",
+"discard Ploys"
+],
+[
+"condition_count",
+"add up"
+],
+[
+"temporary_effect",
+"until the end of your next turn"
+],
+[
+"stat_gain",
+"+1 Move"
+],
+[
+"flanking",
+"enemies are Flanked"
+],
+[
+"stat_gain",
+"+1 Attack dice"
+]
+],
+"796461": [
+[
+"combat_start",
+"At the start of the combat phase"
+],
+[
+"modal_choice",
+"choose one hymn"
+],
+[
+"condition_count",
+"2 or more friendly fighters"
+],
+[
+"immunity",
+"friendly fighters cannot be Flanked"
+],
+[
+"flanking",
+"Flanked"
+],
+[
+"life_payment",
+"a fighter may take 1 damage"
+],
+[
+"buff",
+"friendly weapons have Stagger"
+]
+],
+"796466": [
+[
+"start_of_game",
+"start the game Inspired"
+],
+[
+"upgrade",
+"Inspire it"
+],
+[
+"on_attack",
+"after a friendly fighter's successful Attack"
+],
+[
+"rewind",
+"Uninspire it"
+]
+],
+"814420": [
+[
+"buff",
+"Defence characteristic changes to :dfBlock:"
+]
+],
+"814422": [
+[
+"random_effect",
+"is a critical hit"
+],
+[
+"stat_multiply",
+"double its Damage characteristic"
+],
+[
+"temporary_buff",
+"in the next activation"
+]
+],
+"814428": [
+[
+"random_effect",
+"is a critical hit"
+],
+[
+"stat_multiply",
+"double its Damage characteristic"
+],
+[
+"temporary_buff",
+"for that Attack action"
+]
+],
+"814444": [
+[
+"buff",
+"Defence characteristic changes to :dfBlock:"
+]
+],
+"814473": [
+[
+"rule_change",
+"Players cannot use reactions during this Attack action"
+]
+],
+"814483": [
+[
+"temporary_buff",
+"In the next activation"
+],
+[
+"stat_gain",
+"Defence characteristic of :dfDodge: 3"
+],
+[
+"scope_multi",
+"friendly fighters"
+]
+],
 "762747": [
 [
 "scoring_objectives",

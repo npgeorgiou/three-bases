@@ -1,0 +1,1370 @@
+{
+"790394": [
+[
+"zone_control",
+"determining control of an objective marker"
+],
+[
+"activated",
+"Herd Banner (1AP)"
+],
+[
+"aura",
+"while a friendly TZAANGOR operative is within ⬛ of this operative"
+],
+[
+"tribal",
+"TZAANGOR"
+],
+[
+"saving_throws",
+"improve its invulnerable save by 1"
+],
+[
+"temporary_effect",
+"Until the end of the Turning Point"
+]
+],
+"790431": [
+[
+"damage_reduction",
+"inflicts 1 less damage on this operative"
+],
+[
+"cost_set",
+"for 0CP"
+],
+[
+"tribal",
+"BROODGUARD"
+],
+[
+"stat_condition",
+"Normal Dmg of 3 or more"
+]
+],
+"790434": [
+[
+"modal_choice",
+"Select one of the following"
+],
+[
+"tribal",
+"BROOD BROTHER"
+],
+[
+"immunity",
+"ignore the Piercing weapon rule"
+],
+[
+"temporary_effect",
+"until the end of the turning point"
+],
+[
+"activated",
+"Telepathic Overload (1AP)"
+],
+[
+"stat_loss",
+"subtract 1 from its APL stat"
+],
+[
+"damage",
+"Inflict 2 damage on it"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stat_condition",
+"if the result is higher than that enemy operative’s APL stat"
+],
+[
+"repeat_trigger",
+"Keep rolling one D6 in this manner"
+]
+],
+"790435": [
+[
+"immunity",
+"ignore the Piercing weapon rule"
+],
+[
+"activated",
+"Mind Control (2AP)"
+],
+[
+"random_effect",
+"Both players roll one D6"
+],
+[
+"steal",
+"that enemy operative is a friendly operative"
+],
+[
+"once_per_game",
+"You can only resolve this action’s second effect once per battle"
+],
+[
+"stances",
+"Change this operative’s order"
+],
+[
+"temporary_effect",
+"Until the end of the activation"
+],
+[
+"speed",
+"You can activate this operative twice during the turning point"
+]
+],
+"790439": [
+[
+"activated",
+"Overcharge (1AP)"
+],
+[
+"tribal",
+"CANOPTEK CIRCLE CANOPTEK"
+],
+[
+"stat_gain",
+"add 1 to its APL stat"
+],
+[
+"temporary_effect",
+"Until the end of that selected operative's next activation"
+],
+[
+"stat_loss",
+"subtract 1 from its APL stat"
+]
+],
+"790440": [
+[
+"fodder",
+"This operative is ignored for your opponent's kill/elimination op"
+],
+[
+"turn_number",
+"in each turning point after the first"
+],
+[
+"condition_count",
+"if you have less than three non-incapacitated friendly CANOPTEK CIRCLE WARRIOR operatives"
+],
+[
+"summon",
+"you can set up another one ready"
+],
+[
+"tribal",
+"CANOPTEK CIRCLE WARRIOR"
+],
+[
+"death_trigger",
+"If this operative is incapacitated by an enemy operative within 2\" of it"
+],
+[
+"random_effect",
+"roll one D3"
+],
+[
+"damage",
+"inflict 1 damage on that enemy operative"
+],
+[
+"counterattack",
+"inflict 1 damage on that enemy operative"
+]
+],
+"790441": [
+[
+"zone_control",
+"you can instead determine control from one of your OBELISK NODE markers"
+],
+[
+"terrain",
+"open or close a hatchway"
+],
+[
+"activated",
+"Molecular Breach (1AP)"
+],
+[
+"tribal",
+"CANOPTEK CIRCLE"
+],
+[
+"movement",
+"remove it from the killzone and set it back up wholly within a distance equal to its Move stat"
+],
+[
+"random_effect",
+"Separately roll 2D6"
+],
+[
+"aoe_damage",
+"for each operative within 2\" of that point"
+],
+[
+"condition_life",
+"If the result is higher than that operative's remaining wounds"
+],
+[
+"damage",
+"inflict damage on it equal to the difference"
+],
+[
+"extra_turn",
+"That selected operative can immediately perform a 1AP action for free"
+]
+],
+"790447": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"mark_target",
+"issue an ultimatum to it"
+],
+[
+"flexibility",
+"Your opponent must accept or decline that ultimatum"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stat_gain",
+"add 1 to the Atk stat of this operative's blessed broadsword"
+],
+[
+"on_kill",
+"The first time this operative incapacitates that enemy operative"
+],
+[
+"stat_loss",
+"subtract 1 from the Atk stat of that enemy operative's weapons"
+],
+[
+"first_strike",
+"resolve one of your successes before the normal order"
+],
+[
+"activated",
+"STRATEGIC GAMBIT"
+],
+[
+"tribal",
+"CELESTIAN INSIDIANT"
+]
+],
+"790454": [
+[
+"movement",
+"can perform the Dash action during an activation in which it performed the Charge action"
+],
+[
+"first_strike",
+"resolve one of your successes before the normal order"
+]
+],
+"790455": [
+[
+"first_strike",
+"you resolve the first attack dice"
+],
+[
+"mark_target",
+"Select one enemy operative within 9\" of this operative"
+],
+[
+"reactions",
+"after that enemy operative performs an action in which it moves, you can interrupt"
+],
+[
+"movement",
+"perform either a free Reposition action"
+],
+[
+"attack_now",
+"a free Charge action"
+],
+[
+"activated",
+"STRATEGIC GAMBIT"
+]
+],
+"790456": [
+[
+"movement",
+"set it back up wholly within 7\" of its original location"
+],
+[
+"damage",
+"Inflict D3+2 damage on one enemy operative that line crosses"
+],
+[
+"area_templates",
+"draw an imaginary line 1mm in diameter"
+],
+[
+"random_effect",
+"D3+2"
+]
+],
+"790460": [
+[
+"activated",
+"Warp Fold (1AP)"
+],
+[
+"tribal",
+"CORSAIR VOIDSCARRED"
+],
+[
+"swap",
+"swap their positions"
+],
+[
+"shield",
+"the first time an attack dice inflicts Normal Dmg on that friendly operative, ignore that inflicted damage"
+]
+],
+"790475": [
+[
+"immunity",
+"You can ignore any changes to the Hit stat"
+],
+[
+"first_strike",
+"resolve one of your successes before the normal order"
+]
+],
+"790484": [
+[
+"immunity",
+"ignore the Piercing weapon rule"
+],
+[
+"damage",
+"inflict 1 damage on the enemy operative in that sequence"
+],
+[
+"condition_life",
+"an enemy operative that was already wounded"
+],
+[
+"buff",
+"this operative's weapons have the Balanced weapon rule"
+],
+[
+"on_kill",
+"The first time this operative incapacitates an enemy operative"
+],
+[
+"resource_gain",
+"gain 1 additional CP"
+],
+[
+"modal_choice",
+"you can either gain 1 additional CP or use an additional WARRANT OF TRADE rule"
+]
+],
+"790508": [
+[
+"buff",
+"this weapon has the Ceaseless weapon rule"
+],
+[
+"activated",
+"Sweeping Blow (1AP)"
+],
+[
+"aoe_damage",
+"Inflict D3+1 damage on each other operative visible to and within 2\" of this operative"
+],
+[
+"friendly_fire",
+"each other operative"
+],
+[
+"random_effect",
+"D3+1"
+]
+],
+"790517": [
+[
+"attack_now",
+"it can immediately perform a free Charge action"
+]
+],
+"790520": [
+[
+"activated",
+"Dash and Spray (1AP)"
+],
+[
+"attack_now",
+"Perform a free Dash action and a free Shoot action"
+],
+[
+"on_kill",
+"Whenever this operative incapacitates an enemy operative from more than 2\" away"
+],
+[
+"tribal",
+"GOREMONGER"
+],
+[
+"damage_over_time",
+"that enemy operative gains a Bleeding token"
+],
+[
+"resource_gain",
+"increase the GORE TANK"
+],
+[
+"movement",
+"Perform a free Dash action"
+]
+],
+"790526": [
+[
+"buff",
+"improve the Hit stat of that weapon by 1"
+],
+[
+"cost_increase",
+"must spend 1 additional AP"
+],
+[
+"symmetric_effect",
+"Whenever an operative is within 3\" of that Utility Grenade marker"
+],
+[
+"random_effect",
+"roll one D3"
+],
+[
+"delayed",
+"Remove that Utility Grenade marker after a number of activations equal to the result have been completed"
+],
+[
+"aura",
+"Whenever an operative is within 3\" of that Utility Grenade marker"
+]
+],
+"790536": [
+[
+"attack_now",
+"This operative can immediately perform a free Shoot action"
+],
+[
+"on_kill",
+"Whenever this operative incapacitates an enemy operative"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stat_condition",
+"if the result is higher than that other enemy operative’s APL stat"
+],
+[
+"stat_loss",
+"subtract 1 from its APL stat"
+],
+[
+"scope_multi",
+"each other enemy operative visible to and within 2\" of that enemy operative"
+],
+[
+"temporary_effect",
+"until the end of its next activation"
+],
+[
+"activated",
+"STRATEGIC GAMBIT"
+]
+],
+"790538": [
+[
+"start_of_game",
+"Set up all your Minefield markers as if they were one item of equipment"
+],
+[
+"trap_secret",
+"Each must be set up reverse-side down (their specifics aren’t revealed)"
+],
+[
+"information",
+"their specifics aren’t revealed"
+],
+[
+"on_enemy_enter",
+"is both within an enemy operative’s control range"
+],
+[
+"random_effect",
+"If it’s a blank, there’s no effect"
+],
+[
+"damage",
+"inflict 3 damage on that enemy operative"
+],
+[
+"stat_condition",
+"if the result is less than that enemy operative’s Save stat"
+],
+[
+"counter_spell",
+"end its action (if any)"
+],
+[
+"recycle",
+"reset one of your flipped Minefield markers"
+],
+[
+"placement_rules",
+"more than 6\" from your opponent’s drop zone"
+]
+],
+"790540": [
+[
+"piercing",
+"That operative cannot be obscured"
+],
+[
+"buff",
+"this operative’s weapons have the Punishing weapon rule"
+]
+],
+"790551": [
+[
+"play_restriction",
+"This operative cannot perform any actions other than Charge, Dash, Fall Back, Reposition and Spot"
+],
+[
+"zone_control",
+"treat this operative’s APL stat as 1 lower"
+],
+[
+"stealth",
+"Whenever this operative has a Conceal order and is in cover, it cannot be selected as a valid target"
+],
+[
+"fodder",
+"This operative is ignored for your opponent’s kill/elimination op"
+],
+[
+"activated",
+"Spot (1AP)"
+],
+[
+"mark_target",
+"Select one enemy operative visible to this operative"
+],
+[
+"piercing",
+"That enemy operative cannot be obscured"
+],
+[
+"tribal",
+"IMPERIAL NAVY BREACHER"
+],
+[
+"temporary_effect",
+"Until the end of the turning point"
+]
+],
+"790558": [
+[
+"reactions",
+"Whenever an enemy operative would perform the Fall Back action"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stat_condition",
+"if that enemy operative has a higher Wounds stat than this operative"
+],
+[
+"condition_life",
+"adding 1 if that enemy operative is wounded"
+],
+[
+"death_trigger",
+"Whenever an enemy operative is incapacitated within this operative’s control range"
+],
+[
+"resource_gain",
+"you gain 1CP"
+],
+[
+"immobilize",
+"that enemy operative cannot perform that action"
+],
+[
+"zone_of_control",
+"Whenever an enemy operative would perform the Fall Back action while within control range of this operative"
+]
+],
+"790560": [
+[
+"zone_control",
+"Whenever determining control of a marker"
+],
+[
+"activated",
+"Scry (1AP)"
+],
+[
+"modal_choice",
+"select one of the following effects"
+],
+[
+"tribal",
+"INQUISITORIAL AGENT"
+],
+[
+"buff",
+"you can retain one of your fails as a normal success instead of discarding it"
+],
+[
+"protection",
+"Whenever an operative is shooting the selected operative, in the Roll Defence Dice step"
+]
+],
+"790567": [
+[
+"play_restriction",
+"This operative cannot perform any actions other than Charge, Dash, Fall Back, Reposition and Spot"
+],
+[
+"zone_control",
+"treat this operative’s APL stat as 1 lower"
+],
+[
+"stealth",
+"Whenever this operative has a Conceal order and is in cover, it cannot be selected as a valid target"
+],
+[
+"fodder",
+"This operative is ignored for your opponent’s kill/elimination op"
+],
+[
+"activated",
+"Spot (1AP)"
+],
+[
+"mark_target",
+"Select one enemy operative visible to this operative"
+],
+[
+"piercing",
+"That enemy operative cannot be obscured"
+],
+[
+"tribal",
+"INQUISITORIAL AGENT BREACHER"
+],
+[
+"temporary_effect",
+"Until the end of the turning point"
+]
+],
+"790617": [
+[
+"death_trigger",
+"If this operative is incapacitated"
+],
+[
+"random_effect",
+"roll one D6, or two D6 if you wish"
+],
+[
+"attack_now",
+"this operative performs a free Shoot action with its explosives"
+],
+[
+"play_restriction",
+"This operative cannot perform any actions other than Charge, Dash, Fight, Reposition and Shoot"
+],
+[
+"fodder",
+"This operative is ignored for your opponent’s kill/elimination op"
+]
+],
+"790633": [
+[
+"zone_control",
+"Whenever determining control of a marker"
+],
+[
+"turn_start",
+"In the Ready step of each Strategy phase"
+],
+[
+"control_reward",
+"if this operative controls an objective marker that isn't tainted"
+],
+[
+"resource_gain",
+"you gain 1CP"
+]
+],
+"790643": [
+[
+"on_kill",
+"Whenever this operative incapacitates an enemy operative that has your Challenge token"
+],
+[
+"resource_gain",
+"you gain 1CP"
+],
+[
+"mark_target",
+"select one enemy operative to gain your Challenge token"
+],
+[
+"modal_choice",
+"you can select one of the following weapon rules"
+],
+[
+"activated",
+"STRATEGIC GAMBIT"
+],
+[
+"buff",
+"Balanced, Brutal, Punishing, Severe, Shock"
+]
+],
+"790648": [
+[
+"cost_increase",
+"your opponent must spend 1 additional AP"
+],
+[
+"zone_control",
+"treat the total APL stat of enemy operatives that contest it as 1 lower"
+],
+[
+"activated",
+"Shriek (1AP)"
+],
+[
+"damage",
+"Inflict D3 damage on the selected operative"
+],
+[
+"stat_loss",
+"subtract 1 from its APL stat"
+],
+[
+"targeting_rules",
+"you cannot select an enemy operative that isn't"
+],
+[
+"aura",
+"Whenever an enemy operative is within 3\" of this operative"
+],
+[
+"random_effect",
+"D3"
+],
+[
+"temporary_effect",
+"until the end of its next activation"
+]
+],
+"790651": [
+[
+"resource_gain",
+"you gain D3 Prescience points"
+],
+[
+"turn_end",
+"At the end of each turning point, discard your Prescience points"
+],
+[
+"coin_economy",
+"You can spend your Prescience points in the Firefight phase"
+],
+[
+"shield",
+"ignore that inflicted damage"
+],
+[
+"activated",
+"Premonition (1AP)"
+],
+[
+"resource_conversion",
+"Spend 1 of your Prescience points to gain 1CP"
+],
+[
+"turn_start",
+"In the Ready step of each Strategy phase"
+],
+[
+"random_effect",
+"D3"
+]
+],
+"790657": [
+[
+"zone_control",
+"Whenever determining control of a marker"
+],
+[
+"activated",
+"Disconcerting Mimicry (1AP)"
+],
+[
+"modal_choice",
+"select one of the following"
+],
+[
+"stat_loss",
+"subtract 1 from its APL stat"
+],
+[
+"forced_movement",
+"Perform a free Dash action with it"
+],
+[
+"temporary_effect",
+"Until the end of its next activation"
+],
+[
+"once_per_game",
+"you can only select each option once per battle"
+]
+],
+"790663": [
+[
+"targeting_rules",
+"shooting against the closest valid target"
+],
+[
+"buff",
+"have the Accurate 1 weapon rule"
+],
+[
+"autonomous_units",
+"this NPO"
+]
+],
+"790676": [
+[
+"autonomous_units",
+"This NPO will move towards the enemy to fight them"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"multi_attack",
+"This operative can perform two Fight actions during its activation"
+],
+[
+"immunity",
+"This operative cannot be injured and its stats cannot be changed"
+],
+[
+"damage_reduction",
+"worsen the x of the Piercing weapon rule by 1"
+],
+[
+"revive",
+"Set up this operative with an Engage order on the centre of that reanimation marker"
+],
+[
+"delayed",
+"After that many activations have been completed"
+],
+[
+"heal",
+"This operative regains all lost wounds"
+],
+[
+"terrain",
+"remove that terrain from the killzone"
+],
+[
+"forced_movement",
+"remove those operatives from the killzone and set them up"
+],
+[
+"targeting_rules",
+"Charge the closest player operative"
+],
+[
+"death_trigger",
+"Whenever this operative is incapacitated"
+],
+[
+"boss_phases",
+"Mighty Foe"
+],
+[
+"speed",
+"it can activate multiple times per turning point"
+]
+],
+"790678": [
+[
+"tribal",
+"Leagues of Vontann NPO"
+],
+[
+"buff",
+"that Leagues of Vontann operative's weapons have the Balanced weapon rule"
+],
+[
+"territory_trigger",
+"is wholly within enemy territory"
+],
+[
+"random_effect",
+"roll seperately for each"
+],
+[
+"adjacency",
+"is within 3\" of another"
+],
+[
+"immunity",
+"Ignore the changes to Tyranid NPO and Tyranid Nemesis operatives' stats from being injured"
+],
+[
+"temporary_buff",
+"until the end of that activation"
+],
+[
+"on_attack",
+"When this operative finishes moving during the Charge action"
+],
+[
+"damage",
+"inflict D3+3 damage on one enemy operative within its control range"
+],
+[
+"first_strike",
+"you can resolve one of its successes before the normal order"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"shield",
+"you can ignore that inflicted damage"
+],
+[
+"damage_reduction",
+"subtract 1 from that inflicted damage"
+],
+[
+"death_trigger",
+"If this operative is incapacitated"
+],
+[
+"aoe_damage",
+"inflice D6+1 damage on each other operative within 3\" of it"
+],
+[
+"friendly_fire",
+"each other operative within 3\" of it"
+],
+[
+"evasion",
+"This operative can move through other operatives"
+],
+[
+"control_reward",
+"an enemy operative that contests a marker"
+],
+[
+"saving_throws",
+"one of its defence dice can be retained as a normal success without rolling it"
+],
+[
+"stat_loss",
+"Worsen the hit stat of the Ork Nemesis operatives' ranged weapons by 1"
+],
+[
+"regeneration",
+"In the ready step of each Strategy phase, each Necron NPO and friendly Necron Nemesis operative regains up to D3+1 lost wounds"
+],
+[
+"turn_start",
+"In the ready step of each Strategy phase"
+],
+[
+"stat_gain",
+"improve this operative's Save stat by 1"
+],
+[
+"condition_count",
+"if two or more fails are rolled for it"
+],
+[
+"targeting_rules",
+"the closest valid target"
+],
+[
+"stat_condition",
+"Normal Dmg stat of 3 or less"
+],
+[
+"condition_life",
+"unless this operative is injured"
+],
+[
+"terrain",
+"temporarily remove that terrain feature from the killzone"
+]
+],
+"790694": [
+[
+"cost_reduction",
+"for 1 less AP"
+],
+[
+"resource_gain",
+"you gain a number of Faith points"
+],
+[
+"turn_number",
+"equal to the turning point number"
+],
+[
+"control_reward",
+"requires it to control an objective or mission marker"
+]
+],
+"790695": [
+[
+"cost_set",
+"for 0CP"
+],
+[
+"tribal",
+"NOVITIATE"
+]
+],
+"790710": [
+[
+"immunity",
+"This operative ignores the Piercing weapon rule"
+],
+[
+"shield",
+"you can ignore that inflicted damage"
+],
+[
+"cost_set",
+"for 0CP"
+]
+],
+"790714": [
+[
+"lifesteal",
+"this operative regains up to an equal number of lost wounds"
+],
+[
+"damage_over_time",
+"has one of your Poison tokens"
+],
+[
+"piercing",
+"Piercing x"
+]
+],
+"790715": [
+[
+"activated",
+"Poisonous Miasma (1AP)"
+],
+[
+"damage_over_time",
+"gains one of your Poison tokens"
+],
+[
+"damage",
+"inflict 3 damage on that enemy operative"
+],
+[
+"random_effect",
+"roll 2D6"
+],
+[
+"heal",
+"regains 7 lost wounds"
+]
+],
+"790718": [
+[
+"zone_control",
+"Whenever determining control of a marker"
+],
+[
+"territory_trigger",
+"Whenever this operative is within your opponent's territory"
+],
+[
+"cost_set",
+"costs you 0CP"
+]
+],
+"790731": [
+[
+"cost_reduction",
+"for 1 less AP"
+]
+],
+"790732": [
+[
+"activated",
+"Intercept Communications (1AP)"
+],
+[
+"stat_gain",
+"add 1 to that operative's APL stat"
+],
+[
+"tribal",
+"RATLING"
+],
+[
+"temporary_buff",
+"Until the end of its next activation"
+]
+],
+"790738": [
+[
+"turn_number",
+"In each turning point after the first"
+],
+[
+"tribal",
+"SANCTIFIER"
+],
+[
+"movement",
+"can immediately perform a free Charge, Fall Back, or Reposition action"
+],
+[
+"reactions",
+"Whenever the enemy operative would perform an action"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"stat_condition",
+"if the result is higher than that enemy operative's APL stat"
+],
+[
+"counter_spell",
+"It cannot perform that action during that activation or counteraction"
+],
+[
+"once_per_game",
+"You cannot use this rule again during the battle"
+],
+[
+"scope_multi",
+"each of those friendly SANCTIFIER operatives"
+]
+],
+"790741": [
+[
+"first_strike",
+"resolve one of your successes before the normal order"
+],
+[
+"activated",
+"Trained Assassin (1AP)"
+],
+[
+"stances",
+"Change this operative's order"
+]
+],
+"790750": [
+[
+"placement_rules",
+"this operative can be set up outside of your drop zone"
+],
+[
+"play_restriction",
+"This operative cannot perform any actions other than Signal"
+],
+[
+"fodder",
+"is ignored for your opponent’s kill/elimination op"
+],
+[
+"activated",
+"Signal (1AP)"
+],
+[
+"tribal",
+"SPECTRE SQUAD"
+],
+[
+"stat_gain",
+"add 1 to its APL stat"
+],
+[
+"start_of_game",
+"In the Set Up Operatives step"
+],
+[
+"temporary_effect",
+"Until the end of that operative’s next activation"
+]
+],
+"790779": [
+[
+"modal_choice",
+"you can do one of the following"
+],
+[
+"resource_advantage",
+"Spend 1 Communion point for free"
+],
+[
+"tribal",
+"VESPID STINGWING"
+],
+[
+"deckbuilding_effect",
+"When selecting your operatives for the battle"
+],
+[
+"cost_set",
+"that ploy costs you 0CP"
+],
+[
+"extra_turn",
+"can immediately perform a free 1AP mission action"
+]
+],
+"790780": [
+[
+"play_restriction",
+"This operative cannot perform any action other than Aerial Guidance, Charge, Dash, Fall Back, Fight and Reposition"
+],
+[
+"zone_control",
+"treat this operative's APL stat as 1 lower"
+],
+[
+"stealth",
+"it cannot be selected as a valid target"
+],
+[
+"immunity",
+"ignore the Piercing weapon rule"
+],
+[
+"activated",
+"Aerial Guidance (1AP)"
+],
+[
+"tribal",
+"VESPID STINGWING"
+],
+[
+"buff",
+"have the Lethal 5+ and Saturate weapon rules"
+],
+[
+"aura",
+"another friendly VESPID STINGWING operative within 6\" of this operative"
+]
+],
+"790786": [
+[
+"activated",
+"Fog of Dreams (1AP)"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"disable",
+"that enemy operative cannot be activated or perform actions"
+],
+[
+"damage",
+"inflict D3 damage on that enemy operative"
+],
+[
+"temporary_effect",
+"Until the end of the turning point"
+]
+],
+"790825": [
+[
+"tribal",
+"When targeting ORKS models"
+],
+[
+"stress_morale",
+"are automatically shaken"
+],
+[
+"game_end_trigger",
+"after all Casualty rolls have been made after a mission"
+],
+[
+"random_effect",
+"roll a D6 for each enemy specialist"
+],
+[
+"resource_gain",
+"you gain 1 Morale"
+],
+[
+"buff",
+"You can add 1 to Deny the Witch tests"
+],
+[
+"counter_spell",
+"Deny the Witch tests"
+]
+],
+"790850": [
+[
+"tribal",
+"ASTRA MILITARUM"
+],
+[
+"aura",
+"within 6\" of this model"
+],
+[
+"stress_morale",
+"automatically pass Nerve tests"
+],
+[
+"immunity",
+"automatically pass Nerve tests"
+]
+]
+}

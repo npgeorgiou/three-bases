@@ -1,0 +1,644 @@
+{
+"790851": [
+[
+"immunity",
+"The Voice of Command ability has no effect on Sly Marbo"
+],
+[
+"attack_now",
+"Sly Marbo will attempt to charge"
+],
+[
+"stat_gain",
+"add 2 to Sly Marbo's Attacks characteristic"
+],
+[
+"temporary_buff",
+"until the end of the battle round"
+],
+[
+"reserve_bench",
+"When you set up Sly Marbo from Reserve"
+],
+[
+"modal_choice",
+"you can choose one of the following"
+],
+[
+"random_effect",
+"Roll a D6 for each of up to 6 enemy models"
+],
+[
+"aoe_damage",
+"all models within 2\" of that model suffer a mortal wound"
+],
+[
+"on_play",
+"When you set up Sly Marbo from Reserve"
+],
+[
+"scope_multi",
+"up to 6 enemy models"
+]
+],
+"790853": [
+[
+"play_restriction",
+"can only move, Advance, React, shoot or fight if a friendly Guardian Defender that is not shaken is within 3\" of it"
+],
+[
+"cant_attack",
+"may not charge"
+],
+[
+"stress_morale",
+"automatically passes Nerve tests"
+],
+[
+"immunity",
+"automatically passes Nerve tests"
+]
+],
+"790857": [
+[
+"random_effect",
+"Roll a D6 whenever this model suffers a mortal wound"
+],
+[
+"damage_reduction",
+"On a 5+ that wound is not lost"
+],
+[
+"counter_spell",
+"deny a psychic power"
+]
+],
+"790909": [
+[
+"damage_reduction",
+"worsen the x of the Piercing weapon rule by 1"
+],
+[
+"on_kill",
+"incapacitated an enemy operative during the Fight action"
+],
+[
+"movement",
+"it can immediately perform a free Sprint action forwards"
+],
+[
+"reactions",
+"after your opponent rolls their attack dice"
+],
+[
+"debuff",
+"your opponent cannot retain attack dice results of less than 6 as critical successes"
+],
+[
+"counterattack",
+"inflict 1 damage on that enemy operative for each critical success allocated this way"
+],
+[
+"stat_condition",
+"If it has SPEED 4+"
+],
+[
+"stat_gain",
+"add 1 to the Normal Dmg stat"
+],
+[
+"first_strike",
+"resolve one of your successes before the normal order"
+],
+[
+"modal_choice",
+"select up to two different Clanblade Upgrade rules"
+],
+[
+"deckbuilding_effect",
+"select up to two different Clanblade Upgrade rules"
+],
+[
+"damage",
+"inflict 1 additional damage"
+]
+],
+"790910": [
+[
+"immunity",
+"You can ignore any changes to this operative’s drakesteed fangs & talons weapon’s Hit stat"
+],
+[
+"modal_choice",
+"select up to two different Leystalker Upgrade rules"
+],
+[
+"deckbuilding_effect",
+"When this operative is selected for the battle"
+],
+[
+"turn_end",
+"At the end of each Firefight phase"
+],
+[
+"movement",
+"it can perform a free Sprint or Turn action"
+],
+[
+"once_per_game",
+"Once per turning point"
+],
+[
+"piercing",
+"Enemy operatives cannot be obscured"
+],
+[
+"reactions",
+"perform the Guard action"
+],
+[
+"extra_turn",
+"it can perform the Shoot action during that action"
+],
+[
+"saving_throws",
+"you can retain one of your defence dice as a normal success without rolling it"
+],
+[
+"targeting_rules",
+"doesn’t prevent that enemy operative from being selected as a valid target"
+]
+],
+"790911": [
+[
+"modal_choice",
+"select up to two different Stonesinger Upgrade rules"
+],
+[
+"deckbuilding_effect",
+"When this operative is selected for the battle"
+],
+[
+"activated",
+"Song of Renewal (1AP)"
+],
+[
+"heal",
+"That operative regains up to 2D3 lost wounds"
+],
+[
+"tribal",
+"EXODITE DRAGON MASTER"
+],
+[
+"stat_loss",
+"Subtract 2\" from the Move stat"
+],
+[
+"scope_multi",
+"each other enemy operative within 2\" of it"
+],
+[
+"random_effect",
+"Roll 2D3 separately"
+],
+[
+"damage",
+"inflict damage on that operative equal to the difference"
+],
+[
+"zone_control",
+"this operative is treated as contesting that marker"
+],
+[
+"immunity",
+"MOUNTED operatives are unaffected"
+],
+[
+"rewind",
+"Remove one rules effect or stat change your opponent has applied to it"
+],
+[
+"stat_gain",
+"that selected operative’s SPEED is one higher"
+],
+[
+"aoe_damage",
+"that operative and each other enemy operative within 2\" of it"
+],
+[
+"temporary_effect",
+"until the end of their next activations"
+]
+],
+"790914": [
+[
+"stress_morale",
+"re-roll failed Nerve tests"
+],
+[
+"aura",
+"for friendly models that are within 6\" of this model"
+],
+[
+"stat_gain",
+"Add 1 to this model's Wounds characteristic"
+],
+[
+"immunity",
+"This model can never be shaken"
+],
+[
+"terrain",
+"climbing up a 4\" wall"
+]
+],
+"790915": [
+[
+"on_kill",
+"If an enemy model is taken out of action by an attack made with this model's liberator autostubs"
+],
+[
+"buff",
+"re-roll hit rolls of 1"
+],
+[
+"aura",
+"re-roll hit rolls of 1 for models in your kill team whilst they are within 6\" of this model"
+],
+[
+"saving_throws",
+"This model has a 5+ invulnerable save"
+],
+[
+"stat_gain",
+"Add 1 to this model's Movement characteristic"
+],
+[
+"piercing",
+"do not suffer the penalty to hit rolls for the target being obscured"
+],
+[
+"reactions",
+"Overwatch attacks"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"target_choice",
+"including choosing a target"
+]
+],
+"790923": [
+[
+"stress_morale",
+"Your opponent must add 1 to Nerve tests"
+],
+[
+"saving_throws",
+"This model has a 5+ invulnerable save"
+],
+[
+"combat_start",
+"at the beginning of the Fight phase"
+],
+[
+"bodyguard",
+"choose one of those models to intercept that hit"
+],
+[
+"aura",
+"Your opponent must add 1 to Nerve tests"
+],
+[
+"random_effect",
+"Roll a dice"
+]
+],
+"790937": [
+[
+"saving_throws",
+"This model has a 5+ invulnerable save"
+],
+[
+"aura",
+"while they are within 12\" of any enemy models with this ability"
+],
+[
+"debuff",
+"PSYKERS suffer Perils of the Warp on any Psychic roll of a double"
+]
+],
+"790940": [
+[
+"immunity",
+"Models do not suffer any penalty to their Nerve tests"
+],
+[
+"spell_power",
+"Add 1\" to the range of a Dark Apostle's Aura Tactics"
+],
+[
+"condition_count",
+"for each friendly Dark Disciple"
+],
+[
+"stress_morale",
+"Nerve tests"
+],
+[
+"support",
+"Add 1\" to the range of a Dark Apostle's Aura Tactics"
+]
+],
+"790943": [
+[
+"trap_secret",
+"booby-trap up to D3+1 pieces of terrain"
+],
+[
+"debuff",
+"that hit roll suffers an additional -1 modifier"
+],
+[
+"piercing",
+"does not suffer the penalty to hit rolls for the target being obscurred"
+],
+[
+"start_of_game",
+"during the Scouting Phase"
+],
+[
+"random_effect",
+"D3+1"
+]
+],
+"790948": [
+[
+"bodyguard",
+"choose one of those models to intercept that hit"
+],
+[
+"random_effect",
+"Roll a D6"
+],
+[
+"saving_throws",
+"Add 1 to saving throws"
+]
+],
+"790962": [
+[
+"aura",
+"models within 6\" of any friendly models equipped with an Infiltrator Comms Array"
+],
+[
+"stat_gain",
+"Add 1 to the Leadership characteristic"
+]
+],
+"791000": [
+[
+"tribal",
+"enemy COMMANDERS"
+],
+[
+"reserve_bench",
+"when it is set up from Reserve"
+],
+[
+"buff",
+"You can re-roll hit and wound rolls"
+],
+[
+"haste",
+"can make a charge attempt when it is set up from Reserve"
+]
+],
+"814757": [
+[
+"tribal",
+"HAND OF THE ARCHON"
+],
+[
+"stacking_keyword",
+"would gain a Pain token"
+],
+[
+"aura",
+"within ⬟ of this operative"
+]
+],
+"814805": [
+[
+"stat_loss",
+"Subtract 2\" from its Move stat"
+],
+[
+"protection",
+"you can re-roll any of your defence dice"
+],
+[
+"stances",
+"Whenever this operative is activated, you can use this rule"
+]
+],
+"814839": [
+[
+"modal_choice",
+"select up to two of the following improvements or weapon rules"
+],
+[
+"stat_gain",
+"Add 1 to the Normal Dmg stat"
+],
+[
+"start_of_game",
+"At the end of the Select Operatives step"
+],
+[
+"buff",
+"Lethal 5+"
+]
+],
+"814861": [
+[
+"resource_gain",
+"you gain Resourceful points"
+],
+[
+"condition_count",
+"determined by the number of friendly HERNKYN YAEGIR operatives in the killzone"
+],
+[
+"tribal",
+"HERNKYN YAEGIR"
+],
+[
+"turn_end",
+"At the end of each turning point, discard your Resourceful points"
+],
+[
+"modal_choice",
+"to do one of the following"
+],
+[
+"stat_gain",
+"add 1 to that friendly operative’s APL stat"
+],
+[
+"heal",
+"it regains up to D3+1 lost wounds"
+],
+[
+"temporary_buff",
+"until the end of its activation"
+],
+[
+"turn_start",
+"In the Ready step of each Strategy phase after the first"
+],
+[
+"coin_economy",
+"spend 1 of your Resourceful points"
+]
+],
+"814879": [
+[
+"multi_target_attack",
+"shoot with this weapon against each secondary target"
+],
+[
+"targeting_rules",
+"regardless of a conceal order"
+],
+[
+"area_templates",
+"within x of the primary target"
+]
+],
+"814881": [
+[
+"piercing",
+"Your opponent can only block with critical successes"
+],
+[
+"blocking",
+"Your opponent can only block with critical successes"
+]
+],
+"814892": [
+[
+"saving_throws",
+"Successful defence dice are determined differently"
+],
+[
+"stat_condition",
+"Each result that’s equal to or less than the target’s APL stat is a success"
+]
+],
+"814926": [
+[
+"aoe_damage",
+"shoot against each operative within its torch zone"
+],
+[
+"piercing",
+"they are not in cover or obscured"
+],
+[
+"area_templates",
+"The torch zone is the area between the operative's current and previous location"
+],
+[
+"friendly_fire",
+"each operative within its torch zone"
+]
+],
+"814935": [
+[
+"damage_reduction",
+"each of your blocks can be allocated to block two unresolved successes"
+]
+],
+"816481": [
+[
+"cost_increase",
+"you must subtract one additional AP to do so"
+],
+[
+"saving_throws",
+"This operative has a 6+ invulnerable save"
+]
+],
+"816490": [
+[
+"tribal",
+"HEARTHKYN SALVAGER"
+],
+[
+"damage_reduction",
+"subtract 1 from the damage inflicted on it"
+],
+[
+"control_reward",
+"if it’s within ⬤ of an objective marker"
+]
+],
+"816496": [
+[
+"activated",
+"Enhanced Data-tether (1AP)"
+],
+[
+"tribal",
+"HUNTER CLADE"
+],
+[
+"stat_gain",
+"Add 1 to its APL"
+]
+],
+"816501": [
+[
+"suppress",
+"it cannot perform psychic actions"
+],
+[
+"aura",
+"While an operative is within ⬟ of this operative"
+],
+[
+"immunity",
+"This operative cannot be targeted or affected by psychic actions"
+]
+],
+"816507": [
+[
+"disable",
+"cannot be activated or perform actions"
+],
+[
+"condition_count",
+"equal to the number of friendly operatives with this ability in the kill zone"
+],
+[
+"activated",
+"Guerilla Warfare (1AP)"
+],
+[
+"stances",
+"Change this operative's order"
+],
+[
+"turn_start",
+"Once in each Strategy phase"
+],
+[
+"turn_number",
+"during the first Turning Point"
+]
+]
+}
