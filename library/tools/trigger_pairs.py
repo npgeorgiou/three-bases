@@ -3,7 +3,7 @@ appeared, so most cards with triggers had none (Runeterra: 367 of 929). Now ever
 (general and per-game trigger patterns plus the trigger words below) and its effects (general and per-game effect patterns) are
 paired. Entries inherit the pairs of the keywords they have. Existing rows are kept (hand-made Underworlds warscroll pairs, Marvel Snap's own loader); new pairs are added.
 Coverage check: per game, the share of entries with a trigger tag that have at least one pair; `check` fails below 50%.
-Usage: trigger_pairs.py <db> [check]"""
+Usage: trigger_pairs.py <db> [check | pairs_only]  (pairs_only: after the tree move, pairs the entry's existing tags and adds no tag)"""
 import re, sqlite3, sys
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
 EXTRA = {   # trigger wording the general patterns miss (Claude's list, from the misses)
@@ -28,6 +28,10 @@ if len(sys.argv) < 3 or sys.argv[2] != 'check':
     for con, ps in EXTRA.items():
         for p in ps: pats.setdefault(None, []).append((con, 'trigger', re.compile(p, re.I)))
     have = {(e, t, f) for e, t, f in q('SELECT entity, trigger, effect FROM trigger_effect')}
+    ONLY = sys.argv[2:] == ['pairs_only']
+    tags = {}
+    if ONLY:
+        for e, k in q('SELECT entity, concept FROM entity_concepts'): tags.setdefault(e, set()).add(k)
     SPLIT = re.compile(r'(?<=[.!;])\s+|\n+')
     n = 0
     # whole-entry triggers that are not in the wording (monster intents, structure rules, reviewed tags): used when no clause names a trigger
@@ -44,13 +48,16 @@ if len(sys.argv) < 3 or sys.argv[2] != 'check':
             cl = low
             if not low: continue
             tr = {con for con, r, p in P if r == 'trigger' and p.search(low)}
+            if ONLY: tr &= tags.get(e, set())   # after the tree move: pair only the tags the entry has, add none
             if not tr: continue
             found = True
-            for a in tr: c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, a, 'does', 'text_pattern', low[:60]))   # the entry gets the trigger tag too
+            if not ONLY:
+                for a in tr: c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, a, 'does', 'text_pattern', low[:60]))   # the entry gets the trigger tag too
             ef = {con for con, r, p in P if r == 'effect' and p.search(low)}
             if not ef:   # "At the start of each turn, repeat this." — the effect is in the clause before or after
                 for nb in (cls[j - 1] if j else '', cls[j + 1] if j + 1 < len(cls) else ''):
                     ef |= {con for con, r, p in P if r == 'effect' and p.search(nb)}
+            if ONLY: ef &= tags.get(e, set())
             for a in tr:
                 for b in ef:
                     if (e, a, b) in have: continue
@@ -84,4 +91,4 @@ for g, in q('SELECT DISTINCT game FROM entities'):
         share = len(tagged & paired) / len(tagged)
         if share < 0.5: bad.append(f'{g} {share:.0%}')
 print('trigger coverage below 50%:', bad or 'none')
-if len(sys.argv) > 2 and bad: sys.exit(1)
+if sys.argv[2:] == ['check'] and bad: sys.exit(1)
