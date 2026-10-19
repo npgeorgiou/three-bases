@@ -1,6 +1,7 @@
 """Trigger -> effect pairs an older database has and a new build lost, grouped by the cause (asked by Kaptain, 19 Oct 2026).
 A pair is lost when its trigger or effect concept is no longer on the entry (the tag was removed), or when both tags are still
-there but the pair rule no longer pairs them. For a removed tag the cause is looked up in this order:
+there: then either a narrower pair took its place (the parent and child rule keeps only the narrowest, passive -> stat_gain instead
+of passive -> buff; searches still find the broader one through the tree), or the pair rule no longer derives it. For a removed tag the cause is looked up in this order:
   key wins      key/key_wins.tsv drops it (the answer key calls the review's tag wrong)
   switch-off    a weak old pattern of that concept was switched off in that game (step3/decisions.tsv '(?!)')
   undo          final/revert.tsv undoes that concept in that game
@@ -34,7 +35,10 @@ rows = []; summ = collections.Counter(); judged = collections.Counter()
 for e, g, t, f in o.execute('SELECT DISTINCT entity, game, trigger, effect FROM trigger_effect'):
     if (e, t, f) in newp or e not in live: continue
     gone = [k for k in (t, f) if k not in newtags[e]]
-    if not gone: cause, k = 'pair rule', ''
+    if not gone:
+        k = ''
+        nar = any((e, t, f2) in newp for f2 in K.DESC.get(f, ())) or any((e, t2, f) in newp for t2 in K.DESC.get(t, ()))
+        cause = 'replaced by a narrower pair' if nar else 'pair no longer derived (both tags still there)'
     else:
         k = gone[0]
         cause = 'key wins' if (e, k) in kw else 'switch-off' if (g, k) in off else 'undo' if (g, k) in undo else 'other: ' + ','.join(sorted(oldm[e, k])) or 'other'
