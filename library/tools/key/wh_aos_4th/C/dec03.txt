@@ -1,0 +1,50 @@
+794092 U
+794113 U
+794129 U -death_count
+794133 U -protection
+794136 U
+794139 U -on_attack
+794140 U -on_attack
+794151 U -temporary_effect
+794163 U -debuff
+794187 U
+794210 U -cost_type -stacking_keyword
+794211 U -buff -protection -damage_reduction -free_play ;; protection|Subtract 1 from wound rolls for combat attacks that target this unit
+794224 U
+794243 U -stacking_keyword -protection
+794262 U -cost_type -stat_gain
+794265 U -debuff
+794268 U
+794270 U -delayed
+794271 U -on_attack
+794304 A
+794309 U -flexibility
+794315 U
+794316 U
+794327 U -deathtouch
+794331 U -immunity -suppress
+794334 U -banish
+794350 A
+794366 U
+794369 U -permanent_growth -stacking_keyword -protection -temporary_effect
+794379 U -stat_gain
+794388 A
+794389 U -buff -forced_attack -suppress -target_choice
+794394 U
+794396 U -delayed ;; temporary_buff|Until the start of your next turn
+794398 U
+794399 U -aura
+794405 U
+794409 U -variable_stats
+794419 U -advantage -cost_set -speed
+794422 U -buff -movement
+794425 U -territory_trigger -debuff ;; piercing|subtract 1 from save rolls for the target for the rest of the battle
+794430 U
+794441 U -protection
+794452 U -stat_gain -temporary_effect
+794455 U -debuff -buff -variable_stats -temporary_effect
+794460 U -steal -bodyguard -protection -speed -merge_attach
+794463 U -temporary_effect
+794472 U -summon
+794474 A
+794488 U

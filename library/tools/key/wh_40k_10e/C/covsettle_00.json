@@ -1,0 +1,1154 @@
+{
+"784271": [
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"on_kill",
+"destroys an enemy unit"
+],
+[
+"tribal",
+"Drukhari units from your army"
+],
+[
+"comeback",
+"If that model's unit is losing the wager"
+],
+[
+"advantage",
+"re-roll a Hit roll of 1"
+]
+],
+"784278": [
+[
+"turn_end",
+"At the end of your opponent's Shooting phase"
+],
+[
+"death_trigger",
+"if one or more Ynnari units from your army were destroyed this phase"
+],
+[
+"movement",
+"make a Normal move of up to D6+1\""
+],
+[
+"random_effect",
+"roll one D6 and add 1 to the result"
+],
+[
+"combat_start",
+"At the start of the Fight phase"
+],
+[
+"condition_life",
+"below its Starting Strength"
+],
+[
+"first_strike",
+"Fights First"
+],
+[
+"temporary_buff",
+"Until the end of the phase"
+]
+],
+"784280": [
+[
+"start_of_game",
+"At the start of the first battle round"
+],
+[
+"random_effect",
+"rolling a number of D6"
+],
+[
+"coin_economy",
+"Fate dice pool"
+],
+[
+"cost_reduction",
+"reduce the CP cost of that usage of that Stratagem by 1CP"
+]
+],
+"784294": [
+[
+"start_of_game",
+"You start the battle with three Flux tokens"
+],
+[
+"coin_economy",
+"Flux tokens"
+],
+[
+"tribal",
+"LEGIONES DAEMONICA TZEENTCH model"
+],
+[
+"advantage",
+"to re‑roll the result of that roll, throw or test"
+],
+[
+"kicker",
+"Flux tokens can also be spent to enhance the effect of some Stratagems"
+],
+[
+"enemy_benefit",
+"your opponent gains one Flux token"
+],
+[
+"turn_start",
+"In your Command phase"
+],
+[
+"resource_gain",
+"you gain one Flux token"
+]
+],
+"784307": [
+[
+"tribal",
+"If your Army Faction is Chaos Knights"
+],
+[
+"start_of_game",
+"from the start of the battle"
+],
+[
+"turn_number",
+"at the start of the first, third and fifth battle rounds"
+],
+[
+"modal_choice",
+"you can either select one of the other Dread abilities"
+],
+[
+"random_ability",
+"randomly select two Dread abilities"
+],
+[
+"aura",
+"Deathly Terror (Aura)"
+],
+[
+"stat_loss",
+"worsen the Leadership characteristic of models in that unit by 1"
+],
+[
+"stacking_keyword",
+"This is cumulative with the Deathly Terror ability"
+],
+[
+"buff",
+"add 1 to the Wound roll"
+],
+[
+"protection",
+"subtract 1 from the Hit roll"
+],
+[
+"condition_life",
+"below its Starting Strength"
+],
+[
+"stress_morale",
+"must take a Battle-shock test"
+],
+[
+"damage",
+"it suffers D3 mortal wounds"
+]
+],
+"784316": [
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"tribal",
+"Heretic Astartes Infantry models"
+],
+[
+"modal_choice",
+"either select one from the list below"
+],
+[
+"random_ability",
+"randomly determine two by rolling two D6"
+],
+[
+"advantage",
+"re‑roll one or both of the dice"
+],
+[
+"stat_gain",
+"Add 1 to the Attacks characteristic"
+]
+],
+"784347": [
+[
+"reactions",
+"Each time an enemy unit is selected to shoot or fight"
+],
+[
+"tribal",
+"Tzeentch Mutant Infantry or Tzeentch Mutant Mounted units"
+],
+[
+"protection",
+"each time an attack targets that unit, subtract 1 from the Wound roll"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"friendly_fire",
+"that Tzeentch Mutant unit suffers D3 mortal wounds"
+],
+[
+"buff",
+"add 1 to the Wound roll"
+],
+[
+"type_grant",
+"Tzaangors units from your army have the Battleline keyword"
+],
+[
+"stat_gain",
+"add 1 to the Objective Control characteristic"
+]
+],
+"784350": [
+[
+"tribal",
+"If your army Faction is Thousand Sons"
+],
+[
+"turn_start",
+"at the start of your Shooting phase"
+],
+[
+"activated",
+"can attempt Rituals"
+],
+[
+"random_effect",
+"Roll 2D6"
+],
+[
+"kicker",
+"Optionally, roll one additional D6 (Channel the Warp)"
+],
+[
+"friendly_fire",
+"that model's unit suffers D3 mortal wounds"
+],
+[
+"condition_count",
+"If this equals or exceeds the Warp Charge value"
+]
+],
+"784353": [
+[
+"on_kill",
+"destroys an enemy unit"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"resource_gain",
+"you gain 1 Blood Tithe point (BTP)"
+],
+[
+"coin_economy",
+"spend 1 or more of your BTP"
+],
+[
+"modal_choice",
+"activate one of the following abilities until the end of the battle"
+],
+[
+"turn_start",
+"At the start of the Command phase"
+],
+[
+"tribal",
+"Blood Legions or World Eaters unit"
+],
+[
+"saving_throws",
+"Feel No Pain 5+"
+],
+[
+"damage_types",
+"against Psychic Attacks and mortal wounds"
+],
+[
+"buff",
+"have the [Lance] ability"
+]
+],
+"784360": [
+[
+"tribal",
+"If your Army Faction is Genestealer Cults"
+],
+[
+"start_of_game",
+"you start the battle with a number of Resurgence points"
+],
+[
+"death_trigger",
+"Each time a unit from your army is destroyed"
+],
+[
+"coin_economy",
+"spend the relevant number of Resurgence points"
+],
+[
+"revive",
+"Add a new unit to your army identical to your destroyed unit"
+],
+[
+"reserve_bench",
+"Cult Ambush is a type of Strategic Reserves"
+],
+[
+"placement_rules",
+"set up that unit using that Cult Ambush marker"
+],
+[
+"on_enemy_enter",
+"If an enemy model (excluding Aircraft) ends any kind of move within 9\" of a Cult Ambush marker"
+],
+[
+"delayed",
+"At the end of the Reinforcements step of your opponent’s next Movement phase"
+]
+],
+"784363": [
+[
+"turn_start",
+"At the start of the battle round"
+],
+[
+"modal_choice",
+"select one of the following Vows of Atonement"
+],
+[
+"once_per_game",
+"You can only select each Vow of Atonement once per battle"
+],
+[
+"tribal",
+"PENITENT model"
+],
+[
+"stat_gain",
+"Add 3\" to the Move characteristic"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"cheat_death",
+"do not remove it from play"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"counterattack",
+"the destroyed model can fight after the attacking unit has finished making its attacks"
+]
+],
+"784377": [
+[
+"on_attack",
+"after this model has shot"
+],
+[
+"stat_loss",
+"worsen the Weapon Skill characteristic"
+],
+[
+"temporary_effect",
+"Until the start of your next turn"
+]
+],
+"784407": [
+[
+"tribal",
+"Astra Militarum Titanic or Astra Militarum Squadron unit"
+],
+[
+"targeting_rules",
+"models in that unit can target enemy units within Engagement Range of that unit"
+],
+[
+"buff",
+"do not suffer the penalty to their Hit rolls"
+]
+],
+"784427": [
+[
+"start_of_game",
+"At the start of the first battle round"
+],
+[
+"zone_control",
+"select two objective markers on the battlefield"
+],
+[
+"link_formation",
+"When you draw a line from any part of one of your foundations to the other"
+],
+[
+"tribal",
+"Imperial Knights unit"
+],
+[
+"buff",
+"that unit has the Against the Horde ability"
+]
+],
+"784453": [
+[
+"tribal",
+"Adeptus Astartes unit"
+],
+[
+"advantage",
+"you can re-roll one Hit roll"
+],
+[
+"quests",
+"your saga is completed"
+],
+[
+"condition_count",
+"three or more different Boasts"
+],
+[
+"on_kill",
+"That unit destroys your Oath of Moment target"
+],
+[
+"territory_trigger",
+"wholly within your opponent's deployment zone"
+],
+[
+"zone_control",
+"within range of an objective marker you control"
+],
+[
+"turn_number",
+"From the second battle round onwards"
+]
+],
+"784479": [
+[
+"tribal",
+"If your Army Faction is Leagues of Votann"
+],
+[
+"stances",
+"which ability those Leagues of Votann units have will change"
+],
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"turn_end",
+"At the end of your Command phase"
+],
+[
+"condition_count",
+"if you have 7YP or more"
+],
+[
+"buff",
+"add 1 to the Hit roll"
+],
+[
+"advantage",
+"re‑roll Advance and Charge rolls"
+],
+[
+"control_reward",
+"within range of one or more objective markers you control"
+],
+[
+"protection",
+"subtract 1 from the Wound roll"
+],
+[
+"stat_condition",
+"if the Strength characteristic of that attack is greater than this unit"
+],
+[
+"resource_gain",
+"you gain 1YP"
+],
+[
+"zone_control",
+"You control more objective markers than your opponent"
+],
+[
+"turn_number",
+"from the second battle round onwards"
+]
+],
+"784483": [
+[
+"tribal",
+"If your Army Faction is Adeptus Astartes"
+],
+[
+"start_of_game",
+"at the start of the first battle round"
+],
+[
+"modal_choice",
+"select one of the following Vows"
+],
+[
+"advantage",
+"you can re-roll the Charge roll"
+],
+[
+"target_choice",
+"[PRECISION]"
+],
+[
+"stat_condition",
+"if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target"
+],
+[
+"speed",
+"eligible to declare a charge in a turn in which it Fell Back"
+],
+[
+"zone_control",
+"that objective marker remains under your control"
+]
+],
+"784495": [
+[
+"death_trigger",
+"were destroyed as a result of those attacks"
+],
+[
+"reactions",
+"Each time an enemy unit is selected to shoot"
+],
+[
+"movement",
+"that unit can be moved a distance in inches up to the result"
+],
+[
+"random_effect",
+"roll one D6"
+],
+[
+"tribal",
+"Endless Multitude units"
+]
+],
+"784499": [
+[
+"advantage",
+"re-roll a Hit roll of 1"
+],
+[
+"tribal",
+"Tyranids model"
+],
+[
+"reserve_bench",
+"set up on the battlefield from Reserves"
+],
+[
+"placement_rules",
+"set that unit up wholly within 9\" of one of your Tunnel Markers"
+],
+[
+"on_enemy_enter",
+"If an enemy model (excluding Aircraft) ends any kind of move within 3\" of one of your Tunnel Markers"
+],
+[
+"terrain",
+"Tunnel Marker"
+]
+],
+"784504": [
+[
+"tribal",
+"ACOLYTE HYBRIDS, HYBRID METAMORPHS, and NEOPHYTE HYBRID unit"
+],
+[
+"merge_attach",
+"while one or more CHARACTER models are leading that unit"
+],
+[
+"advantage",
+"re-roll Advance and Charge rolls"
+],
+[
+"saving_throws",
+"Feel No Pain 3+"
+]
+],
+"784517": [
+[
+"zone_control",
+"if you control at least half of the objective markers within No Man's Land"
+],
+[
+"control_reward",
+"No Man's Land is within your army's Power Matrix"
+],
+[
+"turn_start",
+"At the start of any phase"
+],
+[
+"tribal",
+"CRYPTEK or CANOPTEK unit"
+],
+[
+"advantage",
+"re-roll a Hit roll of 1"
+],
+[
+"territory_trigger",
+"If such a unit is wholly within your Power Matrix"
+]
+],
+"784552": [
+[
+"merge_attach",
+"it is known as an Attached unit"
+],
+[
+"bodyguard",
+"that attack cannot be allocated to a Character model in that unit"
+],
+[
+"death_trigger",
+"Each time the last model in a Bodyguard unit is destroyed"
+]
+],
+"784638": [
+[
+"tribal",
+"Asuryani model only"
+],
+[
+"start_of_game",
+"In the Deploy Armies step"
+],
+[
+"placement_rules",
+"Infiltrators"
+]
+],
+"784644": [
+[
+"tribal",
+"Drukhari model only"
+],
+[
+"passive",
+"The bearer's unit is always Empowered"
+],
+[
+"resource_advantage",
+"you do not need to spend any Pain tokens"
+]
+],
+"784646": [
+[
+"tribal",
+"Harlequins or Drukhari model only"
+],
+[
+"placement_rules",
+"have the Deep Strike ability"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"comeback",
+"if that unit is currently losing the wager"
+],
+[
+"advantage",
+"re‑roll Charge rolls"
+],
+[
+"temporary_buff",
+"until the end of the turn"
+]
+],
+"784648": [
+[
+"tribal",
+"Drukhari model only"
+],
+[
+"turn_start",
+"In your Command phase"
+],
+[
+"modal_choice",
+"you can do one of the following"
+],
+[
+"coin_economy",
+"you can gain 1 Pain token"
+],
+[
+"comeback",
+"If your Drukhari units are currently losing the wager"
+]
+],
+"784691": [
+[
+"tribal",
+"Anhrathe Character unit only"
+],
+[
+"start_of_game",
+"At the start of the battle"
+],
+[
+"aura",
+"Lord of Deceit (Aura)"
+],
+[
+"reactions",
+"Each time your opponent targets a unit from their army with a Stratagem"
+],
+[
+"cost_increase",
+"increase the cost of that use of that Stratagem by 1CP"
+]
+],
+"784755": [
+[
+"passive",
+"This unit is always Empowered"
+],
+[
+"resource_advantage",
+"you do not need to spend any Pain tokens"
+]
+],
+"784869": [
+[
+"sacrifice",
+"Dark Sacrifice"
+],
+[
+"targeting_rules",
+"select one visible friendly DAMNED unit"
+]
+],
+"784923": [
+[
+"tribal",
+"Chaos Knights unit"
+],
+[
+"on_attack",
+"is selected to shoot or fight"
+],
+[
+"random_effect",
+"must take a Leadership test"
+],
+[
+"sacrifice",
+"destroy D3 models in that Damned unit"
+],
+[
+"modal_choice",
+"select one of the following abilities"
+],
+[
+"buff",
+"[LETHAL HITS]"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+]
+],
+"785060": [
+[
+"merge_attach",
+"While the bearer is leading a Poxwalkers unit"
+],
+[
+"tribal",
+"Poxwalkers unit"
+],
+[
+"stat_gain",
+"add 1 to the Damage characteristic"
+],
+[
+"on_attack",
+"Each time the bearer makes one or more attacks"
+],
+[
+"friendly_fire",
+"D3 Bodyguard models from the bearer's unit are destroyed"
+]
+],
+"785150": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"turn_end",
+"at the end of the Fight phase"
+],
+[
+"condition_count",
+"three or more enemy models"
+],
+[
+"activated",
+"it can use this Enhancement"
+],
+[
+"multi_attack",
+"the bearer can fight one additional time"
+],
+[
+"modal_choice",
+"you can select one ability"
+]
+],
+"785225": [
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"repeat_trigger",
+"even if a model from your army has already attempted to manifest that Ritual this phase"
+]
+],
+"785339": [
+[
+"start_of_game",
+"After both players have deployed their armies"
+],
+[
+"tribal",
+"Jakhals and/or Goremongers units"
+],
+[
+"movement",
+"redeploy them"
+],
+[
+"reserve_bench",
+"set those units up in Strategic Reserves"
+]
+],
+"785365": [
+[
+"on_attack",
+"Each time this unit is selected to fight"
+],
+[
+"activated",
+"you can choose to use this Battle Trait"
+],
+[
+"stat_gain",
+"add 2 to the Attacks characteristic"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"friendly_fire",
+"[HAZARDOUS]"
+]
+],
+"785368": [
+[
+"buff",
+"its effects will apply to the bearer's unit in addition to any other Blessings of Khorne"
+],
+[
+"temporary_buff",
+"until the end of the battle round"
+]
+],
+"785426": [
+[
+"resource_gain",
+"You gain 6 Planning points"
+],
+[
+"coin_economy",
+"spend to purchase Shrewd Strategy abilities"
+]
+],
+"785470": [
+[
+"tribal",
+"PENITENT model only"
+],
+[
+"once_per_game",
+"Once per battle"
+],
+[
+"turn_start",
+"at the start of the battle round"
+],
+[
+"modal_choice",
+"select one Vow of Atonement"
+],
+[
+"repeat_trigger",
+"even if you have already selected that Vow of Atonement this battle"
+],
+[
+"temporary_buff",
+"Until the start of the next battle round"
+]
+],
+"785482": [
+[
+"stress_morale",
+"Battle-shock or Leadership test"
+],
+[
+"coin_economy",
+"discard 1 Miracle dice"
+],
+[
+"immunity",
+"that test is automatically passed"
+]
+],
+"785483": [
+[
+"reactions",
+"when this unit is selected as the target of an attack"
+],
+[
+"coin_economy",
+"discard 1 Miracle dice"
+],
+[
+"protection",
+"worsen the Armour Penetration characteristic of that attack by 1"
+],
+[
+"temporary_effect",
+"until the end of the phase"
+]
+],
+"785502": [
+[
+"saving_throws",
+"The bearer has a 4+ invulnerable save"
+],
+[
+"reactions",
+"Each time the bearer's unit is selected as the target of an attack"
+],
+[
+"coin_economy",
+"discard 1 Miracle dice"
+],
+[
+"stat_gain",
+"the bearer has a 3+ invulnerable save"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+]
+],
+"785513": [
+[
+"on_attack",
+"selected to fight"
+],
+[
+"coin_economy",
+"discard 1 Miracle dice"
+],
+[
+"stat_multiply",
+"double the Strength characteristic"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+],
+[
+"piercing",
+"[DEVASTATING WOUNDS]"
+]
+],
+"785515": [
+[
+"turn_start",
+"At the start of any phase"
+],
+[
+"coin_economy",
+"discard 1 Miracle dice"
+],
+[
+"heal",
+"this model regains all of its lost wounds"
+]
+],
+"785516": [
+[
+"turn_end",
+"At the end of each player's Command phase"
+],
+[
+"coin_economy",
+"discard 1 Miracle dice"
+],
+[
+"resource_conversion",
+"you gain 1 Miracle dice showing a value of 6"
+]
+],
+"785517": [
+[
+"on_attack",
+"Each time this model's unit is selected to shoot"
+],
+[
+"coin_economy",
+"discard 1 Miracle die"
+],
+[
+"piercing",
+"[IGNORES COVER]"
+],
+[
+"target_choice",
+"[PRECISION]"
+],
+[
+"temporary_buff",
+"until the end of the phase"
+]
+],
+"785521": [
+[
+"turn_start",
+"At the start of each battle round"
+],
+[
+"random_effect",
+"roll one D6 and consult the Hymns of Battle table"
+],
+[
+"coin_economy",
+"discard 1 Miracle dice"
+],
+[
+"buff",
+"that Hymn applies to this model's unit"
+],
+[
+"temporary_buff",
+"until the end of the battle round"
+]
+],
+"785549": [
+[
+"reactions",
+"the first time a saving throw is failed"
+],
+[
+"shield",
+"change the Damage characteristic of that attack to 0"
+]
+],
+"785595": [
+[
+"quests",
+"Win a battle by more than 10 Victory points"
+],
+[
+"condition_count",
+"more than 10 Victory points"
+],
+[
+"points_scoring",
+"Victory points"
+]
+],
+"785643": [
+[
+"tribal",
+"Legio Cybernetica or Adeptus Mechanicus Vehicle model"
+],
+[
+"protection",
+"friendly Legio Cybernetica or Adeptus Mechanicus Vehicle model within 12\" of the bearer"
+],
+[
+"reactions",
+"when a saving throw made for a friendly Legio Cybernetica or Adeptus Mechanicus Vehicle model"
+],
+[
+"shield",
+"change the Damage characteristic of that attack to 0"
+]
+],
+"785798": [
+[
+"tribal",
+"Astra Militarum Infantry model only"
+],
+[
+"on_enemy_enter",
+"Each time an enemy Infantry or Mounted unit ends a Normal, Advance, Charge, or Fall Back move within 9\" of the bearer's unit"
+],
+[
+"random_effect",
+"roll a D6"
+],
+[
+"debuff",
+"subtract 1 from the Hit roll"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+]
+]
+}

@@ -1,4 +1,4642 @@
 {
+"766036": [
+[
+"cost_type",
+"cast this spell for its cleave cost"
+],
+[
+"flexibility",
+"remove the words in square brackets"
+]
+],
+"766104": [
+[
+"blocking",
+"Whenever a creature without flanking blocks this creature"
+],
+[
+"stat_loss",
+"the blocking creature gets -1/-1"
+],
+[
+"temporary_effect",
+"until end of turn"
+]
+],
+"766300": [
+[
+"cost_reduction",
+"costs {1} less to cast for each snow land you control"
+],
+[
+"condition_count",
+"for each snow land you control"
+],
+[
+"on_play",
+"When this creature enters"
+],
+[
+"disable",
+"don't untap during that player's next untap step"
+],
+[
+"scope_multi",
+"artifacts and creatures target opponent controls"
+],
+[
+"activated",
+"Return three snow lands you control to their owner's hand:"
+],
+[
+"return_to_hand",
+"Return this creature to its owner's hand"
+]
+],
+"766387": [
+[
+"stat_gain",
+"enters with two +1/+1 counters on it"
+],
+[
+"on_ally_play",
+"Whenever another creature enters"
+],
+[
+"distribute",
+"move a +1/+1 counter from this creature onto it"
+],
+[
+"activated",
+"{U}, {T}: Gain control"
+],
+[
+"steal",
+"Gain control of target creature with a +1/+1 counter on it"
+],
+[
+"targeting_rules",
+"target creature with a +1/+1 counter on it"
+]
+],
+"766388": [
+[
+"team_play",
+"Another player can pay up to {5} of this spell's cost"
+],
+[
+"hand_deck_swap",
+"Each player shuffles their hand and graveyard into their library, then draws seven cards"
+],
+[
+"symmetric_effect",
+"Each player shuffles"
+],
+[
+"recycle",
+"shuffles their hand and graveyard into their library"
+],
+[
+"draw",
+"draws seven cards"
+],
+[
+"banish",
+"Exile Game Plan"
+]
+],
+"766397": [
+[
+"cost_type",
+"can be paid with either {W} or 2 life"
+],
+[
+"life_payment",
+"2 life"
+],
+[
+"cant_attack",
+"Defender"
+],
+[
+"death_trigger",
+"When this creature dies during combat"
+],
+[
+"counterattack",
+"it deals 6 damage to each creature it blocked this combat"
+],
+[
+"damage",
+"deals 6 damage"
+]
+],
+"766423": [
+[
+"on_play",
+"As this enchantment enters"
+],
+[
+"play_restriction",
+"Your opponents can't cast spells with the chosen name"
+],
+[
+"disruption",
+"Your opponents can't cast spells with the chosen name"
+],
+[
+"protection",
+"Prevent all damage that would be dealt to you and permanents you control"
+]
+],
+"766475": [
+[
+"modal_choice",
+"your choice of a +1/+1 counter or haste"
+],
+[
+"stat_gain",
+"+1/+1 counter"
+],
+[
+"haste",
+"haste"
+],
+[
+"tribal",
+"Other Spiders you control"
+],
+[
+"aura",
+"Other Spiders you control have riot"
+],
+[
+"rule_change",
+"Spells and abilities can't be countered"
+],
+[
+"rule_change",
+"Damage can't be prevented"
+]
+],
+"766640": [
+[
+"combat_start",
+"At the beginning of combat on your turn"
+],
+[
+"variety_payoff",
+"three or more creatures with different powers"
+],
+[
+"condition_count",
+"three or more creatures"
+],
+[
+"stat_gain",
+"creatures you control get +1/+0"
+],
+[
+"scope_multi",
+"creatures you control"
+],
+[
+"temporary_buff",
+"until end of turn"
+]
+],
+"766657": [
+[
+"tutor",
+"Search your library and graveyard for up to four creature cards"
+],
+[
+"variety_payoff",
+"with different names"
+],
+[
+"cost_condition",
+"mana value X or less"
+],
+[
+"free_play",
+"put the rest onto the battlefield"
+],
+[
+"revive",
+"your library and graveyard"
+],
+[
+"banish",
+"Exile Ecological Appreciation"
+]
+],
+"766750": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"self_destruct",
+"sacrifice it unless an opponent was dealt damage this turn"
+],
+[
+"permanent_growth",
+"put that many +1/+1 counters on this creature"
+]
+],
+"766908": [
+[
+"activated",
+"+1: Reveal the top card of your library"
+],
+[
+"deck_position",
+"Reveal the top card of your library"
+],
+[
+"draw",
+"put that card into your hand"
+],
+[
+"direct_damage",
+"Each opponent loses life equal to its mana value"
+],
+[
+"cost_condition",
+"equal to its mana value"
+],
+[
+"damage",
+"Sorin deals X damage to target creature or planeswalker"
+],
+[
+"lifesteal",
+"deals X damage to target creature or planeswalker and you gain X life"
+],
+[
+"summon",
+"Create a number of 1/1 black Vampire Knight creature tokens"
+],
+[
+"lifesteal",
+"lifelink"
+],
+[
+"condition_count",
+"equal to the highest life total among all players"
+]
+],
+"767010": [
+[
+"activated",
+"+1: Untap up to one target creature"
+],
+[
+"untap",
+"Untap up to one target creature and up to one target land"
+],
+[
+"selection",
+"Reveal the top four cards of your library"
+],
+[
+"deck_position",
+"the top four cards of your library"
+],
+[
+"self_mill",
+"Put the rest into your graveyard"
+],
+[
+"on_ally_play",
+"Whenever a creature you control enters"
+],
+[
+"damage",
+"have it fight target creature"
+],
+[
+"summon",
+"create three 8/8 blue Octopus creature tokens"
+]
+],
+"767032": [
+[
+"upgrade",
+"Level up {W}"
+],
+[
+"activated",
+"{W}: Put a level counter on this"
+],
+[
+"spell_speed",
+"Level up only as a sorcery"
+],
+[
+"stat_gain",
+"3/3"
+],
+[
+"first_strike",
+"First strike"
+],
+[
+"multi_attack",
+"Double strike"
+],
+[
+"condition_count",
+"LEVEL 7+"
+]
+],
+"767097": [
+[
+"activated",
+"+4: Target player exiles a card from their hand"
+],
+[
+"hand_disruption",
+"Target player exiles a card from their hand"
+],
+[
+"removal",
+"Exile target permanent"
+],
+[
+"banish",
+"Exile target permanent"
+],
+[
+"rewind",
+"Restart the game"
+],
+[
+"steal",
+"put those cards onto the battlefield under your control"
+]
+],
+"767125": [
+[
+"on_attack",
+"Whenever this creature attacks and isn't blocked"
+],
+[
+"disruption",
+"lose all unspent mana"
+],
+[
+"no_damage_output",
+"this creature assigns no combat damage this turn"
+],
+[
+"delayed",
+"at the beginning of your next main phase this turn"
+],
+[
+"steal",
+"add an amount of {C} equal to the amount of mana that player lost this way"
+],
+[
+"resource_gain",
+"you add an amount of {C}"
+]
+],
+"767234": [
+[
+"spell_speed",
+"Flash"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"rule_change",
+"Artifacts and creatures entering don't cause abilities to trigger"
+]
+],
+"767464": [
+[
+"on_attack",
+"Whenever this creature and at least two other creatures attack"
+],
+[
+"condition_count",
+"at least two other creatures"
+],
+[
+"multi_attack",
+"gains double strike"
+],
+[
+"temporary_buff",
+"until end of turn"
+]
+],
+"767591": [
+[
+"cost_type",
+"you may pay {1}{W} rather than pay this spell's mana cost"
+],
+[
+"condition_count",
+"If four or more creatures are attacking"
+],
+[
+"reactions",
+"four or more creatures are attacking"
+],
+[
+"distribute",
+"deals 5 damage divided as you choose among any number of target attacking creatures"
+],
+[
+"damage",
+"deals 5 damage"
+],
+[
+"targeting_rules",
+"target attacking creatures"
+]
+],
+"767706": [
+[
+"placement_rules",
+"position it to the left or right of another creature you control"
+],
+[
+"positional",
+"lock your creatures in order from left to right"
+],
+[
+"adjacency",
+"Adjacent creatures to the left and right of Defender of the Queue"
+],
+[
+"aura",
+"Adjacent creatures to the left and right of Defender of the Queue get +1/+1"
+],
+[
+"stat_gain",
+"get +1/+1"
+]
+],
+"767795": [
+[
+"on_ally_play",
+"Whenever a land you control enters"
+],
+[
+"permanent_growth",
+"put a loyalty counter on Nissa"
+],
+[
+"activated",
+"+1: Untap target land you control"
+],
+[
+"untap",
+"Untap target land you control"
+],
+[
+"transform",
+"become a 3/3 Elemental creature with haste and menace until end of turn"
+],
+[
+"haste",
+"haste"
+],
+[
+"evasion",
+"menace"
+],
+[
+"temporary_effect",
+"until end of turn"
+],
+[
+"free_play",
+"put a creature card with mana value less than or equal to the number of lands you control onto the battlefield from your hand or graveyard"
+],
+[
+"cost_condition",
+"mana value less than or equal to the number of lands you control"
+],
+[
+"revive",
+"from your hand or graveyard"
+],
+[
+"stat_gain",
+"two +1/+1 counters"
+]
+],
+"767852": [
+[
+"stat_gain",
+"enters with four +1/+1 counters"
+],
+[
+"block_armor",
+"prevent that damage and remove a +1/+1 counter from it"
+]
+],
+"767951": [
+[
+"on_attack",
+"Whenever one or more creatures you control deal combat damage to a player"
+],
+[
+"return_to_hand",
+"return one of them to its owner's hand"
+],
+[
+"repeat_trigger",
+"activate loyalty abilities of Kaito twice this turn"
+],
+[
+"activated",
+"+1: Up to one target creature can't attack or block"
+],
+[
+"attack_lock",
+"can't attack or block until your next turn"
+],
+[
+"cant_block",
+"can't attack or block"
+],
+[
+"draw",
+"0: Draw a card"
+],
+[
+"summon",
+"Create a 2/2 colorless Drone artifact creature token with deathtouch"
+],
+[
+"deathtouch",
+"with deathtouch"
+],
+[
+"death_trigger",
+"When this token leaves the battlefield"
+],
+[
+"direct_damage",
+"each opponent loses 2 life"
+],
+[
+"lifesteal",
+"each opponent loses 2 life and you gain 2 life"
+]
+],
+"768034": [
+[
+"turn_start",
+"At the beginning of your second main phase"
+],
+[
+"graveyard",
+"four or more cards in your graveyard"
+],
+[
+"condition_count",
+"four or more cards in your graveyard"
+],
+[
+"generate_cards",
+"conjure a card named Mox Jet into your hand"
+],
+[
+"once_per_game",
+"This ability triggers only once"
+],
+[
+"activated",
+"{X}{B}: Return target creature card"
+],
+[
+"revive",
+"Return target creature card with mana value X from your graveyard to the battlefield"
+],
+[
+"cost_condition",
+"mana value X"
+],
+[
+"spell_speed",
+"Activate only as a sorcery"
+]
+],
+"768151": [
+[
+"blocking",
+"Reach"
+],
+[
+"on_play",
+"When this creature enters"
+],
+[
+"tutor",
+"search your library and/or graveyard for a creature card with no abilities"
+],
+[
+"null_body",
+"creature card with no abilities"
+],
+[
+"graveyard",
+"and/or graveyard"
+]
+],
+"768618": [
+[
+"activated",
+"{T}: The player whose turn it is may end the turn"
+],
+[
+"rule_change",
+"The player whose turn it is may end the turn"
+],
+[
+"counter_spell",
+"Exile all spells and abilities from the stack"
+]
+],
+"768926": [
+[
+"resource_banking",
+"If you would lose unspent mana, that mana becomes black instead"
+],
+[
+"resource_conversion",
+"that mana becomes black instead"
+],
+[
+"turn_start",
+"At the beginning of your first main phase"
+],
+[
+"deck_position",
+"look at the top card of your library"
+],
+[
+"cost_condition",
+"three or more colored mana symbols in its mana cost"
+],
+[
+"resource_gain",
+"add three mana in any combination of its colors"
+],
+[
+"draw",
+"put it into your hand"
+]
+],
+"768983": [
+[
+"cost_type",
+"Cleave {4}{U}{U}{R}"
+],
+[
+"flexibility",
+"You may cast this spell for its cleave cost"
+],
+[
+"extra_turn",
+"Take an extra turn after this one"
+],
+[
+"rule_change",
+"damage can't be prevented"
+],
+[
+"friendly_fire",
+"you lose the game"
+],
+[
+"delayed",
+"At the beginning of that turn's end step"
+],
+[
+"banish",
+"Exile Alchemist's Gambit"
+]
+],
+"768984": [
+[
+"stakes_wager",
+"if you're not playing for ante"
+],
+[
+"activated",
+"{T}, Sacrifice this creature:"
+],
+[
+"sacrifice",
+"Sacrifice this creature"
+],
+[
+"random_effect",
+"reveal a card at random from their hand"
+],
+[
+"steal",
+"Exchange ownership of the revealed card and Tempest Efreet"
+],
+[
+"hand_disruption",
+"Put the revealed card into your hand"
+],
+[
+"donate",
+"Tempest Efreet from anywhere into that player's graveyard"
+],
+[
+"permanent_loss",
+"This change in ownership is permanent"
+]
+],
+"769147": [
+[
+"transform",
+"When this creature specializes"
+],
+[
+"distribute",
+"distribute that many +1/+1 counters among any number of target creatures"
+],
+[
+"stat_gain",
+"+1/+1 counters"
+],
+[
+"activated",
+"{T}: Draw a card, then discard a card."
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"then discard a card"
+],
+[
+"card_quality",
+"Draw a card, then discard a card."
+]
+],
+"769398": [
+[
+"activated",
+"{U}, {T}:"
+],
+[
+"transform",
+"Target snow land becomes a 2/2 blue Elemental creature with flying"
+],
+[
+"evasion",
+"flying"
+],
+[
+"targeting_rules",
+"Target snow land"
+]
+],
+"769454": [
+[
+"evasion",
+"Flying"
+],
+[
+"protection",
+"Ward\u2014Discard a card"
+],
+[
+"hand_disruption",
+"counter it unless that player discards a card"
+],
+[
+"on_attack",
+"Whenever this creature deals combat damage to a player"
+],
+[
+"permanent_growth",
+"put that many +1/+1 counters on it"
+]
+],
+"769678": [
+[
+"immunity",
+"This spell can't be countered"
+],
+[
+"spell_speed",
+"can be cast as though it had flash"
+],
+[
+"immunity",
+"That spell can't be countered"
+],
+[
+"stat_gain",
+"enters with an additional +1/+1 counter"
+]
+],
+"769697": [
+[
+"aura",
+"Other creatures you control have haste"
+],
+[
+"haste",
+"haste"
+],
+[
+"information",
+"face-down creatures"
+],
+[
+"on_attack",
+"Whenever one or more face-down creatures you control deal combat damage to a player"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"death_trigger",
+"Whenever a face-down creature you control dies"
+],
+[
+"cheat_death",
+"return it to the battlefield face down"
+],
+[
+"transform",
+"turn it face up"
+]
+],
+"769877": [
+[
+"activated",
+"+1: Until your next turn"
+],
+[
+"temporary_effect",
+"Until your next turn"
+],
+[
+"counterattack",
+"whenever a creature attacks you or Tasha, Unholy Archmage, put a -1/-1 counter on that creature"
+],
+[
+"stat_loss",
+"put a -1/-1 counter on that creature"
+],
+[
+"steal",
+"Target opponent puts a creature card of their choice from their graveyard onto the battlefield under your control"
+],
+[
+"graveyard",
+"from their graveyard"
+],
+[
+"protection",
+"ward {2}"
+],
+[
+"deck_position",
+"reveals cards from the top of their library"
+],
+[
+"steal",
+"Put those cards onto the battlefield under your control"
+],
+[
+"mill",
+"That player puts the rest into their graveyard"
+]
+],
+"769988": [
+[
+"cant_attack",
+"This creature can't attack unless defending player controls an Island"
+],
+[
+"activated",
+"{5}{U}{U}: Monstrosity 3"
+],
+[
+"stat_gain",
+"put three +1/+1 counters on it"
+],
+[
+"once_per_game",
+"If this creature isn't monstrous"
+],
+[
+"type_grant",
+"target land becomes an Island in addition to its other types"
+]
+],
+"770170": [
+[
+"damage",
+"deals 2 damage to any target"
+],
+[
+"direct_damage",
+"deals 2 damage to any target"
+],
+[
+"in_hand_buff",
+"Choose a creature card in your hand. It perpetually gains"
+],
+[
+"on_attack",
+"Whenever this creature deals combat damage to a player"
+],
+[
+"cast_from_zone",
+"cast target card named Pass the Torch from your graveyard"
+],
+[
+"free_play",
+"without paying its mana cost"
+]
+],
+"770183": [
+[
+"on_play",
+"When Blurry Visionary enters the battlefield"
+],
+[
+"deck_position",
+"look at the top two cards of your library"
+],
+[
+"modal_choice",
+"You can play either face of that double-faced card"
+],
+[
+"draw",
+"Then put that card into your hand"
+]
+],
+"770198": [
+[
+"once_per_game",
+"Activate each exhaust ability only once"
+],
+[
+"activated",
+"Exhaust \u2014 {R}:"
+],
+[
+"haste",
+"Other creatures you control gain haste until end of turn"
+],
+[
+"scope_multi",
+"Other creatures you control"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"stat_gain",
+"Put a +1/+1 counter on this creature"
+],
+[
+"summon",
+"Create a 4/4 red Dinosaur Dragon creature token with flying"
+],
+[
+"evasion",
+"flying"
+]
+],
+"770476": [
+[
+"spell_speed",
+"Cast this spell only during your turn"
+],
+[
+"extra_turn",
+"Take an extra turn after this one"
+]
+],
+"770494": [
+[
+"blocking",
+"Reach"
+],
+[
+"cast_from_zone",
+"play lands from your graveyard"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"repeat_trigger",
+"that ability triggers an additional time"
+]
+],
+"770634": [
+[
+"on_damaged",
+"Whenever a creature deals damage to you"
+],
+[
+"type_grant",
+"is a Wall in addition to its other creature types"
+],
+[
+"attack_lock",
+"Those creatures can't attack"
+],
+[
+"aura",
+"Each creature with a gold counter on it"
+]
+],
+"770641": [
+[
+"cheat_death",
+"The next time you would lose the game this turn"
+],
+[
+"comeback",
+"would lose the game"
+],
+[
+"draw",
+"draw seven cards"
+],
+[
+"banish",
+"Exile Stunning Reversal"
+]
+],
+"770736": [
+[
+"stat_loss",
+"enters with two -1/-1 counters on it"
+],
+[
+"activated",
+"{U}, {Q}:"
+],
+[
+"distribute",
+"Move a counter from target creature onto a second target creature"
+]
+],
+"770890": [
+[
+"silence",
+"target creature loses all abilities"
+],
+[
+"polymorph",
+"becomes a red Weird with base power and toughness 0/1"
+],
+[
+"attack_zero",
+"base power and toughness 0/1"
+],
+[
+"temporary_effect",
+"Until end of turn"
+],
+[
+"modal_choice",
+"You may cast one or both halves of this card from your hand"
+],
+[
+"damage",
+"Burn deals 2 damage to any target"
+],
+[
+"direct_damage",
+"deals 2 damage to any target"
+]
+],
+"771037": [
+[
+"start_of_game",
+"You may reveal this card from your opening hand"
+],
+[
+"heal",
+"your life total becomes 26"
+]
+],
+"771117": [
+[
+"untap",
+"Untap all creatures you control"
+],
+[
+"evasion",
+"flying"
+],
+[
+"multi_attack",
+"double strike"
+],
+[
+"scope_multi",
+"all creatures you control"
+],
+[
+"temporary_buff",
+"until end of turn"
+]
+],
+"771187": [
+[
+"tutor",
+"reveal a multicolored card you own from outside the game and put it into your hand"
+],
+[
+"banish",
+"Exile Glittering Wish"
+]
+],
+"771272": [
+[
+"excess_damage",
+"Trample"
+],
+[
+"protection",
+"ward {2}"
+],
+[
+"haste",
+"haste"
+],
+[
+"count_payoff",
+"for each time this creature attacked this game"
+],
+[
+"permanent_growth",
+"gets +2/+2 for each time this creature attacked this game"
+],
+[
+"cost_type",
+"Disguise {2}{G}{G}"
+]
+],
+"771274": [
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"When this creature enters"
+],
+[
+"targeting_rules",
+"target Human or artifact an opponent controls"
+],
+[
+"tribal",
+"Human"
+],
+[
+"steal",
+"gain control of that permanent"
+],
+[
+"silence",
+"it loses all abilities"
+],
+[
+"cant_attack",
+"it can't attack or block"
+]
+],
+"771465": [
+[
+"cant_attack",
+"Defender"
+],
+[
+"activated",
+"{T}: Add {C}{C}"
+],
+[
+"resource_gain",
+"Add {C}{C}"
+],
+[
+"copy",
+"copy it"
+]
+],
+"771490": [
+[
+"simultaneous_play",
+"all players reveal them simultaneously"
+],
+[
+"symmetric_effect",
+"Each player loses life"
+],
+[
+"friendly_fire",
+"Each player loses life equal to the number of items they revealed"
+],
+[
+"direct_damage",
+"loses half their life, rounded up"
+],
+[
+"condition_count",
+"The player who revealed the fewest items"
+]
+],
+"771864": [
+[
+"kicker",
+"Offspring {2}"
+],
+[
+"copy",
+"create a 1/1 token copy of it"
+],
+[
+"summon",
+"create a 1/1 token copy of it"
+],
+[
+"on_ally_play",
+"Whenever a land you control enters"
+],
+[
+"ping",
+"deals 1 damage to target opponent"
+],
+[
+"direct_damage",
+"deals 1 damage to target opponent"
+]
+],
+"771948": [
+[
+"taunt",
+"All creatures able to block target creature this turn do so"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"772080": [
+[
+"turn_start",
+"At the beginning of each upkeep"
+],
+[
+"transform",
+"transform this creature"
+],
+[
+"condition_count",
+"if no spells were cast last turn"
+],
+[
+"destroy",
+"destroy target artifact"
+],
+[
+"direct_damage",
+"deals 3 damage to that artifact's controller"
+],
+[
+"condition_count",
+"if a player cast two or more spells last turn"
+]
+],
+"772288": [
+[
+"on_attack",
+"Whenever this creature becomes blocked"
+],
+[
+"direct_damage",
+"defending player loses 2 life"
+],
+[
+"activated",
+"{2}{B}, Discard a card:"
+],
+[
+"discard",
+"Discard a card"
+],
+[
+"stat_gain",
+"gets +2/+2"
+],
+[
+"temporary_buff",
+"until end of turn"
+]
+],
+"772397": [
+[
+"destroy",
+"Destroy target nonblack creature"
+],
+[
+"targeting_rules",
+"nonblack creature"
+],
+[
+"piercing",
+"It can't be regenerated"
+],
+[
+"heal",
+"You gain life equal to its toughness"
+]
+],
+"772566": [
+[
+"cost_type",
+"You may cast this card converted for {1}{R}{G}"
+],
+[
+"aura",
+"Other nontoken artifact creatures and Vehicles you control have modular 1"
+],
+[
+"stat_gain",
+"They enter with an additional +1/+1 counter on them"
+],
+[
+"death_trigger",
+"When they die"
+],
+[
+"distribute",
+"put their +1/+1 counters on target artifact creature"
+],
+[
+"transform",
+"convert it"
+],
+[
+"activated",
+"{X}, {T}: Move X +1/+1 counters"
+],
+[
+"haste",
+"That artifact gains haste until end of turn"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"spell_speed",
+"Activate only as a sorcery"
+]
+],
+"772616": [
+[
+"selection",
+"Look at the top five cards of your library"
+],
+[
+"deck_position",
+"the top five cards of your library"
+],
+[
+"cast_from_zone",
+"You may cast the exiled card this turn"
+],
+[
+"delayed",
+"At the beginning of the next combat phase this turn"
+],
+[
+"damage",
+"deals damage equal to its power to up to one target creature you don't control"
+]
+],
+"772691": [
+[
+"evasion",
+"Flying"
+],
+[
+"tribal",
+"if you control another Hero"
+],
+[
+"ping",
+"deals 1 damage to target opponent"
+],
+[
+"direct_damage",
+"deals 1 damage to target opponent"
+],
+[
+"activated",
+"Power-up \u2014 {6}{R}"
+],
+[
+"stat_gain",
+"Put three +1/+1 counters on Human Torch"
+],
+[
+"once_per_game",
+"Activate each power-up ability only once"
+],
+[
+"cost_reduction",
+"Reduce the cost by his mana cost if he entered this turn"
+]
+],
+"772693": [
+[
+"life_payment",
+"you lose life equal to your life total"
+],
+[
+"cheat_death",
+"You don't lose the game for having 0 or less life"
+],
+[
+"rule_change",
+"You don't lose the game for having 0 or less life"
+],
+[
+"draw",
+"draw that many cards instead"
+],
+[
+"resource_conversion",
+"If you would gain life, draw that many cards instead"
+],
+[
+"on_damaged",
+"Whenever you're dealt damage"
+],
+[
+"sacrifice",
+"sacrifice that many nontoken permanents"
+],
+[
+"death_trigger",
+"When this enchantment is put into a graveyard from the battlefield"
+],
+[
+"friendly_fire",
+"you lose the game"
+]
+],
+"772841": [
+[
+"silence",
+"All creatures lose trample"
+],
+[
+"scope_global",
+"All creatures"
+],
+[
+"temporary_effect",
+"until end of turn"
+],
+[
+"stat_multiply",
+"deals double that damage"
+],
+[
+"symmetric_effect",
+"All creatures lose trample"
+]
+],
+"772878": [
+[
+"damage",
+"deals 3 damage to any target"
+],
+[
+"direct_damage",
+"deals 3 damage to any target"
+],
+[
+"selection",
+"Look at the top two cards of your library"
+],
+[
+"self_mill",
+"the other into your graveyard"
+]
+],
+"772894": [
+[
+"on_ally_play",
+"Whenever another creature or planeswalker you control enters"
+],
+[
+"self_mill",
+"mill two cards"
+],
+[
+"once_per_game",
+"Activate each exhaust ability only once"
+],
+[
+"activated",
+"Exhaust \u2014 {5}{B}:"
+],
+[
+"revive",
+"Return target creature or planeswalker card from your graveyard to the battlefield"
+],
+[
+"stat_gain",
+"Put a +1/+1 counter on Liliana"
+],
+[
+"spell_speed",
+"Activate only as a sorcery"
+]
+],
+"773158": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"heal",
+"each player's life total becomes the highest life total among all players"
+],
+[
+"symmetric_effect",
+"each player's life total"
+],
+[
+"comeback",
+"becomes the highest life total among all players"
+]
+],
+"773160": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"donate",
+"target opponent gains control of it"
+],
+[
+"turn_start",
+"At the beginning of your upkeep"
+],
+[
+"friendly_fire",
+"deals 2 damage to you"
+]
+],
+"773321": [
+[
+"comeback",
+"If you have less life than an opponent"
+],
+[
+"low_life",
+"If you have less life than an opponent"
+],
+[
+"heal",
+"you gain 6 life"
+],
+[
+"comeback",
+"If you control fewer creatures than an opponent"
+],
+[
+"summon",
+"create three 1/1 white Soldier creature tokens"
+]
+],
+"773328": [
+[
+"on_damaged",
+"Whenever a source an opponent controls deals damage to you or a permanent you control"
+],
+[
+"counterattack",
+"that source's controller loses 2 life unless they pay {1}"
+],
+[
+"activated",
+"{2}{W}, Sacrifice three other creatures:"
+],
+[
+"sacrifice",
+"Sacrifice three other creatures"
+],
+[
+"transform",
+"return it to the battlefield transformed"
+],
+[
+"delayed",
+"after your draw step, add a lore counter"
+],
+[
+"summon",
+"Incubate 2 five times"
+],
+[
+"stat_gain",
+"Creatures you control get +1/+1"
+],
+[
+"multi_attack",
+"gain double strike"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"board_wipe",
+"Destroy all other permanents except for artifacts, lands, and Phyrexians"
+],
+[
+"tribal",
+"Phyrexians"
+],
+[
+"blink",
+"Exile this Saga, then return it to the battlefield (front face up)"
+]
+],
+"773498": [
+[
+"deathtouch",
+"Deathtouch"
+],
+[
+"death_trigger",
+"When this creature dies"
+],
+[
+"tutor",
+"search your library for a Curse card"
+],
+[
+"free_play",
+"put it onto the battlefield attached to target player"
+]
+],
+"773500": [
+[
+"on_play",
+"As this enchantment enters"
+],
+[
+"modal_choice",
+"choose Mirran or Phyrexian"
+],
+[
+"on_spell",
+"Whenever you cast an artifact spell"
+],
+[
+"summon",
+"create a 1/1 colorless Myr artifact creature token"
+],
+[
+"turn_end",
+"At the beginning of your end step"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"discard",
+"then discard a card"
+],
+[
+"graveyard",
+"fifteen or more artifact cards in your graveyard"
+],
+[
+"condition_count",
+"fifteen or more artifact cards"
+],
+[
+"alt_wincon",
+"target opponent loses the game"
+]
+],
+"773539": [
+[
+"board_wipe",
+"Destroy all green creatures or all white creatures"
+],
+[
+"modal_choice",
+"all green creatures or all white creatures"
+],
+[
+"piercing",
+"They can't be regenerated"
+],
+[
+"friendly_fire",
+"You lose 2 life for each creature that died this way"
+],
+[
+"death_count",
+"for each creature that died this way"
+]
+],
+"773691": [
+[
+"upgrade",
+"Level up {1}"
+],
+[
+"activated",
+"{1}: Put a level counter on this"
+],
+[
+"spell_speed",
+"Level up only as a sorcery"
+],
+[
+"stat_gain",
+"4/4"
+],
+[
+"immunity",
+"Protection from instants"
+],
+[
+"immunity",
+"Protection from everything"
+],
+[
+"condition_count",
+"LEVEL 8+"
+]
+],
+"773739": [
+[
+"immunity",
+"This spell can't be countered"
+],
+[
+"excess_damage",
+"Trample"
+],
+[
+"haste",
+"haste"
+],
+[
+"immunity",
+"Creature spells you control can't be countered"
+],
+[
+"rule_change",
+"Combat damage can't be prevented"
+]
+],
+"774275": [
+[
+"stat_gain",
+"enters with six +1/+1 counters"
+],
+[
+"activated",
+"{2}, Remove a +1/+1 counter from this creature"
+],
+[
+"distribute",
+"Put a +1/+1 counter on target creature"
+],
+[
+"cheat_death",
+"Regenerate this creature"
+]
+],
+"774396": [
+[
+"kicker",
+"you may waterbend {10}"
+],
+[
+"steal",
+"You control target opponent during their next combat phase"
+],
+[
+"steal",
+"you control that player during their next turn instead"
+],
+[
+"information",
+"You see all cards that player could see"
+],
+[
+"banish",
+"Exile Secret of Bloodbending"
+]
+],
+"774441": [
+[
+"stakes_wager",
+"if you're not playing for ante"
+],
+[
+"steal",
+"You own target card in the ante"
+],
+[
+"deck_position",
+"Exchange that card with the top card of your library"
+]
+],
+"774469": [
+[
+"draw",
+"Draw X cards"
+],
+[
+"condition_count",
+"If X is 10 or more"
+],
+[
+"recycle",
+"shuffle your graveyard into your library"
+],
+[
+"untap",
+"untap up to five lands"
+],
+[
+"retain",
+"you have no maximum hand size for the rest of the game"
+],
+[
+"banish",
+"Exile Finale of Revelation"
+]
+],
+"774902": [
+[
+"board_wipe",
+"Destroy all creatures and all permanents attached to creatures"
+],
+[
+"scope_global",
+"all creatures"
+]
+],
+"774934": [
+[
+"rule_change",
+"A player losing unspent mana causes that player to lose that much life"
+],
+[
+"direct_damage",
+"lose that much life"
+],
+[
+"activated",
+"{1}, {T}: Each player adds {B}{R}{G}"
+],
+[
+"resource_gain",
+"adds {B}{R}{G}"
+],
+[
+"symmetric_effect",
+"Each player adds {B}{R}{G}"
+],
+[
+"enemy_benefit",
+"Each player adds {B}{R}{G}"
+]
+],
+"775054": [
+[
+"merge_attach",
+"Enchant red or green creature"
+],
+[
+"targeting_rules",
+"red or green creature"
+],
+[
+"disable",
+"doesn't untap during its controller's untap step"
+]
+],
+"775160": [
+[
+"stat_gain",
+"gets +1/+0"
+],
+[
+"protection",
+"gains indestructible"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"cast_from_zone",
+"Cast this spell only from your graveyard"
+],
+[
+"banish",
+"Then exile it"
+],
+[
+"taunt",
+"All creatures able to block target creature this turn do so"
+],
+[
+"temporary_effect",
+"this turn do so"
+]
+],
+"775234": [
+[
+"modal_choice",
+"your choice of a +1/+1 counter or haste"
+],
+[
+"stat_gain",
+"+1/+1 counter"
+],
+[
+"haste",
+"haste"
+],
+[
+"on_attack",
+"Whenever this creature attacks"
+],
+[
+"cant_block",
+"target creature an opponent controls can't block this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"775342": [
+[
+"variable_stats",
+"gets +2/+0 for each Mountain you control"
+],
+[
+"condition_count",
+"for each Mountain you control"
+],
+[
+"on_attack",
+"Whenever you attack with creatures with total power 12 or greater"
+],
+[
+"stat_condition",
+"total power 12 or greater"
+],
+[
+"untap",
+"untap all attacking creatures"
+],
+[
+"multi_attack",
+"there is an additional combat phase"
+],
+[
+"extra_turn",
+"additional combat phase"
+]
+],
+"775344": [
+[
+"excess_damage",
+"Trample"
+],
+[
+"protection",
+"can't be sacrificed"
+],
+[
+"turn_start",
+"At the beginning of each player's upkeep"
+],
+[
+"symmetric_effect",
+"each player's upkeep"
+],
+[
+"donate",
+"that player gains control of Alexios"
+],
+[
+"untap",
+"untaps it"
+],
+[
+"permanent_growth",
+"puts a +1/+1 counter on it"
+],
+[
+"haste",
+"It gains haste until end of turn"
+]
+],
+"775498": [
+[
+"recycle",
+"Return all cards from your graveyard to your hand"
+],
+[
+"graveyard",
+"all cards from your graveyard"
+],
+[
+"card_advantage",
+"Return all cards from your graveyard to your hand"
+],
+[
+"banish",
+"Exile Praetor's Counsel"
+],
+[
+"retain",
+"You have no maximum hand size for the rest of the game"
+]
+],
+"775695": [
+[
+"turn_start",
+"At the beginning of each player's upkeep"
+],
+[
+"direct_damage",
+"deals X damage to that player"
+],
+[
+"damage_over_time",
+"At the beginning of each player's upkeep, this enchantment deals X damage"
+],
+[
+"hand_size",
+"4 minus the number of cards in their hand"
+],
+[
+"symmetric_effect",
+"each player's upkeep"
+]
+],
+"775805": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"items_consumables",
+"create a Food token"
+],
+[
+"heal",
+"You gain 3 life"
+],
+[
+"sacrifice",
+"Whenever you sacrifice a Food"
+],
+[
+"summon",
+"create a 1/1 black Rat creature token"
+],
+[
+"cant_block",
+"This token can't block"
+]
+],
+"775873": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"tutor",
+"Search your library for up to two basic land cards"
+],
+[
+"recycle",
+"Return target permanent card from your graveyard to your hand"
+]
+],
+"775921": [
+[
+"activated",
+"{U}, {T}: Draw a card"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"then discard a card"
+],
+[
+"card_quality",
+"Draw a card, then discard a card"
+],
+[
+"cant_block",
+"Target creature can't block this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"775955": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"items_consumables",
+"create a Food token"
+],
+[
+"heal",
+"You gain 3 life"
+],
+[
+"activated",
+"{2}{G}: Until end of turn"
+],
+[
+"transform",
+"becomes a 4/4 artifact creature"
+],
+[
+"temporary_effect",
+"Until end of turn"
+],
+[
+"self_destruct",
+"Sacrifice this creature"
+]
+],
+"775991": [
+[
+"tutor",
+"Search your library for a Trap card"
+],
+[
+"tribal",
+"Trap card"
+]
+],
+"776288": [
+[
+"revive",
+"from your graveyard to your hand"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"card_advantage",
+"Return up to one target creature card"
+],
+[
+"variety_payoff",
+"up to one target creature card, up to one target Mount card, up to one target Vehicle card"
+],
+[
+"null_body",
+"creature card with no abilities"
+]
+],
+"776289": [
+[
+"quests",
+"Whenever you complete one of the following objectives, check it off"
+],
+[
+"self_destruct",
+"sacrifice Map to Lorthos's Temple"
+],
+[
+"summon",
+"create a Lorthos, the Tidemaker token"
+],
+[
+"on_ally_play",
+"An artifact enters the battlefield under your control"
+],
+[
+"tribal",
+"A Merfolk enters the battlefield under your control"
+],
+[
+"on_spell",
+"You cast an instant or sorcery spell"
+]
+],
+"776651": [
+[
+"upkeep",
+"Echo {4}"
+],
+[
+"turn_start",
+"At the beginning of your upkeep"
+],
+[
+"self_destruct",
+"sacrifice it unless you pay its echo cost"
+],
+[
+"sacrifice",
+"Sacrifice an artifact"
+],
+[
+"activated",
+"Sacrifice an artifact: Put a +1/+1 counter"
+],
+[
+"stat_gain",
+"Put a +1/+1 counter on target creature"
+]
+],
+"776657": [
+[
+"evasion",
+"Flying"
+],
+[
+"multi_attack",
+"double strike"
+],
+[
+"immunity",
+"You have hexproof"
+],
+[
+"cheat_death",
+"If your life total would be reduced to 0 or less, instead transform this creature and your life total becomes 3"
+],
+[
+"transform",
+"transform this creature"
+],
+[
+"variable_stats",
+"power and toughness are each equal to your life total"
+],
+[
+"on_attack",
+"Whenever this creature attacks"
+],
+[
+"stat_multiply",
+"double your life total"
+],
+[
+"heal",
+"double your life total"
+]
+],
+"776805": [
+[
+"stat_gain",
+"Creatures you control get +2/+2"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"scope_multi",
+"Creatures you control"
+],
+[
+"alt_wincon",
+"its controller gets a poison counter"
+],
+[
+"temporary_effect",
+"Whenever a creature blocks this turn"
+]
+],
+"776905": [
+[
+"evasion",
+"Menace"
+],
+[
+"on_play",
+"When Sheoldred enters"
+],
+[
+"destroy",
+"each opponent sacrifices a nontoken creature or planeswalker of their choice"
+],
+[
+"activated",
+"{4}{B}: Exile Sheoldred"
+],
+[
+"transform",
+"return it to the battlefield transformed"
+],
+[
+"graveyard",
+"an opponent has eight or more cards in their graveyard"
+],
+[
+"delayed",
+"after your draw step, add a lore counter"
+],
+[
+"destroy",
+"destroy up to one target creature or planeswalker that player controls"
+],
+[
+"hand_disruption",
+"Each opponent discards three cards"
+],
+[
+"mill",
+"mills three cards"
+],
+[
+"steal",
+"Put all creature cards from all graveyards onto the battlefield under your control"
+],
+[
+"revive",
+"Put all creature cards from all graveyards onto the battlefield"
+],
+[
+"blink",
+"Exile this Saga, then return it to the battlefield (front face up)"
+]
+],
+"776935": [
+[
+"evasion",
+"Flying"
+],
+[
+"activated",
+"{T}: Non-Wall creatures the active player controls attack this turn if able"
+],
+[
+"forced_attack",
+"Non-Wall creatures the active player controls attack this turn if able"
+],
+[
+"delayed",
+"At the beginning of the next end step"
+],
+[
+"destroy",
+"destroy each of those creatures that didn't attack this turn"
+],
+[
+"spell_speed",
+"Activate only during an opponent's turn and only before combat"
+],
+[
+"reactions",
+"only during an opponent's turn"
+]
+],
+"776969": [
+[
+"sacrifice",
+"Sacrifice a land"
+],
+[
+"sacrifice",
+"Sacrifice an enchantment"
+],
+[
+"activated",
+"Sacrifice a land:"
+],
+[
+"stat_gain",
+"This creature gets +1/+1"
+],
+[
+"temporary_buff",
+"until end of turn"
+]
+],
+"777049": [
+[
+"immunity",
+"This spell can't be countered"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"on_play",
+"When this creature enters"
+],
+[
+"selection",
+"look at the top five cards of your library"
+],
+[
+"deck_position",
+"the top five cards of your library"
+],
+[
+"information",
+"face-down pile"
+],
+[
+"card_advantage",
+"Put that pile into your hand"
+],
+[
+"self_mill",
+"the other into your graveyard"
+]
+],
+"777497": [
+[
+"stat_gain",
+"enters with two +1/+1 counters"
+],
+[
+"death_trigger",
+"Whenever a creature you control with a +1/+1 counter on it dies"
+],
+[
+"permanent_growth",
+"put a +1/+1 counter on this artifact"
+],
+[
+"activated",
+"{T}: Move a +1/+1 counter"
+],
+[
+"distribute",
+"Move a +1/+1 counter from this artifact onto target creature"
+],
+[
+"spell_speed",
+"Activate only as a sorcery"
+]
+],
+"777528": [
+[
+"spell_speed",
+"Cast this spell only during an opponent's turn"
+],
+[
+"reactions",
+"only during an opponent's turn"
+],
+[
+"suppress",
+"Tap target creature that player controls"
+],
+[
+"direct_damage",
+"That creature deals damage equal to its power to the player"
+],
+[
+"damage_prevention",
+"Prevent all combat damage that would be dealt to and dealt by the creature this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"777559": [
+[
+"stakes_wager",
+"if you're not playing for ante"
+],
+[
+"activated",
+"{T}, Sacrifice this artifact:"
+],
+[
+"self_destruct",
+"Sacrifice this artifact"
+],
+[
+"random_effect",
+"you flip a coin"
+],
+[
+"alt_wincon",
+"If you win the flip, that player loses the game"
+],
+[
+"friendly_fire",
+"If you lose the flip, you lose the game"
+],
+[
+"spell_speed",
+"Activate only during your upkeep"
+]
+],
+"777613": [
+[
+"transform",
+"Specialize {2}"
+],
+[
+"on_play",
+"When Gale, Conduit of the Arcane enters"
+],
+[
+"recycle",
+"return target instant or sorcery card from your graveyard to your hand"
+],
+[
+"graveyard",
+"from your graveyard to your hand"
+]
+],
+"777636": [
+[
+"evasion",
+"Flying"
+],
+[
+"protection",
+"ward {2}"
+],
+[
+"disable",
+"enters tapped with three stun counters"
+],
+[
+"activated",
+"{1}{U}: Untap this creature"
+],
+[
+"untap",
+"Untap this creature"
+]
+],
+"777644": [
+[
+"stakes_wager",
+"if you're not playing for ante"
+],
+[
+"activated",
+"{4}, {T}: Exile this artifact"
+],
+[
+"removal",
+"Exile this artifact and target nontoken permanent an opponent owns"
+],
+[
+"banish",
+"Exile this artifact and target nontoken permanent an opponent owns"
+],
+[
+"steal",
+"you own the other exiled card"
+],
+[
+"donate",
+"that player owns this card"
+],
+[
+"permanent_loss",
+"that player owns this card"
+]
+],
+"777739": [
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"cost_condition",
+"the amount of mana you spent is greater than this creature's power or toughness"
+],
+[
+"permanent_growth",
+"put a +1/+1 counter on this creature"
+],
+[
+"combat_start",
+"At the beginning of combat on your turn"
+],
+[
+"distribute",
+"move X +1/+1 counters from this creature onto another target creature"
+]
+],
+"777798": [
+[
+"multi_attack",
+"Double strike"
+],
+[
+"on_play",
+"When this creature enters or specializes"
+],
+[
+"stat_gain",
+"other creatures you control"
+],
+[
+"in_hand_buff",
+"creature cards in your hand perpetually get +1/+1"
+],
+[
+"scope_multi",
+"other creatures you control and creature cards in your hand"
+]
+],
+"777942": [
+[
+"multi_attack",
+"Double strike"
+],
+[
+"transform",
+"Specialize {1}"
+],
+[
+"on_play",
+"When you cast this spell"
+],
+[
+"reactions",
+"When this creature becomes the target of a spell or ability an opponent controls"
+],
+[
+"blink",
+"exile this creature, then return it to the battlefield"
+],
+[
+"protection",
+"you may exile this creature, then return it to the battlefield"
+]
+],
+"778086": [
+[
+"retain",
+"Your maximum hand size is ten"
+],
+[
+"turn_end",
+"At the beginning of your end step"
+],
+[
+"hand_size",
+"if you have fewer than ten cards in hand"
+],
+[
+"draw",
+"draw cards equal to the difference"
+]
+],
+"778093": [
+[
+"sacrifice",
+"sacrifice an artifact or creature with mana value X"
+],
+[
+"cost_type",
+"As an additional cost to cast this spell, sacrifice"
+],
+[
+"cost_condition",
+"mana value X"
+],
+[
+"distribute",
+"deals X damage divided as you choose among any number of target creatures"
+],
+[
+"damage",
+"deals X damage"
+]
+],
+"778358": [
+[
+"cost_reduction",
+"This spell costs {2} less to cast"
+],
+[
+"tribal",
+"if you control a Wolf or Werewolf"
+],
+[
+"transform",
+"Daybound"
+],
+[
+"rule_change",
+"it becomes night next turn"
+],
+[
+"death_trigger",
+"Whenever this creature or another Wolf or Werewolf you control dies"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"778520": [
+[
+"spell_speed",
+"Cast this spell only during combat before blockers are declared"
+],
+[
+"condition_count",
+"X can't be greater than the number of snow lands you control"
+],
+[
+"scope_multi",
+"Choose X target attacking creatures"
+],
+[
+"destroy",
+"destroy that creature at end of combat"
+],
+[
+"delayed",
+"at end of combat"
+],
+[
+"damage_prevention",
+"prevent all combat damage that would be dealt to and dealt by that creature"
+]
+],
+"778535": [
+[
+"on_damaged",
+"Whenever a creature is dealt damage"
+],
+[
+"deathtouch",
+"Whenever a creature is dealt damage, destroy it"
+],
+[
+"scope_global",
+"Whenever a creature is dealt damage"
+],
+[
+"piercing",
+"It can't be regenerated"
+]
+],
+"778649": [
+[
+"tutor",
+"Seek two creature cards from among the top ten cards of your library"
+],
+[
+"deck_position",
+"the top ten cards of your library"
+],
+[
+"card_advantage",
+"Seek two creature cards"
+],
+[
+"in_hand_buff",
+"Creature cards in your hand perpetually get +1/+1"
+]
+],
+"778893": [
+[
+"turn_start",
+"At the beginning of your upkeep"
+],
+[
+"deck_position",
+"exile the top card of your library"
+],
+[
+"card_advantage",
+"exile the top card of your library"
+],
+[
+"cast_from_zone",
+"you may play lands and cast spells from among cards exiled with this enchantment"
+],
+[
+"activated",
+"{3}{R}: This enchantment deals 1 damage"
+],
+[
+"ping",
+"deals 1 damage to target opponent or planeswalker"
+],
+[
+"direct_damage",
+"deals 1 damage to target opponent"
+]
+],
+"779098": [
+[
+"cost_reduction",
+"This spell costs {2} less to cast if it targets a blue permanent"
+],
+[
+"immunity",
+"This spell can't be countered"
+],
+[
+"damage",
+"deals X damage to target creature or planeswalker"
+]
+],
+"779398": [
+[
+"blink",
+"Exile target nontoken creature you own"
+],
+[
+"deck_position",
+"the top two cards of your library"
+],
+[
+"summon",
+"put it onto the battlefield face down as a 2/2 creature"
+],
+[
+"information",
+"face-down pile"
+],
+[
+"protection",
+"ward {2}"
+],
+[
+"transform",
+"Turn it face up"
+]
+],
+"779422": [
+[
+"activated",
+"{1}, {T}, Remove a gem counter from this artifact:"
+],
+[
+"attack_lock",
+"Target creature can't attack or block this turn"
+],
+[
+"cant_block",
+"can't attack or block"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"779441": [
+[
+"start_of_game",
+"If this card is in your opening hand, you may begin the game with it on the battlefield"
+],
+[
+"free_play",
+"begin the game with it on the battlefield"
+],
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"ping",
+"deals 1 damage to target player or planeswalker"
+],
+[
+"direct_damage",
+"deals 1 damage to target player"
+]
+],
+"779477": [
+[
+"upgrade",
+"Level up {1}{U}"
+],
+[
+"spell_speed",
+"Level up only as a sorcery"
+],
+[
+"activated",
+"{T}: Draw a card, then discard a card."
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"then discard a card"
+],
+[
+"card_quality",
+"Draw a card, then discard a card."
+],
+[
+"condition_count",
+"LEVEL 3+"
+]
+],
+"779609": [
+[
+"tutor",
+"reveal an instant card you own from outside the game and put it into your hand"
+],
+[
+"banish",
+"Exile Cunning Wish"
+]
+],
+"779639": [
+[
+"evasion",
+"Flying"
+],
+[
+"activated",
+"{2}, Return a land you control to its owner's hand:"
+],
+[
+"return_to_hand",
+"Return a land you control to its owner's hand"
+],
+[
+"stat_loss",
+"gets -X/-0"
+],
+[
+"temporary_effect",
+"until end of turn"
+],
+[
+"hand_size",
+"X is the number of cards in your hand"
+]
+],
+"779795": [
+[
+"deathtouch",
+"Deathtouch"
+],
+[
+"synergy_payoff",
+"Whenever a creature you control with deathtouch deals combat damage to a player"
+],
+[
+"on_attack",
+"deals combat damage to a player"
+],
+[
+"alt_wincon",
+"A player with ten or more poison counters loses the game"
+]
+],
+"779887": [
+[
+"turn_start",
+"At the beginning of your upkeep"
+],
+[
+"in_hand_buff",
+"instant and sorcery cards in your hand perpetually gain \"This spell costs {1} less to cast.\""
+],
+[
+"activated",
+"Sacrifice this enchantment: Conjure"
+],
+[
+"self_destruct",
+"Sacrifice this enchantment"
+],
+[
+"generate_cards",
+"Conjure a card of your choice from Charged Conjuration's spellbook into your hand"
+],
+[
+"spell_speed",
+"Activate only as a sorcery"
+]
+],
+"779910": [
+[
+"deathtouch",
+"Deathtouch"
+],
+[
+"taunt",
+"must be blocked if able"
+],
+[
+"death_trigger",
+"When Lukamina, Scorpion Form dies"
+],
+[
+"transform",
+"it unspecializes"
+],
+[
+"cheat_death",
+"return it to the battlefield tapped"
+]
+],
+"779947": [
+[
+"on_attack",
+"Whenever this creature becomes blocked"
+],
+[
+"direct_damage",
+"defending player loses 3 life"
+],
+[
+"reactions",
+"Whenever an opponent casts a spell"
+],
+[
+"stat_loss",
+"put a -1/-1 counter on this creature"
+],
+[
+"on_attack",
+"Whenever this creature deals combat damage to a player"
+],
+[
+"rewind",
+"remove all -1/-1 counters from it"
+]
+],
+"780178": [
+[
+"merge_attach",
+"Equipped creature"
+],
+[
+"stat_gain",
+"Equipped creature gets +2/+2"
+],
+[
+"immunity",
+"protection from red and from green"
+],
+[
+"on_attack",
+"Whenever equipped creature deals combat damage to a player"
+],
+[
+"deck_position",
+"exile the top two cards of your library"
+],
+[
+"cast_from_zone",
+"You may play those cards this turn"
+],
+[
+"card_advantage",
+"exile the top two cards of your library"
+],
+[
+"resource_gain",
+"You may play an additional land this turn"
+],
+[
+"activated",
+"Equip {2}"
+]
+],
+"780230": [
+[
+"self_destruct",
+"Sacrifice this creature"
+],
+[
+"activated",
+"Sacrifice this creature:"
+],
+[
+"graveyard",
+"permanent card in your graveyard that was put there from the battlefield this turn"
+],
+[
+"revive",
+"Return it to your hand"
+]
+],
+"780278": [
+[
+"on_ally_play",
+"Whenever one or more tokens you control enter"
+],
+[
+"copy",
+"cast a copy of its spell"
+],
+[
+"stat_gain",
+"One or two target creatures each get +2/+2"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"scope_multi",
+"One or two target creatures"
+]
+],
+"780283": [
+[
+"activated",
+"{5}, {T}, Exile this artifact:"
+],
+[
+"self_destruct",
+"Exile this artifact"
+],
+[
+"tutor",
+"put a card you own from outside the game into your hand"
+]
+],
+"780553": [
+[
+"evasion",
+"Flying"
+],
+[
+"on_attack",
+"Whenever this creature deals combat damage to a player"
+],
+[
+"attack_lock",
+"that player skips their next combat phase"
+]
+],
+"780583": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"scope_multi",
+"up to two target creatures"
+],
+[
+"suppress",
+"detain up to two target creatures your opponents control"
+],
+[
+"attack_lock",
+"those creatures can't attack or block"
+],
+[
+"cant_block",
+"can't attack or block"
+],
+[
+"temporary_effect",
+"Until your next turn"
+]
+],
+"780777": [
+[
+"on_play",
+"When Clive enters"
+],
+[
+"discard",
+"discard your hand"
+],
+[
+"hand_deck_swap",
+"discard your hand, then draw cards equal to your devotion to red"
+],
+[
+"draw",
+"draw cards equal to your devotion to red"
+],
+[
+"condition_count",
+"devotion to red"
+],
+[
+"activated",
+"{4}{R}{R}, {T}: Exile Clive"
+],
+[
+"transform",
+"return it to the battlefield transformed"
+],
+[
+"spell_speed",
+"Activate only as a sorcery"
+],
+[
+"delayed",
+"after your draw step, add a lore counter"
+],
+[
+"damage",
+"Ifrit fights up to one other target creature"
+],
+[
+"resource_gain",
+"Add {R}{R}{R}{R}"
+],
+[
+"blink",
+"exile it, then return it to the battlefield (front face up)"
+]
+],
+"780806": [
+[
+"evasion",
+"Flying"
+],
+[
+"death_trigger",
+"When this creature dies"
+],
+[
+"steal",
+"you gain control of all enchantments"
+],
+[
+"scope_global",
+"all enchantments"
+]
+],
+"781066": [
+[
+"repeat_trigger",
+"instead create a Food token and a Treasure token"
+],
+[
+"items_consumables",
+"Food token"
+],
+[
+"resource_gain",
+"Treasure token"
+]
+],
+"781163": [
+[
+"lifesteal",
+"Lifelink"
+],
+[
+"turn_end",
+"At the beginning of each end step"
+],
+[
+"count_payoff",
+"if you gained life this turn"
+],
+[
+"distribute",
+"distribute up to that many +1/+1 counters among any number of other target creatures"
+]
+],
+"781183": [
+[
+"cost_type",
+"Cleave {4}{W}{B}"
+],
+[
+"flexibility",
+"You may cast this spell for its cleave cost"
+],
+[
+"board_wipe",
+"Destroy all creatures"
+],
+[
+"cost_condition",
+"mana value 2 or less"
+]
+],
+"781195": [
+[
+"on_spell",
+"Whenever a spell you control causes you to gain card advantage"
+],
+[
+"synergy_payoff",
+"Whenever a spell you control causes you to gain card advantage"
+],
+[
+"direct_damage",
+"each opponent loses 2 life"
+]
+],
+"781471": [
+[
+"turn_start",
+"At the beginning of your upkeep"
+],
+[
+"enemy_benefit",
+"target opponent creates three Walker tokens"
+],
+[
+"activated",
+"{T}: Hansk, Slayer Zealot deals 2 damage"
+],
+[
+"ping",
+"deals 2 damage to target creature"
+],
+[
+"death_trigger",
+"Whenever a Zombie an opponent controls dies"
+],
+[
+"tribal",
+"Zombie"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"781482": [
+[
+"random_effect",
+"flip a coin"
+],
+[
+"stat_multiply",
+"it deals double that damage instead"
+],
+[
+"no_damage_output",
+"prevent that damage"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"781490": [
+[
+"on_attack",
+"Whenever this creature becomes blocked"
+],
+[
+"direct_damage",
+"defending player loses 3 life"
+]
+],
+"781642": [
+[
+"spell_speed",
+"Cast this spell only during combat after blockers are declared"
+],
+[
+"random_effect",
+"Flip a coin"
+],
+[
+"stat_gain",
+"target creature gets +1/+1"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"delayed",
+"at the beginning of the next turn's upkeep"
+]
+],
+"782107": [
+[
+"on_play",
+"When this enchantment enters"
+],
+[
+"destroy",
+"destroy each permanent with the same name as another permanent"
+],
+[
+"scope_global",
+"each permanent"
+],
+[
+"on_ally_play",
+"Whenever a permanent other than a basic land enters"
+],
+[
+"on_enemy_enter",
+"Whenever a permanent other than a basic land enters"
+],
+[
+"destroy",
+"destroy all other permanents with that name"
+],
+[
+"symmetric_effect",
+"destroy all other permanents with that name"
+],
+[
+"piercing",
+"They can't be regenerated"
+]
+],
+"782279": [
+[
+"protection",
+"Indestructible"
+],
+[
+"on_play",
+"When this creature enters"
+],
+[
+"evasion",
+"It has menace"
+],
+[
+"cant_block",
+"can't block"
+],
+[
+"on_attack",
+"Whenever this creature deals combat damage to a player"
+],
+[
+"draw",
+"you draw a card"
+],
+[
+"friendly_fire",
+"you lose 1 life"
+],
+[
+"on_damaged",
+"Whenever this creature is dealt damage"
+],
+[
+"direct_damage",
+"target opponent loses that much life"
+]
+],
+"782354": [
+[
+"on_spell",
+"Whenever you cast an instant or sorcery spell"
+],
+[
+"permanent_growth",
+"perpetually gains \"Creatures you control get +1/+0.\""
+],
+[
+"aura",
+"Creatures you control get +1/+0"
+]
+],
+"782462": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"summon",
+"target player creates a 1/1 white and black Inkling creature token with flying"
+],
+[
+"comeback",
+"if an opponent controls more creatures than you"
+],
+[
+"copy",
+"cast a copy of its spell"
+],
+[
+"removal",
+"Exile target creature"
+],
+[
+"banish",
+"Exile target creature"
+],
+[
+"enemy_benefit",
+"Its controller gains life equal to its power"
+]
+],
+"782483": [
+[
+"delayed",
+"after your draw step, add a lore counter"
+],
+[
+"bounce_enemy",
+"Return up to one target creature or planeswalker to its owner's hand"
+],
+[
+"recycle",
+"Return an artifact card from your graveyard to your hand"
+],
+[
+"graveyard",
+"from your graveyard"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"transform",
+"return it to the battlefield transformed"
+],
+[
+"evasion",
+"Flying"
+],
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"play_restriction",
+"your opponents can't cast spells with the same mana value as that spell until your next turn"
+],
+[
+"disruption",
+"your opponents can't cast spells"
+],
+[
+"cost_condition",
+"the same mana value"
+]
+],
+"782889": [
+[
+"upgrade",
+"Level up {2}{W}"
+],
+[
+"activated",
+"{2}{W}: Put a level counter on this"
+],
+[
+"spell_speed",
+"Level up only as a sorcery"
+],
+[
+"damage_reduction",
+"prevent 1 of that damage"
+],
+[
+"damage_reduction",
+"prevent 2 of that damage"
+],
+[
+"condition_count",
+"LEVEL 5+"
+]
+],
+"782965": [
+[
+"stat_gain",
+"put two +1/+1 counters on it"
+],
+[
+"tribal",
+"Beast card"
+],
+[
+"condition_count",
+"for each Beast card you reveal in your hand"
+],
+[
+"information",
+"reveal in your hand"
+],
+[
+"on_attack",
+"Whenever this creature attacks"
+],
+[
+"blocking",
+"untap and block it if able"
+]
+],
+"782985": [
+[
+"on_play",
+"When Oath of Teferi enters"
+],
+[
+"blink",
+"exile another target permanent you control. Return it to the battlefield"
+],
+[
+"delayed",
+"at the beginning of the next end step"
+],
+[
+"repeat_trigger",
+"activate the loyalty abilities of planeswalkers you control twice each turn"
+],
+[
+"rule_change",
+"rather than only once"
+]
+],
+"783121": [
+[
+"resource_conversion",
+"spells and abilities you control that would add colored mana instead add that much white mana"
+],
+[
+"rule_change",
+"you may spend white mana as though it were mana of any color"
+],
+[
+"temporary_effect",
+"Until end of turn"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"783361": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"summon",
+"create two 0/2 blue Illusion creature tokens"
+],
+[
+"blocking",
+"Whenever this token blocks a creature"
+],
+[
+"disable",
+"that creature doesn't untap during its controller's next untap step"
+],
+[
+"immunity",
+"This creature has hexproof as long as you control an Illusion"
+],
+[
+"tribal",
+"as long as you control an Illusion"
+]
+],
+"783438": [
+[
+"on_play",
+"When this Equipment enters"
+],
+[
+"tutor",
+"reveal a Lesson card you own from outside the game and put it into your hand"
+],
+[
+"card_quality",
+"discard a card to draw a card"
+],
+[
+"merge_attach",
+"Equipped creature"
+],
+[
+"stat_gain",
+"Equipped creature gets +1/+1"
+],
+[
+"lifesteal",
+"has lifelink"
+],
+[
+"activated",
+"Equip {1}{B}"
+]
+],
+"783543": [
+[
+"type_grant",
+"Other creatures you control are Assassins in addition to their other types"
+],
+[
+"aura",
+"Face-down creatures you control have menace"
+],
+[
+"evasion",
+"menace"
+],
+[
+"information",
+"Face-down creatures"
+],
+[
+"draw",
+"you draw a card"
+],
+[
+"friendly_fire",
+"you lose 1 life"
+]
+],
+"783551": [
+[
+"forced_attack",
+"Each opponent must attack you or a planeswalker you control with at least one creature each combat if able"
+],
+[
+"turn_end",
+"At the beginning of your end step"
+],
+[
+"resource_gain",
+"create a Treasure token"
+]
+],
+"783764": [
+[
+"evasion",
+"Flying"
+],
+[
+"turn_end",
+"At the beginning of each end step"
+],
+[
+"death_count",
+"if a creature died this turn"
+],
+[
+"items_consumables",
+"create a Food token"
+],
+[
+"heal",
+"You gain 3 life"
+],
+[
+"activated",
+"{2}{B}, Sacrifice another creature or artifact:"
+],
+[
+"sacrifice",
+"Sacrifice another creature or artifact"
+],
+[
+"stat_gain",
+"gets +2/+2"
+],
+[
+"temporary_buff",
+"until end of turn"
+]
+],
+"801441": [
+[
+"evasion",
+"Menace"
+],
+[
+"on_attack",
+"When this creature deals combat damage to a player"
+],
+[
+"self_destruct",
+"sacrifice it"
+],
+[
+"deck_position",
+"reveal cards from the top of your library until you reveal a creature card"
+],
+[
+"free_play",
+"Put that card onto the battlefield"
+],
+[
+"tribal",
+"If that creature is a Demon"
+],
+[
+"direct_damage",
+"deals damage equal to its power to each opponent"
+]
+],
+"801603": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"modal_choice",
+"choose one"
+],
+[
+"removal",
+"Each opponent sacrifices an enchantment of their choice"
+],
+[
+"evasion",
+"Creatures you control gain menace"
+],
+[
+"scope_multi",
+"Creatures you control gain menace"
+],
+[
+"temporary_buff",
+"until end of turn"
+]
+],
+"802423": [
+[
+"merge_attach",
+"Enchant creature"
+],
+[
+"attack_lock",
+"Enchanted creature has defender"
+],
+[
+"damage_prevention",
+"Prevent all combat damage that would be dealt by enchanted creature"
+],
+[
+"no_damage_output",
+"Prevent all combat damage that would be dealt by enchanted creature"
+],
+[
+"self_destruct",
+"Sacrifice this Aura"
+],
+[
+"activated",
+"{2}{W}, Sacrifice this Aura:"
+],
+[
+"removal",
+"Exile enchanted creature"
+],
+[
+"banish",
+"Exile enchanted creature"
+],
+[
+"variety_payoff",
+"three or more creatures with different powers"
+],
+[
+"condition_count",
+"three or more creatures"
+]
+],
+"802489": [
+[
+"merge_attach",
+"Enchant creature you control"
+],
+[
+"on_play",
+"When this Aura enters"
+],
+[
+"cant_block",
+"target creature can't block this turn"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"stat_gain",
+"Enchanted creature gets +1/+1"
+],
+[
+"haste",
+"has haste"
+]
+],
+"803285": [
+[
+"on_play",
+"Whenever C\u00edrdan enters or attacks"
+],
+[
+"on_attack",
+"attacks"
+],
+[
+"simultaneous_play",
+"each player secretly votes for a player, then those votes are revealed"
+],
+[
+"draw",
+"Each player draws a card for each vote they received"
+],
+[
+"symmetric_effect",
+"Each player draws a card"
+],
+[
+"enemy_benefit",
+"Each player draws a card for each vote they received"
+],
+[
+"comeback",
+"Each player who received no votes"
+],
+[
+"free_play",
+"may put a permanent card from their hand onto the battlefield"
+]
+],
+"803298": [
+[
+"deathtouch",
+"Deathtouch"
+],
+[
+"rule_change",
+"Skip your draw step"
+],
+[
+"turn_start",
+"At the beginning of your upkeep"
+],
+[
+"hand_size",
+"if you have fewer than seven cards in hand"
+],
+[
+"draw",
+"draw cards equal to the difference"
+]
+],
+"803433": [
+[
+"evasion",
+"Menace"
+],
+[
+"death_trigger",
+"Whenever an attacking creature you control or a blocking creature an opponent controls dies"
+],
+[
+"summon",
+"create a 2/2 black Zombie creature token"
+],
+[
+"activated",
+"{5}{B}: Return this card from your graveyard"
+],
+[
+"revive",
+"Return this card from your graveyard to the battlefield tapped"
+],
+[
+"graveyard",
+"from your graveyard"
+]
+],
+"804120": [
+[
+"on_play",
+"When Elrond enters"
+],
+[
+"simultaneous_play",
+"each player secretly votes for fellowship or aid, then those votes are revealed"
+],
+[
+"steal",
+"You gain control of each creature chosen this way"
+],
+[
+"cant_attack",
+"This creature can't attack its owner"
+],
+[
+"stat_gain",
+"put a +1/+1 counter on each creature you control"
+],
+[
+"scope_multi",
+"each creature you control"
+],
+[
+"condition_count",
+"for each aid vote"
+]
+],
+"804502": [
+[
+"team_play",
+"Another player can pay up to {3} of this spell's cost"
+],
+[
+"activated",
+"{2}: This creature gets +1/+1"
+],
+[
+"stat_gain",
+"gets +1/+1"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"enemy_benefit",
+"Any player may activate this ability"
+]
+],
+"804601": [
+[
+"damage_prevention",
+"Prevent all combat damage that would be dealt by target creature this turn"
+],
+[
+"no_damage_output",
+"Prevent all combat damage that would be dealt by target creature this turn"
+],
+[
+"temporary_effect",
+"this turn"
+],
+[
+"activated",
+"Cycling {2}"
+],
+[
+"discard",
+"Discard this card"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"card_quality",
+"Cycling {2}"
+]
+],
+"805736": [
+[
+"upgrade",
+"Level up {2}"
+],
+[
+"activated",
+"{2}: Put a level counter on this"
+],
+[
+"spell_speed",
+"Level up only as a sorcery"
+],
+[
+"stat_gain",
+"6/6"
+],
+[
+"evasion",
+"This creature can't be blocked as long as defending player controls an Island"
+],
+[
+"condition_count",
+"LEVEL 5+"
+]
+],
+"805793": [
+[
+"excess_damage",
+"Trample"
+],
+[
+"transform",
+"Daybound"
+],
+[
+"rule_change",
+"it becomes night next turn"
+]
+],
+"806776": [
+[
+"stat_gain",
+"Put a +1/+1 counter on target creature"
+],
+[
+"haste",
+"gains haste until end of turn"
+],
+[
+"evasion",
+"can't be blocked by Walls this turn"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"quests",
+"Venture into the dungeon"
+]
+],
+"806867": [
+[
+"blocking",
+"Whenever a creature without flanking blocks this creature"
+],
+[
+"stat_loss",
+"the blocking creature gets -1/-1"
+],
+[
+"temporary_effect",
+"until end of turn"
+],
+[
+"on_play",
+"When this creature enters"
+],
+[
+"destroy",
+"destroy target Knight"
+],
+[
+"tribal",
+"target Knight"
+],
+[
+"friendly_fire",
+"If you don't, destroy target Knight"
+],
+[
+"piercing",
+"it can't be regenerated"
+]
+],
+"807839": [
+[
+"simultaneous_play",
+"Each player secretly votes for another player, then those votes are revealed"
+],
+[
+"direct_damage",
+"deals 2 damage to that player"
+],
+[
+"aoe_damage",
+"each creature that player controls"
+],
+[
+"condition_count",
+"For each vote an opponent received"
+],
+[
+"draw",
+"For each vote you received, draw a card"
+]
+],
+"808594": [
+[
+"bodyguard",
+"All damage that would be dealt to you and other permanents you control is dealt to this creature instead"
+]
+],
+"809228": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"destroy",
+"Destroy target artifact"
+],
+[
+"destroy",
+"Destroy target land"
+],
+[
+"disruption",
+"Destroy target land"
+],
+[
+"kicker",
+"Entwine {3}{R}"
+]
+],
+"809499": [
+[
+"blocking",
+"Reach"
+],
+[
+"evasion",
+"menace"
+],
+[
+"on_play",
+"When Rendmaw enters"
+],
+[
+"on_ally_play",
+"whenever you play a card with two or more card types"
+],
+[
+"condition_count",
+"two or more card types"
+],
+[
+"summon",
+"creates a tapped 2/2 black Bird creature token with flying"
+],
+[
+"symmetric_effect",
+"each player creates"
+],
+[
+"enemy_benefit",
+"each player creates"
+],
+[
+"forced_attack",
+"The tokens are goaded"
+]
+],
+"809877": [
+[
+"on_play",
+"Whenever Ruxa enters or attacks"
+],
+[
+"on_attack",
+"attacks"
+],
+[
+"revive",
+"return target creature card with no abilities from your graveyard to your hand"
+],
+[
+"null_body",
+"Creatures you control with no abilities"
+],
+[
+"aura",
+"Creatures you control with no abilities get +1/+1"
+],
+[
+"evasion",
+"assign its combat damage as though it weren't blocked"
+]
+],
+"811370": [
+[
+"excess_damage",
+"trample"
+],
+[
+"activated",
+"{2}, {T}, Sacrifice an artifact:"
+],
+[
+"sacrifice",
+"Sacrifice an artifact"
+],
+[
+"random_effect",
+"Choose a player at random"
+],
+[
+"damage",
+"Strax fights another target creature that player controls"
+],
+[
+"on_attack",
+"Whenever Strax deals damage to a creature"
+],
+[
+"permanent_growth",
+"put a +1/+1 counter on Strax"
+]
+],
+"811767": [
+[
+"spell_speed",
+"Flash"
+],
+[
+"merge_attach",
+"Enchant creature"
+],
+[
+"blocking",
+"It can block or be blocked by only creatures with shadow"
+],
+[
+"damage_prevention",
+"Prevent all damage that would be dealt by enchanted creature"
+],
+[
+"no_damage_output",
+"Prevent all damage that would be dealt by enchanted creature"
+]
+],
+"811860": [
+[
+"delayed",
+"after your draw step, add a lore counter"
+],
+[
+"self_destruct",
+"Sacrifice after III"
+],
+[
+"destroy",
+"destroy up to one target creature that player controls"
+],
+[
+"symmetric_effect",
+"For each player"
+],
+[
+"friendly_fire",
+"For each player, destroy up to one target creature that player controls"
+],
+[
+"summon",
+"creates a 3/3 green Mutant creature token with deathtouch"
+],
+[
+"enemy_benefit",
+"its controller creates a 3/3 green Mutant creature token"
+],
+[
+"transform",
+"becomes a 6/6 legendary Horror creature named Fenric"
+],
+[
+"silence",
+"loses all abilities"
+],
+[
+"damage",
+"fights another target creature named Fenric"
+]
+],
+"812421": [
+[
+"on_attack",
+"Whenever this creature attacks"
+],
+[
+"destroy",
+"defending player sacrifices two permanents of their choice"
+],
+[
+"scope_multi",
+"two permanents"
+]
+],
+"812477": [
+[
+"cost_type",
+"Escape\u2014{3}{R}"
+],
+[
+"graveyard",
+"Exile three other cards from your graveyard"
+],
+[
+"cast_from_zone",
+"You may cast this card from your graveyard"
+],
+[
+"stat_gain",
+"escapes with a +1/+1 counter"
+]
+],
+"812633": [
+[
+"on_attack",
+"Whenever Varchild deals combat damage to a player"
+],
+[
+"board_clog",
+"that player creates that many 1/1 red Survivor creature tokens"
+],
+[
+"cant_block",
+"Survivors your opponents control can't block"
+],
+[
+"attack_lock",
+"they can't attack you or planeswalkers you control"
+],
+[
+"tribal",
+"Survivors"
+],
+[
+"death_trigger",
+"When Varchild leaves the battlefield"
+],
+[
+"steal",
+"gain control of all Survivors"
+]
+],
+"812665": [
+[
+"on_play",
+"When this enchantment enters"
+],
+[
+"evasion",
+"put a flying counter on each face-down creature you control"
+],
+[
+"scope_multi",
+"each face-down creature you control"
+],
+[
+"aura",
+"Face-down creatures you control enter with a flying counter on them"
+],
+[
+"information",
+"face-down creature"
+],
+[
+"turn_start",
+"At the beginning of your upkeep"
+],
+[
+"summon",
+"cloak the top card of your library"
+],
+[
+"deck_position",
+"the top card of your library"
+]
+],
+"813404": [
+[
+"activated",
+"{T}: Target opponent gains control of Yes Man"
+],
+[
+"donate",
+"Target opponent gains control of Yes Man"
+],
+[
+"draw",
+"you draw two cards"
+],
+[
+"spell_speed",
+"Activate only during your turn"
+],
+[
+"death_trigger",
+"When Yes Man leaves the battlefield"
+],
+[
+"summon",
+"creates a tapped 1/1 white Soldier creature token for each quest counter on it"
+],
+[
+"condition_count",
+"for each quest counter on it"
+]
+],
+"813424": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"blocking",
+"Each creature blocks this turn if able"
+],
+[
+"temporary_effect",
+"this turn if able"
+],
+[
+"resource_gain",
+"You create a Treasure token for each opponent who was dealt damage this turn"
+],
+[
+"condition_count",
+"for each opponent who was dealt damage this turn"
+]
+],
+"813466": [
+[
+"blocking",
+"Whenever a creature without flanking blocks this creature"
+],
+[
+"stat_loss",
+"the blocking creature gets -1/-1"
+],
+[
+"temporary_effect",
+"until end of turn"
+],
+[
+"activated",
+"{W}{W}: This creature gains first strike"
+],
+[
+"first_strike",
+"gains first strike"
+],
+[
+"temporary_buff",
+"gains first strike until end of turn"
+]
+],
+"816295": [
+[
+"cheat_death",
+"you can't lose the game"
+],
+[
+"rule_change",
+"you can't lose the game and your opponents can't win the game"
+],
+[
+"tribal",
+"As long as you control a Gideon planeswalker"
+]
+],
 "765978": [],
 "766115": [
 [

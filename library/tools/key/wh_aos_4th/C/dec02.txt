@@ -1,0 +1,50 @@
+793683 A
+793690 U -debuff
+793713 U -counter_spell -protection -temporary_effect
+793745 U
+793748 U -on_attack
+793757 U -temporary_effect
+793761 U -advantage -damage_reduction -debuff -suppress -on_attack
+793769 U -stacking_keyword -cost_type
+793771 U -damage_reduction
+793786 U -bodyguard -cost_type -protection
+793788 U
+793791 A
+793793 U -speed
+793803 U -debuff
+793808 U
+793809 U
+793818 U -on_attack
+793829 U -debuff -summon -immunity
+793842 U
+793845 U -temporary_effect
+793890 U -resource_conversion -protection
+793891 U -speed -protection
+793892 U -stat_gain -silence -protection ;; spell_power|add 1 to this unit's power level for the rest of the battle
+793897 U -comeback -protection
+793898 U -resource_gain -sacrifice -protection
+793900 B -protection -sacrifice ;; saving_throws|This unit has Ward (6+) ;; exhaust|you can remove a Gong Carrier
+793904 U -on_attack
+793909 U -protection -advantage
+793922 U -on_attack -protection
+793936 U -on_attack -protection -spell_power -self_destruct ;; exhaust|remove this unit's Sea-beast Familiar from the battlefield
+793960 U -on_attack
+793977 U
+793978 U -disruption
+793984 U -adjacency
+793986 U -bodyguard -protection
+793989 U -speed -rule_change ;; buff|can use Charge abilities even if they used a Run ability
+793993 U
+794000 U
+794012 U
+794031 U -flexibility
+794034 U
+794040 U -area_templates
+794046 U -combo_sequence -transform -rule_change -stat_gain ;; spell_power|Add 1 to this unit's power level for the rest of the phase
+794053 U -free_play -variable_stats -debuff
+794061 U -on_attack -play_restriction
+794066 U
+794074 U -advantage -protection
+794081 U -stat_gain
+794085 U
+794090 U -protection

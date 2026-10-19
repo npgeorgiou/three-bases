@@ -1,0 +1,778 @@
+{
+ "742391": [
+  [
+   "merge_attach",
+   "merges into it"
+  ],
+  [
+   "adjacency",
+   "Played next to a Mech"
+  ],
+  [
+   "tribal",
+   "Mech"
+  ],
+  [
+   "stat_gain",
+   "combining stats and effects"
+  ]
+ ],
+ "742422": [
+  [
+   "deckbuilding_effect",
+   "While deckbuilding"
+  ],
+  [
+   "generate_cards",
+   "adds synergistic uncollectible cards to the deck"
+  ]
+ ],
+ "742618": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "in_hand_buff",
+   "Swap the Attack and Health of all minions in both players' hands"
+  ],
+  [
+   "hand_disruption",
+   "both players' hands"
+  ],
+  [
+   "symmetric_effect",
+   "both players' hands"
+  ]
+ ],
+ "742692": [
+  [
+   "taunt",
+   "Taunt"
+  ],
+  [
+   "on_damaged",
+   "Frenzy"
+  ],
+  [
+   "damage_reduction",
+   "Gain Armor"
+  ]
+ ],
+ "743136": [
+  [
+   "aura",
+   "All minions take double damage from spells"
+  ],
+  [
+   "spell_power",
+   "double damage from spells"
+  ],
+  [
+   "scope_global",
+   "All minions"
+  ]
+ ],
+ "743185": [
+  [
+   "immunity",
+   "Elusive"
+  ],
+  [
+   "turn_end",
+   "At the end of your turn"
+  ],
+  [
+   "permanent_growth",
+   "give your other minions +1/+1"
+  ],
+  [
+   "scope_multi",
+   "your other minions"
+  ]
+ ],
+ "743214": [
+  [
+   "bounce_enemy",
+   "Return an enemy minion to its owner's hand"
+  ],
+  [
+   "play_restriction",
+   "They can't play it next turn"
+  ]
+ ],
+ "743253": [
+  [
+   "discard",
+   "After you discard a minion"
+  ],
+  [
+   "copy",
+   "summon a copy of it"
+  ],
+  [
+   "summon",
+   "summon a copy of it"
+  ]
+ ],
+ "743279": [
+  [
+   "transform",
+   "Transform all friendly minions into ones that cost (1) more"
+  ],
+  [
+   "death_trigger",
+   "when they die"
+  ],
+  [
+   "summon",
+   "They summon the originals"
+  ]
+ ],
+ "743296": [
+  [
+   "generate_cards",
+   "Get a random Paladin Aura"
+  ],
+  [
+   "random_effect",
+   "random"
+  ],
+  [
+   "in_hand_buff",
+   "It lasts an additional turn"
+  ]
+ ],
+ "743327": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "stat_gain",
+   "Swap the Attack and Health of a minion"
+  ],
+  [
+   "stat_loss",
+   "Swap the Attack and Health"
+  ]
+ ],
+ "743492": [
+  [
+   "taunt",
+   "Taunt"
+  ],
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "hand_deck_swap",
+   "Replace your hand and deck with Legendary minions"
+  ],
+  [
+   "generate_cards",
+   "Legendary minions"
+  ]
+ ],
+ "743528": [
+  [
+   "rewind",
+   "Rewind"
+  ],
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "selection",
+   "Discover a Beast with a Dark Gift"
+  ],
+  [
+   "generate_cards",
+   "Discover a Beast"
+  ],
+  [
+   "tribal",
+   "Beast"
+  ],
+  [
+   "combo_sequence",
+   "Kindred"
+  ],
+  [
+   "cost_reduction",
+   "It costs (1) less"
+  ]
+ ],
+ "743556": [
+  [
+   "trap_secret",
+   "Secret"
+  ],
+  [
+   "summon",
+   "summon a 2/1 Defender"
+  ],
+  [
+   "bodyguard",
+   "as the new target"
+  ]
+ ],
+ "743627": [
+  [
+   "trap_secret",
+   "Secret"
+  ],
+  [
+   "aoe_damage",
+   "deal 2 damage to all enemies"
+  ]
+ ],
+ "743648": [
+  [
+   "selection",
+   "Discover a Temporary Execute, Shield Block, or Brawl"
+  ],
+  [
+   "generate_cards",
+   "Discover"
+  ],
+  [
+   "temporary_effect",
+   "Temporary"
+  ]
+ ],
+ "743650": [
+  [
+   "selection",
+   "Discover a Temporary Backstab, Deadly Poison, or Fan of Knives"
+  ],
+  [
+   "generate_cards",
+   "Discover"
+  ],
+  [
+   "temporary_effect",
+   "Temporary"
+  ]
+ ],
+ "743654": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "destroy",
+   "Destroy all other minions with 2 or less Attack"
+  ],
+  [
+   "board_wipe",
+   "Destroy all other minions"
+  ],
+  [
+   "stat_condition",
+   "with 2 or less Attack"
+  ],
+  [
+   "friendly_fire",
+   "all other minions"
+  ]
+ ],
+ "743723": [
+  [
+   "copy",
+   "Shuffle a copy of your hand into your deck"
+  ],
+  [
+   "card_advantage",
+   "a copy of your hand"
+  ]
+ ],
+ "743754": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "mill",
+   "Remove the top card of your opponent's deck"
+  ],
+  [
+   "deck_position",
+   "top card"
+  ]
+ ],
+ "743863": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "play_restriction",
+   "Your opponent can only play their left- and right-most cards on their next turn"
+  ],
+  [
+   "hand_position",
+   "left- and right-most cards"
+  ]
+ ],
+ "743876": [
+  [
+   "enemy_benefit",
+   "Your opponent summons a random minion from their hand"
+  ],
+  [
+   "random_effect",
+   "random minion"
+  ]
+ ],
+ "743919": [
+  [
+   "turn_end",
+   "At the end of your turn"
+  ],
+  [
+   "condition_count",
+   "3 or more damage"
+  ],
+  [
+   "draw",
+   "draw a card"
+  ]
+ ],
+ "743927": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "selection",
+   "Discover a card in each player's hand"
+  ],
+  [
+   "steal",
+   "swap them"
+  ],
+  [
+   "donate",
+   "swap them"
+  ],
+  [
+   "information",
+   "each player's hand"
+  ]
+ ],
+ "744019": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "stat_gain",
+   "Gain +1/+1"
+  ],
+  [
+   "condition_count",
+   "for each damaged minion"
+  ],
+  [
+   "condition_life",
+   "damaged minion"
+  ],
+  [
+   "attack_now",
+   "attack all enemies"
+  ],
+  [
+   "multi_attack",
+   "attack all enemies"
+  ]
+ ],
+ "744039": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "trap_secret",
+   "If you control a Secret"
+  ],
+  [
+   "hand_disruption",
+   "choose a card in your opponent's hand to shuffle into their deck"
+  ],
+  [
+   "information",
+   "choose a card in your opponent's hand"
+  ]
+ ],
+ "744067": [
+  [
+   "cheat_death",
+   "Reborn"
+  ],
+  [
+   "turn_end",
+   "At the end of your turn"
+  ],
+  [
+   "coin_economy",
+   "spend 4 Corpses"
+  ],
+  [
+   "copy",
+   "summon a copy of this minion"
+  ],
+  [
+   "summon",
+   "summon a copy of this minion"
+  ]
+ ],
+ "744201": [
+  [
+   "start_of_game",
+   "Start of Game"
+  ],
+  [
+   "deck_condition",
+   "If this is in BOTH players' decks"
+  ],
+  [
+   "rule_change",
+   "turns are only 15 seconds long"
+  ]
+ ],
+ "744295": [
+  [
+   "copy",
+   "add a copy to your hand"
+  ],
+  [
+   "card_advantage",
+   "add a copy to your hand"
+  ]
+ ],
+ "744379": [
+  [
+   "stealth",
+   "Stealth"
+  ],
+  [
+   "turn_end",
+   "At the end of your turn"
+  ],
+  [
+   "heal",
+   "restore 2 Health to all friendly characters"
+  ],
+  [
+   "scope_multi",
+   "all friendly characters"
+  ]
+ ],
+ "744455": [
+  [
+   "aura",
+   "Your other minions have +1 Attack"
+  ],
+  [
+   "upgrade",
+   "Corrupt"
+  ],
+  [
+   "stat_gain",
+   "This gains +4 Attack"
+  ]
+ ],
+ "744462": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "free_play",
+   "Summon a minion from your deck"
+  ],
+  [
+   "summon",
+   "Summon a minion from your deck"
+  ],
+  [
+   "attack_now",
+   "It attacks the enemy hero"
+  ],
+  [
+   "direct_damage",
+   "attacks the enemy hero"
+  ],
+  [
+   "self_destruct",
+   "then dies"
+  ]
+ ],
+ "744534": [
+  [
+   "in_hand_buff",
+   "Swap the Cost and Attack of all minions in your deck"
+  ]
+ ],
+ "744589": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "draw",
+   "Each player draws a card"
+  ],
+  [
+   "symmetric_effect",
+   "Each player draws a card"
+  ],
+  [
+   "cost_set",
+   "Swap their Costs"
+  ]
+ ],
+ "744650": [
+  [
+   "in_hand_buff",
+   "Give all minions in your deck +2/+2"
+  ]
+ ],
+ "744694": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "free_play",
+   "Cast the highest Cost spell from your hand"
+  ],
+  [
+   "cost_condition",
+   "highest Cost spell"
+  ]
+ ],
+ "744709": [
+  [
+   "turn_end",
+   "At the end of your turn"
+  ],
+  [
+   "attack_now",
+   "attack a random enemy minion"
+  ],
+  [
+   "random_effect",
+   "random enemy minion"
+  ],
+  [
+   "excess_damage",
+   "excess damage hits the enemy hero"
+  ]
+ ],
+ "744754": [
+  [
+   "transform",
+   "it transforms into one that costs (2) more"
+  ]
+ ],
+ "744839": [
+  [
+   "board_wipe",
+   "Destroy all minions with 4 or less Attack"
+  ],
+  [
+   "stat_condition",
+   "with 4 or less Attack"
+  ],
+  [
+   "overload_debt",
+   "Overload: (2)"
+  ]
+ ],
+ "744854": [
+  [
+   "fatigue",
+   "Take Fatigue damage"
+  ],
+  [
+   "life_payment",
+   "Take Fatigue damage"
+  ],
+  [
+   "aoe_damage",
+   "Deal that much damage to all enemies"
+  ]
+ ],
+ "744855": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "fatigue",
+   "Take Fatigue damage"
+  ],
+  [
+   "life_payment",
+   "Take Fatigue damage"
+  ],
+  [
+   "summon",
+   "Summon that many 3/3 Imps"
+  ]
+ ],
+ "744886": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "copy",
+   "Take a Snapshot of your current hand and shuffle it into your deck"
+  ],
+  [
+   "once_per_game",
+   "Once per game"
+  ]
+ ],
+ "745023": [
+  [
+   "silence",
+   "Silence a minion"
+  ],
+  [
+   "damage",
+   "deal 1 damage to it"
+  ]
+ ],
+ "745063": [
+  [
+   "rule_change",
+   "Players only have 15 seconds to take their turns"
+  ],
+  [
+   "symmetric_effect",
+   "Players only have 15 seconds"
+  ]
+ ],
+ "745108": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "variety_payoff",
+   "If every card in your hand is of a different Cost"
+  ],
+  [
+   "cost_reduction",
+   "reduce their Costs by (2)"
+  ]
+ ],
+ "745188": [
+  [
+   "on_play",
+   "Battlecry"
+  ],
+  [
+   "tribal",
+   "Draenei"
+  ],
+  [
+   "attack_now",
+   "immediately attacks a random enemy"
+  ],
+  [
+   "random_effect",
+   "random enemy"
+  ],
+  [
+   "delayed",
+   "The next Draenei you play"
+  ]
+ ],
+ "745189": [
+  [
+   "immunity",
+   "Immune while attacking"
+  ],
+  [
+   "turn_end",
+   "At the end of EACH turn"
+  ],
+  [
+   "stat_gain",
+   "swap this minion's Attack and Health"
+  ],
+  [
+   "stat_loss",
+   "swap this minion's Attack and Health"
+  ]
+ ],
+ "745241": [
+  [
+   "condition_life",
+   "Undamaged enemy minions"
+  ],
+  [
+   "aura",
+   "take double damage"
+  ],
+  [
+   "stat_multiply",
+   "double damage"
+  ],
+  [
+   "combo_sequence",
+   "Combo"
+  ],
+  [
+   "generate_cards",
+   "Get a Backstab"
+  ]
+ ],
+ "745265": [
+  [
+   "immunity",
+   "Elusive"
+  ],
+  [
+   "taunt",
+   "Taunt"
+  ],
+  [
+   "on_spell",
+   "Spellburst"
+  ],
+  [
+   "temporary_buff",
+   "Give your hero +8 Attack this turn"
+  ],
+  [
+   "damage_reduction",
+   "gain 8 Armor"
+  ]
+ ],
+ "745385": [
+  [
+   "trap_secret",
+   "Secret"
+  ],
+  [
+   "reactions",
+   "After your opponent plays three cards in a turn"
+  ],
+  [
+   "condition_count",
+   "three cards in a turn"
+  ],
+  [
+   "draw",
+   "draw 2 cards"
+  ]
+ ]
+}

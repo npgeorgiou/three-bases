@@ -1,0 +1,29 @@
+788373 aura@A saving_throws once_per_game combat_start activated stat_multiply temporary_buff piercing merge_attach@A
+788401 turn_end random_effect aoe_damage damage speed reserve_bench="Deep Strike"
+788402 turn_start tribal="select one enemy VEHICLE unit" random_effect damage lifesteal reactions saving_throws debuff temporary_effect death_trigger
+788412 targeting_rules advantage zone_control
+788418 condition_life stat_loss@A debuff reactions temporary_effect random_effect damage reserve_bench="Deep Strike" death_trigger
+788421 saving_throws condition_life stat_loss debuff turn_start modal_choice temporary_effect aura tribal advantage stat_gain death_trigger friendly_fire@B ranged piercing="Devastating Wounds"
+788436 saving_throws merge_attach@A damage_reduction
+788443 aura@A advantage turn_start revive merge_attach@A once_per_game turn_end heal
+788444 aura@A advantage saving_throws once_per_game turn_start activated="this model can overcharge its kustom force field" temporary_buff stat_gain merge_attach@A repeat_trigger@A
+788461 stat_gain turn_start random_effect control_reward resource_gain temporary_effect
+788480 on_attack="after this model has shot" random_effect debuff@B stat_loss temporary_effect once_per_game turn_start damage ranged death_trigger
+788497 on_attack random_effect damage condition_life debuff board_limit death_trigger="Deadly Demise"
+788517 buff targeting_rules random_effect damage death_trigger
+788521 damage random_effect condition_count stress_morale aura tribal@A
+788542 aura@A stat_gain merge_attach@A on_attack modal_choice target_choice piercing buff="[SUSTAINED HITS 2]"
+788551 shield repeat_trigger="Twice per battle" speed silence death_trigger
+788555 turn_end return_to_hand reserve_bench@B once_per_game piercing temporary_buff
+788574 mark_target advantage condition_life stat_loss debuff@A movement piercing death_trigger
+788580 reactions counterattack@B targeting_rules
+788585 tribal stat_loss debuff@B temporary_effect reserve_bench="Deep Strike"
+788591 start_of_game reserve_bench on_enemy_enter="when an enemy unit ends a Normal, Advance or Fall Back move within 9" movement@B merge_attach@A
+788592 once_per_game turn_start stress_morale tribal merge_attach@A
+788616 aura@A stress_morale damage lifesteal saving_throws tribal
+788623 reactions buff control_reward
+788627 activated summon placement_rules reactions cost_set death_trigger
+788628 on_attack mark_target tribal@B piercing temporary_effect condition_life buff death_trigger
+788639 saving_throws@A damage_types target_choice death_trigger
+788663 play_restriction placement_rules@A death_trigger random_effect aoe_damage activated self_destruct terrain friendly_fire
+816460 death_trigger random_effect cheat_death counterattack first_strike

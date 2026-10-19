@@ -1,0 +1,50 @@
+784271 start_of_game on_kill tribal comeback advantage@B
+784278 turn_end death_trigger movement random_effect combat_start condition_life first_strike temporary_buff
+784280 start_of_game random_effect coin_economy cost_reduction
+784294 start_of_game coin_economy tribal advantage kicker enemy_benefit turn_start resource_gain
+784307 tribal start_of_game turn_number modal_choice random_ability aura@B stat_loss stacking_keyword buff protection condition_life stress_morale damage
+784316 start_of_game tribal modal_choice random_ability advantage stat_gain
+784347 reactions tribal protection temporary_buff friendly_fire@A buff type_grant stat_gain
+784350 tribal turn_start activated random_effect kicker friendly_fire condition_count
+784353 on_kill random_effect resource_gain coin_economy modal_choice turn_start tribal@B saving_throws@A damage_types buff
+784360 tribal@A start_of_game death_trigger coin_economy revive reserve_bench placement_rules@A on_enemy_enter delayed
+784363 turn_start modal_choice once_per_game tribal stat_gain@A temporary_buff cheat_death random_effect counterattack
+784377 on_attack stat_loss temporary_effect
+784407 tribal targeting_rules buff
+784427 start_of_game zone_control link_formation tribal buff
+784453 tribal@B advantage quests condition_count on_kill territory_trigger zone_control turn_number
+784479 tribal stances start_of_game turn_end@B condition_count buff advantage control_reward@A protection stat_condition resource_gain zone_control turn_number
+784483 tribal@A start_of_game modal_choice advantage target_choice stat_condition speed zone_control
+784495 death_trigger reactions movement random_effect tribal
+784499 advantage tribal reserve_bench@B placement_rules@B on_enemy_enter terrain
+784504 tribal@A merge_attach="while one or more CHARACTER models are leading that unit" advantage saving_throws
+784517 zone_control@A control_reward turn_start tribal advantage territory_trigger@B
+784552 merge_attach@B bodyguard death_trigger
+784638 tribal start_of_game placement_rules@A
+784644 tribal passive@B resource_advantage
+784646 tribal placement_rules@B reserve_bench="Deep Strike" comeback advantage="re‑roll Charge rolls" temporary_buff
+784648 tribal turn_start modal_choice coin_economy comeback
+784691 tribal start_of_game aura@B reactions cost_increase
+784755 passive resource_advantage="you do not need to spend any Pain tokens"
+784869 sacrifice targeting_rules
+784923 tribal on_attack random_effect="must take a Leadership test" sacrifice modal_choice buff temporary_buff
+785060 merge_attach="While the bearer is leading a Poxwalkers unit" tribal stat_gain on_attack friendly_fire
+785150 once_per_game turn_end condition_count activated multi_attack modal_choice
+785225 once_per_game repeat_trigger
+785339 start_of_game tribal movement reserve_bench
+785365 on_attack activated stat_gain temporary_buff friendly_fire
+785368 buff@A temporary_buff
+785426 resource_gain coin_economy
+785470 tribal once_per_game turn_start modal_choice repeat_trigger temporary_buff
+785482 stress_morale coin_economy="discard 1 Miracle dice" immunity
+785483 reactions coin_economy="discard 1 Miracle dice" protection="worsen the Armour Penetration characteristic of that attack by 1" temporary_effect
+785502 saving_throws reactions coin_economy="discard 1 Miracle dice" stat_gain temporary_buff
+785513 on_attack coin_economy="discard 1 Miracle dice" stat_multiply temporary_buff piercing
+785515 turn_start coin_economy="discard 1 Miracle dice" heal
+785516 turn_end coin_economy="discard 1 Miracle dice" resource_conversion
+785517 on_attack coin_economy="discard 1 Miracle die" piercing target_choice="[PRECISION]" temporary_buff
+785521 turn_start random_effect coin_economy="discard 1 Miracle dice" buff temporary_buff
+785549 reactions shield
+785595 quests condition_count points_scoring
+785643 tribal protection reactions shield
+785798 tribal on_enemy_enter random_effect debuff temporary_effect

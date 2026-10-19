@@ -1,4 +1,2096 @@
 {
+"752395": [
+[
+"free_play",
+"invoke this card"
+],
+[
+"cast_from_zone",
+"invoke this card"
+],
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"combo_sequence",
+"if it's the fourth card you've played this turn"
+],
+[
+"return_to_hand",
+"return it to your hand"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"condition_count",
+"If at least 4 other cards were played this turn"
+],
+[
+"damage",
+"deal 4 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random enemy follower"
+]
+],
+"752397": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"variable_stats",
+"Gain +0/+X"
+],
+[
+"death_count",
+"the number of allied cards destroyed this match that cost 1 play point or less"
+],
+[
+"cost_condition",
+"cost 1 play point or less"
+],
+[
+"condition_count",
+"if X is at least 5"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"targeting_rules",
+"Can't attack the enemy leader"
+]
+],
+"752503": [
+[
+"damage",
+"Deal 3 damage to an enemy follower"
+],
+[
+"generate_cards",
+"Put a Glittering Gold into your hand"
+],
+[
+"condition_count",
+"If you have more evolution points than your opponent"
+],
+[
+"in_hand_buff",
+"subtract 1 from its cost"
+]
+],
+"752521": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"hand_position",
+"the left-most card in your hand"
+],
+[
+"reactions",
+"a card played by your opponent during their previous turn"
+],
+[
+"summon",
+"summon a Magic Sediment"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"count_payoff",
+"at least 7 allied Stacked cards have been consumed this match"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"resource_gain",
+"recover X play points"
+]
+],
+"752695": [
+[
+"merge_attach",
+"When a card is fused to this card"
+],
+[
+"count_payoff",
+"at least 10 allied amulets have been destroyed this match"
+],
+[
+"transform",
+"Transmute this card into Seraphs of the True Key"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"speed",
+"Subtract 1 from the Countdown of an allied amulet"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"return_to_hand",
+"return this card to your hand"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"banish",
+"Banish an enemy follower with 3 defense or less"
+],
+[
+"stat_condition",
+"3 defense or less"
+]
+],
+"752824": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"direct_damage",
+"Deal 1 damage to the enemy leader"
+],
+[
+"heal",
+"Restore 1 defense to your leader"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"condition_count",
+"if you have more evolution points than your opponent"
+],
+[
+"resource_gain",
+"gain an empty play point orb"
+]
+],
+"752899": [
+[
+"on_attack",
+"Follower Strike"
+],
+[
+"attack_zero",
+"change the enemy follower's attack to 0"
+],
+[
+"temporary_effect",
+"Until the end of your opponent's turn"
+],
+[
+"friendly_fire",
+"change this follower's attack to 0"
+]
+],
+"753070": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon an Invisible Soldier"
+],
+[
+"kicker",
+"Enhance (4)"
+],
+[
+"kicker",
+"Enhance (8)"
+],
+[
+"stat_gain",
+"+1/+3"
+],
+[
+"scope_multi",
+"all allied Invisible Soldiers"
+],
+[
+"haste",
+"Storm"
+],
+[
+"evasion",
+"Ignore Ward"
+]
+],
+"753293": [
+[
+"discard",
+"Randomly discard 1 of the lowest-cost cards in your hand"
+],
+[
+"random_effect",
+"Randomly"
+],
+[
+"draw",
+"draw 2 cards"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"generate_cards",
+"put a 1-play-point Draconic Counsel"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"self_destruct",
+"discard this card from your hand"
+]
+],
+"753440": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"on_damaged",
+"Whenever your leader takes damage during your turn"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+]
+],
+"753444": [
+[
+"condition_count",
+"If you have at least 2 play points"
+],
+[
+"low_life",
+"Vengeance is active for you"
+],
+[
+"modal_choice",
+"Choose: Play this card as a Raven, Noontide Vampire or Raven, Midnight Vampire"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Forest Bat"
+]
+],
+"753512": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"count_payoff",
+"If allied followers have evolved at least 3 times this match"
+],
+[
+"lifesteal",
+"gain Drain"
+],
+[
+"cost_set",
+"Can evolve for 0 evolution points"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"turn_end",
+"At the end of your opponent's turn"
+],
+[
+"summon",
+"summon an Assembly Droid"
+]
+],
+"753530": [
+[
+"target_choice",
+"Select an allied follower and then an enemy follower"
+],
+[
+"stat_gain",
+"Give +1/+0 to the first follower"
+],
+[
+"damage",
+"Deal X damage to the second"
+],
+[
+"stat_condition",
+"X equals the first follower's attack"
+],
+[
+"play_restriction",
+"Can be played only when both a targetable allied card and enemy card are in play"
+]
+],
+"753622": [
+[
+"target_choice",
+"Select an allied follower and an enemy follower"
+],
+[
+"synergy_payoff",
+"If the allied follower has Ward"
+],
+[
+"stat_gain",
+"give it +1/+1"
+],
+[
+"damage",
+"deal X damage to the enemy follower"
+],
+[
+"stat_condition",
+"X equals the attack of the allied follower"
+],
+[
+"play_restriction",
+"Can be played only when both a targetable allied card and enemy card are in play"
+]
+],
+"753890": [
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"condition_count",
+"If at least 2 other cards were played this turn"
+],
+[
+"summon",
+"summon a Furious Mountain Deity"
+],
+[
+"summon",
+"summon 2 Deepwood Anomalies"
+]
+],
+"753962": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"modal_choice",
+"Choose"
+],
+[
+"generate_cards",
+"Put 1 of the following cards into your hand"
+],
+[
+"count_payoff",
+"Rally (10)"
+],
+[
+"in_hand_buff",
+"Subtract 3 from its cost until the end of the turn"
+],
+[
+"temporary_effect",
+"until the end of the turn"
+],
+[
+"on_spell",
+"When you play a spell"
+],
+[
+"transform",
+"evolve this follower"
+],
+[
+"combo_sequence",
+"activate 1 of the following effects in order"
+],
+[
+"heal",
+"Restore 2 defense to your leader"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"stat_gain",
+"Give +1/+1 to all allied followers"
+],
+[
+"scope_multi",
+"all allied followers"
+]
+],
+"754030": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Rending Blast into your hand"
+],
+[
+"self_mill",
+"Banish 2 random cards from your deck"
+],
+[
+"banish",
+"Banish 2 random cards from your deck"
+],
+[
+"random_effect",
+"random"
+],
+[
+"deck_condition",
+"If you had 20 cards or less in your deck"
+],
+[
+"summon",
+"summon an Anne's Summoning"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"damage",
+"Deal 2 damage to an enemy"
+],
+[
+"heal",
+"Restore 2 defense to your leader"
+]
+],
+"754047": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"sacrifice",
+"Earth Rite (3)"
+],
+[
+"heal",
+"Restore 5 defense to your leader"
+],
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"count_payoff",
+"at least 7 allied Stacked cards have been consumed this match"
+],
+[
+"stat_multiply",
+"double all other allied followers' attack and defense"
+],
+[
+"scope_multi",
+"all other allied followers"
+]
+],
+"754264": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"on_damaged",
+"Whenever your leader takes damage during your turn"
+],
+[
+"resource_gain",
+"recover 1 play point"
+]
+],
+"754273": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"low_life",
+"If Vengeance is active for you"
+],
+[
+"cost_set",
+"evolve for 0 evolution points"
+],
+[
+"on_enemy_enter",
+"Whenever an enemy follower comes into play"
+],
+[
+"direct_damage",
+"deal 1 damage to the enemy leader"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+],
+[
+"on_kill",
+"Whenever this follower attacks and destroys an enemy follower"
+],
+[
+"heal",
+"restore 4 defense to this follower"
+]
+],
+"754322": [
+[
+"target_choice",
+"Select a follower"
+],
+[
+"attack_lock",
+"It can't attack until the start of your next turn"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"summon",
+"Summon a Spiderweb Imp"
+],
+[
+"condition_count",
+"If any allied amulets are in play"
+],
+[
+"stat_gain",
+"give it +2/+0"
+]
+],
+"754370": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Sphere Relic into your hand"
+],
+[
+"resource_gain",
+"Recover 2 play points"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"summon",
+"randomly summon 1 of the following amulets"
+],
+[
+"random_effect",
+"randomly summon"
+],
+[
+"variety_payoff",
+"that is not already in play for you"
+]
+],
+"754492": [
+[
+"haste",
+"Rush"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"multi_attack",
+"Can attack 2 times per turn"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon 2 Naterran World Trees"
+],
+[
+"death_count",
+"at least 5 allied Naterran World Trees have been destroyed this match"
+],
+[
+"transform",
+"evolve it"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"heal",
+"restore 6 defense to your leader"
+]
+],
+"754629": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon an Earth Essence"
+],
+[
+"condition_count",
+"if there are no allied Earth Sigil amulets in play"
+],
+[
+"kicker",
+"Enhance (10)"
+],
+[
+"stat_multiply",
+"Double all other allied followers' attack and defense"
+],
+[
+"scope_multi",
+"all other allied followers"
+]
+],
+"754748": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"cost_set",
+"Gain the ability to evolve for 0 evolution points"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"graveyard",
+"Necromancy (6)"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"ping",
+"deal 1 damage to a random enemy follower. Do this 4 times"
+],
+[
+"repeat_trigger",
+"Do this 4 times"
+],
+[
+"random_effect",
+"random enemy follower"
+]
+],
+"754958": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (7)"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"ping",
+"deal 2 damage to a random enemy. Do this 2 times"
+],
+[
+"repeat_trigger",
+"Do this 2 times"
+],
+[
+"random_effect",
+"random enemy"
+]
+],
+"754983": [
+[
+"in_hand_buff",
+"change the cost of this card to 3"
+],
+[
+"cost_set",
+"change the cost of this card to 3"
+],
+[
+"draw",
+"Draw 3 cards"
+]
+],
+"754986": [
+[
+"free_play",
+"invoke this card"
+],
+[
+"cast_from_zone",
+"invoke this card"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"resource_banking",
+"if you have at least 5 play points"
+],
+[
+"aura",
+"While this amulet is in play"
+],
+[
+"symmetric_effect",
+"both leaders have the following effect"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"in_hand_buff",
+"subtract 3 from the cost of a random card in your hand"
+],
+[
+"random_effect",
+"a random card in your hand"
+],
+[
+"variety_payoff",
+"If there are no duplicate cards in your deck"
+]
+],
+"755003": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"tutor",
+"Randomly put a spell that costs 1 play point or less from your deck into your hand"
+],
+[
+"cost_condition",
+"costs 1 play point or less"
+],
+[
+"random_effect",
+"Randomly"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"heal",
+"restore defense to your leader"
+],
+[
+"condition_count",
+"equal to the number of enemy followers in play"
+]
+],
+"755074": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Dominant's Order into your hand"
+],
+[
+"in_hand_buff",
+"subtract X from its cost"
+],
+[
+"board_clog",
+"Summon X enemy Firm Henchmen"
+],
+[
+"count_payoff",
+"X equals half the number of times allied followers have evolved this match"
+],
+[
+"death_trigger",
+"whenever an enemy card is destroyed"
+],
+[
+"direct_damage",
+"deal 2 damage to the enemy leader"
+]
+],
+"755094": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"sacrifice",
+"Earth Rite"
+],
+[
+"turn_end",
+"At the end of this turn"
+],
+[
+"stat_multiply",
+"double all other allied followers' attack and defense"
+],
+[
+"scope_multi",
+"all other allied followers"
+]
+],
+"755117": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"condition_count",
+"there are 3 or less Ghios, Sparkling Prisms in your hand"
+],
+[
+"condition_count",
+"If this card has been Spellboosted at least 5 times"
+],
+[
+"information",
+"reveal it"
+],
+[
+"summon",
+"summon an Owlcat"
+],
+[
+"summon",
+"summon a Mist Dragon"
+],
+[
+"summon",
+"summon an Incandescent Dragon"
+],
+[
+"transform",
+"evolve it"
+],
+[
+"banish",
+"banish this card"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"protection",
+"Can't be destroyed by effects"
+]
+],
+"755169": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Disdainful Rending into your hand"
+],
+[
+"condition_count",
+"if you have 10 play point orbs"
+],
+[
+"generate_cards",
+"put a Fangs of Ardent Destruction into your hand"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"on_damaged",
+"when an allied follower takes damage, if it's not destroyed"
+]
+],
+"755303": [
+[
+"cost_type",
+"Crystallize (3)"
+],
+[
+"delayed",
+"Countdown (4)"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"condition_count",
+"if you have more evolution points than your opponent"
+],
+[
+"speed",
+"subtract 1 from this amulet's Countdown"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Xeno Vohu Manah"
+],
+[
+"cost_set",
+"Can evolve for 0 evolution points"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"regeneration",
+"restore 4 defense to this follower"
+],
+[
+"on_damaged",
+"Whenever this follower takes damage, if it's not destroyed"
+],
+[
+"protection",
+"Can't be attacked"
+],
+[
+"temporary_effect",
+"until the end of your opponent's turn"
+]
+],
+"755356": [
+[
+"merge_attach",
+"Whenever cards are fused to this card"
+],
+[
+"generate_cards",
+"put an Assembly Droid into your hand"
+],
+[
+"in_hand_buff",
+"give it the following effects"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"self_destruct",
+"destroy it"
+],
+[
+"haste",
+"Rush"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Robotic-Arm Rescuer"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"heal",
+"Restore 2 defense to your leader"
+]
+],
+"755411": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"condition_count",
+"if at least 4 cards were played this turn"
+],
+[
+"stat_multiply",
+"double all other allied followers' attack and defense"
+],
+[
+"scope_multi",
+"all other allied followers"
+],
+[
+"once_per_game",
+"then remove this effect"
+]
+],
+"755412": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"cost_set",
+"the ability to evolve for 0 evolution points"
+],
+[
+"tribal",
+"Forestcraft follower"
+],
+[
+"summon",
+"summon 2 Fairy Wisps"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"summon",
+"Summon 2 Fairies"
+]
+],
+"755441": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"kicker",
+"Enhance (8)"
+],
+[
+"cost_set",
+"Gain the ability to evolve for 0 evolution points"
+],
+[
+"on_kill",
+"Whenever this follower attacks and destroys an enemy follower"
+],
+[
+"resource_gain",
+"recover 2 play points"
+],
+[
+"multi_attack",
+"gain the ability to attack 2 times this turn"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"stat_loss",
+"Give -4/-0 to an enemy follower"
+]
+],
+"755509": [
+[
+"haste",
+"Storm"
+],
+[
+"combo_sequence",
+"activate 1 of the following effects in order"
+],
+[
+"resource_gain",
+"Recover 2 play points"
+],
+[
+"destroy",
+"Destroy a random enemy follower"
+],
+[
+"random_effect",
+"a random enemy follower"
+],
+[
+"protection",
+"Can't be attacked"
+],
+[
+"immunity",
+"Reduce damage from effects to 0"
+]
+],
+"755531": [
+[
+"cost_type",
+"Crystallize (2)"
+],
+[
+"delayed",
+"Countdown (2)"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"disruption",
+"Reduce defense restored to your leader to 1"
+],
+[
+"temporary_effect",
+"until the end of your opponent's turn"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Celeste Omega"
+],
+[
+"play_restriction",
+"Can't play spells or amulets"
+],
+[
+"revive",
+"Reanimate (2)"
+]
+],
+"755623": [
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"banish",
+"Banish an enemy follower"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+]
+],
+"755739": [
+[
+"free_play",
+"invoke this card"
+],
+[
+"cast_from_zone",
+"invoke this card"
+],
+[
+"turn_number",
+"At the start of your tenth turn or later"
+],
+[
+"cost_type",
+"lose 1 evolution point"
+],
+[
+"aura",
+"While this amulet is in play"
+],
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"damage",
+"deal 2 damage to a random enemy"
+],
+[
+"random_effect",
+"a random enemy"
+],
+[
+"deck_condition",
+"if there are no followers in your deck"
+],
+[
+"resource_gain",
+"recover 1 play point"
+]
+],
+"755855": [
+[
+"targeting_rules",
+"Can't attack the enemy leader"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"sacrifice",
+"randomly destroy an allied Artifact follower"
+],
+[
+"random_effect",
+"randomly destroy"
+],
+[
+"tribal",
+"Artifact follower"
+],
+[
+"direct_damage",
+"Deal damage to the enemy leader equal to that follower's cost"
+],
+[
+"cost_condition",
+"equal to that follower's cost"
+]
+],
+"755865": [
+[
+"free_play",
+"invoke this card"
+],
+[
+"cast_from_zone",
+"invoke this card"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"death_count",
+"at least 20 allied followers have been destroyed this match"
+],
+[
+"taunt",
+"Ward"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"generate_cards",
+"Put a Dead to Rights into your hand"
+],
+[
+"summon",
+"summon a Magitrain"
+]
+],
+"755870": [
+[
+"cost_type",
+"Accelerate (0)"
+],
+[
+"modal_choice",
+"Choose - Put a Gullian Howl or Gullian Aura into your hand"
+],
+[
+"generate_cards",
+"Put a Gullian Howl or Gullian Aura into your hand"
+],
+[
+"haste",
+"Storm"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"revive",
+"summon copies of different allied Machina followers destroyed this match"
+],
+[
+"random_effect",
+"Randomly"
+],
+[
+"tribal",
+"Machina followers"
+],
+[
+"variety_payoff",
+"different allied Machina followers"
+],
+[
+"board_limit",
+"until your area is full"
+]
+],
+"755889": [
+[
+"turn_end",
+"At the end of turns you are able to evolve"
+],
+[
+"cost_set",
+"change the cost of this card to 4"
+],
+[
+"deckbuilding_effect",
+"if this match is Unlimited"
+],
+[
+"discard",
+"Discard 2 random cards from your hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"graveyard",
+"discarded from your hand this match"
+],
+[
+"summon",
+"Summon copies of 4 different random allied followers or amulets"
+],
+[
+"copy",
+"Summon copies"
+],
+[
+"variety_payoff",
+"4 different"
+],
+[
+"delayed",
+"At the start of your next turn"
+],
+[
+"hand_disruption",
+"discard 2 random cards from your hand"
+]
+],
+"755914": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"summon",
+"Summon a Legendary Sword"
+],
+[
+"haste",
+"Rush"
+],
+[
+"damage_reduction",
+"Reduce damage to this follower to 0"
+],
+[
+"immunity",
+"Not affected by other cards' effects"
+]
+],
+"755950": [
+[
+"cost_type",
+"Accelerate (2)"
+],
+[
+"summon",
+"Summon 2 Megalorcas"
+],
+[
+"haste",
+"give them Rush"
+],
+[
+"enemy_benefit",
+"Summon an enemy Megalorca"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"taunt",
+"Give them Ward"
+],
+[
+"transform",
+"evolve them"
+],
+[
+"enemy_benefit",
+"Summon 2 enemy Megalorcas"
+],
+[
+"counterattack",
+"Whenever an enemy follower attacks, deal 2 damage to it"
+],
+[
+"direct_damage",
+"the enemy leader"
+],
+[
+"heal",
+"restore 2 defense to your leader"
+]
+],
+"755963": [
+[
+"free_play",
+"invoke this card"
+],
+[
+"cast_from_zone",
+"invoke this card"
+],
+[
+"sacrifice",
+"Burial Rite"
+],
+[
+"count_payoff",
+"if it is your fifth, seventh, or ninth time this match"
+],
+[
+"return_to_hand",
+"return it to your hand"
+],
+[
+"death_trigger",
+"When this follower leaves play"
+],
+[
+"turn_end",
+"at the end of your turn"
+],
+[
+"summon",
+"summon a Lich"
+]
+],
+"756041": [
+[
+"death_trigger",
+"Last Words"
+],
+[
+"delayed",
+"During your next turn"
+],
+[
+"stat_multiply",
+"double the attack and defense"
+],
+[
+"tribal",
+"Dragoncraft follower"
+],
+[
+"on_ally_play",
+"that comes into play"
+]
+],
+"756066": [
+[
+"merge_attach",
+"Whenever cards are fused to this card"
+],
+[
+"cost_set",
+"change this card's cost to 6"
+],
+[
+"low_life",
+"Vengeance is active for you"
+],
+[
+"haste",
+"Storm"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"aoe_damage",
+"Deal X damage to all other followers"
+],
+[
+"scope_global",
+"all other followers"
+],
+[
+"friendly_fire",
+"deal damage to your leader until their defense drops to 1"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"damage_reduction",
+"Reduce damage to your leader to 0"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+]
+],
+"756095": [
+[
+"on_spell",
+"Whenever you play a spell"
+],
+[
+"in_hand_buff",
+"Subtract 1 from the cost of this card"
+],
+[
+"on_ally_play",
+"Whenever you play a Mysteria card"
+],
+[
+"tribal",
+"Mysteria card"
+],
+[
+"aoe_damage",
+"deal 1 damage to all enemy followers"
+],
+[
+"ping",
+"deal 1 damage to all enemy followers"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+]
+],
+"756119": [
+[
+"cost_type",
+"Crystallize (2)"
+],
+[
+"delayed",
+"Countdown (3)"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"self_mill",
+"Banish 2 random cards from your deck"
+],
+[
+"banish",
+"Banish 2 random cards from your deck"
+],
+[
+"random_effect",
+"random"
+],
+[
+"deck_condition",
+"if you have 10 cards or less in your deck"
+],
+[
+"speed",
+"subtract 2 from this amulet's Countdown"
+],
+[
+"death_trigger",
+"Last Words"
+],
+[
+"summon",
+"Summon a Grasping Spider"
+],
+[
+"deathtouch",
+"Bane"
+],
+[
+"attack_lock",
+"Can't attack"
+],
+[
+"scope_multi",
+"all enemy followers"
+],
+[
+"temporary_effect",
+"until the end of your opponent's turn"
+],
+[
+"stat_loss",
+"give this follower -X/-X"
+],
+[
+"variable_stats",
+"X equals the number of cards in your deck minus 10"
+]
+],
+"756136": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"condition_count",
+"if you have 10 play point orbs"
+],
+[
+"in_hand_buff",
+"subtract 10 from the cost of this card"
+],
+[
+"cost_type",
+"Accelerate (1)"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"condition_count",
+"If you have more evolution points than your opponent"
+],
+[
+"summon",
+"summon a Megalorca"
+],
+[
+"on_play",
+"Fanfare"
+],
+[
+"stat_loss",
+"Give -X/-X to all enemy followers"
+],
+[
+"scope_multi",
+"all enemy followers"
+],
+[
+"resource_banking",
+"X equals your remaining play points"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"bounce_enemy",
+"Return another card in play to the player's hand"
+]
+],
+"813708": [
+[
+"deck_condition",
+"If Resonance is active for you"
+],
+[
+"in_hand_buff",
+"subtract 1 from the cost of a random Paradigm Shift in your hand"
+],
+[
+"random_effect",
+"random"
+],
+[
+"ping",
+"deal 1 damage to a random enemy follower"
+],
+[
+"direct_damage",
+"the enemy leader"
+]
+],
+"813724": [
+[
+"silence",
+"Remove all effects from all followers"
+],
+[
+"board_wipe",
+"banish all cards in play"
+],
+[
+"banish",
+"Banish all cards in your hand and deck"
+],
+[
+"hand_deck_swap",
+"Banish all cards in your hand and deck"
+],
+[
+"copy",
+"Put copies of the first 10 cards your opponent played this match"
+],
+[
+"deck_position",
+"the Reaper at the bottom of your deck"
+],
+[
+"alt_wincon",
+"Transform the Reaper at the bottom of your deck into a Victory Card"
+],
+[
+"rule_change",
+"Treat allied cards that have been destroyed or discarded from your hand this match as if they were banished"
+],
+[
+"delayed",
+"At the end of your opponent's next turn"
+],
+[
+"steal",
+"put copies of each card in your opponent's hand into your hand"
+]
+],
+"813844": [
+[
+"sacrifice",
+"can be used to activate Earth Rite effects"
+]
+],
+"813851": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"condition_count",
+"there are 3 or less Curse of the Black Dragons in your hand"
+],
+[
+"condition_count",
+"If Overflow is active for you"
+],
+[
+"information",
+"reveal this card"
+],
+[
+"friendly_fire",
+"deal 1 damage to your leader"
+],
+[
+"damage",
+"deal 2 damage to a random enemy"
+],
+[
+"random_effect",
+"a random enemy"
+]
+],
+"813885": [
+[
+"transform",
+"Evolve an allied Forest Bat"
+],
+[
+"death_trigger",
+"give it Last Words"
+],
+[
+"delayed",
+"At the end of your opponent's turn"
+],
+[
+"summon",
+"summon a Forest Bat"
+]
+],
+"813954": [
+[
+"merge_attach",
+"Whenever cards are fused to this card"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"distribute",
+"Deal a pool of 4 damage divided between all enemies"
+],
+[
+"condition_count",
+"If at least 4 cards have been fused to this card"
+]
+],
+"814037": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"damage",
+"deal 2 damage to a random enemy follower"
+],
+[
+"random_effect",
+"random enemy follower"
+],
+[
+"synergy_payoff",
+"If any allied Relic Goddesses are in play"
+]
+],
+"814039": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"heal",
+"restore 1 defense to your leader"
+],
+[
+"synergy_payoff",
+"If any allied Relic Goddesses are in play"
+]
+],
+"814075": [
+[
+"taunt",
+"Ward"
+],
+[
+"deathtouch",
+"Gain Bane"
+],
+[
+"synergy_payoff",
+"while an allied Irate Forest Beast is in play"
+]
+],
+"814158": [
+[
+"merge_attach",
+"When cards are fused to this card"
+],
+[
+"self_destruct",
+"banish this card"
+],
+[
+"generate_cards",
+"randomly put X different cards from your leader's class into your hand"
+],
+[
+"condition_count",
+"X equals the number of cards fused"
+],
+[
+"random_effect",
+"randomly put"
+],
+[
+"generate_cards",
+"put a random Legendary card from your leader's class into your hand"
+],
+[
+"play_restriction",
+"Can only fuse if you haven't fused cards to a Radiant Crystal this turn"
+],
+[
+"draw",
+"Draw until you have 8 cards in your hand"
+],
+[
+"hand_size",
+"until you have 8 cards in your hand"
+]
+],
+"814222": [
+[
+"stat_gain",
+"Give +4/+4 to an allied follower"
+],
+[
+"synergy_payoff",
+"If that follower is Shin, Lawful Light"
+],
+[
+"transform",
+"transform it into Shin, Chaotic Darkness"
+]
+],
+"814248": [
+[
+"direct_damage",
+"Deal 10 damage to the enemy leader"
+],
+[
+"heal",
+"Restore 10 defense to your leader"
+],
+[
+"deck_position",
+"the Reaper at the bottom of your deck"
+],
+[
+"rule_change",
+"reduce your leader's maximum defense by 5 instead of losing the match"
+]
+],
+"814297": [
+[
+"on_play",
+"Fanfare"
+],
+[
+"delayed",
+"At the start of your next turn"
+],
+[
+"hand_disruption",
+"discard a random card from your hand"
+],
+[
+"random_effect",
+"a random card"
+]
+],
+"814413": [
+[
+"death_trigger",
+"Whenever an allied follower is destroyed"
+],
+[
+"in_hand_buff",
+"subtract 1 from the cost of this card"
+],
+[
+"protection",
+"Can't be destroyed by effects"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"aoe_damage",
+"deal 5 damage to all enemies"
+],
+[
+"direct_damage",
+"deal 5 damage to all enemies"
+],
+[
+"scope_multi",
+"all enemies"
+],
+[
+"synergy_payoff",
+"If an allied Destruction in White is in play"
+]
+],
 "752370": [
 [
 "banish",

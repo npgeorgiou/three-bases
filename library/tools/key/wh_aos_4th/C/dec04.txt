@@ -1,0 +1,15 @@
+794499 U -protection
+794500 A
+794514 U -stat_gain
+794529 A
+794534 U -self_destruct -on_attack
+794537 U
+794555 U -temporary_effect
+794557 U -temporary_effect
+794558 U -lane_rule -target_choice
+794559 U -rule_change -stat_gain
+794590 U -lane_rule -territory_trigger -blink -protection ;; movement|remove it from the battlefield and set it up again
+815110 B
+815139 B
+815243 A ;; adjacency|wholly within 6" of this unit
+815249 B

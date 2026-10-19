@@ -1,0 +1,50 @@
+787810 saving_throws once_per_game activated stat_gain temporary_buff aura
+787813 on_attack mark_target advantage="you can re‑roll the Hit roll" tribal@A temporary_buff permanent_growth@A target_choice movement
+787829 once_per_game modal_choice telegraphed_threats mark_target death_trigger
+787855 death_trigger@A stat_gain turn_start tribal heal saving_throws temporary_buff immunity@A merge_attach@A
+787856 once_per_game shield death_trigger
+787860 movement cant_attack reactions@B counterattack targeting_rules target_choice
+787863 activated death_trigger random_effect cheat_death counterattack ranged
+787886 on_attack tribal advantage death_trigger
+787932 activated cheat_death@B random_effect merge_attach@A on_attack temporary_buff piercing
+787951 aura@A advantage turn_start modal_choice buff stat_gain piercing merge_attach@A friendly_fire
+787996 on_damaged reactions@B movement random_effect targeting_rules saving_throws death_trigger
+787998 aura@A buff@B turn_start resource_gain saving_throws once_per_game temporary_buff merge_attach@A piercing
+788011 once_per_game on_damaged damage_reduction saving_throws damage_types="against mortal wounds" temporary_buff merge_attach start_of_game reserve_bench placement_rules cost_set piercing
+788012 saving_throws piercing@B mark_target buff@B merge_attach start_of_game once_per_game cost_set placement_rules@A reserve_bench="Rapid Ingress Stratagem" on_damaged="just after a mortal wound is allocated" damage_types temporary_buff
+788014 adjacency immunity aura piercing on_enemy_enter="when an enemy unit ends a Normal, Advance or Fall Back move within 9" movement saving_throws death_trigger
+788034 merge_attach@A aura@A speed on_kill@A resource_gain permanent_growth target_choice
+788049 damage_reduction board_limit friendly_fire death_trigger
+788061 speed board_limit death_trigger
+788063 board_limit on_attack mark_target advantage temporary_effect death_trigger
+788094 aura@A immunity="cannot be targeted by ranged attacks unless the attacking model is within 12" turn_end return_to_hand reserve_bench@B merge_attach@A stat_gain@B target_choice
+788100 merge_attach@A advantage reserve_bench
+788103 on_attack tribal stress_morale@B
+788117 start_of_game reserve_bench placement_rules once_per_game cost_set combat_start stress_morale stat_gain piercing
+788158 targeting_rules buff death_trigger
+788165 on_attack mark_target advantage temporary_effect board_limit death_trigger
+788167 reserve_bench turn_number placement_rules@B board_limit speed death_trigger
+788169 buff targeting_rules death_trigger
+788171 damage_reduction board_limit friendly_fire death_trigger
+788179 aura@A buff merge_attach@A reserve_bench
+788186 aura@A stat_gain saving_throws start_of_game merge_attach@A
+788187 start_of_game zone_control="you can select one objective marker on the battlefield" tribal advantage on_enemy_enter="when an enemy unit ends a Normal, Advance or Fall Back move within 9" movement deckbuilding_effect immunity
+788212 on_attack mark_target advantage temporary_effect board_limit death_trigger
+788217 turn_start heal buff tribal temporary_buff merge_attach@A immunity@A death_trigger@A stat_gain
+788235 merge_attach@A aura@A on_attack buff@B temporary_buff shield
+788238 merge_attach@A buff stat_gain
+788244 protection stat_condition piercing="Devastating Wounds" reserve_bench
+788250 on_enemy_enter movement@B aura tribal stat_gain
+788253 on_attack="after this model has shot" tribal debuff@B stat_loss temporary_effect board_limit death_trigger
+788254 speed temporary_buff board_limit death_trigger
+788270 aura@A movement@A buff reactions merge_attach@A
+788278 aura@B reactions cost_increase start_of_game tribal reserve_bench@B merge_attach@A
+788283 once_per_game combat_start activated stat_gain temporary_buff merge_attach aura@A protection death_trigger reactions movement random_effect target_choice
+788285 stat_gain start_of_game movement reserve_bench merge_attach saving_throws
+788300 on_enemy_enter="when an enemy unit ends a Normal, Advance or Fall Back move within 9" movement piercing target_choice
+788310 saving_throws merge_attach@A on_kill resource_gain
+788313 targeting_rules@A buff piercing death_trigger
+788314 condition_life advantage saving_throws piercing death_trigger
+788331 buff targeting_rules death_trigger
+788332 damage_reduction board_limit death_trigger
+788350 stat_gain@A temporary_buff condition_life stat_loss debuff saving_throws death_trigger
