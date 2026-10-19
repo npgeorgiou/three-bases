@@ -28,6 +28,12 @@ def judge(Kc):
     return ok
 
 res = {}; restore = []; undo = []; basemap = collections.defaultdict(set)
+# a later pass keeps the earlier revert lines and undoes further concepts where the earlier undos (which spare key-right and reviewed
+# entries) were not enough
+PREV = [l.rstrip('\n').split('\t') for l in open(os.path.join(OUT, 'revert.tsv'), encoding='utf-8') if l.strip() and not l.startswith('#')] \
+    if mode == 'revert' and os.path.exists(os.path.join(OUT, 'revert.tsv')) else []
+done = {(r[1], r[2]) for r in PREV if r[0] == 'undo'}
+restore += [(int(r[1]), r[2], r[3]) for r in PREV if r[0] == 'restore']; undo += [(r[1], r[2]) for r in PREV if r[0] == 'undo']
 for g in K.GAMES:
     key = json.load(open(os.path.join(HERE, 'key', g, 'key.json'))); ids = [int(i) for i in key]
     live = {i for i, in cn.execute('SELECT id FROM entities WHERE game=?', (g,))}; ids = [i for i in ids if i in live]
@@ -50,6 +56,7 @@ for g in K.GAMES:
         need = wn - wo; s = 0
         for k, n in added_wrong.most_common():
             if s >= need: break
+            if (g, k) in done: continue
             undo.append((g, k)); s += n
 if mode == 'revert':
     txt = dict(co.execute('SELECT id, text FROM entities'))
@@ -60,10 +67,10 @@ if mode == 'revert':
     with open(os.path.join(OUT, 'revert.tsv'), 'w') as fh:
         fh.write('# made by final_compare.py (see final_revert.py)\n')
         for e, k, r in sorted(set(restore)): fh.write(f'restore\t{e}\t{k}\t{r}\n')
-        for g, k in undo: fh.write(f'undo\t{g}\t{k}\n')
+        for g, k in dict.fromkeys(undo): fh.write(f'undo\t{g}\t{k}\n')
     with open(os.path.join(OUT, 'revert_base.tsv'), 'w') as fh:
         for (g, k), es in sorted(basemap.items()): fh.write(f'{g}\t{k}\t{",".join(map(str, sorted(es)))}\n')
-    print('restore', len(set(restore)), 'undo', len(undo), undo[:12])
+    print('restore', len(set(restore)), 'undo', len(undo), [u for u in undo if u not in done][:12])
 for g, (n, wo, wn, mo, mn, lost, aw) in res.items():
     flag = '' if (wn <= wo and mn <= mo and lost == 0) else '  WORSE'
     print(f'{g:18} n {n:4}  wrong/100 {100 * wo / n:6.1f} -> {100 * wn / n:6.1f}   missed/100 {100 * mo / n:6.1f} -> {100 * mn / n:6.1f}   lost {lost}{flag}')
