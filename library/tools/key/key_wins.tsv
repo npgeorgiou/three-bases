@@ -11,14 +11,12 @@ entity	concept	action	why
 740625	stat_loss	drop	review tag the key calls wrong
 740625	variable_stats	drop	review tag the key calls wrong
 740626	graveyard	drop	review tag the key calls wrong
-740627	sacrifice	drop	review tag the key calls wrong
 740629	turn_end	drop	review tag the key calls wrong
 740630	self_destruct	drop	review tag the key calls wrong
 740631	null_body	drop	review tag the key calls wrong
 740631	slot_filler	drop	review tag the key calls wrong
 740633	blocking	drop	review tag the key calls wrong
 740634	adjacency	drop	review tag the key calls wrong
-740635	death_trigger	drop	review tag the key calls wrong
 740636	blocking	drop	review tag the key calls wrong
 740636	null_body	drop	review tag the key calls wrong
 740636	slot_filler	drop	review tag the key calls wrong
@@ -43,7 +41,6 @@ entity	concept	action	why
 740696	removal	drop	review tag the key calls wrong
 740699	adjacency	drop	review tag the key calls wrong
 740710	condition_count	drop	review tag the key calls wrong
-740715	evasion	drop	review tag the key calls wrong
 740715	null_body	drop	review tag the key calls wrong
 740718	stat_gain	drop	review tag the key calls wrong
 740720	tribal	drop	review tag the key calls wrong
@@ -68,7 +65,6 @@ entity	concept	action	why
 740737	null_body	drop	review tag the key calls wrong
 740739	null_body	drop	review tag the key calls wrong
 740740	condition_count	drop	review tag the key calls wrong
-740740	multiple_resources	drop	review tag the key calls wrong
 740740	null_body	drop	review tag the key calls wrong
 740740	repeat_trigger	drop	review tag the key calls wrong
 740742	null_body	drop	review tag the key calls wrong
@@ -89,9 +85,7 @@ entity	concept	action	why
 740755	null_body	drop	review tag the key calls wrong
 740755	ping	drop	review tag the key calls wrong
 740756	null_body	drop	review tag the key calls wrong
-740756	sacrifice	drop	review tag the key calls wrong
 740757	null_body	drop	review tag the key calls wrong
-740758	evasion	drop	review tag the key calls wrong
 740758	null_body	drop	review tag the key calls wrong
 740759	blocking	drop	review tag the key calls wrong
 740759	null_body	drop	review tag the key calls wrong
@@ -100,9 +94,7 @@ entity	concept	action	why
 740761	null_body	drop	review tag the key calls wrong
 740762	null_body	drop	review tag the key calls wrong
 740764	null_body	drop	review tag the key calls wrong
-740764	sacrifice	drop	review tag the key calls wrong
 740769	blocking	drop	review tag the key calls wrong
-740770	death_trigger	drop	review tag the key calls wrong
 740777	graveyard	drop	review tag the key calls wrong
 740777	permanent_growth	drop	review tag the key calls wrong
 740777	turn_start	drop	review tag the key calls wrong
@@ -124,7 +116,6 @@ entity	concept	action	why
 740788	null_body	drop	review tag the key calls wrong
 740792	null_body	drop	review tag the key calls wrong
 740795	damage	add	key concept
-740795	evasion	drop	review tag the key calls wrong
 740795	ping	drop	review concept broader or narrower than the key's
 740796	null_body	drop	review tag the key calls wrong
 740797	null_body	drop	review tag the key calls wrong
@@ -166,7 +157,6 @@ entity	concept	action	why
 740862	null_body	drop	review tag the key calls wrong
 740863	blocking	drop	review tag the key calls wrong
 740863	null_body	drop	review tag the key calls wrong
-740865	evasion	drop	review tag the key calls wrong
 740865	null_body	drop	review tag the key calls wrong
 740868	null_body	drop	review tag the key calls wrong
 740868	turn_start	drop	review tag the key calls wrong
@@ -176,7 +166,6 @@ entity	concept	action	why
 740871	passive	drop	review tag the key calls wrong
 740874	null_body	drop	review tag the key calls wrong
 740874	turn_start	drop	review tag the key calls wrong
-740882	multiple_resources	drop	review tag the key calls wrong
 740882	null_body	drop	review tag the key calls wrong
 740883	blocking	drop	review tag the key calls wrong
 740883	multiple_resources	drop	review tag the key calls wrong
@@ -191,7 +180,6 @@ entity	concept	action	why
 740894	null_body	drop	review tag the key calls wrong
 740901	graveyard	drop	review tag the key calls wrong
 740901	passive	drop	review tag the key calls wrong
-740902	sacrifice	drop	review tag the key calls wrong
 740912	blocking	drop	review tag the key calls wrong
 740912	null_body	drop	review tag the key calls wrong
 740914	direct_damage	drop	review tag the key calls wrong
@@ -212,17 +200,10 @@ entity	concept	action	why
 740937	generate_cards	drop	review tag the key calls wrong
 740938	null_body	drop	review tag the key calls wrong
 740938	permanent_growth	drop	review tag the key calls wrong
-740943	evasion	drop	review tag the key calls wrong
 740946	stat_loss	drop	review tag the key calls wrong
 740948	null_body	drop	review tag the key calls wrong
-740951	deathtouch	drop	review tag the key calls wrong
-740951	evasion	drop	review tag the key calls wrong
-740951	stat_loss	drop	review tag the key calls wrong
-740953	deathtouch	drop	review tag the key calls wrong
 740953	direct_damage	drop	review tag the key calls wrong
-740953	evasion	drop	review tag the key calls wrong
 740953	removal	drop	review tag the key calls wrong
-740953	stat_loss	drop	review tag the key calls wrong
 740956	blocking	drop	review tag the key calls wrong
 740956	null_body	drop	review tag the key calls wrong
 740959	null_body	drop	review tag the key calls wrong
@@ -261,7 +242,6 @@ entity	concept	action	why
 741000	shop_gold	add	key concept
 741002	run_structure	drop	review tag the key calls wrong
 741002	turn_start	drop	review tag the key calls wrong
-741004	excess_damage	drop	review tag the key calls wrong
 741005	random_ability	add	review dropped a key concept
 741011	graveyard	drop	review tag the key calls wrong
 741022	board_clog	drop	review tag the key calls wrong
@@ -289,7 +269,6 @@ entity	concept	action	why
 741047	boss_phases	add	review dropped a key concept
 741051	run_structure	drop	review tag the key calls wrong
 741051	tribal	drop	review tag the key calls wrong
-741061	forced_movement	drop	review tag the key calls wrong
 741063	evasion	drop	review tag the key calls wrong
 741070	generate_cards	drop	review tag the key calls wrong
 741071	counterattack	drop	review tag the key calls wrong
@@ -324,18 +303,15 @@ entity	concept	action	why
 741169	combo_sequence	drop	review tag the key calls wrong
 741174	death_count	add	review dropped a key concept
 741174	death_trigger	drop	review tag the key calls wrong
-741174	sacrifice	drop	review tag the key calls wrong
 741174	scope_self	drop	review tag the key calls wrong
 741174	stat_gain	drop	review tag the key calls wrong
 741176	terrain	drop	review tag the key calls wrong
 741189	zone_of_control	drop	review tag the key calls wrong
-741196	high_cost	drop	review tag the key calls wrong
 741196	terrain	drop	review tag the key calls wrong
 741204	cost_reduction	drop	review tag the key calls wrong
 741216	stat_gain	drop	review tag the key calls wrong
 741230	adjacency	add	key concept
 741230	positional	drop	review concept broader or narrower than the key's
-741236	damage	drop	review tag the key calls wrong
 741236	on_damaged	drop	review tag the key calls wrong
 741236	scope_self	drop	review tag the key calls wrong
 741247	scope_self	drop	review tag the key calls wrong
@@ -360,7 +336,6 @@ entity	concept	action	why
 741295	passive	drop	review tag the key calls wrong
 741295	stat_gain	drop	review tag the key calls wrong
 741301	lifesteal	drop	review tag the key calls wrong
-741301	sacrifice	drop	review tag the key calls wrong
 741307	count_payoff	drop	review tag the key calls wrong
 741309	scope_self	drop	review tag the key calls wrong
 741310	variable_stats	drop	review tag the key calls wrong
@@ -378,7 +353,6 @@ entity	concept	action	why
 741334	protection	drop	review concept broader or narrower than the key's
 741336	passive	drop	review tag the key calls wrong
 741336	scope_self	drop	review tag the key calls wrong
-741336	summon	drop	review tag the key calls wrong
 741337	damage	drop	review tag the key calls wrong
 741342	symmetric_effect	drop	review tag the key calls wrong
 741344	cost_reduction	drop	review tag the key calls wrong
@@ -400,13 +374,10 @@ entity	concept	action	why
 741391	immobilize	drop	review tag the key calls wrong
 741391	zone_of_control	drop	review tag the key calls wrong
 741392	damage	drop	review tag the key calls wrong
-741392	movement	drop	review tag the key calls wrong
 741397	hand_deck_swap	drop	review tag the key calls wrong
-741399	draw	drop	review tag the key calls wrong
 741400	on_play	drop	review tag the key calls wrong
 741406	scope_self	drop	review tag the key calls wrong
 741406	symmetric_effect	drop	review tag the key calls wrong
-741411	movement	drop	review tag the key calls wrong
 741411	scope_global	add	key concept
 741411	symmetric_effect	drop	review concept broader or narrower than the key's
 741416	stat_gain	drop	review tag the key calls wrong
@@ -418,7 +389,6 @@ entity	concept	action	why
 741448	rule_change	drop	review tag the key calls wrong
 741449	temporary_effect	drop	review tag the key calls wrong
 741451	cost_reduction	drop	review tag the key calls wrong
-741452	movement	drop	review tag the key calls wrong
 741452	terrain	drop	review tag the key calls wrong
 741463	deck_modification	drop	review tag the key calls wrong
 741463	stat_gain	drop	review tag the key calls wrong
@@ -460,7 +430,6 @@ entity	concept	action	why
 741699	items_consumables	drop	review tag the key calls wrong
 741708	items_consumables	drop	review tag the key calls wrong
 741715	stat_loss	drop	review tag the key calls wrong
-741717	items_consumables	drop	review tag the key calls wrong
 741717	stat_gain	add	review dropped a key concept
 741726	zone_control	drop	review tag the key calls wrong
 741731	area_templates	drop	review tag the key calls wrong
@@ -502,7 +471,6 @@ entity	concept	action	why
 741882	transform	drop	review tag the key calls wrong
 741890	bounce_enemy	drop	review tag the key calls wrong
 741894	damage_reduction	drop	review tag the key calls wrong
-741912	ranged	drop	review tag the key calls wrong
 741927	regeneration	add	review dropped a key concept
 741931	adjacency	drop	review tag the key calls wrong
 741946	card_quality	add	key concept
@@ -511,14 +479,11 @@ entity	concept	action	why
 741953	stat_gain	drop	review tag the key calls wrong
 741954	adjacency	drop	review tag the key calls wrong
 741956	stat_gain	drop	review tag the key calls wrong
-741956	summon	drop	review tag the key calls wrong
-741966	movement	drop	review tag the key calls wrong
 741968	null_body	drop	review tag the key calls wrong
 741968	polymorph	add	key concept
 741968	removal	drop	review concept broader or narrower than the key's
 741973	damage	add	review dropped a key concept
 741973	stealth	drop	review tag the key calls wrong
-741979	ranged	drop	review tag the key calls wrong
 741990	items_consumables	drop	review tag the key calls wrong
 741997	items_consumables	drop	review tag the key calls wrong
 741999	alt_wincon	drop	review tag the key calls wrong
@@ -541,9 +506,7 @@ entity	concept	action	why
 742062	passive	drop	review concept broader or narrower than the key's
 742064	recycle	drop	review tag the key calls wrong
 742066	disable	drop	review concept broader or narrower than the key's
-742066	haste	drop	review tag the key calls wrong
 742066	suppress	add	key concept
-742083	damage	drop	review tag the key calls wrong
 742088	recycle	drop	review tag the key calls wrong
 742089	life_payment	drop	review tag the key calls wrong
 742089	recycle	drop	review tag the key calls wrong
@@ -553,7 +516,6 @@ entity	concept	action	why
 742097	damage	drop	review concept broader or narrower than the key's
 742097	symmetric_effect	drop	review tag the key calls wrong
 742105	stat_gain	drop	review tag the key calls wrong
-742114	positional	drop	review tag the key calls wrong
 742114	territory_trigger	drop	review tag the key calls wrong
 742123	adjacency	drop	review tag the key calls wrong
 742123	destroy	add	key concept
@@ -566,7 +528,6 @@ entity	concept	action	why
 742138	transform	drop	review tag the key calls wrong
 742140	deck_modification	drop	review tag the key calls wrong
 742142	variety_payoff	drop	review tag the key calls wrong
-742154	death_trigger	drop	review tag the key calls wrong
 742166	polymorph	add	key concept
 742166	removal	drop	review concept broader or narrower than the key's
 742169	items_consumables	drop	review tag the key calls wrong
@@ -583,7 +544,6 @@ entity	concept	action	why
 742243	tribal	drop	review tag the key calls wrong
 742270	aura	drop	review tag the key calls wrong
 742271	rows	drop	review tag the key calls wrong
-742273	damage	drop	review tag the key calls wrong
 742284	destroy	add	key concept
 742284	null_body	drop	review tag the key calls wrong
 742284	polymorph	add	key concept
@@ -638,7 +598,6 @@ entity	concept	action	why
 744106	tutor	drop	review concept broader or narrower than the key's
 744205	scope_global	drop	review tag the key calls wrong
 744264	permanent_growth	drop	review tag the key calls wrong
-744264	spell_power	add	review dropped a key concept
 744281	generate_cards	drop	review tag the key calls wrong
 744388	life_payment	drop	review tag the key calls wrong
 744479	stat_gain	drop	review tag the key calls wrong
@@ -653,8 +612,6 @@ entity	concept	action	why
 744820	hero_power	add	review dropped a key concept
 745360	tribal	drop	review concept broader or narrower than the key's
 745360	type_grant	add	key concept
-745404	summon	drop	review tag the key calls wrong
-745432	summon	drop	review tag the key calls wrong
 745521	donate	drop	review tag the key calls wrong
 745530	donate	drop	review tag the key calls wrong
 745533	donate	drop	review tag the key calls wrong
@@ -691,8 +648,6 @@ entity	concept	action	why
 746421	deck_modification	drop	review tag the key calls wrong
 746501	condition_count	drop	review concept broader or narrower than the key's
 746501	quests	add	key concept
-746513	polymorph	add	review dropped a key concept
-746513	spell_power	add	review dropped a key concept
 746549	life_payment	drop	review tag the key calls wrong
 746550	deck_modification	drop	review tag the key calls wrong
 746570	condition_count	drop	review concept broader or narrower than the key's
@@ -707,7 +662,6 @@ entity	concept	action	why
 747153	condition_count	drop	review concept broader or narrower than the key's
 747153	count_payoff	add	key concept
 747158	deck_modification	drop	review tag the key calls wrong
-747242	summon	drop	review tag the key calls wrong
 747269	scope_global	add	key concept
 747269	symmetric_effect	drop	review concept broader or narrower than the key's
 747276	on_attack	drop	review tag the key calls wrong
@@ -741,7 +695,6 @@ entity	concept	action	why
 748074	tribal	drop	review tag the key calls wrong
 748116	shop_gold	drop	review tag the key calls wrong
 748129	positional	drop	review tag the key calls wrong
-748140	summon	drop	review tag the key calls wrong
 748142	stat_gain	add	review dropped a key concept
 748142	turn_start	add	review dropped a key concept
 748144	shop_gold	drop	review tag the key calls wrong
@@ -752,13 +705,8 @@ entity	concept	action	why
 748167	shop_gold	drop	review tag the key calls wrong
 748167	stat_gain	add	review dropped a key concept
 748205	selection	drop	review tag the key calls wrong
-748288	auto_battle	drop	review tag the key calls wrong
-748288	summon	drop	review tag the key calls wrong
 748319	shop_gold	drop	review tag the key calls wrong
 748408	shop_gold	drop	review tag the key calls wrong
-748417	auto_battle	drop	review tag the key calls wrong
-748442	on_play	drop	review tag the key calls wrong
-748442	repeat_trigger	add	review dropped a key concept
 748452	generate_cards	drop	review tag the key calls wrong
 748452	shop_gold	drop	review tag the key calls wrong
 748477	cost_condition	drop	review tag the key calls wrong
@@ -803,7 +751,6 @@ entity	concept	action	why
 748871	turn_end	drop	review tag the key calls wrong
 748897	temporary_buff	add	key concept
 748897	temporary_effect	drop	review concept broader or narrower than the key's
-748916	auto_battle	drop	review tag the key calls wrong
 748927	heal	drop	review tag the key calls wrong
 748958	shop_gold	drop	review tag the key calls wrong
 748971	shop_gold	drop	review tag the key calls wrong
@@ -836,19 +783,16 @@ entity	concept	action	why
 749188	delayed	drop	review tag the key calls wrong
 749188	shop_gold	drop	review tag the key calls wrong
 749282	generate_cards	drop	review tag the key calls wrong
-749282	on_attack	drop	review tag the key calls wrong
 749318	condition_count	drop	review concept broader or narrower than the key's
 749318	variety_payoff	add	key concept
 749354	shop_gold	drop	review tag the key calls wrong
 749436	heal	drop	review tag the key calls wrong
 749440	stat_gain	add	review dropped a key concept
-749447	on_play	drop	review tag the key calls wrong
 749507	condition_count	drop	review concept broader or narrower than the key's
 749507	count_payoff	add	key concept
 749555	shop_gold	drop	review tag the key calls wrong
 749589	items_consumables	drop	review tag the key calls wrong
 749613	permanent_growth	drop	review tag the key calls wrong
-749613	summon	drop	review tag the key calls wrong
 749644	items_consumables	drop	review tag the key calls wrong
 749650	condition_count	drop	review concept broader or narrower than the key's
 749650	death_count	add	key concept
@@ -870,7 +814,6 @@ entity	concept	action	why
 749692	items_consumables	drop	review tag the key calls wrong
 749706	items_consumables	drop	review tag the key calls wrong
 749707	items_consumables	drop	review tag the key calls wrong
-749707	summon	drop	review tag the key calls wrong
 749708	items_consumables	drop	review tag the key calls wrong
 749708	revive	drop	review tag the key calls wrong
 749708	turn_start	add	review dropped a key concept
@@ -888,7 +831,6 @@ entity	concept	action	why
 749806	symmetric_effect	drop	review tag the key calls wrong
 749837	items_consumables	drop	review tag the key calls wrong
 749846	items_consumables	drop	review tag the key calls wrong
-749846	on_attack	drop	review tag the key calls wrong
 749847	items_consumables	drop	review tag the key calls wrong
 749849	items_consumables	drop	review tag the key calls wrong
 749871	items_consumables	drop	review tag the key calls wrong
@@ -898,12 +840,9 @@ entity	concept	action	why
 749900	items_consumables	drop	review tag the key calls wrong
 749903	items_consumables	drop	review tag the key calls wrong
 749961	revive	drop	review tag the key calls wrong
-749989	on_play	drop	review tag the key calls wrong
-749989	repeat_trigger	add	review dropped a key concept
 750035	shop_gold	drop	review tag the key calls wrong
 750056	items_consumables	drop	review tag the key calls wrong
 750062	items_consumables	drop	review tag the key calls wrong
-750104	auto_battle	drop	review tag the key calls wrong
 750139	hand_size	drop	review tag the key calls wrong
 750155	shop_gold	drop	review tag the key calls wrong
 750156	hand_size	drop	review tag the key calls wrong
@@ -912,7 +851,6 @@ entity	concept	action	why
 750162	selection	drop	review concept broader or narrower than the key's
 750162	shop_gold	drop	review tag the key calls wrong
 750181	shop_gold	drop	review tag the key calls wrong
-750187	shield	drop	review tag the key calls wrong
 750194	heal	drop	review tag the key calls wrong
 750197	stat_gain	add	review dropped a key concept
 750199	adjacency	add	key concept
@@ -950,7 +888,6 @@ entity	concept	action	why
 750806	stat_condition	drop	review tag the key calls wrong
 750830	multi_attack	add	review dropped a key concept
 750830	passive	drop	review tag the key calls wrong
-750870	direct_damage	drop	review tag the key calls wrong
 750870	spell_speed	add	review dropped a key concept
 750918	on_spell	drop	review tag the key calls wrong
 750941	damage	drop	review tag the key calls wrong
@@ -990,7 +927,6 @@ entity	concept	action	why
 751396	resource_gain	add	review dropped a key concept
 751422	hand_size	drop	review tag the key calls wrong
 751425	cost_reduction	drop	review tag the key calls wrong
-751425	generate_cards	add	review dropped a key concept
 751425	on_ally_play	add	review dropped a key concept
 751425	permanent_growth	add	review dropped a key concept
 751441	life_payment	drop	review tag the key calls wrong
@@ -1027,8 +963,6 @@ entity	concept	action	why
 751885	cost_type	drop	review concept broader or narrower than the key's
 751885	kicker	add	key concept
 751915	spell_speed	add	review dropped a key concept
-751939	copy	add	review dropped a key concept
-751939	death_trigger	add	review dropped a key concept
 751939	generate_cards	drop	review tag the key calls wrong
 751961	attack_token	drop	review tag the key calls wrong
 751976	stat_condition	drop	review tag the key calls wrong
@@ -1075,13 +1009,10 @@ entity	concept	action	why
 755142	enemy_benefit	drop	review tag the key calls wrong
 755154	cost_reduction	drop	review tag the key calls wrong
 755169	upgrade	drop	review tag the key calls wrong
-755201	targeting_rules	add	key concept
-755201	taunt	drop	review concept broader or narrower than the key's
 755431	board_limit	add	key concept
 755431	slot_filler	drop	review concept broader or narrower than the key's
 755934	condition_count	drop	review tag the key calls wrong
 755934	destroy	drop	review tag the key calls wrong
-755934	high_cost	drop	review tag the key calls wrong
 755934	tutor	drop	review tag the key calls wrong
 755989	friendly_fire	drop	review tag the key calls wrong
 755989	symmetric_effect	drop	review tag the key calls wrong
@@ -1091,8 +1022,6 @@ entity	concept	action	why
 756144	targeting_rules	drop	review tag the key calls wrong
 756145	damage	add	key concept
 756145	lifesteal	drop	review concept broader or narrower than the key's
-756183	damage_over_time	drop	review tag the key calls wrong
-756183	stat_loss	drop	review tag the key calls wrong
 756185	sacrifice	drop	review tag the key calls wrong
 756186	steal	drop	review tag the key calls wrong
 756193	information	drop	review concept broader or narrower than the key's
@@ -1126,13 +1055,11 @@ entity	concept	action	why
 756473	disruption	add	key concept
 756473	junk_cards	drop	review concept broader or narrower than the key's
 756482	board_clog	drop	review tag the key calls wrong
-756482	damage_over_time	drop	review tag the key calls wrong
 756482	enemy_benefit	drop	review tag the key calls wrong
 756482	free_play	drop	review tag the key calls wrong
 756482	placement_rules	drop	review tag the key calls wrong
 756482	rows	drop	review tag the key calls wrong
 756482	stat_gain	drop	review tag the key calls wrong
-756482	stat_loss	drop	review tag the key calls wrong
 756492	free_play	drop	review tag the key calls wrong
 756495	scope_multi	drop	review tag the key calls wrong
 756501	stat_gain	drop	review tag the key calls wrong
@@ -1162,7 +1089,6 @@ entity	concept	action	why
 756601	free_play	drop	review tag the key calls wrong
 756601	information	drop	review tag the key calls wrong
 756611	death_count	add	review dropped a key concept
-756611	destroy	drop	review tag the key calls wrong
 756611	stat_gain	drop	review tag the key calls wrong
 756615	rows	drop	review tag the key calls wrong
 756617	aoe_damage	drop	review tag the key calls wrong
@@ -1172,19 +1098,16 @@ entity	concept	action	why
 756622	selection	drop	review tag the key calls wrong
 756624	selection	drop	review tag the key calls wrong
 756651	deckbuilding_effect	drop	review tag the key calls wrong
-756665	board_presence	drop	review tag the key calls wrong
 756670	activated	add	review dropped a key concept
 756670	round_passing	drop	review tag the key calls wrong
 756698	enemy_benefit	drop	review tag the key calls wrong
 756699	aoe_damage	add	key concept
 756699	damage	drop	review concept broader or narrower than the key's
 756699	ping	add	key concept
-756699	summon	drop	review tag the key calls wrong
 756729	stat_gain	drop	review tag the key calls wrong
 756741	turn_start	add	review dropped a key concept
 756769	rows	drop	review tag the key calls wrong
 756769	silence	add	review dropped a key concept
-756769	stat_loss	drop	review tag the key calls wrong
 756779	activated	drop	review concept broader or narrower than the key's
 756779	cooldowns	add	key concept
 756779	rows	drop	review tag the key calls wrong
@@ -1224,9 +1147,7 @@ entity	concept	action	why
 756948	activated	drop	review concept broader or narrower than the key's
 756948	cooldowns	add	key concept
 756948	copy	drop	review tag the key calls wrong
-756948	damage_over_time	drop	review tag the key calls wrong
 756948	round_carryover	drop	review tag the key calls wrong
-756948	stat_loss	drop	review tag the key calls wrong
 756954	tank	drop	review tag the key calls wrong
 756955	block_armor	add	key concept
 756955	damage_reduction	drop	review concept broader or narrower than the key's
@@ -1235,7 +1156,6 @@ entity	concept	action	why
 756956	regeneration	drop	review tag the key calls wrong
 756978	activated	drop	review concept broader or narrower than the key's
 756978	cooldowns	add	key concept
-756978	damage_reduction	drop	review tag the key calls wrong
 756978	free_play	drop	review tag the key calls wrong
 756978	rows	drop	review tag the key calls wrong
 756978	tutor	drop	review tag the key calls wrong
@@ -1297,7 +1217,6 @@ entity	concept	action	why
 757185	rows	drop	review tag the key calls wrong
 757190	targeting_rules	drop	review tag the key calls wrong
 757200	rows	drop	review tag the key calls wrong
-757200	summon	add	review dropped a key concept
 757203	activated	drop	review concept broader or narrower than the key's
 757203	cooldowns	add	key concept
 757213	rows	drop	review tag the key calls wrong
@@ -1363,7 +1282,6 @@ entity	concept	action	why
 757398	variety_payoff	add	key concept
 757405	activated	drop	review concept broader or narrower than the key's
 757405	cooldowns	add	key concept
-757405	high_cost	drop	review tag the key calls wrong
 757405	summon	drop	review tag the key calls wrong
 757410	rows	drop	review tag the key calls wrong
 757427	combo_sequence	drop	review tag the key calls wrong
@@ -1387,7 +1305,6 @@ entity	concept	action	why
 757481	adjacency	drop	review tag the key calls wrong
 757485	damage_over_time	add	review dropped a key concept
 757490	damage	drop	review tag the key calls wrong
-757493	draw	drop	review tag the key calls wrong
 757497	stat_gain	drop	review tag the key calls wrong
 757517	card_flow	drop	review concept broader or narrower than the key's
 757517	deck_position	add	key concept
@@ -1399,13 +1316,11 @@ entity	concept	action	why
 757542	generate_cards	drop	review tag the key calls wrong
 757552	damage	drop	review concept broader or narrower than the key's
 757552	damage_over_time	add	key concept
-757567	life_payment	drop	review tag the key calls wrong
 757573	condition_count	add	key concept
 757573	count_payoff	drop	review concept broader or narrower than the key's
 757577	in_hand_buff	drop	review tag the key calls wrong
 757600	count_payoff	drop	review tag the key calls wrong
 757608	immunity	add	review dropped a key concept
-757608	stat_loss	drop	review tag the key calls wrong
 757625	damage	drop	review tag the key calls wrong
 757625	junk_cards	drop	review tag the key calls wrong
 757658	in_hand_buff	drop	review tag the key calls wrong
@@ -1413,7 +1328,6 @@ entity	concept	action	why
 757660	stacking_keyword	drop	review tag the key calls wrong
 757665	count_payoff	drop	review tag the key calls wrong
 757665	damage	drop	review tag the key calls wrong
-757665	discard	drop	review tag the key calls wrong
 757667	bounce_enemy	drop	review tag the key calls wrong
 757667	graveyard	drop	review tag the key calls wrong
 757667	return_to_hand	drop	review tag the key calls wrong
@@ -1448,7 +1362,6 @@ entity	concept	action	why
 757792	repeat_trigger	drop	review tag the key calls wrong
 757799	permanent_growth	drop	review tag the key calls wrong
 757799	snowball	drop	review tag the key calls wrong
-757800	life_payment	drop	review tag the key calls wrong
 757804	debuff	add	key concept
 757804	stat_loss	drop	review concept broader or narrower than the key's
 757814	exhaust	add	review dropped a key concept
@@ -1523,7 +1436,6 @@ entity	concept	action	why
 757969	passive	drop	review tag the key calls wrong
 757970	items_consumables	drop	review tag the key calls wrong
 757970	passive	drop	review tag the key calls wrong
-757973	heal	drop	review tag the key calls wrong
 757973	items_consumables	drop	review tag the key calls wrong
 757973	passive	drop	review tag the key calls wrong
 757977	items_consumables	drop	review tag the key calls wrong
@@ -1548,11 +1460,9 @@ entity	concept	action	why
 757991	passive	drop	review tag the key calls wrong
 757996	immunity	drop	review tag the key calls wrong
 757996	items_consumables	drop	review tag the key calls wrong
-757996	junk_cards	drop	review tag the key calls wrong
 757996	passive	drop	review tag the key calls wrong
 757997	items_consumables	drop	review tag the key calls wrong
 757997	passive	drop	review tag the key calls wrong
-757997	stat_loss	drop	review tag the key calls wrong
 757998	items_consumables	drop	review tag the key calls wrong
 757998	passive	drop	review tag the key calls wrong
 757999	items_consumables	drop	review tag the key calls wrong
@@ -1565,7 +1475,6 @@ entity	concept	action	why
 758002	passive	drop	review tag the key calls wrong
 758004	items_consumables	drop	review tag the key calls wrong
 758004	passive	drop	review tag the key calls wrong
-758004	stat_loss	drop	review tag the key calls wrong
 758005	items_consumables	drop	review tag the key calls wrong
 758005	passive	drop	review tag the key calls wrong
 758007	items_consumables	drop	review tag the key calls wrong
@@ -1602,10 +1511,8 @@ entity	concept	action	why
 758044	passive	drop	review tag the key calls wrong
 758045	items_consumables	drop	review tag the key calls wrong
 758045	passive	drop	review tag the key calls wrong
-758046	card_flow	add	key concept
 758046	items_consumables	drop	review tag the key calls wrong
 758046	passive	drop	review tag the key calls wrong
-758046	recycle	drop	review concept broader or narrower than the key's
 758048	items_consumables	drop	review tag the key calls wrong
 758048	passive	drop	review tag the key calls wrong
 758050	items_consumables	drop	review tag the key calls wrong
@@ -1649,15 +1556,12 @@ entity	concept	action	why
 758115	stances	add	review dropped a key concept
 758119	snowball	drop	review tag the key calls wrong
 758121	immunity	add	review dropped a key concept
-758121	stat_loss	drop	review tag the key calls wrong
 758123	flanking	add	key concept
 758123	positional	drop	review concept broader or narrower than the key's
 758130	round_carryover	drop	review tag the key calls wrong
 758153	stat_gain	drop	review tag the key calls wrong
 758158	stat_loss	drop	review tag the key calls wrong
 758161	slots_queue	drop	review tag the key calls wrong
-758170	junk_cards	drop	review tag the key calls wrong
-758177	multi_attack	drop	review tag the key calls wrong
 758185	stat_loss	drop	review tag the key calls wrong
 758191	boss_phases	drop	review tag the key calls wrong
 758197	snowball	drop	review tag the key calls wrong
@@ -1791,13 +1695,9 @@ entity	concept	action	why
 758527	temporary_effect	add	key concept
 758531	condition_count	add	key concept
 758531	count_payoff	drop	review concept broader or narrower than the key's
-758531	damage	add	review dropped a key concept
-758531	draw	drop	review tag the key calls wrong
 758575	in_hand_buff	drop	review tag the key calls wrong
 758578	random_effect	drop	review tag the key calls wrong
-758587	block_armor	drop	review tag the key calls wrong
 758591	synergy_payoff	drop	review tag the key calls wrong
-758597	summon	drop	review tag the key calls wrong
 758606	stat_loss	drop	review tag the key calls wrong
 758626	snowball	drop	review tag the key calls wrong
 758639	sacrifice	drop	review tag the key calls wrong
@@ -1806,9 +1706,7 @@ entity	concept	action	why
 758655	count_payoff	drop	review concept broader or narrower than the key's
 758665	recycle	drop	review tag the key calls wrong
 758686	cost_reduction	drop	review tag the key calls wrong
-758686	draw	drop	review tag the key calls wrong
 758714	death_count	drop	review tag the key calls wrong
-758755	exhaust	drop	review tag the key calls wrong
 758757	combo_sequence	drop	review tag the key calls wrong
 758761	self_destruct	drop	review tag the key calls wrong
 758775	combo_sequence	drop	review tag the key calls wrong
@@ -1821,8 +1719,6 @@ entity	concept	action	why
 758845	symmetric_effect	drop	review tag the key calls wrong
 758846	slots_queue	drop	review tag the key calls wrong
 758861	stacking_keyword	drop	review tag the key calls wrong
-758866	damage	add	review dropped a key concept
-758872	self_destruct	drop	review tag the key calls wrong
 758880	condition_count	add	key concept
 758880	count_payoff	drop	review concept broader or narrower than the key's
 758882	multi_attack	drop	review tag the key calls wrong
@@ -1858,7 +1754,6 @@ entity	concept	action	why
 758985	passive	drop	review tag the key calls wrong
 758994	items_consumables	drop	review tag the key calls wrong
 758994	passive	drop	review tag the key calls wrong
-758994	stat_loss	drop	review tag the key calls wrong
 759000	cost_set	drop	review tag the key calls wrong
 759000	items_consumables	drop	review tag the key calls wrong
 759000	passive	drop	review tag the key calls wrong
@@ -1962,7 +1857,6 @@ entity	concept	action	why
 759158	run_structure	drop	review tag the key calls wrong
 759174	items_consumables	drop	review tag the key calls wrong
 759174	run_structure	drop	review tag the key calls wrong
-759179	block_armor	drop	review tag the key calls wrong
 759179	items_consumables	drop	review tag the key calls wrong
 759179	passive	drop	review tag the key calls wrong
 759179	run_structure	drop	review tag the key calls wrong
@@ -2076,12 +1970,9 @@ entity	concept	action	why
 759492	resource_gain	drop	review tag the key calls wrong
 759502	debuff	add	key concept
 759502	stat_loss	drop	review concept broader or narrower than the key's
-759504	summon	add	review dropped a key concept
-759513	junk_cards	drop	review tag the key calls wrong
 759528	on_ally_play	drop	review tag the key calls wrong
 759569	upgrade	drop	review tag the key calls wrong
 759575	upgrade	drop	review tag the key calls wrong
-759577	block_armor	drop	review tag the key calls wrong
 759577	upgrade	drop	review tag the key calls wrong
 759582	cost_reduction	drop	review tag the key calls wrong
 759582	run_structure	drop	review tag the key calls wrong
@@ -2090,7 +1981,6 @@ entity	concept	action	why
 759585	upgrade	drop	review tag the key calls wrong
 759586	run_structure	drop	review tag the key calls wrong
 759586	upgrade	drop	review tag the key calls wrong
-759588	deck_modification	drop	review tag the key calls wrong
 759588	run_structure	drop	review tag the key calls wrong
 759588	upgrade	drop	review tag the key calls wrong
 759594	telegraphed_threats	drop	review tag the key calls wrong
@@ -2168,7 +2058,6 @@ entity	concept	action	why
 759735	resource_gain	drop	review tag the key calls wrong
 759740	items_consumables	drop	review tag the key calls wrong
 759757	run_structure	drop	review tag the key calls wrong
-759761	damage_over_time	drop	review tag the key calls wrong
 759768	null_body	drop	review tag the key calls wrong
 759768	positional	add	key concept
 759768	rank_positions	drop	review concept broader or narrower than the key's
@@ -2182,7 +2071,6 @@ entity	concept	action	why
 759871	aoe_damage	add	key concept
 759871	damage	drop	review concept broader or narrower than the key's
 759871	multi_target_attack	drop	review tag the key calls wrong
-759939	board_clog	drop	review tag the key calls wrong
 759939	damage	drop	review tag the key calls wrong
 759947	boss_phases	drop	review tag the key calls wrong
 759949	boss_phases	drop	review tag the key calls wrong
@@ -2230,7 +2118,6 @@ entity	concept	action	why
 760105	stat_loss	add	review dropped a key concept
 760107	items_consumables	drop	review tag the key calls wrong
 760107	stat_loss	add	review dropped a key concept
-760108	forced_movement	drop	review tag the key calls wrong
 760108	items_consumables	drop	review tag the key calls wrong
 760108	play_restriction	drop	review tag the key calls wrong
 760108	random_effect	drop	review tag the key calls wrong
@@ -2275,7 +2162,6 @@ entity	concept	action	why
 760173	items_consumables	drop	review tag the key calls wrong
 760175	items_consumables	drop	review tag the key calls wrong
 760176	items_consumables	drop	review tag the key calls wrong
-760184	damage_over_time	drop	review tag the key calls wrong
 760184	items_consumables	drop	review tag the key calls wrong
 760184	stat_loss	add	review dropped a key concept
 760185	items_consumables	drop	review tag the key calls wrong
@@ -2604,7 +2490,6 @@ entity	concept	action	why
 760759	run_structure	drop	review tag the key calls wrong
 760759	trap_secret	drop	review tag the key calls wrong
 760777	light_level	drop	review tag the key calls wrong
-760794	damage_over_time	add	review dropped a key concept
 760807	run_structure	drop	review tag the key calls wrong
 760818	run_structure	drop	review tag the key calls wrong
 760822	run_structure	drop	review tag the key calls wrong
@@ -2944,7 +2829,6 @@ entity	concept	action	why
 761142	aoe_damage	drop	review tag the key calls wrong
 761142	immunity	drop	review tag the key calls wrong
 761142	ranged	drop	review tag the key calls wrong
-761142	upgrade	add	review dropped a key concept
 761143	ranged	drop	review tag the key calls wrong
 761144	stat_loss	drop	review tag the key calls wrong
 761149	adjacency	drop	review tag the key calls wrong
@@ -2982,16 +2866,13 @@ entity	concept	action	why
 761227	damage_types	drop	review tag the key calls wrong
 761229	upgrade	drop	review tag the key calls wrong
 761233	upgrade	drop	review tag the key calls wrong
-761237	advantage	add	review dropped a key concept
 761237	upgrade	drop	review tag the key calls wrong
 761257	damage	drop	review tag the key calls wrong
 761257	on_attack	drop	review tag the key calls wrong
 761257	upgrade	drop	review tag the key calls wrong
 761284	upgrade	drop	review tag the key calls wrong
 761299	upgrade	drop	review tag the key calls wrong
-761357	stat_loss	drop	review tag the key calls wrong
 761357	upgrade	drop	review tag the key calls wrong
-761362	stat_loss	drop	review tag the key calls wrong
 761362	upgrade	drop	review tag the key calls wrong
 761374	delayed	drop	review tag the key calls wrong
 761374	disable	add	key concept
@@ -3047,7 +2928,6 @@ entity	concept	action	why
 761627	passive	drop	review concept broader or narrower than the key's
 761631	items_consumables	drop	review tag the key calls wrong
 761633	items_consumables	drop	review tag the key calls wrong
-761633	stat_loss	drop	review tag the key calls wrong
 761643	advantage	drop	review concept broader or narrower than the key's
 761643	buff	drop	review concept broader or narrower than the key's
 761643	random_effect	add	key concept
@@ -3104,7 +2984,6 @@ entity	concept	action	why
 761890	kicker	drop	review concept broader or narrower than the key's
 761890	movement	drop	review tag the key calls wrong
 761893	ranged	drop	review tag the key calls wrong
-761926	stat_loss	drop	review tag the key calls wrong
 761932	buff	drop	review concept broader or narrower than the key's
 761932	damage	drop	review tag the key calls wrong
 761932	stat_gain	add	key concept
@@ -3112,7 +2991,6 @@ entity	concept	action	why
 761954	on_attack	drop	review tag the key calls wrong
 761966	damage	add	key concept
 761966	damage_over_time	drop	review concept broader or narrower than the key's
-761966	on_attack	add	review dropped a key concept
 761966	turn_end	drop	review tag the key calls wrong
 761983	multiple_resources	drop	review concept broader or narrower than the key's
 761983	resource_conversion	add	key concept
@@ -3200,7 +3078,6 @@ entity	concept	action	why
 762434	stat_loss	drop	review concept broader or narrower than the key's
 762441	damage_types	drop	review tag the key calls wrong
 762447	damage_reduction	drop	review tag the key calls wrong
-762447	heal	drop	review tag the key calls wrong
 762447	passive	drop	review tag the key calls wrong
 762447	turn_start	drop	review tag the key calls wrong
 762452	damage	drop	review concept broader or narrower than the key's
@@ -3220,7 +3097,6 @@ entity	concept	action	why
 762471	stat_loss	drop	review tag the key calls wrong
 762481	disable	add	key concept
 762481	immobilize	drop	review concept broader or narrower than the key's
-762481	stat_loss	add	review dropped a key concept
 762485	aoe_damage	drop	review tag the key calls wrong
 762485	area_templates	drop	review tag the key calls wrong
 762485	damage_reduction	drop	review tag the key calls wrong
@@ -3238,7 +3114,6 @@ entity	concept	action	why
 762521	damage_reduction	drop	review tag the key calls wrong
 762521	damage_types	drop	review tag the key calls wrong
 762521	saving_throws	drop	review tag the key calls wrong
-762524	advantage	add	review dropped a key concept
 762524	aoe_damage	add	key concept
 762524	damage	drop	review concept broader or narrower than the key's
 762524	damage_over_time	add	key concept
@@ -3436,7 +3311,6 @@ entity	concept	action	why
 765525	items_consumables	drop	review tag the key calls wrong
 765535	items_consumables	drop	review tag the key calls wrong
 765570	items_consumables	drop	review tag the key calls wrong
-765570	piercing	drop	review tag the key calls wrong
 765574	items_consumables	drop	review tag the key calls wrong
 765601	items_consumables	drop	review tag the key calls wrong
 765606	items_consumables	drop	review tag the key calls wrong
@@ -3469,7 +3343,6 @@ entity	concept	action	why
 784325	damage	drop	review tag the key calls wrong
 784325	life_payment	drop	review tag the key calls wrong
 784325	ranged	drop	review tag the key calls wrong
-784368	piercing	add	review dropped a key concept
 784368	stat_gain	drop	review tag the key calls wrong
 784368	temporary_buff	drop	review concept broader or narrower than the key's
 784368	temporary_effect	add	key concept
@@ -3493,7 +3366,6 @@ entity	concept	action	why
 784470	movement	drop	review tag the key calls wrong
 784470	ranged	drop	review tag the key calls wrong
 784470	temporary_buff	add	review dropped a key concept
-784563	bodyguard	drop	review tag the key calls wrong
 784563	merge_attach	add	review dropped a key concept
 784663	cooldowns	drop	review tag the key calls wrong
 784700	ranged	drop	review tag the key calls wrong
@@ -3507,7 +3379,6 @@ entity	concept	action	why
 786282	passive	drop	review tag the key calls wrong
 786524	regeneration	drop	review tag the key calls wrong
 786655	ranged	drop	review tag the key calls wrong
-786840	random_effect	drop	review tag the key calls wrong
 786914	passive	drop	review tag the key calls wrong
 787152	damage_reduction	drop	review tag the key calls wrong
 787152	movement	drop	review tag the key calls wrong
@@ -3529,14 +3400,12 @@ entity	concept	action	why
 787629	stat_gain	add	key concept
 787629	stat_loss	drop	review concept broader or narrower than the key's
 787629	turn_start	drop	review tag the key calls wrong
-787788	bodyguard	drop	review tag the key calls wrong
 787788	damage_reduction	drop	review tag the key calls wrong
 787788	merge_attach	drop	review tag the key calls wrong
 787788	movement	drop	review tag the key calls wrong
 787788	multi_attack	drop	review tag the key calls wrong
 787788	on_attack	drop	review tag the key calls wrong
 787788	stress_morale	drop	review tag the key calls wrong
-787788	terrain	drop	review tag the key calls wrong
 787788	tribal	add	review dropped a key concept
 787932	movement	drop	review tag the key calls wrong
 787932	random_effect	drop	review concept broader or narrower than the key's
@@ -3551,13 +3420,10 @@ entity	concept	action	why
 788198	multi_attack	drop	review tag the key calls wrong
 788198	passive	drop	review tag the key calls wrong
 788198	piercing	drop	review tag the key calls wrong
-788198	placement_rules	drop	review tag the key calls wrong
 788198	ranged	drop	review tag the key calls wrong
 788198	reserve_bench	drop	review tag the key calls wrong
 788313	multi_attack	drop	review tag the key calls wrong
-788313	random_effect	add	key concept
 788313	ranged	drop	review tag the key calls wrong
-788313	saving_throws	drop	review concept broader or narrower than the key's
 788313	stat_gain	add	review dropped a key concept
 788652	damage_reduction	drop	review tag the key calls wrong
 788652	movement	drop	review tag the key calls wrong
@@ -3565,7 +3431,6 @@ entity	concept	action	why
 788652	random_effect	drop	review concept broader or narrower than the key's
 788652	ranged	drop	review tag the key calls wrong
 788652	saving_throws	add	key concept
-788671	ranged	drop	review tag the key calls wrong
 788673	on_damaged	drop	review tag the key calls wrong
 788673	passive	drop	review tag the key calls wrong
 788689	buff	add	key concept
@@ -3724,7 +3589,6 @@ entity	concept	action	why
 790804	aoe_damage	drop	review tag the key calls wrong
 790804	random_effect	add	key concept
 790804	ranged	drop	review tag the key calls wrong
-790804	terrain	drop	review tag the key calls wrong
 790808	aoe_damage	drop	review tag the key calls wrong
 790808	enemy_benefit	drop	review tag the key calls wrong
 790808	once_per_game	drop	review tag the key calls wrong
@@ -3745,9 +3609,7 @@ entity	concept	action	why
 791119	temporary_effect	drop	review tag the key calls wrong
 791123	passive	drop	review tag the key calls wrong
 791136	aura	add	key concept
-791136	heal	drop	review tag the key calls wrong
 791136	passive	drop	review concept broader or narrower than the key's
-791136	revive	drop	review tag the key calls wrong
 791150	activated	drop	review tag the key calls wrong
 791152	buff	add	key concept
 791152	passive	drop	review tag the key calls wrong
@@ -3775,7 +3637,6 @@ entity	concept	action	why
 791582	aura	add	key concept
 791582	passive	drop	review concept broader or narrower than the key's
 791647	passive	drop	review tag the key calls wrong
-791783	stat_multiply	add	review dropped a key concept
 791804	aura	add	key concept
 791804	damage_reduction	drop	review concept broader or narrower than the key's
 791804	passive	drop	review concept broader or narrower than the key's
@@ -3876,7 +3737,6 @@ entity	concept	action	why
 793187	damage_reduction	drop	review tag the key calls wrong
 793187	passive	drop	review tag the key calls wrong
 793233	activated	drop	review tag the key calls wrong
-793233	destroy	add	review dropped a key concept
 793245	cooldowns	drop	review tag the key calls wrong
 793280	activated	drop	review tag the key calls wrong
 793280	random_effect	drop	review tag the key calls wrong
@@ -4114,7 +3974,6 @@ entity	concept	action	why
 794620	buff	add	key concept
 794620	ranged	drop	review concept broader or narrower than the key's
 794620	stat_gain	drop	review concept broader or narrower than the key's
-794630	piercing	drop	review tag the key calls wrong
 794634	revive	drop	review tag the key calls wrong
 794640	stat_loss	drop	review tag the key calls wrong
 794641	reactions	drop	review tag the key calls wrong
@@ -4135,7 +3994,6 @@ entity	concept	action	why
 794661	random_effect	add	key concept
 794662	damage_reduction	drop	review concept broader or narrower than the key's
 794662	protection	add	key concept
-794668	ranged	drop	review tag the key calls wrong
 794668	zone_of_control	drop	review tag the key calls wrong
 794669	buff	add	key concept
 794669	stat_gain	drop	review concept broader or narrower than the key's
@@ -4172,7 +4030,6 @@ entity	concept	action	why
 794704	cant_block	drop	review concept broader or narrower than the key's
 794704	movement	add	review dropped a key concept
 794704	suppress	add	key concept
-794704	zone_of_control	drop	review tag the key calls wrong
 794706	activated	add	review dropped a key concept
 794706	ranged	drop	review tag the key calls wrong
 794711	on_kill	drop	review tag the key calls wrong
@@ -4196,7 +4053,6 @@ entity	concept	action	why
 794736	permanent_growth	drop	review tag the key calls wrong
 794740	evasion	drop	review tag the key calls wrong
 794740	ranged	drop	review tag the key calls wrong
-794740	zone_of_control	drop	review tag the key calls wrong
 794741	evasion	drop	review tag the key calls wrong
 794742	damage_reduction	drop	review tag the key calls wrong
 794742	evasion	drop	review tag the key calls wrong
@@ -4235,7 +4091,6 @@ entity	concept	action	why
 794753	protection	add	key concept
 794755	damage_reduction	drop	review tag the key calls wrong
 794755	passive	drop	review tag the key calls wrong
-794755	piercing	drop	review tag the key calls wrong
 794757	reactions	drop	review tag the key calls wrong
 794760	evasion	drop	review tag the key calls wrong
 794760	passive	drop	review tag the key calls wrong
@@ -4248,7 +4103,6 @@ entity	concept	action	why
 794766	ranged	drop	review concept broader or narrower than the key's
 794772	evasion	drop	review tag the key calls wrong
 794772	forced_movement	drop	review tag the key calls wrong
-794772	zone_of_control	drop	review tag the key calls wrong
 794774	damage_reduction	drop	review tag the key calls wrong
 794774	immunity	add	review dropped a key concept
 794774	passive	drop	review tag the key calls wrong
@@ -4284,9 +4138,7 @@ entity	concept	action	why
 794799	ranged	drop	review tag the key calls wrong
 794803	evasion	drop	review tag the key calls wrong
 794803	movement	drop	review tag the key calls wrong
-794803	zone_of_control	drop	review tag the key calls wrong
 794804	evasion	drop	review tag the key calls wrong
-794804	zone_of_control	drop	review tag the key calls wrong
 794805	immunity	add	review dropped a key concept
 794805	ranged	drop	review tag the key calls wrong
 794811	buff	add	key concept
@@ -4318,7 +4170,6 @@ entity	concept	action	why
 794825	passive	drop	review tag the key calls wrong
 794825	protection	add	key concept
 794826	forced_movement	drop	review tag the key calls wrong
-794826	ranged	drop	review tag the key calls wrong
 794826	zone_of_control	drop	review tag the key calls wrong
 794827	forced_movement	drop	review tag the key calls wrong
 794827	passive	drop	review tag the key calls wrong
@@ -4342,7 +4193,6 @@ entity	concept	action	why
 794834	disable	add	key concept
 794834	immobilize	drop	review concept broader or narrower than the key's
 794834	piercing	drop	review concept broader or narrower than the key's
-794834	ranged	drop	review concept broader or narrower than the key's
 794834	regeneration	add	review dropped a key concept
 794834	reserve_bench	drop	review tag the key calls wrong
 794834	turn_end	add	review dropped a key concept
@@ -4354,10 +4204,8 @@ entity	concept	action	why
 794836	ranged	drop	review concept broader or narrower than the key's
 794840	evasion	drop	review tag the key calls wrong
 794840	movement	drop	review tag the key calls wrong
-794840	zone_of_control	drop	review tag the key calls wrong
 794845	advantage	drop	review tag the key calls wrong
 794845	damage_reduction	drop	review concept broader or narrower than the key's
-794845	evasion	drop	review tag the key calls wrong
 794845	passive	drop	review tag the key calls wrong
 794845	protection	add	key concept
 794845	reactions	drop	review tag the key calls wrong
@@ -4387,7 +4235,6 @@ entity	concept	action	why
 794855	cheat_death	drop	review tag the key calls wrong
 794855	evasion	drop	review tag the key calls wrong
 794855	passive	drop	review tag the key calls wrong
-794855	zone_of_control	drop	review tag the key calls wrong
 794858	cheat_death	drop	review concept broader or narrower than the key's
 794858	damage_reduction	drop	review concept broader or narrower than the key's
 794858	passive	drop	review tag the key calls wrong
@@ -4395,7 +4242,6 @@ entity	concept	action	why
 794860	forced_movement	drop	review tag the key calls wrong
 794861	evasion	drop	review tag the key calls wrong
 794861	piercing	drop	review tag the key calls wrong
-794861	zone_of_control	drop	review tag the key calls wrong
 794862	debuff	add	key concept
 794862	forced_movement	drop	review tag the key calls wrong
 794862	passive	drop	review tag the key calls wrong
@@ -4438,10 +4284,8 @@ entity	concept	action	why
 794882	turnover	drop	review concept broader or narrower than the key's
 794885	ranged	drop	review tag the key calls wrong
 794888	evasion	drop	review tag the key calls wrong
-794888	zone_of_control	drop	review tag the key calls wrong
 794889	comeback	drop	review tag the key calls wrong
 794889	evasion	drop	review tag the key calls wrong
-794889	forced_movement	drop	review tag the key calls wrong
 794889	passive	drop	review tag the key calls wrong
 794891	damage_reduction	drop	review tag the key calls wrong
 794891	immunity	add	review dropped a key concept
@@ -4459,7 +4303,6 @@ entity	concept	action	why
 794895	disable	add	key concept
 794895	evasion	drop	review tag the key calls wrong
 794895	passive	drop	review tag the key calls wrong
-794895	zone_of_control	drop	review tag the key calls wrong
 794896	evasion	drop	review tag the key calls wrong
 794896	passive	drop	review tag the key calls wrong
 794896	stat_gain	drop	review tag the key calls wrong
@@ -4478,7 +4321,6 @@ entity	concept	action	why
 794899	movement	add	review dropped a key concept
 794899	passive	drop	review tag the key calls wrong
 794899	ranged	drop	review tag the key calls wrong
-794899	zone_of_control	drop	review tag the key calls wrong
 794904	damage_reduction	drop	review concept broader or narrower than the key's
 794904	forced_movement	drop	review tag the key calls wrong
 794904	passive	drop	review tag the key calls wrong
@@ -4488,10 +4330,8 @@ entity	concept	action	why
 794904	turnover	drop	review concept broader or narrower than the key's
 794907	evasion	drop	review tag the key calls wrong
 794907	passive	drop	review tag the key calls wrong
-794907	zone_of_control	drop	review tag the key calls wrong
 794911	buff	add	key concept
 794911	damage_reduction	drop	review concept broader or narrower than the key's
-794911	evasion	drop	review concept broader or narrower than the key's
 794911	forced_movement	drop	review tag the key calls wrong
 794911	on_attack	drop	review tag the key calls wrong
 794911	passive	drop	review tag the key calls wrong
@@ -4504,12 +4344,10 @@ entity	concept	action	why
 794912	passive	drop	review tag the key calls wrong
 794912	stat_gain	drop	review concept broader or narrower than the key's
 794914	cheat_death	drop	review concept broader or narrower than the key's
-794914	evasion	drop	review tag the key calls wrong
 794914	forced_movement	drop	review tag the key calls wrong
 794914	on_attack	drop	review tag the key calls wrong
 794914	piercing	drop	review tag the key calls wrong
 794914	protection	add	key concept
-794914	ranged	drop	review tag the key calls wrong
 794914	zone_of_control	drop	review tag the key calls wrong
 794916	buff	add	key concept
 794916	evasion	drop	review concept broader or narrower than the key's
@@ -4523,9 +4361,7 @@ entity	concept	action	why
 794919	evasion	drop	review tag the key calls wrong
 794919	movement	drop	review tag the key calls wrong
 794919	passive	drop	review tag the key calls wrong
-794919	zone_of_control	drop	review tag the key calls wrong
 794920	aura	add	review dropped a key concept
-794920	evasion	drop	review tag the key calls wrong
 794920	movement	add	review dropped a key concept
 794926	evasion	drop	review tag the key calls wrong
 794926	passive	drop	review tag the key calls wrong
@@ -4563,7 +4399,6 @@ entity	concept	action	why
 794935	stat_loss	drop	review concept broader or narrower than the key's
 794937	forced_movement	drop	review tag the key calls wrong
 794937	on_attack	drop	review tag the key calls wrong
-794937	ranged	drop	review tag the key calls wrong
 794937	zone_of_control	drop	review tag the key calls wrong
 794938	buff	add	key concept
 794938	cheat_death	drop	review tag the key calls wrong
@@ -4572,7 +4407,6 @@ entity	concept	action	why
 794938	passive	drop	review tag the key calls wrong
 794938	ranged	drop	review concept broader or narrower than the key's
 794938	stat_gain	drop	review concept broader or narrower than the key's
-794938	zone_of_control	drop	review tag the key calls wrong
 794943	buff	add	key concept
 794943	damage_reduction	drop	review concept broader or narrower than the key's
 794943	passive	drop	review tag the key calls wrong
@@ -4586,7 +4420,6 @@ entity	concept	action	why
 794946	stat_gain	drop	review concept broader or narrower than the key's
 794951	buff	add	key concept
 794951	damage_reduction	drop	review tag the key calls wrong
-794951	evasion	drop	review concept broader or narrower than the key's
 794951	immunity	add	review dropped a key concept
 794951	passive	drop	review tag the key calls wrong
 794951	piercing	drop	review concept broader or narrower than the key's
@@ -4608,13 +4441,11 @@ entity	concept	action	why
 795421	summon	drop	review tag the key calls wrong
 795421	tutor	drop	review tag the key calls wrong
 795422	scope_global	drop	review tag the key calls wrong
-795422	stat_loss	drop	review tag the key calls wrong
 795423	disruption	drop	review tag the key calls wrong
 795423	reveal_order	drop	review tag the key calls wrong
 795425	cheat_death	drop	review tag the key calls wrong
 795425	reactions	drop	review tag the key calls wrong
 795425	summon	drop	review tag the key calls wrong
-795429	slot_filler	drop	review tag the key calls wrong
 795435	synergy_payoff	drop	review tag the key calls wrong
 795443	control_reward	drop	review concept broader or narrower than the key's
 795443	permanent_growth	drop	review tag the key calls wrong
@@ -4629,7 +4460,6 @@ entity	concept	action	why
 795492	disruption	drop	review tag the key calls wrong
 795492	stat_loss	drop	review tag the key calls wrong
 795496	repeat_trigger	drop	review tag the key calls wrong
-795504	destroy	drop	review tag the key calls wrong
 795504	immunity	add	key concept
 795504	immunity	add	review dropped a key concept
 795504	protection	drop	review concept broader or narrower than the key's
@@ -4638,58 +4468,45 @@ entity	concept	action	why
 795528	slot_filler	drop	review tag the key calls wrong
 795568	disruption	drop	review tag the key calls wrong
 795568	resource_gain	drop	review tag the key calls wrong
-795570	generate_cards	drop	review tag the key calls wrong
 795573	in_hand_buff	drop	review tag the key calls wrong
 795573	permanent_growth	drop	review tag the key calls wrong
 795580	recycle	drop	review tag the key calls wrong
 795581	lane_identity	drop	review tag the key calls wrong
 795600	finisher	drop	review tag the key calls wrong
-795604	generate_cards	drop	review tag the key calls wrong
-795608	turn_end	drop	review tag the key calls wrong
 795618	reveal_order	drop	review tag the key calls wrong
 795621	cost_increase	add	key concept
 795621	disruption	drop	review concept broader or narrower than the key's
-795621	generate_cards	drop	review tag the key calls wrong
 795629	random_ability	drop	review tag the key calls wrong
-795638	discard	drop	review tag the key calls wrong
 795638	graveyard	drop	review tag the key calls wrong
 795639	hand_size	drop	review tag the key calls wrong
 795660	permanent_growth	drop	review tag the key calls wrong
-795660	slot_filler	drop	review tag the key calls wrong
 795662	autonomous_units	drop	review tag the key calls wrong
 795665	null_body	drop	review tag the key calls wrong
 795666	cost_increase	add	key concept
 795666	disruption	drop	review concept broader or narrower than the key's
 795666	hand_disruption	add	key concept
-795667	stat_loss	drop	review tag the key calls wrong
 795673	information	add	key concept
 795673	simultaneous_play	drop	review concept broader or narrower than the key's
 795684	null_body	drop	review tag the key calls wrong
 795684	passive	add	review dropped a key concept
-795687	cost_set	drop	review tag the key calls wrong
 795700	stat_gain	drop	review tag the key calls wrong
 795702	condition_count	drop	review concept broader or narrower than the key's
 795702	quests	add	key concept
 795702	variety_payoff	add	key concept
-795712	generate_cards	drop	review tag the key calls wrong
-795713	forced_movement	drop	review tag the key calls wrong
 795719	disruption	drop	review concept broader or narrower than the key's
 795719	junk_cards	add	key concept
 795737	cost_reduction	drop	review tag the key calls wrong
 795737	deck_modification	drop	review tag the key calls wrong
 795764	junk_cards	drop	review tag the key calls wrong
-795765	slot_filler	drop	review tag the key calls wrong
 795769	card_flow	drop	review tag the key calls wrong
 795772	disable	drop	review concept broader or narrower than the key's
 795772	immobilize	add	key concept
 795776	cost_reduction	drop	review tag the key calls wrong
-795776	movement	drop	review tag the key calls wrong
 795794	deck_condition	drop	review tag the key calls wrong
 795794	null_body	drop	review tag the key calls wrong
 795794	stat_gain	drop	review tag the key calls wrong
 795794	stat_loss	drop	review tag the key calls wrong
 795797	deck_condition	drop	review tag the key calls wrong
-795802	discard	drop	review tag the key calls wrong
 795804	bounce_enemy	drop	review tag the key calls wrong
 795804	graveyard	drop	review tag the key calls wrong
 795804	return_to_hand	drop	review tag the key calls wrong
@@ -4698,15 +4515,12 @@ entity	concept	action	why
 795828	transform	drop	review tag the key calls wrong
 795838	fodder	drop	review tag the key calls wrong
 795865	graveyard	drop	review tag the key calls wrong
-795870	stat_loss	drop	review tag the key calls wrong
 795880	cheat_death	drop	review tag the key calls wrong
 795886	lane_identity	drop	review tag the key calls wrong
 795888	tutor	drop	review tag the key calls wrong
-795889	generate_cards	drop	review tag the key calls wrong
 795902	condition_count	drop	review tag the key calls wrong
 795913	disruption	drop	review concept broader or narrower than the key's
 795913	junk_cards	add	key concept
-795914	passive	drop	review tag the key calls wrong
 795920	cost_increase	add	key concept
 795920	disruption	drop	review concept broader or narrower than the key's
 795921	null_body	drop	review tag the key calls wrong
@@ -4715,8 +4529,6 @@ entity	concept	action	why
 795947	upgrade	drop	review tag the key calls wrong
 795954	autonomous_units	drop	review tag the key calls wrong
 795956	hand_disruption	drop	review tag the key calls wrong
-795974	passive	drop	review tag the key calls wrong
-795976	movement	drop	review tag the key calls wrong
 795977	disruption	drop	review concept broader or narrower than the key's
 795977	hand_disruption	add	key concept
 795977	once_per_game	drop	review tag the key calls wrong
@@ -4724,11 +4536,8 @@ entity	concept	action	why
 795986	board_presence	drop	review concept broader or narrower than the key's
 795986	slot_filler	drop	review tag the key calls wrong
 795986	summon	add	key concept
-795990	board_clog	drop	review tag the key calls wrong
 795990	disruption	drop	review tag the key calls wrong
-795990	summon	drop	review tag the key calls wrong
 795994	cost_reduction	drop	review tag the key calls wrong
-796000	generate_cards	drop	review tag the key calls wrong
 796011	game_end_trigger	drop	review tag the key calls wrong
 796011	information	add	key concept
 796011	simultaneous_play	drop	review concept broader or narrower than the key's
@@ -4737,7 +4546,6 @@ entity	concept	action	why
 796033	delayed	drop	review tag the key calls wrong
 796033	generate_cards	drop	review tag the key calls wrong
 796043	rule_change	drop	review tag the key calls wrong
-796047	slot_filler	drop	review tag the key calls wrong
 796049	board_clog	drop	review tag the key calls wrong
 796049	null_body	drop	review tag the key calls wrong
 796049	stat_loss	drop	review tag the key calls wrong
@@ -4745,7 +4553,6 @@ entity	concept	action	why
 796069	board_presence	drop	review concept broader or narrower than the key's
 796069	slot_filler	drop	review tag the key calls wrong
 796069	summon	add	key concept
-796073	slot_filler	drop	review tag the key calls wrong
 796078	cost_reduction	drop	review tag the key calls wrong
 796095	summon	drop	review tag the key calls wrong
 796095	tutor	drop	review tag the key calls wrong
@@ -4754,8 +4561,6 @@ entity	concept	action	why
 796110	stat_loss	drop	review tag the key calls wrong
 796110	summon	drop	review tag the key calls wrong
 796113	null_body	drop	review tag the key calls wrong
-796114	destroy	drop	review tag the key calls wrong
-796114	discard	drop	review tag the key calls wrong
 796138	summon	drop	review tag the key calls wrong
 796138	tribal	drop	review tag the key calls wrong
 796164	lane_rule	drop	review tag the key calls wrong
@@ -4766,7 +4571,6 @@ entity	concept	action	why
 796183	board_clog	drop	review tag the key calls wrong
 796183	slot_filler	drop	review tag the key calls wrong
 796187	lane_rule	drop	review tag the key calls wrong
-796187	slot_filler	drop	review tag the key calls wrong
 796187	stat_gain	drop	review tag the key calls wrong
 796187	symmetric_effect	drop	review tag the key calls wrong
 796193	lane_rule	drop	review tag the key calls wrong
@@ -4777,10 +4581,7 @@ entity	concept	action	why
 796208	null_body	drop	review tag the key calls wrong
 796209	delayed	drop	review tag the key calls wrong
 796209	lane_rule	drop	review tag the key calls wrong
-796224	stat_gain	drop	review tag the key calls wrong
-796224	stat_loss	drop	review tag the key calls wrong
 796227	lane_rule	drop	review tag the key calls wrong
-796227	movement	drop	review tag the key calls wrong
 796227	symmetric_effect	drop	review tag the key calls wrong
 796231	damage_over_time	drop	review tag the key calls wrong
 796242	information	drop	review tag the key calls wrong
@@ -4790,15 +4591,11 @@ entity	concept	action	why
 796251	lane_rule	drop	review tag the key calls wrong
 796251	symmetric_effect	drop	review tag the key calls wrong
 796251	turn_start	drop	review tag the key calls wrong
-796252	summon	drop	review tag the key calls wrong
 796258	stat_gain	drop	review tag the key calls wrong
 796258	symmetric_effect	drop	review tag the key calls wrong
-796275	passive	drop	review tag the key calls wrong
 796282	lane_rule	drop	review tag the key calls wrong
 796282	symmetric_effect	drop	review tag the key calls wrong
-796288	stakes_wager	drop	review tag the key calls wrong
 796290	lane_rule	drop	review tag the key calls wrong
-796295	slot_filler	drop	review tag the key calls wrong
 796319	lane_identity	drop	review tag the key calls wrong
 796326	random_effect	drop	review tag the key calls wrong
 796334	stat_gain	drop	review tag the key calls wrong
@@ -4811,7 +4608,6 @@ entity	concept	action	why
 796337	symmetric_effect	drop	review tag the key calls wrong
 796338	card_advantage	add	key concept
 796338	generate_cards	drop	review concept broader or narrower than the key's
-796339	generate_cards	drop	review tag the key calls wrong
 796344	hand_size	drop	review tag the key calls wrong
 796353	lane_identity	drop	review tag the key calls wrong
 796366	lane_rule	drop	review tag the key calls wrong
@@ -4874,7 +4670,6 @@ entity	concept	action	why
 815641	cost_set	drop	review tag the key calls wrong
 816342	combo_sequence	drop	review tag the key calls wrong
 816358	start_of_game	drop	review tag the key calls wrong
-816375	generate_cards	drop	review tag the key calls wrong
 816375	stacking_keyword	drop	review tag the key calls wrong
 816375	start_of_game	drop	review tag the key calls wrong
 816375	stat_gain	drop	review tag the key calls wrong
@@ -4884,14 +4679,10 @@ entity	concept	action	why
 816389	stat_loss	drop	review concept broader or narrower than the key's
 816395	start_of_game	drop	review tag the key calls wrong
 816398	damage_over_time	drop	review tag the key calls wrong
-816399	damage	add	key concept
-816399	damage_over_time	drop	review concept broader or narrower than the key's
 816420	condition_count	add	key concept
 816420	count_payoff	drop	review concept broader or narrower than the key's
-816425	block_armor	drop	review tag the key calls wrong
 816425	stacking_keyword	drop	review tag the key calls wrong
 816428	cost_condition	drop	review tag the key calls wrong
-816447	deck_modification	drop	review tag the key calls wrong
 816447	junk_cards	drop	review tag the key calls wrong
 816447	self_destruct	drop	review tag the key calls wrong
 816453	junk_cards	drop	review tag the key calls wrong
@@ -4916,7 +4707,6 @@ entity	concept	action	why
 816501	once_per_game	drop	review tag the key calls wrong
 816501	piercing	drop	review tag the key calls wrong
 816501	ranged	drop	review tag the key calls wrong
-816501	terrain	drop	review tag the key calls wrong
 816556	passive	drop	review tag the key calls wrong
 816557	passive	drop	review tag the key calls wrong
 816557	ranged	add	review dropped a key concept

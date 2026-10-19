@@ -1,5 +1,6 @@
 """The answer key wins over the review files (Kaptain's decision, 19 Oct 2026; script only, no readers).
-Only on key entries, and only the concept in conflict: the entry's other tags stay (the key may not have explored them).
+Only on key entries, only the concept in conflict, and never a 'benefits' or 'counters' line (the readers tagged what a card
+does, not what it pays off or answers: Brann Bronzebeard benefits from battlecries without doing one): the entry's other tags stay (the key may not have explored them).
   - a review tag the key calls wrong (neither a key concept nor a broader or narrower one): the tag is removed;
   - a review tag that is a broader or narrower form of a key concept (not the key concept itself): the review's concept is removed
     and the key's related concepts are added;
@@ -24,6 +25,7 @@ if mode == 'make':
         e = mk.get(int(r['entity']), int(r['entity']))
         if e not in keys: keep.append(r); continue
         ks = keys[e]
+        if r['role'] in ('benefits', 'counters'): keep.append(r); continue   # a payoff or an answer: the key reads what a card does, not what it rewards
         if r['expect'] == 'present':   # a removed old concept is checked as any of its new ids (as regression.py does)
             pk = [r['concept']]
             if any(k in ks or k in K.GROUPS for k in pk): keep.append(r); continue
