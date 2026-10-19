@@ -1,0 +1,20 @@
+swarm	Go-wide swarm: many cheap bodies and tokens, payoffs for numbers
+sacrifice	Sacrifice / death value: units die on purpose and death pays off
+graveyard	Graveyard recursion: discard pile as a second hand
+control	Control: remove, lock down and answer threats
+burn	Burn / reach: direct and area damage to close games
+aggro_tempo	Aggro / tempo: act fast, attack bonuses, evasion
+scaling	Scaling: units and cards grow over time
+fortress	Fortress / defence: walls, guards, shields and armour
+sustain	Sustain: healing, lifesteal, regeneration
+spellslinger	Spellslinger / combo: chains of actions and spell payoffs
+ramp	Ramp / economy: extra resources, cost cheating, big payoffs
+positional	Positional / manoeuvre: movement, push and placement matter
+disruption	Disruption / attrition: debuffs, discard, theft, taxes
+trickery	Trickery: stealth, traps, hidden information
+chaos	Chaos / randomness: random outcomes and generated cards
+card_advantage	Card advantage / selection: draw, tutor, filter
+tribal	Tribal synergy: payoffs for a shared type
+objectives	Objective play: control points, score goals
+poison_attrition	Damage over time: poison, burn, bleed
+transformation	Transformation: change form, stances, merge

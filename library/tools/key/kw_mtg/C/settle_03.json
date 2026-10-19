@@ -1,0 +1,40 @@
+{
+"766190": [
+[
+"summon",
+"Cloak"
+]
+],
+"766196": [
+[
+"cast_from_zone",
+"You may cast this card from your graveyard"
+],
+[
+"discard",
+"discarding a card"
+],
+[
+"banish",
+"Then exile this card"
+]
+],
+"766198": [
+[
+"banish",
+"Then exile this spell"
+],
+[
+"cast_from_zone",
+"cast a copy of it from exile"
+],
+[
+"free_play",
+"without paying its mana cost"
+],
+[
+"turn_start",
+"at the beginning of each of your first main phases"
+]
+]
+}

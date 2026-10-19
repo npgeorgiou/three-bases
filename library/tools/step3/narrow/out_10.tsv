@@ -5,3 +5,7 @@ selection|does|*|look at the top	mtg	look at the top (?!card\b)(?!two cards of y
 destroy|counters|*|\bindestructible\b	mtg	keep
 damage_over_time|does|*|\bpoison(?!ous)	sts2	(?<=apply \d )\bpoison(?!ous)
 damage_over_time|does|*|\bpoison(?!ous)	darkest_dungeon,dnd5e,gwent,wh_killteam,runeterra,wh_underworlds,wh_aos_4th,hearthstone,mtg	keep
+aura|does|*|\baura\b	hearthstone,shadowverse	(?!)\baura\b
+aura|does|*|\baura\b	dnd5e,wh_killteam,wh_aos_4th,mtg	keep
+damage_types|does|*|\bresistance\b	wh_aos_4th	(?!)\bresistance\b
+damage_types|does|*|\bresistance\b	darkest_dungeon,dnd5e	keep

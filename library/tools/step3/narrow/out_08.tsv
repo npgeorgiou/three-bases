@@ -10,3 +10,9 @@ random_effect|does|*|\brandom	into_the_breach	keep
 draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	hearthstone	(?<!you )(?<!opponent )(?<!quest: )(?<!questline: )\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?(?! in one turn)
 draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	runeterra	(?<!when you )(?<!seen you )(?<!opponent )\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?
 draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	inscryption	(?<!to )(?<!and )\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?
+stat_loss|does|*|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	(?<!this unit, )(?<!that unit, )(?<!phase, )(?<!unit, )subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))(?! rolls? for (combat |shooting )?attacks (that target|made by enemy))
+stat_loss|does|*|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	keep
+stress_morale|does|wh_40k_10e|\bbattle-shock(ed)?\b|\bleadership\b	wh_40k_10e	\bbattle-shock\b|(?<!not )(?<!excluding )\bbattle-shocked\b|(?<=worsen the )\bleadership\b
+terrain|does|*|\bterrain	into_the_breach	(?!)
+terrain|does|*|\bterrain	inscryption	(?<=traits: )terrain
+terrain|does|*|\bterrain	wh_killteam,wh_aos_4th,dnd5e	keep

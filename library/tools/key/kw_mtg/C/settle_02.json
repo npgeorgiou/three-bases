@@ -1,0 +1,358 @@
+{
+"766113": [
+[
+"merge_attach",
+"Splice"
+]
+],
+"766116": [
+[
+"stat_gain",
+"enters with a +1/+1 counter on it for each color of mana spent to cast it"
+],
+[
+"variety_payoff",
+"for each color of mana spent"
+]
+],
+"766119": [
+[
+"cost_type",
+"for its warp cost"
+],
+[
+"cast_from_zone",
+"cast it from exile on a later turn"
+],
+[
+"delayed",
+"on a later turn"
+]
+],
+"766120": [],
+"766121": [
+[
+"steal",
+"Heist"
+]
+],
+"766123": [
+[
+"on_play",
+"When you cast this spell"
+],
+[
+"copy",
+"copy it for each time you paid its replicate cost"
+]
+],
+"766124": [
+[
+"stat_loss",
+"Blight"
+]
+],
+"766125": [],
+"766126": [
+[
+"on_play",
+"When this creature enters"
+],
+[
+"modal_choice",
+"put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens"
+],
+[
+"summon",
+"create two 1/1 colorless Servo artifact creature tokens"
+]
+],
+"766127": [],
+"766130": [
+[
+"on_attack",
+"Whenever this creature attacks"
+],
+[
+"destroy",
+"defending player sacrifices two permanents of their choice"
+]
+],
+"766132": [
+[
+"transform",
+"Living metal"
+]
+],
+"766133": [
+[
+"transform",
+"Convert"
+]
+],
+"766134": [
+[
+"transform",
+"More Than Meets the Eye"
+]
+],
+"766135": [
+[
+"card_quality",
+"Learn"
+]
+],
+"766136": [
+[
+"once_per_game",
+"Exhaust"
+]
+],
+"766138": [
+[
+"activated",
+"{W}, {T}: Put a +1/+1 counter on this creature"
+],
+[
+"stat_gain",
+"Put a +1/+1 counter on this creature"
+]
+],
+"766139": [],
+"766140": [
+[
+"stat_condition",
+"Ferocious"
+]
+],
+"766141": [],
+"766144": [
+[
+"on_ally_play",
+"Rally"
+]
+],
+"766145": [
+[
+"transform",
+"Target land you control becomes a 0/0 creature"
+],
+[
+"haste",
+"with haste"
+],
+[
+"stat_gain",
+"Put X +1/+1 counters on it"
+],
+[
+"death_trigger",
+"When it dies or is exiled"
+],
+[
+"cheat_death",
+"return it to the battlefield tapped"
+]
+],
+"766146": [
+[
+"scope_multi",
+"Strive"
+]
+],
+"766147": [
+[
+"on_ally_play",
+"Whenever a creature you control enters"
+],
+[
+"stat_condition",
+"greater power or toughness than this creature"
+],
+[
+"permanent_growth",
+"put a +1/+1 counter on this creature"
+]
+],
+"766148": [
+[
+"on_attack",
+"When this creature attacks"
+],
+[
+"copy",
+"conjure a duplicate into your hand"
+]
+],
+"766149": [
+[
+"hand_size",
+"Hellbent"
+]
+],
+"766150": [
+[
+"copy",
+"copy it for each spell cast before it this turn"
+],
+[
+"count_payoff",
+"each spell cast before it this turn"
+],
+[
+"on_play",
+"When you cast this spell"
+]
+],
+"766151": [
+[
+"activated",
+"Forecast"
+]
+],
+"766152": [],
+"766156": [],
+"766157": [
+[
+"scope_multi",
+"Radiance"
+]
+],
+"766159": [
+[
+"transform",
+"Meld"
+]
+],
+"766160": [],
+"766161": [
+[
+"suppress",
+"Detain"
+]
+],
+"766162": [
+[
+"activated",
+"Renew"
+]
+],
+"766164": [
+[
+"on_spell",
+"Repartee"
+]
+],
+"766166": [
+[
+"cheat_death",
+"instead remove all damage from it and destroy this Aura"
+],
+[
+"merge_attach",
+"enchanted creature"
+]
+],
+"766167": [
+[
+"activated",
+"Craft"
+]
+],
+"766169": [
+[
+"summon",
+"For Mirrodin!"
+]
+],
+"766171": [
+[
+"sacrifice",
+"Forage"
+]
+],
+"766173": [
+[
+"graveyard",
+"Undergrowth"
+]
+],
+"766175": [
+[
+"on_spell",
+"Opus"
+]
+],
+"766176": [
+[
+"permanent_growth",
+"Intensity"
+]
+],
+"766179": [
+[
+"blink",
+"This phases in or out"
+],
+[
+"immunity",
+"While it's phased out, it's treated as though it doesn't exist"
+]
+],
+"766180": [
+[
+"death_trigger",
+"When this creature dies"
+],
+[
+"merge_attach",
+"exile it haunting target creature"
+]
+],
+"766182": [
+[
+"evasion",
+"This creature can block or be blocked by only creatures with shadow"
+],
+[
+"blocking",
+"This creature can block or be blocked by only creatures with shadow"
+]
+],
+"766184": [
+[
+"temporary_buff",
+"Battle Cry"
+],
+[
+"on_attack",
+"Battle Cry"
+]
+],
+"766186": [
+[
+"on_spell",
+"Valiant"
+]
+],
+"766187": [
+[
+"stat_condition",
+"Formidable"
+]
+],
+"766188": [
+[
+"on_spell",
+"Whenever you cast a spell"
+],
+[
+"permanent_growth",
+"put a +1/+1 counter on this creature"
+],
+[
+"stat_condition",
+"greater than this creature's power or toughness"
+]
+]
+}

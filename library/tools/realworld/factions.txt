@@ -1,0 +1,324 @@
+dnd5e	Transmutation	61
+dnd5e	Evocation	55
+dnd5e	Conjuration	54
+dnd5e	Abjuration	48
+dnd5e	Warlock	42
+dnd5e	Monk	38
+dnd5e	Ranger	37
+dnd5e	Enchantment	35
+dnd5e	Paladin	30
+dnd5e	Illusion	29
+dnd5e	Divination	27
+dnd5e	Necromancy	27
+dnd5e	Fighter	23
+dnd5e	Sorcerer	22
+dnd5e	Barbarian	21
+dnd5e	Cleric	21
+dnd5e	Druid	20
+dnd5e	Rogue	18
+dnd5e	Wizard	13
+dnd5e	Bard	11
+duelyst	Neutral	221
+duelyst	Vanar Kindred	99
+duelyst	Songhai Empire	98
+duelyst	Vetruvian Imperium	94
+duelyst	Abyssian Host	92
+duelyst	Lyonar Kingdoms	90
+duelyst	Magmar Aspects	89
+faeria	Neutral (Human)	127
+faeria	Blue	71
+faeria	Yellow	70
+faeria	Red	68
+faeria	Green	67
+faeria	Pandora	40
+gwent	Neutral	269
+gwent	Scoiatael	185
+gwent	Skellige	181
+gwent	Monster	180
+gwent	Nilfgaard	177
+gwent	Northern Realms	175
+gwent	Syndicate	175
+hearthstone	Neutral	2573
+hearthstone	Druid	634
+hearthstone	Rogue	549
+hearthstone	Mage	548
+hearthstone	Shaman	537
+hearthstone	Warlock	534
+hearthstone	Paladin	531
+hearthstone	Hunter	507
+hearthstone	Priest	506
+hearthstone	Warrior	506
+hearthstone	Demonhunter	361
+hearthstone	Deathknight	271
+inscryption	Beast	77
+inscryption	Technology	57
+inscryption	Magick	20
+inscryption	Undead	20
+into_the_breach	Any	33
+into_the_breach	Prime	31
+into_the_breach	Brute	29
+into_the_breach	Ranged	26
+into_the_breach	Science	25
+mtg	Red	2769
+mtg	Black	2763
+mtg	White	2707
+mtg	Blue	2692
+mtg	Green	2671
+mtg	Colorless	1724
+mtg	Multicolor (BR)	318
+mtg	Multicolor (BU)	310
+mtg	Multicolor (RW)	303
+mtg	Multicolor (BG)	297
+mtg	Multicolor (UW)	297
+mtg	Multicolor (BW)	296
+mtg	Multicolor (GW)	296
+mtg	Multicolor (GU)	291
+mtg	Multicolor (RU)	291
+mtg	Multicolor (GR)	283
+mtg	Multicolor (BGRUW)	71
+mtg	Multicolor (BRU)	64
+mtg	Multicolor (GRW)	62
+mtg	Multicolor (GUW)	62
+mtg	Multicolor (BGR)	59
+mtg	Multicolor (RUW)	52
+mtg	Multicolor (BUW)	51
+mtg	Multicolor (GRU)	49
+mtg	Multicolor (BGU)	48
+mtg	Multicolor (BRW)	48
+mtg	Multicolor (BGW)	42
+runeterra	Shurima	263
+runeterra	Bandle City	249
+runeterra	Ionia	235
+runeterra	Targon	234
+runeterra	Piltover & Zaun	226
+runeterra	Bilgewater	225
+runeterra	Noxus	218
+runeterra	Shadow Isles	213
+runeterra	Freljord	210
+runeterra	Demacia	203
+shadowverse	Swordcraft	519
+shadowverse	Runecraft	514
+shadowverse	Shadowcraft	502
+shadowverse	Havencraft	495
+shadowverse	Dragoncraft	492
+shadowverse	Forestcraft	492
+shadowverse	Bloodcraft	491
+shadowverse	Portalcraft	480
+shadowverse	Neutral	401
+sts1	Defect	89
+sts1	Watcher	89
+sts1	Ironclad	83
+sts1	Silent	83
+sts1	Colorless	67
+sts1	Curse	14
+sts2	Event	174
+sts2	Shared	173
+sts2	Defect	112
+sts2	Necrobinder	107
+sts2	Regent	106
+sts2	Silent	106
+sts2	Ironclad	103
+sts2	Colorless	79
+sts2	Curse	17
+sts2	Token	14
+sts2	Status	10
+wh_40k_10e	Imperium - Adeptus Astartes - Space Marines	476
+wh_40k_10e	Aeldari	331
+wh_40k_10e	Imperium	301
+wh_40k_10e	Chaos	221
+wh_40k_10e	Chaos - Chaos Space Marines	204
+wh_40k_10e	Xenos - Orks	193
+wh_40k_10e	Xenos - Tyranids	177
+wh_40k_10e	Xenos - T'au Empire	167
+wh_40k_10e	Warhammer 40,000 10th Edition	154
+wh_40k_10e	Xenos - Necrons	147
+wh_40k_10e	Chaos - Death Guard	124
+wh_40k_10e	Chaos - Thousand Sons	124
+wh_40k_10e	Imperium - Adepta Sororitas	121
+wh_40k_10e	Imperium - Grey Knights	115
+wh_40k_10e	Chaos - World Eaters	112
+wh_40k_10e	Imperium - Agents of the Imperium	110
+wh_40k_10e	Imperium - Adeptus Custodes	109
+wh_40k_10e	Imperium - Adeptus Mechanicus	107
+wh_40k_10e	Xenos - Leagues of Votann	107
+wh_40k_10e	Chaos - Emperor's Children	93
+wh_40k_10e	Xenos - Genestealer Cults	74
+wh_40k_10e	Imperium - Adeptus Astartes - Space Wolves	47
+wh_40k_10e	Astartes Heresy Legends	42
+wh_40k_10e	Imperium - Adeptus Astartes - Blood Angels	30
+wh_40k_10e	Unaligned Forces	27
+wh_40k_10e	Imperium - Adeptus Astartes - Black Templars	20
+wh_40k_10e	Imperium - Adeptus Astartes - Dark Angels	19
+wh_40k_10e	Imperium - Adeptus Astartes - Ultramarines	16
+wh_40k_10e	Imperium - Adeptus Astartes - Deathwatch	14
+wh_aos_4th	❖ Lores	383
+wh_aos_4th	Cities of Sigmar	183
+wh_aos_4th	Stormcast Eternals	160
+wh_aos_4th	Slaves to Darkness	151
+wh_aos_4th	۞ Regiments of Renown	149
+wh_aos_4th	Skaven	125
+wh_aos_4th	Soulblight Gravelords	125
+wh_aos_4th	Kharadron Overlords	118
+wh_aos_4th	✦ Path to Glory - Ravaged Coast	117
+wh_aos_4th	Blades of Khorne	111
+wh_aos_4th	Gloomspite Gitz	111
+wh_aos_4th	Disciples of Tzeentch	105
+wh_aos_4th	Hedonites of Slaanesh	105
+wh_aos_4th	Flesh-eater Courts	104
+wh_aos_4th	Ogor Mawtribes	104
+wh_aos_4th	Sylvaneth	103
+wh_aos_4th	✦ Path to Glory - Blighted Wilds	103
+wh_aos_4th	Maggotkin of Nurgle	97
+wh_aos_4th	Daughters of Khaine	95
+wh_aos_4th	Ossiarch Bonereapers	95
+wh_aos_4th	Nighthaunt	91
+wh_aos_4th	Idoneth Deepkin	88
+wh_aos_4th	Lumineth Realm-lords	86
+wh_aos_4th	Ironjawz	83
+wh_aos_4th	Sons of Behemat	80
+wh_aos_4th	Helsmiths of Hashut	78
+wh_aos_4th	Kruleboyz	75
+wh_aos_4th	Seraphon	67
+wh_aos_4th	Age of Sigmar 4.0	59
+wh_aos_4th	Fyreslayers	56
+wh_aos_4th	✦ Path to Glory - Ascension	42
+wh_aos_4th	Beasts of Chaos	40
+wh_aos_4th	Bonesplitterz	26
+wh_bloodbowl3	Blood Bowl	93
+wh_bloodbowl3	Chaos Renegade	10
+wh_bloodbowl3	Old World Alliance	10
+wh_killteam	Warhammer 40,000: Kill Team (2018)	143
+wh_killteam	Inquisitorial Agents	87
+wh_killteam	Pathfinder	57
+wh_killteam	Blooded	45
+wh_killteam	Phobos Strike Team	45
+wh_killteam	Gellerpox Infected	44
+wh_killteam	Imperial Navy Breacher	44
+wh_killteam	Novitiate	43
+wh_killteam	Blades of Khaine	42
+wh_killteam	Brood Brother	41
+wh_killteam	Kasrkin	41
+wh_killteam	Hearthkyn Salvager	40
+wh_killteam	Corsair Voidscarred	39
+wh_killteam	Hunter Clade	38
+wh_killteam	Fellgor Ravager	37
+wh_killteam	Veteran Guardsmen	36
+wh_killteam	Farstalker Kinband	35
+wh_killteam	Kommando	35
+wh_killteam	Space Marines	34
+wh_killteam	Warp Coven	34
+wh_killteam	Mandrake	33
+wh_killteam	T'au Empire	33
+wh_killteam	Elucidian Starstriders	32
+wh_killteam	Hand of the Archon	31
+wh_killteam	Hernkyn Yaegir	30
+wh_killteam	Hierotek Circle	30
+wh_killteam	Wyrmblade	30
+wh_killteam	Exaction Squad	29
+wh_killteam	Nemesis Claw	29
+wh_killteam	Warhammer 40,000: Kill Team (2024)	28
+wh_killteam	Scout Squad	27
+wh_killteam	Non-player Operatives	26
+wh_killteam	Void-Dancer Troupe	26
+wh_killteam	Asuryani	25
+wh_killteam	Chaos Cult	25
+wh_killteam	Chaos Daemons	24
+wh_killteam	Death Guard	24
+wh_killteam	Genestealer Cults	24
+wh_killteam	Legionary	24
+wh_killteam	Deathwatch	22
+wh_killteam	Drukhari	22
+wh_killteam	Astra Militarum	21
+wh_killteam	Sanctifier	21
+wh_killteam	Adeptus Mechanicus	20
+wh_killteam	Tyranids	20
+wh_killteam	Grey Knight	19
+wh_killteam	Heretic Astartes	19
+wh_killteam	Ratling	19
+wh_killteam	Legionaries	18
+wh_killteam	Murderwing	18
+wh_killteam	Spectre Squad	18
+wh_killteam	Wrecka Krew	18
+wh_killteam	Hunter Cadre	17
+wh_killteam	Thousand Sons (Legends)	17
+wh_killteam	Death Korps	16
+wh_killteam	Goremonger	16
+wh_killteam	Orks	16
+wh_killteam	XV26 Battlesuits	16
+wh_killteam	Exodite Dragon Masters	15
+wh_killteam	Imperial Guard	15
+wh_killteam	Vespid Stingwings	15
+wh_killteam	Brood Coven	14
+wh_killteam	Celestian Insidiants	14
+wh_killteam	Commorrite	14
+wh_killteam	Craftworld	14
+wh_killteam	Harlequins	14
+wh_killteam	Raveners	14
+wh_killteam	Intercession Squad	13
+wh_killteam	Wolf Scouts	13
+wh_killteam	Battleclade	12
+wh_killteam	Necrons	12
+wh_killteam	Plague Marines	12
+wh_killteam	Tempestus Aquilons	12
+wh_killteam	Warhammer 40,000: Kill Team (2021)	12
+wh_killteam	Canoptek Circle	11
+wh_killteam	Ecclesiarchy	11
+wh_killteam	Talons of the Emperor	11
+wh_killteam	Adepta Sororitas	10
+wh_killteam	Angels of Death	10
+wh_killteam	Hive Fleet	10
+wh_underworlds	Universal	1433
+wh_underworlds	Chaos	40
+wh_underworlds	Destruction	40
+wh_underworlds	Order	40
+wh_underworlds	Death	37
+wh_underworlds	Ironsoul's Condemners	37
+wh_underworlds	Sepulchral Guard	37
+wh_underworlds	Spiteclaw's Swarm	37
+wh_underworlds	The Farstriders	33
+wh_underworlds	Da Kunnin' Krew	32
+wh_underworlds	Domitan's Stormcoven	32
+wh_underworlds	Drepur's Wraithcreepers	32
+wh_underworlds	Elathain's Soulraid	32
+wh_underworlds	Eyes of the Nine	32
+wh_underworlds	Gnarlspirit Pack	32
+wh_underworlds	Godsworn Hunt	32
+wh_underworlds	Gorechosen of Dromm	32
+wh_underworlds	Grashrak's Despoilers	32
+wh_underworlds	Grinkrak's Looncourt	32
+wh_underworlds	Gryselle's Arenai	32
+wh_underworlds	Hedkrakka's Madmob	32
+wh_underworlds	Hexbane's Hunters	32
+wh_underworlds	Hrothgorn's Mantrappers	32
+wh_underworlds	Kainan's Reapers	32
+wh_underworlds	Khagra's Ravagers	32
+wh_underworlds	Lady Harrow's Mournflight	32
+wh_underworlds	Mollog's Mob	32
+wh_underworlds	Morgok's Krushas	32
+wh_underworlds	Morgwaeth's Blade-coven	32
+wh_underworlds	Myari's Purifiers	32
+wh_underworlds	Rippa's Snarlfangs	32
+wh_underworlds	Skittershank's Clawpack	32
+wh_underworlds	Sons of Velmorn	32
+wh_underworlds	Storm of Celestus	32
+wh_underworlds	Stormsire's Cursebreakers	32
+wh_underworlds	The Dread Pageant	32
+wh_underworlds	The Exiled Dead	32
+wh_underworlds	The Shadeborn	32
+wh_underworlds	The Starblood Stalkers	32
+wh_underworlds	The Wurmspat	32
+wh_underworlds	Thorns of the Briar Queen	32
+wh_underworlds	Thundrik's Profiteers	32
+wh_underworlds	Xandire's Truthseekers	32
+wh_underworlds	Ylthari's Guardians	32
+wh_underworlds	Blackpowder's Buccaneers	31
+wh_underworlds	Ephilim's Pandaemonium	31
+wh_underworlds	Garrek's Reavers	31
+wh_underworlds	Ironskull's Boyz	31
+wh_underworlds	Magore's Fiends	31
+wh_underworlds	Skaeth's Wild Hunt	31
+wh_underworlds	Steelheart's Champions	31
+wh_underworlds	The Chosen Axes	31
+wh_underworlds	The Crimson Court	31
+wh_underworlds	The Grymwatch	31
+wh_underworlds	Zarbag's Gitz	31

@@ -20,3 +20,11 @@ information|does|*|\breveal	dnd5e	\breveals it to be (an illusion|illusory|false
 information|does|*|\breveal	inscryption	\breveal\w* itself\b
 information|does|*|\breveal	runeterra	\breveal(?! me\b)
 information|does|*|\breveal	wh_killteam,wh_underworlds	keep
+zone_control|does|*|\bobjective	wh_underworlds	\b(hold|holds|holding)\b[^.]{0,30}\bobjectives?\b
+zone_control|does|*|\bobjective	wh_killteam	(?<!bonus )(?<!draw one )\bobjective(?! (cards?|control|deck|characteristic))(?!s? cards?)(?=[^.]{0,80}\b(control|contests?|within|marker|hold|holds|score)\b|.{0,0}$)
+zone_control|does|*|\bobjective	wh_aos_4th	(?<!bonus )(?<!draw one )\bobjective(?! (cards?|control|deck|characteristic))(?!s? cards?)
+zone_control|does|*|\bobjective	wh_40k_10e	(?<!bonus )(?<!draw one )\bobjective(?! (cards?|control|deck|characteristic))(?!s? cards?)
+zone_control|does|*|\bobjective	into_the_breach,dnd5e,mtg	(?!)
+damage_reduction|does|wh_40k_10e|\bfeel no pain\b|\binvulnerable save\b|\bsubtract 1 from the damage characteristic\b|\bworsen the armour penetration\b|\bdamage characteristic of that attack by 1\b	wh_40k_10e	\bsubtract 1 from the damage characteristic\b|\bworsen the armour penetration\b
+stat_gain|does|*|gains? \+\d+	duelyst,shadowverse,hearthstone	(?s)^(?!.*(whenever|at the (end|start) of|after (this|it|you)|each time|for each|swallowed|permanently|dies, )).*?gains? \+\d+
+stat_gain|does|*|gains? \+\d+	into_the_breach,faeria,hs_battlegrounds,inscryption	keep

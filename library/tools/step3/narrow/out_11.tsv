@@ -6,3 +6,4 @@ forced_movement|does|*|\badvance\b	dnd5e,wh_killteam,runeterra,wh_aos_4th,wh_40k
 upgrade|does|shadowverse|\bevolve (it|this|an?|target|all|that|them)\b|\bcan evolve\b|\bwhen this follower evolves\b|\bthis follower evolves\b	shadowverse	(?!)\bevolve (it|this|an?|target|all|that|them)\b
 reactions|does|*|\breaction\b	dnd5e	(?<!or a )(?<!require a )(?<!action or )\breaction\b(?! to deliver)(?! to cast)
 reactions|does|*|\breaction\b	wh_aos_4th	keep
+cost_reduction|does|*|costs? \(?\d+\)? less	hearthstone	(?<!\bit )(?<!that )costs? \(?\d+\)? less
