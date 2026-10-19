@@ -1,0 +1,27 @@
+752303 | Evolve | 
+   A: []
+   B: [["transform", "Evolve"]]
+752309 | Accelerate | 
+   A: []
+   B: [["cost_type", "Accelerate"]]
+752310 | Strike | 
+   A: []
+   B: [["damage", "Strike"]]
+752314 | Necromancy | 
+   A: []
+   B: [["graveyard", "Necromancy"]]
+752322 | Rally | 
+   A: []
+   B: [["count_payoff", "Rally"]]
+752324 | Fusion | 
+   A: []
+   B: [["merge_attach", "Fusion"]]
+752325 | Wrath | 
+   A: []
+   B: [["condition_life", "Wrath"]]
+752326 | Resonance | 
+   A: []
+   B: [["deck_condition", "Resonance"]]
+752327 | Stack | 
+   A: [["stacking_keyword", "Stack"]]
+   B: []

@@ -7,3 +7,6 @@ stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wound
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	shadowverse	(?<!deal )\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	hs_battlegrounds	(?s)^(?!.*(permanently|this game|each turn|at the start of (your )?turn)).*?(?<!deal )\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b
 stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	duelyst,wh_underworlds,wh_aos_4th,hearthstone	keep
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	faeria,duelyst,sts1,dnd5e,gwent,wh_killteam,runeterra,wh_aos_4th,hearthstone	(?<!you )\bdraw (a|an|one|two|three|x|\d+)(?=\s*(cards?\b(?! (of|with|from|that|you|in))|s many|more|extra|\.|,|$|then|and\b|at\b))
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_underworlds	\bdraw (a|an|one|two|three|x|\d+) (power|objective) card
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	inscryption	keep

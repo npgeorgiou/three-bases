@@ -1,0 +1,33 @@
+757490 | Burn | Burns are unplayable status cards that damage you.
+   A: [["junk_cards", "unplayable status cards"], ["damage", "damage you"]]
+   B: [["junk_cards", "unplayable status cards that damage you"]]
+757495 | Dark | Orb: Increases damage every turn. When Evoked, deals damage to the enemy with the least HP.
+   A: [["permanent_growth", "Increases damage every turn"], ["damage", "deals damage to the enemy with the least HP"]]
+   B: [["permanent_growth", "Increases damage every turn"], ["slots_queue", "Orb"], ["stat_condition", "least HP"]]
+757498 | Divinity | Upon entering this stance, gain 3 Energy. Attacks deal triple damage. Exit this Stance at the start of your next turn.
+   A: [["stances", "this stance"], ["resource_gain", "gain 3 Energy"], ["stat_multiply", "Attacks deal triple damage"]]
+   B: [["stances", "this stance"], ["resource_gain", "gain 3 Energy"], ["stat_multiply", "triple damage"], ["turn_start", "start of your next turn"]]
+757505 | Frost | Orb: Gains Block.
+   A: [["block_armor", "Gains Block"]]
+   B: [["block_armor", "Gains Block"], ["slots_queue", "Orb"]]
+757508 | Lightning | Orb: Deals damage to random enemies.
+   A: [["damage", "Deals damage to random enemies"], ["random_effect", "random enemies"]]
+   B: [["damage", "Deals damage to random enemies"], ["random_effect", "random enemies"], ["slots_queue", "Orb"]]
+757511 | Plasma | Orb: Gains Energy.
+   A: [["resource_gain", "Gains Energy"]]
+   B: [["resource_gain", "Gains Energy"], ["slots_queue", "Orb"]]
+757512 | Poison | Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.
+   A: [["damage_over_time", "lose HP at the start of their turn"]]
+   B: [["damage_over_time", "lose HP at the start of their turn"], ["turn_start", "at the start of their turn"]]
+757514 | Regen | Regen heals HP at the end of your turn. Each turn, Regen is reduced by 1.
+   A: [["regeneration", "Regen heals HP at the end of your turn"]]
+   B: [["regeneration", "heals HP at the end of your turn"], ["turn_end", "at the end of your turn"]]
+757516 | Ritual | Gain Strength at the end of your turn.
+   A: [["permanent_growth", "Gain Strength at the end of your turn"]]
+   B: [["permanent_growth", "Gain Strength at the end of your turn"], ["turn_end", "at the end of your turn"]]
+757518 | Shiv | Shivs are 0 cost Attack cards which Exhaust.
+   A: [["cost_set", "0 cost"], ["exhaust", "which Exhaust"]]
+   B: [["exhaust", "which Exhaust"]]
+757526 | Vigor | Your next Attack deals additional damage.
+   A: [["buff", "Your next Attack deals additional damage"]]
+   B: [["stat_gain", "Your next Attack deals additional damage"]]

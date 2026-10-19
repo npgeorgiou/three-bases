@@ -20,3 +20,6 @@ activated|does|*|once per (turn|round)	wh_bloodbowl3,gwent,shadowverse	(?!)once 
 activated|does|*|once per (turn|round)	wh_killteam,wh_40k_10e,hs_battlegrounds,dnd5e,runeterra,hearthstone	keep
 stat_gain|does|*|add \d+ to (the )?.{0,40}(toughness|wounds|strength|attacks|damage|move|save|characteristic|hit roll|wound roll)	wh_aos_4th,wh_40k_10e	keep
 stat_gain|does|*|add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)	wh_killteam,wh_aos_4th,wh_40k_10e	keep
+passive|does|wh_aos_4th|(?s)^(?!.*\btiming:).*\S	wh_aos_4th	(?s)^(?!.*\btiming:)(?=.*(wholly within|regiment of renown)[^.]*(of this unit|of this manifestation|of the \w+ in this regiment|of them))(?!.*\b(roll a|roll 2d6|pick|inflict|to be the target)\b).*\S
+condition_count|does|*|\bfor each\b	wh_bloodbowl3,inscryption,dnd5e,gwent,wh_killteam,wh_aos_4th,wh_40k_10e,shadowverse	(?<!dice )(?<!d3 )(?<!d6 )(?<!draw a card )\bfor each\b(?! (target|damage|attack dice|additional|point))
+condition_count|does|*|\bfor each\b	faeria,sts1,hs_battlegrounds,wh_underworlds	keep

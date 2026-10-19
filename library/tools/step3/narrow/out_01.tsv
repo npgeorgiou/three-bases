@@ -8,3 +8,8 @@ sacrifice|does|*|\bsacrific	mtg	(?<!opponent )(?<!opponents )\bsacrific(?!(?:es|
 sacrifice|does|*|\bsacrific	inscryption,wh_aos_4th	keep
 banish|does|*|\bexile	mtg	\bexile(?:s)? (?:target (?!creature card from a graveyard)(?!.{0,100}then return)|all |it(?: instead|\.|,)|name\b|up to one (?!.{0,100}then return))
 banish|does|*|\bexile	runeterra,wh_aos_4th	\bexile(?=s? (?:target|up to|all|each|it\b|that|another))(?<=\bnever\bexile)
+damage|does|*|\bstrikes?\b	mtg	(?<!deep )(?<!coordinated )(?<!double )(?<!first )(?<!heavy )\bstrikes?\b
+damage|does|*|\bstrikes?\b	dnd5e	(?<!unarmed )\bstrikes?\b
+damage|does|*|\bstrikes?\b	into_the_breach,inscryption,sts1,sts2,gwent,wh_killteam,runeterra,wh_aos_4th,wh_40k_10e,shadowverse,hearthstone	keep
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	into_the_breach,faeria,sts1,dnd5e,sts2,hs_battlegrounds,wh_underworlds,hearthstone	\bdeals? (?:\d+|x|an?|one|two|three|four|five)\b[^.]{0,80}?damage(?! (?:to (?:your|yourself|this\b|it\b|them|the attacker|an? (?:friendly|allied))|back|to you))
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	inscryption,runeterra	keep

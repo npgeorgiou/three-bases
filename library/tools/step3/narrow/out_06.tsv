@@ -7,3 +7,7 @@ stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|woun
 zone_of_control|does|*|\bengagement range	wh_killteam,wh_40k_10e	keep
 saving_throws|does|*|saving throw	dnd5e	(strength|dexterity|constitution|intelligence|wisdom|charisma) saving throw(?!s)|\bfail(s|ed)? a saving throw
 saving_throws|does|*|saving throw	wh_killteam,wh_40k_10e	keep
+terrain|does|*|\bcover\b	mtg	(?!)\bcover\b
+terrain|does|*|\bcover\b	dnd5e,wh_killteam,wh_aos_4th,wh_40k_10e	keep
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	duelyst,sts1,dnd5e,sts2,wh_killteam,runeterra	(?!)whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	inscryption,faeria,gwent,hs_battlegrounds,shadowverse,hearthstone,mtg	keep

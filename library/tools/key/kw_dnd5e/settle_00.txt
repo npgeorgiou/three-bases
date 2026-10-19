@@ -1,0 +1,30 @@
+761163 | Blinded | While you have the Blinded condition, you experience the following effects. Can't See. You can't see and automatically fail any ability check that requires sight. Attacks Affected. Attack rolls against you have Advantage, and your attack rolls have Disadvantage.
+   A: [["advantage", "Attack rolls against you have Advantage"], ["advantage", "your attack rolls have Disadvantage"], ["debuff", "automatically fail any ability check that requires sight"]]
+   B: [["advantage", "Attack rolls against you have Advantage"]]
+761164 | Charmed | While you have the Charmed condition, you experience the following effects. Can't Harm the Charmer. You can't attack the charmer or target the charmer with damaging abilities or magical effects. Social Advantage. The charmer has Advantage on ability checks to interact socially with you.
+   A: [["attack_lock", "You can't attack the charmer"], ["targeting_rules", "target the charmer with damaging abilities"], ["advantage", "Advantage on ability checks to interact socially"]]
+   B: [["attack_lock", "You can't attack the charmer"], ["advantage", "Advantage on ability checks"]]
+761174 | Prone | While you have the Prone condition, you experience the following effects. Restricted Movement. Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can't right yourself. Attacks Affected. You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.
+   A: [["advantage", "You have Disadvantage on attack rolls"], ["positional", "if the attacker is within 5 feet of you"]]
+   B: [["advantage", "Disadvantage on attack rolls"]]
+761178 | Ammunition | You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.
+   A: [["ranged", "make a ranged attack"], ["upkeep", "Each attack expends one piece of ammunition"]]
+   B: [["ranged", "make a ranged attack"], ["items_consumables", "Each attack expends one piece of ammunition"]]
+761182 | Loading | You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make.
+   A: [["play_restriction", "You can fire only one piece of ammunition"]]
+   B: []
+761184 | Reach | A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it.
+   A: [["ranged", "adds 5 feet to your reach"], ["zone_of_control", "Opportunity Attacks"]]
+   B: [["ranged", "adds 5 feet to your reach"]]
+761188 | Cleave | If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.
+   A: [["multi_target_attack", "make a melee attack roll with the weapon against a second creature"], ["adjacency", "within 5 feet of the first"]]
+   B: [["multi_target_attack", "make a melee attack roll with the weapon against a second creature"]]
+761189 | Graze | If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.
+   A: [["damage", "deal damage to that creature equal to the ability modifier"], ["damage_types", "same type dealt by the weapon"]]
+   B: [["damage", "you can deal damage to that creature"]]
+761193 | Slow | If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.
+   A: [["stat_loss", "reduce its Speed by 10 feet"], ["temporary_effect", "until the start of your next turn"]]
+   B: [["stat_loss", "reduce its Speed by 10 feet"]]
+761194 | Topple | If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition.
+   A: [["saving_throws", "force the creature to make a Constitution saving throw"], ["debuff", "the creature has the Prone condition"]]
+   B: [["saving_throws", "Constitution saving throw"]]

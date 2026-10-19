@@ -1,0 +1,212 @@
+{
+"750336": [
+[
+"death_trigger",
+"Deathrattle"
+]
+],
+"750337": [
+[
+"on_play",
+"Battlecry"
+]
+],
+"750338": [
+[
+"taunt",
+"Taunt"
+]
+],
+"750339": [
+[
+"shield",
+"Divine Shield"
+]
+],
+"750340": [
+[
+"selection",
+"Discover"
+]
+],
+"750341": [
+[
+"combat_start",
+"Start of Combat"
+]
+],
+"750342": [
+[
+"on_attack",
+"Triggers whenever this minion attacks"
+]
+],
+"750343": [
+[
+"stat_gain",
+"+1/+1"
+]
+],
+"750344": [
+[
+"revive",
+"Reborn"
+]
+],
+"750345": [
+[
+"death_count",
+"Triggers after a number of friendly minions die in the same combat"
+]
+],
+"750346": [
+[
+"generate_cards",
+"Gives a temporary spell"
+],
+[
+"turn_start",
+"at the start of each recruit phase"
+]
+],
+"750347": [
+[
+"merge_attach",
+"Magnetic"
+]
+],
+"750348": [
+[
+"multi_attack",
+"Windfury"
+]
+],
+"750349": [
+[
+"random_effect",
+"Rerolls the tavern offers"
+]
+],
+"750350": [
+[
+"deathtouch",
+"The first minion it damages each combat is destroyed"
+]
+],
+"750351": [
+[
+"shop_gold",
+"bought"
+]
+],
+"750352": [
+[
+"modal_choice",
+"Choose One"
+]
+],
+"750353": [
+[
+"quests",
+"Quest"
+]
+],
+"750354": [
+[
+"stealth",
+"Stealth"
+]
+],
+"750355": [
+[
+"trap_secret",
+"Secret"
+]
+],
+"750356": [
+[
+"on_play",
+"when bought in the tavern"
+],
+[
+"shop_gold",
+"bought in the tavern"
+]
+],
+"750357": [],
+"750358": [
+[
+"immunity",
+"Immune"
+]
+],
+"750359": [
+[
+"deathtouch",
+"Poisonous"
+]
+],
+"750360": [],
+"750361": [
+[
+"activated",
+"pay gold to use the effect"
+],
+[
+"cooldowns",
+"Once per recruit turn"
+]
+],
+"750362": [
+[
+"team_play",
+"give a card from your hand to your teammate"
+]
+],
+"750363": [
+[
+"random_effect",
+"Randomly assigned"
+],
+[
+"death_count",
+"after three friendly aberrations die"
+]
+],
+"750364": [
+[
+"generate_cards",
+"added to your hand"
+]
+],
+"750365": [
+[
+"shop_gold",
+"A special shop"
+],
+[
+"coin_economy",
+"a second currency"
+],
+[
+"resource_banking",
+"carries over"
+]
+],
+"750366": [
+[
+"random_ability",
+"Gains a random keyword"
+]
+],
+"750367": [
+[
+"shop_gold",
+"Tavern spells"
+],
+[
+"tribal",
+"pirates"
+]
+]
+}

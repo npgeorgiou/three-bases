@@ -1,0 +1,45 @@
+759760 | Affliction | A temporary condition that may be triggered when a hero reaches 100 stress. Afflicted heroes act on their own and suffer stat penalties. Afflictions can be cured in town by reducing the hero's stress at the Abbey or the Tavern.
+   A: [["stress_morale", "reaches 100 stress"], ["debuff", "suffer stat penalties"], ["autonomous_units", "act on their own"]]
+   B: [["stress_morale", "reaches 100 stress"], ["autonomous_units", "act on their own"], ["stat_loss", "stat penalties"]]
+759762 | Armor | A hero's armor determines her base DODGE and MAX HP. Armor can be upgraded at the Blacksmith.
+   A: []
+   B: [["upgrade", "can be upgraded"]]
+759766 | Buff | A temporary stat increase.
+   A: [["stat_gain", "stat increase"]]
+   B: [["temporary_buff", "A temporary stat increase"]]
+759767 | Camping Skill | An ability used by a hero during Camping.
+   A: [["rest_phase", "Camping"], ["activated", "An ability used by a hero"]]
+   B: [["rest_phase", "during Camping"]]
+759768 | Corpse | Most dead monsters leave a temporary corpse. Corpses preserve the enemy order for a time and require heroes to use skills to attack around the corpses, move other enemies in reach, and so on. Alternatively, corpses can be attacked and cleared manually.
+   A: [["targeting_rules", "require heroes to use skills to attack around the corpses"]]
+   B: [["death_trigger", "Most dead monsters leave a temporary corpse"], ["targeting_rules", "attack around the corpses"]]
+759769 | CRIT | Short for "critical hit chance". Critical hits do extra damage and provide stress relief (when a hero crits) or stress damage (when a monster crits).
+   A: [["damage", "Critical hits do extra damage"], ["stress_morale", "stress damage"]]
+   B: [["stress_morale", "stress relief"]]
+759771 | Death's Door | A hero with 0 HP is at Death's Door. Each subsequent hit taken while at Death's Door has a chance of permanently killing the hero.
+   A: [["cheat_death", "A hero with 0 HP is at Death's Door"], ["permanent_loss", "permanently killing the hero"], ["random_effect", "has a chance"]]
+   B: [["cheat_death", "A hero with 0 HP is at Death's Door"], ["random_effect", "has a chance of permanently killing the hero"]]
+759772 | Debuff | A temporary stat decrease.
+   A: [["stat_loss", "stat decrease"]]
+   B: [["stat_loss", "A temporary stat decrease"], ["temporary_effect", "temporary"]]
+759774 | Disease | A temporary sickness that debilitates the hero in some way. Can be cured by some combat skills or Camping skills, but usually needs treated in town at the Sanitarium.
+   A: [["debuff", "debilitates the hero"]]
+   B: [["debuff", "debilitates the hero"], ["rest_phase", "treated in town at the Sanitarium"]]
+759776 | Equipment | Commonly refers to the weapon and armor equipped to a hero, but can also include Trinkets. Weapons and armor cannot be unequipped but can be upgraded.
+   A: [["merge_attach", "equipped to a hero"]]
+   B: [["merge_attach", "equipped to a hero"], ["upgrade", "can be upgraded"]]
+759785 | Obstacle | An object found in dungeons that impedes the party's progress. They can be removed by hand or with a Shovel. Clearing an obstacle by hand inflicts DMG and stress on the entire party.
+   A: [["terrain", "An object found in dungeons"], ["stress_morale", "stress"]]
+   B: [["terrain", "An object found in dungeons that impedes the party's progress"], ["friendly_fire", "inflicts DMG and stress on the entire party"]]
+759786 | PROT | Short for "protection". Indicates what percentage of incoming damage is mitigated. DOTs (bleed, blight) ignore PROT.
+   A: [["damage_reduction", "what percentage of incoming damage is mitigated"]]
+   B: [["damage_reduction", "what percentage of incoming damage is mitigated"], ["piercing", "DOTs (bleed, blight) ignore PROT"]]
+759794 | SPD | Short for "speed". Speed influences the order in which combatants act. Initiative is re-rolled each round.
+   A: [["speed", "influences the order in which combatants act"], ["random_effect", "Initiative is re-rolled each round"]]
+   B: [["reveal_order", "influences the order in which combatants act"]]
+759801 | Virtue | A temporary condition of increased effectiveness that a hero acquires after passing an Affliction Check. Virtued heroes have buffs and may buff or otherwise increase the power of their allies.
+   A: [["buff", "Virtued heroes have buffs"]]
+   B: [["buff", "Virtued heroes have buffs"], ["temporary_effect", "A temporary condition"]]
+759802 | Weapon | A type of equipment used by a hero to combat the dangers found in dungeons. A hero's weapon determines his/her base DMG, CRIT and SPD. Weapons can be upgraded at the Blacksmith.
+   A: [["merge_attach", "A type of equipment used by a hero"]]
+   B: [["upgrade", "Weapons can be upgraded"]]

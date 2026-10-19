@@ -1,0 +1,163 @@
+{
+"795390": {
+"tags": [
+[
+"on_play",
+"when the card is revealed after being played"
+]
+],
+"by": "A=B"
+},
+"795391": {
+"tags": [
+[
+"passive",
+"A continuous effect that applies while the card is on the board"
+]
+],
+"by": "A=B"
+},
+"795392": {
+"tags": [
+[
+"activated",
+"An effect the player triggers once"
+]
+],
+"by": "A=B"
+},
+"795393": {
+"tags": [
+[
+"turn_end",
+"Triggers at the end of each turn"
+]
+],
+"by": "A=B"
+},
+"795394": {
+"tags": [
+[
+"turn_start",
+"Triggers at the start of each turn"
+]
+],
+"by": "A=B"
+},
+"795395": {
+"tags": [
+[
+"start_of_game",
+"Triggers at the start of the game"
+]
+],
+"by": "A=B"
+},
+"795396": {
+"tags": [
+[
+"death_trigger",
+"Triggers when the card is destroyed"
+]
+],
+"by": "A=B"
+},
+"795397": {
+"tags": [
+[
+"discard",
+"discarded from hand"
+]
+],
+"by": "A=B"
+},
+"795398": {
+"tags": [
+[
+"quests",
+"A goal written on the card with a progress counter"
+]
+],
+"by": "A=B"
+},
+"795399": {
+"tags": [
+[
+"movement",
+"The card can be moved once per turn by its player"
+]
+],
+"by": "A=B"
+},
+"795400": {
+"tags": [],
+"by": "A=B"
+},
+"795401": {
+"tags": [
+[
+"stat_gain",
+"gains power"
+]
+],
+"by": "A=B"
+},
+"795402": {
+"tags": [
+[
+"stat_gain",
+"Adds power"
+]
+],
+"by": "A=B"
+},
+"795403": {
+"tags": [
+[
+"destroy",
+"Destroy"
+]
+],
+"by": "A=B"
+},
+"795404": {
+"tags": [
+[
+"discard",
+"Removes a card from a hand"
+]
+],
+"by": "A=B"
+},
+"795405": {
+"tags": [
+[
+"movement",
+"A card changes location"
+]
+],
+"by": "A=B"
+},
+"795406": {
+"tags": [
+[
+"merge_attach",
+"Two cards become one"
+],
+[
+"stat_gain",
+"adding their power"
+]
+],
+"by": "A=B"
+},
+"795407": {
+"tags": [
+[
+"stat_loss",
+"Lowers the power of cards"
+]
+],
+"by": "A=B"
+}
+}
