@@ -10,3 +10,7 @@ damage|does|*|\b\d+ damage\b	hs_battlegrounds,wh_underworlds,gwent,hearthstone,m
 damage|does|*|\b\d+ damage\b	into_the_breach,wh_killteam,wh_aos_4th	keep
 passive|does|*|\bwhile\b	shadowverse	(?:^|[.:;] )while\b
 passive|does|*|\bwhile\b	into_the_breach,inscryption,faeria,duelyst,sts1,dnd5e,sts2,gwent,hs_battlegrounds,wh_killteam,runeterra,wh_underworlds,wh_aos_4th,wh_40k_10e,hearthstone,mtg	keep
+temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	wh_40k_10e	(until|till) (the )?end of (the |your |this )?(turn|round)(?!, (?:this|that) (?:unit|model) (?:is not|cannot))
+temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	mtg	(?<!haste )(until|till) (the )?end of (the |your |this )?(turn|round)
+temporary_buff|does|*|(until|till) end of (turn|round)	mtg	(?<!haste )(until|till) end of (turn|round)
+temporary_buff|does|*|(until|till) end of (turn|round)	duelyst,hearthstone	(?<!minion )(?<!exists )(?<!attack )(?<!opponent.s )(until|till) end of (turn|round)

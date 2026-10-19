@@ -1,0 +1,179 @@
+765927 || excess_damage || excess combat damage
+765928 || generate_cards || Conjure
+765931 || evasion || can't be blocked except by creatures with flying or reach
+765932 || stat_gain || Adapt
+765933 || resource_gain || Treasure
+765934 || on_ally_play || Landfall
+765935 || deathtouch || enough to destroy it
+765936 || immunity || Protection
+765937 || merge_attach || Attach to target creature you control
+765937 || activated || {2}: Attach to target creature you control
+765938 || card_quality || Connive
+765939 || condition_life || Enrage
+765940 || cost_type || Your creatures can help cast this spell
+765941 || stat_gain || enters with three +1/+1 counters on it
+765942 || kicker || You may pay an additional
+765943 || untap || Attacking doesn't cause this creature to tap
+765944 || condition_count || Corrupted
+765945 || selection || look at the top two cards of your library
+765945 || self_mill || put any number of them into your graveyard
+765945 || deck_position || top two cards of your library
+765946 || summon || create a blue Jace planeswalker token
+765947 || spell_speed || any time you could cast an instant
+765948 || evasion || can't be blocked except by two or more creatures
+765949 || stat_gain || Amass
+765950 || discard || Discard this card
+765950 || draw || Draw a card
+765950 || activated || {3}{R}, Discard this card: Draw a card
+765951 || on_spell || Whenever you cast a noncreature spell
+765951 || temporary_buff || +1/+1 until end of turn
+765952 || count_payoff || Revolt
+765953 || activated || Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn
+765953 || transform || becomes an artifact creature
+765954 || stat_loss || -1/-1 counters
+765954 || damage_over_time || poison counters
+765956 || cheat_death || Regenerate
+765957 || damage || Fight
+765958 || first_strike || deals combat damage before creatures without first strike
+765959 || merge_attach || Enchant
+765960 || death_trigger || When this creature dies
+765960 || cheat_death || return it to the battlefield under its owner's control
+765961 || cast_from_zone || Cast it as a sorcery on a later turn
+765961 || free_play || without paying its mana cost
+765961 || delayed || on a later turn
+765962 || kicker || You may pay an additional {1}{U} any number of times
+765963 || stat_gain || put four +1/+1 counters on target land you control
+765963 || transform || it becomes a 0/0 Elemental creature
+765963 || haste || with haste
+765964 || modal_choice || Choose one or more additional costs
+765965 || on_spell || Heroic
+765966 || evasion || Landwalk
+765967 || evasion || This creature can't be blocked as long as defending player controls an Island
+765968 || selection || Scry
+765969 || cost_reduction || Affinity
+765970 || generate_cards || Draft from a spellbook
+765970 || selection || Draft from a spellbook
+765971 || tutor || exile cards from the top of your library until you exile a nonland card
+765971 || free_play || Cast it without paying its mana cost
+765971 || cost_condition || mana value 10 or less
+765972 || on_ally_play || Eerie
+765973 || cast_from_zone || You may cast this card from your graveyard
+765973 || banish || Then exile it
+765974 || lifesteal || Damage dealt by this creature also causes you to gain that much life
+765975 || haste || This creature can attack and {T} as soon as it comes under your control
+765976 || card_advantage || Investigate
+765977 || on_spell || Whenever you cast a spell
+765977 || lifesteal || each opponent loses 1 life and you gain that much life
+765979 || tutor || Seek
+765980 || immunity || can't be the target of spells or abilities your opponents control
+765981 || upkeep || sacrifice it unless you pay its echo cost
+765981 || turn_start || At the beginning of your upkeep
+765982 || death_count || Morbid
+765983 || cost_type || can be paid with {G}, {U}, or 2 life
+765983 || life_payment || 2 life
+765984 || revive || Return this card from your graveyard to the battlefield
+765984 || haste || It gains haste
+765984 || self_destruct || Exile it at the beginning of the next end step
+765985 || first_strike || deals both first-strike and regular combat damage
+765985 || multi_attack || both first-strike and regular combat damage
+765986 || evasion || This creature can't be blocked except by creatures with horsemanship
+765987 || cast_from_zone || You may cast this card from your graveyard
+765987 || cost_reduction || reduce that cost
+765987 || banish || Then exile this spell
+765988 || immunity || don't destroy this creature
+765989 || stat_gain || This creature enters with two +1/+1 counters on it
+765989 || on_ally_play || Whenever another creature enters
+765990 || team_play || Another player can pay up to {5} of this spell's cost
+765991 || blocking || This creature can block creatures with flying
+765992 || evasion || This creature can't be blocked except by artifact creatures and/or black creatures
+765993 || cant_attack || This creature can't attack
+765994 || cast_from_zone || you may cast this card from exile
+765994 || free_play || without paying its mana cost
+765994 || turn_start || At the beginning of your next upkeep
+765995 || discard || If you discard this card
+765995 || cost_type || madness cost
+765996 || transform || Transform
+765997 || cast_from_zone || Escape
+765998 || deck_position || Clash
+765999 || banish || exile it instead
+765999 || graveyard || Descend
+766000 || activated || Channel
+766001 || temporary_buff || gets +2/+2 until end of turn
+766002 || on_spell || Magecraft
+766003 || activated || Tap another creature you control
+766003 || transform || It's an artifact creature at 9+
+766004 || mill || Mill
+766005 || sacrifice || Offering
+766005 || cost_reduction || Offering
+766007 || modal_choice || your choice of a +1/+1 counter or haste
+766007 || haste || haste
+766008 || removal || Airbend
+766009 || cast_from_zone || Aftermath
+766010 || stacking_keyword || give each another counter of each kind already there
+766011 || on_ally_play || Alliance
+766012 || graveyard || Threshold
+766013 || transform || Specialize
+766014 || modal_choice || You may cast one or both halves of this card
+766015 || death_trigger || When this creature dies
+766015 || cheat_death || return it to the battlefield under its owner's control
+766016 || summon || create a 0/0 black Phyrexian Germ creature token
+766016 || merge_attach || then attach this to it
+766016 || on_play || When this Equipment enters
+766017 || delayed || remove a time counter
+766017 || free_play || cast it without paying its mana cost
+766017 || turn_start || At the beginning of your upkeep
+766018 || graveyard || Collect evidence
+766019 || enemy_benefit || Gift
+766020 || enemy_benefit || an opponent of your choice may put two +1/+1 counters on it
+766021 || delayed || remove a time counter from it
+766021 || self_destruct || sacrifice it
+766021 || turn_start || At the beginning of your upkeep
+766022 || summon || create an Incubator token
+766022 || transform || Transform this token
+766023 || lone_unit || attacks alone
+766023 || temporary_buff || +1/+1 until end of turn
+766024 || condition_count || Pack tactics
+766025 || immunity || This creature can't be the target of spells or abilities
+766026 || cast_from_zone || You may cast this card from your graveyard
+766026 || discard || discarding a land card
+766026 || cost_type || in addition to paying its other costs
+766027 || counter_spell || counter it unless that player pays {2}
+766027 || cost_increase || unless that player pays {2}
+766028 || variety_payoff || Coven
+766029 || free_play || You may cast it without paying its mana cost
+766029 || cost_condition || a nonland card that costs less
+766029 || random_effect || in a random order
+766029 || on_play || When you cast this spell
+766030 || haste || it gains haste
+766030 || return_to_hand || it's returned from the battlefield to its owner's hand
+766030 || cost_type || dash cost
+766030 || turn_end || next end step
+766031 || discard || Bloodrush
+766031 || activated || Bloodrush
+766032 || board_presence || If you control ten or more permanents
+766033 || summon || Manifest
+766034 || selection || look at the top two cards of your library
+766034 || summon || put one onto the battlefield face down as a 2/2 creature
+766034 || self_mill || the other into your graveyard
+766035 || haste || it gains haste
+766035 || death_trigger || When this creature dies
+766035 || draw || draw a card
+766035 || self_destruct || Sacrifice it at the beginning of the next end step
+766035 || cost_type || blitz cost
+766036 || cost_type || cleave cost
+766037 || activated || Boast
+766038 || immunity || Hexproof from
+766039 || count_payoff || Infusion
+766040 || sacrifice || You may sacrifice an artifact, enchantment, or token
+766040 || kicker || You may sacrifice an artifact, enchantment, or token
+766041 || modal_choice || Choose both if you pay the entwine cost
+766042 || cost_type || You may cast this card face down for {3}
+766042 || transform || Turn it face up any time
+766043 || activated || {2}{U}, Return an unblocked attacker you control to hand
+766043 || return_to_hand || Return an unblocked attacker you control to hand
+766043 || attack_now || tapped and attacking
+766044 || tutor || Search your library for a card with the same mana value
+766044 || discard || Discard this card
+766044 || cost_condition || same mana value as this card
+766045 || sacrifice || you may sacrifice a creature with power 1 or greater
+766045 || copy || copy this spell
