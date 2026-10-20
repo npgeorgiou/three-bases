@@ -54,8 +54,6 @@ const cellRect = (svg, lane, owner, r, c, cls, inset = 3) => {
   const [x, y] = cellXY(lane, owner, r, c);
   return svgEl('rect', { x: x + inset, y: y + inset, width: CELL - 2 * inset, height: CELL - 2 * inset, rx: inset + 4, class: cls }, svg);
 };
-const campFrame = (svg, lane, owner, cls) =>
-  svgEl('rect', { x: LANE_X[lane] - 4, y: campY(owner) - 2, width: CELL * 3 + 8, height: CELL * ROWS + 4, rx: 10, class: cls }, svg);
 const crossPath = (x0, y0, x1, y1) => `M${x0} ${y0}L${x1} ${y1}M${x1} ${y0}L${x0} ${y1}`;
 
 /**

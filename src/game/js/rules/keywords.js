@@ -26,7 +26,7 @@ const isReckless = u => !!(cardOf(u).reckless || u.reck);
 /** Armoured: printed, or given until round end (Strategikon). */
 const isArmoured = u => !!(kw(u, 'armoured') || u.tArm);
 
-/** Resolution order (section 7, option B): page order of the whole board from the seat of the unit's controller. */
+/** Resolution order (summary section 7): page order of the whole board from the seat of the unit's controller. */
 const readingKey = u => seatKey(u, ctl(u));
 const byReadingOrder = (a, b) => readingKey(a) - readingKey(b);
 

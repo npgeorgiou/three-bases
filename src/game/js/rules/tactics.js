@@ -95,8 +95,6 @@ const NO_LANE_FX = ['levy', 'crown', 'tithe', 'boneharvest', 'requiem', 'danse',
  * resolve on these picks, and the screen highlights them. a: the spell action ({lane}, {lane, col}, {vid}, {tid}).
  */
 const ownCampOf = (p, lane) => campCells(p, lane), foeCampOf = (p, lane) => campCells(other(p), lane);
-/** p's units in `lane` standing in any of `rows`, except unit `except`. */
-const rowMates = (s, p, lane, rows, except) => unitsIn(s, p, lane).filter(u => u.id !== except && cellsOf(u).some(([r]) => rows.includes(r)));
 const rowCells = (u, rows) => campCells(u.owner, u.lane, r => rows.includes(r));
 const SPELL_SCOPE = {
   annona: { area: (s, p, l) => ownCampOf(p, l) },
@@ -139,13 +137,6 @@ function spellTargets(s, p, k, a) {
   return [byId(s, a.tid ?? a.vid)].filter(Boolean);
 }
 const spellArea = (s, p, k, a) => (SPELL_SCOPE[k] && SPELL_SCOPE[k].area ? SPELL_SCOPE[k].area(s, p, spellLane(s, a), a) : []);
-/** The first enemy in u's column(s) of the enemy camp that it can strike (front row first), or null. */
-function facingStrikable(s, u) {
-  const q = other(u.owner), map = occupancy(s, q, u.lane), cols = colsOf(u);
-  const rows = [0, 1, 2].sort((a, b) => Math.abs(a - frontRow(q)) - Math.abs(b - frontRow(q)));
-  for (const r of rows) for (const c of cols) { const t = map[r + ',' + c]; if (t && ctl(t) !== ctl(u) && !isIncorp(t)) return t; }
-  return null;
-}
 /** A unit leaves the game without dying (no Death effects, no reactions, its card goes nowhere). */
 function exitGame(s, u, why) {
   emit(s, { exit: u.id });

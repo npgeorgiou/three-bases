@@ -177,7 +177,6 @@ details ul { padding-left: 18px; margin: 6px 0 0; font-size: 16px; }
 .dot.d-op { fill: #D3533F; stroke: #E0D0AE; }
 .dot.x { fill: var(--platec); }
 .dotx { stroke: var(--plate); stroke-width: 3; stroke-linecap: round; }
-.fitlane { fill: none; stroke: #3F8EF0; stroke-width: 4; pointer-events: none; }
 #board .shade { fill: rgba(8,10,14,.58); pointer-events: none; }
 .tst { fill: #6E6F73; stroke: #2B2C30; stroke-width: 3; }
 .tsx { fill: none; stroke: #2B2C30; stroke-width: 5; stroke-linecap: round; }
@@ -194,7 +193,6 @@ details ul { padding-left: 18px; margin: 6px 0 0; font-size: 16px; }
 .tombfly svg { width: 100%; height: 100%; display: block; overflow: visible; }
 #board .pvcur { fill: none; stroke: #fff; stroke-width: 2.5; stroke-dasharray: 7 4; pointer-events: none; filter: drop-shadow(0 0 2px rgba(0,0,0,.7)); }
 .lanehl { fill: rgba(242,163,58,.12); stroke: #F2A33A; stroke-width: 3; pointer-events: none; }
-.nolane { fill: none; stroke: var(--danger); stroke-width: 3; stroke-dasharray: 8 6; opacity: .8; pointer-events: none; }
 .reach { fill: rgba(111,190,110,.28); pointer-events: none; }
 .mvpath { fill: rgba(76,190,90,.5); stroke: #3FB950; stroke-width: 2; pointer-events: none; }
 .pv { pointer-events: none; stroke-width: 2.5; }
@@ -648,7 +646,7 @@ button.dlit:hover { filter: brightness(1.15); }
    Sections: card data · rules engine · computer opponent · sound · view · board · animations · panels · flow · input. */
 
 /* =====================================================================
-   CARD DATA (card revamp, v2)
+   CARD DATA
    Units: sup = supply given each round = deploy cost = cost of each move or attack.
    Budget (supply to stats): strength + defence of a vanilla unit by supply: 1:3, 2:5, 3:7, 4:8, 5:10, then 2 per supply
    (6:12 … 10:20); minus size (line of 2: 1, line of 3: 2, 2x2: 3); stats take their share, the ability the rest.
@@ -1332,7 +1330,7 @@ const isReckless = u => !!(cardOf(u).reckless || u.reck);
 /** Armoured: printed, or given until round end (Strategikon). */
 const isArmoured = u => !!(kw(u, 'armoured') || u.tArm);
 
-/** Resolution order (section 7, option B): page order of the whole board from the seat of the unit's controller. */
+/** Resolution order (summary section 7): page order of the whole board from the seat of the unit's controller. */
 const readingKey = u => seatKey(u, ctl(u));
 const byReadingOrder = (a, b) => readingKey(a) - readingKey(b);
 
@@ -2730,8 +2728,6 @@ const NO_LANE_FX = ['levy', 'crown', 'tithe', 'boneharvest', 'requiem', 'danse',
  * resolve on these picks, and the screen highlights them. a: the spell action ({lane}, {lane, col}, {vid}, {tid}).
  */
 const ownCampOf = (p, lane) => campCells(p, lane), foeCampOf = (p, lane) => campCells(other(p), lane);
-/** p's units in `lane` standing in any of `rows`, except unit `except`. */
-const rowMates = (s, p, lane, rows, except) => unitsIn(s, p, lane).filter(u => u.id !== except && cellsOf(u).some(([r]) => rows.includes(r)));
 const rowCells = (u, rows) => campCells(u.owner, u.lane, r => rows.includes(r));
 const SPELL_SCOPE = {
   annona: { area: (s, p, l) => ownCampOf(p, l) },
@@ -2774,13 +2770,6 @@ function spellTargets(s, p, k, a) {
   return [byId(s, a.tid ?? a.vid)].filter(Boolean);
 }
 const spellArea = (s, p, k, a) => (SPELL_SCOPE[k] && SPELL_SCOPE[k].area ? SPELL_SCOPE[k].area(s, p, spellLane(s, a), a) : []);
-/** The first enemy in u's column(s) of the enemy camp that it can strike (front row first), or null. */
-function facingStrikable(s, u) {
-  const q = other(u.owner), map = occupancy(s, q, u.lane), cols = colsOf(u);
-  const rows = [0, 1, 2].sort((a, b) => Math.abs(a - frontRow(q)) - Math.abs(b - frontRow(q)));
-  for (const r of rows) for (const c of cols) { const t = map[r + ',' + c]; if (t && ctl(t) !== ctl(u) && !isIncorp(t)) return t; }
-  return null;
-}
 /** A unit leaves the game without dying (no Death effects, no reactions, its card goes nowhere). */
 function exitGame(s, u, why) {
   emit(s, { exit: u.id });
@@ -3819,8 +3808,6 @@ const cellRect = (svg, lane, owner, r, c, cls, inset = 3) => {
   const [x, y] = cellXY(lane, owner, r, c);
   return svgEl('rect', { x: x + inset, y: y + inset, width: CELL - 2 * inset, height: CELL - 2 * inset, rx: inset + 4, class: cls }, svg);
 };
-const campFrame = (svg, lane, owner, cls) =>
-  svgEl('rect', { x: LANE_X[lane] - 4, y: campY(owner) - 2, width: CELL * 3 + 8, height: CELL * ROWS + 4, rx: 10, class: cls }, svg);
 const crossPath = (x0, y0, x1, y1) => `M${x0} ${y0}L${x1} ${y1}M${x1} ${y0}L${x0} ${y1}`;
 
 /**
