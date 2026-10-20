@@ -5,6 +5,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from compact_text import clause_text, evidence_text   # Step 6: evidence and clauses are positions in the entry's text
 DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'three-bases-library.sqlite'))  # the database sits next to tools/
 db = sqlite3.connect(DB)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import indexes; indexes.fts_temp(db)   # stored without it
 q = lambda s, *a: db.execute(s, a).fetchall()
 
 def concepts(term=''):
@@ -129,8 +130,7 @@ def interactions(name, game=None, per=8):
         print(f'   {rel} {tn}: partners ({other}):', ', '.join(p[0] for p in ps))
     print('-- keyword partners:')
     for rel, kid, kn in q('SELECT l.rel, k.id, k.name FROM entity_links l JOIN entities k ON k.id=l.dst WHERE l.src=? AND k.category="keyword"', eid):
-        other = {'has_keyword': ('grants_keyword', 'mentions_keyword'), 'inflicts_keyword': ('benefits_keyword', 'counters_keyword'), 'benefits_keyword': ('inflicts_keyword',),
-                 'counters_keyword': ('inflicts_keyword',), 'suffers_keyword': ('counters_keyword', 'benefits_keyword')}.get(rel, ('has_keyword',))
+        other = ('grants_keyword', 'mentions_keyword') if rel == 'has_keyword' else ('has_keyword',)
         ps = q(f'SELECT x.name, l.rel FROM entity_links l JOIN entities x ON x.id=l.src WHERE l.dst=? AND l.rel IN ({",".join("?"*len(other))}) AND x.id<>? ORDER BY random() LIMIT ?', kid, *other, eid, per)
         print(f'   {rel} {kn}:', ', '.join(f'{a} ({b})' for a, b in ps))
     print('-- concept partners in the same game (what this benefits from <-> who does it; what this does <-> who benefits):')

@@ -10,7 +10,8 @@ cl_form, cl_pos, cl_len, frequency, basis); for form 2, *_pos is the note id and
   compact_text.py <db> compact   last build step before the checks: text -> positions (exact: the text is cut back out unchanged)
   compact_text.py <db> expand    first build step: positions -> text, so every build step keeps working on the text columns
 Readers (query.py) cut the text out with evidence_text() / clause_text(). Idempotent in both directions."""
-import re, sqlite3, sys
+import os, re, sqlite3, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import indexes as IX
 
 def read_text(game, name, text):
     low = (text or '').lower()
@@ -79,9 +80,9 @@ def expand(c):
     c.executemany('INSERT INTO trigger_effect VALUES(?,?,?,?,?,?,?)', te)
     indexes(c); c.commit(); print('expand: tags', len(ec), ', pairs', len(te))
 
-def indexes(c):
-    c.execute('CREATE INDEX IF NOT EXISTS ix_ec_concept ON entity_concepts(concept)')
-    c.execute('CREATE INDEX IF NOT EXISTS ix_te ON trigger_effect(trigger, effect)')
+def indexes(c):   # the two tables were just rebuilt; build.sh drops all indexes from its output at the end
+    for s in IX.INDEXES:
+        if ' ON entity_concepts(' in s or ' ON trigger_effect(' in s: c.execute(s)
 
 if __name__ == '__main__':
     c = sqlite3.connect(sys.argv[1])

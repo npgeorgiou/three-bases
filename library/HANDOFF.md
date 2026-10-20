@@ -1,28 +1,32 @@
 # Library: state and next steps (20 Oct 2026)
 
+Later on 20 Oct 2026: D&D 5e was removed (`tools/fixes/f16_drop_dnd.py`), and the database is stored without its search and
+full-text indexes (`tools/indexes.py`; the build creates them first and drops them last). The file went from 86.2 MB to 63.1 MB.
+The numbers below are after the removal.
+
 Rules for the next chat: **no readers, judges or agents** without Kaptain's OK and a measured cost. Scripts and builds first.
 Commit and push after each step. Read `ADDING_GAMES.md` sections 4b and 4c before writing any pattern.
 
 ## Where it stands
 The tag-fix plan is finished and its build is the library (`tools/final/report.md`). On the answer key every game has about half the
-wrong tags and fewer missed tags than the original (c7a77a4). But the real test, the 322 real-world cases from wikis and guides
-(`tools/realworld/<game>.tsv`), is met only **162 of 322 (50%)**, almost the same as the original (161). The tag fix improved
+wrong tags and fewer missed tags than the original (c7a77a4). But the real test, the 300 real-world cases from wikis and guides
+(`tools/realworld/<game>.tsv`), is met only **150 of 300 (50%)**; before the removal of D&D it was 162 of 322, almost the same as the original (161). The tag fix improved
 agreement with the key, not the library's use for real decks and combos. That is the next goal: **raise the real-world rate.**
 
-## Why the 160 misses miss
+## Why the 150 misses miss
 Run `python3 library/tools/realworld_why.py library/three-bases-library.sqlite` (it prints every missed case with its reason):
 
 | cases | type | reason | what fixes it |
 |---|---|---|---|
-| 55 | archetype | the faction is not above the game average for that archetype | the archetype model (below) |
-| 38 | signature | the faction's cards use the concept, but not more than other factions | the signature model (below) |
-| 17 | signature | only 1-4 of the faction's cards have the concept | tagging |
-| 11 | signature | no card of the faction has the concept | tagging (or the case names the wrong concept) |
+| 53 | archetype | the faction is not above the game average for that archetype | the archetype model (below) |
+| 35 | signature | the faction's cards use the concept, but not more than other factions | the signature model (below) |
+| 15 | signature | only 1-4 of the faction's cards have the concept | tagging |
+| 10 | signature | no card of the faction has the concept | tagging (or the case names the wrong concept) |
 | 15 | combo | a card name is not in the library | missing cards or name forms |
-| 14 | combo | both cards are there, no connection | tagging or the connection search |
+| 12 | combo | both cards are there, no connection | tagging or the connection search |
 | 10 | splash | missing from the faction's splash list | the signature model |
 
-So only about 42 misses (17 + 11 + 14) are tagging. About 103 come from **how signatures and archetypes are measured**, and 15
+So only about 37 misses (15 + 10 + 12) are tagging. About 98 come from **how signatures and archetypes are measured**, and 15
 from **missing cards**.
 
 What is measured now (`tools/signature.py`):
@@ -36,18 +40,18 @@ archetypes are decided by the cards decks actually play and by a few key mechani
 
 ## Next steps, in order
 1. **Collect more real-world cases (Kaptain's direction).**
-   - Target: 50+ per game (about 1,000), in the same format, each with a source URL: signatures, archetypes, combos and splashes.
+   - Target: 50+ per game (about 950), in the same format, each with a source URL: signatures, archetypes, combos and splashes.
    - Also collect **the key cards each source names for an archetype**, as a new case type:
      `archetype_card <faction> <archetype> <card>`.
    - Card names exactly as the library stores them (check with `query.py`).
    - Split every game's cases 50/50 with seed 1. Build rules from one half; use the other half only to test, and report the test
      half only, or the rate will be fitted to the cases.
    - Research with web search in the main chat. Measure the tokens of one game first and show Kaptain before doing the rest.
-2. **Check the existing 322 against their sources.** A Claude wrote them, and some may name the wrong concept (for example Duelyst
+2. **Check the existing 300 against their sources.** A Claude wrote them, and some may name the wrong concept (for example Duelyst
    Songhai "stealth": 0 of 98 cards). Fix or drop cases the source does not support.
 3. **Missing cards (15 combos).** Find why each name is missing (another name form, a merged entry, a card never loaded) with
    `query.py`. Add aliases, or load the cards from a reachable source.
-4. **Rebuild the archetype and signature model from the cases.** This is the biggest lever (about 103 misses).
+4. **Rebuild the archetype and signature model from the cases.** This is the biggest lever (about 98 misses).
    - From the build half, learn which concepts and which key cards separate the factions sources call "swarm", "control", and so on.
    - Use that instead of the hand-made concept bundles. For example: an archetype counts when the faction has enough cards with
      the archetype's *distinctive* concepts, weighted by how often those cards are its named key cards.

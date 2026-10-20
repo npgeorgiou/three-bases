@@ -17,7 +17,6 @@ NOTES = {
  'sts1': " Later load (12 Oct 2026, wiki Module:Cards/data): an upgraded card whose text changes only in numbers keeps them on the base card (extra.upgraded_text, extra.upgraded_cost); an upgrade that changes the mechanic (adds Innate or Retain, drops Exhaust, all cards instead of one, ...) is its own entry '<name>+' linked variant_of to the base card. Cards the first build lacked (Sucker Punch, Pressure Points, created cards such as Shiv, Miracle, Smite) were added.",
  'gwent': " Later load (12 Oct 2026): NonOwnable cards (tokens, created cards) from the same export, ' (created)' when the name exists, linked from the cards that create them (generates).",
  'shadowverse': " Later load (12 Oct 2026): tokens (set 90000, alternate art left out) and cards the first build dropped, linked from the cards that create them (generates).",
- 'dnd5e': " Later load (12 Oct 2026, 5e-database): spells, class features, species traits and feats the first build dropped; bookkeeping features and item variants still left out.",
  'wh_40k_10e': " Later load (12 Oct 2026, BSData current): abilities and army rules whose text the library lacked; campaign content (Crusade) left out.",
  'wh_killteam': " Later load (12 Oct 2026, BSData current): abilities, unique actions and rules whose text the library lacked.",
  'wh_aos_4th': " Later load (12 Oct 2026, BSData current): abilities and rules whose text the library lacked; Path to Glory and hero-creation entries left out.",
@@ -39,7 +38,6 @@ SOURCES = {   # later loads (12 Oct 2026), added once to the game's source line
  'wh_40k_10e': 'BSData wh40k-10e (current) for abilities and rules the library lacked',
  'wh_killteam': 'BSData wh40k-killteam (current) for abilities and rules the library lacked',
  'wh_aos_4th': 'BSData age-of-sigmar-4th (current) for abilities and rules the library lacked',
- 'dnd5e': '5e-database (github.com/5e-bits/5e-database) for entries the first build dropped',
 }
 for g, sx in SOURCES.items():
     cur = q('SELECT source FROM games WHERE id=?', g)

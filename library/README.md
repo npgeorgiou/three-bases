@@ -1,12 +1,12 @@
 # Three Bases inspiration library
 
 ## What it is
-A SQLite database of game mechanics from 20 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
+A SQLite database of game mechanics from 19 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
 
 It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite`, `tools/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results).
 
 ## Contents
-57,709 entries (cards, units, locations, abilities, items, rules), 1,186 keywords and 450 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
+56,353 entries (cards, units, locations, abilities, items, rules), 1,135 keywords and 450 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
 
 | Game | Entries |
 |---|---|
@@ -21,7 +21,6 @@ It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `thr
 | Warhammer 40,000: Kill Team | 2,219 |
 | Slay the Spire 2 (Early Access) | 1,386 |
 | Gwent (standalone) | 1,357 |
-| Dungeons & Dragons 5e (SRD) | 1,344 |
 | Darkest Dungeon | 949 |
 | Marvel Snap (699 cards, 212 locations, 6 rules) | 917 |
 | Slay the Spire | 895 |
@@ -48,7 +47,7 @@ What is in, beyond the cards each source lists as playable:
 **concept_relations**: 478 relations (synergizes, enables, counters, mitigates, tension, variant_of), Claude's analysis. Every design problem is linked to the mechanics that ease or worsen it, including five from Three Bases playtests: p_objective_stalemate (dot-holding stalemates), p_resource_hoarding (carry-over hoarding), p_front_pileup (units piling into the front row), p_draw_engine (card-draw engines) and p_holder_snowball (the base holder snowballing). `anti_stalemate` (stalemates and board locks, and what breaks them) is a design problem too.
 
 **entity_links**:
-- **Keyword links:** has (the card's own keyword), grants (given to others: "creatures you control have flying"), mentions (only named: "creatures with flying"), describes (the text describes a keyword's mechanic in other words, Claude's reading). D&D conditions use inflicts, counters, suffers and benefits instead.
+- **Keyword links:** has (the card's own keyword), grants (given to others: "creatures you control have flying"), mentions (only named: "creatures with flying"), describes (the text describes a keyword's mechanic in other words, Claude's reading).
 - **Type links:** has_type, cares_about_type.
 - **Name links:** references (names another card; for Magic also Scryfall's related cards), summons, generates (creates another card), transforms_into (a champion's level-up).
 - **variant_of:** the same mechanic in another faction, and a Slay the Spire upgrade to its base card.
@@ -73,13 +72,14 @@ What is in, beyond the cards each source lists as playable:
 
 **concept_precision**: per concept and game, how often the current wording patterns are right on the entries the hand reviews checked (a reviewed wrong tag counts only while a pattern would still make it). `concept` warns where this is below 70%.
 
-**entity_fts**: full-text search. **games**, **load_log**: what each game is and how it was loaded.
+**entity_fts**: full-text search. It and the search indexes are not stored in the file (about 21 MB): `tools/indexes.py` says how the build and `query.py` rebuild them. **games**, **load_log**: what each game is and how it was loaded.
 
 ## How Claude uses it
 In a fresh chat, Claude clones the repository and runs `python3 library/tools/query.py <command>` (the script finds the database next to `tools/`; `TB_LIB` overrides). The commands and the rules for reading results are in SEARCH_GUIDE.md. The database never enters the conversation, only printed results do, so a design question costs a few short queries.
 
 ## Maintenance
 - **Tag-fix plan, final (20 Oct 2026)**: the library is the build of that day; `tools/final/report.md` compares it with the original (c7a77a4) on the answer key, the 322 real-world cases and the combos (fewer wrong and fewer missed tags in all 20 games; real-world 161 -> 162; combos 80/82 both). The key credits the tags of the keywords a card has (`tools/key/key.py credit`); patterns built from the key's quotes (`tools/step3/key_patterns.py`), old patterns right less than half the time switched off or redirected (`tools/step3/switch_off.py`), new triggers and amplifiers (`tools/step3/trigger_patterns.py`, `tools/step3/amp_patterns.py`), all as lines of `tools/step3/decisions.tsv`; review records in the tree v3 ids (`tools/fixes/f15`), and where a review and the key disagree on what a card does the key wins (`tools/key_wins.py`). Lost trigger pairs by cause: `tools/lost_pairs.py`.
+**D&D 5e removed (20 Oct 2026)**: Kaptain's decision; `tools/fixes/f16_drop_dnd.py` deleted its entries and every row pointing at them, and its scripts, patterns, reviews, key and cases are gone. Real-world test since: 150 of 300 (D&D had 12 of 22); the other games are unchanged.
 The build is incremental: `three-bases-library.sqlite` is the base for all work. The raw corpus of the first build is deleted and not needed.
 
 - **Fix wrong tags** in these places, then run `tools/build.sh <in.sqlite> <out.sqlite>`:
@@ -89,10 +89,10 @@ The build is incremental: `three-bases-library.sqlite` is the base for all work.
 - **Tag audit** (12 Oct 2026): `tools/audit/audit.py` (sample, show, trial, confirm, blind, score); per game the errors found in the 150 work entries and the blind checker's judgments of the 50 held-out entries (the samples, snapshots and blind files were removed after scoring). A newer review decision replaces an older opposite one; a reviewed keyword passes added concepts only to entries that have the keyword, not to those that only mention it.
 - **Add cards:** a converter in `tools/convert/` turns a source file into the load format (described in `tools/load_cards.py`). Then run `tools/build.sh <in.sqlite> <out.sqlite> <game>=<cards.json> ...`. New cards get the same tagging as the rest of their game; older entries stay as they were, apart from merges and links to the new cards.
 - **How entries are tagged:** an entry gets the general wording patterns (all games) once, when it is loaded; the game's own patterns, keyword inheritance, outcome concepts, link rules and trigger pairs are re-derived on every build. Text is read lower-cased with the entry's own name as "name"; Magic without reminder text. Entries that no pattern or keyword reaches are dropped.
-- **One-time fixes** of 12 Oct 2026 are in `tools/fixes/` (f01 Magic cut, f02 Scryfall data, f04 text clean-up, f06 leftovers, f08 weak patterns, f09 whole-entry patterns, f10 Magic non-token cards, f11 icon words in Slay the Spire text and stat lines for units without them, f12 review tags that older builds copied across categories, f13 the 19 keywords no card used, f14 the one untagged entry with no mechanic; the other 51 untagged entries were read and tagged in the reviews); f03 (granted keywords are not "does"), f05 (faction names and table) and f07 (keyword links, concept tree) are also build steps.
+- **One-time fixes** of 12 Oct 2026 are in `tools/fixes/` (f01 Magic cut, f02 Scryfall data, f04 text clean-up, f06 leftovers, f08 weak patterns, f09 whole-entry patterns, f10 Magic non-token cards, f11 icon words in Slay the Spire text and stat lines for units without them, f12 review tags that older builds copied across categories, f13 the 19 keywords no card used, f14 the one untagged entry with no mechanic, f16 the removal of D&D 5e; the other 51 untagged entries were read and tagged in the reviews); f03 (granted keywords are not "does"), f05 (faction names and table) and f07 (keyword links, concept tree) are also build steps.
 
 The build stops if any check fails:
-- **regression set** (`regression.py <db> check`): 12,835 reviewed tags must hold (a reviewed parent also holds through a narrower concept);
+- **regression set** (`regression.py <db> check`): 21,282 reviewed tags must hold (a reviewed parent also holds through a narrower concept);
 - **combo set** (`combo_check.py <db>`): 82 enabler → payoff pairs, 80 found, 2 known misses;
 - **trigger coverage** (`trigger_pairs.py <db> check`): at least 50% of entries with a trigger in every game;
 - **query tests** (`test_query.py <db>`): all 16 commands.
@@ -105,17 +105,16 @@ Sources of the later loads (converter in brackets):
 - Shadowverse: the Portal card API export, set 90000 [conv_sv.py].
 - Underworlds: yawudb's db.js, github.com/PompolutZ/yawudb [conv_wu.py].
 - 40k, Kill Team, Age of Sigmar: the BSData repos at their current state [conv_bs.py]: abilities and rules whose text the library lacked; campaign content (Crusade, Path to Glory, hero creation) left out. Unit datasheets and missing stat lines [conv_bs_units.py].
-- D&D 5e: github.com/5e-bits/5e-database [conv_dnd.py].
 
 ## Known limits
-- Automatic tags on long prose (D&D, Warhammer army rules, Inscryption and Into the Breach wiki text) are the least precise. Five concept/game cells are below 70% (Hearthstone hand_disruption, adjacency and debuff; Kill Team information; Shadowverse tutor): their right and wrong tags come from the same wording, so `concept` warns there.
+- Automatic tags on long prose (Warhammer army rules, Inscryption and Into the Breach wiki text) are the least precise. Five concept/game cells are below 70% (Hearthstone hand_disruption, adjacency and debuff; Kill Team information; Shadowverse tutor): their right and wrong tags come from the same wording, so `concept` warns there.
 - Combo detection finds candidates through concepts, keywords and trigger links; confirming a combo means reading both cards.
-- Frequency limits, D&D condition roles and trigger pairs come from wording rules, not play; real counts come from the Three Bases simulator.
-- Warhammer and D&D entries loaded on 12 Oct 2026 come from the current BSData and SRD data, which can differ from the older snapshot of the first build. Units still without a stat line: 40k 46, Kill Team 83 (no single matching stat profile in BSData).
+- Frequency limits and trigger pairs come from wording rules, not play; real counts come from the Three Bases simulator.
+- Warhammer entries loaded on 12 Oct 2026 come from the current BSData data, which can differ from the older snapshot of the first build. Units still without a stat line: 40k 46, Kill Team 83 (no single matching stat profile in BSData).
 - Missing data: Underworlds fighter stat lines. The three stat files Kaptain supplied on 12 Oct 2026 were not loaded: most rows are a repeated template ("Leader", "Minion A", "Melee Weapon" with the same numbers for every warband), and on the fighters they share the files disagree (32 fighter states conflict, 11 agree). Also missing: about 25 dropped entries of Duelyst, Darkest Dungeon, Inscryption and Into the Breach (not reloaded).
 - About 280 Magic token links are left out: Scryfall lists a related token whose name and type several tokens share, and the card's text does not say which one.
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Suggestions for improving the library
 Claude's suggestions, none done.
-1. **Hand-review more entries** of the noisiest games (Age of Sigmar, 40k, D&D) and the 12 Oct loads, and add the decisions to `tools/reviews/` (then `regression.py <db> make` and `enforce`). A first sample was reviewed on 12 Oct 2026 (Age of Sigmar 30, 40k 30, D&D 25 entries: 46 needed corrections); it is still too small for precision estimates there (Age of Sigmar has one precision cell, 40k none).
+1. **Hand-review more entries** of the noisiest games (Age of Sigmar, 40k, Kill Team) and the 12 Oct loads, and add the decisions to `tools/reviews/` (then `regression.py <db> make` and `enforce`). A first sample was reviewed on 12 Oct 2026 (Age of Sigmar 30, 40k 30, D&D 25 entries: 46 needed corrections); it is still too small for precision estimates there (Age of Sigmar has one precision cell, 40k none).

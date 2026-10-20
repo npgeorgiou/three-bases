@@ -248,7 +248,7 @@ def load(g):
             if i in key: key[i] = dict(key[i], tags=key[i]['tags'] + [t for t in v['tags'] if t not in key[i]['tags']])
     return key
 
-GAMES = ['into_the_breach', 'wh_bloodbowl3', 'inscryption', 'faeria', 'duelyst', 'sts1', 'marvel_snap', 'darkest_dungeon', 'dnd5e', 'sts2',
+GAMES = ['into_the_breach', 'wh_bloodbowl3', 'inscryption', 'faeria', 'duelyst', 'sts1', 'marvel_snap', 'darkest_dungeon', 'sts2',
          'gwent', 'hs_battlegrounds', 'wh_killteam', 'runeterra', 'wh_underworlds', 'wh_aos_4th', 'wh_40k_10e', 'shadowverse', 'hearthstone', 'mtg']
 if __name__ == '__main__':
     cmd, *a = sys.argv[1:]

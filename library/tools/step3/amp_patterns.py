@@ -5,8 +5,8 @@ that are amplifiers (Claude read them), with the games they occur in:
   F1  "... trigger(s) / activate(s) an extra time / twice"        Magic, Hearthstone, Battlegrounds, Shadowverse, Runeterra, Duelyst
   F2  "twice / three times that many"                              Magic
   F3  "that many plus one", "those tokens plus", "plus an additional" Magic, Gwent, Underworlds, Slay the Spire 2
-  F4  "double the number / amount of", "double all"                              Magic, Kill Team, Age of Sigmar, Shadowverse, Gwent, D&D, 40k
-  F5  "... are / is doubled" (not "this card's / its")             Runeterra, Hearthstone, D&D, Marvel Snap, Slay the Spire 2...
+  F4  "double the number / amount of", "double all"                              Magic, Kill Team, Age of Sigmar, Shadowverse, Gwent, 40k
+  F5  "... are / is doubled" (not "this card's / its")             Runeterra, Hearthstone, Marvel Snap, Slay the Spire 2...
   F6  "shuffle / plant / summon / create / add ... an extra / additional copy / one" (other cards' effect, after "whenever / when")
   F7  "deals double / twice that damage"                           Magic
   F8  "that much damage / life plus"                               Magic

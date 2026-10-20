@@ -24,7 +24,6 @@ M = {  # (game, keyword): (rel, pattern)
  ('into_the_breach', 'Kickoff Boosters'): ('mentions_keyword', r"kickoff boosters"),
  ('into_the_breach', 'Self-Repairing'): ('describes_keyword', r"self-repair"),
  ('into_the_breach', 'Hive Targeted'): ('mentions_keyword', r"psion tyrant"),
- ('dnd5e', 'Ammunition'): ('mentions_keyword', r"\bammunition\b"),
  ('wh_killteam', 'Rifles'): ('mentions_keyword', r"\bshuriken rifle|\branger long rifle"),
  ('wh_killteam', 'Nightmare Hulks'): ('mentions_keyword', r"nightmare hulk"),
 }

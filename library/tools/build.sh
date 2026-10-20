@@ -29,7 +29,6 @@ steps() {   # $1 = db
   $P keyword_defs.py "$D"
   $P outcome_tree.py "$D"
   for f in reviews_outcome/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f" old; done
-  $P condition_roles.py "$D"
   $P link_types.py "$D"
   $P engine_links.py "$D"
   $P design_problems.py "$D"
@@ -51,9 +50,9 @@ steps() {   # $1 = db
   $P fixes/f05_factions.py "$D"
   $P distinct.py "$D"
 }
-rm -f "$OUT"; cp "$IN" "$OUT"
+rm -f "$OUT"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the database is stored without its indexes (indexes.py)
 if [ $# -gt 0 ]; then
-  BASE="$OUT.base"; rm -f "$BASE"; cp "$IN" "$BASE"
+  BASE="$OUT.base"; rm -f "$BASE"; cp "$OUT" "$BASE"
   steps "$BASE"
   for a in "$@"; do $P load_cards.py "$OUT" "${a%%=*}" "${a#*=}"; done
   steps "$OUT"
@@ -70,5 +69,6 @@ $P combo_check.py "$OUT"
 $P trigger_pairs.py "$OUT" check
 $P realworld.py "$OUT"
 $P compact_text.py "$OUT" compact
-python3 -I -c "import sqlite3,sys; c=sqlite3.connect(sys.argv[1], isolation_level=None); c.execute(\"insert into entity_fts(entity_fts) values('integrity-check')\"); c.execute('vacuum'); print(c.execute('pragma integrity_check').fetchone())" "$OUT"
+python3 -I -c "import sqlite3,sys; c=sqlite3.connect(sys.argv[1], isolation_level=None); c.execute(\"insert into entity_fts(entity_fts) values('integrity-check')\"); print(c.execute('pragma integrity_check').fetchone())" "$OUT"
 $P test_query.py "$OUT"
+$P indexes.py "$OUT" drop   # stored without indexes: about 21 MB smaller, rebuilt in under a second

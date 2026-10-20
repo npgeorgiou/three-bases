@@ -1,31 +1,28 @@
 # Step 3 decisions (patterns3.py accept): narrow <pattern> <games> <new regex>
 narrow	random_effect|does|*|\broll	wh_bloodbowl3	(?<!re-)\broll(?= (?:a |an |one |two |three |\d+ )?(?:d\d|dice|die|\d*d\d))
 narrow	damage|does|*|\bdamage to\b	hs_battlegrounds	\bdamage to\b(?! (?:your|you\b|this|its|it\b|them\b|him\b|me\b|my\b))
-narrow	damage|does|*|\b\d+ damage\b	hs_battlegrounds,dnd5e	(?<![+-])(?<!take )(?<!suffer )(?<!dealt )(?<!allocate )(?<!split )(?<!than )\b\d+ damage\b(?! points?)(?! to (?:your|you\b|this|its|it\b|them\b|me\b|my\b|that fighter|the attacker))
+narrow	damage|does|*|\b\d+ damage\b	hs_battlegrounds	(?<![+-])(?<!take )(?<!suffer )(?<!dealt )(?<!allocate )(?<!split )(?<!than )\b\d+ damage\b(?! points?)(?! to (?:your|you\b|this|its|it\b|them\b|me\b|my\b|that fighter|the attacker))
 narrow	temporary_buff|does|*|(until|till) end of (turn|round)	hearthstone	(?<!minion )(?<!exists )(?<!attack )(?<!opponent.s )(until|till) end of (turn|round)
 narrow	stacking_keyword|does|*|\bcounters? on\b	wh_underworlds	(?<!raise )\bcounters? on\b
 narrow	permanent_growth|does|*|\bevolve	shadowverse	\bevolve[^.]*\bgains? \+\d+/\+\d+
 narrow	movement|does|*|\bmoves?\b	mtg	\bmoves?\b(?![^.]{0,50}counters?)
 narrow	forced_movement|does|*|\bmoves?\b	wh_bloodbowl3,faeria,duelyst,sts1,sts2,gwent,wh_killteam,runeterra,wh_underworlds,wh_aos_4th,wh_40k_10e,hearthstone,mtg	\bmoves?\b(?= (?:the |a |an )?(?:last played )?(?:enemy|target|opposing|each enemy|all enemy)|.{0,30}\b(?:to the other row|away|toward))
 narrow	summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	mtg	\bcreate (?!.{0,50}\bin (your )?hand)(?!(?:a |an )?(?:clue|food|treasure|mutagen|gold|lander|blood|powerstone|map|junk|shard)\b)(?!a token that.s a copy)(a|an|\d+|two|three|x)? ?(?:(?!\.|,|;).){0,40}(token|creature|unit|minion)
-narrow	summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	dnd5e	\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}token
 narrow	banish|does|*|\bexile	runeterra,wh_aos_4th	\bexile(?=s? (?:target|up to|all|each|it\b|that|another))(?<=\bnever\bexile)
 narrow	damage|does|*|\bstrikes?\b	mtg	(?<!deep )(?<!coordinated )(?<!double )(?<!first )(?<!heavy )\bstrikes?\b
-narrow	damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	into_the_breach,sts1,dnd5e,sts2,hs_battlegrounds,wh_underworlds	\bdeals? (?:\d+|x|an?|one|two|three|four|five)\b[^.]{0,80}?damage(?! (?:to (?:your|yourself|this\b|it\b|them|the attacker|an? (?:friendly|allied))|back|to you))
+narrow	damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	into_the_breach,sts1,sts2,hs_battlegrounds,wh_underworlds	\bdeals? (?:\d+|x|an?|one|two|three|four|five)\b[^.]{0,80}?damage(?! (?:to (?:your|yourself|this\b|it\b|them|the attacker|an? (?:friendly|allied))|back|to you))
 narrow	destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	into_the_breach,inscryption	(?!)\bdestroy (target|a|an|all|each|that|it|the)
 narrow	destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	hearthstone,hs_battlegrounds,duelyst	(?<!you )(?<!\bto )\bdestroy (target|an?|all|each|that|it|the)(?! (?:friendly|allied)\b)
 narrow	terrain|does|*|\blands?\b	wh_40k_10e	\bno man.s land\b
-narrow	terrain|does|*|\blands?\b	mtg,into_the_breach,inscryption,wh_killteam,wh_bloodbowl3,dnd5e	(?!)\blands?\b
+narrow	terrain|does|*|\blands?\b	mtg,into_the_breach,inscryption,wh_killteam,wh_bloodbowl3	(?!)\blands?\b
 narrow	hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	inscryption,sts1,sts2,gwent,hs_battlegrounds,wh_killteam,runeterra,wh_underworlds,wh_40k_10e,hearthstone,mtg	(?:\b(?:opponent|opponents|player|players|enemy|enemies|they|their)\b[^.]{0,30}|\bthat player |\beach player |\beach opponent )\bdiscards?\b(?! piles?\b)
 narrow	summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	inscryption,duelyst,gwent	(?<!you )(?<!opponent )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b(?![^.]{0,80}(for your opponent|from your hand|opposite row|from your deck to the opposite))
 narrow	summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	wh_40k_10e	(?!)\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b
-narrow	ranged|does|*|\bshoot	dnd5e	\bshoots? (a|an|over|projectile|in)\b
 narrow	discard|does|*|\bdiscards?\b(?! piles?\b)	inscryption,sts1	\bdiscards? (a|an|one|any|up to|\d+|x|your|all cards|cards|two|three)\b(?! piles?)(?! (attack|shadow))
 narrow	discard|does|*|\bdiscards?\b(?! piles?\b)	wh_underworlds	\bdiscards? (a|an|one|any|up to|\d+|x|your|two|three)\b[^.]{0,30}\bcards?\b
 narrow	discard|does|*|\bdiscards?\b(?! piles?\b)	wh_killteam,wh_40k_10e	(?!)\bdiscards?\b(?! piles?\b)
 narrow	activated|does|*|\bactivate	shadowverse,wh_underworlds,into_the_breach	(?!)\bactivate
 narrow	delayed|does|*|next turn	into_the_breach,inscryption,faeria,duelyst,sts1,sts2,hs_battlegrounds,wh_killteam,wh_underworlds,wh_40k_10e	(?<!until the start of your )(?<!until the end of your )(?<!until the start of its )(?<!until the end of its )(?<!until the start your )(?<!until your )(?<!until )(?<!before the end of its )(?<!until the end of the mephit’s )(?<!until the start of the )(?<!until the end of the )(?<!until the end of that )(?<!until the end of their )(?<!the start of their )\bnext turn
-narrow	delayed|does|*|next turn	dnd5e	(?:(?<=at the end of its )|(?<=at the start of your )|(?<=at the end of their )|(?<=at the start of its )|(?<=at the end of your )|(?<=at the start of their ))next turn
 narrow	activated|does|*|once per (turn|round)	wh_aos_4th	(?<!timing: )once per (turn|round)
 narrow	activated|does|*|once per (turn|round)	wh_bloodbowl3,gwent,shadowverse	(?!)once per (turn|round)
 narrow	passive|does|wh_aos_4th|(?s)^(?!.*\btiming:).*\S	wh_aos_4th	(?s)^(?!.*\btiming:)(?=.*(wholly within|regiment of renown)[^.]*(of this unit|of this manifestation|of the \w+ in this regiment|of them))(?!.*\b(roll a|roll 2d6|pick|inflict|to be the target)\b).*\S
@@ -34,7 +31,6 @@ narrow	ranged|does|*|\branged\b	duelyst	\branged\b(?! attackers)
 narrow	ranged|does|*|\branged\b	darkest_dungeon	(?<!with )\branged\b
 narrow	draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	faeria,wh_killteam,wh_aos_4th	(?<!you )\bdraw (a|an|one|two|three|x|\d+)(?=\s*(cards?\b(?! (of|with|from|that|you|in))|s many|more|extra|\.|,|$|then|and\b|at\b))
 narrow	draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_underworlds	\bdraw (a|an|one|two|three|x|\d+) (power|objective) card
-narrow	shield|does|*|\bward\b	dnd5e	\byou ward\b
 narrow	information|does|*|\breveal	inscryption	\breveal\w* itself\b
 narrow	information|does|*|\breveal	runeterra	\breveal(?! me\b)
 narrow	zone_control|does|*|\bobjective	wh_40k_10e	(?<!bonus )(?<!draw one )\bobjective(?! (cards?|control|deck|characteristic))(?!s? cards?)
@@ -42,25 +38,25 @@ narrow	damage_reduction|does|wh_40k_10e|\bfeel no pain\b|\binvulnerable save\b|\
 narrow	damage|does|wh_aos_4th|\bmortal damage\b|\bcrit \(mortal\)|\binflict (\d|d3|d6)( mortal)? damage\b	wh_aos_4th	(?:(?<=amount of )|(?<=allocate 1 ))\bmortal damage\b|\binflict (\d|d3|d6)( mortal)? damage\b
 narrow	temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	sts2	\b(gets?|gains?|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b(?:(?!\bif\b|\bwas\b|\bwere\b|\bhas\b|\bhave\b)[^.]){0,40}\bthis (turn|round)\b
 narrow	direct_damage|does|*|damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)	mtg	(?<!when you deal )(?<!you.ve dealt )(?<!you deal )(?<!you deal non-combat )damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)(?! \d+\+? times)
-narrow	piercing|does|*|\brend	inscryption,darkest_dungeon,dnd5e,wh_40k_10e	\(\+\d+ rend\)|\brend characteristic
+narrow	piercing|does|*|\brend	inscryption,darkest_dungeon,wh_40k_10e	\(\+\d+ rend\)|\brend characteristic
 narrow	stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	wh_killteam	(?<![\w+])(?:give|gain|gains)\b[^.]{0,40}\+\d+ (attack|power|health|strength|wounds|toughness)
 narrow	damage|does|*|loses? \d+ (life|health|hp)	sts1,sts2,hearthstone	loses? \d+ hp(?=[^|]{0,80}\bdeal\b)|enemy loses? \d+ hp|\bdeal\b[^|]{0,30}loses? \d+ hp
 narrow	damage|does|*|loses? \d+ (life|health|hp)	mtg	(?:each opponent|target opponent|that player|the enemy) loses? \d+ life
 narrow	generate_cards|does|*|\bdiscover\b	hearthstone	^(?!.*\b(?:summon|deal damage)\b).*\bdiscover\b
 narrow	generate_cards|does|*|\bdiscover\b	mtg	\bdiscover (?:a|an) card from\b
 narrow	bounce_enemy|does|mtg|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b	mtg	\breturn\b(?:(?!you control)[^.]){0,90}\b(?:target|attacking)\b(?:(?!you control)[^.]){0,90}to (its|their) owners?'?s?'? hands?\b
-narrow	polymorph|does|*|\btransforms?\b	inscryption,sts1,sts2,gwent,hs_battlegrounds,mtg,dnd5e,hearthstone	\btransforms?\b(?= (?:an? |all |any )(?:nearby )?(?:enemy )?(?:minions?|followers?|creature))|that transform them|\bto transform\b(?= a creature)
+narrow	polymorph|does|*|\btransforms?\b	inscryption,sts1,sts2,gwent,hs_battlegrounds,mtg,hearthstone	\btransforms?\b(?= (?:an? |all |any )(?:nearby )?(?:enemy )?(?:minions?|followers?|creature))|that transform them|\bto transform\b(?= a creature)
 narrow	tutor|does|*|(?:^|[.:!/])(?:(?!\b(?:remove|removes|removed|lose|loses|purge|purges|shuffle|shuffles)\b)[^.:!/])*\bfrom your (?:deck|draw pile)\b	shadowverse	(?:^|[.:!/])(?:(?!\b(?:remove|removes|removed|lose|loses|purge|purges|shuffle|shuffles|banish|banishes)\b)[^.:!/])*\bfrom your (?:deck|draw pile)\b(?!\W+(?:\w+\W+){0,2}into play)
 narrow	movement|does|wh_40k_10e|\bfall back\b|\badvance (move|roll)s?\b|\bcharge (move|roll)s?\b|\bnormal move\b|\bpile-in\b|\bconsolidat	wh_40k_10e	\bnormal move of\b|\bfall back\b(?= move)|\bnormal, advance|\bpile-in\b|\bconsolidat
 narrow	forced_movement|does|wh_40k_10e|\bfall back\b|\badvance (move|roll)s?\b|\bcharge (move|roll)s?\b|\bnormal move\b|\bpile-in\b|\bconsolidat	wh_40k_10e	\b(?:must|forced to|cannot|can.t)\b[^.]{0,30}\bfall back\b
 narrow	damage_reduction|does|*|\barmou?r\b	wh_bloodbowl3,inscryption,darkest_dungeon,mtg	(?!)\barmou?r\b
 narrow	stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	(?<!targets this unit, )(?<!targets that unit, )(?<!allocated to this model, )(?<!model in this unit, )(?<!previous movement phase, )(?<!toughness characteristic, )(?<!allocated to the bearer, )(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))(?! of that attack)(?!s? for attacks that target)
 narrow	terrain|does|*|\bcover\b	mtg	(?!)\bcover\b
-narrow	death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	duelyst,sts1,dnd5e,sts2,wh_killteam,runeterra	(?!)whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)
+narrow	death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	duelyst,sts1,sts2,wh_killteam,runeterra	(?!)whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)
 narrow	condition|does|hearthstone|\bif (you|you.re|your)\b	hearthstone	(?!)\bif (you|you.re|your)\b
 narrow	variable_stats|does|*|equal to the number of	inscryption,sts1,sts2,wh_killteam,wh_underworlds,wh_aos_4th,wh_40k_10e,shadowverse,mtg	(?<=\bis )equal to the number of|(?<=\bare each )equal to the number of|(?<=\bbe )equal to the number of|(?<=\bhas power )equal to the number of|(?<=\bis a variable power stat)
 narrow	bounce_enemy|does|*|return .{0,40}to (its|their) owner'?s? hand	mtg	return (?!(?:it|this|that|name|another)\b)(?!(?:(?!to (?:its|their)).){0,40}(?:you control|\b(?:lands?|artifacts?|enchantments?|auras?|equipment)\b))(?!.{0,5}\bcards?\b).{0,40}to (its|their) owner'?s? hand
-narrow	shield|does|*|\bshield\b	dnd5e,runeterra,wh_underworlds,wh_40k_10e,shadowverse,hearthstone,mtg	\bdivine shield\b|\bshield counters?\b
+narrow	shield|does|*|\bshield\b	runeterra,wh_underworlds,wh_40k_10e,shadowverse,hearthstone,mtg	\bdivine shield\b|\bshield counters?\b
 narrow	debuff|does|wh_40k_10e|(add|subtract) 1 (to|from) the (hit|wound) roll	wh_40k_10e	subtract 1 from the hit roll
 narrow	condition_count|does|*|equal to the number of	wh_underworlds,gwent	(?<!less than or )(?<!is )(?<!are )(?<!be )(?<!each )(?<!hexes )equal to the number of
 narrow	information|does|*|look at	gwent	look at(?= (?:target (?:face-down|player)|(?:the )?(?:top (?:card|\d+ cards?|three|\d+ units?)|first \d+ cards?)\b[^.]{0,30}(?:opponent|both)|your opponent|the creature cards in target opponent|the top (?:three|nine) cards of target))
@@ -76,15 +72,14 @@ narrow	upgrade|does|*|\bupgrade	into_the_breach	(?<!no )\bupgrade(?!s?: [^.]{0,4
 narrow	mill|does|*|\bmill	mtg	\bmills\b
 narrow	aura|does|*|\baura\b	hearthstone,shadowverse	(?!)\baura\b
 narrow	damage_types|does|*|\bresistance\b	wh_aos_4th	(?!)\bresistance\b
-narrow	piercing|does|*|\bpierc	into_the_breach,dnd5e,wh_aos_4th,mtg	(?!)\bpierc
+narrow	piercing|does|*|\bpierc	into_the_breach,wh_aos_4th,mtg	(?!)\bpierc
 narrow	polymorph|does|*|\bbecomes? a\b	mtg	(?<=abilities and )becomes? a\b|(?<=creature, it )becomes? a\b
-narrow	polymorph|does|*|\bbecomes? a\b	inscryption,dnd5e,gwent,hs_battlegrounds,wh_killteam,runeterra,shadowverse,hearthstone	(?!)\bbecomes? a\b
-narrow	summon|does|*|\bspawn	into_the_breach,gwent,dnd5e	(?<!troll )(?<!cannot )(?<!can only )(?<!to one )(?<!to two )\bspawn(?!s? of\b)(?! frost)(?!s? per)(?! once)(?! on the first)(?! on missions)(?! on an island)(?! on island)(?! on [a-z ]{0,20}(island|mission))(?! an operative on each enemy row)(?! it on the opposite row)
+narrow	polymorph|does|*|\bbecomes? a\b	inscryption,gwent,hs_battlegrounds,wh_killteam,runeterra,shadowverse,hearthstone	(?!)\bbecomes? a\b
+narrow	summon|does|*|\bspawn	into_the_breach,gwent	(?<!troll )(?<!cannot )(?<!can only )(?<!to one )(?<!to two )\bspawn(?!s? of\b)(?! frost)(?!s? per)(?! once)(?! on the first)(?! on missions)(?! on an island)(?! on island)(?! on [a-z ]{0,20}(island|mission))(?! an operative on each enemy row)(?! it on the opposite row)
 narrow	destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	faeria,duelyst,sts2,gwent,hs_battlegrounds,shadowverse,hearthstone,mtg	(?!)whenever .{0,40}(is destroyed|dies|is killed)
-narrow	movement|does|*|\badvance\b	dnd5e,hearthstone,runeterra	(?!)\badvance\b
+narrow	movement|does|*|\badvance\b	hearthstone,runeterra	(?!)\badvance\b
 narrow	forced_movement|does|*|\badvance\b	wh_killteam,runeterra,wh_aos_4th,wh_40k_10e,hearthstone	(?!)\badvance\b
 narrow	upgrade|does|shadowverse|\bevolve (it|this|an?|target|all|that|them)\b|\bcan evolve\b|\bwhen this follower evolves\b|\bthis follower evolves\b	shadowverse	(?!)\bevolve (it|this|an?|target|all|that|them)\b
-narrow	reactions|does|*|\breaction\b	dnd5e	(?<!or a )(?<!require a )(?<!action or )\breaction\b(?! to deliver)(?! to cast)
 # manual (Claude, 20 Oct 2026, asked by Kaptain): Magic exile of your own permanents or of the card itself is not banish (sacrifice / cost)
 narrow	banish|does|*|\bexile	mtg	\bexile(?!s?\s+(?:a|an|another|one|two|x|all|any number of|up to \w+)?\s*(?:other\s+)?(?:target\s+)?(?:[\w-]+\s+){0,2}?(?:creatures?|permanents?|artifacts?|tokens?|lands?)\s+you control\b)(?!s?\s+(?:this|name)\b)
 # manual (Claude, 20 Oct 2026): Magic replacement effects that make more of something ("that many plus one", "twice that many ... instead") benefit from that thing
@@ -95,9 +90,9 @@ new	heal|benefits|mtg|manual	mtg	\bwould gain life\b[^.\n]{0,60}?\b(?:twice that
 # switch_off.py: old patterns right less than half the time switched off, and pointed at the concept the key shows them right for
 narrow	activated|does|*|\bactivate	duelyst,inscryption,runeterra,wh_40k_10e,wh_killteam	(?!)
 narrow	activated|does|*|\bactivated	runeterra,shadowverse,wh_underworlds	(?!)
-narrow	activated|does|*|\bspend \d	dnd5e,hearthstone,hs_battlegrounds,runeterra,wh_40k_10e,wh_aos_4th,wh_killteam	(?!)
+narrow	activated|does|*|\bspend \d	hearthstone,hs_battlegrounds,runeterra,wh_40k_10e,wh_aos_4th,wh_killteam	(?!)
 narrow	activated|does|*|\{[^}]+\}.{0,30}:	sts2	(?!)
-narrow	activated|does|*|once per (turn|round)	dnd5e,hs_battlegrounds,wh_40k_10e	(?!)
+narrow	activated|does|*|once per (turn|round)	hs_battlegrounds,wh_40k_10e	(?!)
 narrow	activated|does|wh_aos_4th|\btiming:	wh_aos_4th	(?!)
 narrow	adjacency|does|*|\badjacent	into_the_breach,wh_bloodbowl3	(?!)
 narrow	advantage|does|wh_killteam|\bre-?roll\b|\bretain (one|up to|any)\b[^.]{0,40}\bas (a )?(normal |critical )?success|\bas a critical (hit|success) instead\b	wh_killteam	(?!)
@@ -105,7 +100,7 @@ narrow	aura|does|*|(other|all|each) .{0,30}(you control|allies|friendly) .{0,15}
 narrow	aura|does|*|\baura\b	mtg,wh_aos_4th,wh_killteam	(?!)
 narrow	banish|does|*|\bbanish	wh_aos_4th	(?!)
 narrow	blocking|counters|*|can't block	mtg,runeterra	(?!)
-narrow	blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	darkest_dungeon,dnd5e,hearthstone,inscryption,mtg,runeterra,sts1,sts2,wh_bloodbowl3,wh_killteam	(?!)
+narrow	blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	darkest_dungeon,hearthstone,inscryption,mtg,runeterra,sts1,sts2,wh_bloodbowl3,wh_killteam	(?!)
 narrow	board_wipe|does|*|(destroy|kill|exile|banish) (all|each) (other )?(enemy |non-?\w+ )?(creatures|minions|units|followers|permanents|cards|fighters)	gwent	(?!)
 narrow	bounce_enemy|does|*|put .{0,30}on the (top|bottom) of	hearthstone,mtg	(?!)
 narrow	bounce_enemy|does|*|return .{0,40}to (your|their|its) hand	hearthstone,hs_battlegrounds,mtg,shadowverse,sts1,sts2,wh_underworlds	(?!)
@@ -113,8 +108,8 @@ narrow	bounce_enemy|does|*|shuffle .{0,40}into (your|their|its owner.s) (deck|li
 narrow	cant_attack|does|*|\bdefender\b	gwent,wh_killteam	(?!)
 narrow	cant_attack|does|*|can't attack	mtg,shadowverse	(?!)
 narrow	coin_economy|does|*|\bcoins?\b	hearthstone,hs_battlegrounds,mtg,runeterra	(?!)
-narrow	condition_count|does|*|\bfor each\b	dnd5e,shadowverse,wh_40k_10e,wh_aos_4th,wh_bloodbowl3,wh_underworlds	(?!)
-narrow	condition_count|does|*|at least \d+	dnd5e,inscryption,into_the_breach	(?!)
+narrow	condition_count|does|*|\bfor each\b	shadowverse,wh_40k_10e,wh_aos_4th,wh_bloodbowl3,wh_underworlds	(?!)
+narrow	condition_count|does|*|at least \d+	inscryption,into_the_breach	(?!)
 narrow	condition_count|does|*|equal to the number of	inscryption,sts1	(?!)
 narrow	condition|does|darkest_dungeon|\bonly if target is\b|\bwhile light (below|above)\b|\bwhile in rank\b	darkest_dungeon	(?!)
 narrow	condition|does|gwent|\bif\b	gwent	(?!)
@@ -125,10 +120,10 @@ narrow	copy|does|*|\bcopies\b	inscryption,runeterra	(?!)
 narrow	copy|does|*|\bcopy\b	inscryption	(?!)
 narrow	cost_condition|does|*|\b\d+[- ]cost\b	hearthstone,runeterra	(?!)
 narrow	cost_reduction|does|*|reduce .{0,20}cost	hearthstone,runeterra,sts1,sts2	(?!)
-narrow	damage_over_time|does|*|\bpoison(?!ous)	darkest_dungeon,dnd5e,mtg,runeterra,wh_underworlds	(?!)
+narrow	damage_over_time|does|*|\bpoison(?!ous)	darkest_dungeon,mtg,runeterra,wh_underworlds	(?!)
 narrow	damage_over_time|does|*|at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)	duelyst,hearthstone,hs_battlegrounds,mtg,shadowverse,sts1,sts2	(?!)
-narrow	damage_reduction|does|*|\barmou?r\b	dnd5e,into_the_breach,wh_40k_10e,wh_killteam	(?!)
-narrow	damage_reduction|does|*|\bresist	darkest_dungeon,dnd5e,into_the_breach,wh_aos_4th	(?!)
+narrow	damage_reduction|does|*|\barmou?r\b	into_the_breach,wh_40k_10e,wh_killteam	(?!)
+narrow	damage_reduction|does|*|\bresist	darkest_dungeon,into_the_breach,wh_aos_4th	(?!)
 narrow	damage_reduction|does|*|invulnerable save	wh_40k_10e,wh_killteam	(?!)
 narrow	damage_reduction|does|*|invulnerable saves?	wh_40k_10e,wh_killteam	(?!)
 narrow	damage_reduction|does|*|prevent .{0,15}damage	mtg	(?!)
@@ -139,7 +134,7 @@ narrow	damage|benefits|*|whenever .{0,40}(deals|takes|is dealt) damage	hearthsto
 narrow	damage|counters|*|prevent (all |the next )?.{0,20}damage	mtg	(?!)
 narrow	damage|does|*|\b\d+ damage\b	gwent,wh_aos_4th	(?!)
 narrow	damage|does|*|\bdamage (a|an|all|self|it|the|each|\d|by|enemy|highest|lowest|adjacent)\b	inscryption,mtg,runeterra	(?!)
-narrow	damage|does|*|\bdeal damage	dnd5e,mtg,wh_underworlds	(?!)
+narrow	damage|does|*|\bdeal damage	mtg,wh_underworlds	(?!)
 narrow	damage|does|*|\bstrikes?\b	inscryption,sts2,wh_aos_4th,wh_killteam	(?!)
 narrow	damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	runeterra	(?!)
 narrow	death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	faeria,gwent,hearthstone,inscryption,mtg,shadowverse	(?!)
@@ -153,12 +148,12 @@ narrow	destroy|does|wh_aos_4th|\bdestroy(s|ed)? (the|an?|that) (enemy )?(unit|mo
 narrow	disable|does|*|\bstun	darkest_dungeon,inscryption,wh_40k_10e,wh_bloodbowl3,wh_killteam	(?!)
 narrow	discard|does|*|\bdiscards?\b(?! piles?\b)	wh_aos_4th	(?!)
 narrow	draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	runeterra	(?!)
-narrow	evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	dnd5e,mtg	(?!)
-narrow	evasion|does|*|\bflying\b	dnd5e,inscryption,into_the_breach	(?!)
-narrow	exhaust|does|*|\bexhaust	dnd5e,duelyst,mtg	(?!)
+narrow	evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	mtg	(?!)
+narrow	evasion|does|*|\bflying\b	inscryption,into_the_breach	(?!)
+narrow	exhaust|does|*|\bexhaust	duelyst,mtg	(?!)
 narrow	extra_turn|does|*|(?<!t )\buntap (target|it|all|up to|another|each|that)\b	mtg	(?!)
 narrow	forced_movement|does|*|\bcharge rolls?	wh_40k_10e,wh_aos_4th,wh_killteam	(?!)
-narrow	forced_movement|does|*|\bmoves?\b	darkest_dungeon,dnd5e,inscryption,into_the_breach	(?!)
+narrow	forced_movement|does|*|\bmoves?\b	darkest_dungeon,inscryption,into_the_breach	(?!)
 narrow	forced_movement|does|*|\bpush	wh_bloodbowl3,wh_underworlds	(?!)
 narrow	forced_movement|does|*|\bpush(ing|es|ed)?\b	wh_bloodbowl3,wh_underworlds	(?!)
 narrow	forced_movement|does|wh_killteam|\b(normal move|dash|fall back|reposition|charge) action\b	wh_killteam	(?!)
@@ -169,25 +164,24 @@ narrow	generate_cards|does|*|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ c
 narrow	generate_cards|does|*|add .{0,40}to your hand	wh_underworlds	(?!)
 narrow	hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	shadowverse,wh_aos_4th	(?!)
 narrow	haste|does|*|\brush\b	wh_bloodbowl3	(?!)
-narrow	heal|does|*|regain	dnd5e	(?!)
 narrow	in_hand_buff|does|*|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)	shadowverse,wh_underworlds	(?!)
-narrow	information|does|*|\breveal	dnd5e,mtg	(?!)
+narrow	information|does|*|\breveal	mtg	(?!)
 narrow	information|does|*|look at	mtg	(?!)
 narrow	items_consumables|does|wh_underworlds|\bupgrades?\b	wh_underworlds	(?!)
 narrow	modal_choice|does|*|choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))	inscryption,wh_killteam,wh_underworlds	(?!)
 narrow	movement|does|*|\badvance\b	wh_40k_10e,wh_killteam	(?!)
 narrow	movement|does|*|\bcharge rolls?	wh_40k_10e,wh_aos_4th,wh_killteam	(?!)
-narrow	movement|does|*|\bmoves?\b	dnd5e,duelyst,gwent,into_the_breach,sts1,sts2,wh_40k_10e,wh_bloodbowl3,wh_killteam,wh_underworlds	(?!)
-narrow	movement|does|*|\bpush	darkest_dungeon,dnd5e,inscryption,into_the_breach,wh_bloodbowl3	(?!)
+narrow	movement|does|*|\bmoves?\b	duelyst,gwent,into_the_breach,sts1,sts2,wh_40k_10e,wh_bloodbowl3,wh_killteam,wh_underworlds	(?!)
+narrow	movement|does|*|\bpush	darkest_dungeon,inscryption,into_the_breach,wh_bloodbowl3	(?!)
 narrow	movement|does|wh_killteam|\b(normal move|dash|fall back|reposition|charge) action\b	wh_killteam	(?!)
 narrow	multiple_resources|does|shadowverse|\bevolution points?\b	shadowverse	(?!)
 narrow	on_ally_play|does|*|whenever (you play|you summon|another .{0,30}(enters|is summoned|is played))	faeria	(?!)
-narrow	on_attack|does|*|\bstrike:	dnd5e,wh_40k_10e,wh_aos_4th	(?!)
+narrow	on_attack|does|*|\bstrike:	wh_40k_10e,wh_aos_4th	(?!)
 narrow	on_attack|does|*|whenever .{0,20}attacks	shadowverse	(?!)
 narrow	once_per_game|does|*|once per (game|battle|match|run)	inscryption	(?!)
-narrow	passive|does|*|\bas long as	dnd5e,inscryption,mtg	(?!)
-narrow	passive|does|*|\bpassive	dnd5e,sts1,sts2,wh_bloodbowl3	(?!)
-narrow	passive|does|*|\bwhile\b	dnd5e,duelyst,faeria,gwent,hearthstone,hs_battlegrounds,inscryption,into_the_breach,mtg,runeterra,sts1,wh_40k_10e,wh_aos_4th,wh_killteam,wh_underworlds	(?!)
+narrow	passive|does|*|\bas long as	inscryption,mtg	(?!)
+narrow	passive|does|*|\bpassive	sts1,sts2,wh_bloodbowl3	(?!)
+narrow	passive|does|*|\bwhile\b	duelyst,faeria,gwent,hearthstone,hs_battlegrounds,inscryption,into_the_breach,mtg,runeterra,sts1,wh_40k_10e,wh_aos_4th,wh_killteam,wh_underworlds	(?!)
 narrow	permanent_growth|does|*|\+1/\+1 counter	mtg	(?!)
 narrow	permanent_growth|does|*|\bevolve	gwent,inscryption,runeterra	(?!)
 narrow	piercing|does|*|\bpierc	sts2	(?!)
@@ -198,7 +192,6 @@ narrow	polymorph|does|*|\btransforms?\b	faeria,runeterra,shadowverse	(?!)
 narrow	quests|does|*|\bobjective\b	wh_40k_10e,wh_aos_4th,wh_killteam	(?!)
 narrow	random_effect|does|*|\bcoin	gwent,hearthstone,hs_battlegrounds,runeterra	(?!)
 narrow	random_effect|does|*|\bdice\b	mtg,wh_killteam	(?!)
-narrow	ranged|does|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	dnd5e	(?!)
 narrow	ranged|does|*|\branged attack	wh_40k_10e	(?!)
 narrow	ranged|does|*|\branged\b	gwent,wh_40k_10e,wh_killteam	(?!)
 narrow	ranged|does|*|\bshoot	hearthstone,wh_40k_10e,wh_killteam	(?!)
@@ -208,15 +201,15 @@ narrow	regeneration|does|*|\bregenerat	mtg	(?!)
 narrow	reserve_bench|does|*|\breserves?\b	wh_bloodbowl3	(?!)
 narrow	resource_gain|does|*|\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)	mtg	(?!)
 narrow	return_to_hand|does|*|return .{0,40}to (your|their|its) hand	mtg,sts1,sts2,wh_underworlds	(?!)
-narrow	rows|does|*|\brows?\b	dnd5e,gwent,hearthstone,inscryption,into_the_breach	(?!)
+narrow	rows|does|*|\brows?\b	gwent,hearthstone,inscryption,into_the_breach	(?!)
 narrow	sacrifice|does|*|\bsacrific	inscryption,wh_aos_4th	(?!)
 narrow	saving_throws|does|*|saving throw	wh_40k_10e,wh_killteam	(?!)
-narrow	scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	dnd5e,duelyst,faeria,gwent,hearthstone,hs_battlegrounds,inscryption,into_the_breach,mtg,runeterra,shadowverse,sts2,wh_aos_4th	(?!)
+narrow	scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	duelyst,faeria,gwent,hearthstone,hs_battlegrounds,inscryption,into_the_breach,mtg,runeterra,shadowverse,sts2,wh_aos_4th	(?!)
 narrow	scope_global|does|*|\beach player	wh_40k_10e,wh_aos_4th,wh_bloodbowl3	(?!)
-narrow	selection|does|*|\bscry	dnd5e,inscryption,wh_aos_4th	(?!)
+narrow	selection|does|*|\bscry	inscryption,wh_aos_4th	(?!)
 narrow	shield|does|*|\bshield\b	wh_aos_4th,wh_killteam	(?!)
 narrow	shield|does|*|\bward\b	shadowverse,wh_aos_4th	(?!)
-narrow	shop_gold|does|*|\bgold\b(?! card)	dnd5e,gwent,hs_battlegrounds,inscryption,mtg,shadowverse,wh_aos_4th	(?!)
+narrow	shop_gold|does|*|\bgold\b(?! card)	gwent,hs_battlegrounds,inscryption,mtg,shadowverse,wh_aos_4th	(?!)
 narrow	stacking_keyword|does|*|\bcounters? on\b	mtg	(?!)
 narrow	stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	hearthstone,into_the_breach	(?!)
 narrow	stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	hearthstone,into_the_breach,shadowverse,wh_killteam	(?!)
@@ -224,7 +217,6 @@ narrow	stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|cr
 narrow	stat_gain|does|*|gains? \+\d+	faeria,hs_battlegrounds	(?!)
 narrow	stat_loss|does|*|-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)	hearthstone	(?!)
 narrow	stealth|does|*|\bstealth	wh_40k_10e,wh_killteam	(?!)
-narrow	stress_morale|does|*|\bstress\b	dnd5e	(?!)
 narrow	summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	gwent	(?!)
 narrow	summon|does|*|\bput .{0,30}(onto|into) the battlefield	hearthstone,mtg	(?!)
 narrow	summon|does|*|\bspawn	wh_bloodbowl3	(?!)
@@ -234,15 +226,15 @@ narrow	symmetric_effect|does|*|\b(each|both|all) players?\b(?!'?s? (units?|mechs
 narrow	temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	shadowverse,wh_40k_10e,wh_aos_4th	(?!)
 narrow	temporary_effect|does|*|until (the start of )?your next turn	mtg	(?!)
 narrow	terrain|counters|wh_40k_10e|\[ignores cover\]|\bignores cover\b|\bbenefit of cover\b(?! to)	wh_40k_10e	(?!)
-narrow	terrain|does|*|\bcover\b	dnd5e,wh_40k_10e,wh_killteam	(?!)
+narrow	terrain|does|*|\bcover\b	wh_40k_10e,wh_killteam	(?!)
 narrow	terrain|does|*|\blands?\b	faeria,wh_aos_4th	(?!)
 narrow	terrain|does|*|\bterrain	into_the_breach,wh_40k_10e	(?!)
 narrow	transform|does|*|\bbecomes? a\b	inscryption,wh_killteam	(?!)
 narrow	transform|does|*|\btransforms?\b	faeria,shadowverse	(?!)
-narrow	tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)	dnd5e,into_the_breach	(?!)
+narrow	tribal|does|*|\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)	into_the_breach	(?!)
 narrow	tribal|does|wh_aos_4th|\banti-[a-z]	wh_aos_4th	(?!)
 narrow	turn_start|does|*|at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b	inscryption,wh_aos_4th	(?!)
-narrow	upgrade|does|*|\bupgrade	dnd5e,inscryption,wh_killteam,wh_underworlds	(?!)
+narrow	upgrade|does|*|\bupgrade	inscryption,wh_killteam,wh_underworlds	(?!)
 narrow	variable_stats|does|*|equal to the number of	gwent	(?!)
 narrow	zone_control|does|*|\bobjective	into_the_breach	(?!)
 narrow	zone_of_control|does|*|\bengagement range	wh_40k_10e,wh_killteam	(?!)
@@ -309,7 +301,6 @@ new	tutor|does|inscryption|redirect	inscryption	choose one\b(?! (friendly|enemy|
 new	damage|does|sts1|redirect	sts1	\bmoves?\b
 new	positional|does|into_the_breach|redirect	into_the_breach	\bpush
 new	forced_movement|does|darkest_dungeon|redirect	darkest_dungeon	\bpush
-new	saving_throws|does|dnd5e|redirect	dnd5e	\bstrike:
 new	aoe_damage|does|wh_40k_10e|redirect	wh_40k_10e	\bstrike:
 new	random_effect|does|wh_bloodbowl3|redirect	wh_bloodbowl3	\bpassive
 new	slots_queue|does|sts1|redirect	sts1	\bpassive
@@ -342,7 +333,6 @@ new	card_advantage|does|shadowverse|redirect	shadowverse	\bgold\b(?! card)
 new	upgrade|does|into_the_breach|redirect	into_the_breach	\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b
 new	upgrade|does|into_the_breach|redirect	into_the_breach	\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)
 new	buff|does|hs_battlegrounds|redirect	hs_battlegrounds	gains? \+\d+
-new	random_effect|does|dnd5e|redirect	dnd5e	\bstress\b
 new	generate_cards|does|gwent|redirect	gwent	\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)
 new	card_flow|does|mtg|redirect	mtg	\bput .{0,30}(onto|into) the battlefield
 new	piercing|does|wh_bloodbowl3|redirect	wh_bloodbowl3	\bspawn
@@ -356,7 +346,6 @@ new	swap|does|into_the_breach|redirect	into_the_breach	\bterrain
 new	movement|does|wh_40k_10e|redirect	wh_40k_10e	\bterrain
 new	piercing|does|wh_aos_4th|redirect	wh_aos_4th	\banti-[a-z]
 new	zone_control|does|wh_aos_4th|redirect	wh_aos_4th	at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b
-new	damage_types|does|dnd5e|redirect	dnd5e	\bupgrade
 new	modal_choice|does|wh_killteam|redirect	wh_killteam	\bupgrade
 # key_patterns.py (patterns from the answer key quotes, 90%+ right on held-out key entries): new <concept|role|game|key> <game> <regex>
 new	adjacency|does|into_the_breach|key	into_the_breach	\ball\s+adjacent\s+tiles\b
@@ -547,31 +536,6 @@ new	traits_quirks|does|darkest_dungeon|key	darkest_dungeon	\bquirk\b
 new	tribal|does|darkest_dungeon|key	darkest_dungeon	(?:\bvs\s+beast\s+enemies\b)|(?:\bvs\s+eldritch\s+enemies\b)|(?:\bvs\s+man\s+enemies\b)
 new	turn_number|does|darkest_dungeon|key	darkest_dungeon	(?:\bin\s+the\s+first\s+round\b)|(?:\bnot\s+in\s+the\s+first\s+round\b)
 new	upkeep|does|darkest_dungeon|key	darkest_dungeon	(?:\+\d+%\s+food\s+consumption\s+percent\b)|(?:\+\d+%\s+starving\s+damage\s+percent\b)
-new	activated|does|dnd5e|key	dnd5e	\bas\s+a\s+magic\s+action\b
-new	advantage|does|dnd5e|key	dnd5e	(?:\badvantage\s+on\s+saving\s+throws\s+against\s+spells\b)|(?:\badvantage\s+on\s+saving\s+throws\s+against\s+spells\s+and\s+other\s+magical\s+effects\b)|(?:\badvantage\s+on\s+wisdom\s+\(perception\)\s+checks\b)|(?:\bare\s+made\s+with\s+disadvantage\b)|(?:\bdisadvantage\s+on\s+ability\s+checks\s+and\s+attack\s+rolls\b)|(?:\bhas\s+advantage\b)|(?:\bhas\s+advantage\s+on\s+an\s+attack\s+roll\b)
-new	aoe_damage|does|dnd5e|key	dnd5e	(?:\beach\s+creature\s+in\s+a\s+\d+\-foot\s+emanation\b)|(?:\beach\s+creature\s+in\s+a\s+\d+\-foot\s+emanation\s+originating\s+from\s+the\s+mephit\b)
-new	area_templates|does|dnd5e|key	dnd5e	(?:\b\d+\-foot\-radius\s+sphere\b)|(?:\b\d+\-foot\s+cone\b)|(?:\b\d+\-foot\s+emanation\b)|(?:\ba\s+\d+\-foot\s+emanation\b)
-new	condition_life|does|dnd5e|key	dnd5e	\bbloodied\b
-new	cooldowns|does|dnd5e|key	dnd5e	(?:\bcan't\s+be\s+used\s+again\s+until\s+the\s+next\s+dawn\b)|(?:\bcan’t\s+take\s+this\s+action\s+again\s+until\s+the\s+start\s+of\s+its\s+next\s+turn\b)|(?:\btake\s+this\s+action\s+again\s+until\s+the\s+start\s+of\s+its\s+next\s+turn\b)
-new	cost_condition|does|dnd5e|key	dnd5e	\blevel\s+\d+\s+or\s+lower\b
-new	damage|does|dnd5e|key	dnd5e	(?:\b\d+\s+\(\d+d\d+\)\s+piercing\s+damage\b)|(?:\b\d+\s+\(\d+d\d+\)\s+poison\s+damage\b)|(?:\b\d+\s+\(\d+d\d+\s+\+\s+\d+\)\s+bludgeoning\s+damage\b)|(?:\b\d+\s+\(\d+d\d+\s+\+\s+\d+\)\s+necrotic\s+damage\b)|(?:\b\d+\s+\(\d+d\d+\s+\+\s+\d+\)\s+piercing\s+damage\b)|(?:\b\d+\s+\(\d+d\d+\s+\+\s+\d+\)\s+slashing\s+damage\b)|(?:\b\d+\s+piercing\s+damage\b)|(?:\b\d+\s+slashing\s+damage\b)|(?:\b\d+d\d+\s+fire\s+damage\b)|(?:\btakes\s+\d+d\d+\s+radiant\s+damage\b)
-new	damage_types|does|dnd5e|key	dnd5e	\bradiant\s+damage\b
-new	death_trigger|does|dnd5e|key	dnd5e	\bthe\s+mephit\s+explodes\s+when\s+it\s+dies\b
-new	debuff|does|dnd5e|key	dnd5e	\bthe\s+target\s+has\s+the\s+frightened\s+condition\b
-new	disable|does|dnd5e|key	dnd5e	(?:\bit\s+has\s+the\s+prone\s+condition\b)|(?:\bthe\s+target\s+has\s+the\s+incapacitated\s+condition\b)
-new	immobilize|does|dnd5e|key	dnd5e	(?:\bgrappled\s+condition\s+\(escape\s+dc\s+\d+\))|(?:\bhas\s+the\s+grappled\s+condition\b)|(?:\bit\s+has\s+the\s+grappled\s+condition\b)|(?:\bit\s+has\s+the\s+restrained\s+condition\s+until\s+the\s+grapple\s+ends\b)|(?:\brestrained\s+condition\b)|(?:\bthe\s+target\s+has\s+the\s+restrained\s+condition\b)
-new	items_consumables|does|dnd5e|key	dnd5e	\bwondrous\s+item\b
-new	legendary_actions|does|dnd5e|key	dnd5e	\blegendary\s+actions\b
-new	modal_choice|does|dnd5e|key	dnd5e	\bone\s+of\s+the\s+following\s+effects\b
-new	multi_attack|does|dnd5e|key	dnd5e	\bthe\s+dragon\s+makes\s+three\s+rend\s+attacks\b
-new	ping|does|dnd5e|key	dnd5e	\bhit:\s+\d+\s+piercing\s+damage\b
-new	ranged|does|dnd5e|key	dnd5e	(?:\bmake\s+a\s+ranged\s+spell\s+attack\b)|(?:\bmelee\s+or\s+ranged\s+attack\s+roll\b)|(?:\brange\s+\d+/\d+\s+ft\b)|(?:\brange\s+\d+\s+ft\b)|(?:\branged\s+attack\s+roll:\s+\+\d+,\s+range\s+\d+/\d+\s+ft\b)|(?:\branged\s+attack\s+roll:\s+\+\d+,\s+range\s+\d+\s+ft\b)|(?:\branged\s+spell\s+attack\b)|(?:\branged\s+weapon\s+attack\b)
-new	reactions|does|dnd5e|key	dnd5e	\byou\s+can\s+take\s+a\s+reaction\b
-new	saving_throws|does|dnd5e|key	dnd5e	(?:\bcharisma\s+saving\s+throw\b)|(?:\bconstitution\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bconstitution\s+saving\s+throw\b)|(?:\bdc\s+\d+\s+constitution\s+saving\s+throw\b)|(?:\bdc\s+\d+\s+wisdom\s+saving\s+throw\b)|(?:\bdexterity\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bdexterity\s+saving\s+throw\b)|(?:\bif\s+the\s+dragon\s+fails\s+a\s+saving\s+throw,\s+it\s+can\s+choose\s+to\s+succeed\s+instead\b)|(?:\bit\s+can\s+choose\s+to\s+succeed\s+instead\b)|(?:\bmakes\s+a\s+constitution\s+saving\s+throw\b)|(?:\bmakes\s+a\s+dexterity\s+saving\s+throw\b)|(?:\bmust\s+succeed\s+on\s+a\s+wisdom\s+saving\s+throw\b)|(?:\bstrength\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bstrength\s+saving\s+throw\b)|(?:\bsucceed\s+on\s+a\s+dc\s+\d+\s+constitution\s+saving\s+throw\b)|(?:\bwisdom\s+saving\s+throw:\s+dc\s+\d+\b)|(?:\bwisdom\s+saving\s+throw\b)
-new	scope_multi|does|dnd5e|key	dnd5e	\byou\s+can\s+target\s+one\s+additional\s+creature\b
-new	stat_gain|does|dnd5e|key	dnd5e	(?:\+\d+\s+bonus\s+to\s+attack\s+rolls\s+and\s+damage\s+rolls\b)|(?:\ba\s+\+\d+\s+bonus\s+to\s+attack\s+rolls\s+and\s+damage\s+rolls\b)|(?:\byou\s+gain\s+a\s+\+\d+\s+bonus\s+to\s+armor\s+class\b)
-new	turn_end|does|dnd5e|key	dnd5e	\bends\s+its\s+turn\s+there\b
-new	zone_of_control|does|dnd5e|key	dnd5e	\bopportunity\s+attack\b
 new	aoe_damage|does|sts2|key	sts2	\bdeal\s+\d+\s+damage\s+to\s+all\s+enemies\b
 new	block_armor|does|sts2|key	sts2	(?:\bblock\s+\d+\b)|(?:\bgain\s+\d+\s+block\b)|(?:\bgain\s+block\b)
 new	combat_start|does|sts2|key	sts2	(?:\bat\s+the\s+start\s+of\s+each\s+combat\b)|(?:\binnate\b)
@@ -1036,7 +1000,6 @@ new	turn_end|trigger|marvel_snap|trigger	marvel_snap	\bat the end of (?:the |you
 new	on_spell|trigger|duelyst|trigger	duelyst	\bwhenever (?:you|a player|an opponent) casts? (?:[\w-]+ ){0,5}?(?:spells?|instants?|sorcer(?:y|ies))\b
 new	on_spell|trigger|hearthstone|trigger	hearthstone	\bwhenever (?:you|a player|an opponent) casts? (?:[\w-]+ ){0,5}?(?:spells?|instants?|sorcer(?:y|ies))\b
 new	on_spell|trigger|hs_battlegrounds|trigger	hs_battlegrounds	\bwhenever (?:you|a player|an opponent) casts? (?:[\w-]+ ){0,5}?(?:spells?|instants?|sorcer(?:y|ies))\b
-new	on_spell|trigger|dnd5e|trigger	dnd5e	\bwhenever (?:you|a player|an opponent) casts? (?:[\w-]+ ){0,5}?(?:spells?|instants?|sorcer(?:y|ies))\b
 new	on_ally_play|trigger|mtg|trigger	mtg	\bwhenever (?:one or more )?(?:another |other )?(?:creatures?|artifacts?|permanents?|tokens?)\b[^.,:\n]{0,30}?\byou control enters?\b
 new	on_ally_play|trigger|duelyst|trigger	duelyst	\bwhen(?:ever)? you play an?\b
 new	on_ally_play|trigger|hearthstone|trigger	hearthstone	\bwhen(?:ever)? you play an?\b
@@ -1053,7 +1016,6 @@ new	on_draw|trigger|runeterra|trigger	runeterra	\b(?:when(?:ever)?|the (?:first|
 new	on_draw|trigger|gwent|trigger	gwent	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:(?:you|i|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b|(?:(?:this card|this creature|this unit|this minion|this fighter|this model|this operative|this permanent|this|name|that card|a card(?: bearing this sigil)?|the card|a domain card|one or more \w+ cards?|it) )?(?:is |are |gets |get |i'm |i am )?drawn\b)
 new	on_draw|trigger|sts1|trigger	sts1	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:(?:you|i|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b|(?:(?:this card|this creature|this unit|this minion|this fighter|this model|this operative|this permanent|this|name|that card|a card(?: bearing this sigil)?|the card|a domain card|one or more \w+ cards?|it) )?(?:is |are |gets |get |i'm |i am )?drawn\b)
 new	on_draw|trigger|sts2|trigger	sts2	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:(?:you|i|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b|(?:(?:this card|this creature|this unit|this minion|this fighter|this model|this operative|this permanent|this|name|that card|a card(?: bearing this sigil)?|the card|a domain card|one or more \w+ cards?|it) )?(?:is |are |gets |get |i'm |i am )?drawn\b)
-new	on_draw|trigger|dnd5e|trigger	dnd5e	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:(?:you|i|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b|(?:(?:this card|this creature|this unit|this minion|this fighter|this model|this operative|this permanent|this|name|that card|a card(?: bearing this sigil)?|the card|a domain card|one or more \w+ cards?|it) )?(?:is |are |gets |get |i'm |i am )?drawn\b)
 new	on_draw|trigger|mtg|trigger	mtg	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:(?:you|i|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b|(?:(?:this card|this creature|this unit|this minion|this fighter|this model|this operative|this permanent|this|name|that card|a card(?: bearing this sigil)?|the card|a domain card|one or more \w+ cards?|it) )?(?:is |are |gets |get |i'm |i am )?drawn\b)
 new	on_draw|trigger|wh_40k_10e|trigger	wh_40k_10e	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:(?:you|i|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b|(?:(?:this card|this creature|this unit|this minion|this fighter|this model|this operative|this permanent|this|name|that card|a card(?: bearing this sigil)?|the card|a domain card|one or more \w+ cards?|it) )?(?:is |are |gets |get |i'm |i am )?drawn\b)
 new	on_draw|trigger|marvel_snap|trigger	marvel_snap	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:(?:you|i|a player|the player|each player|that player|an opponent|your opponent|each opponent|target player|your hero|they) draws?\b|(?:(?:this card|this creature|this unit|this minion|this fighter|this model|this operative|this permanent|this|name|that card|a card(?: bearing this sigil)?|the card|a domain card|one or more \w+ cards?|it) )?(?:is |are |gets |get |i'm |i am )?drawn\b)
@@ -1090,7 +1052,6 @@ new	on_life_loss|trigger|hs_battlegrounds|trigger	hs_battlegrounds	\b(?:when(?:e
 new	on_life_loss|trigger|shadowverse|trigger	shadowverse	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:you|your hero|your nexus|your general|your leader|your champion|your avatar|i) (?:would )?(?:lose|loses|lost|take|takes|took|is dealt|are dealt|suffer|suffers)\b[^.,:\n]{0,25}?\b(?:hp|life|health|damage)\b
 new	on_life_loss|trigger|sts1|trigger	sts1	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:you|your hero|your nexus|your general|your leader|your champion|your avatar|i) (?:would )?(?:lose|loses|lost|take|takes|took|is dealt|are dealt|suffer|suffers)\b[^.,:\n]{0,25}?\b(?:hp|life|health|damage)\b
 new	on_life_loss|trigger|sts2|trigger	sts2	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:you|your hero|your nexus|your general|your leader|your champion|your avatar|i) (?:would )?(?:lose|loses|lost|take|takes|took|is dealt|are dealt|suffer|suffers)\b[^.,:\n]{0,25}?\b(?:hp|life|health|damage)\b
-new	on_life_loss|trigger|dnd5e|trigger	dnd5e	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:you|your hero|your nexus|your general|your leader|your champion|your avatar|i) (?:would )?(?:lose|loses|lost|take|takes|took|is dealt|are dealt|suffer|suffers)\b[^.,:\n]{0,25}?\b(?:hp|life|health|damage)\b
 new	on_life_loss|trigger|wh_underworlds|trigger	wh_underworlds	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:you|your hero|your nexus|your general|your leader|your champion|your avatar|i) (?:would )?(?:lose|loses|lost|take|takes|took|is dealt|are dealt|suffer|suffers)\b[^.,:\n]{0,25}?\b(?:hp|life|health|damage)\b
 new	on_life_loss|trigger|mtg|trigger	mtg	\b(?:when(?:ever)?|the (?:first|second|next) time|each time|every time|after) (?:you|your hero|your nexus|your general|your leader|your champion|your avatar|i) (?:would )?(?:lose|loses|lost|take|takes|took|is dealt|are dealt|suffer|suffers)\b[^.,:\n]{0,25}?\b(?:hp|life|health|damage)\b
 new	sacrifice|does|runeterra|trigger	runeterra	\b(?:exiles?|banish(?:es)?|consumes?|devours?|obliterates?)\s+(?:(?:a|an|another|one|two|three|\d+|all|x|up to \d+|any number of)\s+)?(?:other\s+)?(?:(?:allied|friendly)\s+(?:units?|followers?|minions?|creatures?|characters?)|(?:[\w-]+\s+){0,2}?(?:creatures?|permanents?|artifacts?|units?|minions?|followers?|tokens?)\s+you control|an? ally|allies)\b(?![^\n]{0,140}?\breturn (?:it|that card|those cards|them|the exiled \w+)\b[^.\n]{0,40}\bbattlefield)
@@ -1109,7 +1070,6 @@ new	summon|benefits|mtg|amp	mtg	(?:(?:\b(?:trigger|triggers|activate|activates|r
 new	summon|benefits|runeterra|amp	runeterra	(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))[^.\n]{0,40}?(?:\btokens?\b|\bsummon)|(?:\btokens?\b|\bsummon)[^.\n]{0,40}?(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))
 new	buff|benefits|mtg|amp	mtg	(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))[^.\n]{0,40}?(?:\bcounters?\b|\battack or defense\b|\bdefense or attack\b|\bstats?\b)|(?:\bcounters?\b|\battack or defense\b|\bdefense or attack\b|\bstats?\b)[^.\n]{0,40}?(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))
 new	buff|benefits|wh_underworlds|amp	wh_underworlds	(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))[^.\n]{0,40}?(?:\bcounters?\b|\battack or defense\b|\bdefense or attack\b|\bstats?\b)|(?:\bcounters?\b|\battack or defense\b|\bdefense or attack\b|\bstats?\b)[^.\n]{0,40}?(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))
-new	damage|benefits|dnd5e|amp	dnd5e	(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))[^.\n]{0,40}?(?:\bdamage\b(?! to (?:itself|you)\b)(?! against this unit)(?![^.\n]{0,40}?\b(?:that many cards|is doubled)))|(?:\bdamage\b(?! to (?:itself|you)\b)(?! against this unit)(?![^.\n]{0,40}?\b(?:that many cards|is doubled)))[^.\n]{0,40}?(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))
 new	damage|benefits|hearthstone|amp	hearthstone	(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))[^.\n]{0,40}?(?:\bdamage\b(?! to (?:itself|you)\b)(?! against this unit)(?![^.\n]{0,40}?\b(?:that many cards|is doubled)))|(?:\bdamage\b(?! to (?:itself|you)\b)(?! against this unit)(?![^.\n]{0,40}?\b(?:that many cards|is doubled)))[^.\n]{0,40}?(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))
 new	damage|benefits|hs_battlegrounds|amp	hs_battlegrounds	(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))[^.\n]{0,40}?(?:\bdamage\b(?! to (?:itself|you)\b)(?! against this unit)(?![^.\n]{0,40}?\b(?:that many cards|is doubled)))|(?:\bdamage\b(?! to (?:itself|you)\b)(?! against this unit)(?![^.\n]{0,40}?\b(?:that many cards|is doubled)))[^.\n]{0,40}?(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))
 new	damage|benefits|mtg|amp	mtg	(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))[^.\n]{0,40}?(?:\bdamage\b(?! to (?:itself|you)\b)(?! against this unit)(?![^.\n]{0,40}?\b(?:that many cards|is doubled)))|(?:\bdamage\b(?! to (?:itself|you)\b)(?! against this unit)(?![^.\n]{0,40}?\b(?:that many cards|is doubled)))[^.\n]{0,40}?(?:(?:\b(?:trigger|triggers|activate|activates|resolve|resolves|take effect|takes effect)\s+(?:an? (?:extra|additional) time|twice|two times)\b|\b(?:twice|three times) that many\b|\bthat many plus (?:one|\d+)\b|\bthose tokens plus\b|\bplus an additional\b|\bdouble (?:the )?(?:number|amount|value) of\b|\bdouble all\b|\bdouble (?:the |an? )?(?:enemy's |target's |its |their )?(?:poison|burn|doom)\b|(?<!this card's )(?<!its )(?<!this minion's )(?<!this unit's )\b(?:are|is) doubled\b|\b(?:whenever|when|each time|if)\b[^.\n]{0,50}?\b(?:shuffle|plant|summon|create|add|put)s?\b[^.\n]{0,40}?\b(?:an?|one) (?:extra|additional) (?:copy|one)\b|\bdeals? (?:double|twice) (?:that|the) (?:damage|much)\b|\bthat much (?:damage|life|healing|armor|block) plus\b|\b(?:your|allied|friendly|other)\b[^.\n]{0,30}?\b(?:deal|deals|gain|gains|restore|restores|get|gets)\s+(?:\d+|an?)\s+(?:more|additional|extra)\b))
