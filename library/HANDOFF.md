@@ -20,6 +20,15 @@ never changed to fit a case**: when a source writes a card's name differently, c
 - **Case audit (suggestion 4):** every case checked against its source (built-in browser for pages WebFetch cannot read); `why`
   holds the source's words. 405 -> 362 cases; **real-world test 217 of 362** on the current library (was 242 of 405).
 
+## Mechanics check (suggestion 1), progress
+- **Into the Breach:** `tools/mechanics/into_the_breach.txt` written; gaps found (line attacks, self damage, flipped attacks,
+  cracked tiles, deployed tanks) and patterns added to `tools/patterns/into_the_breach.txt` (with `!terrain|\btile`). Reloaded in
+  scratch: regression 21282/21282, real-world one case less (Science fortress), key wrong tags 74 -> 106, missed 43 -> 40. **Not
+  kept.** Cause found: a reload re-tags the game's keyword entries with today's patterns, but the old one-time fixes that removed
+  wrong keyword tags (`tools/fixes/f08`, `f09`, `f13`, `f14` and similar) are not build steps, so their removals are lost and
+  every card inherits them again (Smoke and Fire get cant_attack, evasion, terrain). Before any reload is kept: make the reload
+  re-apply those one-time removals (or copy the keyword entries' current tags), then reload again and compare.
+
 ## Next steps, in order
 1. **Combos (suggestion 7, scripts only).** `realworld_why.py` lists 11 pairs with both cards and no connection: Unleash the
    Hounds / Stormwind Champion, Injured Blademaster / Circle of Healing, Force of Nature / Savage Roar, Defias Ringleader / The

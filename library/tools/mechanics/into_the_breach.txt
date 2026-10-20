@@ -1,0 +1,18 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics.
+# https://intothebreach.fandom.com/wiki/Weapons , https://www.giantbomb.com/profile/majormitch/blog/thoughts-on-into-the-breachs-squads/116986/
+push|forced_movement|\bpush
+pull|forced_movement|\bpull
+toss or throw a unit|forced_movement|\b(toss|throws?) (a|an|the|adjacent)? ?unit
+swap places|swap|\bswap
+freeze|disable|\bfreez
+fire|damage_over_time|\b(on fire|ignite|applies fire|light[s]? tiles on fire|sets? \d+ tiles on fire)
+smoke|attack_lock|\bsmoke
+shield|shield|\bshield
+self damage|friendly_fire|\b(damag\w+|hurt\w*) (the user|self|yourself|itself|both shooter)
+artillery|ranged|\bartillery
+chain lightning|multi_target_attack|\bchain
+line attack|multi_target_attack|\b(in a line|a line of tiles)
+repair or heal|heal|\b(repairs?|heals?) (all|one|a|mechs|player)
+flip attack direction|disruption|\bflip\w* (its|a target's|the) attack
+cracks tiles|terrain|\bcrack
+spawn a unit|summon|\b(launches walking bombs|spawning a friendly|deploy\w*)

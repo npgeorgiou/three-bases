@@ -20,3 +20,10 @@ ranged|does|\bprojectile\b|\bartillery\b|\bthrows?\b
 multi_target_attack|does|\bbeam\b|\b(damag|push)\w* (all )?adjacent tiles\b|\bdamages? all tiles\b
 immobilize|does|\bwebs?\b|\bwebbed\b
 boss_phases|does|\bboss\b
+# mechanics check (tools/mechanics/into_the_breach.txt): "tile" is every board square here, not terrain; line attacks, self damage, flipped attacks, cracked tiles, deployed tanks
+!terrain|\btile
+multi_target_attack|does|\b(tiles|everything|all units) in a line\b|\bin a line,? (dealing|pushing|and slam)\b
+friendly_fire|does|\b(damaging self|hurting yourself|self damage|damage itself)\b
+disruption|does|\bflip\w* (its|a target's|the target's) attack direction\b
+terrain|does|\bcrack\w* (adjacent )?tiles\b
+summon|does|\bdeploy (a|an) [a-z.\- ]{0,12}tank\b
