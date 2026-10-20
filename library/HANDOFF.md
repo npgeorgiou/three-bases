@@ -1,3 +1,42 @@
+# Library: night plan (21 Oct 2026, 01:00) — read this first
+
+Kaptain approved this plan; work through it in order, commit and push after each step, and list anything that needs his
+decision for the morning instead of guessing. Keep tool outputs short. The older sections below are the earlier state.
+
+## Done on 20-21 Oct (this chat)
+- New concepts `other_death_trigger`, `leave_trigger`, `other_leave_trigger`; `death_trigger` narrowed to the entry's own death.
+  Rule in `tools/death_side.py` (tests: `python3 tools/death_side.py`). Build: split in `concept_tree.py` (DEATH), step
+  `leave_triggers.py`, pairing in `trigger_pairs.py` (pairs_only), regression lines moved.
+- Keys corrected in all games by `tools/key/death_split.py apply` (run from the pre-change keys; it is not idempotent on its
+  own output, so to redo it restore the keys from commit c0d1667 first). Decisions: spells' "if it dies" = `on_kill`;
+  "whenever another dies" with no counting = `other_death_trigger`; key fill of the new concepts; Leader (40k) and Doomed
+  (Gwent) are rule-only (`death_side.RULE_ONLY`). `key.py credit` re-run after.
+- Measured (corrected key, against a control build with the old tools from the same input): missed lower in 15 of 19 games,
+  wrong lower in 7, equal in 10, higher in Gwent and 40k (from Leader and Doomed, now removed). Regression passes, real-world 245
+  both. Not stored yet.
+
+## Findings on build drift
+- Building the same data twice gives the same tags except 34 of 266,770 (text_pattern; `ranged` in 40k, `movement` in Kill Team).
+- The stored library is not today's build output: last full build 20 Oct 02:06 (bd4f1f7), then insert-only loads and the Into
+  the Breach reload with changed tools. A rebuild differs by ~5,000 tags; biggest groups: buff -> stat_gain 1,238 (rebuild right:
+  +1/+1 counters), new disable 185 (half wrong: a card not untapping itself is a drawback), new draw 118 (mostly right: "put one
+  into your hand" is draw and selection; "Skip your draw step" wrong), lost haste 21 (Lorcana "gains Rush": rebuild wrong).
+- Fragile parts: the build reads its own previous output and undoes the last tree move (`concept_tree.py restore`); steps before
+  the move use old ids, after it new ids (`buff` means different things); stored derived files go stale (`key_kw.json`,
+  `final/revert.tsv` with c7a77a4 ids, `revert_base.tsv` empty).
+
+## Night plan
+1. Biggest rebuild-difference groups (stored vs a rebuild): 20 samples per group against `concept_tree_v3.txt`, the key may be
+   wrong; fix tools generically; log verdicts in `tools/audit/rebuild_groups.md`. Known fixes: "skip your draw step" is not draw;
+   own "doesn't untap" is drawback, not disable; Lorcana Rush keeps haste; an aura giving a keyword keeps buff.
+2. One chain, one database: sort tags by origin (method); one-off results go into record files the build reads; the build starts
+   from raw card data; add a build-twice check (identical tags); fix the 34. The stored db = exactly `build.sh` output.
+3. Clean the library folder: remove scripts nothing calls and history files, merge overlaps, short map in README. Git keeps all.
+4. Regression lines for today's decisions (death/leave split, per-card decisions, Leader/Doomed absent).
+5. Keys for Lorcana, Stormbound, Star Wars Unlimited, Legends, Monster Train: 50 random entries each, read against the tree
+   definitions; measure tokens on the first game, stop if expensive.
+6. Final full build, score against a control, real-world, regression; store it; update this file; commit, push.
+
 # Library: state and next steps (20 Oct 2026, evening)
 
 Kaptain asked for README suggestions 1, 2, 3, 4, 5, 6, 7 and 9, then a new real-world test. Done in this chat: 2, 3, 4.
