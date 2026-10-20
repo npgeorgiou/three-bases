@@ -1208,6 +1208,10 @@
 [
 "combo_sequence",
 "if a permanent left the battlefield under your control this turn"
+],
+[
+"other_leave_trigger",
+"if a permanent left the battlefield"
 ]
 ],
 "by": "C"
@@ -2989,6 +2993,10 @@
 [
 "aura",
 "Each creature with a gold counter on it"
+],
+[
+"leave_trigger",
+"When this enchantment leaves the battlefield"
 ]
 ],
 "by": "C"
@@ -9079,6 +9087,10 @@
 [
 "selection",
 "scry 1"
+],
+[
+"other_death_trigger",
+"Whenever an enchantment you control is put into a graveyard from the battlefield"
 ]
 ],
 "by": "A=B"

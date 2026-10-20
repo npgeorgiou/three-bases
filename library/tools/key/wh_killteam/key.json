@@ -6805,6 +6805,10 @@
 [
 "temporary_effect",
 "Until the end of the turning point"
+],
+[
+"other_death_trigger",
+"if a friendly INQUISITORIAL AGENT SURVEYOR operative has been incapacitated"
 ]
 ],
 "by": "C"

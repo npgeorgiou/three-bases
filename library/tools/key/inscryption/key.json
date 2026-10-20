@@ -108,6 +108,10 @@
 [
 "adjacency",
 "each empty adjacent space"
+],
+[
+"other_death_trigger",
+"If a chime created by The Daus is defeated"
 ]
 ],
 "by": "A=B"
@@ -985,6 +989,10 @@
 [
 "resource_gain",
 "opposing creatures also grant Bones upon death"
+],
+[
+"other_death_trigger",
+"when an opposing creature is defeated"
 ]
 ],
 "by": "C"
@@ -3880,6 +3888,10 @@
 [
 "shield",
 "Your bots on the board get Nano Armor"
+],
+[
+"other_death_trigger",
+"if one of your creatures is destroyed"
 ]
 ],
 "by": "C"
@@ -4153,6 +4165,10 @@
 [
 "fatigue",
 "one of them will be destroyed and replaced by a Starvation"
+],
+[
+"other_death_trigger",
+"When a creature is defeated"
 ]
 ],
 "by": "C"
@@ -4276,6 +4292,10 @@
 [
 "hand_disruption",
 "the player's hand is emptied"
+],
+[
+"other_death_trigger",
+"When your creatures die"
 ]
 ],
 "by": "C"
@@ -4997,6 +5017,10 @@
 [
 "turn_end",
 "are healed at the end of the owner's turn"
+],
+[
+"other_death_trigger",
+"If a card that you own dies"
 ]
 ],
 "by": "C"
@@ -5131,6 +5155,10 @@
 [
 "summon",
 "summons Bait Buckets in front of each creature in play"
+],
+[
+"other_death_trigger",
+"When a Bait Bucket is defeated"
 ]
 ],
 "by": "C"
@@ -5424,6 +5452,10 @@
 [
 "board_wipe",
 "The board is wiped whenever a card dies"
+],
+[
+"other_death_trigger",
+"Every time a card dies"
 ]
 ],
 "by": "C"

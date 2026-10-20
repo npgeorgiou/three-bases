@@ -6,7 +6,7 @@ side(clause, name, spell) -> set of those four concepts read from the clause, em
 or {'?'} when a death or leaving is named but whose it is can't be read."""
 import re
 
-DIE = r"(?:dies|die|died|dying|is destroyed|are destroyed|was destroyed|were destroyed|be destroyed|destroyed|is killed|are killed|killed|perish(?:es|ed)?|is slain|are slain|slain|(?:is|are|would be|be) incapacitated|incapacitated|(?:is|are|be) taken out of action|taken out of action|suffers a dead result|(?:is|are) defeated|defeated|(?:is|are) put into (?:a|your|its owner's|their owner's) graveyard(?: from the battlefield)?)"
+DIE = r"(?:dies|die|died|dying|is destroyed|are destroyed|was destroyed|were destroyed|be destroyed|destroyed(?! (?:this|that|it|them|him|her|a|an|the|one|another|any|enemy)\b)|is killed|are killed|killed(?! (?:this|that|it|them|him|her|a|an|the|one|another|any|enemy)\b)|perish(?:es|ed)?|is slain|are slain|slain(?! (?:models?|units?|fighters?|operatives?|this|that|it|them|an?|the|enemy)\b)|(?:is|are|would be|be) incapacitated|(?<!has )(?<!have )incapacitated(?! (?:this|that|it|them|an?|the|enemy|one)\b)|(?:is|are|be) taken out of action|taken out of action|suffers a dead result|(?:is|are) defeated|defeated|(?:is|are) put into (?:a|your|its owner's|their owner's) graveyard from the battlefield)"
 LEAVE = r"(?:leaves?|left) (?:the battlefield|play|the board|the field)|(?:is|are|be) banished(?! (?:from (?:your |the |their )?(?:deck|hand|graveyard)|by this))|(?:is|are) removed from (?:play|the battlefield)"
 SPELLS = {'spell', 'tactic', 'ploy', 'stratagem', 'event', 'action'}
 START = r"(?:when(?:ever)?|after|each time|every time|the first time|if|once|before|as soon as)"   # not "until": "until this leaves the battlefield" is a duration
@@ -16,7 +16,7 @@ OWN = re.compile(r"^(this|it|i|i'm|me|~|itself|self|he|she|they)\b|\bthis (\w+ )
 OTHER = re.compile(r"\b(another|other|an?|any|each|one or more|friendly|enemy|enemies|allied|ally|allies|your|their|opposing|all|its owner's|that)\b", re.I)
 TRIG = re.compile(START + r"\b\s+([^.;:!?\n,—–]{0,60}?)\b(" + DIE + r"|" + LEAVE + r")\b", re.I)
 
-SELF_GROUP = re.compile(r"bearing this|such a model|\b(in|from) this (\w+ )?(unit|squad)\b|this model['’]s unit", re.I)
+SELF_GROUP = re.compile(r"bearing (this|it)\b|with this (sigil|ability|skill|status|trait|rule|keyword)\b|copy of it\b|one of these models|causes it\b|such a model|\b(in|from) this (\w+ )?(unit|squad)\b|this model['’]s unit", re.I)
 NOT_SELF = re.compile(r"\b(bearer|equipped|enchanted|quarry|anyone|everyone)\b", re.I)
 
 def _whose(subject, name, spell=False):
@@ -42,10 +42,12 @@ def side(clause, name='', spell=False, game=''):
     t = re.sub(r"\bwould (die|leave)\b", "would_\\1", t, flags=re.I)   # (see above)
     t = re.sub(r"\bbefore (it|they|this \w+) (is|are) removed from", "before_removed", t, flags=re.I)   # removing a destroyed model is part of its death   # "if it would die / leave, ... instead" replaces the event, it is not a trigger
     if OWN_KW.search(t): out.add('death_trigger')
-    for m in re.finditer(r"\btakes? ([^.;:]{0,50}?) out of action|\byou slay (another|an?) ", t, re.I):   # active voice: "takes a fighter out of action"
+    for m in re.finditer(r"\btakes? ([^.;:]{0,50}?) out of action(?! test)|\byou slay (another|an?) ", t, re.I):   # active voice: "takes a fighter out of action"
         own, other = _whose(m.group(1) or 'another', name, spell); out |= {'death_trigger'} if own and not other else {'other_death_trigger'} if other else {'?'}
     for m in TRIG.finditer(t):
         subj, ev = m.group(1), m.group(2)
+        subj = re.split(r"\b" + START + r"\b", subj, flags=re.I)[-1]   # "if that model was attached when it was destroyed": the nearest start
+        if re.search(r"\b(not|neither|never|no)\b|n't\b", subj, re.I) or re.search(r"triggered\s*$", t[:m.start()], re.I): continue   # "if it is not destroyed", "rules triggered when"
         leave = bool(re.match(LEAVE, ev, re.I))
         own, other = _whose(subj, name, spell)
         if not own and not other: out.add('?'); continue

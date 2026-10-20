@@ -100,6 +100,10 @@
 [
 "return_to_hand",
 "Recall me"
+],
+[
+"other_leave_trigger",
+"When that ally leaves play"
 ]
 ],
 "by": "A=B"

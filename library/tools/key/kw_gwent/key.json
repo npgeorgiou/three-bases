@@ -198,6 +198,10 @@
 [
 "banish",
 "removes the card from the game after it leaves the battlefield"
+],
+[
+"leave_trigger",
+"after it leaves the battlefield"
 ]
 ],
 "by": "A=B"

@@ -933,6 +933,10 @@
 [
 "immunity",
 "it cannot be lost as a result of a Halfling Master Chef"
+],
+[
+"leave_trigger",
+"if all players with the Leader Skill are removed from play"
 ]
 ],
 "by": "A=B"

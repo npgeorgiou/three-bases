@@ -965,6 +965,10 @@
 [
 "draw",
 "draw a card"
+],
+[
+"leave_trigger",
+"When this follower is banished"
 ]
 ],
 "by": "A=B"
@@ -1010,6 +1014,10 @@
 [
 "stat_condition",
 "3 defense or less"
+],
+[
+"other_death_trigger",
+"if an allied amulet was destroyed"
 ]
 ],
 "by": "C"
@@ -4016,6 +4024,10 @@
 [
 "graveyard",
 "gain 20 shadows"
+],
+[
+"leave_trigger",
+"When this follower leaves play"
 ]
 ],
 "by": "A=B"

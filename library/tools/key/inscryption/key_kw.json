@@ -860,7 +860,7 @@
 "Energy Conduit (sigil)"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Gem Detonator (sigil)"
 ],
 [
@@ -1882,7 +1882,7 @@
 ],
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Double Death"
 ],
 [
@@ -2104,6 +2104,10 @@
 "tags": [
 [
 "resource_gain",
+"Scavenger"
+],
+[
+"other_death_trigger",
 "Scavenger"
 ]
 ]
@@ -2547,6 +2551,10 @@
 [
 "adjacency",
 "Bellist"
+],
+[
+"other_death_trigger",
+"Bellist"
 ]
 ]
 },
@@ -2565,6 +2573,10 @@
 ],
 [
 "adjacency",
+"Bellist"
+],
+[
+"other_death_trigger",
 "Bellist"
 ]
 ]

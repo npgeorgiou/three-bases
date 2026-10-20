@@ -6165,6 +6165,10 @@
 [
 "temporary_buff",
 "until the start of your next turn"
+],
+[
+"other_death_trigger",
+"If any friendly units have been destroyed"
 ]
 ],
 "by": "C"
@@ -6255,6 +6259,10 @@
 [
 "debuff",
 "this unit has Strike-last for the rest of the phase"
+],
+[
+"other_death_trigger",
+"If a friendly Fyreslayers Hero wholly within 6\" of this unit is destroyed"
 ]
 ],
 "by": "C"
@@ -7568,6 +7576,10 @@
 [
 "exhaust",
 "remove this unit's Sea-beast Familiar from the battlefield"
+],
+[
+"leave_trigger",
+"If it is removed from the battlefield"
 ]
 ],
 "by": "C"
@@ -10449,6 +10461,10 @@
 [
 "ranged",
 "Shoot in Combat"
+],
+[
+"leave_trigger",
+"If this Manifestation is removed from play"
 ]
 ],
 "by": "A=B"
@@ -11589,6 +11605,10 @@
 [
 "ranged",
 "shooting attacks"
+],
+[
+"other_death_trigger",
+"If an enemy unit is destroyed"
 ]
 ],
 "by": "C"

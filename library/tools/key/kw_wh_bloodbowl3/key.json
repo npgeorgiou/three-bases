@@ -613,6 +613,10 @@
 [
 "resource_gain",
 "may gain a single extra Team Re-roll"
+],
+[
+"leave_trigger",
+"if all players with the Leader Skill are removed from play"
 ]
 ],
 "by": "A=B"

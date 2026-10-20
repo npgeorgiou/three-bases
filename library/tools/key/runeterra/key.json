@@ -73,6 +73,10 @@
 [
 "return_to_hand",
 "Recall me"
+],
+[
+"other_leave_trigger",
+"When that ally leaves play"
 ]
 ],
 "by": "A=B"
@@ -5105,6 +5109,10 @@
 [
 "summon",
 "Spawn 2"
+],
+[
+"other_death_trigger",
+"Whenever a non-Tentacle ally dies"
 ]
 ],
 "by": "C"
@@ -7372,6 +7380,10 @@
 [
 "return_to_hand",
 "Recall me"
+],
+[
+"other_leave_trigger",
+"When that ally leaves play"
 ]
 ],
 "by": "C"

@@ -100,6 +100,10 @@
 [
 "adjacency",
 "each empty adjacent space"
+],
+[
+"other_death_trigger",
+"If a chime created by The Daus is defeated"
 ]
 ],
 "by": "C"
@@ -897,6 +901,10 @@
 [
 "resource_gain",
 "opposing creatures also grant Bones upon death"
+],
+[
+"other_death_trigger",
+"when an opposing creature is defeated"
 ]
 ],
 "by": "A=B"

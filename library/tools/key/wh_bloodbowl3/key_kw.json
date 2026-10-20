@@ -6480,6 +6480,10 @@
 [
 "resource_gain",
 "Leader"
+],
+[
+"leave_trigger",
+"Leader"
 ]
 ]
 },

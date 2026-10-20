@@ -581,6 +581,10 @@
 [
 "counterattack",
 "the destroyed model can fight after the attacking unit has finished making its attacks"
+],
+[
+"other_death_trigger",
+"Each time a PENITENT model from your army is destroyed"
 ]
 ],
 "by": "C"
@@ -809,6 +813,10 @@
 [
 "buff",
 "that unit has the Against the Horde ability"
+],
+[
+"other_leave_trigger",
+"Each time one of your foundations is removed from the battlefield"
 ]
 ],
 "by": "C"
@@ -10444,6 +10452,10 @@
 [
 "deckbuilding_effect",
 "it must be your Warlord"
+],
+[
+"other_death_trigger",
+"if your Oath of Moment target is destroyed"
 ]
 ],
 "by": "C"

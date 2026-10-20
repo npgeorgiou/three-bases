@@ -4,6 +4,10 @@ around them when the words don't say whose death it is: own death stays death_tr
 other_death_trigger, leaving play becomes leave_trigger / other_leave_trigger. A death_count tag whose words are one single
 death trigger ("whenever another creature dies") with no counting becomes other_death_trigger (death_count counts deaths).
 Tags whose wording can't be read stay unchanged and are printed. FIXED holds the decisions Kaptain took per card.
+Then the fill: the readers never had the leave-play and another-death concepts, so every key entry whose text has a sentence
+that death_side.side() reads as leave_trigger, other_leave_trigger or other_death_trigger gets that tag when its key lacks it
+(Kaptain's decision, 21 Oct 2026: what the key is missing is added generally). A sentence the key already tagged death_count,
+on_kill or cheat_death for keeps that reading and gets no other_death_trigger.
 Usage: death_split.py [apply]   (without apply: only prints what would change)"""
 import json, os, re, sqlite3, sys, collections
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, os.path.dirname(HERE))
@@ -80,6 +84,17 @@ def main(apply):
                 if not m: continue   # a namesake whose text lacks the wording (two Kill Team "Tracker" entries)
                 if add and not any(t[0] == add for t in v['tags']):
                     v['tags'].append([add, m.group(0) if m else nm]); moved[game, 'decision: add ' + add] += 1; ch = True
+        for i, v in key.items():   # the fill
+            n, text, cat = ent.get(int(i), ('', '', ''))
+            have = {t[0] for t in v['tags']}
+            for cl in re.split(r'(?<=[.!;])\s+|\n+', text or ''):
+                if re.search(r"\bat least \d+|\b\d+ or more\b", cl) or ('cheat_death' in have and re.search(r"\bwould\b|\bfirst time\b", cl, re.I)): continue   # counting, or surviving death
+                got = D.side(cl, n, cat in D.SPELLS, game) & {'leave_trigger', 'other_leave_trigger', 'other_death_trigger'}
+                if 'other_death_trigger' in got and any(t[0] in ('death_count', 'on_kill', 'cheat_death') and t[1] and t[1].lower()[:30] in cl.lower() for t in v['tags']):
+                    got.discard('other_death_trigger')
+                m = re.search(D.TRIG, cl)
+                for x in sorted(got - have):
+                    v['tags'].append([x, (m.group(0) if m else cl)[:120]]); have.add(x); moved[game, 'fill: ' + x] += 1; ch = True
         if ch and apply: json.dump(key, open(f, 'w'), indent=0)
     for (g, what), n in sorted(moved.items()): print(f'{g:18} {what:45} {n}')
     print('doubtful (unchanged):', len(doubt))

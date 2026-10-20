@@ -3152,6 +3152,10 @@
 [
 "random_effect",
 "land on randomly determined tiles"
+],
+[
+"other_death_trigger",
+"when a Medium Goo is defeated"
 ]
 ],
 "by": "C"
@@ -3190,6 +3194,10 @@
 [
 "movement",
 "Massive units can walk in Water"
+],
+[
+"other_death_trigger",
+"when a Medium Goo is defeated"
 ]
 ],
 "by": "C"

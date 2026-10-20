@@ -754,6 +754,10 @@
 [
 "transform",
 "replace that model with 1 Pair of Brimstone Horrors model"
+],
+[
+"other_death_trigger",
+"When a Blue Horror is taken out of action"
 ]
 ],
 "by": "C"
