@@ -30,7 +30,7 @@ shield|shield|\bshield
 boosted|temporary_buff|\bboost
 stable (cannot be moved)|immunity|\bstable\b
 # --- tiles and environment (Tiles, Environments pages)
-water or chasm kills|terrain|\b(drown\w*|chasm|pushed into water|die in water)\b
+water or chasm kills|terrain|\b(drowned|chasm|pushed into water|die in water)\b
 crack tiles|terrain|\bcrack\w* (adjacent )?tiles\b
 environment hazards announced a turn ahead|telegraphed_threats|\b(will be dropped|will fall|will strike|will become|will emerge|next turn)\b
 # --- passives, pilots, Vek (Passives, Pilots, Vek pages)
@@ -40,5 +40,6 @@ psion aura over all other Vek|aura|\ball other vek\b
 explode on death|death_trigger|\b(explode\w* on death|on death|when (killed|destroyed))\b
 spawn eggs or minions|summon|\bspawns? (a|an|one|two|three|\d) |\blays? (an |)eggs?\b|\bspawning a friendly\b
 regeneration|regeneration|\bregenerat
+# "capable of drowning" / "able to drown" on Vek is trivia (no immunity), not an effect, so the water line reads "drowned" only.
 # Not checked: Flying (the game's Flying lets a unit cross water and chasms; patterns/into_the_breach.txt switches evasion off for it on purpose);
 # single-use weapons (no concept for once per battle).

@@ -44,3 +44,6 @@ variable_stats|does|\bdamage increases the further\b
 !friendly_fire|self[- ]damage
 # "Health 3, move 4" is every unit's stat line, not a movement effect
 !movement|\bmoves?\b
+# Environments that turn a tile into Water or a Chasm, and Vek that leave Fire on death, change the terrain
+terrain|does|\bwill become (a |an )?(water|chasm|lava|ice|smoke|fire|ground|mountain|forest|sand|acid|hole)\b
+terrain|does|\bleaves? (fire|acid|a\.c\.i\.d|smoke|ice|water|lava) on death\b
