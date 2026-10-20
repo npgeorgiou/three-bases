@@ -34,10 +34,14 @@ def _whose(subject, name, spell=False):
     if re.search(r"\b(this|it)\b[^.]{0,20}\bor (another|an?|any)\b|\b(another|an?|any)\b[^.]{0,30}\bor (this|it)\b", s): own = other = True
     return own, other
 
+# keyword entries whose death or leave-play sentences only state how the game handles removal (Kaptain's decision, 21 Oct 2026):
+# no death or leave trigger is read from them, so no card inherits one through them
+RULE_ONLY = {('wh_40k_10e', 'leader'), ('gwent', 'doomed')}
 BANISH_DIES = {'lorcana'}   # in Lorcana a banished character is one that was defeated: banished is its word for dying
 
 def side(clause, name='', spell=False, game=''):
     t = clause or ''; out = set()
+    if (game, (name or '').lower()) in RULE_ONLY: return out
     if game in BANISH_DIES: t = re.sub(r"\b(is|are|be) banished\b", r"\1 destroyed", t, flags=re.I)
     t = re.sub(r"\bwould (die|leave)\b", "would_\\1", t, flags=re.I)   # (see above)
     t = re.sub(r"\bbefore (it|they|this \w+) (is|are) removed from", "before_removed", t, flags=re.I)   # removing a destroyed model is part of its death   # "if it would die / leave, ... instead" replaces the event, it is not a trigger
@@ -62,7 +66,8 @@ NUM = re.compile(r"\b(x|y|n|\d+|two|three|four|five|second|subsequent|more|multi
 COUNT = re.compile(r"\b(for each|number of|how many|times|tally|counter|this game|this battle|this match|this turn|so far|died this|x is|equal to)\b", re.I)
 
 def split(k, clause, name='', spell=False, game=''):
-    """New concepts for one death_trigger or death_count tag, read from the sentence that holds it."""
+    """New concepts for one death_trigger or death_count tag, read from the sentence that holds it (empty: the tag goes)."""
+    if (game, (name or '').lower()) in RULE_ONLY: return set()
     s = side(clause, name, spell, game) - {'?'}
     if k == 'death_count':
         return {'other_death_trigger'} if s == {'other_death_trigger'} and SINGLE.search(clause) and not NUM.search(clause) and not COUNT.search(clause) else {'death_count'}

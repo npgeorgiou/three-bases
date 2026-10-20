@@ -244,7 +244,7 @@ def apply(c):
     moved = {}
     for rid, e, k, role, m, ev in q('SELECT rowid, entity, concept, role, method, evidence FROM entity_concepts WHERE concept IN (%s)' % ','.join('?' * len(old)), *old):
         new = dsplit(k, e, clause(ev, text.get(e))) if k in DEATH else targets(k, text.get(e))
-        if k in DEATH: new = {n for n in new if n == k or (e, n) not in dropped} or {k}
+        if k in DEATH and new: new = {n for n in new if n == k or (e, n) not in dropped} or {k}   # empty: a rule-only keyword (death_side.RULE_ONLY)
         elif k not in REMOVED:
             new = {n for n in new if n == k or (e, n) not in dropped}
             if not new & set(primary(k)): new.add(k)   # nothing it may move to: it stays as it is

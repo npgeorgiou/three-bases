@@ -1153,10 +1153,6 @@
 [
 "bodyguard",
 "that attack cannot be allocated to a Character model in that unit"
-],
-[
-"other_death_trigger",
-"Each time the last model in a Bodyguard unit is destroyed"
 ]
 ],
 "by": "C"

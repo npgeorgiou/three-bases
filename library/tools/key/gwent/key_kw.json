@@ -102,10 +102,6 @@
 [
 "banish",
 "Doomed"
-],
-[
-"leave_trigger",
-"Doomed"
 ]
 ]
 },
@@ -3206,10 +3202,6 @@
 [
 "banish",
 "Doomed"
-],
-[
-"leave_trigger",
-"Doomed"
 ]
 ]
 },
@@ -4379,10 +4371,6 @@
 [
 "banish",
 "Doomed"
-],
-[
-"leave_trigger",
-"Doomed"
 ]
 ]
 },
@@ -4432,10 +4420,6 @@
 [
 "banish",
 "Doomed"
-],
-[
-"leave_trigger",
-"Doomed"
 ]
 ]
 },
@@ -4466,10 +4450,6 @@
 ],
 [
 "banish",
-"Doomed"
-],
-[
-"leave_trigger",
 "Doomed"
 ]
 ]
@@ -4530,10 +4510,6 @@
 "tags": [
 [
 "banish",
-"Doomed"
-],
-[
-"leave_trigger",
 "Doomed"
 ],
 [
@@ -4935,10 +4911,6 @@
 [
 "banish",
 "Doomed"
-],
-[
-"leave_trigger",
-"Doomed"
 ]
 ]
 },
@@ -4958,10 +4930,6 @@
 "Doomed"
 ],
 [
-"leave_trigger",
-"Doomed"
-],
-[
 "on_kill",
 "Deathblow"
 ]
@@ -4975,10 +4943,6 @@
 "tags": [
 [
 "banish",
-"Doomed"
-],
-[
-"leave_trigger",
 "Doomed"
 ],
 [
@@ -5057,10 +5021,6 @@
 "Doomed"
 ],
 [
-"leave_trigger",
-"Doomed"
-],
-[
 "immunity",
 "Immunity"
 ],
@@ -5103,10 +5063,6 @@
 "Doomed"
 ],
 [
-"leave_trigger",
-"Doomed"
-],
-[
 "destroy",
 "Consume"
 ],
@@ -5136,10 +5092,6 @@
 ],
 [
 "banish",
-"Doomed"
-],
-[
-"leave_trigger",
 "Doomed"
 ]
 ]
@@ -5557,10 +5509,6 @@
 [
 "banish",
 "Doomed"
-],
-[
-"leave_trigger",
-"Doomed"
 ]
 ]
 },
@@ -5586,10 +5534,6 @@
 "Doomed"
 ],
 [
-"leave_trigger",
-"Doomed"
-],
-[
 "protection",
 "Defender"
 ],
@@ -5606,10 +5550,6 @@
 "tags": [
 [
 "banish",
-"Doomed"
-],
-[
-"leave_trigger",
 "Doomed"
 ]
 ]
@@ -5637,10 +5577,6 @@
 "tags": [
 [
 "banish",
-"Doomed"
-],
-[
-"leave_trigger",
 "Doomed"
 ]
 ]
@@ -5781,10 +5717,6 @@
 [
 "banish",
 "Doomed"
-],
-[
-"leave_trigger",
-"Doomed"
 ]
 ]
 },
@@ -5795,10 +5727,6 @@
 "tags": [
 [
 "banish",
-"Doomed"
-],
-[
-"leave_trigger",
 "Doomed"
 ]
 ]
@@ -5865,10 +5793,6 @@
 "Doomed"
 ],
 [
-"leave_trigger",
-"Doomed"
-],
-[
 "on_ally_play",
 "Harmony"
 ],
@@ -5908,10 +5832,6 @@
 "Doomed"
 ],
 [
-"leave_trigger",
-"Doomed"
-],
-[
 "immunity",
 "Immunity"
 ],
@@ -5938,10 +5858,6 @@
 "Doomed"
 ],
 [
-"leave_trigger",
-"Doomed"
-],
-[
 "death_trigger",
 "Deathwish"
 ],
@@ -5959,10 +5875,6 @@
 "tags": [
 [
 "banish",
-"Doomed"
-],
-[
-"leave_trigger",
 "Doomed"
 ],
 [

@@ -60,10 +60,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "ranged",
 "Assault"
 ],
@@ -121,10 +117,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -204,10 +196,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -362,10 +350,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "ranged",
 "Assault"
 ],
@@ -393,10 +377,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -436,10 +416,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -638,10 +614,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "ranged",
 "Assault"
 ],
@@ -673,10 +645,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -756,10 +724,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -1632,10 +1596,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "play_restriction",
 "Psychic"
 ],
@@ -1785,10 +1745,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "ranged",
 "Assault"
 ],
@@ -1856,10 +1812,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -1979,10 +1931,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -2240,10 +2188,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "buff",
 "Lethal Hits"
 ],
@@ -2331,10 +2275,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -2491,10 +2431,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "multi_attack",
 "Extra Attacks"
 ],
@@ -2547,10 +2483,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "tribal",
 "Anti-"
 ],
@@ -2595,10 +2527,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "tribal",
 "Anti-"
 ],
@@ -2628,10 +2556,6 @@
 [
 "bodyguard",
 "Leader"
-],
-[
-"other_death_trigger",
-"Leader"
 ]
 ]
 },
@@ -2646,10 +2570,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ]
 ]
@@ -2950,10 +2870,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "buff",
 "Lethal Hits"
 ],
@@ -2979,10 +2895,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -3017,10 +2929,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -3128,10 +3036,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "buff",
 "Lethal Hits"
 ]
@@ -3169,10 +3073,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -3380,10 +3280,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -3665,10 +3561,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "movement",
 "Scouts"
 ],
@@ -3691,10 +3583,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -3847,10 +3735,6 @@
 [
 "bodyguard",
 "Leader"
-],
-[
-"other_death_trigger",
-"Leader"
 ]
 ]
 },
@@ -3867,10 +3751,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -3935,10 +3815,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -4017,10 +3893,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "placement_rules",
 "Deep Strike"
 ],
@@ -4049,10 +3921,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "placement_rules",
 "Deep Strike"
 ],
@@ -4074,10 +3942,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -4105,10 +3969,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "placement_rules",
 "Deep Strike"
 ],
@@ -4130,10 +3990,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -4159,10 +4015,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -4199,10 +4051,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -4253,10 +4101,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -4374,10 +4218,6 @@
 [
 "bodyguard",
 "Leader"
-],
-[
-"other_death_trigger",
-"Leader"
 ]
 ]
 },
@@ -4443,10 +4283,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "random_effect",
 "Twin-Linked"
 ],
@@ -4487,10 +4323,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -4561,10 +4393,6 @@
 [
 "bodyguard",
 "Leader"
-],
-[
-"other_death_trigger",
-"Leader"
 ]
 ]
 },
@@ -4588,10 +4416,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ]
 ]
@@ -4706,10 +4530,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "ranged",
 "Assault"
 ],
@@ -4750,10 +4570,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -5182,10 +4998,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "piercing",
 "Devastating Wounds"
 ],
@@ -5400,10 +5212,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "targeting_rules",
 "Lone Operative"
 ]
@@ -5470,10 +5278,6 @@
 [
 "bodyguard",
 "Leader"
-],
-[
-"other_death_trigger",
-"Leader"
 ]
 ]
 },
@@ -5537,10 +5341,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -5848,10 +5648,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "piercing",
 "DEVASTATING WOUNDS"
 ],
@@ -5911,10 +5707,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "deckbuilding_effect",
 "Crucible"
 ],
@@ -5938,10 +5730,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -6004,10 +5792,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -6272,10 +6056,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "target_choice",
 "Precision"
 ],
@@ -6309,10 +6089,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -6654,10 +6430,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "random_effect",
 "Twin-linked"
 ],
@@ -6708,10 +6480,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "piercing",
 "Ignores Cover"
 ],
@@ -6735,10 +6503,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -6767,10 +6531,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -7070,10 +6830,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "placement_rules",
 "Deep Strike"
 ],
@@ -7094,10 +6850,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ]
 ]
@@ -7307,10 +7059,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "multi_attack",
 "Extra Attacks"
 ],
@@ -7333,10 +7081,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -7424,10 +7168,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "multi_attack",
 "Extra Attacks"
 ]
@@ -7445,10 +7185,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -7672,10 +7408,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "buff",
 "Lethal Hits"
 ]
@@ -7724,10 +7456,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "target_choice",
 "PRECISION"
 ],
@@ -7765,10 +7493,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -7867,10 +7591,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ]
 ]
@@ -8285,10 +8005,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "piercing",
 "Devastating Wounds"
 ],
@@ -8338,10 +8054,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ]
 ]
@@ -8696,10 +8408,6 @@
 [
 "bodyguard",
 "Leader"
-],
-[
-"other_death_trigger",
-"Leader"
 ]
 ]
 },
@@ -8791,10 +8499,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "piercing",
 "DEVASTATING WOUNDS"
 ],
@@ -8835,10 +8539,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "random_effect",
 "Blast"
 ],
@@ -8864,10 +8564,6 @@
 [
 "bodyguard",
 "Leader"
-],
-[
-"other_death_trigger",
-"Leader"
 ]
 ]
 },
@@ -8883,10 +8579,6 @@
 [
 "bodyguard",
 "Leader"
-],
-[
-"other_death_trigger",
-"Leader"
 ]
 ]
 },
@@ -8901,10 +8593,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ]
 ]
@@ -9157,10 +8845,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "placement_rules",
 "Deep Strike"
 ],
@@ -9184,10 +8868,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [
@@ -9502,10 +9182,6 @@
 "Leader"
 ],
 [
-"other_death_trigger",
-"Leader"
-],
-[
 "movement",
 "Scouts"
 ],
@@ -9541,10 +9217,6 @@
 ],
 [
 "bodyguard",
-"Leader"
-],
-[
-"other_death_trigger",
 "Leader"
 ],
 [

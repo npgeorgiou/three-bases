@@ -67,6 +67,7 @@ def main(apply):
                     else: new.append([k, w])
                     continue
                 if (game, n) in READ: s = READ[game, n]
+                if (game, (n or '').lower()) in D.RULE_ONLY: moved[game, 'rule-only keyword: tag removed'] += 1; ch = True; continue
                 s -= {'?'}
                 if not s: doubt.append((game, n, w, clause(text, w)[:150])); new.append([k, w]); continue
                 if s == {'death_trigger'}: new.append([k, w]); continue
@@ -84,7 +85,10 @@ def main(apply):
                 if not m: continue   # a namesake whose text lacks the wording (two Kill Team "Tracker" entries)
                 if add and not any(t[0] == add for t in v['tags']):
                     v['tags'].append([add, m.group(0) if m else nm]); moved[game, 'decision: add ' + add] += 1; ch = True
-        for i, v in key.items():   # the fill
+        for i, v in key.items():   # rule-only keywords lose the new triggers too, then the fill
+            if (game, ent.get(int(i), ('',))[0].lower()) in D.RULE_ONLY:
+                k0 = len(v['tags']); v['tags'] = [t for t in v['tags'] if t[0] not in ('other_death_trigger', 'leave_trigger', 'other_leave_trigger')]; ch |= len(v['tags']) != k0
+        for i, v in key.items():
             n, text, cat = ent.get(int(i), ('', '', ''))
             have = {t[0] for t in v['tags']}
             for cl in re.split(r'(?<=[.!;])\s+|\n+', text or ''):

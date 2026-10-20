@@ -48,10 +48,6 @@
 [
 "banish",
 "removes the card from the game"
-],
-[
-"leave_trigger",
-"after it leaves the battlefield"
 ]
 ],
 "by": "C"
