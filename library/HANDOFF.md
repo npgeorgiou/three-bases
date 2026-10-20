@@ -30,7 +30,11 @@ never changed to fit a case**: when a source writes a card's name differently, c
   per 100 entries, regression 21282/21282, real-world 245 -> 246, other games unchanged (insert-only check). One checklist line
   still shows a gap (water/chasm deaths, 7 Vek entries). Reload fixes made on the way: keyword entries keep their tags
   (`export_game.py` keep_tags), and `drop_untagged.py` keeps entries of the answer key and of regression.tsv.
-- **The other 18 older games:** not started. Same procedure (ADDING_GAMES.md 0.1, then 0.1-4), one game per pass, keep only when
+- **Inscryption: checked, nothing to change.** Its cards only list their sigils, so the check reads the sigil (keyword) entries:
+  `coverage.py <db> inscryption 0 --mechanics tools/mechanics/inscryption.txt --keywords` (new option). Research: the wiki's
+  Sigils page (all acts and the rulebook). Every one of 27 mechanics carries its concept; one doubtful tag left: Double Strike
+  has counterattack (it strikes twice; a hand review in `tools/reviews/inscryption.json` would drop it).
+- **The other 17 older games:** not started. Same procedure (ADDING_GAMES.md 0.1, then 0.1-4), one game per pass, keep only when
   `final_compare.py` wrong and missed are not worse than before, regression passes and real-world is not lower. Measure with a
   script like `keydiff` (new wrong key tags by concept and entry, base vs reloaded), which made each fix here a single look.
 

@@ -1,0 +1,30 @@
+# Mechanics of Inscryption: name|expected concept|wording in the sigil (keyword) definitions. Cards list only their sigils, so the
+# check reads the keyword entries (coverage.py --keywords). Research (20 Oct 2026, built-in browser): inscryption.fandom.com/wiki/Sigils
+# (all sigils of Acts 1-3 and the rulebook), and the real-world sources in tools/realworld/inscryption.tsv.
+card into hand when played or struck|generate_cards|\bis created in your hand\b|\bcreated in your hand\b
+strikes directly over blockers|evasion|\bstrike an opponent directly\b|\bstrike directly\b
+kills what it damages|deathtouch|\bthat creature perishes\b
+grows into a stronger form|transform|\bgrow into a more powerful form\b|\btransform to, or from\b
+moves each turn|movement|\bwill move in the direction\b|\bwill move to that (empty )?space\b|\bmove towards them\b
+tutor a card|tutor|\bsearch your deck for any card\b
+returns to hand on death|cheat_death|\bwhen a card bearing this sigil perishes, a copy of it\b|\bwhen a card bearing this sigil is sacrificed, it does not perish\b
+thorns and sentry|counterattack|\battacker of said card\b|\bthey are dealt 1 damage\b
+cannot be attacked|immunity|\bwould attack a card bearing this sigil, it does not\b|\bimmune to the effects\b
+worth more when sacrificed|sacrifice|\bwhen sacrificed\b|\bis sacrificed\b
+bones as a resource|resource_gain|\b\d+ bones are awarded\b|\bgenerate 1 bone\b|\bgain 3 bones\b|\balso grant bones\b
+hits several spaces|multi_target_attack|\bstrike each opposing space\b|\ban extra time\b
+adjacent or circuit creatures gain power|aura|\bcreatures adjacent to a card bearing this sigil gain\b|\bwithin a circuit completed by a card bearing this sigil gain\b|\bmox cards on the owner's side of the board gain\b
+opposing creature loses power|stat_loss|\bopposing a card bearing this sigil loses\b
+dies after attacking|self_destruct|\bafter attacking, a card bearing this sigil perishes\b
+effect when it dies|death_trigger|\bwhen a card bearing this sigil (perishes|dies)\b
+draw cards|draw|\bdraw (\d+|a|a new hand of \d+) cards?\b|\bdraw a card\b
+gems (mox) as a resource|resource_gain|\bgem is provided\b
+energy as a resource|resource_gain|\benergy cell\b|\benergy never depletes\b
+activated abilities|activated|\bactivate:
+pay to grow|stat_gain|\bincrease the power and health\b|\bgains? \d+ power\b
+prevent the first damage|shield|\bwould take damage, prevent that damage\b
+random effects|random_effect|\bat random\b|\brandom (card|item)\b|\brandomly\b
+creates units on spaces|summon|\bis created on (each|the)\b|\bfill all empty spaces\b|\bspawn (l33pb0ts|gem vessels)\b|\bdrop a (skeleton|squirrel)\b
+blocks flyers|blocking|\bwill block an opposing creature bearing the airborne\b
+pushes or throws creatures|forced_movement|\bthrown back\b|\bpushing any cards\b
+heals|heal|\bare healed\b|\bto heal a card\b

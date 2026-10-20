@@ -5,7 +5,7 @@ printed most common first, with one example each: the mechanics the tagging miss
 Also, with --mechanics <file> (one mechanic per line: 'name|concept|regex', from guides and wikis), per faction: how many entries
 show the mechanic's wording, and how many of those carry the expected concept (or a narrower one) after the build. A faction
 whose cards show the wording but lack the concept is a tagging gap (a missing pattern, or a later build step that removed it).
-Usage: coverage.py <db> <game> [top_n] [--mechanics <file>]   (top_n 0: only the mechanics)"""
+Usage: coverage.py <db> <game> [top_n] [--mechanics <file>] [--keywords]   (top_n 0: only the mechanics)"""
 import collections, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE); import reading as RD
 args = [a for a in sys.argv[1:] if not a.startswith('--')]; db, G = args[:2]; top = int(args[2]) if len(args) > 2 and args[2].isdigit() else 40
@@ -20,7 +20,7 @@ if os.path.exists(pf):
         if ln.strip() and ln[0] not in '#!': pats.append(re.compile(ln.rstrip('\n').split('|', 2)[2], re.I))
 kws = sorted((n.lower() for (n,) in q("SELECT name FROM entities WHERE game=? AND category='keyword'", G)), key=len, reverse=True)
 kwstart = re.compile(r'^\W*(' + '|'.join(re.escape(k) for k in kws) + r')\b') if kws else None
-ents = q("SELECT id, name, faction, text FROM entities WHERE game=? AND category NOT IN ('keyword','tribe') AND text IS NOT NULL", G)
+ents = q("SELECT id, name, faction, text FROM entities WHERE game=? AND category %s AND text IS NOT NULL" % ("= 'keyword'" if '--keywords' in sys.argv else "NOT IN ('keyword','tribe')"), G)   # --keywords: read the keyword entries (games whose cards only list keywords)
 groups = collections.defaultdict(list); ncl = nun = 0
 for i, nm, f, t in ents:
     low = RD.strip(G, t.lower()).replace((nm or '').lower(), 'name') if nm and len(nm) > 2 else RD.strip(G, t.lower())
