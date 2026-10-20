@@ -73,7 +73,9 @@ for card in d['cards']:
               (nid, G, card['ext_id'] if RELOAD else PRE + str(card['ext_id']), name, card['category'], card.get('source_type'), card.get('edition'), card.get('faction'),
                json.dumps(sub) if sub else None, card.get('rarity'), cost, cn, stats, text or None, json.dumps(card['extra']) if card.get('extra') else None,
                json.dumps(card['variants'], ensure_ascii=False) if card.get('variants') else None))
-    for con, role, p in pats:
+    if card.get('keep_tags'):   # reload of a keyword entry: its current tags, not today's patterns
+        c.executemany('INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)', [(nid, *t) for t in card['keep_tags']])
+    for con, role, p in [] if card.get('keep_tags') else pats:
         m = p.search(low)
         if m: c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (nid, con, role, 'text_pattern', low[max(0, m.start() - 20): m.start() + 40]))
     for con, role, ev in card.get('tags') or []:   # data rules the converter read from the card's fields (method data_rule)

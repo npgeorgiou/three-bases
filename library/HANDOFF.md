@@ -1,7 +1,7 @@
 # Library: state and next steps (20 Oct 2026, evening)
 
 Kaptain asked for README suggestions 1, 2, 3, 4, 5, 6, 7 and 9, then a new real-world test. Done in this chat: 2, 3, 4.
-Open: 1, 5, 6, 7, 9 (below, in that order of cost). The database file was not changed in this chat.
+Open: 1 (started), 5 (started), 6, 7, 9. The database file was not changed in this chat.
 
 Rules for the next chat: **no readers, judges or agents** without Kaptain's OK and a measured cost. Scripts and builds first.
 Commit and push after each step. Read `ADDING_GAMES.md` sections 4b and 4c before writing any pattern. **The library itself is
@@ -18,16 +18,20 @@ never changed to fit a case**: when a source writes a card's name differently, c
   key wrong tags 74 -> 130 per 100 entries (today's patterns; mostly a general "tile" match tagged terrain). So a reload is kept
   only after the game's patterns are fixed and the key is not worse than the current library.
 - **Case audit (suggestion 4):** every case checked against its source (built-in browser for pages WebFetch cannot read); `why`
-  holds the source's words. 405 -> 362 cases; **real-world test 217 of 362** on the current library (was 242 of 405).
+  holds the source's words. 405 -> 362 cases; then 43 new cases from the same pages (suggestion 5, started): **real-world
+  test 245 of 405** on the current library. Next for suggestion 5: more pages per game, thinnest games first (Blood Bowl 2,
+  Darkest Dungeon 3, Inscryption 3, Kill Team 8, Monster Train 9).
 
 ## Mechanics check (suggestion 1), progress
-- **Into the Breach:** `tools/mechanics/into_the_breach.txt` written; gaps found (line attacks, self damage, flipped attacks,
-  cracked tiles, deployed tanks) and patterns added to `tools/patterns/into_the_breach.txt` (with `!terrain|\btile`). Reloaded in
-  scratch: regression 21282/21282, real-world one case less (Science fortress), key wrong tags 74 -> 106, missed 43 -> 40. **Not
-  kept.** Cause found: a reload re-tags the game's keyword entries with today's patterns, but the old one-time fixes that removed
-  wrong keyword tags (`tools/fixes/f08`, `f09`, `f13`, `f14` and similar) are not build steps, so their removals are lost and
-  every card inherits them again (Smoke and Fire get cant_attack, evasion, terrain). Before any reload is kept: make the reload
-  re-apply those one-time removals (or copy the keyword entries' current tags), then reload again and compare.
+- **Into the Breach:** `tools/mechanics/into_the_breach.txt` written; its gaps (line attacks, self damage, flipped attacks,
+  cracked tiles, deployed tanks) have patterns in `tools/patterns/into_the_breach.txt`, plus switch-offs for "tile" (terrain) and
+  "turns into" (transform: tiles turning into water). Reloads now keep every keyword entry's current tags (`export_game.py`
+  keep_tags): before, a reload re-tagged keywords with today's patterns and lost the old one-time removals, so cards inherited
+  wrong tags again. Last reload in scratch: regression 21282/21282, real-world 245/405 (unchanged), key missed 43.2 -> 39.4 per
+  100 entries (better), wrong 74.0 -> 79.4 (worse). **Not kept yet.** Next: run `final_compare.py` per concept on the reloaded
+  file (the scratch script that breaks wrong tags down by concept and method is easy to rewrite: key.load + K.narrow, as in
+  final_compare.py) and fix the patterns behind the extra wrong tags (multi_target_attack, terrain, forced_movement); keep the
+  reload once wrong is at or below 74.0. Then do the same for the other 18 older games.
 
 ## Next steps, in order
 1. **Combos (suggestion 7, scripts only).** `realworld_why.py` lists 11 pairs with both cards and no connection: Unleash the
