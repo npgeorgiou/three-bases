@@ -1,36 +1,33 @@
-signature	Druid	resource_gain	mana acceleration	https://hearthstone.wiki.gg/wiki/Classes
-signature	Hunter	tribal	Beast synergy	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-signature	Mage	trap_secret	Secrets	https://hearthstone.wiki.gg/wiki/Classes
-signature	Paladin	shield	Divine Shield	https://hearthstone.wiki.gg/wiki/Classes
-signature	Priest	heal	healing	https://hearthstone.wiki.gg/wiki/Classes
-signature	Rogue	combo_sequence	Combo cards	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-signature	Shaman	overload_debt	Overload	https://hearthstone.wiki.gg/wiki/Classes
-signature	Warlock	life_payment	life as a resource	https://hearthstone.wiki.gg/wiki/Classes
-signature	Warrior	on_damaged	Enrage and on-damage effects	https://hearthstone.wiki.gg/wiki/Classes
-signature	Demonhunter	tribal	demons and fel	https://hearthstone.wiki.gg/wiki/Classes
-archetype	Druid	swarm	Token Druid	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-archetype	Hunter	aggro_tempo	Face Hunter	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-archetype	Mage	spellslinger	spell focused	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-archetype	Paladin	swarm	Odd Paladin, minion swarms	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-archetype	Priest	sustain	healing Priest	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-archetype	Rogue	spellslinger	Miracle combo Rogue	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-archetype	Shaman	tribal	Murloc Shaman	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-archetype	Warlock	swarm	Zoo Warlock	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-archetype	Warrior	fortress	armor and Taunt, Control Warrior	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-archetype	Druid	ramp	Big Druid, mana generation	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-combo	Auchenai Soulpriest	Circle of Healing	heal turned into damage	https://www.keengamer.com/articles/guides/7-great-hearthstone-card-combos/
-combo	Equality	Consecration	board clear	https://www.keengamer.com/articles/guides/7-great-hearthstone-card-combos/
-combo	Leeroy Jenkins	Shadowstep	replay for repeat charge damage	https://www.keengamer.com/articles/guides/7-great-hearthstone-card-combos/
-combo	Unleash the Hounds	Stormwind Champion	hound buff burst	https://www.keengamer.com/articles/guides/7-great-hearthstone-card-combos/
-combo	Injured Blademaster	Circle of Healing	heal triggers damage and buff	https://primagames.com/tips/hearthstone-powerful-card-combos
-combo	Ancestral Spirit	Cairne Bloodhoof	repeating deathrattle	https://primagames.com/tips/hearthstone-powerful-card-combos
-combo	Force of Nature	Savage Roar	treant charge burst	https://primagames.com/tips/hearthstone-powerful-card-combos
-combo	Defias Ringleader	The Coin	enables Combo	https://hearthstone.fandom.com/wiki/Combo
-combo	Youthful Brewmaster	SI:7 Agent	re-trigger Combo	https://hearthstone.fandom.com/wiki/Combo
-combo	Divine Spirit	Inner Fire	double then set attack to health	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-splash	Paladin	trap_secret	Secret Paladin	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-splash	Priest	death_trigger	Deathrattle Priest	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-splash	Rogue	death_trigger	Deathrattle Rogue	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-splash	Shaman	direct_damage	damage spells	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-splash	Warlock	draw	card draw	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
-splash	Druid	draw	card draw	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+signature	Druid	resource_gain	accelerate their rate of mana accumulation	https://hearthstone.wiki.gg/wiki/Classes
+signature	Hunter	tribal	an army of beasts fighting alongside them	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+signature	Mage	trap_secret	can employ a range of magical Secrets	https://hearthstone.wiki.gg/wiki/Classes
+signature	Paladin	shield	gifting the recruits of their order with Divine Shields	https://hearthstone.wiki.gg/wiki/Classes
+signature	Priest	heal	Devout healers with powerful restorative abilities	https://hearthstone.wiki.gg/wiki/Classes
+signature	Rogue	combo_sequence	Combo cards, destroying individual minions, card draw	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+signature	Shaman	overload_debt	Shamans can Overload their mana	https://hearthstone.wiki.gg/wiki/Classes
+signature	Warlock	life_payment	Regarding their own lifeblood as nothing more than a currency	https://hearthstone.wiki.gg/wiki/Classes
+signature	Warrior	on_damaged	synergy with Enrage and on-damage effects	https://hearthstone.wiki.gg/wiki/Classes
+signature	Demonhunter	tribal	call upon demonic allies and fel magic	https://hearthstone.wiki.gg/wiki/Classes
+archetype	Druid	swarm	minion swarm strategy in the form of Token Druid	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+archetype	Hunter	aggro_tempo	Face Hunter was once a feared aggro deck	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+archetype	Mage	spellslinger	Spells (big and small), damage spells, Secrets, board clear	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+archetype	Paladin	swarm	Odd Paladin with its minion swarms	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+archetype	Priest	sustain	Healing, narrow but powerful spells, copying	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+archetype	Shaman	tribal	Token Shamans and Murloc Shamans have existed for a long time	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+archetype	Warlock	swarm	Zoo Warlock gets a nod in the form of minion swarms	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+archetype	Warrior	fortress	Armor, weapons, Taunt, destroying minions	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+archetype	Druid	ramp	Giant minions have been present in many forms in Big Druid	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+combo	Auchenai Soulpriest	Circle of Healing	Play the Auchenai Soulpriest card first and then Circle of Healing	https://www.keengamer.com/articles/guides/7-great-hearthstone-card-combos/
+combo	Equality	Consecration	The combo consists of the Equality card	https://www.keengamer.com/articles/guides/7-great-hearthstone-card-combos/
+combo	Leeroy Jenkins	Shadowstep	play Rogue's Shadowstep card on the same turn	https://www.keengamer.com/articles/guides/7-great-hearthstone-card-combos/
+combo	Unleash the Hounds	Stormwind Champion	you can play the Stormwind Champion	https://www.keengamer.com/articles/guides/7-great-hearthstone-card-combos/
+combo	Injured Blademaster	Circle of Healing	Priest: Injured Blademaster with Circle of Healing	https://primagames.com/tips/hearthstone-powerful-card-combos
+combo	Ancestral Spirit	Cairne Bloodhoof	Shaman: Ancestral Spirit with Cairne Bloodhoof	https://primagames.com/tips/hearthstone-powerful-card-combos
+combo	Force of Nature	Savage Roar	Druid: Force of Nature with Savage Roar	https://primagames.com/tips/hearthstone-powerful-card-combos
+combo	Defias Ringleader	The Coin	The Coin can be used as a card to build up	https://hearthstone.wiki.gg/wiki/Combo
+combo	Divine Spirit	Inner Fire	they will all have to include Divine Spirit and Inner Fire	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+splash	Paladin	trap_secret	Secret Paladin with secrets and buffs	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+splash	Rogue	death_trigger	Deathrattle Rogue has only been somewhat successful	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+splash	Shaman	direct_damage	Minion swarms, damage spells, Totems, Elementals, Murlocs	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+splash	Warlock	draw	Powerful sacrifice effects, card draw, minion swarms	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/
+splash	Druid	draw	Mana generation, giant minions, minion swarms, card draw, Beasts	https://www.hearthstonetopdecks.com/class-identity-in-hearthstone-the-past-the-present-and-the-future/

@@ -1,17 +1,14 @@
-signature	Soulblight Gravelords	summon	spawning abilities, especially zombies	https://ageofminiatures.com/aos-armies/
-signature	Flesh-eater Courts	revive	Carrion Retainers resurrect fallen units	https://ageofminiatures.com/aos-armies/
-signature	Seraphon	summon	conjuration summons extra units	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
-signature	Idoneth Deepkin	first_strike	tide stage lets units fight first regardless of order	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
-signature	Lumineth Realm-lords	counter_spell	units can dispel enemy spells	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
-signature	Maggotkin of Nurgle	damage_over_time	disease points deal splash mortal wounds each turn	https://ageofminiatures.com/aos-armies/
-signature	Kharadron Overlords	ranged	shooting-focused airborne gunboats	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
-signature	Sylvaneth	movement	up to half the army in reserve, arrives mid-game	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
-archetype	Skaven	swarm	horde-based rat-men	https://ageofminiatures.com/aos-armies/
-archetype	Disciples of Tzeentch	spellslinger	magic-heavy, strong hero phase	https://ageofminiatures.com/aos-armies/
-archetype	Blades of Khorne	aggro_tempo	violent expendable blood armies, no summoning	https://ageofminiatures.com/aos-armies/
-archetype	Hedonites of Slaanesh	aggro_tempo	very fast but fragile, hit-first charges	https://ageofminiatures.com/aos-armies/
-archetype	Daughters of Khaine	aggro_tempo	very fast melee glass cannons	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
-archetype	Maggotkin of Nurgle	fortress	tough, slow, hard to dislodge from objectives	https://ageofminiatures.com/aos-armies/
-archetype	Nighthaunt	fortress	durable spectral units, Ethereal ignores save modifiers	https://ageofminiatures.com/aos-armies/
-archetype	Ogor Mawtribes	sustain	tough units that can heal	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
-archetype	Beasts of Chaos	aggro_tempo	fast mobile brutes that charge the front line	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+signature	Soulblight Gravelords	summon	raised in shambling warbands	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+signature	Seraphon	summon	summon new units to the battle	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+signature	Idoneth Deepkin	first_strike	another lets them fight first in the combat phase	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+signature	Lumineth Realm-lords	counter_spell	capable of collectively dispelling enemy casts	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+signature	Kharadron Overlords	ranged	Some of the best shooting in the game	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+signature	Sylvaneth	movement	bring in new units mid-game	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+archetype	Skaven	swarm	Very much a horde army	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+archetype	Disciples of Tzeentch	spellslinger	A very magic-focused army	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+archetype	Hedonites of Slaanesh	aggro_tempo	hoping to deal enough damage in a first strike	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+archetype	Daughters of Khaine	aggro_tempo	classic 'glass cannon' army that'll either dominate or die	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+archetype	Maggotkin of Nurgle	fortress	Probably the toughest AoS army	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+archetype	Nighthaunt	fortress	Hard-hitting and tough to kill	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+archetype	Ogor Mawtribes	sustain	access to healing to keep your big lads alive	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide
+archetype	Beasts of Chaos	aggro_tempo	fast-moving brutes that gallop up to the enemy's frontline	https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide

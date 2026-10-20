@@ -1,19 +1,15 @@
-signature	Northern Realms	block_armor	armour absorbs damage	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
-signature	Monster	aoe_damage	weather hurts enemy side	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
-signature	Monster	sacrifice	consume / kill own units	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
-signature	Skellige	revive	resurrects from graveyard	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
-signature	Skellige	condition_life	self-wounding for bonuses	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
-signature	Nilfgaard	donate	disloyal units on opponent side	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
-signature	Nilfgaard	deck_position	Xarthisius views opponent deck top	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
-signature	Nilfgaard	tutor	Emissary/Rainfarn fetch deck cards	https://masters.playgwent.com/en/news/22010/the-evolution-of-gwents-factions
-signature	Syndicate	coin_economy	cards generate and spend coins	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
-signature	Scoiatael	tribal	dwarf and elf families	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
-archetype	Monster	swarm	swarm and devour	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
-archetype	Skellige	graveyard	resurrection, graveyard interaction	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
-archetype	Nilfgaard	control	locking, spying, counterplay	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
-archetype	Northern Realms	fortress	armour, boosted hard-to-remove units	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
-archetype	Scoiatael	control	Old Schirru control	https://masters.playgwent.com/en/news/22010/the-evolution-of-gwents-factions
-archetype	Scoiatael	spellslinger	special-heavy spell deck	https://masters.playgwent.com/en/news/22010/the-evolution-of-gwents-factions
-archetype	Monster	sacrifice	kill own units deck	https://www.redbull.com/gb-en/Witcher-3-gwent-guide-2018
-combo	Vattier de Rideaux	Mangonel	reveals trigger Mangonel damage	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
-combo	Letho	Fake Ciri	Letho absorbs and destroys Fake Ciri	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
+signature	Monster	sacrifice	Many of their cards have Consume effects	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+signature	Skellige	revive	Many decks revolve around reviving powerful fallen units	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+signature	Skellige	condition_life	many of their units hurt themselves or allies for bonuses	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+signature	Nilfgaard	donate	played to your opponent's side of the board	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
+signature	Nilfgaard	deck_position	see the next two cards at the top of their opponent's deck	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
+signature	Nilfgaard	tutor	to tutor for its core cards	https://masters.playgwent.com/en/news/22010/the-evolution-of-gwents-factions
+signature	Syndicate	coin_economy	Many of its cards generate coins, which can then be spent	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+archetype	Monster	swarm	Many of their cards have Consume effects	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+archetype	Skellige	graveyard	Another key aspect of Skellige is its graveyard interaction	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+archetype	Nilfgaard	control	including Locking units, spying on enemy hands	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+archetype	Scoiatael	control	This single card is what made Control Scoia'tael an oppressive archetype.	https://masters.playgwent.com/en/news/22010/the-evolution-of-gwents-factions
+archetype	Scoiatael	spellslinger	playing a special heavy strategy in R1-2	https://masters.playgwent.com/en/news/22010/the-evolution-of-gwents-factions
+archetype	Monster	sacrifice	Many of their cards have Consume effects	https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html
+combo	Vattier de Rideaux	Mangonel	removes two damage from a random non-gold opposing card	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3
+combo	Letho	Fake Ciri	Play it while Fake Ciri is still on your side	https://www.pcgamer.com/au/the-nilfgaard-faction-shows-gwent-has-a-life-after-the-witcher-3

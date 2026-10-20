@@ -1,33 +1,33 @@
-signature	Amber	heal	"protection and healing"	https://www.wargamer.com/disney-lorcana/colors
-signature	Amethyst	return_to_hand	"Recursion": cards return to hand	https://www.wargamer.com/disney-lorcana/colors
-signature	Amethyst	draw	"extra card draw"	https://www.wargamer.com/disney-lorcana/colors
-signature	Emerald	hand_disruption	"Forcing opponents to discard"	https://wiki.mushureport.com/wiki/Emerald
-signature	Emerald	bounce_enemy	"Returning cards in play to hand"	https://wiki.mushureport.com/wiki/Emerald
-signature	Emerald	immunity	Ward	https://wiki.mushureport.com/wiki/Emerald
-signature	Emerald	recycle	"recovering actions from the discard pile"	https://wiki.mushureport.com/wiki/Emerald
-signature	Emerald	cost_reduction	"Reducing action costs"	https://wiki.mushureport.com/wiki/Emerald
-signature	Ruby	haste	Rush	https://www.wargamer.com/disney-lorcana/colors
-signature	Ruby	destroy	"Banishing characters"	https://wiki.mushureport.com/wiki/Ruby
-signature	Ruby	drawback	Reckless, "typically a downside"	https://wiki.mushureport.com/wiki/Ruby
-signature	Ruby	untap	"Readying exerted characters"	https://wiki.mushureport.com/wiki/Ruby
-signature	Sapphire	resource_gain	"Ink ramp"	https://wiki.mushureport.com/wiki/Sapphire
-signature	Sapphire	points_scoring	"Lore increase"	https://wiki.mushureport.com/wiki/Sapphire
-signature	Sapphire	selection	"card filtering (filtering the top of the deck)"	https://wiki.mushureport.com/wiki/Sapphire
-signature	Steel	damage	"Direct damage to characters"	https://wiki.mushureport.com/wiki/Steel
-signature	Steel	taunt	Bodyguard	https://wiki.mushureport.com/wiki/Steel
-signature	Steel	attack_lock	"Challenge prevention"	https://wiki.mushureport.com/wiki/Steel
-signature	Steel	stat_gain	Challenger, "Strength increase"	https://wiki.mushureport.com/wiki/Steel
-archetype	Ruby	aggro_tempo	"Aggressive and direct ... Rush"	https://www.wargamer.com/disney-lorcana/colors
-archetype	Sapphire	ramp	"ramp and big combo cards"	https://www.wargamer.com/disney-lorcana/colors
-archetype	Steel	control	"Midrange and Control are the most popular archetypes"	https://www.wargamer.com/disney-lorcana/colors
-archetype	Steel	fortress	"Focuses on defense"	https://www.wargamer.com/disney-lorcana/colors
-archetype	Amber	sustain	"protection and healing"	https://www.wargamer.com/disney-lorcana/colors
-archetype	Emerald	disruption	"forcing opponents to discard"	https://www.wargamer.com/disney-lorcana/colors
-archetype	Amethyst	card_advantage	"extra card draw"	https://www.wargamer.com/disney-lorcana/colors
-combo	Merlin - Goat	Madam Mim - Fox	bounce Merlin for lore on leaving and entering play	https://www.wargamer.com/best-disney-lorcana-cards
-combo	Merlin - Goat	Arthur - Wizard's Apprentice	returning Merlin to hand repeats his lore	https://www.wargamer.com/best-disney-lorcana-cards
-combo	Merlin - Rabbit	Madam Mim - Snake	bounce Rabbit to draw on leave and on play	https://spellmana.com/amethyst-sapphire-deck-guide-lorcana/
-combo	Tipo - Growing Son	Madam Mim - Snake	quest, bounce, replay or ink	https://spellmana.com/amethyst-sapphire-deck-guide-lorcana/
-combo	Tinker Bell - Giant Fairy	Grab Your Sword	1 damage to all on play, then sing for 2 more to all	https://geekydomain.com/blogs/guides/competitive-amethyst-steel-bounce-guide
-combo	Tinker Bell - Giant Fairy	A Whole New World	exert the 6-cost to sing the 5-cost song for free	https://geekydomain.com/blogs/guides/competitive-amethyst-steel-bounce-guide
-combo	Captain Hook - Forceful Duelist	Mr. Smee - Bumbling Mate	a Captain keeps Smee from damaging himself	https://geekydomain.com/blogs/guides/competitive-amethyst-steel-bounce-guide
+signature	Amber	heal	Others provide protection and healing	https://www.wargamer.com/disney-lorcana/colors
+signature	Amethyst	return_to_hand	cards that bounce back to your hand	https://www.wargamer.com/disney-lorcana/colors
+signature	Amethyst	draw	offer extra card draw	https://www.wargamer.com/disney-lorcana/colors
+signature	Emerald	hand_disruption	Emerald glimmers can force the opponent to discard cards	https://wiki.mushureport.com/wiki/Emerald
+signature	Emerald	bounce_enemy	Emerald glimmers can return cards in play back to their players' hands	https://wiki.mushureport.com/wiki/Emerald
+signature	Emerald	immunity	Emerald glimmers have access to the Ward keyword	https://wiki.mushureport.com/wiki/Emerald
+signature	Emerald	recycle	Emerald glimmers can recover them from the discard pile	https://wiki.mushureport.com/wiki/Emerald
+signature	Emerald	cost_reduction	are able to reduce their cost with Genie - Powers Unleashed	https://wiki.mushureport.com/wiki/Emerald
+signature	Ruby	haste	abilities like 'Rush' that let cards challenge faster	https://www.wargamer.com/disney-lorcana/colors
+signature	Ruby	destroy	Ruby glimmers have the ability to banish opposing characters.	https://wiki.mushureport.com/wiki/Ruby
+signature	Ruby	drawback	this is typically a downside	https://wiki.mushureport.com/wiki/Ruby
+signature	Ruby	untap	Ruby glimmers can ready their exerted characters	https://wiki.mushureport.com/wiki/Ruby
+signature	Sapphire	resource_gain	Sapphire glimmers can put more cards into their inkwell	https://wiki.mushureport.com/wiki/Sapphire
+signature	Sapphire	points_scoring	Sapphire glimmers can increase their own lore	https://wiki.mushureport.com/wiki/Sapphire
+signature	Sapphire	selection	Sapphire glimmers can filter the top cards of their deck	https://wiki.mushureport.com/wiki/Sapphire
+signature	Steel	damage	Steel glimmers are able to damage opposing characters directly	https://wiki.mushureport.com/wiki/Steel
+signature	Steel	taunt	Steel glimmers have access to the Bodyguard keyword	https://wiki.mushureport.com/wiki/Steel
+signature	Steel	attack_lock	Steel glimmers can prevent the opponents from challenging	https://wiki.mushureport.com/wiki/Steel
+signature	Steel	stat_gain	Steel glimmers can increase the strength of characters	https://wiki.mushureport.com/wiki/Steel
+archetype	Ruby	aggro_tempo	Despite its clearly aggressive tactics	https://www.wargamer.com/disney-lorcana/colors
+archetype	Sapphire	ramp	ramp and big combo cards	https://www.wargamer.com/disney-lorcana/colors
+archetype	Steel	control	Midrange and Control are the most popular archetypes	https://www.wargamer.com/disney-lorcana/colors
+archetype	Steel	fortress	fans of defense and direct damage	https://www.wargamer.com/disney-lorcana/colors
+archetype	Amber	sustain	Others provide protection and healing	https://www.wargamer.com/disney-lorcana/colors
+archetype	Emerald	disruption	force opponents to discard	https://www.wargamer.com/disney-lorcana/colors
+archetype	Amethyst	card_advantage	offer extra card draw	https://www.wargamer.com/disney-lorcana/colors
+combo	Merlin - Goat	Madam Mim - Fox	Madam Mim, Fox are perfect for returning cards to your hand	https://www.wargamer.com/best-disney-lorcana-cards
+combo	Merlin - Goat	Arthur - Wizard's Apprentice	Arthur, Wizard's Apprentice and Madam Mim, Fox are perfect for returning cards	https://www.wargamer.com/best-disney-lorcana-cards
+combo	Merlin - Rabbit	Madam Mim - Snake	The bounce cards can synergize with multiple cards like	https://spellmana.com/amethyst-sapphire-deck-guide-lorcana/
+combo	Tipo - Growing Son	Madam Mim - Snake	bounce them back through Madam Mim	https://spellmana.com/amethyst-sapphire-deck-guide-lorcana/
+combo	Tinker Bell - Giant Fairy	Grab Your Sword	exert her ... to sing Grab Your Sword for free	https://geekydomain.com/blogs/guides/competitive-amethyst-steel-bounce-guide
+combo	Tinker Bell - Giant Fairy	A Whole New World	Tinker Bell - Giant Fairy herself qualifies at 6 ink	https://geekydomain.com/blogs/guides/competitive-amethyst-steel-bounce-guide
+combo	Captain Hook - Forceful Duelist	Mr. Smee - Bumbling Mate	Captain Hook keeps Mr. Smee alive	https://geekydomain.com/blogs/guides/competitive-amethyst-steel-bounce-guide

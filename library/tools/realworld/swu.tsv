@@ -1,20 +1,20 @@
-signature	Vigilance	taunt	Sentinel keyword (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Vigilance	heal	"healing units and bases", Restore (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Vigilance	destroy	"defeating enemy units" (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Command	resource_gain	"resource acceleration" (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Command	condition_count	"rewards for having many units" (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Command	stat_gain	"temporary stat buffs" (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Aggression	direct_damage	"direct damage to units and bases" (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Aggression	excess_damage	Overwhelm (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Aggression	untap	"readying units" (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Aggression	draw	"card draw" (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Cunning	attack_now	Ambush keyword (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Cunning	disable	"exhausting units" (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Cunning	bounce_enemy	"returning units to hand" (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-signature	Cunning	immunity	Hidden keyword (primary)	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-archetype	Command	swarm	"playing lots of units"	https://starwarsunlimited.com/articles/command
-archetype	Command	ramp	"resource acceleration"	https://starwarsunlimited.com/articles/command
-archetype	Aggression	aggro_tempo	"attack bonuses and offensive keywords"	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
-archetype	Aggression	burn	"damage, damage, damage"	https://starwarsunlimited.com/articles/aggression
-archetype	Vigilance	fortress	"Defensive units with strong HP"	https://cardgamer.com/games/star-wars/aspects-in-star-wars-unlimited/
-archetype	Cunning	disruption	"Control and manipulation of opponent's units"	https://cardgamer.com/games/star-wars/aspects-in-star-wars-unlimited/
+signature	Vigilance	taunt	Sentinel keyword	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Vigilance	heal	Healing bases and the Restore keyword	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Vigilance	destroy	Defeating enemy units and reducing their power/HP	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Command	resource_gain	exclusive access to proactive resource acceleration	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Command	condition_count	Rewards for having many units	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Command	temporary_buff	Temporary stat buffs and payoffs for having large units	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Aggression	direct_damage	Direct damage to enemy units and bases	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Aggression	excess_damage	offensive unit keywords such as Overwhelm, Raid, and Saboteur	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Aggression	untap	Readying units	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Aggression	draw	Card draw	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Cunning	attack_now	Ambush keyword	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Cunning	disable	Exhausting units	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Cunning	bounce_enemy	Returning units to their owner's hand	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+signature	Cunning	immunity	Hidden keyword	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+archetype	Command	swarm	playing lots of units	https://starwarsunlimited.com/articles/command
+archetype	Command	ramp	resource acceleration	https://starwarsunlimited.com/articles/command
+archetype	Aggression	aggro_tempo	Attack bonuses and offensive unit keywords	https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie
+archetype	Aggression	burn	is about damage, damage, damage	https://starwarsunlimited.com/articles/aggression
+archetype	Vigilance	fortress	guard-type Units that have strong HP	https://cardgamer.com/games/star-wars/aspects-in-star-wars-unlimited/
+archetype	Cunning	disruption	Control and manipulation of your opponent's Units features heavily	https://cardgamer.com/games/star-wars/aspects-in-star-wars-unlimited/

@@ -1,15 +1,15 @@
-signature	Green	taunt	big minions and taunts	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Green	stat_gain	buffs and growth theme	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Blue	transform	creature transformation theme	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Blue	movement	mobility and moving lands	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Red	direct_damage	burn to the orb	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-signature	Red	ranged	ranged effects	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Yellow	haste	rush and haste	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Yellow	resource_gain	cards generate faeria	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Yellow	movement	movement tricks	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Yellow	aggro_tempo	Yellow Rush	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Red	burn	Red Yellow Burn	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Green	sacrifice	Green Yellow Sacrifice	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Blue	spellslinger	Blue Yellow events	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Yellow	control	Yellow Control removal plus movement	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-splash	Yellow	sacrifice	sacrifice theme besides Green	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Green	taunt	Green is big minions, taunts, and a lot of buffs.	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Green	stat_gain	Motif is obviously growth	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Blue	transform	there is a motif of creature transformation	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Blue	movement	land moving shenanigans	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Red	direct_damage	Burn decks use direct damage to the orb to win the match.	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+signature	Red	ranged	some interesting ranged creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Yellow	haste	Yellow is most known for it's rush	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Yellow	resource_gain	Cards give you mana	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Yellow	movement	The movement tricks can be used to change the positioning	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Yellow	aggro_tempo	This variant of Yellow Rush constantly attacks the orb	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Red	burn	This Red Yellow Burn deck uses a midrange strategy.	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Green	sacrifice	Sacrifice decks are almost always green and yellow.	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Blue	spellslinger	Blue yellow events is less all in on combos.	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Yellow	control	using both damage based and hard removal to clear any threats	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+splash	Yellow	sacrifice	strong motif of sacrifice (HP or creatures)	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292

@@ -1,17 +1,16 @@
-signature	Prime	forced_movement	most Prime weapons push (Titan Fist, Vice Fist)	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Prime	multi_target_attack	Burst Beam hits a whole line	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	forced_movement	Attraction Pulse and Grav Well pull	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	swap	Swap weapon	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	shield	Shield Projector and Shield Array	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	disable	Frost Beam freezes	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Ranged	ranged	artillery weapons	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Brute	movement	Grappling Hook and charge engines	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Brute	friendly_fire	Ramming Engines damage the mech itself	https://www.giantbomb.com/profile/majormitch/blog/thoughts-on-into-the-breachs-squads/116986/
-archetype	Science	positional	pull, swap and push reposition Vek	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-archetype	Science	fortress	shield weapons protect buildings	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-splash	Brute	forced_movement	Taurus Cannon and Janus Cannon push	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-splash	Brute	shield	Phase Cannon shields buildings	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-splash	Science	damage_over_time	Fire Beam burns	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-splash	Prime	damage_over_time	Flame Thrower burns	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-combo	Electric Whip	Grappling Hook	hook and rocks build chains for lightning	https://www.gameskinny.com/i7374/into-the-breach-squads-guide
-combo	Vice Fist	Grav Well	Gravity pulls, Judo pushes follow-up	https://www.pocketgamer.com/into-the-breach/best-squads
+signature	Prime	forced_movement	Punch an adjacent tile, damaging and pushing it.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Prime	multi_target_attack	Fire a piercing beam that decreases in damage	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Science	forced_movement	Pull target towards you 1 tile.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Science	swap	Swap places with a nearby tile.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Science	shield	Shield tiles from damage.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Science	disable	Fire a beam that Freezes everything in a line.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Ranged	ranged	Powerful artillery strike, damaging a single tile	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Brute	movement	Fly in a line and slam into the target	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Brute	friendly_fire	hurts itself without a good way to heal	https://www.giantbomb.com/profile/majormitch/blog/thoughts-on-into-the-breachs-squads/116986/
+archetype	Science	positional	Swap places with a nearby tile.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+archetype	Science	fortress	Shield adjacent ally or Building.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+splash	Brute	forced_movement	Fires a powerful projectile that damages and pushes its target.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+splash	Brute	shield	Applies a Shield to buildings it passes through.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+splash	Science	damage_over_time	Fire a beam that applies Fire in a line.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+splash	Prime	damage_over_time	Push target tile and light tiles on Fire.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+combo	Electric Whip	Grappling Hook	use thrown rocks and the hook tank to create chains for your lightning attacks	https://www.gameskinny.com/i7374/into-the-breach-squads-guide

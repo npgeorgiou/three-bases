@@ -1,17 +1,11 @@
-signature	Forestcraft	combo_sequence	many cards per turn	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-signature	Swordcraft	tribal	Officers and Commanders	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-signature	Runecraft	in_hand_buff	Spellboost	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-signature	Dragoncraft	resource_gain	extra PP and Overflow	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-signature	Shadowcraft	death_trigger	Last Words	https://shadowversecb.com/cards-classes
-signature	Bloodcraft	life_payment	risks own life	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-signature	Havencraft	delayed	Countdown amulets	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-signature	Portalcraft	deck_condition	Resonance even deck	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-signature	Forestcraft	return_to_hand	returns own cards to hand	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-signature	Swordcraft	haste	Storm and Rush	https://shadowversecb.com/cards-classes
-archetype	Forestcraft	swarm	many small Fairies	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-archetype	Runecraft	spellslinger	Spellboost decks	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-archetype	Dragoncraft	ramp	extra PP for big dragons	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-archetype	Shadowcraft	graveyard	Burial Rite and Reanimate	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-archetype	Swordcraft	tribal	Officer and Commander	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
-combo	Witching Moggy	Chrono Witch	Spellboost synergy	https://shadowversecb.com/cards-classes
-combo	Cursed Maiden	God of Curses	countdown and resurrection	https://shadowversecb.com/cards-classes
+signature	Forestcraft	combo_sequence	Forestcraft is all about playing lots of cards at once.	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
+signature	Runecraft	in_hand_buff	Spellboost is the central goal of Runecraft.	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
+signature	Dragoncraft	resource_gain	their main mechanic is called Overflow	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
+signature	Bloodcraft	life_payment	Many of your cards will hurt your own life total	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
+signature	Havencraft	delayed	Most amulets they play have Countdown	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
+signature	Portalcraft	deck_condition	only activates when you have an even number of cards in deck	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
+signature	Forestcraft	return_to_hand	the best at returning your own cards to hand	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
+archetype	Forestcraft	swarm	very good at making lots of little followers, especially Fairies	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
+archetype	Runecraft	spellslinger	By playing a spell, you spellboost the other cards	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
+archetype	Dragoncraft	ramp	many of Dragoncraft's cards cause you to gain play points	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/
+archetype	Shadowcraft	graveyard	the best at Reanimating dead followers you destroyed using Burial Rite	https://upcomer.com/shadowverse-starter-guide-card-basics-classes-how-to-build-a-deck/

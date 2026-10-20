@@ -1,7 +1,3 @@
-signature	Undead	death_trigger	Walkers/Obols give bones on death	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
-signature	Undead	summon	Skeletons and Ghost Ship spawn skeletons	https://steamcommunity.com/app/1092790/discussions/0/3123802224156217321
-signature	Beast	fodder	squirrels and cat as fodder	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
-archetype	Undead	sacrifice	bone deck	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
-archetype	Beast	swarm	squirrel fodder decks	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
-combo	Necromancer	Walker	sacrifice to Walker for bones	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
-combo	Necromancer	Obol	sacrifice to Obol for bones	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
+signature	Undead	death_trigger	broken obols (ones that give extra bone on perish)	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
+archetype	Undead	sacrifice	Bone deck is a good one to start with	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
+combo	Necromancer	Obol	Necromancers force any card to die twice.	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930

@@ -1,16 +1,16 @@
-signature	Noxus	excess_damage	Overwhelm	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-signature	Shadow Isles	death_trigger	Last Breath	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-signature	Demacia	forced_attack	Challenger	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-signature	Freljord	stat_loss	Frostbite	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-signature	Piltover & Zaun	evasion	Elusive	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-signature	Ionia	evasion	Elusive	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-signature	Noxus	evasion	Fearsome	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-signature	Shadow Isles	evasion	Fearsome	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-signature	Demacia	attack_now	Rally	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-signature	Freljord	excess_damage	Overwhelm	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-archetype	Noxus	aggro_tempo	offense-first All-Out Assault	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-archetype	Shadow Isles	sacrifice	sacrifices units	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-archetype	Freljord	disruption	freezes opponents	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-archetype	Ionia	aggro_tempo	evades defenses	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-archetype	Shadow Isles	swarm	swarms the board with low-level units	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
-combo	Ashe	Rimetusk Shaman	Frostbite each round	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
+signature	Noxus	excess_damage	Overwhelm, Fearsome, Stun	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+signature	Shadow Isles	death_trigger	Ephemeral, Last Breath, Fearsome	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+signature	Demacia	forced_attack	Challenger, Scout, Rally	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+signature	Freljord	attack_zero	Frostbite, Overwhelm, Challenger	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
+signature	Piltover & Zaun	evasion	Elusive, Fast, Quick Attack	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+signature	Ionia	evasion	Elusive, Quick Attack, Recall	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+signature	Noxus	evasion	Overwhelm, Fearsome, Stun	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+signature	Shadow Isles	evasion	Ephemeral, Last Breath, Fearsome	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+signature	Demacia	attack_now	Challenger, Scout, Rally	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+signature	Freljord	excess_damage	Frostbite, Overwhelm, Challenger	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+archetype	Noxus	aggro_tempo	relies on dealing tons of damage than defending	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+archetype	Shadow Isles	sacrifice	works off of sacrificing units and swarming the board	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+archetype	Freljord	disruption	will freeze your opponents for a quick victory	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+archetype	Ionia	aggro_tempo	experts in breaking and evading the best defenses	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+archetype	Shadow Isles	swarm	swarming the board with low-level characters	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know
+combo	Ashe	Rimetusk Shaman	With Ashe and Rimetusk Shaman providing Frostbite every round	https://www.oneesports.gg/lol/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know

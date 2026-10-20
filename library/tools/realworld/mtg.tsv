@@ -1,28 +1,28 @@
-signature	Red	direct_damage	primary direct damage	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-signature	White	first_strike	primary first and double strike	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-signature	Blue	counter_spell	primary counterspells	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-signature	Black	destroy	primary destroying creatures	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-signature	Green	stat_gain	primary +1/+1 counters	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-signature	Red	haste	primary haste	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-signature	White	lifesteal	primary lifelink	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-signature	Blue	draw	primary card draw	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-signature	Black	deathtouch	primary deathtouch	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-signature	Green	excess_damage	primary trample	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-archetype	Red	burn	direct damage	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-archetype	Blue	control	counterspells and bounce	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-archetype	Black	graveyard	reanimation	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-archetype	Green	ramp	permanent mana and putting lands/creatures into play	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-archetype	White	swarm	token generation and team pumps	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-archetype	Black	sacrifice	forced sacrifice and rewards for death	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-combo	Splinter Twin	Pestermite	infinite hasty copies	https://edhrec.com/combos/ur/2905-4702
-combo	Kiki-Jiki, Mirror Breaker	Restoration Angel	infinite hasty copies	https://blog.cardkingdom.com/?p=10964
-combo	Saheeli Rai	Felidar Guardian	infinite copies	https://blog.cardkingdom.com/?p=10964
-combo	Inverter of Truth	Thassa's Oracle	win with empty library	https://blog.cardkingdom.com/?p=10964
-splash	White	draw	tertiary card draw	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-splash	Red	draw	tertiary card draw	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-splash	Blue	summon	secondary token generation	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-splash	Black	summon	secondary token generation	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-splash	Green	deathtouch	secondary deathtouch	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-splash	White	counter_spell	tertiary counterspells	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-splash	Red	revive	secondary reanimation	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-splash	Black	heal	secondary life gain	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+signature	Red	direct_damage	Red is king of direct damage	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+signature	White	first_strike	White and red are also the primary colors for first strike.	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+signature	Blue	counter_spell	Primary: Blue Tertiary: White	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+signature	Black	destroy	Black is king of creature destruction	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+signature	Green	stat_gain	white and green are best overall at doing it	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+signature	Red	haste	Haste shows up most often on red creatures.	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+signature	White	lifesteal	Primary: White and black	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+signature	Blue	draw	Blue is best at card drawing.	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+signature	Black	deathtouch	Primary: Black Secondary: Green	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+signature	Green	excess_damage	Green is the main trample color	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+archetype	Red	burn	Red is king of direct damage	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+archetype	Blue	control	Blue can bounce any type of permanent	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+archetype	Black	graveyard	Black is the best at bringing the dead back to life.	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+archetype	Green	ramp	Play extra lands/Put a land from hand onto the battlefield	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+archetype	White	swarm	White is the color most likely to pump its team	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+archetype	Black	sacrifice	Black is the color that most triggers off of other things dying	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+combo	Splinter Twin	Pestermite	Infinite creature tokens with haste.	https://edhrec.com/combos/ur/2905-4702
+combo	Kiki-Jiki, Mirror Breaker	Restoration Angel	a true 2-card combo ... Infinite creature tokens with haste	https://edhrec.com/combos/boros/618-1090
+combo	Saheeli Rai	Felidar Guardian	Infinite creature tokens with haste.	https://edhrec.com/combos/jeskai/142-2781
+combo	Inverter of Truth	Thassa's Oracle	Inverter of Truth, Thassa's Oracle ... Win the game.	https://commanderspellbook.com/combo/1295-2503-2726
+splash	White	draw	Tertiary: White and red	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+splash	Red	draw	Tertiary: White and red	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+splash	Blue	summon	Secondary: Blue, black, and red	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+splash	Black	summon	Secondary: Blue, black, and red	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+splash	Green	deathtouch	Primary: Black Secondary: Green	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+splash	White	counter_spell	Primary: Blue Tertiary: White	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+splash	Red	revive	Secondary: Red and green	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+splash	Black	heal	Primary: White and green Secondary: Black	https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
