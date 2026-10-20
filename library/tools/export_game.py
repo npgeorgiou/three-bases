@@ -12,12 +12,13 @@ game = dict(zip(['id', 'name', 'family', 'edition', 'source', 'structure', 'note
 data = {}
 for e, k, r, ev in q("SELECT ec.entity, ec.concept, ec.role, ec.evidence FROM entity_concepts ec JOIN entities x ON x.id=ec.entity WHERE x.game=? AND ec.method='data_rule'", G):
     data.setdefault(e, []).append([k, r, ev])
-cols = ['id', 'ext_id', 'name', 'category', 'source_type', 'edition', 'faction', 'subtypes', 'rarity', 'cost', 'cost_num', 'stats', 'text', 'extra']
+cols = ['id', 'ext_id', 'name', 'category', 'source_type', 'edition', 'faction', 'subtypes', 'rarity', 'cost', 'cost_num', 'stats', 'text', 'extra', 'variants']
 kw_cards, cards = [], []
 for row in q(f"SELECT {','.join(cols)} FROM entities WHERE game=? ORDER BY id", G):
     e = dict(zip(cols, row)); i = e['id']
     e['subtypes'] = json.loads(e['subtypes']) if e['subtypes'] else None
     e['extra'] = json.loads(e['extra']) if e['extra'] else None
+    e['variants'] = json.loads(e['variants']) if e['variants'] else None
     if e['edition'] == 'non-collectible':   # load_cards moves a created card's set back into edition
         e['created'] = True; ex = dict(e['extra'] or {}); e['edition'] = ex.pop('set', None); e['extra'] = ex or None
     if i in data: e['tags'] = data[i]

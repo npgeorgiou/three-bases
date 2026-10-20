@@ -1,81 +1,43 @@
-# Library: state and next steps (20 Oct 2026)
+# Library: state and next steps (20 Oct 2026, evening)
 
-Later on 20 Oct 2026: D&D 5e was removed (`tools/fixes/f16_drop_dnd.py`), and the database is stored without its search and
-full-text indexes (`tools/indexes.py`; the build creates them first and drops them last). The file went from 86.2 MB to 63.1 MB.
-The numbers below are after the removal.
-
-Later still on 20 Oct 2026: Disney Lorcana, Stormbound, Star Wars: Unlimited, The Elder Scrolls: Legends and Monster Train
-were added; loading is insert-only (`add_games.py`, two minutes, the build stops if an existing row changes). Prominence: one rule
-(1.5x the rest of the game and not chance), no "top 2", archetypes as recipes; learned recipe weights over-fit and are not used
-(`learn_recipes.py`, README suggestion 5). Real-world test **242 of 405**, every case in `REALWORLD_REPORT.md`
-(`tools/realworld_report.py`). Next: the README suggestions, cheapest first; agreed before them: collect more cases (step 1
-below) and audit the existing ones (step 2).
+Kaptain asked for README suggestions 1, 2, 3, 4, 5, 6, 7 and 9, then a new real-world test. Done in this chat: 2, 3, 4.
+Open: 1, 5, 6, 7, 9 (below, in that order of cost). The database file was not changed in this chat.
 
 Rules for the next chat: **no readers, judges or agents** without Kaptain's OK and a measured cost. Scripts and builds first.
-Commit and push after each step. Read `ADDING_GAMES.md` sections 4b and 4c before writing any pattern.
+Commit and push after each step. Read `ADDING_GAMES.md` sections 4b and 4c before writing any pattern. **The library itself is
+never changed to fit a case**: when a source writes a card's name differently, change the name in the case file to the library's.
 
-## Where it stands
-The tag-fix plan is finished and its build is the library (`tools/final/report.md`). On the answer key every game has about half the
-wrong tags and fewer missed tags than the original (c7a77a4). But the real test, the 300 real-world cases from wikis and guides
-(`tools/realworld/<game>.tsv`), is met only **150 of 300 (50%)**; before the removal of D&D it was 162 of 322, almost the same as the original (161). The tag fix improved
-agreement with the key, not the library's use for real decks and combos. That is the next goal: **raise the real-world rate.**
-
-## Why the 150 misses miss
-Run `python3 library/tools/realworld_why.py library/three-bases-library.sqlite` (it prints every missed case with its reason):
-
-| cases | type | reason | what fixes it |
-|---|---|---|---|
-| 53 | archetype | the faction is not above the game average for that archetype | the archetype model (below) |
-| 35 | signature | the faction's cards use the concept, but not more than other factions | the signature model (below) |
-| 15 | signature | only 1-4 of the faction's cards have the concept | tagging |
-| 10 | signature | no card of the faction has the concept | tagging (or the case names the wrong concept) |
-| 15 | combo | a card name is not in the library | missing cards or name forms |
-| 12 | combo | both cards are there, no connection | tagging or the connection search |
-| 10 | splash | missing from the faction's splash list | the signature model |
-
-So only about 37 misses (15 + 10 + 12) are tagging. About 98 come from **how signatures and archetypes are measured**, and 15
-from **missing cards**.
-
-What is measured now (`tools/signature.py`):
-- A faction's **signature** is a concept on 5+ of its cards, 6%+ of them, with lift 1.8+ over the game's other factions.
-- An **archetype** counts when the share of the faction's cards with any of the archetype's concepts (`archetypes` table, for
-  example swarm = summon, board_presence, fodder, aura, on_ally_play) has lift 1.25+ over the game average.
-
-Tested on 20 Oct 2026: ranking a faction's archetypes and taking its top 3, 4 or 5 instead does **not** help (top 5: 50 of 99,
-against 49 now). The thresholds are not the problem. **The share of all cards is not what makes a faction "a swarm deck".** Real
-archetypes are decided by the cards decks actually play and by a few key mechanics, not by how common a broad concept is.
+## Done
+- **Step log (suggestion 3):** `tools/step_log.py` runs after every step of `build.sh`; drops go to `<out>.steps.tsv`, warnings
+  to the build output. A full rebuild without loads (scratch only) gave many warnings; most are steps meant to remove (parent_rule,
+  pattern_fix, key_wins). Not yet read one by one: Lorcana delayed 154 -> 0 and Duelyst evasion 30 -> 0 at game_patterns,
+  Shadowverse cast_from_zone 44 -> 0 at link_types, Gwent passive 42 -> 0 at pattern_fix. Check these first.
+- **Reload (suggestion 2):** `tools/reload_game.sh <scratch> <game> [...]` writes `<scratch>/reloaded.sqlite`. Entries keep their
+  ids, so reviews, key, regression and revert lists apply. `drop_untagged.py` now keeps entries that regression.tsv gives a tag
+  (they were dropped before the review step could tag them). Into the Breach test: regression 21282/21282, real-world unchanged,
+  key wrong tags 74 -> 130 per 100 entries (today's patterns; mostly a general "tile" match tagged terrain). So a reload is kept
+  only after the game's patterns are fixed and the key is not worse than the current library.
+- **Case audit (suggestion 4):** every case checked against its source (built-in browser for pages WebFetch cannot read); `why`
+  holds the source's words. 405 -> 362 cases; **real-world test 217 of 362** on the current library (was 242 of 405).
 
 ## Next steps, in order
-1. **Collect more real-world cases (Kaptain's direction).**
-   - Target: 50+ per game (about 950), in the same format, each with a source URL: signatures, archetypes, combos and splashes.
-   - Also collect **the key cards each source names for an archetype**, as a new case type:
-     `archetype_card <faction> <archetype> <card>`.
-   - Card names exactly as the library stores them (check with `query.py`).
-   - Split every game's cases 50/50 with seed 1. Build rules from one half; use the other half only to test, and report the test
-     half only, or the rate will be fitted to the cases.
-   - Research with web search in the main chat. Measure the tokens of one game first and show Kaptain before doing the rest.
-2. **Check the existing 300 against their sources.** A Claude wrote them, and some may name the wrong concept (for example Duelyst
-   Songhai "stealth": 0 of 98 cards). Fix or drop cases the source does not support.
-3. **Missing cards (15 combos).** Find why each name is missing (another name form, a merged entry, a card never loaded) with
-   `query.py`. Add aliases, or load the cards from a reachable source.
-4. **Rebuild the archetype and signature model from the cases.** This is the biggest lever (about 98 misses).
-   - From the build half, learn which concepts and which key cards separate the factions sources call "swarm", "control", and so on.
-   - Use that instead of the hand-made concept bundles. For example: an archetype counts when the faction has enough cards with
-     the archetype's *distinctive* concepts, weighted by how often those cards are its named key cards.
-   - Decide the rule on the build half; report the test half.
-5. **Tagging from the cases.** For every missed signature with 0-4 cards and every unconnected combo:
-   - find the faction's cards that do it;
-   - scan their wording in every game (ADDING_GAMES.md 4b) and write per-game patterns;
-   - read 20 matches per pattern, then rebuild.
-   Example: Gwent Skellige "revive" has 0 of 181 cards tagged.
-6. **After each step**: build, all checks, `realworld.py -v`, `realworld_why.py`, and `final_compare.py ... check` against the
-   original. No game may get worse on the key.
-
-## Also open
-- Payoff tags (`benefits`) count as wrong in `final_compare.py`, because the key reads only what a card does. Decide whether the
-  scorers skip them.
-- `tools/lost_pairs.py <old> <new>`: look at the trigger pairs that are truly lost (not replaced by a narrower one).
-- Step 5 of the plan (reading what rules cannot decide) needs Kaptain's choice first.
+1. **Combos (suggestion 7, scripts only).** `realworld_why.py` lists 11 pairs with both cards and no connection: Unleash the
+   Hounds / Stormwind Champion, Injured Blademaster / Circle of Healing, Force of Nature / Savage Roar, Defias Ringleader / The
+   Coin, Electric Whip / Grappling Hook, Tinker Bell - Giant Fairy / Grab Your Sword and / A Whole New World, Inverter of Truth /
+   Thassa's Oracle, All for One / Claw, Parry / Sword Sage, Impulsor / Sternguard Veteran Squad (Impulsor is missing). For each,
+   print both cards' text and tags, find the missing tag or link, fix the pattern generically (every card with the same wording).
+   Cards the library lacks: Inner Fire, Cobalt Guardian, Obol, Wong, Pestermite, Star Battery, Impulsor; check whether the source
+   data of that game has them before loading anything.
+2. **Tribal (suggestion 6).** A rule in a build step: a card whose text names a type of its game gets `tribal` (benefits), with a
+   per-game stop list (Star Wars Unlimited traits like Force or Plan). Measure Hearthstone and Lorcana before and after.
+3. **Mechanics check (suggestion 1), one game at a time:** 2-4 guide pages -> `tools/mechanics/<game>.txt` -> `coverage.py <db>
+   <game> 40 --mechanics ...` -> patterns -> `reload_game.sh` -> keep only if key (`final_compare.py`), regression and real-world
+   are not worse. Start with Into the Breach (its weapon list, class by class, is on intothebreach.fandom.com/wiki/Weapons).
+4. **Missing data (suggestion 9).** The built-in browser reaches stormboundkingdomwars.fandom.com and en.uesp.net. Legends sets
+   after Houses of Morrowind and Stormbound cards after Feb 2022: read the card tables there, write a converter, load insert-only.
+5. **More cases, then recipes (suggestion 5).** About 50 cases per game with source words, split 50/50 seed 1; then
+   `learn_recipes.py` and report the test half only. Measure the tokens of one game first and show Kaptain.
+6. After each step: build, all checks, `realworld.py -v`, `realworld_why.py`, `final_compare.py ... check`.
 
 ## Commands
 - Build: `sh library/tools/build.sh library/three-bases-library.sqlite <scratch>/new.sqlite`
@@ -85,3 +47,4 @@ archetypes are decided by the cards decks actually play and by a few key mechani
 - Combos: `python3 library/tools/combo_check.py <db> -v`
 - Before a final run: delete `tools/final/revert.tsv` and `revert_base.tsv`, then alternate `final_compare.py ... revert` and a
   rebuild until no game is worse. Never run two builds at once.
+- Reload a game: `sh library/tools/reload_game.sh <scratch> <game>`; build drops: `<out>.steps.tsv`

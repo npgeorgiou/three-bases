@@ -93,6 +93,7 @@ The build is incremental: `three-bases-library.sqlite` is the base for all work.
   - the hand reviews (`tools/reviews/<game>.json`; a decision also reaches entries of the same category with the very same text), then `regression.py <db> make` and `regression.py <db> enforce`;
   - the keyword reviews against the outcome tree (`tools/reviews_outcome/<game>.json`).
 - **Tag audit** (12 Oct 2026): `tools/audit/audit.py` (sample, show, trial, confirm, blind, score); per game the errors found in the 150 work entries and the blind checker's judgments of the 50 held-out entries (the samples, snapshots and blind files were removed after scoring). A newer review decision replaces an older opposite one; a reviewed keyword passes added concepts only to entries that have the keyword, not to those that only mention it.
+- **Build log and reloads:** every build writes `<out>.steps.tsv` (what each step removed, `step_log.py`); `tools/reload_game.sh <scratch> <game>` reloads a game with today's patterns, keeping its ids.
 - **Add cards:** a converter in `tools/convert/` turns a source file into the load format (described in `tools/load_cards.py`). Then run `tools/build.sh <in.sqlite> <out.sqlite> <game>=<cards.json> ...`. New cards get the same tagging as the rest of their game; older entries stay as they were, apart from merges and links to the new cards.
 - **How entries are tagged:** an entry gets the general wording patterns (all games) once, when it is loaded; the game's own patterns, keyword inheritance, outcome concepts, link rules and trigger pairs are re-derived on every build. Text is read lower-cased with the entry's own name as "name"; Magic without reminder text. Entries that no pattern or keyword reaches are dropped.
 - **One-time fixes** of 12 Oct 2026 are in `tools/fixes/` (f01 Magic cut, f02 Scryfall data, f04 text clean-up, f06 leftovers, f08 weak patterns, f09 whole-entry patterns, f10 Magic non-token cards, f11 icon words in Slay the Spire text and stat lines for units without them, f12 review tags that older builds copied across categories, f13 the 19 keywords no card used, f14 the one untagged entry with no mechanic, f16 the removal of D&D 5e; the other 51 untagged entries were read and tagged in the reviews); f03 (granted keywords are not "does"), f05 (faction names and table) and f07 (keyword links, concept tree) are also build steps.
@@ -127,30 +128,29 @@ Sources of the later loads (converter in brackets):
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Suggestions for improving the library
-Claude's suggestions (20 Oct 2026), from the real-world test (`REALWORLD_REPORT.md`, 242 of 405) and the checks of the day. Cheapest first.
-1. **Run the mechanics check on the 19 older games.** For each: 2-4 guide pages into `tools/mechanics/<game>.txt`, then
-   `coverage.py --mechanics`. On the four new games every GAP line was a real bug that also hits older games (a step wiping
-   game-specific tags, granted keywords passing nothing on, empty texts treated as one text). Scripts only, a few k tokens per game.
-2. **Make older games reloadable.** Reloading a game (drop_game.py + insert-only add, two minutes) re-tags it with today's
-   patterns and fixes, but the hand reviews and `regression.tsv` name entries by id, and a reload gives new ids. Keying reviews
-   by game + name + category instead would let every game be reloaded and re-checked one at a time, never the whole library.
-3. **Log what each build step removes.** Count every game's pattern tags before and after each step; a step that removes many of
-   one game's tags is a bug like the outcome-tree one (it wiped all of Lorcana's "can't challenge" tags). Cheap, catches the
-   whole class.
-4. **Audit the cases (agreed).** 35 signature misses say the faction does not use the concept 1.5x more than the rest of its
-   game. Many name a broad concept (draw, stat_gain) where the source means a narrower mechanic. Every case should name the
-   narrowest concept its source supports, with the source's words; cases the source does not support go.
-5. **More cases, then learn the archetype recipes.** Learned recipe weights over-fit: 46 of 58 on the cases they learned from,
-   19 of 68 on the others, against 39 of 68 with the fixed concepts. With ~50 cases per game (agreed step 1 of HANDOFF),
-   `learn_recipes.py` can be tried again.
-6. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
-   "a card that names a type of its game cares about that type" needs only a short stop list per game (Star Wars Unlimited
-   traits such as Force or Plan are also common words).
-7. **Combos (29 misses).** 15 cards are missing under the name the source uses: add the source names as `variants`. 14 pairs
-   have no connection: with granted keywords now passed on, the connection search can follow them.
-8. **Answer keys for the new games.** Lorcana, Stormbound, Star Wars Unlimited, Legends and Monster Train have no key, so their
-   wrong-tag rate is unmeasured. The bulk reader (ADDING_GAMES.md) makes one in about 10 requests for all five.
-9. **Missing data, reachable through Kaptain's Chrome.** Legends sets after Houses of Morrowind (UESP), Stormbound cards after
-   February 2022 (fandom wiki), keyword glossaries for Legends and Monster Train (now Claude summaries or none).
-10. **Warhammer (15 of 59 cases).** Its army rules are long prose; per army, the mechanics check of suggestion 1 shows what the
-   patterns miss.
+Claude's suggestions (20 Oct 2026), from the real-world test and the checks of that day, with their state. Next steps: HANDOFF.md.
+1. **Mechanics check on the 19 older games** (open). For each: 2-4 guide pages into `tools/mechanics/<game>.txt`, then
+   `coverage.py --mechanics`; fix the gaps in `tools/patterns/<game>.txt`, then reload the game (suggestion 2) and keep the reload
+   only if the key, regression and real-world cases are not worse. A plain reload is not better by itself: Into the Breach reloaded
+   with today's patterns went from 74 to 130 wrong tags per 100 key entries (a general "tile" pattern tags it terrain).
+2. **Reload an older game** (done 20 Oct 2026). `tools/reload_game.sh <scratch> <game>` exports the game (`export_game.py`), drops
+   it and loads it insert-only; every entry keeps its id, ext_id, name, variants and links, so reviews, key and regression still
+   apply. Tested on Into the Breach: all regression lines pass, real-world unchanged.
+3. **Log what each build step removes** (done 20 Oct 2026). `tools/step_log.py` runs after every step of `build.sh`, writes every
+   drop to `<out>.steps.tsv` and warns when one game loses half or more of a concept's tags while the other games keep theirs.
+4. **Audit the cases** (done 20 Oct 2026). Every case was checked against its source page; the `why` column now holds the source's
+   words. 43 cases the source does not support were dropped, 3 narrowed (Runeterra Freljord attack_zero, Slay the Spire Ironclad
+   permanent_growth, Star Wars Unlimited Command temporary_buff), 18 moved to a reachable page that says the same, 2 moved from
+   sts1 to sts2 (the source is about Slay the Spire 2). Card names the source writes differently were changed to the library's
+   names (MODOK, Fake Ciri, Hellblasters). Real-world test after the audit: 217 of 362.
+5. **More cases, then learn the archetype recipes** (open). Learned weights over-fit on 405 cases. With ~50 cases per game, split
+   50/50 with seed 1, `learn_recipes.py` can be tried again.
+6. **Tribal from type links** (open). Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2.
+   A rule "a card that names a type of its game cares about that type" needs only a short stop list per game.
+7. **Combos with no connection** (open). After the audit: 11 pairs have both cards but no connection, 9 have a card the library
+   lacks (Inner Fire, Cobalt Guardian, Obol, Wong, Pestermite, Star Battery, Impulsor, Baron Rivendare in Battlegrounds, Letho
+   with the old Fake Ciri text). Each unconnected pair needs its two cards' tags read to see which link is missing.
+8. **Answer keys for the new games** (not asked). Lorcana, Stormbound, Star Wars Unlimited, Legends and Monster Train have no key.
+9. **Missing data through the browser** (open). Legends sets after Houses of Morrowind (UESP), Stormbound cards after February 2022
+   (fandom wiki), keyword glossaries for Legends and Monster Train. The built-in browser reaches the Stormbound wiki and UESP.
+10. **Warhammer** (not asked). Its army rules are long prose; the mechanics check of suggestion 1 shows what the patterns miss.
