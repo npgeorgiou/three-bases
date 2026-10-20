@@ -10,7 +10,7 @@
 return_to_hand|does|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b
 counter_spell|does|(?<!opponent controls, )\bcounter (up to (one|two|three|four|x|\d+) )?(target|that|those|it|them|the (spell|ability)|all|each)\b(?! (creature|land|permanent|player|opponent|artifact|enchantment|planeswalker)s?\b)
 destroy|does|\bdestroy (up to (one|two|three|four|x|\d+) |x |two |three |four |any number of )(target|other|nonland|artifact|creature|enchantment|land|permanent)
-disable|does|\btap (up to (one|two|three|four|x|\d+) |x |two |three |all |each |any number of )(target |other |untapped )?(nonland |noncreature )?(creatures?|permanents?|artifacts?|lands?)\b(?![^.:]{0,40}\byou control)
+disable|does|\btap (up to (one|two|three|four|x|\d+) |x |two |three |all |each |any number of )(target |other |untapped )?(nonland |noncreature )?(creatures?|permanents?|artifacts?)\b(?![^.:]{0,40}\byou control)
 disable|does|\b(creatures|permanents|artifacts|lands) your opponents control enter tapped
 drawback|does|^(name|this creature|this land|this artifact|this permanent) enters tapped
 cost_increase|does|\bcosts? (\{[^}]+\})+ more\b
@@ -22,7 +22,8 @@ heal|counters|\b(an opponent|a player|each opponent|your opponents|each player) 
 blocking|does|\bmust be blocked\b
 type_grant|does|\bbecomes? (the colou?r or colou?rs of your choice|the chosen colou?r|all colou?rs|colorless|(white|blue|black|red|green)\b(?! and/or))
 type_grant|does|\b(is|are) (all colou?rs|colorless|the chosen colou?r)\b(?! (sources|spells))
-disable|does|\b(don't|doesn't) untap during\b
+# a card that doesn't untap itself is a drawback, not disabling an enemy; tapping lands is mana denial, not disable (Kaptain's review, 21 Oct 2026)
+disable|does|\b(target|enchanted|that|those|each|all|tapped) [^.]{0,40}\b(don't|doesn't) untap during\b
 disable|does|\btap all (\w+ )?creatures\b
 destroy|does|\bdestroy (five|six|seven|eight|nine|ten) target\b
 removal|does|\bput (up to \w+ )?target (?![^.]{0,40}(you control|\bcard\b))[^.]{0,40}\b(on the bottom of|on top of|into|just beneath the top \w+ cards of) (its|their) owners?'?s?'? librar(y|ies)\b
