@@ -49,17 +49,51 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 6. To get rid of wrong tags, narrow a pattern only after a sample of what the narrowing drops has been judged 90%+ wrong (`patterns3.py accept`).
    Narrowing cannot fix misses or sibling confusions.
 
+## 4b. Writing a pattern (what went wrong on 19-20 Oct 2026)
+1. **Find the wording on the cards first, in every game.** Before a pattern, scan all texts for the word family (for example
+   double/twice/extra/additional/more; exile/banish/consume/devour/obliterate) and group the hits by the phrase around them, per
+   game (`tools/step3/amp_patterns.py scan` does this). Write the pattern only from phrases you saw. Never assume one game's
+   phrasing is the only one: "would ... instead" is Magic only; Runeterra says "traps ... are doubled", Hearthstone "trigger twice".
+2. **Cover every grammatical form.** Active and passive ("when you draw" / "when drawn" / "is drawn"), first person ("when I'm
+   discarded", "when I block"), every subject ("you", "the player", "an opponent", "your hero/leader/general/nexus"), every starter
+   ("when", "whenever", "the first time", "each time", "after"), and any quantity ("draw cards", "draw 10 cards"). Test the
+   pattern on a list of such sentences before using it.
+3. **Keep look-alikes out, and say why in the file.** "gain block" is armor, not blocking; "pick targets" is not being targeted;
+   "exile ..., then return it" is blink, not sacrifice; "this card's damage is doubled" doubles itself, not other cards.
+4. **Own side vs enemy is a different concept.** Exiling an enemy is banish; exiling your own unit as a cost is sacrifice.
+5. **Doing vs paying off.** A card that rewards something (an amplifier, "whenever you lose life") gets that concept with role
+   `benefits`; the answer key only reads what a card does, so a key-based step must never remove `benefits` or `counters` tags.
+6. **Read 20 random matches per pattern and game**, and drop the pattern where it is below 90% right (on the key where it has 3+
+   key matches). Print the samples; do not judge from counts.
+7. **A new concept needs three things**: a line in `tools/concept_tree_v3.txt`, its id in `tools/key/added_concepts.txt` (the key
+   never had it, so the scorers skip it), and, for a trigger, an entry in `FEEDS` in `tools/query.py` (what sets it off), or the
+   connection search will not use it.
+8. **Switching a pattern off can remove the only tag a card has.** Before switching off, check whether the matches are right for
+   another concept and point the pattern there (`tools/step3/switch_off.py` does this).
+
+## 4c. Build hygiene
+- One build at a time. Before starting another, make sure no `build.sh` and none of its python steps still run: two writers
+  corrupt the scratch database ("disk I/O error", "malformed").
+- A build step that adds tags must respect the reviewed drops. Steps after the tree move only pair or remove
+  (`trigger_pairs.py <db> pairs_only`).
+- Scripts that rewrite `tools/step3/decisions.tsv` must keep the other scripts' lines (each script marks its own: `|key`, `|trigger`,
+  `|amp`, `|redirect`, `|manual`).
+- After any tag change run all of: `regression`, `combo_check.py`, `realworld.py -v`, `realworld_why.py`, `lost_pairs.py <old> <new>`,
+  and compare real-world cases one by one, not only the totals.
+
 ## 5. Never
 - Never run more than 3 or 4 agents at once. Rate limits killed every larger batch.
 - Never let agents share helper scripts in a common scratchpad. They overwrite each other.
 - Never judge with Opus. Use Haiku for yes/no questions and Sonnet for regexes.
 - Never start an agent without a progress file it saves after each batch and can resume from.
-- Never remove a tag unless it has been judged wrong. Hand reviews in `tools/regression.tsv` always win.
+- Never remove a tag unless it has been judged wrong. Hand reviews in `tools/regression.tsv` win, except where the answer key
+  disagrees on what a card does: then the key wins (`tools/key_wins.py`), and payoff and answer tags (`benefits`, `counters`) are never touched.
 - Never put more than 60 to 80 questions in one judging file.
 
 ## 6. Finish
 1. All build checks must pass: regression, combos, trigger pairs, query tests, realworld.
-2. Add 10 to 20 real-world cases with source URLs to `tools/realworld/<game>.tsv`.
+2. Add at least 30 real-world cases with source URLs to `tools/realworld/<game>.tsv` (signatures, archetypes, combos, splashes;
+   card names exactly as the library stores them). They are the real test: run `realworld_why.py` and fix what misses before finishing.
 3. Check the database size. GitHub refuses files over 100 MB; `compact_text.py` keeps the database at about 87 MB.
 4. Copy the build over `three-bases-library.sqlite`, then commit and push after each step together with its progress files, keys and decisions.
 5. Update `README.md`. Write a short handoff that says what is done, what the build applies, what is left, and the exact commands.
