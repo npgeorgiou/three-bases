@@ -129,7 +129,7 @@ Sources of the later loads (converter in brackets):
 
 ## Suggestions for improving the library
 Claude's suggestions (20 Oct 2026), from the real-world test and the checks of that day, with their state. Next steps: HANDOFF.md.
-1. **Mechanics check on the 19 older games** (Into the Breach done and kept, Inscryption checked, Faeria waiting on a decision; 16 left, see HANDOFF.md). For each: 2-4 guide pages into `tools/mechanics/<game>.txt`, then
+1. **Mechanics check on the 19 older games** (Into the Breach done and kept, Inscryption checked, Faeria waiting on the key fix; 16 left, see HANDOFF.md). For each: 2-4 guide pages into `tools/mechanics/<game>.txt`, then
    `coverage.py --mechanics`; fix the gaps in `tools/patterns/<game>.txt`, then reload the game (suggestion 2) and keep the reload
    only if the key, regression and real-world cases are not worse. A plain reload is not better by itself: Into the Breach reloaded
    with today's patterns went from 74 to 130 wrong tags per 100 key entries (a general "tile" pattern tags it terrain).

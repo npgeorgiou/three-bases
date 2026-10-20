@@ -1,7 +1,7 @@
 # Library: state and next steps (20 Oct 2026, evening)
 
 Kaptain asked for README suggestions 1, 2, 3, 4, 5, 6, 7 and 9, then a new real-world test. Done in this chat: 2, 3, 4.
-Open: 1 (Into the Breach done, Inscryption checked, Faeria waiting on a decision, 16 left), 5 (started), 6, 7, 9. The database file was not changed in this chat.
+Open: 1 (Into the Breach done, Inscryption checked, Faeria waiting on the key fix, 16 left), 5 (started), 6, 7, 9. The database file was not changed in this chat.
 
 Rules for the next chat: **no readers, judges or agents** without Kaptain's OK and a measured cost. Scripts and builds first.
 Commit and push after each step. Read `ADDING_GAMES.md` sections 4b and 4c before writing any pattern. **The library itself is
@@ -39,9 +39,10 @@ never changed to fit a case**: when a source writes a card's name differently, c
   and others) and Fight untagged; patterns added to `tools/patterns/faeria.txt`. Reloaded in scratch: missed 46.2 -> 44.4, wrong
   58.7 -> 62.6, so not kept. The extra wrong tags do not come from the new patterns: a reload runs today's `kw_sync.py`, which
   passes a keyword's tags to cards that give it to other cards ("Add two 2/3 Imperial Guards with Taunt to your hand" gets Taunt's
-  immobilize and zone_of_control as grants). The key counts these as wrong. **Decision for Kaptain** before more reloads: should
-  a card that creates or gives a unit with a keyword carry that keyword's tags (role grants), or not? Every older game's reload
-  will hit this.
+  immobilize and zone_of_control as grants). The key counts these as wrong. **Kaptain's decision (20 Oct 2026):**
+  per the README, such a card should have a "generates" link (to the created unit) and a "grants" link (to the keyword); the tags
+  are right and **the key is wrong** there. Next worker: ask Kaptain how to fix the key for these cards before reloading Faeria or
+  any other older game; once fixed, re-measure Faeria and keep the reload if wrong and missed are not worse.
 - Reload changes made for this: every entry keeps its current tags on reload (`export_game.py` keep_tags; before, today's general
   patterns re-tagged the whole game and wrong tags removed long ago came back), and merge records may be written again
   (`add_games.py`).
