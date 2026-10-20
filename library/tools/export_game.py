@@ -22,8 +22,9 @@ for row in q(f"SELECT {','.join(cols)} FROM entities WHERE game=? ORDER BY id", 
     if e['edition'] == 'non-collectible':   # load_cards moves a created card's set back into edition
         e['created'] = True; ex = dict(e['extra'] or {}); e['edition'] = ex.pop('set', None); e['extra'] = ex or None
     if i in data: e['tags'] = data[i]
-    if e['category'] == 'keyword':   # keyword entries keep their tags as they are: one-time fixes removed wrong ones, and cards inherit them
-        e['keep_tags'] = [list(r) for r in q('SELECT concept, role, method, evidence FROM entity_concepts WHERE entity=?', i)]
+    # every entry keeps its tags as they are: the general patterns were applied once at its first load and one-time fixes removed
+    # wrong tags since; the build steps then re-apply the game's own patterns, its '!' switch-offs, reviews and link rules
+    e['keep_tags'] = [list(r) for r in q('SELECT concept, role, method, evidence FROM entity_concepts WHERE entity=?', i)]
     (kw_cards if e['category'] in ('keyword', 'tribe') else cards).append({k: v for k, v in e.items() if v is not None})
 head = {'_source': f'reload of {G} from the library', '_reload': True, '_game': game}
 json.dump(dict(head, _tag='reload-kw', cards=kw_cards), open(out + '_kw.json', 'w', encoding='utf-8'), ensure_ascii=False)

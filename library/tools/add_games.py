@@ -31,7 +31,8 @@ elif cmd == 'copy':
     n = {}
     def put(t, cond):
         if not q("SELECT 1 FROM w.sqlite_master WHERE name=?", t) or not q("SELECT 1 FROM main.sqlite_master WHERE name=?", t): return
-        n[t] = c.execute(f"INSERT INTO main.{t}({cols(t)}) SELECT {cols(t)} FROM w.{t} WHERE {cond}", games if '?' in cond else ()).rowcount
+        verb = 'INSERT OR REPLACE' if t == 'merged_entities' else 'INSERT'   # a reload keeps the game's merge records; the new build may write them again
+        n[t] = c.execute(f"{verb} INTO main.{t}({cols(t)}) SELECT {cols(t)} FROM w.{t} WHERE {cond}", games if '?' in cond else ()).rowcount
     put('entities', f"game IN ({gl})")
     for t in ('entity_concepts', 'trigger_effect', 'tree_v3_moved', 'tree_v3_added'): put(t, 'entity IN (SELECT id FROM temp.new_ids)')
     put('entity_links', 'src IN (SELECT id FROM temp.new_ids) AND dst IN (SELECT id FROM temp.new_ids)')

@@ -8,3 +8,6 @@ stat_condition|does|\bwith \d+ (attack|life) or (more|less)\b
 drawback|does|\bcan't harvest\b|\bcan only attack gods\b
 !ping|deal 1 damage
 tribal|does|\b(friendly|adjacent friendly|another|a random) (yaks?|beasts?|tritons?)\b
+# mechanics check: killing a creature outright; Fight (attacks a creature anywhere, outside its own attack)
+destroy|does|\bdestroy (a|an|another|target) (enemy )?creature\b
+attack_now|does|\bfights? (a|an|your) (enemy|opponent)\b|\bthen it fights\b
