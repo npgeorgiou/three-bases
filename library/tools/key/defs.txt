@@ -229,7 +229,10 @@ zone_of_control | Zones of control (leaving is punished) | Leaving an enemy's re
 activated | Activated ability (pay to use) | The player chooses when to use an ability: activate, tap, pay to use. | Not: Abilities that fire on their own are triggers.
 aura | Aura (ongoing effect on others) | While the source is in play, other units are continuously changed: anthem, lord. | Not: A one-time change is the effect itself.
 combat_start | Start of combat | Effects at the start of combat or before a fight. | Not: Start of turn is turn_start.
-death_trigger | When it dies (deathrattle) | Effects when a unit dies or is destroyed. | Not: Counting deaths is death_count.
+death_trigger | When it dies (deathrattle) | Effects when this unit dies or is destroyed: its own death. (Narrowed 20 Oct 2026, Kaptain's decision.) | Not: Another unit dying is other_death_trigger; leaving play by other means is leave_trigger.
+other_death_trigger | When another unit dies | Triggers when another unit, friendly or enemy, dies or is destroyed. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Not: Its own death is death_trigger; counting deaths is death_count.
+leave_trigger | When it leaves play | Effects when this unit leaves play by any means: dies, exiled, returned, banished. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Not: Text that says it dies is death_trigger.
+other_leave_trigger | When another unit leaves play | Triggers when another unit leaves play by any means. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Not: Text that says it dies is other_death_trigger.
 delayed | Delayed / countdown | The effect happens later: next turn, after N turns, countdowns. | Not: A set turn number is turn_number.
 game_end_trigger | At the end of the game | Effects when the game ends or at the final count. | Not: End of a turn is turn_end.
 hero_power | Hero power | A repeatable player or leader ability. | Not: A unit's own ability is activated.
@@ -240,6 +243,13 @@ on_enemy_enter | When an enemy arrives | Triggers when an enemy is placed or mov
 on_kill | When it kills | Triggers when the unit kills another. | Not: When it dies is death_trigger.
 on_play | When played (battlecry, on reveal) | Triggers when the card is played or revealed: battlecry, on reveal, enters. | Not: When another card is played is on_ally_play.
 on_spell | When a spell is played | Triggers when a spell or action is played. | Not: When a unit is played is on_ally_play.
+on_draw | When a card is drawn | Triggers when the owner or a player draws a card. (Added 19 Oct 2026, Claude's.) | Not: Drawing cards as the effect is draw.
+on_discard | When a card is discarded | Triggers when the owner or a player discards a card, or when this card is discarded. (Added 19 Oct 2026, Claude's.) | Not: Discarding as a cost is discard.
+on_lifegain | When life or health is restored | Triggers when a player gains life, or a hero or unit is healed. (Added 19 Oct 2026, Claude's.) | Not: Gaining life as the effect is heal.
+on_block | When it blocks or is blocked | Triggers when the unit blocks or becomes blocked. (Added 19 Oct 2026, Claude's.) | Not: When it attacks is on_attack.
+on_targeted | When it becomes a target | Triggers when the unit or card becomes the target of a spell or ability. (Added 19 Oct 2026, Claude's.) | Not: When it is damaged is on_damaged.
+on_sacrifice | When a unit is sacrificed | Triggers when the owner sacrifices a unit or permanent. (Added 19 Oct 2026, Claude's.) | Not: Sacrificing as a cost is the sacrifice concept.
+on_life_loss | When I lose life | Triggers when the owner's player or hero loses life or takes damage. (Added 20 Oct 2026, Claude's.) | Not: A unit being damaged is on_damaged; paying life as a cost is life_payment.
 once_per_game | Once per game | The effect can be used only once per game. | Not: Waiting turns between uses is cooldowns.
 passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
 reactions | Reactions on the opponent's turn | The effect answers the opponent's actions: interrupts, after your opponent plays. | Not: Hidden traps are trap_secret.

@@ -358,7 +358,7 @@
 "740640": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When another creature you own dies"
 ],
 [
@@ -497,7 +497,7 @@
 "740651": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When Gem Vessels on the owner's side of the board die"
 ],
 [

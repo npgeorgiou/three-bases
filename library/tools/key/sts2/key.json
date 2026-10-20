@@ -1109,7 +1109,7 @@
 "Reduce this card's cost by energy whenever ANYONE dies"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "whenever ANYONE dies"
 ]
 ],
@@ -2146,7 +2146,7 @@
 "758994": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a non-Minion enemy dies to Doom"
 ],
 [
@@ -2410,7 +2410,7 @@
 "759075": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an enemy dies"
 ],
 [
@@ -3420,7 +3420,7 @@
 "759365": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When an ally dies"
 ],
 [
@@ -3784,7 +3784,7 @@
 "759482": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When an enemy dies"
 ],
 [

@@ -378,7 +378,7 @@
 "740640": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When another creature you own dies"
 ],
 [
@@ -533,7 +533,7 @@
 "740651": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When Gem Vessels on the owner's side of the board die"
 ],
 [
@@ -3450,7 +3450,7 @@
 "Cards that cost Bones"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a card on the players side perishes for any reason"
 ],
 [
@@ -5069,7 +5069,7 @@
 "are played in adjacent slots for free"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When a card perishes, it spawns a Leaping Trap in its place"
 ]
 ],
@@ -5138,7 +5138,7 @@
 "741042": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When a Librarian is killed"
 ],
 [
@@ -5276,7 +5276,7 @@
 "Everytime your turn starts"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When a card dies"
 ],
 [

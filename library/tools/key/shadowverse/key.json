@@ -5918,7 +5918,7 @@
 "X equals half the number of times allied followers have evolved this match"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "whenever an enemy card is destroyed"
 ],
 [
@@ -6064,7 +6064,7 @@
 "2 damage to the enemy leader"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an enemy follower is destroyed"
 ],
 [
@@ -8384,7 +8384,7 @@
 "Artifact cards"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an allied Artifact card is destroyed"
 ],
 [
@@ -8691,7 +8691,7 @@
 "return it to your hand"
 ],
 [
-"death_trigger",
+"leave_trigger",
 "When this follower leaves play"
 ],
 [
@@ -9053,7 +9053,7 @@
 "Fanfare"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an allied amulet is destroyed"
 ],
 [
@@ -10796,7 +10796,7 @@
 "Not affected by other cards' effects"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever another allied follower is destroyed"
 ],
 [
@@ -10864,7 +10864,7 @@
 "814395": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an allied follower is destroyed"
 ],
 [
@@ -10918,7 +10918,7 @@
 "814413": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an allied follower is destroyed"
 ],
 [

@@ -240,7 +240,7 @@
 "795425": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When one of your cards is destroyed"
 ],
 [
@@ -4235,7 +4235,7 @@
 "if you've discarded a card"
 ],
 [
-"death_count",
+"other_death_trigger",
 "one of your cards has been destroyed"
 ]
 ],
@@ -4480,7 +4480,7 @@
 "Destroy your first other card here"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "After one of your other cards is destroyed"
 ],
 [

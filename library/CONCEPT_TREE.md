@@ -243,6 +243,7 @@ A concept with two parents is listed under both, with the other one named as "al
     - Discard pile / graveyard as a resource `graveyard`
       - Fill my own discard pile (self-mill) `self_mill` (also under Helps my side, Hand, deck and discard pile)
     - When it dies (deathrattle) `death_trigger` (also under Triggers & timing)
+    - When another unit dies `other_death_trigger` (also under Triggers & timing)
   - Difficulty modifiers `difficulty_modifiers`
   - Fatigue / end-game pressure `fatigue`
   - Hidden and revealed information `information`
@@ -321,6 +322,9 @@ A concept with two parents is listed under both, with the other one named as "al
     - Hero power `hero_power`
   - Start of combat `combat_start`
   - When it dies (deathrattle) `death_trigger` (also under Death and graveyard (theme))
+  - When another unit dies `other_death_trigger` (also under Death and graveyard (theme))
+  - When it leaves play `leave_trigger`
+  - When another unit leaves play `other_leave_trigger`
   - Delayed / countdown `delayed`
     - Pay later (overload, debt) `overload_debt` (also under Alternative costs)
     - Enemy actions announced in advance `telegraphed_threats` (also under Hidden and revealed information)

@@ -2851,7 +2851,7 @@ darkest_dungeon	760823	Tutorial Food	random_effect	*	absent
 duelyst	741524	Blood Surge	hero_power	does	present
 duelyst	741524	Blood Surge	on_spell	does	present
 duelyst	741527	Deathwatch	death_count	*	absent
-duelyst	741527	Deathwatch	death_trigger	does	present
+duelyst	741527	Deathwatch	other_death_trigger	does	present
 duelyst	741531	Exhuming Sand	on_ally_play	does	present
 duelyst	741531	Exhuming Sand	summon	does	present
 duelyst	741534	Grow	permanent_growth	does	present
@@ -3236,7 +3236,7 @@ duelyst	742043	Saberspine Cub	haste	does	present
 duelyst	742045	Thunderhorn	multi_target_attack	does	present
 duelyst	742046	Spriggin	enemy_benefit	does	present
 duelyst	742047	Glub	death_count	*	absent
-duelyst	742047	Glub	death_trigger	does	present
+duelyst	742047	Glub	other_death_trigger	does	present
 duelyst	742047	Glub	destroy	benefits	absent
 duelyst	742047	Glub	sacrifice	benefits	absent
 duelyst	742047	Glub	tribal	does	present
@@ -3540,7 +3540,7 @@ duelyst	742345	Replicant	on_play	does	present
 duelyst	742345	Replicant	tutor	does	present
 duelyst	742346	Project Ω	count_payoff	does	present
 duelyst	742351	Capricious Marauder	death_count	*	absent
-duelyst	742351	Capricious Marauder	death_trigger	does	present
+duelyst	742351	Capricious Marauder	other_death_trigger	does	present
 duelyst	742351	Capricious Marauder	destroy	benefits	absent
 duelyst	742351	Capricious Marauder	donate	does	present
 duelyst	742351	Capricious Marauder	drawback	does	present
@@ -3708,7 +3708,7 @@ faeria	741247	Flamesilk Faerie	movement	does	present
 faeria	741247	Flamesilk Faerie	ranged	does	present
 faeria	741247	Flamesilk Faerie	terrain	*	absent
 faeria	741249	Bloodfire Wisp	death_count	*	absent
-faeria	741249	Bloodfire Wisp	death_trigger	does	present
+faeria	741249	Bloodfire Wisp	other_death_trigger	does	present
 faeria	741249	Bloodfire Wisp	destroy	benefits	absent
 faeria	741249	Bloodfire Wisp	sacrifice	benefits	absent
 faeria	741251	Firebringer	on_ally_play	does	present
@@ -3778,7 +3778,7 @@ faeria	741300	Oath to Oblivion	sacrifice	does	present
 faeria	741300	Oath to Oblivion	sacrifice	cost	present
 faeria	741300	Oath to Oblivion	summon	does	present
 faeria	741301	Shaytan Monstrosity	death_count	*	absent
-faeria	741301	Shaytan Monstrosity	death_trigger	does	present
+faeria	741301	Shaytan Monstrosity	other_death_trigger	does	present
 faeria	741301	Shaytan Monstrosity	destroy	benefits	absent
 faeria	741301	Shaytan Monstrosity	movement	does	present
 faeria	741301	Shaytan Monstrosity	sacrifice	benefits	present
@@ -5408,7 +5408,7 @@ hearthstone	743789	Bring It On!	hand_disruption	*	absent
 hearthstone	743790	Sindragosa	null_body	does	present
 hearthstone	743798	Hyldnir Frostrider	drawback	does	present
 hearthstone	743800	Necrotic Geist	death_count	*	absent
-hearthstone	743800	Necrotic Geist	death_trigger	does	present
+hearthstone	743800	Necrotic Geist	other_death_trigger	does	present
 hearthstone	743800	Necrotic Geist	destroy	benefits	absent
 hearthstone	743800	Necrotic Geist	sacrifice	benefits	absent
 hearthstone	743800	Necrotic Geist	summon	does	present
@@ -6914,7 +6914,7 @@ hs_battlegrounds	748408	Timecap'n Hooktail	stat_gain	does	present
 hs_battlegrounds	748408	Timecap'n Hooktail	on_spell	does	present
 hs_battlegrounds	748417	Free-Flying Feathermane	auto_battle	benefits	present
 hs_battlegrounds	748417	Free-Flying Feathermane	death_count	*	absent
-hs_battlegrounds	748417	Free-Flying Feathermane	death_trigger	does	present
+hs_battlegrounds	748417	Free-Flying Feathermane	other_death_trigger	does	present
 hs_battlegrounds	748417	Free-Flying Feathermane	free_play	does	present
 hs_battlegrounds	748417	Free-Flying Feathermane	sacrifice	benefits	absent
 hs_battlegrounds	748417	Free-Flying Feathermane	temporary_effect	does	present
@@ -10368,7 +10368,7 @@ mtg	767913	Splitting the Powerstone	sacrifice	cost	present
 mtg	767913	Splitting the Powerstone	sacrifice	does	present
 mtg	767913	Splitting the Powerstone	summon	does	present
 mtg	768144	Judge Magister Gabranth	death_count	does	present
-mtg	768144	Judge Magister Gabranth	death_trigger	does	present
+mtg	768144	Judge Magister Gabranth	other_death_trigger	does	present
 mtg	768144	Judge Magister Gabranth	evasion	does	present
 mtg	768144	Judge Magister Gabranth	permanent_growth	does	present
 mtg	768144	Judge Magister Gabranth	sacrifice	benefits	absent
@@ -10435,7 +10435,7 @@ mtg	770062	Shroudstomper	heal	does	present
 mtg	770062	Shroudstomper	on_attack	does	present
 mtg	770062	Shroudstomper	on_play	does	present
 mtg	770338	Ghoulish Procession	death_count	*	absent
-mtg	770338	Ghoulish Procession	death_trigger	does	present
+mtg	770338	Ghoulish Procession	other_death_trigger	does	present
 mtg	770338	Ghoulish Procession	on_attack	*	absent
 mtg	770338	Ghoulish Procession	sacrifice	benefits	absent
 mtg	770338	Ghoulish Procession	summon	does	present
@@ -10597,7 +10597,7 @@ mtg	774337	Maximum Carnage	resource_gain	does	present
 mtg	774337	Maximum Carnage	temporary_effect	does	present
 mtg	774522	Sothera, the Supervoid	banish	does	present
 mtg	774522	Sothera, the Supervoid	death_count	*	absent
-mtg	774522	Sothera, the Supervoid	death_trigger	does	present
+mtg	774522	Sothera, the Supervoid	other_death_trigger	does	present
 mtg	774522	Sothera, the Supervoid	destroy	benefits	absent
 mtg	774522	Sothera, the Supervoid	permanent_growth	does	present
 mtg	774522	Sothera, the Supervoid	sacrifice	benefits	absent
@@ -11235,7 +11235,7 @@ runeterra	750724	Pack Mentality	temporary_buff	does	present
 runeterra	750727	Troop of Elnuks	deck_position	does	present
 runeterra	750727	Troop of Elnuks	summon	does	present
 runeterra	750740	Phantom Prankster	death_count	*	absent
-runeterra	750740	Phantom Prankster	death_trigger	does	present
+runeterra	750740	Phantom Prankster	other_death_trigger	does	present
 runeterra	750740	Phantom Prankster	direct_damage	does	present
 runeterra	750743	Ancient Crocolith	sacrifice	does	present
 runeterra	750747	Fresh Offerings	summon	does	present
@@ -12054,7 +12054,7 @@ shadowverse	752665	Eternal Contract	generate_cards	*	absent
 shadowverse	752683	Pyne, Holy Police	friendly_fire	does	present
 shadowverse	752688	Cursed Maiden	cost_type	benefits	absent
 shadowverse	752688	Cursed Maiden	death_count	*	absent
-shadowverse	752688	Cursed Maiden	death_trigger	does	present
+shadowverse	752688	Cursed Maiden	other_death_trigger	does	present
 shadowverse	752688	Cursed Maiden	delayed	does	present
 shadowverse	752688	Cursed Maiden	delayed	benefits	present
 shadowverse	752688	Cursed Maiden	on_play	does	present
@@ -12829,7 +12829,7 @@ shadowverse	755781	Dark Alice	sacrifice	does	present
 shadowverse	755782	Mail of Obliteration	death_count	does	present
 shadowverse	755787	Gluttonous Empress	cost_condition	does	present
 shadowverse	755787	Gluttonous Empress	death_count	*	absent
-shadowverse	755787	Gluttonous Empress	death_trigger	does	present
+shadowverse	755787	Gluttonous Empress	other_death_trigger	does	present
 shadowverse	755787	Gluttonous Empress	destroy	benefits	absent
 shadowverse	755787	Gluttonous Empress	free_play	does	present
 shadowverse	755787	Gluttonous Empress	heal	does	present
@@ -15066,7 +15066,7 @@ sts2	759073	Golden Pearl	passive	does	present
 sts2	759074	Gorget	items_consumables	does	present
 sts2	759074	Gorget	passive	does	present
 sts2	759075	Gremlin Horn	death_count	*	absent
-sts2	759075	Gremlin Horn	death_trigger	does	present
+sts2	759075	Gremlin Horn	other_death_trigger	does	present
 sts2	759075	Gremlin Horn	destroy	benefits	absent
 sts2	759075	Gremlin Horn	draw	does	present
 sts2	759075	Gremlin Horn	resource_gain	does	present
@@ -15637,7 +15637,7 @@ sts2	759358	Constrict	aura	does	present
 sts2	759358	Constrict	damage_over_time	*	absent
 sts2	759358	Constrict	stat_loss	does	present
 sts2	759364	Covered	bodyguard	does	present
-sts2	759365	Crab Rage	death_trigger	does	present
+sts2	759365	Crab Rage	other_death_trigger	does	present
 sts2	759367	Crimson Mantle	block_armor	does	present
 sts2	759367	Crimson Mantle	life_payment	cost	present
 sts2	759370	Curl Up	block_armor	does	present
@@ -15725,7 +15725,7 @@ sts2	759479	Radiance	resource_gain	does	present
 sts2	759481	Rampart	turn_start	does	present
 sts2	759482	Ravenous	stat_gain	does	present
 sts2	759482	Ravenous	death_count	*	absent
-sts2	759482	Ravenous	death_trigger	does	present
+sts2	759482	Ravenous	other_death_trigger	does	present
 sts2	759482	Ravenous	snowball	*	absent
 sts2	759487	Regen	regeneration	does	present
 sts2	759487	Regen	turn_end	does	present
@@ -17693,7 +17693,7 @@ wh_aos_4th	815237	Gnawhole	terrain	does	present
 wh_aos_4th	815271	Timberrrrr!	aoe_damage	does	present
 wh_aos_4th	815271	Timberrrrr!	damage	*	absent
 wh_aos_4th	815271	Timberrrrr!	death_count	*	absent
-wh_aos_4th	815271	Timberrrrr!	death_trigger	does	present
+wh_aos_4th	815271	Timberrrrr!	other_death_trigger	does	present
 wh_aos_4th	815271	Timberrrrr!	destroy	benefits	absent
 wh_aos_4th	815271	Timberrrrr!	destroy	*	absent
 wh_aos_4th	815271	Timberrrrr!	friendly_fire	does	present
@@ -18388,7 +18388,7 @@ wh_bloodbowl3	794951	Lucien & Valen Swift	advantage	does	present
 wh_bloodbowl3	794951	Lucien & Valen Swift	drawback	does	present
 wh_bloodbowl3	794951	Lucien & Valen Swift	evasion	counters	present
 wh_bloodbowl3	794951	Lucien & Valen Swift	movement	*	absent
-wh_killteam	788666	Blooded	death_count	does	present
+wh_killteam	788666	Blooded	other_death_trigger	does	present
 wh_killteam	788666	Blooded	destroy	*	absent
 wh_killteam	788670	Ruthless Efficiency	piercing	does	present
 wh_killteam	788670	Ruthless Efficiency	zone_of_control	*	absent
@@ -18541,7 +18541,7 @@ wh_killteam	788831	Inexorable Advance	stat_gain	*	absent
 wh_killteam	788837	Inescapable Slayers (Flayed Skull)	piercing	does	present
 wh_killteam	788843	Combat Drugs	random_effect	does	present
 wh_killteam	788843	Combat Drugs	transform	*	absent
-wh_killteam	788855	Sombre Sentinels (Dreaming Shadow)	death_trigger	does	present
+wh_killteam	788855	Sombre Sentinels (Dreaming Shadow)	other_death_trigger	does	present
 wh_killteam	788855	Sombre Sentinels (Dreaming Shadow)	destroy	*	absent
 wh_killteam	788858	Dance of Nightmares Made Flesh (Silent Shroud)	discard	*	absent
 wh_killteam	788860	Riddle-smiths (Veiled Path)	discard	*	absent
@@ -18813,7 +18813,7 @@ wh_killteam	789500	Covert Guises	items_consumables	does	present
 wh_killteam	789503	Nanoscarab Caskets	items_consumables	does	present
 wh_killteam	789506	Phase Shifter	items_consumables	does	present
 wh_killteam	789507	Psyk-out Grenades	items_consumables	does	present
-wh_killteam	789508	Vocifera Mortis	death_trigger	does	present
+wh_killteam	789508	Vocifera Mortis	other_death_trigger	does	present
 wh_killteam	789508	Vocifera Mortis	destroy	*	absent
 wh_killteam	789508	Vocifera Mortis	items_consumables	does	present
 wh_killteam	789510	Saintly Relics	items_consumables	does	present
@@ -19007,7 +19007,7 @@ wh_killteam	789778	Sprint (0AP)	placement_rules	*	absent
 wh_killteam	789778	Sprint (0AP)	reactions	*	absent
 wh_killteam	789778	Sprint (0AP)	terrain	does	present
 wh_killteam	789781	Clan Talismans	items_consumables	does	present
-wh_killteam	789783	Spirit Stones	death_trigger	does	present
+wh_killteam	789783	Spirit Stones	other_death_trigger	does	present
 wh_killteam	789783	Spirit Stones	destroy	*	absent
 wh_killteam	789783	Spirit Stones	items_consumables	does	present
 wh_killteam	789783	Spirit Stones	resource_gain	does	present
@@ -20439,7 +20439,7 @@ wh_underworlds	764570	Born From Agony	items_consumables	does	present
 wh_underworlds	764571	Ethersea Predator	items_consumables	does	present
 wh_underworlds	764572	Hunter of Souls	items_consumables	does	present
 wh_underworlds	764573	Lurelight	adjacency	does	present
-wh_underworlds	764573	Lurelight	death_trigger	does	present
+wh_underworlds	764573	Lurelight	other_death_trigger	does	present
 wh_underworlds	764573	Lurelight	destroy	*	absent
 wh_underworlds	764573	Lurelight	hand_disruption	does	present
 wh_underworlds	764573	Lurelight	modal_choice	does	present

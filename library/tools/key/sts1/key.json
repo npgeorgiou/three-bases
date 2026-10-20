@@ -577,7 +577,7 @@
 "Apply 6 Poison"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When the enemy dies"
 ],
 [
@@ -2301,7 +2301,7 @@
 "757954": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an enemy dies"
 ],
 [
@@ -2808,7 +2808,7 @@
 "758048": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an enemy dies"
 ],
 [

@@ -272,7 +272,10 @@ trigger | Triggers & timing | trigger |  | When an effect happens. | What it doe
 activated | Activated ability (pay to use) | trigger | trigger | The player chooses when to use an ability: activate, tap, pay to use. | Abilities that fire on their own are triggers.
 aura | Aura (ongoing effect on others) | trigger | passive | While the source is in play, other units are continuously changed: anthem, lord. | A one-time change is the effect itself.
 combat_start | Start of combat | trigger | trigger | Effects at the start of combat or before a fight. | Start of turn is turn_start.
-death_trigger | When it dies (deathrattle) | trigger | death,trigger | Effects when a unit dies or is destroyed. | Counting deaths is death_count.
+death_trigger | When it dies (deathrattle) | trigger | death,trigger | Effects when this unit dies or is destroyed: its own death. (Narrowed 20 Oct 2026, Kaptain's decision.) | Another unit dying is other_death_trigger; leaving play by other means is leave_trigger.
+other_death_trigger | When another unit dies | trigger | death,trigger | Triggers when another unit, friendly or enemy, dies or is destroyed. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Its own death is death_trigger; counting deaths is death_count.
+leave_trigger | When it leaves play | trigger | trigger | Effects when this unit leaves play by any means: dies, exiled, returned, banished. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Text that says it dies is death_trigger.
+other_leave_trigger | When another unit leaves play | trigger | trigger | Triggers when another unit leaves play by any means. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Text that says it dies is other_death_trigger.
 delayed | Delayed / countdown | trigger | trigger | The effect happens later: next turn, after N turns, countdowns. | A set turn number is turn_number.
 game_end_trigger | At the end of the game | trigger | trigger,win_condition | Effects when the game ends or at the final count. | End of a turn is turn_end.
 hero_power | Hero power | trigger | activated | A repeatable player or leader ability. | A unit's own ability is activated.

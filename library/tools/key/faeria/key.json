@@ -1014,7 +1014,7 @@
 "adjacent creature"
 ],
 [
-"death_count",
+"other_death_trigger",
 "dies"
 ]
 ],
@@ -1202,7 +1202,7 @@
 "741202": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever another friendly creature dies"
 ],
 [
@@ -1525,7 +1525,7 @@
 "741233": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an enemy creature dies"
 ],
 [
@@ -1577,7 +1577,7 @@
 "741238": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an enemy creature dies in combat"
 ],
 [
@@ -1671,7 +1671,7 @@
 "Whenever an enemy creature dies, this gains +2/+1"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an enemy creature dies"
 ]
 ],
@@ -1703,6 +1703,10 @@
 [
 "direct_damage",
 "deal 2 damage to its controller"
+],
+[
+"on_kill",
+"If it dies"
 ]
 ],
 "by": "C"
@@ -2178,7 +2182,7 @@
 "this drains its attack"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a friendly creature dies"
 ]
 ],
@@ -3438,7 +3442,7 @@
 "When an adjacent creature dies"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When an adjacent creature dies"
 ],
 [

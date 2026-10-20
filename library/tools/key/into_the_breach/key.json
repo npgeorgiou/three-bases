@@ -484,6 +484,10 @@
 [
 "turn_start",
 "start of the enemy turn"
+],
+[
+"terrain",
+"will become Water"
 ]
 ],
 "by": "A=B"
@@ -4340,6 +4344,10 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"terrain",
+"leave Fire on death"
 ]
 ],
 "by": "C"
@@ -4486,7 +4494,7 @@
 "preparing to destroy one next turn"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "explosive decay effect"
 ],
 [
@@ -5469,6 +5477,10 @@
 [
 "turn_start",
 "start of the enemy turn"
+],
+[
+"terrain",
+"will become Water"
 ]
 ],
 "by": "A=B"
@@ -5517,6 +5529,10 @@
 [
 "turn_start",
 "start of the enemy turn"
+],
+[
+"terrain",
+"will become a Chasm"
 ]
 ],
 "by": "A=B"

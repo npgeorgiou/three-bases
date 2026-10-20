@@ -27,7 +27,7 @@
 "784274": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Each time an Asuryani Psyker model from your army is destroyed"
 ],
 [
@@ -73,7 +73,7 @@
 "At the end of your opponent's Shooting phase"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "if one or more Ynnari units from your army were destroyed this phase"
 ],
 [
@@ -514,7 +514,7 @@
 "you start the battle with a number of Resurgence points"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Each time a unit from your army is destroyed"
 ],
 [
@@ -1018,7 +1018,7 @@
 "784495": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "were destroyed as a result of those attacks"
 ],
 [
@@ -1147,7 +1147,7 @@
 "that attack cannot be allocated to a Character model in that unit"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Each time the last model in a Bodyguard unit is destroyed"
 ]
 ],
@@ -3139,7 +3139,7 @@
 "until the start of your next Command phase"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "If the bearer is destroyed"
 ],
 [
@@ -3370,7 +3370,7 @@
 "While this model is leading a unit"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "each time a model in that unit is destroyed by a melee attack"
 ],
 [
@@ -3840,7 +3840,7 @@
 "Each time an enemy unit is selected to shoot, after that unit has shot"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "if any models from the bearer\u2019s unit were destroyed as a result of those attacks"
 ],
 [
@@ -4443,7 +4443,7 @@
 "787072": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When the bearer's unit is destroyed"
 ],
 [
@@ -8129,7 +8129,7 @@
 "it can be attached to this unit instead"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Each time the bearer\u2019s unit\u2019s quarry is destroyed"
 ],
 [
@@ -8729,7 +8729,7 @@
 "787855": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "If a friendly Astra Militarum Vehicle model is destroyed within 12\" of this model"
 ],
 [
@@ -10118,7 +10118,7 @@
 "this model has the Lone Operative ability"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "If a friendly Adeptus Astartes Vehicle model is destroyed within 12\" of this model"
 ],
 [
@@ -12193,7 +12193,7 @@
 "you can set this model up alongside that unit as if it was part of it"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When the bearer is destroyed"
 ],
 [
@@ -12243,7 +12243,7 @@
 "815355": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "If the bearer is destroyed by a melee attack"
 ],
 [

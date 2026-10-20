@@ -32,10 +32,14 @@ How old tags move (every old concept maps to one or more new ones; a tag keeps i
                   disruption when only the opponent is bound; cost_set gets cost_increase on enemy cards; junk_cards put in
                   one's own deck also get drawback; swap gets forced_movement when enemy units are swapped; forced_attack on
                   one's own units becomes drawback ("must attack") or attack_now.
+  split by whose  death_trigger -> other_death_trigger when another unit dies, leave_trigger / other_leave_trigger when the text
+                  says leaves play, on_kill for a spell whose target dies; death_count -> other_death_trigger for one single death
+                  with no counting (death_side.py)
   unchanged id    every other concept (its parents or definition may have changed).
 Usage: concept_tree.py <db> restore   (first build step: undoes the last apply, so the earlier steps see the old ids)
        concept_tree.py <db> apply     (after regression.py enforce)"""
 import json, os, re, sqlite3, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import death_side
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 def load_tree():
@@ -171,6 +175,8 @@ PRIMARY = {'buff': ['stat_gain'], 'debuff': ['stat_loss'], 'stat_set': ['stat_ga
            'movement': ['movement', 'forced_movement'], 'discard': ['discard', 'hand_disruption'], 'mill': ['mill', 'self_mill'],
            'recycle': ['recycle', 'bounce_enemy'], 'forced_attack': ['forced_attack', 'attack_now', 'drawback']}
 REMOVED = {'stat_set', 'stat_swap', 'attack_mod', 'control'}
+# own or another unit's death, and leaving play (death_side.py, Kaptain's decision 20 Oct 2026): read per tag from its sentence
+DEATH = {'death_trigger', 'death_count'}
 
 def primary(k): return PRIMARY.get(k, [k])
 # The review records (tools/reviews*, snap_review.json, regression.tsv) are in the tree v3 ids since 19 Oct 2026 (fixes/f15).
@@ -225,7 +231,10 @@ def apply(c):
     c.executemany('INSERT INTO concepts VALUES(?,?,?,?)', [(i, d['name'], d['facet'], description(i, ex)) for i, d in TREE.items()])
     c.executemany('INSERT INTO concept_parents VALUES(?,?)', [(i, p) for i, d in TREE.items() for p in d['parents']])
     text = dict(q('SELECT id, text FROM entities'))
-    old = set(MAP) | REMOVED
+    old = set(MAP) | REMOVED | DEATH
+    ename = dict(q('SELECT id, name FROM entities')); egame = dict(q('SELECT id, game FROM entities'))
+    spell = {i for i, cat in q('SELECT id, category FROM entities') if cat in death_side.SPELLS}
+    dsplit = lambda k, e, cl: death_side.split(k, cl, ename.get(e), e in spell, egame.get(e))
     kept = dict(q('SELECT old_id, kept_id FROM merged_entities')) if q("SELECT 1 FROM sqlite_master WHERE name='merged_entities'") else {}
     import csv
     rev = [r for r in csv.DictReader(open(os.path.join(HERE, 'regression.tsv'), encoding='utf-8'), delimiter='\t')]
@@ -234,8 +243,9 @@ def apply(c):
     dropped = {(r['e'], r['concept']) for r in rev if r['expect'] == 'absent'}
     moved = {}
     for rid, e, k, role, m, ev in q('SELECT rowid, entity, concept, role, method, evidence FROM entity_concepts WHERE concept IN (%s)' % ','.join('?' * len(old)), *old):
-        new = targets(k, text.get(e))
-        if k not in REMOVED:
+        new = dsplit(k, e, clause(ev, text.get(e))) if k in DEATH else targets(k, text.get(e))
+        if k in DEATH: new = {n for n in new if n == k or (e, n) not in dropped} or {k}
+        elif k not in REMOVED:
             new = {n for n in new if n == k or (e, n) not in dropped}
             if not new & set(primary(k)): new.add(k)   # nothing it may move to: it stays as it is
         if k not in new:
@@ -264,7 +274,7 @@ def apply(c):
     te = 0
     for row in q('SELECT rowid, entity, game, trigger, effect, clause, frequency, basis FROM trigger_effect WHERE trigger IN (%s) OR effect IN (%s)' % (','.join('?' * len(old)), ','.join('?' * len(old))), *old, *old):
         rid, e, g, t, f, cl, fr, b = row
-        ts = targets(t, cl) if t in old else {t}; fs = targets(f, cl) if f in old else {f}
+        ts = (dsplit(t, e, cl) if t in DEATH else targets(t, cl)) if t in old else {t}; fs = targets(f, cl) if f in old and f not in DEATH else {f}
         c.execute('DELETE FROM trigger_effect WHERE rowid=?', (rid,)); te += 1
         for a in ts:
             for z in fs:

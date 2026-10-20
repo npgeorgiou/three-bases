@@ -37,7 +37,7 @@
 "741527": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "whenever ANY minion dies"
 ]
 ],
@@ -1158,6 +1158,10 @@
 [
 "terrain",
 "the space turns into Shadow Creep"
+],
+[
+"on_kill",
+"If it dies"
 ]
 ],
 "by": "A=B"
@@ -1220,7 +1224,7 @@
 "Deal 1 damage to a minion"
 ],
 [
-"death_trigger",
+"on_kill",
 "If it dies this turn"
 ],
 [
@@ -1306,7 +1310,7 @@
 "deals 3 damage to enemies around it"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When it dies"
 ]
 ],
@@ -1512,7 +1516,7 @@
 "741798": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a friendly minion dies this turn"
 ],
 [
@@ -3135,7 +3139,7 @@
 "742047": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a Spriggin is destroyed"
 ],
 [
@@ -3932,6 +3936,10 @@
 [
 "random_effect",
 "random Battle Pet"
+],
+[
+"on_kill",
+"If it dies"
 ]
 ],
 "by": "A=B"
@@ -4186,7 +4194,7 @@
 "742201": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a friendly Battle Pet dies"
 ],
 [
@@ -4452,6 +4460,10 @@
 [
 "resource_gain",
 "permanently gain 1 mana crystal"
+],
+[
+"on_kill",
+"If it dies"
 ]
 ],
 "by": "C"
@@ -5049,7 +5061,7 @@
 "742351": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a friendly minion is destroyed"
 ],
 [

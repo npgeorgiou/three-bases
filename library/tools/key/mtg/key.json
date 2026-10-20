@@ -337,7 +337,7 @@
 "mana value 3 or less"
 ],
 [
-"death_trigger",
+"leave_trigger",
 "When this enchantment leaves the battlefield"
 ],
 [
@@ -1160,7 +1160,7 @@
 "Myrkul has indestructible"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever another nontoken creature you control dies"
 ],
 [
@@ -1475,7 +1475,7 @@
 "with deathtouch"
 ],
 [
-"death_trigger",
+"leave_trigger",
 "When this token leaves the battlefield"
 ],
 [
@@ -1587,7 +1587,7 @@
 "768050": {
 "tags": [
 [
-"death_trigger",
+"other_leave_trigger",
 "Whenever a creature you control leaves the battlefield"
 ],
 [
@@ -2383,7 +2383,7 @@
 "draw a card"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a face-down creature you control dies"
 ],
 [
@@ -2690,7 +2690,7 @@
 "gets +2/+2"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever equipped creature dies"
 ],
 [
@@ -3146,7 +3146,7 @@
 "gets +1/+1 for each oil counter on it"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever another creature or artifact you control is put into a graveyard from the battlefield"
 ],
 [
@@ -3495,6 +3495,10 @@
 ],
 [
 "death_trigger",
+"Whenever Avacyn or another nontoken creature you control dies"
+],
+[
+"other_death_trigger",
 "Whenever Avacyn or another nontoken creature you control dies"
 ],
 [
@@ -4264,7 +4268,7 @@
 "772754": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever one or more creatures die"
 ],
 [
@@ -4305,7 +4309,7 @@
 "Until end of turn"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When enchanted Plains is put into a graveyard"
 ],
 [
@@ -4476,7 +4480,7 @@
 "mill three cards"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a creature dies"
 ],
 [
@@ -7200,7 +7204,7 @@
 "776616": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an artifact is put into a graveyard from the battlefield"
 ],
 [
@@ -7694,7 +7698,7 @@
 "Whenever another creature you control enters"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "or dies"
 ],
 [
@@ -7878,7 +7882,7 @@
 "enters with two +1/+1 counters"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a creature you control with a +1/+1 counter on it dies"
 ],
 [
@@ -8052,7 +8056,7 @@
 "you gain 10 life"
 ],
 [
-"death_trigger",
+"leave_trigger",
 "When this enchantment leaves the battlefield"
 ],
 [
@@ -8111,7 +8115,7 @@
 "777793": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a creature you control dies"
 ],
 [
@@ -8472,6 +8476,10 @@
 ],
 [
 "death_trigger",
+"Whenever this creature or another Wolf or Werewolf you control dies"
+],
+[
+"other_death_trigger",
 "Whenever this creature or another Wolf or Werewolf you control dies"
 ],
 [
@@ -10642,7 +10650,7 @@
 "deals 2 damage to target creature"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a Zombie an opponent controls dies"
 ],
 [
@@ -12188,7 +12196,7 @@
 "creature cards from graveyards"
 ],
 [
-"death_trigger",
+"leave_trigger",
 "When this creature leaves the battlefield"
 ],
 [
@@ -13183,7 +13191,7 @@
 "Menace"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an attacking creature you control or a blocking creature an opponent controls dies"
 ],
 [
@@ -14096,7 +14104,7 @@
 "Survivors"
 ],
 [
-"death_trigger",
+"leave_trigger",
 "When Varchild leaves the battlefield"
 ],
 [
@@ -14191,7 +14199,7 @@
 "Activate only during your turn"
 ],
 [
-"death_trigger",
+"leave_trigger",
 "When Yes Man leaves the battlefield"
 ],
 [

@@ -924,7 +924,7 @@
 "Transform all friendly minions into ones that cost (1) more"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "when they die"
 ],
 [
@@ -1258,7 +1258,7 @@
 "743611": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a friendly Beast dies"
 ],
 [
@@ -1445,7 +1445,7 @@
 "743727": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever your weapon is destroyed"
 ],
 [
@@ -1555,7 +1555,7 @@
 "743800": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever one of your other minions dies"
 ],
 [
@@ -2394,7 +2394,7 @@
 "Rush"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "After a friendly minion dies"
 ],
 [
@@ -5254,7 +5254,7 @@
 "746832": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "After a friendly Beast dies"
 ],
 [
@@ -6207,7 +6207,7 @@
 "Summon a 0/4 Entr\u00e9e for your opponent"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When it dies"
 ],
 [

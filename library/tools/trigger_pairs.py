@@ -27,6 +27,12 @@ if len(sys.argv) < 3 or sys.argv[2] != 'check':
             except re.error: pass
     for con, ps in EXTRA.items():
         for p in ps: pats.setdefault(None, []).append((con, 'trigger', re.compile(p, re.I)))
+    if sys.argv[2:] == ['pairs_only']:   # the death and leave-play triggers split by whose (death_side.py): which clause holds them, for pairing only
+        import os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import death_side as DS
+        for con in ('death_trigger', 'other_death_trigger', 'leave_trigger', 'other_leave_trigger'):
+            root.setdefault(con, 'trigger')
+        pats.setdefault(None, []).extend([('death_trigger', 'trigger', DS.OWN_KW), ('other_death_trigger', 'trigger', re.compile(r"\b" + DS.DIE + r"\b", re.I)),
+                                          ('leave_trigger', 'trigger', re.compile(DS.LEAVE, re.I)), ('other_leave_trigger', 'trigger', re.compile(DS.LEAVE, re.I))])
     have = {(e, t, f) for e, t, f in q('SELECT entity, trigger, effect FROM trigger_effect')}
     ONLY = sys.argv[2:] == ['pairs_only']
     tags = {}

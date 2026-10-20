@@ -420,7 +420,7 @@
 "Once per game"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "suffers a Dead result"
 ],
 [
@@ -1347,7 +1347,7 @@
 "add one new Lineman player"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "suffers a Dead result"
 ]
 ],

@@ -820,7 +820,7 @@
 "748313": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a friendly minion dies"
 ],
 [
@@ -901,7 +901,7 @@
 "748344": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "After a friendly Beast dies"
 ],
 [
@@ -1122,7 +1122,7 @@
 "748417": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "After a friendly Beast dies"
 ],
 [
@@ -1400,7 +1400,7 @@
 "take 25 damage"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "After another hero dies"
 ],
 [
@@ -1891,7 +1891,7 @@
 "748696": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When another friendly Elemental dies"
 ],
 [
@@ -5536,7 +5536,7 @@
 "Secret"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When a friendly minion dies"
 ],
 [
@@ -5561,7 +5561,7 @@
 "Secret"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When your second minion dies in a turn"
 ],
 [

@@ -55,7 +55,7 @@
 "741527": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "whenever ANY minion dies"
 ]
 ],

@@ -919,7 +919,7 @@
 "750740": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When another ally dies"
 ],
 [
@@ -4716,7 +4716,7 @@
 "Kill up to 2 allies"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When you slay another ally"
 ],
 [
@@ -4741,7 +4741,7 @@
 "751956": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When another ally dies"
 ],
 [
@@ -5921,7 +5921,7 @@
 "Fearsome"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "the first time another unit dies"
 ],
 [
@@ -6239,7 +6239,7 @@
 "Kill up to 2 allies"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "When you slay another ally"
 ],
 [

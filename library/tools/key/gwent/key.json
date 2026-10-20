@@ -1119,7 +1119,7 @@
 "756361": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever a unit is destroyed during your turn"
 ],
 [
@@ -2671,7 +2671,7 @@
 "756611": {
 "tags": [
 [
-"death_count",
+"other_death_trigger",
 "Whenever a unit is destroyed during your turn"
 ],
 [
@@ -2765,7 +2765,7 @@
 "While in hand, deck, or on the battlefield"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "whenever an enemy unit is destroyed or Banished during your turn"
 ],
 [
@@ -3908,7 +3908,7 @@
 "Coins"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an enemy unit with Bounty is destroyed"
 ],
 [

@@ -156,6 +156,8 @@ FEEDS = {   # which effects set off which triggers (Claude's mapping)
     'on_ally_play': {'summon', 'revive', 'free_play'}, 'death_count': {'sacrifice', 'destroy', 'self_destruct', 'board_wipe', 'aoe_damage'},
     'on_damaged': {'damage', 'friendly_fire'}, 'on_attack': {'attack_now', 'haste', 'multi_attack', 'forced_attack'},
     'on_kill': {'destroy', 'deathtouch'}, 'on_play': {'blink', 'copy', 'return_to_hand'}, 'death_trigger': {'sacrifice', 'self_destruct', 'destroy'},
+    'other_death_trigger': {'sacrifice', 'self_destruct', 'destroy', 'board_wipe', 'aoe_damage'}, 'leave_trigger': {'sacrifice', 'self_destruct', 'destroy', 'blink', 'return_to_hand'},
+    'other_leave_trigger': {'sacrifice', 'self_destruct', 'destroy', 'board_wipe', 'blink', 'return_to_hand', 'banish', 'bounce_enemy'},
     'on_life_loss': {'life_payment', 'friendly_fire'}, 'on_lifegain': {'heal', 'lifesteal'}, 'on_draw': {'draw', 'tutor'}, 'on_discard': {'discard'},
     'on_sacrifice': {'sacrifice'}, 'on_targeted': set(), 'on_block': set()}
 

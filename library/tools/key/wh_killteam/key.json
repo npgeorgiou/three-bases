@@ -3447,7 +3447,7 @@
 "BLOODED"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "when a friendly BLOODED operative with a Blooded token is incapacitated"
 ],
 [
@@ -3489,7 +3489,7 @@
 "Once per Turning Point"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "when a ready friendly BROOD BROTHER operative would be incapacitated"
 ],
 [
@@ -4193,6 +4193,10 @@
 [
 "stat_gain",
 "Add 1 to its APL"
+],
+[
+"death_trigger",
+"incapacitated"
 ]
 ],
 "by": "C"
@@ -5038,7 +5042,7 @@
 "790315": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Each time a friendly NOVITIATE operative is incapacitated"
 ],
 [
@@ -5318,6 +5322,10 @@
 [
 "delayed",
 "Place a Mine token"
+],
+[
+"death_trigger",
+"incapacitated"
 ]
 ],
 "by": "C"
@@ -6692,7 +6700,7 @@
 "adding 1 if that enemy operative is wounded"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Whenever an enemy operative is incapacitated within this operative\u2019s control range"
 ],
 [
@@ -9176,7 +9184,7 @@
 "Roll a dice"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "a friendly COMMANDER is taken out of action"
 ],
 [
@@ -9342,6 +9350,10 @@
 [
 "tribal",
 "SERGEANT VETERAN"
+],
+[
+"other_death_trigger",
+"incapacitated"
 ]
 ],
 "by": "A=B"
@@ -10077,7 +10089,7 @@
 "816530": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "If a friendly SERGEANT VETERAN operative is incapacitated"
 ],
 [

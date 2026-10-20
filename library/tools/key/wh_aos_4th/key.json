@@ -7346,7 +7346,7 @@
 "you can re-roll the casting roll"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Each time an enemy unit is destroyed"
 ],
 [
@@ -8970,6 +8970,10 @@
 [
 "buff",
 "add 1 to the number of dice rolled when making charge rolls"
+],
+[
+"other_death_trigger",
+"slain"
 ]
 ],
 "by": "C"
@@ -9259,7 +9263,7 @@
 "as if it had the Hero keyword"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "Each time a visible enemy unit within 12\" of this unit is destroyed"
 ],
 [
@@ -10452,7 +10456,7 @@
 "794366": {
 "tags": [
 [
-"death_count",
+"other_death_trigger",
 "Each time a model (friendly or enemy) is slain"
 ],
 [
@@ -11758,7 +11762,7 @@
 "measure to this Manifestation instead"
 ],
 [
-"death_trigger",
+"leave_trigger",
 "If this Manifestation is banished"
 ]
 ],
@@ -12640,7 +12644,7 @@
 "815271": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "Each time a friendly Big or Little model is slain"
 ],
 [

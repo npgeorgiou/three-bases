@@ -38,6 +38,7 @@ steps() {   # $1 = db
   run regression.py "$D" enforce
   run concept_tree.py "$D" apply
   for f in reviews/*.json reviews_outcome/*.json; do g=$(basename "$f" .json); run apply_review.py "$D" "$g" "$f" new; done   # reviews are in the new ids (fixes/f15)
+  run leave_triggers.py "$D"   # leave-play triggers by whose (death_side.py); after the tree move, which knows the new ids
   run regression.py "$D" enforce_new
   run relations_added.py "$D"
   run pattern_fix.py "$D"

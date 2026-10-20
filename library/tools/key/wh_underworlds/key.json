@@ -392,7 +392,7 @@
 "Reaction:"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "takes a fighter out of action"
 ],
 [
@@ -973,7 +973,7 @@
 "Reaction: After an action or ploy that takes your leader out of action"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "takes your leader out of action"
 ],
 [
@@ -1058,7 +1058,7 @@
 "Score this"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "taken out of action"
 ],
 [
@@ -1408,7 +1408,7 @@
 "Score this"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "taken out of action by a lethal hex"
 ],
 [
@@ -1936,7 +1936,7 @@
 "Score this"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "taken out of action by a spell"
 ]
 ],
@@ -2376,7 +2376,7 @@
 "Reaction"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "is taken out of action"
 ],
 [
@@ -2923,7 +2923,7 @@
 "Reaction: After this fighter is removed from the battlefield"
 ],
 [
-"death_trigger",
+"leave_trigger",
 "this fighter is removed from the battlefield"
 ],
 [
@@ -3535,7 +3535,7 @@
 "764573": {
 "tags": [
 [
-"death_trigger",
+"other_death_trigger",
 "When an enemy fighter is taken out of action"
 ],
 [
@@ -4162,7 +4162,7 @@
 "Reaction"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "enough damage to a friendly fighter to take that fighter out of action"
 ],
 [
@@ -4191,7 +4191,7 @@
 "Reaction: Play this after a gambit or Attack action that takes one or more friendly fighters out of action"
 ],
 [
-"death_trigger",
+"other_death_trigger",
 "takes one or more friendly fighters out of action"
 ],
 [
