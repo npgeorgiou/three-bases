@@ -1,6 +1,7 @@
 """Drop entries (any load) that no pattern or keyword reached (no concept tag and no keyword link), as the first build
 dropped them (README: the library is for mechanics). An entry a hand review gives a tag (a 'present' line in regression.tsv) is
-kept: the review step adds its tag later (this matters when a game is reloaded). Run after game_patterns.py. Logged per game.
+kept: the review step adds its tag later (this matters when a game is reloaded); so is an entry of the answer key (tools/key/<game>/key.json),
+which is measured by id. Run after game_patterns.py. Logged per game.
 Usage: drop_untagged.py <db>"""
 import csv, os, sqlite3, sys
 c = sqlite3.connect(sys.argv[1])
@@ -8,6 +9,8 @@ reviewed = {int(r['entity']) for r in csv.DictReader(open(os.path.join(os.path.d
 rows = c.execute("""SELECT id, game FROM entities e WHERE category NOT IN ('keyword','tribe')
     AND NOT EXISTS (SELECT 1 FROM entity_concepts x WHERE x.entity=e.id)
     AND NOT EXISTS (SELECT 1 FROM entity_links l WHERE l.src=e.id AND l.rel LIKE '%keyword')""").fetchall()
+import glob, json
+for f in glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'key', '*', 'key.json')): reviewed |= {int(i) for i in json.load(open(f, encoding='utf-8'))}
 rows = [(i, g) for i, g in rows if i not in reviewed]
 n = {}
 for i, g in rows:

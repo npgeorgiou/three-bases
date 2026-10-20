@@ -1,7 +1,7 @@
 # Library: state and next steps (20 Oct 2026, evening)
 
 Kaptain asked for README suggestions 1, 2, 3, 4, 5, 6, 7 and 9, then a new real-world test. Done in this chat: 2, 3, 4.
-Open: 1 (started), 5 (started), 6, 7, 9. The database file was not changed in this chat.
+Open: 1 (Into the Breach done, 18 games left), 5 (started), 6, 7, 9. The database file was not changed in this chat.
 
 Rules for the next chat: **no readers, judges or agents** without Kaptain's OK and a measured cost. Scripts and builds first.
 Commit and push after each step. Read `ADDING_GAMES.md` sections 4b and 4c before writing any pattern. **The library itself is
@@ -23,15 +23,16 @@ never changed to fit a case**: when a source writes a card's name differently, c
   Darkest Dungeon 3, Inscryption 3, Kill Team 8, Monster Train 9).
 
 ## Mechanics check (suggestion 1), progress
-- **Into the Breach:** `tools/mechanics/into_the_breach.txt` written; its gaps (line attacks, self damage, flipped attacks,
-  cracked tiles, deployed tanks) have patterns in `tools/patterns/into_the_breach.txt`, plus switch-offs for "tile" (terrain) and
-  "turns into" (transform: tiles turning into water). Reloads now keep every keyword entry's current tags (`export_game.py`
-  keep_tags): before, a reload re-tagged keywords with today's patterns and lost the old one-time removals, so cards inherited
-  wrong tags again. Last reload in scratch: regression 21282/21282, real-world 245/405 (unchanged), key missed 43.2 -> 39.4 per
-  100 entries (better), wrong 74.0 -> 79.4 (worse). **Not kept yet.** Next: run `final_compare.py` per concept on the reloaded
-  file (the scratch script that breaks wrong tags down by concept and method is easy to rewrite: key.load + K.narrow, as in
-  final_compare.py) and fix the patterns behind the extra wrong tags (multi_target_attack, terrain, forced_movement); keep the
-  reload once wrong is at or below 74.0. Then do the same for the other 18 older games.
+- **Into the Breach: done and kept (20 Oct 2026).** Research on the wiki (Weapons, Status_Effects, Tiles, Environments,
+  Passives, Pilots, Squads, Vek, Tips_and_tricks) and two squad guides gave the checklist `tools/mechanics/into_the_breach.txt`
+  (36 mechanics). Patterns for its gaps and switch-offs for general wordings that misread this game are in
+  `tools/patterns/into_the_breach.txt`, each with its reason. Reloaded and kept: key wrong 74.0 -> 73.7 and missed 43.2 -> 39.4
+  per 100 entries, regression 21282/21282, real-world 245 -> 246, other games unchanged (insert-only check). One checklist line
+  still shows a gap (water/chasm deaths, 7 Vek entries). Reload fixes made on the way: keyword entries keep their tags
+  (`export_game.py` keep_tags), and `drop_untagged.py` keeps entries of the answer key and of regression.tsv.
+- **The other 18 older games:** not started. Same procedure (ADDING_GAMES.md 0.1, then 0.1-4), one game per pass, keep only when
+  `final_compare.py` wrong and missed are not worse than before, regression passes and real-world is not lower. Measure with a
+  script like `keydiff` (new wrong key tags by concept and entry, base vs reloaded), which made each fix here a single look.
 
 ## Next steps, in order
 1. **Combos (suggestion 7, scripts only).** `realworld_why.py` lists 11 pairs with both cards and no connection: Unleash the

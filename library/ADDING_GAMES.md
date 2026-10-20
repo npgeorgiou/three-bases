@@ -8,7 +8,12 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 - Do not repeat experiments in loops. Before you choose a fix, break the errors down by where they come from (the `method` column).
 
 ## 0. Before any pattern: the game's material, then its cards
-1. Read 2-4 guide or wiki pages per game (faction overviews, keyword glossary, rules summary). Write every mechanic they name,
+0.1 **Research the game properly first.** Not 2-4 pages: go through the game's wiki (its rules or gameplay pages, the full
+   keyword/status/effect glossary, every faction, class or squad page, the unit/enemy and environment pages) and at least two
+   strategy guides or community pages on how it is played (builds, archetypes, combos). Note every mechanic, status, keyword and
+   board rule the game has, with the page it comes from. Use the built-in browser for pages WebFetch cannot read (fandom wikis,
+   pages behind scripts). This is the checklist the patterns are measured against; a thin checklist hides gaps.
+1. From that research, write every mechanic it names,
    with the expected concept and the wording to look for, into `tools/mechanics/<game>.txt` (`name|concept|regex`, source URL in
    a comment). Write the real-world cases (section 6) from the same pages now, so tagging and test read the same sources.
 2. Read a random sample of about 300 cards in one go (a script prints `name|faction|text`, one line each, about 20k tokens), or
