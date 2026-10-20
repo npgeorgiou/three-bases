@@ -18,3 +18,5 @@ archetype	Aggression	aggro_tempo	Attack bonuses and offensive unit keywords	http
 archetype	Aggression	burn	is about damage, damage, damage	https://starwarsunlimited.com/articles/aggression
 archetype	Vigilance	fortress	guard-type Units that have strong HP	https://cardgamer.com/games/star-wars/aspects-in-star-wars-unlimited/
 archetype	Cunning	disruption	Control and manipulation of your opponent's Units features heavily	https://cardgamer.com/games/star-wars/aspects-in-star-wars-unlimited/
+signature	Aggression	friendly_fire	dealing damage to your own units or base as part of an effect	https://starwarsunlimited.com/articles/aggression
+signature	Command	stat_gain	Experience tokens	https://starwarsunlimited.com/articles/command
