@@ -17,41 +17,42 @@ cd "$(dirname "$0")"
 P="python3 -I"
 steps() {   # $1 = db
   D="$1"
-  $P compact_text.py "$D" expand
-  $P concept_tree.py "$D" restore
-  $P concept_defs.py "$D"
-  $P game_patterns.py "$D" patterns
-  $P drop_untagged.py "$D"
-  $P fix_grants.py "$D"
-  $P fixes/f03_grant_not_does.py "$D"
-  for f in reviews/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f" old; done
-  $P kw_sync.py "$D" wh_bloodbowl3 wh_killteam wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:wh_underworlds h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th h:lorcana h:swu h:tesl h:monster_train
-  $P propagate.py "$D"
-  $P keyword_defs.py "$D"
-  $P outcome_tree.py "$D"
-  for f in reviews_outcome/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f" old; done
-  $P link_types.py "$D"
-  $P engine_links.py "$D"
-  $P design_problems.py "$D"
-  $P trigger_pairs.py "$D"
-  $P regression.py "$D" enforce
-  $P concept_tree.py "$D" apply
-  for f in reviews/*.json reviews_outcome/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f" new; done   # reviews are in the new ids (fixes/f15)
-  $P regression.py "$D" enforce_new
-  $P relations_added.py "$D"
-  $P pattern_fix.py "$D"
-  $P kw_links.py "$D"
-  $P trigger_pairs.py "$D" pairs_only   # again after the tree move: pairs for the tags added since (new patterns, key wins)
-  $P parent_rule.py "$D"
-  $P final_revert.py "$D"
-  $P key_wins.py apply "$D"
-  $P dedupe.py "$D"
-  $P frequency.py "$D"
-  $P fixes/f07_keywords_structure.py "$D"
-  $P fixes/f05_factions.py "$D"
-  $P distinct.py "$D"
+  run() { $P "$@"; $P step_log.py "$D" "$(echo "$*" | sed "s#$D##")"; }   # each step, then what it removed (step_log.py)
+  run compact_text.py "$D" expand
+  run concept_tree.py "$D" restore
+  run concept_defs.py "$D"
+  run game_patterns.py "$D" patterns
+  run drop_untagged.py "$D"
+  run fix_grants.py "$D"
+  run fixes/f03_grant_not_does.py "$D"
+  for f in reviews/*.json; do g=$(basename "$f" .json); run apply_review.py "$D" "$g" "$f" old; done
+  run kw_sync.py "$D" wh_bloodbowl3 wh_killteam wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:wh_underworlds h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th h:lorcana h:swu h:tesl h:monster_train
+  run propagate.py "$D"
+  run keyword_defs.py "$D"
+  run outcome_tree.py "$D"
+  for f in reviews_outcome/*.json; do g=$(basename "$f" .json); run apply_review.py "$D" "$g" "$f" old; done
+  run link_types.py "$D"
+  run engine_links.py "$D"
+  run design_problems.py "$D"
+  run trigger_pairs.py "$D"
+  run regression.py "$D" enforce
+  run concept_tree.py "$D" apply
+  for f in reviews/*.json reviews_outcome/*.json; do g=$(basename "$f" .json); run apply_review.py "$D" "$g" "$f" new; done   # reviews are in the new ids (fixes/f15)
+  run regression.py "$D" enforce_new
+  run relations_added.py "$D"
+  run pattern_fix.py "$D"
+  run kw_links.py "$D"
+  run trigger_pairs.py "$D" pairs_only   # again after the tree move: pairs for the tags added since (new patterns, key wins)
+  run parent_rule.py "$D"
+  run final_revert.py "$D"
+  run key_wins.py apply "$D"
+  run dedupe.py "$D"
+  run frequency.py "$D"
+  run fixes/f07_keywords_structure.py "$D"
+  run fixes/f05_factions.py "$D"
+  run distinct.py "$D"
 }
-rm -f "$OUT"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the database is stored without its indexes (indexes.py)
+rm -f "$OUT" "$OUT.steps.tsv" "$OUT.work.steps.tsv"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the database is stored without its indexes (indexes.py)
 if [ $# -gt 0 ]; then   # insert-only: the steps run on a work copy holding only the new games; their rows are then added
   GAMES=$(for a in "$@"; do echo "${a%%=*}"; done | sort -u | tr '\n' ' ')
   WORK="$OUT.work"; rm -f "$WORK"; cp "$OUT" "$WORK"
@@ -64,6 +65,7 @@ if [ $# -gt 0 ]; then   # insert-only: the steps run on a work copy holding only
 else
   steps "$OUT"
 fi
+$P step_log.py "$OUT" --done
 $P signature.py "$OUT"
 $P precision.py "$OUT"
 $P finalize.py "$OUT"

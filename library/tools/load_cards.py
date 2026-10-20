@@ -16,13 +16,16 @@ For each new entry:
     generates (names of 5+ characters that no older entry shares).
 A name the game already has in the same faction is skipped (counted in load_log), unless the card is created and the name is free with ' (created)'.
 Trigger -> effect pairs, frequency, outcome concepts, link rules and signatures are made by the later build steps.
-Idempotent per tag: entries with ext_id 'add:<tag>:...' are removed first. Usage: load_cards.py <db> <game> <json>"""
+Idempotent per tag: entries with ext_id 'add:<tag>:...' are removed first. A file from export_game.py (_reload) keeps every entry's id,
+ext_id and name, skips no duplicate name, and derives no links: it restores the game's links (_links) with their inherited
+keyword tags. Usage: load_cards.py <db> <game> <json>"""
 import json, os, re, sqlite3, sys
 db, G, path = sys.argv[1:4]
 c = sqlite3.connect(db); q = lambda s, *a: c.execute(s, a).fetchall()
 here = os.path.dirname(os.path.abspath(__file__))
 d = json.load(open(path, encoding='utf-8')); TAG = d['_tag']; PRE = f'add:{TAG}:'
-for (i,) in q("SELECT id FROM entities WHERE game=? AND ext_id LIKE ?", G, PRE + '%'):
+RELOAD = d.get('_reload', False)   # export_game.py: each entry keeps its id and ext_id, so id-keyed reviews, key and regression still apply
+for (i,) in [] if RELOAD else q("SELECT id FROM entities WHERE game=? AND ext_id LIKE ?", G, PRE + '%'):
     for s in ("DELETE FROM entity_concepts WHERE entity=?", "DELETE FROM entity_links WHERE src=? OR dst=?", "DELETE FROM trigger_effect WHERE entity=?", "DELETE FROM entities WHERE id=?"):
         c.execute(s, (i,) * s.count('?'))
 sys.path.insert(0, here); from concept_tree import primary   # pattern files use the old ids (game_patterns.py runs before the tree move)
@@ -49,7 +52,8 @@ nid = q('SELECT max(id) FROM entities')[0][0] + 1
 n = skipped = 0; new_ids = []
 for card in d['cards']:
     name = card['name']
-    if (name, card.get('faction')) in seen:
+    if RELOAD: nid = card['id']
+    elif (name, card.get('faction')) in seen:
         if not card.get('created') or (name + ' (created)', card.get('faction')) in seen: skipped += 1; continue
         name += ' (created)'
     text = card.get('text') or ''
@@ -66,7 +70,7 @@ for card in d['cards']:
     if card.get('created'):   # created cards carry edition 'non-collectible', as in the earlier loads; the source's set goes to extra.set
         card['extra'] = dict(card.get('extra') or {}, **({'set': card['edition']} if card.get('edition') else {})); card['edition'] = 'non-collectible'
     c.execute("INSERT INTO entities(id, game, ext_id, name, category, source_type, edition, faction, subtypes, rarity, cost, cost_num, stats, text, extra) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-              (nid, G, PRE + str(card['ext_id']), name, card['category'], card.get('source_type'), card.get('edition'), card.get('faction'),
+              (nid, G, card['ext_id'] if RELOAD else PRE + str(card['ext_id']), name, card['category'], card.get('source_type'), card.get('edition'), card.get('faction'),
                json.dumps(sub) if sub else None, card.get('rarity'), cost, cn, stats, text or None, json.dumps(card['extra']) if card.get('extra') else None))
     for con, role, p in pats:
         m = p.search(low)
@@ -74,7 +78,7 @@ for card in d['cards']:
     for con, role, ev in card.get('tags') or []:   # data rules the converter read from the card's fields (method data_rule)
         c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (nid, con, role, 'data_rule', ev))
     listed = {k.lower() for k in card.get('keywords') or []}
-    for k, kid, start, any_ in kwrx:
+    for k, kid, start, any_ in [] if RELOAD else kwrx:
         own = start.search(mtext) or (k in listed and not any_.search(mtext))   # listed and not written out (e.g. a face name) = its own
         if FIELD and not (k in listed and own) and re.search(r'\b(have|has|gains?|gives?|give it)\b[^.]{0,40}\b' + re.escape(k) + r'\b', mtext):
             c.execute("INSERT OR IGNORE INTO entity_links VALUES(?,?,?,?)", (nid, 'grants_keyword', kid, 'keywords field, given to other cards'))
@@ -86,9 +90,9 @@ for card in d['cards']:
             c.execute("INSERT OR IGNORE INTO entity_links VALUES(?,?,?,?)", (nid, 'mentions_keyword', kid, 'keywords field, named in the text'))
         elif not FIELD and any_.search(mtext):
             c.execute("INSERT OR IGNORE INTO entity_links VALUES(?,?,?,?)", (nid, 'mentions_keyword', kid, 'keyword in text'))
-    for s in sub or []:
+    for s in [] if RELOAD else sub or []:
         if s.lower() in tribes: c.execute("INSERT OR IGNORE INTO entity_links VALUES(?,?,?,?)", (nid, 'has_type', tribes[s.lower()], 'subtypes field'))
-    for sent in re.split(r'(?<=[.\n])', mtext):
+    for sent in [] if RELOAD else re.split(r'(?<=[.\n])', mtext):
         hits = [(t, i, m) for t, i, rx in trx for m in [rx.search(sent)] if m]
         if len(hits) >= 4: continue
         for t, i, m in hits:
@@ -96,18 +100,18 @@ for card in d['cards']:
     if card.get('variant_of'):
         r = q("SELECT id FROM entities WHERE game=? AND name=? AND (faction IS ? OR faction=?) AND id<>?", G, card['variant_of'], card.get('faction'), card.get('faction'), nid)
         if r: c.execute("INSERT OR IGNORE INTO entity_links VALUES(?,?,?,?)", (nid, 'variant_of', r[0][0], card.get('variant_note', 'variant')))
-    byname[name] = nid; seen.add((name, card.get('faction'))); new_ids.append((nid, bool(card.get('created')))); nid += 1; n += 1
+    byname[name] = nid; seen.add((name, card.get('faction'))); new_ids.append((nid, bool(card.get('created')))); nid = max(nid + 1, q('SELECT max(id) FROM entities')[0][0] + 1); n += 1
 # names: "named X" -> references; a created entry named in a text -> generates
 L = 0
-names = sorted((x for x in byname if len(x) >= 4), key=len, reverse=True)
+names = [] if RELOAD else sorted((x for x in byname if len(x) >= 4), key=len, reverse=True)
 for k in range(0, len(names), 400):
     rx = re.compile(r'\bnamed (' + '|'.join(re.escape(x) for x in names[k:k + 400]) + r')\b')
-    for e, t in q("SELECT id, text FROM entities WHERE game=? AND ext_id LIKE ? AND text IS NOT NULL", G, PRE + '%'):
+    for e, t in q("SELECT id, text FROM entities WHERE id IN (%s) AND text IS NOT NULL" % ','.join(str(i) for i, _ in new_ids) if new_ids else "SELECT 1, 2 WHERE 0"):
         for m in set(rx.findall(t)):
             if byname[m] != e: L += c.execute("INSERT OR IGNORE INTO entity_links VALUES(?,?,?,?)", (e, 'references', byname[m], 'named ' + m)).rowcount
 cids = {i for i, cr in new_ids if cr}
-created = {nm.split(' (created)')[0]: i for i, nm in q("SELECT id, name FROM entities WHERE game=? AND ext_id LIKE ?", G, PRE + '%') if i in cids}
-cand = sorted((x for x in created if len(x) >= 5 and x not in orig), key=len, reverse=True)
+created = {nm.split(' (created)')[0]: i for i, nm in q("SELECT id, name FROM entities WHERE game=?", G) if i in cids}
+cand = [] if RELOAD else sorted((x for x in created if len(x) >= 5 and x not in orig), key=len, reverse=True)
 for k in range(0, len(cand), 400):
     rx = re.compile(r'\b(' + '|'.join(re.escape(x) for x in cand[k:k + 400]) + r')\b')
     for e, t in q("SELECT id, text FROM entities WHERE game=? AND text IS NOT NULL AND category NOT IN ('keyword','tribe')", G):
@@ -120,6 +124,10 @@ for u in d.get('extra_updates', []):
         e = json.loads(ex) if ex else {}; e.update(u['extra'])
         U += c.execute("UPDATE entities SET extra=? WHERE id=?", (json.dumps(e), i)).rowcount
 if U: print('extra updated on', U, 'entries')
+for a, rel, b, ev in d.get('_links', []):   # reload: the game's links as they were, with the keyword tags they pass on
+    L += c.execute("INSERT OR IGNORE INTO entity_links VALUES(?,?,?,?)", (a, rel, b, ev)).rowcount
+    if rel in ('has_keyword', 'grants_keyword'):
+        c.execute("INSERT OR IGNORE INTO entity_concepts SELECT ?, concept, %s, 'via_keyword', 'inherited from a reviewed keyword' FROM entity_concepts WHERE entity=?" % ("'grants'" if rel == 'grants_keyword' else 'role'), (a, b))
 if d.get('_game') and not q('SELECT 1 FROM games WHERE id=?', G):   # a new game: its row in games (id, name, family, edition, source, structure, notes)
     g = d['_game']; c.execute('INSERT INTO games VALUES(?,?,?,?,?,?,?)', tuple(g.get(k) for k in ['id', 'name', 'family', 'edition', 'source', 'structure', 'notes']))
 c.execute("DELETE FROM load_log WHERE game=? AND step LIKE ?", (G, f'loaded ({TAG})%'))

@@ -1,10 +1,14 @@
 """Drop entries (any load) that no pattern or keyword reached (no concept tag and no keyword link), as the first build
-dropped them (README: the library is for mechanics). Run after game_patterns.py. Logged per game. Usage: drop_untagged.py <db>"""
-import sqlite3, sys
+dropped them (README: the library is for mechanics). An entry a hand review gives a tag (a 'present' line in regression.tsv) is
+kept: the review step adds its tag later (this matters when a game is reloaded). Run after game_patterns.py. Logged per game.
+Usage: drop_untagged.py <db>"""
+import csv, os, sqlite3, sys
 c = sqlite3.connect(sys.argv[1])
+reviewed = {int(r['entity']) for r in csv.DictReader(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'regression.tsv'), encoding='utf-8'), delimiter='\t') if r['expect'] == 'present'}
 rows = c.execute("""SELECT id, game FROM entities e WHERE category NOT IN ('keyword','tribe')
     AND NOT EXISTS (SELECT 1 FROM entity_concepts x WHERE x.entity=e.id)
     AND NOT EXISTS (SELECT 1 FROM entity_links l WHERE l.src=e.id AND l.rel LIKE '%keyword')""").fetchall()
+rows = [(i, g) for i, g in rows if i not in reviewed]
 n = {}
 for i, g in rows:
     for s in ("DELETE FROM entity_links WHERE src=? OR dst=?", "DELETE FROM trigger_effect WHERE entity=?", "DELETE FROM entities WHERE id=?"):
