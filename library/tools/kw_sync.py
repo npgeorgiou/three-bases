@@ -1,6 +1,6 @@
 """Make inherited keyword concepts match the keyword's own (reviewed) concepts. For every entry that has a keyword (entity_links
 rel has_keyword or mentions_keyword), its via_keyword tags from those keywords become exactly the union of the keywords' current concepts and roles:
-stale inherited tags are removed and missing ones added. grants_keyword inheritance is left to fix_grants.py.
+stale inherited tags are removed and missing ones added. A keyword the card grants (grants_keyword) adds its does-concepts as grants (never removed here; fix_grants.py corrects roles).
 Usage: kw_sync.py <db> <game> [<game> ...]; a game written as h:<game> syncs has_keyword links only (mentions are not inherited)."""
 import sqlite3, sys
 db, games = sys.argv[1], sys.argv[2:]
@@ -26,5 +26,9 @@ for g in games:
                 c.execute("delete from entity_concepts where entity=? and concept=? and role=? and method='via_keyword'", (x, con, role)); ndel += 1
         for (con, role), ev in want.items():
             cur = c.execute("insert or ignore into entity_concepts values(?,?,?,?,?)", (x, con, role, 'via_keyword', ev)); nadd += cur.rowcount
+    # a keyword the card gives to other cards (grants_keyword): its 'does' concepts become the card's 'grants' tags
+    for x, k in q("select l.src, l.dst from entity_links l join entities e on e.id=l.src where e.game=? and l.rel='grants_keyword'", g):
+        for con, role in tags.get(k, ()):
+            if role == 'does': nadd += c.execute("insert or ignore into entity_concepts values(?,?,?,?,?)", (x, con, 'grants', 'via_keyword', kw[k])).rowcount
 c.commit()
 print('kw_sync removed', ndel, 'added', nadd)

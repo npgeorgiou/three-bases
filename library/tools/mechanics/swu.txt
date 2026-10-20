@@ -1,0 +1,27 @@
+# Mechanics the guides name (source in brackets): name|expected concept|wording on the cards. Checked with coverage.py --mechanics.
+# https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie , /command , /vigilance , /cunning , /aggression
+sentinel|taunt|\bsentinel\b
+restore|heal|\brestore \d
+heal|heal|\bheal \d
+defeat enemy|destroy|\bdefeat (a|an|each|all|that|up to \d+) (enemy |non-leader )*(unit|units|upgrade)
+experience tokens|stat_gain|\bexperience token
+shield tokens|shield|\bshield token|\bshielded\b
+exhaust units|disable|\bexhaust (a|an|each|all|that|up to \d+|the|another|it|enemy)\b
+when defeated|death_trigger|\bwhen defeated\b
+resource acceleration|resource_gain|\bas a resource\b|\binto (your )?resources\b
+many units|condition_count|\bif you control (\d|three|four|five) or more units\b|\bfor each (friendly )?unit\b
+capture|removal|\bcaptures?\b
+raid|stat_gain|\braid \d
+ambush|attack_now|\bambush\b
+overwhelm|excess_damage|\boverwhelm\b
+saboteur|taunt|\bsaboteur\b
+hidden|immunity|\bhidden\b
+ready units|untap|\bready (a|an|another|this|that|it|each|up to)\b
+return to hand|bounce_enemy|\breturn (a|an|that|each|up to)[^.]{0,40}to (its|their) owner.s hand
+when played|on_play|\bwhen played\b
+draw cards|draw|\bdraw (a|\d) cards?\b
+damage to base|direct_damage|\bdamage to (a|the|each|an enemy|your opponent.s) base\b
+discard from hand|discard|\bdiscards? (a|\d|that|those|up to)[^.]{0,30}\bfrom (your|their) hand
+initiative|turn_structure|\binitiative\b
+grit|stat_gain|\bgrit\b
+tokens|summon|\bcreate (a|\d|two|three)\b

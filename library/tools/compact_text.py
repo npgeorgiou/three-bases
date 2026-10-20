@@ -11,11 +11,12 @@ cl_form, cl_pos, cl_len, frequency, basis); for form 2, *_pos is the note id and
   compact_text.py <db> expand    first build step: positions -> text, so every build step keeps working on the text columns
 Readers (query.py) cut the text out with evidence_text() / clause_text(). Idempotent in both directions."""
 import os, re, sqlite3, sys
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__))); import reading as RD   # how patterns read text
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import indexes as IX
 
 def read_text(game, name, text):
     low = (text or '').lower()
-    if game == 'mtg': low = re.sub(r'\([^()]*\)', ' ', low)
+    low = RD.strip(game, low)
     for x in [name] + (name or '').split(' // '):
         if x and len(x) > 2: low = low.replace(x.lower(), 'name')
     return low

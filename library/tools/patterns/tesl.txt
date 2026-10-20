@@ -1,0 +1,15 @@
+# The Elder Scrolls: Legends (20 Oct 2026). Two lanes (field and shadow); runes on each player's health.
+# Old concept ids; a '!' line also switches off its new ids.
+# Slay is "when it kills on your turn", not deathtouch or destroy; items are equipment on a creature; Cover is protection.
+!deathtouch|\bslay\b
+!destroy|\bslay\b
+!items_consumables|\bitem
+!terrain|\bcover\b
+!condition_life|\bwounded\b
+condition_life|does|\bwounded\b
+direct_damage|does|\b(destroy|break)s? (an? |the |all )?(enemy |opponent.s )?runes?\b
+merge_attach|does|\bequip|\bitems? (to|on)\b
+# which lane a creature is in matters
+lane_identity|does|\b(field|shadow) lane\b|\bin (this|each|that|its|a|the other|either) lane\b
+# more magicka is ramp
+resource_gain|does|\b(gain|gains|increase|increases)\b[^.]{0,25}\bmagicka\b

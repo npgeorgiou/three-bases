@@ -1,0 +1,16 @@
+# Mechanics the guides name (source in brackets): name|expected concept|wording on the cards. Checked with coverage.py --mechanics.
+# https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+atronachs|summon|\batronach
+equip items|merge_attach|\bequip|\bitem
+random spells|random_effect|\brandom
+summon many|summon|\bsummon (a|an|two|three|\d)
+take control|steal|\b(take|gain|steal)s? control\b|\bsteal\b
+lethal|deathtouch|\blethal\b
+move lanes|movement|\bmove\b|\bswitch lanes?\b|\bother lane\b
+cover|immunity|\bcover\b|\bshadow lane\b
+pilfer|on_attack|\bpilfer\b
+guard|taunt|\bguard\b
+increase magicka|resource_gain|\bmagicka\b
+healing|heal|\bheal|\bgain \d+ health\b|\bdrain\b
+big creatures|stat_condition|\bwith \d+ (power|health) or (more|greater)\b
+prophecy|free_play|\bprophecy\b

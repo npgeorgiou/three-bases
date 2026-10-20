@@ -4,6 +4,7 @@ imply is replaced, so the parent and child rule (parent_rule.py) never removes a
 (game NULL) of the narrowed concepts are rewritten to match, and those concepts are re-derived on every entry (Marvel Snap
 excluded: it has its own tagging). Hand-reviewed tags (regression.tsv) are kept. Usage: concept_defs.py <db>"""
 import csv, os, re, sqlite3, sys
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__))); import reading as RD   # how patterns read text
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
 DESC = {
  'stat_swap': 'Swap two stats with each other, on one unit or between units: swap attack and health, swap power and cost. Setting stats to a fixed value is stat_set.',
@@ -87,7 +88,7 @@ have = {(e, k) for e, k, r in q("SELECT entity, concept, role FROM entity_concep
 tp = {(e, k) for e, k, r in q("SELECT entity, concept, role FROM entity_concepts WHERE method='text_pattern' AND concept IN (%s)" % ','.join('?' * len(PATS)), *PATS) if r == role(k)}
 for e, g, t, nm in q("SELECT id, game, text, name FROM entities WHERE text IS NOT NULL AND game != 'marvel_snap' AND category NOT IN ('tribe')"):
     low = t.lower()
-    if g == 'mtg': low = re.sub(r'\([^()]*\)', ' ', low)
+    low = RD.strip(g, low)
     for x in [nm] + nm.split(' // '):
         if len(x) > 2: low = low.replace(x.lower(), 'name')
     for k, ps in pats.items():   # only what the changed patterns change: a new pattern adds, a removed one takes its tags away

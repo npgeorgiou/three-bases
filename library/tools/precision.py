@@ -11,6 +11,7 @@ kept_id = dict(q('SELECT old_id, kept_id FROM merged_entities')) if q("SELECT 1 
 rows = list(csv.DictReader(open(os.path.join(here, 'regression.tsv'), encoding='utf-8'), delimiter='\t'))
 game = dict(q('SELECT id, game FROM entities'))
 import re
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__))); import reading as RD   # how patterns read text
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from concept_tree import primary
 excl = collections.defaultdict(set)
 for f in os.listdir(os.path.join(here, 'patterns')):
@@ -24,7 +25,7 @@ TXT = {i: (n, t) for i, n, t in q("SELECT id, name, text FROM entities")}
 def fires(e, g, con):
     n, t = TXT.get(e, ('', ''))
     low = (t or '').lower()
-    if g == 'mtg': low = re.sub(r'\([^()]*\)', ' ', low)
+    low = RD.strip(g, low)
     for x in [n] + (n or '').split(' // '):
         if x and len(x) > 2: low = low.replace(x.lower(), 'name')
     ex = excl[g] | excl['_all']

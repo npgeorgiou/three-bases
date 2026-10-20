@@ -5,6 +5,7 @@ their enablers and payoffs. Also adds the modern Magic wording "When this creatu
 effect pairs) and "put ... card from a graveyard onto the battlefield" to revive, both of which the general patterns missed.
 Idempotent. Usage: link_types.py <db>"""
 import re, sqlite3, sys
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__))); import reading as RD   # how patterns read text
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
 CON = {
  'blink': ('Blink', 'effect', ['movement', 'effect'], 'Remove a unit and bring it straight back, so it re-enters fresh and repeats its on-enter effect: flicker, blink.',
@@ -76,7 +77,7 @@ for e, g, t, nm in q("SELECT id, game, text, name FROM entities WHERE text IS NO
         m = p.search(low)
         if m: n += c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, con, ROLE.get(con, 'does') if con not in CON else 'does', 'text_pattern', low[max(0, m.start() - 20): m.start() + 40])).rowcount
     if g in gp:   # read as game_patterns.py reads it: Magic without reminder text, the entry's own name as 'name'
-        lg = re.sub(r'\([^()]*\)', ' ', low) if g == 'mtg' else low
+        lg = RD.strip(g, low)
         for x in [nm] + nm.split(' // '):
             if len(x) > 2: lg = lg.replace(x.lower(), 'name')
         for con, role, p in gp[g]:

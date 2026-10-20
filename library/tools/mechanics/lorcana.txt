@@ -1,0 +1,25 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics.
+# https://www.wargamer.com/disney-lorcana/colors , https://wiki.mushureport.com/wiki/Sapphire , /Steel , /Emerald , /Ruby
+healing|heal|\bremove (up to )?(\d+|all) damage
+recursion|return_to_hand|\breturn [^.]{0,40}to your hand
+card draw|draw|\bdraw (a|\d+) cards?
+discard|hand_disruption|\b(opponent|opponents|player)s? (chooses and )?discards?
+bounce|bounce_enemy|\bto their player.s hand
+ward|immunity|\bward\b
+evasive|immunity|\bevasive\b
+recover actions|recycle|\baction cards? [^.]{0,30}from your discard
+cost reduction|cost_reduction|\bpay \d+ ink less
+rush|haste|\brush\b
+banish characters|destroy|\bbanish (chosen|all|each)
+reckless|drawback|\breckless\b
+readying|untap|\bready (this|chosen|all|your|another)
+ink ramp|resource_gain|\binto your inkwell
+lore increase|points_scoring|\b(gain \d+ lore|\+\d+ lore)
+card filtering|selection|\blook at the top
+bodyguard|taunt|\bbodyguard\b
+challenge prevention|attack_lock|can'?t challenge
+challenger|stat_gain|\bchallenger\b
+direct damage|damage|\bdeal \d+ damage
+singing|cost_type|\bsing\b|\bsong\b
+shift|upgrade|\bshift\b
+locations|zone_control|\blocation

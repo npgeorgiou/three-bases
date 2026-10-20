@@ -1,0 +1,29 @@
+# Star Wars: Unlimited (20 Oct 2026). Text read without reminder text. Old concept ids; a '!' line also switches off its new ids.
+# "Exhaust" is tapping (Action [Exhaust] is an activated cost), not one use; an Upgrade is a card attached to a unit.
+!exhaust|\bexhaust
+!upgrade|\bupgrade
+!placement_rules|\bdeploy (it|this) 
+!stealth|\bhidden\b
+!information|\bhidden\b
+!extra_turn|\bready\b .{0,20}(again|unit)
+!zone_control|\bcapture
+!advantage|\badvantage\b
+!copy|\bclone
+!cant_attack|\bdefender\b
+!discard|\bdiscards?\b(?! piles?\b)
+activated|does|\baction \[
+disable|does|\bexhaust (a|an|each|all|that|target|up to \d+|the|another|it)\b[^.]{0,20}\b(enemy|unit|units|ground|space)\b
+untap|does|\bready (a|an|another|this|that|it|each|up to \d+|target|him|her|them|the)\b
+removal|does|\bcaptures?\b
+destroy|does|\bdefeat (a|an|each|all|that|target|another|it|up to \d+|the|him|her|them)\b(?![^.]{0,30}\b(you control|friendly)\b)
+sacrifice|does|\bdefeat (a|an|up to \d+|another) friendly (non-leader |ground |space |\w+ )?units?\b|\bdefeat (a|an|up to \d+) units? you control\b
+death_trigger|does|\bwhen defeated\b|\b(is|are) defeated\b
+on_play|does|\bwhen played\b
+buff|does|\bexperience tokens?\b
+direct_damage|does|\bdamage to (a|the|each|an enemy|the enemy|your opponent.s|that player.s) base\b
+resource_gain|does|\binto play as a resource\b|\bput [^.]{0,40}\binto (your )?resources\b
+discard|does|\bdiscard (a|\d+|up to \d+|that|those) (cards? )?from your hand\b
+hand_disruption|does|\b(that player|opponent|each opponent|they) discards?\b|\bopponent.s hand\b
+# the Force token is a second resource; disclose reveals cards of the named aspects from hand
+coin_economy|does|\buse the force\b|\bthe force is with you\b
+information|does|\bdisclose\b

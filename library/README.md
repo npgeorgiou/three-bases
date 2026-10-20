@@ -1,12 +1,12 @@
 # Three Bases inspiration library
 
 ## What it is
-A SQLite database of game mechanics from 21 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
+A SQLite database of game mechanics from 23 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
 
 It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite`, `tools/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results).
 
 ## Contents
-58,330 entries (cards, units, locations, abilities, items, rules), 1,151 keywords and 506 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
+60,994 entries (cards, units, locations, abilities, items, rules), 1,195 keywords and 631 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
 
 | Game | Entries |
 |---|---|
@@ -19,12 +19,14 @@ It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `thr
 | Legends of Runeterra | 2,434 |
 | Hearthstone Battlegrounds | 2,239 |
 | Warhammer 40,000: Kill Team | 2,219 |
-| Disney Lorcana | 1,787 |
+| Star Wars: Unlimited | 1,813 |
+| Disney Lorcana | 1,788 |
 | Slay the Spire 2 (Early Access) | 1,386 |
 | Gwent (standalone) | 1,357 |
 | Darkest Dungeon | 949 |
 | Marvel Snap (699 cards, 212 locations, 6 rules) | 917 |
 | Slay the Spire | 895 |
+| The Elder Scrolls: Legends | 850 |
 | Duelyst | 786 |
 | Faeria | 443 |
 | Into the Breach | 287 |
@@ -63,12 +65,12 @@ What is in, beyond the cards each source lists as playable:
 - **unbounded:** fires on other units' events or on repeated events.
 - **static:** an aura, not a trigger.
 
-**faction_signature**: per source faction (30+ entries):
-- **signature mechanics:** concepts the faction uses much more than the rest of its game. Share = the part of the faction's entries that have the concept; lift = that share divided by the game's average share. The rule: 5+ entries, share 6%+, lift 1.8+, and one of the two factions of its game that use the concept most. A broad faction left with fewer than 3 signatures (a Magic colour, a big class) also gets its concepts with lift 1.3+ (same entry and share minimums).
-- **keyword signatures** (`kw:<keyword>`): a keyword whose cards are 60%+ that faction's;
+**faction_signature**: which mechanics are prominent in which faction (`tools/signature.py`, rule of 20 Oct 2026). One rule for every game, concept and archetype: a faction's mechanic is prominent when (1) its share of the faction's cards is at least 1.5 times the share among all the game's other cards, and (2) that difference is not chance (a faction of this size drawn at random from the game would have this many with probability under 5%: a one-sided Fisher exact test). A card of a combined faction (Lorcana Amber-Steel, Legends and Star Wars Unlimited pairs, Gwent "Syndicate / X", Magic "Multicolor (BR)") counts for each of its factions; factions under 20 cards are left out.
+- **signature mechanics:** prominent, and the faction is one of the two with the highest share. Share and lift (share over the game average) are stored for reading.
+- **keyword signatures** (`kw:<keyword>`): a keyword whose cards are 60%+ that faction's (8+ cards);
 - **splash:** every other faction that uses a signature mechanic, sorted by share.
 
-**factions / archetypes / faction_archetypes**: every faction with its size and concept profile (concepts on 3+ of its entries and 5%+ of them, top 12 by lift), and 20 cross-game archetypes (swarm, sacrifice, graveyard, control, burn, aggro/tempo, scaling, fortress, sustain, spellslinger, ramp, positional, disruption, trickery, chaos, card advantage, tribal, objectives, damage over time, transformation) with each faction's share and lift. All rebuilt from the current tags on every build.
+**factions / archetypes / faction_archetypes**: every faction with its size and concept profile (concepts on 3+ of its entries and 5%+ of them, top 12 by lift), and 20 cross-game archetypes (swarm, sacrifice, graveyard, control, burn, aggro/tempo, scaling, fortress, sustain, spellslinger, ramp, positional, disruption, trickery, chaos, card advantage, tribal, objectives, damage over time, transformation), each a fixed bundle of concepts; a faction has an archetype when the bundle is prominent in it by the same rule as signatures. All rebuilt from the current tags on every build.
 
 **mechanic_repeat**: an entry whose category, concepts and trigger pairs are exactly those of an earlier entry of the same game (usually the same mechanic in other numbers). Nothing is removed; `concept` and `search` take `distinct=1` to skip these.
 
@@ -81,7 +83,7 @@ In a fresh chat, Claude clones the repository and runs `python3 library/tools/qu
 
 ## Maintenance
 - **Tag-fix plan, final (20 Oct 2026)**: the library is the build of that day; `tools/final/report.md` compares it with the original (c7a77a4) on the answer key, the 322 real-world cases and the combos (fewer wrong and fewer missed tags in all 20 games; real-world 161 -> 162; combos 80/82 both). The key credits the tags of the keywords a card has (`tools/key/key.py credit`); patterns built from the key's quotes (`tools/step3/key_patterns.py`), old patterns right less than half the time switched off or redirected (`tools/step3/switch_off.py`), new triggers and amplifiers (`tools/step3/trigger_patterns.py`, `tools/step3/amp_patterns.py`), all as lines of `tools/step3/decisions.tsv`; review records in the tree v3 ids (`tools/fixes/f15`), and where a review and the key disagree on what a card does the key wins (`tools/key_wins.py`). Lost trigger pairs by cause: `tools/lost_pairs.py`.
-**Lorcana and Stormbound added (20 Oct 2026)**: patterns in `tools/patterns/lorcana.txt` and `stormbound.txt` (every pattern checked on sampled matches), 33 and 18 real-world cases. Build fixes found on the way: `build.sh` expands the database before loading and reads load paths from the caller's folder; `load_cards.py` honours a `!` line in an old concept id for its new ids and takes a new game's `_game` row; `keep_old.py` puts back old entries the chain itself drops (176 on every rebuild, by drop_untagged). `signature.py` minimum faction size 30 -> 20 (Stormbound factions have 28-30 cards): real-world 176 -> 189 of 351, no game worse.
+**Lorcana, Stormbound, Star Wars: Unlimited and The Elder Scrolls: Legends added (20 Oct 2026)**: patterns in `tools/patterns/<game>.txt` (every pattern checked on sampled matches), mechanics checklists from guides in `tools/mechanics/<game>.txt` checked with `tools/coverage.py`, 33, 18, 20 and 20 real-world cases. Later fixes the checklists found: the outcome-tree step wiped game-specific tags of the concepts it recomputes (now applied), keywords given to other cards passed nothing on (`kw_sync.py` now adds them as grants), reminder text is read the same way in every step (`reading.py`), tapping, exhausting and exerting an enemy count as total disable. Build fixes found on the way: `build.sh` expands the database before loading and reads load paths from the caller's folder; `load_cards.py` honours a `!` line in an old concept id for its new ids and takes a new game's `_game` row; `keep_old.py` puts back old entries the chain itself drops (176 on every rebuild, by drop_untagged). Prominence of mechanics in factions measured by one rule (see faction_signature). Real-world test: 215 of 391.
 **D&D 5e removed (20 Oct 2026)**: Kaptain's decision; `tools/fixes/f16_drop_dnd.py` deleted its entries and every row pointing at them, and its scripts, patterns, reviews, key and cases are gone. Real-world test since: 150 of 300 (D&D had 12 of 22); the other games are unchanged.
 The build is incremental: `three-bases-library.sqlite` is the base for all work. The raw corpus of the first build is deleted and not needed.
 
@@ -102,6 +104,8 @@ The build stops if any check fails:
 
 Sources of the later loads (converter in brackets):
 - Disney Lorcana (20 Oct 2026): LorcanaJSON as bundled in the npm package lorcana-oracle 0.1.2, sets 1-12 (12 incomplete) and Illumineer's Quest [conv_lorcana.py]; keywords from the source's keyword field, definitions from the reminder text, keyword concepts in `reviews/lorcana.json`; 264 vanilla characters (no text) dropped, 248 repeats merged.
+- Star Wars: Unlimited (20 Oct 2026): sets/*.json of github.com/Yannick101984/swucardex-data (commit a86faed), an export of the official card database: SOR to ASH and Intro Battle: Hoth [conv_swu.py]; English text from its localisations; keyword names (French in the export) matched to the English word on every card that has them; trait names translated by Claude.
+- The Elder Scrolls: Legends (20 Oct 2026): database/dbCards.json and dbTokens.json of github.com/edipo2s/TESLegendsTracker (commit c541e82, Apr 2018) [conv_tesl.py]: sets up to Houses of Morrowind, later sets missing; keyword definitions are Claude's summaries.
 - Stormbound (20 Oct 2026): github.com/Stormbound-Games/stormbound-kitty src/data/cards.json at commit 96a86726 (28 Feb 2022, the last commit that kept the card list) [conv_stormbound.py]; cards added after that date are missing; no keyword list in the source.
 - Magic: MTGJSON AtomicCards.json [conv_mtg.py] for the 640 cards with a new mechanic; Scryfall Oracle Cards [conv_scryfall_tokens.py, fixes/f02] for tokens, emblems, set names, related cards and keyword lists.
 - Slay the Spire 1: the wiki's Module:Cards/data [conv_sts.py].

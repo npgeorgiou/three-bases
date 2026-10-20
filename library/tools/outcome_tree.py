@@ -16,7 +16,7 @@ so the same outcome is found across games however each game does it. Changes (Cl
 Text-pattern tags are recomputed for the moved concepts: a text_pattern 'disable' that only says "can't attack" / "can't move" /
 "can't block" becomes the matching partial lock; a text_pattern temporary_buff without a bonus becomes temporary_effect.
 Hand-reviewed tags are not touched here (keywords are re-checked in tools/reviews_outcome/). Idempotent. Usage: outcome_tree.py <db>"""
-import re, sqlite3, sys
+import collections, re, sqlite3, sys
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
 NEW = {
  'suppress': ('Suppress', 'effect', ['control'], 'Stop an enemy unit from doing something: attacking, dealing damage, blocking, moving, using abilities, or acting at all.'),
@@ -46,7 +46,8 @@ PATS = {
  'immobilize': [T + r"[^.]{0,40}\b(can'?t|cannot|may not) (move|be moved by its controller)", r"\b(is|are|becomes?|become) (rooted|snared|pinned)\b", r"\b(root|snare)s? (target|an|the|that|each)\b"],
  'temporary_effect': [r"(until|till) (the )?end of (the |your |this )?(turn|round)", r"\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b", r"until (the start of )?your next turn", r"\buntil the end of the (battle round|phase|turning point)"],   # "this turn" as a condition window ("if you discarded it this turn") is not a duration
 }
-TOTAL = re.compile(r"\bstun|\bfreez|\bfrozen\b|\bparaly|\bsleep|\bdaze|skip (its|their) (next )?(turn|activation)|can'?t (attack or block|act|take actions)|\bincapacitat", re.I)
+TOTAL = re.compile(r"\bstun|\bfreez|\bfrozen\b|\bparaly|\bsleep|\bdaze|skip (its|their) (next )?(turn|activation)|can'?t (attack or block|act|take actions)|\bincapacitat"
+                   r"|\bexhaust|\bexert|\btap(s|ped)? (target|an?|all|each|up to|that|it)\b|can'?t ready|doesn'?t untap", re.I)   # tapping, exhausting, exerting an enemy = it can't act
 BONUS = re.compile(r"\+\d|\bgains?\b|\bget[s]? \+|\bhas \+|\bbonus|\bboost", re.I)
 ok = {i for (i,) in q('SELECT id FROM concepts')}
 for cid, (name, facet, parents, desc) in NEW.items():
@@ -65,6 +66,11 @@ for cid, ps in PATS.items():
 # enemy locks are no longer general cant_attack / disable wording
 c.execute("DELETE FROM concept_patterns WHERE concept='disable' AND game IS NULL AND pattern IN (?,?,?)", ("can't attack", r'\broot(ed)?\b', r'\bimmobil'))
 comp = {k: [re.compile(p, re.I) for p in v] for k, v in PATS.items()}
+# a game's own patterns for these concepts (patterns/<game>.txt) are applied too, read as game_patterns.py reads the text
+gcomp = collections.defaultdict(list)
+for k, p, g in q("SELECT concept, pattern, game FROM concept_patterns WHERE game IS NOT NULL AND concept IN (%s)" % ','.join('?' * len(PATS)), *PATS):
+    gcomp[g, k].append(re.compile(p, re.I))
+import os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import reading as RD
 # tags a hand review confirmed are kept even when an older pattern made them (regression set, 'present' lines)
 import csv, os
 kept = dict(q('SELECT old_id, kept_id FROM merged_entities')) if q("SELECT 1 FROM sqlite_master WHERE name='merged_entities'") else {}
@@ -73,13 +79,16 @@ reviewed = {(kept.get(int(r['entity']), int(r['entity'])), _to_old(r['concept'])
 for e, k in q("SELECT entity, concept FROM entity_concepts WHERE method='text_pattern' AND concept IN (%s)" % ','.join('?' * len(PATS)), *PATS):
     if (e, k) not in reviewed: c.execute("DELETE FROM entity_concepts WHERE entity=? AND concept=? AND method='text_pattern'", (e, k))
 n = {k: 0 for k in PATS}; moved = 0; tb = 0
-rows = q("SELECT id, game, text FROM entities WHERE text IS NOT NULL AND category NOT IN ('tribe')")
+rows = q("SELECT id, game, text, name FROM entities WHERE text IS NOT NULL AND category NOT IN ('tribe')")
 dis = {e for (e,) in q("SELECT entity FROM entity_concepts WHERE concept='disable' AND method='text_pattern'")}
 tmpb = {e for (e,) in q("SELECT entity FROM entity_concepts WHERE concept='temporary_buff' AND method='text_pattern'")}
-for e, g, t in rows:
-    low = t.lower()
+for e, g, t, nm in rows:
+    low = t.lower(); glow = None
     for k, ps in comp.items():
         m = next((m for p in ps for m in [p.search(low)] if m), None)
+        if not m and gcomp.get((g, k)):
+            if glow is None: glow = RD.strip(g, low).replace(nm.lower(), 'name') if nm and len(nm) > 2 else RD.strip(g, low)
+            m = next((m for p in gcomp[g, k] for m in [p.search(glow)] if m), None)
         if m: n[k] += c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, k, 'does', 'text_pattern', low[max(0, m.start() - 20): m.start() + 40])).rowcount
     if e in dis and not TOTAL.search(low) and (e, 'disable') not in reviewed:
         moved += c.execute("DELETE FROM entity_concepts WHERE entity=? AND concept='disable' AND method='text_pattern'", (e,)).rowcount

@@ -43,7 +43,7 @@ trx = [(t, i, re.compile(r'\b' + re.escape(t) + r'(s|es)?\b', re.I)) for t, i in
 byname = {n: i for n, i in q("SELECT name, id FROM entities WHERE game=? AND category NOT IN ('keyword','tribe')", G)}
 orig = set(byname)
 seen = set(q("SELECT name, faction FROM entities WHERE game=?", G))
-STRIP = d.get('_strip_reminder', False); FIELD = d.get('_keywords_from_field', False)
+import reading as RD; STRIP = d.get('_strip_reminder', False) or G in RD.NO_REMINDER; FIELD = d.get('_keywords_from_field', False)
 NAMED = re.compile(r'\bnamed ' + '(' + '|'.join(re.escape(x.lower()) for x in sorted(byname, key=len, reverse=True) if len(x) >= 4) + r')\b') if byname else re.compile(r'(?!x)x')
 nid = q('SELECT max(id) FROM entities')[0][0] + 1
 n = skipped = 0; new_ids = []
@@ -76,7 +76,7 @@ for card in d['cards']:
     listed = {k.lower() for k in card.get('keywords') or []}
     for k, kid, start, any_ in kwrx:
         own = start.search(mtext) or (k in listed and not any_.search(mtext))   # listed and not written out (e.g. a face name) = its own
-        if FIELD and not (k in listed and own) and re.search(r'\b(have|has|gains?)\b[^.]{0,40}\b' + re.escape(k) + r'\b', mtext):
+        if FIELD and not (k in listed and own) and re.search(r'\b(have|has|gains?|gives?|give it)\b[^.]{0,40}\b' + re.escape(k) + r'\b', mtext):
             c.execute("INSERT OR IGNORE INTO entity_links VALUES(?,?,?,?)", (nid, 'grants_keyword', kid, 'keywords field, given to other cards'))
             c.execute("INSERT OR IGNORE INTO entity_concepts SELECT ?, concept, 'grants', 'via_keyword', 'inherited from a reviewed keyword' FROM entity_concepts WHERE entity=?", (nid, kid))
         elif (k in listed and own) or (not FIELD and start.search(mtext)):

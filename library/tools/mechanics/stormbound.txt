@@ -1,0 +1,12 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics.
+# https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html , fandom Winter Pact and Swarm pages
+freeze|disable|\bfreez|\bfrozen
+mana gain|resource_gain|\bgain \d+ mana|\bmana\b
+area damage|aoe_damage|\b(all|each) (enemy|enemies|units|surrounding)
+poison|damage_over_time|\bpoison
+toads|summon|\btoads?\b
+spawn units|summon|\bspawn
+base damage|direct_damage|\benemy base\b
+movement|movement|\b(move|command|forward)\b
+satyrs|tribal|\bsatyrs?\b
+buffs|stat_gain|\b(give|gain)\b[^.]{0,40}\d+ strength

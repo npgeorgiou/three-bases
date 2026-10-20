@@ -1,0 +1,168 @@
+{
+ "Activate": {
+  "add": [
+   "activated"
+  ],
+  "drop": []
+ },
+ "Assemble": {
+  "add": [
+   "modal_choice",
+   "tribal"
+  ],
+  "drop": []
+ },
+ "Battle": {
+  "add": [
+   "damage"
+  ],
+  "drop": []
+ },
+ "Beast Form": {
+  "add": [
+   "transform"
+  ],
+  "drop": []
+ },
+ "Betray": {
+  "add": [
+   "sacrifice",
+   "repeat_trigger"
+  ],
+  "drop": []
+ },
+ "Breakthrough": {
+  "add": [
+   "excess_damage"
+  ],
+  "drop": []
+ },
+ "Charge": {
+  "add": [
+   "haste"
+  ],
+  "drop": []
+ },
+ "Cover": {
+  "add": [
+   "immunity",
+   "temporary_effect"
+  ],
+  "drop": []
+ },
+ "Drain": {
+  "add": [
+   "lifesteal"
+  ],
+  "drop": []
+ },
+ "Evolves": {
+  "add": [
+   "transform"
+  ],
+  "drop": []
+ },
+ "Exalt": {
+  "add": [
+   "kicker"
+  ],
+  "drop": []
+ },
+ "Guard": {
+  "add": [
+   "taunt"
+  ],
+  "drop": []
+ },
+ "Last Gasp": {
+  "add": [
+   "death_trigger"
+  ],
+  "drop": []
+ },
+ "Lethal": {
+  "add": [
+   "deathtouch"
+  ],
+  "drop": []
+ },
+ "Pilfer": {
+  "add": [
+   "on_attack"
+  ],
+  "drop": []
+ },
+ "Plot": {
+  "add": [
+   "combo_sequence"
+  ],
+  "drop": []
+ },
+ "Prophecy": {
+  "add": [
+   "free_play",
+   "reactions"
+  ],
+  "drop": []
+ },
+ "Rally": {
+  "add": [
+   "in_hand_buff"
+  ],
+  "drop": []
+ },
+ "Regenerate": {
+  "add": [
+   "regeneration"
+  ],
+  "drop": []
+ },
+ "Shackle": {
+  "add": [
+   "disable"
+  ],
+  "drop": []
+ },
+ "Shout": {
+  "add": [
+   "upgrade"
+  ],
+  "drop": []
+ },
+ "Silence": {
+  "add": [
+   "silence"
+  ],
+  "drop": []
+ },
+ "Slay": {
+  "add": [
+   "on_kill"
+  ],
+  "drop": []
+ },
+ "Summon": {
+  "add": [
+   "on_play"
+  ],
+  "drop": []
+ },
+ "Treasure Hunt": {
+  "add": [
+   "condition_count"
+  ],
+  "drop": []
+ },
+ "Unsummon": {
+  "add": [
+   "bounce_enemy"
+  ],
+  "drop": []
+ },
+ "Ward": {
+  "add": [
+   "shield"
+  ],
+  "drop": []
+ }
+}

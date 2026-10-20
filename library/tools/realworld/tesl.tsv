@@ -1,0 +1,20 @@
+archetype	Strength	aggro_tempo	"direct attacks that clear enemies out"	https://En.UESP.net/wiki/Legends:Attributes
+signature	Intelligence	generate_cards	"conjure an Atronach"	https://En.UESP.net/wiki/Legends:Attributes
+signature	Intelligence	merge_attach	"equipping weapons"	https://En.UESP.net/wiki/Legends:Attributes
+signature	Intelligence	random_effect	"spells with unpredictable results"	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+archetype	Intelligence	chaos	"Magic and chaos"	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+archetype	Intelligence	spellslinger	"Spells"	https://En.UESP.net/wiki/Legends:Attributes
+signature	Willpower	summon	"Amassing large armies"	https://En.UESP.net/wiki/Legends:Attributes
+signature	Willpower	steal	"bending them to your control"	https://En.UESP.net/wiki/Legends:Attributes
+archetype	Willpower	swarm	"going wide"	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+archetype	Willpower	control	"the greatest ability to deal with opposing threats"	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+signature	Agility	deathtouch	Lethal, "poison and precision"	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+signature	Agility	movement	"shift creatures from one lane to another"	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+signature	Agility	immunity	"cover"	https://En.UESP.net/wiki/Legends:Attributes
+signature	Agility	on_attack	Pilfer	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+signature	Endurance	taunt	Guard	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+signature	Endurance	resource_gain	"increasing Magicka"	https://En.UESP.net/wiki/Legends:Attributes
+signature	Endurance	heal	"healing actions"	https://En.UESP.net/wiki/Legends:Attributes
+archetype	Endurance	fortress	"Guard creatures and sturdy defense"	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+archetype	Endurance	ramp	"cards that increase magicka supply"	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes
+archetype	Endurance	sustain	"healing for both player and creatures"	https://bethesda.net/en-AU/news/beginners-guide-to-attributes-and-classes

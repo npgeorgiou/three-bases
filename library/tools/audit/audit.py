@@ -17,6 +17,7 @@ A trial also counts the changed entries whose locked decision it would undo (reg
 Judgments file: {"<id>": {"A": {"wrong": ["concept:role", ...], "missed": ["short note", ...]}, "B": {...}}, ...}
 The database is library/three-bases-library.sqlite unless TB_LIB is set."""
 import json, os, random, re, sqlite3, sys
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))); import reading as RD   # how patterns read text
 here = os.path.dirname(os.path.abspath(__file__))
 DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(os.path.dirname(here)), 'three-bases-library.sqlite'))
 c = sqlite3.connect(DB); q = lambda s, *a: c.execute(s, a).fetchall()
@@ -41,7 +42,7 @@ def line(e, ts=None):
 
 def read(g, t, nm):   # as game_patterns.py reads an entry
     low = t.lower()
-    if g == 'mtg': low = re.sub(r'\([^()]*\)', ' ', low)
+    low = RD.strip(g, low)
     for x in [nm] + nm.split(' // '):
         if len(x) > 2: low = low.replace(x.lower(), 'name')
     return low

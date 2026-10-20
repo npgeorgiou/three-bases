@@ -3,6 +3,7 @@ applied to that game's entries (method text_pattern; the text is read lower-case
 the concept's automatic tag is removed from entries where no other pattern of the concept matches. File _all.txt applies to every game
 except Marvel Snap. Usage: game_patterns.py <db> <dir>"""
 import os, re, sqlite3, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import reading as RD
 c = sqlite3.connect(sys.argv[1]); d = sys.argv[2]
 ok = {r[0] for r in c.execute("select id from concepts")}
 for f in sorted(os.listdir(d)):
@@ -41,7 +42,7 @@ for f in sorted(os.listdir(d)):
             bad = re.compile(p, re.I)
             for e, t, nm in c.execute("select e.id, e.text, e.name from entity_concepts ec join entities e on e.id=ec.entity where e.game=? and ec.concept=? and ec.role=? and ec.method='text_pattern'", (g, con, role)).fetchall():
                 low = (t or '').lower()
-                if g == 'mtg': low = re.sub(r'\([^()]*\)', ' ', low)
+                low = RD.strip(g, low)
                 for x in [nm] + nm.split(' // '):
                     if len(x) > 2: low = low.replace(x.lower(), 'name')
                 if (e, con) not in keep and bad.search(low) and not any(o.search(low) for o in rest):
@@ -52,7 +53,7 @@ for f in sorted(os.listdir(d)):
     comp = [(con, role, re.compile(p, re.I)) for con, role, p in rows]
     for e, t, nm in c.execute("select id,text,name from entities where game=? and text is not null", (g,)).fetchall():
         low = t.lower()
-        if g == 'mtg': low = re.sub(r'\([^()]*\)', ' ', low)   # Magic is read without reminder text, as in the first build
+        low = RD.strip(g, low)   # reminder text left out where cards print it (reading.py)
         for x in [nm] + nm.split(' // '):
             if len(x) > 2: low = low.replace(x.lower(), 'name')   # the entry's own name, as in the first build
         for con, role, p in comp:

@@ -7,6 +7,15 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 - Every reading step runs on one batch first. Report its tokens before going on.
 - Do not repeat experiments in loops. Before you choose a fix, break the errors down by where they come from (the `method` column).
 
+## 0. Guides first (before any pattern)
+1. Read 2-4 guide or wiki pages per game (faction overviews, keyword glossary). Write every mechanic they name, with the wording
+   to look for on cards, into `tools/mechanics/<game>.txt` (`name|regex`, source URL in a comment).
+2. After loading, run `tools/coverage.py <db> <game> 40 --mechanics tools/mechanics/<game>.txt`. It prints how many cards of each
+   faction show each listed mechanic, and the clauses no pattern reads, grouped by their first words. A listed mechanic that the
+   cards show but the faction's tags lack is a missing pattern; a frequent unread clause is a mechanic nobody listed.
+   Guides are a checklist, not the whole game: the unread clauses find what they leave out.
+3. Then write the real-world cases from the same pages (section 6), so tagging and test read the same sources.
+
 ## 1. Load
 1. Write a converter, `tools/convert/conv_<game>.py`. It outputs JSON in the format described at the top of `tools/load_cards.py`:
    ext_id, name, category, faction, subtypes, cost, stats, text, and `keywords` as a field.
@@ -85,6 +94,7 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 - Never run more than 3 or 4 agents at once. Rate limits killed every larger batch.
 - Never let agents share helper scripts in a common scratchpad. They overwrite each other.
 - Never judge with Opus. Use Haiku for yes/no questions and Sonnet for regexes.
+- Never read cards in a chat agent when a stateless batch script can do it (section "Reading cards cheaply").
 - Never start an agent without a progress file it saves after each batch and can resume from.
 - Never remove a tag unless it has been judged wrong. Hand reviews in `tools/regression.tsv` win, except where the answer key
   disagrees on what a card does: then the key wins (`tools/key_wins.py`), and payoff and answer tags (`benefits`, `counters`) are never touched.
@@ -97,6 +107,20 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 3. Check the database size. GitHub refuses files over 100 MB; the database is stored compact (`compact_text.py`) and without its indexes (`indexes.py`), about 63 MB on 20 Oct 2026.
 4. Copy the build over `three-bases-library.sqlite`, then commit and push after each step together with its progress files, keys and decisions.
 5. Update `README.md`. Write a short handoff that says what is done, what the build applies, what is left, and the exact commands.
+
+## Reading cards cheaply (if a step ever needs it)
+Patterns are written from samples: for each pattern, its hit count and a few matching lines (`step3/amp_patterns.py scan`, the
+`pat_stats` loop of 20 Oct 2026); for gaps, the texts no pattern reaches (`coverage.py`). Reading every card is never needed
+for tagging. Where reading is needed (an answer key, a review), the chat agents of 19-20 Oct 2026 were the expensive way:
+- An agent is a whole new conversation. Before its first card it holds its system prompt, tool definitions, its instructions
+  and the files it reads to understand the task (README, SEARCH_GUIDE, the concept tree of about 51 KB, the definitions of
+  about 38 KB): that is the 90k-200k start-up. Every card it then reads and every tag it writes stays in its conversation,
+  and each later step re-sends the whole conversation, so the cost per card grows as it goes. It cannot "forget" a batch.
+- The cheap way is stateless: a script sends one request per batch of 50 entries to the API (one model call, no conversation),
+  each request = the same instruction block (concept definitions; cached, so it is paid once) + the 50 texts as `id|text`, and
+  the answer is `id|concept:role:quote` lines that `key.py check` verifies. Nothing carries over between requests. With the
+  Message Batches API and a small model for yes/no judging, this costs API money instead of chat tokens and needs an API key
+  (none in the chat workspace). Before sending: drop entries with the same text, and send only entries no rule decides.
 
 ## Cost guide (measured)
 | work | tokens |

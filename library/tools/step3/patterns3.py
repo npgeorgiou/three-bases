@@ -21,12 +21,13 @@ HERE = os.path.dirname(os.path.abspath(__file__)); TOOLS = os.path.dirname(HERE)
 sys.path.insert(0, TOOLS); sys.path.insert(0, KEY)
 from concept_tree import TREE
 import key as K
+import os as _os, sys as _sys; _sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))); import reading as RD   # how patterns read text
 DB = os.path.join(os.path.dirname(TOOLS), 'three-bases-library.sqlite')
 GAMES = K.GAMES
 
 def norm_text(g, name, text):
     low = (text or '').lower()
-    if g == 'mtg': low = re.sub(r'\([^()]*\)', ' ', low)
+    low = RD.strip(g, low)
     for x in [name] + (name or '').split(' // '):
         if x and len(x) > 2: low = low.replace(x.lower(), 'name')
     return low
