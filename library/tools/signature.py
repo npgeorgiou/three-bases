@@ -15,7 +15,7 @@ import sqlite3, sys, collections
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
 c.execute('DROP TABLE IF EXISTS faction_signature')
 c.execute('CREATE TABLE faction_signature(game TEXT, faction TEXT, concept TEXT, kind TEXT, entities INTEGER, share REAL, lift REAL, owner TEXT, owner_share REAL)')
-MIN = 30   # factions smaller than this get no signature or splash rows (tiny samples inflate lift)
+MIN = 20   # (30 until 20 Oct 2026: Stormbound factions have 28-30 cards) factions smaller than this get no signature or splash rows (tiny samples inflate lift)
 mech = {i for (i,) in q("SELECT id FROM concepts WHERE facet NOT IN ('role','scope','problem') AND id IN (SELECT child FROM concept_parents)")}  # roots left out
 for (g,) in q('SELECT DISTINCT game FROM factions'):
     fac = {n: k for n, k in q("""SELECT f.name, count(e.id) FROM factions f JOIN entities e ON e.game=f.game AND e.faction=f.name

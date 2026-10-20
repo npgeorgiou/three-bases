@@ -1,12 +1,12 @@
 # Three Bases inspiration library
 
 ## What it is
-A SQLite database of game mechanics from 19 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
+A SQLite database of game mechanics from 21 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
 
 It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite`, `tools/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results).
 
 ## Contents
-56,353 entries (cards, units, locations, abilities, items, rules), 1,135 keywords and 450 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
+58,330 entries (cards, units, locations, abilities, items, rules), 1,151 keywords and 506 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
 
 | Game | Entries |
 |---|---|
@@ -19,6 +19,7 @@ It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `thr
 | Legends of Runeterra | 2,434 |
 | Hearthstone Battlegrounds | 2,239 |
 | Warhammer 40,000: Kill Team | 2,219 |
+| Disney Lorcana | 1,787 |
 | Slay the Spire 2 (Early Access) | 1,386 |
 | Gwent (standalone) | 1,357 |
 | Darkest Dungeon | 949 |
@@ -29,6 +30,7 @@ It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `thr
 | Into the Breach | 287 |
 | Inscryption | 263 |
 | Blood Bowl (Third Season) | 243 |
+| Stormbound | 190 |
 
 What is in, beyond the cards each source lists as playable:
 - **Created cards** (edition `non-collectible`; a name already used gets " (created)"): Runeterra (levelled champions, champion spells, tokens), Hearthstone (tokens, generated cards, rewards), Battlegrounds, Gwent and Shadowverse tokens, Magic tokens and emblems that have rules text, Slay the Spire's created cards (Shiv, Miracle, Smite, ...). Cards link to what they create (`generates`; for Magic from Scryfall's list of related tokens).
@@ -79,6 +81,7 @@ In a fresh chat, Claude clones the repository and runs `python3 library/tools/qu
 
 ## Maintenance
 - **Tag-fix plan, final (20 Oct 2026)**: the library is the build of that day; `tools/final/report.md` compares it with the original (c7a77a4) on the answer key, the 322 real-world cases and the combos (fewer wrong and fewer missed tags in all 20 games; real-world 161 -> 162; combos 80/82 both). The key credits the tags of the keywords a card has (`tools/key/key.py credit`); patterns built from the key's quotes (`tools/step3/key_patterns.py`), old patterns right less than half the time switched off or redirected (`tools/step3/switch_off.py`), new triggers and amplifiers (`tools/step3/trigger_patterns.py`, `tools/step3/amp_patterns.py`), all as lines of `tools/step3/decisions.tsv`; review records in the tree v3 ids (`tools/fixes/f15`), and where a review and the key disagree on what a card does the key wins (`tools/key_wins.py`). Lost trigger pairs by cause: `tools/lost_pairs.py`.
+**Lorcana and Stormbound added (20 Oct 2026)**: patterns in `tools/patterns/lorcana.txt` and `stormbound.txt` (every pattern checked on sampled matches), 33 and 18 real-world cases. Build fixes found on the way: `build.sh` expands the database before loading and reads load paths from the caller's folder; `load_cards.py` honours a `!` line in an old concept id for its new ids and takes a new game's `_game` row; `keep_old.py` puts back old entries the chain itself drops (176 on every rebuild, by drop_untagged). `signature.py` minimum faction size 30 -> 20 (Stormbound factions have 28-30 cards): real-world 176 -> 189 of 351, no game worse.
 **D&D 5e removed (20 Oct 2026)**: Kaptain's decision; `tools/fixes/f16_drop_dnd.py` deleted its entries and every row pointing at them, and its scripts, patterns, reviews, key and cases are gone. Real-world test since: 150 of 300 (D&D had 12 of 22); the other games are unchanged.
 The build is incremental: `three-bases-library.sqlite` is the base for all work. The raw corpus of the first build is deleted and not needed.
 
@@ -98,6 +101,8 @@ The build stops if any check fails:
 - **query tests** (`test_query.py <db>`): all 16 commands.
 
 Sources of the later loads (converter in brackets):
+- Disney Lorcana (20 Oct 2026): LorcanaJSON as bundled in the npm package lorcana-oracle 0.1.2, sets 1-12 (12 incomplete) and Illumineer's Quest [conv_lorcana.py]; keywords from the source's keyword field, definitions from the reminder text, keyword concepts in `reviews/lorcana.json`; 264 vanilla characters (no text) dropped, 248 repeats merged.
+- Stormbound (20 Oct 2026): github.com/Stormbound-Games/stormbound-kitty src/data/cards.json at commit 96a86726 (28 Feb 2022, the last commit that kept the card list) [conv_stormbound.py]; cards added after that date are missing; no keyword list in the source.
 - Magic: MTGJSON AtomicCards.json [conv_mtg.py] for the 640 cards with a new mechanic; Scryfall Oracle Cards [conv_scryfall_tokens.py, fixes/f02] for tokens, emblems, set names, related cards and keyword lists.
 - Slay the Spire 1: the wiki's Module:Cards/data [conv_sts.py].
 - Slay the Spire 2: the wiki's card lists, normal and upgraded, supplied by Kaptain on 12 Oct 2026 [conv_sts2.py]: upgrades, and 46 cards the library lacked.

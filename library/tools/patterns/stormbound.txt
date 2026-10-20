@@ -1,0 +1,25 @@
+# Stormbound (20 Oct 2026). Board of 4 lanes x 5 rows; units move forward on their own; "tile" is a board space.
+# Old concept ids (this file is applied before the tree move); a '!' line in an old id also switches off its new ids.
+!terrain|\btile
+!movement|\bmoves?\b
+!movement|\bpush
+!movement|\bpull
+!movement|\bteleport
+!movement|\bjump
+!life_payment|deals? \d+ damage to (you|your hero|yourself|itself)\b(?! ?opponent)
+!in_hand_buff|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)
+# moving: own units forward, enemies pushed or pulled (the tree move splits own and enemy by the words around)
+movement|does|\b(moves?|push(es|ed)?|pull(s|ed)?|teleports?|jumps?|fly|flies|command)\b
+# confused units move in a random direction; bordering and surrounding tiles; the base at the end of each side
+forced_movement|does|\bconfuse
+adjacency|does|\b(bordering|surrounding)\b
+direct_damage|does|\bdamage to (the )?enemy base\b|\bdamage to (all )?enem[a-z ]{0,20}and (the enemy )?base\b
+life_payment|cost|\bdamage to your base\b
+permanent_growth|does|\bvitaliz
+silence|does|\bdisable the ability\b
+steal|does|\bconvert (all|a|an|the)\b[^.]{0,30}\benem
+on_attack|does|\b(before|after|when) attacking\b
+on_damaged|does|\bafter surviving damage\b
+buff|does|\b(give|gain|gains)\b[^.]{0,40}?\d+ strength\b
+debuff|does|\breduce (the |its )?strength\b|\breduce [^.]{0,30}\bstrength (of|to)\b
+cost_reduction|does|\breduce [^.]{0,40}\bmana cost\b

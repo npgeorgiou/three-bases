@@ -1,0 +1,84 @@
+# Disney Lorcana (20 Oct 2026). Text is read without reminder text; ability names are in extra.ability_names, not the text.
+# Old concept ids (this file is applied before the tree move); a '!' line in an old id also switches off its new ids.
+#
+# "Banish" is Lorcana's word for a card leaving play to the discard pile (dying), not exile.
+!banish|\bbanish
+destroy|does|\bbanish (chosen|all|each|up to \d+|that|them|her|him|every|another|the chosen)\b(?![^.,—]{0,30}\bof yours)
+board_wipe|does|\bbanish all (opposing )?characters\b
+sacrifice|does|\bbanish (one of your (characters|items|locations)|\d+ of your (characters|items)|chosen [a-z ]{0,30}\bof yours)\b
+# an item or character that banishes itself as the cost of its ability is one use
+self_destruct|does|\bbanish this (item|location|character)\b
+death_trigger|does|\b(when|whenever) (this character|name|this item|this location|he|she|one of your [a-z ]{0,30}characters|another [a-z ]{0,30}character) (is|are) banished\b
+on_kill|does|\b(this character|name|he|she|one of your characters) banishes another character\b
+on_attack|does|\bwhenever (this character|name|he|she|one of your [a-z ]{0,30}characters) challenges\b
+on_damaged|does|\bwhenever (this character|name|he|she) is challenged\b
+on_play|does|\bwhen (you play|[a-z]+ plays) (this character|this item|this location|name|her|him)\b
+activated|does|(^|\n)(exert|\d+ ink|banish (this|one of your)[^—\n]{0,30}|choose and discard [^—\n]{0,20})[^—\n]{0,40} —
+!activated|\bpay \d
+# Ink: the inkwell is the resource. Putting a card there is ramp; putting an opposing card there removes it.
+!stealth|\bface-?down\b
+!information|\bface-?down
+resource_gain|does|(?<!whenever a card is )(?<!whenever you )(?<!didn't )\bput (?!any)[^.]{0,50}\binto your inkwell\b|additional card into your inkwell
+removal|does|\b(chosen|opposing|that)[^.]{0,40}\binto (their|its) player.s inkwell\b
+cost_reduction|does|\bpay \d+ ink less\b|\bcosts? \d+ less\b
+# Damage is removed (healed), moved as counters and dealt; "N damage" alone is not dealing damage.
+!damage|\b\d+ damage\b
+heal|does|\bremove (up to )?(\d+|all) damage\b
+# Ready / exert = untap / tap.
+untap|does|\bready (this|chosen|that|another|all|your|them|her|him|up to|each|one|those)\b
+disable|does|\bexert (chosen|all|each|up to \d+ chosen|another chosen) opposing\b|\b(chosen|opposing|those)[^.]{0,50}\bcan'?t ready\b|\b(opponent|illumineer)s? chooses and exerts\b|\bexerts all opposing\b|\bopposing [a-z ]{0,20}enter play exerted\b
+attack_lock|does|\b(chosen|opposing)[^.]{0,30}\bcan'?t challenge\b|(?<!this )\bcharacters?\b[^.]{0,40}\bcan'?t challenge (this|your|her|him)\b
+cant_attack|does|\b(this character|name) can'?t challenge\b
+# Questing scores lore; lore decides the winner. The general "quest" pattern means objectives with rewards.
+!quests|\bquest\b
+points_scoring|does|\bgain lore equal\b|\bgains? \d+ lore\b|\blose(s)? \d+ lore\b|\bgets? \+\d+ lore\b
+# Locations: characters move to them and are "here"; holding them gives lore.
+!movement|\bmoves?\b
+!movement|\bshift
+!movement|\bpull
+movement|does|\bmoves? (to|him|her|them|this character|a character|one of your|up to|any number|chosen character of yours|characters?|your)\b[^.]{0,40}\blocations?\b|\bmove here\b|\bmoves? to (a|this|that|another) location\b
+zone_control|does|\bwhile here\b|\b(at|to) (a|this|that|another) location\b|\blocations? (you have )?in play\b
+# Hand and discard: "your discard" is the pile.
+!discard|\bdiscards?\b(?! piles?\b)
+discard|does|(?<!opponent may )(?<!player may )\bchoose and discard\b|(?<!opponent )(?<!player )(?<!choose and )\bdiscard (a|an|\d+|your|up to|that)\b(?! (card )?(from|to|into))
+hand_disruption|does|\b(opponent|opponents|chosen player|each player|that player|illumineer)s? (may )?(chooses and discards|choose and discard|discards?)\b|\bof your choice\b[^.]{0,20}\bdiscard|\breveals their hand\b
+!revive|return .{0,40}from (your |the |a )?(graveyard|discard pile|discard)( to the (battlefield|board|field))?
+revive|does|\b(return|play) [^.]{0,40}\bcharacter cards? [^.]{0,30}\bfrom your discard\b|\bbanished[^.]{0,60}\breturn (this card|that card|them|it) to your hand\b
+!recycle|put .{0,30}on the (top|bottom) of
+!recycle|shuffle .{0,40}into (your|their|its owner.s) (deck|library)
+recycle|does|\b(action|item|song|location) cards? [^.]{0,30}\bfrom your discard\b|\bfrom your discard (on|into) (the )?(top|bottom of )?(of )?your deck\b|\bshuffle [^.]{0,40}\bfrom your discard into your deck\b
+removal|does|\b(chosen|opposing)[^.]{0,40}\bon the (top|bottom) of (their|its) player.s deck\b
+!return_to_hand|return .{0,40}to (your|their|its) hand
+return_to_hand|does|\breturn (another|chosen|up to|all|each|one of your|that character|her|him|this character)\b(?![^.]*\bfrom your discard)[^.]{0,40}\bto (their|its|your) (player.s |players. )?hands?\b
+!mill|top .{0,20}cards? of (their|your|target player.s|his or her) (library|deck) into
+mill|does|\btop (\d+ )?cards? of (your|their|chosen player.s|each opponent.s) deck into (your|their|that player.s) discard\b
+# Cards that no pattern reached in the first build (read 20 Oct 2026)
+drawback|does|\b(this character|name) (can'?t (exert to sing|quest|challenge or quest)|enters play (exerted|with \d+ damage))\b|\bskip your turn.s draw step\b
+counterattack|does|\b(challenged|challenges) and (is )?banished\b
+disruption|does|\b(chosen opposing|opposing)[^.]{0,30}\bcan'?t quest\b
+bodyguard|does|\bdamage counters on this character instead\b
+target_choice|does|\bcan challenge ready characters\b
+deckbuilding_effect|does|\bcopies of [^.]{0,60}\bin your deck\b
+damage|does|\b(move|put) (up to )?\d+ damage( counters?)?\b[^.]{0,50}\b(on|to) (chosen|each) (opposing )?character
+destroy|does|\bchooses and banishes\b
+immunity|does|\bcan'?t be (challenged|dealt damage)\b
+upgrade|does|\bwith shift on this character\b
+debuff|does|\bgive [^.]{0,30}-\d+ strength\b
+# Bodyguard is taunt in Lorcana (opposing challengers must choose it); a card that takes another's damage is bodyguard (above)
+# Wrong readings found on the cards (20 matches read per pattern):
+!items_consumables|\bitem
+!generate_cards|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b
+!delayed|next turn
+!in_hand_buff|\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)
+!stacking_keyword|\bcounters? on\b
+!copy|\bcopies\b
+!cheat_death|can't (die|be reduced below)
+!disable|\bsleep
+!resource_banking|\bbank(ed)?\b
+!coin_economy|\bcrowns?\b
+!steal|\bsteal(s|ing)?\b
+!overload_debt|\bnext turn.{0,30}(locked|less)
+!buff|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)
+!drawback|opposing .{0,20}gains
+!shield|\bward\b
+!bodyguard|\bbodyguard

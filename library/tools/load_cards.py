@@ -1,6 +1,6 @@
 """Load new entries into an existing library, with the same tagging the first build used (incremental; the raw corpus is gone).
 Input JSON: {'_source': str, '_tag': str, 'cards': [...]}. Each card: ext_id, name, category, and optionally source_type, edition,
-faction, subtypes (list), rarity, cost, cost_num, stats (str or dict), text, extra (dict), extra_updates at file level (merged into existing entries' extra), variant_of (name of the entry this one is a version of, same faction; link variant_of), keywords (list of keyword names the
+faction, subtypes (list), rarity, cost, cost_num, stats (str or dict), text, extra (dict), extra_updates at file level (merged into existing entries' extra), _game at file level (the games row of a new game), variant_of (name of the entry this one is a version of, same faction; link variant_of), keywords (list of keyword names the
 source lists for the card), created (true for tokens / created cards). File options: _strip_reminder (read the text without
 reminder text in parentheses, as the first build read Magic), _keywords_from_field (keyword links only from the cards' keywords field: has_keyword when the card has it,
 grants_keyword with inherited role 'grants' when the text gives it ("creatures you control have flying"), else mentions_keyword).
@@ -25,6 +25,7 @@ d = json.load(open(path, encoding='utf-8')); TAG = d['_tag']; PRE = f'add:{TAG}:
 for (i,) in q("SELECT id FROM entities WHERE game=? AND ext_id LIKE ?", G, PRE + '%'):
     for s in ("DELETE FROM entity_concepts WHERE entity=?", "DELETE FROM entity_links WHERE src=? OR dst=?", "DELETE FROM trigger_effect WHERE entity=?", "DELETE FROM entities WHERE id=?"):
         c.execute(s, (i,) * s.count('?'))
+sys.path.insert(0, here); from concept_tree import primary   # pattern files use the old ids (game_patterns.py runs before the tree move)
 excl = set()
 pf = os.path.join(here, 'patterns', G + '.txt')
 if os.path.exists(pf):
@@ -32,7 +33,7 @@ if os.path.exists(pf):
         if line.startswith('!'): excl.add(tuple(line[1:].rstrip('\n').split('|', 1)))
 pats = []
 for con, role, p, g in q("SELECT concept, role, pattern, game FROM concept_patterns WHERE game IS NULL OR game=?", G):
-    if g is None and any(con == a and b in p for a, b in excl): continue
+    if g is None and any((con == a or con in primary(a)) and b in p for a, b in excl): continue   # a '!' line in an old id also covers its new ids
     try: pats.append((con, role, re.compile(p, re.I)))
     except re.error: pass
 kw = {n.lower(): i for n, i in q("SELECT name, id FROM entities WHERE game=? AND category='keyword'", G)}
@@ -119,6 +120,8 @@ for u in d.get('extra_updates', []):
         e = json.loads(ex) if ex else {}; e.update(u['extra'])
         U += c.execute("UPDATE entities SET extra=? WHERE id=?", (json.dumps(e), i)).rowcount
 if U: print('extra updated on', U, 'entries')
+if d.get('_game') and not q('SELECT 1 FROM games WHERE id=?', G):   # a new game: its row in games (id, name, family, edition, source, structure, notes)
+    g = d['_game']; c.execute('INSERT INTO games VALUES(?,?,?,?,?,?,?)', tuple(g.get(k) for k in ['id', 'name', 'family', 'edition', 'source', 'structure', 'notes']))
 c.execute("DELETE FROM load_log WHERE game=? AND step LIKE ?", (G, f'loaded ({TAG})%'))
 c.execute("INSERT INTO load_log VALUES(?,?,?,?)", (G, f'loaded ({TAG})', n, d['_source']))
 if skipped: c.execute("INSERT INTO load_log VALUES(?,?,?,?)", (G, f'loaded ({TAG}): skipped, name already in the library', skipped, ''))

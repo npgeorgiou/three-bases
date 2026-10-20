@@ -12,6 +12,7 @@
 set -e
 [ $# -ge 2 ] || { echo "usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]"; exit 2; }
 IN=$(readlink -f "$1"); OUT=$(readlink -f "$2"); shift 2
+LOADS=""; for a in "$@"; do LOADS="$LOADS ${a%%=*}=$(readlink -f "${a#*=}")"; done; set -- $LOADS   # load paths relative to the caller
 cd "$(dirname "$0")"
 P="python3 -I"
 steps() {   # $1 = db
@@ -24,7 +25,7 @@ steps() {   # $1 = db
   $P fix_grants.py "$D"
   $P fixes/f03_grant_not_does.py "$D"
   for f in reviews/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f" old; done
-  $P kw_sync.py "$D" wh_bloodbowl3 wh_killteam wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:wh_underworlds h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th
+  $P kw_sync.py "$D" wh_bloodbowl3 wh_killteam wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:wh_underworlds h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th h:lorcana
   $P propagate.py "$D"
   $P keyword_defs.py "$D"
   $P outcome_tree.py "$D"
@@ -54,6 +55,7 @@ rm -f "$OUT"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the database is s
 if [ $# -gt 0 ]; then
   BASE="$OUT.base"; rm -f "$BASE"; cp "$OUT" "$BASE"
   steps "$BASE"
+  $P compact_text.py "$OUT" expand   # the loader writes evidence as text
   for a in "$@"; do $P load_cards.py "$OUT" "${a%%=*}" "${a#*=}"; done
   steps "$OUT"
   INX="$OUT.in"; rm -f "$INX"; cp "$IN" "$INX"; $P compact_text.py "$INX" expand   # keep_old reads the text columns

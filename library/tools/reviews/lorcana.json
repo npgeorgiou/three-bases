@@ -1,0 +1,110 @@
+{
+ "Alert": {
+  "add": [
+   "immunity:counters"
+  ],
+  "drop": []
+ },
+ "Bodyguard": {
+  "add": [
+   "taunt"
+  ],
+  "drop": [
+   "modal_choice"
+  ]
+ },
+ "Boost": {
+  "add": [
+   "activated",
+   "deck_position",
+   "merge_attach"
+  ],
+  "drop": []
+ },
+ "Challenger": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "Evasive": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ },
+ "Puppy Shift": {
+  "add": [
+   "upgrade",
+   "cost_type"
+  ],
+  "drop": []
+ },
+ "Shift": {
+  "add": [
+   "upgrade",
+   "cost_type"
+  ],
+  "drop": []
+ },
+ "Universal Shift": {
+  "add": [
+   "upgrade",
+   "cost_type"
+  ],
+  "drop": []
+ },
+ "Reckless": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "Resist": {
+  "add": [
+   "damage_reduction"
+  ],
+  "drop": []
+ },
+ "Rush": {
+  "add": [
+   "haste"
+  ],
+  "drop": []
+ },
+ "Sing Together": {
+  "add": [
+   "cost_type",
+   "free_play",
+   "team_play"
+  ],
+  "drop": []
+ },
+ "Singer": {
+  "add": [
+   "cost_type"
+  ],
+  "drop": []
+ },
+ "Support": {
+  "add": [
+   "stat_gain",
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "Vanish": {
+  "add": [
+   "self_destruct",
+   "drawback",
+   "on_targeted:trigger"
+  ],
+  "drop": []
+ },
+ "Ward": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ }
+}

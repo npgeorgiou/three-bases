@@ -4,6 +4,13 @@ Later on 20 Oct 2026: D&D 5e was removed (`tools/fixes/f16_drop_dnd.py`), and th
 full-text indexes (`tools/indexes.py`; the build creates them first and drops them last). The file went from 86.2 MB to 63.1 MB.
 The numbers below are after the removal.
 
+Later still on 20 Oct 2026: Disney Lorcana (1,787 entries) and Stormbound (190) were added (README "Lorcana and Stormbound added").
+Real-world test now **189 of 351**: Lorcana 22 of 33, Stormbound 12 of 18. Lorcana's misses are the signature model (draw,
+Reckless, lore and Challenger are on many cards of several inks) and two Tinker Bell song combos. Still to add: Star Wars Unlimited,
+The Elder Scrolls: Legends and Monster Train. Their card data is on sites the workspace cannot reach (swu-db.com, UESP, the
+Monster Train fandom wiki); they need the desktop app's browser, which was not linked to this chat, and a measured token cost
+before moving the data.
+
 Rules for the next chat: **no readers, judges or agents** without Kaptain's OK and a measured cost. Scripts and builds first.
 Commit and push after each step. Read `ADDING_GAMES.md` sections 4b and 4c before writing any pattern.
 

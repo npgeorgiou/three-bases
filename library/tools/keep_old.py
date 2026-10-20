@@ -9,6 +9,10 @@ c = sqlite3.connect(new)
 c.execute(f"ATTACH '{orig}' AS o"); c.execute(f"ATTACH '{base}' AS b")
 c.execute("CREATE TEMP TABLE old_ids AS SELECT id FROM o.entities")
 c.execute("CREATE INDEX temp.oi ON old_ids(id)")
+# an old entry that the build chain itself drops (missing from base and new, e.g. drop_untagged after a re-derivation) is put back
+# as it was; one the loads removed (present in base, missing in new: merged into a new card) stays removed
+back = c.execute("INSERT INTO main.entities SELECT * FROM o.entities WHERE id NOT IN (SELECT id FROM main.entities) AND id NOT IN (SELECT id FROM b.entities)").rowcount
+print('old entries the chain dropped, put back:', back)
 def redo(tbl, cols, cond):
     sel = lambda s: f"SELECT {cols} FROM {s}.{tbl} WHERE {cond}"
     c.execute(f"CREATE TEMP TABLE keep_{tbl} AS {sel('o')} UNION SELECT * FROM ({sel('main')} EXCEPT {sel('b')})")
