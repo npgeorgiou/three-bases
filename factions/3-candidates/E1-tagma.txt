@@ -1,0 +1,18 @@
+------------------------------------------------------------------
+E1. TAGMA — the Byzantine army (all-round)
+------------------------------------------------------------------
+STATUS: VERY MUCH up for BIG redesign. The current cards (summary/ section 11) are a starting point only; any of them can be changed or dropped. Do not describe Tagma from its current cards: they lean defensive only because of how earlier card design went. Tagma is NOT a defence faction (Kaptain, 11 Oct 2026).
+Identity (Kaptain, 11 Oct 2026): an all-round faction, good at everything, flashy at nothing, with the character of a thousand years of East Roman (Byzantine) military, social and spiritual history:
+- Adaptable: it changed its army to fit each enemy; mixed troops working together.
+- Mercenaries: it hired foreign units (Varangians and others), strong but bought, with their own terms.
+- Diplomacy: it won wars without battles: bribes, alliances, turning enemies against each other.
+- Logistics: themes, supply trains, fortified roads; armies that arrived fed and on time.
+- Strategy: master strategists who wrote manuals (Strategikon, Taktika); plans, stratagems, the right answer prepared in advance.
+- Faith: deep spirituality and religiosity; priests, icons and relics with the army. "En touto nika" (in this sign, conquer).
+Mechanic directions (Claude's suggestions; the remake picks 3-5 as core, the rest become splash or flavour; library concept ids in brackets):
+- Adaptability / combined arms: rewards for mixing different unit roles; cards that choose between modes. [variety_payoff, modal_choice, synergy_payoff, adjacency]
+- Mercenaries: strong units bought with supply, carrying terms (upkeep, desertion, a price). [upkeep, drawback, resource_conversion]
+- Diplomacy: winning over or pacifying enemy units; bargains. [steal, cant_attack, disable, enemy_benefit]
+- Logistics: supply, cheap repositioning, carry-over planning. [resource_gain, round_carryover, movement, rows]
+- Strategy: set up now, pay off later; finding the prepared answer (a candidate for the deck-search signature, pending the allocation table). [delayed, tutor, reactions, combo_sequence]
+- Faith: blessings, restoring, protection, faith that grows while you hold the lane's base. [heal, protection, aura, buff, territory_trigger]

@@ -1,0 +1,21 @@
+------------------------------------------------------------------
+C5. LEGION — strength in numbers (swarm + formation)
+------------------------------------------------------------------
+Idea: many cheap bodies that are strong together, measured by full rows and full columns of the 3x3 camp.
+How it wins: holds dots by numbers in all three lanes; full rows make each body sturdy, mass buffs turn the swarm into an attack.
+Mechanics:
+- Recruit N (N+1): Place: N Recruit tokens (1|1, supply 0) in free cells of my camp. [summon, fodder, board_presence]
+- Full Row (text): a bonus while all 3 cells of my row are filled ("+1|+1 while my row is full"). [row_effects, condition_count]
+- Deep Column (text): a bonus while all 3 cells of my column are filled ("the front unit of my column has +2 defence"). Rows 2-3 hold the units that make the front one strong. [link_formation, condition_count]
+- Muster (2): +1 strength for each other ally in my camp. [count_payoff, board_presence]
+- Rally: spells, every unit you control in a lane gains +1|+1 this round. [buff, temporary_buff, scope_multi]
+Self-sufficiency: holding (numbers, full rows), removal (Muster, Rally), supply (cheap bodies; Quartermaster: Supply +1 while my camp is full), cards (Roll Call: draw if one of your camps is full).
+Weak to: lane-wide damage, effects that kill the weakest unit.
+Examples:
+- Shield Brother      1 - 1|1  — +1|+1 while my row is full.
+- Conscript Sergeant  2 - 1|1  — Recruit 1.
+- Column Captain      3 - 2|3  — While my column is full, its front unit has +2 defence.
+- Drillmaster         3 - 2|3  — Muster.
+- Call to Arms (2) — Pick a lane: places 2 Recruits in free cells of your camp there.
+- Rally (1) — Pick a lane: your units there gain +1|+1 this round.
+Spells ~35%.

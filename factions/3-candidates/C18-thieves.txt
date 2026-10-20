@@ -1,0 +1,19 @@
+------------------------------------------------------------------
+C18. THIEVES — sees and takes what the enemy has (disruption + infiltration)
+------------------------------------------------------------------
+Idea: plays with the enemy's resources: their hand, their deck, their units and their camp.
+How it wins: knows the enemy's hand, steals their best cards and plays them, and infiltrates their camp to take deploy space and dots.
+Mechanics:
+- Foresight (text, spells): see the enemy's hand or top cards; some units show the enemy hand while they stand. [information, reveal_order]
+- Theft: take or copy a card from the enemy's hand or deck; stolen cards are played normally. [steal, copy]
+- Infiltrate (NEW RULE, 2): placed into a free cell of the enemy camp, under the existing control rules: it takes cells the enemy can't deploy to and can hold dots from inside. Backstab: +2 damage when striking from the cell behind the target. [placement_rules, forced_placement]
+- Burdens (NEW RULE): your units placed into the enemy camp under their control, with harmful text. [forced_placement, junk_cards]
+Self-sufficiency: holding (infiltrators), removal (stolen cards, Backstab), supply (Burdens drain the enemy; Fence: +1 carry-over when you play a stolen card), cards (theft).
+Weak to: full enemy camps (no free cells), Hold.
+Examples:
+- Lookout               1 - 1|1  — While I'm on the board, you see the enemy's hand.
+- Sneak                 2 - 2|1  — Infiltrate.
+- Saboteur              3 - 2|2  — Infiltrate. While I'm in the enemy camp, their lane gives them 1 less supply.
+- Cursed Idol (burden)  1 - 2|2  — Placed into the enemy camp under their control. Their lane gives them 2 less supply.
+- Pickpocket (1) — Take a random card from the enemy's hand.
+Spells ~40%.

@@ -1,0 +1,21 @@
+------------------------------------------------------------------
+C3. WARDENS — lock and answer (control)
+------------------------------------------------------------------
+Idea: stops threats instead of racing them.
+How it wins: lets the enemy commit, then binds, silences, bounces or exiles the key units; wins late in two lanes where the enemy can't act.
+Mechanics:
+- Bind: the unit can't move or attack this round. Buys a round in a contested lane. [disable, cant_attack]
+- Silence: the unit loses its card text and keywords, lasting (its stats stay). Shuts engines: Revenant, Plague, round-end abilities. [silence]
+- Exile: the unit leaves the game; no Death effects, no return, its card goes nowhere. [banish, removal]
+- Bounce: back to its owner's hand as the plain deck card; the owner pays again. [return_to_hand, tempo]
+- Toll (2): enemy actions in my lane cost 1 more supply. Slows a whole lane, from any row. [cost_increase, lane_rule]
+Self-sufficiency: holding (sturdy low-strength wardens), removal (exile, bounce), supply (Toll taxes the enemy), cards (Interrogate: when I bind a unit, draw a card). [DRAW RULE: limited only if the unit binds once (on Place); check]
+Weak to: many cheap units, copies.
+Examples:
+- Gaoler       2 - 1|2  — Place: binds the enemy facing me.
+- Hushkeeper   3 - 2|3  — Place: silences an enemy in my lane.
+- Toll Warden  3 - 1|4  — Toll.
+- Shackles (1) — Bind an enemy unit.
+- Recall (2) — Return a unit with supply 3 or less to its owner's hand.
+- Banish (5) — Exile an enemy unit.
+Spells ~45%.

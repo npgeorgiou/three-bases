@@ -1,0 +1,22 @@
+==================================================================
+14. ANIMATIONS AND SOUND
+==================================================================
+- Attack: attacker gets a red frame; after 0.5 s the target gets a red frame; the attacker's strength badge glows, then red markers fly to the target's defence (as many as the attacker's strength); the markers fly back.
+- Damage starts from its real source (October 2026): a unit's strength badge for its strikes and ability damage, a dead unit's cell for its Death effects, the spell card only for spell damage.
+- Hits of one step land together (October 2026): all the targets of an effect that happens at once are hit in the same animation.
+- Deaths (October 2026): a unit that dies stays on the board, dimmed, and a tombstone drops onto it. While its death resolves, its cell gets a white border; every death whose chain is still running keeps its white border, and only the one being resolved right now has a lit (lighter) tombstone. When its chain is done, the dead unit flies to the discard pile. Stat gains from each death show the moment it resolves.
+- Charge (October 2026): the charger sets off fast (gains such as Tourmarches' show as it sets off), rushes into the enemies ahead, knocks them back a little, the lane shakes front to back, and everyone settles into their cells.
+- Throw (October 2026): the thrown unit flies in an arc to its cell; landing on a unit it hits it (no markers) and dies there.
+- Mass Grave (October 2026): all the fliers glide together through the enemy camp without stopping; each vanishes where it strikes, or flies off the board; an enemy turns into a grave the moment its killing flier passes over it, although the strikes all count at the end of the spell.
+- Drain: drops of life stream from the target into the drainer.
+- Units killed outright (by a spell, a sacrifice or Reckless) get their tombstone the same way; damage blocked by armour shows an "Armour" label.
+- Movement (especially the enemy's): green border on the unit, green highlighted destination, then the unit slides there.
+- Placement: yellow border for 1 second plus a big yellow puff (also for a thrown unit landing on a free cell, and for units rising from Danse Macabre).
+- Restored shields: the unit glows green and "+n" rises from its defence, with a soft chime.
+- Stat gains: whenever a unit's strength or full defence goes up (auras, buffs, Link merges, growth), green rings puff once from that stat badge.
+- Spells: the played card flies face up (the opponent's flips over) to the spell slot and stays there about 1 second for the opponent's spells (0.6 s for your own) before its effects play; while it acts, the lane it works on is highlighted in orange (Greek Fire and Contagion: the column, red dashed) and a picked unit gets the orange marker; then it flies to the discard pile. Spells cast on a lane only to pay (Levy, Crown of Aurelius, Ossuary Tithe, Bone Harvest, Requiem, Danse Macabre, Thinning of the Veil) highlight no lane.
+- Card draw: a card flies from the deck into the hand, with a sound.
+- Cards entering a hand from anywhere else animate too (AGREED, October 2026): a created card (Levy's Stratiotes) appears at the spell slot and flies into the hand; a card returning from the discard pile (Undying Reaver, Clerk of the Dead Ledger, Requiem) flies from the pile. The opponent's show their back. Draws and arrivals fill the hand's new slots in the order they happen (a card drawn by a death at round end takes the first new slot, the round's draws the next ones), so the hand never shows a gap.
+- Unspent supply flies into the carry-over indicator at round end.
+- Timing: the computer waits 1 second between actions, counted from the end of the previous action's animation, and 1 second more when it passes. When you have no actions left, your turn passes automatically after 2 seconds; a computer with no actions passes after 1 second.
+- Sound: a clock tick on each change of turn, a gong for each new round, card drawing, unit placement, each strike or damage, unit death, unit movement (a group marching, footsteps matching the distance moved) and base capture. Currently synthesized in the page; to be replaced by free sound files later.

@@ -1,0 +1,21 @@
+------------------------------------------------------------------
+C13. FORGE — builds constructs, arms its units (assembly + items; Kaptain's items idea)
+------------------------------------------------------------------
+Idea: builds big constructs out of parts and arms its units with items; parts and items keep their value when units die.
+How it wins: assembles constructs in its front rows (a construct covers 2-3 cells and holds a base), arms its holders, re-arms them when they fall.
+Mechanics:
+- Parts and Assembly (NEW RULE, like the Stitching Table): Part units name a recipe ("a Frame, an Engine and a Weapon in one row"); when the recipe stands complete, the parts merge in place into the Construct printed on them (their combined stats plus its ability). A board condition, not a counter. [merge_attach, card_crafting]
+- Items (NEW RULE: a third card kind): attached to one of your units, adding stats or keywords. [items_consumables, merge_attach]
+- Kaptain's drop rule: a unit killed by a spell or a ranged unit returns its items to their owner's hand; one killed by a melee unit gives them to the killer. [items_consumables, return_to_hand]
+- Salvage (text): Death: a Part returns to your hand, or leaves a Scrap token (0|1, supply 0) that counts as any part. [death_trigger, recycle]
+- Carriers (text): units that hold extra items or gain per item. [items_consumables, synergy_payoff]
+Self-sufficiency: holding (constructs), removal (weapons, construct abilities), supply (Furnace part: Supply +1), cards (Salvage).
+Weak to: Silence, Exile, pushes that break a row.
+Examples:
+- Iron Frame    1 - 0|3  — Part: Frame.
+- Boiler        2 - 1|2  — Part: Engine. Supply +1.
+- Ballista Arm  2 - 2|1  — Part: Weapon.
+- War Engine (construct of Frame + Engine + Weapon in one row) ▪▪▪ — their combined stats +2|+2, Ranged.
+- Iron Helm (item, 1) — +0|+2.
+- Barbed Spear (item, 2) — +2|+0, Pike.
+Items ~20%, spells ~15%.

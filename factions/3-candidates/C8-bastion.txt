@@ -1,0 +1,19 @@
+------------------------------------------------------------------
+C8. BASTION — the unbreakable line (fortress + punishment)
+------------------------------------------------------------------
+Idea: you can't break through it, and trying hurts.
+How it wins: holds dots with walls and screened units, kills attackers with defence-based strikes; slow, wins by holding two bases through rounds.
+Mechanics:
+- Palisades: tokens 0|3, Immobile, supply 0, made in front-row cells; they hold dots. [summon, blocking]
+- Screen (2): I can't be struck while an ally stands directly in front of me. Strikers and supply sit safe in rows 2-3 behind the walls. [protection, rows]
+- Hold (2): enemies placed or moved into the cells facing me can't attack this round. [on_enemy_enter, cant_attack]
+- Brace (1): my strikes use my defence instead of my strength. Its high-defence units are its attackers. [stat_swap]
+- Unbroken (text): round end: if I took no damage this round, I gain +1 defence (lasting). [permanent_growth, turn_end]
+Self-sufficiency: holding, removal (Brace), supply (Garrison: Supply +1 for each Palisade in my lane, up to 2), cards (Fortify: draw a card and make a Palisade).
+Weak to: lasting defence loss, units displaced to other lanes, control.
+Examples:
+- Wallwright     2 - 1|2  — Place: a Palisade in a free cell of your front row.
+- Gate Sentinel  3 - 2|3  — Hold.
+- Tower Shield   3 - 1|5  — Brace.
+- Raise the Walls (2) — Pick a lane: a Palisade in each free cell of your front row there.
+Spells ~20%.

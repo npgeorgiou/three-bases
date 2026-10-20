@@ -1,0 +1,17 @@
+==================================================================
+6. FACTION ENTRY FORMAT (11 Oct 2026; Claude's proposal from the agreed points in Part 5)
+==================================================================
+Each faction candidate is written as:
+- Idea: one overarching idea, one or two sentences, mechanics only.
+- Core mechanics (3-5): each explained as a mechanic (what the player does, what it rewards, how it is answered), then the keywords that serve it.
+- Library concepts: the concept ids behind each core mechanic, and 2-3 real cards from the library that show it.
+- Signatures owned: which signature mechanics belong to this faction (from the allocation table).
+- Splash: the few cards using another faction's mechanic, and the faction trait each one expresses.
+- Web: enablers -> payoffs (every payoff 3+ enablers, every enabler 2+ payoffs).
+- How it wins.
+- Interaction level: high / medium / low, and how it touches the enemy.
+- Lane control: its "as long as you hold this lane's base" / "if you don't" / both-case cards.
+- Rows 2-3: the job of its back rows.
+- Self-sufficiency: how it holds dots, removes enemies, gets supply and draws (the draw card, tied to the signature, bounded), without another faction.
+- Example cards: "Name  4 - 2|3  ▪▪  text", each trigger with its frequency bound (per card / per round / unbounded).
+- Network: which existing inputs it uses, which new ones it needs.

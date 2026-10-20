@@ -1,0 +1,7 @@
+==================================================================
+4. WINNING AND LOSING
+==================================================================
+- Hold 2 or more bases at the end of a round that you also held when that round started (ownership may change during the round; only start and end count). Nobody holds a base when round 1 starts, so the earliest win is at the end of round 2.
+- If a round ends with a player having no carry-over and no units that generate supply, that player loses. If both do, both lose.
+- If three rounds in a row pass without either player taking any action, for whatever reason (passing by choice or having nothing legal to do), both players lose. The first two such rounds are free, so carry-over can be saved; the count resets the moment either side does anything.
+- Withdrawing (AGREED, 10 Oct 2026) is a loss: the other side wins, and the end popup says who withdrew.

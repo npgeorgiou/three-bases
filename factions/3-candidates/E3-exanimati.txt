@@ -1,0 +1,11 @@
+------------------------------------------------------------------
+E3. EXANIMATI — the march of the unburied
+------------------------------------------------------------------
+STATUS: VERY MUCH up for BIG redesign. The current cards (summary/ section 11) are a starting point only; any of them can be changed or dropped. Do not limit the faction to what its current cards do.
+Identity (AGREED, 10 Oct 2026): death and disease; own non-Greek theme. Imaginative frame (Claude's suggestion): a necropolis on the march. For them death is a door, not an end: the fallen leave something behind, the grave is a second hand, the named dead come back, and plague is a patient tide that rots the living enemy round after round. Boundary (AGREED): remains/corpses belong to the Rotborn, not the Exanimati.
+Mechanic directions (Claude's suggestions; library concept ids in brackets):
+- Death as a resource: deaths fuel effects, counts of the dead pay off. [death_trigger, sacrifice, fodder, death_count]
+- The grave as a second hand: return, resurrect, recycle from the discard pile (a candidate for the resurrection signature, pending the allocation table). [graveyard, revive, recycle]
+- Plague: disease that wears enemies down every round and spreads when they die; lasting losses. [damage_over_time, debuff, permanent_loss]
+- Haunting: the dead leave spirits (Shades) behind that still act. [summon, death_trigger]
+- Drain: taking from the living to sustain the dead. [lifesteal, debuff]

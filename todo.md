@@ -1,5 +1,5 @@
 # Three Bases — TODO
-Work not done yet. Kaptain's requests in his own words where he gave them. Remove an item once done or decided, and move what was decided into summary.txt (or factions.txt if it is only an idea).
+Work not done yet. Kaptain's requests in his own words where he gave them. Remove an item once done or decided, and move what was decided into summary/ (or factions/ if it is only an idea).
 
 1. **Crown rule.** "Only the player who holds the crown can attack": how that rule would change the game. Not yet discussed.
 2. **File size.** The game file is large. Look at ways to shrink it.
@@ -11,7 +11,7 @@ Work not done yet. Kaptain's requests in his own words where he gave them. Remov
 8. **AI lab.** Move it to the current card set, let its tournament tune the coded AIs on them, then retrain the learning AIs.
    - Planned for the retrain on the current cards: the cell layer (16 numbers per cell) may need widening (e.g. 24 or 32) as keywords and a "gained keywords" input per cell are added; replace the side-by-side cell combination with a convolution-style layer (each cell read with its neighbours) or attention (every unit looks at every other unit). Kaptain prefers attention.
    - Gained keywords (Plague, Revenant, Doctor Vessane, Embalmer, Embalming Rite, Hungering Mass) need a "gained keywords" input per cell in the AI network (one slot per keyword, in the shared cell layer).
-9. **Faction candidates remake** (factions.txt Part 3, into the Part 6 format). Known fixes:
+9. **Faction candidates remake** (factions/ part 3, into the Part 6 format). Known fixes:
    - Every entry: separate the 3-5 core mechanics from the keywords that serve them; name owned signatures; add interaction level, lane-control cards, row 2-3 job, frequency bound on every trigger.
    - Draw: C14 Scout and C22 Decompose break the draw rule; C3, C16, C21 to check; C2 cantrips depend on the allocation table (all marked on their Self-sufficiency lines).
    - Card copying, card creation and deck search are spread over several candidates: settle them in the allocation table.

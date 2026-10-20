@@ -1,0 +1,9 @@
+==================================================================
+3. BOARD AND BASES
+==================================================================
+- 3 lanes. Each lane: my camp (bottom) and the enemy camp (top), facing a base in the middle.
+- Camp grid: 3 columns × 3 rows. The row nearest the base is the front row.
+- No hits between lanes. Lane switching only via special moves (e.g. Outrider).
+- Cells occupied by one unit are drawn as one merged cell.
+- Each base has 3 dots, one in front of each front-row column. A unit of yours in that front-row cell gives you the dot; if the opponent also has a unit in its facing front-row cell, the dot is cancelled. 2 or more dots = the base is yours.
+- No base powers in the game yet.

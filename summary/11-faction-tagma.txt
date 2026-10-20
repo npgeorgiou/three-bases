@@ -1,0 +1,59 @@
+11. FACTIONS (continued)
+------------------------------------------------------------------
+TAGMA (Byzantine army)
+------------------------------------------------------------------
+Identity: a balanced mix, not a defence faction (a future faction will be defence-heavy), with good but not excessive supply and logistics (a future faction will be supply-heavy), and Orthodox Christian priest units and church spells. Baseline 1-cost unit: 1|1 with a minor ability. Inspiration: Legends of Runeterra's Demacia.
+Main keywords: Shield wall, Link, Pike, Charge, Armoured, Ranged, Lightfooted, Defect, Pull, Bodyguard, Skirmisher, Outrider.
+
+Units:
+Unit            | Card      | Ability / notes
+----------------+-----------+----------------
+Stratiotes      | 1 - 1|1      | +1 supply while in your back row.
+Kursor          | 1 - 1|1      | Lightfooted.
+Pavisarios      | 1 - 1|1      | Shield wall. Link.
+Mandator        | 1 - 1|1      | Place: moves another ally in its lane to any free spot (doesn't use its move).
+Psilos          | 1 - 1|1      | Skirmisher: +2 defence (while no ally is adjacent).
+Deputatoi       | 1 - 0|1      | Round end: each other adjacent ally restores 1 lost shield. Death: draw a card.
+Akolouthos      | 1 - 1|2      | (vanilla).
+Mitaton         | 2 - 0|1  ▪▪  | Supply +1.
+Voukinator      | 2 - 1|2      | Each unit you place later in its lane gains +1 strength.
+Monomachos      | 2 - 2|2      | Place: pick an enemy unit in this lane that can move forward; it is pulled forward.
+Komes           | 2 - 1|2      | Place: each ally already in its lane gains +1 defence.
+Kontarioi       | 2 - 2|2      | Pike.
+Toxotes         | 2 - 1|1      | Ranged.
+Presbeutes      | 2 - 0|2      | Place: an enemy 1-supply unit in this lane defects to a free spot in your camp.
+Hiereus         | 2 - 0|3      | Round end: each other ally adjacent to it restores 1 lost shield.
+Skoutatoi       | 2 - 1|3      | Shield wall.
+Lorikatos       | 2 - 1|2      | Armoured.
+Kavallarios     | 4 - 3|2  ▪▪  | Charge.
+Akritai         | 3 - 2|2  ▪▪  | When an enemy is placed or moved into an enemy front-row cell in its columns, deals 2 damage to it.
+Menavlatoi      | 3 - 3|2      | Pike. +1 strength while an ally is directly in front of it.
+Sphendonetes    | 3 - 1|1      | Ranged. Round end: deals 1 damage to the nearest enemy in its column.
+Doryphoroi      | 3 - 1|3  ▪▪  | Bodyguard. Death: each adjacent ally restores 2 lost shields.
+Misthophoroi    | 3 - 5|3      | Round end: if you have no carry-over, it deserts (dies). (AGREED 5|3, 10 Oct 2026: above the budget of 7 because desertion is a drawback.)
+Tagmatikos      | 3 - 3|4      | (vanilla).
+Thureophoroi    | 3 - 2|3  ▪▪  | Shield wall.
+Tourmarches     | 3 - 2|4      | Whenever another ally in its lane moves (any move: own moves, free moves, charges, pulls, pushes, Onslaught, a throw), that ally gains +1|+1 this round. (AGREED, October 2026: the ally that moved gains, not the Tourmarches.)
+Varangoi        | 4 - 3|2  ▪▪  | Whenever another ally in its lane survives damage, that ally gains +1 defence. (AGREED, October 2026; was +1 strength.)
+Charax          | 4 - 0|8  ▪▪▪ | Immobile.
+Strategos       | 4 - 2|3      | Other allies in its row have +1 strength and +1 defence.
+Hippotoxotai    | 4 - 2|1  ▪▪  | Ranged, Outrider.
+Varangian Guard | 4 - 2|3  ▪▪  | Bodyguard; each time it takes damage for an ally, it gains +1 defence. (AGREED, October 2026; was +1 strength.)
+Klibanophoros   | 4 - 3|3      | Armoured.
+Patriarches     | 5 - 1|6      | Round end: the other allies in its lane restore all lost shields.
+Manganon        | 5 - 2|4  ▪▪  | Round end: strikes the nearest enemy it could attack (section 6).
+Doux            | 5 - 5|5      | (vanilla). Also appears from the Exanimati Sarcophagus. (AGREED)
+Kataphraktoi    | 6 - 4|3      | Armoured.
+Domestikos      | 6 - 4|4      | Allies adjacent to it have +1 strength and +1 defence. (name AGREED)
+
+Spells:
+- Annona (1) — Pick a lane: +3 supply there this round.
+- Reform Ranks (1) — Pick a lane: move up to 2 of your units there (doesn't use their moves).
+- Monomachia (2) — Pick one of your units (with strength), then an enemy in its lane: they strike each other at once.
+- Synaspismos (2) — Pick two of your units directly beside each other: both gain +1 strength and +1 defence.
+- Levy (2) — Add 2 Stratiotes to your hand (cast on a lane, which pays).
+- Strategikon (2) — Pick a lane: your units there are Armoured this round.
+- Forologia (2) — Pick a lane: +1 carry-over for each unit you control there (including units in the enemy camp), up to the carry-over cap; units lose nothing.
+- Ipermachos Stratigos (4; renamed from Hodegetria, was cost 3; AGREED) — Pick a lane: your units there restore all lost shields and gain +1 defence.
+- Greek Fire (3) — Pick a column of an enemy camp: deals 2 damage to every enemy in it.
+- Bribe (=) — Costs the target's supply. Pick an enemy unit: it defects to a free spot in your camp in its lane.

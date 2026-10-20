@@ -1,0 +1,18 @@
+------------------------------------------------------------------
+C22. ROTBORN — remains that feed growth (planned; part 2)
+------------------------------------------------------------------
+Idea: every death leaves remains; remains hold dots, feed growth and sprout new units; the enemy starves.
+How it wins: trades units into remains that keep holding the dots, grows through its camps, and lowers enemy supply with Blight.
+Mechanics:
+- Remains: dying units leave a Fungal Corpse (0|0, Immobile, destroyed by any damage, holds dots). [death_trigger, summon]
+- Sprout (text): units placed onto remains (as Corpse Gnawer is placed onto Shades), gaining stats. [placement_rules, synergy_payoff]
+- Spreading (text): masses that spread into free cells (the existing spreading rules). [summon, board_clog]
+- Blight: lowers the supply of the enemy's lane. [disruption, economy]
+- Feeding (text): units that eat remains for lasting growth. [sacrifice, permanent_growth]
+Self-sufficiency: holding (remains), removal (masses, Blight), supply (Mycelium: +1 supply for each remains in my lane), cards (Decompose: draw a card when remains are eaten). [BREAKS DRAW RULE: fires on every eaten remains; fix in remake]
+Weak to: Exile, area damage (remains die to any damage).
+Examples:
+- Spore Rat  1 - 2|1  — Death: leaves a Fungal Corpse.
+- Sprouter   2 - 1|2  — Can be placed only onto remains, which it consumes; I gain +2|+2.
+- Blighting Spores (1) — Blight an enemy unit.
+Spells ~30%.

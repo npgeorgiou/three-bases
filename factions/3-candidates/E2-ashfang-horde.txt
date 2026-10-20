@@ -1,0 +1,12 @@
+------------------------------------------------------------------
+E2. ASHFANG HORDE — the war host of fury and fire
+------------------------------------------------------------------
+STATUS: VERY MUCH up for BIG redesign. The current cards (summary/ section 11) are a starting point only; any of them can be changed or dropped.
+Identity: a savage war host of brutes, beasts and fire. Blood is fuel: it hurts itself on purpose to unleash something bigger. Its heart is its huge brutes.
+Measured (11 Oct 2026, 168 simulated games): the Horde wins with its big units (Iron Behemoth, Gorehound, Cave Troll); the self-harm payoffs barely mattered and Blood Drum hurt only its own side. Self-harm must feed the big units, not be a tax.
+Mechanic directions (Claude's suggestions; library concept ids in brackets; Kaptain's ideas #8, 9, 22, 24, 30, 31 in Part 4):
+- Brutes fed by blood: big units that cost less or grow when your units were damaged or died. [cost_reduction, on_damaged, permanent_growth, count_payoff]
+- Blood as fuel: self-damage that also hurts the enemy; some small ways to gain defence from it. [life_payment, friendly_fire, sacrifice, on_damaged]
+- Hit hard and burn: direct and area damage, units that strike on Place. [direct_damage, aoe_damage, on_play]
+- Protect the wounded front: hit-and-push, so the enemy must spend supply to move and hit. [forced_movement, on_attack]
+- Feast on the fallen: gains from enemy deaths. [on_kill, death_trigger]

@@ -1,0 +1,21 @@
+------------------------------------------------------------------
+C10. SUNDERERS — break defence for good (defence-lowering + punishment)
+------------------------------------------------------------------
+Idea: enemy defence falls and stays fallen; its holders crack whoever strikes them.
+How it wins: enemy holders lose defence that restoring can't bring back until anything kills them; ordinary strikes then take the dots.
+Mechanics:
+- Sunder N: the target loses N defence, lasting (like Creeping Rot's -2 strength, but defence). Restoring can't undo it; at 0 the unit dies. [permanent_loss, debuff]
+- Pierce (2): Armoured doesn't block my strikes, and Bodyguard doesn't take them. [piercing]
+- Cracking Hide (text): when I'm struck, the attacker is Sundered 1. Its defenders punish attackers. [counterattack, on_damaged]
+- Exposed payoffs (text): +2 damage to units whose defence is below their printed defence. [stat_condition, attack_mod]
+- Shatter (text): when a Sundered enemy dies, the enemies adjacent to it are Sundered 1. [death_trigger, debuff]
+Self-sufficiency: holding (Cracking Hide), removal, supply (Salvage: when a Sundered enemy dies, +1 supply in its lane), cards (spells that draw on a kill).
+Weak to: many small units, growth.
+Examples:
+- Chisel     1 - 1|1  — My strikes Sunder 1.
+- Thornhide  2 - 1|3  — Cracking Hide.
+- Ram Crew   3 - 3|2  — Pierce.
+- Breaker    3 - 3|2  — My strikes deal +2 damage to units below their printed defence.
+- Splinter (2) — Sunder 2 an enemy unit.
+- Fracture (3) — Pick an enemy unit: Sunder 1 it and every enemy in its row.
+Spells ~40%.

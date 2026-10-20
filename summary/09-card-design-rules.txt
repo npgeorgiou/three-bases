@@ -1,0 +1,17 @@
+==================================================================
+9. CARD DESIGN RULES
+==================================================================
+- Costing check (AGREED, October 2026; Claude applies it to every card it designs or costs): (1) play the card out over a whole game, in the deck built for it; (2) find what limits the mechanic it touches: a card that removes the only limit on a repeating effect (returns, Place, round end) is near-unbounded and is never costed as a small bonus; (3) compare it with the strongest card at the same cost. Defence is what holds the dots, so defence gains, and defence that keeps coming back, are worth more than strength.
+- Supply-to-stats rule (AGREED): total strength + defence of a vanilla unit by supply: 1→3, 2→5, 3→7, 4→8, 5→10, then 2 per supply (6→12, 7→14, 8→16, 9→18, 10→20). Up to 5 it follows round(3 × S^0.75); from 5 on it is 2 × S. Size takes its share (line of 2: 1, line of 3: 2, 2x2: 3), and the ability gets the rest.
+- Rationale: 2#3|3 or 3#1|8 are too strong early/mid game. Examples: 5#5|5, 10#10|10.
+- Keyword values (AGREED): the values in section 11 "Keywords by faction".
+- Card text (AGREED): written ability text, beyond its keywords and agreed values such as Supply N, costs at least 1 point; abilities worth more cost what their effect is worth (Claude's judgement, open to change, following the costing check in section 2). E.g. a unit that brings another unit later (Sarcophagus, Husk, Stitching Table) counts that unit at a discount. Giving Plague to enemies is valued 1 higher (AGREED, 10 Oct 2026): the cards that give Plague cost 1 more than before, with the same stats.
+- Card text voice (AGREED, October 2026): a card refers to itself as I / me / my ("When I attack", "I return to your hand"); "it" always means another unit (e.g. Tourmarches: the ally that moved gains +1|+1). "In my lane" is assumed and not written; "in ANY lane" is written out where it applies (Ogre Thrower, Blood-Letter). Stat changes follow the wording in section 8 (plain verb for lasting, "this round", "have" for position bonuses). The tables in this document describe the abilities; the game's card texts are written in this voice.
+- Drawbacks (AGREED): card text that hurts its own side (e.g. Misthophoroi deserting without carry-over) is a drawback, never an ability: it adds to the stat budget, so such a unit's strength + defence sits above the vanilla budget, never at or below it. Every ability is judged as benefit or drawback before it is costed.
+- No faction gets a built-in weakness penalty (AGREED; the Exanimati included).
+- So every unit's strength + defence = budget for its supply − size − keyword values − the value of its card text (+ the value of a drawback). The split between strength and defence is Claude's (open to change). Exception: Writhing Flesh (AGREED 1|1).
+- Each faction has a baseline 1-cost unit showing its proclivity.
+- 100 cards per faction, spells 20-50% of them (AGREED, 11 Oct 2026).
+- Only mechanics are reused from other games, never names or wording.
+- Design stays open-ended: future cards may create, multiply or steal cards, and values may grow very large.
+- Decks may mix 2 factions later, so design cross-faction interactions.

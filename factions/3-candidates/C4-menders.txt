@@ -1,0 +1,20 @@
+------------------------------------------------------------------
+C4. MENDERS — refuse to die (sustain + fortress)
+------------------------------------------------------------------
+Idea: units refuse to die and grow tougher from healing, and every restore also hurts the enemy.
+How it wins: its holders keep returning to full defence, so it holds two bases through whole rounds; healing triggers deal the damage.
+Mechanics:
+- Back-line healers: healers restore the ally directly in front of them (round end, or Place). Healers stand in rows 2-3, holders in front. [heal, rows, turn_end]
+- Overheal: defence restored beyond what was lost becomes extra defence above the card, up to +3 (as Drain does). [heal, shield]
+- Lifebond (2): when my strike deals damage, the most damaged ally in my lane restores that much defence. [lifesteal]
+- Mending triggers (text): whenever an ally in my lane restores defence, I deal 1 damage to the nearest enemy in my column. Healing is removal. [synergy_payoff, ping]
+- Last Stand (2): the first time each round I would die, I survive with 1 defence. [cheat_death]
+Self-sufficiency: holding, removal (triggers, Lifebond strikes), supply (Pilgrims: Supply 1 healers), cards (Blessing: draw when one action restores 3 or more).
+Weak to: lasting defence loss (can't be restored), Exile, Silence.
+Examples:
+- Field Medic        1 - 0|2  — Round end: the ally directly in front of me restores 1 defence.
+- Sister of Mending  2 - 1|2  — Whenever an ally in my lane restores defence, I deal 1 damage to the nearest enemy in my column.
+- Bonded Blade       3 - 3|2  — Lifebond.
+- Unyielding         3 - 2|3  — Last Stand.
+- Wellspring (2) — Pick a lane: your units there restore 2 defence (Overheal applies).
+Spells ~30%.

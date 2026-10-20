@@ -1,0 +1,48 @@
+==================================================================
+11. FACTIONS
+==================================================================
+All current factions, in one place: keyword values, units, spells and tokens. Ideas for new factions and redesigns are in factions/.
+
+Notation: supply - strength|defence, then the size: no mark 1 cell, ▪▪ line of 2, ▪▪▪ line of 3, ▪▪▪▪ 2x2.
+
+Keywords by faction (each keyword under the faction that has it most; full hover texts in section 10). Value = stat points the keyword takes from the supply budget (negative = a drawback that buys stats). AGREED.
+
+Tagma:
+Keyword                | Value         | Description
+-----------------------+---------------+------------
+Shield wall            | 1             | Beside another Shield wall unit in its row: +1 defence per such neighbour.
+Link                   | 0             | Touching Link units merge into one unit, adding stats, supply and keywords.
+Pike                   | 1             | Can also attack the enemy front row from your second row.
+Ranged                 | 3             | Can attack any enemy in its lane, from any row.
+Armoured               | 2             | The first damage it takes each round is blocked.
+Lightfooted            | 1             | Moves twice per round, pays for the first move only.
+Skirmisher             | 1             | Has its bonus while no ally is adjacent.
+Outrider               | 1             | Can move to a free spot in another lane's camp.
+Bodyguard              | 1             | Takes the damage aimed at adjacent allies.
+Defect / Pull          | per card      | Defect: an enemy joins your side. Pull: an enemy moves straight forward.
+Supply N               | 3 per point   | Adds N supply to its lane at each round start.
+
+Ashfang Horde:
+Keyword                | Value         | Description
+-----------------------+---------------+------------
+Charge                 | 2             | When placed outside the front row, moves straight forward; in the front row, strikes the enemies right ahead.
+Reckless               | -2            | Dies right after it attacks.
+Push                   | 1             | A surviving front-row enemy it strikes moves one row back.
+Splash                 | 1             | Half of each strike passes to the units right behind the target.
+Overrun                | 1             | A killing strike passes its leftover strength to the units right behind.
+Pack                   | 1             | Bonus per adjacent ally.
+Frenzy                 | 1             | In your front row: strikes the nearest enemy it could attack whenever another ally in its lane dies.
+Sacrifice              | -2            | Must be placed over your own units; they die. Shared with Exanimati.
+Riposte                | 2             | Strikes back an attacker when it survives.
+Flurry                 | 3             | Attacks twice per round, pays once.
+
+Exanimati:
+Keyword                | Value         | Description
+-----------------------+---------------+------------
+Revenant               | 1             | When it dies, it is resurrected in the same cell at halved stats, until its defence would halve to 0.
+Afterlife N            | N + 1         | Death: places N Shades in your camp in its lane.
+Fading                 | -2            | Dies at the end of the round in which it was placed.
+Plague                 | -1 on itself  | Loses 1 shield each round end; when it dies, adjacent allies catch it.
+Immobile               | -2            | Can't move.
+Drain N                | 2N            | Its drains deal N damage and restore up to N shields, even above its card's defence.
+Incorporeal (spice)    | 3             | Can't be struck; only spells can deal damage to it.

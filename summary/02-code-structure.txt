@@ -1,0 +1,5 @@
+==================================================================
+2. CODE STRUCTURE
+==================================================================
+- Build UI behaviour once, generically (one marker layer, previews played on a copy of the game, one hand layout), never as per-card patches.
+- Code structure (October 2026): the engine resolves effects through one resolution queue (section 7, resolution chains). The game file has an engine layer (rules, state, actions; no screen code) and a screen layer that reads the state and replays the engine's events. Each ability declares its scope once in the engine: its area (cells) and whom it affects (the SCOPE table for unit abilities, SPELL_SCOPE for spells). The rules resolve abilities on those targets, and the screen highlights the same area and units. Legal targets and move cells come from the engine's list of legal actions; previews and kill marks come from playing the action on a copy of the game. A new card needs a scope entry and its rule, never screen code.

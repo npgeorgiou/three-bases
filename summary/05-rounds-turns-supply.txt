@@ -1,0 +1,15 @@
+==================================================================
+5. ROUNDS, TURNS AND SUPPLY
+==================================================================
+- Before the game, each player sees their starting hand and can redraw up to 3 cards, each dealt card at most once. When the battle begins, both players learn how many cards the other redrew (not which).
+- The game starts with 4 carry-over supply for each player.
+- The game is played in rounds. Each action (deploy, move, attack, play a spell) is one turn; then the other player acts. Moving and attacking stay separate actions, each its own turn (AGREED, 10 Oct 2026).
+- A player can PASS instead of acting (Space = Pass). When both players pass in a row, the round ends. If a player can't take any action, they pass automatically.
+- Who acts first in round 1 is random (AGREED, October 2026); after that the starting player alternates each round.
+- Round start: each player gets, per lane, supply equal to their units' supply there; each player draws 2 cards (not in round 1). Drawing from an empty deck draws nothing.
+- A hand holds at most 10 cards; with 10 in hand you draw nothing.
+- Supply of a lane is spent only in that lane; carry-over can be used in any lane. Payment uses the lane first, then carry-over.
+- Deploying, moving and attacking each cost the unit's supply.
+- Each unit can move once and attack once per round, unless its card says otherwise (e.g. Lightfooted, Flurry).
+- Movement goes to any free spot in your own camp, in any orientation; rotating in place also counts as a move. Units with a shape of their own (Link merges, spread or eaten cells, the grown Stitching Table) are single units of that shape: they move and turn in quarter turns like any unit. A turn animates as one motion (turning while travelling), never a move followed by a turn.
+- Round end: round-end abilities fire, then leftover supply fills the carry-over lane by lane from the owner's left to right (mirrored for the opponent) until it holds 5 (trial value; was 3).

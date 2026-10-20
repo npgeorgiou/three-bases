@@ -1,0 +1,133 @@
+11. FACTIONS (continued)
+------------------------------------------------------------------
+EXANIMATI (death faction; formerly "The Grave Court")
+------------------------------------------------------------------
+Identity (AGREED, 10 Oct 2026): death and disease; own non-Greek theme. The faction profits from dying: its own deaths feed Shades, returns, card draw and growth. Its main weakening tool is Plague: diseased enemies lose a shield every round end and spread the disease when they die; a smaller set of cards also lowers enemy strength (another faction will mostly lower defence). Uses the discard pile as a graveyard (resurrection). It leaves Shades behind when it dies; remains (corpses) belong to the future Rotborn, not to the Exanimati. Baseline 1-cost unit: Bone Thrall 1 - 1|2.
+Core archetypes: four, one per unit group below. Each unit sits in the group whose mechanic it mainly serves; spells are listed together.
+Core keywords: Plague, Revenant, Afterlife, Fading, Sacrifice, Immobile, Drain. Spice: Incorporeal. A unit with two keywords is rare.
+Name concepts: Children of the Plague (disease as divine revelation; plague masks, fever visions), Ossuary Kingdom (the dead as honoured workforce; bone architecture, soul contracts), the Returned (the dead return with memories; returned knights, ancestral spirits, dead kings), Pale Physicians (death as a disease to cure; plague doctors, surgeons, stitched flesh), the Mist (ghosts, Shades).
+Card list status: built (October 2026 redesign; revised 10 Oct 2026). Stats follow section 9; the strength/defence split is Claude's unless marked AGREED. Names, keywords, costs and build choices that were proposed were approved on 10 Oct 2026.
+
+Tokens (not deck cards; each has a card that shows on hover and isn't listed in the deck builder; tokens vanish when they die):
+- Shade 1|1 (supply 1). No card text.
+- Abomination 4|3. No card text.
+- Doux 5|5 (also a Tagma card).
+- Gorvan, the Masterwork of Doctor Vessane — 3 cells (head, torso, legs), enters horizontally, 9|9; Round end: deals 2 damage to every enemy in its lane. (AGREED) A lane-winning unit.
+
+The Mist (the death engine: Fading, Shades, Afterlife, Sacrifice, and units that profit when your units die; Incorporeal as spice):
+Unit                            | Card     | Ability / notes
+--------------------------------+----------+----------------
+Grave Wisp                      | 1 - 3|2     | Fading.
+Pallid Mourner                  | 1 - 1|1     | Whenever another ally in its lane dies, it gains +1 strength.
+Ashen Penitent                  | 2 - 4|3     | Fading.
+Hanged Poet Ferenc              | 2 - 1|2     | Whenever another ally in its lane dies, the nearest enemy in its column loses 1 strength.
+Husk                            | 2 - 1|1     | Death: a 4|3 Abomination appears in its cell. (AGREED)
+Lantern Wisp                    | 2 - 1|1     | Afterlife 2.
+Pale Lantern-Bearer             | 2 - 0|2     | Round end: removes the top unit of your discard pile and places a Shade in a free cell of your camp in its lane.
+Vial-Keeper                     | 2 - 2|2     | Death: draw a card.
+Wake Candle                     | 2 - 3|3     | Fading; Death: draw a card.
+Weeping Nun                     | 2 - 1|2     | Whenever an adjacent ally dies, draw a card (once per round).
+Barrow Rider                    | 3 - 6|3     | Fading.
+Corpse Candle                   | 3 - 3|2     | Death: places a Shade in its cell and draws a card.
+Corpse Gnawer                   | 3 - 2|1     | Can be placed only onto one of your Shades, which it destroys; gains +2|+2.
+Mist Weaver                     | 3 - 1|3     | Place: your other units in its lane are Incorporeal this round.
+Ossuary Bellringer              | 3 - 1|6     | Immobile; whenever another ally in its lane dies, +1 supply there this round.
+Strix                           | 3 - 3|2     | Drain 1; whenever another ally in its lane dies, it drains the enemy facing it. (AGREED)
+Vivisector                      | 3 - 5|4     | Sacrifice.
+Wraith of the Fen               | 3 - 2|2     | Incorporeal.
+Abbess Ysolde of the Long Sleep | 4 - 2|4     | Round end: if one of your units died this round, places a Shade in a free cell of your camp in its lane.
+Charnel Priest                  | 4 - 3|5     | Sacrifice; Place: draw 2.
+Grafter                         | 4 - 3|3     | Whenever an adjacent ally dies, it gains that ally's printed strength.
+Midnight Procession             | 4 - 4|3  ▪▪ | Fading; Death: places a Shade in each of its cells.
+Oathsworn Ancestor              | 4 - 3|2     | Incorporeal.
+Shade Shepherd                  | 4 - 2|2     | Your Shades have +1|+1; Afterlife 2.
+Bone Colossus                   | 5 - 6|5  ▪▪ | Sacrifice.
+Keening Banshee                 | 5 - 2|2     | Incorporeal; Round end: deals 1 damage to every enemy in its lane.
+Reaper of the Pale Field        | 5 - 4|4     | Whenever another ally in its lane dies, deals 1 damage to the nearest enemy in its column.
+Sarcophagus                     | 5 - 0|4     | Death: Doux 5 - 5|5 appears in its place. (AGREED)
+Hollow Bishop                   | 6 - 4|4     | Round end: places a Shade in each free cell of your front row in its lane.
+
+The Returned (Revenant, resurrection, and the graveyard: units that come back or bring cards back):
+Unit                             | Card      | Ability / notes
+---------------------------------+-----------+----------------
+Barrow Revenant                  | 2 - 2|2      | Revenant.
+Banner of the Returned           | 3 - 0|7      | Immobile; your Revenant units in its lane return without their strength halved (defence and supply still halve, so they still run out). (AGREED, October 2026; was: without any resurrection debuffs, which let them return forever.)
+Clerk of the Dead Ledger         | 3 - 2|3      | Place: return a spell with cost 2 or less from your discard pile to your hand.
+Embalmer                         | 3 - 2|4      | Place: one of your units without Revenant gains Revenant.
+Grave Robber                     | 3 - 1|3      | Place: resurrects the top unit of the enemy's discard pile on your side, in a free spot of your choice in your camp in its lane. (AGREED concept)
+Tomb Warden                      | 3 - 1|5      | Whenever one of your units returns or is resurrected in its lane, that unit gains +1|+1 (a returning Revenant keeps it through later returns).
+Knight of the Ninth Barrow       | 4 - 3|3  ▪▪  | Revenant.
+The Grey Ferryman                | 4 - 3|3      | Round end: removes the top unit of the enemy's discard pile from the game and gains +1|+0.
+Weeping Bride                    | 4 - 3|3      | Revenant; when it returns, each enemy facing it loses 2 strength this round.
+Captain Mardoc of the Long Watch | 5 - 4|3      | Revenant; when it returns, it deals 2 damage to each enemy in its lane's front row.
+Aurelius the Unburied            | 6 - 4|3  ▪▪▪ | Can be played only while the Crown, Sceptre and Blade of Aurelius are all in your discard pile; playing it removes one copy of each from the discard pile. Revenant; Place: resurrects up to 2 units of your choice, picked from the top 4 units of your discard pile, in free cells of your camp in its lane. (AGREED) Built: its card marks which of the three are in your discard pile (green) and which are missing (red, struck through); the pick shows those 4 units as cards over the enemy camps (the ones that can't rise greyed out), and hovering one shows the cell it would take.
+
+The Children of the Plague (weakening the enemy: Plague, strength loss, and units that punish weakened enemies):
+Unit                      | Card     | Ability / notes
+--------------------------+----------+----------------
+Masked Flagellant         | 2 - 2|1     | Plague; Death: the enemy facing it catches Plague. (cost 2 since 10 Oct 2026, was 1)
+Plague Acolyte            | 2 - 0|1     | Place: the nearest enemy in its column catches Plague. (cost 2, was 1)
+Feverseer                 | 2 - 1|2     | Round end: each enemy with Plague in its lane loses 1 strength.
+Choir of the Fever        | 3 - 1|2  ▪▪ | Round end: each enemy facing it loses 1 strength.
+Hollow Duelist            | 3 - 4|2     | Its strikes deal +2 damage to units whose strength is below their printed strength.
+Plague Slinger            | 3 - 1|1     | Ranged; the enemies it strikes catch Plague. (AGREED, 10 Oct 2026: a very weak ranged unit tossing rotting parts; budget 7 = Ranged 3 + Plague on hit 2 + 1|1.)
+Leper Knight              | 4 - 3|4     | Plague; the enemies it strikes catch Plague. (cost 4, was 3)
+Plague Herald             | 4 - 2|3     | Round end: the nearest enemy in its column catches Plague. (cost 4, was 3)
+The Blighted Shepherd     | 3 - 2|4     | Its strikes Blight the target.
+Executioner of Saint Mora | 4 - 3|4     | Kills the enemies it strikes whose strength is 0.
+Lazaret of the Weeping    | 5 - 0|7  ▪▪ | Immobile; Round end: the enemies facing it catch Plague. (cost 5, was 4)
+Prophet Ilyas the Fevered | 4 - 3|4     | Plague; Round end: each of your units with Plague in its lane deals 1 damage to the enemy facing it.
+Mother Ophra              | 5 - 3|5     | Enemies with Plague in its lane lose 2 shields at round end instead of 1; whenever one of them dies, draw a card.
+
+The Ossuary Kingdom (bone and flesh that stay put and grow: Immobile, supply, spreading masses, Drain, surgery):
+Unit                           | Card     | Ability / notes
+-------------------------------+----------+----------------
+Bone Thrall                    | 1 - 1|2     | (vanilla; the baseline 1-cost unit).
+Ossuary Labourer               | 1 - 0|2     | Immobile; Supply 1.
+Leech Physician                | 2 - 1|2     | Drain 1; Round end: drains the nearest enemy in its column.
+Stitching Table                | 2 - 0|3     | Immobile; When a unit dies in one of the 4 cells around it (left and right = hands, behind = legs, in front = head), that cell's part is done; deaths count in any order, enemy deaths count too, and no death in a part cell is wasted. Each done part gives it +1 defence. Once all 4 parts are done, the Stitching Table leaves and Gorvan enters horizontally across the table's row, from hand to hand. The table grows into each done part's cell (it glows in place, no drop-in), unless that cell is no longer free: a unit that returns or appears there through the dying unit's own ability goes first, and then the table doesn't grow. The part cells are always counted around the cell the table was placed in. Hovering it highlights its part cells and shows which are done. (AGREED)
+Writhing Flesh                 | 2 - 1|1     | Immobile; Round end: spreads into one free cell (spreading order) and gains +1|+1. (AGREED; stays 1|1, an agreed exception to the stat rule)
+Gorged Leech                   | 3 - 1|3     | Drain 1; Round end: drains the nearest enemy in its column; +1 strength for each shield it has above its card's defence.
+Hungering Mass                 | 3 - 1|4     | Round end: eats the touching ally the spreading order picks first, taking its stats, keywords and cells. (AGREED)
+Ossuary Mason                  | 3 - 0|2  ▪▪ | Immobile; Supply 2.
+Pale Surgeon                   | 3 - 2|4     | Place: deals 1 damage to one of your units; if it survives, it gains +2 strength.
+Bone Ballista                  | 4 - 3|3  ▪▪ | Ranged; Immobile.
+Corpse of Saint Mora           | 4 - 0|4  ▪▪ | Immobile; Round end: loses 1 shield and every unit adjacent to it gains +1|+1. (AGREED)
+Doctor Vessane                 | 5 - 3|6     | Place: moves one keyword from one of your units to another.
+Ossuary Overseer               | 5 - 2|5  ▪▪ | Your Immobile units in its lane have +1|+1.
+Gharam, Titan of the Catacombs | 6 - 4|5     | Immobile; Round end: deals 2 damage to each enemy facing it.
+
+Spells:
+- Last Rites (0) — Kill one of your units; a Shade appears in its cell, or in another free cell if that one is taken.
+- Crown of Aurelius (1) — Draw a card.
+- Sceptre of Aurelius (1) — Pick a lane: +1 supply there this round.
+- Blade of Aurelius (1) — Deals 2 damage to a unit.
+- Withering Hymn (1) — An enemy unit loses 3 strength this round.
+- Ashen Tithe (1) — Blight an enemy unit.
+- Miasma (2; was 1) — An enemy unit catches Plague.
+- Crude Stitches (1) — One of your units restores up to 3 lost shields.
+- Grave Toll (1) — Kill one of your units with Fading: draw 2.
+- Barrow Mist (2) — Pick a lane: your units there are Incorporeal this round.
+- Creeping Rot (2) — An enemy unit loses 2 strength.
+- Embalming Rite (2) — One of your units without Revenant gains Revenant.
+- Kiss of the Revenant (2) — Pick one of your units and an enemy: deals 3 damage to the enemy, and your unit restores up to 3 lost shields.
+- Ossuary Tithe (2) — Gain carry-over supply equal to the number of units in your discard pile, up to 3. Built: the card shows the current gain ("now +N"), and the cast preview shows it on the carry-over indicator.
+- Bone Harvest (2) — Draw a card for each of your units that died this round, up to 3.
+- Rupture (3; was 2) — Kill one of your units with Plague; every enemy in its lane catches Plague.
+- Last Breath (3) — Pick a lane: this round, whenever one of your units there dies, it deals 2 damage to the nearest enemy in its column.
+- Requiem (3) — Return up to 2 units from your discard pile to your hand.
+- Mass Grave (3) — Pick a lane: your Shades there fly through the enemy camp, in each column as many at the first enemy as it takes to kill it, then at the next one (AGREED, 10 Oct 2026; Shades only since 10 Oct). The strikes are planned per column in flying order, front flier first: each flier goes at the first enemy in its column not yet planned to die (by its defence and Armour left); each strikes with its strength, then dies. All the strikes count at once, when the spell ends, and the deaths then resolve as usual. One with no enemy left in its column flies off the board and leaves the game without dying.
+- Ossuary Volley (3) — Pick a lane: deals 1 damage to each enemy in its front row for every 4 cards in your discard pile (up to 4).
+- Contagion (4; AGREED, 10 Oct 2026, was 2 and hit a unit and its neighbours) — Pick a column of an enemy camp: every enemy in it catches Plague. Hovering an enemy camp cell highlights the column, as for Greek Fire.
+- Raise the Fallen (4) — Resurrects the top unit of your discard pile (spells skipped) in a free spot of your choice in your camp; the card leaves the discard pile. (AGREED)
+- Thinning of the Veil (4) — Everywhere. Until round end, each of your units on the whole board that dies (Shades included) returns as a Shade in its cell. Built: hovering a lane highlights your whole board.
+- Danse Macabre (5; AGREED, 10 Oct 2026, replaces "Shades and Revenants strike") — Everywhere. Each of your units that died this round is resurrected in its own cells, if they are free (halved printed stats, placed, its card leaves the discard pile). They rise one by one in resolution order; tokens can't rise (they have no card), nor can units whose defence would halve to 0.
+- Night of Shades (5) — Pick a lane: places one Shade in each free cell of your camp there, up to the number of units in your discard pile, and removes one unit card from the top of your discard pile per Shade placed. (AGREED)
+- Katabasis (5; was "Soul Theft") — Kills any unit, yours or the enemy's, and resurrects it on your side in its own cells (even in the enemy camp) at full printed stats, without the resurrection debuffs. (AGREED)
+- Execution (6) — Kill an enemy unit. (AGREED: moved from the Horde in October 2026; kills belong to the death faction.)
+- The Long Night (6) — Pick a lane: every enemy there loses 2 strength.
+- Debt of the Fallen (7; AGREED, 10 Oct 2026) — Costs 1 less for each of your units that died this round (never below 0). Kill an enemy unit. Its card in the hand shows the current cost ("now N"). The Mist deck's finisher.
+
+Notes:
+- Units that punish weakened enemies: Hollow Duelist and Executioner of Saint Mora; mainly for another faction.
+- Exhume (spending discard-pile cards): REJECTED, never use.

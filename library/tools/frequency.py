@@ -1,4 +1,4 @@
-"""Frequency limit on every trigger -> effect pair (factions.txt Part 5, step 7: the FREQUENCY check).
+"""Frequency limit on every trigger -> effect pair (factions/ part 5, step 7: the FREQUENCY check).
 Adds trigger_effect.frequency and trigger_effect.basis. Classes:
   per_card   fires at most once for the card: a spell, a Place/on-play effect, the card's OWN death, once per game, a one-time delayed effect
   per_round  explicit "once per turn/round" cap, or a trigger of the card itself that comes once per round (turn start/end, its own attack or kill, a tap ability)

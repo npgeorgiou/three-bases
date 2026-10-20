@@ -1,0 +1,67 @@
+==================================================================
+10. KEYWORDS
+==================================================================
+Texts shown on hover in the game.
+
+Movement, attack and position:
+- Melee: Strikes enemies in its adjacent area; from your front row that area reaches across the base into the enemy front row (section 6).
+- Ranged: Can attack any enemy in its lane, from any row.
+- Pike: Also reaches the enemy front row from your second row (the cells facing it and diagonally next to them).
+- Charge: When it is placed outside your front row, it charges straight forward as far as it can. If it reaches your front row, it strikes each enemy right ahead of it (in the enemy front row, in its columns) with its strength. Short panel: "When placed outside the front row, moves straight forward. If it reaches the front row, strikes the enemies right ahead."
+- Lightfooted: Moves twice per round and pays only for the first move.
+- Outrider: Its move can also take it to a free spot in another lane's camp, paid from the lane it leaves (a move, not an active ability).
+- Immobile (Can't move): Can't move.
+- Push: When its attack strikes a front-row enemy that survives, that enemy moves one row back, if the cells are free.
+- Pull: The enemy moves straight forward, toward the base, as far as the cells are free.
+- Defect: The enemy unit joins your side: it is placed in a free spot of your camp in the same lane (its Place effects trigger) and can't act that round. If no spot is free, nothing happens. Short panel: "Joins your side in a free spot of your camp in the same lane. Can't act that round."
+
+Defence:
+- Shield wall: Shield wall units standing directly beside each other in the same row give each other +1 defence (a unit with two such neighbours gets +2).
+- Armoured: The first damage it takes each round is blocked, whatever its source (spells and your own strikes too).
+- Link (AGREED): Link units of yours touching edges merge in place (they glow, no disappear-and-appear) into one unit of the combined shape at their current stats (bonuses included), adding strength, defence and supply and combining keywords; any connected shape; a merged unit never splits. Shield wall gives +1 defence only, so two Pavisarioi: 1|2 + 1|2 = 2|4. Built choices (Claude's, open to change): merging happens after every action and after round-end abilities; the older unit absorbs the newer; the merged unit counts as moved/attacked if either part had; temporary strength stays temporary; all merged cards go to the discard pile when it dies. Link may also suit the Exanimati (masses that unite).
+- Bodyguard: When an ally adjacent to it would take damage, it takes it instead (not for self-strikes).
+- Skirmisher: Has its bonus while no ally is adjacent.
+- Incorporeal: Can't be struck, and units can't deal damage to it (attacks, Charge, Riposte, ability damage such as Akritai's or round-end damage, and strikes a spell makes a unit deal). Only spells can deal damage to it.
+
+Damage:
+- Strike (AGREED, October 2026): A hit with a unit's strength: its attacks and charges, and strikes with its strength from an ability or a spell. A melee unit strikes only what it could attack. Fixed amounts from abilities and spells are damage dealt, not strikes.
+- Reckless: Dies right after it attacks (a charge strike counts).
+- Overrun: When its strike kills, the leftover strength passes to the units right behind the target, split evenly (rounded down); each one it kills passes its leftover on the same way.
+- Splash: Each unit its attacks strike passes half of that damage (rounded down) to the units right behind it, split evenly (rounded down), and so on backward.
+- "Right behind" follows the struck unit's own cells: the units in the cells directly behind any of its cells (a 2-wide unit can pass to two units). A unit is struck once per attack; an amount that rounds down to 0 stops there.
+- Pack: Has its bonus for each adjacent ally.
+- Frenzy: While in your front row, whenever another ally in its lane dies, strikes the nearest enemy it could attack with its strength.
+- Riposte (AGREED): When it survives an attack, it strikes the attacker back with its strength.
+- Flurry (AGREED): Attacks twice per round and pays only for the first attack.
+- Drain N (AGREED; keyword on the card since October 2026): When it drains a unit, it deals N damage to it and restores up to N of its own shields, even above its card's defence. The card's text says when and whom it drains.
+
+Triggers:
+- Place: Triggers every time the unit is placed on the grid: when you play it from your hand, when it defects to your side, when it is resurrected or returns, and when it appears as a token.
+- Death: Triggers when this unit dies.
+- Round end: A round ends when both players pass in a row. Round-end effects then fire in reading order, round starter first. A unit's strength bonuses add to the strikes its abilities deal to enemies.
+- Supply: Adds this much extra supply to its lane at the start of each round.
+- Sacrifice (AGREED; Horde and Exanimati): The unit can only be placed if its cells cover at least one of your units (and only yours); every unit it covers dies. A 2-cell unit can kill two units (e.g. a 1-cell unit and part of a 3-cell unit, if it covers both); a 3-cell unit covering only one 1-cell unit kills just that one.
+(Round end, Place, Death and Supply need no keyword panels in the game: AGREED, 10 Oct 2026.)
+
+Supply:
+- Carry-over (keyword panel, October 2026): "Supply you keep between rounds. At round end your unspent lane supply is added to it, up to 5 in total; you can spend it in any lane." Shown on Misthophoroi, Gold Grubber, Forologia, Blood Money and Ossuary Tithe.
+
+Spells:
+- Everywhere (AGREED, October 2026): Paid from one lane, it works in all three lanes (Danse Macabre, Thinning of the Veil). No "Anywhere" keyword (rejected).
+
+Death and the discard pile (Exanimati):
+- Revenant (AGREED): When it dies, it is resurrected in the same cell (the resurrection rule: halved printed stats; it is placed, so its Place effects fire again) and keeps Revenant, so it can return again and again until its defence would halve to 0. It keeps its lasting changes (section 8).
+- Plague (AGREED): Loses 1 shield at each round end; when it dies, adjacent units of both sides, in the camp where it died, catch Plague. "Catches Plague" = gains the Plague keyword.
+- Afterlife N (AGREED): Death: places N Shades in free cells of your camp in its lane (front row first, reading order).
+- Fading (AGREED): Dies at the end of the round in which it was placed.
+
+States:
+- Bloodied: Has less defence than its card shows. Defence gains that bring it back up to its card's value end it. Shown in a placed unit's hover panels.
+- Blighted (AGREED as a few Exanimati cards; mostly for the Rotborn): Gives its lane 1 less supply each round (not below 0).
+
+Removed (10 Oct 2026; don't reintroduce without asking): Rot, Wither, Freeze/Frozen, Fungal Remains (and the Fungal Corpse token, which moves to the future Rotborn as a concept).
+
+Plain terms (hover text, no panel): back row (the row of your camp furthest from the base), row (the row or rows of its own camp the unit stands in), column (enemies in the same column face each other), directly in front (the cell next to it on the side of the base, same column), directly beside (the cell left or right of it, same row), adjacent, nearest enemy in its column (section 7).
+
+Keyword panels exist only for the keywords above; other terms are plain text. No browser tooltips anywhere. Wherever a card shows its keyword panels beside it (hand, deck builder, a hovered unit, discard pile, deck list), its keywords have no underline and no hover of their own; only cards shown without panels (starting hand, Aurelius' pick, the spell slot) keep the dotted underline and the hover.
+Card references (October 2026): every card named in a card's text or in its keywords' texts (found by name: Shade, Abomination, Doux, Gorvan, Stratiotes in Levy, the Crown, Sceptre and Blade on Aurelius, and any other) shows by default in the card's side panel, under its keyword panels, as a full card; its name in the text is bold, with no underline and no hover. Tokens have no flavour text, so a search never matches flavour.

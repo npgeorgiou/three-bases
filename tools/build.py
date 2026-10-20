@@ -13,7 +13,10 @@ import os, re, subprocess, sys, tempfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'src')
-MAX_LINES = 400  # parts longer than this should be split at a section or function boundary
+MAX_LINES = 400  # code parts longer than this should be split at a section or function boundary
+MAX_DOC_LINES = 150  # same for files in summary/ and factions/
+BIG_FILE_LINES = 600  # any other new text file this long should be split too (the AI lab is exempt for now)
+EXEMPT = {'three-bases-game.html', 'three-bases-scenarios.html', 'three-bases-ai-lab.html'}
 
 
 def read(p):
@@ -36,6 +39,21 @@ def build():
     scen = scen[:i] + read(os.path.join(SRC, 'scenarios', 'scenarios.css')) + scen[i:]
     i = scen.rindex('</script>\n') + len('</script>\n')
     scen = scen[:i] + read(os.path.join(SRC, 'scenarios', 'scenarios.html')) + scen[i:]
+    for d in ('summary', 'factions'):
+        for dp, _, fs in os.walk(os.path.join(ROOT, d)):
+            for f in fs:
+                n = read(os.path.join(dp, f)).count('\n')
+                if n > MAX_DOC_LINES:
+                    warn.append(f'{os.path.relpath(os.path.join(dp, f), ROOT)}: {n} lines (> {MAX_DOC_LINES}); split it')
+    for dp, ds, fs in os.walk(ROOT):
+        ds[:] = [x for x in ds if x not in ('.git', 'library', 'src', 'summary', 'factions')]
+        for f in fs:
+            p = os.path.join(dp, f)
+            if f in EXEMPT or not f.endswith(('.html', '.js', '.txt', '.md', '.py', '.css')):
+                continue
+            n = read(p).count('\n')
+            if n > BIG_FILE_LINES:
+                warn.append(f'{os.path.relpath(p, ROOT)}: {n} lines (> {BIG_FILE_LINES}); split it with an index')
     return game, scen, warn
 
 

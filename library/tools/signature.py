@@ -1,4 +1,4 @@
-"""Signature-vs-splash view per source faction (factions.txt Part 5, step 5: signatures belong to 1, at most 2, factions;
+"""Signature-vs-splash view per source faction (factions/ part 5, step 5: signatures belong to 1, at most 2, factions;
 elsewhere they appear on a very few cards, expressed through that faction's own character).
 Builds table faction_signature(game, faction, concept, kind, entities, share, lift, owner, owner_share):
   signature  the faction's own mechanic: at least 5 cards, share >= 6% of the faction, lift >= 1.8 over the game's factions,

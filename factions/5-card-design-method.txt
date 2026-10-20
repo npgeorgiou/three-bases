@@ -1,0 +1,20 @@
+==================================================================
+5. CARD DESIGN METHOD (11 Oct 2026; Claude's proposal after Kaptain's critique of the three current factions)
+==================================================================
+Base-bound cards (R1): the condition is the base of the unit's own lane (AGREED, 11 Oct 2026).
+Base bonuses: each game the bases are assigned at random from a large pool, so cards must never depend on one specific base bonus; they check only "you hold / don't hold this lane's base" (AGREED, 11 Oct 2026).
+Steps for every faction:
+1. Read cards, not statistics: the 30-50 most characteristic cards of each source faction (small-set games and Marvel Snap included); write each card's play pattern (the decision it creates, what it rewards) and its Three Bases translation.
+2. Engine map: one idea; enablers -> payoffs drawn as a web. Every payoff has 3+ enablers in the faction, every enabler feeds 2+ payoffs; an enabler that also hurts the enemy beats one that only hurts you.
+3. A moment per card: when, where and why to play it must be a real decision; at most ~15% plain keyword-plus-stats bodies.
+4. Interaction share: cards that touch the enemy or answer what the enemy does (on enemy placed, on struck, survives damage, punish). The share differs per faction: playful/disruptive factions high, straightforward factions lower (AGREED, 11 Oct 2026).
+5. Card variety and signatures (AGREED, 11 Oct 2026):
+   - Each faction: 3-5 core mechanics (mechanics, not keywords; keywords only enable mechanics), and its own keyword set. Not every faction gets every mechanic or keyword.
+   - Signature mechanics (card copying, deck search/tutor, draw bonanza, card creation, forced movement, supply play, resurrection, bonds, stealing cards, etc.) belong to 1, at most 2, factions, where they are prominent. Elsewhere they appear only on a very few cards, and only when expressed through that faction's own character (example: a HIT HIT faction gets ONE card that resurrects its STRONGEST dead unit).
+   - Draw: every faction has at least one draw card, tied to its most basic signature (one draw card is enough for most factions).
+   - Draw is RARE and BOUNDED (AGREED, 11 Oct 2026): draw sits on an effect that fires at most once per card: a spell, a Place effect, the unit's OWN death (watch resurrection/return factions, where a death can repeat), or an explicit "once per round" cap. NEVER on a trigger tied to repeated or shared events ("whenever a friendly unit survives damage / a spell is cast, draw"). Same for other card advantage (generate, copy, tutor) outside its signature faction.
+   - Also: Place effects, triggers, round-end, base-bound cards, spells in several roles, a few deliberate gap-fillers that are strong without an obvious drawback.
+6. The game's own levers: alternating single actions (sequencing), lane-locked supply, rows (a back-row job for every faction), two of three bases held through a whole round.
+   - Lane control conditions (AGREED, 11 Oct 2026): "if you hold this lane's base", "if you don't", and cards with an effect for each case. Condition checks the current state ("as long as you hold"), not "held since round start".
+7. Checks: costing check (summary/ section 2), network line (which inputs it uses or needs), FREQUENCY check: classify each triggered effect by what bounds it: once per card (Place, own death, spell), once per round (explicit cap, round-end of one unit), or unbounded (fires on other units' or repeated events: any friendly hit, any spell cast, any death). Card-advantage and resource effects must be bounded unless the faction's signature is built on them. Real counts come from the simulator (draws, triggers per game).
+8. Measure: the headless simulator (engine + Benchmark, ~1 s per game at depth 1): premade decks against each other; per card: games played, win rate when played, damage, kills, how often its ability fired; fix or cut cards that never matter. Caveat: the Benchmark plays synergies only by accident.

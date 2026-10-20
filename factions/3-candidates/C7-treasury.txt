@@ -1,0 +1,21 @@
+------------------------------------------------------------------
+C7. TREASURY — save, then buy big (ramp + kicker)
+------------------------------------------------------------------
+Idea: weak early, banks supply, then plays expensive cards or the paid-up version of cheap ones.
+How it wins: survives the first rounds with cheap defenders that grow while it saves, then spends the bank on 7-10 supply units or Surplus effects that swing two lanes.
+Mechanics:
+- Vault (2): your carry-over cap is 2 higher while I'm in your back row. [resource_banking, round_carryover]
+- Hoard (text; moved from the dropped Tempo idea): round end: I gain +1|+1 (lasting) for every 2 supply left unspent in my lane. Saving makes its holders grow. [resource_banking, permanent_growth]
+- Surplus N: when you play the card, you may pay N more; then its Surplus effect happens too. Each card is a cheap play now or a strong one later. [kicker]
+- Interest (text): round end: +1 carry-over if you have 3 or more. [round_carryover, resource_gain]
+- Big buys: units of 7-10 supply with plain strong stats. [finisher]
+Self-sufficiency: holding (Hoard units), removal (Surplus effects, big buys), supply (its core), cards (Buy Intelligence: draw 2; Surplus draws).
+Weak to: early aggression, theft.
+Examples:
+- Vault Keeper     2 - 0|3  — Vault.
+- Miser            2 - 1|3  — Hoard.
+- Hired Blade      2 - 2|3  — Surplus 2: Place: I deal 2 damage to the enemy facing me.
+- Moneylender      3 - 1|4  — Interest.
+- Gilded Colossus  8 - 8|8.
+- Windfall (1) — +2 carry-over.
+Spells ~30%.

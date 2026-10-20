@@ -1,0 +1,9 @@
+==================================================================
+1. FILES
+==================================================================
+- three-bases-game.html — the game, built from src/game/ by tools/build.py (parts joined in src/game/parts.txt order). Factions: Tagma, Ashfang Horde, Exanimati. Playable against the Benchmark or the Random player, or by two players on the same screen.
+- three-bases-scenarios.html — ready boards to try the rules: the game plus a scenario page (each board starts a test game with unlimited supply and an opponent that only passes; a panel over the opponent's deck explains what to do and what to watch, with Reset and All boards). Built by tools/build.py: the game plus src/scenarios/ (a scenario script and its styles). Boards: a charge into two units, Pyre, Frenzy retargeting, a Powder Keg chain, Mass Grave, Danse Macabre (the fallen rise), Debt of the Fallen (the cost falls), Tomb Warden (lasting gains come back), Undying Reaver (back to the hand with its changes), Stampede, a Revenant returning inside a chain, Exanimati death reactions, placing/dragging/picking, and a big chain.
+- three-bases-ai-lab.html — the AI lab (section 16). It runs on an earlier card list from before the current factions.
+- library/ — the inspiration library (see library/README.md).
+- factions/ — ideas for factions and cards; todo.md — work not done yet; CLAUDE.md — how Claude works on these files.
+Tags in this document: AGREED = decided by Kaptain; "proposed" / "Claude's suggestion" = not confirmed yet.

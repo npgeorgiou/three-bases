@@ -1,0 +1,20 @@
+------------------------------------------------------------------
+C11. MEASURERS — exact numbers (precision + control)
+------------------------------------------------------------------
+Idea: picks exact amounts and rewrites stats; rewarded for exactness and balance.
+How it wins: neutralises the enemy's biggest units by setting or swapping their stats, kills with exact amounts, holds with balanced units.
+Mechanics:
+- Choose X: X spells and units, X picked up to your available supply. [kicker, variable_stats]
+- Set: set a unit's strength or defence to N (this round cheaply, lasting for more). [variable_stats, debuff]
+- Swap: swap a unit's strength and defence. Your 6|1 attacker becomes a 1|6 holder; the enemy's 1|6 wall becomes a 6|1 target. [stat_swap]
+- Exact (2): if my strike kills with nothing left over, draw a card. [excess_damage, draw]
+- Balance (text): a bonus while my strength equals my defence. [stat_condition]
+Self-sufficiency: holding (Swap, Balance), removal (Set, exact strikes), supply (Exact Change: an action that leaves exactly 0 supply in its lane gives +1 carry-over), cards (Exact).
+Weak to: many targets, copies.
+Examples:
+- Gauger        2 - 2|1  — Exact.
+- Scale-Keeper  3 - 2|2  — While my strength equals my defence, I have +1|+1 and Armoured.
+- Measured Cut (X) — Deals X damage to a unit.
+- Invert (1) — Swap a unit's strength and defence this round.
+- Equalise (2) — Set an enemy unit's strength to 1 this round.
+Spells ~50%.

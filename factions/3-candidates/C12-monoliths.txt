@@ -1,0 +1,20 @@
+------------------------------------------------------------------
+C12. MONOLITHS — never moves, owns its columns (every unit Immobile; Kaptain's idea)
+------------------------------------------------------------------
+Idea: every unit is Immobile and sturdier for it; its units reach down whole columns and stop the enemy moving.
+How it wins: places each monolith once, in the right cell; they strike the whole facing enemy column and lock the lane, so the enemy can't fix its line.
+Mechanics:
+- Immobile on every unit (its -2 gives each unit +2 stats). [drawback, movement]
+- Column Reach (2): my strikes reach every cell of my column in the enemy camp. A back-row monolith attacks the enemy's back rows. [ranged, lanes]
+- Lock (text): enemies in my lane can't move. [disable, zone_of_control]
+- Foundations (text): +1|+1 for each adjacent Immobile ally. Monoliths are built in blocks. [adjacency, link_formation]
+- Placement as movement: Place effects that let the next unit you play this round be placed in any lane or any cell, the faction's only way to choose position late. [placement_rules, cross_lane]
+Self-sufficiency: holding (sturdy), removal (Column Reach), supply (Quarry: Supply +1), cards (Inscription: Place: draw a card if I'm adjacent to two allies).
+Weak to: units displaced to other lanes, pushes.
+Examples:
+- Standing Stone  1 - 1|4.
+- Keystone        3 - 3|4  — Foundations.
+- Obelisk         3 - 2|5  — Column Reach.
+- Warden Stone    4 - 2|6  — Lock.
+- Seal the Lane (1) — Pick a lane: enemies there can't move this round.
+Spells ~30%.

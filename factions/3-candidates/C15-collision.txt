@@ -1,0 +1,20 @@
+------------------------------------------------------------------
+C15. COLLISION — the lane is a battering ground (forced movement)
+------------------------------------------------------------------
+Idea: pushes enemies out of the front row, where they lose their dots, and into each other, where they take damage.
+How it wins: pushes enemy holders back off the front row; collisions wear down the units behind them.
+Mechanics:
+- Shove (text): pushes one cell in any direction (sideways, back, forward), not only back like Push. [forced_movement]
+- Collision (NEW RULE): a unit pushed into a cell held by another unit doesn't move; both take 1 damage. Units only; the camp's edge stops a push without damage. [collision_damage]
+- Knock-on (text): when my push collides, the unit hit is pushed one cell further in the same direction if it can move; then the damage. [collision_damage, forced_movement]
+- Rams (text): Place: I move straight forward as far as I can and push the first enemy in my way (a Charge that pushes instead of striking). [on_play, forced_movement]
+- Anchored (1): I can't be pushed and take no collision damage. Its own holders stay put. [immunity]
+Self-sufficiency: holding (Anchored), removal (pushing off the dots, collisions), supply (Scavenge: when a collision kills, +1 supply in its lane), cards (spells that draw when a push moves 2 or more units).
+Weak to: Heavy titans, Lock, full enemy back rows that stop pushes (but those collide).
+Examples:
+- Shover         1 - 1|1  — My strikes push the target one cell in the direction I choose.
+- Anchor Guard   2 - 1|3  — Anchored.
+- Battering Ram  3 - 2|3  — Push. My collisions deal 2 damage instead of 1.
+- Tremor (2) — Pick a lane: every enemy there is pushed one row back.
+- Head-on (1) — Push an enemy into the unit behind it.
+Spells ~35%.

@@ -33,13 +33,15 @@ js/view/previews.js
 js/view/board-cells-units.js
 js/view/board-render-pointer.js
 js/view/animations.js
-js/view/animations-spells-and-more.js
+js/view/animations-cards-moves.js
+js/view/animations-hits-flights.js
 js/view/panels.js
+js/view/tooltips.js
 js/view/forecast.js
 js/view/decks-pages.js
 js/flow/game-flow.js
 js/flow/replay.js
 js/input/input.js
-js/input/fullscreen.js
+js/input/fullscreen-keys-aipick.js
 js/boot.js
 shell/tail.html

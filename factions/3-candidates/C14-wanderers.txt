@@ -1,0 +1,20 @@
+------------------------------------------------------------------
+C14. WANDERERS — decides which lane the fight is in (moving its own and enemy units between lanes)
+------------------------------------------------------------------
+Idea: brings its units to where they are needed and sends enemy holders away to other lanes.
+How it wins: concentrates on two lanes and displaces the enemy's holders into the lane it has given up.
+Mechanics:
+- Outrider as the core keyword: its units move to another lane's camp. [movement, cross_lane]
+- Displace (text): move an enemy to the same cell in another lane's camp (if that cell is taken, the nearest free cell there). That base loses the holder without a fight. [forced_movement, cross_lane]
+- Arrival triggers (text): "whenever an ally arrives in my lane from another lane, it gains +1|+1 this round"; "when I arrive, I deal 1 damage to the nearest enemy in my column". [movement, synergy_payoff]
+- Swap (spells, Place): two of your units in different lanes trade places; or one of yours trades places with an enemy in another lane. [swap, cross_lane]
+- Waystations (text): back-row units that make allies' moves into my lane free. [movement, cost_reduction, rows]
+Self-sufficiency: holding (concentration), removal (displacement), supply (Caravan: when I arrive in a lane, +1 supply there this round), cards (Scout: when I arrive, draw a card). [BREAKS DRAW RULE: fires on every lane arrival; fix in remake]
+Weak to: Lock, Hold.
+Examples:
+- Courier     1 - 1|1  — Outrider.
+- Pathfinder  2 - 1|2  — Outrider. When I arrive in a lane, I deal 1 damage to the nearest enemy in my column.
+- Waystation  3 - 1|4  — Allies moving into my lane pay nothing.
+- Crosswind (2) — Displace an enemy unit.
+- Crossroads (1) — Two of your units in different lanes swap places.
+Spells ~30%.

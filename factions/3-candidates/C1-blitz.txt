@@ -1,0 +1,22 @@
+------------------------------------------------------------------
+C1. BLITZ — the relentless rotation (aggro + positional)
+------------------------------------------------------------------
+Idea: wins before the enemy is set up, attacking every round with cheap units that cycle through the front row: strike, step back, the next one steps up.
+How it wins: kills front-row holders in rounds 1-3, takes two bases early, and keeps them by refilling the front row faster than the enemy can clear it.
+Mechanics:
+- Quick (1): attacking costs 1 supply instead of my supply. It can deploy and attack in the same round. [haste, tempo]
+- Fall Back (1): after I attack, I may swap places, for free, with the ally directly behind me. The fresh unit takes the dot, the attacker rests in row 2. Rows 2-3 are its queue. [swap, movement, rows]
+- Momentum (1): +1 strength this round for each attack your side already made this round. Cheap Quick attacks go first, the Momentum finisher last. [count_payoff, combo_sequence, temporary_buff]
+- Rampage (2): once per round, when my strike kills, I can attack again for free. [on_kill, multi_attack]
+- Spoils (text): when my strike kills a front-row unit, +1 supply in my lane this round. Kills pay for the next attack. [on_kill, resource_gain]
+Self-sufficiency: holding (rotation refills the dots), removal (attacks), supply (Quick, Spoils), cards (spells that draw after many attacks).
+Weak to: walls, Last Stand, Riposte.
+Examples:
+- Raider Scout    1 - 1|1  — Quick.
+- Line Runner     1 - 1|1  — Fall Back.
+- Looter          2 - 2|2  — Spoils.
+- Spear Runner    2 - 2|2  — Momentum.
+- Reaver Captain  3 - 3|2  — Rampage.
+- War Cry (1) — Pick a lane: your units there gain +2 strength this round.
+- Press the Attack (2) — Draw 2 if your side attacked 3 or more times this round.
+Spells ~25%.

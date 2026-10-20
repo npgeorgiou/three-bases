@@ -1,0 +1,20 @@
+------------------------------------------------------------------
+C6. TITANS — few, huge, crushing (big units + ramp)
+------------------------------------------------------------------
+Idea: plays few units that cover several cells; one titan in the front row holds a whole base alone (a ▪▪▪ covers all three dots).
+How it wins: ramps into titans in two lanes; each covers enough dots to own its base and crushes what faces it.
+Mechanics:
+- Lumbering (drawback, -2): moving me costs twice my supply. Titans are placed where they will stay; the drawback buys their size. [drawback, movement]
+- Stomp N (N): Place: I deal N damage to each enemy facing my cells. Clears the facing front row on arrival. [aoe_damage, on_play]
+- Shelter (text): allies directly behind me can't be struck. Small casters and supply units live behind the titan. [protection, rows]
+- Forerunners (text): small units, "the next unit of size 3 or more you place this round costs 2 less". [cost_reduction]
+- Quake (text): round end: I deal 1 damage to each enemy in the facing front row. [turn_end, ping]
+Self-sufficiency: holding (bodies), removal (Stomp, Quake), supply (Forerunners; Herdkeeper: Supply +1), cards (Call the Titan: draw a unit of size 3 or more from your deck).
+Weak to: Bounce, Exile, Bind, lasting defence loss.
+Examples:
+- Herald of Giants  1 - 1|1        — Place: the next unit of size 3 or more you place this round costs 1 less.
+- Ancient           4 - 3|4  ▪▪    — Lumbering. Shelter.
+- Stone Colossus    5 - 5|5  ▪▪▪   — Lumbering.
+- Earthshaker       6 - 5|4  ▪▪▪▪  — Lumbering. Stomp 2.
+- Titan's Stride (2) — Pick a lane: your units of size 2 or more there gain +2|+2 this round.
+Spells ~20%.

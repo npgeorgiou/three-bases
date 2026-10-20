@@ -1,0 +1,19 @@
+------------------------------------------------------------------
+C20. BONDS — paired units share everything (new idea)
+------------------------------------------------------------------
+Idea: units are bound in pairs that share gains, damage and fate; a pair is stronger than two singles.
+How it wins: pairs hold the front row together: damage is split between partners, gains land on both, and a fallen partner powers the survivor.
+Mechanics:
+- Bond (NEW RULE): Place: I bond with an ally in my lane (a line on the board shows it). A lasting gain on one bonded unit goes to both. [link_formation, synergy_payoff]
+- Shared Burden (text): damage to one bonded unit is split between the two (the extra point on the target). [damage_reduction, distribute]
+- Vow (text): Death: my partner gains my strength and defence (lasting). [death_trigger, donate]
+- Distance bonuses (text): "while my partner is in your back row, I have +2 strength". Rows 2-3 hold partners. [rows, condition]
+Self-sufficiency: holding (Shared Burden), removal (Vow-grown units), supply (Hearth: Supply +1 while bonded), cards (Letters: when my partner dies, draw a card).
+Weak to: area damage (hits both), Exile (no Vow).
+Examples:
+- Shieldmate   2 - 1|3  — Bond.
+- Blade-sworn  2 - 2|2  — Bond. Vow.
+- Twin Guard   3 - 2|3  — Bond. Shared Burden.
+- Pledge (1) — Bond two of your units in one lane.
+- Gift of Two (2) — A bonded unit gains +1|+1 (its partner too, through the Bond).
+Spells ~30%.

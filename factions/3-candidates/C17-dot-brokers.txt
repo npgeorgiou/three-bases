@@ -1,0 +1,19 @@
+------------------------------------------------------------------
+C17. DOT BROKERS — changes who holds the dots (objectives + positional)
+------------------------------------------------------------------
+Idea: bends the base rule: its dots are held from further back and can't be cancelled, and it is paid for holding them.
+How it wins: holds dots from row 2 behind other units (losing the front row doesn't lose the base), cancels enemy dots from anywhere, and turns held dots into supply.
+Mechanics (NEW RULE: dot exceptions):
+- Long Claim (1): I hold the dot in my column from your second row. Frees the front row for walls or attackers. [zone_control, rows]
+- Anchor (2): the dot in my column can't be cancelled. [zone_control, protection]
+- Contest (text): I cancel the enemy dot facing me from any row. [zone_control, disruption]
+- Tribute (text): round end: +1 carry-over for each dot you hold in my lane. [round_carryover, scoring_objectives]
+- Claims (spells): pay off a board state at this round's end. [delayed, scoring_objectives]
+Self-sufficiency: holding (Long Claim, Anchor), removal (Disputant: Place: deals damage equal to the dots you hold in my lane), supply (Tribute), cards (Claims).
+Weak to: removal of the row-2 holders (Column Reach, Pierce), displacement.
+Examples:
+- Surveyor       2 - 2|2  — Long Claim.
+- Flagbearer     2 - 1|2  — Anchor.
+- Tax Collector  3 - 1|4  — Tribute.
+- Claim the Field (1) — Pick a lane: if you hold all 3 of its dots at this round's end, draw 2.
+Spells ~30%.

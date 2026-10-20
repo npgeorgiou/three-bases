@@ -1,0 +1,21 @@
+------------------------------------------------------------------
+C16. EDICTS — rewrites the laws of a lane
+------------------------------------------------------------------
+Idea: plays laws that apply to both sides in a lane; its units are built for the laws, and it can break or rewrite them.
+How it wins: sets laws that suit it in its two lanes (or that ruin the enemy's plan) and fills those lanes with units that profit from them.
+Mechanics:
+- Edicts (NEW RULE): spells that stay on a lane, one per lane (a new one replaces the old), shown on the base, applying to both sides. [lane_rule, rule_change]
+- Edict readers (text): bonuses while my lane has an Edict, or for each Edict on the board. [count_payoff, lane_rule]
+- Lawbreakers (text): "I ignore Edicts". [immunity]
+- Rewriting (spells): move an Edict to another lane, swap two, end one. [rule_change, cross_lane]
+- Decrees (text): Place: put a named Edict on my lane. [on_play, lane_rule]
+Self-sufficiency: holding (Edict of Stillness with readers), removal (Edict of the Arena, Edict of Fire), supply (Edict of Plenty), cards (Edict of Records). [DRAW RULE: an Edict stays in the lane; must not draw every round; check]
+Rows: Edict of the Long Line (units in back rows reach the enemy front row) gives the back rows a job.
+Weak to: Lawbreakers of its own kind; control of the board while the Edict is cast.
+Examples:
+- Edict of Stillness (2) — Units here can't move.
+- Edict of the Arena (3) — Round end: the unit with the least defence on each side here dies.
+- Edict of Plenty (2) — Each side gets +2 supply here each round.
+- Magistrate  2 - 1|3  — While my lane has an Edict, I have +1|+1.
+- Lawbreaker  3 - 3|3  — I ignore Edicts.
+Spells ~45%.

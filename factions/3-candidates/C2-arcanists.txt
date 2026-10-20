@@ -1,0 +1,21 @@
+------------------------------------------------------------------
+C2. ARCANISTS — spells are the army (burn + card advantage)
+------------------------------------------------------------------
+Idea: the units are spell engines; spells deal the damage, draw the cards and get cheaper the more casters stand in a lane.
+How it wins: clears front rows with damage spells while sturdy holders grow with every spell cast in their lane.
+Mechanics:
+- Spell Power N (N): your spells deal +N damage to targets in my lane. Works from any row, so casters stand in rows 2-3. [spell_power, rows]
+- Attunement (text): whenever you cast a spell in my lane, I gain +0|+1 (or +1|+0) this round. The holders get sturdier as you cast. [on_spell, temporary_buff]
+- Focus (2): your spells cast in my lane cost 1 less (never below 0). [cost_reduction, on_spell]
+- Chain: a spell does more if your previous action this round was also a spell. Actions alternate, so chaining gives up board actions. [combo_sequence, on_spell]
+- Cantrips: cheap spells that also draw a card, to keep the hand full of spells. [draw, card_flow]
+Self-sufficiency: holding (Attunement), removal (spells), supply (Focus), cards (cantrips). [SIGNATURE: many cheap draw spells only if card flow is the Arcanists' signature (allocation table)]
+Weak to: hand theft, Toll.
+Examples:
+- Apprentice    1 - 1|1  — Spell Power 1.
+- Warded Adept  2 - 1|3  — Whenever you cast a spell in my lane, I gain +0|+1 this round.
+- Focus Lector  3 - 2|3  — Focus.
+- Bolt (1) — Deals 2 damage to a unit.
+- Arc (2) — Pick a lane: deals 1 damage to every enemy there. Chain: 2 instead.
+- Insight (1) — Draw a card. Chain: draw 2.
+Spells ~50%.

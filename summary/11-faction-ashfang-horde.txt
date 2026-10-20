@@ -1,0 +1,65 @@
+11. FACTIONS (continued)
+------------------------------------------------------------------
+ASHFANG HORDE (barbarians / orcs)
+------------------------------------------------------------------
+Identity: damage-heavy and self-destructive; units strike their own side, die to their own effects and grow from blood. Baseline 1-cost unit: 2|1 with no ability. Inspiration: Legends of Runeterra's Noxus and Faeria's red cards. Its spells deal damage; plain kill spells belong to the Exanimati (AGREED), though Cull and Decapitate stay with the Horde (AGREED). The Horde is not about fine-tuning (AGREED): its X effects spend everything available.
+Main keywords: Reckless, Charge, Push, Splash, Overrun, Ranged, Pack, Frenzy, Sacrifice, Riposte, Flurry, Death, Round end self-strikes.
+
+Units:
+Unit            | Card      | Ability / notes
+----------------+-----------+----------------
+Ash Raider      | 1 - 2|1       | (no ability)
+Bloodrager      | 1 - 4|1       | Reckless.
+Powder Keg      | 1 - 0|1       | Death: deals 2 damage to every unit in its row, allies included; if it was in the front row, also to every enemy in the facing front row.
+Pain Eater      | 1 - 0|2       | Each time it survives damage, from anyone, it gains +2 strength.
+Cinder Imp      | 1 - 1|1       | Place: deals 1 damage to another of your units in its lane, then 1 damage to the nearest enemy in its column.
+Gold Grubber    | 1 - 1|1       | When it attacks: +1 carry-over (AGREED, 10 Oct 2026: it loots on attacking, alive or not, before its strike).
+Goblin Sapper   | 1 - 1|1       | Round end: deals 3 damage to the nearest enemy in its column, then dies.
+Rabid Hound     | 1 - 1|1       | Pack: +1 strength per adjacent ally.
+Gutsack Goblin  | 1 - 1|1       | Death: draw a card.
+Blood-Letter    | 1 - 0|2       | Place: deals 1 damage to itself and to one unit you pick (any lane, either side). Placed off your own turn, it damages only itself.
+Warhorn Goblin  | 2 - 1|3       | Units you place later in its lane gain Charge and Reckless.
+Blood Drum      | 2 - 0|2       | Other allies in its row have +2 strength. Round end: deals 1 damage to each of them.
+Crowd Pleaser   | 2 - 1|1       | Place: gains +1 strength for each unit already in its lane, both sides.
+Tusker          | 2 - 2|2       | Push.
+Flesh Shield    | 2 - 0|3       | Death: deals 2 damage to the nearest enemy in its column.
+Flame Spitter   | 2 - 1|1       | Ranged.
+Bonebreaker     | 2 - 2|1  ▪▪   | Frenzy.
+Blood Idol      | 2 - 3|4       | Sacrifice.
+Bile Bloater    | 2 - 1|2       | Death: deals 1 damage to every enemy in its lane.
+Plunderer       | 2 - 2|2       | Whenever its strike kills, +1 supply in its lane this round.
+Bleeding Ogre   | 3 - 2|3  ▪▪   | +1 strength for each shield it has lost.
+Skull Eater     | 3 - 3|2       | When it kills, it gains the victim's printed strength and defence.
+Carrion Chief   | 3 - 2|3       | Whenever another unit in its lane dies, either side, it gains +1 strength.
+Wolf Rider      | 3 - 3|1  ▪▪   | Charge.
+Pit Fighter     | 3 - 3|2       | Round end: deals 1 damage to each enemy in its lane's front row, and 1 damage to itself.
+Undying Reaver  | 3 - 3|2       | Death: returns to your hand (if the hand has room), keeping its lasting changes (section 8).
+Gorehound       | 3 - 1|4       | After each strike it deals, it gains +2 strength.
+Headsman        | 3 - 3|2       | Kills the Bloodied units it strikes.
+Scarred Veteran | 3 - 2|3       | Riposte.
+Twin-Axe Reaver | 3 - 2|2       | Flurry.
+Trophy Taker    | 3 - 3|3       | Whenever its strike kills, draw the top card of the enemy's deck.
+Rock Hurler     | 4 - 3|1       | Ranged. Splash.
+Rampaging Boar  | 4 - 3|1  ▪▪   | Charge. Overrun.
+Warlord         | 4 - 4|1  ▪▪▪  | Can strike own units (its attack may target any other of your units in its lane).
+Cave Troll      | 4 - 3|2  ▪▪   | Round end: restores all its lost shields.
+Ogre Thrower    | 4 - 3|3       | Each round it either attacks or throws an adjacent 1-cell ally at any cell in ANY lane, in either camp, free or occupied (AGREED: attack or throw, one per round). The thrown unit flies there in an arc. Landing on a unit, it strikes it with its strength, then dies where it landed (AGREED, 10 Oct 2026: its death happens in that cell); landing on a free cell, it stays there as a normal unit you control and can take dots. The throw costs what an attack costs (AGREED); Immobile allies can't be thrown; it can't land on itself, the thrown unit or an Incorporeal unit. Controls: with it selected, clicking an enemy attacks as usual; clicking an adjacent ally switches to throwing.
+Blood Sorcerer  | 5 - 3|5       | Round end: deals 1 damage to as few other allies (reading order) as it takes to kill the first enemy in the lane (enemy camp first), then deals that enemy 1 damage per ally hit, plus its strength bonus; with no enemy it does nothing (AGREED, October 2026).
+Pyre Colossus   | 6 - 6|4  ▪▪▪▪ | Round end: deals 1 damage to itself. (AGREED 6|4, 10 Oct 2026: 10 points, above its budget of 9 because the self-damage is a drawback; was 5|3.)
+Iron Behemoth   | 6 - 4|3       | Armoured.
+
+Spells:
+- Blood Tithe (0) — Kill one of your units and draw 2.
+- Carrion Feast (2) — Kill one of your units: its adjacent allies gain +1 strength and +1 defence.
+- Martyrdom (1) — One of your units strikes the nearest enemy it could attack with its strength +2, then dies. (AGREED, October 2026; was: kill it, then it strikes.)
+- Blood Money (1) — Kill one of your units: gain carry-over equal to its supply (up to the carry-over cap).
+- Onslaught (2) — Pick a lane: your units there advance straight forward as far as they can (doesn't use their moves).
+- Cull (3) — Kill an enemy unit with 2 or less defence left.
+- Burn the Bridges (2) — Pick a lane: +3 supply there this round; your units there each lose 1 shield (not damage).
+- Rain of Blood (2) — Pick a lane: deals 1 damage to every unit in both camps, nothing else.
+- Pyre (3) — Pick a lane: deals 1 damage to every unit there, yours included.
+- Stampede (3) — Pick a lane: each of your front-row units there strikes the enemy facing it with its strength, all at the same moment.
+- Decapitate (3) — Kill a Bloodied unit.
+- Firestorm (4) — Pick an enemy unit: deals 2 damage to it and to every enemy in its row.
+- Hellfire (4) — Deals 6 damage to an enemy unit. (AGREED, 10 Oct 2026: cost and damage confirmed.)
+- Thousand Cuts (X) — Pick a unit: spends all your supply in its lane and all your carry-over (X = that total); deals 1 damage to it X times. (AGREED, October 2026; before, the player chose X.)

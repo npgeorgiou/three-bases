@@ -1,0 +1,19 @@
+------------------------------------------------------------------
+C19. ECHOES — everything happens twice (copies + Place value)
+------------------------------------------------------------------
+Idea: every effect is played twice: Place effects repeat, cards copy themselves, units mirror the enemy.
+How it wins: builds lanes where each Place effect fires twice, keeps its hand full with copies, and mirrors the enemy's biggest threats.
+Mechanics:
+- Resonance (text): Place effects of your other units placed in my lane fire twice. [repeat_trigger, on_play]
+- Twins (text): Place: add a copy of my card to your hand (the copy without this text). [copy, generate_cards]
+- Mirror (text): Place: I take the strength and defence of the enemy facing me (lasting). [variable_stats, copy]
+- Reprise (spells): recast the last spell you played this round, or repeat an ally's Place effect. [repeat_trigger, copy]
+Self-sufficiency: holding (Mirror), removal (doubled Place damage), supply (copies cost 1 less), cards (Twins).
+Weak to: Silence, Exile, Bind.
+Examples:
+- Spark Thrower  1 - 1|1  — Place: I deal 1 damage to the enemy facing me.
+- Bellman        2 - 1|2  — Resonance.
+- Twin Blade     2 - 2|1  — Twins.
+- Mirror Knight  3 - 1|1  — Mirror.
+- Reprise (2) — Recast the last spell you played this round.
+Spells ~35%.

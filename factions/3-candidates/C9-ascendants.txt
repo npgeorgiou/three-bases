@@ -1,0 +1,20 @@
+------------------------------------------------------------------
+C9. ASCENDANTS — grow in safety, then step forward (scaling)
+------------------------------------------------------------------
+Idea: units grow while protected in the back rows and step into the front row when they are big.
+How it wins: a few units grow each round end in rows 2-3; once large they move to the front and hold dots nobody can break.
+Mechanics:
+- Nurture (2): round end: I gain +1|+1 (lasting) if I'm not in your front row. The back rows become the nursery. [permanent_growth, rows]
+- Mentors (text): round end, the ally directly in front of me gains +1|+1 (lasting). [buff, permanent_growth]
+- Veteran triggers (text): +1|+1 when I kill or survive damage. [on_kill, on_damaged, permanent_growth]
+- Ascend (text): when my strength reaches N, my second line of text switches on (a keyword, an aura). A condition, not a counter. [stat_condition, upgrade]
+- Inheritance (text): Death: an adjacent ally gains my lasting gains. Removal loses its sting. [death_trigger, donate]
+Self-sufficiency: holding (grown units), removal (grown attackers), supply (Granary: Supply +1 while in your back row), cards (Lesson: draw a card when one of your units ascends).
+Weak to: Silence, Exile, early aggression.
+Examples:
+- Seedling Squire  1 - 0|1  — Nurture.
+- Tutor            2 - 1|2  — Round end: the ally directly in front of me gains +1|+1.
+- Disciple         2 - 1|2  — Ascend at 4 strength: I gain Pike and +2 defence.
+- Heir             3 - 2|3  — Inheritance.
+- Growth Spurt (2) — Double a unit's lasting stat gains.
+Spells ~25%.
