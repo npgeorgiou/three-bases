@@ -1,0 +1,1220 @@
+# General wording patterns (every game but Marvel Snap), in the old concept ids: applied by general_tags.py before the tree move.
+# Exported from the database on 21 Oct 2026, where they had lived without a file. concept<TAB>role<TAB>regex
+activated	does	\bactivate
+activated	does	\bactivated
+activated	does	\bpay \d
+activated	does	\bspend \d
+activated	does	\{[^}]+\}.{0,30}:
+activated	does	once per (turn|round)
+adjacency	does	\badjacent
+adjacency	does	\bleft and right
+adjacency	does	\bneighbo
+adjacency	does	\bnext to\b
+adjacency	does	to (the |its )?(left|right)
+advantage	does	\badvantage\b
+advantage	does	\bdisadvantage\b
+advantage	does	\breroll
+alt_wincon	does	\bdecks? out
+alt_wincon	does	\bscales?\b.{0,20}(damage|tip)
+alt_wincon	does	\btip the scales?
+alt_wincon	does	lose the game
+alt_wincon	does	no cards (left )?in (their|your) (library|deck)
+alt_wincon	does	win the game
+aoe_damage	does	\bsplash
+aoe_damage	does	adjacent .{0,30}(take|are dealt|deals?) .{0,10}damage
+aoe_damage	does	damage .{0,20}(and|to) (all )?adjacent
+aoe_damage	does	damage to (all|each) (other )?(enem(y|ies) )?(creature|minion|unit|character|follower|fighter|model)
+aoe_damage	does	damage to all (enemies|units|minions|creatures|characters)
+aoe_damage	does	deals? .{0,15}damage to each (?!opponent|player)
+area_templates	does	\b\d+-foot (cone|line|cube|sphere|radius|emanation|cylinder)
+area_templates	does	\bcone\b
+area_templates	does	\bemanation\b
+area_templates	does	\bradius\b
+assists_support	does	\bassists?\b
+assists_support	does	\bflanking support
+assists_support	does	\bsupporting\b
+assists_support	does	for each (other )?(friendly|allied) .{0,30}(adjacent|within)
+attack_lock	does	\b(can'?t|cannot) attack (this|next|until|during)
+attack_lock	does	\b(target|enemy|enemies|opponent'?s?|that|those|each|all other|the chosen|the attacked|the targeted)\b[^.]{0,40}\b(can'?t|cannot|may not|is unable to) attack
+attack_now	does	\b(summon|summons|put|puts|create|creates|play|plays)\b[^.]{0,50}\battacking\b
+attack_now	does	\battacks? immediately\b
+attack_now	does	\bstart a free attack\b
+attack_token	does	attack token
+attack_token	does	you can attack this round
+attack_zero	does	\b(attack|power|strength) (to|becomes) 0\b
+attack_zero	does	\bfrostbite
+attack_zero	does	\bset[^.]{0,30}(attack|power|strength)[^.]{0,10} to 0\b
+aura	does	(other|all|each) .{0,30}(you control|allies|friendly) .{0,15}(get|have) \+
+aura	does	\banthem\b
+aura	does	\baura\b
+aura	does	adjacent (allies|friendly|minions|creatures|units|cards).{0,20}(get|have|gain) \+
+auto_battle	does	\bauto-?battle
+auto_battle	does	combat (resolves|is resolved) automatically
+autonomous_units	does	\bbattle pet
+autonomous_units	does	acts? on (its|their) own
+autonomous_units	does	attacks? (a|the) random
+autonomous_units	does	moves? to attack the nearest
+banish	does	\bbanish
+banish	does	\bexile
+banish	does	\bobliterate
+banish	does	\bpurge
+banish	does	remove .{0,30}from the game
+blink	does	exile [^.]{0,60}(,|\.)? ?(then )?return (it|that card|them|those cards|that creature|the exiled card)[^.]{0,30} to the battlefield
+block_armor	does	\(defend
+block_armor	does	\b\d+ block\b
+block_armor	does	\bbarricade
+block_armor	does	\bgain \d+ block
+block_armor	does	\bplated armor
+block_armor	does	\bplating
+blocking	counters	\bunblockable
+blocking	counters	can't block
+blocking	does	(?<!\d )(?<!gain )(?<!stat )\bblocks?\b
+blocking	does	\bguards? (a|an|the|your|another|adjacent|allies|friendly|it|them)\b|\bguarding\b
+blocking	does	\bintercept
+blocking	does	\bmighty leap
+board_clog	does	(?:^|[.:;,] |\bthen |\band )(target |each |your )?opponents? (creates?|summons?|puts?|gets?)\b[^.]{0,30}\b(token|minion|unit|creature|copy|rock)
+board_clog	does	\b(add|put|summon|create|place|spawn)s?\b[^.]{0,50}\b(to|on|onto|into|for) (your |the |each |an? )?(opponent|enemy)'?s? (side|board|battlefield|lane|row|camp)
+board_clog	does	\b(enemy|opponent'?s?) side of (this|that|each|a|the)
+board_clog	does	\bsummon (a|an|one|two|three|\d) [^.]{0,15}\b0/\d+\b[^.]{0,40}\bfor (your|the|each|an) (opponent|enemy)\b(?! (followers?|minions?|units?|creatures?|characters?|cards?|heroes|hero)\b)
+board_clog	does	\bunder (an |your |target )?opponent'?s control
+board_limit	does	\bno (empty|open) (space|slot)
+board_limit	does	board is full
+board_limit	does	maximum of \d+ (minions|units|creatures)
+board_wipe	does	(destroy|kill) (all|every) (other )?(enemy )?(creatures|minions|units|cards)
+board_wipe	does	(destroy|kill|exile|banish) (all|each) (other )?(enemy |non-?\w+ )?(creatures|minions|units|followers|permanents|cards|fighters)
+board_wipe	does	destroy .{0,20}and all 
+bodyguard	does	\bbodyguard
+bodyguard	does	\bguard (target |an? )?(ally|friendly)
+bodyguard	does	\bguarding\b
+bodyguard	does	attacks .{0,30}are redirected
+bodyguard	does	redirect(ed|s)? (to|onto)
+boss_phases	does	\bboss fight
+boss_phases	does	\bboss phase
+boss_phases	does	\bphase (two|2|three|3)\b
+boss_phases	does	\bsecond form
+buff	does	\(buff
+buff	does	\+(attack|power|health) equal to
+buff	does	\+\d+ (attack|power|health|strength|wounds|toughness)
+buff	does	\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b
+buff	does	\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)
+buff	does	\+\d+/\+\d+
+buff	does	\+\d+\|\+\d+
+buff	does	\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)
+buff	does	\bdouble .{0,20}(attack|power|health|life|strength)
+buff	does	\bempower
+buff	does	\benlarge
+buff	does	\bimprove (the )?.{0,50}(characteristic|skill|save)
+buff	does	\bstrengthen
+buff	does	add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)
+buff	does	add \d to .{0,25}(hit|wound|save|charge|run|attacks?) (rolls?|characteristic)
+buff	does	add \d+ to (the )?.{0,40}(toughness|wounds|strength|attacks|damage|move|save|characteristic|hit roll|wound roll)
+buff	does	deals? (additional|extra|more) damage
+buff	does	gains? (strength|dexterity)
+buff	does	gains? \+\d+
+buff	does	gains? \d+ (strength|dexterity|vigor|focus)
+buff	does	gets? \+\d+
+buff	does	increase .{0,20}(attack|power|health)
+cant_attack	does	\bdefender\b
+cant_attack	does	can't attack
+cant_attack	does	cannot attack
+cant_block	does	\b(target|enemy|enemies|opponent'?s?|that|those|each|all other|the chosen|the attacked|the targeted)\b[^.]{0,40}\b(can'?t|cannot|may not|is unable to) block
+cant_block	does	\bcan'?t be (used as a )?blocker
+card_crafting	does	\bbuild-a-card
+card_crafting	does	\bcustom card
+card_crafting	does	\bpoint-buy
+card_crafting	does	create your own card
+cast_from_zone	does	(you may )?(cast|play) (this card|~|it|cards?|spells?|that card|those cards|the exiled card)[^.]{0,40} from (exile|your graveyard|a graveyard|the graveyard|the top of your library|your discard pile|your deck)
+cast_from_zone	does	\bescape\b(?= ?[—-])
+cast_from_zone	does	\bflashback\b
+cast_from_zone	does	\bunearth\b
+cheat_death	does	\b(when|if|whenever) (you|it|this|they|this (unit|minion|creature|character|follower)) would die\b
+cheat_death	does	\bregenerate (it|this|target)
+cheat_death	does	can't (die|be reduced below)
+cheat_death	does	instead (remains|stays) (alive|on the battlefield)
+cheat_death	does	lethal damage.{0,20}prevent
+cheat_death	does	set (its|their) health to 1
+cheat_death	does	survives? with 1
+cheat_death	does	would take lethal
+coin_economy	does	\bcoins?\b
+coin_economy	does	\bcrowns?\b
+coin_economy	does	\bfee\b
+coin_economy	does	\bspend \d+ \w+ to
+coin_economy	does	\btribute\b
+collision_damage	does	\bbump damage
+collision_damage	does	\bbumps? into
+collision_damage	does	\bcollid
+collision_damage	does	\bcollision
+collision_damage	does	blocking damage
+collision_damage	does	pushed into
+combat_start	does	at the start of (each )?(combat|battle|fight)
+combat_start	does	before (combat|the battle|the fight)
+combat_start	does	start of combat
+combo_sequence	does	\b(the )?(last|next) (card|character|minion|spell|unit) (you|your opponent|each player) (played|play)
+combo_sequence	does	\bafter you play your next\b
+combo_sequence	does	\bchain\b
+combo_sequence	does	\bcombo\b
+combo_sequence	does	if you.ve (played|cast) .{0,30}this (turn|round)
+combo_sequence	does	play \d+ (attacks|spells|skills|cards|powers) (in a single|this|each|in one) turn
+combo_sequence	does	second (card|spell) .{0,20}(this|each) turn
+comeback	does	\bcatch.?up
+comeback	does	\bdesperation
+comeback	does	\bunderdog
+comeback	does	if (you have|you control) (fewer|less)
+comeback	does	if your opponent (has|controls) more
+concentration	does	\bchannell?ing\b(?! stones)
+concentration	does	\bconcentration\b
+concentration	does	until .{0,20}(loses|breaks) concentration
+condition_count	does	\bfor each\b
+condition_count	does	\bmetalcraft
+condition_count	does	\bthreshold
+condition_count	does	at least \d+
+condition_count	does	equal to the number of
+condition_count	does	if you (have|control) (\d+|three|four|five|seven) or more
+condition_life	does	\bbloodied\b
+condition_life	does	\bdeath.?s door
+condition_life	does	\bdesperation
+condition_life	does	\bwounded\b
+condition_life	does	below (its )?(starting|half)[- ]strength
+condition_life	does	below half
+condition_life	does	if .{0,20}(is|are) damaged
+condition_life	does	if your (hero|health|life) .{0,30}(or less|below)
+control_reward	does	\b(the )?(winning|losing) (side|player)\b
+control_reward	does	\bplayer winning (here|this)
+control_reward	does	\bthe (winner|loser) (here|of this)
+control_reward	does	\bwhoever (is winning|wins|controls|has (the )?(most|more|least))
+cooldowns	does	\bcooldown
+cooldowns	does	\brecharge
+copy	does	\bclone
+copy	does	\bcopies\b
+copy	does	\bcopy\b
+copy	does	\bduplicate
+copy	does	\bechoe?s?\b
+copy	does	\bmimic
+cost_condition	does	\b(highest|lowest|least|most)[- ]cost
+cost_condition	does	\b(odd|even)[- ](cost|costed)
+cost_condition	does	\b\d+[- ]cost\b
+cost_condition	does	\bcosts? (exactly )?\d+ or (more|less|fewer)\b
+cost_condition	does	\bdifferent costs?\b
+cost_condition	does	\bthat costs? the (least|most)\b
+cost_increase	does	(?<!that )(?<!which )(?<!one that )costs? \(?\d+\)? more
+cost_increase	does	cost an additional
+cost_increase	does	costs? \(?\d+\)? (?!or )\w+ more
+cost_increase	does	costs? \{\d+\} more
+cost_increase	does	costs? more
+cost_increase	does	increase .{0,20}cost
+cost_reduction	does	\bcost reduction
+cost_reduction	does	\bdiscount
+cost_reduction	does	cost \{\d+\} less
+cost_reduction	does	costs? \(?\d+\)? (?!or )\w+ less
+cost_reduction	does	costs? \(?\d+\)? less
+cost_reduction	does	costs? \{\d+\} less
+cost_reduction	does	costs? less
+cost_reduction	does	reduce .{0,20}cost
+cost_set	does	\bcosts? \(\d+\)(?! (less|more|or (less|more)))
+cost_set	does	cost becomes
+cost_set	does	costs? (0|zero)\b(?! (less|more))
+cost_type	cost	\balternative cost
+cost_type	cost	as an additional cost
+cost_type	cost	instead of paying
+cost_type	cost	pay .{0,10}(life|health)
+cost_type	cost	rather than pay
+count_payoff	does	\b(for each|number of|each) (time|card|minion|spell|unit|creature)[^.]{0,60}\bthis (game|match|battle|combat)\b
+count_payoff	does	\b(times?|cards?)[^.]{0,30}this game\b
+counter_spell	counters	can't be countered
+counter_spell	does	\bcancel
+counter_spell	does	\bcounter target
+counter_spell	does	\bdeny\b
+counter_spell	does	\bnegate
+counter_spell	does	\bstop (a|an|all) .{0,30}(spell|skill)
+counterattack	does	\bcounterattack
+counterattack	does	\bretaliat
+counterattack	does	\briposte
+counterattack	does	\bthorns
+counterattack	does	deals? .{0,15}damage to (the )?attacker
+counterattack	does	sharp quills
+counterattack	does	when .{0,20}(is )?(attacked|struck|damaged).{0,40}deals?
+cross_lane	does	\b(at|to) (each|every|all|a random|another) (location|lane|zone)s?\b
+cross_lane	does	\b(each|every|the|all|both|another)? ?other (locations?|lanes?|zones?|battlefields?)\b
+cross_lane	does	\b(location|lane)s? to the (left|right)\b
+cross_lane	does	\badjacent (locations?|lanes?)
+damage	benefits	whenever .{0,40}(deals|takes|is dealt) damage
+damage	benefits	whenever .{0,40}(is damaged|survives damage)
+damage	counters	can't be damaged
+damage	counters	prevent (all |the next )?.{0,20}damage
+damage	counters	takes? no damage
+damage	does	\b\d+ damage\b
+damage	does	\battack (an|a|target|the) enemy
+damage	does	\bdamage (a|an|all|self|it|the|each|\d|by|enemy|highest|lowest|adjacent)\b
+damage	does	\bdamage to\b
+damage	does	\bdeal \d+ to\b
+damage	does	\bdeal damage
+damage	does	\bstrikes?\b
+damage	does	deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage
+damage	does	loses? \d+ (life|health|hp)
+damage_over_time	does	\bbleed
+damage_over_time	does	\bburn(s|ing)?\b
+damage_over_time	does	\bdecay\b
+damage_over_time	does	\bpoison(?!ous)
+damage_over_time	does	at the (start|end|beginning) of .{0,30}(lose|take|deals?) \d+ (life|damage)
+damage_prevention	does	\b(can'?t|cannot) deal (combat )?damage\b(?! to (this|you|your|friendly|it|him|her|them|allies))
+damage_prevention	does	\bdeals? no (combat )?damage\b
+damage_prevention	does	\bprevent (all )?(the )?(combat )?damage (that would be )?dealt by
+damage_reduction	does	\barmou?r\b
+damage_reduction	does	\bresist
+damage_reduction	does	\btough\b
+damage_reduction	does	damage .{0,20}is reduced
+damage_reduction	does	does not lose (that|the) wound
+damage_reduction	does	half damage
+damage_reduction	does	ignore (the )?(penalty|damage)
+damage_reduction	does	ignores? .{0,15}damage
+damage_reduction	does	improve the save
+damage_reduction	does	invulnerable save
+damage_reduction	does	invulnerable saves?
+damage_reduction	does	negation save
+damage_reduction	does	prevent .{0,15}damage
+damage_reduction	does	reduce .{0,20}damage
+damage_reduction	does	save characteristic
+damage_reduction	does	subtract \d from (the )?(hit|wound) rolls? for attacks that target
+damage_reduction	does	subtract \d from (the )?(hit|wound) rolls?.{0,40}target(s)? this (unit|model|operative)
+damage_reduction	does	take (\d+ )?less damage
+damage_types	does	(fire|frost|nature|shadow|holy|arcane|fel|cold|lightning|poison|physical|magic) (damage|weakness|resistance)
+damage_types	does	\bcritical damage
+damage_types	does	\bcritically
+damage_types	does	\bresistance\b
+damage_types	does	\bweakness\b
+death_count	does	after a .{0,25}dies
+death_count	does	for each .{0,30}(died|dead|that died|in your graveyard)
+death_count	does	whenever .{0,30}(dies|perishes)
+death_count	does	whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)
+death_trigger	does	(if|when) this (operative|model|unit) is (incapacitated|destroyed)
+death_trigger	does	\bdeath:
+death_trigger	does	\bdeathrattle
+death_trigger	does	\bdying wish
+death_trigger	does	\blast breath
+death_trigger	does	\bwhen destroyed
+death_trigger	does	on death
+death_trigger	does	when (this|~|it) (dies|is destroyed|perishes|is killed)
+death_trigger	does	when .{0,20}(dies|perishes)
+deathtouch	does	\bdeathtouch
+deathtouch	does	\bexecute
+deathtouch	does	\bpoisonous\b
+deathtouch	does	\bslay\b
+deathtouch	does	kills? .{0,20}(any|all) creatures? it (damages|strikes)
+deathtouch	does	touch of death
+debuff	does	(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))
+debuff	does	-\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit)
+debuff	does	-\d+/-\d+
+debuff	does	-\d+\|-\d+
+debuff	does	\(debuff
+debuff	does	\bcurse
+debuff	does	\bfrail\b
+debuff	does	\bhalve
+debuff	does	\bvulnerable\b
+debuff	does	\bweak(en|ened)?\b
+debuff	does	\bweaken
+debuff	does	gets? -\d+
+debuff	does	loses? \d+ (attack|power)
+debuff	does	reduce .{0,20}(attack|power|life|health)
+debuff	does	subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))
+debuff	does	subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))
+debuff	does	takes? double damage
+deck_condition	does	cards? in your deck (have|has|are)
+deck_condition	does	if your deck
+deck_condition	does	your deck (contains|has)
+deck_modification	does	\badd .{0,30}to your deck
+deck_modification	does	\bfuse\b
+deck_modification	does	\bmerge
+deck_modification	does	\bremove .{0,20}from (your )?deck
+deck_modification	does	\bsacrifice stone
+deck_modification	does	\bsigil transfer
+deck_modification	does	\bupgrade (a|one) card
+deck_modification	does	permanently (gain|lose|add|remove)
+deck_position	does	\ballegiance
+deck_position	does	\blurk
+deck_position	does	\bnab\b
+deck_position	does	bottom of (your|the enemy|their) deck
+deck_position	does	from the top
+deck_position	does	on top of (their|your|its owner.s) library
+deck_position	does	top (card )?of your deck
+deckbuilding_effect	does	(your|start the game with a) deck (can|may) include
+deckbuilding_effect	does	when mustering
+deckbuilding_effect	does	while deckbuilding
+deckbuilding_effect	does	your army may include
+delayed	does	\bafter \d+ (turns|rounds)
+delayed	does	\bcountdown
+delayed	does	\bdelayed
+delayed	does	\bdormant
+delayed	does	\bfading
+delayed	does	\bfuse\b
+delayed	does	\bhourglass
+delayed	does	\bin \d+ turns
+delayed	does	\blore counter
+delayed	does	\bsaga\b
+delayed	does	\bslumber
+delayed	does	\btimer
+delayed	does	\bvanishing
+delayed	does	after (two|three|four|five|\d+) (turns|rounds)
+delayed	does	next turn
+destroy	benefits	whenever .{0,40}(is destroyed|dies|is killed)
+destroy	counters	\bindestructible\b
+destroy	counters	can't be destroyed
+destroy	counters	would (die|be destroyed).{0,40}instead
+destroy	does	\bdestroy (target|a|an|all|each|that|it|the)
+destroy	does	\bdestroy this\b
+destroy	does	\binstantly (dies|killed)
+destroy	does	\bkill (target|a|an|all|it|that)
+destroy	does	\bperishes?\b.{0,15}(immediately|instantly)
+destroy	does	\bslay\b
+destroy	does	out of action
+destroy	does	set (their|its) (hp|health) to 0
+destroy	does	touch of death
+destroy	does	will die (after|at the end)
+difficulty_modifiers	does	\bascension
+difficulty_modifiers	does	\bchallenge mode
+difficulty_modifiers	does	\bdifficulty
+direct_damage	does	attack (the )?(opponent|player) directly
+direct_damage	does	damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)
+direct_damage	does	damage to (their|the enemy) (hero|face|leader|general|nexus)
+direct_damage	does	deal \d+ to (the enemy nexus|anything|each player|the enemy hero)
+direct_damage	does	strike (the )?opponent directly
+disable	does	\bdaze
+disable	does	\bfreez
+disable	does	\bfrozen\b
+disable	does	\bparaly
+disable	does	\bsleep
+disable	does	\bstun
+disable	does	\btap (target|it|that)
+disable	does	doesn't untap
+disable	does	skip (its|their) (next )?(turn|attack)
+discard	benefits	when .{0,20}is discarded
+discard	benefits	whenever you discard
+discard	cost	as an additional cost.{0,30}discard
+discard	cost	discard (a|an|\d+) .{0,15}card.{0,15}:
+discard	does	\bdiscards?\b(?! piles?\b)
+disruption	does	look at .{0,20}opponent.s hand
+disruption	does	opponent discards
+distribute	does	\b(split|divide|distribute)[sd]?\b[^.]{0,40}\b(among|between|evenly|across)
+distribute	does	\bdistributed?\b
+donate	does	give (it|them|control of .{0,30}) to (your|an|target) opponent
+donate	does	opponent gains control of
+donate	does	shuffle .{0,40}into your opponent.s deck
+draw	benefits	whenever you draw
+draw	counters	can't draw
+draw	does	(put|add) .{0,40}into your action bar
+draw	does	\bdraw (a|an|one|two|three|x|\d+)
+draw	does	\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?
+draw	does	\bdraws? (six|seven|eight|nine|ten|\d+) cards?
+draw	does	\bput [^.]{0,50}\bfrom (your|the) (deck|library|draw pile)\b[^.]{0,20}\binto your hand\b
+drawback	does	\bdrawback
+drawback	does	also dealt to you
+drawback	does	opposing .{0,20}gains
+drawback	does	your opponent (gains|draws)
+economy	does	(faeria|mana|energy|gold) to \d+
+economy	does	spend all your (mana|energy)
+enemy_benefit	does	(?:^|[.:;,] |\bthen |\band )(your |the |target |each |an )?opponents? (draws?|gains?|gets?|adds?|summons?)\b
+enemy_benefit	does	\benemy cards?[^.]{0,20}(have|get|gain) \+\d
+enemy_benefit	does	\bsummon [^.]{0,60}\bfor (your|the|each|an) (opponent|enemy)\b(?! (followers?|minions?|units?|creatures?|characters?|cards?|heroes|hero)\b)|\bfor your opponent\b
+evasion	counters	(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)
+evasion	counters	\bintercept
+evasion	counters	can block .{0,20}flying
+evasion	counters	mighty leap
+evasion	does	\bairborne\b
+evasion	does	\bburrow
+evasion	does	\belusive\b
+evasion	does	\bfearsome\b
+evasion	does	\bflying\b
+evasion	does	\bmenace\b
+evasion	does	\bsubmerge
+evasion	does	\bunblockable\b
+evasion	does	\bwaterborne\b
+evasion	does	attack .{0,20}directly
+evasion	does	can't be blocked
+excess_damage	does	\boverwhelm\b
+excess_damage	does	\btrample\b
+excess_damage	does	excess damage
+excess_damage	does	overkill
+excess_damage	does	remaining damage
+exhaust	does	\bexhaust
+exhaust	does	\bpurge
+exhaust	does	removed? .{0,20}until (the )?end of combat
+extra_turn	does	(?<!t )\buntap (target|it|all|up to|another|each|that)\b
+extra_turn	does	\breactivate
+extra_turn	does	\bready\b .{0,20}(again|unit)
+extra_turn	does	act again
+extra_turn	does	additional action
+extra_turn	does	additional turn
+extra_turn	does	extra action
+extra_turn	does	extra turn
+extra_turn	does	take another turn
+fatigue	does	\bfatigue
+fatigue	does	\bovertime
+fatigue	does	\bsudden death
+fatigue	does	\btime limit
+fatigue	does	\bturn limit
+finisher	does	(target|that|each) (player|opponent) loses the game
+finisher	does	deals? damage equal to .{0,30}(life|health) total
+finisher	does	you win the game
+first_strike	does	\bpreemptive
+first_strike	does	before .{0,20}(combat|blockers)
+first_strike	does	first strike
+first_strike	does	quick ?attack
+first_strike	does	strikes? first
+flanking	does	\bbackstab
+flanking	does	\bfacing\b
+flanking	does	\bflank
+flanking	does	from behind
+fodder	does	(?<![\d/])0/1(?!\d)
+fodder	does	\b\d/\d tokens?\b
+fodder	does	\bchump
+fodder	does	\bdisposable
+fodder	does	\bfodder
+fodder	does	\bsquirrel
+forced_attack	does	(must|forced to|will) attack (their|its|your) (own )?(general|hero|leader|allies|owner)
+forced_attack	does	attack(s)? themselves
+forced_attack	does	attacks each (combat|turn) if able
+forced_attack	does	attacks? (a|an|another) random
+forced_attack	does	must attack
+forced_movement	does	(pull|push)(ed|es|s)? (forward|back)
+forced_movement	does	\bknockback
+forced_movement	does	\bknocks? back
+forced_movement	does	\bpull(ing|s|ed)? (it|its target|the target|towards|target|enemies|units|them)
+forced_movement	does	\bpull(s)? (target|an?|the)
+forced_movement	does	\bpush(es)? (target|an?|the|that|it|all)
+forced_movement	does	\bpush(ing|es|ed)?\b
+forced_movement	does	\bsmash .{0,20}into
+forced_movement	does	\bthrow(s|n)? (it|them|target|the target|a creature|an enemy|an ally)
+forced_placement	does	\bmoves? (it|them) (here|to this location)
+forced_placement	does	\bmust (be )?play(ed)? (here|there|at|in)
+forced_placement	does	\bput (a card|cards) from (each player'?s|your|their|your opponent'?s) hand (here|onto|into play)
+free_play	does	\bput .{0,30}onto the battlefield
+free_play	does	automatically (played|placed)
+free_play	does	for free
+free_play	does	play the top
+free_play	does	without paying
+friendly_fire	does	\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units|models)\b|\b(deal|deals) \d+ damage to everything\b|\bdamage to all (other )?(minions|characters|creatures|units)\b
+friendly_fire	does	damag(e|es|ing) (allies|friendly units|your own)
+friendly_fire	does	friendly fire
+friendly_fire	does	including (allies|friendly)
+friendly_fire	does	self[- ]damage
+game_end_trigger	does	\b(at|when) the end of the game
+game_end_trigger	does	\buntil the game ends
+game_end_trigger	does	\bwhen the game ends
+game_length	does	\b(an? )?(extra|additional) (round|turn) (to|of) the game
+game_length	does	\bend the game\b
+game_length	does	\bthe game lasts\b
+game_length	does	\bthere is a turn \d
+generate_cards	does	(^|[.:] )get (a|an|\d|two|three|four|five|copies|a copy|another)
+generate_cards	does	\b(add|create|get|gain|obtain|generate|shuffle|receive|conjure|put)s? [^.]{0,25}\brandom [^.]{0,30}\bcards?\b
+generate_cards	does	\bbottled\b
+generate_cards	does	\bconjure
+generate_cards	does	\bcreate (a|an|\d+|two|three)? ?.{0,30}(card|copy|copies) in (your|their) hand
+generate_cards	does	\bcreate .{0,50}\bin (your )?hand
+generate_cards	does	\bdiscover\b
+generate_cards	does	\bmanifest\b
+generate_cards	does	\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b
+generate_cards	does	add .{0,40}to your hand
+generate_cards	does	add a random
+generate_cards	does	fill (your|their) hand
+graveyard	does	\bbones?\b
+graveyard	does	\bcorpse
+graveyard	does	\bdeath count
+graveyard	does	\bgraveyard
+graveyard	does	\bscavenger
+graveyard	does	discard pile
+graveyard	does	from your discard
+hand_deck_swap	does	\bexchange (hands|decks)
+hand_deck_swap	does	\breplace (your|both|their|each player'?s) (deck|hand)
+hand_deck_swap	does	\bshuffle your hand into your deck
+hand_deck_swap	does	\bswap hands\b
+hand_disruption	does	\b(cards?|minions?|spells?|characters?|the [a-z-]+ card)[^.]{0,40}in (your |an |each |target )?opponent'?s hand
+hand_disruption	does	\b(opponent|enemy)'?s? hand\b
+hand_position	does	(left|right)-?most card in your hand
+hand_position	does	\boutcast\b
+hand_position	does	\bquickdraw\b
+hand_position	does	the turn (you draw|it.s drawn)
+hand_size	does	(number of|for each|\d+ or (more|fewer|less)) cards? in (your|their) hand
+hand_size	does	\bfill (your|their|each player'?s|your opponent'?s) hands?\b
+hand_size	does	\bhand size
+hand_size	does	\bhellbent
+hand_size	does	empty hand
+hand_size	does	hand is (full|empty)
+haste	does	\bhaste\b
+haste	does	\bquick ?attack
+haste	does	\brush\b
+haste	does	can (move and )?attack (immediately|the turn it|this turn)
+heal	benefits	whenever .{0,40}(is healed|gain life|gains life|are healed|restores health)
+heal	benefits	whenever you gain life
+heal	counters	(prevent|stop)s? .{0,20}heal(s|ed|ing)?\b
+heal	counters	can't (be healed|gain life|heal)
+heal	does	\b(heal|restore)s? (?:\d+|x|an?|one|two|three|four|five)\b
+heal	does	\bheal (a|an|all|your|target|each|it|this|them)\b
+heal	does	\bheal \(
+heal	does	\bheal \(\d+\)
+heal	does	\brestore (all )?(health|life)
+heal	does	\byou gain .{0,12}life
+heal	does	gain (twice|double|\d+ plus \d+|9 plus \d+) .{0,15}life
+heal	does	gains? (?:\d+|x|an?|one|two|three|four|five) (life|health|hp)\b
+heal	does	regain
+hero_power	does	\bbloodbound spell
+hero_power	does	\bcommander ability
+hero_power	does	\bgeneral.s (ability|power)
+hero_power	does	\bleader skill
+hero_power	does	hero power
+immobilize	does	\b(is|are|becomes?|become) (rooted|snared|pinned)\b
+immobilize	does	\b(root|snare)s? (target|an|the|that|each)\b
+immobilize	does	\b(target|enemy|enemies|opponent'?s?|that|those|each|all other|the chosen|the attacked|the targeted)\b[^.]{0,40}\b(can'?t|cannot|may not) (move|be moved by its controller)
+immunity	does	\bhexproof\b
+immunity	does	\bimmune\b
+immunity	does	\bimmunity\b
+immunity	does	\binvulnerab(le|ility)\b(?! saves?)
+immunity	does	\bshroud\b
+immunity	does	\buntargetable\b
+immunity	does	can't be attacked
+immunity	does	can't be targeted
+immunity	does	cannot be attacked
+in_hand_buff	does	\b(cards?|minions?|units?|characters?|creatures?|spells?)[^.]{0,25}in your (hand|deck)\b[^.]{0,40}(\+\d|-\d|cost|power|attack|health|gain|get)
+in_hand_buff	does	\b(give|gives)\b[^.]{0,50}\bin your (hand|deck)
+in_hand_buff	does	\byour (hand|deck)\b[^.]{0,15}\+\d
+information	does	\bface-?down
+information	does	\bhidden\b
+information	does	\bintel
+information	does	\bintent
+information	does	\bintents?\b
+information	does	\bpeek
+information	does	\breveal
+information	does	look at
+information	does	telegraph
+items_consumables	does	\bconsumable
+items_consumables	does	\bitem
+items_consumables	does	\bpotion
+items_consumables	does	\brelic
+items_consumables	does	\bscroll
+items_consumables	does	\btrinket
+junk_cards	does	(add|shuffle) .{0,30}(wound|dazed|burn|void|slimed|curse)s? (cards? )?(into|to) (your|their|the) (deck|hand|draw pile|discard)
+junk_cards	does	\(status
+junk_cards	does	\bcurse cards?
+junk_cards	does	\bdazed\b
+junk_cards	does	\bshuffle [^.]{0,50}\binto (your |the )?(opponent'?s|enemy'?s?) (deck|library|draw pile)\b
+junk_cards	does	\bslimed\b
+junk_cards	does	\bunplayable
+junk_cards	does	\bwound cards?\b
+kicker	does	\bempower(ed)? \d
+kicker	does	\benhance\b
+kicker	does	\bkicker
+kicker	does	\boverload\b.{0,5}\d
+kicker	does	if you paid
+kicker	does	you may pay .{0,30}(more|additional)
+lane_closure	does	\b(destroy|ruin)s? (all |both )?(the )?(other |a random |this )?locations?\b
+lane_closure	does	\bcan't play cards here after
+lane_closure	does	\bcards can't be played (here|there)
+lane_closure	does	\bflood(s|ed|ing)? (this|the|other|a)?\s*(location|locations|lane)
+lane_closure	does	\blast turn cards can be played
+lane_identity	does	\b(left|middle|right|center|centre|leftmost|rightmost) (location|lane)\b
+lane_identity	does	\bmiddle (location|lane|row)
+lanes	does	\blanes?\b
+lanes	does	\bsame (lane|column)
+lanes	does	across from
+lanes	does	in front of
+lanes	does	opposing (space|slot|card|lane)
+legendary_actions	does	\blair action
+legendary_actions	does	\bmythic
+legendary_actions	does	at the end of another creature.s turn
+legendary_actions	does	legendary action
+life_payment	cost	\b(you|your hero) takes? \d+ damage
+life_payment	cost	\byou lose \d+ (life|hp|health)\b
+life_payment	cost	blood price
+life_payment	cost	cost to health
+life_payment	cost	costs? health
+life_payment	cost	deals? \d+ damage to (you|your hero|yourself|itself)\b(?! ?opponent)
+life_payment	cost	pay \d+ (life|health)
+life_payment	cost	pays? .{0,10}life
+life_track	does	\bhero health
+life_track	does	\blife total
+life_track	does	\bscale\b
+life_track	does	\bscales\b
+lifesteal	does	\bdrain\b
+lifesteal	does	\bdrains? \d+
+lifesteal	does	\bleech
+lifesteal	does	damage dealt by .{0,40}(heals|restores)
+lifesteal	does	gains? (life|health) equal to .{0,20}damage
+lifesteal	does	lifelink
+lifesteal	does	lifesteal
+lifesteal	does	loses? \d+ life and you gain \d+ life
+light_level	does	\b(increase|decrease) light
+light_level	does	\blight (below|above|level)
+light_level	does	\btorch
+light_level	does	\btorchlight
+link_formation	does	\bbonded\b
+link_formation	does	\bcircuit
+link_formation	does	\bconduit
+link_formation	does	\bformation
+link_formation	does	\bin a line
+lone_unit	does	\b(cards?|units?|minions?) alone (at|in)\b
+lone_unit	does	\b(your )?only (card|minion|unit|creature|character|model)s? (here|there|in (this|its|that|the) (lane|row|location|zone))
+lone_unit	does	\bno (other )?(adjacent|nearby|friendly) (allies|units|minions|models|creatures)
+lone_unit	does	\bonly (have )?one card here
+lone_unit	does	\bwhile no ally is adjacent
+mark_target	does	\block-?on
+mark_target	does	\bmark target
+mark_target	does	\bmark(ed|s)? (target|an? enemy|self)
+mark_target	does	\bmarked\b
+merge_attach	does	\battach
+merge_attach	does	\bequip (it|this) to
+merge_attach	does	\bfuse\b
+merge_attach	does	\bmagnetic\b
+merge_attach	does	\bmagnetize
+merge_attach	does	\bmerge
+mill	does	\bburn(s)? .{0,15}cards? from
+mill	does	\bmill
+mill	does	remove the top .{0,20}of .{0,20}deck
+mill	does	top .{0,20}cards? of (their|your|target player.s|his or her) (library|deck) into
+modal_choice	does	\boptions?:
+modal_choice	does	choose (two|one or both|one or more)\s*[:—-]
+modal_choice	does	choose one of the following
+modal_choice	does	choose one\b(?! (friendly|enemy|target|fighter|unit|creature|minion|model|of your|of them|card|other))
+modal_choice	does	choose one\s*[:—-]
+movement	does	\badvance\b
+movement	does	\bcharge rolls?
+movement	does	\bjump
+movement	does	\bleap
+movement	does	\bmoves?\b
+movement	does	\bpull
+movement	does	\bpush
+movement	does	\breposition
+movement	does	\bshift
+movement	does	\bsprinter\b
+movement	does	\bstrafe
+movement	does	\bswap
+movement	does	\bteleport
+movement	does	declare a charge
+multi_attack	does	\bflurry
+multi_attack	does	\bwindfury\b
+multi_attack	does	additional attack
+multi_attack	does	attack .{0,10}(two|three|\d+) times
+multi_attack	does	attack again
+multi_attack	does	attacks? twice
+multi_attack	does	bifurcated
+multi_attack	does	double strike
+multi_attack	does	extra attack
+multi_attack	does	multi_?attack
+multi_attack	does	trifurcated
+multi_target_attack	does	\bcleave
+multi_target_attack	does	\bsweep
+multi_target_attack	does	also (strikes|attacks|hits)
+multi_target_attack	does	also damages
+multi_target_attack	does	attacks? (each|all|both) (enemy|enemies|adjacent|opposing|creatures?|minions?|units?)
+multi_target_attack	does	bifurcated
+multi_target_attack	does	trifurcated
+multiple_resources	does	\bbones\b.{0,40}\benergy\b
+multiple_resources	does	\bcolou?red mana
+multiple_resources	does	\bmox\b
+null_body	does	\b(cards?|minions?|units?|creatures?|characters?) (with )?no (abilities|text|ability)\b
+on_ally_play	does	after you (play|summon) a
+on_ally_play	does	whenever (you play|you summon|another .{0,30}(enters|is summoned|is played))
+on_ally_play	does	whenever you cast a creature
+on_attack	does	\battack:
+on_attack	does	\bon attack
+on_attack	does	\bstrike:
+on_attack	does	when .{0,20}attacks
+on_attack	does	whenever .{0,20}attacks
+on_attack	does	whenever .{0,20}strikes
+on_damaged	does	\benrage
+on_damaged	does	\bfrenzy
+on_damaged	does	after .{0,30}(is dealt|takes) damage
+on_damaged	does	when (i|it|this|~) survives? damage
+on_damaged	does	when .{0,30}(is damaged|takes damage|is struck)
+on_damaged	does	whenever .{0,30}(is damaged|takes damage|is dealt damage|survives damage)
+on_enemy_enter	does	when(ever)? an? (enemy|opposing) .{0,30}(is placed|moves into|enters|is summoned|is played)
+on_enemy_enter	does	whenever an? (enemy|opponent).{0,30}(enters|is played|is summoned)
+on_kill	does	\boverkill
+on_kill	does	\bslay\b
+on_kill	does	when .{0,30}kills
+on_kill	does	when(ever)? .{0,30}destroys (a|an|another) 
+on_kill	does	whenever .{0,30}(kills|destroys) (a|an|another)
+on_play	does	\bbattlecry
+on_play	does	\bdeploy:
+on_play	does	\benters the battlefield
+on_play	does	\bfanfare
+on_play	does	\bon play
+on_play	does	\bopening gambit
+on_play	does	\bplay:
+on_play	does	\bsummon:
+on_play	does	\bwhen (this|~) (creature|permanent|artifact|enchantment|vehicle|land|minion|unit|follower|card) enters\b
+on_play	does	\bwhen (this|~|it) (enters|is played|is summoned|comes into play)
+on_spell	does	\bmagecraft
+on_spell	does	\bprowess
+on_spell	does	\bspellburst
+on_spell	does	\bspellcraft
+on_spell	does	after you (cast|play) a (spell|instant|sorcery|tactic)
+on_spell	does	whenever you (cast|play) a (spell|instant|sorcery|tactic)
+once_per_game	does	\bconsumable
+once_per_game	does	\blimited use
+once_per_game	does	\bone use
+once_per_game	does	once per (game|battle|match|run)
+overload_debt	cost	\bdebt\b
+overload_debt	cost	\bnext turn.{0,30}(locked|less)
+overload_debt	cost	\boverload
+passive	does	\bas long as
+passive	does	\bpassive
+passive	does	\bwhile\b
+permanent_growth	does	\+1/\+1 counter
+permanent_growth	does	\bevolve
+permanent_growth	does	\bexperience points?
+permanent_growth	does	\bfledgling\b
+permanent_growth	does	\bgrows?\b
+permanent_growth	does	\blevels? up
+permanent_growth	does	\bscales?\b
+permanent_growth	does	for the rest of the (game|run)
+permanent_growth	does	gains? \d+ ?xp
+permanent_growth	does	permanently
+permanent_loss	does	\bdeleted\b
+permanent_loss	does	\bpermadeath
+permanent_loss	does	permanently removed
+permanent_loss	does	removed from your deck
+piercing	does	\bap -\d
+piercing	does	\bpierc
+piercing	does	\brend
+piercing	does	\bsunder
+piercing	does	armou?r penetration
+piercing	does	ignores? (armou?r|defen[cs]e|shields?|saves?)
+piercing	does	ignoring (its |the |their )?(armou?r|shield)
+ping	does	deal 1 damage
+placement_rules	does	(summon|play|deploy)ed? .{0,25}anywhere
+placement_rules	does	\bdeploy (it|this) 
+placement_rules	does	\bdeployment
+placement_rules	does	can be (summoned|played|placed|deployed|cast)
+play_restriction	does	can only (cast|play|summon)
+play_restriction	does	can't (cast|play|summon|deploy)
+play_restriction	does	can't be (cast|played)
+points_scoring	does	(most|more|fewer) points
+points_scoring	does	\bscore(s|d)? (\d+|victory|glory|points?|this|that|one|an? objective)\b
+points_scoring	does	\bwinning the (current )?round
+points_scoring	does	\d+ or more points
+points_scoring	does	highest (total )?power wins
+points_scoring	does	victory points?
+quests	does	\bobjective\b
+quests	does	\bquest\b
+quests	does	\bquestline
+quests	does	\breward:
+quests	does	\bsidequest
+quests	does	\btrial\b
+race_objective	does	\bfirst (player )?to (fill|put|play|reach|have|get|score|complete)\b
+race_objective	does	\bthe first player (to|who)\b
+random_ability	does	\bamorphous
+random_ability	does	random (sigil|keyword|ability|abilities)
+random_effect	does	\b\d+%(?=:| chance| of the time| to )
+random_effect	does	\bat random
+random_effect	does	\bchance\b
+random_effect	does	\bcoin
+random_effect	does	\bd20\b
+random_effect	does	\bd6\b
+random_effect	does	\bdice\b
+random_effect	does	\brandom
+random_effect	does	\broll
+ranged	does	(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)
+ranged	does	\barcher
+ranged	does	\bartillery
+ranged	does	\branged attack
+ranged	does	\branged\b
+ranged	does	\bshoot
+ranged	does	\bsniper\b
+ranged	does	from a distance
+rank_positions	does	\bback rank
+rank_positions	does	\bfront rank
+rank_positions	does	\bin rank
+rank_positions	does	\bposition [1-4]
+rank_positions	does	\branks? [1-4]
+rank_positions	does	from ranks?
+rank_positions	does	targets? (enemy |ally )?ranks?
+reactions	does	\binterrupt
+reactions	does	\bopportunity attack
+reactions	does	\breaction\b
+reactions	does	in response to
+recycle	does	\brecycle
+recycle	does	put .{0,30}on the (top|bottom) of
+recycle	does	shuffle .{0,40}into (your|their|its owner.s) (deck|library)
+regeneration	does	\bregenerat
+regeneration	does	at the (start|end|beginning) of .{0,40}(heal(s|ed)?\b|restore)
+regeneration	does	heals? (to )?full
+repeat_trigger	does	\bdies again
+repeat_trigger	does	additional time
+repeat_trigger	does	play(ed)? .{0,15}(an extra time|an additional time)
+repeat_trigger	does	played an (extra|additional) time
+repeat_trigger	does	played twice
+repeat_trigger	does	trigger(s)? (an additional time|twice|again)
+reserve_bench	does	\bbench\b
+reserve_bench	does	\breserves?\b
+reserve_bench	does	from your bench
+resource_banking	does	\bbank(ed)?\b
+resource_banking	does	carr(y|ies) over
+resource_banking	does	save .{0,15}(mana|gold|energy) for
+resource_banking	does	spend all (your )?(remaining )?(mana|energy)
+resource_banking	does	unspent (mana|energy|gold|resources?)
+resource_conversion	does	pay \d+ (energy|bones?|mana|gold|life) to gain \d+
+resource_gain	benefits	whenever you (spend|gain) .{0,15}(mana|energy|gold)
+resource_gain	does	\badd \{
+resource_gain	does	\bbattery
+resource_gain	does	\bcommand points?
+resource_gain	does	\bgain .{0,15}(mana|energy|gold|faeria|bones?|resource|supply|command points?|action points?|mox)
+resource_gain	does	\bramp\b
+resource_gain	does	additional order
+resource_gain	does	gain \d+ ?cp\b
+resource_gain	does	mana crystal
+resource_gain	does	refresh (your |all |\d+ )?(mana|energy)
+rest_phase	does	\bat a campfire
+rest_phase	does	\bcamp(ing)?\b
+rest_phase	does	\brest site
+rest_phase	does	until next camp
+retain	does	\bkeep .{0,20}in (your )?hand
+retain	does	\bretain\.
+retain	does	is retained
+retain	does	not discarded at (the )?end of (your )?turn
+retain	does	retain (your hand|this card|a card|cards|up to)
+return_to_hand	does	\brecall (it|target|a|an|this|that|them)\b
+return_to_hand	does	return .{0,40}to (its|their) owner'?s? hand
+return_to_hand	does	return .{0,40}to (its|their|your) action bar
+return_to_hand	does	return .{0,40}to (your|their|its) hand
+return_to_hand	does	returns? to your action bar
+return_to_hand	does	to (your )?opponent'?s hand
+reveal_order	does	\b(play|act|go)s? first\b
+reveal_order	does	\bpriority\b
+reveal_order	does	\breveals? first\b
+revive	counters	can't be returned
+revive	counters	would (die|be put into a graveyard).{0,30}exile it instead
+revive	does	\b(revive|resurrect|reanimate)s?\b|\braises?\b(?! (your|its|their|his|her|the|by|max|maximum|\d|it|this|that|all|attack|health|power|hp|icon|banner|standard|flag|morale|alarm|shields?|stakes)\b)
+revive	does	\bput [^.]{0,50}card[^.]{0,30} from (a|your|an opponent's|any) graveyard onto the battlefield
+revive	does	\breborn\b
+revive	does	\bundying\b
+revive	does	\bunkillable\b
+revive	does	many lives
+revive	does	return .{0,20}destroyed models?
+revive	does	return .{0,25}slain models?
+revive	does	return .{0,40}from (your |the |a )?(graveyard|discard pile|discard)( to the (battlefield|board|field))?
+revive	does	returns? to (the )?(battlefield|board|play|field)
+rewind	does	\brewind
+rewind	does	\bundo\b
+rewind	does	restore .{0,20}(board|state)
+rewind	does	return .{0,20}to (its|their) state
+round_carryover	does	\bresilience
+round_carryover	does	carr(y|ies) over
+round_carryover	does	remain on the (battlefield|board) (at|after) the end of the round
+round_passing	does	\b(you|your opponent|a player|both players|each player|opponent|they) (has |have )?pass(ed|es)?\b(?! (the|a|test|across|over|through))
+round_passing	does	\bafter (you|your opponent|both players) pass
+round_passing	does	\btruce\b
+round_passing	does	los(e|es|ing) (the|a) round
+round_passing	does	win(s|ning)? (the|a) round
+row_effects	does	(hazard|boon) (on|to) (an enemy|each|this|the opposite|a|the) row
+row_effects	does	\brow effects?
+row_effects	does	\bweather\b
+rows	does	\bback ?line
+rows	does	\bfront ?line
+rows	does	\bfront\b
+rows	does	\bmelee row
+rows	does	\branged row
+rows	does	\brows?\b
+rows	does	\bsiege row
+rows	does	back rank
+rows	does	front rank
+rule_change	does	\banomal(y|ies)\b
+rule_change	does	change the rules
+rule_change	does	rules? of the game (change|are changed)
+run_structure	does	\bcampfire
+run_structure	does	\bmap node
+run_structure	does	\bnext (combat|battle|floor|act|encounter)\b
+run_structure	does	\brest site
+run_structure	does	\bthis run\b
+run_structure	does	card rewards?
+run_structure	does	end of combat.{0,20}reward
+run_structure	does	rest of (the|this) run
+sacrifice	benefits	many lives
+sacrifice	benefits	whenever .{0,30}(is )?sacrificed
+sacrifice	benefits	worthy sacrifice
+sacrifice	cost	sacrifice (a|an|\d+|another|two|three)
+sacrifice	does	(kill|destroy) an ally to
+sacrifice	does	\bsacrific
+sacrifice	does	destroy an? (allied|friendly) (unit|minion|creature|follower)
+saving_throws	does	\bdc \d+
+saving_throws	does	\bsave dc\b
+saving_throws	does	must succeed on
+saving_throws	does	saving throw
+scope_global	does	\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))
+scope_global	does	\bboth players
+scope_global	does	\beach player
+scope_global	does	\bevery (unit|creature|minion)
+scope_self	does	\(self\)
+scope_self	does	\b(this|~) (gets|gains|has) 
+scope_self	does	\btarget(s)? (only )?self\b
+scoring_objectives	does	\bgain \d+ glory
+scoring_objectives	does	\bglory\b
+scoring_objectives	does	\bscore this\b
+scoring_objectives	does	\bvictory points?\b
+scoring_objectives	does	^score this
+selection	does	\bchoose (one|1) of
+selection	does	\bcycle
+selection	does	\bmulligan
+selection	does	\bredraw
+selection	does	\breplace (a|an additional|an extra) card
+selection	does	\bscry
+selection	does	\bsurveil
+selection	does	look at the top
+self_destruct	does	(then|after attacking,?) .{0,30}(dies|perishes|is destroyed)
+self_destruct	does	\bbrittle\b
+self_destruct	does	\bephemeral
+self_destruct	does	\bfleeting\b
+self_destruct	does	destroy (it|~) at (the )?end
+self_destruct	does	sacrifice (it|~) at (the )?end
+shield	counters	(lose|remove|break|pop)s? .{0,20}(shield|barrier|ward)
+shield	does	\barmored\b
+shield	does	\bprevent the next
+shield	does	\bshield\b
+shield	does	\bspell ?shield
+shield	does	\bward\b
+shield	does	barrier
+shield	does	block(s)? the (first|next) (hit|attack|instance)
+shield	does	divine shield
+shield	does	prevent the (first|next) time you would lose
+shield	does	spellshield
+shop_gold	does	\bbuy\b
+shop_gold	does	\bgold\b(?! card)
+shop_gold	does	\bmerchant
+shop_gold	does	\bprice\b
+shop_gold	does	\bpurchase
+shop_gold	does	\bsell (a|an|this|it|minions?|cards?)\b
+shop_gold	does	\bshop\b
+shop_gold	does	\btavern\b
+shop_gold	does	\bteeth\b
+side_deck	does	\bsquirrel deck
+side_deck	does	secondary deck
+side_deck	does	side deck
+silence	does	\bnegate .{0,20}abilit
+silence	does	\bsilence
+silence	does	loses? all abilit
+silence	does	remove (all )?(its |their )?(abilities|sigils|keywords|text)
+slot_filler	does	\b(your )?(side|board|location|row|lane)( here)? is full\b
+slot_filler	does	\bfill (this|your|the|each|a)\b(?! (hand|hands)\b)
+slot_filler	does	\bfull (board|location|row|lane|side)
+slots_queue	does	\b(frost|lightning|dark|plasma|glass) orbs?\b
+slots_queue	does	\bchannel \d+ (dark|frost|lightning|plasma|glass|orbs?)
+slots_queue	does	\bevoke (your|the|an?) (orb|rightmost|leftmost)
+slots_queue	does	\borb slots?
+slots_queue	does	empty orb slot
+spawn_blocking	does	(vek|enemies|enemy) .{0,15}emerg
+spawn_blocking	does	block(s|ing)? (reinforcements|spawns?|emerging)
+spawn_blocking	does	emerge here
+spawn_blocking	does	will emerge
+spell_power	does	double the damage .{0,25}(of|from) your spells
+spell_power	does	spell damage
+spell_power	does	spell power
+spell_power	does	spellpower
+spell_power	does	your spells .{0,20}(deal|have) .{0,10}(extra|more|\+)
+spell_speed	does	\bburst (spell|speed)
+spell_speed	does	\bfast\b spell
+spell_speed	does	\bflash\b
+spell_speed	does	\bin response
+spell_speed	does	\bslow\b spell
+stacking_keyword	does	\bcounters? on\b
+stacking_keyword	does	\bstacks?\b
+stacking_keyword	does	can stack
+stakes_wager	does	\b(wager|ante)\b
+stakes_wager	does	\bdouble (your|the) (winnings|stakes)
+stances	does	\bstances?\b
+stances	does	enter (wrath|calm|divinity)
+stances	does	switch to .{0,15}(stance|form|mode)
+start_of_game	does	\bmulligan
+start_of_game	does	\bopening hand
+start_of_game	does	at the start of the game
+start_of_game	does	start of game
+start_of_game	does	start the game
+stat_condition	does	\b(highest|lowest|greatest|least)[- ](power|attack|health|strength)
+stat_condition	does	\b(power|attack|health) (of )?\d+ or (more|less)
+stat_condition	does	\b(weakest|strongest)\b
+stat_condition	does	\bwith \d+ or (more|less|fewer) (power|attack|health|strength|defen[cs]e)
+stat_multiply	does	\b(power|attack|health|stats|strength) (is|are) doubled
+stat_multiply	does	\bdoubl(e|es|ed)\b[^.]{0,40}(power|attack|health|stats|strength|damage)
+stat_multiply	does	\btripl(e|es)\b[^.]{0,30}(power|attack|health)
+stat_set	does	\bbase (power|attack|health) (becomes|is) \d+
+stat_set	does	\bbecomes? (a )?\d+/\d+
+stat_set	does	\bchange [^.]{0,30}to \d+/\d+
+stat_set	does	\bhas base (power|toughness) \d+\b
+stat_set	does	\bset [^.]{0,30}to \d+/\d+
+stat_set	does	base (power and toughness|attack and health) \d+/\d+
+stat_set	does	change the (attack|health|power|toughness)[^.]{0,40} to \d+
+stat_set	does	set [^.]{0,40}(attack|power|health|toughness) to \d+
+stat_swap	does	\b(swap|switch|exchange)(es|s)? [^.]{0,30}\b(power|attack|health|toughness|stats)\b[^.]{0,30}\b(of|with)\b
+stat_swap	does	\b(switch|swap|exchange)(es|s)? [^.]{0,30}\b(attack|power) and (health|toughness|defen[cs]e|cost)\b
+stat_swap	does	\b(switch|swap|exchange)(es|s)? [^.]{0,30}\b(health|toughness) and (attack|power)\b
+steal	does	\bcharm(ed)?\b
+steal	does	\bexchange control of\b
+steal	does	\bmind control
+steal	does	\bsteal(s|ing)?\b
+steal	does	gain control
+steal	does	take control
+steal	does	you control enchanted
+stealth	does	\bcamouflage
+stealth	does	\bconceal
+stealth	does	\bface-?down\b
+stealth	does	\bhidden\b
+stealth	does	\binvisib
+stealth	does	\bstealth
+stress_morale	does	\bafflict
+stress_morale	does	\bbattle-?shock
+stress_morale	does	\bbravery\b
+stress_morale	does	\bleadership (test|characteristic)
+stress_morale	does	\bmorale\b
+stress_morale	does	\bnerve tests?
+stress_morale	does	\bpanic
+stress_morale	does	\bresolve check
+stress_morale	does	\brout\b
+stress_morale	does	\bsanity\b
+stress_morale	does	\bshaken\b
+stress_morale	does	\bstress\b
+summon	does	(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b
+summon	does	\(summon
+summon	does	\bconjure.{0,20}(unit|minion|creature)
+summon	does	\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)
+summon	does	\bfecundity\b
+summon	does	\bfill .{0,20}board
+summon	does	\binvoke\b
+summon	does	\bput .{0,30}(onto|into) the battlefield
+summon	does	\bset up (a|an|one|\d+|up to)\b
+summon	does	\bspawn
+summon	does	creates? .{0,30}in (an? )?(empty|open|adjacent) (space|slot|lane|tile)
+summon	does	gift bearer
+swap	does	\b(swap|switch|exchange)(es|s)? (the )?(positions?|places) of\b
+swap	does	\b(swap|switch|exchange)(es|s)? (their |its |the )?(places|positions|lanes|locations)\b
+swap	does	\bswap (me|this|it|itself|name) with (a|an|the|another|target)\b(?![^.]{0,40}\b(hand|deck|tavern)\b)
+swap	does	\bswap (two|2) (allies|allied \w+|units|minions|creatures|followers|fighters|enemies|enemy \w+)\b
+symmetric_effect	does	\b(deal|deals|dealing) \d+ damage to (all|each) (other )?(minions|creatures|characters|units)\b|\b(destroy|destroys) all (other )?(minions|creatures|units)\b|\bto everything\b
+symmetric_effect	does	\b(each|both|all) players?\b(?!'?s? (units?|mechs?|characters?|pawns?|pieces?)\b)
+symmetric_effect	does	\b(to|on) each side\b
+symmetric_effect	does	\beach player'?s\b
+symmetric_effect	does	\beveryone\b
+symmetric_effect	does	\bfor each player\b
+target_choice	does	choose which .{0,20}(space|target)
+target_choice	does	may (attack|target) any
+targeting_rules	does	can only (be )?target
+targeting_rules	does	change the target
+targeting_rules	does	priority target
+taunt	counters	can attack .{0,20}regardless
+taunt	counters	ignores? taunt
+taunt	does	\bprovoke
+taunt	does	\btaunt\b
+taunt	does	able to block .{0,25} do so
+taunt	does	enemies must attack
+taunt	does	must (attack|target) (this|~)
+taunt	does	must block
+team_play	does	\bteammates?'?s?\b|\byour team controls\b
+telegraphed_threats	does	\battack order
+telegraphed_threats	does	\bintent\b
+telegraphed_threats	does	\btelegraph
+telegraphed_threats	does	\bwill emerge
+telegraphed_threats	does	prepare(s)? to attack
+telegraphed_threats	does	will (attack|strike|explode|emerge|become|turn into) .{0,30}(next turn|at the start of)
+temporary_buff	does	(until|till) end of (turn|round)
+temporary_buff	does	[+-]\d+ (attack|power|health) this turn
+temporary_buff	does	[+-]\d+/[+-]\d+ this turn
+temporary_buff	does	until your next turn
+temporary_effect	does	(until|till) (the )?end of (the |your |this )?(turn|round)
+temporary_effect	does	\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b
+temporary_effect	does	\buntil the end of the (battle round|phase|turning point)
+temporary_effect	does	until (the start of )?your next turn
+terrain	does	\bcover\b
+terrain	does	\bdeserts?\b
+terrain	does	\bforests?\b
+terrain	does	\bhazard
+terrain	does	\blakes?\b
+terrain	does	\blands?\b
+terrain	does	\bmountains?\b
+terrain	does	\bobstacle
+terrain	does	\bterrain
+terrain	does	\btile
+terrain	does	\bwall\b
+territory_trigger	does	\binfiltrat
+territory_trigger	does	enemy side of the (battlefield|board)
+territory_trigger	does	in (your|the) opponent.s (territory|half|deployment zone)
+territory_trigger	does	moves? onto (an )?enemy (land|territory|side)
+traits_quirks	does	(positive|negative) (quirk|trait)
+traits_quirks	does	\bdiseases?\b(?!d)
+traits_quirks	does	\bphobia
+traits_quirks	does	\bquirks?\b
+traits_quirks	does	inflict disease
+transform	does	\bbecomes? a\b
+transform	does	\bchange(s)? into
+transform	does	\bevolves? into
+transform	does	\bforge .{0,20}into
+transform	does	\bgrows? into
+transform	does	\bmetamorph
+transform	does	\bmorph
+transform	does	\bpolymorph
+transform	does	\btransforms?\b
+transform	does	\bturns? into\b
+trap_secret	does	\bambush\b.{0,10}(card|trap)
+trap_secret	does	\bsecret\b
+trap_secret	does	\btrap\b
+trap_secret	does	face-?down .{0,20}(trap|trigger)
+tribal	benefits	\bshares? (a|any|the same) (color|colour|type|creature type|card type|faction|region|tribe|keyword)\b
+tribal	does	\b(other )?(beasts?|undead|insects?|dragons?|elementals?|demons?|murlocs?|pirates?|mechs?|elves|goblins?|humans?|zombies?|spiders?|wolves|knights?|soldiers?|warriors?)\b.{0,15}(you control|get \+|have)
+tribal	does	\bsame (type|tribe|race)
+tribal	does	\btribe
+turn_end	does	\bround end
+turn_end	does	at the end of (your|each|the|their)? ?(turn|round)
+turn_number	does	\b(odd|even) (turns?|rounds?)\b
+turn_number	does	\b(on|after|until|before|by) (the end of )?(turn|round) \d
+turn_number	does	\bturns? \d(,| and| or)
+turn_start	does	\bround start
+turn_start	does	\bupkeep
+turn_start	does	at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b
+turn_structure	does	\balternat
+turn_structure	does	\binitiative
+turn_structure	does	\d+ seconds
+turn_structure	does	take (their |your )?(turns|phases)
+turnover	does	(fail|failed|fails) .{0,40}ends? (the|your|their) (turn|activation)
+turnover	does	\bturnover
+tutor	does	(?:^|[.:!/])(?:(?!\b(?:remove|removes|removed|lose|loses|purge|purges|shuffle|shuffles)\b)[^.:!/])*\bfrom your (?:deck|draw pile)\b
+tutor	does	\btutor(s|ed|ing)?\b
+tutor	does	search your (library|deck)
+type_grant	does	\ball (minion|creature) types\b
+type_grant	does	\bchangeling\b
+type_grant	does	\bcounts? as (a|an|every|all)\b[^.]{0,20}\b(type|tribe|color|colour|faction|region|creature)\b
+type_grant	does	\bhas all (types|tribes|regions)\b
+type_grant	does	\bin addition to (its|their) other (colors|colours|types|creature types)\b
+type_grant	does	\bis every creature type\b
+untap	does	(?<!t )\buntap (target|it|all|up to|another|each|that|this|~|those|a|an|two|x)\b
+upgrade	does	\bempowered\b
+upgrade	does	\blevel(s|ed)? up
+upgrade	does	\bupgrade
+upkeep	does	\bconsumption
+upkeep	does	\bfood\b
+upkeep	does	\bstarv
+upkeep	does	cumulative upkeep
+upkeep	does	pay .{0,12} upkeep
+upkeep	does	sacrifice .{0,25}unless you pay
+upkeep	does	upkeep cost
+variable_stats	does	\*/\*
+variable_stats	does	\+(attack|power|health) equal to
+variable_stats	does	\bx/x\b
+variable_stats	does	becomes equal to
+variable_stats	does	equal to the number of
+variable_stats	does	power (is )?equal to
+variety_payoff	does	\bdifferent (base )?(costs?|powers?|categories|types|tribes|card types|names|minion types|keywords|factions|provision costs?)\b
+variety_payoff	does	\bharmony\b
+variety_payoff	does	\bhighlander\b
+variety_payoff	does	\bno (repeated|duplicate) (costs?|cards?|names)
+variety_payoff	does	\bno duplicates\b
+variety_payoff	does	\bunique (primary )?(categor|types?|names?|cards?)
+zone_control	does	\bcapture
+zone_control	does	\bcontrol (a|an|the|\d+)? ?(point|zone|objective|base|area)
+zone_control	does	\bhold(s)? .{0,20}(objective|point)
+zone_control	does	\bmana ?wells?\b
+zone_control	does	\bmanaspring
+zone_control	does	\bobjective
+zone_control	does	\bobjective markers?
+zone_control	does	control score
+zone_control	does	objective control
+zone_of_control	does	\bengagement range
+zone_of_control	does	\bfall back
+zone_of_control	does	\bmarked\b
+zone_of_control	does	disengag
+zone_of_control	does	leave .{0,20}(adjacent|engagement|combat)
+zone_of_control	does	tackle zone
+zone_of_control	does	zones? of control

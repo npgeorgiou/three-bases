@@ -21,6 +21,7 @@ steps() {   # $1 = db
   run compact_text.py "$D" expand
   run concept_tree.py "$D" restore
   run concept_defs.py "$D"
+  run general_tags.py "$D"   # first tagging from the general patterns and keyword links (one chain: the build starts from the card data)
   run game_patterns.py "$D" patterns
   run drop_untagged.py "$D"
   run fix_grants.py "$D"
