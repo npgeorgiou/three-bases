@@ -1,0 +1,13 @@
+
+/* ============ Scenarios (three-bases-scenarios.html) ============ */
+#scenList { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+.scen { text-align: left; background: var(--panel); border: 2px solid var(--cellb); border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; transition: border-color .15s, transform .15s; }
+.scen:hover { border-color: var(--tl); transform: translateY(-2px); }
+.scen b { font: 400 21px/1.15 var(--disp); }
+.scen span { font-size: 15px; color: var(--muted); line-height: 1.35; }
+#scenBar { position: fixed; left: 8px; top: 8px; z-index: 40; width: 220px; background: var(--panel); border: 2px solid var(--tl); border-radius: 14px; padding: 10px 12px; box-shadow: 0 8px 26px rgba(0,0,0,.3); display: flex; flex-direction: column; gap: 6px; max-height: calc(36vh + 12px); }   /* over the opponent's deck, which doesn't matter here */
+#scenBar b { font: 400 18px/1.15 var(--disp); }
+#scenBar p { margin: 0; overflow: auto; min-height: 0; flex: 1 1 auto; font-size: 13px; line-height: 1.35; color: var(--muted); }
+#scenBar .sbtns { display: flex; gap: 8px; flex: 0 0 auto; }
+#scenBar button { border-radius: 9px; padding: 6px 12px; font-size: 14px; }
+#scenBack { background: var(--cell); border: 2px solid var(--cellb); }

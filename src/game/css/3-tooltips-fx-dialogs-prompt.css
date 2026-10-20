@@ -1,0 +1,169 @@
+/* ============ Tooltips ============ */
+#tip, #ghost, #pileTip { position: fixed; z-index: 200; pointer-events: none; padding: calc(var(--bs) * 0.45); }
+#ghost { --cw: var(--hcw); --ch: calc(var(--hcw) * 1.45); transition: transform .34s cubic-bezier(.25,.8,.3,1), opacity .3s ease-out; will-change: transform; }
+#ghost .card { box-shadow: 0 14px 30px rgba(0,0,0,.45); }
+#ghost.small { transform: translate(44px, 30px) scale(.42); opacity: .92; }   /* over the board: small, beside the pointer */
+#ghost.gone { opacity: 0; transition: none; }                                 /* over a camp: the unit preview takes its place at once */
+.cardbtn.dragsrc { visibility: hidden; }
+body.dragging, body.dragging * { cursor: grabbing !important; }
+.tipw { display: flex; gap: 14px; align-items: flex-start; }
+.tipw.flip { flex-direction: row-reverse; }
+.ab .hup { color: #8FF0A0; font-weight: 800; background: rgba(0,0,0,.32); border-radius: 4px; padding: 0 3px; white-space: nowrap; }
+.ab .need.ok { color: #7BE38D; }
+.ab .need.no { color: #FF8A7A; text-decoration: line-through; }
+.kwcol { display: flex; flex-direction: column; gap: 8px; width: 240px; }
+#logcard { position: fixed; z-index: 200; pointer-events: none; }
+#log .lname { font-weight: 700; color: var(--ink); background: color-mix(in srgb, currentColor 14%, transparent); border-radius: 4px; padding: 0 3px; cursor: help; }
+.kwbox, #kwtip { background: #101216; color: #F2EDE3; border-radius: 9px; padding: 8px 11px; font-size: 15px; line-height: 1.35; box-shadow: 0 6px 18px rgba(0,0,0,.4); }
+.kwbox b, #kwtip b { display: block; font: 400 17px var(--disp); margin-bottom: 2px; }
+#kwtip { position: fixed; z-index: 400; max-width: 260px; pointer-events: none; }
+.dmgnote { margin-top: calc(var(--bs) * 0.5); text-align: center; font-size: 15px; background: var(--panel); border-radius: 6px; padding: 2px 6px; }
+.dmgnote + .dmgnote { margin-top: 6px; }
+
+/* ============ Effects layer ============ */
+#fxLayer { position: fixed; inset: 0; pointer-events: none; z-index: 250; }
+.flyer { position: fixed; }
+.flyer svg { width: 100%; height: 100%; }
+.flycard { position: fixed; z-index: 260; transform-origin: 0 0; }
+.flycard .back { box-shadow: 0 6px 18px rgba(0,0,0,.4); }
+.flyunit { position: fixed; border-radius: 9px; border: 2px solid; transform-origin: 0 0; display: grid; place-items: center; }
+.flyunit .art { width: 50%; height: 50%; }
+.rbanner { position: fixed; transform: translate(-50%,-50%); background: var(--panel); border: 3px solid var(--tl); border-radius: 16px; padding: 14px 34px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,.45); }
+.rbanner b { display: block; font: 400 44px/1.1 var(--disp); }
+.rbanner span { font-size: 20px; color: var(--muted); }
+
+/* ============ Dialogs ============ */
+.overlay { position: fixed; inset: 0; background: rgba(10,12,16,.72); display: grid; place-items: center; z-index: 300; padding: 16px; }
+.overlay[hidden] { display: none; }
+/* start page, decks page, deck builder */
+.page { background: var(--bg); display: block; padding: 0; overflow: auto; z-index: 290; }
+.pagein { width: 100%; max-width: 1100px; margin: 0 auto; padding: 28px 24px 40px; }
+.phead { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+.phead h1 { font: 400 36px/1.1 var(--disp); margin: 0 0 6px; }
+.phead .choice { margin: 0; }
+.pbox { background: var(--panel); border-radius: 16px; padding: 20px 22px; }
+.pbox h2 { font: 400 24px var(--disp); margin: 0 0 12px; }
+.homecols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 800px) { .homecols { grid-template-columns: 1fr; } }
+.choice select { background: var(--cell); border: 2px solid var(--cellb); border-radius: 10px; padding: 9px 12px; color: var(--ink); font: inherit; max-width: 100%; }
+.choice button:disabled { opacity: .45; cursor: default; }
+.go.big { width: 100%; padding: 14px 22px; font-size: 18px; }
+.go:disabled { opacity: .4; cursor: default; }
+button.danger { background: transparent; border: 2px solid #B4483C; color: #E07A6C; border-radius: 10px; padding: 9px 16px; }
+.dhead { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.dhead b { font: 400 22px var(--disp); }
+.dmeta { color: var(--muted); }
+.testopt.sub { display: block; margin: 6px 0 0 26px; } .testopt.off { opacity: .45; }
+.dok { color: #36A853; font-weight: 700; } .dbad { color: #D0604F; font-weight: 700; }
+.homelist { max-height: max(40vh, calc(100vh - 350px)); overflow: auto; padding-right: 4px; }
+.dlist.homelist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; row-gap: 6px; }
+.homeleft > .choice { margin-top: 12px; }
+.pagein.home { max-width: 1240px; }
+.home .homecols { grid-template-columns: minmax(0, 660px) minmax(0, 1fr); }
+@media (max-width: 800px) { .home .homecols { grid-template-columns: 1fr; } }
+.empty { color: var(--muted); padding: 10px 0; }
+/* deck-list-item: a card drawn as an oblong row */
+.dlist { display: flex; flex-direction: column; gap: 6px; }
+.dli { display: flex; align-items: center; gap: 8px; }
+.dlit { flex: 1; min-width: 0; display: flex; align-items: center; gap: 7px; height: 42px; padding: 0 8px; border-radius: 10px; border: 2px solid;
+  background: var(--fill); border-color: var(--line); color: var(--text); text-align: left; }
+.dlit.tac { background: var(--spell); }
+button.dlit:hover { filter: brightness(1.15); }
+.dlit .ico { width: 28px; height: 28px; flex: 0 0 auto; display: block; filter: drop-shadow(0 1px 2px rgba(0,0,0,.5)); }
+.dlit .dn { flex: 1; min-width: 0; font: 400 17px/1.1 var(--disp); overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow-wrap: anywhere; }
+.dlit .art { width: 24px; height: 24px; flex: 0 0 auto; }
+.dlit .art path { stroke-width: 7; }
+.dlit .mini { flex: 0 0 auto; color: var(--text); }
+.dlit { gap: 5px; }
+.dli .dc { width: 30px; text-align: right; font-weight: 700; font-size: 17px; color: var(--ink); }
+/* decks page */
+#deckTiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+.dtile { background: var(--panel); border-radius: 14px; padding: 8px 18px 16px; border-top: 16px solid var(--fill, var(--cellb)); display: flex; flex-direction: column; gap: 8px; }
+.dtile.on { outline: 3px solid var(--tl); }
+.dtile.pickable { cursor: pointer; } .dtile.pickable:hover { filter: brightness(1.04); box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+.dtile b { font: 400 22px var(--disp); }
+.dtile .choice { margin: 4px 0 0; }
+.dtile .choice { gap: 6px; flex-wrap: nowrap; }
+.dtile .choice button { padding: 7px 12px; }
+.choice button.danger { background: transparent; border-color: #B4483C; color: #D0604F; }
+/* builder */
+.bwrap { display: flex; height: 100%; }
+.bside { width: 340px; flex: 0 0 auto; background: var(--panel); display: flex; flex-direction: column; gap: 10px; padding: 18px 16px; }
+#bName { background: var(--cell); border: 2px solid var(--cellb); border-radius: 10px; padding: 9px 12px; color: var(--ink); font: 400 22px var(--disp); width: 100%; }
+.bstat { color: var(--muted); }
+.bside .dlist { flex: 1; overflow: auto; padding-right: 4px; }
+.bbtns { display: flex; gap: 8px; flex-wrap: wrap; }
+.bbtns button:not(.go):not(.danger) { background: var(--cell); border: 2px solid var(--cellb); border-radius: 10px; padding: 9px 16px; }
+.bcards { flex: 1; overflow: auto; padding: 0 26px 40px; --cw: clamp(150px, min(25vh, 30vw), 210px); --ch: calc(var(--cw) * 1.45); --bs: calc(var(--cw) * 0.3); }
+.bbar { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 18px 0 10px; background: var(--bg); box-shadow: 0 8px 10px -6px var(--bg); }
+.bfacs { display: flex; gap: 8px; flex-wrap: wrap; }
+.dfacs { margin-bottom: 16px; }
+.bfac { display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 14px 0 8px; border-radius: 10px; border: 2px solid var(--line); background: var(--fill); color: var(--text); font: 400 18px var(--disp); opacity: .5; transition: opacity .15s, box-shadow .15s; }
+.bfac .art { width: 28px; height: 28px; }
+.bfac:hover { opacity: .8; }
+.bfac[aria-pressed="true"] { opacity: 1; box-shadow: 0 0 0 3px var(--ink); }
+.btypes { margin-right: 18px; }
+.btype { height: 42px; padding: 0 14px; border-radius: 10px; border: 2px solid var(--cellb); background: var(--cell); font: 400 18px var(--disp); opacity: .6; }
+.btype:hover { opacity: .85; }
+.btype[aria-pressed="true"] { opacity: 1; box-shadow: 0 0 0 3px var(--ink); }
+.bmode { height: 42px; min-width: 96px; padding: 0 14px; border: none; border-radius: 10px; background: #2E8B47; color: #fff; font-weight: 700; }
+.bmode.ex { background: #B4483C; }
+.sbox { position: relative; display: flex; width: min(520px, 100%); flex: 1 1 260px; }
+.bcards #bSearch { width: 100%; background: var(--cell); border: 2px solid var(--cellb); border-radius: 10px; padding: 9px 52px 9px 12px; color: var(--ink); font: inherit; }
+#bSearch::-webkit-search-cancel-button { display: none; }
+#bClear { position: absolute; top: 3px; right: 3px; bottom: 3px; width: 44px; border: 0; border-radius: 8px; background: var(--cellb); display: grid; place-items: center; }
+#bClear:hover { background: var(--danger); }
+#bClear svg { width: 20px; height: 20px; } #bClear path { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; }
+.bnone { color: var(--muted); padding: 10px 2px; }
+.bcards h3 { display: flex; align-items: center; gap: 10px; font: 400 26px var(--disp); margin: 14px 0 4px; }
+.bcards h3 .art { width: 30px; height: 30px; }
+.bcards h3 .art path { stroke: var(--line); }
+.bgrid { display: flex; flex-wrap: wrap; gap: calc(var(--bs) * 0.9) calc(var(--bs) * 0.9); padding: calc(var(--bs) * 0.6) calc(var(--bs) * 0.5) 20px; }
+.bcard { position: relative; background: none; border: 0; padding: 0; margin-bottom: 22px; transition: transform .12s, opacity .15s, filter .15s; }
+.bcard:not(:disabled):hover { transform: translateY(-4px); }
+.bcard:disabled { opacity: .3; filter: grayscale(.9); cursor: default; }
+.bcard.full:disabled { opacity: 1; filter: none; }
+.bcard.full:disabled .card { opacity: .55; }
+.bcard .cnt { position: absolute; bottom: -22px; left: 0; right: 0; text-align: center; font-weight: 700; font-size: 14px; color: var(--muted); }
+.bcard .cnt.has { color: var(--ink); }
+.dlg { background: var(--panel); border-radius: 16px; padding: 22px; max-width: 1000px; width: 100%; max-height: 100%; overflow: auto; }
+.dlg.small { max-width: 420px; text-align: center; }
+.dlg.center { text-align: center; }
+.dlg h2 { font: 400 30px/1.1 var(--disp); margin: 0 0 6px; }
+.choice { display: flex; gap: 10px; flex-wrap: wrap; margin: 8px 0 16px; }
+.choice button { background: var(--cell); border: 2px solid var(--cellb); border-radius: 10px; padding: 9px 16px; }
+.choice button[aria-pressed="true"] { border-color: var(--tl); }
+.choice select { background: var(--cell); border: 2px solid var(--cellb); border-radius: 10px; padding: 9px 12px; color: inherit; font: inherit; max-width: 100%; }
+.go:disabled { opacity: .45; cursor: not-allowed; }
+.go { background: var(--tl); color: var(--tf); border: none; border-radius: 10px; padding: 11px 22px; font-weight: 700; }
+#mullCards { display: flex; gap: calc(var(--bs) * 0.9); flex-wrap: wrap; justify-content: center; padding: calc(var(--bs) * 0.6) 8px 8px; }
+#mullGo { margin-top: 34px; }
+.mc { background: none; border: none; padding: 0; position: relative; transition: transform .15s; }
+.mc:hover:not([disabled]) { transform: translateY(-8px); }
+.mc[disabled] { cursor: default; }
+.mc.done .card { filter: grayscale(1); opacity: .5; }
+.mc.swap .card { animation: swapin .45s ease-out; }
+@keyframes swapin { 0% { transform: rotateY(90deg); } 100% { transform: rotateY(0); } }
+.mc .rd { position: absolute; left: 50%; bottom: -26px; transform: translateX(-50%); font-size: 14px; color: var(--muted); white-space: nowrap; }
+
+/* ============ Follow-up prompt (picks, free moves, X cost) ============ */
+#prompt { position: fixed; transform: translateX(-50%); z-index: 260; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
+  max-width: 94vw; white-space: nowrap; background: rgba(20,24,30,.95); color: #fff; border: 2px solid var(--tl); border-radius: 10px; padding: 2px 10px;
+  font-size: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.3); animation: promptin .25s ease-out; }
+#prompt span { margin-right: 4px; }
+#prompt .esc { opacity: .65; font-size: 12px; margin-left: 4px; }
+#prompt button { background: var(--tl); color: var(--tf); border: none; border-radius: 7px; padding: 2px 9px; font-weight: 700; min-width: 30px; }
+#prompt button:hover { filter: brightness(1.12); transform: translateY(-1px); }
+@keyframes promptin { from { opacity: 0; transform: translate(-50%, -6px); } to { opacity: 1; transform: translate(-50%, 0); } }
+/* Aurelius: the units it may resurrect, shown as cards over the board */
+#gravePick { position: fixed; z-index: 255; transform: translate(-50%, -50%); display: flex; gap: calc(var(--bs) * 1.25); padding: calc(var(--bs) * 0.6) 18px 16px;
+  background: rgba(16,18,22,.82); border: 2px solid var(--tl); border-radius: 16px; box-shadow: 0 12px 34px rgba(0,0,0,.5); animation: promptin .25s ease-out; }
+#gravePick .gpc { background: none; border: 0; padding: 0; transition: transform .14s ease-out; }
+#gravePick .gpc:hover:not(:disabled) { transform: translateY(-8px); }
+#gravePick .gpc:hover:not(:disabled) .card { box-shadow: 0 0 0 3px #fff; }
+#gravePick .gpc:disabled { cursor: default; }
+#gravePick .gpc:disabled .card { filter: grayscale(.9); opacity: .45; }
+#board .colhl { fill: rgba(224,64,47,.16); stroke: #E0402F; stroke-width: 2; stroke-dasharray: 5 4; }
+#board .colhl.no { fill: none; stroke: var(--muted); }
+.blocknum { position: fixed; color: #fff; background: #3A6FB0; border-radius: 8px; font-weight: 700; font-size: 13px; padding: 2px 6px; z-index: 250; pointer-events: none; display: grid; place-items: center; }
+@media (prefers-reduced-motion: reduce) { .cardbtn { transition: none; } }

@@ -1,0 +1,102 @@
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="oppStrip" aria-label="Opponent hand"><div id="oppHand"></div></div>
+  <div id="mid">
+    <div id="boardWrap">
+      <div class="piles"><div class="pile" id="deckOpp"></div>
+        <button class="eye" id="eye" aria-label="Preview the end of this round"><svg viewBox="0 0 32 20" aria-hidden="true"><path d="M1.5 10C6 3 11 1 16 1S26 3 30.5 10C26 17 21 19 16 19S6 17 1.5 10Z"/><circle cx="16" cy="10" r="5.2"/><circle cx="16" cy="10" r="2.2" class="pupil"/></svg><span>End of round</span></button>
+        <div class="pile" id="deckMe"></div></div>
+      <svg id="board" viewBox="0 0 644 501" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Three lanes: two camps facing a base with three dots"></svg>
+      <div class="piles">
+        <div class="toolbar">
+          <button class="go" id="passBtn">Pass</button>
+          <button class="iconbtn" id="infoBtn" aria-pressed="false" aria-label="Battle log and help"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14M5 10h14M5 15h9M5 20h6"/></svg></button>
+          <button class="iconbtn" id="quitBtn" aria-label="Withdraw from the battle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M18 12H9"/></svg><span class="qtip">Click again to withdraw</span></button>
+          <button class="iconbtn" id="fsBtn" aria-pressed="false" aria-label="Full screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fs-in" d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/><path class="fs-out" d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5"/></svg></button>
+        </div>
+        <div class="pile" id="pileOpp"></div><div class="spellslot" id="spellSlot"><span>Spells</span></div><div class="pile" id="pileMe"></div>
+      </div>
+      <aside class="side" id="infoPanel" hidden>
+      <div class="topbar"><span id="status" aria-live="polite"></span><button class="hbtn" id="newBtn">New game</button></div>
+      <div class="line" id="oppLine"></div>
+      <div id="panel"></div>
+      <div class="line" id="meLine"></div>
+      <details><summary>How to play</summary><ul>
+        <li>Each base has 3 dots, one facing each column. A dot is yours if you have a unit in that column of your front row and the enemy doesn't. 2 dots take the base. Win by holding 2 or more bases at the end of a round that you also held when that round started. A base's colour shows who holds it now (green: you, red: the opponent); a frame around it, in the same colours, shows who held it when the round started. If a round ends with you having no carry-over and no units that generate supply, you lose (if both sides do, both lose). If three rounds in a row pass without either side taking any action, for whatever reason, both sides lose.</li>
+        <li>Players alternate single actions: deploy a unit, move one, attack, or play a tactic. Pass when you're done (Space). When both sides pass in a row, the round ends. Who acts first in round 1 is random; then the starting player alternates each round.</li>
+        <li>At round start every lane gives supply equal to the bread of your units there (plus bonuses). Spend it in that lane; your carry-over works anywhere. A unit's supply is also its cost, and the price of each move, attack or triggered ability.</li>
+        <li>Each unit can move once and attack once per round. Moves go to any free spot in your camp, in any orientation. Melee units strike the cells around them; from your front row that reaches across the base to the three enemy front-row cells facing them (a Pike also from your second row). Ranged units hit any enemy in the lane. Each point of strength (red) breaks one shield (blue); lost shields stay lost.</li>
+        <li>At round end, round-end abilities fire in reading order, then leftover supply fills your carry-over from your left lane to your right, up to 5. You start with 3. Each player draws 2 cards at round start; a hand holds at most 10 cards, and with 10 you draw nothing.</li>
+        <li>Drag or click to place or move. R or mouse wheel rotates. Right-click cancels.</li>
+      </ul></details>
+      <div class="logwrap"><div class="logtitle">Battle log</div><ul id="log"></ul></div>
+      </aside>
+    </div>
+  </div>
+  <div id="handStrip"><div id="hand"></div></div>
+</div>
+<div id="toast" hidden></div><div id="prompt" hidden></div><div id="gravePick" hidden></div><div id="fcWin" hidden></div><div id="fxLayer"></div><div id="kwtip" hidden></div><div id="tip" hidden></div><div id="replayBar" hidden>
+  <div class="rbtop"><b>Replay</b><span id="rbStep"></span></div>
+  <input type="range" id="rbSlider" min="0" max="0" value="0" step="1" aria-label="Replay position">
+  <div class="rbbtns"><button id="rbPlay">Play</button><button id="rbNext">Next</button><button id="rbRestart">Restart</button><button id="rbExit">Exit</button></div>
+  <div class="rbhand"><span class="rblbl" id="rbHandLbl"></span><div class="dlist" id="rbHand"></div></div>
+</div><div id="dlcard" hidden></div><div id="pileTip" hidden></div><div id="logcard" hidden></div><div id="ghost" hidden></div>
+
+<div class="overlay page" id="setup"><div class="pagein home">
+  <header class="phead"><div><h1>Three Bases</h1><p class="hint">Three lanes, two armies. Take and hold two of the three bases.</p></div></header>
+  <div class="homecols">
+    <div class="homeleft">
+      <section class="pbox">
+        <h2>Your deck</h2>
+        <div id="homeDeck"></div>
+      </section>
+      <div class="choice"><button id="pickDeckBtn">Pick a deck</button><button id="editDeckBtn">Edit deck</button><button id="newDeckBtn">Create a deck</button></div>
+    </div>
+    <section class="pbox">
+      <h2>Opponent</h2>
+      <div class="choice"><button data-mode="ai" aria-pressed="true">Computer</button><button data-mode="hot" aria-pressed="false">Second player, same screen</button></div>
+      <div id="aiPick"><b>Computer player</b>
+        <div class="choice"><select id="aiKind" aria-label="Computer player">
+          <option value="bench">The Benchmark (looks ahead, sees your hand)</option>
+          <option value="random">The Random player</option>
+        </select></div>
+      </div>
+      <b id="oppDeckLbl">Opponent's deck</b>
+      <div class="choice"><select id="oppDeck" aria-labelledby="oppDeckLbl"></select></div>
+      <label class="testopt"><input type="checkbox" id="testGames"> Test game: any deck size and copies, unlimited supply</label>
+      <label class="testopt sub"><input type="checkbox" id="testIdle"> In test games the opponent doesn't act</label>
+      <p class="hint" id="startWhy"></p>
+      <button class="go big" id="startBtn">Start battle</button>
+    </section>
+  </div>
+</div></div>
+<div class="overlay page" id="decksPage" hidden><div class="pagein">
+  <header class="phead"><h1>Your decks</h1><div class="choice"><button id="decksNew">Create a deck</button><button id="decksBack">Back</button></div></header>
+  <div class="bfacs dfacs" id="dFacs" role="group" aria-label="Show factions"></div>
+  <div id="deckTiles"></div>
+</div></div>
+<div class="overlay page" id="builder" hidden><div class="bwrap">
+  <aside class="bside">
+    <input id="bName" maxlength="40" aria-label="Deck name" placeholder="Deck name">
+    <div class="bstat" id="bStat"></div>
+    <div class="dlist" id="bList"></div>
+    <div class="bbtns"><button class="go" id="bSave">Save</button><button id="bEmpty">Empty deck</button><button id="bBack">Back</button><button id="bDel" class="danger">Delete</button></div>
+  </aside>
+  <main class="bcards"><div class="bbar"><div class="bfacs" id="bFacs" role="group" aria-label="Show factions"></div><div class="bfacs btypes" id="bTypes" role="group" aria-label="Show card types"></div><span class="sbox"><input id="bSearch" type="search" placeholder="Search: words or phrases, separated by commas" aria-label="Search cards"><button id="bClear" type="button" aria-label="Clear the search" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6L18 18M18 6L6 18"/></svg></button></span><button id="bMode" class="bmode" aria-pressed="false" aria-label="Include or exclude matches">Include</button></div><div id="bCards"></div></main>
+</div></div>
+<div class="overlay" id="mull" hidden><div class="dlg center">
+  <h2>Starting hand · <span id="mullName"></span></h2>
+  <p class="hint" id="mullHint">Click a card to redraw it: up to 3 cards, each once. When the battle begins, each side learns how many cards the other redrew.</p>
+  <div id="mullCards"></div>
+  <button class="go" id="mullGo">Start battle</button>
+</div></div>
+<div class="overlay" id="cover" hidden><div class="dlg small">
+  <h2 id="coverName"></h2><p class="hint">Your turn. Hand the screen over, then reveal your hand.</p>
+  <button class="go" id="coverBtn">Show hand</button>
+</div></div>
+<div class="overlay" id="endDlg" hidden><div class="dlg small">
+  <h2 id="endText"></h2><div class="endbtns"><button class="go" id="againBtn">Play again</button><button class="go alt" id="replayBtn">Replay</button><button class="go alt" id="endEditBtn">Edit deck</button></div>
+</div></div>
+<script>

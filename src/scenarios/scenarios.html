@@ -1,0 +1,121 @@
+<script>
+/* =====================================================================
+   SCENARIOS (three-bases-scenarios.html only): ready boards to try the resolution rules.
+   Each board starts a test game (unlimited supply, the opponent only passes) with the units and hand below.
+   Units: [card, side (0 you, 1 enemy), lane, row, column, orientation, extra fields]. Your front row is row 0; the enemy's is row 2.
+   ===================================================================== */
+const SCENARIOS = [
+  { title: 'Charge into two units', hand: ['kavallarios'],
+    text: 'Place the Kavallarios in lane 1, back row, left two cells. It charges and strikes the Bile Bloater and the Bonebreaker at the same moment: both die together and get tombstones. Then they resolve one at a time: the Bile Bloater first (its death deals 1 damage to your units), then the Bonebreaker, which is dead and can\'t Frenzy. The enemy Carrion Chief grows once for each death. Your Tourmarches gives the charging Kavallarios +1|+1.',
+    units: [['bilebloater', 1, 0, 2, 0], ['bonebreaker', 1, 0, 2, 1, 'h'], ['carrionchief', 1, 0, 1, 1], ['tourmarches', 0, 0, 2, 2]] },
+  { title: 'Pyre: one death moves the next one\'s damage', hand: ['pyre'],
+    text: 'Cast Pyre on lane 2. Every unit there takes 1 damage at the same moment. Your Bile Bloater and your wounded Flesh Shield die together. The Bile Bloater resolves first: its 1 damage to every enemy finishes the Akolouthos in front of the Flesh Shield. Then the Flesh Shield resolves: its 2 damage goes to the nearest enemy now in its column, the Tagmatikos behind. Your Pain Eater survives Pyre and grows; the enemy Carrion Chief grows with each death.',
+    units: [['bilebloater', 0, 1, 0, 0, 'h', { dmg: 1 }], ['fleshshield', 0, 1, 0, 1, 'h', { dmg: 2 }], ['paineater', 0, 1, 1, 1], ['akolouthos', 1, 1, 2, 1], ['tagmatikos', 1, 1, 1, 1], ['ashraider', 1, 1, 2, 0], ['carrionchief', 1, 1, 0, 2]] },
+  { title: 'Frenzy strikes again at the next enemy', hand: ['rainblood'],
+    text: 'Cast Rain of Blood on lane 3. Your two Gutsack Goblins and the enemy Ash Raider die at once. Each Gutsack\'s death makes your Bonebreaker Frenzy once: the first strike kills the Akolouthos, and that chain closes before the second death resolves, so the second strike goes to the Tagmatikos.',
+    units: [['bonebreaker', 0, 2, 0, 0, 'h', { pd: 2 }], ['gutsack', 0, 2, 1, 0], ['gutsack', 0, 2, 1, 1], ['ashraider', 1, 2, 2, 0], ['akolouthos', 1, 2, 2, 1], ['tagmatikos', 1, 2, 2, 2]] },
+  { title: 'Powder Keg: a chain of chains', hand: ['bloodtithe'],
+    text: 'Cast Blood Tithe on your Powder Keg (front row, lane 1). Its blast hits your row and the enemy front row at once, and many units die together. Each then resolves in turn: the enemy Bile Bloater\'s death damages all your units, the enemy Flesh Shield hits the nearest unit in its column, your Gutsack draws, and the Carrion Chiefs and the Pallid Mourner grow one death at a time.',
+    units: [['powderkeg', 0, 0, 0, 1], ['ashraider', 0, 0, 0, 0], ['gutsack', 0, 0, 0, 2], ['carrionchief', 0, 0, 1, 1], ['mourner', 0, 0, 2, 1],
+      ['bilebloater', 1, 0, 2, 0], ['ashraider', 1, 0, 2, 1], ['fleshshield', 1, 0, 2, 2, 'h', { dmg: 1 }], ['carrionchief', 1, 0, 1, 1]] },
+  { title: 'Mass Grave (new)', hand: ['massgrave'],
+    text: 'Cast Mass Grave on lane 2. In each column the game first works out the strikes in flying order: as many fliers at the first enemy as it takes to kill it, then the rest at the next one. In the left column the front Shade is enough for the Ash Raider, and the two Shades behind it go for the Akolouthos (2 defence). Then they all fly through the enemy camp together; each enemy turns into a grave the moment its killing Shade passes over it, but the strikes all count at once, when the spell ends. In the middle column one Shade is enough for the Ash Raider. The right column has no enemy: that Shade flies off the board and leaves the game without dying. Your Pallid Mourner grows for each one that dies.',
+    units: [['shade', 0, 1, 0, 0], ['shade', 0, 1, 1, 0], ['shade', 0, 1, 2, 0], ['shade', 0, 1, 0, 1], ['shade', 0, 1, 0, 2], ['mourner', 0, 1, 2, 2],
+      ['ashraider', 1, 1, 2, 0], ['akolouthos', 1, 1, 1, 0], ['ashraider', 1, 1, 2, 1]] },
+  { title: 'Danse Macabre: the fallen rise', hand: ['bloodtithe', 'bloodtithe', 'danse'],
+    text: 'Cast Blood Tithe on your Vial-Keeper, then on your Ashen Penitent (lane 1). Each dies, and your Pallid Mourner grows. Then cast Danse Macabre: both rise in their own cells at halved printed stats (Vial-Keeper 1|1, Ashen Penitent 2|1), and the hovered spell previews where they will stand. A unit whose cells are taken, or whose defence would halve to 0, stays dead.',
+    units: [['vialkeeper', 0, 0, 0, 0], ['ashenpenitent', 0, 0, 0, 1], ['mourner', 0, 0, 1, 1], ['ashraider', 1, 0, 2, 0], ['ashraider', 1, 0, 2, 1]] },
+  { title: 'Debt of the Fallen: the cost falls', hand: ['bloodtithe', 'bloodtithe', 'bloodtithe', 'debt'],
+    text: 'Debt of the Fallen costs 7, 1 less for each of your units that died this round; its card in your hand shows the cost now. Cast Blood Tithe on your Bone Thralls one by one and watch it drop (supply is unlimited here, so you can cast it at any time). Then kill the Doux with it.',
+    units: [['bonethrall', 0, 1, 0, 0], ['bonethrall', 0, 1, 0, 1], ['bonethrall', 0, 1, 0, 2], ['doux', 1, 1, 2, 1]] },
+  { title: 'Tomb Warden: lasting gains come back', hand: ['komes', 'bloodtithe', 'bloodtithe'],
+    text: 'Place the Komes in lane 1: your Knight of the Ninth Barrow gains +1 defence (3|4). Cast Blood Tithe on the Knight: it returns at halved printed stats (1|1), keeps its +1 defence, and your Tomb Warden gives it +1|+1 the moment it is back, so it stands as 2|3. Cast Blood Tithe on it again: its printed defence of 1 would halve to 0, so it stays dead.',
+    units: [['ninthknight', 0, 0, 0, 0, 'h'], ['tombwarden', 0, 0, 1, 0]] },
+  { title: 'Undying Reaver: back to the hand with its changes', hand: ['vessane', 'surgeon', 'bloodtithe'],
+    text: 'Place Doctor Vessane in lane 2 and move Pike from your Kontarioi to your Undying Reaver. Place the Pale Surgeon and operate on the Reaver: 1 damage, then +2 strength. Cast Blood Tithe on the Reaver: it returns to your hand, and its card shows 5|2 in green with what it kept (+2 strength, gained Pike); the lost shield is not kept. Play it again: it comes back with Pike and +2 strength. The Kontarioi stays without Pike.',
+    units: [['undyingreaver', 0, 1, 1, 1], ['kontarioi', 0, 1, 1, 0], ['ashraider', 1, 1, 2, 1]] },
+  { title: 'Stampede: all strike at once', hand: ['stampede'],
+    text: 'Cast Stampede on lane 1. Your three front-row units strike the enemies facing them at the same moment. The Bile Bloater and the Gutsack Goblin die together; the Scarred Veteran survives (Riposte answers attacks, not Stampede). The Bile Bloater resolves first: its 1 damage to all your units kills your three front-row units, and their deaths resolve inside its chain. Only then does the Gutsack Goblin resolve and draw. The enemy Carrion Chief grows with every death.',
+    units: [['bloodrager', 0, 0, 0, 0], ['ashraider', 0, 0, 0, 1], ['rabidhound', 0, 0, 0, 2],
+      ['bilebloater', 1, 0, 2, 0], ['scarredvet', 1, 0, 2, 1], ['gutsack', 1, 0, 2, 2], ['carrionchief', 1, 0, 1, 1]] },
+  { title: 'A Revenant returns inside a chain', hand: ['kavallarios'],
+    text: 'Hover the Kavallarios over lane 2, back row, middle and right cells, and check the preview before placing it. Your Tourmarches gives it +1|+1 as it sets off; it charges and kills Captain Mardoc. Mardoc returns at half strength and gets the enemy Tomb Warden\'s +1|+1 the moment it is back, before its return effect. That +1 strength adds to its return damage: 3 instead of 2 to your front row, which kills the Kavallarios.',
+    units: [['tourmarches', 0, 1, 2, 0], ['mardoc', 1, 1, 2, 1], ['tombwarden', 1, 1, 1, 1]] },
+  { title: 'Death reactions retarget', hand: ['rainblood'],
+    text: 'Cast Rain of Blood on lane 3. Your two Shades die at once. Each death resolves completely before the next: your Strix drains the enemy facing it, your Reaper deals 1 damage to the nearest enemy in its column, your Ossuary Bellringer gives +1 supply, and your Weeping Nun draws (once per round). When the first death\'s reactions kill the front enemy, the second death\'s reactions hit the next one.',
+    units: [['shade', 0, 2, 0, 0], ['shade', 0, 2, 0, 2], ['strix', 0, 2, 0, 1], ['reaper', 0, 2, 1, 1], ['bellringer', 0, 2, 2, 1], ['nun', 0, 2, 1, 0],
+      ['akolouthos', 1, 2, 2, 1], ['tagmatikos', 1, 2, 1, 1], ['ashraider', 1, 2, 2, 0]] },
+  { title: 'Placing, dragging and picking', hand: ['bribe', 'varangianguard', 'cinderimp', 'annona'],
+    text: 'Drag a card from your hand: the card itself follows the pointer and turns into the unit preview over a camp; a spell shrinks beside the pointer. Bribe the enemy Varangian Guard in lane 1: only one column is free, so it turns upright by itself, and only the cells that can take it are marked. Hover the Cinder Imp over lane 2 to see its damage to the enemy before its pick. Select your Ogre Thrower in lane 3, then the Ash Raider next to it: the raider gets the white picked marker, and it can be thrown into any lane.',
+    units: [['akolouthos', 0, 0, 0, 1], ['akolouthos', 0, 0, 0, 2], ['akolouthos', 0, 0, 1, 1], ['akolouthos', 0, 0, 1, 2], ['akolouthos', 0, 0, 2, 1], ['akolouthos', 0, 0, 2, 2],
+      ['varangianguard', 1, 0, 1, 0, 'h'], ['ashraider', 1, 1, 2, 1], ['ogrethrower', 0, 2, 1, 1], ['ashraider', 0, 2, 1, 0], ['ashraider', 1, 2, 2, 0]] },
+  { title: 'Big chain: everything reacts', hand: ['bloodtithe'],
+    text: 'Cast Blood Tithe on your Powder Keg (lane 2, front left). Its blast hits your front row and the enemy front row at once. Then the deaths resolve one by one, each chain to its end: the enemy Bile Bloater damages all your units, the enemy Flesh Shield hits the nearest unit in its column, your Bonebreaker Frenzies at each ally that dies, your Strix drains and your Reaper deals damage, the Carrion Chiefs and your Pallid Mourner grow the moment each death resolves, your Gutsack Goblin draws, and the enemy Barrow Revenant returns with Tomb Warden\'s bonus. Watch the lit tombstone: it marks the death being resolved right now, and the white borders mark the ones still waiting for their chains to finish.',
+    units: [['powderkeg', 0, 1, 0, 0], ['bonebreaker', 0, 1, 0, 1, 'h', { pd: 2 }], ['gutsack', 0, 1, 1, 0], ['carrionchief', 0, 1, 1, 1], ['mourner', 0, 1, 1, 2], ['reaper', 0, 1, 2, 0], ['strix', 0, 1, 2, 2],
+      ['bilebloater', 1, 1, 2, 0], ['fleshshield', 1, 1, 2, 1, 'h', { dmg: 1 }], ['ashraider', 1, 1, 2, 2], ['carrionchief', 1, 1, 1, 0], ['barrowrevenant', 1, 1, 1, 2], ['tombwarden', 1, 1, 0, 1]] },
+];
+
+let scenAt = null, scenReady = false;
+const waitFor = (test, ms = 10000) => new Promise((resolve, reject) => {
+  const t0 = Date.now(), tick = () => { if (test()) resolve(); else if (Date.now() - t0 > ms) reject(new Error('timeout')); else setTimeout(tick, 60); };
+  tick();
+});
+function renderScenarioPage() {
+  $('#scenList').innerHTML = SCENARIOS.map((sc, i) => `<button class="scen" data-i="${i}"><b>${i + 1}. ${sc.title}</b><span>${sc.text}</span></button>`).join('');
+}
+function showScenarioPage() {
+  $('#scenBar').hidden = true;
+  $('#scenPage').hidden = false;
+  renderScenarioPage();
+}
+/** Start a fresh test game and lay out scenario i. */
+async function loadScenario(i) {
+  const sc = SCENARIOS[i];
+  scenAt = i; scenReady = false;
+  $('#scenPage').hidden = true; $('#scenBar').hidden = true;
+  settings.mode = 'ai'; aiChoice.kind = 'bench';
+  setTestGames(true); setTestIdle(true);
+  $('#endDlg').hidden = true; $('#replayBar').hidden = true;
+  showPage('#setup'); renderHome();
+  $('#setup').dataset.scen = '1';
+  $('#startBtn').click();
+  await waitFor(() => !$('#mull').hidden);
+  $('#mullGo').click();
+  // if the computer starts, let its pass go through first, so no move of its own is still on its way
+  await waitFor(() => game && $('#mull').hidden && game.cur === 0 && !busy && !aiThinking, 15000);
+  await sleep(400);
+  const s = game;
+  s.units = []; s.tombs = []; s.cur = 0; s.starter = 0; s.passed = null; s.pending = null; s.winner = null; s.round = 1; s.acts = 0;
+  for (const [card, owner, lane, r, c, o, extra] of sc.units)
+    s.units.push({ id: s.nid++, card, owner, lane, r, c, o: o || 'h', ps: 0, pd: 0, dmg: 0, mv: 0, born: 0, ...(extra || {}) });
+  s.players[0].hand = sc.hand.slice();
+  s.players[1].hand = [];
+  s.players[0].discard = []; s.players[1].discard = [];
+  applyAuras(s); updateBases(s); s.ownerStart = s.owner.slice();
+  s.log = []; log(s, `Scenario: ${sc.title}.`);
+  resetUi(); prevStats = new Map();
+  $('#scenTitle').textContent = `${i + 1}. ${sc.title}`;
+  $('#scenText').textContent = sc.text;
+  $('#scenBar').hidden = false;
+  scenReady = true;
+  render();
+}
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.insertAdjacentHTML('beforeend', `
+<div class="overlay page" id="scenPage"><div class="pagein">
+  <header class="phead"><div><h1>Three Bases · scenarios</h1><p class="hint">Ready boards for the resolution rules. Supply is unlimited and the opponent only passes. Pick one to play it.</p></div></header>
+  <div id="scenList"></div>
+</div></div>
+<aside id="scenBar" hidden><b id="scenTitle"></b><p id="scenText"></p><div class="sbtns"><button id="scenReset" class="go">Reset</button><button id="scenBack">All boards</button></div></aside>`);
+  $('#scenList').addEventListener('click', e => { const b = e.target.closest('.scen'); if (b) loadScenario(+b.dataset.i); });
+  $('#scenReset').addEventListener('click', () => { if (scenAt !== null) loadScenario(scenAt); });
+  $('#scenBack').addEventListener('click', () => { if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); showScenarioPage(); });
+  // the start page never shows here: whenever the game would return to it, the scenario list shows instead
+  new MutationObserver(() => { if (!$('#setup').hidden && !$('#setup').dataset.scen) { $('#setup').hidden = true; showScenarioPage(); } delete $('#setup').dataset.scen; })
+    .observe($('#setup'), { attributes: true, attributeFilter: ['hidden'] });
+  $('#setup').hidden = true;
+  $('#againBtn').textContent = 'Reset board';
+  $('#againBtn').addEventListener('click', e => { e.stopImmediatePropagation(); $('#endDlg').hidden = true; if (scenAt !== null) loadScenario(scenAt); }, true);
+  showScenarioPage();
+});
+</script>

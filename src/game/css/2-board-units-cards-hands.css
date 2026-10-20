@@ -1,0 +1,198 @@
+/* ============ Board ============ */
+.activeside { fill: var(--act); pointer-events: none; }
+.cell, .mcell { fill: var(--cell); stroke: var(--cellb); }
+.frontrow { stroke: var(--platec); stroke-width: 2; }
+.band { fill: var(--plate); stroke: var(--platec); stroke-width: 2; }
+.band.own-me { fill: var(--bme); stroke: var(--bmel); }
+.band.own-op { fill: var(--bop); stroke: var(--bopl); }
+.bandout { fill: none; pointer-events: none; }
+.bandout { stroke-width: 3; }
+.bandout.own-me { stroke: var(--bmel); }
+.bandout.own-op { stroke: var(--bopl); }
+.dot { fill: var(--plate); stroke: var(--platec); stroke-width: 3; }   /* untaken: the base's plain colour, whoever holds the base */
+.dot.d-me { fill: #4FAE5C; stroke: #E0D0AE; }   /* taken: green you (bottom side), red opponent */
+.dot.d-op { fill: #D3533F; stroke: #E0D0AE; }
+.dot.x { fill: var(--platec); }
+.dotx { stroke: var(--plate); stroke-width: 3; stroke-linecap: round; }
+.fitlane { fill: none; stroke: #3F8EF0; stroke-width: 4; pointer-events: none; }
+#board .shade { fill: rgba(8,10,14,.58); pointer-events: none; }
+.tst { fill: #6E6F73; stroke: #2B2C30; stroke-width: 3; }
+.tsx { fill: none; stroke: #2B2C30; stroke-width: 5; stroke-linecap: round; }
+.tsg { fill: none; stroke: #4A3B2A; stroke-width: 6; stroke-linecap: round; }
+#board .tomb { pointer-events: none; filter: drop-shadow(0 3px 3px rgba(0,0,0,.5)); }
+#board .tomb.now .tst { fill: #C9CBD0; }
+#board .tomb.now .tsx { stroke: #4A4B50; }
+.drawghost { position: absolute; pointer-events: none; opacity: .8; outline: 3px dashed rgba(255,255,255,.75); outline-offset: -6px; }
+#hand .drawghost { --cw: var(--hcw); --ch: calc(var(--hcw) * 1.45); width: var(--cw); height: var(--ch); top: calc(var(--bs) * 0.45 + 10px); border-radius: 12px; border: 2px solid; z-index: 98; }
+#board .tombcell { fill: none; stroke: #fff; stroke-width: 3.5; filter: drop-shadow(0 0 3px rgba(0,0,0,.6)); }
+.unit.deadpawn { filter: grayscale(.85) brightness(.55); }
+.unit.src .ubody { stroke: #fff; stroke-width: 4; }
+.flyunit.flier { box-shadow: 0 0 18px 6px rgba(168,220,203,.45); }
+.tombfly svg { width: 100%; height: 100%; display: block; overflow: visible; }
+#board .pvcur { fill: none; stroke: #fff; stroke-width: 2.5; stroke-dasharray: 7 4; pointer-events: none; filter: drop-shadow(0 0 2px rgba(0,0,0,.7)); }
+.lanehl { fill: rgba(242,163,58,.12); stroke: #F2A33A; stroke-width: 3; pointer-events: none; }
+.nolane { fill: none; stroke: var(--danger); stroke-width: 3; stroke-dasharray: 8 6; opacity: .8; pointer-events: none; }
+.reach { fill: rgba(111,190,110,.28); pointer-events: none; }
+.mvpath { fill: rgba(76,190,90,.5); stroke: #3FB950; stroke-width: 2; pointer-events: none; }
+.pv { pointer-events: none; stroke-width: 2.5; }
+.pv.ok { fill: rgba(139,196,138,.35); stroke: var(--ok); }
+.pv.no { fill: rgba(224,103,79,.28); stroke: var(--danger); }
+.aurazone { fill: rgba(80,200,110,.15); stroke: #4CC46A; stroke-width: 2; stroke-dasharray: 5 4; pointer-events: none; }
+.hitmark rect { fill: #E0301E; stroke: #fff; stroke-width: 1.5; }
+.hitmark text { fill: #fff; font: 700 13px/1 var(--body); text-anchor: middle; dominant-baseline: central; }
+.deathx { stroke: #E0301E; stroke-width: 7; stroke-linecap: round; pointer-events: none; filter: drop-shadow(0 0 2px #000); }
+.supx { stroke: #E0301E; stroke-width: 2.6; stroke-linecap: round; pointer-events: none; }
+
+/* ============ Icons (bread) ============ */
+.ico .b { stroke: var(--iline); stroke-width: 1.4; stroke-linejoin: round; }
+.ico .d { fill: none; stroke: var(--iline); stroke-width: 1.4; stroke-linecap: round; }
+.k-sup .b { fill: var(--bread); }
+.k-cost .b { fill: var(--cost); }
+.k-empty .b, .k-spent .b { fill: none; stroke: var(--muted); stroke-dasharray: 2 2; }
+.k-empty .d, .k-spent .d { stroke: var(--muted); }
+.k-next .b { fill: none; stroke: #C9A44A; stroke-width: 1.6; }
+.k-next .d { stroke: #C9A44A; }
+.k-gain .b { fill: #4CC46A; animation: pulse 1s ease-in-out infinite; }
+.k-gain .d { stroke: #174; }
+.carry .k-gain .b { stroke: var(--iline); stroke-dasharray: none; }
+.k-pend .b { fill: var(--cost) !important; animation: pulse 1s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .45; } }
+.ico.fill { animation: sfill .5s ease-out; }
+@keyframes sfill { 0% { transform: scale(1.5); } 100% { transform: scale(1); } }
+.ico.lost { transition: opacity .6s, transform .6s; opacity: 0; transform: translateY(8px); }
+
+/* ============ Stat badges (cards and units) ============ */
+.bdg .b { stroke: var(--iline); stroke-width: 1.2; }
+.sq.k-str .b { fill: var(--str); }
+.sq.k-def .b { fill: var(--def); }
+.sq.k-sup .b { fill: var(--bread); }
+.sq.up .b { fill: var(--up) !important; }
+.sq.down .b { fill: var(--down) !important; }
+.sq.k-empty .b { fill: none; stroke: var(--def); stroke-dasharray: 3 2; stroke-width: 1.6; }
+.sq.k-empty .numc { fill: var(--def); stroke: none; }
+.sq.k-hot .b { fill: #FF5A3C !important; }
+.k-broken { opacity: .12; transition: opacity .25s; }
+.numc { font-family: var(--body); font-weight: 800; font-variant-numeric: lining-nums tabular-nums; font-feature-settings: "lnum" 1, "tnum" 1; fill: #1c1712; text-anchor: middle; pointer-events: none; }
+.numc.w { fill: #fff; paint-order: stroke; stroke: rgba(0,0,0,.45); stroke-width: 1.2px; }
+.numc.lt { fill: #fff; paint-order: stroke; stroke: #000; stroke-width: 1.3px; }
+
+/* ============ Units on the board ============ */
+.unit { transform-box: fill-box; transform-origin: center; }
+.unit .ubody { fill: var(--fill); stroke: var(--line); stroke-width: 2; }
+.unit.nomove .ubody { stroke: color-mix(in srgb, var(--line) 35%, #858585); }   /* can't move again now */
+.unit.noatk .k-str .b { fill: #5E5E5E !important; stroke: #3A3A3A; }                 /* can't attack again now: a solid grey badge */
+.unit.noatk .k-str text { fill: #C8C8C8 !important; }
+.unit.nosup > .ubody, .unit.nosup > .uart, .unit.nosup > .role, .unit.nosup > .bdg { filter: grayscale(.75); opacity: .6; }
+.mark, .markhalo { fill: none; pointer-events: none; stroke-linejoin: round; }
+.markhalo { stroke: rgba(30,20,10,.45); stroke-width: 8; }
+.mark.tgt { stroke: #F2A33A; stroke-width: 4.5; }
+.mark.kill { stroke: #E0402F; stroke-width: 4.5; }
+.mark.pick { stroke: #FFFFFF; stroke-width: 5; }
+.markhalo.hov { stroke-width: 11; }
+.mark.hov { stroke-width: 6; fill: rgba(255,214,154,.2); }
+.mark.tgt.hov { stroke: #FFD69A; }   /* the target the pointer is on: a lighter orange */
+.mark.kill.hov { fill: rgba(224,64,47,.22); }
+.mark.pick.hov { fill: rgba(255,255,255,.18); }
+.unit.healed .ubody { stroke: #4CC46A; stroke-width: 6; filter: drop-shadow(0 0 8px rgba(76,196,106,.9)); }
+.healnum { font: 800 20px/1 var(--body); color: #6BE081; text-shadow: 0 0 3px #000, 0 0 6px #000; display: grid; place-items: center; }
+.unit.atk .ubody, .unit.hitme .ubody { stroke: #E0301E; stroke-width: 5; stroke-dasharray: none; }
+.unit.mv .ubody { stroke: #3FB950 !important; stroke-width: 5 !important; stroke-dasharray: none !important; }
+.unit.placed .ubody { stroke: #F5C518 !important; stroke-width: 5 !important; stroke-dasharray: none !important; }
+.unit.lift { opacity: .45; }
+/* previews: a unit as it would stand (placed, moved or appearing) */
+.unit.pvnew { opacity: .88; pointer-events: none; }
+.unit.pvnew > .ubody { stroke: #fff; stroke-width: 3; stroke-dasharray: 7 4; }
+/* a Place effect's target: hovered (light orange), then picked (a ring bursts from it) */
+.puff.gainp { stroke: #4CC46A; }
+.unit.shake { animation: shake .3s; }
+@keyframes shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+.unit.spawn > .ubody, .unit.spawn > svg { transform-box: fill-box; transform-origin: center; animation: drop .5s cubic-bezier(.2,.8,.3,1.3); }
+/* Link: the merged unit glows in place (no drop-in) */
+.unit.merged .ubody { animation: mergeGlow .8s ease-out; }
+@keyframes mergeGlow { 0% { stroke: #F5C518; stroke-width: 9; filter: drop-shadow(0 0 10px #F5C518); } 100% { stroke-width: 3; filter: none; } }
+@keyframes drop { from { transform: scale(1.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.puff { fill: none; stroke: #F5C518; stroke-width: 6; transform-box: fill-box; transform-origin: center; opacity: 0; animation: puff .75s ease-out forwards; }
+@keyframes puff { 0% { transform: scale(.5); opacity: 1; stroke-width: 12; } 100% { transform: scale(2.1); opacity: 0; stroke-width: 1; } }
+.spark { fill: #F5C518; opacity: 0; animation: spark .7s ease-out forwards; }
+@keyframes spark { 0% { transform: translate(0,0); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)); opacity: 0; } }
+.role .rbg { fill: rgba(15,15,20,.72); stroke: rgba(255,255,255,.5); stroke-width: 1; }
+.role .rgl { fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ============ Cards ============ */
+.card {
+  position: relative; width: var(--cw); height: var(--ch); border-radius: 12px; border: 2px solid;
+  padding: 6px 7px 8px; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  text-align: center; overflow: visible;
+  background: var(--fill); border-color: var(--line); color: var(--text);
+}
+.card.tac { background: var(--spell); }
+.card .cb { position: absolute; width: var(--bs); height: var(--bs); z-index: 2; filter: drop-shadow(0 1px 2px rgba(0,0,0,.6)); }
+.card .cb .ico { width: 100%; height: 100%; display: block; }
+.card .cs {
+  position: absolute; top: -2px; z-index: 2; width: calc(var(--bs) * 0.9); height: calc(var(--bs) * 0.9);
+  display: grid; place-items: center; border: 2px solid; border-color: inherit; color: #fff;
+  font: 800 calc(var(--bs) * 0.58)/1 var(--body); font-variant-numeric: lining-nums tabular-nums;
+  text-shadow: 0 0 2px rgba(0,0,0,.5), 0 1px 1px rgba(0,0,0,.35);
+}
+.card .cs.two { font-size: calc(var(--bs) * 0.44); }
+.card .cs.tl { left: -2px; border-radius: 12px 0 12px 0; background: var(--str); }
+.card .cs.tr { right: -2px; border-radius: 0 12px 0 12px; background: var(--def); }
+.card .cs.up { background: var(--up); }
+.card .cs.down { background: var(--down); }
+.unit .immo { fill: none; stroke: var(--line); stroke-width: 1.6; stroke-dasharray: 4 3; opacity: .75; pointer-events: none; }
+.unit.drained .ubody { stroke: #A3173B; stroke-width: 5; filter: drop-shadow(0 0 7px rgba(163,23,59,.9)); }
+.unit.drainer .ubody { stroke: #D9365F; stroke-width: 4; }
+.lifedrop { position: fixed; width: 10px; height: 10px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #FF8FA8, #B0123C 70%); box-shadow: 0 0 8px 2px rgba(214,40,80,.7); pointer-events: none; z-index: 252; }
+.cb.tm { top: calc(var(--bs) * -0.4); left: calc(50% - var(--bs) / 2); }
+.card .shape { position: absolute; top: calc(var(--bs) * 0.66); left: 50%; transform: translateX(-50%); display: flex; }
+.mini rect { fill: currentColor; opacity: .85; }
+.nm { font: 400 calc(var(--cw) * 0.128)/1.1 var(--disp); margin-top: calc(var(--bs) * 0.62 + var(--cw) * 0.17); }
+.card.tac .nm { margin-top: calc(var(--bs) * 0.62); }
+.tag { font-size: calc(var(--cw) * 0.095); opacity: .9; }
+.card .art { width: calc(var(--cw) * 0.24); height: calc(var(--cw) * 0.24); flex: 0 0 auto; }
+.ab { font-size: calc(var(--cw) * 0.106); line-height: 1.12; opacity: .96; overflow: hidden; flex: 1 1 auto; min-height: 0; }
+.kw { text-decoration: underline dotted; text-underline-offset: 2px; cursor: help; font-weight: 700; }
+.cardbtn .kw, .bcard .kw, .kwcol .kw { text-decoration: none; cursor: inherit; }
+.cref { font-weight: 700; }
+.kwcol .kwref { display: block; padding-top: calc(var(--bs) * 0.45); }
+#pileOpp, #pileMe, #spellSlot { --cw: clamp(92px, 13.5vh, 132px); --ch: calc(var(--cw) * 1.45); --bs: calc(var(--cw) * 0.3); }
+.ptop { cursor: help; }
+
+/* ============ Hands ============ */
+#oppStrip { position: relative; z-index: 15; }
+#oppHand, #hand { position: absolute; inset: 0; }
+.oback {
+  position: absolute; top: calc(var(--opeek) - var(--ch) - 2px); width: var(--cw); height: var(--ch);
+  border-radius: 12px; border: 2px solid; display: grid; place-items: center;
+  transform: rotate(180deg); box-shadow: 0 2px 6px rgba(0,0,0,.25);
+}
+.oback .art { width: 45%; height: 45%; }
+#handStrip { position: relative; z-index: 20; }
+.cardbtn { --cw: var(--hcw); --ch: calc(var(--hcw) * 1.45); position: absolute; top: calc(var(--bs) * 0.45); background: none; border: none; padding: 0; transition: transform .14s ease-out; touch-action: none; }
+.cardbtn.dim .card, .cardbtn.nofit .card { filter: grayscale(1) brightness(.8) contrast(.85); }
+.cardbtn.fit { transform: translateY(-16px); }
+.cardbtn.fit .card { box-shadow: 0 0 0 4px #3F8EF0, 0 0 18px 4px rgba(63,142,240,.7); }
+.cardbtn.on { transform: translateY(-10px); }
+.cardbtn.on .card { box-shadow: 0 0 0 3px #fff; }
+.cardbtn:hover, .cardbtn:focus-visible { transform: translateY(calc(var(--peek) - var(--ch) - var(--bs) * 0.45 - 6px)); z-index: 99 !important; }
+body.dragging .cardbtn { transform: none !important; }
+.cardbtn .kwside, .bcard .kwside { display: none; position: absolute; bottom: 0; left: calc(100% + 10px); text-align: left; pointer-events: none; z-index: 5; }
+.bcard .kwside { bottom: auto; top: 0; }
+.cardbtn.kwl .kwside, .bcard.kwl .kwside { left: auto; right: calc(100% + 10px); }
+.cardbtn:hover .kwside, .bcard:hover .kwside { display: flex; }
+.bcard:hover { z-index: 4; }
+#replayBar { position: fixed; left: 12px; bottom: 12px; z-index: 250; width: 280px; max-height: calc(100vh - 24px); overflow: auto; background: var(--panel); border: 2px solid var(--tl); border-radius: 14px; padding: 12px 14px; box-shadow: 0 10px 30px rgba(0,0,0,.35); display: flex; flex-direction: column; gap: 10px; }
+#replayBar[hidden] { display: none; }
+.rbtop { display: flex; justify-content: space-between; align-items: baseline; } .rbtop b { font: 400 22px var(--disp); } #rbStep { color: var(--muted); }
+.rbbtns { display: flex; gap: 6px; flex-wrap: wrap; }
+.rbbtns button { background: var(--cell); border: 2px solid var(--cellb); border-radius: 9px; padding: 6px 12px; }
+.rbbtns button:disabled { opacity: .45; cursor: default; }
+#rbSlider { width: 100%; accent-color: var(--tl); cursor: pointer; }
+.rblbl { color: var(--muted); font-size: 14px; display: block; margin-bottom: 6px; }
+#replayBar .dlit { height: 34px; } #replayBar .dlit .dn { font-size: 15px; } #replayBar .dlit .ico { width: 24px; height: 24px; }
+.endbtns { display: flex; gap: 10px; justify-content: center; margin-top: 8px; }
+.go.alt { background: var(--cell); color: var(--ink); border: 2px solid var(--cellb); }
+#dlcard { position: fixed; z-index: 320; pointer-events: none; padding: calc(var(--bs) * 0.45); }
+body.dragging .cardbtn .kwside { display: none; }
+.kwbox { display: block; }
+
