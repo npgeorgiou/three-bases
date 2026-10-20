@@ -129,7 +129,7 @@ Sources of the later loads (converter in brackets):
 
 ## Suggestions for improving the library
 Claude's suggestions (20 Oct 2026), from the real-world test and the checks of that day, with their state. Next steps: HANDOFF.md.
-1. **Mechanics check on the 19 older games** (open). For each: 2-4 guide pages into `tools/mechanics/<game>.txt`, then
+1. **Mechanics check on the 19 older games** (started: Into the Breach, see HANDOFF.md). For each: 2-4 guide pages into `tools/mechanics/<game>.txt`, then
    `coverage.py --mechanics`; fix the gaps in `tools/patterns/<game>.txt`, then reload the game (suggestion 2) and keep the reload
    only if the key, regression and real-world cases are not worse. A plain reload is not better by itself: Into the Breach reloaded
    with today's patterns went from 74 to 130 wrong tags per 100 key entries (a general "tile" pattern tags it terrain).
@@ -142,8 +142,9 @@ Claude's suggestions (20 Oct 2026), from the real-world test and the checks of t
    words. 43 cases the source does not support were dropped, 3 narrowed (Runeterra Freljord attack_zero, Slay the Spire Ironclad
    permanent_growth, Star Wars Unlimited Command temporary_buff), 18 moved to a reachable page that says the same, 2 moved from
    sts1 to sts2 (the source is about Slay the Spire 2). Card names the source writes differently were changed to the library's
-   names (MODOK, Fake Ciri, Hellblasters). Real-world test after the audit: 217 of 362.
-5. **More cases, then learn the archetype recipes** (open). Learned weights over-fit on 405 cases. With ~50 cases per game, split
+   names (MODOK, Fake Ciri, Hellblasters). Real-world test after the audit: 217 of 362; with 43 new
+   cases from the same pages: 245 of 405.
+5. **More cases, then learn the archetype recipes** (started: 43 cases added). Learned weights over-fit on 405 cases. With ~50 cases per game, split
    50/50 with seed 1, `learn_recipes.py` can be tried again.
 6. **Tribal from type links** (open). Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2.
    A rule "a card that names a type of its game cares about that type" needs only a short stop list per game.
