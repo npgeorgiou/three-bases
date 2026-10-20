@@ -1,6 +1,7 @@
 """Readable report of the real-world test: every case of tools/realworld/*.tsv with its result, the number behind it and its source.
-  signature  the faction's share of cards with the concept, its rank among the game's factions, and its lift over the game
-  archetype  the faction's lift for the archetype (counts when above 1.25 in faction_archetypes)
+  signature  the faction's cards with the concept, how many times the rest of the game's share that is, the chance test, and
+             its rank among the game's factions (combined factions counted in each of theirs, as signature.py counts)
+  archetype  the faction's recipe score over the average of the game's other factions (counts at 1.5)
   splash     whether the concept is a splash of the faction
   combo      whether both cards are in the library and which connection layers link them
 Writes library/REALWORLD_REPORT.md (or the path given). Usage: realworld_report.py <db> [<out.md>]"""
@@ -14,15 +15,15 @@ for r, i in q('SELECT root, id FROM concept_tree'): desc[r].add(i); anc[i].add(r
 GROUPS = {'effect', 'helps_me', 'hurts_enemy', 'drawback', 'game_rules'} | {i for i, in q('SELECT id FROM concepts WHERE id NOT IN (SELECT child FROM concept_parents)')}
 near = lambda k: desc[k] | (anc[k] - GROUPS) | {k}
 names = dict(q('SELECT id, name FROM games'))
-CARD = "e.category NOT IN ('keyword','tribe')"
+from factions import CARD, members, tail
+RATIO = 1.5   # the prominence rule of signature.py
 
 def share(g, ks):
-    """cards with any of the concepts (does/grants) per faction of the game, over the faction's size"""
-    n = dict(q(f"SELECT e.faction, count(*) FROM entities e WHERE e.game=? AND {CARD} AND e.faction IS NOT NULL GROUP BY 1", g))
-    h = dict(q(f"""SELECT e.faction, count(DISTINCT e.id) FROM entities e JOIN entity_concepts ec ON ec.entity=e.id WHERE e.game=? AND {CARD}
-                   AND ec.role IN ('does','grants') AND ec.concept IN ({','.join('?' * len(ks))}) GROUP BY 1""", g, *ks))
-    tot = sum(n.values()); avg = sum(h.values()) / tot if tot else 0
-    return n, h, avg
+    """per faction (combined factions' cards in each of theirs, as signature.py counts): cards, cards with any of the concepts"""
+    fac, allc = members(q, g)
+    ids = {e for (e,) in q(f"""SELECT DISTINCT e.id FROM entities e JOIN entity_concepts ec ON ec.entity=e.id WHERE e.game=? AND {CARD}
+                   AND ec.role IN ('does','grants') AND ec.concept IN ({','.join('?' * len(ks))})""", g, *ks)} & allc
+    return fac, len(allc), ids
 
 rows, tot, met, why = [], collections.Counter(), collections.Counter(), collections.Counter()
 for fn in sorted(glob.glob(os.path.join(HERE, 'realworld', '*.tsv'))):
@@ -32,18 +33,24 @@ for fn in sorted(glob.glob(os.path.join(HERE, 'realworld', '*.tsv'))):
         t, a, b = (x.strip() for x in row[:3]); note = row[3].strip() if len(row) > 3 else ''; url = row[-1].strip() if row[-1].startswith('http') else ''
         if t == 'signature':
             sig = {k for k, in q("SELECT concept FROM faction_signature WHERE game=? AND faction=? AND kind IN ('signature','keyword_signature')", g, a)}
-            ok = bool(sig & near(b)); n, h, avg = share(g, near(b))
-            sh = h.get(a, 0) / n[a] if n.get(a) else 0
-            rank = 1 + sum(1 for f in n if n[f] and h.get(f, 0) / n[f] > sh)
-            detail = f"{h.get(a, 0)}/{n.get(a, 0)} cards ({sh:.0%}), rank {rank} of {len(n)}, lift {sh / avg:.1f}" if avg else f"0/{n.get(a, 0)} cards"
-            r = '' if ok else 'faction not in library' if a not in n else 'no card of the faction has it' if not h.get(a) else 'only 1-4 cards have it' if h[a] < 5 else 'faction size under 20' if n[a] < 20 else 'used, but not more than other factions'
+            ok = bool(sig & near(b)); fac, N, ids = share(g, near(b))
+            if a in fac:
+                s_ = fac[a]; x, n = len(s_ & ids), len(s_); rest = (len(ids) - x) / (N - n) if N > n else 0
+                ratio = (x / n) / rest if rest else float('inf') if x else 0
+                rank = 1 + sum(1 for f, s2 in fac.items() if len(s2 & ids) / len(s2) > x / n)
+                detail = f"{x}/{n} cards ({x / n:.0%}), {'inf' if ratio == float('inf') else f'{ratio:.1f}'}x the rest, chance {tail(N, len(ids), n, x):.3f}, rank {rank} of {len(fac)}"
+            else: detail = 'faction under 20 cards or not in the library'
+            r = ''
+            if not ok:
+                x = len(fac[a] & ids) if a in fac else 0
+                r = 'faction not in library' if a not in fac else 'no card of the faction has it' if x == 0 else 'not 1.5x the rest of the game' if not (x and (len(ids) - x == 0 or (x / len(fac[a])) / ((len(ids) - x) / (N - len(fac[a]))) >= RATIO)) else 'could be chance (5%)'
         elif t == 'splash':
             ok = bool({k for k, in q("SELECT concept FROM faction_signature WHERE game=? AND faction=? AND kind='splash'", g, a)} & (desc[b] | {b}))
             detail = ''; r = '' if ok else 'missing from the splash list'
         elif t == 'archetype':
-            lf = q('SELECT lift, entities FROM faction_archetypes WHERE game=? AND faction=? AND archetype=?', g, a, b)
-            ok = bool(lf and lf[0][0] > 1); detail = f'lift {lf[0][0]:.2f}, {lf[0][1]} cards' if lf else 'lift under 1.25'
-            r = '' if ok else 'not above the game average'
+            lf = q('SELECT share, lift, entities FROM faction_archetypes WHERE game=? AND faction=? AND archetype=?', g, a, b)
+            ok = bool(lf and lf[0][1] > 1); detail = f'recipe score {lf[0][0]:.2f}, {lf[0][1]:.1f}x the other factions, {lf[0][2]} cards' if lf else 'under 1.5x the other factions'
+            r = '' if ok else 'recipe not 1.5x the other factions'
         elif t == 'combo':
             ia = q('SELECT id FROM entities WHERE game=? AND name=? LIMIT 1', g, a); ib = q('SELECT id FROM entities WHERE game=? AND name=? LIMIT 1', g, b)
             res = Qy.connections(ia[0][0], ib[0][0]) if ia and ib else None

@@ -1,0 +1,12 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics.
+# https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/ , https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
+multistrike|multi_attack|\bmultistrike\b
+rage|stat_gain|\brage\b
+sweep|multi_target_attack|\bsweep\b
+incant|on_spell|\bincant\b
+frostbite|damage_over_time|\bfrostbite\b
+morsels|summon|\bmorsel
+gorge|on_sacrifice|\bgorge\b
+reform|revive|\breform
+burnout|self_destruct|\bburnout\b
+eggs|transform|\b(hatch|shell \d)

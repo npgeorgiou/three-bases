@@ -4,16 +4,12 @@ Later on 20 Oct 2026: D&D 5e was removed (`tools/fixes/f16_drop_dnd.py`), and th
 full-text indexes (`tools/indexes.py`; the build creates them first and drops them last). The file went from 86.2 MB to 63.1 MB.
 The numbers below are after the removal.
 
-Later still on 20 Oct 2026: Disney Lorcana, Stormbound, Star Wars: Unlimited and The Elder Scrolls: Legends were added; Monster
-Train's card data (282 cards, fandom wiki Module:Cards/Data, read through Kaptain's Chrome) is in hand but not loaded.
-Real-world test now **215 of 391**. Agreed work, in order (Kaptain, 20 Oct 2026):
-1. Insert-only loading: adding a game only adds rows; the build proves old rows are untouched.
-2. Monster Train: read a sample of ~300 cards first, then patterns, cases, load with the insert-only build.
-3. Prominence: drop the "top 2 factions" condition (a signature is any mechanic prominent in the faction); archetypes become
-   weighted recipes scored per faction (a faction can have several), weights learned on half the cases, tested on the other half.
-4. ADDING_GAMES: per game read the material, then a bulk sample of cards, then patterns, then the mechanics check; the cheap
-   bulk reader (one request = game block + up to 500 cards).
-5. Detailed real-world report (`tools/realworld_report.py` -> REALWORLD_REPORT.md) and whole-library cheap tagging suggestions.
+Later still on 20 Oct 2026: Disney Lorcana, Stormbound, Star Wars: Unlimited, The Elder Scrolls: Legends and Monster Train
+were added; loading is insert-only (`add_games.py`, two minutes, the build stops if an existing row changes). Prominence: one rule
+(1.5x the rest of the game and not chance), no "top 2", archetypes as recipes; learned recipe weights over-fit and are not used
+(`learn_recipes.py`, README suggestion 5). Real-world test **242 of 405**, every case in `REALWORLD_REPORT.md`
+(`tools/realworld_report.py`). Next: the README suggestions, cheapest first; agreed before them: collect more cases (step 1
+below) and audit the existing ones (step 2).
 
 Rules for the next chat: **no readers, judges or agents** without Kaptain's OK and a measured cost. Scripts and builds first.
 Commit and push after each step. Read `ADDING_GAMES.md` sections 4b and 4c before writing any pattern.

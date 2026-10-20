@@ -7,21 +7,26 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 - Every reading step runs on one batch first. Report its tokens before going on.
 - Do not repeat experiments in loops. Before you choose a fix, break the errors down by where they come from (the `method` column).
 
-## 0. Guides first (before any pattern)
-1. Read 2-4 guide or wiki pages per game (faction overviews, keyword glossary). Write every mechanic they name, with the wording
-   to look for on cards, into `tools/mechanics/<game>.txt` (`name|regex`, source URL in a comment).
-2. After loading, run `tools/coverage.py <db> <game> 40 --mechanics tools/mechanics/<game>.txt`. It prints how many cards of each
-   faction show each listed mechanic, and the clauses no pattern reads, grouped by their first words. A listed mechanic that the
-   cards show but the faction's tags lack is a missing pattern; a frequent unread clause is a mechanic nobody listed.
-   Guides are a checklist, not the whole game: the unread clauses find what they leave out.
-3. Then write the real-world cases from the same pages (section 6), so tagging and test read the same sources.
+## 0. Before any pattern: the game's material, then its cards
+1. Read 2-4 guide or wiki pages per game (faction overviews, keyword glossary, rules summary). Write every mechanic they name,
+   with the expected concept and the wording to look for, into `tools/mechanics/<game>.txt` (`name|concept|regex`, source URL in
+   a comment). Write the real-world cases (section 6) from the same pages now, so tagging and test read the same sources.
+2. Read a random sample of about 300 cards in one go (a script prints `name|faction|text`, one line each, about 20k tokens), or
+   all cards when the game has fewer than 500. Note the game's wording families ("exhaust a unit", "When Defeated:", "Apply Rage 3")
+   and what each does. Guides are a checklist, not the whole game: the sample shows the wording the patterns must read.
+3. Convert and load (sections 1-2), write the patterns (section 3) from the sample and the checklist.
+4. After the build, run `tools/coverage.py <db> <game> 40 --mechanics tools/mechanics/<game>.txt`. It prints, per faction, how
+   many cards show each listed mechanic and how many carry the expected concept, and the clauses no pattern reads grouped by their
+   first words. A GAP line is a missing pattern or a later build step that removed the tag; a frequent unread clause is a
+   mechanic nobody listed. Fix and rebuild (insert-only, two minutes).
 
 ## 1. Load
 1. Write a converter, `tools/convert/conv_<game>.py`. It outputs JSON in the format described at the top of `tools/load_cards.py`:
    ext_id, name, category, faction, subtypes, cost, stats, text, and `keywords` as a field.
 2. Keep the source's keyword lists as a field and set `_keywords_from_field`. Links taken from source fields are trusted; links found by matching text are not.
 3. Build with the load: `sh tools/build.sh three-bases-library.sqlite <scratch>/new.sqlite <game>=<cards.json>`.
-   - The build keeps every older entry exactly as it was (`keep_old.py`).
+   - Loading is insert-only (`add_games.py`): the steps run on a copy holding only the new games, their rows are added, and the
+     build stops if any existing row changed. To reload a game, drop it first (`drop_game.py`).
    - Never run a build without loads just "to see". It re-applies every pattern and review file to all games and changes other games' tags.
      That is how the plan's first full rebuild made some games worse.
 
@@ -104,23 +109,25 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 1. All build checks must pass: regression, combos, trigger pairs, query tests, realworld.
 2. Add at least 30 real-world cases with source URLs to `tools/realworld/<game>.tsv` (signatures, archetypes, combos, splashes;
    card names exactly as the library stores them). They are the real test: run `realworld_why.py` and fix what misses before finishing.
-3. Check the database size. GitHub refuses files over 100 MB; the database is stored compact (`compact_text.py`) and without its indexes (`indexes.py`), about 63 MB on 20 Oct 2026.
+3. Check the database size. GitHub refuses files over 100 MB; the database is stored compact (`compact_text.py`) and without its indexes (`indexes.py`), about 70 MB on 20 Oct 2026.
 4. Copy the build over `three-bases-library.sqlite`, then commit and push after each step together with its progress files, keys and decisions.
 5. Update `README.md`. Write a short handoff that says what is done, what the build applies, what is left, and the exact commands.
 
 ## Reading cards cheaply (if a step ever needs it)
-Patterns are written from samples: for each pattern, its hit count and a few matching lines (`step3/amp_patterns.py scan`, the
-`pat_stats` loop of 20 Oct 2026); for gaps, the texts no pattern reaches (`coverage.py`). Reading every card is never needed
-for tagging. Where reading is needed (an answer key, a review), the chat agents of 19-20 Oct 2026 were the expensive way:
-- An agent is a whole new conversation. Before its first card it holds its system prompt, tool definitions, its instructions
-  and the files it reads to understand the task (README, SEARCH_GUIDE, the concept tree of about 51 KB, the definitions of
-  about 38 KB): that is the 90k-200k start-up. Every card it then reads and every tag it writes stays in its conversation,
-  and each later step re-sends the whole conversation, so the cost per card grows as it goes. It cannot "forget" a batch.
-- The cheap way is stateless: a script sends one request per batch of 50 entries to the API (one model call, no conversation),
-  each request = the same instruction block (concept definitions; cached, so it is paid once) + the 50 texts as `id|text`, and
-  the answer is `id|concept:role:quote` lines that `key.py check` verifies. Nothing carries over between requests. With the
-  Message Batches API and a small model for yes/no judging, this costs API money instead of chat tokens and needs an API key
-  (none in the chat workspace). Before sending: drop entries with the same text, and send only entries no rule decides.
+Patterns are written from the sample of step 0, the mechanics checklist and the coverage scan; reading every card is not needed
+for tagging. Where every card must be read (an answer key, a review), use the bulk reader, not chat agents:
+- One request = the game block + up to 500 cards, sent once. The game block is the game's rules summary, keyword glossary,
+  factions and the concept definitions with their "Not:" lines; the cards are `id|text` lines (identical texts sent once). The
+  answer is one line per card, `id|concept:role:quote;...`, which `key.py check` verifies. About 120 requests cover the library.
+- Each request is independent, so nothing piles up: cost grows with the number of cards, not with their square. The game block
+  is cached by the API and paid in full once per game.
+- Check the first request of each game by hand (skipped cards, wrong quotes) before sending the rest; make batches smaller only
+  if the end of a 500-card answer is worse than its start.
+- It runs as a script on the Anthropic API (Message Batches API: half price, a small model for yes/no judging), so it needs an
+  API key and costs API money instead of chat tokens. The chat workspace has no key.
+Why not chat agents: an agent is a conversation. Before its first card it holds its system prompt, tool definitions, instructions
+and the files it reads (the concept tree file alone is about 51 KB), the measured 90k-200k start-up; every card it reads and every
+tag it writes stays in the conversation and is re-sent at every later step, so each card costs more than the one before.
 
 ## Cost guide (measured)
 | work | tokens |

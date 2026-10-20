@@ -5,9 +5,9 @@
 # the idempotent ones (f03, f05, f07) are also build steps.
 # Usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]
 #   Without loads: runs every step below on a copy of <in> (tags, links and pairs are re-derived for all entries).
-#   With loads: each JSON (made by a converter in convert/, format in load_cards.py) is loaded into the copy first. The steps also
-#   run on a second copy without the loads, and keep_old.py then keeps every older entry as it was in <in>, apart from what the
-#   loads change (merges, links to new cards). A pattern-file change reaches older entries only through a run without loads.
+#   With loads: insert-only (add_games.py). The new games are loaded into a work copy that holds no other game, the steps run
+#   there, and only the new games' rows are inserted into the library; the build stops if any existing row changed. To reload
+#   a game, drop it first (drop_game.py). A pattern-file change reaches older entries only through a run without loads.
 #   Any failed check stops the build.
 set -e
 [ $# -ge 2 ] || { echo "usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]"; exit 2; }
@@ -25,7 +25,7 @@ steps() {   # $1 = db
   $P fix_grants.py "$D"
   $P fixes/f03_grant_not_does.py "$D"
   for f in reviews/*.json; do g=$(basename "$f" .json); $P apply_review.py "$D" "$g" "$f" old; done
-  $P kw_sync.py "$D" wh_bloodbowl3 wh_killteam wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:wh_underworlds h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th h:lorcana h:swu h:tesl
+  $P kw_sync.py "$D" wh_bloodbowl3 wh_killteam wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:wh_underworlds h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th h:lorcana h:swu h:tesl h:monster_train
   $P propagate.py "$D"
   $P keyword_defs.py "$D"
   $P outcome_tree.py "$D"
@@ -52,20 +52,22 @@ steps() {   # $1 = db
   $P distinct.py "$D"
 }
 rm -f "$OUT"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the database is stored without its indexes (indexes.py)
-if [ $# -gt 0 ]; then
-  BASE="$OUT.base"; rm -f "$BASE"; cp "$OUT" "$BASE"
-  steps "$BASE"
-  $P compact_text.py "$OUT" expand   # the loader writes evidence as text
-  for a in "$@"; do $P load_cards.py "$OUT" "${a%%=*}" "${a#*=}"; done
-  steps "$OUT"
-  INX="$OUT.in"; rm -f "$INX"; cp "$IN" "$INX"; $P compact_text.py "$INX" expand   # keep_old reads the text columns
-  $P keep_old.py "$OUT" "$INX" "$BASE"; rm -f "$BASE" "$INX"
+if [ $# -gt 0 ]; then   # insert-only: the steps run on a work copy holding only the new games; their rows are then added
+  GAMES=$(for a in "$@"; do echo "${a%%=*}"; done | sort -u | tr '\n' ' ')
+  WORK="$OUT.work"; rm -f "$WORK"; cp "$OUT" "$WORK"
+  $P compact_text.py "$WORK" expand
+  $P add_games.py prepare "$WORK" $GAMES
+  for a in "$@"; do $P load_cards.py "$WORK" "${a%%=*}" "${a#*=}"; done
+  steps "$WORK"
+  $P compact_text.py "$OUT" expand
+  $P add_games.py copy "$OUT" "$WORK" $GAMES; rm -f "$WORK"
 else
   steps "$OUT"
 fi
 $P signature.py "$OUT"
 $P precision.py "$OUT"
 $P finalize.py "$OUT"
+if [ $# -gt 0 ]; then INX="$OUT.in"; rm -f "$INX"; cp "$IN" "$INX"; $P compact_text.py "$INX" expand; $P add_games.py verify "$OUT" "$INX"; rm -f "$INX"; fi
 $P regression.py "$OUT" check
 $P combo_check.py "$OUT"
 $P trigger_pairs.py "$OUT" check

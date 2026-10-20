@@ -1,12 +1,12 @@
 # Three Bases inspiration library
 
 ## What it is
-A SQLite database of game mechanics from 23 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
+A SQLite database of game mechanics from 24 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
 
 It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite`, `tools/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results).
 
 ## Contents
-60,994 entries (cards, units, locations, abilities, items, rules), 1,195 keywords and 631 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
+61,266 entries (cards, units, locations, abilities, items, rules), 1,261 keywords and 655 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
 
 | Game | Entries |
 |---|---|
@@ -30,6 +30,7 @@ It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `thr
 | Duelyst | 786 |
 | Faeria | 443 |
 | Into the Breach | 287 |
+| Monster Train | 272 |
 | Inscryption | 263 |
 | Blood Bowl (Third Season) | 243 |
 | Stormbound | 190 |
@@ -83,7 +84,7 @@ In a fresh chat, Claude clones the repository and runs `python3 library/tools/qu
 
 ## Maintenance
 - **Tag-fix plan, final (20 Oct 2026)**: the library is the build of that day; `tools/final/report.md` compares it with the original (c7a77a4) on the answer key, the 322 real-world cases and the combos (fewer wrong and fewer missed tags in all 20 games; real-world 161 -> 162; combos 80/82 both). The key credits the tags of the keywords a card has (`tools/key/key.py credit`); patterns built from the key's quotes (`tools/step3/key_patterns.py`), old patterns right less than half the time switched off or redirected (`tools/step3/switch_off.py`), new triggers and amplifiers (`tools/step3/trigger_patterns.py`, `tools/step3/amp_patterns.py`), all as lines of `tools/step3/decisions.tsv`; review records in the tree v3 ids (`tools/fixes/f15`), and where a review and the key disagree on what a card does the key wins (`tools/key_wins.py`). Lost trigger pairs by cause: `tools/lost_pairs.py`.
-**Lorcana, Stormbound, Star Wars: Unlimited and The Elder Scrolls: Legends added (20 Oct 2026)**: patterns in `tools/patterns/<game>.txt` (every pattern checked on sampled matches), mechanics checklists from guides in `tools/mechanics/<game>.txt` checked with `tools/coverage.py`, 33, 18, 20 and 20 real-world cases. Later fixes the checklists found: the outcome-tree step wiped game-specific tags of the concepts it recomputes (now applied), keywords given to other cards passed nothing on (`kw_sync.py` now adds them as grants), reminder text is read the same way in every step (`reading.py`), tapping, exhausting and exerting an enemy count as total disable. Build fixes found on the way: `build.sh` expands the database before loading and reads load paths from the caller's folder; `load_cards.py` honours a `!` line in an old concept id for its new ids and takes a new game's `_game` row; `keep_old.py` puts back old entries the chain itself drops (176 on every rebuild, by drop_untagged). Prominence of mechanics in factions measured by one rule (see faction_signature). Real-world test: 215 of 391.
+**Lorcana, Stormbound, Star Wars: Unlimited, The Elder Scrolls: Legends and Monster Train added (20 Oct 2026)**: patterns in `tools/patterns/<game>.txt` (every pattern checked on sampled matches), mechanics checklists from guides in `tools/mechanics/<game>.txt` checked with `tools/coverage.py`, 33, 18, 20 and 20 real-world cases. Later fixes the checklists found: the outcome-tree step wiped game-specific tags of the concepts it recomputes (now applied), keywords given to other cards passed nothing on (`kw_sync.py` now adds them as grants), reminder text is read the same way in every step (`reading.py`), tapping, exhausting and exerting an enemy count as total disable. Build fixes found on the way: `build.sh` expands the database before loading and reads load paths from the caller's folder; `load_cards.py` honours a `!` line in an old concept id for its new ids and takes a new game's `_game` row; loading is insert-only (`add_games.py`): the steps run on a copy holding only the new games and their rows are added; the build stops if any existing row changed (it replaced keep_old.py, which re-ran every step on the whole library and lost 176 old entries on every rebuild through drop_untagged). Prominence of mechanics in factions measured by one rule, archetypes as recipes (see faction_signature). Real-world test: 242 of 405 (`REALWORLD_REPORT.md`).
 **D&D 5e removed (20 Oct 2026)**: Kaptain's decision; `tools/fixes/f16_drop_dnd.py` deleted its entries and every row pointing at them, and its scripts, patterns, reviews, key and cases are gone. Real-world test since: 150 of 300 (D&D had 12 of 22); the other games are unchanged.
 The build is incremental: `three-bases-library.sqlite` is the base for all work. The raw corpus of the first build is deleted and not needed.
 
@@ -106,6 +107,7 @@ Sources of the later loads (converter in brackets):
 - Disney Lorcana (20 Oct 2026): LorcanaJSON as bundled in the npm package lorcana-oracle 0.1.2, sets 1-12 (12 incomplete) and Illumineer's Quest [conv_lorcana.py]; keywords from the source's keyword field, definitions from the reminder text, keyword concepts in `reviews/lorcana.json`; 264 vanilla characters (no text) dropped, 248 repeats merged.
 - Star Wars: Unlimited (20 Oct 2026): sets/*.json of github.com/Yannick101984/swucardex-data (commit a86faed), an export of the official card database: SOR to ASH and Intro Battle: Hoth [conv_swu.py]; English text from its localisations; keyword names (French in the export) matched to the English word on every card that has them; trait names translated by Claude.
 - The Elder Scrolls: Legends (20 Oct 2026): database/dbCards.json and dbTokens.json of github.com/edipo2s/TESLegendsTracker (commit c541e82, Apr 2018) [conv_tesl.py]: sets up to Houses of Morrowind, later sets missing; keyword definitions are Claude's summaries.
+- Monster Train (20 Oct 2026): the fandom wiki's Module:Cards/Data, read through Kaptain's Chrome and flattened to one line per card (kept as `tools/convert/monster_train_cards.psv`, since the wiki is reachable only through a browser); keywords from the wiki tags, no keyword definitions.
 - Stormbound (20 Oct 2026): github.com/Stormbound-Games/stormbound-kitty src/data/cards.json at commit 96a86726 (28 Feb 2022, the last commit that kept the card list) [conv_stormbound.py]; cards added after that date are missing; no keyword list in the source.
 - Magic: MTGJSON AtomicCards.json [conv_mtg.py] for the 640 cards with a new mechanic; Scryfall Oracle Cards [conv_scryfall_tokens.py, fixes/f02] for tokens, emblems, set names, related cards and keyword lists.
 - Slay the Spire 1: the wiki's Module:Cards/data [conv_sts.py].
@@ -125,5 +127,30 @@ Sources of the later loads (converter in brackets):
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Suggestions for improving the library
-Claude's suggestions, none done.
-1. **Hand-review more entries** of the noisiest games (Age of Sigmar, 40k, Kill Team) and the 12 Oct loads, and add the decisions to `tools/reviews/` (then `regression.py <db> make` and `enforce`). A first sample was reviewed on 12 Oct 2026 (Age of Sigmar 30, 40k 30, D&D 25 entries: 46 needed corrections); it is still too small for precision estimates there (Age of Sigmar has one precision cell, 40k none).
+Claude's suggestions (20 Oct 2026), from the real-world test (`REALWORLD_REPORT.md`, 242 of 405) and the checks of the day. Cheapest first.
+1. **Run the mechanics check on the 19 older games.** For each: 2-4 guide pages into `tools/mechanics/<game>.txt`, then
+   `coverage.py --mechanics`. On the four new games every GAP line was a real bug that also hits older games (a step wiping
+   game-specific tags, granted keywords passing nothing on, empty texts treated as one text). Scripts only, a few k tokens per game.
+2. **Make older games reloadable.** Reloading a game (drop_game.py + insert-only add, two minutes) re-tags it with today's
+   patterns and fixes, but the hand reviews and `regression.tsv` name entries by id, and a reload gives new ids. Keying reviews
+   by game + name + category instead would let every game be reloaded and re-checked one at a time, never the whole library.
+3. **Log what each build step removes.** Count every game's pattern tags before and after each step; a step that removes many of
+   one game's tags is a bug like the outcome-tree one (it wiped all of Lorcana's "can't challenge" tags). Cheap, catches the
+   whole class.
+4. **Audit the cases (agreed).** 35 signature misses say the faction does not use the concept 1.5x more than the rest of its
+   game. Many name a broad concept (draw, stat_gain) where the source means a narrower mechanic. Every case should name the
+   narrowest concept its source supports, with the source's words; cases the source does not support go.
+5. **More cases, then learn the archetype recipes.** Learned recipe weights over-fit: 46 of 58 on the cases they learned from,
+   19 of 68 on the others, against 39 of 68 with the fixed concepts. With ~50 cases per game (agreed step 1 of HANDOFF),
+   `learn_recipes.py` can be tried again.
+6. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
+   "a card that names a type of its game cares about that type" needs only a short stop list per game (Star Wars Unlimited
+   traits such as Force or Plan are also common words).
+7. **Combos (29 misses).** 15 cards are missing under the name the source uses: add the source names as `variants`. 14 pairs
+   have no connection: with granted keywords now passed on, the connection search can follow them.
+8. **Answer keys for the new games.** Lorcana, Stormbound, Star Wars Unlimited, Legends and Monster Train have no key, so their
+   wrong-tag rate is unmeasured. The bulk reader (ADDING_GAMES.md) makes one in about 10 requests for all five.
+9. **Missing data, reachable through Kaptain's Chrome.** Legends sets after Houses of Morrowind (UESP), Stormbound cards after
+   February 2022 (fandom wiki), keyword glossaries for Legends and Monster Train (now Claude summaries or none).
+10. **Warhammer (15 of 59 cases).** Its army rules are long prose; per army, the mechanics check of suggestion 1 shows what the
+   patterns miss.

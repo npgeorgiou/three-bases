@@ -1,0 +1,14 @@
+signature	Hellhorned	multi_attack	"Multistrike and Rage"	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Hellhorned	stat_gain	"Multistrike and Rage"	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+archetype	Hellhorned	aggro_tempo	"Offense-focused", "much more firepower"	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Awoken	multi_target_attack	"Giant minions that can sweep enemies"	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+archetype	Awoken	fortress	"Defensive tanks"	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Stygian Guard	on_spell	"incant" abilities	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
+signature	Stygian Guard	damage_over_time	"Frostbite effects"	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
+archetype	Stygian Guard	spellslinger	"their powerful spells"	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Umbra	summon	"Morsel units are summoned and eaten"	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
+archetype	Umbra	sacrifice	"buffing units by killing other units"	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
+signature	Melting Remnant	revive	dying "return them to the deck with upgraded stats"	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Melting Remnant	self_destruct	"burnout" kills the unit when the stacks run out	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
+archetype	Melting Remnant	sacrifice	"Aggressive and self-sacrificing"	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Wurmkin	transform	"Hatching Eggs"	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/

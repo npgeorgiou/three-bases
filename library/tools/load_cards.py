@@ -67,7 +67,7 @@ for card in d['cards']:
         card['extra'] = dict(card.get('extra') or {}, **({'set': card['edition']} if card.get('edition') else {})); card['edition'] = 'non-collectible'
     c.execute("INSERT INTO entities(id, game, ext_id, name, category, source_type, edition, faction, subtypes, rarity, cost, cost_num, stats, text, extra) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
               (nid, G, PRE + str(card['ext_id']), name, card['category'], card.get('source_type'), card.get('edition'), card.get('faction'),
-               json.dumps(sub) if sub else None, card.get('rarity'), cost, cn, stats, text, json.dumps(card['extra']) if card.get('extra') else None))
+               json.dumps(sub) if sub else None, card.get('rarity'), cost, cn, stats, text or None, json.dumps(card['extra']) if card.get('extra') else None))
     for con, role, p in pats:
         m = p.search(low)
         if m: c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (nid, con, role, 'text_pattern', low[max(0, m.start() - 20): m.start() + 40]))

@@ -13,7 +13,7 @@ if sys.argv[4:] == ['old']:
     cv = lambda xs: [':'.join([to_old(x.split(':')[0])] + x.split(':')[1:]) for x in xs if to_old(x.split(':')[0])]
     rv = {k: dict(v, add=cv(v.get('add', [])), drop=cv(v.get('drop', []))) for k, v in rv.items() if isinstance(v, dict)}
 bytext = {}
-for i, t, k in q("select id,text,category from entities where game=? and text is not null", game): bytext.setdefault((t, k), []).append(i)
+for i, t, k in q("select id,text,category from entities where game=? and text is not null and text != ''", game): bytext.setdefault((t, k), []).append(i)
 text = {i: (t, k) for i, t, k in q("select id,text,category from entities where game=?", game)}
 n = 0
 for key, r in rv.items():

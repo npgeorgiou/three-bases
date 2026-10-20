@@ -1,0 +1,311 @@
+{
+ "Armor": {
+  "add": [
+   "block_armor"
+  ],
+  "drop": []
+ },
+ "Rage": {
+  "add": [
+   "stat_gain",
+   "temporary_buff"
+  ],
+  "drop": []
+ },
+ "Multistrike": {
+  "add": [
+   "multi_attack"
+  ],
+  "drop": []
+ },
+ "Slay": {
+  "add": [
+   "on_kill"
+  ],
+  "drop": []
+ },
+ "Revenge": {
+  "add": [
+   "on_damaged"
+  ],
+  "drop": []
+ },
+ "Summon": {
+  "add": [
+   "on_play"
+  ],
+  "drop": []
+ },
+ "Incant": {
+  "add": [
+   "on_spell"
+  ],
+  "drop": []
+ },
+ "Strike": {
+  "add": [
+   "on_attack"
+  ],
+  "drop": []
+ },
+ "Extinguish": {
+  "add": [
+   "death_trigger"
+  ],
+  "drop": []
+ },
+ "Harvest": {
+  "add": [
+   "death_count"
+  ],
+  "drop": []
+ },
+ "Gorge": {
+  "add": [
+   "on_sacrifice:trigger"
+  ],
+  "drop": []
+ },
+ "Eaten": {
+  "add": [
+   "death_trigger",
+   "sacrifice"
+  ],
+  "drop": []
+ },
+ "Burnout": {
+  "add": [
+   "self_destruct"
+  ],
+  "drop": []
+ },
+ "Endless": {
+  "add": [
+   "recycle"
+  ],
+  "drop": []
+ },
+ "Consume": {
+  "add": [
+   "exhaust"
+  ],
+  "drop": []
+ },
+ "Permafrost": {
+  "add": [
+   "retain"
+  ],
+  "drop": []
+ },
+ "Piercing": {
+  "add": [
+   "piercing"
+  ],
+  "drop": []
+ },
+ "Attuned": {
+  "add": [
+   "spell_power"
+  ],
+  "drop": []
+ },
+ "Pyrebound": {
+  "add": [
+   "placement_rules"
+  ],
+  "drop": []
+ },
+ "Offering": {
+  "add": [
+   "free_play"
+  ],
+  "drop": []
+ },
+ "Quick": {
+  "add": [
+   "first_strike"
+  ],
+  "drop": []
+ },
+ "Sweep": {
+  "add": [
+   "multi_target_attack"
+  ],
+  "drop": []
+ },
+ "Trample": {
+  "add": [
+   "excess_damage"
+  ],
+  "drop": []
+ },
+ "Lifesteal": {
+  "add": [
+   "lifesteal"
+  ],
+  "drop": []
+ },
+ "Damage Shield": {
+  "add": [
+   "shield"
+  ],
+  "drop": []
+ },
+ "Spikes": {
+  "add": [
+   "counterattack"
+  ],
+  "drop": []
+ },
+ "Regen": {
+  "add": [
+   "regeneration"
+  ],
+  "drop": []
+ },
+ "Frostbite": {
+  "add": [
+   "damage_over_time"
+  ],
+  "drop": []
+ },
+ "Sap": {
+  "add": [
+   "stat_loss"
+  ],
+  "drop": []
+ },
+ "Dazed": {
+  "add": [
+   "disable"
+  ],
+  "drop": []
+ },
+ "Rooted": {
+  "add": [
+   "immobilize"
+  ],
+  "drop": []
+ },
+ "Melee Weakness": {
+  "add": [
+   "mark_target"
+  ],
+  "drop": []
+ },
+ "Spell Weakness": {
+  "add": [
+   "mark_target"
+  ],
+  "drop": []
+ },
+ "Stealth": {
+  "add": [
+   "stealth"
+  ],
+  "drop": []
+ },
+ "Inert": {
+  "add": [
+   "cant_attack"
+  ],
+  "drop": []
+ },
+ "Shell": {
+  "add": [
+   "transform"
+  ],
+  "drop": []
+ },
+ "Hatch": {
+  "add": [
+   "transform",
+   "summon"
+  ],
+  "drop": []
+ },
+ "Reap": {
+  "add": [
+   "damage_over_time"
+  ],
+  "drop": []
+ },
+ "Emberdrain": {
+  "add": [
+   "drawback"
+  ],
+  "drop": []
+ },
+ "Silence": {
+  "add": [
+   "silence"
+  ],
+  "drop": []
+ },
+ "Phased": {
+  "add": [
+   "immunity"
+  ],
+  "drop": []
+ },
+ "Purge": {
+  "add": [
+   "exhaust"
+  ],
+  "drop": []
+ },
+ "Unplayable": {
+  "add": [
+   "junk_cards"
+  ],
+  "drop": []
+ },
+ "Rejuvenate": {
+  "add": [
+   "on_lifegain:trigger"
+  ],
+  "drop": []
+ },
+ "Cultivate": {
+  "add": [
+   "stat_gain"
+  ],
+  "drop": []
+ },
+ "Ascend": {
+  "add": [
+   "movement"
+  ],
+  "drop": []
+ },
+ "Descend": {
+  "add": [
+   "movement"
+  ],
+  "drop": []
+ },
+ "Reform": {
+  "add": [
+   "revive"
+  ],
+  "drop": []
+ },
+ "Enchant": {
+  "add": [
+   "aura"
+  ],
+  "drop": []
+ },
+ "Magic Power": {
+  "add": [
+   "spell_power"
+  ],
+  "drop": []
+ },
+ "Frozen": {
+  "add": [
+   "retain"
+  ],
+  "drop": []
+ }
+}

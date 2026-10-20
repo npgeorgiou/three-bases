@@ -1,0 +1,8 @@
+# Monster Train (20 Oct 2026). Floors are the lanes; the front unit fights first; Ember pays for cards.
+# Old concept ids; a '!' line also switches off its new ids.
+lane_identity|does|\bon this floor\b|\bthis room\b|\bbottom floor\b|\bpyre room\b
+movement|does|\b(ascend|descend)s?\b|\bmove (a|that|it|this)\b[^.]{0,20}\b(front|back)\b|\bpush it to the back\b
+resource_gain|does|\bgain (\d+ |\+\d+ )?ember\b|\+\d+ ember per turn\b
+heal|does|\brestore (\d+|full|\d+ per x)\b|\bto full health\b
+revive|does|\breturn a random defeated unit\b|\breform\b
+board_limit|does|\b[+-]\d+ capacity\b

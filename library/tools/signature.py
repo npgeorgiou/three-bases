@@ -12,47 +12,21 @@ failed and big factions passed on small differences; hence rule 1 for size, rule
 Factions: a card of a combined faction (Lorcana 'Amber-Steel', Legends 'Strength-Willpower', Star Wars Unlimited 'Command-
 Cunning', Gwent 'Syndicate / Monster', Magic 'Multicolor (BR)') counts for each of its factions; combined factions are not
 factions of their own. Factions with fewer than MIN cards (after that) are left out.
-  signature          the mechanic is prominent in the faction and it is one of the two factions with the highest share of cards with the concept
+  signature          the mechanic is prominent in the faction (any number of factions can share a signature)
   splash             another faction that uses a signature mechanic at all: 1+ cards, sorted by share
   keyword_signature  a keyword at least 60% of whose cards (8+) are one faction's (concept 'kw:<keyword>')
-  faction_archetypes the archetype is prominent: the rule applied to the archetype's concepts taken together (any of them, or a narrower one)
+  faction_archetypes an archetype is a recipe of weighted mechanics (tools/archetype_recipes.tsv, learned by learn_recipes.py; else the
+                     archetypes table's concepts at weight 1). A faction's score is the weighted average of its over-representation
+                     of those mechanics (table faction_concept_ov: ln of its share over the rest of the game's share, 0 if not above);
+                     it has the archetype when its score is at least 1.5 times the average of the game's other factions; several can hold
 Mechanics only: the root concepts and the role, scope and problem facets are left out, and so are concepts on more than 25% of
 a game's cards (too common to belong to anyone). Roles counted: does and grants. Columns share and lift (share over the game
 average) are kept for reading. Usage: signature.py <db>"""
-import collections, json, re, sqlite3, sys
-from math import lgamma, exp, log
+import collections, json, os, sqlite3, sys
+from math import log
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
-MIN, P_MAX, RATIO = 20, 0.05, 1.5
-CARD = "e.category NOT IN ('keyword','tribe')"
-MTG = {'W': 'White', 'U': 'Blue', 'B': 'Black', 'R': 'Red', 'G': 'Green'}
-
-def tail(N, K, n, x):
-    """P(X >= x) for X hypergeometric: x successes in n draws from N items of which K are successes"""
-    if x <= 0: return 1.0
-    lc = lambda a, b: lgamma(a + 1) - lgamma(b + 1) - lgamma(a - b + 1)
-    hi = min(K, n); base = lc(N, n)
-    terms = [lc(K, i) + lc(N - K, n - i) - base for i in range(x, hi + 1) if n - i <= N - K]
-    if not terms: return 0.0
-    m = max(terms); return min(1.0, exp(m) * sum(exp(t - m) for t in terms))
-
-def parts(name, plain):
-    """the factions a combined faction name stands for, or None"""
-    m = re.fullmatch(r'Multicolor \(([WUBRG]+)\)', name or '')
-    if m: return [MTG[ch] for ch in m.group(1) if MTG[ch] in plain] or None
-    for sep in (' / ', '-'):
-        if sep == '-' and ' ' in (name or ''): continue
-        ps = (name or '').split(sep)
-        if len(ps) > 1 and all(p in plain for p in ps): return ps
-    return None
-
-def members(g):
-    """faction -> set of its card ids (combined cards in each of their factions); all card ids with a faction"""
-    rows = q(f'SELECT e.id, e.faction FROM entities e WHERE e.game=? AND {CARD} AND e.faction IS NOT NULL', g)
-    names = {f for _, f in rows}; plain = {f for f in names if not parts(f, names - {f})}
-    mem = collections.defaultdict(set)
-    for i, f in rows:
-        for p in (parts(f, plain) or [f]): mem[p].add(i)
-    return {f: s for f, s in mem.items() if len(s) >= MIN}, {i for i, _ in rows}
+P_MAX, RATIO = 0.05, 1.5
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from factions import MIN, CARD, tail, members   # noqa
 
 mech = {i for (i,) in q("SELECT id FROM concepts WHERE facet NOT IN ('role','scope','problem') AND id IN (SELECT child FROM concept_parents)")}
 tree = collections.defaultdict(set)
@@ -61,9 +35,19 @@ arch = [(a, json.loads(cs) if cs and cs.startswith('[') else [x.strip() for x in
 c.execute('DROP TABLE IF EXISTS faction_signature')
 c.execute('CREATE TABLE faction_signature(game TEXT, faction TEXT, concept TEXT, kind TEXT, entities INTEGER, share REAL, lift REAL, owner TEXT, owner_share REAL)')
 c.execute('DELETE FROM faction_archetypes')
+c.execute('DROP TABLE IF EXISTS faction_concept_ov')
+c.execute('CREATE TABLE faction_concept_ov(game TEXT, faction TEXT, concept TEXT, entities INTEGER, ov REAL)')
+# archetype recipes: tools/archetype_recipes.tsv (archetype, concept, weight; learn_recipes.py), else the archetypes table's concepts at weight 1
+RF = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'archetype_recipes.tsv')
+recipes = {a: [(k, 1.0) for k in cs] for a, cs in arch}
+if os.path.exists(RF):
+    learned = collections.defaultdict(list)
+    for ln in open(RF, encoding='utf-8'):
+        if ln.strip() and not ln.startswith('#'): a, k, w = ln.rstrip('\n').split('\t'); learned[a].append((k, float(w)))
+    recipes.update(learned)
 ins = lambda *v: c.execute('INSERT INTO faction_signature VALUES(?,?,?,?,?,?,?,?,?)', v)
 for (g,) in q('SELECT DISTINCT game FROM entities'):
-    fac, allc = members(g)
+    fac, allc = members(q, g)
     if len(fac) < 2: continue
     N = len(allc)
     has = collections.defaultdict(set)
@@ -79,7 +63,7 @@ for (g,) in q('SELECT DISTINCT game FROM entities'):
     for k, ids in has.items():
         if k not in mech or len(ids) > 0.25 * N: continue
         K, res = test(ids); avg = K / N
-        own = [(sh, f, x) for sh, f, x, ok in res[:2] if ok]
+        own = [(sh, f, x) for sh, f, x, ok in res if ok]
         for sh, f, x in own: ins(g, f, k, 'signature', x, round(sh, 3), round(sh / avg, 2), f, round(sh, 3))
         if not own: continue
         top = own[0]
@@ -93,11 +77,26 @@ for (g,) in q('SELECT DISTINCT game FROM entities'):
         for f, s in fac.items():
             n = len(s & ids)
             if n >= 8 and n / len(ids) >= 0.6: ins(g, f, 'kw:' + k, 'keyword_signature', n, round(n / len(s), 3), round(n / len(ids), 2), f, round(n / len(s), 3))
-    for a, cs in arch:
-        want = set().union(*[tree.get(x, {x}) for x in cs]) if cs else set()
-        ids = set().union(*[has[k] for k in want if k in has]) if want else set()
-        K, res = test(ids)
-        for sh, f, x, p in res:
-            if p: c.execute('INSERT INTO faction_archetypes VALUES(?,?,?,?,?,?)', (g, f, a, round(sh, 3), round(sh / (K / N), 2), x))
+    # over-representation of every mechanic in every faction: ln(faction share / share in the rest of the game), 0 when not above
+    for k in mech:
+        ids = set().union(*[has[x] for x in tree.get(k, {k}) if x in has])
+        if not ids: continue
+        K = len(ids)
+        for f, s_ in fac.items():
+            x, n = len(s_ & ids), len(s_)
+            v = log(((x + 0.5) / (n + 1)) / ((K - x + 0.5) / (N - n + 1)))
+            if v > 0: c.execute('INSERT INTO faction_concept_ov VALUES(?,?,?,?,?)', (g, f, k, x, round(v, 4)))
+    ov = collections.defaultdict(dict)
+    for f, k, v in q('SELECT faction, concept, ov FROM faction_concept_ov WHERE game=?', g): ov[f][k] = v
+    # archetypes: a recipe of weighted mechanics; a faction has the archetype when its recipe score is at least RATIO times the
+    # average score of the game's other factions (the same "half again as much" as signatures); a faction can have several
+    for a, rec in recipes.items():
+        if not rec: continue
+        sc = {f: sum(w * ov[f].get(k, 0) for k, w in rec) / sum(w for _, w in rec) for f in fac}
+        allids = set().union(*[has[x] for k, _ in rec for x in tree.get(k, {k}) if x in has])
+        for f, v in sc.items():
+            others = [u for h, u in sc.items() if h != f]; m = sum(others) / len(others) if others else 0
+            if v > 0 and (m == 0 or v / m >= RATIO):
+                c.execute('INSERT INTO faction_archetypes VALUES(?,?,?,?,?,?)', (g, f, a, round(v, 3), round(v / m, 2) if m else 99, len(fac[f] & allids)))
 c.commit()
 print('faction_signature:', dict(q('SELECT kind, count(*) FROM faction_signature GROUP BY 1')), ' faction_archetypes:', q('SELECT count(*) FROM faction_archetypes')[0][0])
