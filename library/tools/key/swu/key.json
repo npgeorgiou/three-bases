@@ -1,0 +1,594 @@
+{
+"819560": {
+"tags": [
+[
+"taunt",
+"Sentinel"
+],
+[
+"shield",
+"Shielded"
+],
+[
+"on_play",
+"When you play this unit"
+]
+],
+"by": "Claude"
+},
+"820575": {
+"tags": [
+[
+"stat_gain",
+"give an Experience token to the chosen unit"
+],
+[
+"condition_count",
+"For each resource paid this way"
+]
+],
+"by": "Claude"
+},
+"821244": {
+"tags": [
+[
+"damage",
+"Deal damage to a unit"
+],
+[
+"variable_stats",
+"equal to the total amount of damage on all units you control"
+],
+[
+"condition_life",
+"damage on all units you control"
+]
+],
+"by": "Claude"
+},
+"821138": {
+"tags": [
+[
+"taunt",
+"this unit gains Sentinel"
+],
+[
+"on_play",
+"When Played"
+],
+[
+"other_death_trigger",
+"If a friendly unit was defeated this phase"
+],
+[
+"summon",
+"create a Mandalorian token"
+]
+],
+"by": "Claude"
+},
+"821044": {
+"tags": [
+[
+"on_play",
+"When Played"
+],
+[
+"stat_gain",
+"Give an Experience token to another friendly Underworld unit"
+],
+[
+"tribal",
+"Underworld unit"
+]
+],
+"by": "Claude"
+},
+"819390": {
+"tags": [
+[
+"resource_gain",
+"Put this event into play as a resource"
+]
+],
+"by": "Claude"
+},
+"819836": {
+"tags": [
+[
+"death_trigger",
+"When Defeated"
+],
+[
+"merge_attach",
+"Attach this upgrade to a friendly Battle Droid token"
+]
+],
+"by": "Claude"
+},
+"819515": {
+"tags": [
+[
+"destroy",
+"Defeat an upgrade"
+]
+],
+"by": "Claude"
+},
+"820399": {
+"tags": [
+[
+"temporary_buff",
+"Give a unit +3/+3 and Overwhelm for this phase"
+],
+[
+"excess_damage",
+"deal excess damage to the opponent's base"
+]
+],
+"by": "Claude"
+},
+"821038": {
+"tags": [
+[
+"play_restriction",
+"Cards with that name can't be played this phase"
+]
+],
+"by": "Claude"
+},
+"820287": {
+"tags": [
+[
+"hero_power",
+"Action [Exhaust]"
+],
+[
+"damage",
+"deal 1 damage to a unit"
+],
+[
+"discard",
+"You may discard your hand"
+],
+[
+"draw",
+"draw 2 cards"
+]
+],
+"by": "Claude"
+},
+"820341": {
+"tags": [
+[
+"on_attack",
+"On Attack"
+],
+[
+"tutor",
+"Search the top 5 cards of your deck for an Item upgrade"
+]
+],
+"by": "Claude"
+},
+"820769": {
+"tags": [
+[
+"disruption",
+"Exhaust 2 enemy resources"
+],
+[
+"cast_from_zone",
+"you may play this card from your resources"
+]
+],
+"by": "Claude"
+},
+"820130": {
+"tags": [
+[
+"stat_gain",
+"This unit gets +1/+1 for each other friendly space unit"
+],
+[
+"board_presence",
+"for each other friendly space unit"
+]
+],
+"by": "Claude"
+},
+"821106": {
+"tags": [
+[
+"merge_attach",
+"When you play an upgrade on this unit"
+],
+[
+"summon",
+"create a Mandalorian token"
+]
+],
+"by": "Claude"
+},
+"819728": {
+"tags": [
+[
+"haste",
+"Ambush"
+],
+[
+"attack_now",
+"it may ready and attack an enemy unit"
+],
+[
+"stat_loss",
+"the defender gets \u20133/\u20130"
+]
+],
+"by": "Claude"
+},
+"819458": {
+"tags": [
+[
+"evasion",
+"ignore Sentinel"
+],
+[
+"piercing",
+"defeat the defender's Shields"
+],
+[
+"stat_gain",
+"This unit gets +2/+0 while attacking"
+]
+],
+"by": "Claude"
+},
+"820378": {
+"tags": [
+[
+"type_grant",
+"This unit gains Ambush while another friendly unit has Ambush"
+]
+],
+"by": "Claude"
+},
+"819316": {
+"tags": [
+[
+"taunt",
+"Sentinel"
+],
+[
+"on_play",
+"When Played"
+],
+[
+"heal",
+"Heal up to 8 total damage"
+],
+[
+"friendly_fire",
+"Deal that much damage to this unit"
+]
+],
+"by": "Claude"
+},
+"821215": {
+"tags": [
+[
+"evasion",
+"ignore Sentinel"
+],
+[
+"on_play",
+"When Played"
+],
+[
+"friendly_fire",
+"Deal 3 damage to this unit"
+]
+],
+"by": "Claude"
+},
+"820154": {
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"When Played"
+],
+[
+"damage",
+"Deal 1 damage to each of up to 3 units"
+],
+[
+"scope_multi",
+"each of up to 3 units"
+]
+],
+"by": "Claude"
+},
+"820249": {
+"tags": [
+[
+"merge_attach",
+"You may play this as an upgrade on a friendly Vehicle"
+]
+],
+"by": "Claude"
+},
+"820664": {
+"tags": [
+[
+"temporary_buff",
+"Give a unit +2/+2 for this phase"
+],
+[
+"kicker",
+"You may disclose Command"
+]
+],
+"by": "Claude"
+},
+"821041": {
+"tags": [
+[
+"bounce_enemy",
+"Return a non-leader unit that costs 3 or less to its owner's hand"
+],
+[
+"cost_condition",
+"costs 3 or less"
+]
+],
+"by": "Claude"
+},
+"821052": {
+"tags": [
+[
+"on_attack",
+"On Attack"
+],
+[
+"life_payment",
+"You may pay 2 resources"
+]
+],
+"by": "Claude"
+},
+"819196": {
+"tags": [
+[
+"stat_gain",
+"This unit gets +1/+0 for each damage on it"
+],
+[
+"condition_life",
+"for each damage on it"
+]
+],
+"by": "Claude"
+},
+"820872": {
+"tags": [
+[
+"on_play",
+"When Played"
+],
+[
+"disable",
+"Exhaust an enemy unit"
+],
+[
+"hand_disruption",
+"its controller discards a card from their hand"
+]
+],
+"by": "Claude"
+},
+"820279": {
+"tags": [
+[
+"hero_power",
+"Action [1 resource, Exhaust]"
+],
+[
+"shield",
+"Give a Shield token to a Creature or Spectre unit"
+],
+[
+"tribal",
+"Creature or Spectre unit"
+]
+],
+"by": "Claude"
+},
+"819862": {
+"tags": [
+[
+"on_attack",
+"On Attack"
+],
+[
+"protection",
+"Prevent all combat damage that would be dealt to this unit"
+]
+],
+"by": "Claude"
+},
+"820933": {
+"tags": [
+[
+"on_play",
+"When Played"
+],
+[
+"tribal",
+"another Villainy unit"
+],
+[
+"damage",
+"deal 2 damage to a ground unit"
+]
+],
+"by": "Claude"
+},
+"821137": {
+"tags": [
+[
+"taunt",
+"this unit gains Sentinel"
+]
+],
+"by": "Claude"
+},
+"819771": {
+"tags": [
+[
+"hero_power",
+"Action [Exhaust]"
+],
+[
+"other_leave_trigger",
+"If a unit left play this phase"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"deck_position",
+"put a card from your hand on the top or bottom of your deck"
+]
+],
+"by": "Claude"
+},
+"820627": {
+"tags": [
+[
+"summon",
+"Create 5 Spy tokens"
+]
+],
+"by": "Claude"
+},
+"819478": {
+"tags": [
+[
+"merge_attach",
+"Attach to a VEHICLE unit"
+],
+[
+"resource_gain",
+"Ready a resource"
+]
+],
+"by": "Claude"
+},
+"819976": {
+"tags": [
+[
+"sacrifice",
+"defeat up to 2 units you control"
+],
+[
+"cost_reduction",
+"This card costs 2 resources less for each unit defeated this way"
+],
+[
+"disable",
+"Exhaust an enemy ground unit"
+]
+],
+"by": "Claude"
+},
+"819320": {
+"tags": [
+[
+"taunt",
+"Sentinel"
+],
+[
+"on_attack",
+"On Attack"
+],
+[
+"cost_reduction",
+"costs [2 resources] less"
+]
+],
+"by": "Claude"
+},
+"819302": {
+"tags": [
+[
+"shield",
+"Shielded"
+],
+[
+"on_play",
+"When Played"
+],
+[
+"destroy",
+"defeat a unit with 4 or less remaining HP"
+]
+],
+"by": "Claude"
+},
+"819309": {
+"tags": [
+[
+"lifesteal",
+"Restore 2"
+],
+[
+"death_trigger",
+"When Defeated"
+],
+[
+"symmetric_effect",
+"They each draw a card"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "Claude"
+},
+"820765": {
+"tags": [
+[
+"taunt",
+"it gains Sentinel"
+],
+[
+"summon",
+"Create a Spy token"
+]
+],
+"by": "Claude"
+},
+"820505": {
+"tags": [
+[
+"excess_damage",
+"Overwhelm"
+],
+[
+"on_play",
+"When Played"
+],
+[
+"untap",
+"you may ready this unit"
+]
+],
+"by": "Claude"
+}
+}

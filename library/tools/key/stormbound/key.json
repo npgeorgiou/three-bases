@@ -1,0 +1,618 @@
+{
+"819002": {
+"tags": [
+[
+"on_play",
+"When played"
+],
+[
+"tribal",
+"bordering a friendly Dragon"
+],
+[
+"adjacency",
+"bordering a friendly Dragon"
+],
+[
+"summon",
+"spawn 1/1/2/2/3 strength Dragons"
+]
+],
+"by": "Claude"
+},
+"819126": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"stat_gain",
+"give 1/1/2/2/3 strength to all surrounding friendly units"
+],
+[
+"adjacency",
+"all surrounding friendly units"
+]
+],
+"by": "Claude"
+},
+"818981": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"random_effect",
+"replace a random non-Pirate card from your hand"
+],
+[
+"tribal",
+"non-Pirate"
+]
+],
+"by": "Claude"
+},
+"819037": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"forced_movement",
+"force it/it/them/them/them to move"
+],
+[
+"adjacency",
+"bordering enemy units"
+]
+],
+"by": "Claude"
+},
+"818998": {
+"tags": [
+[
+"on_play",
+"When played"
+],
+[
+"adjacency",
+"bordering a friendly structure or base"
+],
+[
+"stat_gain",
+"gain 3/4/5/6/7 strength"
+]
+],
+"by": "Claude"
+},
+"819105": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"steal",
+"convert a random bordering enemy unit"
+],
+[
+"stat_condition",
+"2/3/4/5/6 or less strength"
+],
+[
+"random_effect",
+"a random bordering enemy unit"
+]
+],
+"by": "Claude"
+},
+"819094": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"damage_over_time",
+"poison 1/1/2/2/3 random enemy"
+],
+[
+"random_effect",
+"random enemy"
+]
+],
+"by": "Claude"
+},
+"819099": {
+"tags": [
+[
+"on_attack",
+"Before attacking a weaker unit"
+],
+[
+"destroy",
+"destroy it instantly"
+],
+[
+"stat_condition",
+"a weaker unit"
+]
+],
+"by": "Claude"
+},
+"819150": {
+"tags": [
+[
+"on_play",
+"When played"
+],
+[
+"adjacency",
+"bordering a stronger friendly unit"
+],
+[
+"stat_gain",
+"gain 4/5/6/7/8 strength"
+]
+],
+"by": "Claude"
+},
+"819073": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"forced_movement",
+"pull enemy units to you"
+],
+[
+"aoe_damage",
+"deal 3/4/5/6/7 damage to all bordering enemy units"
+]
+],
+"by": "Claude"
+},
+"819023": {
+"tags": [
+[
+"on_attack",
+"Before attacking a confused unit"
+],
+[
+"aoe_damage",
+"damage to all enemies surrounding it"
+]
+],
+"by": "Claude"
+},
+"818992": {
+"tags": [
+[
+"on_play",
+"When played"
+],
+[
+"hand_size",
+"with a full hand"
+],
+[
+"discard",
+"discard all cards"
+],
+[
+"draw",
+"draw 4 new cards"
+]
+],
+"by": "Claude"
+},
+"819103": {
+"tags": [
+[
+"steal",
+"Convert a target enemy unit"
+],
+[
+"stat_condition",
+"or less strength"
+]
+],
+"by": "Claude"
+},
+"818969": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"aoe_damage",
+"deal 1/1/2/2/3 damage to all non-Dragon units in front"
+],
+[
+"friendly_fire",
+"all non-Dragon units"
+]
+],
+"by": "Claude"
+},
+"819077": {
+"tags": [
+[
+"on_damaged",
+"After surviving damage"
+],
+[
+"stat_gain",
+"set strength to 2/3/4/5/6"
+]
+],
+"by": "Claude"
+},
+"819089": {
+"tags": [
+[
+"summon",
+"Spawn a 1 strength Toad"
+],
+[
+"random_effect",
+"random tiles"
+]
+],
+"by": "Claude"
+},
+"819139": {
+"tags": [
+[
+"on_damaged",
+"After surviving damage"
+],
+[
+"movement",
+"command all friendly units with equal or less strength forward"
+]
+],
+"by": "Claude"
+},
+"818960": {
+"tags": [
+[
+"death_trigger",
+"On death"
+],
+[
+"enemy_benefit",
+"give 1/2/3/4/5 strength to a random surrounding enemy unit"
+]
+],
+"by": "Claude"
+},
+"819093": {
+"tags": [
+[
+"on_attack",
+"After attacking"
+],
+[
+"movement",
+"jump in front of a random enemy unit or structure"
+],
+[
+"stat_gain",
+"gain 2/3/4/5/6 strength"
+]
+],
+"by": "Claude"
+},
+"819040": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"comeback",
+"give it to the weaker one"
+]
+],
+"by": "Claude"
+},
+"819028": {
+"tags": [
+[
+"on_attack",
+"Before attacking an enemy unit"
+],
+[
+"forced_attack",
+"force all enemy units bordering it"
+]
+],
+"by": "Claude"
+},
+"819133": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"free_play",
+"randomly play up to 1/1/1/2/2 common or rare Satyr"
+],
+[
+"tribal",
+"Satyr"
+],
+[
+"random_effect",
+"randomly play"
+]
+],
+"by": "Claude"
+},
+"818994": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"damage",
+"deal 1/1/2/2/3 damage to a random enemy"
+],
+[
+"variety_payoff",
+"for each unique surrounding primary unit type"
+]
+],
+"by": "Claude"
+},
+"819056": {
+"tags": [
+[
+"death_trigger",
+"On death"
+],
+[
+"summon",
+"spawn a 1/1/2/2/3 strength Construct"
+]
+],
+"by": "Claude"
+},
+"819160": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"stat_loss",
+"lose 1 strength for every other friendly unit on the board"
+],
+[
+"condition_count",
+"for every other friendly unit on the board"
+]
+],
+"by": "Claude"
+},
+"818967": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"generate_cards",
+"create a 0 cost unit with 5/6/6/8/10 strength and add it to your deck"
+]
+],
+"by": "Claude"
+},
+"818968": {
+"tags": [
+[
+"stat_loss",
+"Reduce the strength of a target enemy unit to 5/4/3/2/1"
+]
+],
+"by": "Claude"
+},
+"819119": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"stat_gain",
+"give 1/1/2/2/3 strength to all friendly Satyrs"
+],
+[
+"tribal",
+"friendly Satyrs"
+]
+],
+"by": "Claude"
+},
+"818964": {
+"tags": [
+[
+"on_play",
+"When played"
+],
+[
+"hand_size",
+"as the last card in your hand"
+],
+[
+"stat_gain",
+"gain 5/6/7/8/10 strength"
+]
+],
+"by": "Claude"
+},
+"819165": {
+"tags": [
+[
+"on_attack",
+"Before attacking a unit or structure"
+],
+[
+"stat_gain",
+"gain 3/4/5/6/7 strength"
+]
+],
+"by": "Claude"
+},
+"819025": {
+"tags": [
+[
+"on_play",
+"On play"
+],
+[
+"speed",
+"gain speed equal to the amount of enemy units in front"
+]
+],
+"by": "Claude"
+},
+"819086": {
+"tags": [
+[
+"death_trigger",
+"On death"
+],
+[
+"aoe_damage",
+"deal 1/2/3/4/5 damage to all bordering units"
+],
+[
+"damage_over_time",
+"poison them"
+],
+[
+"friendly_fire",
+"all bordering units"
+]
+],
+"by": "Claude"
+},
+"819149": {
+"tags": [
+[
+"stat_gain",
+"Give 5/6/7/8/9 strength to a target friendly unit or structure"
+],
+[
+"disable",
+"Freeze all surrounding enemy units"
+]
+],
+"by": "Claude"
+},
+"819116": {
+"tags": [
+[
+"death_trigger",
+"On death"
+],
+[
+"summon",
+"spawn a 3/4/6/7/8 strength Dragon"
+],
+[
+"tribal",
+"a friendly Dragon"
+]
+],
+"by": "Claude"
+},
+"819026": {
+"tags": [
+[
+"speed",
+"gain 2 speed"
+]
+],
+"by": "Claude"
+},
+"819091": {
+"tags": [
+[
+"death_trigger",
+"On death"
+],
+[
+"summon",
+"spawn 1 strength Toads"
+]
+],
+"by": "Claude"
+},
+"819171": {
+"tags": [
+[
+"on_damaged",
+"After surviving damage"
+],
+[
+"destroy",
+"destroy all enemy units in front"
+]
+],
+"by": "Claude"
+},
+"819122": {
+"tags": [
+[
+"destroy",
+"Destroy a target unit or structure"
+],
+[
+"excess_damage",
+"Spread spare damage randomly among surrounding units"
+],
+[
+"friendly_fire",
+"Deal 3 damage to your base"
+]
+],
+"by": "Claude"
+},
+"819029": {
+"tags": [
+[
+"on_damaged",
+"After surviving damage"
+],
+[
+"stat_gain",
+"randomly give 4/5/6/7/9 strength to another friendly unit"
+]
+],
+"by": "Claude"
+},
+"819063": {
+"tags": [
+[
+"death_trigger",
+"When this dies"
+],
+[
+"summon",
+"spawn a 6/7/8/10/12 strength Dragon at the enemy base"
+]
+],
+"by": "Claude"
+}
+}

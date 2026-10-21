@@ -251,7 +251,8 @@ def load(g):
     return key
 
 GAMES = ['into_the_breach', 'wh_bloodbowl3', 'inscryption', 'faeria', 'duelyst', 'sts1', 'marvel_snap', 'darkest_dungeon', 'sts2',
-         'gwent', 'hs_battlegrounds', 'wh_killteam', 'runeterra', 'wh_underworlds', 'wh_aos_4th', 'wh_40k_10e', 'shadowverse', 'hearthstone', 'mtg']
+         'gwent', 'hs_battlegrounds', 'wh_killteam', 'runeterra', 'wh_underworlds', 'wh_aos_4th', 'wh_40k_10e', 'shadowverse', 'hearthstone', 'mtg',
+         'lorcana', 'stormbound', 'swu', 'tesl', 'monster_train']   # the last five: 40-50 entries read by Claude against defs.txt (21 Oct 2026)
 if __name__ == '__main__':
     cmd, *a = sys.argv[1:]
     if cmd == 'defs': defs()

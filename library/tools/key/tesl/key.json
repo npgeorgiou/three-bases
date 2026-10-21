@@ -1,0 +1,550 @@
+{
+"821587": {
+"tags": [
+[
+"reactions",
+"Prophecy"
+],
+[
+"damage",
+"Deal 4 damage"
+]
+],
+"by": "Claude"
+},
+"822058": {
+"tags": [
+[
+"death_trigger",
+"Last Gasp"
+],
+[
+"generate_cards",
+"Put a Heavy Battleaxe into your hand"
+]
+],
+"by": "Claude"
+},
+"822374": {
+"tags": [
+[
+"haste",
+"Charge"
+]
+],
+"by": "Claude"
+},
+"822306": {
+"tags": [
+[
+"kicker",
+"Exalt 4"
+],
+[
+"on_play",
+"Summon"
+],
+[
+"destroy",
+"Destroy a creature with less power than Grand Inquisitor"
+],
+[
+"stat_condition",
+"less power than"
+]
+],
+"by": "Claude"
+},
+"822265": {
+"tags": [
+[
+"silence",
+"Silence a creature"
+],
+[
+"stat_gain",
+"give it +2/+0"
+]
+],
+"by": "Claude"
+},
+"821507": {
+"tags": [
+[
+"merge_attach",
+"equips an item"
+],
+[
+"stat_gain",
+"he gains +1/+1"
+]
+],
+"by": "Claude"
+},
+"821718": {
+"tags": [
+[
+"cost_reduction",
+"reduce his cost to 1"
+],
+[
+"turn_number",
+"during your first turn"
+]
+],
+"by": "Claude"
+},
+"821570": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"generate_cards",
+"Put a Firebolt into your hand"
+],
+[
+"deck_position",
+"if the top card of your deck"
+]
+],
+"by": "Claude"
+},
+"821979": {
+"tags": [
+[
+"stat_gain",
+"Give friendly Werewolves +1/+1"
+],
+[
+"tribal",
+"friendly Werewolves"
+],
+[
+"stances",
+"Beast Form"
+]
+],
+"by": "Claude"
+},
+"822262": {
+"tags": [
+[
+"evasion",
+"ignores Guards"
+],
+[
+"cross_lane",
+"can attack creatures in any lane this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "Claude"
+},
+"821926": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"Then discard a card"
+]
+],
+"by": "Claude"
+},
+"821953": {
+"tags": [
+[
+"stat_loss",
+"Give an enemy creature -1/-1"
+]
+],
+"by": "Claude"
+},
+"822146": {
+"tags": [
+[
+"quests",
+"Treasure Hunt"
+],
+[
+"stat_gain",
+"+6/+6"
+]
+],
+"by": "Claude"
+},
+"821850": {
+"tags": [
+[
+"deathtouch",
+"Lethal"
+],
+[
+"on_play",
+"Summon"
+],
+[
+"damage",
+"Deal 1 damage"
+]
+],
+"by": "Claude"
+},
+"822292": {
+"tags": [
+[
+"on_attack",
+"Rally"
+],
+[
+"death_trigger",
+"Last Gasp"
+],
+[
+"in_hand_buff",
+"Give a random creature in your hand +2/+2"
+],
+[
+"random_effect",
+"a random creature in your hand"
+]
+],
+"by": "Claude"
+},
+"821667": {
+"tags": [
+[
+"direct_damage",
+"Pilfer"
+],
+[
+"tutor",
+"Draw a random support from your deck"
+]
+],
+"by": "Claude"
+},
+"821544": {
+"tags": [
+[
+"shield",
+"Give a creature a Ward"
+]
+],
+"by": "Claude"
+},
+"821970": {
+"tags": [
+[
+"draw",
+"draw a card"
+],
+[
+"stealth",
+"gains Cover"
+]
+],
+"by": "Claude"
+},
+"821469": {
+"tags": [
+[
+"haste",
+"Charge"
+]
+],
+"by": "Claude"
+},
+"822351": {
+"tags": [
+[
+"merge_attach",
+"+2/+0"
+],
+[
+"stat_gain",
+"+2/+0"
+]
+],
+"by": "Claude"
+},
+"821861": {
+"tags": [
+[
+"stat_gain",
+"+0/+3"
+]
+],
+"by": "Claude"
+},
+"821908": {
+"tags": [
+[
+"activated",
+"Activate"
+],
+[
+"sacrifice",
+"Sacrifice a creature"
+],
+[
+"tutor",
+"summon a creature from your deck that costs 1"
+]
+],
+"by": "Claude"
+},
+"822100": {
+"tags": [
+[
+"summon",
+"Summon a random 1-cost creature in each lane"
+],
+[
+"random_effect",
+"a random 1-cost creature"
+],
+[
+"cross_lane",
+"in each lane"
+]
+],
+"by": "Claude"
+},
+"822263": {
+"tags": [
+[
+"bounce_enemy",
+"Unsummon a creature in this lane"
+],
+[
+"stat_condition",
+"with power less than"
+]
+],
+"by": "Claude"
+},
+"822270": {
+"tags": [
+[
+"on_damaged",
+"When a friendly creature takes damage on your turn"
+],
+[
+"stat_gain",
+"give it +2/+0"
+]
+],
+"by": "Claude"
+},
+"821374": {
+"tags": [
+[
+"damage",
+"Two creatures deal damage to each other"
+]
+],
+"by": "Claude"
+},
+"822192": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"board_clog",
+"Summon a 0/1 Target with Guard for your opponent in each lane"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"deathtouch",
+"Lethal"
+]
+],
+"by": "Claude"
+},
+"821922": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"cost_increase",
+"Your opponent's cards cost 1 more next turn"
+]
+],
+"by": "Claude"
+},
+"821730": {
+"tags": [
+[
+"reactions",
+"Prophecy"
+],
+[
+"lifesteal",
+"Drain"
+]
+],
+"by": "Claude"
+},
+"822218": {
+"tags": [
+[
+"lifesteal",
+"Drain"
+]
+],
+"by": "Claude"
+},
+"821689": {
+"tags": [
+[
+"stat_gain",
+"+2/+0 on your turn"
+]
+],
+"by": "Claude"
+},
+"822083": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"stat_loss",
+"Give all enemy creatures in this lane -1/-0"
+]
+],
+"by": "Claude"
+},
+"821552": {
+"tags": [
+[
+"death_trigger",
+"Last Gasp"
+],
+[
+"generate_cards",
+"Put an Iron Sword into your hand"
+]
+],
+"by": "Claude"
+},
+"821785": {
+"tags": [
+[
+"resource_gain",
+"+1 max magicka"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"self_destruct",
+"sacrifice this"
+],
+[
+"summon",
+"summon an 8/8 Swamp Leviathan in each lane"
+]
+],
+"by": "Claude"
+},
+"821471": {
+"tags": [
+[
+"on_attack",
+"When Fiery Imp attacks"
+],
+[
+"direct_damage",
+"deal 2 damage to your opponent"
+]
+],
+"by": "Claude"
+},
+"821394": {
+"tags": [
+[
+"silence",
+"Removes all text and effects from a creature"
+]
+],
+"by": "Claude"
+},
+"821398": {
+"tags": [
+[
+"bounce_enemy",
+"Returns a creature to its owner's hand"
+]
+],
+"by": "Claude"
+},
+"822144": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"count_payoff",
+"for each other Skeever you've summoned this game"
+],
+[
+"tribal",
+"Skeever"
+]
+],
+"by": "Claude"
+},
+"822030": {
+"tags": [
+[
+"reactions",
+"Prophecy"
+],
+[
+"taunt",
+"Guard"
+],
+[
+"death_trigger",
+"Last Gasp"
+],
+[
+"in_hand_buff",
+"Reduce the cost of a random Dragon in your hand by 1"
+]
+],
+"by": "Claude"
+},
+"821381": {
+"tags": [
+[
+"transform",
+"It transforms into a stronger creature"
+]
+],
+"by": "Claude"
+}
+}
