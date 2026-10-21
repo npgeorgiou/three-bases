@@ -18,11 +18,9 @@ steps() {   # $1 = db
   D="$1"
   run() { $P "$@"; $P step_log.py "$D" "$(echo "$*" | sed "s#$D##")"; }   # each step, then what it removed (step_log.py)
   run compact_text.py "$D" expand
-  run start_clean.py "$D"   # one chain: the build starts from the card data and the record files
   run concept_tree.py "$D" restore
+  run start_clean.py "$D"   # one chain: every build starts from the frozen base (make_base.py)
   run concept_defs.py "$D"
-  run seed_records.py "$D" before
-  run general_tags.py "$D"   # first tagging from the general patterns and keyword links (one chain: the build starts from the card data)
   run game_patterns.py "$D" patterns
   run drop_untagged.py "$D"
   run fix_grants.py "$D"
@@ -39,7 +37,6 @@ steps() {   # $1 = db
   run trigger_pairs.py "$D"
   run regression.py "$D" enforce
   run concept_tree.py "$D" apply
-  run seed_records.py "$D" after
   for f in reviews/*.json reviews_outcome/*.json; do g=$(basename "$f" .json); run apply_review.py "$D" "$g" "$f" new; done   # reviews are in the new ids (fixes/f15)
   run leave_triggers.py "$D"   # leave-play triggers by whose (death_side.py); after the tree move, which knows the new ids
   run regression.py "$D" enforce_new
@@ -59,9 +56,9 @@ steps() {   # $1 = db
 rm -f "$OUT" "$OUT.steps.tsv" "$OUT.work.steps.tsv"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the database is stored without its indexes (indexes.py)
 if [ $# -gt 0 ]; then   # loads: the new cards go into the library copy, then every step runs over all games (one chain)
   GAMES=$(for a in "$@"; do echo "${a%%=*}"; done | sort -u | tr '\n' ' ')
-  $P compact_text.py "$OUT" expand
+  $P compact_text.py "$OUT" expand; $P concept_tree.py "$OUT" restore   # old ids, as the patterns read them
   for a in "$@"; do $P load_cards.py "$OUT" "${a%%=*}" "${a#*=}"; done
-  $P seed_records.py "$OUT" keep $GAMES   # their card-field tags (data_rule) join records/seed_tags.tsv before the clean start
+  $P start_clean.py "$OUT" keep $GAMES   # their first tags join the base
 fi
 steps "$OUT"
 $P step_log.py "$OUT" --done
