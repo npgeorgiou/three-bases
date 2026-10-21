@@ -95,8 +95,8 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
   (`trigger_pairs.py <db> pairs_only`).
 - Scripts that rewrite `tools/step3/decisions.tsv` must keep the other scripts' lines (each script marks its own: `|key`, `|trigger`,
   `|amp`, `|redirect`, `|manual`).
-- After any tag change run all of: `regression`, `combo_check.py`, `realworld.py -v`, `realworld_why.py`, `lost_pairs.py <old> <new>`,
-  and compare real-world cases one by one, not only the totals.
+- After any tag change run `compare_builds.py <stored> <new>` (key, real-world cases per game and kind, regression, combos, lost
+  pairs, with every case newly met or missed) and keep the change only if nothing is worse; `realworld_why.py` says why a case misses.
 
 ## 5. Never
 - Never read cards any other way than "Reading cards" below: no reading agents, no batches, no second or third reader.

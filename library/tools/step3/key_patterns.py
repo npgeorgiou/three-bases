@@ -6,14 +6,21 @@ from) and kept only if it matches there at least MIN times and is 90%+ right (ri
 a broader one below the four branches). Both directions are run; the kept candidates of a game and concept are joined into one regex.
 Claude's choices (not in the plan): numbers as \\d+, a phrase must be at least 4 characters and not only the name, MIN = 3 held-out
 matches, never a candidate that matches an entry a hand review dropped the concept from (regression.tsv 'absent'), and the role is the concept's most common role among the existing patterns ('does' when it has none).
+Two more checks (21 Oct 2026): a phrase that is only one of the game's keyword names matches only where the game prints keywords
+(the position rule of kw_links.py, so "with Prophecy" or "the Consume pile" do not tag), and a candidate is kept only if it is also
+90%+ right on the whole key (ADDING_GAMES.md 4b.6), not only on the held-out half.
 Writes the 'new' lines of tools/step3/decisions.tsv (narrow lines are kept as they are) and prints counts only.
-Usage: key_patterns.py [db]"""
+Only the games named are rewritten; every other game's lines stay as they are, so a game changes only when it is worked on and
+measured (compare_builds.py).
+Usage: key_patterns.py <db> <game> [<game> ...]"""
 import collections, json, os, random, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); TOOLS = os.path.dirname(HERE)
 sys.path.insert(0, HERE); sys.path.insert(0, TOOLS)
 import patterns3 as P
 K = P.K
-DB = sys.argv[1] if len(sys.argv) > 1 else P.DB
+if len(sys.argv) < 3: sys.exit('usage: key_patterns.py <db> <game> [<game> ...]')
+DB, ONLY = sys.argv[1], set(sys.argv[2:])
+assert ONLY <= set(P.GAMES), ONLY - set(P.GAMES)
 MIN, PREC = 3, 0.9
 c = sqlite3.connect(DB)
 roles = collections.defaultdict(collections.Counter)
@@ -28,6 +35,17 @@ for r in csv.DictReader(open(os.path.join(TOOLS, 'regression.tsv'), encoding='ut
         absent[r['game'], r['concept']].add(mk.get(int(r['entity']), int(r['entity'])))
 ent = {i: (g, n, t) for i, g, n, t in c.execute('SELECT id, game, name, text FROM entities')}
 
+KW_AFTER = r"(?=\s*(?:$|[\n.,:;(/]|\d|\s-))"
+KW_ACT = r"\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b"
+kwnames = collections.defaultdict(set)   # game -> its keyword names, lower case
+for g, n in c.execute("SELECT game, name FROM entities WHERE category='keyword'"): kwnames[g].add(re.sub(r'\s+', ' ', n.lower()).strip())
+
+def kw_rx(phrase, concept):
+    # a keyword name counts only where the game prints keywords (kw_links.py valid())
+    k = re.sub(r'(\\ )+', r'\\s+', re.escape(phrase))
+    r = K.KW_B + k + KW_AFTER
+    return '(?:%s|%s)' % (r, K.KW_B + k + KW_ACT) if concept in K.KW_ACTION else r
+
 def rx(phrase):
     s = re.escape(phrase)
     s = re.sub(r'(\\ )+', r'\\s+', s)
@@ -37,7 +55,7 @@ def rx(phrase):
     return s
 
 out = []; stats = collections.Counter()
-for g in P.GAMES:
+for g in [g for g in P.GAMES if g in ONLY]:
     f = os.path.join(TOOLS, 'key', g, 'key.json')
     if not os.path.exists(f): continue
     raw = K.load(g)   # with the keyword credit (KEY_BUG.md)
@@ -53,7 +71,7 @@ for g in P.GAMES:
                 if k not in K.TREE or k in K.GROUPS: continue
                 w = re.sub(r'\s+', ' ', P.norm_text(g, ent[i][1], words)).strip(' .,;:')
                 if len(w) < 4 or w == 'name' or not re.search(rx(w), text[i], re.I): continue
-                cand.add((k, rx(w)))
+                cand.add((k, kw_rx(w, k) if w in kwnames[g] else rx(w)))
         for k, p in cand:
             r = re.compile(p, re.I); n = ok = 0
             for i in half[b]:
@@ -61,14 +79,17 @@ for g in P.GAMES:
                     n += 1; ok += P.right(k, keyset[i])
             stats['candidates'] += 1
             if any(r.search(P.norm_text(g, ent[e][1], ent[e][2])) for e in absent[g, k] if e in ent): stats['hit a reviewed drop'] += 1; continue
-            if n >= MIN and ok >= PREC * n: kept[k].add(p)
+            if not (n >= MIN and ok >= PREC * n): continue
+            m = [i for i in ids if r.search(text[i])]   # the whole key
+            if sum(P.right(k, keyset[i]) for i in m) >= PREC * len(m): kept[k].add(p)
+            else: stats['under 90% on the whole key'] += 1
     for k in sorted(kept):
         ps = sorted(kept[k]); stats['kept'] += len(ps); stats['concepts'] += 1
         p = '|'.join('(?:%s)' % x for x in ps) if len(ps) > 1 else ps[0]
         out.append(f'new\t{k}|{role(k)}|{g}|key\t{g}\t{p}')
     print(f'{g:18} key {len(ids):4}  concepts {len(kept):3}  patterns {sum(len(v) for v in kept.values()):4}')
 D = os.path.join(HERE, 'decisions.tsv')
-keep = [l for l in open(D, encoding='utf-8') if not (l.startswith('new\t') and l.split('\t')[1].endswith('|key')) and not l.startswith('# key_patterns')]   # other scripts' new lines stay
+keep = [l for l in open(D, encoding='utf-8') if not (l.startswith('new\t') and l.split('\t')[1].endswith('|key') and l.split('\t')[2] in ONLY) and not l.startswith('# key_patterns')]   # other games' and other scripts' lines stay
 with open(D, 'w', encoding='utf-8') as fh:
     fh.writelines(keep)
     fh.write('# key_patterns.py (patterns from the answer key quotes, 90%+ right on held-out key entries): new <concept|role|game|key> <game> <regex>\n')

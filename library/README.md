@@ -43,9 +43,9 @@ What is in, beyond the cards each source lists as playable:
 - **Warhammer factions** are armies: a BSData "Library" file's entries belong to the army that uses it, and an Age of Sigmar army of renown or Legends list belongs to its army (`extra.army_of_renown`, `extra.legends`).
 
 ## Structure
-**entities**: every card, unit, spell, item, location, ability, rule, keyword (its definition as text) and tribe, with game, category, faction, cost, stats and rules text. `variants` lists other names the same mechanic was printed under; **merged_entities** maps each merged name to the entry that kept it, so commands still find it. Keywords no card text uses were dropped on 12 Oct 2026 (`tools/fixes/f13`); one that later loses its last card is marked with `extra.note` "used by no card text in this library".
+**entities**: every card, unit, spell, item, location, ability, rule, keyword (its definition as text) and tribe, with game, category, faction, cost, stats and rules text. `variants` lists other names the same mechanic was printed under; **merged_entities** maps each merged name to the entry that kept it, so commands still find it. Keywords no card text uses are dropped; one that later loses its last card is marked with `extra.note` "used by no card text in this library".
 
-**concepts**: Claude's cross-game network of 293 design concepts (tree v3, 13 Oct 2026, plus seven triggers added on 19-20 Oct 2026: on_draw, on_discard, on_lifegain, on_block, on_targeted, on_sacrifice, on_life_loss; the readable tree, every move and its reason are in `CONCEPT_TREE.md`). Effects answer first **who it helps or hurts**: helps my side, hurts the enemy, hurts my side (drawback), neutral game rules. A concept has a second parent only when it is always a kind of both (lifesteal: heal and damage). For example, "no damage output" holds can't attack (attack lock), attack set to 0 and damage prevention. It sits under "suppress" (hurts the enemy), next to can't block, immobilize, silence and total disable (stun, freeze). "Make a unit stronger" (buff) holds stat gain and the combat bonuses; "make a unit weaker" (debuff) holds stat loss and penalties. "This turn / round only" is a separate marker. Every definition says what counts, what doesn't and where it goes instead, with two cards that fit and one look-alike that doesn't (`tools/concept_tree_v3.txt`, `tools/concept_examples.tsv`; the build step `tools/concept_tree.py` moves the older steps' tags to the tree). The view `concept_tree` gives all descendants. **Parent and child rule** (every game): an entry keeps only the narrowest concepts of a branch (ping, not also damage), in its tags and its trigger pairs (`tools/parent_rule.py`); every query command finds the parent through `concept_tree`. Definitions and parents fixed on 12 Oct 2026, with the wording patterns that feed them, are in `tools/concept_defs.py`.
+**concepts**: Claude's cross-game network of 293 design concepts (tree v3; the readable tree, every move and its reason are in `CONCEPT_TREE.md`). Effects answer first **who it helps or hurts**: helps my side, hurts the enemy, hurts my side (drawback), neutral game rules. A concept has a second parent only when it is always a kind of both (lifesteal: heal and damage). For example, "no damage output" holds can't attack (attack lock), attack set to 0 and damage prevention. It sits under "suppress" (hurts the enemy), next to can't block, immobilize, silence and total disable (stun, freeze). "Make a unit stronger" (buff) holds stat gain and the combat bonuses; "make a unit weaker" (debuff) holds stat loss and penalties. "This turn / round only" is a separate marker. Every definition says what counts, what doesn't and where it goes instead, with two cards that fit and one look-alike that doesn't (`tools/concept_tree_v3.txt`, `tools/concept_examples.tsv`; the build step `tools/concept_tree.py` moves the older steps' tags to the tree). The view `concept_tree` gives all descendants. **Parent and child rule** (every game): an entry keeps only the narrowest concepts of a branch (ping, not also damage), in its tags and its trigger pairs (`tools/parent_rule.py`); every query command finds the parent through `concept_tree`. Definitions and parents, with the wording patterns that feed them, are in `tools/concept_defs.py`.
 
 **entity_concepts**: links each entry to its concepts with a role (does, grants, benefits, counters, cost; exhibits for design problems) and the method that made the link (reliability order in SEARCH_GUIDE). A card that gives a keyword to others has that keyword's concepts as `grants`, not `does`.
 
@@ -58,7 +58,7 @@ What is in, beyond the cards each source lists as playable:
 - **variant_of:** the same mechanic in another faction, and a Slay the Spire upgrade to its base card.
 - **equivalent_keyword:** the same keyword in another game.
 
-**Text positions (Step 6, 19 Oct 2026)**: tag evidence and pair clauses are stored as positions in the entry's own text (`ev_form/ev_pos/ev_len`, `cl_form/cl_pos/cl_len`; form 0 the stored text, 1 the text as patterns read it, 2 a note in `text_notes`). `tools/compact_text.py` explains the forms and cuts the text back out (`evidence_text`, `clause_text`); the build expands them first and compacts them last.
+**Text positions**: tag evidence and pair clauses are stored as positions in the entry's own text (`ev_form/ev_pos/ev_len`, `cl_form/cl_pos/cl_len`; form 0 the stored text, 1 the text as patterns read it, 2 a note in `text_notes`). `tools/compact_text.py` explains the forms and cuts the text back out (`evidence_text`, `clause_text`); the build expands them first and compacts them last.
 
 **trigger_effect**: about 82,500 "when X, do Y" pairs, from every clause of every entry and from the entry's keywords. Each pair has a **frequency** limit and its basis:
 - **per_card:** a spell, a Place/on-play effect, the card's own death, or once per game.
@@ -66,7 +66,7 @@ What is in, beyond the cards each source lists as playable:
 - **unbounded:** fires on other units' events or on repeated events.
 - **static:** an aura, not a trigger.
 
-**faction_signature**: which mechanics are prominent in which faction (`tools/signature.py`, rule of 20 Oct 2026). One rule for every game, concept and archetype: a faction's mechanic is prominent when (1) its share of the faction's cards is at least 1.5 times the share among all the game's other cards, and (2) that difference is not chance (a faction of this size drawn at random from the game would have this many with probability under 5%: a one-sided Fisher exact test). A card of a combined faction (Lorcana Amber-Steel, Legends and Star Wars Unlimited pairs, Gwent "Syndicate / X", Magic "Multicolor (BR)") counts for each of its factions; factions under 20 cards are left out.
+**faction_signature**: which mechanics are prominent in which faction (`tools/signature.py`). One rule for every game, concept and archetype: a faction's mechanic is prominent when (1) its share of the faction's cards is at least 1.5 times the share among all the game's other cards, and (2) that difference is not chance (a faction of this size drawn at random from the game would have this many with probability under 5%: a one-sided Fisher exact test). A card of a combined faction (Lorcana Amber-Steel, Legends and Star Wars Unlimited pairs, Gwent "Syndicate / X", Magic "Multicolor (BR)") counts for each of its factions; factions under 20 cards are left out.
 - **signature mechanics:** prominent, and the faction is one of the two with the highest share. Share and lift (share over the game average) are stored for reading.
 - **keyword signatures** (`kw:<keyword>`): a keyword whose cards are 60%+ that faction's (8+ cards);
 - **splash:** every other faction that uses a signature mechanic, sorted by share.
@@ -83,28 +83,41 @@ What is in, beyond the cards each source lists as playable:
 In a fresh chat, Claude clones the repository and runs `python3 library/tools/query.py <command>` (the script finds the database next to `tools/`; `TB_LIB` overrides). The commands and the rules for reading results are in SEARCH_GUIDE.md. The database never enters the conversation, only printed results do, so a design question costs a few short queries.
 
 ## Maintenance
-- **Tag-fix plan, final (20 Oct 2026)**: the library is the build of that day; `tools/final/report.md` compares it with the original (c7a77a4) on the answer key, the 322 real-world cases and the combos (fewer wrong and fewer missed tags in all 20 games; real-world 161 -> 162; combos 80/82 both). The key credits the tags of the keywords a card has (`tools/key/key.py credit`); patterns built from the key's quotes (`tools/step3/key_patterns.py`), old patterns right less than half the time switched off or redirected (`tools/step3/switch_off.py`), new triggers and amplifiers (`tools/step3/trigger_patterns.py`, `tools/step3/amp_patterns.py`), all as lines of `tools/step3/decisions.tsv`; review records in the tree v3 ids (`tools/fixes/f15`), and where a review and the key disagree on what a card does the key wins (`tools/key_wins.py`). Lost trigger pairs by cause: `tools/lost_pairs.py`.
-**Lorcana, Stormbound, Star Wars: Unlimited, The Elder Scrolls: Legends and Monster Train added (20 Oct 2026)**: patterns in `tools/patterns/<game>.txt` (every pattern checked on sampled matches), mechanics checklists from guides in `tools/mechanics/<game>.txt` checked with `tools/coverage.py`, 33, 18, 20 and 20 real-world cases. Later fixes the checklists found: the outcome-tree step wiped game-specific tags of the concepts it recomputes (now applied), keywords given to other cards passed nothing on (`kw_sync.py` now adds them as grants), reminder text is read the same way in every step (`reading.py`), tapping, exhausting and exerting an enemy count as total disable. Build fixes found on the way: `build.sh` expands the database before loading and reads load paths from the caller's folder; `load_cards.py` honours a `!` line in an old concept id for its new ids and takes a new game's `_game` row; loading is insert-only (`add_games.py`): the steps run on a copy holding only the new games and their rows are added; the build stops if any existing row changed (it replaced keep_old.py, which re-ran every step on the whole library and lost 176 old entries on every rebuild through drop_untagged). Prominence of mechanics in factions measured by one rule, archetypes as recipes (see faction_signature). Real-world test: 242 of 405 (`REALWORLD_REPORT.md`).
-**D&D 5e removed (20 Oct 2026)**: Kaptain's decision; a one-time script (since deleted) removed its entries and every row pointing at them, and its scripts, patterns, reviews, key and cases are gone. Real-world test since: 150 of 300 (D&D had 12 of 22); the other games are unchanged.
-The build is one chain (21 Oct 2026): it starts from the frozen base tagging (`base_tags`, `base_pairs`, `base_patterns`, made once by `tools/make_base.py`, because the first build's corpus and code are gone), the card data and the record files, and its output never depends on an earlier build; building twice gives identical tags (checked).
+**The build** is one chain: `sh tools/build.sh three-bases-library.sqlite <scratch>/new.sqlite` (about 10 minutes; one build at a
+time, two writers corrupt the scratch database). It starts from the frozen base tagging (`base_tags`, `base_pairs`,
+`base_patterns`, made once by `tools/make_base.py`), the card data and the record files, so its output never depends on an earlier
+build. Every build writes `<out>.steps.tsv` (what each step removed, `step_log.py`). The stored file is compact (`compact_text.py`)
+and without its indexes (`indexes.py`); copy a checked build over `three-bases-library.sqlite`, then commit and push.
 
-- **Fix wrong tags** in these places, then run `tools/build.sh <in.sqlite> <out.sqlite>`:
-  - the per-game pattern files (`tools/patterns/<game>.txt`: `concept|role|regex` adds a pattern, `!concept|pattern` switches a general pattern off for that game);
-  - the hand reviews (`tools/reviews/<game>.json`; a decision also reaches entries of the same category with the very same text), then `regression.py <db> make` and `regression.py <db> enforce`;
-  - the keyword reviews against the outcome tree (`tools/reviews_outcome/<game>.json`).
-- **Tag audit** (12 Oct 2026): `tools/audit/audit.py` (sample, show, trial, confirm, blind, score); per game the errors found in the 150 work entries and the blind checker's judgments of the 50 held-out entries (the samples, snapshots and blind files were removed after scoring). A newer review decision replaces an older opposite one; a reviewed keyword passes added concepts only to entries that have the keyword, not to those that only mention it.
-- **Build log and reloads:** every build writes `<out>.steps.tsv` (what each step removed, `step_log.py`); `tools/reload_game.sh <scratch> <game>` reloads a game with today's patterns, keeping its ids.
-- **Add cards:** a converter in `tools/convert/` turns a source file into the load format (described in `tools/load_cards.py`). Then run `tools/build.sh <in.sqlite> <out.sqlite> <game>=<cards.json> ...`. New cards get the same tagging as the rest of their game; older entries stay as they were, apart from merges and links to the new cards.
-- **How entries are tagged:** an entry gets the general wording patterns (all games) once, when it is loaded; the game's own patterns, keyword inheritance, outcome concepts, link rules and trigger pairs are re-derived on every build. Text is read lower-cased with the entry's own name as "name"; Magic without reminder text. Entries that no pattern or keyword reaches are dropped.
-- **One-time fixes** of 12 Oct 2026 are in `tools/fixes/` (f01 Magic cut, f02 Scryfall data, f04 text clean-up, f06 leftovers, f08 weak patterns, f09 whole-entry patterns, f10 Magic non-token cards, f11 icon words in Slay the Spire text and stat lines for units without them, f12 review tags that older builds copied across categories, f13 the 19 keywords no card used, f14 the one untagged entry with no mechanic, f16 the removal of D&D 5e; the other 51 untagged entries were read and tagged in the reviews); f03 (granted keywords are not "does"), f05 (faction names and table) and f07 (keyword links, concept tree) are also build steps.
+**Where tags come from**, and where to fix them:
+- general wording patterns (all games), applied once when an entry is loaded;
+- the game's own patterns, `tools/patterns/<game>.txt` (`concept|role|regex` adds one, `!concept|pattern` switches a general
+  pattern off for that game);
+- `tools/step3/decisions.tsv`: narrowed patterns and new ones, applied by `pattern_fix.py` to the games listed for it in
+  `tools/step_games.json`. Its `|key` lines are written by `tools/step3/key_patterns.py`, which turns the answer key's quoted words
+  into patterns and keeps one only if it is 90%+ right on the key half it was not made from and on the whole key; a phrase that is
+  only a keyword name matches only where the game prints keywords. It rewrites only the games it is given
+  (`key_patterns.py <db> <game> ...`); re-run it for a game whose key or patterns change;
+- the hand reviews (`tools/reviews/<game>.json`, then `regression.py <db> make`) and the keyword reviews against the outcome tree
+  (`tools/reviews_outcome/<game>.json`); where a review and the answer key disagree on what a card does, the key wins (`key_wins.py`);
+- keyword inheritance, outcome concepts, link rules and trigger pairs, re-derived on every build. Text is read lower-cased with the
+  entry's own name as "name"; Magic without reminder text. Entries that no pattern or keyword reaches are dropped.
 
-The build stops if any check fails:
-- **regression set** (`regression.py <db> check`): 21,282 reviewed tags must hold (a reviewed parent also holds through a narrower concept);
-- **combo set** (`combo_check.py <db>`): 82 enabler → payoff pairs, 80 found, 2 known misses;
-- **trigger coverage** (`trigger_pairs.py <db> check`): at least 50% of entries with a trigger in every game;
-- **query tests** (`test_query.py <db>`): all 16 commands.
+**Add or reload a game:** `ADDING_GAMES.md` (converter in `tools/convert/`, load format in `tools/load_cards.py`,
+`build.sh <in> <out> <game>=<cards.json>`; `tools/reload_game.sh <scratch> <game>` reloads a game keeping its ids).
 
-Sources of the later loads (converter in brackets):
+**The build stops** if any of these fails: the regression set (`regression.py <db> check`, the reviewed tags), the combo set
+(`combo_check.py`, 82 enabler -> payoff pairs, 2 known misses), trigger coverage (`trigger_pairs.py <db> check`, 50%+ of entries with
+a trigger in every game) and the query tests (`test_query.py`, all 16 commands).
+
+**After every change**, compare the build with the stored library and keep it only if nothing is worse:
+`python3 tools/compare_builds.py three-bases-library.sqlite <scratch>/new.sqlite <scratch>/cmp`. Per game it prints the answer-key
+wrong and missed tags per 100 entries and the real-world cases met per kind (signature, archetype, combo, splash; cases in
+`tools/realworld/<game>.tsv`); then the regression set, the combos, the real-world cases newly met or missed, and the trigger ->
+effect pairs lost (`lost_pairs.py`). Why a case misses: `realworld_why.py <db>`. A game's new wrong key tags: `keydiff.py`.
+Against the original library (`git show c7a77a4:library/three-bases-library.sqlite`): `final_compare.py <orig> <new> check`.
+
+**Sources** of the card data (converter in brackets):
 - Disney Lorcana (20 Oct 2026): LorcanaJSON as bundled in the npm package lorcana-oracle 0.1.2, sets 1-12 (12 incomplete) and Illumineer's Quest [conv_lorcana.py]; keywords from the source's keyword field, definitions from the reminder text, keyword concepts in `reviews/lorcana.json`; 264 vanilla characters (no text) dropped, 248 repeats merged.
 - Star Wars: Unlimited (20 Oct 2026): sets/*.json of github.com/Yannick101984/swucardex-data (commit a86faed), an export of the official card database: SOR to ASH and Intro Battle: Hoth [conv_swu.py]; English text from its localisations; keyword names (French in the export) matched to the English word on every card that has them; trait names translated by Claude.
 - The Elder Scrolls: Legends (20 Oct 2026): database/dbCards.json and dbTokens.json of github.com/edipo2s/TESLegendsTracker (commit c541e82, Apr 2018) [conv_tesl.py]: sets up to Houses of Morrowind, later sets missing; keyword definitions are Claude's summaries.
@@ -127,34 +140,32 @@ Sources of the later loads (converter in brackets):
 - About 280 Magic token links are left out: Scryfall lists a related token whose name and type several tokens share, and the card's text does not say which one.
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
-## Suggestions for improving the library
-Claude's suggestions (20 Oct 2026), from the real-world test and the checks of that day, with their state. The open work, in
-order, is in HANDOFF.md (the one list).
-1. **Mechanics check on the 19 older games** (Into the Breach done and kept, Inscryption checked, Faeria waiting on a re-measure;
-   16 left, HANDOFF.md open work 2). For each: the guide pages and rules terms into `tools/mechanics/<game>.txt`, then
-   `coverage.py --mechanics`; fix the gaps in `tools/patterns/<game>.txt`, then reload the game (suggestion 2) and keep the reload
-   only if the key, regression and real-world cases are not worse. A plain reload is not better by itself: Into the Breach reloaded
-   with today's patterns went from 74 to 130 wrong tags per 100 key entries (a general "tile" pattern tags it terrain).
-2. **Reload an older game** (done 20 Oct 2026). `tools/reload_game.sh <scratch> <game>` exports the game (`export_game.py`), drops
-   it and loads it insert-only; every entry keeps its id, ext_id, name, variants and links, so reviews, key and regression still
-   apply. Tested on Into the Breach: all regression lines pass, real-world unchanged.
-3. **Log what each build step removes** (done 20 Oct 2026). `tools/step_log.py` runs after every step of `build.sh`, writes every
-   drop to `<out>.steps.tsv` and warns when one game loses half or more of a concept's tags while the other games keep theirs.
-4. **Audit the cases** (done 20 Oct 2026). Every case was checked against its source page; the `why` column now holds the source's
-   words. 43 cases the source does not support were dropped, 3 narrowed (Runeterra Freljord attack_zero, Slay the Spire Ironclad
-   permanent_growth, Star Wars Unlimited Command temporary_buff), 18 moved to a reachable page that says the same, 2 moved from
-   sts1 to sts2 (the source is about Slay the Spire 2). Card names the source writes differently were changed to the library's
-   names (MODOK, Fake Ciri, Hellblasters). Real-world test after the audit: 217 of 362; with 43 new
-   cases from the same pages: 245 of 405.
-5. **More cases, then learn the archetype recipes** (started: 43 cases added). Learned weights over-fit on 405 cases. With ~50 cases per game, split
-   50/50 with seed 1, `learn_recipes.py` can be tried again.
-6. **Tribal from type links** (open). Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2.
-   A rule "a card that names a type of its game cares about that type" needs only a short stop list per game.
-7. **Combos with no connection** (open). After the audit: 11 pairs have both cards but no connection, 9 have a card the library
-   lacks (Inner Fire, Cobalt Guardian, Obol, Wong, Pestermite, Star Battery, Impulsor, Baron Rivendare in Battlegrounds, Letho
-   with the old Fake Ciri text). Each unconnected pair needs its two cards' tags read to see which link is missing.
-8. **Answer keys for the new games** (done 21 Oct 2026): read with the one-request method (ADDING_GAMES.md, "Reading cards").
-9. **Missing data through the browser** (open). Legends sets after Houses of Morrowind (UESP), Stormbound cards after February 2022
-   (fandom wiki), the keyword entry texts of Monster Train and two Legends keywords (their definitions are in the mechanics files
-   since 21 Oct 2026). The built-in browser reaches the Stormbound wiki and UESP.
-10. **Warhammer** (not asked). Its army rules are long prose; the mechanics check of suggestion 1 shows what the patterns miss.
+## Improving the library: the open work, in order
+Kaptain's requests in his own words are in `todo.md` (items 11 and 12); the rest are Claude's suggestions.
+1. **Rebuild only the games worked on** (todo.md 11). Find which build steps really cross games and whether a build can run on
+   the changed games alone; every later item needs many builds, at about 10 minutes each.
+2. **Real-world cases for every faction of every game** (todo.md 12): signatures, archetypes and splashes per faction and a good
+   number of combos, where sources exist, each with its source URL in `tools/realworld/<game>.tsv`; and every current and new case
+   checked so its cards are tagged correctly. This includes the 11 combos whose two cards are in the library with no connection
+   (read both cards' tags to see which link is missing) and the 9 with a card the library lacks (Inner Fire, Cobalt Guardian, Obol,
+   Wong, Pestermite, Star Battery, Impulsor, Baron Rivendare in Battlegrounds, Letho with the old Fake Ciri text).
+3. **Mechanics files for the 16 older games without one**: darkest_dungeon, duelyst, gwent, hearthstone, hs_battlegrounds,
+   marvel_snap, mtg, runeterra, shadowverse, sts1, sts2, wh_40k_10e, wh_aos_4th, wh_bloodbowl3, wh_killteam, wh_underworlds. For
+   each: the mechanics its guides name (`name|concept|regex`) and its rules and terms as `# term:` lines with their source
+   (`(assumed)` where no source has it) in `tools/mechanics/<game>.txt`; then `coverage.py --mechanics`, fix the gaps in its
+   patterns, reload it (`reload_game.sh`), keep only if nothing is worse (`compare_builds.py`). One game per pass. Their keys exist;
+   do not re-read them. A plain reload is not better by itself (Into the Breach went from 74 to 130 wrong per 100 key entries).
+   Faeria (has a file): first re-measure its reload on the corrected key, then the same check. In each pass also re-run
+   `key_patterns.py` for the game: its key lines predate that script's whole-key and keyword checks (all 19 regenerated at once
+   on 21 Oct 2026: wrong down, Blood Bowl 163 -> 133, Into the Breach 74 -> 65, Runeterra 84 -> 80, but missed up in Duelyst,
+   Hearthstone, Shadowverse, Slay the Spire, Kill Team and Blood Bowl, so it is measured per game).
+4. **Retire `final_revert.py`.** It still puts back 915 tags of the original library (c7a77a4). Build without it and retire it
+   only if nothing is worse.
+5. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
+   "a card that names a type of its game cares about that type" needs only a short stop list per game.
+6. **Learn the archetype recipes again** (after item 2). Learned weights over-fitted on 405 cases; with about 50 cases per game,
+   split 50/50 with seed 1, try `learn_recipes.py` again.
+7. **Missing data through the browser.** Legends sets after Houses of Morrowind (UESP), Stormbound cards after February 2022
+   (fandom wiki), the keyword entry texts of Monster Train and two Legends keywords. The built-in browser reaches both wikis.
+8. **One vocabulary** (a cleanup): move the pattern files and early build steps to the concept tree's ids, so `concept_tree.py`
+   no longer moves tags on each build and the `v2_*` tables can go.

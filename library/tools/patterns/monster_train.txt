@@ -6,3 +6,5 @@ resource_gain|does|\bgain (\d+ |\+\d+ )?ember\b|\+\d+ ember per turn\b
 heal|does|\brestore (\d+|full|\d+ per x)\b|\bto full health\b
 revive|does|\breturn a random defeated unit\b|\breform\b
 board_limit|does|\b[+-]\d+ capacity\b
+# "Summon:" opening a clause is the unit's on-play ability; "Summon 2 Bog Fly units" creates units (not on play). 10/10 right on the key.
+on_play|does|(?:^|[\n.:;/]\s*)summon:
