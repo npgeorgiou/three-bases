@@ -1,21 +1,48 @@
-signature	Ironclad	permanent_growth	At the start of your turn, gain 2 Strength.	https://www.thegamer.com/slay-the-spire-best-builds/
-signature	Ironclad	exhaust	Exhaust builds with Feel No Pain and Dark Embrace offer insane value.	https://slaythespire.gg/guides/slay-the-spire-best-character
-signature	Silent	damage_over_time	enemies take damage equal to their current Poison stacks	https://www.thegamer.com/slay-the-spire-best-builds/
-signature	Silent	discard	drawing and discarding cards to get exactly what you need	https://www.thegamer.com/slay-the-spire-best-builds/
-signature	Silent	generate_cards	Add 3 Shivs into your hand.	https://www.thegamer.com/slay-the-spire-best-builds/
-signature	Defect	slots_queue	Gain 2 Orb slots.	https://www.thegamer.com/slay-the-spire-best-builds/
-signature	Watcher	stances	Stances (Calm, Wrath, Divinity) enable insane burst damage.	https://slaythespire.gg/guides/slay-the-spire-best-character
-signature	Watcher	retain	Watcher - Retain	https://www.thegamer.com/slay-the-spire-best-builds/
-signature	Watcher	selection	the Watcher also has a powerful mechanic called Scry	https://www.thegamer.com/slay-the-spire-best-builds/
-archetype	Ironclad	fortress	allow you to build a massive Block value	https://www.thegamer.com/slay-the-spire-best-builds/
-archetype	Ironclad	scaling	Strength scaling builds are deadly (Demon Form, Limit Break, Inflame).	https://slaythespire.gg/guides/slay-the-spire-best-character
-archetype	Silent	poison_attrition	strong Poison abilities like Catalyst	https://www.thegamer.com/slay-the-spire-best-builds/
-archetype	Silent	spellslinger	those powerful cards are of a low cost	https://www.thegamer.com/slay-the-spire-best-builds/
-archetype	Silent	card_advantage	drawing and discarding cards to get exactly what you need	https://www.thegamer.com/slay-the-spire-best-builds/
-archetype	Defect	fortress	Since the Frost Orbs grant Block on their own	https://www.thegamer.com/slay-the-spire-best-builds/
-archetype	Defect	scaling	scaling a single card to deal as much damage	https://www.thegamer.com/slay-the-spire-best-builds/
-archetype	Watcher	transformation	stance dance	https://slaythespire.gg/guides/slay-the-spire-best-character
-archetype	Watcher	card_advantage	you have so much control over your deck rotation	https://www.thegamer.com/slay-the-spire-best-builds/
-combo	Loop	Defragment	Focus stacking, Loop + Defrag	https://slaythespire.gg/guides/slay-the-spire-best-character
-combo	Worship	Brilliance	Brilliance adds damage equal to the Mantra you've gained	https://www.highgroundgaming.com/slay-the-spire-watcher-guide/
-combo	All for One	Claw	creative combos like All For One + Claw/Recycle engines.	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Ironclad	permanent_growth	Strength scaling	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Ironclad	exhaust	Exhaust builds	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Ironclad	block_armor	Block with Barricade and Entrench	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Ironclad	multi_attack	multi-attack cards	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Silent	damage_over_time	Poison	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Silent	generate_cards	Shivs	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Silent	discard	discard loops	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Silent	draw	drawing and discarding	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Silent	on_ally_play	triggers on every card played	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Defect	slots_queue	Orbs	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Defect	spell_power	Focus stacking	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Defect	block_armor	Frost for Block	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Defect	cost_condition	zero-cost cards with Claw	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Watcher	stances	Calm, Wrath, Divinity	https://slaythespire.gg/guides/slay-the-spire-best-character
+signature	Watcher	retain	Retain	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Watcher	selection	Scry	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Watcher	generate_cards	creating cards	https://www.thegamer.com/slay-the-spire-best-builds/
+signature	Watcher	upgrade	upgrading created cards	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Ironclad	scaling	Strength scaling	https://slaythespire.gg/guides/slay-the-spire-best-character
+archetype	Ironclad	fortress	Bunker	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Silent	poison_attrition	Poison	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Silent	card_advantage	Discard and Draw	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Silent	spellslinger	Momentum, playing many cards	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Defect	fortress	Frost Tank	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Defect	scaling	Focus stacking, Claw	https://slaythespire.gg/guides/slay-the-spire-best-character
+archetype	Watcher	transformation	stance switching	https://www.thegamer.com/slay-the-spire-best-builds/
+archetype	Watcher	card_advantage	Scry and Creation	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Body Slam	Barricade	Block becomes damage	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Body Slam	Entrench	Block becomes damage	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Demon Form	Sword Boomerang	Strength with multi-attack	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Limit Break	Whirlwind	Strength with multi-attack	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Feel No Pain	Dark Embrace	Exhaust value	https://slaythespire.gg/guides/slay-the-spire-best-character
+combo	After Image	A Thousand Cuts	both trigger on every card	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Catalyst	Noxious Fumes	Catalyst doubles Poison	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Catalyst	Bouncing Flask	Catalyst doubles Poison	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Glacier	Capacitor	Frost and more Orb slots	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Recursion	Loop	more use of Orbs	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Loop	Defragment	Focus scaling	https://slaythespire.gg/guides/slay-the-spire-best-character
+combo	All for One	Claw	zero-cost engine	https://slaythespire.gg/guides/slay-the-spire-best-character
+combo	Establishment	Windmill Strike	retained cards get cheaper	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Establishment	Sands of Time	retained cards get cheaper	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Master Reality	Conjure Blade	created cards come upgraded	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Master Reality	Evaluate	created cards come upgraded	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Talk to the Hand	Flurry of Blows	stance switching	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Nirvana	Cut Through Fate	Block whenever you Scry	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Nirvana	Third Eye	Block whenever you Scry	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Nirvana	Just Lucky	Block whenever you Scry	https://www.thegamer.com/slay-the-spire-best-builds/
+combo	Nirvana	Weave	Block whenever you Scry	https://www.thegamer.com/slay-the-spire-best-builds/
