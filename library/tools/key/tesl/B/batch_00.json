@@ -1,0 +1,579 @@
+{
+"821513": [
+[
+"aoe_damage",
+"Deal 1 damage to all enemies"
+],
+[
+"damage",
+"Deal 1 damage"
+]
+],
+"821986": [
+[
+"stat_gain",
+"+2/+2"
+],
+[
+"on_play",
+"Summon:"
+],
+[
+"graveyard",
+"in your discard pile"
+],
+[
+"tribal",
+"a Dragon"
+]
+],
+"822284": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_condition",
+"5 power or more"
+],
+[
+"cost_reduction",
+"reduce the cost of all creature in your hand by 1"
+],
+[
+"in_hand_buff",
+"reduce the cost of all creature in your hand by 1"
+]
+],
+"822234": [
+[
+"on_play",
+"Summon:"
+],
+[
+"cost_reduction",
+"Reduce the cost of an action in your hand by 2"
+],
+[
+"in_hand_buff",
+"Reduce the cost of an action in your hand by 2"
+]
+],
+"822194": [
+[
+"on_play",
+"Summon:"
+],
+[
+"resource_gain",
+"Gain 6 magicka this turn"
+]
+],
+"821436": [],
+"821645": [
+[
+"on_play",
+"Summon:"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"count_payoff",
+"if an enemy rune has been destroyed this game"
+]
+],
+"821495": [
+[
+"reactions",
+"Prophecy"
+],
+[
+"return_to_hand",
+"Unsummon a creature"
+]
+],
+"821904": [
+[
+"stat_gain",
+"+0/+2"
+],
+[
+"on_play",
+"Summon:"
+],
+[
+"stat_gain",
+"power becomes equal to its health"
+]
+],
+"822191": [
+[
+"on_play",
+"Summon:"
+],
+[
+"board_clog",
+"Summon a 0/1 Traget with Guard for your opponent"
+],
+[
+"on_kill",
+"Slay: +1/+1"
+],
+[
+"stat_gain",
+"+1/+1"
+]
+],
+"821854": [
+[
+"on_play",
+"Summon:"
+],
+[
+"damage",
+"Deal 2 damage to an enemy creature"
+],
+[
+"stat_gain",
+"give a friendly creature +2/+2"
+],
+[
+"flexibility",
+"Deal 2 damage to an enemy creature or give a friendly creature +2/+2"
+]
+],
+"821878": [
+[
+"on_attack",
+"attacks a Guard"
+],
+[
+"temporary_buff",
+"until end of turn"
+],
+[
+"stat_gain",
+"+3/+0"
+],
+[
+"excess_damage",
+"Breakthrough"
+]
+],
+"822077": [
+[
+"on_play",
+"Summon:"
+],
+[
+"steal",
+"Steal the top card of the opponent's deck"
+],
+[
+"junk_cards",
+"replace it with a Counterfeit Trinket"
+],
+[
+"deck_position",
+"top card of the opponent's deck"
+]
+],
+"821780": [
+[
+"on_ally_play",
+"When you summon another"
+],
+[
+"stat_gain",
+"+0/+2"
+]
+],
+"822219": [
+[
+"on_play",
+"Summon:"
+],
+[
+"stat_multiply",
+"double Redoran Oathman's health"
+],
+[
+"stat_multiply",
+"double Redoran Oathman's power"
+]
+],
+"821596": [
+[
+"disable",
+"Shackle all enemy creatures in a lane"
+],
+[
+"scope_multi",
+"all enemy creatures in a lane"
+]
+],
+"821468": [
+[
+"excess_damage",
+"Breakthrough"
+],
+[
+"stat_gain",
+"+1/+1"
+]
+],
+"821895": [
+[
+"activated",
+"Activate:"
+],
+[
+"generate_cards",
+"Put a copy of a random card from your opponent's deck into your hand"
+],
+[
+"copy",
+"a copy of a random card"
+],
+[
+"random_effect",
+"random card"
+]
+],
+"821401": [],
+"822336": [
+[
+"taunt",
+"Guard"
+]
+],
+"822272": [
+[
+"on_play",
+"Summon:"
+],
+[
+"silence",
+"Silence a creature"
+],
+[
+"damage",
+"deal 1 damage to it"
+]
+],
+"821791": [
+[
+"taunt",
+"Guard"
+],
+[
+"on_play",
+"Summon:"
+],
+[
+"resource_gain",
+"Gain +1 max magicka"
+]
+],
+"821837": [
+[
+"multi_attack",
+"can attack an additional time each turn"
+],
+[
+"aura",
+"Friendly creatures with Pilfer"
+]
+],
+"822030": [
+[
+"reactions",
+"Prophecy"
+],
+[
+"taunt",
+"Guard"
+],
+[
+"death_trigger",
+"Last Gasp:"
+],
+[
+"cost_reduction",
+"Reduce the cost of a random Dragon in your hand by 1"
+],
+[
+"in_hand_buff",
+"Reduce the cost of a random Dragon in your hand by 1"
+],
+[
+"random_effect",
+"random Dragon"
+]
+],
+"822192": [
+[
+"on_play",
+"Summon:"
+],
+[
+"board_clog",
+"Summon a 0/1 Target with Guard for your opponent in each lane"
+],
+[
+"aura",
+"Friendly creatures have"
+],
+[
+"on_kill",
+"Slay: +1/+1"
+],
+[
+"deathtouch",
+"Lethal"
+]
+],
+"822197": [
+[
+"on_play",
+"Summon:"
+],
+[
+"draw",
+"draw a random action from your deck"
+],
+[
+"random_effect",
+"random action"
+],
+[
+"summon",
+"summon a Riden Dead in each lane"
+]
+],
+"821374": [
+[
+"damage",
+"deal damage to each other"
+]
+],
+"822122": [
+[
+"damage",
+"Deal 3 damage to a creature"
+],
+[
+"aoe_damage",
+"all enemy creatures with the same name"
+]
+],
+"821850": [
+[
+"deathtouch",
+"Lethal"
+],
+[
+"on_play",
+"Summon:"
+],
+[
+"damage",
+"Deal 1 damage"
+]
+],
+"821657": [
+[
+"on_ally_play",
+"When you play an action"
+],
+[
+"lifesteal",
+"Drain"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"822149": [
+[
+"on_play",
+"Summon:"
+],
+[
+"damage",
+"Battle an enemy creature"
+]
+],
+"822394": [
+[
+"haste",
+"Charge"
+]
+],
+"821616": [
+[
+"stat_loss",
+"-4/-0"
+],
+[
+"temporary_buff",
+"this turn"
+]
+],
+"822013": [
+[
+"reactions",
+"Prophecy"
+]
+],
+"821478": [
+[
+"stat_gain",
+"+2/+2"
+]
+],
+"821713": [
+[
+"on_play",
+"Summon:"
+],
+[
+"stat_gain",
+"+2/+2"
+],
+[
+"death_count",
+"if a creature died this turn"
+]
+],
+"821403": [],
+"821394": [
+[
+"silence",
+"Removes all text and effects from a creature"
+]
+],
+"821398": [
+[
+"return_to_hand",
+"Returns a creature to its owner's hand"
+]
+],
+"822075": [
+[
+"on_play",
+"Summon:"
+],
+[
+"polymorph",
+"Transform an enemy creature with 2 power or less into a Sweet Roll"
+],
+[
+"stat_condition",
+"2 power or less"
+]
+],
+"821956": [
+[
+"stat_gain",
+"gains +1/+1"
+],
+[
+"permanent_growth",
+"When Caravan Enforcer moves"
+]
+],
+"821381": [
+[
+"transform",
+"It transforms into a stronger creature"
+]
+],
+"822319": [
+[
+"stat_gain",
+"+5/+5"
+],
+[
+"cheat_death",
+"you can't lose the game"
+]
+],
+"821782": [
+[
+"reactions",
+"Prophecy"
+],
+[
+"deathtouch",
+"Lethal"
+]
+],
+"822112": [
+[
+"lifesteal",
+"Drain"
+],
+[
+"taunt",
+"Guard"
+]
+],
+"821603": [
+[
+"on_play",
+"Summon:"
+],
+[
+"cast_from_zone",
+"equips the two highest cost items in your discard pile"
+],
+[
+"graveyard",
+"your discard pile"
+]
+],
+"821825": [
+[
+"regeneration",
+"Regenerate"
+]
+],
+"822154": [
+[
+"on_play",
+"Summon:"
+],
+[
+"stat_gain",
+"+4/+4"
+],
+[
+"transform",
+"it becomes (Neutral)"
+]
+],
+"822359": [
+[
+"lifesteal",
+"Drain"
+]
+],
+"821941": [
+[
+"haste",
+"Charge"
+],
+[
+"on_play",
+"Summon:"
+],
+[
+"silence",
+"lose Cover"
+]
+]
+}

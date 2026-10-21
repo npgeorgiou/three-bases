@@ -1,0 +1,50 @@
+819063 | Embers of Chaos | When this dies bordering the enemy base, randomly spawn a 6/7/8/10/12 strength Dragon at the enemy base
+819064 | Mech Workshop | At the start of your turn, spawn a 2/3/4/5/6 strength Construct on the tile in front
+819065 | Overchargers | On play, deal 1/1/2/2/3 damage to the first enemy in front
+819066 | Debug Loggers | After attacking, give 2/2/3/4/5 strength to itself and a random surrounding friendly unit
+819067 | Eloth the Ignited | On play, fly to the first enemy unit in front. Push this enemy away and deal 3/4/5/6/7 damage to it. If pushed enemy dies, move forward
+819068 | Flaming Stream | Push back all enemy units in a target unit’s column and deal 4/5/6/7/8 damage to them
+819069 | Siege Assembly | At the start of your turn, deal 3/3/4/5/6 damage to the first enemy in front
+819070 | Windmakers | Before attacking a stronger unit, push it away and deal 3/4/5/6/7 damage to it
+819072 | Project PH03-NIX | When this dies not bordering any base, randomly respawn at your base with 5/6/7/8/10 strength
+819073 | Armed Schemers | On play, pull enemy units to you. Then deal 3/4/5/6/7 damage to all bordering enemy units.
+819074 | Mechanical Workers | On play, on the tile behind build a 3/3/4/5/6 strength workshop which spawn 2/3/4/5/6 strength Constructs each turn
+819077 | Scrapped Planners | After surviving damage, set strength to 2/3/4/5/6
+819078 | Booming Professors | After surviving damage, deal up to 3/3/4/5/6 of its remaining strength as damage to the first enemy in front
+819079 | Temple of Space | When played with a friendly copy on the board, teleport 2/3/4/6/8 surrounding units from it, then destroy the older copy. Otherwise, return to the hand.
+819080 | Function Wilds | On play, vitalize itself and 1/1/2/2/2 surrounding friendly unit/unit/units/units/units
+819081 | Absorbing Varmints | Before moving, make all friendly ancients on the board pull enemy units from behind, then deal 1/2/2/3/3 damage to all pulled units
+819082 | Brood Sages | On play, for each surrounding poisoned unit spawn a 1 strength Toad on 2/2/3/3/4 tiles bordering it
+819083 | Copperskin Ranger | On play, poison 1/1/2/2/3 random enemy unit/unit/units/units/units
+819084 | Dubious Hags | On death, spawn a 1 strength Raven on a random bordering tile to fight for the enemy
+819085 | Toxic Sacrifice | Destroy a target friendly unit. Deal 2/3/4/5/6 damage to all surrounding units and poison them.
+819086 | Crimson Sentry | On death, deal 1/2/3/4/5 damage to all bordering units and poison them
+819088 | Heliotroopers | On play, poison itself
+819089 | Rain of Frogs | Spawn a 1 strength Toad on 3/4/4-5/5/6 random tiles
+819090 | Wandering Wyrms | When played bordering a friendly Dragon, deal 3/4/5/6/7 damage to the strongest enemy unit
+819091 | Azure Hatcher | On death, spawn 1 strength Toads on 2/3/4/5/6 random surrounding tiles
+819092 | Marked as Prey | Deal 5/6/7/8/10 damage to a target poisoned unit. If that kills it, spawn a 5/6/7/8/10 strength Raven there.
+819093 | Tode the Elevated | After attacking, jump in front of a random enemy unit or structure and gain 2/3/4/5/6 strength
+819094 | Venomfall Spire | At the start of your turn, poison 1/1/2/2/3 random enemy unit/unit/units/units/units
+819095 | Witches of the Wild | On play, drain 1/1/2/2/3 strength from all bordering units
+819096 | Amberhides | On play, drain 4/5/6/7/8 strength from a random surrounding poisoned unit
+819097 | Feral Shamans | Before attacking a stronger unit, drain 3/4/4/5/6 strength from it
+819098 | Obsidian Butchers | On play, drain the strength from all 1 strength units
+819099 | Soulcrushers | Before attacking a weaker unit, destroy it instantly
+819100 | Sunbeam Serpents | On play, gain the strength of the strongest friendly Dragon
+819101 | Blood Ministers | On play, convert all bordering enemy units with 3/4/5/6/7 or less strength to fight for you
+819102 | Broodmother Qordia | On play, spawn 3 Nests on random surrounding tiles which will hatch 3/4/5/6/7 strength Dragons
+819103 | Curse of Strings | Convert a target enemy unit with 7/9/11/14/17 or less strength to fight for you
+819104 | High Priestess Klaxi | On play, destroy all units with the lowest strength and spawn 5/6/7/8/10 strength Ravens there
+819105 | Clerics with Cords | On play, convert a random bordering enemy unit with 2/3/4/5/6 or less strength to fight for you
+819108 | Faithless Prophets | After surviving damage, convert itself to fight for the enemy
+819109 | Hairy Chestnuts | After surviving damage, drain up to 1/1/2/2/2 of the damage received from the enemy base
+819110 | Temple of Time | At the end of your turn, remember the state of surrounding friendly units and structures. At the start of your turn, restore 1/2/2/3/3 of them to that state.
+819111 | Soap Cleanse | Restore up to 3/4/5/6/7 initial strength of all friendly poisoned units and vitalize them
+819112 | Plague Monarchs | Before moving, make all friendly ancients on the board drain 1/2/2/3/3 strength from a surrounding enemy poisoned unit
+819113 | Doppelbocks | On play, spawn a 1/1/2/2/3 strength Satyr on the tile in front
+819114 | Restless Goats | On death, deal 2 damage to your base
+819115 | Counselor Ahmi | If played with no surrounding units, return the copy of this card to your hand with +1 strength
+819116 | Dreadful Keepers | On death, randomly spawn a 3/4/6/7/8 strength Dragon on a tile bordering a friendly Dragon
+819117 | Faun Companions | On play, give 3/4/4/5/6 strength to a random bordering friendly Satyr
+819118 | Forgotten Souls | On play, command a/a/all/all/all random/random/// bordering/bordering/bordering/bordering/surrounding friendly unit/unit/units/units/units forward

@@ -1,0 +1,1002 @@
+[
+{
+"id": 816920,
+"name": "Gaston - Scheming Suitor",
+"text": "While one or more opponents have no cards in their hands, this character gets +3 strength."
+},
+{
+"id": 818076,
+"name": "Fa Zhou - War Hero",
+"text": "Whenever one of your characters challenges another character, if it's the second challenge this turn, gain 3 lore."
+},
+{
+"id": 818800,
+"name": "Dopey - Drawn to Music",
+"text": "This character can't exert to sing songs.\nOnce during your turn, whenever you play a song, this character gets +1 lore this turn."
+},
+{
+"id": 818685,
+"name": "Elsa - Ice Artisan",
+"text": "Shift 4 ink (You may pay 4 ink to play this on top of one of your characters named Elsa.)\nWhen you play this character and whenever you play a location, you may exert chosen character with 3 strength or less.\nWhile this character is at a location, she gets +3 lore."
+},
+{
+"id": 818582,
+"name": "Pleakley - Arctic Naturalist",
+"text": "When you play this character, if you have another Alien character in play, draw a card."
+},
+{
+"id": 816721,
+"name": "Mickey Mouse - Artful Rogue",
+"text": "Shift 5 (You may pay 5 ink to play this on top of one of your characters named Mickey Mouse.)\nWhenever you play an action, chosen opposing character can't quest during their next turn."
+},
+{
+"id": 817253,
+"name": "Donald Duck - Musketeer Soldier",
+"text": "Bodyguard (This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.)\nWhen you play this character, chosen character gets +1 lore this turn."
+},
+{
+"id": 816880,
+"name": "HeiHei - Persistent Presence",
+"text": "When this character is banished in a challenge, return this card to your hand."
+},
+{
+"id": 817893,
+"name": "Roger Radcliffe - Dog Lover",
+"text": "Whenever this character quests, you may remove up to 1 damage from each of your Puppy characters."
+},
+{
+"id": 818576,
+"name": "Sarabi - Protecting the Pride",
+"text": "exert \u2014 Chosen opposing character gets -4 strength until the start of your next turn."
+},
+{
+"id": 817775,
+"name": "Basil - Disguised Detective",
+"text": "Shift 4 (You may pay 4 ink to play this on top of one of your characters named Basil.)\nDuring your turn, whenever a card is put into your inkwell, you may pay 1 ink to have chosen opponent choose and discard a card."
+},
+{
+"id": 817833,
+"name": "Wasabi - Methodical Engineer",
+"text": "When you play this character, you may banish chosen item. Its player gains 1 lore.\nDuring your turn, this character gains Evasive. (They can challenge characters with Evasive.)"
+},
+{
+"id": 818286,
+"name": "Nathaniel Flint - Notorious Pirate",
+"text": "You can't play this character unless an opposing character was damaged this turn."
+},
+{
+"id": 817584,
+"name": "Wreck-It Ralph - Demolition Dude",
+"text": "Whenever you ready this character, gain 1 lore for each 1 damage on him."
+},
+{
+"id": 818647,
+"name": "Copper - Champion of the Forest",
+"text": "Shift 3 ink (You may pay 3 ink to play this on top of one of your characters named Copper.)\nWhenever this character quests, your characters with Evasive get +1 lore this turn."
+},
+{
+"id": 817130,
+"name": "Stitch - Covert Agent",
+"text": "Evasive (Only characters with Evasive can challenge this character.)\nWhile this character is at a location, he gains Ward. (Opponents can't choose them except to challenge.)"
+},
+{
+"id": 816808,
+"name": "Captain Hook - Thinking a Happy Thought",
+"text": "Shift 3 (You may pay 3 ink to play this on top of one of your characters named Captain Hook.)\nChallenger +3 (While challenging, this character gets +3 strength.)\nCharacters with cost 3 or less can't challenge this character."
+},
+{
+"id": 817876,
+"name": "Captain Amelia - Commander of the Legacy",
+"text": "This character can't be challenged by Pirate characters.\nWhile being challenged, your other characters gain Resist +1. (Damage dealt to them is reduced by 1.)"
+},
+{
+"id": 816632,
+"name": "Villain",
+"text": "Villain: 284 entities of this type."
+},
+{
+"id": 818924,
+"name": "Lord Macintosh - Wiry and High-Strung",
+"text": "This character may enter play exerted to give chosen character Resist +2 until the start of your next turn. (Damage dealt to them is reduced by 2.)"
+},
+{
+"id": 818773,
+"name": "Dolores Madrigal - Hears Everything",
+"text": "When you play this character, look at chosen opponent's hand."
+},
+{
+"id": 817612,
+"name": "Potion of Might",
+"text": "ink, Banish this item \u2014 Chosen character gets +3 strength this turn. If a Villain character is chosen, they get +4 strength instead."
+},
+{
+"id": 817732,
+"name": "Tinker Bell - Queen of the Azurite Fairies",
+"text": "Shift 5 (You may pay 5 ink to play this on top of one of your characters named Tinker Bell.)\nEvasive (Only characters with Evasive can challenge this character.)\nWhenever this character quests, your other Fairy characters get +1 lore this turn."
+},
+{
+"id": 818173,
+"name": "Everybody's Got a Weakness",
+"text": "Move 1 damage counter from each damaged character you have in play to chosen opposing character. Draw a card for each damage counter moved this way."
+},
+{
+"id": 818579,
+"name": "John Smith - Snow Tracker",
+"text": "At the end of your turn, if this character is exerted and none of your characters challenged this turn, gain 1 lore."
+},
+{
+"id": 818590,
+"name": "Widow Tweed - Kindly Soul",
+"text": "When you play this character, return a character card from your discard to your hand. If that character is named Tod, you may play him for free."
+},
+{
+"id": 816578,
+"name": "Evasive",
+"text": "Only characters with Evasive can challenge this character."
+},
+{
+"id": 818397,
+"name": "Minnie Mouse - Amethyst Champion",
+"text": "Whenever one of your other Amethyst characters is banished in a challenge, you may draw a card."
+},
+{
+"id": 817765,
+"name": "Daisy Duck - Pirate Captain",
+"text": "Whenever one of your Pirate characters quests while at a location, draw a card."
+},
+{
+"id": 817282,
+"name": "Belle - Untrained Mystic",
+"text": "When you play this character, move up to 1 damage counter from chosen character to chosen opposing character."
+},
+{
+"id": 818471,
+"name": "Rama - Vigilant Father",
+"text": "Whenever you play another character with 5 strength or more, you may ready this character. If you do, he can't quest for the rest of this turn."
+},
+{
+"id": 818684,
+"name": "Olaf - Snowman of Action",
+"text": "For each action card in your discard, you pay 1 ink less to play this character.\nWhen you play this character, each opponent loses 2 lore."
+},
+{
+"id": 817178,
+"name": "Audrey Ramirez - The Engineer",
+"text": "Ward (Opponents can't choose this character except to challenge.)\nWhenever this character quests, ready one of your items."
+},
+{
+"id": 818132,
+"name": "Only So Much Room",
+"text": "Return chosen character with 2 strength or less to their player's hand. Return a character card from your discard to your hand."
+},
+{
+"id": 816834,
+"name": "Beast's Mirror",
+"text": "exert, 3 ink \u2014 If you have no cards in your hand, draw a card."
+},
+{
+"id": 818946,
+"name": "The Island of Nomanisan - Syndrome's Headquarters",
+"text": "& DEVELOPMENT Robot characters get +1 strength and +1 willpower while here.\nOnce during your turn, whenever a character banishes another character in a challenge while here, you may deal 2 damage to chosen character."
+},
+{
+"id": 817420,
+"name": "Ariel - Sonic Warrior",
+"text": "Shift 4 (You may pay 4 ink to play this on top of one of your characters named Ariel.)\nWhenever you play a song, you may pay 2 ink to deal 3 damage to chosen character."
+},
+{
+"id": 816636,
+"name": "Cinderella - Gentle and Kind",
+"text": "Singer 5 (This character counts as cost 5 to sing songs.)\nexert \u2014 Remove up to 3 damage from chosen Princess character."
+},
+{
+"id": 816619,
+"name": "Princess",
+"text": "Princess: 137 entities of this type."
+},
+{
+"id": 816626,
+"name": "Sorcerer",
+"text": "Sorcerer: 135 entities of this type."
+},
+{
+"id": 818280,
+"name": "Toby Turtle - Wary Friend",
+"text": "While this character is exerted, he gains Resist +1. (Damage dealt to them is reduced by 1.)"
+},
+{
+"id": 818004,
+"name": "Wake Up, Alice!",
+"text": "Return chosen damaged character to their player's hand."
+},
+{
+"id": 816592,
+"name": "Broom",
+"text": "Broom: 9 entities of this type."
+},
+{
+"id": 818893,
+"name": "Norton Nimnul - Misanthropic Genius",
+"text": "Once during your turn, whenever you play an item, chosen opposing character gets -2 strength this turn."
+},
+{
+"id": 817587,
+"name": "Donald Duck - Pie Slinger",
+"text": "Shift 4 (You may pay 4 ink to play this on top of one of your characters named Donald Duck.)\nWhen you play this character, if you used Shift to play him, each opponent loses 2 lore.\nWhile an opponent has 10 or more lore, this character gets +6 strength."
+},
+{
+"id": 818370,
+"name": "Scrooge McDuck - On the Right Track",
+"text": "When you play this character, chosen character with a card under them gets +1 lore this turn."
+},
+{
+"id": 817144,
+"name": "Ariel - Adventurous Collector",
+"text": "Evasive (Only characters with Evasive can challenge this character.)\nWhenever you play a song, chosen character of yours gains Evasive until the start of your next turn."
+},
+{
+"id": 817702,
+"name": "Dale - Mischievous Ranger",
+"text": "When you play this character, you may put the top 3 cards of your deck into your discard to give chosen character -3 strength until the start of your next turn."
+},
+{
+"id": 818482,
+"name": "Brooklyn - Second in Command",
+"text": "Evasive (Only characters with Evasive can challenge this character.)\nIf you have 3 or more cards in your hand, this character can't ready."
+},
+{
+"id": 816633,
+"name": "Whisper",
+"text": "Whisper: 27 entities of this type."
+},
+{
+"id": 817969,
+"name": "This Is My Family",
+"text": "(A character with cost 2 or more can exert to sing this song for free.) Gain 1 lore. Draw a card."
+},
+{
+"id": 817161,
+"name": "Peter Pan - Pirate's Bane",
+"text": "Shift 4 (You may pay 4 ink to play this on top of one of your characters named Peter Pan.)\nEvasive (Only characters with Evasive can challenge this character.)\nWhenever he challenges a Pirate character, this character takes no damage from the challenge."
+},
+{
+"id": 817745,
+"name": "Genie - Wonderful Trickster",
+"text": "Shift 5 (You may pay 5 ink to play this on top of one of your characters named Genie.)\nWhenever you play a card, draw a card.\nAt the end of your turn, put all the cards in your hand on the bottom of your deck in any order."
+},
+{
+"id": 817895,
+"name": "Peg - Natural Performer",
+"text": "exert \u2014 If you have 3 or more other characters in play, draw a card."
+},
+{
+"id": 818031,
+"name": "Ratigan - Nefarious Criminal",
+"text": "Whenever you play an action while this character is exerted, gain 1 lore."
+},
+{
+"id": 817198,
+"name": "Tinker Bell - Very Clever Fairy",
+"text": "Whenever one of your items is banished, you may put that card into your inkwell facedown and exerted."
+},
+{
+"id": 817500,
+"name": "Alan-a-Dale - Rockin' Rooster",
+"text": "Whenever you play a song, gain 1 lore."
+},
+{
+"id": 817186,
+"name": "Huey - Savvy Nephew",
+"text": "Support (Whenever this character quests, you may add their strength to another chosen character's strength this turn.)\nWhenever this character quests, if you have characters named Dewey and Louie in play, you may draw 3 cards."
+},
+{
+"id": 818346,
+"name": "Family Fishing Pole",
+"text": "This item enters play exerted.\nexert, 1 ink, Banish this item \u2014 Return chosen exerted character of yours to your hand to gain 2 lore."
+},
+{
+"id": 817153,
+"name": "Madame Medusa - The Boss",
+"text": "When you play this character, banish chosen opposing character with 3 strength or less."
+},
+{
+"id": 817804,
+"name": "Minnie Mouse - Pirate Lookout",
+"text": "Once during your turn, whenever a card is put into your inkwell, you may return a location card from your discard to your hand."
+},
+{
+"id": 817342,
+"name": "We Don't Talk About Bruno",
+"text": "(A character with cost 5 or more can exert to sing this song for free.) Return chosen character to their player's hand, then that player discards a card at random."
+},
+{
+"id": 816618,
+"name": "Prince",
+"text": "Prince: 88 entities of this type."
+},
+{
+"id": 817686,
+"name": "Lilo - Escape Artist",
+"text": "At the start of your turn, if this card is in your discard, you may play her and she enters play exerted."
+},
+{
+"id": 818778,
+"name": "Chip - Retrieval Expert",
+"text": "When you play this character, you may return a character card with 4 willpower or more from your discard to your hand.\nYour characters named Dale get +1 willpower."
+},
+{
+"id": 818041,
+"name": "Clarabelle - News Reporter",
+"text": "Support (Whenever this character quests, you may add their strength to another chosen character's strength this turn.)\nYour other characters with Support get +1 strength."
+},
+{
+"id": 818259,
+"name": "Arthur - Determined Squire",
+"text": "Skip your turn's Draw step."
+},
+{
+"id": 816828,
+"name": "A Whole New World",
+"text": "(A character with cost 5 or more can exert to sing this song for free.) Each player discards their hand and draws 7 cards."
+},
+{
+"id": 817068,
+"name": "Quick Patch",
+"text": "Remove up to 3 damage from chosen location."
+},
+{
+"id": 818227,
+"name": "Tinker Bell - Insistent Fairy",
+"text": "Evasive (Only characters with Evasive can challenge this character.)\nWhenever you play a character with 5 strength or more, you may exert them to gain 2 lore."
+},
+{
+"id": 818478,
+"name": "David Xanatos - Charismatic Leader",
+"text": "During your turn, whenever one of your characters is banished, draw a card.\nWhenever this character quests, chosen character gains Rush this turn. (They can challenge the turn they're played.)"
+},
+{
+"id": 818838,
+"name": "Milo Thatch - Getting His Hands Dirty",
+"text": "Ward SCHOLAR'S GAMBIT When you play this character, you may choose and discard a card to return chosen character to their player's hand.\nAt the end of your turn, if 2 or more cards were put into your discard this turn, draw a card."
+},
+{
+"id": 817366,
+"name": "Raya - Fierce Protector",
+"text": "Whenever this character challenges another character, gain 1 lore for each other damaged character you have in play."
+},
+{
+"id": 816886,
+"name": "Madam Mim - Snake",
+"text": "When you play this character, banish her or return another chosen character of yours to your hand."
+},
+{
+"id": 818526,
+"name": "Detective's Badge",
+"text": "exert, 1 ink \u2014 Chosen character gains Resist +1 and the Detective classification until the start of your next turn. (Damage dealt to them is reduced by 1.)"
+},
+{
+"id": 817464,
+"name": "Tamatoa - Grabby Crab",
+"text": "When you play this character, the opposing players together choose an item or location of theirs and banish it."
+},
+{
+"id": 818933,
+"name": "Merida - Formidable Archer",
+"text": "When you play this character, you may return an action card named Three Arrows from your discard to your hand.\nWhenever one of your actions deals damage to an opposing character, deal 2 damage to that character."
+},
+{
+"id": 818443,
+"name": "Flynn Rider - Spectral Scoundrel",
+"text": "Boost 2 ink (Once during your turn, you may pay 2 ink to put the top card of your deck facedown under this character.)\nWhile there's a card under this character, he gets +2 strength and +1 lore."
+},
+{
+"id": 817907,
+"name": "Pascal - Garden Chameleon",
+"text": "Evasive (Only characters with Evasive can challenge this character.)"
+},
+{
+"id": 817923,
+"name": "Mirabel Madrigal - Musically Talented",
+"text": "Shift 4 (You may pay 4 ink to play this on top of one of your characters named Mirabel Madrigal.)\nWhenever this character quests, you may return a song card with cost 3 or less from your discard to your hand."
+},
+{
+"id": 818757,
+"name": "The Terror That Flaps in the Night",
+"text": "Deal 2 damage to chosen opposing character. If you have a character named Darkwing Duck in play, deal 3 damage instead."
+},
+{
+"id": 818331,
+"name": "Beast - Gracious Prince",
+"text": "Your Princess characters get +1 strength and +1 willpower."
+},
+{
+"id": 817077,
+"name": "Chernabog's Followers - Creatures of Evil",
+"text": "Whenever this character quests, you may banish them to draw a card."
+},
+{
+"id": 817381,
+"name": "Training Grounds - Impossible Pillar",
+"text": "ink \u2014 Chosen character here gets +1 strength this turn."
+},
+{
+"id": 817327,
+"name": "Panic - Immortal Sidekick",
+"text": "While this character is exerted, if you have a character named Pain in play, your Villain characters can't be challenged."
+},
+{
+"id": 818125,
+"name": "Lady - Decisive Dog",
+"text": "Whenever you play a character, this character gets +1 strength this turn.\nWhile this character has 3 strength or more, she gets +2 lore."
+},
+{
+"id": 818898,
+"name": "Dr. Sara Bellum - Head of Research",
+"text": "When you play this character, look at the top card of your deck. Put it on either the top or the bottom of your deck."
+},
+{
+"id": 817903,
+"name": "Cinderella - The Right One",
+"text": "When you play this character, you may put an item card named The Glass Slipper from your discard on the bottom of your deck to gain 3 lore."
+},
+{
+"id": 818798,
+"name": "Alma Madrigal - Leading the Way",
+"text": "When you play this character, if you have another Madrigal character in play, you may exert chosen opposing character."
+},
+{
+"id": 817917,
+"name": "Pongo - Dear Old Dad",
+"text": "At the start of your turn, look at the cards in your inkwell. You may play a Puppy character from there for free."
+},
+{
+"id": 817623,
+"name": "Pacha - Emperor's Guide",
+"text": "At the start of your turn, if you have an item in play, gain 1 lore.\nAt the start of your turn, if you have a location in play, gain 1 lore."
+},
+{
+"id": 818128,
+"name": "Joey - Blue Pigeon",
+"text": "Whenever this character quests, you may remove up to 1 damage from each of your characters with Bodyguard."
+},
+{
+"id": 818818,
+"name": "Frozone - Super Cool",
+"text": "Rush (This character can challenge the turn they're played.)\nWhen you play this character, if you have another Super character in play, you may exert chosen opposing character."
+},
+{
+"id": 816647,
+"name": "Moana - Of Motunui",
+"text": "Whenever this character quests, you may ready your other Princess characters. They can't quest for the rest of this turn."
+},
+{
+"id": 817853,
+"name": "Rescue Rangers Submarine - Mobile Headquarters",
+"text": "At the start of your turn, if you have a character here, you may put the top card of your deck into your inkwell facedown and exerted."
+},
+{
+"id": 817221,
+"name": "Lythos - Rock Titan",
+"text": "Resist +2 (Damage dealt to this character is reduced by 2.)\nexert \u2014 Chosen character gains Resist +2 this turn."
+},
+{
+"id": 818528,
+"name": "Fairy Godmother's Wand",
+"text": "During your turn, whenever you put a card into your inkwell, chosen Princess character of yours gains Ward until the start of your next turn. (Opponents can't choose them except to challenge.)"
+},
+{
+"id": 818666,
+"name": "Scrooge McDuck - Ghostly Ebenezer",
+"text": "Boost 1 ink (Once during your turn, you may pay 1 ink to put the top card of your deck facedown under this character.)\nThis character gets +1 strength and +1 willpower for each card under him."
+},
+{
+"id": 817649,
+"name": "The Great Illuminary - Radiant Ballroom",
+"text": "Characters with Support get +1 lore and +2 willpower while here."
+},
+{
+"id": 817682,
+"name": "Steel Chromicon",
+"text": "exert \u2014 Deal 1 damage to chosen character."
+},
+{
+"id": 818320,
+"name": "Fiery Basin",
+"text": "At the start of Jafar's turn, he banishes this item to have each Illumineer choose one of their characters and deal 4 damage to them."
+},
+{
+"id": 817033,
+"name": "Tiana - Celebrating Princess",
+"text": "Resist +2 (Damage dealt to this character is reduced by 2.)\nWhile this character is exerted and you have no cards in your hand, opponents can't play actions."
+},
+{
+"id": 817554,
+"name": "Ed - Laughing Hyena",
+"text": "When you play this character, you may deal 2 damage to chosen damaged character."
+},
+{
+"id": 818021,
+"name": "Li Shang - Newly Promoted",
+"text": "This character can challenge ready characters.\nWhile this character has damage, he gets +2 strength."
+},
+{
+"id": 818419,
+"name": "Olaf - Helping Hand",
+"text": "When this character leaves play, you may return chosen character of yours to your hand."
+},
+{
+"id": 818611,
+"name": "Morgana Macawber - Reformed Spellcaster",
+"text": "Shift 4 ink (You may pay 4 ink to play this on top of one of your characters named Morgana Macawber.)\nWhen you play this character, you may choose an opposing character and move 1 damage from each other character to them."
+},
+{
+"id": 818340,
+"name": "Goofy - Set for Adventure",
+"text": "Once during your turn, whenever this character moves to a location, you may move one of your other characters to that location for free. If you do, draw a card."
+},
+{
+"id": 818516,
+"name": "Cinderella - Dream Come True",
+"text": "At the end of your turn, if you played a Princess character this turn, you may put a card from your hand into your inkwell facedown to draw a card."
+},
+{
+"id": 817573,
+"name": "Scar - Vengeful Lion",
+"text": "Ward (Opponents can't choose this character except to challenge.)\nWhenever one of your characters challenges a damaged character, you may draw a card."
+},
+{
+"id": 816791,
+"name": "Scar - Mastermind",
+"text": "When you play this character, chosen opposing character gets -5 strength this turn."
+},
+{
+"id": 817747,
+"name": "Lose the Way",
+"text": "Exert chosen character. Then, you may choose and discard a card. If you do, the exerted character can't ready at the start of their next turn."
+},
+{
+"id": 818316,
+"name": "Arcane Quake",
+"text": "Jafar exerts all opposing characters. They can't ready at the start of their next turn."
+},
+{
+"id": 817925,
+"name": "Pepa Madrigal - Sensitive Sister",
+"text": "Whenever one or more of your characters sings a song, gain 1 lore."
+},
+{
+"id": 816853,
+"name": "Mulan - Reflecting",
+"text": "Shift 2 (You may pay 2 ink to play this on top of one of your characters named Mulan.)\nWhenever this character quests, you may reveal the top card of your deck. If it's a song card, you may play it for free. Otherwise, put it on the top of your deck."
+},
+{
+"id": 818619,
+"name": "Christopher Robin - Joining the Fun",
+"text": "If this is your first turn and you're not the first player, you pay 1 ink less to play this character."
+},
+{
+"id": 817006,
+"name": "Pawpsicle",
+"text": "When you play this item, you may draw a card.\nBanish this item \u2014 Remove up to 2 damage from chosen character."
+},
+{
+"id": 817953,
+"name": "Sven - Keen-Eyed Reindeer",
+"text": "Rush (This character can challenge the turn they're played.)\nWhen you play this character, chosen character gets -3 strength this turn."
+},
+{
+"id": 818783,
+"name": "Isabela Madrigal - Caring Cultivator",
+"text": "Shift 4 ink (You may pay 4 ink to play this on top of one of your characters named Isabela Madrigal.)\nWhenever you remove damage from one of your characters, gain 1 lore for each 1 damage removed."
+},
+{
+"id": 817564,
+"name": "Clarabelle - Light on Her Hooves",
+"text": "Shift 5 (You may pay 5 ink to play this on top of one of your characters named Clarabelle.)\nAt the end of your turn, if chosen opponent has more cards in their hand than you, you may draw cards until you have the same number."
+},
+{
+"id": 817879,
+"name": "Hot Potato",
+"text": "Choose one: \u2022 Deal 2 damage to chosen character.\n\u2022 Banish chosen item."
+},
+{
+"id": 818496,
+"name": "The Bitterwood - Underground Forest",
+"text": "Once during your turn, whenever you move a character with 5 strength or more here, you may draw a card."
+},
+{
+"id": 816634,
+"name": "Ariel - On Human Legs",
+"text": "This character can't exert to sing songs."
+},
+{
+"id": 817826,
+"name": "Oswald - The Lucky Rabbit",
+"text": "During your turn, whenever a card is put into your inkwell, you may reveal the top card of your deck. If it's an item card, you may play that item for free and it enters play exerted. Otherwise, put it on the bottom of your deck."
+},
+{
+"id": 816670,
+"name": "Dr. Facilier - Agent Provocateur",
+"text": "Shift 5 (You may pay 5 ink to play this on top of one of your characters named Dr. Facilier.)\nWhenever one of your other characters is banished in a challenge, you may return that card to your hand."
+},
+{
+"id": 817397,
+"name": "Prince Phillip - Gallant Defender",
+"text": "Support (Whenever this character quests, you may add their strength to another chosen character's strength this turn.)\nWhenever one of your characters is chosen for Support, they gain Resist +1 this turn. (Damage dealt to them is reduced by 1.)"
+},
+{
+"id": 818420,
+"name": "Merlin - Completing His Research",
+"text": "Boost 2 ink (Once during your turn, you may pay 2 ink to put the top card of your deck facedown under this character.)\nWhen this character is banished in a challenge, if he had a card under him, draw 2 cards."
+},
+{
+"id": 818804,
+"name": "Sneezy - Startlingly Loud",
+"text": "When you play this character, chosen character gets +1 lore this turn."
+},
+{
+"id": 818195,
+"name": "Alice - Clumsy as Can Be",
+"text": "Shift 3 (You may pay 3 ink to play this on top of one of your characters named Alice.)\nWhenever this character quests, put 1 damage counter on each other character."
+},
+{
+"id": 818138,
+"name": "Madame Medusa - Deceiving Partner",
+"text": "When you play this character, you may deal 2 damage to another chosen character of yours to return chosen character with cost 2 or less to their player's hand."
+},
+{
+"id": 818101,
+"name": "Tiana - Natural Talent",
+"text": "Singer 6 (This character counts as cost 6 to sing songs.)\nWhenever you play a song, each opposing character gets -1 strength until the start of your next turn."
+},
+{
+"id": 817624,
+"name": "The Queen - Fairest of All",
+"text": "Shift 3 (You may pay 3 ink to play this on top of one of your characters named The Queen.)\nWard (Opponents can't choose this character except to challenge.)\nFor each other character named The Queen you have in play, this character gets +1 lore."
+},
+{
+"id": 818270,
+"name": "Belle's Favorite Book",
+"text": "exert, Banish one of your other items \u2014 Put the top card of your deck into your inkwell facedown and exerted."
+},
+{
+"id": 817025,
+"name": "Magic Broom - Industrial Model",
+"text": "When you play this character, chosen character gains Resist +1 until the start of your next turn. (Damage dealt to them is reduced by 1.)"
+},
+{
+"id": 817022,
+"name": "Kronk - Junior Chipmunk",
+"text": "Resist +1 (Damage dealt to this character is reduced by 1.)\nDuring your turn, whenever this character banishes another character in a challenge, you may deal 2 damage to chosen character."
+},
+{
+"id": 817910,
+"name": "Fix-It Felix, Jr. - Pint-Sized Hero",
+"text": "Whenever you return a Racer character card from your discard to your hand, you may ready chosen Racer character. They can't quest for the rest of this turn."
+},
+{
+"id": 817174,
+"name": "Sumerian Talisman",
+"text": "During your turn, whenever one of your characters is banished in a challenge, you may draw a card."
+},
+{
+"id": 816599,
+"name": "Dreamborn",
+"text": "Dreamborn: 319 entities of this type."
+},
+{
+"id": 818597,
+"name": "John Smith's Compass",
+"text": "At the end of your turn, if a character of yours challenged this turn, banish this item.\nAt the end of your turn, if none of your characters challenged this turn, reveal the top card of your deck. If it's a character card with cost 3 or less or named Pocahontas, you may put it into your hand. Otherwise, put it on the bottom of your deck."
+},
+{
+"id": 817102,
+"name": "It Calls Me",
+"text": "(A character with cost 1 or more can exert to sing this song for free.) Draw a card. Then, choose up to 3 cards from chosen opponent's discard and shuffle them into their deck."
+},
+{
+"id": 817999,
+"name": "King of Hearts - Picky Ruler",
+"text": "Damaged characters can't challenge your characters."
+},
+{
+"id": 818020,
+"name": "Beagle Boys - Small-Time Crooks",
+"text": "Whenever this character quests, chosen character of yours gains Rush and Resist +1 this turn. (They can challenge the turn they're played. Damage dealt to them is reduced by 1.)"
+},
+{
+"id": 817195,
+"name": "Scrooge McDuck - Richest Duck in the World",
+"text": "During your turn, this character gains Evasive. (They can challenge characters with Evasive.)\nDuring your turn, whenever this character banishes another character in a challenge, you may play an item for free."
+},
+{
+"id": 817650,
+"name": "Merlin's Cottage - The Wizard's Home",
+"text": "Each player plays with the top card of their deck face up."
+},
+{
+"id": 817937,
+"name": "Iago - Giant Spectral Parrot",
+"text": "Evasive (Only characters with Evasive can challenge this character.)\nVanish (When an opponent chooses this character for an action, banish them.)"
+},
+{
+"id": 817496,
+"name": "Daisy Duck - Donald's Date",
+"text": "Whenever this character quests, each opponent reveals the top card of their deck. If it's a character card, they may put it into their hand. Otherwise, they put it on the bottom of their deck."
+},
+{
+"id": 818099,
+"name": "Ludwig Von Drake - All-Around Expert",
+"text": "When you play this character, chosen opponent reveals their hand and discards a non-character card of your choice.\nWhen this character is banished, you may put this card into your inkwell facedown and exerted."
+},
+{
+"id": 817517,
+"name": "Cogsworth - Illuminary Watchman",
+"text": "When you play this character, chosen character gains Rush this turn. (They can challenge the turn they're played.)"
+},
+{
+"id": 817803,
+"name": "Aladdin - Intrepid Commander",
+"text": "Shift 2 (You may pay 2 ink to play this on top of one of your characters named Aladdin.)\nWhen you play this character, your characters get +2 strength this turn."
+},
+{
+"id": 817288,
+"name": "Flotsam - Ursula's \"Baby\"",
+"text": "When this character is banished in a challenge, return this card to your hand.\nYour characters named Jetsam gain \u201cWhen this character is banished in a challenge, return this card to your hand.\u201d"
+},
+{
+"id": 818304,
+"name": "Gazeem - Ruthless Ruffian",
+"text": "When Jafar plays this character, he deals 2 damage to each opposing damaged character."
+},
+{
+"id": 818177,
+"name": "Basil - Undercover Detective",
+"text": "When you play this character, you may return chosen character to their player's hand.\nWhenever this character quests, chosen opponent discards a card at random."
+},
+{
+"id": 818489,
+"name": "Brom Bones - Burly Bully",
+"text": "Whenever this character challenges a character with 2 strength or less, each opponent loses 1 lore."
+},
+{
+"id": 816585,
+"name": "Singer",
+"text": "This character counts as cost N to sing songs."
+},
+{
+"id": 817597,
+"name": "Taffyta Muttonfudge - Sour Speedster",
+"text": "Shift 2 (You may pay 2 ink to play this on top of one of your characters named Taffyta Muttonfudge.)\nOnce per turn, when this character moves to a location, gain 2 lore."
+},
+{
+"id": 818631,
+"name": "The Frozen Vine - Monstrous Plant",
+"text": "When this location is banished, if there was an exerted character here, return this card from your discard to your hand."
+},
+{
+"id": 818831,
+"name": "Helga Sinclair - No Backup Needed",
+"text": "If 2 or more cards were put into your discard this turn, you pay 2 ink less to play this character."
+},
+{
+"id": 818732,
+"name": "Launchpad - Hideout Defender",
+"text": "Your locations gain Resist +1. (Damage dealt to them is reduced by 1.)"
+},
+{
+"id": 818905,
+"name": "Kida - Crystal Scion",
+"text": "Shift 6 ink FLOOD OF POWER When you play this character, each player may put up to 5 cards from their discard into their inkwell facedown and exerted.\nink \u2014 Look at the top 2 cards of your deck. Put one into your hand and the other on the bottom of your deck."
+},
+{
+"id": 818521,
+"name": "Hen Wen's Visions",
+"text": "Look at the top 4 cards of your deck. Put 1 on the top of your deck and the rest on the bottom in any order."
+},
+{
+"id": 817933,
+"name": "Kuzco - Temporary Whale",
+"text": "Once during your turn, whenever a card is put into your inkwell, you may return chosen character, item, or location with cost 2 or less to their player's hand, then that player draws a card."
+},
+{
+"id": 818699,
+"name": "Roo - Little Helper",
+"text": "exert \u2014 Put this character facedown under one of your characters or locations with Boost."
+},
+{
+"id": 816907,
+"name": "Beast - Relentless",
+"text": "Whenever an opposing character is damaged, you may ready this character."
+},
+{
+"id": 817948,
+"name": "Bucky - Nutty Rascal",
+"text": "When this character is banished in a challenge, you may draw a card."
+},
+{
+"id": 818615,
+"name": "Kristoff - Icy Explorer",
+"text": "When you play this character, if you have a character named Anna in play, you may put a card from chosen player's discard on the bottom of their deck.\nOnce during your turn, whenever a card leaves your discard, draw a card."
+},
+{
+"id": 818054,
+"name": "Marie - Favored Kitten",
+"text": "Whenever this character quests, you may give chosen character -2 strength this turn."
+},
+{
+"id": 817115,
+"name": "Helga Sinclair - Femme Fatale",
+"text": "Shift 3 (You may pay 3 ink to play this on top of one of your characters named Helga Sinclair.)\nWhenever this character quests, you may deal 3 damage to chosen damaged character."
+},
+{
+"id": 817711,
+"name": "Good Job!",
+"text": "Chosen character gets +1 lore this turn."
+},
+{
+"id": 816701,
+"name": "White Rabbit's Pocket Watch",
+"text": "exert, 1 ink \u2014 Chosen character gains Rush this turn. (They can challenge the turn they're played.)"
+},
+{
+"id": 817855,
+"name": "Kakamora - Long-Range Specialist",
+"text": "When you play this character, if you have another Pirate character in play, you may deal 1 damage to chosen character or location."
+},
+{
+"id": 818863,
+"name": "Wind-Up Frog - Sid's Toy",
+"text": "If one of your Toy characters was banished this turn, you pay 2 ink less to play this character."
+},
+{
+"id": 817547,
+"name": "Elsa's Ice Palace - Place of Solitude",
+"text": "When you play this location, choose an exerted character. While this location is in play, that character can't ready at the start of their turn."
+},
+{
+"id": 818079,
+"name": "Tick-Tock - Relentless Crocodile",
+"text": "During your turn, this character gains Evasive while a Pirate character is in play. (They can challenge characters with Evasive.)"
+},
+{
+"id": 818037,
+"name": "Ruby Coil",
+"text": "During your turn, whenever a card is put into your inkwell, chosen character gets +2 strength this turn."
+},
+{
+"id": 817103,
+"name": "Last-Ditch Effort",
+"text": "Exert chosen opposing character. Then chosen character of yours gains Challenger +2 this turn. (They get +2 strength while challenging.)"
+},
+{
+"id": 817916,
+"name": "Lady - Miss Park Avenue",
+"text": "Shift 3 (You may pay 3 ink to play this on top of one of your characters named Lady.)\nWhen you play this character, you may return up to 2 character cards with cost 2 or less each from your discard to your hand."
+},
+{
+"id": 817678,
+"name": "Duck for Cover!",
+"text": "Chosen character gains Resist +1 and Evasive this turn. (Damage dealt to them is reduced by 1. They can challenge characters with Evasive.)"
+},
+{
+"id": 817869,
+"name": "Billy Bones - Space Sailor",
+"text": "When this character is banished, you may banish chosen item or location."
+},
+{
+"id": 818714,
+"name": "Scrooge McDuck - Reformed Ebenezer",
+"text": "Shift 4 ink (You may pay 4 ink to play this on top of one of your characters named Scrooge McDuck.)\nWhen you play this character, you may put a card from the top of your deck facedown under each of your other characters. If you do, those characters gain Ward until the start of your next turn. (Opponents can't choose them except to challenge.)"
+},
+{
+"id": 817528,
+"name": "Elsa - The Fifth Spirit",
+"text": "Rush (This character can challenge the turn they're played.)\nEvasive (Only characters with Evasive can challenge this character.)\nWhen you play this character, exert chosen opposing character."
+},
+{
+"id": 817501,
+"name": "Wreck-It Ralph - Admiral Underpants",
+"text": "When you play this character, return a character card from your discard to your hand. If that card is a Princess character card, gain 2 lore."
+},
+{
+"id": 816577,
+"name": "Challenger",
+"text": "While challenging, this character gets +N strength."
+},
+{
+"id": 817995,
+"name": "Mr. Smee - Efficient Captain",
+"text": "Whenever you play an action that isn't a song, you may ready chosen Pirate character."
+},
+{
+"id": 818002,
+"name": "Pete - Space Pirate",
+"text": "Shift 4 (You may pay 4 ink to play this on top of one of your characters named Pete.)\nWhile this character is exerted, opposing characters can't exert to sing songs and your Pirate characters gain Resist +1. (Damage dealt to them is reduced by 1.)"
+},
+{
+"id": 818212,
+"name": "Gloyd Orangeboar - Fierce Competitor",
+"text": "When you play this character, each opponent loses 1 lore and you gain 1 lore."
+},
+{
+"id": 818641,
+"name": "Dinky - Has the Brains",
+"text": "When you play this character, each opponent chooses one of their characters and deals 1 damage to them."
+},
+{
+"id": 818188,
+"name": "Chip - Quick Thinker",
+"text": "When you play this character, chosen opponent chooses and discards a card."
+},
+{
+"id": 817458,
+"name": "Jetsam - Wicked Whisperer",
+"text": "When you play this character, deal 1 damage to each opposing character."
+},
+{
+"id": 817800,
+"name": "Adorabeezle Winterpop - Ice Rocket Racer",
+"text": "While this character has damage, she gets +1 lore."
+},
+{
+"id": 818156,
+"name": "Nero - Fearsome Crocodile",
+"text": "exert \u2014 Move 1 damage counter from this character to chosen opposing character."
+},
+{
+"id": 816631,
+"name": "Toy",
+"text": "Toy: 18 entities of this type."
+},
+{
+"id": 818689,
+"name": "Nani's Payback",
+"text": "Each opponent loses lore equal to the damage on chosen character of yours, to a maximum of 4 lore each. Draw a card."
+},
+{
+"id": 817184,
+"name": "Gramma Tala - Spirit of the Ocean",
+"text": "Shift 5 (You may pay 5 ink to play this on top of one of your characters named Gramma Tala.)\nWhenever a card is put into your inkwell, gain 1 lore."
+},
+{
+"id": 818241,
+"name": "Twitterpated",
+"text": "Chosen character gains Evasive until the start of your next turn. (Only characters with Evasive can challenge them.)"
+},
+{
+"id": 817042,
+"name": "Baloo - von Bruinwald XIII",
+"text": "Bodyguard (This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.)\nWhen this character is banished, gain 2 lore."
+},
+{
+"id": 818026,
+"name": "Maurice - Unconventional Inventor",
+"text": "When you play this character, you may banish chosen item of yours to draw a card. If the banished item is named Maurice's Machine, you may also banish chosen character with 2 strength or less."
+},
+{
+"id": 818117,
+"name": "Patch - Playful Pup",
+"text": "Ward (Opponents can't choose this character except to challenge.)\nWhile you have another Puppy character in play, this character gets +1 lore."
+},
+{
+"id": 817056,
+"name": "Perdita - Devoted Mother",
+"text": "When you play this character and whenever she quests, you may play a character with cost 2 or less from your discard for free."
+},
+{
+"id": 818840,
+"name": "Elinor - Renowned Diplomat",
+"text": "At the end of your turn, if you have 3 or more exerted characters in play, deal 1 damage to chosen opposing character, gain 1 lore, and draw a card."
+},
+{
+"id": 816802,
+"name": "Magic Golden Flower",
+"text": "Banish this item \u2014 Remove up to 3 damage from chosen character."
+},
+{
+"id": 818673,
+"name": "Liquidator - Iced Over",
+"text": "If this is your first turn and you're not the first player, you pay 1 ink less to play this character.\nReckless (This character can't quest and must challenge each turn if able.)"
+}
+]

@@ -51,7 +51,7 @@ steps() {   # $1 = db
   run fixes/f05_factions.py "$D"
   run distinct.py "$D"
 }
-rm -f "$OUT" "$OUT.steps.tsv" "$OUT.work.steps.tsv"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the database is stored without its indexes (indexes.py)
+rm -f "$OUT" "$OUT.steps.tsv" "$OUT.work.steps.tsv"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the full form of the stored database (indexes.py)
 if [ $# -gt 0 ]; then   # loads: the new cards go into the library copy, then every step runs over all games (one chain)
   GAMES=$(for a in "$@"; do echo "${a%%=*}"; done | sort -u | tr '\n' ' ')
   $P compact_text.py "$OUT" expand; $P concept_tree.py "$OUT" restore   # old ids, as the patterns read them
@@ -71,4 +71,4 @@ $P realworld.py "$OUT"
 $P compact_text.py "$OUT" compact
 python3 -I -c "import sqlite3,sys; c=sqlite3.connect(sys.argv[1], isolation_level=None); c.execute(\"insert into entity_fts(entity_fts) values('integrity-check')\"); print(c.execute('pragma integrity_check').fetchone())" "$OUT"
 $P test_query.py "$OUT"
-$P indexes.py "$OUT" drop   # stored without indexes: about 21 MB smaller, rebuilt in under a second
+$P indexes.py "$OUT" drop   # the stored form (indexes.py): no indexes, base kept as differences

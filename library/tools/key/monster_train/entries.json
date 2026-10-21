@@ -1,0 +1,1812 @@
+[
+{
+"id": 822401,
+"name": "Action",
+"text": ""
+},
+{
+"id": 822402,
+"name": "Armor",
+"text": ""
+},
+{
+"id": 822403,
+"name": "Armored",
+"text": ""
+},
+{
+"id": 822404,
+"name": "Ascend",
+"text": ""
+},
+{
+"id": 822405,
+"name": "Attuned",
+"text": ""
+},
+{
+"id": 822406,
+"name": "Buffet",
+"text": ""
+},
+{
+"id": 822407,
+"name": "Burnout",
+"text": ""
+},
+{
+"id": 822408,
+"name": "Charged Echo",
+"text": ""
+},
+{
+"id": 822409,
+"name": "Consume",
+"text": ""
+},
+{
+"id": 822410,
+"name": "Cultivate",
+"text": ""
+},
+{
+"id": 822411,
+"name": "Damage Shield",
+"text": ""
+},
+{
+"id": 822412,
+"name": "Dazed",
+"text": ""
+},
+{
+"id": 822413,
+"name": "Descend",
+"text": ""
+},
+{
+"id": 822414,
+"name": "Eaten",
+"text": ""
+},
+{
+"id": 822415,
+"name": "Emberdrain",
+"text": ""
+},
+{
+"id": 822416,
+"name": "Enchant",
+"text": ""
+},
+{
+"id": 822417,
+"name": "Endless",
+"text": ""
+},
+{
+"id": 822418,
+"name": "Etch",
+"text": ""
+},
+{
+"id": 822419,
+"name": "Extinguish",
+"text": ""
+},
+{
+"id": 822420,
+"name": "Extract",
+"text": ""
+},
+{
+"id": 822421,
+"name": "Fragile",
+"text": ""
+},
+{
+"id": 822422,
+"name": "Frostbite",
+"text": ""
+},
+{
+"id": 822423,
+"name": "Frozen",
+"text": ""
+},
+{
+"id": 822424,
+"name": "Fuel",
+"text": ""
+},
+{
+"id": 822425,
+"name": "Gorge",
+"text": ""
+},
+{
+"id": 822426,
+"name": "Harvest",
+"text": ""
+},
+{
+"id": 822427,
+"name": "Hatch",
+"text": ""
+},
+{
+"id": 822428,
+"name": "Hunger",
+"text": ""
+},
+{
+"id": 822429,
+"name": "Incant",
+"text": ""
+},
+{
+"id": 822430,
+"name": "Inert",
+"text": ""
+},
+{
+"id": 822431,
+"name": "Infused",
+"text": ""
+},
+{
+"id": 822432,
+"name": "Inspire",
+"text": ""
+},
+{
+"id": 822433,
+"name": "Lifesteal",
+"text": ""
+},
+{
+"id": 822434,
+"name": "Magic Power",
+"text": ""
+},
+{
+"id": 822435,
+"name": "Melee Weakness",
+"text": ""
+},
+{
+"id": 822436,
+"name": "Multistrike",
+"text": ""
+},
+{
+"id": 822437,
+"name": "Offering",
+"text": ""
+},
+{
+"id": 822438,
+"name": "Permafrost",
+"text": ""
+},
+{
+"id": 822439,
+"name": "Phased",
+"text": ""
+},
+{
+"id": 822440,
+"name": "Piercing",
+"text": ""
+},
+{
+"id": 822441,
+"name": "Purge",
+"text": ""
+},
+{
+"id": 822442,
+"name": "Pyrebound",
+"text": ""
+},
+{
+"id": 822443,
+"name": "Quick",
+"text": ""
+},
+{
+"id": 822444,
+"name": "Rage",
+"text": ""
+},
+{
+"id": 822445,
+"name": "Rally",
+"text": ""
+},
+{
+"id": 822446,
+"name": "Reap",
+"text": ""
+},
+{
+"id": 822447,
+"name": "Reform",
+"text": ""
+},
+{
+"id": 822448,
+"name": "Regen",
+"text": ""
+},
+{
+"id": 822449,
+"name": "Rejuvenate",
+"text": ""
+},
+{
+"id": 822450,
+"name": "Reserve",
+"text": ""
+},
+{
+"id": 822451,
+"name": "Resolve",
+"text": ""
+},
+{
+"id": 822452,
+"name": "Revenge",
+"text": ""
+},
+{
+"id": 822453,
+"name": "Rooted",
+"text": ""
+},
+{
+"id": 822454,
+"name": "Sap",
+"text": ""
+},
+{
+"id": 822455,
+"name": "Shell",
+"text": ""
+},
+{
+"id": 822456,
+"name": "Silence",
+"text": ""
+},
+{
+"id": 822457,
+"name": "Slay",
+"text": ""
+},
+{
+"id": 822458,
+"name": "Spell Weakness",
+"text": ""
+},
+{
+"id": 822459,
+"name": "Spikes",
+"text": ""
+},
+{
+"id": 822460,
+"name": "Stealth",
+"text": ""
+},
+{
+"id": 822461,
+"name": "Strike",
+"text": ""
+},
+{
+"id": 822462,
+"name": "Summon",
+"text": ""
+},
+{
+"id": 822463,
+"name": "Sweep",
+"text": ""
+},
+{
+"id": 822464,
+"name": "Trample",
+"text": ""
+},
+{
+"id": 822465,
+"name": "Unplayable",
+"text": ""
+},
+{
+"id": 822466,
+"name": "Unpurgeable",
+"text": ""
+},
+{
+"id": 822467,
+"name": "Animus",
+"text": "Animus: 4 entities of this type."
+},
+{
+"id": 822468,
+"name": "Blight",
+"text": "Blight: 4 entities of this type."
+},
+{
+"id": 822469,
+"name": "Channeler",
+"text": "Channeler: 3 entities of this type."
+},
+{
+"id": 822470,
+"name": "Construct",
+"text": "Construct: 4 entities of this type."
+},
+{
+"id": 822471,
+"name": "Dante",
+"text": "Dante: 1 entities of this type."
+},
+{
+"id": 822472,
+"name": "Demon",
+"text": "Demon: 9 entities of this type."
+},
+{
+"id": 822473,
+"name": "Egg",
+"text": "Egg: 3 entities of this type."
+},
+{
+"id": 822474,
+"name": "Fen",
+"text": "Fen: 1 entities of this type."
+},
+{
+"id": 822475,
+"name": "Hollow",
+"text": "Hollow: 5 entities of this type."
+},
+{
+"id": 822476,
+"name": "Host",
+"text": "Host: 2 entities of this type."
+},
+{
+"id": 822477,
+"name": "Imp",
+"text": "Imp: 8 entities of this type."
+},
+{
+"id": 822478,
+"name": "Kin",
+"text": "Kin: 6 entities of this type."
+},
+{
+"id": 822479,
+"name": "Machine",
+"text": "Machine: 1 entities of this type."
+},
+{
+"id": 822480,
+"name": "Mage",
+"text": "Mage: 3 entities of this type."
+},
+{
+"id": 822481,
+"name": "Morsel",
+"text": "Morsel: 6 entities of this type."
+},
+{
+"id": 822482,
+"name": "Scourge",
+"text": "Scourge: 4 entities of this type."
+},
+{
+"id": 822483,
+"name": "Shroud",
+"text": "Shroud: 6 entities of this type."
+},
+{
+"id": 822484,
+"name": "Siren",
+"text": "Siren: 6 entities of this type."
+},
+{
+"id": 822485,
+"name": "Steward",
+"text": "Steward: 1 entities of this type."
+},
+{
+"id": 822486,
+"name": "Titanspawn",
+"text": "Titanspawn: 1 entities of this type."
+},
+{
+"id": 822487,
+"name": "Tomb",
+"text": "Tomb: 4 entities of this type."
+},
+{
+"id": 822488,
+"name": "Totem",
+"text": "Totem: 4 entities of this type."
+},
+{
+"id": 822489,
+"name": "Waxer",
+"text": "Waxer: 6 entities of this type."
+},
+{
+"id": 822490,
+"name": "Wickless",
+"text": "Wickless: 7 entities of this type."
+},
+{
+"id": 822491,
+"name": "Hornbreaker Prince",
+"text": ""
+},
+{
+"id": 822492,
+"name": "Shardtail Queen",
+"text": ""
+},
+{
+"id": 822493,
+"name": "Queen's Impling",
+"text": "Summon: Deal 10 damage to the front enemy unit."
+},
+{
+"id": 822494,
+"name": "Spike of the Hellhorned",
+"text": "Consume. / Apply 2 per X Rage and 2 per X Armor."
+},
+{
+"id": 822495,
+"name": "Vent",
+"text": "Deal 2 per X damage to enemy units."
+},
+{
+"id": 822496,
+"name": "Dark Deal",
+"text": "Deal 5 damage, Apply Rage 7."
+},
+{
+"id": 822497,
+"name": "Fortify",
+"text": "Apply Armor 5."
+},
+{
+"id": 822498,
+"name": "Imp-in-a-Box",
+"text": "Consume. / Add 2 random Imp units to your hand."
+},
+{
+"id": 822499,
+"name": "Imp-portant Work",
+"text": "Sacrifice Imp. / Gain 1 Ember. Draw 1."
+},
+{
+"id": 822500,
+"name": "Rage Serum",
+"text": "Consume. / Apply Rage 3."
+},
+{
+"id": 822501,
+"name": "Alloy of the Ancients",
+"text": "Consume. / Apply Armor 25."
+},
+{
+"id": 822502,
+"name": "Branded Warrior",
+"text": "Rage 4. / Slay: Apply Rage 3 to friendly units."
+},
+{
+"id": 822503,
+"name": "Deranged Brute",
+"text": "Rage on friendly units adds an additional +3 Attack per stack."
+},
+{
+"id": 822504,
+"name": "Fledgling Imp",
+"text": "Summon: Apply Rage 5 to friendly units."
+},
+{
+"id": 822505,
+"name": "Hidden Passage",
+"text": "Ascend a unit."
+},
+{
+"id": 822506,
+"name": "Horn Break",
+"text": "Piercing. / Deal 5 damage, twice."
+},
+{
+"id": 822507,
+"name": "Horned Warrior",
+"text": "Multistrike 1."
+},
+{
+"id": 822508,
+"name": "Impish Scholar",
+"text": "Summon: Return a random consumed spell to your hand."
+},
+{
+"id": 822509,
+"name": "Imp-olate",
+"text": "Deal damage to the front enemy unit equal to 15x the number of Imp units in your deck."
+},
+{
+"id": 822510,
+"name": "Imp-pressive",
+"text": "Attuned. Sacrifice Imp. / Deal 50 damage to the front enemy unit."
+},
+{
+"id": 822511,
+"name": "March of Shields",
+"text": "Move a unit to the front and apply Armor 10."
+},
+{
+"id": 822512,
+"name": "Molting Imp",
+"text": "Summon: Deal 5 damage to enemy units."
+},
+{
+"id": 822513,
+"name": "Pyre Chomper",
+"text": "Summon: Gain 4 Ember."
+},
+{
+"id": 822514,
+"name": "Railbeater",
+"text": "Armor 30. / Strike: Apply Melee Weakness 1 to the attacked unit."
+},
+{
+"id": 822515,
+"name": "Steelworker",
+"text": "Resolve: Apply Armor 5 to friendly units."
+},
+{
+"id": 822516,
+"name": "Torch",
+"text": "Deal 2 damage."
+},
+{
+"id": 822517,
+"name": "Transcendimp",
+"text": "When played, repeat all Summon effects triggered so far this battle."
+},
+{
+"id": 822518,
+"name": "Welder Helper",
+"text": "Summon: Apply Armor 20 to the front friendly unit."
+},
+{
+"id": 822519,
+"name": "Alpha Fiend",
+"text": "Strike: +5 Attack."
+},
+{
+"id": 822520,
+"name": "Branding Rite",
+"text": "Piercing. / Deal 5 damage. Apply Armor 20."
+},
+{
+"id": 822521,
+"name": "Enflame",
+"text": "Apply Rage 4 and Armor 5."
+},
+{
+"id": 822522,
+"name": "Tiresome Climb",
+"text": "Ascend a unit and apply Dazed 2."
+},
+{
+"id": 822523,
+"name": "Battering Ram",
+"text": "Deal damage to the front enemy unit equal to 4x the amount of Armor on friendly units."
+},
+{
+"id": 822524,
+"name": "Inferno",
+"text": "Piercing. / Deal 100 damage to friendly and enemy units."
+},
+{
+"id": 822525,
+"name": "Last Stand",
+"text": "Consume. / Double the amount of Rage on friendly units."
+},
+{
+"id": 822526,
+"name": "Reinforce",
+"text": "Consume. / Double Armor on a unit."
+},
+{
+"id": 822527,
+"name": "Ritual of Battle",
+"text": "Apply Rage 10."
+},
+{
+"id": 822529,
+"name": "Onehorn's Tome",
+"text": "Consume. / Apply Multistrike 1 and Fragile to a friendly unit."
+},
+{
+"id": 822531,
+"name": "Apex Imp",
+"text": "Armored: Gain Rage equal to gained Armor. / Summon: Gain Armor 5."
+},
+{
+"id": 822532,
+"name": "The Sentient",
+"text": ""
+},
+{
+"id": 822533,
+"name": "Wyldenten",
+"text": ""
+},
+{
+"id": 822534,
+"name": "Awoken's Rail Spike",
+"text": "Consume. / Draw [X Cost] and apply -1 Ember to those cards."
+},
+{
+"id": 822535,
+"name": "Ensnare",
+"text": "Apply Rooted 1 to an enemy unit. / Draw +1 next turn."
+},
+{
+"id": 822536,
+"name": "Invigorating Solution",
+"text": "Consume. / Draw +3 next turn."
+},
+{
+"id": 822537,
+"name": "Preserved Thorns",
+"text": "Consume. / Add 3 Sting spells to your hand."
+},
+{
+"id": 822538,
+"name": "Sting",
+"text": "Deal 10 damage to the front enemy unit. / Draw +1 next turn."
+},
+{
+"id": 822539,
+"name": "Unleash the Wildwood",
+"text": "Restore friendly units to full health."
+},
+{
+"id": 822540,
+"name": "Vine Grasp",
+"text": "Deal 3 damage. Move that unit to the front."
+},
+{
+"id": 822541,
+"name": "Animus of Speed",
+"text": "Quick."
+},
+{
+"id": 822542,
+"name": "Animus of Will",
+"text": "Multistrike 2."
+},
+{
+"id": 822543,
+"name": "Awoken Hollow",
+"text": "Summon: Gain 60 max health. / Rejuvenate: Cultivate 2"
+},
+{
+"id": 822544,
+"name": "Channelsong",
+"text": "Consume. / Draw a unit and apply +20 Attack, +20 Health, and 0 Ember."
+},
+{
+"id": 822545,
+"name": "Edge Prior",
+"text": "Healing spells cast on this floor cost -1 Ember."
+},
+{
+"id": 822546,
+"name": "Engraft",
+"text": "Restore 1 health. / Gain 1 Ember. Draw +1 next turn."
+},
+{
+"id": 822547,
+"name": "Glimmer",
+"text": "Restore 2 health to all friendly units and deal 2 damage to all enemy units."
+},
+{
+"id": 822548,
+"name": "Husk Hermit",
+"text": "Sweep."
+},
+{
+"id": 822549,
+"name": "Pyre Shards",
+"text": "Consume. / Apply Spikes 4."
+},
+{
+"id": 822550,
+"name": "Razorsharp Edge",
+"text": "Apply +10 Attack and -2 Health."
+},
+{
+"id": 822551,
+"name": "Restoration Detonation",
+"text": "Restore 10 health to a friendly unit. Deal damage to the front enemy unit equal to 5x the amount healed."
+},
+{
+"id": 822552,
+"name": "Restore",
+"text": "Restore 2 health. Apply Regen 1."
+},
+{
+"id": 822553,
+"name": "Rootseeds",
+"text": "Apply +2 Attack. / Draw +1 next turn."
+},
+{
+"id": 822554,
+"name": "Shard Channeler",
+"text": "Spikes on friendly units deal +1 damage per stack."
+},
+{
+"id": 822555,
+"name": "Shattered Shell",
+"text": "Sweep. / Slay: +3 Attack."
+},
+{
+"id": 822557,
+"name": "Thorned Hollow",
+"text": "Summon: Gain 60 max health. / Rejuvenate: Gain Spikes 3."
+},
+{
+"id": 822558,
+"name": "Vinemother",
+"text": "Resolve: Add a Sting spell to your hand."
+},
+{
+"id": 822560,
+"name": "Wildwood Sap",
+"text": "Consume. / Apply Regen 5."
+},
+{
+"id": 822561,
+"name": "Wildwood Tome",
+"text": "Consume. / Apply Quick."
+},
+{
+"id": 822562,
+"name": "Adaptive Mutation",
+"text": "Consume. / Restore a friendly unit to full health and then swap [Attack] and [Health]."
+},
+{
+"id": 822563,
+"name": "Bramble Lash",
+"text": "Deal damage to the front enemy unit equal to 10x the amount of Spikes on friendly units."
+},
+{
+"id": 822564,
+"name": "Focused Growth",
+"text": "Restore 25 health. / Draw +2 next turn."
+},
+{
+"id": 822565,
+"name": "Pyre-Gro",
+"text": "Consume. / Draw 2 less cards and gain +1 Ember per turn."
+},
+{
+"id": 822566,
+"name": "Restoring Retreat",
+"text": "Descend a unit and restore 10 health."
+},
+{
+"id": 822567,
+"name": "Sharpen",
+"text": "Apply +4 Attack and Spikes 4."
+},
+{
+"id": 822568,
+"name": "Spreading Spores",
+"text": "Apply Regen 2 and Spikes 2. Add a copy of this card to your discard pile."
+},
+{
+"id": 822569,
+"name": "Wilting Sapwood",
+"text": "Revenge: Gain 1 Ember."
+},
+{
+"id": 822570,
+"name": "Awake",
+"text": "Restore 30 health. Apply Regen 3."
+},
+{
+"id": 822571,
+"name": "Cycle of Life",
+"text": "Apply +10 Health and Spikes 3."
+},
+{
+"id": 822572,
+"name": "Steelsinger",
+"text": "Summon: Gain 80 max health. / Rejuvenate: +1 Attack permanently."
+},
+{
+"id": 822573,
+"name": "Tethys Titansbane",
+"text": ""
+},
+{
+"id": 822574,
+"name": "Solgard the Martyr",
+"text": "Incant: Gain Shard 1."
+},
+{
+"id": 822575,
+"name": "Spike of the Stygian",
+"text": "Consume. / Apply 1 per X Sap and 5 per X Frostbite."
+},
+{
+"id": 822576,
+"name": "Crystalline Seeds",
+"text": "Consume. / Apply Frostbite 6 to enemy units."
+},
+{
+"id": 822577,
+"name": "Energy Siphon",
+"text": "Apply Spell Weakness 1 to an enemy unit."
+},
+{
+"id": 822578,
+"name": "Offering Token",
+"text": "Draw 1. Discard 1."
+},
+{
+"id": 822579,
+"name": "Preserve",
+"text": "Permafrost. / Apply Frozen to a card in your hand."
+},
+{
+"id": 822580,
+"name": "Unnamed Tome",
+"text": "Permafrost. Consume. / Apply Silence to enemy units."
+},
+{
+"id": 822581,
+"name": "Urchin Spines",
+"text": "Consume. / Apply Spell Weakness 2 to enemy units."
+},
+{
+"id": 822582,
+"name": "Coldcaelia",
+"text": "Sweep. / Strike: Apply Frostbite 3 to the attacked unit."
+},
+{
+"id": 822583,
+"name": "Cuttlehex",
+"text": "End of Turn: Apply Frozen to a random card in your hand."
+},
+{
+"id": 822584,
+"name": "Drain",
+"text": "Apply Sap 3. / Discard a card at random."
+},
+{
+"id": 822585,
+"name": "Flash Freeze",
+"text": "Deal 3 damage. Apply Frostbite 8."
+},
+{
+"id": 822586,
+"name": "Forgone Power",
+"text": "Apply Frostbite 6 to the front enemy unit. / Discard a card at random"
+},
+{
+"id": 822587,
+"name": "Frenzied Swarm",
+"text": "Apply Dazed 1 to enemy units. / Discard your hand."
+},
+{
+"id": 822588,
+"name": "Frozen Lance",
+"text": "Deal 6 damage to the front enemy unit."
+},
+{
+"id": 822589,
+"name": "Glacial Seal",
+"text": "Incant: Apply Frostbite 2 to enemy units."
+},
+{
+"id": 822590,
+"name": "Guard of the Unnamed",
+"text": "Incant: Gain Armor 3."
+},
+{
+"id": 822591,
+"name": "Guardian Stone",
+"text": "Incant: Apply Armor 1 to friendly units."
+},
+{
+"id": 822592,
+"name": "Harness the Titan",
+"text": "Apply +5 Magic Power to spells in hand."
+},
+{
+"id": 822593,
+"name": "Ice and Pyre",
+"text": "Pyrebound. Attuned. / Deal 90 damage to the front enemy unit."
+},
+{
+"id": 822594,
+"name": "Icestorm",
+"text": "Deal 1 damage to a random enemy unit, five times."
+},
+{
+"id": 822595,
+"name": "Icy Cilophyte",
+"text": "Sweep. / Strike: Apply Spell Weakness 1 to the attacked unit."
+},
+{
+"id": 822596,
+"name": "Lodestone Totem",
+"text": "Incant: Apply Sap 1 to enemy units."
+},
+{
+"id": 822597,
+"name": "Molluscmage",
+"text": "+10 Magic Power on this floor."
+},
+{
+"id": 822598,
+"name": "Nameless Siren",
+"text": "Incant: Gain Rage 2."
+},
+{
+"id": 822599,
+"name": "Offering Monument",
+"text": "Incant: Draw 1 and this unit gets -5 Health."
+},
+{
+"id": 822600,
+"name": "Siren of the Sea",
+"text": "Incant: +2 Attack and +2 Health."
+},
+{
+"id": 822601,
+"name": "Siren's Song",
+"text": "Pyrebound. / Ascend all enemy units on this floor and apply Dazed 3."
+},
+{
+"id": 822602,
+"name": "Titan Sentry",
+"text": "Revenge: Apply Frostbite 3 to enemy units."
+},
+{
+"id": 822603,
+"name": "Titan's Gratitude",
+"text": "Attuned. / Deal 25 damage to the front enemy unit. / Discard a card at random."
+},
+{
+"id": 822604,
+"name": "Deep Offering",
+"text": "Consume. / Discard your hand. Draw 5."
+},
+{
+"id": 822605,
+"name": "Gifts for a Guard",
+"text": "Draw 3 spells and apply Consume, +20 Magic Power and 0 Ember."
+},
+{
+"id": 822606,
+"name": "Helical Crystalis",
+"text": "Deal 25 damage to the front enemy unit, twice."
+},
+{
+"id": 822607,
+"name": "Hoarfrost Effigy",
+"text": "Transfer all Frostbite on this floor to a unit, then double the amount of Frostbite."
+},
+{
+"id": 822608,
+"name": "Ancient Synergy",
+"text": "Deal damage to the front enemy unit equal to 2x the number of spells in your deck, three times."
+},
+{
+"id": 822609,
+"name": "Crypt Builder",
+"text": "Offering. Attuned. / Deal 60 damage to the front enemy unit and push it to the back."
+},
+{
+"id": 822610,
+"name": "Guardian's Amulet",
+"text": "Offering. / Apply Sap 2 to enemy units."
+},
+{
+"id": 822611,
+"name": "Ice Tornado",
+"text": "Permafrost. Deal 20 damage to a random enemy unit, three times."
+},
+{
+"id": 822612,
+"name": "Titanstooth",
+"text": "Offering. / Deal 5 damage to enemy units and apply Frostbite 10."
+},
+{
+"id": 822613,
+"name": "Eel Gorgon",
+"text": "Incant: Gain Multistrike 1. / Resolve: Remove all status effects."
+},
+{
+"id": 822614,
+"name": "Penumbra",
+"text": ""
+},
+{
+"id": 822615,
+"name": "Primordium",
+"text": "Buffet 3. / Eaten: Add this unit's [Attack] and [Health] to the eater."
+},
+{
+"id": 822616,
+"name": "Forever Consumed",
+"text": "Deal 30 per X damage to the front enemy unit."
+},
+{
+"id": 822617,
+"name": "Kindle",
+"text": "Consume. / Gain 2."
+},
+{
+"id": 822618,
+"name": "Mine Collapse",
+"text": "Deal 3 per X damage to an enemy unit. / Slay: Gain 2 Ember."
+},
+{
+"id": 822619,
+"name": "Prism Retrieval",
+"text": "Consume. / Draw a unit and apply +5 and -."
+},
+{
+"id": 822620,
+"name": "Prismal Dust",
+"text": "Consume. / Apply 1 per X Damage Shield."
+},
+{
+"id": 822621,
+"name": "Shroud Spike",
+"text": "Consume. / Kill a Morsel unit. Trigger Eaten and Gorge abilities as if it had been eaten 2 per X times."
+},
+{
+"id": 822622,
+"name": "Antumbra Morsel",
+"text": "Eaten: Eater gains +6 Health."
+},
+{
+"id": 822623,
+"name": "Ember Cache",
+"text": "Consume. / Add 3 Excavated Ember cards to your discard pile."
+},
+{
+"id": 822624,
+"name": "Feast",
+"text": "Trigger feeding on units with Eaten abilities."
+},
+{
+"id": 822625,
+"name": "Immortal Trade",
+"text": "Apply Lifesteal 3 and Emberdrain 2 to a friendly unit."
+},
+{
+"id": 822626,
+"name": "Magma Morsel",
+"text": "Eaten: Eater gains +6 Attack."
+},
+{
+"id": 822627,
+"name": "Morsel Excavator",
+"text": "Eaten: Eater gains +3 Attack and Lifesteal 1."
+},
+{
+"id": 822628,
+"name": "Morsel Jeweler",
+"text": "Eaten: Eater gains +3 Health and Damage Shield 1."
+},
+{
+"id": 822629,
+"name": "Morsel Miner",
+"text": "Eaten: Eater gains +6 Attack and +6 Health."
+},
+{
+"id": 822630,
+"name": "Packed Morsels",
+"text": "Consume. / Add 3 uncommon or rare Morsel units to your hand."
+},
+{
+"id": 822631,
+"name": "Perils of Production",
+"text": "Apply Rage 3 and Emberdrain 2 to a friendly unit. / Gain 3 Ember."
+},
+{
+"id": 822632,
+"name": "Retch",
+"text": "Return consumed Morsel units to your hand."
+},
+{
+"id": 822633,
+"name": "Rubble Morsel",
+"text": "Eaten: Gain 1 Ember. / Eater gains +1 Attack and +1 Health."
+},
+{
+"id": 822634,
+"name": "Space Prism",
+"text": "Consume. / +1 Capacity on this floor."
+},
+{
+"id": 822635,
+"name": "Void Binding",
+"text": "Apply Damage Shield 2, Rage 6, and Emberdrain 3."
+},
+{
+"id": 822636,
+"name": "Antumbra Assault",
+"text": "Deal 3 damage. / Slay: Add 2 uncommon or rare Morsel units to your hand."
+},
+{
+"id": 822637,
+"name": "Cannibalize",
+"text": "Sacrifice. / Add 3 random uncommon or rare Morsel units to your hand."
+},
+{
+"id": 822638,
+"name": "Crucible Collector",
+"text": "Gorge: Gain Lifesteal 1."
+},
+{
+"id": 822639,
+"name": "Crucible Warden",
+"text": "Gorge: Gain Damage Shield 1."
+},
+{
+"id": 822640,
+"name": "Ember Forge",
+"text": "+2 Ember per turn."
+},
+{
+"id": 822641,
+"name": "Engine Upgrade",
+"text": "Consume. / -1 Capacity on this floor. +1 Ember per turn for the rest of battle."
+},
+{
+"id": 822642,
+"name": "Morselmaster",
+"text": "When you summon a Morsel unit on this floor, create a copy."
+},
+{
+"id": 822643,
+"name": "Plink",
+"text": "Deal 1 damage to a random enemy unit, twice. / Slay: Add a common or uncommon Morsel unit to your hand."
+},
+{
+"id": 822644,
+"name": "Shadesplitter",
+"text": "Add a common or uncommon Morsel unit to your hand."
+},
+{
+"id": 822645,
+"name": "Shroud Mitosis",
+"text": "Create 3 copies of a Morsel unit."
+},
+{
+"id": 822646,
+"name": "Alloyed Construct",
+"text": "Inert. Multistrike 1. / Gorge: Gain Fuel 1."
+},
+{
+"id": 822647,
+"name": "Cave In",
+"text": "Descend friendly and enemy units on this floor."
+},
+{
+"id": 822648,
+"name": "Crucible Extension",
+"text": "+1 Capacity on this floor."
+},
+{
+"id": 822649,
+"name": "Furnace Tap",
+"text": "Consume. / Apply Multistrike 1. Apply Emberdrain 4."
+},
+{
+"id": 822650,
+"name": "Grovel",
+"text": "Apply Damage Shield 1. Add 2 uncommon or rare Morsel units to your hand."
+},
+{
+"id": 822651,
+"name": "Making of a Morsel",
+"text": "Add a Morsel Miner to your hand."
+},
+{
+"id": 822652,
+"name": "Morselmaker",
+"text": "Resolve: Summon an Antumbra Morsel and Magma Morsel in this room."
+},
+{
+"id": 822653,
+"name": "Overgorger",
+"text": "Gorge: +2 Attack permanently."
+},
+{
+"id": 822654,
+"name": "Shadoweater",
+"text": "Gorge: Restore 10 health. Deal 10 damage to enemy units."
+},
+{
+"id": 822655,
+"name": "Umbra Stone",
+"text": "Consume. / Apply Trample."
+},
+{
+"id": 822656,
+"name": "Blazing Bolts",
+"text": "Purge. / Deal 30 damage to the front enemy unit. Add a stronger version of this card to your discard.Purge. / Deal 30 damage to a random unit, two times. Add a stronger version of this card to your discard.Deal 30 damage to a random unit, four times."
+},
+{
+"id": 822657,
+"name": "Excavation Eruption",
+"text": "Deal 20 damage to a random enemy unit, three times. / Slay: Gain 2 Ember."
+},
+{
+"id": 822658,
+"name": "Gem Trove",
+"text": "Apply Damage Shield 1 to friendly units. Add 3 uncommon or rare Morsel units to your hand."
+},
+{
+"id": 822660,
+"name": "Morsel-Made",
+"text": "Hunger: Feed on units with Eaten. / Gorge: +2 Attack and +2 Health."
+},
+{
+"id": 822661,
+"name": "Rector Flicker",
+"text": ""
+},
+{
+"id": 822662,
+"name": "Little Fade",
+"text": ""
+},
+{
+"id": 822663,
+"name": "Waxen Spike",
+"text": "Consume. / Apply +4 and Burnout 4 to friendly units."
+},
+{
+"id": 822664,
+"name": "Dreg",
+"text": "Burnout 2."
+},
+{
+"id": 822665,
+"name": "Primitive Mold",
+"text": "Reform a random unit."
+},
+{
+"id": 822666,
+"name": "Hallowed Drippings",
+"text": "Consume. / Apply Burnout 5 to friendly Burnout units."
+},
+{
+"id": 822667,
+"name": "Intent on Death",
+"text": "Consume. / Trigger a unit's Extinguish ability without killing it."
+},
+{
+"id": 822668,
+"name": "Memories of the Melted",
+"text": "Consume. / Gain 1 Ember for each friendly unit death this battle."
+},
+{
+"id": 822669,
+"name": "Purifying Cleanse",
+"text": "Restore 15 health and apply Burnout 3 to a friendly unit."
+},
+{
+"id": 822670,
+"name": "Sacred Wicks",
+"text": "Consume. / Reform 2 random units."
+},
+{
+"id": 822671,
+"name": "Sacrificial Resurrection",
+"text": "Consume cards in hand to add a Draff unit to your hand and apply +10 Attack for each card consumed."
+},
+{
+"id": 822672,
+"name": "Wickless Recruitment",
+"text": "Remove all Burnout and Debuff effects from a unit."
+},
+{
+"id": 822673,
+"name": "Bounty Stalker",
+"text": "Stealth 1. / Extinguish: +8 Attack permanently."
+},
+{
+"id": 822674,
+"name": "Crushing Demise",
+"text": "Kill a random non-boss enemy unit. / Kill a random friendly unit."
+},
+{
+"id": 822675,
+"name": "Devourer of Death",
+"text": "Harvest: Gain Soul 1. / Extinguish: Deal damage to the enemy units equal to 15x the Soul count."
+},
+{
+"id": 822676,
+"name": "Draff",
+"text": "Burnout 1. Multistrike 1."
+},
+{
+"id": 822677,
+"name": "Engulfed in Smoke",
+"text": "Apply Stealth 2 to friendly units."
+},
+{
+"id": 822678,
+"name": "Entombed Explosive",
+"text": "Extinguish: Deal 50 damage to the front enemy unit."
+},
+{
+"id": 822679,
+"name": "Lady of the House",
+"text": "Burnout 3."
+},
+{
+"id": 822680,
+"name": "Lady of the Reformed",
+"text": "Burnout 3. / Revenge: Friendly Burnout units gain Burnout 1."
+},
+{
+"id": 822681,
+"name": "Molded",
+"text": "Reform a unit."
+},
+{
+"id": 822682,
+"name": "Molten Encasement",
+"text": "Extinguish: Apply Stealth 2 to friendly units."
+},
+{
+"id": 822683,
+"name": "Paraffin Enforcer",
+"text": "Strike: Friendly Burnout units gain Rage 3."
+},
+{
+"id": 822684,
+"name": "Paraffin Thug",
+"text": "Slay: Gain 20 Gold."
+},
+{
+"id": 822685,
+"name": "Remnant Host",
+"text": "Extinguish: Summon 2 Draff units."
+},
+{
+"id": 822686,
+"name": "Remnant Pact",
+"text": "Consume. / Apply Endless to a friendly unit."
+},
+{
+"id": 822688,
+"name": "Votivary",
+"text": "Endless. / Extinguish: Draw 1."
+},
+{
+"id": 822689,
+"name": "Wicklash",
+"text": "Apply +10 Attack and Burnout 2 to a friendly unit."
+},
+{
+"id": 822690,
+"name": "Wickless Baron",
+"text": "Harvest: +3 Attack and +3 Health."
+},
+{
+"id": 822691,
+"name": "Wickless Tycoon",
+"text": "Harvest: Gain 5 Gold."
+},
+{
+"id": 822692,
+"name": "A Fatal Melting",
+"text": "Deal damage to enemy units equal to 3x the number of friendly unit deaths this battle."
+},
+{
+"id": 822693,
+"name": "Big Sludge",
+"text": "Harvest: Gain Rage 5."
+},
+{
+"id": 822694,
+"name": "Dripfall",
+"text": "Descend a unit and apply Dazed 1."
+},
+{
+"id": 822695,
+"name": "Formless Child",
+"text": "Extinguish: Return a random defeated unit to your hand and apply +40 Attack."
+},
+{
+"id": 822696,
+"name": "Legion of Wax",
+"text": "Extinguish: Summon 2 Twin of Wax and apply this unit's upgrades and stat changes."
+},
+{
+"id": 822697,
+"name": "Subsuming Blade",
+"text": "Piercing. / Deal 5 damage. / Slay: Increase damage by 3 permanently."
+},
+{
+"id": 822698,
+"name": "Wicked Blaze",
+"text": "Reform a unit and apply an additional +10 Attack."
+},
+{
+"id": 822699,
+"name": "Memento Mori",
+"text": "Deal damage to the front enemy unit equal to 10x the number of friendly unit deaths this battle."
+},
+{
+"id": 822700,
+"name": "Mortal Entrapment",
+"text": "Attuned. / Deal 25 damage and apply Dazed 3 to an already damaged unit."
+},
+{
+"id": 822701,
+"name": "Hallowed Halls",
+"text": "Kill friendly units. / Reform random units to this floor until it exceeds its Capacity."
+},
+{
+"id": 822702,
+"name": "Spine Chief",
+"text": ""
+},
+{
+"id": 822703,
+"name": "Echowright",
+"text": ""
+},
+{
+"id": 822704,
+"name": "Fracture",
+"text": "Apply Reap 2."
+},
+{
+"id": 822705,
+"name": "Echo Break",
+"text": "Deal 1 damage per [Echo]"
+},
+{
+"id": 822706,
+"name": "Bog Fly",
+"text": "+5 Attack per [Echo]."
+},
+{
+"id": 822707,
+"name": "Bounding Echoes",
+"text": "Consume. / Apply Infused to cards in hand."
+},
+{
+"id": 822708,
+"name": "Echo Infusion",
+"text": "Extract 1. / Apply +10 Health."
+},
+{
+"id": 822709,
+"name": "Echo Snare",
+"text": "Consume. / Apply Reap 2 to enemy units."
+},
+{
+"id": 822710,
+"name": "Echo Transfer",
+"text": "Extract 2. / Apply +15 Attack."
+},
+{
+"id": 822711,
+"name": "Hosting Kin",
+"text": "Consume. / Deal 13 damage to a unit and move it to the back."
+},
+{
+"id": 822712,
+"name": "Proclamation",
+"text": "Attuned. Extract 2. / Deal 50 damage to the front enemy unit."
+},
+{
+"id": 822713,
+"name": "Shelter",
+"text": "Consume. / Apply Armor 2 per [Echo] to friendly units."
+},
+{
+"id": 822714,
+"name": "Bog Chrysalis",
+"text": "Shell 5. / Hatch: Summon 2 Bog Fly units."
+},
+{
+"id": 822715,
+"name": "Keeper of Echoes",
+"text": "Inspire: Apply +1 Attack and +1 Health to friendly units."
+},
+{
+"id": 822716,
+"name": "Kinhost Carapace",
+"text": "When played, gain +10 Attack, +10 Health, and +1 Capacity per [Echo]."
+},
+{
+"id": 822717,
+"name": "Kinhost Vessel",
+"text": "Shell 8. / Hatch: Summon Kinhost Pupa."
+},
+{
+"id": 822718,
+"name": "Kinhost Pupa",
+"text": "Armor 20. Multistrike 1. / Strike: Apply Reap 1 to enemy units."
+},
+{
+"id": 822719,
+"name": "First of Kin",
+"text": "Etch: +5 Attack."
+},
+{
+"id": 822720,
+"name": "Shardsoul Carver",
+"text": "Inspire: +2 Attack and Armor 2."
+},
+{
+"id": 822721,
+"name": "Ambient Charge",
+"text": "Extract 3. / Draw 3. Apply Consume to drawn spells."
+},
+{
+"id": 822722,
+"name": "Ancient Resonance",
+"text": "Deal 5 damage to enemy units per [Echo]."
+},
+{
+"id": 822723,
+"name": "Broken Memories",
+"text": "Consume. / Return a consumed spell to the top of your draw pile."
+},
+{
+"id": 822724,
+"name": "Forced Contamination",
+"text": "Extract 3. / Apply Melee Weakness 3."
+},
+{
+"id": 822725,
+"name": "Forgotten Trade",
+"text": "Consume. / Gain 1 per [Echo]."
+},
+{
+"id": 822726,
+"name": "Power of Knowledge",
+"text": "Deal 15 damage for each spell in the Consume pile."
+},
+{
+"id": 822727,
+"name": "Returned Soul",
+"text": "Return a spell card from the discard pile to your hand and apply Infused, -1 Ember, and Consume."
+},
+{
+"id": 822728,
+"name": "Revenge of the Damned",
+"text": "Extract 1. / Deal 5 damage, twice. / Slay: Gain 2 Echo."
+},
+{
+"id": 822729,
+"name": "Soul Cripple",
+"text": "Consume. / Apply Reap 13."
+},
+{
+"id": 822730,
+"name": "Soul Siphon",
+"text": "Consume. / Fill [EchoSlot] with [Echo]. Apply Emberdrain 1 to friendly units."
+},
+{
+"id": 822731,
+"name": "Soulcrushing Guilt",
+"text": "Extract 3. / Apply Dazed 3 to a unit and move it to the back."
+},
+{
+"id": 822732,
+"name": "Total Recall",
+"text": "Consume. / Return 3 random spell cards from the discard pile to your hand and apply Consume."
+},
+{
+"id": 822733,
+"name": "Bogdeep Cocoon",
+"text": "Shell 12. / Hatch: Summon Bog Wurmling"
+},
+{
+"id": 822734,
+"name": "Bog Wurmling",
+"text": "Trample. / Etch: +10 Attack and +10 Health."
+},
+{
+"id": 822735,
+"name": "Glareminder",
+"text": "Sweep. / Etch: Apply Reap 2 to enemy units."
+},
+{
+"id": 822736,
+"name": "Glugsider",
+"text": "Extract 4. / Inspire: Restore 5 health. / Revenge: Apply Reap 5 to the attacking unit."
+},
+{
+"id": 822737,
+"name": "Accelerated Incubation",
+"text": "Consume. / Remove 3 Shell from Eggs."
+},
+{
+"id": 822738,
+"name": "Echoes of the Past",
+"text": "Apply +6 Attack per [Echo]. Clear [Echo]."
+},
+{
+"id": 822739,
+"name": "Eternal Kinstone",
+"text": "Add 1 that cannot be removed."
+},
+{
+"id": 822741,
+"name": "Symphony of the Soul",
+"text": "Extract 5. / Double buffs and Armor on a unit."
+},
+{
+"id": 822742,
+"name": "Unearthed Remains",
+"text": "Consume. / Gain 1 EchoSlot. Gain 1 Echo."
+},
+{
+"id": 822743,
+"name": "Wurmkin Spike",
+"text": "Consume. / Apply 4 per X Reap to enemy units."
+},
+{
+"id": 822744,
+"name": "Wurmkin Etchings",
+"text": "Consume. / Return 5 consumed spells to the top of your draw pile."
+},
+{
+"id": 822745,
+"name": "Automatic Railspikes",
+"text": "Deal 10 per X damage. / Slay: Add a permanent copy of this card to your discard pile."
+},
+{
+"id": 822746,
+"name": "Bone Rattler",
+"text": "Consume. / Apply +5 to your Pyre."
+},
+{
+"id": 822747,
+"name": "Boneshine",
+"text": "Purge. / Restore 5 per X Pyre health."
+},
+{
+"id": 822748,
+"name": "Gift of Gratitude",
+"text": "Purge. / Gain 40."
+},
+{
+"id": 822749,
+"name": "Most Blessed Sword",
+"text": "Purge. Piercing. / Deal 30 per X damage to enemy units."
+},
+{
+"id": 822750,
+"name": "Thy Holiest Shield",
+"text": "Purge. / Apply 2 per X Damage Shield."
+},
+{
+"id": 822751,
+"name": "Bone Dog's Favor",
+"text": "Unplayable. / Reserve: Restore 5 Pyre health."
+},
+{
+"id": 822752,
+"name": "Deadweight",
+"text": "Unplayable. Unpurgeable."
+},
+{
+"id": 822753,
+"name": "Excavated Ember",
+"text": "Consume. / Gain 2 Ember. Draw 1."
+},
+{
+"id": 822754,
+"name": "Petrified Skull",
+"text": "Purge. / Kill a non-boss unit."
+},
+{
+"id": 822755,
+"name": "Spikedriver Colony",
+"text": "Multistrike 1. / Extinguish: Add a permanent copy of this card to your discard pile.+20 Attack and remove Extinguish."
+},
+{
+"id": 822756,
+"name": "Trap Chute",
+"text": "Consume. / Descend a unit to the bottom floor. Apply Dazed 2."
+},
+{
+"id": 822757,
+"name": "Dante the Deceptive",
+"text": "When played, gain a stack of Multistrike for each Blight card in your deck."
+},
+{
+"id": 822758,
+"name": "Dante's Candle",
+"text": "Unpurgeable. / Reserve: Your Pyre takes 3 damage."
+},
+{
+"id": 822759,
+"name": "Petty Theft",
+"text": "Deal 2 damage to an enemy unit. / Slay: +50 Gold."
+},
+{
+"id": 822760,
+"name": "Self-Mutilation",
+"text": "Purge. / Reserve: Your Pyre takes 5 damage."
+},
+{
+"id": 822761,
+"name": "Sinner's Burden",
+"text": "Purge."
+},
+{
+"id": 822763,
+"name": "Vengeful Shard",
+"text": "Reserve: Your Pyre takes 1 damage."
+},
+{
+"id": 822765,
+"name": "Steel Pulleyclaw",
+"text": "Consume. / Ascend an enemy unit to the Pyre room. Apply Dazed 3."
+},
+{
+"id": 822767,
+"name": "Calcified Ember",
+"text": "Purge."
+},
+{
+"id": 822768,
+"name": "Good Ol' Wingmaker",
+"text": "Deal 6 damage to enemy units, two times. / Slay: +1 Capacity on this floor."
+},
+{
+"id": 822769,
+"name": "Heph the Blacksmith",
+"text": "Trample. / Resolve: +1 Capacity on this floor."
+},
+{
+"id": 822770,
+"name": "Olde Magic",
+"text": ""
+},
+{
+"id": 822771,
+"name": "Nexus Spike",
+"text": "Consume. / Does not affect bosses."
+},
+{
+"id": 822772,
+"name": "For the Greater Good",
+"text": "Summon a friendly Rebel unit to the front of this floor."
+}
+]

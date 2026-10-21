@@ -1,0 +1,1012 @@
+[
+{
+"id": 818948,
+"name": "Construct",
+"text": "Construct: 13 entities of this type."
+},
+{
+"id": 818949,
+"name": "Dragon",
+"text": "Dragon: 20 entities of this type."
+},
+{
+"id": 818950,
+"name": "Dwarf",
+"text": "Dwarf: 11 entities of this type."
+},
+{
+"id": 818951,
+"name": "Feline",
+"text": "Feline: 14 entities of this type."
+},
+{
+"id": 818952,
+"name": "Frostling",
+"text": "Frostling: 15 entities of this type."
+},
+{
+"id": 818953,
+"name": "Knight",
+"text": "Knight: 11 entities of this type."
+},
+{
+"id": 818954,
+"name": "Pirate",
+"text": "Pirate: 12 entities of this type."
+},
+{
+"id": 818955,
+"name": "Raven",
+"text": "Raven: 13 entities of this type."
+},
+{
+"id": 818956,
+"name": "Rodent",
+"text": "Rodent: 15 entities of this type."
+},
+{
+"id": 818957,
+"name": "Satyr",
+"text": "Satyr: 12 entities of this type."
+},
+{
+"id": 818958,
+"name": "Toad",
+"text": "Toad: 14 entities of this type."
+},
+{
+"id": 818959,
+"name": "Undead",
+"text": "Undead: 15 entities of this type."
+},
+{
+"id": 818960,
+"name": "Green Prototypes",
+"text": "On death, give 1/2/3/4/5 strength to a random surrounding enemy unit and vitalize it"
+},
+{
+"id": 818961,
+"name": "Summon Militia",
+"text": "Randomly spawn a Knight with 1/2/3/4/5 strength"
+},
+{
+"id": 818964,
+"name": "Northsea Dog",
+"text": "When played as the last card in your hand, gain 5/6/7/8/10 strength"
+},
+{
+"id": 818965,
+"name": "Spare Dragonling",
+"text": "On death, give 3/4/5/6/7 strength to a random friendly Dragon"
+},
+{
+"id": 818966,
+"name": "Brothers in Arms",
+"text": "On play, spawn a 1/2/2/3/3 strength Knight on the tile behind"
+},
+{
+"id": 818967,
+"name": "Collector Mirz",
+"text": "On play, create a 0 cost unit with 5/6/6/8/10 strength and add it to your deck"
+},
+{
+"id": 818968,
+"name": "Confinement",
+"text": "Reduce the strength of a target enemy unit to 5/4/3/2/1"
+},
+{
+"id": 818969,
+"name": "Conflicted Drakes",
+"text": "On play, deal 1/1/2/2/3 damage to all non-Dragon units in front"
+},
+{
+"id": 818970,
+"name": "Felflares",
+"text": "On play, deal 2/3/4/5/6 damage to a random surrounding enemy"
+},
+{
+"id": 818971,
+"name": "First Mutineer",
+"text": "On play, discard a random non-Pirate card from your hand"
+},
+{
+"id": 818973,
+"name": "Freebooters",
+"text": "On play, draw 1/1/1/2/2 card/card/card/cards/cards"
+},
+{
+"id": 818974,
+"name": "Potion of Growth",
+"text": "Give 2/3/4/5/6 strength to a target friendly unit and vitalizes it"
+},
+{
+"id": 818976,
+"name": "Wetland Deceivers",
+"text": "On play, destroy all surrounding units with 1/1/2/2/3 /or/or/or/or /less/less/less/less strength"
+},
+{
+"id": 818977,
+"name": "Beasts of Terror",
+"text": "When attacking a non-Dragon unit, deal 2/2/3/3/4 damage to all other enemies with the same unit type"
+},
+{
+"id": 818979,
+"name": "Emerald Towers",
+"text": "At the start of your turn, give 2/2/3/3/4 strength to all friendly units in front"
+},
+{
+"id": 818980,
+"name": "Execution",
+"text": "Deal 4/5/6/7/8 damage to a target enemy unit or structure"
+},
+{
+"id": 818981,
+"name": "Goldgrubbers",
+"text": "On play, replace a random non-Pirate card from your hand"
+},
+{
+"id": 818982,
+"name": "Hunter\u2019s Vengeance",
+"text": "Randomly deal 2/3/4/5/6 damage to one unit of each unit type"
+},
+{
+"id": 818983,
+"name": "Personal Servers",
+"text": "On play, give 2/2/3/3/4 strength to another random friendly unit"
+},
+{
+"id": 818984,
+"name": "Siegebreakers",
+"text": "On play, deal 4/5/6/7/8 damage to all surrounding enemy structures"
+},
+{
+"id": 818985,
+"name": "Snowmasons",
+"text": "On death, give 4/5/6/7/8 strength spread randomly among all surrounding friendly units"
+},
+{
+"id": 818986,
+"name": "Terrific Slayers",
+"text": "Before attacking a Dragon, deal 5/6/7/8/10 additional damage"
+},
+{
+"id": 818988,
+"name": "Bladestorm",
+"text": "Deal 1/2/2-3/3/4 damage to all enemy units and structures"
+},
+{
+"id": 818990,
+"name": "Flooding the Gates",
+"text": "Deal 5/6/7/8/10 damage to all units bordering your base"
+},
+{
+"id": 818992,
+"name": "Snake Eyes",
+"text": "When played with a full hand, discard all cards and draw 4 new cards"
+},
+{
+"id": 818993,
+"name": "Trueshot Post",
+"text": "At the start of your turn, randomly deal 4/5/6/7/8 damage to the most forward enemy unit or structure"
+},
+{
+"id": 818994,
+"name": "Ubass the Hunter",
+"text": "On play, deal 1/1/2/2/3 damage to a random enemy for each unique surrounding primary unit type"
+},
+{
+"id": 818995,
+"name": "Voidsurgers",
+"text": "When played with at least 3 surrounding enemies, deal 2/3/4/5/6 damage to each"
+},
+{
+"id": 818996,
+"name": "Boomstick Officers",
+"text": "On play, deal 4/5/6/7/8 damage to the closest enemy behind"
+},
+{
+"id": 818997,
+"name": "Harvesters of Souls",
+"text": "When attacking a weaker unit, add a 5/6/7/8/10 strength copy of that card to your deck"
+},
+{
+"id": 818998,
+"name": "Hearthguards",
+"text": "When played bordering a friendly structure or base, gain 3/4/5/6/7 strength"
+},
+{
+"id": 818999,
+"name": "Kindred\u2019s Grace",
+"text": "Give 7/8/8/10/12 strength to a target friendly unit and 2/2/3/4/5 strength to all others of the same unit type"
+},
+{
+"id": 819000,
+"name": "Lich Summoners",
+"text": "After attacking, spawn a 3/4/5/6/7 strength Undead on the tile behind"
+},
+{
+"id": 819001,
+"name": "Lucky Charmers",
+"text": "On play, gain 3/3/4/5/6 strength for each Pirate in your hand"
+},
+{
+"id": 819002,
+"name": "Ludic Matriarchs",
+"text": "When played bordering a friendly Dragon, spawn 1/1/2/2/3 strength Dragons on all tiles bordering either"
+},
+{
+"id": 819003,
+"name": "Needle Blast",
+"text": "Deal 2/2/3/3/4 damage to 2/3/3/4/4 random enemies"
+},
+{
+"id": 819004,
+"name": "Powder Tower",
+"text": "At the start of your turn, this explodes and deals 2/2/3/3/4 damage to all enemies"
+},
+{
+"id": 819005,
+"name": "Tegor the Vengeful",
+"text": "On death, do a random effect: give 6/7/8/10/12 strength, deal 5/6/7/8/10 damage or spawn a 4/5/6/7/8 strength unit"
+},
+{
+"id": 819006,
+"name": "Victors of the Melee",
+"text": "When attacking, deal 2/2/3/3/4 damage to all surrounding enemy units and structures"
+},
+{
+"id": 819007,
+"name": "Archdruid Earyn",
+"text": "On play, randomly play up to 1/1/1/2/2 spell card/card/card/cards/cards up to Earyn\u2019s mana cost from your hand"
+},
+{
+"id": 819008,
+"name": "Avian Stalkers",
+"text": "On death, destroy all units in front with 3/4/5/6/7 strength or less and spawn 3/4/5/6/7 strength Ravens on all tiles behind"
+},
+{
+"id": 819009,
+"name": "Call for Aid",
+"text": "Spawn 3/4/5/6/7 strength units on all tiles bordering a target friendly unit"
+},
+{
+"id": 819010,
+"name": "Dangerous Suitors",
+"text": "On play, gain 2/2/3/3/4 strength for every other Dragon on the board"
+},
+{
+"id": 819012,
+"name": "Sharpfist Exiles",
+"text": "On play, gain 2/2/3/3/4 strength for every enemy unit on the board"
+},
+{
+"id": 819014,
+"name": "Joust Champions",
+"text": "Before attacking a unit or structure, deal 3/4/5/6/7 additional damage to it"
+},
+{
+"id": 819015,
+"name": "Temple Guardians",
+"text": "When played on the tile in front or the sides of your temple structure or your base, spawn 4/5/6/7/8 strength Knights on all of its bordering tiles"
+},
+{
+"id": 819016,
+"name": "Crazy Bombers",
+"text": "On play, deal 7/8/10/12/15 damage spread randomly among all surrounding enemies"
+},
+{
+"id": 819017,
+"name": "Siren of the Seas",
+"text": "Before attacking a unit, reduce its strength to 3"
+},
+{
+"id": 819018,
+"name": "Edrik the Fierce",
+"text": "On play, spawn 2/3/4/5/6 strength Knights in front of all surrounding enemy units"
+},
+{
+"id": 819019,
+"name": "Fluffy Badboxers",
+"text": "After attacking, confuse all weaker enemy units"
+},
+{
+"id": 819020,
+"name": "Hair-Raising Cats",
+"text": "On play, randomly force a surrounding confused enemy unit to attack a bordering enemy"
+},
+{
+"id": 819021,
+"name": "Sweetcap Kittens",
+"text": "On play, confuse all enemy units in front"
+},
+{
+"id": 819022,
+"name": "Unhealthy Hysteria",
+"text": "Force the target enemy unit with 4/5/6/7/8 or less strength to attack a random bordering enemy"
+},
+{
+"id": 819023,
+"name": "Melodious Sisters",
+"text": "Before attacking a confused unit, deal up to 5/6/7/8/9 of its strength as damage to all enemies surrounding it"
+},
+{
+"id": 819024,
+"name": "Razor-Sharp Lynxes",
+"text": "If played bordering an enemy gain 2 strength else gain 1 speed"
+},
+{
+"id": 819025,
+"name": "Bigthrust Tigers",
+"text": "On play, gain speed equal to the amount of enemy units in front"
+},
+{
+"id": 819026,
+"name": "Wild Saberpaws",
+"text": "If played with no surrounding enemies gain 2 speed, else with no bordering enemies gain 1 speed"
+},
+{
+"id": 819027,
+"name": "Twilight Prowlers",
+"text": "When played bordering your base gain 3 speed"
+},
+{
+"id": 819028,
+"name": "Laurus, King in Exile",
+"text": "Before attacking an enemy unit force all enemy units bordering it with 4/5/6/7/8 or lower strength to attack it"
+},
+{
+"id": 819029,
+"name": "Aged Duskbringers",
+"text": "After surviving damage, randomly give 4/5/6/7/9 strength to another friendly unit"
+},
+{
+"id": 819032,
+"name": "Trekking Aldermen",
+"text": "After surviving damage, deal 3/3/4/4/5 damage spread randomly among enemy units on the board"
+},
+{
+"id": 819033,
+"name": "Beards of Crowglyph",
+"text": "After surviving damage, spawn an Elder with strength equal to this on a random bordering tile"
+},
+{
+"id": 819034,
+"name": "Greenwood Ancients",
+"text": "After surviving damage, gain 2/2/3/3/4 strength for each stronger enemy unit on the board"
+},
+{
+"id": 819035,
+"name": "Prime Oracle Bragda",
+"text": "After surviving damage, increase the strength of all weaker friendly units to be equal to this"
+},
+{
+"id": 819036,
+"name": "Rogue Sheep",
+"text": "On play, draw 1/1/2/2/3 single-use non-pirate card copy/copy/copies/copies/copies from the enemy\u2019s hand. If you have a pirate card in hand, reduce its/its/their/their/their mana cost by 1."
+},
+{
+"id": 819037,
+"name": "Slyboots",
+"text": "On play, confuse up to 1/1/2/2/3 bordering enemy units and force it/it/them/them/them to move"
+},
+{
+"id": 819038,
+"name": "Excited Mousers",
+"text": "On play confuse the same number of surrounding enemies, as there are friendly units on the board"
+},
+{
+"id": 819039,
+"name": "Stoic Protectors",
+"text": "Before moving, disable the ability of 1/2/2/3/4 surrounding enemy unit/units/units/units/units"
+},
+{
+"id": 819040,
+"name": "Temple of the Heart",
+"text": "At the start of your turn remove 1/1/1/2/2 strength from the stronger base and give it to the weaker one"
+},
+{
+"id": 819042,
+"name": "Headless Hotheads",
+"text": "On play, move fixedly forward"
+},
+{
+"id": 819044,
+"name": "Temple of the Mind",
+"text": "At the start of your turn, give (or remove) fixedly forward movement to the leftmost unit card in your hand, then destroy the weakest confused unit"
+},
+{
+"id": 819045,
+"name": "Sparkly Kitties",
+"text": "On play, confuse itself then gain 2 speed"
+},
+{
+"id": 819046,
+"name": "Bounded Daemons",
+"text": "Before moving, spawn a unit with 2/2/3/3/4 strength on both sides"
+},
+{
+"id": 819047,
+"name": "Lost Psyches",
+"text": "Before moving, teleport itself to a random tile in its row"
+},
+{
+"id": 819048,
+"name": "Erratic Neglects",
+"text": "Before moving, get a random status effect"
+},
+{
+"id": 819050,
+"name": "Minion Launchers",
+"text": "On play, deal 1/2/2/3/3 damage to a random friendly non-legendary unit on the side, then deal the same damage to the first enemy in front"
+},
+{
+"id": 819051,
+"name": "Destructobots",
+"text": "On play, deal 1 damage to another friendly unit or structure"
+},
+{
+"id": 819052,
+"name": "Doctor Mia",
+"text": "On play, trigger the ability of all bordering/surrounding/surrounding//  friendly structures"
+},
+{
+"id": 819053,
+"name": "Fortification Tonic",
+"text": "Give 2/3/4/5/6 strength to all friendly units surrounding a friendly structure"
+},
+{
+"id": 819054,
+"name": "Ozone Purifiers",
+"text": "On play, push a random bordering enemy unit away"
+},
+{
+"id": 819055,
+"name": "Unstable Build",
+"text": "At the start of your turn, deal 3 damage to itself"
+},
+{
+"id": 819056,
+"name": "Finite Loopers",
+"text": "On death, spawn a 1/1/2/2/3 strength Construct on a random bordering tile"
+},
+{
+"id": 819057,
+"name": "Greengale Serpents",
+"text": "Before attacking a unit, gives 1/1/2/2/3 strength to itself and a surrounding friendly Dragon"
+},
+{
+"id": 819058,
+"name": "Linked Golems",
+"text": "When played bordering a friendly Construct, both gain 1/2/2/3/4 strength"
+},
+{
+"id": 819059,
+"name": "Sound Drivers",
+"text": "On play, push forward the friendly unit on the tile in front"
+},
+{
+"id": 819060,
+"name": "Upgrade Point",
+"text": "At the start of your turn, give 2/2/3/4/5 strength to all surrounding friendly Constructs"
+},
+{
+"id": 819061,
+"name": "Boosting Elixir",
+"text": "Give 3/4/5/5/6 strength to a target friendly unit and a random friendly unit bordering/bordering/bordering/surrounding/surrounding it"
+},
+{
+"id": 819062,
+"name": "Chaotic Pupil",
+"text": "On death, deal 3/4/5/6/7 damage to a random bordering enemy"
+},
+{
+"id": 819063,
+"name": "Embers of Chaos",
+"text": "When this dies bordering the enemy base, randomly spawn a 6/7/8/10/12 strength Dragon at the enemy base"
+},
+{
+"id": 819064,
+"name": "Mech Workshop",
+"text": "At the start of your turn, spawn a 2/3/4/5/6 strength Construct on the tile in front"
+},
+{
+"id": 819065,
+"name": "Overchargers",
+"text": "On play, deal 1/1/2/2/3 damage to the first enemy in front"
+},
+{
+"id": 819066,
+"name": "Debug Loggers",
+"text": "After attacking, give 2/2/3/4/5 strength to itself and a random surrounding friendly unit"
+},
+{
+"id": 819067,
+"name": "Eloth the Ignited",
+"text": "On play, fly to the first enemy unit in front. Push this enemy away and deal 3/4/5/6/7 damage to it. If pushed enemy dies, move forward"
+},
+{
+"id": 819068,
+"name": "Flaming Stream",
+"text": "Push back all enemy units in a target unit\u2019s column and deal 4/5/6/7/8 damage to them"
+},
+{
+"id": 819069,
+"name": "Siege Assembly",
+"text": "At the start of your turn, deal 3/3/4/5/6 damage to the first enemy in front"
+},
+{
+"id": 819070,
+"name": "Windmakers",
+"text": "Before attacking a stronger unit, push it away and deal 3/4/5/6/7 damage to it"
+},
+{
+"id": 819072,
+"name": "Project PH03-NIX",
+"text": "When this dies not bordering any base, randomly respawn at your base with 5/6/7/8/10 strength"
+},
+{
+"id": 819073,
+"name": "Armed Schemers",
+"text": "On play, pull enemy units to you. Then deal 3/4/5/6/7 damage to all bordering enemy units."
+},
+{
+"id": 819074,
+"name": "Mechanical Workers",
+"text": "On play, on the tile behind build a 3/3/4/5/6 strength workshop which spawn 2/3/4/5/6 strength Constructs each turn"
+},
+{
+"id": 819077,
+"name": "Scrapped Planners",
+"text": "After surviving damage, set strength to 2/3/4/5/6"
+},
+{
+"id": 819078,
+"name": "Booming Professors",
+"text": "After surviving damage, deal up to 3/3/4/5/6 of its remaining strength as damage to the first enemy in front"
+},
+{
+"id": 819079,
+"name": "Temple of Space",
+"text": "When played with a friendly copy on the board, teleport 2/3/4/6/8 surrounding units from it, then destroy the older copy. Otherwise, return to the hand."
+},
+{
+"id": 819080,
+"name": "Function Wilds",
+"text": "On play, vitalize itself and 1/1/2/2/2 surrounding friendly unit/unit/units/units/units"
+},
+{
+"id": 819081,
+"name": "Absorbing Varmints",
+"text": "Before moving, make all friendly ancients on the board pull enemy units from behind, then deal 1/2/2/3/3 damage to all pulled units"
+},
+{
+"id": 819082,
+"name": "Brood Sages",
+"text": "On play, for each surrounding poisoned unit spawn a 1 strength Toad on 2/2/3/3/4 tiles bordering it"
+},
+{
+"id": 819083,
+"name": "Copperskin Ranger",
+"text": "On play, poison 1/1/2/2/3 random enemy unit/unit/units/units/units"
+},
+{
+"id": 819084,
+"name": "Dubious Hags",
+"text": "On death, spawn a 1 strength Raven on a random bordering tile to fight for the enemy"
+},
+{
+"id": 819085,
+"name": "Toxic Sacrifice",
+"text": "Destroy a target friendly unit. Deal 2/3/4/5/6 damage to all surrounding units and poison them."
+},
+{
+"id": 819086,
+"name": "Crimson Sentry",
+"text": "On death, deal 1/2/3/4/5 damage to all bordering units and poison them"
+},
+{
+"id": 819088,
+"name": "Heliotroopers",
+"text": "On play, poison itself"
+},
+{
+"id": 819089,
+"name": "Rain of Frogs",
+"text": "Spawn a 1 strength Toad on 3/4/4-5/5/6 random tiles"
+},
+{
+"id": 819090,
+"name": "Wandering Wyrms",
+"text": "When played bordering a friendly Dragon, deal 3/4/5/6/7 damage to the strongest enemy unit"
+},
+{
+"id": 819091,
+"name": "Azure Hatcher",
+"text": "On death, spawn 1 strength Toads on 2/3/4/5/6 random surrounding tiles"
+},
+{
+"id": 819092,
+"name": "Marked as Prey",
+"text": "Deal 5/6/7/8/10 damage to a target poisoned unit. If that kills it, spawn a 5/6/7/8/10 strength Raven there."
+},
+{
+"id": 819093,
+"name": "Tode the Elevated",
+"text": "After attacking, jump in front of a random enemy unit or structure and gain 2/3/4/5/6 strength"
+},
+{
+"id": 819094,
+"name": "Venomfall Spire",
+"text": "At the start of your turn, poison 1/1/2/2/3 random enemy unit/unit/units/units/units"
+},
+{
+"id": 819095,
+"name": "Witches of the Wild",
+"text": "On play, drain 1/1/2/2/3 strength from all bordering units"
+},
+{
+"id": 819096,
+"name": "Amberhides",
+"text": "On play, drain 4/5/6/7/8 strength from a random surrounding poisoned unit"
+},
+{
+"id": 819097,
+"name": "Feral Shamans",
+"text": "Before attacking a stronger unit, drain 3/4/4/5/6 strength from it"
+},
+{
+"id": 819098,
+"name": "Obsidian Butchers",
+"text": "On play, drain the strength from all 1 strength units"
+},
+{
+"id": 819099,
+"name": "Soulcrushers",
+"text": "Before attacking a weaker unit, destroy it instantly"
+},
+{
+"id": 819100,
+"name": "Sunbeam Serpents",
+"text": "On play, gain the strength of the strongest friendly Dragon"
+},
+{
+"id": 819101,
+"name": "Blood Ministers",
+"text": "On play, convert all bordering enemy units with 3/4/5/6/7 or less strength to fight for you"
+},
+{
+"id": 819102,
+"name": "Broodmother Qordia",
+"text": "On play, spawn 3 Nests on random surrounding tiles which will hatch 3/4/5/6/7 strength Dragons"
+},
+{
+"id": 819103,
+"name": "Curse of Strings",
+"text": "Convert a target enemy unit with 7/9/11/14/17 or less strength to fight for you"
+},
+{
+"id": 819104,
+"name": "High Priestess Klaxi",
+"text": "On play, destroy all units with the lowest strength and spawn 5/6/7/8/10 strength Ravens there"
+},
+{
+"id": 819105,
+"name": "Clerics with Cords",
+"text": "On play, convert a random bordering enemy unit with 2/3/4/5/6 or less strength to fight for you"
+},
+{
+"id": 819108,
+"name": "Faithless Prophets",
+"text": "After surviving damage, convert itself to fight for the enemy"
+},
+{
+"id": 819109,
+"name": "Hairy Chestnuts",
+"text": "After surviving damage, drain up to 1/1/2/2/2 of the damage received from the enemy base"
+},
+{
+"id": 819110,
+"name": "Temple of Time",
+"text": "At the end of your turn, remember the state of surrounding friendly units and structures. At the start of your turn, restore 1/2/2/3/3 of them to that state."
+},
+{
+"id": 819111,
+"name": "Soap Cleanse",
+"text": "Restore up to 3/4/5/6/7 initial strength of all friendly poisoned units and vitalize them"
+},
+{
+"id": 819112,
+"name": "Plague Monarchs",
+"text": "Before moving, make all friendly ancients on the board drain 1/2/2/3/3 strength from a surrounding enemy poisoned unit"
+},
+{
+"id": 819113,
+"name": "Doppelbocks",
+"text": "On play, spawn a 1/1/2/2/3 strength Satyr on the tile in front"
+},
+{
+"id": 819114,
+"name": "Restless Goats",
+"text": "On death, deal 2 damage to your base"
+},
+{
+"id": 819115,
+"name": "Counselor Ahmi",
+"text": "If played with no surrounding units, return the copy of this card to your hand with +1 strength"
+},
+{
+"id": 819116,
+"name": "Dreadful Keepers",
+"text": "On death, randomly spawn a 3/4/6/7/8 strength Dragon on a tile bordering a friendly Dragon"
+},
+{
+"id": 819117,
+"name": "Faun Companions",
+"text": "On play, give 3/4/4/5/6 strength to a random bordering friendly Satyr"
+},
+{
+"id": 819118,
+"name": "Forgotten Souls",
+"text": "On play, command a/a/all/all/all random/random/// bordering/bordering/bordering/bordering/surrounding friendly unit/unit/units/units/units forward"
+},
+{
+"id": 819119,
+"name": "Moonlit Aerie",
+"text": "At the start of your turn, give 1/1/2/2/3 strength to all friendly Satyrs"
+},
+{
+"id": 819120,
+"name": "Shady Ghoul",
+"text": "On death, spawn a 1/2/3/4/5 strength Satyr on a random bordering tile"
+},
+{
+"id": 819121,
+"name": "Swarmcallers",
+"text": "On play, gain 2/2/3/3/4 strength for each bordering friendly Satyr"
+},
+{
+"id": 819122,
+"name": "Broken Truce",
+"text": "Destroy a target unit or structure with 8/10/12/15/18 or less strength. Spread spare damage randomly among surrounding units and structures. Deal 3 damage to your base."
+},
+{
+"id": 819123,
+"name": "Devastators",
+"text": "When attacking a structure or base, deal 3/3/4/5/6 additional damage to it"
+},
+{
+"id": 819124,
+"name": "Draconic Roamers",
+"text": "When attacking a unit, spawn a 1/1/2/2/3 strength Dragon on a random tile bordering that unit"
+},
+{
+"id": 819125,
+"name": "Mischiefs",
+"text": "On play, deal 1/1/1/2/2 damage to the enemy base"
+},
+{
+"id": 819126,
+"name": "Pan Heralds",
+"text": "On play, give 1/1/2/2/3 strength to all surrounding friendly units"
+},
+{
+"id": 819127,
+"name": "Dark Harvest",
+"text": "Deal 2/3/4/5/6 damage to all enemies surrounding a friendly unit"
+},
+{
+"id": 819128,
+"name": "Dreadfauns",
+"text": "On play, spawn 2 Satyrs with 2/2/3/3/4 strength on random bordering tiles"
+},
+{
+"id": 819130,
+"name": "Pillars of Doom",
+"text": "At the start of your turn, deal 2/2/3/3/4 damage to the enemy base"
+},
+{
+"id": 819131,
+"name": "Xuri, Lord of Life",
+"text": "On play, fly to the first empty tile in front. Give 3/4/5/6/7 strength to all friendly units passed and vitalize them."
+},
+{
+"id": 819132,
+"name": "Herald\u2019s Hymn",
+"text": "Give 1/2/3/4/5 strength to a target friendly unit. Command all friendly units in its row forward."
+},
+{
+"id": 819133,
+"name": "Queen of Herds",
+"text": "On play, randomly play up to 1/1/1/2/2 common or rare Satyr/Satyr/Satyr/Satyrs/Satyrs from your deck on a tile in its row"
+},
+{
+"id": 819134,
+"name": "Vindicators",
+"text": "Before attacking, deal 1/1/1/2/2 damage to the enemy base"
+},
+{
+"id": 819135,
+"name": "Lasting Remains",
+"text": "After attacking, move forward"
+},
+{
+"id": 819136,
+"name": "Head Start",
+"text": "Spawn a 3/4/5/6/7 strength Satyr on a random tile in your furthest row"
+},
+{
+"id": 819139,
+"name": "Petrified Fossils",
+"text": "After surviving damage, command all friendly units with equal or less strength forward"
+},
+{
+"id": 819140,
+"name": "Bucks of Wasteland",
+"text": "After surviving damage, randomly give strength to 2 other friendly units equal to the damage received"
+},
+{
+"id": 819141,
+"name": "Temple of Focus",
+"text": "At the start of your turn, deconfuse and give 1 additional move to all friendly units in front"
+},
+{
+"id": 819142,
+"name": "Diehards",
+"text": "When dying from an ability or spell, respawn on a random surrounding tile with 4/6/8/10/12 strength"
+},
+{
+"id": 819143,
+"name": "Martyr Spongers",
+"text": "Before moving deal 1/1/1/2/2 damage to 1/2/2/3/3 other friendly ancient units, then deal the same amount of damage to enemy\u2019s base"
+},
+{
+"id": 819144,
+"name": "Icicle Burst",
+"text": "Freeze a target enemy unit. If it is already frozen, deal 8/10/12/15/18 damage to it instead"
+},
+{
+"id": 819145,
+"name": "Frosthexers",
+"text": "On play, freeze all bordering enemy units"
+},
+{
+"id": 819146,
+"name": "The Hearth",
+"text": "At the start of your turn, give 2/2/3/3/4 strength to another friendly unit or structure"
+},
+{
+"id": 819147,
+"name": "Wisp Cloud",
+"text": "Before attacking a frozen enemy, deal 4/5/6/7/8 damage to all surrounding frozen enemies"
+},
+{
+"id": 819148,
+"name": "Yowling Weavers",
+"text": "When attacking, randomly destroy a friendly non-Dragon unit"
+},
+{
+"id": 819149,
+"name": "Moment\u2019s Peace",
+"text": "Give 5/6/7/8/9 strength to a target friendly unit or structure. Freeze all surrounding enemy units."
+},
+{
+"id": 819150,
+"name": "Mystwives",
+"text": "When played bordering a stronger friendly unit, gain 4/5/6/7/8 strength"
+},
+{
+"id": 819151,
+"name": "Spellbinder Zhevana",
+"text": "On play, destroy all frozen units in front with 4/5/6/7/8 or less strength. Gain 4 mana for each unit destroyed."
+},
+{
+"id": 819152,
+"name": "Frozen Core",
+"text": "At the start of your turn, gain 2 mana"
+},
+{
+"id": 819153,
+"name": "Lady Rime",
+"text": "On play, spend your remaining mana and gain 2/2/3/4/5 strength for each"
+},
+{
+"id": 819154,
+"name": "Midwinter Chaos",
+"text": "Freeze all enemy units with 4/5/6/7/8 or less strength. Destroy those that were already frozen."
+},
+{
+"id": 819155,
+"name": "Rimelings",
+"text": "On play, gain 3 mana"
+},
+{
+"id": 819156,
+"name": "Rockworkers",
+"text": "On play, build a 4/5/6/7/8 strength Fort on a random bordering tile"
+},
+{
+"id": 819157,
+"name": "Blessed with Brawn",
+"text": "Give 8/10/12/15/18 strength to a target friendly unit or structure with 4/5/6/7/8 or less strength"
+},
+{
+"id": 819158,
+"name": "Broken Earth Drakes",
+"text": "When this dies not bordering any base, deal 3/4/5/6/7 damage to all non-Dragon units"
+},
+{
+"id": 819159,
+"name": "Dawnsparks",
+"text": "When attacking, gain 4 mana"
+},
+{
+"id": 819160,
+"name": "Wolfcloaks",
+"text": "On play, lose 1 strength for every other friendly unit on the board"
+},
+{
+"id": 819161,
+"name": "Fleshmenders",
+"text": "On play, give 6/7/8/10/12 strength to a random bordering friendly unit or structure"
+},
+{
+"id": 819162,
+"name": "Gift of the Wise",
+"text": "Gain 11/12/13/14/15 mana"
+},
+{
+"id": 819164,
+"name": "Visions of the Grove",
+"text": "On play, for every 4/4/3/3/2 remaining mana deal 1 damage to all enemies in front"
+},
+{
+"id": 819165,
+"name": "Chillbeards",
+"text": "Before attacking a unit or structure, gain 3/4/5/6/7 strength"
+},
+{
+"id": 819166,
+"name": "Olf the Hammer",
+"text": "When played bordering your base, give it 3/3/4/5/6 strength"
+},
+{
+"id": 819167,
+"name": "Underground Spring",
+"text": "At the start of your turn, remove 1/1-2/1-2/2/2 strength from itself and give it to your base"
+},
+{
+"id": 819170,
+"name": "Earthfathers",
+"text": "After surviving damage, gain 3/3/3/4/4 strength"
+},
+{
+"id": 819171,
+"name": "Chilled Stonedames",
+"text": "After surviving damage, destroy all enemy units in front"
+},
+{
+"id": 819172,
+"name": "Temple of Life",
+"text": "At the start of your turn, vitalize 1/2/2/3/3 friendly unit/units/units/units/units, then spawn a 1 strength copy of itself on the tile behind"
+},
+{
+"id": 819173,
+"name": "Glacier Palace",
+"text": "At the start of your turn, randomly freeze the most forward enemy unit"
+},
+{
+"id": 819174,
+"name": "Iceflakes",
+"text": "On play, freeze itself"
+},
+{
+"id": 819175,
+"name": "Blizzard Bombs",
+"text": "On death, freeze all surrounding units"
+},
+{
+"id": 819176,
+"name": "Orgone Leechers",
+"text": "Before moving, reduce mana by 3, then freeze an enemy in the tile in front. Decrease mana reduction by 1 for each other friendly ancient on the board."
+}
+]

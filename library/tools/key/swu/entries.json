@@ -1,0 +1,1002 @@
+[
+{
+"id": 819488,
+"name": "Change of Heart",
+"text": "Take control of a non-leader unit. At the start of the regroup phase, its owner takes control of it."
+},
+{
+"id": 820505,
+"name": "Darth Malak - Covetous Apprentice",
+"text": "Overwhelm\nWhen Played: If you control a Sith leader unit, you may ready this unit."
+},
+{
+"id": 821175,
+"name": "Ant Droid",
+"text": "When Defeated: Draw a card."
+},
+{
+"id": 821069,
+"name": "Bo-Katan Kryze - Reclaiming Mandalore",
+"text": "Action [2 resources, Exhaust]: If you control a unit in each arena, create a Mandalorian token.\nDeployed: Other friendly Mandalorian units get +1/+0.\nOn Attack: If you control a unit in each arena, create a Mandalorian token.\nEpic Action: Epic Action: If the number of resources you control plus the number of friendly Mandalorian units is 10 or more, deploy this leader."
+},
+{
+"id": 820970,
+"name": "0-0-0 - Translation and Torture",
+"text": "On Attack: You may put a Aggression card from your discard pile on the bottom of your deck. If you do, deal 1 damage to each enemy base."
+},
+{
+"id": 819332,
+"name": "Cargo Juggernaut",
+"text": "Shielded (When you play this unit, give a Shield token to it.)\nWhen Played: If you control another [Vigilance] unit, heal 4 damage from your base."
+},
+{
+"id": 819768,
+"name": "Nala Se - Clone Engineer",
+"text": "Ignore the aspect penalty on Clone units you play.\nDeployed: Ignore the aspect penalty on Clone units you play.\nEach friendly Clone unit gains: \u201cWhen Defeated: Heal 2 damage from your base.\u201d\nEpic Action: Epic Action: If you control 4 or more resources, deploy this leader."
+},
+{
+"id": 819449,
+"name": "Chimaera - Flagship of the Seventh Fleet",
+"text": "Shielded (When you play this unit, give a Shield token to it.)\n\nOn Attack: Name a card. An opponent reveals their hand and discards a card with that name from it."
+},
+{
+"id": 820329,
+"name": "Calm in the Storm",
+"text": "Exhaust a friendly unit. If you do, give a Shield token and 2 Experience tokens to it."
+},
+{
+"id": 820963,
+"name": "Common Cause",
+"text": "Give a unit +1/+1 for this phase for each different aspect among units you control."
+},
+{
+"id": 820224,
+"name": "Independent Smuggler",
+"text": "Raid 1 (This unit gets +1/+0 while attacking.)\nEpic Action: Piloting [1 resource Cunning] (You may play this as an upgrade on a friendly Vehicle without a Pilot.)\nAttached unit gains Raid 1."
+},
+{
+"id": 820276,
+"name": "Mother Talzin - Power Through Magick",
+"text": "Action [Exhaust, use the Force (lose your Force token)]: Give a unit \u20131/\u20131 for this phase.\nDeployed: On Attack: You may give a unit \u20131/\u20131 for this phase.\nEpic Action: Epic Action: If you control 5 or more resources, deploy this leader."
+},
+{
+"id": 820704,
+"name": "AAT Incinerator",
+"text": "When Played: Deal 1 damage to each of up to 4 other ground units. If no friendly units were damaged by this ability, deal 2 damage to your base."
+},
+{
+"id": 820065,
+"name": "Cassian Andor - Threading the Eye",
+"text": "Epic Action: Piloting [2 resources Vigilance Heroism] (You may play this as an upgrade on a friendly Vehicle without a Pilot.)\nAttached unit gains: \u201cOn Attack: Discard a card from the defending player's deck. If that card costs 3 or less, draw a card.\u201d"
+},
+{
+"id": 821038,
+"name": "Transmission Jamming",
+"text": "Name a card. Cards with that name can't be played this phase."
+},
+{
+"id": 819668,
+"name": "Wild Rancor",
+"text": "Overwhelm\nWhen Played: Deal 2 damage to each other ground unit."
+},
+{
+"id": 819398,
+"name": "Ruthless Raider",
+"text": "When Played/When Defeated: Deal 2 damage to an enemy base and 2 damage to an enemy unit."
+},
+{
+"id": 820314,
+"name": "Darth Sidious - The Phantom Menace",
+"text": "Restore 2 (When this unit attacks, heal 2 damage from your base.)\nWhen Played: You may use the Force. If you do, defeat each non-Sith unit with 3 or less remaining HP."
+},
+{
+"id": 819250,
+"name": "Speeder",
+"text": "Speeder: 20 entities of this type."
+},
+{
+"id": 821287,
+"name": "Improvised Identity",
+"text": "Attach to a ground unit.\nAttached unit gains: \u201cAction: Search the top 3 cards of your deck for a ground unit and discard it. Then, you may attack with this unit. For this attack, this unit gains the discarded unit's abilities. Use this ability only once each round.\u201d"
+},
+{
+"id": 821150,
+"name": "Buy Time",
+"text": "Create a Mandalorian token and give it Sentinel for this phase. (Enemy units in its arena must attack a Sentinel when they attack you.)"
+},
+{
+"id": 820091,
+"name": "Close the Shield Gate",
+"text": "Choose a base. The next time damage would be dealt to it this phase, prevent that damage."
+},
+{
+"id": 820187,
+"name": "Hotshot Maneuver",
+"text": "Choose a friendly unit. For each of its \u201cOn Attack\u201d abilities, deal 2 damage to a different enemy unit. Then, attack with the chosen unit."
+},
+{
+"id": 820603,
+"name": "Lando Calrissian - Trust Me",
+"text": "Grit\nWhen Played: You may choose an enemy unit and another friendly non-leader unit. If you do, heal 6 damage from your base and the enemy unit captures the friendly unit."
+},
+{
+"id": 820966,
+"name": "Double-Cross",
+"text": "Choose a friendly non-leader unit and an enemy non-leader unit. Exchange control of those units. The player who takes control of the lower-cost unit creates Credit tokens equal to the difference between those units' costs."
+},
+{
+"id": 820979,
+"name": "Aerie - Cloud-Rider Dropship",
+"text": "On Attack: Deal 2 damage to an enemy ground unit and 2 damage to a base."
+},
+{
+"id": 819196,
+"name": "Grit",
+"text": "This unit gets +1/+0 for each damage on it."
+},
+{
+"id": 820806,
+"name": "Hera Syndulla - Not Fighting Alone",
+"text": "While you control 2 or more units, ignore the aspect penalties on Heroism units you play.\nDeployed: Restore 1 (When this unit attacks, heal 1 damage from your base.)\nWhile you control 2 or more units, ignore the aspect penalties on Heroism units you play.\nEpic Action: Epic Action: If you control 5 or more resources, deploy this leader."
+},
+{
+"id": 820216,
+"name": "Han Solo - Has His Moments",
+"text": "Ambush\nEpic Action: Piloting [2 resources Cunning Heroism] \nWhen played as an upgrade: You may attack with attached unit. If it's the Millennium Falcon, it deals its combat damage before the defender."
+},
+{
+"id": 819799,
+"name": "Wartime Trade Official",
+"text": "When Defeated: Create a Battle Droid token."
+},
+{
+"id": 820866,
+"name": "The Ghost - Home of the Spectres",
+"text": "When Played: You may give an Experience token and a Shield token to a unit. If you control a Vigilance or Aggression unit, you may give an Experience token and a Shield token to each of up to 2 units instead."
+},
+{
+"id": 821068,
+"name": "Ahsoka Tano - Trust in the Force",
+"text": "Action [Exhaust]: Choose a unit with less power than a friendly unit. It gets +2/+0 for this phase.\nDeployed: Support (When you deploy this leader, you may attack with another unit. It gains this unit's other abilities for this attack.)\nOn Attack: You may give a unit with less power than this unit +2/+0 for this phase.\nEpic Action: Epic Action: If you control 6 or more resources, deploy this leader."
+},
+{
+"id": 819708,
+"name": "Coruscant Dissident",
+"text": "On Attack: You may ready a resource."
+},
+{
+"id": 820554,
+"name": "DJ - Need a Lift?",
+"text": "Action [Exhaust]: Choose a friendly unit. If you do, play a unit from your hand. It costs 1 resource less. The chosen unit captures it. (When Played abilities resolve after the unit is captured.)\nDeployed: Saboteur\nFriendly units that are rescued enter play ready.\nEpic Action: Epic Action: If you control 6 or more resources, deploy this leader."
+},
+{
+"id": 819415,
+"name": "Karabast",
+"text": "A friendly unit deals damage to an enemy unit equal to the amount of damage on the friendly unit plus 1."
+},
+{
+"id": 821308,
+"name": "Zealous Soldier",
+"text": "When Played: Give an Advantage token to this unit."
+},
+{
+"id": 819914,
+"name": "Bold Resistance",
+"text": "Choose up to 3 units that share the same Trait. Each of those units gets +2/+0 for this phase."
+},
+{
+"id": 819254,
+"name": "Transport",
+"text": "Transport: 127 entities of this type."
+},
+{
+"id": 819237,
+"name": "Naboo",
+"text": "Naboo: 20 entities of this type."
+},
+{
+"id": 819244,
+"name": "Rebel",
+"text": "Rebel: 233 entities of this type."
+},
+{
+"id": 820697,
+"name": "Crosshair - Filled With Doubt",
+"text": "On Attack: You may deal 1 damage to another friendly unit. If you do, deal 2 damage to the defending player's base."
+},
+{
+"id": 820442,
+"name": "Heavy Blaster Cannon",
+"text": "Attach to a non-Vehicle unit.\nWhen Played: You may deal 1 damage to a ground unit. Then, deal 1 damage to the same unit. Then, deal 1 damage to the same unit."
+},
+{
+"id": 819210,
+"name": "Capital Ship",
+"text": "Capital Ship: 77 entities of this type."
+},
+{
+"id": 821259,
+"name": "Carson Teva - There's Something Going On",
+"text": "Support (When you play this unit, you may attack with another unit. It gains this unit's other abilities for this attack.)\nWhile attacking, this unit deals combat damage before the defender."
+},
+{
+"id": 820068,
+"name": "Red Squadron X-Wing",
+"text": "When Played: You may deal 2 damage to this unit. If you do, draw a card."
+},
+{
+"id": 820785,
+"name": "Covert Operative",
+"text": "When Played: This unit captures an enemy non-leader unit that costs 2 or less. (Put the captured card facedown under this unit until this unit leaves play.)"
+},
+{
+"id": 819683,
+"name": "Hotshot DL-44 Blaster",
+"text": "Attach to a non-VEHICLE unit.\n\nSmuggle [3 resources, cunning]\n\nWhen played using Smuggle: Attack with attached unit."
+},
+{
+"id": 820163,
+"name": "Red Squadron Y-Wing",
+"text": "On Attack: Deal 3 indirect damage to the defending player. (They assign 3 unpreventable damage among their base and units.)"
+},
+{
+"id": 820876,
+"name": "K-2SO - Locking the Vault",
+"text": "Ambush\nOn Attack: You may deal 3 damage to a damaged ground unit."
+},
+{
+"id": 819251,
+"name": "Supply",
+"text": "Supply: 35 entities of this type."
+},
+{
+"id": 820410,
+"name": "Savage Opress - Imbued With Hate",
+"text": "Overwhelm (When attacking an enemy unit, deal excess damage to the opponent's base.)\nWhen Played/When Defeated: You may use the Force (lose your Force token). If you don't, deal 9 damage to your base."
+},
+{
+"id": 819694,
+"name": "Doctor Evazan - Wanted on Twelve Systems",
+"text": "Shielded (When you play this unit, give a Shield token to him.)\nBounty \u2014 Ready up to 12 resources. (When this unit is defeated or captured, your opponent collects his bounty.)"
+},
+{
+"id": 820199,
+"name": "Mist Hunter - The Findsman's Pursuit",
+"text": "On Attack: If you played a Bounty Hunter or Pilot card this phase, you may draw a card."
+},
+{
+"id": 820330,
+"name": "Dume - Redeem the Future",
+"text": "When the regroup phase starts: Give an Experience token to each other friendly non-Vehicle unit."
+},
+{
+"id": 820468,
+"name": "Qui-Gon Jinn's Aethersprite - Guided by the Force",
+"text": "On Attack: The next time you use a \u201cWhen Played\u201d ability this phase, you may use that ability again."
+},
+{
+"id": 819718,
+"name": "Criminal Muscle",
+"text": "When Played: You may return a non-unique upgrade to its owner's hand."
+},
+{
+"id": 819976,
+"name": "Tri-Droid Suppressor",
+"text": "Exploit 2 (While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.)\nWhen Played: Exhaust an enemy ground unit."
+},
+{
+"id": 819713,
+"name": "Millennium Falcon - Lando's Pride",
+"text": "If you play this unit from your hand, it gains Ambush.\nSmuggle [6 resources Cunning Heroism] (If this card is a resource, you may play her for her smuggle cost. Replace her with the top card of your deck.)"
+},
+{
+"id": 820764,
+"name": "Charged with Espionage",
+"text": "You may disclose CunningCunning (reveal cards from your hand with these aspect icons among them). If you do, look at an opponent's hand and discard a unit from it."
+},
+{
+"id": 819688,
+"name": "Desperate Attack",
+"text": "Attack with a damaged unit. It gets +2/+0 for this attack."
+},
+{
+"id": 820247,
+"name": "Torpedo Barrage",
+"text": "Deal 5 indirect damage to a player. (They assign 5 unpreventable damage among their base and units.)"
+},
+{
+"id": 819853,
+"name": "Separatist Super Tank",
+"text": "Exploit 3 (While playing this card, defeat up to 3 units you control. This card costs 2 resources less for each unit defeated this way.)"
+},
+{
+"id": 819236,
+"name": "Musician",
+"text": "Musician: 2 entities of this type."
+},
+{
+"id": 820151,
+"name": "Vonreg's TIE Interceptor - Ace of the First Order",
+"text": "While this unit has 4 or more power, it gains Overwhelm. (When attacking an enemy unit, deal excess damage to the opponent's base.)\nWhile this unit has 6 or more power, it gains Raid 1. (It gets +1/+0 while attacking.)"
+},
+{
+"id": 821154,
+"name": "Remnant Interceptor",
+"text": "Support (When you play this unit, you may attack with another unit. It gains this unit's other abilities for this attack.)\nRestore 1 (When this unit attacks, heal 1 damage from your base.)"
+},
+{
+"id": 821355,
+"name": "Imperial Deck Officer",
+"text": "Action [Exhaust]: Heal 2 damage from a Villainy unit."
+},
+{
+"id": 820475,
+"name": "Zuckuss - The Findsman",
+"text": "On Attack: Name a card, then discard the top card of the defending player's deck. If a card with that name is discarded, this unit gets +4/+0 for this attack."
+},
+{
+"id": 820679,
+"name": "Tempest Assault",
+"text": "If you've dealt damage to an enemy base this phase, deal 2 damage to each enemy space unit."
+},
+{
+"id": 819410,
+"name": "Zeb Orrelios - Headstrong Warrior",
+"text": "When this unit completes an attack: If the defender was defeated, you may deal 4 damage to a ground unit."
+},
+{
+"id": 819614,
+"name": "General Rieekan - Defensive Strategist",
+"text": "When Played/On Attack: Choose a friendly unit. If it has Sentinel, give an Experience token to it. Otherwise, it gains Sentinel for this phase."
+},
+{
+"id": 820649,
+"name": "Kino Loy - You Answer to Me",
+"text": "This unit gets +1/+0 for each other exhausted friendly unit."
+},
+{
+"id": 820872,
+"name": "Interrogation Droid",
+"text": "When Played: Exhaust an enemy unit. If you do and that unit costs 3 or less, its controller discards a card from their hand."
+},
+{
+"id": 821208,
+"name": "Deadly Vulnerability",
+"text": "If attached unit would take damage, it takes twice as much damage instead.\nWhile attached unit is defending, the attacker loses Overwhelm."
+},
+{
+"id": 819867,
+"name": "Mas Amedda - Vice Chair",
+"text": "When you play another unit: You may exhaust this unit. If you do, search the top 4 cards of your deck for a unit, reveal it, and draw it. (Put the other cards on the bottom of your deck in a random order.)"
+},
+{
+"id": 819455,
+"name": "Vanguard Ace",
+"text": "When Played: For each other card you played this phase, give an Experience token to this unit."
+},
+{
+"id": 820914,
+"name": "Droid Laser Turret",
+"text": "Sentinel (Enemy units in this arena must attack a Sentinel when they attack you.)\nShielded (When you play this unit, give a Shield token to it.)"
+},
+{
+"id": 819948,
+"name": "Unnatural Life",
+"text": "Play a unit that was defeated this phase from your discard pile. It costs 2 resources less and enters play ready. At the start of the regroup phase, defeat it."
+},
+{
+"id": 821292,
+"name": "Sense Through the Force",
+"text": "Choose a number, then search the top 5 cards of your deck for a card, reveal it, and draw it. If its cost is the chosen number, you may give 3 Advantage tokens to a Force unit."
+},
+{
+"id": 820845,
+"name": "Chio Fain - Four-Armed Slicer",
+"text": "On Attack: You may choose 2 players. If you do, they each draw a card."
+},
+{
+"id": 820343,
+"name": "Anakin Skywalker - Champion of Mortis",
+"text": "When Played: If there is a Heroism card in your discard pile, you may give a unit \u20133/\u20133 for this phase.\nWhen Played: If there is a Villainy card in your discard pile, you may give a unit \u20133/\u20133 for this phase."
+},
+{
+"id": 820360,
+"name": "Eighth Brother - Hunt Together",
+"text": "Ambush (When you play this unit, it may attack an enemy unit.)\nWhen you play another unit: You may use the Force (lose your Force token). If you do, give a unit +2/+2 for this phase."
+},
+{
+"id": 821137,
+"name": "B-Wing Rearguard",
+"text": "While you control a ground unit, this unit gains Sentinel. (Enemy units in this arena must attack a Sentinel when they attack you.)"
+},
+{
+"id": 821335,
+"name": "Tauntaun Mount",
+"text": "When Defeated: Heal 2 damage from your base."
+},
+{
+"id": 820745,
+"name": "Faith in Your Friends",
+"text": "Search the top 3 cards of your deck for a card and draw it. Then, you may disclose CunningCunningCunningHeroismHeroism (reveal cards from your hand with these aspect icons among them). If you do, create 2 Spy tokens."
+},
+{
+"id": 819623,
+"name": "Gamorrean Retainer",
+"text": "While you control another Command unit, this unit gains Sentinel. (Units in this arena can't attack your non-Sentinel units or your base.)"
+},
+{
+"id": 819882,
+"name": "Baktoid Spider Droid",
+"text": "Exploit 2 (While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.)\nAmbush (When you play this unit, it may ready and attack an enemy unit.)"
+},
+{
+"id": 819839,
+"name": "I Have the High Ground",
+"text": "Choose a friendly unit. Each enemy unit gets \u20134/\u20130 while attacking that unit this phase."
+},
+{
+"id": 820547,
+"name": "Governor Pryce - Tyrant of Lothal",
+"text": "Action [1 resource, Exhaust]: Ready a token unit.\nDeployed: This unit gets +1/+0 for each ready friendly token unit.\nOn Attack: Create a Spy token.\nEpic Action: Epic Action: If you control 6 or more resources, deploy this leader."
+},
+{
+"id": 821263,
+"name": "Kelleran Beq - Where are the Others?",
+"text": "Ambush\nThis unit gets +1/+0 for each other unit (friendly and enemy) with 0 power."
+},
+{
+"id": 820338,
+"name": "Watto - No Money, No Parts, No Deal",
+"text": "On Attack: An opponent chooses one:\nYou give an Experience token to a friendly unit.\nYou draw a card."
+},
+{
+"id": 821173,
+"name": "Sabine's Lightsaber - Not Alone",
+"text": "Attach to a non-Vehicle unit.\nIf attached unit is Sabine Wren or a Force unit, it gains Restore 2."
+},
+{
+"id": 820354,
+"name": "Sith Legionnaire",
+"text": "While you control another Villainy unit, this unit gets +2/+0."
+},
+{
+"id": 820099,
+"name": "Pantoran Starship Thief",
+"text": "When Played: You may pay 3 resources. If you do, attach this unit as an upgrade to a Fighter or Transport unit without a Pilot on it. Take control of that unit.\nEpic Action: When this upgrade detaches from a unit: That unit's owner takes control of it."
+},
+{
+"id": 820550,
+"name": "Sly Moore - Cipher in the Dark",
+"text": "Action [1 resource, Exhaust]: If there are 4 or more exhausted units in play, create a Spy token.\nDeployed: On Attack: You may deal 2 damage to an exhausted unit.\nEpic Action: Epic Action: If you control 5 or more resources, deploy this leader."
+},
+{
+"id": 821190,
+"name": "Queen Soruna - Willing to Fight",
+"text": "When Played/On Attack: You may reveal a unit from your hand. If you do, deal 3 damage to a unit with the same cost as the revealed unit."
+},
+{
+"id": 819262,
+"name": "Walker",
+"text": "Walker: 26 entities of this type."
+},
+{
+"id": 820293,
+"name": "Anakin Skywalker - Tempted by the Dark Side",
+"text": "Action [Exhaust, use the Force (lose your Force token)]: Play a Villainy non-unit card from your hand, ignoring its aspect penalties.\nDeployed: Action [use the Force]: Play a Villainy non-unit card from your hand, ignoring its aspect penalties.\nEpic Action: Epic Action: If you control 5 or more resources, deploy this leader."
+},
+{
+"id": 819739,
+"name": "Relentless Pursuit",
+"text": "Choose a friendly unit. It captures an enemy non-leader unit that costs the same as or less than it. If the friendly unit is a Bounty Hunter, give a Shield token to it. (Put\u00a0the captured card facedown under the friendly unit until it leaves play.)"
+},
+{
+"id": 820917,
+"name": "Canto Bight Security",
+"text": "Sentinel (Enemy units in this arena must attack a Sentinel when they attack you.)\nOn Defense: Create a Credit token."
+},
+{
+"id": 821059,
+"name": "Mandalorian",
+"text": "Shielded (When you create this token, give a Shield token to it.)"
+},
+{
+"id": 820122,
+"name": "Unity of Purpose",
+"text": "For each friendly unit with a different name, give each unit you control +1/+1 for this phase."
+},
+{
+"id": 820146,
+"name": "First Order Stormtrooper",
+"text": "On Attack/When Defeated: Deal 1 indirect damage to a player. (They assign 1 unpreventable damage among their base and units.)"
+},
+{
+"id": 820734,
+"name": "Junior Senator",
+"text": "When Played: You may return an upgrade that costs 3 or less to its owner's hand."
+},
+{
+"id": 819588,
+"name": "Vambrace Grappleshot",
+"text": "Attach to a non-Vehicle unit.\nAttached unit gains: \u201cOn Attack: Exhaust the defender.\u201d"
+},
+{
+"id": 820029,
+"name": "Major Vonreg - Red Baron",
+"text": "Action [Exhaust]: Play a Vehicle unit from your hand (paying its cost). If you do, give another unit +1/+0 for this phase.\nDeployed: \nAttached unit is a leader unit. It gains: \u201cOn Attack: You may give another unit in this arena +1/+0 for this phase.\u201d\nEpic Action: Epic Action: If you control 4 or more resources, choose one:\nDeploy this leader.\nDeploy this leader as an upgrade on a friendly Vehicle unit without a Pilot on it."
+},
+{
+"id": 820457,
+"name": "Marchion Ro - Eye of the Nihil",
+"text": "Each friendly unit's Raid is doubled."
+},
+{
+"id": 820828,
+"name": "Bossk - Join Our Merry Band",
+"text": "On Attack: Give a unit +1/+1 for this phase. You may give a unit \u20131/\u20131 for this phase."
+},
+{
+"id": 821001,
+"name": "That's a Rock",
+"text": "Deal 1 damage to a unit.\nWhen this event is discarded from your hand or deck: You may deal 1 damage to a unit."
+},
+{
+"id": 820758,
+"name": "Vel Sartha - One Path, One Choice",
+"text": "Raid 2 (This unit gets +2/+0 while attacking.)\nEach exhausted enemy unit gets \u20132/\u20130 while defending."
+},
+{
+"id": 820903,
+"name": "Defiant Scrapper",
+"text": "When Played: You may defeat an enemy Credit token."
+},
+{
+"id": 820055,
+"name": "Corvus - Inferno Squadron Raider",
+"text": "Restore 2\nWhen Played: You may attach a friendly Pilot unit or upgrade to this unit. (Defeat all upgrades on that Pilot and remove all damage from it.)"
+},
+{
+"id": 819381,
+"name": "Mercenary Company",
+"text": "Ambush (After you play this unit, it may ready and attack an enemy unit.)\n\nOverwhelm (When attacking an enemy unit, deal excess damage to the opponent's base.)"
+},
+{
+"id": 820201,
+"name": "Moff Gideon - I Know Everything",
+"text": "When this unit deals combat damage to an opponent's base: Each unit that opponent plays this phase costs 1 resource more."
+},
+{
+"id": 820731,
+"name": "Furtive Handmaiden",
+"text": "On Attack: You may discard a card from your hand. If you do, draw a card."
+},
+{
+"id": 820362,
+"name": "Supremacy - Of Unimaginable Size",
+"text": "Ambush\nOther friendly Vehicle units get +6/+6."
+},
+{
+"id": 819428,
+"name": "Wampa",
+"text": "Overwhelm (When attacking an enemy unit, deal excess damage to the opponent's base.)"
+},
+{
+"id": 821010,
+"name": "Vermillion - Qi'ra's Auction House",
+"text": "When Attack Ends: If this unit survived, reveal the top card of a deck, then choose a player. They may play the revealed card for free. If they do, a different player creates Credit tokens equal to that card's cost."
+},
+{
+"id": 819563,
+"name": "Rey - Keeping the Past",
+"text": "While playing this unit, ignore her Heroism aspect penalty if you control Kylo Ren.\nOn Attack: You may heal 2 damage from a unit. If it's a non-Heroism\u00a0unit, give a Shield token to it."
+},
+{
+"id": 820394,
+"name": "The Purrgil King - Leading The Journey",
+"text": "Restore 4\nWhen Played: Draw a card for each friendly unit with 7 or more remaining HP."
+},
+{
+"id": 821159,
+"name": "Gallius Rax - Counselor to the Empire",
+"text": "Other friendly units with 2 or more different keywords get +2/+2."
+},
+{
+"id": 820036,
+"name": "Kazuda Xiono - Best Pilot in the Galaxy",
+"text": "Action [Exhaust]: A friendly unit loses all abilities for this round. Take an extra action after this one.\nDeployed: On Attack: Choose any number of friendly units. They lose all abilities for this round.\nAttached unit is a leader unit. It gains: \u201cOn\u00a0Attack: Choose any number of friendly units. They lose all abilities for this round.\u201d\nEpic Action: Epic Action: If you control 4 or more resources, choose one:\nDeploy this leader.\nDeploy this leader as an upgrade on a friendly Vehicle unit without a Pilot on it."
+},
+{
+"id": 820317,
+"name": "Always Two",
+"text": "Choose 2 friendly <uq> Sith units. If you do, give 2 Shield tokens and 2 Experience tokens to each chosen unit. Defeat all other friendly units."
+},
+{
+"id": 820890,
+"name": "Rio Durant - Beckett's Right Hands",
+"text": "When Played: You may return a non-leader unit that costs 3 or less to its owner's hand. Then, its owner may play it for free. It gains Shielded for this phase."
+},
+{
+"id": 819252,
+"name": "Tactic",
+"text": "Tactic: 136 entities of this type."
+},
+{
+"id": 820269,
+"name": "Swarming Vulture Droid",
+"text": "A deck can have up to 15 copies of this card.\nThis unit gets +1/+0 for each other friendly Swarming Vulture Droid."
+},
+{
+"id": 819281,
+"name": "Han Solo - Audacious Smuggler",
+"text": "Action [exhaust]: Put a card from your hand into play as a resource and ready it. At the start of the next action phase, defeat a resource you control.\nDeployed: On Attack: Put the top card of your deck into play as a resource and ready it. At the start of the next action phase, defeat a resource you control.\nEpic Action: Epic Action: If you control 6 or more resources, deploy this leader."
+},
+{
+"id": 819892,
+"name": "OOM-Series Officer",
+"text": "When Defeated: Deal 2 damage to a base."
+},
+{
+"id": 820829,
+"name": "Cad Bane - Now It's My Turn",
+"text": "Shielded\nOverwhelm\nOn Attack: Defeat any number of friendly Credit tokens. Give an Experience token to this unit for each Credit defeated this way."
+},
+{
+"id": 821178,
+"name": "Greef Karga - Introductions are in Order",
+"text": "Action [1 resource, Exhaust]: If your base was attacked this phase, create a Mandalorian token."
+},
+{
+"id": 820619,
+"name": "Mas Amedda - Accomplice to Power",
+"text": "When Played: Give an Experience token to each of up to 2 other Official units.\nPlot (When you deploy a leader, you may play this card from your resources, paying its cost. Replace it with the top card of your deck.)"
+},
+{
+"id": 820567,
+"name": "Kylo Ren's Command Shuttle - Icon of Authority",
+"text": "Each friendly ground unit with Sentinel gets +0/+2."
+},
+{
+"id": 820528,
+"name": "Kowakian Monkey-Lizard",
+"text": "Ambush (When you play this unit, it may attack an enemy unit.)"
+},
+{
+"id": 820100,
+"name": "Wingman Victor Two - Mauler Mithel",
+"text": "Epic Action: Piloting [1 resource Command Villainy] (You may play this as an upgrade on a friendly Vehicle without a Pilot.)\nWhen played as an upgrade: Create a TIE Fighter token."
+},
+{
+"id": 820690,
+"name": "Alexsandr Kallus - With New Purpose",
+"text": "While you have the initiative, each other friendly <uq> (unique) unit gains Raid 2.\nWhen Played: Deal 2 damage to each of up to 3 ground units."
+},
+{
+"id": 819582,
+"name": "Fenn Rau - Protector of Concord Dawn",
+"text": "When Played: You may play an upgrade from your hand. It costs 2 resources less.\nWhen you play an upgrade on this unit: Give\u00a0an enemy unit \u20132/\u20132 for this phase."
+},
+{
+"id": 819576,
+"name": "Embo - Stoic and Resolute",
+"text": "When this unit completes an attack: If\u00a0the defender was defeated, heal up to 2\u00a0damage from a unit."
+},
+{
+"id": 820346,
+"name": "Mythosaur - Folklore Awakened",
+"text": "Shielded\nFriendly upgraded units can't be exhausted or returned to hand by enemy card abilities.\nFriendly leaders gain the Mandalorian trait."
+},
+{
+"id": 819704,
+"name": "Cartel Turncoat",
+"text": "Bounty \u2014 Draw a card. (When this unit is defeated or captured, your opponent collects its bounty.)"
+},
+{
+"id": 819217,
+"name": "Fighter",
+"text": "Fighter: 179 entities of this type."
+},
+{
+"id": 820989,
+"name": "Doctor Aphra - Digging For Answers",
+"text": "On Attack: Discard 3 cards from your deck. You may return an Underworld card discarded this way to your hand."
+},
+{
+"id": 819645,
+"name": "Kylo's TIE Silencer - Ruthlessly Efficient",
+"text": "Action: If this unit was discarded from your hand or deck this phase, play it from your discard pile (paying its cost)."
+},
+{
+"id": 820438,
+"name": "Saesee Tiin - Courageous Warrior",
+"text": "When Played: If you have the initiative, deal 1 damage to each of up to 3 units."
+},
+{
+"id": 821370,
+"name": "Blizzard One - Veers at the Helm",
+"text": "When Played: You may defeat a non-leader ground unit with 3 or less remaining HP."
+},
+{
+"id": 820456,
+"name": "Baylan Skoll - Enigmatic Master",
+"text": "Hidden\nWhen Played: You may use the Force. If you do, return a non-leader unit that costs 4 or less to its owner's hand. Then, its owner may play it for free."
+},
+{
+"id": 819716,
+"name": "A New Adventure",
+"text": "Return a non-leader unit that costs 6 or less to its owner's hand. Then, its owner may play it for free."
+},
+{
+"id": 820123,
+"name": "Bunker Defender",
+"text": "While you control a Vehicle unit, this unit gains Sentinel. (Units in this arena can't attack your non-Sentinel units or your base.)"
+},
+{
+"id": 820374,
+"name": "Yoda - My Ally is the Force",
+"text": "When Played: You may use the Force. If you do, heal 5 damage from a base.\nWhen you use the Force: You may deal damage to a unit equal to twice the number of units you control."
+},
+{
+"id": 819972,
+"name": "Sanctioner's Shuttle",
+"text": "Coordinate \u2014 When Played: This unit captures an enemy non-leader unit that costs 3 or less. (Gain this ability while you control 3 or more units, including this one.)"
+},
+{
+"id": 820526,
+"name": "Curious Flock",
+"text": "When Played: Pay up to 6 resources. For each resource paid this way, give an Experience token to this unit."
+},
+{
+"id": 819994,
+"name": "Grievous's Wheel Bike",
+"text": "While playing this upgrade on General Grievous, it costs 2 resources less to play.\nAttach to a non-Vehicle unit.\nAttached unit gains Overwhelm."
+},
+{
+"id": 820246,
+"name": "Sweep the Area",
+"text": "Return up to 2 non-leader units in the same arena with a combined cost 3 or less to their owners' hands."
+},
+{
+"id": 821333,
+"name": "Recovery",
+"text": "Heal 5 damage from a unit."
+},
+{
+"id": 819805,
+"name": "Providence Destroyer",
+"text": "Exploit 2 (While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.)\nOn Attack: Give an enemy space unit \u20132/\u20132 for this phase."
+},
+{
+"id": 820722,
+"name": "Darth Traya - Lord of Betrayal",
+"text": "On Attack: You may ready a non-unit leader."
+},
+{
+"id": 820606,
+"name": "Disciples' Devotion",
+"text": "While attached unit is exhausted, it gains Sentinel. (Enemy units in this arena must attack a Sentinel when they attack you.)"
+},
+{
+"id": 820883,
+"name": "The Stranger - No Survivors",
+"text": "Ambush\nGrit\nWhile attacking, you may have the defending unit deal combat damage before this unit."
+},
+{
+"id": 819203,
+"name": "Saboteur",
+"text": "When this unit attacks, ignore Sentinel and defeat the defender's Shields."
+},
+{
+"id": 820073,
+"name": "Hondo Ohnaka - Superfluous Swindler",
+"text": "Shielded\nOn Attack: You may take control of a non-Pilot upgrade on a unit and attach it to a different eligible unit."
+},
+{
+"id": 821024,
+"name": "The Master Codebreaker - High Stakes",
+"text": "The first Gambit card you play each round costs 1 resource less.\nWhen Played: Search the top 8 cards of your deck for a Gambit card, reveal it, and draw it."
+},
+{
+"id": 821200,
+"name": "Mortar Trooper",
+"text": "Action [Exhaust]: Deal 1 damage to each of up to 3 ground units."
+},
+{
+"id": 821115,
+"name": "Huyang - Your Aptitude Falls Short",
+"text": "On Attack: You may give an upgraded unit \u20134/\u20130 for this phase."
+},
+{
+"id": 821271,
+"name": "Amnesty Officer",
+"text": "When Played: You may exhaust a unit with one or more keywords."
+},
+{
+"id": 820908,
+"name": "Leia's Disguise",
+"text": "Attach to a non-Vehicle unit.\nAttached unit gains the Underworld trait.\nWhen Played: If attached unit is Leia Organa, give a Shield token to a friendly unit."
+},
+{
+"id": 820371,
+"name": "Leia Organa - Extraordinary",
+"text": "While this unit is in the space arena, she can't ready and gains: \u201cAction [use the Force]: Move this unit to the ground arena and give each friendly Heroism unit +2/+2 for this phase.\u201d"
+},
+{
+"id": 821091,
+"name": "Rancor Keeper",
+"text": "When a friendly unit is dealt damage and survives: Deal 1 damage to any number of bases. Use this ability only once each round."
+},
+{
+"id": 819475,
+"name": "Gamorrean Guards",
+"text": "While you control another [Cunning] unit, this unit gains Sentinel. (Units in this arena can't attack your non-Sentinel units or your base.)"
+},
+{
+"id": 820387,
+"name": "Kaadu",
+"text": "When Played: You may give another friendly unit Overwhelm for this phase. (When attacking an enemy unit, deal excess damage to the opponent's base.)"
+},
+{
+"id": 821008,
+"name": "Cutthroat Podracer",
+"text": "When Played: You may deal 2 damage to an exhausted ground unit."
+},
+{
+"id": 820486,
+"name": "Ascension Cable",
+"text": "Attach to a non-Vehicle unit.\nAttached unit gains Saboteur. (When this unit attacks, ignore Sentinel and defeat the defender's Shields.)"
+},
+{
+"id": 819658,
+"name": "Cassian Andor - Rebellions Are Built On Hope",
+"text": "Smuggle [5 resources Aggression Heroism] (If this card is a resource, you may play him for his smuggle cost. Replace it with the top card of your deck.)\nWhen played using Smuggle: Ready this unit."
+},
+{
+"id": 820171,
+"name": "Relentless Firespray",
+"text": "On Attack: Ready this unit. Use this ability only once each round."
+},
+{
+"id": 819315,
+"name": "Luke Skywalker - Jedi Knight",
+"text": "Restore 3\n\nWhen Played: Give an enemy unit \u20133/\u20133 for this phase. If a friendly unit was defeated this phase, give that enemy unit \u20136/\u20136 for this phase instead."
+},
+{
+"id": 820295,
+"name": "Nightsister Lair",
+"text": "When a friendly Force unit attacks: The Force is with you (create your Force token)."
+},
+{
+"id": 821231,
+"name": "StarFortress Heavy Bomber",
+"text": "When Played: You may deal 6 damage to a non-<uq> ground unit."
+},
+{
+"id": 820024,
+"name": "Darth Vader - Victor Squadron Leader",
+"text": "Action [Exhaust]: If you attacked with a non-token Vehicle unit this phase, create a TIE Fighter token.\nDeployed: \nAttached unit is a leader unit.\nWhen deployed as an upgrade: Create 2 TIE Fighter tokens.\nEpic Action: Epic Action: If you control 6 or more resources, choose one:\nDeploy this leader.\nDeploy this leader as an upgrade on a friendly Vehicle unit without a Pilot on it."
+},
+{
+"id": 820508,
+"name": "The Son - Embodiment of Darkness",
+"text": "While the Force is with you, each friendly unit gets +2/+0."
+},
+{
+"id": 820471,
+"name": "Qui-Gon Jinn - The Negotiations Will Be Short",
+"text": "Ambush\nWhen Defeated: You may choose a non-leader ground unit. Its owner puts it on the top or bottom of their deck."
+},
+{
+"id": 819646,
+"name": "Death Watch Loyalist",
+"text": "Grit (This unit gets +1/+0 for each damage on it.)\nOverwhelm (When attacking an enemy unit, deal excess damage to the opponent's base.)"
+},
+{
+"id": 820352,
+"name": "Shatterpoint",
+"text": "Choose one:\nDefeat a non-leader unit with 3 or less remaining HP.\nUse the Force (lose your Force token). If you do, defeat a non-leader unit."
+},
+{
+"id": 820142,
+"name": "Lightspeed Assault",
+"text": "Defeat a friendly space unit and deal damage equal to its power to an enemy space unit. If you do, deal indirect damage equal to the enemy unit's power to its controller."
+},
+{
+"id": 820308,
+"name": "Nameless Terror",
+"text": "When Played: You may exhaust a Force unit.\nOn Attack: Each enemy unit loses the Force trait for this phase."
+},
+{
+"id": 821099,
+"name": "Poe Dameron - I'll Come Back For You",
+"text": "All units lose Sentinel."
+},
+{
+"id": 820003,
+"name": "Armored Saber Tank",
+"text": "Sentinel (Units in this arena can't attack your non-Sentinel units or your base.)"
+},
+{
+"id": 819977,
+"name": "Droid Cohort",
+"text": "Attached unit gains, \u201cWhen Defeated: Create a Battle Droid token.\u201d"
+},
+{
+"id": 819195,
+"name": "Exploit",
+"text": "While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way."
+},
+{
+"id": 820435,
+"name": "Quinlan Vos - Dark Disciple",
+"text": "On Attack: If this unit has 6 or more power, you may deal 2 damage to an enemy base."
+},
+{
+"id": 820440,
+"name": "Invasion Control Ship",
+"text": "Friendly Droid units gain Raid 2."
+},
+{
+"id": 820636,
+"name": "Queen Amidala - Championing Her People",
+"text": "When Played: Create 2 Spy tokens.\nIf damage would be dealt to this unit, you may defeat another friendly unit that shares a trait with this unit. If you do, prevent that damage."
+},
+{
+"id": 821031,
+"name": "Bix Caleen - Selling Scrap",
+"text": "When Played/On Attack: You may discard a card from your hand. If you do, create a Credit token."
+},
+{
+"id": 820613,
+"name": "Hyperspace Disaster",
+"text": "Defeat all space units."
+},
+{
+"id": 819945,
+"name": "San Hill - Chairman of the Banking Clan",
+"text": "Exploit 3 (While playing this card, defeat up to 3 units you control. This card costs 2 resources less for each unit defeated this way.)\nOn Attack: For each friendly unit that was defeated this phase, ready a friendly resource."
+},
+{
+"id": 820244,
+"name": "Punch It",
+"text": "Attack with a Vehicle unit. It gets +2/+0 for this attack."
+},
+{
+"id": 820583,
+"name": "Captain Rex - Into the Firefight",
+"text": "When Played/When this unit completes an attack: Give this unit and an enemy unit Sentinel for this phase."
+},
+{
+"id": 819249,
+"name": "Spectre",
+"text": "Spectre: 34 entities of this type."
+},
+{
+"id": 821073,
+"name": "The Mandalorian - We Can't Keep Running",
+"text": "When you take the initiative: You may pay 1 resource. If you do, draw a card.\nDeployed: Support (When you deploy this leader, you may attack with another unit. It gains this unit's other abilities for this attack.)\nOn Attack: If you have the initiative, you may draw a card.\nEpic Action: Epic Action: If you control 6 or more resources, deploy this leader."
+},
+{
+"id": 819711,
+"name": "Qi'ra - Playing Her Part",
+"text": "When Played: Look at an opponent's hand, then name a card. While this unit is in play, each card with that name costs 3 resources more for your opponents to play."
+},
+{
+"id": 820664,
+"name": "With Thunderous Applause",
+"text": "Give a unit +2/+2 for this phase.\nYou may disclose Command (reveal a card from your hand with this aspect icon). If you do, give another unit +2/+2 for this phase."
+},
+{
+"id": 819596,
+"name": "Phase-III Dark Trooper",
+"text": "Sentinel (Units in this arena can't attack your non-Sentinel units or your base.)\n\nWhen combat damage is dealt to this unit: Give an Experience token to this unit (if it survives the damage)."
+},
+{
+"id": 820461,
+"name": "Anakin Skywalker - Force Prodigy",
+"text": "Hidden (This unit can't be attacked if it was played this phase.)\nShielded (When you play this unit, give a Shield token to him.)"
+},
+{
+"id": 820540,
+"name": "Leia Organa - Of A Secret Bloodline",
+"text": "Action [1 resource, Exhaust]: Disclose Vigilance, Command, Aggression, Cunning, or Heroism (reveal a card from your hand with this aspect icon). If you do, give an Experience token to a unit that doesn't share an aspect with the disclosed card.\nDeployed: On Attack: You may disclose Vigilance, Command, Aggression, Cunning, or Heroism. If you do, give an Experience token to a unit that doesn't share an aspect with the disclosed card.\nEpic Action: Epic Action: If you control 6 or more resources, deploy this leader."
+}
+]

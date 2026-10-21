@@ -1,0 +1,50 @@
+818948 | Construct | Construct: 13 entities of this type.
+818949 | Dragon | Dragon: 20 entities of this type.
+818950 | Dwarf | Dwarf: 11 entities of this type.
+818951 | Feline | Feline: 14 entities of this type.
+818952 | Frostling | Frostling: 15 entities of this type.
+818953 | Knight | Knight: 11 entities of this type.
+818954 | Pirate | Pirate: 12 entities of this type.
+818955 | Raven | Raven: 13 entities of this type.
+818956 | Rodent | Rodent: 15 entities of this type.
+818957 | Satyr | Satyr: 12 entities of this type.
+818958 | Toad | Toad: 14 entities of this type.
+818959 | Undead | Undead: 15 entities of this type.
+818960 | Green Prototypes | On death, give 1/2/3/4/5 strength to a random surrounding enemy unit and vitalize it
+818961 | Summon Militia | Randomly spawn a Knight with 1/2/3/4/5 strength
+818964 | Northsea Dog | When played as the last card in your hand, gain 5/6/7/8/10 strength
+818965 | Spare Dragonling | On death, give 3/4/5/6/7 strength to a random friendly Dragon
+818966 | Brothers in Arms | On play, spawn a 1/2/2/3/3 strength Knight on the tile behind
+818967 | Collector Mirz | On play, create a 0 cost unit with 5/6/6/8/10 strength and add it to your deck
+818968 | Confinement | Reduce the strength of a target enemy unit to 5/4/3/2/1
+818969 | Conflicted Drakes | On play, deal 1/1/2/2/3 damage to all non-Dragon units in front
+818970 | Felflares | On play, deal 2/3/4/5/6 damage to a random surrounding enemy
+818971 | First Mutineer | On play, discard a random non-Pirate card from your hand
+818973 | Freebooters | On play, draw 1/1/1/2/2 card/card/card/cards/cards
+818974 | Potion of Growth | Give 2/3/4/5/6 strength to a target friendly unit and vitalizes it
+818976 | Wetland Deceivers | On play, destroy all surrounding units with 1/1/2/2/3 /or/or/or/or /less/less/less/less strength
+818977 | Beasts of Terror | When attacking a non-Dragon unit, deal 2/2/3/3/4 damage to all other enemies with the same unit type
+818979 | Emerald Towers | At the start of your turn, give 2/2/3/3/4 strength to all friendly units in front
+818980 | Execution | Deal 4/5/6/7/8 damage to a target enemy unit or structure
+818981 | Goldgrubbers | On play, replace a random non-Pirate card from your hand
+818982 | Hunter’s Vengeance | Randomly deal 2/3/4/5/6 damage to one unit of each unit type
+818983 | Personal Servers | On play, give 2/2/3/3/4 strength to another random friendly unit
+818984 | Siegebreakers | On play, deal 4/5/6/7/8 damage to all surrounding enemy structures
+818985 | Snowmasons | On death, give 4/5/6/7/8 strength spread randomly among all surrounding friendly units
+818986 | Terrific Slayers | Before attacking a Dragon, deal 5/6/7/8/10 additional damage
+818988 | Bladestorm | Deal 1/2/2-3/3/4 damage to all enemy units and structures
+818990 | Flooding the Gates | Deal 5/6/7/8/10 damage to all units bordering your base
+818992 | Snake Eyes | When played with a full hand, discard all cards and draw 4 new cards
+818993 | Trueshot Post | At the start of your turn, randomly deal 4/5/6/7/8 damage to the most forward enemy unit or structure
+818994 | Ubass the Hunter | On play, deal 1/1/2/2/3 damage to a random enemy for each unique surrounding primary unit type
+818995 | Voidsurgers | When played with at least 3 surrounding enemies, deal 2/3/4/5/6 damage to each
+818996 | Boomstick Officers | On play, deal 4/5/6/7/8 damage to the closest enemy behind
+818997 | Harvesters of Souls | When attacking a weaker unit, add a 5/6/7/8/10 strength copy of that card to your deck
+818998 | Hearthguards | When played bordering a friendly structure or base, gain 3/4/5/6/7 strength
+818999 | Kindred’s Grace | Give 7/8/8/10/12 strength to a target friendly unit and 2/2/3/4/5 strength to all others of the same unit type
+819000 | Lich Summoners | After attacking, spawn a 3/4/5/6/7 strength Undead on the tile behind
+819001 | Lucky Charmers | On play, gain 3/3/4/5/6 strength for each Pirate in your hand
+819002 | Ludic Matriarchs | When played bordering a friendly Dragon, spawn 1/1/2/2/3 strength Dragons on all tiles bordering either
+819003 | Needle Blast | Deal 2/2/3/3/4 damage to 2/3/3/4/4 random enemies
+819004 | Powder Tower | At the start of your turn, this explodes and deals 2/2/3/3/4 damage to all enemies
+819005 | Tegor the Vengeful | On death, do a random effect: give 6/7/8/10/12 strength, deal 5/6/7/8/10 damage or spawn a 4/5/6/7/8 strength unit
