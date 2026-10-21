@@ -1,17 +1,28 @@
-signature	Winter	disable	their interaction with the Freeze status	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
-signature	Winter	resource_gain	Frozen Core and Dawnsparks generate extra mana	https://stormboundkingdomwars.fandom.com/wiki/Winter_Pact
-signature	Winter	aoe_damage	the Winter Pact can deal massive area damage	https://stormboundkingdomwars.fandom.com/wiki/Winter_Pact
-archetype	Winter	control	This class is all about controlling the board	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
-archetype	Winter	ramp	all about gaining extra mana, freezing, and big units	https://stormboundkingdomwars.fandom.com/wiki/Winter_Pact
-signature	Shadowfen	damage_over_time	with a dash of poison and diagonal damage	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
-signature	Shadowfen	summon	they can flood the board with a bunch of Toad units	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
-archetype	Shadowfen	swarm	they can flood the board with a bunch of Toad units	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
-archetype	Shadowfen	tribal	then buff them with the Kindred's Grace Neutral card	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
-signature	Swarm	summon	mechanics like unit generation, high movement, and direct base damage	https://stormboundkingdomwars.fandom.com/wiki/Swarm_of_the_East
-signature	Swarm	direct_damage	mechanics like unit generation, high movement, and direct base damage	https://stormboundkingdomwars.fandom.com/wiki/Swarm_of_the_East
-signature	Swarm	movement	mechanics like unit generation, high movement, and direct base damage	https://stormboundkingdomwars.fandom.com/wiki/Swarm_of_the_East
-archetype	Swarm	aggro_tempo	almost entirely focused on an Aggro playstyle	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
-archetype	Swarm	swarm	filling the board with countless weak units	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
-archetype	Swarm	tribal	particularly one centered around Satyrs	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
-archetype	Ironclad	aggro_tempo	it requires cheap and inexpensive cards	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
-combo	Wisp Cloud	Frosthexers	one good combo for this deck is Wisp Cloud + Frosthexers	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+signature	Winter	disable	Freeze	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+signature	Winter	resource_gain	extra mana	https://stormboundkingdomwars.fandom.com/wiki/Winter_Pact?oldid=7023
+signature	Winter	aoe_damage	heavy area damage	https://stormboundkingdomwars.fandom.com/wiki/Winter_Pact?oldid=7023
+signature	Winter	high_cost	big units that finish the game	https://stormboundkingdomwars.fandom.com/wiki/Winter_Pact?oldid=7023
+signature	Swarm	summon	unit generation	https://stormboundkingdomwars.fandom.com/wiki/Swarm_of_the_East?oldid=4049
+signature	Swarm	board_presence	many weak units	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+signature	Swarm	buff	strengthening units on the board	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+signature	Swarm	direct_damage	direct damage to the enemy base	https://stormboundkingdomwars.fandom.com/wiki/Swarm_of_the_East?oldid=4049
+signature	Swarm	movement	high movement	https://stormboundkingdomwars.fandom.com/wiki/Swarm_of_the_East?oldid=4049
+signature	Swarm	tribal	Satyrs	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+signature	Swarm	life_payment	self-damage costs	https://stormboundkingdomwars.fandom.com/wiki/Swarm_of_the_East?oldid=4049
+signature	Shadowfen	damage_over_time	poison	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+signature	Shadowfen	summon	Toads	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+signature	Shadowfen	tribal	Toads	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+signature	Shadowfen	sacrifice	sacrifice-based poison	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+signature	Ironclad	buff	Boosting Elixir	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+signature	Ironclad	forced_movement	knockback	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+archetype	Winter	control	control and attrition	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+archetype	Winter	ramp	extra mana for big units	https://stormboundkingdomwars.fandom.com/wiki/Winter_Pact?oldid=7023
+archetype	Swarm	aggro_tempo	aggro	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+archetype	Swarm	swarm	many weak units	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+archetype	Swarm	tribal	Satyrs	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+archetype	Shadowfen	swarm	flooding the board	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+archetype	Shadowfen	tribal	Toads	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+archetype	Shadowfen	poison_attrition	poison wears down health	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+archetype	Ironclad	aggro_tempo	aggro variant	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+archetype	Ironclad	control	control variant	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
+combo	Wisp Cloud	Frosthexers	freeze, then clear frozen targets	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
