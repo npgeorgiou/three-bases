@@ -1,0 +1,500 @@
+816920|hand_size:benefits:no cards in their hands;stat_gain:does:gets +3 strength
+818076|on_attack:does:challenges another character;combo_sequence:does:second challenge this turn;points_scoring:does:gain 3 lore
+818800|on_spell:does:whenever you play a song;temporary_buff:does:gets +1 lore this turn
+818685|upgrade:does:Shift 4 ink;cost_type:does:Shift 4 ink;on_play:does:When you play this character;on_ally_play:does:whenever you play a location;suppress:does:exert chosen character;stat_condition:does:3 strength or less;lanes:benefits:at a location;stat_gain:does:she gets +3 lore
+818582|on_play:does:When you play this character;tribal:does:another Alien character;draw:does:draw a card
+816721|upgrade:does:Shift 5;cost_type:does:Shift 5;on_spell:does:Whenever you play an action;suppress:does:can't quest during their next turn;temporary_effect:does:during their next turn
+817253|taunt:does:Bodyguard;on_play:does:When you play this character;temporary_buff:grants:gets +1 lore this turn
+816880|death_trigger:does:banished in a challenge;revive:does:return this card to your hand
+817893|heal:does:remove up to 1 damage;tribal:does:Puppy characters;scope_multi:does:each of your Puppy characters
+818576|activated:does:exert;stat_loss:does:gets -4 strength;temporary_effect:does:until the start of your next turn
+817775|upgrade:does:Shift 4;cost_type:does:Shift 4;hand_disruption:does:choose and discard a card
+817833|on_play:does:When you play this character;destroy:does:banish chosen item;enemy_benefit:does:Its player gains 1 lore;evasion:does:gains Evasive
+818286|play_restriction:does:You can't play this character unless;condition_life:benefits:opposing character was damaged
+817584|points_scoring:does:gain 1 lore for each 1 damage on him;condition_life:benefits:damage on him;condition_count:does:for each 1 damage
+818647|upgrade:does:Shift 3 ink;cost_type:does:Shift 3 ink;temporary_buff:grants:get +1 lore this turn;evasion:benefits:characters with Evasive
+817130|evasion:does:Evasive;immunity:does:gains Ward;lanes:benefits:at a location
+816808|upgrade:does:Shift 3;cost_type:does:Shift 3;temporary_buff:does:Challenger +3;evasion:does:can't challenge this character;cost_condition:does:cost 3 or less
+817876|evasion:does:can't be challenged by Pirate characters;tribal:does:Pirate characters;aura:does:your other characters gain Resist +1;damage_reduction:grants:Resist +1
+816632|
+818773|on_play:does:When you play this character;hand_disruption:does:look at chosen opponent's hand
+817612|activated:does:Banish this item;self_destruct:cost:Banish this item;temporary_buff:grants:gets +3 strength this turn;tribal:benefits:Villain character
+817732|upgrade:does:Shift 5;cost_type:does:Shift 5;evasion:does:Evasive;temporary_buff:grants:get +1 lore this turn;tribal:does:Fairy characters
+818173|heal:does:Move 1 damage counter;damage:does:to chosen opposing character;draw:does:Draw a card for each damage counter;condition_count:does:for each damage counter
+818579|turn_end:does:At the end of your turn;points_scoring:does:gain 1 lore
+818590|on_play:does:When you play this character;revive:does:return a character card from your discard to your hand;free_play:does:play him for free
+816578|evasion:does:Only characters with Evasive can challenge this character
+818397|other_death_trigger:does:Amethyst characters is banished;tribal:does:Amethyst characters;draw:does:draw a card
+817765|tribal:does:Pirate characters;lanes:benefits:while at a location;draw:does:draw a card
+817282|on_play:does:When you play this character;heal:does:move up to 1 damage counter;damage:does:to chosen opposing character
+818471|on_ally_play:does:Whenever you play another character;stat_condition:does:5 strength or more;untap:does:ready this character
+818684|cost_reduction:does:you pay 1 ink less;graveyard:benefits:action card in your discard;on_play:does:When you play this character;points_scoring:does:each opponent loses 2 lore
+817178|immunity:does:Ward;untap:does:ready one of your items
+818132|bounce_enemy:does:Return chosen character with 2 strength or less;stat_condition:does:2 strength or less;revive:does:Return a character card from your discard to your hand
+816834|activated:does:exert, 3 ink;hand_size:benefits:no cards in your hand;draw:does:draw a card
+817420|upgrade:does:Shift 4;cost_type:does:Shift 4;on_spell:does:Whenever you play a song;kicker:does:pay 2 ink;damage:does:deal 3 damage
+816636|cost_type:does:Singer 5;activated:does:exert;heal:does:Remove up to 3 damage;tribal:does:Princess character
+816619|
+816626|
+818280|damage_reduction:does:Resist +1
+818004|bounce_enemy:does:Return chosen damaged character;condition_life:does:damaged character
+816592|
+818893|on_ally_play:does:whenever you play an item;stat_loss:does:gets -2 strength;temporary_effect:does:this turn
+817587|upgrade:does:Shift 4;cost_type:does:Shift 4;on_play:does:When you play this character;points_scoring:does:each opponent loses 2 lore;comeback:does:While an opponent has 10 or more lore;stat_gain:does:gets +6 strength
+818370|on_play:does:When you play this character;temporary_buff:grants:gets +1 lore this turn;merge_attach:benefits:with a card under them
+817144|evasion:does:Evasive;on_spell:does:Whenever you play a song;evasion:grants:gains Evasive until the start of your next turn
+817702|on_play:does:When you play this character;self_mill:cost:put the top 3 cards of your deck into your discard;stat_loss:does:-3 strength;temporary_effect:does:until the start of your next turn
+818482|evasion:does:Evasive;hand_size:does:3 or more cards in your hand
+816633|
+817969|cost_type:does:exert to sing this song for free;points_scoring:does:Gain 1 lore;draw:does:Draw a card
+817161|upgrade:does:Shift 4;cost_type:does:Shift 4;evasion:does:Evasive;on_attack:does:Whenever he challenges;tribal:does:Pirate character;protection:does:takes no damage from the challenge
+818943|activated:does:exert, 2 ink;attack_lock:does:can't challenge during their next turn;other_death_trigger:does:Robot character is banished;tribal:does:Robot character;self_destruct:cost:banish this item;discard:does:discard your hand;draw:does:draw 2 cards
+817745|upgrade:does:Shift 5;cost_type:does:Shift 5;on_ally_play:does:Whenever you play a card;draw:does:draw a card;turn_end:does:At the end of your turn;recycle:does:put all the cards in your hand on the bottom of your deck
+817895|activated:does:exert;condition_count:does:3 or more other characters;draw:does:draw a card
+818031|on_spell:does:Whenever you play an action;points_scoring:does:gain 1 lore
+817198|other_death_trigger:does:items is banished;resource_gain:does:into your inkwell facedown and exerted
+817500|on_spell:does:Whenever you play a song;points_scoring:does:gain 1 lore
+817186|assists_support:does:Support;tribal:does:named Dewey and Louie;draw:does:draw 3 cards
+818346|activated:does:exert, 1 ink, Banish this item;self_destruct:cost:Banish this item;return_to_hand:does:Return chosen exerted character of yours to your hand;points_scoring:does:gain 2 lore
+817153|on_play:does:When you play this character;destroy:does:banish chosen opposing character;stat_condition:does:3 strength or less
+818938|tribal:benefits:Villain character;stat_gain:does:gets +2 strength and +1 lore;evasion:grants:can't be challenged
+817804|recycle:does:return a location card from your discard to your hand
+817342|cost_type:does:exert to sing this song for free;bounce_enemy:does:Return chosen character to their player's hand;hand_disruption:does:discards a card at random;random_effect:does:at random
+816618|
+817686|turn_start:does:At the start of your turn;cast_from_zone:does:you may play her
+818778|on_play:does:When you play this character;revive:does:return a character card with 4 willpower or more;stat_condition:does:4 willpower or more;aura:does:Your characters named Dale get +1 willpower
+818041|assists_support:does:Support;aura:does:Your other characters with Support get +1 strength
+818259|rule_change:does:Skip your turn's Draw step
+816828|cost_type:does:exert to sing this song for free;hand_deck_swap:does:Each player discards their hand and draws 7 cards;symmetric_effect:does:Each player
+817068|heal:does:Remove up to 3 damage from chosen location
+818227|evasion:does:Evasive;on_ally_play:does:Whenever you play a character;stat_condition:does:5 strength or more;points_scoring:does:gain 2 lore
+818478|other_death_trigger:does:one of your characters is banished;draw:does:draw a card;haste:grants:gains Rush this turn
+818838|immunity:does:Ward;on_play:does:When you play this character;discard:cost:choose and discard a card;bounce_enemy:does:return chosen character to their player's hand;turn_end:does:At the end of your turn;condition_count:does:2 or more cards were put into your discard;draw:does:draw a card
+817366|on_attack:does:Whenever this character challenges;points_scoring:does:gain 1 lore for each other damaged character;condition_life:benefits:damaged character
+816886|on_play:does:When you play this character;modal_choice:does:banish her or return;self_destruct:does:banish her;return_to_hand:does:return another chosen character of yours to your hand
+818526|activated:does:exert, 1 ink;damage_reduction:grants:gains Resist +1;type_grant:does:the Detective classification
+817464|on_play:does:When you play this character;destroy:does:choose an item or location of theirs and banish it
+818909|play_restriction:does:You can't play this action unless;condition_count:does:2 or more cards were put into your discard;symmetric_effect:does:Each player chooses 2 of their characters;removal:does:puts them into their inkwell;resource_gain:does:puts them into their inkwell
+818443|merge_attach:does:Boost 2 ink;stat_gain:does:gets +2 strength and +1 lore
+817907|evasion:does:Evasive
+818889|on_play:does:When you play this character;damage_reduction:grants:gain Resist +1;scope_multi:does:your other characters
+817923|upgrade:does:Shift 4;cost_type:does:Shift 4;recycle:does:return a song card with cost 3 or less;cost_condition:does:cost 3 or less
+818757|damage:does:Deal 2 damage to chosen opposing character;tribal:benefits:named Darkwing Duck
+818331|aura:does:Your Princess characters get +1 strength;tribal:does:Princess characters
+817077|self_destruct:cost:banish them;draw:does:draw a card
+817381|activated:does:ink;lane_rule:does:Chosen character here;temporary_buff:grants:gets +1 strength this turn
+817327|evasion:grants:your Villain characters can't be challenged;tribal:does:Villain characters
+818125|on_ally_play:does:Whenever you play a character;temporary_buff:does:gets +1 strength this turn;stat_condition:does:3 strength or more;stat_gain:does:she gets +2 lore
+817903|on_play:does:When you play this character;recycle:does:put an item card named The Glass Slipper from your discard on the bottom of your deck;points_scoring:does:gain 3 lore
+818798|on_play:does:When you play this character;tribal:does:another Madrigal character;suppress:does:exert chosen opposing character
+817917|turn_start:does:At the start of your turn;cast_from_zone:does:play a Puppy character from there for free;free_play:does:for free;tribal:does:Puppy character
+817623|turn_start:does:At the start of your turn;points_scoring:does:gain 1 lore
+818128|heal:does:remove up to 1 damage;taunt:benefits:characters with Bodyguard
+818818|haste:does:Rush;on_play:does:When you play this character;tribal:does:another Super character;suppress:does:exert chosen opposing character
+816647|untap:does:ready your other Princess characters;tribal:does:Princess characters
+817853|turn_start:does:At the start of your turn;lane_rule:does:a character here;resource_gain:does:into your inkwell facedown and exerted
+817221|damage_reduction:does:Resist +2;activated:does:exert;damage_reduction:grants:gains Resist +2 this turn
+818528|immunity:grants:gains Ward;tribal:does:Princess character
+818666|merge_attach:does:Boost 1 ink;variable_stats:does:+1 willpower for each card under him
+817649|lane_rule:does:while here;stat_gain:grants:+1 lore and +2 willpower;assists_support:benefits:Characters with Support
+817682|activated:does:exert;ping:does:Deal 1 damage to chosen character
+818320|boss_phases:does:Jafar's turn;turn_start:does:At the start of Jafar's turn;self_destruct:does:banishes this item;damage:does:deal 4 damage
+817033|damage_reduction:does:Resist +2;hand_size:benefits:no cards in your hand;play_restriction:does:opponents can't play actions
+817554|on_play:does:When you play this character;damage:does:deal 2 damage to chosen damaged character;condition_life:does:damaged character
+818021|targeting_rules:does:can challenge ready characters;condition_life:benefits:has damage;stat_gain:does:gets +2 strength
+818419|leave_trigger:does:When this character leaves play;return_to_hand:does:return chosen character of yours to your hand
+818611|upgrade:does:Shift 4 ink;cost_type:does:Shift 4 ink;on_play:does:When you play this character;damage:does:move 1 damage from each other character to them
+818340|movement:does:move one of your other characters to that location for free;draw:does:draw a card
+818516|turn_end:does:At the end of your turn;tribal:does:Princess character;resource_gain:does:put a card from your hand into your inkwell;draw:does:draw a card
+817573|immunity:does:Ward;on_attack:does:challenges a damaged character;condition_life:does:damaged character;draw:does:draw a card
+816791|on_play:does:When you play this character;stat_loss:does:gets -5 strength this turn;temporary_effect:does:this turn
+817747|suppress:does:Exert chosen character;discard:cost:choose and discard a card;disable:does:can't ready at the start of their next turn
+818316|boss_phases:does:Jafar;suppress:does:exerts all opposing characters;disable:does:can't ready at the start of their next turn
+817925|on_spell:does:sings a song;points_scoring:does:gain 1 lore
+816853|upgrade:does:Shift 2;cost_type:does:Shift 2;deck_position:does:reveal the top card of your deck;cast_from_zone:does:play it for free;free_play:does:play it for free
+818619|cost_reduction:does:pay 1 ink less;turn_number:does:If this is your first turn;comeback:does:you're not the first player
+817006|on_play:does:When you play this item;draw:does:draw a card;self_destruct:cost:Banish this item;heal:does:Remove up to 2 damage
+817953|haste:does:Rush;on_play:does:When you play this character;stat_loss:does:gets -3 strength this turn;temporary_effect:does:this turn
+818783|upgrade:does:Shift 4 ink;cost_type:does:Shift 4 ink;on_lifegain:does:Whenever you remove damage;points_scoring:does:gain 1 lore for each 1 damage removed
+818833|upkeep:does:unless you pay 1 ink
+817564|upgrade:does:Shift 5;cost_type:does:Shift 5;turn_end:does:At the end of your turn;comeback:does:more cards in their hand than you;draw:does:draw cards until you have the same number
+817879|modal_choice:does:Choose one;damage:does:Deal 2 damage to chosen character;destroy:does:Banish chosen item
+818496|lane_rule:does:move a character with 5 strength or more here;stat_condition:does:5 strength or more;draw:does:draw a card
+816634|
+817826|deck_position:does:reveal the top card of your deck;cast_from_zone:does:play that item for free;free_play:does:play that item for free
+816670|upgrade:does:Shift 5;cost_type:does:Shift 5;other_death_trigger:does:other characters is banished;revive:does:return that card to your hand
+817397|assists_support:does:Support;damage_reduction:grants:gain Resist +1 this turn
+818420|merge_attach:does:Boost 2 ink;death_trigger:does:banished in a challenge;draw:does:draw 2 cards
+818195|upgrade:does:Shift 3;cost_type:does:Shift 3;aoe_damage:does:put 1 damage counter on each other character;friendly_fire:does:each other character
+818138|on_play:does:When you play this character;friendly_fire:cost:deal 2 damage to another chosen character of yours;bounce_enemy:does:return chosen character with cost 2 or less;cost_condition:does:cost 2 or less
+818101|cost_type:does:Singer 6;on_spell:does:Whenever you play a song;stat_loss:does:each opposing character gets -1 strength;temporary_effect:does:until the start of your next turn
+817624|upgrade:does:Shift 3;cost_type:does:Shift 3;immunity:does:Ward;condition_count:does:For each other character named The Queen;stat_gain:does:gets +1 lore
+818270|activated:does:exert, Banish one of your other items;sacrifice:cost:Banish one of your other items;resource_gain:does:into your inkwell facedown and exerted
+817025|on_play:does:When you play this character;damage_reduction:grants:gains Resist +1
+817022|damage_reduction:does:Resist +1;on_kill:does:banishes another character in a challenge;damage:does:deal 2 damage to chosen character
+817910|untap:does:ready chosen Racer character;tribal:does:Racer character
+817174|other_death_trigger:does:one of your characters is banished in a challenge;draw:does:draw a card
+816599|
+818597|turn_end:does:At the end of your turn;self_destruct:does:banish this item;deck_position:does:reveal the top card of your deck;cost_condition:does:cost 3 or less
+817102|cost_type:does:exert to sing this song for free;draw:does:Draw a card;graveyard:counters:chosen opponent's discard
+817999|condition_life:does:Damaged characters;attack_lock:does:can't challenge your characters
+818020|haste:grants:gains Rush;damage_reduction:grants:Resist +1 this turn
+817195|evasion:does:gains Evasive;on_kill:does:banishes another character in a challenge;free_play:does:play an item for free
+817650|information:does:top card of their deck face up;symmetric_effect:does:Each player;deck_position:does:top card of their deck
+817937|evasion:does:Evasive;on_targeted:does:Vanish;self_destruct:does:Vanish
+817496|deck_position:does:reveals the top card of their deck;enemy_benefit:does:they may put it into their hand
+818099|on_play:does:When you play this character;hand_disruption:does:discards a non-character card of your choice;death_trigger:does:When this character is banished;resource_gain:does:put this card into your inkwell
+817517|on_play:does:When you play this character;haste:grants:gains Rush this turn
+817803|upgrade:does:Shift 2;cost_type:does:Shift 2;on_play:does:When you play this character;temporary_buff:grants:your characters get +2 strength this turn
+817288|death_trigger:does:banished in a challenge;revive:does:return this card to your hand;tribal:does:characters named Jetsam
+818304|boss_phases:does:When Jafar plays;on_play:does:When Jafar plays this character;aoe_damage:does:deals 2 damage to each opposing damaged character;condition_life:does:damaged character
+818765|on_play:does:When you play this character;untap:does:ready chosen character with cost 2 or less;cost_condition:does:cost 2 or less
+818177|on_play:does:When you play this character;bounce_enemy:does:return chosen character to their player's hand;hand_disruption:does:discards a card at random;random_effect:does:at random
+818489|on_attack:does:Whenever this character challenges;stat_condition:does:2 strength or less;points_scoring:does:each opponent loses 1 lore
+816585|cost_type:does:counts as cost N to sing songs
+817597|upgrade:does:Shift 2;cost_type:does:Shift 2;points_scoring:does:gain 2 lore
+818631|death_trigger:does:When this location is banished;revive:does:return this card from your discard to your hand
+818732|damage_reduction:grants:Your locations gain Resist +1
+818521|selection:does:Look at the top 4 cards of your deck;deck_position:does:top 4 cards
+817933|bounce_enemy:does:return chosen character, item, or location;cost_condition:does:cost 2 or less;enemy_benefit:does:that player draws a card
+818699|activated:does:exert;merge_attach:does:Put this character facedown under one of your characters
+816907|untap:does:ready this character
+817948|death_trigger:does:banished in a challenge;draw:does:draw a card
+818615|on_play:does:When you play this character;tribal:does:named Anna;graveyard:counters:from chosen player's discard;draw:does:draw a card
+818054|stat_loss:does:-2 strength this turn;temporary_effect:does:this turn
+817115|upgrade:does:Shift 3;cost_type:does:Shift 3;damage:does:deal 3 damage to chosen damaged character;condition_life:does:damaged character
+817711|temporary_buff:grants:gets +1 lore this turn
+816701|activated:does:exert, 1 ink;haste:grants:gains Rush this turn
+817855|on_play:does:When you play this character;tribal:does:another Pirate character;damage:does:deal 1 damage
+817547|on_play:does:When you play this location;disable:does:can't ready at the start of their turn
+818079|evasion:does:gains Evasive;tribal:benefits:Pirate character
+818037|temporary_buff:grants:gets +2 strength this turn
+817103|suppress:does:Exert chosen opposing character;temporary_buff:grants:gains Challenger +2 this turn
+817916|upgrade:does:Shift 3;cost_type:does:Shift 3;on_play:does:When you play this character;revive:does:return up to 2 character cards;cost_condition:does:cost 2 or less
+817678|damage_reduction:grants:gains Resist +1;evasion:grants:Evasive this turn
+817869|death_trigger:does:When this character is banished;destroy:does:banish chosen item or location
+818714|upgrade:does:Shift 4 ink;cost_type:does:Shift 4 ink;on_play:does:When you play this character;merge_attach:does:facedown under each of your other characters;immunity:grants:gain Ward
+817528|haste:does:Rush;evasion:does:Evasive;on_play:does:When you play this character;suppress:does:exert chosen opposing character
+818819|upgrade:does:Shift 3 ink;cost_type:does:Shift 3 ink;activated:does:ink;heal:does:Move up to 1 damage from chosen character of yours;condition_count:does:3 or more damage;damage:does:move all damage from this character to chosen opposing character
+817501|on_play:does:When you play this character;revive:does:return a character card from your discard;tribal:benefits:Princess character card;points_scoring:does:gain 2 lore
+816577|temporary_buff:does:While challenging, this character gets +N strength
+817995|on_spell:does:Whenever you play an action;untap:does:ready chosen Pirate character;tribal:does:Pirate character
+818002|upgrade:does:Shift 4;cost_type:does:Shift 4;play_restriction:does:can't exert to sing songs;damage_reduction:grants:gain Resist +1;tribal:does:Pirate characters
+818212|on_play:does:When you play this character;points_scoring:does:each opponent loses 1 lore and you gain 1 lore
+818641|on_play:does:When you play this character;damage:does:deals 1 damage to them
+818188|on_play:does:When you play this character;hand_disruption:does:chooses and discards a card
+817458|on_play:does:When you play this character;aoe_damage:does:deal 1 damage to each opposing character
+817800|condition_life:benefits:has damage;stat_gain:does:gets +1 lore
+818156|activated:does:exert;heal:does:Move 1 damage counter from this character;damage:does:to chosen opposing character
+816631|
+818689|points_scoring:does:Each opponent loses lore equal to the damage;condition_life:benefits:damage on chosen character of yours;draw:does:Draw a card
+817184|upgrade:does:Shift 5;cost_type:does:Shift 5;points_scoring:does:gain 1 lore
+818241|evasion:grants:gains Evasive until the start of your next turn
+817042|taunt:does:Bodyguard;death_trigger:does:When this character is banished;points_scoring:does:gain 2 lore
+818026|on_play:does:When you play this character;sacrifice:cost:banish chosen item of yours;draw:does:draw a card;destroy:does:banish chosen character with 2 strength or less;stat_condition:does:2 strength or less
+818117|immunity:does:Ward;tribal:benefits:another Puppy character;stat_gain:does:gets +1 lore
+817056|on_play:does:When you play this character;cast_from_zone:does:play a character with cost 2 or less from your discard for free;revive:does:from your discard for free;cost_condition:does:cost 2 or less
+816802|self_destruct:cost:Banish this item;heal:does:Remove up to 3 damage
+818673|cost_reduction:does:pay 1 ink less;comeback:does:you're not the first player
+818027|evasion:does:Evasive;on_attack:does:challenges another character;temporary_buff:grants:get +1 lore this turn
+818665|merge_attach:does:Boost 1 ink;variable_stats:does:+1 strength for each card under him;death_trigger:does:When this character is banished;board_wipe:does:banish all characters with strength equal to or less;stat_condition:does:strength equal to or less
+818941|cost_type:does:exert to sing this song for free;movement:does:Move a character of yours to a location for free;draw:does:draw cards equal to that location's lore
+816640|assists_support:does:Support
+818337|evasion:does:Evasive;on_play:does:When you play this character;evasion:grants:gains Evasive until the start of your next turn
+816740|haste:does:Rush;forced_attack:does:opposing characters with Evasive gain Reckless;evasion:counters:opposing characters with Evasive
+816777|immunity:does:Ward
+816608|
+817783|activated:does:ink, Banish this item;self_destruct:cost:Banish this item;bounce_enemy:does:Return chosen character with 2 strength or less;stat_condition:does:2 strength or less
+816603|
+818556|attack_lock:does:can't challenge during their next turn;draw:does:Draw a card
+818559|on_ally_play:does:Whenever you play a character;self_destruct:cost:banish this item;damage:does:deal 2 damage
+817320|on_play:does:When you play this character;comeback:does:more cards in their inkwell than you;resource_gain:does:into your inkwell facedown and exerted
+817239|destroy:does:Banish chosen location or item
+817287|activated:does:exert;temporary_buff:grants:gains Challenger +2;haste:grants:Rush this turn
+816857|activated:does:exert;heal:does:Remove up to 2 damage
+818690|cost_type:does:exert to sing this song for free;temporary_buff:grants:gets +5 strength this turn
+818217|variable_stats:does:+1 strength for each 1 damage on him;condition_life:benefits:damage on him
+817066|assists_support:grants:gains Support this turn
+817497|on_play:does:When you play this character;lanes:benefits:have a location in play;draw:does:draw a card
+817343|on_play:does:When you play this item;draw:does:draw a card;type_grant:does:count as having inkwell symbol
+816737|upgrade:does:Shift 5;cost_type:does:Shift 5;on_kill:does:banishes another character in a challenge;points_scoring:does:you gain 2 lore and each opponent loses 2 lore
+817018|upgrade:does:Shift 4;cost_type:does:Shift 4;damage_reduction:does:Resist +2
+816996|selection:does:look at the top 2 cards of your deck
+818700|merge_attach:does:Boost 2 ink;stat_gain:does:gets +1 lore
+818883|activated:does:exert, 1 ink;selection:does:Look at the top 4 cards of your deck
+817021|evasion:does:gains Evasive
+818297|taunt:does:Bodyguard;boss_phases:does:Jafar's characters;evasion:grants:Jafar's locations can't be challenged
+817299|haste:does:Rush;evasion:does:Evasive;haste:grants:Your other characters with Evasive gain Rush
+818274|on_targeted:does:Vanish;self_destruct:does:Vanish;temporary_buff:grants:gain Challenger +1;tribal:does:Illusion characters
+818444|death_trigger:does:challenged and banished;aoe_damage:does:put 1 damage counter on each opposing character
+817358|aura:does:Your other characters get +1 strength
+817787|upgrade:does:Shift 3;cost_type:does:Shift 3;temporary_buff:grants:gets +2 strength;protection:grants:takes no damage from challenges;tribal:does:Pirate character
+818418|on_play:does:When you play this character;draw:does:draw 2 cards;bounce_enemy:does:puts that card on the bottom of their deck
+817435|temporary_buff:grants:gain Challenger +1;tribal:does:Hero characters;on_ally_play:does:Whenever you play a Hero character;points_scoring:does:gain 1 lore
+817897|taunt:does:Bodyguard;temporary_buff:grants:get +1 lore this turn
+817838|damage_reduction:grants:gain Resist +1;tribal:does:Inventor characters;activated:does:ink;deck_position:does:Look at the top card of your deck;selection:does:Put it on either the top or the bottom
+816869|cost_type:does:exert to sing this song for free;condition_count:does:Count the number of characters;cost_reduction:does:pay that amount of ink less
+816622|
+817405|evasion:does:gains Evasive;other_death_trigger:does:locations is banished;resource_gain:does:into your inkwell facedown and exerted
+817605|on_play:does:When you play this character;temporary_buff:grants:gets +2 strength this turn
+817495|upgrade:does:Shift 4;cost_type:does:Shift 4;on_play:does:When you play this character;tutor:does:search your deck for a character card;deck_position:does:put that card on top of it
+817700|reactions:does:Whenever a character of yours is challenged;stat_loss:does:gets -3 strength this turn;temporary_effect:does:this turn
+817074|lane_rule:does:while here;stat_gain:grants:get +2 willpower;cost_reduction:does:pay 1 ink less;tribal:does:Prince or King character
+817262|taunt:does:Bodyguard;on_play:does:When you play this character;destroy:does:banish chosen opposing character with 5 strength or more;stat_condition:does:5 strength or more
+816854|on_ally_play:does:Whenever you play a Floodborn character;tribal:does:Floodborn character;heal:does:remove all damage
+817249|cost_type:does:Singer 9;temporary_buff:grants:get +1 lore this turn;tribal:does:Princess characters
+818491|cost_reduction:does:pay 2 ink less;stat_condition:does:5 strength or more;untap:does:Ready chosen character;points_scoring:does:gain 1 lore
+817928|cost_type:does:exert to sing this song for free;selection:does:Look at the top 5 cards of your deck;tribal:does:Madrigal character card
+817126|lanes:benefits:at a location;stat_gain:does:gets +3 strength;on_attack:does:challenges another character;draw:does:draw a card
+818169|disable:does:can't ready at the start of their next turn;scope_multi:does:Up to 2 chosen characters;draw:does:Draw a card
+817725|on_play:does:When you play this character;heal:does:move 1 damage counter;damage:does:to chosen opposing character
+816616|
+817171|untap:does:Ready all your characters;friendly_fire:does:deal 1 damage to each of them
+816610|
+817634|upgrade:does:Shift 3;cost_type:does:Shift 3;on_play:does:When you play this character;draw:does:draw 2 cards;card_quality:does:put a card from your hand on the bottom of your deck
+816959|on_kill:does:banishes another character in a challenge;untap:does:ready this character
+816651|on_play:does:When you play this character;heal:does:remove up to 3 damage;draw:does:Draw a card for each 1 damage removed
+818462|activated:does:exert;count_payoff:does:played 2 or more cards this turn;points_scoring:does:gain 1 lore
+816999|symmetric_effect:does:Each player chooses;removal:does:puts them into their inkwell;resource_gain:does:puts them into their inkwell
+818911|turn_start:does:At the start of your turn;tribal:does:Madrigal character;heal:does:remove up to 2 damage;activated:does:exert;points_scoring:does:gain 1 lore
+818423|bounce_enemy:does:Return chosen character, item, or location;cost_condition:does:cost 3 or less
+817919|on_ally_play:does:Whenever you play a character;temporary_buff:does:gets +1 lore this turn;stat_loss:does:loses strength equal to this character's lore;temporary_effect:does:until the start of your next turn
+818348|upgrade:does:Shift 4 ink;cost_type:does:Singer 9;on_spell:does:sings a song;selection:does:look at the top 4 cards of your deck;cast_from_zone:does:play it for free;free_play:does:play it for free
+817712|cost_type:does:exert to sing this song for free;revive:does:Return a character card with cost 2 or less;cost_condition:does:cost 2 or less
+818012|damage_reduction:does:Resist +2
+817156|lanes:benefits:at a location;stat_gain:does:gets +2 strength
+818230|upgrade:does:Shift 3;cost_type:does:Shift 3;evasion:does:Evasive;other_death_trigger:does:items is banished;temporary_buff:does:gets +1 lore this turn
+818395|activated:does:exert;heal:does:Remove up to 2 damage;cost_reduction:does:pay 1 ink less;tribal:does:named Gurgi
+817942|upgrade:does:Shift 7;cost_type:does:Shift 7;destroy:does:banish them
+817779|cost_type:does:exert to sing this song for free;suppress:does:can't quest during their next turn;draw:does:Draw a card
+817165|cost_reduction:does:pay 1 ink less;tribal:does:named Peter Pan;evasion:does:Evasive
+817959|evasion:does:Evasive;turn_start:does:At the start of your turn;modal_choice:does:choose one;symmetric_effect:does:Each player draws a card;draw:does:Each player draws a card;discard:does:chooses and discards a card
+818275|on_play:does:When you play this character;suppress:does:exert chosen Princess character;tribal:does:Princess character
+818903|turn_end:does:At the end of your turn;condition_count:does:2 or more cards were put into your discard;resource_gain:does:into your inkwell facedown
+817626|assists_support:does:Support;combo_sequence:does:second card you've put into your inkwell;draw:does:draw a card
+818341|on_play:does:When you play this character;kicker:does:pay 1 ink;recycle:does:return a song card;cost_condition:does:cost 3 or less
+818093|stat_loss:does:the challenging character gets -1 strength
+817432|upgrade:does:Shift 3;cost_type:does:Shift 3;damage_reduction:does:Resist +1;on_play:does:When you play this character;damage:does:deal damage to chosen character;condition_count:does:equal to the number of Broom characters;tribal:does:Broom characters
+818305|evasion:does:Evasive;boss_phases:does:Jafar steals;steal:does:Jafar steals The Reforged Crown
+818231|condition_count:does:2 or more characters of yours are exerted;stat_gain:does:gets +2 strength;evasion:does:gains Evasive
+818608|haste:does:Rush;on_play:does:When you play this character;graveyard:counters:from chosen player's discard
+816708|evasion:does:Evasive;on_play:does:When you play this character;bounce_enemy:does:return chosen character to their player's hand
+818515|upgrade:does:Shift 4 ink;cost_type:does:Shift 4 ink;assists_support:does:Support;disruption:does:cards enter opponents' inkwells exerted
+817370|upgrade:does:Shift 6;cost_type:does:Shift 6;on_play:does:When you play this character;board_wipe:does:banish all opposing characters with 2 strength or less;stat_condition:does:2 strength or less
+816899|cost_type:does:exert to sing this song for free;free_play:does:Play a character with cost 4 or less for free;cost_condition:does:cost 4 or less;haste:grants:They gain Rush;self_destruct:does:At the end of the turn, banish them
+817135|cost_type:does:exert to sing this song for free;destroy:does:Banish chosen item
+816680|on_play:does:When you play this character;recycle:does:shuffle a card from any discard into its player's deck
+817389|assists_support:does:Support;cost_reduction:does:pay 1 ink less;tribal:does:named Ariel
+818686|points_scoring:does:each opponent loses 1 lore;draw:does:Draw a card for each 1 lore lost;turn_end:does:At the end of your turn;points_scoring:does:you gain 1 lore
+816762|haste:grants:gains Rush this turn
+817402|on_play:does:When you play this character;heal:does:remove up to 2 damage
+817369|variable_stats:does:+1 strength for each card in opponents' hands;hand_size:benefits:cards in opponents' hands
+818823|tutor:does:Search your deck for a Princess character card;tribal:does:Seven Dwarfs characters;draw:does:draw 2 cards;points_scoring:does:gain 2 lore
+816991|on_play:does:When you play this character;recycle:does:return an item card named Pawpsicle
+818866|combo_sequence:does:if you played a character this turn;untap:does:ready another chosen character
+818063|assists_support:does:Support;on_play:does:When you play this character;selection:does:look at the top 4 cards of your deck;tribal:does:Floodborn character card
+817244|
+816910|on_ally_play:does:Whenever you play a Floodborn character;upgrade:benefits:used Shift;hand_disruption:does:chooses and discards a card
+816591|
+818052|immunity:does:Ward;activated:does:exert;selection:does:Look at the top 2 cards of your deck;resource_gain:does:into your inkwell facedown and exerted
+816657|on_play:does:When you play this character;heal:does:remove up to 1 damage
+818131|modal_choice:does:Choose one;heal:does:Remove up to 3 damage;taunt:benefits:characters with Bodyguard
+817148|points_scoring:does:each opponent loses 1 lore
+818730|activated:does:exert, Banish this item;self_destruct:cost:Banish this item;modal_choice:does:Choose one;destroy:does:Banish chosen item;stat_loss:does:gets -2 strength this turn
+817807|haste:does:Rush;evasion:does:Evasive
+817030|activated:does:exert;ping:does:Deal 1 damage to chosen character
+818421|merge_attach:does:Boost 1 ink;stat_gain:does:gets +1 lore;evasion:does:gains Evasive
+818211|resource_gain:does:into your inkwell facedown and exerted
+817926|cost_type:does:exert to sing this song for free;draw:does:Draw a card;taunt:grants:gains Bodyguard
+816656|upgrade:does:Shift 4;cost_type:does:Shift 4;on_ally_play:does:Whenever you play a character with cost 2 or less;cost_condition:does:cost 2 or less;draw:does:draw a card
+817580|reactions:does:During opponents' turns;other_death_trigger:does:one of your characters is banished;bounce_enemy:does:return chosen character to their player's hand
+817104|cost_type:does:exert to sing this song for free;selection:does:Look at the top 5 cards of your deck;points_scoring:does:Gain 1 lore
+817503|on_play:does:When you play this character;untap:does:ready chosen character
+816826|upgrade:does:Shift 4;cost_type:does:Shift 4;on_play:does:When you play this character;aoe_damage:does:deal 1 damage to each opposing character;on_kill:does:banishes another character in a challenge;damage:does:deal 2 damage to chosen opposing character
+817117|immunity:does:Ward;immunity:grants:Your characters named Flotsam gain Ward
+818088|on_kill:does:banishes another character in a challenge;free_play:does:play a character for free
+818339|on_play:does:When you play this item;evasion:grants:that character gains Evasive;activated:does:ink;return_to_hand:does:Return this item to your hand
+818917|upgrade:does:Shift 4 ink;cost_type:does:Shift 4 ink;revive:does:return a Robot character card;free_play:does:play or shift a Robot character;tribal:does:Robot character;cost_condition:does:cost 8 or less
+818133|cost_type:does:Sing Together 9;revive:does:Return up to 3 character cards;cost_reduction:does:pay 2 ink less
+817088|evasion:does:Evasive;activated:does:exert;movement:does:Move a character of yours to a location for free
+817886|activated:does:exert;draw:does:Draw a card;discard:does:choose and discard a card
+816838|tribal:does:another Seven Dwarfs character
+818322|boss_phases:does:When Jafar plays;aoe_damage:does:deals 1 damage to each opposing character
+818919|on_play:does:When you play this character;evasion:counters:gains Alert this turn
+817364|on_spell:does:Whenever you play an action;protection:does:takes no damage from challenges this turn
+817915|other_death_trigger:does:other characters is banished;temporary_buff:does:gets +1 lore this turn
+817904|tribal:benefits:named Dolores Madrigal;stat_gain:does:gets +1 lore
+816609|
+817443|cost_type:does:Sing Together 10;damage:does:Deal 3 damage;scope_multi:does:up to 3 chosen characters
+818186|on_play:does:When you play this character;forced_attack:does:gains Reckless during their next turn
+817645|activated:does:exert, 2 ink, Banish this item;self_destruct:cost:Banish this item;temporary_buff:grants:gets +2 lore this turn
+817321|immunity:does:Ward;immunity:grants:named Zeus gain Ward;evasion:grants:named Hercules gain Evasive
+816611|
+816988|on_play:does:When you play this character;heal:does:remove up to 1 damage
+817105|self_destruct:cost:Banish this item;tribal:benefits:named Jafar;draw:does:draw 2 cards;bounce_enemy:does:return chosen character with cost 4 or less
+817448|lane_rule:does:exerted character here;evasion:grants:your other locations can't be challenged
+818060|taunt:does:Bodyguard;immunity:does:Ward
+816922|on_play:does:When you play this character;hand_disruption:does:chooses and discards either 2 cards or 1 action card
+817478|activated:does:exert;draw:does:Draw a card
+817718|reactions:does:During an opponent's turn;other_death_trigger:does:a character is banished while here;points_scoring:does:gain 1 lore
+817137|cost_type:does:exert to sing this song for free;draw:does:Draw 2 cards;discard:does:choose and discard a card
+818910|recycle:does:Return an item card from your discard;stat_condition:benefits:4 willpower or more;points_scoring:does:gain 1 lore
+818812|on_play:does:When you play this character;tribal:does:Super or Hero character;draw:does:draw a card
+816819|taunt:does:Bodyguard;aura:does:Your other Musketeer characters get +1 strength
+817582|forced_attack:does:Opposing damaged characters gain Reckless;condition_life:does:damaged characters
+818018|graveyard:benefits:item card in your discard;stat_gain:does:gets +2 strength
+818761|on_play:does:When you play this item;draw:does:draw a card;discard:does:choose and discard a card;self_destruct:cost:Banish this item;evasion:counters:gains Alert this turn
+818376|temporary_buff:grants:+2 strength this turn;tribal:does:Detective character
+817986|recycle:does:return an action card
+817867|upgrade:does:Shift 3;cost_type:does:Shift 3;on_play:does:When you play this character;damage:does:deal 1 damage to chosen character or location
+817982|condition_life:benefits:a damaged character challenges;draw:does:draw a card
+817201|cost_type:does:exert to sing this song for free;symmetric_effect:does:Each player puts the top 3 cards;resource_gain:does:into their inkwell facedown and exerted
+816727|recycle:does:Return an action card from your discard to your hand
+818481|on_attack:does:Gargoyle characters challenges;tribal:does:Gargoyle characters;points_scoring:does:gain 1 lore;hand_size:does:3 or more cards in your hand
+816662|free_play:does:play a character with cost 5 or less for free;cost_condition:does:cost 5 or less
+816782|upgrade:does:Shift 3;cost_type:does:Shift 3;on_play:does:When you play this character;heal:does:remove up to 2 damage from each of your characters;scope_multi:does:each of your characters
+816916|evasion:does:Evasive;suppress:does:can't quest during their next turn
+817024|evasion:grants:your characters gain Evasive this turn
+817014|upgrade:does:Shift 5;cost_type:does:Shift 5;damage_reduction:does:Resist +2;on_spell:does:Whenever you play a song;targeting_rules:does:challenge ready characters
+818716|merge_attach:does:Boost 1 ink;selection:does:look at a number of cards from the top of your deck;condition_count:does:equal to the number of cards under him
+818511|upgrade:does:Shift 4 ink;cost_type:does:Shift 4 ink;evasion:counters:gain Alert;damage_reduction:grants:Resist +2;tribal:does:Detective characters
+817285|turn_start:does:At the start of your turn;modal_choice:does:choose one;temporary_buff:does:gets +1 lore this turn
+817463|on_play:does:When you play this character;aoe_damage:does:deal 2 damage to each opposing damaged character;condition_life:does:damaged character
+818157|evasion:does:Evasive;on_play:does:When you play this character;return_to_hand:does:return another chosen character of yours to your hand;draw:does:draw a card
+818610|evasion:does:Evasive;turn_end:does:At the end of your turn;upkeep:does:choose and discard a card or banish him;discard:cost:choose and discard a card
+818658|board_wipe:does:Banish all locations;draw:does:Draw 2 cards;discard:does:choose and discard a card
+817557|on_play:does:When you play this character;condition_life:benefits:damaged character in play;points_scoring:does:gain 1 lore
+817477|suppress:does:Exert all opposing characters;disable:does:can't ready at the start of the their next turn
+817480|activated:does:exert;points_scoring:does:Gain 1 lore
+818644|on_spell:does:Whenever you play an action;evasion:does:gains Evasive
+817345|turn_start:does:At the start of your turn;condition_life:benefits:opposing character has damage;points_scoring:does:gain 1 lore;rule_change:does:Damage counters can't be removed
+817202|cost_type:does:exert to sing this song for free;selection:does:Look at the top 2 cards of your deck;resource_gain:does:into your inkwell facedown and exerted
+818164|on_targeted:does:Vanish;self_destruct:does:Vanish;tribal:does:Illusion characters;suppress:does:exert chosen opposing character
+818453|other_death_trigger:does:challenged and banished;destroy:does:banish the challenging character;immunity:grants:gain Ward;tribal:does:Emerald characters
+817878|upgrade:does:Shift 5;cost_type:does:Shift 5;damage_reduction:does:Resist +2;turn_start:does:At the start of your turn;aoe_damage:does:deal 1 damage to each opposing ready character
+816923|stat_condition:does:5 strength or more;stat_gain:does:gets +2 lore
+818106|tribal:benefits:Puppy character;stat_gain:does:+1 willpower
+818691|cost_type:does:exert to sing this song for free;count_payoff:does:a character was banished this turn;draw:does:draw 2 cards
+818532|on_play:does:When you play this character;temporary_buff:grants:gains Challenger +2 this turn;tribal:does:Detective character
+817431|damage_reduction:does:Resist +1;variable_stats:does:+2 strength for each other character named Magic Broom;tribal:does:named Magic Broom
+816660|cost_type:does:exert to sing this song for free;heal:does:Remove up to 3 damage from each of your characters
+817661|on_play:does:When you play this character;tribal:does:another Knight character;damage:does:deal 1 damage
+816746|on_play:does:When you play this character;destroy:does:banish chosen character
+817585|turn_end:does:At the end of your turn;stat_condition:does:5 strength or more;points_scoring:does:gain 2 lore
+816962|haste:does:Rush;on_kill:does:banishes another character in a challenge;untap:does:ready this character
+816897|upgrade:does:Shift 4;cost_type:does:Shift 4;on_play:does:When you play this character;bounce_enemy:does:shuffle another chosen character card into their player's deck;enemy_benefit:does:That player draws 2 cards
+817485|evasion:grants:named Koda can't be challenged
+816870|activated:does:exert, 3 ink;revive:does:Return a character card with Support;assists_support:benefits:with Support
+818794|cost_type:does:exert to sing this song for free;comeback:does:more characters in play than you;free_play:does:play a character with cost 4 or less for free
+818854|on_play:does:When you play this item;ping:does:deal 1 damage to chosen character;self_destruct:cost:Banish this item
+818549|taunt:does:Bodyguard;rule_change:does:only one character can challenge
+818577|cost_reduction:does:pay 1 ink less
+818080|tribal:benefits:another Pirate character;temporary_buff:does:gains Challenger +3
+818025|on_attack:does:Whenever one of your characters challenges;damage_reduction:grants:gain Resist +2;on_kill:does:banishes another character in a challenge;points_scoring:does:gain 2 lore
+817167|aura:does:Your characters named Nutsy get +1 lore
+818066|cost_type:does:exert to sing this song for free;graveyard:does:from your discard into your inkwell;resource_gain:does:from your discard into your inkwell
+816774|cost_reduction:does:pay 1 ink less for the next item
+817283|on_play:does:When you play this character;death_trigger:grants:When this character is banished in a challenge;revive:grants:return this card to your hand
+817548|lane_rule:does:while here;other_death_trigger:does:a character is banished while here;draw:does:draw a card
+817362|multi_target_attack:does:deal the same amount of damage to another chosen character
+818062|assists_support:does:Support;on_play:does:When you play this character;damage_reduction:grants:gains Resist +1
+818790|on_play:does:When you play this character;stat_condition:benefits:4 willpower or more;draw:does:draw a card
+818449|on_play:does:When you play this character;hand_disruption:does:discards a location card of your choice;graveyard:counters:from chosen player's discard;points_scoring:does:gain 1 lore
+817794|turn_start:does:At the start of your turn;lanes:benefits:at a location;draw:does:draw a card;points_scoring:does:gain 1 lore
+817311|self_destruct:cost:Banish this item;temporary_buff:grants:gets +1 strength this turn;hand_size:benefits:for each card in your hand
+816851|death_trigger:does:When this character is banished;deck_position:does:reveal the top card of your deck;free_play:does:play that character for free
+816675|upgrade:does:Shift 6;cost_type:does:Shift 6;on_play:does:When you play this character;suppress:does:exert up to 2 chosen characters;disable:does:can't ready at the start of their next turn
+818429|points_scoring:does:gain 1 lore;haste:grants:named Demona gain Rush
+818921|on_play:does:When you play this character;tribal:does:Hero character;points_scoring:does:gain 1 lore;type_grant:does:counts as being named Syndrome for Shift
+818191|kicker:does:pay 2 ink;untap:does:ready another chosen character
+818332|assists_support:grants:gain Support;destroy:does:banish chosen exerted character with 5 strength or more;stat_condition:does:5 strength or more
+818680|haste:does:Rush;on_attack:does:Whenever this character challenges;lanes:benefits:at a location;protection:does:takes no damage from the challenge
+818693|cost_type:does:exert to sing this song for free;destroy:does:Banish up to 2 chosen characters;stat_condition:does:2 strength or less;scope_multi:does:up to 2 chosen characters
+818725|removal:does:into their player's inkwell;enemy_benefit:does:into their player's inkwell;taunt:counters:with Bodyguard
+816871|activated:does:exert;combo_sequence:does:If you played a song this turn;points_scoring:does:gain 1 lore
+816661|heal:does:Remove up to 2 damage
+817073|
+817211|other_death_trigger:does:a character is banished while here;resource_gain:does:into your inkwell facedown and exerted
+818122|upgrade:does:Shift 2;cost_type:does:Shift 2;condition_life:benefits:has no damage;damage_reduction:does:gains Resist +2
+818636|reactions:does:During opponents' turns;damage_reduction:does:gains Resist +2
+817002|hand_disruption:does:Each opponent reveals their hand;draw:does:Draw a card
+816872|return_to_hand:does:return another chosen character of yours to your hand;points_scoring:does:gain 2 lore
+818598|
+818660|aura:does:Your characters get +1 strength;damage_reduction:grants:gain Resist +1
+818354|cost_type:does:Sing Together 9;symmetric_effect:does:Each player draws 2 cards and gains 2 lore;draw:does:draws 2 cards;points_scoring:does:gains 2 lore;untap:does:ready them
+817217|condition_count:does:For each location you have in play;damage_reduction:does:gains Resist +1;stat_gain:does:gets +1 lore
+816992|damage_reduction:does:gains Resist +1;immunity:does:Ward
+816835|self_destruct:cost:Banish this item;attack_lock:does:can't challenge during their next turn
+817740|activated:does:exert;hand_size:benefits:fewer than 3 cards in your hand;draw:does:draw until you have 3 cards
+818445|on_play:does:When you play this character;destroy:does:banish chosen location
+818007|symmetric_effect:does:Each player exerts all the cards in their inkwell;disruption:does:returns cards at random from their inkwell;random_effect:does:at random
+817357|upgrade:does:Shift;cost_type:does:Shift: Discard a character card;discard:cost:Discard a character card;aura:does:Your characters with 4 strength or more get +1 lore;stat_condition:does:4 strength or more
+818442|on_play:does:When you play this character;merge_attach:does:facedown under one of your characters or locations with Boost
+817247|on_play:does:When you play this character;tutor:does:search your deck for a Madrigal character card;tribal:does:Madrigal character card;deck_position:does:put that card on top of it
+817846|cost_type:does:exert to sing this song for free;damage_reduction:grants:gain Resist +6 this turn;tribal:does:Inventor characters;resource_gain:does:put this card into your inkwell
+817412|activated:does:exert;graveyard:does:character card from your discard;resource_gain:does:into your inkwell facedown and exerted
+816829|destroy:does:Banish chosen item
+817122|type_grant:does:as if this character had any name;upgrade:benefits:any character with Shift
+818288|on_play:does:When you play this character;turn_start:does:at the start of your turn;draw:does:draw a card;discard:does:choose and discard a card;variable_stats:does:+1 strength for each card in your discard;graveyard:benefits:each card in your discard
+818904|combo_sequence:does:if you played another character this turn;points_scoring:does:gain 1 lore
+818413|on_play:does:When you play this character;graveyard:benefits:Gargoyle character cards in your discard;tribal:does:Gargoyle;points_scoring:does:gain 2 lore
+816629|
+816595|
+818553|merge_attach:does:Boost 2 ink;stat_gain:does:gets +2 strength and +2 willpower
+818145|tribal:benefits:named Hades;temporary_buff:does:gains Challenger +2
+817429|stat_gain:does:gets +2 strength
+817777|hand_disruption:does:Each opponent discards all cards in their hand
+817615|activated:does:exert chosen character here;friendly_fire:cost:deal them 1 damage;movement:does:move them to another location for free
+817409|cost_type:does:exert to sing this song for free;stat_loss:does:gets -3 strength this turn;temporary_effect:does:this turn
+817638|immunity:does:Ward;on_play:does:When you play this character;immunity:grants:your other characters gain Ward
+816720|on_play:does:When you play this character;temporary_buff:grants:gets +2 strength this turn
+816724|evasion:does:Evasive
+817419|on_spell:does:Whenever you play a song;draw:does:draw a card;discard:does:choose and discard a card
+818159|on_play:does:When you play this character;graveyard:benefits:card named Pull the Lever! in your discard;tutor:does:search your deck for a card named Wrong Lever!
+817790|points_scoring:does:each opponent loses 1 lore
+816862|upgrade:does:Shift 4;cost_type:does:Shift 4;revive:does:return a character card from your discard to your hand
+817240|on_kill:does:banishes another character in a challenge;kicker:does:pay 1 ink;draw:does:draw a card;temporary_buff:grants:gain Challenger +1
+817141|
+818201|death_trigger:does:When this character is banished;modal_choice:does:choose one;aoe_damage:does:Put 2 damage counters on all opposing characters;destroy:does:Banish all opposing items
+818390|cost_type:does:exert to sing this song for free;stat_loss:does:gets -2 strength;temporary_effect:does:until the start of your next turn;draw:does:Draw a card
+817825|immunity:does:Ward;damage_reduction:grants:gains Resist +1
+818312|boss_phases:does:Jafar deals;aoe_damage:does:deals 1 damage to each opposing character;resource_gain:does:put this card into his inkwell
+817526|upgrade:does:Shift 4;cost_type:does:Shift 4;on_play:does:When you play this character;suppress:does:exert all opposing characters
+817263|assists_support:does:Support;temporary_buff:grants:get +1 lore this turn;tribal:does:Madrigal characters
+817061|temporary_buff:grants:get +1 lore this turn;tribal:does:Villain characters
+818005|cost_type:does:exert to sing this song for free;temporary_buff:grants:gets +1 strength this turn;board_presence:benefits:for each character you have in play
+818381|on_play:does:When you play this character;hand_disruption:does:discards a non-character card of their choice
+817394|cost_type:does:Shift: Discard an item card;discard:cost:Discard an item card;temporary_buff:grants:gets +strength equal to this character's strength this turn;scope_multi:does:each of your other characters
+817101|heal:does:Move 1 damage counter;damage:does:to chosen opposing character
+817232|on_discard:does:Whenever you discard a card;ping:does:deal 1 damage to chosen opposing character
+817539|draw:does:Draw a card;temporary_buff:grants:gains Challenger +2 this turn
+816772|upgrade:does:Shift 3;cost_type:does:Shift 3;aura:does:Your other characters gain Ward;immunity:grants:Your other characters gain Ward
+818676|tribal:benefits:Queen character;stat_gain:does:gets +2 strength
+816798|assists_support:grants:gains Support this turn
+817772|on_play:does:When you play this character;evasion:grants:gains Evasive until the start of your next turn
+816800|activated:does:exert;temporary_buff:grants:gets +1 lore this turn
+818380|upgrade:does:Shift 4 ink;cost_type:does:Shift 4 ink;on_ally_play:does:Whenever you play a character or location with Boost;merge_attach:does:put the top card of your deck facedown under them
+818090|damage:does:Deal 1 damage each;scope_multi:does:up to 2 chosen characters
+818261|taunt:does:Bodyguard;tribal:does:Ally characters;heal:does:remove up to 2 damage from this character
+818584|on_play:does:When you play this character;selection:does:look at the top 4 cards of your deck;cost_condition:does:cost 2 or less
+817175|
+817613|turn_start:does:At the start of your turn;stat_condition:does:more strength than each opposing character;points_scoring:does:each opponent loses 1 lore and you gain lore
+817391|on_play:does:When you play this character;tribal:does:Princess or Queen character;points_scoring:does:gain 1 lore
+816664|hand_disruption:does:Each opponent chooses and discards 2 cards
+817447|activated:does:exert, 2 ink, Discard a card;discard:cost:Discard a card;damage:does:Deal 2 damage to chosen character or location
+817070|self_destruct:cost:Banish this item;heal:does:Remove up to 2 damage from each of your characters
+817416|cost_type:does:Shift: Discard a location card;discard:cost:Discard a location card;destroy:does:banish chosen item
+818102|on_play:does:When you play this character;information:does:reveal a song card in your hand;points_scoring:does:gain 1 lore
+817380|lane_rule:does:while here;on_attack:does:challenges another character while here;stat_condition:does:3 strength or more;points_scoring:does:gain 1 lore
+817231|upgrade:does:Shift 3;cost_type:does:Shift 3;on_kill:does:banishes another character in a challenge;points_scoring:does:gain 2 lore;death_trigger:does:banished in a challenge;draw:does:draw a card
+817468|aoe_damage:does:Deal 2 damage to each opposing character
+816830|damage:does:Deal 2 damage to chosen character
+818010|condition_life:benefits:has damage;stat_gain:does:gets +3 strength
+818184|cost_reduction:does:pay 1 ink less;tribal:benefits:named Don Karnage
+818831|cost_reduction:does:pay 2 ink less;condition_count:does:2 or more cards were put into your discard
+818144|on_play:does:When you play this character;bounce_enemy:does:return chosen character, item, or location;cost_condition:does:cost 2 or less
+816803|activated:does:exert;assists_support:grants:gains Support this turn
+817225|turn_end:does:At the end of your turn;tribal:does:Captain character;friendly_fire:does:deal 1 damage to this character
+817155|activated:does:ink;untap:does:Ready this character
+816615|
+817223|activated:does:exert, 2 ink;free_play:does:Play a character for free

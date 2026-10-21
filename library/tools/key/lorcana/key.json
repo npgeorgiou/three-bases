@@ -1,52 +1,8021 @@
 {
-"816920": {"tags": [["condition_count", "While one or more opponents have no cards in their hands"], ["hand_size", "no cards in their hands"], ["stat_gain", "this character gets +3 strength"]], "by": "Claude"},
-"818076": {"tags": [["on_attack", "Whenever one of your characters challenges another character"], ["condition_count", "if it's the second challenge this turn"], ["points_scoring", "gain 3 lore"]], "by": "Claude"},
-"818800": {"tags": [["on_spell", "whenever you play a song"], ["temporary_buff", "this character gets +1 lore this turn"]], "by": "Claude"},
-"818685": {"tags": [["cost_type", "You may pay 4 ink to play this on top of one of your characters named Elsa"], ["on_play", "When you play this character"], ["disable", "exert chosen character with 3 strength or less"], ["stat_condition", "3 strength or less"], ["temporary_buff", "While this character is at a location, she gets +3 lore"]], "by": "Claude"},
-"818582": {"tags": [["on_play", "When you play this character"], ["tribal", "if you have another Alien character in play"], ["draw", "draw a card"]], "by": "Claude"},
-"816721": {"tags": [["cost_type", "You may pay 5 ink to play this on top of one of your characters named Mickey Mouse"], ["on_spell", "Whenever you play an action"], ["suppress", "chosen opposing character can't quest during their next turn"]], "by": "Claude"},
-"817253": {"tags": [["bodyguard", "Bodyguard"], ["on_play", "When you play this character"], ["temporary_buff", "chosen character gets +1 lore this turn"]], "by": "Claude"},
-"816880": {"tags": [["death_trigger", "When this character is banished in a challenge"], ["revive", "return this card to your hand"]], "by": "Claude"},
-"817893": {"tags": [["heal", "remove up to 1 damage from each of your Puppy characters"], ["tribal", "Puppy characters"]], "by": "Claude"},
-"818576": {"tags": [["activated", "exert — Chosen opposing character gets -4 strength"], ["stat_loss", "gets -4 strength until the start of your next turn"]], "by": "Claude"},
-"817775": {"tags": [["cost_type", "You may pay 4 ink to play this on top of one of your characters named Basil"], ["hand_disruption", "have chosen opponent choose and discard a card"]], "by": "Claude"},
-"817833": {"tags": [["on_play", "When you play this character"], ["destroy", "banish chosen item"], ["enemy_benefit", "Its player gains 1 lore"], ["evasion", "this character gains Evasive"]], "by": "Claude"},
-"818286": {"tags": [["play_restriction", "You can't play this character unless an opposing character was damaged this turn"]], "by": "Claude"},
-"817584": {"tags": [["untap", "Whenever you ready this character"], ["points_scoring", "gain 1 lore for each 1 damage on him"], ["condition_life", "for each 1 damage on him"]], "by": "Claude"},
-"818647": {"tags": [["cost_type", "You may pay 3 ink to play this on top of one of your characters named Copper"], ["temporary_buff", "your characters with Evasive get +1 lore this turn"]], "by": "Claude"},
-"817130": {"tags": [["evasion", "Evasive"], ["immunity", "he gains Ward"]], "by": "Claude"},
-"816808": {"tags": [["cost_type", "You may pay 3 ink to play this on top of one of your characters named Captain Hook"], ["stat_gain", "While challenging, this character gets +3 strength"], ["evasion", "Characters with cost 3 or less can't challenge this character"]], "by": "Claude"},
-"817876": {"tags": [["immunity", "This character can't be challenged by Pirate characters"], ["damage_reduction", "your other characters gain Resist +1"], ["aura", "your other characters gain Resist +1"]], "by": "Claude"},
-"816632": {"tags": [], "by": "Claude"},
-"818924": {"tags": [["damage_reduction", "give chosen character Resist +2"]], "by": "Claude"},
-"818773": {"tags": [["on_play", "When you play this character"], ["information", "look at chosen opponent's hand"], ["hand_disruption", "look at chosen opponent's hand"]], "by": "Claude"},
-"817612": {"tags": [["sacrifice", "Banish this item"], ["temporary_buff", "Chosen character gets +3 strength this turn"], ["tribal", "If a Villain character is chosen"]], "by": "Claude"},
-"817732": {"tags": [["cost_type", "You may pay 5 ink to play this on top of one of your characters named Tinker Bell"], ["evasion", "Evasive"], ["tribal", "your other Fairy characters"], ["temporary_buff", "get +1 lore this turn"]], "by": "Claude"},
-"818173": {"tags": [["condition_life", "each damaged character you have in play"], ["damage", "to chosen opposing character"], ["draw", "Draw a card for each damage counter moved this way"]], "by": "Claude"},
-"818579": {"tags": [["turn_end", "At the end of your turn"], ["points_scoring", "gain 1 lore"]], "by": "Claude"},
-"818590": {"tags": [["on_play", "When you play this character"], ["revive", "return a character card from your discard to your hand"], ["free_play", "you may play him for free"]], "by": "Claude"},
-"816578": {"tags": [["evasion", "Only characters with Evasive can challenge this character"]], "by": "Claude"},
-"818397": {"tags": [["other_death_trigger", "Whenever one of your other Amethyst characters is banished in a challenge"], ["tribal", "Amethyst characters"], ["draw", "draw a card"]], "by": "Claude"},
-"817765": {"tags": [["tribal", "Whenever one of your Pirate characters quests"], ["draw", "draw a card"]], "by": "Claude"},
-"817282": {"tags": [["on_play", "When you play this character"], ["damage", "to chosen opposing character"], ["heal", "move up to 1 damage counter from chosen character"]], "by": "Claude"},
-"818471": {"tags": [["on_ally_play", "Whenever you play another character with 5 strength or more"], ["untap", "ready this character"]], "by": "Claude"},
-"818684": {"tags": [["cost_reduction", "you pay 1 ink less to play this character"], ["graveyard", "For each action card in your discard"], ["on_play", "When you play this character"], ["points_scoring", "each opponent loses 2 lore"]], "by": "Claude"},
-"817178": {"tags": [["immunity", "Ward"], ["untap", "ready one of your items"]], "by": "Claude"},
-"818132": {"tags": [["bounce_enemy", "Return chosen character with 2 strength or less to their player's hand"], ["stat_condition", "2 strength or less"], ["revive", "Return a character card from your discard to your hand"]], "by": "Claude"},
-"816834": {"tags": [["activated", "exert, 3 ink"], ["hand_size", "If you have no cards in your hand"], ["draw", "draw a card"]], "by": "Claude"},
-"818946": {"tags": [["tribal", "Robot characters"], ["stat_gain", "get +1 strength and +1 willpower while here"], ["lane_rule", "while here"], ["damage", "deal 2 damage to chosen character"]], "by": "Claude"},
-"817420": {"tags": [["cost_type", "You may pay 4 ink to play this on top of one of your characters named Ariel"], ["on_spell", "Whenever you play a song"], ["damage", "deal 3 damage to chosen character"]], "by": "Claude"},
-"816636": {"tags": [["activated", "exert — Remove up to 3 damage"], ["heal", "Remove up to 3 damage from chosen Princess character"], ["tribal", "Princess character"]], "by": "Claude"},
-"816619": {"tags": [], "by": "Claude"},
-"816626": {"tags": [], "by": "Claude"},
-"818280": {"tags": [["damage_reduction", "he gains Resist +1"]], "by": "Claude"},
-"818004": {"tags": [["bounce_enemy", "Return chosen damaged character to their player's hand"], ["condition_life", "chosen damaged character"]], "by": "Claude"},
-"816592": {"tags": [], "by": "Claude"},
-"818893": {"tags": [["on_ally_play", "whenever you play an item"], ["stat_loss", "chosen opposing character gets -2 strength this turn"], ["temporary_effect", "this turn"]], "by": "Claude"},
-"817587": {"tags": [["cost_type", "You may pay 4 ink to play this on top of one of your characters named Donald Duck"], ["on_play", "When you play this character"], ["points_scoring", "each opponent loses 2 lore"], ["stat_gain", "this character gets +6 strength"]], "by": "Claude"},
-"818370": {"tags": [["on_play", "When you play this character"], ["merge_attach", "chosen character with a card under them"], ["temporary_buff", "gets +1 lore this turn"]], "by": "Claude"},
-"817144": {"tags": [["evasion", "Evasive"], ["on_spell", "Whenever you play a song"]], "by": "Claude"},
-"817702": {"tags": [["on_play", "When you play this character"], ["self_mill", "put the top 3 cards of your deck into your discard"], ["stat_loss", "give chosen character -3 strength"]], "by": "Claude"},
-"818482": {"tags": [["evasion", "Evasive"], ["hand_size", "If you have 3 or more cards in your hand"]], "by": "Claude"},
-"816633": {"tags": [], "by": "Claude"}
+"816920": {
+"tags": [
+[
+"hand_size",
+"no cards in their hands"
+],
+[
+"stat_gain",
+"gets +3 strength"
+]
+],
+"by": "read"
+},
+"818076": {
+"tags": [
+[
+"on_attack",
+"challenges another character"
+],
+[
+"combo_sequence",
+"second challenge this turn"
+],
+[
+"points_scoring",
+"gain 3 lore"
+]
+],
+"by": "read"
+},
+"818800": {
+"tags": [
+[
+"on_spell",
+"whenever you play a song"
+],
+[
+"temporary_buff",
+"gets +1 lore this turn"
+]
+],
+"by": "read"
+},
+"818685": {
+"tags": [
+[
+"upgrade",
+"Shift 4 ink"
+],
+[
+"cost_type",
+"Shift 4 ink"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"on_ally_play",
+"whenever you play a location"
+],
+[
+"suppress",
+"exert chosen character"
+],
+[
+"stat_condition",
+"3 strength or less"
+],
+[
+"lanes",
+"at a location"
+],
+[
+"stat_gain",
+"she gets +3 lore"
+]
+],
+"by": "read"
+},
+"818582": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"tribal",
+"another Alien character"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"816721": {
+"tags": [
+[
+"upgrade",
+"Shift 5"
+],
+[
+"cost_type",
+"Shift 5"
+],
+[
+"on_spell",
+"Whenever you play an action"
+],
+[
+"suppress",
+"can't quest during their next turn"
+],
+[
+"temporary_effect",
+"during their next turn"
+]
+],
+"by": "read"
+},
+"817253": {
+"tags": [
+[
+"taunt",
+"Bodyguard"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"temporary_buff",
+"gets +1 lore this turn"
+]
+],
+"by": "read"
+},
+"816880": {
+"tags": [
+[
+"death_trigger",
+"banished in a challenge"
+],
+[
+"revive",
+"return this card to your hand"
+]
+],
+"by": "read"
+},
+"817893": {
+"tags": [
+[
+"heal",
+"remove up to 1 damage"
+],
+[
+"tribal",
+"Puppy characters"
+],
+[
+"scope_multi",
+"each of your Puppy characters"
+]
+],
+"by": "read"
+},
+"818576": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"stat_loss",
+"gets -4 strength"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+]
+],
+"by": "read"
+},
+"817775": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"hand_disruption",
+"choose and discard a card"
+]
+],
+"by": "read"
+},
+"817833": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"destroy",
+"banish chosen item"
+],
+[
+"enemy_benefit",
+"Its player gains 1 lore"
+],
+[
+"evasion",
+"gains Evasive"
+]
+],
+"by": "read"
+},
+"818286": {
+"tags": [
+[
+"play_restriction",
+"You can't play this character unless"
+],
+[
+"condition_life",
+"opposing character was damaged"
+]
+],
+"by": "read"
+},
+"817584": {
+"tags": [
+[
+"points_scoring",
+"gain 1 lore for each 1 damage on him"
+],
+[
+"condition_life",
+"damage on him"
+],
+[
+"condition_count",
+"for each 1 damage"
+]
+],
+"by": "read"
+},
+"818647": {
+"tags": [
+[
+"upgrade",
+"Shift 3 ink"
+],
+[
+"cost_type",
+"Shift 3 ink"
+],
+[
+"temporary_buff",
+"get +1 lore this turn"
+],
+[
+"evasion",
+"characters with Evasive"
+]
+],
+"by": "read"
+},
+"817130": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"immunity",
+"gains Ward"
+],
+[
+"lanes",
+"at a location"
+]
+],
+"by": "read"
+},
+"816808": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"temporary_buff",
+"Challenger +3"
+],
+[
+"evasion",
+"can't challenge this character"
+],
+[
+"cost_condition",
+"cost 3 or less"
+]
+],
+"by": "read"
+},
+"817876": {
+"tags": [
+[
+"evasion",
+"can't be challenged by Pirate characters"
+],
+[
+"tribal",
+"Pirate characters"
+],
+[
+"aura",
+"your other characters gain Resist +1"
+],
+[
+"damage_reduction",
+"Resist +1"
+]
+],
+"by": "read"
+},
+"816632": {
+"tags": [],
+"by": "read"
+},
+"818773": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"hand_disruption",
+"look at chosen opponent's hand"
+]
+],
+"by": "read"
+},
+"817612": {
+"tags": [
+[
+"activated",
+"Banish this item"
+],
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"temporary_buff",
+"gets +3 strength this turn"
+],
+[
+"tribal",
+"Villain character"
+]
+],
+"by": "read"
+},
+"817732": {
+"tags": [
+[
+"upgrade",
+"Shift 5"
+],
+[
+"cost_type",
+"Shift 5"
+],
+[
+"evasion",
+"Evasive"
+],
+[
+"temporary_buff",
+"get +1 lore this turn"
+],
+[
+"tribal",
+"Fairy characters"
+]
+],
+"by": "read"
+},
+"818173": {
+"tags": [
+[
+"heal",
+"Move 1 damage counter"
+],
+[
+"damage",
+"to chosen opposing character"
+],
+[
+"draw",
+"Draw a card for each damage counter"
+],
+[
+"condition_count",
+"for each damage counter"
+]
+],
+"by": "read"
+},
+"818579": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"818590": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"revive",
+"return a character card from your discard to your hand"
+],
+[
+"free_play",
+"play him for free"
+]
+],
+"by": "read"
+},
+"816578": {
+"tags": [
+[
+"evasion",
+"Only characters with Evasive can challenge this character"
+]
+],
+"by": "read"
+},
+"818397": {
+"tags": [
+[
+"other_death_trigger",
+"Amethyst characters is banished"
+],
+[
+"tribal",
+"Amethyst characters"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817765": {
+"tags": [
+[
+"tribal",
+"Pirate characters"
+],
+[
+"lanes",
+"while at a location"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817282": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"heal",
+"move up to 1 damage counter"
+],
+[
+"damage",
+"to chosen opposing character"
+]
+],
+"by": "read"
+},
+"818471": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play another character"
+],
+[
+"stat_condition",
+"5 strength or more"
+],
+[
+"untap",
+"ready this character"
+]
+],
+"by": "read"
+},
+"818684": {
+"tags": [
+[
+"cost_reduction",
+"you pay 1 ink less"
+],
+[
+"graveyard",
+"action card in your discard"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"points_scoring",
+"each opponent loses 2 lore"
+]
+],
+"by": "read"
+},
+"817178": {
+"tags": [
+[
+"immunity",
+"Ward"
+],
+[
+"untap",
+"ready one of your items"
+]
+],
+"by": "read"
+},
+"818132": {
+"tags": [
+[
+"bounce_enemy",
+"Return chosen character with 2 strength or less"
+],
+[
+"stat_condition",
+"2 strength or less"
+],
+[
+"revive",
+"Return a character card from your discard to your hand"
+]
+],
+"by": "read"
+},
+"816834": {
+"tags": [
+[
+"activated",
+"exert, 3 ink"
+],
+[
+"hand_size",
+"no cards in your hand"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817420": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"on_spell",
+"Whenever you play a song"
+],
+[
+"kicker",
+"pay 2 ink"
+],
+[
+"damage",
+"deal 3 damage"
+]
+],
+"by": "read"
+},
+"816636": {
+"tags": [
+[
+"cost_type",
+"Singer 5"
+],
+[
+"activated",
+"exert"
+],
+[
+"heal",
+"Remove up to 3 damage"
+],
+[
+"tribal",
+"Princess character"
+]
+],
+"by": "read"
+},
+"816619": {
+"tags": [],
+"by": "read"
+},
+"816626": {
+"tags": [],
+"by": "read"
+},
+"818280": {
+"tags": [
+[
+"damage_reduction",
+"Resist +1"
+]
+],
+"by": "read"
+},
+"818004": {
+"tags": [
+[
+"bounce_enemy",
+"Return chosen damaged character"
+],
+[
+"condition_life",
+"damaged character"
+]
+],
+"by": "read"
+},
+"816592": {
+"tags": [],
+"by": "read"
+},
+"818893": {
+"tags": [
+[
+"on_ally_play",
+"whenever you play an item"
+],
+[
+"stat_loss",
+"gets -2 strength"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "read"
+},
+"817587": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"points_scoring",
+"each opponent loses 2 lore"
+],
+[
+"comeback",
+"While an opponent has 10 or more lore"
+],
+[
+"stat_gain",
+"gets +6 strength"
+]
+],
+"by": "read"
+},
+"818370": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"temporary_buff",
+"gets +1 lore this turn"
+],
+[
+"merge_attach",
+"with a card under them"
+]
+],
+"by": "read"
+},
+"817144": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"on_spell",
+"Whenever you play a song"
+],
+[
+"evasion",
+"gains Evasive until the start of your next turn"
+]
+],
+"by": "read"
+},
+"817702": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"self_mill",
+"put the top 3 cards of your deck into your discard"
+],
+[
+"stat_loss",
+"-3 strength"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+]
+],
+"by": "read"
+},
+"818482": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"hand_size",
+"3 or more cards in your hand"
+]
+],
+"by": "read"
+},
+"816633": {
+"tags": [],
+"by": "read"
+},
+"817969": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"points_scoring",
+"Gain 1 lore"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "read"
+},
+"817161": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"evasion",
+"Evasive"
+],
+[
+"on_attack",
+"Whenever he challenges"
+],
+[
+"tribal",
+"Pirate character"
+],
+[
+"protection",
+"takes no damage from the challenge"
+]
+],
+"by": "read"
+},
+"818943": {
+"tags": [
+[
+"activated",
+"exert, 2 ink"
+],
+[
+"attack_lock",
+"can't challenge during their next turn"
+],
+[
+"other_death_trigger",
+"Robot character is banished"
+],
+[
+"tribal",
+"Robot character"
+],
+[
+"self_destruct",
+"banish this item"
+],
+[
+"discard",
+"discard your hand"
+],
+[
+"draw",
+"draw 2 cards"
+]
+],
+"by": "read"
+},
+"817745": {
+"tags": [
+[
+"upgrade",
+"Shift 5"
+],
+[
+"cost_type",
+"Shift 5"
+],
+[
+"on_ally_play",
+"Whenever you play a card"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"recycle",
+"put all the cards in your hand on the bottom of your deck"
+]
+],
+"by": "read"
+},
+"817895": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"condition_count",
+"3 or more other characters"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"818031": {
+"tags": [
+[
+"on_spell",
+"Whenever you play an action"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"817198": {
+"tags": [
+[
+"other_death_trigger",
+"items is banished"
+],
+[
+"resource_gain",
+"into your inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"817500": {
+"tags": [
+[
+"on_spell",
+"Whenever you play a song"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"817186": {
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"tribal",
+"named Dewey and Louie"
+],
+[
+"draw",
+"draw 3 cards"
+]
+],
+"by": "read"
+},
+"818346": {
+"tags": [
+[
+"activated",
+"exert, 1 ink, Banish this item"
+],
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"return_to_hand",
+"Return chosen exerted character of yours to your hand"
+],
+[
+"points_scoring",
+"gain 2 lore"
+]
+],
+"by": "read"
+},
+"817153": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"destroy",
+"banish chosen opposing character"
+],
+[
+"stat_condition",
+"3 strength or less"
+]
+],
+"by": "read"
+},
+"818938": {
+"tags": [
+[
+"tribal",
+"Villain character"
+],
+[
+"stat_gain",
+"gets +2 strength and +1 lore"
+],
+[
+"evasion",
+"can't be challenged"
+]
+],
+"by": "read"
+},
+"817804": {
+"tags": [
+[
+"recycle",
+"return a location card from your discard to your hand"
+]
+],
+"by": "read"
+},
+"817342": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"bounce_enemy",
+"Return chosen character to their player's hand"
+],
+[
+"hand_disruption",
+"discards a card at random"
+],
+[
+"random_effect",
+"at random"
+]
+],
+"by": "read"
+},
+"816618": {
+"tags": [],
+"by": "read"
+},
+"817686": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"cast_from_zone",
+"you may play her"
+]
+],
+"by": "read"
+},
+"818778": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"revive",
+"return a character card with 4 willpower or more"
+],
+[
+"stat_condition",
+"4 willpower or more"
+],
+[
+"aura",
+"Your characters named Dale get +1 willpower"
+]
+],
+"by": "read"
+},
+"818041": {
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"aura",
+"Your other characters with Support get +1 strength"
+]
+],
+"by": "read"
+},
+"818259": {
+"tags": [
+[
+"rule_change",
+"Skip your turn's Draw step"
+]
+],
+"by": "read"
+},
+"816828": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"hand_deck_swap",
+"Each player discards their hand and draws 7 cards"
+],
+[
+"symmetric_effect",
+"Each player"
+]
+],
+"by": "read"
+},
+"817068": {
+"tags": [
+[
+"heal",
+"Remove up to 3 damage from chosen location"
+]
+],
+"by": "read"
+},
+"818227": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"on_ally_play",
+"Whenever you play a character"
+],
+[
+"stat_condition",
+"5 strength or more"
+],
+[
+"points_scoring",
+"gain 2 lore"
+]
+],
+"by": "read"
+},
+"818478": {
+"tags": [
+[
+"other_death_trigger",
+"one of your characters is banished"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"haste",
+"gains Rush this turn"
+]
+],
+"by": "read"
+},
+"818838": {
+"tags": [
+[
+"immunity",
+"Ward"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"discard",
+"choose and discard a card"
+],
+[
+"bounce_enemy",
+"return chosen character to their player's hand"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"condition_count",
+"2 or more cards were put into your discard"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817366": {
+"tags": [
+[
+"on_attack",
+"Whenever this character challenges"
+],
+[
+"points_scoring",
+"gain 1 lore for each other damaged character"
+],
+[
+"condition_life",
+"damaged character"
+]
+],
+"by": "read"
+},
+"816886": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"modal_choice",
+"banish her or return"
+],
+[
+"self_destruct",
+"banish her"
+],
+[
+"return_to_hand",
+"return another chosen character of yours to your hand"
+]
+],
+"by": "read"
+},
+"818526": {
+"tags": [
+[
+"activated",
+"exert, 1 ink"
+],
+[
+"damage_reduction",
+"gains Resist +1"
+],
+[
+"type_grant",
+"the Detective classification"
+]
+],
+"by": "read"
+},
+"817464": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"destroy",
+"choose an item or location of theirs and banish it"
+]
+],
+"by": "read"
+},
+"818909": {
+"tags": [
+[
+"play_restriction",
+"You can't play this action unless"
+],
+[
+"condition_count",
+"2 or more cards were put into your discard"
+],
+[
+"symmetric_effect",
+"Each player chooses 2 of their characters"
+],
+[
+"removal",
+"puts them into their inkwell"
+],
+[
+"resource_gain",
+"puts them into their inkwell"
+]
+],
+"by": "read"
+},
+"818443": {
+"tags": [
+[
+"merge_attach",
+"Boost 2 ink"
+],
+[
+"stat_gain",
+"gets +2 strength and +1 lore"
+]
+],
+"by": "read"
+},
+"817907": {
+"tags": [
+[
+"evasion",
+"Evasive"
+]
+],
+"by": "read"
+},
+"818889": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"damage_reduction",
+"gain Resist +1"
+],
+[
+"scope_multi",
+"your other characters"
+]
+],
+"by": "read"
+},
+"817923": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"recycle",
+"return a song card with cost 3 or less"
+],
+[
+"cost_condition",
+"cost 3 or less"
+]
+],
+"by": "read"
+},
+"818757": {
+"tags": [
+[
+"damage",
+"Deal 2 damage to chosen opposing character"
+],
+[
+"tribal",
+"named Darkwing Duck"
+]
+],
+"by": "read"
+},
+"818331": {
+"tags": [
+[
+"aura",
+"Your Princess characters get +1 strength"
+],
+[
+"tribal",
+"Princess characters"
+]
+],
+"by": "read"
+},
+"817077": {
+"tags": [
+[
+"self_destruct",
+"banish them"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817381": {
+"tags": [
+[
+"activated",
+"ink"
+],
+[
+"lane_rule",
+"Chosen character here"
+],
+[
+"temporary_buff",
+"gets +1 strength this turn"
+]
+],
+"by": "read"
+},
+"817327": {
+"tags": [
+[
+"evasion",
+"your Villain characters can't be challenged"
+],
+[
+"tribal",
+"Villain characters"
+]
+],
+"by": "read"
+},
+"818125": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a character"
+],
+[
+"temporary_buff",
+"gets +1 strength this turn"
+],
+[
+"stat_condition",
+"3 strength or more"
+],
+[
+"stat_gain",
+"she gets +2 lore"
+]
+],
+"by": "read"
+},
+"817903": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"recycle",
+"put an item card named The Glass Slipper from your discard on the bottom of your deck"
+],
+[
+"points_scoring",
+"gain 3 lore"
+]
+],
+"by": "read"
+},
+"818798": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"tribal",
+"another Madrigal character"
+],
+[
+"suppress",
+"exert chosen opposing character"
+]
+],
+"by": "read"
+},
+"817917": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"cast_from_zone",
+"play a Puppy character from there for free"
+],
+[
+"free_play",
+"for free"
+],
+[
+"tribal",
+"Puppy character"
+]
+],
+"by": "read"
+},
+"817623": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"818128": {
+"tags": [
+[
+"heal",
+"remove up to 1 damage"
+],
+[
+"taunt",
+"characters with Bodyguard"
+]
+],
+"by": "read"
+},
+"818818": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"tribal",
+"another Super character"
+],
+[
+"suppress",
+"exert chosen opposing character"
+]
+],
+"by": "read"
+},
+"816647": {
+"tags": [
+[
+"untap",
+"ready your other Princess characters"
+],
+[
+"tribal",
+"Princess characters"
+]
+],
+"by": "read"
+},
+"817853": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"lane_rule",
+"a character here"
+],
+[
+"resource_gain",
+"into your inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"817221": {
+"tags": [
+[
+"damage_reduction",
+"Resist +2"
+],
+[
+"activated",
+"exert"
+],
+[
+"damage_reduction",
+"gains Resist +2 this turn"
+]
+],
+"by": "read"
+},
+"818528": {
+"tags": [
+[
+"immunity",
+"gains Ward"
+],
+[
+"tribal",
+"Princess character"
+]
+],
+"by": "read"
+},
+"818666": {
+"tags": [
+[
+"merge_attach",
+"Boost 1 ink"
+],
+[
+"variable_stats",
+"+1 willpower for each card under him"
+]
+],
+"by": "read"
+},
+"817649": {
+"tags": [
+[
+"lane_rule",
+"while here"
+],
+[
+"stat_gain",
+"+1 lore and +2 willpower"
+],
+[
+"assists_support",
+"Characters with Support"
+]
+],
+"by": "read"
+},
+"817682": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"ping",
+"Deal 1 damage to chosen character"
+]
+],
+"by": "read"
+},
+"818320": {
+"tags": [
+[
+"boss_phases",
+"Jafar's turn"
+],
+[
+"turn_start",
+"At the start of Jafar's turn"
+],
+[
+"self_destruct",
+"banishes this item"
+],
+[
+"damage",
+"deal 4 damage"
+]
+],
+"by": "read"
+},
+"817033": {
+"tags": [
+[
+"damage_reduction",
+"Resist +2"
+],
+[
+"hand_size",
+"no cards in your hand"
+],
+[
+"play_restriction",
+"opponents can't play actions"
+]
+],
+"by": "read"
+},
+"817554": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"damage",
+"deal 2 damage to chosen damaged character"
+],
+[
+"condition_life",
+"damaged character"
+]
+],
+"by": "read"
+},
+"818021": {
+"tags": [
+[
+"targeting_rules",
+"can challenge ready characters"
+],
+[
+"condition_life",
+"has damage"
+],
+[
+"stat_gain",
+"gets +2 strength"
+]
+],
+"by": "read"
+},
+"818419": {
+"tags": [
+[
+"leave_trigger",
+"When this character leaves play"
+],
+[
+"return_to_hand",
+"return chosen character of yours to your hand"
+]
+],
+"by": "read"
+},
+"818611": {
+"tags": [
+[
+"upgrade",
+"Shift 4 ink"
+],
+[
+"cost_type",
+"Shift 4 ink"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"damage",
+"move 1 damage from each other character to them"
+]
+],
+"by": "read"
+},
+"818340": {
+"tags": [
+[
+"movement",
+"move one of your other characters to that location for free"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"818516": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"tribal",
+"Princess character"
+],
+[
+"resource_gain",
+"put a card from your hand into your inkwell"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817573": {
+"tags": [
+[
+"immunity",
+"Ward"
+],
+[
+"on_attack",
+"challenges a damaged character"
+],
+[
+"condition_life",
+"damaged character"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"816791": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"stat_loss",
+"gets -5 strength this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "read"
+},
+"817747": {
+"tags": [
+[
+"suppress",
+"Exert chosen character"
+],
+[
+"discard",
+"choose and discard a card"
+],
+[
+"disable",
+"can't ready at the start of their next turn"
+]
+],
+"by": "read"
+},
+"818316": {
+"tags": [
+[
+"boss_phases",
+"Jafar"
+],
+[
+"suppress",
+"exerts all opposing characters"
+],
+[
+"disable",
+"can't ready at the start of their next turn"
+]
+],
+"by": "read"
+},
+"817925": {
+"tags": [
+[
+"on_spell",
+"sings a song"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"816853": {
+"tags": [
+[
+"upgrade",
+"Shift 2"
+],
+[
+"cost_type",
+"Shift 2"
+],
+[
+"deck_position",
+"reveal the top card of your deck"
+],
+[
+"cast_from_zone",
+"play it for free"
+],
+[
+"free_play",
+"play it for free"
+]
+],
+"by": "read"
+},
+"818619": {
+"tags": [
+[
+"cost_reduction",
+"pay 1 ink less"
+],
+[
+"turn_number",
+"If this is your first turn"
+],
+[
+"comeback",
+"you're not the first player"
+]
+],
+"by": "read"
+},
+"817006": {
+"tags": [
+[
+"on_play",
+"When you play this item"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"heal",
+"Remove up to 2 damage"
+]
+],
+"by": "read"
+},
+"817953": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"stat_loss",
+"gets -3 strength this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "read"
+},
+"818783": {
+"tags": [
+[
+"upgrade",
+"Shift 4 ink"
+],
+[
+"cost_type",
+"Shift 4 ink"
+],
+[
+"on_lifegain",
+"Whenever you remove damage"
+],
+[
+"points_scoring",
+"gain 1 lore for each 1 damage removed"
+]
+],
+"by": "read"
+},
+"818833": {
+"tags": [
+[
+"upkeep",
+"unless you pay 1 ink"
+]
+],
+"by": "read"
+},
+"817564": {
+"tags": [
+[
+"upgrade",
+"Shift 5"
+],
+[
+"cost_type",
+"Shift 5"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"comeback",
+"more cards in their hand than you"
+],
+[
+"draw",
+"draw cards until you have the same number"
+]
+],
+"by": "read"
+},
+"817879": {
+"tags": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"damage",
+"Deal 2 damage to chosen character"
+],
+[
+"destroy",
+"Banish chosen item"
+]
+],
+"by": "read"
+},
+"818496": {
+"tags": [
+[
+"lane_rule",
+"move a character with 5 strength or more here"
+],
+[
+"stat_condition",
+"5 strength or more"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"816634": {
+"tags": [],
+"by": "read"
+},
+"817826": {
+"tags": [
+[
+"deck_position",
+"reveal the top card of your deck"
+],
+[
+"cast_from_zone",
+"play that item for free"
+],
+[
+"free_play",
+"play that item for free"
+]
+],
+"by": "read"
+},
+"816670": {
+"tags": [
+[
+"upgrade",
+"Shift 5"
+],
+[
+"cost_type",
+"Shift 5"
+],
+[
+"other_death_trigger",
+"other characters is banished"
+],
+[
+"revive",
+"return that card to your hand"
+]
+],
+"by": "read"
+},
+"817397": {
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"damage_reduction",
+"gain Resist +1 this turn"
+]
+],
+"by": "read"
+},
+"818420": {
+"tags": [
+[
+"merge_attach",
+"Boost 2 ink"
+],
+[
+"death_trigger",
+"banished in a challenge"
+],
+[
+"draw",
+"draw 2 cards"
+]
+],
+"by": "read"
+},
+"818195": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"aoe_damage",
+"put 1 damage counter on each other character"
+],
+[
+"friendly_fire",
+"each other character"
+]
+],
+"by": "read"
+},
+"818138": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"friendly_fire",
+"deal 2 damage to another chosen character of yours"
+],
+[
+"bounce_enemy",
+"return chosen character with cost 2 or less"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"by": "read"
+},
+"818101": {
+"tags": [
+[
+"cost_type",
+"Singer 6"
+],
+[
+"on_spell",
+"Whenever you play a song"
+],
+[
+"stat_loss",
+"each opposing character gets -1 strength"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+]
+],
+"by": "read"
+},
+"817624": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"immunity",
+"Ward"
+],
+[
+"condition_count",
+"For each other character named The Queen"
+],
+[
+"stat_gain",
+"gets +1 lore"
+]
+],
+"by": "read"
+},
+"818270": {
+"tags": [
+[
+"activated",
+"exert, Banish one of your other items"
+],
+[
+"sacrifice",
+"Banish one of your other items"
+],
+[
+"resource_gain",
+"into your inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"817025": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"damage_reduction",
+"gains Resist +1"
+]
+],
+"by": "read"
+},
+"817022": {
+"tags": [
+[
+"damage_reduction",
+"Resist +1"
+],
+[
+"on_kill",
+"banishes another character in a challenge"
+],
+[
+"damage",
+"deal 2 damage to chosen character"
+]
+],
+"by": "read"
+},
+"817910": {
+"tags": [
+[
+"untap",
+"ready chosen Racer character"
+],
+[
+"tribal",
+"Racer character"
+]
+],
+"by": "read"
+},
+"817174": {
+"tags": [
+[
+"other_death_trigger",
+"one of your characters is banished in a challenge"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"816599": {
+"tags": [],
+"by": "read"
+},
+"818597": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"self_destruct",
+"banish this item"
+],
+[
+"deck_position",
+"reveal the top card of your deck"
+],
+[
+"cost_condition",
+"cost 3 or less"
+]
+],
+"by": "read"
+},
+"817102": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"graveyard",
+"chosen opponent's discard"
+]
+],
+"by": "read"
+},
+"817999": {
+"tags": [
+[
+"condition_life",
+"Damaged characters"
+],
+[
+"attack_lock",
+"can't challenge your characters"
+]
+],
+"by": "read"
+},
+"818020": {
+"tags": [
+[
+"haste",
+"gains Rush"
+],
+[
+"damage_reduction",
+"Resist +1 this turn"
+]
+],
+"by": "read"
+},
+"817195": {
+"tags": [
+[
+"evasion",
+"gains Evasive"
+],
+[
+"on_kill",
+"banishes another character in a challenge"
+],
+[
+"free_play",
+"play an item for free"
+]
+],
+"by": "read"
+},
+"817650": {
+"tags": [
+[
+"information",
+"top card of their deck face up"
+],
+[
+"symmetric_effect",
+"Each player"
+],
+[
+"deck_position",
+"top card of their deck"
+]
+],
+"by": "read"
+},
+"817937": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"on_targeted",
+"Vanish"
+],
+[
+"self_destruct",
+"Vanish"
+]
+],
+"by": "read"
+},
+"817496": {
+"tags": [
+[
+"deck_position",
+"reveals the top card of their deck"
+],
+[
+"enemy_benefit",
+"they may put it into their hand"
+]
+],
+"by": "read"
+},
+"818099": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"hand_disruption",
+"discards a non-character card of your choice"
+],
+[
+"death_trigger",
+"When this character is banished"
+],
+[
+"resource_gain",
+"put this card into your inkwell"
+]
+],
+"by": "read"
+},
+"817517": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"haste",
+"gains Rush this turn"
+]
+],
+"by": "read"
+},
+"817803": {
+"tags": [
+[
+"upgrade",
+"Shift 2"
+],
+[
+"cost_type",
+"Shift 2"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"temporary_buff",
+"your characters get +2 strength this turn"
+]
+],
+"by": "read"
+},
+"817288": {
+"tags": [
+[
+"death_trigger",
+"banished in a challenge"
+],
+[
+"revive",
+"return this card to your hand"
+],
+[
+"tribal",
+"characters named Jetsam"
+]
+],
+"by": "read"
+},
+"818304": {
+"tags": [
+[
+"boss_phases",
+"When Jafar plays"
+],
+[
+"on_play",
+"When Jafar plays this character"
+],
+[
+"aoe_damage",
+"deals 2 damage to each opposing damaged character"
+],
+[
+"condition_life",
+"damaged character"
+]
+],
+"by": "read"
+},
+"818765": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"untap",
+"ready chosen character with cost 2 or less"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"by": "read"
+},
+"818177": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"bounce_enemy",
+"return chosen character to their player's hand"
+],
+[
+"hand_disruption",
+"discards a card at random"
+],
+[
+"random_effect",
+"at random"
+]
+],
+"by": "read"
+},
+"818489": {
+"tags": [
+[
+"on_attack",
+"Whenever this character challenges"
+],
+[
+"stat_condition",
+"2 strength or less"
+],
+[
+"points_scoring",
+"each opponent loses 1 lore"
+]
+],
+"by": "read"
+},
+"816585": {
+"tags": [
+[
+"cost_type",
+"counts as cost N to sing songs"
+]
+],
+"by": "read"
+},
+"817597": {
+"tags": [
+[
+"upgrade",
+"Shift 2"
+],
+[
+"cost_type",
+"Shift 2"
+],
+[
+"points_scoring",
+"gain 2 lore"
+]
+],
+"by": "read"
+},
+"818631": {
+"tags": [
+[
+"death_trigger",
+"When this location is banished"
+],
+[
+"revive",
+"return this card from your discard to your hand"
+]
+],
+"by": "read"
+},
+"818732": {
+"tags": [
+[
+"damage_reduction",
+"Your locations gain Resist +1"
+]
+],
+"by": "read"
+},
+"818521": {
+"tags": [
+[
+"selection",
+"Look at the top 4 cards of your deck"
+],
+[
+"deck_position",
+"top 4 cards"
+]
+],
+"by": "read"
+},
+"817933": {
+"tags": [
+[
+"bounce_enemy",
+"return chosen character, item, or location"
+],
+[
+"cost_condition",
+"cost 2 or less"
+],
+[
+"enemy_benefit",
+"that player draws a card"
+]
+],
+"by": "read"
+},
+"818699": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"merge_attach",
+"Put this character facedown under one of your characters"
+]
+],
+"by": "read"
+},
+"816907": {
+"tags": [
+[
+"untap",
+"ready this character"
+]
+],
+"by": "read"
+},
+"817948": {
+"tags": [
+[
+"death_trigger",
+"banished in a challenge"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"818615": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"tribal",
+"named Anna"
+],
+[
+"graveyard",
+"from chosen player's discard"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"818054": {
+"tags": [
+[
+"stat_loss",
+"-2 strength this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "read"
+},
+"817115": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"damage",
+"deal 3 damage to chosen damaged character"
+],
+[
+"condition_life",
+"damaged character"
+]
+],
+"by": "read"
+},
+"817711": {
+"tags": [
+[
+"temporary_buff",
+"gets +1 lore this turn"
+]
+],
+"by": "read"
+},
+"816701": {
+"tags": [
+[
+"activated",
+"exert, 1 ink"
+],
+[
+"haste",
+"gains Rush this turn"
+]
+],
+"by": "read"
+},
+"817855": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"tribal",
+"another Pirate character"
+],
+[
+"damage",
+"deal 1 damage"
+]
+],
+"by": "read"
+},
+"817547": {
+"tags": [
+[
+"on_play",
+"When you play this location"
+],
+[
+"disable",
+"can't ready at the start of their turn"
+]
+],
+"by": "read"
+},
+"818079": {
+"tags": [
+[
+"evasion",
+"gains Evasive"
+],
+[
+"tribal",
+"Pirate character"
+]
+],
+"by": "read"
+},
+"818037": {
+"tags": [
+[
+"temporary_buff",
+"gets +2 strength this turn"
+]
+],
+"by": "read"
+},
+"817103": {
+"tags": [
+[
+"suppress",
+"Exert chosen opposing character"
+],
+[
+"temporary_buff",
+"gains Challenger +2 this turn"
+]
+],
+"by": "read"
+},
+"817916": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"revive",
+"return up to 2 character cards"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"by": "read"
+},
+"817678": {
+"tags": [
+[
+"damage_reduction",
+"gains Resist +1"
+],
+[
+"evasion",
+"Evasive this turn"
+]
+],
+"by": "read"
+},
+"817869": {
+"tags": [
+[
+"death_trigger",
+"When this character is banished"
+],
+[
+"destroy",
+"banish chosen item or location"
+]
+],
+"by": "read"
+},
+"818714": {
+"tags": [
+[
+"upgrade",
+"Shift 4 ink"
+],
+[
+"cost_type",
+"Shift 4 ink"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"merge_attach",
+"facedown under each of your other characters"
+],
+[
+"immunity",
+"gain Ward"
+]
+],
+"by": "read"
+},
+"817528": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"evasion",
+"Evasive"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"suppress",
+"exert chosen opposing character"
+]
+],
+"by": "read"
+},
+"818819": {
+"tags": [
+[
+"upgrade",
+"Shift 3 ink"
+],
+[
+"cost_type",
+"Shift 3 ink"
+],
+[
+"activated",
+"ink"
+],
+[
+"heal",
+"Move up to 1 damage from chosen character of yours"
+],
+[
+"condition_count",
+"3 or more damage"
+],
+[
+"damage",
+"move all damage from this character to chosen opposing character"
+]
+],
+"by": "read"
+},
+"817501": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"revive",
+"return a character card from your discard"
+],
+[
+"tribal",
+"Princess character card"
+],
+[
+"points_scoring",
+"gain 2 lore"
+]
+],
+"by": "read"
+},
+"816577": {
+"tags": [
+[
+"temporary_buff",
+"While challenging, this character gets +N strength"
+]
+],
+"by": "read"
+},
+"817995": {
+"tags": [
+[
+"on_spell",
+"Whenever you play an action"
+],
+[
+"untap",
+"ready chosen Pirate character"
+],
+[
+"tribal",
+"Pirate character"
+]
+],
+"by": "read"
+},
+"818002": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"play_restriction",
+"can't exert to sing songs"
+],
+[
+"damage_reduction",
+"gain Resist +1"
+],
+[
+"tribal",
+"Pirate characters"
+]
+],
+"by": "read"
+},
+"818212": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"points_scoring",
+"each opponent loses 1 lore and you gain 1 lore"
+]
+],
+"by": "read"
+},
+"818641": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"damage",
+"deals 1 damage to them"
+]
+],
+"by": "read"
+},
+"818188": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"hand_disruption",
+"chooses and discards a card"
+]
+],
+"by": "read"
+},
+"817458": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"aoe_damage",
+"deal 1 damage to each opposing character"
+]
+],
+"by": "read"
+},
+"817800": {
+"tags": [
+[
+"condition_life",
+"has damage"
+],
+[
+"stat_gain",
+"gets +1 lore"
+]
+],
+"by": "read"
+},
+"818156": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"heal",
+"Move 1 damage counter from this character"
+],
+[
+"damage",
+"to chosen opposing character"
+]
+],
+"by": "read"
+},
+"816631": {
+"tags": [],
+"by": "read"
+},
+"818689": {
+"tags": [
+[
+"points_scoring",
+"Each opponent loses lore equal to the damage"
+],
+[
+"condition_life",
+"damage on chosen character of yours"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "read"
+},
+"817184": {
+"tags": [
+[
+"upgrade",
+"Shift 5"
+],
+[
+"cost_type",
+"Shift 5"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"818241": {
+"tags": [
+[
+"evasion",
+"gains Evasive until the start of your next turn"
+]
+],
+"by": "read"
+},
+"817042": {
+"tags": [
+[
+"taunt",
+"Bodyguard"
+],
+[
+"death_trigger",
+"When this character is banished"
+],
+[
+"points_scoring",
+"gain 2 lore"
+]
+],
+"by": "read"
+},
+"818026": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"sacrifice",
+"banish chosen item of yours"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"destroy",
+"banish chosen character with 2 strength or less"
+],
+[
+"stat_condition",
+"2 strength or less"
+]
+],
+"by": "read"
+},
+"818117": {
+"tags": [
+[
+"immunity",
+"Ward"
+],
+[
+"tribal",
+"another Puppy character"
+],
+[
+"stat_gain",
+"gets +1 lore"
+]
+],
+"by": "read"
+},
+"817056": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"cast_from_zone",
+"play a character with cost 2 or less from your discard for free"
+],
+[
+"revive",
+"from your discard for free"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"by": "read"
+},
+"816802": {
+"tags": [
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"heal",
+"Remove up to 3 damage"
+]
+],
+"by": "read"
+},
+"818673": {
+"tags": [
+[
+"cost_reduction",
+"pay 1 ink less"
+],
+[
+"comeback",
+"you're not the first player"
+]
+],
+"by": "read"
+},
+"818027": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"on_attack",
+"challenges another character"
+],
+[
+"temporary_buff",
+"get +1 lore this turn"
+]
+],
+"by": "read"
+},
+"818665": {
+"tags": [
+[
+"merge_attach",
+"Boost 1 ink"
+],
+[
+"variable_stats",
+"+1 strength for each card under him"
+],
+[
+"death_trigger",
+"When this character is banished"
+],
+[
+"board_wipe",
+"banish all characters with strength equal to or less"
+],
+[
+"stat_condition",
+"strength equal to or less"
+]
+],
+"by": "read"
+},
+"818941": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"movement",
+"Move a character of yours to a location for free"
+],
+[
+"draw",
+"draw cards equal to that location's lore"
+]
+],
+"by": "read"
+},
+"816640": {
+"tags": [
+[
+"assists_support",
+"Support"
+]
+],
+"by": "read"
+},
+"818337": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"evasion",
+"gains Evasive until the start of your next turn"
+]
+],
+"by": "read"
+},
+"816740": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"forced_attack",
+"opposing characters with Evasive gain Reckless"
+],
+[
+"evasion",
+"opposing characters with Evasive"
+]
+],
+"by": "read"
+},
+"816777": {
+"tags": [
+[
+"immunity",
+"Ward"
+]
+],
+"by": "read"
+},
+"816608": {
+"tags": [],
+"by": "read"
+},
+"817783": {
+"tags": [
+[
+"activated",
+"ink, Banish this item"
+],
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"bounce_enemy",
+"Return chosen character with 2 strength or less"
+],
+[
+"stat_condition",
+"2 strength or less"
+]
+],
+"by": "read"
+},
+"816603": {
+"tags": [],
+"by": "read"
+},
+"818556": {
+"tags": [
+[
+"attack_lock",
+"can't challenge during their next turn"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "read"
+},
+"818559": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a character"
+],
+[
+"self_destruct",
+"banish this item"
+],
+[
+"damage",
+"deal 2 damage"
+]
+],
+"by": "read"
+},
+"817320": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"comeback",
+"more cards in their inkwell than you"
+],
+[
+"resource_gain",
+"into your inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"817239": {
+"tags": [
+[
+"destroy",
+"Banish chosen location or item"
+]
+],
+"by": "read"
+},
+"817287": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"temporary_buff",
+"gains Challenger +2"
+],
+[
+"haste",
+"Rush this turn"
+]
+],
+"by": "read"
+},
+"816857": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"heal",
+"Remove up to 2 damage"
+]
+],
+"by": "read"
+},
+"818690": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"temporary_buff",
+"gets +5 strength this turn"
+]
+],
+"by": "read"
+},
+"818217": {
+"tags": [
+[
+"variable_stats",
+"+1 strength for each 1 damage on him"
+],
+[
+"condition_life",
+"damage on him"
+]
+],
+"by": "read"
+},
+"817066": {
+"tags": [
+[
+"assists_support",
+"gains Support this turn"
+]
+],
+"by": "read"
+},
+"817497": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"lanes",
+"have a location in play"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817343": {
+"tags": [
+[
+"on_play",
+"When you play this item"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"type_grant",
+"count as having inkwell symbol"
+]
+],
+"by": "read"
+},
+"816737": {
+"tags": [
+[
+"upgrade",
+"Shift 5"
+],
+[
+"cost_type",
+"Shift 5"
+],
+[
+"on_kill",
+"banishes another character in a challenge"
+],
+[
+"points_scoring",
+"you gain 2 lore and each opponent loses 2 lore"
+]
+],
+"by": "read"
+},
+"817018": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"damage_reduction",
+"Resist +2"
+]
+],
+"by": "read"
+},
+"816996": {
+"tags": [
+[
+"selection",
+"look at the top 2 cards of your deck"
+]
+],
+"by": "read"
+},
+"818700": {
+"tags": [
+[
+"merge_attach",
+"Boost 2 ink"
+],
+[
+"stat_gain",
+"gets +1 lore"
+]
+],
+"by": "read"
+},
+"818883": {
+"tags": [
+[
+"activated",
+"exert, 1 ink"
+],
+[
+"selection",
+"Look at the top 4 cards of your deck"
+]
+],
+"by": "read"
+},
+"817021": {
+"tags": [
+[
+"evasion",
+"gains Evasive"
+]
+],
+"by": "read"
+},
+"818297": {
+"tags": [
+[
+"taunt",
+"Bodyguard"
+],
+[
+"boss_phases",
+"Jafar's characters"
+],
+[
+"evasion",
+"Jafar's locations can't be challenged"
+]
+],
+"by": "read"
+},
+"817299": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"evasion",
+"Evasive"
+],
+[
+"haste",
+"Your other characters with Evasive gain Rush"
+]
+],
+"by": "read"
+},
+"818274": {
+"tags": [
+[
+"on_targeted",
+"Vanish"
+],
+[
+"self_destruct",
+"Vanish"
+],
+[
+"temporary_buff",
+"gain Challenger +1"
+],
+[
+"tribal",
+"Illusion characters"
+]
+],
+"by": "read"
+},
+"818444": {
+"tags": [
+[
+"death_trigger",
+"challenged and banished"
+],
+[
+"aoe_damage",
+"put 1 damage counter on each opposing character"
+]
+],
+"by": "read"
+},
+"817358": {
+"tags": [
+[
+"aura",
+"Your other characters get +1 strength"
+]
+],
+"by": "read"
+},
+"817787": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"temporary_buff",
+"gets +2 strength"
+],
+[
+"protection",
+"takes no damage from challenges"
+],
+[
+"tribal",
+"Pirate character"
+]
+],
+"by": "read"
+},
+"818418": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"draw",
+"draw 2 cards"
+],
+[
+"bounce_enemy",
+"puts that card on the bottom of their deck"
+]
+],
+"by": "read"
+},
+"817435": {
+"tags": [
+[
+"temporary_buff",
+"gain Challenger +1"
+],
+[
+"tribal",
+"Hero characters"
+],
+[
+"on_ally_play",
+"Whenever you play a Hero character"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"817897": {
+"tags": [
+[
+"taunt",
+"Bodyguard"
+],
+[
+"temporary_buff",
+"get +1 lore this turn"
+]
+],
+"by": "read"
+},
+"817838": {
+"tags": [
+[
+"damage_reduction",
+"gain Resist +1"
+],
+[
+"tribal",
+"Inventor characters"
+],
+[
+"activated",
+"ink"
+],
+[
+"deck_position",
+"Look at the top card of your deck"
+],
+[
+"selection",
+"Put it on either the top or the bottom"
+]
+],
+"by": "read"
+},
+"816869": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"condition_count",
+"Count the number of characters"
+],
+[
+"cost_reduction",
+"pay that amount of ink less"
+]
+],
+"by": "read"
+},
+"816622": {
+"tags": [],
+"by": "read"
+},
+"817405": {
+"tags": [
+[
+"evasion",
+"gains Evasive"
+],
+[
+"other_death_trigger",
+"locations is banished"
+],
+[
+"resource_gain",
+"into your inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"817605": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"temporary_buff",
+"gets +2 strength this turn"
+]
+],
+"by": "read"
+},
+"817495": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"tutor",
+"search your deck for a character card"
+],
+[
+"deck_position",
+"put that card on top of it"
+]
+],
+"by": "read"
+},
+"817700": {
+"tags": [
+[
+"reactions",
+"Whenever a character of yours is challenged"
+],
+[
+"stat_loss",
+"gets -3 strength this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "read"
+},
+"817074": {
+"tags": [
+[
+"lane_rule",
+"while here"
+],
+[
+"stat_gain",
+"get +2 willpower"
+],
+[
+"cost_reduction",
+"pay 1 ink less"
+],
+[
+"tribal",
+"Prince or King character"
+]
+],
+"by": "read"
+},
+"817262": {
+"tags": [
+[
+"taunt",
+"Bodyguard"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"destroy",
+"banish chosen opposing character with 5 strength or more"
+],
+[
+"stat_condition",
+"5 strength or more"
+]
+],
+"by": "read"
+},
+"816854": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a Floodborn character"
+],
+[
+"tribal",
+"Floodborn character"
+],
+[
+"heal",
+"remove all damage"
+]
+],
+"by": "read"
+},
+"817249": {
+"tags": [
+[
+"cost_type",
+"Singer 9"
+],
+[
+"temporary_buff",
+"get +1 lore this turn"
+],
+[
+"tribal",
+"Princess characters"
+]
+],
+"by": "read"
+},
+"818491": {
+"tags": [
+[
+"cost_reduction",
+"pay 2 ink less"
+],
+[
+"stat_condition",
+"5 strength or more"
+],
+[
+"untap",
+"Ready chosen character"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"817928": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"selection",
+"Look at the top 5 cards of your deck"
+],
+[
+"tribal",
+"Madrigal character card"
+]
+],
+"by": "read"
+},
+"817126": {
+"tags": [
+[
+"lanes",
+"at a location"
+],
+[
+"stat_gain",
+"gets +3 strength"
+],
+[
+"on_attack",
+"challenges another character"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"818169": {
+"tags": [
+[
+"disable",
+"can't ready at the start of their next turn"
+],
+[
+"scope_multi",
+"Up to 2 chosen characters"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "read"
+},
+"817725": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"heal",
+"move 1 damage counter"
+],
+[
+"damage",
+"to chosen opposing character"
+]
+],
+"by": "read"
+},
+"816616": {
+"tags": [],
+"by": "read"
+},
+"817171": {
+"tags": [
+[
+"untap",
+"Ready all your characters"
+],
+[
+"friendly_fire",
+"deal 1 damage to each of them"
+]
+],
+"by": "read"
+},
+"816610": {
+"tags": [],
+"by": "read"
+},
+"817634": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"draw",
+"draw 2 cards"
+],
+[
+"card_quality",
+"put a card from your hand on the bottom of your deck"
+]
+],
+"by": "read"
+},
+"816959": {
+"tags": [
+[
+"on_kill",
+"banishes another character in a challenge"
+],
+[
+"untap",
+"ready this character"
+]
+],
+"by": "read"
+},
+"816651": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"heal",
+"remove up to 3 damage"
+],
+[
+"draw",
+"Draw a card for each 1 damage removed"
+]
+],
+"by": "read"
+},
+"818462": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"count_payoff",
+"played 2 or more cards this turn"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"816999": {
+"tags": [
+[
+"symmetric_effect",
+"Each player chooses"
+],
+[
+"removal",
+"puts them into their inkwell"
+],
+[
+"resource_gain",
+"puts them into their inkwell"
+]
+],
+"by": "read"
+},
+"818911": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"tribal",
+"Madrigal character"
+],
+[
+"heal",
+"remove up to 2 damage"
+],
+[
+"activated",
+"exert"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"818423": {
+"tags": [
+[
+"bounce_enemy",
+"Return chosen character, item, or location"
+],
+[
+"cost_condition",
+"cost 3 or less"
+]
+],
+"by": "read"
+},
+"817919": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a character"
+],
+[
+"temporary_buff",
+"gets +1 lore this turn"
+],
+[
+"stat_loss",
+"loses strength equal to this character's lore"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+]
+],
+"by": "read"
+},
+"818348": {
+"tags": [
+[
+"upgrade",
+"Shift 4 ink"
+],
+[
+"cost_type",
+"Singer 9"
+],
+[
+"on_spell",
+"sings a song"
+],
+[
+"selection",
+"look at the top 4 cards of your deck"
+],
+[
+"cast_from_zone",
+"play it for free"
+],
+[
+"free_play",
+"play it for free"
+]
+],
+"by": "read"
+},
+"817712": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"revive",
+"Return a character card with cost 2 or less"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"by": "read"
+},
+"818012": {
+"tags": [
+[
+"damage_reduction",
+"Resist +2"
+]
+],
+"by": "read"
+},
+"817156": {
+"tags": [
+[
+"lanes",
+"at a location"
+],
+[
+"stat_gain",
+"gets +2 strength"
+]
+],
+"by": "read"
+},
+"818230": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"evasion",
+"Evasive"
+],
+[
+"other_death_trigger",
+"items is banished"
+],
+[
+"temporary_buff",
+"gets +1 lore this turn"
+]
+],
+"by": "read"
+},
+"818395": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"heal",
+"Remove up to 2 damage"
+],
+[
+"cost_reduction",
+"pay 1 ink less"
+],
+[
+"tribal",
+"named Gurgi"
+]
+],
+"by": "read"
+},
+"817942": {
+"tags": [
+[
+"upgrade",
+"Shift 7"
+],
+[
+"cost_type",
+"Shift 7"
+],
+[
+"destroy",
+"banish them"
+]
+],
+"by": "read"
+},
+"817779": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"suppress",
+"can't quest during their next turn"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "read"
+},
+"817165": {
+"tags": [
+[
+"cost_reduction",
+"pay 1 ink less"
+],
+[
+"tribal",
+"named Peter Pan"
+],
+[
+"evasion",
+"Evasive"
+]
+],
+"by": "read"
+},
+"817959": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"modal_choice",
+"choose one"
+],
+[
+"symmetric_effect",
+"Each player draws a card"
+],
+[
+"draw",
+"Each player draws a card"
+],
+[
+"discard",
+"chooses and discards a card"
+]
+],
+"by": "read"
+},
+"818275": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"suppress",
+"exert chosen Princess character"
+],
+[
+"tribal",
+"Princess character"
+]
+],
+"by": "read"
+},
+"818903": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"condition_count",
+"2 or more cards were put into your discard"
+],
+[
+"resource_gain",
+"into your inkwell facedown"
+]
+],
+"by": "read"
+},
+"817626": {
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"combo_sequence",
+"second card you've put into your inkwell"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"818341": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"kicker",
+"pay 1 ink"
+],
+[
+"recycle",
+"return a song card"
+],
+[
+"cost_condition",
+"cost 3 or less"
+]
+],
+"by": "read"
+},
+"818093": {
+"tags": [
+[
+"stat_loss",
+"the challenging character gets -1 strength"
+]
+],
+"by": "read"
+},
+"817432": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"damage_reduction",
+"Resist +1"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"damage",
+"deal damage to chosen character"
+],
+[
+"condition_count",
+"equal to the number of Broom characters"
+],
+[
+"tribal",
+"Broom characters"
+]
+],
+"by": "read"
+},
+"818305": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"boss_phases",
+"Jafar steals"
+],
+[
+"steal",
+"Jafar steals The Reforged Crown"
+]
+],
+"by": "read"
+},
+"818231": {
+"tags": [
+[
+"condition_count",
+"2 or more characters of yours are exerted"
+],
+[
+"stat_gain",
+"gets +2 strength"
+],
+[
+"evasion",
+"gains Evasive"
+]
+],
+"by": "read"
+},
+"818608": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"graveyard",
+"from chosen player's discard"
+]
+],
+"by": "read"
+},
+"816708": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"bounce_enemy",
+"return chosen character to their player's hand"
+]
+],
+"by": "read"
+},
+"818515": {
+"tags": [
+[
+"upgrade",
+"Shift 4 ink"
+],
+[
+"cost_type",
+"Shift 4 ink"
+],
+[
+"assists_support",
+"Support"
+],
+[
+"disruption",
+"cards enter opponents' inkwells exerted"
+]
+],
+"by": "read"
+},
+"817370": {
+"tags": [
+[
+"upgrade",
+"Shift 6"
+],
+[
+"cost_type",
+"Shift 6"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"board_wipe",
+"banish all opposing characters with 2 strength or less"
+],
+[
+"stat_condition",
+"2 strength or less"
+]
+],
+"by": "read"
+},
+"816899": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"free_play",
+"Play a character with cost 4 or less for free"
+],
+[
+"cost_condition",
+"cost 4 or less"
+],
+[
+"haste",
+"They gain Rush"
+],
+[
+"self_destruct",
+"At the end of the turn, banish them"
+]
+],
+"by": "read"
+},
+"817135": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"destroy",
+"Banish chosen item"
+]
+],
+"by": "read"
+},
+"816680": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"recycle",
+"shuffle a card from any discard into its player's deck"
+]
+],
+"by": "read"
+},
+"817389": {
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"cost_reduction",
+"pay 1 ink less"
+],
+[
+"tribal",
+"named Ariel"
+]
+],
+"by": "read"
+},
+"818686": {
+"tags": [
+[
+"points_scoring",
+"each opponent loses 1 lore"
+],
+[
+"draw",
+"Draw a card for each 1 lore lost"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"points_scoring",
+"you gain 1 lore"
+]
+],
+"by": "read"
+},
+"816762": {
+"tags": [
+[
+"haste",
+"gains Rush this turn"
+]
+],
+"by": "read"
+},
+"817402": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"heal",
+"remove up to 2 damage"
+]
+],
+"by": "read"
+},
+"817369": {
+"tags": [
+[
+"variable_stats",
+"+1 strength for each card in opponents' hands"
+]
+],
+"by": "read"
+},
+"818823": {
+"tags": [
+[
+"tutor",
+"Search your deck for a Princess character card"
+],
+[
+"tribal",
+"Seven Dwarfs characters"
+],
+[
+"draw",
+"draw 2 cards"
+],
+[
+"points_scoring",
+"gain 2 lore"
+]
+],
+"by": "read"
+},
+"816991": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"recycle",
+"return an item card named Pawpsicle"
+]
+],
+"by": "read"
+},
+"818866": {
+"tags": [
+[
+"combo_sequence",
+"if you played a character this turn"
+],
+[
+"untap",
+"ready another chosen character"
+]
+],
+"by": "read"
+},
+"818063": {
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"selection",
+"look at the top 4 cards of your deck"
+],
+[
+"tribal",
+"Floodborn character card"
+]
+],
+"by": "read"
+},
+"817244": {
+"tags": [],
+"by": "read"
+},
+"816910": {
+"tags": [
+[
+"on_ally_play",
+"Whenever you play a Floodborn character"
+],
+[
+"upgrade",
+"used Shift"
+],
+[
+"hand_disruption",
+"chooses and discards a card"
+]
+],
+"by": "read"
+},
+"816591": {
+"tags": [],
+"by": "read"
+},
+"818052": {
+"tags": [
+[
+"immunity",
+"Ward"
+],
+[
+"activated",
+"exert"
+],
+[
+"selection",
+"Look at the top 2 cards of your deck"
+],
+[
+"resource_gain",
+"into your inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"816657": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"heal",
+"remove up to 1 damage"
+]
+],
+"by": "read"
+},
+"818131": {
+"tags": [
+[
+"modal_choice",
+"Choose one"
+],
+[
+"heal",
+"Remove up to 3 damage"
+],
+[
+"taunt",
+"characters with Bodyguard"
+]
+],
+"by": "read"
+},
+"817148": {
+"tags": [
+[
+"points_scoring",
+"each opponent loses 1 lore"
+]
+],
+"by": "read"
+},
+"818730": {
+"tags": [
+[
+"activated",
+"exert, Banish this item"
+],
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"modal_choice",
+"Choose one"
+],
+[
+"destroy",
+"Banish chosen item"
+],
+[
+"stat_loss",
+"gets -2 strength this turn"
+]
+],
+"by": "read"
+},
+"817807": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"evasion",
+"Evasive"
+]
+],
+"by": "read"
+},
+"817030": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"ping",
+"Deal 1 damage to chosen character"
+]
+],
+"by": "read"
+},
+"818421": {
+"tags": [
+[
+"merge_attach",
+"Boost 1 ink"
+],
+[
+"stat_gain",
+"gets +1 lore"
+],
+[
+"evasion",
+"gains Evasive"
+]
+],
+"by": "read"
+},
+"818211": {
+"tags": [
+[
+"resource_gain",
+"into your inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"817926": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"taunt",
+"gains Bodyguard"
+]
+],
+"by": "read"
+},
+"816656": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"on_ally_play",
+"Whenever you play a character with cost 2 or less"
+],
+[
+"cost_condition",
+"cost 2 or less"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817580": {
+"tags": [
+[
+"reactions",
+"During opponents' turns"
+],
+[
+"other_death_trigger",
+"one of your characters is banished"
+],
+[
+"bounce_enemy",
+"return chosen character to their player's hand"
+]
+],
+"by": "read"
+},
+"817104": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"selection",
+"Look at the top 5 cards of your deck"
+],
+[
+"points_scoring",
+"Gain 1 lore"
+]
+],
+"by": "read"
+},
+"817503": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"untap",
+"ready chosen character"
+]
+],
+"by": "read"
+},
+"816826": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"aoe_damage",
+"deal 1 damage to each opposing character"
+],
+[
+"on_kill",
+"banishes another character in a challenge"
+],
+[
+"damage",
+"deal 2 damage to chosen opposing character"
+]
+],
+"by": "read"
+},
+"817117": {
+"tags": [
+[
+"immunity",
+"Ward"
+],
+[
+"immunity",
+"Your characters named Flotsam gain Ward"
+]
+],
+"by": "read"
+},
+"818088": {
+"tags": [
+[
+"on_kill",
+"banishes another character in a challenge"
+],
+[
+"free_play",
+"play a character for free"
+]
+],
+"by": "read"
+},
+"818339": {
+"tags": [
+[
+"on_play",
+"When you play this item"
+],
+[
+"evasion",
+"that character gains Evasive"
+],
+[
+"activated",
+"ink"
+],
+[
+"return_to_hand",
+"Return this item to your hand"
+]
+],
+"by": "read"
+},
+"818917": {
+"tags": [
+[
+"upgrade",
+"Shift 4 ink"
+],
+[
+"cost_type",
+"Shift 4 ink"
+],
+[
+"revive",
+"return a Robot character card"
+],
+[
+"free_play",
+"play or shift a Robot character"
+],
+[
+"tribal",
+"Robot character"
+],
+[
+"cost_condition",
+"cost 8 or less"
+]
+],
+"by": "read"
+},
+"818133": {
+"tags": [
+[
+"cost_type",
+"Sing Together 9"
+],
+[
+"revive",
+"Return up to 3 character cards"
+],
+[
+"cost_reduction",
+"pay 2 ink less"
+]
+],
+"by": "read"
+},
+"817088": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"activated",
+"exert"
+],
+[
+"movement",
+"Move a character of yours to a location for free"
+]
+],
+"by": "read"
+},
+"817886": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"draw",
+"Draw a card"
+],
+[
+"discard",
+"choose and discard a card"
+]
+],
+"by": "read"
+},
+"816838": {
+"tags": [
+[
+"tribal",
+"another Seven Dwarfs character"
+]
+],
+"by": "read"
+},
+"818322": {
+"tags": [
+[
+"boss_phases",
+"When Jafar plays"
+],
+[
+"aoe_damage",
+"deals 1 damage to each opposing character"
+]
+],
+"by": "read"
+},
+"818919": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"evasion",
+"gains Alert this turn"
+]
+],
+"by": "read"
+},
+"817364": {
+"tags": [
+[
+"on_spell",
+"Whenever you play an action"
+],
+[
+"protection",
+"takes no damage from challenges this turn"
+]
+],
+"by": "read"
+},
+"817915": {
+"tags": [
+[
+"other_death_trigger",
+"other characters is banished"
+],
+[
+"temporary_buff",
+"gets +1 lore this turn"
+]
+],
+"by": "read"
+},
+"817904": {
+"tags": [
+[
+"tribal",
+"named Dolores Madrigal"
+],
+[
+"stat_gain",
+"gets +1 lore"
+]
+],
+"by": "read"
+},
+"816609": {
+"tags": [],
+"by": "read"
+},
+"817443": {
+"tags": [
+[
+"cost_type",
+"Sing Together 10"
+],
+[
+"damage",
+"Deal 3 damage"
+],
+[
+"scope_multi",
+"up to 3 chosen characters"
+]
+],
+"by": "read"
+},
+"818186": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"forced_attack",
+"gains Reckless during their next turn"
+]
+],
+"by": "read"
+},
+"817645": {
+"tags": [
+[
+"activated",
+"exert, 2 ink, Banish this item"
+],
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"temporary_buff",
+"gets +2 lore this turn"
+]
+],
+"by": "read"
+},
+"817321": {
+"tags": [
+[
+"immunity",
+"Ward"
+],
+[
+"immunity",
+"named Zeus gain Ward"
+],
+[
+"evasion",
+"named Hercules gain Evasive"
+]
+],
+"by": "read"
+},
+"816611": {
+"tags": [],
+"by": "read"
+},
+"816988": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"heal",
+"remove up to 1 damage"
+]
+],
+"by": "read"
+},
+"817105": {
+"tags": [
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"tribal",
+"named Jafar"
+],
+[
+"draw",
+"draw 2 cards"
+],
+[
+"bounce_enemy",
+"return chosen character with cost 4 or less"
+]
+],
+"by": "read"
+},
+"817448": {
+"tags": [
+[
+"lane_rule",
+"exerted character here"
+],
+[
+"evasion",
+"your other locations can't be challenged"
+]
+],
+"by": "read"
+},
+"818060": {
+"tags": [
+[
+"taunt",
+"Bodyguard"
+],
+[
+"immunity",
+"Ward"
+]
+],
+"by": "read"
+},
+"816922": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"hand_disruption",
+"chooses and discards either 2 cards or 1 action card"
+]
+],
+"by": "read"
+},
+"817478": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "read"
+},
+"817718": {
+"tags": [
+[
+"reactions",
+"During an opponent's turn"
+],
+[
+"other_death_trigger",
+"a character is banished while here"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"817137": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"discard",
+"choose and discard a card"
+]
+],
+"by": "read"
+},
+"818910": {
+"tags": [
+[
+"recycle",
+"Return an item card from your discard"
+],
+[
+"stat_condition",
+"4 willpower or more"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"818812": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"tribal",
+"Super or Hero character"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"816819": {
+"tags": [
+[
+"taunt",
+"Bodyguard"
+],
+[
+"aura",
+"Your other Musketeer characters get +1 strength"
+]
+],
+"by": "read"
+},
+"817582": {
+"tags": [
+[
+"forced_attack",
+"Opposing damaged characters gain Reckless"
+],
+[
+"condition_life",
+"damaged characters"
+]
+],
+"by": "read"
+},
+"818018": {
+"tags": [
+[
+"graveyard",
+"item card in your discard"
+],
+[
+"stat_gain",
+"gets +2 strength"
+]
+],
+"by": "read"
+},
+"818761": {
+"tags": [
+[
+"on_play",
+"When you play this item"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"discard",
+"choose and discard a card"
+],
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"evasion",
+"gains Alert this turn"
+]
+],
+"by": "read"
+},
+"818376": {
+"tags": [
+[
+"temporary_buff",
+"+2 strength this turn"
+],
+[
+"tribal",
+"Detective character"
+]
+],
+"by": "read"
+},
+"817986": {
+"tags": [
+[
+"recycle",
+"return an action card"
+]
+],
+"by": "read"
+},
+"817867": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"damage",
+"deal 1 damage to chosen character or location"
+]
+],
+"by": "read"
+},
+"817982": {
+"tags": [
+[
+"condition_life",
+"a damaged character challenges"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817201": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"symmetric_effect",
+"Each player puts the top 3 cards"
+],
+[
+"resource_gain",
+"into their inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"816727": {
+"tags": [
+[
+"recycle",
+"Return an action card from your discard to your hand"
+]
+],
+"by": "read"
+},
+"818481": {
+"tags": [
+[
+"on_attack",
+"Gargoyle characters challenges"
+],
+[
+"tribal",
+"Gargoyle characters"
+],
+[
+"points_scoring",
+"gain 1 lore"
+],
+[
+"hand_size",
+"3 or more cards in your hand"
+]
+],
+"by": "read"
+},
+"816662": {
+"tags": [
+[
+"free_play",
+"play a character with cost 5 or less for free"
+],
+[
+"cost_condition",
+"cost 5 or less"
+]
+],
+"by": "read"
+},
+"816782": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"heal",
+"remove up to 2 damage from each of your characters"
+],
+[
+"scope_multi",
+"each of your characters"
+]
+],
+"by": "read"
+},
+"816916": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"suppress",
+"can't quest during their next turn"
+]
+],
+"by": "read"
+},
+"817024": {
+"tags": [
+[
+"evasion",
+"your characters gain Evasive this turn"
+]
+],
+"by": "read"
+},
+"817014": {
+"tags": [
+[
+"upgrade",
+"Shift 5"
+],
+[
+"cost_type",
+"Shift 5"
+],
+[
+"damage_reduction",
+"Resist +2"
+],
+[
+"on_spell",
+"Whenever you play a song"
+],
+[
+"targeting_rules",
+"challenge ready characters"
+]
+],
+"by": "read"
+},
+"818716": {
+"tags": [
+[
+"merge_attach",
+"Boost 1 ink"
+],
+[
+"selection",
+"look at a number of cards from the top of your deck"
+],
+[
+"condition_count",
+"equal to the number of cards under him"
+]
+],
+"by": "read"
+},
+"818511": {
+"tags": [
+[
+"upgrade",
+"Shift 4 ink"
+],
+[
+"cost_type",
+"Shift 4 ink"
+],
+[
+"evasion",
+"gain Alert"
+],
+[
+"damage_reduction",
+"Resist +2"
+],
+[
+"tribal",
+"Detective characters"
+]
+],
+"by": "read"
+},
+"817285": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"modal_choice",
+"choose one"
+],
+[
+"temporary_buff",
+"gets +1 lore this turn"
+]
+],
+"by": "read"
+},
+"817463": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"aoe_damage",
+"deal 2 damage to each opposing damaged character"
+],
+[
+"condition_life",
+"damaged character"
+]
+],
+"by": "read"
+},
+"818157": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"return_to_hand",
+"return another chosen character of yours to your hand"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"818610": {
+"tags": [
+[
+"evasion",
+"Evasive"
+],
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"upkeep",
+"choose and discard a card or banish him"
+],
+[
+"discard",
+"choose and discard a card"
+]
+],
+"by": "read"
+},
+"818658": {
+"tags": [
+[
+"board_wipe",
+"Banish all locations"
+],
+[
+"draw",
+"Draw 2 cards"
+],
+[
+"discard",
+"choose and discard a card"
+]
+],
+"by": "read"
+},
+"817557": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"condition_life",
+"damaged character in play"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"817477": {
+"tags": [
+[
+"suppress",
+"Exert all opposing characters"
+],
+[
+"disable",
+"can't ready at the start of the their next turn"
+]
+],
+"by": "read"
+},
+"817480": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"points_scoring",
+"Gain 1 lore"
+]
+],
+"by": "read"
+},
+"818644": {
+"tags": [
+[
+"on_spell",
+"Whenever you play an action"
+],
+[
+"evasion",
+"gains Evasive"
+]
+],
+"by": "read"
+},
+"817345": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"condition_life",
+"opposing character has damage"
+],
+[
+"points_scoring",
+"gain 1 lore"
+],
+[
+"rule_change",
+"Damage counters can't be removed"
+]
+],
+"by": "read"
+},
+"817202": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"selection",
+"Look at the top 2 cards of your deck"
+],
+[
+"resource_gain",
+"into your inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"818164": {
+"tags": [
+[
+"on_targeted",
+"Vanish"
+],
+[
+"self_destruct",
+"Vanish"
+],
+[
+"tribal",
+"Illusion characters"
+],
+[
+"suppress",
+"exert chosen opposing character"
+]
+],
+"by": "read"
+},
+"818453": {
+"tags": [
+[
+"other_death_trigger",
+"challenged and banished"
+],
+[
+"destroy",
+"banish the challenging character"
+],
+[
+"immunity",
+"gain Ward"
+],
+[
+"tribal",
+"Emerald characters"
+]
+],
+"by": "read"
+},
+"817878": {
+"tags": [
+[
+"upgrade",
+"Shift 5"
+],
+[
+"cost_type",
+"Shift 5"
+],
+[
+"damage_reduction",
+"Resist +2"
+],
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"aoe_damage",
+"deal 1 damage to each opposing ready character"
+]
+],
+"by": "read"
+},
+"816923": {
+"tags": [
+[
+"stat_condition",
+"5 strength or more"
+],
+[
+"stat_gain",
+"gets +2 lore"
+]
+],
+"by": "read"
+},
+"818106": {
+"tags": [
+[
+"tribal",
+"Puppy character"
+],
+[
+"stat_gain",
+"+1 willpower"
+]
+],
+"by": "read"
+},
+"818691": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"count_payoff",
+"a character was banished this turn"
+],
+[
+"draw",
+"draw 2 cards"
+]
+],
+"by": "read"
+},
+"818532": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"temporary_buff",
+"gains Challenger +2 this turn"
+],
+[
+"tribal",
+"Detective character"
+]
+],
+"by": "read"
+},
+"817431": {
+"tags": [
+[
+"damage_reduction",
+"Resist +1"
+],
+[
+"variable_stats",
+"+2 strength for each other character named Magic Broom"
+],
+[
+"tribal",
+"named Magic Broom"
+]
+],
+"by": "read"
+},
+"816660": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"heal",
+"Remove up to 3 damage from each of your characters"
+]
+],
+"by": "read"
+},
+"817661": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"tribal",
+"another Knight character"
+],
+[
+"damage",
+"deal 1 damage"
+]
+],
+"by": "read"
+},
+"816746": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"destroy",
+"banish chosen character"
+]
+],
+"by": "read"
+},
+"817585": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"stat_condition",
+"5 strength or more"
+],
+[
+"points_scoring",
+"gain 2 lore"
+]
+],
+"by": "read"
+},
+"816962": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_kill",
+"banishes another character in a challenge"
+],
+[
+"untap",
+"ready this character"
+]
+],
+"by": "read"
+},
+"816897": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"bounce_enemy",
+"shuffle another chosen character card into their player's deck"
+],
+[
+"enemy_benefit",
+"That player draws 2 cards"
+]
+],
+"by": "read"
+},
+"817485": {
+"tags": [
+[
+"evasion",
+"named Koda can't be challenged"
+]
+],
+"by": "read"
+},
+"816870": {
+"tags": [
+[
+"activated",
+"exert, 3 ink"
+],
+[
+"revive",
+"Return a character card with Support"
+],
+[
+"assists_support",
+"with Support"
+]
+],
+"by": "read"
+},
+"818794": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"comeback",
+"more characters in play than you"
+],
+[
+"free_play",
+"play a character with cost 4 or less for free"
+]
+],
+"by": "read"
+},
+"818854": {
+"tags": [
+[
+"on_play",
+"When you play this item"
+],
+[
+"ping",
+"deal 1 damage to chosen character"
+],
+[
+"self_destruct",
+"Banish this item"
+]
+],
+"by": "read"
+},
+"818549": {
+"tags": [
+[
+"taunt",
+"Bodyguard"
+],
+[
+"rule_change",
+"only one character can challenge"
+]
+],
+"by": "read"
+},
+"818577": {
+"tags": [
+[
+"cost_reduction",
+"pay 1 ink less"
+]
+],
+"by": "read"
+},
+"818080": {
+"tags": [
+[
+"tribal",
+"another Pirate character"
+],
+[
+"temporary_buff",
+"gains Challenger +3"
+]
+],
+"by": "read"
+},
+"818025": {
+"tags": [
+[
+"on_attack",
+"Whenever one of your characters challenges"
+],
+[
+"damage_reduction",
+"gain Resist +2"
+],
+[
+"on_kill",
+"banishes another character in a challenge"
+],
+[
+"points_scoring",
+"gain 2 lore"
+]
+],
+"by": "read"
+},
+"817167": {
+"tags": [
+[
+"aura",
+"Your characters named Nutsy get +1 lore"
+]
+],
+"by": "read"
+},
+"818066": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"graveyard",
+"from your discard into your inkwell"
+],
+[
+"resource_gain",
+"from your discard into your inkwell"
+]
+],
+"by": "read"
+},
+"816774": {
+"tags": [
+[
+"cost_reduction",
+"pay 1 ink less for the next item"
+]
+],
+"by": "read"
+},
+"817283": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"death_trigger",
+"When this character is banished in a challenge"
+],
+[
+"revive",
+"return this card to your hand"
+]
+],
+"by": "read"
+},
+"817548": {
+"tags": [
+[
+"lane_rule",
+"while here"
+],
+[
+"other_death_trigger",
+"a character is banished while here"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817362": {
+"tags": [
+[
+"multi_target_attack",
+"deal the same amount of damage to another chosen character"
+]
+],
+"by": "read"
+},
+"818062": {
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"damage_reduction",
+"gains Resist +1"
+]
+],
+"by": "read"
+},
+"818790": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"stat_condition",
+"4 willpower or more"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"818449": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"hand_disruption",
+"discards a location card of your choice"
+],
+[
+"graveyard",
+"from chosen player's discard"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"817794": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"lanes",
+"at a location"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"817311": {
+"tags": [
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"temporary_buff",
+"gets +1 strength this turn"
+],
+[
+"hand_size",
+"for each card in your hand"
+]
+],
+"by": "read"
+},
+"816851": {
+"tags": [
+[
+"death_trigger",
+"When this character is banished"
+],
+[
+"deck_position",
+"reveal the top card of your deck"
+],
+[
+"free_play",
+"play that character for free"
+]
+],
+"by": "read"
+},
+"816675": {
+"tags": [
+[
+"upgrade",
+"Shift 6"
+],
+[
+"cost_type",
+"Shift 6"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"suppress",
+"exert up to 2 chosen characters"
+],
+[
+"disable",
+"can't ready at the start of their next turn"
+]
+],
+"by": "read"
+},
+"818429": {
+"tags": [
+[
+"points_scoring",
+"gain 1 lore"
+],
+[
+"haste",
+"named Demona gain Rush"
+]
+],
+"by": "read"
+},
+"818921": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"tribal",
+"Hero character"
+],
+[
+"points_scoring",
+"gain 1 lore"
+],
+[
+"type_grant",
+"counts as being named Syndrome for Shift"
+]
+],
+"by": "read"
+},
+"818191": {
+"tags": [
+[
+"kicker",
+"pay 2 ink"
+],
+[
+"untap",
+"ready another chosen character"
+]
+],
+"by": "read"
+},
+"818332": {
+"tags": [
+[
+"assists_support",
+"gain Support"
+],
+[
+"destroy",
+"banish chosen exerted character with 5 strength or more"
+],
+[
+"stat_condition",
+"5 strength or more"
+]
+],
+"by": "read"
+},
+"818680": {
+"tags": [
+[
+"haste",
+"Rush"
+],
+[
+"on_attack",
+"Whenever this character challenges"
+],
+[
+"lanes",
+"at a location"
+],
+[
+"protection",
+"takes no damage from the challenge"
+]
+],
+"by": "read"
+},
+"818693": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"destroy",
+"Banish up to 2 chosen characters"
+],
+[
+"stat_condition",
+"2 strength or less"
+],
+[
+"scope_multi",
+"up to 2 chosen characters"
+]
+],
+"by": "read"
+},
+"818725": {
+"tags": [
+[
+"removal",
+"into their player's inkwell"
+],
+[
+"enemy_benefit",
+"into their player's inkwell"
+],
+[
+"taunt",
+"with Bodyguard"
+]
+],
+"by": "read"
+},
+"816871": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"combo_sequence",
+"If you played a song this turn"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"816661": {
+"tags": [
+[
+"heal",
+"Remove up to 2 damage"
+]
+],
+"by": "read"
+},
+"817073": {
+"tags": [],
+"by": "read"
+},
+"817211": {
+"tags": [
+[
+"other_death_trigger",
+"a character is banished while here"
+],
+[
+"resource_gain",
+"into your inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"818122": {
+"tags": [
+[
+"upgrade",
+"Shift 2"
+],
+[
+"cost_type",
+"Shift 2"
+],
+[
+"condition_life",
+"has no damage"
+],
+[
+"damage_reduction",
+"gains Resist +2"
+]
+],
+"by": "read"
+},
+"818636": {
+"tags": [
+[
+"reactions",
+"During opponents' turns"
+],
+[
+"damage_reduction",
+"gains Resist +2"
+]
+],
+"by": "read"
+},
+"817002": {
+"tags": [
+[
+"hand_disruption",
+"Each opponent reveals their hand"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "read"
+},
+"816872": {
+"tags": [
+[
+"return_to_hand",
+"return another chosen character of yours to your hand"
+],
+[
+"points_scoring",
+"gain 2 lore"
+]
+],
+"by": "read"
+},
+"818598": {
+"tags": [],
+"by": "read"
+},
+"818660": {
+"tags": [
+[
+"aura",
+"Your characters get +1 strength"
+],
+[
+"damage_reduction",
+"gain Resist +1"
+]
+],
+"by": "read"
+},
+"818354": {
+"tags": [
+[
+"cost_type",
+"Sing Together 9"
+],
+[
+"symmetric_effect",
+"Each player draws 2 cards and gains 2 lore"
+],
+[
+"draw",
+"draws 2 cards"
+],
+[
+"points_scoring",
+"gains 2 lore"
+],
+[
+"untap",
+"ready them"
+]
+],
+"by": "read"
+},
+"817217": {
+"tags": [
+[
+"condition_count",
+"For each location you have in play"
+],
+[
+"damage_reduction",
+"gains Resist +1"
+],
+[
+"stat_gain",
+"gets +1 lore"
+]
+],
+"by": "read"
+},
+"816992": {
+"tags": [
+[
+"damage_reduction",
+"gains Resist +1"
+],
+[
+"immunity",
+"Ward"
+]
+],
+"by": "read"
+},
+"816835": {
+"tags": [
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"attack_lock",
+"can't challenge during their next turn"
+]
+],
+"by": "read"
+},
+"817740": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"hand_size",
+"fewer than 3 cards in your hand"
+],
+[
+"draw",
+"draw until you have 3 cards"
+]
+],
+"by": "read"
+},
+"818445": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"destroy",
+"banish chosen location"
+]
+],
+"by": "read"
+},
+"818007": {
+"tags": [
+[
+"symmetric_effect",
+"Each player exerts all the cards in their inkwell"
+],
+[
+"disruption",
+"returns cards at random from their inkwell"
+],
+[
+"random_effect",
+"at random"
+]
+],
+"by": "read"
+},
+"817357": {
+"tags": [
+[
+"upgrade",
+"Shift"
+],
+[
+"cost_type",
+"Shift: Discard a character card"
+],
+[
+"discard",
+"Discard a character card"
+],
+[
+"aura",
+"Your characters with 4 strength or more get +1 lore"
+],
+[
+"stat_condition",
+"4 strength or more"
+]
+],
+"by": "read"
+},
+"818442": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"merge_attach",
+"facedown under one of your characters or locations with Boost"
+]
+],
+"by": "read"
+},
+"817247": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"tutor",
+"search your deck for a Madrigal character card"
+],
+[
+"tribal",
+"Madrigal character card"
+],
+[
+"deck_position",
+"put that card on top of it"
+]
+],
+"by": "read"
+},
+"817846": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"damage_reduction",
+"gain Resist +6 this turn"
+],
+[
+"tribal",
+"Inventor characters"
+],
+[
+"resource_gain",
+"put this card into your inkwell"
+]
+],
+"by": "read"
+},
+"817412": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"graveyard",
+"character card from your discard"
+],
+[
+"resource_gain",
+"into your inkwell facedown and exerted"
+]
+],
+"by": "read"
+},
+"816829": {
+"tags": [
+[
+"destroy",
+"Banish chosen item"
+]
+],
+"by": "read"
+},
+"817122": {
+"tags": [
+[
+"type_grant",
+"as if this character had any name"
+],
+[
+"upgrade",
+"any character with Shift"
+]
+],
+"by": "read"
+},
+"818288": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"turn_start",
+"at the start of your turn"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"discard",
+"choose and discard a card"
+],
+[
+"variable_stats",
+"+1 strength for each card in your discard"
+],
+[
+"graveyard",
+"each card in your discard"
+]
+],
+"by": "read"
+},
+"818904": {
+"tags": [
+[
+"combo_sequence",
+"if you played another character this turn"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"818413": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"graveyard",
+"Gargoyle character cards in your discard"
+],
+[
+"tribal",
+"Gargoyle"
+],
+[
+"points_scoring",
+"gain 2 lore"
+]
+],
+"by": "read"
+},
+"816629": {
+"tags": [],
+"by": "read"
+},
+"816595": {
+"tags": [],
+"by": "read"
+},
+"818553": {
+"tags": [
+[
+"merge_attach",
+"Boost 2 ink"
+],
+[
+"stat_gain",
+"gets +2 strength and +2 willpower"
+]
+],
+"by": "read"
+},
+"818145": {
+"tags": [
+[
+"tribal",
+"named Hades"
+],
+[
+"temporary_buff",
+"gains Challenger +2"
+]
+],
+"by": "read"
+},
+"817429": {
+"tags": [
+[
+"stat_gain",
+"gets +2 strength"
+]
+],
+"by": "read"
+},
+"817777": {
+"tags": [
+[
+"hand_disruption",
+"Each opponent discards all cards in their hand"
+]
+],
+"by": "read"
+},
+"817615": {
+"tags": [
+[
+"activated",
+"exert chosen character here"
+],
+[
+"friendly_fire",
+"deal them 1 damage"
+],
+[
+"movement",
+"move them to another location for free"
+]
+],
+"by": "read"
+},
+"817409": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"stat_loss",
+"gets -3 strength this turn"
+],
+[
+"temporary_effect",
+"this turn"
+]
+],
+"by": "read"
+},
+"817638": {
+"tags": [
+[
+"immunity",
+"Ward"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"immunity",
+"your other characters gain Ward"
+]
+],
+"by": "read"
+},
+"816720": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"temporary_buff",
+"gets +2 strength this turn"
+]
+],
+"by": "read"
+},
+"816724": {
+"tags": [
+[
+"evasion",
+"Evasive"
+]
+],
+"by": "read"
+},
+"817419": {
+"tags": [
+[
+"on_spell",
+"Whenever you play a song"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"discard",
+"choose and discard a card"
+]
+],
+"by": "read"
+},
+"818159": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"graveyard",
+"card named Pull the Lever! in your discard"
+],
+[
+"tutor",
+"search your deck for a card named Wrong Lever!"
+]
+],
+"by": "read"
+},
+"817790": {
+"tags": [
+[
+"points_scoring",
+"each opponent loses 1 lore"
+]
+],
+"by": "read"
+},
+"816862": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"revive",
+"return a character card from your discard to your hand"
+]
+],
+"by": "read"
+},
+"817240": {
+"tags": [
+[
+"on_kill",
+"banishes another character in a challenge"
+],
+[
+"kicker",
+"pay 1 ink"
+],
+[
+"draw",
+"draw a card"
+],
+[
+"temporary_buff",
+"gain Challenger +1"
+]
+],
+"by": "read"
+},
+"817141": {
+"tags": [],
+"by": "read"
+},
+"818201": {
+"tags": [
+[
+"death_trigger",
+"When this character is banished"
+],
+[
+"modal_choice",
+"choose one"
+],
+[
+"aoe_damage",
+"Put 2 damage counters on all opposing characters"
+],
+[
+"destroy",
+"Banish all opposing items"
+]
+],
+"by": "read"
+},
+"818390": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"stat_loss",
+"gets -2 strength"
+],
+[
+"temporary_effect",
+"until the start of your next turn"
+],
+[
+"draw",
+"Draw a card"
+]
+],
+"by": "read"
+},
+"817825": {
+"tags": [
+[
+"immunity",
+"Ward"
+],
+[
+"damage_reduction",
+"gains Resist +1"
+]
+],
+"by": "read"
+},
+"818312": {
+"tags": [
+[
+"boss_phases",
+"Jafar deals"
+],
+[
+"aoe_damage",
+"deals 1 damage to each opposing character"
+],
+[
+"resource_gain",
+"put this card into his inkwell"
+]
+],
+"by": "read"
+},
+"817526": {
+"tags": [
+[
+"upgrade",
+"Shift 4"
+],
+[
+"cost_type",
+"Shift 4"
+],
+[
+"on_play",
+"When you play this character"
+],
+[
+"suppress",
+"exert all opposing characters"
+]
+],
+"by": "read"
+},
+"817263": {
+"tags": [
+[
+"assists_support",
+"Support"
+],
+[
+"temporary_buff",
+"get +1 lore this turn"
+],
+[
+"tribal",
+"Madrigal characters"
+]
+],
+"by": "read"
+},
+"817061": {
+"tags": [
+[
+"temporary_buff",
+"get +1 lore this turn"
+],
+[
+"tribal",
+"Villain characters"
+]
+],
+"by": "read"
+},
+"818005": {
+"tags": [
+[
+"cost_type",
+"exert to sing this song for free"
+],
+[
+"temporary_buff",
+"gets +1 strength this turn"
+],
+[
+"board_presence",
+"for each character you have in play"
+]
+],
+"by": "read"
+},
+"818381": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"hand_disruption",
+"discards a non-character card of their choice"
+]
+],
+"by": "read"
+},
+"817394": {
+"tags": [
+[
+"cost_type",
+"Shift: Discard an item card"
+],
+[
+"discard",
+"Discard an item card"
+],
+[
+"temporary_buff",
+"gets +strength equal to this character's strength this turn"
+],
+[
+"scope_multi",
+"each of your other characters"
+]
+],
+"by": "read"
+},
+"817101": {
+"tags": [
+[
+"heal",
+"Move 1 damage counter"
+],
+[
+"damage",
+"to chosen opposing character"
+]
+],
+"by": "read"
+},
+"817232": {
+"tags": [
+[
+"on_discard",
+"Whenever you discard a card"
+],
+[
+"ping",
+"deal 1 damage to chosen opposing character"
+]
+],
+"by": "read"
+},
+"817539": {
+"tags": [
+[
+"draw",
+"Draw a card"
+],
+[
+"temporary_buff",
+"gains Challenger +2 this turn"
+]
+],
+"by": "read"
+},
+"816772": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"aura",
+"Your other characters gain Ward"
+],
+[
+"immunity",
+"Your other characters gain Ward"
+]
+],
+"by": "read"
+},
+"818676": {
+"tags": [
+[
+"tribal",
+"Queen character"
+],
+[
+"stat_gain",
+"gets +2 strength"
+]
+],
+"by": "read"
+},
+"816798": {
+"tags": [
+[
+"assists_support",
+"gains Support this turn"
+]
+],
+"by": "read"
+},
+"817772": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"evasion",
+"gains Evasive until the start of your next turn"
+]
+],
+"by": "read"
+},
+"816800": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"temporary_buff",
+"gets +1 lore this turn"
+]
+],
+"by": "read"
+},
+"818380": {
+"tags": [
+[
+"upgrade",
+"Shift 4 ink"
+],
+[
+"cost_type",
+"Shift 4 ink"
+],
+[
+"on_ally_play",
+"Whenever you play a character or location with Boost"
+],
+[
+"merge_attach",
+"put the top card of your deck facedown under them"
+]
+],
+"by": "read"
+},
+"818090": {
+"tags": [
+[
+"damage",
+"Deal 1 damage each"
+],
+[
+"scope_multi",
+"up to 2 chosen characters"
+]
+],
+"by": "read"
+},
+"818261": {
+"tags": [
+[
+"taunt",
+"Bodyguard"
+],
+[
+"tribal",
+"Ally characters"
+],
+[
+"heal",
+"remove up to 2 damage from this character"
+]
+],
+"by": "read"
+},
+"818584": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"selection",
+"look at the top 4 cards of your deck"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"by": "read"
+},
+"817175": {
+"tags": [],
+"by": "read"
+},
+"817613": {
+"tags": [
+[
+"turn_start",
+"At the start of your turn"
+],
+[
+"stat_condition",
+"more strength than each opposing character"
+],
+[
+"points_scoring",
+"each opponent loses 1 lore and you gain lore"
+]
+],
+"by": "read"
+},
+"817391": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"tribal",
+"Princess or Queen character"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"816664": {
+"tags": [
+[
+"hand_disruption",
+"Each opponent chooses and discards 2 cards"
+]
+],
+"by": "read"
+},
+"817447": {
+"tags": [
+[
+"activated",
+"exert, 2 ink, Discard a card"
+],
+[
+"discard",
+"Discard a card"
+],
+[
+"damage",
+"Deal 2 damage to chosen character or location"
+]
+],
+"by": "read"
+},
+"817070": {
+"tags": [
+[
+"self_destruct",
+"Banish this item"
+],
+[
+"heal",
+"Remove up to 2 damage from each of your characters"
+]
+],
+"by": "read"
+},
+"817416": {
+"tags": [
+[
+"cost_type",
+"Shift: Discard a location card"
+],
+[
+"discard",
+"Discard a location card"
+],
+[
+"destroy",
+"banish chosen item"
+]
+],
+"by": "read"
+},
+"818102": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"information",
+"reveal a song card in your hand"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"817380": {
+"tags": [
+[
+"lane_rule",
+"while here"
+],
+[
+"on_attack",
+"challenges another character while here"
+],
+[
+"stat_condition",
+"3 strength or more"
+],
+[
+"points_scoring",
+"gain 1 lore"
+]
+],
+"by": "read"
+},
+"817231": {
+"tags": [
+[
+"upgrade",
+"Shift 3"
+],
+[
+"cost_type",
+"Shift 3"
+],
+[
+"on_kill",
+"banishes another character in a challenge"
+],
+[
+"points_scoring",
+"gain 2 lore"
+],
+[
+"death_trigger",
+"banished in a challenge"
+],
+[
+"draw",
+"draw a card"
+]
+],
+"by": "read"
+},
+"817468": {
+"tags": [
+[
+"aoe_damage",
+"Deal 2 damage to each opposing character"
+]
+],
+"by": "read"
+},
+"816830": {
+"tags": [
+[
+"damage",
+"Deal 2 damage to chosen character"
+]
+],
+"by": "read"
+},
+"818010": {
+"tags": [
+[
+"condition_life",
+"has damage"
+],
+[
+"stat_gain",
+"gets +3 strength"
+]
+],
+"by": "read"
+},
+"818184": {
+"tags": [
+[
+"cost_reduction",
+"pay 1 ink less"
+],
+[
+"tribal",
+"named Don Karnage"
+]
+],
+"by": "read"
+},
+"818831": {
+"tags": [
+[
+"cost_reduction",
+"pay 2 ink less"
+],
+[
+"condition_count",
+"2 or more cards were put into your discard"
+]
+],
+"by": "read"
+},
+"818144": {
+"tags": [
+[
+"on_play",
+"When you play this character"
+],
+[
+"bounce_enemy",
+"return chosen character, item, or location"
+],
+[
+"cost_condition",
+"cost 2 or less"
+]
+],
+"by": "read"
+},
+"816803": {
+"tags": [
+[
+"activated",
+"exert"
+],
+[
+"assists_support",
+"gains Support this turn"
+]
+],
+"by": "read"
+},
+"817225": {
+"tags": [
+[
+"turn_end",
+"At the end of your turn"
+],
+[
+"tribal",
+"Captain character"
+],
+[
+"friendly_fire",
+"deal 1 damage to this character"
+]
+],
+"by": "read"
+},
+"817155": {
+"tags": [
+[
+"activated",
+"ink"
+],
+[
+"untap",
+"Ready this character"
+]
+],
+"by": "read"
+},
+"816615": {
+"tags": [],
+"by": "read"
+},
+"817223": {
+"tags": [
+[
+"activated",
+"exert, 2 ink"
+],
+[
+"free_play",
+"Play a character for free"
+]
+],
+"by": "read"
+}
 }
