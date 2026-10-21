@@ -17,7 +17,7 @@ Only one or two: pull (Grappling Hook), shields (Phase Cannon, Grappling Hook), 
 
 ## Ranged
 Weapons: artillery strikes that damage and push; smoke and fire artillery [1].
-Only one: freeze (but smoke, also disable, is common) [1].
+Only one: freeze; smoke (Rocket Artillery, Smoke Mortar) also disables, so no disable splash [1].
 
 ## Science
 Weapons: utility, not damage: pull, push, swap, acid, shields, smoke, fire, freeze [1].
