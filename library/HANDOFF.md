@@ -23,7 +23,8 @@
 - **Fixes found on the way:** `key_wins.py apply` no longer drops a concept the corrected key now has; MTG `disable` patterns no
   longer read a card not untapping itself or tapping lands. Review of the rebuild differences: `tools/audit/rebuild_groups.md`.
 - **Cleanup:** one-time fixes (f01-f16 except the build steps f03, f05, f07), insert-only loading, retag and new-concepts scripts,
-  step3 reader rounds and scores, and the key readers' batch inputs are removed (git keeps them). `key.py final` refuses to
+  and the key readers' batch inputs are removed (git keeps them). The step3 files stay: the build reads its judged samples
+  there (`patterns3.py answers`). A rebuild from the stored library after the cleanup gives identical tags and pairs. `key.py final` refuses to
   overwrite a corrected key.
 - **Keys for the five newest games** (Lorcana 50, Stormbound, Star Wars Unlimited, Legends, Monster Train 40 each; random,
   seed 1; quotes checked). Scores: Lorcana wrong 164.0 / missed 78.0 per 100, Stormbound 105.0 / 70.0, SWU 177.5 / 70.0,
