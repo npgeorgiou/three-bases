@@ -115,5 +115,3 @@ w(G,'settle_00',{
 '757518':[["cost_set","0 cost"],["exhaust","which Exhaust"]],
 '757526':[["stat_gain","Your next Attack deals additional damage"]],
 })
-G='wh_underworlds'
-w(G,'settle_00',{'762735':[["immobilize","Ensnare"]]})

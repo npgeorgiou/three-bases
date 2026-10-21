@@ -18,12 +18,9 @@ NOTES = {
  'gwent': " Later load (12 Oct 2026): NonOwnable cards (tokens, created cards) from the same export, ' (created)' when the name exists, linked from the cards that create them (generates).",
  'shadowverse': " Later load (12 Oct 2026): tokens (set 90000, alternate art left out) and cards the first build dropped, linked from the cards that create them (generates).",
  'wh_40k_10e': " Later load (12 Oct 2026, BSData current): abilities and army rules whose text the library lacked; campaign content (Crusade) left out.",
- 'wh_killteam': " Later load (12 Oct 2026, BSData current): abilities, unique actions and rules whose text the library lacked.",
  'wh_aos_4th': " Later load (12 Oct 2026, BSData current): abilities and rules whose text the library lacked; Path to Glory and hero-creation entries left out.",
- 'wh_underworlds': " Later load (Oct 2026): the warscroll abilities of 8 warbands and the 4 Grand Alliance warscrolls (category ability, edition 'Embergard warband rules'), paraphrased from the official PDFs; fighter stat lines are not in the data.",
 }
-NOTES_LATER = {'wh_underworlds': " Later load (12 Oct 2026, yawudb): the deck cards the first build dropped (upgrades tagged items_consumables like every reviewed upgrade; attack profiles read as damage, ranged from range 2)."}
-for g, extra in list(NOTES.items()) + list(NOTES_LATER.items()):
+for g, extra in NOTES.items():
     cur = q('SELECT notes FROM games WHERE id=?', g)
     if cur and extra.strip() not in (cur[0][0] or ''):
         c.execute('UPDATE games SET notes=? WHERE id=?', ((cur[0][0] or '') + extra, g))
@@ -34,9 +31,7 @@ SOURCES = {   # later loads (12 Oct 2026), added once to the game's source line
  'sts1': 'Slay the Spire Wiki Module:Cards/data for upgraded cards',
  'gwent': 'the same export for the NonOwnable set (tokens)',
  'shadowverse': 'the same export for tokens (set 90000)',
- 'wh_underworlds': 'yawudb db.js (github.com/PompolutZ/yawudb) for dropped deck cards',
  'wh_40k_10e': 'BSData wh40k-10e (current) for abilities and rules the library lacked',
- 'wh_killteam': 'BSData wh40k-killteam (current) for abilities and rules the library lacked',
  'wh_aos_4th': 'BSData age-of-sigmar-4th (current) for abilities and rules the library lacked',
 }
 for g, sx in SOURCES.items():

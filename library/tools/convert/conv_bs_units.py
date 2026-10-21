@@ -1,9 +1,8 @@
-"""BSData repo -> load_cards.py JSON of unit datasheets, and stat lines for library units that have none (12 Oct 2026).
+"""BSData repo -> load_cards.py JSON of unit datasheets (40k, Age of Sigmar), and stat lines for library units that have none.
   - New units: unit entries (not hidden) whose name the game does not have yet; an entry that only groups models the library
-    already has is left out. Kill Team datasheets are operatives (model entries); its unit entries (fire teams) are not loaded.
-    As in the first build, a unit without any ability or special rule (Kill Team: without an ability) is left out. Text as the first build wrote units: each ability
+    already has is left out. A unit without any ability or special rule is left out. Text as the library writes units: each ability
     'Name: text', then 'Weapon abilities: ...' (weapon keywords) and 'Special rules: ...' (linked rules). Stats = the first stat
-    profile (40k/AoS 'Unit', Kill Team 'Operative'); other models' different profiles go to extra.model_stats. Campaign content (and campaign lines in a unit's text) left out.
+    profile ('Unit'); other models' different profiles go to extra.model_stats. Campaign content (and campaign lines in a unit's text) left out.
   - Stat lines: a library unit without stats whose name has exactly one distinct stat profile in the repo gets it (file 'stats_updates').
 Usage: conv_bs_units.py <game> <repo dir> <db> <out.json>"""
 import collections, json, os, re, sqlite3, sys
@@ -12,13 +11,13 @@ import bsdata
 from bsdata import strip, kids, walk, txt, profile_text
 import xml.etree.ElementTree as ET
 g, repo, db, out = sys.argv[1:5]
-STAT = {'wh_40k_10e': 'Unit', 'wh_killteam': 'Operative', 'wh_aos_4th': 'Unit'}[g]
-ABIL = {'wh_40k_10e': ('Abilities',), 'wh_killteam': ('Abilities', 'Ability', 'Unique Actions'),
+STAT = 'Unit'
+ABIL = {'wh_40k_10e': ('Abilities',),
         'wh_aos_4th': ('Ability (Activated)', 'Ability (Passive)', 'Ability (Spell)', 'Ability (Prayer)', 'Ability (Command)')}[g]
-WEAP = {'wh_40k_10e': (('Ranged Weapons', 'Melee Weapons'), 'Keywords'), 'wh_killteam': (('Weapons', 'Weapon'), 'WR'),
+WEAP = {'wh_40k_10e': (('Ranged Weapons', 'Melee Weapons'), 'Keywords'),
         'wh_aos_4th': (('Melee Weapon', 'Ranged Weapon'), 'Ability')}[g]
-ETYPE = 'model' if g == 'wh_killteam' else 'unit'   # a Kill Team datasheet is an operative (model); its 'unit' entries are fire teams
-CAMP = re.compile(r'crusade|battle honou?r|battle scar|requisition|experience points?|\bxp\b|path to glory|rival (lord|activity)|spec ops|campaign|glory points|renown|dossier|agenda|saint points|martyr points?|anvil of apotheosis', re.I)
+ETYPE = 'unit'
+CAMP = re.compile(r'crusade|battle honou?r|battle scar|requisition|experience points?|\bxp\b|path to glory|rival (lord|activity)|campaign|glory points|renown|agenda|saint points|martyr points?|anvil of apotheosis', re.I)
 clean = lambda t: re.sub(r'\s+', ' ', re.sub(r'\*\*|\^\^|\*', '', t or '')).strip()
 c = sqlite3.connect(db)
 names = {n for (n,) in c.execute("SELECT name FROM entities WHERE game=?", (g,))} | {n for (n,) in c.execute("SELECT name FROM merged_entities WHERE game=?", (g,))}
@@ -81,8 +80,8 @@ for f, root in roots:
         if wk: text += (' ' if text else '') + 'Weapon abilities: ' + ', '.join(wk) + '.'
         if sr: text += (' ' if text else '') + 'Special rules: ' + ', '.join(sr) + '.'
         if not st: C['no stat profile'] += 1; continue
-        if not ab and (g == 'wh_killteam' or not sr): C['no ability or special rule (left out, as in the first build)'] += 1; continue
-        ex = {'source': 'BSData datasheet (12 Oct 2026 load)'}
+        if not ab and not sr: C['no ability or special rule (left out, as in the first build)'] += 1; continue
+        ex = {'source': 'BSData datasheet'}
         others = [s for s in st[1:] if s != st[0]]
         if others: ex['model_stats'] = others
         cards.append(dict(ext_id='unit:' + name + '|' + fac, name=name, category='unit', source_type='unit', faction=fac,

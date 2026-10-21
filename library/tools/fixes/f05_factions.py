@@ -4,14 +4,12 @@
   - Age of Sigmar "<army> - <list>" (armies of renown) and "<army> [LEGENDS]": the faction is the army; the list name goes to
     extra.army_of_renown, the Legends mark to extra.legends.
   - Names cut at a hyphen by the first build ("Flesh", "Lumineth Realm") get the full army name.
-  - Kill Team: the same kill team written two ways (2021 and 2024 catalogues: "Pathfinder" / "Pathfinders", "Warp Coven" /
-    "Warpcoven") gets the more common spelling.
 Then the factions table is rebuilt from the entries (every faction, its size, and its concept profile: concepts with 3+ cards
 and share >= 5%, by lift, top 12)."""
 import json, re, sqlite3, sys, collections
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall(); dry = len(sys.argv) > 2
 moves = []   # (game, old, new, extra)
-for g in ('wh_40k_10e', 'wh_aos_4th', 'wh_killteam'):
+for g in ('wh_40k_10e', 'wh_aos_4th'):
     F = dict(q("SELECT faction, count(*) FROM entities WHERE game=? AND faction IS NOT NULL AND category NOT IN ('keyword','tribe') GROUP BY 1", g))
     for f in F:
         new, ex = None, {}
@@ -33,15 +31,6 @@ for g in ('wh_40k_10e', 'wh_aos_4th', 'wh_killteam'):
             full = [x for x in F if x != f and x.startswith(f + '-') and ' - ' not in x[len(f):]]
             if len(full) == 1: new = full[0]
         if new and new != f: moves.append((g, f, new, ex))
-    if g == 'wh_killteam':
-        key = lambda x: re.sub(r's$', '', re.sub(r'[^a-z]', '', x.lower()))
-        groups = collections.defaultdict(list)
-        for f in F:
-            if not re.search(r"\(\d{4}\)", f): groups[key(f)].append(f)   # core-rule editions stay apart
-        for k, fs in groups.items():
-            if len(fs) > 1:
-                keep = sorted(fs, key=lambda x: -F[x])[0]
-                moves += [(g, f, keep, {}) for f in fs if f != keep]
 for g, a, b, ex in moves: print(g, '|', a, '->', b, ex if ex else '')
 if dry: sys.exit()
 for g, a, b, ex in moves:

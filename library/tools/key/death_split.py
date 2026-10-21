@@ -15,8 +15,6 @@ import death_side as D
 # Kaptain's decisions per card (game, name): (concept to remove or None, concept to add or None)
 FIXED = [
  ('wh_aos_4th', 'Anvil of Apotheosis: Nighthaunt Hero', None, 'other_death_trigger'),
- ('wh_killteam', 'Tracker', None, 'death_trigger'), ('wh_killteam', 'Demolition Veteran', None, 'death_trigger'),
- ('wh_killteam', 'Second in Command', None, 'other_death_trigger'),
  ('duelyst', 'Cassyva Soulreaper', None, 'on_kill'), ('duelyst', 'Inkhorn Gaze', None, 'on_kill'),
  ('duelyst', 'Mana Deathgrip', None, 'on_kill'), ('faeria', "Seifer's Wrath", None, 'on_kill'),
  ('into_the_breach', 'High Tide', None, 'terrain'), ('into_the_breach', 'Seismic Activity', None, 'terrain'),
@@ -28,10 +26,7 @@ READ = {('darkest_dungeon', 'Corpses'): {'other_death_trigger'}, ('darkest_dunge
         ('hearthstone', 'Ascendance'): {'other_death_trigger'}, ('hearthstone', 'Food Fight'): {'other_death_trigger'},
         ('hearthstone', 'Starship'): {'other_death_trigger'}, ('inscryption', 'Gem Detonator (sigil)'): {'other_death_trigger'},
         ('into_the_breach', 'Tumblebug Leader'): {'other_death_trigger'}, ('mtg', 'Genju of the Fields'): {'other_death_trigger'},
-        ('mtg', 'Death Tyrant'): {'other_death_trigger'}, ('wh_40k_10e', 'Insurmountable Odds'): {'other_death_trigger'},
-        ('wh_bloodbowl3', 'Masters of Undeath'): {'other_death_trigger'}, ('wh_bloodbowl3', 'Plague Ridden'): {'other_death_trigger'},
-        ('wh_killteam', 'Tyrant Guard'): {'other_death_trigger'}, ('wh_underworlds', 'A Hard Death'): {'other_death_trigger'},
-        ('wh_underworlds', 'Dark Sacrifice'): {'other_death_trigger'}}
+        ('mtg', 'Death Tyrant'): {'other_death_trigger'}, ('wh_40k_10e', 'Insurmountable Odds'): {'other_death_trigger'}}
 WORDS = {'other_death_trigger': r"\b(dies|die|destroyed|slain|incapacitated)\b", 'death_trigger': r"\b(incapacitated|destroyed|dies)\b",
          'on_kill': r"\bif it dies\b", 'terrain': r"\bwill become (a |an )?\w+|\bleave fire on death"}
 
@@ -82,7 +77,7 @@ def main(apply):
                 if ent.get(int(i), ('',))[0] != nm: continue
                 text = ent[int(i)][1] or ''
                 m = re.search(WORDS[add], text, re.I)
-                if not m: continue   # a namesake whose text lacks the wording (two Kill Team "Tracker" entries)
+                if not m: continue   # a namesake whose text lacks the wording
                 if add and not any(t[0] == add for t in v['tags']):
                     v['tags'].append([add, m.group(0) if m else nm]); moved[game, 'decision: add ' + add] += 1; ch = True
         for i, v in key.items():   # rule-only keywords lose the new triggers too, then the fill

@@ -1,6 +1,6 @@
 # Adding a game to the library: cheap and safe
 
-Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file before you add a game.
+Read this whole file before you add a game.
 
 ## Rule zero
 - Scripts first. Cards are read only as in "Reading cards" at the end of this file, and only when Kaptain approves.
@@ -30,7 +30,7 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
    ext_id, name, category, faction, subtypes, cost, stats, text, and `keywords` as a field.
 2. Keep the source's keyword lists as a field and set `_keywords_from_field`. Links taken from source fields are trusted; links found by matching text are not.
 3. Build with the load: `sh tools/build.sh three-bases-library.sqlite <scratch>/new.sqlite <game>=<cards.json>`.
-   - One chain (21 Oct 2026): the new cards are added, their first tags join the frozen base (`start_clean.py keep`), and every
+   - One chain: the new cards are added, their first tags join the frozen base (`start_clean.py keep`), and every
      step runs over all games. The stored database is always the output of one such build; building twice gives identical tags.
      To reload a game, drop it first (`drop_game.py`).
 
@@ -65,7 +65,7 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 6. To get rid of wrong tags, narrow a pattern only after a sample of what the narrowing drops has been judged 90%+ wrong (`patterns3.py accept`).
    Narrowing cannot fix misses or sibling confusions.
 
-## 4b. Writing a pattern (what went wrong on 19-20 Oct 2026)
+## 4b. Writing a pattern
 1. **Find the wording on the cards first, in every game.** Before a pattern, scan all texts for the word family (for example
    double/twice/extra/additional/more; exile/banish/consume/devour/obliterate) and group the hits by the phrase around them, per
    game (`tools/step3/amp_patterns.py scan` does this). Write the pattern only from phrases you saw. Never assume one game's
@@ -104,13 +104,14 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 
 ## 6. Finish
 1. All build checks must pass: regression, combos, trigger pairs, query tests, realworld.
-2. Add at least 30 real-world cases with source URLs to `tools/realworld/<game>.tsv` (signatures, archetypes, combos, splashes;
-   card names exactly as the library stores them). They are the real test: run `realworld_why.py` and fix what misses before finishing.
-3. Check the database size. GitHub refuses files over 100 MB; the database is stored compact (`compact_text.py`) and without its indexes (`indexes.py`), about 59 MB on 21 Oct 2026 (`indexes.py` also keeps the frozen base only as its differences from the output).
+2. Make the real-world cases as `tools/realworld/RESEARCH.md` says: a source summary `tools/realworld/<game>.md`, then the cases
+   `<game>.tsv` (signatures, archetypes, combos, splashes in the library's own names). They are the real test: run
+   `realworld_why.py` and fix what misses before finishing.
+3. Check the database size. GitHub refuses files over 100 MB; the database is stored compact (`compact_text.py`) and without its indexes (`indexes.py`), about 55 MB (`indexes.py` also keeps the frozen base only as its differences from the output).
 4. Copy the build over `three-bases-library.sqlite`, then commit and push after each step together with its progress files, keys and decisions.
 5. Update `README.md`. Write a short handoff that says what is done, what the build applies, what is left, and the exact commands.
 
-## Reading cards (Kaptain's decision, 21 Oct 2026; the only way cards are read)
+## Reading cards (Kaptain's decision; the only way cards are read)
 **Why there is a key.** The library's tags come from regexes (patterns). The answer key is the only place where cards are
 read and tagged by judgement, so it is the only measure of whether the patterns are right: every score (wrong and missed per 100
 cards), every pattern accepted or narrowed, and every key-based fix is decided against it. A wrong or empty key tag makes a wrong
@@ -123,7 +124,7 @@ sources if the first lacks it). If no source defines it, write the definition fr
 `(assumed)` (Kaptain's decision). `key.py read` refuses to write the request while any keyword is undefined.
 
 **Keywords on cards.** A card that has a keyword has that keyword's effects, so its key entry carries the keyword's tags
-(without this, all 168 Blood Bowl players, whose text is only "Skills: Dodge." and the like, were read as empty). `key.py credit
+(without this, a card whose text is only "Skills: Dodge." would be read as empty). `key.py credit
 <game>` writes them into the card's entry in `key.json`: a card has a keyword when its source data lists it or when the name stands
 where the game prints keywords (start of the text, a line, sentence or clause, or a "Keywords:" list; the name may be in square
 brackets), and the tags are the keyword entry's own key tags, quoted with the keyword's name. The added tags are also listed in

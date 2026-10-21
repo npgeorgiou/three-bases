@@ -1,7 +1,6 @@
-"""Rebuild the trigger -> effect table for every game. The first build only made pairs for clauses where a concept being retagged
-appeared, so most cards with triggers had none (Runeterra: 367 of 929). Now every clause of every entry is read: its triggers
+"""Rebuild the trigger -> effect table for every game. Every clause of every entry is read: its triggers
 (general and per-game trigger patterns plus the trigger words below) and its effects (general and per-game effect patterns) are
-paired. Entries inherit the pairs of the keywords they have. Existing rows are kept (hand-made Underworlds warscroll pairs, Marvel Snap's own loader); new pairs are added.
+paired. Entries inherit the pairs of the keywords they have. Existing rows are kept (Marvel Snap's own loader); new pairs are added.
 Coverage check: per game, the share of entries with a trigger tag that have at least one pair; `check` fails below 50%.
 Usage: trigger_pairs.py <db> [check | pairs_only]  (pairs_only: after the tree move, pairs the entry's existing tags and adds no tag)"""
 import re, sqlite3, sys
@@ -78,7 +77,7 @@ if len(sys.argv) < 3 or sys.argv[2] != 'check':
                         if (e, a, b) in have: continue
                         have.add((e, a, b)); n += 1
                         c.execute("INSERT INTO trigger_effect(entity, game, trigger, effect, clause) VALUES(?,?,?,?,?)", (e, g, a, b, cl.strip()[:300]))
-    # an entry that has a keyword also has that keyword's trigger -> effect pairs (Inscryption sigils, Blood Bowl skills...)
+    # an entry that has a keyword also has that keyword's trigger -> effect pairs (Inscryption sigils...)
     k = 0
     kwp = {}
     for e, t, f, cl in q("SELECT t.entity, t.trigger, t.effect, t.clause FROM trigger_effect t JOIN entities x ON x.id=t.entity WHERE x.category='keyword'"): kwp.setdefault(e, []).append((t, f, cl))

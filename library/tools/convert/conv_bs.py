@@ -5,9 +5,9 @@ sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(_
 import bs_missing
 g, repo, db, out = sys.argv[1:5]
 bs_missing.c = __import__('sqlite3').connect(db)
-PT = {'wh_40k_10e': ('Abilities', 'rule'), 'wh_killteam': ('Abilities', 'Ability', 'Unique Actions', 'rule'),
+PT = {'wh_40k_10e': ('Abilities', 'rule'),
       'wh_aos_4th': ('Ability (Activated)', 'Ability (Passive)', 'Ability (Spell)', 'Ability (Prayer)', 'Ability (Command)', 'rule')}[g]
-CAMP = re.compile(r'crusade|battle honou?r|battle scar|requisition|experience points?|\bxp\b|path to glory|rival (lord|activity)|spec ops|campaign|glory points|renown|dossier|agenda|saint points|martyr points?|complete \w+ battles|at the end of (a|the) battle\b', re.I)
+CAMP = re.compile(r'crusade|battle honou?r|battle scar|requisition|experience points?|\bxp\b|path to glory|rival (lord|activity)|campaign|glory points|renown|agenda|saint points|martyr points?|complete \w+ battles|at the end of (a|the) battle\b', re.I)
 clean = lambda t: re.sub(r'\s+', ' ', re.sub(r'\*\*|\^\^|\*', '', t)).strip()
 m = bs_missing.missing(g, repo, PT)
 cards = []; C = collections.Counter(); names = set()
@@ -18,7 +18,7 @@ for r, t in m:
         st, cat, pre = 'faction/army rule', 'game_rule', 'rule:'
     else:
         p = r['ptype'].lower()
-        st = {'abilities': 'abilities', 'ability': 'ability', 'unique actions': 'unique actions'}.get(p, p)
+        st = {'abilities': 'abilities', 'ability': 'ability'}.get(p, p)
         cat = 'spell' if any(k in p for k in ('spell', 'prayer', 'psychic')) else 'ability'; pre = 'ab:'
     name = clean(r['name']).lstrip('*').strip()
     if (name, r['faction']) in names: C['same name'] += 1; continue

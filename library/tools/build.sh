@@ -24,7 +24,7 @@ steps() {   # $1 = db
   run fix_grants.py "$D"
   run fixes/f03_grant_not_does.py "$D"
   for f in reviews/*.json; do g=$(basename "$f" .json); run apply_review.py "$D" "$g" "$f" old; done
-  run kw_sync.py "$D" wh_bloodbowl3 wh_killteam wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:wh_underworlds h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th h:lorcana h:swu h:tesl h:monster_train
+  run kw_sync.py "$D" wh_40k_10e h:mtg h:hearthstone h:hs_battlegrounds h:shadowverse h:runeterra h:gwent h:duelyst h:faeria h:inscryption h:into_the_breach h:sts1 h:sts2 h:darkest_dungeon h:wh_aos_4th h:lorcana h:swu h:tesl h:monster_train
   run propagate.py "$D"
   run keyword_defs.py "$D"
   run outcome_tree.py "$D"
