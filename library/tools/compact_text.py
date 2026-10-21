@@ -44,7 +44,6 @@ clause_text = evidence_text
 def cols(c, t): return [r[1] for r in c.execute(f'PRAGMA table_info({t})')]
 
 def compact(c):
-    if 'ev_form' in cols(c, 'entity_concepts'): print('compact: already compact'); return
     c.execute('CREATE TABLE IF NOT EXISTS text_notes(id INTEGER PRIMARY KEY, note TEXT UNIQUE)')
     raw = {i: (g, n, t or '') for i, g, n, t in c.execute('SELECT id, game, name, text FROM entities')}
     norm = {}
@@ -58,28 +57,34 @@ def compact(c):
         if i >= 0: return (1, i, len(s))
         c.execute('INSERT OR IGNORE INTO text_notes(note) VALUES(?)', (s,))
         return (2, c.execute('SELECT id FROM text_notes WHERE note=?', (s,)).fetchone()[0], None)
-    ec = c.execute('SELECT entity, concept, role, method, evidence FROM entity_concepts').fetchall()
-    te = c.execute('SELECT entity, game, trigger, effect, clause, frequency, basis FROM trigger_effect').fetchall()
-    c.execute('DROP TABLE entity_concepts'); c.execute('DROP TABLE trigger_effect')
-    c.execute('CREATE TABLE entity_concepts(entity INTEGER, concept TEXT, role TEXT, method TEXT, ev_form INTEGER, ev_pos INTEGER, ev_len INTEGER, PRIMARY KEY(entity, concept, role))')
-    c.execute('CREATE TABLE trigger_effect(entity INTEGER, game TEXT, trigger TEXT, effect TEXT, cl_form INTEGER, cl_pos INTEGER, cl_len INTEGER, frequency TEXT, basis TEXT)')
-    c.executemany('INSERT INTO entity_concepts VALUES(?,?,?,?,?,?,?)', [(e, k, r, m, *place(e, ev)) for e, k, r, m, ev in ec])
-    c.executemany('INSERT INTO trigger_effect VALUES(?,?,?,?,?,?,?,?,?)', [(e, g, a, b, *place(e, cl), f, bs) for e, g, a, b, cl, f, bs in te])
+    for tg, pr in TABLES:   # the tags and pairs, and the frozen base (make_base.py) in the same form
+        if not c.execute("SELECT 1 FROM sqlite_master WHERE name=?", (tg,)).fetchone() or 'ev_form' in cols(c, tg): continue
+        ec = c.execute('SELECT entity, concept, role, method, evidence FROM %s' % tg).fetchall()
+        te = c.execute('SELECT entity, game, trigger, effect, clause, frequency, basis FROM %s' % pr).fetchall()
+        c.execute('DROP TABLE %s' % tg); c.execute('DROP TABLE %s' % pr)
+        c.execute('CREATE TABLE %s(entity INTEGER, concept TEXT, role TEXT, method TEXT, ev_form INTEGER, ev_pos INTEGER, ev_len INTEGER, PRIMARY KEY(entity, concept, role))' % tg)
+        c.execute('CREATE TABLE %s(entity INTEGER, game TEXT, trigger TEXT, effect TEXT, cl_form INTEGER, cl_pos INTEGER, cl_len INTEGER, frequency TEXT, basis TEXT)' % pr)
+        c.executemany('INSERT INTO %s VALUES(?,?,?,?,?,?,?)' % tg, [(e, k, r, m, *place(e, ev)) for e, k, r, m, ev in ec])
+        c.executemany('INSERT INTO %s VALUES(?,?,?,?,?,?,?,?,?)' % pr, [(e, g, a, b, *place(e, cl), f, bs) for e, g, a, b, cl, f, bs in te])
     indexes(c); c.commit()
     n = c.execute('SELECT count(*), sum(length(note)) FROM text_notes').fetchone()
-    print('compact: tags', len(ec), ', pairs', len(te), ', distinct notes', n[0], f'({n[1]} characters)')
+    print('compact: tags', c.execute('SELECT count(*) FROM entity_concepts').fetchone()[0], ', distinct notes', n[0], f'({n[1]} characters)')
+
+TABLES = [('entity_concepts', 'trigger_effect'), ('base_tags', 'base_pairs')]
 
 def expand(c):
-    if 'evidence' in cols(c, 'entity_concepts'): print('expand: already text'); return
     T = Texts(c)
-    ec = [(e, k, r, m, T.cut(e, f, p, l)) for e, k, r, m, f, p, l in c.execute('SELECT * FROM entity_concepts')]
-    te = [(e, g, a, b, T.cut(e, f, p, l), fr, bs) for e, g, a, b, f, p, l, fr, bs in c.execute('SELECT * FROM trigger_effect')]
-    c.execute('DROP TABLE entity_concepts'); c.execute('DROP TABLE trigger_effect'); c.execute('DROP TABLE text_notes')
-    c.execute('CREATE TABLE entity_concepts(entity INTEGER, concept TEXT, role TEXT, method TEXT, evidence TEXT, PRIMARY KEY(entity, concept, role))')
-    c.execute('CREATE TABLE trigger_effect(entity INTEGER, game TEXT, trigger TEXT, effect TEXT, clause TEXT, frequency TEXT, basis TEXT)')
-    c.executemany('INSERT INTO entity_concepts VALUES(?,?,?,?,?)', ec)
-    c.executemany('INSERT INTO trigger_effect VALUES(?,?,?,?,?,?,?)', te)
-    indexes(c); c.commit(); print('expand: tags', len(ec), ', pairs', len(te))
+    for tg, pr in TABLES:
+        if not c.execute("SELECT 1 FROM sqlite_master WHERE name=?", (tg,)).fetchone() or 'evidence' in cols(c, tg): continue
+        ec = [(e, k, r, m, T.cut(e, f, p, l)) for e, k, r, m, f, p, l in c.execute('SELECT * FROM %s' % tg)]
+        te = [(e, g, a, b, T.cut(e, f, p, l), fr, bs) for e, g, a, b, f, p, l, fr, bs in c.execute('SELECT * FROM %s' % pr)]
+        c.execute('DROP TABLE %s' % tg); c.execute('DROP TABLE %s' % pr)
+        c.execute('CREATE TABLE %s(entity INTEGER, concept TEXT, role TEXT, method TEXT, evidence TEXT, PRIMARY KEY(entity, concept, role))' % tg)
+        c.execute('CREATE TABLE %s(entity INTEGER, game TEXT, trigger TEXT, effect TEXT, clause TEXT, frequency TEXT, basis TEXT)' % pr)
+        c.executemany('INSERT INTO %s VALUES(?,?,?,?,?)' % tg, ec)
+        c.executemany('INSERT INTO %s VALUES(?,?,?,?,?,?,?)' % pr, te)
+    if all('evidence' in cols(c, tg) for tg, _ in TABLES if c.execute("SELECT 1 FROM sqlite_master WHERE name=?", (tg,)).fetchone()): c.execute('DROP TABLE IF EXISTS text_notes')
+    indexes(c); c.commit(); print('expand: tags', c.execute('SELECT count(*) FROM entity_concepts').fetchone()[0])
 
 def indexes(c):   # the two tables were just rebuilt; build.sh drops all indexes from its output at the end
     for s in IX.INDEXES:

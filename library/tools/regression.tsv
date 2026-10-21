@@ -21281,3 +21281,37 @@ wh_underworlds	814504	The Life Line	self_destruct	does	present
 wh_underworlds	814504	The Life Line	swap	does	present
 wh_underworlds	814504	The Life Line	turn_number	does	present
 wh_underworlds	814504	The Life Line	turn_start	*	absent
+wh_40k_10e	784552	Leader	other_death_trigger	*	absent
+wh_40k_10e	784552	Leader	death_trigger	*	absent
+gwent	756159	Doomed	leave_trigger	*	absent
+wh_killteam	790382	Demolition Veteran	death_trigger	does	present
+wh_killteam	814792	Second in Command	other_death_trigger	does	present
+wh_aos_4th	794129	Anvil of Apotheosis: Nighthaunt Hero	other_death_trigger	does	present
+faeria	741174	Bone Collector	other_death_trigger	does	present
+gwent	756611	She-Troll of Vergen	other_death_trigger	does	present
+wh_aos_4th	794366	Darkoath Wilderfiend	other_death_trigger	does	present
+duelyst	741734	Cassyva Soulreaper	on_kill	does	present
+duelyst	742164	Inkhorn Gaze	on_kill	does	present
+duelyst	742248	Mana Deathgrip	on_kill	does	present
+faeria	741254	Seifer's Wrath	on_kill	does	present
+into_the_breach	760872	High Tide	terrain	does	present
+into_the_breach	761156	High Tide	terrain	does	present
+into_the_breach	761160	Seismic Activity	terrain	does	present
+into_the_breach	761098	Smoldering Psion	terrain	does	present
+wh_aos_4th	794510	Dais Arcanum	leave_trigger	does	present
+wh_aos_4th	794510	Dais Arcanum	death_trigger	*	absent
+mtg	768050	The Ozolith	other_leave_trigger	does	present
+mtg	766477	Baffling End	leave_trigger	does	present
+mtg	766477	Baffling End	death_trigger	*	absent
+mtg	767951	Kaito, Dancing Shadow	leave_trigger	does	present
+mtg	767951	Kaito, Dancing Shadow	death_trigger	*	absent
+mtg	777671	Delusions of Mediocrity	leave_trigger	does	present
+mtg	777671	Delusions of Mediocrity	death_trigger	*	absent
+mtg	783466	Angel of Serenity	leave_trigger	does	present
+mtg	783466	Angel of Serenity	death_trigger	*	absent
+mtg	812633	Varchild, Betrayer of Kjeldor	leave_trigger	does	present
+mtg	812633	Varchild, Betrayer of Kjeldor	death_trigger	*	absent
+mtg	813404	Yes Man, Personal Securitron	leave_trigger	does	present
+mtg	813404	Yes Man, Personal Securitron	death_trigger	*	absent
+shadowverse	755963	Conquering Dreadlord	leave_trigger	does	present
+wh_killteam	790140	Tracker	death_trigger	does	present

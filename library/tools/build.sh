@@ -66,6 +66,7 @@ $P signature.py "$OUT"
 $P precision.py "$OUT"
 $P finalize.py "$OUT"
 $P regression.py "$OUT" check
+$P death_side.py   # wording tests of the own / another death and leave-play rule
 $P combo_check.py "$OUT"
 $P trigger_pairs.py "$OUT" check
 $P realworld.py "$OUT"
