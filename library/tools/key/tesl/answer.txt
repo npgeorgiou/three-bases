@@ -1,0 +1,497 @@
+821513|aoe_damage:does:Deal 1 damage to all enemies;direct_damage:does:all enemies;ping:does:Deal 1 damage
+821986|stat_gain:grants:+2/+2;on_play:does:Summon;graveyard:benefits:in your discard pile;tribal:benefits:Dragon
+822284|turn_end:does:At the end of your turn;stat_condition:benefits:5 power or more;in_hand_buff:does:reduce the cost of all creature in your hand by 1;cost_reduction:does:reduce the cost
+822234|on_play:does:Summon;in_hand_buff:does:Reduce the cost of an action in your hand by 2;cost_reduction:does:Reduce the cost
+822194|on_play:does:Summon;resource_gain:does:Gain 6 magicka this turn;temporary_effect:does:this turn
+821436|
+821645|on_play:does:Summon;draw:does:Draw a card;count_payoff:benefits:if an enemy rune has been destroyed this game
+821495|free_play:does:Prophecy;reactions:does:Prophecy;bounce_enemy:does:Unsummon a creature
+821904|stat_gain:grants:+0/+2;on_play:does:Summon;variable_stats:grants:power becomes equal to its health
+822191|on_play:does:Summon;board_clog:does:Summon a 0/1 Traget with Guard for your opponent;on_kill:does:Slay;permanent_growth:does:+1/+1
+821854|on_play:does:Summon;damage:does:Deal 2 damage to an enemy creature;stat_gain:grants:give a friendly creature +2/+2;modal_choice:does:or give
+821878|on_attack:does:When Ageless Automaton attacks a Guard;temporary_buff:does:+3/+0 and Breakthrough until end of turn;excess_damage:does:Breakthrough;taunt:counters:attacks a Guard
+822077|on_play:does:Summon;steal:does:Steal the top card of the opponent's deck;deck_position:does:top card;junk_cards:does:replace it with a Counterfeit Trinket
+821780|on_ally_play:does:When you summon another;stat_gain:grants:+0/+2
+822219|on_play:does:Summon;tribal:benefits:(Willpower) card in play;stat_multiply:does:double Redoran Oathman's health
+821596|attack_lock:does:Shackle all enemy creatures in a lane;cant_block:does:Shackle;scope_multi:does:all enemy creatures in a lane
+821468|excess_damage:grants:Breakthrough;stat_gain:grants:+1/+1
+821895|activated:does:Activate;copy:does:Put a copy of a random card from your opponent's deck into your hand;random_effect:does:random card
+821401|
+822336|taunt:does:Guard
+822272|combo_sequence:benefits:Plot;on_play:does:Summon;silence:does:Silence a creature;ping:does:deal 1 damage to it
+821791|taunt:does:Guard;on_play:does:Summon;resource_gain:does:Gain +1 max magicka
+821837|multi_attack:grants:can attack an additional time each turn;synergy_payoff:benefits:Pilfer;aura:does:Friendly creatures with Pilfer
+822030|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard;death_trigger:does:Last Gasp;in_hand_buff:does:Reduce the cost of a random Dragon in your hand by 1;tribal:benefits:Dragon;random_effect:does:random Dragon
+822192|on_play:does:Summon;board_clog:does:Summon a 0/1 Target with Guard for your opponent in each lane;aura:grants:Friendly creatures have;on_kill:grants:Slay;stat_gain:grants:+1/+1 and Lethal;deathtouch:grants:Lethal
+822197|on_play:does:Summon;tribal:benefits:(Intelligence) card in play;tutor:does:draw a random action from your deck;summon:does:summon a Riden Dead in each lane
+821374|damage:does:deal damage to each other without attacking
+822122|damage:does:Deal 3 damage to a creature;scope_multi:does:all enemy creatures with the same name
+821850|deathtouch:does:Lethal;on_play:does:Summon;ping:does:Deal 1 damage
+821657|on_spell:does:When you play an action;lifesteal:does:Drain;temporary_buff:does:Drain this turn
+822149|on_play:does:Summon;damage:does:Battle an enemy creature;scope_multi:does:Battle another enemy creature
+822394|haste:does:Charge
+821616|stat_loss:does:-4/-0;temporary_effect:does:this turn
+822013|free_play:does:Prophecy;reactions:does:Prophecy
+821478|stat_gain:grants:+2/+2
+821713|on_play:does:Summon;stat_gain:does:+2/+2;count_payoff:benefits:if a creature died this turn
+821403|
+821394|silence:does:Removes all text and effects from a creature
+821398|bounce_enemy:does:Returns a creature to its owner's hand
+822075|on_play:does:Summon;polymorph:does:Transform an enemy creature;stat_condition:benefits:2 power or less
+821956|movement:benefits:When Caravan Enforcer moves;permanent_growth:does:he gains +1/+1
+821381|transform:does:It transforms into a stronger creature when its condition is met
+822319|kicker:does:Exalt 3;stat_gain:does:+5/+5;rule_change:does:you can't lose the game
+821782|free_play:does:Prophecy;reactions:does:Prophecy;deathtouch:does:Lethal
+822112|lifesteal:does:Drain;taunt:does:Guard
+821603|on_play:does:Summon;merge_attach:does:equips;cost_condition:benefits:highest cost items;graveyard:does:in your discard pile
+821825|regeneration:does:Regenerate
+822154|on_play:does:Summon;stat_gain:grants:+4/+4;type_grant:does:it becomes (Neutral)
+822359|lifesteal:does:Drain
+821941|haste:does:Charge;on_play:does:Summon;stealth:counters:lose Cover
+821609|on_ally_play:does:When you summon a creature;cost_condition:benefits:costs 2 or less;copy:does:summon a copy of that creature;cross_lane:does:in the other lane
+822392|taunt:does:Guard
+821842|draw:does:draw a card;direct_damage:benefits:When an enemy rune is destroyed
+822376|draw:does:Draw a card;friendly_fire:does:deals 1 damage to you
+821969|lifesteal:does:Drain;synergy_payoff:benefits:Pilfers or Drains;resource_gain:does:gain +1 magicka this turn;temporary_effect:does:this turn
+821620|lifesteal:does:Drain
+821744|on_play:does:Summon;repeat_trigger:does:Trigger the Last Gasp of each friendly creature;synergy_payoff:benefits:Last Gasp
+821618|on_play:does:Summon;stat_gain:does:+1/+1;tribal:benefits:an action in your hand
+822103|movement:does:Move a friendly creature;temporary_buff:grants:+3/+0 and Drain this turn;lifesteal:grants:Drain
+821606|on_play:does:Summon;draw:does:Each player draws two cards;symmetric_effect:does:Each player;enemy_benefit:does:Each player draws
+821865|turn_start:does:At the start of your turn;stat_gain:grants:+1/+1;random_effect:does:random friendly creature
+821683|excess_damage:does:Breakthrough;on_play:does:Summon;summon:does:Summon a 1/1 Imperial Grunt
+822326|deathtouch:does:Lethal
+821819|on_play:does:Summon;stat_gain:does:+1/+1;graveyard:benefits:for each creature in your discard pile;condition_count:benefits:for each
+822274|combo_sequence:benefits:Plot;merge_attach:does:Equip a friendly creature;stat_gain:grants:+2/+2
+821972|death_trigger:does:Last Gasp;generate_cards:does:Put a random Shout into your hand;random_effect:does:random Shout
+822066|stat_gain:grants:+3/+3;damage:does:Battles your opponent's most powerful creature;stat_condition:benefits:most powerful creature
+821475|direct_damage:does:deal 1 damage to your opponent;ping:does:deal 1 damage
+821572|activated:does:Activate;direct_damage:does:Deal 1 damage to your opponent;count_payoff:benefits:If Dark Rift has dealt 5 damage;self_destruct:does:sacrifice it;summon:does:summon a Storm Atronach
+822052|upgrade:does:Shout - Level 1;bounce_enemy:does:Unsummon an enemy creature;stat_condition:benefits:power 3 or less
+822152|board_wipe:does:Destroy all creatures except for the most powerful creature;stat_condition:benefits:most powerful creature;friendly_fire:does:on noth sides;symmetric_effect:does:on noth sides
+821690|attack_lock:does:Shackle a creature;ping:does:deal 1 damage to it
+821498|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard;on_play:does:Summon;stat_gain:grants:+2/+0
+822172|on_play:does:Summon;aoe_damage:does:Deal 2 damage to all other cratures in this lane;friendly_fire:does:all other cratures
+821730|free_play:does:Prophecy;reactions:does:Prophecy;lifesteal:does:Drain
+822337|taunt:does:Guard
+822138|on_play:does:Summon;summon:does:Summon a Power Sphere in each lane;cross_lane:does:in each lane
+821909|on_play:does:Summon;random_ability:does:gains all Keywords;deck_position:benefits:top three cards of your deck
+822316|taunt:does:Guard;on_enemy_enter:does:When your opponent summons a creature;attack_zero:does:reduce its power to 0;temporary_effect:does:until the start of your turn
+821917|taunt:does:Guard;on_draw:does:When your opponent draws a Prophecy;draw:does:draw a card
+822264|free_play:does:Prophecy;reactions:does:Prophecy;on_play:does:Summon;damage:does:Battle an enemy creature
+822096|silence:does:Silence a creature;damage:does:deal 2 damage to it
+821576|stat_gain:grants:+2/+1;on_play:does:Summon;attack_lock:does:Shackle an enemy creature
+821697|free_play:does:Prophecy;reactions:does:Prophecy;on_play:does:Summon;movement:does:Move another friendly creature
+821676|on_play:does:Summon;destroy:does:Destroy an creature;stat_condition:benefits:2 power or less
+822008|passive:does:Ongoing;cost_reduction:does:cost 1 less;tribal:benefits:Your High Elves;immunity:does:You can't be damaged by actions
+821908|activated:does:Activate;sacrifice:cost:Sacrifice a creature;tutor:does:summon a creature from your deck that costs 1;free_play:does:summon a creature from your deck;cost_condition:benefits:costs 1
+821915|deathtouch:does:Lethal;on_play:does:Summon;attack_lock:does:Shackle an enemy creature in this lane
+821794|regeneration:does:Regenerate;on_play:does:Summon;stat_gain:does:+2/+2;hand_size:benefits:more cards in hands;comeback:benefits:your opponent has more cards
+822011|on_play:does:Summon;generate_cards:does:Put an Experimental Scroll into your hand
+821407|
+821887|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard
+821631|on_ally_play:does:When you summon another creature;stat_gain:grants:+1/+0
+822173|banish:does:Banish a creature;mill:does:all creatures from its owner's deck with same name
+822228|kicker:does:Exalt 5;merge_attach:does:Equipe a +5/+0 Heirloom Greatsword;stat_gain:does:+5/+0
+821805|deathtouch:does:Lethal;on_kill:benefits:When another friendly creature Slays;stat_gain:grants:+2/+2
+821817|on_play:does:Summon;revive:does:summon a random creature card from your discard pile;random_effect:does:random creature
+822090|activated:does:Activate;summon:does:Summon an Uncaged Wolf
+821559|free_play:does:Prophecy;reactions:does:Prophecy;on_play:does:Summon;attack_lock:does:Shackle an enemy creature
+821767|deathtouch:grants:Lethal;stat_gain:grants:+1/+1
+821963|on_draw:does:When you draw a card on your turn;in_hand_buff:does:reduce its cost by 1;cost_reduction:does:reduce its cost by 1
+822129|quests:does:Treasure Hunt;tribal:benefits:(Neutral) cards;transform:does:Sacrifice Abandoned Imperfect to summon an 8/8;summon:does:summon an 8/8 Awakened Imperfect;excess_damage:grants:Breakthrough;taunt:grants:Guard
+822206|other_death_trigger:does:When a creature dies;lifesteal:does:gains Drain this turn;temporary_buff:does:this turn
+822100|summon:does:Summon a random 1-cost creature in each lane;random_effect:does:random 1-cost creature;cross_lane:does:in each lane
+822166|passive:does:Ongoing;turn_end:does:At the end of your turn;combo_sequence:benefits:if you played three cards this turn;draw:does:draw a card
+821775|stat_gain:does:+2/+2;condition_count:benefits:7 or more max magicka
+821460|
+821843|on_play:does:Summon;steal:does:steals all keywords from enemy creatures;silence:does:steals all keywords
+822089|lifesteal:does:Drain;stat_gain:does:+5/+5;condition_count:benefits:30 or more health
+821918|on_kill:does:Slay;permanent_growth:does:+1/+1
+821485|aura:does:Other friendly creatures in this lane;stat_gain:grants:+1/+0
+822209|sacrifice:cost:Betra;repeat_trigger:does:Betra;in_hand_buff:does:Give the top three creatures of your deck +1/+1;deck_position:does:top three creatures
+821547|damage:does:Deal 2 damage to a creature
+821931|haste:does:Charge;death_trigger:does:Last Gasp;recycle:does:Shuffle Shadowmere into your deck;in_hand_buff:does:give it +3/+3
+822273|summon:does:Summon an Iposter;variable_stats:does:power and health equal to power of your most powerful creature;stat_condition:benefits:most powerful creature
+821771|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard
+821897|excess_damage:does:Brekathrough;on_damaged:does:When Dwarven Centurion is dealt damage;generate_cards:does:draw a 0/3 Dwarven Spider with Guard
+822161|passive:does:Ongoing;low_life:benefits:When you have 0 or less health;self_destruct:does:sacrifice The Mechanical Heart;heal:does:set your health to 10;comeback:does:restore a rune
+821402|
+821875|on_play:does:Summon;stat_gain:grants:+2/+1
+821416|
+821702|deathtouch:does:Lethal
+822130|modal_choice:does:Assemble;stat_gain:does:+1/+0;excess_damage:does:Breakthrough;regeneration:does:Regenerate
+822037|on_play:does:Summon;tutor:does:Draw a random Shout from your deck
+822015|activated:does:Activate;selection:does:Reveals three random 1-cost actions and draw one;generate_cards:does:draw one
+821998|taunt:does:Guard;on_play:does:Summon;stat_gain:grants:Give all creaturesin your discard pile +2/+2;graveyard:does:discard pile;death_trigger:does:Last Gasp;revive:does:Draw a random creature from your discard pile
+821795|deathtouch:does:Lethal
+822072|on_play:does:Summon;draw:does:Draw a card;tribal:benefits:two other (Willpower) creatures
+821554|on_play:does:Summon;generate_cards:does:Put a random Atronach into your hand;random_effect:does:random Atronach
+821552|death_trigger:does:Last Gasp;generate_cards:does:Put an Iron Sword into your hand
+821912|synergy_payoff:benefits:Friendly Pilfer abilities;on_kill:grants:also Slay abilities
+821614|on_play:does:Summon;summon:does:Summon a Flame Atronach in each lane;on_ally_play:does:When you summon another creature;direct_damage:does:deal 2 damage to your opponent
+821384|death_trigger:does:Triggers when the creature dies
+822201|kicker:does:Exalt 2;heal:does:Heal all freiendly creatures
+821586|turn_start:does:At the start of your turn;generate_cards:does:draw an Ice Spike
+821954|lifesteal:does:Drain;direct_damage:benefits:Pilfer;resource_gain:does:Gain 1 magicka this turn
+822258|taunt:does:Guarge;on_attack:does:Rally;in_hand_buff:does:Rally
+821619|copy:does:Draw a copy of a random creature from your opponent's deck;random_effect:does:random creature
+821806|free_play:does:Prophecy;reactions:does:Prophecy;summon:does:Summon a 2/2 Colovian Trooper with Guard in each lane;taunt:grants:Guard
+821924|merge_attach:does:Equip a +1/+0 Steel Dagger;stat_gain:grants:+1/+0;random_effect:does:random friendly creature;cross_lane:does:in each lane
+821743|on_play:does:Summon;destroy:does:Destroy a wounded creature;condition_life:benefits:wounded creature
+821997|regeneration:does:Regenerate;on_lifegain:does:When Frost Giant heals;heal:does:you gains that much health
+821753|on_play:does:Summon;summon:does:Summon a random Animal;random_effect:does:random Animal
+822301|summon:does:Summon two 1/1 Imperial Grunts;combo_sequence:benefits:Plot;heal:does:Gain 1 health for each friendly creature in that lane;condition_count:benefits:for each friendly creature
+821660|aura:does:Friendly creatures have +0/+1;stat_gain:grants:+0/+1
+822085|taunt:does:Guard;on_play:does:Summon;stat_gain:does:+1/+1;synergy_payoff:benefits:another creature with Guard
+822220|sacrifice:cost:Betray;repeat_trigger:does:Betray;summon:does:Summon a 3/3 Risen Horror with Guard
+822031|on_play:does:Summon;direct_damage:does:Deal 1 damage to your opponent
+822157|excess_damage:does:Breakthrough;on_play:does:Summon;heal:does:You gain 4 health
+821377|excess_damage:does:Damage it deals beyond what kills a creature is dealt to the opponent
+821784|death_trigger:does:Last Gasp;stat_gain:grants:+3/+3;random_effect:does:random friendly creature
+822169|tutor:does:Summon one of each creature from your deck;free_play:does:Summon one of each creature;cost_condition:benefits:costs 2 or less
+821922|on_play:does:Summon;cost_increase:does:Your opponent's cards cost 1 more next turn;delayed:does:next turn
+821507|merge_attach:benefits:When Alik'r Bandit equips an item;permanent_growth:does:he gains +1/+1
+821929|shield:does:Ward;on_play:does:Summon;stat_gain:does:+1/+1;graveyard:benefits:for each action in your discard pile;condition_count:benefits:for each action
+821978|on_kill:does:Slay;tribal:benefits:friendly Orcs;stat_gain:grants:+1/+1
+821592|shield:does:Ward
+821830|lifesteal:does:Drain;on_kill:does:Slay;steal:does:Summon the slain creature;revive:does:Summon the slain creature
+821429|
+821888|on_play:does:Summon;taunt:grants:Give all enemy creatures in this lane Guard
+821765|shield:does:Ward;on_damaged:does:When Iliac Sorcerer's Ward is broken;stat_multiply:does:double his power
+821987|turn_end:does:At the end of your turn;in_hand_buff:does:give the top creature of your deck +1/+1 and Guard;deck_position:does:top creature of your deck
+821970|stealth:benefits:When Nightprowler gains Cover;draw:does:draw a card
+822222|stat_loss:does:Set a creatures's power to 1
+821914|free_play:does:Prophecy;reactions:does:Prophecy;on_kill:does:Slay;generate_cards:does:Put a Completed Contract into your hand
+821816|on_play:does:Summon;stat_gain:grants:+1/+2;synergy_payoff:benefits:friendly Guards
+821892|
+821757|on_play:does:Summon;summon:does:Fill your lanes with 2/1 Spiderlings;board_presence:does:Fill your lanes;death_trigger:does:Last Gasp;friendly_fire:does:Destroy all friendly Spiderlings
+822263|combo_sequence:benefits:Plot;bounce_enemy:does:Unsummon a creature in this lane;stat_condition:benefits:power less than
+821745|on_kill:does:Slay;draw:does:Draw a card
+821373|modal_choice:does:Choose one of two bonuses;tribal:does:all your Factotums
+821953|stat_loss:does:Give an enemy creature -1/-1
+821955|steal:does:Trade a card in your hand for a random card;donate:does:Trade a card in your hand;random_effect:does:random card
+822046|on_ally_play:does:When you summon another creature;stat_condition:benefits:5 power or more;stat_gain:grants:+1/+1;excess_damage:grants:Breakthrough
+822035|on_play:does:Summon;stat_gain:grants:+3/+3;taunt:grants:Guard;tribal:benefits:(Neutral) creature
+821729|rule_change:does:All field lanes become Shadow lanes;stealth:grants:Shadow lanes;aura:does:Friendly creatures have +1/+0;stat_gain:grants:+1/+0
+821864|on_play:does:Summon;friendly_fire:does:Deal 2 damage to a friendly creature
+822022|on_draw:does:When you draw a creature;random_ability:grants:a random Keyword;in_hand_buff:does:give it a random Keyword
+821400|
+821617|taunt:does:Guard
+822058|death_trigger:does:Last Gasp;generate_cards:does:Put a Heavy Battleaxe into your hand
+821563|on_play:does:Summon;shield:grants:Give a creature a Ward
+821966|on_kill:does:Slay;permanent_growth:does:+2/+0;movement:does:May move;cross_lane:does:attack creatures in the other lane
+822005|on_ally_play:does:When you summon a Dragon;tribal:benefits:Dragon;shield:does:gains a Ward
+821567|on_play:does:Summon;direct_damage:does:Deal 2 damage to your opponent
+821465|
+821967|on_play:does:Summon;draw:does:Draw a card;tribal:benefits:two other (Agility) creatures
+822388|taunt:does:Guard;turn_start:does:At the start of your turn;random_ability:grants:give Dwarven Colossus a random Keyword
+822099|ping:does:Deal 1 damage;heal:does:gain 1 health;draw:does:draw 1 card
+821444|
+821457|
+821389|free_play:does:play it at once for free;reactions:does:When it is drawn from a broken rune;on_draw:does:When it is drawn
+821857|on_play:does:Summon;destroy:does:Destroy all wounded enemy creatures in this lane;condition_life:benefits:wounded
+821386|
+821673|free_play:does:Prophecy;reactions:does:Prophecy;on_play:does:Summon;stat_gain:grants:+2/+2;taunt:grants:Guard
+821639|stat_gain:does:+2/+0;board_presence:benefits:most creatures in this lane
+822212|on_play:does:Summon;selection:does:Look at the top two cards of your deck;draw:does:Draw one;self_mill:does:discard the other
+821487|on_play:does:Summon;stat_gain:grants:+1/+0
+822047|on_ally_play:does:When you summon a Dragon;tribal:benefits:Dragon;draw:does:draw a card
+821571|shield:does:Ward;on_damaged:does:When Daggerfall Mage's Ward is broken;generate_cards:does:put a Tome of Alteration into your hand
+822216|passive:does:Ongoing;repeat_trigger:grants:Your actions have Betray;sacrifice:cost:Betray
+821684|taunt:does:Guard;on_damaged:does:When Auroran Sentry is dealt damage;heal:does:you gain that much health
+821443|
+821551|on_spell:does:After you play an action;permanent_growth:does:gets +1/+1
+821543|sacrifice:cost:Sacrifice a creature;damage:does:deal 5 damage to a random enemy creature;random_effect:does:random enemy creature
+822168|variety_payoff:benefits:no duplicate cards in your deck;free_play:does:play a random creature, item, support and action from your deck;tutor:does:from your deck;random_effect:does:a random creature
+822313|on_play:does:Summon;board_clog:does:Summon a 0/1 Target with Guard for your opponent;on_kill:does:Slay;draw:does:Draw a card;cost_set:does:reduce its cost to 0
+822227|taunt:does:Guard;kicker:does:Exalt 3;stat_gain:does:+2/+2
+822082|taunt:does:Guard;on_play:does:Summon;support:does:Give yout Activated supports an extra use;untap:does:Activate your supports an extra time each turn
+821664|summon:does:Fill a lane with 1/1 Imperial Grunts;board_presence:does:Fill a lane
+822073|summon:does:Summon a 3/3 Sovngarde Hero
+822285|combo_sequence:benefits:Plot;stat_gain:does:+1/+1;condition_count:benefits:for each other card you're played this turn
+821688|stat_loss:does:Give a creature -1/-1
+821859|on_play:does:Summon;damage:does:Deal 4 damage to an enemy creature;aoe_damage:does:1 damage to all other enemy creatures
+822257|on_play:does:Summon;revive:does:Draw a Dewmer from your discard pile;tribal:benefits:Dewmer;stat_gain:grants:give it +2/+2
+821718|cost_set:does:reduce his cost to 1;turn_number:benefits:during your first turn
+821905|return_to_hand:does:Unsummon a friendly creature
+821881|on_ally_play:does:When you summon a creature;random_ability:grants:give it a random keyword
+821491|on_play:does:Summon;condition_life:benefits:wounded enemy creature;haste:does:give Silvenar Tracker Charge
+821396|on_play:does:Triggers when the creature is played
+821707|stat_gain:grants:+1/+1;on_play:does:Summon;lifesteal:grants:Drain this turn;temporary_buff:grants:Drain this turn
+821787|free_play:does:Prophecy;reactions:does:Prophecy;polymorph:does:Transform a creature into a 2/2 Shriveled Mummy
+821741|on_play:does:Summon;attack_lock:does:Shackle all enemy creatures in this lane
+821824|on_play:does:Summon;summon:does:Summon 1/1 Skeletons to fill this lane;aura:does:Other friendly Undead have +1/+1;tribal:benefits:Undead;stat_gain:grants:+1/+1
+821574|on_play:does:Summon;information:does:Reveal the top card of the opponent's deck;deck_position:does:top card
+821649|on_play:does:Summon;summon:does:Summon a 1/1 Young Wolf in the other lane;cross_lane:does:in the other lane
+821486|excess_damage:does:Breakthrough;aura:does:Other friendly Orcs in this lane;tribal:benefits:Orcs
+821643|on_spell:does:After you play an action;stat_gain:grants:gets +1/+1;random_effect:does:random friendly creature
+821920|turn_start:does:At the start of your turn;transform:does:Little Girl Changes into a 5/5 Ageless Vampire;lifesteal:does:Drain
+822365|taunt:does:Guard
+822028|blink:does:disappears to who knows where, then returns;movement:does:returns in the other lane;cant_attack:does:Shackled
+821836|taunt:does:Guard;on_kill:does:Slay;heal:does:Gain 3 health
+821393|upgrade:does:all your copies of it level up;on_spell:does:Each time you play a shout
+821612|on_play:does:Summon;draw:does:Draw a card;cost_set:does:reduce its cost to 0
+821390|on_attack:does:When it attacks;in_hand_buff:does:a random creature in your hand gets +1/+1;random_effect:does:a random creature
+821798|turn_end:does:At the end of your turn;summon:does:summon a 1/1 Argonian Recruit;condition_count:benefits:7 or more max magicka
+821527|free_play:does:Prophecy;reactions:does:Prophecy;on_play:does:Summon;aoe_damage:does:Deal 1 damage to all enemy creatures in this lane
+821408|
+821544|shield:grants:Give a creature a Ward
+822341|taunt:does:Guard
+821916|on_play:does:Summon;death_trigger:does:Last Gasp;draw:does:Draw a card;cost_reduction:does:reduce its cost by 2
+822104|on_play:does:Summon;steal:does:Steal Cover from another crature;stealth:does:Steal Cover
+822199|deathtouch:does:Lethal;on_attack:does:Rally;in_hand_buff:does:Rally
+821959|generate_cards:does:put another Lockpick into your hand;draw:does:draw a card;cost_reduction:does:reduce its costs by 2;random_effect:does:Choosen randomly
+821607|activated:does:Activate;recycle:does:Shuffle all cards in your hand with Prophecy into your deck;draw:does:draw that many cards
+822053|stat_gain:does:+1/+1;draw:does:draw a card
+821926|on_play:does:Summon;draw:does:Draw a card;discard:does:Then discard a card
+821855|on_play:does:Summon;merge_attach:does:Equip all friendly creatures in this lane;random_effect:does:random item
+821610|taunt:does:Guard;death_trigger:does:Last Gasp;aoe_damage:does:deals 6 damage to all enemy creatures in this lane
+821934|silence:does:Silence a creature;draw:does:Draw a card
+822074|on_ally_play:does:When you summon a Dragon;tribal:benefits:Dragon;permanent_growth:does:gains +1/+1
+822327|taunt:does:Guard
+821796|deathtouch:does:Lethal
+821995|on_play:does:Summon;draw:does:Draw a card;tribal:benefits:two other (Endurance) creatures
+821716|death_trigger:does:Last Gasp;direct_damage:does:Deal 3 damage to your opponent;heal:does:gain 3 health
+822211|taunt:does:Guard;kicker:does:Exalt 1;immunity:does:Your opponent can't target Indomitable Ordinator with actions
+822054|haste:does:Charge;taunt:does:Guard
+822111|direct_damage:benefits:Pilfer;free_play:does:Summon the top creature of your deck;deck_position:does:top creature of your deck
+821432|
+821692|movement:does:Move a friendly creature;draw:does:Draw a card
+821503|destroy:does:Destroy an enemy creature;stat_condition:benefits:a creature with higher power
+821599|free_play:does:Prophecy;reactions:does:Prophecy;on_play:does:Summon;draw:does:Draw a card;free_play:does:you may play it for free
+821420|
+821700|destroy:does:Destroy a wounded enemy creature;condition_life:benefits:wounded
+822165|on_play:does:Summon;variety_payoff:benefits:no duplicate cards in your deck;heal:does:you gain 5 health;comeback:does:restore a rune
+821450|
+821705|death_trigger:does:Last Gasp;enemy_benefit:does:Your opponent summons a 2/1 Mournhold Guardian
+822094|selection:does:Look at the top card of your deck;self_mill:does:You may discard it;draw:does:Draw a card;deck_position:does:top card
+821542|taunt:does:Guard;on_play:does:Summon;stat_multiply:does:Double a creature's power and health
+822298|on_play:does:Summon;stat_gain:grants:Give another friendly creature power and health;variable_stats:grants:equal to Ambitious Hireling's power
+821982|on_spell:does:After you play a Dragon or Schout;tribal:benefits:Dragon;transform:does:changes into Grandmaster Delphine
+821642|board_wipe:does:Destroy all creatures with 2 power or less in one lane;stat_condition:benefits:2 power or less;friendly_fire:does:Destroy all creatures
+821508|on_play:does:Summon;generate_cards:does:Put a Steel Dagger into your hand;merge_attach:benefits:When Alik'r Survivalist equips an item;permanent_growth:does:he gains +1/+1
+821380|lifesteal:does:damage it deals heals you that much
+822223|summon:does:Summon a 0/1 Vvardvark in each lane;cross_lane:does:in each lane
+821410|
+822012|shield:does:Ward;on_play:does:Summon;stat_gain:does:+2/+0;synergy_payoff:benefits:another creature with Ward
+821604|stat_gain:grants:+3/+0;on_attack:does:When the wielder attacks;aoe_damage:does:deals 1 damage to all enemy creatures in this lane
+822195|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard;on_play:does:Summon;movement:does:Move a friendly creature to this lane
+821866|free_play:does:Prophecy;reactions:does:Prophecy;on_play:does:Summon;draw:does:Draw a card
+821555|direct_damage:does:Deal 2 damage to your opponent;draw:does:Draw a card
+822045|haste:does:Charge;death_trigger:does:Last Gasp;generate_cards:does:Put a 5/5 Stormcloak Battalion in your hand
+821919|on_kill:does:Slay;revive:does:Summon a creature from your discard pile
+822078|destroy:does:Destroy a creature;stat_condition:benefits:4 power of less;steal:does:give its Keywords;in_hand_buff:does:to a random Dragon in your hand;tribal:benefits:Dragon
+821779|turn_start:does:At the start of your turn;heal:does:heal another random friendly creature;random_effect:does:random friendly creature
+821587|free_play:does:Prophecy;reactions:does:Prophecy;damage:does:Deal 4 damage
+821746|multi_attack:does:Can attack an additional time on each turn
+821474|ping:does:Deal 1 damage to a creature;draw:does:draw a card
+822200|kicker:does:Exalt 3;stat_gain:does:+6/+6;aura:does:Friendly Exalted creatures;immunity:grants:immune to damage
+821993|stat_gain:does:+2/+2;taunt:does:Guard;regeneration:does:Regenerate
+822351|stat_gain:grants:+2/+0
+822334|attack_lock:does:Shackle all enemy creatures in a lane
+821580|shield:does:Ward;on_damaged:does:When Breton Conjurer's Ward is broken;summon:does:summon a 5/5 Frost Atronach with Guard
+821900|on_play:does:Summon;damage:does:Deal 1 damage to an enemy creature for each friendly Orc;tribal:benefits:friendly Orc;condition_count:benefits:for each friendly Orc
+821480|stat_gain:grants:+1/+0;on_play:does:Summon;silence:does:Silence another creature
+822352|excess_damage:does:Breakthrough;taunt:does:Guard;shield:does:Ward
+822290|excess_damage:does:Breakthrough;lifesteal:does:Drain;shield:does:Ward
+822349|excess_damage:does:Breakthrough
+822275|excess_damage:does:Breakthrough
+822163|on_kill:does:Slay;permanent_growth:does:+1/+1
+821722|multi_attack:grants:Give a creature an extra attack this turn;temporary_buff:grants:this turn
+822034|on_kill:does:When Young Dragonborn Slay a Dragon;generate_cards:does:put a random Shout into your hand;on_spell:does:After you play a Shout;permanent_growth:does:gains +1/+1
+821803|on_enemy_enter:does:When an enemy creature is summoned;cant_attack:does:Shackle Imprisoned Deathlord
+821674|free_play:does:Prophecy;reactions:does:Prophecy;destroy:does:Destroy a creature
+822119|stat_loss:does:Set a creature's health to 1
+821539|excess_damage:does:Breakthrough
+822067|excess_damage:does:Breakthrough;on_play:does:Summon;aoe_damage:does:Deal 1 damage to all other creatures;friendly_fire:does:all other creatures;on_kill:does:Slay;permanent_growth:does:+1/+1
+821724|taunt:does:Guard;death_trigger:does:Last Gasp;draw:does:Draw a card
+821980|on_ally_play:does:When you summon another creature;stat_condition:benefits:5 health or more;stat_gain:grants:+1/+1;taunt:grants:Guard
+821514|turn_start:does:At the start of each player's turn;direct_damage:does:deal 2 damage to that player;symmetric_effect:does:each player's turn;friendly_fire:does:deal 2 damage to that player
+821737|free_play:does:Prophecy;reactions:does:Prophecy
+821833|on_play:does:Summon;low_life:benefits:less health than your opponent;stat_gain:does:+0/+2;taunt:does:Guard;excess_damage:does:Breakthrough
+821600|free_play:does:Prophecy;reactions:does:Prophecy;on_play:does:Summon;draw:does:Draw a card
+822338|revive:does:Summon a random creature from each discard pile;steal:does:from each discard pile;random_effect:does:a random creature
+821470|stat_gain:does:+2/+0;hand_size:benefits:no cards in hand
+822367|lifesteal:does:Drain
+821962|deathtouch:does:Lethal;on_play:does:Summon;stat_gain:does:+0/+2;synergy_payoff:benefits:another creature with Lethal
+822315|on_play:does:Summon;attack_lock:does:Shackle an enemy creature
+821948|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard;on_play:does:Summon;heal:does:You gain 3 health
+822190|on_kill:does:Slay;copy:does:Summon a copy of Morag Tong Aspirant
+821946|immunity:does:Immune to Lethal;deathtouch:counters:Immune to Lethal;on_kill:does:Slay;mill:does:Discard all copies of the slain creature from the opponent's deck
+821622|destroy:does:Destroy a creature;stat_condition:benefits:2 power or less
+821438|
+821413|
+821458|
+821512|on_play:does:Summon;silence:does:Silence another creature;ping:does:deal 1 damage to it
+821553|taunt:does:Guard;shield:does:Ward
+821550|death_trigger:does:Last Gasp;summon:does:Summon a random creature;random_effect:does:a random creature;cost_condition:benefits:cost less than or equal to your max magicka
+822185|sacrifice:cost:Betray;free_play:does:Summon a random creature from your deck;cost_condition:benefits:cost 3 or less;random_effect:does:random lane;return_to_hand:does:Unsummon it at the end of your turn;turn_end:does:at the end of your turn
+822039|on_play:does:Summon;modal_choice:does:Choose one;stat_gain:does:Gains +1/+1;taunt:does:Guard;generate_cards:does:Put a dandom Daedra into your hand;haste:does:Gains Charge
+821659|stat_gain:grants:+4/+4;on_play:does:Summon;destroy:does:Destroy an enemy Undead;tribal:benefits:Undead
+822287|excess_damage:does:Breakthrough;haste:does:Charge;lifesteal:does:Drain;taunt:does:Guard;deathtouch:does:Lethal;shield:does:Ward
+822113|on_damaged:does:When Brassilisk takes damage and survives;copy:does:summon a copy of it in the other lane;cross_lane:does:in the other lane
+822286|on_attack:does:Rally;in_hand_buff:does:Rally;hand_size:benefits:with no creatures in your hand;tutor:does:draw Bolvyn Venim from your deck
+821768|on_play:does:Summon;stat_gain:does:+1/+0;condition_count:benefits:for each enemy creature in this lane
+821736|haste:does:Charge;direct_damage:benefits:Pilfer;resource_gain:does:Gain 2 magicka
+821738|on_play:does:Summon;summon:does:Summon a 2/2 Wood Elf Scout with Charge;haste:grants:Charge;condition_life:benefits:wounded enemy creature;cross_lane:does:in each lane
+822135|on_play:does:Summon;lane_identity:benefits:in the left lane;stat_gain:does:+2/+0;lifesteal:does:Drain;taunt:does:Guard
+821685|board_wipe:does:Destroy all creatures in a lane;friendly_fire:does:Destroy all creatures
+822350|taunt:does:Guard
+821896|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard;on_play:does:Summon;heal:does:Gain 4 health
+822042|on_play:does:Summon;generate_cards:does:put three random Shouts into your hand;cost_set:does:reduce their costs to 0;random_effect:does:random Shouts
+821999|modal_choice:does:or transform all friendly;polymorph:does:Transform all enemy creatures in a lane into 2/2 Stricken Draugr;transform:does:transform all friendly creatures in a lane into 5/5 Hulking Draugrs
+822205|passive:does:While Betty Netch is in play;resource_gain:does:your magicka is increased by 2
+822057|turn_end:does:At the end of your turn;death_count:benefits:if three or more friendly creatures died this turn;summon:does:summon a 2/2 Rallying Stormcloak
+822254|on_play:does:Summon;tutor:does:Draw a random multi-attribute card from your deck
+821412|
+821808|
+821446|
+821781|aura:does:Friendly Orcs have +0/+2;tribal:benefits:Friendly Orcs;stat_gain:grants:+0/+2
+821528|on_attack:does:When Markarth Bannerman attacks;generate_cards:does:put two 1/1 Nord Firebrands with Charge into your hand
+822093|modal_choice:does:or the right lane;summon:does:Fill the left lane with Stormcloak Skirmisher;lane_identity:does:the left lane
+821739|haste:does:Charge
+821492|stat_gain:grants:+3/+0;on_play:does:Summon;stealth:grants:Give the wielder Cover at the end of turn
+822068|haste:does:Charge
+822088|on_play:does:Summon;in_hand_buff:does:Give creatures in your deck +1/+1
+821988|regeneration:does:Regenerate;on_damaged:does:When Frost Troll take damage;permanent_growth:does:it gains that much power
+822174|on_play:does:Summon;stat_condition:benefits:5 power or more;attack_lock:does:Shackle an enemy creature
+821611|on_play:does:Summon;damage:does:Deal 4 damage to a creature
+821983|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard;on_play:does:Summon;in_hand_buff:does:Give a creature in your hand Guard
+821455|
+821658|free_play:does:Prophecy;reactions:does:Prophecy;on_play:does:Summon;stat_loss:does:-4/-0;temporary_effect:does:this turn
+822196|combo_sequence:benefits:Plot;generate_cards:does:Put a random 0-cost card into your hand;random_effect:does:random 0-cost card
+821689|stat_gain:does:+2/+0;temporary_buff:does:on your turn
+821981|stat_gain:does:+1/+1;lifesteal:does:Drain
+822033|stat_gain:grants:+2/+3
+821996|regeneration:does:Regenerate
+821863|free_play:does:Prophecy;reactions:does:Prophecy
+821669|direct_damage:benefits:destroys an enemy rune;merge_attach:does:equip it with a random item;random_effect:does:random item
+822247|cant_attack:does:Permanently Shackled
+821418|
+821984|revive:does:Draw a creature from your discard pile
+822224|on_play:does:Summon;damage:does:Deal 3 damage to a creature;stat_condition:benefits:5 power or more
+822240|damage:does:Deal 7 damage to a creature;draw:does:Draw a card
+822171|on_play:does:Summon;stat_gain:does:+4/+4;taunt:does:Guard;variety_payoff:benefits:an action, item, and support;graveyard:benefits:in your discard pile
+822302|taunt:does:Guard
+822063|passive:does:Ongoing;on_ally_play:does:When you summon a creature;cost_condition:benefits:costs 7 or more;stat_multiply:does:double its power and health
+822003|sacrifice:cost:Sacrifice a creature;copy:does:summon a copy of it
+822140|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard;on_play:does:Summon;revive:does:Summon all Gearwork Spiders in your discard pile
+821628|attack_lock:does:Shackle a creature
+822235|summon:does:Summon a random Atronach;random_effect:does:random Atronach;stat_condition:benefits:5 power or more
+821545|death_trigger:does:Last Gasp;damage:does:Deal 3 damage to a random enemy;random_effect:does:random enemy
+821493|haste:does:Charge
+822106|lifesteal:does:Drain;deathtouch:does:Lethal
+822151|quests:does:Treasure Hunt;stat_gain:grants:Give the item +1/+1
+821630|activated:does:Activate;taunt:grants:Give a friendly creature Guard
+822098|temporary_buff:grants:+2/+0, Breakthrough;excess_damage:grants:Breakthrough;on_kill:grants:Slay and Pilfer;draw:grants:Draw a card
+821479|on_play:does:Summon;direct_damage:does:Deal 2 damage to each player;symmetric_effect:does:each player;friendly_fire:does:each player
+821839|taunt:does:Guard;death_trigger:does:Last Gasp;summon:does:Summon a 2/1 Mournhold Guardian with Guard
+822255|stat_gain:grants:+1/+1;on_play:does:Summon;summon:does:Summons a 0/1 Sheepish Dunmer in the other lane;cross_lane:does:in the other lane;death_trigger:does:Last Gasp
+822142|on_play:does:Summon;generate_cards:does:create an Abomination and put it into your hand;deck_position:does:top creature from both decks
+822126|taunt:does:Guard;on_play:does:Summon;tribal:benefits:(Neutral) card;generate_cards:does:put a random action into your hand;random_effect:does:random action
+821884|
+821710|direct_damage:benefits:Pilfer;permanent_growth:does:+3/+0
+822294|haste:does:Charge;lifesteal:does:Drain;shield:does:Ward
+821594|stat_gain:grants:+3/+3;on_play:does:Summon;buff:grants:Give all your other creatures the keywords;scope_multi:does:all your other creatures
+822330|haste:does:Charge
+822308|free_play:does:Prophecy;reactions:does:Prophecy;summon:does:Summon a 0/5 Illusory Wall with Guard in each lane;taunt:grants:Guard;self_destruct:does:Sacrifice them at the start of your turn;turn_start:does:at the start of your turn
+821399|shield:does:The first damage or effect that would hit it is prevented
+821382|kicker:does:Pay extra magicka when you play it to get a bonus
+821976|on_attack:does:after he attacks;cant_attack:does:Shackle Encumbered Explorer
+821715|haste:does:Charge
+822374|haste:does:Charge
+821792|on_play:does:Summon;stat_gain:grants:+1/+1
+821708|on_play:does:Summon;draw:does:Draw a card;cost_condition:benefits:costs 7 or more;cost_reduction:does:reduce its cost by 1
+821800|free_play:does:Prophecy;reactions:does:Prophecy;on_play:does:Summon;silence:does:Silence another creature
+822391|taunt:does:Guard
+821437|
+821712|on_play:does:Summon;movement:does:Move another friendly creature in this lane;stat_gain:grants:When a friendly creature moves, give it +1/+1
+821860|taunt:does:Guard
+821489|stat_gain:does:+3/+0;excess_damage:does:Breakthrough;merge_attach:benefits:while equipped with an item
+821640|
+821602|aoe_damage:does:Deal 3 damage to all creatures;friendly_fire:does:all creatures
+822238|stat_gain:grants:+1/+1;on_play:does:Summon;stat_condition:benefits:5 power or more;shield:grants:it gains a Ward
+821756|turn_start:does:At the start of your turn;summon:does:summon a random Spider;random_effect:does:random Spider
+821650|play_restriction:does:can't be summoned unless there's a friendly unit in each lane;cross_lane:benefits:in each lane
+821569|on_ally_play:does:When you play or activate a support;permanent_growth:does:give Craglorn Scavenger +1/+1
+821949|destroy:does:Destroy an enemy creature;stat_gain:grants:Give all friendly creatures in its lane +1/+1
+821701|direct_damage:benefits:Pilfer;tutor:does:Draw a random card from your deck that costs 0;cost_condition:benefits:costs 0
+821585|free_play:does:Prophecy;reactions:does:Prophecy;aoe_damage:does:Deal 2 damage to all creatures in one lane;friendly_fire:does:all creatures
+821635|taunt:grants:Guard;stat_gain:grants:+1/+3
+821761|heal:does:Heal a creature;stat_gain:grants:give it +1/+1
+822323|deathtouch:does:Lethal;on_play:does:Summon;draw:does:Draw a card
+822160|activated:does:Activate;stat_loss:does:Give a friendly creature -1/-1;summon:does:summon a 1/1 Reconstructed Spider
+821463|
+821852|turn_start:does:At the start of your turn;free_play:does:summon a random creature from your deck;random_effect:does:random lane
+821464|
+822041|recycle:does:Shuffle all creatures from your discard pile into your deck;in_hand_buff:does:Give them +5/+5;graveyard:does:from your discard pile
+822225|sacrifice:cost:Betray;transform:does:Transform a creature into a random creature that cost 1 more;random_effect:does:random creature
+822056|death_trigger:does:Last Gasp;summon:does:Summon a 2/2 Rallying Stormcloak in each lane
+821923|turn_start:does:At the start of your turn;revive:does:summon the highest cost creature from your discard pile;cost_condition:benefits:highest cost creature;haste:grants:give Charge;turn_end:does:At the end of the turn;recycle:does:put it on the bottom of your deck
+821414|
+822044|free_play:does:Prophecy;reactions:does:Prophecy;stat_gain:does:+2/+1
+821467|
+822110|quests:does:Treasure Hunt;stat_gain:does:+1/+1 and Drain;lifesteal:does:Drain;deathtouch:does:Lethal
+821797|deathtouch:does:Lethal;on_kill:does:Slay;resource_gain:does:Gain +1 max magicka
+821826|taunt:does:Guard;immunity:does:Your opponent can't target Nahagliiv with actions
+822300|destroy:does:Destroy a creature;combo_sequence:benefits:Plot;steal:does:Steal the creature instead
+821851|on_play:does:Summon;summon:does:Summon a 2/2 Colovian Trooper with Guard in each lane;other_death_trigger:does:When a friendly creature is destroyed;permanent_growth:does:gains +1/+1
+822304|taunt:does:Guard;on_play:does:Summon;heal:does:You gain 1 health for each enemy creature;condition_count:benefits:for each enemy creature
+821534|on_play:does:Summon;draw:does:draw two cards
+821500|on_play:does:Summon;stat_gain:does:+1/+1;count_payoff:benefits:for each destroyed enemy rune
+821961|on_play:does:Summon;stealth:grants:Give a friendly creature Cover;immunity:grants:Your opponent can't target it with actions;temporary_effect:does:until next turn
+821423|
+821663|
+822262|evasion:grants:ignores Guards;cross_lane:grants:can attack creatures in any lane;temporary_effect:does:this turn
+821903|passive:does:Ongoing;on_ally_play:does:When you play a 0-cost card;cost_condition:benefits:0-cost card;direct_damage:does:deal 1 damage to your opponent;heal:does:gain 1 health
+822281|on_play:does:Summon;stat_multiply:grants:Double the wielder's power and health;targeting_rules:does:can onle attack creatures
+822086|on_play:does:Summon;blink:does:Another creature disappears, then returns;delayed:does:at the end of the turn
+821419|
+821898|activated:does:Activate;damage:does:Deal 2 damage to a creature;spell_power:does:increase the damage Goldbrand deals by 2
+822208|on_play:does:Summon;information:does:Look at two of your opponent's cards;in_hand_buff:does:give all creatures in your hand +1/+1
+821945|on_play:does:Summon;steal:does:Steal a creature's keywords;silence:does:Steal a creature's keywords
+822032|on_damaged:does:When Raging Horker takes damage;permanent_growth:does:it gains +1/+1
+821499|generate_cards:does:Put two 1/1 Nord Firebrands with Charge into your hand;haste:grants:Charge
+822229|on_play:does:Summon;friendly_fire:does:deals 5 damage to himself;death_trigger:does:Last Gasp;generate_cards:does:Draw an Experimental Scroll
+821409|
+822400|on_play:does:Summon;stealth:does:Give Sheepish Dunmer Cover
+821667|direct_damage:benefits:Pilfer;tutor:does:Draw a random support from your deck
+821838|lifesteal:does:Drain;on_play:does:Summon;taunt:grants:Give all other friendly creatures in this lane Guard
+822116|on_play:does:Summon;tribal:benefits:(Neutral) card;stat_gain:does:+3/+3
+821985|shield:does:Ward;turn_end:does:At the end of your turn;self_destruct:does:sacrifice it
+822069|activated:does:Activate;heal:does:Gain 2 health
+821383|taunt:does:Enemy creatures in its lane must attack it before attacking anything else
+822083|on_play:does:Summon;stat_loss:does:Give all enemy creatures in this lane -1/-0
+822207|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard;on_play:does:Summon;stat_gain:does:+1/+1;condition_count:benefits:for each enemy creature in this lane
+821526|taunt:does:Guard
+821776|shield:does:Ward
+822137|heal:does:You gain 3 health;damage:does:Battle an enemy creature as if you had 3 power
+821565|copy:does:Draw a copy of a friendly creature
+821921|deathtouch:does:Lethal;on_kill:does:Slay;draw:does:Draw two cards;targeting_rules:does:can attack friendly creatures
+822371|random_effect:does:Don't worry which one it is;random_ability:grants:Give each friendly creature two random Keywords;aoe_damage:does:Deal 2 damage to each enemy creature;direct_damage:does:Deal 5 damage to each player;friendly_fire:does:5 damage to each player
+821835|destroy:does:Destroy an enemy creature or support card
+822040|passive:does:Ongoint;on_play:does:Summon;transform:does:Transform all cards in your deck into random Dragons;random_effect:does:random Dragons;cost_reduction:does:Your Dragons cost 1 less;tribal:benefits:Your Dragons
+821994|on_play:does:Summon;resource_gain:does:Gaint +1 max magicka
+822353|shield:does:Ward
+821930|on_spell:does:After you play an action;generate_cards:does:put a random action into your hand;random_effect:does:random action
+821790|on_play:does:Summon;stat_gain:does:+0/+2;taunt:does:Guard;deck_position:benefits:the top card of your deck
+822245|sacrifice:cost:Betray;aoe_damage:does:Deal 2 damage to all enemy creatures in a lane
+821411|
+821644|heal:does:gain 3 health;direct_damage:benefits:After an enemy rune is destroyed
+822020|on_play:does:Summon;summon:does:Summon a 5/5 Frost Atronach with Guard
+822252|on_kill:does:Slay;transform:does:Change into Saint Jiub
+822282|board_wipe:does:Deal 10 damage to each creature;aoe_damage:does:Deal 10 damage to each creature;friendly_fire:does:each creature
+821789|heal:does:Heal all friendly creatures in a lane;stat_gain:grants:give them all +1/+1
+821448|
+822250|destroy:does:Destroy an enemy support or (Neutral) creature;tribal:benefits:(Neutral) creature
+821813|free_play:does:Prophecy;reactions:does:Prophecy;taunt:does:Guard
+822062|on_play:does:Summon;damage:does:Battle an enemy creature
+822150|quests:does:Treasure Hunt;stat_gain:does:+5/+5;on_attack:does:After Ratway Prospector attacks;stealth:does:it gains Cover
+821535|merge_attach:benefits:When Whirling Duelist equips an item;aoe_damage:does:deal 1 damage to each enemy creature in this lane
+821426|
+821755|on_play:does:Summon;stat_loss:does:Give all enemy creatures in this lane -1/-1
+821648|direct_damage:benefits:When an enemy rune is destroyed;permanent_growth:does:gains +2/+0
+821820|taunt:does:Guard
+821695|free_play:does:Prophecy;reactions:does:Prophecy;direct_damage:benefits:Pilfer;permanent_growth:does:+1/+1
+822276|on_attack:does:Rally;in_hand_buff:does:Rally;stat_gain:does:+1/+3
