@@ -1,21 +1,24 @@
-signature	Ironclad	stat_gain	Strength scaling cards combined with relic bonuses	https://keengamer.com/articles/guides/slay-the-spire-2-best-character-tier-list
-signature	Ironclad	life_payment	Core self-damage synergies preserved	https://slaythespire2.gg/characters
-signature	Ironclad	exhaust	advanced Exhaust interactions raise his tactical ceiling	https://slaythespire2.gg/characters
-signature	Silent	damage_over_time	Poison stacks slowly chip away at enemies.	https://keengamer.com/articles/guides/slay-the-spire-2-best-character-tier-list
-signature	Silent	generate_cards	shiv generation	https://keengamer.com/articles/guides/slay-the-spire-2-best-character-tier-list
-signature	Silent	discard	The new Sly keyword transforms discard-heavy decks	https://slaythespire2.gg/characters
-signature	Defect	slots_queue	Orb-channelling automaton returns with Lightning, Frost, Dark, Plasma	https://slaythespire2.gg/characters
-signature	Necrobinder	summon	a skeletal companion who attacks, tanks damage, and scales via Summon	https://slaythespire2.gg/characters
-signature	Necrobinder	destroy	instantly kill enemies when Doom equals their health	https://keengamer.com/articles/guides/slay-the-spire-2-best-character-tier-list
-signature	Regent	resource_gain	manages Stars as a secondary resource	https://slaythespire2.gg/characters
-signature	Regent	permanent_growth	a scaling weapon that grows stronger each time you Forge	https://slaythespire2.gg/characters
-archetype	Ironclad	scaling	Demon Form stacks Strength every turn, so damage compounds	https://brokenbuilds.gg/slay-the-spire-2/guides/slay-the-spire-2-best-builds
-archetype	Silent	poison_attrition	discard combos and Poison attrition	https://slaythespire2.gg/characters
-archetype	Silent	card_advantage	Use discard synergies to cycle your deck efficiently.	https://keengamer.com/articles/guides/slay-the-spire-2-best-character-tier-list
-archetype	Defect	fortress	Focus scales every Frost orb you generate, so block compounds	https://brokenbuilds.gg/slay-the-spire-2/guides/slay-the-spire-2-best-builds
-archetype	Necrobinder	control	Doom converts everything you have banked into an execute	https://brokenbuilds.gg/slay-the-spire-2/guides/slay-the-spire-2-best-builds
-archetype	Regent	scaling	rewards patient long-term scaling with Stars and Forge	https://slaythespire2.gg/characters
-combo	Star Battery	Sovereign Blade	Star Battery and Sovereign Blade give the class a damage plan	https://brokenbuilds.gg/slay-the-spire-2/guides/slay-the-spire-2-best-builds
-combo	Parry	Sword Sage	The Parry and Sword Sage loop is genuinely strong	https://brokenbuilds.gg/slay-the-spire-2/guides/slay-the-spire-2-best-builds
-combo	Corruption	Feel No Pain	Exhaust Synergy (Corruption + Feel No Pain)	https://www.gamecat.it.com/articles/slay-the-spire-2-best-builds
-combo	Rupture	Hemokinesis	Rupture, Hemokinesis, Bloodletting, Combust, Reaper	https://www.gamecat.it.com/articles/slay-the-spire-2-best-builds
+signature	Ironclad	permanent_growth	Strength scaling	https://slaythespire2.gg/characters
+signature	Ironclad	life_payment	self-damage for power	https://slaythespire2.gg/characters
+signature	Ironclad	exhaust	Exhaust payoffs	https://slaythespire2.gg/characters
+signature	Silent	damage_over_time	Poison	https://slaythespire2.gg/characters
+signature	Silent	generate_cards	Shivs	https://slaythespire2.gg/characters
+signature	Silent	discard	discard combos	https://slaythespire2.gg/characters
+signature	Silent	on_discard	Sly	https://slaythespire2.gg/characters
+signature	Defect	slots_queue	Orbs	https://slaythespire2.gg/characters
+signature	Defect	spell_power	Focus	https://keengamer.com/articles/guides/slay-the-spire-2-best-character-tier-list
+signature	Necrobinder	summon	Osty scales by Summon	https://slaythespire2.gg/characters
+signature	Necrobinder	destroy	Doom executes at a threshold	https://slaythespire2.gg/characters
+signature	Necrobinder	draw	Souls, burst card draw	https://slaythespire2.gg/characters
+signature	Necrobinder	transform	card transform	https://slaythespire2.gg/characters
+signature	Regent	coin_economy	Stars, a second resource	https://slaythespire2.gg/characters
+signature	Regent	permanent_growth	Forge scales the Sovereign Blade	https://slaythespire2.gg/characters
+signature	Regent	summon	Minions	https://slaythespire2.gg/characters
+archetype	Ironclad	scaling	Strength stacking	https://brokenbuilds.gg/slay-the-spire-2/guides/slay-the-spire-2-best-builds
+archetype	Silent	poison_attrition	Poison attrition	https://slaythespire2.gg/characters
+archetype	Silent	card_advantage	discard cycling	https://keengamer.com/articles/guides/slay-the-spire-2-best-character-tier-list
+archetype	Defect	scaling	Orb scaling engines	https://slaythespire2.gg/characters
+archetype	Defect	fortress	Frost Tank	https://brokenbuilds.gg/slay-the-spire-2/guides/slay-the-spire-2-best-builds
+archetype	Regent	scaling	long-term scaling	https://slaythespire2.gg/characters
+combo	Star Battery	Sovereign Blade	climbing damage	https://brokenbuilds.gg/slay-the-spire-2/guides/slay-the-spire-2-best-builds
+combo	Parry	Sword Sage	early Block loop	https://brokenbuilds.gg/slay-the-spire-2/guides/slay-the-spire-2-best-builds
