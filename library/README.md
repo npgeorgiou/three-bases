@@ -128,8 +128,10 @@ Sources of the later loads (converter in brackets):
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Suggestions for improving the library
-Claude's suggestions (20 Oct 2026), from the real-world test and the checks of that day, with their state. Next steps: HANDOFF.md.
-1. **Mechanics check on the 19 older games** (Into the Breach done and kept, Inscryption checked, Faeria waiting on the key fix; 16 left, see HANDOFF.md). For each: 2-4 guide pages into `tools/mechanics/<game>.txt`, then
+Claude's suggestions (20 Oct 2026), from the real-world test and the checks of that day, with their state. The open work, in
+order, is in HANDOFF.md (the one list).
+1. **Mechanics check on the 19 older games** (Into the Breach done and kept, Inscryption checked, Faeria waiting on a re-measure;
+   16 left, HANDOFF.md open work 2). For each: the guide pages and rules terms into `tools/mechanics/<game>.txt`, then
    `coverage.py --mechanics`; fix the gaps in `tools/patterns/<game>.txt`, then reload the game (suggestion 2) and keep the reload
    only if the key, regression and real-world cases are not worse. A plain reload is not better by itself: Into the Breach reloaded
    with today's patterns went from 74 to 130 wrong tags per 100 key entries (a general "tile" pattern tags it terrain).
@@ -151,7 +153,8 @@ Claude's suggestions (20 Oct 2026), from the real-world test and the checks of t
 7. **Combos with no connection** (open). After the audit: 11 pairs have both cards but no connection, 9 have a card the library
    lacks (Inner Fire, Cobalt Guardian, Obol, Wong, Pestermite, Star Battery, Impulsor, Baron Rivendare in Battlegrounds, Letho
    with the old Fake Ciri text). Each unconnected pair needs its two cards' tags read to see which link is missing.
-8. **Answer keys for the new games** (not asked). Lorcana, Stormbound, Star Wars Unlimited, Legends and Monster Train have no key.
+8. **Answer keys for the new games** (done 21 Oct 2026): read with the one-request method (ADDING_GAMES.md, "Reading cards").
 9. **Missing data through the browser** (open). Legends sets after Houses of Morrowind (UESP), Stormbound cards after February 2022
-   (fandom wiki), keyword glossaries for Legends and Monster Train. The built-in browser reaches the Stormbound wiki and UESP.
+   (fandom wiki), the keyword entry texts of Monster Train and two Legends keywords (their definitions are in the mechanics files
+   since 21 Oct 2026). The built-in browser reaches the Stormbound wiki and UESP.
 10. **Warhammer** (not asked). Its army rules are long prose; the mechanics check of suggestion 1 shows what the patterns miss.
