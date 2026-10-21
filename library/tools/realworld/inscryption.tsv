@@ -1,3 +1,18 @@
-signature	Undead	death_trigger	broken obols (ones that give extra bone on perish)	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
-archetype	Undead	sacrifice	Bone deck is a good one to start with	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
-combo	Necromancer	Obol	Necromancers force any card to die twice.	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
+signature	Beast	sacrifice	Blood costs paid by sacrifice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
+signature	Beast	generate_cards	Warren puts a Rabbit in hand	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Beast	deathtouch	Adder kills what it damages	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Beast	evasion	Hawk hits past blockers	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Undead	cost_type	Bones	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Undead	sacrifice	destroying its own cards	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Undead	death_trigger	Draugr releases a creature when it perishes	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Technology	resource_gain	energy-boosting cards	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Technology	aura	support circuits buff robots	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Technology	autonomous_units	49er moves on its own	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Magick	multiple_resources	Mox of three colours	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Magick	draw	Blue Mage draws per Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+archetype	Undead	sacrifice	Necromancers and perish effects	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
+combo	Necromancer	Obol	the Obol dies twice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
+combo	Warren	Rabbit	Warren supplies Rabbits	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+combo	Blue Mage	Sapphire Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+combo	Mage Knight	Ruby Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+combo	Junior Sage	Emerald Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
