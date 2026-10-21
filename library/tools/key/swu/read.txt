@@ -60,17 +60,16 @@ Keyword and trait names translated from the French export (keywords checked agai
 ## Card types and tribes
 Armor, Bounty Hunter, Capital Ship, Clone, Condition, Creature, Disaster, Droid, Ewok, Fighter, First Order, Force, Fringe, Gambit, Gungan, Hutt, Imperial, Innate, Inquisitor, Item, Jawa, Jedi, Kaminoan, Law, Learned, Lightsaber, Mandalorian, Modification, Musician, Naboo, New Republic, Night, Nihil, Official, Pilot, Plan, Rebel, Republic, Resistance, Separatist, Sith, Spectre, Speeder, Supply, Tactic, Tank, Transport, Trick, Trooper, Tusken, Twi'lek, Undead, Underworld, Vehicle, Walker, Weapon, Wookiee
 
-## Mechanics the game's guides name
-sentinel, restore, heal, defeat enemy, experience tokens, shield tokens, exhaust units, when defeated, resource acceleration, many units, capture, raid, ambush, overwhelm, saboteur, hidden, ready units, return to hand, when played, draw cards, damage to base, discard from hand, initiative, grit, tokens
-
-## From the game's rules pages
-# Source: https://rulespal.com/star-wars-unlimited/rulebook
+## Rules and terms
 - Zones: each player has a base and a leader in the base zone, a resource zone (face-down resources), deck, hand and discard pile; the ground arena and the space arena are shared, and a unit attacks an enemy unit in its own arena or the opposing base.
 - Rounds: an action phase in which players alternate one action (play a card, attack with a unit, use an action ability, take the initiative, pass) until both pass in a row; then the regroup phase: each player draws 2, may put one card from hand into resources, and readies all exhausted cards.
 - Ready and exhaust: non-leader units and resources enter play exhausted; paying costs exhausts resources; a ready unit exhausts to attack.
 - Attacks: attacker and defender deal damage equal to their power to each other at the same time. A unit with damage equal to or over its HP is defeated (a leader unit returns exhausted to the base zone). A player whose base reaches 0 HP loses.
 - Upgrades attach to friendly or enemy units and change power and HP; they are defeated when their unit leaves play. Experience tokens are upgrades giving +1 power and +1 HP.
 - Initiative: its holder acts first each round; taking it is an action, after which that player passes for the rest of the phase.
+
+## Mechanics the game's guides name
+sentinel, restore, heal, defeat enemy, experience tokens, shield tokens, exhaust units, when defeated, resource acceleration, many units, capture, raid, ambush, overwhelm, saboteur, hidden, ready units, return to hand, when played, draw cards, damage to base, discard from hand, initiative, grit, tokens
 
 ## Concepts (id | name | what counts | Not: what does not count and where it goes)
 buff | Make a unit stronger (buff) | A unit gains stats or a combat ability it did not have: more power or health, first strike, flying, extra attacks, reach, piercing. | Not: Improving a card still in hand is in_hand_buff; a unit printed with high stats is not buffed.

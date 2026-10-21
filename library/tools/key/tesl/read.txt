@@ -75,14 +75,13 @@ Keyword field from the source; keyword definitions are Claude's summaries. Sets 
 ## Card types and tribes
 Animal, Argonian, Ash Creature, Ash Creture, Ash creature, Beast, Breton, Breton , Centaur, Chaurus, Daedra, Daedra , Dark Elf, Dark elf, Defense, Defensor, Dragon, Dreugh, Dwemer, Dwermer, Fabricant, Fabricant , Factotum, Falmer, Fish, Gargoyle, Giant, Goblin, God, Harpy, High Elf, Imp, Imperfect, Imperial, Insect, Kajiit, Khajiit, Kwama, Lurcher, Lycanthrope, Mammoth, Mantikora, Minotaur, Mudcarb, Mudcrab, Mummy, Nereid, Netch, Nord, Ogre, Orc, Pastry, Reachman, Redguard, Reptile, Skeever, Skeleton, Spider, Spirit, Spriggan, Troll, Vampire, Wamasu, Werewolf, Wolf, Wood Elf, Wood elf, Wraith
 
-## Mechanics the game's guides name
-atronachs, equip items, random spells, summon many, take control, lethal, move lanes, cover, pilfer, guard, increase magicka, healing, big creatures, prophecy
-
-## From the game's rules pages
-# Source: https://en.uesp.net/wiki/Legends:Guard (and its keyword navigation)
+## Rules and terms
 - Enemy Guard creatures in a lane must be destroyed before other creatures in that lane can damage the opponent's health.
 - The shadow lane gives Cover; damage to a player breaks Runes; some effects gain max magicka.
 - Keywords and mechanics: Guard, Prophecy, Regenerate, Last Gasp, Pilfer, Cover, Shackle, Silence, Charge, Drain, Breakthrough, Lethal, Ward, Rally, Exalt, Slay, Summon, Consume, Veteran, Plot, Treasure Hunt, Mobilize, Betray, Assemble, Empower, Ongoing, Wax, Wane, Wounded, Activate, Move.
+
+## Mechanics the game's guides name
+atronachs, equip items, random spells, summon many, take control, lethal, move lanes, cover, pilfer, guard, increase magicka, healing, big creatures, prophecy
 
 ## Concepts (id | name | what counts | Not: what does not count and where it goes)
 buff | Make a unit stronger (buff) | A unit gains stats or a combat ability it did not have: more power or health, first strike, flying, extra attacks, reach, piercing. | Not: Improving a card still in hand is in_hand_buff; a unit printed with high stats is not buffed.

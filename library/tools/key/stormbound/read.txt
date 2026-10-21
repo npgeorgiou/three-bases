@@ -34,14 +34,13 @@ No keyword list in the source; status words are read by patterns. Numbers that c
 ## Card types and tribes
 Construct, Dragon, Dwarf, Feline, Frostling, Knight, Pirate, Raven, Rodent, Satyr, Toad, Undead
 
-## Mechanics the game's guides name
-freeze, mana gain, area damage, poison, toads, spawn units, base damage, movement, satyrs, buffs
-
-## From the game's rules pages
-# Source: https://stormboundkingdomwars.fandom.com/wiki/Frosthexers (no glossary page could be reached)
+## Rules and terms
 - Freeze can delay a unit's advance, or keep an enemy on a tile so the opponent can't play a unit there.
 - "On play" marks when an ability happens. Abilities name "bordering" enemy units; older texts said "surrounding".
 - Cards level from 1 to 5; levelling raises the card's numbers.
+
+## Mechanics the game's guides name
+freeze, mana gain, area damage, poison, toads, spawn units, base damage, movement, satyrs, buffs
 
 ## Concepts (id | name | what counts | Not: what does not count and where it goes)
 buff | Make a unit stronger (buff) | A unit gains stats or a combat ability it did not have: more power or health, first strike, flying, extra attacks, reach, piercing. | Not: Improving a card still in hand is in_hand_buff; a unit printed with high stats is not buffed.

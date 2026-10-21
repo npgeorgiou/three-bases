@@ -10,7 +10,7 @@
   cards), read once by one fresh process, answer checked by `key.py answer`. Reader agents, batches and second or third readers
   are gone from tools and docs.
 - **Reading requests ready** for the five newest games: `tools/key/<game>/read.txt` (Lorcana, SWU, Legends 500 cards each;
-  Stormbound all 202; Monster Train all 362). Each game block has a sourced `tools/key/<game>/game.md` from its rules pages,
+  Stormbound all 202; Monster Train all 362). Each game block has sourced rules and terms (`# term:` lines in `tools/mechanics/<game>.txt`),
   except Monster Train (its 66 keyword entries already cover it). Stormbound's is thin: no glossary page could be reached.
 
 ## Next steps, in order

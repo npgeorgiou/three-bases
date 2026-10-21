@@ -115,12 +115,13 @@ def block(g):
     if fs: out += ['', '## Factions (cards)'] + ['- %s (%s)' % f for f in fs]
     ts = [n for n, in c.execute("SELECT name FROM entities WHERE game=? AND category='tribe' ORDER BY name", (g,))]
     if ts: out += ['', '## Card types and tribes', ', '.join(ts)]
-    mf = os.path.join(TOOLS, 'mechanics', g + '.txt')
+    mf = os.path.join(TOOLS, 'mechanics', g + '.txt')   # the game's mechanics file: its rules and terms, and the mechanics its guides name
     if os.path.exists(mf):
-        ms = [l.split('|')[0].strip() for l in open(mf, encoding='utf-8') if l.strip() and not l.startswith('#')]
+        ls = [l.rstrip('\n') for l in open(mf, encoding='utf-8')]
+        ts = [l[len('# term: '):] for l in ls if l.startswith('# term: ')]
+        if ts: out += ['', '## Rules and terms'] + ['- ' + t for t in ts]
+        ms = [l.split('|')[0].strip() for l in ls if l.strip() and not l.startswith('#')]
         out += ['', "## Mechanics the game's guides name", ', '.join(dict.fromkeys(ms))]
-    gm = os.path.join(gdir(g), 'game.md')   # what the game's rules pages add (source on its first line)
-    if os.path.exists(gm): out += ['', "## From the game's rules pages"] + [l.rstrip('\n') for l in open(gm, encoding='utf-8')]
     out += ['', '## Concepts (id | name | what counts | Not: what does not count and where it goes)']
     out += [l.rstrip('\n') for l in open(os.path.join(HERE, 'defs.txt'), encoding='utf-8')]
     return '\n'.join(out)

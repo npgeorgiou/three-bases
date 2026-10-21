@@ -118,9 +118,9 @@ for tagging. Where cards must be read (an answer key, a review, judging a patter
 2. `python3 library/tools/key/key.py read <game>` writes the one request, `tools/key/<game>/read.txt`: the reading rules, the
    game block and the cards. The game block is everything the library holds about how the game is played: the rules summary
    (`games.structure`, `games.notes`), the keyword glossary (the game's `keyword` entries), factions, card types and tribes, the
-   mechanics checklist (`tools/mechanics/<game>.txt`), what the game's rules pages add (`tools/key/<game>/game.md`, sourced, only
-   facts the pages state), and the concept definitions with their "Not:" lines (`tools/key/defs.txt`). Keep `game.md` as full
-   as the game's rules pages allow before reading. Cards are `<ids>|<name>: <text>` lines; identical cards are sent once.
+   game's mechanics file (`tools/mechanics/<game>.txt`: the mechanics its guides name, and its rules and terms as `# term:` lines,
+   sourced, only facts the pages state), and the concept definitions with their "Not:" lines (`tools/key/defs.txt`). Keep the
+   mechanics file as full as the game's rules pages allow before reading. Cards are `<ids>|<name>: <text>` lines; identical cards are sent once.
 3. One fresh process reads `read.txt` once and writes `tools/key/<game>/answer.txt`: one line per card line,
    `<ids>|concept:role:exact words;...` (empty after `|` for a card with no mechanic). It opens no other file and nothing else is
    in its context. One process per game; nothing is read twice, so cost grows with the number of cards only.

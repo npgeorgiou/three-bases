@@ -1,5 +1,9 @@
 # Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics.
 # https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html , fandom Winter Pact and Swarm pages
+# Rules and terms for the game block (key.py read), only facts the source states: https://stormboundkingdomwars.fandom.com/wiki/Frosthexers (no glossary page could be reached)
+# term: Freeze can delay a unit's advance, or keep an enemy on a tile so the opponent can't play a unit there.
+# term: "On play" marks when an ability happens. Abilities name "bordering" enemy units; older texts said "surrounding".
+# term: Cards level from 1 to 5; levelling raises the card's numbers.
 freeze|disable|\bfreez|\bfrozen
 mana gain|resource_gain|\bgain \d+ mana|\bmana\b
 area damage|aoe_damage|\b(all|each) (enemy|enemies|units|surrounding)

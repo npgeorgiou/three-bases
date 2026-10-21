@@ -68,16 +68,15 @@ Keyword definitions are the reminder text the cards print. Reprints and alternat
 ## Card types and tribes
 Alien, Ally, Broom, Captain, Colossus, Deity, Detective, Dinosaur, Dragon, Dreamborn, Entangled, Fairy, Floodborn, Gargoyle, Ghost, Giant, Hero, Hyena, Illusion, Inventor, King, Knight, Madrigal, Mentor, Monster, Musketeer, Obstacle, Pirate, Prince, Princess, Puppy, Queen, Racer, Robot, Seven Dwarfs, Song, Sorcerer, Storyborn, Super, Tigger, Titan, Toy, Villain, Whisper
 
-## Mechanics the game's guides name
-healing, recursion, card draw, discard, bounce, ward, evasive, recover actions, cost reduction, rush, banish characters, reckless, readying, ink ramp, lore increase, card filtering, bodyguard, challenge prevention, challenger, direct damage, singing, shift, locations
-
-## From the game's rules pages
-# Source: https://www.wargamer.com/disney-lorcana/keywords
+## Rules and terms
 - Exert: a card turned on its side; an exerted character can't use abilities that need exerting until it is readied. Characters ready again at the start of their owner's next turn.
 - Quest: questing gathers lore, which wins the game. Reckless characters can't quest.
 - Challenge: characters challenge opposing characters, using their Strength.
 - Ink pays card costs; a newly played card must wait for its ink to dry before it can exert or quest.
 - Songs: a character can sing a song for free when the song's ink cost fits its own; Singer N lets it sing songs costing up to N.
+
+## Mechanics the game's guides name
+healing, recursion, card draw, discard, bounce, ward, evasive, recover actions, cost reduction, rush, banish characters, reckless, readying, ink ramp, lore increase, card filtering, bodyguard, challenge prevention, challenger, direct damage, singing, shift, locations
 
 ## Concepts (id | name | what counts | Not: what does not count and where it goes)
 buff | Make a unit stronger (buff) | A unit gains stats or a combat ability it did not have: more power or health, first strike, flying, extra attacks, reach, piercing. | Not: Improving a card still in hand is in_hand_buff; a unit printed with high stats is not buffed.
