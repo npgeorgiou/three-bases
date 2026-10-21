@@ -7,8 +7,8 @@ sources only, in four steps per game, one game at a time:
    archetypes, guide or community pages for known combos. Prefer pages that cover all factions at once.
 2. **Read them**, faction by faction.
 3. **Summarise** in `<game>.md`: terse, one block per faction: what it is known for, its archetypes, what it uses a little
-   that is another faction's specialty, and known combos with why they work. Every line ends with its source URL (or a short
-   [n] that the file's source list resolves). Only what the sources say; a source claim with no matching concept says so.
+   that is another faction's specialty, and known combos with why they work. Every line ends with its source URL (or a short key such as
+   [1] or [st] that the file's source list resolves). Only what the sources say; a source claim with no matching concept says so.
 4. **Write the cases** in `<game>.tsv` from the summary, in the library's own names, written correctly from the start:
    one case per line, tab-separated: `type  a  b  why  source URL`
    - `signature  <faction>  <concept id>`  the faction is known for this mechanic

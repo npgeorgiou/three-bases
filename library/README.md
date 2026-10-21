@@ -144,11 +144,14 @@ Against the original library (`git show c7a77a4:library/three-bases-library.sqli
 Kaptain's requests in his own words are in `todo.md` (items 11 and 12); the rest are Claude's suggestions.
 1. **Rebuild only the games worked on** (todo.md 11). Find which build steps really cross games and whether a build can run on
    the changed games alone; every later item needs many builds, at about 10 minutes each.
-2. **Real-world cases for every faction of every game** (todo.md 12): signatures, archetypes and splashes per faction and a good
-   number of combos, where sources exist, each with its source URL in `tools/realworld/<game>.tsv`; and every current and new case
-   checked so its cards are tagged correctly. This includes the 11 combos whose two cards are in the library with no connection
-   (read both cards' tags to see which link is missing) and the 9 with a card the library lacks (Inner Fire, Cobalt Guardian, Obol,
-   Wong, Pestermite, Star Battery, Impulsor, Baron Rivendare in Battlegrounds, Letho with the old Fake Ciri text).
+2. **Real-world cases for every faction of every game** (todo.md 12). Cases done (21 Oct 2026): every game was rebuilt from
+   sources in the four steps of `tools/realworld/RESEARCH.md`: a source summary per game (`tools/realworld/<game>.md`), then
+   916 cases written from it (`<game>.tsv`); the old cases were replaced. Met on the stored library: 500/916
+   (`REALWORLD_REPORT.md`). Left: make the cards' tags right, from `realworld_why.py`: 39 signatures no card of the faction
+   has, 75 only 1-4 cards have, 21 combos with both cards and no connection (read both cards' tags), and check that met cases
+   are met for the right reason. A miss is fixed only when the cards' text supports the case, through the game's patterns.
+   Measurement misses (133 archetypes not above the game average, 116 signatures not above other factions) and 17 combos
+   with a card the library lacks are not tagging work.
 3. **Mechanics files for the 16 older games without one**: darkest_dungeon, duelyst, gwent, hearthstone, hs_battlegrounds,
    marvel_snap, mtg, runeterra, shadowverse, sts1, sts2, wh_40k_10e, wh_aos_4th, wh_bloodbowl3, wh_killteam, wh_underworlds. For
    each: the mechanics its guides name (`name|concept|regex`) and its rules and terms as `# term:` lines with their source
