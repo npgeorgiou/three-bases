@@ -1,0 +1,16 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics (not yet run).
+# Sources (21 Oct 2026): spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/ (warband playstyles).
+resurrection|revive|\b(return|resurrect)\b
+teleport|movement|\bteleport\b
+push|forced_movement|\bpush\b
+ping (damage without an attack)|ping|\bdeal \d+ damage\b
+rerolls|advantage|\bre-?roll\b
+traps|trap_secret|\btrap\b
+range 2+ attacks|ranged|\brange [2-9]\b
+inspire|upgrade|\binspire[sd]?\b
+delving|terrain|\bdelve\b
+objective tokens|scoring_objectives|\bobjective\b
+counterspell|counter_spell|\bcounterspell\b
+draw|draw|\bdraw\b
+# term: Inspire: fighters turn to a stronger, inspired profile when their warband's condition is met (assumed; spentglory names inspiration and inspired profiles).
+# term: Delving: digging in objective tokens; Underdog: a bonus for the player behind in glory (assumed: spentglory names both without defining them).

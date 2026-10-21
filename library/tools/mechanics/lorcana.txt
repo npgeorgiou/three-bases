@@ -1,5 +1,5 @@
 # Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics.
-# https://www.wargamer.com/disney-lorcana/colors , https://wiki.mushureport.com/wiki/Sapphire , /Steel , /Emerald , /Ruby
+# https://www.wargamer.com/disney-lorcana/colors , https://wiki.mushureport.com/wiki/Sapphire , /Steel , /Emerald , /Ruby , /Amber
 # Rules and terms for the game block (key.py read), only facts the source states: https://www.wargamer.com/disney-lorcana/keywords
 # term: Exert: a card turned on its side; an exerted character can't use abilities that need exerting until it is readied. Characters ready again at the start of their owner's next turn.
 # term: Quest: questing gathers lore, which wins the game. Reckless characters can't quest.
@@ -29,3 +29,4 @@ direct damage|damage|\bdeal \d+ damage
 singing|cost_type|\bsing\b|\bsong\b
 shift|upgrade|\bshift\b
 locations|zone_control|\blocation
+support|assists_support|\bsupport\b

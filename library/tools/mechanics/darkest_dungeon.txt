@@ -1,0 +1,13 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics (not yet run).
+# Sources (21 Oct 2026): gameskinny.com/7xyiu/darkest-dungeon-party-building-guide (skill pairs and parties).
+stun|disable|\bstun\b
+bleed|damage_over_time|\bbleed\b
+blight|damage_over_time|\bblight\b
+pull forward|forced_movement|\bpull\b
+push back|forced_movement|\bknockback\b|\bpush\b
+bonus damage on stunned|condition_life|\bvs\.? stunned\b|\bon stunned\b
+stress relief|stress_morale|\bstress\b
+transform (beast mode)|stances|\btransform\b
+corpse clearing|blocking|\bcorpses?\b
+# term: Stress: the party gains stress; some skills remove it (gameskinny: Cry Havoc removes stress, the Abomination's transform adds it).
+# term: Corpses: killed enemies can leave corpses that hold their rank; some skills clear them (gameskinny).

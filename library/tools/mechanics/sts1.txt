@@ -1,0 +1,26 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics (not yet run).
+# Sources (21 Oct 2026): thegamer.com/slay-the-spire-best-builds, slaythespire.gg/guides/slay-the-spire-best-character.
+strength|permanent_growth|\bstrength\b
+exhaust|exhaust|\bexhaust\b
+block|block_armor|\bblock\b
+keep block (Barricade)|block_armor|\bblock is not removed\b
+multi-hit attacks|multi_attack|\b\d+ times\b
+poison|damage_over_time|\bpoison\b
+shiv|generate_cards|\bshivs?\b
+discard|discard|\bdiscard\b
+draw|draw|\bdraw \d+ cards?\b
+whenever you play a card|on_ally_play|\bwhenever you play a card\b
+channel and evoke orbs|slots_queue|\b(channel|evoke)\b
+focus|spell_power|\bfocus\b
+frost orb block|block_armor|\bfrost\b
+zero-cost cards (Claw)|cost_condition|\bcosts? 0\b
+stances (Calm, Wrath, Divinity)|stances|\b(calm|wrath|divinity)\b
+mantra|condition_count|\bmantra\b
+retain|retain|\bretain\b
+scry|selection|\bscry\b
+upgrade created cards|upgrade|\bupgrade\b
+create cards|generate_cards|\badd [a-z0-9 ]{0,30} (into|to) your hand\b
+# term: Block: absorbs attack damage; Barricade and Entrench keep and grow it (thegamer); it is removed at the start of the next turn otherwise (assumed).
+# term: Orbs: channelled into slots; Frost gives Block, Lightning deals damage; Focus strengthens orbs (thegamer; slaythespire.gg).
+# term: Stances: Calm, Wrath and Divinity; switching between them (stance dancing) is the Watcher's burst (slaythespire.gg).
+# term: Retain: the card stays in hand at the end of the turn (assumed); Establishment makes retained cards cheaper (thegamer).

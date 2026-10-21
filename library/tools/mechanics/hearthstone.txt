@@ -1,0 +1,37 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics (not yet run).
+# Sources (21 Oct 2026): hearthstone.wiki.gg/wiki/Classes, hearthstone.wiki.gg/wiki/Demon_Hunter, hearthstone.wiki.gg/wiki/Death_Knight,
+# hearthstonetopdecks.com class identity (2019), hearthstone.blizzard.com/en-us/news/23305788 (Demon Hunter), /23852696 (Death Knight).
+taunt|taunt|\btaunt\b
+divine shield|shield|\bdivine shield\b
+charge|haste|\bcharge\b
+rush|haste|\brush\b
+choose one|modal_choice|\bchoose one\b
+mana gain (ramp)|resource_gain|\bmana crystals?\b
+deathrattle|death_trigger|\bdeathrattle\b
+battlecry|on_play|\bbattlecry\b
+secret|trap_secret|\bsecret\b
+freeze|disable|\bfreezes?\b
+spell damage and spell synergy|on_spell|\bwhenever you cast a spell\b|\bafter you cast a spell\b
+overload|overload_debt|\boverload\b
+combo|combo_sequence|\bcombo\b
+lifesteal|lifesteal|\blifesteal\b
+outcast|hand_position|\boutcast\b
+hero attack this turn|temporary_buff|\byour hero \+\d+ attack this turn\b
+armor|block_armor|\b(gain|gains) \d+ armor\b|\barmor\b
+enrage and on-damage|on_damaged|\bwhenever (this|it) (takes|is dealt) damage\b|\benrage\b
+corpses|coin_economy|\bcorpses?\b
+take control (mind control)|steal|\btake control\b
+destroy a minion|destroy|\bdestroy (a|an|all|target)\b
+copy|copy|\bcop(y|ies) of\b
+discard|discard|\bdiscard\b
+pay health|life_payment|\bdeal \d+ damage to your hero\b|\bcosts? health\b
+heal|heal|\brestore \d+ health\b
+draw cards|draw|\bdraw (a|\d+|two|three) cards?\b
+summon minions|summon|\bsummon (a|an|two|three|\d+)\b
+tribes (beast, demon, murloc, elemental, totem, undead, pirate, mech, dragon)|tribal|\b(beast|demon|murloc|elemental|totem|undead|pirate|mech|dragon)s?\b
+# term: Outcast: a bonus when the card is played from the leftmost or rightmost position in the hand (hearthstone.blizzard.com Demon Hunter reveal).
+# term: Corpses: a Death Knight resource; whenever a friendly minion dies you gain a Corpse, which some cards spend (hearthstone.blizzard.com Death Knight deep dive).
+# term: Runes: a Death Knight deck picks three Runes (Blood, Frost, Unholy), which decide which Death Knight cards it may hold (same source).
+# term: Demon Claws: the Demon Hunter hero power, 1 mana, +1 Attack to the hero this turn (Demon Hunter reveal).
+# term: Ghoul Charge: the Death Knight hero power, 2 mana, a 1/1 Ghoul with Charge that dies at the end of the turn (Death Knight deep dive).
+# term: Hero power: each class has its own; most cost 2 mana (hearthstone.wiki.gg/wiki/Demon_Hunter).

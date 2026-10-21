@@ -1,0 +1,33 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics (not yet run).
+# Sources (21 Oct 2026): wargamer.com/warhammer-40k/factions, wahapedia.ru/wh40k10ed/factions/<faction>/ (army rules).
+mark a target (Oath of Moment, Spotted)|mark_target|\boath of moment\b|\bspotted\b
+re-roll hits|advantage|\bre-roll (the )?hit\b
+reanimation|regeneration|\breanimation protocols\b
+return destroyed models|revive|\breturn [a-z ]{0,20}destroyed models?\b
+strategic reserves|reserve_bench|\bstrategic reserves?\b|\bdeep strike\b
+miracle and fate dice|resource_banking|\b(miracle|fate) d(ie|ice)\b
+stances (Martial Ka'tah)|stances|\bka'tah\b
+imperatives and vows (choose each round)|modal_choice|\b(imperative|vow)s?\b
+dark pacts (mortal wounds on a fail)|life_payment|\bdark pact\b
+plague aura|debuff|\bcontagion range\b|\bafflicted\b
+aura|aura|\(aura\)
+battle-shock|stress_morale|\bbattle-shock\b
+synapse|aura|\bsynapse\b
+waaagh (once per battle)|once_per_game|\bwaaagh\b
+shoot or charge after advancing|attack_now|\bin a turn in which (it|they) advanced\b
+lethal hits|deathtouch|\blethal hits\b
+sustained hits|multi_attack|\bsustained hits\b
+devastating wounds|piercing|\bdevastating wounds\b
+ignores cover|piercing|\bignores cover\b
+objective control|zone_control|\bobjective marker\b
+leader (attaches to a unit)|merge_attach|\bleader\b
+firing deck|ranged|\bfiring deck\b
+mortal wounds|damage|\bmortal wounds?\b
+# term: Oath of Moment: at the start of the Command phase pick one enemy unit; Space Marines re-roll Hit rolls against it (wahapedia).
+# term: Reanimation Protocols: at the end of the Command phase a Necron unit reanimates D3 wounds or returns destroyed models (wahapedia).
+# term: Waaagh!: once per battle, for one round, Orks can charge after Advancing, +1 Strength and Attacks in melee, a 5+ invulnerable save (wahapedia).
+# term: Synapse: Tyranids within 6" of a Synapse model test Battle-shock on 3D6 and get +1 melee Strength (wahapedia).
+# term: For the Greater Good: Observers mark enemies Spotted; other T'au shoot them at +1 Ballistic Skill (wahapedia).
+# term: Acts of Faith: a Miracle die replaces one roll; dice come each round and when a Sororitas unit is destroyed (wahapedia).
+# term: Cult Ambush: destroyed Genestealer Cults units can come back from reserve with Resurgence points (wahapedia).
+# term: Battle Focus: Aeldari spend tokens for extra movement and to shoot or charge after moving; Strands of Fate: a pool of dice that replace rolls (wahapedia).

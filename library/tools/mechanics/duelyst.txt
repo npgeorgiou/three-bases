@@ -1,0 +1,24 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics (not yet run).
+# Sources (21 Oct 2026): store.steampowered.com/app/2004320 (Duelyst II faction descriptions), gamewave.fr six factions.
+provoke|taunt|\bprovoke\b
+zeal|adjacency|\bzeal\b
+backstab|flanking|\bbackstab\b
+ranged|ranged|\branged\b
+rebirth|cheat_death|\brebirth\b
+grow|permanent_growth|\bgrow\b
+infiltrate|territory_trigger|\binfiltrate\b
+deathwatch|other_death_trigger|\bdeathwatch\b
+shadow creep|terrain|\bshadow creep\b
+dying wish|death_trigger|\bdying wish\b
+opening gambit|on_play|\bopening gambit\b
+wraithlings|summon|\bwraithlings?\b
+dervish (short-lived)|self_destruct|\bdervish\b
+artifacts on the General|merge_attach|\bartifact\b
+displacement and teleport|movement|\bteleports?\b
+heal|heal|\brestore \d+ health\b
+dispel|silence|\bdispel\b
+stun|disable|\bstun\b
+walls|summon|\bwall\b
+# term: Zeal: a bonus while the minion is next to its General (Duelyst II store page: close-quarters fighters with Provoke and Zeal).
+# term: Infiltrate: a bonus while the minion is on the enemy's side of the board (assumed: the store page names Infiltrate without defining it).
+# term: Deathwatch: triggers when any minion dies (assumed: the store page says Abyssians profit from death through Deathwatch).

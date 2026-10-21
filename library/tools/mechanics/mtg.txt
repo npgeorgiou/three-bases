@@ -1,0 +1,48 @@
+# Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics (not yet run).
+# Sources (21 Oct 2026): magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021 (primary/secondary/tertiary per colour),
+# edhrec.com/articles/foundations-choosing-your-color, edhrec.com/combos/early-game-2-card-combos.
+flying|evasion|\bflying\b
+can't be blocked|evasion|\bcan't be blocked\b
+menace|evasion|\bmenace\b
+first strike|first_strike|\bfirst strike\b
+double strike|multi_attack|\bdouble strike\b
+trample|excess_damage|\btrample\b
+deathtouch|deathtouch|\bdeathtouch\b
+lifelink|lifesteal|\blifelink\b
+haste|haste|\bhaste\b
+vigilance|untap|\bvigilance\b
+hexproof|immunity|\bhexproof\b
+ward|immunity|\bward\b
+protection|protection|\bprotection from\b
+indestructible|cheat_death|\bindestructible\b
+defender|cant_attack|\bdefender\b
+reach|blocking|\breach\b
+flash|reactions|\bflash\b
+can't block|cant_block|\bcan't block\b
+scry|selection|\bscry \d+\b
+counter target spell|counter_spell|\bcounter target\b
+draw cards|draw|\bdraw (a|\d+|two|three) cards?\b
+return to hand (bounce)|bounce_enemy|\breturn target [a-z ]{0,30} to its owner's hand\b
+mill|mill|\bmills?\b
+gain control|steal|\bgain control of\b
+copy|copy|\bcopy of\b
+extra turn|extra_turn|\bextra turn\b
+tap creatures|disable|\btap target creature\b|\bdoesn't untap\b
++1/+1 counters|stat_gain|\+1/\+1 counters?\b
+-N/-N|stat_loss|\b-\d+/-\d+\b
+tokens|summon|\bcreate [a-z0-9 ,/]{0,40}tokens?\b
+life gain|heal|\byou gain \d+ life\b
+destroy creatures|destroy|\bdestroy target creature\b
+destroy all creatures|board_wipe|\bdestroy all creatures\b
+exile|banish|\bexile target\b
+sacrifice|sacrifice|\bsacrifice (a|an|another) \b
+discard (opponent)|hand_disruption|\b(target|each) (player|opponent) discards\b
+reanimation|revive|\breturn target creature card from your graveyard to the battlefield\b
+tutor|tutor|\bsearch your library\b
+damage to any target|damage|\bdeals? \d+ damage\b
+must attack|forced_attack|\battacks each (combat|turn) if able\b
+fight|attack_now|\bfights?\b
+extra land and mana|resource_gain|\badd \{[wubrgc]\}|\bplay an additional land\b
+flicker|blink|\bexile [a-z ]{0,30}, then return (it|that card) to the battlefield\b
+taxes|cost_increase|\bcosts? \{\d\} more\b
+# term: The colour pie sorts every mechanic as primary, secondary or tertiary in each colour; tertiary means it appears only occasionally (magic.wizards.com Mechanical Color Pie 2021).

@@ -103,3 +103,4 @@ gorge|on_sacrifice|\bgorge\b
 reform|revive|\breform
 burnout|self_destruct|\bburnout\b
 eggs|transform|\b(hatch|shell \d)
+harvest|other_death_trigger|\bharvest\b

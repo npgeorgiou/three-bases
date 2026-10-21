@@ -144,16 +144,16 @@ Against the original library (`git show c7a77a4:library/three-bases-library.sqli
 Kaptain's requests in his own words are in `todo.md` (items 11 and 12); the rest are Claude's suggestions.
 1. **Rebuild only the games worked on** (todo.md 11). Find which build steps really cross games and whether a build can run on
    the changed games alone; every later item needs many builds, at about 10 minutes each.
-2. **Mechanics files for the 16 older games without one**: darkest_dungeon, duelyst, gwent, hearthstone, hs_battlegrounds,
-   marvel_snap, mtg, runeterra, shadowverse, sts1, sts2, wh_40k_10e, wh_aos_4th, wh_bloodbowl3, wh_killteam, wh_underworlds. For
-   each: the mechanics its guides name (`name|concept|regex`) and its rules and terms as `# term:` lines with their source
-   (`(assumed)` where no source has it) in `tools/mechanics/<game>.txt`; then `coverage.py --mechanics`, fix the gaps in its
-   patterns, reload it (`reload_game.sh`), keep only if nothing is worse (`compare_builds.py`). One game per pass. Their keys exist;
-   do not re-read them. A plain reload is not better by itself (Into the Breach went from 74 to 130 wrong per 100 key entries).
-   Faeria (has a file): first re-measure its reload on the corrected key, then the same check. In each pass also re-run
-   `key_patterns.py` for the game: its key lines predate that script's whole-key and keyword checks (all 19 regenerated at once
-   on 21 Oct 2026: wrong down, Blood Bowl 163 -> 133, Into the Breach 74 -> 65, Runeterra 84 -> 80, but missed up in Duelyst,
-   Hearthstone, Shadowverse, Slay the Spire, Kill Team and Blood Bowl, so it is measured per game).
+2. **Check the patterns against the mechanics files.** The files are done (21 Oct 2026): `tools/mechanics/<game>.txt` for all
+   24 games, the 16 new ones written from the sources read for the real-world cases (named in each file's header), with
+   `name|concept|regex` lines and `# term:` lines (`(assumed)` where no source has it); Blood Bowl's is empty (no source read).
+   Not done: the regexes are not yet run. For each game: `coverage.py --mechanics`, fix the regexes that miss the cards'
+   wording, then the gaps in its patterns, reload it (`reload_game.sh`), keep only if nothing is worse (`compare_builds.py`).
+   One game per pass. Their keys exist; do not re-read them. A plain reload is not better by itself (Into the Breach went from
+   74 to 130 wrong per 100 key entries). Faeria: first re-measure its reload on the corrected key, then the same check. In each
+   pass also re-run `key_patterns.py` for the game: its key lines predate that script's whole-key and keyword checks (all 19
+   regenerated at once on 21 Oct 2026: wrong down, Blood Bowl 163 -> 133, Into the Breach 74 -> 65, Runeterra 84 -> 80, but
+   missed up in Duelyst, Hearthstone, Shadowverse, Slay the Spire, Kill Team and Blood Bowl, so it is measured per game).
 3. **Retire `final_revert.py`.** It still puts back 915 tags of the original library (c7a77a4). Build without it and retire it
    only if nothing is worse.
 4. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
