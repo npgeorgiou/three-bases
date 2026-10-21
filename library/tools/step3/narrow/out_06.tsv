@@ -1,0 +1,20 @@
+damage|does|dnd5e|\b\d+d\d+( ?[+-] ?\d+)? [a-z]+ damage\b|\(\d+d\d+( ?[+-] ?\d+)?\) [a-z]+ damage\b|\btakes? [^.]{0,30}\bdamage\b|\bdeals? [^.]{0,30}\bdamage\b	dnd5e	\b\d+d\d+( ?[+-] ?\d+)? [a-z]+ damage\b|\(\d+d\d+( ?[+-] ?\d+)?\) [a-z]+ damage\b|\btakes? [^.]{0,30}\bdamage\b(?<!takes damage)(?<!takes any damage)(?<!take damage)|\bdeals? [^.]{0,30}\bdamage\b(?=[^.]{0,20}\d)
+damage_reduction|does|*|\barmou?r\b	wh_bloodbowl3,inscryption,darkest_dungeon,mtg	(?!)\barmou?r\b
+damage_reduction|does|*|\barmou?r\b	into_the_breach,dnd5e,gwent,wh_killteam,wh_aos_4th,wh_40k_10e,hearthstone	keep
+stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_killteam	(?!subtract \d+ from both )(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))
+stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	(?<!targets this unit, )(?<!targets that unit, )(?<!allocated to this model, )(?<!model in this unit, )(?<!previous movement phase, )(?<!toughness characteristic, )(?<!allocated to the bearer, )(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))(?! of that attack)(?!s? for attacks that target)
+stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	keep
+zone_of_control|does|*|\bengagement range	wh_killteam,wh_40k_10e	keep
+saving_throws|does|*|saving throw	dnd5e	(strength|dexterity|constitution|intelligence|wisdom|charisma) saving throw(?!s)|\bfail(s|ed)? a saving throw
+saving_throws|does|*|saving throw	wh_killteam,wh_40k_10e	keep
+terrain|does|*|\bcover\b	mtg	(?!)\bcover\b
+terrain|does|*|\bcover\b	dnd5e,wh_killteam,wh_aos_4th,wh_40k_10e	keep
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	duelyst,sts1,dnd5e,sts2,wh_killteam,runeterra	(?!)whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	inscryption,faeria,gwent,hs_battlegrounds,shadowverse,hearthstone,mtg	keep
+condition|does|hearthstone|\bif (you|you.re|your)\b	hearthstone	(?!)\bif (you|you.re|your)\b
+reserve_bench|does|wh_40k_10e|\bdeep strike\b|\bstrategic reserves\b|\breserves\b	wh_40k_10e	\bstrategic reserves\b|\breserves\b
+variable_stats|does|*|equal to the number of	inscryption,sts1,sts2,wh_killteam,wh_underworlds,wh_aos_4th,wh_40k_10e,shadowverse,mtg	(?<=\bis )equal to the number of|(?<=\bare each )equal to the number of|(?<=\bbe )equal to the number of|(?<=\bhas power )equal to the number of|(?<=\bis a variable power stat)
+variable_stats|does|*|equal to the number of	gwent,runeterra,hearthstone	keep
+summon|does|*|\bput .{0,30}(onto|into) the battlefield	hearthstone	\bput (?![^.]{0,30}secret)(?=[^.]{0,30}\bfrom your).{0,30}(onto|into) the battlefield
+summon|does|*|\bput .{0,30}(onto|into) the battlefield	mtg	keep
+adjacency|does|*|\badjacent	into_the_breach,wh_bloodbowl3,inscryption,hs_battlegrounds,wh_underworlds	keep

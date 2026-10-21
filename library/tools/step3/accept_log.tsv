@@ -1,0 +1,662 @@
+stat_gain|does|*|\+\d+/\+\d+	faeria	keep
+stat_gain|does|*|\+\d+/\+\d+	duelyst	keep
+stat_gain|does|*|\+\d+/\+\d+	hs_battlegrounds	keep
+stat_gain|does|*|\+\d+/\+\d+	shadowverse	keep
+stat_gain|does|*|\+\d+/\+\d+	hearthstone	keep
+stat_gain|does|*|\+\d+/\+\d+	mtg	keep
+random_effect|does|*|\broll	wh_aos_4th	rejected dropped 1026 known 119 wrong 51% key kept 166/171
+random_effect|does|*|\broll	wh_40k_10e	rejected dropped 602 known 83 wrong 65% key kept 147/150
+random_effect|does|*|\broll	wh_bloodbowl3	narrowed dropped 40 known 40 wrong 95% key kept 35/35
+random_effect|does|*|\broll	wh_killteam	rejected dropped 458 known 85 wrong 80% key kept 78/78
+random_effect|does|*|\broll	sts1	keep
+random_effect|does|*|\broll	sts2	keep
+random_effect|does|*|\broll	dnd5e	keep
+random_effect|does|*|\broll	wh_underworlds	keep
+damage|does|*|\bdamage to\b	hs_battlegrounds	narrowed dropped 16 known 15 wrong 100% key kept 10/11
+damage|does|*|\bdamage to\b	shadowverse	rejected dropped 115 known 16 wrong 50% key kept 99/104
+damage|does|*|\bdamage to\b	hearthstone	rejected dropped 73 known 15 wrong 73% key kept 47/48
+damage|does|*|\bdamage to\b	faeria	rejected dropped 28 known 19 wrong 63% key kept 16/16
+damage|does|*|\bdamage to\b	mtg	rejected dropped 788 known 49 wrong 71% key kept 47/50
+damage|does|*|\bdamage to\b	wh_underworlds	rejected dropped 191 known 26 wrong 73% key kept 11/12
+damage|does|*|\bdamage to\b	into_the_breach	keep
+damage|does|*|\bdamage to\b	inscryption	keep
+damage|does|*|\bdamage to\b	dnd5e	keep
+damage|does|*|\bdamage to\b	gwent	keep
+damage|does|*|\bdamage to\b	wh_killteam	keep
+damage|does|*|\bdamage to\b	runeterra	keep
+damage|does|*|\b\d+ damage\b	hs_battlegrounds	narrowed dropped 18 known 18 wrong 100% key kept 4/5
+damage|does|*|\b\d+ damage\b	wh_underworlds	rejected dropped 253 known 40 wrong 75% key kept 21/21
+damage|does|*|\b\d+ damage\b	gwent	rejected dropped 9 known 9 wrong 56% key kept 0/0
+damage|does|*|\b\d+ damage\b	hearthstone	rejected dropped 109 known 18 wrong 78% key kept 64/69
+damage|does|*|\b\d+ damage\b	mtg	rejected dropped 86 known 10 wrong 40% key kept 39/42
+damage|does|*|\b\d+ damage\b	shadowverse	rejected dropped 124 known 16 wrong 81% key kept 84/87
+damage|does|*|\b\d+ damage\b	faeria	rejected dropped 27 known 19 wrong 63% key kept 23/23
+damage|does|*|\b\d+ damage\b	runeterra	rejected dropped 5 known 5 wrong 60% key kept 0/0
+damage|does|*|\b\d+ damage\b	dnd5e	narrowed dropped 1 known 1 wrong 100% key kept 6/6
+damage|does|*|\b\d+ damage\b	into_the_breach	keep
+damage|does|*|\b\d+ damage\b	wh_killteam	keep
+damage|does|*|\b\d+ damage\b	wh_aos_4th	keep
+passive|does|*|\bwhile\b	shadowverse	rejected dropped 12 known 10 wrong 20% key kept 4/5
+passive|does|*|\bwhile\b	into_the_breach	keep
+passive|does|*|\bwhile\b	inscryption	keep
+passive|does|*|\bwhile\b	faeria	keep
+passive|does|*|\bwhile\b	duelyst	keep
+passive|does|*|\bwhile\b	sts1	keep
+passive|does|*|\bwhile\b	dnd5e	keep
+passive|does|*|\bwhile\b	sts2	keep
+passive|does|*|\bwhile\b	gwent	keep
+passive|does|*|\bwhile\b	hs_battlegrounds	keep
+passive|does|*|\bwhile\b	wh_killteam	keep
+passive|does|*|\bwhile\b	runeterra	keep
+passive|does|*|\bwhile\b	wh_underworlds	keep
+passive|does|*|\bwhile\b	wh_aos_4th	keep
+passive|does|*|\bwhile\b	wh_40k_10e	keep
+passive|does|*|\bwhile\b	hearthstone	keep
+passive|does|*|\bwhile\b	mtg	keep
+temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	wh_40k_10e	rejected dropped 32 known 10 wrong 30% key kept 15/16
+temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	mtg	rejected dropped 153 known 10 wrong 40% key kept 64/66
+temporary_buff|does|*|(until|till) end of (turn|round)	mtg	rejected dropped 153 known 10 wrong 40% key kept 64/66
+temporary_buff|does|*|(until|till) end of (turn|round)	duelyst	rejected dropped 2 known 2 wrong 50% key kept 1/1
+temporary_buff|does|*|(until|till) end of (turn|round)	hearthstone	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+graveyard|does|*|\bgraveyard	mtg	rejected dropped 1608 known 56 wrong 68% key kept 26/29
+stacking_keyword|does|*|\bcounters? on\b	wh_underworlds	narrowed dropped 8 known 8 wrong 100% key kept 3/4
+stacking_keyword|does|*|\bcounters? on\b	mtg	keep
+permanent_growth|does|*|\bevolve	shadowverse	narrowed dropped 2390 known 214 wrong 99% key kept 1/2
+permanent_growth|does|*|\bevolve	inscryption	keep
+permanent_growth|does|*|\bevolve	gwent	keep
+permanent_growth|does|*|\bevolve	runeterra	keep
+activated|does|wh_aos_4th|\btiming:	wh_aos_4th	keep
+movement|does|*|\bmoves?\b	wh_bloodbowl3	rejected dropped 9 known 9 wrong 78% key kept 4/4
+movement|does|*|\bmoves?\b	darkest_dungeon	rejected dropped 72 known 39 wrong 74% key kept 18/18
+movement|does|*|\bmoves?\b	faeria	rejected dropped 11 known 7 wrong 71% key kept 7/8
+movement|does|*|\bmoves?\b	wh_aos_4th	rejected dropped 291 known 50 wrong 64% key kept 28/33
+movement|does|*|\bmoves?\b	mtg	narrowed dropped 23 known 14 wrong 100% key kept 0/0
+movement|does|*|\bmoves?\b	into_the_breach	keep
+movement|does|*|\bmoves?\b	inscryption	keep
+movement|does|*|\bmoves?\b	duelyst	keep
+movement|does|*|\bmoves?\b	sts1	keep
+movement|does|*|\bmoves?\b	dnd5e	keep
+movement|does|*|\bmoves?\b	sts2	keep
+movement|does|*|\bmoves?\b	gwent	keep
+movement|does|*|\bmoves?\b	wh_killteam	keep
+movement|does|*|\bmoves?\b	runeterra	keep
+movement|does|*|\bmoves?\b	wh_underworlds	keep
+movement|does|*|\bmoves?\b	wh_40k_10e	keep
+movement|does|*|\bmoves?\b	hearthstone	keep
+forced_movement|does|*|\bmoves?\b	wh_bloodbowl3	narrowed dropped 13 known 13 wrong 100% key kept 0/0
+forced_movement|does|*|\bmoves?\b	faeria	narrowed dropped 19 known 15 wrong 100% key kept 0/0
+forced_movement|does|*|\bmoves?\b	duelyst	narrowed dropped 22 known 17 wrong 94% key kept 0/0
+forced_movement|does|*|\bmoves?\b	sts1	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+forced_movement|does|*|\bmoves?\b	sts2	narrowed dropped 6 known 6 wrong 100% key kept 0/0
+forced_movement|does|*|\bmoves?\b	gwent	narrowed dropped 63 known 27 wrong 96% key kept 12/14
+forced_movement|does|*|\bmoves?\b	wh_killteam	narrowed dropped 243 known 71 wrong 97% key kept 1/1
+forced_movement|does|*|\bmoves?\b	runeterra	narrowed dropped 4 known 4 wrong 100% key kept 0/0
+forced_movement|does|*|\bmoves?\b	wh_underworlds	narrowed dropped 334 known 41 wrong 93% key kept 0/0
+forced_movement|does|*|\bmoves?\b	wh_aos_4th	narrowed dropped 490 known 86 wrong 94% key kept 0/0
+forced_movement|does|*|\bmoves?\b	wh_40k_10e	narrowed dropped 586 known 107 wrong 100% key kept 0/2
+forced_movement|does|*|\bmoves?\b	hearthstone	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+forced_movement|does|*|\bmoves?\b	mtg	narrowed dropped 25 known 15 wrong 100% key kept 0/0
+forced_movement|does|*|\bmoves?\b	inscryption	rejected dropped 18 known 18 wrong 78% key kept 0/1
+forced_movement|does|*|\bmoves?\b	into_the_breach	keep
+forced_movement|does|*|\bmoves?\b	darkest_dungeon	keep
+forced_movement|does|*|\bmoves?\b	dnd5e	keep
+stat_gain|does|*|gets? \+\d+	mtg	rejected dropped 1305 known 31 wrong 52% key kept 21/23
+summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	mtg	narrowed dropped 411 known 16 wrong 94% key kept 36/38
+summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	dnd5e	narrowed dropped 11 known 11 wrong 100% key kept 0/0
+summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	gwent	rejected dropped 6 known 6 wrong 83% key kept 0/1
+sacrifice|does|*|\bsacrific	mtg	rejected dropped 469 known 17 wrong 82% key kept 35/44
+sacrifice|does|*|\bsacrific	inscryption	keep
+sacrifice|does|*|\bsacrific	wh_aos_4th	keep
+banish|does|*|\bexile	mtg	rejected dropped 1217 known 41 wrong 63% key kept 27/32
+banish|does|*|\bexile	runeterra	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+banish|does|*|\bexile	wh_aos_4th	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+damage|does|*|\bstrikes?\b	mtg	narrowed dropped 651 known 33 wrong 97% key kept 0/0
+damage|does|*|\bstrikes?\b	dnd5e	rejected dropped 18 known 10 wrong 80% key kept 13/14
+damage|does|*|\bstrikes?\b	into_the_breach	keep
+damage|does|*|\bstrikes?\b	inscryption	keep
+damage|does|*|\bstrikes?\b	sts1	keep
+damage|does|*|\bstrikes?\b	sts2	keep
+damage|does|*|\bstrikes?\b	gwent	keep
+damage|does|*|\bstrikes?\b	wh_killteam	keep
+damage|does|*|\bstrikes?\b	runeterra	keep
+damage|does|*|\bstrikes?\b	wh_aos_4th	keep
+damage|does|*|\bstrikes?\b	wh_40k_10e	keep
+damage|does|*|\bstrikes?\b	shadowverse	keep
+damage|does|*|\bstrikes?\b	hearthstone	keep
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	into_the_breach	narrowed dropped 1 known 1 wrong 100% key kept 47/55
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	faeria	rejected dropped 26 known 18 wrong 67% key kept 22/22
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	sts1	narrowed dropped 3 known 3 wrong 100% key kept 50/57
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	dnd5e	narrowed dropped 1 known 1 wrong 100% key kept 5/7
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	sts2	narrowed dropped 5 known 4 wrong 100% key kept 58/63
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	hs_battlegrounds	narrowed dropped 14 known 14 wrong 100% key kept 7/8
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	wh_underworlds	narrowed dropped 24 known 10 wrong 100% key kept 18/19
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	hearthstone	rejected dropped 71 known 13 wrong 69% key kept 61/66
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	inscryption	keep
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	runeterra	keep
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	into_the_breach	narrowed dropped 6 known 6 wrong 100% key kept 0/0
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	inscryption	narrowed dropped 4 known 4 wrong 100% key kept 0/0
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	hearthstone	narrowed dropped 23 known 10 wrong 100% key kept 11/18
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	hs_battlegrounds	narrowed dropped 8 known 8 wrong 100% key kept 0/0
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	runeterra	rejected dropped 6 known 6 wrong 83% key kept 2/3
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	duelyst	narrowed dropped 11 known 10 wrong 90% key kept 9/13
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	faeria	keep
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	wh_40k_10e	keep
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	shadowverse	keep
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	gwent	keep
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	mtg	keep
+random_effect|does|wh_aos_4th|\broll (a|\d+) dice\b|\bon a \d\+|\b(casting|chanting|charge|run) rolls?\b|\b2d6\b|\bd3\b|\bd6\b	wh_aos_4th	rejected dropped 370 known 52 wrong 67% key kept 188/196
+permanent_growth|does|*|\+1/\+1 counter	mtg	rejected dropped 1236 known 47 wrong 68% key kept 13/15
+terrain|does|*|\blands?\b	wh_40k_10e	narrowed dropped 3 known 3 wrong 100% key kept 0/1
+terrain|does|*|\blands?\b	mtg	narrowed dropped 1626 known 49 wrong 100% key kept 0/0
+terrain|does|*|\blands?\b	into_the_breach	narrowed dropped 9 known 9 wrong 100% key kept 0/0
+terrain|does|*|\blands?\b	inscryption	narrowed dropped 4 known 4 wrong 100% key kept 0/0
+terrain|does|*|\blands?\b	wh_killteam	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+terrain|does|*|\blands?\b	wh_bloodbowl3	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+terrain|does|*|\blands?\b	dnd5e	narrowed dropped 16 known 15 wrong 93% key kept 0/0
+terrain|does|*|\blands?\b	faeria	keep
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	inscryption	narrowed dropped 3 known 3 wrong 100% key kept 0/1
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	sts1	narrowed dropped 22 known 12 wrong 100% key kept 0/0
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	sts2	narrowed dropped 17 known 17 wrong 100% key kept 0/0
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	gwent	narrowed dropped 9 known 9 wrong 100% key kept 1/1
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	hs_battlegrounds	narrowed dropped 25 known 20 wrong 100% key kept 0/0
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	wh_killteam	narrowed dropped 20 known 15 wrong 100% key kept 0/3
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	runeterra	narrowed dropped 38 known 10 wrong 100% key kept 2/2
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	wh_underworlds	narrowed dropped 113 known 24 wrong 100% key kept 2/7
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	wh_40k_10e	narrowed dropped 18 known 18 wrong 100% key kept 0/0
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	shadowverse	rejected dropped 112 known 15 wrong 87% key kept 0/0
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	hearthstone	narrowed dropped 68 known 16 wrong 94% key kept 1/1
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	mtg	narrowed dropped 776 known 17 wrong 94% key kept 7/9
+summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	inscryption	narrowed dropped 0 known 0 wrong 100% key kept 2/3
+summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	duelyst	narrowed dropped 4 known 4 wrong 100% key kept 28/33
+summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	gwent	narrowed dropped 3 known 3 wrong 100% key kept 2/3
+summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	runeterra	rejected dropped 3 known 3 wrong 67% key kept 34/40
+summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	hearthstone	rejected dropped 52 known 10 wrong 80% key kept 70/80
+summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	wh_40k_10e	narrowed dropped 6 known 6 wrong 100% key kept 0/0
+random_effect|does|*|\bdice\b	wh_aos_4th	rejected dropped 108 known 15 wrong 67% key kept 110/110
+random_effect|does|*|\bdice\b	wh_underworlds	rejected dropped 227 known 37 wrong 81% key kept 33/34
+random_effect|does|*|\bdice\b	wh_bloodbowl3	keep
+random_effect|does|*|\bdice\b	dnd5e	keep
+random_effect|does|*|\bdice\b	wh_killteam	keep
+random_effect|does|*|\bdice\b	wh_40k_10e	keep
+random_effect|does|*|\bdice\b	mtg	keep
+ranged|does|*|\bshoot	wh_aos_4th	rejected dropped 228 known 34 wrong 62% key kept 38/40
+ranged|does|*|\bshoot	dnd5e	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+ranged|does|*|\bshoot	into_the_breach	keep
+ranged|does|*|\bshoot	wh_killteam	keep
+ranged|does|*|\bshoot	wh_40k_10e	keep
+ranged|does|*|\bshoot	hearthstone	keep
+discard|does|*|\bdiscards?\b(?! piles?\b)	inscryption	narrowed dropped 1 known 1 wrong 100% key kept 2/3
+discard|does|*|\bdiscards?\b(?! piles?\b)	sts1	narrowed dropped 2 known 1 wrong 100% key kept 9/11
+discard|does|*|\bdiscards?\b(?! piles?\b)	runeterra	rejected dropped 7 known 5 wrong 80% key kept 8/9
+discard|does|*|\bdiscards?\b(?! piles?\b)	shadowverse	rejected dropped 11 known 10 wrong 20% key kept 12/13
+discard|does|*|\bdiscards?\b(?! piles?\b)	wh_underworlds	narrowed dropped 101 known 24 wrong 92% key kept 5/7
+discard|does|*|\bdiscards?\b(?! piles?\b)	mtg	rejected dropped 360 known 10 wrong 70% key kept 15/16
+discard|does|*|\bdiscards?\b(?! piles?\b)	wh_killteam	narrowed dropped 23 known 18 wrong 100% key kept 0/0
+discard|does|*|\bdiscards?\b(?! piles?\b)	wh_40k_10e	narrowed dropped 19 known 19 wrong 100% key kept 0/0
+activated|does|*|\bactivate	shadowverse	narrowed dropped 103 known 21 wrong 95% key kept 0/0
+activated|does|*|\bactivate	wh_underworlds	narrowed dropped 18 known 13 wrong 92% key kept 0/0
+activated|does|*|\bactivate	into_the_breach	narrowed dropped 4 known 4 wrong 100% key kept 0/0
+activated|does|*|\bactivate	wh_bloodbowl3	keep
+activated|does|*|\bactivate	inscryption	keep
+activated|does|*|\bactivate	duelyst	keep
+activated|does|*|\bactivate	dnd5e	keep
+activated|does|*|\bactivate	wh_killteam	keep
+activated|does|*|\bactivate	runeterra	keep
+activated|does|*|\bactivate	wh_aos_4th	keep
+activated|does|*|\bactivate	wh_40k_10e	keep
+activated|does|*|\bactivate	hearthstone	keep
+activated|does|*|\bactivate	mtg	keep
+temporary_buff|does|wh_aos_4th|\buntil the (start|end) of (your|the|this|your opponent's)( next)? (turn|phase|battle round)\b|\bfor the rest of the (turn|phase)\b	wh_aos_4th	keep
+delayed|does|*|next turn	into_the_breach	narrowed dropped 0 known 0 wrong 100% key kept 8/10
+delayed|does|*|next turn	inscryption	narrowed dropped 0 known 0 wrong 100% key kept 1/3
+delayed|does|*|next turn	faeria	narrowed dropped 1 known 1 wrong 100% key kept 1/2
+delayed|does|*|next turn	duelyst	narrowed dropped 7 known 7 wrong 100% key kept 2/3
+delayed|does|*|next turn	sts1	narrowed dropped 1 known 1 wrong 100% key kept 6/8
+delayed|does|*|next turn	sts2	narrowed dropped 0 known 0 wrong 100% key kept 10/14
+delayed|does|*|next turn	hs_battlegrounds	narrowed dropped 45 known 14 wrong 100% key kept 5/10
+delayed|does|*|next turn	wh_killteam	narrowed dropped 5 known 5 wrong 100% key kept 0/1
+delayed|does|*|next turn	wh_underworlds	narrowed dropped 4 known 4 wrong 100% key kept 0/1
+delayed|does|*|next turn	wh_aos_4th	rejected dropped 431 known 62 wrong 89% key kept 0/0
+delayed|does|*|next turn	wh_40k_10e	narrowed dropped 42 known 18 wrong 100% key kept 0/5
+delayed|does|*|next turn	shadowverse	rejected dropped 28 known 10 wrong 20% key kept 11/12
+delayed|does|*|next turn	hearthstone	rejected dropped 31 known 10 wrong 30% key kept 4/10
+delayed|does|*|next turn	mtg	rejected dropped 172 known 12 wrong 67% key kept 1/2
+delayed|does|*|next turn	dnd5e	narrowed dropped 138 known 63 wrong 95% key kept 1/7
+activated|does|*|once per (turn|round)	wh_aos_4th	narrowed dropped 831 known 143 wrong 98% key kept 0/2
+activated|does|*|once per (turn|round)	wh_bloodbowl3	narrowed dropped 4 known 4 wrong 100% key kept 0/0
+activated|does|*|once per (turn|round)	gwent	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+activated|does|*|once per (turn|round)	shadowverse	narrowed dropped 1 known 1 wrong 100% key kept 0/0
+activated|does|*|once per (turn|round)	wh_killteam	keep
+activated|does|*|once per (turn|round)	wh_40k_10e	keep
+activated|does|*|once per (turn|round)	hs_battlegrounds	keep
+activated|does|*|once per (turn|round)	dnd5e	keep
+activated|does|*|once per (turn|round)	runeterra	keep
+activated|does|*|once per (turn|round)	hearthstone	keep
+stat_gain|does|*|add \d+ to (the )?.{0,40}(toughness|wounds|strength|attacks|damage|move|save|characteristic|hit roll|wound roll)	wh_aos_4th	keep
+stat_gain|does|*|add \d+ to (the )?.{0,40}(toughness|wounds|strength|attacks|damage|move|save|characteristic|hit roll|wound roll)	wh_40k_10e	keep
+stat_gain|does|*|add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)	wh_killteam	keep
+stat_gain|does|*|add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)	wh_aos_4th	keep
+stat_gain|does|*|add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)	wh_40k_10e	keep
+passive|does|wh_aos_4th|(?s)^(?!.*\btiming:).*\S	wh_aos_4th	narrowed dropped 1111 known 120 wrong 96% key kept 9/11
+condition_count|does|*|\bfor each\b	wh_bloodbowl3	rejected dropped 3 known 3 wrong 67% key kept 4/11
+condition_count|does|*|\bfor each\b	inscryption	narrowed dropped 4 known 4 wrong 100% key kept 1/10
+condition_count|does|*|\bfor each\b	dnd5e	rejected dropped 31 known 12 wrong 83% key kept 3/34
+condition_count|does|*|\bfor each\b	gwent	rejected dropped 8 known 8 wrong 25% key kept 30/35
+condition_count|does|*|\bfor each\b	wh_killteam	narrowed dropped 32 known 11 wrong 91% key kept 6/18
+condition_count|does|*|\bfor each\b	wh_aos_4th	rejected dropped 165 known 27 wrong 78% key kept 27/49
+condition_count|does|*|\bfor each\b	wh_40k_10e	rejected dropped 26 known 10 wrong 60% key kept 11/21
+condition_count|does|*|\bfor each\b	shadowverse	rejected dropped 1 known 1 wrong 0% key kept 0/4
+condition_count|does|*|\bfor each\b	faeria	keep
+condition_count|does|*|\bfor each\b	sts1	keep
+condition_count|does|*|\bfor each\b	hs_battlegrounds	keep
+condition_count|does|*|\bfor each\b	wh_underworlds	keep
+ranged|does|*|\branged\b	duelyst	narrowed dropped 2 known 2 wrong 100% key kept 12/14
+ranged|does|*|\branged\b	darkest_dungeon	narrowed dropped 37 known 11 wrong 100% key kept 42/42
+ranged|does|*|\branged\b	gwent	narrowed dropped 130 known 47 wrong 96% key kept 0/0
+ranged|does|*|\branged\b	into_the_breach	keep
+ranged|does|*|\branged\b	dnd5e	keep
+ranged|does|*|\branged\b	wh_killteam	keep
+ranged|does|*|\branged\b	wh_aos_4th	keep
+ranged|does|*|\branged\b	wh_40k_10e	keep
+stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	into_the_breach	narrowed dropped 63 known 63 wrong 95% key kept 0/0
+stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	wh_killteam	rejected dropped 22 known 19 wrong 84% key kept 0/0
+stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	shadowverse	rejected dropped 7 known 7 wrong 86% key kept 0/0
+stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	hs_battlegrounds	rejected dropped 32 known 10 wrong 50% key kept 13/13
+stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	duelyst	keep
+stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	wh_underworlds	keep
+stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	wh_aos_4th	keep
+stat_gain|does|*|\+\d+ (defence|defense|armou?r|attack|damage|power|health|wounds)\b	hearthstone	keep
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	faeria	narrowed dropped 14 known 10 wrong 90% key kept 16/16
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	duelyst	rejected dropped 9 known 9 wrong 67% key kept 10/10
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	sts1	rejected dropped 15 known 10 wrong 50% key kept 19/19
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	dnd5e	rejected dropped 5 known 5 wrong 60% key kept 1/1
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	gwent	rejected dropped 11 known 10 wrong 70% key kept 13/13
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_killteam	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	runeterra	rejected dropped 64 known 11 wrong 73% key kept 16/16
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_aos_4th	narrowed dropped 7 known 7 wrong 100% key kept 0/0
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	hearthstone	rejected dropped 263 known 17 wrong 76% key kept 15/15
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	wh_underworlds	narrowed dropped 8 known 6 wrong 100% key kept 8/8
+draw|does|*|\bdraw (a|an|one|two|three|x|\d+)	inscryption	keep
+zone_of_control|does|wh_aos_4th|\bin combat\b|\bcombat range\b	wh_aos_4th	narrowed dropped 1089 known 168 wrong 96% key kept 0/0
+stat_gain|does|*|add \d to .{0,25}(hit|wound|save|charge|run|attacks?) (rolls?|characteristic)	wh_killteam	keep
+stat_gain|does|*|add \d to .{0,25}(hit|wound|save|charge|run|attacks?) (rolls?|characteristic)	wh_aos_4th	keep
+stat_gain|does|*|add \d to .{0,25}(hit|wound|save|charge|run|attacks?) (rolls?|characteristic)	wh_40k_10e	keep
+shield|does|*|\bward\b	shadowverse	narrowed dropped 620 known 60 wrong 98% key kept 0/0
+shield|does|*|\bward\b	dnd5e	narrowed dropped 7 known 7 wrong 100% key kept 0/0
+shield|does|*|\bward\b	wh_aos_4th	keep
+information|does|*|\breveal	mtg	rejected dropped 678 known 28 wrong 89% key kept 8/9
+information|does|*|\breveal	dnd5e	rejected dropped 12 known 8 wrong 75% key kept 3/3
+information|does|*|\breveal	inscryption	narrowed dropped 6 known 6 wrong 100% key kept 1/1
+information|does|*|\breveal	runeterra	narrowed dropped 1 known 1 wrong 100% key kept 2/2
+information|does|*|\breveal	wh_killteam	keep
+information|does|*|\breveal	wh_underworlds	keep
+zone_control|does|*|\bobjective	wh_underworlds	rejected dropped 132 known 21 wrong 81% key kept 19/20
+zone_control|does|*|\bobjective	wh_killteam	rejected dropped 12 known 9 wrong 67% key kept 17/19
+zone_control|does|*|\bobjective	wh_aos_4th	rejected dropped 1 known 1 wrong 0% key kept 35/40
+zone_control|does|*|\bobjective	wh_40k_10e	narrowed dropped 166 known 21 wrong 100% key kept 31/31
+zone_control|does|*|\bobjective	into_the_breach	narrowed dropped 12 known 12 wrong 92% key kept 0/0
+zone_control|does|*|\bobjective	dnd5e	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+zone_control|does|*|\bobjective	mtg	narrowed dropped 1 known 1 wrong 100% key kept 0/0
+damage_reduction|does|wh_40k_10e|\bfeel no pain\b|\binvulnerable save\b|\bsubtract 1 from the damage characteristic\b|\bworsen the armour penetration\b|\bdamage characteristic of that attack by 1\b	wh_40k_10e	narrowed dropped 830 known 147 wrong 93% key kept 9/9
+stat_gain|does|*|gains? \+\d+	duelyst	rejected dropped 37 known 22 wrong 41% key kept 5/6
+stat_gain|does|*|gains? \+\d+	shadowverse	rejected dropped 105 known 10 wrong 40% key kept 15/17
+stat_gain|does|*|gains? \+\d+	hearthstone	rejected dropped 144 known 10 wrong 70% key kept 7/8
+stat_gain|does|*|gains? \+\d+	into_the_breach	keep
+stat_gain|does|*|gains? \+\d+	faeria	keep
+stat_gain|does|*|gains? \+\d+	hs_battlegrounds	keep
+stat_gain|does|*|gains? \+\d+	inscryption	keep
+cooldowns|does|wh_aos_4th|\bonce per turn\b	wh_aos_4th	narrowed dropped 840 known 142 wrong 100% key kept 0/0
+generate_cards|does|*|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b	shadowverse	rejected dropped 15 known 10 wrong 30% key kept 63/69
+generate_cards|does|*|\bput (a|an|\d+|one|two|three|x|copies|a copy|\d+ copies|random)\b(?![^.]{0,60}\bfrom (your|the|their|an?)\b)[^.]{0,60}\binto your hand\b	mtg	narrowed dropped 131 known 14 wrong 100% key kept 0/0
+damage|does|wh_aos_4th|\bmortal damage\b|\bcrit \(mortal\)|\binflict (\d|d3|d6)( mortal)? damage\b	wh_aos_4th	narrowed dropped 210 known 32 wrong 97% key kept 90/100
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	wh_bloodbowl3	narrowed dropped 84 known 84 wrong 100% key kept 0/0
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	darkest_dungeon	narrowed dropped 9 known 9 wrong 100% key kept 0/0
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	sts1	narrowed dropped 37 known 16 wrong 100% key kept 0/0
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	sts2	narrowed dropped 55 known 19 wrong 100% key kept 0/0
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	hearthstone	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	dnd5e	narrowed dropped 16 known 16 wrong 94% key kept 0/0
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	inscryption	keep
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	wh_killteam	keep
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	runeterra	keep
+blocking|does|*|(?<!\d )(?<!gain )(?<!stat )\bblocks?\b	mtg	keep
+quests|does|*|\bobjective\b	wh_killteam	narrowed dropped 71 known 22 wrong 95% key kept 0/0
+quests|does|*|\bobjective\b	wh_40k_10e	narrowed dropped 319 known 52 wrong 92% key kept 0/0
+quests|does|*|\bobjective\b	into_the_breach	keep
+quests|does|*|\bobjective\b	wh_underworlds	keep
+quests|does|*|\bobjective\b	wh_aos_4th	keep
+passive|does|*|\bas long as	inscryption	keep
+passive|does|*|\bas long as	dnd5e	keep
+passive|does|*|\bas long as	wh_killteam	keep
+passive|does|*|\bas long as	mtg	keep
+damage_reduction|does|*|invulnerable saves?	wh_killteam	keep
+damage_reduction|does|*|invulnerable saves?	wh_40k_10e	keep
+damage_reduction|does|*|invulnerable save	wh_killteam	keep
+damage_reduction|does|*|invulnerable save	wh_40k_10e	keep
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	sts2	narrowed dropped 6 known 6 wrong 100% key kept 7/7
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	runeterra	rejected dropped 5 known 5 wrong 80% key kept 2/2
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	mtg	rejected dropped 58 known 10 wrong 70% key kept 12/14
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	sts1	keep
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	hs_battlegrounds	keep
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	wh_underworlds	keep
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	wh_aos_4th	keep
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	wh_40k_10e	keep
+temporary_effect|does|*|\b(gets?|gains?|has|have|loses?|becomes?|can'?t|cannot|deals?|takes?|set[s]?)\b[^.]{0,40}\bthis (turn|round)\b	shadowverse	keep
+direct_damage|does|*|damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)	runeterra	rejected dropped 3 known 3 wrong 67% key kept 1/1
+direct_damage|does|*|damage to (the |each |target )?(opponent|enemy hero|enemy player|any target|your opponent|enemy nexus|each player)	mtg	narrowed dropped 0 known 0 wrong 100% key kept 19/22
+condition_count|does|*|at least \d+	shadowverse	rejected dropped 379 known 37 wrong 43% key kept 36/36
+condition_count|does|*|at least \d+	into_the_breach	keep
+condition_count|does|*|at least \d+	inscryption	keep
+condition_count|does|*|at least \d+	dnd5e	keep
+condition_count|does|*|at least \d+	wh_killteam	keep
+condition_count|does|*|at least \d+	runeterra	keep
+condition_count|does|*|at least \d+	wh_aos_4th	keep
+turn_end|does|mtg|at the beginning of (your|the next|each) end step	mtg	rejected dropped 271 known 10 wrong 70% key kept 19/19
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	into_the_breach	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	inscryption	narrowed dropped 23 known 23 wrong 100% key kept 0/0
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	dnd5e	narrowed dropped 6 known 6 wrong 100% key kept 0/0
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	sts2	narrowed dropped 4 known 4 wrong 100% key kept 0/0
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	wh_40k_10e	narrowed dropped 4 known 4 wrong 100% key kept 0/0
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	wh_aos_4th	rejected dropped 8 known 8 wrong 88% key kept 0/0
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	faeria	keep
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	duelyst	keep
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	gwent	keep
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	hs_battlegrounds	keep
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	runeterra	keep
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	shadowverse	keep
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	hearthstone	keep
+scope_global|does|*|\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))	mtg	keep
+ping|does|*|deal 1 damage	duelyst	keep
+ping|does|*|deal 1 damage	faeria	keep
+ping|does|*|deal 1 damage	shadowverse	keep
+ping|does|*|deal 1 damage	hearthstone	keep
+ping|does|*|deal 1 damage	hs_battlegrounds	keep
+ping|does|*|deal 1 damage	inscryption	keep
+ping|does|*|deal 1 damage	into_the_breach	keep
+ping|does|*|deal 1 damage	wh_underworlds	keep
+destroy|does|*|out of action	wh_killteam	keep
+destroy|does|*|out of action	wh_underworlds	keep
+destroy|does|*|out of action	wh_40k_10e	keep
+turn_end|does|wh_underworlds|\bscore this in (an|the third) end phase\b	wh_underworlds	rejected dropped 58 known 10 wrong 60% key kept 53/61
+piercing|does|*|\brend	inscryption	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+piercing|does|*|\brend	darkest_dungeon	narrowed dropped 4 known 4 wrong 100% key kept 0/0
+piercing|does|*|\brend	dnd5e	narrowed dropped 55 known 13 wrong 100% key kept 0/0
+piercing|does|*|\brend	wh_40k_10e	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+piercing|does|*|\brend	wh_killteam	keep
+piercing|does|*|\brend	wh_aos_4th	rejected dropped 4 known 4 wrong 0% key kept 70/76
+stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	hearthstone	keep
+stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	duelyst	keep
+stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	hs_battlegrounds	rejected dropped 24 known 12 wrong 58% key kept 11/11
+stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	into_the_breach	rejected dropped 6 known 6 wrong 83% key kept 1/1
+stat_gain|does|*|\+\d+ (attack|power|health|strength|wounds|toughness)	wh_killteam	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+damage|does|*|loses? \d+ (life|health|hp)	sts1	narrowed dropped 11 known 11 wrong 100% key kept 2/2
+damage|does|*|loses? \d+ (life|health|hp)	sts2	narrowed dropped 28 known 10 wrong 100% key kept 3/3
+damage|does|*|loses? \d+ (life|health|hp)	hearthstone	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+damage|does|*|loses? \d+ (life|health|hp)	mtg	narrowed dropped 291 known 14 wrong 93% key kept 11/11
+generate_cards|does|*|\bdiscover\b	hearthstone	narrowed dropped 36 known 10 wrong 90% key kept 14/21
+generate_cards|does|*|\bdiscover\b	mtg	narrowed dropped 18 known 10 wrong 100% key kept 0/0
+generate_cards|does|*|\bdiscover\b	faeria	keep
+generate_cards|does|*|\bdiscover\b	hs_battlegrounds	keep
+return_to_hand|does|mtg|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b	mtg	rejected dropped 312 known 18 wrong 78% key kept 5/5
+bounce_enemy|does|mtg|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b	mtg	narrowed dropped 395 known 20 wrong 95% key kept 4/5
+polymorph|does|*|\btransforms?\b	inscryption	narrowed dropped 8 known 8 wrong 100% key kept 0/0
+polymorph|does|*|\btransforms?\b	sts1	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+polymorph|does|*|\btransforms?\b	sts2	narrowed dropped 23 known 10 wrong 100% key kept 0/0
+polymorph|does|*|\btransforms?\b	gwent	narrowed dropped 42 known 28 wrong 96% key kept 0/0
+polymorph|does|*|\btransforms?\b	hs_battlegrounds	narrowed dropped 23 known 10 wrong 100% key kept 0/1
+polymorph|does|*|\btransforms?\b	mtg	narrowed dropped 168 known 15 wrong 100% key kept 0/0
+polymorph|does|*|\btransforms?\b	faeria	rejected dropped 6 known 6 wrong 83% key kept 2/3
+polymorph|does|*|\btransforms?\b	dnd5e	narrowed dropped 13 known 13 wrong 92% key kept 0/0
+polymorph|does|*|\btransforms?\b	runeterra	rejected dropped 61 known 17 wrong 88% key kept 2/2
+polymorph|does|*|\btransforms?\b	shadowverse	rejected dropped 42 known 16 wrong 69% key kept 1/1
+polymorph|does|*|\btransforms?\b	hearthstone	narrowed dropped 120 known 10 wrong 100% key kept 4/4
+polymorph|does|*|\btransforms?\b	duelyst	rejected dropped 22 known 19 wrong 79% key kept 3/3
+tutor|does|*|(?:^|[.:!/])(?:(?!\b(?:remove|removes|removed|lose|loses|purge|purges|shuffle|shuffles)\b)[^.:!/])*\bfrom your (?:deck|draw pile)\b	gwent	keep
+tutor|does|*|(?:^|[.:!/])(?:(?!\b(?:remove|removes|removed|lose|loses|purge|purges|shuffle|shuffles)\b)[^.:!/])*\bfrom your (?:deck|draw pile)\b	hearthstone	keep
+tutor|does|*|(?:^|[.:!/])(?:(?!\b(?:remove|removes|removed|lose|loses|purge|purges|shuffle|shuffles)\b)[^.:!/])*\bfrom your (?:deck|draw pile)\b	sts2	rejected dropped 5 known 5 wrong 60% key kept 4/4
+tutor|does|*|(?:^|[.:!/])(?:(?!\b(?:remove|removes|removed|lose|loses|purge|purges|shuffle|shuffles)\b)[^.:!/])*\bfrom your (?:deck|draw pile)\b	shadowverse	narrowed dropped 73 known 10 wrong 100% key kept 16/17
+movement|does|wh_40k_10e|\bfall back\b|\badvance (move|roll)s?\b|\bcharge (move|roll)s?\b|\bnormal move\b|\bpile-in\b|\bconsolidat	wh_40k_10e	narrowed dropped 466 known 71 wrong 90% key kept 27/33
+forced_movement|does|wh_40k_10e|\bfall back\b|\badvance (move|roll)s?\b|\bcharge (move|roll)s?\b|\bnormal move\b|\bpile-in\b|\bconsolidat	wh_40k_10e	narrowed dropped 613 known 104 wrong 100% key kept 0/0
+damage|does|dnd5e|\b\d+d\d+( ?[+-] ?\d+)? [a-z]+ damage\b|\(\d+d\d+( ?[+-] ?\d+)?\) [a-z]+ damage\b|\btakes? [^.]{0,30}\bdamage\b|\bdeals? [^.]{0,30}\bdamage\b	dnd5e	rejected dropped 67 known 42 wrong 67% key kept 169/178
+damage_reduction|does|*|\barmou?r\b	wh_bloodbowl3	narrowed dropped 17 known 17 wrong 100% key kept 0/0
+damage_reduction|does|*|\barmou?r\b	inscryption	narrowed dropped 10 known 10 wrong 100% key kept 0/0
+damage_reduction|does|*|\barmou?r\b	darkest_dungeon	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+damage_reduction|does|*|\barmou?r\b	mtg	narrowed dropped 14 known 10 wrong 100% key kept 0/0
+damage_reduction|does|*|\barmou?r\b	into_the_breach	keep
+damage_reduction|does|*|\barmou?r\b	dnd5e	keep
+damage_reduction|does|*|\barmou?r\b	gwent	keep
+damage_reduction|does|*|\barmou?r\b	wh_killteam	keep
+damage_reduction|does|*|\barmou?r\b	wh_aos_4th	keep
+damage_reduction|does|*|\barmou?r\b	wh_40k_10e	keep
+damage_reduction|does|*|\barmou?r\b	hearthstone	keep
+stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_killteam	rejected dropped 8 known 7 wrong 29% key kept 7/10
+stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	narrowed dropped 82 known 16 wrong 94% key kept 43/48
+stat_loss|does|*|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	keep
+zone_of_control|does|*|\bengagement range	wh_killteam	keep
+zone_of_control|does|*|\bengagement range	wh_40k_10e	keep
+saving_throws|does|*|saving throw	dnd5e	rejected dropped 92 known 35 wrong 66% key kept 130/133
+saving_throws|does|*|saving throw	wh_killteam	keep
+saving_throws|does|*|saving throw	wh_40k_10e	keep
+terrain|does|*|\bcover\b	mtg	narrowed dropped 1 known 1 wrong 100% key kept 0/0
+terrain|does|*|\bcover\b	dnd5e	keep
+terrain|does|*|\bcover\b	wh_killteam	keep
+terrain|does|*|\bcover\b	wh_aos_4th	keep
+terrain|does|*|\bcover\b	wh_40k_10e	keep
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	duelyst	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	sts1	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	dnd5e	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	sts2	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	wh_killteam	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	runeterra	narrowed dropped 1 known 1 wrong 100% key kept 0/0
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	inscryption	keep
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	faeria	keep
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	gwent	keep
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	hs_battlegrounds	keep
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	shadowverse	keep
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	hearthstone	keep
+death_count|does|*|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)	mtg	keep
+condition|does|hearthstone|\bif (you|you.re|your)\b	hearthstone	narrowed dropped 525 known 36 wrong 100% key kept 0/0
+reserve_bench|does|wh_40k_10e|\bdeep strike\b|\bstrategic reserves\b|\breserves\b	wh_40k_10e	rejected dropped 371 known 70 wrong 67% key kept 28/28
+variable_stats|does|*|equal to the number of	inscryption	narrowed dropped 1 known 1 wrong 100% key kept 4/4
+variable_stats|does|*|equal to the number of	sts1	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+variable_stats|does|*|equal to the number of	sts2	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+variable_stats|does|*|equal to the number of	wh_killteam	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+variable_stats|does|*|equal to the number of	wh_underworlds	narrowed dropped 5 known 5 wrong 100% key kept 3/3
+variable_stats|does|*|equal to the number of	wh_aos_4th	narrowed dropped 43 known 25 wrong 96% key kept 0/0
+variable_stats|does|*|equal to the number of	wh_40k_10e	narrowed dropped 0 known 0 wrong 100% key kept 1/1
+variable_stats|does|*|equal to the number of	shadowverse	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+variable_stats|does|*|equal to the number of	mtg	narrowed dropped 258 known 16 wrong 100% key kept 5/5
+variable_stats|does|*|equal to the number of	gwent	keep
+variable_stats|does|*|equal to the number of	runeterra	keep
+variable_stats|does|*|equal to the number of	hearthstone	keep
+summon|does|*|\bput .{0,30}(onto|into) the battlefield	hearthstone	rejected dropped 10 known 10 wrong 70% key kept 0/1
+summon|does|*|\bput .{0,30}(onto|into) the battlefield	mtg	keep
+adjacency|does|*|\badjacent	into_the_breach	keep
+adjacency|does|*|\badjacent	wh_bloodbowl3	keep
+adjacency|does|*|\badjacent	inscryption	keep
+adjacency|does|*|\badjacent	hs_battlegrounds	keep
+adjacency|does|*|\badjacent	wh_underworlds	keep
+free_play|does|*|\bput .{0,30}onto the battlefield	mtg	keep
+return_to_hand|does|*|return .{0,40}to (its|their) owner'?s? hand	mtg	rejected dropped 160 known 10 wrong 80% key kept 6/7
+return_to_hand|does|*|return .{0,40}to (its|their) owner'?s? hand	hearthstone	keep
+tribal|does|hs_battlegrounds|\b(murlocs?|beasts?|mechs?|demons?|dragons?|elementals?|pirates?|naga|quilboar|undead|zerg|whelps?)\b	hs_battlegrounds	rejected dropped 84 known 18 wrong 67% key kept 60/60
+bounce_enemy|does|*|return .{0,40}to (its|their) owner'?s? hand	mtg	narrowed dropped 319 known 17 wrong 100% key kept 3/5
+movement|does|*|\bcharge rolls?	wh_killteam	keep
+movement|does|*|\bcharge rolls?	wh_aos_4th	keep
+movement|does|*|\bcharge rolls?	wh_40k_10e	keep
+forced_movement|does|*|\bcharge rolls?	wh_killteam	narrowed dropped 31 known 17 wrong 100% key kept 0/0
+forced_movement|does|*|\bcharge rolls?	wh_aos_4th	narrowed dropped 251 known 35 wrong 97% key kept 0/0
+forced_movement|does|*|\bcharge rolls?	wh_40k_10e	narrowed dropped 200 known 35 wrong 100% key kept 0/0
+condition|does|mtg|(?<!for )\bas long as (you|your|there|this|it|equipped|enchanted|an?|defending|no)\b	mtg	keep
+shield|does|*|\bshield\b	dnd5e	narrowed dropped 26 known 10 wrong 100% key kept 0/0
+shield|does|*|\bshield\b	runeterra	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+shield|does|*|\bshield\b	wh_underworlds	narrowed dropped 2 known 2 wrong 100% key kept 0/2
+shield|does|*|\bshield\b	wh_40k_10e	narrowed dropped 48 known 19 wrong 100% key kept 0/0
+shield|does|*|\bshield\b	shadowverse	narrowed dropped 13 known 11 wrong 100% key kept 0/0
+shield|does|*|\bshield\b	hearthstone	narrowed dropped 2 known 2 wrong 100% key kept 9/11
+shield|does|*|\bshield\b	mtg	narrowed dropped 3 known 3 wrong 100% key kept 2/2
+shield|does|*|\bshield\b	inscryption	keep
+shield|does|*|\bshield\b	hs_battlegrounds	keep
+shield|does|*|\bshield\b	wh_killteam	keep
+shield|does|*|\bshield\b	wh_aos_4th	keep
+stat_gain|does|darkest_dungeon|\+\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit|max hp)\b|\bbuff: \+	darkest_dungeon	keep
+buff|does|wh_40k_10e|(add|subtract) 1 (to|from) the (hit|wound) roll	wh_40k_10e	rejected dropped 227 known 40 wrong 48% key kept 32/33
+debuff|does|wh_40k_10e|(add|subtract) 1 (to|from) the (hit|wound) roll	wh_40k_10e	narrowed dropped 264 known 39 wrong 97% key kept 32/34
+condition_count|does|*|equal to the number of	wh_underworlds	narrowed dropped 4 known 4 wrong 100% key kept 3/3
+condition_count|does|*|equal to the number of	mtg	rejected dropped 224 known 11 wrong 64% key kept 6/6
+condition_count|does|*|equal to the number of	gwent	narrowed dropped 1 known 1 wrong 100% key kept 4/5
+condition_count|does|*|equal to the number of	inscryption	keep
+condition_count|does|*|equal to the number of	sts1	keep
+condition_count|does|*|equal to the number of	sts2	keep
+stat_gain|does|*|\+\d+\|\+\d+	runeterra	keep
+movement|does|*|\bpush	wh_underworlds	rejected dropped 200 known 23 wrong 57% key kept 13/14
+movement|does|*|\bpush	into_the_breach	keep
+movement|does|*|\bpush	wh_bloodbowl3	keep
+movement|does|*|\bpush	inscryption	keep
+movement|does|*|\bpush	duelyst	keep
+movement|does|*|\bpush	darkest_dungeon	keep
+movement|does|*|\bpush	dnd5e	keep
+movement|does|*|\bpush	wh_40k_10e	keep
+information|does|*|look at	mtg	rejected dropped 330 known 14 wrong 64% key kept 1/1
+information|does|*|look at	gwent	narrowed dropped 15 known 15 wrong 100% key kept 1/1
+information|does|*|look at	darkest_dungeon	keep
+random_effect|does|*|\brandom	mtg	rejected dropped 222 known 10 wrong 30% key kept 6/6
+random_effect|does|*|\brandom	inscryption	narrowed dropped 2 known 2 wrong 100% key kept 25/27
+random_effect|does|*|\brandom	into_the_breach	keep
+draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	hearthstone	rejected dropped 29 known 10 wrong 70% key kept 18/18
+draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	runeterra	rejected dropped 4 known 4 wrong 75% key kept 0/0
+draw|does|*|\bdraws? (?:\d+|x|an?|one|two|three|four|five)? ?cards?	inscryption	narrowed dropped 2 known 2 wrong 100% key kept 8/8
+stat_loss|does|*|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	rejected dropped 57 known 10 wrong 80% key kept 39/43
+stat_loss|does|*|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	keep
+stress_morale|does|wh_40k_10e|\bbattle-shock(ed)?\b|\bleadership\b	wh_40k_10e	narrowed dropped 119 known 24 wrong 100% key kept 40/45
+terrain|does|*|\bterrain	into_the_breach	narrowed dropped 29 known 29 wrong 100% key kept 0/0
+terrain|does|*|\bterrain	inscryption	rejected dropped 6 known 6 wrong 67% key kept 22/22
+terrain|does|*|\bterrain	wh_killteam	keep
+terrain|does|*|\bterrain	wh_aos_4th	keep
+terrain|does|*|\bterrain	dnd5e	keep
+generate_cards|does|hs_battlegrounds|\bget (a|an|another|\d+|x|two|three) (random |new |plain )?[a-z]	hs_battlegrounds	rejected dropped 67 known 14 wrong 71% key kept 50/50
+ranged|does|*|\branged attack	dnd5e	rejected dropped 12 known 10 wrong 50% key kept 29/31
+ranged|does|*|\branged attack	wh_40k_10e	keep
+forced_movement|does|*|\bpush	into_the_breach	rejected dropped 18 known 18 wrong 39% key kept 74/78
+forced_movement|does|*|\bpush	wh_40k_10e	narrowed dropped 1 known 1 wrong 100% key kept 0/0
+forced_movement|does|*|\bpush	wh_bloodbowl3	keep
+forced_movement|does|*|\bpush	inscryption	keep
+forced_movement|does|*|\bpush	dnd5e	keep
+forced_movement|does|*|\bpush	wh_underworlds	keep
+forced_movement|does|*|\bpush(ing|es|ed)?\b	into_the_breach	rejected dropped 18 known 18 wrong 39% key kept 74/78
+forced_movement|does|*|\bpush(ing|es|ed)?\b	wh_40k_10e	narrowed dropped 1 known 1 wrong 100% key kept 0/0
+forced_movement|does|*|\bpush(ing|es|ed)?\b	wh_bloodbowl3	keep
+forced_movement|does|*|\bpush(ing|es|ed)?\b	inscryption	keep
+forced_movement|does|*|\bpush(ing|es|ed)?\b	dnd5e	keep
+forced_movement|does|*|\bpush(ing|es|ed)?\b	wh_underworlds	keep
+stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	narrowed dropped 39 known 11 wrong 100% key kept 43/45
+stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	keep
+stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	wh_killteam	narrowed dropped 6 known 6 wrong 100% key kept 0/0
+stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	gwent	rejected dropped 121 known 40 wrong 52% key kept 68/76
+stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	runeterra	keep
+stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	darkest_dungeon	keep
+evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	dnd5e	narrowed dropped 110 known 56 wrong 100% key kept 0/0
+evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	wh_aos_4th	narrowed dropped 1 known 1 wrong 100% key kept 0/0
+evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	mtg	narrowed dropped 304 known 18 wrong 94% key kept 0/0
+piercing|does|wh_aos_4th|\brend\b	wh_aos_4th	rejected dropped 39 known 10 wrong 80% key kept 69/71
+disable|does|*|\bstun	wh_bloodbowl3	narrowed dropped 47 known 47 wrong 100% key kept 0/0
+disable|does|*|\bstun	inscryption	narrowed dropped 6 known 6 wrong 100% key kept 0/0
+disable|does|*|\bstun	wh_aos_4th	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+disable|does|*|\bstun	darkest_dungeon	rejected dropped 49 known 24 wrong 88% key kept 15/15
+disable|does|*|\bstun	duelyst	keep
+disable|does|*|\bstun	runeterra	keep
+disable|does|*|\bstun	dnd5e	keep
+disable|does|*|\bstun	wh_killteam	keep
+shop_gold|does|*|\btavern\b	hs_battlegrounds	narrowed dropped 383 known 75 wrong 97% key kept 2/3
+once_per_game|does|*|once per (game|battle|match|run)	wh_40k_10e	narrowed dropped 77 known 10 wrong 100% key kept 57/59
+once_per_game|does|*|once per (game|battle|match|run)	inscryption	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+once_per_game|does|wh_40k_10e|\bonce per (battle|game)\b	wh_40k_10e	narrowed dropped 77 known 10 wrong 100% key kept 57/59
+advantage|does|wh_aos_4th|\bre-?roll|\bcrit \((2 hits|auto-wound)\)	wh_aos_4th	keep
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	into_the_breach	narrowed dropped 58 known 58 wrong 98% key kept 0/0
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	duelyst	keep
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	wh_killteam	keep
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	wh_underworlds	keep
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	wh_aos_4th	keep
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	shadowverse	keep
+rows|does|*|\brows?\b	into_the_breach	narrowed dropped 7 known 7 wrong 100% key kept 0/0
+rows|does|*|\brows?\b	inscryption	narrowed dropped 6 known 6 wrong 100% key kept 0/0
+rows|does|*|\brows?\b	hearthstone	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+rows|does|*|\brows?\b	dnd5e	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+rows|does|*|\brows?\b	gwent	keep
+rows|does|*|\brows?\b	duelyst	keep
+upgrade|does|*|\bupgrade	into_the_breach	narrowed dropped 22 known 22 wrong 100% key kept 90/90
+upgrade|does|*|\bupgrade	wh_underworlds	narrowed dropped 229 known 45 wrong 96% key kept 0/0
+upgrade|does|*|\bupgrade	wh_killteam	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+upgrade|does|*|\bupgrade	hs_battlegrounds	keep
+upgrade|does|*|\bupgrade	inscryption	keep
+upgrade|does|*|\bupgrade	dnd5e	keep
+upgrade|does|*|\bupgrade	runeterra	keep
+mill|does|*|\bmill	mtg	narrowed dropped 211 known 10 wrong 100% key kept 3/3
+self_mill|does|*|\bmill	mtg	rejected dropped 139 known 10 wrong 80% key kept 5/5
+damage_reduction|does|*|\bresist	into_the_breach	keep
+damage_reduction|does|*|\bresist	darkest_dungeon	keep
+damage_reduction|does|*|\bresist	dnd5e	keep
+damage_reduction|does|*|\bresist	sts2	keep
+damage_reduction|does|*|\bresist	wh_aos_4th	keep
+selection|does|*|look at the top	mtg	rejected dropped 101 known 10 wrong 60% key kept 6/7
+destroy|counters|*|\bindestructible\b	mtg	keep
+damage_over_time|does|*|\bpoison(?!ous)	sts2	rejected dropped 8 known 8 wrong 62% key kept 6/6
+damage_over_time|does|*|\bpoison(?!ous)	darkest_dungeon	keep
+damage_over_time|does|*|\bpoison(?!ous)	dnd5e	keep
+damage_over_time|does|*|\bpoison(?!ous)	gwent	keep
+damage_over_time|does|*|\bpoison(?!ous)	wh_killteam	keep
+damage_over_time|does|*|\bpoison(?!ous)	runeterra	keep
+damage_over_time|does|*|\bpoison(?!ous)	wh_underworlds	keep
+damage_over_time|does|*|\bpoison(?!ous)	wh_aos_4th	keep
+damage_over_time|does|*|\bpoison(?!ous)	hearthstone	keep
+damage_over_time|does|*|\bpoison(?!ous)	mtg	keep
+aura|does|*|\baura\b	hearthstone	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+aura|does|*|\baura\b	shadowverse	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+aura|does|*|\baura\b	dnd5e	keep
+aura|does|*|\baura\b	wh_killteam	keep
+aura|does|*|\baura\b	wh_aos_4th	keep
+aura|does|*|\baura\b	mtg	keep
+damage_types|does|*|\bresistance\b	wh_aos_4th	narrowed dropped 6 known 6 wrong 100% key kept 0/0
+damage_types|does|*|\bresistance\b	darkest_dungeon	keep
+damage_types|does|*|\bresistance\b	dnd5e	keep
+ranged|does|wh_aos_4th|\bshooting attacks?\b|\bshoot\b	wh_aos_4th	rejected dropped 140 known 20 wrong 70% key kept 41/42
+piercing|does|*|\bpierc	into_the_breach	narrowed dropped 10 known 10 wrong 100% key kept 0/0
+piercing|does|*|\bpierc	dnd5e	narrowed dropped 210 known 81 wrong 99% key kept 0/0
+piercing|does|*|\bpierc	wh_aos_4th	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+piercing|does|*|\bpierc	mtg	narrowed dropped 1 known 1 wrong 100% key kept 0/0
+piercing|does|*|\bpierc	sts2	keep
+piercing|does|*|\bpierc	wh_killteam	keep
+damage_reduction|does|wh_aos_4th|\bward \(\d\+\)|\b(has|have|gain|gains|with) ward\b|\bsubtract 1 from (the )?(hit|wound) rolls? for (combat |shooting )?attacks that target\b|\bdamage points? allocated to this unit\b	wh_aos_4th	keep
+polymorph|does|*|\bbecomes? a\b	mtg	narrowed dropped 282 known 20 wrong 100% key kept 2/2
+polymorph|does|*|\bbecomes? a\b	inscryption	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+polymorph|does|*|\bbecomes? a\b	dnd5e	narrowed dropped 30 known 19 wrong 100% key kept 0/0
+polymorph|does|*|\bbecomes? a\b	gwent	narrowed dropped 1 known 1 wrong 100% key kept 0/0
+polymorph|does|*|\bbecomes? a\b	hs_battlegrounds	narrowed dropped 2 known 2 wrong 100% key kept 0/0
+polymorph|does|*|\bbecomes? a\b	wh_killteam	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+polymorph|does|*|\bbecomes? a\b	runeterra	narrowed dropped 1 known 1 wrong 100% key kept 0/0
+polymorph|does|*|\bbecomes? a\b	shadowverse	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+polymorph|does|*|\bbecomes? a\b	hearthstone	narrowed dropped 10 known 10 wrong 100% key kept 0/0
+summon|does|*|\bspawn	into_the_breach	narrowed dropped 22 known 22 wrong 91% key kept 14/20
+summon|does|*|\bspawn	gwent	narrowed dropped 13 known 10 wrong 100% key kept 44/62
+summon|does|*|\bspawn	dnd5e	narrowed dropped 1 known 1 wrong 100% key kept 1/2
+stress_morale|does|darkest_dungeon|\bstress\b|\bresolve\b|\baffliction|\bvirtue	darkest_dungeon	rejected dropped 44 known 21 wrong 86% key kept 101/105
+destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	faeria	narrowed dropped 6 known 6 wrong 100% key kept 0/0
+destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	duelyst	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	sts2	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	gwent	narrowed dropped 5 known 5 wrong 100% key kept 0/0
+destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	hs_battlegrounds	narrowed dropped 8 known 8 wrong 100% key kept 0/0
+destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	shadowverse	narrowed dropped 53 known 17 wrong 94% key kept 0/0
+destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	hearthstone	narrowed dropped 23 known 13 wrong 100% key kept 0/0
+destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	mtg	narrowed dropped 243 known 17 wrong 100% key kept 0/0
+movement|does|*|\badvance\b	dnd5e	narrowed dropped 3 known 3 wrong 100% key kept 0/0
+movement|does|*|\badvance\b	hearthstone	narrowed dropped 39 known 19 wrong 100% key kept 0/0
+movement|does|*|\badvance\b	runeterra	narrowed dropped 23 known 18 wrong 100% key kept 0/0
+forced_movement|does|*|\badvance\b	dnd5e	rejected dropped 3 known 3 wrong 67% key kept 0/0
+forced_movement|does|*|\badvance\b	wh_killteam	narrowed dropped 14 known 14 wrong 100% key kept 0/0
+forced_movement|does|*|\badvance\b	runeterra	narrowed dropped 23 known 18 wrong 100% key kept 0/0
+forced_movement|does|*|\badvance\b	wh_aos_4th	narrowed dropped 6 known 6 wrong 100% key kept 0/0
+forced_movement|does|*|\badvance\b	wh_40k_10e	narrowed dropped 261 known 53 wrong 100% key kept 0/0
+forced_movement|does|*|\badvance\b	hearthstone	narrowed dropped 39 known 19 wrong 100% key kept 0/0
+upgrade|does|shadowverse|\bevolve (it|this|an?|target|all|that|them)\b|\bcan evolve\b|\bwhen this follower evolves\b|\bthis follower evolves\b	shadowverse	narrowed dropped 345 known 50 wrong 100% key kept 0/0
+reactions|does|*|\breaction\b	dnd5e	narrowed dropped 7 known 7 wrong 100% key kept 16/17
+reactions|does|*|\breaction\b	wh_aos_4th	keep
+cost_reduction|does|*|costs? \(?\d+\)? less	hearthstone	rejected dropped 65 known 10 wrong 30% key kept 17/17

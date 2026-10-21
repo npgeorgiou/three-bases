@@ -1,0 +1,76 @@
+# definitions
+activated | Activated ability (pay to use) | The player chooses when to use an ability: activate, tap, pay to use. | Not: Abilities that fire on their own are triggers.
+aoe_damage | Damage to many at once | Damage hits several units, a row, a lane or an area at once. | Not: One unit's attack hitting several is multi_target_attack.
+cost_reduction | Cards cost less | The owner's cards cost less by an amount. | Not: A play that costs nothing at all is free_play; a cost set to a number is cost_set.
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+on_play | When played (battlecry, on reveal) | Triggers when the card is played or revealed: battlecry, on reveal, enters. | Not: When another card is played is on_ally_play.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+scope_global | Whole board / all players | The effect touches the whole board or all players. | Not: Several but not all is scope_multi.
+shield | Absorb one hit (shield, ward) | The next hit or damage instance is fully absorbed or cancelled. | Not: Damage lowered by an amount is damage_reduction.
+symmetric_effect | Both players alike | The effect touches both players the same way: each player draws. | Not: Only my side is the effect itself.
+temporary_effect | This turn / round only | It lasts only this turn or round: a bonus, a penalty or a lock. | Not: Lasting changes are the effect itself.
+transform | Transform my card into another | The owner's own card or unit turns into a different one: evolve, flip, become. | Not: Turning an enemy into something weaker is polymorph.
+tribal | Tribe / type matters | The effect cares about a tribe, type, team or family of cards. | Not: Counting as another type is type_grant.
+tutor | Search the deck for a card (tutor) | The owner searches the deck for a card of a stated kind and takes it. | Not: Drawing the top card is draw.
+upgrade | Upgrade / level up a card | A card is upgraded, levelled up or enhanced into a better version of itself. | Not: A plain stat rise on the board is stat_gain.
+# questions: qid | concept | game | name | text
+8124* | symmetric_effect | runeterra | Fracture | Deal 1 to EVERYTHING or destroy a unit's equipment.
+8125* | symmetric_effect | runeterra | Udyr's Spirits Unleashed | Keywords: Slow. Grant allies everywhere +1|+1. Then deal 1 to EVERYTHING. Create an Udyr in your deck.
+8126* | symmetric_effect | runeterra | Ram Stance | Keywords: Slow. Pick an ally. Deal 1 to EVERYTHING else.
+8127* | symmetric_effect | runeterra | Fracture (created) | Keywords: Slow. Deal 1 to EVERYTHING.
+3395* | temporary_effect | runeterra | Survival Skills | Allies can't drop below 1 health this round.
+3396* | temporary_effect | runeterra | Eager Dedicant | Keywords: Brash, Missing Translation. I have +1|+0 for each card you've drawn this round.
+3397* | temporary_effect | runeterra | Annie's Disintegrate | Keywords: Fast. Pick a unit. The next time it takes 1 or more damage this round, kill it. Create an Annie in your deck.
+3398* | temporary_effect | runeterra | Thresh's The Box | Keywords: Fast. Deal 3 to each enemy that was summoned this round. Create a Thresh in your deck.
+3399* | temporary_effect | runeterra | Fresh Offerings | If 3+ allies have died this round, summon Vilemaw.
+3400* | temporary_effect | runeterra | Lamb's Respite | Give the weakest ally "I can't take damage or die" this round.
+3401* | temporary_effect | runeterra | The Box | Deal 3 to each enemy that was summoned this round.
+3402* | temporary_effect | runeterra | Divine Judgment | Give an ally "I can't take damage or die" this round. 
+3403* | temporary_effect | runeterra | Reveler's Feast | Deal 2 to an ally to give allies +2|+0 this round.
+3404* | temporary_effect | runeterra | Crystal Carrier | Round Start: Get an extra mana gem this round.
+6930* | transform | runeterra | Ripper's Bay | Keywords: Lurk, Landmark. When allies attack, before activating Lurk, grant the top ally in your deck Lurk and it becomes a Lurker.
+6455* | tribal | runeterra | Shyvana | Keywords: Fury. Attack: Give me +1|+1 this round. Level up: Dragon allies have dealt 16+ damage.
+6456* | tribal | runeterra | Spider Queen Elise (level 2) | Keywords: Fearsome, Challenger, Missing Translation. Other Spider allies have Challenger and Fearsome.
+4572* | tutor | runeterra | Warmother's Call | Summon the top ally from your deck now and EACH Round Start.
+4573* | tutor | runeterra | Zap Sprayfin | Keywords: Elusive, Attune. When I'm summoned, draw a spell that costs 3 or less from your deck.
+4574* | tutor | runeterra | Vaults of Helia | Keywords: Landmark. Round Start: If you can, kill your most expensive ally to summon an ally from your deck that costs 1 more.
+4575* | tutor | runeterra | Gluttony | Kill an ally with Last Breath to summon a follower from your deck that costs 1 more.
+4576* | tutor | runeterra | The Kingfisher | When I'm summoned, draw 1 of each champion from your deck.
+4577* | tutor | runeterra | Thresh (level 2) | Keywords: Challenger. The first time I attack this game, summon another attacking champion from your deck or hand.
+5162* | upgrade | runeterra | Viktor | Keywords: Augment. When I'm summoned or Round Start: Create a Hex Core Upgrade in hand. Level up: You've played 7+ created cards.
+5163* | upgrade | runeterra | Viktor (level 2) | Keywords: Augment, Missing Translation. Your created cards cost 1 less. When I'm summoned or Round Start: Create a Hex Core Upgrade in hand.
+427* | activated | shadowverse | Castelle's Ultimate | Put a Purgation's Blessing into your hand. Give your leader the following effect: At the start of your every other turn, put a Purgation's Blessing into your hand. (This effect lasts for the rest of the match.)<<${me.inplay.class.load_turn_skill_id=9301440901}>0&{me.main_place.class.is_buff_detail=true.count}>0? (Turn given: )?>>
+2167* | activated | shadowverse | Postapocalyptic Girls | During your turn, when this card is added to your hand from your deck, if X is at least 1, subtract X from its cost and reveal it. X equals the number of times Resonance has been activated for you this match. ---------- Accelerate (1): Put 2 Analyzing Artifacts and a Postapocalyptic Girls into your deck. At the end of this turn, draw a card. ---------- Fanfare: Restore 5 defense to your leader. Give your leader the following effect - The next time your leader takes damage, reduce that damage to 0.
+2643* | activated | shadowverse | Loxis, Homestead Pioneer | Ward. During your turn, whenever an allied amulet comes into play, recover 1 play point. During your turn, whenever an allied amulet leaves play, randomly summon a Dutiful Steed, Bullet Bike, or Arcane Personnel Carrier. Each of these amulets can be summoned only once per turn with this effect. (Transformation doesn't count as leaving play.) Evolved: (Same as the unevolved form.)
+7184* | activated | shadowverse | Yuwan, Dimensional Avenger | Fanfare: Banish a card in your hand and put a copy of it into your deck. Draw a card. At the start of your opponent's turn, if Resonance has been activated for you at least 5 times this match, deal 4 damage to a random enemy follower. Then, if it has been activated at least 10 times, deal 4 damage to the enemy leader. Evolved: Evolve: Summon an Analyzing Artifact. At the start of your opponent's turn, if Resonance has been activated for you at least 5 times this match, deal 4 damage to a random enemy follower. Then, if it has been activated at least 10 times, deal 4 damage to the enemy leader.
+7185* | activated | shadowverse | Rulenye, Omen of Silence | Fanfare: Necromancy (3) - Until the start of your next turn, add 3 to the original cost of spells in your opponent's hand. (Only affects cards in hand at the time this effect is activated.)
+7186* | activated | shadowverse | Automachina Maiden | Invocation: At the end of your turn, if Resonance has been activated for you at least 10 times this match, invoke this card. ---------- Ward. Fanfare and Last Words: Draw a card. Evolved: (Same as the unevolved form, excluding Fanfare.)
+7187* | activated | shadowverse | Magna Zero | Fanfare: Deal 3 damage to all enemies. If Resonance has been activated for you at least 10 times this match, deal 10 damage instead. If it has been activated for you at least 20 times, deal 20 damage instead.
+7188* | activated | shadowverse | Infernal Gaze | Until the start of your next turn, add 10 to the original cost of spells in your opponent's hand. (Only affects cards in hand at the time this effect is activated.) Draw a card.
+8152* | aoe_damage | shadowverse | Foul Tempest | Deal 1 damage to each enemy follower. Necromancy (6): Deal 3 damage instead.
+6046* | cost_reduction | shadowverse | Diabolic Drain | If Vengeance is active for you, this card costs 4 less. ---------- Deal 4 damage to an enemy follower. Restore 2 defense to your leader.
+6047* | cost_reduction | shadowverse | Revelation | If Vengeance is active for you, this card costs 4 less. ---------- Deal 8 damage to all followers.
+6048* | cost_reduction | shadowverse | Lord Atomy | If 4 allied cards are in play, this follower costs 8 less play points. ---------- Fanfare: If 4 other allied cards are in play, destroy all other allied cards.
+4256* | damage | shadowverse | Avowed Strike | Deal X damage to an enemy follower. X equals the number of other Dragoncraft cards in your hand. Enhance (7): Draw 2 cards and deal damage 2 times the number of other Dragoncraft cards in your hand instead.
+4257* | damage | shadowverse | Burst Shot | Deal 1 damage to a random enemy follower. Do this 4 times. Enhance (10): Deal damage to the enemy leader instead. Deal damage 1 more time for every 2 allied Fairies that have been destroyed this match.
+8807* | on_play | shadowverse | Whitefrost Blizzard | Deal damage to enemy followers in the order they came into play: Deal 4 damage to the first, 3 damage to the second, 2 damage to the third, and 1 damage to the fourth. If Overflow is active for you, draw a card.
+6965* | polymorph | shadowverse | Harnessed Flame | Strike: Deal 2 damage to the enemy leader. At the start of your turn, combine with an allied Harnessed Glass to become a Flame and Glass. Evolved: (Same as the unevolved form.)
+6966* | polymorph | shadowverse | Venomfang Medusa | Fanfare: Summon a Serpent. At the start of your turn, if at least 2 allied Serpents are in play, 2 Serpents combine to become a Medusiana. Evolved: Evolve: Summon a Serpent. At the start of your turn, if at least 2 allied Serpents are in play, 2 Serpents combine to become a Medusiana.
+6967* | polymorph | shadowverse | Marionette//Due | Storm. At the start of your turn, combine with an allied Marionette//Uno to become a Marionette//Tre. Evolved: (Same as the unevolved form.)
+3939* | scope_global | shadowverse | Filene, Blizzardous Heart | Bane. Fanfare: Deal 1 damage to an enemy follower. If Overflow is active for you, add 1 to the cost of all cards in your opponent's hand until the start of your next turn. Evolved: Bane. Evolve: Destroy a damaged enemy follower.
+3940* | scope_global | shadowverse | Demon-Eyed Gangster | Fanfare: Give the enemy leader the following effect until the end of your opponent's turn - Reduce defense restored to your leader to 1. Evolved: Evolve: If Vengeance is active for you, add 1 to the cost of all cards in your opponent's hand until the start of your next turn.
+3941* | scope_global | shadowverse | Phoenix Roost | Fanfare: Halve the cost of all cards in both players' hands (rounding up). Whenever a card is added to a player's hand, halve its cost (rounding up).
+3942* | scope_global | shadowverse | Python | Fanfare: Banish all cards that cost 7 play points or less from your deck.
+3943* | scope_global | shadowverse | Pay the Piper | Give -10/-0 to a random enemy follower. Add 1 to the costs of all cards in your opponent's hand until the start of your next turn.
+4494* | scope_global | shadowverse | Faust, Overzealous Observer | At the end of each player's turn, if the total allied Stack count in play is less than 2, summon 2 Magic Sediments. Otherwise, perform Earth Rite (2): Deal 4 damage to all enemies. Evolved: (Same as the unevolved form.)
+4495* | scope_global | shadowverse | Juno, Atelier Alchemist | Fusion: Runecraft followers Whenever cards are fused to this card, summon a Magic Sediment. ---------- Fanfare: Earth Rite - Give your leader the following effect: At the end of each player's turn, summon a Guardian Golem. (This effect is not stackable and is removed after activating 3 times.)
+4496* | scope_global | shadowverse | Magic Girl Melvie | Fanfare: Both players draw cards until each player has 7 cards in their hand.
+5455* | shield | shadowverse | Tears of Tribulation | Give your leader the following effect until the end of the turn: Whenever an allied Officer follower comes into play, restore 1 defense to your leader. Summon 2 Shield Guardians.
+5456* | shield | shadowverse | Honored Frontguard General | Ward. Can't be targeted by enemy effects. Last Words: Summon a Shield Guardian, and give it +X/+X. X equals the number of times that allied followers have evolved during this match. Evolved: (Same as the unevolved form.)
+5457* | shield | shadowverse | Shield Phalanx | Summon a Shield Guardian and Knight. Rally (15): Summon a Frontguard General instead of a Shield Guardian.
+5458* | shield | shadowverse | White Paladin | Ward. Evolved: Ward. Evolve: Summon a Shield Guardian for each enemy follower in play.
+5459* | shield | shadowverse | Greatshield | Countdown (1) Fanfare: Give an allied Swordcraft follower +0/+1. Last Words: Summon a Shield Guardian.
+5460* | shield | shadowverse | Holy Lion Crystal | Summon a Holy Shield Lion. If you've played 3 to 5 other Holy Lion Crystals this match, summon a Holy Plate Lion instead. If you've played at least 6 other Holy Lion Crystals, Summon a Holy King Lion instead. Enhance (5): Put a Holy Lion Crystal into your hand.
+5461* | shield | shadowverse | Sera, Maiden of the Dawn | Ward. Whenever an allied Officer follower comes into play, give it the following effect: Can't be targeted by enemy effects. Then restore 1 defense to your leader. Evolved: Ward. Evolve: Summon 3 Shield Guardians. Whenever an allied Officer follower comes into play, give it the following effect: Can't be targeted by enemy effects. Then restore 1 defense to your leader.
+5462* | shield | shadowverse | Empress of Serenity | Fanfare: Summon a Shield Guardian. Enhance (5): Summon 3 instead. Enhance (10): Give +3/+3 to all allied Shield Guardians.
+5463* | shield | shadowverse | Confront Adversity | Summon a Shield Guardian and a Knight. Deal 1 damage to all enemy followers.

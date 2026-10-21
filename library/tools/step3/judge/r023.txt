@@ -1,0 +1,97 @@
+# definitions
+movement | Move my units (reposition) | The owner moves their own unit to another space, row, lane or location. | Not: Moving enemy units is forced_movement.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+permanent_growth | Grows again and again | A unit gains stats repeatedly (each turn, each trigger) and keeps them. | Not: A single lasting bonus is stat_gain.
+ping | Small repeatable damage | A small amount of damage (1 or 2) that can be dealt again and again. | Not: One big hit is damage.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+regeneration | Heal every turn (regeneration) | A unit heals again each turn or returns to full health each turn. | Not: A single heal is heal.
+resource_gain | Gain resources (ramp) | The owner gains extra mana, energy, supply or another resource, now or for good. | Not: Cards costing less is cost_reduction.
+return_to_hand | Return my unit to hand | The owner returns their own unit to hand, to replay it or save it. | Not: Sending an enemy unit back is bounce_enemy.
+scope_global | Whole board / all players | The effect touches the whole board or all players. | Not: Several but not all is scope_multi.
+shield | Absorb one hit (shield, ward) | The next hit or damage instance is fully absorbed or cancelled. | Not: Damage lowered by an amount is damage_reduction.
+spell_speed | Speed / reaction timing | Spells and actions have speeds: instant, fast, slow, responses. | Not: Reacting to the opponent is reactions.
+stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+stat_multiply | Double or multiply stats | A stat or a total is doubled, tripled or multiplied. | Not: Adding a fixed amount is stat_gain.
+summon | Summon units / tokens | New units are put onto the owner's side of the board. | Not: Units put on the opponent's side are board_clog; units back from death are revive.
+# questions: qid | concept | game | name | text
+7089 | movement | runeterra | Time in a Bottle | Predict and advance an allied landmark 2 rounds.
+7090 | movement | runeterra | Time Bomb | Keywords: Countdown, Landmark. When I'm summoned, draw 1 and advance other allied Time Bombs 1 round. Countdown 1: Deal 1 to enemies and the enemy Nexus.
+7091 | movement | runeterra | Boadir of Blackened Ice | When I'm summoned, summon 2 Frozen Thralls and advance them to 2.
+7092 | movement | runeterra | Stopwatch | When I'm summoned, advance me 1.
+7093 | movement | runeterra | Vekauran Vagabond | When I'm summoned, summon a Warlord's Palace or advance it 2 rounds.
+7094 | movement | runeterra | Draklorn Inquisitor | When I'm summoned, summon a Frozen Thrall.
+3722* | passive | runeterra | Curse | Applies a negative effect as long as it's in hand. Multiples of the same curse on a unit combine, increasing their cost and effect. Cannot be targeted in hand.
+1251 | permanent_growth | runeterra | Void Abomination | Keywords: Evolve. When I'm summoned, grant me all positive keywords allies have had this game.
+1252 | permanent_growth | runeterra | Hive Herald | Keywords: Evolve. Play: Grant a unit and me each other's positive keywords.
+1253 | permanent_growth | runeterra | Belvethi Elder | Keywords: Evolve, SpellShield.
+1254 | permanent_growth | runeterra | Void Seeker | Deal 1 to a follower. If you've Evolved, deal  3 to a unit instead.
+1255 | permanent_growth | runeterra | Void Blaster | Keywords: Overwhelm, Evolve.
+1256 | permanent_growth | runeterra | Camouflaged Horror | Keywords: Fearsome, Evolve. Play: I strike an enemy.
+3989* | ping | runeterra | Ziggs | Attack: I deal 1 damage to my blocker and the enemy Nexus. Level up: You've destroyed 4+ allied landmarks.
+3990* | ping | runeterra | Flashbomb Trap | Keywords: Trap. Deal 1 damage to a random ally.
+6964* | polymorph | runeterra | Ripper's Bay | Keywords: Lurk, Landmark. When allies attack, before activating Lurk, grant the top ally in your deck Lurk and it becomes a Lurker.
+9077 | random_effect | runeterra | Barknuckles | Keywords: Equipment, Brash. Strike: Create a Coin in hand.
+9078 | random_effect | runeterra | Jack (level 2) | Keywords: Overwhelm, Brash. Strike: Create 2 Coins in hand. When you refill mana, grant me +1|+0 and heal me 1 for each mana refilled.
+9079 | random_effect | runeterra | Pocket Picker | Keywords: Last Breath. Last Breath: Create a Coin in hand.
+9080 | random_effect | runeterra | Attentive Accountant | Keywords: Elusive. Nexus Strike: Create a Coin in hand.
+9081 | random_effect | runeterra | Sett's Facebreaker | Keywords: Slow. Stun 2 enemies and create a Coin in hand. Create a Sett in your deck.
+9082 | random_effect | runeterra | Facebreaker | Stun 2 enemies and create a Coin in hand.
+9083 | random_effect | runeterra | The Pit Champion | Keywords: Landmark. I: An ally and an enemy Strike each other. They can't drop below 1 Health from this Strike.
+9084 | random_effect | runeterra | Tag Out! | Recall an ally and create a Coin in hand, or spend 5 mana to Recall an enemy and create a Coin in hand.
+9085 | random_effect | runeterra | Smooth Mixologist | Play: Heal an ally or your Nexus 3 and create a Coin in hand.
+9086 | random_effect | runeterra | Pit Professional | When I'm summoned, create a Coin in hand.
+6795 | regeneration | runeterra | Uzgar the Ancient | Keywords: Challenger, Regeneration.
+6796 | regeneration | runeterra | Dragon's Claw | SpellShield, Regeneration
+6797 | regeneration | runeterra | Murkwolf Rager | Keywords: Regeneration. When I transform, draw a unit.
+6798 | regeneration | runeterra | Trundle (level 2) | Keywords: Overwhelm, Regeneration. When I'm summoned, create an Ice Pillar in hand. Attack: Grant me +1|+0 for each 8+ cost card you Behold.
+6799 | regeneration | runeterra | Braum | Keywords: Challenger, Regeneration. The first time I survive damage, summon a Mighty Poro. Level up: I've survived 10+ total damage.
+6800 | regeneration | runeterra | Stubborn Husk | Keywords: Immobile, Regeneration. When you play an ally, kill me to grant it my stats and positive keywords.
+6801 | regeneration | runeterra | Maokai (level 2) | Keywords: Regeneration. When I level up, Obliterate the enemy deck, leaving 4 non-champions. Round Start: Summon a Sapling.
+6802 | regeneration | runeterra | Rejuvenation Bead | Regeneration
+6803 | regeneration | runeterra | Augur of the Old Ones | Keywords: Overwhelm, Regeneration. Play: If you Behold an 8+ cost card, grant an ally Overwhelm and Regeneration.
+7327* | resource_gain | runeterra | Ottrani Dragon-Worshiper | When I'm summoned, heal your Nexus 2 and gain an extra mana gem next round.
+7200* | return_to_hand | runeterra | Equipment | Equip to a unit to grant the listed bonuses. If the unit leaves play, the equipment will return to your hand. You may play each equipment at most once per round.
+7201* | return_to_hand | runeterra | Equip | Equipping an Item to a unit grants it the listed bonuses. If the unit leaves play, the Item will return to your hand. You may play each item at most once per round.
+3923 | scope_global | runeterra | Icequake  | Give ALL units -3|-0 this round. Deal 3 to ALL units.
+3924 | scope_global | runeterra | Stress Testing | Remove Fleeting from all cards in hand. When I'm discarded, draw 1 Fleeting.
+3925 | scope_global | runeterra | Utter Devastation | Kill ALL units except Darkin allies and Equipped allies.
+3926 | scope_global | runeterra | The Ruination | Kill ALL units.
+3927 | scope_global | runeterra | Bellows Breath | Forge an ally and deal 1 to ALL units, then do it again.
+3928 | scope_global | runeterra | Rising Light | Boost all units 3 times.
+3929 | scope_global | runeterra | Keelbreaker | Keywords: Slow. If I'm Tossed, draw me instead. Deal 5 to ALL units.
+3930 | scope_global | runeterra | Incandescence | Boost all units.
+3931 | scope_global | runeterra | Wings of the Cryophoenix | Deal 3 to ALL units.
+3932 | scope_global | runeterra | Passage Unearned | Obliterate all units that were summoned, but not played, this round.
+5434* | shield | runeterra | Yordle Squire | Play: Create a Tiny Spear or a Tiny Shield in hand.
+5435* | shield | runeterra | Sentinel's Hoard | Keywords: Fleeting, Focus. Play a The Absolver's Resurrection, a Fount of Power, or a Shield of the Sentinels.
+6309* | spell_speed | runeterra | Three Sisters | Create a Fleeting Flash Freeze, Fury of the North, or Entomb in hand.
+2685* | stat_gain | runeterra | Charging Sigil I | +1 damage
+2686* | stat_gain | runeterra | Charging Sigil III | +4 damage
+2687* | stat_gain | runeterra | Charging Sigil II | +2 damage
+6359* | stat_gain | runeterra | The Light of Demacia | Keywords: Landmark. I: Grant an ally Spirit.
+6360* | stat_gain | runeterra | Incandescence | Boost all units.
+6361* | stat_gain | runeterra | Rising Light | Boost all units 3 times.
+6362* | stat_gain | runeterra | Smoldering Smirk | Boost 2 allies, then they Strike an enemy one after another.
+6363* | stat_gain | runeterra | Tree Sprites | Keywords: Spirit. Play: Boost all other units.
+6364* | stat_gain | runeterra | The Family Reunion | Keywords: Landmark. I: Grant a unit Gloom.
+6365* | stat_gain | runeterra | Hearts Incandescent | Keywords: Skill, Focus. Boost all allies.
+6366* | stat_gain | runeterra | Lux's Incandescence | Keywords: Fast. Boost all units.  Create a Lux: Illuminated in your deck.
+6367* | stat_gain | runeterra | Bandle Bright | Keywords: Skill. Boost all other units.
+6368* | stat_gain | runeterra | Ms. Vex | Keywords: Skill, Slow. Boost 2 units.
+8604 | stat_multiply | runeterra | Horns of the Dragon | Keywords: Double Attack.
+8605 | stat_multiply | runeterra | Earthshaker | Keywords: Impact. Attack: Double my Power and Impact.
+8606 | stat_multiply | runeterra | The Dreadway | Keywords: Fearsome, Missing Translation. When I'm summoned, draw Gangplank. 
+8607 | stat_multiply | runeterra | Cithria, Lady of Clouds | Keywords: Challenger. When I'm summoned, double other allies' Power and Health and grant them Challenger.
+8608 | stat_multiply | runeterra | The Tuskraider | Keywords: Plunder. When I'm summoned, Draw Sejuani.
+8609 | stat_multiply | runeterra | Sacred Protector | Keywords: Missing Translation. Play: Give an ally Barrier this round and draw a Shen.
+8610 | stat_multiply | runeterra | The Old Timer | Keywords: Double Attack. Play: Recall the strongest enemy. If you've spent 16+ mana this round, Recall all enemies instead.
+8611 | stat_multiply | runeterra | Faulty Blasting Sigil | Double damage, but cost 1 more
+8612 | stat_multiply | runeterra | Big Game Tycoon | Play: Manifest a card with Ambush.
+6718 | summon | runeterra | Riptide Sermon | Deal 3 to an enemy unit.
+6719 | summon | runeterra | Illaoi (level 2) | Keywords: Overwhelm. When you Spawn, increase its value by 1. Attack: Spawn 1, then fully heal your strongest Tentacle and I gain stats equal to its stats this round.
+6720 | summon | runeterra | Nagakabouros | Keywords: Fearsome. When I'm summoned or Round Start: Spawn 2. Then, if your strongest Tentacle has 12+ Power, create a Nagakabouros' Tantrum in hand.
+6721 | summon | runeterra | The Sea's Voice | Attack: Spawn 1 and give your strongest Tentacle Overwhelm this round.
+6722 | summon | runeterra | Illaoi's Tentacle Smash | Keywords: Slow. Spawn 2, then your strongest Tentacle and an enemy strike each other. Create an Illaoi in your deck.
+6723 | summon | runeterra | Tentacle Smash | Spawn 2, then your strongest Tentacle and an enemy strike each other.
+6724 | summon | runeterra | Eye of God | Keywords: Equipment. Attack: Spawn 2.

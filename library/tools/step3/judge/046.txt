@@ -1,0 +1,67 @@
+# definitions
+activated | Activated ability (pay to use) | The player chooses when to use an ability: activate, tap, pay to use. | Not: Abilities that fire on their own are triggers.
+adjacency | Neighbours matter (adjacency) | The effect cares about units beside it, or the lane or location to the left or right. | Not: Several lanes away is cross_lane.
+coin_economy | Second currency for abilities | A second currency (coins, crowns) is spent on abilities. | Not: Shop gold between fights is shop_gold.
+condition_count | Counts / thresholds | The effect needs or scales with a number: for each, N or more. | Not: Counts of past events this game are count_payoff.
+copy | Copy cards or units | A copy of a card, unit or effect is made for the owner. | Not: Doing a trigger again is repeat_trigger; a copy given to the opponent is enemy_benefit.
+# questions: qid | concept | game | name | text
+2124 | activated | hs_battlegrounds | Abyssal Envoy | Activate (X): Discard a card to get a random Tavern spell.
+2599* | activated | hs_battlegrounds | Glaive Ricochet | Once per turn, after you buy 3 minions, get a plain copy of one of them. (X left!)X[x]Once per turn, after you buy 3 minions, get a plain copy of one of them. (Done!)
+2600* | activated | hs_battlegrounds | Imperial Defender | After you cast a spell on a different friendly minion, you also cast it on this. (Once per turn.)
+2601* | activated | hs_battlegrounds | Zesty Shaker | Once per turn, when a Spellcraft spell is played on this, get a new copy of it.
+2602* | activated | hs_battlegrounds | Reliquary Attendant | Once per turn, after you cast a Tavern spell, get a new copy of it.
+2603* | activated | hs_battlegrounds | Magicfin Mycologist | Once per turn, after you buy a Tavern spell, get a 1/1 Murloc and teach it that spell. (X left!)
+2604* | activated | hs_battlegrounds | Stone Age Slab | After you buy a minion, give it +X/+Y and double its stats. (Once per turn.)
+2605* | activated | hs_battlegrounds | Timewarped Zerus | Once per turn, choose from 2 Minor Timewarped minions to transform into. Keep this minion's stats.
+2606* | activated | hs_battlegrounds | Hired Ritualist | Once per turn, after a Blood Gem is played on this, gain Y Gold.
+2607* | activated | hs_battlegrounds | Dark Dazzler | After your teammate sells a minion, gain its stats. (Once per turn.)
+8369* | activated | hs_battlegrounds | Captain Flat Tusk | Whenever you spend 3 Gold, get a Blood Gem. (X Gold left!)
+8370* | activated | hs_battlegrounds | Gunpowder Courier | Whenever you spend 5 Gold, give your Pirates +Z/+. (X Gold left!)
+8371* | activated | hs_battlegrounds | Dual-Wield Corsair | Whenever you spend 5 Gold, give two friendly Pirates +Z/+. (X Gold left!)
+8372* | activated | hs_battlegrounds | Extravagant Scale | When you spend 20 Gold, double your minions' Attack. (Twice per game.)X[x]When you spend 20 Gold, double your minions' Attack. (X left!)
+8373* | activated | hs_battlegrounds | Wax Warband | Start of Combat: Give a friendly minion of each type +Z/+Z. (Improves after you spend 10 Gold!)X[x]Start of Combat: Give a friendly minion of each type +Z/+Z. (Spend X Gold to improve!)
+4063 | adjacency | hs_battlegrounds | Obsidian Ravager | Rally: Deal damage equal to this minion's Attack to the target and an adjacent minion.
+4064 | adjacency | hs_battlegrounds | Timewarped Collector | Also damages adjacent minions. Rally: If you control 4 Golden minions, gain Divine Shield.
+4065 | adjacency | hs_battlegrounds | Rylak Metalhead | Taunt Deathrattle: Trigger the Battlecry of an adjacent minion.
+4066 | adjacency | hs_battlegrounds | Surfing Sylvar | At the end of your turn, give adjacent minions +X Attack. Repeat for each friendly Golden minion.X[x]At the end of your turn, give adjacent minions +X/+Y. Repeat for each friendly Golden minion.
+4067 | adjacency | hs_battlegrounds | Sunborne Val'kyr | Battlecry: Give adjacent minions +2 Health.
+4068 | adjacency | hs_battlegrounds | Timewarped Painter | At the end of your turn, give adjacent minions +X/+Y. After you play a card from Tier 3 or below, improve this.
+4069 | adjacency | hs_battlegrounds | Timewarped Sensei | At the end of your turn, give adjacent Mechs +X/+Y.
+4070 | adjacency | hs_battlegrounds | Starry-eyed Explorer | At the start of every two turns, make an adjacent Tier 2 minion Golden. (X turns left!)X[x]At the start of every two turns, make an adjacent Tier 2 minion Golden. (Next turn!)
+4071 | adjacency | hs_battlegrounds | Fauna Whisperer | At the end of your turn, cast Natural Blessing on adjacent minions.
+4072 | adjacency | hs_battlegrounds | Immortal | Start of Combat: Gain the stats of adjacent minions.
+9117 | coin_economy | hs_battlegrounds | False Idols | You only need 2 copies to make minions Golden. They give Tavern Coins instead of Triple Rewards.
+9118 | coin_economy | hs_battlegrounds | Friendly Saloonkeeper | Battlecry: Your teammate gets a Tavern Coin.
+9119 | coin_economy | hs_battlegrounds | Shady Aristocrat | When you sell this, Discover a Quest. Complete it to get an 8-Gold Coin Pouch.
+9120 | coin_economy | hs_battlegrounds | Untold Riches | Get a 5-Gold Coin Pouch. Increase your maximum Gold by 5.
+9121 | coin_economy | hs_battlegrounds | Pocket Change | Get 2 Tavern Coins.
+9122 | coin_economy | hs_battlegrounds | Greedy Snaketongue | Rally: Get a Tavern Coin.
+9123 | coin_economy | hs_battlegrounds | Timewarped Pillager | Taunt, Reborn Deathrattle: Get a Tavern Coin.
+9124 | coin_economy | hs_battlegrounds | Industrious Deckhand | At the start of your turn, get 2 Tavern Coins.
+9125 | coin_economy | hs_battlegrounds | Corrupted Coin Portrait | Get 2 Corrupted Coins.
+9126 | coin_economy | hs_battlegrounds | Briny Bootlegger | Deathrattle: Get a Tavern Coin.
+1133 | condition_count | hs_battlegrounds | Flourishing Frostling | Has +X/+Y for each Elemental you played this game (wherever this is).
+1134 | condition_count | hs_battlegrounds | Battle Scars | Has +3/+3 for each Battlecry you've triggered this game. (Y)
+1135 | condition_count | hs_battlegrounds | Salty Looter | Has +1/+1 for each Pirate you've summoned this game (wherever this is).
+1136 | condition_count | hs_battlegrounds | Menagerie Mayhem | At the end of your turn, give your minions +1/+1 for each different friendly minion type.
+1137 | condition_count | hs_battlegrounds | Thieving Rascal | At the start of your turn, gain 1 Gold. Repeat for each friendly Golden minion.
+1138 | condition_count | hs_battlegrounds | Utility Drone | At the end of your turn, give your minions +X/+Y for each Magnetization they have.
+1139 | condition_count | hs_battlegrounds | Abyssal Bruiser | Divine Shield Has +X/+Y for each Tavern spell you've cast this game.
+1140 | condition_count | hs_battlegrounds | Falling Sky Golem | Divine Shield. Has +X/+Y for each Deathrattle you've triggered this game (wherever this is).
+1141 | condition_count | hs_battlegrounds | Brazen Buccaneer | At the end of your turn, give your left-most Pirate +X/+Y. Repeat for each card you played this turn. (Z)
+1142 | condition_count | hs_battlegrounds | Oceanfloor Rummager | At the end of your turn, give your team's minions +1 Attack for each different Bonus Keyword in your warbands.
+2223 | copy | hs_battlegrounds | Zesty Shaker | Once per turn, when a Spellcraft spell is played on this, get a new copy of it.
+2224 | copy | hs_battlegrounds | Plaguerunner Portrait | Get a Plaguerunner. After you destroy a Plaguerunner outside combat, get a plain copy.
+2225 | copy | hs_battlegrounds | Coilfang Elite | After a Spellcraft minion appears in the Tavern, get a copy of its spell.
+2226 | copy | hs_battlegrounds | Boom Controller | When you have space, summon an exact copy of your first Mech that died each combat.
+2227 | copy | hs_battlegrounds | Rapid Reanimation | Choose a friendly minion. Start of Combat: Destroy it. When you have space, resummon an exact copy.
+2228 | copy | hs_battlegrounds | Timewarped Conch | Choose a friendly Murloc. Summon an exact copy of it.
+2229 | copy | hs_battlegrounds | Timewarped Radio Star | Deathrattle: Get a copy of the enemy minion that killed this with full Health and enchantments.
+2230 | copy | hs_battlegrounds | Timewarped Rodeo Performer | At the start of your turn Discover a Tavern spell. Gain "Deathrattle: Get another copy of it." until next turn.
+2231 | copy | hs_battlegrounds | Glorious Gloopling | At the start of every 2 turns, get a plain copy of your teammate's highest-Tier minion (X turns left!) X[x]At the start of every 2 turns, get a plain copy of your teammate's highest-Tier minion (Next turn!)
+2232 | copy | hs_battlegrounds | Portable Factory | Discover a Tier 4 minion with a type. At the start of each turn, get another copy of it.
+7865* | copy | hs_battlegrounds | Iron Groundskeeper | Battlecry: Get X copies of Fortify.
+7866* | copy | hs_battlegrounds | Warband Whistle | Gain a free Refresh that contains plain copies of minions in your warband.
+7867* | copy | hs_battlegrounds | Pilfered Lamps | You only need 2 copies of a minion to make it Golden.
+7868* | copy | hs_battlegrounds | Designer Eyepatch | You only need 2 copies of a Pirate to make it Golden.
+7869* | copy | hs_battlegrounds | Kangor's Apprentice | Deathrattle: Summon plain copies of your first 2 Mechs that died this combat.

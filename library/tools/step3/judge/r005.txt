@@ -1,0 +1,90 @@
+# definitions
+modal_choice | Choose one of several effects | The card offers several effects and the owner picks one or more. | Not: Switching a unit between lasting forms is stances.
+on_ally_play | When I play another card | Triggers when the owner plays or summons another card or unit. | Not: When this card is played is on_play.
+on_attack | When it attacks | Triggers when the unit attacks or strikes. | Not: When it is attacked is on_damaged or counterattack.
+resource_gain | Gain resources (ramp) | The owner gains extra mana, energy, supply or another resource, now or for good. | Not: Cards costing less is cost_reduction.
+return_to_hand | Return my unit to hand | The owner returns their own unit to hand, to replay it or save it. | Not: Sending an enemy unit back is bounce_enemy.
+scope_global | Whole board / all players | The effect touches the whole board or all players. | Not: Several but not all is scope_multi.
+stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+stat_loss | Stat loss (-power, -health) | A unit's power, attack, health or other stat goes down, or is set or swapped to a lower value. | Not: Not being able to attack is attack_lock or cant_attack.
+# questions: qid | concept | game | name | text
+7333* | resource_gain | hearthstone | Wild Growth | Gain an empty Mana Crystal.
+7334* | resource_gain | hearthstone | Mindpocalypse | Both players draw 2 cards and gain a Mana Crystal.
+7335* | resource_gain | hearthstone | Felwood Treant | Battlecry: Gain a temporary Mana Crystal. If you spent 4 Mana while holding this, it's permanent. ( left!)[x]Battlecry: Gain a temporary Mana Crystal. If you spent 4 Mana while holding this, it's permanent. (Ready!)[x]Battlecry: Gain a temporary Mana Crystal. If you spent 4 Mana while holding this, it's permanent.
+7336* | resource_gain | hearthstone | Acceleration Aura | At the start of your turn, gain a temporary Mana Crystal. Lasts turns.
+7337* | resource_gain | hearthstone | Jade Blossom | Summon a Jade Golem. Gain an empty Mana Crystal.Summon a Jade Golem. Gain an empty Mana Crystal.
+7338* | resource_gain | hearthstone | Kabal Coin | Gain 1 Mana Crystal this turn only. Get a random 1-Cost Kazakus Potion.
+7339* | resource_gain | hearthstone | Rampant Growth | Gain 2 Mana Crystals.
+7340* | resource_gain | hearthstone | Grimy Coin | Gain 1 Mana Crystal this turn only. Deal 2 damage to a random enemy minion.
+7341* | resource_gain | hearthstone | New Heights | Increase your maximum Mana by 3 and gain an empty Mana Crystal.
+7342* | resource_gain | hearthstone | Breath of Dreams | Draw a card. If you're holding a Dragon, gain an empty Mana Crystal.
+5726* | return_to_hand | hearthstone | Shadowcrafter Scabbs | Battlecry: Return all minions to their owner's hands. Summon two 4/2 Shadows with Stealth.
+5727* | return_to_hand | hearthstone | Blackjack Stunner | Battlecry: If you control a Secret, return a minion to its owner's hand. It costs (2) more.
+5728* | return_to_hand | hearthstone | Twilight Mistress | Battlecry: Return all enemy minions to their owner's hand.
+5729* | return_to_hand | hearthstone | Freezing Trap | Secret: When an enemy minion attacks, return it to its owner's hand. It costs (2) more.
+5730* | return_to_hand | hearthstone | Vanish | Return all minions to their owner's hand.
+5731* | return_to_hand | hearthstone | Kidnapper | Combo: Return a minion to its owner's hand.
+5732* | return_to_hand | hearthstone | Dream | Return a minion to its owner's hand.
+5733* | return_to_hand | hearthstone | Canary | Battlecry: Return an enemy minion to its owner's hand.
+7213 | return_to_hand | hearthstone | Krag'wa, the Frog | Battlecry: Return all spells you played last turn to your hand.
+7214 | return_to_hand | hearthstone | Corpsicle | Deal 3 damage. Spend 3 Corpses to return this to your hand at the end of your turn.
+7215 | return_to_hand | hearthstone | Kidnapper's Sack | Deathrattle: Return your opponent's kidnapped minion to their hand.
+7216 | return_to_hand | hearthstone | Waggle Pick | Deathrattle: Return a random friendly minion to your hand. It costs (2) less.
+7217 | return_to_hand | hearthstone | Infinitize the Maxitude | Discover a spell. Reduce its Cost by (1). Finale: Return this to your hand at end of turn.
+7218 | return_to_hand | hearthstone | [CORE 2024] Cheat Death | Secret: When a friendly minion dies, return it to your hand. It costs (2) less.
+7219 | return_to_hand | hearthstone | X-21 Repairbot | Deathrattle: Return any Mechs Magnetized to this to your hand.
+7220 | return_to_hand | hearthstone | Pen Flinger | Battlecry: Deal 1 damage to a minion. Spellburst: Return this to your hand.
+7221 | return_to_hand | hearthstone | Bog Slosher | Battlecry: Return a friendly minion to your hand and give it +2/+2.
+7222 | return_to_hand | hearthstone | Dawngrasp (created) | Deathrattle: Return this to your hand and summon a 2/4 Aquarrior.
+4497 | scope_global | hearthstone | Coldlight Oracle | Battlecry: Each player draws 2 cards.
+4498 | scope_global | hearthstone | Khadgar's Pipe | Put a random spell into each player's hand. Yours costs (0).
+4499 | scope_global | hearthstone | Research Project | Each player draws 2 cards.
+4500 | scope_global | hearthstone | Twisted Treant | Deathrattle: Give a random minion in each player's hand -2 Attack.
+4501 | scope_global | hearthstone | Prize Vendor | Battlecry and Deathrattle: Each player draws a card.
+4502 | scope_global | hearthstone | Plague of Madness | Each player equips a 2/2 Knife with Poisonous.
+4503 | scope_global | hearthstone | Barbaric Sorceress | Taunt. Battlecry: Swap the Cost of a random spell in each player's hand.
+4504 | scope_global | hearthstone | Blatant Decoy | Deathrattle: Each player summons the lowest Cost minion from their hand.
+4505 | scope_global | hearthstone | Front Lines | Summon a minion from each player's deck. Repeat until either side of the battlefield is full.
+4506 | scope_global | hearthstone | Banana Vendor | Battlecry: Add 2 Bananas to each player's hand.
+1518* | stat_gain | hearthstone | Thornmantle Musician | Finale: The next Beast you summon gets +1/+1.
+3888* | stat_gain | hearthstone | Molten Pick of ROCK | At the end of turn, explode for @ damage! (Or spend all your Mana to give this to the opponent with +2 damage.)
+5653* | stat_loss | hearthstone | Helm of Humiliation | Give a minion -5/-5. Give a random minion in your hand +5/+5.
+5654* | stat_loss | hearthstone | Rattlegore | Deathrattle: Resummon this with -1/-1.
+5655* | stat_loss | hearthstone | Wave Pool Thrasher | Battlecry: Give all other minions -1/-1. Deathrattle: Give all other minions +1/+1.
+5656* | stat_loss | hearthstone | Gilneas Brochure | Silence a minion and give it -2/-2. (Flips each turn.)
+8540* | stat_loss | hearthstone | Elemental Destruction | Deal 4-5 damage to all minions. Overload: (2)
+8541* | stat_loss | hearthstone | Crackle | Deal 3-6 damage. Overload: (1)
+8542* | stat_loss | hearthstone | Imp-losion | Deal 2-4 damage to a minion. Summon a 1/1 Imp for each damage dealt.
+8543* | stat_loss | hearthstone | Bru'kan (created) | At the end of your turn, deal 1-2 damage to all enemy minions. Deathrattle: Go Dormant for 2 turns.
+8544* | stat_loss | hearthstone | Boom Bot | Deathrattle: Deal 1-4 damage to a random enemy.
+8545* | stat_loss | hearthstone | Alliance Siege Tower | At the start of your turn, deal 1-2 damage to a random enemy. Restore 1 Health to your hero.
+8546* | stat_loss | hearthstone | Leviathan Missiles | Ini deals 1-3 damage to random enemy minions when she is attacked.
+8547* | stat_loss | hearthstone | Murloc Menace (created) | At the end of each turn, deal 1-4 damage to all enemies. Deathrattle: Your opponent gains an empty Mana crystal.
+4111 | modal_choice | hs_battlegrounds | Escape Eruption | Choose One - Give your minions +8 Attack; or +8 Health.
+4112 | modal_choice | hs_battlegrounds | Snare Trapper | Choose One - Get a random Quilboar; or Increase your maximum Gold by X.
+4113 | modal_choice | hs_battlegrounds | Sprightly Scarab | Choose One - Give a Beast +X/+Y and Reborn; or +Z Attack and Windfury.
+4114 | modal_choice | hs_battlegrounds | Crystal Infuser | Choose One - Get 3 Blood Gems; or gain "Deathrattle: Get 2 Blood Gems."
+4115 | modal_choice | hs_battlegrounds | Mirage Conjurer | Choose One - Double the Attack of all minions in the Tavern; or Double their Health.
+4116 | modal_choice | hs_battlegrounds | Adaptive Ancestor | Choose One - Gain +3 Attack and Divine Shield; or +3 Health and Venomous.
+4117 | modal_choice | hs_battlegrounds | The Road Less Traveled | Choose One - Get a random Tier 6 minion; or Get two random Tier 5 minions.
+4118 | modal_choice | hs_battlegrounds | Boundless Potential | Choose One - Discover a minion of your Tier; or a Tavern spell of your Tier.
+4119 | modal_choice | hs_battlegrounds | Forest's Bounty | Choose One - Give a minion +X/+Y twice; or Give your minions +Z/+.
+4120 | modal_choice | hs_battlegrounds | Nether Construct | Choose One - Give minions in the Tavern +4/+4 this game; or Consume all minions in the Tavern to gain their stats.
+6203 | modal_choice | hs_battlegrounds | Fearless Foodie | Choose One - Your Blood Gems give an extra +X/+Y this game; or Get Z Blood Gems.
+6204 | modal_choice | hs_battlegrounds | Grace Farsail | Choose One - Gain 2 Gold next turn; or Gain 4 Gold in two turns.
+6205 | modal_choice | hs_battlegrounds | Gem Day | Choose One - Your Blood Gems give an extra +1 Attack this game; or +1 Health.
+6206 | modal_choice | hs_battlegrounds | Alliance Flag | Choose One - Give a minion +X/+Y; or +Z/+.
+5525 | on_ally_play | hs_battlegrounds | Reinforced Shield | Whenever you summon a minion, give it Divine Shield. (Y times per combat.)X[x]Whenever you summon a minion, give it Divine Shield. (X left!)
+5526 | on_ally_play | hs_battlegrounds | One-Amalgam Tour Group | Whenever you play a card, give friendly minions of its Tier or lower +X/+Y.
+5527 | on_ally_play | hs_battlegrounds | Noisul of the Many Faces | Whenever you summon an Undead, give all your Undead +X/+Y permanently.
+5528 | on_ally_play | hs_battlegrounds | Tumbling Disaster | Whenever you summon a minion in combat, give it +X/+X. Avenge (4): Improve this permanently.
+5529 | on_ally_play | hs_battlegrounds | Gentle Stag | Whenever you summon a minion in combat, give your right-most Beast +3/+3 permanently.
+5530 | on_ally_play | hs_battlegrounds | Dexterity | Whenever you play a card, gain +2/+2.
+5531 | on_ally_play | hs_battlegrounds | Sharpened Sword | Whenever you play a card, gain +3 Attack.
+5532 | on_ally_play | hs_battlegrounds | Spark Snapper | Whenever you play a Mech, Magnetize a Y/Z Satellite to it and improve this.
+5533 | on_ally_play | hs_battlegrounds | Mechagnome Interpreter | Whenever you play or Magnetize a Mech, give it +X/+Y.
+5534 | on_ally_play | hs_battlegrounds | Thundering Abomination | Whenever you summon a minion in combat, give it +3/+3. If there's no space, gain +3/+3 permanently.
+2916 | on_attack | hs_battlegrounds | Void Ray | Divine Shield. Whenever a friendly minion attacks, give it and this minion +5 Attack permanently.
+2917 | on_attack | hs_battlegrounds | Ripsnarl Captain | Whenever a friendly Pirate attacks, give it +3 Attack.
+2918 | on_attack | hs_battlegrounds | Admiral Eliza Goreblade | Whenever a friendly Pirate attacks, give all friendly minions +3/+1.
+2919 | on_attack | hs_battlegrounds | Faerie Dragon Scale | Whenever a friendly Dragon attacks, give it Divine Shield. (Y times per combat.)X[x]Whenever a friendly Dragon attacks, give it Divine Shield. (X left!)

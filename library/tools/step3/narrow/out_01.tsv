@@ -1,0 +1,24 @@
+forced_movement|does|*|\bmoves?\b	wh_bloodbowl3,faeria,duelyst,sts1,sts2,gwent,wh_killteam,runeterra,wh_underworlds,wh_aos_4th,wh_40k_10e,hearthstone,mtg,inscryption	\bmoves?\b(?= (?:the |a |an )?(?:last played )?(?:enemy|target|opposing|each enemy|all enemy)|.{0,30}\b(?:to the other row|away|toward))
+forced_movement|does|*|\bmoves?\b	into_the_breach,darkest_dungeon,dnd5e	keep
+stat_gain|does|*|gets? \+\d+	mtg	(?<!this creature )(?<!it )(?<!flying )(?<!abilities )(?<!perpetually )(?<!you control )gets? \+\d+
+summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	mtg	\bcreate (?!.{0,50}\bin (your )?hand)(?!(?:a |an )?(?:clue|food|treasure|mutagen|gold|lander|blood|powerstone|map|junk|shard)\b)(?!a token that.s a copy)(a|an|\d+|two|three|x)? ?(?:(?!\.|,|;).){0,40}(token|creature|unit|minion)
+summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	dnd5e	\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}token
+summon|does|*|\bcreate (?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)	gwent	\bcreate (?=and play)(?!.{0,50}\bin (your )?hand)(a|an|\d+|two|three|x)? ?.{0,40}(token|creature|unit|minion)
+sacrifice|does|*|\bsacrific	mtg	(?<!opponent )(?<!opponents )\bsacrific(?!(?:es|e|ed) (?:it|name|this (?:aura|enchantment|saga)|.{0,80}unless)\b)(?!e (?:it|name)\b)
+sacrifice|does|*|\bsacrific	inscryption,wh_aos_4th	keep
+banish|does|*|\bexile	mtg	\bexile(?:s)? (?:target (?!creature card from a graveyard)(?!.{0,100}then return)|all |it(?: instead|\.|,)|name\b|up to one (?!.{0,100}then return))
+banish|does|*|\bexile	runeterra,wh_aos_4th	\bexile(?=s? (?:target|up to|all|each|it\b|that|another))(?<=\bnever\bexile)
+damage|does|*|\bstrikes?\b	mtg	(?<!deep )(?<!coordinated )(?<!double )(?<!first )(?<!heavy )\bstrikes?\b
+damage|does|*|\bstrikes?\b	dnd5e	(?<!unarmed )\bstrikes?\b
+damage|does|*|\bstrikes?\b	into_the_breach,inscryption,sts1,sts2,gwent,wh_killteam,runeterra,wh_aos_4th,wh_40k_10e,shadowverse,hearthstone	keep
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	into_the_breach,faeria,sts1,dnd5e,sts2,hs_battlegrounds,wh_underworlds,hearthstone	\bdeals? (?:\d+|x|an?|one|two|three|four|five)\b[^.]{0,80}?damage(?! (?:to (?:your|yourself|this\b|it\b|them|the attacker|an? (?:friendly|allied))|back|to you))
+damage|does|*|deals? (?:\d+|x|an?|one|two|three|four|five)\b.*damage	inscryption,runeterra	keep
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	into_the_breach,inscryption	(?!)\bdestroy (target|a|an|all|each|that|it|the)
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	hearthstone,hs_battlegrounds,runeterra,duelyst	(?<!you )(?<!\bto )\bdestroy (target|an?|all|each|that|it|the)(?! (?:friendly|allied)\b)
+destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	faeria,wh_40k_10e,shadowverse,gwent,mtg	keep
+random_effect|does|wh_aos_4th|\broll (a|\d+) dice\b|\bon a \d\+|\b(casting|chanting|charge|run) rolls?\b|\b2d6\b|\bd3\b|\bd6\b	wh_aos_4th	\broll (a|\d+) dice\b|\bon a \d\+|\b(casting|chanting) rolls? of|\b(?<!move )(?<!moves )(?<!move up to )(?<!inflict )(?<!add 1 to )\bd[36]\b(?!")
+permanent_growth|does|*|\+1/\+1 counter	mtg	(?<=put a )\+1/\+1 counter(?= on (?:this creature|it|name|[a-z]+[.,\n]))
+terrain|does|*|\blands?\b	wh_40k_10e	\bno man.s land\b
+terrain|does|*|\blands?\b	mtg,into_the_breach,inscryption,wh_killteam,wh_bloodbowl3,dnd5e	(?!)\blands?\b
+terrain|does|*|\blands?\b	faeria	keep
+hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	inscryption,sts1,sts2,gwent,hs_battlegrounds,wh_killteam,runeterra,wh_underworlds,wh_40k_10e,shadowverse,hearthstone,mtg	(?:\b(?:opponent|opponents|player|players|enemy|enemies|they|their)\b[^.]{0,30}|\bthat player |\beach player |\beach opponent )\bdiscards?\b(?! piles?\b)

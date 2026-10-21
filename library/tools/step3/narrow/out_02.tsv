@@ -1,0 +1,25 @@
+summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	inscryption,duelyst,gwent,runeterra,hearthstone	(?<!you )(?<!opponent )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b(?![^.]{0,80}(for your opponent|from your hand|opposite row|from your deck to the opposite))
+summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	wh_40k_10e	(?!)\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b
+random_effect|does|*|\bdice\b	wh_aos_4th	(?<!miracle )(?<!rage )(?<![+-]\d )(?<!number of )\bdice\b(?! step)
+random_effect|does|*|\bdice\b	wh_underworlds	(?<=roll )((a|an|one|\d+|two|three) )?(\w+ )?\bdice\b
+random_effect|does|*|\bdice\b	wh_bloodbowl3,dnd5e,wh_killteam,wh_40k_10e,mtg	keep
+ranged|does|*|\bshoot	wh_aos_4th	\bshoot(?!ing)\b(?! abilit)
+ranged|does|*|\bshoot	dnd5e	\bshoots? (a|an|over|projectile|in)\b
+ranged|does|*|\bshoot	into_the_breach,wh_killteam,wh_40k_10e,hearthstone	keep
+discard|does|*|\bdiscards?\b(?! piles?\b)	inscryption,sts1,runeterra,shadowverse	\bdiscards? (a|an|one|any|up to|\d+|x|your|all cards|cards|two|three)\b(?! piles?)(?! (attack|shadow))
+discard|does|*|\bdiscards?\b(?! piles?\b)	wh_underworlds	\bdiscards? (a|an|one|any|up to|\d+|x|your|two|three)\b[^.]{0,30}\bcards?\b
+discard|does|*|\bdiscards?\b(?! piles?\b)	mtg	(?<!player )(?<!opponent )(?<!opponents )(?<!that player )(?<!each other player )\bdiscards?\b(?! piles?\b)(?! (this|that|the) )
+discard|does|*|\bdiscards?\b(?! piles?\b)	wh_killteam,wh_40k_10e	(?!)\bdiscards?\b(?! piles?\b)
+activated|does|*|\bactivate	shadowverse,wh_underworlds,into_the_breach	(?!)\bactivate
+activated|does|*|\bactivate	wh_bloodbowl3,inscryption,duelyst,dnd5e,wh_killteam,runeterra,wh_aos_4th,wh_40k_10e,hearthstone,mtg	keep
+temporary_buff|does|wh_aos_4th|\buntil the (start|end) of (your|the|this|your opponent's)( next)? (turn|phase|battle round)\b|\bfor the rest of the (turn|phase)\b	wh_aos_4th	keep
+delayed|does|*|next turn	into_the_breach,inscryption,faeria,duelyst,sts1,sts2,hs_battlegrounds,wh_killteam,wh_underworlds,wh_aos_4th,wh_40k_10e,shadowverse,hearthstone,mtg	(?<!until the start of your )(?<!until the end of your )(?<!until the start of its )(?<!until the end of its )(?<!until the start your )(?<!until your )(?<!until )(?<!before the end of its )(?<!until the end of the mephit’s )(?<!until the start of the )(?<!until the end of the )(?<!until the end of that )(?<!until the end of their )(?<!the start of their )\bnext turn
+delayed|does|*|next turn	dnd5e	(?:(?<=at the end of its )|(?<=at the start of your )|(?<=at the end of their )|(?<=at the start of its )|(?<=at the end of your )|(?<=at the start of their ))next turn
+activated|does|*|once per (turn|round)	wh_aos_4th	(?<!timing: )once per (turn|round)
+activated|does|*|once per (turn|round)	wh_bloodbowl3,gwent,shadowverse	(?!)once per (turn|round)
+activated|does|*|once per (turn|round)	wh_killteam,wh_40k_10e,hs_battlegrounds,dnd5e,runeterra,hearthstone	keep
+stat_gain|does|*|add \d+ to (the )?.{0,40}(toughness|wounds|strength|attacks|damage|move|save|characteristic|hit roll|wound roll)	wh_aos_4th,wh_40k_10e	keep
+stat_gain|does|*|add (\d|9|▲|⬤|■) to (the )?(hit|wound|save|attacks?|damage|strength|charge|run|movement|move|rend|toughness|power)	wh_killteam,wh_aos_4th,wh_40k_10e	keep
+passive|does|wh_aos_4th|(?s)^(?!.*\btiming:).*\S	wh_aos_4th	(?s)^(?!.*\btiming:)(?=.*(wholly within|regiment of renown)[^.]*(of this unit|of this manifestation|of the \w+ in this regiment|of them))(?!.*\b(roll a|roll 2d6|pick|inflict|to be the target)\b).*\S
+condition_count|does|*|\bfor each\b	wh_bloodbowl3,inscryption,dnd5e,gwent,wh_killteam,wh_aos_4th,wh_40k_10e,shadowverse	(?<!dice )(?<!d3 )(?<!d6 )(?<!draw a card )\bfor each\b(?! (target|damage|attack dice|additional|point))
+condition_count|does|*|\bfor each\b	faeria,sts1,hs_battlegrounds,wh_underworlds	keep

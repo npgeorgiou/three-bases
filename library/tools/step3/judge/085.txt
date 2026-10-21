@@ -1,0 +1,71 @@
+# definitions
+heal | Restore health (heal) | Lost health of a unit, hero or player is restored. | Not: Preventing damage before it happens is protection.
+in_hand_buff | Improve cards in hand or deck | Cards still in hand or deck get more power, a lower cost or better text before they are played. | Not: A discount on whatever is played this turn is cost_reduction.
+information | Hidden and revealed information | Hidden and revealed information: face-down cards, looking at the opponent's hand. | Not: Hidden units are stealth.
+lifesteal | Lifesteal / drain | Damage dealt also heals its source or its owner. | Not: Healing not tied to damage dealt is heal.
+merge_attach | Attach or merge onto a unit | A card attaches to or merges with a unit: equipment, enchant creature, a leader attached to a unit, magnetic. | Not: What the attached card gives is buff or debuff.
+modal_choice | Choose one of several effects | The card offers several effects and the owner picks one or more. | Not: Switching a unit between lasting forms is stances.
+movement | Move my units (reposition) | The owner moves their own unit to another space, row, lane or location. | Not: Moving enemy units is forced_movement.
+on_attack | When it attacks | Triggers when the unit attacks or strikes. | Not: When it is attacked is on_damaged or counterattack.
+on_play | When played (battlecry, on reveal) | Triggers when the card is played or revealed: battlecry, on reveal, enters. | Not: When another card is played is on_ally_play.
+# questions: qid | concept | game | name | text
+3511* | heal | runeterra | Redoubled Valor | Fully heal an ally, then double its Power and Health.
+3512* | heal | runeterra | Star Shepherd | When you heal a damaged ally, grant me +2|+0.
+3513* | heal | runeterra | Kindly Tavernkeeper | Play: Heal an ally or your Nexus 3.
+3514* | heal | runeterra | Spring Gifts | Keywords: Slow. Fully heal an ally.
+3515* | heal | runeterra | Soraka (level 2) | Keywords: Support. Each round, the first time you heal a damaged ally, draw 1. Support: Fully heal me and my supported ally.
+3516* | heal | runeterra | Guiding Touch | Heal an ally or your Nexus 2. Draw 1.
+3517* | heal | runeterra | Winds of War | Fully heal an ally. Then, that ally and an enemy strike each other.
+3518* | heal | runeterra | Astral Protection | Heal an ally 4 and grant it +0|+4.
+8943* | in_hand_buff | runeterra | Starlit Seer | Keywords: Imbue. When you play a spell, grant the top ally in your deck +1|+1.
+8944* | in_hand_buff | runeterra | Voices of the Old Ones | Get 2 empty mana gems. / For the top 5 cards in your deck, draw each card that costs 8+. Then place the rest into your deck.
+8945* | in_hand_buff | runeterra | Revna, the Lorekeeper | When I'm summoned, grant units in your deck my stats, then draw a unit with 5+ Power.
+8946* | in_hand_buff | runeterra | Glacial Saurian | Keywords: Overwhelm. When I'm summoned, grant the top 3 units in your deck +1|+1. If an ally has a different subtype than me, draw 1 of those units.
+2866* | information | runeterra | The Tidedancer | When I'm summoned, draw a Nilah. / Each round, when you play your third card, give other allies +2|+0 and Brash this round.  / When I would gain Fleeting, reveal me instead.
+8558 | lifesteal | runeterra | Darkwater Scourge | Keywords: Ephemeral, Lifesteal.
+8559 | lifesteal | runeterra | Keeper of the Box | Keywords: Fearsome. Once you've Equipped an ally this game, grant me Lifesteal.
+8560 | lifesteal | runeterra | Spirit's Refuge | Give an ally Barrier and Lifesteal this round.
+8561 | lifesteal | runeterra | Sparklefly | Keywords: Elusive, Lifesteal.
+8562 | lifesteal | runeterra | Radiant Guardian | When I'm summoned, grant me Lifesteal and Tough if an ally died this round.
+8563 | lifesteal | runeterra | Divine Clerk | Empowered 3: Lifesteal.
+8564 | lifesteal | runeterra | Ghostly Paramour | Keywords: Hallowed, Lifesteal.
+8565 | lifesteal | runeterra | Severum | Keywords: Slow. Give an ally +1|+2 and Lifesteal this round. Phase Gravitum or Infernum.
+8566 | lifesteal | runeterra | Song of the Isles | Grant an ally Lifesteal, Fearsome, and Ephemeral.
+8567 | lifesteal | runeterra | Serene Sky-Singer | Keywords: Lifesteal. When I'm summoned, reduce the cost of spells in your deck by half, rounded up.
+3146 | merge_attach | runeterra | Yuumi | Keywords: Attach. Round Start: Grant the unit I'm Attached to +1|+1. Otherwise, grant me +1|+1 instead. Level up: I or the unit I'm Attached to have attacked 3 times.
+3147 | merge_attach | runeterra | Yuumi (level 2) | Keywords: Attach, SpellShield. Round Start: Grant the unit I'm Attached to SpellShield and +1|+1. Otherwise, grant me SpellShield and +1|+1 instead.
+3148 | merge_attach | runeterra | Sleep | Obliterate a unit and recall its attachments to store an exact copy in a landmark for one round.
+3149 | merge_attach | runeterra | Quick Quill | Keywords: Quick Attack, Attach.
+3150 | merge_attach | runeterra | Yuumi (other form) | Keywords: Attach. Round Start: Grant the unit I'm Attached to +1|+1.
+3151 | merge_attach | runeterra | Sharesies | Give an ally with an attachment the stats and keywords of its attachment this round and move the attachment to another ally.
+3152 | merge_attach | runeterra | Unworthy Soul | Keywords: Flow. Flow: I cost 2 less. / Recall a unit or landmark. If it has any attachments, destroy them first.
+3153 | merge_attach | runeterra | Rainbowfish | Keywords: Elusive, Attach.
+3154 | merge_attach | runeterra | Papercraft Dragon | Keywords: Double Attack, Attach.
+3155 | merge_attach | runeterra | Stinky Whump | Keywords: Last Breath. Last Breath: Create a copy of me in the enemy deck with 2 Poison Puffcaps attached.
+4126* | modal_choice | runeterra | Improvise | Choose one of two random options from a depleting pool of equipment and equip it to this ally. If the ally wasn't played from hand, it equips a random equipment instead.
+1372* | movement | runeterra | Draven's Biggest Fan | When I'm summoned, move Draven to the top of your deck if you don't have him in hand or in play.
+1373* | movement | runeterra | Bone Skewer | An ally strikes an enemy, then moves to the top of your deck.
+1374* | movement | runeterra | Sharesies | Give an ally with an attachment the stats and keywords of its attachment this round and move the attachment to another ally.
+7085 | movement | runeterra | Preservationist | Play: Advance an allied landmark 3 rounds.
+7086 | movement | runeterra | Akshan (level 2) | Keywords: Quick Attack. When I'm summoned or strike: Summon a Warlord's Hoard or advance it 1 round.
+7087 | movement | runeterra | Warlord's Hoard | Keywords: Countdown, Landmark. Countdown 8: Create a Sentinel's Hoard in hand. When you target allies advance me 1.
+7088 | movement | runeterra | Imagined Possibilities | Create a random landmark with Countdown in hand, or advance your landmarks 1 round.
+7089 | movement | runeterra | Time in a Bottle | Predict and advance an allied landmark 2 rounds.
+7090 | movement | runeterra | Time Bomb | Keywords: Countdown, Landmark. When I'm summoned, draw 1 and advance other allied Time Bombs 1 round. Countdown 1: Deal 1 to enemies and the enemy Nexus.
+7091 | movement | runeterra | Boadir of Blackened Ice | When I'm summoned, summon 2 Frozen Thralls and advance them to 2.
+7092 | movement | runeterra | Stopwatch | When I'm summoned, advance me 1.
+7093 | movement | runeterra | Vekauran Vagabond | When I'm summoned, summon a Warlord's Palace or advance it 2 rounds.
+7094 | movement | runeterra | Draklorn Inquisitor | When I'm summoned, summon a Frozen Thrall. / Round End: If the Countdown of any of your Frozen Thralls is 4 or less, advance them to 0.
+7735 | on_attack | runeterra | Midenstokke Henchmen | Nexus Strike: Summon an exact copy of me.
+7736 | on_attack | runeterra | Jack | Keywords: Brash. Strike: Create a Coin in hand. / When you refill mana, heal me 1 for each mana refilled. Level up: You've spent 12+ mana in one round.
+7737 | on_attack | runeterra | Jack (level 2) | Keywords: Overwhelm, Brash. Strike: Create 2 Coins in hand. When you refill mana, grant me +1|+0 and heal me 1 for each mana refilled.
+7738 | on_attack | runeterra | Akshan (level 2) | Keywords: Quick Attack. When I'm summoned or strike: Summon a Warlord's Hoard or advance it 1 round.
+7739 | on_attack | runeterra | Ezreal (level 2) | Keywords: Elusive, Imbue. Nexus Strike: Create a Fleeting Mystic Shot in hand. When you play a spell, deal 1 to the enemy Nexus. If it targeted an enemy, deal 2 to the enemy Nexus instead.
+7740 | on_attack | runeterra | Draven | Keywords: Quick Attack. When I'm summoned or strike: Create a Spinning Axe in hand. Level up: I've struck with 2+ total Spinning Axes.
+7741 | on_attack | runeterra | Ekko | Keywords: Quick Attack. Strike: Create a Fleeting Time Trick in hand. Level up: You've Predicted 4+ times. When I level up, create 3 Chronobreaks in your deck.
+7742 | on_attack | runeterra | Ezreal | Keywords: Elusive. Nexus Strike: Create a Fleeting Mystic Shot in hand. Level up: You've targeted enemies 8+ times.
+7743 | on_attack | runeterra | Acoustician | Strike: Create a random new 2 cost spell in hand.
+7744 | on_attack | runeterra | Lillia (level 2) | Keywords: Quick Attack, Spirit. When I'm summoned or Strike: Create a Dream-Laden Bough in hand or, if you have one, reduce its cost by 1. When you Sleep another ally, immediately wake it up and grant it Spirit.
+8797 | on_play | runeterra | Boxtopus | Keywords: Challenger. Play: Deal 3 to me.
+8798 | on_play | runeterra | Ruby-Eyed Conjurer | Play: Grant SpellShield or Overwhelm to an ally in hand.
+8799 | on_play | runeterra | Allay (created) | Keywords: Impact. Play: Grant a unit Gloom.

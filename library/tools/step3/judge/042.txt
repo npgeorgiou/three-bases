@@ -1,0 +1,65 @@
+# definitions
+shield | Absorb one hit (shield, ward) | The next hit or damage instance is fully absorbed or cancelled. | Not: Damage lowered by an amount is damage_reduction.
+stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+stat_loss | Stat loss (-power, -health) | A unit's power, attack, health or other stat goes down, or is set or swapped to a lower value. | Not: Not being able to attack is attack_lock or cant_attack.
+# questions: qid | concept | game | name | text
+5470 | shield | hearthstone | Ini Stormcoil | Battlecry: Choose a friendly Mech. Summon a copy of it with Rush, Windfury, and Divine Shield.
+5471 | shield | hearthstone | Tigress Plushy | Miniaturize Rush, Lifesteal, Divine Shield
+5472 | shield | hearthstone | The Leviathan | Colossal +1 Rush, Divine Shield After this attacks, Dredge.
+5473 | shield | hearthstone | Call the Threshfleet! | Give a minion +2/+2 and Divine Shield. (This stays in your hand while Ido is alive!)
+5474 | shield | hearthstone | Gift of Luminance | Give a minion Divine Shield, then summon a 1/1 copy of it.
+7537 | shield | hearthstone | Tainted Zealot | Divine Shield Spell Damage +1
+7538 | shield | hearthstone | Carousel Gryphon (created) | Corrupted Divine Shield, Taunt
+7539 | shield | hearthstone | Searing Reflection | Draw a minion. Summon an 8/8 copy of it with Divine Shield.
+7540 | shield | hearthstone | Light's Sorrow | After a friendly minion loses Divine Shield, gain +1 Attack.
+7541 | shield | hearthstone | Pharaoh's Blessing | Give a minion +4/+4, Divine Shield, and Taunt.
+7542 | shield | hearthstone | Pipsi Painthoof | Deathrattle: Summon a random Divine Shield, Rush, and Taunt minion from your deck.
+7543 | shield | hearthstone | Bubblebot | Battlecry: Give your other Mechs Divine Shield and Taunt.
+7544 | shield | hearthstone | Tigress Plushy (created) | Mini Rush, Lifesteal, Divine Shield
+7545 | shield | hearthstone | Shield of Honor | Give a damaged minion +3 Attack and Divine Shield.
+40 | stat_gain | hearthstone | Silvermoon Portal | Give a minion +2/+2. Summon a random 2-Cost minion.
+41 | stat_gain | hearthstone | Bananas (created) | You can now fight the Monkey King! Give a minion +1/+1.
+42 | stat_gain | hearthstone | Helboar | Deathrattle: Give a random Beast in your hand +1/+1.
+43 | stat_gain | hearthstone | Totem Cruncher | Taunt Battlecry: Destroy your Totems. Gain +2/+2 for each destroyed.
+44 | stat_gain | hearthstone | Cenarius | Choose One - Give your other minions +2/+2; or Summon two 2/2 Treants with Taunt.
+45 | stat_gain | hearthstone | Liferoot | +1/+1 and Lifesteal
+46 | stat_gain | hearthstone | Dinomancy | Replace your Hero Power with 'Give a Beast +3/+3.'
+47 | stat_gain | hearthstone | Handle with Bear | Get two 3/3 Bears with Taunt. Each turn they are in your hand, they gain +1/+1.
+48 | stat_gain | hearthstone | Endangered Dodo | Taunt Battlecry: If you have 10 or less Health, gain +5/+5 and summon a copy of this.
+49 | stat_gain | hearthstone | Drum Soloist | Taunt Battlecry: If you control no other minions, gain +2/+2 and Rush.
+1518* | stat_gain | hearthstone | Thornmantle Musician | Finale: The next Beast you summon gets +1/+1.
+2711 | stat_gain | hearthstone | Coldlight Seer | Battlecry: Give your other Murlocs +2 Health.
+2712 | stat_gain | hearthstone | Lawful Longarm | Rush, Lifesteal Battlecry: Gain +1 Attack for each card in your hand.
+2713 | stat_gain | hearthstone | Temple of Earth | Choose a friendly minion. Summon a copy of it with +3 Health and Taunt that can't attack.
+2714 | stat_gain | hearthstone | Zandalari Striker | After your hero attacks, give your minions +2 Attack.
+2715 | stat_gain | hearthstone | Omega Defender | Taunt Battlecry: If you have 10 Mana Crystals, gain +10 Attack.
+2716 | stat_gain | hearthstone | Inara Stormcrash | On your turn, your hero has +2 Attack and Windfury.
+2717 | stat_gain | hearthstone | Deadly Poison | Give your weapon +2 Attack.
+2718 | stat_gain | hearthstone | Neferset Weaponsmith | Battlecry: Get a random weapon from another class. Combo: Give it +2 Attack.
+2719 | stat_gain | hearthstone | Sand Art Elemental (created) | Mini Battlecry: Give your hero +1 Attack and Windfury this turn.
+2720 | stat_gain | hearthstone | Skeletal Sidekick | Battlecry: Give a friendly Undead +2 Attack.
+3319 | stat_gain | hearthstone | Crypt Lord | Taunt After you summon a minion, gain +1 Health.
+3320 | stat_gain | hearthstone | Brainstormer | Battlecry: Gain +1 Health for each spell in your hand.
+3321 | stat_gain | hearthstone | Stranded Spaceman | Battlecry: The next Draenei you play gains +2 Health and Rush.
+3322 | stat_gain | hearthstone | Gurubashi Berserker | Whenever this minion takes damage, gain +3 Attack.
+3323 | stat_gain | hearthstone | Disturbed Spirit | Whenever a minion dies, gain +1/+1.
+3324 | stat_gain | hearthstone | Razorgore's Claws | Whenever a Corrupted Egg dies, gain +1 Attack.
+3325 | stat_gain | hearthstone | Stitched Creation (created) | Infused Combo: Gain +2/+2. Manathirst (@): Gain +4/+4.
+3326 | stat_gain | hearthstone | Flux Revenant | Taunt Whenever you would damage this with a Nature spell, it gains +2/+1 instead.
+3327 | stat_gain | hearthstone | Splintered Reality | Summon two 2/2 Treants. They gain +1/+1 for each friendly Treant that died this game. ()
+3328 | stat_gain | hearthstone | Nozdormu, Bronze Aspect | At the end of your turn, give your minions Divine Shield. Any that already had one gain +3/+3 instead.
+3888* | stat_gain | hearthstone | Molten Pick of ROCK | At the end of turn, explode for @ damage! (Or spend all your Mana to give this to the opponent with +2 damage.)
+4041 | stat_gain | hearthstone | Conservative Forecast | +2 Health.
+4042 | stat_gain | hearthstone | Severed Souls | Both heroes start with +5 Health.
+5653* | stat_loss | hearthstone | Helm of Humiliation | Give a minion -5/-5. Give a random minion in your hand +5/+5.
+5654* | stat_loss | hearthstone | Rattlegore | Deathrattle: Resummon this with -1/-1.
+5655* | stat_loss | hearthstone | Wave Pool Thrasher | Battlecry: Give all other minions -1/-1. Deathrattle: Give all other minions +1/+1.
+5656* | stat_loss | hearthstone | Gilneas Brochure | Silence a minion and give it -2/-2. (Flips each turn.)
+8540* | stat_loss | hearthstone | Elemental Destruction | Deal 4-5 damage to all minions. Overload: (2)
+8541* | stat_loss | hearthstone | Crackle | Deal 3-6 damage. Overload: (1)
+8542* | stat_loss | hearthstone | Imp-losion | Deal 2-4 damage to a minion. Summon a 1/1 Imp for each damage dealt.
+8543* | stat_loss | hearthstone | Bru'kan (created) | At the end of your turn, deal 1-2 damage to all enemy minions. Deathrattle: Go Dormant for 2 turns.
+8544* | stat_loss | hearthstone | Boom Bot | Deathrattle: Deal 1-4 damage to a random enemy.
+8545* | stat_loss | hearthstone | Alliance Siege Tower | At the start of your turn, deal 1-2 damage to a random enemy. Restore 1 Health to your hero.
+8546* | stat_loss | hearthstone | Leviathan Missiles | Ini deals 1-3 damage to random enemy minions when she is attacked.
+8547* | stat_loss | hearthstone | Murloc Menace (created) | At the end of each turn, deal 1-4 damage to all enemies. Deathrattle: Your opponent gains an empty Mana crystal.

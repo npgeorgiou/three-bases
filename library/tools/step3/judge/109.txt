@@ -1,0 +1,71 @@
+# definitions
+heal | Restore health (heal) | Lost health of a unit, hero or player is restored. | Not: Preventing damage before it happens is protection.
+in_hand_buff | Improve cards in hand or deck | Cards still in hand or deck get more power, a lower cost or better text before they are played. | Not: A discount on whatever is played this turn is cost_reduction.
+multi_attack | Attack more than once | The unit attacks or strikes more than once per turn or round. | Not: One attack that hits several targets is multi_target_attack; readying a used unit is untap.
+on_ally_play | When I play another card | Triggers when the owner plays or summons another card or unit. | Not: When this card is played is on_play.
+on_attack | When it attacks | Triggers when the unit attacks or strikes. | Not: When it is attacked is on_damaged or counterattack.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+resource_gain | Gain resources (ramp) | The owner gains extra mana, energy, supply or another resource, now or for good. | Not: Cards costing less is cost_reduction.
+# questions: qid | concept | game | name | text
+3499 | heal | sts2 | Sapphire Seed | Choices: Consume: Heal 9 HP. Upgrade a card in your Deck. | Plant and Nourish: Enchant a card with Sown.
+3500 | heal | sts2 | Spur | Summon 3. Osty heals 5 HP. Retain.
+8936* | in_hand_buff | sts2 | Clash | Can only be played if every card in your Hand is an Attack. Deal 14 damage.
+8862 | multi_attack | sts2 | Flail Knight | Actions: War Chant (buff, power); Flail (multi_attack, 9 damage); Ram (attack, 15 damage)
+8863 | multi_attack | sts2 | Chomper | Actions: Clamp (8 damage x2); Clamp (multi_attack); Screech (status)
+8864 | multi_attack | sts2 | Mawler | Actions: Rip and Tear (14 damage); Claw (4 damage x2); Rip and Tear (attack, 14 damage); Roar (debuff, power); Claw (multi_attack, 4 damage)
+8865 | multi_attack | sts2 | Byrdonis | Actions: Peck (3 damage); Swoop (17 damage); Peck (multi_attack); Swoop (attack)
+8866 | multi_attack | sts2 | Knowledge Demon | Actions: Slap (17 damage); Knowledge Overwhelming (8 damage x3); Ponder (11 damage); Curse of Knowledge (debuff); Slap (attack, 17 damage); Knowledge Overwhelming (multi_attack, 8 damage); Ponder (attack, heal, buff, 11 damage, power)
+8867 | multi_attack | sts2 | Terror Eel | Actions: Crash (16 damage); Thrash (3 damage); Crash (attack, 16 damage); Thrash (multi_attack, buff, 3 damage, power); Stun (stun); Terrorize (debuff, power)
+8868 | multi_attack | sts2 | Kin Follower | Actions: Quick Slash (5 damage); Quick Slash (attack, 5 damage); Boomerang (multi_attack, 2 damage); Power Dance (buff, power)
+8869 | multi_attack | sts2 | Toadpole | Actions: Spike Spit (3 damage); Whirl (7 damage); Spike Spit (multi_attack, 3 damage, power); Whirl (attack, 7 damage); Spiken (buff, power)
+8870 | multi_attack | sts2 | Punch Construct | Actions: Strong Punch (14 damage); Fast Punch (5 damage); READY (defend, block 10); Strong Punch (attack, 14 damage); Fast Punch (multi_attack, debuff, 5 damage, power)
+8871 | multi_attack | sts2 | Hunter Killer | Actions: Bite (17 damage); Puncture (7 damage x3); Tenderizing Goop (debuff, power); Bite (attack, 17 damage); Puncture (multi_attack, 7 damage)
+5505 | on_ally_play | sts2 | The Sealed Throne | Whenever you play a card, gain star.
+5506 | on_ally_play | sts2 | Devour Life | Whenever you play a Soul, Summon 1.
+5507 | on_ally_play | sts2 | Pocketwatch | Whenever you play 3 or fewer cards during your turn, draw 3 additional cards at the start of your next turn.
+5508 | on_ally_play | sts2 | Danse Macabre | Whenever you play a card that costs 2 energy or more, gain 4 Block.
+5509 | on_ally_play | sts2 | Mummified Hand | Whenever you play a Power, a random card in your Hand is free to play that turn.
+5510 | on_ally_play | sts2 | Haunt | Whenever you play a Soul, a random enemy loses 3 HP.
+5511 | on_ally_play | sts2 | Lost Wisp | Whenever you play a Power, deal 8 damage to ALL enemies.
+5512 | on_ally_play | sts2 | Storm | Whenever you play a Power, Channel 1 Lightning.
+5513 | on_ally_play | sts2 | Danse Macabre | Whenever you play a card that costs 2 Energy or more, gain 7 Block.
+5514 | on_ally_play | sts2 | Helical Dart | Whenever you play a Shiv, gain 1 Dexterity this turn.
+2915 | on_attack | sts2 | Bone Flute | Whenever Osty attacks, gain 2 Block.
+564* | passive | sts2 | Belt Buckle | While you have no potions, you have 2 additional Dexterity.
+565* | passive | sts2 | Constrict | While the Slithering Strangler is alive, at the end of your turn, take 1 damage.
+566* | passive | sts2 | Frail | While Frail, gain 25% less Block from cards.
+567* | passive | sts2 | Hex | While Spectral Knight is alive, ALL your cards are Ethereal.
+8071 | passive | sts2 | Darkness | Channel 1 Dark. Trigger the passive ability of all Dark Orbs.
+8072 | passive | sts2 | Gold-Plated Cables | Your rightmost Orb triggers its passive an additional time.
+8073 | passive | sts2 | Loop | At the start of your turn, trigger the passive ability of your next Orb.
+8074 | passive | sts2 | Loop+ | At the start of your turn, trigger the passive ability of your rightmost Orb 2 times.
+4763 | polymorph | sts2 | Seance | Transform a card in your Draw Pile into Soul. Ethereal.
+4764 | polymorph | sts2 | Whispering Hollow | Choices: Exchange Gold: Lose 35 Gold. Procure 2 random Potions. | Hug the Tree: Lose 9 HP. Choose a card to Transform.
+4765 | polymorph | sts2 | Primal Force | Transform all Attacks in your Hand into Giant Rock.
+4766 | polymorph | sts2 | Leafy Poultice | Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose 12 Max HP.
+4767 | polymorph | sts2 | Wood Carvings | Choices: Bird: Choose 1 starter card to Transform into Peck. | Snake: Enchant 1 card with Slither. | Torus: Choose 1 starter card to Transform into Toric Toughness.
+4768 | polymorph | sts2 | Aroma of Chaos | Choices: Let Go: Transform a card in your Deck. | Maintain Control: Upgrade a card in your Deck.
+4769 | polymorph | sts2 | Entropy | At the start of your turn, Transform 1 card in your Hand.
+4770 | polymorph | sts2 | Claws | Upon pickup, Transform up to 6 cards into Maul.
+4771 | polymorph | sts2 | Sword of Stone | Transforms into a powerful Relic after defeating 5 Elites.
+4772 | polymorph | sts2 | Entropy+ | Innate. At the start of your turn, Transform 1 card in your Hand.
+71* | random_effect | sts2 | Curl Up | When damaged, rolls up and gains block. (Once per combat)
+72* | random_effect | sts2 | Slumbering Beetle | Actions: Snore (sleep); Roll Out (attack, buff, 16 damage, power)
+706 | random_effect | sts2 | Hellraiser | Whenever you draw a card containing “Strike”, it is played against a random enemy.
+707 | random_effect | sts2 | Call of the Void | At the start of your turn, add 1 random card into your Hand and apply Ethereal to it.
+708 | random_effect | sts2 | Hello World+ | Innate. At the start of your turn, add a random Common card into your Hand.
+709 | random_effect | sts2 | Whispering Hollow | Choices: Exchange Gold: Lose 35 Gold. Procure 2 random Potions. | Hug the Tree: Lose 9 HP. Choose a card to Transform.
+710 | random_effect | sts2 | Chaos | Channel 1 random Orb.
+711 | random_effect | sts2 | Sword Boomerang | Deal 3 damage to a random enemy 3 times.
+712 | random_effect | sts2 | Haunt | Whenever you play a Soul, a random enemy loses 6 HP.
+713 | random_effect | sts2 | War Paint | Upon pickup, Upgrade 2 random Skills.
+714 | random_effect | sts2 | Sere Talon | Upon pickup, add 2 random Curses and 3 Wishes to your Deck.
+715 | random_effect | sts2 | Tiny Mailbox | Whenever you Rest, procure 2 random potions.
+7297 | resource_gain | sts2 | Outmaneuver | Next turn, gain 2 energy.
+7298 | resource_gain | sts2 | Demesne | At the start of your turn, gain energy and draw 1 additional card. Ethereal.
+7299 | resource_gain | sts2 | Booming Conch | At the start of Elite combats, draw 2 additional cards and gain energy.
+7300 | resource_gain | sts2 | Luminesce | Gain 2 energy. Exhaust. Retain.
+7301 | resource_gain | sts2 | Dense Vegetation | Choices: Rest: Heal like resting at a Rest Site. Fight some enemies. | Trudge On: Gain 0 Gold. Lose 8 HP.
+7302 | resource_gain | sts2 | Friendship | Gain 1 Energy at the start of each turn.

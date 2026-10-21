@@ -1,0 +1,92 @@
+# definitions
+cost_condition | Cost matters | The effect cares about a card's cost: 1-cost cards, odd or even cost, N or more. | Not: Changing costs is cost_reduction or cost_set.
+cost_reduction | Cards cost less | The owner's cards cost less by an amount. | Not: A play that costs nothing at all is free_play; a cost set to a number is cost_set.
+on_ally_play | When I play another card | Triggers when the owner plays or summons another card or unit. | Not: When this card is played is on_play.
+on_attack | When it attacks | Triggers when the unit attacks or strikes. | Not: When it is attacked is on_damaged or counterattack.
+on_spell | When a spell is played | Triggers when a spell or action is played. | Not: When a unit is played is on_ally_play.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+ranged | Ranged attack / long reach | The unit attacks from a distance, from the back row or over other units. | Not: Damage from a spell is damage.
+recycle | Reuse my cards (shuffle back) | The owner's used or discarded cards go back into deck or hand to be used again. | Not: An enemy unit sent to its deck is bounce_enemy.
+# questions: qid | concept | game | name | text
+7811 | cost_condition | hearthstone | Story of Carnassa | Shuffle ten 1-Cost 3/2 Raptors into your deck with "Battlecry: Draw a card."
+7812 | cost_condition | hearthstone | Karazhan the Sanctum | Costs (0) if you're wielding Atiesh. Summon two random 8-Cost minions.
+7813 | cost_condition | hearthstone | Hybridization | Draw a 1, 2, 3, and 4-Cost minion. Kindred: They cost (1) less.
+7989 | cost_reduction | hearthstone | Palm Reading | Discover a spell. Reduce the Cost of spells in your hand by (1).
+7990 | cost_reduction | hearthstone | Mathias Shaw | Stealth. Whenever a friendly Stealthed minion attacks, reduce the Cost of a random card in your hand by (3).
+7991 | cost_reduction | hearthstone | Celestial Ink Set | After you spend 5 Mana on spells, reduce the Cost of a spell in your hand by (5). Lose 1 Durability.
+7992 | cost_reduction | hearthstone | Skittish Saucier | Battlecry: Reduce the Cost of adjacent cards in your hand by (1).
+7993 | cost_reduction | hearthstone | Titanographer Osk (created) | Battlecry: Reduce the Cost of all minions in your hand by (2).
+7994 | cost_reduction | hearthstone | Movement of Pride | Draw your highest Cost minion. Reduce its Cost by (6).
+7995 | cost_reduction | hearthstone | Transfer Student (created) | At the end of your turn, reduce the Cost of a random card in your hand by (2).
+7996 | cost_reduction | hearthstone | Service Ace | After this minion gains Attack, reduce the Cost of the highest Cost card in your hand by (1).
+7997 | cost_reduction | hearthstone | Enthralled Shade | Deathrattle: Reduce the Cost of cards in your hand that were copied from your opponent by (1).
+7998 | cost_reduction | hearthstone | Mysterious Visitor | Battlecry: Reduce the Cost of cards copied from your opponent by (3).
+5550 | on_ally_play | hearthstone | Blubber Baron | Whenever you summon a Battlecry minion while this is in your hand, gain +1/+1.
+5551 | on_ally_play | hearthstone | Herald of Flame | Whenever you play a Dragon, give it Rush and draw a Dragon.
+5552 | on_ally_play | hearthstone | Murloc Tidecaller | Whenever you summon a Murloc, gain +1 Attack.
+5553 | on_ally_play | hearthstone | Hawkstrider Rancher | Whenever you play a minion, give it +1/+1 and "Deathrattle: Summon a 1/1 Hawkstrider."
+5554 | on_ally_play | hearthstone | Steward of Darkshire | Whenever you summon a 1-Health minion, give it Divine Shield.
+2936 | on_attack | hearthstone | Bloodbound Imp | Whenever this attacks, deal 2 damage to your hero.
+2937 | on_attack | hearthstone | King Varian | Whenever this attacks, Recruit a minion. Deathrattle: Advance fight.
+2938 | on_attack | hearthstone | Finja, the Flying Star | Stealth Whenever this attacks and kills a minion, summon 2 Murlocs from your deck.
+2939 | on_attack | hearthstone | Blessing of Wisdom | Choose a minion. Whenever it attacks, draw a card.
+2940 | on_attack | hearthstone | Genzo, the Shark | Whenever this attacks, both players draw until they have 3 cards.
+2941 | on_attack | hearthstone | Thorignir Drake | Rush Whenever this attacks, summon two 3/1 Whelps to attack the target first.
+2942 | on_attack | hearthstone | Stormbrewer | Whenever this attacks, deal 3 damage to the target first. Kindred: Gain Rush.
+2943 | on_attack | hearthstone | Craftsman's Hammer | Whenever your hero attacks, gain 4 Armor.
+2944 | on_attack | hearthstone | Magehunter | Rush Whenever this attacks a minion, Silence it.
+2945 | on_attack | hearthstone | Overlord Runthak | Rush. Whenever this attacks, give +1/+1 to all minions in your hand.
+8477* | on_spell | hearthstone | Arcane Artificer | Whenever you cast a spell, gain Armor equal to its Cost.
+8478* | on_spell | hearthstone | Hunter of Old | Whenever you cast a spell, gain Spell Damage +2.
+8479* | on_spell | hearthstone | Arcane Devourer | Whenever you cast a spell, gain +2/+2.
+8480* | on_spell | hearthstone | Mana Addict | Whenever you cast a spell, gain +2 Attack this turn.
+8481* | on_spell | hearthstone | Archmage Antonidas | Whenever you cast a spell, add a 'Fireball' spell to your hand.
+8482* | on_spell | hearthstone | Li'Na, Shop Manager | Whenever you cast a spell, fill your board with random minions of that Cost.
+8483* | on_spell | hearthstone | Summoning Stone | Whenever you cast a spell, summon a random minion of the same Cost.
+8484* | on_spell | hearthstone | Exotic Mountseller | Whenever you cast a spell, summon a random 3-Cost Beast.
+8485* | on_spell | hearthstone | Bogshaper | Whenever you cast a spell, draw a minion from your deck.
+8486* | on_spell | hearthstone | Lyra the Sunshard | Whenever you cast a spell, add a random Priest spell to your hand.
+8086 | passive | hearthstone | Togwaggle's Dice | Passive At the end of your turn, randomize the cost of all cards in your hand.
+8087 | passive | hearthstone | Cloak of Invisibility | Passive Your minions have permanent Stealth.
+8088 | passive | hearthstone | Disks of Swiftness | Passive Your opponent must pass their first 2 turns.
+8089 | passive | hearthstone | Darklight Torch | Passive After you play an even-Cost card, refresh your hero power. It costs (0) this turn.
+8090 | passive | hearthstone | Windfall Blessing | Passive Your Shrines have "Deathrattle: Give minions in your deck +1/+1."
+8091 | passive | hearthstone | Resourcefulness | Passive At the start of the game, equip a random weapon. Give it +1/+1.
+8092 | passive | hearthstone | First Aid Kit | Passive At the end of your turn, restore 2 Health to all friendly characters.
+8093 | passive | hearthstone | Wondrous Wisdomball | Passive Occasionally gives helpful advice.
+8094 | passive | hearthstone | Grommash's Armguards | Passive Your weapons cost (1).
+8095 | passive | hearthstone | Ever-Changing Elixir | Passive At the end of your turn, transform a friendly minion into one that costs (1) more.
+6968* | polymorph | hearthstone | Dormant | Becomes a permanent that cannot act or be interacted with until a condition is met.
+6969* | polymorph | hearthstone | Forsaken Lieutenant | Stealth. After you play a Deathrattle minion, become a 2/2 copy of it with Rush.
+6970* | polymorph | hearthstone | Stonetalon Striker | Taunt (While in hand, play a Dragon to become a 6/6 Dragon!)
+6971* | polymorph | hearthstone | Ebyssian | Battlecry: Your Dragons have Rush this game. (While in hand, play a Dragon to become a 12/12 Dragon!)
+6972* | polymorph | hearthstone | Faceless Manipulator | Battlecry: Choose a minion and become a copy of it.
+6973* | polymorph | hearthstone | Creepy Painting | After another minion dies, become a copy of it.
+6974* | polymorph | hearthstone | Felsteel Executioner | Corrupt: Become a weapon.
+6975* | polymorph | hearthstone | Ring of Tides | After you cast a spell, this becomes a copy of it that costs (1).
+115* | random_effect | hearthstone | Snake Eyes | Battlecry: Roll two dice, then Discover two cards of those Costs. (Doubles get an extra Discover!)
+9087 | random_effect | hearthstone | Blackpaw's Whip | Costs (1) less for each Coin you're holding. Deathrattle: Draw a card.
+9088 | random_effect | hearthstone | Soldier of Fortune | Whenever this minion attacks, give your opponent a Coin.
+9089 | random_effect | hearthstone | Dig for Treasure | Draw a minion. If it's a Pirate, get a Coin.
+9090 | random_effect | hearthstone | Trade Prince Gallywix | Whenever your opponent casts a spell, gain a copy of it and give them a Coin.
+9091 | random_effect | hearthstone | Avatar of the Coin | You lost the coin flip, but gained a friend.
+9092 | random_effect | hearthstone | Lucrative Contract | Destroy a minion. Add 2 Coins to your hand.
+9093 | random_effect | hearthstone | Loan Shark | Battlecry: Give your opponent a Coin. Deathrattle: You get two.
+9094 | random_effect | hearthstone | Oh, Manager! | Deal 2 damage. Combo: Get a Coin.
+9095 | random_effect | hearthstone | Gilded Gargoyle | Deathrattle: Add a Coin to your hand.
+9096 | random_effect | hearthstone | Licensed Adventurer | Battlecry: If you control a Quest, add a Coin to your hand.
+2102 | ranged | hearthstone | Greater Arcane Missiles | Shoot three missiles at random enemies that deal 3 damage each.
+2103 | ranged | hearthstone | Lightshow | Shoot beams at enemies that each deal 2 damage. Your future Lightshows shoot one more beam.
+2104 | ranged | hearthstone | Grunty | Battlecry: Summon four random Murlocs, then shoot them at enemy minions. (You pick the targets!)
+8268 | recycle | hearthstone | Azsharan Scavenger | Battlecry: Put a 'Sunken Scavenger' on the bottom of your deck.
+8269 | recycle | hearthstone | Azsharan Trident | Deathrattle: Put a 'Sunken Trident' on the bottom of your deck.
+8270 | recycle | hearthstone | Azsharan Saber | Rush. Deathrattle: Put a 'Sunken Saber' on the bottom of your deck.
+8271 | recycle | hearthstone | Bootstrap Sunkeneer | Combo: Put an enemy minion on the bottom of your opponent's deck.
+8272 | recycle | hearthstone | Meadowstrider | Taunt. Deathrattle: Put a Meadowstrider on the bottom of your deck. It costs (1).
+8273 | recycle | hearthstone | Sunken Spirit | Spell Damage +1 Deathrattle: Put a 'Priestess' Memory' on the bottom of your deck.
+8274 | recycle | hearthstone | Azsharan Gardens | Give all minions in your hand +1/+1. Put a 'Sunken Gardens' on the bottom of your deck.
+8275 | recycle | hearthstone | Azsharan Scroll | Discover a Fire, Frost or Nature spell. Put a 'Sunken Scroll' on the bottom of your deck.
+8276 | recycle | hearthstone | Azsharan Ritual | Silence a minion and summon a copy of it. Put a 'Sunken Ritual' on the bottom of your deck.
+8277 | recycle | hearthstone | Kaldorei Cultivator | Battlecry: Discover 2 Beasts. Put them on the bottom of your deck with +5/+5.

@@ -1,0 +1,69 @@
+# definitions
+on_ally_play | When I play another card | Triggers when the owner plays or summons another card or unit. | Not: When this card is played is on_play.
+on_play | When played (battlecry, on reveal) | Triggers when the card is played or revealed: battlecry, on reveal, enters. | Not: When another card is played is on_ally_play.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+permanent_growth | Grows again and again | A unit gains stats repeatedly (each turn, each trigger) and keeps them. | Not: A single lasting bonus is stat_gain.
+ping | Small repeatable damage | A small amount of damage (1 or 2) that can be dealt again and again. | Not: One big hit is damage.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+# questions: qid | concept | game | name | text
+5523 | on_ally_play | gwent | Desert Banshee | Order: Consume an allied unit. Whenever you play a unit with the Deathwish ability, boost self by 1.
+5524 | on_ally_play | gwent | Arachas Swarm | Order: Spawn a Drone on an allied row. Charges: 5 Whenever you play an Organic card, Spawn a Drone on a random allied row. This ability adds 15 provisions to your deck's provisions limit.
+1683* | on_play | gwent | Morkvarg | When this unit enters your graveyard during the round, Summon it to your Melee row and give it Doomed.
+1684* | on_play | gwent | Saov Ainmhi'dh | Boost an allied unit by 5. When this card enters your graveyard, transform self into Saov Ainmhi'dh: Unity.
+6087 | on_play | gwent | Ceallach Dyffryn | Deploy: Purify all allied units on this row.
+6088 | on_play | gwent | Aen Elle Slave Trader | Deploy: Gain Vitality equal to the total duration of Frost on your opponent's side of the battlefield and Infuse an enemy unit with "At the end of your turn, if there's an enemy Aen Elle Slave Trader with higher power than your own, set own power to 1, then Lock self".
+6089 | on_play | gwent | Imperial Golem | Deploy: Reveal the top unit from your opponent's deck and damage self by its power, then shuffle it back.
+6090 | on_play | gwent | Vivienne de Tabris | Deploy: Set a unit's power equal to its provision cost.
+6091 | on_play | gwent | Letho of Gulet | Deploy: If Auckes is in your hand, Lock an enemy unit. If Serrit is in your hand, damage an enemy unit by 3. If both are in your hand, Lock a unit and damage it by 3.
+6092 | on_play | gwent | Melusine | Deploy: Gain Veil. Order: Spawn Rain on an enemy row for 2 turns, then damage self by 2. At the end of your turn, damage adjacent units by 1, then gain 1 base power for each unit damaged. If any unit damaged was a Cultist, refresh this Order.
+6093 | on_play | gwent | Bear Witcher | Deploy: Damage self by 3. Adrenaline 4: Damage self and an enemy unit by 3 instead.
+6094 | on_play | gwent | Queen Meve | Deploy: Reduce the Timer by 1 for each adjacent unit with an Inspired ability. Timer 3: Boost all allied units by 1 and reset the Timer. Whenever this unit receives a boost, gain 1 Armor.
+6095 | on_play | gwent | Etriel | Deploy: Damage an enemy unit by 3. If you control Muirlega, damage by 7 instead.
+6096 | on_play | gwent | Half-Elf Hunter | Harmony. Deploy: Spawn an Elven Deadeye on this row.
+568 | passive | gwent | Wheel of Fortune | Damage an enemy unit by 0. At the end of your turn, while in hand or deck, change this value to a random number between 1 and 10.
+569 | passive | gwent | Auberon: Invader | Deploy: Create and play a bronze Wild Hunt unit. / Devotion: At the start of the round, while in hand or deck, evolve.
+570 | passive | gwent | Wyvern Scale Shield | Boost an allied unit by 4 and give it a Shield. While in your graveyard, when you play a unit, give it a Shield, then Banish self.
+571 | passive | gwent | Eithné: Young Queen | Deploy: Spawn a Young Dryad on this row. At the start of the round, while in hand or deck, evolve.
+572 | passive | gwent | Phoenix | Deploy: Gain Vitality (5). At the start of the round, while in your graveyard, Banish self, then Spawn Phoenix Hatchling on a random allied row.
+573 | passive | gwent | Open, Sesame! | Profit 5. While in your graveyard, whenever you reach 0 Coins, remove a Counter. When the Counter reaches 0, gain 4 Coins. Counter: 6
+574 | passive | gwent | Sigismund Dijkstra | Order: Play a boosted unit from your deck. While in deck, whenever this unit receives a boost from other abilities, boost self by the same amount.
+575 | passive | gwent | Lara Dorren | Disloyal. Deploy: Damage self by the total duration of Frost on enemy rows. Deathwish: Boost all enemy units by 2. When your opponent plays a gold Wild Hunt unit while Lara Dorren is in your graveyard, they also replay Lara Dorren from your graveyard and give it Doomed.
+576 | passive | gwent | Orb of Insight  | Boost an allied unit by 2 and give it Vitality (2). While in your graveyard, lower the Counter by 1 whenever you play a special card. When the Counter reaches 0, play this card and give it Doomed. Counter: 3
+577 | passive | gwent | Harald an Craite | Deploy: Play a bronze Warrior from your graveyard, give it Doomed and damage self by 2. At the start of the round, while in hand or deck, evolve.
+1243 | permanent_growth | gwent | Auberon: King | Deploy: Spawn and play a random bronze Wild Hunt unit. At the start of the round, while in hand or deck, evolve.
+1244 | permanent_growth | gwent | Harald an Craite | Deploy: Play a bronze Warrior from your graveyard, give it Doomed and damage self by 2. At the start of the round, while in hand or deck, evolve.
+1245 | permanent_growth | gwent | Jacques: Miracle Child | Profit 4. Tribute 4: Spawn 2 Firesworn Zealots on this row. At the start of the round, while in hand or deck, evolve.
+1246 | permanent_growth | gwent | Eithné: Young Queen | Deploy: Spawn a Young Dryad on this row. At the start of the round, while in hand or deck, evolve.
+1247 | permanent_growth | gwent | Auberon: Invader | Deploy: Create and play a bronze Wild Hunt unit. / Devotion: At the start of the round, while in hand or deck, evolve.
+1248 | permanent_growth | gwent | Jacques de Aldersberg | Profit 4. / Tribute 4: Spawn 2 Flaming Rose Footmen on this row. / Fee 1: Boost self by 1. / Devotion: At the start of the round, while in hand or deck, evolve.
+1249 | permanent_growth | gwent | Viraxas: Outcast | Formation. / Order: Reset an allied non-Neutral unit's Order ability and give it Zeal. / Devotion: At the start of the round, while in hand or deck, evolve.
+1250 | permanent_growth | gwent | Eithné: Mother | Deploy: Spawn 2 Young Dryads on this row. / Devotion: At the start of the round, while in hand or deck, evolve.
+3984* | ping | gwent | Yennefer: Conjurer | Zeal. Order: Deal 1 damage to the highest-power enemy unit(s). Cooldown: 1
+4773 | polymorph | gwent | Scoia'tael Neophyte | Deploy: Spawn a base copy of self on the other row. Order: Transform an allied Elf into an Elven Deadeye.
+4774 | polymorph | gwent | Saov Ainmhi'dh | Boost an allied unit by 5. When this card enters your graveyard, transform self into Saov Ainmhi'dh: Unity.
+4775 | polymorph | gwent | Botchling | At the end of your turn, damage the highest-power enemy unit by 1. Order: Transform into Lubberkin.
+4776 | polymorph | gwent | Treant Mantis: Stalk | Ambush: When your opponent plays a unit on their side of the battlefield, Poison it and transform self into Treant Mantis: Strike. Spring: Transform into Treant Mantis: Strike.
+4777 | polymorph | gwent | Draug | Zeal. Order: Transform all Human on an allied row into Kaedweni Revenants without changing their power.
+4778 | polymorph | gwent | Urcheon of Erlenwald | Veil. Zeal. Order (Melee): Transform self into Duny. At the end of your turn, boost a random allied unit by 1.
+4779 | polymorph | gwent | Cleric of the Flaming Rose | Profit 3. Tribute 2: Spawn a Firesworn Zealot on this row. Fee 1: Transform a Firesworn Zealot into a Flaming Rose Footman.
+4780 | polymorph | gwent | Saber-Tooth Tiger: Stealth | At the start of your turn, damage all enemy units that are alone on their row by 2 and transform self into Saber-Tooth Tiger.
+4781 | polymorph | gwent | Ethereal | Doomed. Deploy: Gain Zeal. Order: Transform unit to the right into base copy of self.
+4782 | polymorph | gwent | Griffin Witcher Adept | Shield. Order: Transform an allied Witcher into a base copy of Griffin Witcher Adept.
+6961* | polymorph | gwent | Fallen Rayla | Veil. Profit 3. Tribute 3: Remove Poison from an allied unit, then boost self by 5. Whenever your opponent plays a unit, Poison it and remove a Counter. When the Counter reaches 0, the Tribute becomes a Fee. Counter: 2
+716 | random_effect | gwent | Xarthisius | Deploy: Reveal a random card in your deck. If it's a unit, boost self by its power and shuffle it back. If it's an artifact or a special card, play it.
+717 | random_effect | gwent | Necromancer's Tome | Zeal. Order: Trigger a bronze allied unit's Deathwish ability. Whenever you play a bronze unit, Summon a random copy of it from your graveyard to the same row and give it Doomed.
+718 | random_effect | gwent | Bombardment | Split 4 damage randomly between all enemy units. Increase the damage by 1 for each Siege Engine you control.
+719 | random_effect | gwent | Portal | Deploy: Summon a random 4-provision cost unit from your deck to the left of this card. Timer 3: Summon a random 4-provision cost unit from your deck to the right of this card.
+720 | random_effect | gwent | Holger Blackhand | Deploy: Damage a unit by 2. Whenever you play a Ship, boost it by 1. Whenever you play a Pirate, damage a random enemy unit by 1.
+721 | random_effect | gwent | Fercart | Deploy: Play a special card from your hand, then draw a card. Whenever you play a special card, give Spying to a random non-Spying enemy unit.
+722 | random_effect | gwent | Cat Witcher | At the end of your turn, move self to the other row and damage a random enemy unit on the opposite row by 1. Adrenaline 3: Damage it by 2 instead.
+723 | random_effect | gwent | Unseen Elder | Deploy: Give an enemy unit Bleeding (4). At the end of your turn, give Bleeding (2) to a random enemy unit without Bleeding. Devotion: Bleeding on enemy units also triggers at the end of your turn.
+724 | random_effect | gwent | Gigascorpion Decoction | Damage a unit by 1 six times or split 6 damage randomly between all units on an enemy row.
+725 | random_effect | gwent | Iorveth's Gambit | If you have 4 or more Traps in your starting deck, play 2 of them at random. If you have 6 or more Traps in your starting deck, play 2 of your choice instead.
+9057 | random_effect | gwent | Horst Borsodi | Deploy: Gain 3 Coins. If Ewald Borsodi is in your graveyard, gain 6 Coins instead. Fee 1: Give an allied unit Vitality (1).
+9058 | random_effect | gwent | Count Reuven's Treasure | Resilience. Profit 0. Increase the Profit by 1 for each Crime in your starting deck. Deploy: Create a bronze Crime with provisions equal or less to the excess Coins gained from the Profit. Whenever you gain Coins, gain Counters equal to the excess amount gained. At the end of your turn, lower the Counter by 1 and gain a Coin. Counter: 0
+9059 | random_effect | gwent | Vice | Trigger this ability after you spent the specified amount of Coins, then reset own counter.
+9060 | random_effect | gwent | Congregate | Order: Spawn a Firesworn Zealot on an allied row and gain 1 Coin. Charges: 3 This ability adds 18 provisions to your deck's provisions limit.
+9061 | random_effect | gwent | Vivaldi Bank | Profit 4. Look at the top card from your deck plus an additional card for each Coin you have. Play the top card for free, or play another card for a Coin cost equal to its distance from the top, then shuffle the remaining cards back into your deck.
+9062 | random_effect | gwent | Salamandra Mage | Tribute 5: Damage 3 adjacent enemy units by 2. Whenever you pay a Tribute ability, gain 1 Coins. Adrenaline 5: Gain 2 Coins instead.

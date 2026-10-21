@@ -1,0 +1,65 @@
+# definitions
+copy | Copy cards or units | A copy of a card, unit or effect is made for the owner. | Not: Doing a trigger again is repeat_trigger; a copy given to the opponent is enemy_benefit.
+cost_reduction | Cards cost less | The owner's cards cost less by an amount. | Not: A play that costs nothing at all is free_play; a cost set to a number is cost_set.
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+# questions: qid | concept | game | name | text
+2207 | copy | sts2 | Heirloom Hammer | Deal 20 damage. Choose a Colorless card in your Hand. Add a copy of that card into your Hand.
+2208 | copy | sts2 | Juggling | Add a copy of the third Attack you play each turn into your Hand.
+2209 | copy | sts2 | Undeath | Gain 7 Block. Add a copy of this card into your Discard Pile.
+2210 | copy | sts2 | Burning Sticks | The first time each combat you Exhaust a Skill, add a copy of it into your Hand.
+2211 | copy | sts2 | Juggling+ | Innate. Add a copy of the third Attack you play each turn into your Hand.
+2212 | copy | sts2 | Imitation Learning | Choose another player. The next 2 times they play a Power, you play a copy of it. Exhaust.
+7853* | copy | sts2 | Nightmare | Choose a card. Next turn, add 3 copies of that card into your Hand. Exhaust.
+7854* | copy | sts2 | Dual Wield+ | Choose an Attack or Power card. Add 2 copies of that card into your Hand.
+6023* | cost_reduction | sts2 | Pinpoint | Deal 15 damage. Costs 1 less energy for each Skill played this turn.
+6024* | cost_reduction | sts2 | Stomp | Deal 12 damage to ALL enemies. Costs 1 less energy for each Attack played this turn.
+6025* | cost_reduction | sts2 | Midnight | Deal 60 damage. Costs 1 less energy for each card Exhausted this combat by ANYONE.
+7960 | cost_reduction | sts2 | Rocket Punch | Deal 13 damage. Draw 1 card. Whenever you create a Status, reduce this card's cost to 0 energy until played.
+7961 | cost_reduction | sts2 | Up My Sleeve | Add 3 Shivs into your Hand. Reduce this card's cost by 1.
+7962 | cost_reduction | sts2 | Enlightenment+ | Reduce the cost of ALL cards in your Hand to 1 this combat. Exhaust.
+166 | damage | sts2 | Echoing Slash | Deal 10 damage to ALL enemies. Repeat this effect for each enemy killed.
+167 | damage | sts2 | Kusarigama | Every time you play 3 Attacks in a single turn, deal 6 damage to a random enemy.
+168 | damage | sts2 | The Bomb | At the end of 3 turns, deal 40 damage to ALL enemies.
+169 | damage | sts2 | Panache | If you play 5 cards this turn, deal damage to ALL enemies.
+170 | damage | sts2 | Hang | All Hangs deal 2 times more damage to this enemy.
+171 | damage | sts2 | Crush Under | Deal 7 damage to ALL enemies. All enemies lose 1 Strength this turn.
+172 | damage | sts2 | Meteor Shower | Deal 14 damage to ALL enemies. Apply 2 Weak and Vulnerable to ALL enemies.
+173 | damage | sts2 | Dying Star | Deal 9 damage to ALL enemies. ALL enemies lose 9 Strength this turn. Ethereal.
+174 | damage | sts2 | Thunder | Whenever you Evoke Lightning, deal 6 damage to each enemy hit.
+175 | damage | sts2 | Sweeping Gaze | Osty deals 10 damage to a random enemy. Ethereal. Exhaust.
+267 | damage | sts2 | Dismantle | Deal 8 damage. If the enemy is Vulnerable, hits twice.
+268 | damage | sts2 | Toxic | At the end of your turn, if this is in your Hand, take 5 damage. Exhaust.
+269 | damage | sts2 | Shrinker Beetle | Actions: Chomp (7 damage); Stomp (13 damage); Shrinker (debuff, power); Chomp (attack, 7 damage); Stomp (attack, 13 damage)
+270 | damage | sts2 | Living Fog | Actions: Advanced Gas (8 damage); Super Gas Blast (8 damage); Advanced Gas (attack, debuff, 8 damage, power); Bloat (attack, summon, 5 damage); Super Gas Blast (attack, 8 damage)
+271 | damage | sts2 | Fuzzy Wurm Crawler | Actions: First Acid Goop (attack, 4 damage); Acid Goop (attack, 4 damage); Inhale (buff)
+272 | damage | sts2 | Clash | Can only be played if every card in your Hand is an Attack. Deal 14 damage.
+273 | damage | sts2 | Hyperbeam | Deal 28 damage to ALL enemies. Lose 3 Focus.
+274 | damage | sts2 | Decay | At the end of your turn, if this is in your Hand, take 2 damage. Unplayable.
+275 | damage | sts2 | Strike | Deal 6 damage.
+276 | damage | sts2 | Frog Knight | Actions: Strike Down Evil (21 damage); Tongue Lash (13 damage); Beetle Charge (35 damage); For the Queen (buff, power); Strike Down Evil (attack, 21 damage); Tongue Lash (attack, debuff, 13 damage, power); Beetle Charge (attack, 35 damage)
+370 | damage | sts2 | Time's Up | Deal damage equal to the enemy's Doom. (Deals 0 damage) Exhaust.
+371* | damage | sts2 | Celestial Might | Deal 6 damage 3 times.
+372 | damage | sts2 | Dash | Gain 10 Block. Deal 10 damage.
+373 | damage | sts2 | Stomp | Deal 12 damage to ALL enemies. Costs 1 less energy for each Attack played this turn.
+374 | damage | sts2 | Knockdown+ | Deal 14 damage. The enemy takes triple damage from other players this turn.
+375 | damage | sts2 | Sic 'Em | Osty deals 5 damage. Whenever Osty hits this enemy this turn, Summon 3.
+376 | damage | sts2 | Solar Strike | Deal 9 damage. Gain star.
+377 | damage | sts2 | Parrying Shield | If you end a turn with at least 10 Block, deal 6 damage to a random enemy.
+1611 | damage | sts2 | Strike Dummy??? | Cards containing “Strike” deal 1 additional damage.
+1612 | damage | sts2 | Perfected Strike | Deal 6 damage. Deals 2 additional damage for ALL your cards containing “Strike”.
+1613 | damage | sts2 | Large Capsule | Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck.
+1614 | damage | sts2 | Amalgamator | Choices: Combine Defends: Remove 2 Defends. Add Ultimate Defend to your Deck. | Combine Strikes: Remove 2 Strikes. Add Ultimate Strike to your Deck.
+1615 | damage | sts2 | Ghost Seed | Strikes and Defends gain Ethereal.
+1616 | damage | sts2 | Strike Dummy | Cards containing “Strike” deal 3 additional damage.
+1617 | damage | sts2 | Leafy Poultice | Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose 12 Max HP.
+1618 | damage | sts2 | Fabricator | Actions: Fabricating Strike (18 damage); Disintegrate (11 damage); Fabricate (summon); Fabricating Strike (attack, summon, 18 damage); Disintegrate (attack, 11 damage); RAND ()
+1619 | damage | sts2 | Hellraiser | Whenever you draw a card containing “Strike”, it is played against a random enemy.
+4221* | damage | sts2 | Hang | Deal 10 damage. Double the damage ALL Hang cards deal to this enemy.
+4222* | damage | sts2 | Momentum | Increase this card's attack damage by X this combat when played.
+4223* | damage | sts2 | Gunk Up | Deal 4 damage 3 times. Add a Slimed into your Discard Pile.
+4224* | damage | sts2 | Omnislice | Deal 8 damage. Damage ALL other enemies equal to the damage dealt.
+4225* | damage | sts2 | Kingly Punch | Deal 8 damage. Whenever you draw this card, increase its damage by 4 this combat.
+4226* | damage | sts2 | Peck | Deal 2 damage 3 times.
+4227* | damage | sts2 | The Scythe | Deal 13 damage. Permanently increase this card's damage by 4. Exhaust.
+4228* | damage | sts2 | The Ball | Deal 10 damage. Increase this card's damage by 10 this combat and give it to a random ally.
+4229* | damage | sts2 | Rolling Boulder | At the start of your turn, deal 5 damage to ALL enemies and increase this damage by 5.

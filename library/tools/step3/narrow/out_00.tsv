@@ -1,0 +1,25 @@
+stat_gain|does|*|\+\d+/\+\d+	faeria,duelyst,hs_battlegrounds,shadowverse,hearthstone,mtg	keep
+random_effect|does|*|\broll	wh_aos_4th,wh_40k_10e	\b(?<!hit )(?<!wound )(?<!charge )(?<!advance )(?<!save )(?<!attack )(?<!defence )(?<!armour )(?<!casting )(?<!run )(?<!ward )(?<!chanting )(?<!unbinding )(?<!priority )(?<!charging )roll(?!s? made)(?!s of)(?!s? for)(?!s cannot)(?!ed)(?!s? that)
+random_effect|does|*|\broll	wh_bloodbowl3,wh_killteam	(?<!re-)\broll(?= (?:a |an |one |two |three |\d+ )?(?:d\d|dice|die|\d*d\d))
+random_effect|does|*|\broll	sts1,sts2,dnd5e,wh_underworlds	keep
+damage|does|*|\bdamage to\b	hs_battlegrounds,shadowverse,hearthstone,faeria	\bdamage to\b(?! (?:your|you\b|this|its|it\b|them\b|him\b|me\b|my\b))
+damage|does|*|\bdamage to\b	mtg	(?<!combat )\bdamage to\b(?! (?:your|you\b|this|its|it\b|them\b|him\b|me\b|my\b))
+damage|does|*|\bdamage to\b	wh_underworlds	(?<!combat )\bdamage to (?:target|any|each|up to|all|another|that)\b
+damage|does|*|\bdamage to\b	into_the_breach,inscryption,dnd5e,gwent,wh_killteam,runeterra	keep
+damage|does|*|\b\d+ damage\b	hs_battlegrounds,wh_underworlds,gwent,hearthstone,mtg,shadowverse,faeria,runeterra,dnd5e	(?<![+-])(?<!take )(?<!suffer )(?<!dealt )(?<!allocate )(?<!split )(?<!than )\b\d+ damage\b(?! points?)(?! to (?:your|you\b|this|its|it\b|them\b|me\b|my\b|that fighter|the attacker))
+damage|does|*|\b\d+ damage\b	into_the_breach,wh_killteam,wh_aos_4th	keep
+passive|does|*|\bwhile\b	shadowverse	(?:^|[.:;] )while\b
+passive|does|*|\bwhile\b	into_the_breach,inscryption,faeria,duelyst,sts1,dnd5e,sts2,gwent,hs_battlegrounds,wh_killteam,runeterra,wh_underworlds,wh_aos_4th,wh_40k_10e,hearthstone,mtg	keep
+temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	wh_40k_10e	(until|till) (the )?end of (the |your |this )?(turn|round)(?!, (?:this|that) (?:unit|model) (?:is not|cannot))
+temporary_effect|does|*|(until|till) (the )?end of (the |your |this )?(turn|round)	mtg	(?<!haste )(until|till) (the )?end of (the |your |this )?(turn|round)
+temporary_buff|does|*|(until|till) end of (turn|round)	mtg	(?<!haste )(until|till) end of (turn|round)
+temporary_buff|does|*|(until|till) end of (turn|round)	duelyst,hearthstone	(?<!minion )(?<!exists )(?<!attack )(?<!opponent.s )(until|till) end of (turn|round)
+graveyard|does|*|\bgraveyard	mtg	(?:cards?|creatures?|lands?|are|is|exile[^.:]{0,40}from|number of [^.]{0,30}in|in) (?:in |from )?(?:your|a|each|target player.s|an opponent.s|all|that player.s) graveyards?\b(?! to (?:your|the|its|their|his|that)\b)
+stacking_keyword|does|*|\bcounters? on\b	wh_underworlds	(?<!raise )\bcounters? on\b
+stacking_keyword|does|*|\bcounters? on\b	mtg	keep
+permanent_growth|does|*|\bevolve	shadowverse	\bevolve[^.]*\bgains? \+\d+/\+\d+
+permanent_growth|does|*|\bevolve	inscryption,gwent,runeterra	keep
+activated|does|wh_aos_4th|\btiming:	wh_aos_4th	keep
+movement|does|*|\bmoves?\b	wh_bloodbowl3,darkest_dungeon,faeria,wh_aos_4th	\b(?:can |may |must |to )moves?\b|\bmoves? (?:to|up to|into|toward|towards|self|\d)\b
+movement|does|*|\bmoves?\b	mtg	\bmoves?\b(?![^.]{0,50}counters?)
+movement|does|*|\bmoves?\b	into_the_breach,inscryption,duelyst,sts1,dnd5e,sts2,gwent,wh_killteam,runeterra,wh_underworlds,wh_40k_10e,hearthstone	keep

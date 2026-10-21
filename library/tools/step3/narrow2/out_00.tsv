@@ -1,0 +1,4 @@
+ranged|does|*|\bshoot	wh_killteam	keep
+permanent_growth|does|*|\blevels? up	runeterra	keep
+stacking_keyword|does|sts2|\b(\d+|x) (strength|poison|doom|plating|vigor|regen|ritual)\b	sts2	\b(\d+|x) (strength|poison|doom|plating|vigor|regen|ritual)\b(?=.*\b(every|for each|additional)\b)
+passive|does|*|\bpassive	wh_bloodbowl3	keep

@@ -1,0 +1,67 @@
+# definitions
+symmetric_effect | Both players alike | The effect touches both players the same way: each player draws. | Not: Only my side is the effect itself.
+taunt | Taunt (enemies must attack it) | Enemies must attack or target this unit before other units. | Not: Shielding one chosen ally is bodyguard.
+temporary_buff | Temporary bonus (this turn only) | A unit's bonus lasts only this turn, round or fight. | Not: A bonus that stays is stat_gain or permanent_growth.
+temporary_effect | This turn / round only | It lasts only this turn or round: a bonus, a penalty or a lock. | Not: Lasting changes are the effect itself.
+transform | Transform my card into another | The owner's own card or unit turns into a different one: evolve, flip, become. | Not: Turning an enemy into something weaker is polymorph.
+# questions: qid | concept | game | name | text
+8137 | symmetric_effect | hearthstone | Eldritch Tentacles | Deal 3 damage to all minions. Repeat this with 1 less damage.
+3107 | taunt | hearthstone | Boneguard Commander | Taunt Battlecry: Raise up to 6 Corpses as 1/3 Risen Footmen with Taunt.
+3108 | taunt | hearthstone | Golden Monkey | Taunt Battlecry: Replace your hand and deck with Legendary minions.
+3109 | taunt | hearthstone | Chromatus | Colossal +4 Taunt, Lifesteal, Elusive, Divine Shield
+3110 | taunt | hearthstone | Paragon of Light | While this minion has 3 or more Attack, it has Taunt and Lifesteal.
+3111 | taunt | hearthstone | Thing from Below | Taunt Costs (1) less for each Totem you've summoned this game.
+3112 | taunt | hearthstone | Dragon Golem | Taunt Battlecry: Summon a copy of this for each Dragon in your hand.
+3113 | taunt | hearthstone | Stone Sentinel | Battlecry: If you played an Elemental last turn, summon two 2/3 Elementals with Taunt.
+3114 | taunt | hearthstone | Sigil of Summoning | At the start of your next turn, summon two 2/2 Demons with Taunt.
+3115 | taunt | hearthstone | Toy Captain Tarim (created) | Mini Taunt. Battlecry: Set a minion's Attack and Health to this minion's.
+3116 | taunt | hearthstone | Hatchery Helper | Battlecry: Give your other minions with 2 or less Attack +1/+1 and Taunt.
+958* | temporary_buff | hearthstone | Hold the Bridge | Give a minion +2/+1 and Divine Shield. It gains Lifesteal until end of turn.
+959* | temporary_buff | hearthstone | Shadow Madness | Gain control of an enemy minion with 3 or less Attack until end of turn.
+960* | temporary_buff | hearthstone | Power Overwhelming | Give a friendly minion +4/+4 until end of turn. Then, it dies. Horribly.
+961* | temporary_buff | hearthstone | Mindrender Illucia | Battlecry: Replace your hand with a copy of your opponent's until end of turn.
+962* | temporary_buff | hearthstone | The Power of Love | Gain control of an enemy minion until end of turn.
+894* | temporary_effect | hearthstone | Hold the Bridge | Give a minion +2/+1 and Divine Shield. It gains Lifesteal until end of turn.
+895* | temporary_effect | hearthstone | Shadow Madness | Gain control of an enemy minion with 3 or less Attack until end of turn.
+896* | temporary_effect | hearthstone | Power Overwhelming | Give a friendly minion +4/+4 until end of turn. Then, it dies. Horribly.
+897* | temporary_effect | hearthstone | Mindrender Illucia | Battlecry: Replace your hand with a copy of your opponent's until end of turn.
+898* | temporary_effect | hearthstone | The Power of Love | Gain control of an enemy minion until end of turn.
+899* | temporary_effect | hearthstone | Amulet of Passions | Take control of an enemy minion until the end of your turn. (It has 1 Attack this turn!)
+900* | temporary_effect | hearthstone | Amulet of Passions (created) | Take control of an enemy minion until the end of your turn.
+3438 | temporary_effect | hearthstone | Ice Block | Secret: When your hero takes fatal damage, prevent it and become Immune this turn.
+3439 | temporary_effect | hearthstone | Inkmaster Solia | Battlecry: If your deck has no duplicates, the next spell you cast this turn costs (0).
+3440 | temporary_effect | hearthstone | Mana Addict | Whenever you cast a spell, gain +2 Attack this turn.
+3441 | temporary_effect | hearthstone | Counterfeit Coin | Gain 1 Mana Crystal this turn only.
+3442 | temporary_effect | hearthstone | Whirling Stormdrake | Rush, Windfury Kindred: Gain Immune this turn.
+3443 | temporary_effect | hearthstone | Gallywix's Coin | Gain 1 Mana Crystal this turn only. (Won't trigger Gallywix.)
+3444 | temporary_effect | hearthstone | Blessing of Authority | Give a minion +8/+8. It can't attack heroes this turn.
+3445 | temporary_effect | hearthstone | PMM Infinitizer | Battlecry: Set a friendly minion's Attack and Health to 8. It can't attack heroes this turn.
+3446 | temporary_effect | hearthstone | Theldurin the Lost | Battlecry: If your deck started with no duplicates, gain Immune this turn and attack all enemies.
+3447 | temporary_effect | hearthstone | Commanding Shout | Your minions can't be reduced below 1 Health this turn. Draw a card.
+4416* | temporary_effect | hearthstone | Cloak of Shadows | Give your hero Stealth until your next turn.
+4417* | temporary_effect | hearthstone | Smoke Bomb (created) | Give a minion Stealth until your next turn. Draw a card.
+4418* | temporary_effect | hearthstone | Vicious Slitherspear | After you cast a spell, gain +1 Attack until your next turn.
+4419* | temporary_effect | hearthstone | Conceal | Give your minions Stealth until your next turn.
+4420* | temporary_effect | hearthstone | Lazul's Scheme | Reduce the Attack of an enemy minion by until your next turn. (Upgrades each turn!)
+4421* | temporary_effect | hearthstone | Crater Gator | Battlecry: Until the start of your next turn, the enemy hero can't be healed.
+4422* | temporary_effect | hearthstone | Ancient Pterrordax | Battlecry: Choose to gain Stealth until your next turn, Elusive, or Windfury.
+4423* | temporary_effect | hearthstone | Sleep | Target minion can't attack until the start of your next turn.
+4424* | temporary_effect | hearthstone | Wave of Apathy | Set the Attack of all enemy minions to 1 until your next turn.
+4425* | temporary_effect | hearthstone | Grizzled Wizard | Battlecry: Swap Hero Powers with your opponent until your next turn.
+4727 | transform | hearthstone | Tribute Dance | Choose a minion. Choose a different minion to transform it into.
+4728 | transform | hearthstone | Devolve | Transform all enemy minions into random ones that cost (1) less.
+4729 | transform | hearthstone | Energy Shaper | Battlecry: Transform all spells in your hand into ones that cost (3) more. (They keep their original Cost.)
+4730 | transform | hearthstone | Mutate | Transform a friendly minion into a random one that costs (1) more.
+4731 | transform | hearthstone | Ancient Growth | Transform your Treants into 5/5 Ancients with Taunt.
+4732 | transform | hearthstone | Shadow Reflection | Each time you play a card, transform this into a copy of it.
+4733 | transform | hearthstone | Larva | Each turn this is in your hand, transform it into a random Zerg minion.
+4734 | transform | hearthstone | Battleworn Faceless | Battlecry: Transform into a copy of a damaged minion.
+4735 | transform | hearthstone | Desperate Bribe | Summon two 2-Cost minions for each player. Transform your minions into ones that cost (1) more.
+4736 | transform | hearthstone | Muck Pools | Transform a friendly minion into one that costs (1) more.
+6934* | transform | hearthstone | Dormant | Becomes a permanent that cannot act or be interacted with until a condition is met.
+6935* | transform | hearthstone | Forsaken Lieutenant | Stealth. After you play a Deathrattle minion, become a 2/2 copy of it with Rush.
+6936* | transform | hearthstone | Stonetalon Striker | Taunt (While in hand, play a Dragon to become a 6/6 Dragon!)
+6937* | transform | hearthstone | Ebyssian | Battlecry: Your Dragons have Rush this game. (While in hand, play a Dragon to become a 12/12 Dragon!)
+6938* | transform | hearthstone | Faceless Manipulator | Battlecry: Choose a minion and become a copy of it.
+6939* | transform | hearthstone | Creepy Painting | After another minion dies, become a copy of it.
+6940* | transform | hearthstone | Felsteel Executioner | Corrupt: Become a weapon.

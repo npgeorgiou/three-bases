@@ -1,0 +1,66 @@
+# definitions
+condition_count | Counts / thresholds | The effect needs or scales with a number: for each, N or more. | Not: Counts of past events this game are count_payoff.
+copy | Copy cards or units | A copy of a card, unit or effect is made for the owner. | Not: Doing a trigger again is repeat_trigger; a copy given to the opponent is enemy_benefit.
+cost_reduction | Cards cost less | The owner's cards cost less by an amount. | Not: A play that costs nothing at all is free_play; a cost set to a number is cost_set.
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+# questions: qid | concept | game | name | text
+1095 | condition_count | sts1 | Chill | Channel 1 Frost for each enemy in combat. Exhaust. Innate.
+1096 | condition_count | sts1 | Flechettes | Deal 4 damage for each Skill in your hand.
+1097 | condition_count | sts1 | Barrage | Deal 4 damage for each Channeled Orb.
+1098 | condition_count | sts1 | Fission | Remove all your Orbs. Gain energy and draw 1 card for each Orb removed. Exhaust.
+1099 | condition_count | sts1 | Second Wind | Exhaust all non-Attack cards in your hand. Gain 5 Block for each card Exhausted.
+1100 | condition_count | sts1 | Du-Vu Doll | For each Curse in your deck, start each combat with 1 Strength.
+1101 | condition_count | sts1 | Fission+ | Evoke all your Orbs. Gain energy and draw 1 card for each Orb Evoked. Exhaust.
+1102 | condition_count | sts1 | Essence Of Darkness | Channel 1 Dark for each orb slot.
+2203 | copy | sts1 | Dual Wield | Choose an Attack or Power card. Add a copy of that card into your hand.
+2204 | copy | sts1 | Endless Agony | Deal 4 damage. Whenever you draw this card, add a copy of it into your hand. Exhaust.
+7849* | copy | sts1 | Nightmare | Choose a card. Next turn, add 3 copies of that card into your hand. Exhaust.
+7850* | copy | sts1 | Colorless Potion | Choose 1 of 3 random Colorless cards to add to your hand, it costs 0 this turn.1Choose 1 of 3 random Colorless cards and add 2 copies to your hand, they cost 0 this turn.
+7851* | copy | sts1 | Power Potion | Choose 1 of 3 random Power cards to add to your hand, it costs 0 this turn.1Choose 1 of 3 random Power cards and add 2 copies to your hand, they cost 0 this turn.
+7852* | copy | sts1 | Skill Potion | Choose 1 of 3 random Skill cards to add to your hand, it costs 0 this turn.1Choose 1 of 3 random Skill cards and add 2 copies to your hand, they cost 0 this turn.
+7957 | cost_reduction | sts1 | Establishment | Whenever a card is Retained, reduce its cost by 1 this combat. Innate.
+7958 | cost_reduction | sts1 | Streamline | Deal 15 damage. Reduce this card's cost by 1 this combat.
+7959 | cost_reduction | sts1 | Enlightenment+ | Reduce the cost of all cards in your hand to 1 this combat.
+146 | damage | sts1 | Conclude | Deal 12 damage to ALL enemies. End your turn.
+147 | damage | sts1 | Charon's Ashes | Whenever you Exhaust a card, deal 3 damage to ALL enemies.
+148 | damage | sts1 | All-Out Attack | Deal 10 damage to ALL enemies. Discard 1 card at random.
+149 | damage | sts1 | Doom and Gloom | Deal 10 damage to ALL enemies. Channel 1 Dark.
+150 | damage | sts1 | Cleave | Deal 8 damage to ALL enemies.
+151 | damage | sts1 | Rip and Tear | Deal 7 damage to a random enemy twice.
+152 | damage | sts1 | Reaper | Deal 4 damage to ALL enemies. Heal HP equal to unblocked damage. Exhaust.
+153 | damage | sts1 | Omega | At the end of your turn, deal X damage to ALL enemies.
+154 | damage | sts1 | Hyperbeam | Deal 26 damage to ALL enemies. Lose 3 Focus.
+155 | damage | sts1 | Sword Boomerang | Deal 3 damage to a random enemy 3 times.
+255 | damage | sts1 | Consecrate | Deal 5 damage to ALL enemies.
+256 | damage | sts1 | Twin Strike | Deal 5 damage twice.
+257 | damage | sts1 | Writhing Mass | Actions: Big Hit (attack, 32 damage); Multi Hit (attack, 7 damage x3); Attack Block (attack defend, 15 damage); Attack Debuff (attack debuff, 10 damage); Mega Debuff (strong debuff)
+258 | damage | sts1 | Slime Boss | Actions: Slam (attack, 35 damage); Preparing (unknown); Split (unknown); Goop Spray (strong debuff)
+259 | damage | sts1 | Orb Walker | Actions: Laser (attack debuff, 10 damage); Claw (attack, 15 damage)
+260 | damage | sts1 | Brilliance | Deal 12 damage. Deals additional damage equal to Mantra gained this combat.
+261 | damage | sts1 | Flechettes | Deal 4 damage for each Skill in your hand.
+262 | damage | sts1 | Cold Snap | Deal 6 damage. Channel 1 Frost.
+263 | damage | sts1 | Strike | Deal 6 damage.
+264 | damage | sts1 | Searing Blow | Deal 12 damage. Can be Upgraded any number of times.
+360 | damage | sts1 | Sneaky Strike | Deal 12 damage. If you have discarded a card this turn, gain energy energy.
+361 | damage | sts1 | Bludgeon | Deal 32 damage.
+362 | damage | sts1 | Sever Soul | Exhaust all non-Attack cards in your hand. Deal 16 damage.
+363 | damage | sts1 | Wrist Blade | Attacks that cost 0 deal 4 additional damage.
+364 | damage | sts1 | Predator | Deal 15 damage. Next turn, draw 2 additional cards.
+1593 | damage | sts1 | Perfected Strike | Deal 6 damage. Deals 2 additional damage for ALL your cards containing "Strike".
+1594 | damage | sts1 | Strike Dummy | Cards containing Strike deal 3 additional damage.
+1595 | damage | sts1 | Lightning Mastery | Lightning strikes ALL enemies.
+1596 | damage | sts1 | Strike Up | Cards containing Strike deal X additional damage.
+1597 | damage | sts1 | Awakened One | Actions: Slash (attack, 20 damage); Soul Strike (attack, 6 damage x4); Rebirth (unknown); Dark Echo (attack, 40 damage); Sludge (attack debuff, 18 damage); Tackle (attack, 10 damage x3)
+1598 | damage | sts1 | Cultist | Actions: Dark Strike (attack, 6 damage); Incantation (buff)
+1599 | damage | sts1 | Ancient Writing | Choices: Remove a card from your deck. | Upgrade all Strikes and Defends.
+1600 | damage | sts1 | Vampires(?) | Choices: Remove all Strikes. Receive 5 Bites. Lose 30% Max HP. | 
+4199 | damage | sts1 | Riddle with Holes | Deal 3 damage 5 times.
+4200 | damage | sts1 | Tantrum | Deal 3 damage 3 times. Enter Wrath. Shuffle this card into your draw pile.
+4201 | damage | sts1 | Strength | Increases attack damage by X.
+4598 | damage | sts1 | Bloodletting | Lose 3 HP. Gain energy energy.
+4599 | damage | sts1 | Brutality | At the start of your turn, lose 1 HP and draw 1 card. Innate.
+4600 | damage | sts1 | Choke | Deal 12 damage. Whenever you play a card this turn, the enemy loses 3 HP.
+4601 | damage | sts1 | Offering | Lose 6 HP. Gain energy energy. Draw 3 cards. Exhaust.
+4602 | damage | sts1 | Combust | At the end of your turn, lose 1 HP and deal X damage to ALL enemies.
+4603 | damage | sts1 | Cursed Tome | Choices:  | Lose 1 HP. | Lose 2 HP. | Lose 3 HP. | Lose 3 HP. | Obtain the Book. Lose HP.
+4604 | damage | sts1 | Brutality+ | Innate. At the start of your turn, lose 1 HP and draw 1 card.

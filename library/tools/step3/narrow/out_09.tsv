@@ -1,0 +1,21 @@
+stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_40k_10e	subtract \d from .{0,25}(hit|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this|visible|those))
+stat_loss|does|*|subtract \d from .{0,25}(hit|wound|save|charge) rolls?(?![^.]{0,40}\b(attacks?|shooting attacks?) (that|which|made against|against) (target |targets )?(this|the bearer|them|it|that|friendly|models? in this|units? in this))	wh_aos_4th	keep
+stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	wh_killteam,gwent	(?<!, )(?<!of )\bboost (self|a(?=n? )(?!n enemy)|an(?! enemy)|all|it|them|each|\d|by|allied|adjacent|the)
+stat_gain|does|*|\bboost (self|a|an|all|it|them|each|\d|by|allied|adjacent|the)	runeterra,darkest_dungeon	keep
+evasion|counters|*|(?<!you )(?<!to )(?<!can )(?<!they )(?<!it )\breach\b(?! (tier|level|rank|\d|zero|full|max|the|a|an|your|their|in|into|out|deeper|for|over|inside)\b)	dnd5e,wh_aos_4th,mtg	(?!)
+piercing|does|wh_aos_4th|\brend\b	wh_aos_4th	(?<!subtract 1 from the )(?<!subtract 1 from )\brend\b
+disable|does|*|\bstun	wh_bloodbowl3,inscryption,wh_aos_4th	(?!)
+disable|does|*|\bstun	darkest_dungeon	(?<=effects: )stun|(?<=; )stun(?! chance)
+disable|does|*|\bstun	duelyst,runeterra,dnd5e,wh_killteam	keep
+shop_gold|does|*|\btavern\b	hs_battlegrounds	\btavern\b(?= spell you buy)|(?<=in the )\btavern\b(?= cost)
+once_per_game|does|*|once per (game|battle|match|run)	wh_40k_10e	once per (game|battle(?! round)|match|run)
+once_per_game|does|*|once per (game|battle|match|run)	inscryption	(?!)
+once_per_game|does|wh_40k_10e|\bonce per (battle|game)\b	wh_40k_10e	once per (battle(?! round)|game)\b
+advantage|does|wh_aos_4th|\bre-?roll|\bcrit \((2 hits|auto-wound)\)	wh_aos_4th	keep
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	into_the_breach	(?!)
+stat_gain|does|*|\+\d+(\.\d+)? (accuracy|damage|dodge|speed|protection|crit|max hp)	duelyst,wh_killteam,wh_underworlds,wh_aos_4th,shadowverse	keep
+rows|does|*|\brows?\b	into_the_breach,inscryption,hearthstone,dnd5e	(?!)
+rows|does|*|\brows?\b	gwent,duelyst	keep
+upgrade|does|*|\bupgrade	into_the_breach	(?<!no )\bupgrade(?!s?: [^.]{0,40}has no upgrades)
+upgrade|does|*|\bupgrade	wh_underworlds,wh_killteam	(?!)
+upgrade|does|*|\bupgrade	hs_battlegrounds,inscryption,dnd5e,runeterra	keep

@@ -1,0 +1,68 @@
+# definitions
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+death_count | Counts deaths | The effect counts or scales with how many units died. | Not: A single death trigger is death_trigger.
+death_trigger | When it dies (deathrattle) | Effects when a unit dies or is destroyed. | Not: Counting deaths is death_count.
+delayed | Delayed / countdown | The effect happens later: next turn, after N turns, countdowns. | Not: A set turn number is turn_number.
+destroy | Destroy outright | A unit is destroyed or killed regardless of its health. | Not: Killing by damage is damage; destroying my own unit for value is sacrifice.
+discard | Discard my own cards | The owner discards cards from their own hand, as a cost or to fuel effects. | Not: Making the opponent discard is hand_disruption.
+# questions: qid | concept | game | name | text
+7445 | damage | hs_battlegrounds | Imp Gang Boss | Whenever this minion takes damage, summon a 1/1 Imp.
+7603* | damage | hs_battlegrounds | Obsidian Ravager | Rally: Deal damage equal to this minion's Attack to the target and an adjacent minion.
+7604* | damage | hs_battlegrounds | Niuzao | Rally: Deal damage equal to this minion's Attack to a random enemy minion other than the target.
+7605* | damage | hs_battlegrounds | Baneling | Deathrattle: Deal damage equal to this minion's Attack to a random enemy minion. (Morphs each turn!)X[x]Deathrattle: Deal damage equal to this minion's Attack to a random enemy minion.
+7606* | damage | hs_battlegrounds | De-volition-ist | After this attacks, deal damage equal to this minion's Attack to the highest- Health enemy minion.
+5310* | death_count | hs_battlegrounds | Flesheating Ghoul | Whenever a minion dies, gain +1 Attack.
+5311* | death_count | hs_battlegrounds | Blood Golem Sticker | Whenever a friendly Quilboar dies, summon a Golem with stats equal to its Blood Gems.
+5312* | death_count | hs_battlegrounds | The Eye of Dalaran | Whenever a friendly minion with no type dies, get a random Tavern spell.
+5313* | death_count | hs_battlegrounds | Timewarped Boar | Whenever every third friendly Timewarped Boar dies, get a random Golden Beast. (X left!)
+5314* | death_count | hs_battlegrounds | Timewarped Hyena | Whenever a friendly Beast dies, gain +X/+Y permanently.
+5315* | death_count | hs_battlegrounds | Snarky Portrait | Get 2 Snarky Sharks. Whenever a Fishbait dies, give your Beasts +X/+Y and improve this.
+5316* | death_count | hs_battlegrounds | Scavenging Hyena | Whenever a friendly Beast dies, gain +2/+1.
+2302 | death_trigger | hs_battlegrounds | Bone Drake | Deathrattle: Add a random Dragon to your hand.
+2303 | death_trigger | hs_battlegrounds | Timewarped Kil'rek | Taunt Deathrattle: Get a random Demon.
+2304 | death_trigger | hs_battlegrounds | Rabid Saurolisk | After you play a minion with Deathrattle, gain +1/+2.
+2305 | death_trigger | hs_battlegrounds | Wheeled Crewmate | Deathrattle: Reduce the Cost of upgrading your team's Taverns by (1).
+2306 | death_trigger | hs_battlegrounds | Rat Pack | Deathrattle: Summon a number of 1/1 Rats equal to this minion's Attack.
+2307 | death_trigger | hs_battlegrounds | Eternal Summoner | Reborn. Deathrattle: Summon 1 Eternal Knight.
+2308 | death_trigger | hs_battlegrounds | Indomitable Mount | Deathrattle: Summon a random Beast from Tiers 2, 3, and 4.
+2309 | death_trigger | hs_battlegrounds | Rylak Metalhead | Taunt Deathrattle: Trigger the Battlecry of an adjacent minion.
+2310 | death_trigger | hs_battlegrounds | Timewarped Scourfin | Taunt. Deathrattle: Give a random minion in your hand +X/+Y and summon it for this combat only.
+2311 | death_trigger | hs_battlegrounds | Kaboom Bot | Deathrattle: Deal X damage to a random enemy minion.XDeathrattle: Deal *X* damage to a random enemy minion.
+5279* | death_trigger | hs_battlegrounds | Avenge | Secret: When one of your minions dies, give a random friendly minion +3/+2.
+5280* | death_trigger | hs_battlegrounds | Redemption | Secret: When a friendly minion dies, return it to life with 1 Health.
+5281* | death_trigger | hs_battlegrounds | Better Redemption | Secret: When a friendly minion dies, return it to life with full Health and enchantments.
+2376 | delayed | hs_battlegrounds | The Golden Hammer | Spellcraft: Make a friendly minion Golden until next turn.
+2377 | delayed | hs_battlegrounds | Grace Farsail | Choose One - Gain 2 Gold next turn; or Gain 4 Gold in two turns.
+2378 | delayed | hs_battlegrounds | Glorious Gloopling | At the start of every 2 turns, get a plain copy of your teammate's highest-Tier minion (X turns left!) X[x]At the start of every 2 turns, get a plain copy of your teammate's highest-Tier minion (Next turn!)
+2379 | delayed | hs_battlegrounds | Private Investigator | Activate (X): Gain Y Gold next turn.
+2380 | delayed | hs_battlegrounds | Timewarped Busker | Battlecry and Deathrattle: Gain X Gold next turn.
+2381 | delayed | hs_battlegrounds | Undersea Mount | Give a minion +X/+Y. If it's a Naga, also give it Windfury until next turn.
+2382 | delayed | hs_battlegrounds | Deep Blue Crooner | Spellcraft: Give a minion +X/+Y until next turn. Improve your future Deep Blues.
+2383 | delayed | hs_battlegrounds | Alter Ego | Even-Tier minions in the Tavern have +7/+7. (Swaps to Odd next turn!)
+2384 | delayed | hs_battlegrounds | Shell Out | Choose a minion in the Tavern. Give its stats to a random friendly minion until next turn.
+2385 | delayed | hs_battlegrounds | Smart Savings | After you sell a minion, gain 1 Gold next turn.X[x]After you sell a minion, gain 1 Gold next turn. (X Gold saved.)
+1721* | destroy | hs_battlegrounds | Incorporeal Corporal | After this minion attacks, destroy it.
+1722* | destroy | hs_battlegrounds | Jailer Sticker | Spellcraft: Destroy a friendly Undead to get a random Undead.
+1723* | destroy | hs_battlegrounds | Rapid Reanimation | Choose a friendly minion. Start of Combat: Destroy it. When you have space, resummon an exact copy.
+1724* | destroy | hs_battlegrounds | Archlich Kel'Thuzad | At the end of your turn, destroy the Undead to the left of this and resummon an exact copy.
+1725* | destroy | hs_battlegrounds | Plaguerunner Portrait | Get a Plaguerunner. After you destroy a Plaguerunner outside combat, get a plain copy.
+1726* | destroy | hs_battlegrounds | Kel'Thuzad Portrait | Get an Archlich Kel'Thuzad. After you destroy a minion outside combat, give your minions +2/+2.
+1727* | destroy | hs_battlegrounds | Maw Caster Portrait | Get a Maw Caster. Whenever you destroy a minion outside combat, gain X Gold.
+1728* | destroy | hs_battlegrounds | Disguised Graverobber | Battlecry: Destroy a friendly Undead to get a plain copy of it.
+1729* | destroy | hs_battlegrounds | Stitched Salvager | Start of Combat: Destroy the minion to the left. Deathrattle: Summon an exact copy of it. (Except Stitched Salvager.)
+1730* | destroy | hs_battlegrounds | Maw Caster | Battlecry: Destroy a friendly Undead to Discover an Undead.
+7030* | destroy | hs_battlegrounds | Flesheating Ghoul | Whenever a minion dies, gain +1 Attack.
+7031* | destroy | hs_battlegrounds | Blood Golem Sticker | Whenever a friendly Quilboar dies, summon a Golem with stats equal to its Blood Gems.
+7032* | destroy | hs_battlegrounds | The Eye of Dalaran | Whenever a friendly minion with no type dies, get a random Tavern spell.
+7033* | destroy | hs_battlegrounds | Timewarped Boar | Whenever every third friendly Timewarped Boar dies, get a random Golden Beast. (X left!)
+7034* | destroy | hs_battlegrounds | Timewarped Hyena | Whenever a friendly Beast dies, gain +X/+Y permanently.
+7035* | destroy | hs_battlegrounds | Snarky Portrait | Get 2 Snarky Sharks. Whenever a Fishbait dies, give your Beasts +X/+Y and improve this.
+7036* | destroy | hs_battlegrounds | Scavenging Hyena | Whenever a friendly Beast dies, gain +2/+1.
+1853 | discard | hs_battlegrounds | Timewarped Bandit | At the start of your turn, discard a spell for this to play X Blood Gems on all your minions.
+1854 | discard | hs_battlegrounds | Incubate | Discard a card to get a random Aberration.
+1855 | discard | hs_battlegrounds | Sludge Portrait | Get a Sludge Corrosion. After you discard a spell, get a Sludge Corrosion.
+1856 | discard | hs_battlegrounds | Conductor Portrait | Get a Snarling Conductor. Whenever you discard a card, this plays a Blood Gem on all your minions.
+1857 | discard | hs_battlegrounds | Cutthroat K'Thir | Whenever you discard a card, give this and your Deity +X/+Y.
+1858 | discard | hs_battlegrounds | Tome of the Ancients | After you discard Y cards, your Tavern spells give an extra +Z/+Z this game. (X left!)
+1859 | discard | hs_battlegrounds | Abyssal Envoy | Activate (X): Discard a card to get a random Tavern spell.
+1860 | discard | hs_battlegrounds | Mysterious K'Thir | At the end of your turn, discard your Z left-most Tavern spells. Gain +X/+Y for each discarded.

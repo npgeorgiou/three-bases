@@ -1,0 +1,66 @@
+# definitions
+discard | Discard my own cards | The owner discards cards from their own hand, as a cost or to fuel effects. | Not: Making the opponent discard is hand_disruption.
+generate_cards | Create new cards | New cards that were not in the deck are put into hand or deck. | Not: Units made on the board are summon.
+hand_disruption | Attack the opponent's hand | Cards in the opponent's hand are discarded, taken, weakened, made dearer or looked at. | Not: Discarding my own cards is discard.
+in_hand_buff | Improve cards in hand or deck | Cards still in hand or deck get more power, a lower cost or better text before they are played. | Not: A discount on whatever is played this turn is cost_reduction.
+# questions: qid | concept | game | name | text
+1861 | discard | hs_battlegrounds | Brain Rotter | Activate (Z): Discard a card to give your Deity +X/+Y.
+1862 | discard | hs_battlegrounds | N'raqi Frostcaller | Activate (Z): Discard a card for your Tavern spells to give an extra +X/+Y this game.
+4631 | generate_cards | hs_battlegrounds | Treasure Hoard | On Turn 6, Discover a Golden Tier 4 minion. (X turns left!)X[x]On Turn 6, Discover a Golden Tier 4 minion. (Done!)
+4632 | generate_cards | hs_battlegrounds | Timewarped Ritual | Discover two Tier 7 minions.
+4633 | generate_cards | hs_battlegrounds | Procrastinate | Skip your first two turns, then Discover a minion from Tier 3 and Tier 4.
+4634 | generate_cards | hs_battlegrounds | King of Dragons | Discover a Dragon. Swaps type each turn.
+4635 | generate_cards | hs_battlegrounds | Ticket Collector | When you sell this, Discover a Darkmoon Prize from the next Tier.
+4636 | generate_cards | hs_battlegrounds | Reclaimed Souls | Discover a plain copy of a minion that died last combat. (Unlocks on Turn 3.)
+4637 | generate_cards | hs_battlegrounds | Clunker Junker | Battlecry: Choose a friendly Mech. Discover a Mech to Magnetize to it.
+4638 | generate_cards | hs_battlegrounds | Triple Reward | Discover a minion from Tier X.
+4639 | generate_cards | hs_battlegrounds | Hunting Tiger Shark | Battlecry: Discover a Beast.
+4640 | generate_cards | hs_battlegrounds | Battle Horn | Discover a Battlecry minion. Avenge (2): Trigger a friendly Battlecry.
+5799* | generate_cards | hs_battlegrounds | Dust for Prints | Quest: Add X cards to your hand.
+5800* | generate_cards | hs_battlegrounds | Bone Drake | Deathrattle: Add a random Dragon to your hand.
+5801* | generate_cards | hs_battlegrounds | Bone Baron | Deathrattle: Add two 1/1 Skeletons to your hand.
+5802* | generate_cards | hs_battlegrounds | Salty Hog | Whenever you add 3 cards to your hand, give your other minions +1/+1. (X left!)
+6258 | generate_cards | hs_battlegrounds | Azerite Portrait | Get a Living Azerite. Your Living Azerites also give stats to friendly Elementals.
+6259 | generate_cards | hs_battlegrounds | Timewarped Mothership | Avenge (X): Get a random Protoss minion.
+6260 | generate_cards | hs_battlegrounds | Consanguinity | Rally: Get 2 Blood Gems.
+6261 | generate_cards | hs_battlegrounds | Corrupted Coin Portrait | Get 2 Corrupted Coins.
+6262 | generate_cards | hs_battlegrounds | Imp-lusionist | Deathrattle: Get a Methodical Madness.
+6263 | generate_cards | hs_battlegrounds | Recruit a Trainee | Get a random Tier 1 minion.
+6264 | generate_cards | hs_battlegrounds | Deep Infusion | Gain "Deathrattle: Get 4 Blood Gems."
+6265 | generate_cards | hs_battlegrounds | Rivendare Portrait | Get a Titus Rivendare. Start of Combat: Double the Health of your Titus Rivendares.
+6266 | generate_cards | hs_battlegrounds | Spirit Drake | Avenge (X): Get a random Tavern spell.
+6267 | generate_cards | hs_battlegrounds | Locked-up Mutineer | Deathrattle: Get a Lockbox. If you already have one, it opens X turns sooner instead.
+6296 | generate_cards | hs_battlegrounds | Double-Headed Reward | The first time you buy a card each turn, get an extra copy of it.
+6297 | generate_cards | hs_battlegrounds | Egg of the Endtimes Portrait | Get an Egg of the Endtimes. At the start of every Y turns, repeat this. (X turns left!)
+6298 | generate_cards | hs_battlegrounds | Zesty Shaker | Once per turn, when a Spellcraft spell is played on this, get a new copy of it.
+6299 | generate_cards | hs_battlegrounds | Gem Rat | At the end of your turn, get a Gem Day.
+6300 | generate_cards | hs_battlegrounds | Mystic Sporebat | Deathrattle: Get a random Tavern spell.
+6301 | generate_cards | hs_battlegrounds | Timewarped Paleofin | At the end of your turn, get a Cloning Conch.
+6302 | generate_cards | hs_battlegrounds | Timewarped Copter | Divine Shield Avenge (X): Get a random Mech.
+6303 | generate_cards | hs_battlegrounds | Timewarped Kil'rek | Taunt Deathrattle: Get a random Demon.
+6304 | generate_cards | hs_battlegrounds | Writhing Tentacles | After you discard your first minion each turn, get a copy of it with double stats. (X left!)
+6305 | generate_cards | hs_battlegrounds | Greedy Snaketongue | Rally: Get a Tavern Coin.
+1945 | hand_disruption | hs_battlegrounds | Timewarped Bandit | At the start of your turn, discard a spell for this to play X Blood Gems on all your minions.
+1946 | hand_disruption | hs_battlegrounds | Incubate | Discard a card to get a random Aberration.
+1947 | hand_disruption | hs_battlegrounds | Sludge Portrait | Get a Sludge Corrosion. After you discard a spell, get a Sludge Corrosion.
+1948 | hand_disruption | hs_battlegrounds | Conductor Portrait | Get a Snarling Conductor. Whenever you discard a card, this plays a Blood Gem on all your minions.
+1949 | hand_disruption | hs_battlegrounds | Cutthroat K'Thir | Whenever you discard a card, give this and your Deity +X/+Y.
+1950 | hand_disruption | hs_battlegrounds | Tome of the Ancients | After you discard Y cards, your Tavern spells give an extra +Z/+Z this game. (X left!)
+1951 | hand_disruption | hs_battlegrounds | Abyssal Envoy | Activate (X): Discard a card to get a random Tavern spell.
+1952 | hand_disruption | hs_battlegrounds | Mysterious K'Thir | At the end of your turn, discard your Z left-most Tavern spells. Gain +X/+Y for each discarded.
+1953 | hand_disruption | hs_battlegrounds | Brain Rotter | Activate (Z): Discard a card to give your Deity +X/+Y.
+1954 | hand_disruption | hs_battlegrounds | N'raqi Frostcaller | Activate (Z): Discard a card for your Tavern spells to give an extra +X/+Y this game.
+8876 | in_hand_buff | hs_battlegrounds | Mrglin' Burglar | After you play a Murloc, give a friendly minion and a minion in your hand +X/+Y.
+8877 | in_hand_buff | hs_battlegrounds | Shamanic Tidecaller | Whenever you cast a spell on a Murloc, give Murlocs in your hand and board +X/+Y.
+8878* | in_hand_buff | hs_battlegrounds | Very Hungry Winterfinner | Taunt Whenever this takes damage, give a minion in your hand +2/+1.
+8879 | in_hand_buff | hs_battlegrounds | Bluegill Flippers | Whenever you cast a Tavern spell, give the left-most minion in your hand and warband +X/+Y.
+8880* | in_hand_buff | hs_battlegrounds | Murgl Mk II | Avenge (4): Give minions in your hand and board +1/+1 permanently.
+8881 | in_hand_buff | hs_battlegrounds | Timewarped Mrrrglr | Start of Combat: Give adjacent Murlocs the stats of all the minions in your hand.
+8882 | in_hand_buff | hs_battlegrounds | Timewarped Scourfin | Taunt. Deathrattle: Give a random minion in your hand +X/+Y and summon it for this combat only.
+8883 | in_hand_buff | hs_battlegrounds | Murkbrine Expeditioner | Taunt, Divine Shield After this gains stats, also give the stats to the left-most minion in your hand.
+8884 | in_hand_buff | hs_battlegrounds | Timewarped Elegist | At the end of your turn, give minions in your hand and board +X/+Y.
+8885 | in_hand_buff | hs_battlegrounds | Canopy Swinger | Battlecry: Give all other Murlocs in your hand and board +X Attack.
+8939* | in_hand_buff | hs_battlegrounds | Red Hand | At the start of each turn, give a minion in your hand +12/+12.
+8940* | in_hand_buff | hs_battlegrounds | Nerglish Phrasebook | After you play a minion, give the left-most minion in your hand +3/+3.
+8941* | in_hand_buff | hs_battlegrounds | Grimscale Elegist | At the end of your turn, give a friendly minion and a minion in your hand +1/+1.
+8942* | in_hand_buff | hs_battlegrounds | Titanic Guardian | Whenever a different minion in your hand or board gains Health, this also gains it.

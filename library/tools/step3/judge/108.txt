@@ -1,0 +1,67 @@
+# definitions
+draw | Draw cards | Cards are drawn from the owner's deck into hand. | Not: Searching the deck for a chosen kind of card is tutor; making a new card is generate_cards.
+exhaust | One use (exhausted for the battle) | A card is removed for the rest of the battle after use, or other cards of mine are. | Not: Removing a card from the game for good is banish.
+generate_cards | Create new cards | New cards that were not in the deck are put into hand or deck. | Not: Units made on the board are summon.
+hand_disruption | Attack the opponent's hand | Cards in the opponent's hand are discarded, taken, weakened, made dearer or looked at. | Not: Discarding my own cards is discard.
+heal | Restore health (heal) | Lost health of a unit, hero or player is restored. | Not: Preventing damage before it happens is protection.
+# questions: qid | concept | game | name | text
+470 | draw | sts2 | Reflex | Draw 2 cards. Sly.
+471 | draw | sts2 | Finesse | Gain 4 Block. Draw 1 card.
+472 | draw | sts2 | Hellraiser | Whenever you draw a card containing "Strike", it is played against a random enemy.
+473 | draw | sts2 | Ring of the Snake | At the start of each combat, draw 2 additional cards.
+474 | draw | sts2 | Glowwater Potion | Exhaust your Hand. Draw 10 cards.
+475 | draw | sts2 | Centennial Puzzle | The first time you lose HP each combat, draw 3 cards.
+476 | draw | sts2 | Minion Strike | Deal 6 damage. Draw 1 card. Exhaust.
+806 | draw | sts2 | Dagger Throw | Deal 9 damage. Draw 1 card. Discard 1 card.
+807 | draw | sts2 | Soul | Draw 2 cards. Exhaust.
+808 | draw | sts2 | Pagestorm | Whenever you draw an Ethereal card, draw 1 card.
+809 | draw | sts2 | Snecko Oil | Draw 7 cards. Randomize the cost of cards in your Hand this turn.
+810 | draw | sts2 | Pendulum | Every 3 turns, draw 1 card.
+811 | draw | sts2 | Burning Pact | Exhaust 1 card. Draw 2 cards.
+812 | draw | sts2 | Restlessness | If your Hand is empty, draw 2 cards and gain 2 energy. Retain.
+813 | draw | sts2 | Speedster+ | Innate. Whenever you draw a card during your turn, deal 2 damage to ALL enemies.
+5047 | draw | sts2 | Dark Embrace | Whenever a card is Exhausted, draw 1 card.
+5048 | draw | sts2 | Tyranny | At the start of your turn, draw 1 card and Exhaust 1 card from your Hand.
+5049 | draw | sts2 | Tools of the Trade | At the start of your turn, draw 1 card and discard 1 card.
+5050 | draw | sts2 | Glimmer | Draw 3 cards. Put 1 card from your Hand on top of your Draw Pile.
+5051 | draw | sts2 | Slimed | Draw 1 card. Exhaust.
+5052 | draw | sts2 | Rocket Punch | Deal 13 damage. Draw 1 card. Whenever you create a Status, reduce this card's cost to 0 energy until played.
+5053 | draw | sts2 | Skim | Draw 3 cards.
+5054 | draw | sts2 | Joss Paper | Every 5 times you Exhaust a card, draw 1 card.
+7517 | exhaust | sts2 | Decisions, Decisions | Draw 3 cards. Choose a Skill in your Hand and play it 3 times. Exhaust.
+7518 | exhaust | sts2 | Thinking Ahead | Draw 2 cards. Put 1 card from your Hand on top of your Draw Pile. Exhaust.
+7519 | exhaust | sts2 | Imitation Learning | Choose another player. The next 2 times they play a Power, you play a copy of it. Exhaust.
+7520 | exhaust | sts2 | Royal Gamble+ | Retain. Gain 9 stars. Exhaust.
+7521 | exhaust | sts2 | Blade Dance | Add 3 Shivs into your Hand. Exhaust.
+7522 | exhaust | sts2 | Fuel | Gain energy. Draw 1 card. Exhaust.
+7523 | exhaust | sts2 | Corruption | Skills cost 0 energy. Whenever you play a Skill, Exhaust it.
+7524 | exhaust | sts2 | Signal Boost | The next Power you play is played an additional time. Exhaust.
+7525 | exhaust | sts2 | Royal Gamble | Gain 9 star. Exhaust.
+7526 | exhaust | sts2 | Secret Technique | Put a Skill from your Draw Pile into your Hand. Exhaust.
+5789 | generate_cards | sts2 | Discovery | Choose 1 of 3 random cards to add into your Hand. It's free to play this turn. Exhaust.
+5790 | generate_cards | sts2 | Toolbox | At the start of each combat, choose 1 of 3 random Colorless cards and add the chosen card into your Hand.
+5791 | generate_cards | sts2 | Infinite Blades+ | Innate. At the start of your turn, add 1 Shiv into your Hand.
+5792 | generate_cards | sts2 | Withering Presence | Every 6 cards you play, add a Wither to your Hand.
+5793 | generate_cards | sts2 | Creative AI | At the start of your turn, add a random Power into your Hand.
+5794 | generate_cards | sts2 | Call of the Void | At the start of your turn, add 1 random card into your Hand. It gains Ethereal.
+5795 | generate_cards | sts2 | Jack of All Trades | Add 1 random Colorless card into your Hand. Exhaust.
+5796 | generate_cards | sts2 | Crossbow | At the start of your turn, add a random Attack into your Hand. It's free to play this turn.
+5797 | generate_cards | sts2 | Hello World+ | Innate. At the start of your turn, add a random Common card into your Hand.
+1933 | hand_disruption | sts2 | Acrobatics | Draw 3 cards. Discard 1 card.
+1934 | hand_disruption | sts2 | Calculated Gamble | Discard your Hand, then draw that many cards. Exhaust.
+1935 | hand_disruption | sts2 | Dagger Throw | Deal 9 damage. Draw 1 card. Discard 1 card.
+1936 | hand_disruption | sts2 | Hidden Daggers | Discard 2 cards. Add 2 Shivs into your Hand.
+1937 | hand_disruption | sts2 | Prepared | Draw 1 card. Discard 1 card.
+1938 | hand_disruption | sts2 | Storm of Steel | Discard your Hand. Add 1 Shiv into your Hand for each card discarded.
+1939 | hand_disruption | sts2 | Runic Pyramid | At the end of your turn, you no longer discard your Hand.
+1940 | hand_disruption | sts2 | Tingsha | Whenever you discard a card during your turn, deal 3 damage to a random enemy for each card discarded.
+1941 | hand_disruption | sts2 | Gambler's Brew | Discard any number of cards, then draw that many.
+1942 | hand_disruption | sts2 | Tools of the Trade | At the start of your turn, draw 1 card and discard 1 card.
+3491 | heal | sts2 | Blood Vial | At the start of each combat, heal 2 HP.
+3492 | heal | sts2 | Spiraling Whirlpool | Choices: Drink: Heal 33% of Max HP. | Observe: Enchant a Basic Strike or Defend with Spiral. | Reach In: Obtain a random Relic. Add Writhe to your Deck.
+3493 | heal | sts2 | Black Blood | At the end of combat, heal 12 HP.
+3494 | heal | sts2 | Eternal Feather | For every 5 cards in your Deck, heal 3 HP whenever you enter a Rest Site.
+3495 | heal | sts2 | Spirit Grafter | Choices: Let It In: Heal 25 HP. Add Metamorphosis to your Deck. | Rejection: Lose 10 HP. Upgrade a card.
+3496 | heal | sts2 | Book of Five Rings | Every 5 cards you add to your Deck, heal 20 HP.
+3497 | heal | sts2 | Planisphere | Whenever you enter a ? room, heal 5 HP.
+3498 | heal | sts2 | Pantograph | At the start of each Boss combat, heal 25 HP.

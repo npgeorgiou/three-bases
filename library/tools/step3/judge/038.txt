@@ -1,0 +1,67 @@
+# definitions
+information | Hidden and revealed information | Hidden and revealed information: face-down cards, looking at the opponent's hand. | Not: Hidden units are stealth.
+lifesteal | Lifesteal / drain | Damage dealt also heals its source or its owner. | Not: Healing not tied to damage dealt is heal.
+modal_choice | Choose one of several effects | The card offers several effects and the owner picks one or more. | Not: Switching a unit between lasting forms is stances.
+movement | Move my units (reposition) | The owner moves their own unit to another space, row, lane or location. | Not: Moving enemy units is forced_movement.
+on_ally_play | When I play another card | Triggers when the owner plays or summons another card or unit. | Not: When this card is played is on_play.
+# questions: qid | concept | game | name | text
+2888* | information | hearthstone | Crossroads Gossiper | After a friendly Secret is revealed, gain +2/+2.
+2889* | information | hearthstone | Deadly Arsenal | Reveal a weapon from your deck. Deal its Attack to all minions.
+2890* | information | hearthstone | Raven Familiar | Battlecry: Reveal a spell in each deck. If yours costs more, draw it.
+2891* | information | hearthstone | Spire Security | Battlecry: Reveal a spell in your deck. If it costs (5) or more, deal 5 damage split among enemy minions.
+2892* | information | hearthstone | Conqueror's Banner | Reveal a card from each player's deck, three times. Draw any of yours that cost more.
+5901* | information | hearthstone | Sphere of Sapience | At the start of your turn, look at your top card. You can put it on the bottom and lose 1 Durability.
+5902* | information | hearthstone | Envoy of Lazul | Battlecry: Look at 3 cards. Guess which one is in your opponent's hand to get a copy of it.
+5903* | information | hearthstone | Faceless Enigma | Battlecry: Look at 2 random Secrets. Pick one to cast for yourself. The other casts for your opponent.
+5904* | information | hearthstone | Sightless Watcher | Battlecry: Look at 3 cards in your deck. Choose one to put on top.
+5905* | information | hearthstone | Futuristic Forefather | Taunt. Battlecry: Look at 3 cards. Guess which one is in your opponent's hand to gain +4 Health.
+5906* | information | hearthstone | Chamber of Viscidus | Look at 3 cards in your hand and choose one to discard. Draw two cards.
+5907* | information | hearthstone | Fracking | Look at the bottom 3 cards of your deck. Draw one and destroy the others.
+5908* | information | hearthstone | Jade Telegram | Look at 3 cards in your opponent's hand and shuffle one of them into their deck. Summon a Jade Golem.[x]Look at 3 cards in your opponent's hand and shuffle one of them into their deck. Summon a Jade Golem.
+5909* | information | hearthstone | Royal Informant | Battlecry: Look at the right- most card in your opponent's hand. Either get a copy of it or increase its Cost by (2).
+5910* | information | hearthstone | Ancient Augur | Battlecry: Look at 3 cards in your opponent's hand and secretly choose one. Deathrattle: Discard it.
+8568 | lifesteal | hearthstone | Lesser Amethyst Spellstone | Lifesteal. Deal 3 damage to a minion. (Take damage from your cards to upgrade.)
+8569 | lifesteal | hearthstone | Liferoot | +1/+1 and Lifesteal
+8570 | lifesteal | hearthstone | Tidal Wave | Lifesteal Deal 3 damage to all minions.
+8571 | lifesteal | hearthstone | The Azerite Rat | Battlecry: Resurrect your highest Cost minion. Give it +2/+2, Reborn, and Lifesteal.
+8572 | lifesteal | hearthstone | Chromatus | Colossal +4 Taunt, Lifesteal, Elusive, Divine Shield
+8573 | lifesteal | hearthstone | Audio Medic | Rush Finale: Gain Lifesteal.
+8574 | lifesteal | hearthstone | Frost Lich Jaina | Battlecry: Summon a 3/6 Water Elemental. Your Elementals have Lifesteal this game.
+8575 | lifesteal | hearthstone | Blackwater Behemoth | Colossal +1 Lifesteal
+8576 | lifesteal | hearthstone | Motherlode Drake | Rush Divine Shield Lifesteal
+8577 | lifesteal | hearthstone | Gladesong Siren | Lifesteal Costs (1) if you've cast a Holy and Shadow spell this turn.
+4138 | modal_choice | hearthstone | Raven Idol | Choose One - Discover a minion; or Discover a spell.
+4139 | modal_choice | hearthstone | Oasis Surger | Rush Choose One - Gain +2/+2; or Summon a copy of this minion.
+4140 | modal_choice | hearthstone | Kun the Forgotten King | Choose One - Gain 10 Armor; or Refresh your Mana Crystals.
+4141 | modal_choice | hearthstone | Lightmender | Taunt. Choose One - +3 Attack and Divine Shield; or +3 Health and Lifesteal.
+4142 | modal_choice | hearthstone | Cenarius | Choose One - Give your other minions +2/+2; or Summon two 2/2 Treants with Taunt.
+4143 | modal_choice | hearthstone | Runic Carvings | Choose One - Summon four 2/2 Treant Totems; or Overload: (2) to summon them with Rush.
+4144 | modal_choice | hearthstone | Starfall | Choose One - Deal 5 damage to a minion; or 2 damage to all enemy minions.
+4145 | modal_choice | hearthstone | Scourge Supplies | Draw 3 cards. Choose one to discard.
+4146 | modal_choice | hearthstone | Powershifting | Choose One - Replace your hero with Cat Form or Bear Form for 2 turns.
+4147 | modal_choice | hearthstone | Uluu, the Everdrifter | Each turn this is in your hand, gain two random Choose One choices.Choose One - ; or .
+6208 | modal_choice | hearthstone | Boomkin | Choose One - Restore 8 Health to your hero; or Deal 4 damage.
+6209 | modal_choice | hearthstone | Nourish | Choose One - Gain 2 Mana Crystals; or Draw 3 cards.
+6210 | modal_choice | hearthstone | Morbid Swarm | Choose One - Summon two 1/1 Ants; or Spend 2 Corpses to deal 4 damage to a minion.
+6211 | modal_choice | hearthstone | Ancient of Lore | Choose One - Draw 2 cards; or Restore 7 Health.
+6212 | modal_choice | hearthstone | Shellshifter | Choose One - Transform into a 5/3 with Stealth; or a 3/5 with Taunt.
+6213 | modal_choice | hearthstone | Wardruid Loti | Choose One - Transform into one of Loti's four dinosaur forms.
+6214 | modal_choice | hearthstone | Lifebinder's Gift | Choose One - Get 2 random Nature spells; or Reduce the Cost of spells in your hand by (1).
+6215 | modal_choice | hearthstone | Malfurion the Pestilent | Choose One - Summon 2 Poisonous Spiders; or 2 Scarabs with Taunt.
+1405* | movement | hearthstone | Corrupt Constable | Battlecry: If the enemy deck has any Imp-formants, move one to the top and give it +2/+2.
+1406* | movement | hearthstone | Kologarn | Rush. Whenever this attacks a minion, put it in your hand. Deathrattle: Move any in your hand to your opponent's.
+7108 | movement | hearthstone | Left Hand With Kurtrus | Taunt Deathrattle: Free Kurtrus and advance fight.
+7109 | movement | hearthstone | Spirit of Water | Immune to Frost spells. At the start of your turn, restore 1 Health to itself. Deathrattle: Advance fight and restore 15 Health to Thrall.
+7110 | movement | hearthstone | Present Gnomeregan | Give a minion +2/+1 and "Deathrattle: Deal 2 damage to the enemy hero." Advance to the future!
+7111 | movement | hearthstone | Silivaz | At the end of your turn, gain +1 Attack. Must be killed with Pashmar. Deathrattle: Advance fight.
+7112 | movement | hearthstone | Radiance of Azshara (created) | Elusive At the end of your turn, deal 1 damage to all enemy minions. Deathrattle: Advance fight.
+7113 | movement | hearthstone | Past Silvermoon | Deal 5 damage to a random enemy minion. Advance to the present!
+7114 | movement | hearthstone | Jaina Proudmoore | Battlecry: Summon a 3/6 Water Elemental. Deathrattle: Advance fight.
+7115 | movement | hearthstone | Bubbling Fissure | Can't attack. Deathrattle: Advance fight.
+7116 | movement | hearthstone | Spirit of Earth | Taunt Deathrattle: Advance fight and restore 15 Health to Thrall.
+7117 | movement | hearthstone | Ogre Brute | Taunt Deathrattle: Advance fight. 50% chance to attack the wrong enemy.
+5545 | on_ally_play | hearthstone | Twisted Webweaver | Whenever you play another minion you've already played, draw a card.
+5546 | on_ally_play | hearthstone | Spirit of the Lynx | Stealth for 1 turn. Whenever you summon a Beast, give it +1/+1.
+5547 | on_ally_play | hearthstone | Murgatha | Whenever you play a card, Overload one of your opponent's Mana Crystals.
+5548 | on_ally_play | hearthstone | Lt. Lewis | Your hero is Immune. Whenever you play a minion it gains Stealth.
+5549 | on_ally_play | hearthstone | Illidan Stormrage | Whenever you play a card, summon a 2/1 Flame of Azzinoth.

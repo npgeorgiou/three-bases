@@ -1,0 +1,66 @@
+# definitions
+stat_multiply | Double or multiply stats | A stat or a total is doubled, tripled or multiplied. | Not: Adding a fixed amount is stat_gain.
+stealth | Stealth / hidden until it acts | The unit can't be seen, targeted or attacked until it acts or a condition ends. | Not: Untargetable for good is immunity.
+summon | Summon units / tokens | New units are put onto the owner's side of the board. | Not: Units put on the opponent's side are board_clog; units back from death are revive.
+symmetric_effect | Both players alike | The effect touches both players the same way: each player draws. | Not: Only my side is the effect itself.
+# questions: qid | concept | game | name | text
+8624 | stat_multiply | hearthstone | Prophet Velen | Double the damage and healing of your spells and Hero Power.
+8625 | stat_multiply | hearthstone | Soldier of the Bronze | Taunt Battlecry: Double this minion's Health.
+8626 | stat_multiply | hearthstone | No Mercy | Double your weapon's Attack for this turn.
+8627 | stat_multiply | hearthstone | Massive Runeblade | Deals double damage to heroes.
+8628 | stat_multiply | hearthstone | Potion of Vitality | Passive Double your starting Health.
+8629 | stat_multiply | hearthstone | Therazane | Taunt Deathrattle: Double the stats of all Elementals in your hand and deck.
+8630 | stat_multiply | hearthstone | Gahz'rilla | Whenever this minion takes damage, double its Attack.
+8631 | stat_multiply | hearthstone | Goldrinn | Rush Friendly Beasts deal double damage.
+8632 | stat_multiply | hearthstone | Immortal | Taunt, Divine Shield Battlecry: Spend 4 Mana to double this minion's stats.
+8633 | stat_multiply | hearthstone | Hallucination | Summon a copy of a friendly Protoss minion. It takes double damage.
+7399 | stealth | hearthstone | Sticky Situation | Secret: After your opponent casts a spell, summon a 3/4 Spider with Stealth.
+7400 | stealth | hearthstone | SI:7 Slayer | Stealth. Whenever a friendly Stealthed minion attacks, give it +2/+2.
+7401 | stealth | hearthstone | Ancient Pterrordax | Battlecry: Choose to gain Stealth until your next turn, Elusive, or Windfury.
+7402 | stealth | hearthstone | Mini-Mage | Stealth Spell Damage +1
+7403 | stealth | hearthstone | Stranglethorn Tiger | Stealth
+7404 | stealth | hearthstone | Tortollan Ninja | Summoned When Drawn Stealth
+7405 | stealth | hearthstone | Shellshifter (created) | Stealth Taunt
+7406 | stealth | hearthstone | Gnomish Army Knife | Give a minion Charge, Windfury, Divine Shield, Lifesteal, Poisonous, Taunt, and Stealth.
+7407 | stealth | hearthstone | Moroes | Stealth At the end of your turn, summon a 1/1 Steward.
+7408 | stealth | hearthstone | Lotus Assassin | Stealth. Whenever this attacks and kills a minion, gain Stealth.
+1048 | summon | hearthstone | Dimensional Ripper | Summon 2 copies of a minion in your deck.
+1049 | summon | hearthstone | Karl the Lost | Battlecry: Summon six 1/1 Silver Hand Recruits and give all friendly minions Taunt and Divine Shield.
+1050 | summon | hearthstone | Captain Crowley | Your Cannoneers fire an additional shot. Battlecry: Summon two 1/1 Cannoneers.
+1051 | summon | hearthstone | Overgrown Beanstalk | Summon a 2/2 Treant. Draw a card for each Treant you control.
+1052 | summon | hearthstone | Lady Darkvein | Battlecry: Summon two 2/1 Shades. Each gains a Deathrattle to cast your last Shadow spell.
+1053 | summon | hearthstone | Reverberating Ooze | After this minion survives damage, summon a copy of this minion.
+1054 | summon | hearthstone | Tonic of Tyranny | Summon a Voidlord.
+1055 | summon | hearthstone | Summon a Panther | Summon a 3/2 Panther.
+1056 | summon | hearthstone | King Phaoris | Battlecry: For each spell in your hand, summon a random minion of the same Cost.
+1057 | summon | hearthstone | Airlock Breach | Summon a 5/5 Undead with Taunt and give your hero +5 Health. Spend 5 Corpses to do it again.
+5585* | summon | hearthstone | Professor Putricide | After you play a Secret, put a random Hunter Secret into the battlefield.
+5586* | summon | hearthstone | Mysterious Rune | Put 5 random Mage Secrets into the battlefield.
+5587* | summon | hearthstone | Voidcaller | Deathrattle: Put a random Demon from your hand into the battlefield.
+5588* | summon | hearthstone | Arcane Keysmith | Battlecry: Discover a Secret. Put it into the battlefield.
+5589* | summon | hearthstone | Eye of Hakkar | Take a secret from your opponent's deck and put it into the battlefield.
+5590* | summon | hearthstone | Deathwing, Dragonlord | Deathrattle: Put all Dragons from your hand into the battlefield.
+5591* | summon | hearthstone | Y'Shaarj, Rage Unbound | At the end of your turn, put a minion from your deck into the battlefield.
+5592* | summon | hearthstone | Mad Scientist | Deathrattle: Put a Secret from your deck into the battlefield.
+5593* | summon | hearthstone | Bellringer Sentry | Battlecry and Deathrattle: Put a Secret from your deck into the battlefield.
+5594* | summon | hearthstone | Halazzi's Trap | Shrine After you cast a spell, put a random Hunter Secret into the battlefield.
+6733* | summon | hearthstone | Selfish Shellfish (created) | Deathrattle: Your opponent draws 2 cards. Spawn a surprise.
+3637 | symmetric_effect | hearthstone | Banana Vendor | Battlecry: Add 2 Bananas to each player's hand.
+3638 | symmetric_effect | hearthstone | Surging Inspiration | Both players start with upgraded Hero Powers.
+3639 | symmetric_effect | hearthstone | Warmaster Blackhorn | Battlecry: Destroy all cards that cost (2) or less in both players' decks.
+3640 | symmetric_effect | hearthstone | Mechanical Yeti | Deathrattle: Give each player a Spare Part.
+3641 | symmetric_effect | hearthstone | Duel! | Summon a minion from each player's deck. They fight!
+3642 | symmetric_effect | hearthstone | Khadgar's Pipe | Put a random spell into each player's hand. Yours costs (0).
+3643 | symmetric_effect | hearthstone | Arcanotron | Both players have Spell Damage +2.
+3644 | symmetric_effect | hearthstone | Chaos Theory | Both players cast all spells in their hand (targets chosen randomly).
+3645 | symmetric_effect | hearthstone | Gift of Gluttony | Both players start with two more drawn cards.
+3646 | symmetric_effect | hearthstone | Fishflinger | Battlecry: Add a random Murloc to each player's hand.
+8128 | symmetric_effect | hearthstone | Anomalus | Deathrattle: Deal 8 damage to all minions.
+8129 | symmetric_effect | hearthstone | Bladestorm | Deal 1 damage to all minions. Repeat until one dies.
+8130 | symmetric_effect | hearthstone | Black Hole | Destroy all minions except Demons.
+8131 | symmetric_effect | hearthstone | Shadow Word: Ruin | Destroy all minions with 5 or more Attack.
+8132 | symmetric_effect | hearthstone | Awoken Darkness | Deal 2 damage to all minions.
+8133 | symmetric_effect | hearthstone | Risky Skipper | After you play a minion, deal 1 damage to all minions.
+8134 | symmetric_effect | hearthstone | Big Boomba | Destroy ALL minions. Do it again at the start of your next turn.
+8135 | symmetric_effect | hearthstone | Caustic Fumes | Destroy an enemy minion. Kindred: Deal 2 damage to all minions.
+8136 | symmetric_effect | hearthstone | Sheep Mask | Set a minion's stats to 1/1 and give it "Deathrattle: Deal 2 damage to all minions."

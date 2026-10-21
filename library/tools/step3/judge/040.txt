@@ -1,0 +1,67 @@
+# definitions
+ping | Small repeatable damage | A small amount of damage (1 or 2) that can be dealt again and again. | Not: One big hit is damage.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+ranged | Ranged attack / long reach | The unit attacks from a distance, from the back row or over other units. | Not: Damage from a spell is damage.
+recycle | Reuse my cards (shuffle back) | The owner's used or discarded cards go back into deck or hand to be used again. | Not: An enemy unit sent to its deck is bounce_enemy.
+# questions: qid | concept | game | name | text
+4016 | ping | hearthstone | A Small Rock | Deal 1 damage.
+4017 | ping | hearthstone | Gattlesnake | At the end of your turn, load two bullets that deal 1 damage each. Deathrattle: Fire at random enemies!
+4018 | ping | hearthstone | Firesworn | Deathrattle: Deal 1 damage to the enemy hero for each Firesworn that died this turn.
+4019 | ping | hearthstone | Jungle Gym | Deal 1 damage to a random enemy. Repeat for each friendly Beast.
+4020 | ping | hearthstone | Aftershocks | Deal 1 damage to all minions, three times. Costs (2) less if you cast a spell last turn.
+4813 | polymorph | hearthstone | Tribute Dance | Choose a minion. Choose a different minion to transform it into.
+4814 | polymorph | hearthstone | Devolve | Transform all enemy minions into random ones that cost (1) less.
+4815 | polymorph | hearthstone | Energy Shaper | Battlecry: Transform all spells in your hand into ones that cost (3) more. (They keep their original Cost.)
+4816 | polymorph | hearthstone | Mutate | Transform a friendly minion into a random one that costs (1) more.
+4817 | polymorph | hearthstone | Ancient Growth | Transform your Treants into 5/5 Ancients with Taunt.
+4818 | polymorph | hearthstone | Shadow Reflection | Each time you play a card, transform this into a copy of it.
+4819 | polymorph | hearthstone | Larva | Each turn this is in your hand, transform it into a random Zerg minion.
+4820 | polymorph | hearthstone | Battleworn Faceless | Battlecry: Transform into a copy of a damaged minion.
+4821 | polymorph | hearthstone | Desperate Bribe | Summon two 2-Cost minions for each player. Transform your minions into ones that cost (1) more.
+4822 | polymorph | hearthstone | Muck Pools | Transform a friendly minion into one that costs (1) more.
+6968* | polymorph | hearthstone | Dormant | Becomes a permanent that cannot act or be interacted with until a condition is met.
+6969* | polymorph | hearthstone | Forsaken Lieutenant | Stealth. After you play a Deathrattle minion, become a 2/2 copy of it with Rush.
+6970* | polymorph | hearthstone | Stonetalon Striker | Taunt (While in hand, play a Dragon to become a 6/6 Dragon!)
+6971* | polymorph | hearthstone | Ebyssian | Battlecry: Your Dragons have Rush this game. (While in hand, play a Dragon to become a 12/12 Dragon!)
+6972* | polymorph | hearthstone | Faceless Manipulator | Battlecry: Choose a minion and become a copy of it.
+6973* | polymorph | hearthstone | Creepy Painting | After another minion dies, become a copy of it.
+6974* | polymorph | hearthstone | Felsteel Executioner | Corrupt: Become a weapon.
+6975* | polymorph | hearthstone | Ring of Tides | After you cast a spell, this becomes a copy of it that costs (1).
+115* | random_effect | hearthstone | Snake Eyes | Battlecry: Roll two dice, then Discover two cards of those Costs. (Doubles get an extra Discover!)
+775 | random_effect | hearthstone | Dark Skies | Deal 1 damage to a random minion. Repeat for each card in your hand.
+776 | random_effect | hearthstone | Grimy Gadgeteer | At the end of your turn, give a random minion in your hand +2/+2.
+777 | random_effect | hearthstone | From De Other Side | Summon a copy of each minion in your hand. They attack random enemy minions, then die.
+778 | random_effect | hearthstone | Trogg Gemtosser | Finale: Deal 1 damage to a random enemy for each of your Mana Crystals.
+779 | random_effect | hearthstone | Underfel Rift (created) | Select the Rift to activate. Throw a card in to summon 2 random Fel Beasts. (Once per turn.)
+780 | random_effect | hearthstone | Archmage Staff | At the start of your turn, add a random Mage spell to your hand.
+781 | random_effect | hearthstone | Corrupted Blood | Deathrattle: Fire three missiles at random enemies that deal 2 damage each.
+782 | random_effect | hearthstone | Soulburner Varia | After a friendly Undead dies, deal 2 damage to the enemy hero and get a random Shadow Priest spell.
+783 | random_effect | hearthstone | Guard Dog | Deathrattle: Summon a random 1-Cost Deathrattle minion.
+784 | random_effect | hearthstone | Anima Extractor | Whenever a friendly minion takes damage, give a random minion in your hand +1/+1.
+9087 | random_effect | hearthstone | Blackpaw's Whip | Costs (1) less for each Coin you're holding. Deathrattle: Draw a card.
+9088 | random_effect | hearthstone | Soldier of Fortune | Whenever this minion attacks, give your opponent a Coin.
+9089 | random_effect | hearthstone | Dig for Treasure | Draw a minion. If it's a Pirate, get a Coin.
+9090 | random_effect | hearthstone | Trade Prince Gallywix | Whenever your opponent casts a spell, gain a copy of it and give them a Coin.
+9091 | random_effect | hearthstone | Avatar of the Coin | You lost the coin flip, but gained a friend.
+9092 | random_effect | hearthstone | Lucrative Contract | Destroy a minion. Add 2 Coins to your hand.
+9093 | random_effect | hearthstone | Loan Shark | Battlecry: Give your opponent a Coin. Deathrattle: You get two.
+9094 | random_effect | hearthstone | Oh, Manager! | Deal 2 damage. Combo: Get a Coin.
+9095 | random_effect | hearthstone | Gilded Gargoyle | Deathrattle: Add a Coin to your hand.
+9096 | random_effect | hearthstone | Licensed Adventurer | Battlecry: If you control a Quest, add a Coin to your hand.
+2102 | ranged | hearthstone | Greater Arcane Missiles | Shoot three missiles at random enemies that deal 3 damage each.
+2103 | ranged | hearthstone | Lightshow | Shoot beams at enemies that each deal 2 damage. Your future Lightshows shoot one more beam.
+2104 | ranged | hearthstone | Grunty | Battlecry: Summon four random Murlocs, then shoot them at enemy minions. (You pick the targets!)
+8188 | recycle | hearthstone | Ysera, Unleashed | Battlecry: Shuffle 7 Dream Portals into your deck. When drawn, summon a random Dragon.
+8189 | recycle | hearthstone | Sheltered Survivor | Battlecry: Choose a card in your hand to shuffle into your deck. Draw a card.
+8190 | recycle | hearthstone | Soul Shear | Deal 3 damage to a minion. Shuffle 2 Soul Fragments into your deck.
+8191 | recycle | hearthstone | Crystal Tusk | Battlecry: Shuffle the left- most card in your hand into your deck. Deathrattle: Draw 2 cards.
+8192 | recycle | hearthstone | High King's Hammer | Windfury Deathrattle: Shuffle this into your deck with +2 Attack permanently.
+8193 | recycle | hearthstone | Lor'themar Theron (created) | At the end of your turn, give another random friendly minion +1/+1. Deathrattle: Shuffle into your deck.
+8194 | recycle | hearthstone | Unleashed Terrorguard | Battlecry: Shuffle a Soul Fragment into your deck for each friendly minion on the board.
+8195 | recycle | hearthstone | Envoy Rustwix | Deathrattle: Shuffle 3 random Prime Legendary minions into your deck.
+8196 | recycle | hearthstone | Entomb | Choose an enemy minion. Shuffle it into your deck.
+8197 | recycle | hearthstone | Dispose of Evidence | Give your hero +3 Attack this turn. Pick from 3 cards in your hand to shuffle into your deck.
+8268 | recycle | hearthstone | Azsharan Scavenger | Battlecry: Put a 'Sunken Scavenger' on the bottom of your deck.
+8269 | recycle | hearthstone | Azsharan Trident | Deathrattle: Put a 'Sunken Trident' on the bottom of your deck.
+8270 | recycle | hearthstone | Azsharan Saber | Rush. Deathrattle: Put a 'Sunken Saber' on the bottom of your deck.

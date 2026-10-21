@@ -1,0 +1,68 @@
+# definitions
+on_ally_play | When I play another card | Triggers when the owner plays or summons another card or unit. | Not: When this card is played is on_play.
+on_attack | When it attacks | Triggers when the unit attacks or strikes. | Not: When it is attacked is on_damaged or counterattack.
+on_play | When played (battlecry, on reveal) | Triggers when the card is played or revealed: battlecry, on reveal, enters. | Not: When another card is played is on_ally_play.
+on_spell | When a spell is played | Triggers when a spell or action is played. | Not: When a unit is played is on_ally_play.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+ping | Small repeatable damage | A small amount of damage (1 or 2) that can be dealt again and again. | Not: One big hit is damage.
+# questions: qid | concept | game | name | text
+5550 | on_ally_play | hearthstone | Blubber Baron | Whenever you summon a Battlecry minion while this is in your hand, gain +1/+1.
+5551 | on_ally_play | hearthstone | Herald of Flame | Whenever you play a Dragon, give it Rush and draw a Dragon.
+5552 | on_ally_play | hearthstone | Murloc Tidecaller | Whenever you summon a Murloc, gain +1 Attack.
+5553 | on_ally_play | hearthstone | Hawkstrider Rancher | Whenever you play a minion, give it +1/+1 and "Deathrattle: Summon a 1/1 Hawkstrider."
+5554 | on_ally_play | hearthstone | Steward of Darkshire | Whenever you summon a 1-Health minion, give it Divine Shield.
+2936 | on_attack | hearthstone | Bloodbound Imp | Whenever this attacks, deal 2 damage to your hero.
+2937 | on_attack | hearthstone | King Varian | Whenever this attacks, Recruit a minion. Deathrattle: Advance fight.
+2938 | on_attack | hearthstone | Finja, the Flying Star | Stealth Whenever this attacks and kills a minion, summon 2 Murlocs from your deck.
+2939 | on_attack | hearthstone | Blessing of Wisdom | Choose a minion. Whenever it attacks, draw a card.
+2940 | on_attack | hearthstone | Genzo, the Shark | Whenever this attacks, both players draw until they have 3 cards.
+2941 | on_attack | hearthstone | Thorignir Drake | Rush Whenever this attacks, summon two 3/1 Whelps to attack the target first.
+2942 | on_attack | hearthstone | Stormbrewer | Whenever this attacks, deal 3 damage to the target first. Kindred: Gain Rush.
+2943 | on_attack | hearthstone | Craftsman's Hammer | Whenever your hero attacks, gain 4 Armor.
+2944 | on_attack | hearthstone | Magehunter | Rush Whenever this attacks a minion, Silence it.
+2945 | on_attack | hearthstone | Overlord Runthak | Rush. Whenever this attacks, give +1/+1 to all minions in your hand.
+1287 | on_play | hearthstone | Swampqueen Hagatha | Battlecry: Add a 5/5 Horror to your hand. Teach it two Shaman spells.
+1288 | on_play | hearthstone | Primordial Lord | Battlecry: Get a random Colossal minion from the past.
+1289 | on_play | hearthstone | Dust Bunny | Battlecry and Deathrattle: Add a random piece of junk to your hand (a Coin, Rock, Banana, or Knife).
+1290 | on_play | hearthstone | Muckborn Servant | Taunt Battlecry: Discover a Paladin card.
+1291 | on_play | hearthstone | Envoy of the End | Taunt Battlecry: Herald X.
+1292 | on_play | hearthstone | Shandris Feathermoon | Stealth Battlecry: Destroy your opponent's left and right-most minions.
+1293 | on_play | hearthstone | Titanographer Osk (created) | Battlecry: Gain +5 Health. Give your hero 5 Armor.
+1294 | on_play | hearthstone | Primalfin Lookout | Battlecry: If you control another Murloc, Discover a Murloc.
+1295 | on_play | hearthstone | Crimson Commander | Battlecry and Deathrattle: Give all Draenei in your hand +2/+1.
+1296 | on_play | hearthstone | Fallen Sun Cleric | Battlecry: Give a friendly minion +1/+1.
+8477* | on_spell | hearthstone | Arcane Artificer | Whenever you cast a spell, gain Armor equal to its Cost.
+8478* | on_spell | hearthstone | Hunter of Old | Whenever you cast a spell, gain Spell Damage +2.
+8479* | on_spell | hearthstone | Arcane Devourer | Whenever you cast a spell, gain +2/+2.
+8480* | on_spell | hearthstone | Mana Addict | Whenever you cast a spell, gain +2 Attack this turn.
+8481* | on_spell | hearthstone | Archmage Antonidas | Whenever you cast a spell, add a 'Fireball' spell to your hand.
+8482* | on_spell | hearthstone | Li'Na, Shop Manager | Whenever you cast a spell, fill your board with random minions of that Cost.
+8483* | on_spell | hearthstone | Summoning Stone | Whenever you cast a spell, summon a random minion of the same Cost.
+8484* | on_spell | hearthstone | Exotic Mountseller | Whenever you cast a spell, summon a random 3-Cost Beast.
+8485* | on_spell | hearthstone | Bogshaper | Whenever you cast a spell, draw a minion from your deck.
+8486* | on_spell | hearthstone | Lyra the Sunshard | Whenever you cast a spell, add a random Priest spell to your hand.
+643 | passive | hearthstone | Wallow, the Wretched | While this is in your hand or deck, it gains a copy of every Dark Gift given to your minions.
+644 | passive | hearthstone | Small-Time Buccaneer | Has +2 Attack while you have a weapon equipped.
+645 | passive | hearthstone | Curse of Rafaam | Give your opponent a 'Cursed!' card. While they hold it, they take 2 damage on their turn.
+646 | passive | hearthstone | Horn of Feasting | Summon three 2/1 Raptors with Rush. Outcast: Give them Immune while attacking this turn.
+647 | passive | hearthstone | Cursed! | While this is in your hand, take 2 damage at the start of your turn.
+648 | passive | hearthstone | Water Moccasin | Stealth Has Poisonous while you have no other minions.
+649 | passive | hearthstone | Brood Affliction: Red | While this is in your hand, take 1 damage at the start of your turn.
+650 | passive | hearthstone | Commander Sivara | Battlecry: If you've cast three spells while holding this, add those spells back to your hand. ( left!) (Ready!)
+651 | passive | hearthstone | Red Giant | Costs (1) less for each adjacent card played while in hand.
+652 | passive | hearthstone | Crazed Wretch | Has +2 Attack and Charge while damaged.
+8086 | passive | hearthstone | Togwaggle's Dice | Passive At the end of your turn, randomize the cost of all cards in your hand.
+8087 | passive | hearthstone | Cloak of Invisibility | Passive Your minions have permanent Stealth.
+8088 | passive | hearthstone | Disks of Swiftness | Passive Your opponent must pass their first 2 turns.
+8089 | passive | hearthstone | Darklight Torch | Passive After you play an even-Cost card, refresh your hero power. It costs (0) this turn.
+8090 | passive | hearthstone | Windfall Blessing | Passive Your Shrines have "Deathrattle: Give minions in your deck +1/+1."
+8091 | passive | hearthstone | Resourcefulness | Passive At the start of the game, equip a random weapon. Give it +1/+1.
+8092 | passive | hearthstone | First Aid Kit | Passive At the end of your turn, restore 2 Health to all friendly characters.
+8093 | passive | hearthstone | Wondrous Wisdomball | Passive Occasionally gives helpful advice.
+8094 | passive | hearthstone | Grommash's Armguards | Passive Your weapons cost (1).
+8095 | passive | hearthstone | Ever-Changing Elixir | Passive At the end of your turn, transform a friendly minion into one that costs (1) more.
+4011 | ping | hearthstone | Cruel Taskmaster | Battlecry: Deal 1 damage to a minion and give it +2 Attack.
+4012 | ping | hearthstone | Vespers Cannon (created) | Auto-Attack: Deal 1 damage to enemies opposite this minion.
+4013 | ping | hearthstone | Meteorologist | Battlecry: For each card in your hand, deal 1 damage to a random enemy.
+4014 | ping | hearthstone | Perdition's Blade | Battlecry: Deal 1 damage. Combo: Deal 2 instead.
+4015 | ping | hearthstone | Fan of Knives | Deal 1 damage to all enemy minions. Draw a card.
