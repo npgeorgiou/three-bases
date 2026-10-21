@@ -1,17 +1,32 @@
-signature	Green	taunt	Green is big minions, taunts, and a lot of buffs.	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Green	stat_gain	Motif is obviously growth	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Blue	transform	there is a motif of creature transformation	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Blue	movement	land moving shenanigans	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Red	direct_damage	Burn decks use direct damage to the orb to win the match.	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-signature	Red	ranged	some interesting ranged creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Yellow	haste	Yellow is most known for it's rush	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Yellow	resource_gain	Cards give you mana	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Yellow	movement	The movement tricks can be used to change the positioning	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Yellow	aggro_tempo	This variant of Yellow Rush constantly attacks the orb	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Red	burn	This Red Yellow Burn deck uses a midrange strategy.	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Green	sacrifice	Sacrifice decks are almost always green and yellow.	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Blue	spellslinger	Blue yellow events is less all in on combos.	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Yellow	control	using both damage based and hard removal to clear any threats	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-splash	Yellow	sacrifice	strong motif of sacrifice (HP or creatures)	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Red	taunt	big taunts	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Blue	movement	mobility, jump	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Blue	transform	transforming creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Blue	stat_loss	shrinking big creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Blue	terrain	turning lands into lakes, moving lands	https://boards.faeria.com/t/board-and-colour-a-state-of-the-game-analysis/2586
+signature	Green	taunt	Taunt	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Green	high_cost	big creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Green	buff	many buffs	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Green	terrain	forests	https://boards.faeria.com/t/board-and-colour-a-state-of-the-game-analysis/2586
+signature	Red	damage	damaging events	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Red	direct_damage	burn	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Red	taunt	the biggest Taunts	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Red	ranged	ranged creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Red	terrain	land destruction	https://boards.faeria.com/t/board-and-colour-a-state-of-the-game-analysis/2586
+signature	Yellow	haste	rush and haste	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 signature	Yellow	evasion	flight	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Yellow	sacrifice	sacrificing creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Yellow	life_payment	sacrificing health	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Yellow	on_spell	cards buffed by events	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Yellow	aoe_damage	area damage	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Yellow	terrain	land conversion	https://boards.faeria.com/t/board-and-colour-a-state-of-the-game-analysis/2586
+archetype	Yellow	aggro_tempo	Yellow Rush	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Yellow	control	Yellow control	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Yellow	spellslinger	Blue Yellow Events	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Yellow	burn	Red Yellow Burn	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Yellow	sacrifice	Green and Yellow sacrifice	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Blue	spellslinger	Blue Yellow Events	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Red	burn	Red Yellow Burn	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+archetype	Red	aggro_tempo	Rush decks	https://boards.faeria.com/t/board-and-colour-a-state-of-the-game-analysis/2586
+archetype	Green	sacrifice	Green and Yellow sacrifice	https://www.faeria.com/the-hub/guide/42-deck-archetypes
+splash	Green	resource_gain	a dash of ramp	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+splash	Yellow	resource_gain	cards that give mana	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+combo	Khalim's Prayer	Zealous Crusader	orb attacks give faeria and buff the Crusader	https://www.faeria.com/the-hub/guide/42-deck-archetypes
