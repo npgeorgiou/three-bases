@@ -1,5 +1,5 @@
 # Reading request: monster_train
-Read the game block once, then every card below. Judge only against the concept definitions at the end of the game block; use
+Read this file once, then every card in the cards files, in order. Judge only against the concept definitions at the end of the game block; use
 the game's rules, keywords and factions to understand what a card does. Write nothing but the answer lines.
 
 ## How to read a card
@@ -12,7 +12,7 @@ the game's rules, keywords and factions to understand what a card does. Write no
 - A card with no mechanic (lore, a bare name, plain stats with nothing else) gets an empty answer.
 - Do not guess beyond the text. If the text doesn't say it, it isn't there.
 
-## Answer: one line per card line below, in the same order
+## Answer: one line per card line of the cards files, in the same order
 `<ids>|<concept>:<role>:<exact words>;<concept>:<role>:<exact words>;...`   (nothing after `|` for a card with no mechanic)
 <ids> as given on the card line. Roles: does (the card does it), grants (it gives it to another card), benefits (it is better
 when this happens), counters (it answers this), cost (it is part of the cost). The exact words never contain `;` or `|`:
@@ -25,72 +25,72 @@ Single-player roguelike deckbuilder. The player defends a train of three floors 
 Keyword list from the wiki tags; no keyword definitions in the source.
 
 ## Keywords
-- Action: 
-- Armor: 
-- Armored: 
-- Ascend: 
-- Attuned: 
-- Buffet: 
-- Burnout: 
-- Charged Echo: 
-- Consume: 
-- Cultivate: 
-- Damage Shield: 
-- Dazed: 
-- Descend: 
-- Eaten: 
-- Emberdrain: 
-- Enchant: 
-- Endless: 
-- Etch: 
-- Extinguish: 
-- Extract: 
-- Fragile: 
-- Frostbite: 
-- Frozen: 
-- Fuel: 
-- Gorge: 
-- Harvest: 
-- Hatch: 
-- Hunger: 
-- Incant: 
-- Inert: 
-- Infused: 
-- Inspire: 
-- Lifesteal: 
-- Magic Power: 
-- Melee Weakness: 
-- Multistrike: 
-- Offering: 
-- Permafrost: 
-- Phased: 
-- Piercing: 
-- Purge: 
-- Pyrebound: 
-- Quick: 
-- Rage: 
-- Rally: 
-- Reap: 
-- Reform: 
-- Regen: 
-- Rejuvenate: 
-- Reserve: 
-- Resolve: 
-- Revenge: 
-- Rooted: 
-- Sap: 
-- Shell: 
-- Silence: 
-- Slay: 
-- Spell Weakness: 
-- Spikes: 
-- Stealth: 
-- Strike: 
-- Summon: 
-- Sweep: 
-- Trample: 
-- Unplayable: 
-- Unpurgeable: 
+- Action (no definition in the library; see Rules and terms)
+- Armor (no definition in the library; see Rules and terms)
+- Armored (no definition in the library; see Rules and terms)
+- Ascend (no definition in the library; see Rules and terms)
+- Attuned (no definition in the library; see Rules and terms)
+- Buffet (no definition in the library; see Rules and terms)
+- Burnout (no definition in the library; see Rules and terms)
+- Charged Echo (no definition in the library; see Rules and terms)
+- Consume (no definition in the library; see Rules and terms)
+- Cultivate (no definition in the library; see Rules and terms)
+- Damage Shield (no definition in the library; see Rules and terms)
+- Dazed (no definition in the library; see Rules and terms)
+- Descend (no definition in the library; see Rules and terms)
+- Eaten (no definition in the library; see Rules and terms)
+- Emberdrain (no definition in the library; see Rules and terms)
+- Enchant (no definition in the library; see Rules and terms)
+- Endless (no definition in the library; see Rules and terms)
+- Etch (no definition in the library; see Rules and terms)
+- Extinguish (no definition in the library; see Rules and terms)
+- Extract (no definition in the library; see Rules and terms)
+- Fragile (no definition in the library; see Rules and terms)
+- Frostbite (no definition in the library; see Rules and terms)
+- Frozen (no definition in the library; see Rules and terms)
+- Fuel (no definition in the library; see Rules and terms)
+- Gorge (no definition in the library; see Rules and terms)
+- Harvest (no definition in the library; see Rules and terms)
+- Hatch (no definition in the library; see Rules and terms)
+- Hunger (no definition in the library; see Rules and terms)
+- Incant (no definition in the library; see Rules and terms)
+- Inert (no definition in the library; see Rules and terms)
+- Infused (no definition in the library; see Rules and terms)
+- Inspire (no definition in the library; see Rules and terms)
+- Lifesteal (no definition in the library; see Rules and terms)
+- Magic Power (no definition in the library; see Rules and terms)
+- Melee Weakness (no definition in the library; see Rules and terms)
+- Multistrike (no definition in the library; see Rules and terms)
+- Offering (no definition in the library; see Rules and terms)
+- Permafrost (no definition in the library; see Rules and terms)
+- Phased (no definition in the library; see Rules and terms)
+- Piercing (no definition in the library; see Rules and terms)
+- Purge (no definition in the library; see Rules and terms)
+- Pyrebound (no definition in the library; see Rules and terms)
+- Quick (no definition in the library; see Rules and terms)
+- Rage (no definition in the library; see Rules and terms)
+- Rally (no definition in the library; see Rules and terms)
+- Reap (no definition in the library; see Rules and terms)
+- Reform (no definition in the library; see Rules and terms)
+- Regen (no definition in the library; see Rules and terms)
+- Rejuvenate (no definition in the library; see Rules and terms)
+- Reserve (no definition in the library; see Rules and terms)
+- Resolve (no definition in the library; see Rules and terms)
+- Revenge (no definition in the library; see Rules and terms)
+- Rooted (no definition in the library; see Rules and terms)
+- Sap (no definition in the library; see Rules and terms)
+- Shell (no definition in the library; see Rules and terms)
+- Silence (no definition in the library; see Rules and terms)
+- Slay (no definition in the library; see Rules and terms)
+- Spell Weakness (no definition in the library; see Rules and terms)
+- Spikes (no definition in the library; see Rules and terms)
+- Stealth (no definition in the library; see Rules and terms)
+- Strike (no definition in the library; see Rules and terms)
+- Summon (no definition in the library; see Rules and terms)
+- Sweep (no definition in the library; see Rules and terms)
+- Trample (no definition in the library; see Rules and terms)
+- Unplayable (no definition in the library; see Rules and terms)
+- Unpurgeable (no definition in the library; see Rules and terms)
 
 ## Factions (cards)
 - Awoken (39)
@@ -103,6 +103,77 @@ Keyword list from the wiki tags; no keyword definitions in the source.
 
 ## Card types and tribes
 Animus, Blight, Channeler, Construct, Dante, Demon, Egg, Fen, Hollow, Host, Imp, Kin, Machine, Mage, Morsel, Scourge, Shroud, Siren, Steward, Titanspawn, Tomb, Totem, Waxer, Wickless
+
+## Rules and terms
+- Armor: absorbs incoming damage before health is lost, one point per point of Armor.
+- Avarice: unblocked damage from this unit grants Gold equal to its stacks.
+- Buffet: this unit can be eaten more than once.
+- Burnout: the unit dies when its stacks run out; the count drops each turn.
+- Burst: extra attacks per stack, losing one stack after each bonus attack.
+- Conduit: adds Magic Power to the floor for each stack.
+- Cooldown: the unit's ability can't be used while stacks remain.
+- Damage Shield: blocks the next source of damage.
+- Dazed: can't attack or use Action or Resolve abilities; wears off each turn.
+- Decay: 3 damage per stack at turn end; fades each turn.
+- Emberdrain: costs 1 Ember per stack at the start of each turn; fades each turn.
+- Endless: when the unit dies or is eaten, its card returns to the top of the draw pile.
+- Fragile: the unit dies if it loses any health.
+- Frostbite: 1 damage per stack at turn end; fades each turn.
+- Fuel: cancels Inert and Dormant; loses one stack each turn.
+- Hatch: Corrupt on the floor removes Hatch from the front unit; the unit hatches once all Hatch is gone.
+- Immobile: the unit can't change floors or its position on its floor.
+- Inert: can't attack unless the unit has Fuel.
+- Lifesteal: heals by the damage dealt on attack; weakens with each attack.
+- Mageblade: Attack per stack equal to the floor's Magic Power.
+- Melee Weakness: the next attack against the unit deals extra damage per stack.
+- Multistrike: one additional attack each turn.
+- Mute: disables triggers, abilities and enchants; fades each turn.
+- Pyregel: more incoming damage per stack.
+- Quick: attacks before enemy units in combat.
+- Rage: Attack per stack; fades each turn.
+- Reanimate: when the unit dies it comes back with 1 health, costing one stack.
+- Reap: 1 damage per Corrupt stack on the floor after combat; does not fade.
+- Regen: restores health per stack at turn end; fades each turn.
+- Rooted: blocks the next floor change (bosses are immune).
+- Sap: less Attack per stack; fades each turn.
+- Spell Weakness: the next damage spell hit deals extra damage per stack.
+- Spikes: attackers take damage per stack when they hit this unit.
+- Stealth: can't be targeted in combat; fades each turn.
+- Steelguard: limits Armor loss per hit to a set amount.
+- Sweep: attacks all enemy units.
+- Titanskin: less damage taken by a set amount per stack.
+- Trample: excess attack damage carries over to the next enemy unit.
+- Troop: Attack and Health per stack; losing one stack's worth of Health removes a stack.
+- Unstable: dies at end of combat if its HP is at or below its stacks, then explodes for damage to enemies on the floor.
+- Valor: Attack per stack, and Armor raised to the stack count if this is the front unit after combat.
+- Armored (trigger): when Armor is added to this unit.
+- Artificer (trigger): when Equipment is attached to an ally of this unit.
+- Celebrate (trigger): after a boss is defeated.
+- Consume: once played, the card is removed from the deck for the rest of the battle.
+- Eaten (trigger): when the front unit eats this unit.
+- Enchant: an aura giving other units on the floor the listed bonus.
+- Equipped (trigger): when Equipment is attached to this unit.
+- Etch (trigger): when a card is consumed on this floor.
+- Extinguish (trigger): when this unit dies.
+- Gorge (trigger): when this unit eats another unit.
+- Harvest (trigger): when any unit dies on this floor.
+- Hunger (trigger): when a unit with Eaten is summoned.
+- Incant (trigger): when a spell is played on this floor.
+- Inspire (trigger): when the clan's resource is gained on this floor.
+- Mooncycle (trigger): when the moon changes phase.
+- Moonlit: active while the moon is in its Moonlit phase.
+- Moonshade: active while the moon is in its Moonshade phase.
+- Propagate: raises existing buff stacks on friendly units and debuff stacks on enemies by the stated amount, except Dazed.
+- Rally (trigger): when a friendly unit is summoned on this floor.
+- Reanimated (trigger): when this unit is revived by Reanimate.
+- Rejuvenate (trigger): when this unit is healed, even at full health.
+- Resolve (trigger): after combat.
+- Revenge (trigger): when this unit is hit.
+- Shift (trigger): whenever this unit moves.
+- Slay (trigger): after dealing a killing blow.
+- Strike (trigger): when this unit attacks.
+- Summon (trigger): when this unit is played.
+- Unplayable: this card cannot be played.
 
 ## Mechanics the game's guides name
 multistrike, rage, sweep, incant, frostbite, morsels, gorge, reform, burnout, eggs
@@ -369,367 +440,3 @@ trap_secret | Hidden traps / secrets | A hidden card fires on an opponent's acti
 turn_end | End of turn / round | Effects at the end of a turn or round. | Not: Start of turn is turn_start.
 turn_number | On a set turn or round | Effects tied to a given turn or round number: on turn 5, until round 4. | Not: After N turns from now is delayed.
 turn_start | Start of turn / round | Effects at the start of a turn or round. | Not: End of turn is turn_end.
-
-# Cards (<ids>|<name>: <text>)
-822401|Action: 
-822402|Armor: 
-822403|Armored: 
-822404|Ascend: 
-822405|Attuned: 
-822406|Buffet: 
-822407|Burnout: 
-822408|Charged Echo: 
-822409|Consume: 
-822410|Cultivate: 
-822411|Damage Shield: 
-822412|Dazed: 
-822413|Descend: 
-822414|Eaten: 
-822415|Emberdrain: 
-822416|Enchant: 
-822417|Endless: 
-822418|Etch: 
-822419|Extinguish: 
-822420|Extract: 
-822421|Fragile: 
-822422|Frostbite: 
-822423|Frozen: 
-822424|Fuel: 
-822425|Gorge: 
-822426|Harvest: 
-822427|Hatch: 
-822428|Hunger: 
-822429|Incant: 
-822430|Inert: 
-822431|Infused: 
-822432|Inspire: 
-822433|Lifesteal: 
-822434|Magic Power: 
-822435|Melee Weakness: 
-822436|Multistrike: 
-822437|Offering: 
-822438|Permafrost: 
-822439|Phased: 
-822440|Piercing: 
-822441|Purge: 
-822442|Pyrebound: 
-822443|Quick: 
-822444|Rage: 
-822445|Rally: 
-822446|Reap: 
-822447|Reform: 
-822448|Regen: 
-822449|Rejuvenate: 
-822450|Reserve: 
-822451|Resolve: 
-822452|Revenge: 
-822453|Rooted: 
-822454|Sap: 
-822455|Shell: 
-822456|Silence: 
-822457|Slay: 
-822458|Spell Weakness: 
-822459|Spikes: 
-822460|Stealth: 
-822461|Strike: 
-822462|Summon: 
-822463|Sweep: 
-822464|Trample: 
-822465|Unplayable: 
-822466|Unpurgeable: 
-822467|Animus: Animus: 4 entities of this type.
-822468|Blight: Blight: 4 entities of this type.
-822469|Channeler: Channeler: 3 entities of this type.
-822470|Construct: Construct: 4 entities of this type.
-822471|Dante: Dante: 1 entities of this type.
-822472|Demon: Demon: 9 entities of this type.
-822473|Egg: Egg: 3 entities of this type.
-822474|Fen: Fen: 1 entities of this type.
-822475|Hollow: Hollow: 5 entities of this type.
-822476|Host: Host: 2 entities of this type.
-822477|Imp: Imp: 8 entities of this type.
-822478|Kin: Kin: 6 entities of this type.
-822479|Machine: Machine: 1 entities of this type.
-822480|Mage: Mage: 3 entities of this type.
-822481|Morsel: Morsel: 6 entities of this type.
-822482|Scourge: Scourge: 4 entities of this type.
-822483|Shroud: Shroud: 6 entities of this type.
-822484|Siren: Siren: 6 entities of this type.
-822485|Steward: Steward: 1 entities of this type.
-822486|Titanspawn: Titanspawn: 1 entities of this type.
-822487|Tomb: Tomb: 4 entities of this type.
-822488|Totem: Totem: 4 entities of this type.
-822489|Waxer: Waxer: 6 entities of this type.
-822490|Wickless: Wickless: 7 entities of this type.
-822491|Hornbreaker Prince: 
-822492|Shardtail Queen: 
-822493|Queen's Impling: Summon: Deal 10 damage to the front enemy unit.
-822494|Spike of the Hellhorned: Consume. / Apply 2 per X Rage and 2 per X Armor.
-822495|Vent: Deal 2 per X damage to enemy units.
-822496|Dark Deal: Deal 5 damage, Apply Rage 7.
-822497|Fortify: Apply Armor 5.
-822498|Imp-in-a-Box: Consume. / Add 2 random Imp units to your hand.
-822499|Imp-portant Work: Sacrifice Imp. / Gain 1 Ember. Draw 1.
-822500|Rage Serum: Consume. / Apply Rage 3.
-822501|Alloy of the Ancients: Consume. / Apply Armor 25.
-822502|Branded Warrior: Rage 4. / Slay: Apply Rage 3 to friendly units.
-822503|Deranged Brute: Rage on friendly units adds an additional +3 Attack per stack.
-822504|Fledgling Imp: Summon: Apply Rage 5 to friendly units.
-822505|Hidden Passage: Ascend a unit.
-822506|Horn Break: Piercing. / Deal 5 damage, twice.
-822507|Horned Warrior: Multistrike 1.
-822508|Impish Scholar: Summon: Return a random consumed spell to your hand.
-822509|Imp-olate: Deal damage to the front enemy unit equal to 15x the number of Imp units in your deck.
-822510|Imp-pressive: Attuned. Sacrifice Imp. / Deal 50 damage to the front enemy unit.
-822511|March of Shields: Move a unit to the front and apply Armor 10.
-822512|Molting Imp: Summon: Deal 5 damage to enemy units.
-822513|Pyre Chomper: Summon: Gain 4 Ember.
-822514|Railbeater: Armor 30. / Strike: Apply Melee Weakness 1 to the attacked unit.
-822515|Steelworker: Resolve: Apply Armor 5 to friendly units.
-822516|Torch: Deal 2 damage.
-822517|Transcendimp: When played, repeat all Summon effects triggered so far this battle.
-822518|Welder Helper: Summon: Apply Armor 20 to the front friendly unit.
-822519|Alpha Fiend: Strike: +5 Attack.
-822520|Branding Rite: Piercing. / Deal 5 damage. Apply Armor 20.
-822521|Enflame: Apply Rage 4 and Armor 5.
-822522|Tiresome Climb: Ascend a unit and apply Dazed 2.
-822523|Battering Ram: Deal damage to the front enemy unit equal to 4x the amount of Armor on friendly units.
-822524|Inferno: Piercing. / Deal 100 damage to friendly and enemy units.
-822525|Last Stand: Consume. / Double the amount of Rage on friendly units.
-822526|Reinforce: Consume. / Double Armor on a unit.
-822527|Ritual of Battle: Apply Rage 10.
-822529|Onehorn's Tome: Consume. / Apply Multistrike 1 and Fragile to a friendly unit.
-822531|Apex Imp: Armored: Gain Rage equal to gained Armor. / Summon: Gain Armor 5.
-822532|The Sentient: 
-822533|Wyldenten: 
-822534|Awoken's Rail Spike: Consume. / Draw [X Cost] and apply -1 Ember to those cards.
-822535|Ensnare: Apply Rooted 1 to an enemy unit. / Draw +1 next turn.
-822536|Invigorating Solution: Consume. / Draw +3 next turn.
-822537|Preserved Thorns: Consume. / Add 3 Sting spells to your hand.
-822538|Sting: Deal 10 damage to the front enemy unit. / Draw +1 next turn.
-822539|Unleash the Wildwood: Restore friendly units to full health.
-822540|Vine Grasp: Deal 3 damage. Move that unit to the front.
-822541|Animus of Speed: Quick.
-822542|Animus of Will: Multistrike 2.
-822543|Awoken Hollow: Summon: Gain 60 max health. / Rejuvenate: Cultivate 2
-822544|Channelsong: Consume. / Draw a unit and apply +20 Attack, +20 Health, and 0 Ember.
-822545|Edge Prior: Healing spells cast on this floor cost -1 Ember.
-822546|Engraft: Restore 1 health. / Gain 1 Ember. Draw +1 next turn.
-822547|Glimmer: Restore 2 health to all friendly units and deal 2 damage to all enemy units.
-822548|Husk Hermit: Sweep.
-822549|Pyre Shards: Consume. / Apply Spikes 4.
-822550|Razorsharp Edge: Apply +10 Attack and -2 Health.
-822551|Restoration Detonation: Restore 10 health to a friendly unit. Deal damage to the front enemy unit equal to 5x the amount healed.
-822552|Restore: Restore 2 health. Apply Regen 1.
-822553|Rootseeds: Apply +2 Attack. / Draw +1 next turn.
-822554|Shard Channeler: Spikes on friendly units deal +1 damage per stack.
-822555|Shattered Shell: Sweep. / Slay: +3 Attack.
-822557|Thorned Hollow: Summon: Gain 60 max health. / Rejuvenate: Gain Spikes 3.
-822558|Vinemother: Resolve: Add a Sting spell to your hand.
-822560|Wildwood Sap: Consume. / Apply Regen 5.
-822561|Wildwood Tome: Consume. / Apply Quick.
-822562|Adaptive Mutation: Consume. / Restore a friendly unit to full health and then swap [Attack] and [Health].
-822563|Bramble Lash: Deal damage to the front enemy unit equal to 10x the amount of Spikes on friendly units.
-822564|Focused Growth: Restore 25 health. / Draw +2 next turn.
-822565|Pyre-Gro: Consume. / Draw 2 less cards and gain +1 Ember per turn.
-822566|Restoring Retreat: Descend a unit and restore 10 health.
-822567|Sharpen: Apply +4 Attack and Spikes 4.
-822568|Spreading Spores: Apply Regen 2 and Spikes 2. Add a copy of this card to your discard pile.
-822569|Wilting Sapwood: Revenge: Gain 1 Ember.
-822570|Awake: Restore 30 health. Apply Regen 3.
-822571|Cycle of Life: Apply +10 Health and Spikes 3.
-822572|Steelsinger: Summon: Gain 80 max health. / Rejuvenate: +1 Attack permanently.
-822573|Tethys Titansbane: 
-822574|Solgard the Martyr: Incant: Gain Shard 1.
-822575|Spike of the Stygian: Consume. / Apply 1 per X Sap and 5 per X Frostbite.
-822576|Crystalline Seeds: Consume. / Apply Frostbite 6 to enemy units.
-822577|Energy Siphon: Apply Spell Weakness 1 to an enemy unit.
-822578|Offering Token: Draw 1. Discard 1.
-822579|Preserve: Permafrost. / Apply Frozen to a card in your hand.
-822580|Unnamed Tome: Permafrost. Consume. / Apply Silence to enemy units.
-822581|Urchin Spines: Consume. / Apply Spell Weakness 2 to enemy units.
-822582|Coldcaelia: Sweep. / Strike: Apply Frostbite 3 to the attacked unit.
-822583|Cuttlehex: End of Turn: Apply Frozen to a random card in your hand.
-822584|Drain: Apply Sap 3. / Discard a card at random.
-822585|Flash Freeze: Deal 3 damage. Apply Frostbite 8.
-822586|Forgone Power: Apply Frostbite 6 to the front enemy unit. / Discard a card at random
-822587|Frenzied Swarm: Apply Dazed 1 to enemy units. / Discard your hand.
-822588|Frozen Lance: Deal 6 damage to the front enemy unit.
-822589|Glacial Seal: Incant: Apply Frostbite 2 to enemy units.
-822590|Guard of the Unnamed: Incant: Gain Armor 3.
-822591|Guardian Stone: Incant: Apply Armor 1 to friendly units.
-822592|Harness the Titan: Apply +5 Magic Power to spells in hand.
-822593|Ice and Pyre: Pyrebound. Attuned. / Deal 90 damage to the front enemy unit.
-822594|Icestorm: Deal 1 damage to a random enemy unit, five times.
-822595|Icy Cilophyte: Sweep. / Strike: Apply Spell Weakness 1 to the attacked unit.
-822596|Lodestone Totem: Incant: Apply Sap 1 to enemy units.
-822597|Molluscmage: +10 Magic Power on this floor.
-822598|Nameless Siren: Incant: Gain Rage 2.
-822599|Offering Monument: Incant: Draw 1 and this unit gets -5 Health.
-822600|Siren of the Sea: Incant: +2 Attack and +2 Health.
-822601|Siren's Song: Pyrebound. / Ascend all enemy units on this floor and apply Dazed 3.
-822602|Titan Sentry: Revenge: Apply Frostbite 3 to enemy units.
-822603|Titan's Gratitude: Attuned. / Deal 25 damage to the front enemy unit. / Discard a card at random.
-822604|Deep Offering: Consume. / Discard your hand. Draw 5.
-822605|Gifts for a Guard: Draw 3 spells and apply Consume, +20 Magic Power and 0 Ember.
-822606|Helical Crystalis: Deal 25 damage to the front enemy unit, twice.
-822607|Hoarfrost Effigy: Transfer all Frostbite on this floor to a unit, then double the amount of Frostbite.
-822608|Ancient Synergy: Deal damage to the front enemy unit equal to 2x the number of spells in your deck, three times.
-822609|Crypt Builder: Offering. Attuned. / Deal 60 damage to the front enemy unit and push it to the back.
-822610|Guardian's Amulet: Offering. / Apply Sap 2 to enemy units.
-822611|Ice Tornado: Permafrost. Deal 20 damage to a random enemy unit, three times.
-822612|Titanstooth: Offering. / Deal 5 damage to enemy units and apply Frostbite 10.
-822613|Eel Gorgon: Incant: Gain Multistrike 1. / Resolve: Remove all status effects.
-822614|Penumbra: 
-822615|Primordium: Buffet 3. / Eaten: Add this unit's [Attack] and [Health] to the eater.
-822616|Forever Consumed: Deal 30 per X damage to the front enemy unit.
-822617|Kindle: Consume. / Gain 2.
-822618|Mine Collapse: Deal 3 per X damage to an enemy unit. / Slay: Gain 2 Ember.
-822619|Prism Retrieval: Consume. / Draw a unit and apply +5 and -.
-822620|Prismal Dust: Consume. / Apply 1 per X Damage Shield.
-822621|Shroud Spike: Consume. / Kill a Morsel unit. Trigger Eaten and Gorge abilities as if it had been eaten 2 per X times.
-822622|Antumbra Morsel: Eaten: Eater gains +6 Health.
-822623|Ember Cache: Consume. / Add 3 Excavated Ember cards to your discard pile.
-822624|Feast: Trigger feeding on units with Eaten abilities.
-822625|Immortal Trade: Apply Lifesteal 3 and Emberdrain 2 to a friendly unit.
-822626|Magma Morsel: Eaten: Eater gains +6 Attack.
-822627|Morsel Excavator: Eaten: Eater gains +3 Attack and Lifesteal 1.
-822628|Morsel Jeweler: Eaten: Eater gains +3 Health and Damage Shield 1.
-822629|Morsel Miner: Eaten: Eater gains +6 Attack and +6 Health.
-822630|Packed Morsels: Consume. / Add 3 uncommon or rare Morsel units to your hand.
-822631|Perils of Production: Apply Rage 3 and Emberdrain 2 to a friendly unit. / Gain 3 Ember.
-822632|Retch: Return consumed Morsel units to your hand.
-822633|Rubble Morsel: Eaten: Gain 1 Ember. / Eater gains +1 Attack and +1 Health.
-822634|Space Prism: Consume. / +1 Capacity on this floor.
-822635|Void Binding: Apply Damage Shield 2, Rage 6, and Emberdrain 3.
-822636|Antumbra Assault: Deal 3 damage. / Slay: Add 2 uncommon or rare Morsel units to your hand.
-822637|Cannibalize: Sacrifice. / Add 3 random uncommon or rare Morsel units to your hand.
-822638|Crucible Collector: Gorge: Gain Lifesteal 1.
-822639|Crucible Warden: Gorge: Gain Damage Shield 1.
-822640|Ember Forge: +2 Ember per turn.
-822641|Engine Upgrade: Consume. / -1 Capacity on this floor. +1 Ember per turn for the rest of battle.
-822642|Morselmaster: When you summon a Morsel unit on this floor, create a copy.
-822643|Plink: Deal 1 damage to a random enemy unit, twice. / Slay: Add a common or uncommon Morsel unit to your hand.
-822644|Shadesplitter: Add a common or uncommon Morsel unit to your hand.
-822645|Shroud Mitosis: Create 3 copies of a Morsel unit.
-822646|Alloyed Construct: Inert. Multistrike 1. / Gorge: Gain Fuel 1.
-822647|Cave In: Descend friendly and enemy units on this floor.
-822648|Crucible Extension: +1 Capacity on this floor.
-822649|Furnace Tap: Consume. / Apply Multistrike 1. Apply Emberdrain 4.
-822650|Grovel: Apply Damage Shield 1. Add 2 uncommon or rare Morsel units to your hand.
-822651|Making of a Morsel: Add a Morsel Miner to your hand.
-822652|Morselmaker: Resolve: Summon an Antumbra Morsel and Magma Morsel in this room.
-822653|Overgorger: Gorge: +2 Attack permanently.
-822654|Shadoweater: Gorge: Restore 10 health. Deal 10 damage to enemy units.
-822655|Umbra Stone: Consume. / Apply Trample.
-822656|Blazing Bolts: Purge. / Deal 30 damage to the front enemy unit. Add a stronger version of this card to your discard.Purge. / Deal 30 damage to a random unit, two times. Add a stronger version of this card to your discard.Deal 30 damage to a random unit, four times.
-822657|Excavation Eruption: Deal 20 damage to a random enemy unit, three times. / Slay: Gain 2 Ember.
-822658|Gem Trove: Apply Damage Shield 1 to friendly units. Add 3 uncommon or rare Morsel units to your hand.
-822660|Morsel-Made: Hunger: Feed on units with Eaten. / Gorge: +2 Attack and +2 Health.
-822661|Rector Flicker: 
-822662|Little Fade: 
-822663|Waxen Spike: Consume. / Apply +4 and Burnout 4 to friendly units.
-822664|Dreg: Burnout 2.
-822665|Primitive Mold: Reform a random unit.
-822666|Hallowed Drippings: Consume. / Apply Burnout 5 to friendly Burnout units.
-822667|Intent on Death: Consume. / Trigger a unit's Extinguish ability without killing it.
-822668|Memories of the Melted: Consume. / Gain 1 Ember for each friendly unit death this battle.
-822669|Purifying Cleanse: Restore 15 health and apply Burnout 3 to a friendly unit.
-822670|Sacred Wicks: Consume. / Reform 2 random units.
-822671|Sacrificial Resurrection: Consume cards in hand to add a Draff unit to your hand and apply +10 Attack for each card consumed.
-822672|Wickless Recruitment: Remove all Burnout and Debuff effects from a unit.
-822673|Bounty Stalker: Stealth 1. / Extinguish: +8 Attack permanently.
-822674|Crushing Demise: Kill a random non-boss enemy unit. / Kill a random friendly unit.
-822675|Devourer of Death: Harvest: Gain Soul 1. / Extinguish: Deal damage to the enemy units equal to 15x the Soul count.
-822676|Draff: Burnout 1. Multistrike 1.
-822677|Engulfed in Smoke: Apply Stealth 2 to friendly units.
-822678|Entombed Explosive: Extinguish: Deal 50 damage to the front enemy unit.
-822679|Lady of the House: Burnout 3.
-822680|Lady of the Reformed: Burnout 3. / Revenge: Friendly Burnout units gain Burnout 1.
-822681|Molded: Reform a unit.
-822682|Molten Encasement: Extinguish: Apply Stealth 2 to friendly units.
-822683|Paraffin Enforcer: Strike: Friendly Burnout units gain Rage 3.
-822684|Paraffin Thug: Slay: Gain 20 Gold.
-822685|Remnant Host: Extinguish: Summon 2 Draff units.
-822686|Remnant Pact: Consume. / Apply Endless to a friendly unit.
-822688|Votivary: Endless. / Extinguish: Draw 1.
-822689|Wicklash: Apply +10 Attack and Burnout 2 to a friendly unit.
-822690|Wickless Baron: Harvest: +3 Attack and +3 Health.
-822691|Wickless Tycoon: Harvest: Gain 5 Gold.
-822692|A Fatal Melting: Deal damage to enemy units equal to 3x the number of friendly unit deaths this battle.
-822693|Big Sludge: Harvest: Gain Rage 5.
-822694|Dripfall: Descend a unit and apply Dazed 1.
-822695|Formless Child: Extinguish: Return a random defeated unit to your hand and apply +40 Attack.
-822696|Legion of Wax: Extinguish: Summon 2 Twin of Wax and apply this unit's upgrades and stat changes.
-822697|Subsuming Blade: Piercing. / Deal 5 damage. / Slay: Increase damage by 3 permanently.
-822698|Wicked Blaze: Reform a unit and apply an additional +10 Attack.
-822699|Memento Mori: Deal damage to the front enemy unit equal to 10x the number of friendly unit deaths this battle.
-822700|Mortal Entrapment: Attuned. / Deal 25 damage and apply Dazed 3 to an already damaged unit.
-822701|Hallowed Halls: Kill friendly units. / Reform random units to this floor until it exceeds its Capacity.
-822702|Spine Chief: 
-822703|Echowright: 
-822704|Fracture: Apply Reap 2.
-822705|Echo Break: Deal 1 damage per [Echo]
-822706|Bog Fly: +5 Attack per [Echo].
-822707|Bounding Echoes: Consume. / Apply Infused to cards in hand.
-822708|Echo Infusion: Extract 1. / Apply +10 Health.
-822709|Echo Snare: Consume. / Apply Reap 2 to enemy units.
-822710|Echo Transfer: Extract 2. / Apply +15 Attack.
-822711|Hosting Kin: Consume. / Deal 13 damage to a unit and move it to the back.
-822712|Proclamation: Attuned. Extract 2. / Deal 50 damage to the front enemy unit.
-822713|Shelter: Consume. / Apply Armor 2 per [Echo] to friendly units.
-822714|Bog Chrysalis: Shell 5. / Hatch: Summon 2 Bog Fly units.
-822715|Keeper of Echoes: Inspire: Apply +1 Attack and +1 Health to friendly units.
-822716|Kinhost Carapace: When played, gain +10 Attack, +10 Health, and +1 Capacity per [Echo].
-822717|Kinhost Vessel: Shell 8. / Hatch: Summon Kinhost Pupa.
-822718|Kinhost Pupa: Armor 20. Multistrike 1. / Strike: Apply Reap 1 to enemy units.
-822719|First of Kin: Etch: +5 Attack.
-822720|Shardsoul Carver: Inspire: +2 Attack and Armor 2.
-822721|Ambient Charge: Extract 3. / Draw 3. Apply Consume to drawn spells.
-822722|Ancient Resonance: Deal 5 damage to enemy units per [Echo].
-822723|Broken Memories: Consume. / Return a consumed spell to the top of your draw pile.
-822724|Forced Contamination: Extract 3. / Apply Melee Weakness 3.
-822725|Forgotten Trade: Consume. / Gain 1 per [Echo].
-822726|Power of Knowledge: Deal 15 damage for each spell in the Consume pile.
-822727|Returned Soul: Return a spell card from the discard pile to your hand and apply Infused, -1 Ember, and Consume.
-822728|Revenge of the Damned: Extract 1. / Deal 5 damage, twice. / Slay: Gain 2 Echo.
-822729|Soul Cripple: Consume. / Apply Reap 13.
-822730|Soul Siphon: Consume. / Fill [EchoSlot] with [Echo]. Apply Emberdrain 1 to friendly units.
-822731|Soulcrushing Guilt: Extract 3. / Apply Dazed 3 to a unit and move it to the back.
-822732|Total Recall: Consume. / Return 3 random spell cards from the discard pile to your hand and apply Consume.
-822733|Bogdeep Cocoon: Shell 12. / Hatch: Summon Bog Wurmling
-822734|Bog Wurmling: Trample. / Etch: +10 Attack and +10 Health.
-822735|Glareminder: Sweep. / Etch: Apply Reap 2 to enemy units.
-822736|Glugsider: Extract 4. / Inspire: Restore 5 health. / Revenge: Apply Reap 5 to the attacking unit.
-822737|Accelerated Incubation: Consume. / Remove 3 Shell from Eggs.
-822738|Echoes of the Past: Apply +6 Attack per [Echo]. Clear [Echo].
-822739|Eternal Kinstone: Add 1 that cannot be removed.
-822741|Symphony of the Soul: Extract 5. / Double buffs and Armor on a unit.
-822742|Unearthed Remains: Consume. / Gain 1 EchoSlot. Gain 1 Echo.
-822743|Wurmkin Spike: Consume. / Apply 4 per X Reap to enemy units.
-822744|Wurmkin Etchings: Consume. / Return 5 consumed spells to the top of your draw pile.
-822745|Automatic Railspikes: Deal 10 per X damage. / Slay: Add a permanent copy of this card to your discard pile.
-822746|Bone Rattler: Consume. / Apply +5 to your Pyre.
-822747|Boneshine: Purge. / Restore 5 per X Pyre health.
-822748|Gift of Gratitude: Purge. / Gain 40.
-822749|Most Blessed Sword: Purge. Piercing. / Deal 30 per X damage to enemy units.
-822750|Thy Holiest Shield: Purge. / Apply 2 per X Damage Shield.
-822751|Bone Dog's Favor: Unplayable. / Reserve: Restore 5 Pyre health.
-822752|Deadweight: Unplayable. Unpurgeable.
-822753|Excavated Ember: Consume. / Gain 2 Ember. Draw 1.
-822754|Petrified Skull: Purge. / Kill a non-boss unit.
-822755|Spikedriver Colony: Multistrike 1. / Extinguish: Add a permanent copy of this card to your discard pile.+20 Attack and remove Extinguish.
-822756|Trap Chute: Consume. / Descend a unit to the bottom floor. Apply Dazed 2.
-822757|Dante the Deceptive: When played, gain a stack of Multistrike for each Blight card in your deck.
-822758|Dante's Candle: Unpurgeable. / Reserve: Your Pyre takes 3 damage.
-822759|Petty Theft: Deal 2 damage to an enemy unit. / Slay: +50 Gold.
-822760|Self-Mutilation: Purge. / Reserve: Your Pyre takes 5 damage.
-822761|Sinner's Burden: Purge.
-822763|Vengeful Shard: Reserve: Your Pyre takes 1 damage.
-822765|Steel Pulleyclaw: Consume. / Ascend an enemy unit to the Pyre room. Apply Dazed 3.
-822767|Calcified Ember: Purge.
-822768|Good Ol' Wingmaker: Deal 6 damage to enemy units, two times. / Slay: +1 Capacity on this floor.
-822769|Heph the Blacksmith: Trample. / Resolve: +1 Capacity on this floor.
-822770|Olde Magic: 
-822771|Nexus Spike: Consume. / Does not affect bosses.
-822772|For the Greater Good: Summon a friendly Rebel unit to the front of this floor.

@@ -1,0 +1,3 @@
+# Cards (<ids>|<name>: <text>)
+819175|Blizzard Bombs: On death, freeze all surrounding units
+819176|Orgone Leechers: Before moving, reduce mana by 3, then freeze an enemy in the tile in front. Decrease mana reduction by 1 for each other friendly ancient on the board.

@@ -1,0 +1,201 @@
+# Cards (<ids>|<name>: <text>)
+822401|Action: 
+822402|Armor: 
+822403|Armored: 
+822404|Ascend: 
+822405|Attuned: 
+822406|Buffet: 
+822407|Burnout: 
+822408|Charged Echo: 
+822409|Consume: 
+822410|Cultivate: 
+822411|Damage Shield: 
+822412|Dazed: 
+822413|Descend: 
+822414|Eaten: 
+822415|Emberdrain: 
+822416|Enchant: 
+822417|Endless: 
+822418|Etch: 
+822419|Extinguish: 
+822420|Extract: 
+822421|Fragile: 
+822422|Frostbite: 
+822423|Frozen: 
+822424|Fuel: 
+822425|Gorge: 
+822426|Harvest: 
+822427|Hatch: 
+822428|Hunger: 
+822429|Incant: 
+822430|Inert: 
+822431|Infused: 
+822432|Inspire: 
+822433|Lifesteal: 
+822434|Magic Power: 
+822435|Melee Weakness: 
+822436|Multistrike: 
+822437|Offering: 
+822438|Permafrost: 
+822439|Phased: 
+822440|Piercing: 
+822441|Purge: 
+822442|Pyrebound: 
+822443|Quick: 
+822444|Rage: 
+822445|Rally: 
+822446|Reap: 
+822447|Reform: 
+822448|Regen: 
+822449|Rejuvenate: 
+822450|Reserve: 
+822451|Resolve: 
+822452|Revenge: 
+822453|Rooted: 
+822454|Sap: 
+822455|Shell: 
+822456|Silence: 
+822457|Slay: 
+822458|Spell Weakness: 
+822459|Spikes: 
+822460|Stealth: 
+822461|Strike: 
+822462|Summon: 
+822463|Sweep: 
+822464|Trample: 
+822465|Unplayable: 
+822466|Unpurgeable: 
+822467|Animus: Animus: 4 entities of this type.
+822468|Blight: Blight: 4 entities of this type.
+822469|Channeler: Channeler: 3 entities of this type.
+822470|Construct: Construct: 4 entities of this type.
+822471|Dante: Dante: 1 entities of this type.
+822472|Demon: Demon: 9 entities of this type.
+822473|Egg: Egg: 3 entities of this type.
+822474|Fen: Fen: 1 entities of this type.
+822475|Hollow: Hollow: 5 entities of this type.
+822476|Host: Host: 2 entities of this type.
+822477|Imp: Imp: 8 entities of this type.
+822478|Kin: Kin: 6 entities of this type.
+822479|Machine: Machine: 1 entities of this type.
+822480|Mage: Mage: 3 entities of this type.
+822481|Morsel: Morsel: 6 entities of this type.
+822482|Scourge: Scourge: 4 entities of this type.
+822483|Shroud: Shroud: 6 entities of this type.
+822484|Siren: Siren: 6 entities of this type.
+822485|Steward: Steward: 1 entities of this type.
+822486|Titanspawn: Titanspawn: 1 entities of this type.
+822487|Tomb: Tomb: 4 entities of this type.
+822488|Totem: Totem: 4 entities of this type.
+822489|Waxer: Waxer: 6 entities of this type.
+822490|Wickless: Wickless: 7 entities of this type.
+822491|Hornbreaker Prince: 
+822492|Shardtail Queen: 
+822493|Queen's Impling: Summon: Deal 10 damage to the front enemy unit.
+822494|Spike of the Hellhorned: Consume. / Apply 2 per X Rage and 2 per X Armor.
+822495|Vent: Deal 2 per X damage to enemy units.
+822496|Dark Deal: Deal 5 damage, Apply Rage 7.
+822497|Fortify: Apply Armor 5.
+822498|Imp-in-a-Box: Consume. / Add 2 random Imp units to your hand.
+822499|Imp-portant Work: Sacrifice Imp. / Gain 1 Ember. Draw 1.
+822500|Rage Serum: Consume. / Apply Rage 3.
+822501|Alloy of the Ancients: Consume. / Apply Armor 25.
+822502|Branded Warrior: Rage 4. / Slay: Apply Rage 3 to friendly units.
+822503|Deranged Brute: Rage on friendly units adds an additional +3 Attack per stack.
+822504|Fledgling Imp: Summon: Apply Rage 5 to friendly units.
+822505|Hidden Passage: Ascend a unit.
+822506|Horn Break: Piercing. / Deal 5 damage, twice.
+822507|Horned Warrior: Multistrike 1.
+822508|Impish Scholar: Summon: Return a random consumed spell to your hand.
+822509|Imp-olate: Deal damage to the front enemy unit equal to 15x the number of Imp units in your deck.
+822510|Imp-pressive: Attuned. Sacrifice Imp. / Deal 50 damage to the front enemy unit.
+822511|March of Shields: Move a unit to the front and apply Armor 10.
+822512|Molting Imp: Summon: Deal 5 damage to enemy units.
+822513|Pyre Chomper: Summon: Gain 4 Ember.
+822514|Railbeater: Armor 30. / Strike: Apply Melee Weakness 1 to the attacked unit.
+822515|Steelworker: Resolve: Apply Armor 5 to friendly units.
+822516|Torch: Deal 2 damage.
+822517|Transcendimp: When played, repeat all Summon effects triggered so far this battle.
+822518|Welder Helper: Summon: Apply Armor 20 to the front friendly unit.
+822519|Alpha Fiend: Strike: +5 Attack.
+822520|Branding Rite: Piercing. / Deal 5 damage. Apply Armor 20.
+822521|Enflame: Apply Rage 4 and Armor 5.
+822522|Tiresome Climb: Ascend a unit and apply Dazed 2.
+822523|Battering Ram: Deal damage to the front enemy unit equal to 4x the amount of Armor on friendly units.
+822524|Inferno: Piercing. / Deal 100 damage to friendly and enemy units.
+822525|Last Stand: Consume. / Double the amount of Rage on friendly units.
+822526|Reinforce: Consume. / Double Armor on a unit.
+822527|Ritual of Battle: Apply Rage 10.
+822529|Onehorn's Tome: Consume. / Apply Multistrike 1 and Fragile to a friendly unit.
+822531|Apex Imp: Armored: Gain Rage equal to gained Armor. / Summon: Gain Armor 5.
+822532|The Sentient: 
+822533|Wyldenten: 
+822534|Awoken's Rail Spike: Consume. / Draw [X Cost] and apply -1 Ember to those cards.
+822535|Ensnare: Apply Rooted 1 to an enemy unit. / Draw +1 next turn.
+822536|Invigorating Solution: Consume. / Draw +3 next turn.
+822537|Preserved Thorns: Consume. / Add 3 Sting spells to your hand.
+822538|Sting: Deal 10 damage to the front enemy unit. / Draw +1 next turn.
+822539|Unleash the Wildwood: Restore friendly units to full health.
+822540|Vine Grasp: Deal 3 damage. Move that unit to the front.
+822541|Animus of Speed: Quick.
+822542|Animus of Will: Multistrike 2.
+822543|Awoken Hollow: Summon: Gain 60 max health. / Rejuvenate: Cultivate 2
+822544|Channelsong: Consume. / Draw a unit and apply +20 Attack, +20 Health, and 0 Ember.
+822545|Edge Prior: Healing spells cast on this floor cost -1 Ember.
+822546|Engraft: Restore 1 health. / Gain 1 Ember. Draw +1 next turn.
+822547|Glimmer: Restore 2 health to all friendly units and deal 2 damage to all enemy units.
+822548|Husk Hermit: Sweep.
+822549|Pyre Shards: Consume. / Apply Spikes 4.
+822550|Razorsharp Edge: Apply +10 Attack and -2 Health.
+822551|Restoration Detonation: Restore 10 health to a friendly unit. Deal damage to the front enemy unit equal to 5x the amount healed.
+822552|Restore: Restore 2 health. Apply Regen 1.
+822553|Rootseeds: Apply +2 Attack. / Draw +1 next turn.
+822554|Shard Channeler: Spikes on friendly units deal +1 damage per stack.
+822555|Shattered Shell: Sweep. / Slay: +3 Attack.
+822557|Thorned Hollow: Summon: Gain 60 max health. / Rejuvenate: Gain Spikes 3.
+822558|Vinemother: Resolve: Add a Sting spell to your hand.
+822560|Wildwood Sap: Consume. / Apply Regen 5.
+822561|Wildwood Tome: Consume. / Apply Quick.
+822562|Adaptive Mutation: Consume. / Restore a friendly unit to full health and then swap [Attack] and [Health].
+822563|Bramble Lash: Deal damage to the front enemy unit equal to 10x the amount of Spikes on friendly units.
+822564|Focused Growth: Restore 25 health. / Draw +2 next turn.
+822565|Pyre-Gro: Consume. / Draw 2 less cards and gain +1 Ember per turn.
+822566|Restoring Retreat: Descend a unit and restore 10 health.
+822567|Sharpen: Apply +4 Attack and Spikes 4.
+822568|Spreading Spores: Apply Regen 2 and Spikes 2. Add a copy of this card to your discard pile.
+822569|Wilting Sapwood: Revenge: Gain 1 Ember.
+822570|Awake: Restore 30 health. Apply Regen 3.
+822571|Cycle of Life: Apply +10 Health and Spikes 3.
+822572|Steelsinger: Summon: Gain 80 max health. / Rejuvenate: +1 Attack permanently.
+822573|Tethys Titansbane: 
+822574|Solgard the Martyr: Incant: Gain Shard 1.
+822575|Spike of the Stygian: Consume. / Apply 1 per X Sap and 5 per X Frostbite.
+822576|Crystalline Seeds: Consume. / Apply Frostbite 6 to enemy units.
+822577|Energy Siphon: Apply Spell Weakness 1 to an enemy unit.
+822578|Offering Token: Draw 1. Discard 1.
+822579|Preserve: Permafrost. / Apply Frozen to a card in your hand.
+822580|Unnamed Tome: Permafrost. Consume. / Apply Silence to enemy units.
+822581|Urchin Spines: Consume. / Apply Spell Weakness 2 to enemy units.
+822582|Coldcaelia: Sweep. / Strike: Apply Frostbite 3 to the attacked unit.
+822583|Cuttlehex: End of Turn: Apply Frozen to a random card in your hand.
+822584|Drain: Apply Sap 3. / Discard a card at random.
+822585|Flash Freeze: Deal 3 damage. Apply Frostbite 8.
+822586|Forgone Power: Apply Frostbite 6 to the front enemy unit. / Discard a card at random
+822587|Frenzied Swarm: Apply Dazed 1 to enemy units. / Discard your hand.
+822588|Frozen Lance: Deal 6 damage to the front enemy unit.
+822589|Glacial Seal: Incant: Apply Frostbite 2 to enemy units.
+822590|Guard of the Unnamed: Incant: Gain Armor 3.
+822591|Guardian Stone: Incant: Apply Armor 1 to friendly units.
+822592|Harness the Titan: Apply +5 Magic Power to spells in hand.
+822593|Ice and Pyre: Pyrebound. Attuned. / Deal 90 damage to the front enemy unit.
+822594|Icestorm: Deal 1 damage to a random enemy unit, five times.
+822595|Icy Cilophyte: Sweep. / Strike: Apply Spell Weakness 1 to the attacked unit.
+822596|Lodestone Totem: Incant: Apply Sap 1 to enemy units.
+822597|Molluscmage: +10 Magic Power on this floor.
+822598|Nameless Siren: Incant: Gain Rage 2.
+822599|Offering Monument: Incant: Draw 1 and this unit gets -5 Health.
+822600|Siren of the Sea: Incant: +2 Attack and +2 Health.
+822601|Siren's Song: Pyrebound. / Ascend all enemy units on this floor and apply Dazed 3.
+822602|Titan Sentry: Revenge: Apply Frostbite 3 to enemy units.
+822603|Titan's Gratitude: Attuned. / Deal 25 damage to the front enemy unit. / Discard a card at random.
+822604|Deep Offering: Consume. / Discard your hand. Draw 5.

@@ -1,5 +1,75 @@
 # Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics.
 # https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/ , https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
+# Rules and terms for the game block (key.py read), only facts the source states: https://railtools.net/monster-train-2/keywords/
+# term: Armor: absorbs incoming damage before health is lost, one point per point of Armor.
+# term: Avarice: unblocked damage from this unit grants Gold equal to its stacks.
+# term: Buffet: this unit can be eaten more than once.
+# term: Burnout: the unit dies when its stacks run out; the count drops each turn.
+# term: Burst: extra attacks per stack, losing one stack after each bonus attack.
+# term: Conduit: adds Magic Power to the floor for each stack.
+# term: Cooldown: the unit's ability can't be used while stacks remain.
+# term: Damage Shield: blocks the next source of damage.
+# term: Dazed: can't attack or use Action or Resolve abilities; wears off each turn.
+# term: Decay: 3 damage per stack at turn end; fades each turn.
+# term: Emberdrain: costs 1 Ember per stack at the start of each turn; fades each turn.
+# term: Endless: when the unit dies or is eaten, its card returns to the top of the draw pile.
+# term: Fragile: the unit dies if it loses any health.
+# term: Frostbite: 1 damage per stack at turn end; fades each turn.
+# term: Fuel: cancels Inert and Dormant; loses one stack each turn.
+# term: Hatch: Corrupt on the floor removes Hatch from the front unit; the unit hatches once all Hatch is gone.
+# term: Immobile: the unit can't change floors or its position on its floor.
+# term: Inert: can't attack unless the unit has Fuel.
+# term: Lifesteal: heals by the damage dealt on attack; weakens with each attack.
+# term: Mageblade: Attack per stack equal to the floor's Magic Power.
+# term: Melee Weakness: the next attack against the unit deals extra damage per stack.
+# term: Multistrike: one additional attack each turn.
+# term: Mute: disables triggers, abilities and enchants; fades each turn.
+# term: Pyregel: more incoming damage per stack.
+# term: Quick: attacks before enemy units in combat.
+# term: Rage: Attack per stack; fades each turn.
+# term: Reanimate: when the unit dies it comes back with 1 health, costing one stack.
+# term: Reap: 1 damage per Corrupt stack on the floor after combat; does not fade.
+# term: Regen: restores health per stack at turn end; fades each turn.
+# term: Rooted: blocks the next floor change (bosses are immune).
+# term: Sap: less Attack per stack; fades each turn.
+# term: Spell Weakness: the next damage spell hit deals extra damage per stack.
+# term: Spikes: attackers take damage per stack when they hit this unit.
+# term: Stealth: can't be targeted in combat; fades each turn.
+# term: Steelguard: limits Armor loss per hit to a set amount.
+# term: Sweep: attacks all enemy units.
+# term: Titanskin: less damage taken by a set amount per stack.
+# term: Trample: excess attack damage carries over to the next enemy unit.
+# term: Troop: Attack and Health per stack; losing one stack's worth of Health removes a stack.
+# term: Unstable: dies at end of combat if its HP is at or below its stacks, then explodes for damage to enemies on the floor.
+# term: Valor: Attack per stack, and Armor raised to the stack count if this is the front unit after combat.
+# term: Armored (trigger): when Armor is added to this unit.
+# term: Artificer (trigger): when Equipment is attached to an ally of this unit.
+# term: Celebrate (trigger): after a boss is defeated.
+# term: Consume: once played, the card is removed from the deck for the rest of the battle.
+# term: Eaten (trigger): when the front unit eats this unit.
+# term: Enchant: an aura giving other units on the floor the listed bonus.
+# term: Equipped (trigger): when Equipment is attached to this unit.
+# term: Etch (trigger): when a card is consumed on this floor.
+# term: Extinguish (trigger): when this unit dies.
+# term: Gorge (trigger): when this unit eats another unit.
+# term: Harvest (trigger): when any unit dies on this floor.
+# term: Hunger (trigger): when a unit with Eaten is summoned.
+# term: Incant (trigger): when a spell is played on this floor.
+# term: Inspire (trigger): when the clan's resource is gained on this floor.
+# term: Mooncycle (trigger): when the moon changes phase.
+# term: Moonlit: active while the moon is in its Moonlit phase.
+# term: Moonshade: active while the moon is in its Moonshade phase.
+# term: Propagate: raises existing buff stacks on friendly units and debuff stacks on enemies by the stated amount, except Dazed.
+# term: Rally (trigger): when a friendly unit is summoned on this floor.
+# term: Reanimated (trigger): when this unit is revived by Reanimate.
+# term: Rejuvenate (trigger): when this unit is healed, even at full health.
+# term: Resolve (trigger): after combat.
+# term: Revenge (trigger): when this unit is hit.
+# term: Shift (trigger): whenever this unit moves.
+# term: Slay (trigger): after dealing a killing blow.
+# term: Strike (trigger): when this unit attacks.
+# term: Summon (trigger): when this unit is played.
+# term: Unplayable: this card cannot be played.
 multistrike|multi_attack|\bmultistrike\b
 rage|stat_gain|\brage\b
 sweep|multi_target_attack|\bsweep\b

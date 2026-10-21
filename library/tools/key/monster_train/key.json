@@ -1,11 +1,6 @@
 {
 "822401": {
-"tags": [
-[
-"combat_start",
-"Action"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822402": {
@@ -18,25 +13,20 @@
 "by": "read"
 },
 "822403": {
-"tags": [],
+"tags": [
+[
+"block_armor",
+"Armored"
+]
+],
 "by": "read"
 },
 "822404": {
-"tags": [
-[
-"movement",
-"Ascend"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822405": {
-"tags": [
-[
-"spell_power",
-"Attuned"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822406": {
@@ -71,12 +61,7 @@
 "by": "read"
 },
 "822410": {
-"tags": [
-[
-"stat_gain",
-"Cultivate"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822411": {
@@ -91,25 +76,28 @@
 "822412": {
 "tags": [
 [
-"disable",
+"attack_lock",
+"Dazed"
+],
+[
+"silence",
+"Dazed"
+],
+[
+"temporary_effect",
 "Dazed"
 ]
 ],
 "by": "read"
 },
 "822413": {
-"tags": [
-[
-"movement",
-"Descend"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822414": {
 "tags": [
 [
-"death_trigger",
+"leave_trigger",
 "Eaten"
 ]
 ],
@@ -118,7 +106,11 @@
 "822415": {
 "tags": [
 [
-"upkeep",
+"disruption",
+"Emberdrain"
+],
+[
+"turn_start",
 "Emberdrain"
 ]
 ],
@@ -138,12 +130,21 @@
 [
 "recycle",
 "Endless"
+],
+[
+"leave_trigger",
+"Endless"
 ]
 ],
 "by": "read"
 },
 "822418": {
-"tags": [],
+"tags": [
+[
+"exhaust",
+"Etch"
+]
+],
 "by": "read"
 },
 "822419": {
@@ -156,16 +157,16 @@
 "by": "read"
 },
 "822420": {
-"tags": [
-[
-"cost_type",
-"Extract"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822421": {
-"tags": [],
+"tags": [
+[
+"self_destruct",
+"Fragile"
+]
+],
 "by": "read"
 },
 "822422": {
@@ -173,27 +174,31 @@
 [
 "damage_over_time",
 "Frostbite"
+],
+[
+"turn_end",
+"Frostbite"
 ]
 ],
 "by": "read"
 },
 "822423": {
-"tags": [
-[
-"retain",
-"Frozen"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822424": {
-"tags": [],
+"tags": [
+[
+"cant_attack",
+"Fuel"
+]
+],
 "by": "read"
 },
 "822425": {
 "tags": [
 [
-"other_death_trigger",
+"on_sacrifice",
 "Gorge"
 ]
 ],
@@ -210,6 +215,10 @@
 },
 "822427": {
 "tags": [
+[
+"transform",
+"Hatch"
+],
 [
 "delayed",
 "Hatch"
@@ -249,7 +258,12 @@
 "by": "read"
 },
 "822432": {
-"tags": [],
+"tags": [
+[
+"resource_gain",
+"Inspire"
+]
+],
 "by": "read"
 },
 "822433": {
@@ -262,12 +276,7 @@
 "by": "read"
 },
 "822434": {
-"tags": [
-[
-"spell_power",
-"Magic Power"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822435": {
@@ -289,61 +298,27 @@
 "by": "read"
 },
 "822437": {
-"tags": [
-[
-"on_discard",
-"Offering"
-],
-[
-"free_play",
-"Offering"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822438": {
-"tags": [
-[
-"retain",
-"Permafrost"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822439": {
-"tags": [
-[
-"immunity",
-"Phased"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822440": {
-"tags": [
-[
-"piercing",
-"Piercing"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822441": {
-"tags": [
-[
-"banish",
-"Purge"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822442": {
-"tags": [
-[
-"play_restriction",
-"Pyrebound"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822443": {
@@ -358,7 +333,7 @@
 "822444": {
 "tags": [
 [
-"stat_gain",
+"temporary_buff",
 "Rage"
 ]
 ],
@@ -378,23 +353,26 @@
 [
 "damage_over_time",
 "Reap"
+],
+[
+"condition_count",
+"Reap"
 ]
 ],
 "by": "read"
 },
 "822447": {
-"tags": [
-[
-"revive",
-"Reform"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822448": {
 "tags": [
 [
 "regeneration",
+"Regen"
+],
+[
+"turn_end",
 "Regen"
 ]
 ],
@@ -410,12 +388,7 @@
 "by": "read"
 },
 "822450": {
-"tags": [
-[
-"turn_end",
-"Reserve"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822451": {
@@ -450,26 +423,20 @@
 [
 "stat_loss",
 "Sap"
+],
+[
+"temporary_effect",
+"Sap"
 ]
 ],
 "by": "read"
 },
 "822455": {
-"tags": [
-[
-"delayed",
-"Shell"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822456": {
-"tags": [
-[
-"silence",
-"Silence"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822457": {
@@ -554,12 +521,7 @@
 "by": "read"
 },
 "822466": {
-"tags": [
-[
-"immunity",
-"Unpurgeable"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822467": {

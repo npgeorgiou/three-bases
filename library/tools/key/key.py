@@ -7,12 +7,13 @@ edited to agree with the library. Prints counts and sampled lines only.
   key.py coverage <game>              concepts on fewer than 5 key entries of the game: candidates found by the concept's typical
                                       words (its wording patterns) among the game's other entries -> key/<game>/cov_entries.json
                                       (read like the key; their tags come from reading, never from the search)
-  key.py read <game> [cov]            the one reading request: game block + cards -> key/<game>/read.txt (read_cov.txt)
-  key.py answer <game> [cov]          quote check of key/<game>/answer.txt (answer_cov.txt) -> key/<game>/key.json
+  key.py read <game> [cov|kw]         the reading request: rules + game block -> key/<game>/read.txt, cards -> cards[_cov|_kw]_N.txt
+                                      (200 card lines each; kw: only the sample's keyword entries)
+  key.py answer <game> [cov|kw]       quote check of key/<game>/answer[_cov|_kw].txt -> key/<game>/key.json (cov, kw: merged in)
   key.py credit [<game>...]            keyword credit for cards that name keywords -> key/<game>/key_kw.json (KEY_BUG.md)
   key.py score <db> [game ...]        wrong tags and missed mechanics per 100 key entries (script; see SCORING below)
 
-READING (Kaptain's decision, 21 Oct 2026): one process reads read.txt once and writes one line per card to answer.txt;
+READING (Kaptain's decision, 21 Oct 2026): one process reads read.txt and the cards files once and writes one line per card to answer.txt;
 ADDING_GAMES.md, "Reading cards", says how.
 
 SCORING. Key concepts K (narrowest, as read) and library tags L of an entry, any role. Game-structure tags (method
@@ -84,7 +85,7 @@ def narrow(ks):   # keep the narrowest: drop a concept when a descendant of it i
 
 ROLES = {'does', 'grants', 'benefits', 'counters', 'cost'}
 RULES = '''# Reading request: {game}
-Read the game block once, then every card below. Judge only against the concept definitions at the end of the game block; use
+Read this file once, then every card in the cards files, in order. Judge only against the concept definitions at the end of the game block; use
 the game's rules, keywords and factions to understand what a card does. Write nothing but the answer lines.
 
 ## How to read a card
@@ -97,7 +98,7 @@ the game's rules, keywords and factions to understand what a card does. Write no
 - A card with no mechanic (lore, a bare name, plain stats with nothing else) gets an empty answer.
 - Do not guess beyond the text. If the text doesn't say it, it isn't there.
 
-## Answer: one line per card line below, in the same order
+## Answer: one line per card line of the cards files, in the same order
 `<ids>|<concept>:<role>:<exact words>;<concept>:<role>:<exact words>;...`   (nothing after `|` for a card with no mechanic)
 <ids> as given on the card line. Roles: does (the card does it), grants (it gives it to another card), benefits (it is better
 when this happens), counters (it answers this), cost (it is part of the cost). The exact words never contain `;` or `|`:
@@ -110,7 +111,7 @@ def block(g):
     name, fam, ed, struct, notes = c.execute('SELECT name, family, edition, structure, notes FROM games WHERE id=?', (g,)).fetchone()
     out += ['# Game block: %s (%s)' % (name, ed), '', '## Rules', struct or '', notes or '']
     kws = c.execute("SELECT name, text FROM entities WHERE game=? AND category='keyword' ORDER BY name", (g,)).fetchall()
-    if kws: out += ['', '## Keywords'] + ['- %s: %s' % (n, (t or '').replace('\n', ' / ')) for n, t in kws]
+    if kws: out += ['', '## Keywords'] + ['- %s: %s' % (n, t.replace('\n', ' / ')) if (t or '').strip() else '- %s (no definition in the library; see Rules and terms)' % n for n, t in kws]
     fs = c.execute('SELECT name, entity_count FROM factions WHERE game=? ORDER BY name', (g,)).fetchall()
     if fs: out += ['', '## Factions (cards)'] + ['- %s (%s)' % f for f in fs]
     ts = [n for n, in c.execute("SELECT name FROM entities WHERE game=? AND category='tribe' ORDER BY name", (g,))]
@@ -126,23 +127,32 @@ def block(g):
     out += [l.rstrip('\n') for l in open(os.path.join(HERE, 'defs.txt'), encoding='utf-8')]
     return '\n'.join(out)
 
-def card_lines(g, cov):
-    f = os.path.join(gdir(g), 'cov_entries.json' if cov else 'entries.json')
+def card_lines(g, part):
+    f = os.path.join(gdir(g), 'cov_entries.json' if part == 'cov' else 'entries.json')
+    ents = json.load(open(f))
+    if part == 'kw':   # the game's keyword entries of the sample only
+        kw = {i for i, in db().execute("SELECT id FROM entities WHERE game=? AND category='keyword'", (g,))}
+        ents = [e for e in ents if e['id'] in kw]
     groups = {}
-    for e in json.load(open(f)):   # identical cards are sent once
+    for e in ents:   # identical cards are sent once
         groups.setdefault((e['name'], e['text']), []).append(str(e['id']))
     return ['%s|%s: %s' % (','.join(ids), n, t.replace('\n', ' / ')) for (n, t), ids in groups.items()]
 
-def read(g, cov=False):
-    lines = card_lines(g, cov)
-    p = os.path.join(gdir(g), 'read_cov.txt' if cov else 'read.txt')
-    open(p, 'w', encoding='utf-8').write(RULES.format(game=g) + '\n' + block(g) + '\n\n# Cards (<ids>|<name>: <text>)\n' + '\n'.join(lines) + '\n')
-    print(g, 'card lines', len(lines), 'characters', os.path.getsize(p), '->', os.path.relpath(p, HERE))
+PART = 200   # card lines per cards file: each file and read.txt can be read in one go
+def read(g, part=''):
+    """read.txt (rules + game block) and cards[_part]_N.txt; one process reads them all once, in order."""
+    d = gdir(g); lines = card_lines(g, part); sfx = '_' + part if part else ''
+    for f in glob.glob(os.path.join(d, 'cards%s_*.txt' % sfx)): os.remove(f)
+    open(os.path.join(d, 'read.txt'), 'w', encoding='utf-8').write(RULES.format(game=g) + '\n' + block(g) + '\n')
+    n = 0
+    for n, b0 in enumerate(range(0, len(lines), PART), 1):
+        open(os.path.join(d, 'cards%s_%d.txt' % (sfx, n)), 'w', encoding='utf-8').write('# Cards (<ids>|<name>: <text>)\n' + '\n'.join(lines[b0:b0 + PART]) + '\n')
+    print(g, 'card lines', len(lines), 'in', n, 'cards files; read.txt', os.path.getsize(os.path.join(d, 'read.txt')), 'characters')
 
-def answer(g, cov=False):
-    d = gdir(g); ents = texts(g); want = {i for l in card_lines(g, cov) for i in l.split('|')[0].split(',')}
+def answer(g, part=''):
+    d = gdir(g); ents = texts(g); want = {i for l in card_lines(g, part) for i in l.split('|')[0].split(',')}
     new = {}; nb = collections.Counter(); ex = []
-    for l in open(os.path.join(d, 'answer_cov.txt' if cov else 'answer.txt'), encoding='utf-8'):
+    for l in open(os.path.join(d, 'answer_%s.txt' % part if part else 'answer.txt'), encoding='utf-8'):
         if '|' not in l: continue
         ids, _, rest = l.rstrip('\n').partition('|')
         for i in ids.split(','):
@@ -157,7 +167,7 @@ def answer(g, cov=False):
             new[i] = {'tags': tags, 'by': 'read'}
     miss = want - set(new)
     kf = os.path.join(d, 'key.json')
-    if cov: key = json.load(open(kf)); key.update(new); new = key
+    if part: key = json.load(open(kf)); key.update(new); new = key   # cov / kw: merged into the key
     elif os.path.exists(kf) and '--force' not in sys.argv:
         sys.exit(g + ': key.json exists (it may have corrections); --force replaces it')
     json.dump(new, open(kf, 'w'), indent=0)
@@ -286,8 +296,8 @@ if __name__ == '__main__':
     cmd, *a = sys.argv[1:]
     if cmd == 'defs': defs()
     elif cmd == 'sample': [sample(g) for g in (GAMES if a[0] == 'all' else a)]
-    elif cmd == 'read': read(a[0], 'cov' in a[1:])
-    elif cmd == 'answer': answer(a[0], 'cov' in a[1:])
+    elif cmd == 'read': read(a[0], next((x for x in a[1:] if x in ('cov', 'kw')), ''))
+    elif cmd == 'answer': answer(a[0], next((x for x in a[1:] if x in ('cov', 'kw')), ''))
     elif cmd == 'coverage': coverage(a[0])
     elif cmd == 'credit': [credit(g) for g in (a or GAMES)]
     elif cmd == 'score': score(a[0], a[1:] or GAMES)

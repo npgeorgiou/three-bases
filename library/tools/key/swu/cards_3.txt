@@ -1,0 +1,101 @@
+# Cards (<ids>|<name>: <text>)
+820497|Tip the Scale: Look at an opponent's hand and discard a non-unit card from it.
+819371|Command: Choose two, in any order: /  / Give 2 Experience tokens to a unit. / A friendly unit deals damage equal to its power to a non-unique enemy unit. / Put this event into play as a resource. / Return a unit from your discard pile to your hand.
+819800|Calculating MagnaGuard: When Played/When a friendly unit is defeated: This unit gains Sentinel for this phase. (Units in this arena can't attack your non-Sentinel units or your base.)
+820025|Admiral Holdo - We're Not Alone: Action [1 resource, Exhaust]: Give a Resistance unit or a unit with a Resistance upgrade on it +2/+2 for this phase. / Deployed: On Attack: You may give another Resistance unit or a unit with a Resistance upgrade on it +2/+2 for this phase. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+819865|Synchronized Strike: Deal damage to an enemy unit equal to the number of units you control in its arena.
+820493|A Precarious Predicament: Return an enemy non-leader unit to its owner's hand unless its controller says, “It could be worse.” If they do, you may play a card named It's Worse from your hand or resources for free.
+820930|Bib Fortuna - Die Wanna Wanga?: When Played: If you control another Underworld unit, create a Credit token.
+821169|Admiral Ackbar - Assume Attack Coordinates: When Played: You may defeat this unit. If you do, search the top 10 cards of your deck for any number of space units with combined cost 5 or less and play each of them for free.
+820243|Electromagnetic Pulse: Deal 2 damage to a Droid or Vehicle unit and exhaust it.
+819822|Equalize: Give a unit –2/–2 for this phase. Then, if you control fewer units than that unit's controller, give another unit –2/–2 for this phase.
+819427|Star Wing Scout: When Defeated: If you have the initiative, draw 2 cards.
+819289|Tarkintown: Epic Action: Deal 3 damage to a damaged non-leader unit.
+820871|Maz Kanata - Where's My Boyfriend?: When Attack Ends: If this unit survived, search the top 5 cards of your deck for an Underworld unit and play it. It costs 4 resources less and enters play ready. At the start of the regroup phase, put that unit on the bottom of your deck (if it is still in play).
+821188|Fang Fighter Squadron: Support (When you play this unit, you may attack with another unit. It gains this unit's other abilities for this attack.)
+820616|Major Partagaz - Healthcare Provider: Overwhelm / When another friendly Official unit attacks: This unit gets +2/+2 for this phase.
+820746|Libertine - Under New Ownership: This unit gets +1/+0 for each captured card it's guarding. / When Played: Choose an enemy unit and a non-leader friendly unit. The enemy unit captures the friendly unit.
+821108|Shin Hati - Going Somewhere?: While this is the only friendly non-leader ground unit, she gains Sentinel. (Enemy units in this arena must attack a Sentinel when they attack you.)
+821121|The Mandalorian - Devoted Rescuer: Shielded / If damage would be dealt to another friendly unit, you may defeat a Shield token on this unit. If you do, prevent that damage.
+821147|The Conflict Within: Attached unit gains: “When this unit readies: You may pay 3 resources. If you don't, exhaust this unit.”
+819443|Boba Fett - Disintegrator: On Attack: If this unit is attacking an exhausted unit that didn't enter play this round, deal 3 damage to the defender.
+819273|Leia Organa - Alliance General: Action [exhaust]: Attack with a Rebel unit. Then, you may attack with another Rebel unit. / Deployed: Raid 1 (This unit gets +1/+0 while attacking.) /  / When this unit completes an attack: You may attack with another Rebel unit. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819618|Enterprising Lackeys: When Defeated: You may defeat a friendly resource. If you do, put this unit into play as a resource. / Smuggle [6 resources Command Command]
+819732|Boba Fett's Armor: Attach to a non-Vehicle unit. / If attached unit is Boba Fett and damage would be dealt to him, prevent 2 of that damage.
+820545|Mon Mothma - Forming a Coalition: Ignore the aspect penalties on non-Villainy Official units you play. / Deployed: Ignore the aspect penalties on non‑Villainy Official units you play. / Each other friendly Official unit gets +0/+1. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+821066|Grand Admiral Sloane - Holding the Empire Together: Action [Exhaust]: Choose one: / Give each ground unit Sentinel and Overwhelm for this phase. / Give each space unit Sentinel and Overwhelm for this phase. / Deployed: Overwhelm / Each other friendly unit gains Overwhelm and Sentinel. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819559|Concord Dawn Interceptors: Sentinel (Units in this arena can't attack your non-Sentinel units or your base.) / This unit gets +2/+0 while defending.
+819444|Seventh Fleet Defender: Shielded (When you play this unit, give a Shield token to it.)
+821032|Qui-Gon Jinn - Influencing Chance: Sentinel / When Played/On Attack: Look at the top 3 cards of your deck. You may discard 1 of them. Put the rest back on top in any order.
+821094|Tatooine Repulsor Train: This unit can't be attacked while you control 2 or more exhausted units (unless it gains Sentinel). / On Attack: Deal 2 damage to a ground unit for each friendly exhausted unit.
+820773|Hutt Cartel Starfighter: When Played: Deal 2 damage to this unit.
+819736|Bounty Posting: Search your deck for a Bounty upgrade, reveal it, and draw it. (Shuffle your deck.)  / You may play that upgrade (paying its cost).
+819552|Clan Saxon Gauntlet: Sentinel (Units in this arena can't attack your non-Sentinel units or your base.) / When this unit is attacked: You may give an Experience token to a unit (before damage is dealt).
+819416|For a Cause I Believe In: Reveal the top 4 cards of your deck. For each [Heroism] card revealed this way, deal 1 damage to an enemy base. You may discard any of the revealed cards and put the rest back on top of your deck in any order.
+820192|Koiogran Turn: Ready a Fighter or Transport unit with 6 or less power.
+820880|Broken Horn - Vizago's Pride: When Played: If you have fewer cards in hand than an opponent, draw a card. If you control fewer resources than an opponent, resource the top card of your deck.
+820445|Ataru Onslaught: Ready a Force unit with 4 or less power.
+819862|Aayla Secura - Master of the Blade: Coordinate — On Attack: Prevent all combat damage that would be dealt to this unit for this attack.
+820877|Luke Skywalker - Profit or Be Destroyed: When Played: An opponent chooses one: / They create a Credit token. Ready this unit. / You may deal 5 damage to a unit.
+819762|Mandalorian Warrior: When Played: You may give an Experience token to another Mandalorian unit.
+820286|Kit Fisto - Focused Jedi Master: Action [1 resource, Exhaust]: If you attacked with a Jedi unit this phase, deal 2 damage to a unit. / Deployed: Saboteur (When this unit attacks, ignore Sentinel and defeat the defender's Shields.) / This unit gets +1/+0 for each other friendly Jedi unit. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819908|Anakin Skywalker - Maverick Mentor: Coordinate — On Attack: Draw a card. (Gain this ability while you control 3 or more units.)
+819411|Black One - Scourge of Starkiller Base: When Played/When Defeated: You may discard your hand. If you do, draw 3 cards.
+819664|Wrecker - Boom!: Overwhelm / When Played: You may defeat a friendly resource. If you do, deal 5 damage to a ground unit.
+820706|Punishing One - Takes No Prisoners: This unit gains Raid 1 for each damaged enemy unit. / When Played/On Attack: You may deal 1 damage to a unit.
+821312|Anakin Skywalker - You Were Right About Me: Hidden / Saboteur / When Played: Give a Shield token to another friendly unit.
+820854|Benthic “Two Tubes” - The War Has Just Begun: On Attack: Deal 1 damage to an enemy ground unit. / When Defeated: Deal 1 damage to a base.
+819247|Separatist: Separatist: 103 entities of this type.
+819213|Creature: Creature: 54 entities of this type.
+820862|4-LOM - Devious: When Played: You may attack with a friendly Bounty Hunter unit, even if it's exhausted. It can't attack bases for this attack.
+820574|Creditor's Claim: Attached unit gains: “When Defeated: You may defeat a unit with 3 or less remaining HP.”
+819919|Clone Heavy Gunner: Coordinate — This unit gets +2/+0. (Gain this ability while you control 3 or more units.)
+820226|Sidon Ithano - The Crimson Corsair: When played as a unit: You may attach this unit as an upgrade to an enemy Vehicle unit without a Pilot on it.
+820094|Direct Hit: Defeat a non-leader Vehicle unit.
+819905|Batch Brothers: When Played: Create a Clone Trooper token.
+820110|Luke Skywalker - You Still With Me?: Epic Action: Piloting [3 resources Command Heroism] (You may play this as an upgrade on a friendly Vehicle without a Pilot.) / If this upgrade would be defeated, you may instead move him to the ground arena as a unit and exhaust him.
+819331|Rugged Survivors: Grit (This unit gets +1/+0 for each damage on it.) /  / On Attack: If you control a leader unit, you may draw a card.
+819334|Devotion: Attached unit gains Restore 2. (When this unit attacks, heal 2 damage from its controller's base.)
+819913|Mace Windu's Lightsaber: Attach to a non-Vehicle unit. / When Played: If attached unit is Mace Windu, draw 2 cards.
+820587|Diplomatic Immunity: Attached unit gains: “When this unit is attacked: You may disclose VigilanceVigilanceHeroismHeroism (reveal cards from your hand with these aspect icons among them). If you do, the attacker gets –2/–0 for this attack.”
+820239|Radiant VII - Ambassadors' Arrival: Each enemy non-leader unit gets –1/–0 for each damage on it. / When Played: Deal 5 indirect damage to a player.
+819436|Open Fire: Deal 4 damage to a unit.
+819756|The Mandalorian's Rifle: Attach to a friendly non-VEHICLE unit. /  / When Played: If attached unit is The Mandalorian, he captures an exhausted enemy non-leader unit. (Put the captured card facedown under him until he leaves play.)
+819680|Covetous Rivals: Grit (This unit gets +1/+0 for each damage on it.) / When Played/On Attack: You may deal 2 damage to a unit with a Bounty.
+820625|Director Krennic - I Lose Nothing But Time: Sentinel / When this unit is attacked: Discard a card from your deck. If it's a unit, you may return it to your hand.
+820839|IG-88 - Programmed to Kill: Shielded
+820789|Restore Freedom: Play a unit from your hand. It costs 1 resource less for each Heroism aspect icon among friendly units.
+820268|Sullustan Spacer: Epic Action: Piloting [1 resource] (You may play this as an upgrade on a friendly Vehicle without a Pilot.)
+820727|Grand Admiral Thrawn - Grand Schemer: When Played: An opponent may choose a non-leader unit they control. If they do, this unit captures that unit. If they don't, ready this unit. / When Defeated: A friendly unit captures an enemy non-leader unit in the same arena.
+820000|Phase II Clone Trooper: Ambush (When you play this unit, it may ready and attack an enemy unit.)
+819776|Maul - A Rival in Darkness: Action [Exhaust]: Attack with a unit. It gains Overwhelm for this attack. (When attacking an enemy unit, deal excess damage to the opponent's base.) / Deployed: Overwhelm / Each other friendly unit gains Overwhelm. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+819609|Sundari Peacekeeper: Raid 2 (This unit gets +2/+0 while attacking.) / Restore 2 (When this unit attacks, heal 2 damage from your base.)
+820443|Sorcerous Blast: Use the Force (lose your Force token). If you do, deal 3 damage to a unit.
+821043|Windfall: Create 3 Credit tokens.
+819890|In Defense of Kamino: For this phase, each friendly Republic unit gains Restore 2 and: “When Defeated: Create a Clone Trooper token.”
+819644|Guavian Antagonizer: Saboteur (When this unit attacks, ignore Sentinel and defeat the defender's Shields.) / Bounty — Draw a card. (When this unit is defeated or captured, your opponent collects its bounty.)
+819747|Gideon's Light Cruiser - Dark Troopers' Station: Overwhelm (When attacking an enemy unit, deal excess damage to the opponent's base.) /  / When Played: If you control Moff Gideon (as a leader or unit), play a [villainy] unit that costs 3 or less from your hand or discard pile for free.
+820012|Brain Invaders: Each leader loses all abilities except for epic actions and can't gain abilities.
+819370|Attack Pattern Delta: Give a friendly unit +3/+3 for this phase. /  / Give another friendly unit +2/+2 for this phase. /  / Give a third friendly unit +1/+1 for this phase.
+821104|Reanimated Night Trooper: When Defeated: Look at the top card of a deck. You may discard it.
+819387|Recruit: Search the top 5 cards of your deck for a unit, reveal it, and draw it. (Put the other cards on the bottom of your deck in a random order.)
+820221|Never Tell Me the Odds: Discard 3 cards from an opponent's deck and 3 cards from your deck. Deal damage to a unit equal to the number of cards with an odd cost discarded this way.
+819389|Prepare for Takeoff: Search the top 8 cards of your deck for up to 2 Vehicle units, reveal them, and draw them. (Put the other cards on the bottom of your deck in a random order.)
+820831|Chewbacca - Mighty Rescuer: Overwhelm / When Attack Ends: If the defending unit was defeated, give an Experience token to this unit and heal 3 damage from him.
+820517|Grogu - Mysterious Child: Hidden / Action [Exhaust]: Heal up to 2 damage from a unit. If you do, deal that much damage to a unit.
+820682|Chopper - War Hero: When this unit deals combat damage to a base: Each player discards a card from their hand.
+820943|Jaunty Light Freighter: When Played: Give an Experience token to this unit for each different aspect among units you control.
+819705|Grogu - Irresistible: Action [exhaust]: Exhaust an enemy unit.
+820092|Covering the Wing: Create an X-Wing token. You may give a Shield token to another unit.
+819889|Encouraging Leadership: Give each friendly unit +1/+1 for this phase.
+819276|IG-88 - Ruthless Bounty Hunter: Action [Exhaust]: Attack with a unit. If you control more units than the defending player, the attacker gets +1/+0 for this attack. / Deployed: Each other friendly unit gains Raid 1. (They get +1/+0 while attacking.) / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819937|Planetary Invasion: Exploit 3 / Ready up to 3 units. Each of those units gets +1/+0 and gains Overwhelm for this phase.
+819616|Spark of Hope: Choose a unit in your discard pile. If it was defeated this phase, put it into play as a resource.
+819912|Resolute - Under Anakin's Command: This unit costs 1 resource less to play for every 5 damage on your base. / When Played/On Attack: Deal 2 damage to an enemy unit and each other enemy unit with the same name as that unit.
+820529|Peli Motto - I Should Charge You More: On Attack: Give an Experience token to a friendly Vehicle or Droid unit.
+819881|Clone: You may have this unit enter play as a copy of a non-leader, non-Vehicle unit in play, except it gains the Clone trait and is not unique. (Only the card's printed attributes are copied.)
+819746|Kragan Gorr - Warbird Captain: When an enemy unit attacks your base: Give a Shield token to a friendly unit in the same arena as the attacker.
+819951|Padmé Amidala - Pursuing Peace: Coordinate — On Attack: Give an enemy unit –3/–0 for this phase. (Gain this ability while you control 3 or more units.)
+819412|Guerilla Attack Pod: Grit (This unit gets +1/+0 for each damage on it.)   /  / When Played: If a base has 15 or more damage on it, ready this unit.
+820448|Time of Crisis: Each player chooses a unit they control. Deal 3 damage to each unit not chosen this way.
+820611|Charged with Murder: You may disclose VigilanceVigilance (reveal cards from your hand with these aspect icons among them). If you do, defeat a damaged non-leader unit.
