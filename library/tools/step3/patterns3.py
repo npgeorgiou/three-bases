@@ -11,11 +11,10 @@ Scripts print counts and sampled lines only.
                                   and step3/to_read/<game>.txt (matches a weak pattern still cannot tell apart)
 
 Token saving (19 Oct 2026, Kaptain asked to save tokens): outside samples are judged only where the pattern has fewer than 10
-key matches in the game; with 10 or more the key decides (samples already judged still count). Judges since then run on a smaller
-model.
+key matches in the game; with 10 or more the key decides (samples already judged still count). 
 Verdicts per pattern and game: 'ok' (90%+ right), 'weak' (below 90%: narrow), 'thin' (one or two key matches and no sample).
-When a pattern has one or two key matches in a game, it passes or fails on the outside sample alone, and that sample gets two
-readers and a third for disagreements (agreed with Kaptain, 13 Oct 2026)."""
+When a pattern has one or two key matches in a game, it passes or fails on the outside sample alone.
+Questions are read as in ADDING_GAMES.md, "Reading cards"; the answers already in judge/ are data the build reads (answers())."""
 import collections, glob, json, os, random, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); TOOLS = os.path.dirname(HERE); KEY = os.path.join(TOOLS, 'key')
 sys.path.insert(0, TOOLS); sys.path.insert(0, KEY)
@@ -114,11 +113,11 @@ def sample(db, n):
                 if qid is None:
                     qid = str(len(Q['q'])); Q['q'][qid] = [e, k, dbl]; textq[tk] = qid; newq.append(qid)
                 elif dbl and not Q['q'][qid][2]:
-                    Q['q'][qid][2] = True; newq.append(qid)   # needs a second reader now
+                    Q['q'][qid][2] = True; newq.append(qid)
                 qs.append(qid)
             Q['pairs'][p + '@' + gg] = qs
     json.dump(Q, open(qfile, 'w'))
-    # batches of 60 new questions, grouped by game and concept so a reader sees one definition many times
+    # batches of 60 new questions, grouped by game and concept so one definition is seen many times
     newq = sorted(set(newq), key=lambda q: (raw[Q['q'][q][0]][0], Q['q'][q][1], int(q)))
     start = len(glob.glob(os.path.join(jd, '*.txt')))
     for b in range(0, len(newq), 60):
@@ -134,7 +133,7 @@ def sample(db, n):
     print('patterns sampled', len(todo), ' questions so far', len(Q['q']), ' new', len(newq), ' new batches', (len(newq) + 59) // 60)
 
 def answers():
-    """qid -> verdict (True right / False wrong / None unsettled). Single questions: reader A. Double ones (*): A and B, C if they differ."""
+    """qid -> verdict (True right / False wrong / None unsettled). From the stored answer files in judge/."""
     A, B, C = {}, {}, {}
     for r, d in (('A', A), ('B', B), ('C', C)):
         for f in glob.glob(os.path.join(HERE, 'judge', r, '*.json')): d.update(json.load(open(f)))
@@ -258,7 +257,7 @@ def decisions_raw():
 
 def dropsample():
     """Up to 10 known matches each narrowing drops per game: the known ones count, the rest are sampled (seed 1) as new questions
-    -> judge/dNNN.txt (one reader)."""
+    -> judge/dNNN.txt."""
     c, ents, raw, pats = load(DB); ky = keys(); Q = json.load(open(os.path.join(HERE, 'questions.json')))
     Qs, ans, A, B = answers()
     have = {(e, k): q for q, (e, k, d) in Q['q'].items()}

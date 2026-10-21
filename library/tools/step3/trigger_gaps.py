@@ -1,4 +1,4 @@
-"""Find trigger wording no trigger concept covers (asked by Kaptain, 19 Oct 2026; script only, no readers).
+"""Find trigger wording no trigger concept covers (asked by Kaptain, 19 Oct 2026; script only).
 Collects trigger-shaped clauses from every entry's text ('when/whenever/after/each time ...', 'at the start/end of ...') up to
 the first ',' ':' '.' or line break, keeps those that no pattern of a trigger concept (concept_tree_v3 facet 'trigger')
 matches, and prints the most frequent groups (first four words, numbers as N) with counts per game and two example entries.

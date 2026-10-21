@@ -1,5 +1,5 @@
-"""The answer key wins over the review files (Kaptain's decision, 19 Oct 2026; script only, no readers).
-Only on key entries, only the concept in conflict, and never a 'benefits' or 'counters' line (the readers tagged what a card
+"""The answer key wins over the review files (Kaptain's decision, 19 Oct 2026; script only).
+Only on key entries, only the concept in conflict, and never a 'benefits' or 'counters' line (the key tags what a card
 does, not what it pays off or answers: Brann Bronzebeard benefits from battlecries without doing one): the entry's other tags stay (the key may not have explored them).
   - a review tag the key calls wrong (neither a key concept nor a broader or narrower one): the tag is removed;
   - a review tag that is a broader or narrower form of a key concept (not the key concept itself): the review's concept is removed
@@ -53,7 +53,7 @@ else:
     role = {}
     for k, r, n in c.execute('SELECT concept, role, count(*) FROM concept_patterns GROUP BY 1, 2 ORDER BY 3'): role[k] = r
     live = {i for i, in c.execute('SELECT id FROM entities')}
-    import key as K   # the key as it is now (key/key.py load: the readers' key with the keyword credit)
+    import key as K   # the key as it is now (key/key.py load: the key with the keyword credit)
     keyed = {}
     for (g,) in c.execute('SELECT id FROM games'):
         try: keyed.update({int(i): {t[0] for t in v['tags']} for i, v in K.load(g).items()})

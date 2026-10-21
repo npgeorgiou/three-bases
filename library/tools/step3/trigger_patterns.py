@@ -1,4 +1,4 @@
-"""Trigger wording that no trigger pattern covered (found by step3/trigger_gaps.py, 19 Oct 2026; script only, no readers).
+"""Trigger wording that no trigger pattern covered (found by step3/trigger_gaps.py, 19 Oct 2026; script only).
 CANDIDATES are Claude's regexes: some for existing trigger concepts, some for the new trigger concepts added to the tree the same day
 (listed in key/added_concepts.txt; the answer key has no tags for them, so the scorers leave them out).
   trigger_patterns.py check [db]   per pattern and game: matches, key matches, key right (existing concepts), and 20 random

@@ -3,13 +3,13 @@
 ## What is wrong
 The answer key (`tools/key/<game>/key.json`) was read from each card's own text with the reading rules then in use:
 "an entry with no mechanic (... plain stats with nothing else) gets an empty list" and "if the text doesn't say it, it isn't
-there". The readers applied this to cards whose text is only a list of keyword names, and gave them no tags for those keywords.
+there". The key applied this to cards whose text is only a list of keyword names, and gave them no tags for those keywords.
 
 Example (Blood Bowl): "Eagle Warrior | Skills: Dodge. Keywords: Human, Lineman. Special rules: Dodge (Active)." has key tags
 `[]`. The card has Dodge, so it should carry Dodge's effects. All 168 Blood Bowl players in the key are like this. The same
 happens on any card that names a keyword without explaining it ("Taunt", "Flying", "[LETHAL HITS]", "Ward 5+").
 
-The keyword entries themselves were read correctly: `tools/key/kw_<game>/key.json` (1,167 entries, two readers plus a third)
+The keyword entries themselves were read correctly: `tools/key/kw_<game>/key.json` (1,167 entries)
 says what each keyword does. Only the cards that NAME a keyword lack that keyword's tags in the key.
 
 ## How big (key entries, today's links)
@@ -44,8 +44,8 @@ Everything scored on the key:
 - **The final comparison.** `final_compare.py` scores and `final_revert.py` "undo" decisions for games with many keyword cards (Blood Bowl, 40k, Kill Team, Gwent, Runeterra).
 - **Patterns built or judged on the key.** `tools/step3` verdicts and any key-derived patterns: a pattern that rightly finds a keyword's effect on a card looks wrong, and patterns learned from the key never learn keyword effects.
 
-## Fix (script only, no readers)
-1. **Credit named keywords in the key**, without touching the readers' files. Write `tools/key/<game>/key_kw.json`: for each key entry, the
+## Fix (script only)
+1. **Credit named keywords in the key**, without touching the key files. Write `tools/key/<game>/key_kw.json`: for each key entry, the
    keywords the card really has, decided from the card's text and source fields only, not from the build being measured
    (that would be circular):
    - a keyword is credited when the card's source data lists it (has_keyword links whose evidence names a field or list:
@@ -59,4 +59,4 @@ Everything scored on the key:
 3. **Re-run everything that used the key:** pattern verdicts (`patterns3.py eval` / `results`), any key-derived pattern
    generation, the Step 4 per-game choice in `step_games.json` (test kw_links again per game), `final_compare.py revert`, the
    build, and the comparison against c7a77a4.
-4. **Leave the original key files unchanged.** The credit is a separate, documented layer, so the readers' work stays as read.
+4. **Leave the original key files unchanged.** The credit is a separate, documented layer, so the key stays as read.

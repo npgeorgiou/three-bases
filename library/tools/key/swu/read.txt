@@ -1,0 +1,838 @@
+# Reading request: swu
+Read the game block once, then every card below. Judge only against the concept definitions at the end of the game block; use
+the game's rules, keywords and factions to understand what a card does. Write nothing but the answer lines.
+
+## How to read a card
+- Go clause by clause and write each concept the clause expresses, with the exact words that justify it, copied character for
+  character from the card's name or text (a short phrase is best). A script rejects any tag whose words are not in the text.
+- Use the most specific concept that fits; do not add its parent as well. Check sibling concepts against their "Not:" lines.
+- A clause can express several concepts (a trigger, a condition and an effect). Triggers and conditions count too.
+- A keyword or ability named on the card counts: tag that keyword's effects, quoting the keyword's name.
+- Keyword or glossary entries: tag what the keyword itself does.
+- A card with no mechanic (lore, a bare name, plain stats with nothing else) gets an empty answer.
+- Do not guess beyond the text. If the text doesn't say it, it isn't there.
+
+## Answer: one line per card line below, in the same order
+`<ids>|<concept>:<role>:<exact words>;<concept>:<role>:<exact words>;...`   (nothing after `|` for a card with no mechanic)
+<ids> as given on the card line. Roles: does (the card does it), grants (it gives it to another card), benefits (it is better
+when this happens), counters (it answers this), cost (it is part of the cost). The exact words never contain `;` or `|`:
+choose a shorter phrase.
+
+# Game block: Star Wars: Unlimited (sets SOR to ASH and Intro Battle: Hoth)
+
+## Rules
+Two-player card game. Each player has a leader and a base with health; units are played into one of two arenas, ground and space, and attack enemy units in the same arena or the enemy base; the first base destroyed loses. Players take actions in turn and pass; any card can be played face down as a resource. The leader can deploy as a unit.
+Keyword and trait names translated from the French export (keywords checked against the English texts); keyword definitions are printed reminder text where cards have one, else Claude's summary.
+
+## Keywords
+- Ambush: When you play this unit, it may attack an enemy unit.
+- Bounty: When it is defeated or captured, the opponent collects the bounty.
+- Coordinate: It has this ability while you control 3 or more units.
+- Exploit: While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.
+- Grit: This unit gets +1/+0 for each damage on it.
+- Hidden: This unit can't be attacked if it was played this phase.
+- Overwhelm: When attacking an enemy unit, deal excess damage to the opponent's base.
+- Piloting: It may be played as an upgrade on a friendly Vehicle unit without a Pilot, for its Piloting cost.
+- Plot: When you deploy a leader, you may play this card from your resources, paying its cost. Replace it with the top card of your deck.
+- Raid: This unit gets +1/+0 while attacking.
+- Restore: When this unit attacks, heal 1 damage from your base.
+- Saboteur: When this unit attacks, ignore Sentinel and defeat the defender's Shields.
+- Sentinel: Units in this arena can't attack your non-Sentinel units or your base.
+- Shielded: When you play this unit, give a Shield token to it.
+- Smuggle: It may be played from your resources for its Smuggle cost; replace it with the top card of your deck.
+- Support: When you play this unit, you may attack with another unit. It gains this unit's other abilities for this attack.
+
+## Factions (cards)
+- Aggression (377)
+- Aggression-Cunning (15)
+- Command (387)
+- Command-Aggression (15)
+- Command-Cunning (13)
+- Cunning (402)
+- Heroism (71)
+- Neutral (49)
+- Vigilance (374)
+- Vigilance-Aggression (14)
+- Vigilance-Command (15)
+- Vigilance-Cunning (15)
+- Villainy (66)
+
+## Card types and tribes
+Armor, Bounty Hunter, Capital Ship, Clone, Condition, Creature, Disaster, Droid, Ewok, Fighter, First Order, Force, Fringe, Gambit, Gungan, Hutt, Imperial, Innate, Inquisitor, Item, Jawa, Jedi, Kaminoan, Law, Learned, Lightsaber, Mandalorian, Modification, Musician, Naboo, New Republic, Night, Nihil, Official, Pilot, Plan, Rebel, Republic, Resistance, Separatist, Sith, Spectre, Speeder, Supply, Tactic, Tank, Transport, Trick, Trooper, Tusken, Twi'lek, Undead, Underworld, Vehicle, Walker, Weapon, Wookiee
+
+## Mechanics the game's guides name
+sentinel, restore, heal, defeat enemy, experience tokens, shield tokens, exhaust units, when defeated, resource acceleration, many units, capture, raid, ambush, overwhelm, saboteur, hidden, ready units, return to hand, when played, draw cards, damage to base, discard from hand, initiative, grit, tokens
+
+## From the game's rules pages
+# Source: https://rulespal.com/star-wars-unlimited/rulebook
+- Zones: each player has a base and a leader in the base zone, a resource zone (face-down resources), deck, hand and discard pile; the ground arena and the space arena are shared, and a unit attacks an enemy unit in its own arena or the opposing base.
+- Rounds: an action phase in which players alternate one action (play a card, attack with a unit, use an action ability, take the initiative, pass) until both pass in a row; then the regroup phase: each player draws 2, may put one card from hand into resources, and readies all exhausted cards.
+- Ready and exhaust: non-leader units and resources enter play exhausted; paying costs exhausts resources; a ready unit exhausts to attack.
+- Attacks: attacker and defender deal damage equal to their power to each other at the same time. A unit with damage equal to or over its HP is defeated (a leader unit returns exhausted to the base zone). A player whose base reaches 0 HP loses.
+- Upgrades attach to friendly or enemy units and change power and HP; they are defeated when their unit leaves play. Experience tokens are upgrades giving +1 power and +1 HP.
+- Initiative: its holder acts first each round; taking it is an action, after which that player passes for the rest of the phase.
+
+## Concepts (id | name | what counts | Not: what does not count and where it goes)
+buff | Make a unit stronger (buff) | A unit gains stats or a combat ability it did not have: more power or health, first strike, flying, extra attacks, reach, piercing. | Not: Improving a card still in hand is in_hand_buff; a unit printed with high stats is not buffed.
+stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+temporary_buff | Temporary bonus (this turn only) | A unit's bonus lasts only this turn, round or fight. | Not: A bonus that stays is stat_gain or permanent_growth.
+permanent_growth | Grows again and again | A unit gains stats repeatedly (each turn, each trigger) and keeps them. | Not: A single lasting bonus is stat_gain.
+stat_multiply | Double or multiply stats | A stat or a total is doubled, tripled or multiplied. | Not: Adding a fixed amount is stat_gain.
+first_strike | First strike (hits before the enemy) | The unit deals its combat damage before the enemy can strike back. | Not: Attacking the turn it arrives is haste.
+multi_attack | Attack more than once | The unit attacks or strikes more than once per turn or round. | Not: One attack that hits several targets is multi_target_attack; readying a used unit is untap.
+counterattack | Strike back when attacked (counterattack, thorns) | When the unit is attacked or hit, it deals damage back to the attacker. | Not: Damage it deals when it attacks is on_attack.
+piercing | Ignore armour or defence | The unit's damage or attacks ignore or lower the target's armour, saves or defence. | Not: Damage that carries on to another target is excess_damage.
+evasion | Hard to block (flying, unblockable) | The unit can't be blocked, can be blocked only by some units, or hits the player past blockers. | Not: Can't be targeted is immunity; hidden until it acts is stealth.
+ranged | Ranged attack / long reach | The unit attacks from a distance, from the back row or over other units. | Not: Damage from a spell is damage.
+multi_target_attack | One attack hits several targets (cleave) | A single attack also hits other units or spaces: cleave, sweep, splash. | Not: Area damage from an effect is aoe_damage; several separate attacks are multi_attack.
+excess_damage | Excess damage carries on (trample) | Damage beyond what kills the target goes on to the player or another unit. | Not: Ignoring armour is piercing.
+deathtouch | Any damage kills (deathtouch, poisonous) | Any damage this unit deals destroys the unit it hits. | Not: Destroying by an effect without combat damage is destroy.
+random_ability | Gain a random ability or keyword | A unit gains a randomly chosen keyword or ability. | Not: Other random results are random_effect.
+spell_power | My spells and abilities get stronger | The owner's spells or abilities deal more damage or have bigger effects: spell damage, ability power, amplify. | Not: A unit gaining stats is stat_gain.
+protection | Keep my units alive (protection) | A unit on my side is guarded against damage, destruction or targeting. | Not: Restoring health already lost is heal.
+damage_reduction | Take less damage (armour) | Damage a unit or player takes is reduced by an amount or a share. | Not: Absorbing one whole hit is shield; points that wear off are block_armor.
+block_armor | Block points that wear off | Points that absorb damage and run out or wear off, usually at the end of the turn. | Not: A lasting reduction is damage_reduction.
+shield | Absorb one hit (shield, ward) | The next hit or damage instance is fully absorbed or cancelled. | Not: Damage lowered by an amount is damage_reduction.
+immunity | Immune / can't be targeted | A unit can't be targeted, or is immune to a damage type, effect or condition. | Not: Hard to block is evasion; hidden until it acts is stealth.
+cheat_death | Cheat death (survive lethal) | A unit that would die survives, or comes back in the same moment it dies. | Not: Bringing back a unit that died earlier is revive.
+bodyguard | Protect a specific ally (bodyguard) | The unit takes hits for, or turns attacks away from, a particular ally. | Not: Forcing all enemy attacks onto itself is taunt.
+taunt | Taunt (enemies must attack it) | Enemies must attack or target this unit before other units. | Not: Shielding one chosen ally is bodyguard.
+stealth | Stealth / hidden until it acts | The unit can't be seen, targeted or attacked until it acts or a condition ends. | Not: Untargetable for good is immunity.
+heal | Restore health (heal) | Lost health of a unit, hero or player is restored. | Not: Preventing damage before it happens is protection.
+lifesteal | Lifesteal / drain | Damage dealt also heals its source or its owner. | Not: Healing not tied to damage dealt is heal.
+regeneration | Heal every turn (regeneration) | A unit heals again each turn or returns to full health each turn. | Not: A single heal is heal.
+card_advantage | Get more cards | The owner ends up with more cards: drawn, created or copied. | Not: Choosing which card to get without getting more is selection.
+draw | Draw cards | Cards are drawn from the owner's deck into hand. | Not: Searching the deck for a chosen kind of card is tutor; making a new card is generate_cards.
+generate_cards | Create new cards | New cards that were not in the deck are put into hand or deck. | Not: Units made on the board are summon.
+card_quality | Better or chosen cards | The owner gets the cards they want, keeps them, reuses them or makes them better before playing them. | Not: Simply getting more cards is card_advantage.
+selection | Look at cards and pick (scry) | The owner looks at several cards and chooses which to keep, take or put back. | Not: Searching the deck for a stated kind of card is tutor.
+tutor | Search the deck for a card (tutor) | The owner searches the deck for a card of a stated kind and takes it. | Not: Drawing the top card is draw.
+retain | Keep cards in hand across turns | Cards that would leave the hand at the end of the turn stay in it. | Not: Returning a played unit to hand is return_to_hand.
+recycle | Reuse my cards (shuffle back) | The owner's used or discarded cards go back into deck or hand to be used again. | Not: An enemy unit sent to its deck is bounce_enemy.
+upgrade | Upgrade / level up a card | A card is upgraded, levelled up or enhanced into a better version of itself. | Not: A plain stat rise on the board is stat_gain.
+in_hand_buff | Improve cards in hand or deck | Cards still in hand or deck get more power, a lower cost or better text before they are played. | Not: A discount on whatever is played this turn is cost_reduction.
+resource_advantage | More resources or cheaper plays | The owner gets more to spend, or pays less for their cards. | Not: Making the opponent pay more is cost_increase.
+resource_gain | Gain resources (ramp) | The owner gains extra mana, energy, supply or another resource, now or for good. | Not: Cards costing less is cost_reduction.
+cost_reduction | Cards cost less | The owner's cards cost less by an amount. | Not: A play that costs nothing at all is free_play; a cost set to a number is cost_set.
+cost_set | Set a cost to a fixed number | A card's cost becomes a fixed number (costs 0, costs 3). | Not: A reduction by an amount is cost_reduction.
+free_play | Put into play for free | A card enters play without its cost being paid, by an effect or automatically. | Not: A dead unit coming back is revive.
+summon | Summon units / tokens | New units are put onto the owner's side of the board. | Not: Units put on the opponent's side are board_clog; units back from death are revive.
+revive | Bring back dead units (revive) | A unit that died or was destroyed earlier comes back to play or to hand. | Not: Surviving at the moment of death is cheat_death.
+self_mill | Fill my own discard pile (self-mill) | The owner puts cards from their own deck straight into their discard pile or graveyard. | Not: Doing it to the opponent is mill.
+speed | Act sooner or more often | The owner's units or turns act earlier or more times than normal. | Not: Several strikes in one attack step is multi_attack.
+haste | Act the turn it arrives (haste, rush) | A unit can attack or act on the turn it is played. | Not: An effect that makes it attack at once is attack_now.
+attack_now | Attack right away | An effect makes a unit attack at once, outside the normal attack step. | Not: Being allowed to attack the turn it arrives is haste.
+extra_turn | Extra turns or actions | The owner takes an extra turn, round or action. | Not: Readying a used unit is untap.
+untap | Ready a used unit again (untap) | A used or tapped unit or card is readied so it can act again. | Not: A whole extra turn is extra_turn.
+movement | Move my units (reposition) | The owner moves their own unit to another space, row, lane or location. | Not: Moving enemy units is forced_movement.
+swap | Swap positions | Two units trade places, or trade lanes or locations. | Not: Trading stats is stat_gain or stat_loss; trading hands or decks is hand_deck_swap.
+blink | Blink (leave and come back fresh) | A unit leaves play and returns at once, reset, repeating its on-enter effect. | Not: Going back to hand is return_to_hand.
+return_to_hand | Return my unit to hand | The owner returns their own unit to hand, to replay it or save it. | Not: Sending an enemy unit back is bounce_enemy.
+copy | Copy cards or units | A copy of a card, unit or effect is made for the owner. | Not: Doing a trigger again is repeat_trigger; a copy given to the opponent is enemy_benefit.
+repeat_trigger | Repeat or double triggers | A trigger or effect happens again, or twice. | Not: Copying a whole card is copy.
+transform | Transform my card into another | The owner's own card or unit turns into a different one: evolve, flip, become. | Not: Turning an enemy into something weaker is polymorph.
+flexibility | Choose what a card does | The owner picks between effects, modes or forms. | Not: A random pick is random_effect.
+modal_choice | Choose one of several effects | The card offers several effects and the owner picks one or more. | Not: Switching a unit between lasting forms is stances.
+stances | Switch stances or forms | The owner switches a unit or hero between lasting modes. | Not: A one-time pick is modal_choice.
+steal | Steal from the opponent | The owner takes the opponent's units, cards, resources or text for themselves. | Not: Destroying them instead is removal.
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+aoe_damage | Damage to many at once | Damage hits several units, a row, a lane or an area at once. | Not: One unit's attack hitting several is multi_target_attack.
+damage_over_time | Damage over time (poison, burn) | Damage repeats over turns: poison, burn, bleed. | Not: One-time damage is damage.
+direct_damage | Damage to the player or base | Damage goes straight to the enemy player, hero or base. | Not: Damage to units is damage.
+ping | Small repeatable damage | A small amount of damage (1 or 2) that can be dealt again and again. | Not: One big hit is damage.
+collision_damage | Bump damage (pushed into something) | A unit takes damage from being pushed into a unit, wall or obstacle. | Not: Damage from the push effect itself is damage.
+removal | Remove an enemy unit | An enemy unit leaves the board: destroyed, exiled, sent to hand or deck, or turned into something harmless. | Not: Weakening it but leaving it there is debuff.
+destroy | Destroy outright | A unit is destroyed or killed regardless of its health. | Not: Killing by damage is damage; destroying my own unit for value is sacrifice.
+banish | Banish / exile (gone for good) | A unit or card is removed from the game for good, beyond the discard pile. | Not: Leaving and coming back is blink.
+board_wipe | Board wipe | Most or all units on the board, or in a lane, are destroyed or removed. | Not: Damage to several that may leave survivors is aoe_damage.
+bounce_enemy | Send an enemy unit back (bounce) | An enemy unit is returned to its owner's hand or deck. | Not: Returning my own unit is return_to_hand.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+debuff | Make a unit weaker (debuff) | A unit loses stats or gets a combat penalty. | Not: Stopping it from acting is suppress.
+stat_loss | Stat loss (-power, -health) | A unit's power, attack, health or other stat goes down, or is set or swapped to a lower value. | Not: Not being able to attack is attack_lock or cant_attack.
+attack_zero | Attack set to 0 | A unit's attack, power or strength becomes 0. | Not: Lowered by an amount but above 0 is stat_loss.
+mark_target | Mark a target for later hits | A target is marked so that later effects or attacks hit it harder. | Not: A lasting stat loss is stat_loss.
+suppress | Stop an enemy unit from acting | An enemy unit can't attack, deal damage, block, move, use abilities, or act at all. | Not: Lowering its stats is debuff.
+no_damage_output | Deals no damage | The unit deals no damage, however it is done: can't attack, attack set to 0, damage prevented. | Not: Can't block is cant_block.
+attack_lock | Can't attack (lock on an enemy) | An enemy unit can't attack, often for a turn or round. | Not: My own unit that never attacks is cant_attack.
+damage_prevention | Its damage is prevented | Damage an enemy unit would deal is prevented. | Not: Damage I would take being reduced is damage_reduction.
+cant_block | Can't block | An enemy unit can't block or intercept. | Not: Can't attack is attack_lock.
+immobilize | Can't move (root) | An enemy unit can't move: root, snare, pin. | Not: Moved against its will is forced_movement.
+silence | Silence (abilities removed) | A unit's abilities or text are removed or switched off. | Not: Lowering stats is stat_loss.
+disable | Can't act at all (stun, freeze) | The unit can't act at all: stun, freeze, sleep, skip its turn. | Not: Losing only its attack is attack_lock.
+forced_movement | Move enemy units (push, pull) | Enemy units are moved against their will: push, pull, knockback, sent to another lane. | Not: Moving my own units is movement.
+forced_attack | Force enemy units to attack | Enemy units are made to attack, often a chosen or bad target. | Not: My own unit that must attack each turn is drawback.
+disruption | Disrupt the opponent's plans | The opponent's hand, deck, resources, plays or board space are interfered with. | Not: Damaging or removing their units is damage or removal.
+hand_disruption | Attack the opponent's hand | Cards in the opponent's hand are discarded, taken, weakened, made dearer or looked at. | Not: Discarding my own cards is discard.
+counter_spell | Counter / cancel a play | An opponent's card or effect is cancelled before it resolves. | Not: Removing a unit after it is in play is removal.
+cost_increase | Make the opponent's cards cost more | The opponent's cards cost more. | Not: Making my cards cheaper is cost_reduction.
+mill | Mill the opponent's deck | Cards are put from the opponent's deck into their discard pile or removed. | Not: Doing it to my own deck is self_mill.
+junk_cards | Junk cards into a deck or hand | Useless or harmful cards (curses, statuses, rocks) are put into a deck or hand to clog it. | Not: Useless units on the board are board_clog.
+board_clog | Clog the opponent's board | Weak, useless or harmful units are put onto the opponent's side to take their slots. | Not: Units on my own side are summon.
+enemy_benefit | Helps the opponent | The card gives the opponent something: cards, power, resources, units or a copy. | Not: Giving them harmful units is board_clog.
+friendly_fire | Hits my own side too | An effect also damages, weakens or destroys the owner's own units or player. | Not: Destroying my own unit on purpose for value is sacrifice.
+self_destruct | Destroys itself / temporary unit | The unit destroys itself or leaves after a time or after use. | Not: Destroying another own unit for value is sacrifice.
+sacrifice | Sacrifice my own units | The owner destroys or gives up their own unit, as a cost or for value. | Not: An enemy being made to sacrifice is destroy.
+discard | Discard my own cards | The owner discards cards from their own hand, as a cost or to fuel effects. | Not: Making the opponent discard is hand_disruption.
+exhaust | One use (exhausted for the battle) | A card is removed for the rest of the battle after use, or other cards of mine are. | Not: Removing a card from the game for good is banish.
+cant_attack | Can't attack (my own unit) | The unit itself can't attack: defender, wall. | Not: A lock put on an enemy is attack_lock.
+donate | Give my units or cards to the opponent | The owner gives their own units or cards to the opponent. | Not: Putting harmful units on their side is board_clog.
+rule_change | Change the game's rules | An effect changes a rule of the game or of a zone for everyone. | Not: A rule that binds only the opponent is disruption.
+play_restriction | Limit what can be played | Where, what or how many cards can be played is limited: can't be played here, only N per turn. | Not: Cancelling a play already made is counter_spell.
+lane_closure | Close or ruin a lane | A lane, location or zone stops being usable: flooded, destroyed, locked. | Not: A lane with an extra rule is lane_rule.
+forced_placement | Force where cards go | Where units are played or end up is dictated: all cards must be played here, played cards move here. | Not: A unit moved after it was placed is movement or forced_movement.
+hand_deck_swap | Swap or replace hands or decks | Hands or decks are exchanged, replaced or reshuffled and redrawn. | Not: Taking single cards from the opponent is steal.
+rewind | Rewind / reset to an earlier state | A unit, card or the game goes back to an earlier state: reset to base stats, undo, redo. | Not: A plain heal is heal.
+advantage | Advantage / disadvantage (roll twice) | A roll is made twice and the better or worse result is kept. | Not: A flat bonus to the roll is buff or debuff.
+blocking | Blocking / interception rules | Rules for who can block or intercept an attacker. | Not: A unit that can't block is cant_block.
+damage_types | Damage types, resistances and weaknesses | Damage has a type (fire, poison...) and units resist or are weak to types. | Not: Damage over turns is damage_over_time.
+saving_throws | Defender rolls to resist (saves) | The target rolls to resist an effect or damage. | Not: Armour that always reduces damage is damage_reduction.
+targeting_rules | Targeting rules | Rules for what may be targeted: only the front row, only damaged units, the nearest. | Not: Forcing attacks onto one unit is taunt.
+target_choice | Choose attack targets | The owner chooses which unit an attack or effect hits. | Not: A random target is random_effect.
+adjacency | Neighbours matter (adjacency) | The effect cares about units beside it, or the lane or location to the left or right. | Not: Several lanes away is cross_lane.
+assists_support | Help from nearby allies (assists) | Nearby allies add a bonus to an action: assists, support, flanking help. | Not: Bonuses for any ally anywhere are tribal or aura.
+combo_sequence | Order of my plays matters (combo) | The effect cares about the order of the owner's plays: the last card played, played another card first. | Not: Order between the players is reveal_order.
+condition_count | Counts / thresholds | The effect needs or scales with a number: for each, N or more. | Not: Counts of past events this game are count_payoff.
+condition_life | Damaged unit matters | The effect cares that a unit is damaged or wounded: enrage, bloodied, below full health. | Not: The player being at low life is low_life.
+low_life | Low life matters (player behind) | The effect cares that the owner's player or hero is at low life. | Not: A unit being damaged is condition_life.
+cost_condition | Cost matters | The effect cares about a card's cost: 1-cost cards, odd or even cost, N or more. | Not: Changing costs is cost_reduction or cost_set.
+count_payoff | Grows with what happened this game | The effect grows with how many times something happened this game: cards played, units died, spells cast. | Not: A count of what is on the board now is condition_count.
+death_count | Counts deaths | The effect counts or scales with how many units died. | Not: A single death trigger is death_trigger.
+deck_condition | Deck contents matter | The effect cares about what is in the deck: deck size, cards in it, an empty deck. | Not: The top card is deck_position.
+deck_position | Top or bottom of the deck matters | The top or bottom card of a deck matters: looked at, revealed or changed. | Not: Searching the whole deck is tutor.
+flanking | Facing / attack from behind | Facing, flanking or attacking from the side or behind matters. | Not: Simple neighbours are adjacency.
+hand_position | Position in hand matters | Where a card sits in hand (leftmost, oldest) or how long it has been there matters. | Not: Hand size is hand_size.
+hand_size | Hand size matters | How many cards are in hand matters: empty or full hand. | Not: Position in hand is hand_position.
+link_formation | Formations (pairs, chains) | Units must stand in a pattern: pairs, chains, circuits. | Not: Simple neighbours are adjacency.
+lone_unit | Alone matters | The effect rewards a unit that stands alone: the only unit in a lane, no neighbours. | Not: Many units are board_presence.
+quests | Quests / objectives with rewards | A goal with progress gives a reward when it is completed. | Not: A goal that scores points is scoring_objectives.
+race_objective | First to do it wins the reward | The reward goes to the first player to meet a condition. | Not: A goal for one player only is quests.
+scoring_objectives | Objectives that score points | Objective or secret-goal cards score points when their condition is met. | Not: Rewards other than points are quests.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+stacking_keyword | Stacking keywords / counters | A keyword or counter stacks and grows with each copy. | Not: A one-time count is condition_count.
+stat_condition | Stats matter (highest, lowest) | The effect cares about stats: the highest or lowest power, N or more attack. | Not: Changing stats is buff or debuff.
+tribal | Tribe / type matters | The effect cares about a tribe, type, team or family of cards. | Not: Counting as another type is type_grant.
+variable_stats | Stats equal to a count | A unit's stats are computed from the game state: power equal to the number of something. | Not: A fixed stat rise is stat_gain.
+variety_payoff | Variety matters (all different) | The effect rewards different costs, types or names, or no duplicates. | Not: Many of the same tribe is tribal.
+cost_type | Alternative costs | A card can be paid with something other than the usual resource. | Not: An optional extra payment for a bonus is kicker.
+kicker | Optional extra cost for a bonus | Paying extra is optional and adds a bonus effect: kicker, enhance. | Not: A required alternative cost is cost_type.
+life_payment | Pay life as a cost | The owner pays life or health to play or use something. | Not: Damage to my own units is friendly_fire.
+overload_debt | Pay later (overload, debt) | Part of the cost is paid later: locked resources next turn, debt. | Not: A cost paid now is cost_type.
+coin_economy | Second currency for abilities | A second currency (coins, crowns) is spent on abilities. | Not: Shop gold between fights is shop_gold.
+graveyard | Discard pile / graveyard as a resource | Cards in the discard pile or graveyard are used: played, counted or eaten. | Not: Filling it from my deck is self_mill.
+high_cost | Expensive card | The card is at the top of its game's cost curve (top 10% of costs). | Not: Cost conditions are cost_condition.
+multiple_resources | Several resource types | The game uses several resource types. | Not: One resource gained is resource_gain.
+resource_banking | Save unspent resources | Unspent resources are kept for later, or reward the owner. | Not: Gaining new resources is resource_gain.
+resource_conversion | Convert one resource into another | One resource is turned into another. | Not: Gaining resources from nothing is resource_gain.
+shop_gold | Shops and gold | Gold is spent in shops to buy cards or items. | Not: A currency spent in battle is coin_economy.
+upkeep | Upkeep (ongoing resource drain) | Resources must be paid again and again to keep things: food, fuel, upkeep. | Not: A one-time cost is cost_type.
+alt_wincon | Alternate win condition | The card gives another way to win the game. | Not: Scoring more points is points_scoring.
+board_presence | Board presence / going wide | Having many units on the board. | Not: One big unit is tank.
+comeback | Comeback / catch-up | The card helps the player who is behind or losing. | Not: A damaged unit is condition_life.
+finisher | Finisher / closer | The card closes out the game. | Not: Steady damage is damage.
+fodder | Fodder / disposable bodies | Bodies meant to die or be used up. | Not: Units meant to last are tank.
+null_body | Empty bodies (0 stats or no abilities) | Units with zero stats or no abilities, valued only for being there. | Not: Weak but useful units are fodder.
+slot_filler | Slot fillers | Cheap bodies whose job is to fill slots or reach a count. | Not: Disposable bodies to sacrifice are fodder.
+snowball | Snowball / runaway advantage | An advantage that keeps growing once gained. | Not: Catch-up for the losing player is comeback.
+support | Support / enabler | The card makes other cards better. | Not: A payoff for a synergy is synergy_payoff.
+synergy_payoff | Synergy payoff | The card rewards building around something. | Not: The card that enables it is support.
+tank | Tank / wall | High defence that holds the line. | Not: A unit that can't attack at all is cant_attack.
+tempo | Tempo | Acting faster or more efficiently than the opponent. | Not: Raw card gain is card_advantage.
+area_templates | Area shapes (cone, line, sphere) | The effect covers a shape: cone, line, sphere. | Not: All units everywhere is scope_global.
+cross_lane | Reaches other lanes | The effect reaches or counts other lanes, zones or locations. | Not: Its own lane only is lanes.
+distribute | Split a total among several | An amount of damage, power or counters is split among several units. | Not: The full amount to each is scope_multi.
+scope_global | Whole board / all players | The effect touches the whole board or all players. | Not: Several but not all is scope_multi.
+scope_multi | Several targets | The effect touches several targets. | Not: One target is the default.
+scope_self | Only itself | The effect touches only the card itself. | Not: Its allies too is scope_multi.
+symmetric_effect | Both players alike | The effect touches both players the same way: each player draws. | Not: Only my side is the effect itself.
+attack_token | Attack token / alternating attack | An attack token or alternating attack rights. | Not: Ordinary turns are turn_structure.
+auto_battle | Automatic combat | Combat resolves on its own (auto-battler). | Not: Units choosing their own actions is autonomous_units.
+autonomous_units | Units that act on their own | Units act without the player choosing. | Not: Combat that resolves on its own is auto_battle.
+board_limit | Board size limit | Limits on board size or units per lane, row or location. | Not: Bench units are reserve_bench.
+boss_phases | Boss phases and rules | Bosses with phases and their own rules. | Not: Boss acting between turns is legendary_actions.
+card_crafting | Card crafting | Cards are crafted or built from points. | Not: Upgrading an existing card is upgrade.
+card_flow | Hand, deck and discard pile | Cards moving between hand, deck and discard pile, as a theme. | Not: Getting more cards is card_advantage.
+merge_attach | Attach or merge onto a unit | A card attaches to or merges with a unit: equipment, enchant creature, a leader attached to a unit, magnetic. | Not: What the attached card gives is buff or debuff.
+cast_from_zone | Play from another zone | Cards are played from somewhere other than the hand: discard pile, exile, top of the deck. | Not: A dead unit returned by an effect is revive.
+concentration | Sustained effects that can be broken | An effect lasts while it is kept up and can be broken: concentration, channelling. | Not: An effect for this turn only is temporary_effect.
+control_reward | Reward for holding a zone | Whoever holds or wins a lane, zone or objective gets a bonus. | Not: Winning the game by zones is zone_control.
+cooldowns | Ability cooldowns | An ability must wait some turns before it can be used again. | Not: Once per game is once_per_game.
+death | Death and graveyard (theme) | Death and the graveyard as a theme. | Not: Removing enemy units is removal.
+deck_modification | Change the deck between battles | A deck's contents change for good: cards added or changed between battles. | Not: Cards created for one battle are generate_cards.
+deckbuilding_effect | Deckbuilding rules | The effect changes how a deck or army is built. | Not: Changes during play are card_flow.
+difficulty_modifiers | Difficulty modifiers | Difficulty modifiers and challenges. | Not: A boss's rules are boss_phases.
+fatigue | Fatigue / end-game pressure | Pressure that grows towards the end of the game. | Not: A set last turn is game_length.
+game_length | Change how long the game lasts | Turns or rounds are added, the game ends early or the last turn is set. | Not: Extra turns for one player are extra_turn.
+information | Hidden and revealed information | Hidden and revealed information: face-down cards, looking at the opponent's hand. | Not: Hidden units are stealth.
+items_consumables | Items & consumables | Items and consumables outside the deck. | Not: Cards in the deck are card_flow.
+lane_identity | Which lane matters | The effect names or depends on which lane: left, middle, right. | Not: Any other lane is cross_lane.
+lane_rule | A lane with its own rule | A lane, location or zone carries its own rule that changes play there. | Not: A closed lane is lane_closure.
+lanes | Lanes / locations | The board is split into lanes, columns or locations. | Not: Rows inside a lane are rows.
+legendary_actions | Boss acts between turns | A boss acts between other turns. | Not: Extra turns for the owner are extra_turn.
+life_track | Life / health track | A life, scale or health track decides the game. | Not: A second damage track is stress_morale.
+light_level | Light / visibility level | A light or visibility level trades risk for reward. | Not: Hidden units are stealth.
+permanent_loss | Permanent loss | Losses that last beyond the battle. | Not: Losses for one battle are exhaust.
+placement_rules | Where units can be placed | Rules for where units can enter. | Not: Moving after placement is movement.
+points_scoring | Points decide the winner | Points or score decide the winner. | Not: Destroying the enemy base is life_track.
+positional | Position and space | Position and space on the board matter. | Not: Card zones are card_flow.
+randomness | Randomness in the game's structure | Randomness built into the game's structure. | Not: A random effect on a card is random_effect.
+rank_positions | Formation ranks | A unit's rank limits its skills and targets. | Not: Plain front and back rows are rows.
+reserve_bench | Bench / reserve | Units wait on a bench or in reserve. | Not: Cards in hand are card_flow.
+rest_phase | Rest or camp between fights | A rest or camp phase between fights. | Not: Healing in battle is heal.
+reveal_order | Who acts or reveals first | The order in which players act or reveal matters or changes. | Not: The order of my own plays is combo_sequence.
+round_carryover | Carry-over between rounds | Things carry over from one round to the next. | Not: Saved resources are resource_banking.
+round_passing | Best-of-rounds with passing | Matches of several rounds where players pass. | Not: Single games are turn_structure.
+row_effects | Row-wide lasting effects (weather) | A lasting effect covers a whole row or lane: weather, hazards, boons. | Not: A lane's printed rule is lane_rule.
+rows | Rows (front and back) | The board has front and back rows. | Not: Lanes side by side are lanes.
+run_structure | Roguelike run | A run of fights with a map, nodes and things kept between fights. | Not: A single game is turn_structure.
+side_deck | Side deck | A second deck beside the main one. | Not: Changing the deck is deck_modification.
+simultaneous_play | Play at the same time, then reveal | Players commit plays face down at the same time and reveal them after. | Not: Order of reveal is reveal_order.
+slots_queue | Slots that fill and fire (orbs) | Slots or queues fill up and then fire. | Not: Delayed effects are delayed.
+spawn_blocking | Block enemy spawns | Occupying tiles stops enemy units from arriving there. | Not: Clogging their board with units is board_clog.
+spell_speed | Speed / reaction timing | Spells and actions have speeds: instant, fast, slow, responses. | Not: Reacting to the opponent is reactions.
+stakes_wager | Stakes and wagers | What a game is worth changes: double the stakes, bet, concede to lose less. | Not: Points scored in the game are points_scoring.
+stress_morale | Stress / morale (second damage track) | Stress, morale or sanity work as a second damage track. | Not: Health is life_track.
+team_play | Team play | Teammates, passing cards, partner effects. | Not: Allied units of one player are tribal.
+telegraphed_threats | Enemy actions announced in advance | Enemy actions are announced now and happen later. | Not: My own delayed effects are delayed.
+temporary_effect | This turn / round only | It lasts only this turn or round: a bonus, a penalty or a lock. | Not: Lasting changes are the effect itself.
+terrain | Terrain / board features | Terrain and features on the board. | Not: A lane's rule is lane_rule.
+traits_quirks | Lasting character traits | Characters gain or lose lasting traits over a run. | Not: Keywords in battle are buff.
+turn_structure | Turn and round structure | How turns and rounds work. | Not: Extra turns are extra_turn.
+turnover | A failed action ends my turn | A failed action ends the whole turn. | Not: A failed roll without that cost is random_effect.
+type_grant | Counts as another type | A card counts as a type, tribe or faction it is not, or as every type. | Not: Caring about a type is tribal.
+zone_control | Hold zones or lanes | Controlling zones, lanes or objectives; winning or losing a location. | Not: A bonus for holding a zone is control_reward.
+zone_of_control | Zones of control (leaving is punished) | Leaving an enemy's reach is punished. | Not: Being unable to move is immobilize.
+activated | Activated ability (pay to use) | The player chooses when to use an ability: activate, tap, pay to use. | Not: Abilities that fire on their own are triggers.
+aura | Aura (ongoing effect on others) | While the source is in play, other units are continuously changed: anthem, lord. | Not: A one-time change is the effect itself.
+combat_start | Start of combat | Effects at the start of combat or before a fight. | Not: Start of turn is turn_start.
+death_trigger | When it dies (deathrattle) | Effects when this unit dies or is destroyed: its own death. (Narrowed 20 Oct 2026, Kaptain's decision.) | Not: Another unit dying is other_death_trigger; leaving play by other means is leave_trigger.
+other_death_trigger | When another unit dies | Triggers when another unit, friendly or enemy, dies or is destroyed. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Not: Its own death is death_trigger; counting deaths is death_count.
+leave_trigger | When it leaves play | Effects when this unit leaves play by any means: dies, exiled, returned, banished. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Not: Text that says it dies is death_trigger.
+other_leave_trigger | When another unit leaves play | Triggers when another unit leaves play by any means. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Not: Text that says it dies is other_death_trigger.
+delayed | Delayed / countdown | The effect happens later: next turn, after N turns, countdowns. | Not: A set turn number is turn_number.
+game_end_trigger | At the end of the game | Effects when the game ends or at the final count. | Not: End of a turn is turn_end.
+hero_power | Hero power | A repeatable player or leader ability. | Not: A unit's own ability is activated.
+on_ally_play | When I play another card | Triggers when the owner plays or summons another card or unit. | Not: When this card is played is on_play.
+on_attack | When it attacks | Triggers when the unit attacks or strikes. | Not: When it is attacked is on_damaged or counterattack.
+on_damaged | When it is damaged | Triggers when the unit is damaged or survives damage. | Not: Striking back at the attacker is counterattack.
+on_enemy_enter | When an enemy arrives | Triggers when an enemy is placed or moves in. | Not: When an ally arrives is on_ally_play.
+on_kill | When it kills | Triggers when the unit kills another. | Not: When it dies is death_trigger.
+on_play | When played (battlecry, on reveal) | Triggers when the card is played or revealed: battlecry, on reveal, enters. | Not: When another card is played is on_ally_play.
+on_spell | When a spell is played | Triggers when a spell or action is played. | Not: When a unit is played is on_ally_play.
+on_draw | When a card is drawn | Triggers when the owner or a player draws a card. (Added 19 Oct 2026, Claude's.) | Not: Drawing cards as the effect is draw.
+on_discard | When a card is discarded | Triggers when the owner or a player discards a card, or when this card is discarded. (Added 19 Oct 2026, Claude's.) | Not: Discarding as a cost is discard.
+on_lifegain | When life or health is restored | Triggers when a player gains life, or a hero or unit is healed. (Added 19 Oct 2026, Claude's.) | Not: Gaining life as the effect is heal.
+on_block | When it blocks or is blocked | Triggers when the unit blocks or becomes blocked. (Added 19 Oct 2026, Claude's.) | Not: When it attacks is on_attack.
+on_targeted | When it becomes a target | Triggers when the unit or card becomes the target of a spell or ability. (Added 19 Oct 2026, Claude's.) | Not: When it is damaged is on_damaged.
+on_sacrifice | When a unit is sacrificed | Triggers when the owner sacrifices a unit or permanent. (Added 19 Oct 2026, Claude's.) | Not: Sacrificing as a cost is the sacrifice concept.
+on_life_loss | When I lose life | Triggers when the owner's player or hero loses life or takes damage. (Added 20 Oct 2026, Claude's.) | Not: A unit being damaged is on_damaged; paying life as a cost is life_payment.
+once_per_game | Once per game | The effect can be used only once per game. | Not: Waiting turns between uses is cooldowns.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+reactions | Reactions on the opponent's turn | The effect answers the opponent's actions: interrupts, after your opponent plays. | Not: Hidden traps are trap_secret.
+start_of_game | Start of the game | Effects at the start of the game or before it. | Not: Start of turn is turn_start.
+territory_trigger | In or entering enemy territory | The effect fires or turns on when a unit enters or stands in enemy territory or a set zone: infiltrate. | Not: When an enemy arrives on my side is on_enemy_enter.
+trap_secret | Hidden traps / secrets | A hidden card fires on an opponent's action. | Not: Open reactions are reactions.
+turn_end | End of turn / round | Effects at the end of a turn or round. | Not: Start of turn is turn_start.
+turn_number | On a set turn or round | Effects tied to a given turn or round number: on turn 5, until round 4. | Not: After N turns from now is delayed.
+turn_start | Start of turn / round | Effects at the start of a turn or round. | Not: End of turn is turn_end.
+
+# Cards (<ids>|<name>: <text>)
+819488|Change of Heart: Take control of a non-leader unit. At the start of the regroup phase, its owner takes control of it.
+820505|Darth Malak - Covetous Apprentice: Overwhelm / When Played: If you control a Sith leader unit, you may ready this unit.
+821175|Ant Droid: When Defeated: Draw a card.
+821069|Bo-Katan Kryze - Reclaiming Mandalore: Action [2 resources, Exhaust]: If you control a unit in each arena, create a Mandalorian token. / Deployed: Other friendly Mandalorian units get +1/+0. / On Attack: If you control a unit in each arena, create a Mandalorian token. / Epic Action: Epic Action: If the number of resources you control plus the number of friendly Mandalorian units is 10 or more, deploy this leader.
+820970|0-0-0 - Translation and Torture: On Attack: You may put a Aggression card from your discard pile on the bottom of your deck. If you do, deal 1 damage to each enemy base.
+819332|Cargo Juggernaut: Shielded (When you play this unit, give a Shield token to it.) / When Played: If you control another [Vigilance] unit, heal 4 damage from your base.
+819768|Nala Se - Clone Engineer: Ignore the aspect penalty on Clone units you play. / Deployed: Ignore the aspect penalty on Clone units you play. / Each friendly Clone unit gains: “When Defeated: Heal 2 damage from your base.” / Epic Action: Epic Action: If you control 4 or more resources, deploy this leader.
+819449|Chimaera - Flagship of the Seventh Fleet: Shielded (When you play this unit, give a Shield token to it.) /  / On Attack: Name a card. An opponent reveals their hand and discards a card with that name from it.
+820329|Calm in the Storm: Exhaust a friendly unit. If you do, give a Shield token and 2 Experience tokens to it.
+820963|Common Cause: Give a unit +1/+1 for this phase for each different aspect among units you control.
+820224|Independent Smuggler: Raid 1 (This unit gets +1/+0 while attacking.) / Epic Action: Piloting [1 resource Cunning] (You may play this as an upgrade on a friendly Vehicle without a Pilot.) / Attached unit gains Raid 1.
+820276|Mother Talzin - Power Through Magick: Action [Exhaust, use the Force (lose your Force token)]: Give a unit –1/–1 for this phase. / Deployed: On Attack: You may give a unit –1/–1 for this phase. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+820704|AAT Incinerator: When Played: Deal 1 damage to each of up to 4 other ground units. If no friendly units were damaged by this ability, deal 2 damage to your base.
+820065|Cassian Andor - Threading the Eye: Epic Action: Piloting [2 resources Vigilance Heroism] (You may play this as an upgrade on a friendly Vehicle without a Pilot.) / Attached unit gains: “On Attack: Discard a card from the defending player's deck. If that card costs 3 or less, draw a card.”
+821038|Transmission Jamming: Name a card. Cards with that name can't be played this phase.
+819668|Wild Rancor: Overwhelm / When Played: Deal 2 damage to each other ground unit.
+819398|Ruthless Raider: When Played/When Defeated: Deal 2 damage to an enemy base and 2 damage to an enemy unit.
+820314|Darth Sidious - The Phantom Menace: Restore 2 (When this unit attacks, heal 2 damage from your base.) / When Played: You may use the Force. If you do, defeat each non-Sith unit with 3 or less remaining HP.
+819250|Speeder: Speeder: 20 entities of this type.
+821287|Improvised Identity: Attach to a ground unit. / Attached unit gains: “Action: Search the top 3 cards of your deck for a ground unit and discard it. Then, you may attack with this unit. For this attack, this unit gains the discarded unit's abilities. Use this ability only once each round.”
+821150|Buy Time: Create a Mandalorian token and give it Sentinel for this phase. (Enemy units in its arena must attack a Sentinel when they attack you.)
+820091|Close the Shield Gate: Choose a base. The next time damage would be dealt to it this phase, prevent that damage.
+820187|Hotshot Maneuver: Choose a friendly unit. For each of its “On Attack” abilities, deal 2 damage to a different enemy unit. Then, attack with the chosen unit.
+820603|Lando Calrissian - Trust Me: Grit / When Played: You may choose an enemy unit and another friendly non-leader unit. If you do, heal 6 damage from your base and the enemy unit captures the friendly unit.
+820966|Double-Cross: Choose a friendly non-leader unit and an enemy non-leader unit. Exchange control of those units. The player who takes control of the lower-cost unit creates Credit tokens equal to the difference between those units' costs.
+820979|Aerie - Cloud-Rider Dropship: On Attack: Deal 2 damage to an enemy ground unit and 2 damage to a base.
+819196|Grit: This unit gets +1/+0 for each damage on it.
+820806|Hera Syndulla - Not Fighting Alone: While you control 2 or more units, ignore the aspect penalties on Heroism units you play. / Deployed: Restore 1 (When this unit attacks, heal 1 damage from your base.) / While you control 2 or more units, ignore the aspect penalties on Heroism units you play. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+820216|Han Solo - Has His Moments: Ambush / Epic Action: Piloting [2 resources Cunning Heroism]  / When played as an upgrade: You may attack with attached unit. If it's the Millennium Falcon, it deals its combat damage before the defender.
+819799|Wartime Trade Official: When Defeated: Create a Battle Droid token.
+820866|The Ghost - Home of the Spectres: When Played: You may give an Experience token and a Shield token to a unit. If you control a Vigilance or Aggression unit, you may give an Experience token and a Shield token to each of up to 2 units instead.
+821068|Ahsoka Tano - Trust in the Force: Action [Exhaust]: Choose a unit with less power than a friendly unit. It gets +2/+0 for this phase. / Deployed: Support (When you deploy this leader, you may attack with another unit. It gains this unit's other abilities for this attack.) / On Attack: You may give a unit with less power than this unit +2/+0 for this phase. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+819708|Coruscant Dissident: On Attack: You may ready a resource.
+820554|DJ - Need a Lift?: Action [Exhaust]: Choose a friendly unit. If you do, play a unit from your hand. It costs 1 resource less. The chosen unit captures it. (When Played abilities resolve after the unit is captured.) / Deployed: Saboteur / Friendly units that are rescued enter play ready. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+819415|Karabast: A friendly unit deals damage to an enemy unit equal to the amount of damage on the friendly unit plus 1.
+821308|Zealous Soldier: When Played: Give an Advantage token to this unit.
+819914|Bold Resistance: Choose up to 3 units that share the same Trait. Each of those units gets +2/+0 for this phase.
+819254|Transport: Transport: 127 entities of this type.
+819237|Naboo: Naboo: 20 entities of this type.
+819244|Rebel: Rebel: 233 entities of this type.
+820697|Crosshair - Filled With Doubt: On Attack: You may deal 1 damage to another friendly unit. If you do, deal 2 damage to the defending player's base.
+820442|Heavy Blaster Cannon: Attach to a non-Vehicle unit. / When Played: You may deal 1 damage to a ground unit. Then, deal 1 damage to the same unit. Then, deal 1 damage to the same unit.
+819210|Capital Ship: Capital Ship: 77 entities of this type.
+821259|Carson Teva - There's Something Going On: Support (When you play this unit, you may attack with another unit. It gains this unit's other abilities for this attack.) / While attacking, this unit deals combat damage before the defender.
+820068|Red Squadron X-Wing: When Played: You may deal 2 damage to this unit. If you do, draw a card.
+820785|Covert Operative: When Played: This unit captures an enemy non-leader unit that costs 2 or less. (Put the captured card facedown under this unit until this unit leaves play.)
+819683|Hotshot DL-44 Blaster: Attach to a non-VEHICLE unit. /  / Smuggle [3 resources, cunning] /  / When played using Smuggle: Attack with attached unit.
+820163|Red Squadron Y-Wing: On Attack: Deal 3 indirect damage to the defending player. (They assign 3 unpreventable damage among their base and units.)
+820876|K-2SO - Locking the Vault: Ambush / On Attack: You may deal 3 damage to a damaged ground unit.
+819251|Supply: Supply: 35 entities of this type.
+820410|Savage Opress - Imbued With Hate: Overwhelm (When attacking an enemy unit, deal excess damage to the opponent's base.) / When Played/When Defeated: You may use the Force (lose your Force token). If you don't, deal 9 damage to your base.
+819694|Doctor Evazan - Wanted on Twelve Systems: Shielded (When you play this unit, give a Shield token to him.) / Bounty — Ready up to 12 resources. (When this unit is defeated or captured, your opponent collects his bounty.)
+821363|I Want Proof, Not Leads: Draw 2 cards, then discard a card from your hand.
+820199|Mist Hunter - The Findsman's Pursuit: On Attack: If you played a Bounty Hunter or Pilot card this phase, you may draw a card.
+820330|Dume - Redeem the Future: When the regroup phase starts: Give an Experience token to each other friendly non-Vehicle unit.
+820468|Qui-Gon Jinn's Aethersprite - Guided by the Force: On Attack: The next time you use a “When Played” ability this phase, you may use that ability again.
+819718|Criminal Muscle: When Played: You may return a non-unique upgrade to its owner's hand.
+819976|Tri-Droid Suppressor: Exploit 2 (While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.) / When Played: Exhaust an enemy ground unit.
+819713|Millennium Falcon - Lando's Pride: If you play this unit from your hand, it gains Ambush. / Smuggle [6 resources Cunning Heroism] (If this card is a resource, you may play her for her smuggle cost. Replace her with the top card of your deck.)
+820764|Charged with Espionage: You may disclose CunningCunning (reveal cards from your hand with these aspect icons among them). If you do, look at an opponent's hand and discard a unit from it.
+819688|Desperate Attack: Attack with a damaged unit. It gets +2/+0 for this attack.
+821355|Imperial Deck Officer: Action [Exhaust]: Heal 2 damage from a Villainy unit.
+820247|Torpedo Barrage: Deal 5 indirect damage to a player. (They assign 5 unpreventable damage among their base and units.)
+819853|Separatist Super Tank: Exploit 3 (While playing this card, defeat up to 3 units you control. This card costs 2 resources less for each unit defeated this way.)
+819236|Musician: Musician: 2 entities of this type.
+820151|Vonreg's TIE Interceptor - Ace of the First Order: While this unit has 4 or more power, it gains Overwhelm. (When attacking an enemy unit, deal excess damage to the opponent's base.) / While this unit has 6 or more power, it gains Raid 1. (It gets +1/+0 while attacking.)
+821154|Remnant Interceptor: Support (When you play this unit, you may attack with another unit. It gains this unit's other abilities for this attack.) / Restore 1 (When this unit attacks, heal 1 damage from your base.)
+820475|Zuckuss - The Findsman: On Attack: Name a card, then discard the top card of the defending player's deck. If a card with that name is discarded, this unit gets +4/+0 for this attack.
+820679|Tempest Assault: If you've dealt damage to an enemy base this phase, deal 2 damage to each enemy space unit.
+819410|Zeb Orrelios - Headstrong Warrior: When this unit completes an attack: If the defender was defeated, you may deal 4 damage to a ground unit.
+819614|General Rieekan - Defensive Strategist: When Played/On Attack: Choose a friendly unit. If it has Sentinel, give an Experience token to it. Otherwise, it gains Sentinel for this phase.
+820649|Kino Loy - You Answer to Me: This unit gets +1/+0 for each other exhausted friendly unit.
+820872|Interrogation Droid: When Played: Exhaust an enemy unit. If you do and that unit costs 3 or less, its controller discards a card from their hand.
+821208|Deadly Vulnerability: If attached unit would take damage, it takes twice as much damage instead. / While attached unit is defending, the attacker loses Overwhelm.
+819867|Mas Amedda - Vice Chair: When you play another unit: You may exhaust this unit. If you do, search the top 4 cards of your deck for a unit, reveal it, and draw it. (Put the other cards on the bottom of your deck in a random order.)
+819455|Vanguard Ace: When Played: For each other card you played this phase, give an Experience token to this unit.
+820914|Droid Laser Turret: Sentinel (Enemy units in this arena must attack a Sentinel when they attack you.) / Shielded (When you play this unit, give a Shield token to it.)
+819948|Unnatural Life: Play a unit that was defeated this phase from your discard pile. It costs 2 resources less and enters play ready. At the start of the regroup phase, defeat it.
+821319|The Way of the Mand'alor: This upgrade costs 1 resource less to play on a Mandalorian unit.
+820845|Chio Fain - Four-Armed Slicer: On Attack: You may choose 2 players. If you do, they each draw a card.
+820343|Anakin Skywalker - Champion of Mortis: When Played: If there is a Heroism card in your discard pile, you may give a unit –3/–3 for this phase. / When Played: If there is a Villainy card in your discard pile, you may give a unit –3/–3 for this phase.
+821297|Mandalorian Super Commandos: While you control a leader unit, this unit gets +2/+0.
+820360|Eighth Brother - Hunt Together: Ambush (When you play this unit, it may attack an enemy unit.) / When you play another unit: You may use the Force (lose your Force token). If you do, give a unit +2/+2 for this phase.
+821137|B-Wing Rearguard: While you control a ground unit, this unit gains Sentinel. (Enemy units in this arena must attack a Sentinel when they attack you.)
+820745|Faith in Your Friends: Search the top 3 cards of your deck for a card and draw it. Then, you may disclose CunningCunningCunningHeroismHeroism (reveal cards from your hand with these aspect icons among them). If you do, create 2 Spy tokens.
+819623|Gamorrean Retainer: While you control another Command unit, this unit gains Sentinel. (Units in this arena can't attack your non-Sentinel units or your base.)
+819882|Baktoid Spider Droid: Exploit 2 (While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.) / Ambush (When you play this unit, it may ready and attack an enemy unit.)
+819839|I Have the High Ground: Choose a friendly unit. Each enemy unit gets –4/–0 while attacking that unit this phase.
+820547|Governor Pryce - Tyrant of Lothal: Action [1 resource, Exhaust]: Ready a token unit. / Deployed: This unit gets +1/+0 for each ready friendly token unit. / On Attack: Create a Spy token. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+820338|Watto - No Money, No Parts, No Deal: On Attack: An opponent chooses one: / You give an Experience token to a friendly unit. / You draw a card.
+821173|Sabine's Lightsaber - Not Alone: Attach to a non-Vehicle unit. / If attached unit is Sabine Wren or a Force unit, it gains Restore 2.
+820354|Sith Legionnaire: While you control another Villainy unit, this unit gets +2/+0.
+820099|Pantoran Starship Thief: When Played: You may pay 3 resources. If you do, attach this unit as an upgrade to a Fighter or Transport unit without a Pilot on it. Take control of that unit. / Epic Action: When this upgrade detaches from a unit: That unit's owner takes control of it.
+820550|Sly Moore - Cipher in the Dark: Action [1 resource, Exhaust]: If there are 4 or more exhausted units in play, create a Spy token. / Deployed: On Attack: You may deal 2 damage to an exhausted unit. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+821190|Queen Soruna - Willing to Fight: When Played/On Attack: You may reveal a unit from your hand. If you do, deal 3 damage to a unit with the same cost as the revealed unit.
+819262|Walker: Walker: 26 entities of this type.
+820293|Anakin Skywalker - Tempted by the Dark Side: Action [Exhaust, use the Force (lose your Force token)]: Play a Villainy non-unit card from your hand, ignoring its aspect penalties. / Deployed: Action [use the Force]: Play a Villainy non-unit card from your hand, ignoring its aspect penalties. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819739|Relentless Pursuit: Choose a friendly unit. It captures an enemy non-leader unit that costs the same as or less than it. If the friendly unit is a Bounty Hunter, give a Shield token to it. (Put the captured card facedown under the friendly unit until it leaves play.)
+820917|Canto Bight Security: Sentinel (Enemy units in this arena must attack a Sentinel when they attack you.) / On Defense: Create a Credit token.
+821059|Mandalorian: Shielded (When you create this token, give a Shield token to it.)
+820122|Unity of Purpose: For each friendly unit with a different name, give each unit you control +1/+1 for this phase.
+820146|First Order Stormtrooper: On Attack/When Defeated: Deal 1 indirect damage to a player. (They assign 1 unpreventable damage among their base and units.)
+820734|Junior Senator: When Played: You may return an upgrade that costs 3 or less to its owner's hand.
+819588|Vambrace Grappleshot: Attach to a non-Vehicle unit. / Attached unit gains: “On Attack: Exhaust the defender.”
+820029|Major Vonreg - Red Baron: Action [Exhaust]: Play a Vehicle unit from your hand (paying its cost). If you do, give another unit +1/+0 for this phase. / Deployed:  / Attached unit is a leader unit. It gains: “On Attack: You may give another unit in this arena +1/+0 for this phase.” / Epic Action: Epic Action: If you control 4 or more resources, choose one: / Deploy this leader. / Deploy this leader as an upgrade on a friendly Vehicle unit without a Pilot on it.
+820457|Marchion Ro - Eye of the Nihil: Each friendly unit's Raid is doubled.
+820828|Bossk - Join Our Merry Band: On Attack: Give a unit +1/+1 for this phase. You may give a unit –1/–1 for this phase.
+821001|That's a Rock: Deal 1 damage to a unit. / When this event is discarded from your hand or deck: You may deal 1 damage to a unit.
+820758|Vel Sartha - One Path, One Choice: Raid 2 (This unit gets +2/+0 while attacking.) / Each exhausted enemy unit gets –2/–0 while defending.
+820903|Defiant Scrapper: When Played: You may defeat an enemy Credit token.
+820055|Corvus - Inferno Squadron Raider: Restore 2 / When Played: You may attach a friendly Pilot unit or upgrade to this unit. (Defeat all upgrades on that Pilot and remove all damage from it.)
+819381|Mercenary Company: Ambush (After you play this unit, it may ready and attack an enemy unit.) /  / Overwhelm (When attacking an enemy unit, deal excess damage to the opponent's base.)
+820201|Moff Gideon - I Know Everything: When this unit deals combat damage to an opponent's base: Each unit that opponent plays this phase costs 1 resource more.
+820731|Furtive Handmaiden: On Attack: You may discard a card from your hand. If you do, draw a card.
+820362|Supremacy - Of Unimaginable Size: Ambush / Other friendly Vehicle units get +6/+6.
+819428|Wampa: Overwhelm (When attacking an enemy unit, deal excess damage to the opponent's base.)
+821010|Vermillion - Qi'ra's Auction House: When Attack Ends: If this unit survived, reveal the top card of a deck, then choose a player. They may play the revealed card for free. If they do, a different player creates Credit tokens equal to that card's cost.
+819563|Rey - Keeping the Past: While playing this unit, ignore her Heroism aspect penalty if you control Kylo Ren. / On Attack: You may heal 2 damage from a unit. If it's a non-Heroism unit, give a Shield token to it.
+820394|The Purrgil King - Leading The Journey: Restore 4 / When Played: Draw a card for each friendly unit with 7 or more remaining HP.
+821159|Gallius Rax - Counselor to the Empire: Other friendly units with 2 or more different keywords get +2/+2.
+821245|Galvanized Leap: Ready a unit that was damaged this phase.
+820036|Kazuda Xiono - Best Pilot in the Galaxy: Action [Exhaust]: A friendly unit loses all abilities for this round. Take an extra action after this one. / Deployed: On Attack: Choose any number of friendly units. They lose all abilities for this round. / Attached unit is a leader unit. It gains: “On Attack: Choose any number of friendly units. They lose all abilities for this round.” / Epic Action: Epic Action: If you control 4 or more resources, choose one: / Deploy this leader. / Deploy this leader as an upgrade on a friendly Vehicle unit without a Pilot on it.
+820317|Always Two: Choose 2 friendly <uq> Sith units. If you do, give 2 Shield tokens and 2 Experience tokens to each chosen unit. Defeat all other friendly units.
+820890|Rio Durant - Beckett's Right Hands: When Played: You may return a non-leader unit that costs 3 or less to its owner's hand. Then, its owner may play it for free. It gains Shielded for this phase.
+819252|Tactic: Tactic: 136 entities of this type.
+820269|Swarming Vulture Droid: A deck can have up to 15 copies of this card. / This unit gets +1/+0 for each other friendly Swarming Vulture Droid.
+819281|Han Solo - Audacious Smuggler: Action [exhaust]: Put a card from your hand into play as a resource and ready it. At the start of the next action phase, defeat a resource you control. / Deployed: On Attack: Put the top card of your deck into play as a resource and ready it. At the start of the next action phase, defeat a resource you control. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+819892|OOM-Series Officer: When Defeated: Deal 2 damage to a base.
+820829|Cad Bane - Now It's My Turn: Shielded / Overwhelm / On Attack: Defeat any number of friendly Credit tokens. Give an Experience token to this unit for each Credit defeated this way.
+821178|Greef Karga - Introductions are in Order: Action [1 resource, Exhaust]: If your base was attacked this phase, create a Mandalorian token.
+820619|Mas Amedda - Accomplice to Power: When Played: Give an Experience token to each of up to 2 other Official units. / Plot (When you deploy a leader, you may play this card from your resources, paying its cost. Replace it with the top card of your deck.)
+820567|Kylo Ren's Command Shuttle - Icon of Authority: Each friendly ground unit with Sentinel gets +0/+2.
+820528|Kowakian Monkey-Lizard: Ambush (When you play this unit, it may attack an enemy unit.)
+820100|Wingman Victor Two - Mauler Mithel: Epic Action: Piloting [1 resource Command Villainy] (You may play this as an upgrade on a friendly Vehicle without a Pilot.) / When played as an upgrade: Create a TIE Fighter token.
+820690|Alexsandr Kallus - With New Purpose: While you have the initiative, each other friendly <uq> (unique) unit gains Raid 2. / When Played: Deal 2 damage to each of up to 3 ground units.
+819582|Fenn Rau - Protector of Concord Dawn: When Played: You may play an upgrade from your hand. It costs 2 resources less. / When you play an upgrade on this unit: Give an enemy unit –2/–2 for this phase.
+819576|Embo - Stoic and Resolute: When this unit completes an attack: If the defender was defeated, heal up to 2 damage from a unit.
+820346|Mythosaur - Folklore Awakened: Shielded / Friendly upgraded units can't be exhausted or returned to hand by enemy card abilities. / Friendly leaders gain the Mandalorian trait.
+819704|Cartel Turncoat: Bounty — Draw a card. (When this unit is defeated or captured, your opponent collects its bounty.)
+819217|Fighter: Fighter: 179 entities of this type.
+820989|Doctor Aphra - Digging For Answers: On Attack: Discard 3 cards from your deck. You may return an Underworld card discarded this way to your hand.
+819645|Kylo's TIE Silencer - Ruthlessly Efficient: Action: If this unit was discarded from your hand or deck this phase, play it from your discard pile (paying its cost).
+820438|Saesee Tiin - Courageous Warrior: When Played: If you have the initiative, deal 1 damage to each of up to 3 units.
+820456|Baylan Skoll - Enigmatic Master: Hidden / When Played: You may use the Force. If you do, return a non-leader unit that costs 4 or less to its owner's hand. Then, its owner may play it for free.
+819716|A New Adventure: Return a non-leader unit that costs 6 or less to its owner's hand. Then, its owner may play it for free.
+820123|Bunker Defender: While you control a Vehicle unit, this unit gains Sentinel. (Units in this arena can't attack your non-Sentinel units or your base.)
+820374|Yoda - My Ally is the Force: When Played: You may use the Force. If you do, heal 5 damage from a base. / When you use the Force: You may deal damage to a unit equal to twice the number of units you control.
+819972|Sanctioner's Shuttle: Coordinate — When Played: This unit captures an enemy non-leader unit that costs 3 or less. (Gain this ability while you control 3 or more units, including this one.)
+821369|You Have Failed Me: Defeat a friendly unit. If you do, ready a friendly unit with 5 or less power.
+820526|Curious Flock: When Played: Pay up to 6 resources. For each resource paid this way, give an Experience token to this unit.
+819994|Grievous's Wheel Bike: While playing this upgrade on General Grievous, it costs 2 resources less to play. / Attach to a non-Vehicle unit. / Attached unit gains Overwhelm.
+820246|Sweep the Area: Return up to 2 non-leader units in the same arena with a combined cost 3 or less to their owners' hands.
+819805|Providence Destroyer: Exploit 2 (While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.) / On Attack: Give an enemy space unit –2/–2 for this phase.
+820722|Darth Traya - Lord of Betrayal: On Attack: You may ready a non-unit leader.
+821183|Stolen Eta Shuttle: Hidden (This unit can't be attacked if it was played this phase.) / While you have the initiative, this unit gets +2/+0.
+820606|Disciples' Devotion: While attached unit is exhausted, it gains Sentinel. (Enemy units in this arena must attack a Sentinel when they attack you.)
+820883|The Stranger - No Survivors: Ambush / Grit / While attacking, you may have the defending unit deal combat damage before this unit.
+819203|Saboteur: When this unit attacks, ignore Sentinel and defeat the defender's Shields.
+820073|Hondo Ohnaka - Superfluous Swindler: Shielded / On Attack: You may take control of a non-Pilot upgrade on a unit and attach it to a different eligible unit.
+821024|The Master Codebreaker - High Stakes: The first Gambit card you play each round costs 1 resource less. / When Played: Search the top 8 cards of your deck for a Gambit card, reveal it, and draw it.
+821115|Huyang - Your Aptitude Falls Short: On Attack: You may give an upgraded unit –4/–0 for this phase.
+820908|Leia's Disguise: Attach to a non-Vehicle unit. / Attached unit gains the Underworld trait. / When Played: If attached unit is Leia Organa, give a Shield token to a friendly unit.
+820371|Leia Organa - Extraordinary: While this unit is in the space arena, she can't ready and gains: “Action [use the Force]: Move this unit to the ground arena and give each friendly Heroism unit +2/+2 for this phase.”
+821091|Rancor Keeper: When a friendly unit is dealt damage and survives: Deal 1 damage to any number of bases. Use this ability only once each round.
+819475|Gamorrean Guards: While you control another [Cunning] unit, this unit gains Sentinel. (Units in this arena can't attack your non-Sentinel units or your base.)
+820387|Kaadu: When Played: You may give another friendly unit Overwhelm for this phase. (When attacking an enemy unit, deal excess damage to the opponent's base.)
+821008|Cutthroat Podracer: When Played: You may deal 2 damage to an exhausted ground unit.
+820486|Ascension Cable: Attach to a non-Vehicle unit. / Attached unit gains Saboteur. (When this unit attacks, ignore Sentinel and defeat the defender's Shields.)
+819658|Cassian Andor - Rebellions Are Built On Hope: Smuggle [5 resources Aggression Heroism] (If this card is a resource, you may play him for his smuggle cost. Replace it with the top card of your deck.) / When played using Smuggle: Ready this unit.
+820171|Relentless Firespray: On Attack: Ready this unit. Use this ability only once each round.
+819315|Luke Skywalker - Jedi Knight: Restore 3 /  / When Played: Give an enemy unit –3/–3 for this phase. If a friendly unit was defeated this phase, give that enemy unit –6/–6 for this phase instead.
+820295|Nightsister Lair: When a friendly Force unit attacks: The Force is with you (create your Force token).
+820024|Darth Vader - Victor Squadron Leader: Action [Exhaust]: If you attacked with a non-token Vehicle unit this phase, create a TIE Fighter token. / Deployed:  / Attached unit is a leader unit. / When deployed as an upgrade: Create 2 TIE Fighter tokens. / Epic Action: Epic Action: If you control 6 or more resources, choose one: / Deploy this leader. / Deploy this leader as an upgrade on a friendly Vehicle unit without a Pilot on it.
+820508|The Son - Embodiment of Darkness: While the Force is with you, each friendly unit gets +2/+0.
+820471|Qui-Gon Jinn - The Negotiations Will Be Short: Ambush / When Defeated: You may choose a non-leader ground unit. Its owner puts it on the top or bottom of their deck.
+819646|Death Watch Loyalist: Grit (This unit gets +1/+0 for each damage on it.) / Overwhelm (When attacking an enemy unit, deal excess damage to the opponent's base.)
+820352|Shatterpoint: Choose one: / Defeat a non-leader unit with 3 or less remaining HP. / Use the Force (lose your Force token). If you do, defeat a non-leader unit.
+820142|Lightspeed Assault: Defeat a friendly space unit and deal damage equal to its power to an enemy space unit. If you do, deal indirect damage equal to the enemy unit's power to its controller.
+820308|Nameless Terror: When Played: You may exhaust a Force unit. / On Attack: Each enemy unit loses the Force trait for this phase.
+821099|Poe Dameron - I'll Come Back For You: All units lose Sentinel.
+820003|Armored Saber Tank: Sentinel (Units in this arena can't attack your non-Sentinel units or your base.)
+821235|Knobby White Ice Spider: Hidden (This unit can't be attacked if it was played this phase.) / When Played: For each enemy unit, give an Advantage token to this unit.
+819977|Droid Cohort: Attached unit gains, “When Defeated: Create a Battle Droid token.”
+819195|Exploit: While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.
+820435|Quinlan Vos - Dark Disciple: On Attack: If this unit has 6 or more power, you may deal 2 damage to an enemy base.
+820440|Invasion Control Ship: Friendly Droid units gain Raid 2.
+820636|Queen Amidala - Championing Her People: When Played: Create 2 Spy tokens. / If damage would be dealt to this unit, you may defeat another friendly unit that shares a trait with this unit. If you do, prevent that damage.
+821031|Bix Caleen - Selling Scrap: When Played/On Attack: You may discard a card from your hand. If you do, create a Credit token.
+820613|Hyperspace Disaster: Defeat all space units.
+819945|San Hill - Chairman of the Banking Clan: Exploit 3 (While playing this card, defeat up to 3 units you control. This card costs 2 resources less for each unit defeated this way.) / On Attack: For each friendly unit that was defeated this phase, ready a friendly resource.
+820244|Punch It: Attack with a Vehicle unit. It gets +2/+0 for this attack.
+820583|Captain Rex - Into the Firefight: When Played/When this unit completes an attack: Give this unit and an enemy unit Sentinel for this phase.
+819249|Spectre: Spectre: 34 entities of this type.
+821073|The Mandalorian - We Can't Keep Running: When you take the initiative: You may pay 1 resource. If you do, draw a card. / Deployed: Support (When you deploy this leader, you may attack with another unit. It gains this unit's other abilities for this attack.) / On Attack: If you have the initiative, you may draw a card. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+819711|Qi'ra - Playing Her Part: When Played: Look at an opponent's hand, then name a card. While this unit is in play, each card with that name costs 3 resources more for your opponents to play.
+820664|With Thunderous Applause: Give a unit +2/+2 for this phase. / You may disclose Command (reveal a card from your hand with this aspect icon). If you do, give another unit +2/+2 for this phase.
+819596|Phase-III Dark Trooper: Sentinel (Units in this arena can't attack your non-Sentinel units or your base.) /  / When combat damage is dealt to this unit: Give an Experience token to this unit (if it survives the damage).
+820461|Anakin Skywalker - Force Prodigy: Hidden (This unit can't be attacked if it was played this phase.) / Shielded (When you play this unit, give a Shield token to him.)
+820540|Leia Organa - Of A Secret Bloodline: Action [1 resource, Exhaust]: Disclose Vigilance, Command, Aggression, Cunning, or Heroism (reveal a card from your hand with this aspect icon). If you do, give an Experience token to a unit that doesn't share an aspect with the disclosed card. / Deployed: On Attack: You may disclose Vigilance, Command, Aggression, Cunning, or Heroism. If you do, give an Experience token to a unit that doesn't share an aspect with the disclosed card. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+819604|Remnant Reserves: Search the top 5 cards of your deck for up to 3 units, reveal them, and draw them. (Put the other cards on the bottom of your deck in a random order.)
+819393|Admiral Ozzel - Overconfident: Action [exhaust]: Play an Imperial unit from your hand (paying its cost). It enters play ready. Each opponent may ready a unit.
+821061|Advantage: When attached unit's attack or defense ends: Defeat this upgrade.
+820462|BD-1 - Beep Boo Boo Bweep: Hidden (This unit can't be attacked if it was played this phase.) / When Played: Choose another friendly unit. While this unit is in play, the chosen unit gets +1/+0 and gains Saboteur.
+821058|The Armorer - Steel Shapes Us: Action [Exhaust]: Play an upgrade from your resources on a unit that entered play this phase (paying its cost). If you do, resource the top card of your deck. / Deployed: When Attack Ends: You may play an upgrade from your resources on a friendly unit. If you do, resource the top card of your deck. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+821106|Gar Saxon - Coveting Power: When you play an upgrade on this unit: You may create a Mandalorian token. Use this ability only once each round.
+821359|General Veers - Leading the Assault: When Played: If you control a Vigilance unit, deal 2 damage to an enemy base and heal 2 damage from your base.
+819258|Twi'lek: Twi'lek: 18 entities of this type.
+820754|Hired Slicer: On Attack: Reveal the top 2 cards of a deck. If you do, you may exhaust a unit that shares a Trait with one of those cards. Put those cards on the bottom of that deck in a random order.
+819347|Superlaser Technician: When Defeated: You may put this unit into play as a resource and ready it.
+819374|Frontline Shuttle: Action [defeat this unit]: Attack with a unit, even if it's exhausted. It can't attack bases for this attack.
+819226|Inquisitor: Inquisitor: 11 entities of this type.
+820232|Rafa Martez - Shrewd Sister: When Played/On Attack: Deal 1 damage to a friendly unit and ready a resource.
+819221|Gambit: Gambit: 35 entities of this type.
+820945|Rey - Skywalker: Opponents can't take control of this unit. / This unit can't be defeated by enemy card abilities.
+820948|C-3PO - Translation Protocol: On Attack: You may give an Experience token to another non-leader unit that shares a Trait with a friendly leader.
+819831|Ki-Adi-Mundi - Composed and Confident: Coordinate — When an opponent plays their second card each phase: You may draw 2 cards.
+819755|Tarfful - Kashyyyk Chieftain: Restore 2 / When a friendly Wookiee unit is dealt combat damage and isn't defeated: That unit deals that much damage to an enemy ground unit.
+819804|Droideka Security: Exploit 2 (While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.) / Sentinel (Units in this arena can't attack your non-Sentinel units or your base.)
+819431|Force Throw: Choose a player. That player discards a card from their hand. Then, if you control a FORCE unit, you may deal damage to a unit equal to the cost of the discarded card.
+821117|Duchess's Protector: When Defeated: Create a Mandalorian token.
+820639|Figure of Unity: Attach to a <uq> unit. / Attached unit gains: “While this unit is ready, each other friendly unit gains Overwhelm, Raid 1, and Restore 1.”
+819612|Adelphi Patrol Wing: When Played: You may attack with a unit. If you have the initiative, it gets +2/+0 for this attack.
+819974|Geonosis Patrol Fighter: Exploit 2 (While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.) / When Played: You may return a non-leader unit that costs 3 or less to its owner's hand.
+819854|Reprocess: Choose up to 4 units in your discard pile. Put them on the bottom of your deck in a random order and create that many Battle Droid tokens.
+819345|Seasoned Shoretrooper: While you control 6 or more resources, this unit gets +2/+0.
+819573|Follower of The Way: While this unit is upgraded, it gets +1/+1.
+819553|First Light - Headquarters of the Crimson Dawn: Grit / Each other friendly non-leader unit gains Grit. / Smuggle [7 resources Vigilance Villainy, deal 4 damage to a friendly unit]
+821164|Bo-Katan Kryze - For All of Mandalore: While you control another Mandalorian unit, this unit gains Raid 2.
+821293|Far Far Away: Return a friendly non-leader unit to its owner's hand. If you do, return an enemy non-leader unit to its owner's hand.
+819575|Val - Loyal to the End: Bounty — Deal 3 damage to a unit. / When Defeated: Give 2 Experience tokens to a friendly unit. (The active player chooses the order of Val's abilities.)
+820716|Unauthorized Investigation: Create a Spy token. / You may disclose Aggression (reveal a card from your hand with this aspect icon). If you do, create another Spy token.
+819812|41st Elite Corps: Coordinate — This unit gets +0/+3. (Gain this ability while you control 3 or more units.)
+820692|One Way Out: Attack with a unit. It gets +1/+0 and gains Overwhelm for this attack. If it attacks a unit, the defender loses all abilities for this attack.
+820846|Bith Brute: Sentinel (Enemy units in this arena must attack a Sentinel when they attack you.) / Saboteur (When this unit attacks, ignore Sentinel and defeat the defender's Shields.)
+819863|Captain Rex - Lead by Example: When Played: Create 2 Clone Trooper tokens.
+820236|Razor Crest - Ride For Hire: When a Pilot attaches to this unit: You may return a non-leader unit that costs 2 or less or an exhausted non-leader unit that costs 4 or less to its owner's hand.
+820826|Citadel Research Center: Epic Action [1 resource]: Return a friendly resource to its owner's hand. If you do, resource the top card of your deck.
+819925|Hevy - Staunch Martyr: Coordinate — Raid 2 (Gain this keyword while you control 3 or more units. This unit gets +2/+0 while attacking.) / When Defeated: Deal 1 damage to each enemy ground unit.
+820331|Size Matters Not: If you control a Force unit, this upgrade costs 1 resource less to play. / Attached unit's printed power is considered to be 5 and its printed HP is considered to be 5.
+820280|Morgan Elsbeth - Following the Call: Action [Exhaust]: Choose a friendly unit that attacked this phase. Play a unit from your hand that shares a keyword with the chosen unit. It costs 1 resource less. / Deployed: On Attack: The next unit you play this phase costs 1 resource less if it shares a keyword with a friendly unit. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819441|Bib Fortuna - Jabba's Majordomo: Shielded (When you play this unit, give him a Shield token.) /  / Action [Exhaust]: Play an event from your hand. It costs [1 resource] less.
+819240|Nihil: Nihil: 5 entities of this type.
+819901|Self-Destruct: Defeat a friendly unit. If you do, deal 4 damage to a unit.
+820080|Landing Shuttle: When Defeated: You may draw a card.
+819971|Freelance Assassin: When Played: You may pay 2 resources. If you do, deal 2 damage to a unit.
+820161|Black One - Straight At Them: While this unit is upgraded, it gets +1/+0. / On Attack: If you control Poe Dameron (as a unit, upgrade, or leader), you may deal 1 damage to a unit.
+821054|Seasoned Tracker: Hidden (This unit can't be attacked if it was played this phase.)
+819619|Enforced Loyalty: Defeat a friendly unit. If you do, draw 2 cards.
+819775|Padmé Amidala - Serving the Republic: Coordinate — Action [1 resource, Exhaust]: Search the top 3 cards of your deck for a Republic card, reveal it, and draw it. (Put the other cards on the bottom of your deck in a random order. Gain this ability while you control 3 or more units.) / Deployed: Restore 1 (When this unit attacks, heal 1 damage from your base.) / Coordinate — On Attack: Search the top 3 cards of your deck for a Republic card, reveal it, and draw it. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819429|Occupier Siege Tank: Grit (This unit gets +1/+0 for each damage on it.)
+819763|Twin Pod Cloud Car: Restore 2 (When this unit attacks, heal 2 damage from your base.)
+820885|Anakin Skywalker - Prescient Podracer: When a friendly unit's attack ends: If no other units have attacked this phase, you may return it to its owner's hand. If you do, heal 2 damage from your base.
+820365|Point Rain Reclaimer: When Played: If you control a Jedi unit, you may give an Experience token to this unit.
+819667|Bo-Katan Kryze - Fighting For Mandalore: When Defeated: For each player with 15 or more damage on their base, draw a card.
+820598|Rotunda Senate Guards: While this unit is undamaged, it gains Sentinel. (Enemy units in this arena must attack a Sentinel when they attack you.)
+820185|Twin Laser Turret: Attach to a Vehicle unit. / Attached unit gains: “On Attack: Deal 1 damage to each of up to 2 units in this arena.”
+819234|Mandalorian: Mandalorian: 84 entities of this type.
+819701|Dryden Vos - Offering No Escape: Shielded / When Played: Choose a captured card guarded by a unit you control. You may play it for free under your control.
+819228|Jawa: Jawa: 2 entities of this type.
+820107|Apology Accepted: Defeat a friendly unit. You may give 2 Experience tokens to a unit.
+819516|Restock: Choose up to 4 cards in a discard pile. Put them on the bottom of their owner's deck in a random order.
+819264|Wookiee: Wookiee: 22 entities of this type.
+820861|Zuckuss - Dangerous: Saboteur / On Attack: If you control another Bounty Hunter unit, you may deal damage equal to this unit's power to a ground unit.
+819556|Calculated Lethality: Defeat a non-leader unit that costs 3 or less. For each upgrade that was on that unit, give an Experience token to a friendly unit.
+821323|Chewbacca - Rrruuuurrr: Sentinel (Enemy units in this arena must attack a Sentinel when they attack you.)
+820832|Ezra Bridger - Spectre Six: Raid 1 (This unit gets +1/+0 while attacking.) / When Played: You may heal 2 damage from a unit. If you control a Aggression or Cunning unit, you may heal 4 damage from a unit instead.
+820356|Captain Enoch - Captain of the Guard: This unit gets +1/+0 for each Trooper unit in your discard pile.
+820766|Kreia's Whispers: Draw 3 cards, then put a card from your hand on the top of your deck and another card from your hand on the bottom of your deck.
+820172|Crackshot V-Wing: When Played: If you control no other Fighter units, deal 1 damage to this unit.
+820449|Adept of Anger: Action [Exhaust, use the Force (lose your Force token)]: Exhaust a unit.
+819691|Bravado: If you've defeated an enemy unit this phase, this event costs 2 resources less to play. / Ready a unit.
+820652|Consular's Cruiser: Sentinel (Enemy units in this arena must attack a Sentinel when they attack you.)
+820804|Boba Fett - Krayt's Claw Commander: When a friendly Bounty Hunter unit's attack ends: If the defending unit was defeated, you may exhaust this leader. If you do, create a Credit token. / Deployed: Raid 1 (This unit gets +1/+0 while attacking.) / When a friendly Bounty Hunter unit's attack ends: If the defending unit was defeated, create a Credit token. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+820379|Acclamator Assault Ship: On Attack: You may give another unit +5/+5 for this phase.
+820228|BoShek - Charismatic Smuggler: Epic Action: Piloting [2 resources Cunning] (You may play this as an upgrade on a friendly Vehicle without a Pilot.) / When played as an upgrade: Discard 2 cards from your deck. Return each of those cards with an odd cost to your hand.
+819697|4-LOM - Bounty Hunter for Hire: Ambush (When you play this unit, it may ready and attack an enemy unit.) / Each friendly unit named Zuckuss gets +1/+1 and gains Ambush.
+820400|Rampage: Each friendly Creature unit gets +2/+2 for this phase.
+820693|Oppression Breeds Rebellion: If a friendly unit was defeated while attacking this phase, draw 3 cards.
+821311|Gallofree Transport: When Defeated: Give 2 Advantage tokens to a friendly unit.
+820102|Wingman Victor Three - Backstabber: Epic Action: Piloting [1 resource Command Villainy] (You may play this as an upgrade on a friendly Vehicle without a Pilot.) / When played as an upgrade: You may give an Experience token to another unit.
+820759|Synara San - Harboring a Secret: Hidden / On Attack: For each friendly unit, ready a friendly resource.
+820520|Luke Skywalker - A Hero's Beginning: When you play another <uq> (unique) unit: You may use the Force (lose your Force token). If you do, give an Experience token and a Shield token to this unit.
+819923|Reckless Torrent: Coordinate — When Played: You may deal 2 damage to a friendly unit and 2 damage to an enemy unit in the same arena. (Gain this ability while you control 3 or more units, including this one.)
+820723|Lurking Snub Fighter: When Played: You may exhaust a unit. / Plot (When you deploy a leader, you may play this card from your resources, paying its cost. Replace it with the top card of your deck.)
+820654|Crucible - Centuries of Wisdom: When Played/When Defeated: Give an Experience token to each other friendly unit.
+821040|Salvaged Materials: Play an Item upgrade from your discard pile. It costs 3 resources less. At the start of the next regroup phase, defeat it.
+819321|Protector: Attached unit gains Sentinel. (Units in this arena can't attack your non-Sentinel units or your base.)
+820902|Cinta Kaz - Stone Cold and Fearless: While this unit is upgraded, she gains Sentinel. (Enemy units in this arena must attack a Sentinel when they attack you.)
+819871|Steadfast Senator: Action [2 resources, Exhaust]: Attack with a unit. It gets +2/+0 for this attack.
+819466|Cantina Bouncer: When Played: You may return a non-leader unit to its owner's hand.
+819673|Migs Mayfeld - Triggerman: When a player discards a card from their hand: You may deal 2 damage to a unit or base. Use this ability only once each round.
+819297|Death Trooper: When Played: Deal 2 damage to a friendly ground unit and 2 damage to an enemy ground unit.
+819888|The Clone Wars: Pay any number of resources. Create that many Clone Trooper tokens. Each opponent creates that many Battle Droid tokens.
+821112|Pre Vizsla - Strong-Willed Ruler: When Played: Defeat any number of non‑leader units with a total of 6 or less remaining HP. Create a Mandalorian token for each unit defeated this way.
+819360|Mon Mothma - Voice Of The Rebellion: When Played: Search the top 5 cards of your deck for a REBEL card, reveal it, and draw it. (Put the other cards on the bottom of your deck in a random order.)
+819898|Savage Opress - Monster: When Played: If you control fewer units (including this one) than an opponent, ready this unit.
+819870|Obedient Vanguard: Raid 1 (This unit gets +1/+0 while attacking.) / When Defeated: You may give a Trooper unit +2/+2 for this phase.
+821238|Mark My Words: Attach to a damaged unit. / Attached unit gains Overwhelm. (When attacking an enemy unit, deal excess damage to the opponent's base.)
+819551|Supercommando Squad: Shielded (When you play this unit, give a Shield token to it.) / While this unit is upgraded, it gains Sentinel. (Units in this arena can't attack your non-Sentinel units or your base.)
+821277|Remnant Lookouts: When Played: Look at an opponent's hand. You may discard a card from it. If you do, they draw a card.
+820494|Force Illusion: Exhaust an enemy unit. A friendly unit gains Sentinel for this phase.
+819760|Lady Proxima - White Worm Matriarch: When you play another Underworld card: You may deal 1 damage to a base.
+819479|Snapshot Reflexes: When Played: You may attack with attached unit.
+819209|Bounty Hunter: Bounty Hunter: 90 entities of this type.
+820485|Sorcerers of Tund: Shielded (When you play this card, give a Shield token to it.)
+819269|Luke Skywalker - Faithful Friend: Action [1 resource, exhaust]: Give a Shield token to a [Heroism] unit you played this phase. / Deployed: On Attack: You may give another unit a Shield token. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader. (Flip him, ready him, and move him to the ground arena.)
+820553|Sabé - Queen's Shadow: When a friendly unit deals combat damage to a base: You may exhaust this leader. If you do, look at the top 2 cards of the defending player's deck. Discard 1 of those cards. (Put the other back on top.) / Deployed: Raid 1 / When this unit deals combat damage to a base: Look at the defending player's hand. You may discard a card from it. If you do, that player draws a card. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819685|Death Mark: Attached unit gains: “Bounty — Draw 2 cards.” (When this unit is defeated or captured, its opponent collects its bounty.)
+821151|Foundling Rescue: You may defeat a unit with 2 or less remaining HP. / Create a Mandalorian token.
+820249|Indoctrinated Conscript: Epic Action: Piloting [1 resource Villainy] (You may play this as an upgrade on a friendly Vehicle without a Pilot.)
+819585|Top Target: Attached unit gains: “Bounty — Heal 4 damage from a unit or base. If this unit is unique, heal 6 damage instead.” (When this unit is defeated or captured, its opponent collects its bounty.)
+820830|Hound's Tooth - Hunters' Approach: When Attack Ends: If this unit survived, you may defeat a unit with less power than this unit.
+820635|Dressellian Commandos: Ambush (When you play this unit, it may attack an enemy unit.) / Plot (When you deploy a leader, you may play this card from your resources, paying its cost. Replace it with the top card of your deck.)
+820363|Inquisitor's Lightsaber: Attach to a non-Vehicle unit. / Attached unit gains: “While attacking a Force unit, this unit gets +2/+0.”
+819268|Chirrut Îmwe - One With The Force: Action [Exhaust]: Give a unit +0/+2 for this phase. / Deployed: During the action phase, this unit isn’t defeated by having no remaining HP. (During the regroup phase, if he has no remaining HP, defeat him.) / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+820062|Hera Syndulla - We've Lost Enough: Restore 1 (When this unit attacks, heal 1 damage from your base.) / Epic Action: Piloting [2 resources Vigilance Heroism] (You may play this as an upgrade on a friendly Vehicle without a Pilot.) / Attached unit gains Restore 1.
+819647|Punishing One - Dengar's Jumpmaster: When an upgraded enemy unit is defeated: You may ready this unit. Use this ability only once each round.
+819979|Shadowed Intentions: Attached unit gains: “This unit can't be captured, defeated, or returned to its owner's hand by enemy card abilities.”
+819408|Red Three - Unstoppable: Raid 1 (This unit gets +1/+0 while attacking.) /  / Each other friendly [Heroism] unit gains Raid 1.
+819659|Nite Owl Skirmisher: Smuggle [5 resources Aggression Heroism] (If this card is a resource, you may play it for its smuggle cost. Replace it with the top card of your deck.)
+820515|Jedi Vector: This unit gets +1/+0 if you control another Jedi unit and +1/+0 if you control a Lightsaber upgrade.
+820757|Duchess's Investigators: When Played: You may disclose Cunning (reveal a card from your hand with this aspect icon). If you do, each opponent discards a random card from their hand.
+821333|Recovery: Heal 5 damage from a unit.
+820563|The Chancellor's Shuttle - Grim Harbinger: Restore 1 / When Defeated: If you control Chancellor Palpatine (as a leader or unit), you may give an Experience token to a unit.
+819632|Arquitens Assault Cruiser: Ambush / When this unit attacks and defeats a non-leader unit: Put the defeated unit into play as a resource under your control.
+820323|Itinerant Warrior: Shielded (When you play this unit, give a Shield token to it.) / When Played: You may use the Force (lose your Force token). If you do, heal 3 damage from a base.
+819419|Aggression: Choose two, in any order: /  / Draw a card. / Defeat up to 2 upgrades. / Ready a unit with 3 or less power. / Deal 4 damage to a unit.
+820736|Rebel Propagandist: When Played/When Defeated: Give another friendly unit +1/+0 and Saboteur for this phase. (When that unit attacks, ignore Sentinel and defeat the defender's Shields.)
+821335|Tauntaun Mount: When Defeated: Heal 2 damage from your base.
+819866|Petition the Senate: If you control 3 or more Official units, draw 3 cards.
+820350|Crushing Blow: Defeat a non-leader unit that costs 2 or less.
+820340|Chirrut Îmwe - Blind, but not Deaf: Sentinel / When this unit is attacked (before damage is dealt): You may use the Force (lose your Force token). If you do, the attacker gets –2/–0 for this attack.
+819227|Item: Item: 55 entities of this type.
+819932|Grim Resolve: Attack with a non-leader unit. It gains Grit for this attack. (It gets +1/+0 for each damage on it.)
+820612|Retaliation: Defeat a unit that dealt damage to a base this phase.
+820118|Resistance Blue Squadron: When Played: You may deal damage to a unit equal to the number of friendly space units.
+819833|Multi-Troop Transport: Exploit 2 (While playing this card, defeat up to 2 units you control. This card costs 2 resources less for each unit defeated this way.) / On Attack: Create a Battle Droid token.
+819229|Jedi: Jedi: 102 entities of this type.
+819548|The Client - Dictated by Discretion: Shielded / Action [Exhaust]: Choose a unit. For this phase, it gains: “Bounty — Heal 5 damage from a base.” (When that unit is defeated or captured, its opponent collects its bounty.)
+819648|Jango Fett - Renowned Bounty Hunter: While attacking a unit with a Bounty, this unit gets +3/+0 and gains Overwhelm. / When this unit attacks and defeats a unit: Draw a card.
+819938|Soulless One - Customized for Grievous: On Attack: You may exhaust a friendly Droid unit or General Grievous (leader or unit). If you do, this unit gets +2/+0 for this attack.
+820491|Shien Flurry: Play a Force unit from your hand (paying its cost). It gains Ambush for this phase. The next time it would be dealt damage this phase, prevent 2 of that damage.
+819490|Admiral Motti - Brazen and Scornful: When Defeated: You may ready a [Villainy] unit.
+819961|Jar Jar Binks - Foolish Gungan: On Attack: Deal 2 damage to a random unit or base.
+820178|Cham Syndulla - Rallying Ryloth: When Played: If an opponent controls more resources than you, you may put the top card of your deck into play as a resource.
+819675|Unlicensed Headhunter: Saboteur / While this unit is exhausted, it gains: “Bounty — Heal 5 damage from your base.” (When this unit is defeated or captured, your opponent collects its bounty.)
+821321|Leia Organa - Get to Your Transports!: Action [1 resource, Exhaust]: Heal 1 damage from a friendly unit. / Deployed: On Attack: Heal 1 damage from a friendly unit and 1 damage from another friendly unit. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader. (Flip her, ready her, and move her to the ground arena.)
+821226|Axe Woves - Undaunted: When you draw 1 or more cards (including during the regroup phase): Give an Advantage token to this unit.
+819403|Force Choke: If you control a FORCE unit, this event costs [1 resource] less to play.  /  / Deal 5 damage to a non-VEHICLE unit. That unit's controller draws a card.
+820064|Admiral Yularen - Fleet Coordinator: When Played: Choose Grit, Restore 1, Sentinel, or Shielded. While this unit is in play, each friendly Vehicle unit gains the chosen keyword.
+820455|Second Sister - Seeking the Holocron: On Attack: You may discard 2 cards from your deck. For each Force card discarded this way, ready a resource.
+821179|Warrior of Clan Kryze: While you control another exhausted unit, this unit gains Sentinel. (Enemy units in this arena must attack a Sentinel when they attack you.)
+820787|Remote Escort Tank: When Played: Give a unit Sentinel for this phase. / Plot (When you deploy a leader, you may play this card from your resources, paying its cost. Replace it with the top card of your deck.)
+820424|Knight's Saber: Attach to a Jedi non-Vehicle unit.
+820306|Karis - We Don't Like Strangers: When Defeated: You may use the Force (lose your Force token). If you do, give a unit –2/–2 for this phase.
+820420|Kit Fisto's Aethersprite - Good Hunting: Saboteur / When Played: You may defeat any number of upgrades on a unit.
+819721|Privateer Scyk: While you control another Cunning unit, this unit gains Shielded. (When you play this unit, give a Shield token to it.)
+819336|Entrenched: Attached unit can't attack bases.
+820875|Sabine Wren - Spectre Five: Ambush (When you play this unit, she may attack an enemy unit.) / When Played: You may defeat a non-<uq> upgrade. If you control a Vigilance or Command unit, you may defeat an upgrade instead.
+819274|Darth Vader - Dark Lord of the Sith: Action [1 resource, exhaust]: If you played a [Villainy] card this phase, deal 1 damage to a unit and 1 damage to a base. / Deployed: On Attack: You may deal 2 damage to a unit. / Epic Action: Epic Action: If you control 7 or more resources, deploy this leader. (Flip him, ready him, and move him to the ground arena.)
+819377|Homestead Militia: While you control 6 or more resources, this unit gains Sentinel. (Units in this arena can't attack your non-Sentinel units or your base.)
+819485|Outmaneuver: Choose an arena (ground or space). Exhaust each unit in that arena.
+819581|Vigilant Pursuit Craft: Sentinel (Units in this arena can't attack your non-Sentinel units or your base.) /  / Smuggle [7 resources, vigilance] (If this card is a resource, you may play it for its smuggle cost. Replace it with the top card of your deck.)
+819570|Second Chance: Attach to a non-leader unit. / Attached unit gains: “When Defeated: For this phase, this unit's owner may play it from their discard pile for free.”
+821140|Nebulon-C Frigate: When Played: You may heal 3 damage from a unit or base.
+820940|Phantom - Spectre Shuttle: When Played: You may play a Heroism unit from your hand (paying its cost) and give an Experience token to it.
+819802|Morgan Elsbeth - Keeper of Many Secrets: Restore 1 / On Attack: You may defeat another friendly unit. If you do, draw a card.
+819947|Wartime Profiteering: Look at cards from the top of your deck equal to the number of units that were defeated this phase. Draw 1 and put the others on the bottom of your deck in a random order.
+820585|Vigil - Securing the Future: If damage would be dealt to another friendly unit, prevent 1 of that damage. / If damage would be dealt to this unit by another card, deal that much damage plus 1 instead. / Plot
+821042|Backed by the Hutts: Create a Credit token. You may deal damage to a unit equal to the number of friendly Credit tokens.
+821092|Grand Admiral Thrawn - Orchestrating His Return: Support (When you play this unit, you may attack with another unit. It gains this unit's other abilities for this attack.) / When Attack Ends: If the defending unit was defeated, ready this unit.
+820031|Poe Dameron - I Can Fly Anything: Action [1 resource, Exhaust]: Flip this leader and attach him as an upgrade to a friendly Vehicle unit without a Pilot on it. / Deployed:  / Action [1 resource]: Attach this upgrade to a friendly Vehicle unit without a Pilot on it. Use this ability only once each round. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader (as a unit).
+819960|Aid from the Innocent: Search the top 10 cards of your deck for 2 Heroism non-unit cards and discard them. (Put the other cards on the bottom of your deck in a random order.) / For this phase, you may play the discarded cards, and they each cost 2 resources less.
+819963|Impropriety Among Thieves: Choose a ready non-leader unit controlled by each player. If you do, each player takes control of the chosen unit controlled by the player to their right. At the start of the regroup phase, each player takes control of each unit they own that was chosen for this ability.
+821071|Vane - Quarrelsome Pirate: Action [Exhaust, defeat a friendly upgrade]: Deal 2 damage to a base. / Deployed: On Attack: You may defeat a friendly upgrade. If you do, deal 2 damage to the defending unit or a base. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819856|Echo - Valiant ARC Trooper: Coordinate — This unit gets +2/+2. (Gain this ability while you control 3 or more units.)
+819722|DJ - Blatant Thief: Smuggle [7 resources Cunning Cunning] / When played using Smuggle: Take control of an enemy resource. When this unit leaves play, that resource's owner takes control of it.
+820592|Lobot - Cloud City Coordinator: Sentinel (Enemy units in this arena must attack a Sentinel when they attack you.) / Grit (This unit gets +1/+0 for each damage on him.)
+820853|Cassian Andor - Everything For the Rebellion: When a friendly unit's attack ends: If the defending unit was defeated, deal 2 damage to a base.
+820316|Drain Essence: Deal 2 damage to a unit. The Force is with you (create your Force token).
+819491|Snowtrooper Lieutenant: When Played: You may attack with a unit. If it's an Imperial unit, it gets +2/+0 for this attack.
+820531|The Father - Maintaining Balance: When you use the Force: You may deal 1 damage to this unit. If you do, the Force is with you.
+821118|Leia Organa - Vigilant for Danger: Support (When you play this unit, you may attack with another unit. It gains this unit's other abilities for this attack.) / On Attack: You may deal 1 damage to this unit. If you do, heal 2 damage from your base.
+820964|Haymaker: Give an Experience token to a friendly unit. That unit deals damage equal to its power to an enemy unit in the same arena.
+819921|Vanguard Droid Bomber: When Played: If you control another Separatist unit, deal 2 damage to an enemy base.
+819272|Hera Syndulla - Spectre Two: Ignore the aspect penalty on SPECTRE cards you play. / Deployed: Ignore the aspect penalty on SPECTRE cards you play. /  / On Attack: You may give an Experience token to another unique unit. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+820128|Eager Escort Fighter: Ambush (When you play this unit, it may attack an enemy unit.)
+819352|Blizzard Assault AT-AT: When this unit attacks and defeats a unit: You may deal the excess damage from this attack to an enemy ground unit.
+820066|L3-37 - Get Out Of My Seat: If this unit would be defeated, you may instead attach her as an upgrade to a friendly Vehicle unit without a Pilot on it. (She's no longer a unit. Defeat all upgrades on her and remove all damage from her.) / Epic Action: Piloting [3 resources Vigilance Heroism]
+819519|Gar Saxon - Viceroy of Mandalore: Each friendly upgraded unit gets +1/+0. / Deployed: Each friendly upgraded unit gets +1/+0 and gains: “When Defeated: You may return an upgrade that was attached to this unit to its owner’s hand.” / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+819465|Bodhi Rook - Imperial Defector: When Played: Look at an opponent's hand and discard a non-unit card from it.
+819965|Independent Senator: Action [2 resources, Exhaust]: Exhaust a unit with 4 or less power.
+819442|Cartel Spacer: When Played: If you control another [Cunning] unit, exhaust an enemy unit that costs 4 or less.
+821200|Mortar Trooper: Action [Exhaust]: Deal 1 damage to each of up to 3 ground units.
+821251|Snub Fighter Squadron: Ambush (When you play this unit, it may attack an enemy unit.) / When Played: Deal 1 damage to a space unit.
+820978|B-Wing Skirmisher: When Played: Deal 1 damage to each of up to 2 space units.
+821005|Salacious Crumb - Cackling Companion: Raid 2 / If you control Jabba the Hutt (as a leader or unit), this unit enters play ready.
+820509|Darth Revan's Lightsabers: Attach to a non-Vehicle unit. / If attached unit is a Sith, it gains Grit.
+820460|Liberated by Darkness: Use the Force (lose your Force token). If you do, take control of a non-leader unit. At the start of the regroup phase, its owner takes control of it.
+819698|Slaver's Freighter: When Played: You may ready another unit with power equal to or less than the number of upgrades on enemy units.
+820497|Tip the Scale: Look at an opponent's hand and discard a non-unit card from it.
+819371|Command: Choose two, in any order: /  / Give 2 Experience tokens to a unit. / A friendly unit deals damage equal to its power to a non-unique enemy unit. / Put this event into play as a resource. / Return a unit from your discard pile to your hand.
+819800|Calculating MagnaGuard: When Played/When a friendly unit is defeated: This unit gains Sentinel for this phase. (Units in this arena can't attack your non-Sentinel units or your base.)
+820025|Admiral Holdo - We're Not Alone: Action [1 resource, Exhaust]: Give a Resistance unit or a unit with a Resistance upgrade on it +2/+2 for this phase. / Deployed: On Attack: You may give another Resistance unit or a unit with a Resistance upgrade on it +2/+2 for this phase. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+819865|Synchronized Strike: Deal damage to an enemy unit equal to the number of units you control in its arena.
+820493|A Precarious Predicament: Return an enemy non-leader unit to its owner's hand unless its controller says, “It could be worse.” If they do, you may play a card named It's Worse from your hand or resources for free.
+820930|Bib Fortuna - Die Wanna Wanga?: When Played: If you control another Underworld unit, create a Credit token.
+821169|Admiral Ackbar - Assume Attack Coordinates: When Played: You may defeat this unit. If you do, search the top 10 cards of your deck for any number of space units with combined cost 5 or less and play each of them for free.
+820243|Electromagnetic Pulse: Deal 2 damage to a Droid or Vehicle unit and exhaust it.
+819822|Equalize: Give a unit –2/–2 for this phase. Then, if you control fewer units than that unit's controller, give another unit –2/–2 for this phase.
+819427|Star Wing Scout: When Defeated: If you have the initiative, draw 2 cards.
+819289|Tarkintown: Epic Action: Deal 3 damage to a damaged non-leader unit.
+820871|Maz Kanata - Where's My Boyfriend?: When Attack Ends: If this unit survived, search the top 5 cards of your deck for an Underworld unit and play it. It costs 4 resources less and enters play ready. At the start of the regroup phase, put that unit on the bottom of your deck (if it is still in play).
+821188|Fang Fighter Squadron: Support (When you play this unit, you may attack with another unit. It gains this unit's other abilities for this attack.)
+820616|Major Partagaz - Healthcare Provider: Overwhelm / When another friendly Official unit attacks: This unit gets +2/+2 for this phase.
+820746|Libertine - Under New Ownership: This unit gets +1/+0 for each captured card it's guarding. / When Played: Choose an enemy unit and a non-leader friendly unit. The enemy unit captures the friendly unit.
+821108|Shin Hati - Going Somewhere?: While this is the only friendly non-leader ground unit, she gains Sentinel. (Enemy units in this arena must attack a Sentinel when they attack you.)
+821121|The Mandalorian - Devoted Rescuer: Shielded / If damage would be dealt to another friendly unit, you may defeat a Shield token on this unit. If you do, prevent that damage.
+821147|The Conflict Within: Attached unit gains: “When this unit readies: You may pay 3 resources. If you don't, exhaust this unit.”
+819443|Boba Fett - Disintegrator: On Attack: If this unit is attacking an exhausted unit that didn't enter play this round, deal 3 damage to the defender.
+819273|Leia Organa - Alliance General: Action [exhaust]: Attack with a Rebel unit. Then, you may attack with another Rebel unit. / Deployed: Raid 1 (This unit gets +1/+0 while attacking.) /  / When this unit completes an attack: You may attack with another Rebel unit. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819618|Enterprising Lackeys: When Defeated: You may defeat a friendly resource. If you do, put this unit into play as a resource. / Smuggle [6 resources Command Command]
+819732|Boba Fett's Armor: Attach to a non-Vehicle unit. / If attached unit is Boba Fett and damage would be dealt to him, prevent 2 of that damage.
+820545|Mon Mothma - Forming a Coalition: Ignore the aspect penalties on non-Villainy Official units you play. / Deployed: Ignore the aspect penalties on non‑Villainy Official units you play. / Each other friendly Official unit gets +0/+1. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+821066|Grand Admiral Sloane - Holding the Empire Together: Action [Exhaust]: Choose one: / Give each ground unit Sentinel and Overwhelm for this phase. / Give each space unit Sentinel and Overwhelm for this phase. / Deployed: Overwhelm / Each other friendly unit gains Overwhelm and Sentinel. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819559|Concord Dawn Interceptors: Sentinel (Units in this arena can't attack your non-Sentinel units or your base.) / This unit gets +2/+0 while defending.
+819444|Seventh Fleet Defender: Shielded (When you play this unit, give a Shield token to it.)
+821032|Qui-Gon Jinn - Influencing Chance: Sentinel / When Played/On Attack: Look at the top 3 cards of your deck. You may discard 1 of them. Put the rest back on top in any order.
+821094|Tatooine Repulsor Train: This unit can't be attacked while you control 2 or more exhausted units (unless it gains Sentinel). / On Attack: Deal 2 damage to a ground unit for each friendly exhausted unit.
+820773|Hutt Cartel Starfighter: When Played: Deal 2 damage to this unit.
+819736|Bounty Posting: Search your deck for a Bounty upgrade, reveal it, and draw it. (Shuffle your deck.)  / You may play that upgrade (paying its cost).
+819552|Clan Saxon Gauntlet: Sentinel (Units in this arena can't attack your non-Sentinel units or your base.) / When this unit is attacked: You may give an Experience token to a unit (before damage is dealt).
+819416|For a Cause I Believe In: Reveal the top 4 cards of your deck. For each [Heroism] card revealed this way, deal 1 damage to an enemy base. You may discard any of the revealed cards and put the rest back on top of your deck in any order.
+820192|Koiogran Turn: Ready a Fighter or Transport unit with 6 or less power.
+820880|Broken Horn - Vizago's Pride: When Played: If you have fewer cards in hand than an opponent, draw a card. If you control fewer resources than an opponent, resource the top card of your deck.
+820445|Ataru Onslaught: Ready a Force unit with 4 or less power.
+819862|Aayla Secura - Master of the Blade: Coordinate — On Attack: Prevent all combat damage that would be dealt to this unit for this attack.
+820877|Luke Skywalker - Profit or Be Destroyed: When Played: An opponent chooses one: / They create a Credit token. Ready this unit. / You may deal 5 damage to a unit.
+819762|Mandalorian Warrior: When Played: You may give an Experience token to another Mandalorian unit.
+820286|Kit Fisto - Focused Jedi Master: Action [1 resource, Exhaust]: If you attacked with a Jedi unit this phase, deal 2 damage to a unit. / Deployed: Saboteur (When this unit attacks, ignore Sentinel and defeat the defender's Shields.) / This unit gets +1/+0 for each other friendly Jedi unit. / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819908|Anakin Skywalker - Maverick Mentor: Coordinate — On Attack: Draw a card. (Gain this ability while you control 3 or more units.)
+819411|Black One - Scourge of Starkiller Base: When Played/When Defeated: You may discard your hand. If you do, draw 3 cards.
+819664|Wrecker - Boom!: Overwhelm / When Played: You may defeat a friendly resource. If you do, deal 5 damage to a ground unit.
+820706|Punishing One - Takes No Prisoners: This unit gains Raid 1 for each damaged enemy unit. / When Played/On Attack: You may deal 1 damage to a unit.
+821312|Anakin Skywalker - You Were Right About Me: Hidden / Saboteur / When Played: Give a Shield token to another friendly unit.
+820854|Benthic “Two Tubes” - The War Has Just Begun: On Attack: Deal 1 damage to an enemy ground unit. / When Defeated: Deal 1 damage to a base.
+819247|Separatist: Separatist: 103 entities of this type.
+819213|Creature: Creature: 54 entities of this type.
+820862|4-LOM - Devious: When Played: You may attack with a friendly Bounty Hunter unit, even if it's exhausted. It can't attack bases for this attack.
+820574|Creditor's Claim: Attached unit gains: “When Defeated: You may defeat a unit with 3 or less remaining HP.”
+819919|Clone Heavy Gunner: Coordinate — This unit gets +2/+0. (Gain this ability while you control 3 or more units.)
+820226|Sidon Ithano - The Crimson Corsair: When played as a unit: You may attach this unit as an upgrade to an enemy Vehicle unit without a Pilot on it.
+820094|Direct Hit: Defeat a non-leader Vehicle unit.
+819905|Batch Brothers: When Played: Create a Clone Trooper token.
+820110|Luke Skywalker - You Still With Me?: Epic Action: Piloting [3 resources Command Heroism] (You may play this as an upgrade on a friendly Vehicle without a Pilot.) / If this upgrade would be defeated, you may instead move him to the ground arena as a unit and exhaust him.
+819331|Rugged Survivors: Grit (This unit gets +1/+0 for each damage on it.) /  / On Attack: If you control a leader unit, you may draw a card.
+819334|Devotion: Attached unit gains Restore 2. (When this unit attacks, heal 2 damage from its controller's base.)
+819913|Mace Windu's Lightsaber: Attach to a non-Vehicle unit. / When Played: If attached unit is Mace Windu, draw 2 cards.
+820587|Diplomatic Immunity: Attached unit gains: “When this unit is attacked: You may disclose VigilanceVigilanceHeroismHeroism (reveal cards from your hand with these aspect icons among them). If you do, the attacker gets –2/–0 for this attack.”
+820239|Radiant VII - Ambassadors' Arrival: Each enemy non-leader unit gets –1/–0 for each damage on it. / When Played: Deal 5 indirect damage to a player.
+819436|Open Fire: Deal 4 damage to a unit.
+819756|The Mandalorian's Rifle: Attach to a friendly non-VEHICLE unit. /  / When Played: If attached unit is The Mandalorian, he captures an exhausted enemy non-leader unit. (Put the captured card facedown under him until he leaves play.)
+819680|Covetous Rivals: Grit (This unit gets +1/+0 for each damage on it.) / When Played/On Attack: You may deal 2 damage to a unit with a Bounty.
+820625|Director Krennic - I Lose Nothing But Time: Sentinel / When this unit is attacked: Discard a card from your deck. If it's a unit, you may return it to your hand.
+820839|IG-88 - Programmed to Kill: Shielded
+820789|Restore Freedom: Play a unit from your hand. It costs 1 resource less for each Heroism aspect icon among friendly units.
+820268|Sullustan Spacer: Epic Action: Piloting [1 resource] (You may play this as an upgrade on a friendly Vehicle without a Pilot.)
+820727|Grand Admiral Thrawn - Grand Schemer: When Played: An opponent may choose a non-leader unit they control. If they do, this unit captures that unit. If they don't, ready this unit. / When Defeated: A friendly unit captures an enemy non-leader unit in the same arena.
+820000|Phase II Clone Trooper: Ambush (When you play this unit, it may ready and attack an enemy unit.)
+819776|Maul - A Rival in Darkness: Action [Exhaust]: Attack with a unit. It gains Overwhelm for this attack. (When attacking an enemy unit, deal excess damage to the opponent's base.) / Deployed: Overwhelm / Each other friendly unit gains Overwhelm. / Epic Action: Epic Action: If you control 6 or more resources, deploy this leader.
+819609|Sundari Peacekeeper: Raid 2 (This unit gets +2/+0 while attacking.) / Restore 2 (When this unit attacks, heal 2 damage from your base.)
+820443|Sorcerous Blast: Use the Force (lose your Force token). If you do, deal 3 damage to a unit.
+821043|Windfall: Create 3 Credit tokens.
+819890|In Defense of Kamino: For this phase, each friendly Republic unit gains Restore 2 and: “When Defeated: Create a Clone Trooper token.”
+819644|Guavian Antagonizer: Saboteur (When this unit attacks, ignore Sentinel and defeat the defender's Shields.) / Bounty — Draw a card. (When this unit is defeated or captured, your opponent collects its bounty.)
+819747|Gideon's Light Cruiser - Dark Troopers' Station: Overwhelm (When attacking an enemy unit, deal excess damage to the opponent's base.) /  / When Played: If you control Moff Gideon (as a leader or unit), play a [villainy] unit that costs 3 or less from your hand or discard pile for free.
+820012|Brain Invaders: Each leader loses all abilities except for epic actions and can't gain abilities.
+819370|Attack Pattern Delta: Give a friendly unit +3/+3 for this phase. /  / Give another friendly unit +2/+2 for this phase. /  / Give a third friendly unit +1/+1 for this phase.
+821104|Reanimated Night Trooper: When Defeated: Look at the top card of a deck. You may discard it.
+819387|Recruit: Search the top 5 cards of your deck for a unit, reveal it, and draw it. (Put the other cards on the bottom of your deck in a random order.)
+820221|Never Tell Me the Odds: Discard 3 cards from an opponent's deck and 3 cards from your deck. Deal damage to a unit equal to the number of cards with an odd cost discarded this way.
+819389|Prepare for Takeoff: Search the top 8 cards of your deck for up to 2 Vehicle units, reveal them, and draw them. (Put the other cards on the bottom of your deck in a random order.)
+820831|Chewbacca - Mighty Rescuer: Overwhelm / When Attack Ends: If the defending unit was defeated, give an Experience token to this unit and heal 3 damage from him.
+820517|Grogu - Mysterious Child: Hidden / Action [Exhaust]: Heal up to 2 damage from a unit. If you do, deal that much damage to a unit.
+820682|Chopper - War Hero: When this unit deals combat damage to a base: Each player discards a card from their hand.
+820943|Jaunty Light Freighter: When Played: Give an Experience token to this unit for each different aspect among units you control.
+819705|Grogu - Irresistible: Action [exhaust]: Exhaust an enemy unit.
+820092|Covering the Wing: Create an X-Wing token. You may give a Shield token to another unit.
+819889|Encouraging Leadership: Give each friendly unit +1/+1 for this phase.
+819276|IG-88 - Ruthless Bounty Hunter: Action [Exhaust]: Attack with a unit. If you control more units than the defending player, the attacker gets +1/+0 for this attack. / Deployed: Each other friendly unit gains Raid 1. (They get +1/+0 while attacking.) / Epic Action: Epic Action: If you control 5 or more resources, deploy this leader.
+819937|Planetary Invasion: Exploit 3 / Ready up to 3 units. Each of those units gets +1/+0 and gains Overwhelm for this phase.
+819616|Spark of Hope: Choose a unit in your discard pile. If it was defeated this phase, put it into play as a resource.
+819912|Resolute - Under Anakin's Command: This unit costs 1 resource less to play for every 5 damage on your base. / When Played/On Attack: Deal 2 damage to an enemy unit and each other enemy unit with the same name as that unit.
+820529|Peli Motto - I Should Charge You More: On Attack: Give an Experience token to a friendly Vehicle or Droid unit.
+819881|Clone: You may have this unit enter play as a copy of a non-leader, non-Vehicle unit in play, except it gains the Clone trait and is not unique. (Only the card's printed attributes are copied.)
+819746|Kragan Gorr - Warbird Captain: When an enemy unit attacks your base: Give a Shield token to a friendly unit in the same arena as the attacker.
+819951|Padmé Amidala - Pursuing Peace: Coordinate — On Attack: Give an enemy unit –3/–0 for this phase. (Gain this ability while you control 3 or more units.)
+819412|Guerilla Attack Pod: Grit (This unit gets +1/+0 for each damage on it.)   /  / When Played: If a base has 15 or more damage on it, ready this unit.
+820448|Time of Crisis: Each player chooses a unit they control. Deal 3 damage to each unit not chosen this way.
+820611|Charged with Murder: You may disclose VigilanceVigilance (reveal cards from your hand with these aspect icons among them). If you do, defeat a damaged non-leader unit.

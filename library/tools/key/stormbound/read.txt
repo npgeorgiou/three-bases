@@ -1,0 +1,511 @@
+# Reading request: stormbound
+Read the game block once, then every card below. Judge only against the concept definitions at the end of the game block; use
+the game's rules, keywords and factions to understand what a card does. Write nothing but the answer lines.
+
+## How to read a card
+- Go clause by clause and write each concept the clause expresses, with the exact words that justify it, copied character for
+  character from the card's name or text (a short phrase is best). A script rejects any tag whose words are not in the text.
+- Use the most specific concept that fits; do not add its parent as well. Check sibling concepts against their "Not:" lines.
+- A clause can express several concepts (a trigger, a condition and an effect). Triggers and conditions count too.
+- A keyword or ability named on the card counts: tag that keyword's effects, quoting the keyword's name.
+- Keyword or glossary entries: tag what the keyword itself does.
+- A card with no mechanic (lore, a bare name, plain stats with nothing else) gets an empty answer.
+- Do not guess beyond the text. If the text doesn't say it, it isn't there.
+
+## Answer: one line per card line below, in the same order
+`<ids>|<concept>:<role>:<exact words>;<concept>:<role>:<exact words>;...`   (nothing after `|` for a card with no mechanic)
+<ids> as given on the card line. Roles: does (the card does it), grants (it gives it to another card), benefits (it is better
+when this happens), counters (it answers this), cost (it is part of the cost). The exact words never contain `;` or `|`:
+choose a shorter phrase.
+
+# Game block: Stormbound (card list of 28 Feb 2022 (Stormbound Kitty))
+
+## Rules
+Two-player card game on a board of 4 lanes and 5 rows between two bases. Units are played on free tiles up to the player's front line and move forward at the start of their owner's turn, attacking what stands in front; a unit that reaches the enemy base deals its strength as damage to the base. Structures do not move. Mana grows by 1 each turn. Each card has five levels with growing numbers.
+No keyword list in the source; status words are read by patterns. Numbers that change by level are written as five values.
+
+## Factions (cards)
+- Ironclad (28)
+- Neutral (76)
+- Shadowfen (28)
+- Swarm (28)
+- Winter (30)
+
+## Card types and tribes
+Construct, Dragon, Dwarf, Feline, Frostling, Knight, Pirate, Raven, Rodent, Satyr, Toad, Undead
+
+## Mechanics the game's guides name
+freeze, mana gain, area damage, poison, toads, spawn units, base damage, movement, satyrs, buffs
+
+## From the game's rules pages
+# Source: https://stormboundkingdomwars.fandom.com/wiki/Frosthexers (no glossary page could be reached)
+- Freeze can delay a unit's advance, or keep an enemy on a tile so the opponent can't play a unit there.
+- "On play" marks when an ability happens. Abilities name "bordering" enemy units; older texts said "surrounding".
+- Cards level from 1 to 5; levelling raises the card's numbers.
+
+## Concepts (id | name | what counts | Not: what does not count and where it goes)
+buff | Make a unit stronger (buff) | A unit gains stats or a combat ability it did not have: more power or health, first strike, flying, extra attacks, reach, piercing. | Not: Improving a card still in hand is in_hand_buff; a unit printed with high stats is not buffed.
+stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+temporary_buff | Temporary bonus (this turn only) | A unit's bonus lasts only this turn, round or fight. | Not: A bonus that stays is stat_gain or permanent_growth.
+permanent_growth | Grows again and again | A unit gains stats repeatedly (each turn, each trigger) and keeps them. | Not: A single lasting bonus is stat_gain.
+stat_multiply | Double or multiply stats | A stat or a total is doubled, tripled or multiplied. | Not: Adding a fixed amount is stat_gain.
+first_strike | First strike (hits before the enemy) | The unit deals its combat damage before the enemy can strike back. | Not: Attacking the turn it arrives is haste.
+multi_attack | Attack more than once | The unit attacks or strikes more than once per turn or round. | Not: One attack that hits several targets is multi_target_attack; readying a used unit is untap.
+counterattack | Strike back when attacked (counterattack, thorns) | When the unit is attacked or hit, it deals damage back to the attacker. | Not: Damage it deals when it attacks is on_attack.
+piercing | Ignore armour or defence | The unit's damage or attacks ignore or lower the target's armour, saves or defence. | Not: Damage that carries on to another target is excess_damage.
+evasion | Hard to block (flying, unblockable) | The unit can't be blocked, can be blocked only by some units, or hits the player past blockers. | Not: Can't be targeted is immunity; hidden until it acts is stealth.
+ranged | Ranged attack / long reach | The unit attacks from a distance, from the back row or over other units. | Not: Damage from a spell is damage.
+multi_target_attack | One attack hits several targets (cleave) | A single attack also hits other units or spaces: cleave, sweep, splash. | Not: Area damage from an effect is aoe_damage; several separate attacks are multi_attack.
+excess_damage | Excess damage carries on (trample) | Damage beyond what kills the target goes on to the player or another unit. | Not: Ignoring armour is piercing.
+deathtouch | Any damage kills (deathtouch, poisonous) | Any damage this unit deals destroys the unit it hits. | Not: Destroying by an effect without combat damage is destroy.
+random_ability | Gain a random ability or keyword | A unit gains a randomly chosen keyword or ability. | Not: Other random results are random_effect.
+spell_power | My spells and abilities get stronger | The owner's spells or abilities deal more damage or have bigger effects: spell damage, ability power, amplify. | Not: A unit gaining stats is stat_gain.
+protection | Keep my units alive (protection) | A unit on my side is guarded against damage, destruction or targeting. | Not: Restoring health already lost is heal.
+damage_reduction | Take less damage (armour) | Damage a unit or player takes is reduced by an amount or a share. | Not: Absorbing one whole hit is shield; points that wear off are block_armor.
+block_armor | Block points that wear off | Points that absorb damage and run out or wear off, usually at the end of the turn. | Not: A lasting reduction is damage_reduction.
+shield | Absorb one hit (shield, ward) | The next hit or damage instance is fully absorbed or cancelled. | Not: Damage lowered by an amount is damage_reduction.
+immunity | Immune / can't be targeted | A unit can't be targeted, or is immune to a damage type, effect or condition. | Not: Hard to block is evasion; hidden until it acts is stealth.
+cheat_death | Cheat death (survive lethal) | A unit that would die survives, or comes back in the same moment it dies. | Not: Bringing back a unit that died earlier is revive.
+bodyguard | Protect a specific ally (bodyguard) | The unit takes hits for, or turns attacks away from, a particular ally. | Not: Forcing all enemy attacks onto itself is taunt.
+taunt | Taunt (enemies must attack it) | Enemies must attack or target this unit before other units. | Not: Shielding one chosen ally is bodyguard.
+stealth | Stealth / hidden until it acts | The unit can't be seen, targeted or attacked until it acts or a condition ends. | Not: Untargetable for good is immunity.
+heal | Restore health (heal) | Lost health of a unit, hero or player is restored. | Not: Preventing damage before it happens is protection.
+lifesteal | Lifesteal / drain | Damage dealt also heals its source or its owner. | Not: Healing not tied to damage dealt is heal.
+regeneration | Heal every turn (regeneration) | A unit heals again each turn or returns to full health each turn. | Not: A single heal is heal.
+card_advantage | Get more cards | The owner ends up with more cards: drawn, created or copied. | Not: Choosing which card to get without getting more is selection.
+draw | Draw cards | Cards are drawn from the owner's deck into hand. | Not: Searching the deck for a chosen kind of card is tutor; making a new card is generate_cards.
+generate_cards | Create new cards | New cards that were not in the deck are put into hand or deck. | Not: Units made on the board are summon.
+card_quality | Better or chosen cards | The owner gets the cards they want, keeps them, reuses them or makes them better before playing them. | Not: Simply getting more cards is card_advantage.
+selection | Look at cards and pick (scry) | The owner looks at several cards and chooses which to keep, take or put back. | Not: Searching the deck for a stated kind of card is tutor.
+tutor | Search the deck for a card (tutor) | The owner searches the deck for a card of a stated kind and takes it. | Not: Drawing the top card is draw.
+retain | Keep cards in hand across turns | Cards that would leave the hand at the end of the turn stay in it. | Not: Returning a played unit to hand is return_to_hand.
+recycle | Reuse my cards (shuffle back) | The owner's used or discarded cards go back into deck or hand to be used again. | Not: An enemy unit sent to its deck is bounce_enemy.
+upgrade | Upgrade / level up a card | A card is upgraded, levelled up or enhanced into a better version of itself. | Not: A plain stat rise on the board is stat_gain.
+in_hand_buff | Improve cards in hand or deck | Cards still in hand or deck get more power, a lower cost or better text before they are played. | Not: A discount on whatever is played this turn is cost_reduction.
+resource_advantage | More resources or cheaper plays | The owner gets more to spend, or pays less for their cards. | Not: Making the opponent pay more is cost_increase.
+resource_gain | Gain resources (ramp) | The owner gains extra mana, energy, supply or another resource, now or for good. | Not: Cards costing less is cost_reduction.
+cost_reduction | Cards cost less | The owner's cards cost less by an amount. | Not: A play that costs nothing at all is free_play; a cost set to a number is cost_set.
+cost_set | Set a cost to a fixed number | A card's cost becomes a fixed number (costs 0, costs 3). | Not: A reduction by an amount is cost_reduction.
+free_play | Put into play for free | A card enters play without its cost being paid, by an effect or automatically. | Not: A dead unit coming back is revive.
+summon | Summon units / tokens | New units are put onto the owner's side of the board. | Not: Units put on the opponent's side are board_clog; units back from death are revive.
+revive | Bring back dead units (revive) | A unit that died or was destroyed earlier comes back to play or to hand. | Not: Surviving at the moment of death is cheat_death.
+self_mill | Fill my own discard pile (self-mill) | The owner puts cards from their own deck straight into their discard pile or graveyard. | Not: Doing it to the opponent is mill.
+speed | Act sooner or more often | The owner's units or turns act earlier or more times than normal. | Not: Several strikes in one attack step is multi_attack.
+haste | Act the turn it arrives (haste, rush) | A unit can attack or act on the turn it is played. | Not: An effect that makes it attack at once is attack_now.
+attack_now | Attack right away | An effect makes a unit attack at once, outside the normal attack step. | Not: Being allowed to attack the turn it arrives is haste.
+extra_turn | Extra turns or actions | The owner takes an extra turn, round or action. | Not: Readying a used unit is untap.
+untap | Ready a used unit again (untap) | A used or tapped unit or card is readied so it can act again. | Not: A whole extra turn is extra_turn.
+movement | Move my units (reposition) | The owner moves their own unit to another space, row, lane or location. | Not: Moving enemy units is forced_movement.
+swap | Swap positions | Two units trade places, or trade lanes or locations. | Not: Trading stats is stat_gain or stat_loss; trading hands or decks is hand_deck_swap.
+blink | Blink (leave and come back fresh) | A unit leaves play and returns at once, reset, repeating its on-enter effect. | Not: Going back to hand is return_to_hand.
+return_to_hand | Return my unit to hand | The owner returns their own unit to hand, to replay it or save it. | Not: Sending an enemy unit back is bounce_enemy.
+copy | Copy cards or units | A copy of a card, unit or effect is made for the owner. | Not: Doing a trigger again is repeat_trigger; a copy given to the opponent is enemy_benefit.
+repeat_trigger | Repeat or double triggers | A trigger or effect happens again, or twice. | Not: Copying a whole card is copy.
+transform | Transform my card into another | The owner's own card or unit turns into a different one: evolve, flip, become. | Not: Turning an enemy into something weaker is polymorph.
+flexibility | Choose what a card does | The owner picks between effects, modes or forms. | Not: A random pick is random_effect.
+modal_choice | Choose one of several effects | The card offers several effects and the owner picks one or more. | Not: Switching a unit between lasting forms is stances.
+stances | Switch stances or forms | The owner switches a unit or hero between lasting modes. | Not: A one-time pick is modal_choice.
+steal | Steal from the opponent | The owner takes the opponent's units, cards, resources or text for themselves. | Not: Destroying them instead is removal.
+damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
+aoe_damage | Damage to many at once | Damage hits several units, a row, a lane or an area at once. | Not: One unit's attack hitting several is multi_target_attack.
+damage_over_time | Damage over time (poison, burn) | Damage repeats over turns: poison, burn, bleed. | Not: One-time damage is damage.
+direct_damage | Damage to the player or base | Damage goes straight to the enemy player, hero or base. | Not: Damage to units is damage.
+ping | Small repeatable damage | A small amount of damage (1 or 2) that can be dealt again and again. | Not: One big hit is damage.
+collision_damage | Bump damage (pushed into something) | A unit takes damage from being pushed into a unit, wall or obstacle. | Not: Damage from the push effect itself is damage.
+removal | Remove an enemy unit | An enemy unit leaves the board: destroyed, exiled, sent to hand or deck, or turned into something harmless. | Not: Weakening it but leaving it there is debuff.
+destroy | Destroy outright | A unit is destroyed or killed regardless of its health. | Not: Killing by damage is damage; destroying my own unit for value is sacrifice.
+banish | Banish / exile (gone for good) | A unit or card is removed from the game for good, beyond the discard pile. | Not: Leaving and coming back is blink.
+board_wipe | Board wipe | Most or all units on the board, or in a lane, are destroyed or removed. | Not: Damage to several that may leave survivors is aoe_damage.
+bounce_enemy | Send an enemy unit back (bounce) | An enemy unit is returned to its owner's hand or deck. | Not: Returning my own unit is return_to_hand.
+polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
+debuff | Make a unit weaker (debuff) | A unit loses stats or gets a combat penalty. | Not: Stopping it from acting is suppress.
+stat_loss | Stat loss (-power, -health) | A unit's power, attack, health or other stat goes down, or is set or swapped to a lower value. | Not: Not being able to attack is attack_lock or cant_attack.
+attack_zero | Attack set to 0 | A unit's attack, power or strength becomes 0. | Not: Lowered by an amount but above 0 is stat_loss.
+mark_target | Mark a target for later hits | A target is marked so that later effects or attacks hit it harder. | Not: A lasting stat loss is stat_loss.
+suppress | Stop an enemy unit from acting | An enemy unit can't attack, deal damage, block, move, use abilities, or act at all. | Not: Lowering its stats is debuff.
+no_damage_output | Deals no damage | The unit deals no damage, however it is done: can't attack, attack set to 0, damage prevented. | Not: Can't block is cant_block.
+attack_lock | Can't attack (lock on an enemy) | An enemy unit can't attack, often for a turn or round. | Not: My own unit that never attacks is cant_attack.
+damage_prevention | Its damage is prevented | Damage an enemy unit would deal is prevented. | Not: Damage I would take being reduced is damage_reduction.
+cant_block | Can't block | An enemy unit can't block or intercept. | Not: Can't attack is attack_lock.
+immobilize | Can't move (root) | An enemy unit can't move: root, snare, pin. | Not: Moved against its will is forced_movement.
+silence | Silence (abilities removed) | A unit's abilities or text are removed or switched off. | Not: Lowering stats is stat_loss.
+disable | Can't act at all (stun, freeze) | The unit can't act at all: stun, freeze, sleep, skip its turn. | Not: Losing only its attack is attack_lock.
+forced_movement | Move enemy units (push, pull) | Enemy units are moved against their will: push, pull, knockback, sent to another lane. | Not: Moving my own units is movement.
+forced_attack | Force enemy units to attack | Enemy units are made to attack, often a chosen or bad target. | Not: My own unit that must attack each turn is drawback.
+disruption | Disrupt the opponent's plans | The opponent's hand, deck, resources, plays or board space are interfered with. | Not: Damaging or removing their units is damage or removal.
+hand_disruption | Attack the opponent's hand | Cards in the opponent's hand are discarded, taken, weakened, made dearer or looked at. | Not: Discarding my own cards is discard.
+counter_spell | Counter / cancel a play | An opponent's card or effect is cancelled before it resolves. | Not: Removing a unit after it is in play is removal.
+cost_increase | Make the opponent's cards cost more | The opponent's cards cost more. | Not: Making my cards cheaper is cost_reduction.
+mill | Mill the opponent's deck | Cards are put from the opponent's deck into their discard pile or removed. | Not: Doing it to my own deck is self_mill.
+junk_cards | Junk cards into a deck or hand | Useless or harmful cards (curses, statuses, rocks) are put into a deck or hand to clog it. | Not: Useless units on the board are board_clog.
+board_clog | Clog the opponent's board | Weak, useless or harmful units are put onto the opponent's side to take their slots. | Not: Units on my own side are summon.
+enemy_benefit | Helps the opponent | The card gives the opponent something: cards, power, resources, units or a copy. | Not: Giving them harmful units is board_clog.
+friendly_fire | Hits my own side too | An effect also damages, weakens or destroys the owner's own units or player. | Not: Destroying my own unit on purpose for value is sacrifice.
+self_destruct | Destroys itself / temporary unit | The unit destroys itself or leaves after a time or after use. | Not: Destroying another own unit for value is sacrifice.
+sacrifice | Sacrifice my own units | The owner destroys or gives up their own unit, as a cost or for value. | Not: An enemy being made to sacrifice is destroy.
+discard | Discard my own cards | The owner discards cards from their own hand, as a cost or to fuel effects. | Not: Making the opponent discard is hand_disruption.
+exhaust | One use (exhausted for the battle) | A card is removed for the rest of the battle after use, or other cards of mine are. | Not: Removing a card from the game for good is banish.
+cant_attack | Can't attack (my own unit) | The unit itself can't attack: defender, wall. | Not: A lock put on an enemy is attack_lock.
+donate | Give my units or cards to the opponent | The owner gives their own units or cards to the opponent. | Not: Putting harmful units on their side is board_clog.
+rule_change | Change the game's rules | An effect changes a rule of the game or of a zone for everyone. | Not: A rule that binds only the opponent is disruption.
+play_restriction | Limit what can be played | Where, what or how many cards can be played is limited: can't be played here, only N per turn. | Not: Cancelling a play already made is counter_spell.
+lane_closure | Close or ruin a lane | A lane, location or zone stops being usable: flooded, destroyed, locked. | Not: A lane with an extra rule is lane_rule.
+forced_placement | Force where cards go | Where units are played or end up is dictated: all cards must be played here, played cards move here. | Not: A unit moved after it was placed is movement or forced_movement.
+hand_deck_swap | Swap or replace hands or decks | Hands or decks are exchanged, replaced or reshuffled and redrawn. | Not: Taking single cards from the opponent is steal.
+rewind | Rewind / reset to an earlier state | A unit, card or the game goes back to an earlier state: reset to base stats, undo, redo. | Not: A plain heal is heal.
+advantage | Advantage / disadvantage (roll twice) | A roll is made twice and the better or worse result is kept. | Not: A flat bonus to the roll is buff or debuff.
+blocking | Blocking / interception rules | Rules for who can block or intercept an attacker. | Not: A unit that can't block is cant_block.
+damage_types | Damage types, resistances and weaknesses | Damage has a type (fire, poison...) and units resist or are weak to types. | Not: Damage over turns is damage_over_time.
+saving_throws | Defender rolls to resist (saves) | The target rolls to resist an effect or damage. | Not: Armour that always reduces damage is damage_reduction.
+targeting_rules | Targeting rules | Rules for what may be targeted: only the front row, only damaged units, the nearest. | Not: Forcing attacks onto one unit is taunt.
+target_choice | Choose attack targets | The owner chooses which unit an attack or effect hits. | Not: A random target is random_effect.
+adjacency | Neighbours matter (adjacency) | The effect cares about units beside it, or the lane or location to the left or right. | Not: Several lanes away is cross_lane.
+assists_support | Help from nearby allies (assists) | Nearby allies add a bonus to an action: assists, support, flanking help. | Not: Bonuses for any ally anywhere are tribal or aura.
+combo_sequence | Order of my plays matters (combo) | The effect cares about the order of the owner's plays: the last card played, played another card first. | Not: Order between the players is reveal_order.
+condition_count | Counts / thresholds | The effect needs or scales with a number: for each, N or more. | Not: Counts of past events this game are count_payoff.
+condition_life | Damaged unit matters | The effect cares that a unit is damaged or wounded: enrage, bloodied, below full health. | Not: The player being at low life is low_life.
+low_life | Low life matters (player behind) | The effect cares that the owner's player or hero is at low life. | Not: A unit being damaged is condition_life.
+cost_condition | Cost matters | The effect cares about a card's cost: 1-cost cards, odd or even cost, N or more. | Not: Changing costs is cost_reduction or cost_set.
+count_payoff | Grows with what happened this game | The effect grows with how many times something happened this game: cards played, units died, spells cast. | Not: A count of what is on the board now is condition_count.
+death_count | Counts deaths | The effect counts or scales with how many units died. | Not: A single death trigger is death_trigger.
+deck_condition | Deck contents matter | The effect cares about what is in the deck: deck size, cards in it, an empty deck. | Not: The top card is deck_position.
+deck_position | Top or bottom of the deck matters | The top or bottom card of a deck matters: looked at, revealed or changed. | Not: Searching the whole deck is tutor.
+flanking | Facing / attack from behind | Facing, flanking or attacking from the side or behind matters. | Not: Simple neighbours are adjacency.
+hand_position | Position in hand matters | Where a card sits in hand (leftmost, oldest) or how long it has been there matters. | Not: Hand size is hand_size.
+hand_size | Hand size matters | How many cards are in hand matters: empty or full hand. | Not: Position in hand is hand_position.
+link_formation | Formations (pairs, chains) | Units must stand in a pattern: pairs, chains, circuits. | Not: Simple neighbours are adjacency.
+lone_unit | Alone matters | The effect rewards a unit that stands alone: the only unit in a lane, no neighbours. | Not: Many units are board_presence.
+quests | Quests / objectives with rewards | A goal with progress gives a reward when it is completed. | Not: A goal that scores points is scoring_objectives.
+race_objective | First to do it wins the reward | The reward goes to the first player to meet a condition. | Not: A goal for one player only is quests.
+scoring_objectives | Objectives that score points | Objective or secret-goal cards score points when their condition is met. | Not: Rewards other than points are quests.
+random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
+stacking_keyword | Stacking keywords / counters | A keyword or counter stacks and grows with each copy. | Not: A one-time count is condition_count.
+stat_condition | Stats matter (highest, lowest) | The effect cares about stats: the highest or lowest power, N or more attack. | Not: Changing stats is buff or debuff.
+tribal | Tribe / type matters | The effect cares about a tribe, type, team or family of cards. | Not: Counting as another type is type_grant.
+variable_stats | Stats equal to a count | A unit's stats are computed from the game state: power equal to the number of something. | Not: A fixed stat rise is stat_gain.
+variety_payoff | Variety matters (all different) | The effect rewards different costs, types or names, or no duplicates. | Not: Many of the same tribe is tribal.
+cost_type | Alternative costs | A card can be paid with something other than the usual resource. | Not: An optional extra payment for a bonus is kicker.
+kicker | Optional extra cost for a bonus | Paying extra is optional and adds a bonus effect: kicker, enhance. | Not: A required alternative cost is cost_type.
+life_payment | Pay life as a cost | The owner pays life or health to play or use something. | Not: Damage to my own units is friendly_fire.
+overload_debt | Pay later (overload, debt) | Part of the cost is paid later: locked resources next turn, debt. | Not: A cost paid now is cost_type.
+coin_economy | Second currency for abilities | A second currency (coins, crowns) is spent on abilities. | Not: Shop gold between fights is shop_gold.
+graveyard | Discard pile / graveyard as a resource | Cards in the discard pile or graveyard are used: played, counted or eaten. | Not: Filling it from my deck is self_mill.
+high_cost | Expensive card | The card is at the top of its game's cost curve (top 10% of costs). | Not: Cost conditions are cost_condition.
+multiple_resources | Several resource types | The game uses several resource types. | Not: One resource gained is resource_gain.
+resource_banking | Save unspent resources | Unspent resources are kept for later, or reward the owner. | Not: Gaining new resources is resource_gain.
+resource_conversion | Convert one resource into another | One resource is turned into another. | Not: Gaining resources from nothing is resource_gain.
+shop_gold | Shops and gold | Gold is spent in shops to buy cards or items. | Not: A currency spent in battle is coin_economy.
+upkeep | Upkeep (ongoing resource drain) | Resources must be paid again and again to keep things: food, fuel, upkeep. | Not: A one-time cost is cost_type.
+alt_wincon | Alternate win condition | The card gives another way to win the game. | Not: Scoring more points is points_scoring.
+board_presence | Board presence / going wide | Having many units on the board. | Not: One big unit is tank.
+comeback | Comeback / catch-up | The card helps the player who is behind or losing. | Not: A damaged unit is condition_life.
+finisher | Finisher / closer | The card closes out the game. | Not: Steady damage is damage.
+fodder | Fodder / disposable bodies | Bodies meant to die or be used up. | Not: Units meant to last are tank.
+null_body | Empty bodies (0 stats or no abilities) | Units with zero stats or no abilities, valued only for being there. | Not: Weak but useful units are fodder.
+slot_filler | Slot fillers | Cheap bodies whose job is to fill slots or reach a count. | Not: Disposable bodies to sacrifice are fodder.
+snowball | Snowball / runaway advantage | An advantage that keeps growing once gained. | Not: Catch-up for the losing player is comeback.
+support | Support / enabler | The card makes other cards better. | Not: A payoff for a synergy is synergy_payoff.
+synergy_payoff | Synergy payoff | The card rewards building around something. | Not: The card that enables it is support.
+tank | Tank / wall | High defence that holds the line. | Not: A unit that can't attack at all is cant_attack.
+tempo | Tempo | Acting faster or more efficiently than the opponent. | Not: Raw card gain is card_advantage.
+area_templates | Area shapes (cone, line, sphere) | The effect covers a shape: cone, line, sphere. | Not: All units everywhere is scope_global.
+cross_lane | Reaches other lanes | The effect reaches or counts other lanes, zones or locations. | Not: Its own lane only is lanes.
+distribute | Split a total among several | An amount of damage, power or counters is split among several units. | Not: The full amount to each is scope_multi.
+scope_global | Whole board / all players | The effect touches the whole board or all players. | Not: Several but not all is scope_multi.
+scope_multi | Several targets | The effect touches several targets. | Not: One target is the default.
+scope_self | Only itself | The effect touches only the card itself. | Not: Its allies too is scope_multi.
+symmetric_effect | Both players alike | The effect touches both players the same way: each player draws. | Not: Only my side is the effect itself.
+attack_token | Attack token / alternating attack | An attack token or alternating attack rights. | Not: Ordinary turns are turn_structure.
+auto_battle | Automatic combat | Combat resolves on its own (auto-battler). | Not: Units choosing their own actions is autonomous_units.
+autonomous_units | Units that act on their own | Units act without the player choosing. | Not: Combat that resolves on its own is auto_battle.
+board_limit | Board size limit | Limits on board size or units per lane, row or location. | Not: Bench units are reserve_bench.
+boss_phases | Boss phases and rules | Bosses with phases and their own rules. | Not: Boss acting between turns is legendary_actions.
+card_crafting | Card crafting | Cards are crafted or built from points. | Not: Upgrading an existing card is upgrade.
+card_flow | Hand, deck and discard pile | Cards moving between hand, deck and discard pile, as a theme. | Not: Getting more cards is card_advantage.
+merge_attach | Attach or merge onto a unit | A card attaches to or merges with a unit: equipment, enchant creature, a leader attached to a unit, magnetic. | Not: What the attached card gives is buff or debuff.
+cast_from_zone | Play from another zone | Cards are played from somewhere other than the hand: discard pile, exile, top of the deck. | Not: A dead unit returned by an effect is revive.
+concentration | Sustained effects that can be broken | An effect lasts while it is kept up and can be broken: concentration, channelling. | Not: An effect for this turn only is temporary_effect.
+control_reward | Reward for holding a zone | Whoever holds or wins a lane, zone or objective gets a bonus. | Not: Winning the game by zones is zone_control.
+cooldowns | Ability cooldowns | An ability must wait some turns before it can be used again. | Not: Once per game is once_per_game.
+death | Death and graveyard (theme) | Death and the graveyard as a theme. | Not: Removing enemy units is removal.
+deck_modification | Change the deck between battles | A deck's contents change for good: cards added or changed between battles. | Not: Cards created for one battle are generate_cards.
+deckbuilding_effect | Deckbuilding rules | The effect changes how a deck or army is built. | Not: Changes during play are card_flow.
+difficulty_modifiers | Difficulty modifiers | Difficulty modifiers and challenges. | Not: A boss's rules are boss_phases.
+fatigue | Fatigue / end-game pressure | Pressure that grows towards the end of the game. | Not: A set last turn is game_length.
+game_length | Change how long the game lasts | Turns or rounds are added, the game ends early or the last turn is set. | Not: Extra turns for one player are extra_turn.
+information | Hidden and revealed information | Hidden and revealed information: face-down cards, looking at the opponent's hand. | Not: Hidden units are stealth.
+items_consumables | Items & consumables | Items and consumables outside the deck. | Not: Cards in the deck are card_flow.
+lane_identity | Which lane matters | The effect names or depends on which lane: left, middle, right. | Not: Any other lane is cross_lane.
+lane_rule | A lane with its own rule | A lane, location or zone carries its own rule that changes play there. | Not: A closed lane is lane_closure.
+lanes | Lanes / locations | The board is split into lanes, columns or locations. | Not: Rows inside a lane are rows.
+legendary_actions | Boss acts between turns | A boss acts between other turns. | Not: Extra turns for the owner are extra_turn.
+life_track | Life / health track | A life, scale or health track decides the game. | Not: A second damage track is stress_morale.
+light_level | Light / visibility level | A light or visibility level trades risk for reward. | Not: Hidden units are stealth.
+permanent_loss | Permanent loss | Losses that last beyond the battle. | Not: Losses for one battle are exhaust.
+placement_rules | Where units can be placed | Rules for where units can enter. | Not: Moving after placement is movement.
+points_scoring | Points decide the winner | Points or score decide the winner. | Not: Destroying the enemy base is life_track.
+positional | Position and space | Position and space on the board matter. | Not: Card zones are card_flow.
+randomness | Randomness in the game's structure | Randomness built into the game's structure. | Not: A random effect on a card is random_effect.
+rank_positions | Formation ranks | A unit's rank limits its skills and targets. | Not: Plain front and back rows are rows.
+reserve_bench | Bench / reserve | Units wait on a bench or in reserve. | Not: Cards in hand are card_flow.
+rest_phase | Rest or camp between fights | A rest or camp phase between fights. | Not: Healing in battle is heal.
+reveal_order | Who acts or reveals first | The order in which players act or reveal matters or changes. | Not: The order of my own plays is combo_sequence.
+round_carryover | Carry-over between rounds | Things carry over from one round to the next. | Not: Saved resources are resource_banking.
+round_passing | Best-of-rounds with passing | Matches of several rounds where players pass. | Not: Single games are turn_structure.
+row_effects | Row-wide lasting effects (weather) | A lasting effect covers a whole row or lane: weather, hazards, boons. | Not: A lane's printed rule is lane_rule.
+rows | Rows (front and back) | The board has front and back rows. | Not: Lanes side by side are lanes.
+run_structure | Roguelike run | A run of fights with a map, nodes and things kept between fights. | Not: A single game is turn_structure.
+side_deck | Side deck | A second deck beside the main one. | Not: Changing the deck is deck_modification.
+simultaneous_play | Play at the same time, then reveal | Players commit plays face down at the same time and reveal them after. | Not: Order of reveal is reveal_order.
+slots_queue | Slots that fill and fire (orbs) | Slots or queues fill up and then fire. | Not: Delayed effects are delayed.
+spawn_blocking | Block enemy spawns | Occupying tiles stops enemy units from arriving there. | Not: Clogging their board with units is board_clog.
+spell_speed | Speed / reaction timing | Spells and actions have speeds: instant, fast, slow, responses. | Not: Reacting to the opponent is reactions.
+stakes_wager | Stakes and wagers | What a game is worth changes: double the stakes, bet, concede to lose less. | Not: Points scored in the game are points_scoring.
+stress_morale | Stress / morale (second damage track) | Stress, morale or sanity work as a second damage track. | Not: Health is life_track.
+team_play | Team play | Teammates, passing cards, partner effects. | Not: Allied units of one player are tribal.
+telegraphed_threats | Enemy actions announced in advance | Enemy actions are announced now and happen later. | Not: My own delayed effects are delayed.
+temporary_effect | This turn / round only | It lasts only this turn or round: a bonus, a penalty or a lock. | Not: Lasting changes are the effect itself.
+terrain | Terrain / board features | Terrain and features on the board. | Not: A lane's rule is lane_rule.
+traits_quirks | Lasting character traits | Characters gain or lose lasting traits over a run. | Not: Keywords in battle are buff.
+turn_structure | Turn and round structure | How turns and rounds work. | Not: Extra turns are extra_turn.
+turnover | A failed action ends my turn | A failed action ends the whole turn. | Not: A failed roll without that cost is random_effect.
+type_grant | Counts as another type | A card counts as a type, tribe or faction it is not, or as every type. | Not: Caring about a type is tribal.
+zone_control | Hold zones or lanes | Controlling zones, lanes or objectives; winning or losing a location. | Not: A bonus for holding a zone is control_reward.
+zone_of_control | Zones of control (leaving is punished) | Leaving an enemy's reach is punished. | Not: Being unable to move is immobilize.
+activated | Activated ability (pay to use) | The player chooses when to use an ability: activate, tap, pay to use. | Not: Abilities that fire on their own are triggers.
+aura | Aura (ongoing effect on others) | While the source is in play, other units are continuously changed: anthem, lord. | Not: A one-time change is the effect itself.
+combat_start | Start of combat | Effects at the start of combat or before a fight. | Not: Start of turn is turn_start.
+death_trigger | When it dies (deathrattle) | Effects when this unit dies or is destroyed: its own death. (Narrowed 20 Oct 2026, Kaptain's decision.) | Not: Another unit dying is other_death_trigger; leaving play by other means is leave_trigger.
+other_death_trigger | When another unit dies | Triggers when another unit, friendly or enemy, dies or is destroyed. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Not: Its own death is death_trigger; counting deaths is death_count.
+leave_trigger | When it leaves play | Effects when this unit leaves play by any means: dies, exiled, returned, banished. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Not: Text that says it dies is death_trigger.
+other_leave_trigger | When another unit leaves play | Triggers when another unit leaves play by any means. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Not: Text that says it dies is other_death_trigger.
+delayed | Delayed / countdown | The effect happens later: next turn, after N turns, countdowns. | Not: A set turn number is turn_number.
+game_end_trigger | At the end of the game | Effects when the game ends or at the final count. | Not: End of a turn is turn_end.
+hero_power | Hero power | A repeatable player or leader ability. | Not: A unit's own ability is activated.
+on_ally_play | When I play another card | Triggers when the owner plays or summons another card or unit. | Not: When this card is played is on_play.
+on_attack | When it attacks | Triggers when the unit attacks or strikes. | Not: When it is attacked is on_damaged or counterattack.
+on_damaged | When it is damaged | Triggers when the unit is damaged or survives damage. | Not: Striking back at the attacker is counterattack.
+on_enemy_enter | When an enemy arrives | Triggers when an enemy is placed or moves in. | Not: When an ally arrives is on_ally_play.
+on_kill | When it kills | Triggers when the unit kills another. | Not: When it dies is death_trigger.
+on_play | When played (battlecry, on reveal) | Triggers when the card is played or revealed: battlecry, on reveal, enters. | Not: When another card is played is on_ally_play.
+on_spell | When a spell is played | Triggers when a spell or action is played. | Not: When a unit is played is on_ally_play.
+on_draw | When a card is drawn | Triggers when the owner or a player draws a card. (Added 19 Oct 2026, Claude's.) | Not: Drawing cards as the effect is draw.
+on_discard | When a card is discarded | Triggers when the owner or a player discards a card, or when this card is discarded. (Added 19 Oct 2026, Claude's.) | Not: Discarding as a cost is discard.
+on_lifegain | When life or health is restored | Triggers when a player gains life, or a hero or unit is healed. (Added 19 Oct 2026, Claude's.) | Not: Gaining life as the effect is heal.
+on_block | When it blocks or is blocked | Triggers when the unit blocks or becomes blocked. (Added 19 Oct 2026, Claude's.) | Not: When it attacks is on_attack.
+on_targeted | When it becomes a target | Triggers when the unit or card becomes the target of a spell or ability. (Added 19 Oct 2026, Claude's.) | Not: When it is damaged is on_damaged.
+on_sacrifice | When a unit is sacrificed | Triggers when the owner sacrifices a unit or permanent. (Added 19 Oct 2026, Claude's.) | Not: Sacrificing as a cost is the sacrifice concept.
+on_life_loss | When I lose life | Triggers when the owner's player or hero loses life or takes damage. (Added 20 Oct 2026, Claude's.) | Not: A unit being damaged is on_damaged; paying life as a cost is life_payment.
+once_per_game | Once per game | The effect can be used only once per game. | Not: Waiting turns between uses is cooldowns.
+passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
+reactions | Reactions on the opponent's turn | The effect answers the opponent's actions: interrupts, after your opponent plays. | Not: Hidden traps are trap_secret.
+start_of_game | Start of the game | Effects at the start of the game or before it. | Not: Start of turn is turn_start.
+territory_trigger | In or entering enemy territory | The effect fires or turns on when a unit enters or stands in enemy territory or a set zone: infiltrate. | Not: When an enemy arrives on my side is on_enemy_enter.
+trap_secret | Hidden traps / secrets | A hidden card fires on an opponent's action. | Not: Open reactions are reactions.
+turn_end | End of turn / round | Effects at the end of a turn or round. | Not: Start of turn is turn_start.
+turn_number | On a set turn or round | Effects tied to a given turn or round number: on turn 5, until round 4. | Not: After N turns from now is delayed.
+turn_start | Start of turn / round | Effects at the start of a turn or round. | Not: End of turn is turn_end.
+
+# Cards (<ids>|<name>: <text>)
+818948|Construct: Construct: 13 entities of this type.
+818949|Dragon: Dragon: 20 entities of this type.
+818950|Dwarf: Dwarf: 11 entities of this type.
+818951|Feline: Feline: 14 entities of this type.
+818952|Frostling: Frostling: 15 entities of this type.
+818953|Knight: Knight: 11 entities of this type.
+818954|Pirate: Pirate: 12 entities of this type.
+818955|Raven: Raven: 13 entities of this type.
+818956|Rodent: Rodent: 15 entities of this type.
+818957|Satyr: Satyr: 12 entities of this type.
+818958|Toad: Toad: 14 entities of this type.
+818959|Undead: Undead: 15 entities of this type.
+818960|Green Prototypes: On death, give 1/2/3/4/5 strength to a random surrounding enemy unit and vitalize it
+818961|Summon Militia: Randomly spawn a Knight with 1/2/3/4/5 strength
+818964|Northsea Dog: When played as the last card in your hand, gain 5/6/7/8/10 strength
+818965|Spare Dragonling: On death, give 3/4/5/6/7 strength to a random friendly Dragon
+818966|Brothers in Arms: On play, spawn a 1/2/2/3/3 strength Knight on the tile behind
+818967|Collector Mirz: On play, create a 0 cost unit with 5/6/6/8/10 strength and add it to your deck
+818968|Confinement: Reduce the strength of a target enemy unit to 5/4/3/2/1
+818969|Conflicted Drakes: On play, deal 1/1/2/2/3 damage to all non-Dragon units in front
+818970|Felflares: On play, deal 2/3/4/5/6 damage to a random surrounding enemy
+818971|First Mutineer: On play, discard a random non-Pirate card from your hand
+818973|Freebooters: On play, draw 1/1/1/2/2 card/card/card/cards/cards
+818974|Potion of Growth: Give 2/3/4/5/6 strength to a target friendly unit and vitalizes it
+818976|Wetland Deceivers: On play, destroy all surrounding units with 1/1/2/2/3 /or/or/or/or /less/less/less/less strength
+818977|Beasts of Terror: When attacking a non-Dragon unit, deal 2/2/3/3/4 damage to all other enemies with the same unit type
+818979|Emerald Towers: At the start of your turn, give 2/2/3/3/4 strength to all friendly units in front
+818980|Execution: Deal 4/5/6/7/8 damage to a target enemy unit or structure
+818981|Goldgrubbers: On play, replace a random non-Pirate card from your hand
+818982|Hunter’s Vengeance: Randomly deal 2/3/4/5/6 damage to one unit of each unit type
+818983|Personal Servers: On play, give 2/2/3/3/4 strength to another random friendly unit
+818984|Siegebreakers: On play, deal 4/5/6/7/8 damage to all surrounding enemy structures
+818985|Snowmasons: On death, give 4/5/6/7/8 strength spread randomly among all surrounding friendly units
+818986|Terrific Slayers: Before attacking a Dragon, deal 5/6/7/8/10 additional damage
+818988|Bladestorm: Deal 1/2/2-3/3/4 damage to all enemy units and structures
+818990|Flooding the Gates: Deal 5/6/7/8/10 damage to all units bordering your base
+818992|Snake Eyes: When played with a full hand, discard all cards and draw 4 new cards
+818993|Trueshot Post: At the start of your turn, randomly deal 4/5/6/7/8 damage to the most forward enemy unit or structure
+818994|Ubass the Hunter: On play, deal 1/1/2/2/3 damage to a random enemy for each unique surrounding primary unit type
+818995|Voidsurgers: When played with at least 3 surrounding enemies, deal 2/3/4/5/6 damage to each
+818996|Boomstick Officers: On play, deal 4/5/6/7/8 damage to the closest enemy behind
+818997|Harvesters of Souls: When attacking a weaker unit, add a 5/6/7/8/10 strength copy of that card to your deck
+818998|Hearthguards: When played bordering a friendly structure or base, gain 3/4/5/6/7 strength
+818999|Kindred’s Grace: Give 7/8/8/10/12 strength to a target friendly unit and 2/2/3/4/5 strength to all others of the same unit type
+819000|Lich Summoners: After attacking, spawn a 3/4/5/6/7 strength Undead on the tile behind
+819001|Lucky Charmers: On play, gain 3/3/4/5/6 strength for each Pirate in your hand
+819002|Ludic Matriarchs: When played bordering a friendly Dragon, spawn 1/1/2/2/3 strength Dragons on all tiles bordering either
+819003|Needle Blast: Deal 2/2/3/3/4 damage to 2/3/3/4/4 random enemies
+819004|Powder Tower: At the start of your turn, this explodes and deals 2/2/3/3/4 damage to all enemies
+819005|Tegor the Vengeful: On death, do a random effect: give 6/7/8/10/12 strength, deal 5/6/7/8/10 damage or spawn a 4/5/6/7/8 strength unit
+819006|Victors of the Melee: When attacking, deal 2/2/3/3/4 damage to all surrounding enemy units and structures
+819007|Archdruid Earyn: On play, randomly play up to 1/1/1/2/2 spell card/card/card/cards/cards up to Earyn’s mana cost from your hand
+819008|Avian Stalkers: On death, destroy all units in front with 3/4/5/6/7 strength or less and spawn 3/4/5/6/7 strength Ravens on all tiles behind
+819009|Call for Aid: Spawn 3/4/5/6/7 strength units on all tiles bordering a target friendly unit
+819010|Dangerous Suitors: On play, gain 2/2/3/3/4 strength for every other Dragon on the board
+819012|Sharpfist Exiles: On play, gain 2/2/3/3/4 strength for every enemy unit on the board
+819014|Joust Champions: Before attacking a unit or structure, deal 3/4/5/6/7 additional damage to it
+819015|Temple Guardians: When played on the tile in front or the sides of your temple structure or your base, spawn 4/5/6/7/8 strength Knights on all of its bordering tiles
+819016|Crazy Bombers: On play, deal 7/8/10/12/15 damage spread randomly among all surrounding enemies
+819017|Siren of the Seas: Before attacking a unit, reduce its strength to 3
+819018|Edrik the Fierce: On play, spawn 2/3/4/5/6 strength Knights in front of all surrounding enemy units
+819019|Fluffy Badboxers: After attacking, confuse all weaker enemy units
+819020|Hair-Raising Cats: On play, randomly force a surrounding confused enemy unit to attack a bordering enemy
+819021|Sweetcap Kittens: On play, confuse all enemy units in front
+819022|Unhealthy Hysteria: Force the target enemy unit with 4/5/6/7/8 or less strength to attack a random bordering enemy
+819023|Melodious Sisters: Before attacking a confused unit, deal up to 5/6/7/8/9 of its strength as damage to all enemies surrounding it
+819024|Razor-Sharp Lynxes: If played bordering an enemy gain 2 strength else gain 1 speed
+819025|Bigthrust Tigers: On play, gain speed equal to the amount of enemy units in front
+819026|Wild Saberpaws: If played with no surrounding enemies gain 2 speed, else with no bordering enemies gain 1 speed
+819027|Twilight Prowlers: When played bordering your base gain 3 speed
+819028|Laurus, King in Exile: Before attacking an enemy unit force all enemy units bordering it with 4/5/6/7/8 or lower strength to attack it
+819029|Aged Duskbringers: After surviving damage, randomly give 4/5/6/7/9 strength to another friendly unit
+819032|Trekking Aldermen: After surviving damage, deal 3/3/4/4/5 damage spread randomly among enemy units on the board
+819033|Beards of Crowglyph: After surviving damage, spawn an Elder with strength equal to this on a random bordering tile
+819034|Greenwood Ancients: After surviving damage, gain 2/2/3/3/4 strength for each stronger enemy unit on the board
+819035|Prime Oracle Bragda: After surviving damage, increase the strength of all weaker friendly units to be equal to this
+819036|Rogue Sheep: On play, draw 1/1/2/2/3 single-use non-pirate card copy/copy/copies/copies/copies from the enemy’s hand. If you have a pirate card in hand, reduce its/its/their/their/their mana cost by 1.
+819037|Slyboots: On play, confuse up to 1/1/2/2/3 bordering enemy units and force it/it/them/them/them to move
+819038|Excited Mousers: On play confuse the same number of surrounding enemies, as there are friendly units on the board
+819039|Stoic Protectors: Before moving, disable the ability of 1/2/2/3/4 surrounding enemy unit/units/units/units/units
+819040|Temple of the Heart: At the start of your turn remove 1/1/1/2/2 strength from the stronger base and give it to the weaker one
+819042|Headless Hotheads: On play, move fixedly forward
+819044|Temple of the Mind: At the start of your turn, give (or remove) fixedly forward movement to the leftmost unit card in your hand, then destroy the weakest confused unit
+819045|Sparkly Kitties: On play, confuse itself then gain 2 speed
+819046|Bounded Daemons: Before moving, spawn a unit with 2/2/3/3/4 strength on both sides
+819047|Lost Psyches: Before moving, teleport itself to a random tile in its row
+819048|Erratic Neglects: Before moving, get a random status effect
+819050|Minion Launchers: On play, deal 1/2/2/3/3 damage to a random friendly non-legendary unit on the side, then deal the same damage to the first enemy in front
+819051|Destructobots: On play, deal 1 damage to another friendly unit or structure
+819052|Doctor Mia: On play, trigger the ability of all bordering/surrounding/surrounding//  friendly structures
+819053|Fortification Tonic: Give 2/3/4/5/6 strength to all friendly units surrounding a friendly structure
+819054|Ozone Purifiers: On play, push a random bordering enemy unit away
+819055|Unstable Build: At the start of your turn, deal 3 damage to itself
+819056|Finite Loopers: On death, spawn a 1/1/2/2/3 strength Construct on a random bordering tile
+819057|Greengale Serpents: Before attacking a unit, gives 1/1/2/2/3 strength to itself and a surrounding friendly Dragon
+819058|Linked Golems: When played bordering a friendly Construct, both gain 1/2/2/3/4 strength
+819059|Sound Drivers: On play, push forward the friendly unit on the tile in front
+819060|Upgrade Point: At the start of your turn, give 2/2/3/4/5 strength to all surrounding friendly Constructs
+819061|Boosting Elixir: Give 3/4/5/5/6 strength to a target friendly unit and a random friendly unit bordering/bordering/bordering/surrounding/surrounding it
+819062|Chaotic Pupil: On death, deal 3/4/5/6/7 damage to a random bordering enemy
+819063|Embers of Chaos: When this dies bordering the enemy base, randomly spawn a 6/7/8/10/12 strength Dragon at the enemy base
+819064|Mech Workshop: At the start of your turn, spawn a 2/3/4/5/6 strength Construct on the tile in front
+819065|Overchargers: On play, deal 1/1/2/2/3 damage to the first enemy in front
+819066|Debug Loggers: After attacking, give 2/2/3/4/5 strength to itself and a random surrounding friendly unit
+819067|Eloth the Ignited: On play, fly to the first enemy unit in front. Push this enemy away and deal 3/4/5/6/7 damage to it. If pushed enemy dies, move forward
+819068|Flaming Stream: Push back all enemy units in a target unit’s column and deal 4/5/6/7/8 damage to them
+819069|Siege Assembly: At the start of your turn, deal 3/3/4/5/6 damage to the first enemy in front
+819070|Windmakers: Before attacking a stronger unit, push it away and deal 3/4/5/6/7 damage to it
+819072|Project PH03-NIX: When this dies not bordering any base, randomly respawn at your base with 5/6/7/8/10 strength
+819073|Armed Schemers: On play, pull enemy units to you. Then deal 3/4/5/6/7 damage to all bordering enemy units.
+819074|Mechanical Workers: On play, on the tile behind build a 3/3/4/5/6 strength workshop which spawn 2/3/4/5/6 strength Constructs each turn
+819077|Scrapped Planners: After surviving damage, set strength to 2/3/4/5/6
+819078|Booming Professors: After surviving damage, deal up to 3/3/4/5/6 of its remaining strength as damage to the first enemy in front
+819079|Temple of Space: When played with a friendly copy on the board, teleport 2/3/4/6/8 surrounding units from it, then destroy the older copy. Otherwise, return to the hand.
+819080|Function Wilds: On play, vitalize itself and 1/1/2/2/2 surrounding friendly unit/unit/units/units/units
+819081|Absorbing Varmints: Before moving, make all friendly ancients on the board pull enemy units from behind, then deal 1/2/2/3/3 damage to all pulled units
+819082|Brood Sages: On play, for each surrounding poisoned unit spawn a 1 strength Toad on 2/2/3/3/4 tiles bordering it
+819083|Copperskin Ranger: On play, poison 1/1/2/2/3 random enemy unit/unit/units/units/units
+819084|Dubious Hags: On death, spawn a 1 strength Raven on a random bordering tile to fight for the enemy
+819085|Toxic Sacrifice: Destroy a target friendly unit. Deal 2/3/4/5/6 damage to all surrounding units and poison them.
+819086|Crimson Sentry: On death, deal 1/2/3/4/5 damage to all bordering units and poison them
+819088|Heliotroopers: On play, poison itself
+819089|Rain of Frogs: Spawn a 1 strength Toad on 3/4/4-5/5/6 random tiles
+819090|Wandering Wyrms: When played bordering a friendly Dragon, deal 3/4/5/6/7 damage to the strongest enemy unit
+819091|Azure Hatcher: On death, spawn 1 strength Toads on 2/3/4/5/6 random surrounding tiles
+819092|Marked as Prey: Deal 5/6/7/8/10 damage to a target poisoned unit. If that kills it, spawn a 5/6/7/8/10 strength Raven there.
+819093|Tode the Elevated: After attacking, jump in front of a random enemy unit or structure and gain 2/3/4/5/6 strength
+819094|Venomfall Spire: At the start of your turn, poison 1/1/2/2/3 random enemy unit/unit/units/units/units
+819095|Witches of the Wild: On play, drain 1/1/2/2/3 strength from all bordering units
+819096|Amberhides: On play, drain 4/5/6/7/8 strength from a random surrounding poisoned unit
+819097|Feral Shamans: Before attacking a stronger unit, drain 3/4/4/5/6 strength from it
+819098|Obsidian Butchers: On play, drain the strength from all 1 strength units
+819099|Soulcrushers: Before attacking a weaker unit, destroy it instantly
+819100|Sunbeam Serpents: On play, gain the strength of the strongest friendly Dragon
+819101|Blood Ministers: On play, convert all bordering enemy units with 3/4/5/6/7 or less strength to fight for you
+819102|Broodmother Qordia: On play, spawn 3 Nests on random surrounding tiles which will hatch 3/4/5/6/7 strength Dragons
+819103|Curse of Strings: Convert a target enemy unit with 7/9/11/14/17 or less strength to fight for you
+819104|High Priestess Klaxi: On play, destroy all units with the lowest strength and spawn 5/6/7/8/10 strength Ravens there
+819105|Clerics with Cords: On play, convert a random bordering enemy unit with 2/3/4/5/6 or less strength to fight for you
+819108|Faithless Prophets: After surviving damage, convert itself to fight for the enemy
+819109|Hairy Chestnuts: After surviving damage, drain up to 1/1/2/2/2 of the damage received from the enemy base
+819110|Temple of Time: At the end of your turn, remember the state of surrounding friendly units and structures. At the start of your turn, restore 1/2/2/3/3 of them to that state.
+819111|Soap Cleanse: Restore up to 3/4/5/6/7 initial strength of all friendly poisoned units and vitalize them
+819112|Plague Monarchs: Before moving, make all friendly ancients on the board drain 1/2/2/3/3 strength from a surrounding enemy poisoned unit
+819113|Doppelbocks: On play, spawn a 1/1/2/2/3 strength Satyr on the tile in front
+819114|Restless Goats: On death, deal 2 damage to your base
+819115|Counselor Ahmi: If played with no surrounding units, return the copy of this card to your hand with +1 strength
+819116|Dreadful Keepers: On death, randomly spawn a 3/4/6/7/8 strength Dragon on a tile bordering a friendly Dragon
+819117|Faun Companions: On play, give 3/4/4/5/6 strength to a random bordering friendly Satyr
+819118|Forgotten Souls: On play, command a/a/all/all/all random/random/// bordering/bordering/bordering/bordering/surrounding friendly unit/unit/units/units/units forward
+819119|Moonlit Aerie: At the start of your turn, give 1/1/2/2/3 strength to all friendly Satyrs
+819120|Shady Ghoul: On death, spawn a 1/2/3/4/5 strength Satyr on a random bordering tile
+819121|Swarmcallers: On play, gain 2/2/3/3/4 strength for each bordering friendly Satyr
+819122|Broken Truce: Destroy a target unit or structure with 8/10/12/15/18 or less strength. Spread spare damage randomly among surrounding units and structures. Deal 3 damage to your base.
+819123|Devastators: When attacking a structure or base, deal 3/3/4/5/6 additional damage to it
+819124|Draconic Roamers: When attacking a unit, spawn a 1/1/2/2/3 strength Dragon on a random tile bordering that unit
+819125|Mischiefs: On play, deal 1/1/1/2/2 damage to the enemy base
+819126|Pan Heralds: On play, give 1/1/2/2/3 strength to all surrounding friendly units
+819127|Dark Harvest: Deal 2/3/4/5/6 damage to all enemies surrounding a friendly unit
+819128|Dreadfauns: On play, spawn 2 Satyrs with 2/2/3/3/4 strength on random bordering tiles
+819130|Pillars of Doom: At the start of your turn, deal 2/2/3/3/4 damage to the enemy base
+819131|Xuri, Lord of Life: On play, fly to the first empty tile in front. Give 3/4/5/6/7 strength to all friendly units passed and vitalize them.
+819132|Herald’s Hymn: Give 1/2/3/4/5 strength to a target friendly unit. Command all friendly units in its row forward.
+819133|Queen of Herds: On play, randomly play up to 1/1/1/2/2 common or rare Satyr/Satyr/Satyr/Satyrs/Satyrs from your deck on a tile in its row
+819134|Vindicators: Before attacking, deal 1/1/1/2/2 damage to the enemy base
+819135|Lasting Remains: After attacking, move forward
+819136|Head Start: Spawn a 3/4/5/6/7 strength Satyr on a random tile in your furthest row
+819139|Petrified Fossils: After surviving damage, command all friendly units with equal or less strength forward
+819140|Bucks of Wasteland: After surviving damage, randomly give strength to 2 other friendly units equal to the damage received
+819141|Temple of Focus: At the start of your turn, deconfuse and give 1 additional move to all friendly units in front
+819142|Diehards: When dying from an ability or spell, respawn on a random surrounding tile with 4/6/8/10/12 strength
+819143|Martyr Spongers: Before moving deal 1/1/1/2/2 damage to 1/2/2/3/3 other friendly ancient units, then deal the same amount of damage to enemy’s base
+819144|Icicle Burst: Freeze a target enemy unit. If it is already frozen, deal 8/10/12/15/18 damage to it instead
+819145|Frosthexers: On play, freeze all bordering enemy units
+819146|The Hearth: At the start of your turn, give 2/2/3/3/4 strength to another friendly unit or structure
+819147|Wisp Cloud: Before attacking a frozen enemy, deal 4/5/6/7/8 damage to all surrounding frozen enemies
+819148|Yowling Weavers: When attacking, randomly destroy a friendly non-Dragon unit
+819149|Moment’s Peace: Give 5/6/7/8/9 strength to a target friendly unit or structure. Freeze all surrounding enemy units.
+819150|Mystwives: When played bordering a stronger friendly unit, gain 4/5/6/7/8 strength
+819151|Spellbinder Zhevana: On play, destroy all frozen units in front with 4/5/6/7/8 or less strength. Gain 4 mana for each unit destroyed.
+819152|Frozen Core: At the start of your turn, gain 2 mana
+819153|Lady Rime: On play, spend your remaining mana and gain 2/2/3/4/5 strength for each
+819154|Midwinter Chaos: Freeze all enemy units with 4/5/6/7/8 or less strength. Destroy those that were already frozen.
+819155|Rimelings: On play, gain 3 mana
+819156|Rockworkers: On play, build a 4/5/6/7/8 strength Fort on a random bordering tile
+819157|Blessed with Brawn: Give 8/10/12/15/18 strength to a target friendly unit or structure with 4/5/6/7/8 or less strength
+819158|Broken Earth Drakes: When this dies not bordering any base, deal 3/4/5/6/7 damage to all non-Dragon units
+819159|Dawnsparks: When attacking, gain 4 mana
+819160|Wolfcloaks: On play, lose 1 strength for every other friendly unit on the board
+819161|Fleshmenders: On play, give 6/7/8/10/12 strength to a random bordering friendly unit or structure
+819162|Gift of the Wise: Gain 11/12/13/14/15 mana
+819164|Visions of the Grove: On play, for every 4/4/3/3/2 remaining mana deal 1 damage to all enemies in front
+819165|Chillbeards: Before attacking a unit or structure, gain 3/4/5/6/7 strength
+819166|Olf the Hammer: When played bordering your base, give it 3/3/4/5/6 strength
+819167|Underground Spring: At the start of your turn, remove 1/1-2/1-2/2/2 strength from itself and give it to your base
+819170|Earthfathers: After surviving damage, gain 3/3/3/4/4 strength
+819171|Chilled Stonedames: After surviving damage, destroy all enemy units in front
+819172|Temple of Life: At the start of your turn, vitalize 1/2/2/3/3 friendly unit/units/units/units/units, then spawn a 1 strength copy of itself on the tile behind
+819173|Glacier Palace: At the start of your turn, randomly freeze the most forward enemy unit
+819174|Iceflakes: On play, freeze itself
+819175|Blizzard Bombs: On death, freeze all surrounding units
+819176|Orgone Leechers: Before moving, reduce mana by 3, then freeze an enemy in the tile in front. Decrease mana reduction by 1 for each other friendly ancient on the board.

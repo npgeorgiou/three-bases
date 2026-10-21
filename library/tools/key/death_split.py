@@ -4,7 +4,7 @@ around them when the words don't say whose death it is: own death stays death_tr
 other_death_trigger, leaving play becomes leave_trigger / other_leave_trigger. A death_count tag whose words are one single
 death trigger ("whenever another creature dies") with no counting becomes other_death_trigger (death_count counts deaths).
 Tags whose wording can't be read stay unchanged and are printed. FIXED holds the decisions Kaptain took per card.
-Then the fill: the readers never had the leave-play and another-death concepts, so every key entry whose text has a sentence
+Then the fill: the key never had the leave-play and another-death concepts, so every key entry whose text has a sentence
 that death_side.side() reads as leave_trigger, other_leave_trigger or other_death_trigger gets that tag when its key lacks it
 (Kaptain's decision, 21 Oct 2026: what the key is missing is added generally). A sentence the key already tagged death_count,
 on_kill or cheat_death for keeps that reading and gets no other_death_trigger.

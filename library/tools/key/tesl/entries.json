@@ -998,5 +998,1505 @@
 "id": 821487,
 "name": "Orc Clansman",
 "text": "Summon: Give a creature +1/+0."
+},
+{
+"id": 822047,
+"name": "Blades Lookout",
+"text": "When you summon a Dragon, draw a card."
+},
+{
+"id": 821571,
+"name": "Daggerfall Mage",
+"text": "Ward. When Daggerfall Mage's Ward is broken, put a Tome of Alteration into your hand."
+},
+{
+"id": 822216,
+"name": "Mushroom Tower",
+"text": "Ongoing. Your actions have Betray."
+},
+{
+"id": 821684,
+"name": "Auroran Sentry",
+"text": "Guard. When Auroran Sentry is dealt damage, you gain that much health."
+},
+{
+"id": 821443,
+"name": "Mudcarb",
+"text": "Mudcarb: 1 entities of this type."
+},
+{
+"id": 821551,
+"name": "Crystal Tower Crafter",
+"text": "After you play an action, Crystal Tower Crafter gets +1/+1."
+},
+{
+"id": 821543,
+"name": "Cruel Firebloom",
+"text": "Sacrifice a creature to deal 5 damage to a random enemy creature."
+},
+{
+"id": 822168,
+"name": "Siege of Stros M'Kai",
+"text": "If you started the game with no duplicate cards in your deck, play a random creature, item, support and action from your deck."
+},
+{
+"id": 822313,
+"name": "Morag Tong Nightblade",
+"text": "Summon: Summon a 0/1 Target with Guard for your opponent. Slay: Draw a card. If it's an action, reduce its cost to 0."
+},
+{
+"id": 822227,
+"name": "Clockwork City Pilgrim",
+"text": "Guard. Exalt 3: +2/+2"
+},
+{
+"id": 822082,
+"name": "Cauldron Keeper",
+"text": "Guard. Summon: Give yout Activated supports an extra use. You may Activate your supports an extra time each turn."
+},
+{
+"id": 821664,
+"name": "Imperial Reinforcements",
+"text": "Fill a lane with 1/1 Imperial Grunts."
+},
+{
+"id": 822073,
+"name": "Call of Valor",
+"text": "Summon a 3/3 Sovngarde Hero"
+},
+{
+"id": 822285,
+"name": "Balmora Puppeteer",
+"text": "Plot: +1/+1 for each other card you're played this turn."
+},
+{
+"id": 821688,
+"name": "Curse",
+"text": "Give a creature -1/-1."
+},
+{
+"id": 821859,
+"name": "Frostscale Dragon",
+"text": "Summon: Deal 4 damage to an enemy creature and 1 damage to all other enemy creatures."
+},
+{
+"id": 822257,
+"name": "Yagrum Bagarn",
+"text": "Summon: Draw a Dewmer from your discard pile and give it +2/+2."
+},
+{
+"id": 821718,
+"name": "Murkwater Butcher",
+"text": "If Murkwater Butcher is in your hand during your first turn, reduce his cost to 1."
+},
+{
+"id": 821905,
+"name": "Close Call",
+"text": "Unsummon a friendly creature."
+},
+{
+"id": 821881,
+"name": "Mundus Stone",
+"text": "When you summon a creature, give it a random keyword."
+},
+{
+"id": 821491,
+"name": "Silvenar Tracker",
+"text": "Summon: If there is a wounded enemy creature in this lane, give Silvenar Tracker Charge."
+},
+{
+"id": 821396,
+"name": "Summon",
+"text": "Triggers when the creature is played."
+},
+{
+"id": 821707,
+"name": "Snake tooth Necklace",
+"text": "+1/+1. Summon: Give the wielder Drain this turn."
+},
+{
+"id": 821787,
+"name": "Mummify",
+"text": "Prophecy. Transform a creature into a 2/2 Shriveled Mummy."
+},
+{
+"id": 821741,
+"name": "Giant Snake",
+"text": "Summon: Shackle all enemy creatures in this lane."
+},
+{
+"id": 821824,
+"name": "Bone Colossus",
+"text": "Summon: Summon 1/1 Skeletons to fill this lane. Other friendly Undead have +1/+1."
+},
+{
+"id": 821574,
+"name": "Farsight Nereid",
+"text": "Summon: Reveal the top card of the opponent's deck."
+},
+{
+"id": 821649,
+"name": "Pack Wolf",
+"text": "Summon: Summon a 1/1 Young Wolf in the other lane."
+},
+{
+"id": 821486,
+"name": "Orc Clan Shaman",
+"text": "Breakthrough. Other friendly Orcs in this lane have Breakthrough."
+},
+{
+"id": 821643,
+"name": "Artaeum Savant",
+"text": "After you play an action, a random friendly creature gets +1/+1."
+},
+{
+"id": 821920,
+"name": "Little Girl",
+"text": "At the start of your turn, Little Girl Changes into a 5/5 Ageless Vampire with Drain"
+},
+{
+"id": 822365,
+"name": "Draugr Dentry",
+"text": "Guard"
+},
+{
+"id": 822028,
+"name": "A Night to Remember",
+"text": "A friendly creature disappears to who knows where, then returns in the other lane Shackled."
+},
+{
+"id": 821836,
+"name": "Emperor's Blade",
+"text": "Guard. Slay: Gain 3 health"
+},
+{
+"id": 821393,
+"name": "Shout",
+"text": "Each time you play a shout, all your copies of it level up."
+},
+{
+"id": 821612,
+"name": "Nahkriin, Dragon Priest",
+"text": "Summon: Draw a card and reduce its cost to 0."
+},
+{
+"id": 821390,
+"name": "Rally",
+"text": "When it attacks, a random creature in your hand gets +1/+1."
+},
+{
+"id": 821798,
+"name": "Black Marsh Warden",
+"text": "At the end of your turn, summon a 1/1 Argonian Recruit. If you have 7 or more max magicka, summon a 3/3 Argonian Veteran instead."
+},
+{
+"id": 821527,
+"name": "Grahtwood Ambusher",
+"text": "Prophecy. Summon: Deal 1 damage to all enemy creatures in this lane."
+},
+{
+"id": 821408,
+"name": "Centaur",
+"text": "Centaur: 1 entities of this type."
+},
+{
+"id": 821544,
+"name": "Lesser Ward",
+"text": "Give a creature a Ward."
+},
+{
+"id": 822341,
+"name": "Worm Thrall",
+"text": "Guard"
+},
+{
+"id": 821916,
+"name": "Eclipse Baroness",
+"text": "Summon and Last Gasp: Draw a card and reduce its cost by 2."
+},
+{
+"id": 822104,
+"name": "Back-Alley Rogue",
+"text": "Summon: Steal Cover from another crature."
+},
+{
+"id": 822199,
+"name": "Ald Veolthi Assassin",
+"text": "Lethal, Rally"
+},
+{
+"id": 821959,
+"name": "Lockpick",
+"text": "Either put another Lockpick into your hand or draw a card and reduce its costs by 2. Choosen randomly."
+},
+{
+"id": 821607,
+"name": "Summerset Orrery",
+"text": "Uses: 3. Activate: Shuffle all cards in your hand with Prophecy into your deck and draw that many cards."
+},
+{
+"id": 822053,
+"name": "Aela's Huntmate",
+"text": "Beast Form: +1/+1 and draw a card."
+},
+{
+"id": 821926,
+"name": "Palace Conspirator",
+"text": "Summon: Draw a card. Then discard a card."
+},
+{
+"id": 821855,
+"name": "Merric-at-Aswala",
+"text": "Summon: Equip all friendly creatures in this lane with a random item."
+},
+{
+"id": 821610,
+"name": "Indoril Archmage",
+"text": "Guard. Last Gasp: Indoril Archmage deals 6 damage to all enemy creatures in this lane."
+},
+{
+"id": 821934,
+"name": "Knife to the Throat",
+"text": "Silence a creature. Draw a card"
+},
+{
+"id": 822074,
+"name": "Cliffside Lookout",
+"text": "When you summon a Dragon, Cliffside Lookout gains +1/+1."
+},
+{
+"id": 822327,
+"name": "Protective Spider",
+"text": "Guard"
+},
+{
+"id": 821796,
+"name": "Archein Guerrilla",
+"text": "Lethal"
+},
+{
+"id": 821995,
+"name": "Stonehill Mammoth",
+"text": "Summon: Draw a card if you have two other (Endurance) creatures."
+},
+{
+"id": 821716,
+"name": "House Kinsman",
+"text": "Last Gasp: Deal 3 damage to your opponent and gain 3 health"
+},
+{
+"id": 822211,
+"name": "Indomitable Ordinator",
+"text": "Guard. Exalt 1: Your opponent can't target Indomitable Ordinator with actions."
+},
+{
+"id": 822054,
+"name": "Candlehearth Brawler",
+"text": "Charge. Guard."
+},
+{
+"id": 822111,
+"name": "Sails-Through-Storms",
+"text": "Pilfer: Summon the top creature of your deck."
+},
+{
+"id": 821432,
+"name": "Imperfect",
+"text": "Imperfect: 1 entities of this type."
+},
+{
+"id": 821692,
+"name": "Shadow Shift",
+"text": "Move a friendly creature. Draw a card."
+},
+{
+"id": 821503,
+"name": "Stone Throw",
+"text": "Destroy an enemy creature if you have a creature with higher power."
+},
+{
+"id": 821599,
+"name": "Fate Weaver",
+"text": "Prophecy. Summon: Draw a card. If it has Prophecy you may play it for free."
+},
+{
+"id": 821420,
+"name": "Fabricant",
+"text": "Fabricant: 8 entities of this type."
+},
+{
+"id": 821700,
+"name": "Finish Off",
+"text": "Destroy a wounded enemy creature."
+},
+{
+"id": 822165,
+"name": "Morokei, the Deathless",
+"text": "Summon: If you started the game with no duplicate cards in your deck, you gain 5 health and restore a rune."
+},
+{
+"id": 821450,
+"name": "Orc",
+"text": "Orc: 24 entities of this type."
+},
+{
+"id": 821705,
+"name": "Mournhold Traitor",
+"text": "Last Gasp: Your opponent summons a 2/1 Mournhold Guardian with Guard."
+},
+{
+"id": 822094,
+"name": "Scout's Report",
+"text": "Look at the top card of your deck. You may discard it. Draw a card."
+},
+{
+"id": 821542,
+"name": "Dremora Markynaz",
+"text": "Guard. Summon: Double a creature's power and health."
+},
+{
+"id": 822298,
+"name": "Ambitious Hireling",
+"text": "Summon: Give another friendly creature power and health equal to Ambitious Hireling's power."
+},
+{
+"id": 821982,
+"name": "Innkeeper Delphine",
+"text": "After you play a Dragon or Schout, Innkeeper Delphine changes into Grandmaster Delphine."
+},
+{
+"id": 821642,
+"name": "Arrow Storm",
+"text": "Destroy all creatures with 2 power or less in one lane."
+},
+{
+"id": 821508,
+"name": "Alik'r Survivalist",
+"text": "Summon: Put a Steel Dagger into your hand. When Alik'r Survivalist equips an item, he gains +1/+1."
+},
+{
+"id": 821380,
+"name": "Drain",
+"text": "On your turn, damage it deals heals you that much."
+},
+{
+"id": 822223,
+"name": "Vvardvark Experiment",
+"text": "Summon a 0/1 Vvardvark in each lane."
+},
+{
+"id": 821410,
+"name": "Daedra",
+"text": "Daedra: 23 entities of this type."
+},
+{
+"id": 822012,
+"name": "mistveilenchanter",
+"text": "Ward. Summon: +2/+0 if you have another creature with Ward."
+},
+{
+"id": 821604,
+"name": "Staff of Sparks",
+"text": "+3/+0. When the wielder attacks, it deals 1 damage to all enemy creatures in this lane."
+},
+{
+"id": 822195,
+"name": "Slit Strider",
+"text": "Prophecy. Guard. Summon: Move a friendly creature to this lane."
+},
+{
+"id": 821866,
+"name": "Spider Worker",
+"text": "Prophecy. Summon: Draw a card."
+},
+{
+"id": 821555,
+"name": "Ice Spike",
+"text": "Deal 2 damage to your opponent. Draw a card."
+},
+{
+"id": 822045,
+"name": "Stormcloak Vanguard",
+"text": "Charge. Last Gasp: Put a 5/5 Stormcloak Battalion in your hand."
+},
+{
+"id": 821919,
+"name": "Falkreath Defiler",
+"text": "Slay: Summon a creature from your discard pile."
+},
+{
+"id": 822078,
+"name": "Devour",
+"text": "Destroy a creature with 4 power of less and give its Keywords to a random Dragon in your hand."
+},
+{
+"id": 821779,
+"name": "Blackrose Herbalist",
+"text": "At the start of your turn, heal another random friendly creature."
+},
+{
+"id": 821587,
+"name": "Lightning Bolt",
+"text": "Prophecy. Deal 4 damage."
+},
+{
+"id": 821746,
+"name": "Snowy Sabre Cat",
+"text": "Can attack an additional time on each turn."
+},
+{
+"id": 821474,
+"name": "Rapid Shot",
+"text": "Deal 1 damage to a creature. If it survives, draw a card."
+},
+{
+"id": 822200,
+"name": "Almalexia",
+"text": "Exalt 3: +6/+6. Friendly Exalted creatures are immune to damage."
+},
+{
+"id": 821993,
+"name": "Whiterun Protector",
+"text": "Beast Form: +2/+2, Guard and Regenerate."
+},
+{
+"id": 822351,
+"name": "Iron Sword",
+"text": "+2/+0"
+},
+{
+"id": 822334,
+"name": "Corpse Curse",
+"text": "Shackle all enemy creatures in a lane."
+},
+{
+"id": 821580,
+"name": "Breton Conjurer",
+"text": "Ward. When Breton Conjurer's Ward is broken, summon a 5/5 Frost Atronach with Guard."
+},
+{
+"id": 821900,
+"name": "Stoneshard Orc",
+"text": "Summon: Deal 1 damage to an enemy creature for each friendly Orc."
+},
+{
+"id": 821480,
+"name": "Bone Bow",
+"text": "+1/+0. Summon: Silence another creature."
+},
+{
+"id": 822352,
+"name": "Lava Atronach",
+"text": "Breakthrough, Guard, Ward"
+},
+{
+"id": 822290,
+"name": "Hand of Dagoth",
+"text": "Breakthrough, Drain, Ward"
+},
+{
+"id": 822349,
+"name": "Flame Atronach",
+"text": "Breakthrough"
+},
+{
+"id": 822275,
+"name": "Ornery Kagouti",
+"text": "Breakthrough"
+},
+{
+"id": 822163,
+"name": "Bleakcoast Troll",
+"text": "Slay: +1/+1"
+},
+{
+"id": 821722,
+"name": "Swift Strike",
+"text": "Give a creature an extra attack this turn."
+},
+{
+"id": 822034,
+"name": "Young Dragonborn",
+"text": "When Young Dragonborn Slay a Dragon, put a random Shout into your hand. After you play a Shout, Young Dragonborn gains +1/+1."
+},
+{
+"id": 821803,
+"name": "Imprisoned Deathlord",
+"text": "When an enemy creature is summoned, Shackle Imprisoned Deathlord."
+},
+{
+"id": 821674,
+"name": "Piercing Javelin",
+"text": "Prophecy. Destroy a creature."
+},
+{
+"id": 822119,
+"name": "Weakness",
+"text": "Set a creature's health to 1."
+},
+{
+"id": 821539,
+"name": "Reclusive Giant",
+"text": "Breakthrough"
+},
+{
+"id": 822067,
+"name": "Wildfire Dragon",
+"text": "Breakthrough. Summon: Deal 1 damage to all other creatures. Slay: +1/+1"
+},
+{
+"id": 821724,
+"name": "Varanis Courier",
+"text": "Guard. Last Gasp: Draw a card."
+},
+{
+"id": 821980,
+"name": "East Empire Crafter",
+"text": "When you summon another creature with 5 health or more, give it +1/+1 and Guard."
+},
+{
+"id": 821514,
+"name": "Gladiator Arena",
+"text": "At the start of each player's turn, deal 2 damage to that player."
+},
+{
+"id": 821737,
+"name": "Twilight Werebat",
+"text": "Prophecy"
+},
+{
+"id": 821833,
+"name": "Rift Thane",
+"text": "Summon: If you have less health than your opponent, +0/+2 and Guard. Otherwise, +2/+0 and Breakthrough."
+},
+{
+"id": 821600,
+"name": "Fate's Witness",
+"text": "Prophecy. Summon: Draw a card."
+},
+{
+"id": 822338,
+"name": "Raise Dead",
+"text": "Summon a random creature from each discard pile."
+},
+{
+"id": 821470,
+"name": "Covenant Marauder",
+"text": "+2/+0 while you have no cards in hand."
+},
+{
+"id": 822367,
+"name": "Grim Shield-Brother (created)",
+"text": "Drain"
+},
+{
+"id": 821962,
+"name": "Shadowscale Partisan",
+"text": "Lethal. Summon: +0/+2 if you have another creature with Lethal."
+},
+{
+"id": 822315,
+"name": "Prison Dhip",
+"text": "Summon: Shackle an enemy creature while you have Prison Ship."
+},
+{
+"id": 821948,
+"name": "Knight of the Hour",
+"text": "Prophecy. Guard. Summon: You gain 3 health"
+},
+{
+"id": 822190,
+"name": "Morag Tong Aspirant",
+"text": "Slay: Summon a copy of Morag Tong Aspirant."
+},
+{
+"id": 821946,
+"name": "The Black Dragon",
+"text": "Immune to Lethal. Slay: Discard all copies of the slain creature from the opponent's deck."
+},
+{
+"id": 821622,
+"name": "Execute",
+"text": "Destroy a creature with 2 power or less."
+},
+{
+"id": 821438,
+"name": "Lurcher",
+"text": "Lurcher: 2 entities of this type."
+},
+{
+"id": 821413,
+"name": "Dark elf",
+"text": "Dark elf: 1 entities of this type."
+},
+{
+"id": 821458,
+"name": "Spirit",
+"text": "Spirit: 11 entities of this type."
+},
+{
+"id": 821512,
+"name": "Earthbone Spinner",
+"text": "Summon: Silence another creature, then deal 1 damage to it."
+},
+{
+"id": 821553,
+"name": "Evermore Steward",
+"text": "Guard, Ward"
+},
+{
+"id": 821550,
+"name": "Balmora Spymaster",
+"text": "Last Gasp: Summon a random creature with cost less than or equal to your max magicka."
+},
+{
+"id": 822185,
+"name": "Fleeting Apparition",
+"text": "Betray. Summon a random creature from your deck that cost 3 or less to random lane. Unsummon it at the end of your turn."
+},
+{
+"id": 822039,
+"name": "Barbas",
+"text": "Summon: Choose one: Stay: Gains +1/+1 and Guard. Fetch: Put a dandom Daedra into your hand. Roll Over: Gains Charge."
+},
+{
+"id": 821659,
+"name": "Dawnbreaker",
+"text": "+4/+4. Summon: Destroy an enemy Undead."
+},
+{
+"id": 822287,
+"name": "Dagoth Ur",
+"text": "Breakthrough, Charge, Drain, Guard, Lethal, Ward"
+},
+{
+"id": 822113,
+"name": "Brassilisk",
+"text": "When Brassilisk takes damage and survives, summon a copy of it in the other lane."
+},
+{
+"id": 822286,
+"name": "Bolvyn Venim",
+"text": "Rally. When you Rally with no creatures in your hand, firts draw Bolvyn Venim from your deck."
+},
+{
+"id": 821768,
+"name": "Dragontail Savior",
+"text": "Summon: +1/+0 for each enemy creature in this lane."
+},
+{
+"id": 821736,
+"name": "Torval Crook",
+"text": "Charge. Pilfer: Gain 2 magicka."
+},
+{
+"id": 821738,
+"name": "Camoran Scout Leader",
+"text": "Summon: Summon a 2/2 Wood Elf Scout with Charge in each lane with a wounded enemy creature."
+},
+{
+"id": 822135,
+"name": "Clockwork Dragon",
+"text": "Summon: If Clockwork Dragon is in the left lane, +2/+0 and Drain. Otherwise, +0/+2 and Guard."
+},
+{
+"id": 821685,
+"name": "Dawn's Wrath",
+"text": "Destroy all creatures in a lane."
+},
+{
+"id": 822350,
+"name": "Frost Atronach",
+"text": "Guard"
+},
+{
+"id": 821896,
+"name": "Dark Harvester",
+"text": "Prophecy, Guard. Summon: Gain 4 health."
+},
+{
+"id": 822042,
+"name": "Paarthurnax",
+"text": "Summon: put three random Shouts into your hand and reduce their costs to 0."
+},
+{
+"id": 821999,
+"name": "Waves of the Fallen",
+"text": "Transform all enemy creatures in a lane into 2/2 Stricken Draugr or transform all friendly creatures in a lane into 5/5 Hulking Draugrs."
+},
+{
+"id": 822205,
+"name": "Betty Netch",
+"text": "While Betty Netch is in play, your magicka is increased by 2."
+},
+{
+"id": 822057,
+"name": "Stormcloak Avenger",
+"text": "At the end of your turn, if three or more friendly creatures died this turn, summon a 2/2 Rallying Stormcloak."
+},
+{
+"id": 822254,
+"name": "Silent Pilgrim",
+"text": "Summon: Draw a random multi-attribute card from your deck."
+},
+{
+"id": 821412,
+"name": "Dark Elf",
+"text": "Dark Elf: 86 entities of this type."
+},
+{
+"id": 821808,
+"name": "Northpoint Lieutenant",
+"text": ""
+},
+{
+"id": 821446,
+"name": "Nereid",
+"text": "Nereid: 3 entities of this type."
+},
+{
+"id": 821781,
+"name": "Chieftain's Banner",
+"text": "Friendly Orcs have +0/+2."
+},
+{
+"id": 821528,
+"name": "Markarth Bannerman",
+"text": "When Markarth Bannerman attacks, put two 1/1 Nord Firebrands with Charge into your hand."
+},
+{
+"id": 822093,
+"name": "A Land Divided",
+"text": "Fill the left lane with Stormcloak Skirmisher or the right lane with Colovian Troopers."
+},
+{
+"id": 821739,
+"name": "Cliff Racer",
+"text": "Charge"
+},
+{
+"id": 821492,
+"name": "Assassin's Bow",
+"text": "+3/+0. Summon: Give the wielder Cover at the end of turn."
+},
+{
+"id": 822068,
+"name": "Swiftwing Dragon",
+"text": "Charge."
+},
+{
+"id": 822088,
+"name": "Praetorian Commander",
+"text": "Summon: Give creatures in your deck +1/+1."
+},
+{
+"id": 821988,
+"name": "Frost Troll",
+"text": "Regenerate. When Frost Troll take damage, it gains that much power."
+},
+{
+"id": 822174,
+"name": "Ash Oppressor",
+"text": "Summon: If you have a creature with 5 power or more, Shackle an enemy creature."
+},
+{
+"id": 821611,
+"name": "Shocking Wamasu",
+"text": "Summon: Deal 4 damage to a creature."
+},
+{
+"id": 821983,
+"name": "Mentor of the Watch",
+"text": "Prophecy, Guard. Summon: Give a creature in your hand Guard."
+},
+{
+"id": 821455,
+"name": "Skeever",
+"text": "Skeever: 1 entities of this type."
+},
+{
+"id": 821658,
+"name": "Cloudrest Illusionist",
+"text": "Prophecy. Summon: Give a creature -4/-0 this turn."
+},
+{
+"id": 822196,
+"name": "Suran Pawnbroker",
+"text": "Plot: Put a random 0-cost card into your hand."
+},
+{
+"id": 821689,
+"name": "Murkwater Goblin",
+"text": "Murkwater Goblin has +2/+0 on your turn."
+},
+{
+"id": 821981,
+"name": "Grim Shield-Brother",
+"text": "Beast Form: +1/+1 and Drain."
+},
+{
+"id": 822033,
+"name": "Horned Helm",
+"text": "+2/+3"
+},
+{
+"id": 821996,
+"name": "Ironscale Dragon",
+"text": "Regenerate"
+},
+{
+"id": 821863,
+"name": "Lurking Crocodile",
+"text": "Prophecy"
+},
+{
+"id": 821669,
+"name": "Haafingar Marauder",
+"text": "When a friendly creature destroys an enemy rune, equip it with a random item."
+},
+{
+"id": 822247,
+"name": "Vigilant Ancestor",
+"text": "Vigilant Ancestor is Permanently Shackled."
+},
+{
+"id": 821418,
+"name": "Dwemer",
+"text": "Dwemer: 16 entities of this type."
+},
+{
+"id": 821984,
+"name": "Soultear",
+"text": "Draw a creature from your discard pile."
+},
+{
+"id": 822224,
+"name": "Ash Piercer",
+"text": "Summon: Deal 3 damage to a creature if you have a creature with 5 power or more."
+},
+{
+"id": 822240,
+"name": "Spirit Knife",
+"text": "Deal 7 damage to a creature. Draw a card."
+},
+{
+"id": 822171,
+"name": "Voice of Balance",
+"text": "Summon: +4/+4 and Guard if you have an action, item, and support in your discard pile or in play."
+},
+{
+"id": 822302,
+"name": "Dren Bodyguard",
+"text": "Guard"
+},
+{
+"id": 822063,
+"name": "World Eater's Eyrie",
+"text": "Ongoing. When you summon a creature that costs 7 or more, double its power and health."
+},
+{
+"id": 822003,
+"name": "Dark Rebirth",
+"text": "Sacrifice a creature to summon a copy of it."
+},
+{
+"id": 822140,
+"name": "Gearwork Spider",
+"text": "Prophecy, Guard. Summon: Summon all Gearwork Spiders in your discard pile."
+},
+{
+"id": 821628,
+"name": "Detain",
+"text": "Shackle a creature."
+},
+{
+"id": 822235,
+"name": "Mighty Conjuring",
+"text": "Summon a random Atronach. If yuo have a creature with 5 power or more, summon a Lava Atronach instead."
+},
+{
+"id": 821545,
+"name": "Brutal Ashlander",
+"text": "Last Gasp: Deal 3 damage to a random enemy."
+},
+{
+"id": 821493,
+"name": "Battlerage Orc",
+"text": "Charge"
+},
+{
+"id": 822106,
+"name": "Clockwork Scorpion",
+"text": "Drain, Lethal."
+},
+{
+"id": 822151,
+"name": "Relic Hunter",
+"text": "Treasure Hunt - Item: Give the item +1/+1."
+},
+{
+"id": 821630,
+"name": "Elixir of the Defender",
+"text": "Uses: 3. Activate: Give a friendly creature Guard."
+},
+{
+"id": 822098,
+"name": "Crusader's Assault",
+"text": "Give a creature +2/+0, Breakthrough and 'Slay and Pilfer: Draw a card' this turn"
+},
+{
+"id": 821479,
+"name": "Afflicted Alit",
+"text": "Summon: Deal 2 damage to each player."
+},
+{
+"id": 821839,
+"name": "Sadras Agent",
+"text": "Guard. Last Gasp: Summon a 2/1 Mournhold Guardian with Guard."
+},
+{
+"id": 822255,
+"name": "Stolen Pants",
+"text": "+1/+1. Summon: Summons a 0/1 Sheepish Dunmer in the other lane. Last Gasp: Give Sheepish Dunmer his pants."
+},
+{
+"id": 822142,
+"name": "Mecinar",
+"text": "Summon: Stitch together the top creature from both decks to create an Abomination and put it into your hand"
+},
+{
+"id": 822126,
+"name": "Shalk Fabricant",
+"text": "Guard. Summon: If you have a (Neutral) card in play, put a random action into your hand."
+},
+{
+"id": 821884,
+"name": "Snapping Dreugh",
+"text": ""
+},
+{
+"id": 821710,
+"name": "Baandari Bruiser",
+"text": "Pilfer: +3/+0."
+},
+{
+"id": 822294,
+"name": "Redoran Forerunner",
+"text": "Charge, Drain, Ward"
+},
+{
+"id": 821594,
+"name": "Mentor's Ring",
+"text": "+3/+3. Summon: Give all your other creatures the keywords of this creature."
+},
+{
+"id": 822330,
+"name": "Wood Elf Scout",
+"text": "Charge"
+},
+{
+"id": 822308,
+"name": "Illusory Defenses",
+"text": "Prophecy. Summon a 0/5 Illusory Wall with Guard in each lane. Sacrifice them at the start of your turn."
+},
+{
+"id": 821399,
+"name": "Ward",
+"text": "The first damage or effect that would hit it is prevented and the Ward is removed."
+},
+{
+"id": 821382,
+"name": "Exalt",
+"text": "Pay extra magicka when you play it to get a bonus."
+},
+{
+"id": 821976,
+"name": "Encumbered Explorer",
+"text": "Shackle Encumbered Explorer after he attacks."
+},
+{
+"id": 821715,
+"name": "Greenheart Knight",
+"text": "Charge"
+},
+{
+"id": 822374,
+"name": "Basbas",
+"text": "Charge"
+},
+{
+"id": 821792,
+"name": "Wrothgar Artisan",
+"text": "Summon: Give a creature +1/+1."
+},
+{
+"id": 821708,
+"name": "Thieves Guild Recruit",
+"text": "Summon: Draw a card. If it costs 7 or more, reduce its cost by 1."
+},
+{
+"id": 821800,
+"name": "Cursed Spectre",
+"text": "Prophecy. Summon: Silence another creature."
+},
+{
+"id": 822391,
+"name": "Risen Dead",
+"text": "Guard"
+},
+{
+"id": 821437,
+"name": "Kwama",
+"text": "Kwama: 5 entities of this type."
+},
+{
+"id": 821712,
+"name": "Dune Smuggler",
+"text": "Summon: Move another friendly creature in this lane. When a friendly creature moves, give it +1/+1."
+},
+{
+"id": 821860,
+"name": "Dwarven Spider",
+"text": "Guard"
+},
+{
+"id": 821489,
+"name": "Rihad Horseman",
+"text": "Rihad Horseman has +3/+0 and Breakthrough while equipped with an item."
+},
+{
+"id": 821640,
+"name": "Starved Hunger",
+"text": ""
+},
+{
+"id": 821602,
+"name": "Ice Storm",
+"text": "Deal 3 damage to all creatures."
+},
+{
+"id": 822238,
+"name": "Sixth House Amulet",
+"text": "+1/+1. Summon: If the wielder has 5 power or more, it gains a Ward."
+},
+{
+"id": 821756,
+"name": "Spider Lair",
+"text": "At the start of your turn, summon a random Spider."
+},
+{
+"id": 821650,
+"name": "Pit Lion",
+"text": "Pit Lion can't be summoned unless there's a friendly unit in each lane."
+},
+{
+"id": 821569,
+"name": "Craglorn Scavenger",
+"text": "When you play or activate a support, give Craglorn Scavenger +1/+1."
+},
+{
+"id": 821949,
+"name": "Sanctuary Raid",
+"text": "Destroy an enemy creature. Give all friendly creatures in its lane +1/+1."
+},
+{
+"id": 821701,
+"name": "Goblin Skulk",
+"text": "Pilfer: Draw a random card from your deck that costs 0."
+},
+{
+"id": 821585,
+"name": "Fire Storm",
+"text": "Prophecy. Deal 2 damage to all creatures in one lane."
+},
+{
+"id": 821635,
+"name": "Legion Shield",
+"text": "Guard, +1/+3"
+},
+{
+"id": 821761,
+"name": "Healing Hands",
+"text": "Heal a creature, then give it +1/+1."
+},
+{
+"id": 822323,
+"name": "Brotherhood Assassin",
+"text": "Lethal, Summon: Draw a card."
+},
+{
+"id": 822160,
+"name": "Reconstruction Engine",
+"text": "Uses: 5. Activate: Give a friendly creature -1/-1 and summon a 1/1 Reconstructed Spider."
+},
+{
+"id": 821463,
+"name": "Werewolf",
+"text": "Werewolf: 10 entities of this type."
+},
+{
+"id": 821852,
+"name": "Gortwog gro-Nagorm",
+"text": "At the start of your turn, summon a random creature from your deck to a random lane."
+},
+{
+"id": 821464,
+"name": "Wolf",
+"text": "Wolf: 6 entities of this type."
+},
+{
+"id": 822041,
+"name": "Journey to Sovngarde",
+"text": "Shuffle all creatures from your discard pile into your deck. Give them +5/+5."
+},
+{
+"id": 822225,
+"name": "Barilzar's Tinkering",
+"text": "Betray. Transform a creature into a random creature that cost 1 more."
+},
+{
+"id": 822056,
+"name": "Inspiring Stormcloak",
+"text": "Last Gasp: Summon a 2/2 Rallying Stormcloak in each lane."
+},
+{
+"id": 821923,
+"name": "Gravesinger",
+"text": "At the start of your turn, summon the highest cost creature from your discard pile and give Charge. At the end of the turn, put it on the bottom of your deck."
+},
+{
+"id": 821414,
+"name": "Defense",
+"text": "Defense: 4 entities of this type."
+},
+{
+"id": 822044,
+"name": "Circle Initiate",
+"text": "Prophecy. Beast Form: +2/+1"
+},
+{
+"id": 821467,
+"name": "Wraith",
+"text": "Wraith: 1 entities of this type."
+},
+{
+"id": 822110,
+"name": "Ruthless Freebooter",
+"text": "Treasure Hunt - Drain: +1/+1 and Drain. Treasure Hunt - Lethal: +1/+1 and Lethal."
+},
+{
+"id": 821797,
+"name": "Archein Venomtongue",
+"text": "Lethal, Slay: Gain +1 max magicka."
+},
+{
+"id": 821826,
+"name": "Nahagliiv",
+"text": "Guard. Your opponent can't target Nahagliiv with actions."
+},
+{
+"id": 822300,
+"name": "Chodala's Treachery",
+"text": "Destroy a creature. Plot: Steal the creature instead."
+},
+{
+"id": 821851,
+"name": "General Tullius",
+"text": "Summon: Summon a 2/2 Colovian Trooper with Guard in each lane. When a friendly creature is destroyed, General Tullius gains +1/+1."
+},
+{
+"id": 822304,
+"name": "Feasting Hunger",
+"text": "Guard. Summon: You gain 1 health for each enemy creature."
+},
+{
+"id": 821534,
+"name": "Triumphant Jarl",
+"text": "Summon: If you have more health than your opponent, draw two cards."
+},
+{
+"id": 821500,
+"name": "Riften Pillager",
+"text": "Summon: +1/+1 for each destroyed enemy rune."
+},
+{
+"id": 821961,
+"name": "Shadowmaster",
+"text": "Summon: Give a friendly creature Cover. Your opponent can't target it with actions until next turn."
+},
+{
+"id": 821423,
+"name": "Falmer",
+"text": "Falmer: 4 entities of this type."
+},
+{
+"id": 821663,
+"name": "Hive Worker",
+"text": ""
+},
+{
+"id": 822262,
+"name": "Bushwhack",
+"text": "A friendly creature ignores Guards and can attack creatures in any lane this turn."
+},
+{
+"id": 821903,
+"name": "Swindler's Market",
+"text": "Ongoing. When you play a 0-cost card, deal 1 damage to your opponent and gain 1 health."
+},
+{
+"id": 822281,
+"name": "Stendarr's Hammer",
+"text": "Summon: Double the wielder's power and health. The wielder can onle attack creatures."
+},
+{
+"id": 822086,
+"name": "Winterhold Illusionist",
+"text": "Summon: Another creature disappears, then returns at the end of the turn."
+},
+{
+"id": 821419,
+"name": "Dwermer",
+"text": "Dwermer: 4 entities of this type."
+},
+{
+"id": 821898,
+"name": "Goldbrand",
+"text": "Activate: Deal 2 damage to a creature, then increase the damage Goldbrand deals by 2."
+},
+{
+"id": 822208,
+"name": "Caius Cosades",
+"text": "Summon: Look at two of your opponent's cards. Guess the one in their hand. If you're right, give all creatures in your hand +1/+1."
+},
+{
+"id": 821945,
+"name": "Penitus Oculatus Agent",
+"text": "Summon: Steal a creature's keywords"
+},
+{
+"id": 822032,
+"name": "Raging Horker",
+"text": "When Raging Horker takes damage, it gains +1/+1."
+},
+{
+"id": 821499,
+"name": "Raiding Party",
+"text": "Put two 1/1 Nord Firebrands with Charge into your hand."
+},
+{
+"id": 822229,
+"name": "Falling Wizard",
+"text": "Summon: Falling Wizard deals 5 damage to himself. Last Gasp: Draw an Experimental Scroll."
+},
+{
+"id": 821409,
+"name": "Chaurus",
+"text": "Chaurus: 2 entities of this type."
+},
+{
+"id": 822400,
+"name": "Sheepish Dunmer",
+"text": "Summon: Give Sheepish Dunmer Cover. While Sheepish Dunmer is pantsless, he dos not lose Cover at the start of your turn."
+},
+{
+"id": 821667,
+"name": "Dagi-raht Mystic",
+"text": "Pilfer: Draw a random support from your deck."
+},
+{
+"id": 821838,
+"name": "Queen Barenziah",
+"text": "Drain. Summon: Give all other friendly creatures in this lane Guard."
+},
+{
+"id": 822116,
+"name": "Hulking Fabricant",
+"text": "Summon: If you hava a (Neutral) card in play, +3/+3"
+},
+{
+"id": 821985,
+"name": "Corrupted Shade",
+"text": "Ward. At the end of your turn, if Corrupted Shade doesn't have Ward, sacrifice it."
+},
+{
+"id": 822069,
+"name": "Elixir of Vitality",
+"text": "Uses 3. Activate: Gain 2 health."
+},
+{
+"id": 821383,
+"name": "Guard",
+"text": "Enemy creatures in its lane must attack it before attacking anything else."
+},
+{
+"id": 822083,
+"name": "Karthspire Scourge",
+"text": "Summon: Give all enemy creatures in this lane -1/-0."
+},
+{
+"id": 822207,
+"name": "Bonewalker",
+"text": "Prophecy, Guard, Summon: +1/+1 for each enemy creature in this lane."
+},
+{
+"id": 821526,
+"name": "Fortress Watchman",
+"text": "Guard"
+},
+{
+"id": 821776,
+"name": "Wind Keep Spellsword",
+"text": "Ward"
+},
+{
+"id": 822137,
+"name": "Dragon Aspect",
+"text": "You gain 3 health and Battle an enemy creature as if you had 3 power."
+},
+{
+"id": 821565,
+"name": "Brilliant Experiment",
+"text": "Draw a copy of a friendly creature."
+},
+{
+"id": 821921,
+"name": "Cicero the Betrayer",
+"text": "Lethal. Slay: Draw two cards. Cicero can attack friendly creatures."
+},
+{
+"id": 822371,
+"name": "Experimental Scroll",
+"text": "Experimental Scroll is either Enlightenment, Flame Blast, or Flame Cloak. Don't worry which one it is. Just give it a try. Elnightenment: Give each friendly creature two random Keywords. Flame Blast: Deal 2 damage to each enemy creature. Flame Cloak: Deal 5 damage to each player."
+},
+{
+"id": 821835,
+"name": "Edict of Azura",
+"text": "Destroy an enemy creature or support card."
+},
+{
+"id": 822040,
+"name": "Dragon Mound",
+"text": "Ongoint. Summon: Transform all cards in your deck into random Dragons. Your Dragons cost 1 less."
+},
+{
+"id": 821994,
+"name": "Spine of Eldersblood",
+"text": "Summon: Gaint +1 max magicka."
+},
+{
+"id": 822353,
+"name": "Storm Atronach",
+"text": "Ward"
+},
+{
+"id": 821930,
+"name": "Speaker Terenus",
+"text": "After you play an action, put a random action into your hand."
+},
+{
+"id": 821790,
+"name": "Stalwart Ally",
+"text": "Summon: +0/+2 and Guard if the top card of your deck is (Endurance)."
+},
+{
+"id": 821799,
+"name": "Cave Grahl",
+"text": "Regenerate"
+},
+{
+"id": 822245,
+"name": "Traitor's Flames",
+"text": "Betray. Deal 2 damage to all enemy creatures in a lane."
+},
+{
+"id": 821411,
+"name": "Daedra ",
+"text": "Daedra : 1 entities of this type."
+},
+{
+"id": 821644,
+"name": "Dawnstar healer",
+"text": "After an enemy rune is destroyed, gain 3 health."
+},
+{
+"id": 822020,
+"name": "Conjuration Scholar",
+"text": "Summon: Summon a 5/5 Frost Atronach with Guard."
+},
+{
+"id": 822252,
+"name": "Juib",
+"text": "Slay: Change into Saint Jiub, Eradicator of the Winged Menace."
+},
+{
+"id": 822282,
+"name": "The Red Year",
+"text": "Deal 10 damage to each creature."
+},
+{
+"id": 821789,
+"name": "Plea to Kynareth",
+"text": "Heal all friendly creatures in a lane, then give them all +1/+1."
+},
+{
+"id": 821448,
+"name": "Nord",
+"text": "Nord: 64 entities of this type."
+},
+{
+"id": 822250,
+"name": "Dismantle",
+"text": "Destroy an enemy support or (Neutral) creature."
+},
+{
+"id": 821813,
+"name": "Lurking Mummy",
+"text": "Prophecy, Guard"
+},
+{
+"id": 822062,
+"name": "Skyborn Dragon",
+"text": "Summon: Battle an enemy creature."
+},
+{
+"id": 822150,
+"name": "Ratway Prospector",
+"text": "Treasure Hunt - Support, Item, Action: +5/+5. After Ratway Prospector attacks, it gains Cover."
+},
+{
+"id": 821535,
+"name": "Whirling Duelist",
+"text": "When Whirling Duelist equips an item, deal 1 damage to each enemy creature in this lane."
+},
+{
+"id": 821426,
+"name": "Giant",
+"text": "Giant: 9 entities of this type."
+},
+{
+"id": 821755,
+"name": "Chaurus Reaper",
+"text": "Summon: Give all enemy creatures in this lane -1/-1."
+},
+{
+"id": 821648,
+"name": "Morthal Executioner",
+"text": "When an enemy rune is destroyed, Morthal Executioner gains +2/+0."
+},
+{
+"id": 821820,
+"name": "Mountain Tyrant",
+"text": "Guard"
+},
+{
+"id": 821695,
+"name": "Daring Cutpurse",
+"text": "Prophecy, Pilfer: +1/+1"
+},
+{
+"id": 822276,
+"name": "Redoran Battlespear",
+"text": "Rally. +1/+3"
 }
 ]

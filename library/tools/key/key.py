@@ -1,20 +1,19 @@
 """Answer key (Step 2 of the tag-fix plan, 13 Oct 2026). It only measures: it is never used to fix library entries and never
 edited to agree with the library. Prints counts and sampled lines only.
 
-  key.py defs                         concept definitions for the readers -> key/defs.txt (id | name | counts | not)
-  key.py sample <game|all>            200 entries per game, seed 1 (all of a game with 400 or fewer), plus the entries named
-                                      in tools/audit/<game>_judgments.json -> key/<game>/entries.json and batch_NN.txt (50 each)
-  key.py check <game> <reader>        quote check of key/<game>/<reader>/batch_NN.json: a tag whose words are not in the entry's
-                                      text, or whose concept does not exist, is rejected -> <reader>/clean.json (+ rejected count)
-  key.py credit [<game>...]            keyword credit for cards that name keywords -> key/<game>/key_kw.json (KEY_BUG.md)
-  key.py final <game>                 agreed tags + C's decisions (quote-checked) -> key/<game>/key.json
+  key.py defs                         concept definitions -> key/defs.txt (id | name | counts | not)
+  key.py sample <game|all>            500 entries per game, seed 1 (all of a game with 500 or fewer), plus the entries named
+                                      in tools/audit/<game>_judgments.json -> key/<game>/entries.json
   key.py coverage <game>              concepts on fewer than 5 key entries of the game: candidates found by the concept's typical
-                                      words (its wording patterns) among the game's other entries -> key/<game>/cov_NN.txt batches
+                                      words (its wording patterns) among the game's other entries -> key/<game>/cov_entries.json
                                       (read like the key; their tags come from reading, never from the search)
+  key.py read <game> [cov]            the one reading request: game block + cards -> key/<game>/read.txt (read_cov.txt)
+  key.py answer <game> [cov]          quote check of key/<game>/answer.txt (answer_cov.txt) -> key/<game>/key.json
+  key.py credit [<game>...]            keyword credit for cards that name keywords -> key/<game>/key_kw.json (KEY_BUG.md)
   key.py score <db> [game ...]        wrong tags and missed mechanics per 100 key entries (script; see SCORING below)
 
-Reader output (one file per batch): {"<entity id>": [["concept", "exact words from the text"], ...], ...}; an entry with no
-mechanic gets []. C's output for a settle batch has the same form and lists the final tags of each entry it settles.
+READING (Kaptain's decision, 21 Oct 2026): one process reads read.txt once and writes one line per card to answer.txt;
+ADDING_GAMES.md, "Reading cards", says how.
 
 SCORING. Key concepts K (narrowest, as read) and library tags L of an entry, any role. Game-structure tags (method
 game_structure: "this game has lanes") and cost-data tags (data_rule) are left out on both sides, since they are not read
@@ -54,7 +53,7 @@ def defs():
 def sample(g):
     c = db()
     ids = sorted(i for i, in c.execute('SELECT id FROM entities WHERE game=?', (g,)))
-    pick = ids if len(ids) <= 400 else random.Random(1).sample(ids, 200)
+    pick = ids if len(ids) <= 500 else random.Random(1).sample(ids, 500)
     jf = os.path.join(TOOLS, 'audit', f'{g}_judgments.json')
     live = set(ids)
     extra = [int(i) for i in json.load(open(jf))] if os.path.exists(jf) else []
@@ -63,10 +62,7 @@ def sample(g):
     ents = [{'id': i, 'name': rows[i][0], 'text': rows[i][1] or ''} for i in sel]
     d = gdir(g); json.dump(ents, open(os.path.join(d, 'entries.json'), 'w'), indent=0)
     for f in glob.glob(os.path.join(d, 'batch_*.txt')): os.remove(f)
-    for b in range(0, len(ents), 50):
-        with open(os.path.join(d, f'batch_{b // 50:02d}.txt'), 'w') as fh:
-            for e in ents[b:b + 50]: fh.write(f"{e['id']} | {e['name']} | {e['text'].replace(chr(10), ' / ')}\n")
-    print(g, 'key entries', len(ents), '(random', len(pick), '+ audit', len(sel) - len(pick), ') batches', (len(ents) + 49) // 50)
+    print(g, 'key entries', len(ents), '(random', len(pick), '+ audit', len(sel) - len(pick), ')')
 
 def texts(g):
     return {e['id']: e for e in json.load(open(os.path.join(gdir(g), 'entries.json')))} | \
@@ -83,37 +79,90 @@ def check_tags(ent, tags):
         ok.append([k, x[1]])
     return ok, bad
 
-def check(g, r):
-    ents = texts(g); clean = {}; nb = collections.Counter(); ex = []
-    for f in sorted(glob.glob(os.path.join(gdir(g), r, '*.json'))):
-        if f.endswith(('clean.json', 'notkw.json')): continue
-        for i, tags in json.load(open(f)).items():
-            e = ents.get(int(i))
-            if not e: nb['unknown entry'] += 1; continue
-            ok, bad = check_tags(e, tags); clean[i] = ok
-            for x, why in bad: nb[why] += 1; ex.append((i, x, why))
-    json.dump(clean, open(os.path.join(gdir(g), r, 'clean.json'), 'w'), indent=0)
-    print(g, r, 'entries', len(clean), 'tags kept', sum(map(len, clean.values())), 'rejected', dict(nb))
-    for x in ex[:5]: print('  rejected', x)
-    return clean
-
 def narrow(ks):   # keep the narrowest: drop a concept when a descendant of it is also there
     return {k for k in ks if not (DESC[k] & ks)}
 
-def final(g):
-    if os.path.exists(os.path.join(HERE, g, 'key.json')) and '--force' not in sys.argv:   # key.json is corrected by hand since (death_split.py ...): never overwrite it
-        sys.exit(g + ': key.json exists and has corrections; key.py final would overwrite them (--force to do it anyway)')
-    a = check(g, 'A'); b = check(g, 'B'); ents = texts(g)
-    cdir = os.path.join(gdir(g), 'C'); csets = {}
-    if os.path.isdir(cdir): csets = check(g, 'C')
-    key = {}; nc = 0; miss = []
-    for i in sorted(set(a) & set(b), key=int):
-        ka, kb = narrow({k for k, _ in a[i]}), narrow({k for k, _ in b[i]})
-        if ka == kb: key[i] = {'tags': a[i], 'by': 'A=B'}
-        elif i in csets: key[i] = {'tags': csets[i], 'by': 'C'}; nc += 1
-        else: miss.append(i)
-    json.dump(key, open(os.path.join(gdir(g), 'key.json'), 'w'), indent=0)
-    print(g, 'key entries', len(key), 'settled by C', nc, 'still unsettled', len(miss))
+ROLES = {'does', 'grants', 'benefits', 'counters', 'cost'}
+RULES = '''# Reading request: {game}
+Read the game block once, then every card below. Judge only against the concept definitions at the end of the game block; use
+the game's rules, keywords and factions to understand what a card does. Write nothing but the answer lines.
+
+## How to read a card
+- Go clause by clause and write each concept the clause expresses, with the exact words that justify it, copied character for
+  character from the card's name or text (a short phrase is best). A script rejects any tag whose words are not in the text.
+- Use the most specific concept that fits; do not add its parent as well. Check sibling concepts against their "Not:" lines.
+- A clause can express several concepts (a trigger, a condition and an effect). Triggers and conditions count too.
+- A keyword or ability named on the card counts: tag that keyword's effects, quoting the keyword's name.
+- Keyword or glossary entries: tag what the keyword itself does.
+- A card with no mechanic (lore, a bare name, plain stats with nothing else) gets an empty answer.
+- Do not guess beyond the text. If the text doesn't say it, it isn't there.
+
+## Answer: one line per card line below, in the same order
+`<ids>|<concept>:<role>:<exact words>;<concept>:<role>:<exact words>;...`   (nothing after `|` for a card with no mechanic)
+<ids> as given on the card line. Roles: does (the card does it), grants (it gives it to another card), benefits (it is better
+when this happens), counters (it answers this), cost (it is part of the cost). The exact words never contain `;` or `|`:
+choose a shorter phrase.
+'''
+
+def block(g):
+    """The game block: everything the library holds about how the game is played, then the concept definitions."""
+    c = db(); out = []
+    name, fam, ed, struct, notes = c.execute('SELECT name, family, edition, structure, notes FROM games WHERE id=?', (g,)).fetchone()
+    out += ['# Game block: %s (%s)' % (name, ed), '', '## Rules', struct or '', notes or '']
+    kws = c.execute("SELECT name, text FROM entities WHERE game=? AND category='keyword' ORDER BY name", (g,)).fetchall()
+    if kws: out += ['', '## Keywords'] + ['- %s: %s' % (n, (t or '').replace('\n', ' / ')) for n, t in kws]
+    fs = c.execute('SELECT name, entity_count FROM factions WHERE game=? ORDER BY name', (g,)).fetchall()
+    if fs: out += ['', '## Factions (cards)'] + ['- %s (%s)' % f for f in fs]
+    ts = [n for n, in c.execute("SELECT name FROM entities WHERE game=? AND category='tribe' ORDER BY name", (g,))]
+    if ts: out += ['', '## Card types and tribes', ', '.join(ts)]
+    mf = os.path.join(TOOLS, 'mechanics', g + '.txt')
+    if os.path.exists(mf):
+        ms = [l.split('|')[0].strip() for l in open(mf, encoding='utf-8') if l.strip() and not l.startswith('#')]
+        out += ['', "## Mechanics the game's guides name", ', '.join(dict.fromkeys(ms))]
+    gm = os.path.join(gdir(g), 'game.md')   # what the game's rules pages add (source on its first line)
+    if os.path.exists(gm): out += ['', "## From the game's rules pages"] + [l.rstrip('\n') for l in open(gm, encoding='utf-8')]
+    out += ['', '## Concepts (id | name | what counts | Not: what does not count and where it goes)']
+    out += [l.rstrip('\n') for l in open(os.path.join(HERE, 'defs.txt'), encoding='utf-8')]
+    return '\n'.join(out)
+
+def card_lines(g, cov):
+    f = os.path.join(gdir(g), 'cov_entries.json' if cov else 'entries.json')
+    groups = {}
+    for e in json.load(open(f)):   # identical cards are sent once
+        groups.setdefault((e['name'], e['text']), []).append(str(e['id']))
+    return ['%s|%s: %s' % (','.join(ids), n, t.replace('\n', ' / ')) for (n, t), ids in groups.items()]
+
+def read(g, cov=False):
+    lines = card_lines(g, cov)
+    p = os.path.join(gdir(g), 'read_cov.txt' if cov else 'read.txt')
+    open(p, 'w', encoding='utf-8').write(RULES.format(game=g) + '\n' + block(g) + '\n\n# Cards (<ids>|<name>: <text>)\n' + '\n'.join(lines) + '\n')
+    print(g, 'card lines', len(lines), 'characters', os.path.getsize(p), '->', os.path.relpath(p, HERE))
+
+def answer(g, cov=False):
+    d = gdir(g); ents = texts(g); want = {i for l in card_lines(g, cov) for i in l.split('|')[0].split(',')}
+    new = {}; nb = collections.Counter(); ex = []
+    for l in open(os.path.join(d, 'answer_cov.txt' if cov else 'answer.txt'), encoding='utf-8'):
+        if '|' not in l: continue
+        ids, _, rest = l.rstrip('\n').partition('|')
+        for i in ids.split(','):
+            i = i.strip(); e = ents.get(int(i)) if i.isdigit() else None
+            if not e: nb['unknown card'] += 1; continue
+            tags = []
+            for x in filter(None, (y.strip() for y in rest.split(';'))):
+                k, _, rw = x.partition(':'); r, _, w = rw.partition(':')
+                if r.strip() not in ROLES: nb['role'] += 1; ex.append((i, x, 'role')); continue
+                ok, bad = check_tags(e, [[k, w]]); tags += ok
+                for y, why in bad: nb[why] += 1; ex.append((i, x, why))
+            new[i] = {'tags': tags, 'by': 'read'}
+    miss = want - set(new)
+    kf = os.path.join(d, 'key.json')
+    if cov: key = json.load(open(kf)); key.update(new); new = key
+    elif os.path.exists(kf) and '--force' not in sys.argv:
+        sys.exit(g + ': key.json exists (it may have corrections); --force replaces it')
+    json.dump(new, open(kf, 'w'), indent=0)
+    print(g, 'answered', len(want) - len(miss), 'of', len(want), 'tags kept', sum(len(v['tags']) for v in new.values()), 'rejected', dict(nb))
+    for x in ex[:5]: print('  rejected', x)
+    if miss: print('  not answered:', ' '.join(sorted(miss, key=int)[:20]))
 
 def coverage(g):
     d = gdir(g); key = load(g)
@@ -135,10 +184,6 @@ def coverage(g):
         for r in hits[:need]: cand[r[0]] = r   # round 1: as many as the concept still needs; later rounds take more
     ents = [{'id': i, 'name': n, 'text': t} for i, n, t in cand.values()]
     json.dump(ents, open(os.path.join(d, 'cov_entries.json'), 'w'), indent=0)
-    for f in glob.glob(os.path.join(d, 'cov_*.txt')): os.remove(f)
-    for b in range(0, len(ents), 50):
-        with open(os.path.join(d, f'cov_{b // 50:02d}.txt'), 'w') as fh:
-            for e in ents[b:b + 50]: fh.write(f"{e['id']} | {e['name']} | {e['text'].replace(chr(10), ' / ')}\n")
     print(g, 'concepts under 5:', len(low), 'with patterns to search:', sum(1 for k in low if pats.get(k)), 'candidates', len(ents))
 
 def lib_tags(c, ids, old=False):
@@ -176,13 +221,13 @@ def score(dbpath, games):
 
 
 # --- Keyword credit (KEY_BUG.md, 19 Oct 2026) ---------------------------------------------------------------------------------
-# The readers gave no tags for keywords a card only names ('Skills: Dodge.', 'Taunt'). key_kw.json (one per game, made by
+# The first keys gave no tags for keywords a card only names ('Skills: Dodge.', 'Taunt'). key_kw.json (one per game, made by
 # 'key.py credit') adds, for each key entry, the tags of the keywords the card has: listed for it in the source data (a has_keyword
 # link whose evidence names a field or list) or standing where the game prints keywords (the position rule of kw_links.py, with
 # Claude's addition that the name may stand in square brackets: '[LETHAL HITS]'). The tags are the keyword's own from
-# kw_<game>/key.json, quoted with the keyword's name as it appears in the card's text. Keywords both readers marked as not real
+# kw_<game>/key.json, quoted with the keyword's name as it appears in the card's text. Keywords the key marked as not real
 # are never credited. Decided from the repo database (text and source links), never from a build being measured.
-# load(g) gives the key with the credit merged; every scorer uses it. The readers' key.json files stay as read.
+# load(g) gives the key with the credit merged; every scorer uses it. The key.json files stay as read.
 KW_FIELD = re.compile(r'field|list|scryfall|sigils|special|traits|warscroll', re.I)
 KW_B = r"(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)"
 KW_ACTION = {'damage', 'destroy', 'draw', 'summon', 'generate_cards', 'disable', 'silence', 'selection', 'transform', 'movement',
@@ -240,8 +285,8 @@ if __name__ == '__main__':
     cmd, *a = sys.argv[1:]
     if cmd == 'defs': defs()
     elif cmd == 'sample': [sample(g) for g in (GAMES if a[0] == 'all' else a)]
-    elif cmd == 'check': check(a[0], a[1])
-    elif cmd == 'final': final(a[0])
+    elif cmd == 'read': read(a[0], 'cov' in a[1:])
+    elif cmd == 'answer': answer(a[0], 'cov' in a[1:])
     elif cmd == 'coverage': coverage(a[0])
     elif cmd == 'credit': [credit(g) for g in (a or GAMES)]
     elif cmd == 'score': score(a[0], a[1:] or GAMES)

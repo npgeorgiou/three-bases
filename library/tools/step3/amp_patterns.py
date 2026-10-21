@@ -1,4 +1,4 @@
-"""Amplifiers: cards that make more of what other cards do (asked by Kaptain, 20 Oct 2026; script only, no readers).
+"""Amplifiers: cards that make more of what other cards do (asked by Kaptain, 20 Oct 2026; script only).
 The wording comes from the cards: step3/amp_patterns.py scan groups every amplifying word family (double, twice, triple, extra,
 additional, more, plus, that many, increase...) by the phrase around it in every game; the amplifier forms below are the groups
 that are amplifiers (Claude read them), with the games they occur in:

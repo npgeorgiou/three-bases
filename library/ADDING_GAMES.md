@@ -3,8 +3,8 @@
 Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file before you add a game.
 
 ## Rule zero
-- Scripts first. Do not use reading agents (readers, judges, narrowers) unless Kaptain approves a measured cost.
-- Every reading step runs on one batch first. Report its tokens before going on.
+- Scripts first. Cards are read only as in "Reading cards" at the end of this file, and only when Kaptain approves.
+- Every reading starts with one game: check its answer and report its tokens before reading the next.
 - Do not repeat experiments in loops. Before you choose a fix, break the errors down by where they come from (the `method` column).
 
 ## 0. Before any pattern: the game's material, then its cards
@@ -37,7 +37,7 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 ## 2. Keywords before cards
 1. Add the game's glossary keywords as category `keyword` entries, each with its definition text.
 2. Tag the keywords with patterns, using the concept definitions in `tools/key/defs.txt` and each concept's "Not:" line in `tools/concept_tree_v3.txt`.
-3. If the game has more than about 50 keywords, ask Kaptain whether they should be read. If he says yes, use one Sonnet reader with the script quote check (`key.py check`).
+3. If the game has more than about 50 keywords, ask Kaptain whether they should be read. If he says yes, read them as in "Reading cards".
 4. A card has a keyword only in these cases:
    - the source field lists it;
    - the keyword stands where the game prints keywords: at the start of the text, a line, a sentence or a clause, or in a "Keywords:" list (`valid()` in `tools/kw_links.py`).
@@ -56,11 +56,10 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 - A pattern that matches 10 or more entries in the key needs no outside sample.
 
 ## 4. Measuring (only if Kaptain approves reading)
-1. Take a sample of at most 100 entries with `key.py sample`, seed 1.
-2. Use one Sonnet reader. `key.py check` must verify every tag's quote.
-   Add a second reader only on 20 entries, to estimate agreement.
-3. The reader instructions MUST say: "a keyword or ability named on the card counts: tag that keyword's effects, quoting the keyword's name".
-   Without this, all 168 Blood Bowl players were read as empty, and every score for keyword-heavy games went wrong (`KEY_BUG.md`).
+1. Take the sample with `key.py sample <game>` (500 entries, seed 1; all of a game with 500 or fewer).
+2. Read it as in "Reading cards". The request says that a keyword named on a card counts; without that rule all 168 Blood Bowl
+   players were read as empty, and every score for keyword-heavy games went wrong (`KEY_BUG.md`).
+3. `key.py answer <game>` checks every quote and writes `key.json`.
 4. Score with `key.py score`, crediting named keywords (the `key_kw` layer in `KEY_BUG.md`).
 5. To make patterns from the key, run `tools/step3/key_patterns.py`. It builds on one half of the key, tests on the other half,
    and keeps a pattern only if it is 90%+ right there.
@@ -100,14 +99,9 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
   and compare real-world cases one by one, not only the totals.
 
 ## 5. Never
-- Never run more than 3 or 4 agents at once. Rate limits killed every larger batch.
-- Never let agents share helper scripts in a common scratchpad. They overwrite each other.
-- Never judge with Opus. Use Haiku for yes/no questions and Sonnet for regexes.
-- Never read cards in a chat agent when a stateless batch script can do it (section "Reading cards cheaply").
-- Never start an agent without a progress file it saves after each batch and can resume from.
+- Never read cards any other way than "Reading cards" below: no reading agents, no batches, no second or third reader.
 - Never remove a tag unless it has been judged wrong. Hand reviews in `tools/regression.tsv` win, except where the answer key
   disagrees on what a card does: then the key wins (`tools/key_wins.py`), and payoff and answer tags (`benefits`, `counters`) are never touched.
-- Never put more than 60 to 80 questions in one judging file.
 
 ## 6. Finish
 1. All build checks must pass: regression, combos, trigger pairs, query tests, realworld.
@@ -117,30 +111,25 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 4. Copy the build over `three-bases-library.sqlite`, then commit and push after each step together with its progress files, keys and decisions.
 5. Update `README.md`. Write a short handoff that says what is done, what the build applies, what is left, and the exact commands.
 
-## Reading cards cheaply (if a step ever needs it)
+## Reading cards (Kaptain's decision, 21 Oct 2026; the only way cards are read)
 Patterns are written from the sample of step 0, the mechanics checklist and the coverage scan; reading every card is not needed
-for tagging. Where every card must be read (an answer key, a review), use the bulk reader, not chat agents:
-- One request = the game block + up to 500 cards, sent once. The game block is the game's rules summary, keyword glossary,
-  factions and the concept definitions with their "Not:" lines; the cards are `id|text` lines (identical texts sent once). The
-  answer is one line per card, `id|concept:role:quote;...`, which `key.py check` verifies. About 120 requests cover the library.
-- Each request is independent, so nothing piles up: cost grows with the number of cards, not with their square. The game block
-  is cached by the API and paid in full once per game.
-- Check the first request of each game by hand (skipped cards, wrong quotes) before sending the rest; make batches smaller only
-  if the end of a 500-card answer is worse than its start.
-- It runs as a script on the Anthropic API (Message Batches API: half price, a small model for yes/no judging), so it needs an
-  API key and costs API money instead of chat tokens. The chat workspace has no key.
-Why not chat agents: an agent is a conversation. Before its first card it holds its system prompt, tool definitions, instructions
-and the files it reads (the concept tree file alone is about 51 KB), the measured 90k-200k start-up; every card it reads and every
-tag it writes stays in the conversation and is re-sent at every later step, so each card costs more than the one before.
+for tagging. Where cards must be read (an answer key, a review, judging a pattern sample), it goes like this:
+1. `python3 library/tools/key/key.py sample <game>`: 500 random cards, seed 1 (all cards of a game with 500 or fewer).
+2. `python3 library/tools/key/key.py read <game>` writes the one request, `tools/key/<game>/read.txt`: the reading rules, the
+   game block and the cards. The game block is everything the library holds about how the game is played: the rules summary
+   (`games.structure`, `games.notes`), the keyword glossary (the game's `keyword` entries), factions, card types and tribes, the
+   mechanics checklist (`tools/mechanics/<game>.txt`), what the game's rules pages add (`tools/key/<game>/game.md`, sourced, only
+   facts the pages state), and the concept definitions with their "Not:" lines (`tools/key/defs.txt`). Keep `game.md` as full
+   as the game's rules pages allow before reading. Cards are `<ids>|<name>: <text>` lines; identical cards are sent once.
+3. One fresh process reads `read.txt` once and writes `tools/key/<game>/answer.txt`: one line per card line,
+   `<ids>|concept:role:exact words;...` (empty after `|` for a card with no mechanic). It opens no other file and nothing else is
+   in its context. One process per game; nothing is read twice, so cost grows with the number of cards only.
+4. `python3 library/tools/key/key.py answer <game>` checks every quote and concept, lists cards left unanswered, and writes
+   `key.json` (`--force` replaces an existing one). Check the first answer of each game by hand (skipped cards, wrong quotes).
+   Coverage cards: `key.py coverage <game>`, then `read <game> cov` and `answer <game> cov`.
 
 ## Cost guide (measured)
 | work | tokens |
 |---|---|
 | scripts, builds, checks | about 0 beyond the commands |
-| one Opus reader, 50 entries | 25k to 30k |
-| one agent doing 5 batches | 120k to 150k |
-| any subagent, startup and context alone | 90k to 200k |
-| Haiku yes/no judging, 560 questions | about 150k |
-| Sonnet regex narrowing, 12 patterns | about 100k |
-
-A game added with converter, keywords from fields, patterns and build only costs one chat and no agents.
+| one reading request, 500 cards | about 35k to read (game block about 12k) plus about 15k to 25k of answer |

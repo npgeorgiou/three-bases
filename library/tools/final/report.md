@@ -1,7 +1,6 @@
 # Tag-fix plan: final comparison (20 Oct 2026)
 
-Original: the library at commit c7a77a4. New: the build pushed on 20 Oct 2026. Both are scored on the answer key (8,242 entries read by
-two readers and a third, with the tags of the keywords each card has, `tools/key/key.py load`). Numbers are per 100 key entries.
+Original: the library at commit c7a77a4. New: the build pushed on 20 Oct 2026. Both are scored on the answer key (8,242 entries, with the tags of the keywords each card has, `tools/key/key.py load`). Numbers are per 100 key entries.
 Wrong: a library tag that is neither a key concept nor a broader or narrower one. Missed: a key concept the library has nothing of.
 
 | Game | Wrong (original → new) | Missed (original → new) |

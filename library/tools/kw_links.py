@@ -1,8 +1,8 @@
 """Step 4 of the tag-fix plan: keywords (build step after pattern_fix.py, before parent_rule.py).
-1. Keyword entries get the tags their two readers (and a third for disagreements) read from them: tools/key/kw_<game>/key.json.
+1. Keyword entries get the tags read from them in their key: tools/key/kw_<game>/key.json.
    An older tag of the keyword stays when the keyword's own text justifies it (a wording pattern of that concept matches) or a
    hand review confirmed it; a hand-reviewed drop is never added.
-   Entries both readers marked as not a real keyword of the game (notkw.json) lose their has/grants links.
+   Entries the key marks as not a real keyword of the game (notkw.json) lose their has/grants links.
 2. Link rule: a card has a keyword only when the word is used as that game's keyword:
      - listed for that card in the source data (link evidence names a source field or list), or
      - standing where the game prints keywords: at the start of the text or of a line, sentence or clause (after '.', ':', ';',
