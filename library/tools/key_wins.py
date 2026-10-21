@@ -53,10 +53,16 @@ else:
     role = {}
     for k, r, n in c.execute('SELECT concept, role, count(*) FROM concept_patterns GROUP BY 1, 2 ORDER BY 3'): role[k] = r
     live = {i for i, in c.execute('SELECT id FROM entities')}
+    import key as K   # the key as it is now (key/key.py load: the readers' key with the keyword credit)
+    keyed = {}
+    for (g,) in c.execute('SELECT id FROM games'):
+        try: keyed.update({int(i): {t[0] for t in v['tags']} for i, v in K.load(g).items()})
+        except FileNotFoundError: pass
     add = drop = 0
     for r in csv.DictReader(open(OUT, encoding='utf-8'), delimiter='\t'):
         e, k = int(r['entity']), r['concept']
         if e not in live: continue
+        if r['action'] == 'drop' and k in keyed.get(e, ()): continue   # the key was corrected since the line was made: it has the concept now
         if r['action'] == 'drop':
             drop += c.execute("DELETE FROM entity_concepts WHERE entity=? AND concept=? AND role NOT IN ('benefits', 'counters')", (e, k)).rowcount   # payoff and answer tags stay
             c.execute('DELETE FROM trigger_effect WHERE entity=? AND (trigger=? OR effect=?)', (e, k, k))
