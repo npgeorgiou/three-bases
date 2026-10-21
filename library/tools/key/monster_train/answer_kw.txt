@@ -1,26 +1,26 @@
-822401|
+822401|combat_start:does:Action
 822402|block_armor:does:Armor
 822403|block_armor:benefits:Armored
-822404|
-822405|
+822404|movement:does:Ascend
+822405|spell_power:does:Attuned
 822406|repeat_trigger:does:Buffet
 822407|self_destruct:does:Burnout
-822408|
+822408|cost_type:does:Charged Echo
 822409|exhaust:does:Consume
-822410|
+822410|stat_gain:does:Cultivate
 822411|shield:does:Damage Shield
 822412|attack_lock:does:Dazed;silence:does:Dazed;temporary_effect:does:Dazed
-822413|
+822413|movement:does:Descend
 822414|leave_trigger:does:Eaten
 822415|disruption:does:Emberdrain;turn_start:does:Emberdrain
 822416|aura:does:Enchant
 822417|recycle:does:Endless;leave_trigger:does:Endless
 822418|exhaust:benefits:Etch
 822419|death_trigger:does:Extinguish
-822420|
+822420|cost_type:cost:Extract
 822421|self_destruct:does:Fragile
 822422|damage_over_time:does:Frostbite;turn_end:does:Frostbite
-822423|
+822423|retain:does:Frozen
 822424|cant_attack:counters:Fuel
 822425|on_sacrifice:does:Gorge
 822426|other_death_trigger:does:Harvest
@@ -28,32 +28,32 @@
 822428|on_ally_play:does:Hunger
 822429|on_spell:does:Incant
 822430|cant_attack:does:Inert
-822431|
+822431|resource_gain:does:Infused
 822432|resource_gain:benefits:Inspire
 822433|lifesteal:does:Lifesteal
-822434|
+822434|spell_power:does:Magic Power
 822435|mark_target:does:Melee Weakness
 822436|multi_attack:does:Multistrike
-822437|
-822438|
-822439|
-822440|
-822441|
-822442|
+822437|on_discard:does:Offering;free_play:does:Offering
+822438|retain:does:Permafrost;on_draw:does:Permafrost
+822439|immunity:does:Phased;cant_attack:does:Phased
+822440|piercing:does:Piercing
+822441|permanent_loss:does:Purge
+822442|play_restriction:does:Pyrebound
 822443|first_strike:does:Quick
 822444|temporary_buff:does:Rage
 822445|on_ally_play:does:Rally
 822446|damage_over_time:does:Reap;condition_count:does:Reap
-822447|
+822447|revive:does:Reform;upgrade:does:Reform
 822448|regeneration:does:Regen;turn_end:does:Regen
 822449|on_lifegain:does:Rejuvenate
-822450|
+822450|turn_end:does:Reserve
 822451|turn_end:does:Resolve
 822452|on_damaged:does:Revenge
 822453|immobilize:does:Rooted
 822454|stat_loss:does:Sap;temporary_effect:does:Sap
-822455|
-822456|
+822455|block_armor:does:Shell
+822456|silence:does:Silence
 822457|on_kill:does:Slay
 822458|mark_target:does:Spell Weakness
 822459|counterattack:does:Spikes
@@ -63,4 +63,4 @@
 822463|multi_target_attack:does:Sweep
 822464|excess_damage:does:Trample
 822465|play_restriction:does:Unplayable
-822466|
+822466|deck_modification:does:Unpurgeable

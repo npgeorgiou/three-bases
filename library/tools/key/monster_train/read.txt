@@ -174,6 +174,27 @@ Animus, Blight, Channeler, Construct, Dante, Demon, Egg, Fen, Hollow, Host, Imp,
 - Strike (trigger): when this unit attacks.
 - Summon (trigger): when this unit is played.
 - Unplayable: this card cannot be played.
+- Frozen: the card is not discarded at the end of the turn and stays in hand until played.
+- Permafrost: when drawn, the card gains Frozen.
+- Purge: once played, the card is removed from the deck for the rest of the run.
+- Reserve (trigger): if the card is still in hand when the turn ends.
+- Piercing: the card's damage ignores Armor and Damage Shield.
+- Pyrebound: can only be played in the Pyre Room and the floor directly below it.
+- Attuned: Magic Power effects on the card count five times.
+- Offering: if the card is discarded before the end of the turn, it is played instead (not when Purged or Consumed by other effects).
+- Infused: when played, the current floor gains 1 Echo.
+- Magic Power: increases the damage and healing of spells.
+- Extract: playing the card costs 1 Echo; with none it can't be played.
+- Unpurgeable: can't be removed by shops or Unstable Vortexes.
+- Ascend: moves a unit up a floor, to the back of that floor.
+- Descend: moves a unit down a floor, to the back of that floor (not onto a frozen floor).
+- Reform: returns a defeated friendly unit to the hand as an upgraded version.
+- Cultivate: raises the max and current health and the attack of the lowest-health friendly unit by the Cultivate value.
+- Action (trigger): the unit's ability happens on its turn in combat. (assumed)
+- Charged Echo: Echo stored on a floor that other cards spend for an effect. (assumed)
+- Phased: the unit can't attack or be attacked while it is phased. (assumed)
+- Shell: absorbs damage per stack; when the last stack is gone, the unit's Hatch ability happens. (assumed)
+- Silence: the unit's abilities and triggers stop working. (assumed)
 
 ## Mechanics the game's guides name
 multistrike, rage, sweep, incant, frostbite, morsels, gorge, reform, burnout, eggs

@@ -112,6 +112,19 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 5. Update `README.md`. Write a short handoff that says what is done, what the build applies, what is left, and the exact commands.
 
 ## Reading cards (Kaptain's decision, 21 Oct 2026; the only way cards are read)
+**Why there is a key.** The library's tags come from regexes (patterns). The answer key is the only place where cards are
+read and tagged by judgement, so it is the only measure of whether the patterns are right: every score (wrong and missed per 100
+cards), every pattern accepted or narrowed, and every key-based fix is decided against it. A wrong or empty key tag makes a wrong
+pattern look right, or a right one look wrong. So the key must be read with everything needed to understand the cards, and a
+gap in the game block is a gap in every score of that game.
+
+**Before reading: no undefined keyword or term.** Every keyword the game has needs a definition in the game block: its entry's
+text, or a `# term:` line in `tools/mechanics/<game>.txt`. Research each missing one in the game's rules pages and wikis (several
+sources if the first lacks it). If no source defines it, write the definition from game knowledge and common sense, marked
+`(assumed)` (Kaptain's decision). `key.py read` refuses to write the request while any keyword is undefined. Cards that name a
+keyword get that keyword's tags through `key.py credit` (from the keyword entries' key tags), so the keyword entries must be
+read with their definitions.
+
 Patterns are written from the sample of step 0, the mechanics checklist and the coverage scan; reading every card is not needed
 for tagging. Where cards must be read (an answer key, a review, judging a pattern sample), it goes like this:
 1. `python3 library/tools/key/key.py sample <game>`: 500 random cards, seed 1 (all cards of a game with 500 or fewer).
@@ -125,7 +138,7 @@ for tagging. Where cards must be read (an answer key, a review, judging a patter
    `<ids>|concept:role:exact words;...` (empty after `|` for a card with no mechanic). It opens no other file and nothing else is
    in its context. One process per game; nothing is read twice, so cost grows with the number of cards only.
 4. `python3 library/tools/key/key.py answer <game>` checks every quote and concept, lists cards left unanswered, and writes
-   `key.json` (`--force` replaces an existing one). Check the first answer of each game by hand (skipped cards, wrong quotes).
+   `key.json` (`--force` replaces an existing one). Then `key.py credit <game>`. Check the first answer of each game by hand (skipped cards, wrong quotes).
    Coverage cards: `key.py coverage <game>`, then `read <game> cov` and `answer <game> cov`.
 
 ## Cost guide (measured)

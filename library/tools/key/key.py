@@ -138,9 +138,19 @@ def card_lines(g, part):
         groups.setdefault((e['name'], e['text']), []).append(str(e['id']))
     return ['%s|%s: %s' % (','.join(ids), n, t.replace('\n', ' / ')) for (n, t), ids in groups.items()]
 
+def undefined(g):
+    """Refuse to read while a keyword of the game has no definition: neither its entry's text nor a '# term:' line of the
+    mechanics file explains it (the reading would then tag it from guesses). --force reads anyway."""
+    mf = os.path.join(TOOLS, 'mechanics', g + '.txt')
+    terms = {norm(l[len('# term: '):].split(':')[0].split(' (')[0]) for l in open(mf, encoding='utf-8') if l.startswith('# term: ')} if os.path.exists(mf) else set()
+    miss = [n for n, t in db().execute("SELECT name, text FROM entities WHERE game=? AND category='keyword'", (g,)) if not (t or '').strip() and norm(n) not in terms]
+    if miss and '--force' not in sys.argv:
+        sys.exit(g + ': keywords without a definition (research them, or assume from game knowledge, into tools/mechanics/' + g + '.txt): ' + ', '.join(sorted(miss)))
+
 PART = 200   # card lines per cards file: each file and read.txt can be read in one go
 def read(g, part=''):
     """read.txt (rules + game block) and cards[_part]_N.txt; one process reads them all once, in order."""
+    undefined(g)
     d = gdir(g); lines = card_lines(g, part); sfx = '_' + part if part else ''
     for f in glob.glob(os.path.join(d, 'cards%s_*.txt' % sfx)): os.remove(f)
     open(os.path.join(d, 'read.txt'), 'w', encoding='utf-8').write(RULES.format(game=g) + '\n' + block(g) + '\n')
@@ -252,15 +262,16 @@ def kw_valid(text, kname, action):
 def credit(g):
     f = os.path.join(HERE, 'kw_' + g, 'key.json')
     key = json.load(open(os.path.join(HERE, g, 'key.json')))
-    if not os.path.exists(f):
+    c = db(); kwids = {i for i, in c.execute("SELECT id FROM entities WHERE game=? AND category='keyword'", (g,))}
+    if os.path.exists(f): kwk = {int(i): v['tags'] for i, v in json.load(open(f)).items()}
+    else: kwk = {int(i): v['tags'] for i, v in key.items() if int(i) in kwids}   # the keyword entries read with the game's cards
+    if not kwk:
         json.dump({}, open(os.path.join(HERE, g, 'key_kw.json'), 'w')); print(g, 'no keyword key'); return
-    kwk = {int(i): v['tags'] for i, v in json.load(open(f)).items()}
     notk = []
     for r in ('A', 'B'):
         nf = os.path.join(HERE, 'kw_' + g, r, 'notkw.json')
         notk.append({int(x) for x in json.load(open(nf))} if os.path.exists(nf) else set())
     bad = notk[0] & notk[1]
-    c = db()
     names = {i: n for i, n in c.execute("SELECT id, name FROM entities WHERE game=? AND category='keyword'", (g,)) if i in kwk and i not in bad and kwk[i]}
     out = {}; nk = nt = 0
     for i in map(int, key):
@@ -291,7 +302,7 @@ def load(g):
 
 GAMES = ['into_the_breach', 'wh_bloodbowl3', 'inscryption', 'faeria', 'duelyst', 'sts1', 'marvel_snap', 'darkest_dungeon', 'sts2',
          'gwent', 'hs_battlegrounds', 'wh_killteam', 'runeterra', 'wh_underworlds', 'wh_aos_4th', 'wh_40k_10e', 'shadowverse', 'hearthstone', 'mtg',
-         'lorcana', 'stormbound', 'swu', 'tesl', 'monster_train']   # the last five: 40-50 entries read by Claude against defs.txt (21 Oct 2026)
+         'lorcana', 'stormbound', 'swu', 'tesl', 'monster_train']   # the last five: read with one request each (21 Oct 2026)
 if __name__ == '__main__':
     cmd, *a = sys.argv[1:]
     if cmd == 'defs': defs()

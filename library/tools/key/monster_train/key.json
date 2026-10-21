@@ -1,6 +1,11 @@
 {
 "822401": {
-"tags": [],
+"tags": [
+[
+"combat_start",
+"Action"
+]
+],
 "by": "read"
 },
 "822402": {
@@ -22,11 +27,21 @@
 "by": "read"
 },
 "822404": {
-"tags": [],
+"tags": [
+[
+"movement",
+"Ascend"
+]
+],
 "by": "read"
 },
 "822405": {
-"tags": [],
+"tags": [
+[
+"spell_power",
+"Attuned"
+]
+],
 "by": "read"
 },
 "822406": {
@@ -48,7 +63,12 @@
 "by": "read"
 },
 "822408": {
-"tags": [],
+"tags": [
+[
+"cost_type",
+"Charged Echo"
+]
+],
 "by": "read"
 },
 "822409": {
@@ -61,7 +81,12 @@
 "by": "read"
 },
 "822410": {
-"tags": [],
+"tags": [
+[
+"stat_gain",
+"Cultivate"
+]
+],
 "by": "read"
 },
 "822411": {
@@ -91,7 +116,12 @@
 "by": "read"
 },
 "822413": {
-"tags": [],
+"tags": [
+[
+"movement",
+"Descend"
+]
+],
 "by": "read"
 },
 "822414": {
@@ -157,7 +187,12 @@
 "by": "read"
 },
 "822420": {
-"tags": [],
+"tags": [
+[
+"cost_type",
+"Extract"
+]
+],
 "by": "read"
 },
 "822421": {
@@ -183,7 +218,12 @@
 "by": "read"
 },
 "822423": {
-"tags": [],
+"tags": [
+[
+"retain",
+"Frozen"
+]
+],
 "by": "read"
 },
 "822424": {
@@ -254,7 +294,12 @@
 "by": "read"
 },
 "822431": {
-"tags": [],
+"tags": [
+[
+"resource_gain",
+"Infused"
+]
+],
 "by": "read"
 },
 "822432": {
@@ -276,7 +321,12 @@
 "by": "read"
 },
 "822434": {
-"tags": [],
+"tags": [
+[
+"spell_power",
+"Magic Power"
+]
+],
 "by": "read"
 },
 "822435": {
@@ -298,27 +348,69 @@
 "by": "read"
 },
 "822437": {
-"tags": [],
+"tags": [
+[
+"on_discard",
+"Offering"
+],
+[
+"free_play",
+"Offering"
+]
+],
 "by": "read"
 },
 "822438": {
-"tags": [],
+"tags": [
+[
+"retain",
+"Permafrost"
+],
+[
+"on_draw",
+"Permafrost"
+]
+],
 "by": "read"
 },
 "822439": {
-"tags": [],
+"tags": [
+[
+"immunity",
+"Phased"
+],
+[
+"cant_attack",
+"Phased"
+]
+],
 "by": "read"
 },
 "822440": {
-"tags": [],
+"tags": [
+[
+"piercing",
+"Piercing"
+]
+],
 "by": "read"
 },
 "822441": {
-"tags": [],
+"tags": [
+[
+"permanent_loss",
+"Purge"
+]
+],
 "by": "read"
 },
 "822442": {
-"tags": [],
+"tags": [
+[
+"play_restriction",
+"Pyrebound"
+]
+],
 "by": "read"
 },
 "822443": {
@@ -362,7 +454,16 @@
 "by": "read"
 },
 "822447": {
-"tags": [],
+"tags": [
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
+]
+],
 "by": "read"
 },
 "822448": {
@@ -388,7 +489,12 @@
 "by": "read"
 },
 "822450": {
-"tags": [],
+"tags": [
+[
+"turn_end",
+"Reserve"
+]
+],
 "by": "read"
 },
 "822451": {
@@ -432,11 +538,21 @@
 "by": "read"
 },
 "822455": {
-"tags": [],
+"tags": [
+[
+"block_armor",
+"Shell"
+]
+],
 "by": "read"
 },
 "822456": {
-"tags": [],
+"tags": [
+[
+"silence",
+"Silence"
+]
+],
 "by": "read"
 },
 "822457": {
@@ -521,7 +637,12 @@
 "by": "read"
 },
 "822466": {
-"tags": [],
+"tags": [
+[
+"deck_modification",
+"Unpurgeable"
+]
+],
 "by": "read"
 },
 "822467": {
@@ -631,10 +752,6 @@
 "822493": {
 "tags": [
 [
-"on_play",
-"Summon"
-],
-[
 "damage",
 "Deal 10 damage"
 ],
@@ -646,20 +763,7 @@
 "by": "read"
 },
 "822494": {
-"tags": [
-[
-"exhaust",
-"Consume"
-],
-[
-"stat_gain",
-"Rage"
-],
-[
-"block_armor",
-"Armor"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822495": {
@@ -695,10 +799,6 @@
 },
 "822498": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "generate_cards",
 "Add 2 random Imp units to your hand"
@@ -738,10 +838,6 @@
 "822500": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "stat_gain",
 "Apply Rage 3"
 ]
@@ -750,10 +846,6 @@
 },
 "822501": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "block_armor",
 "Apply Armor 25"
@@ -766,10 +858,6 @@
 [
 "stat_gain",
 "Rage 4"
-],
-[
-"on_kill",
-"Slay"
 ],
 [
 "stat_gain",
@@ -794,10 +882,6 @@
 "822504": {
 "tags": [
 [
-"on_play",
-"Summon"
-],
-[
 "stat_gain",
 "Apply Rage 5 to friendly units"
 ]
@@ -815,10 +899,6 @@
 },
 "822506": {
 "tags": [
-[
-"piercing",
-"Piercing"
-],
 [
 "damage",
 "Deal 5 damage"
@@ -841,10 +921,6 @@
 },
 "822508": {
 "tags": [
-[
-"on_play",
-"Summon"
-],
 [
 "recycle",
 "Return a random consumed spell to your hand"
@@ -876,10 +952,6 @@
 "822510": {
 "tags": [
 [
-"spell_power",
-"Attuned"
-],
-[
 "sacrifice",
 "Sacrifice Imp"
 ],
@@ -906,10 +978,6 @@
 "822512": {
 "tags": [
 [
-"on_play",
-"Summon"
-],
-[
 "aoe_damage",
 "Deal 5 damage to enemy units"
 ]
@@ -918,10 +986,6 @@
 },
 "822513": {
 "tags": [
-[
-"on_play",
-"Summon"
-],
 [
 "resource_gain",
 "Gain 4 Ember"
@@ -936,10 +1000,6 @@
 "Armor 30"
 ],
 [
-"on_attack",
-"Strike"
-],
-[
 "mark_target",
 "Apply Melee Weakness 1"
 ]
@@ -948,10 +1008,6 @@
 },
 "822515": {
 "tags": [
-[
-"turn_end",
-"Resolve"
-],
 [
 "block_armor",
 "Apply Armor 5 to friendly units"
@@ -988,10 +1044,6 @@
 "822518": {
 "tags": [
 [
-"on_play",
-"Summon"
-],
-[
 "block_armor",
 "Apply Armor 20 to the front friendly unit"
 ]
@@ -1001,10 +1053,6 @@
 "822519": {
 "tags": [
 [
-"on_attack",
-"Strike"
-],
-[
 "permanent_growth",
 "+5 Attack"
 ]
@@ -1013,10 +1061,6 @@
 },
 "822520": {
 "tags": [
-[
-"piercing",
-"Piercing"
-],
 [
 "damage",
 "Deal 5 damage"
@@ -1070,10 +1114,6 @@
 "822524": {
 "tags": [
 [
-"piercing",
-"Piercing"
-],
-[
 "aoe_damage",
 "Deal 100 damage to friendly and enemy units"
 ],
@@ -1087,10 +1127,6 @@
 "822525": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "stat_multiply",
 "Double the amount of Rage on friendly units"
 ]
@@ -1099,10 +1135,6 @@
 },
 "822526": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "stat_multiply",
 "Double Armor on a unit"
@@ -1122,10 +1154,6 @@
 "822529": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "multi_attack",
 "Apply Multistrike 1"
 ]
@@ -1137,10 +1165,6 @@
 [
 "stat_gain",
 "Gain Rage equal to gained Armor"
-],
-[
-"on_play",
-"Summon"
 ],
 [
 "block_armor",
@@ -1159,10 +1183,6 @@
 },
 "822534": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "draw",
 "Draw [X Cost]"
@@ -1194,10 +1214,6 @@
 "822536": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "draw",
 "Draw +3 next turn"
 ],
@@ -1210,10 +1226,6 @@
 },
 "822537": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "generate_cards",
 "Add 3 Sting spells to your hand"
@@ -1261,12 +1273,7 @@
 "by": "read"
 },
 "822541": {
-"tags": [
-[
-"first_strike",
-"Quick"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822542": {
@@ -1281,16 +1288,8 @@
 "822543": {
 "tags": [
 [
-"on_play",
-"Summon"
-],
-[
 "stat_gain",
 "Gain 60 max health"
-],
-[
-"on_lifegain",
-"Rejuvenate"
 ],
 [
 "stat_gain",
@@ -1301,10 +1300,6 @@
 },
 "822544": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "tutor",
 "Draw a unit"
@@ -1364,20 +1359,11 @@
 "by": "read"
 },
 "822548": {
-"tags": [
-[
-"multi_target_attack",
-"Sweep"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822549": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "counterattack",
 "Apply Spikes 4"
@@ -1450,24 +1436,12 @@
 [
 "aura",
 "Spikes on friendly units deal +1 damage per stack"
-],
-[
-"counterattack",
-"Spikes"
 ]
 ],
 "by": "read"
 },
 "822555": {
 "tags": [
-[
-"multi_target_attack",
-"Sweep"
-],
-[
-"on_kill",
-"Slay"
-],
 [
 "permanent_growth",
 "+3 Attack"
@@ -1478,16 +1452,8 @@
 "822557": {
 "tags": [
 [
-"on_play",
-"Summon"
-],
-[
 "stat_gain",
 "Gain 60 max health"
-],
-[
-"on_lifegain",
-"Rejuvenate"
 ],
 [
 "counterattack",
@@ -1499,10 +1465,6 @@
 "822558": {
 "tags": [
 [
-"turn_end",
-"Resolve"
-],
-[
 "generate_cards",
 "Add a Sting spell to your hand"
 ]
@@ -1511,10 +1473,6 @@
 },
 "822560": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "regeneration",
 "Apply Regen 5"
@@ -1525,10 +1483,6 @@
 "822561": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "first_strike",
 "Apply Quick"
 ]
@@ -1537,10 +1491,6 @@
 },
 "822562": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "heal",
 "Restore a friendly unit to full health"
@@ -1584,10 +1534,6 @@
 },
 "822565": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "resource_gain",
 "gain +1 Ember per turn"
@@ -1641,10 +1587,6 @@
 "822569": {
 "tags": [
 [
-"on_damaged",
-"Revenge"
-],
-[
 "resource_gain",
 "Gain 1 Ember"
 ]
@@ -1680,16 +1622,8 @@
 "822572": {
 "tags": [
 [
-"on_play",
-"Summon"
-],
-[
 "stat_gain",
 "Gain 80 max health"
-],
-[
-"on_lifegain",
-"Rejuvenate"
 ],
 [
 "permanent_growth",
@@ -1703,37 +1637,15 @@
 "by": "read"
 },
 "822574": {
-"tags": [
-[
-"on_spell",
-"Incant"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822575": {
-"tags": [
-[
-"exhaust",
-"Consume"
-],
-[
-"stat_loss",
-"Sap"
-],
-[
-"damage_over_time",
-"Frostbite"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822576": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "damage_over_time",
 "Apply Frostbite 6 to enemy units"
@@ -1767,10 +1679,6 @@
 "tags": [
 [
 "retain",
-"Permafrost"
-],
-[
-"retain",
 "Apply Frozen to a card in your hand"
 ]
 ],
@@ -1778,14 +1686,6 @@
 },
 "822580": {
 "tags": [
-[
-"retain",
-"Permafrost"
-],
-[
-"exhaust",
-"Consume"
-],
 [
 "silence",
 "Apply Silence to enemy units"
@@ -1796,10 +1696,6 @@
 "822581": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "mark_target",
 "Apply Spell Weakness 2 to enemy units"
 ]
@@ -1808,14 +1704,6 @@
 },
 "822582": {
 "tags": [
-[
-"multi_target_attack",
-"Sweep"
-],
-[
-"on_attack",
-"Strike"
-],
 [
 "damage_over_time",
 "Apply Frostbite 3"
@@ -1908,10 +1796,6 @@
 "822589": {
 "tags": [
 [
-"on_spell",
-"Incant"
-],
-[
 "damage_over_time",
 "Apply Frostbite 2 to enemy units"
 ]
@@ -1921,10 +1805,6 @@
 "822590": {
 "tags": [
 [
-"on_spell",
-"Incant"
-],
-[
 "block_armor",
 "Gain Armor 3"
 ]
@@ -1933,10 +1813,6 @@
 },
 "822591": {
 "tags": [
-[
-"on_spell",
-"Incant"
-],
 [
 "block_armor",
 "Apply Armor 1 to friendly units"
@@ -1959,14 +1835,6 @@
 },
 "822593": {
 "tags": [
-[
-"play_restriction",
-"Pyrebound"
-],
-[
-"spell_power",
-"Attuned"
-],
 [
 "damage",
 "Deal 90 damage"
@@ -1994,14 +1862,6 @@
 "822595": {
 "tags": [
 [
-"multi_target_attack",
-"Sweep"
-],
-[
-"on_attack",
-"Strike"
-],
-[
 "mark_target",
 "Apply Spell Weakness 1"
 ]
@@ -2010,10 +1870,6 @@
 },
 "822596": {
 "tags": [
-[
-"on_spell",
-"Incant"
-],
 [
 "stat_loss",
 "Apply Sap 1 to enemy units"
@@ -2033,10 +1889,6 @@
 "822598": {
 "tags": [
 [
-"on_spell",
-"Incant"
-],
-[
 "stat_gain",
 "Gain Rage 2"
 ]
@@ -2045,10 +1897,6 @@
 },
 "822599": {
 "tags": [
-[
-"on_spell",
-"Incant"
-],
 [
 "draw",
 "Draw 1"
@@ -2063,10 +1911,6 @@
 "822600": {
 "tags": [
 [
-"on_spell",
-"Incant"
-],
-[
 "permanent_growth",
 "+2 Attack and +2 Health"
 ]
@@ -2075,10 +1919,6 @@
 },
 "822601": {
 "tags": [
-[
-"play_restriction",
-"Pyrebound"
-],
 [
 "forced_movement",
 "Ascend all enemy units on this floor"
@@ -2093,10 +1933,6 @@
 "822602": {
 "tags": [
 [
-"on_damaged",
-"Revenge"
-],
-[
 "damage_over_time",
 "Apply Frostbite 3 to enemy units"
 ]
@@ -2105,10 +1941,6 @@
 },
 "822603": {
 "tags": [
-[
-"spell_power",
-"Attuned"
-],
 [
 "damage",
 "Deal 25 damage"
@@ -2122,10 +1954,6 @@
 },
 "822604": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "discard",
 "Discard your hand"
@@ -2174,10 +2002,6 @@
 "822607": {
 "tags": [
 [
-"damage_over_time",
-"Frostbite"
-],
-[
 "stat_multiply",
 "double the amount of Frostbite"
 ]
@@ -2204,14 +2028,6 @@
 "822609": {
 "tags": [
 [
-"on_discard",
-"Offering"
-],
-[
-"spell_power",
-"Attuned"
-],
-[
 "damage",
 "Deal 60 damage"
 ],
@@ -2225,10 +2041,6 @@
 "822610": {
 "tags": [
 [
-"on_discard",
-"Offering"
-],
-[
 "stat_loss",
 "Apply Sap 2 to enemy units"
 ]
@@ -2237,10 +2049,6 @@
 },
 "822611": {
 "tags": [
-[
-"retain",
-"Permafrost"
-],
 [
 "damage",
 "Deal 20 damage"
@@ -2259,10 +2067,6 @@
 "822612": {
 "tags": [
 [
-"on_discard",
-"Offering"
-],
-[
 "aoe_damage",
 "Deal 5 damage to enemy units"
 ],
@@ -2276,16 +2080,8 @@
 "822613": {
 "tags": [
 [
-"on_spell",
-"Incant"
-],
-[
 "multi_attack",
 "Gain Multistrike 1"
-],
-[
-"turn_end",
-"Resolve"
 ]
 ],
 "by": "read"
@@ -2299,10 +2095,6 @@
 [
 "repeat_trigger",
 "Buffet 3"
-],
-[
-"death_trigger",
-"Eaten"
 ],
 [
 "stat_gain",
@@ -2321,12 +2113,7 @@
 "by": "read"
 },
 "822617": {
-"tags": [
-[
-"exhaust",
-"Consume"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822618": {
@@ -2334,10 +2121,6 @@
 [
 "damage",
 "Deal 3 per X damage"
-],
-[
-"on_kill",
-"Slay"
 ],
 [
 "resource_gain",
@@ -2348,10 +2131,6 @@
 },
 "822619": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "tutor",
 "Draw a unit"
@@ -2364,24 +2143,11 @@
 "by": "read"
 },
 "822620": {
-"tags": [
-[
-"exhaust",
-"Consume"
-],
-[
-"shield",
-"Damage Shield"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822621": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "destroy",
 "Kill a Morsel unit"
@@ -2400,10 +2166,6 @@
 "822622": {
 "tags": [
 [
-"death_trigger",
-"Eaten"
-],
-[
 "stat_gain",
 "Eater gains +6 Health"
 ]
@@ -2412,10 +2174,6 @@
 },
 "822623": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "generate_cards",
 "Add 3 Excavated Ember cards to your discard pile"
@@ -2448,10 +2206,6 @@
 "822626": {
 "tags": [
 [
-"death_trigger",
-"Eaten"
-],
-[
 "stat_gain",
 "Eater gains +6 Attack"
 ]
@@ -2460,10 +2214,6 @@
 },
 "822627": {
 "tags": [
-[
-"death_trigger",
-"Eaten"
-],
 [
 "stat_gain",
 "Eater gains +3 Attack"
@@ -2478,10 +2228,6 @@
 "822628": {
 "tags": [
 [
-"death_trigger",
-"Eaten"
-],
-[
 "stat_gain",
 "Eater gains +3 Health"
 ],
@@ -2495,10 +2241,6 @@
 "822629": {
 "tags": [
 [
-"death_trigger",
-"Eaten"
-],
-[
 "stat_gain",
 "Eater gains +6 Attack and +6 Health"
 ]
@@ -2507,10 +2249,6 @@
 },
 "822630": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "generate_cards",
 "Add 3 uncommon or rare Morsel units to your hand"
@@ -2551,10 +2289,6 @@
 "822633": {
 "tags": [
 [
-"death_trigger",
-"Eaten"
-],
-[
 "resource_gain",
 "Gain 1 Ember"
 ],
@@ -2567,10 +2301,6 @@
 },
 "822634": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "board_limit",
 "+1 Capacity on this floor"
@@ -2602,10 +2332,6 @@
 "Deal 3 damage"
 ],
 [
-"on_kill",
-"Slay"
-],
-[
 "generate_cards",
 "Add 2 uncommon or rare Morsel units to your hand"
 ]
@@ -2632,10 +2358,6 @@
 "822638": {
 "tags": [
 [
-"other_death_trigger",
-"Gorge"
-],
-[
 "lifesteal",
 "Gain Lifesteal 1"
 ]
@@ -2644,10 +2366,6 @@
 },
 "822639": {
 "tags": [
-[
-"other_death_trigger",
-"Gorge"
-],
 [
 "shield",
 "Gain Damage Shield 1"
@@ -2666,10 +2384,6 @@
 },
 "822641": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "board_limit",
 "-1 Capacity on this floor"
@@ -2713,10 +2427,6 @@
 "twice"
 ],
 [
-"on_kill",
-"Slay"
-],
-[
 "generate_cards",
 "Add a common or uncommon Morsel unit to your hand"
 ]
@@ -2744,16 +2454,8 @@
 "822646": {
 "tags": [
 [
-"cant_attack",
-"Inert"
-],
-[
 "multi_attack",
 "Multistrike 1"
-],
-[
-"other_death_trigger",
-"Gorge"
 ]
 ],
 "by": "read"
@@ -2782,10 +2484,6 @@
 },
 "822649": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "multi_attack",
 "Apply Multistrike 1"
@@ -2822,10 +2520,6 @@
 "822652": {
 "tags": [
 [
-"turn_end",
-"Resolve"
-],
-[
 "summon",
 "Summon an Antumbra Morsel and Magma Morsel"
 ]
@@ -2835,10 +2529,6 @@
 "822653": {
 "tags": [
 [
-"other_death_trigger",
-"Gorge"
-],
-[
 "permanent_growth",
 "+2 Attack permanently"
 ]
@@ -2847,10 +2537,6 @@
 },
 "822654": {
 "tags": [
-[
-"other_death_trigger",
-"Gorge"
-],
 [
 "heal",
 "Restore 10 health"
@@ -2865,10 +2551,6 @@
 "822655": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "excess_damage",
 "Apply Trample"
 ]
@@ -2877,10 +2559,6 @@
 },
 "822656": {
 "tags": [
-[
-"banish",
-"Purge"
-],
 [
 "damage",
 "Deal 30 damage to the front enemy unit"
@@ -2915,10 +2593,6 @@
 "three times"
 ],
 [
-"on_kill",
-"Slay"
-],
-[
 "resource_gain",
 "Gain 2 Ember"
 ]
@@ -2941,14 +2615,6 @@
 "822660": {
 "tags": [
 [
-"on_ally_play",
-"Hunger"
-],
-[
-"other_death_trigger",
-"Gorge"
-],
-[
 "permanent_growth",
 "+2 Attack and +2 Health"
 ]
@@ -2965,10 +2631,6 @@
 },
 "822663": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "stat_gain",
 "Apply +4"
@@ -3005,10 +2667,6 @@
 "822666": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "self_destruct",
 "Apply Burnout 5"
 ]
@@ -3018,10 +2676,6 @@
 "822667": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "repeat_trigger",
 "Trigger a unit's Extinguish ability without killing it"
 ]
@@ -3030,10 +2684,6 @@
 },
 "822668": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "resource_gain",
 "Gain 1 Ember"
@@ -3060,10 +2710,6 @@
 },
 "822670": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "revive",
 "Reform 2 random units"
@@ -3097,12 +2743,7 @@
 "by": "read"
 },
 "822672": {
-"tags": [
-[
-"self_destruct",
-"Burnout"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822673": {
@@ -3110,10 +2751,6 @@
 [
 "stealth",
 "Stealth 1"
-],
-[
-"death_trigger",
-"Extinguish"
 ],
 [
 "permanent_growth",
@@ -3142,16 +2779,8 @@
 "822675": {
 "tags": [
 [
-"other_death_trigger",
-"Harvest"
-],
-[
 "stacking_keyword",
 "Gain Soul 1"
-],
-[
-"death_trigger",
-"Extinguish"
 ],
 [
 "aoe_damage",
@@ -3189,10 +2818,6 @@
 "822678": {
 "tags": [
 [
-"death_trigger",
-"Extinguish"
-],
-[
 "damage",
 "Deal 50 damage"
 ]
@@ -3215,10 +2840,6 @@
 "Burnout 3"
 ],
 [
-"on_damaged",
-"Revenge"
-],
-[
 "self_destruct",
 "Friendly Burnout units gain Burnout 1"
 ]
@@ -3237,10 +2858,6 @@
 "822682": {
 "tags": [
 [
-"death_trigger",
-"Extinguish"
-],
-[
 "stealth",
 "Apply Stealth 2 to friendly units"
 ]
@@ -3249,10 +2866,6 @@
 },
 "822683": {
 "tags": [
-[
-"on_attack",
-"Strike"
-],
 [
 "stat_gain",
 "Friendly Burnout units gain Rage 3"
@@ -3263,10 +2876,6 @@
 "822684": {
 "tags": [
 [
-"on_kill",
-"Slay"
-],
-[
 "shop_gold",
 "Gain 20 Gold"
 ]
@@ -3275,10 +2884,6 @@
 },
 "822685": {
 "tags": [
-[
-"death_trigger",
-"Extinguish"
-],
 [
 "summon",
 "Summon 2 Draff units"
@@ -3289,10 +2894,6 @@
 "822686": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "recycle",
 "Apply Endless"
 ]
@@ -3301,14 +2902,6 @@
 },
 "822688": {
 "tags": [
-[
-"recycle",
-"Endless"
-],
-[
-"death_trigger",
-"Extinguish"
-],
 [
 "draw",
 "Draw 1"
@@ -3332,10 +2925,6 @@
 "822690": {
 "tags": [
 [
-"other_death_trigger",
-"Harvest"
-],
-[
 "permanent_growth",
 "+3 Attack and +3 Health"
 ]
@@ -3344,10 +2933,6 @@
 },
 "822691": {
 "tags": [
-[
-"other_death_trigger",
-"Harvest"
-],
 [
 "shop_gold",
 "Gain 5 Gold"
@@ -3371,10 +2956,6 @@
 "822693": {
 "tags": [
 [
-"other_death_trigger",
-"Harvest"
-],
-[
 "stat_gain",
 "Gain Rage 5"
 ]
@@ -3397,10 +2978,6 @@
 "822695": {
 "tags": [
 [
-"death_trigger",
-"Extinguish"
-],
-[
 "revive",
 "Return a random defeated unit to your hand"
 ],
@@ -3418,10 +2995,6 @@
 "822696": {
 "tags": [
 [
-"death_trigger",
-"Extinguish"
-],
-[
 "summon",
 "Summon 2 Twin of Wax"
 ],
@@ -3435,16 +3008,8 @@
 "822697": {
 "tags": [
 [
-"piercing",
-"Piercing"
-],
-[
 "damage",
 "Deal 5 damage"
-],
-[
-"on_kill",
-"Slay"
 ],
 [
 "upgrade",
@@ -3481,10 +3046,6 @@
 },
 "822700": {
 "tags": [
-[
-"spell_power",
-"Attuned"
-],
 [
 "damage",
 "Deal 25 damage"
@@ -3559,10 +3120,6 @@
 "822707": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "in_hand_buff",
 "Apply Infused to cards in hand"
 ]
@@ -3584,10 +3141,6 @@
 },
 "822709": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "damage_over_time",
 "Apply Reap 2 to enemy units"
@@ -3611,10 +3164,6 @@
 "822711": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "damage",
 "Deal 13 damage"
 ],
@@ -3628,10 +3177,6 @@
 "822712": {
 "tags": [
 [
-"spell_power",
-"Attuned"
-],
-[
 "cost_type",
 "Extract 2"
 ],
@@ -3644,10 +3189,6 @@
 },
 "822713": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "block_armor",
 "Apply Armor 2 per [Echo]"
@@ -3726,10 +3267,6 @@
 "Multistrike 1"
 ],
 [
-"on_attack",
-"Strike"
-],
-[
 "damage_over_time",
 "Apply Reap 1 to enemy units"
 ]
@@ -3791,10 +3328,6 @@
 "822723": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "recycle",
 "Return a consumed spell to the top of your draw pile"
 ],
@@ -3820,10 +3353,6 @@
 },
 "822725": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "condition_count",
 "per [Echo]"
@@ -3853,10 +3382,6 @@
 [
 "in_hand_buff",
 "-1 Ember"
-],
-[
-"exhaust",
-"Consume"
 ]
 ],
 "by": "read"
@@ -3876,10 +3401,6 @@
 "twice"
 ],
 [
-"on_kill",
-"Slay"
-],
-[
 "resource_gain",
 "Gain 2 Echo"
 ]
@@ -3889,10 +3410,6 @@
 "822729": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "damage_over_time",
 "Apply Reap 13"
 ]
@@ -3901,10 +3418,6 @@
 },
 "822730": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "resource_gain",
 "Fill [EchoSlot] with [Echo]"
@@ -3936,10 +3449,6 @@
 "822732": {
 "tags": [
 [
-"exhaust",
-"Consume."
-],
-[
 "recycle",
 "Return 3 random spell cards from the discard pile to your hand"
 ],
@@ -3970,10 +3479,6 @@
 "822734": {
 "tags": [
 [
-"excess_damage",
-"Trample"
-],
-[
 "stat_gain",
 "+10 Attack and +10 Health"
 ]
@@ -3982,10 +3487,6 @@
 },
 "822735": {
 "tags": [
-[
-"multi_target_attack",
-"Sweep"
-],
 [
 "damage_over_time",
 "Apply Reap 2 to enemy units"
@@ -4004,10 +3505,6 @@
 "Restore 5 health"
 ],
 [
-"on_damaged",
-"Revenge"
-],
-[
 "damage_over_time",
 "Apply Reap 5 to the attacking unit"
 ],
@@ -4020,10 +3517,6 @@
 },
 "822737": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "speed",
 "Remove 3 Shell"
@@ -4072,10 +3565,6 @@
 "822742": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "resource_gain",
 "Gain 1 EchoSlot"
 ]
@@ -4085,10 +3574,6 @@
 "822743": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "damage_over_time",
 "Reap to enemy units"
 ]
@@ -4097,10 +3582,6 @@
 },
 "822744": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "recycle",
 "Return 5 consumed spells to the top of your draw pile"
@@ -4119,10 +3600,6 @@
 "Deal 10 per X damage"
 ],
 [
-"on_kill",
-"Slay"
-],
-[
 "copy",
 "Add a permanent copy of this card to your discard pile"
 ],
@@ -4136,10 +3613,6 @@
 "822746": {
 "tags": [
 [
-"exhaust",
-"Consume"
-],
-[
 "stat_gain",
 "Apply +5 to your Pyre"
 ]
@@ -4149,10 +3622,6 @@
 "822747": {
 "tags": [
 [
-"banish",
-"Purge"
-],
-[
 "heal",
 "Restore 5 per X Pyre health"
 ]
@@ -4160,24 +3629,11 @@
 "by": "read"
 },
 "822748": {
-"tags": [
-[
-"banish",
-"Purge"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822749": {
 "tags": [
-[
-"banish",
-"Purge"
-],
-[
-"piercing",
-"Piercing"
-],
 [
 "aoe_damage",
 "Deal 30 per X damage to enemy units"
@@ -4186,28 +3642,11 @@
 "by": "read"
 },
 "822750": {
-"tags": [
-[
-"banish",
-"Purge"
-],
-[
-"shield",
-"Damage Shield"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822751": {
 "tags": [
-[
-"play_restriction",
-"Unplayable"
-],
-[
-"turn_end",
-"Reserve"
-],
 [
 "heal",
 "Restore 5 Pyre health"
@@ -4216,24 +3655,11 @@
 "by": "read"
 },
 "822752": {
-"tags": [
-[
-"play_restriction",
-"Unplayable"
-],
-[
-"immunity",
-"Unpurgeable"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822753": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "resource_gain",
 "Gain 2 Ember"
@@ -4248,10 +3674,6 @@
 "822754": {
 "tags": [
 [
-"banish",
-"Purge"
-],
-[
 "destroy",
 "Kill a non-boss unit"
 ]
@@ -4263,10 +3685,6 @@
 [
 "multi_attack",
 "Multistrike 1"
-],
-[
-"death_trigger",
-"Extinguish"
 ],
 [
 "copy",
@@ -4285,10 +3703,6 @@
 },
 "822756": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "forced_movement",
 "Descend a unit to the bottom floor"
@@ -4324,14 +3738,6 @@
 "822758": {
 "tags": [
 [
-"immunity",
-"Unpurgeable"
-],
-[
-"turn_end",
-"Reserve"
-],
-[
 "friendly_fire",
 "Your Pyre takes 3 damage"
 ]
@@ -4345,10 +3751,6 @@
 "Deal 2 damage"
 ],
 [
-"on_kill",
-"Slay"
-],
-[
 "shop_gold",
 "+50 Gold"
 ]
@@ -4358,14 +3760,6 @@
 "822760": {
 "tags": [
 [
-"banish",
-"Purge"
-],
-[
-"turn_end",
-"Reserve"
-],
-[
 "friendly_fire",
 "Your Pyre takes 5 damage"
 ]
@@ -4373,20 +3767,11 @@
 "by": "read"
 },
 "822761": {
-"tags": [
-[
-"banish",
-"Purge"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822763": {
 "tags": [
-[
-"turn_end",
-"Reserve"
-],
 [
 "friendly_fire",
 "Your Pyre takes 1 damage"
@@ -4396,10 +3781,6 @@
 },
 "822765": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "forced_movement",
 "Ascend an enemy unit to the Pyre room"
@@ -4412,12 +3793,7 @@
 "by": "read"
 },
 "822767": {
-"tags": [
-[
-"banish",
-"Purge"
-]
-],
+"tags": [],
 "by": "read"
 },
 "822768": {
@@ -4431,10 +3807,6 @@
 "two times"
 ],
 [
-"on_kill",
-"Slay"
-],
-[
 "board_limit",
 "+1 Capacity on this floor"
 ]
@@ -4443,14 +3815,6 @@
 },
 "822769": {
 "tags": [
-[
-"excess_damage",
-"Trample"
-],
-[
-"turn_end",
-"Resolve"
-],
 [
 "board_limit",
 "+1 Capacity on this floor"
@@ -4464,10 +3828,6 @@
 },
 "822771": {
 "tags": [
-[
-"exhaust",
-"Consume"
-],
 [
 "targeting_rules",
 "Does not affect bosses"

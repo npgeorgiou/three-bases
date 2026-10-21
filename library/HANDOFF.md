@@ -10,14 +10,16 @@
   cards), read once by one fresh process, answer checked by `key.py answer`. Reader agents, batches and second or third readers
   are gone from tools and docs.
 - **Reading requests ready** for the five newest games: `tools/key/<game>/read.txt` (Lorcana, SWU, Legends 500 cards each;
-  Stormbound all 202; Monster Train all 362). Each game block has sourced rules and terms (`# term:` lines in `tools/mechanics/<game>.txt`),
-  except Monster Train (its 66 keyword entries already cover it). Stormbound's is thin: no glossary page could be reached.
+  Stormbound all 202; Monster Train all 362). Each game block has sourced rules and terms (`# term:` lines in `tools/mechanics/<game>.txt`);
+  Stormbound's comes from the stormbound-kitty rulebook.
 
 - **New keys for the five newest games** (one-request reading, 21 Oct): Lorcana 500, Stormbound 202, SWU 500, Legends 497 (3
-  cards skipped), Monster Train 362 (its 66 keywords re-read once their definitions were in the mechanics file; 21 have no
-  definition and got none). About 715k subagent tokens in all, 106k-144k per game, most of it each subagent's start-up and the
-  game block. Scores of the stored library, wrong / missed per 100: Lorcana 125.2 / 89.6, Stormbound 75.7 / 81.7, SWU 155.6 / 95.2,
-  Legends 116.9 / 64.8, Monster Train 82.0 / 69.9 (the old 40-50 entry keys gave 164 / 78, 105 / 70, 177.5 / 70, 110 / 40,
+  cards skipped), Monster Train 362. Monster Train's cards were read before its keyword definitions were in the block: its 66
+  keywords were re-read with definitions (21 found on the fandom wiki or assumed, then tagged by Claude in the chat), the 187
+  card tags that only quoted a keyword name were dropped, and `key.py credit` gives every card its keywords' tags. Legends:
+  Ongoing and Beast Form definitions assumed. About 715k subagent tokens in all, 106k-144k per game, most of it each subagent's start-up and the
+  game block. Scores of the stored library with the keyword credit, wrong / missed per 100: Lorcana 125.2 / 89.6, Stormbound 75.7 / 81.7,
+  SWU 152.8 / 96.8, Legends 111.1 / 73.6, Monster Train 62.7 / 89.8 (the old 40-50 entry keys gave 164 / 78, 105 / 70, 177.5 / 70, 110 / 40,
   102.5 / 42.5: the new keys tag more, so missed rose).
 
 ## Next steps, in order
