@@ -1,4 +1,671 @@
 {
+"822401": {
+"tags": [
+[
+"combat_start",
+"Action"
+]
+],
+"by": "read"
+},
+"822402": {
+"tags": [
+[
+"block_armor",
+"Armor"
+]
+],
+"by": "read"
+},
+"822403": {
+"tags": [],
+"by": "read"
+},
+"822404": {
+"tags": [
+[
+"movement",
+"Ascend"
+]
+],
+"by": "read"
+},
+"822405": {
+"tags": [
+[
+"spell_power",
+"Attuned"
+]
+],
+"by": "read"
+},
+"822406": {
+"tags": [
+[
+"repeat_trigger",
+"Buffet"
+]
+],
+"by": "read"
+},
+"822407": {
+"tags": [
+[
+"self_destruct",
+"Burnout"
+]
+],
+"by": "read"
+},
+"822408": {
+"tags": [],
+"by": "read"
+},
+"822409": {
+"tags": [
+[
+"exhaust",
+"Consume"
+]
+],
+"by": "read"
+},
+"822410": {
+"tags": [
+[
+"stat_gain",
+"Cultivate"
+]
+],
+"by": "read"
+},
+"822411": {
+"tags": [
+[
+"shield",
+"Damage Shield"
+]
+],
+"by": "read"
+},
+"822412": {
+"tags": [
+[
+"disable",
+"Dazed"
+]
+],
+"by": "read"
+},
+"822413": {
+"tags": [
+[
+"movement",
+"Descend"
+]
+],
+"by": "read"
+},
+"822414": {
+"tags": [
+[
+"death_trigger",
+"Eaten"
+]
+],
+"by": "read"
+},
+"822415": {
+"tags": [
+[
+"upkeep",
+"Emberdrain"
+]
+],
+"by": "read"
+},
+"822416": {
+"tags": [
+[
+"aura",
+"Enchant"
+]
+],
+"by": "read"
+},
+"822417": {
+"tags": [
+[
+"recycle",
+"Endless"
+]
+],
+"by": "read"
+},
+"822418": {
+"tags": [],
+"by": "read"
+},
+"822419": {
+"tags": [
+[
+"death_trigger",
+"Extinguish"
+]
+],
+"by": "read"
+},
+"822420": {
+"tags": [
+[
+"cost_type",
+"Extract"
+]
+],
+"by": "read"
+},
+"822421": {
+"tags": [],
+"by": "read"
+},
+"822422": {
+"tags": [
+[
+"damage_over_time",
+"Frostbite"
+]
+],
+"by": "read"
+},
+"822423": {
+"tags": [
+[
+"retain",
+"Frozen"
+]
+],
+"by": "read"
+},
+"822424": {
+"tags": [],
+"by": "read"
+},
+"822425": {
+"tags": [
+[
+"other_death_trigger",
+"Gorge"
+]
+],
+"by": "read"
+},
+"822426": {
+"tags": [
+[
+"other_death_trigger",
+"Harvest"
+]
+],
+"by": "read"
+},
+"822427": {
+"tags": [
+[
+"delayed",
+"Hatch"
+]
+],
+"by": "read"
+},
+"822428": {
+"tags": [
+[
+"on_ally_play",
+"Hunger"
+]
+],
+"by": "read"
+},
+"822429": {
+"tags": [
+[
+"on_spell",
+"Incant"
+]
+],
+"by": "read"
+},
+"822430": {
+"tags": [
+[
+"cant_attack",
+"Inert"
+]
+],
+"by": "read"
+},
+"822431": {
+"tags": [],
+"by": "read"
+},
+"822432": {
+"tags": [],
+"by": "read"
+},
+"822433": {
+"tags": [
+[
+"lifesteal",
+"Lifesteal"
+]
+],
+"by": "read"
+},
+"822434": {
+"tags": [
+[
+"spell_power",
+"Magic Power"
+]
+],
+"by": "read"
+},
+"822435": {
+"tags": [
+[
+"mark_target",
+"Melee Weakness"
+]
+],
+"by": "read"
+},
+"822436": {
+"tags": [
+[
+"multi_attack",
+"Multistrike"
+]
+],
+"by": "read"
+},
+"822437": {
+"tags": [
+[
+"on_discard",
+"Offering"
+],
+[
+"free_play",
+"Offering"
+]
+],
+"by": "read"
+},
+"822438": {
+"tags": [
+[
+"retain",
+"Permafrost"
+]
+],
+"by": "read"
+},
+"822439": {
+"tags": [
+[
+"immunity",
+"Phased"
+]
+],
+"by": "read"
+},
+"822440": {
+"tags": [
+[
+"piercing",
+"Piercing"
+]
+],
+"by": "read"
+},
+"822441": {
+"tags": [
+[
+"banish",
+"Purge"
+]
+],
+"by": "read"
+},
+"822442": {
+"tags": [
+[
+"play_restriction",
+"Pyrebound"
+]
+],
+"by": "read"
+},
+"822443": {
+"tags": [
+[
+"first_strike",
+"Quick"
+]
+],
+"by": "read"
+},
+"822444": {
+"tags": [
+[
+"stat_gain",
+"Rage"
+]
+],
+"by": "read"
+},
+"822445": {
+"tags": [
+[
+"on_ally_play",
+"Rally"
+]
+],
+"by": "read"
+},
+"822446": {
+"tags": [
+[
+"damage_over_time",
+"Reap"
+]
+],
+"by": "read"
+},
+"822447": {
+"tags": [
+[
+"revive",
+"Reform"
+]
+],
+"by": "read"
+},
+"822448": {
+"tags": [
+[
+"regeneration",
+"Regen"
+]
+],
+"by": "read"
+},
+"822449": {
+"tags": [
+[
+"on_lifegain",
+"Rejuvenate"
+]
+],
+"by": "read"
+},
+"822450": {
+"tags": [
+[
+"turn_end",
+"Reserve"
+]
+],
+"by": "read"
+},
+"822451": {
+"tags": [
+[
+"turn_end",
+"Resolve"
+]
+],
+"by": "read"
+},
+"822452": {
+"tags": [
+[
+"on_damaged",
+"Revenge"
+]
+],
+"by": "read"
+},
+"822453": {
+"tags": [
+[
+"immobilize",
+"Rooted"
+]
+],
+"by": "read"
+},
+"822454": {
+"tags": [
+[
+"stat_loss",
+"Sap"
+]
+],
+"by": "read"
+},
+"822455": {
+"tags": [
+[
+"delayed",
+"Shell"
+]
+],
+"by": "read"
+},
+"822456": {
+"tags": [
+[
+"silence",
+"Silence"
+]
+],
+"by": "read"
+},
+"822457": {
+"tags": [
+[
+"on_kill",
+"Slay"
+]
+],
+"by": "read"
+},
+"822458": {
+"tags": [
+[
+"mark_target",
+"Spell Weakness"
+]
+],
+"by": "read"
+},
+"822459": {
+"tags": [
+[
+"counterattack",
+"Spikes"
+]
+],
+"by": "read"
+},
+"822460": {
+"tags": [
+[
+"stealth",
+"Stealth"
+]
+],
+"by": "read"
+},
+"822461": {
+"tags": [
+[
+"on_attack",
+"Strike"
+]
+],
+"by": "read"
+},
+"822462": {
+"tags": [
+[
+"on_play",
+"Summon"
+]
+],
+"by": "read"
+},
+"822463": {
+"tags": [
+[
+"multi_target_attack",
+"Sweep"
+]
+],
+"by": "read"
+},
+"822464": {
+"tags": [
+[
+"excess_damage",
+"Trample"
+]
+],
+"by": "read"
+},
+"822465": {
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+]
+],
+"by": "read"
+},
+"822466": {
+"tags": [
+[
+"immunity",
+"Unpurgeable"
+]
+],
+"by": "read"
+},
+"822467": {
+"tags": [],
+"by": "read"
+},
+"822468": {
+"tags": [],
+"by": "read"
+},
+"822469": {
+"tags": [],
+"by": "read"
+},
+"822470": {
+"tags": [],
+"by": "read"
+},
+"822471": {
+"tags": [],
+"by": "read"
+},
+"822472": {
+"tags": [],
+"by": "read"
+},
+"822473": {
+"tags": [],
+"by": "read"
+},
+"822474": {
+"tags": [],
+"by": "read"
+},
+"822475": {
+"tags": [],
+"by": "read"
+},
+"822476": {
+"tags": [],
+"by": "read"
+},
+"822477": {
+"tags": [],
+"by": "read"
+},
+"822478": {
+"tags": [],
+"by": "read"
+},
+"822479": {
+"tags": [],
+"by": "read"
+},
+"822480": {
+"tags": [],
+"by": "read"
+},
+"822481": {
+"tags": [],
+"by": "read"
+},
+"822482": {
+"tags": [],
+"by": "read"
+},
+"822483": {
+"tags": [],
+"by": "read"
+},
+"822484": {
+"tags": [],
+"by": "read"
+},
+"822485": {
+"tags": [],
+"by": "read"
+},
+"822486": {
+"tags": [],
+"by": "read"
+},
+"822487": {
+"tags": [],
+"by": "read"
+},
+"822488": {
+"tags": [],
+"by": "read"
+},
+"822489": {
+"tags": [],
+"by": "read"
+},
+"822490": {
+"tags": [],
+"by": "read"
+},
+"822491": {
+"tags": [],
+"by": "read"
+},
+"822492": {
+"tags": [],
+"by": "read"
+},
 "822493": {
 "tags": [
 [
@@ -7,98 +674,64 @@
 ],
 [
 "damage",
-"Deal 10 damage to the front enemy unit"
+"Deal 10 damage"
+],
+[
+"targeting_rules",
+"the front enemy unit"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822722": {
+"822494": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"stat_gain",
+"Rage"
+],
+[
+"block_armor",
+"Armor"
+]
+],
+"by": "read"
+},
+"822495": {
+"tags": [
+[
+"aoe_damage",
+"Deal 2 per X damage to enemy units"
+]
+],
+"by": "read"
+},
+"822496": {
 "tags": [
 [
 "damage",
-"Deal 5 damage to enemy units"
-],
-[
-"aoe_damage",
-"Deal 5 damage to enemy units"
-]
-],
-"by": "Claude"
-},
-"822433": {
-"tags": [],
-"by": "Claude"
-},
-"822461": {
-"tags": [],
-"by": "Claude"
-},
-"822558": {
-"tags": [
-[
-"generate_cards",
-"Add a Sting spell to your hand"
-]
-],
-"by": "Claude"
-},
-"822683": {
-"tags": [
-[
-"on_attack",
-"Strike"
+"Deal 5 damage"
 ],
 [
 "stat_gain",
-"gain Rage 3"
+"Apply Rage 7"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822660": {
+"822497": {
 "tags": [
 [
-"sacrifice",
-"Feed on units with Eaten"
-],
-[
-"stat_gain",
-"+2 Attack and +2 Health"
+"block_armor",
+"Apply Armor 5"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822671": {
-"tags": [
-[
-"sacrifice",
-"Consume cards in hand"
-],
-[
-"generate_cards",
-"add a Draff unit to your hand"
-],
-[
-"in_hand_buff",
-"apply +10 Attack for each card consumed"
-]
-],
-"by": "Claude"
-},
-"822768": {
-"tags": [
-[
-"aoe_damage",
-"Deal 6 damage to enemy units, two times"
-],
-[
-"on_kill",
-"Slay"
-]
-],
-"by": "Claude"
-},
-"822623": {
+"822498": {
 "tags": [
 [
 "exhaust",
@@ -106,10 +739,461 @@
 ],
 [
 "generate_cards",
-"Add 3 Excavated Ember cards to your discard pile"
+"Add 2 random Imp units to your hand"
+],
+[
+"random_effect",
+"random Imp units"
+],
+[
+"tribal",
+"Imp units"
 ]
 ],
-"by": "Claude"
+"by": "read"
+},
+"822499": {
+"tags": [
+[
+"sacrifice",
+"Sacrifice Imp"
+],
+[
+"tribal",
+"Imp"
+],
+[
+"resource_gain",
+"Gain 1 Ember"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"by": "read"
+},
+"822500": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"stat_gain",
+"Apply Rage 3"
+]
+],
+"by": "read"
+},
+"822501": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"block_armor",
+"Apply Armor 25"
+]
+],
+"by": "read"
+},
+"822502": {
+"tags": [
+[
+"stat_gain",
+"Rage 4"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"stat_gain",
+"Apply Rage 3 to friendly units"
+]
+],
+"by": "read"
+},
+"822503": {
+"tags": [
+[
+"aura",
+"Rage on friendly units adds an additional +3 Attack per stack"
+],
+[
+"stacking_keyword",
+"per stack"
+]
+],
+"by": "read"
+},
+"822504": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"stat_gain",
+"Apply Rage 5 to friendly units"
+]
+],
+"by": "read"
+},
+"822505": {
+"tags": [
+[
+"movement",
+"Ascend a unit"
+]
+],
+"by": "read"
+},
+"822506": {
+"tags": [
+[
+"piercing",
+"Piercing"
+],
+[
+"damage",
+"Deal 5 damage"
+],
+[
+"repeat_trigger",
+"twice"
+]
+],
+"by": "read"
+},
+"822507": {
+"tags": [
+[
+"multi_attack",
+"Multistrike 1"
+]
+],
+"by": "read"
+},
+"822508": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"recycle",
+"Return a random consumed spell to your hand"
+],
+[
+"random_effect",
+"random consumed spell"
+]
+],
+"by": "read"
+},
+"822509": {
+"tags": [
+[
+"damage",
+"Deal damage to the front enemy unit"
+],
+[
+"deck_condition",
+"number of Imp units in your deck"
+],
+[
+"tribal",
+"Imp units"
+]
+],
+"by": "read"
+},
+"822510": {
+"tags": [
+[
+"spell_power",
+"Attuned"
+],
+[
+"sacrifice",
+"Sacrifice Imp"
+],
+[
+"damage",
+"Deal 50 damage"
+]
+],
+"by": "read"
+},
+"822511": {
+"tags": [
+[
+"movement",
+"Move a unit to the front"
+],
+[
+"block_armor",
+"apply Armor 10"
+]
+],
+"by": "read"
+},
+"822512": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"aoe_damage",
+"Deal 5 damage to enemy units"
+]
+],
+"by": "read"
+},
+"822513": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"resource_gain",
+"Gain 4 Ember"
+]
+],
+"by": "read"
+},
+"822514": {
+"tags": [
+[
+"block_armor",
+"Armor 30"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"mark_target",
+"Apply Melee Weakness 1"
+]
+],
+"by": "read"
+},
+"822515": {
+"tags": [
+[
+"turn_end",
+"Resolve"
+],
+[
+"block_armor",
+"Apply Armor 5 to friendly units"
+]
+],
+"by": "read"
+},
+"822516": {
+"tags": [
+[
+"damage",
+"Deal 2 damage"
+]
+],
+"by": "read"
+},
+"822517": {
+"tags": [
+[
+"on_play",
+"When played"
+],
+[
+"repeat_trigger",
+"repeat all Summon effects"
+],
+[
+"count_payoff",
+"triggered so far this battle"
+]
+],
+"by": "read"
+},
+"822518": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"block_armor",
+"Apply Armor 20 to the front friendly unit"
+]
+],
+"by": "read"
+},
+"822519": {
+"tags": [
+[
+"on_attack",
+"Strike"
+],
+[
+"permanent_growth",
+"+5 Attack"
+]
+],
+"by": "read"
+},
+"822520": {
+"tags": [
+[
+"piercing",
+"Piercing"
+],
+[
+"damage",
+"Deal 5 damage"
+],
+[
+"block_armor",
+"Apply Armor 20"
+]
+],
+"by": "read"
+},
+"822521": {
+"tags": [
+[
+"stat_gain",
+"Apply Rage 4"
+],
+[
+"block_armor",
+"Armor 5"
+]
+],
+"by": "read"
+},
+"822522": {
+"tags": [
+[
+"movement",
+"Ascend a unit"
+],
+[
+"disable",
+"apply Dazed 2"
+]
+],
+"by": "read"
+},
+"822523": {
+"tags": [
+[
+"damage",
+"Deal damage to the front enemy unit"
+],
+[
+"condition_count",
+"4x the amount of Armor on friendly units"
+]
+],
+"by": "read"
+},
+"822524": {
+"tags": [
+[
+"piercing",
+"Piercing"
+],
+[
+"aoe_damage",
+"Deal 100 damage to friendly and enemy units"
+],
+[
+"friendly_fire",
+"friendly and enemy units"
+]
+],
+"by": "read"
+},
+"822525": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"stat_multiply",
+"Double the amount of Rage on friendly units"
+]
+],
+"by": "read"
+},
+"822526": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"stat_multiply",
+"Double Armor on a unit"
+]
+],
+"by": "read"
+},
+"822527": {
+"tags": [
+[
+"stat_gain",
+"Apply Rage 10"
+]
+],
+"by": "read"
+},
+"822529": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"multi_attack",
+"Apply Multistrike 1"
+]
+],
+"by": "read"
+},
+"822531": {
+"tags": [
+[
+"stat_gain",
+"Gain Rage equal to gained Armor"
+],
+[
+"on_play",
+"Summon"
+],
+[
+"block_armor",
+"Gain Armor 5"
+]
+],
+"by": "read"
+},
+"822532": {
+"tags": [],
+"by": "read"
+},
+"822533": {
+"tags": [],
+"by": "read"
 },
 "822534": {
 "tags": [
@@ -126,103 +1210,26 @@
 "apply -1 Ember to those cards"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822449": {
-"tags": [],
-"by": "Claude"
-},
-"822679": {
+"822535": {
 "tags": [
 [
-"self_destruct",
-"Burnout 3"
+"immobilize",
+"Apply Rooted 1"
+],
+[
+"draw",
+"Draw +1 next turn"
+],
+[
+"delayed",
+"next turn"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822415": {
-"tags": [],
-"by": "Claude"
-},
-"822628": {
-"tags": [
-[
-"death_trigger",
-"Eaten"
-],
-[
-"enemy_benefit",
-"Eater gains +3 Health and Damage Shield 1"
-]
-],
-"by": "Claude"
-},
-"822650": {
-"tags": [
-[
-"shield",
-"Apply Damage Shield 1"
-],
-[
-"generate_cards",
-"Add 2 uncommon or rare Morsel units to your hand"
-]
-],
-"by": "Claude"
-},
-"822743": {
-"tags": [
-[
-"exhaust",
-"Consume"
-],
-[
-"damage",
-"Apply 4 per X Reap to enemy units"
-]
-],
-"by": "Claude"
-},
-"822402": {
-"tags": [],
-"by": "Claude"
-},
-"822657": {
-"tags": [
-[
-"damage",
-"Deal 20 damage to a random enemy unit, three times"
-],
-[
-"random_effect",
-"a random enemy unit"
-],
-[
-"on_kill",
-"Slay"
-],
-[
-"resource_gain",
-"Gain 2 Ember"
-]
-],
-"by": "Claude"
-},
-"822565": {
-"tags": [
-[
-"exhaust",
-"Consume"
-],
-[
-"resource_gain",
-"gain +1 Ember per turn"
-]
-],
-"by": "Claude"
-},
-"822544": {
+"822536": {
 "tags": [
 [
 "exhaust",
@@ -230,74 +1237,14 @@
 ],
 [
 "draw",
-"Draw a unit"
+"Draw +3 next turn"
 ],
-[
-"in_hand_buff",
-"apply +20 Attack, +20 Health, and 0 Ember"
-]
-],
-"by": "Claude"
-},
-"822733": {
-"tags": [
 [
 "delayed",
-"Shell 12"
-],
-[
-"summon",
-"Summon Bog Wurmling"
+"next turn"
 ]
 ],
-"by": "Claude"
-},
-"822453": {
-"tags": [],
-"by": "Claude"
-},
-"822416": {
-"tags": [],
-"by": "Claude"
-},
-"822412": {
-"tags": [],
-"by": "Claude"
-},
-"822414": {
-"tags": [],
-"by": "Claude"
-},
-"822767": {
-"tags": [
-[
-"banish",
-"Purge"
-]
-],
-"by": "Claude"
-},
-"822708": {
-"tags": [
-[
-"stat_gain",
-"Apply +10 Health"
-]
-],
-"by": "Claude"
-},
-"822405": {
-"tags": [],
-"by": "Claude"
-},
-"822624": {
-"tags": [
-[
-"repeat_trigger",
-"Trigger feeding on units with Eaten abilities"
-]
-],
-"by": "Claude"
+"by": "read"
 },
 "822537": {
 "tags": [
@@ -310,29 +1257,33 @@
 "Add 3 Sting spells to your hand"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822645": {
+"822538": {
 "tags": [
 [
-"copy",
-"Create 3 copies of a Morsel unit"
+"damage",
+"Deal 10 damage"
+],
+[
+"draw",
+"Draw +1 next turn"
+],
+[
+"delayed",
+"next turn"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822701": {
+"822539": {
 "tags": [
 [
-"sacrifice",
-"Kill friendly units"
-],
-[
-"summon",
-"Reform random units to this floor"
+"heal",
+"Restore friendly units to full health"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
 "822540": {
 "tags": [
@@ -345,29 +1296,76 @@
 "Move that unit to the front"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822653": {
+"822541": {
 "tags": [
 [
-"permanent_growth",
-"+2 Attack permanently"
+"first_strike",
+"Quick"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822714": {
+"822542": {
 "tags": [
 [
-"delayed",
-"Shell 5"
-],
-[
-"summon",
-"Summon 2 Bog Fly units"
+"multi_attack",
+"Multistrike 2"
 ]
 ],
-"by": "Claude"
+"by": "read"
+},
+"822543": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"stat_gain",
+"Gain 60 max health"
+],
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"stat_gain",
+"Cultivate 2"
+]
+],
+"by": "read"
+},
+"822544": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"tutor",
+"Draw a unit"
+],
+[
+"in_hand_buff",
+"apply +20 Attack, +20 Health"
+],
+[
+"cost_set",
+"0 Ember"
+]
+],
+"by": "read"
+},
+"822545": {
+"tags": [
+[
+"cost_reduction",
+"cost -1 Ember"
+]
+],
+"by": "read"
 },
 "822546": {
 "tags": [
@@ -382,31 +1380,594 @@
 [
 "draw",
 "Draw +1 next turn"
+],
+[
+"delayed",
+"next turn"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822605": {
+"822547": {
 "tags": [
 [
-"tutor",
-"Draw 3 spells"
+"heal",
+"Restore 2 health to all friendly units"
 ],
 [
-"in_hand_buff",
-"apply Consume, +20 Magic Power and 0 Ember"
+"aoe_damage",
+"deal 2 damage to all enemy units"
 ]
 ],
-"by": "Claude"
+"by": "read"
 },
-"822545": {
+"822548": {
 "tags": [
 [
-"cost_reduction",
-"Healing spells cast on this floor cost -1 Ember"
+"multi_target_attack",
+"Sweep"
 ]
 ],
-"by": "Claude"
+"by": "read"
+},
+"822549": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"counterattack",
+"Apply Spikes 4"
+]
+],
+"by": "read"
+},
+"822550": {
+"tags": [
+[
+"stat_gain",
+"Apply +10 Attack"
+],
+[
+"stat_loss",
+"-2 Health"
+]
+],
+"by": "read"
+},
+"822551": {
+"tags": [
+[
+"heal",
+"Restore 10 health"
+],
+[
+"damage",
+"Deal damage to the front enemy unit"
+],
+[
+"condition_count",
+"5x the amount healed"
+]
+],
+"by": "read"
+},
+"822552": {
+"tags": [
+[
+"heal",
+"Restore 2 health"
+],
+[
+"regeneration",
+"Apply Regen 1"
+]
+],
+"by": "read"
+},
+"822553": {
+"tags": [
+[
+"stat_gain",
+"Apply +2 Attack"
+],
+[
+"draw",
+"Draw +1 next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"by": "read"
+},
+"822554": {
+"tags": [
+[
+"aura",
+"Spikes on friendly units deal +1 damage per stack"
+],
+[
+"counterattack",
+"Spikes"
+]
+],
+"by": "read"
+},
+"822555": {
+"tags": [
+[
+"multi_target_attack",
+"Sweep"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"permanent_growth",
+"+3 Attack"
+]
+],
+"by": "read"
+},
+"822557": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"stat_gain",
+"Gain 60 max health"
+],
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"counterattack",
+"Gain Spikes 3"
+]
+],
+"by": "read"
+},
+"822558": {
+"tags": [
+[
+"turn_end",
+"Resolve"
+],
+[
+"generate_cards",
+"Add a Sting spell to your hand"
+]
+],
+"by": "read"
+},
+"822560": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"regeneration",
+"Apply Regen 5"
+]
+],
+"by": "read"
+},
+"822561": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"first_strike",
+"Apply Quick"
+]
+],
+"by": "read"
+},
+"822562": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"heal",
+"Restore a friendly unit to full health"
+],
+[
+"stat_gain",
+"swap [Attack] and [Health]"
+]
+],
+"by": "read"
+},
+"822563": {
+"tags": [
+[
+"damage",
+"Deal damage to the front enemy unit"
+],
+[
+"condition_count",
+"10x the amount of Spikes on friendly units"
+]
+],
+"by": "read"
+},
+"822564": {
+"tags": [
+[
+"heal",
+"Restore 25 health"
+],
+[
+"draw",
+"Draw +2 next turn"
+],
+[
+"delayed",
+"next turn"
+]
+],
+"by": "read"
+},
+"822565": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"resource_gain",
+"gain +1 Ember per turn"
+]
+],
+"by": "read"
+},
+"822566": {
+"tags": [
+[
+"movement",
+"Descend a unit"
+],
+[
+"heal",
+"restore 10 health"
+]
+],
+"by": "read"
+},
+"822567": {
+"tags": [
+[
+"stat_gain",
+"Apply +4 Attack"
+],
+[
+"counterattack",
+"Spikes 4"
+]
+],
+"by": "read"
+},
+"822568": {
+"tags": [
+[
+"regeneration",
+"Apply Regen 2"
+],
+[
+"counterattack",
+"Spikes 2"
+],
+[
+"copy",
+"Add a copy of this card to your discard pile"
+]
+],
+"by": "read"
+},
+"822569": {
+"tags": [
+[
+"on_damaged",
+"Revenge"
+],
+[
+"resource_gain",
+"Gain 1 Ember"
+]
+],
+"by": "read"
+},
+"822570": {
+"tags": [
+[
+"heal",
+"Restore 30 health"
+],
+[
+"regeneration",
+"Apply Regen 3"
+]
+],
+"by": "read"
+},
+"822571": {
+"tags": [
+[
+"stat_gain",
+"Apply +10 Health"
+],
+[
+"counterattack",
+"Spikes 3"
+]
+],
+"by": "read"
+},
+"822572": {
+"tags": [
+[
+"on_play",
+"Summon"
+],
+[
+"stat_gain",
+"Gain 80 max health"
+],
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"permanent_growth",
+"+1 Attack permanently"
+]
+],
+"by": "read"
+},
+"822573": {
+"tags": [],
+"by": "read"
+},
+"822574": {
+"tags": [
+[
+"on_spell",
+"Incant"
+]
+],
+"by": "read"
+},
+"822575": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"stat_loss",
+"Sap"
+],
+[
+"damage_over_time",
+"Frostbite"
+]
+],
+"by": "read"
+},
+"822576": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"damage_over_time",
+"Apply Frostbite 6 to enemy units"
+]
+],
+"by": "read"
+},
+"822577": {
+"tags": [
+[
+"mark_target",
+"Apply Spell Weakness 1"
+]
+],
+"by": "read"
+},
+"822578": {
+"tags": [
+[
+"draw",
+"Draw 1"
+],
+[
+"discard",
+"Discard 1"
+]
+],
+"by": "read"
+},
+"822579": {
+"tags": [
+[
+"retain",
+"Permafrost"
+],
+[
+"retain",
+"Apply Frozen to a card in your hand"
+]
+],
+"by": "read"
+},
+"822580": {
+"tags": [
+[
+"retain",
+"Permafrost"
+],
+[
+"exhaust",
+"Consume"
+],
+[
+"silence",
+"Apply Silence to enemy units"
+]
+],
+"by": "read"
+},
+"822581": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"mark_target",
+"Apply Spell Weakness 2 to enemy units"
+]
+],
+"by": "read"
+},
+"822582": {
+"tags": [
+[
+"multi_target_attack",
+"Sweep"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"damage_over_time",
+"Apply Frostbite 3"
+]
+],
+"by": "read"
+},
+"822583": {
+"tags": [
+[
+"turn_end",
+"End of Turn"
+],
+[
+"retain",
+"Apply Frozen to a random card in your hand"
+],
+[
+"random_effect",
+"a random card"
+]
+],
+"by": "read"
+},
+"822584": {
+"tags": [
+[
+"stat_loss",
+"Apply Sap 3"
+],
+[
+"discard",
+"Discard a card at random"
+],
+[
+"random_effect",
+"at random"
+]
+],
+"by": "read"
+},
+"822585": {
+"tags": [
+[
+"damage",
+"Deal 3 damage"
+],
+[
+"damage_over_time",
+"Apply Frostbite 8"
+]
+],
+"by": "read"
+},
+"822586": {
+"tags": [
+[
+"damage_over_time",
+"Apply Frostbite 6"
+],
+[
+"discard",
+"Discard a card at random"
+]
+],
+"by": "read"
+},
+"822587": {
+"tags": [
+[
+"disable",
+"Apply Dazed 1 to enemy units"
+],
+[
+"discard",
+"Discard your hand"
+]
+],
+"by": "read"
+},
+"822588": {
+"tags": [
+[
+"damage",
+"Deal 6 damage"
+]
+],
+"by": "read"
+},
+"822589": {
+"tags": [
+[
+"on_spell",
+"Incant"
+],
+[
+"damage_over_time",
+"Apply Frostbite 2 to enemy units"
+]
+],
+"by": "read"
+},
+"822590": {
+"tags": [
+[
+"on_spell",
+"Incant"
+],
+[
+"block_armor",
+"Gain Armor 3"
+]
+],
+"by": "read"
 },
 "822591": {
 "tags": [
@@ -415,10 +1976,2550 @@
 "Incant"
 ],
 [
-"damage_reduction",
+"block_armor",
 "Apply Armor 1 to friendly units"
 ]
 ],
-"by": "Claude"
+"by": "read"
+},
+"822592": {
+"tags": [
+[
+"spell_power",
+"+5 Magic Power"
+],
+[
+"in_hand_buff",
+"to spells in hand"
+]
+],
+"by": "read"
+},
+"822593": {
+"tags": [
+[
+"play_restriction",
+"Pyrebound"
+],
+[
+"spell_power",
+"Attuned"
+],
+[
+"damage",
+"Deal 90 damage"
+]
+],
+"by": "read"
+},
+"822594": {
+"tags": [
+[
+"ping",
+"Deal 1 damage"
+],
+[
+"random_effect",
+"a random enemy unit"
+],
+[
+"repeat_trigger",
+"five times"
+]
+],
+"by": "read"
+},
+"822595": {
+"tags": [
+[
+"multi_target_attack",
+"Sweep"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"mark_target",
+"Apply Spell Weakness 1"
+]
+],
+"by": "read"
+},
+"822596": {
+"tags": [
+[
+"on_spell",
+"Incant"
+],
+[
+"stat_loss",
+"Apply Sap 1 to enemy units"
+]
+],
+"by": "read"
+},
+"822597": {
+"tags": [
+[
+"spell_power",
+"+10 Magic Power on this floor"
+]
+],
+"by": "read"
+},
+"822598": {
+"tags": [
+[
+"on_spell",
+"Incant"
+],
+[
+"stat_gain",
+"Gain Rage 2"
+]
+],
+"by": "read"
+},
+"822599": {
+"tags": [
+[
+"on_spell",
+"Incant"
+],
+[
+"draw",
+"Draw 1"
+],
+[
+"stat_loss",
+"-5 Health"
+]
+],
+"by": "read"
+},
+"822600": {
+"tags": [
+[
+"on_spell",
+"Incant"
+],
+[
+"permanent_growth",
+"+2 Attack and +2 Health"
+]
+],
+"by": "read"
+},
+"822601": {
+"tags": [
+[
+"play_restriction",
+"Pyrebound"
+],
+[
+"forced_movement",
+"Ascend all enemy units on this floor"
+],
+[
+"disable",
+"apply Dazed 3"
+]
+],
+"by": "read"
+},
+"822602": {
+"tags": [
+[
+"on_damaged",
+"Revenge"
+],
+[
+"damage_over_time",
+"Apply Frostbite 3 to enemy units"
+]
+],
+"by": "read"
+},
+"822603": {
+"tags": [
+[
+"spell_power",
+"Attuned"
+],
+[
+"damage",
+"Deal 25 damage"
+],
+[
+"discard",
+"Discard a card at random"
+]
+],
+"by": "read"
+},
+"822604": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"discard",
+"Discard your hand"
+],
+[
+"draw",
+"Draw 5"
+]
+],
+"by": "read"
+},
+"822605": {
+"tags": [
+[
+"tutor",
+"Draw 3 spells"
+],
+[
+"exhaust",
+"apply Consume"
+],
+[
+"in_hand_buff",
+"+20 Magic Power"
+],
+[
+"cost_set",
+"0 Ember"
+]
+],
+"by": "read"
+},
+"822606": {
+"tags": [
+[
+"damage",
+"Deal 25 damage"
+],
+[
+"repeat_trigger",
+"twice"
+]
+],
+"by": "read"
+},
+"822607": {
+"tags": [
+[
+"damage_over_time",
+"Frostbite"
+],
+[
+"stat_multiply",
+"double the amount of Frostbite"
+]
+],
+"by": "read"
+},
+"822608": {
+"tags": [
+[
+"damage",
+"Deal damage to the front enemy unit"
+],
+[
+"deck_condition",
+"number of spells in your deck"
+],
+[
+"repeat_trigger",
+"three times"
+]
+],
+"by": "read"
+},
+"822609": {
+"tags": [
+[
+"on_discard",
+"Offering"
+],
+[
+"spell_power",
+"Attuned"
+],
+[
+"damage",
+"Deal 60 damage"
+],
+[
+"forced_movement",
+"push it to the back"
+]
+],
+"by": "read"
+},
+"822610": {
+"tags": [
+[
+"on_discard",
+"Offering"
+],
+[
+"stat_loss",
+"Apply Sap 2 to enemy units"
+]
+],
+"by": "read"
+},
+"822611": {
+"tags": [
+[
+"retain",
+"Permafrost"
+],
+[
+"damage",
+"Deal 20 damage"
+],
+[
+"random_effect",
+"a random enemy unit"
+],
+[
+"repeat_trigger",
+"three times"
+]
+],
+"by": "read"
+},
+"822612": {
+"tags": [
+[
+"on_discard",
+"Offering"
+],
+[
+"aoe_damage",
+"Deal 5 damage to enemy units"
+],
+[
+"damage_over_time",
+"apply Frostbite 10"
+]
+],
+"by": "read"
+},
+"822613": {
+"tags": [
+[
+"on_spell",
+"Incant"
+],
+[
+"multi_attack",
+"Gain Multistrike 1"
+],
+[
+"turn_end",
+"Resolve"
+]
+],
+"by": "read"
+},
+"822614": {
+"tags": [],
+"by": "read"
+},
+"822615": {
+"tags": [
+[
+"repeat_trigger",
+"Buffet 3"
+],
+[
+"death_trigger",
+"Eaten"
+],
+[
+"stat_gain",
+"Add this unit's [Attack] and [Health] to the eater"
+]
+],
+"by": "read"
+},
+"822616": {
+"tags": [
+[
+"damage",
+"Deal 30 per X damage"
+]
+],
+"by": "read"
+},
+"822617": {
+"tags": [
+[
+"exhaust",
+"Consume"
+]
+],
+"by": "read"
+},
+"822618": {
+"tags": [
+[
+"damage",
+"Deal 3 per X damage"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"resource_gain",
+"Gain 2 Ember"
+]
+],
+"by": "read"
+},
+"822619": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"tutor",
+"Draw a unit"
+],
+[
+"in_hand_buff",
+"apply +5"
+]
+],
+"by": "read"
+},
+"822620": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"shield",
+"Damage Shield"
+]
+],
+"by": "read"
+},
+"822621": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"destroy",
+"Kill a Morsel unit"
+],
+[
+"tribal",
+"Morsel unit"
+],
+[
+"repeat_trigger",
+"Trigger Eaten and Gorge abilities"
+]
+],
+"by": "read"
+},
+"822622": {
+"tags": [
+[
+"death_trigger",
+"Eaten"
+],
+[
+"stat_gain",
+"Eater gains +6 Health"
+]
+],
+"by": "read"
+},
+"822623": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"generate_cards",
+"Add 3 Excavated Ember cards to your discard pile"
+]
+],
+"by": "read"
+},
+"822624": {
+"tags": [
+[
+"repeat_trigger",
+"Trigger feeding"
+]
+],
+"by": "read"
+},
+"822625": {
+"tags": [
+[
+"lifesteal",
+"Apply Lifesteal 3"
+],
+[
+"upkeep",
+"Emberdrain 2"
+]
+],
+"by": "read"
+},
+"822626": {
+"tags": [
+[
+"death_trigger",
+"Eaten"
+],
+[
+"stat_gain",
+"Eater gains +6 Attack"
+]
+],
+"by": "read"
+},
+"822627": {
+"tags": [
+[
+"death_trigger",
+"Eaten"
+],
+[
+"stat_gain",
+"Eater gains +3 Attack"
+],
+[
+"lifesteal",
+"Lifesteal 1"
+]
+],
+"by": "read"
+},
+"822628": {
+"tags": [
+[
+"death_trigger",
+"Eaten"
+],
+[
+"stat_gain",
+"Eater gains +3 Health"
+],
+[
+"shield",
+"Damage Shield 1"
+]
+],
+"by": "read"
+},
+"822629": {
+"tags": [
+[
+"death_trigger",
+"Eaten"
+],
+[
+"stat_gain",
+"Eater gains +6 Attack and +6 Health"
+]
+],
+"by": "read"
+},
+"822630": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"generate_cards",
+"Add 3 uncommon or rare Morsel units to your hand"
+]
+],
+"by": "read"
+},
+"822631": {
+"tags": [
+[
+"stat_gain",
+"Apply Rage 3"
+],
+[
+"upkeep",
+"Emberdrain 2"
+],
+[
+"resource_gain",
+"Gain 3 Ember"
+]
+],
+"by": "read"
+},
+"822632": {
+"tags": [
+[
+"recycle",
+"Return consumed Morsel units to your hand"
+],
+[
+"tribal",
+"Morsel units"
+]
+],
+"by": "read"
+},
+"822633": {
+"tags": [
+[
+"death_trigger",
+"Eaten"
+],
+[
+"resource_gain",
+"Gain 1 Ember"
+],
+[
+"stat_gain",
+"Eater gains +1 Attack and +1 Health"
+]
+],
+"by": "read"
+},
+"822634": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"board_limit",
+"+1 Capacity on this floor"
+]
+],
+"by": "read"
+},
+"822635": {
+"tags": [
+[
+"shield",
+"Apply Damage Shield 2"
+],
+[
+"stat_gain",
+"Rage 6"
+],
+[
+"upkeep",
+"Emberdrain 3"
+]
+],
+"by": "read"
+},
+"822636": {
+"tags": [
+[
+"damage",
+"Deal 3 damage"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"generate_cards",
+"Add 2 uncommon or rare Morsel units to your hand"
+]
+],
+"by": "read"
+},
+"822637": {
+"tags": [
+[
+"sacrifice",
+"Sacrifice"
+],
+[
+"generate_cards",
+"Add 3 random uncommon or rare Morsel units to your hand"
+],
+[
+"random_effect",
+"random uncommon or rare Morsel"
+]
+],
+"by": "read"
+},
+"822638": {
+"tags": [
+[
+"other_death_trigger",
+"Gorge"
+],
+[
+"lifesteal",
+"Gain Lifesteal 1"
+]
+],
+"by": "read"
+},
+"822639": {
+"tags": [
+[
+"other_death_trigger",
+"Gorge"
+],
+[
+"shield",
+"Gain Damage Shield 1"
+]
+],
+"by": "read"
+},
+"822640": {
+"tags": [
+[
+"resource_gain",
+"+2 Ember per turn"
+]
+],
+"by": "read"
+},
+"822641": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"board_limit",
+"-1 Capacity on this floor"
+],
+[
+"resource_gain",
+"+1 Ember per turn"
+]
+],
+"by": "read"
+},
+"822642": {
+"tags": [
+[
+"on_ally_play",
+"When you summon a Morsel unit on this floor"
+],
+[
+"copy",
+"create a copy"
+],
+[
+"tribal",
+"Morsel unit"
+]
+],
+"by": "read"
+},
+"822643": {
+"tags": [
+[
+"ping",
+"Deal 1 damage"
+],
+[
+"random_effect",
+"a random enemy unit"
+],
+[
+"repeat_trigger",
+"twice"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"generate_cards",
+"Add a common or uncommon Morsel unit to your hand"
+]
+],
+"by": "read"
+},
+"822644": {
+"tags": [
+[
+"generate_cards",
+"Add a common or uncommon Morsel unit to your hand"
+]
+],
+"by": "read"
+},
+"822645": {
+"tags": [
+[
+"copy",
+"Create 3 copies of a Morsel unit"
+]
+],
+"by": "read"
+},
+"822646": {
+"tags": [
+[
+"cant_attack",
+"Inert"
+],
+[
+"multi_attack",
+"Multistrike 1"
+],
+[
+"other_death_trigger",
+"Gorge"
+]
+],
+"by": "read"
+},
+"822647": {
+"tags": [
+[
+"movement",
+"Descend friendly and enemy units"
+],
+[
+"forced_movement",
+"enemy units on this floor"
+]
+],
+"by": "read"
+},
+"822648": {
+"tags": [
+[
+"board_limit",
+"+1 Capacity on this floor"
+]
+],
+"by": "read"
+},
+"822649": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"multi_attack",
+"Apply Multistrike 1"
+],
+[
+"upkeep",
+"Apply Emberdrain 4"
+]
+],
+"by": "read"
+},
+"822650": {
+"tags": [
+[
+"shield",
+"Apply Damage Shield 1"
+],
+[
+"generate_cards",
+"Add 2 uncommon or rare Morsel units to your hand"
+]
+],
+"by": "read"
+},
+"822651": {
+"tags": [
+[
+"generate_cards",
+"Add a Morsel Miner to your hand"
+]
+],
+"by": "read"
+},
+"822652": {
+"tags": [
+[
+"turn_end",
+"Resolve"
+],
+[
+"summon",
+"Summon an Antumbra Morsel and Magma Morsel"
+]
+],
+"by": "read"
+},
+"822653": {
+"tags": [
+[
+"other_death_trigger",
+"Gorge"
+],
+[
+"permanent_growth",
+"+2 Attack permanently"
+]
+],
+"by": "read"
+},
+"822654": {
+"tags": [
+[
+"other_death_trigger",
+"Gorge"
+],
+[
+"heal",
+"Restore 10 health"
+],
+[
+"aoe_damage",
+"Deal 10 damage to enemy units"
+]
+],
+"by": "read"
+},
+"822655": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"excess_damage",
+"Apply Trample"
+]
+],
+"by": "read"
+},
+"822656": {
+"tags": [
+[
+"banish",
+"Purge"
+],
+[
+"damage",
+"Deal 30 damage to the front enemy unit"
+],
+[
+"upgrade",
+"Add a stronger version of this card to your discard"
+],
+[
+"random_effect",
+"a random unit"
+],
+[
+"repeat_trigger",
+"two times"
+]
+],
+"by": "read"
+},
+"822657": {
+"tags": [
+[
+"damage",
+"Deal 20 damage"
+],
+[
+"random_effect",
+"a random enemy unit"
+],
+[
+"repeat_trigger",
+"three times"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"resource_gain",
+"Gain 2 Ember"
+]
+],
+"by": "read"
+},
+"822658": {
+"tags": [
+[
+"shield",
+"Apply Damage Shield 1 to friendly units"
+],
+[
+"generate_cards",
+"Add 3 uncommon or rare Morsel units to your hand"
+]
+],
+"by": "read"
+},
+"822660": {
+"tags": [
+[
+"on_ally_play",
+"Hunger"
+],
+[
+"other_death_trigger",
+"Gorge"
+],
+[
+"permanent_growth",
+"+2 Attack and +2 Health"
+]
+],
+"by": "read"
+},
+"822661": {
+"tags": [],
+"by": "read"
+},
+"822662": {
+"tags": [],
+"by": "read"
+},
+"822663": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"stat_gain",
+"Apply +4"
+],
+[
+"self_destruct",
+"Burnout 4"
+]
+],
+"by": "read"
+},
+"822664": {
+"tags": [
+[
+"self_destruct",
+"Burnout 2"
+]
+],
+"by": "read"
+},
+"822665": {
+"tags": [
+[
+"revive",
+"Reform a random unit"
+],
+[
+"random_effect",
+"a random unit"
+]
+],
+"by": "read"
+},
+"822666": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"self_destruct",
+"Apply Burnout 5"
+]
+],
+"by": "read"
+},
+"822667": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"repeat_trigger",
+"Trigger a unit's Extinguish ability without killing it"
+]
+],
+"by": "read"
+},
+"822668": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"resource_gain",
+"Gain 1 Ember"
+],
+[
+"death_count",
+"for each friendly unit death this battle"
+]
+],
+"by": "read"
+},
+"822669": {
+"tags": [
+[
+"heal",
+"Restore 15 health"
+],
+[
+"self_destruct",
+"apply Burnout 3"
+]
+],
+"by": "read"
+},
+"822670": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"revive",
+"Reform 2 random units"
+],
+[
+"random_effect",
+"random units"
+]
+],
+"by": "read"
+},
+"822671": {
+"tags": [
+[
+"exhaust",
+"Consume cards in hand"
+],
+[
+"generate_cards",
+"add a Draff unit to your hand"
+],
+[
+"in_hand_buff",
+"apply +10 Attack for each card consumed"
+],
+[
+"condition_count",
+"for each card consumed"
+]
+],
+"by": "read"
+},
+"822672": {
+"tags": [
+[
+"self_destruct",
+"Burnout"
+]
+],
+"by": "read"
+},
+"822673": {
+"tags": [
+[
+"stealth",
+"Stealth 1"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"permanent_growth",
+"+8 Attack permanently"
+]
+],
+"by": "read"
+},
+"822674": {
+"tags": [
+[
+"destroy",
+"Kill a random non-boss enemy unit"
+],
+[
+"random_effect",
+"random non-boss enemy unit"
+],
+[
+"friendly_fire",
+"Kill a random friendly unit"
+]
+],
+"by": "read"
+},
+"822675": {
+"tags": [
+[
+"other_death_trigger",
+"Harvest"
+],
+[
+"stacking_keyword",
+"Gain Soul 1"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"aoe_damage",
+"Deal damage to the enemy units"
+],
+[
+"condition_count",
+"15x the Soul count"
+]
+],
+"by": "read"
+},
+"822676": {
+"tags": [
+[
+"self_destruct",
+"Burnout 1"
+],
+[
+"multi_attack",
+"Multistrike 1"
+]
+],
+"by": "read"
+},
+"822677": {
+"tags": [
+[
+"stealth",
+"Apply Stealth 2 to friendly units"
+]
+],
+"by": "read"
+},
+"822678": {
+"tags": [
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"damage",
+"Deal 50 damage"
+]
+],
+"by": "read"
+},
+"822679": {
+"tags": [
+[
+"self_destruct",
+"Burnout 3"
+]
+],
+"by": "read"
+},
+"822680": {
+"tags": [
+[
+"self_destruct",
+"Burnout 3"
+],
+[
+"on_damaged",
+"Revenge"
+],
+[
+"self_destruct",
+"Friendly Burnout units gain Burnout 1"
+]
+],
+"by": "read"
+},
+"822681": {
+"tags": [
+[
+"revive",
+"Reform a unit"
+]
+],
+"by": "read"
+},
+"822682": {
+"tags": [
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"stealth",
+"Apply Stealth 2 to friendly units"
+]
+],
+"by": "read"
+},
+"822683": {
+"tags": [
+[
+"on_attack",
+"Strike"
+],
+[
+"stat_gain",
+"Friendly Burnout units gain Rage 3"
+]
+],
+"by": "read"
+},
+"822684": {
+"tags": [
+[
+"on_kill",
+"Slay"
+],
+[
+"shop_gold",
+"Gain 20 Gold"
+]
+],
+"by": "read"
+},
+"822685": {
+"tags": [
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"summon",
+"Summon 2 Draff units"
+]
+],
+"by": "read"
+},
+"822686": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"recycle",
+"Apply Endless"
+]
+],
+"by": "read"
+},
+"822688": {
+"tags": [
+[
+"recycle",
+"Endless"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"by": "read"
+},
+"822689": {
+"tags": [
+[
+"stat_gain",
+"Apply +10 Attack"
+],
+[
+"self_destruct",
+"Burnout 2"
+]
+],
+"by": "read"
+},
+"822690": {
+"tags": [
+[
+"other_death_trigger",
+"Harvest"
+],
+[
+"permanent_growth",
+"+3 Attack and +3 Health"
+]
+],
+"by": "read"
+},
+"822691": {
+"tags": [
+[
+"other_death_trigger",
+"Harvest"
+],
+[
+"shop_gold",
+"Gain 5 Gold"
+]
+],
+"by": "read"
+},
+"822692": {
+"tags": [
+[
+"aoe_damage",
+"Deal damage to enemy units"
+],
+[
+"death_count",
+"number of friendly unit deaths this battle"
+]
+],
+"by": "read"
+},
+"822693": {
+"tags": [
+[
+"other_death_trigger",
+"Harvest"
+],
+[
+"stat_gain",
+"Gain Rage 5"
+]
+],
+"by": "read"
+},
+"822694": {
+"tags": [
+[
+"movement",
+"Descend a unit"
+],
+[
+"disable",
+"apply Dazed 1"
+]
+],
+"by": "read"
+},
+"822695": {
+"tags": [
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"revive",
+"Return a random defeated unit to your hand"
+],
+[
+"random_effect",
+"a random defeated unit"
+],
+[
+"in_hand_buff",
+"apply +40 Attack"
+]
+],
+"by": "read"
+},
+"822696": {
+"tags": [
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"summon",
+"Summon 2 Twin of Wax"
+],
+[
+"copy",
+"apply this unit's upgrades and stat changes"
+]
+],
+"by": "read"
+},
+"822697": {
+"tags": [
+[
+"piercing",
+"Piercing"
+],
+[
+"damage",
+"Deal 5 damage"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"upgrade",
+"Increase damage by 3 permanently"
+]
+],
+"by": "read"
+},
+"822698": {
+"tags": [
+[
+"revive",
+"Reform a unit"
+],
+[
+"stat_gain",
+"apply an additional +10 Attack"
+]
+],
+"by": "read"
+},
+"822699": {
+"tags": [
+[
+"damage",
+"Deal damage to the front enemy unit"
+],
+[
+"death_count",
+"number of friendly unit deaths this battle"
+]
+],
+"by": "read"
+},
+"822700": {
+"tags": [
+[
+"spell_power",
+"Attuned"
+],
+[
+"damage",
+"Deal 25 damage"
+],
+[
+"disable",
+"apply Dazed 3"
+],
+[
+"condition_life",
+"an already damaged unit"
+]
+],
+"by": "read"
+},
+"822701": {
+"tags": [
+[
+"sacrifice",
+"Kill friendly units"
+],
+[
+"revive",
+"Reform random units"
+],
+[
+"random_effect",
+"random units"
+]
+],
+"by": "read"
+},
+"822702": {
+"tags": [],
+"by": "read"
+},
+"822703": {
+"tags": [],
+"by": "read"
+},
+"822704": {
+"tags": [
+[
+"damage_over_time",
+"Apply Reap 2"
+]
+],
+"by": "read"
+},
+"822705": {
+"tags": [
+[
+"damage",
+"Deal 1 damage per [Echo]"
+],
+[
+"condition_count",
+"per [Echo]"
+]
+],
+"by": "read"
+},
+"822706": {
+"tags": [
+[
+"variable_stats",
+"+5 Attack per [Echo]"
+]
+],
+"by": "read"
+},
+"822707": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"in_hand_buff",
+"Apply Infused to cards in hand"
+]
+],
+"by": "read"
+},
+"822708": {
+"tags": [
+[
+"cost_type",
+"Extract 1"
+],
+[
+"stat_gain",
+"Apply +10 Health"
+]
+],
+"by": "read"
+},
+"822709": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"damage_over_time",
+"Apply Reap 2 to enemy units"
+]
+],
+"by": "read"
+},
+"822710": {
+"tags": [
+[
+"cost_type",
+"Extract 2"
+],
+[
+"stat_gain",
+"Apply +15 Attack"
+]
+],
+"by": "read"
+},
+"822711": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"damage",
+"Deal 13 damage"
+],
+[
+"forced_movement",
+"move it to the back"
+]
+],
+"by": "read"
+},
+"822712": {
+"tags": [
+[
+"spell_power",
+"Attuned"
+],
+[
+"cost_type",
+"Extract 2"
+],
+[
+"damage",
+"Deal 50 damage"
+]
+],
+"by": "read"
+},
+"822713": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"block_armor",
+"Apply Armor 2 per [Echo]"
+],
+[
+"condition_count",
+"per [Echo]"
+]
+],
+"by": "read"
+},
+"822714": {
+"tags": [
+[
+"delayed",
+"Shell 5"
+],
+[
+"summon",
+"Summon 2 Bog Fly units"
+]
+],
+"by": "read"
+},
+"822715": {
+"tags": [
+[
+"stat_gain",
+"Apply +1 Attack and +1 Health to friendly units"
+]
+],
+"by": "read"
+},
+"822716": {
+"tags": [
+[
+"on_play",
+"When played"
+],
+[
+"stat_gain",
+"gain +10 Attack, +10 Health"
+],
+[
+"board_limit",
+"+1 Capacity"
+],
+[
+"condition_count",
+"per [Echo]"
+]
+],
+"by": "read"
+},
+"822717": {
+"tags": [
+[
+"delayed",
+"Shell 8"
+],
+[
+"summon",
+"Summon Kinhost Pupa"
+]
+],
+"by": "read"
+},
+"822718": {
+"tags": [
+[
+"block_armor",
+"Armor 20"
+],
+[
+"multi_attack",
+"Multistrike 1"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"damage_over_time",
+"Apply Reap 1 to enemy units"
+]
+],
+"by": "read"
+},
+"822719": {
+"tags": [
+[
+"stat_gain",
+"+5 Attack"
+]
+],
+"by": "read"
+},
+"822720": {
+"tags": [
+[
+"stat_gain",
+"+2 Attack"
+],
+[
+"block_armor",
+"Armor 2"
+]
+],
+"by": "read"
+},
+"822721": {
+"tags": [
+[
+"cost_type",
+"Extract 3"
+],
+[
+"draw",
+"Draw 3"
+],
+[
+"exhaust",
+"Apply Consume to drawn spells"
+]
+],
+"by": "read"
+},
+"822722": {
+"tags": [
+[
+"aoe_damage",
+"Deal 5 damage to enemy units per [Echo]"
+],
+[
+"condition_count",
+"per [Echo]"
+]
+],
+"by": "read"
+},
+"822723": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"recycle",
+"Return a consumed spell to the top of your draw pile"
+],
+[
+"deck_position",
+"top of your draw pile"
+]
+],
+"by": "read"
+},
+"822724": {
+"tags": [
+[
+"cost_type",
+"Extract 3"
+],
+[
+"mark_target",
+"Apply Melee Weakness 3"
+]
+],
+"by": "read"
+},
+"822725": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"condition_count",
+"per [Echo]"
+]
+],
+"by": "read"
+},
+"822726": {
+"tags": [
+[
+"damage",
+"Deal 15 damage"
+],
+[
+"graveyard",
+"for each spell in the Consume pile"
+]
+],
+"by": "read"
+},
+"822727": {
+"tags": [
+[
+"recycle",
+"Return a spell card from the discard pile to your hand"
+],
+[
+"in_hand_buff",
+"-1 Ember"
+],
+[
+"exhaust",
+"Consume"
+]
+],
+"by": "read"
+},
+"822728": {
+"tags": [
+[
+"cost_type",
+"Extract 1"
+],
+[
+"damage",
+"Deal 5 damage"
+],
+[
+"repeat_trigger",
+"twice"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"resource_gain",
+"Gain 2 Echo"
+]
+],
+"by": "read"
+},
+"822729": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"damage_over_time",
+"Apply Reap 13"
+]
+],
+"by": "read"
+},
+"822730": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"resource_gain",
+"Fill [EchoSlot] with [Echo]"
+],
+[
+"upkeep",
+"Apply Emberdrain 1 to friendly units"
+]
+],
+"by": "read"
+},
+"822731": {
+"tags": [
+[
+"cost_type",
+"Extract 3"
+],
+[
+"disable",
+"Apply Dazed 3"
+],
+[
+"forced_movement",
+"move it to the back"
+]
+],
+"by": "read"
+},
+"822732": {
+"tags": [
+[
+"exhaust",
+"Consume."
+],
+[
+"recycle",
+"Return 3 random spell cards from the discard pile to your hand"
+],
+[
+"random_effect",
+"random spell cards"
+],
+[
+"exhaust",
+"apply Consume"
+]
+],
+"by": "read"
+},
+"822733": {
+"tags": [
+[
+"delayed",
+"Shell 12"
+],
+[
+"summon",
+"Summon Bog Wurmling"
+]
+],
+"by": "read"
+},
+"822734": {
+"tags": [
+[
+"excess_damage",
+"Trample"
+],
+[
+"stat_gain",
+"+10 Attack and +10 Health"
+]
+],
+"by": "read"
+},
+"822735": {
+"tags": [
+[
+"multi_target_attack",
+"Sweep"
+],
+[
+"damage_over_time",
+"Apply Reap 2 to enemy units"
+]
+],
+"by": "read"
+},
+"822736": {
+"tags": [
+[
+"cost_type",
+"Extract 4"
+],
+[
+"heal",
+"Restore 5 health"
+],
+[
+"on_damaged",
+"Revenge"
+],
+[
+"damage_over_time",
+"Apply Reap 5 to the attacking unit"
+],
+[
+"counterattack",
+"to the attacking unit"
+]
+],
+"by": "read"
+},
+"822737": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"speed",
+"Remove 3 Shell"
+],
+[
+"tribal",
+"Eggs"
+]
+],
+"by": "read"
+},
+"822738": {
+"tags": [
+[
+"stat_gain",
+"Apply +6 Attack per [Echo]"
+],
+[
+"condition_count",
+"per [Echo]"
+],
+[
+"cost_type",
+"Clear [Echo]"
+]
+],
+"by": "read"
+},
+"822739": {
+"tags": [],
+"by": "read"
+},
+"822741": {
+"tags": [
+[
+"cost_type",
+"Extract 5"
+],
+[
+"stat_multiply",
+"Double buffs and Armor on a unit"
+]
+],
+"by": "read"
+},
+"822742": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"resource_gain",
+"Gain 1 EchoSlot"
+]
+],
+"by": "read"
+},
+"822743": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"damage_over_time",
+"Reap to enemy units"
+]
+],
+"by": "read"
+},
+"822744": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"recycle",
+"Return 5 consumed spells to the top of your draw pile"
+],
+[
+"deck_position",
+"top of your draw pile"
+]
+],
+"by": "read"
+},
+"822745": {
+"tags": [
+[
+"damage",
+"Deal 10 per X damage"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"copy",
+"Add a permanent copy of this card to your discard pile"
+],
+[
+"deck_modification",
+"permanent copy"
+]
+],
+"by": "read"
+},
+"822746": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"stat_gain",
+"Apply +5 to your Pyre"
+]
+],
+"by": "read"
+},
+"822747": {
+"tags": [
+[
+"banish",
+"Purge"
+],
+[
+"heal",
+"Restore 5 per X Pyre health"
+]
+],
+"by": "read"
+},
+"822748": {
+"tags": [
+[
+"banish",
+"Purge"
+]
+],
+"by": "read"
+},
+"822749": {
+"tags": [
+[
+"banish",
+"Purge"
+],
+[
+"piercing",
+"Piercing"
+],
+[
+"aoe_damage",
+"Deal 30 per X damage to enemy units"
+]
+],
+"by": "read"
+},
+"822750": {
+"tags": [
+[
+"banish",
+"Purge"
+],
+[
+"shield",
+"Damage Shield"
+]
+],
+"by": "read"
+},
+"822751": {
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+],
+[
+"turn_end",
+"Reserve"
+],
+[
+"heal",
+"Restore 5 Pyre health"
+]
+],
+"by": "read"
+},
+"822752": {
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+],
+[
+"immunity",
+"Unpurgeable"
+]
+],
+"by": "read"
+},
+"822753": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"resource_gain",
+"Gain 2 Ember"
+],
+[
+"draw",
+"Draw 1"
+]
+],
+"by": "read"
+},
+"822754": {
+"tags": [
+[
+"banish",
+"Purge"
+],
+[
+"destroy",
+"Kill a non-boss unit"
+]
+],
+"by": "read"
+},
+"822755": {
+"tags": [
+[
+"multi_attack",
+"Multistrike 1"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"copy",
+"Add a permanent copy of this card to your discard pile"
+],
+[
+"deck_modification",
+"permanent copy"
+],
+[
+"stat_gain",
+"+20 Attack"
+]
+],
+"by": "read"
+},
+"822756": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"forced_movement",
+"Descend a unit to the bottom floor"
+],
+[
+"disable",
+"Apply Dazed 2"
+]
+],
+"by": "read"
+},
+"822757": {
+"tags": [
+[
+"on_play",
+"When played"
+],
+[
+"multi_attack",
+"gain a stack of Multistrike"
+],
+[
+"deck_condition",
+"for each Blight card in your deck"
+],
+[
+"tribal",
+"Blight card"
+]
+],
+"by": "read"
+},
+"822758": {
+"tags": [
+[
+"immunity",
+"Unpurgeable"
+],
+[
+"turn_end",
+"Reserve"
+],
+[
+"friendly_fire",
+"Your Pyre takes 3 damage"
+]
+],
+"by": "read"
+},
+"822759": {
+"tags": [
+[
+"damage",
+"Deal 2 damage"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"shop_gold",
+"+50 Gold"
+]
+],
+"by": "read"
+},
+"822760": {
+"tags": [
+[
+"banish",
+"Purge"
+],
+[
+"turn_end",
+"Reserve"
+],
+[
+"friendly_fire",
+"Your Pyre takes 5 damage"
+]
+],
+"by": "read"
+},
+"822761": {
+"tags": [
+[
+"banish",
+"Purge"
+]
+],
+"by": "read"
+},
+"822763": {
+"tags": [
+[
+"turn_end",
+"Reserve"
+],
+[
+"friendly_fire",
+"Your Pyre takes 1 damage"
+]
+],
+"by": "read"
+},
+"822765": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"forced_movement",
+"Ascend an enemy unit to the Pyre room"
+],
+[
+"disable",
+"Apply Dazed 3"
+]
+],
+"by": "read"
+},
+"822767": {
+"tags": [
+[
+"banish",
+"Purge"
+]
+],
+"by": "read"
+},
+"822768": {
+"tags": [
+[
+"aoe_damage",
+"Deal 6 damage to enemy units"
+],
+[
+"repeat_trigger",
+"two times"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"board_limit",
+"+1 Capacity on this floor"
+]
+],
+"by": "read"
+},
+"822769": {
+"tags": [
+[
+"excess_damage",
+"Trample"
+],
+[
+"turn_end",
+"Resolve"
+],
+[
+"board_limit",
+"+1 Capacity on this floor"
+]
+],
+"by": "read"
+},
+"822770": {
+"tags": [],
+"by": "read"
+},
+"822771": {
+"tags": [
+[
+"exhaust",
+"Consume"
+],
+[
+"targeting_rules",
+"Does not affect bosses"
+]
+],
+"by": "read"
+},
+"822772": {
+"tags": [
+[
+"summon",
+"Summon a friendly Rebel unit to the front of this floor"
+]
+],
+"by": "read"
 }
 }
