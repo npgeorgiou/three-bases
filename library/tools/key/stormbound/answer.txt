@@ -1,0 +1,202 @@
+818948|
+818949|
+818950|
+818951|
+818952|
+818953|
+818954|
+818955|
+818956|
+818957|
+818958|
+818959|
+818960|death_trigger:does:On death;enemy_benefit:does:give 1/2/3/4/5 strength to a random surrounding enemy unit;permanent_growth:grants:vitalize it;random_effect:does:a random surrounding enemy unit
+818961|summon:does:spawn a Knight;random_effect:does:Randomly spawn
+818964|on_play:does:When played;hand_size:benefits:as the last card in your hand;stat_gain:does:gain 5/6/7/8/10 strength
+818965|death_trigger:does:On death;stat_gain:grants:give 3/4/5/6/7 strength;tribal:benefits:a random friendly Dragon;random_effect:does:a random friendly Dragon
+818966|on_play:does:On play;summon:does:spawn a 1/2/2/3/3 strength Knight
+818967|on_play:does:On play;generate_cards:does:create a 0 cost unit;cost_set:does:0 cost
+818968|stat_loss:does:Reduce the strength of a target enemy unit to 5/4/3/2/1
+818969|on_play:does:On play;aoe_damage:does:deal 1/1/2/2/3 damage to all non-Dragon units in front;tribal:does:non-Dragon units;friendly_fire:does:all non-Dragon units in front
+818970|on_play:does:On play;damage:does:deal 2/3/4/5/6 damage;random_effect:does:a random surrounding enemy
+818971|on_play:does:On play;discard:does:discard a random non-Pirate card from your hand;tribal:does:non-Pirate;random_effect:does:a random non-Pirate card
+818973|on_play:does:On play;draw:does:draw 1/1/1/2/2 card
+818974|stat_gain:grants:Give 2/3/4/5/6 strength to a target friendly unit;permanent_growth:grants:vitalizes it
+818976|on_play:does:On play;destroy:does:destroy all surrounding units;stat_condition:does:strength;friendly_fire:does:destroy all surrounding units
+818977|on_attack:does:When attacking;aoe_damage:does:deal 2/2/3/3/4 damage to all other enemies with the same unit type;tribal:does:the same unit type
+818979|turn_start:does:At the start of your turn;stat_gain:grants:give 2/2/3/3/4 strength to all friendly units in front
+818980|damage:does:Deal 4/5/6/7/8 damage to a target enemy unit or structure
+818981|on_play:does:On play;card_quality:does:replace a random non-Pirate card from your hand;tribal:does:non-Pirate;random_effect:does:a random non-Pirate card
+818982|aoe_damage:does:deal 2/3/4/5/6 damage to one unit of each unit type;tribal:does:each unit type;random_effect:does:Randomly;friendly_fire:does:one unit of each unit type
+818983|on_play:does:On play;stat_gain:grants:give 2/2/3/3/4 strength to another random friendly unit;random_effect:does:another random friendly unit
+818984|on_play:does:On play;aoe_damage:does:deal 4/5/6/7/8 damage to all surrounding enemy structures
+818985|death_trigger:does:On death;stat_gain:grants:give 4/5/6/7/8 strength;distribute:does:spread randomly among all surrounding friendly units;random_effect:does:spread randomly
+818986|on_attack:does:Before attacking a Dragon;damage:does:deal 5/6/7/8/10 additional damage;tribal:benefits:a Dragon
+818988|aoe_damage:does:Deal 1/2/2-3/3/4 damage to all enemy units and structures
+818990|aoe_damage:does:Deal 5/6/7/8/10 damage to all units bordering your base;friendly_fire:does:all units bordering your base
+818992|on_play:does:When played;hand_size:benefits:with a full hand;hand_deck_swap:does:discard all cards and draw 4 new cards
+818993|turn_start:does:At the start of your turn;damage:does:deal 4/5/6/7/8 damage to the most forward enemy unit or structure;targeting_rules:does:the most forward enemy;random_effect:does:randomly
+818994|on_play:does:On play;damage:does:deal 1/1/2/2/3 damage to a random enemy;variety_payoff:benefits:each unique surrounding primary unit type;random_effect:does:a random enemy
+818995|on_play:does:When played;condition_count:benefits:at least 3 surrounding enemies;aoe_damage:does:deal 2/3/4/5/6 damage to each
+818996|on_play:does:On play;damage:does:deal 4/5/6/7/8 damage to the closest enemy behind;targeting_rules:does:the closest enemy behind
+818997|on_attack:does:When attacking;stat_condition:benefits:a weaker unit;copy:does:add a 5/6/7/8/10 strength copy of that card to your deck
+818998|on_play:does:When played;adjacency:benefits:bordering a friendly structure or base;stat_gain:does:gain 3/4/5/6/7 strength
+818999|stat_gain:grants:Give 7/8/8/10/12 strength to a target friendly unit;tribal:benefits:all others of the same unit type
+819000|on_attack:does:After attacking;summon:does:spawn a 3/4/5/6/7 strength Undead
+819001|on_play:does:On play;stat_gain:does:gain 3/3/4/5/6 strength;tribal:benefits:each Pirate in your hand;condition_count:benefits:for each Pirate in your hand
+819002|on_play:does:When played;adjacency:benefits:bordering a friendly Dragon;tribal:benefits:friendly Dragon;summon:does:spawn 1/1/2/2/3 strength Dragons
+819003|aoe_damage:does:Deal 2/2/3/3/4 damage to 2/3/3/4/4 random enemies;random_effect:does:random enemies
+819004|turn_start:does:At the start of your turn;self_destruct:does:this explodes;aoe_damage:does:deals 2/2/3/3/4 damage to all enemies
+819005|death_trigger:does:On death;random_effect:does:do a random effect;stat_gain:grants:give 6/7/8/10/12 strength;damage:does:deal 5/6/7/8/10 damage;summon:does:spawn a 4/5/6/7/8 strength unit
+819006|on_attack:does:When attacking;aoe_damage:does:deal 2/2/3/3/4 damage to all surrounding enemy units and structures
+819007|on_play:does:On play;free_play:does:randomly play up to 1/1/1/2/2 spell card;random_effect:does:randomly play;cost_condition:does:mana cost
+819008|death_trigger:does:On death;destroy:does:destroy all units in front;stat_condition:does:strength or less;friendly_fire:does:all units in front;summon:does:spawn 3/4/5/6/7 strength Ravens
+819009|summon:does:Spawn 3/4/5/6/7 strength units on all tiles bordering a target friendly unit
+819010|on_play:does:On play;stat_gain:does:gain 2/2/3/3/4 strength;tribal:benefits:every other Dragon on the board;condition_count:benefits:for every other Dragon
+819012|on_play:does:On play;stat_gain:does:gain 2/2/3/3/4 strength;condition_count:benefits:for every enemy unit on the board
+819014|on_attack:does:Before attacking a unit or structure;damage:does:deal 3/4/5/6/7 additional damage to it
+819015|on_play:does:When played;adjacency:benefits:your temple structure or your base;summon:does:spawn 4/5/6/7/8 strength Knights
+819016|on_play:does:On play;distribute:does:deal 7/8/10/12/15 damage spread randomly among all surrounding enemies;random_effect:does:spread randomly
+819017|on_attack:does:Before attacking a unit;stat_loss:does:reduce its strength to 3
+819018|on_play:does:On play;summon:does:spawn 2/3/4/5/6 strength Knights in front of all surrounding enemy units
+819019|on_attack:does:After attacking;forced_movement:does:confuse all weaker enemy units;stat_condition:does:weaker enemy units
+819020|on_play:does:On play;forced_attack:does:force a surrounding confused enemy unit to attack a bordering enemy;random_effect:does:randomly
+819021|on_play:does:On play;forced_movement:does:confuse all enemy units in front
+819022|forced_attack:does:Force the target enemy unit;stat_condition:does:or less strength;random_effect:does:a random bordering enemy
+819023|on_attack:does:Before attacking a confused unit;aoe_damage:does:deal up to 5/6/7/8/9 of its strength as damage to all enemies surrounding it
+819024|on_play:does:If played;adjacency:benefits:bordering an enemy;stat_gain:does:gain 2 strength;speed:does:gain 1 speed
+819025|on_play:does:On play;speed:does:gain speed;condition_count:benefits:equal to the amount of enemy units in front
+819026|on_play:does:If played;lone_unit:benefits:no surrounding enemies;speed:does:gain 2 speed
+819027|on_play:does:When played;adjacency:benefits:bordering your base;speed:does:gain 3 speed
+819028|on_attack:does:Before attacking an enemy unit;forced_attack:does:force all enemy units bordering it;stat_condition:does:or lower strength
+819029|on_damaged:does:After surviving damage;stat_gain:grants:give 4/5/6/7/9 strength to another friendly unit;random_effect:does:randomly
+819032|on_damaged:does:After surviving damage;distribute:does:deal 3/3/4/4/5 damage spread randomly among enemy units;random_effect:does:spread randomly
+819033|on_damaged:does:After surviving damage;summon:does:spawn an Elder;variable_stats:does:strength equal to this;random_effect:does:a random bordering tile
+819034|on_damaged:does:After surviving damage;stat_gain:does:gain 2/2/3/3/4 strength;condition_count:benefits:for each stronger enemy unit
+819035|on_damaged:does:After surviving damage;stat_gain:grants:increase the strength of all weaker friendly units;stat_condition:does:weaker friendly units
+819036|on_play:does:On play;steal:does:from the enemy;copy:does:non-pirate card copy;exhaust:does:single-use;cost_reduction:does:reduce its/its/their/their/their mana cost by 1;tribal:benefits:If you have a pirate card in hand
+819037|on_play:does:On play;forced_movement:does:force it/it/them/them/them to move
+819038|on_play:does:On play;forced_movement:does:confuse the same number of surrounding enemies;condition_count:benefits:as there are friendly units on the board
+819039|turn_start:does:Before moving;silence:does:disable the ability of 1/2/2/3/4 surrounding enemy
+819040|turn_start:does:At the start of your turn;direct_damage:does:remove 1/1/1/2/2 strength from the stronger base;heal:does:give it to the weaker one;comeback:does:the weaker one
+819042|on_play:does:On play;movement:does:move fixedly forward
+819044|turn_start:does:At the start of your turn;in_hand_buff:does:give (or remove) fixedly forward movement;hand_position:benefits:the leftmost unit card in your hand;destroy:does:destroy the weakest confused unit;stat_condition:does:the weakest confused unit
+819045|on_play:does:On play;speed:does:gain 2 speed
+819046|turn_start:does:Before moving;summon:does:spawn a unit with 2/2/3/3/4 strength on both sides
+819047|turn_start:does:Before moving;movement:does:teleport itself to a random tile in its row;random_effect:does:a random tile
+819048|turn_start:does:Before moving;random_effect:does:get a random status effect
+819050|on_play:does:On play;friendly_fire:does:deal 1/2/2/3/3 damage to a random friendly non-legendary unit;damage:does:deal the same damage to the first enemy in front;random_effect:does:a random friendly
+819051|on_play:does:On play;friendly_fire:does:deal 1 damage to another friendly unit or structure
+819052|on_play:does:On play;repeat_trigger:does:trigger the ability of all
+819053|stat_gain:grants:Give 2/3/4/5/6 strength to all friendly units surrounding a friendly structure;adjacency:benefits:surrounding a friendly structure
+819054|on_play:does:On play;forced_movement:does:push a random bordering enemy unit away;random_effect:does:a random bordering enemy
+819055|turn_start:does:At the start of your turn;friendly_fire:does:deal 3 damage to itself
+819056|death_trigger:does:On death;summon:does:spawn a 1/1/2/2/3 strength Construct;random_effect:does:a random bordering tile
+819057|on_attack:does:Before attacking a unit;stat_gain:does:gives 1/1/2/2/3 strength to itself;tribal:benefits:a surrounding friendly Dragon
+819058|on_play:does:When played;adjacency:benefits:bordering a friendly Construct;tribal:benefits:friendly Construct;stat_gain:does:both gain 1/2/2/3/4 strength
+819059|on_play:does:On play;movement:does:push forward the friendly unit on the tile in front
+819060|turn_start:does:At the start of your turn;stat_gain:grants:give 2/2/3/4/5 strength to all surrounding friendly Constructs;tribal:benefits:friendly Constructs
+819061|stat_gain:grants:Give 3/4/5/5/6 strength to a target friendly unit;random_effect:does:a random friendly unit
+819062|death_trigger:does:On death;damage:does:deal 3/4/5/6/7 damage to a random bordering enemy;random_effect:does:a random bordering enemy
+819063|death_trigger:does:When this dies;territory_trigger:benefits:bordering the enemy base;summon:does:spawn a 6/7/8/10/12 strength Dragon at the enemy base;random_effect:does:randomly spawn
+819064|turn_start:does:At the start of your turn;summon:does:spawn a 2/3/4/5/6 strength Construct
+819065|on_play:does:On play;damage:does:deal 1/1/2/2/3 damage to the first enemy in front
+819066|on_attack:does:After attacking;permanent_growth:does:give 2/2/3/4/5 strength to itself;stat_gain:grants:a random surrounding friendly unit;random_effect:does:a random surrounding friendly unit
+819067|on_play:does:On play;movement:does:fly to the first enemy unit in front;forced_movement:does:Push this enemy away;damage:does:deal 3/4/5/6/7 damage to it;on_kill:does:If pushed enemy dies
+819068|forced_movement:does:Push back all enemy units;aoe_damage:does:deal 4/5/6/7/8 damage to them
+819069|turn_start:does:At the start of your turn;damage:does:deal 3/3/4/5/6 damage to the first enemy in front
+819070|on_attack:does:Before attacking a stronger unit;stat_condition:benefits:a stronger unit;forced_movement:does:push it away;damage:does:deal 3/4/5/6/7 damage to it
+819072|death_trigger:does:When this dies;cheat_death:does:randomly respawn at your base
+819073|on_play:does:On play;forced_movement:does:pull enemy units to you;aoe_damage:does:deal 3/4/5/6/7 damage to all bordering enemy units
+819074|on_play:does:On play;summon:does:spawn 2/3/4/5/6 strength Constructs each turn
+819077|on_damaged:does:After surviving damage;heal:does:set strength to 2/3/4/5/6
+819078|on_damaged:does:After surviving damage;damage:does:deal up to 3/3/4/5/6 of its remaining strength as damage to the first enemy in front
+819079|on_play:does:When played;movement:does:teleport 2/3/4/6/8 surrounding units;sacrifice:does:destroy the older copy;return_to_hand:does:return to the hand
+819080|on_play:does:On play;permanent_growth:does:vitalize itself
+819081|turn_start:does:Before moving;tribal:benefits:friendly ancients;forced_movement:does:pull enemy units from behind;aoe_damage:does:deal 1/2/2/3/3 damage to all pulled units
+819082|on_play:does:On play;damage_over_time:benefits:surrounding poisoned unit;condition_count:benefits:for each surrounding poisoned unit;summon:does:spawn a 1 strength Toad
+819083|on_play:does:On play;damage_over_time:does:poison 1/1/2/2/3 random enemy;random_effect:does:random enemy
+819084|death_trigger:does:On death;enemy_benefit:does:spawn a 1 strength Raven on a random bordering tile to fight for the enemy
+819085|sacrifice:does:Destroy a target friendly unit;aoe_damage:does:Deal 2/3/4/5/6 damage to all surrounding units;damage_over_time:does:poison them;friendly_fire:does:all surrounding units
+819086|death_trigger:does:On death;aoe_damage:does:deal 1/2/3/4/5 damage to all bordering units;damage_over_time:does:poison them;friendly_fire:does:all bordering units
+819088|on_play:does:On play;friendly_fire:does:poison itself
+819089|summon:does:Spawn a 1 strength Toad on 3/4/4-5/5/6 random tiles;random_effect:does:random tiles
+819090|on_play:does:When played;adjacency:benefits:bordering a friendly Dragon;tribal:benefits:a friendly Dragon;damage:does:deal 3/4/5/6/7 damage to the strongest enemy unit;targeting_rules:does:the strongest enemy unit
+819091|death_trigger:does:On death;summon:does:spawn 1 strength Toads;random_effect:does:random surrounding tiles
+819092|damage:does:Deal 5/6/7/8/10 damage to a target poisoned unit;damage_over_time:benefits:poisoned unit;on_kill:does:If that kills it;summon:does:spawn a 5/6/7/8/10 strength Raven
+819093|on_attack:does:After attacking;movement:does:jump in front of a random enemy unit;permanent_growth:does:gain 2/3/4/5/6 strength;random_effect:does:a random enemy unit
+819094|turn_start:does:At the start of your turn;damage_over_time:does:poison 1/1/2/2/3 random enemy;random_effect:does:random enemy
+819095|on_play:does:On play;lifesteal:does:drain 1/1/2/2/3 strength from all bordering units;friendly_fire:does:all bordering units
+819096|on_play:does:On play;lifesteal:does:drain 4/5/6/7/8 strength;damage_over_time:benefits:poisoned unit;random_effect:does:a random surrounding poisoned unit
+819097|on_attack:does:Before attacking a stronger unit;stat_condition:benefits:a stronger unit;lifesteal:does:drain 3/4/4/5/6 strength from it
+819098|on_play:does:On play;lifesteal:does:drain the strength from all 1 strength units;stat_condition:does:all 1 strength units;friendly_fire:does:all 1 strength units
+819099|on_attack:does:Before attacking a weaker unit;stat_condition:benefits:a weaker unit;destroy:does:destroy it instantly
+819100|on_play:does:On play;variable_stats:does:gain the strength of the strongest friendly Dragon;tribal:benefits:the strongest friendly Dragon
+819101|on_play:does:On play;steal:does:convert all bordering enemy units;stat_condition:does:or less strength
+819102|on_play:does:On play;summon:does:spawn 3 Nests;delayed:does:which will hatch;random_effect:does:random surrounding tiles
+819103|steal:does:Convert a target enemy unit;stat_condition:does:or less strength
+819104|on_play:does:On play;destroy:does:destroy all units with the lowest strength;stat_condition:does:the lowest strength;friendly_fire:does:destroy all units;summon:does:spawn 5/6/7/8/10 strength Ravens there
+819105|on_play:does:On play;steal:does:convert a random bordering enemy unit;stat_condition:does:or less strength;random_effect:does:a random bordering enemy unit
+819108|on_damaged:does:After surviving damage;donate:does:convert itself to fight for the enemy
+819109|on_damaged:does:After surviving damage;lifesteal:does:drain up to 1/1/2/2/2 of the damage received from the enemy base;direct_damage:does:from the enemy base
+819110|turn_end:does:At the end of your turn;turn_start:does:At the start of your turn;rewind:does:restore 1/2/2/3/3 of them to that state
+819111|heal:does:Restore up to 3/4/5/6/7 initial strength;damage_over_time:benefits:friendly poisoned units;permanent_growth:grants:vitalize them
+819112|turn_start:does:Before moving;tribal:benefits:friendly ancients;lifesteal:does:drain 1/2/2/3/3 strength;damage_over_time:benefits:enemy poisoned unit
+819113|on_play:does:On play;summon:does:spawn a 1/1/2/2/3 strength Satyr
+819114|death_trigger:does:On death;friendly_fire:does:deal 2 damage to your base
+819115|on_play:does:If played;lone_unit:benefits:with no surrounding units;return_to_hand:does:return the copy of this card to your hand;in_hand_buff:does:with +1 strength
+819116|death_trigger:does:On death;summon:does:spawn a 3/4/6/7/8 strength Dragon;tribal:benefits:bordering a friendly Dragon;random_effect:does:randomly spawn
+819117|on_play:does:On play;stat_gain:grants:give 3/4/4/5/6 strength to a random bordering friendly Satyr;tribal:benefits:friendly Satyr;random_effect:does:a random bordering friendly Satyr
+819118|on_play:does:On play;movement:does:command
+819119|turn_start:does:At the start of your turn;stat_gain:grants:give 1/1/2/2/3 strength to all friendly Satyrs;tribal:benefits:all friendly Satyrs
+819120|death_trigger:does:On death;summon:does:spawn a 1/2/3/4/5 strength Satyr;random_effect:does:a random bordering tile
+819121|on_play:does:On play;stat_gain:does:gain 2/2/3/3/4 strength;tribal:benefits:each bordering friendly Satyr;condition_count:benefits:for each bordering friendly Satyr
+819122|destroy:does:Destroy a target unit or structure;stat_condition:does:or less strength;excess_damage:does:Spread spare damage randomly;life_payment:cost:Deal 3 damage to your base
+819123|on_attack:does:When attacking a structure or base;direct_damage:does:deal 3/3/4/5/6 additional damage to it
+819124|on_attack:does:When attacking a unit;summon:does:spawn a 1/1/2/2/3 strength Dragon;random_effect:does:a random tile
+819125|on_play:does:On play;direct_damage:does:deal 1/1/1/2/2 damage to the enemy base
+819126|on_play:does:On play;stat_gain:grants:give 1/1/2/2/3 strength to all surrounding friendly units
+819127|aoe_damage:does:Deal 2/3/4/5/6 damage to all enemies surrounding a friendly unit
+819128|on_play:does:On play;summon:does:spawn 2 Satyrs;random_effect:does:random bordering tiles
+819130|turn_start:does:At the start of your turn;direct_damage:does:deal 2/2/3/3/4 damage to the enemy base
+819131|on_play:does:On play;movement:does:fly to the first empty tile in front;stat_gain:grants:Give 3/4/5/6/7 strength to all friendly units passed;permanent_growth:grants:vitalize them
+819132|stat_gain:grants:Give 1/2/3/4/5 strength to a target friendly unit;movement:does:Command all friendly units in its row forward
+819133|on_play:does:On play;free_play:does:randomly play up to 1/1/1/2/2 common or rare Satyr;cast_from_zone:does:from your deck;tribal:benefits:Satyr;random_effect:does:randomly play
+819134|on_attack:does:Before attacking;direct_damage:does:deal 1/1/1/2/2 damage to the enemy base
+819135|on_attack:does:After attacking;movement:does:move forward
+819136|summon:does:Spawn a 3/4/5/6/7 strength Satyr;random_effect:does:a random tile
+819139|on_damaged:does:After surviving damage;movement:does:command all friendly units with equal or less strength forward;stat_condition:does:equal or less strength
+819140|on_damaged:does:After surviving damage;stat_gain:grants:randomly give strength to 2 other friendly units;variable_stats:does:equal to the damage received;random_effect:does:randomly
+819141|turn_start:does:At the start of your turn;speed:grants:give 1 additional move to all friendly units in front
+819142|death_trigger:does:When dying from an ability or spell;cheat_death:does:respawn on a random surrounding tile;random_effect:does:a random surrounding tile
+819143|turn_start:does:Before moving;friendly_fire:does:deal 1/1/1/2/2 damage to 1/2/2/3/3 other friendly ancient units;tribal:benefits:friendly ancient units;direct_damage:does:deal the same amount of damage
+819144|disable:does:Freeze a target enemy unit;damage:does:deal 8/10/12/15/18 damage to it instead
+819145|on_play:does:On play;disable:does:freeze all bordering enemy units
+819146|turn_start:does:At the start of your turn;stat_gain:grants:give 2/2/3/3/4 strength to another friendly unit or structure
+819147|on_attack:does:Before attacking a frozen enemy;aoe_damage:does:deal 4/5/6/7/8 damage to all surrounding frozen enemies
+819148|on_attack:does:When attacking;friendly_fire:does:randomly destroy a friendly non-Dragon unit;tribal:does:non-Dragon unit;random_effect:does:randomly destroy
+819149|stat_gain:grants:Give 5/6/7/8/9 strength to a target friendly unit or structure;disable:does:Freeze all surrounding enemy units
+819150|on_play:does:When played;adjacency:benefits:bordering a stronger friendly unit;stat_condition:benefits:a stronger friendly unit;stat_gain:does:gain 4/5/6/7/8 strength
+819151|on_play:does:On play;destroy:does:destroy all frozen units in front;disable:benefits:frozen units;stat_condition:does:or less strength;resource_gain:does:Gain 4 mana for each unit destroyed
+819152|turn_start:does:At the start of your turn;resource_gain:does:gain 2 mana
+819153|on_play:does:On play;stat_gain:does:gain 2/2/3/4/5 strength for each;condition_count:benefits:spend your remaining mana
+819154|disable:does:Freeze all enemy units;stat_condition:does:or less strength;destroy:does:Destroy those that were already frozen
+819155|on_play:does:On play;resource_gain:does:gain 3 mana
+819156|on_play:does:On play;summon:does:build a 4/5/6/7/8 strength Fort;random_effect:does:a random bordering tile
+819157|stat_gain:grants:Give 8/10/12/15/18 strength;stat_condition:does:or less strength
+819158|death_trigger:does:When this dies;aoe_damage:does:deal 3/4/5/6/7 damage to all non-Dragon units;tribal:does:non-Dragon units;friendly_fire:does:all non-Dragon units
+819159|on_attack:does:When attacking;resource_gain:does:gain 4 mana
+819160|on_play:does:On play;stat_loss:does:lose 1 strength;condition_count:does:for every other friendly unit
+819161|on_play:does:On play;stat_gain:grants:give 6/7/8/10/12 strength to a random bordering friendly unit or structure;random_effect:does:a random bordering friendly unit
+819162|resource_gain:does:Gain 11/12/13/14/15 mana
+819164|on_play:does:On play;aoe_damage:does:deal 1 damage to all enemies in front;condition_count:benefits:for every 4/4/3/3/2 remaining mana
+819165|on_attack:does:Before attacking a unit or structure;permanent_growth:does:gain 3/4/5/6/7 strength
+819166|on_play:does:When played;adjacency:benefits:bordering your base;heal:does:give it 3/3/4/5/6 strength
+819167|turn_start:does:At the start of your turn;friendly_fire:does:remove 1/1-2/1-2/2/2 strength from itself;heal:does:give it to your base
+819170|on_damaged:does:After surviving damage;stat_gain:does:gain 3/3/3/4/4 strength
+819171|on_damaged:does:After surviving damage;destroy:does:destroy all enemy units in front
+819172|turn_start:does:At the start of your turn;permanent_growth:grants:vitalize 1/2/2/3/3 friendly unit;summon:does:spawn a 1 strength copy of itself
+819173|turn_start:does:At the start of your turn;disable:does:randomly freeze the most forward enemy unit;targeting_rules:does:the most forward enemy unit
+819174|on_play:does:On play;disable:does:freeze itself
+819175|death_trigger:does:On death;disable:does:freeze all surrounding units;friendly_fire:does:all surrounding units
+819176|turn_start:does:Before moving;upkeep:cost:reduce mana by 3;disable:does:freeze an enemy in the tile in front;tribal:benefits:friendly ancient;condition_count:benefits:for each other friendly ancient
