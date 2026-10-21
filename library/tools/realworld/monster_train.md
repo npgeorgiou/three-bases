@@ -34,3 +34,4 @@ Known for: Charged Echoes, Hatching Eggs; Infused cards and devouring Eggs buff 
 - Molded + Rector Flicker: Molded returns the fallen Flicker to hand by Reform [2]
 - Crushing Demise + Rector Flicker: it kills a friendly unit, Flicker upgrades on each death and Reform [2]
 - Cannibalize + Penumbra: Cannibalize gives Morsels for Penumbra to Gorge on [2]
+- Morselmaker + Penumbra: Morselmaker summons Morsels for Penumbra to eat [2]

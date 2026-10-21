@@ -5,6 +5,10 @@ Sources:
 [2] https://www.pcgamer.com/uk/legends-of-runeterra-regions-factions (six original regions)
 [3] https://gamersdecide.com/articles/legends-of-runeterra-best-regions (all ten: keywords, archetypes, strengths, weaknesses)
 [4] https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
+[5] https://mobalytics.gg/?p=15986 (meta decks)
+[6] https://mobalytics.gg/blog/lor/lor-5-top-decks-ranked/
+[7] https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
+[8] https://mobalytics.gg/blog/lor/lor-deck-guide-ezreal-vi-pranks/
 
 Challenger (choose the blocker) is target_choice; Rally (a new attack) is extra_turn; Recall returns any unit to its owner's
 hand (own: return_to_hand, enemy: bounce_enemy); Fearsome and Elusive are evasion; Ephemeral is self_destruct. Plunder and
@@ -59,3 +63,17 @@ Archetypes: go-wide Yordle/Fae swarm, value-tempo [3].
 
 ## Combos
 - Ashe + Rimetusk Shaman: Frostbite the strongest enemy each round [4]
+- Lulu + Flame Chompers!: early board for a tempo swing [5]
+- Towering Pairofant + Curious Changelings: surprise open-attack lethal [5]
+- The Grand Plaza + Aurelion Sol: Plaza takes the board, Aurelion Sol finishes [6]
+- Solari Sunforger + Starshaping: heal back [6]
+- Hush + Single Combat: answer threats [6]
+- Karma + Lux: an Enlightened Karma makes Lux stack twice as fast [7]
+- Ezreal + Trueshot Barrage: stabilises and levels Ezreal [7]
+- Entreat + Mystic Shot: Entreat fetches Mystic Shot for more damage [7]
+- Chump Whump + Rummage / Get Excited!: Chump Whump is fuel for the discard [7]
+- Judgment + Deny / Purify: Deny protects Judgment; Purify punishes Elusives [7]
+- Stand Alone + Emerald Awakener: good against aggro [7]
+- Curious Shellfolk + Ezreal: Shellfolk builds the engine, Ezreal closes [8]
+- Ezreal + Timewinder / Bouncing Bomb: two Ezreal triggers [8]
+- Vi + Ambush / Sumpworks Map: a sneaky strike to the nexus [8]

@@ -9,27 +9,27 @@ Made by `tools/realworld_report.py` from the library build. A case is a fact a w
 | Darkest Dungeon |  |  | 6/7 |  | 6/7 |
 | Duelyst | 13/22 | 6/8 |  |  | 19/30 |
 | Faeria | 9/20 | 6/9 | 0/1 | 0/2 | 15/32 |
-| Gwent (standalone) | 16/22 | 7/8 |  |  | 23/30 |
+| Gwent (standalone) | 16/22 | 7/8 | 3/3 |  | 26/33 |
 | Hearthstone | 38/57 | 13/34 | 6/13 | 8/9 | 65/113 |
 | Hearthstone Battlegrounds |  |  | 9/13 |  | 9/13 |
 | Inscryption | 2/12 | 1/1 | 1/5 |  | 4/18 |
 | Into the Breach | 2/11 | 1/1 | 0/1 | 2/4 | 5/17 |
 | Disney Lorcana | 18/25 | 7/8 | 12/12 | 6/12 | 43/57 |
 | Marvel Snap |  |  | 19/24 |  | 19/24 |
-| Monster Train | 6/14 | 4/7 | 2/3 |  | 12/24 |
+| Monster Train | 6/14 | 4/7 | 2/4 |  | 12/25 |
 | Magic: The Gathering | 44/48 | 7/10 | 9/15 | 12/15 | 72/88 |
-| Legends of Runeterra | 31/40 | 7/16 | 1/1 | 1/1 | 40/58 |
+| Legends of Runeterra | 31/40 | 7/16 | 7/19 | 1/1 | 46/76 |
 | Shadowverse | 15/22 | 7/13 |  |  | 22/35 |
 | Stormbound | 6/17 | 6/10 | 1/1 |  | 13/28 |
 | Slay the Spire | 10/18 | 5/9 | 18/21 |  | 33/48 |
 | Slay the Spire 2 (Early Access) | 7/16 | 1/6 | 0/2 |  | 8/24 |
-| Star Wars: Unlimited | 17/20 | 6/8 |  | 2/3 | 25/31 |
-| The Elder Scrolls: Legends | 10/15 | 5/9 |  |  | 15/24 |
+| Star Wars: Unlimited | 17/20 | 6/8 | 4/7 | 2/3 | 29/38 |
+| The Elder Scrolls: Legends | 10/15 | 5/9 | 6/16 |  | 21/40 |
 | Warhammer 40,000 (10th edition) | 8/28 | 4/12 | 5/8 |  | 17/48 |
 | Warhammer Age of Sigmar (4th edition) | 11/47 | 4/18 |  |  | 15/65 |
 | Warhammer 40,000: Kill Team | 12/32 | 1/15 |  |  | 13/47 |
 | Warhammer Underworlds | 5/24 | 2/31 |  |  | 7/55 |
-| **All** | 280/510 | 100/233 | 89/127 | 31/46 | **500/916** |
+| **All** | 280/510 | 100/233 | 108/172 | 31/46 | **519/961** |
 
 ## Why cases miss
 
@@ -39,8 +39,8 @@ Made by `tools/realworld_report.py` from the library build. A case is a fact a w
 | 132 | signature | not 1.5x the rest of the game |
 | 52 | signature | no card of the faction has it |
 | 46 | signature | could be chance (5%) |
-| 21 | combo | both cards there, no connection |
-| 17 | combo | a card name is not in the library |
+| 43 | combo | both cards there, no connection |
+| 21 | combo | a card name is not in the library |
 | 15 | splash | missing from the splash list |
 
 ## Darkest Dungeon
@@ -161,6 +161,9 @@ Made by `tools/realworld_report.py` from the library build. A case is a fact a w
 | ✓ | archetype | Skellige | graveyard | recipe score 1.45, 3.7x the other factions, 41 cards |  | [resurrection](https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html) |
 | ✗ | archetype | Skellige | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [aggression](https://www.pockettactics.com/gwent-the-witcher-card-game/decks) |
 | ✓ | archetype | Syndicate | ramp | recipe score 5.08, 156.6x the other factions, 134 cards |  | [coin economy](https://www.bluestacks.com/blog/game-guides/gwent/gwt-decks-guide-en.html) |
+| ✓ | combo | Koshchey | Caranthir Ar-Feiniel | linked by engine, keyword, relation |  | [a large amount of points](https://www.bluestacks.com/blog/game-guides/gwent/gwt-top-5-best-decks-en.html) |
+| ✓ | combo | Joachim de Wett | Coup de Grâce | linked by engine, relation |  | [strong plays always available](https://www.bluestacks.com/blog/game-guides/gwent/gwt-top-5-best-decks-en.html) |
+| ✓ | combo | Iris von Everec | Iris' Companions | linked by relation |  | [thinning for Round 3](https://www.bluestacks.com/blog/game-guides/gwent/gwt-top-5-best-decks-en.html) |
 
 ## Hearthstone
 
@@ -462,6 +465,7 @@ Made by `tools/realworld_report.py` from the library build. A case is a fact a w
 | ✓ | combo | Molded | Rector Flicker | linked by keyword, relation |  | [returns the fallen Flicker by Reform](https://progameguides.com/monster-train/best-builds-in-monster-train/) |
 | ✗ | combo | Crushing Demise | Rector Flicker |  | both cards there, no connection | [Flicker upgrades on each death](https://progameguides.com/monster-train/best-builds-in-monster-train/) |
 | ✓ | combo | Cannibalize | Penumbra | linked by engine |  | [Morsels for Penumbra to Gorge on](https://progameguides.com/monster-train/best-builds-in-monster-train/) |
+| ✗ | combo | Morselmaker | Penumbra |  | both cards there, no connection | [Morsels for Penumbra](https://progameguides.com/monster-train/best-builds-in-monster-train/) |
 
 ## Magic: The Gathering
 
@@ -618,6 +622,24 @@ Made by `tools/realworld_report.py` from the library build. A case is a fact a w
 | ✗ | archetype | Bandle City | tribal | under 1.5x the other factions | recipe not 1.5x the other factions | [Yordle and Fae](https://gamersdecide.com/articles/legends-of-runeterra-best-regions) |
 | ✓ | splash | Demacia | direct_damage |  |  | [direct damage is limited](https://www.pcgamer.com/uk/legends-of-runeterra-regions-factions) |
 | ✓ | combo | Ashe | Rimetusk Shaman | linked by keyword, relation |  | [Frostbite the strongest enemy](https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/) |
+| ✗ | combo | Lulu | Flame Chompers! |  | both cards there, no connection | [early tempo swing](https://mobalytics.gg/?p=15986) |
+| ✗ | combo | Towering Pairofant | Curious Changelings |  | both cards there, no connection | [surprise lethal](https://mobalytics.gg/?p=15986) |
+| ✓ | combo | The Grand Plaza | Aurelion Sol | linked by engine, relation |  | [board, then finisher](https://mobalytics.gg/blog/lor/lor-5-top-decks-ranked/) |
+| ✓ | combo | Solari Sunforger | Starshaping | linked by relation |  | [heal back](https://mobalytics.gg/blog/lor/lor-5-top-decks-ranked/) |
+| ✗ | combo | Hush | Single Combat |  | both cards there, no connection | [answer threats](https://mobalytics.gg/blog/lor/lor-5-top-decks-ranked/) |
+| ✗ | combo | Karma | Lux |  | both cards there, no connection | [Lux stacks twice as fast](https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/) |
+| ✓ | combo | Ezreal | Trueshot Barrage | linked by role |  | [stabilises and levels Ezreal](https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/) |
+| ✗ | combo | Entreat | Mystic Shot |  | both cards there, no connection | [Entreat fetches Mystic Shot](https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/) |
+| ✗ | combo | Chump Whump | Rummage |  | both cards there, no connection | [fuel for the discard](https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/) |
+| ✗ | combo | Chump Whump | Get Excited! |  | both cards there, no connection | [fuel for the discard](https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/) |
+| ✓ | combo | Judgment | Deny | linked by keyword |  | [Deny protects Judgment](https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/) |
+| ✗ | combo | Judgment | Purify |  | both cards there, no connection | [Purify punishes Elusives](https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/) |
+| ✓ | combo | Stand Alone | Emerald Awakener | linked by relation |  | [good against aggro](https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/) |
+| ✗ | combo | Curious Shellfolk | Ezreal |  | both cards there, no connection | [engine, then Ezreal closes](https://mobalytics.gg/blog/lor/lor-deck-guide-ezreal-vi-pranks/) |
+| ✓ | combo | Ezreal | Timewinder | linked by role |  | [two Ezreal triggers](https://mobalytics.gg/blog/lor/lor-deck-guide-ezreal-vi-pranks/) |
+| ✗ | combo | Ezreal | Bouncing Bomb |  | both cards there, no connection | [two Ezreal triggers](https://mobalytics.gg/blog/lor/lor-deck-guide-ezreal-vi-pranks/) |
+| ✗ | combo | Vi | Ambush |  | both cards there, no connection | [sneaky nexus strike](https://mobalytics.gg/blog/lor/lor-deck-guide-ezreal-vi-pranks/) |
+| ✗ | combo | Vi | Sumpworks Map |  | both cards there, no connection | [sneaky nexus strike](https://mobalytics.gg/blog/lor/lor-deck-guide-ezreal-vi-pranks/) |
 
 ## Shadowverse
 
@@ -809,6 +831,13 @@ Made by `tools/realworld_report.py` from the library build. A case is a fact a w
 | ✓ | splash | Vigilance | draw |  |  | [once-per-round card draw](https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie) |
 | ✓ | splash | Vigilance | disable |  |  | [exhausting units](https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie) |
 | ✗ | splash | Vigilance | shield |  | missing from the splash list | [Shield tokens](https://starwarsunlimited.com/articles/behind-unlimited-on-the-color-pie) |
+| ✗ | combo | Tarkintown | Cad Bane - He Who Needs No Introduction |  | both cards there, no connection | [ping, then finish damaged units](https://tcg-hq.beehiiv.com/p/cad-bane-tarkin-town-master-class) |
+| ✗ | combo | Crafty Smugglers | Ma Klounkee |  | a card name is not in the library | [return to hand and deal damage](https://tcg-hq.beehiiv.com/p/cad-bane-tarkin-town-master-class) |
+| ✗ | combo | Now There Are Two of Them | Zuckuss - Bounty Hunter for Hire |  | both cards there, no connection | [cheaper deployment](https://tcg-hq.beehiiv.com/p/cad-bane-tarkin-town-master-class) |
+| ✓ | combo | Now There Are Two of Them | Bossk - Deadly Stalker | linked by relation |  | [cheaper deployment](https://tcg-hq.beehiiv.com/p/cad-bane-tarkin-town-master-class) |
+| ✓ | combo | Jabba the Hutt - Cunning Daimyo | Shoot First | linked by type |  | [cost reduction makes it free](https://tcg-hq.beehiiv.com/p/cad-bane-tarkin-town-master-class) |
+| ✓ | combo | Jabba the Hutt - Cunning Daimyo | Ma Klounkee | linked by engine, relation, type |  | [cost reduction makes it free](https://tcg-hq.beehiiv.com/p/cad-bane-tarkin-town-master-class) |
+| ✓ | combo | Ma Klounkee | Bossk - Deadly Stalker | linked by engine, relation, type |  | [Bossk deals 2 on an event](https://tcg-hq.beehiiv.com/p/cad-bane-tarkin-town-master-class) |
 
 ## The Elder Scrolls: Legends
 
@@ -838,6 +867,22 @@ Made by `tools/realworld_report.py` from the library build. A case is a fact a w
 | ✗ | archetype | Endurance | fortress | under 1.5x the other factions | recipe not 1.5x the other factions | [strong guards](https://en.uesp.net/wiki/Legends:Attributes) |
 | ✗ | archetype | Endurance | ramp | under 1.5x the other factions | recipe not 1.5x the other factions | [more magicka, high-cost creatures](https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes) |
 | ✓ | archetype | Endurance | sustain | recipe score 1.26, 9.5x the other factions, 31 cards |  | [healing actions](https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes) |
+| ✗ | combo | Snowy Sabre Cat | Swift Strike |  | both cards there, no connection | [one-turn attack](https://bethesda.net/en-US/news/houses-of-morrowind-community-deck-spotlight) |
+| ✗ | combo | Snowy Sabre Cat | Crusader's Assault |  | both cards there, no connection | [one-turn attack](https://bethesda.net/en-US/news/houses-of-morrowind-community-deck-spotlight) |
+| ✗ | combo | Snowy Sabre Cat | Monk's Strike |  | both cards there, no connection | [one-turn attack](https://bethesda.net/en-US/news/houses-of-morrowind-community-deck-spotlight) |
+| ✗ | combo | Doomcrag Vampire | Nord Firebrand |  | both cards there, no connection | [pings take down big creatures](https://bethesda.net/en-US/news/houses-of-morrowind-community-deck-spotlight) |
+| ✗ | combo | Doomcrag Vampire | Sharpshooter Scout |  | both cards there, no connection | [pings take down big creatures](https://bethesda.net/en-US/news/houses-of-morrowind-community-deck-spotlight) |
+| ✗ | combo | Disciple of Namira | Namira's Shrine |  | both cards there, no connection | [draw lots of cards](https://bethesda.net/en-US/news/houses-of-morrowind-community-deck-spotlight) |
+| ✓ | combo | Paarthurnax | Soultear | linked by engine, keyword, relation |  | [reuse for value](https://bethesda.net/en-US/news/houses-of-morrowind-community-deck-spotlight) |
+| ✓ | combo | Blood Magic Lord | Soultear | linked by relation |  | [reuse for value](https://bethesda.net/en-US/news/houses-of-morrowind-community-deck-spotlight) |
+| ✓ | combo | Odirniran Necromancer | Soultear | linked by engine, relation |  | [more power](https://bethesda.net/en-US/news/houses-of-morrowind-community-deck-spotlight) |
+| ✓ | combo | Odirniran Necromancer | Galyn The Shelterer | linked by engine, keyword, relation, type |  | [more power and targets](https://bethesda.net/en-US/news/houses-of-morrowind-community-deck-spotlight) |
+| ✗ | combo | Ulfric's Uprising | Nix-Ox |  | a card name is not in the library | [re-triggers Nix-Ox for magicka](https://bethesda.net/en-US/news/top-highlights-of-the-month-november-2018) |
+| ✗ | combo | Therana | Ulfric's Uprising |  | a card name is not in the library | [extra copies of Uprising](https://bethesda.net/en-US/news/top-highlights-of-the-month-november-2018) |
+| ✓ | combo | Ring of Namira | The Night Mother | linked by relation |  | [life gain becomes damage](https://bethesda.net/en-US/news/top-highlights-of-the-month-november-2018) |
+| ✗ | combo | Devour | Territorial Viper |  | both cards there, no connection | [Lethal and Charge](https://bethesda.net/en-US/news/top-highlights-of-the-month-november-2018) |
+| ✗ | combo | Wildfire Dragon | Brotherhood Sanctuary |  | a card name is not in the library | [repeats the boost](https://bethesda.net/en-US/news/top-highlights-of-the-month-november-2018) |
+| ✓ | combo | Dremora Markynaz | Dagoth Ur | linked by keyword, relation |  | [grows Dagoth Ur](https://bethesda.net/en-US/news/top-highlights-of-the-month-november-2018) |
 
 ## Warhammer 40,000 (10th edition)
 

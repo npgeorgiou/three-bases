@@ -113,7 +113,7 @@ a trigger in every game) and the query tests (`test_query.py`, all 16 commands).
 **After every change**, compare the build with the stored library and keep it only if nothing is worse:
 `python3 tools/compare_builds.py three-bases-library.sqlite <scratch>/new.sqlite <scratch>/cmp`. Per game it prints the answer-key
 wrong and missed tags per 100 entries and the real-world cases met per kind (signature, archetype, combo, splash; cases in
-`tools/realworld/<game>.tsv`); then the regression set, the combos, the real-world cases newly met or missed, and the trigger ->
+`tools/realworld/<game>.tsv`, made from the source summaries `<game>.md` as `tools/realworld/RESEARCH.md` says); then the regression set, the combos, the real-world cases newly met or missed, and the trigger ->
 effect pairs lost (`lost_pairs.py`). Why a case misses: `realworld_why.py <db>`. A game's new wrong key tags: `keydiff.py`.
 Against the original library (`git show c7a77a4:library/three-bases-library.sqlite`): `final_compare.py <orig> <new> check`.
 
@@ -144,15 +144,7 @@ Against the original library (`git show c7a77a4:library/three-bases-library.sqli
 Kaptain's requests in his own words are in `todo.md` (items 11 and 12); the rest are Claude's suggestions.
 1. **Rebuild only the games worked on** (todo.md 11). Find which build steps really cross games and whether a build can run on
    the changed games alone; every later item needs many builds, at about 10 minutes each.
-2. **Real-world cases for every faction of every game** (todo.md 12). Cases done (21 Oct 2026): every game was rebuilt from
-   sources in the four steps of `tools/realworld/RESEARCH.md`: a source summary per game (`tools/realworld/<game>.md`), then
-   916 cases written from it (`<game>.tsv`); the old cases were replaced. Met on the stored library: 500/916
-   (`REALWORLD_REPORT.md`). Left: make the cards' tags right, from `realworld_why.py`: 39 signatures no card of the faction
-   has, 75 only 1-4 cards have, 21 combos with both cards and no connection (read both cards' tags), and check that met cases
-   are met for the right reason. A miss is fixed only when the cards' text supports the case, through the game's patterns.
-   Measurement misses (133 archetypes not above the game average, 116 signatures not above other factions) and 17 combos
-   with a card the library lacks are not tagging work.
-3. **Mechanics files for the 16 older games without one**: darkest_dungeon, duelyst, gwent, hearthstone, hs_battlegrounds,
+2. **Mechanics files for the 16 older games without one**: darkest_dungeon, duelyst, gwent, hearthstone, hs_battlegrounds,
    marvel_snap, mtg, runeterra, shadowverse, sts1, sts2, wh_40k_10e, wh_aos_4th, wh_bloodbowl3, wh_killteam, wh_underworlds. For
    each: the mechanics its guides name (`name|concept|regex`) and its rules and terms as `# term:` lines with their source
    (`(assumed)` where no source has it) in `tools/mechanics/<game>.txt`; then `coverage.py --mechanics`, fix the gaps in its
@@ -162,13 +154,13 @@ Kaptain's requests in his own words are in `todo.md` (items 11 and 12); the rest
    `key_patterns.py` for the game: its key lines predate that script's whole-key and keyword checks (all 19 regenerated at once
    on 21 Oct 2026: wrong down, Blood Bowl 163 -> 133, Into the Breach 74 -> 65, Runeterra 84 -> 80, but missed up in Duelyst,
    Hearthstone, Shadowverse, Slay the Spire, Kill Team and Blood Bowl, so it is measured per game).
-4. **Retire `final_revert.py`.** It still puts back 915 tags of the original library (c7a77a4). Build without it and retire it
+3. **Retire `final_revert.py`.** It still puts back 915 tags of the original library (c7a77a4). Build without it and retire it
    only if nothing is worse.
-5. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
+4. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
    "a card that names a type of its game cares about that type" needs only a short stop list per game.
-6. **Learn the archetype recipes again** (after item 2). Learned weights over-fitted on 405 cases; with about 50 cases per game,
+5. **Learn the archetype recipes again** (the real-world cases are done). Learned weights over-fitted on 405 cases; with about 50 cases per game,
    split 50/50 with seed 1, try `learn_recipes.py` again.
-7. **Missing data through the browser.** Legends sets after Houses of Morrowind (UESP), Stormbound cards after February 2022
+6. **Missing data through the browser.** Legends sets after Houses of Morrowind (UESP), Stormbound cards after February 2022
    (fandom wiki), the keyword entry texts of Monster Train and two Legends keywords. The built-in browser reaches both wikis.
-8. **One vocabulary** (a cleanup): move the pattern files and early build steps to the concept tree's ids, so `concept_tree.py`
+7. **One vocabulary** (a cleanup): move the pattern files and early build steps to the concept tree's ids, so `concept_tree.py`
    no longer moves tags on each build and the `v2_*` tables can go.
