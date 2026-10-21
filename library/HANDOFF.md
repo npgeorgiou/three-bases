@@ -17,27 +17,31 @@ and their history; todo.md item 10 points here.
   of the five games its keywords' tags. Legends: Ongoing and Beast Form assumed. About 715k subagent tokens in all.
   Scores of the stored library, wrong / missed per 100: Lorcana 125.2 / 89.6, Stormbound 75.7 / 81.7, SWU 152.8 / 96.8,
   Legends 111.1 / 73.6, Monster Train 62.7 / 89.8.
+- **Patterns of the five new games against their keys** (21 Oct). `step3/key_patterns.py` made 177 `new` lines for them in
+  `step3/decisions.tsv` (the other games' lines unchanged) and `step_games.json` now lets `pattern_fix` run on them (it was off
+  for them, so no step-3 line ever reached them). Then, by `ADDING_GAMES.md` 4b.6, the 16 lines under 90% right on the whole key
+  (3+ matches) were removed, and 55 alternatives that were only a keyword's name got the keyword position rule of `kw_links.py`
+  (`valid()`), so a mention ("with Prophecy", "the Consume pile") no longer tags. Missed / 100: Lorcana 89.6 -> 65.4, Stormbound
+  81.7 -> 67.3, SWU 96.8 -> 77.8, Legends 73.6 -> 69.0, Monster Train 89.8 -> 69.6; wrong unchanged except Lorcana 125.2 -> 125.4
+  and SWU 152.8 -> 153.0 (one tag each, from patterns 13/14 and 40/41 right on the key). Regression, combos unchanged; real
+  world 245 -> 250 of 405, no new misses; the 48 lost pairs all have a narrower pair in their place (damage -> ping and the
+  like). Re-running `key_patterns.py` would bring the removed lines back and undo the keyword rule: redo both after it.
 - Earlier (20-21 Oct night): new death and leave triggers, one build chain from the frozen base, the cleanup, reload of an older
   game, the step log, the real-world case audit (README suggestions 2-4).
 
 ## Open work, in order
-1. **Fix the five new games' patterns against their new keys** (`tools/patterns/<game>.txt`). Missed is 74-97 per 100, wrong
-   63-153. `tools/step3/key_patterns.py` builds patterns on one half of the key and keeps one only if it is 90%+ right on the
-   other half; narrow wrong patterns only after a judged sample (`ADDING_GAMES.md` sections 3, 4, 4b). After each game: build,
-   then regression, `combo_check.py`, `realworld.py -v`, `realworld_why.py`, `lost_pairs.py`, and keep it only if the key,
-   regression and real-world are not worse. The keys are final: do not re-read them.
-2. **Mechanics files for the 16 older games without one** (todo.md item 10 and README suggestion 1, the same work): darkest_dungeon,
+1. **Mechanics files for the 16 older games without one** (todo.md item 10 and README suggestion 1, the same work): darkest_dungeon,
    duelyst, gwent, hearthstone, hs_battlegrounds, marvel_snap, mtg, runeterra, shadowverse, sts1, sts2, wh_40k_10e, wh_aos_4th,
    wh_bloodbowl3, wh_killteam, wh_underworlds. For each: the mechanics its guides name (`name|concept|regex`) and its rules and
    terms as `# term:` lines with their source (`(assumed)` where no source has it); then `coverage.py --mechanics`, fix the gaps
    in its patterns, reload it (`reload_game.sh`), keep only if the key, regression and real-world are not worse. One game per
    pass. Their keys already exist (read earlier); do not re-read them. Faeria (has a file): first re-measure its reload on the
    corrected key, then the same check.
-3. **Retire `final_revert.py`.** It still puts back 915 tags of the c7a77a4 library. Measure first: a build without it, compared
+2. **Retire `final_revert.py`.** It still puts back 915 tags of the c7a77a4 library. Measure first: a build without it, compared
    on key, regression and real-world; retire it only if none is worse.
-4. **One vocabulary** (a cleanup, not a size fix): move the pattern files and early build steps to the concept tree's ids, so
+3. **One vocabulary** (a cleanup, not a size fix): move the pattern files and early build steps to the concept tree's ids, so
    `concept_tree.py` no longer moves tags each build and the `v2_*` tables can go.
-5. **README suggestions still open**: 5 (more real-world cases, then learn the archetype recipes again), 6 (tribal from type
+4. **README suggestions still open**: 5 (more real-world cases, then learn the archetype recipes again), 6 (tribal from type
    links), 7 (combos with no connection), 9 (missing data: Legends sets after Houses of Morrowind, Stormbound cards after
    February 2022, keyword entry texts of Monster Train and two Legends keywords; their definitions are now in the mechanics
    files), 10 (Warhammer, not asked).
