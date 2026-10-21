@@ -27,19 +27,17 @@ Made by `tools/realworld_report.py` from the library build. A case is a fact a w
 | The Elder Scrolls: Legends | 10/15 | 5/9 | 6/16 |  | 21/40 |
 | Warhammer 40,000 (10th edition) | 8/28 | 4/12 | 5/8 |  | 17/48 |
 | Warhammer Age of Sigmar (4th edition) | 11/47 | 4/18 |  |  | 15/65 |
-| Warhammer 40,000: Kill Team | 12/32 | 1/15 |  |  | 13/47 |
-| Warhammer Underworlds | 5/24 | 2/31 |  |  | 7/55 |
-| **All** | 280/510 | 100/233 | 108/172 | 31/46 | **519/961** |
+| **All** | 263/454 | 97/187 | 108/172 | 31/46 | **499/859** |
 
 ## Why cases miss
 
 | Cases | Type | Reason |
 |---|---|---|
-| 133 | archetype | recipe not 1.5x the other factions |
-| 132 | signature | not 1.5x the rest of the game |
-| 52 | signature | no card of the faction has it |
-| 46 | signature | could be chance (5%) |
+| 114 | signature | not 1.5x the rest of the game |
+| 90 | archetype | recipe not 1.5x the other factions |
 | 43 | combo | both cards there, no connection |
+| 39 | signature | no card of the faction has it |
+| 38 | signature | could be chance (5%) |
 | 21 | combo | a card name is not in the library |
 | 15 | splash | missing from the splash list |
 
@@ -1006,115 +1004,3 @@ Made by `tools/realworld_report.py` from the library build. A case is a fact a w
 | ✓ | archetype | Kruleboyz | trickery | recipe score 0.82, 2.1x the other factions, 3 cards |  | [cunning, Dirty Tricks](https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide) |
 | ✗ | archetype | Gloomspite Gitz | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [horde](https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide) |
 | ✗ | archetype | Ogor Mawtribes | sustain | under 1.5x the other factions | recipe not 1.5x the other factions | [healing access](https://www.wargamer.com/warhammer-age-of-sigmar/armies-guide) |
-
-## Warhammer 40,000: Kill Team
-
-| | Type | Faction or card | Concept or card | Measured | Why it misses | Source says |
-|---|---|---|---|---|---|---|
-| ✓ | signature | Kasrkin | ranged | 11/40 cards (28%), 1.7x the rest, chance 0.059, rank 7 of 44 |  | [ranged, specialist weapons](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Kasrkin | buff | 30/40 cards (75%), 1.5x the rest, chance 0.002, rank 3 of 44 |  | [team-wide buffs](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Phobos Strike Team | stealth | 11/44 cards (25%), 1.9x the rest, chance 0.026, rank 7 of 44 |  | [concealed deployment](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Phobos Strike Team | spawn_blocking | 3/44 cards (7%), 1.0x the rest, chance 0.579, rank 16 of 44 | not 1.5x the rest of the game | [deep strike denial](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Phobos Strike Team | piercing | 13/44 cards (30%), 1.2x the rest, chance 0.286, rank 13 of 44 | not 1.5x the rest of the game | [cover-ignoring carbines](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Scout Squad | ranged | 4/27 cards (15%), 0.9x the rest, chance 0.688, rank 27 of 44 | not 1.5x the rest of the game | [sniper rifles](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Scout Squad | stealth | 8/27 cards (30%), 2.3x the rest, chance 0.020, rank 5 of 44 |  | [concealed positioning](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Novitiate | board_presence | 2/42 cards (5%), 6.4x the rest, chance 0.046, rank 2 of 44 |  | [high model count](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Novitiate | coin_economy | 0/42 cards (0%), 0.0x the rest, chance 1.000, rank 3 of 44 | no card of the faction has it | [Faith points for healing and actions](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Exaction Squad | mark_target | 1/29 cards (3%), 2.7x the rest, chance 0.323, rank 5 of 44 | could be chance (5%) | [warrants and marks](https://wahapedia.ru/kill-team3/kill-teams/exaction-squad/) |
-| ✗ | signature | Exaction Squad | zone_control | 2/29 cards (7%), 1.4x the rest, chance 0.435, rank 11 of 44 | not 1.5x the rest of the game | [objective control](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Hunter Clade | modal_choice | 0/38 cards (0%), 0.0x the rest, chance 1.000, rank 16 of 44 | no card of the faction has it | [Doctrina imperatives](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Nemesis Claw | stealth | 1/29 cards (3%), 0.3x the rest, chance 0.985, rank 38 of 44 | not 1.5x the rest of the game | [stealth](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Nemesis Claw | debuff | 10/29 cards (34%), 2.3x the rest, chance 0.007, rank 2 of 44 |  | [Terror lowers enemy APL](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Legionary | flexibility | 0/23 cards (0%), 0.0x the rest, chance 1.000, rank 18 of 44 | no card of the faction has it | [all-rounder, Mark-based builds](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Blooded | board_presence | 0/44 cards (0%), 0.0x the rest, chance 1.000, rank 13 of 44 | no card of the faction has it | [horde](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Gellerpox Infected | board_presence | 2/44 cards (5%), 6.1x the rest, chance 0.050, rank 3 of 44 |  | [horde](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Pathfinder | mark_target | 18/57 cards (32%), 61.0x the rest, chance 0.000, rank 1 of 44 |  | [markerlights](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Pathfinder | ranged | 4/57 cards (7%), 0.4x the rest, chance 0.992, rank 35 of 44 | not 1.5x the rest of the game | [ranged](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Mandrake | stealth | 3/33 cards (9%), 0.7x the rest, chance 0.837, rank 25 of 44 | not 1.5x the rest of the game | [stealth](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Mandrake | movement | 6/33 cards (18%), 1.4x the rest, chance 0.277, rank 13 of 44 | not 1.5x the rest of the game | [shadow-stepping, teleporting](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Kommando | stealth | 16/35 cards (46%), 3.6x the rest, chance 0.000, rank 2 of 44 |  | [concealment](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Corsair Voidscarred | movement | 9/39 cards (23%), 1.7x the rest, chance 0.068, rank 6 of 44 |  | [speed, free Dash](https://wahapedia.ru/kill-team3/kill-teams/corsair-voidscarred/) |
-| ✗ | signature | Corsair Voidscarred | resource_banking | 0/39 cards (0%), 0.0x the rest, chance 1.000, rank 2 of 44 | no card of the faction has it | [Fate Dice](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Hernkyn Yaegir | ranged | 8/30 cards (27%), 1.6x the rest, chance 0.116, rank 8 of 44 |  | [shooting](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | signature | Wyrmblade | stealth | 15/29 cards (52%), 4.0x the rest, chance 0.000, rank 1 of 44 |  | [stealth](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Wyrmblade | reserve_bench | 0/29 cards (0%), 0.0x the rest, chance 1.000, rank 4 of 44 | no card of the faction has it | [ambush deployment](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Hierotek Circle | revive | 1/30 cards (3%), 5.5x the rest, chance 0.177, rank 3 of 44 | could be chance (5%) | [Reanimation](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Hearthkyn Salvager | mark_target | 0/40 cards (0%), 0.0x the rest, chance 1.000, rank 7 of 44 | no card of the faction has it | [Judgment tokens for focus fire](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Hearthkyn Salvager | ranged | 10/40 cards (25%), 1.5x the rest, chance 0.119, rank 12 of 44 | could be chance (5%) | [shooting](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Brood Brother | board_presence | 1/40 cards (2%), 3.1x the rest, chance 0.284, rank 8 of 44 | could be chance (5%) | [high model count](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | signature | Brood Brother | ranged | 9/40 cards (22%), 1.3x the rest, chance 0.217, rank 15 of 44 | not 1.5x the rest of the game | [shooting](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Phobos Strike Team | trickery | under 1.5x the other factions | recipe not 1.5x the other factions | [stealth](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Novitiate | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [horde](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Exaction Squad | control | under 1.5x the other factions | recipe not 1.5x the other factions | [control, target priority](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Nemesis Claw | trickery | under 1.5x the other factions | recipe not 1.5x the other factions | [stealth](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Blooded | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [horde](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Fellgor Ravager | objectives | under 1.5x the other factions | recipe not 1.5x the other factions | [objective play](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Gellerpox Infected | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [horde](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Gellerpox Infected | chaos | under 1.5x the other factions | recipe not 1.5x the other factions | [high variance](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Warp Coven | spellslinger | under 1.5x the other factions | recipe not 1.5x the other factions | [psychic](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Warp Coven | objectives | under 1.5x the other factions | recipe not 1.5x the other factions | [objective play](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Mandrake | trickery | under 1.5x the other factions | recipe not 1.5x the other factions | [stealth](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Kommando | trickery | under 1.5x the other factions | recipe not 1.5x the other factions | [stealth and ambush](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✓ | archetype | Wyrmblade | trickery | recipe score 1.84, 1.5x the other factions, 15 cards |  | [stealth and ambush](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Hearthkyn Salvager | objectives | under 1.5x the other factions | recipe not 1.5x the other factions | [objective play](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-| ✗ | archetype | Brood Brother | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [horde](https://warhammerguild.com/guides/all-kill-team-warbands/) |
-
-## Warhammer Underworlds
-
-| | Type | Faction or card | Concept or card | Measured | Why it misses | Source says |
-|---|---|---|---|---|---|---|
-| ✓ | signature | Sons of Velmorn | revive | 3/32 cards (9%), 9.9x the rest, chance 0.004, rank 4 of 55 |  | [resurrection](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Sons of Velmorn | flanking | 0/32 cards (0%), 0.0x the rest, chance 1.000, rank 5 of 55 | no card of the faction has it | [flanking](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Thorns of the Briar Queen | movement | 2/32 cards (6%), 1.3x the rest, chance 0.455, rank 17 of 55 | not 1.5x the rest of the game | [teleports](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Mollog's Mob | revive | 1/32 cards (3%), 3.1x the rest, chance 0.283, rank 7 of 55 | could be chance (5%) | [resurrection](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✓ | signature | Mollog's Mob | regeneration | 2/32 cards (6%), 2.2x the rest, chance 0.233, rank 6 of 55 |  | [leader regeneration](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✓ | signature | Hrothgorn's Mantrappers | trap_secret | 2/31 cards (6%), 6.6x the rest, chance 0.040, rank 3 of 55 |  | [trap mechanic](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Rippa's Snarlfangs | multi_attack | 0/32 cards (0%), 0.0x the rest, chance 1.000, rank 32 of 55 | no card of the faction has it | [multiple attacks](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Xandire's Truthseekers | other_death_trigger | 1/32 cards (3%), 1.9x the rest, chance 0.414, rank 12 of 55 | could be chance (5%) | [benefits from fighter deaths](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | The Starblood Stalkers | advantage | 6/32 cards (19%), 1.0x the rest, chance 0.598, rank 22 of 55 | not 1.5x the rest of the game | [defensive rerolls](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | The Shadeborn | movement | 1/32 cards (3%), 0.7x the rest, chance 0.792, rank 32 of 55 | not 1.5x the rest of the game | [teleports](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | The Shadeborn | ping | 5/32 cards (16%), 1.1x the rest, chance 0.453, rank 17 of 55 | not 1.5x the rest of the game | [built-in ping](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Elathain's Soulraid | forced_movement | 1/32 cards (3%), 0.3x the rest, chance 0.959, rank 49 of 55 | not 1.5x the rest of the game | [push mechanic](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Elathain's Soulraid | revive | 0/32 cards (0%), 0.0x the rest, chance 1.000, rank 10 of 55 | no card of the faction has it | [resurrection](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | The Grymwatch | revive | 0/31 cards (0%), 0.0x the rest, chance 1.000, rank 10 of 55 | no card of the faction has it | [resurrection](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Ylthari's Guardians | movement | 2/32 cards (6%), 1.3x the rest, chance 0.455, rank 17 of 55 | not 1.5x the rest of the game | [teleport](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Ylthari's Guardians | draw | 0/32 cards (0%), 0.0x the rest, chance 1.000, rank 18 of 55 | no card of the faction has it | [built-in card draw](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Hexbane's Hunters | ranged | 2/32 cards (6%), 1.6x the rest, chance 0.359, rank 11 of 55 | could be chance (5%) | [ranged options](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✓ | signature | Hexbane's Hunters | ping | 8/32 cards (25%), 1.8x the rest, chance 0.062, rank 2 of 55 |  | [chip damage](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Myari's Purifiers | advantage | 6/32 cards (19%), 1.0x the rest, chance 0.598, rank 22 of 55 | not 1.5x the rest of the game | [rerolls](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✓ | signature | Thundrik's Profiteers | ranged | 6/32 cards (19%), 5.0x the rest, chance 0.001, rank 1 of 55 |  | [ranged attacks](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Morgok's Krushas | counter_spell | 0/32 cards (0%), 0.0x the rest, chance 1.000, rank 4 of 55 | no card of the faction has it | [counterspell](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Blackpowder's Buccaneers | ranged | 1/31 cards (3%), 0.8x the rest, chance 0.712, rank 21 of 55 | not 1.5x the rest of the game | [two-damage ranged option](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Da Kunnin' Krew | forced_movement | 2/32 cards (6%), 0.7x the rest, chance 0.820, rank 38 of 55 | not 1.5x the rest of the game | [built-in push](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | signature | Da Kunnin' Krew | ranged | 2/32 cards (6%), 1.6x the rest, chance 0.359, rank 11 of 55 | could be chance (5%) | [range-2+ attacks](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Thorns of the Briar Queen | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [swarm aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Thorns of the Briar Queen | positional | under 1.5x the other factions | recipe not 1.5x the other factions | [board control](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | The Exiled Dead | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [swarm aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | The Exiled Dead | objectives | under 1.5x the other factions | recipe not 1.5x the other factions | [token control](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Mollog's Mob | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [big-model aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Zarbag's Gitz | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [swarm aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Zarbag's Gitz | positional | under 1.5x the other factions | recipe not 1.5x the other factions | [board control](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Hrothgorn's Mantrappers | fortress | under 1.5x the other factions | recipe not 1.5x the other factions | [defensive counterpunch](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Rippa's Snarlfangs | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [invading aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Skittershank's Clawpack | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [invading aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Gnarlspirit Pack | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [fast aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | The Wurmspat | disruption | under 1.5x the other factions | recipe not 1.5x the other factions | [denial](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Xandire's Truthseekers | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [invading aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | The Starblood Stalkers | fortress | under 1.5x the other factions | recipe not 1.5x the other factions | [defensive](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✓ | archetype | The Starblood Stalkers | objectives | recipe score 0.24, 3.3x the other factions, 15 cards |  | [token control](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | The Shadeborn | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [fast aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Elathain's Soulraid | objectives | under 1.5x the other factions | recipe not 1.5x the other factions | [token occupancy](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Sons of Velmorn | objectives | under 1.5x the other factions | recipe not 1.5x the other factions | [token control](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Kainan's Reapers | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [swarm aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Kainan's Reapers | positional | under 1.5x the other factions | recipe not 1.5x the other factions | [board control](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | The Grymwatch | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [swarm aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | The Crimson Court | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [invading aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Ylthari's Guardians | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [fast aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Hexbane's Hunters | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [swarm aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Thundrik's Profiteers | fortress | under 1.5x the other factions | recipe not 1.5x the other factions | [defensive board control](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Thundrik's Profiteers | objectives | under 1.5x the other factions | recipe not 1.5x the other factions | [token holding](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Morgok's Krushas | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [full aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Blackpowder's Buccaneers | aggro_tempo | under 1.5x the other factions | recipe not 1.5x the other factions | [big-model aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Grinkrak's Looncourt | swarm | under 1.5x the other factions | recipe not 1.5x the other factions | [swarm aggression](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✗ | archetype | Khagra's Ravagers | positional | under 1.5x the other factions | recipe not 1.5x the other factions | [board control](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
-| ✓ | archetype | Khagra's Ravagers | objectives | recipe score 0.17, 2.4x the other factions, 15 cards |  | [token control](https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/) |
