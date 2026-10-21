@@ -1,20 +1,24 @@
-archetype	Strength	aggro_tempo	attack the enemy head-on, cutting them down	https://En.UESP.net/wiki/Legends:Attributes
-signature	Intelligence	generate_cards	conjure an Atronach to even the odds	https://En.UESP.net/wiki/Legends:Attributes
-signature	Intelligence	merge_attach	equip a weapon	https://En.UESP.net/wiki/Legends:Attributes
-signature	Intelligence	random_effect	spells with random and unpredictable outcomes	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
-archetype	Intelligence	chaos	a wide assortment of magic and chaos	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
-archetype	Intelligence	spellslinger	cast a spell	https://En.UESP.net/wiki/Legends:Attributes
-signature	Willpower	summon	amassing large armies	https://En.UESP.net/wiki/Legends:Attributes
-signature	Willpower	steal	bending them to your will	https://En.UESP.net/wiki/Legends:Attributes
-archetype	Willpower	swarm	In card games it's known as going wide	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
-archetype	Willpower	control	Willpower has the greatest ability to deal with opposing threats	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
-signature	Agility	deathtouch	thanks to card abilities like Lethal and Pilfer	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
-signature	Agility	movement	shift your creatures from one lane to another	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
-signature	Agility	immunity	cover and movement abilities to sneak past them	https://En.UESP.net/wiki/Legends:Attributes
-signature	Agility	on_attack	thanks to card abilities like Lethal and Pilfer	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
-signature	Endurance	taunt	plays host to a bevy of Guard creatures	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
-signature	Endurance	resource_gain	the ability to increase its Magicka	https://En.UESP.net/wiki/Legends:Attributes
-signature	Endurance	heal	potent healing actions	https://En.UESP.net/wiki/Legends:Attributes
-archetype	Endurance	fortress	plays host to a bevy of Guard creatures	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
-archetype	Endurance	ramp	cards designed to increase your magicka supply	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
-archetype	Endurance	sustain	actions that can heal both player and creature	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+signature	Strength	removal	removes enemies head-on	https://en.uesp.net/wiki/Legends:Attributes
+signature	Intelligence	random_effect	spells with random outcomes	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+signature	Intelligence	generate_cards	conjured Atronachs	https://en.uesp.net/wiki/Legends:Attributes
+signature	Intelligence	merge_attach	weapons	https://en.uesp.net/wiki/Legends:Attributes
+signature	Willpower	board_presence	going wide	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+signature	Willpower	buff	boosting forces with magic	https://en.uesp.net/wiki/Legends:Attributes
+signature	Willpower	steal	bending enemies to your will	https://en.uesp.net/wiki/Legends:Attributes
+signature	Willpower	destroy	destroying enemy creatures	https://en.uesp.net/wiki/Legends:Attributes
+signature	Agility	deathtouch	Lethal	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+signature	Agility	movement	moving creatures between lanes	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+signature	Agility	on_attack	Pilfer	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+signature	Endurance	taunt	Guard	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+signature	Endurance	resource_gain	more magicka	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+signature	Endurance	heal	heals for player and creature	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+signature	Endurance	high_cost	high-cost, high-power creatures	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+archetype	Strength	aggro_tempo	head-on attacks, pure power	https://en.uesp.net/wiki/Legends:Attributes
+archetype	Intelligence	chaos	random, unpredictable spells	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+archetype	Intelligence	spellslinger	trickery and magic, spells	https://en.uesp.net/wiki/Legends:Attributes
+archetype	Willpower	swarm	going wide	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+archetype	Willpower	control	greatest ability to deal with threats	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+archetype	Agility	positional	lane movement	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+archetype	Endurance	fortress	strong guards	https://en.uesp.net/wiki/Legends:Attributes
+archetype	Endurance	ramp	more magicka, high-cost creatures	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
+archetype	Endurance	sustain	healing actions	https://bethesda.net/de-DE/news/beginners-guide-to-attributes-and-classes
