@@ -4,10 +4,9 @@
 # are already in the database; their scripts and data files are removed. One-time fixes of 12 Oct 2026 are in tools/fixes/ (f01-f12);
 # the idempotent ones (f03, f05, f07) are also build steps.
 # Usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]
-#   Without loads: runs every step below on a copy of <in> (tags, links and pairs are re-derived for all entries).
-#   With loads: insert-only (add_games.py). The new games are loaded into a work copy that holds no other game, the steps run
-#   there, and only the new games' rows are inserted into the library; the build stops if any existing row changed. To reload
-#   a game, drop it first (drop_game.py). A pattern-file change reaches older entries only through a run without loads.
+#   One chain (21 Oct 2026): the first step removes every derived tag and pair, so the output depends only on the card data,
+#   the record files and the tools, never on an earlier build. With loads, the new cards are added first, then every step runs
+#   over all games. To reload a game, drop it first (drop_game.py).
 #   Any failed check stops the build.
 set -e
 [ $# -ge 2 ] || { echo "usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]"; exit 2; }
@@ -19,8 +18,10 @@ steps() {   # $1 = db
   D="$1"
   run() { $P "$@"; $P step_log.py "$D" "$(echo "$*" | sed "s#$D##")"; }   # each step, then what it removed (step_log.py)
   run compact_text.py "$D" expand
+  run start_clean.py "$D"   # one chain: the build starts from the card data and the record files
   run concept_tree.py "$D" restore
   run concept_defs.py "$D"
+  run seed_records.py "$D" before
   run general_tags.py "$D"   # first tagging from the general patterns and keyword links (one chain: the build starts from the card data)
   run game_patterns.py "$D" patterns
   run drop_untagged.py "$D"
@@ -38,6 +39,7 @@ steps() {   # $1 = db
   run trigger_pairs.py "$D"
   run regression.py "$D" enforce
   run concept_tree.py "$D" apply
+  run seed_records.py "$D" after
   for f in reviews/*.json reviews_outcome/*.json; do g=$(basename "$f" .json); run apply_review.py "$D" "$g" "$f" new; done   # reviews are in the new ids (fixes/f15)
   run leave_triggers.py "$D"   # leave-play triggers by whose (death_side.py); after the tree move, which knows the new ids
   run regression.py "$D" enforce_new
@@ -55,23 +57,17 @@ steps() {   # $1 = db
   run distinct.py "$D"
 }
 rm -f "$OUT" "$OUT.steps.tsv" "$OUT.work.steps.tsv"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the database is stored without its indexes (indexes.py)
-if [ $# -gt 0 ]; then   # insert-only: the steps run on a work copy holding only the new games; their rows are then added
+if [ $# -gt 0 ]; then   # loads: the new cards go into the library copy, then every step runs over all games (one chain)
   GAMES=$(for a in "$@"; do echo "${a%%=*}"; done | sort -u | tr '\n' ' ')
-  WORK="$OUT.work"; rm -f "$WORK"; cp "$OUT" "$WORK"
-  $P compact_text.py "$WORK" expand
-  $P add_games.py prepare "$WORK" $GAMES
-  for a in "$@"; do $P load_cards.py "$WORK" "${a%%=*}" "${a#*=}"; done
-  steps "$WORK"
   $P compact_text.py "$OUT" expand
-  $P add_games.py copy "$OUT" "$WORK" $GAMES; rm -f "$WORK"
-else
-  steps "$OUT"
+  for a in "$@"; do $P load_cards.py "$OUT" "${a%%=*}" "${a#*=}"; done
+  $P seed_records.py "$OUT" keep $GAMES   # their card-field tags (data_rule) join records/seed_tags.tsv before the clean start
 fi
+steps "$OUT"
 $P step_log.py "$OUT" --done
 $P signature.py "$OUT"
 $P precision.py "$OUT"
 $P finalize.py "$OUT"
-if [ $# -gt 0 ]; then INX="$OUT.in"; rm -f "$INX"; cp "$IN" "$INX"; $P compact_text.py "$INX" expand; $P add_games.py verify "$OUT" "$INX"; rm -f "$INX"; fi
 $P regression.py "$OUT" check
 $P combo_check.py "$OUT"
 $P trigger_pairs.py "$OUT" check
