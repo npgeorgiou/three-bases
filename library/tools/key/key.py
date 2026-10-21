@@ -6,8 +6,6 @@ edited to agree with the library. Prints counts and sampled lines only.
                                       in tools/audit/<game>_judgments.json -> key/<game>/entries.json and batch_NN.txt (50 each)
   key.py check <game> <reader>        quote check of key/<game>/<reader>/batch_NN.json: a tag whose words are not in the entry's
                                       text, or whose concept does not exist, is rejected -> <reader>/clean.json (+ rejected count)
-  key.py disagree <game> [prefix]     entries where readers A and B differ and C has not settled -> key/<game>/<prefix>_NN.txt
-                                      (prefix settle, or covsettle for the coverage round) for the third reader (C)
   key.py credit [<game>...]            keyword credit for cards that name keywords -> key/<game>/key_kw.json (KEY_BUG.md)
   key.py final <game>                 agreed tags + C's decisions (quote-checked) -> key/<game>/key.json
   key.py coverage <game>              concepts on fewer than 5 key entries of the game: candidates found by the concept's typical
@@ -101,21 +99,6 @@ def check(g, r):
 
 def narrow(ks):   # keep the narrowest: drop a concept when a descendant of it is also there
     return {k for k in ks if not (DESC[k] & ks)}
-
-def disagree(g, prefix='settle'):
-    a = check(g, 'A'); b = check(g, 'B'); ents = texts(g); d = gdir(g)
-    done = set(check(g, 'C')) if os.path.isdir(os.path.join(d, 'C')) else set()
-    for f in glob.glob(os.path.join(d, prefix + '_*.txt')): os.remove(f)
-    todo = []
-    for i in sorted((set(a) | set(b)) - done, key=int):
-        ka, kb = narrow({k for k, _ in a.get(i, [])}), narrow({k for k, _ in b.get(i, [])})
-        if ka != kb: todo.append(i)
-    for n in range(0, len(todo), 50):
-        with open(os.path.join(d, f'{prefix}_{n // 50:02d}.txt'), 'w') as fh:
-            for i in todo[n:n + 50]:
-                e = ents[int(i)]
-                fh.write(f"{i} | {e['name']} | {e['text'].replace(chr(10), ' / ')}\n   A: {json.dumps(a.get(i, []), ensure_ascii=False)}\n   B: {json.dumps(b.get(i, []), ensure_ascii=False)}\n")
-    print(g, 'entries read by both', len(set(a) & set(b)), 'disagreements', len(todo), 'settle batches', (len(todo) + 49) // 50)
 
 def final(g):
     if os.path.exists(os.path.join(HERE, g, 'key.json')) and '--force' not in sys.argv:   # key.json is corrected by hand since (death_split.py ...): never overwrite it
@@ -258,7 +241,6 @@ if __name__ == '__main__':
     if cmd == 'defs': defs()
     elif cmd == 'sample': [sample(g) for g in (GAMES if a[0] == 'all' else a)]
     elif cmd == 'check': check(a[0], a[1])
-    elif cmd == 'disagree': disagree(*a)
     elif cmd == 'final': final(a[0])
     elif cmd == 'coverage': coverage(a[0])
     elif cmd == 'credit': [credit(g) for g in (a or GAMES)]

@@ -1,7 +1,7 @@
 # Answer-key bug: keywords named on a card were not tagged (found 19 Oct 2026)
 
 ## What is wrong
-The answer key (`tools/key/<game>/key.json`) was read from each card's own text with the rules in `tools/key/READER.md`:
+The answer key (`tools/key/<game>/key.json`) was read from each card's own text with the reading rules then in use:
 "an entry with no mechanic (... plain stats with nothing else) gets an empty list" and "if the text doesn't say it, it isn't
 there". The readers applied this to cards whose text is only a list of keyword names, and gave them no tags for those keywords.
 
