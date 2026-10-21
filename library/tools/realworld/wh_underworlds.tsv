@@ -1,10 +1,55 @@
-archetype	The Crimson Court	aggro_tempo	Best for When You Just Want To Kill All Your Enemies	https://www.warhammer-community.com/en-gb/articles/ZvLICueF/good-all-rounders-most-killy-or-best-for-pets-a-guide-to-warhammer-underworlds-warbands/
-archetype	Morgok's Krushas	aggro_tempo	the best choices if you want to rush headlong into your enemies	https://www.warhammer-community.com/en-gb/articles/ZvLICueF/good-all-rounders-most-killy-or-best-for-pets-a-guide-to-warhammer-underworlds-warbands/
-archetype	Khagra's Ravagers	aggro_tempo	the best choices if you want to rush headlong into your enemies	https://www.warhammer-community.com/en-gb/articles/ZvLICueF/good-all-rounders-most-killy-or-best-for-pets-a-guide-to-warhammer-underworlds-warbands/
-archetype	Morgwaeth's Blade-coven	aggro_tempo	the best choices if you want to rush headlong into your enemies	https://www.warhammer-community.com/en-gb/articles/ZvLICueF/good-all-rounders-most-killy-or-best-for-pets-a-guide-to-warhammer-underworlds-warbands/
-archetype	Ironsoul's Condemners	aggro_tempo	the best choices if you want to rush headlong into your enemies	https://www.warhammer-community.com/en-gb/articles/ZvLICueF/good-all-rounders-most-killy-or-best-for-pets-a-guide-to-warhammer-underworlds-warbands/
-archetype	Hedkrakka's Madmob	spellslinger	Best for Unleashing Magic	https://www.warhammer-community.com/en-gb/articles/ZvLICueF/good-all-rounders-most-killy-or-best-for-pets-a-guide-to-warhammer-underworlds-warbands/
-archetype	The Wurmspat	spellslinger	Best for Unleashing Magic	https://www.warhammer-community.com/en-gb/articles/ZvLICueF/good-all-rounders-most-killy-or-best-for-pets-a-guide-to-warhammer-underworlds-warbands/
-archetype	The Starblood Stalkers	spellslinger	Best for Unleashing Magic	https://www.warhammer-community.com/en-gb/articles/ZvLICueF/good-all-rounders-most-killy-or-best-for-pets-a-guide-to-warhammer-underworlds-warbands/
-archetype	Myari's Purifiers	spellslinger	Best for Unleashing Magic	https://www.warhammer-community.com/en-gb/articles/ZvLICueF/good-all-rounders-most-killy-or-best-for-pets-a-guide-to-warhammer-underworlds-warbands/
-archetype	Lady Harrow's Mournflight	objectives	pretty handy in a fight AND at claiming objective tokens	https://www.warhammer-community.com/en-gb/articles/ZvLICueF/good-all-rounders-most-killy-or-best-for-pets-a-guide-to-warhammer-underworlds-warbands/
+signature	Sons of Velmorn	revive	resurrection	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Sons of Velmorn	flanking	flanking	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Thorns of the Briar Queen	movement	teleports	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Mollog's Mob	revive	resurrection	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Mollog's Mob	regeneration	leader regeneration	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Hrothgorn's Mantrappers	trap_secret	trap mechanic	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Rippa's Snarlfangs	multi_attack	multiple attacks	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Xandire's Truthseekers	other_death_trigger	benefits from fighter deaths	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	The Starblood Stalkers	advantage	defensive rerolls	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	The Shadeborn	movement	teleports	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	The Shadeborn	ping	built-in ping	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Elathain's Soulraid	forced_movement	push mechanic	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Elathain's Soulraid	revive	resurrection	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	The Grymwatch	revive	resurrection	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Ylthari's Guardians	movement	teleport	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Ylthari's Guardians	draw	built-in card draw	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Hexbane's Hunters	ranged	ranged options	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Hexbane's Hunters	ping	chip damage	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Myari's Purifiers	advantage	rerolls	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Thundrik's Profiteers	ranged	ranged attacks	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Morgok's Krushas	counter_spell	counterspell	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Blackpowder's Buccaneers	ranged	two-damage ranged option	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Da Kunnin' Krew	forced_movement	built-in push	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+signature	Da Kunnin' Krew	ranged	range-2+ attacks	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Thorns of the Briar Queen	swarm	swarm aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Thorns of the Briar Queen	positional	board control	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	The Exiled Dead	swarm	swarm aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	The Exiled Dead	objectives	token control	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Mollog's Mob	aggro_tempo	big-model aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Zarbag's Gitz	swarm	swarm aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Zarbag's Gitz	positional	board control	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Hrothgorn's Mantrappers	fortress	defensive counterpunch	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Rippa's Snarlfangs	aggro_tempo	invading aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Skittershank's Clawpack	aggro_tempo	invading aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Gnarlspirit Pack	aggro_tempo	fast aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	The Wurmspat	disruption	denial	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Xandire's Truthseekers	aggro_tempo	invading aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	The Starblood Stalkers	fortress	defensive	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	The Starblood Stalkers	objectives	token control	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	The Shadeborn	aggro_tempo	fast aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Elathain's Soulraid	objectives	token occupancy	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Sons of Velmorn	objectives	token control	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Kainan's Reapers	swarm	swarm aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Kainan's Reapers	positional	board control	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	The Grymwatch	swarm	swarm aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	The Crimson Court	aggro_tempo	invading aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Ylthari's Guardians	aggro_tempo	fast aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Hexbane's Hunters	swarm	swarm aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Thundrik's Profiteers	fortress	defensive board control	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Thundrik's Profiteers	objectives	token holding	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Morgok's Krushas	aggro_tempo	full aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Blackpowder's Buccaneers	aggro_tempo	big-model aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Grinkrak's Looncourt	swarm	swarm aggression	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Khagra's Ravagers	positional	board control	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
+archetype	Khagra's Ravagers	objectives	token control	https://spentglory.com/2025/08/11/master-list-of-warbands-for-second-edition/
