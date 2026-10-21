@@ -1,18 +1,48 @@
-signature	Xenos - Necrons	revive	revive your lowly Necron Warriors whenever they fall	https://www.wargamer.com/warhammer-40k/factions
-signature	Xenos - Genestealer Cults	revive	there's a very good chance that they'll return to play	https://www.wargamer.com/warhammer-40k/factions
-signature	Imperium - Adepta Sororitas	resource_banking	'Miracle Dice' allow you to store up useful dice results	https://www.wargamer.com/warhammer-40k/factions
-signature	Xenos - Leagues of Votann	mark_target	easier for your entire force to hit and to wound that enemy	https://www.wargamer.com/warhammer-40k/factions
-signature	Chaos - Death Guard	debuff	a debilitating aura of plague ... weakens their enemies	https://www.wargamer.com/warhammer-40k/factions
-signature	Imperium - Adeptus Mechanicus	modal_choice	you need to deploy the right tool at the right moment	https://www.wargamer.com/warhammer-40k/factions
-archetype	Xenos - Orks	swarm	an unstoppable green tide of lowly, axe-wielding Boyz	https://www.wargamer.com/warhammer-40k/factions
-archetype	Xenos - Tyranids	swarm	swarms of organic gun-toting Termagants and razor-armed Hormagaunts	https://www.wargamer.com/warhammer-40k/factions
-archetype	Xenos - Necrons	fortress	Necrons are a slow but resilient force	https://www.wargamer.com/warhammer-40k/factions
-archetype	Chaos - Death Guard	fortress	Death Guard are slow, hardy	https://www.wargamer.com/warhammer-40k/factions
-archetype	Imperium - Adeptus Custodes	fortress	the most powerful defensive wargear in the Imperium	https://www.wargamer.com/warhammer-40k/factions
-archetype	Xenos - T'au Empire	positional	extremely maneuverable battlesuits, light vehicles, and transports	https://www.wargamer.com/warhammer-40k/factions
-archetype	Chaos - Emperor's Children	aggro_tempo	all about speed, unbridled aggression	https://www.wargamer.com/warhammer-40k/factions
-archetype	Chaos - Thousand Sons	spellslinger	Their biggest strategic strength is in their psychic abilities	https://www.wargamer.com/warhammer-40k/factions
-combo	Impulsor	Hellblaster Squad	FIRING DECK 6 to let you shoot with whatever's inside	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
-combo	Impulsor	Sternguard Veteran Squad	FIRING DECK 6 to let you shoot with whatever's inside	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
-combo	Judiciar	Bladeguard Veteran Squad	Bladeguard are probably the closest to decent, particularly with a Judiciar	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
-combo	Ghazghkull Thraka	Meganobz	Ghaz can attach to	https://www.belloflostsouls.net/2024/08/warhammer-40k-top-5-must-have-units-for-10ths-hot-armies.html
+signature	Imperium - Adeptus Astartes - Space Marines	mark_target	Oath of Moment	https://wahapedia.ru/wh40k10ed/factions/space-marines/
+signature	Imperium - Adeptus Astartes - Space Marines	flexibility	flexible, many units	https://www.wargamer.com/warhammer-40k/factions
+signature	Imperium - Adeptus Astartes - Black Templars	modal_choice	four Templar Vows	https://www.wargamer.com/warhammer-40k/factions
+signature	Imperium - Adeptus Astartes - Space Wolves	quests	Sagas completed for power	https://www.wargamer.com/warhammer-40k/factions
+signature	Imperium - Grey Knights	reserve_bench	Gate of Infinity to Strategic Reserves	https://wahapedia.ru/wh40k10ed/factions/grey-knights/
+signature	Imperium - Adepta Sororitas	resource_banking	Miracle dice stored for later	https://www.wargamer.com/warhammer-40k/factions
+signature	Imperium - Adepta Sororitas	other_death_trigger	Miracle die when a friendly unit dies	https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas/
+signature	Imperium - Adeptus Custodes	stances	Martial Ka'tah stances	https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes/
+signature	Imperium - Adeptus Custodes	tank	tough, top defensive wargear	https://www.wargamer.com/warhammer-40k/factions
+signature	Imperium - Adeptus Mechanicus	modal_choice	Doctrina Imperatives each round	https://wahapedia.ru/wh40k10ed/factions/adeptus-mechanicus/
+signature	Imperium - Adeptus Mechanicus	buff	stackable buffs	https://www.wargamer.com/warhammer-40k/factions
+signature	Chaos - Chaos Space Marines	life_payment	Dark Pacts cost mortal wounds on a fail	https://wahapedia.ru/wh40k10ed/factions/chaos-space-marines/
+signature	Chaos - Death Guard	debuff	plague aura weakens enemies	https://www.wargamer.com/warhammer-40k/factions
+signature	Chaos - Death Guard	aura	Nurgle's Gift aura	https://wahapedia.ru/wh40k10ed/factions/death-guard/
+signature	Chaos - Emperor's Children	attack_now	shoot and charge after Advancing	https://wahapedia.ru/wh40k10ed/factions/emperor-s-children/
+signature	Aeldari	movement	Battle Focus extra movement	https://wahapedia.ru/wh40k10ed/factions/aeldari/
+signature	Aeldari	resource_banking	Strands of Fate dice replace rolls	https://wahapedia.ru/wh40k10ed/factions/aeldari/
+signature	Xenos - Necrons	regeneration	reanimate wounds each Command phase	https://wahapedia.ru/wh40k10ed/factions/necrons/
+signature	Xenos - Necrons	revive	returning destroyed models	https://wahapedia.ru/wh40k10ed/factions/necrons/
+signature	Xenos - Orks	temporary_buff	Waaagh! for one round	https://wahapedia.ru/wh40k10ed/factions/orks/
+signature	Xenos - Orks	once_per_game	Waaagh! once per battle	https://wahapedia.ru/wh40k10ed/factions/orks/
+signature	Xenos - Orks	board_presence	green tide, strong in numbers	https://www.wargamer.com/warhammer-40k/factions
+signature	Xenos - T'au Empire	mark_target	Spotted targets	https://wahapedia.ru/wh40k10ed/factions/t-au-empire/
+signature	Xenos - T'au Empire	ranged	superior weapons	https://www.wargamer.com/warhammer-40k/factions
+signature	Xenos - Tyranids	aura	Synapse range bonuses	https://wahapedia.ru/wh40k10ed/factions/tyranids/
+signature	Xenos - Tyranids	stress_morale	Shadow in the Warp Battle-shock	https://wahapedia.ru/wh40k10ed/factions/tyranids/
+signature	Xenos - Genestealer Cults	revive	destroyed units come back	https://wahapedia.ru/wh40k10ed/factions/genestealer-cults/
+signature	Xenos - Leagues of Votann	zone_control	bonuses near and on objectives	https://wahapedia.ru/wh40k10ed/factions/leagues-of-votann/
+archetype	Imperium - Adeptus Astartes - Black Templars	aggro_tempo	ultra-aggressive melee	https://www.wargamer.com/warhammer-40k/factions
+archetype	Imperium - Adeptus Astartes - Blood Angels	aggro_tempo	jump pack assaults	https://www.wargamer.com/warhammer-40k/factions
+archetype	Imperium - Adeptus Custodes	fortress	tough, defensive wargear	https://www.wargamer.com/warhammer-40k/factions
+archetype	Chaos - Death Guard	fortress	slow and hardy	https://www.wargamer.com/warhammer-40k/factions
+archetype	Chaos - Thousand Sons	spellslinger	psychic and sorcerous	https://www.wargamer.com/warhammer-40k/factions
+archetype	Chaos - World Eaters	aggro_tempo	fast, ultra-violent melee	https://www.wargamer.com/warhammer-40k/factions
+archetype	Chaos - Emperor's Children	aggro_tempo	fast aggressive melee	https://www.wargamer.com/warhammer-40k/factions
+archetype	Xenos - Necrons	fortress	slow but resilient	https://www.wargamer.com/warhammer-40k/factions
+archetype	Xenos - Orks	swarm	green tide	https://www.wargamer.com/warhammer-40k/factions
+archetype	Xenos - T'au Empire	positional	dynamic and manoeuvrable	https://www.wargamer.com/warhammer-40k/factions
+archetype	Xenos - Tyranids	swarm	huge swarms	https://www.wargamer.com/warhammer-40k/factions
+archetype	Xenos - Genestealer Cults	swarm	relentless horde	https://www.wargamer.com/warhammer-40k/factions
+combo	Judiciar	Bladeguard Veteran Squad	decent in melee with a Judiciar	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Impulsor	Sternguard Veteran Squad	Firing Deck	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Impulsor	Hellblaster Squad	Firing Deck	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Storm Speeder Thunderstrike	Eradicator Squad	+1 to wound on vehicles and monsters	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Incursor Squad	Whirlwind	+1 to hit helps indirect fire	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Drop Pod	Devastator Squad	delivers them into shooting position	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Captain	Company Heroes	they need a Captain	https://www.tabletopbattles.com/10th-edition-competitive-faction-focus-space-marines
+combo	Ghazghkull Thraka	Meganobz	Ghaz leads Meganobz	https://www.belloflostsouls.net/2024/08/warhammer-40k-top-5-must-have-units-for-10ths-hot-armies.html
