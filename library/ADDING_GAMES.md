@@ -107,7 +107,7 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 1. All build checks must pass: regression, combos, trigger pairs, query tests, realworld.
 2. Add at least 30 real-world cases with source URLs to `tools/realworld/<game>.tsv` (signatures, archetypes, combos, splashes;
    card names exactly as the library stores them). They are the real test: run `realworld_why.py` and fix what misses before finishing.
-3. Check the database size. GitHub refuses files over 100 MB; the database is stored compact (`compact_text.py`) and without its indexes (`indexes.py`), about 70 MB on 20 Oct 2026.
+3. Check the database size. GitHub refuses files over 100 MB; the database is stored compact (`compact_text.py`) and without its indexes (`indexes.py`), about 59 MB on 21 Oct 2026 (`indexes.py` also keeps the frozen base only as its differences from the output).
 4. Copy the build over `three-bases-library.sqlite`, then commit and push after each step together with its progress files, keys and decisions.
 5. Update `README.md`. Write a short handoff that says what is done, what the build applies, what is left, and the exact commands.
 
