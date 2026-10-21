@@ -1,16 +1,17 @@
-signature	Prime	forced_movement	Punch an adjacent tile, damaging and pushing it.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Prime	multi_target_attack	Fire a piercing beam that decreases in damage	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	forced_movement	Pull target towards you 1 tile.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	swap	Swap places with a nearby tile.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	shield	Shield tiles from damage.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	disable	Fire a beam that Freezes everything in a line.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Ranged	ranged	Powerful artillery strike, damaging a single tile	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Brute	movement	Fly in a line and slam into the target	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Brute	friendly_fire	hurts itself without a good way to heal	https://www.giantbomb.com/profile/majormitch/blog/thoughts-on-into-the-breachs-squads/116986/
-archetype	Science	positional	Swap places with a nearby tile.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-archetype	Science	fortress	Shield adjacent ally or Building.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-splash	Brute	forced_movement	Fires a powerful projectile that damages and pushes its target.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-splash	Brute	shield	Applies a Shield to buildings it passes through.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-splash	Science	damage_over_time	Fire a beam that applies Fire in a line.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-splash	Prime	damage_over_time	Push target tile and light tiles on Fire.	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-combo	Electric Whip	Grappling Hook	use thrown rocks and the hook tank to create chains for your lightning attacks	https://www.gameskinny.com/i7374/into-the-breach-squads-guide
+signature	Prime	damage	punches and strikes	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Prime	forced_movement	strikes that push	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Brute	damage	projectiles and charges	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Brute	forced_movement	shots that push	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Ranged	ranged	artillery	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Ranged	forced_movement	artillery that pushes	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Science	forced_movement	pull and push	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Science	swap	swap	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Science	shield	shields	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Science	disable	smoke and freeze	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+signature	Science	damage_over_time	acid and fire	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+archetype	Science	positional	utility: pull, push, swap	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+splash	Prime	shield	only Spartan Shield	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+splash	Prime	damage_over_time	only Flame Thrower	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+splash	Brute	shield	Phase Cannon, Grappling Hook	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+splash	Brute	disable	only Aerial Bombs' smoke	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+combo	Electric Whip	Grappling Hook	the Hook extends the chain	https://www.giantbomb.com/profile/majormitch/blog/thoughts-on-into-the-breachs-squads/116986/
