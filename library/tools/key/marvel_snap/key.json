@@ -94,7 +94,10 @@
 "highest-Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795414": {
 "tags": [
@@ -107,7 +110,10 @@
 "Shuffle 4 Ancient Arcana into your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795395
+]
 },
 "795416": {
 "tags": [
@@ -124,7 +130,10 @@
 "random"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795418": {
 "tags": [
@@ -137,7 +146,10 @@
 "Set the Power of all cards in your deck to 3"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795419": {
 "tags": [
@@ -188,7 +200,10 @@
 "4-Cost card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795396
+]
 },
 "795422": {
 "tags": [
@@ -205,7 +220,10 @@
 "for each card in play afflicted with negative Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795423": {
 "tags": [
@@ -218,7 +236,10 @@
 "Remove the text from all unrevealed enemy characters here"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795424": {
 "tags": [
@@ -235,7 +256,10 @@
 "top card of your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795425": {
 "tags": [
@@ -265,7 +289,10 @@
 "+4 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795434": {
 "tags": [
@@ -290,7 +317,10 @@
 "at any location"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795435": {
 "tags": [
@@ -307,7 +337,10 @@
 "for each time one of your cards moved this game"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795439": {
 "tags": [
@@ -328,7 +361,10 @@
 "+1 Max Energy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795395
+]
 },
 "795443": {
 "tags": [
@@ -353,7 +389,10 @@
 "as the turn starts"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795392
+]
 },
 "795448": {
 "tags": [
@@ -370,7 +409,10 @@
 "at each other location"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795392
+]
 },
 "795455": {
 "tags": [
@@ -387,7 +429,10 @@
 "They cost 1 less next turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795457": {
 "tags": [
@@ -400,7 +445,10 @@
 "Shuffle Stormbreaker into your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795458": {
 "tags": [
@@ -430,7 +478,10 @@
 "Until the end of next turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795392
+]
 },
 "795466": {
 "tags": [
@@ -445,9 +496,23 @@
 [
 "hand_position",
 "rightmost card"
+],
+[
+"discard",
+"Discard"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"discard",
+"Discard"
+]
+],
+"keywords": [
+795390,
+795404
+]
 },
 "795467": {
 "tags": [
@@ -468,7 +533,10 @@
 "costs the same or more"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795468": {
 "tags": [
@@ -489,7 +557,10 @@
 "13 or more"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795471": {
 "tags": [
@@ -514,7 +585,10 @@
 "randomly"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795392
+]
 },
 "795477": {
 "tags": [],
@@ -535,7 +609,10 @@
 "1 and 6-Cost cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795481": {
 "tags": [
@@ -552,7 +629,10 @@
 "Afflict the highest-Cost enemy card with -7 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795398
+]
 },
 "795482": {
 "tags": [
@@ -571,9 +651,23 @@
 [
 "destroy",
 "destroy it with a Rock"
+],
+[
+"movement",
+"Move"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Move"
+]
+],
+"keywords": [
+795390,
+795405
+]
 },
 "795486": {
 "tags": [
@@ -618,9 +712,22 @@
 [
 "tribal",
 "Avengers"
+],
+[
+"passive",
+"Ongoing"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"passive",
+"Ongoing"
+]
+],
+"keywords": [
+795391
+]
 },
 "795492": {
 "tags": [
@@ -633,7 +740,10 @@
 "Steal 1 Power from each card in your opponent's deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795496": {
 "tags": [
@@ -646,7 +756,10 @@
 "Copy the text of another card here"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795498": {
 "tags": [
@@ -676,7 +789,10 @@
 "Give your Champion +8 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795504": {
 "tags": [
@@ -689,7 +805,10 @@
 "Can't be destroyed, moved, or have its Power reduced"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795506": {
 "tags": [
@@ -704,9 +823,23 @@
 [
 "resource_gain",
 "+1 Max Energy"
+],
+[
+"discard",
+"Discard"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"discard",
+"Discard"
+]
+],
+"keywords": [
+795390,
+795404
+]
 },
 "795510": {
 "tags": [
@@ -723,7 +856,10 @@
 "front-row"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795512": {
 "tags": [
@@ -740,7 +876,10 @@
 "Each player"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795514": {
 "tags": [],
@@ -778,7 +917,10 @@
 "random locations"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795528": {
 "tags": [
@@ -795,7 +937,10 @@
 "each other location"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795531": {
 "tags": [
@@ -812,7 +957,10 @@
 "for each card in your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "795532": {
 "tags": [
@@ -829,7 +977,10 @@
 "additional -2 Power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "795561": {
 "tags": [
@@ -850,7 +1001,11 @@
 "You can only play 1 card a turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390,
+795391
+]
 },
 "795563": {
 "tags": [
@@ -863,7 +1018,10 @@
 "gets revived here"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795568": {
 "tags": [
@@ -876,7 +1034,10 @@
 "Steal 1 bonus Energy from your opponent"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795394
+]
 },
 "795570": {
 "tags": [
@@ -889,7 +1050,10 @@
 "Put a created card from your hand here"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795393
+]
 },
 "795573": {
 "tags": [
@@ -906,7 +1070,10 @@
 "+2 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795393
+]
 },
 "795577": {
 "tags": [
@@ -917,9 +1084,23 @@
 [
 "stat_loss",
 "-1 Power"
+],
+[
+"stat_loss",
+"Afflict"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_loss",
+"Afflict"
+]
+],
+"keywords": [
+795390,
+795407
+]
 },
 "795580": {
 "tags": [
@@ -936,7 +1117,10 @@
 "1-Cost"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795581": {
 "tags": [
@@ -953,7 +1137,10 @@
 "move them to the right"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795392
+]
 },
 "795586": {
 "tags": [
@@ -970,7 +1157,10 @@
 "front-row"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795590": {
 "tags": [
@@ -987,7 +1177,10 @@
 "top card of your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795592": {
 "tags": [
@@ -1004,7 +1197,10 @@
 "Adjacent locations"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795597": {
 "tags": [
@@ -1023,9 +1219,23 @@
 [
 "condition_count",
 "for each moved"
+],
+[
+"movement",
+"Move"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Move"
+]
+],
+"keywords": [
+795390,
+795405
+]
 },
 "795600": {
 "tags": [
@@ -1046,7 +1256,10 @@
 "destroy all other locations"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795601": {
 "tags": [
@@ -1067,7 +1280,10 @@
 "if you're winning my Herald's location"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795393
+]
 },
 "795604": {
 "tags": [
@@ -1088,7 +1304,10 @@
 "destroy up to 3 total Cost of enemy cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795398
+]
 },
 "795608": {
 "tags": [
@@ -1101,7 +1320,10 @@
 "Remove the abilities from all End of Turn cards here"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795613": {
 "tags": [
@@ -1126,7 +1348,10 @@
 "+2 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795615": {
 "tags": [
@@ -1160,7 +1385,10 @@
 "this turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795621": {
 "tags": [
@@ -1173,7 +1401,10 @@
 "created cards cost 1 more"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795623": {
 "tags": [
@@ -1192,9 +1423,23 @@
 [
 "repeat_trigger",
 "Its ability happens again"
+],
+[
+"movement",
+"Move"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Move"
+]
+],
+"keywords": [
+795390,
+795405
+]
 },
 "795624": {
 "tags": [
@@ -1211,7 +1456,10 @@
 "move it to this location"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795629": {
 "tags": [
@@ -1237,7 +1485,10 @@
 "this gains +3 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795393
+]
 },
 "795636": {
 "tags": [
@@ -1254,7 +1505,10 @@
 "give all cards in your hand +1 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795396
+]
 },
 "795638": {
 "tags": [
@@ -1275,7 +1529,10 @@
 "For each different Cost"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795639": {
 "tags": [
@@ -1286,9 +1543,22 @@
 [
 "random_effect",
 "random cards"
+],
+[
+"discard",
+"When Discarded"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"discard",
+"When Discarded"
+]
+],
+"keywords": [
+795397
+]
 },
 "795640": {
 "tags": [
@@ -1299,9 +1569,23 @@
 [
 "discard",
 "Discard a card from your hand"
+],
+[
+"discard",
+"Discard"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"discard",
+"Discard"
+]
+],
+"keywords": [
+795392,
+795404
+]
 },
 "795641": {
 "tags": [
@@ -1324,9 +1608,23 @@
 [
 "stat_condition",
 "with 0 Power or less"
+],
+[
+"stat_loss",
+"Afflict"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_loss",
+"Afflict"
+]
+],
+"keywords": [
+795393,
+795407
+]
 },
 "795642": {
 "tags": [
@@ -1343,7 +1641,10 @@
 "Next turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795643": {
 "tags": [
@@ -1356,7 +1657,10 @@
 "Execute all 4 of H.E.R.B.I.E.'s abilities here"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795649": {
 "tags": [
@@ -1373,7 +1677,10 @@
 "cards with no abilities"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795395
+]
 },
 "795653": {
 "tags": [
@@ -1384,9 +1691,22 @@
 [
 "deck_position",
 "top card of your deck"
+],
+[
+"passive",
+"Ongoing"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"passive",
+"Ongoing"
+]
+],
+"keywords": [
+795391
+]
 },
 "795660": {
 "tags": [
@@ -1411,7 +1731,10 @@
 "if your side here is full"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795393
+]
 },
 "795662": {
 "tags": [
@@ -1424,7 +1747,10 @@
 "This moves if a player Snapped"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795393
+]
 },
 "795665": {
 "tags": [
@@ -1445,7 +1771,10 @@
 "your side is full here"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795394
+]
 },
 "795666": {
 "tags": [
@@ -1462,7 +1791,10 @@
 "+1 Cost"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795667": {
 "tags": [
@@ -1496,7 +1828,10 @@
 "highest-Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795671": {
 "tags": [
@@ -1517,7 +1852,10 @@
 "front-row"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795673": {
 "tags": [
@@ -1530,7 +1868,10 @@
 "Cards you play here are not revealed until the game ends"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795681": {
 "tags": [
@@ -1563,7 +1904,10 @@
 "give it -3 Cost"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795684": {
 "tags": [
@@ -1572,7 +1916,10 @@
 "Ongoing"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795686": {
 "tags": [
@@ -1593,7 +1940,10 @@
 "random characters"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795687": {
 "tags": [
@@ -1610,7 +1960,10 @@
 "cost 0"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795697": {
 "tags": [],
@@ -1640,7 +1993,10 @@
 "+6 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795398
+]
 },
 "795706": {
 "tags": [
@@ -1657,7 +2013,10 @@
 "1, 2, and 3-Cost characters"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795712": {
 "tags": [
@@ -1670,7 +2029,10 @@
 "Draw a created card from your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795392
+]
 },
 "795713": {
 "tags": [
@@ -1700,7 +2062,10 @@
 "When this returns to your hand, +1 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795394
+]
 },
 "795716": {
 "tags": [
@@ -1725,7 +2090,10 @@
 "different Cost among their cards in play"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795719": {
 "tags": [
@@ -1738,7 +2106,10 @@
 "Shuffle a Rock into your opponent's deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795720": {
 "tags": [
@@ -1767,7 +2138,10 @@
 "+4 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795722": {
 "tags": [
@@ -1786,9 +2160,23 @@
 [
 "resource_banking",
 "for each of your unspent Energy"
+],
+[
+"stat_loss",
+"Afflict"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_loss",
+"Afflict"
+]
+],
+"keywords": [
+795390,
+795407
+]
 },
 "795725": {
 "tags": [
@@ -1803,9 +2191,23 @@
 [
 "cost_condition",
 "costs the most"
+],
+[
+"discard",
+"Discard"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"discard",
+"Discard"
+]
+],
+"keywords": [
+795390,
+795404
+]
 },
 "795727": {
 "tags": [
@@ -1816,9 +2218,23 @@
 [
 "stat_loss",
 "Afflict an enemy card here with negative Power"
+],
+[
+"stat_loss",
+"Afflict"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_loss",
+"Afflict"
+]
+],
+"keywords": [
+795392,
+795407
+]
 },
 "795730": {
 "tags": [
@@ -1839,7 +2255,10 @@
 "6-Cost cards"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795735": {
 "tags": [
@@ -1856,7 +2275,10 @@
 "-2 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795393
+]
 },
 "795737": {
 "tags": [
@@ -1873,7 +2295,10 @@
 "Give those cards -1 Cost"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795743": {
 "tags": [
@@ -1890,7 +2315,10 @@
 "if your hand is full"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795394
+]
 },
 "795750": {
 "tags": [
@@ -1915,7 +2343,10 @@
 "-1 Cost"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795751": {
 "tags": [
@@ -1932,7 +2363,10 @@
 "Guardians"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795753": {
 "tags": [
@@ -1957,7 +2391,10 @@
 "don't reveal it until the game ends"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795759": {
 "tags": [
@@ -2007,7 +2444,10 @@
 "add a copy of this to your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795764": {
 "tags": [
@@ -2020,7 +2460,10 @@
 "Add 2 Sentinel to your opponent's hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795765": {
 "tags": [
@@ -2043,9 +2486,23 @@
 [
 "board_presence",
 "either side here is full"
+],
+[
+"movement",
+"Move"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Move"
+]
+],
+"keywords": [
+795390,
+795405
+]
 },
 "795769": {
 "tags": [
@@ -2058,7 +2515,10 @@
 "Your opponent draws 2 cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795771": {
 "tags": [
@@ -2088,7 +2548,10 @@
 "Enemy cards here can't move"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795775": {
 "tags": [
@@ -2131,7 +2594,10 @@
 "Stones"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795786": {
 "tags": [
@@ -2144,7 +2610,10 @@
 "Add a Sinister Clone here"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795788": {
 "tags": [
@@ -2157,7 +2626,10 @@
 "+7 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795792": {
 "tags": [
@@ -2170,7 +2642,10 @@
 "Get a copy of your opening hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795396
+]
 },
 "795794": {
 "tags": [
@@ -2195,7 +2670,10 @@
 "Set their Power to the banished card's Cost"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795797": {
 "tags": [
@@ -2221,7 +2699,10 @@
 "Copy your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795802": {
 "tags": [
@@ -2238,7 +2719,10 @@
 "for each time you discarded a card this game"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "795804": {
 "tags": [
@@ -2255,7 +2739,10 @@
 "+3 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795805": {
 "tags": [
@@ -2276,7 +2763,10 @@
 "a card in your opponent's hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795806": {
 "tags": [
@@ -2301,7 +2791,10 @@
 "+2 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795810": {
 "tags": [
@@ -2322,7 +2815,10 @@
 "for each location"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "795814": {
 "tags": [
@@ -2339,7 +2835,10 @@
 "Brotherhood cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795816": {
 "tags": [
@@ -2356,7 +2855,10 @@
 "this is your only card here"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795817": {
 "tags": [
@@ -2377,7 +2879,10 @@
 "another location"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795818": {
 "tags": [
@@ -2407,7 +2912,10 @@
 "After you play your next card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795829": {
 "tags": [
@@ -2424,7 +2932,10 @@
 "After you play your next card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795838": {
 "tags": [
@@ -2437,7 +2948,10 @@
 "+1 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795396
+]
 },
 "795839": {
 "tags": [
@@ -2467,7 +2981,10 @@
 "Give every card in your deck +1 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795846": {
 "tags": [
@@ -2480,7 +2997,10 @@
 "apply an additional time"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795847": {
 "tags": [],
@@ -2495,9 +3015,22 @@
 [
 "random_effect",
 "random cards"
+],
+[
+"movement",
+"Move"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Move"
+]
+],
+"keywords": [
+795405
+]
 },
 "795853": {
 "tags": [
@@ -2531,7 +3064,10 @@
 "+2 Power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "795863": {
 "tags": [
@@ -2556,7 +3092,10 @@
 "next turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795864": {
 "tags": [
@@ -2573,7 +3112,10 @@
 "-1 Cost or +2 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795865": {
 "tags": [
@@ -2594,7 +3136,10 @@
 "It gains Moveable"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795870": {
 "tags": [
@@ -2607,7 +3152,10 @@
 "Put a card from your hand here"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795398
+]
 },
 "795871": {
 "tags": [
@@ -2624,7 +3172,10 @@
 "lowest-Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795873": {
 "tags": [
@@ -2641,7 +3192,10 @@
 "Thanos has +10 Power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "795877": {
 "tags": [],
@@ -2656,9 +3210,22 @@
 [
 "stat_condition",
 "lowest-Power"
+],
+[
+"discard",
+"When Discarded"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"discard",
+"When Discarded"
+]
+],
+"keywords": [
+795397
+]
 },
 "795886": {
 "tags": [
@@ -2675,7 +3242,10 @@
 "other two locations"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795888": {
 "tags": [
@@ -2697,7 +3267,10 @@
 "created cards cost 1 less"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795891": {
 "tags": [
@@ -2718,7 +3291,10 @@
 "a random card in your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795899": {
 "tags": [
@@ -2731,7 +3307,10 @@
 "Has 3 random Ongoing abilities"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795901": {
 "tags": [
@@ -2748,7 +3327,10 @@
 "Enemy cards here have +2 Power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "795902": {
 "tags": [
@@ -2769,7 +3351,10 @@
 "Give your hand +1 Power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795913": {
 "tags": [
@@ -2782,7 +3367,10 @@
 "Shuffle 2 Rocks into your opponent's deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795914": {
 "tags": [
@@ -2795,7 +3383,10 @@
 "Steal the text from an enemy Ongoing card here"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795918": {
 "tags": [
@@ -2812,7 +3403,10 @@
 "for each different Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795919": {
 "tags": [
@@ -2837,7 +3431,11 @@
 "Moveable"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390,
+795391
+]
 },
 "795920": {
 "tags": [
@@ -2862,7 +3460,10 @@
 "Next turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795921": {
 "tags": [
@@ -2887,7 +3488,10 @@
 "front-Row"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795923": {
 "tags": [
@@ -2900,7 +3504,10 @@
 "Remove the abilities from all Ongoing cards in your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795930": {
 "tags": [
@@ -2911,9 +3518,22 @@
 [
 "stat_gain",
 "give +2 Power to itself and one of your cards in play"
+],
+[
+"discard",
+"When Discarded"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"discard",
+"When Discarded"
+]
+],
+"keywords": [
+795397
+]
 },
 "795934": {
 "tags": [
@@ -2945,9 +3565,23 @@
 [
 "symmetric_effect",
 "each player's hand"
+],
+[
+"stat_loss",
+"Afflict"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_loss",
+"Afflict"
+]
+],
+"keywords": [
+795390,
+795407
+]
 },
 "795937": {
 "tags": [
@@ -2962,9 +3596,22 @@
 [
 "null_body",
 "3 cards with no abilities"
+],
+[
+"quests",
+"Objective"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"quests",
+"Objective"
+]
+],
+"keywords": [
+795398
+]
 },
 "795939": {
 "tags": [
@@ -2977,7 +3624,10 @@
 "Add another Sentinel to your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795940": {
 "tags": [
@@ -2998,7 +3648,10 @@
 "right location"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795942": {
 "tags": [
@@ -3011,7 +3664,10 @@
 "cost 1 less"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795943": {
 "tags": [
@@ -3032,7 +3688,10 @@
 "cost 1 more"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795947": {
 "tags": [
@@ -3049,7 +3708,11 @@
 "On Reveal"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390,
+795395
+]
 },
 "795949": {
 "tags": [
@@ -3096,7 +3759,10 @@
 "lowest-Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795960": {
 "tags": [
@@ -3117,7 +3783,10 @@
 "merge them into this"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795395
+]
 },
 "795963": {
 "tags": [
@@ -3163,7 +3832,11 @@
 "Thanos can't be discarded or destroyed"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390,
+795391
+]
 },
 "795970": {
 "tags": [
@@ -3178,9 +3851,31 @@
 [
 "movement",
 "It's Moveable next turn"
+],
+[
+"merge_attach",
+"Merge"
+],
+[
+"stat_gain",
+"Merge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Merge"
+],
+[
+"stat_gain",
+"Merge"
+]
+],
+"keywords": [
+795390,
+795406
+]
 },
 "795972": {
 "tags": [
@@ -3201,7 +3896,11 @@
 "Nothing can stop you from playing Thanos"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390,
+795391
+]
 },
 "795974": {
 "tags": [
@@ -3214,7 +3913,10 @@
 "+2 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795975": {
 "tags": [
@@ -3231,7 +3933,10 @@
 "for each turn in which you spent all your Energy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795391
+]
 },
 "795976": {
 "tags": [
@@ -3252,7 +3957,10 @@
 "for each Moveable card you've played"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795977": {
 "tags": [
@@ -3273,7 +3981,10 @@
 "in your opponent's hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795392
+]
 },
 "795984": {
 "tags": [
@@ -3288,9 +3999,23 @@
 [
 "scope_multi",
 "all enemy cards here"
+],
+[
+"stat_loss",
+"Afflict"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_loss",
+"Afflict"
+]
+],
+"keywords": [
+795390,
+795407
+]
 },
 "795986": {
 "tags": [
@@ -3307,7 +4032,10 @@
 "each other location"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795988": {
 "tags": [
@@ -3332,7 +4060,10 @@
 "unspent Energy"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795990": {
 "tags": [
@@ -3345,7 +4076,10 @@
 "Cards can't be added to locations except by playing or moving them"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "795991": {
 "tags": [
@@ -3366,7 +4100,10 @@
 "left location"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "795993": {
 "tags": [
@@ -3391,7 +4128,10 @@
 "Guardians"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795994": {
 "tags": [
@@ -3417,7 +4157,10 @@
 "Give the next card you play Power equal to this card's Power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "795998": {
 "tags": [
@@ -3436,9 +4179,22 @@
 [
 "in_hand_buff",
 "Give your other cards here and in your hand +2 Power"
+],
+[
+"quests",
+"Objective"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Objective"
+]
+],
+"keywords": [
+795398
+]
 },
 "796000": {
 "tags": [
@@ -3453,9 +4209,31 @@
 [
 "merge_attach",
 "Merge one of your created cards into this"
+],
+[
+"merge_attach",
+"Merge"
+],
+[
+"stat_gain",
+"Merge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Merge"
+],
+[
+"stat_gain",
+"Merge"
+]
+],
+"keywords": [
+795393,
+795406
+]
 },
 "796003": {
 "tags": [
@@ -3493,7 +4271,10 @@
 "EACH card here"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "796007": {
 "tags": [
@@ -3508,9 +4289,23 @@
 [
 "summon",
 "to summon Dormammu"
+],
+[
+"destroy",
+"Destroy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"destroy",
+"Destroy"
+]
+],
+"keywords": [
+795390,
+795403
+]
 },
 "796011": {
 "tags": [
@@ -3531,7 +4326,10 @@
 "next turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796015": {
 "tags": [
@@ -3559,9 +4357,22 @@
 [
 "cost_set",
 "cost 0"
+],
+[
+"discard",
+"When Discarded"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"discard",
+"When Discarded"
+]
+],
+"keywords": [
+795397
+]
 },
 "796020": {
 "tags": [
@@ -3580,9 +4391,31 @@
 [
 "repeat_trigger",
 "Copy its text like it just revealed"
+],
+[
+"merge_attach",
+"Merge"
+],
+[
+"stat_gain",
+"Merge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Merge"
+],
+[
+"stat_gain",
+"Merge"
+]
+],
+"keywords": [
+795392,
+795406
+]
 },
 "796021": {
 "tags": [
@@ -3601,9 +4434,31 @@
 [
 "tribal",
 "Spider-Verse"
+],
+[
+"merge_attach",
+"Merge"
+],
+[
+"stat_gain",
+"Merge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Merge"
+],
+[
+"stat_gain",
+"Merge"
+]
+],
+"keywords": [
+795392,
+795406
+]
 },
 "796022": {
 "tags": [
@@ -3616,7 +4471,10 @@
 "Copy the text of one of your Ongoing cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796024": {
 "tags": [
@@ -3633,7 +4491,10 @@
 "the last card you played"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796025": {
 "tags": [
@@ -3654,7 +4515,10 @@
 "highest-Power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "796027": {
 "tags": [
@@ -3671,7 +4535,10 @@
 "for each Techno-Organic Virus you've played"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "796029": {
 "tags": [
@@ -3688,7 +4555,10 @@
 "For each location"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "796030": {
 "tags": [
@@ -3705,7 +4575,10 @@
 "10 or more Power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795393
+]
 },
 "796031": {
 "tags": [
@@ -3718,7 +4591,10 @@
 "Shuffle the six Infinity Stones into your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795395
+]
 },
 "796033": {
 "tags": [
@@ -3731,7 +4607,10 @@
 "On Reveal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795395
+]
 },
 "796039": {
 "tags": [
@@ -3744,7 +4623,10 @@
 "Add a Demon to your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796043": {
 "tags": [
@@ -3761,7 +4643,10 @@
 "all locations"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "796044": {
 "tags": [
@@ -3774,7 +4659,10 @@
 "+1 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796045": {
 "tags": [
@@ -3787,7 +4675,10 @@
 "+1 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795393
+]
 },
 "796047": {
 "tags": [
@@ -3816,7 +4707,10 @@
 "if your side here is full"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795393
+]
 },
 "796049": {
 "tags": [],
@@ -3833,7 +4727,10 @@
 "Shuffle Mjolnir into your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "796052": {
 "tags": [
@@ -3854,7 +4751,10 @@
 "shuffle Mjolnir into your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796054": {
 "tags": [
@@ -3871,7 +4771,10 @@
 "Draw a card"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "796056": {
 "tags": [
@@ -3918,7 +4821,10 @@
 "Thunderbolts"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796064": {
 "tags": [
@@ -3939,7 +4845,10 @@
 "for each returned"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796065": {
 "tags": [
@@ -3964,7 +4873,10 @@
 "Give the last character EACH player played last turn +3 Power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "796069": {
 "tags": [
@@ -3981,7 +4893,10 @@
 "each other location"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796071": {
 "tags": [
@@ -3994,7 +4909,10 @@
 "Double Infinity Ultron's Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796073": {
 "tags": [
@@ -4019,7 +4937,10 @@
 "For each of your full locations"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "796078": {
 "tags": [
@@ -4044,7 +4965,10 @@
 "Give it -1 Cost"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "796085": {
 "tags": [
@@ -4059,9 +4983,23 @@
 [
 "stat_gain",
 "Add their Power to this card"
+],
+[
+"destroy",
+"Destroy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"destroy",
+"Destroy"
+]
+],
+"keywords": [
+795390,
+795403
+]
 },
 "796086": {
 "tags": [
@@ -4091,7 +5029,10 @@
 "lowest Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796093": {
 "tags": [
@@ -4112,7 +5053,10 @@
 "move this to another location"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795394
+]
 },
 "796095": {
 "tags": [
@@ -4133,7 +5077,10 @@
 "with +2 Power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795396
+]
 },
 "796102": {
 "tags": [
@@ -4144,9 +5091,22 @@
 [
 "in_hand_buff",
 "-2 Cost"
+],
+[
+"discard",
+"When Discarded"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"discard",
+"When Discarded"
+]
+],
+"keywords": [
+795397
+]
 },
 "796103": {
 "tags": [],
@@ -4167,7 +5127,10 @@
 "costs the most"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796108": {
 "tags": [
@@ -4192,7 +5155,10 @@
 "it costs 2 less"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "796110": {
 "tags": [
@@ -4205,7 +5171,10 @@
 "Add a Widow's Kiss to your opponent's side of this location"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796113": {
 "tags": [
@@ -4216,9 +5185,22 @@
 [
 "board_limit",
 "your side of this location is full"
+],
+[
+"destroy",
+"Destroy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"destroy",
+"Destroy"
+]
+],
+"keywords": [
+795403
+]
 },
 "796114": {
 "tags": [
@@ -4239,7 +5221,10 @@
 "one of your cards has been destroyed"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795391
+]
 },
 "796117": {
 "tags": [],
@@ -4273,7 +5258,10 @@
 "increase its cost by 1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796121": {
 "tags": [
@@ -4315,7 +5303,10 @@
 "at each location"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795398
+]
 },
 "796125": {
 "tags": [
@@ -4361,7 +5352,10 @@
 "costs the least"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+795390
+]
 },
 "796132": {
 "tags": [
@@ -4378,7 +5372,10 @@
 "4-Cost card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796133": {
 "tags": [
@@ -4391,7 +5388,10 @@
 "Remove the abilities on the next card you play"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796137": {
 "tags": [
@@ -4412,7 +5412,11 @@
 "copies of this"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390,
+795395
+]
 },
 "796138": {
 "tags": [
@@ -4429,7 +5433,10 @@
 "this gains Power equal to your Zombie Horde"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796141": {
 "tags": [
@@ -4467,7 +5474,10 @@
 "right location"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795390
+]
 },
 "796145": {
 "tags": [
@@ -4486,9 +5496,23 @@
 [
 "stat_gain",
 "Horde +2"
+],
+[
+"destroy",
+"Destroy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"destroy",
+"Destroy"
+]
+],
+"keywords": [
+795390,
+795403
+]
 },
 "796148": {
 "tags": [
@@ -4609,7 +5633,10 @@
 "lowest-Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795393
+]
 },
 "796175": {
 "tags": [
@@ -4931,7 +5958,10 @@
 "lose 1 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795393
+]
 },
 "796234": {
 "tags": [
@@ -5073,7 +6103,10 @@
 "highest-Cost card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795393
+]
 },
 "796251": {
 "tags": [
@@ -5120,7 +6153,10 @@
 "Give front-row cards here +1 Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+795393
+]
 },
 "796264": {
 "tags": [
@@ -5539,9 +6575,22 @@
 [
 "draw",
 "draw a card"
+],
+[
+"discard",
+"Discard"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"discard",
+"Discard"
+]
+],
+"keywords": [
+795404
+]
 },
 "796369": {
 "tags": [
@@ -5574,9 +6623,22 @@
 [
 "lane_closure",
 "Destroy the other locations"
+],
+[
+"destroy",
+"Destroy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"destroy",
+"Destroy"
+]
+],
+"keywords": [
+795403
+]
 },
 "796375": {
 "tags": [],

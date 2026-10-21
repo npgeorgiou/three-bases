@@ -30,9 +30,22 @@
 [
 "free_play",
 "Sly"
+],
+[
+"discard",
+"Sly"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"discard",
+"Sly"
+]
+],
+"keywords": [
+758402
+]
 },
 "758408": {
 "tags": [
@@ -85,9 +98,23 @@
 [
 "combat_start",
 "Innate"
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399,
+758400
+]
 },
 "758428": {
 "tags": [
@@ -102,9 +129,23 @@
 [
 "combat_start",
 "Innate"
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399,
+758400
+]
 },
 "758431": {
 "tags": [
@@ -171,9 +212,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758445": {
 "tags": [
@@ -266,9 +320,23 @@
 [
 "combat_start",
 "Innate"
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399,
+758400
+]
 },
 "758460": {
 "tags": [
@@ -300,9 +368,22 @@
 [
 "stat_gain",
 "Gain 1 Strength"
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758467": {
 "tags": [
@@ -337,7 +418,10 @@
 "Unplayable"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758403
+]
 },
 "758478": {
 "tags": [
@@ -354,7 +438,10 @@
 "Unplayable"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758403
+]
 },
 "758483": {
 "tags": [
@@ -404,9 +491,22 @@
 [
 "exhaust",
 "Exhaust 1 card from your Draw Pile"
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758507": {
 "tags": [
@@ -474,7 +574,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399
+]
 },
 "758531": {
 "tags": [
@@ -516,9 +619,30 @@
 [
 "debuff",
 "Apply 1 Weak"
+],
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
+]
+],
+"keywords": [
+758398
+]
 },
 "758564": {
 "tags": [
@@ -531,7 +655,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758399
+]
 },
 "758573": {
 "tags": [
@@ -546,9 +673,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758575": {
 "tags": [
@@ -565,7 +705,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399
+]
 },
 "758578": {
 "tags": [
@@ -608,7 +751,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399
+]
 },
 "758591": {
 "tags": [
@@ -709,9 +855,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758616": {
 "tags": [
@@ -741,7 +900,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758399
+]
 },
 "758628": {
 "tags": [
@@ -782,9 +944,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758634": {
 "tags": [
@@ -831,7 +1006,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399
+]
 },
 "758639": {
 "tags": [
@@ -844,7 +1022,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399
+]
 },
 "758640": {
 "tags": [
@@ -919,9 +1100,22 @@
 [
 "free_play",
 "Sly"
+],
+[
+"discard",
+"Sly"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"discard",
+"Sly"
+]
+],
+"keywords": [
+758402
+]
 },
 "758655": {
 "tags": [
@@ -964,7 +1158,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758399
+]
 },
 "758665": {
 "tags": [
@@ -998,7 +1195,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758399
+]
 },
 "758674": {
 "tags": [
@@ -1017,9 +1217,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758675": {
 "tags": [
@@ -1094,9 +1307,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758714": {
 "tags": [
@@ -1130,7 +1356,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758399
+]
 },
 "758720": {
 "tags": [
@@ -1145,9 +1374,22 @@
 [
 "start_of_game",
 "Innate"
+],
+[
+"combat_start",
+"Innate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"combat_start",
+"Innate"
+]
+],
+"keywords": [
+758400
+]
 },
 "758727": {
 "tags": [
@@ -1203,7 +1445,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399
+]
 },
 "758737": {
 "tags": [
@@ -1246,7 +1491,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399
+]
 },
 "758748": {
 "tags": [
@@ -1265,9 +1513,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758754": {
 "tags": [
@@ -1334,9 +1595,30 @@
 [
 "draw",
 "Draw 3 cards"
+],
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
+]
+],
+"keywords": [
+758398
+]
 },
 "758762": {
 "tags": [
@@ -1431,7 +1713,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758399
+]
 },
 "758792": {
 "tags": [
@@ -1478,7 +1763,10 @@
 "Retain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758401
+]
 },
 "758801": {
 "tags": [
@@ -1506,9 +1794,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758804": {
 "tags": [
@@ -1631,7 +1932,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399
+]
 },
 "758836": {
 "tags": [
@@ -1693,9 +1997,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758846": {
 "tags": [
@@ -1742,7 +2059,10 @@
 "Retain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758401
+]
 },
 "758863": {
 "tags": [
@@ -1757,9 +2077,22 @@
 [
 "free_play",
 "Sly"
+],
+[
+"discard",
+"Sly"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"discard",
+"Sly"
+]
+],
+"keywords": [
+758402
+]
 },
 "758866": {
 "tags": [
@@ -1913,9 +2246,22 @@
 [
 "free_play",
 "Sly"
+],
+[
+"discard",
+"Sly"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"discard",
+"Sly"
+]
+],
+"keywords": [
+758402
+]
 },
 "758911": {
 "tags": [
@@ -1982,9 +2328,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "758935": {
 "tags": [
@@ -1997,7 +2356,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399
+]
 },
 "758941": {
 "tags": [
@@ -2030,18 +2392,53 @@
 [
 "free_play",
 "Sly"
+],
+[
+"discard",
+"Sly"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"discard",
+"Sly"
+]
+],
+"keywords": [
+758402
+]
 },
 "758953": {
 "tags": [
 [
 "play_restriction",
 "Unplayable"
+],
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
+]
+],
+"keywords": [
+758398,
+758403
+]
 },
 "758968": {
 "tags": [
@@ -5318,9 +5715,22 @@
 [
 "exhaust",
 "Exhaust 1 card"
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "816338": {
 "tags": [
@@ -5362,7 +5772,10 @@
 "Upgrade it"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758400
+]
 },
 "816342": {
 "tags": [
@@ -5405,7 +5818,11 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758399,
+758401
+]
 },
 "816350": {
 "tags": [
@@ -5443,7 +5860,10 @@
 "gain 1 Block"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758400
+]
 },
 "816375": {
 "tags": [
@@ -5456,7 +5876,10 @@
 "Whenever you create a card, gain 1 Strength"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758400
+]
 },
 "816384": {
 "tags": [
@@ -5501,9 +5924,22 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "816394": {
 "tags": [
@@ -5545,7 +5981,10 @@
 "random card"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758400
+]
 },
 "816398": {
 "tags": [
@@ -5562,7 +6001,10 @@
 "apply that much Doom"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758401
+]
 },
 "816399": {
 "tags": [
@@ -5579,7 +6021,10 @@
 "damage equal to the enemy's Doom"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758401
+]
 },
 "816401": {
 "tags": [
@@ -5683,7 +6128,11 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399,
+758401
+]
 },
 "816431": {
 "tags": [
@@ -5700,7 +6149,10 @@
 "equal to the number of cards played this combat"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758401
+]
 },
 "816434": {
 "tags": [
@@ -5734,7 +6186,11 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758399,
+758401
+]
 },
 "816438": {
 "tags": [
@@ -5750,18 +6206,62 @@
 [
 "exhaust",
 "Exhaust."
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+758399
+]
 },
 "816447": {
 "tags": [
 [
 "play_restriction",
 "Unplayable"
+],
+[
+"immunity",
+"Eternal"
+],
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immunity",
+"Eternal"
+],
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
+]
+],
+"keywords": [
+758397,
+758398,
+758403
+]
 },
 "816453": {
 "tags": [
@@ -5774,7 +6274,11 @@
 "Retain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+758401,
+758403
+]
 },
 "816455": {
 "tags": [
@@ -5787,6 +6291,10 @@
 "Innate"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+758400,
+758403
+]
 }
 }

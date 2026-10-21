@@ -1554,9 +1554,31 @@
 [
 "temporary_buff",
 "until the end of the phase"
+],
+[
+"damage",
+"SUSTAINED HITS"
+],
+[
+"buff",
+"LETHAL HITS"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"SUSTAINED HITS"
+],
+[
+"buff",
+"LETHAL HITS"
+]
+],
+"keywords": [
+784558,
+784566
+]
 },
 "784934": {
 "tags": [
@@ -4369,9 +4391,30 @@
 [
 "protection",
 "enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784572
+]
 },
 "787040": {
 "tags": [
@@ -4621,9 +4664,110 @@
 [
 "tribal",
 "leading a Howling Banshees unit"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+]
+],
+"keywords": [
+784550,
+784552,
+784554,
+784557,
+784558,
+784559,
+784560,
+784567,
+784569
+]
 },
 "787150": {
 "tags": [
@@ -4650,9 +4794,127 @@
 [
 "resource_gain",
 "you gain 1 Battle Focus token"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784550,
+784552,
+784554,
+784557,
+784558,
+784559,
+784560,
+784567,
+784569,
+784572
+]
 },
 "787151": {
 "tags": [
@@ -4683,9 +4945,47 @@
 [
 "saving_throws",
 "4+ Invulnerable save"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Sustained Hits"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784558,
+784573
+]
 },
 "787152": {
 "tags": [
@@ -4720,9 +5020,74 @@
 [
 "cant_attack",
 "it is not eligible to declare a charge"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784554,
+784558,
+784566,
+784572
+]
 },
 "787154": {
 "tags": [
@@ -4749,9 +5114,145 @@
 [
 "saving_throws",
 "4+ invulnerable save"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"target_choice",
+"PRECISION"
+],
+[
+"buff",
+"LETHAL HITS"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"target_choice",
+"PRECISION"
+],
+[
+"buff",
+"LETHAL HITS"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784550,
+784554,
+784556,
+784557,
+784559,
+784560,
+784563,
+784566,
+784568,
+784569,
+784570,
+784579
+]
 },
 "787163": {
 "tags": [
@@ -4770,9 +5271,58 @@
 [
 "piercing",
 "Ignores cover"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"buff",
+"Torrent"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"buff",
+"Torrent"
+]
+],
+"keywords": [
+784550,
+784554,
+784560,
+784567,
+784569
+]
 },
 "787165": {
 "tags": [
@@ -4795,9 +5345,57 @@
 [
 "random_effect",
 "roll one D6"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"damage",
+"Sustained hits"
+],
+[
+"stat_gain",
+"Melta"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"damage",
+"Sustained hits"
+],
+[
+"stat_gain",
+"Melta"
+]
+],
+"keywords": [
+784552,
+784554,
+784558,
+784560
+]
 },
 "787170": {
 "tags": [
@@ -4832,9 +5430,49 @@
 [
 "first_strike",
 "Fights First"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+]
+],
+"keywords": [
+784552,
+784554,
+784557,
+784578
+]
 },
 "787171": {
 "tags": [
@@ -4853,9 +5491,82 @@
 [
 "buff",
 "have the [DEVASTATING WOUNDS] ability"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+]
+],
+"keywords": [
+784550,
+784552,
+784554,
+784558,
+784571
+]
 },
 "787173": {
 "tags": [
@@ -4882,9 +5593,91 @@
 [
 "temporary_effect",
 "until the start of your next turn"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784554,
+784556,
+784562,
+784564,
+784566,
+784573
+]
 },
 "787175": {
 "tags": [
@@ -4907,9 +5700,57 @@
 [
 "random_effect",
 "D6"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Heavy"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+]
+],
+"keywords": [
+784559,
+784563,
+784571,
+784574
+]
 },
 "787177": {
 "tags": [
@@ -4920,9 +5761,67 @@
 [
 "movement",
 "ignore any vertical distance"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lance"
+],
+[
+"buff",
+"Lethal Hits"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lance"
+],
+[
+"buff",
+"Lethal Hits"
+]
+],
+"keywords": [
+784554,
+784556,
+784557,
+784558,
+784565,
+784566
+]
 },
 "787183": {
 "tags": [
@@ -4970,9 +5869,74 @@
 [
 "play_restriction",
 "you cannot target this unit with the Grenades Stratagem"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784550,
+784554,
+784558,
+784566,
+784572
+]
 },
 "787192": {
 "tags": [
@@ -5011,9 +5975,65 @@
 [
 "temporary_buff",
 "until the end of the phase"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784552,
+784554,
+784557,
+784579
+]
 },
 "787193": {
 "tags": [
@@ -5048,9 +6068,65 @@
 [
 "start_of_game",
 "At the start of the Declare Battle Formations step"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784552,
+784554,
+784557,
+784579
+]
 },
 "787196": {
 "tags": [
@@ -5081,9 +6157,30 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787203": {
 "tags": [
@@ -5126,9 +6223,107 @@
 [
 "piercing",
 "Devastating Wounds"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+]
+],
+"keywords": [
+784290,
+784550,
+784552,
+784553,
+784554,
+784557
+]
 },
 "787204": {
 "tags": [
@@ -5151,9 +6346,125 @@
 [
 "tribal",
 "Beast model"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+]
+],
+"keywords": [
+784290,
+784553,
+784554,
+784556,
+784557,
+784558,
+784566,
+784570
+]
 },
 "787206": {
 "tags": [
@@ -5192,9 +6503,140 @@
 [
 "revive",
 "1 model is returned to this unit"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784290,
+784557,
+784561,
+784562,
+784567,
+784569,
+784573
+]
 },
 "787210": {
 "tags": [
@@ -5225,9 +6667,143 @@
 [
 "piercing",
 "Devastating Wounds"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"buff",
+"Lance"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"buff",
+"Lance"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784290,
+784550,
+784553,
+784554,
+784556,
+784557,
+784558,
+784563,
+784565,
+784572
+]
 },
 "787214": {
 "tags": [
@@ -5254,9 +6830,116 @@
 [
 "piercing",
 "Ignores Cover"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"debuff",
+"Stealth"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"debuff",
+"Stealth"
+]
+],
+"keywords": [
+784290,
+784553,
+784554,
+784567,
+784571,
+784572,
+784574
+]
 },
 "787215": {
 "tags": [
@@ -5311,9 +6994,89 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
+]
+],
+"keywords": [
+784290,
+784572,
+784573,
+784580
+]
 },
 "787217": {
 "tags": [
@@ -5348,9 +7111,142 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"debuff",
+"Stealth"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"debuff",
+"Stealth"
+]
+],
+"keywords": [
+784290,
+784554,
+784556,
+784557,
+784558,
+784562,
+784568,
+784573,
+784574
+]
 },
 "787219": {
 "tags": [
@@ -5389,9 +7285,135 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+]
+],
+"keywords": [
+784290,
+784550,
+784553,
+784554,
+784557,
+784558,
+784559,
+784560,
+784569,
+784572
+]
 },
 "787221": {
 "tags": [
@@ -5430,9 +7452,160 @@
 [
 "piercing",
 "Devastating Wounds"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained hits"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained hits"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784290,
+784553,
+784554,
+784555,
+784556,
+784557,
+784558,
+784560,
+784561,
+784569,
+784573
+]
 },
 "787225": {
 "tags": [
@@ -5467,9 +7640,55 @@
 [
 "friendly_fire",
 "[Hazardous]"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"tribal",
+"Anti-"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"tribal",
+"Anti-"
+]
+],
+"keywords": [
+784290,
+784557
+]
 },
 "787226": {
 "tags": [
@@ -5496,9 +7715,81 @@
 [
 "speed",
 "eligible to declare a charge in a turn in which it Advanced or Fell Back"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+]
+],
+"keywords": [
+784290,
+784550,
+784554,
+784557
+]
 },
 "787232": {
 "tags": [
@@ -5517,9 +7808,48 @@
 [
 "targeting_rules",
 "targets a unit that can Fly"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
+]
+],
+"keywords": [
+784556,
+784558,
+784577
+]
 },
 "787238": {
 "tags": [
@@ -5534,9 +7864,133 @@
 [
 "stress_morale",
 "must take a Battle-shock test"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784553,
+784557,
+784558,
+784562,
+784563,
+784569,
+784573,
+784579
+]
 },
 "787239": {
 "tags": [
@@ -5575,9 +8029,106 @@
 [
 "buff",
 "have the [RAPID FIRE 8] ability"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
+]
+],
+"keywords": [
+784290,
+784554,
+784572,
+784573,
+784580
+]
 },
 "787240": {
 "tags": [
@@ -5608,9 +8159,50 @@
 [
 "placement_rules",
 "Infiltrators"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Heavy"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784559,
+784563,
+784571,
+784574,
+784576
+]
 },
 "787241": {
 "tags": [
@@ -5641,9 +8233,47 @@
 [
 "heal",
 "regains up to D3 lost wounds"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784552,
+784579
+]
 },
 "787245": {
 "tags": [
@@ -5670,9 +8300,66 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784554,
+784556,
+784557,
+784558,
+784573
+]
 },
 "787251": {
 "tags": [
@@ -5703,9 +8390,132 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage",
+"SUSTAINED HITS"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lance"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage",
+"SUSTAINED HITS"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lance"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784290,
+784555,
+784558,
+784562,
+784565,
+784572,
+784573
+]
 },
 "787252": {
 "tags": [
@@ -5740,9 +8550,100 @@
 [
 "saving_throws",
 "4+ Invulnerable save"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784550,
+784552,
+784554,
+784556,
+784557,
+784569,
+784579
+]
 },
 "787267": {
 "tags": [
@@ -5789,26 +8690,235 @@
 [
 "piercing",
 "Devastating Wounds"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"buff",
+"Lethal Hits"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"buff",
+"Lethal Hits"
+]
+],
+"keywords": [
+784290,
+784551,
+784552,
+784553,
+784555,
+784558,
+784561,
+784566
+]
 },
 "787271": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"ranged",
+"Assault"
+],
+[
+"buff",
+"Torrent"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"ranged",
+"Assault"
+],
+[
+"buff",
+"Torrent"
+]
+],
+"keywords": [
+784554,
+784569
+]
 },
 "787274": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"tribal",
+"Anti-"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"tribal",
+"Anti-"
+]
+],
+"keywords": [
+784556,
+784557
+]
 },
 "787276": {
 "tags": [
 [
 "shield",
 "change the Damage characteristic of that attack to 0"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+]
+],
+"keywords": [
+784550,
+784554,
+784557
+]
 },
 "787283": {
 "tags": [
@@ -5839,9 +8949,97 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Power from Pain"
+],
+[
+"turn_start",
+"Power from Pain"
+],
+[
+"on_kill",
+"Power from Pain"
+],
+[
+"temporary_buff",
+"Power from Pain"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
+]
+],
+"keywords": [
+784290,
+784552,
+784561,
+784581
+]
 },
 "787287": {
 "tags": [
@@ -5880,9 +9078,58 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784300,
+784567,
+784569,
+784572,
+784573
+]
 },
 "787306": {
 "tags": [
@@ -5921,9 +9168,124 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784300,
+784551,
+784562,
+784564,
+784572,
+784573,
+784579
+]
 },
 "787314": {
 "tags": [
@@ -5946,9 +9308,73 @@
 [
 "transform",
 "use the Blue Horrors datasheet for this unit"
+],
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784300,
+784550,
+784572,
+784579
+]
 },
 "787320": {
 "tags": [
@@ -5979,9 +9405,117 @@
 [
 "temporary_effect",
 "Until the start of your next Movement phase"
+],
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784300,
+784555,
+784561,
+784566,
+784567,
+784569,
+784572,
+784573
+]
 },
 "787324": {
 "tags": [
@@ -6016,9 +9550,65 @@
 [
 "scope_multi",
 "every enemy unit (excluding Monsters and Vehicles) within 6\" of this model"
+],
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784300,
+784552,
+784566,
+784572
+]
 },
 "787329": {
 "tags": [
@@ -6045,9 +9635,82 @@
 [
 "tribal",
 "NURGLE LEGIONES DAEMONICA"
+],
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784300,
+784555,
+784562,
+784566,
+784572
+]
 },
 "787337": {
 "tags": [
@@ -6078,9 +9741,126 @@
 [
 "merge_attach",
 "This model can be attached"
+],
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Warp Rifts"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784300,
+784550,
+784552,
+784553,
+784554,
+784555,
+784557,
+784566,
+784572
+]
 },
 "787375": {
 "tags": [
@@ -6115,9 +9895,117 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"piercing",
+"IGNORES COVER"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"piercing",
+"IGNORES COVER"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
+]
+],
+"keywords": [
+784553,
+784556,
+784557,
+784562,
+784567,
+784569,
+784573,
+784575
+]
 },
 "787382": {
 "tags": [
@@ -6152,9 +10040,39 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784572,
+784573
+]
 },
 "787383": {
 "tags": [
@@ -6181,9 +10099,82 @@
 [
 "random_effect",
 "roll one D6"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+]
+],
+"keywords": [
+784550,
+784552,
+784555,
+784557,
+784561
+]
 },
 "787385": {
 "tags": [
@@ -6226,9 +10217,91 @@
 [
 "target_choice",
 "Precision"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784550,
+784551,
+784552,
+784557,
+784563,
+784579
+]
 },
 "787391": {
 "tags": [
@@ -6271,9 +10344,75 @@
 [
 "piercing",
 "Ignores Cover"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"buff",
+"Torrent"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"buff",
+"Torrent"
+]
+],
+"keywords": [
+784550,
+784552,
+784557,
+784560,
+784567,
+784569
+]
 },
 "787392": {
 "tags": [
@@ -6300,9 +10439,30 @@
 [
 "random_effect",
 "add D3"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "787393": {
 "tags": [
@@ -6353,9 +10513,30 @@
 [
 "saving_throws",
 "4+ invulnerable save"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "787396": {
 "tags": [
@@ -6366,9 +10547,30 @@
 [
 "zone_control",
 "that objective marker remains under your control"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+]
+],
+"keywords": [
+784550
+]
 },
 "787400": {
 "tags": [
@@ -6404,9 +10606,38 @@
 [
 "permanent_growth",
 "until the end of the battle, add 1 to the Attacks characteristic"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787416": {
 "tags": [
@@ -6417,9 +10648,63 @@
 [
 "immunity",
 "does not suffer the penalty to its Hit rolls"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784562,
+784573
+]
 },
 "787418": {
 "tags": [
@@ -6450,9 +10735,82 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784551,
+784556,
+784560,
+784562,
+784573
+]
 },
 "787426": {
 "tags": [
@@ -6475,9 +10833,100 @@
 [
 "stat_loss",
 "worsen the Leadership characteristic"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"buff",
+"Torrent"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"buff",
+"Torrent"
+]
+],
+"keywords": [
+784551,
+784557,
+784562,
+784566,
+784567,
+784568,
+784569
+]
 },
 "787454": {
 "tags": [
@@ -6532,9 +10981,66 @@
 [
 "target_choice",
 "Precision"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784550,
+784554,
+784557,
+784563,
+784579
+]
 },
 "787460": {
 "tags": [
@@ -6565,9 +11071,99 @@
 [
 "friendly_fire",
 "this model suffers 3 mortal wounds"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784560,
+784562,
+784563,
+784567,
+784569,
+784573
+]
 },
 "787462": {
 "tags": [
@@ -6598,9 +11194,38 @@
 [
 "protection",
 "have the Benefit of Cover against that attack"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787468": {
 "tags": [
@@ -6631,9 +11256,56 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784566,
+784572
+]
 },
 "787474": {
 "tags": [
@@ -6668,9 +11340,39 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Lethal Hits"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Lethal Hits"
+]
+],
+"keywords": [
+784552,
+784566
+]
 },
 "787476": {
 "tags": [
@@ -6697,9 +11399,117 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784550,
+784552,
+784554,
+784557,
+784562,
+784563,
+784566,
+784573
+]
 },
 "787486": {
 "tags": [
@@ -6710,9 +11520,38 @@
 [
 "tribal",
 "Death Guard Infantry models"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787488": {
 "tags": [
@@ -6739,9 +11578,48 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal Hits"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784566,
+784568,
+784573
+]
 },
 "787491": {
 "tags": [
@@ -6768,9 +11646,39 @@
 [
 "tribal",
 "friendly Death Guard unit"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Lethal Hits"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Lethal Hits"
+]
+],
+"keywords": [
+784552,
+784566
+]
 },
 "787495": {
 "tags": [
@@ -6789,9 +11697,30 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787500": {
 "tags": [
@@ -6810,9 +11739,56 @@
 [
 "targeting_rules",
 "cannot be targeted by ranged attacks unless the attacking unit is within 18\""
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"buff",
+"Lethal Hits"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"buff",
+"Lethal Hits"
+]
+],
+"keywords": [
+784552,
+784553,
+784566
+]
 },
 "787501": {
 "tags": [
@@ -6863,9 +11839,84 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784555,
+784561,
+784566,
+784567,
+784569,
+784572,
+784573
+]
 },
 "787505": {
 "tags": [
@@ -6892,9 +11943,73 @@
 [
 "movement",
 "Scouts"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784553,
+784570,
+784572,
+784573
+]
 },
 "787507": {
 "tags": [
@@ -6925,9 +12040,64 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784562,
+784566,
+784573
+]
 },
 "787513": {
 "tags": [
@@ -6986,9 +12156,73 @@
 [
 "immobilize",
 "that unit must Remain Stationary this phase instead"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784555,
+784558,
+784572,
+784573
+]
 },
 "787538": {
 "tags": [
@@ -7019,9 +12253,72 @@
 [
 "merge_attach",
 "This model can be attached to the following unit"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784552,
+784562,
+784579
+]
 },
 "787539": {
 "tags": [
@@ -7032,9 +12329,38 @@
 [
 "tribal",
 "Thousand Sons Infantry models"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787543": {
 "tags": [
@@ -7049,9 +12375,30 @@
 [
 "saving_throws",
 "5+ invulnerable save"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+]
+],
+"keywords": [
+784561
+]
 },
 "787551": {
 "tags": [
@@ -7114,9 +12461,107 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784553,
+784562,
+784567,
+784572,
+784573,
+784579
+]
 },
 "787559": {
 "tags": [
@@ -7151,9 +12596,107 @@
 [
 "heal",
 "this model regains up to D3 lost wounds"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784553,
+784558,
+784567,
+784572,
+784573,
+784579
+]
 },
 "787569": {
 "tags": [
@@ -7188,9 +12731,131 @@
 [
 "debuff",
 "subtract 1 from the Hit roll"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"ranged",
+"Indirect Fire"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"ranged",
+"Indirect Fire"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784551,
+784562,
+784564,
+784572,
+784573,
+784579
+]
 },
 "787575": {
 "tags": [
@@ -7205,9 +12870,39 @@
 [
 "saving_throws",
 "5+ invulnerable save"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784561,
+784576
+]
 },
 "787577": {
 "tags": [
@@ -7230,9 +12925,47 @@
 [
 "placement_rules",
 "set up in the Reinforcements step"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+]
+],
+"keywords": [
+784552,
+784570
+]
 },
 "787585": {
 "tags": [
@@ -7263,9 +12996,48 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"buff",
+"Lance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"buff",
+"Lance"
+]
+],
+"keywords": [
+784552,
+784555,
+784565
+]
 },
 "787597": {
 "tags": [
@@ -7292,9 +13064,91 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784551,
+784556,
+784560,
+784562,
+784568,
+784573
+]
 },
 "787604": {
 "tags": [
@@ -7313,9 +13167,30 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787607": {
 "tags": [
@@ -7342,9 +13217,73 @@
 [
 "condition_life",
 "While this model has 1-7 wounds remaining"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784567,
+784569,
+784572,
+784573
+]
 },
 "787609": {
 "tags": [
@@ -7363,9 +13302,30 @@
 [
 "debuff",
 "subtract 1 from each of those Desperate Escape tests"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784572
+]
 },
 "787614": {
 "tags": [
@@ -7376,9 +13336,30 @@
 [
 "merge_attach",
 "This model can be attached to the following unit"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "787619": {
 "tags": [
@@ -7413,9 +13394,56 @@
 [
 "movement",
 "Scouts"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784570,
+784572
+]
 },
 "787624": {
 "tags": [
@@ -7442,9 +13470,48 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
+]
+],
+"keywords": [
+784556,
+784573,
+784580
+]
 },
 "787626": {
 "tags": [
@@ -7483,9 +13550,66 @@
 [
 "target_choice",
 "Precision"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"debuff",
+"Stealth"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"debuff",
+"Stealth"
+]
+],
+"keywords": [
+784552,
+784559,
+784563,
+784570,
+784574
+]
 },
 "787627": {
 "tags": [
@@ -7512,9 +13636,73 @@
 [
 "on_attack",
 "after one model from your army with this ability has shot"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784550,
+784553,
+784572,
+784576
+]
 },
 "787628": {
 "tags": [
@@ -7541,9 +13729,48 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"first_strike",
+"Fights First"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"first_strike",
+"Fights First"
+]
+],
+"keywords": [
+784552,
+784572,
+784578
+]
 },
 "787629": {
 "tags": [
@@ -7586,9 +13813,39 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784572
+]
 },
 "787631": {
 "tags": [
@@ -7607,9 +13864,47 @@
 [
 "merge_attach",
 "This model can be attached"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784572
+]
 },
 "787633": {
 "tags": [
@@ -7640,9 +13935,47 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784572
+]
 },
 "787638": {
 "tags": [
@@ -7677,9 +14010,47 @@
 [
 "saving_throws",
 "4+ invulnerable save"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784572
+]
 },
 "787640": {
 "tags": [
@@ -7694,9 +14065,64 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
+]
+],
+"keywords": [
+784552,
+784572,
+784581
+]
 },
 "787641": {
 "tags": [
@@ -7715,9 +14141,91 @@
 [
 "immunity",
 "Lone Operative"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
+]
+],
+"keywords": [
+784552,
+784571,
+784572,
+784574,
+784576,
+784581
+]
 },
 "787642": {
 "tags": [
@@ -7728,9 +14236,73 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"LETHAL HITS"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"LETHAL HITS"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
+]
+],
+"keywords": [
+784552,
+784566,
+784572,
+784581
+]
 },
 "787649": {
 "tags": [
@@ -7765,9 +14337,49 @@
 [
 "first_strike",
 "Fights First"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784563,
+784572,
+784576,
+784578
+]
 },
 "787653": {
 "tags": [
@@ -7806,9 +14418,74 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784558,
+784562,
+784564,
+784567,
+784573
+]
 },
 "787654": {
 "tags": [
@@ -7835,9 +14512,30 @@
 [
 "saving_throws",
 "invulnerable save of 6+"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "787656": {
 "tags": [
@@ -7872,9 +14570,75 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784556,
+784558,
+784560,
+784567,
+784569,
+784573
+]
 },
 "787657": {
 "tags": [
@@ -7917,9 +14681,74 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784552,
+784556,
+784567,
+784569,
+784573
+]
 },
 "787659": {
 "tags": [
@@ -7966,9 +14795,90 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784552,
+784553,
+784558,
+784562,
+784573
+]
 },
 "787660": {
 "tags": [
@@ -8003,9 +14913,64 @@
 [
 "saving_throws",
 "invulnerable save of 4+"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784550,
+784551,
+784552
+]
 },
 "787670": {
 "tags": [
@@ -8056,9 +15021,47 @@
 [
 "piercing",
 "improve the Armour Penetration characteristic of melee weapons"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784550,
+784552
+]
 },
 "787671": {
 "tags": [
@@ -8077,9 +15080,39 @@
 [
 "saving_throws",
 "Invulnerable save of 5+"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Sustained Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784558,
+784572
+]
 },
 "787676": {
 "tags": [
@@ -8098,9 +15131,49 @@
 [
 "first_strike",
 "Fights First"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784563,
+784571,
+784576,
+784578
+]
 },
 "787681": {
 "tags": [
@@ -8151,9 +15224,48 @@
 [
 "resource_gain",
 "you gain 1 Miracle dice"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Lethal Hits"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Lethal Hits"
+]
+],
+"keywords": [
+784553,
+784557,
+784566
+]
 },
 "787694": {
 "tags": [
@@ -8180,9 +15292,91 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"stances",
+"Martial Ka'tah"
+],
+[
+"buff",
+"Martial Ka'tah"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"placement_rules",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stances",
+"Martial Ka'tah"
+],
+[
+"buff",
+"Martial Ka'tah"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"placement_rules",
+"Deep Strike"
+]
+],
+"keywords": [
+784376,
+784550,
+784552,
+784554,
+784560,
+784572
+]
 },
 "787696": {
 "tags": [
@@ -8201,9 +15395,74 @@
 [
 "movement",
 "it can make a Normal move"
+],
+[
+"stances",
+"Martial Ka'tah"
+],
+[
+"buff",
+"Martial Ka'tah"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"buff",
+"Lance"
+],
+[
+"stat_gain",
+"Rapid Fire"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stances",
+"Martial Ka'tah"
+],
+[
+"buff",
+"Martial Ka'tah"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"buff",
+"Lance"
+],
+[
+"stat_gain",
+"Rapid Fire"
+]
+],
+"keywords": [
+784376,
+784552,
+784556,
+784565,
+784568
+]
 },
 "787720": {
 "tags": [
@@ -8226,9 +15485,88 @@
 [
 "buff",
 "The bearer has the Smoke keyword"
+],
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
+]
+],
+"keywords": [
+784385,
+784573,
+784577
+]
 },
 "787732": {
 "tags": [
@@ -8251,9 +15589,99 @@
 [
 "piercing",
 "Ignores Cover"
+],
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784385,
+784550,
+784558,
+784567,
+784569,
+784572
+]
 },
 "787741": {
 "tags": [
@@ -8288,9 +15716,72 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
+]
+],
+"keywords": [
+784385,
+784573,
+784580
+]
 },
 "787751": {
 "tags": [
@@ -8309,9 +15800,82 @@
 [
 "advantage",
 "you can re-roll the Wound roll"
+],
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784385,
+784559,
+784563,
+784574,
+784576
+]
 },
 "787753": {
 "tags": [
@@ -8334,9 +15898,115 @@
 [
 "merge_attach",
 "this unit can join one other unit from your army"
+],
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+]
+],
+"keywords": [
+784385,
+784551,
+784558,
+784559,
+784560,
+784562
+]
 },
 "787759": {
 "tags": [
@@ -8347,9 +16017,55 @@
 [
 "buff",
 "that attack has the [SUSTAINED HITS 1] ability"
+],
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"damage",
+"SUSTAINED HITS"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Doctrina Imperatives"
+],
+[
+"turn_start",
+"Doctrina Imperatives"
+],
+[
+"temporary_effect",
+"Doctrina Imperatives"
+],
+[
+"stat_gain",
+"Doctrina Imperatives"
+],
+[
+"damage",
+"SUSTAINED HITS"
+]
+],
+"keywords": [
+784385,
+784558
+]
 },
 "787761": {
 "tags": [
@@ -8380,9 +16096,110 @@
 [
 "piercing",
 "Ignores Cover"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784550,
+784553,
+784557,
+784559,
+784563,
+784567,
+784571,
+784574,
+784576
+]
 },
 "787763": {
 "tags": [
@@ -8421,9 +16238,92 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784550,
+784557,
+784558,
+784563,
+784570,
+784573,
+784576
+]
 },
 "787776": {
 "tags": [
@@ -8478,9 +16378,83 @@
 [
 "target_choice",
 "Precision"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784552,
+784553,
+784558,
+784561,
+784563,
+784579
+]
 },
 "787788": {
 "tags": [
@@ -8503,9 +16477,136 @@
 [
 "saving_throws",
 "6+ invulnerable save"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"buff",
+"Torrent"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"buff",
+"Torrent"
+]
+],
+"keywords": [
+784550,
+784551,
+784553,
+784557,
+784558,
+784559,
+784560,
+784563,
+784567,
+784568,
+784569
+]
 },
 "787789": {
 "tags": [
@@ -8540,9 +16641,75 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784556,
+784558,
+784560,
+784567,
+784569,
+784573
+]
 },
 "787790": {
 "tags": [
@@ -8565,9 +16732,39 @@
 [
 "start_of_game",
 "At the start of the Declare Battle Formations step"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal Hits"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784566,
+784579
+]
 },
 "787794": {
 "tags": [
@@ -8614,9 +16811,48 @@
 [
 "piercing",
 "Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784553,
+784556,
+784572
+]
 },
 "787810": {
 "tags": [
@@ -8643,9 +16879,39 @@
 [
 "aura",
 "While this model is leading a unit"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784552,
+784576
+]
 },
 "787813": {
 "tags": [
@@ -8680,9 +16946,76 @@
 [
 "movement",
 "Scouts"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784550,
+784555,
+784557,
+784559,
+784563,
+784570,
+784576
+]
 },
 "787823": {
 "tags": [
@@ -8701,9 +17034,30 @@
 [
 "merge_attach",
 "This model can be attached"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "787829": {
 "tags": [
@@ -8726,9 +17080,64 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"exhaust",
+"One Shot"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"One Shot"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784359,
+784562,
+784573
+]
 },
 "787855": {
 "tags": [
@@ -8767,9 +17176,82 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784550,
+784552,
+784553,
+784555,
+784576
+]
 },
 "787856": {
 "tags": [
@@ -8784,9 +17266,30 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787860": {
 "tags": [
@@ -8813,9 +17316,75 @@
 [
 "target_choice",
 "Precision"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784550,
+784557,
+784563,
+784571,
+784574,
+784576
+]
 },
 "787863": {
 "tags": [
@@ -8842,9 +17411,38 @@
 [
 "ranged",
 "it can issue it to an eligible unit up to 12\" away"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787866": {
 "tags": [
@@ -8855,9 +17453,30 @@
 [
 "zone_control",
 "within range of an objective marker"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784572
+]
 },
 "787875": {
 "tags": [
@@ -8868,9 +17487,63 @@
 [
 "buff",
 "hits are scored on unmodified Hit rolls of 5+"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784562,
+784573
+]
 },
 "787884": {
 "tags": [
@@ -8889,9 +17562,38 @@
 [
 "temporary_effect",
 "Until the end of the phase"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787886": {
 "tags": [
@@ -8910,9 +17612,39 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Heavy"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784559,
+784573
+]
 },
 "787896": {
 "tags": [
@@ -8931,9 +17663,55 @@
 [
 "temporary_effect",
 "Until the end of the phase"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
+]
+],
+"keywords": [
+784573,
+784577
+]
 },
 "787898": {
 "tags": [
@@ -8948,9 +17726,80 @@
 [
 "tribal",
 "Infantry unit"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"ranged",
+"Indirect Fire"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"ranged",
+"Indirect Fire"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784562,
+784564,
+784573
+]
 },
 "787912": {
 "tags": [
@@ -8969,9 +17818,55 @@
 [
 "temporary_effect",
 "Unit the start of your next turn"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"ranged",
+"Indirect Fire"
+],
+[
+"debuff",
+"Indirect Fire"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"ranged",
+"Indirect Fire"
+],
+[
+"debuff",
+"Indirect Fire"
+]
+],
+"keywords": [
+784562,
+784564
+]
 },
 "787932": {
 "tags": [
@@ -9002,9 +17897,82 @@
 [
 "piercing",
 "[DEVASTATING WOUNDS]"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"DEVASTATING WOUNDS"
+],
+[
+"damage",
+"DEVASTATING WOUNDS"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"DEVASTATING WOUNDS"
+],
+[
+"damage",
+"DEVASTATING WOUNDS"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+]
+],
+"keywords": [
+784552,
+784553,
+784555,
+784557,
+784561
+]
 },
 "787934": {
 "tags": [
@@ -9015,9 +17983,38 @@
 [
 "support",
 "This Officer can issue 2 Orders to Squadron units"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "787942": {
 "tags": [
@@ -9032,9 +18029,47 @@
 [
 "support",
 "This Officer can issue up to 2 Orders to Regiment units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
+]
+],
+"keywords": [
+784552,
+784581
+]
 },
 "787944": {
 "tags": [
@@ -9049,9 +18084,89 @@
 [
 "support",
 "This Officer can issue up to 1 Order"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"deckbuilding_effect",
+"Crucible"
+],
+[
+"play_restriction",
+"Crucible"
+]
+],
+"keywords": [
+784552,
+784570,
+784573,
+784581
+]
 },
 "787951": {
 "tags": [
@@ -9090,9 +18205,73 @@
 [
 "friendly_fire",
 "Hazardous"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+]
+],
+"keywords": [
+784550,
+784551,
+784552,
+784561
+]
 },
 "787954": {
 "tags": [
@@ -9103,18 +18282,104 @@
 [
 "movement",
 "this unit can make a Normal move"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+]
+],
+"keywords": [
+784553,
+784556,
+784558,
+784566
+]
 },
 "787957": {
 "tags": [
 [
 "advantage",
 "you can re-roll one Hit roll"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Heavy"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784559,
+784573
+]
 },
 "787996": {
 "tags": [
@@ -9145,9 +18410,48 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784556,
+784561,
+784573
+]
 },
 "787998": {
 "tags": [
@@ -9186,9 +18490,40 @@
 [
 "piercing",
 "Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"stat_gain",
+"Rapid Fire"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"stat_gain",
+"Rapid Fire"
+]
+],
+"keywords": [
+784553,
+784557,
+784568
+]
 },
 "788011": {
 "tags": [
@@ -9239,9 +18574,66 @@
 [
 "piercing",
 "Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784553,
+784557,
+784558,
+784566,
+784572
+]
 },
 "788012": {
 "tags": [
@@ -9296,9 +18688,48 @@
 [
 "temporary_buff",
 "until the end of the phase"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784557,
+784568,
+784572
+]
 },
 "788014": {
 "tags": [
@@ -9333,13 +18764,101 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-Linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784553,
+784556,
+784558,
+784573
+]
 },
 "788028": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"buff",
+"Heavy"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"buff",
+"Lethal Hits"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Heavy"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"buff",
+"Lethal Hits"
+]
+],
+"keywords": [
+784559,
+784563,
+784566
+]
 },
 "788034": {
 "tags": [
@@ -9370,9 +18889,65 @@
 [
 "target_choice",
 "Precision"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784552,
+784563,
+784572,
+784579
+]
 },
 "788035": {
 "tags": [
@@ -9383,9 +18958,47 @@
 [
 "advantage",
 "you can re-roll Charge rolls"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784572
+]
 },
 "788041": {
 "tags": [
@@ -9396,9 +19009,55 @@
 [
 "tribal",
 "targets a Monster or Vehicle unit"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784572,
+784573
+]
 },
 "788049": {
 "tags": [
@@ -9417,9 +19076,99 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
+]
+],
+"keywords": [
+784551,
+784556,
+784560,
+784562,
+784573,
+784577
+]
 },
 "788056": {
 "tags": [
@@ -9434,9 +19183,30 @@
 [
 "temporary_effect",
 "until the start of your next turn"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784572
+]
 },
 "788061": {
 "tags": [
@@ -9451,9 +19221,65 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784556,
+784558,
+784573,
+784579
+]
 },
 "788063": {
 "tags": [
@@ -9480,9 +19306,56 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784556,
+784573,
+784579
+]
 },
 "788070": {
 "tags": [
@@ -9505,9 +19378,107 @@
 [
 "death_trigger",
 "If your Canis Rex model is destroyed"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784550,
+784558,
+784562,
+784573,
+784575,
+784576
+]
 },
 "788071": {
 "tags": [
@@ -9522,9 +19493,47 @@
 [
 "temporary_buff",
 "until the end of the turn"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_gain",
+"Melta"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784560,
+784573
+]
 },
 "788091": {
 "tags": [
@@ -9559,9 +19568,90 @@
 [
 "piercing",
 "[IGNORES COVER] ability"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
+]
+],
+"keywords": [
+784554,
+784562,
+784568,
+784573,
+784575
+]
 },
 "788094": {
 "tags": [
@@ -9596,9 +19686,92 @@
 [
 "target_choice",
 "Precision"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784550,
+784552,
+784556,
+784563,
+784572,
+784574,
+784576
+]
 },
 "788096": {
 "tags": [
@@ -9613,9 +19786,65 @@
 [
 "stat_loss",
 "halve the Objective Control characteristic of models in that enemy unit"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+]
+],
+"keywords": [
+784550,
+784552,
+784567,
+784569
+]
 },
 "788098": {
 "tags": [
@@ -9626,9 +19855,57 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"buff",
+"Heavy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"buff",
+"Heavy"
+]
+],
+"keywords": [
+784552,
+784554,
+784555,
+784559
+]
 },
 "788100": {
 "tags": [
@@ -9643,9 +19920,39 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784572
+]
 },
 "788102": {
 "tags": [
@@ -9726,9 +20033,48 @@
 [
 "piercing",
 "Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784553,
+784556,
+784572
+]
 },
 "788121": {
 "tags": [
@@ -9739,9 +20085,31 @@
 [
 "zone_control",
 "within range of an objective marker"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+]
+],
+"keywords": [
+784557,
+784559
+]
 },
 "788123": {
 "tags": [
@@ -9756,9 +20124,38 @@
 [
 "tribal",
 "friendly Adeptus Astartes Infantry unit"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "788133": {
 "tags": [
@@ -9782,9 +20179,39 @@
 [
 "temporary_effect",
 "Until the start of your next turn"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Heavy"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784559,
+784572
+]
 },
 "788144": {
 "tags": [
@@ -9807,9 +20234,57 @@
 [
 "temporary_effect",
 "until the start of your next Movement phase"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Heavy"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+]
+],
+"keywords": [
+784559,
+784563,
+784571,
+784574
+]
 },
 "788158": {
 "tags": [
@@ -9824,9 +20299,55 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784562,
+784573
+]
 },
 "788165": {
 "tags": [
@@ -9853,9 +20374,30 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "788167": {
 "tags": [
@@ -9882,9 +20424,47 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784572,
+784573
+]
 },
 "788169": {
 "tags": [
@@ -9899,9 +20479,39 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784557,
+784573
+]
 },
 "788171": {
 "tags": [
@@ -9920,9 +20530,90 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
+]
+],
+"keywords": [
+784551,
+784556,
+784562,
+784573,
+784577
+]
 },
 "788179": {
 "tags": [
@@ -9941,9 +20632,39 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784572
+]
 },
 "788180": {
 "tags": [
@@ -9958,9 +20679,30 @@
 [
 "piercing",
 "Armour Penetration"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "788186": {
 "tags": [
@@ -10020,9 +20762,83 @@
 [
 "immunity",
 "Lone Operative"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784557,
+784558,
+784561,
+784571,
+784574,
+784576
+]
 },
 "788198": {
 "tags": [
@@ -10045,9 +20861,89 @@
 [
 "random_effect",
 "roll six D6"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
+]
+],
+"keywords": [
+784557,
+784562,
+784573,
+784577
+]
 },
 "788201": {
 "tags": [
@@ -10058,9 +20954,125 @@
 [
 "zone_control",
 "within range of an objective marker you do not control"
+],
+[
+"buff",
+"Conversion"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Conversion"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784482,
+784551,
+784558,
+784560,
+784562,
+784567,
+784569,
+784573
+]
 },
 "788212": {
 "tags": [
@@ -10087,9 +21099,30 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "788217": {
 "tags": [
@@ -10128,9 +21161,74 @@
 [
 "stat_gain",
 "has an Attacks characteristic of 7"
+],
+[
+"buff",
+"Conversion"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage",
+"Sustained Hits"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Conversion"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage",
+"Sustained Hits"
+]
+],
+"keywords": [
+784482,
+784550,
+784552,
+784555,
+784558
+]
 },
 "788228": {
 "tags": [
@@ -10141,9 +21239,64 @@
 [
 "deckbuilding_effect",
 "Your army cannot contain both Logan Grimnar and Logan Grimnar on Stormrider"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784552,
+784555,
+784573
+]
 },
 "788230": {
 "tags": [
@@ -10166,9 +21319,99 @@
 [
 "saving_throws",
 "Invulnerable Save: 5+"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784553,
+784560,
+784561,
+784566,
+784569,
+784573
+]
 },
 "788235": {
 "tags": [
@@ -10195,9 +21438,39 @@
 [
 "shield",
 "change the Damage characteristic of that attack to 0"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"multi_attack",
+"Extra Attacks"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"multi_attack",
+"Extra Attacks"
+]
+],
+"keywords": [
+784552,
+784555
+]
 },
 "788238": {
 "tags": [
@@ -10212,9 +21485,39 @@
 [
 "stat_gain",
 "has a Wounds characteristic of 7"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Twin-linked"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Twin-linked"
+]
+],
+"keywords": [
+784552,
+784556
+]
 },
 "788244": {
 "tags": [
@@ -10233,9 +21536,49 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"placement_rules",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"placement_rules",
+"Deep Strike"
+]
+],
+"keywords": [
+784553,
+784556,
+784568,
+784572
+]
 },
 "788245": {
 "tags": [
@@ -10262,9 +21605,82 @@
 [
 "merge_attach",
 "it can instead be attached to this unit"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+]
+],
+"keywords": [
+784550,
+784553,
+784557,
+784563,
+784570
+]
 },
 "788247": {
 "tags": [
@@ -10287,9 +21703,64 @@
 [
 "buff",
 "TWIN-LINKED ability"
+],
+[
+"stat_gain",
+"Curse of the Wulfen"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_gain",
+"Curse of the Wulfen"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784471,
+784561,
+784573
+]
 },
 "788250": {
 "tags": [
@@ -10345,9 +21816,74 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
+]
+],
+"keywords": [
+784556,
+784558,
+784569,
+784573,
+784577
+]
 },
 "788254": {
 "tags": [
@@ -10366,9 +21902,65 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
+]
+],
+"keywords": [
+784556,
+784569,
+784573,
+784577
+]
 },
 "788270": {
 "tags": [
@@ -10391,9 +21983,56 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Lethal Hits"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"buff",
+"Lethal Hits"
+]
+],
+"keywords": [
+784550,
+784552,
+784566
+]
 },
 "788274": {
 "tags": [
@@ -10452,9 +22091,48 @@
 [
 "other_death_trigger",
 "if your Oath of Moment target is destroyed"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"stat_gain",
+"Rapid Fire"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"stat_gain",
+"Rapid Fire"
+]
+],
+"keywords": [
+784553,
+784566,
+784568
+]
 },
 "788276": {
 "tags": [
@@ -10477,9 +22155,82 @@
 [
 "temporary_buff",
 "until the end of the phase"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"target_choice",
+"PRECISION"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"target_choice",
+"PRECISION"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+]
+],
+"keywords": [
+784552,
+784563,
+784570,
+784571,
+784574
+]
 },
 "788278": {
 "tags": [
@@ -10510,9 +22261,39 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Sustained Hits"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Sustained Hits"
+]
+],
+"keywords": [
+784552,
+784558
+]
 },
 "788283": {
 "tags": [
@@ -10567,9 +22348,23 @@
 [
 "target_choice",
 "Precision"
+],
+[
+"random_effect",
+"Twin-linked"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-linked"
+]
+],
+"keywords": [
+784556,
+784563
+]
 },
 "788285": {
 "tags": [
@@ -10596,9 +22391,55 @@
 [
 "saving_throws",
 "4+ Invulnerable save"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784562,
+784579
+]
 },
 "788300": {
 "tags": [
@@ -10617,9 +22458,50 @@
 [
 "target_choice",
 "Precision"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Assault"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+]
+],
+"keywords": [
+784554,
+784557,
+784563,
+784567,
+784571
+]
 },
 "788306": {
 "tags": [
@@ -10651,9 +22533,30 @@
 [
 "resource_gain",
 "you gain 1YP"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "788313": {
 "tags": [
@@ -10672,9 +22575,91 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784553,
+784556,
+784559,
+784560,
+784562,
+784573
+]
 },
 "788314": {
 "tags": [
@@ -10697,9 +22682,99 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784551,
+784553,
+784556,
+784557,
+784562,
+784573
+]
 },
 "788315": {
 "tags": [
@@ -10718,9 +22793,133 @@
 [
 "saving_throws",
 "5+ invulnerable save"
+],
+[
+"buff",
+"Conversion"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Conversion"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"stat_gain",
+"Rapid Fire"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784482,
+784551,
+784553,
+784557,
+784558,
+784562,
+784568,
+784573
+]
 },
 "788331": {
 "tags": [
@@ -10735,9 +22934,39 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784557,
+784573
+]
 },
 "788332": {
 "tags": [
@@ -10752,9 +22981,90 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
+]
+],
+"keywords": [
+784556,
+784560,
+784562,
+784573,
+784577
+]
 },
 "788339": {
 "tags": [
@@ -10773,9 +23083,56 @@
 [
 "shield",
 "change the Damage characteristic of that attack to 0"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784557,
+784560,
+784573
+]
 },
 "788347": {
 "tags": [
@@ -10806,9 +23163,47 @@
 [
 "saving_throws",
 "5+ invulnerable save"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
+]
+],
+"keywords": [
+784573,
+784575
+]
 },
 "788350": {
 "tags": [
@@ -10839,9 +23234,108 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
+]
+],
+"keywords": [
+784551,
+784558,
+784562,
+784567,
+784569,
+784573,
+784575
+]
 },
 "788357": {
 "tags": [
@@ -10856,9 +23350,39 @@
 [
 "cant_attack",
 "this unit is not eligible to declare a charge"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Assault"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784554,
+784572
+]
 },
 "788373": {
 "tags": [
@@ -10897,9 +23421,39 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Devastating Wounds"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"damage",
+"Devastating Wounds"
+]
+],
+"keywords": [
+784552,
+784553
+]
 },
 "788384": {
 "tags": [
@@ -10938,9 +23492,56 @@
 [
 "tribal",
 "NECRONS INFANTRY or NECRONS MOUNTED unit"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784558,
+784566,
+784573
+]
 },
 "788389": {
 "tags": [
@@ -10963,9 +23564,30 @@
 [
 "targeting_rules",
 "excluding units with the Lone Operative ability"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "788392": {
 "tags": [
@@ -10984,9 +23606,30 @@
 [
 "random_effect",
 "D3"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+]
+],
+"keywords": [
+784561
+]
 },
 "788401": {
 "tags": [
@@ -11013,9 +23656,81 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784553,
+784561,
+784572,
+784573
+]
 },
 "788402": {
 "tags": [
@@ -11058,9 +23773,116 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784555,
+784557,
+784558,
+784561,
+784562,
+784572,
+784573
+]
 },
 "788412": {
 "tags": [
@@ -11075,9 +23897,22 @@
 [
 "zone_control",
 "within range of an objective marker your opponent controls"
+],
+[
+"buff",
+"Lethal Hits"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal Hits"
+]
+],
+"keywords": [
+784566
+]
 },
 "788413": {
 "tags": [
@@ -11088,9 +23923,49 @@
 [
 "tribal",
 "MONSTER or VEHICLE unit"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"stat_gain",
+"Rapid Fire"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"stat_gain",
+"Rapid Fire"
+]
+],
+"keywords": [
+784558,
+784559,
+784566,
+784568
+]
 },
 "788418": {
 "tags": [
@@ -11129,9 +24004,57 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784557,
+784558,
+784572,
+784573
+]
 },
 "788421": {
 "tags": [
@@ -11194,9 +24117,65 @@
 [
 "piercing",
 "Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784553,
+784564,
+784566,
+784573
+]
 },
 "788426": {
 "tags": [
@@ -11207,9 +24186,116 @@
 [
 "debuff",
 "subtract 2 from the Charge roll"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784553,
+784558,
+784562,
+784566,
+784567,
+784569,
+784573
+]
 },
 "788428": {
 "tags": [
@@ -11240,9 +24326,65 @@
 [
 "debuff",
 "subtract 1 from the Hit roll"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"damage",
+"Sustained Hits"
+],
+[
+"buff",
+"Lethal Hits"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784557,
+784558,
+784566,
+784573
+]
 },
 "788436": {
 "tags": [
@@ -11257,9 +24399,30 @@
 [
 "damage_reduction",
 "subtract 1 from the Damage characteristic of that attack"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "788439": {
 "tags": [
@@ -11274,9 +24437,81 @@
 [
 "silence",
 "it no longer has the Firing Deck ability"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
+]
+],
+"keywords": [
+784557,
+784562,
+784573,
+784580
+]
 },
 "788440": {
 "tags": [
@@ -11287,9 +24522,55 @@
 [
 "tribal",
 "targets a MONSTER or VEHICLE unit"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+]
+],
+"keywords": [
+784561,
+784562
+]
 },
 "788441": {
 "tags": [
@@ -11304,9 +24585,82 @@
 [
 "temporary_buff",
 "until the end of the turn, melee weapons it is equipped with have the [DEVASTATING WOUNDS] ability"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"DEVASTATING WOUNDS"
+],
+[
+"damage",
+"DEVASTATING WOUNDS"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"stat_gain",
+"Rapid Fire"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"DEVASTATING WOUNDS"
+],
+[
+"damage",
+"DEVASTATING WOUNDS"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"stat_gain",
+"Rapid Fire"
+]
+],
+"keywords": [
+784552,
+784553,
+784557,
+784561,
+784568
+]
 },
 "788443": {
 "tags": [
@@ -11341,9 +24695,55 @@
 [
 "heal",
 "regains D3 lost wounds"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+]
+],
+"keywords": [
+784552,
+784562
+]
 },
 "788444": {
 "tags": [
@@ -11386,9 +24786,30 @@
 [
 "repeat_trigger",
 "can overcharge its kustom force field one additional time"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "788461": {
 "tags": [
@@ -11444,9 +24865,30 @@
 [
 "merge_attach",
 "This model can be attached to the following units"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "788479": {
 "tags": [
@@ -11481,9 +24923,30 @@
 [
 "revive",
 "return up to D3 destroyed Bodyguard models"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+]
+],
+"keywords": [
+784552
+]
 },
 "788480": {
 "tags": [
@@ -11526,9 +24989,82 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Assault"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"debuff",
+"Indirect Fire"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784554,
+784562,
+784564,
+784567,
+784573
+]
 },
 "788481": {
 "tags": [
@@ -11539,9 +25075,81 @@
 [
 "blink",
 "remove it from the battlefield and set it up again"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"target_choice",
+"Precision"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784551,
+784553,
+784563,
+784573
+]
 },
 "788497": {
 "tags": [
@@ -11572,9 +25180,39 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
+]
+],
+"keywords": [
+784573,
+784580
+]
 },
 "788517": {
 "tags": [
@@ -11597,9 +25235,30 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "788521": {
 "tags": [
@@ -11626,9 +25285,65 @@
 [
 "tribal",
 "GRETCHIN unit"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784555,
+784561,
+784570,
+784576
+]
 },
 "788529": {
 "tags": [
@@ -11639,9 +25354,64 @@
 [
 "rule_change",
 "even if you have already targeted a different unit with that Stratagem this phase"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784570,
+784573,
+784576
+]
 },
 "788534": {
 "tags": [
@@ -11676,9 +25446,57 @@
 [
 "tribal",
 "friendly T\u2019au Empire unit"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"Melta"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784560,
+784571,
+784574,
+784576
+]
 },
 "788535": {
 "tags": [
@@ -11697,9 +25515,47 @@
 [
 "cost_reduction",
 "reduce the CP cost of that use of that Stratagem by 1CP"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784552,
+784572
+]
 },
 "788542": {
 "tags": [
@@ -11734,9 +25590,65 @@
 [
 "buff",
 "[SUSTAINED HITS 2]"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"DEVASTATING WOUNDS"
+],
+[
+"damage",
+"DEVASTATING WOUNDS"
+],
+[
+"damage",
+"SUSTAINED HITS"
+],
+[
+"target_choice",
+"PRECISION"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"piercing",
+"DEVASTATING WOUNDS"
+],
+[
+"damage",
+"DEVASTATING WOUNDS"
+],
+[
+"damage",
+"SUSTAINED HITS"
+],
+[
+"target_choice",
+"PRECISION"
+]
+],
+"keywords": [
+784552,
+784553,
+784558,
+784563
+]
 },
 "788547": {
 "tags": [
@@ -11755,9 +25667,39 @@
 [
 "condition_count",
 "Starting Strength of 20"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"debuff",
+"Stealth"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"debuff",
+"Stealth"
+]
+],
+"keywords": [
+784570,
+784574
+]
 },
 "788549": {
 "tags": [
@@ -11768,9 +25710,30 @@
 [
 "merge_attach",
 "it can be attached to this unit instead"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784572
+]
 },
 "788551": {
 "tags": [
@@ -11793,9 +25756,100 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"debuff",
+"Stealth"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784551,
+784556,
+784560,
+784571,
+784573,
+784574,
+784576
+]
 },
 "788555": {
 "tags": [
@@ -11822,9 +25876,90 @@
 [
 "temporary_buff",
 "until the end of the phase"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"piercing",
+"IGNORES COVER"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"piercing",
+"IGNORES COVER"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784553,
+784557,
+784562,
+784567,
+784572
+]
 },
 "788574": {
 "tags": [
@@ -11859,9 +25994,117 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"movement",
+"Super-Heavy Walker"
+]
+],
+"keywords": [
+784551,
+784553,
+784557,
+784559,
+784560,
+784562,
+784573,
+784575
+]
 },
 "788579": {
 "tags": [
@@ -11876,9 +26119,55 @@
 [
 "debuff",
 "subtract 1 from the Hit roll"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"stances",
+"Hover"
+],
+[
+"stat_gain",
+"Hover"
+]
+],
+"keywords": [
+784573,
+784577
+]
 },
 "788580": {
 "tags": [
@@ -11918,9 +26207,40 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"placement_rules",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"placement_rules",
+"Deep Strike"
+]
+],
+"keywords": [
+784556,
+784560,
+784572
+]
 },
 "788588": {
 "tags": [
@@ -11931,9 +26251,30 @@
 [
 "tribal",
 "targets a Monster or Vehicle unit"
+],
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Deep Strike"
+],
+[
+"reserve_bench",
+"Deep Strike"
+]
+],
+"keywords": [
+784572
+]
 },
 "788591": {
 "tags": [
@@ -11956,9 +26297,73 @@
 [
 "merge_attach",
 "This model can be attached to the following unit"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+]
+],
+"keywords": [
+784552,
+784570,
+784571,
+784574
+]
 },
 "788592": {
 "tags": [
@@ -11981,9 +26386,73 @@
 [
 "merge_attach",
 "This model can be attached to the following unit"
+],
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Leader"
+],
+[
+"bodyguard",
+"Leader"
+],
+[
+"movement",
+"Scouts"
+],
+[
+"start_of_game",
+"Scouts"
+],
+[
+"placement_rules",
+"Infiltrators"
+],
+[
+"start_of_game",
+"Infiltrators"
+],
+[
+"debuff",
+"Stealth"
+]
+],
+"keywords": [
+784552,
+784570,
+784571,
+784574
+]
 },
 "788612": {
 "tags": [
@@ -11998,9 +26467,65 @@
 [
 "temporary_effect",
 "Until the end of the phase"
+],
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Twin-linked"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"buff",
+"Torrent"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784556,
+784567,
+784569,
+784573
+]
 },
 "788616": {
 "tags": [
@@ -12044,9 +26569,48 @@
 [
 "control_reward",
 "if this unit is within range of an objective marker that you control"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"ranged",
+"Indirect Fire"
+],
+[
+"debuff",
+"Indirect Fire"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Anti-"
+],
+[
+"buff",
+"Heavy"
+],
+[
+"ranged",
+"Indirect Fire"
+],
+[
+"debuff",
+"Indirect Fire"
+]
+],
+"keywords": [
+784557,
+784559,
+784564
+]
 },
 "788627": {
 "tags": [
@@ -12073,9 +26637,30 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "788628": {
 "tags": [
@@ -12110,9 +26695,73 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Devastating Wounds"
+],
+[
+"damage",
+"Devastating Wounds"
+],
+[
+"tribal",
+"Anti-"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784553,
+784557,
+784561,
+784573
+]
 },
 "788639": {
 "tags": [
@@ -12131,18 +26780,197 @@
 [
 "death_trigger",
 "Deadly Demise"
+],
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_attack",
+"Extra Attacks"
+],
+[
+"stat_gain",
+"Melta"
+],
+[
+"damage_reduction",
+"Feel No Pain"
+],
+[
+"saving_throws",
+"Feel No Pain"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"play_restriction",
+"Psychic"
+],
+[
+"damage_types",
+"Psychic"
+]
+],
+"keywords": [
+784555,
+784560,
+784561,
+784562,
+784563,
+784573,
+784579
+]
 },
 "788650": {
 "tags": [
 [
 "saving_throws",
 "roll one D6: on a 4+, that wound is not lost"
+],
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hazardous"
+],
+[
+"random_effect",
+"Hazardous"
+],
+[
+"random_effect",
+"Blast"
+],
+[
+"condition_count",
+"Blast"
+],
+[
+"play_restriction",
+"Blast"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+],
+[
+"ranged",
+"Firing Deck"
+]
+],
+"keywords": [
+784551,
+784562,
+784573,
+784580
+]
 },
 "788652": {
 "tags": [
@@ -12165,9 +26993,38 @@
 [
 "heal",
 "that Aircraft regains up to D3 lost wounds"
+],
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deadly Demise"
+],
+[
+"aoe_damage",
+"Deadly Demise"
+],
+[
+"random_effect",
+"Deadly Demise"
+]
+],
+"keywords": [
+784573
+]
 },
 "788654": {
 "tags": [
@@ -12186,9 +27043,48 @@
 [
 "debuff",
 "subtract 1 from that test"
+],
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"targeting_rules",
+"Lone Operative"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"ranged",
+"Pistol"
+],
+[
+"flexibility",
+"Pistol"
+],
+[
+"piercing",
+"Ignores Cover"
+],
+[
+"targeting_rules",
+"Lone Operative"
+]
+],
+"keywords": [
+784550,
+784567,
+784576
+]
 },
 "788663": {
 "tags": [
@@ -12422,9 +27318,22 @@
 [
 "first_strike",
 "Fights First"
+],
+[
+"ranged",
+"Assault"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"ranged",
+"Assault"
+]
+],
+"keywords": [
+784554
+]
 },
 "816462": {
 "tags": [
@@ -12435,9 +27344,22 @@
 [
 "tribal",
 "Tyranids unit"
+],
+[
+"ranged",
+"Assault"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"ranged",
+"Assault"
+]
+],
+"keywords": [
+784554
+]
 },
 "816463": {
 "tags": [

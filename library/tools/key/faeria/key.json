@@ -178,7 +178,10 @@
 "Haste"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741068
+]
 },
 "741087": {
 "tags": [
@@ -232,9 +235,23 @@
 [
 "resource_gain",
 "Gain 1 faeria"
+],
+[
+"immobilize",
+"Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immobilize",
+"Taunt"
+]
+],
+"keywords": [
+741060,
+741066
+]
 },
 "741093": {
 "tags": [
@@ -259,7 +276,10 @@
 "random Legend"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741059
+]
 },
 "741097": {
 "tags": [
@@ -278,9 +298,23 @@
 [
 "cost_set",
 "It costs 0 faeria"
+],
+[
+"movement",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Charge"
+]
+],
+"keywords": [
+741060,
+741064
+]
 },
 "741098": {
 "tags": [
@@ -297,7 +331,10 @@
 "ALL creatures"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741058
+]
 },
 "741099": {
 "tags": [
@@ -314,7 +351,10 @@
 "it gains +1/+0"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741071
+]
 },
 "741100": {
 "tags": [
@@ -357,7 +397,10 @@
 "Add an Explore to your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741058
+]
 },
 "741105": {
 "tags": [
@@ -370,7 +413,10 @@
 "Draw a card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741058
+]
 },
 "741106": {
 "tags": [
@@ -395,16 +441,32 @@
 "Each player draws 2 cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741108": {
 "tags": [
 [
 "protection",
 "Protection"
+],
+[
+"shield",
+"Protection"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"shield",
+"Protection"
+]
+],
+"keywords": [
+741069
+]
 },
 "741109": {
 "tags": [
@@ -442,7 +504,10 @@
 "Each player draws a card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741058
+]
 },
 "741112": {
 "tags": [
@@ -483,9 +548,23 @@
 [
 "comeback",
 "If you were attacked last turn"
+],
+[
+"immobilize",
+"Taunt"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immobilize",
+"Taunt"
+]
+],
+"keywords": [
+741057,
+741066
+]
 },
 "741115": {
 "tags": [
@@ -494,7 +573,10 @@
 "Deathtouch"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741073
+]
 },
 "741117": {
 "tags": [
@@ -520,7 +602,10 @@
 "Add a Campfire to your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741122": {
 "tags": [
@@ -584,7 +669,10 @@
 "Deal 1 damage to this"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741059
+]
 },
 "741129": {
 "tags": [
@@ -597,7 +685,10 @@
 "Another creature's Attack becomes equal to its Life"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741130": {
 "tags": [
@@ -616,9 +707,30 @@
 [
 "evasion",
 "Flying"
+],
+[
+"placement_rules",
+"Aquatic"
+],
+[
+"self_destruct",
+"Aquatic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Aquatic"
+],
+[
+"self_destruct",
+"Aquatic"
+]
+],
+"keywords": [
+741074
+]
 },
 "741135": {
 "tags": [
@@ -631,7 +743,10 @@
 "Transform another creature into a 5/5 Mirror Phantasm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741137": {
 "tags": [
@@ -644,7 +759,10 @@
 "Haste"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741065
+]
 },
 "741138": {
 "tags": [
@@ -722,7 +840,10 @@
 "you may summon it on an ocean tile"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057
+]
 },
 "741144": {
 "tags": [
@@ -738,8 +859,30 @@
 "by": "C"
 },
 "741145": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"placement_rules",
+"Aquatic"
+],
+[
+"self_destruct",
+"Aquatic"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"placement_rules",
+"Aquatic"
+],
+[
+"self_destruct",
+"Aquatic"
+]
+],
+"keywords": [
+741074
+]
 },
 "741146": {
 "tags": [
@@ -754,9 +897,31 @@
 [
 "adjacency",
 "adjacent lands"
+],
+[
+"placement_rules",
+"Aquatic"
+],
+[
+"self_destruct",
+"Aquatic"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"placement_rules",
+"Aquatic"
+],
+[
+"self_destruct",
+"Aquatic"
+]
+],
+"keywords": [
+741059,
+741074
+]
 },
 "741147": {
 "tags": [
@@ -769,7 +934,10 @@
 "Gain 10 faeria"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741058
+]
 },
 "741149": {
 "tags": [
@@ -805,9 +973,23 @@
 [
 "random_effect",
 "creatures that cost 2 faeria more"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741057,
+741063
+]
 },
 "741151": {
 "tags": [
@@ -824,7 +1006,11 @@
 "Create lake"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057,
+741065
+]
 },
 "741152": {
 "tags": [
@@ -839,9 +1025,22 @@
 [
 "movement",
 "Charge 2"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741153": {
 "tags": [
@@ -858,7 +1057,10 @@
 "Deal 1 damage to this"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741062
+]
 },
 "741154": {
 "tags": [
@@ -884,7 +1086,10 @@
 "this gains +2/+0 this turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741065
+]
 },
 "741159": {
 "tags": [
@@ -932,7 +1137,10 @@
 "Change another friendly creature to 6/6"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741168": {
 "tags": [
@@ -999,9 +1207,30 @@
 [
 "movement",
 "Dash 2"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741067
+]
 },
 "741174": {
 "tags": [
@@ -1035,7 +1264,10 @@
 "random friendly creature"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741058
+]
 },
 "741176": {
 "tags": [
@@ -1048,7 +1280,10 @@
 "teleport another friendly creature to a forest you control"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741182": {
 "tags": [
@@ -1061,7 +1296,10 @@
 "Give a creature +2/+2"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741186": {
 "tags": [
@@ -1093,9 +1331,23 @@
 [
 "random_effect",
 "at random"
+],
+[
+"immobilize",
+"Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immobilize",
+"Taunt"
+]
+],
+"keywords": [
+741058,
+741066
+]
 },
 "741192": {
 "tags": [
@@ -1112,7 +1364,10 @@
 "for each forest you control"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741193": {
 "tags": [
@@ -1137,7 +1392,10 @@
 "gain 10 faeria"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741059
+]
 },
 "741195": {
 "tags": [
@@ -1178,9 +1436,23 @@
 [
 "terrain",
 "Create forest"
+],
+[
+"immobilize",
+"Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immobilize",
+"Taunt"
+]
+],
+"keywords": [
+741057,
+741066
+]
 },
 "741200": {
 "tags": [
@@ -1197,7 +1469,10 @@
 "Deal 1 damage to this"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741062
+]
 },
 "741202": {
 "tags": [
@@ -1239,7 +1514,10 @@
 "It costs 2 faeria less"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741065
+]
 },
 "741206": {
 "tags": [
@@ -1258,9 +1536,23 @@
 [
 "scope_global",
 "Fill the world"
+],
+[
+"immobilize",
+"Taunt"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immobilize",
+"Taunt"
+]
+],
+"keywords": [
+741058,
+741066
+]
 },
 "741207": {
 "tags": [
@@ -1309,9 +1601,22 @@
 [
 "count_payoff",
 "for each time you've been dealt damage this game"
+],
+[
+"immobilize",
+"Taunt"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immobilize",
+"Taunt"
+]
+],
+"keywords": [
+741066
+]
 },
 "741210": {
 "tags": [
@@ -1326,9 +1631,30 @@
 [
 "stat_condition",
 "5 Life or more"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741067
+]
 },
 "741214": {
 "tags": [
@@ -1341,7 +1667,10 @@
 "Give all creatures in your deck and hand +1/+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741058
+]
 },
 "741215": {
 "tags": [
@@ -1394,9 +1723,31 @@
 [
 "in_hand_buff",
 "She gains +2/+2"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741058,
+741067
+]
 },
 "741218": {
 "tags": [
@@ -1409,7 +1760,10 @@
 "Gain 2 faeria"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741060
+]
 },
 "741222": {
 "tags": [
@@ -1422,7 +1776,10 @@
 "+0/+2"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741224": {
 "tags": [
@@ -1482,7 +1839,10 @@
 "random card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741060
+]
 },
 "741230": {
 "tags": [
@@ -1499,7 +1859,10 @@
 "adjacent to an opponent's well"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741231": {
 "tags": [
@@ -1520,7 +1883,10 @@
 "adjacent to the target"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741071
+]
 },
 "741233": {
 "tags": [
@@ -1546,7 +1912,10 @@
 "Deal 1 damage to an enemy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741236": {
 "tags": [
@@ -1572,7 +1941,10 @@
 "higher Attack than Life"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741238": {
 "tags": [
@@ -1606,7 +1978,10 @@
 "adjacent enemy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741242": {
 "tags": [
@@ -1628,7 +2003,10 @@
 "Create mountain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741247": {
 "tags": [
@@ -1643,9 +2021,22 @@
 [
 "ranged",
 "Ranged Attack"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741248": {
 "tags": [
@@ -1662,7 +2053,10 @@
 "Deal 1 damage to this"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741062
+]
 },
 "741249": {
 "tags": [
@@ -1728,9 +2122,23 @@
 [
 "adjacency",
 "adjacent enemy creatures"
+],
+[
+"immobilize",
+"Taunt"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immobilize",
+"Taunt"
+]
+],
+"keywords": [
+741059,
+741066
+]
 },
 "741256": {
 "tags": [
@@ -1833,7 +2241,10 @@
 "Has +2/+0 against gods"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741068
+]
 },
 "741267": {
 "tags": [
@@ -1844,9 +2255,30 @@
 [
 "stat_gain",
 "Has +3/+0 against gods"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741067
+]
 },
 "741269": {
 "tags": [
@@ -1859,7 +2291,11 @@
 "Gift"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057,
+741065
+]
 },
 "741271": {
 "tags": [
@@ -1876,7 +2312,10 @@
 "Move Wind Gate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741062
+]
 },
 "741272": {
 "tags": [
@@ -1893,7 +2332,10 @@
 "drain 2 Life from your opponent"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057
+]
 },
 "741273": {
 "tags": [
@@ -1916,9 +2358,22 @@
 [
 "cost_set",
 "It costs 0 faeria"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741275": {
 "tags": [
@@ -1961,7 +2416,10 @@
 "It costs 2 faeria"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741062
+]
 },
 "741278": {
 "tags": [
@@ -1974,7 +2432,10 @@
 "Deal 2 damage to yourself"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741059
+]
 },
 "741281": {
 "tags": [
@@ -1995,7 +2456,10 @@
 "at end of turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741068
+]
 },
 "741284": {
 "tags": [
@@ -2027,9 +2491,23 @@
 [
 "scope_multi",
 "each enemy creature"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741057,
+741063
+]
 },
 "741290": {
 "tags": [
@@ -2044,9 +2522,22 @@
 [
 "movement",
 "Charge 3"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741291": {
 "tags": [
@@ -2067,7 +2558,10 @@
 "Deal 1 damage to this"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741062
+]
 },
 "741292": {
 "tags": [
@@ -2082,9 +2576,22 @@
 [
 "permanent_growth",
 "Whenever a friendly creature attacks a god, this gains +3/+0"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741294": {
 "tags": [
@@ -2108,9 +2615,22 @@
 [
 "permanent_growth",
 "Gains +1/+1 each time"
+],
+[
+"movement",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Charge"
+]
+],
+"keywords": [
+741064
+]
 },
 "741297": {
 "tags": [
@@ -2131,7 +2651,11 @@
 "give this creature Protection"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057,
+741073
+]
 },
 "741298": {
 "tags": [
@@ -2152,7 +2676,10 @@
 "Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057
+]
 },
 "741300": {
 "tags": [
@@ -2184,9 +2711,22 @@
 [
 "other_death_trigger",
 "Whenever a friendly creature dies"
+],
+[
+"movement",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Charge"
+]
+],
+"keywords": [
+741064
+]
 },
 "741302": {
 "tags": [
@@ -2197,9 +2737,22 @@
 [
 "immunity",
 "Can't be attacked"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741305": {
 "tags": [
@@ -2254,7 +2807,10 @@
 "Doomgate gains +0/+2"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741062
+]
 },
 "741308": {
 "tags": [
@@ -2275,7 +2831,10 @@
 "this turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741071
+]
 },
 "741309": {
 "tags": [
@@ -2294,9 +2853,22 @@
 [
 "temporary_buff",
 "this turn"
+],
+[
+"movement",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Charge"
+]
+],
+"keywords": [
+741064
+]
 },
 "741310": {
 "tags": [
@@ -2313,7 +2885,11 @@
 "Gain Attack and Life equal to any creature's"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057,
+741065
+]
 },
 "741313": {
 "tags": [
@@ -2340,9 +2916,31 @@
 [
 "stat_gain",
 "Give +4/+4"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741057,
+741067
+]
 },
 "741314": {
 "tags": [
@@ -2361,9 +2959,22 @@
 [
 "death_count",
 "friendly creature that has died this game"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741315": {
 "tags": [
@@ -2386,9 +2997,23 @@
 [
 "direct_damage",
 "Deal 3 damage to your opponent"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741060,
+741063
+]
 },
 "741316": {
 "tags": [
@@ -2401,7 +3026,10 @@
 "Deal 2 damage to your opponent"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741317": {
 "tags": [
@@ -2433,9 +3061,22 @@
 [
 "movement",
 "Dash 2"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741319": {
 "tags": [
@@ -2462,9 +3103,23 @@
 [
 "hand_size",
 "each card in your hand"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741057,
+741063
+]
 },
 "741320": {
 "tags": [
@@ -2485,7 +3140,10 @@
 "deal 2 damage to yourself"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741059
+]
 },
 "741322": {
 "tags": [
@@ -2502,7 +3160,10 @@
 "you gain 5 Life"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741065
+]
 },
 "741323": {
 "tags": [
@@ -2515,7 +3176,10 @@
 "Can only attack gods"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741065
+]
 },
 "741325": {
 "tags": [
@@ -2570,7 +3234,11 @@
 "Jump creature"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057,
+741065
+]
 },
 "741332": {
 "tags": [
@@ -2583,7 +3251,10 @@
 "Give the next Combat creature you summon +1/+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741060
+]
 },
 "741334": {
 "tags": [
@@ -2600,7 +3271,10 @@
 "destroy this instead"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741072
+]
 },
 "741335": {
 "tags": [
@@ -2636,9 +3310,22 @@
 [
 "cost_condition",
 "costs 1 faeria or less"
+],
+[
+"movement",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Charge"
+]
+],
+"keywords": [
+741064
+]
 },
 "741337": {
 "tags": [
@@ -2651,7 +3338,10 @@
 "This may fight an enemy creature"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741340": {
 "tags": [
@@ -2704,9 +3394,23 @@
 [
 "friendly_fire",
 "Destroy all adjacent creatures"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741057,
+741063
+]
 },
 "741343": {
 "tags": [
@@ -2753,7 +3457,10 @@
 "deal 1 damage to your opponent"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741059
+]
 },
 "741348": {
 "tags": [
@@ -2807,9 +3514,30 @@
 [
 "movement",
 "Dash 2"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741067
+]
 },
 "741355": {
 "tags": [
@@ -2857,7 +3585,10 @@
 "Destroy your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057
+]
 },
 "741360": {
 "tags": [
@@ -2868,9 +3599,22 @@
 [
 "movement",
 "Charge 3"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741361": {
 "tags": [
@@ -2921,7 +3665,10 @@
 "For each enemy destroyed"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741366": {
 "tags": [
@@ -2944,9 +3691,22 @@
 [
 "adjacency",
 "adjacent enemies"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741370": {
 "tags": [
@@ -2978,9 +3738,23 @@
 [
 "delayed",
 "On your opponent's next turn"
+],
+[
+"immobilize",
+"Taunt"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immobilize",
+"Taunt"
+]
+],
+"keywords": [
+741057,
+741066
+]
 },
 "741372": {
 "tags": [
@@ -3001,7 +3775,10 @@
 "each player's hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741373": {
 "tags": [
@@ -3022,7 +3799,10 @@
 "deal 1 damage to this"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741374": {
 "tags": [
@@ -3047,7 +3827,10 @@
 "adjacent to the target"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741071
+]
 },
 "741378": {
 "tags": [
@@ -3072,7 +3855,10 @@
 "with 0 Attack"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741059
+]
 },
 "741382": {
 "tags": [
@@ -3089,7 +3875,10 @@
 "For each enemy creature"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741384": {
 "tags": [
@@ -3110,7 +3899,11 @@
 "this gains +3/+3"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057,
+741065
+]
 },
 "741387": {
 "tags": [
@@ -3131,7 +3924,10 @@
 "If there are none"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741060
+]
 },
 "741388": {
 "tags": [
@@ -3164,7 +3960,10 @@
 "draw a card"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741072
+]
 },
 "741391": {
 "tags": [
@@ -3210,7 +4009,10 @@
 "adjacent to the target"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057
+]
 },
 "741393": {
 "tags": [
@@ -3254,9 +4056,23 @@
 [
 "draw",
 "draw that many cards"
+],
+[
+"immobilize",
+"Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immobilize",
+"Taunt"
+]
+],
+"keywords": [
+741057,
+741066
+]
 },
 "741399": {
 "tags": [
@@ -3292,9 +4108,22 @@
 [
 "terrain",
 "brings its land with it"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741401": {
 "tags": [
@@ -3309,9 +4138,30 @@
 [
 "adjacency",
 "Adjacent friendly creatures"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741067
+]
 },
 "741402": {
 "tags": [
@@ -3326,9 +4176,22 @@
 [
 "placement_rules",
 "Can be summoned anywhere"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741403": {
 "tags": [
@@ -3341,7 +4204,10 @@
 "Draw a green card, a blue card, a red card and a yellow card from your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741405": {
 "tags": [
@@ -3360,9 +4226,23 @@
 [
 "stat_gain",
 "Gain +2/+2"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741061,
+741063
+]
 },
 "741406": {
 "tags": [
@@ -3383,7 +4263,10 @@
 "for each well emptied"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057
+]
 },
 "741407": {
 "tags": [
@@ -3396,7 +4279,10 @@
 "Gain control of this creature's land"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741061
+]
 },
 "741411": {
 "tags": [
@@ -3429,7 +4315,11 @@
 "EVERYTHING"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741061,
+741072
+]
 },
 "741413": {
 "tags": [
@@ -3452,9 +4342,22 @@
 [
 "movement",
 "Jump"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741416": {
 "tags": [
@@ -3477,9 +4380,31 @@
 [
 "in_hand_buff",
 "Give it +2/+2"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741061,
+741067
+]
 },
 "741417": {
 "tags": [
@@ -3494,9 +4419,23 @@
 [
 "stat_multiply",
 "Double this creature's Attack"
+],
+[
+"immobilize",
+"Taunt"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immobilize",
+"Taunt"
+]
+],
+"keywords": [
+741061,
+741066
+]
 },
 "741419": {
 "tags": [
@@ -3509,7 +4448,10 @@
 "Deal 2 damage to yourself"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741058
+]
 },
 "741420": {
 "tags": [
@@ -3576,7 +4518,10 @@
 "yak"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057
+]
 },
 "741426": {
 "tags": [
@@ -3604,9 +4549,31 @@
 [
 "junk_cards",
 "Fill your opponent's hand with Ruby Fish"
+],
+[
+"placement_rules",
+"Aquatic"
+],
+[
+"self_destruct",
+"Aquatic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Aquatic"
+],
+[
+"self_destruct",
+"Aquatic"
+]
+],
+"keywords": [
+741057,
+741074
+]
 },
 "741429": {
 "tags": [
@@ -3640,7 +4607,10 @@
 "Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741431": {
 "tags": [
@@ -3671,9 +4641,23 @@
 [
 "movement",
 "Charge 2"
+],
+[
+"shield",
+"Protection"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"shield",
+"Protection"
+]
+],
+"keywords": [
+741057,
+741069
+]
 },
 "741433": {
 "tags": [
@@ -3701,9 +4685,22 @@
 [
 "deathtouch",
 "Deathtouch"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741436": {
 "tags": [
@@ -3747,9 +4744,23 @@
 [
 "tribal",
 "Rakoan"
+],
+[
+"movement",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Charge"
+]
+],
+"keywords": [
+741057,
+741064
+]
 },
 "741438": {
 "tags": [
@@ -3770,7 +4781,10 @@
 "deal 3 damage to an enemy creature"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741439": {
 "tags": [
@@ -3791,7 +4805,10 @@
 "until the start of your next turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741440": {
 "tags": [
@@ -3804,7 +4821,10 @@
 "Summon a 1/1 Rakoan where this died"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741058
+]
 },
 "741441": {
 "tags": [
@@ -3825,7 +4845,10 @@
 "Rakoan"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741060
+]
 },
 "741442": {
 "tags": [
@@ -3842,7 +4865,10 @@
 "It costs 0 faeria"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741444": {
 "tags": [
@@ -3859,7 +4885,10 @@
 "Deal 1 damage to this"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741062
+]
 },
 "741445": {
 "tags": [
@@ -3878,9 +4907,22 @@
 [
 "steal",
 "swallow and gain control of it"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741063
+]
 },
 "741448": {
 "tags": [
@@ -3907,9 +4949,23 @@
 [
 "cost_set",
 "It costs 0 faeria"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741057,
+741063
+]
 },
 "741449": {
 "tags": [
@@ -3924,9 +4980,23 @@
 [
 "immobilize",
 "Enemy creatures can't move next turn"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741057,
+741063
+]
 },
 "741450": {
 "tags": [
@@ -3943,7 +5013,10 @@
 "adjacent enemies"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741060
+]
 },
 "741451": {
 "tags": [
@@ -3964,7 +5037,10 @@
 "Beast"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057
+]
 },
 "741452": {
 "tags": [
@@ -3985,7 +5061,10 @@
 "adjacent land"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741061
+]
 },
 "741453": {
 "tags": [
@@ -4025,9 +5104,23 @@
 [
 "generate_cards",
 "Add a Vile Bloatfly to your hand"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741061,
+741063
+]
 },
 "741459": {
 "tags": [
@@ -4040,7 +5133,10 @@
 "Increase the cost of each card in your opponent's hand by 1 faeria"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741061
+]
 },
 "741461": {
 "tags": [
@@ -4086,7 +5182,10 @@
 "They gain +2/+2"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057
+]
 },
 "741465": {
 "tags": [
@@ -4111,7 +5210,10 @@
 "Each player draws a card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741060
+]
 },
 "741466": {
 "tags": [
@@ -4126,9 +5228,31 @@
 [
 "movement",
 "Dash 1"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741057,
+741067
+]
 },
 "741467": {
 "tags": [
@@ -4153,7 +5277,10 @@
 "yaks"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057
+]
 },
 "741470": {
 "tags": [
@@ -4166,7 +5293,10 @@
 "Transform an enemy creature into a 5/3"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741471": {
 "tags": [
@@ -4195,7 +5325,11 @@
 "triton"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057,
+741065
+]
 },
 "741472": {
 "tags": [
@@ -4220,7 +5354,10 @@
 "tritons"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741065
+]
 },
 "741474": {
 "tags": [
@@ -4237,7 +5374,10 @@
 "move this creature's land"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741475": {
 "tags": [
@@ -4266,7 +5406,12 @@
 "Destroy this"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057,
+741059,
+741062
+]
 },
 "741476": {
 "tags": [
@@ -4279,7 +5424,10 @@
 "Give +1/+1 to all creatures in your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741058
+]
 },
 "741479": {
 "tags": [
@@ -4335,7 +5483,10 @@
 "exactly 1 Attack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741483": {
 "tags": [
@@ -4395,9 +5546,24 @@
 [
 "recycle",
 "Shuffle Celeste back into your deck"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741057,
+741058,
+741063
+]
 },
 "741486": {
 "tags": [
@@ -4420,9 +5586,23 @@
 [
 "hand_deck_swap",
 "Shuffle your hand into your deck and draw that many cards"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741057,
+741063
+]
 },
 "741487": {
 "tags": [
@@ -4451,7 +5631,11 @@
 "if this is on an enemy land"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057,
+741065
+]
 },
 "741488": {
 "tags": [
@@ -4481,7 +5665,10 @@
 "draw a card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741490": {
 "tags": [
@@ -4502,7 +5689,11 @@
 "this gains +2/+2"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057,
+741065
+]
 },
 "741491": {
 "tags": [
@@ -4515,7 +5706,10 @@
 "Whenever you discover a Treasure, Fugoro gains +3/+3"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741065
+]
 },
 "741493": {
 "tags": [
@@ -4538,9 +5732,23 @@
 [
 "cost_type",
 "becomes wild land"
+],
+[
+"copy",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"copy",
+"Discover"
+]
+],
+"keywords": [
+741057,
+741070
+]
 },
 "741494": {
 "tags": [
@@ -4561,7 +5769,10 @@
 "Beasts"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741065
+]
 },
 "741495": {
 "tags": [
@@ -4580,9 +5791,22 @@
 [
 "in_hand_buff",
 "gets +0/+3"
+],
+[
+"copy",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"copy",
+"Discover"
+]
+],
+"keywords": [
+741070
+]
 },
 "741497": {
 "tags": [
@@ -4601,9 +5825,30 @@
 [
 "territory_trigger",
 "if this is on an enemy land"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741067
+]
 },
 "741502": {
 "tags": [
@@ -4622,9 +5867,30 @@
 [
 "territory_trigger",
 "if this is on an enemy land"
+],
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Dash"
+],
+[
+"on_play",
+"Dash"
+]
+],
+"keywords": [
+741067
+]
 },
 "741503": {
 "tags": [
@@ -4655,9 +5921,32 @@
 [
 "cost_type",
 "They all become wild land"
+],
+[
+"movement",
+"Flying"
+],
+[
+"copy",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+],
+[
+"copy",
+"Discover"
+]
+],
+"keywords": [
+741057,
+741063,
+741070
+]
 },
 "741504": {
 "tags": [
@@ -4670,7 +5959,10 @@
 "Shuffle a Treasure Map into your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741057
+]
 },
 "741505": {
 "tags": [
@@ -4697,9 +5989,24 @@
 [
 "revive",
 "Return Aryana to your hand"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741057,
+741058,
+741063
+]
 },
 "741507": {
 "tags": [
@@ -4743,9 +6050,22 @@
 [
 "cost_type",
 "wild land"
+],
+[
+"copy",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"copy",
+"Discover"
+]
+],
+"keywords": [
+741070
+]
 },
 "741514": {
 "tags": [
@@ -4772,9 +6092,22 @@
 [
 "condition_count",
 "for each map destroyed"
+],
+[
+"movement",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Charge"
+]
+],
+"keywords": [
+741064
+]
 },
 "741515": {
 "tags": [
@@ -4803,7 +6136,12 @@
 "Destroy this"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741057,
+741059,
+741062
+]
 },
 "741516": {
 "tags": [
@@ -4826,9 +6164,23 @@
 [
 "cost_type",
 "They become wild land"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741057,
+741063
+]
 },
 "741517": {
 "tags": [
@@ -4858,7 +6210,10 @@
 "Must be summoned next to a friendly creature"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741072
+]
 },
 "741520": {
 "tags": [
@@ -4877,9 +6232,22 @@
 [
 "cost_type",
 "wild land"
+],
+[
+"copy",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"copy",
+"Discover"
+]
+],
+"keywords": [
+741070
+]
 },
 "795375": {
 "tags": [],

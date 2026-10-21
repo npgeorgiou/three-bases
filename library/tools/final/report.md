@@ -66,7 +66,7 @@ Original 80 of 82, new 80 of 82 (the same two known misses).
 
 ## What changed
 
-- The key credits the tags of the keywords a card has (`key.py credit`, KEY_BUG.md).
+- The key credits the tags of the keywords a card has (`key.py credit`).
 - Patterns from the key's quoted words, kept only when 90%+ right on the half of the key they were not built from (`step3/key_patterns.py`).
 - Old patterns right less than half the time on the key switched off, or pointed at the concept the key shows them right for (`step3/switch_off.py`).
 - Review records in the tree v3 ids (`fixes/f15`); where a review and the key disagree on what a card does, the key wins (`key_wins.py`).

@@ -389,9 +389,22 @@
 [
 "temporary_buff",
 "this round"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "750489": {
 "tags": [
@@ -400,7 +413,10 @@
 "Quick Attack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750415
+]
 },
 "750491": {
 "tags": [
@@ -413,7 +429,10 @@
 "Grant an ally in hand +3|+3"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371
+]
 },
 "750493": {
 "tags": [
@@ -424,9 +443,22 @@
 [
 "removal",
 "grant it to an enemy"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "750497": {
 "tags": [
@@ -443,7 +475,10 @@
 "Grant me +3|+0"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371
+]
 },
 "750501": {
 "tags": [
@@ -454,9 +489,22 @@
 [
 "first_strike",
 "Quick Attack"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "750507": {
 "tags": [
@@ -471,9 +519,22 @@
 [
 "temporary_effect",
 "this round"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "750508": {
 "tags": [
@@ -484,9 +545,22 @@
 [
 "temporary_effect",
 "this round"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "750517": {
 "tags": [
@@ -505,9 +579,22 @@
 [
 "cost_condition",
 "1 cost ally"
+],
+[
+"on_play",
+"Allegiance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Allegiance"
+]
+],
+"keywords": [
+750433
+]
 },
 "750520": {
 "tags": [
@@ -524,7 +611,11 @@
 "I have +4|+4"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750382,
+750421
+]
 },
 "750535": {
 "tags": [
@@ -577,9 +668,22 @@
 [
 "friendly_fire",
 "kill ALL units"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "750552": {
 "tags": [
@@ -609,7 +713,10 @@
 "create 2 Decimates in hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750368
+]
 },
 "750608": {
 "tags": [
@@ -630,16 +737,32 @@
 "6+ cost spell"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750388
+]
 },
 "750619": {
 "tags": [
 [
 "damage",
 "An ally and an enemy strike each other"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "750636": {
 "tags": [
@@ -654,9 +777,23 @@
 [
 "hand_size",
 "I see your hand is empty"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750389,
+750415
+]
 },
 "750638": {
 "tags": [
@@ -687,9 +824,31 @@
 [
 "tribal",
 "Tech allies"
+],
+[
+"quests",
+"Level up"
+],
+[
+"on_spell",
+"Imbue"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"on_spell",
+"Imbue"
+]
+],
+"keywords": [
+750389,
+750395
+]
 },
 "750639": {
 "tags": [
@@ -710,7 +869,10 @@
 "Deal 3 to an enemy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371
+]
 },
 "750666": {
 "tags": [
@@ -725,9 +887,22 @@
 [
 "damage",
 "Deal that much to a unit"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "750669": {
 "tags": [
@@ -746,9 +921,22 @@
 [
 "temporary_effect",
 "this round"
+],
+[
+"on_play",
+"Allegiance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Allegiance"
+]
+],
+"keywords": [
+750433
+]
 },
 "750670": {
 "tags": [
@@ -759,9 +947,22 @@
 [
 "permanent_growth",
 "grant me +1|+1"
+],
+[
+"on_spell",
+"Imbue"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_spell",
+"Imbue"
+]
+],
+"keywords": [
+750395
+]
 },
 "750673": {
 "tags": [
@@ -785,9 +986,22 @@
 [
 "enemy_benefit",
 "your opponent summons a Snow Hare"
+],
+[
+"target_choice",
+"Challenger"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"target_choice",
+"Challenger"
+]
+],
+"keywords": [
+750431
+]
 },
 "750716": {
 "tags": [
@@ -800,7 +1014,10 @@
 "Frostbite an enemy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371
+]
 },
 "750718": {
 "tags": [
@@ -831,9 +1048,32 @@
 [
 "friendly_fire",
 "Obliterate ALL units"
+],
+[
+"on_play",
+"Play"
+],
+[
+"banish",
+"Obliterate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+],
+[
+"banish",
+"Obliterate"
+]
+],
+"keywords": [
+750371,
+750418,
+750449
+]
 },
 "750724": {
 "tags": [
@@ -848,9 +1088,22 @@
 [
 "scope_multi",
 "Give allies"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "750730": {
 "tags": [
@@ -867,16 +1120,32 @@
 "the strongest enemy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750464
+]
 },
 "750734": {
 "tags": [
 [
 "attack_zero",
 "Frostbite an enemy"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "750736": {
 "tags": [
@@ -895,9 +1164,22 @@
 [
 "deck_position",
 "on top of your deck"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "750737": {
 "tags": [
@@ -918,7 +1200,10 @@
 "for each ally that has died"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750368
+]
 },
 "750740": {
 "tags": [
@@ -958,9 +1243,24 @@
 [
 "count_payoff",
 "You've attacked with 7+ Ephemeral allies"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750368,
+750374,
+750389
+]
 },
 "750756": {
 "tags": [
@@ -975,9 +1275,22 @@
 [
 "self_destruct",
 "Ephemeral"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "750757": {
 "tags": [
@@ -1002,7 +1315,10 @@
 "for each time I've died"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750388
+]
 },
 "750761": {
 "tags": [
@@ -1019,7 +1335,10 @@
 "reduce its cost by 1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371
+]
 },
 "750770": {
 "tags": [
@@ -1047,9 +1366,22 @@
 [
 "board_limit",
 "Can't play if you have 6 allies or landmarks already"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "750796": {
 "tags": [
@@ -1060,9 +1392,22 @@
 [
 "copy",
 "Create a Fleeting Vault Breaker in hand"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "750806": {
 "tags": [
@@ -1075,7 +1420,11 @@
 "Elusive"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750404,
+750432
+]
 },
 "750828": {
 "tags": [
@@ -1107,18 +1456,52 @@
 [
 "spell_power",
 "deal 1 extra damage"
+],
+[
+"untap",
+"Scout"
+],
+[
+"on_attack",
+"Scout"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"untap",
+"Scout"
+],
+[
+"on_attack",
+"Scout"
+]
+],
+"keywords": [
+750425
+]
 },
 "750831": {
 "tags": [
 [
 "random_ability",
 "Grant me 2 random keywords"
+],
+[
+"count_payoff",
+"Plunder"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"count_payoff",
+"Plunder"
+]
+],
+"keywords": [
+750401
+]
 },
 "750833": {
 "tags": [
@@ -1148,7 +1531,11 @@
 "Vulnerable"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750403,
+750404
+]
 },
 "750840": {
 "tags": [
@@ -1179,9 +1566,31 @@
 [
 "count_payoff",
 "You've played 6+ spells"
+],
+[
+"quests",
+"Level up"
+],
+[
+"on_spell",
+"Imbue"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"on_spell",
+"Imbue"
+]
+],
+"keywords": [
+750389,
+750395
+]
 },
 "750855": {
 "tags": [
@@ -1196,9 +1605,22 @@
 [
 "tutor",
 "Draw a Sea Monster"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "750870": {
 "tags": [
@@ -1213,9 +1635,31 @@
 [
 "draw",
 "Draw 1 of them"
+],
+[
+"spell_speed",
+"Burst"
+],
+[
+"count_payoff",
+"Plunder"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"count_payoff",
+"Plunder"
+]
+],
+"keywords": [
+750369,
+750401
+]
 },
 "750884": {
 "tags": [
@@ -1224,7 +1668,10 @@
 "Overwhelm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750368
+]
 },
 "750887": {
 "tags": [
@@ -1243,9 +1690,39 @@
 [
 "count_payoff",
 "I've seen you attack 4 times"
+],
+[
+"quests",
+"Level up"
+],
+[
+"untap",
+"Scout"
+],
+[
+"on_attack",
+"Scout"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"untap",
+"Scout"
+],
+[
+"on_attack",
+"Scout"
+]
+],
+"keywords": [
+750389,
+750425
+]
 },
 "750909": {
 "tags": [
@@ -1281,9 +1758,22 @@
 [
 "bounce_enemy",
 "If the enemy survives, Recall it"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "750918": {
 "tags": [
@@ -1304,7 +1794,10 @@
 "weakest enemy"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750447
+]
 },
 "750941": {
 "tags": [
@@ -1319,9 +1812,22 @@
 [
 "scope_multi",
 "2 enemies"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "750949": {
 "tags": [
@@ -1336,9 +1842,23 @@
 [
 "removal",
 "Capture a unit or landmark"
+],
+[
+"on_play",
+"Play"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+]
+],
+"keywords": [
+750371,
+750420
+]
 },
 "750951": {
 "tags": [
@@ -1361,9 +1881,31 @@
 [
 "alt_wincon",
 "win the game"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750372,
+750447
+]
 },
 "750965": {
 "tags": [
@@ -1390,9 +1932,23 @@
 [
 "count_payoff",
 "You've activated Nightfall 4+ times"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750389,
+750415
+]
 },
 "750980": {
 "tags": [
@@ -1417,7 +1973,10 @@
 "costs 3 or less"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371
+]
 },
 "750985": {
 "tags": [
@@ -1436,9 +1995,30 @@
 [
 "tribal",
 "Dragon follower"
+],
+[
+"on_kill",
+"Fury"
+],
+[
+"permanent_growth",
+"Fury"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_kill",
+"Fury"
+],
+[
+"permanent_growth",
+"Fury"
+]
+],
+"keywords": [
+750409
+]
 },
 "750987": {
 "tags": [
@@ -1457,9 +2037,32 @@
 [
 "combo_sequence",
 "Nightfall"
+],
+[
+"spell_speed",
+"Burst"
+],
+[
+"silence",
+"Silence"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"silence",
+"Silence"
+]
+],
+"keywords": [
+750369,
+750397,
+750471
+]
 },
 "750988": {
 "tags": [
@@ -1490,9 +2093,32 @@
 [
 "variety_payoff",
 "10 cards with different names"
+],
+[
+"quests",
+"Level up"
+],
+[
+"direct_damage",
+"Nexus Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"direct_damage",
+"Nexus Strike"
+]
+],
+"keywords": [
+750389,
+750404,
+750459
+]
 },
 "750990": {
 "tags": [
@@ -1503,18 +2129,44 @@
 [
 "shield",
 "SpellShield"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751019": {
 "tags": [
 [
 "generate_cards",
 "Fill your hand with Gems"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751033": {
 "tags": [
@@ -1546,9 +2198,31 @@
 [
 "symmetric_effect",
 "ALL players draw 1"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750372,
+750464
+]
 },
 "751046": {
 "tags": [
@@ -1575,9 +2249,22 @@
 [
 "cost_condition",
 "3 cost card"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751049": {
 "tags": [
@@ -1598,7 +2285,12 @@
 "Create a copy of me in hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750397,
+750426,
+750432
+]
 },
 "751063": {
 "tags": [
@@ -1613,9 +2305,39 @@
 [
 "temporary_buff",
 "Give my supported ally +2|+1 this round"
+],
+[
+"adjacency",
+"Support"
+],
+[
+"buff",
+"Support"
+],
+[
+"temporary_effect",
+"Barrier"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"adjacency",
+"Support"
+],
+[
+"buff",
+"Support"
+],
+[
+"temporary_effect",
+"Barrier"
+]
+],
+"keywords": [
+750393,
+750410
+]
 },
 "751064": {
 "tags": [
@@ -1630,9 +2352,22 @@
 [
 "temporary_effect",
 "this round"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751078": {
 "tags": [
@@ -1660,9 +2395,22 @@
 [
 "heal",
 "heal it 5"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "751083": {
 "tags": [
@@ -1719,9 +2467,23 @@
 [
 "cost_set",
 "Reduce its cost to 0"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750382,
+750394
+]
 },
 "751093": {
 "tags": [
@@ -1740,9 +2502,23 @@
 [
 "upgrade",
 "Level up"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750389,
+750418
+]
 },
 "751101": {
 "tags": [
@@ -1753,9 +2529,22 @@
 [
 "stat_gain",
 "+2|+2"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751105": {
 "tags": [
@@ -1770,9 +2559,22 @@
 [
 "random_effect",
 "random Turrets"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751109": {
 "tags": [
@@ -1787,9 +2589,22 @@
 [
 "stat_loss",
 "Swap my stats with another unit"
+],
+[
+"on_play",
+"Play"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+]
+],
+"keywords": [
+750371
+]
 },
 "751121": {
 "tags": [
@@ -1812,9 +2627,48 @@
 [
 "count_payoff",
 "Allied Pykes have dealt 15+ damage"
+],
+[
+"quests",
+"Level up"
+],
+[
+"on_attack",
+"Lurk"
+],
+[
+"stat_gain",
+"Lurk"
+],
+[
+"tribal",
+"Lurk"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"on_attack",
+"Lurk"
+],
+[
+"stat_gain",
+"Lurk"
+],
+[
+"tribal",
+"Lurk"
+]
+],
+"keywords": [
+750389,
+750415,
+750427
+]
 },
 "751136": {
 "tags": [
@@ -1831,16 +2685,32 @@
 "Blade Dance 2"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750371
+]
 },
 "751141": {
 "tags": [
 [
 "swap",
 "Swap 2 allies"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751142": {
 "tags": [
@@ -1851,9 +2721,39 @@
 [
 "generate_cards",
 "create a Flawless Duet in hand"
+],
+[
+"spell_speed",
+"Fast"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+],
+"keywords": [
+750390,
+750391
+]
 },
 "751149": {
 "tags": [
@@ -1872,9 +2772,22 @@
 [
 "destroy",
 "kill it instead"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751152": {
 "tags": [
@@ -1909,9 +2822,56 @@
 [
 "stat_condition",
 "I've attacked with 10+ Power"
+],
+[
+"quests",
+"Level up"
+],
+[
+"on_attack",
+"Lurk"
+],
+[
+"deck_position",
+"Lurk"
+],
+[
+"stat_gain",
+"Lurk"
+],
+[
+"tribal",
+"Lurk"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"on_attack",
+"Lurk"
+],
+[
+"deck_position",
+"Lurk"
+],
+[
+"stat_gain",
+"Lurk"
+],
+[
+"tribal",
+"Lurk"
+]
+],
+"keywords": [
+750389,
+750427,
+750447
+]
 },
 "751154": {
 "tags": [
@@ -1928,7 +2888,10 @@
 "summon a Grumpy Rockbear"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750371
+]
 },
 "751155": {
 "tags": [
@@ -1953,7 +2916,11 @@
 "Give enemies"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750374,
+750432
+]
 },
 "751159": {
 "tags": [
@@ -1972,9 +2939,57 @@
 [
 "summon",
 "Summon a Clockling"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"deck_position",
+"Predict"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"deck_position",
+"Predict"
+]
+],
+"keywords": [
+750370,
+750371,
+750372,
+750477
+]
 },
 "751161": {
 "tags": [
@@ -1991,7 +3006,10 @@
 "grant me +1|+0"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750432
+]
 },
 "751168": {
 "tags": [
@@ -2014,9 +3032,55 @@
 [
 "stat_gain",
 "+2|+2"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750370,
+750372
+]
 },
 "751175": {
 "tags": [
@@ -2043,9 +3107,23 @@
 [
 "repeat_trigger",
 "5 times"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394,
+750461
+]
 },
 "751193": {
 "tags": [
@@ -2060,9 +3138,22 @@
 [
 "summon",
 "summon 6 Sand Soldiers"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751201": {
 "tags": [
@@ -2091,7 +3182,11 @@
 "summon a copy of me"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371,
+750432
+]
 },
 "751208": {
 "tags": [
@@ -2114,9 +3209,55 @@
 [
 "count_payoff",
 "for each time an Ascended ally has leveled up this game"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750370,
+750372
+]
 },
 "751215": {
 "tags": [
@@ -2140,9 +3281,22 @@
 [
 "repeat_trigger",
 "activates twice"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751218": {
 "tags": [
@@ -2157,9 +3311,22 @@
 [
 "counter_spell",
 "stop all enemy Fast spells, Slow spells, and Skills"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "751240": {
 "tags": [
@@ -2170,9 +3337,22 @@
 [
 "stat_gain",
 "+0|+2"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751241": {
 "tags": [
@@ -2199,9 +3379,23 @@
 [
 "generate_cards",
 "create a Watcher in hand"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750389,
+750417
+]
 },
 "751250": {
 "tags": [
@@ -2232,9 +3426,22 @@
 [
 "tutor",
 "Draw a Yeti"
+],
+[
+"on_play",
+"Play"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+]
+],
+"keywords": [
+750371
+]
 },
 "751255": {
 "tags": [
@@ -2268,7 +3475,10 @@
 "Rally"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750461
+]
 },
 "751263": {
 "tags": [
@@ -2295,9 +3505,32 @@
 [
 "variable_stats",
 "Grant me Power equal to the total Power of all allies"
+],
+[
+"on_play",
+"Play"
+],
+[
+"on_attack",
+"Attack"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+],
+[
+"on_attack",
+"Attack"
+]
+],
+"keywords": [
+750368,
+750371,
+750374
+]
 },
 "751268": {
 "tags": [
@@ -2332,9 +3565,24 @@
 [
 "count_payoff",
 "I've seen you slay 2+ units with my mark"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750389,
+750415,
+750447
+]
 },
 "751284": {
 "tags": [
@@ -2349,9 +3597,30 @@
 [
 "modal_choice",
 "I strike an ally or deal 3 to your Nexus"
+],
+[
+"on_kill",
+"Fury"
+],
+[
+"permanent_growth",
+"Fury"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_kill",
+"Fury"
+],
+[
+"permanent_growth",
+"Fury"
+]
+],
+"keywords": [
+750409
+]
 },
 "751287": {
 "tags": [
@@ -2395,9 +3664,31 @@
 [
 "direct_damage",
 "drain 1 from the enemy Nexus"
+],
+[
+"on_kill",
+"Fury"
+],
+[
+"permanent_growth",
+"Fury"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_kill",
+"Fury"
+],
+[
+"permanent_growth",
+"Fury"
+]
+],
+"keywords": [
+750409,
+750432
+]
 },
 "751294": {
 "tags": [
@@ -2412,9 +3703,64 @@
 [
 "stat_condition",
 "weakest enemy"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"banish",
+"Obliterate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"banish",
+"Obliterate"
+]
+],
+"keywords": [
+750370,
+750372,
+750449
+]
 },
 "751295": {
 "tags": [
@@ -2440,7 +3786,10 @@
 "Summon a Crest of Insight"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750388
+]
 },
 "751300": {
 "tags": [
@@ -2459,9 +3808,23 @@
 [
 "hand_deck_swap",
 "replace your deck with 20 copies of Behold the Infinite"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369,
+750383
+]
 },
 "751303": {
 "tags": [
@@ -2476,9 +3839,41 @@
 [
 "random_effect",
 "random"
+],
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"combo_sequence",
+"Nightfall"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"combo_sequence",
+"Nightfall"
+]
+],
+"keywords": [
+750369,
+750381,
+750397,
+750399
+]
 },
 "751308": {
 "tags": [
@@ -2489,9 +3884,22 @@
 [
 "blocking",
 "Challenging an enemy"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751313": {
 "tags": [
@@ -2537,7 +3945,10 @@
 "give allies"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750417
+]
 },
 "751324": {
 "tags": [
@@ -2585,9 +3996,40 @@
 [
 "upgrade",
 "Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"on_attack",
+"Impact"
+],
+[
+"stacking_keyword",
+"Impact"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"on_attack",
+"Impact"
+],
+[
+"stacking_keyword",
+"Impact"
+]
+],
+"keywords": [
+750389,
+750415,
+750424
+]
 },
 "751326": {
 "tags": [
@@ -2600,7 +4042,10 @@
 "transform me into Megatee"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750447
+]
 },
 "751330": {
 "tags": [
@@ -2627,9 +4072,41 @@
 [
 "turn_end",
 "Round End"
+],
+[
+"quests",
+"Level up"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
+]
+],
+"keywords": [
+750389,
+750415,
+750447,
+750457
+]
 },
 "751338": {
 "tags": [
@@ -2644,9 +4121,22 @@
 [
 "temporary_buff",
 "this round"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751341": {
 "tags": [
@@ -2685,9 +4175,23 @@
 [
 "tribal",
 "Mecha Yordle"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750371,
+750389
+]
 },
 "751342": {
 "tags": [
@@ -2711,9 +4215,22 @@
 [
 "junk_cards",
 "plant 3 Poison Puffcaps"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751347": {
 "tags": [
@@ -2748,9 +4265,23 @@
 [
 "in_hand_buff",
 "reduce its cost by 1"
+],
+[
+"on_play",
+"Play"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+]
+],
+"keywords": [
+750371,
+750417
+]
 },
 "751351": {
 "tags": [
@@ -2773,9 +4304,39 @@
 [
 "summon",
 "summon it"
+],
+[
+"spell_speed",
+"Burst"
+],
+[
+"generate_cards",
+"Manifest"
+],
+[
+"random_effect",
+"Manifest"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"generate_cards",
+"Manifest"
+],
+[
+"random_effect",
+"Manifest"
+]
+],
+"keywords": [
+750369,
+750473
+]
 },
 "751355": {
 "tags": [
@@ -2790,9 +4351,22 @@
 [
 "ping",
 "Deal 1"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751356": {
 "tags": [
@@ -2821,7 +4395,10 @@
 "Fae allies"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750415
+]
 },
 "751364": {
 "tags": [
@@ -2844,9 +4421,31 @@
 [
 "alt_wincon",
 "win the game"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750372,
+750464
+]
 },
 "751380": {
 "tags": [
@@ -2859,7 +4458,10 @@
 "transform me into Terrordactyl"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750447
+]
 },
 "751388": {
 "tags": [
@@ -2870,9 +4472,22 @@
 [
 "silence",
 "Silence it"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751396": {
 "tags": [
@@ -2887,9 +4502,22 @@
 [
 "generate_cards",
 "create a Prank in hand"
+],
+[
+"on_play",
+"Attune"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Attune"
+]
+],
+"keywords": [
+750398
+]
 },
 "751406": {
 "tags": [
@@ -2925,9 +4553,39 @@
 [
 "temporary_effect",
 "this round"
+],
+[
+"spell_speed",
+"Fast"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+],
+"keywords": [
+750390,
+750391
+]
 },
 "751422": {
 "tags": [
@@ -2946,9 +4604,22 @@
 [
 "play_restriction",
 "You can only play 3 more cards this round"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751425": {
 "tags": [
@@ -2971,9 +4642,31 @@
 [
 "in_hand_buff",
 "reduce its cost by 1"
+],
+[
+"on_ally_play",
+"Augment"
+],
+[
+"stat_gain",
+"Augment"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_ally_play",
+"Augment"
+],
+[
+"stat_gain",
+"Augment"
+]
+],
+"keywords": [
+750371,
+750423
+]
 },
 "751429": {
 "tags": [
@@ -2986,7 +4679,10 @@
 "Create a Fleeting Poison Dart in hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750374
+]
 },
 "751436": {
 "tags": [
@@ -3017,9 +4713,22 @@
 [
 "count_payoff",
 "You've played Stance Swap 3+ times"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750389
+]
 },
 "751437": {
 "tags": [
@@ -3030,9 +4739,22 @@
 [
 "cost_set",
 "0 cost"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751438": {
 "tags": [
@@ -3060,9 +4782,22 @@
 [
 "generate_cards",
 "Create a Stance Swap in hand"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751441": {
 "tags": [
@@ -3083,7 +4818,11 @@
 "EACH Nexus"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750368,
+750371
+]
 },
 "751444": {
 "tags": [
@@ -3127,9 +4866,24 @@
 [
 "count_payoff",
 "You've Recalled 5+ units"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750374,
+750389,
+750415
+]
 },
 "751447": {
 "tags": [
@@ -3144,9 +4898,48 @@
 [
 "temporary_effect",
 "this round"
+],
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+],
+"keywords": [
+750369,
+750381,
+750391
+]
 },
 "751448": {
 "tags": [
@@ -3161,9 +4954,32 @@
 [
 "bounce_enemy",
 "Recall a unit"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+],
+"keywords": [
+750371,
+750391,
+750404
+]
 },
 "751451": {
 "tags": [
@@ -3198,9 +5014,39 @@
 [
 "count_payoff",
 "you've Recalled this game"
+],
+[
+"spell_speed",
+"Fast"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Fast"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+],
+"keywords": [
+750390,
+750391
+]
 },
 "751461": {
 "tags": [
@@ -3223,9 +5069,55 @@
 [
 "stat_gain",
 "+2|+0"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750370,
+750372
+]
 },
 "751493": {
 "tags": [
@@ -3267,7 +5159,10 @@
 "create an exact Fleeting copy in hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371
+]
 },
 "751504": {
 "tags": [
@@ -3282,9 +5177,22 @@
 [
 "draw",
 "Draw 1"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751505": {
 "tags": [
@@ -3307,9 +5215,22 @@
 [
 "modal_choice",
 "or activate the effects of all traps"
+],
+[
+"on_play",
+"Play"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+]
+],
+"keywords": [
+750371
+]
 },
 "751506": {
 "tags": [
@@ -3320,9 +5241,22 @@
 [
 "symmetric_effect",
 "ALL players draw 2"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "751509": {
 "tags": [
@@ -3353,9 +5287,40 @@
 [
 "count_payoff",
 "5+ of your traps have been activated"
+],
+[
+"quests",
+"Level up"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
+]
+],
+"keywords": [
+750389,
+750415,
+750457
+]
 },
 "751512": {
 "tags": [
@@ -3366,9 +5331,22 @@
 [
 "enemy_benefit",
 "your opponent draws 1"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "751521": {
 "tags": [
@@ -3387,9 +5365,22 @@
 [
 "temporary_effect",
 "this round"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751526": {
 "tags": [
@@ -3429,9 +5420,31 @@
 [
 "condition_count",
 "for each extra unit they have"
+],
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+]
+],
+"keywords": [
+750369,
+750381
+]
 },
 "751540": {
 "tags": [
@@ -3454,9 +5467,32 @@
 [
 "stat_condition",
 "enemies with less Health than me"
+],
+[
+"on_play",
+"Play"
+],
+[
+"variable_stats",
+"Formidable"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+],
+[
+"variable_stats",
+"Formidable"
+]
+],
+"keywords": [
+750371,
+750417,
+750428
+]
 },
 "751553": {
 "tags": [
@@ -3479,9 +5515,39 @@
 [
 "summon",
 "summon a Legion General"
+],
+[
+"spell_speed",
+"Slow"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
+]
+],
+"keywords": [
+750394,
+750405
+]
 },
 "751557": {
 "tags": [
@@ -3494,7 +5560,10 @@
 "I gain all allied everywhere buffs"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750432
+]
 },
 "751569": {
 "tags": [
@@ -3505,9 +5574,55 @@
 [
 "summon",
 "Summon Inviolus Vox"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750370,
+750372
+]
 },
 "751583": {
 "tags": [
@@ -3522,18 +5637,53 @@
 [
 "modal_choice",
 "or advance all your Frozen Thralls 1 round"
+],
+[
+"on_play",
+"Play"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+]
+],
+"keywords": [
+750371
+]
 },
 "751584": {
 "tags": [
 [
 "transform",
 "Transform an allied follower into an Alpha Wildclaw"
+],
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+]
+],
+"keywords": [
+750369,
+750381
+]
 },
 "751595": {
 "tags": [
@@ -3548,9 +5698,30 @@
 [
 "permanent_growth",
 "grant that attachment +1|+0"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750372
+]
 },
 "751598": {
 "tags": [
@@ -3569,9 +5740,22 @@
 [
 "draw",
 "Draw 1"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751613": {
 "tags": [
@@ -3610,9 +5794,49 @@
 [
 "count_payoff",
 "deal 15+ damage"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"quests",
+"Level up"
+],
+[
+"summon",
+"Spawn"
+],
+[
+"stat_gain",
+"Spawn"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_attack",
+"Attack"
+],
+[
+"quests",
+"Level up"
+],
+[
+"summon",
+"Spawn"
+],
+[
+"stat_gain",
+"Spawn"
+]
+],
+"keywords": [
+750368,
+750374,
+750389,
+750441
+]
 },
 "751615": {
 "tags": [
@@ -3636,9 +5860,39 @@
 [
 "kicker",
 "spend 5 mana to Spawn 4 instead"
+],
+[
+"spell_speed",
+"Slow"
+],
+[
+"summon",
+"Spawn"
+],
+[
+"stat_gain",
+"Spawn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"summon",
+"Spawn"
+],
+[
+"stat_gain",
+"Spawn"
+]
+],
+"keywords": [
+750394,
+750441
+]
 },
 "751623": {
 "tags": [
@@ -3655,7 +5909,11 @@
 "Deal 2 to me"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750411,
+750464
+]
 },
 "751632": {
 "tags": [
@@ -3682,9 +5940,31 @@
 [
 "upgrade",
 "Level up"
+],
+[
+"quests",
+"Level up"
+],
+[
+"stat_gain",
+"Evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"stat_gain",
+"Evolve"
+]
+],
+"keywords": [
+750389,
+750413
+]
 },
 "751642": {
 "tags": [
@@ -3699,9 +5979,30 @@
 [
 "on_play",
 "When I'm summoned"
+],
+[
+"stat_gain",
+"Evolve"
+],
+[
+"variety_payoff",
+"Evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"Evolve"
+],
+[
+"variety_payoff",
+"Evolve"
+]
+],
+"keywords": [
+750413
+]
 },
 "751648": {
 "tags": [
@@ -3716,9 +6017,55 @@
 [
 "delayed",
 "Countdown 2"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750370,
+750372
+]
 },
 "751651": {
 "tags": [
@@ -3737,9 +6084,40 @@
 [
 "upgrade",
 "Level up"
+],
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750369,
+750381,
+750389
+]
 },
 "751652": {
 "tags": [
@@ -3770,9 +6148,66 @@
 [
 "count_payoff",
 "I've dealt 10+ damage"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"lifesteal",
+"Drain"
+],
+[
+"quests",
+"Level up"
+],
+[
+"death_trigger",
+"Hallowed"
+],
+[
+"on_attack",
+"Hallowed"
+],
+[
+"temporary_buff",
+"Hallowed"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_attack",
+"Attack"
+],
+[
+"lifesteal",
+"Drain"
+],
+[
+"quests",
+"Level up"
+],
+[
+"death_trigger",
+"Hallowed"
+],
+[
+"on_attack",
+"Hallowed"
+],
+[
+"temporary_buff",
+"Hallowed"
+]
+],
+"keywords": [
+750374,
+750387,
+750389,
+750412,
+750415
+]
 },
 "751654": {
 "tags": [
@@ -3791,9 +6226,39 @@
 [
 "stat_condition",
 "with my power or less"
+],
+[
+"death_trigger",
+"Hallowed"
+],
+[
+"on_attack",
+"Hallowed"
+],
+[
+"temporary_buff",
+"Hallowed"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Hallowed"
+],
+[
+"on_attack",
+"Hallowed"
+],
+[
+"temporary_buff",
+"Hallowed"
+]
+],
+"keywords": [
+750374,
+750412
+]
 },
 "751673": {
 "tags": [
@@ -3804,9 +6269,30 @@
 [
 "kicker",
 "You may spend 8 mana to play me as Naganeka of Zuretta"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750396
+]
 },
 "751679": {
 "tags": [
@@ -3829,9 +6315,23 @@
 [
 "transform",
 "Transform me into Xolaani, Aspect's Bane"
+],
+[
+"stat_condition",
+"Empowered"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_condition",
+"Empowered"
+]
+],
+"keywords": [
+750368,
+750460
+]
 },
 "751682": {
 "tags": [
@@ -3862,9 +6362,24 @@
 [
 "excess_damage",
 "Overwhelm"
+],
+[
+"stat_condition",
+"Empowered"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_condition",
+"Empowered"
+]
+],
+"keywords": [
+750404,
+750447,
+750460
+]
 },
 "751687": {
 "tags": [
@@ -3899,9 +6414,33 @@
 [
 "turn_start",
 "Round Start"
+],
+[
+"quests",
+"Level up"
+],
+[
+"stat_condition",
+"Empowered"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"stat_condition",
+"Empowered"
+]
+],
+"keywords": [
+750389,
+750415,
+750460,
+750464
+]
 },
 "751694": {
 "tags": [
@@ -3924,9 +6463,55 @@
 [
 "transform",
 "play me as Horazi"
+],
+[
+"assists_support",
+"Support"
+],
+[
+"adjacency",
+"Support"
+],
+[
+"buff",
+"Support"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"assists_support",
+"Support"
+],
+[
+"adjacency",
+"Support"
+],
+[
+"buff",
+"Support"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750393,
+750396
+]
 },
 "751712": {
 "tags": [
@@ -3941,9 +6526,24 @@
 [
 "regeneration",
 "Regeneration"
+],
+[
+"stat_condition",
+"Empowered"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_condition",
+"Empowered"
+]
+],
+"keywords": [
+750368,
+750418,
+750460
+]
 },
 "751715": {
 "tags": [
@@ -3962,9 +6562,23 @@
 [
 "damage_reduction",
 "Tough"
+],
+[
+"stat_condition",
+"Empowered"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_condition",
+"Empowered"
+]
+],
+"keywords": [
+750368,
+750460
+]
 },
 "751731": {
 "tags": [
@@ -3983,9 +6597,30 @@
 [
 "trap_secret",
 "traps"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750396
+]
 },
 "751734": {
 "tags": [
@@ -4017,9 +6652,22 @@
 [
 "junk_cards",
 "plant a Flashbomb Trap and 3 Poison Puffcaps in the enemy deck"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751744": {
 "tags": [
@@ -4042,9 +6690,39 @@
 [
 "transform",
 "play me as Praa the Breachwalker"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_attack",
+"Attack"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750374,
+750396
+]
 },
 "751761": {
 "tags": [
@@ -4055,9 +6733,22 @@
 [
 "banish",
 "Obliterate it instead"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "751772": {
 "tags": [
@@ -4078,7 +6769,10 @@
 "new spells"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750371
+]
 },
 "751778": {
 "tags": [
@@ -4093,9 +6787,22 @@
 [
 "repeat_trigger",
 "copy me with the same target"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "751779": {
 "tags": [
@@ -4106,9 +6813,31 @@
 [
 "resource_gain",
 "Refill 2 spell mana"
+],
+[
+"count_payoff",
+"Flow"
+],
+[
+"turn_start",
+"Flow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"count_payoff",
+"Flow"
+],
+[
+"turn_start",
+"Flow"
+]
+],
+"keywords": [
+750384,
+750464
+]
 },
 "751780": {
 "tags": [
@@ -4119,9 +6848,30 @@
 [
 "spell_power",
 "Your spells and Skills deal 1 extra damage"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750396
+]
 },
 "751786": {
 "tags": [
@@ -4152,9 +6902,40 @@
 [
 "transform",
 "play me as Ibaaros"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_attack",
+"Attack"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750374,
+750396,
+750432
+]
 },
 "751794": {
 "tags": [
@@ -4169,9 +6950,30 @@
 [
 "tribal",
 "Darkin Unit"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750372
+]
 },
 "751802": {
 "tags": [
@@ -4225,7 +7027,10 @@
 "summon it instead"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750464
+]
 },
 "751804": {
 "tags": [
@@ -4252,9 +7057,31 @@
 [
 "transform",
 "play me as Xolaani"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750388,
+750396
+]
 },
 "751808": {
 "tags": [
@@ -4269,18 +7096,52 @@
 [
 "silence",
 "Silence it"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751822": {
 "tags": [
 [
 "merge_attach",
 "Equipment"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750396
+]
 },
 "751824": {
 "tags": [
@@ -4297,7 +7158,10 @@
 "grant me Scout"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750417
+]
 },
 "751826": {
 "tags": [
@@ -4326,7 +7190,10 @@
 "Forge me"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750371
+]
 },
 "751828": {
 "tags": [
@@ -4345,9 +7212,30 @@
 [
 "transform",
 "play me as Taarosh"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750396
+]
 },
 "751829": {
 "tags": [
@@ -4368,7 +7256,10 @@
 "grant all allied copies of it everywhere +1|+1"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750447
+]
 },
 "751831": {
 "tags": [
@@ -4387,9 +7278,22 @@
 [
 "merge_attach",
 "equipment"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751833": {
 "tags": [
@@ -4408,9 +7312,31 @@
 [
 "attack_token",
 "If you have the attack token"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750372,
+750464
+]
 },
 "751843": {
 "tags": [
@@ -4429,9 +7355,22 @@
 [
 "deck_position",
 "the top 8 cards of the enemy deck"
+],
+[
+"on_spell",
+"Imbue"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_spell",
+"Imbue"
+]
+],
+"keywords": [
+750395
+]
 },
 "751849": {
 "tags": [
@@ -4442,18 +7381,54 @@
 [
 "stat_multiply",
 "Double my power"
+],
+[
+"count_payoff",
+"Plunder"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"count_payoff",
+"Plunder"
+]
+],
+"keywords": [
+750368,
+750401
+]
 },
 "751862": {
 "tags": [
 [
 "generate_cards",
 "Create 3 Coins in hand"
+],
+[
+"count_payoff",
+"Plunder"
+],
+[
+"evasion",
+"Brash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"count_payoff",
+"Plunder"
+],
+[
+"evasion",
+"Brash"
+]
+],
+"keywords": [
+750401,
+750430
+]
 },
 "751863": {
 "tags": [
@@ -4468,9 +7443,22 @@
 [
 "generate_cards",
 "create 2 Coins in hand"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751874": {
 "tags": [
@@ -4487,7 +7475,10 @@
 "Bird allies"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750415
+]
 },
 "751877": {
 "tags": [
@@ -4498,9 +7489,22 @@
 [
 "generate_cards",
 "create 2 Coins in hand"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "751878": {
 "tags": [
@@ -4549,9 +7553,22 @@
 [
 "friendly_fire",
 "Kill ALL units"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751897": {
 "tags": [
@@ -4566,9 +7583,22 @@
 [
 "modal_choice",
 "or an ally Captures a landmark"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "751903": {
 "tags": [
@@ -4579,9 +7609,30 @@
 [
 "junk_cards",
 "your opponent plants 5 Poison Puffcaps in your deck for each damage instead"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750372
+]
 },
 "751904": {
 "tags": [
@@ -4596,9 +7647,22 @@
 [
 "variable_stats",
 "grow its stats to that amount"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751915": {
 "tags": [
@@ -4621,9 +7685,22 @@
 [
 "in_hand_buff",
 "everywhere"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751923": {
 "tags": [
@@ -4638,9 +7715,31 @@
 [
 "counter_spell",
 "stop all enemy Fast spells, Slow spells, and Skills"
+],
+[
+"stealth",
+"Ambush"
+],
+[
+"transform",
+"Ambush"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stealth",
+"Ambush"
+],
+[
+"transform",
+"Ambush"
+]
+],
+"keywords": [
+750420,
+750474
+]
 },
 "751925": {
 "tags": [
@@ -4651,9 +7750,30 @@
 [
 "summon",
 "summon a Aurora Hallunatis"
+],
+[
+"stealth",
+"Ambush"
+],
+[
+"transform",
+"Ambush"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stealth",
+"Ambush"
+],
+[
+"transform",
+"Ambush"
+]
+],
+"keywords": [
+750474
+]
 },
 "751939": {
 "tags": [
@@ -4678,7 +7798,10 @@
 "double the stats"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750388
+]
 },
 "751941": {
 "tags": [
@@ -4701,9 +7824,22 @@
 [
 "temporary_effect",
 "this round"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751952": {
 "tags": [
@@ -4738,9 +7874,40 @@
 [
 "stat_condition",
 "Allies with 5+ Power count twice"
+],
+[
+"on_play",
+"Play"
+],
+[
+"quests",
+"Level up"
+],
+[
+"target_choice",
+"Challenger"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+],
+[
+"quests",
+"Level up"
+],
+[
+"target_choice",
+"Challenger"
+]
+],
+"keywords": [
+750371,
+750389,
+750431
+]
 },
 "751956": {
 "tags": [
@@ -4757,7 +7924,10 @@
 "Plant 4 Chimes in your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750388
+]
 },
 "751961": {
 "tags": [
@@ -4780,9 +7950,22 @@
 [
 "friendly_fire",
 "Kill ALL other units"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "751976": {
 "tags": [
@@ -4803,7 +7986,10 @@
 "grant me +1|+1"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750430
+]
 },
 "751983": {
 "tags": [
@@ -4822,9 +8008,22 @@
 [
 "direct_damage",
 "2 to the enemy Nexus"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "751984": {
 "tags": [
@@ -4868,9 +8067,32 @@
 [
 "draw",
 "Draw that many cards plus 1"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750372,
+750447,
+750464
+]
 },
 "751993": {
 "tags": [
@@ -4899,7 +8121,10 @@
 "draw 2"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750415
+]
 },
 "752006": {
 "tags": [
@@ -4910,9 +8135,22 @@
 [
 "summon",
 "summon an Sigil of the Storm"
+],
+[
+"on_spell",
+"Imbue"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_spell",
+"Imbue"
+]
+],
+"keywords": [
+750395
+]
 },
 "752020": {
 "tags": [
@@ -4956,9 +8194,32 @@
 [
 "count_payoff",
 "You've targeted units 10+ times"
+],
+[
+"on_play",
+"Play"
+],
+[
+"quests",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+],
+[
+"quests",
+"Level up"
+]
+],
+"keywords": [
+750371,
+750389,
+750421
+]
 },
 "752026": {
 "tags": [
@@ -4969,9 +8230,22 @@
 [
 "cost_increase",
 "Increase the cost of enemy Curses everywhere by 1"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "752034": {
 "tags": [
@@ -4986,9 +8260,22 @@
 [
 "friendly_fire",
 "Curse it with Shackles"
+],
+[
+"spell_speed",
+"Burst"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Burst"
+]
+],
+"keywords": [
+750369
+]
 },
 "752035": {
 "tags": [
@@ -5011,9 +8298,24 @@
 [
 "shield",
 "Grant me SpellShield"
+],
+[
+"combo_sequence",
+"Nightfall"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"combo_sequence",
+"Nightfall"
+]
+],
+"keywords": [
+750371,
+750397,
+750399
+]
 },
 "752036": {
 "tags": [
@@ -5028,9 +8330,22 @@
 [
 "damage",
 "Deal 7 to a unit"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "752041": {
 "tags": [
@@ -5041,9 +8356,22 @@
 [
 "damage",
 "That ally and an enemy strike each other"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "752048": {
 "tags": [
@@ -5058,9 +8386,22 @@
 [
 "summon",
 "summon The Empyrean"
+],
+[
+"spell_speed",
+"Fast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Fast"
+]
+],
+"keywords": [
+750390
+]
 },
 "752052": {
 "tags": [
@@ -5071,9 +8412,22 @@
 [
 "cost_condition",
 "highest cost card"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "752055": {
 "tags": [
@@ -5094,7 +8448,11 @@
 "I Capture it"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371,
+750404
+]
 },
 "752062": {
 "tags": [
@@ -5113,9 +8471,31 @@
 [
 "other_death_trigger",
 "Whenever a non-Tentacle ally dies"
+],
+[
+"summon",
+"Spawn"
+],
+[
+"stat_gain",
+"Spawn"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"summon",
+"Spawn"
+],
+[
+"stat_gain",
+"Spawn"
+]
+],
+"keywords": [
+750388,
+750441
+]
 },
 "752066": {
 "tags": [
@@ -5138,9 +8518,64 @@
 [
 "count_payoff",
 "20+ total positive keywords"
+],
+[
+"quests",
+"Level up"
+],
+[
+"assists_support",
+"Support"
+],
+[
+"adjacency",
+"Support"
+],
+[
+"buff",
+"Support"
+],
+[
+"stat_gain",
+"Spirit"
+],
+[
+"stacking_keyword",
+"Spirit"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"quests",
+"Level up"
+],
+[
+"assists_support",
+"Support"
+],
+[
+"adjacency",
+"Support"
+],
+[
+"buff",
+"Support"
+],
+[
+"stat_gain",
+"Spirit"
+],
+[
+"stacking_keyword",
+"Spirit"
+]
+],
+"keywords": [
+750389,
+750393,
+750416
+]
 },
 "752080": {
 "tags": [
@@ -5151,9 +8586,39 @@
 [
 "draw",
 "Draw 1"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"cost_reduction",
+"Updraft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+],
+[
+"cost_reduction",
+"Updraft"
+]
+],
+"keywords": [
+750372,
+750451
+]
 },
 "752081": {
 "tags": [
@@ -5172,9 +8637,24 @@
 [
 "cost_condition",
 "costs either more or less than the card you Updrafted"
+],
+[
+"cost_reduction",
+"Updraft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cost_reduction",
+"Updraft"
+]
+],
+"keywords": [
+750371,
+750430,
+750451
+]
 },
 "752111": {
 "tags": [
@@ -5193,9 +8673,22 @@
 [
 "board_limit",
 "Can't play if you have 6 allies or landmarks already"
+],
+[
+"spell_speed",
+"Slow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Slow"
+]
+],
+"keywords": [
+750394
+]
 },
 "752116": {
 "tags": [
@@ -5221,7 +8714,10 @@
 "Burst"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750369
+]
 },
 "752123": {
 "tags": [
@@ -5247,7 +8743,10 @@
 "Fast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750390
+]
 },
 "752134": {
 "tags": [
@@ -5260,7 +8759,10 @@
 "Plant 5 Poison Puffcaps in the enemy deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750374
+]
 },
 "752147": {
 "tags": [
@@ -5299,7 +8801,10 @@
 "Quick Attack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750415
+]
 },
 "752155": {
 "tags": [
@@ -5342,7 +8847,10 @@
 "Summon an exact copy of me"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371
+]
 },
 "752176": {
 "tags": [
@@ -5393,9 +8901,22 @@
 [
 "blocking",
 "Challenger"
+],
+[
+"target_choice",
+"Challenger"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"target_choice",
+"Challenger"
+]
+],
+"keywords": [
+750431
+]
 },
 "752206": {
 "tags": [
@@ -5518,9 +9039,22 @@
 [
 "generate_cards",
 "create a Prank in hand"
+],
+[
+"on_play",
+"Attune"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Attune"
+]
+],
+"keywords": [
+750398
+]
 },
 "795276": {
 "tags": [
@@ -5559,7 +9093,11 @@
 "with my stats and positive keywords"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750374,
+750415
+]
 },
 "796472": {
 "tags": [
@@ -5602,9 +9140,33 @@
 [
 "direct_damage",
 "drain 1 from the enemy Nexus"
+],
+[
+"on_play",
+"Play"
+],
+[
+"on_attack",
+"Attack"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+],
+[
+"on_attack",
+"Attack"
+]
+],
+"keywords": [
+750371,
+750374,
+750418,
+750432
+]
 },
 "796474": {
 "tags": [
@@ -5635,9 +9197,31 @@
 [
 "return_to_hand",
 "Recall me"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
+]
+],
+"keywords": [
+750415,
+750457
+]
 },
 "796478": {
 "tags": [
@@ -5652,9 +9236,22 @@
 [
 "alt_wincon",
 "you win the game"
+],
+[
+"target_choice",
+"Challenger"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"target_choice",
+"Challenger"
+]
+],
+"keywords": [
+750431
+]
 },
 "796479": {
 "tags": [
@@ -5683,7 +9280,11 @@
 "create a Super Mega Death Rocket! in hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750415,
+750464
+]
 },
 "796480": {
 "tags": [
@@ -5702,9 +9303,23 @@
 [
 "junk_cards",
 "Poison Puffcaps in the enemy deck"
+],
+[
+"direct_damage",
+"Nexus Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"direct_damage",
+"Nexus Strike"
+]
+],
+"keywords": [
+750404,
+750459
+]
 },
 "796487": {
 "tags": [
@@ -5723,9 +9338,23 @@
 [
 "summon",
 "summon a Mighty Poro"
+],
+[
+"target_choice",
+"Challenger"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"target_choice",
+"Challenger"
+]
+],
+"keywords": [
+750418,
+750431
+]
 },
 "796490": {
 "tags": [
@@ -5758,7 +9387,10 @@
 "This round"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750432
+]
 },
 "796495": {
 "tags": [
@@ -5789,9 +9421,31 @@
 [
 "generate_cards",
 "Create a Chum the Waters in hand"
+],
+[
+"on_spell",
+"Imbue"
+],
+[
+"direct_damage",
+"Nexus Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_spell",
+"Imbue"
+],
+[
+"direct_damage",
+"Nexus Strike"
+]
+],
+"keywords": [
+750395,
+750459
+]
 },
 "796504": {
 "tags": [
@@ -5814,9 +9468,22 @@
 [
 "banish",
 "Obliterate my Captured enemies"
+],
+[
+"on_attack",
+"Attack"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_attack",
+"Attack"
+]
+],
+"keywords": [
+750374
+]
 },
 "796517": {
 "tags": [
@@ -5835,9 +9502,31 @@
 [
 "cost_set",
 "0 cost"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
+]
+],
+"keywords": [
+750415,
+750457
+]
 },
 "796521": {
 "tags": [
@@ -5860,9 +9549,23 @@
 [
 "selection",
 "Predict"
+],
+[
+"on_play",
+"play"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"play"
+]
+],
+"keywords": [
+750371,
+750464
+]
 },
 "796523": {
 "tags": [
@@ -5920,7 +9623,11 @@
 "Kill units with my mark"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750415,
+750447
+]
 },
 "796534": {
 "tags": [
@@ -5957,7 +9664,11 @@
 "kill it instead"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750432,
+750464
+]
 },
 "796540": {
 "tags": [
@@ -5970,7 +9681,10 @@
 "Grant me +1|+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750464
+]
 },
 "796549": {
 "tags": [
@@ -6034,9 +9748,24 @@
 [
 "adjacency",
 "the ally to my right"
+],
+[
+"on_attack",
+"Attack"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_attack",
+"Attack"
+]
+],
+"keywords": [
+750374,
+750404,
+750415
+]
 },
 "796559": {
 "tags": [
@@ -6045,7 +9774,10 @@
 "Quick Attack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750415
+]
 },
 "796561": {
 "tags": [
@@ -6076,9 +9808,31 @@
 [
 "count_payoff",
 "equal to the number of your traps activated this round"
+],
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Strike"
+],
+[
+"no_damage_output",
+"Strike"
+]
+],
+"keywords": [
+750415,
+750457
+]
 },
 "796567": {
 "tags": [
@@ -6121,9 +9875,31 @@
 [
 "targeting_rules",
 "lowest health first"
+],
+[
+"on_attack",
+"attack"
+],
+[
+"stat_gain",
+"Evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_attack",
+"attack"
+],
+[
+"stat_gain",
+"Evolve"
+]
+],
+"keywords": [
+750374,
+750413
+]
 },
 "796569": {
 "tags": [
@@ -6150,9 +9926,33 @@
 [
 "multi_attack",
 "Double Attack"
+],
+[
+"first_strike",
+"Double Attack"
+],
+[
+"stat_condition",
+"Empowered"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"first_strike",
+"Double Attack"
+],
+[
+"stat_condition",
+"Empowered"
+]
+],
+"keywords": [
+750368,
+750402,
+750415,
+750460
+]
 },
 "796570": {
 "tags": [
@@ -6193,7 +9993,12 @@
 "with my stats"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750371,
+750374,
+750417
+]
 },
 "796572": {
 "tags": [
@@ -6228,9 +10033,41 @@
 [
 "stat_gain",
 "Grant all allied Master Yis Everywhere +2|+0"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"count_payoff",
+"Flow"
+],
+[
+"turn_start",
+"Flow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_attack",
+"Attack"
+],
+[
+"count_payoff",
+"Flow"
+],
+[
+"turn_start",
+"Flow"
+]
+],
+"keywords": [
+750374,
+750384,
+750415,
+750464
+]
 },
 "796579": {
 "tags": [
@@ -6265,9 +10102,40 @@
 [
 "direct_damage",
 "Drain 1 from the enemy Nexus"
+],
+[
+"on_play",
+"Play"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"target_choice",
+"Challenger"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Play"
+],
+[
+"on_attack",
+"Attack"
+],
+[
+"target_choice",
+"Challenger"
+]
+],
+"keywords": [
+750371,
+750374,
+750431
+]
 },
 "796586": {
 "tags": [
@@ -6288,7 +10156,11 @@
 "it gains it again"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750374,
+750432
+]
 },
 "796593": {
 "tags": [
@@ -6313,7 +10185,10 @@
 "Create a Shen in your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750369
+]
 },
 "796600": {
 "tags": [
@@ -6334,7 +10209,10 @@
 "Create a Vladimir in your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750369
+]
 },
 "796607": {
 "tags": [
@@ -6351,7 +10229,10 @@
 "Create a Garen in your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750390
+]
 },
 "796623": {
 "tags": [
@@ -6370,9 +10251,22 @@
 [
 "ping",
 "Deal 1"
+],
+[
+"merge_attach",
+"Trap"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Trap"
+]
+],
+"keywords": [
+750386
+]
 },
 "796636": {
 "tags": [
@@ -6397,7 +10291,10 @@
 "Draw 1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750394
+]
 },
 "796637": {
 "tags": [
@@ -6414,7 +10311,10 @@
 "Create an Ashe in your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750369
+]
 },
 "796640": {
 "tags": [
@@ -6445,9 +10345,23 @@
 [
 "symmetric_effect",
 "ALL units"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750400,
+750449
+]
 },
 "796646": {
 "tags": [
@@ -6460,7 +10374,10 @@
 "Other Fearsome allies have +1|+0"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750432
+]
 },
 "796653": {
 "tags": [
@@ -6477,7 +10394,10 @@
 "Create a Vi in your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750369
+]
 },
 "796660": {
 "tags": [
@@ -6498,7 +10418,10 @@
 "Summon 3 Vicious Platewyrms"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750394
+]
 },
 "796661": {
 "tags": [
@@ -6513,9 +10436,22 @@
 [
 "direct_damage",
 "deal 1 to the enemy Nexus instead"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750400
+]
 },
 "796666": {
 "tags": [
@@ -6540,7 +10476,11 @@
 "Destroy me"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750403,
+750411
+]
 },
 "796670": {
 "tags": [
@@ -6559,9 +10499,22 @@
 [
 "direct_damage",
 "the enemy Nexus"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750400
+]
 },
 "796677": {
 "tags": [
@@ -6580,9 +10533,31 @@
 [
 "generate_cards",
 "Create a Nautilus into your deck"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
+]
+],
+"keywords": [
+750390,
+750405
+]
 },
 "796679": {
 "tags": [
@@ -6599,7 +10574,10 @@
 "Create a Sejuani in your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750369
+]
 },
 "796683": {
 "tags": [
@@ -6610,9 +10588,39 @@
 [
 "multi_attack",
 "Scout"
+],
+[
+"untap",
+"Scout"
+],
+[
+"on_attack",
+"Scout"
+],
+[
+"target_choice",
+"Challenger"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"untap",
+"Scout"
+],
+[
+"on_attack",
+"Scout"
+],
+[
+"target_choice",
+"Challenger"
+]
+],
+"keywords": [
+750425,
+750431
+]
 },
 "796689": {
 "tags": [
@@ -6631,9 +10639,22 @@
 [
 "bounce_enemy",
 "Recall it"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750400
+]
 },
 "796692": {
 "tags": [
@@ -6648,9 +10669,31 @@
 [
 "cost_condition",
 "costs 3 or less"
+],
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
+]
+],
+"keywords": [
+750369,
+750378
+]
 },
 "796699": {
 "tags": [
@@ -6665,9 +10708,31 @@
 [
 "friendly_fire",
 "It strikes him"
+],
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
+]
+],
+"keywords": [
+750378,
+750394
+]
 },
 "796702": {
 "tags": [
@@ -6680,7 +10745,10 @@
 "Draw a landmark"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750390
+]
 },
 "796709": {
 "tags": [
@@ -6719,9 +10787,24 @@
 [
 "scope_multi",
 "other allies"
+],
+[
+"target_choice",
+"Challenger"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"target_choice",
+"Challenger"
+]
+],
+"keywords": [
+750368,
+750374,
+750431
+]
 },
 "796714": {
 "tags": [
@@ -6732,9 +10815,23 @@
 [
 "silence",
 "Silence a follower"
+],
+[
+"silence",
+"Silence"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"silence",
+"Silence"
+]
+],
+"keywords": [
+750394,
+750471
+]
 },
 "796717": {
 "tags": [
@@ -6755,7 +10852,10 @@
 "enemies with 3 or less Power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750394
+]
 },
 "796719": {
 "tags": [
@@ -6770,9 +10870,31 @@
 [
 "scope_multi",
 "2 enemies"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
+]
+],
+"keywords": [
+750394,
+750405
+]
 },
 "796727": {
 "tags": [
@@ -6793,7 +10915,10 @@
 "Create an Aphelios in your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750369
+]
 },
 "796735": {
 "tags": [
@@ -6814,7 +10939,10 @@
 "Refill your mana to full"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750369
+]
 },
 "796736": {
 "tags": [
@@ -6825,9 +10953,23 @@
 [
 "banish",
 "Obliterate a unit or landmark"
+],
+[
+"banish",
+"Obliterate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"banish",
+"Obliterate"
+]
+],
+"keywords": [
+750394,
+750449
+]
 },
 "796746": {
 "tags": [
@@ -6852,7 +10994,10 @@
 "Create a Leona in your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750394
+]
 },
 "796747": {
 "tags": [
@@ -6871,9 +11016,22 @@
 [
 "stat_condition",
 "2 or less Power"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750400
+]
 },
 "796758": {
 "tags": [
@@ -6888,9 +11046,31 @@
 [
 "direct_damage",
 "from the enemy Nexus"
+],
+[
+"lifesteal",
+"Drain"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"lifesteal",
+"Drain"
+],
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750387,
+750400
+]
 },
 "796760": {
 "tags": [
@@ -6915,7 +11095,10 @@
 "Create a Lulu in your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750369
+]
 },
 "796769": {
 "tags": [
@@ -6936,7 +11119,10 @@
 "Ephemeral"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750394
+]
 },
 "796773": {
 "tags": [
@@ -6968,9 +11154,47 @@
 [
 "damage",
 "striking an enemy"
+],
+[
+"on_attack",
+"Lurk"
+],
+[
+"deck_position",
+"Lurk"
+],
+[
+"stat_gain",
+"Lurk"
+],
+[
+"tribal",
+"Lurk"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_attack",
+"Lurk"
+],
+[
+"deck_position",
+"Lurk"
+],
+[
+"stat_gain",
+"Lurk"
+],
+[
+"tribal",
+"Lurk"
+]
+],
+"keywords": [
+750390,
+750427
+]
 },
 "796776": {
 "tags": [
@@ -6995,7 +11219,10 @@
 "Create a Pyke in your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750390
+]
 },
 "796778": {
 "tags": [
@@ -7014,9 +11241,22 @@
 [
 "random_effect",
 "a random enemy"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750400
+]
 },
 "796779": {
 "tags": [
@@ -7027,9 +11267,31 @@
 [
 "swap",
 "Swap Irelia with an ally"
+],
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
+]
+],
+"keywords": [
+750369,
+750378
+]
 },
 "796782": {
 "tags": [
@@ -7055,7 +11317,10 @@
 "stop all enemy Fast spells, Slow spells, and Skills"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750390
+]
 },
 "796793": {
 "tags": [
@@ -7070,9 +11335,22 @@
 [
 "direct_damage",
 "deal 2 to the enemy Nexus instead"
+],
+[
+"reactions",
+"Elemental Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"reactions",
+"Elemental Skill"
+]
+],
+"keywords": [
+750379
+]
 },
 "796808": {
 "tags": [
@@ -7083,9 +11361,55 @@
 [
 "generate_cards",
 "Create a Relic of Power in hand"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750370,
+750372
+]
 },
 "796819": {
 "tags": [
@@ -7100,9 +11424,22 @@
 [
 "direct_damage",
 "the enemy Nexus"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750400
+]
 },
 "796824": {
 "tags": [
@@ -7113,9 +11450,32 @@
 [
 "excess_damage",
 "Overwhelm"
+],
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
+]
+],
+"keywords": [
+750368,
+750378,
+750381
+]
 },
 "796826": {
 "tags": [
@@ -7126,9 +11486,31 @@
 [
 "stat_gain",
 "+1|+1"
+],
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"temporary_effect",
+"Fleeting"
+],
+[
+"turn_end",
+"Fleeting"
+]
+],
+"keywords": [
+750378,
+750381
+]
 },
 "796833": {
 "tags": [
@@ -7141,7 +11523,10 @@
 "Advance your landmarks 1 round"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750381
+]
 },
 "796835": {
 "tags": [
@@ -7156,9 +11541,30 @@
 [
 "blocking",
 "grant it Vulnerable"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750372
+]
 },
 "796840": {
 "tags": [
@@ -7184,7 +11590,10 @@
 "draw a Champion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750394
+]
 },
 "796863": {
 "tags": [
@@ -7199,9 +11608,22 @@
 [
 "direct_damage",
 "deal 3 to the enemy Nexus"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750400
+]
 },
 "796864": {
 "tags": [
@@ -7216,9 +11638,22 @@
 [
 "destroy",
 "kill an enemy"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750400
+]
 },
 "796866": {
 "tags": [
@@ -7241,9 +11676,31 @@
 [
 "generate_cards",
 "Create a Malphite in your deck"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
+]
+],
+"keywords": [
+750390,
+750405
+]
 },
 "796869": {
 "tags": [
@@ -7258,9 +11715,55 @@
 [
 "temporary_effect",
 "this round"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+],
+[
+"turn_start",
+"Countdown"
+],
+[
+"self_destruct",
+"Countdown"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750370,
+750372
+]
 },
 "796875": {
 "tags": [
@@ -7269,7 +11772,10 @@
 "Overwhelm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750368
+]
 },
 "796877": {
 "tags": [
@@ -7296,9 +11802,31 @@
 [
 "cant_block",
 "It can't block"
+],
+[
+"on_attack",
+"Impact"
+],
+[
+"direct_damage",
+"Impact"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_attack",
+"Impact"
+],
+[
+"direct_damage",
+"Impact"
+]
+],
+"keywords": [
+750424,
+750464
+]
 },
 "796884": {
 "tags": [
@@ -7321,9 +11849,31 @@
 [
 "generate_cards",
 "Create a Veigar in your deck"
+],
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"disable",
+"Stun"
+],
+[
+"temporary_effect",
+"Stun"
+]
+],
+"keywords": [
+750390,
+750405
+]
 },
 "796888": {
 "tags": [
@@ -7344,7 +11894,10 @@
 "plant 3 Poison Puffcaps on all copies of it"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750369
+]
 },
 "796891": {
 "tags": [
@@ -7361,7 +11914,10 @@
 "Give an ally SpellShield this round"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750369
+]
 },
 "796900": {
 "tags": [
@@ -7384,9 +11940,47 @@
 [
 "other_leave_trigger",
 "When that ally leaves play"
+],
+[
+"merge_attach",
+"Attach"
+],
+[
+"return_to_hand",
+"Attach"
+],
+[
+"other_leave_trigger",
+"Attach"
+],
+[
+"first_strike",
+"Double Attack"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Attach"
+],
+[
+"return_to_hand",
+"Attach"
+],
+[
+"other_leave_trigger",
+"Attach"
+],
+[
+"first_strike",
+"Double Attack"
+]
+],
+"keywords": [
+750376,
+750402
+]
 },
 "796901": {
 "tags": [
@@ -7416,7 +12010,10 @@
 "two enemies"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750394
+]
 },
 "796963": {
 "tags": [
@@ -7441,7 +12038,10 @@
 "Create a Jayce in your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750394
+]
 },
 "796966": {
 "tags": [
@@ -7460,9 +12060,23 @@
 [
 "deck_position",
 "top 5 cards of the enemy deck"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750371,
+750400
+]
 },
 "796968": {
 "tags": [
@@ -7491,7 +12105,10 @@
 "Create a Caitlyn in your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750390
+]
 },
 "796990": {
 "tags": [
@@ -7516,7 +12133,11 @@
 "grant it my stats and positive keywords"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750404,
+750411
+]
 },
 "796998": {
 "tags": [
@@ -7529,7 +12150,10 @@
 "Advance all your Frozen Thralls 1 round"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371
+]
 },
 "797000": {
 "tags": [
@@ -7546,7 +12170,10 @@
 "Draw 1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750394
+]
 },
 "797013": {
 "tags": [
@@ -7567,7 +12194,10 @@
 "Create a Kai'Sa in your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750381
+]
 },
 "797030": {
 "tags": [
@@ -7594,9 +12224,23 @@
 [
 "generate_cards",
 "Create an Ornn in your deck"
+],
+[
+"stat_gain",
+"Forge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_gain",
+"Forge"
+]
+],
+"keywords": [
+750394,
+750465
+]
 },
 "797037": {
 "tags": [
@@ -7623,9 +12267,22 @@
 [
 "cost_set",
 "0 cost"
+],
+[
+"merge_attach",
+"Boon"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Boon"
+]
+],
+"keywords": [
+750385
+]
 },
 "797043": {
 "tags": [
@@ -7662,7 +12319,10 @@
 "Elusive"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750371
+]
 },
 "797050": {
 "tags": [
@@ -7679,7 +12339,10 @@
 "other allies"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750371
+]
 },
 "797055": {
 "tags": [
@@ -7690,9 +12353,31 @@
 [
 "first_strike",
 "Quick Attack"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750396,
+750415
+]
 },
 "797062": {
 "tags": [
@@ -7711,9 +12396,30 @@
 [
 "summon",
 "summon a Darkinthrall"
+],
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"return_to_hand",
+"Equipment"
+],
+[
+"play_restriction",
+"Equipment"
+]
+],
+"keywords": [
+750396
+]
 },
 "797065": {
 "tags": [
@@ -7724,9 +12430,22 @@
 [
 "damage",
 "Camouflaged Horror strikes an enemy"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750400
+]
 },
 "797068": {
 "tags": [
@@ -7741,9 +12460,23 @@
 [
 "cost_increase",
 "Your opponent's spells cost 2 more while I am attacking"
+],
+[
+"target_choice",
+"Challenger"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"target_choice",
+"Challenger"
+]
+],
+"keywords": [
+750417,
+750431
+]
 },
 "797070": {
 "tags": [
@@ -7756,7 +12489,10 @@
 "An ally and an enemy strike each other"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750394
+]
 },
 "797078": {
 "tags": [
@@ -7785,7 +12521,10 @@
 "you've slain this game"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750432
+]
 },
 "797095": {
 "tags": [
@@ -7800,9 +12539,31 @@
 [
 "generate_cards",
 "create a Coin in hand"
+],
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"return_to_hand",
+"Recall"
+],
+[
+"rewind",
+"Recall"
+]
+],
+"keywords": [
+750390,
+750391
+]
 },
 "797100": {
 "tags": [
@@ -7815,7 +12576,10 @@
 "Deal 1 to anything"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750394
+]
 },
 "797114": {
 "tags": [
@@ -7832,7 +12596,10 @@
 "Obliterate me"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750369
+]
 },
 "797115": {
 "tags": [
@@ -7849,7 +12616,10 @@
 "Obliterate me"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750369
+]
 },
 "797126": {
 "tags": [
@@ -7862,7 +12632,10 @@
 "Draw 2"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750369
+]
 },
 "797135": {
 "tags": [
@@ -7873,9 +12646,23 @@
 [
 "draw",
 "draw 1"
+],
+[
+"cost_reduction",
+"Updraft"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_reduction",
+"Updraft"
+]
+],
+"keywords": [
+750371,
+750451
+]
 },
 "797138": {
 "tags": [
@@ -7898,9 +12685,30 @@
 [
 "on_ally_play",
 "when you play a Titanic ally"
+],
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cant_attack",
+"Landmark"
+],
+[
+"terrain",
+"Landmark"
+]
+],
+"keywords": [
+750372
+]
 },
 "797141": {
 "tags": [
@@ -7919,9 +12727,39 @@
 [
 "friendly_fire",
 "Deal 1 to your Nexus"
+],
+[
+"hand_disruption",
+"Curse"
+],
+[
+"stacking_keyword",
+"Curse"
+],
+[
+"cost_increase",
+"Curse"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"hand_disruption",
+"Curse"
+],
+[
+"stacking_keyword",
+"Curse"
+],
+[
+"cost_increase",
+"Curse"
+]
+],
+"keywords": [
+750381,
+750406
+]
 },
 "797143": {
 "tags": [
@@ -7936,9 +12774,39 @@
 [
 "suppress",
 "the cursed unit is Immobile"
+],
+[
+"hand_disruption",
+"Curse"
+],
+[
+"stacking_keyword",
+"Curse"
+],
+[
+"cost_increase",
+"Curse"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"hand_disruption",
+"Curse"
+],
+[
+"stacking_keyword",
+"Curse"
+],
+[
+"cost_increase",
+"Curse"
+]
+],
+"keywords": [
+750381,
+750406
+]
 },
 "797146": {
 "tags": [
@@ -7951,7 +12819,10 @@
 "Grant SpellShield to an ally in hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750371
+]
 },
 "797147": {
 "tags": [
@@ -7966,9 +12837,39 @@
 [
 "play_restriction",
 "you can't play spells other than curses"
+],
+[
+"hand_disruption",
+"Curse"
+],
+[
+"stacking_keyword",
+"Curse"
+],
+[
+"cost_increase",
+"Curse"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"hand_disruption",
+"Curse"
+],
+[
+"stacking_keyword",
+"Curse"
+],
+[
+"cost_increase",
+"Curse"
+]
+],
+"keywords": [
+750381,
+750406
+]
 },
 "797156": {
 "tags": [
@@ -7987,9 +12888,31 @@
 [
 "self_destruct",
 "Ephemeral"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750381,
+750400
+]
 },
 "797167": {
 "tags": [
@@ -8004,9 +12927,31 @@
 [
 "disruption",
 "Curse your opponent with Suppression"
+],
+[
+"spell_speed",
+"Slow"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Slow"
+],
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750394,
+750400
+]
 },
 "797170": {
 "tags": [
@@ -8017,9 +12962,23 @@
 [
 "removal",
 "An ally Captures a unit"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750394,
+750400
+]
 },
 "797172": {
 "tags": [
@@ -8034,9 +12993,31 @@
 [
 "temporary_buff",
 "give it +2|+0 this round"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750381,
+750400
+]
 },
 "797181": {
 "tags": [
@@ -8051,9 +13032,31 @@
 [
 "cost_condition",
 "costs more than the card you Updrafted"
+],
+[
+"evasion",
+"Brash"
+],
+[
+"cost_reduction",
+"Updraft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"evasion",
+"Brash"
+],
+[
+"cost_reduction",
+"Updraft"
+]
+],
+"keywords": [
+750430,
+750451
+]
 },
 "797225": {
 "tags": [
@@ -8068,9 +13071,31 @@
 [
 "random_effect",
 "random card"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750381,
+750400
+]
 },
 "797228": {
 "tags": [
@@ -8097,8 +13122,39 @@
 [
 "cost_condition",
 "costs 7 or more"
+],
+[
+"spell_speed",
+"Focus"
+],
+[
+"generate_cards",
+"Invoke"
+],
+[
+"reactions",
+"Skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"spell_speed",
+"Focus"
+],
+[
+"generate_cards",
+"Invoke"
+],
+[
+"reactions",
+"Skill"
+]
+],
+"keywords": [
+750381,
+750383,
+750400
+]
 }
 }

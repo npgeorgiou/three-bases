@@ -627,7 +627,10 @@
 "stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+759796
+]
 },
 "759878": {
 "tags": [
@@ -755,9 +758,22 @@
 [
 "damage_over_time",
 "bleed 3 per round for 3 rounds"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "759900": {
 "tags": [
@@ -974,7 +990,10 @@
 "stun"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+759796
+]
 },
 "759939": {
 "tags": [
@@ -1003,7 +1022,10 @@
 "stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+759796
+]
 },
 "759940": {
 "tags": [
@@ -1041,7 +1063,10 @@
 "increase light 6"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+759796
+]
 },
 "759945": {
 "tags": [
@@ -1105,9 +1130,22 @@
 [
 "self_destruct",
 "kill self"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "759948": {
 "tags": [
@@ -1132,7 +1170,10 @@
 "stress +8"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+759796
+]
 },
 "759949": {
 "tags": [
@@ -1163,9 +1204,32 @@
 [
 "disable",
 "stun"
+],
+[
+"damage_over_time",
+"bleed"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+],
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759764,
+759765,
+759796
+]
 },
 "759951": {
 "tags": [
@@ -1188,9 +1252,22 @@
 [
 "self_destruct",
 "kill (self)"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759765
+]
 },
 "759952": {
 "tags": [
@@ -1364,7 +1441,10 @@
 "stress +8"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+759796
+]
 },
 "759962": {
 "tags": [
@@ -1387,9 +1467,22 @@
 [
 "stat_gain",
 "+100% damage"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759765
+]
 },
 "759966": {
 "tags": [
@@ -1432,9 +1525,22 @@
 [
 "mark_target",
 "mark target for 2 rounds"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "759971": {
 "tags": [
@@ -1461,9 +1567,22 @@
 [
 "damage",
 "Deals damage 2-4"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "759972": {
 "tags": [
@@ -1540,9 +1659,22 @@
 [
 "damage",
 "Deals damage 4-9"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "759977": {
 "tags": [
@@ -1585,9 +1717,22 @@
 [
 "stat_gain",
 "+25% damage"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759765
+]
 },
 "759978": {
 "tags": [
@@ -1643,9 +1788,22 @@
 [
 "stat_loss",
 "-5% crit, -33% damage"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "759982": {
 "tags": [
@@ -1676,9 +1834,22 @@
 [
 "forced_movement",
 "push back 2 ranks"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759765
+]
 },
 "759987": {
 "tags": [
@@ -1695,7 +1866,10 @@
 "Deals damage 2-4"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+759796
+]
 },
 "759989": {
 "tags": [
@@ -1710,9 +1884,22 @@
 [
 "damage_over_time",
 "blight 2 per round for 3 rounds"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759765
+]
 },
 "759992": {
 "tags": [
@@ -1766,7 +1953,10 @@
 "stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+759796
+]
 },
 "759994": {
 "tags": [
@@ -1805,9 +1995,22 @@
 [
 "rank_positions",
 "Usable from ranks 2, 1"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "759995": {
 "tags": [
@@ -1871,9 +2074,22 @@
 [
 "stat_gain",
 "+25% protection"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "760001": {
 "tags": [
@@ -1912,9 +2128,23 @@
 [
 "ping",
 "Deals damage 1-1"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759765,
+759796
+]
 },
 "760002": {
 "tags": [
@@ -1937,9 +2167,22 @@
 [
 "traits_quirks",
 "inflict disease rabies"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "760003": {
 "tags": [
@@ -1978,9 +2221,31 @@
 [
 "forced_movement",
 "Shuffle Party"
+],
+[
+"damage_over_time",
+"bleed"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+],
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759764,
+759765
+]
 },
 "760004": {
 "tags": [
@@ -2044,9 +2309,22 @@
 [
 "forced_movement",
 "Shuffle Party"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "760006": {
 "tags": [
@@ -2085,9 +2363,22 @@
 [
 "damage_over_time",
 "bleed 1 per round for 3 rounds"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764
+]
 },
 "760007": {
 "tags": [
@@ -2164,9 +2455,23 @@
 [
 "stat_gain",
 "+100% damage"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759765,
+759796
+]
 },
 "760019": {
 "tags": [
@@ -2195,7 +2500,10 @@
 "Usable from ranks 1, 2, 3, 4"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+759796
+]
 },
 "760020": {
 "tags": [
@@ -2222,9 +2530,23 @@
 [
 "targeting_rules",
 "Targets enemy ranks 3, 4"
+],
+[
+"damage_over_time",
+"bleed"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_over_time",
+"bleed"
+]
+],
+"keywords": [
+759764,
+759796
+]
 },
 "760023": {
 "tags": [
@@ -2261,7 +2583,10 @@
 "Ranged skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+759796
+]
 },
 "760025": {
 "tags": [
@@ -2304,9 +2629,23 @@
 [
 "stress_morale",
 "stress +40"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759765,
+759796
+]
 },
 "760027": {
 "tags": [
@@ -2341,9 +2680,22 @@
 [
 "stress_morale",
 "stress +40"
+],
+[
+"damage_over_time",
+"blight"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_over_time",
+"blight"
+]
+],
+"keywords": [
+759765
+]
 },
 "760029": {
 "tags": [
@@ -7517,9 +7869,39 @@
 [
 "stress_morale",
 "-30% stress dmg received percent"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760697": {
 "tags": [
@@ -7530,9 +7912,22 @@
 [
 "stress_morale",
 "stress heal amount 12 (self)"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759767
+]
 },
 "760703": {
 "tags": [
@@ -7547,9 +7942,39 @@
 [
 "scope_self",
 "(self)"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760704": {
 "tags": [
@@ -7560,9 +7985,39 @@
 [
 "stat_gain",
 "+10% monsters surprise chance"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760705": {
 "tags": [
@@ -7577,9 +8032,39 @@
 [
 "stat_condition",
 "vs size 2 enemies"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760709": {
 "tags": [
@@ -7590,9 +8075,39 @@
 [
 "stress_morale",
 "stress heal amount 15"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760711": {
 "tags": [
@@ -7603,9 +8118,22 @@
 [
 "traits_quirks",
 "remove disease"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759767
+]
 },
 "760714": {
 "tags": [
@@ -7616,9 +8144,22 @@
 [
 "items_consumables",
 "loot S 1"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759767
+]
 },
 "760719": {
 "tags": [
@@ -7641,9 +8182,39 @@
 [
 "scope_self",
 "(self)"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760723": {
 "tags": [
@@ -7658,9 +8229,39 @@
 [
 "buff",
 "+0.1 dodge (party_other)"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760724": {
 "tags": [
@@ -7675,9 +8276,39 @@
 [
 "speed",
 "+5 speed (individual)"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760728": {
 "tags": [
@@ -7692,9 +8323,39 @@
 [
 "stress_morale",
 "stress damage amount 15 (self)"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760730": {
 "tags": [
@@ -7709,9 +8370,39 @@
 [
 "stat_gain",
 "+20% hp heal received percent (individual)"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760731": {
 "tags": [
@@ -7726,9 +8417,22 @@
 [
 "traits_quirks",
 "remove disease (individual)"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759767
+]
 },
 "760732": {
 "tags": [
@@ -7751,9 +8455,39 @@
 [
 "scope_self",
 "(self)"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760733": {
 "tags": [
@@ -7772,9 +8506,39 @@
 [
 "buff",
 "+0.1 accuracy (self)"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760740": {
 "tags": [
@@ -7785,9 +8549,39 @@
 [
 "buff",
 "+0.1 accuracy (individual)"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760752": {
 "tags": [
@@ -7798,9 +8592,39 @@
 [
 "speed",
 "+5 speed"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760753": {
 "tags": [
@@ -7823,9 +8647,39 @@
 [
 "scope_self",
 "(self)"
+],
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"buff"
+],
+[
+"temporary_buff",
+"buff"
+],
+[
+"activated",
+"Camping skill"
+]
+],
+"keywords": [
+759766,
+759767
+]
 },
 "760759": {
 "tags": [
@@ -7840,9 +8694,22 @@
 [
 "damage",
 "HP change -25%"
+],
+[
+"stress_morale",
+"Stress"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stress_morale",
+"Stress"
+]
+],
+"keywords": [
+759795
+]
 },
 "760761": {
 "tags": [
@@ -7899,9 +8766,22 @@
 [
 "shield",
 "Suit of Armor Shield"
+],
+[
+"traits_quirks",
+"Quirk"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"traits_quirks",
+"Quirk"
+]
+],
+"keywords": [
+759788
+]
 },
 "760784": {
 "tags": [
@@ -7937,9 +8817,22 @@
 [
 "information",
 "Scouting 22.22%"
+],
+[
+"traits_quirks",
+"Quirk"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"traits_quirks",
+"Quirk"
+]
+],
+"keywords": [
+759788
+]
 },
 "760791": {
 "tags": [
@@ -7958,9 +8851,22 @@
 [
 "items_consumables",
 "use provision"
+],
+[
+"traits_quirks",
+"Quirk"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"traits_quirks",
+"Quirk"
+]
+],
+"keywords": [
+759788
+]
 },
 "760794": {
 "tags": [
@@ -7979,9 +8885,22 @@
 [
 "items_consumables",
 "use medicinal_herbs"
+],
+[
+"traits_quirks",
+"Quirk"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"traits_quirks",
+"Quirk"
+]
+],
+"keywords": [
+759788
+]
 },
 "760797": {
 "tags": [
@@ -8004,9 +8923,22 @@
 [
 "items_consumables",
 "use torch"
+],
+[
+"traits_quirks",
+"Quirk"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"traits_quirks",
+"Quirk"
+]
+],
+"keywords": [
+759788
+]
 },
 "760802": {
 "tags": [
@@ -8072,9 +9004,22 @@
 [
 "items_consumables",
 "use shovel"
+],
+[
+"traits_quirks",
+"Quirk"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"traits_quirks",
+"Quirk"
+]
+],
+"keywords": [
+759788
+]
 },
 "760818": {
 "tags": [

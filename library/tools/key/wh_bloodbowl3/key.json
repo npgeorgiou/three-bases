@@ -1137,9 +1137,30 @@
 [
 "deckbuilding_effect",
 "cannot have any of the following Skills"
+],
+[
+"debuff",
+"Diving Tackle"
+],
+[
+"zone_of_control",
+"Diving Tackle"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"debuff",
+"Diving Tackle"
+],
+[
+"zone_of_control",
+"Diving Tackle"
+]
+],
+"keywords": [
+794642
+]
 },
 "794698": {
 "tags": [
@@ -1639,855 +1660,14235 @@
 "by": "C"
 },
 "794738": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+]
+],
+"keywords": [
+794615
+]
 },
 "794739": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"silence",
+"Defensive"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"silence",
+"Defensive"
+]
+],
+"keywords": [
+794615,
+794640
+]
 },
 "794740": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+],
+[
+"turnover",
+"Safe Pass"
+],
+[
+"protection",
+"Safe Pass"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+],
+[
+"turnover",
+"Safe Pass"
+],
+[
+"protection",
+"Safe Pass"
+]
+],
+"keywords": [
+794615,
+794623,
+794683,
+794685
+]
 },
 "794741": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"movement",
+"Hit and Run"
+],
+[
+"untap",
+"Jump Up"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"movement",
+"Hit and Run"
+],
+[
+"untap",
+"Jump Up"
+]
+],
+"keywords": [
+794615,
+794643,
+794644
+]
 },
 "794742": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794638,
+794716,
+794718
+]
 },
 "794743": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Brawler"
+],
+[
+"target_choice",
+"Grab"
+],
+[
+"forced_movement",
+"Grab"
+],
+[
+"silence",
+"Grab"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Brawler"
+],
+[
+"target_choice",
+"Grab"
+],
+[
+"forced_movement",
+"Grab"
+],
+[
+"silence",
+"Grab"
+]
+],
+"keywords": [
+794687,
+794690
+]
 },
 "794744": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794639,
+794694,
+794713,
+794714,
+794715
+]
 },
 "794745": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+]
+],
+"keywords": [
+794666
+]
 },
 "794746": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+]
+],
+"keywords": [
+794614,
+794622,
+794657
+]
 },
 "794747": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+]
+],
+"keywords": [
+794622,
+794623,
+794657
+]
 },
 "794748": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"protection",
+"Steady Footing"
+],
+[
+"random_effect",
+"Steady Footing"
+],
+[
+"turnover",
+"Steady Footing"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"protection",
+"Steady Footing"
+],
+[
+"random_effect",
+"Steady Footing"
+],
+[
+"turnover",
+"Steady Footing"
+]
+],
+"keywords": [
+794616,
+794657,
+794662
+]
 },
 "794749": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"stat_gain",
+"Horns"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"stat_gain",
+"Horns"
+]
+],
+"keywords": [
+794638,
+794671
+]
 },
 "794750": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"buff",
+"Arm Bar"
+],
+[
+"zone_of_control",
+"Arm Bar"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Arm Bar"
+],
+[
+"zone_of_control",
+"Arm Bar"
+]
+],
+"keywords": [
+794686
+]
 },
 "794751": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794636,
+794639,
+794694,
+794713,
+794714,
+794715
+]
 },
 "794752": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"keywords": [
+794619,
+794636,
+794637,
+794638,
+794639
+]
 },
 "794753": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"keywords": [
+794619,
+794636,
+794638,
+794659,
+794671,
+794724
+]
 },
 "794754": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"advantage",
+"Brawler"
+],
+[
+"activated",
+"Breathe Fire"
+],
+[
+"random_effect",
+"Breathe Fire"
+],
+[
+"disable",
+"Breathe Fire"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"advantage",
+"Brawler"
+],
+[
+"activated",
+"Breathe Fire"
+],
+[
+"random_effect",
+"Breathe Fire"
+],
+[
+"disable",
+"Breathe Fire"
+]
+],
+"keywords": [
+794638,
+794668,
+794687,
+794700
+]
 },
 "794755": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"immunity",
+"Iron Hard Skin"
+],
+[
+"protection",
+"Thick Skull"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"immunity",
+"Iron Hard Skin"
+],
+[
+"protection",
+"Thick Skull"
+]
+],
+"keywords": [
+794616,
+794630,
+794638
+]
 },
 "794756": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"keywords": [
+794619,
+794636,
+794638,
+794659,
+794671,
+794724
+]
 },
 "794757": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"keywords": [
+794625,
+794717
+]
 },
 "794758": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794638,
+794647,
+794648,
+794725
+]
 },
 "794759": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"keywords": [
+794696
+]
 },
 "794760": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794696,
+794716,
+794718
+]
 },
 "794761": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"keywords": [
+794696
+]
 },
 "794762": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"keywords": [
+794696
+]
 },
 "794763": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"keywords": [
+794696
+]
 },
 "794764": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"keywords": [
+794623,
+794627,
+794696
+]
 },
 "794765": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794636,
+794639,
+794694,
+794713,
+794714,
+794715
+]
 },
 "794766": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"keywords": [
+794619,
+794636,
+794637,
+794638,
+794639
+]
 },
 "794767": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"keywords": [
+794619,
+794636,
+794638,
+794659,
+794671,
+794724
+]
 },
 "794768": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"random_effect",
+"Animal Savagery"
+],
+[
+"friendly_fire",
+"Animal Savagery"
+],
+[
+"buff",
+"Animal Savagery"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"random_effect",
+"Animal Savagery"
+],
+[
+"friendly_fire",
+"Animal Savagery"
+],
+[
+"buff",
+"Animal Savagery"
+]
+],
+"keywords": [
+794619,
+794636,
+794659,
+794673,
+794695
+]
 },
 "794769": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"reactions",
+"Dump-off"
+],
+[
+"activated",
+"Punt"
+],
+[
+"play_restriction",
+"Punt"
+],
+[
+"random_effect",
+"Punt"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"reactions",
+"Dump-off"
+],
+[
+"activated",
+"Punt"
+],
+[
+"play_restriction",
+"Punt"
+],
+[
+"random_effect",
+"Punt"
+]
+],
+"keywords": [
+794679,
+794684
+]
 },
 "794770": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"movement",
+"Hit and Run"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"movement",
+"Hit and Run"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"keywords": [
+794625,
+794643,
+794717
+]
 },
 "794771": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+]
+],
+"keywords": [
+794616
+]
 },
 "794772": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"multi_attack",
+"Frenzy"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"multi_attack",
+"Frenzy"
+]
+],
+"keywords": [
+794615,
+794644,
+794659
+]
 },
 "794773": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"silence",
+"Defensive"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"silence",
+"Defensive"
+]
+],
+"keywords": [
+794616,
+794638,
+794640
+]
 },
 "794774": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"speed",
+"Sprint"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"speed",
+"Sprint"
+]
+],
+"keywords": [
+794627,
+794638,
+794647
+]
 },
 "794775": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Diving Tackle"
+],
+[
+"zone_of_control",
+"Diving Tackle"
+],
+[
+"silence",
+"Tackle"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Diving Tackle"
+],
+[
+"zone_of_control",
+"Diving Tackle"
+],
+[
+"silence",
+"Tackle"
+]
+],
+"keywords": [
+794616,
+794638,
+794642,
+794664
+]
 },
 "794776": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"keywords": [
+794616,
+794638,
+794657,
+794659,
+794726
+]
 },
 "794777": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"stat_condition",
+"Break Tackle"
+],
+[
+"buff",
+"Break Tackle"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"stat_condition",
+"Break Tackle"
+],
+[
+"buff",
+"Break Tackle"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794618,
+794619,
+794624,
+794636,
+794688,
+794691,
+794708,
+794727
+]
 },
 "794778": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"turnover",
+"Fumblerooski"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"turnover",
+"Fumblerooski"
+]
+],
+"keywords": [
+794621
+]
 },
 "794779": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"ranged",
+"Hail Mary Pass"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"ranged",
+"Hail Mary Pass"
+]
+],
+"keywords": [
+794623,
+794681
+]
 },
 "794780": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"buff",
+"Diving Catch"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"buff",
+"Diving Catch"
+]
+],
+"keywords": [
+794614,
+794622,
+794641
+]
 },
 "794781": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"target_choice",
+"Sidestep"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"target_choice",
+"Sidestep"
+]
+],
+"keywords": [
+794616,
+794628
+]
 },
 "794782": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"untap",
+"Jump Up"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"untap",
+"Jump Up"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794644,
+794666,
+794716,
+794718
+]
 },
 "794783": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"play_restriction",
+"My Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"play_restriction",
+"My Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794628,
+794707,
+794718
+]
 },
 "794784": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"untap",
+"Jump Up"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"reactions",
+"Trickster"
+],
+[
+"movement",
+"Trickster"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"untap",
+"Jump Up"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"reactions",
+"Trickster"
+],
+[
+"movement",
+"Trickster"
+]
+],
+"keywords": [
+794644,
+794666,
+794718,
+794723
+]
 },
 "794785": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"assists_support",
+"Guard"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"assists_support",
+"Guard"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794617,
+794644,
+794666,
+794718
+]
 },
 "794786": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"buff",
+"Strong Arm"
+],
+[
+"play_restriction",
+"Strong Arm"
+],
+[
+"random_effect",
+"Take Root"
+],
+[
+"immobilize",
+"Take Root"
+],
+[
+"buff",
+"Timmm-ber!"
+],
+[
+"adjacency",
+"Timmm-ber!"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"buff",
+"Strong Arm"
+],
+[
+"play_restriction",
+"Strong Arm"
+],
+[
+"random_effect",
+"Take Root"
+],
+[
+"immobilize",
+"Take Root"
+],
+[
+"buff",
+"Timmm-ber!"
+],
+[
+"adjacency",
+"Timmm-ber!"
+]
+],
+"keywords": [
+794618,
+794619,
+794638,
+794639,
+794693,
+794720,
+794721
+]
 },
 "794787": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794716,
+794718
+]
 },
 "794788": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"activated",
+"Chainsaw"
+],
+[
+"damage",
+"Chainsaw"
+],
+[
+"random_effect",
+"Chainsaw"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Chainsaw"
+],
+[
+"damage",
+"Chainsaw"
+],
+[
+"random_effect",
+"Chainsaw"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794701,
+794708,
+794718,
+794727
+]
 },
 "794789": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"activated",
+"Bombardier"
+],
+[
+"play_restriction",
+"Bombardier"
+],
+[
+"ranged",
+"Bombardier"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"activated",
+"Bombardier"
+],
+[
+"play_restriction",
+"Bombardier"
+],
+[
+"ranged",
+"Bombardier"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794615,
+794699,
+794718,
+794727
+]
 },
 "794790": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"random_effect",
+"Swoop"
+],
+[
+"movement",
+"Swoop"
+],
+[
+"advantage",
+"Swoop"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"random_effect",
+"Swoop"
+],
+[
+"movement",
+"Swoop"
+],
+[
+"advantage",
+"Swoop"
+]
+],
+"keywords": [
+794615,
+794716,
+794718,
+794719
+]
 },
 "794791": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"autonomous_units",
+"Ball & Chain"
+],
+[
+"random_effect",
+"Ball & Chain"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"autonomous_units",
+"Ball & Chain"
+],
+[
+"random_effect",
+"Ball & Chain"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794697,
+794708,
+794718,
+794727
+]
 },
 "794792": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"movement",
+"Pogo"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"movement",
+"Pogo"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794712,
+794718
+]
 },
 "794793": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794639,
+794694,
+794713,
+794714,
+794715
+]
 },
 "794794": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"forced_movement",
+"Taunt"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"forced_movement",
+"Taunt"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794624,
+794665,
+794668,
+794716,
+794718
+]
 },
 "794795": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794716,
+794718
+]
 },
 "794796": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"suppress",
+"Fend"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"suppress",
+"Fend"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794658,
+794718
+]
 },
 "794797": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Dodge"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Dodge"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794614,
+794615,
+794647,
+794716,
+794718
+]
 },
 "794798": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"buff",
+"Strong Arm"
+],
+[
+"play_restriction",
+"Strong Arm"
+],
+[
+"random_effect",
+"Take Root"
+],
+[
+"immobilize",
+"Take Root"
+],
+[
+"buff",
+"Timmm-ber!"
+],
+[
+"adjacency",
+"Timmm-ber!"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"buff",
+"Strong Arm"
+],
+[
+"play_restriction",
+"Strong Arm"
+],
+[
+"random_effect",
+"Take Root"
+],
+[
+"immobilize",
+"Take Root"
+],
+[
+"buff",
+"Timmm-ber!"
+],
+[
+"adjacency",
+"Timmm-ber!"
+]
+],
+"keywords": [
+794618,
+794619,
+794638,
+794639,
+794693,
+794720,
+794721
+]
 },
 "794799": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"suppress",
+"Cloud Burster"
+],
+[
+"turnover",
+"Safe Pass"
+],
+[
+"protection",
+"Safe Pass"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"suppress",
+"Cloud Burster"
+],
+[
+"turnover",
+"Safe Pass"
+],
+[
+"protection",
+"Safe Pass"
+]
+],
+"keywords": [
+794623,
+794678,
+794685
+]
 },
 "794800": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Steady Footing"
+],
+[
+"random_effect",
+"Steady Footing"
+],
+[
+"turnover",
+"Steady Footing"
+],
+[
+"play_restriction",
+"My Ball"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Steady Footing"
+],
+[
+"random_effect",
+"Steady Footing"
+],
+[
+"turnover",
+"Steady Footing"
+],
+[
+"play_restriction",
+"My Ball"
+]
+],
+"keywords": [
+794616,
+794662,
+794707
+]
 },
 "794801": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"piercing",
+"Claws"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"piercing",
+"Claws"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+]
+],
+"keywords": [
+794629,
+794666
+]
 },
 "794802": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+]
+],
+"keywords": [
+794616
+]
 },
 "794803": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Dodge"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Dodge"
+]
+],
+"keywords": [
+794614,
+794615
+]
 },
 "794804": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+]
+],
+"keywords": [
+794615
+]
 },
 "794805": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+]
+],
+"keywords": [
+794623,
+794627
+]
 },
 "794806": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"keywords": [
+794619,
+794636,
+794637,
+794638,
+794639
+]
 },
 "794807": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"suppress",
+"Fend"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"suppress",
+"Fend"
+]
+],
+"keywords": [
+794658
+]
 },
 "794808": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Pro"
+],
+[
+"random_effect",
+"Pro"
+],
+[
+"speed",
+"Give and Go"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Pro"
+],
+[
+"random_effect",
+"Pro"
+],
+[
+"speed",
+"Give and Go"
+]
+],
+"keywords": [
+794623,
+794661,
+794680
+]
 },
 "794809": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+]
+],
+"keywords": [
+794618,
+794666
+]
 },
 "794810": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"protection",
+"Block"
+],
+[
+"advantage",
+"Pro"
+],
+[
+"random_effect",
+"Pro"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"protection",
+"Block"
+],
+[
+"advantage",
+"Pro"
+],
+[
+"random_effect",
+"Pro"
+]
+],
+"keywords": [
+794614,
+794616,
+794661
+]
 },
 "794811": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"keywords": [
+794619,
+794636,
+794637,
+794638,
+794639
+]
 },
 "794812": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"multi_attack",
+"Frenzy"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"multi_attack",
+"Frenzy"
+]
+],
+"keywords": [
+794659
+]
 },
 "794813": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+]
+],
+"keywords": [
+794638,
+794644,
+794671,
+794691
+]
 },
 "794814": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"multi_attack",
+"Frenzy"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"multi_attack",
+"Frenzy"
+]
+],
+"keywords": [
+794659
+]
 },
 "794815": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"keywords": [
+794619,
+794629,
+794636,
+794659,
+794724
+]
 },
 "794816": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794625,
+794683,
+794718
+]
 },
 "794817": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+]
+],
+"keywords": [
+794619,
+794636,
+794637,
+794638,
+794673
+]
 },
 "794818": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794691,
+794725
+]
 },
 "794819": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794718
+]
 },
 "794820": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"suppress",
+"Eye Gouge"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"suppress",
+"Eye Gouge"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794649,
+794715,
+794725
+]
 },
 "794821": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794615,
+794715
+]
 },
 "794822": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794616,
+794628,
+794670,
+794708,
+794715
+]
 },
 "794823": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794618,
+794638,
+794715,
+794725
+]
 },
 "794824": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"piercing",
+"Claws"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"piercing",
+"Claws"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794629,
+794659,
+794715
+]
 },
 "794825": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Drunkard"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Drunkard"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794616,
+794638,
+794703,
+794725
+]
 },
 "794826": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"keywords": [
+794629,
+794636,
+794659,
+794668,
+794724
+]
 },
 "794827": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794659,
+794725
+]
 },
 "794828": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"disruption",
+"Strip Ball"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"disruption",
+"Strip Ball"
+]
+],
+"keywords": [
+794614,
+794623,
+794657,
+794663
+]
 },
 "794829": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"multi_attack",
+"Frenzy"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"multi_attack",
+"Frenzy"
+]
+],
+"keywords": [
+794616,
+794644,
+794659
+]
 },
 "794830": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"untap",
+"Pick-me-up"
+],
+[
+"random_effect",
+"Pick-me-up"
+],
+[
+"turn_end",
+"Pick-me-up"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"untap",
+"Pick-me-up"
+],
+[
+"random_effect",
+"Pick-me-up"
+],
+[
+"turn_end",
+"Pick-me-up"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+]
+],
+"keywords": [
+794615,
+794708,
+794710,
+794718,
+794722
+]
 },
 "794831": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"debuff",
+"Decay"
+],
+[
+"summon",
+"Plague Ridden"
+],
+[
+"once_per_game",
+"Plague Ridden"
+],
+[
+"on_kill",
+"Plague Ridden"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"debuff",
+"Decay"
+],
+[
+"summon",
+"Plague Ridden"
+],
+[
+"once_per_game",
+"Plague Ridden"
+],
+[
+"on_kill",
+"Plague Ridden"
+]
+],
+"keywords": [
+794702,
+794711
+]
 },
 "794832": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"protection",
+"Steady Footing"
+],
+[
+"random_effect",
+"Steady Footing"
+],
+[
+"turnover",
+"Steady Footing"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"summon",
+"Plague Ridden"
+],
+[
+"once_per_game",
+"Plague Ridden"
+],
+[
+"on_kill",
+"Plague Ridden"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"protection",
+"Steady Footing"
+],
+[
+"random_effect",
+"Steady Footing"
+],
+[
+"turnover",
+"Steady Footing"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"summon",
+"Plague Ridden"
+],
+[
+"once_per_game",
+"Plague Ridden"
+],
+[
+"on_kill",
+"Plague Ridden"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794638,
+794662,
+794671,
+794711,
+794715
+]
 },
 "794833": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"summon",
+"Plague Ridden"
+],
+[
+"once_per_game",
+"Plague Ridden"
+],
+[
+"on_kill",
+"Plague Ridden"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"summon",
+"Plague Ridden"
+],
+[
+"once_per_game",
+"Plague Ridden"
+],
+[
+"on_kill",
+"Plague Ridden"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794618,
+794668,
+794670,
+794711,
+794715,
+794725
+]
 },
 "794834": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"immobilize",
+"Tentacles"
+],
+[
+"zone_of_control",
+"Tentacles"
+],
+[
+"random_effect",
+"Tentacles"
+],
+[
+"untap",
+"Pick-me-up"
+],
+[
+"random_effect",
+"Pick-me-up"
+],
+[
+"turn_end",
+"Pick-me-up"
+],
+[
+"summon",
+"Plague Ridden"
+],
+[
+"once_per_game",
+"Plague Ridden"
+],
+[
+"on_kill",
+"Plague Ridden"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"immobilize",
+"Tentacles"
+],
+[
+"zone_of_control",
+"Tentacles"
+],
+[
+"random_effect",
+"Tentacles"
+],
+[
+"untap",
+"Pick-me-up"
+],
+[
+"random_effect",
+"Pick-me-up"
+],
+[
+"turn_end",
+"Pick-me-up"
+],
+[
+"summon",
+"Plague Ridden"
+],
+[
+"once_per_game",
+"Plague Ridden"
+],
+[
+"on_kill",
+"Plague Ridden"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794636,
+794668,
+794670,
+794674,
+794710,
+794711,
+794714,
+794715
+]
 },
 "794835": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+]
+],
+"keywords": [
+794615,
+794628,
+794716,
+794718,
+794722
+]
 },
 "794836": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"keywords": [
+794619,
+794637,
+794638,
+794639
+]
 },
 "794837": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Kick Team-mate"
+],
+[
+"play_restriction",
+"Kick Team-mate"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Kick Team-mate"
+],
+[
+"play_restriction",
+"Kick Team-mate"
+]
+],
+"keywords": [
+794619,
+794637,
+794638,
+794706
+]
 },
 "794839": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794716,
+794718
+]
 },
 "794840": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Dodge"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Dodge"
+]
+],
+"keywords": [
+794614,
+794615
+]
 },
 "794841": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"silence",
+"Defensive"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"silence",
+"Defensive"
+]
+],
+"keywords": [
+794616,
+794638,
+794640
+]
 },
 "794842": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+]
+],
+"keywords": [
+794623,
+794627
+]
 },
 "794843": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"speed",
+"Sprint"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"speed",
+"Sprint"
+]
+],
+"keywords": [
+794627,
+794638,
+794647
+]
 },
 "794844": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"silence",
+"Tackle"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"silence",
+"Tackle"
+]
+],
+"keywords": [
+794616,
+794664
+]
 },
 "794845": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Diving Tackle"
+],
+[
+"zone_of_control",
+"Diving Tackle"
+],
+[
+"silence",
+"Tackle"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Diving Tackle"
+],
+[
+"zone_of_control",
+"Diving Tackle"
+],
+[
+"silence",
+"Tackle"
+]
+],
+"keywords": [
+794616,
+794638,
+794642,
+794664
+]
 },
 "794846": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"keywords": [
+794616,
+794638,
+794657,
+794659,
+794726
+]
 },
 "794847": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+]
+],
+"keywords": [
+794619,
+794636,
+794637,
+794638,
+794639
+]
 },
 "794848": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"buff",
+"Strong Arm"
+],
+[
+"play_restriction",
+"Strong Arm"
+],
+[
+"random_effect",
+"Take Root"
+],
+[
+"immobilize",
+"Take Root"
+],
+[
+"buff",
+"Timmm-ber!"
+],
+[
+"adjacency",
+"Timmm-ber!"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"buff",
+"Strong Arm"
+],
+[
+"play_restriction",
+"Strong Arm"
+],
+[
+"random_effect",
+"Take Root"
+],
+[
+"immobilize",
+"Take Root"
+],
+[
+"buff",
+"Timmm-ber!"
+],
+[
+"adjacency",
+"Timmm-ber!"
+]
+],
+"keywords": [
+794618,
+794619,
+794636,
+794638,
+794639,
+794693,
+794720,
+794721
+]
 },
 "794849": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+]
+],
+"keywords": [
+794623,
+794627
+]
 },
 "794850": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"stat_condition",
+"Break Tackle"
+],
+[
+"buff",
+"Break Tackle"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"stat_condition",
+"Break Tackle"
+],
+[
+"buff",
+"Break Tackle"
+]
+],
+"keywords": [
+794616,
+794664,
+794688
+]
 },
 "794851": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"forced_movement",
+"Taunt"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"forced_movement",
+"Taunt"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794619,
+794638,
+794665,
+794725
+]
 },
 "794852": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794636,
+794639,
+794694,
+794713,
+794714,
+794715
+]
 },
 "794853": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794716,
+794718
+]
 },
 "794854": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"suppress",
+"Eye Gouge"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"suppress",
+"Eye Gouge"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794649,
+794715,
+794725
+]
 },
 "794855": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794615,
+794715
+]
 },
 "794856": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794616,
+794638,
+794664,
+794715
+]
 },
 "794857": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794715
+]
 },
 "794858": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794638,
+794715
+]
 },
 "794859": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+]
+],
+"keywords": [
+794623,
+794627
+]
 },
 "794860": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"disruption",
+"Strip Ball"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"disruption",
+"Strip Ball"
+]
+],
+"keywords": [
+794616,
+794663
+]
 },
 "794861": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"keywords": [
+794615,
+794717
+]
 },
 "794862": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"random_effect",
+"Animal Savagery"
+],
+[
+"friendly_fire",
+"Animal Savagery"
+],
+[
+"buff",
+"Animal Savagery"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"random_effect",
+"Animal Savagery"
+],
+[
+"friendly_fire",
+"Animal Savagery"
+],
+[
+"buff",
+"Animal Savagery"
+]
+],
+"keywords": [
+794619,
+794636,
+794659,
+794673,
+794695
+]
 },
 "794863": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"deckbuilding_effect",
+"Insignificant"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"deckbuilding_effect",
+"Insignificant"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+]
+],
+"keywords": [
+794615,
+794628,
+794705,
+794716,
+794718,
+794722
+]
 },
 "794864": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"movement",
+"Pogo"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"movement",
+"Pogo"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794628,
+794712,
+794716,
+794718
+]
 },
 "794865": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794628,
+794647,
+794716,
+794718
+]
 },
 "794866": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"activated",
+"Bombardier"
+],
+[
+"play_restriction",
+"Bombardier"
+],
+[
+"ranged",
+"Bombardier"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"activated",
+"Bombardier"
+],
+[
+"play_restriction",
+"Bombardier"
+],
+[
+"ranged",
+"Bombardier"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794615,
+794628,
+794699,
+794716,
+794718,
+794722,
+794727
+]
 },
 "794867": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794639,
+794694,
+794713,
+794714,
+794715
+]
 },
 "794868": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+]
+],
+"keywords": [
+794618,
+794619,
+794624,
+794691,
+794714
+]
 },
 "794869": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794638,
+794715
+]
 },
 "794870": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Brawler"
+],
+[
+"debuff",
+"Decay"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Brawler"
+],
+[
+"debuff",
+"Decay"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794687,
+794702,
+794715
+]
 },
 "794871": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794616,
+794638,
+794715
+]
 },
 "794872": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794623,
+794627,
+794638,
+794715
+]
 },
 "794873": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794716,
+794718
+]
 },
 "794874": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"deckbuilding_effect",
+"Insignificant"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"deckbuilding_effect",
+"Insignificant"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+]
+],
+"keywords": [
+794615,
+794628,
+794705,
+794716,
+794718,
+794722
+]
 },
 "794875": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"keywords": [
+794696
+]
 },
 "794876": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"keywords": [
+794623,
+794627,
+794696
+]
 },
 "794877": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"keywords": [
+794615,
+794696,
+794717
+]
 },
 "794878": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"disruption",
+"Strip Ball"
+],
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"disruption",
+"Strip Ball"
+],
+[
+"random_effect",
+"Animosity (X)"
+],
+[
+"disable",
+"Animosity (X)"
+],
+[
+"tribal",
+"Animosity (X)"
+]
+],
+"keywords": [
+794616,
+794663,
+794696
+]
 },
 "794879": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"random_effect",
+"Always Hungry"
+],
+[
+"friendly_fire",
+"Always Hungry"
+],
+[
+"activated",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Projectile Vomit"
+],
+[
+"damage",
+"Projectile Vomit"
+],
+[
+"random_effect",
+"Really Stupid"
+],
+[
+"disable",
+"Really Stupid"
+],
+[
+"adjacency",
+"Really Stupid"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794636,
+794639,
+794694,
+794713,
+794714,
+794715
+]
 },
 "794880": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"random_effect",
+"Animal Savagery"
+],
+[
+"friendly_fire",
+"Animal Savagery"
+],
+[
+"buff",
+"Animal Savagery"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"random_effect",
+"Animal Savagery"
+],
+[
+"friendly_fire",
+"Animal Savagery"
+],
+[
+"buff",
+"Animal Savagery"
+]
+],
+"keywords": [
+794619,
+794636,
+794659,
+794673,
+794695
+]
 },
 "794881": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"random_effect",
+"Bloodlust (X+)"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"random_effect",
+"Bloodlust (X+)"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794691,
+794698,
+794704,
+794715
+]
 },
 "794882": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"random_effect",
+"Bloodlust (X+)"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"random_effect",
+"Bloodlust (X+)"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794629,
+794636,
+794659,
+794698,
+794715
+]
 },
 "794883": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Bloodlust (X+)"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Bloodlust (X+)"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794698,
+794704,
+794715
+]
 },
 "794884": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"random_effect",
+"Bloodlust (X+)"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"random_effect",
+"Bloodlust (X+)"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794623,
+794698,
+794704,
+794715
+]
 },
 "794885": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+]
+],
+"keywords": [
+794623
+]
 },
 "794886": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Dodge"
+],
+[
+"speed",
+"Sprint"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Dodge"
+],
+[
+"speed",
+"Sprint"
+]
+],
+"keywords": [
+794614,
+794615,
+794647
+]
 },
 "794887": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"buff",
+"Strong Arm"
+],
+[
+"play_restriction",
+"Strong Arm"
+],
+[
+"random_effect",
+"Take Root"
+],
+[
+"immobilize",
+"Take Root"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"buff",
+"Strong Arm"
+],
+[
+"play_restriction",
+"Strong Arm"
+],
+[
+"random_effect",
+"Take Root"
+],
+[
+"immobilize",
+"Take Root"
+]
+],
+"keywords": [
+794618,
+794619,
+794636,
+794638,
+794639,
+794693,
+794720
+]
 },
 "794888": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"movement",
+"Leap"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"movement",
+"Leap"
+]
+],
+"keywords": [
+794615,
+794616,
+794645
+]
 },
 "794889": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"buff",
+"Titchy"
+]
+],
+"keywords": [
+794615,
+794628,
+794629,
+794636,
+794644,
+794657,
+794659,
+794708,
+794718,
+794722
+]
 },
 "794890": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Stand Firm"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"target_choice",
+"Grab"
+],
+[
+"forced_movement",
+"Grab"
+],
+[
+"silence",
+"Grab"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Stand Firm"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"target_choice",
+"Grab"
+],
+[
+"forced_movement",
+"Grab"
+],
+[
+"silence",
+"Grab"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794616,
+794618,
+794636,
+794690,
+794725
+]
 },
 "794891": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"buff",
+"Cannoneer"
+],
+[
+"ranged",
+"Hail Mary Pass"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"buff",
+"Cannoneer"
+],
+[
+"ranged",
+"Hail Mary Pass"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794623,
+794627,
+794636,
+794638,
+794677,
+794681,
+794727
+]
 },
 "794892": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"buff",
+"Dirty Player"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"lone_unit",
+"Lone Fouler"
+],
+[
+"advantage",
+"Lone Fouler"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Dirty Player"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"lone_unit",
+"Lone Fouler"
+],
+[
+"advantage",
+"Lone Fouler"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794624,
+794636,
+794651,
+794668,
+794670,
+794715,
+794725
+]
 },
 "794893": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"suppress",
+"Fend"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"suppress",
+"Fend"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+]
+],
+"keywords": [
+794615,
+794628,
+794636,
+794658,
+794673,
+794704
+]
 },
 "794894": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Accurate"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Bombardier"
+],
+[
+"play_restriction",
+"Bombardier"
+],
+[
+"ranged",
+"Bombardier"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Accurate"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Bombardier"
+],
+[
+"play_restriction",
+"Bombardier"
+],
+[
+"ranged",
+"Bombardier"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794615,
+794620,
+794636,
+794699,
+794716,
+794718,
+794727
+]
 },
 "794895": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"random_effect",
+"Bloodlust (X+)"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"random_effect",
+"Bloodlust (X+)"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794615,
+794636,
+794644,
+794698,
+794704,
+794715
+]
 },
 "794896": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Accurate"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Bombardier"
+],
+[
+"play_restriction",
+"Bombardier"
+],
+[
+"ranged",
+"Bombardier"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Accurate"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Bombardier"
+],
+[
+"play_restriction",
+"Bombardier"
+],
+[
+"ranged",
+"Bombardier"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794615,
+794620,
+794636,
+794699,
+794718,
+794727
+]
 },
 "794897": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794616,
+794628,
+794636,
+794704,
+794715
+]
 },
 "794898": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"placement_rules",
+"Bullseye"
+],
+[
+"buff",
+"Strong Arm"
+],
+[
+"play_restriction",
+"Strong Arm"
+],
+[
+"buff",
+"Timmm-ber!"
+],
+[
+"adjacency",
+"Timmm-ber!"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"placement_rules",
+"Bullseye"
+],
+[
+"buff",
+"Strong Arm"
+],
+[
+"play_restriction",
+"Strong Arm"
+],
+[
+"buff",
+"Timmm-ber!"
+],
+[
+"adjacency",
+"Timmm-ber!"
+]
+],
+"keywords": [
+794616,
+794618,
+794619,
+794636,
+794638,
+794639,
+794689,
+794693,
+794721
+]
 },
 "794899": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Dodge"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"advantage",
+"Dodge"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+],
+[
+"activated",
+"Hypnotic Gaze"
+],
+[
+"random_effect",
+"Hypnotic Gaze"
+],
+[
+"disable",
+"Hypnotic Gaze"
+]
+],
+"keywords": [
+794614,
+794615,
+794622,
+794636,
+794683,
+794704
+]
 },
 "794900": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"assists_support",
+"Guard"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"assists_support",
+"Guard"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+]
+],
+"keywords": [
+794615,
+794617,
+794628,
+794636,
+794668
+]
 },
 "794901": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"autonomous_units",
+"Ball & Chain"
+],
+[
+"random_effect",
+"Ball & Chain"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"autonomous_units",
+"Ball & Chain"
+],
+[
+"random_effect",
+"Ball & Chain"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794619,
+794636,
+794697,
+794708,
+794718,
+794727
+]
 },
 "794902": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Stand Firm"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"target_choice",
+"Grab"
+],
+[
+"forced_movement",
+"Grab"
+],
+[
+"silence",
+"Grab"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Stand Firm"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"target_choice",
+"Grab"
+],
+[
+"forced_movement",
+"Grab"
+],
+[
+"silence",
+"Grab"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+]
+],
+"keywords": [
+794616,
+794618,
+794629,
+794636,
+794690,
+794691
+]
 },
 "794903": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Accurate"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Accurate"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+]
+],
+"keywords": [
+794615,
+794620,
+794623,
+794627,
+794628,
+794636
+]
 },
 "794904": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"random_effect",
+"Animal Savagery"
+],
+[
+"friendly_fire",
+"Animal Savagery"
+],
+[
+"buff",
+"Animal Savagery"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"random_effect",
+"Animal Savagery"
+],
+[
+"friendly_fire",
+"Animal Savagery"
+],
+[
+"buff",
+"Animal Savagery"
+]
+],
+"keywords": [
+794618,
+794619,
+794636,
+794638,
+794659,
+794673,
+794695
+]
 },
 "794905": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"keywords": [
+794619,
+794636,
+794638,
+794659,
+794671,
+794724
+]
 },
 "794906": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794615,
+794625,
+794628,
+794636,
+794644,
+794668,
+794670,
+794708,
+794715
+]
 },
 "794907": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"suppress",
+"Fend"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"suppress",
+"Fend"
+]
+],
+"keywords": [
+794615,
+794616,
+794636,
+794647,
+794648,
+794658
+]
 },
 "794908": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"multi_attack",
+"Multiple Block"
+],
+[
+"stat_loss",
+"Multiple Block"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"multi_attack",
+"Multiple Block"
+],
+[
+"stat_loss",
+"Multiple Block"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"keywords": [
+794616,
+794636,
+794638,
+794657,
+794659,
+794692,
+794726
+]
 },
 "794909": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"stat_condition",
+"Break Tackle"
+],
+[
+"buff",
+"Break Tackle"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+],
+[
+"stat_condition",
+"Break Tackle"
+],
+[
+"buff",
+"Break Tackle"
+]
+],
+"keywords": [
+794616,
+794618,
+794619,
+794636,
+794638,
+794648,
+794657,
+794688
+]
 },
 "794910": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"activated",
+"Monstrous Mouth"
+],
+[
+"immobilize",
+"Monstrous Mouth"
+],
+[
+"random_effect",
+"Monstrous Mouth"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+],
+[
+"summon",
+"Plague Ridden"
+],
+[
+"once_per_game",
+"Plague Ridden"
+],
+[
+"on_kill",
+"Plague Ridden"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"activated",
+"Monstrous Mouth"
+],
+[
+"immobilize",
+"Monstrous Mouth"
+],
+[
+"random_effect",
+"Monstrous Mouth"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+],
+[
+"summon",
+"Plague Ridden"
+],
+[
+"once_per_game",
+"Plague Ridden"
+],
+[
+"on_kill",
+"Plague Ridden"
+]
+],
+"keywords": [
+794622,
+794636,
+794670,
+794672,
+794683,
+794711
+]
 },
 "794911": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"silence",
+"Defensive"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"stat_condition",
+"Break Tackle"
+],
+[
+"buff",
+"Break Tackle"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"silence",
+"Defensive"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"stat_condition",
+"Break Tackle"
+],
+[
+"buff",
+"Break Tackle"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794616,
+794636,
+794638,
+794640,
+794647,
+794648,
+794688,
+794691,
+794725
+]
 },
 "794912": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"buff",
+"Extra Arms"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"buff",
+"Two Heads"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"buff",
+"Extra Arms"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"buff",
+"Two Heads"
+]
+],
+"keywords": [
+794615,
+794636,
+794669,
+794673,
+794675
+]
 },
 "794913": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"advantage",
+"Pro"
+],
+[
+"random_effect",
+"Pro"
+],
+[
+"activated",
+"Chainsaw"
+],
+[
+"damage",
+"Chainsaw"
+],
+[
+"random_effect",
+"Chainsaw"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"advantage",
+"Pro"
+],
+[
+"random_effect",
+"Pro"
+],
+[
+"activated",
+"Chainsaw"
+],
+[
+"damage",
+"Chainsaw"
+],
+[
+"random_effect",
+"Chainsaw"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794618,
+794636,
+794661,
+794701,
+794708,
+794727
+]
 },
 "794914": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"disruption",
+"Strip Ball"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"disruption",
+"Strip Ball"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"keywords": [
+794616,
+794636,
+794663,
+794664,
+794668,
+794691,
+794715,
+794726
+]
 },
 "794915": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"assists_support",
+"Guard"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"silence",
+"Tackle"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"assists_support",
+"Guard"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"silence",
+"Tackle"
+]
+],
+"keywords": [
+794616,
+794617,
+794636,
+794664
+]
 },
 "794916": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"buff",
+"Diving Catch"
+],
+[
+"reactions",
+"Dump-off"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"buff",
+"Diving Catch"
+],
+[
+"reactions",
+"Dump-off"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+]
+],
+"keywords": [
+794615,
+794616,
+794622,
+794623,
+794628,
+794636,
+794641,
+794679,
+794683
+]
 },
 "794917": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"buff",
+"Diving Catch"
+],
+[
+"movement",
+"Leap"
+],
+[
+"protection",
+"Steady Footing"
+],
+[
+"random_effect",
+"Steady Footing"
+],
+[
+"turnover",
+"Steady Footing"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"buff",
+"Diving Catch"
+],
+[
+"movement",
+"Leap"
+],
+[
+"protection",
+"Steady Footing"
+],
+[
+"random_effect",
+"Steady Footing"
+],
+[
+"turnover",
+"Steady Footing"
+]
+],
+"keywords": [
+794615,
+794616,
+794628,
+794636,
+794641,
+794645,
+794662
+]
 },
 "794918": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"suppress",
+"Fend"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"forced_movement",
+"Taunt"
+],
+[
+"debuff",
+"Drunkard"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"suppress",
+"Fend"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"forced_movement",
+"Taunt"
+],
+[
+"debuff",
+"Drunkard"
+]
+],
+"keywords": [
+794616,
+794636,
+794638,
+794658,
+794664,
+794665,
+794703
+]
 },
 "794919": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+]
+],
+"keywords": [
+794615,
+794616,
+794636,
+794644,
+794657
+]
 },
 "794920": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"immobilize",
+"Tentacles"
+],
+[
+"zone_of_control",
+"Tentacles"
+],
+[
+"random_effect",
+"Tentacles"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"immobilize",
+"Tentacles"
+],
+[
+"zone_of_control",
+"Tentacles"
+],
+[
+"random_effect",
+"Tentacles"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+]
+],
+"keywords": [
+794636,
+794664,
+794668,
+794670,
+794674,
+794683
+]
 },
 "794921": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"autonomous_units",
+"Ball & Chain"
+],
+[
+"random_effect",
+"Ball & Chain"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"autonomous_units",
+"Ball & Chain"
+],
+[
+"random_effect",
+"Ball & Chain"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794619,
+794636,
+794673,
+794697,
+794708,
+794727
+]
 },
 "794922": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"immunity",
+"Sneaky Git"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"assists_support",
+"Put the Boot In"
+],
+[
+"resource_gain",
+"Leader"
+],
+[
+"leave_trigger",
+"Leader"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"immunity",
+"Sneaky Git"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"assists_support",
+"Put the Boot In"
+],
+[
+"resource_gain",
+"Leader"
+],
+[
+"leave_trigger",
+"Leader"
+]
+],
+"keywords": [
+794616,
+794619,
+794624,
+794626,
+794636,
+794653,
+794682
+]
 },
 "794923": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"immobilize",
+"Tentacles"
+],
+[
+"zone_of_control",
+"Tentacles"
+],
+[
+"random_effect",
+"Tentacles"
+],
+[
+"advantage",
+"Brawler"
+],
+[
+"target_choice",
+"Grab"
+],
+[
+"forced_movement",
+"Grab"
+],
+[
+"silence",
+"Grab"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Stand Firm"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"immobilize",
+"Tentacles"
+],
+[
+"zone_of_control",
+"Tentacles"
+],
+[
+"random_effect",
+"Tentacles"
+],
+[
+"advantage",
+"Brawler"
+],
+[
+"target_choice",
+"Grab"
+],
+[
+"forced_movement",
+"Grab"
+],
+[
+"silence",
+"Grab"
+]
+],
+"keywords": [
+794618,
+794619,
+794636,
+794638,
+794674,
+794687,
+794690
+]
 },
 "794924": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Chainsaw"
+],
+[
+"damage",
+"Chainsaw"
+],
+[
+"random_effect",
+"Chainsaw"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Chainsaw"
+],
+[
+"damage",
+"Chainsaw"
+],
+[
+"random_effect",
+"Chainsaw"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794636,
+794701,
+794708,
+794727
+]
 },
 "794925": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"placement_rules",
+"Bullseye"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"placement_rules",
+"Bullseye"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"keywords": [
+794616,
+794619,
+794636,
+794638,
+794639,
+794689,
+794726
+]
 },
 "794926": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Saboteur"
+],
+[
+"counterattack",
+"Saboteur"
+],
+[
+"reactions",
+"Saboteur"
+],
+[
+"activated",
+"Chainsaw"
+],
+[
+"damage",
+"Chainsaw"
+],
+[
+"random_effect",
+"Chainsaw"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Saboteur"
+],
+[
+"counterattack",
+"Saboteur"
+],
+[
+"reactions",
+"Saboteur"
+],
+[
+"activated",
+"Chainsaw"
+],
+[
+"damage",
+"Chainsaw"
+],
+[
+"random_effect",
+"Chainsaw"
+],
+[
+"play_restriction",
+"No Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794615,
+794616,
+794636,
+794655,
+794701,
+794708,
+794718,
+794727
+]
 },
 "794927": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"protection",
+"Block"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794616,
+794622,
+794636,
+794716,
+794718
+]
 },
 "794928": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"immunity",
+"Sneaky Git"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"immunity",
+"Sneaky Git"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"keywords": [
+794625,
+794626,
+794628,
+794636,
+794717
+]
 },
 "794929": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"placement_rules",
+"Bullseye"
+],
+[
+"target_choice",
+"Grab"
+],
+[
+"forced_movement",
+"Grab"
+],
+[
+"silence",
+"Grab"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"activated",
+"Throw Team-mate"
+],
+[
+"placement_rules",
+"Bullseye"
+],
+[
+"target_choice",
+"Grab"
+],
+[
+"forced_movement",
+"Grab"
+],
+[
+"silence",
+"Grab"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794636,
+794639,
+794689,
+794690,
+794715
+]
 },
 "794930": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"buff",
+"Diving Catch"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"buff",
+"Diving Catch"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"reactions",
+"On the Ball"
+],
+[
+"movement",
+"On the Ball"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794614,
+794628,
+794636,
+794641,
+794644,
+794666,
+794683,
+794718
+]
 },
 "794931": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"assists_support",
+"Guard"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"movement",
+"Leap"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"reactions",
+"Dump-off"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"assists_support",
+"Guard"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"movement",
+"Leap"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"reactions",
+"Dump-off"
+]
+],
+"keywords": [
+794615,
+794617,
+794636,
+794644,
+794645,
+794671,
+794679
+]
 },
 "794932": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"movement",
+"Leap"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"movement",
+"Leap"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+]
+],
+"keywords": [
+794615,
+794636,
+794644,
+794645,
+794659,
+794691
+]
 },
 "794933": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"stat_gain",
+"Horns"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+]
+],
+"keywords": [
+794616,
+794636,
+794638,
+794664,
+794671,
+794691
+]
 },
 "794934": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"movement",
+"Pogo"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"speed",
+"Sprint"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"movement",
+"Pogo"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794624,
+794636,
+794647,
+794648,
+794712,
+794716,
+794718
+]
 },
 "794935": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"random_effect",
+"Unchannelled Fury"
+],
+[
+"disable",
+"Unchannelled Fury"
+]
+],
+"keywords": [
+794619,
+794629,
+794636,
+794638,
+794659,
+794673,
+794724
+]
 },
 "794936": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"zone_of_control",
+"Shadowing"
+],
+[
+"random_effect",
+"Shadowing"
+],
+[
+"movement",
+"Shadowing"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+]
+],
+"keywords": [
+794615,
+794625,
+794636,
+794673,
+794717
+]
 },
 "794937": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+]
+],
+"keywords": [
+794616,
+794619,
+794629,
+794636,
+794668,
+794691
+]
 },
 "794938": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"buff",
+"Accurate"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Accurate"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794620,
+794622,
+794623,
+794627,
+794636,
+794638,
+794715
+]
 },
 "794939": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"suppress",
+"Fend"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"suppress",
+"Fend"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794628,
+794636,
+794658,
+794668,
+794717,
+794718
+]
 },
 "794940": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"immunity",
+"Sneaky Git"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"activated",
+"Bombardier"
+],
+[
+"play_restriction",
+"Bombardier"
+],
+[
+"ranged",
+"Bombardier"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"immunity",
+"Sneaky Git"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"activated",
+"Bombardier"
+],
+[
+"play_restriction",
+"Bombardier"
+],
+[
+"ranged",
+"Bombardier"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794626,
+794628,
+794636,
+794668,
+794699,
+794717,
+794718
+]
 },
 "794941": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"play_restriction",
+"Unsteady"
+]
+],
+"keywords": [
+794616,
+794619,
+794636,
+794725
+]
 },
 "794942": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Drunkard"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"debuff",
+"Drunkard"
+]
+],
+"keywords": [
+794616,
+794636,
+794638,
+794703
+]
 },
 "794943": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"play_restriction",
+"Unsteady"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"untap",
+"Jump Up"
+],
+[
+"play_restriction",
+"Unsteady"
+],
+[
+"advantage",
+"Hatred (X)"
+],
+[
+"tribal",
+"Hatred (X)"
+]
+],
+"keywords": [
+794616,
+794619,
+794636,
+794638,
+794644,
+794725,
+794726
+]
 },
 "794944": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Catch"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Catch"
+],
+[
+"piercing",
+"Claws"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"multi_attack",
+"Frenzy"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794614,
+794629,
+794636,
+794659,
+794666,
+794715
+]
 },
 "794945": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"stat_gain",
+"Dauntless"
+],
+[
+"stat_condition",
+"Dauntless"
+],
+[
+"random_effect",
+"Dauntless"
+]
+],
+"keywords": [
+794628,
+794636,
+794638,
+794657
+]
 },
 "794946": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"immobilize",
+"Tentacles"
+],
+[
+"zone_of_control",
+"Tentacles"
+],
+[
+"random_effect",
+"Tentacles"
+],
+[
+"buff",
+"Two Heads"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"flexibility",
+"Wrestle"
+],
+[
+"disable",
+"Wrestle"
+],
+[
+"random_effect",
+"Foul Appearance"
+],
+[
+"counter_spell",
+"Foul Appearance"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"immobilize",
+"Tentacles"
+],
+[
+"zone_of_control",
+"Tentacles"
+],
+[
+"random_effect",
+"Tentacles"
+],
+[
+"buff",
+"Two Heads"
+]
+],
+"keywords": [
+794636,
+794664,
+794666,
+794670,
+794673,
+794674,
+794675
+]
 },
 "794947": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"advantage",
+"Sure Feet"
+],
+[
+"debuff",
+"Disturbing Presence"
+],
+[
+"aura",
+"Disturbing Presence"
+],
+[
+"debuff",
+"Prehensile Tail"
+],
+[
+"zone_of_control",
+"Prehensile Tail"
+],
+[
+"flexibility",
+"Juggernaut"
+],
+[
+"silence",
+"Juggernaut"
+],
+[
+"regeneration",
+"Regeneration"
+],
+[
+"random_effect",
+"Regeneration"
+]
+],
+"keywords": [
+794619,
+794636,
+794648,
+794668,
+794673,
+794691,
+794715
+]
 },
 "794948": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"buff",
+"Cannoneer"
+],
+[
+"ranged",
+"Hail Mary Pass"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"buff",
+"Cannoneer"
+],
+[
+"ranged",
+"Hail Mary Pass"
+],
+[
+"self_destruct",
+"Secret Weapon"
+],
+[
+"turn_end",
+"Secret Weapon"
+]
+],
+"keywords": [
+794622,
+794636,
+794638,
+794677,
+794681,
+794727
+]
 },
 "794949": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"buff",
+"Lethal Flight"
+],
+[
+"activated",
+"Kick Team-mate"
+],
+[
+"play_restriction",
+"Kick Team-mate"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"random_effect",
+"Bone Head"
+],
+[
+"disable",
+"Bone Head"
+],
+[
+"protection",
+"Thick Skull"
+],
+[
+"buff",
+"Lethal Flight"
+],
+[
+"activated",
+"Kick Team-mate"
+],
+[
+"play_restriction",
+"Kick Team-mate"
+],
+[
+"team_play",
+"Right Stuff"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+]
+],
+"keywords": [
+794615,
+794619,
+794627,
+794636,
+794637,
+794638,
+794650,
+794706,
+794716,
+794718
+]
 },
 "794950": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"immunity",
+"Sneaky Git"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"speed",
+"Quick Foul"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"deckbuilding_effect",
+"A Sneaky Pair"
+],
+[
+"buff",
+"A Sneaky Pair"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Dodge"
+],
+[
+"buff",
+"Dirty Player"
+],
+[
+"immunity",
+"Sneaky Git"
+],
+[
+"target_choice",
+"Sidestep"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"speed",
+"Quick Foul"
+],
+[
+"activated",
+"Stab"
+],
+[
+"damage",
+"Stab"
+],
+[
+"immunity",
+"Stunty"
+],
+[
+"debuff",
+"Stunty"
+],
+[
+"deckbuilding_effect",
+"A Sneaky Pair"
+],
+[
+"buff",
+"A Sneaky Pair"
+]
+],
+"keywords": [
+794615,
+794624,
+794626,
+794628,
+794636,
+794654,
+794717,
+794718,
+794729
+]
 },
 "794951": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"buff",
+"Accurate"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"turnover",
+"Safe Pass"
+],
+[
+"protection",
+"Safe Pass"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Block"
+],
+[
+"on_kill",
+"Mighty Blow"
+],
+[
+"buff",
+"Mighty Blow"
+],
+[
+"buff",
+"Accurate"
+],
+[
+"immunity",
+"Nerves of Steel"
+],
+[
+"advantage",
+"Pass"
+],
+[
+"advantage",
+"Sure Hands"
+],
+[
+"immunity",
+"Sure Hands"
+],
+[
+"random_effect",
+"Loner (X+)"
+],
+[
+"silence",
+"Tackle"
+],
+[
+"turnover",
+"Safe Pass"
+],
+[
+"protection",
+"Safe Pass"
+]
+],
+"keywords": [
+794616,
+794619,
+794620,
+794622,
+794623,
+794627,
+794636,
+794664,
+794685
+]
 }
 }

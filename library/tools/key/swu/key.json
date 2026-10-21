@@ -452,7 +452,10 @@
 "the enemy unit captures the friendly unit"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+819196
+]
 },
 "820966": {
 "tags": [
@@ -648,9 +651,30 @@
 [
 "haste",
 "enter play ready"
+],
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
+]
+],
+"keywords": [
+819203
+]
 },
 "819415": {
 "tags": [
@@ -983,9 +1007,30 @@
 [
 "suppress",
 "Exhaust an enemy ground unit"
+],
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
+]
+],
+"keywords": [
+819195
+]
 },
 "819713": {
 "tags": [
@@ -1069,9 +1114,30 @@
 [
 "cost_reduction",
 "Exploit 3"
+],
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
+]
+],
+"keywords": [
+819195
+]
 },
 "819236": {
 "tags": [],
@@ -1423,9 +1489,30 @@
 [
 "attack_now",
 "Ambush"
+],
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
+]
+],
+"keywords": [
+819195
+]
 },
 "819839": {
 "tags": [
@@ -2530,9 +2617,30 @@
 [
 "stat_loss",
 "Give an enemy space unit"
+],
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
+]
+],
+"keywords": [
+819195
+]
 },
 "820722": {
 "tags": [
@@ -2592,7 +2700,10 @@
 "Grit"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+819196
+]
 },
 "819203": {
 "tags": [
@@ -2905,9 +3016,22 @@
 [
 "excess_damage",
 "Overwhelm"
+],
+[
+"condition_life",
+"Grit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"condition_life",
+"Grit"
+]
+],
+"keywords": [
+819196
+]
 },
 "820352": {
 "tags": [
@@ -3143,9 +3267,30 @@
 [
 "death_count",
 "For each friendly unit that was defeated this phase"
+],
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
+]
+],
+"keywords": [
+819195
+]
 },
 "820244": {
 "tags": [
@@ -3575,9 +3720,30 @@
 [
 "taunt",
 "Sentinel"
+],
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
+]
+],
+"keywords": [
+819195
+]
 },
 "819431": {
 "tags": [
@@ -3668,9 +3834,30 @@
 [
 "bounce_enemy",
 "return a non-leader unit that costs 3 or less"
+],
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
+]
+],
+"keywords": [
+819195
+]
 },
 "819854": {
 "tags": [
@@ -3732,9 +3919,22 @@
 [
 "friendly_fire",
 "deal 4 damage to a friendly unit"
+],
+[
+"condition_life",
+"Grit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"condition_life",
+"Grit"
+]
+],
+"keywords": [
+819196
+]
 },
 "821164": {
 "tags": [
@@ -3831,9 +4031,30 @@
 [
 "piercing",
 "Saboteur"
+],
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
+]
+],
+"keywords": [
+819203
+]
 },
 "819863": {
 "tags": [
@@ -4066,9 +4287,22 @@
 [
 "variable_stats",
 "Grit"
+],
+[
+"condition_life",
+"Grit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"condition_life",
+"Grit"
+]
+],
+"keywords": [
+819196
+]
 },
 "819763": {
 "tags": [
@@ -4232,9 +4466,30 @@
 [
 "tribal",
 "another Bounty Hunter unit"
+],
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
+]
+],
+"keywords": [
+819203
+]
 },
 "819556": {
 "tags": [
@@ -5340,9 +5595,30 @@
 [
 "summon",
 "Create a Battle Droid token"
+],
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
+]
+],
+"keywords": [
+819195
+]
 },
 "819229": {
 "tags": [],
@@ -5476,9 +5752,30 @@
 [
 "enemy_benefit",
 "Heal 5 damage from your base"
+],
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
+]
+],
+"keywords": [
+819203
+]
 },
 "821321": {
 "tags": [
@@ -5630,9 +5927,30 @@
 [
 "debuff",
 "defeat any number of upgrades on a unit"
+],
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
+]
+],
+"keywords": [
+819203
+]
 },
 "819721": {
 "tags": [
@@ -5980,9 +6298,22 @@
 [
 "variable_stats",
 "Grit"
+],
+[
+"condition_life",
+"Grit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"condition_life",
+"Grit"
+]
+],
+"keywords": [
+819196
+]
 },
 "820853": {
 "tags": [
@@ -7010,9 +7341,30 @@
 [
 "tribal",
 "Jedi unit"
+],
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
+]
+],
+"keywords": [
+819203
+]
 },
 "819908": {
 "tags": [
@@ -7115,9 +7467,30 @@
 [
 "shield",
 "Give a Shield token to another friendly unit"
+],
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
+]
+],
+"keywords": [
+819203
+]
 },
 "820854": {
 "tags": [
@@ -7260,9 +7633,22 @@
 [
 "draw",
 "you may draw a card"
+],
+[
+"condition_life",
+"Grit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"condition_life",
+"Grit"
+]
+],
+"keywords": [
+819196
+]
 },
 "819334": {
 "tags": [
@@ -7367,9 +7753,22 @@
 [
 "damage",
 "deal 2 damage to a unit with a Bounty"
+],
+[
+"condition_life",
+"Grit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"condition_life",
+"Grit"
+]
+],
+"keywords": [
+819196
+]
 },
 "820625": {
 "tags": [
@@ -7539,9 +7938,30 @@
 [
 "enemy_benefit",
 "Draw a card"
+],
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Saboteur"
+],
+[
+"evasion",
+"Saboteur"
+]
+],
+"keywords": [
+819203
+]
 },
 "819747": {
 "tags": [
@@ -7811,9 +8231,30 @@
 [
 "excess_damage",
 "gains Overwhelm"
+],
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"sacrifice",
+"Exploit"
+],
+[
+"cost_reduction",
+"Exploit"
+]
+],
+"keywords": [
+819195
+]
 },
 "819616": {
 "tags": [
@@ -7934,9 +8375,22 @@
 [
 "condition_count",
 "15 or more damage"
+],
+[
+"condition_life",
+"Grit"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"condition_life",
+"Grit"
+]
+],
+"keywords": [
+819196
+]
 },
 "820448": {
 "tags": [

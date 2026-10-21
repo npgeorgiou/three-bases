@@ -289,7 +289,10 @@
 "at a location"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "816808": {
 "tags": [
@@ -312,9 +315,22 @@
 [
 "cost_condition",
 "cost 3 or less"
+],
+[
+"temporary_buff",
+"Challenger"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"temporary_buff",
+"Challenger"
+]
+],
+"keywords": [
+816577
+]
 },
 "817876": {
 "tags": [
@@ -398,7 +414,10 @@
 "Fairy characters"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818173": {
 "tags": [
@@ -638,9 +657,22 @@
 [
 "tribal",
 "Princess character"
+],
+[
+"cost_type",
+"Singer"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Singer"
+]
+],
+"keywords": [
+816585
+]
 },
 "816619": {
 "tags": [],
@@ -754,7 +786,10 @@
 "gains Evasive until the start of your next turn"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "817702": {
 "tags": [
@@ -788,7 +823,10 @@
 "3 or more cards in your hand"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "816633": {
 "tags": [],
@@ -838,7 +876,10 @@
 "takes no damage from the challenge"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818943": {
 "tags": [
@@ -1165,7 +1206,10 @@
 "gain 2 lore"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818478": {
 "tags": [
@@ -1330,7 +1374,10 @@
 "Evasive"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818889": {
 "tags": [
@@ -2194,9 +2241,22 @@
 [
 "temporary_effect",
 "until the start of your next turn"
+],
+[
+"cost_type",
+"Singer"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Singer"
+]
+],
+"keywords": [
+816585
+]
 },
 "817624": {
 "tags": [
@@ -2413,7 +2473,10 @@
 "Vanish"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "817496": {
 "tags": [
@@ -2926,7 +2989,10 @@
 "exert chosen opposing character"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818819": {
 "tags": [
@@ -3279,7 +3345,10 @@
 "get +1 lore this turn"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818665": {
 "tags": [
@@ -3347,7 +3416,10 @@
 "gains Evasive until the start of your next turn"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "816740": {
 "tags": [
@@ -3673,7 +3745,10 @@
 "Your other characters with Evasive gain Rush"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818274": {
 "tags": [
@@ -3984,9 +4059,22 @@
 [
 "tribal",
 "Princess characters"
+],
+[
+"cost_type",
+"Singer"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Singer"
+]
+],
+"keywords": [
+816585
+]
 },
 "818491": {
 "tags": [
@@ -4275,9 +4363,22 @@
 [
 "free_play",
 "play it for free"
+],
+[
+"cost_type",
+"Singer"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Singer"
+]
+],
+"keywords": [
+816585
+]
 },
 "817712": {
 "tags": [
@@ -4341,7 +4442,10 @@
 "gets +1 lore this turn"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818395": {
 "tags": [
@@ -4413,7 +4517,10 @@
 "Evasive"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "817959": {
 "tags": [
@@ -4442,7 +4549,10 @@
 "chooses and discards a card"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818275": {
 "tags": [
@@ -4573,7 +4683,10 @@
 "Jafar steals The Reforged Crown"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818231": {
 "tags": [
@@ -4624,7 +4737,10 @@
 "return chosen character to their player's hand"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818515": {
 "tags": [
@@ -4981,7 +5097,10 @@
 "Evasive"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "817030": {
 "tags": [
@@ -5248,7 +5367,10 @@
 "Move a character of yours to a location for free"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "817886": {
 "tags": [
@@ -5783,7 +5905,10 @@
 "can't quest during their next turn"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "817024": {
 "tags": [
@@ -5914,7 +6039,10 @@
 "draw a card"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818610": {
 "tags": [
@@ -5935,7 +6063,10 @@
 "choose and discard a card"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "818658": {
 "tags": [
@@ -7286,7 +7417,10 @@
 "Evasive"
 ]
 ],
-"by": "read"
+"by": "read",
+"keywords": [
+816578
+]
 },
 "817419": {
 "tags": [

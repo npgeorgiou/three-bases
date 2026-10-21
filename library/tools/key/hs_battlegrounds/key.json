@@ -99,7 +99,10 @@
 "Give your other minions this minion's stats"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "748063": {
 "tags": [
@@ -131,9 +134,22 @@
 [
 "random_effect",
 "random"
+],
+[
+"death_count",
+"Avenge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_count",
+"Avenge"
+]
+],
+"keywords": [
+750345
+]
 },
 "748083": {
 "tags": [
@@ -150,7 +166,10 @@
 "Elemental"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750337
+]
 },
 "748085": {
 "tags": [
@@ -165,9 +184,22 @@
 [
 "stat_condition",
 "highest-Health enemy minion"
+],
+[
+"death_count",
+"Avenge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_count",
+"Avenge"
+]
+],
+"keywords": [
+750345
+]
 },
 "748092": {
 "tags": [
@@ -182,9 +214,22 @@
 [
 "random_effect",
 "random"
+],
+[
+"death_count",
+"Avenge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_count",
+"Avenge"
+]
+],
+"keywords": [
+750345
+]
 },
 "748097": {
 "tags": [
@@ -234,7 +279,11 @@
 "Taunt"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341,
+750350
+]
 },
 "748110": {
 "tags": [
@@ -302,7 +351,10 @@
 "highest- Health enemy minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750341
+]
 },
 "748120": {
 "tags": [
@@ -323,7 +375,10 @@
 "right-most enemy minion"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "748121": {
 "tags": [
@@ -332,7 +387,10 @@
 "Deathrattle"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750336
+]
 },
 "748129": {
 "tags": [
@@ -398,9 +456,22 @@
 [
 "permanent_growth",
 "Improve this by +1/+1"
+],
+[
+"death_count",
+"Avenge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_count",
+"Avenge"
+]
+],
+"keywords": [
+750345
+]
 },
 "748142": {
 "tags": [
@@ -411,9 +482,38 @@
 [
 "temporary_buff",
 "until next turn"
+],
+[
+"generate_cards",
+"Spellcraft"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spellcraft"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
+]
+],
+"keywords": [
+750346
+]
 },
 "748144": {
 "tags": [
@@ -430,7 +530,10 @@
 "Get a Tavern Coin"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750337
+]
 },
 "748147": {
 "tags": [
@@ -475,9 +578,22 @@
 [
 "tribal",
 "Naga"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750340
+]
 },
 "748163": {
 "tags": [
@@ -490,7 +606,10 @@
 "Set a minion's Attack and Health to 15"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "748167": {
 "tags": [
@@ -528,7 +647,10 @@
 "consumes a minion in the Tavern to gain its stats"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750337
+]
 },
 "748172": {
 "tags": [
@@ -630,7 +752,10 @@
 "neighbors"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "748186": {
 "tags": [
@@ -699,7 +824,10 @@
 "Quest"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750353
+]
 },
 "748222": {
 "tags": [
@@ -712,7 +840,10 @@
 "End your turn with unspent Gold X times"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750353
+]
 },
 "748223": {
 "tags": [
@@ -725,7 +856,10 @@
 "Have friendly minions attack X times"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750353
+]
 },
 "748243": {
 "tags": [
@@ -787,9 +921,30 @@
 [
 "card_advantage",
 "Move it to your hand"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
+]
+],
+"keywords": [
+750346
+]
 },
 "748270": {
 "tags": [
@@ -845,7 +1000,10 @@
 "Make a Buddy Golden"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "748319": {
 "tags": [
@@ -862,7 +1020,10 @@
 "next turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750337
+]
 },
 "748320": {
 "tags": [
@@ -932,9 +1093,23 @@
 [
 "life_payment",
 "Deal damage to your hero equal to its Tier"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750337,
+750340
+]
 },
 "748354": {
 "tags": [
@@ -947,7 +1122,10 @@
 "Deal 1 damage to your hero"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "748357": {
 "tags": [
@@ -989,7 +1167,10 @@
 "0/1 Cublings"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750336
+]
 },
 "748364": {
 "tags": [
@@ -1010,7 +1191,10 @@
 "after you summon a minion in combat"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750336
+]
 },
 "748371": {
 "tags": [
@@ -1040,7 +1224,10 @@
 "Quilboar"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750336
+]
 },
 "748386": {
 "tags": [
@@ -1083,7 +1270,10 @@
 "Add a Coin to your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750336
+]
 },
 "748408": {
 "tags": [
@@ -1159,7 +1349,10 @@
 "survive with 1 Health"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750338
+]
 },
 "748423": {
 "tags": [
@@ -1215,7 +1408,10 @@
 "give its maximum stats to a minion in your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750359
+]
 },
 "748442": {
 "tags": [
@@ -1555,9 +1751,23 @@
 [
 "tribal",
 "Undead"
+],
+[
+"revive",
+"Reborn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"revive",
+"Reborn"
+]
+],
+"keywords": [
+750336,
+750344
+]
 },
 "748537": {
 "tags": [
@@ -1689,7 +1899,10 @@
 "a minion in your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "748593": {
 "tags": [
@@ -1745,7 +1958,10 @@
 "Cast X spells"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750353
+]
 },
 "748638": {
 "tags": [
@@ -1824,9 +2040,24 @@
 [
 "friendly_fire",
 "deal 1 damage to them"
+],
+[
+"revive",
+"Reborn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"revive",
+"Reborn"
+]
+],
+"keywords": [
+750336,
+750338,
+750344
+]
 },
 "748653": {
 "tags": [
@@ -1839,7 +2070,10 @@
 "Deal 1 damage to your other minions"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750342
+]
 },
 "748682": {
 "tags": [
@@ -1860,7 +2094,10 @@
 "give them +X Attack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750341
+]
 },
 "748694": {
 "tags": [
@@ -1922,9 +2159,31 @@
 [
 "scope_multi",
 "your minions"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
+]
+],
+"keywords": [
+750346,
+750352
+]
 },
 "748701": {
 "tags": [
@@ -1993,7 +2252,10 @@
 "Quilboar"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "748739": {
 "tags": [
@@ -2017,9 +2279,22 @@
 [
 "turn_start",
 "At the start of each turn"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750340
+]
 },
 "748748": {
 "tags": [
@@ -2185,7 +2460,10 @@
 "Naga"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "748814": {
 "tags": [
@@ -2244,7 +2522,10 @@
 "Summon a Flourishing Frostling"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "748830": {
 "tags": [
@@ -2274,7 +2555,10 @@
 "Trigger a friendly minion's end of turn effects"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "748872": {
 "tags": [
@@ -2287,7 +2571,10 @@
 "Get X Blood Gems"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750352
+]
 },
 "748875": {
 "tags": [
@@ -2344,9 +2631,38 @@
 [
 "temporary_buff",
 "until next turn"
+],
+[
+"generate_cards",
+"Spellcraft"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spellcraft"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
+]
+],
+"keywords": [
+750346
+]
 },
 "748916": {
 "tags": [
@@ -2422,7 +2738,10 @@
 "twice"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750352
+]
 },
 "748946": {
 "tags": [
@@ -2467,9 +2786,38 @@
 [
 "count_payoff",
 "every 3 spells you've cast this game"
+],
+[
+"generate_cards",
+"Spellcraft"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spellcraft"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
+]
+],
+"keywords": [
+750346
+]
 },
 "748958": {
 "tags": [
@@ -2556,7 +2904,10 @@
 "a copy of it"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750337
+]
 },
 "748981": {
 "tags": [
@@ -2614,9 +2965,22 @@
 [
 "permanent_growth",
 "improve this permanently"
+],
+[
+"death_count",
+"Avenge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_count",
+"Avenge"
+]
+],
+"keywords": [
+750345
+]
 },
 "749002": {
 "tags": [
@@ -2663,7 +3027,10 @@
 "Morphs each turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750341
+]
 },
 "749010": {
 "tags": [
@@ -2752,16 +3119,48 @@
 "Get a Shifting Tide"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750336
+]
 },
 "749059": {
 "tags": [
 [
 "spell_power",
 "Your Tavern spells give an extra +X/+Y this game"
+],
+[
+"generate_cards",
+"Spellcraft"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"Spellcraft"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
+]
+],
+"keywords": [
+750346
+]
 },
 "749072": {
 "tags": [
@@ -2824,7 +3223,10 @@
 "cost Health instead of Gold"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750337
+]
 },
 "749087": {
 "tags": [
@@ -2926,7 +3328,10 @@
 "Reborn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "749114": {
 "tags": [
@@ -2937,9 +3342,22 @@
 [
 "stat_gain",
 "Set its stats to 12/12"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750340
+]
 },
 "749120": {
 "tags": [
@@ -3087,9 +3505,22 @@
 [
 "temporary_buff",
 "next turn"
+],
+[
+"death_count",
+"Avenge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_count",
+"Avenge"
+]
+],
+"keywords": [
+750345
+]
 },
 "749192": {
 "tags": [
@@ -3152,7 +3583,10 @@
 "+X/+Y permanently"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750354
+]
 },
 "749223": {
 "tags": [
@@ -3173,7 +3607,10 @@
 "Get a Sanctify"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750338
+]
 },
 "749235": {
 "tags": [
@@ -3203,7 +3640,10 @@
 "Improved by each Beast you've summoned this combat"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750354
+]
 },
 "749259": {
 "tags": [
@@ -3280,7 +3720,10 @@
 "Improves permanently after this gains Attack!"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750336
+]
 },
 "749290": {
 "tags": [
@@ -3301,7 +3744,10 @@
 "wherever they are"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750347
+]
 },
 "749296": {
 "tags": [
@@ -3380,9 +3826,22 @@
 [
 "death_count",
 "Avenge (X)"
+],
+[
+"death_count",
+"Avenge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_count",
+"Avenge"
+]
+],
+"keywords": [
+750345
+]
 },
 "749318": {
 "tags": [
@@ -3412,7 +3871,10 @@
 "attacks immediately"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750336
+]
 },
 "749330": {
 "tags": [
@@ -3433,7 +3895,10 @@
 "X-Cost"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750337
+]
 },
 "749340": {
 "tags": [
@@ -3461,9 +3926,22 @@
 [
 "resource_gain",
 "Gain a free Refresh"
+],
+[
+"death_count",
+"Avenge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_count",
+"Avenge"
+]
+],
+"keywords": [
+750345
+]
 },
 "749353": {
 "tags": [
@@ -3488,7 +3966,10 @@
 "twice"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "749354": {
 "tags": [
@@ -3505,7 +3986,10 @@
 "random minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750336
+]
 },
 "749360": {
 "tags": [
@@ -3654,7 +4138,10 @@
 "+Y Health this game"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750336
+]
 },
 "749443": {
 "tags": [
@@ -3718,7 +4205,10 @@
 "wherever they are"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750336
+]
 },
 "749500": {
 "tags": [
@@ -3735,7 +4225,10 @@
 "your Blood Gems give an extra +X Attack this game"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750339
+]
 },
 "749502": {
 "tags": [
@@ -3752,7 +4245,10 @@
 "give your minions +X/+Y permanently"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750339
+]
 },
 "749507": {
 "tags": [
@@ -3820,7 +4316,10 @@
 "different types"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750341
+]
 },
 "749541": {
 "tags": [
@@ -3887,9 +4386,22 @@
 [
 "stat_gain",
 "Set its stats to 30/30"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750340
+]
 },
 "749578": {
 "tags": [
@@ -3917,9 +4429,22 @@
 [
 "cheat_death",
 "Give it Reborn"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750340
+]
 },
 "749581": {
 "tags": [
@@ -3962,7 +4487,10 @@
 "Double this minion's stats"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750341
+]
 },
 "749589": {
 "tags": [],
@@ -4233,7 +4761,10 @@
 "It attacks immediately"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "749675": {
 "tags": [
@@ -4275,7 +4806,10 @@
 "highest-Attack minion in your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "749680": {
 "tags": [
@@ -4290,9 +4824,30 @@
 [
 "cost_set",
 "They cost (1)"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
+]
+],
+"keywords": [
+750346
+]
 },
 "749691": {
 "tags": [
@@ -4312,9 +4867,22 @@
 [
 "play_restriction",
 "Lock it in your hand"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750340
+]
 },
 "749706": {
 "tags": [
@@ -4355,9 +4923,38 @@
 [
 "cheat_death",
 "Reborn"
+],
+[
+"generate_cards",
+"Spellcraft"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spellcraft"
+],
+[
+"on_play",
+"Spellcraft"
+],
+[
+"turn_start",
+"Spellcraft"
+]
+],
+"keywords": [
+750346
+]
 },
 "749709": {
 "tags": [
@@ -4449,9 +5046,30 @@
 [
 "repeat_trigger",
 "Trigger a friendly minion's Rally"
+],
+[
+"activated",
+"Activate"
+],
+[
+"cooldowns",
+"Activate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Activate"
+],
+[
+"cooldowns",
+"Activate"
+]
+],
+"keywords": [
+750361
+]
 },
 "749753": {
 "tags": [
@@ -4464,7 +5082,10 @@
 "twice"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750341
+]
 },
 "749756": {
 "tags": [
@@ -4517,9 +5138,30 @@
 [
 "random_effect",
 "random Aberration"
+],
+[
+"activated",
+"Activate"
+],
+[
+"cooldowns",
+"Activate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Activate"
+],
+[
+"cooldowns",
+"Activate"
+]
+],
+"keywords": [
+750361
+]
 },
 "749783": {
 "tags": [
@@ -4564,9 +5206,31 @@
 [
 "merge_attach",
 "Magnetization"
+],
+[
+"activated",
+"Activate"
+],
+[
+"cooldowns",
+"Activate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Activate"
+],
+[
+"cooldowns",
+"Activate"
+]
+],
+"keywords": [
+750339,
+750361
+]
 },
 "749797": {
 "tags": [
@@ -4655,7 +5319,10 @@
 "Fodder"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750336
+]
 },
 "749825": {
 "tags": [
@@ -4749,7 +5416,10 @@
 "Give your Rally minions Divine Shield"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "749847": {
 "tags": [
@@ -4894,7 +5564,10 @@
 "Add a Fodder"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750342
+]
 },
 "749931": {
 "tags": [
@@ -4903,7 +5576,10 @@
 "Venomous"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750350
+]
 },
 "749947": {
 "tags": [
@@ -4942,7 +5618,10 @@
 "Stealth"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750354
+]
 },
 "749960": {
 "tags": [
@@ -4980,7 +5659,10 @@
 "Mechs or Undead"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750347
+]
 },
 "749968": {
 "tags": [
@@ -4989,7 +5671,10 @@
 "Poisonous"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750359
+]
 },
 "749981": {
 "tags": [
@@ -5015,7 +5700,10 @@
 "+1/+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "749989": {
 "tags": [
@@ -5071,7 +5759,10 @@
 "highest in the battlefield"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "750012": {
 "tags": [
@@ -5151,7 +5842,10 @@
 "your team's Deities"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "750046": {
 "tags": [
@@ -5197,7 +5891,10 @@
 "highest-Tier"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "750056": {
 "tags": [
@@ -5222,7 +5919,10 @@
 "highest-Health"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "750062": {
 "tags": [
@@ -5246,9 +5946,38 @@
 [
 "stat_gain",
 "give this minion's stats"
+],
+[
+"random_effect",
+"Deity"
+],
+[
+"death_count",
+"Deity"
+],
+[
+"generate_cards",
+"Deity"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Deity"
+],
+[
+"death_count",
+"Deity"
+],
+[
+"generate_cards",
+"Deity"
+]
+],
+"keywords": [
+750363
+]
 },
 "750084": {
 "tags": [
@@ -5282,7 +6011,10 @@
 "in your hand and board"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750337
+]
 },
 "750102": {
 "tags": [
@@ -5299,7 +6031,10 @@
 "It attacks immediately"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750336
+]
 },
 "750104": {
 "tags": [
@@ -5337,7 +6072,10 @@
 "different types"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750337
+]
 },
 "750117": {
 "tags": [
@@ -5376,7 +6114,10 @@
 "Venomous"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750350
+]
 },
 "750135": {
 "tags": [
@@ -5527,7 +6268,10 @@
 "give it Reborn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750355
+]
 },
 "750167": {
 "tags": [
@@ -5552,7 +6296,10 @@
 "same Cost"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750355
+]
 },
 "750173": {
 "tags": [
@@ -5569,7 +6316,10 @@
 "return it to life"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750355
+]
 },
 "750174": {
 "tags": [
@@ -5590,7 +6340,10 @@
 "this turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750355
+]
 },
 "750181": {
 "tags": [
@@ -5603,7 +6356,10 @@
 "Replace cards in the Tavern with ones from a Tier higher"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750337
+]
 },
 "750182": {
 "tags": [
@@ -5641,7 +6397,10 @@
 "gain your minions' highest Attack and Health"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750341
+]
 },
 "750187": {
 "tags": [
@@ -5873,7 +6632,10 @@
 "random enemy minions"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750341
+]
 },
 "750254": {
 "tags": [
@@ -5933,7 +6695,10 @@
 "Venomous"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750350
+]
 },
 "750270": {
 "tags": [
@@ -5978,9 +6743,22 @@
 [
 "transform",
 "Swaps type each turn"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750340
+]
 },
 "750278": {
 "tags": [
@@ -5995,9 +6773,22 @@
 [
 "transform",
 "Swaps type each turn"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750340
+]
 },
 "750285": {
 "tags": [
@@ -6008,9 +6799,22 @@
 [
 "transform",
 "Swaps type each turn"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750340
+]
 },
 "750287": {
 "tags": [
@@ -6027,7 +6831,10 @@
 "Deal 1 damage"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750341
+]
 },
 "750289": {
 "tags": [
@@ -6047,9 +6854,22 @@
 [
 "selection",
 "Discover a minion from your Tier"
+],
+[
+"selection",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+]
+],
+"keywords": [
+750340
+]
 },
 "750292": {
 "tags": [
@@ -6143,7 +6963,10 @@
 "ALL minions"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750341
+]
 },
 "750302": {
 "tags": [
@@ -6380,7 +7203,10 @@
 "Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+750338
+]
 },
 "800873": {
 "tags": [
@@ -6393,6 +7219,9 @@
 "Summon a 3/3 Pip Quickwit for your opponent"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+750336
+]
 }
 }

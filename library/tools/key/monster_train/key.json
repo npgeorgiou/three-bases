@@ -742,12 +742,94 @@
 "by": "read"
 },
 "822491": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"block_armor",
+"Armor"
+],
+[
+"multi_attack",
+"Multistrike"
+],
+[
+"temporary_buff",
+"Rage"
+],
+[
+"on_damaged",
+"Revenge"
+],
+[
+"on_kill",
+"Slay"
+]
+],
+"by": "read",
+"credited": [
+[
+"block_armor",
+"Armor"
+],
+[
+"multi_attack",
+"Multistrike"
+],
+[
+"temporary_buff",
+"Rage"
+],
+[
+"on_damaged",
+"Revenge"
+],
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822402,
+822436,
+822444,
+822452,
+822457
+]
 },
 "822492": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"combat_start",
+"Action"
+],
+[
+"on_ally_play",
+"Rally"
+],
+[
+"turn_end",
+"Resolve"
+]
+],
+"by": "read",
+"credited": [
+[
+"combat_start",
+"Action"
+],
+[
+"on_ally_play",
+"Rally"
+],
+[
+"turn_end",
+"Resolve"
+]
+],
+"keywords": [
+822401,
+822445,
+822451
+]
 },
 "822493": {
 "tags": [
@@ -758,13 +840,40 @@
 [
 "targeting_rules",
 "the front enemy unit"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822462
+]
 },
 "822494": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"exhaust",
+"Consume"
+]
+],
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822495": {
 "tags": [
@@ -810,9 +919,22 @@
 [
 "tribal",
 "Imp units"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822499": {
 "tags": [
@@ -840,18 +962,44 @@
 [
 "stat_gain",
 "Apply Rage 3"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822501": {
 "tags": [
 [
 "block_armor",
 "Apply Armor 25"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822502": {
 "tags": [
@@ -862,9 +1010,31 @@
 [
 "stat_gain",
 "Apply Rage 3 to friendly units"
+],
+[
+"temporary_buff",
+"Rage"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"temporary_buff",
+"Rage"
+],
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822444,
+822457
+]
 },
 "822503": {
 "tags": [
@@ -875,27 +1045,66 @@
 [
 "stacking_keyword",
 "per stack"
+],
+[
+"temporary_buff",
+"Rage"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"temporary_buff",
+"Rage"
+]
+],
+"keywords": [
+822444
+]
 },
 "822504": {
 "tags": [
 [
 "stat_gain",
 "Apply Rage 5 to friendly units"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822462
+]
 },
 "822505": {
 "tags": [
 [
 "movement",
 "Ascend a unit"
+],
+[
+"movement",
+"Ascend"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"movement",
+"Ascend"
+]
+],
+"keywords": [
+822404
+]
 },
 "822506": {
 "tags": [
@@ -906,18 +1115,53 @@
 [
 "repeat_trigger",
 "twice"
+],
+[
+"piercing",
+"Piercing"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"piercing",
+"Piercing"
+]
+],
+"keywords": [
+822440
+]
 },
 "822507": {
 "tags": [
 [
 "multi_attack",
 "Multistrike 1"
+],
+[
+"self_destruct",
+"Fragile"
+],
+[
+"multi_attack",
+"Multistrike"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"self_destruct",
+"Fragile"
+],
+[
+"multi_attack",
+"Multistrike"
+]
+],
+"keywords": [
+822421,
+822436
+]
 },
 "822508": {
 "tags": [
@@ -928,9 +1172,22 @@
 [
 "random_effect",
 "random consumed spell"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822462
+]
 },
 "822509": {
 "tags": [
@@ -958,9 +1215,22 @@
 [
 "damage",
 "Deal 50 damage"
+],
+[
+"spell_power",
+"Attuned"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"spell_power",
+"Attuned"
+]
+],
+"keywords": [
+822405
+]
 },
 "822511": {
 "tags": [
@@ -980,18 +1250,44 @@
 [
 "aoe_damage",
 "Deal 5 damage to enemy units"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822462
+]
 },
 "822513": {
 "tags": [
 [
 "resource_gain",
 "Gain 4 Ember"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822462
+]
 },
 "822514": {
 "tags": [
@@ -1002,18 +1298,53 @@
 [
 "mark_target",
 "Apply Melee Weakness 1"
+],
+[
+"block_armor",
+"Armor"
+],
+[
+"on_attack",
+"Strike"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"block_armor",
+"Armor"
+],
+[
+"on_attack",
+"Strike"
+]
+],
+"keywords": [
+822402,
+822461
+]
 },
 "822515": {
 "tags": [
 [
 "block_armor",
 "Apply Armor 5 to friendly units"
+],
+[
+"turn_end",
+"Resolve"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"turn_end",
+"Resolve"
+]
+],
+"keywords": [
+822451
+]
 },
 "822516": {
 "tags": [
@@ -1037,27 +1368,74 @@
 [
 "count_payoff",
 "triggered so far this battle"
+],
+[
+"recycle",
+"Endless"
+],
+[
+"leave_trigger",
+"Endless"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"recycle",
+"Endless"
+],
+[
+"leave_trigger",
+"Endless"
+]
+],
+"keywords": [
+822417
+]
 },
 "822518": {
 "tags": [
 [
 "block_armor",
 "Apply Armor 20 to the front friendly unit"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822462
+]
 },
 "822519": {
 "tags": [
 [
 "permanent_growth",
 "+5 Attack"
+],
+[
+"on_attack",
+"Strike"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Strike"
+]
+],
+"keywords": [
+822461
+]
 },
 "822520": {
 "tags": [
@@ -1068,9 +1446,22 @@
 [
 "block_armor",
 "Apply Armor 20"
+],
+[
+"piercing",
+"Piercing"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"piercing",
+"Piercing"
+]
+],
+"keywords": [
+822440
+]
 },
 "822521": {
 "tags": [
@@ -1094,9 +1485,22 @@
 [
 "disable",
 "apply Dazed 2"
+],
+[
+"movement",
+"Ascend"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"movement",
+"Ascend"
+]
+],
+"keywords": [
+822404
+]
 },
 "822523": {
 "tags": [
@@ -1120,27 +1524,66 @@
 [
 "friendly_fire",
 "friendly and enemy units"
+],
+[
+"piercing",
+"Piercing"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"piercing",
+"Piercing"
+]
+],
+"keywords": [
+822440
+]
 },
 "822525": {
 "tags": [
 [
 "stat_multiply",
 "Double the amount of Rage on friendly units"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822526": {
 "tags": [
 [
 "stat_multiply",
 "Double Armor on a unit"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822527": {
 "tags": [
@@ -1156,9 +1599,22 @@
 [
 "multi_attack",
 "Apply Multistrike 1"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822531": {
 "tags": [
@@ -1169,17 +1625,148 @@
 [
 "block_armor",
 "Gain Armor 5"
+],
+[
+"block_armor",
+"Armored"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"block_armor",
+"Armored"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822403,
+822462
+]
 },
 "822532": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"stat_gain",
+"Cultivate"
+],
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"on_damaged",
+"Revenge"
+],
+[
+"counterattack",
+"Spikes"
+]
+],
+"by": "read",
+"credited": [
+[
+"stat_gain",
+"Cultivate"
+],
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"on_damaged",
+"Revenge"
+],
+[
+"counterattack",
+"Spikes"
+]
+],
+"keywords": [
+822410,
+822449,
+822452,
+822459
+]
 },
 "822533": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"aura",
+"Enchant"
+],
+[
+"on_spell",
+"Incant"
+],
+[
+"multi_attack",
+"Multistrike"
+],
+[
+"first_strike",
+"Quick"
+],
+[
+"immobilize",
+"Rooted"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"by": "read",
+"credited": [
+[
+"aura",
+"Enchant"
+],
+[
+"on_spell",
+"Incant"
+],
+[
+"multi_attack",
+"Multistrike"
+],
+[
+"first_strike",
+"Quick"
+],
+[
+"immobilize",
+"Rooted"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822416,
+822429,
+822436,
+822443,
+822453,
+822461,
+822462
+]
 },
 "822534": {
 "tags": [
@@ -1190,9 +1777,22 @@
 [
 "in_hand_buff",
 "apply -1 Ember to those cards"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822535": {
 "tags": [
@@ -1220,18 +1820,44 @@
 [
 "delayed",
 "next turn"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822537": {
 "tags": [
 [
 "generate_cards",
 "Add 3 Sting spells to your hand"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822538": {
 "tags": [
@@ -1273,17 +1899,44 @@
 "by": "read"
 },
 "822541": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"first_strike",
+"Quick"
+]
+],
+"by": "read",
+"credited": [
+[
+"first_strike",
+"Quick"
+]
+],
+"keywords": [
+822443
+]
 },
 "822542": {
 "tags": [
 [
 "multi_attack",
 "Multistrike 2"
+],
+[
+"multi_attack",
+"Multistrike"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"multi_attack",
+"Multistrike"
+]
+],
+"keywords": [
+822436
+]
 },
 "822543": {
 "tags": [
@@ -1294,9 +1947,40 @@
 [
 "stat_gain",
 "Cultivate 2"
+],
+[
+"stat_gain",
+"Cultivate"
+],
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"stat_gain",
+"Cultivate"
+],
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822410,
+822449,
+822462
+]
 },
 "822544": {
 "tags": [
@@ -1311,9 +1995,22 @@
 [
 "cost_set",
 "0 Ember"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822545": {
 "tags": [
@@ -1359,17 +2056,44 @@
 "by": "read"
 },
 "822548": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"multi_target_attack",
+"Sweep"
+]
+],
+"by": "read",
+"credited": [
+[
+"multi_target_attack",
+"Sweep"
+]
+],
+"keywords": [
+822463
+]
 },
 "822549": {
 "tags": [
 [
 "counterattack",
 "Apply Spikes 4"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822550": {
 "tags": [
@@ -1436,18 +2160,53 @@
 [
 "aura",
 "Spikes on friendly units deal +1 damage per stack"
+],
+[
+"counterattack",
+"Spikes"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"counterattack",
+"Spikes"
+]
+],
+"keywords": [
+822459
+]
 },
 "822555": {
 "tags": [
 [
 "permanent_growth",
 "+3 Attack"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"multi_target_attack",
+"Sweep"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_kill",
+"Slay"
+],
+[
+"multi_target_attack",
+"Sweep"
+]
+],
+"keywords": [
+822457,
+822463
+]
 },
 "822557": {
 "tags": [
@@ -1458,36 +2217,106 @@
 [
 "counterattack",
 "Gain Spikes 3"
+],
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822449,
+822462
+]
 },
 "822558": {
 "tags": [
 [
 "generate_cards",
 "Add a Sting spell to your hand"
+],
+[
+"turn_end",
+"Resolve"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"turn_end",
+"Resolve"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822451,
+822462
+]
 },
 "822560": {
 "tags": [
 [
 "regeneration",
 "Apply Regen 5"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822561": {
 "tags": [
 [
 "first_strike",
 "Apply Quick"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822562": {
 "tags": [
@@ -1498,9 +2327,22 @@
 [
 "stat_gain",
 "swap [Attack] and [Health]"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822563": {
 "tags": [
@@ -1537,9 +2379,22 @@
 [
 "resource_gain",
 "gain +1 Ember per turn"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822566": {
 "tags": [
@@ -1550,9 +2405,22 @@
 [
 "heal",
 "restore 10 health"
+],
+[
+"movement",
+"Descend"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"movement",
+"Descend"
+]
+],
+"keywords": [
+822413
+]
 },
 "822567": {
 "tags": [
@@ -1589,9 +2457,22 @@
 [
 "resource_gain",
 "Gain 1 Ember"
+],
+[
+"on_damaged",
+"Revenge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_damaged",
+"Revenge"
+]
+],
+"keywords": [
+822452
+]
 },
 "822570": {
 "tags": [
@@ -1628,30 +2509,194 @@
 [
 "permanent_growth",
 "+1 Attack permanently"
+],
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_lifegain",
+"Rejuvenate"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822449,
+822462
+]
 },
 "822573": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"damage_over_time",
+"Frostbite"
+],
+[
+"turn_end",
+"Frostbite"
+],
+[
+"mark_target",
+"Spell Weakness"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"multi_target_attack",
+"Sweep"
+]
+],
+"by": "read",
+"credited": [
+[
+"damage_over_time",
+"Frostbite"
+],
+[
+"turn_end",
+"Frostbite"
+],
+[
+"mark_target",
+"Spell Weakness"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"multi_target_attack",
+"Sweep"
+]
+],
+"keywords": [
+822422,
+822458,
+822461,
+822463
+]
 },
 "822574": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"combat_start",
+"Action"
+],
+[
+"damage_over_time",
+"Frostbite"
+],
+[
+"turn_end",
+"Frostbite"
+],
+[
+"on_spell",
+"Incant"
+],
+[
+"immunity",
+"Phased"
+],
+[
+"cant_attack",
+"Phased"
+],
+[
+"on_damaged",
+"Revenge"
+]
+],
+"by": "read",
+"credited": [
+[
+"combat_start",
+"Action"
+],
+[
+"damage_over_time",
+"Frostbite"
+],
+[
+"turn_end",
+"Frostbite"
+],
+[
+"on_spell",
+"Incant"
+],
+[
+"immunity",
+"Phased"
+],
+[
+"cant_attack",
+"Phased"
+],
+[
+"on_damaged",
+"Revenge"
+]
+],
+"keywords": [
+822401,
+822422,
+822429,
+822439,
+822452
+]
 },
 "822575": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"exhaust",
+"Consume"
+]
+],
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822576": {
 "tags": [
 [
 "damage_over_time",
 "Apply Frostbite 6 to enemy units"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822577": {
 "tags": [
@@ -1680,36 +2725,122 @@
 [
 "retain",
 "Apply Frozen to a card in your hand"
+],
+[
+"retain",
+"Permafrost"
+],
+[
+"on_draw",
+"Permafrost"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"retain",
+"Permafrost"
+],
+[
+"on_draw",
+"Permafrost"
+]
+],
+"keywords": [
+822438
+]
 },
 "822580": {
 "tags": [
 [
 "silence",
 "Apply Silence to enemy units"
+],
+[
+"exhaust",
+"Consume"
+],
+[
+"retain",
+"Permafrost"
+],
+[
+"on_draw",
+"Permafrost"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+],
+[
+"retain",
+"Permafrost"
+],
+[
+"on_draw",
+"Permafrost"
+]
+],
+"keywords": [
+822409,
+822438
+]
 },
 "822581": {
 "tags": [
 [
 "mark_target",
 "Apply Spell Weakness 2 to enemy units"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822582": {
 "tags": [
 [
 "damage_over_time",
 "Apply Frostbite 3"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"multi_target_attack",
+"Sweep"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Strike"
+],
+[
+"multi_target_attack",
+"Sweep"
+]
+],
+"keywords": [
+822461,
+822463
+]
 },
 "822583": {
 "tags": [
@@ -1798,27 +2929,66 @@
 [
 "damage_over_time",
 "Apply Frostbite 2 to enemy units"
+],
+[
+"on_spell",
+"Incant"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_spell",
+"Incant"
+]
+],
+"keywords": [
+822429
+]
 },
 "822590": {
 "tags": [
 [
 "block_armor",
 "Gain Armor 3"
+],
+[
+"on_spell",
+"Incant"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_spell",
+"Incant"
+]
+],
+"keywords": [
+822429
+]
 },
 "822591": {
 "tags": [
 [
 "block_armor",
 "Apply Armor 1 to friendly units"
+],
+[
+"on_spell",
+"Incant"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_spell",
+"Incant"
+]
+],
+"keywords": [
+822429
+]
 },
 "822592": {
 "tags": [
@@ -1838,9 +3008,31 @@
 [
 "damage",
 "Deal 90 damage"
+],
+[
+"spell_power",
+"Attuned"
+],
+[
+"play_restriction",
+"Pyrebound"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"spell_power",
+"Attuned"
+],
+[
+"play_restriction",
+"Pyrebound"
+]
+],
+"keywords": [
+822405,
+822442
+]
 },
 "822594": {
 "tags": [
@@ -1864,18 +3056,62 @@
 [
 "mark_target",
 "Apply Spell Weakness 1"
+],
+[
+"combat_start",
+"Action"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"multi_target_attack",
+"Sweep"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"combat_start",
+"Action"
+],
+[
+"on_attack",
+"Strike"
+],
+[
+"multi_target_attack",
+"Sweep"
+]
+],
+"keywords": [
+822401,
+822461,
+822463
+]
 },
 "822596": {
 "tags": [
 [
 "stat_loss",
 "Apply Sap 1 to enemy units"
+],
+[
+"on_spell",
+"Incant"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_spell",
+"Incant"
+]
+],
+"keywords": [
+822429
+]
 },
 "822597": {
 "tags": [
@@ -1891,9 +3127,22 @@
 [
 "stat_gain",
 "Gain Rage 2"
+],
+[
+"on_spell",
+"Incant"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_spell",
+"Incant"
+]
+],
+"keywords": [
+822429
+]
 },
 "822599": {
 "tags": [
@@ -1904,18 +3153,44 @@
 [
 "stat_loss",
 "-5 Health"
+],
+[
+"on_spell",
+"Incant"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_spell",
+"Incant"
+]
+],
+"keywords": [
+822429
+]
 },
 "822600": {
 "tags": [
 [
 "permanent_growth",
 "+2 Attack and +2 Health"
+],
+[
+"on_spell",
+"Incant"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_spell",
+"Incant"
+]
+],
+"keywords": [
+822429
+]
 },
 "822601": {
 "tags": [
@@ -1926,18 +3201,53 @@
 [
 "disable",
 "apply Dazed 3"
+],
+[
+"movement",
+"Ascend"
+],
+[
+"play_restriction",
+"Pyrebound"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"movement",
+"Ascend"
+],
+[
+"play_restriction",
+"Pyrebound"
+]
+],
+"keywords": [
+822404,
+822442
+]
 },
 "822602": {
 "tags": [
 [
 "damage_over_time",
 "Apply Frostbite 3 to enemy units"
+],
+[
+"on_damaged",
+"Revenge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_damaged",
+"Revenge"
+]
+],
+"keywords": [
+822452
+]
 },
 "822603": {
 "tags": [
@@ -1948,9 +3258,22 @@
 [
 "discard",
 "Discard a card at random"
+],
+[
+"spell_power",
+"Attuned"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"spell_power",
+"Attuned"
+]
+],
+"keywords": [
+822405
+]
 },
 "822604": {
 "tags": [
@@ -1961,9 +3284,22 @@
 [
 "draw",
 "Draw 5"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822605": {
 "tags": [
@@ -2034,18 +3370,69 @@
 [
 "forced_movement",
 "push it to the back"
+],
+[
+"spell_power",
+"Attuned"
+],
+[
+"on_discard",
+"Offering"
+],
+[
+"free_play",
+"Offering"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"spell_power",
+"Attuned"
+],
+[
+"on_discard",
+"Offering"
+],
+[
+"free_play",
+"Offering"
+]
+],
+"keywords": [
+822405,
+822437
+]
 },
 "822610": {
 "tags": [
 [
 "stat_loss",
 "Apply Sap 2 to enemy units"
+],
+[
+"on_discard",
+"Offering"
+],
+[
+"free_play",
+"Offering"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_discard",
+"Offering"
+],
+[
+"free_play",
+"Offering"
+]
+],
+"keywords": [
+822437
+]
 },
 "822611": {
 "tags": [
@@ -2060,9 +3447,30 @@
 [
 "repeat_trigger",
 "three times"
+],
+[
+"retain",
+"Permafrost"
+],
+[
+"on_draw",
+"Permafrost"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"retain",
+"Permafrost"
+],
+[
+"on_draw",
+"Permafrost"
+]
+],
+"keywords": [
+822438
+]
 },
 "822612": {
 "tags": [
@@ -2073,22 +3481,106 @@
 [
 "damage_over_time",
 "apply Frostbite 10"
+],
+[
+"on_discard",
+"Offering"
+],
+[
+"free_play",
+"Offering"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_discard",
+"Offering"
+],
+[
+"free_play",
+"Offering"
+]
+],
+"keywords": [
+822437
+]
 },
 "822613": {
 "tags": [
 [
 "multi_attack",
 "Gain Multistrike 1"
+],
+[
+"on_spell",
+"Incant"
+],
+[
+"turn_end",
+"Resolve"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_spell",
+"Incant"
+],
+[
+"turn_end",
+"Resolve"
+]
+],
+"keywords": [
+822429,
+822451
+]
 },
 "822614": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"on_sacrifice",
+"Gorge"
+],
+[
+"lifesteal",
+"Lifesteal"
+],
+[
+"on_play",
+"Summon"
+],
+[
+"excess_damage",
+"Trample"
+]
+],
+"by": "read",
+"credited": [
+[
+"on_sacrifice",
+"Gorge"
+],
+[
+"lifesteal",
+"Lifesteal"
+],
+[
+"on_play",
+"Summon"
+],
+[
+"excess_damage",
+"Trample"
+]
+],
+"keywords": [
+822425,
+822433,
+822462,
+822464
+]
 },
 "822615": {
 "tags": [
@@ -2099,9 +3591,31 @@
 [
 "stat_gain",
 "Add this unit's [Attack] and [Health] to the eater"
+],
+[
+"repeat_trigger",
+"Buffet"
+],
+[
+"leave_trigger",
+"Eaten"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"repeat_trigger",
+"Buffet"
+],
+[
+"leave_trigger",
+"Eaten"
+]
+],
+"keywords": [
+822406,
+822414
+]
 },
 "822616": {
 "tags": [
@@ -2113,8 +3627,22 @@
 "by": "read"
 },
 "822617": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"exhaust",
+"Consume"
+]
+],
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822618": {
 "tags": [
@@ -2125,9 +3653,22 @@
 [
 "resource_gain",
 "Gain 2 Ember"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822457
+]
 },
 "822619": {
 "tags": [
@@ -2138,13 +3679,40 @@
 [
 "in_hand_buff",
 "apply +5"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822620": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"exhaust",
+"Consume"
+]
+],
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822621": {
 "tags": [
@@ -2159,27 +3727,66 @@
 [
 "repeat_trigger",
 "Trigger Eaten and Gorge abilities"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822622": {
 "tags": [
 [
 "stat_gain",
 "Eater gains +6 Health"
+],
+[
+"leave_trigger",
+"Eaten"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"leave_trigger",
+"Eaten"
+]
+],
+"keywords": [
+822414
+]
 },
 "822623": {
 "tags": [
 [
 "generate_cards",
 "Add 3 Excavated Ember cards to your discard pile"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822624": {
 "tags": [
@@ -2208,9 +3815,22 @@
 [
 "stat_gain",
 "Eater gains +6 Attack"
+],
+[
+"leave_trigger",
+"Eaten"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"leave_trigger",
+"Eaten"
+]
+],
+"keywords": [
+822414
+]
 },
 "822627": {
 "tags": [
@@ -2221,9 +3841,22 @@
 [
 "lifesteal",
 "Lifesteal 1"
+],
+[
+"leave_trigger",
+"Eaten"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"leave_trigger",
+"Eaten"
+]
+],
+"keywords": [
+822414
+]
 },
 "822628": {
 "tags": [
@@ -2234,27 +3867,66 @@
 [
 "shield",
 "Damage Shield 1"
+],
+[
+"leave_trigger",
+"Eaten"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"leave_trigger",
+"Eaten"
+]
+],
+"keywords": [
+822414
+]
 },
 "822629": {
 "tags": [
 [
 "stat_gain",
 "Eater gains +6 Attack and +6 Health"
+],
+[
+"leave_trigger",
+"Eaten"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"leave_trigger",
+"Eaten"
+]
+],
+"keywords": [
+822414
+]
 },
 "822630": {
 "tags": [
 [
 "generate_cards",
 "Add 3 uncommon or rare Morsel units to your hand"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822631": {
 "tags": [
@@ -2295,18 +3967,44 @@
 [
 "stat_gain",
 "Eater gains +1 Attack and +1 Health"
+],
+[
+"leave_trigger",
+"Eaten"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"leave_trigger",
+"Eaten"
+]
+],
+"keywords": [
+822414
+]
 },
 "822634": {
 "tags": [
 [
 "board_limit",
 "+1 Capacity on this floor"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822635": {
 "tags": [
@@ -2334,9 +4032,22 @@
 [
 "generate_cards",
 "Add 2 uncommon or rare Morsel units to your hand"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822457
+]
 },
 "822637": {
 "tags": [
@@ -2360,18 +4071,44 @@
 [
 "lifesteal",
 "Gain Lifesteal 1"
+],
+[
+"on_sacrifice",
+"Gorge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_sacrifice",
+"Gorge"
+]
+],
+"keywords": [
+822425
+]
 },
 "822639": {
 "tags": [
 [
 "shield",
 "Gain Damage Shield 1"
+],
+[
+"on_sacrifice",
+"Gorge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_sacrifice",
+"Gorge"
+]
+],
+"keywords": [
+822425
+]
 },
 "822640": {
 "tags": [
@@ -2391,9 +4128,22 @@
 [
 "resource_gain",
 "+1 Ember per turn"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822642": {
 "tags": [
@@ -2429,9 +4179,22 @@
 [
 "generate_cards",
 "Add a common or uncommon Morsel unit to your hand"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822457
+]
 },
 "822644": {
 "tags": [
@@ -2456,9 +4219,40 @@
 [
 "multi_attack",
 "Multistrike 1"
+],
+[
+"on_sacrifice",
+"Gorge"
+],
+[
+"cant_attack",
+"Inert"
+],
+[
+"multi_attack",
+"Multistrike"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_sacrifice",
+"Gorge"
+],
+[
+"cant_attack",
+"Inert"
+],
+[
+"multi_attack",
+"Multistrike"
+]
+],
+"keywords": [
+822425,
+822430,
+822436
+]
 },
 "822647": {
 "tags": [
@@ -2469,9 +4263,22 @@
 [
 "forced_movement",
 "enemy units on this floor"
+],
+[
+"movement",
+"Descend"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"movement",
+"Descend"
+]
+],
+"keywords": [
+822413
+]
 },
 "822648": {
 "tags": [
@@ -2491,9 +4298,22 @@
 [
 "upkeep",
 "Apply Emberdrain 4"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822650": {
 "tags": [
@@ -2522,18 +4342,44 @@
 [
 "summon",
 "Summon an Antumbra Morsel and Magma Morsel"
+],
+[
+"turn_end",
+"Resolve"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"turn_end",
+"Resolve"
+]
+],
+"keywords": [
+822451
+]
 },
 "822653": {
 "tags": [
 [
 "permanent_growth",
 "+2 Attack permanently"
+],
+[
+"on_sacrifice",
+"Gorge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_sacrifice",
+"Gorge"
+]
+],
+"keywords": [
+822425
+]
 },
 "822654": {
 "tags": [
@@ -2544,18 +4390,44 @@
 [
 "aoe_damage",
 "Deal 10 damage to enemy units"
+],
+[
+"on_sacrifice",
+"Gorge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_sacrifice",
+"Gorge"
+]
+],
+"keywords": [
+822425
+]
 },
 "822655": {
 "tags": [
 [
 "excess_damage",
 "Apply Trample"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822656": {
 "tags": [
@@ -2574,9 +4446,22 @@
 [
 "repeat_trigger",
 "two times"
+],
+[
+"permanent_loss",
+"Purge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"keywords": [
+822441
+]
 },
 "822657": {
 "tags": [
@@ -2595,9 +4480,22 @@
 [
 "resource_gain",
 "Gain 2 Ember"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822457
+]
 },
 "822658": {
 "tags": [
@@ -2617,17 +4515,155 @@
 [
 "permanent_growth",
 "+2 Attack and +2 Health"
+],
+[
+"on_sacrifice",
+"Gorge"
+],
+[
+"on_ally_play",
+"Hunger"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_sacrifice",
+"Gorge"
+],
+[
+"on_ally_play",
+"Hunger"
+]
+],
+"keywords": [
+822425,
+822428
+]
 },
 "822661": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"self_destruct",
+"Burnout"
+],
+[
+"other_death_trigger",
+"Harvest"
+],
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
+],
+[
+"turn_end",
+"Resolve"
+]
+],
+"by": "read",
+"credited": [
+[
+"self_destruct",
+"Burnout"
+],
+[
+"other_death_trigger",
+"Harvest"
+],
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
+],
+[
+"turn_end",
+"Resolve"
+]
+],
+"keywords": [
+822407,
+822426,
+822447,
+822451
+]
 },
 "822662": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"self_destruct",
+"Burnout"
+],
+[
+"recycle",
+"Endless"
+],
+[
+"leave_trigger",
+"Endless"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"first_strike",
+"Quick"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"counterattack",
+"Spikes"
+]
+],
+"by": "read",
+"credited": [
+[
+"self_destruct",
+"Burnout"
+],
+[
+"recycle",
+"Endless"
+],
+[
+"leave_trigger",
+"Endless"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"first_strike",
+"Quick"
+],
+[
+"on_kill",
+"Slay"
+],
+[
+"counterattack",
+"Spikes"
+]
+],
+"keywords": [
+822407,
+822417,
+822419,
+822443,
+822457,
+822459
+]
 },
 "822663": {
 "tags": [
@@ -2638,18 +4674,44 @@
 [
 "self_destruct",
 "Burnout 4"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822664": {
 "tags": [
 [
 "self_destruct",
 "Burnout 2"
+],
+[
+"self_destruct",
+"Burnout"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"self_destruct",
+"Burnout"
+]
+],
+"keywords": [
+822407
+]
 },
 "822665": {
 "tags": [
@@ -2660,27 +4722,74 @@
 [
 "random_effect",
 "a random unit"
+],
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
+]
+],
+"keywords": [
+822447
+]
 },
 "822666": {
 "tags": [
 [
 "self_destruct",
 "Apply Burnout 5"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822667": {
 "tags": [
 [
 "repeat_trigger",
 "Trigger a unit's Extinguish ability without killing it"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822668": {
 "tags": [
@@ -2691,9 +4800,22 @@
 [
 "death_count",
 "for each friendly unit death this battle"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822669": {
 "tags": [
@@ -2717,9 +4839,39 @@
 [
 "random_effect",
 "random units"
+],
+[
+"exhaust",
+"Consume"
+],
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+],
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
+]
+],
+"keywords": [
+822409,
+822447
+]
 },
 "822671": {
 "tags": [
@@ -2738,9 +4890,22 @@
 [
 "condition_count",
 "for each card consumed"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822672": {
 "tags": [],
@@ -2755,9 +4920,31 @@
 [
 "permanent_growth",
 "+8 Attack permanently"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"stealth",
+"Stealth"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"stealth",
+"Stealth"
+]
+],
+"keywords": [
+822419,
+822460
+]
 },
 "822674": {
 "tags": [
@@ -2789,9 +4976,31 @@
 [
 "condition_count",
 "15x the Soul count"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"other_death_trigger",
+"Harvest"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"other_death_trigger",
+"Harvest"
+]
+],
+"keywords": [
+822419,
+822426
+]
 },
 "822676": {
 "tags": [
@@ -2802,9 +5011,31 @@
 [
 "multi_attack",
 "Multistrike 1"
+],
+[
+"self_destruct",
+"Burnout"
+],
+[
+"multi_attack",
+"Multistrike"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"self_destruct",
+"Burnout"
+],
+[
+"multi_attack",
+"Multistrike"
+]
+],
+"keywords": [
+822407,
+822436
+]
 },
 "822677": {
 "tags": [
@@ -2820,18 +5051,44 @@
 [
 "damage",
 "Deal 50 damage"
+],
+[
+"death_trigger",
+"Extinguish"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"death_trigger",
+"Extinguish"
+]
+],
+"keywords": [
+822419
+]
 },
 "822679": {
 "tags": [
 [
 "self_destruct",
 "Burnout 3"
+],
+[
+"self_destruct",
+"Burnout"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"self_destruct",
+"Burnout"
+]
+],
+"keywords": [
+822407
+]
 },
 "822680": {
 "tags": [
@@ -2842,72 +5099,228 @@
 [
 "self_destruct",
 "Friendly Burnout units gain Burnout 1"
+],
+[
+"self_destruct",
+"Burnout"
+],
+[
+"on_damaged",
+"Revenge"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"self_destruct",
+"Burnout"
+],
+[
+"on_damaged",
+"Revenge"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822407,
+822452,
+822462
+]
 },
 "822681": {
 "tags": [
 [
 "revive",
 "Reform a unit"
+],
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
+]
+],
+"keywords": [
+822447
+]
 },
 "822682": {
 "tags": [
 [
 "stealth",
 "Apply Stealth 2 to friendly units"
+],
+[
+"death_trigger",
+"Extinguish"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"death_trigger",
+"Extinguish"
+]
+],
+"keywords": [
+822419
+]
 },
 "822683": {
 "tags": [
 [
 "stat_gain",
 "Friendly Burnout units gain Rage 3"
+],
+[
+"on_attack",
+"Strike"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_attack",
+"Strike"
+]
+],
+"keywords": [
+822461
+]
 },
 "822684": {
 "tags": [
 [
 "shop_gold",
 "Gain 20 Gold"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822457
+]
 },
 "822685": {
 "tags": [
 [
 "summon",
 "Summon 2 Draff units"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822419,
+822462
+]
 },
 "822686": {
 "tags": [
 [
 "recycle",
 "Apply Endless"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822688": {
 "tags": [
 [
 "draw",
 "Draw 1"
+],
+[
+"recycle",
+"Endless"
+],
+[
+"leave_trigger",
+"Endless"
+],
+[
+"death_trigger",
+"Extinguish"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"recycle",
+"Endless"
+],
+[
+"leave_trigger",
+"Endless"
+],
+[
+"death_trigger",
+"Extinguish"
+]
+],
+"keywords": [
+822417,
+822419
+]
 },
 "822689": {
 "tags": [
@@ -2927,18 +5340,44 @@
 [
 "permanent_growth",
 "+3 Attack and +3 Health"
+],
+[
+"other_death_trigger",
+"Harvest"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"other_death_trigger",
+"Harvest"
+]
+],
+"keywords": [
+822426
+]
 },
 "822691": {
 "tags": [
 [
 "shop_gold",
 "Gain 5 Gold"
+],
+[
+"other_death_trigger",
+"Harvest"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"other_death_trigger",
+"Harvest"
+]
+],
+"keywords": [
+822426
+]
 },
 "822692": {
 "tags": [
@@ -2958,9 +5397,22 @@
 [
 "stat_gain",
 "Gain Rage 5"
+],
+[
+"other_death_trigger",
+"Harvest"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"other_death_trigger",
+"Harvest"
+]
+],
+"keywords": [
+822426
+]
 },
 "822694": {
 "tags": [
@@ -2971,9 +5423,22 @@
 [
 "disable",
 "apply Dazed 1"
+],
+[
+"movement",
+"Descend"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"movement",
+"Descend"
+]
+],
+"keywords": [
+822413
+]
 },
 "822695": {
 "tags": [
@@ -2988,9 +5453,22 @@
 [
 "in_hand_buff",
 "apply +40 Attack"
+],
+[
+"death_trigger",
+"Extinguish"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"death_trigger",
+"Extinguish"
+]
+],
+"keywords": [
+822419
+]
 },
 "822696": {
 "tags": [
@@ -3001,9 +5479,40 @@
 [
 "copy",
 "apply this unit's upgrades and stat changes"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"on_damaged",
+"Revenge"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"on_damaged",
+"Revenge"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822419,
+822452,
+822462
+]
 },
 "822697": {
 "tags": [
@@ -3014,9 +5523,31 @@
 [
 "upgrade",
 "Increase damage by 3 permanently"
+],
+[
+"piercing",
+"Piercing"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"piercing",
+"Piercing"
+],
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822440,
+822457
+]
 },
 "822698": {
 "tags": [
@@ -3027,9 +5558,30 @@
 [
 "stat_gain",
 "apply an additional +10 Attack"
+],
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"revive",
+"Reform"
+],
+[
+"upgrade",
+"Reform"
+]
+],
+"keywords": [
+822447
+]
 },
 "822699": {
 "tags": [
@@ -3057,9 +5609,22 @@
 [
 "condition_life",
 "an already damaged unit"
+],
+[
+"spell_power",
+"Attuned"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"spell_power",
+"Attuned"
+]
+],
+"keywords": [
+822405
+]
 },
 "822701": {
 "tags": [
@@ -3079,12 +5644,120 @@
 "by": "read"
 },
 "822702": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"resource_gain",
+"Inspire"
+],
+[
+"multi_attack",
+"Multistrike"
+],
+[
+"damage_over_time",
+"Reap"
+],
+[
+"condition_count",
+"Reap"
+],
+[
+"on_attack",
+"Strike"
+]
+],
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"resource_gain",
+"Inspire"
+],
+[
+"multi_attack",
+"Multistrike"
+],
+[
+"damage_over_time",
+"Reap"
+],
+[
+"condition_count",
+"Reap"
+],
+[
+"on_attack",
+"Strike"
+]
+],
+"keywords": [
+822408,
+822432,
+822436,
+822446,
+822461
+]
 },
 "822703": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"block_armor",
+"Armor"
+],
+[
+"exhaust",
+"Consume"
+],
+[
+"exhaust",
+"Etch"
+],
+[
+"block_armor",
+"Shell"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"by": "read",
+"credited": [
+[
+"block_armor",
+"Armor"
+],
+[
+"exhaust",
+"Consume"
+],
+[
+"exhaust",
+"Etch"
+],
+[
+"block_armor",
+"Shell"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822402,
+822409,
+822418,
+822455,
+822462
+]
 },
 "822704": {
 "tags": [
@@ -3104,27 +5777,66 @@
 [
 "condition_count",
 "per [Echo]"
+],
+[
+"cost_type",
+"Charged Echo"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+]
+],
+"keywords": [
+822408
+]
 },
 "822706": {
 "tags": [
 [
 "variable_stats",
 "+5 Attack per [Echo]"
+],
+[
+"cost_type",
+"Charged Echo"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+]
+],
+"keywords": [
+822408
+]
 },
 "822707": {
 "tags": [
 [
 "in_hand_buff",
 "Apply Infused to cards in hand"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822708": {
 "tags": [
@@ -3135,18 +5847,44 @@
 [
 "stat_gain",
 "Apply +10 Health"
+],
+[
+"cost_type",
+"Extract"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Extract"
+]
+],
+"keywords": [
+822420
+]
 },
 "822709": {
 "tags": [
 [
 "damage_over_time",
 "Apply Reap 2 to enemy units"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822710": {
 "tags": [
@@ -3157,9 +5895,22 @@
 [
 "stat_gain",
 "Apply +15 Attack"
+],
+[
+"cost_type",
+"Extract"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Extract"
+]
+],
+"keywords": [
+822420
+]
 },
 "822711": {
 "tags": [
@@ -3170,9 +5921,22 @@
 [
 "forced_movement",
 "move it to the back"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822712": {
 "tags": [
@@ -3183,9 +5947,31 @@
 [
 "damage",
 "Deal 50 damage"
+],
+[
+"spell_power",
+"Attuned"
+],
+[
+"cost_type",
+"Extract"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"spell_power",
+"Attuned"
+],
+[
+"cost_type",
+"Extract"
+]
+],
+"keywords": [
+822405,
+822420
+]
 },
 "822713": {
 "tags": [
@@ -3196,9 +5982,31 @@
 [
 "condition_count",
 "per [Echo]"
+],
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822408,
+822409
+]
 },
 "822714": {
 "tags": [
@@ -3209,18 +6017,70 @@
 [
 "summon",
 "Summon 2 Bog Fly units"
+],
+[
+"transform",
+"Hatch"
+],
+[
+"delayed",
+"Hatch"
+],
+[
+"block_armor",
+"Shell"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"transform",
+"Hatch"
+],
+[
+"delayed",
+"Hatch"
+],
+[
+"block_armor",
+"Shell"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822427,
+822455,
+822462
+]
 },
 "822715": {
 "tags": [
 [
 "stat_gain",
 "Apply +1 Attack and +1 Health to friendly units"
+],
+[
+"resource_gain",
+"Inspire"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"resource_gain",
+"Inspire"
+]
+],
+"keywords": [
+822432
+]
 },
 "822716": {
 "tags": [
@@ -3239,9 +6099,31 @@
 [
 "condition_count",
 "per [Echo]"
+],
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822408,
+822462
+]
 },
 "822717": {
 "tags": [
@@ -3252,9 +6134,74 @@
 [
 "summon",
 "Summon Kinhost Pupa"
+],
+[
+"block_armor",
+"Armor"
+],
+[
+"transform",
+"Hatch"
+],
+[
+"delayed",
+"Hatch"
+],
+[
+"damage_over_time",
+"Reap"
+],
+[
+"condition_count",
+"Reap"
+],
+[
+"block_armor",
+"Shell"
+],
+[
+"on_attack",
+"Strike"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"block_armor",
+"Armor"
+],
+[
+"transform",
+"Hatch"
+],
+[
+"delayed",
+"Hatch"
+],
+[
+"damage_over_time",
+"Reap"
+],
+[
+"condition_count",
+"Reap"
+],
+[
+"block_armor",
+"Shell"
+],
+[
+"on_attack",
+"Strike"
+]
+],
+"keywords": [
+822402,
+822427,
+822446,
+822455,
+822461
+]
 },
 "822718": {
 "tags": [
@@ -3269,18 +6216,62 @@
 [
 "damage_over_time",
 "Apply Reap 1 to enemy units"
+],
+[
+"block_armor",
+"Armor"
+],
+[
+"multi_attack",
+"Multistrike"
+],
+[
+"on_attack",
+"strike"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"block_armor",
+"Armor"
+],
+[
+"multi_attack",
+"Multistrike"
+],
+[
+"on_attack",
+"strike"
+]
+],
+"keywords": [
+822402,
+822436,
+822461
+]
 },
 "822719": {
 "tags": [
 [
 "stat_gain",
 "+5 Attack"
+],
+[
+"exhaust",
+"Etch"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Etch"
+]
+],
+"keywords": [
+822418
+]
 },
 "822720": {
 "tags": [
@@ -3291,9 +6282,22 @@
 [
 "block_armor",
 "Armor 2"
+],
+[
+"resource_gain",
+"Inspire"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"resource_gain",
+"Inspire"
+]
+],
+"keywords": [
+822432
+]
 },
 "822721": {
 "tags": [
@@ -3308,9 +6312,22 @@
 [
 "exhaust",
 "Apply Consume to drawn spells"
+],
+[
+"cost_type",
+"Extract"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Extract"
+]
+],
+"keywords": [
+822420
+]
 },
 "822722": {
 "tags": [
@@ -3321,9 +6338,22 @@
 [
 "condition_count",
 "per [Echo]"
+],
+[
+"cost_type",
+"Charged Echo"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+]
+],
+"keywords": [
+822408
+]
 },
 "822723": {
 "tags": [
@@ -3334,9 +6364,22 @@
 [
 "deck_position",
 "top of your draw pile"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822724": {
 "tags": [
@@ -3347,18 +6390,53 @@
 [
 "mark_target",
 "Apply Melee Weakness 3"
+],
+[
+"cost_type",
+"Extract"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Extract"
+]
+],
+"keywords": [
+822420
+]
 },
 "822725": {
 "tags": [
 [
 "condition_count",
 "per [Echo]"
+],
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822408,
+822409
+]
 },
 "822726": {
 "tags": [
@@ -3403,18 +6481,62 @@
 [
 "resource_gain",
 "Gain 2 Echo"
+],
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"cost_type",
+"Extract"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"cost_type",
+"Extract"
+],
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822408,
+822420,
+822457
+]
 },
 "822729": {
 "tags": [
 [
 "damage_over_time",
 "Apply Reap 13"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822730": {
 "tags": [
@@ -3425,9 +6547,31 @@
 [
 "upkeep",
 "Apply Emberdrain 1 to friendly units"
+],
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822408,
+822409
+]
 },
 "822731": {
 "tags": [
@@ -3442,9 +6586,22 @@
 [
 "forced_movement",
 "move it to the back"
+],
+[
+"cost_type",
+"Extract"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Extract"
+]
+],
+"keywords": [
+822420
+]
 },
 "822732": {
 "tags": [
@@ -3459,9 +6616,22 @@
 [
 "exhaust",
 "apply Consume"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822733": {
 "tags": [
@@ -3472,27 +6642,110 @@
 [
 "summon",
 "Summon Bog Wurmling"
+],
+[
+"transform",
+"Hatch"
+],
+[
+"delayed",
+"Hatch"
+],
+[
+"block_armor",
+"Shell"
+],
+[
+"excess_damage",
+"Trample"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"transform",
+"Hatch"
+],
+[
+"delayed",
+"Hatch"
+],
+[
+"block_armor",
+"Shell"
+],
+[
+"excess_damage",
+"Trample"
+]
+],
+"keywords": [
+822427,
+822455,
+822464
+]
 },
 "822734": {
 "tags": [
 [
 "stat_gain",
 "+10 Attack and +10 Health"
+],
+[
+"exhaust",
+"Etch"
+],
+[
+"excess_damage",
+"Trample"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Etch"
+],
+[
+"excess_damage",
+"Trample"
+]
+],
+"keywords": [
+822418,
+822464
+]
 },
 "822735": {
 "tags": [
 [
 "damage_over_time",
 "Apply Reap 2 to enemy units"
+],
+[
+"exhaust",
+"Etch"
+],
+[
+"multi_target_attack",
+"Sweep"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Etch"
+],
+[
+"multi_target_attack",
+"Sweep"
+]
+],
+"keywords": [
+822418,
+822463
+]
 },
 "822736": {
 "tags": [
@@ -3511,9 +6764,40 @@
 [
 "counterattack",
 "to the attacking unit"
+],
+[
+"cost_type",
+"Extract"
+],
+[
+"resource_gain",
+"Inspire"
+],
+[
+"on_damaged",
+"Revenge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Extract"
+],
+[
+"resource_gain",
+"Inspire"
+],
+[
+"on_damaged",
+"Revenge"
+]
+],
+"keywords": [
+822420,
+822432,
+822452
+]
 },
 "822737": {
 "tags": [
@@ -3524,9 +6808,22 @@
 [
 "tribal",
 "Eggs"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822738": {
 "tags": [
@@ -3541,13 +6838,40 @@
 [
 "cost_type",
 "Clear [Echo]"
+],
+[
+"cost_type",
+"Charged Echo"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+]
+],
+"keywords": [
+822408
+]
 },
 "822739": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"cost_type",
+"Charged Echo"
+]
+],
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+]
+],
+"keywords": [
+822408
+]
 },
 "822741": {
 "tags": [
@@ -3558,27 +6882,75 @@
 [
 "stat_multiply",
 "Double buffs and Armor on a unit"
+],
+[
+"cost_type",
+"Extract"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Extract"
+]
+],
+"keywords": [
+822420
+]
 },
 "822742": {
 "tags": [
 [
 "resource_gain",
 "Gain 1 EchoSlot"
+],
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+],
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822408,
+822409
+]
 },
 "822743": {
 "tags": [
 [
 "damage_over_time",
 "Reap to enemy units"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822744": {
 "tags": [
@@ -3589,9 +6961,22 @@
 [
 "deck_position",
 "top of your draw pile"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822745": {
 "tags": [
@@ -3606,57 +6991,191 @@
 [
 "deck_modification",
 "permanent copy"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822457
+]
 },
 "822746": {
 "tags": [
 [
 "stat_gain",
 "Apply +5 to your Pyre"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822747": {
 "tags": [
 [
 "heal",
 "Restore 5 per X Pyre health"
+],
+[
+"permanent_loss",
+"Purge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"keywords": [
+822441
+]
 },
 "822748": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"by": "read",
+"credited": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"keywords": [
+822441
+]
 },
 "822749": {
 "tags": [
 [
 "aoe_damage",
 "Deal 30 per X damage to enemy units"
+],
+[
+"piercing",
+"Piercing"
+],
+[
+"permanent_loss",
+"Purge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"piercing",
+"Piercing"
+],
+[
+"permanent_loss",
+"Purge"
+]
+],
+"keywords": [
+822440,
+822441
+]
 },
 "822750": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"by": "read",
+"credited": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"keywords": [
+822441
+]
 },
 "822751": {
 "tags": [
 [
 "heal",
 "Restore 5 Pyre health"
+],
+[
+"turn_end",
+"Reserve"
+],
+[
+"play_restriction",
+"Unplayable"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"turn_end",
+"Reserve"
+],
+[
+"play_restriction",
+"Unplayable"
+]
+],
+"keywords": [
+822450,
+822465
+]
 },
 "822752": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"play_restriction",
+"Unplayable"
+],
+[
+"deck_modification",
+"Unpurgeable"
+]
+],
+"by": "read",
+"credited": [
+[
+"play_restriction",
+"Unplayable"
+],
+[
+"deck_modification",
+"Unpurgeable"
+]
+],
+"keywords": [
+822465,
+822466
+]
 },
 "822753": {
 "tags": [
@@ -3667,18 +7186,44 @@
 [
 "draw",
 "Draw 1"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822754": {
 "tags": [
 [
 "destroy",
 "Kill a non-boss unit"
+],
+[
+"permanent_loss",
+"Purge"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"keywords": [
+822441
+]
 },
 "822755": {
 "tags": [
@@ -3697,9 +7242,48 @@
 [
 "stat_gain",
 "+20 Attack"
+],
+[
+"recycle",
+"Endless"
+],
+[
+"leave_trigger",
+"Endless"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"multi_attack",
+"Multistrike"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"recycle",
+"Endless"
+],
+[
+"leave_trigger",
+"Endless"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"multi_attack",
+"Multistrike"
+]
+],
+"keywords": [
+822417,
+822419,
+822436
+]
 },
 "822756": {
 "tags": [
@@ -3710,9 +7294,31 @@
 [
 "disable",
 "Apply Dazed 2"
+],
+[
+"exhaust",
+"Consume"
+],
+[
+"movement",
+"Descend"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+],
+[
+"movement",
+"Descend"
+]
+],
+"keywords": [
+822409,
+822413
+]
 },
 "822757": {
 "tags": [
@@ -3731,18 +7337,53 @@
 [
 "tribal",
 "Blight card"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822462
+]
 },
 "822758": {
 "tags": [
 [
 "friendly_fire",
 "Your Pyre takes 3 damage"
+],
+[
+"turn_end",
+"Reserve"
+],
+[
+"deck_modification",
+"Unpurgeable"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"turn_end",
+"Reserve"
+],
+[
+"deck_modification",
+"Unpurgeable"
+]
+],
+"keywords": [
+822450,
+822466
+]
 },
 "822759": {
 "tags": [
@@ -3753,31 +7394,93 @@
 [
 "shop_gold",
 "+50 Gold"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822457
+]
 },
 "822760": {
 "tags": [
 [
 "friendly_fire",
 "Your Pyre takes 5 damage"
+],
+[
+"permanent_loss",
+"Purge"
+],
+[
+"turn_end",
+"Reserve"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"permanent_loss",
+"Purge"
+],
+[
+"turn_end",
+"Reserve"
+]
+],
+"keywords": [
+822441,
+822450
+]
 },
 "822761": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"by": "read",
+"credited": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"keywords": [
+822441
+]
 },
 "822763": {
 "tags": [
 [
 "friendly_fire",
 "Your Pyre takes 1 damage"
+],
+[
+"turn_end",
+"Reserve"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"turn_end",
+"Reserve"
+]
+],
+"keywords": [
+822450
+]
 },
 "822765": {
 "tags": [
@@ -3788,13 +7491,49 @@
 [
 "disable",
 "Apply Dazed 3"
+],
+[
+"movement",
+"Ascend"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"movement",
+"Ascend"
+],
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822404,
+822409
+]
 },
 "822767": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"by": "read",
+"credited": [
+[
+"permanent_loss",
+"Purge"
+]
+],
+"keywords": [
+822441
+]
 },
 "822768": {
 "tags": [
@@ -3809,39 +7548,282 @@
 [
 "board_limit",
 "+1 Capacity on this floor"
+],
+[
+"on_kill",
+"Slay"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"on_kill",
+"Slay"
+]
+],
+"keywords": [
+822457
+]
 },
 "822769": {
 "tags": [
 [
 "board_limit",
 "+1 Capacity on this floor"
+],
+[
+"turn_end",
+"Resolve"
+],
+[
+"excess_damage",
+"Trample"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"turn_end",
+"Resolve"
+],
+[
+"excess_damage",
+"Trample"
+]
+],
+"keywords": [
+822451,
+822464
+]
 },
 "822770": {
-"tags": [],
-"by": "read"
+"tags": [
+[
+"block_armor",
+"Armor"
+],
+[
+"movement",
+"Ascend"
+],
+[
+"movement",
+"Descend"
+],
+[
+"damage_over_time",
+"Frostbite"
+],
+[
+"turn_end",
+"Frostbite"
+],
+[
+"temporary_buff",
+"Rage"
+],
+[
+"regeneration",
+"Regen"
+],
+[
+"turn_end",
+"Regen"
+],
+[
+"stat_loss",
+"Sap"
+],
+[
+"temporary_effect",
+"Sap"
+],
+[
+"counterattack",
+"Spikes"
+]
+],
+"by": "read",
+"credited": [
+[
+"block_armor",
+"Armor"
+],
+[
+"movement",
+"Ascend"
+],
+[
+"movement",
+"Descend"
+],
+[
+"damage_over_time",
+"Frostbite"
+],
+[
+"turn_end",
+"Frostbite"
+],
+[
+"temporary_buff",
+"Rage"
+],
+[
+"regeneration",
+"Regen"
+],
+[
+"turn_end",
+"Regen"
+],
+[
+"stat_loss",
+"Sap"
+],
+[
+"temporary_effect",
+"Sap"
+],
+[
+"counterattack",
+"Spikes"
+]
+],
+"keywords": [
+822402,
+822404,
+822413,
+822422,
+822444,
+822448,
+822454,
+822459
+]
 },
 "822771": {
 "tags": [
 [
 "targeting_rules",
 "Does not affect bosses"
+],
+[
+"exhaust",
+"Consume"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"exhaust",
+"Consume"
+]
+],
+"keywords": [
+822409
+]
 },
 "822772": {
 "tags": [
 [
 "summon",
 "Summon a friendly Rebel unit to the front of this floor"
+],
+[
+"block_armor",
+"Armor"
+],
+[
+"shield",
+"Damage Shield"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"mark_target",
+"Melee Weakness"
+],
+[
+"multi_attack",
+"Multistrike"
+],
+[
+"first_strike",
+"Quick"
+],
+[
+"temporary_buff",
+"Rage"
+],
+[
+"counterattack",
+"Spikes"
+],
+[
+"stealth",
+"Stealth"
+],
+[
+"on_play",
+"Summon"
 ]
 ],
-"by": "read"
+"by": "read",
+"credited": [
+[
+"block_armor",
+"Armor"
+],
+[
+"shield",
+"Damage Shield"
+],
+[
+"death_trigger",
+"Extinguish"
+],
+[
+"mark_target",
+"Melee Weakness"
+],
+[
+"multi_attack",
+"Multistrike"
+],
+[
+"first_strike",
+"Quick"
+],
+[
+"temporary_buff",
+"Rage"
+],
+[
+"counterattack",
+"Spikes"
+],
+[
+"stealth",
+"Stealth"
+],
+[
+"on_play",
+"Summon"
+]
+],
+"keywords": [
+822402,
+822411,
+822419,
+822435,
+822436,
+822443,
+822444,
+822459,
+822460,
+822462
+]
 }
 }

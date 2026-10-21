@@ -1415,16 +1415,32 @@
 "Mighty Leap"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740669
+]
 },
 "740716": {
 "tags": [
 [
 "movement",
 "Sprinter"
+],
+[
+"turn_end",
+"Sprinter"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Sprinter"
+]
+],
+"keywords": [
+740690
+]
 },
 "740717": {
 "tags": [
@@ -1433,7 +1449,10 @@
 "Touch of Death"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740697
+]
 },
 "740718": {
 "tags": [
@@ -1442,16 +1461,32 @@
 "Annoying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740614
+]
 },
 "740719": {
 "tags": [
 [
 "aura",
 "Leader"
+],
+[
+"adjacency",
+"Leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"adjacency",
+"Leader"
+]
+],
+"keywords": [
+740662
+]
 },
 "740720": {
 "tags": [],
@@ -1464,7 +1499,10 @@
 "Amorphous"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740613
+]
 },
 "740723": {
 "tags": [
@@ -1473,7 +1511,10 @@
 "Amorphous"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740613
+]
 },
 "740724": {
 "tags": [
@@ -1486,16 +1527,41 @@
 "Terrain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740614
+]
 },
 "740725": {
 "tags": [
 [
 "generate_cards",
 "Ant Spawner"
+],
+[
+"on_play",
+"Ant Spawner"
+],
+[
+"variable_stats",
+"Ants"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Ant Spawner"
+],
+[
+"variable_stats",
+"Ants"
+]
+],
+"keywords": [
+740615,
+740710
+]
 },
 "740726": {
 "tags": [
@@ -1504,7 +1570,10 @@
 "Waterborne"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740705
+]
 },
 "740728": {
 "tags": [
@@ -1522,38 +1591,95 @@
 "Airborne"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740612
+]
 },
 "740730": {
 "tags": [
 [
 "evasion",
 "Airborne"
+],
+[
+"variable_stats",
+"One Half Bones"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"variable_stats",
+"One Half Bones"
+]
+],
+"keywords": [
+740612,
+740674
+]
 },
 "740731": {
 "tags": [
 [
 "summon",
 "Dam Builder"
+],
+[
+"on_play",
+"Dam Builder"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Dam Builder"
+]
+],
+"keywords": [
+740636
+]
 },
 "740733": {
 "tags": [
 [
 "generate_cards",
 "Bees Within"
+],
+[
+"on_damaged",
+"Bees Within"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_damaged",
+"Bees Within"
+]
+],
+"keywords": [
+740619
+]
 },
 "740734": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"variable_stats",
+"Bell Ringer"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"variable_stats",
+"Bell Ringer"
+]
+],
+"keywords": [
+740713
+]
 },
 "740735": {
 "tags": [
@@ -1566,7 +1692,10 @@
 "Worthy Sacrifice"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740706
+]
 },
 "740736": {
 "tags": [
@@ -1581,9 +1710,30 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740737": {
 "tags": [
@@ -1594,81 +1744,214 @@
 [
 "resource_gain",
 "Blue Mox"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740738": {
 "tags": [
 [
 "movement",
 "Guardian"
+],
+[
+"on_enemy_enter",
+"Guardian"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_enemy_enter",
+"Guardian"
+]
+],
+"keywords": [
+740656
+]
 },
 "740739": {
 "tags": [
 [
 "draw",
 "Mental Gemnastics"
+],
+[
+"on_play",
+"Mental Gemnastics"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mental Gemnastics"
+]
+],
+"keywords": [
+740668
+]
 },
 "740740": {
 "tags": [
 [
 "draw",
 "Mental Gemnastics"
+],
+[
+"on_play",
+"Mental Gemnastics"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mental Gemnastics"
+]
+],
+"keywords": [
+740668
+]
 },
 "740741": {
 "tags": [
 [
 "movement",
 "Guardian"
+],
+[
+"on_enemy_enter",
+"Guardian"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_enemy_enter",
+"Guardian"
+]
+],
+"keywords": [
+740656
+]
 },
 "740742": {
 "tags": [
 [
 "death_trigger",
 "Bomb Latch"
+],
+[
+"merge_attach",
+"Bomb Latch"
+],
+[
+"target_choice",
+"Bomb Latch"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Bomb Latch"
+],
+[
+"target_choice",
+"Bomb Latch"
+]
+],
+"keywords": [
+740623
+]
 },
 "740743": {
 "tags": [
 [
 "stat_gain",
 "Enlarge"
+],
+[
+"activated",
+"Enlarge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Enlarge"
+]
+],
+"keywords": [
+740644
+]
 },
 "740744": {
 "tags": [
 [
 "resource_conversion",
 "Bonehorn"
+],
+[
+"activated",
+"Bonehorn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Bonehorn"
+]
+],
+"keywords": [
+740628
+]
 },
 "740745": {
 "tags": [
 [
 "movement",
 "Guardian"
+],
+[
+"on_enemy_enter",
+"Guardian"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_enemy_enter",
+"Guardian"
+]
+],
+"keywords": [
+740656
+]
 },
 "740747": {
 "tags": [
@@ -1685,7 +1968,10 @@
 "A black goat is created in your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740706
+]
 },
 "740748": {
 "tags": [
@@ -1702,7 +1988,10 @@
 "A frozen opossum is created in your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740648
+]
 },
 "740749": {
 "tags": [
@@ -1715,7 +2004,10 @@
 "A boulder is created in your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740665
+]
 },
 "740750": {
 "tags": [
@@ -1728,7 +2020,10 @@
 "Terrain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740665
+]
 },
 "740752": {
 "tags": [
@@ -1748,9 +2043,30 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"death_trigger",
+"Detonator"
+],
+[
+"adjacency",
+"Detonator"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Detonator"
+],
+[
+"adjacency",
+"Detonator"
+]
+],
+"keywords": [
+740638
+]
 },
 "740754": {
 "tags": [
@@ -1776,7 +2092,10 @@
 "gives the player one Ancient Obol"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740683
+]
 },
 "740756": {
 "tags": [
@@ -1791,9 +2110,22 @@
 [
 "resource_gain",
 "gives the player one Ancient Obol"
+],
+[
+"death_trigger",
+"Bone King"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Bone King"
+]
+],
+"keywords": [
+740627
+]
 },
 "740757": {
 "tags": [
@@ -1810,7 +2142,10 @@
 "Attack Conduit"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740617
+]
 },
 "740758": {
 "tags": [
@@ -1819,7 +2154,10 @@
 "Mighty Leap"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740669
+]
 },
 "740759": {
 "tags": [
@@ -1834,18 +2172,69 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"bodyguard",
+"Burrower"
+],
+[
+"death_trigger",
+"Steel Trap"
+],
+[
+"generate_cards",
+"Steel Trap"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"bodyguard",
+"Burrower"
+],
+[
+"death_trigger",
+"Steel Trap"
+],
+[
+"generate_cards",
+"Steel Trap"
+]
+],
+"keywords": [
+740633,
+740692
+]
 },
 "740760": {
 "tags": [
 [
 "draw",
 "Vessel Printer"
+],
+[
+"on_damaged",
+"Vessel Printer"
+],
+[
+"side_deck",
+"Vessel Printer"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_damaged",
+"Vessel Printer"
+],
+[
+"side_deck",
+"Vessel Printer"
+]
+],
+"keywords": [
+740704
+]
 },
 "740761": {
 "tags": [
@@ -1863,7 +2252,10 @@
 "Many Lives"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740666
+]
 },
 "740764": {
 "tags": [
@@ -1872,7 +2264,10 @@
 "Many Lives"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740666
+]
 },
 "740765": {
 "tags": [
@@ -1885,16 +2280,33 @@
 "Many Lives"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740612,
+740666
+]
 },
 "740768": {
 "tags": [
 [
 "revive",
 "Unkillable"
+],
+[
+"death_trigger",
+"Unkillable"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Unkillable"
+]
+],
+"keywords": [
+740703
+]
 },
 "740769": {
 "tags": [
@@ -1905,9 +2317,30 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"link_formation",
+"Null Conduit (sigil)"
+],
+[
+"null_body",
+"Null Conduit (sigil)"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"link_formation",
+"Null Conduit (sigil)"
+],
+[
+"null_body",
+"Null Conduit (sigil)"
+]
+],
+"keywords": [
+740672
+]
 },
 "740770": {
 "tags": [
@@ -1916,7 +2349,10 @@
 "Corpse Eater"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740635
+]
 },
 "740772": {
 "tags": [
@@ -1927,9 +2363,23 @@
 [
 "board_clog",
 "Brood Parasite"
+],
+[
+"on_play",
+"Brood Parasite"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Brood Parasite"
+]
+],
+"keywords": [
+740612,
+740631
+]
 },
 "740775": {
 "tags": [
@@ -1940,9 +2390,30 @@
 [
 "draw",
 "Handy"
+],
+[
+"on_play",
+"Handy"
+],
+[
+"hand_deck_swap",
+"Handy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Handy"
+],
+[
+"hand_deck_swap",
+"Handy"
+]
+],
+"keywords": [
+740657
+]
 },
 "740776": {
 "tags": [
@@ -1951,7 +2422,10 @@
 "Double Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740641
+]
 },
 "740777": {
 "tags": [
@@ -1962,9 +2436,31 @@
 [
 "transform",
 "Fledgling"
+],
+[
+"turn_end",
+"Bone Digger"
+],
+[
+"delayed",
+"Fledgling"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Bone Digger"
+],
+[
+"delayed",
+"Fledgling"
+]
+],
+"keywords": [
+740626,
+740647
+]
 },
 "740778": {
 "tags": [
@@ -1977,7 +2473,10 @@
 "Bifurcated Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740621
+]
 },
 "740779": {
 "tags": [
@@ -1994,7 +2493,10 @@
 "Terrain"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740648
+]
 },
 "740780": {
 "tags": [
@@ -2007,16 +2509,42 @@
 "Touch of Death"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740697,
+740705
+]
 },
 "740781": {
 "tags": [
 [
 "movement",
 "Sprinter"
+],
+[
+"variable_stats",
+"Spilled Blood"
+],
+[
+"turn_end",
+"Sprinter"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"variable_stats",
+"Spilled Blood"
+],
+[
+"turn_end",
+"Sprinter"
+]
+],
+"keywords": [
+740689,
+740690
+]
 },
 "740782": {
 "tags": [
@@ -2027,9 +2555,31 @@
 [
 "transform",
 "Fledgling"
+],
+[
+"delayed",
+"Fledgling"
+],
+[
+"turn_end",
+"Sprinter"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Fledgling"
+],
+[
+"turn_end",
+"Sprinter"
+]
+],
+"keywords": [
+740647,
+740690
+]
 },
 "740783": {
 "tags": [
@@ -2040,45 +2590,142 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740785": {
 "tags": [
 [
 "resource_gain",
 "Green Mox"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740786": {
 "tags": [
 [
 "resource_gain",
 "Orange Mox"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740787": {
 "tags": [
 [
 "resource_gain",
 "Blue Mox"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740788": {
 "tags": [
 [
 "resource_gain",
 "Battery Bearer"
+],
+[
+"on_play",
+"Battery Bearer"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Battery Bearer"
+]
+],
+"keywords": [
+740618
+]
 },
 "740789": {
 "tags": [
@@ -2089,54 +2736,215 @@
 [
 "link_formation",
 "Energy Conduit"
+],
+[
+"resource_gain",
+"Energy Conduit (sigil)"
+],
+[
+"link_formation",
+"Energy Conduit (sigil)"
+],
+[
+"other_death_trigger",
+"Gem Detonator (sigil)"
+],
+[
+"aoe_damage",
+"Gem Detonator (sigil)"
+],
+[
+"friendly_fire",
+"Gem Detonator (sigil)"
+],
+[
+"on_play",
+"Gem Guardian (sigil)"
+],
+[
+"protection",
+"Gem Guardian (sigil)"
+],
+[
+"link_formation",
+"Null Conduit (sigil)"
+],
+[
+"null_body",
+"Null Conduit (sigil)"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Energy Conduit (sigil)"
+],
+[
+"link_formation",
+"Energy Conduit (sigil)"
+],
+[
+"other_death_trigger",
+"Gem Detonator (sigil)"
+],
+[
+"aoe_damage",
+"Gem Detonator (sigil)"
+],
+[
+"friendly_fire",
+"Gem Detonator (sigil)"
+],
+[
+"on_play",
+"Gem Guardian (sigil)"
+],
+[
+"protection",
+"Gem Guardian (sigil)"
+],
+[
+"link_formation",
+"Null Conduit (sigil)"
+],
+[
+"null_body",
+"Null Conduit (sigil)"
+]
+],
+"keywords": [
+740642,
+740651,
+740652,
+740672
+]
 },
 "740790": {
 "tags": [
 [
 "self_destruct",
 "Brittle"
+],
+[
+"on_attack",
+"Brittle"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_attack",
+"Brittle"
+]
+],
+"keywords": [
+740629
+]
 },
 "740791": {
 "tags": [
 [
 "aoe_damage",
 "Detonator"
+],
+[
+"death_trigger",
+"Detonator"
+],
+[
+"adjacency",
+"Detonator"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Detonator"
+],
+[
+"adjacency",
+"Detonator"
+]
+],
+"keywords": [
+740638
+]
 },
 "740792": {
 "tags": [
 [
 "summon",
 "Spawn Conduit"
+],
+[
+"turn_end",
+"Spawn Conduit"
+],
+[
+"link_formation",
+"Spawn Conduit"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Spawn Conduit"
+],
+[
+"link_formation",
+"Spawn Conduit"
+]
+],
+"keywords": [
+740688
+]
 },
 "740793": {
 "tags": [
 [
 "copy",
 "Fecundity"
+],
+[
+"on_play",
+"Fecundity"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Fecundity"
+]
+],
+"keywords": [
+740645
+]
 },
 "740794": {
 "tags": [
 [
 "copy",
 "Fecundity"
+],
+[
+"on_play",
+"Fecundity"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Fecundity"
+]
+],
+"keywords": [
+740645
+]
 },
 "740795": {
 "tags": [
@@ -2155,9 +2963,25 @@
 [
 "blocking",
 "Mighty Leap"
+],
+[
+"on_enemy_enter",
+"Sentry"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_enemy_enter",
+"Sentry"
+]
+],
+"keywords": [
+740669,
+740682,
+740683,
+740687
+]
 },
 "740796": {
 "tags": [
@@ -2168,36 +2992,106 @@
 [
 "enemy_benefit",
 "Annoying"
+],
+[
+"on_attack",
+"Brittle"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_attack",
+"Brittle"
+]
+],
+"keywords": [
+740614,
+740629
+]
 },
 "740797": {
 "tags": [
 [
 "generate_cards",
 "Gift Bearer"
+],
+[
+"death_trigger",
+"Gift Bearer"
+],
+[
+"random_effect",
+"Gift Bearer"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Gift Bearer"
+],
+[
+"random_effect",
+"Gift Bearer"
+]
+],
+"keywords": [
+740654
+]
 },
 "740798": {
 "tags": [
 [
 "generate_cards",
 "Gift Bearer"
+],
+[
+"death_trigger",
+"Gift Bearer"
+],
+[
+"random_effect",
+"Gift Bearer"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Gift Bearer"
+],
+[
+"random_effect",
+"Gift Bearer"
+]
+],
+"keywords": [
+740654
+]
 },
 "740799": {
 "tags": [
 [
 "evasion",
 "Airborne"
+],
+[
+"variable_stats",
+"Ants"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"variable_stats",
+"Ants"
+]
+],
+"keywords": [
+740612,
+740710
+]
 },
 "740800": {
 "tags": [
@@ -2206,7 +3100,10 @@
 "Repulsive"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740679
+]
 },
 "740803": {
 "tags": [
@@ -2223,25 +3120,62 @@
 "Terrain"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740648
+]
 },
 "740804": {
 "tags": [
 [
 "stances",
 "Transformer"
+],
+[
+"transform",
+"Transformer"
+],
+[
+"turn_start",
+"Transformer"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Transformer"
+],
+[
+"turn_start",
+"Transformer"
+]
+],
+"keywords": [
+740698
+]
 },
 "740806": {
 "tags": [
 [
 "random_effect",
 "Power Dice"
+],
+[
+"activated",
+"Power Dice"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Power Dice"
+]
+],
+"keywords": [
+740676
+]
 },
 "740809": {
 "tags": [
@@ -2250,16 +3184,40 @@
 "Gem Dependant"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740650
+]
 },
 "740812": {
 "tags": [
 [
 "summon",
 "Gem Spawn Conduit"
+],
+[
+"turn_end",
+"Gem Spawn Conduit"
+],
+[
+"link_formation",
+"Gem Spawn Conduit"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Gem Spawn Conduit"
+],
+[
+"link_formation",
+"Gem Spawn Conduit"
+]
+],
+"keywords": [
+740653
+]
 },
 "740813": {
 "tags": [
@@ -2270,9 +3228,31 @@
 [
 "summon",
 "Skeleton Crew"
+],
+[
+"turn_end",
+"Skeleton Crew"
+],
+[
+"movement",
+"Skeleton Crew"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Skeleton Crew"
+],
+[
+"movement",
+"Skeleton Crew"
+]
+],
+"keywords": [
+740686,
+740705
+]
 },
 "740817": {
 "tags": [
@@ -2287,9 +3267,30 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740818": {
 "tags": [
@@ -2300,45 +3301,118 @@
 [
 "resource_gain",
 "Green Mox"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740819": {
 "tags": [
 [
 "stat_gain",
 "Enlarge"
+],
+[
+"activated",
+"Enlarge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Enlarge"
+]
+],
+"keywords": [
+740644
+]
 },
 "740820": {
 "tags": [
 [
 "resource_gain",
 "Bone Digger"
+],
+[
+"turn_end",
+"Bone Digger"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Bone Digger"
+]
+],
+"keywords": [
+740626
+]
 },
 "740821": {
 "tags": [
 [
 "resource_gain",
 "Bone Digger"
+],
+[
+"turn_end",
+"Bone Digger"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Bone Digger"
+]
+],
+"keywords": [
+740626
+]
 },
 "740822": {
 "tags": [
 [
 "stealth",
 "Kraken Waterborne"
+],
+[
+"stealth",
+"Waterborne"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stealth",
+"Waterborne"
+]
+],
+"keywords": [
+740705
+]
 },
 "740823": {
 "tags": [
@@ -2347,15 +3421,54 @@
 "Waterborne"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740705
+]
 },
 "740824": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"variable_stats",
+"Emerald Power"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"variable_stats",
+"Emerald Power"
+]
+],
+"keywords": [
+740712
+]
 },
 "740826": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"variable_stats",
+"Card Counter"
+],
+[
+"hand_size",
+"Card Counter"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"variable_stats",
+"Card Counter"
+],
+[
+"hand_size",
+"Card Counter"
+]
+],
+"keywords": [
+740711
+]
 },
 "740828": {
 "tags": [
@@ -2366,18 +3479,45 @@
 [
 "movement",
 "Sprinter"
+],
+[
+"turn_end",
+"Sprinter"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Sprinter"
+]
+],
+"keywords": [
+740612,
+740690
+]
 },
 "740829": {
 "tags": [
 [
 "on_kill",
 "Blood Lust"
+],
+[
+"temporary_buff",
+"Blood Lust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"temporary_buff",
+"Blood Lust"
+]
+],
+"keywords": [
+740622
+]
 },
 "740830": {
 "tags": [
@@ -2386,7 +3526,10 @@
 "Airborne"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740612
+]
 },
 "740831": {
 "tags": [
@@ -2397,18 +3540,53 @@
 [
 "resource_gain",
 "Battery Bearer"
+],
+[
+"on_play",
+"Battery Bearer"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Battery Bearer"
+]
+],
+"keywords": [
+740618,
+740705
+]
 },
 "740832": {
 "tags": [
 [
 "transform",
 "Finical Hatchling"
+],
+[
+"deck_condition",
+"Finical Hatchling"
+],
+[
+"variety_payoff",
+"Finical Hatchling"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"deck_condition",
+"Finical Hatchling"
+],
+[
+"variety_payoff",
+"Finical Hatchling"
+]
+],
+"keywords": [
+740646
+]
 },
 "740833": {
 "tags": [
@@ -2429,7 +3607,11 @@
 "Trifurcated Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740621,
+740699
+]
 },
 "740834": {
 "tags": [
@@ -2438,7 +3620,10 @@
 "Repulsive"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740679
+]
 },
 "740836": {
 "tags": [
@@ -2447,25 +3632,78 @@
 "Airborne"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740612
+]
 },
 "740837": {
 "tags": [
 [
 "link_formation",
 "Null Conduit"
+],
+[
+"link_formation",
+"Null Conduit (sigil)"
+],
+[
+"null_body",
+"Null Conduit (sigil)"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"link_formation",
+"Null Conduit (sigil)"
+],
+[
+"null_body",
+"Null Conduit (sigil)"
+]
+],
+"keywords": [
+740672
+]
 },
 "740839": {
 "tags": [
 [
 "generate_cards",
 "Gift When Powered"
+],
+[
+"death_trigger",
+"Gift When Powered"
+],
+[
+"link_formation",
+"Gift When Powered"
+],
+[
+"random_effect",
+"Gift When Powered"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Gift When Powered"
+],
+[
+"link_formation",
+"Gift When Powered"
+],
+[
+"random_effect",
+"Gift When Powered"
+]
+],
+"keywords": [
+740655
+]
 },
 "740840": {
 "tags": [
@@ -2478,7 +3716,11 @@
 "Waterborne"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740612,
+740705
+]
 },
 "740843": {
 "tags": [
@@ -2493,9 +3735,31 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"death_trigger",
+"Steel Trap"
+],
+[
+"generate_cards",
+"Steel Trap"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Steel Trap"
+],
+[
+"generate_cards",
+"Steel Trap"
+]
+],
+"keywords": [
+740669,
+740692
+]
 },
 "740844": {
 "tags": [
@@ -2506,18 +3770,45 @@
 [
 "direct_damage",
 "Dead Byte"
+],
+[
+"death_trigger",
+"Dead Byte"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Dead Byte"
+]
+],
+"keywords": [
+740637,
+740669
+]
 },
 "740845": {
 "tags": [
 [
 "movement",
 "Clinger"
+],
+[
+"on_ally_play",
+"Clinger"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_ally_play",
+"Clinger"
+]
+],
+"keywords": [
+740634
+]
 },
 "740846": {
 "tags": [
@@ -2528,9 +3819,23 @@
 [
 "deathtouch",
 "Touch of Death"
+],
+[
+"turn_end",
+"Sprinter"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Sprinter"
+]
+],
+"keywords": [
+740690,
+740697
+]
 },
 "740849": {
 "tags": [
@@ -2543,7 +3848,10 @@
 "Worthy Sacrifice"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740706
+]
 },
 "740852": {
 "tags": [
@@ -2554,9 +3862,30 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740853": {
 "tags": [
@@ -2567,9 +3896,23 @@
 [
 "tutor",
 "Hoarder"
+],
+[
+"on_play",
+"Hoarder"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Hoarder"
+]
+],
+"keywords": [
+740612,
+740660
+]
 },
 "740854": {
 "tags": [
@@ -2582,25 +3925,62 @@
 "Bifurcated Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740621
+]
 },
 "740855": {
 "tags": [
 [
 "multi_attack",
 "Trifurcated Strike"
+],
+[
+"multi_target_attack",
+"Trifurcated Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"multi_target_attack",
+"Trifurcated Strike"
+]
+],
+"keywords": [
+740699
+]
 },
 "740856": {
 "tags": [
 [
 "draw",
 "True Scholar"
+],
+[
+"activated",
+"True Scholar"
+],
+[
+"sacrifice",
+"True Scholar"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"True Scholar"
+],
+[
+"sacrifice",
+"True Scholar"
+]
+],
+"keywords": [
+740702
+]
 },
 "740858": {
 "tags": [
@@ -2611,18 +3991,45 @@
 [
 "draw",
 "Looter"
+],
+[
+"direct_damage",
+"Looter"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"direct_damage",
+"Looter"
+]
+],
+"keywords": [
+740612,
+740664
+]
 },
 "740859": {
 "tags": [
 [
 "stat_gain",
 "Morsel"
+],
+[
+"sacrifice",
+"Morsel"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"sacrifice",
+"Morsel"
+]
+],
+"keywords": [
+740670
+]
 },
 "740860": {
 "tags": [
@@ -2635,11 +4042,28 @@
 "Frozen Away"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740648
+]
 },
 "740861": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"variable_stats",
+"M!rror r0rriM"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"variable_stats",
+"M!rror r0rriM"
+]
+],
+"keywords": [
+740714
+]
 },
 "740862": {
 "tags": [
@@ -2650,18 +4074,44 @@
 [
 "blocking",
 "block any landborne attacker"
+],
+[
+"bodyguard",
+"Burrower"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"bodyguard",
+"Burrower"
+]
+],
+"keywords": [
+740633
+]
 },
 "740863": {
 "tags": [
 [
 "movement",
 "Burrower"
+],
+[
+"bodyguard",
+"Burrower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"bodyguard",
+"Burrower"
+]
+],
+"keywords": [
+740633
+]
 },
 "740865": {
 "tags": [
@@ -2672,9 +4122,23 @@
 [
 "blocking",
 "Mighty Leap"
+],
+[
+"bodyguard",
+"Burrower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"bodyguard",
+"Burrower"
+]
+],
+"keywords": [
+740633,
+740669
+]
 },
 "740867": {
 "tags": [
@@ -2685,36 +4149,96 @@
 [
 "forced_movement",
 "Hefty"
+],
+[
+"turn_end",
+"Hefty"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_end",
+"Hefty"
+]
+],
+"keywords": [
+740659
+]
 },
 "740868": {
 "tags": [
 [
 "transform",
 "Fledgling"
+],
+[
+"delayed",
+"Fledgling"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Fledgling"
+]
+],
+"keywords": [
+740647
+]
 },
 "740871": {
 "tags": [
 [
 "resource_gain",
 "Great Mox"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740872": {
 "tags": [
 [
 "summon",
 "Bomb Spewer"
+],
+[
+"on_play",
+"Bomb Spewer"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Bomb Spewer"
+]
+],
+"keywords": [
+740624
+]
 },
 "740873": {
 "tags": [
@@ -2723,16 +4247,32 @@
 "Armored"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740616
+]
 },
 "740874": {
 "tags": [
 [
 "transform",
 "Fledgling"
+],
+[
+"delayed",
+"Fledgling"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Fledgling"
+]
+],
+"keywords": [
+740647
+]
 },
 "740877": {
 "tags": [
@@ -2743,18 +4283,52 @@
 [
 "forced_movement",
 "Hefty"
+],
+[
+"turn_end",
+"Hefty"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_end",
+"Hefty"
+]
+],
+"keywords": [
+740659
+]
 },
 "740879": {
 "tags": [
 [
 "revive",
 "Double Death"
+],
+[
+"other_death_trigger",
+"Double Death"
+],
+[
+"repeat_trigger",
+"Double Death"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"other_death_trigger",
+"Double Death"
+],
+[
+"repeat_trigger",
+"Double Death"
+]
+],
+"keywords": [
+740640
+]
 },
 "740882": {
 "tags": [
@@ -2763,7 +4337,10 @@
 "Gem Animator"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740649
+]
 },
 "740883": {
 "tags": [
@@ -2778,9 +4355,30 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740884": {
 "tags": [
@@ -2791,45 +4389,126 @@
 [
 "resource_gain",
 "Orange Mox"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740885": {
 "tags": [
 [
 "revive",
 "Unkillable"
+],
+[
+"death_trigger",
+"Unkillable"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Unkillable"
+]
+],
+"keywords": [
+740703
+]
 },
 "740886": {
 "tags": [
 [
 "revive",
 "Unkillable"
+],
+[
+"death_trigger",
+"Unkillable"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Unkillable"
+]
+],
+"keywords": [
+740703
+]
 },
 "740887": {
 "tags": [
 [
 "movement",
 "Sprinter"
+],
+[
+"turn_end",
+"Sprinter"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Sprinter"
+]
+],
+"keywords": [
+740690
+]
 },
 "740888": {
 "tags": [
 [
 "items_consumables",
 "Trinket Bearer"
+],
+[
+"on_play",
+"Trinket Bearer"
+],
+[
+"random_effect",
+"Trinket Bearer"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Trinket Bearer"
+],
+[
+"random_effect",
+"Trinket Bearer"
+]
+],
+"keywords": [
+740701
+]
 },
 "740889": {
 "tags": [
@@ -2838,7 +4517,10 @@
 "Double Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740641
+]
 },
 "740893": {
 "tags": [
@@ -2855,16 +4537,41 @@
 "Many Lives"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740666,
+740706
+]
 },
 "740894": {
 "tags": [
 [
 "damage",
 "Energy Gun"
+],
+[
+"activated",
+"Energy Gun"
+],
+[
+"ping",
+"Energy Gun"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Energy Gun"
+],
+[
+"ping",
+"Energy Gun"
+]
+],
+"keywords": [
+740643
+]
 },
 "740895": {
 "tags": [
@@ -2873,7 +4580,10 @@
 "Sharp Quills"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740683
+]
 },
 "740897": {
 "tags": [
@@ -2888,9 +4598,23 @@
 [
 "multi_target_attack",
 "Bifurcated Strike"
+],
+[
+"turn_end",
+"Sprinter"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_end",
+"Sprinter"
+]
+],
+"keywords": [
+740621,
+740690
+]
 },
 "740899": {
 "tags": [
@@ -2901,36 +4625,97 @@
 [
 "stances",
 "Transformer"
+],
+[
+"transform",
+"Transformer"
+],
+[
+"turn_start",
+"Transformer"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Transformer"
+],
+[
+"turn_start",
+"Transformer"
+]
+],
+"keywords": [
+740683,
+740698
+]
 },
 "740901": {
 "tags": [
 [
 "resource_gain",
 "Scavenger"
+],
+[
+"other_death_trigger",
+"Scavenger"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"other_death_trigger",
+"Scavenger"
+]
+],
+"keywords": [
+740681
+]
 },
 "740902": {
 "tags": [
 [
 "resource_gain",
 "Bone King"
+],
+[
+"death_trigger",
+"Bone King"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Bone King"
+]
+],
+"keywords": [
+740627
+]
 },
 "740907": {
 "tags": [
 [
 "self_destruct",
 "Brittle"
+],
+[
+"on_attack",
+"Brittle"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_attack",
+"Brittle"
+]
+],
+"keywords": [
+740629
+]
 },
 "740911": {
 "tags": [
@@ -2941,9 +4726,22 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"death_trigger",
+"Ruby Heart"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Ruby Heart"
+]
+],
+"keywords": [
+740680
+]
 },
 "740912": {
 "tags": [
@@ -2954,9 +4752,30 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740914": {
 "tags": [
@@ -2967,9 +4786,31 @@
 [
 "evasion",
 "Airborne"
+],
+[
+"transform",
+"Transformer"
+],
+[
+"turn_start",
+"Transformer"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Transformer"
+],
+[
+"turn_start",
+"Transformer"
+]
+],
+"keywords": [
+740612,
+740698
+]
 },
 "740915": {
 "tags": [
@@ -2980,9 +4821,23 @@
 [
 "movement",
 "Sprinter"
+],
+[
+"turn_end",
+"Sprinter"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Sprinter"
+]
+],
+"keywords": [
+740690,
+740705
+]
 },
 "740916": {
 "tags": [
@@ -2993,27 +4848,74 @@
 [
 "terrain",
 "Terrain"
+],
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Mox Sigils"
+],
+[
+"resource_gain",
+"Mox Sigils"
+]
+],
+"keywords": [
+740671
+]
 },
 "740917": {
 "tags": [
 [
 "damage",
 "Sentry"
+],
+[
+"on_enemy_enter",
+"Sentry"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_enemy_enter",
+"Sentry"
+]
+],
+"keywords": [
+740682
+]
 },
 "740918": {
 "tags": [
 [
 "damage",
 "Sentry"
+],
+[
+"on_enemy_enter",
+"Sentry"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_enemy_enter",
+"Sentry"
+]
+],
+"keywords": [
+740682
+]
 },
 "740920": {
 "tags": [
@@ -3024,9 +4926,30 @@
 [
 "shield",
 "Shield Latch"
+],
+[
+"merge_attach",
+"Shield Latch"
+],
+[
+"target_choice",
+"Shield Latch"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Shield Latch"
+],
+[
+"target_choice",
+"Shield Latch"
+]
+],
+"keywords": [
+740684
+]
 },
 "740921": {
 "tags": [
@@ -3035,7 +4958,10 @@
 "Armored"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740616
+]
 },
 "740922": {
 "tags": [
@@ -3046,18 +4972,53 @@
 [
 "damage",
 "Sentry"
+],
+[
+"on_enemy_enter",
+"Sentry"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_enemy_enter",
+"Sentry"
+]
+],
+"keywords": [
+740682,
+740697
+]
 },
 "740924": {
 "tags": [
 [
 "death_trigger",
 "Brittle Latch"
+],
+[
+"merge_attach",
+"Brittle Latch"
+],
+[
+"target_choice",
+"Brittle Latch"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Brittle Latch"
+],
+[
+"target_choice",
+"Brittle Latch"
+]
+],
+"keywords": [
+740630
+]
 },
 "740925": {
 "tags": [
@@ -3068,27 +5029,75 @@
 [
 "self_destruct",
 "Gem Dependant"
+],
+[
+"on_attack",
+"Brittle"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_attack",
+"Brittle"
+]
+],
+"keywords": [
+740629,
+740650
+]
 },
 "740927": {
 "tags": [
 [
 "self_destruct",
 "Brittle"
+],
+[
+"on_attack",
+"Brittle"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_attack",
+"Brittle"
+]
+],
+"keywords": [
+740629
+]
 },
 "740928": {
 "tags": [
 [
 "protection",
 "Loose Tail"
+],
+[
+"summon",
+"Loose Tail"
+],
+[
+"movement",
+"Loose Tail"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"summon",
+"Loose Tail"
+],
+[
+"movement",
+"Loose Tail"
+]
+],
+"keywords": [
+740663
+]
 },
 "740929": {
 "tags": [
@@ -3097,7 +5106,10 @@
 "Stinky"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740694
+]
 },
 "740930": {
 "tags": [
@@ -3106,7 +5118,10 @@
 "Sniper"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740687
+]
 },
 "740932": {
 "tags": [
@@ -3117,18 +5132,52 @@
 [
 "multi_attack",
 "Trifurcated When Powered"
+],
+[
+"link_formation",
+"Trifurcated When Powered"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"link_formation",
+"Trifurcated When Powered"
+]
+],
+"keywords": [
+740700
+]
 },
 "740934": {
 "tags": [
 [
 "summon",
 "Squirrel Shedder"
+],
+[
+"turn_end",
+"Squirrel Shedder"
+],
+[
+"movement",
+"Squirrel Shedder"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Squirrel Shedder"
+],
+[
+"movement",
+"Squirrel Shedder"
+]
+],
+"keywords": [
+740691
+]
 },
 "740935": {
 "tags": [
@@ -3141,25 +5190,55 @@
 "Airborne"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740612,
+740679
+]
 },
 "740937": {
 "tags": [
 [
 "copy",
 "Fecundity"
+],
+[
+"on_play",
+"Fecundity"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Fecundity"
+]
+],
+"keywords": [
+740645
+]
 },
 "740938": {
 "tags": [
 [
 "stat_gain",
 "Stimulate"
+],
+[
+"activated",
+"Stimulate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Stimulate"
+]
+],
+"keywords": [
+740693
+]
 },
 "740939": {
 "tags": [
@@ -3168,7 +5247,10 @@
 "Stinky"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740694
+]
 },
 "740943": {
 "tags": [
@@ -3181,16 +5263,32 @@
 "Terrain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740669
+]
 },
 "740946": {
 "tags": [
 [
 "stat_gain",
 "Swapper"
+],
+[
+"on_damaged",
+"Swapper"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_damaged",
+"Swapper"
+]
+],
+"keywords": [
+740695
+]
 },
 "740948": {
 "tags": [
@@ -3201,27 +5299,99 @@
 [
 "transform",
 "Fledgling"
+],
+[
+"delayed",
+"Fledgling"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Fledgling"
+]
+],
+"keywords": [
+740647,
+740705
+]
 },
 "740949": {
 "tags": [
 [
 "summon",
 "Bellist"
+],
+[
+"on_play",
+"Bellist"
+],
+[
+"adjacency",
+"Bellist"
+],
+[
+"other_death_trigger",
+"Bellist"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Bellist"
+],
+[
+"adjacency",
+"Bellist"
+],
+[
+"other_death_trigger",
+"Bellist"
+]
+],
+"keywords": [
+740620
+]
 },
 "740950": {
 "tags": [
 [
 "summon",
 "Bellist"
+],
+[
+"on_play",
+"Bellist"
+],
+[
+"adjacency",
+"Bellist"
+],
+[
+"other_death_trigger",
+"Bellist"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Bellist"
+],
+[
+"adjacency",
+"Bellist"
+],
+[
+"other_death_trigger",
+"Bellist"
+]
+],
+"keywords": [
+740620
+]
 },
 "740951": {
 "tags": [
@@ -3238,7 +5408,12 @@
 "Made Of Stone"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+740665,
+740669,
+740673
+]
 },
 "740952": {
 "tags": [
@@ -3257,9 +5432,32 @@
 [
 "permanent_growth",
 "Increases its Power by 1 every turn"
+],
+[
+"turn_start",
+"Tidal Lock"
+],
+[
+"forced_movement",
+"Tidal Lock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_start",
+"Tidal Lock"
+],
+[
+"forced_movement",
+"Tidal Lock"
+]
+],
+"keywords": [
+740669,
+740673,
+740696
+]
 },
 "740953": {
 "tags": [
@@ -3282,9 +5480,33 @@
 [
 "permanent_growth",
 "Increases its Power by 1 every turn"
+],
+[
+"turn_start",
+"Tidal Lock"
+],
+[
+"forced_movement",
+"Tidal Lock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_start",
+"Tidal Lock"
+],
+[
+"forced_movement",
+"Tidal Lock"
+]
+],
+"keywords": [
+740665,
+740669,
+740673,
+740696
+]
 },
 "740956": {
 "tags": [
@@ -3300,18 +5522,44 @@
 [
 "resource_gain",
 "Bone King"
+],
+[
+"death_trigger",
+"Bone King"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Bone King"
+]
+],
+"keywords": [
+740627
+]
 },
 "740959": {
 "tags": [
 [
 "generate_cards",
 "Disentomb"
+],
+[
+"activated",
+"Disentomb"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Disentomb"
+]
+],
+"keywords": [
+740639
+]
 },
 "740960": {
 "tags": [
@@ -3324,47 +5572,124 @@
 "Terrain"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+740679
+]
 },
 "740961": {
 "tags": [
 [
 "stat_gain",
 "Buff When Powered"
+],
+[
+"link_formation",
+"Buff When Powered"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"link_formation",
+"Buff When Powered"
+]
+],
+"keywords": [
+740632
+]
 },
 "740964": {
 "tags": [
 [
 "generate_cards",
 "Rabbit Hole"
+],
+[
+"on_play",
+"Rabbit Hole"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Rabbit Hole"
+]
+],
+"keywords": [
+740677
+]
 },
 "740965": {
 "tags": [
 [
 "forced_movement",
 "Rampager"
+],
+[
+"turn_end",
+"Rampager"
+],
+[
+"movement",
+"Rampager"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Rampager"
+],
+[
+"movement",
+"Rampager"
+]
+],
+"keywords": [
+740678
+]
 },
 "740968": {
 "tags": [
 [
 "on_kill",
 "Blood Lust"
+],
+[
+"temporary_buff",
+"Blood Lust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"temporary_buff",
+"Blood Lust"
+]
+],
+"keywords": [
+740622
+]
 },
 "740969": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"variable_stats",
+"Ants"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"variable_stats",
+"Ants"
+]
+],
+"keywords": [
+740710
+]
 },
 "740971": {
 "tags": [
@@ -3375,9 +5700,23 @@
 [
 "self_destruct",
 "Brittle"
+],
+[
+"on_attack",
+"Brittle"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_attack",
+"Brittle"
+]
+],
+"keywords": [
+740612,
+740629
+]
 },
 "740972": {
 "tags": [
@@ -5021,9 +7360,97 @@
 [
 "other_death_trigger",
 "If a card that you own dies"
+],
+[
+"random_ability",
+"Amorphous"
+],
+[
+"death_trigger",
+"Bomb Latch"
+],
+[
+"merge_attach",
+"Bomb Latch"
+],
+[
+"target_choice",
+"Bomb Latch"
+],
+[
+"death_trigger",
+"Brittle Latch"
+],
+[
+"merge_attach",
+"Brittle Latch"
+],
+[
+"target_choice",
+"Brittle Latch"
+],
+[
+"death_trigger",
+"Shield Latch"
+],
+[
+"merge_attach",
+"Shield Latch"
+],
+[
+"target_choice",
+"Shield Latch"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_ability",
+"Amorphous"
+],
+[
+"death_trigger",
+"Bomb Latch"
+],
+[
+"merge_attach",
+"Bomb Latch"
+],
+[
+"target_choice",
+"Bomb Latch"
+],
+[
+"death_trigger",
+"Brittle Latch"
+],
+[
+"merge_attach",
+"Brittle Latch"
+],
+[
+"target_choice",
+"Brittle Latch"
+],
+[
+"death_trigger",
+"Shield Latch"
+],
+[
+"merge_attach",
+"Shield Latch"
+],
+[
+"target_choice",
+"Shield Latch"
+]
+],
+"keywords": [
+740613,
+740623,
+740630,
+740684
+]
 },
 "741035": {
 "tags": [

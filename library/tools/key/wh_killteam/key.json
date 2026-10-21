@@ -1472,9 +1472,22 @@
 [
 "buff",
 "gains the Balanced special rule"
+],
+[
+"advantage",
+"Balanced"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Balanced"
+]
+],
+"keywords": [
+788692
+]
 },
 "789269": {
 "tags": [
@@ -1498,9 +1511,22 @@
 [
 "play_restriction",
 "cannot move more than 3\u2b24 in the same activation"
+],
+[
+"play_restriction",
+"Heavy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"play_restriction",
+"Heavy"
+]
+],
+"keywords": [
+788699
+]
 },
 "789279": {
 "tags": [
@@ -1572,9 +1598,22 @@
 [
 "buff",
 "gains the Rending critical hit rule"
+],
+[
+"debuff",
+"Brutal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"debuff",
+"Brutal"
+]
+],
+"keywords": [
+788694
+]
 },
 "789314": {
 "tags": [
@@ -3457,9 +3496,40 @@
 [
 "piercing",
 "AP1"
+],
+[
+"piercing",
+"APx"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+]
+],
+"keywords": [
+788690,
+788696,
+788698
+]
 },
 "790043": {
 "tags": [
@@ -3470,9 +3540,83 @@
 [
 "multi_target_attack",
 "Blast \u2b24"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"damage",
+"MWx"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"damage",
+"MWx"
+]
+],
+"keywords": [
+788690,
+788693,
+788696,
+788697,
+788698,
+788704
+]
 },
 "790044": {
 "tags": [
@@ -3528,9 +3672,31 @@
 [
 "random_effect",
 "2D3"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"exhaust",
+"Limited"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"exhaust",
+"Limited"
+]
+],
+"keywords": [
+788702,
+788703
+]
 },
 "790049": {
 "tags": [
@@ -3549,9 +3715,31 @@
 [
 "tribal",
 "BROODGUARD"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"targeting_rules",
+"Rng x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Balanced"
+],
+[
+"targeting_rules",
+"Rng x"
+]
+],
+"keywords": [
+788692,
+788698
+]
 },
 "790052": {
 "tags": [
@@ -3594,9 +3782,40 @@
 [
 "aura",
 "Friendly BROOD BROTHER operatives have a 5+ invulnerable save"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+]
+],
+"keywords": [
+788698,
+788702,
+788712
+]
 },
 "790053": {
 "tags": [
@@ -3639,9 +3858,31 @@
 [
 "speed",
 "You can activate it twice during the Turning Point"
+],
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
+]
+],
+"keywords": [
+788708,
+788709
+]
 },
 "790055": {
 "tags": [
@@ -3652,9 +3893,74 @@
 [
 "multi_target_attack",
 "Blast \u2b24"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+]
+],
+"keywords": [
+788690,
+788693,
+788698,
+788702,
+788712
+]
 },
 "790066": {
 "tags": [
@@ -3742,9 +4048,22 @@
 [
 "piercing",
 "AP1"
+],
+[
+"piercing",
+"APx"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+]
+],
+"keywords": [
+788690
+]
 },
 "790086": {
 "tags": [
@@ -3755,18 +4074,87 @@
 [
 "multi_target_attack",
 "Blast \u2b24"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Rending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Rending"
+]
+],
+"keywords": [
+788690,
+788693,
+788709
+]
 },
 "790088": {
 "tags": [
 [
 "first_strike",
 "resolve one successful hit before the Attacker"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"advantage",
+"Relentless"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"advantage",
+"Relentless"
+]
+],
+"keywords": [
+788702,
+788708
+]
 },
 "790089": {
 "tags": [
@@ -3851,9 +4239,100 @@
 [
 "ranged",
 "Heavy"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"play_restriction",
+"HEAVY"
+],
+[
+"piercing",
+"Px"
+],
+[
+"buff",
+"Rending"
+],
+[
+"distribute",
+"Fusillade"
+],
+[
+"multi_target_attack",
+"Fusillade"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"play_restriction",
+"HEAVY"
+],
+[
+"piercing",
+"Px"
+],
+[
+"buff",
+"Rending"
+],
+[
+"distribute",
+"Fusillade"
+],
+[
+"multi_target_attack",
+"Fusillade"
+]
+],
+"keywords": [
+788690,
+788693,
+788695,
+788699,
+788706,
+788709,
+788714
+]
 },
 "790103": {
 "tags": [
@@ -3893,9 +4372,58 @@
 [
 "multi_target_attack",
 "Torrent \u2b24"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"damage",
+"MWx"
+],
+[
+"advantage",
+"Relentless"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"damage",
+"MWx"
+],
+[
+"advantage",
+"Relentless"
+]
+],
+"keywords": [
+788690,
+788697,
+788698,
+788704,
+788708
+]
 },
 "790113": {
 "tags": [
@@ -3934,9 +4462,31 @@
 [
 "play_restriction",
 "cannot perform mission actions"
+],
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
+]
+],
+"keywords": [
+788708,
+788709
+]
 },
 "790115": {
 "tags": [
@@ -3991,9 +4541,40 @@
 [
 "play_restriction",
 "cannot perform this action while within Engagement Range of an enemy operative"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"aoe_damage",
+"Splash x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"aoe_damage",
+"Splash x"
+]
+],
+"keywords": [
+788698,
+788709,
+788711
+]
 },
 "790117": {
 "tags": [
@@ -4065,9 +4646,48 @@
 [
 "disable",
 "cannot perform any actions other than Pass"
+],
+[
+"targeting_rules",
+"Ruthless Efficiency"
+],
+[
+"piercing",
+"Ruthless Efficiency"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stat_loss",
+"Stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Ruthless Efficiency"
+],
+[
+"piercing",
+"Ruthless Efficiency"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stat_loss",
+"Stun"
+]
+],
+"keywords": [
+788670,
+788709,
+788712
+]
 },
 "790121": {
 "tags": [
@@ -4106,9 +4726,30 @@
 [
 "play_restriction",
 "cannot perform this action while within Engagement Range of an enemy operative"
+],
+[
+"targeting_rules",
+"Ruthless Efficiency"
+],
+[
+"piercing",
+"Ruthless Efficiency"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Ruthless Efficiency"
+],
+[
+"piercing",
+"Ruthless Efficiency"
+]
+],
+"keywords": [
+788670
+]
 },
 "790124": {
 "tags": [
@@ -4143,9 +4784,30 @@
 [
 "play_restriction",
 "cannot perform this action while within Engagement Range of an enemy operative"
+],
+[
+"targeting_rules",
+"Ruthless Efficiency"
+],
+[
+"piercing",
+"Ruthless Efficiency"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Ruthless Efficiency"
+],
+[
+"piercing",
+"Ruthless Efficiency"
+]
+],
+"keywords": [
+788670
+]
 },
 "790133": {
 "tags": [
@@ -4164,9 +4826,56 @@
 [
 "condition_count",
 "for each attack dice your opponent discards"
+],
+[
+"protection",
+"Rogue"
+],
+[
+"modal_choice",
+"Rogue"
+],
+[
+"immunity",
+"Rogue"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"buff",
+"Lethal x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"protection",
+"Rogue"
+],
+[
+"modal_choice",
+"Rogue"
+],
+[
+"immunity",
+"Rogue"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"buff",
+"Lethal x"
+]
+],
+"keywords": [
+788671,
+788692,
+788702
+]
 },
 "790140": {
 "tags": [
@@ -4197,9 +4906,38 @@
 [
 "death_trigger",
 "incapacitated"
+],
+[
+"protection",
+"Rogue"
+],
+[
+"modal_choice",
+"Rogue"
+],
+[
+"immunity",
+"Rogue"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"protection",
+"Rogue"
+],
+[
+"modal_choice",
+"Rogue"
+],
+[
+"immunity",
+"Rogue"
+]
+],
+"keywords": [
+788671
+]
 },
 "790144": {
 "tags": [
@@ -4222,9 +4960,58 @@
 [
 "piercing",
 "AP1"
+],
+[
+"piercing",
+"APx"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Rending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Rending"
+]
+],
+"keywords": [
+788690,
+788692,
+788696,
+788698,
+788709
+]
 },
 "790149": {
 "tags": [
@@ -4251,9 +5038,40 @@
 [
 "stat_gain",
 "Add 1 to its APL"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+]
+],
+"keywords": [
+788698,
+788702,
+788712
+]
 },
 "790151": {
 "tags": [
@@ -4296,9 +5114,31 @@
 [
 "modal_choice",
 "Resolve a FELLGOR RAVAGER psychic power"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"stat_loss",
+"Stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"stat_loss",
+"Stun"
+]
+],
+"keywords": [
+788696,
+788712
+]
 },
 "790152": {
 "tags": [
@@ -4358,9 +5198,39 @@
 [
 "multi_attack",
 "you can fight in combat with this weapon profile against another enemy operative"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"distribute",
+"Fusillade"
+],
+[
+"multi_target_attack",
+"Fusillade"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"distribute",
+"Fusillade"
+],
+[
+"multi_target_attack",
+"Fusillade"
+]
+],
+"keywords": [
+788698,
+788714
+]
 },
 "790158": {
 "tags": [
@@ -4375,9 +5245,22 @@
 [
 "aura",
 "while within \u2b1b of this operative"
+],
+[
+"buff",
+"Lethal x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+]
+],
+"keywords": [
+788702
+]
 },
 "790166": {
 "tags": [
@@ -4388,9 +5271,76 @@
 [
 "multi_target_attack",
 "Splash 1"
+],
+[
+"merge_attach",
+"Kombi"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"buff",
+"Rending"
+],
+[
+"aoe_damage",
+"Splash x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Kombi"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"buff",
+"Rending"
+],
+[
+"aoe_damage",
+"Splash x"
+]
+],
+"keywords": [
+788676,
+788690,
+788697,
+788698,
+788703,
+788709,
+788711
+]
 },
 "790172": {
 "tags": [
@@ -4466,9 +5416,22 @@
 [
 "on_attack",
 "the first time it strikes with a critical hit"
+],
+[
+"advantage",
+"Relentless"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Relentless"
+]
+],
+"keywords": [
+788708
+]
 },
 "790176": {
 "tags": [
@@ -4479,9 +5442,56 @@
 [
 "multi_target_attack",
 "Blast \u2b24"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Rending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Rending"
+]
+],
+"keywords": [
+788690,
+788693,
+788709
+]
 },
 "790178": {
 "tags": [
@@ -4536,9 +5546,32 @@
 [
 "piercing",
 "No Cover"
+],
+[
+"piercing",
+"Indirect"
+],
+[
+"stealth",
+"Silent"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Indirect"
+],
+[
+"stealth",
+"Silent"
+]
+],
+"keywords": [
+788700,
+788705,
+788710
+]
 },
 "790181": {
 "tags": [
@@ -4569,9 +5602,22 @@
 [
 "random_effect",
 "2D3"
+],
+[
+"buff",
+"Lethal x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+]
+],
+"keywords": [
+788702
+]
 },
 "790182": {
 "tags": [
@@ -4618,9 +5664,74 @@
 [
 "multi_target_attack",
 "Blast \u25b2"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast X"
+],
+[
+"piercing",
+"Blast X"
+],
+[
+"play_restriction",
+"Blast X"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"piercing",
+"Indirect"
+],
+[
+"exhaust",
+"Limited"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Blast X"
+],
+[
+"piercing",
+"Blast X"
+],
+[
+"play_restriction",
+"Blast X"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"piercing",
+"Indirect"
+],
+[
+"exhaust",
+"Limited"
+]
+],
+"keywords": [
+788690,
+788693,
+788698,
+788700,
+788703
+]
 },
 "790186": {
 "tags": [
@@ -4668,9 +5779,49 @@
 [
 "buff",
 "you can reroll any rolls of attack dice of one result"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stealth",
+"Silent"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stealth",
+"Silent"
+]
+],
+"keywords": [
+788698,
+788703,
+788709,
+788710
+]
 },
 "790201": {
 "tags": [
@@ -4697,13 +5848,73 @@
 [
 "piercing",
 "AP1"
+],
+[
+"regeneration",
+"Living Metal"
+],
+[
+"turn_start",
+"Living Metal"
+],
+[
+"piercing",
+"APx"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"regeneration",
+"Living Metal"
+],
+[
+"turn_start",
+"Living Metal"
+],
+[
+"piercing",
+"APx"
+]
+],
+"keywords": [
+788683,
+788690
+]
 },
 "790205": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"condition_life",
+"Synapse"
+],
+[
+"adjacency",
+"Synapse"
+],
+[
+"immunity",
+"Synapse"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"condition_life",
+"Synapse"
+],
+[
+"adjacency",
+"Synapse"
+],
+[
+"immunity",
+"Synapse"
+]
+],
+"keywords": [
+788684
+]
 },
 "790220": {
 "tags": [
@@ -4718,9 +5929,55 @@
 [
 "buff",
 "you can retain one as a successful normal hit without rolling it"
+],
+[
+"play_restriction",
+"Artificial Intelligence"
+],
+[
+"stat_loss",
+"Artificial Intelligence"
+],
+[
+"debuff",
+"Artificial Intelligence"
+],
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"play_restriction",
+"Artificial Intelligence"
+],
+[
+"stat_loss",
+"Artificial Intelligence"
+],
+[
+"debuff",
+"Artificial Intelligence"
+],
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+]
+],
+"keywords": [
+788685,
+788686
+]
 },
 "790223": {
 "tags": [
@@ -4747,9 +6004,64 @@
 [
 "play_restriction",
 "This operative cannot perform this action while within Engagement Range of enemy operatives"
+],
+[
+"play_restriction",
+"Artificial Intelligence"
+],
+[
+"stat_loss",
+"Artificial Intelligence"
+],
+[
+"debuff",
+"Artificial Intelligence"
+],
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+],
+[
+"play_restriction",
+"Heavy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"play_restriction",
+"Artificial Intelligence"
+],
+[
+"stat_loss",
+"Artificial Intelligence"
+],
+[
+"debuff",
+"Artificial Intelligence"
+],
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+],
+[
+"play_restriction",
+"Heavy"
+]
+],
+"keywords": [
+788685,
+788686,
+788699
+]
 },
 "790227": {
 "tags": [
@@ -4765,8 +6077,40 @@
 "by": "C"
 },
 "790231": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"play_restriction",
+"Heavy"
+],
+[
+"damage",
+"MWx"
+],
+[
+"stealth",
+"Silent"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"play_restriction",
+"Heavy"
+],
+[
+"damage",
+"MWx"
+],
+[
+"stealth",
+"Silent"
+]
+],
+"keywords": [
+788699,
+788704,
+788710
+]
 },
 "790235": {
 "tags": [
@@ -4781,9 +6125,30 @@
 [
 "turn_number",
 "At the start of the first Strategy phase"
+],
+[
+"immunity",
+"Void Armour"
+],
+[
+"protection",
+"Void Armour"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immunity",
+"Void Armour"
+],
+[
+"protection",
+"Void Armour"
+]
+],
+"keywords": [
+788687
+]
 },
 "790249": {
 "tags": [
@@ -4802,9 +6167,22 @@
 [
 "play_restriction",
 "Perform any actions other than Dash, Fall Back, Normal Move or Pass"
+],
+[
+"team_play",
+"Group Activation"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"team_play",
+"Group Activation"
+]
+],
+"keywords": [
+788688
+]
 },
 "790250": {
 "tags": [
@@ -4844,9 +6222,40 @@
 [
 "piercing",
 "AP2"
+],
+[
+"piercing",
+"APx"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"damage",
+"MWx"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"damage",
+"MWx"
+]
+],
+"keywords": [
+788690,
+788698,
+788704
+]
 },
 "790272": {
 "tags": [
@@ -4927,9 +6336,22 @@
 [
 "play_restriction",
 "cannot perform Overwatch, Pick Up, Shoot or mission actions"
+],
+[
+"buff",
+"Rending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Rending"
+]
+],
+"keywords": [
+788709
+]
 },
 "790297": {
 "tags": [
@@ -4981,9 +6403,76 @@
 [
 "piercing",
 "AP1"
+],
+[
+"piercing",
+"APx"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stat_loss",
+"Stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stat_loss",
+"Stun"
+]
+],
+"keywords": [
+788690,
+788694,
+788696,
+788698,
+788702,
+788709,
+788712
+]
 },
 "790307": {
 "tags": [
@@ -5105,9 +6594,22 @@
 [
 "play_restriction",
 "This operative cannot perform this action if it is within Engagement Range of an enemy operative"
+],
+[
+"buff",
+"Lethal x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+]
+],
+"keywords": [
+788702
+]
 },
 "790320": {
 "tags": [
@@ -5122,13 +6624,67 @@
 [
 "cost_increase",
 "1 additional AP must be subtracted to perform that action"
+],
+[
+"damage",
+"MWx"
+],
+[
+"piercing",
+"Px"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"stat_loss",
+"Stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"MWx"
+],
+[
+"piercing",
+"Px"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"stat_loss",
+"Stun"
+]
+],
+"keywords": [
+788704,
+788706,
+788710,
+788712
+]
 },
 "790322": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"stealth",
+"Silent"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"stealth",
+"Silent"
+]
+],
+"keywords": [
+788710
+]
 },
 "790323": {
 "tags": [
@@ -5234,13 +6790,109 @@
 [
 "piercing",
 "AP1"
+],
+[
+"piercing",
+"APx"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"MWx"
+],
+[
+"stealth",
+"Silent"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"MWx"
+],
+[
+"stealth",
+"Silent"
+]
+],
+"keywords": [
+788690,
+788702,
+788704,
+788710
+]
 },
 "790331": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"play_restriction",
+"Artificial Intelligence"
+],
+[
+"stat_loss",
+"Artificial Intelligence"
+],
+[
+"debuff",
+"Artificial Intelligence"
+],
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+],
+[
+"advantage",
+"Relentless"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"play_restriction",
+"Artificial Intelligence"
+],
+[
+"stat_loss",
+"Artificial Intelligence"
+],
+[
+"debuff",
+"Artificial Intelligence"
+],
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+],
+[
+"advantage",
+"Relentless"
+]
+],
+"keywords": [
+788685,
+788686,
+788708
+]
 },
 "790356": {
 "tags": [
@@ -5280,18 +6932,89 @@
 [
 "multi_target_attack",
 "Torrent \u2b24"
+],
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+]
+],
+"keywords": [
+788690,
+788697,
+788698
+]
 },
 "790377": {
 "tags": [
 [
 "piercing",
 "AP1"
+],
+[
+"piercing",
+"APx"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"buff",
+"Lethal x"
+]
+],
+"keywords": [
+788690,
+788696,
+788698,
+788702
+]
 },
 "790382": {
 "tags": [
@@ -5326,9 +7049,31 @@
 [
 "death_trigger",
 "incapacitated"
+],
+[
+"piercing",
+"APx"
+],
+[
+"stealth",
+"Silent"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"stealth",
+"Silent"
+]
+],
+"keywords": [
+788690,
+788710
+]
 },
 "790383": {
 "tags": [
@@ -5408,9 +7153,22 @@
 [
 "modal_choice",
 "Resolve a VOID-DANCER TROUPE psychic power"
+],
+[
+"stat_loss",
+"Stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_loss",
+"Stun"
+]
+],
+"keywords": [
+788712
+]
 },
 "790391": {
 "tags": [
@@ -5481,9 +7239,137 @@
 [
 "temporary_effect",
 "Until the start of this operative's next activation"
+],
+[
+"piercing",
+"APx"
+],
+[
+"terrain",
+"Barrage"
+],
+[
+"piercing",
+"Barrage"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"piercing",
+"Indirect"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"MWx"
+],
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stat_loss",
+"Stun"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"APx"
+],
+[
+"terrain",
+"Barrage"
+],
+[
+"piercing",
+"Barrage"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Rng x"
+],
+[
+"piercing",
+"Indirect"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"MWx"
+],
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stat_loss",
+"Stun"
+]
+],
+"keywords": [
+788690,
+788691,
+788693,
+788697,
+788698,
+788700,
+788702,
+788704,
+788705,
+788708,
+788709,
+788712
+]
 },
 "790394": {
 "tags": [
@@ -5510,9 +7396,22 @@
 [
 "temporary_effect",
 "Until the end of the Turning Point"
+],
+[
+"buff",
+"Rending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Rending"
+]
+],
+"keywords": [
+788709
+]
 },
 "790409": {
 "tags": [
@@ -5543,9 +7442,93 @@
 [
 "multi_target_attack",
 "Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"piercing",
+"Seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"piercing",
+"Seek"
+]
+],
+"keywords": [
+788693,
+788699,
+788710,
+788755,
+788756,
+788757,
+788758,
+788763
+]
 },
 "790419": {
 "tags": [
@@ -5556,9 +7539,93 @@
 [
 "multi_target_attack",
 "Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788693,
+788696,
+788697,
+788755,
+788756,
+788757,
+788758,
+788760
+]
 },
 "790431": {
 "tags": [
@@ -5577,9 +7644,31 @@
 [
 "stat_condition",
 "Normal Dmg of 3 or more"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"targeting_rules",
+"Range x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Balanced"
+],
+[
+"targeting_rules",
+"Range x"
+]
+],
+"keywords": [
+788692,
+788757
+]
 },
 "790433": {
 "tags": [
@@ -5610,9 +7699,40 @@
 [
 "zone_of_control",
 "move within control range of them"
+],
+[
+"team_play",
+"Group Activation"
+],
+[
+"buff",
+"Rending"
+],
+[
+"piercing",
+"Seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"team_play",
+"Group Activation"
+],
+[
+"buff",
+"Rending"
+],
+[
+"piercing",
+"Seek"
+]
+],
+"keywords": [
+788688,
+788709,
+788763
+]
 },
 "790434": {
 "tags": [
@@ -5655,9 +7775,49 @@
 [
 "repeat_trigger",
 "Keep rolling one D6 in this manner"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788702,
+788757,
+788760,
+788765
+]
 },
 "790435": {
 "tags": [
@@ -5692,9 +7852,31 @@
 [
 "speed",
 "You can activate this operative twice during the turning point"
+],
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Relentless"
+],
+[
+"buff",
+"Rending"
+]
+],
+"keywords": [
+788708,
+788709
+]
 },
 "790439": {
 "tags": [
@@ -5717,9 +7899,58 @@
 [
 "stat_loss",
 "subtract 1 from its APL stat"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788702,
+788712,
+788756,
+788757,
+788760
+]
 },
 "790440": {
 "tags": [
@@ -5758,9 +7989,47 @@
 [
 "counterattack",
 "inflict 1 damage on that enemy operative"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"piercing",
+"Piercing x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"piercing",
+"Piercing x"
+]
+],
+"keywords": [
+788693,
+788756
+]
 },
 "790441": {
 "tags": [
@@ -5803,9 +8072,83 @@
 [
 "extra_turn",
 "That selected operative can immediately perform a 1AP action for free"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"piercing",
+"Seek"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"piercing",
+"Seek"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788693,
+788712,
+788756,
+788763,
+788764,
+788765
+]
 },
 "790447": {
 "tags": [
@@ -5848,9 +8191,40 @@
 [
 "tribal",
 "CELESTIAN INSIDIANT"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788694,
+788702,
+788760
+]
 },
 "790451": {
 "tags": [
@@ -5865,9 +8239,48 @@
 [
 "terrain",
 "cover saves"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"play_restriction",
+"Heavy"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+]
+],
+"keywords": [
+788699,
+788710,
+788755
+]
 },
 "790454": {
 "tags": [
@@ -5878,9 +8291,40 @@
 [
 "first_strike",
 "resolve one of your successes before the normal order"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788695,
+788702,
+788760
+]
 },
 "790455": {
 "tags": [
@@ -5907,9 +8351,49 @@
 [
 "activated",
 "STRATEGIC GAMBIT"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"piercing",
+"Seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Rending"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"piercing",
+"Seek"
+]
+],
+"keywords": [
+788709,
+788710,
+788758,
+788763
+]
 },
 "790456": {
 "tags": [
@@ -5928,9 +8412,58 @@
 [
 "random_effect",
 "D3+2"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788695,
+788702,
+788710,
+788757,
+788760
+]
 },
 "790460": {
 "tags": [
@@ -5949,9 +8482,66 @@
 [
 "shield",
 "the first time an attack dice inflicts Normal Dmg on that friendly operative, ignore that inflicted damage"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stealth",
+"Silent"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788710,
+788712,
+788755,
+788764,
+788765
+]
 },
 "790472": {
 "tags": [
@@ -5962,9 +8552,22 @@
 [
 "tribal",
 "DEATH KORPS TROOPER"
+],
+[
+"team_play",
+"Group Activation"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"team_play",
+"Group Activation"
+]
+],
+"keywords": [
+788688
+]
 },
 "790475": {
 "tags": [
@@ -5975,9 +8578,40 @@
 [
 "first_strike",
 "resolve one of your successes before the normal order"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788694,
+788702,
+788760
+]
 },
 "790479": {
 "tags": [
@@ -6004,9 +8638,31 @@
 [
 "cost_set",
 "costs you 0CP"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788702,
+788760
+]
 },
 "790484": {
 "tags": [
@@ -6037,9 +8693,58 @@
 [
 "modal_choice",
 "you can either gain 1 additional CP or use an additional WARRANT OF TRADE rule"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"piercing",
+"Seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"piercing",
+"Seek"
+]
+],
+"keywords": [
+788702,
+788756,
+788757,
+788760,
+788763
+]
 },
 "790489": {
 "tags": [
@@ -6066,9 +8771,58 @@
 [
 "piercing",
 "Piercing x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788693,
+788702,
+788710,
+788756,
+788760
+]
 },
 "790490": {
 "tags": [
@@ -6083,9 +8837,40 @@
 [
 "buff",
 "this operative\u2019s weapons have the Lethal 5+ weapon rule"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788702,
+788709,
+788760
+]
 },
 "790491": {
 "tags": [
@@ -6096,9 +8881,40 @@
 [
 "multi_attack",
 "this operative can immediately perform a free Fight action afterwards"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788695,
+788702,
+788760
+]
 },
 "790497": {
 "tags": [
@@ -6141,9 +8957,22 @@
 [
 "piercing",
 "Seek Light weapon rule"
+],
+[
+"piercing",
+"Seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Seek"
+]
+],
+"keywords": [
+788763
+]
 },
 "790501": {
 "tags": [
@@ -6174,9 +9003,39 @@
 [
 "play_restriction",
 "cannot perform this action while it has a Conceal order"
+],
+[
+"cheat_death",
+"Frenzy"
+],
+[
+"stat_loss",
+"Frenzy"
+],
+[
+"advantage",
+"Ceaseless"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cheat_death",
+"Frenzy"
+],
+[
+"stat_loss",
+"Frenzy"
+],
+[
+"advantage",
+"Ceaseless"
+]
+],
+"keywords": [
+788673,
+788695
+]
 },
 "790504": {
 "tags": [
@@ -6199,9 +9058,48 @@
 [
 "permanent_growth",
 "Until the end of the battle, add the result to the Critical Dmg stat"
+],
+[
+"cheat_death",
+"Frenzy"
+],
+[
+"stat_loss",
+"Frenzy"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cheat_death",
+"Frenzy"
+],
+[
+"stat_loss",
+"Frenzy"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788673,
+788702,
+788760
+]
 },
 "790508": {
 "tags": [
@@ -6224,9 +9122,39 @@
 [
 "random_effect",
 "D3+1"
+],
+[
+"cheat_death",
+"Frenzy"
+],
+[
+"stat_loss",
+"Frenzy"
+],
+[
+"debuff",
+"Brutal"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cheat_death",
+"Frenzy"
+],
+[
+"stat_loss",
+"Frenzy"
+],
+[
+"debuff",
+"Brutal"
+]
+],
+"keywords": [
+788673,
+788694
+]
 },
 "790513": {
 "tags": [
@@ -6245,9 +9173,39 @@
 [
 "stat_gain",
 "add 1 to the Atk stat of this weapon"
+],
+[
+"team_play",
+"Group Activation"
+],
+[
+"play_restriction",
+"MUTOID VERMIN"
+],
+[
+"cost_reduction",
+"MUTOID VERMIN"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"team_play",
+"Group Activation"
+],
+[
+"play_restriction",
+"MUTOID VERMIN"
+],
+[
+"cost_reduction",
+"MUTOID VERMIN"
+]
+],
+"keywords": [
+788688,
+788744
+]
 },
 "790515": {
 "tags": [
@@ -6266,9 +9224,65 @@
 [
 "damage",
 "inflict 1 damage"
+],
+[
+"play_restriction",
+"Mutoid Vermin"
+],
+[
+"cost_reduction",
+"Mutoid Vermin"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"play_restriction",
+"Mutoid Vermin"
+],
+[
+"cost_reduction",
+"Mutoid Vermin"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+]
+],
+"keywords": [
+788744,
+788755,
+788756,
+788757
+]
 },
 "790517": {
 "tags": [
@@ -6308,9 +9322,57 @@
 [
 "movement",
 "Perform a free Dash action"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Rending"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Rending"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+]
+],
+"keywords": [
+788695,
+788709,
+788755,
+788757
+]
 },
 "790526": {
 "tags": [
@@ -6337,9 +9399,92 @@
 [
 "aura",
 "Whenever an operative is within 3\" of that Utility Grenade marker"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"exhaust",
+"limited"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"exhaust",
+"Limited x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"exhaust",
+"limited"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"exhaust",
+"Limited x"
+]
+],
+"keywords": [
+788693,
+788699,
+788703,
+788756,
+788757,
+788758,
+788761
+]
 },
 "790529": {
 "tags": [
@@ -6407,9 +9552,22 @@
 [
 "play_restriction",
 "cannot perform this action while within control range of an enemy operative"
+],
+[
+"advantage",
+"Balanced"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Balanced"
+]
+],
+"keywords": [
+788692
+]
 },
 "790531": {
 "tags": [
@@ -6502,9 +9660,49 @@
 [
 "activated",
 "STRATEGIC GAMBIT"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788695,
+788702,
+788757,
+788760
+]
 },
 "790537": {
 "tags": [
@@ -6519,9 +9717,49 @@
 [
 "piercing",
 "Piercing x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"play_restriction",
+"Heavy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"play_restriction",
+"Heavy"
+]
+],
+"keywords": [
+788693,
+788695,
+788699,
+788756
+]
 },
 "790538": {
 "tags": [
@@ -6577,9 +9815,58 @@
 [
 "buff",
 "this operative\u2019s weapons have the Punishing weapon rule"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"exhaust",
+"Limited x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Limited"
+],
+[
+"buff",
+"Rending"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"exhaust",
+"Limited x"
+]
+],
+"keywords": [
+788703,
+788709,
+788710,
+788757,
+788761
+]
 },
 "790543": {
 "tags": [
@@ -6603,9 +9890,77 @@
 [
 "multi_target_attack",
 "Torrent x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"buff",
+"Rending"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"buff",
+"Rending"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788696,
+788697,
+788699,
+788709,
+788755,
+788756,
+788757,
+788760
+]
 },
 "790549": {
 "tags": [
@@ -6636,9 +9991,22 @@
 [
 "once_per_game",
 "This operative can only perform this action once per battle"
+],
+[
+"piercing",
+"Seek"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"piercing",
+"Seek"
+]
+],
+"keywords": [
+788763
+]
 },
 "790551": {
 "tags": [
@@ -6677,9 +10045,22 @@
 [
 "temporary_effect",
 "Until the end of the turning point"
+],
+[
+"piercing",
+"Seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Seek"
+]
+],
+"keywords": [
+788763
+]
 },
 "790558": {
 "tags": [
@@ -6714,9 +10095,31 @@
 [
 "zone_of_control",
 "Whenever an enemy operative would perform the Fall Back action while within control range of this operative"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"buff",
+"Rending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Balanced"
+],
+[
+"buff",
+"Rending"
+]
+],
+"keywords": [
+788692,
+788709
+]
 },
 "790560": {
 "tags": [
@@ -6743,9 +10146,31 @@
 [
 "protection",
 "Whenever an operative is shooting the selected operative, in the Roll Defence Dice step"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Seek"
+]
+],
+"keywords": [
+788757,
+788763
+]
 },
 "790562": {
 "tags": [
@@ -6764,9 +10189,40 @@
 [
 "buff",
 "this operative\u2019s weapons have the Relentless weapon rule"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+]
+],
+"keywords": [
+788697,
+788757,
+788758
+]
 },
 "790567": {
 "tags": [
@@ -6871,9 +10327,48 @@
 [
 "play_restriction",
 "cannot perform this action while within control range of an enemy operative"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"play_restriction",
+"Heavy"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+]
+],
+"keywords": [
+788699,
+788710,
+788755
+]
 },
 "790616": {
 "tags": [
@@ -6904,9 +10399,31 @@
 [
 "play_restriction",
 "cannot perform this action while within control range of an enemy operative"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"debuff",
+"Brutal"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788694,
+788765
+]
 },
 "790617": {
 "tags": [
@@ -6929,9 +10446,56 @@
 [
 "fodder",
 "This operative is ignored for your opponent\u2019s kill/elimination op"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"exhaust",
+"Limited x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"exhaust",
+"Limited x"
+]
+],
+"keywords": [
+788693,
+788703,
+788761
+]
 },
 "790620": {
 "tags": [
@@ -6942,9 +10506,33 @@
 [
 "piercing",
 "Seek"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+]
+],
+"keywords": [
+788697,
+788757,
+788758,
+788763
+]
 },
 "790627": {
 "tags": [
@@ -6967,9 +10555,31 @@
 [
 "heal",
 "it regains D3+3 lost wounds"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788702,
+788760
+]
 },
 "790633": {
 "tags": [
@@ -6988,9 +10598,30 @@
 [
 "resource_gain",
 "you gain 1CP"
+],
+[
+"free_play",
+"Favoured of the Dark Gods"
+],
+[
+"cooldowns",
+"Favoured of the Dark Gods"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"free_play",
+"Favoured of the Dark Gods"
+],
+[
+"cooldowns",
+"Favoured of the Dark Gods"
+]
+],
+"keywords": [
+788715
+]
 },
 "790636": {
 "tags": [
@@ -7017,9 +10648,40 @@
 [
 "shield",
 "ignore the damage inflicted from that attack dice"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788702,
+788760,
+788765
+]
 },
 "790643": {
 "tags": [
@@ -7046,9 +10708,58 @@
 [
 "buff",
 "Balanced, Brutal, Punishing, Severe, Shock"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Punishing"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Balanced"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Punishing"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788692,
+788694,
+788762,
+788764,
+788765
+]
 },
 "790644": {
 "tags": [
@@ -7149,9 +10860,49 @@
 [
 "play_restriction",
 "you cannot spend more than 2AP for it"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788695,
+788702,
+788709,
+788760
+]
 },
 "790651": {
 "tags": [
@@ -7186,9 +10937,76 @@
 [
 "random_effect",
 "D3"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"debuff",
+"Brutal"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788694,
+788696,
+788702,
+788756,
+788757,
+788760,
+788765
+]
 },
 "790653": {
 "tags": [
@@ -7199,9 +11017,49 @@
 [
 "multi_target_attack",
 "Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"play_restriction",
+"Heavy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"play_restriction",
+"Heavy"
+]
+],
+"keywords": [
+788693,
+788697,
+788699,
+788756
+]
 },
 "790655": {
 "tags": [
@@ -7220,9 +11078,40 @@
 [
 "buff",
 "have the Lethal 4+ weapon rule"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788695,
+788702,
+788760
+]
 },
 "790657": {
 "tags": [
@@ -7270,9 +11159,31 @@
 [
 "autonomous_units",
 "this NPO"
+],
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
+]
+],
+"keywords": [
+788756,
+788757
+]
 },
 "790669": {
 "tags": [
@@ -7283,9 +11194,40 @@
 [
 "terrain",
 "Light terrain"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Balanced"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788692,
+788702,
+788760
+]
 },
 "790670": {
 "tags": [
@@ -7316,27 +11258,113 @@
 [
 "multi_target_attack",
 "Torrent x"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+]
+],
+"keywords": [
+788695,
+788697,
+788755,
+788756,
+788757,
+788758
+]
 },
 "790672": {
 "tags": [
 [
 "multi_attack",
 "two Fight actions during each of its activations"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788702,
+788760
+]
 },
 "790673": {
 "tags": [
 [
 "piercing",
 "Piercing x"
+],
+[
+"targeting_rules",
+"Range x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Range x"
+]
+],
+"keywords": [
+788756,
+788757
+]
 },
 "790674": {
 "tags": [
@@ -7367,9 +11395,33 @@
 [
 "multi_target_attack",
 "Torrent x"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Punishing"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Punishing"
+]
+],
+"keywords": [
+788694,
+788697,
+788756,
+788762
+]
 },
 "790676": {
 "tags": [
@@ -7428,9 +11480,75 @@
 [
 "speed",
 "it can activate multiple times per turning point"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"buff",
+"Severe"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"buff",
+"Severe"
+]
+],
+"keywords": [
+788702,
+788709,
+788755,
+788757,
+788760,
+788764
+]
 },
 "790678": {
 "tags": [
@@ -7545,18 +11663,52 @@
 [
 "terrain",
 "temporarily remove that terrain feature from the killzone"
+],
+[
+"regeneration",
+"Living Metal"
+],
+[
+"turn_start",
+"Living Metal"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"regeneration",
+"Living Metal"
+],
+[
+"turn_start",
+"Living Metal"
+]
+],
+"keywords": [
+788683
+]
 },
 "790689": {
 "tags": [
 [
 "counterattack",
 "inflict damage equal to the weapon\u2019s Critical Dmg stat on the enemy operative"
+],
+[
+"advantage",
+"Ceaseless"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+]
+],
+"keywords": [
+788695
+]
 },
 "790690": {
 "tags": [
@@ -7579,9 +11731,58 @@
 [
 "multi_attack",
 "it can perform two Fight actions during its next activation"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788702,
+788712,
+788757,
+788760,
+788765
+]
 },
 "790692": {
 "tags": [
@@ -7592,9 +11793,31 @@
 [
 "buff",
 "it has the Ceaseless weapon rule"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"advantage",
+"Ceaseless"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"debuff",
+"Brutal"
+],
+[
+"advantage",
+"Ceaseless"
+]
+],
+"keywords": [
+788694,
+788695
+]
 },
 "790693": {
 "tags": [
@@ -7625,9 +11848,31 @@
 [
 "buff",
 "weapons have the Severe weapon rule"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Severe"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Severe"
+]
+],
+"keywords": [
+788694,
+788764
+]
 },
 "790694": {
 "tags": [
@@ -7659,9 +11904,40 @@
 [
 "tribal",
 "NOVITIATE"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+]
+],
+"keywords": [
+788697,
+788757,
+788758
+]
 },
 "790697": {
 "tags": [
@@ -7681,9 +11957,58 @@
 [
 "piercing",
 "Piercing x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788696,
+788702,
+788755,
+788756,
+788760
+]
 },
 "790707": {
 "tags": [
@@ -7736,9 +12061,77 @@
 [
 "piercing",
 "Piercing x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_over_time",
+"Poison"
+],
+[
+"stat_gain",
+"Toxic"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_over_time",
+"Poison"
+],
+[
+"stat_gain",
+"Toxic"
+]
+],
+"keywords": [
+788696,
+788702,
+788756,
+788757,
+788760,
+788764,
+788782,
+788783
+]
 },
 "790715": {
 "tags": [
@@ -7761,9 +12154,76 @@
 [
 "heal",
 "regains 7 lost wounds"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+],
+[
+"damage_over_time",
+"Poison"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+],
+[
+"damage_over_time",
+"Poison"
+]
+],
+"keywords": [
+788697,
+788712,
+788757,
+788758,
+788764,
+788765,
+788782
+]
 },
 "790718": {
 "tags": [
@@ -7778,18 +12238,80 @@
 [
 "cost_set",
 "costs you 0CP"
+],
+[
+"targeting_rules",
+"Range x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Range x"
+]
+],
+"keywords": [
+788757
+]
 },
 "790720": {
 "tags": [
 [
 "damage_over_time",
 "*Poison"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_over_time",
+"Poison"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_over_time",
+"Poison"
+]
+],
+"keywords": [
+788697,
+788757,
+788758,
+788764,
+788782
+]
 },
 "790723": {
 "tags": [
@@ -7804,9 +12326,39 @@
 [
 "multi_target_attack",
 "Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788693,
+788765
+]
 },
 "790727": {
 "tags": [
@@ -7876,9 +12428,74 @@
 [
 "damage_over_time",
 "*Poison"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_over_time",
+"Poison"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_over_time",
+"Poison"
+]
+],
+"keywords": [
+788693,
+788702,
+788757,
+788760,
+788782
+]
 },
 "790738": {
 "tags": [
@@ -7917,9 +12534,31 @@
 [
 "scope_multi",
 "each of those friendly SANCTIFIER operatives"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"debuff",
+"Brutal"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788694,
+788765
+]
 },
 "790741": {
 "tags": [
@@ -7934,9 +12573,31 @@
 [
 "stances",
 "Change this operative's order"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"targeting_rules",
+"Range x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stealth",
+"Silent"
+],
+[
+"targeting_rules",
+"Range x"
+]
+],
+"keywords": [
+788710,
+788757
+]
 },
 "790750": {
 "tags": [
@@ -8025,9 +12686,67 @@
 [
 "piercing",
 "Piercing x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788696,
+788702,
+788755,
+788756,
+788757,
+788760
+]
 },
 "790755": {
 "tags": [
@@ -8054,9 +12773,40 @@
 [
 "piercing",
 "Piercing x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"play_restriction",
+"Heavy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"play_restriction",
+"Heavy"
+]
+],
+"keywords": [
+788693,
+788699,
+788756
+]
 },
 "790771": {
 "tags": [
@@ -8071,18 +12821,107 @@
 [
 "variable_stats",
 "you only roll a number of attack dice equal to the opponent's discarded attack dice plus one"
+],
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Rending"
+],
+[
+"targeting_rules",
+"Range x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+],
+[
+"buff",
+"Rending"
+],
+[
+"targeting_rules",
+"Range x"
+]
+],
+"keywords": [
+788695,
+788709,
+788757
+]
 },
 "790772": {
 "tags": [
 [
 "piercing",
 "Piercing x"
+],
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"friendly_fire",
+"Hot"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788696,
+788702,
+788755,
+788756,
+788757,
+788760
+]
 },
 "790776": {
 "tags": [
@@ -8105,9 +12944,47 @@
 [
 "multi_target_attack",
 "Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+]
+],
+"keywords": [
+788693,
+788755
+]
 },
 "790779": {
 "tags": [
@@ -8171,18 +13048,98 @@
 [
 "aura",
 "another friendly VESPID STINGWING operative within 6\" of this operative"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"piercing",
+"Seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"piercing",
+"Seek"
+]
+],
+"keywords": [
+788702,
+788758,
+788760,
+788763
+]
 },
 "790785": {
 "tags": [
 [
 "multi_target_attack",
 "Torrent x"
+],
+[
+"play_restriction",
+"Heavy"
+],
+[
+"buff",
+"Rending"
+],
+[
+"immunity",
+"Harlequin's Panoply"
+],
+[
+"zone_of_control",
+"Harlequin's Panoply"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"play_restriction",
+"Heavy"
+],
+[
+"buff",
+"Rending"
+],
+[
+"immunity",
+"Harlequin's Panoply"
+],
+[
+"zone_of_control",
+"Harlequin's Panoply"
+]
+],
+"keywords": [
+788697,
+788699,
+788709,
+788797
+]
 },
 "790786": {
 "tags": [
@@ -8205,18 +13162,132 @@
 [
 "temporary_effect",
 "Until the end of the turning point"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Seek"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"stealth",
+"Silent"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Seek"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788693,
+788710,
+788712,
+788757,
+788763,
+788765
+]
 },
 "790793": {
 "tags": [
 [
 "multi_attack",
 "it can immediately perform a free Fight action afterwards"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Rending"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788694,
+788702,
+788709,
+788760
+]
 },
 "790796": {
 "tags": [
@@ -8235,9 +13306,31 @@
 [
 "territory_trigger",
 "within your opponent's territory"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"targeting_rules",
+"Range x"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"advantage",
+"Balanced"
+],
+[
+"targeting_rules",
+"Range x"
+]
+],
+"keywords": [
+788692,
+788757
+]
 },
 "790804": {
 "tags": [
@@ -8260,9 +13353,101 @@
 [
 "turn_number",
 "during the turning point that matches the result"
+],
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"piercing",
+"Seek"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"multi_target_attack",
+"Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"piercing",
+"Seek"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788693,
+788697,
+788712,
+788757,
+788758,
+788763,
+788764,
+788765
+]
 },
 "790808": {
 "tags": [
@@ -8289,9 +13474,48 @@
 [
 "multi_target_attack",
 "Blast x"
+],
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"exhaust",
+"Limited x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Blast x"
+],
+[
+"play_restriction",
+"Blast x"
+],
+[
+"exhaust",
+"Limited"
+],
+[
+"exhaust",
+"Limited x"
+]
+],
+"keywords": [
+788693,
+788703,
+788761
+]
 },
 "790812": {
 "tags": [
@@ -8302,9 +13526,22 @@
 [
 "tribal",
 "WYRMBLADE WARRIOR"
+],
+[
+"team_play",
+"Group Activation"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"team_play",
+"Group Activation"
+]
+],
+"keywords": [
+788688
+]
 },
 "790814": {
 "tags": [
@@ -8339,9 +13576,58 @@
 [
 "play_restriction",
 "cannot perform this action while it has an Engage order"
+],
+[
+"advantage",
+"Balanced"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Balanced"
+],
+[
+"debuff",
+"Brutal"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788692,
+788694,
+788702,
+788760,
+788765
+]
 },
 "790815": {
 "tags": [
@@ -8372,9 +13658,40 @@
 [
 "death_count",
 "if 2 or more friendly XV26 STEALTH BATTLESUIT operatives (excluding DRONE) are incapacitated"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Accurate X"
+],
+[
+"reactions",
+"For the Greater Good"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Range x"
+],
+[
+"buff",
+"Accurate X"
+],
+[
+"reactions",
+"For the Greater Good"
+]
+],
+"keywords": [
+788757,
+788759,
+788904
+]
 },
 "790819": {
 "tags": [
@@ -8602,8 +13919,38 @@
 "by": "A=B"
 },
 "790890": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"random_effect",
+"Combat Drugs"
+],
+[
+"stat_gain",
+"Combat Drugs"
+],
+[
+"start_of_game",
+"Combat Drugs"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"random_effect",
+"Combat Drugs"
+],
+[
+"stat_gain",
+"Combat Drugs"
+],
+[
+"start_of_game",
+"Combat Drugs"
+]
+],
+"keywords": [
+788843
+]
 },
 "790909": {
 "tags": [
@@ -8654,9 +14001,31 @@
 [
 "damage",
 "inflict 1 additional damage"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788702,
+788760
+]
 },
 "790910": {
 "tags": [
@@ -8703,9 +14072,48 @@
 [
 "targeting_rules",
 "doesn\u2019t prevent that enemy operative from being selected as a valid target"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"buff",
+"Lethal x+"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"buff",
+"Lethal x+"
+]
+],
+"keywords": [
+788702,
+788755,
+788760
+]
 },
 "790911": {
 "tags": [
@@ -8768,9 +14176,102 @@
 [
 "temporary_effect",
 "until the end of their next activations"
+],
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_target_attack",
+"Torrent x"
+],
+[
+"buff",
+"Lethal x"
+],
+[
+"stat_loss",
+"Stun"
+],
+[
+"damage",
+"Devastating x"
+],
+[
+"aoe_damage",
+"Devastating x"
+],
+[
+"targeting_rules",
+"Range x"
+],
+[
+"piercing",
+"Saturate"
+],
+[
+"buff",
+"Lethal x+"
+],
+[
+"buff",
+"Severe"
+],
+[
+"damage_prevention",
+"Shock"
+]
+],
+"keywords": [
+788697,
+788702,
+788712,
+788755,
+788757,
+788758,
+788760,
+788764,
+788765
+]
 },
 "790914": {
 "tags": [
@@ -8909,8 +14410,48 @@
 "by": "C"
 },
 "790931": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"movement",
+"Flip Belt"
+],
+[
+"immunity",
+"Flip Belt"
+],
+[
+"saving_throws",
+"Holo-suit"
+],
+[
+"buff",
+"Rising Crescendo"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flip Belt"
+],
+[
+"immunity",
+"Flip Belt"
+],
+[
+"saving_throws",
+"Holo-suit"
+],
+[
+"buff",
+"Rising Crescendo"
+]
+],
+"keywords": [
+788861,
+788862,
+788863
+]
 },
 "790937": {
 "tags": [
@@ -9134,9 +14675,48 @@
 [
 "random_effect",
 "roll a D6"
+],
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+],
+[
+"reactions",
+"For the Greater Good"
+],
+[
+"play_restriction",
+"Support Subroutines"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"bodyguard",
+"Saviour Protocols"
+],
+[
+"temporary_effect",
+"Saviour Protocols"
+],
+[
+"reactions",
+"For the Greater Good"
+],
+[
+"play_restriction",
+"Support Subroutines"
+]
+],
+"keywords": [
+788686,
+788904,
+788906
+]
 },
 "790992": {
 "tags": [
@@ -9637,9 +15217,22 @@
 [
 "immunity",
 "cannot be selected as a valid target"
+],
+[
+"piercing",
+"Seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Seek"
+]
+],
+"keywords": [
+788763
+]
 },
 "814878": {
 "tags": [
@@ -9693,9 +15286,22 @@
 [
 "play_restriction",
 "cannot use this weapon in an activation or counteraction in which it moved"
+],
+[
+"play_restriction",
+"Heavy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"play_restriction",
+"Heavy"
+]
+],
+"keywords": [
+788699
+]
 },
 "814892": {
 "tags": [
@@ -9847,9 +15453,22 @@
 [
 "temporary_effect",
 "for that combat"
+],
+[
+"targeting_rules",
+"Rng x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Rng x"
+]
+],
+"keywords": [
+788698
+]
 },
 "816472": {
 "tags": [
@@ -9864,18 +15483,44 @@
 [
 "multi_target_attack",
 "Torrent x"
+],
+[
+"buff",
+"Lethal x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+]
+],
+"keywords": [
+788702
+]
 },
 "816480": {
 "tags": [
 [
 "saving_throws",
 "This operative has a 6+ invulnerable save"
+],
+[
+"piercing",
+"APx"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"piercing",
+"APx"
+]
+],
+"keywords": [
+788690
+]
 },
 "816481": {
 "tags": [
@@ -9899,9 +15544,22 @@
 [
 "modal_choice",
 "select one psychic power to be resolved"
+],
+[
+"targeting_rules",
+"Rng x"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"targeting_rules",
+"Rng x"
+]
+],
+"keywords": [
+788698
+]
 },
 "816490": {
 "tags": [
@@ -9916,9 +15574,22 @@
 [
 "control_reward",
 "if it\u2019s within \u2b24 of an objective marker"
+],
+[
+"advantage",
+"Ceaseless"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+]
+],
+"keywords": [
+788695
+]
 },
 "816491": {
 "tags": [
@@ -9933,9 +15604,22 @@
 [
 "stealth",
 "it is always treated as having a Conceal order"
+],
+[
+"advantage",
+"Ceaseless"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Ceaseless"
+]
+],
+"keywords": [
+788695
+]
 },
 "816492": {
 "tags": [
@@ -9958,9 +15642,22 @@
 [
 "buff",
 "you can re-roll one of your attack dice"
+],
+[
+"advantage",
+"Balanced"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"advantage",
+"Balanced"
+]
+],
+"keywords": [
+788692
+]
 },
 "816495": {
 "tags": [
@@ -9971,9 +15668,22 @@
 [
 "terrain",
 "if it is in Cover"
+],
+[
+"buff",
+"Rending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Rending"
+]
+],
+"keywords": [
+788709
+]
 },
 "816496": {
 "tags": [
@@ -9988,9 +15698,22 @@
 [
 "stat_gain",
 "Add 1 to its APL"
+],
+[
+"play_restriction",
+"Heavy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"play_restriction",
+"Heavy"
+]
+],
+"keywords": [
+788699
+]
 },
 "816501": {
 "tags": [
@@ -10005,27 +15728,66 @@
 [
 "immunity",
 "This operative cannot be targeted or affected by psychic actions"
+],
+[
+"multi_target_attack",
+"Torrent x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"multi_target_attack",
+"Torrent x"
+]
+],
+"keywords": [
+788697
+]
 },
 "816503": {
 "tags": [
 [
 "multi_attack",
 "two Fight actions during its activation"
+],
+[
+"buff",
+"Lethal x"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Lethal x"
+]
+],
+"keywords": [
+788702
+]
 },
 "816505": {
 "tags": [
 [
 "stealth",
 "while it has a Conceal order"
+],
+[
+"targeting_rules",
+"Rng x"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"targeting_rules",
+"Rng x"
+]
+],
+"keywords": [
+788698
+]
 },
 "816507": {
 "tags": [
@@ -10052,9 +15814,22 @@
 [
 "turn_number",
 "during the first Turning Point"
+],
+[
+"buff",
+"Lethal x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Lethal x"
+]
+],
+"keywords": [
+788702
+]
 },
 "816512": {
 "tags": [
@@ -10086,9 +15861,31 @@
 [
 "piercing",
 "APx"
+],
+[
+"regeneration",
+"Living Metal"
+],
+[
+"turn_start",
+"Living Metal"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"regeneration",
+"Living Metal"
+],
+[
+"turn_start",
+"Living Metal"
+]
+],
+"keywords": [
+788683,
+788690
+]
 },
 "816530": {
 "tags": [
@@ -10115,8 +15912,21 @@
 [
 "piercing",
 "APx"
+],
+[
+"targeting_rules",
+"Rng x"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"targeting_rules",
+"Rng x"
+]
+],
+"keywords": [
+788698
+]
 }
 }

@@ -165,7 +165,10 @@
 "Divine Shield"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "742544": {
 "tags": [
@@ -203,7 +206,10 @@
 "Freezes the target"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "742570": {
 "tags": [
@@ -216,7 +222,10 @@
 "Gain +2 Attack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742397
+]
 },
 "742594": {
 "tags": [
@@ -237,7 +246,10 @@
 "you've cast this game"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "742599": {
 "tags": [
@@ -254,7 +266,10 @@
 "Equip a 2/5 Immovable Object"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "742604": {
 "tags": [
@@ -271,7 +286,10 @@
 "Reduce the Cost of spells in your hand by (1)"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742397
+]
 },
 "742612": {
 "tags": [
@@ -292,7 +310,10 @@
 "It costs (1) more"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742364
+]
 },
 "742618": {
 "tags": [
@@ -313,7 +334,10 @@
 "both players' hands"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "742645": {
 "tags": [
@@ -351,7 +375,10 @@
 "costs (1) more"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "742692": {
 "tags": [
@@ -393,7 +420,10 @@
 "Windfury"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "742720": {
 "tags": [
@@ -410,7 +440,10 @@
 "Summon another Gruntled Patron"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742406
+]
 },
 "742789": {
 "tags": [
@@ -448,7 +481,10 @@
 "transform an enemy minion into a 0/1 Frog with Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "742821": {
 "tags": [
@@ -469,7 +505,11 @@
 "deal 6 damage to a minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359,
+742365
+]
 },
 "742823": {
 "tags": [
@@ -511,7 +551,10 @@
 "costs (5) or more"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "742897": {
 "tags": [
@@ -528,7 +571,10 @@
 "Summon two 2/2 Treants"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742369
+]
 },
 "742899": {
 "tags": [
@@ -549,7 +595,10 @@
 "destroy the enemy hero"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "742935": {
 "tags": [
@@ -587,7 +636,10 @@
 "until your next turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "742959": {
 "tags": [
@@ -623,9 +675,23 @@
 [
 "overload_debt",
 "Overload: (1)"
+],
+[
+"overload_debt",
+"Overload"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"overload_debt",
+"Overload"
+]
+],
+"keywords": [
+742359,
+742370
+]
 },
 "743012": {
 "tags": [
@@ -644,9 +710,22 @@
 [
 "overload_debt",
 "Overload: (1)"
+],
+[
+"overload_debt",
+"Overload"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"overload_debt",
+"Overload"
+]
+],
+"keywords": [
+742370
+]
 },
 "743058": {
 "tags": [
@@ -718,7 +797,10 @@
 "it may attack again"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742362
+]
 },
 "743133": {
 "tags": [
@@ -782,7 +864,11 @@
 "Your opponent draws 2 cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360,
+742362
+]
 },
 "743185": {
 "tags": [
@@ -904,9 +990,30 @@
 [
 "on_play",
 "Battlecry"
+],
+[
+"summon",
+"Herald"
+],
+[
+"upgrade",
+"Herald"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"summon",
+"Herald"
+],
+[
+"upgrade",
+"Herald"
+]
+],
+"keywords": [
+742408
+]
 },
 "743272": {
 "tags": [
@@ -915,7 +1022,10 @@
 "Elusive"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742381
+]
 },
 "743279": {
 "tags": [
@@ -978,7 +1088,11 @@
 "three times"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359,
+742361
+]
 },
 "743316": {
 "tags": [
@@ -999,7 +1113,10 @@
 "Adjoining Essences"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742401
+]
 },
 "743327": {
 "tags": [
@@ -1016,7 +1133,10 @@
 "Swap the Attack and Health"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "743332": {
 "tags": [
@@ -1029,7 +1149,10 @@
 "Shuffle this minion into your opponent's deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "743341": {
 "tags": [
@@ -1044,9 +1167,23 @@
 [
 "generate_cards",
 "Discover a Hunter, Paladin, or Warrior card"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742359,
+742363
+]
 },
 "743361": {
 "tags": [
@@ -1076,7 +1213,10 @@
 "random Potion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "743434": {
 "tags": [
@@ -1144,7 +1284,10 @@
 "return this to your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742373
+]
 },
 "743492": {
 "tags": [
@@ -1196,9 +1339,39 @@
 [
 "cost_reduction",
 "It costs (1) less"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+],
+[
+"tribal",
+"Kindred"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+],
+[
+"tribal",
+"Kindred"
+]
+],
+"keywords": [
+742363,
+742392
+]
 },
 "743544": {
 "tags": [
@@ -1232,7 +1405,10 @@
 "as the new target"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742364
+]
 },
 "743592": {
 "tags": [
@@ -1253,7 +1429,11 @@
 "random cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359,
+742373
+]
 },
 "743611": {
 "tags": [
@@ -1283,7 +1463,10 @@
 "deal 2 damage to all enemies"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742364
+]
 },
 "743642": {
 "tags": [
@@ -1300,7 +1483,10 @@
 "Once per game"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "743648": {
 "tags": [
@@ -1315,9 +1501,30 @@
 [
 "temporary_effect",
 "Temporary"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "743650": {
 "tags": [
@@ -1332,9 +1539,30 @@
 [
 "temporary_effect",
 "Temporary"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "743654": {
 "tags": [
@@ -1359,7 +1587,10 @@
 "all other minions"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "743703": {
 "tags": [
@@ -1380,7 +1611,10 @@
 "Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742369
+]
 },
 "743705": {
 "tags": [
@@ -1470,7 +1704,10 @@
 "a copy of your opponent's deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "743754": {
 "tags": [
@@ -1487,7 +1724,10 @@
 "top card"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "743764": {
 "tags": [
@@ -1512,7 +1752,10 @@
 "1-Cost spells"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "743778": {
 "tags": [
@@ -1533,7 +1776,10 @@
 "random friendly Beast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "743790": {
 "tags": [
@@ -1550,7 +1796,10 @@
 "0/1 Frozen Champions"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "743800": {
 "tags": [
@@ -1602,7 +1851,10 @@
 "left- and right-most cards"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "743876": {
 "tags": [
@@ -1632,7 +1884,10 @@
 "random card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "743919": {
 "tags": [
@@ -1672,9 +1927,31 @@
 [
 "information",
 "each player's hand"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742359,
+742363
+]
 },
 "743941": {
 "tags": [
@@ -1779,7 +2056,10 @@
 "attack all enemies"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "744021": {
 "tags": [
@@ -1796,7 +2076,10 @@
 "Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744024": {
 "tags": [
@@ -1851,7 +2134,10 @@
 "both players' decks"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744032": {
 "tags": [
@@ -1893,7 +2179,10 @@
 "choose a card in your opponent's hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "744047": {
 "tags": [
@@ -1935,7 +2224,10 @@
 "for each"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744064": {
 "tags": [
@@ -1992,9 +2284,30 @@
 [
 "cost_reduction",
 "Your next one costs (1) less"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "744106": {
 "tags": [
@@ -2009,9 +2322,30 @@
 [
 "draw",
 "draw them all instead"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "744117": {
 "tags": [
@@ -2075,7 +2409,10 @@
 "Summon a 1/1 Boar"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744189": {
 "tags": [
@@ -2105,7 +2442,10 @@
 "turns are only 15 seconds long"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742401
+]
 },
 "744205": {
 "tags": [
@@ -2139,7 +2479,10 @@
 "with all minion types"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744242": {
 "tags": [
@@ -2152,7 +2495,10 @@
 "Add two 1/1 Squirrels to your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "744249": {
 "tags": [
@@ -2167,9 +2513,22 @@
 [
 "repeat_trigger",
 "Also trigger its Deathrattle"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "744264": {
 "tags": [
@@ -2205,9 +2564,30 @@
 [
 "copy",
 "two copies of it"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "744291": {
 "tags": [
@@ -2222,9 +2602,30 @@
 [
 "cost_condition",
 "costs (3) or less"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "744295": {
 "tags": [
@@ -2275,7 +2676,10 @@
 "each player's board"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744374": {
 "tags": [
@@ -2286,9 +2690,30 @@
 [
 "generate_cards",
 "Excavate a treasure"
+],
+[
+"generate_cards",
+"Excavate"
+],
+[
+"permanent_growth",
+"Excavate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"Excavate"
+],
+[
+"permanent_growth",
+"Excavate"
+]
+],
+"keywords": [
+742409
+]
 },
 "744376": {
 "tags": [
@@ -2305,7 +2730,10 @@
 "your Battlecries trigger twice"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744378": {
 "tags": [
@@ -2358,9 +2786,22 @@
 [
 "condition_count",
 "equal to the number Frozen"
+],
+[
+"disable",
+"Freeze"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"disable",
+"Freeze"
+]
+],
+"keywords": [
+742371
+]
 },
 "744413": {
 "tags": [
@@ -2383,9 +2824,23 @@
 [
 "disable",
 "And Freeze them"
+],
+[
+"tribal",
+"Kindred"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"tribal",
+"Kindred"
+]
+],
+"keywords": [
+742359,
+742392
+]
 },
 "744416": {
 "tags": [
@@ -2421,9 +2876,30 @@
 [
 "stat_gain",
 "This gains +4 Attack"
+],
+[
+"in_hand_buff",
+"Corrupt"
+],
+[
+"cost_condition",
+"Corrupt"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"in_hand_buff",
+"Corrupt"
+],
+[
+"cost_condition",
+"Corrupt"
+]
+],
+"keywords": [
+742390
+]
 },
 "744462": {
 "tags": [
@@ -2452,7 +2928,10 @@
 "then dies"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "744474": {
 "tags": [
@@ -2473,7 +2952,10 @@
 "friendly Secret"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744479": {
 "tags": [
@@ -2494,7 +2976,10 @@
 "then Silence it"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "744532": {
 "tags": [
@@ -2550,7 +3035,10 @@
 "Swap their Costs"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "744596": {
 "tags": [
@@ -2563,7 +3051,10 @@
 "Draw Galakrond"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "744650": {
 "tags": [
@@ -2593,7 +3084,10 @@
 "Draw 3 spells from your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742387
+]
 },
 "744694": {
 "tags": [
@@ -2610,7 +3104,10 @@
 "highest Cost spell"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "744709": {
 "tags": [
@@ -2644,7 +3141,10 @@
 "The next 3 spells you play cast twice"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744754": {
 "tags": [
@@ -2687,7 +3187,10 @@
 "Outcast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742382
+]
 },
 "744820": {
 "tags": [
@@ -2715,9 +3218,22 @@
 [
 "overload_debt",
 "Overload: (2)"
+],
+[
+"overload_debt",
+"Overload"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"overload_debt",
+"Overload"
+]
+],
+"keywords": [
+742370
+]
 },
 "744853": {
 "tags": [
@@ -2742,7 +3258,10 @@
 "that much Attack and Health"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744854": {
 "tags": [
@@ -2780,7 +3299,10 @@
 "Summon that many 3/3 Imps"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "744875": {
 "tags": [
@@ -2801,7 +3323,10 @@
 "random weapon"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744877": {
 "tags": [
@@ -2818,7 +3343,10 @@
 "deal 2 damage"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "744886": {
 "tags": [
@@ -2835,7 +3363,10 @@
 "Once per game"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "744896": {
 "tags": [
@@ -2903,7 +3434,10 @@
 "Silence a minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742369
+]
 },
 "745023": {
 "tags": [
@@ -2914,9 +3448,22 @@
 [
 "damage",
 "deal 1 damage to it"
+],
+[
+"silence",
+"Silence"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"silence",
+"Silence"
+]
+],
+"keywords": [
+742383
+]
 },
 "745063": {
 "tags": [
@@ -2963,7 +3510,10 @@
 "reduce their Costs by (2)"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "745119": {
 "tags": [
@@ -2984,7 +3534,10 @@
 "Lifesteal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745157": {
 "tags": [
@@ -3005,7 +3558,10 @@
 "deal 5 damage to all enemies"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745188": {
 "tags": [
@@ -3030,7 +3586,10 @@
 "The next Draenei you play"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "745189": {
 "tags": [
@@ -3068,7 +3627,10 @@
 "Stealth?"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742362
+]
 },
 "745225": {
 "tags": [
@@ -3087,9 +3649,24 @@
 [
 "silence",
 "Silence this minion"
+],
+[
+"silence",
+"Silence"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"silence",
+"Silence"
+]
+],
+"keywords": [
+742360,
+742383,
+742396
+]
 },
 "745227": {
 "tags": [
@@ -3139,7 +3716,10 @@
 "Get a Backstab"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742368
+]
 },
 "745265": {
 "tags": [
@@ -3164,7 +3744,10 @@
 "gain 8 Armor"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742381
+]
 },
 "745268": {
 "tags": [
@@ -3177,7 +3760,10 @@
 "Double this minion's Attack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742396
+]
 },
 "745281": {
 "tags": [
@@ -3215,7 +3801,10 @@
 "Shuffle 3 Asteroids into your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745290": {
 "tags": [
@@ -3232,7 +3821,10 @@
 "all minions in your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745360": {
 "tags": [
@@ -3258,7 +3850,10 @@
 "set Attack equal to Health"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745384": {
 "tags": [
@@ -3271,7 +3866,10 @@
 "Give your weapon +1 Attack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742368
+]
 },
 "745385": {
 "tags": [
@@ -3292,7 +3890,10 @@
 "draw 2 cards"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742364
+]
 },
 "745398": {
 "tags": [
@@ -3402,7 +4003,10 @@
 "for each player"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745506": {
 "tags": [
@@ -3449,7 +4053,10 @@
 "deal 2 damage when drawn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742360
+]
 },
 "745525": {
 "tags": [
@@ -3466,7 +4073,10 @@
 "costs Corpses"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745530": {
 "tags": [
@@ -3512,7 +4122,10 @@
 "twice"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "745539": {
 "tags": [
@@ -3537,7 +4150,10 @@
 "adjacent minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745540": {
 "tags": [
@@ -3554,7 +4170,10 @@
 "gain Charge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745541": {
 "tags": [
@@ -3579,7 +4198,10 @@
 "play cards for 2 Mana"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "745551": {
 "tags": [
@@ -3627,9 +4249,31 @@
 [
 "revive",
 "Summon Moragg"
+],
+[
+"cost_reduction",
+"Prepare"
+],
+[
+"play_restriction",
+"Prepare"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cost_reduction",
+"Prepare"
+],
+[
+"play_restriction",
+"Prepare"
+]
+],
+"keywords": [
+742360,
+742404
+]
 },
 "745599": {
 "tags": [
@@ -3650,7 +4294,10 @@
 "random enemy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "745623": {
 "tags": [
@@ -3661,9 +4308,22 @@
 [
 "stat_gain",
 "And +1/+1"
+],
+[
+"resource_banking",
+"Finale"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_banking",
+"Finale"
+]
+],
+"keywords": [
+742395
+]
 },
 "745624": {
 "tags": [
@@ -3693,7 +4353,10 @@
 "Return a minion to its owner's hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742382
+]
 },
 "745689": {
 "tags": [
@@ -3727,7 +4390,10 @@
 "deals 7 damage to you when drawn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "745714": {
 "tags": [
@@ -3841,7 +4507,10 @@
 "They cost (1)"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745797": {
 "tags": [
@@ -3862,7 +4531,10 @@
 "reequip this"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "745812": {
 "tags": [
@@ -3883,7 +4555,10 @@
 "costs (5) or more"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745820": {
 "tags": [
@@ -3915,9 +4590,22 @@
 [
 "summon",
 "Summon a Frozen copy of it"
+],
+[
+"disable",
+"Freeze"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"disable",
+"Freeze"
+]
+],
+"keywords": [
+742371
+]
 },
 "745862": {
 "tags": [
@@ -3993,7 +4681,11 @@
 "Shuffle three Bombs into your opponent's deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360,
+742362
+]
 },
 "745895": {
 "tags": [
@@ -4006,7 +4698,10 @@
 "Give your weapon +1/+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "745903": {
 "tags": [
@@ -4048,7 +4743,11 @@
 "deal 5 damage to the enemy hero"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359,
+742399
+]
 },
 "745951": {
 "tags": [
@@ -4099,7 +4798,10 @@
 "Give your weapon +2 Attack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "746001": {
 "tags": [
@@ -4133,7 +4835,10 @@
 "reduce this card's Cost by (1)"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742361
+]
 },
 "746046": {
 "tags": [
@@ -4180,7 +4885,10 @@
 "Deathrattle cards"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746113": {
 "tags": [
@@ -4218,7 +4926,10 @@
 "Once per game"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "746170": {
 "tags": [
@@ -4231,7 +4942,10 @@
 "Permanently add a Vision of Darkness to your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746174": {
 "tags": [
@@ -4248,7 +4962,10 @@
 "Craft a custom Zombeast"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "746180": {
 "tags": [
@@ -4282,7 +4999,10 @@
 "if you control a location"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742361
+]
 },
 "746253": {
 "tags": [
@@ -4337,7 +5057,10 @@
 "the highest in the battlefield"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "746289": {
 "tags": [
@@ -4392,7 +5115,10 @@
 "Your opponent does the same"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742382
+]
 },
 "746333": {
 "tags": [
@@ -4447,7 +5173,10 @@
 "Destroy any minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742368
+]
 },
 "746351": {
 "tags": [
@@ -4489,7 +5218,10 @@
 "Give both +1/+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742382
+]
 },
 "746387": {
 "tags": [
@@ -4531,7 +5263,10 @@
 "Overload: (1)"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742362
+]
 },
 "746400": {
 "tags": [
@@ -4548,7 +5283,10 @@
 "Reduce the Cost of the cards drawn by (1)"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742388
+]
 },
 "746406": {
 "tags": [
@@ -4578,7 +5316,10 @@
 "equal to your hand size"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746421": {
 "tags": [
@@ -4595,7 +5336,10 @@
 "Shuffle three 3/3 copies into your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746448": {
 "tags": [
@@ -4641,7 +5385,10 @@
 "Destroy an enemy minion"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742368
+]
 },
 "746471": {
 "tags": [
@@ -4658,7 +5405,10 @@
 "Summon a 2/2 Treant"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742369
+]
 },
 "746487": {
 "tags": [
@@ -4688,7 +5438,10 @@
 "deal 5 damage"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746513": {
 "tags": [
@@ -4718,7 +5471,10 @@
 "next turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746525": {
 "tags": [
@@ -4743,7 +5499,10 @@
 "next turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746532": {
 "tags": [
@@ -4835,7 +5594,10 @@
 "deal 3 damage to all enemies"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746549": {
 "tags": [
@@ -4852,7 +5614,10 @@
 "deal 3 damage to your hero"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "746550": {
 "tags": [
@@ -4895,7 +5660,10 @@
 "for each time the enemy hero took damage this turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742367
+]
 },
 "746576": {
 "tags": [
@@ -4986,9 +5754,30 @@
 [
 "life_payment",
 "This costs Health instead of Mana"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "746626": {
 "tags": [
@@ -5034,7 +5823,10 @@
 "resurrect with that much Health"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "746643": {
 "tags": [
@@ -5051,7 +5843,10 @@
 "It's FULL of Coins!"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "746646": {
 "tags": [
@@ -5097,7 +5892,11 @@
 "random enemy"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742360,
+742422
+]
 },
 "746660": {
 "tags": [
@@ -5160,7 +5959,10 @@
 "(wherever they are)"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "746693": {
 "tags": [
@@ -5173,7 +5975,10 @@
 "Summon a 0/1 Eternal Seedling"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "746709": {
 "tags": [
@@ -5190,7 +5995,10 @@
 "Spit out the Bones of its Attack and Health into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "746727": {
 "tags": [
@@ -5213,9 +6021,30 @@
 [
 "card_advantage",
 "keep all 3 instead"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "746733": {
 "tags": [
@@ -5249,7 +6078,10 @@
 "that cost (1)"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746832": {
 "tags": [
@@ -5291,7 +6123,10 @@
 "restore 3 Health"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742360
+]
 },
 "746850": {
 "tags": [
@@ -5316,7 +6151,10 @@
 "take an extra turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "746866": {
 "tags": [
@@ -5370,7 +6208,11 @@
 "Swap places with it"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359,
+742360
+]
 },
 "746887": {
 "tags": [
@@ -5418,9 +6260,31 @@
 [
 "selection",
 "Discover them instead"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363,
+742382
+]
 },
 "746903": {
 "tags": [
@@ -5492,7 +6356,10 @@
 "Draw a Divine Shield minion and an Aura"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746943": {
 "tags": [
@@ -5551,7 +6418,10 @@
 "Swap stats"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742366
+]
 },
 "746948": {
 "tags": [
@@ -5572,7 +6442,10 @@
 "permanently doubled Attack and Health"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742360
+]
 },
 "746955": {
 "tags": [
@@ -5593,7 +6466,10 @@
 "Temporary"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "746958": {
 "tags": [
@@ -5629,9 +6505,31 @@
 [
 "random_effect",
 "at random"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742359,
+742363
+]
 },
 "746982": {
 "tags": [
@@ -5642,9 +6540,22 @@
 [
 "summon",
 "Summon a 5/5 Ironhide Runt"
+],
+[
+"excess_damage",
+"Overkill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"excess_damage",
+"Overkill"
+]
+],
+"keywords": [
+742414
+]
 },
 "747012": {
 "tags": [
@@ -5661,7 +6572,10 @@
 "gain 5 Armor"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "747061": {
 "tags": [
@@ -5733,7 +6647,10 @@
 "bottom of your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747123": {
 "tags": [
@@ -5779,7 +6696,10 @@
 "choose an Ancient Relic"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "747150": {
 "tags": [
@@ -5796,7 +6716,10 @@
 "on the bottom of your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747153": {
 "tags": [
@@ -5813,7 +6736,10 @@
 "for each spell you've cast this turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "747158": {
 "tags": [
@@ -5906,7 +6832,10 @@
 "with permanent +3/+3"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742360
+]
 },
 "747259": {
 "tags": [
@@ -5978,7 +6907,10 @@
 "Plagues they draw this game are unending"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "747352": {
 "tags": [
@@ -5995,7 +6927,10 @@
 "summon King Krush"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747367": {
 "tags": [
@@ -6042,7 +6977,10 @@
 "Deathrattle minion"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "747429": {
 "tags": [
@@ -6067,7 +7005,10 @@
 "summon Highkeeper Ra"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "747440": {
 "tags": [
@@ -6080,7 +7021,10 @@
 "Summon two 1/1 Desert Hares"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747453": {
 "tags": [
@@ -6097,7 +7041,10 @@
 "Summon a 1/1 copy of it"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "747548": {
 "tags": [
@@ -6156,7 +7103,10 @@
 "Elemental"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747608": {
 "tags": [
@@ -6244,7 +7194,10 @@
 "when drawn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747656": {
 "tags": [
@@ -6265,7 +7218,10 @@
 "top 2 cards of your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747679": {
 "tags": [
@@ -6282,7 +7238,10 @@
 "Shuffle this into your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742360
+]
 },
 "747680": {
 "tags": [
@@ -6301,9 +7260,31 @@
 [
 "enemy_benefit",
 "give to both players"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742359,
+742363
+]
 },
 "747720": {
 "tags": [
@@ -6345,7 +7326,10 @@
 "repeat"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747740": {
 "tags": [
@@ -6368,9 +7352,31 @@
 [
 "cost_condition",
 "equal to its Cost"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742359,
+742363
+]
 },
 "747756": {
 "tags": [
@@ -6383,7 +7389,10 @@
 "Give a friendly minion Lifesteal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747769": {
 "tags": [
@@ -6429,7 +7438,10 @@
 "Summon a copy of it"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "747785": {
 "tags": [
@@ -6448,9 +7460,30 @@
 [
 "copy",
 "copy it"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "747789": {
 "tags": [
@@ -6505,7 +7538,10 @@
 "Elemental"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747796": {
 "tags": [
@@ -6547,7 +7583,10 @@
 "remove all enemy minions from the game"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747819": {
 "tags": [
@@ -6568,7 +7607,10 @@
 "get a permanent Mirage"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747850": {
 "tags": [
@@ -6589,7 +7631,10 @@
 "Overload: (2)"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742362
+]
 },
 "747857": {
 "tags": [
@@ -6629,9 +7674,30 @@
 [
 "combo_sequence",
 "If you've played a Naga while holding this"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "747884": {
 "tags": [
@@ -6652,7 +7718,10 @@
 "Elemental"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747912": {
 "tags": [
@@ -6669,7 +7738,10 @@
 "gain an empty Mana Crystal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "747946": {
 "tags": [
@@ -6686,7 +7758,10 @@
 "next turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "747956": {
 "tags": [
@@ -6739,9 +7814,30 @@
 [
 "in_hand_buff",
 "give it +1/+1"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "747974": {
 "tags": [
@@ -6787,7 +7883,10 @@
 "corrupt the game with a random anomaly"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742361
+]
 },
 "797235": {
 "tags": [
@@ -6828,9 +7927,22 @@
 [
 "upgrade",
 "Rank 3"
+],
+[
+"disable",
+"Freeze"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"disable",
+"Freeze"
+]
+],
+"keywords": [
+742371
+]
 },
 "797364": {
 "tags": [
@@ -6889,7 +8001,10 @@
 "Lose the game"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "797423": {
 "tags": [
@@ -6931,7 +8046,10 @@
 "for 2 turns"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "797433": {
 "tags": [
@@ -6965,7 +8083,10 @@
 "deal 1 damage to all enemies"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "797446": {
 "tags": [
@@ -7007,7 +8128,11 @@
 "Advance fight"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360,
+742406
+]
 },
 "797511": {
 "tags": [
@@ -7032,7 +8157,10 @@
 "Advance fight"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742360
+]
 },
 "797522": {
 "tags": [
@@ -7049,7 +8177,10 @@
 "on top of your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "797531": {
 "tags": [
@@ -7091,7 +8222,10 @@
 "Summon two 0/6 Glowcap Mushrooms"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742382
+]
 },
 "797751": {
 "tags": [
@@ -7228,7 +8362,10 @@
 "Give your hero +1 Attack this turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "797872": {
 "tags": [
@@ -7288,7 +8425,11 @@
 "Each turn this is in your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742361,
+742401
+]
 },
 "797910": {
 "tags": [
@@ -7309,7 +8450,10 @@
 "this run"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742360
+]
 },
 "797914": {
 "tags": [
@@ -7322,7 +8466,10 @@
 "Your hero is Immune while attacking"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742375
+]
 },
 "797922": {
 "tags": [
@@ -7539,7 +8686,10 @@
 "with Taunt"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742360
+]
 },
 "798018": {
 "tags": [
@@ -7867,7 +9017,10 @@
 "Secrets"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "798440": {
 "tags": [
@@ -8007,9 +9160,30 @@
 [
 "copy",
 "two copies of it"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "798633": {
 "tags": [
@@ -8026,7 +9200,10 @@
 "lose the game"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "798660": {
 "tags": [
@@ -8095,7 +9272,10 @@
 "Battlecry"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "798707": {
 "tags": [
@@ -8154,7 +9334,10 @@
 "this gains +2/+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742380
+]
 },
 "798782": {
 "tags": [
@@ -8192,7 +9375,10 @@
 "ALL minions"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "798819": {
 "tags": [
@@ -8260,7 +9446,10 @@
 "Summon the Inner Gate of Quel'Thalas"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "798993": {
 "tags": [
@@ -8281,7 +9470,10 @@
 "random minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "799037": {
 "tags": [
@@ -8296,9 +9488,22 @@
 [
 "overload_debt",
 "Overload: (2)"
+],
+[
+"overload_debt",
+"Overload"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"overload_debt",
+"Overload"
+]
+],
+"keywords": [
+742370
+]
 },
 "799057": {
 "tags": [
@@ -8378,7 +9583,10 @@
 "Elemental minions"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "799094": {
 "tags": [
@@ -8449,7 +9657,11 @@
 "Advance fight"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360,
+742361
+]
 },
 "799133": {
 "tags": [
@@ -8470,7 +9682,12 @@
 "Advance fight"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360,
+742361,
+742380
+]
 },
 "799150": {
 "tags": [
@@ -8491,7 +9708,10 @@
 "advance fight"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742360
+]
 },
 "799157": {
 "tags": [
@@ -8520,7 +9740,10 @@
 "advance fight"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "799160": {
 "tags": [
@@ -8546,7 +9769,10 @@
 "Reward: Victory!"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742386
+]
 },
 "799184": {
 "tags": [
@@ -8592,7 +9818,10 @@
 "Victory!"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "799206": {
 "tags": [
@@ -8693,7 +9922,10 @@
 "restore 8 Health to random friendly characters"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742369
+]
 },
 "799268": {
 "tags": [
@@ -8757,7 +9989,10 @@
 "Return all enemy minions to your opponent's hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "799303": {
 "tags": [
@@ -8778,7 +10013,10 @@
 "destroy all enemy minions"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "799312": {
 "tags": [
@@ -8810,9 +10048,22 @@
 [
 "random_effect",
 "random enemies"
+],
+[
+"disable",
+"Freeze"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"disable",
+"Freeze"
+]
+],
+"keywords": [
+742371
+]
 },
 "799335": {
 "tags": [
@@ -8837,7 +10088,10 @@
 "deal 3 damage"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742375
+]
 },
 "799342": {
 "tags": [
@@ -8867,7 +10121,10 @@
 "Outcast"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742382
+]
 },
 "799378": {
 "tags": [
@@ -9033,7 +10290,10 @@
 "Advance fight"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "799596": {
 "tags": [
@@ -9063,7 +10323,10 @@
 "Reward: Blightborn Tamsin"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742388
+]
 },
 "799612": {
 "tags": [
@@ -9080,7 +10343,10 @@
 "draw a card"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742388
+]
 },
 "799662": {
 "tags": [
@@ -9110,7 +10376,10 @@
 "Any Boons given to Bwonsamdi carry over"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "799679": {
 "tags": [
@@ -9123,7 +10392,10 @@
 "Fill your opponent's hand with Coins"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "799682": {
 "tags": [
@@ -9161,7 +10433,10 @@
 "Choose two enemy minions"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "799744": {
 "tags": [
@@ -9178,7 +10453,10 @@
 "all other minions"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "799750": {
 "tags": [
@@ -9195,7 +10473,10 @@
 "random enemy minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "799827": {
 "tags": [
@@ -9250,7 +10531,10 @@
 "Spell Damage +1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742361
+]
 },
 "799839": {
 "tags": [
@@ -9288,7 +10572,11 @@
 "Overloaded"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359,
+742401
+]
 },
 "799883": {
 "tags": [
@@ -9299,9 +10587,23 @@
 [
 "disruption",
 "Overload 3 of your opponent's Mana Crystals"
+],
+[
+"overload_debt",
+"Overload"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"overload_debt",
+"Overload"
+]
+],
+"keywords": [
+742359,
+742370
+]
 },
 "799885": {
 "tags": [
@@ -9349,9 +10651,30 @@
 [
 "card_advantage",
 "keep all 3 instead"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "799903": {
 "tags": [
@@ -9368,7 +10691,10 @@
 "Draw this"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742401
+]
 },
 "799914": {
 "tags": [
@@ -9426,9 +10752,22 @@
 [
 "summon",
 "summon 2 copies of it"
+],
+[
+"silence",
+"Silence"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"silence",
+"Silence"
+]
+],
+"keywords": [
+742383
+]
 },
 "799962": {
 "tags": [
@@ -9595,7 +10934,11 @@
 "Return this to your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359,
+742360
+]
 },
 "800131": {
 "tags": [
@@ -9633,7 +10976,10 @@
 "deal 20 damage to the enemy hero"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742364
+]
 },
 "800138": {
 "tags": [
@@ -9654,7 +11000,10 @@
 "remove this from your Adventure deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742401
+]
 },
 "800163": {
 "tags": [
@@ -9695,9 +11044,30 @@
 [
 "generate_cards",
 "Discover a card"
+],
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Discover"
+],
+[
+"random_effect",
+"Discover"
+]
+],
+"keywords": [
+742363
+]
 },
 "800252": {
 "tags": [
@@ -9727,7 +11097,10 @@
 "Deal 6 damage to the enemy hero"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "800264": {
 "tags": [
@@ -9750,9 +11123,23 @@
 [
 "random_effect",
 "random enemy minions"
+],
+[
+"disable",
+"Freeze"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"disable",
+"Freeze"
+]
+],
+"keywords": [
+742359,
+742371
+]
 },
 "800266": {
 "tags": [
@@ -9771,9 +11158,23 @@
 [
 "disable",
 "Freeze three random enemy minions"
+],
+[
+"disable",
+"Freeze"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"disable",
+"Freeze"
+]
+],
+"keywords": [
+742359,
+742371
+]
 },
 "800278": {
 "tags": [
@@ -9792,9 +11193,23 @@
 [
 "random_effect",
 "random enemy minions"
+],
+[
+"disable",
+"Freeze"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"disable",
+"Freeze"
+]
+],
+"keywords": [
+742359,
+742371
+]
 },
 "800285": {
 "tags": [
@@ -9820,7 +11235,10 @@
 "Your opponent summons a minion from their deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "800303": {
 "tags": [
@@ -9906,7 +11324,10 @@
 "Mech"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "800427": {
 "tags": [
@@ -9919,7 +11340,10 @@
 "Deal 3 damage to your hero"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742359
+]
 },
 "800439": {
 "tags": [
@@ -9958,7 +11382,10 @@
 "all minions"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742360
+]
 },
 "800617": {
 "tags": [
@@ -9980,7 +11407,10 @@
 "Elusive"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742381
+]
 },
 "800636": {
 "tags": [
@@ -9989,7 +11419,10 @@
 "Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742361
+]
 },
 "800676": {
 "tags": [
@@ -10011,7 +11444,10 @@
 "Deal 1 damage"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+742359
+]
 },
 "800779": {
 "tags": [
@@ -10020,6 +11456,9 @@
 "Taunt"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+742361
+]
 }
 }

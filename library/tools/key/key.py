@@ -10,7 +10,7 @@ edited to agree with the library. Prints counts and sampled lines only.
   key.py read <game> [cov|kw]         the reading request: rules + game block -> key/<game>/read.txt, cards -> cards[_cov|_kw]_N.txt
                                       (200 card lines each; kw: only the sample's keyword entries)
   key.py answer <game> [cov|kw]       quote check of key/<game>/answer[_cov|_kw].txt -> key/<game>/key.json (cov, kw: merged in)
-  key.py credit [<game>...]            keyword credit for cards that name keywords -> key/<game>/key_kw.json (KEY_BUG.md)
+  key.py credit [<game>...]            keyword credit for cards that name keywords, written into key/<game>/key.json
   key.py score <db> [game ...]        wrong tags and missed mechanics per 100 key entries (script; see SCORING below)
 
 READING (Kaptain's decision, 21 Oct 2026): one process reads read.txt and the cards files once and writes one line per card to answer.txt;
@@ -241,14 +241,14 @@ def score(dbpath, games):
     print(f"{'all':18} entries {tot[0]:4}  wrong/100 {100 * tot[1] / max(tot[0], 1):6.1f}  missed/100 {100 * tot[2] / max(tot[0], 1):6.1f}")
 
 
-# --- Keyword credit (KEY_BUG.md, 19 Oct 2026) ---------------------------------------------------------------------------------
-# The first keys gave no tags for keywords a card only names ('Skills: Dodge.', 'Taunt'). key_kw.json (one per game, made by
-# 'key.py credit') adds, for each key entry, the tags of the keywords the card has: listed for it in the source data (a has_keyword
-# link whose evidence names a field or list) or standing where the game prints keywords (the position rule of kw_links.py, with
-# Claude's addition that the name may stand in square brackets: '[LETHAL HITS]'). The tags are the keyword's own from
-# kw_<game>/key.json, quoted with the keyword's name as it appears in the card's text. Keywords the key marked as not real
-# are never credited. Decided from the repo database (text and source links), never from a build being measured.
-# load(g) gives the key with the credit merged; every scorer uses it. The key.json files stay as read.
+# --- Keyword credit ----------------------------------------------------------------------------------------------------------
+# A card that names a keyword has that keyword's effects, so its key entry carries them ('Skills: Dodge.', 'Taunt'). 'key.py
+# credit' adds to each key entry the tags of the keywords the card has: listed for it in the source data (a has_keyword link whose
+# evidence names a field or list) or standing where the game prints keywords (the position rule of kw_links.py; the name may stand
+# in square brackets: '[LETHAL HITS]'). The tags are the keyword's own from kw_<game>/key.json (or the game's keyword entries),
+# quoted with the keyword's name as it appears in the card's text. Keywords the key marked as not real are never credited.
+# Decided from the repo database (text and source links), never from a build being measured. The added tags are listed again in
+# the entry's 'credited' field and its keywords in 'keywords', so a new credit replaces the old one and the quote checks know them.
 KW_FIELD = re.compile(r'field|list|scryfall|sigils|special|traits|warscroll', re.I)
 KW_B = r"(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)"
 KW_ACTION = {'damage', 'destroy', 'draw', 'summon', 'generate_cards', 'disable', 'silence', 'selection', 'transform', 'movement',
@@ -260,45 +260,42 @@ def kw_valid(text, kname, action):
     return False
 
 def credit(g):
-    f = os.path.join(HERE, 'kw_' + g, 'key.json')
-    key = json.load(open(os.path.join(HERE, g, 'key.json')))
+    f = os.path.join(HERE, 'kw_' + g, 'key.json'); kf = os.path.join(HERE, g, 'key.json')
+    key = json.load(open(kf))
+    for v in key.values():   # take the previous credit out
+        v['tags'] = [t for t in v['tags'] if t not in v.pop('credited', [])]; v.pop('keywords', None)
     c = db(); kwids = {i for i, in c.execute("SELECT id FROM entities WHERE game=? AND category='keyword'", (g,))}
     if os.path.exists(f): kwk = {int(i): v['tags'] for i, v in json.load(open(f)).items()}
     else: kwk = {int(i): v['tags'] for i, v in key.items() if int(i) in kwids}   # the keyword entries read with the game's cards
-    if not kwk:
-        json.dump({}, open(os.path.join(HERE, g, 'key_kw.json'), 'w')); print(g, 'no keyword key'); return
     notk = []
     for r in ('A', 'B'):
         nf = os.path.join(HERE, 'kw_' + g, r, 'notkw.json')
         notk.append({int(x) for x in json.load(open(nf))} if os.path.exists(nf) else set())
     bad = notk[0] & notk[1]
     names = {i: n for i, n in c.execute("SELECT id, name FROM entities WHERE game=? AND category='keyword'", (g,)) if i in kwk and i not in bad and kwk[i]}
-    out = {}; nk = nt = 0
-    for i in map(int, key):
-        row = c.execute('SELECT text FROM entities WHERE id=?', (i,)).fetchone()
-        if not row: continue
+    nk = nt = 0
+    for i, v in key.items():
+        row = c.execute('SELECT text FROM entities WHERE id=?', (int(i),)).fetchone()
+        if not row or not names: continue
         text = row[0] or ''
-        have = {d for d, ev in c.execute("SELECT dst, evidence FROM entity_links WHERE src=? AND rel='has_keyword'", (i,)) if d in names and ev and KW_FIELD.search(ev)}
+        have = {d for d, ev in c.execute("SELECT dst, evidence FROM entity_links WHERE src=? AND rel='has_keyword'", (int(i),)) if d in names and ev and KW_FIELD.search(ev)}
         for d, n in names.items():
-            if d != i and d not in have and kw_valid(text, n, bool({k for k, _ in kwk[d]} & KW_ACTION)): have.add(d)
+            if d != int(i) and d not in have and kw_valid(text, n, bool({k for k, _ in kwk[d]} & KW_ACTION)): have.add(d)
         if not have: continue
-        tags = []
+        add = []
         for d in sorted(have):
             m = re.search(re.escape(names[d]), text, re.I); w = m.group(0) if m else names[d]
             for k, _ in kwk[d]:
-                if k in TREE and [k, w] not in tags: tags.append([k, w])
-        out[str(i)] = {'keywords': sorted(have), 'tags': tags}; nk += 1; nt += len(tags)
-    json.dump(out, open(os.path.join(HERE, g, 'key_kw.json'), 'w'), indent=0)
+                if k in TREE and [k, w] not in v['tags'] and [k, w] not in add: add.append([k, w])
+        v['keywords'] = sorted(have); v['tags'] += add
+        if add: v['credited'] = add
+        nk += 1; nt += len(add)
+    json.dump(key, open(kf, 'w'), indent=0)
     print(f'{g:18} key entries credited {nk:4}  keyword tags {nt:5}')
 
 def load(g):
-    """The game's key with the keyword credit merged: {id: {'tags': [[concept, words], ...], ...}}."""
-    key = json.load(open(os.path.join(HERE, g, 'key.json')))
-    f = os.path.join(HERE, g, 'key_kw.json')
-    if os.path.exists(f):
-        for i, v in json.load(open(f)).items():
-            if i in key: key[i] = dict(key[i], tags=key[i]['tags'] + [t for t in v['tags'] if t not in key[i]['tags']])
-    return key
+    """The game's key, keyword credit included: {id: {'tags': [[concept, words], ...], ...}}."""
+    return json.load(open(os.path.join(HERE, g, 'key.json')))
 
 GAMES = ['into_the_breach', 'wh_bloodbowl3', 'inscryption', 'faeria', 'duelyst', 'sts1', 'marvel_snap', 'darkest_dungeon', 'sts2',
          'gwent', 'hs_battlegrounds', 'wh_killteam', 'runeterra', 'wh_underworlds', 'wh_aos_4th', 'wh_40k_10e', 'shadowverse', 'hearthstone', 'mtg',
@@ -310,5 +307,5 @@ if __name__ == '__main__':
     elif cmd == 'read': read(a[0], next((x for x in a[1:] if x in ('cov', 'kw')), ''))
     elif cmd == 'answer': answer(a[0], next((x for x in a[1:] if x in ('cov', 'kw')), ''))
     elif cmd == 'coverage': coverage(a[0])
-    elif cmd == 'credit': [credit(g) for g in (a or GAMES)]
+    elif cmd == 'credit': [credit(g) for g in (a or GAMES)]   # run again after 'answer' or a key correction
     elif cmd == 'score': score(a[0], a[1:] or GAMES)

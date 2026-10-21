@@ -70,7 +70,10 @@
 "change its cost to 5"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752312
+]
 },
 "752395": {
 "tags": [
@@ -111,7 +114,10 @@
 "random enemy follower"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "752397": {
 "tags": [
@@ -148,7 +154,11 @@
 "Can't attack the enemy leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752301
+]
 },
 "752401": {
 "tags": [
@@ -177,7 +187,10 @@
 "change their costs to 1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752420": {
 "tags": [
@@ -206,7 +219,10 @@
 "return this card to your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752437": {
 "tags": [
@@ -269,7 +285,10 @@
 "attack 2 times per turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752477": {
 "tags": [
@@ -294,7 +313,10 @@
 "Put a Gilded Blade into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752478": {
 "tags": [
@@ -319,7 +341,11 @@
 "Summon it instead"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752312
+]
 },
 "752483": {
 "tags": [
@@ -342,9 +368,23 @@
 [
 "shield",
 "reduce that damage to 0"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752308,
+752310
+]
 },
 "752494": {
 "tags": [
@@ -494,7 +534,11 @@
 "While this follower is in play"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752317
+]
 },
 "752521": {
 "tags": [
@@ -531,7 +575,10 @@
 "recover X play points"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "752530": {
 "tags": [
@@ -640,7 +687,10 @@
 "recover 1 play point"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752551": {
 "tags": [
@@ -661,7 +711,10 @@
 "gain +2/+1"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "752552": {
 "tags": [
@@ -682,7 +735,10 @@
 "summon it instead"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "752559": {
 "tags": [
@@ -711,7 +767,11 @@
 "Put a Draconic Smash into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752302
+]
 },
 "752566": {
 "tags": [
@@ -776,9 +836,24 @@
 [
 "death_trigger",
 "Last Words"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752302,
+752304
+]
 },
 "752607": {
 "tags": [
@@ -793,9 +868,22 @@
 [
 "destroy",
 "Then destroy that follower"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752304
+]
 },
 "752611": {
 "tags": [
@@ -858,7 +946,10 @@
 "At the start of your next turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752642": {
 "tags": [
@@ -879,7 +970,10 @@
 "deal 4 damage to an enemy follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752643": {
 "tags": [
@@ -904,7 +998,11 @@
 "restore 1 defense to your leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752301
+]
 },
 "752657": {
 "tags": [
@@ -946,7 +1044,10 @@
 "deal 1 damage to that follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752689": {
 "tags": [
@@ -971,7 +1072,10 @@
 "When this follower is banished"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752317
+]
 },
 "752695": {
 "tags": [
@@ -1020,7 +1124,11 @@
 "if an allied amulet was destroyed"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752303
+]
 },
 "752720": {
 "tags": [
@@ -1043,9 +1151,23 @@
 [
 "random_effect",
 "random"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752307
+]
 },
 "752729": {
 "tags": [
@@ -1058,7 +1180,10 @@
 "Put a Paradigm Shift into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752302
+]
 },
 "752754": {
 "tags": [
@@ -1071,7 +1196,10 @@
 "Put 1 of the following cards into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752312
+]
 },
 "752761": {
 "tags": [
@@ -1134,7 +1262,10 @@
 "Allied Fanfare effects will not activate"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752303
+]
 },
 "752787": {
 "tags": [
@@ -1151,7 +1282,10 @@
 "random"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752303
+]
 },
 "752814": {
 "tags": [
@@ -1182,9 +1316,24 @@
 [
 "random_effect",
 "random"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752302,
+752304
+]
 },
 "752818": {
 "tags": [
@@ -1225,7 +1374,13 @@
 "the number of cards in your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752301,
+752302,
+752303
+]
 },
 "752824": {
 "tags": [
@@ -1258,7 +1413,11 @@
 "gain an empty play point orb"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752301
+]
 },
 "752850": {
 "tags": [
@@ -1296,7 +1455,10 @@
 "at least 2 other cards were played this turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752880": {
 "tags": [
@@ -1322,7 +1484,10 @@
 "Add 1 to the number of cards played this turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752886": {
 "tags": [
@@ -1335,7 +1500,10 @@
 "Followers can't be played"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752891": {
 "tags": [
@@ -1394,7 +1562,10 @@
 "the lowest cost"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752302
+]
 },
 "752922": {
 "tags": [
@@ -1411,7 +1582,10 @@
 "restore 4 defense to your leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752929": {
 "tags": [
@@ -1440,7 +1614,11 @@
 "fully restore all allied followers' defense"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752301
+]
 },
 "752957": {
 "tags": [
@@ -1461,7 +1639,10 @@
 "until the end of your opponent's turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "752960": {
 "tags": [
@@ -1510,7 +1691,11 @@
 "randomly"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752301
+]
 },
 "752964": {
 "tags": [
@@ -1567,9 +1752,22 @@
 [
 "attack_lock",
 "It can't attack next turn"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "753012": {
 "tags": [
@@ -1603,7 +1801,10 @@
 "evolve this follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753054": {
 "tags": [
@@ -1632,7 +1833,10 @@
 "evolve this follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753055": {
 "tags": [
@@ -1653,7 +1857,10 @@
 "deal 2 damage to the enemy leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753070": {
 "tags": [
@@ -1692,9 +1899,24 @@
 [
 "evasion",
 "Ignore Ward"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304,
+752305
+]
 },
 "753072": {
 "tags": [
@@ -1721,9 +1943,23 @@
 [
 "transform",
 "evolve it"
+],
+[
+"transform",
+"evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"evolve"
+]
+],
+"keywords": [
+752301,
+752303
+]
 },
 "753096": {
 "tags": [
@@ -1765,7 +2001,10 @@
 "Spellboost it X times"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753123": {
 "tags": [
@@ -1786,7 +2025,10 @@
 "gain +2/+2"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753141": {
 "tags": [
@@ -1815,7 +2057,10 @@
 "Storm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753146": {
 "tags": [
@@ -1844,7 +2089,12 @@
 "add 1 to an allied Stack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303,
+752323
+]
 },
 "753167": {
 "tags": [
@@ -1869,7 +2119,10 @@
 "If this card has been Spellboosted at least 5 times"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753187": {
 "tags": [
@@ -1965,7 +2218,10 @@
 "restore 2 defense to your leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752312
+]
 },
 "753200": {
 "tags": [
@@ -1982,7 +2238,10 @@
 "summon 1 of the following"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753223": {
 "tags": [
@@ -2020,7 +2279,10 @@
 "Gain +3/+3"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753269": {
 "tags": [
@@ -2049,7 +2311,11 @@
 "Change this follower's attack to its defense"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752303
+]
 },
 "753293": {
 "tags": [
@@ -2122,9 +2388,23 @@
 [
 "silence",
 "Remove all effects from an enemy follower"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304
+]
 },
 "753333": {
 "tags": [
@@ -2143,9 +2423,24 @@
 [
 "summon",
 "Summon a Spellplate Cavalier or Bone Cavalier"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304,
+752312
+]
 },
 "753362": {
 "tags": [
@@ -2168,9 +2463,24 @@
 [
 "damage",
 "Deal 3 damage to an enemy follower"
+],
+[
+"graveyard",
+"Necromancy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"graveyard",
+"Necromancy"
+]
+],
+"keywords": [
+752300,
+752303,
+752314
+]
 },
 "753364": {
 "tags": [
@@ -2197,9 +2507,23 @@
 [
 "haste",
 "Storm"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304
+]
 },
 "753372": {
 "tags": [
@@ -2228,7 +2552,10 @@
 "Storm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753385": {
 "tags": [
@@ -2271,9 +2598,32 @@
 [
 "turn_end",
 "At the end of your turn"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752303,
+752304
+]
 },
 "753403": {
 "tags": [
@@ -2301,9 +2651,22 @@
 [
 "kicker",
 "Enhance (8)"
+],
+[
+"revive",
+"Reanimate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"revive",
+"Reanimate"
+]
+],
+"keywords": [
+752321
+]
 },
 "753440": {
 "tags": [
@@ -2320,7 +2683,10 @@
 "restore 2 defense to your leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "753444": {
 "tags": [
@@ -2345,7 +2711,10 @@
 "Summon a Forest Bat"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "753472": {
 "tags": [
@@ -2374,7 +2743,11 @@
 "Storm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752305
+]
 },
 "753504": {
 "tags": [
@@ -2413,9 +2786,24 @@
 [
 "heal",
 "Restore 2 defense to your leader"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752300,
+752301,
+752310
+]
 },
 "753507": {
 "tags": [
@@ -2452,7 +2840,10 @@
 "when another allied follower evolves"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752301
+]
 },
 "753512": {
 "tags": [
@@ -2483,9 +2874,23 @@
 [
 "summon",
 "summon an Assembly Droid"
+],
+[
+"transform",
+"evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"evolve"
+]
+],
+"keywords": [
+752300,
+752303
+]
 },
 "753518": {
 "tags": [
@@ -2598,7 +3003,11 @@
 "X equals the number of allied followers with Ward in play"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752301
+]
 },
 "753601": {
 "tags": [
@@ -2635,7 +3044,11 @@
 "2 attack or less"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "753612": {
 "tags": [
@@ -2664,7 +3077,10 @@
 "random"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753617": {
 "tags": [
@@ -2721,9 +3137,22 @@
 [
 "summon",
 "Summon a Barong"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "753640": {
 "tags": [
@@ -2742,9 +3171,23 @@
 [
 "summon",
 "Summon a Bejeweled Tortoise"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752307
+]
 },
 "753646": {
 "tags": [
@@ -2771,9 +3214,23 @@
 [
 "summon",
 "Summon an Adamantium Bird"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752307
+]
 },
 "753648": {
 "tags": [
@@ -2804,9 +3261,23 @@
 [
 "generate_cards",
 "Put a Naterran Great Tree into your hand"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752307
+]
 },
 "753676": {
 "tags": [
@@ -2827,7 +3298,10 @@
 "draw 2 cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753682": {
 "tags": [
@@ -2844,7 +3318,11 @@
 "Put 2 Ancient Artifacts into your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752305
+]
 },
 "753686": {
 "tags": [
@@ -2865,7 +3343,10 @@
 "gain Rush"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753700": {
 "tags": [
@@ -2890,7 +3371,11 @@
 "Put a Facsimile into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752302
+]
 },
 "753710": {
 "tags": [
@@ -2927,7 +3412,12 @@
 "random Queen Hemera the White"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752303,
+752312
+]
 },
 "753722": {
 "tags": [
@@ -2974,9 +3464,24 @@
 [
 "resource_gain",
 "Recover 1 evolution point"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304,
+752305
+]
 },
 "753741": {
 "tags": [
@@ -3020,9 +3525,22 @@
 [
 "transform",
 "become a Flame and Glass"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752310
+]
 },
 "753785": {
 "tags": [
@@ -3037,9 +3555,23 @@
 [
 "transform",
 "Transform an allied Goblin into a Goblin King"
+],
+[
+"transform",
+"Evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Evolve"
+]
+],
+"keywords": [
+752300,
+752303
+]
 },
 "753790": {
 "tags": [
@@ -3056,7 +3588,10 @@
 "Festive follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753817": {
 "tags": [
@@ -3094,7 +3629,10 @@
 "each other card played this turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753845": {
 "tags": [
@@ -3115,7 +3653,10 @@
 "gain Storm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "753860": {
 "tags": [
@@ -3151,9 +3692,22 @@
 [
 "cost_set",
 "change its cost to 0"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752304
+]
 },
 "753887": {
 "tags": [
@@ -3220,7 +3774,11 @@
 "all allied followers"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752301,
+752303
+]
 },
 "753939": {
 "tags": [
@@ -3253,7 +3811,11 @@
 "gain +0/+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752305
+]
 },
 "753942": {
 "tags": [
@@ -3288,9 +3850,24 @@
 [
 "resource_gain",
 "Recover 5 play points"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304,
+752305
+]
 },
 "753946": {
 "tags": [
@@ -3311,7 +3888,11 @@
 "Summon a Bullet Bike or Arcane Personnel Carrier"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752312
+]
 },
 "753962": {
 "tags": [
@@ -3368,7 +3949,11 @@
 "all allied followers"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752312
+]
 },
 "753977": {
 "tags": [
@@ -3450,9 +4035,22 @@
 [
 "in_hand_buff",
 "Subtract 1 from the cost of this card"
+],
+[
+"in_hand_buff",
+"Spellboost"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"in_hand_buff",
+"Spellboost"
+]
+],
+"keywords": [
+752311
+]
 },
 "754017": {
 "tags": [
@@ -3469,7 +4067,10 @@
 "Subtract 1 from its cost"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "754021": {
 "tags": [
@@ -3498,7 +4099,11 @@
 "deal 3 damage to an enemy follower"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752303
+]
 },
 "754024": {
 "tags": [
@@ -3515,7 +4120,10 @@
 "20 cards or less in your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754030": {
 "tags": [
@@ -3560,7 +4168,11 @@
 "Restore 2 defense to your leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752303
+]
 },
 "754032": {
 "tags": [
@@ -3579,9 +4191,23 @@
 [
 "draw",
 "Draw a card"
+],
+[
+"in_hand_buff",
+"Spellboost"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"in_hand_buff",
+"Spellboost"
+]
+],
+"keywords": [
+752300,
+752311
+]
 },
 "754042": {
 "tags": [
@@ -3630,7 +4256,11 @@
 "Banish this follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "754047": {
 "tags": [
@@ -3667,7 +4297,10 @@
 "all other allied followers"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "754073": {
 "tags": [
@@ -3788,7 +4421,12 @@
 "Banish an enemy Dragon"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752301,
+752303
+]
 },
 "754112": {
 "tags": [
@@ -3817,7 +4455,11 @@
 "deal 3 damage to an enemy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "754118": {
 "tags": [
@@ -3844,9 +4486,23 @@
 [
 "tribal",
 "Machina follower"
+],
+[
+"transform",
+"Evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Evolve"
+]
+],
+"keywords": [
+752300,
+752303
+]
 },
 "754121": {
 "tags": [
@@ -3867,7 +4523,11 @@
 "Fanfare"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752301
+]
 },
 "754133": {
 "tags": [
@@ -3904,7 +4564,11 @@
 "Draw 2 cards"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752303
+]
 },
 "754143": {
 "tags": [
@@ -3937,7 +4601,10 @@
 "evolve this follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754151": {
 "tags": [
@@ -3990,9 +4657,22 @@
 [
 "resource_gain",
 "Gain an empty play point orb"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "754179": {
 "tags": [
@@ -4011,9 +4691,23 @@
 [
 "summon",
 "Summon a Zombie"
+],
+[
+"graveyard",
+"Necromancy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"graveyard",
+"Necromancy"
+]
+],
+"keywords": [
+752300,
+752314
+]
 },
 "754182": {
 "tags": [
@@ -4059,7 +4753,10 @@
 "restore 1 defense to your leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "754197": {
 "tags": [
@@ -4094,9 +4791,32 @@
 [
 "banish",
 "Banish the enemy follower"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752303,
+752304
+]
 },
 "754207": {
 "tags": [
@@ -4129,7 +4849,12 @@
 "Evolve"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752302,
+752303
+]
 },
 "754215": {
 "tags": [
@@ -4158,7 +4883,11 @@
 "draw 2 cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "754217": {
 "tags": [
@@ -4171,7 +4900,10 @@
 "Summon a Cursed Coin"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754252": {
 "tags": [
@@ -4188,7 +4920,10 @@
 "Forest Bats"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754264": {
 "tags": [
@@ -4205,7 +4940,10 @@
 "recover 1 play point"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "754273": {
 "tags": [
@@ -4242,7 +4980,10 @@
 "restore 4 defense to this follower"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "754294": {
 "tags": [
@@ -4287,7 +5028,10 @@
 "deal 1 damage to your leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "754295": {
 "tags": [
@@ -4318,9 +5062,23 @@
 [
 "self_destruct",
 "At the end of your turn, banish this follower"
+],
+[
+"transform",
+"evolve"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"evolve"
+]
+],
+"keywords": [
+752300,
+752303
+]
 },
 "754303": {
 "tags": [
@@ -4357,7 +5115,11 @@
 "Recover 1 play point"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "754310": {
 "tags": [
@@ -4398,7 +5160,12 @@
 "Banish 2 random cards from your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752306,
+752308
+]
 },
 "754322": {
 "tags": [
@@ -4458,9 +5225,24 @@
 [
 "resource_gain",
 "Recover 1 play point"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752300,
+752303,
+752310
+]
 },
 "754370": {
 "tags": [
@@ -4501,7 +5283,12 @@
 "that is not already in play for you"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752301,
+752303
+]
 },
 "754373": {
 "tags": [
@@ -4532,9 +5319,34 @@
 [
 "draw",
 "Draw a card"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752301,
+752302,
+752303,
+752304
+]
 },
 "754382": {
 "tags": [
@@ -4570,9 +5382,23 @@
 [
 "summon",
 "Summon a Holywing Dragon"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752307
+]
 },
 "754396": {
 "tags": [
@@ -4603,9 +5429,23 @@
 [
 "self_destruct",
 "banish this amulet"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304
+]
 },
 "754397": {
 "tags": [
@@ -4628,9 +5468,23 @@
 [
 "resource_gain",
 "recover 1 play point"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752300,
+752307
+]
 },
 "754404": {
 "tags": [
@@ -4657,9 +5511,32 @@
 [
 "board_wipe",
 "Destroy all followers"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+],
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752304,
+752307
+]
 },
 "754422": {
 "tags": [
@@ -4693,7 +5570,10 @@
 "Artifact card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754436": {
 "tags": [
@@ -4710,7 +5590,10 @@
 "left-most card in your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754449": {
 "tags": [
@@ -4749,9 +5632,24 @@
 [
 "taunt",
 "Ward"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752301,
+752304
+]
 },
 "754487": {
 "tags": [
@@ -4768,7 +5666,11 @@
 "Deal 2 damage to an enemy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752301
+]
 },
 "754492": {
 "tags": [
@@ -4813,7 +5715,13 @@
 "restore 6 defense to your leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752301,
+752302,
+752305,
+752308
+]
 },
 "754506": {
 "tags": [
@@ -4830,7 +5738,10 @@
 "at least 2 other cards were played this turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754511": {
 "tags": [
@@ -4847,7 +5758,10 @@
 "gain +1/+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752305
+]
 },
 "754541": {
 "tags": [
@@ -4872,7 +5786,10 @@
 "Fairies"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754559": {
 "tags": [
@@ -4891,9 +5808,31 @@
 [
 "transform",
 "Evolve them instead"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752303,
+752304
+]
 },
 "754573": {
 "tags": [
@@ -4914,7 +5853,12 @@
 "Put an Evyn, Novice Agent or Infiltration into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752312,
+752317
+]
 },
 "754609": {
 "tags": [
@@ -4949,9 +5893,24 @@
 [
 "summon",
 "summon a Val, Speedy Magicar"
+],
+[
+"transform",
+"evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"evolve"
+]
+],
+"keywords": [
+752300,
+752303,
+752306
+]
 },
 "754629": {
 "tags": [
@@ -4978,9 +5937,23 @@
 [
 "scope_multi",
 "all other allied followers"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304
+]
 },
 "754633": {
 "tags": [
@@ -5015,9 +5988,24 @@
 [
 "stat_gain",
 "gain +2/+2"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752303,
+752309
+]
 },
 "754654": {
 "tags": [
@@ -5036,9 +6024,23 @@
 [
 "transform",
 "Transform this follower into an Owlbear"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304
+]
 },
 "754679": {
 "tags": [
@@ -5055,7 +6057,10 @@
 "if Overflow is active for you"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "754684": {
 "tags": [
@@ -5076,7 +6081,11 @@
 "if Overflow is active for you"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752301
+]
 },
 "754701": {
 "tags": [
@@ -5111,9 +6120,41 @@
 [
 "multi_attack",
 "attack 3 times per turn"
+],
+[
+"turn_number",
+"Skybound Art"
+],
+[
+"condition_count",
+"Skybound Art"
+],
+[
+"turn_number",
+"Super Skybound Art"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_number",
+"Skybound Art"
+],
+[
+"condition_count",
+"Skybound Art"
+],
+[
+"turn_number",
+"Super Skybound Art"
+]
+],
+"keywords": [
+752300,
+752305,
+752331,
+752332
+]
 },
 "754718": {
 "tags": [
@@ -5159,7 +6200,10 @@
 "give +2/+0"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754746": {
 "tags": [
@@ -5182,9 +6226,24 @@
 [
 "transform",
 "Evolve"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752303,
+752304
+]
 },
 "754748": {
 "tags": [
@@ -5223,9 +6282,41 @@
 [
 "random_effect",
 "random enemy follower"
+],
+[
+"transform",
+"evolve"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"graveyard",
+"Necromancy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"evolve"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"graveyard",
+"Necromancy"
+]
+],
+"keywords": [
+752300,
+752303,
+752304,
+752314
+]
 },
 "754752": {
 "tags": [
@@ -5260,9 +6351,25 @@
 [
 "haste",
 "give it Storm"
+],
+[
+"graveyard",
+"Necromancy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"graveyard",
+"Necromancy"
+]
+],
+"keywords": [
+752300,
+752303,
+752308,
+752314
+]
 },
 "754777": {
 "tags": [
@@ -5277,9 +6384,22 @@
 [
 "summon",
 "Summon a Lich"
+],
+[
+"graveyard",
+"Necromancy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"graveyard",
+"Necromancy"
+]
+],
+"keywords": [
+752314
+]
 },
 "754783": {
 "tags": [
@@ -5294,9 +6414,22 @@
 [
 "graveyard",
 "Necromancy (20)"
+],
+[
+"graveyard",
+"Necromancy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"graveyard",
+"Necromancy"
+]
+],
+"keywords": [
+752314
+]
 },
 "754791": {
 "tags": [
@@ -5317,7 +6450,10 @@
 "Vengeance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754815": {
 "tags": [
@@ -5368,9 +6504,23 @@
 [
 "friendly_fire",
 "all other followers"
+],
+[
+"transform",
+"evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"evolve"
+]
+],
+"keywords": [
+752300,
+752303
+]
 },
 "754833": {
 "tags": [
@@ -5421,9 +6571,32 @@
 [
 "repeat_trigger",
 "Do this 2 times"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"kicker",
+"Enhance"
+],
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752300,
+752304,
+752310
+]
 },
 "754846": {
 "tags": [
@@ -5440,7 +6613,10 @@
 "3 defense or less"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752303
+]
 },
 "754848": {
 "tags": [
@@ -5453,7 +6629,10 @@
 "Summon a Beastly Vow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "754861": {
 "tags": [
@@ -5484,9 +6663,32 @@
 [
 "on_attack",
 "Strike"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+],
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752300,
+752304,
+752310
+]
 },
 "754879": {
 "tags": [
@@ -5517,9 +6719,42 @@
 [
 "draw",
 "Draw a card"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Evolve"
+],
+[
+"kicker",
+"Enhance"
+],
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752300,
+752303,
+752304,
+752306,
+752310
+]
 },
 "754891": {
 "tags": [
@@ -5542,9 +6777,22 @@
 [
 "attack_lock",
 "It can't attack next turn"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "754906": {
 "tags": [
@@ -5565,7 +6813,10 @@
 "summon a copy of that follower as an allied follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752303
+]
 },
 "754920": {
 "tags": [
@@ -5586,7 +6837,11 @@
 "Summon an Ancient Artifact"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "754937": {
 "tags": [
@@ -5607,7 +6862,11 @@
 "Recover 2 play points"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "754943": {
 "tags": [
@@ -5659,9 +6918,23 @@
 [
 "random_effect",
 "random enemy"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304
+]
 },
 "754968": {
 "tags": [
@@ -5720,9 +6993,23 @@
 [
 "friendly_fire",
 "all allies"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752300,
+752310
+]
 },
 "754983": {
 "tags": [
@@ -5817,7 +7104,10 @@
 "equal to the number of enemy followers in play"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "755018": {
 "tags": [
@@ -5842,7 +7132,11 @@
 "evolve this follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752301
+]
 },
 "755031": {
 "tags": [
@@ -5865,9 +7159,22 @@
 [
 "haste",
 "Give them Storm"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752304
+]
 },
 "755032": {
 "tags": [
@@ -5905,7 +7212,11 @@
 "Bane"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752305,
+752308
+]
 },
 "755074": {
 "tags": [
@@ -5938,7 +7249,10 @@
 "deal 2 damage to the enemy leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "755094": {
 "tags": [
@@ -5963,7 +7277,10 @@
 "all other allied followers"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "755101": {
 "tags": [
@@ -5976,7 +7293,10 @@
 "Your spells deal +1 damage"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755112": {
 "tags": [
@@ -5991,9 +7311,22 @@
 [
 "transform",
 "Evolve all allied Happy Pigs"
+],
+[
+"transform",
+"Evolve"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Evolve"
+]
+],
+"keywords": [
+752303
+]
 },
 "755117": {
 "tags": [
@@ -6042,7 +7375,10 @@
 "Can't be destroyed by effects"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752301
+]
 },
 "755119": {
 "tags": [
@@ -6059,7 +7395,10 @@
 "Recover 3 play points"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755123": {
 "tags": [
@@ -6088,7 +7427,11 @@
 "Evolve"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "755128": {
 "tags": [
@@ -6117,7 +7460,11 @@
 "X equals the number of times the selected card has been Spellboosted"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752303
+]
 },
 "755138": {
 "tags": [
@@ -6185,7 +7532,10 @@
 "Put a Blazing Breath into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752302
+]
 },
 "755154": {
 "tags": [
@@ -6202,7 +7552,10 @@
 "Dragoncraft card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755169": {
 "tags": [
@@ -6231,7 +7584,11 @@
 "when an allied follower takes damage, if it's not destroyed"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752303
+]
 },
 "755180": {
 "tags": [
@@ -6261,7 +7618,11 @@
 "Put an Infernal Crown or Descent into Madness into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752312
+]
 },
 "755201": {
 "tags": [
@@ -6278,7 +7639,10 @@
 "Storm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752306
+]
 },
 "755222": {
 "tags": [
@@ -6382,7 +7746,11 @@
 "gain Drain"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752306
+]
 },
 "755297": {
 "tags": [
@@ -6413,9 +7781,23 @@
 [
 "damage_reduction",
 "Can't take more than 3 damage at a time"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752309
+]
 },
 "755303": {
 "tags": [
@@ -6470,9 +7852,22 @@
 [
 "temporary_effect",
 "until the end of your opponent's turn"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "755314": {
 "tags": [
@@ -6497,7 +7892,11 @@
 "Evolve"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "755336": {
 "tags": [
@@ -6526,7 +7925,10 @@
 "deal 1 damage to a random enemy follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755342": {
 "tags": [
@@ -6549,9 +7951,24 @@
 [
 "transform",
 "Evolve"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752303,
+752309
+]
 },
 "755347": {
 "tags": [
@@ -6570,9 +7987,23 @@
 [
 "kicker",
 "Enhance (9)"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752304
+]
 },
 "755356": {
 "tags": [
@@ -6619,9 +8050,26 @@
 [
 "heal",
 "Restore 2 defense to your leader"
+],
+[
+"transform",
+"Evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Evolve"
+]
+],
+"keywords": [
+752300,
+752301,
+752302,
+752303,
+752305
+]
 },
 "755376": {
 "tags": [
@@ -6662,7 +8110,13 @@
 "Ward"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752301,
+752305,
+752308
+]
 },
 "755403": {
 "tags": [
@@ -6687,7 +8141,11 @@
 "Neutral cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752301
+]
 },
 "755411": {
 "tags": [
@@ -6739,9 +8197,23 @@
 [
 "summon",
 "Summon 2 Fairies"
+],
+[
+"transform",
+"evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"evolve"
+]
+],
+"keywords": [
+752300,
+752303
+]
 },
 "755416": {
 "tags": [
@@ -6782,7 +8254,10 @@
 "destroy an enemy follower"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "755429": {
 "tags": [
@@ -6820,7 +8295,10 @@
 "An area can hold 5 cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755434": {
 "tags": [
@@ -6833,7 +8311,10 @@
 "Randomly gain Rush, Bane, or Ward"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755436": {
 "tags": [
@@ -6862,7 +8343,10 @@
 "Officer followers"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755441": {
 "tags": [
@@ -6901,9 +8385,33 @@
 [
 "stat_loss",
 "Give -4/-0 to an enemy follower"
+],
+[
+"transform",
+"evolve"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"evolve"
+],
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752300,
+752303,
+752304,
+752305
+]
 },
 "755450": {
 "tags": [
@@ -6928,7 +8436,11 @@
 "change its cost to 0"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "755473": {
 "tags": [
@@ -6971,9 +8483,22 @@
 [
 "aoe_damage",
 "deal 3 damage to all enemies"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "755501": {
 "tags": [
@@ -6994,7 +8519,10 @@
 "Give -2/-0 to the enemy follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755509": {
 "tags": [
@@ -7027,7 +8555,10 @@
 "Reduce damage from effects to 0"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752306
+]
 },
 "755524": {
 "tags": [
@@ -7050,9 +8581,24 @@
 [
 "resource_gain",
 "Recover 1 play point"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752300,
+752310,
+752312
+]
 },
 "755529": {
 "tags": [
@@ -7087,9 +8633,42 @@
 [
 "stat_gain",
 "Give +1/+4 to all other allied followers"
+],
+[
+"transform",
+"evolve"
+],
+[
+"cost_type",
+"Accelerate"
+],
+[
+"revive",
+"Reanimate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"evolve"
+],
+[
+"cost_type",
+"Accelerate"
+],
+[
+"revive",
+"Reanimate"
+]
+],
+"keywords": [
+752300,
+752301,
+752303,
+752309,
+752321
+]
 },
 "755530": {
 "tags": [
@@ -7104,9 +8683,23 @@
 [
 "revive",
 "Reanimate (4)"
+],
+[
+"revive",
+"Reanimate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"revive",
+"Reanimate"
+]
+],
+"keywords": [
+752300,
+752321
+]
 },
 "755531": {
 "tags": [
@@ -7145,9 +8738,33 @@
 [
 "revive",
 "Reanimate (2)"
+],
+[
+"delayed",
+"Countdown"
+],
+[
+"revive",
+"Reanimate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+],
+[
+"revive",
+"Reanimate"
+]
+],
+"keywords": [
+752300,
+752302,
+752307,
+752321
+]
 },
 "755532": {
 "tags": [
@@ -7164,7 +8781,11 @@
 "Summon a Marian the Mummy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752301
+]
 },
 "755534": {
 "tags": [
@@ -7185,7 +8806,10 @@
 "originally costs 6 play points or less"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755543": {
 "tags": [
@@ -7220,9 +8844,42 @@
 [
 "transform",
 "Evolve them"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"cost_type",
+"Accelerate"
+],
+[
+"graveyard",
+"Necromancy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Evolve"
+],
+[
+"cost_type",
+"Accelerate"
+],
+[
+"graveyard",
+"Necromancy"
+]
+],
+"keywords": [
+752300,
+752303,
+752305,
+752309,
+752314
+]
 },
 "755562": {
 "tags": [
@@ -7253,9 +8910,24 @@
 [
 "heal",
 "restore 3 defense to your leader"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752301,
+752309
+]
 },
 "755574": {
 "tags": [
@@ -7292,7 +8964,10 @@
 "recover 6 play points"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "755575": {
 "tags": [
@@ -7313,7 +8988,11 @@
 "Evolve"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "755585": {
 "tags": [
@@ -7343,7 +9022,10 @@
 "Put 2 Monastic Holy Waters into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755598": {
 "tags": [
@@ -7372,7 +9054,10 @@
 "+0/+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755619": {
 "tags": [
@@ -7415,9 +9100,24 @@
 [
 "resource_gain",
 "recover 2 play points"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752300,
+752306,
+752307
+]
 },
 "755621": {
 "tags": [
@@ -7476,9 +9176,23 @@
 [
 "cost_condition",
 "X equals this amulet's original cost"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752300,
+752307
+]
 },
 "755622": {
 "tags": [
@@ -7511,7 +9225,11 @@
 "Summon a Moon Al-mi'raj"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752303
+]
 },
 "755623": {
 "tags": [
@@ -7536,7 +9254,11 @@
 "restore 1 defense to your leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752301
+]
 },
 "755645": {
 "tags": [
@@ -7567,9 +9289,24 @@
 [
 "protection",
 "Can't be destroyed or banished by effects"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752301,
+752309
+]
 },
 "755661": {
 "tags": [
@@ -7606,7 +9343,12 @@
 "draw 5 cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752317,
+752323
+]
 },
 "755670": {
 "tags": [
@@ -7627,7 +9369,11 @@
 "evolve this follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752301
+]
 },
 "755694": {
 "tags": [
@@ -7656,7 +9402,10 @@
 "cost 2 play points or less"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755702": {
 "tags": [
@@ -7683,9 +9432,24 @@
 [
 "stat_gain",
 "give +2/+2"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752306,
+752309
+]
 },
 "755717": {
 "tags": [
@@ -7706,7 +9470,10 @@
 "Summon an Eldritch Chimera or Eldritch Demon"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755720": {
 "tags": [
@@ -7737,9 +9504,24 @@
 [
 "aoe_damage",
 "deal 2 damage to all enemy followers"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752301,
+752309
+]
 },
 "755739": {
 "tags": [
@@ -7801,7 +9583,12 @@
 "Ward"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752301,
+752306,
+752308
+]
 },
 "755765": {
 "tags": [
@@ -7862,7 +9649,11 @@
 "Can't be targeted by enemy effects"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752301,
+752302
+]
 },
 "755766": {
 "tags": [
@@ -7911,7 +9702,12 @@
 "Put a Relic Dragon into your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752302,
+752306
+]
 },
 "755790": {
 "tags": [
@@ -7954,9 +9750,23 @@
 [
 "turn_number",
 "X equals your current turn number"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752307
+]
 },
 "755798": {
 "tags": [
@@ -7985,7 +9795,11 @@
 "Put a Corpse King's Command into your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752303
+]
 },
 "755800": {
 "tags": [
@@ -8020,9 +9834,23 @@
 [
 "transform",
 "evolve it"
+],
+[
+"graveyard",
+"Necromancy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"graveyard",
+"Necromancy"
+]
+],
+"keywords": [
+752300,
+752314
+]
 },
 "755803": {
 "tags": [
@@ -8052,7 +9880,10 @@
 "draw a card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752305
+]
 },
 "755831": {
 "tags": [
@@ -8065,7 +9896,10 @@
 "Summon a Death Sentence"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755834": {
 "tags": [
@@ -8078,7 +9912,10 @@
 "Destroy every Countdown amulet immediately after you play it"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752302
+]
 },
 "755840": {
 "tags": [
@@ -8105,9 +9942,24 @@
 [
 "turn_end",
 "At the end of your turn"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752301,
+752308,
+752309
+]
 },
 "755844": {
 "tags": [
@@ -8144,7 +9996,10 @@
 "Havencraft followers"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755851": {
 "tags": [
@@ -8191,9 +10046,34 @@
 [
 "tribal",
 "Havencraft followers"
+],
+[
+"transform",
+"evolve"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"evolve"
+],
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752300,
+752301,
+752303,
+752306,
+752310
+]
 },
 "755853": {
 "tags": [
@@ -8235,7 +10115,10 @@
 "Artifact cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755855": {
 "tags": [
@@ -8293,7 +10176,11 @@
 "summon an Assembly Droid"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300,
+752305
+]
 },
 "755865": {
 "tags": [
@@ -8330,7 +10217,11 @@
 "summon a Magitrain"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752301
+]
 },
 "755870": {
 "tags": [
@@ -8373,9 +10264,33 @@
 [
 "board_limit",
 "until your area is full"
+],
+[
+"cost_type",
+"Accelerate"
+],
+[
+"modal_choice",
+"Choose"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+],
+[
+"modal_choice",
+"Choose"
+]
+],
+"keywords": [
+752300,
+752306,
+752309,
+752312
+]
 },
 "755875": {
 "tags": [
@@ -8412,7 +10327,11 @@
 "Put 3 Mechamagical Rhinos into your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752305
+]
 },
 "755885": {
 "tags": [
@@ -8435,9 +10354,23 @@
 [
 "direct_damage",
 "3 damage to the enemy leader"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752309
+]
 },
 "755889": {
 "tags": [
@@ -8503,7 +10436,10 @@
 "Fairy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755895": {
 "tags": [
@@ -8522,9 +10458,23 @@
 [
 "scope_multi",
 "all enemy followers"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752310,
+752317
+]
 },
 "755903": {
 "tags": [
@@ -8541,7 +10491,10 @@
 "Can't attack the enemy leader"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752305
+]
 },
 "755914": {
 "tags": [
@@ -8566,7 +10519,10 @@
 "Not affected by other cards' effects"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "755934": {
 "tags": [
@@ -8591,7 +10547,10 @@
 "costs more than it"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755950": {
 "tags": [
@@ -8638,9 +10597,23 @@
 [
 "heal",
 "restore 2 defense to your leader"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752309
+]
 },
 "755956": {
 "tags": [
@@ -8665,7 +10638,10 @@
 "Then destroy those followers"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "755958": {
 "tags": [
@@ -8676,9 +10652,23 @@
 [
 "revive",
 "Reanimate (10)"
+],
+[
+"revive",
+"Reanimate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"revive",
+"Reanimate"
+]
+],
+"keywords": [
+752300,
+752321
+]
 },
 "755963": {
 "tags": [
@@ -8743,9 +10733,22 @@
 [
 "summon",
 "Summon an Awakened Seraph"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "755999": {
 "tags": [
@@ -8772,9 +10775,24 @@
 [
 "summon",
 "Summon a Radiant Artifact or Prime Artifact"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752309,
+752312
+]
 },
 "756001": {
 "tags": [
@@ -8801,9 +10819,24 @@
 [
 "resource_gain",
 "Recover 7 play points"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752301,
+752309
+]
 },
 "756002": {
 "tags": [
@@ -8830,9 +10863,24 @@
 [
 "summon",
 "Summon 2 Radiant Artifacts"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752301,
+752309
+]
 },
 "756009": {
 "tags": [
@@ -8855,9 +10903,23 @@
 [
 "hand_deck_swap",
 "Replace your deck with a deck of Cocytus Cards"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752309
+]
 },
 "756017": {
 "tags": [
@@ -8892,9 +10954,34 @@
 [
 "multi_attack",
 "Can attack 2 times per turn"
+],
+[
+"transform",
+"Evolve"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Evolve"
+],
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752301,
+752303,
+752306,
+752309
+]
 },
 "756018": {
 "tags": [
@@ -8936,7 +11023,10 @@
 "Deal 1 more damage"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "756032": {
 "tags": [
@@ -8957,7 +11047,10 @@
 "Deal 6 damage to an enemy follower"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "756041": {
 "tags": [
@@ -8982,7 +11075,10 @@
 "that comes into play"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752302
+]
 },
 "756061": {
 "tags": [
@@ -8999,7 +11095,10 @@
 "Restore 5 defense to your leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "756066": {
 "tags": [
@@ -9048,7 +11147,12 @@
 "until the start of your next turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300,
+752303,
+752306
+]
 },
 "756069": {
 "tags": [
@@ -9071,9 +11175,23 @@
 [
 "direct_damage",
 "deal 3 damage to the enemy leader"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752309
+]
 },
 "756073": {
 "tags": [
@@ -9104,9 +11222,23 @@
 [
 "random_effect",
 "random enemy follower"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752307
+]
 },
 "756082": {
 "tags": [
@@ -9119,7 +11251,10 @@
 "Replace your deck with an Apocalypse Deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "756083": {
 "tags": [
@@ -9144,7 +11279,10 @@
 "if 2 or more enemy followers are in play"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "756087": {
 "tags": [
@@ -9179,9 +11317,23 @@
 [
 "direct_damage",
 "deal it to the enemy leader"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752309
+]
 },
 "756091": {
 "tags": [
@@ -9228,9 +11380,25 @@
 [
 "stat_condition",
 "Z equals this follower's attack"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752301,
+752303,
+752309
+]
 },
 "756095": {
 "tags": [
@@ -9261,9 +11429,22 @@
 [
 "heal",
 "restore 1 defense to your leader"
+],
+[
+"in_hand_buff",
+"Spellboost"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"in_hand_buff",
+"Spellboost"
+]
+],
+"keywords": [
+752311
+]
 },
 "756114": {
 "tags": [
@@ -9294,9 +11475,24 @@
 [
 "deathtouch",
 "Bane"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752306,
+752308,
+752309
+]
 },
 "756119": {
 "tags": [
@@ -9363,9 +11559,24 @@
 [
 "variable_stats",
 "X equals the number of cards in your deck minus 10"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752307,
+752308
+]
 },
 "756128": {
 "tags": [
@@ -9400,9 +11611,32 @@
 [
 "stat_condition",
 "5 or less defense"
+],
+[
+"cost_type",
+"Accelerate"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Accelerate"
+],
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752309,
+752310,
+752317
+]
 },
 "756136": {
 "tags": [
@@ -9457,9 +11691,32 @@
 [
 "bounce_enemy",
 "Return another card in play to the player's hand"
+],
+[
+"transform",
+"evolve"
+],
+[
+"cost_type",
+"Accelerate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"evolve"
+],
+[
+"cost_type",
+"Accelerate"
+]
+],
+"keywords": [
+752300,
+752303,
+752309
+]
 },
 "756138": {
 "tags": [
@@ -9474,9 +11731,22 @@
 [
 "extra_turn",
 "Take an extra turn after this one"
+],
+[
+"in_hand_buff",
+"Spellboost"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"in_hand_buff",
+"Spellboost"
+]
+],
+"keywords": [
+752311
+]
 },
 "795301": {
 "tags": [],
@@ -9663,7 +11933,10 @@
 "destroy this follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752305
+]
 },
 "813780": {
 "tags": [
@@ -9702,7 +11975,10 @@
 "Storm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752306
+]
 },
 "813841": {
 "tags": [
@@ -9838,9 +12114,22 @@
 [
 "summon",
 "summon a Forest Bat"
+],
+[
+"transform",
+"Evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Evolve"
+]
+],
+"keywords": [
+752303
+]
 },
 "813903": {
 "tags": [
@@ -9915,9 +12204,22 @@
 [
 "heal",
 "restore 1 defense to your leader"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "813939": {
 "tags": [
@@ -9955,7 +12257,10 @@
 "Put a Gilded Blade into your hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752302
+]
 },
 "813954": {
 "tags": [
@@ -10004,9 +12309,22 @@
 [
 "heal",
 "Restore 3 defense to your leader"
+],
+[
+"kicker",
+"Enhance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Enhance"
+]
+],
+"keywords": [
+752304
+]
 },
 "813998": {
 "tags": [
@@ -10035,7 +12353,10 @@
 "all enemy followers"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752308
+]
 },
 "813999": {
 "tags": [
@@ -10086,7 +12407,10 @@
 "deal 1 damage to the enemy leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "814013": {
 "tags": [
@@ -10105,9 +12429,24 @@
 [
 "heal",
 "Restore 2 defense to your leader"
+],
+[
+"transform",
+"Evolve"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Evolve"
+]
+],
+"keywords": [
+752300,
+752302,
+752303
+]
 },
 "814023": {
 "tags": [
@@ -10130,9 +12469,23 @@
 [
 "friendly_fire",
 "Deal 2 damage to your leader"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752307
+]
 },
 "814025": {
 "tags": [
@@ -10145,7 +12498,10 @@
 "Give +0/+2"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752300
+]
 },
 "814033": {
 "tags": [
@@ -10168,9 +12524,22 @@
 [
 "draw",
 "Draw a card"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "814036": {
 "tags": [
@@ -10207,7 +12576,10 @@
 "become a Relic Goddess"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "814037": {
 "tags": [
@@ -10262,7 +12634,10 @@
 "random"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752302
+]
 },
 "814049": {
 "tags": [
@@ -10288,7 +12663,10 @@
 "Storm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752306
+]
 },
 "814075": {
 "tags": [
@@ -10305,7 +12683,10 @@
 "while an allied Irate Forest Beast is in play"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752301
+]
 },
 "814076": {
 "tags": [
@@ -10322,7 +12703,10 @@
 "Gain Storm"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752305
+]
 },
 "814091": {
 "tags": [
@@ -10343,7 +12727,10 @@
 "restore X defense to your leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752301
+]
 },
 "814095": {
 "tags": [
@@ -10381,7 +12768,10 @@
 "At the end of your opponent's turn, destroy this follower"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752301
+]
 },
 "814106": {
 "tags": [
@@ -10425,9 +12815,23 @@
 [
 "stat_condition",
 "X equals this follower's attack"
+],
+[
+"damage",
+"Strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"Strike"
+]
+],
+"keywords": [
+752305,
+752310
+]
 },
 "814147": {
 "tags": [
@@ -10528,9 +12932,31 @@
 [
 "heal",
 "Restore 4 defense to your leader"
+],
+[
+"damage",
+"Strike"
+],
+[
+"tribal",
+"Maneuver"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage",
+"Strike"
+],
+[
+"tribal",
+"Maneuver"
+]
+],
+"keywords": [
+752310,
+752333
+]
 },
 "814170": {
 "tags": [
@@ -10553,9 +12979,22 @@
 [
 "play_restriction",
 "Can be played only when 2 targetable enemy cards are in play"
+],
+[
+"transform",
+"Evolve"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Evolve"
+]
+],
+"keywords": [
+752303
+]
 },
 "814201": {
 "tags": [
@@ -10572,7 +13011,11 @@
 "Can attack up to 3 times per turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752305,
+752308
+]
 },
 "814204": {
 "tags": [
@@ -10595,9 +13038,23 @@
 [
 "friendly_fire",
 "Deal 2 damage to your leader"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752302,
+752307
+]
 },
 "814213": {
 "tags": [
@@ -10616,9 +13073,22 @@
 [
 "random_effect",
 "random"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "814222": {
 "tags": [
@@ -10681,7 +13151,10 @@
 "restore 3 defense to your leader"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752302
+]
 },
 "814257": {
 "tags": [
@@ -10706,7 +13179,10 @@
 "gain +2/+2"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752301
+]
 },
 "814272": {
 "tags": [
@@ -10717,9 +13193,22 @@
 [
 "tribal",
 "Machina followers"
+],
+[
+"transform",
+"Evolve"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Evolve"
+]
+],
+"keywords": [
+752303
+]
 },
 "814286": {
 "tags": [
@@ -10732,7 +13221,11 @@
 "Drain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752305,
+752323
+]
 },
 "814297": {
 "tags": [
@@ -10753,7 +13246,10 @@
 "a random card"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "814338": {
 "tags": [
@@ -10782,7 +13278,11 @@
 "until the end of your opponent's turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752301,
+752306
+]
 },
 "814347": {
 "tags": [
@@ -10831,9 +13331,22 @@
 [
 "summon",
 "Summon a Renascent Seraph"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "814383": {
 "tags": [
@@ -10848,9 +13361,22 @@
 [
 "summon",
 "Summon a Seraph Lapis, Glory Be"
+],
+[
+"delayed",
+"Countdown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"delayed",
+"Countdown"
+]
+],
+"keywords": [
+752307
+]
 },
 "814391": {
 "tags": [
@@ -10869,9 +13395,22 @@
 [
 "friendly_fire",
 "banish all other followers"
+],
+[
+"tribal",
+"Maneuver"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tribal",
+"Maneuver"
+]
+],
+"keywords": [
+752333
+]
 },
 "814395": {
 "tags": [
@@ -10908,7 +13447,10 @@
 "If any allied New Prayers are in play"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+752300
+]
 },
 "814409": {
 "tags": [
@@ -10925,7 +13467,10 @@
 "Ignore Ward"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+752306
+]
 },
 "814413": {
 "tags": [

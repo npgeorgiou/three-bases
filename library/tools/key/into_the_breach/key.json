@@ -338,9 +338,30 @@
 [
 "movement",
 "move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "760862": {
 "tags": [
@@ -351,9 +372,30 @@
 [
 "damage",
 "dropping an explosive smoke bomb"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "760863": {
 "tags": [
@@ -381,9 +423,22 @@
 [
 "damage_reduction",
 "reduced by 1"
+],
+[
+"damage_reduction",
+"Natural Armor"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_reduction",
+"Natural Armor"
+]
+],
+"keywords": [
+760831
+]
 },
 "760865": {
 "tags": [
@@ -655,9 +710,30 @@
 [
 "movement",
 "move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "760884": {
 "tags": [
@@ -822,9 +898,30 @@
 [
 "buff",
 "Mech gains Flying"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "760901": {
 "tags": [
@@ -1113,9 +1210,30 @@
 [
 "movement",
 "move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "760921": {
 "tags": [
@@ -1164,9 +1282,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "760926": {
 "tags": [
@@ -1186,9 +1325,22 @@
 [
 "damage_reduction",
 "reduced by 1"
+],
+[
+"damage_reduction",
+"Natural Armor"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_reduction",
+"Natural Armor"
+]
+],
+"keywords": [
+760831
+]
 },
 "760928": {
 "tags": [
@@ -1266,9 +1418,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "760932": {
 "tags": [
@@ -1300,9 +1473,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "760934": {
 "tags": [
@@ -2823,9 +3017,39 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"aura",
+"Invigorating Spores"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"aura",
+"Invigorating Spores"
+]
+],
+"keywords": [
+760829,
+760852
+]
 },
 "761014": {
 "tags": [
@@ -2857,9 +3081,47 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"aura",
+"Hardened Carapace"
+],
+[
+"damage_reduction",
+"Hardened Carapace"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"aura",
+"Hardened Carapace"
+],
+[
+"damage_reduction",
+"Hardened Carapace"
+]
+],
+"keywords": [
+760829,
+760849
+]
 },
 "761016": {
 "tags": [
@@ -2899,9 +3161,39 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"regeneration",
+"Regeneration"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"regeneration",
+"Regeneration"
+]
+],
+"keywords": [
+760829,
+760855
+]
 },
 "761018": {
 "tags": [
@@ -3002,9 +3294,31 @@
 [
 "immunity",
 "This unit is unaffected by Smoke"
+],
+[
+"immunity",
+"Smoke Immunity"
+],
+[
+"immunity",
+"Mine Immunity"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immunity",
+"Smoke Immunity"
+],
+[
+"immunity",
+"Mine Immunity"
+]
+],
+"keywords": [
+760832,
+760860
+]
 },
 "761025": {
 "tags": [
@@ -3019,9 +3333,31 @@
 [
 "immunity",
 "This unit is unaffected by Smoke"
+],
+[
+"immunity",
+"Smoke Immunity"
+],
+[
+"immunity",
+"Mine Immunity"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immunity",
+"Smoke Immunity"
+],
+[
+"immunity",
+"Mine Immunity"
+]
+],
+"keywords": [
+760832,
+760860
+]
 },
 "761026": {
 "tags": [
@@ -3056,9 +3392,22 @@
 [
 "summon",
 "will always spawn with 2 other hostile Sentient Weapons"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761027": {
 "tags": [
@@ -3156,9 +3505,39 @@
 [
 "other_death_trigger",
 "when a Medium Goo is defeated"
+],
+[
+"movement",
+"Massive"
+],
+[
+"summon",
+"Spawner"
+],
+[
+"death_trigger",
+"Spawner"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+],
+[
+"summon",
+"Spawner"
+],
+[
+"death_trigger",
+"Spawner"
+]
+],
+"keywords": [
+760853,
+760858
+]
 },
 "761031": {
 "tags": [
@@ -3181,9 +3560,39 @@
 [
 "random_effect",
 "land on randomly determined tiles"
+],
+[
+"movement",
+"Massive"
+],
+[
+"summon",
+"Spawner"
+],
+[
+"death_trigger",
+"Spawner"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+],
+[
+"summon",
+"Spawner"
+],
+[
+"death_trigger",
+"Spawner"
+]
+],
+"keywords": [
+760853,
+760858
+]
 },
 "761032": {
 "tags": [
@@ -3198,9 +3607,22 @@
 [
 "other_death_trigger",
 "when a Medium Goo is defeated"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761033": {
 "tags": [
@@ -3269,9 +3691,22 @@
 [
 "movement",
 "Massive units can walk in Water"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761036": {
 "tags": [
@@ -3303,9 +3738,22 @@
 [
 "movement",
 "Massive units can walk in Water"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761038": {
 "tags": [
@@ -3349,9 +3797,22 @@
 [
 "immunity",
 "it's immune to being drowned"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761040": {
 "tags": [
@@ -3493,9 +3954,47 @@
 [
 "movement",
 "move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"debuff",
+"A.C.I.D."
+],
+[
+"silence",
+"A.C.I.D."
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"debuff",
+"A.C.I.D."
+],
+[
+"silence",
+"A.C.I.D."
+]
+],
+"keywords": [
+760829,
+760834
+]
 },
 "761048": {
 "tags": [
@@ -3514,9 +4013,30 @@
 [
 "immunity",
 "It cannot be drowned"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761049": {
 "tags": [
@@ -3531,9 +4051,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761050": {
 "tags": [
@@ -3556,9 +4097,55 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
+]
+],
+"keywords": [
+760829,
+760848
+]
 },
 "761051": {
 "tags": [
@@ -3573,9 +4160,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761052": {
 "tags": [
@@ -3598,9 +4206,63 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"aura",
+"Overpowered"
+],
+[
+"stat_gain",
+"Overpowered"
+],
+[
+"regeneration",
+"Overpowered"
+],
+[
+"death_trigger",
+"Overpowered"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+],
+[
+"aura",
+"Overpowered"
+],
+[
+"stat_gain",
+"Overpowered"
+],
+[
+"regeneration",
+"Overpowered"
+],
+[
+"death_trigger",
+"Overpowered"
+]
+],
+"keywords": [
+760829,
+760854
+]
 },
 "761053": {
 "tags": [
@@ -3661,9 +4323,22 @@
 [
 "boss_phases",
 "can only appear in the boss mission"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761056": {
 "tags": [
@@ -3682,9 +4357,31 @@
 [
 "immunity",
 "This unit is unaffected by Smoke"
+],
+[
+"immunity",
+"Smoke Immunity"
+],
+[
+"attack_lock",
+"Smoke"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immunity",
+"Smoke Immunity"
+],
+[
+"attack_lock",
+"Smoke"
+]
+],
+"keywords": [
+760832,
+760842
+]
 },
 "761057": {
 "tags": [
@@ -3733,9 +4430,30 @@
 [
 "movement",
 "bypass any obstacles"
+],
+[
+"stealth",
+"Burrower"
+],
+[
+"on_damaged",
+"Burrower"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stealth",
+"Burrower"
+],
+[
+"on_damaged",
+"Burrower"
+]
+],
+"keywords": [
+760847
+]
 },
 "761060": {
 "tags": [
@@ -3758,9 +4476,30 @@
 [
 "movement",
 "bypass any obstacles"
+],
+[
+"stealth",
+"Burrower"
+],
+[
+"on_damaged",
+"Burrower"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stealth",
+"Burrower"
+],
+[
+"on_damaged",
+"Burrower"
+]
+],
+"keywords": [
+760847
+]
 },
 "761062": {
 "tags": [
@@ -3882,9 +4621,30 @@
 [
 "upgrade",
 "Upgrade: +2 Health"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761070": {
 "tags": [
@@ -4006,9 +4766,30 @@
 [
 "variable_stats",
 "Damage increases the further the Mech dashes away"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761081": {
 "tags": [
@@ -4048,9 +4829,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761083": {
 "tags": [
@@ -4069,9 +4871,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761084": {
 "tags": [
@@ -4090,9 +4913,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761085": {
 "tags": [
@@ -4149,9 +4993,30 @@
 [
 "movement",
 "move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761088": {
 "tags": [
@@ -4174,9 +5039,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761089": {
 "tags": [
@@ -4293,9 +5179,22 @@
 [
 "movement",
 "Massive units can walk in Water"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761096": {
 "tags": [
@@ -4314,9 +5213,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761097": {
 "tags": [
@@ -4331,9 +5251,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761098": {
 "tags": [
@@ -4356,9 +5297,30 @@
 [
 "terrain",
 "leave Fire on death"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761099": {
 "tags": [
@@ -4411,9 +5373,30 @@
 [
 "movement",
 "Flying units can move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761102": {
 "tags": [
@@ -4487,9 +5470,30 @@
 [
 "movement",
 "move over any terrain tile"
+],
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"placement_rules",
+"Flying"
+],
+[
+"immunity",
+"Flying"
+]
+],
+"keywords": [
+760829
+]
 },
 "761106": {
 "tags": [
@@ -4508,9 +5512,22 @@
 [
 "movement",
 "Massive units can walk in Water"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761107": {
 "tags": [
@@ -4529,9 +5546,31 @@
 [
 "movement",
 "Massive units can walk in Water"
+],
+[
+"damage_reduction",
+"Natural Armor"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_reduction",
+"Natural Armor"
+],
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760831,
+760853
+]
 },
 "761108": {
 "tags": [
@@ -4546,9 +5585,22 @@
 [
 "movement",
 "Massive units can walk in Water"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761109": {
 "tags": [
@@ -4571,9 +5623,22 @@
 [
 "movement",
 "Massive units can walk in Water"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761110": {
 "tags": [
@@ -4626,9 +5691,22 @@
 [
 "movement",
 "Massive units can walk in Water"
+],
+[
+"movement",
+"Massive"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Massive"
+]
+],
+"keywords": [
+760853
+]
 },
 "761114": {
 "tags": [
@@ -4655,9 +5733,38 @@
 [
 "quests",
 "Destroy all Boom-Bots objective"
+],
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
+]
+],
+"keywords": [
+760848
+]
 },
 "761115": {
 "tags": [
@@ -4680,9 +5787,38 @@
 [
 "quests",
 "Destroy all Boom-Bots objective"
+],
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
+]
+],
+"keywords": [
+760848
+]
 },
 "761116": {
 "tags": [
@@ -4705,9 +5841,38 @@
 [
 "quests",
 "Destroy all Boom-Bots objective"
+],
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Explosive Decay"
+],
+[
+"aoe_damage",
+"Explosive Decay"
+],
+[
+"piercing",
+"Explosive Decay"
+]
+],
+"keywords": [
+760848
+]
 },
 "761117": {
 "tags": [

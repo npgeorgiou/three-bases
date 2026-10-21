@@ -262,9 +262,22 @@
 [
 "random_effect",
 "randomly selected"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756150
+]
 },
 "756203": {
 "tags": [
@@ -388,7 +401,10 @@
 "When you lose a round"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141
+]
 },
 "756230": {
 "tags": [
@@ -403,9 +419,22 @@
 [
 "stat_condition",
 "9 or more power"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756231": {
 "tags": [
@@ -428,9 +457,31 @@
 [
 "on_kill",
 "If any were destroyed"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"combo_sequence",
+"Initiative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"combo_sequence",
+"Initiative"
+]
+],
+"keywords": [
+756141,
+756142
+]
 },
 "756232": {
 "tags": [
@@ -445,9 +496,47 @@
 [
 "stat_condition",
 "by the amount of boost it has"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"piercing",
+"Drain"
+],
+[
+"stat_gain",
+"Drain"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"piercing",
+"Drain"
+],
+[
+"stat_gain",
+"Drain"
+]
+],
+"keywords": [
+756143,
+756145
+]
 },
 "756242": {
 "tags": [
@@ -466,9 +555,22 @@
 [
 "free_play",
 "Summon Vesemir and Lambert from your deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756244": {
 "tags": [
@@ -487,9 +589,22 @@
 [
 "free_play",
 "Summon Eskel and Vesemir from your deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756255": {
 "tags": [
@@ -539,7 +654,10 @@
 "Spawn and play Clear Skies"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756159
+]
 },
 "756261": {
 "tags": [
@@ -579,9 +697,22 @@
 [
 "friendly_fire",
 "Destroy the lowest-power unit"
+],
+[
+"combo_sequence",
+"Initiative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"combo_sequence",
+"Initiative"
+]
+],
+"keywords": [
+756142
+]
 },
 "756267": {
 "tags": [
@@ -621,9 +752,22 @@
 [
 "scope_global",
 "all row effect durations"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756270": {
 "tags": [
@@ -651,9 +795,22 @@
 [
 "friendly_fire",
 "Destroy the highest-power unit"
+],
+[
+"combo_sequence",
+"Initiative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"combo_sequence",
+"Initiative"
+]
+],
+"keywords": [
+756142
+]
 },
 "756282": {
 "tags": [
@@ -693,9 +850,22 @@
 [
 "damage",
 "damage it by 3"
+],
+[
+"silence",
+"Lock"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"silence",
+"Lock"
+]
+],
+"keywords": [
+756166
+]
 },
 "756286": {
 "tags": [
@@ -710,9 +880,64 @@
 [
 "damage_over_time",
 "give it Bleeding equal to the amount of boost it lost"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+],
+[
+"stat_condition",
+"Inspired"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+],
+[
+"stat_condition",
+"Inspired"
+]
+],
+"keywords": [
+756143,
+756167,
+756168
+]
 },
 "756291": {
 "tags": [
@@ -731,9 +956,22 @@
 [
 "in_hand_buff",
 "boost it by 3"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756295": {
 "tags": [
@@ -760,9 +998,47 @@
 [
 "round_passing",
 "If neither player has passed"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+],
+"keywords": [
+756143,
+756167
+]
 },
 "756298": {
 "tags": [
@@ -781,9 +1057,23 @@
 [
 "friendly_fire",
 "Damage all units on this row by 3"
+],
+[
+"death_trigger",
+"Deathwish"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_trigger",
+"Deathwish"
+]
+],
+"keywords": [
+756170,
+756173
+]
 },
 "756307": {
 "tags": [
@@ -798,9 +1088,22 @@
 [
 "hand_size",
 "for each card in your hand"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756309": {
 "tags": [
@@ -815,9 +1118,73 @@
 [
 "cooldowns",
 "Cooldown: 1"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+],
+[
+"cooldowns",
+"Resupply"
+],
+[
+"on_ally_play",
+"Resupply"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+],
+[
+"cooldowns",
+"Resupply"
+],
+[
+"on_ally_play",
+"Resupply"
+]
+],
+"keywords": [
+756143,
+756152,
+756167,
+756176
+]
 },
 "756313": {
 "tags": [
@@ -840,9 +1207,39 @@
 [
 "haste",
 "Give an allied unit Zeal"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756141,
+756143
+]
 },
 "756320": {
 "tags": [
@@ -857,9 +1254,55 @@
 [
 "condition_count",
 "for each remaining Charge of your leader ability"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+],
+"keywords": [
+756143,
+756167
+]
 },
 "756324": {
 "tags": [
@@ -878,9 +1321,22 @@
 [
 "deck_position",
 "move a card from your hand to the top of your deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756330": {
 "tags": [
@@ -895,9 +1351,30 @@
 [
 "deckbuilding_effect",
 "adds 16 provisions to your deck's provisions limit"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756335": {
 "tags": [
@@ -916,9 +1393,39 @@
 [
 "stat_condition",
 "with 4 or less power"
+],
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
+]
+],
+"keywords": [
+756173,
+756186
+]
 },
 "756337": {
 "tags": [
@@ -941,9 +1448,23 @@
 [
 "condition_count",
 "for each"
+],
+[
+"banish",
+"Banish"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"banish",
+"Banish"
+]
+],
+"keywords": [
+756141,
+756158
+]
 },
 "756345": {
 "tags": [
@@ -974,9 +1495,32 @@
 [
 "cooldowns",
 "Cooldown: 3"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+],
+"keywords": [
+756143,
+756151,
+756152
+]
 },
 "756348": {
 "tags": [
@@ -1001,7 +1545,11 @@
 "Boost self by [0]"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141,
+756181
+]
 },
 "756349": {
 "tags": [
@@ -1016,9 +1564,48 @@
 [
 "cooldowns",
 "Cooldown: 1"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"stat_condition",
+"Dominance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"stat_condition",
+"Dominance"
+]
+],
+"keywords": [
+756143,
+756152,
+756189
+]
 },
 "756353": {
 "tags": [
@@ -1049,9 +1636,30 @@
 [
 "self_destruct",
 "Banish self"
+],
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
+]
+],
+"keywords": [
+756149
+]
 },
 "756354": {
 "tags": [
@@ -1070,9 +1678,57 @@
 [
 "cooldowns",
 "Cooldown: 4"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+],
+"keywords": [
+756143,
+756150,
+756151,
+756152
+]
 },
 "756356": {
 "tags": [
@@ -1095,9 +1751,23 @@
 [
 "permanent_growth",
 "Whenever you apply a row effect, boost self by its duration"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141,
+756161
+]
 },
 "756360": {
 "tags": [
@@ -1114,7 +1784,10 @@
 "destroy self"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "756361": {
 "tags": [
@@ -1159,9 +1832,31 @@
 [
 "summon",
 "Spawn a Harpy on this row"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
+]
+],
+"keywords": [
+756150,
+756173
+]
 },
 "756367": {
 "tags": [
@@ -1172,9 +1867,22 @@
 [
 "permanent_growth",
 "boost self by 1"
+],
+[
+"stat_condition",
+"Dominance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_condition",
+"Dominance"
+]
+],
+"keywords": [
+756189
+]
 },
 "756369": {
 "tags": [
@@ -1193,9 +1901,22 @@
 [
 "tribal",
 "Construct"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756370": {
 "tags": [
@@ -1224,7 +1945,10 @@
 "Play [1] Rock Barrage(s) from your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141
+]
 },
 "756377": {
 "tags": [
@@ -1239,9 +1963,23 @@
 [
 "temporary_effect",
 "until the start of your next turn"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143,
+756184
+]
 },
 "756379": {
 "tags": [
@@ -1256,9 +1994,22 @@
 [
 "tribal",
 "Trap"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756384": {
 "tags": [
@@ -1285,9 +2036,23 @@
 [
 "scope_global",
 "all other units"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143,
+756151
+]
 },
 "756387": {
 "tags": [
@@ -1306,9 +2071,22 @@
 [
 "tribal",
 "Elves"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756393": {
 "tags": [
@@ -1335,9 +2113,39 @@
 [
 "ping",
 "Damage an enemy unit by 1"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756141,
+756143
+]
 },
 "756410": {
 "tags": [
@@ -1348,9 +2156,22 @@
 [
 "in_hand_buff",
 "Boost a unit in your hand by 1"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756414": {
 "tags": [
@@ -1365,9 +2186,22 @@
 [
 "lone_unit",
 "if it is the only unit on its row"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756420": {
 "tags": [
@@ -1386,9 +2220,22 @@
 [
 "free_play",
 "Play an Alchemy card from your deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756421": {
 "tags": [
@@ -1407,9 +2254,31 @@
 [
 "hand_position",
 "rightmost card in your hand"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"discard",
+"Discard"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"discard",
+"Discard"
+]
+],
+"keywords": [
+756141,
+756195
+]
 },
 "756422": {
 "tags": [
@@ -1426,7 +2295,10 @@
 "Discard the same number of cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "756424": {
 "tags": [
@@ -1453,9 +2325,23 @@
 [
 "random_effect",
 "random enemy unit"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143,
+756151
+]
 },
 "756435": {
 "tags": [
@@ -1482,9 +2368,33 @@
 [
 "damage_over_time",
 "Give an enemy unit Bleeding (2)"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+]
+],
+"keywords": [
+756141,
+756143,
+756151,
+756155
+]
 },
 "756443": {
 "tags": [
@@ -1501,7 +2411,10 @@
 "If you control a Ship"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "756446": {
 "tags": [
@@ -1516,9 +2429,22 @@
 [
 "discard",
 "Discard a card"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756451": {
 "tags": [
@@ -1556,7 +2482,10 @@
 "the number of units on an enemy row"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "756458": {
 "tags": [
@@ -1583,9 +2512,30 @@
 [
 "graveyard",
 "Spawn the other in your graveyard"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
+]
+],
+"keywords": [
+756198
+]
 },
 "756464": {
 "tags": [
@@ -1604,9 +2554,22 @@
 [
 "free_play",
 "Play a Tactic from your deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756469": {
 "tags": [
@@ -1647,7 +2610,10 @@
 "damage self by 12"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756184
+]
 },
 "756472": {
 "tags": [
@@ -1670,9 +2636,22 @@
 [
 "graveyard",
 "Shuffle a card from your opponent's graveyard into their deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756473": {
 "tags": [
@@ -1687,9 +2666,31 @@
 [
 "disruption",
 "Spawn The Guardian on top of your opponent's deck"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756141,
+756150
+]
 },
 "756480": {
 "tags": [
@@ -1714,7 +2715,11 @@
 "the top card from your opponent's deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141,
+756170
+]
 },
 "756482": {
 "tags": [
@@ -1749,9 +2754,40 @@
 [
 "movement",
 "Move self to the opposite row"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
+],
+[
+"stat_condition",
+"Grace"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
+],
+[
+"stat_condition",
+"Grace"
+]
+],
+"keywords": [
+756141,
+756170,
+756180
+]
 },
 "756484": {
 "tags": [
@@ -1784,7 +2820,10 @@
 "Summon all copies of self from your deck to this row"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141
+]
 },
 "756486": {
 "tags": [
@@ -1823,9 +2862,23 @@
 [
 "tribal",
 "bronze Soldier"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756141,
+756143
+]
 },
 "756489": {
 "tags": [
@@ -1840,9 +2893,39 @@
 [
 "on_spell",
 "Whenever you play a Tactic"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+]
+],
+"keywords": [
+756143,
+756155
+]
 },
 "756491": {
 "tags": [
@@ -1865,9 +2948,48 @@
 [
 "block_armor",
 "Gain 1 Armor"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"activated",
+"Charge"
+]
+],
+"keywords": [
+756143,
+756151,
+756155
+]
 },
 "756492": {
 "tags": [
@@ -1882,9 +3004,22 @@
 [
 "summon",
 "Spawn and play Battle Preparation"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756494": {
 "tags": [
@@ -1907,9 +3042,71 @@
 [
 "damage_reduction",
 "gain 1 Armor"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
+]
+],
+"keywords": [
+756143,
+756200
+]
 },
 "756495": {
 "tags": [
@@ -1928,9 +3125,22 @@
 [
 "adjacency",
 "units adjacent to the targets"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756501": {
 "tags": [
@@ -1941,9 +3151,22 @@
 [
 "enemy_benefit",
 "Boost an enemy unit by 2"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756509": {
 "tags": [
@@ -1962,9 +3185,22 @@
 [
 "adjacency",
 "adjacent units"
+],
+[
+"on_kill",
+"Deathblow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_kill",
+"Deathblow"
+]
+],
+"keywords": [
+756192
+]
 },
 "756517": {
 "tags": [
@@ -1983,9 +3219,22 @@
 [
 "damage",
 "damage an enemy unit by the destroyed unit's power"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756520": {
 "tags": [
@@ -2000,9 +3249,39 @@
 [
 "heal",
 "Heal self by 1"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
+]
+],
+"keywords": [
+756141,
+756196
+]
 },
 "756521": {
 "tags": [
@@ -2025,9 +3304,32 @@
 [
 "tribal",
 "Tactic"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+]
+],
+"keywords": [
+756143,
+756155,
+756181
+]
 },
 "756525": {
 "tags": [
@@ -2042,9 +3344,31 @@
 [
 "heal",
 "Heal self"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Berserk"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Berserk"
+]
+],
+"keywords": [
+756141,
+756197
+]
 },
 "756527": {
 "tags": [
@@ -2071,9 +3395,73 @@
 [
 "cooldowns",
 "Cooldown: 2"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"adjacency",
+"Crew"
+],
+[
+"tribal",
+"Crew"
+],
+[
+"cooldowns",
+"Resupply"
+],
+[
+"on_ally_play",
+"Resupply"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"adjacency",
+"Crew"
+],
+[
+"tribal",
+"Crew"
+],
+[
+"cooldowns",
+"Resupply"
+],
+[
+"on_ally_play",
+"Resupply"
+]
+],
+"keywords": [
+756143,
+756152,
+756175,
+756176
+]
 },
 "756531": {
 "tags": [
@@ -2104,9 +3492,22 @@
 [
 "deckbuilding_effect",
 "adds 15 provisions to your deck's provisions limit"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756532": {
 "tags": [
@@ -2117,9 +3518,39 @@
 [
 "generate_cards",
 "Create and play a special card from any faction"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Create"
+],
+[
+"random_effect",
+"Create"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Create"
+],
+[
+"random_effect",
+"Create"
+]
+],
+"keywords": [
+756141,
+756201
+]
 },
 "756533": {
 "tags": [
@@ -2147,9 +3578,22 @@
 [
 "stat_condition",
 "highest-power unit"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756543": {
 "tags": [
@@ -2168,9 +3612,22 @@
 [
 "cast_from_zone",
 "Summon this card from your deck to your Ranged row"
+],
+[
+"delayed",
+"Counter"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Counter"
+]
+],
+"keywords": [
+756223
+]
 },
 "756545": {
 "tags": [
@@ -2193,9 +3650,30 @@
 [
 "stat_loss",
 "sets its power to 1"
+],
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
+]
+],
+"keywords": [
+756149
+]
 },
 "756552": {
 "tags": [
@@ -2218,9 +3696,22 @@
 [
 "stat_gain",
 "Boost all allied Beasts by 1"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756554": {
 "tags": [
@@ -2237,7 +3728,10 @@
 "shuffle self into your opponent's deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756144
+]
 },
 "756555": {
 "tags": [
@@ -2260,9 +3754,22 @@
 [
 "banish",
 "Banish it"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756556": {
 "tags": [
@@ -2281,9 +3788,30 @@
 [
 "friendly_fire",
 "and self by 4"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756563": {
 "tags": [
@@ -2339,9 +3867,22 @@
 [
 "deckbuilding_effect",
 "adds 17 provisions to your deck's provisions limit"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756567": {
 "tags": [
@@ -2364,9 +3905,30 @@
 [
 "deckbuilding_effect",
 "adds 16 provisions to your deck's provisions limit"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756568": {
 "tags": [
@@ -2389,9 +3951,22 @@
 [
 "deckbuilding_effect",
 "adds 16 provisions to your deck's provisions limit"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756570": {
 "tags": [
@@ -2418,9 +3993,22 @@
 [
 "deckbuilding_effect",
 "adds 16 provisions to your deck's provision limit"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756574": {
 "tags": [
@@ -2447,9 +4035,22 @@
 [
 "deckbuilding_effect",
 "adds 15 provisions to your deck's provisions limit"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756575": {
 "tags": [
@@ -2468,9 +4069,30 @@
 [
 "deckbuilding_effect",
 "adds 15 provisions to your deck's provisions limit"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756576": {
 "tags": [
@@ -2497,9 +4119,39 @@
 [
 "deckbuilding_effect",
 "adds 16 provisions to your deck's provisions limit"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756143,
+756150
+]
 },
 "756589": {
 "tags": [
@@ -2522,9 +4174,31 @@
 [
 "cost_condition",
 "equal to its provision cost"
+],
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
+]
+],
+"keywords": [
+756193,
+756194
+]
 },
 "756590": {
 "tags": [
@@ -2551,9 +4225,31 @@
 [
 "damage_over_time",
 "Poison an enemy unit"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"targeting_rules",
+"Predator"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"targeting_rules",
+"Predator"
+]
+],
+"keywords": [
+756141,
+756203
+]
 },
 "756591": {
 "tags": [
@@ -2572,9 +4268,32 @@
 [
 "stat_gain",
 "boost self by 3"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"condition_count",
+"Bonded"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"condition_count",
+"Bonded"
+]
+],
+"keywords": [
+756141,
+756150,
+756190
+]
 },
 "756595": {
 "tags": [
@@ -2597,9 +4316,22 @@
 [
 "block_armor",
 "give it 1 Armor"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756600": {
 "tags": [
@@ -2620,7 +4352,10 @@
 "the number of units on that row"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "756601": {
 "tags": [
@@ -2664,9 +4399,22 @@
 [
 "random_effect",
 "random allied row"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756611": {
 "tags": [
@@ -2677,9 +4425,22 @@
 [
 "permanent_growth",
 "boost self by 2"
+],
+[
+"rows",
+"Melee"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"rows",
+"Melee"
+]
+],
+"keywords": [
+756144
+]
 },
 "756615": {
 "tags": [
@@ -2694,9 +4455,31 @@
 [
 "scope_multi",
 "all units on a row"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+],
+"keywords": [
+756141,
+756153
+]
 },
 "756617": {
 "tags": [
@@ -2711,9 +4494,22 @@
 [
 "random_effect",
 "randomly"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756619": {
 "tags": [
@@ -2736,9 +4532,30 @@
 [
 "deckbuilding_effect",
 "adds 15 provisions to your deck's provisions limit"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756622": {
 "tags": [
@@ -2771,9 +4588,38 @@
 [
 "permanent_growth",
 "boost self by 1"
+],
+[
+"start_of_game",
+"Lineage"
+],
+[
+"tribal",
+"Lineage"
+],
+[
+"stat_gain",
+"Lineage"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"start_of_game",
+"Lineage"
+],
+[
+"tribal",
+"Lineage"
+],
+[
+"stat_gain",
+"Lineage"
+]
+],
+"keywords": [
+756148
+]
 },
 "756640": {
 "tags": [
@@ -2838,9 +4684,48 @@
 [
 "rewind",
 "Reset own power"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+],
+"keywords": [
+756143,
+756167,
+756192
+]
 },
 "756651": {
 "tags": [
@@ -2869,7 +4754,10 @@
 "Veil"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141
+]
 },
 "756656": {
 "tags": [
@@ -2904,9 +4792,23 @@
 [
 "spell_power",
 "increase the damage by 1 for the rest of the game"
+],
+[
+"combo_sequence",
+"Initiative"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"combo_sequence",
+"Initiative"
+]
+],
+"keywords": [
+756142,
+756192
+]
 },
 "756659": {
 "tags": [
@@ -2971,9 +4873,24 @@
 [
 "round_carryover",
 "Resilience"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756141,
+756143,
+756191
+]
 },
 "756664": {
 "tags": [
@@ -2992,9 +4909,40 @@
 [
 "adjacency",
 "adjacent unit"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+],
+[
+"heal",
+"Heal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+],
+[
+"heal",
+"Heal"
+]
+],
+"keywords": [
+756143,
+756155,
+756157
+]
 },
 "756665": {
 "tags": [
@@ -3013,9 +4961,39 @@
 [
 "condition_count",
 "the enemy row with the most units"
+],
+[
+"trap_secret",
+"Ambush"
+],
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"trap_secret",
+"Ambush"
+],
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
+]
+],
+"keywords": [
+756193,
+756194
+]
 },
 "756667": {
 "tags": [
@@ -3043,9 +5021,39 @@
 [
 "adjacency",
 "adjacent units"
+],
+[
+"trap_secret",
+"Ambush"
+],
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"trap_secret",
+"Ambush"
+],
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
+]
+],
+"keywords": [
+756193,
+756194
+]
 },
 "756677": {
 "tags": [
@@ -3068,9 +5076,39 @@
 [
 "tribal",
 "Soldiers"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+]
+],
+"keywords": [
+756143,
+756151
+]
 },
 "756684": {
 "tags": [
@@ -3087,7 +5125,10 @@
 "Move a unit to the other row"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "756693": {
 "tags": [
@@ -3098,9 +5139,22 @@
 [
 "draw",
 "Draw a card"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756696": {
 "tags": [
@@ -3119,9 +5173,22 @@
 [
 "stat_gain",
 "boost an allied unit by its power"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756697": {
 "tags": [
@@ -3144,9 +5211,22 @@
 [
 "rows",
 "Melee"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756698": {
 "tags": [
@@ -3165,9 +5245,22 @@
 [
 "cost_condition",
 "highest-provision cost unit"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756699": {
 "tags": [
@@ -3230,7 +5323,11 @@
 "Play a random gold card from your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141,
+756170
+]
 },
 "756706": {
 "tags": [
@@ -3253,9 +5350,57 @@
 [
 "cooldowns",
 "Cooldown: 1"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"banish",
+"Banish"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"banish",
+"Banish"
+]
+],
+"keywords": [
+756143,
+756151,
+756152,
+756158
+]
 },
 "756708": {
 "tags": [
@@ -3284,7 +5429,10 @@
 "For each unit destroyed"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141
+]
 },
 "756709": {
 "tags": [
@@ -3315,9 +5463,22 @@
 [
 "permanent_growth",
 "boost self by 1"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756722": {
 "tags": [
@@ -3340,9 +5501,23 @@
 [
 "synergy_payoff",
 "Bonded"
+],
+[
+"condition_count",
+"Bonded"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"condition_count",
+"Bonded"
+]
+],
+"keywords": [
+756141,
+756190
+]
 },
 "756723": {
 "tags": [
@@ -3357,9 +5532,22 @@
 [
 "tribal",
 "Bomb"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756729": {
 "tags": [
@@ -3387,9 +5575,56 @@
 [
 "damage",
 "Damage by 3 instead"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+],
+[
+"stat_condition",
+"Inspired"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+],
+[
+"stat_condition",
+"Inspired"
+]
+],
+"keywords": [
+756143,
+756167,
+756168
+]
 },
 "756741": {
 "tags": [
@@ -3420,9 +5655,48 @@
 [
 "banish",
 "Banish the unit"
+],
+[
+"banish",
+"Banish"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"banish",
+"Banish"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
+]
+],
+"keywords": [
+756158,
+756192,
+756198
+]
 },
 "756742": {
 "tags": [
@@ -3449,9 +5723,48 @@
 [
 "cost_condition",
 "same provision cost"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+],
+"keywords": [
+756141,
+756143,
+756191
+]
 },
 "756743": {
 "tags": [
@@ -3466,9 +5779,22 @@
 [
 "combo_sequence",
 "the next unit you play during this turn"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756744": {
 "tags": [
@@ -3483,9 +5809,22 @@
 [
 "banish",
 "Banish self"
+],
+[
+"banish",
+"Banish"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"banish",
+"Banish"
+]
+],
+"keywords": [
+756158
+]
 },
 "756746": {
 "tags": [
@@ -3504,9 +5843,22 @@
 [
 "tutor",
 "Move any card from your deck to the top"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756751": {
 "tags": [
@@ -3534,9 +5886,22 @@
 [
 "adjacency",
 "the unit to the right"
+],
+[
+"on_kill",
+"Deathblow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_kill",
+"Deathblow"
+]
+],
+"keywords": [
+756192
+]
 },
 "756763": {
 "tags": [
@@ -3551,9 +5916,22 @@
 [
 "draw",
 "draw a card"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756768": {
 "tags": [
@@ -3576,9 +5954,23 @@
 [
 "activated",
 "Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756141,
+756143
+]
 },
 "756769": {
 "tags": [
@@ -3589,9 +5981,31 @@
 [
 "damage_over_time",
 "Bleeding (3)"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"silence",
+"Purify"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"silence",
+"Purify"
+]
+],
+"keywords": [
+756141,
+756183
+]
 },
 "756779": {
 "tags": [
@@ -3618,9 +6032,48 @@
 [
 "tribal",
 "Vampire"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+],
+"keywords": [
+756143,
+756151,
+756152
+]
 },
 "756783": {
 "tags": [
@@ -3657,7 +6110,10 @@
 "play the top card from your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141
+]
 },
 "756786": {
 "tags": [
@@ -3676,9 +6132,31 @@
 [
 "random_effect",
 "2 random gold cards"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
+]
+],
+"keywords": [
+756141,
+756170
+]
 },
 "756798": {
 "tags": [
@@ -3697,9 +6175,48 @@
 [
 "ping",
 "Damage an enemy unit by 1"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+]
+],
+"keywords": [
+756141,
+756143,
+756155
+]
 },
 "756801": {
 "tags": [
@@ -3739,9 +6256,64 @@
 [
 "cooldowns",
 "Cooldown: 2"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+],
+"keywords": [
+756143,
+756152,
+756167
+]
 },
 "756825": {
 "tags": [
@@ -3782,16 +6354,33 @@
 "Whenever a unit is played"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141,
+756146
+]
 },
 "756826": {
 "tags": [
 [
 "transform",
 "Transform into Champion of Svalblod"
+],
+[
+"stat_condition",
+"Berserk"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_condition",
+"Berserk"
+]
+],
+"keywords": [
+756197
+]
 },
 "756827": {
 "tags": [
@@ -3808,7 +6397,10 @@
 "damaged allied unit"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "756828": {
 "tags": [
@@ -3835,9 +6427,22 @@
 [
 "stat_gain",
 "boost self by that amount"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756829": {
 "tags": [
@@ -3864,9 +6469,22 @@
 [
 "tribal",
 "Beast"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756831": {
 "tags": [
@@ -3922,9 +6540,22 @@
 [
 "mark_target",
 "Bounty"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756851": {
 "tags": [
@@ -3947,18 +6578,61 @@
 [
 "damage_over_time",
 "Bleeding (1)"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"coin_economy",
+"Fee"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"coin_economy",
+"Fee"
+]
+],
+"keywords": [
+756141,
+756213
+]
 },
 "756852": {
 "tags": [
 [
 "coin_economy",
 "Profit 8"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+]
+],
+"keywords": [
+756212
+]
 },
 "756853": {
 "tags": [
@@ -3985,9 +6659,39 @@
 [
 "in_hand_buff",
 "in hand, deck and on the battlefield"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+]
+],
+"keywords": [
+756141,
+756211
+]
 },
 "756855": {
 "tags": [
@@ -4006,9 +6710,56 @@
 [
 "summon",
 "Spawn a Sly Seductress on this row"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+]
+],
+"keywords": [
+756150,
+756211,
+756212
+]
 },
 "756856": {
 "tags": [
@@ -4031,9 +6782,56 @@
 [
 "stat_gain",
 "boost it by 2"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
+]
+],
+"keywords": [
+756143,
+756151,
+756202
+]
 },
 "756859": {
 "tags": [
@@ -4081,9 +6879,56 @@
 [
 "suppress",
 "Intimidate"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
+]
+],
+"keywords": [
+756143,
+756211,
+756215
+]
 },
 "756866": {
 "tags": [
@@ -4102,9 +6947,31 @@
 [
 "coin_economy",
 "Tribute 8"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+]
+],
+"keywords": [
+756141,
+756211
+]
 },
 "756869": {
 "tags": [
@@ -4127,9 +6994,22 @@
 [
 "deckbuilding_effect",
 "adds 15 provisions to your deck's provisions limit"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756871": {
 "tags": [
@@ -4189,9 +7069,31 @@
 [
 "comeback",
 "If you have 0 Coins"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"coin_economy",
+"Fee"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"coin_economy",
+"Fee"
+]
+],
+"keywords": [
+756152,
+756213
+]
 },
 "756878": {
 "tags": [
@@ -4206,9 +7108,39 @@
 [
 "damage",
 "Damage an enemy unit by 2"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
+]
+],
+"keywords": [
+756212,
+756213
+]
 },
 "756889": {
 "tags": [
@@ -4269,9 +7201,22 @@
 [
 "free_play",
 "play the top card from your deck"
+],
+[
+"banish",
+"Banish"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"banish",
+"Banish"
+]
+],
+"keywords": [
+756158
+]
 },
 "756898": {
 "tags": [
@@ -4294,9 +7239,31 @@
 [
 "turn_end",
 "At the end of this turn"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+]
+],
+"keywords": [
+756141,
+756211
+]
 },
 "756899": {
 "tags": [
@@ -4328,9 +7295,57 @@
 [
 "cooldowns",
 "Cooldown: 1"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"cooldowns",
+"Cooldown"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
+]
+],
+"keywords": [
+756150,
+756152,
+756212,
+756213
+]
 },
 "756915": {
 "tags": [
@@ -4349,9 +7364,22 @@
 [
 "tribal",
 "Crime"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756924": {
 "tags": [
@@ -4387,9 +7415,55 @@
 [
 "immunity",
 "Gain Immunity"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
+]
+],
+"keywords": [
+756211,
+756215
+]
 },
 "756928": {
 "tags": [
@@ -4400,9 +7474,64 @@
 [
 "coin_economy",
 "Fee 3"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
+]
+],
+"keywords": [
+756212,
+756213,
+756215
+]
 },
 "756935": {
 "tags": [
@@ -4417,9 +7546,22 @@
 [
 "stat_gain",
 "boost self by that amount"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756941": {
 "tags": [
@@ -4438,9 +7580,48 @@
 [
 "block_armor",
 "Give an allied unit 3 Armor"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+],
+"keywords": [
+756141,
+756143,
+756191
+]
 },
 "756942": {
 "tags": [
@@ -4476,9 +7657,22 @@
 [
 "lone_unit",
 "if this is the only card on its row"
+],
+[
+"condition_count",
+"Bonded"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"condition_count",
+"Bonded"
+]
+],
+"keywords": [
+756190
+]
 },
 "756946": {
 "tags": [
@@ -4497,9 +7691,23 @@
 [
 "silence",
 "Locked"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756141,
+756150
+]
 },
 "756947": {
 "tags": [
@@ -4535,9 +7743,57 @@
 [
 "adjacency",
 "unit to the right"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"banish",
+"Banish"
+],
+[
+"on_damaged",
+"Exposed"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"banish",
+"Banish"
+],
+[
+"on_damaged",
+"Exposed"
+]
+],
+"keywords": [
+756141,
+756143,
+756158,
+756179
+]
 },
 "756954": {
 "tags": [
@@ -4548,9 +7804,31 @@
 [
 "shield",
 "Shield"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
+]
+],
+"keywords": [
+756181,
+756218
+]
 },
 "756955": {
 "tags": [
@@ -4569,9 +7847,22 @@
 [
 "scope_multi",
 "all its copies"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756956": {
 "tags": [
@@ -4603,9 +7894,39 @@
 [
 "damage_over_time",
 "Bleeding (2)"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
+]
+],
+"keywords": [
+756141,
+756202
+]
 },
 "756970": {
 "tags": [
@@ -4626,7 +7947,10 @@
 "destroy self"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "756972": {
 "tags": [
@@ -4653,9 +7977,31 @@
 [
 "board_limit",
 "If this row is full"
+],
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
+]
+],
+"keywords": [
+756141,
+756149
+]
 },
 "756975": {
 "tags": [
@@ -4707,9 +8053,30 @@
 [
 "tribal",
 "Soldiers"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "756979": {
 "tags": [
@@ -4728,9 +8095,22 @@
 [
 "block_armor",
 "give it 2 Armor"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "756981": {
 "tags": [
@@ -4745,9 +8125,31 @@
 [
 "generate_cards",
 "Spawn and play Battle Preparation"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
+]
+],
+"keywords": [
+756141,
+756218
+]
 },
 "756985": {
 "tags": [
@@ -4758,9 +8160,63 @@
 [
 "ping",
 "damage the last unit played by your opponent by 1"
+],
+[
+"condition_count",
+"Barricade"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"condition_count",
+"Barricade"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
+]
+],
+"keywords": [
+756178,
+756200
+]
 },
 "756989": {
 "tags": [
@@ -4779,9 +8235,39 @@
 [
 "damage_reduction",
 "gain 1 Armor"
+],
+[
+"stat_condition",
+"Berserk"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_condition",
+"Berserk"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
+]
+],
+"keywords": [
+756197,
+756218
+]
 },
 "756997": {
 "tags": [
@@ -4793,8 +8279,38 @@
 "by": "A=B"
 },
 "756999": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
+]
+],
+"keywords": [
+756207
+]
 },
 "757001": {
 "tags": [
@@ -4809,9 +8325,39 @@
 [
 "movement",
 "Move self to the other row"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
+]
+],
+"keywords": [
+756143,
+756218
+]
 },
 "757003": {
 "tags": [
@@ -4838,9 +8384,57 @@
 [
 "cooldowns",
 "Cooldown: 1"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"cooldowns",
+"Cooldown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+],
+"keywords": [
+756141,
+756143,
+756150,
+756152
+]
 },
 "757012": {
 "tags": [
@@ -4853,7 +8447,10 @@
 "Spawn Desert Treasure on this row"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "757013": {
 "tags": [
@@ -4868,9 +8465,22 @@
 [
 "condition_count",
 "the number of units you control"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757014": {
 "tags": [
@@ -4889,9 +8499,40 @@
 [
 "summon",
 "Spawn a base copy of self"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"condition_count",
+"Bonded"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"condition_count",
+"Bonded"
+]
+],
+"keywords": [
+756141,
+756150,
+756190
+]
 },
 "757015": {
 "tags": [
@@ -4910,9 +8551,22 @@
 [
 "stat_condition",
 "3 power the target has"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757023": {
 "tags": [
@@ -4923,9 +8577,30 @@
 [
 "transform",
 "Transform into Lamp Djinn"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757024": {
 "tags": [
@@ -4940,9 +8615,22 @@
 [
 "shield",
 "give it Shield"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757033": {
 "tags": [
@@ -4961,9 +8649,22 @@
 [
 "summon",
 "Spawn 2 Crows on your Melee row"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757035": {
 "tags": [
@@ -4990,9 +8691,31 @@
 [
 "random_effect",
 "random allied row"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756141,
+756150
+]
 },
 "757037": {
 "tags": [
@@ -5015,9 +8738,22 @@
 [
 "tribal",
 "Crows"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757047": {
 "tags": [
@@ -5032,9 +8768,72 @@
 [
 "activated",
 "Order (Dominance):"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
+]
+],
+"keywords": [
+756141,
+756143,
+756185
+]
 },
 "757049": {
 "tags": [
@@ -5049,9 +8848,31 @@
 [
 "random_effect",
 "random enemy row"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
+]
+],
+"keywords": [
+756150,
+756173
+]
 },
 "757059": {
 "tags": [
@@ -5074,9 +8895,39 @@
 [
 "variety_payoff",
 "Harmony"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+]
+],
+"keywords": [
+756141,
+756207
+]
 },
 "757063": {
 "tags": [
@@ -5115,9 +8966,48 @@
 [
 "cooldowns",
 "Cooldown: 1"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+],
+"keywords": [
+756141,
+756143,
+756152
+]
 },
 "757071": {
 "tags": [
@@ -5146,7 +9036,10 @@
 "Gain 6 Coins"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756159
+]
 },
 "757078": {
 "tags": [
@@ -5161,9 +9054,56 @@
 [
 "self_destruct",
 "Destroy self"
+],
+[
+"on_damaged",
+"Exposed"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"life_payment",
+"Insanity"
+],
+[
+"coin_economy",
+"Insanity"
+],
+[
+"piercing",
+"Insanity"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_damaged",
+"Exposed"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"life_payment",
+"Insanity"
+],
+[
+"coin_economy",
+"Insanity"
+],
+[
+"piercing",
+"Insanity"
+]
+],
+"keywords": [
+756179,
+756213,
+756216
+]
 },
 "757081": {
 "tags": [
@@ -5186,9 +9126,22 @@
 [
 "deckbuilding_effect",
 "adds 17 provisions to your deck's provision limit"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757082": {
 "tags": [
@@ -5211,9 +9164,30 @@
 [
 "deckbuilding_effect",
 "adds 18 provisions to your deck's provision limit"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757085": {
 "tags": [
@@ -5248,9 +9222,23 @@
 [
 "on_ally_play",
 "whenever you play the rightmost card from your hand"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141,
+756161
+]
 },
 "757089": {
 "tags": [
@@ -5269,9 +9257,22 @@
 [
 "deck_condition",
 "Offering in your starting deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757091": {
 "tags": [
@@ -5312,9 +9313,23 @@
 [
 "spell_power",
 "Increase the damage dealt by Frost by 1"
+],
+[
+"stat_condition",
+"Dominance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_condition",
+"Dominance"
+]
+],
+"keywords": [
+756141,
+756189
+]
 },
 "757099": {
 "tags": [
@@ -5345,9 +9360,22 @@
 [
 "stat_gain",
 "boost self by 2 for each turn of Frost remaining"
+],
+[
+"deck_condition",
+"Devotion"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"deck_condition",
+"Devotion"
+]
+],
+"keywords": [
+756182
+]
 },
 "757101": {
 "tags": [
@@ -5397,7 +9425,10 @@
 "damage it by 2"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "757105": {
 "tags": [
@@ -5416,9 +9447,32 @@
 [
 "deckbuilding_effect",
 "Devotion"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"deck_condition",
+"Devotion"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"deck_condition",
+"Devotion"
+]
+],
+"keywords": [
+756141,
+756161,
+756182
+]
 },
 "757110": {
 "tags": [
@@ -5449,13 +9503,75 @@
 [
 "ping",
 "damage a random enemy unit by 1"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143,
+756151,
+756161
+]
 },
 "757112": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"immunity",
+"Veil"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"immunity",
+"Veil"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
+]
+],
+"keywords": [
+756161,
+756196
+]
 },
 "757115": {
 "tags": [
@@ -5482,9 +9598,22 @@
 [
 "transform",
 "Transform into a Bear Abomination"
+],
+[
+"stat_condition",
+"Berserk"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_condition",
+"Berserk"
+]
+],
+"keywords": [
+756197
+]
 },
 "757118": {
 "tags": [
@@ -5507,9 +9636,39 @@
 [
 "on_kill",
 "Deathblow:"
+],
+[
+"on_kill",
+"Deathblow"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_kill",
+"Deathblow"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
+]
+],
+"keywords": [
+756192,
+756198
+]
 },
 "757121": {
 "tags": [
@@ -5520,9 +9679,39 @@
 [
 "summon",
 "Spawn a Flaming Rose Footman on an allied row"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+]
+],
+"keywords": [
+756150,
+756212
+]
 },
 "757126": {
 "tags": [
@@ -5541,9 +9730,22 @@
 [
 "upgrade",
 "evolve"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757134": {
 "tags": [
@@ -5558,9 +9760,48 @@
 [
 "stat_gain",
 "Boost an allied unit by 2"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"deck_condition",
+"Devotion"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"deck_condition",
+"Devotion"
+]
+],
+"keywords": [
+756143,
+756151,
+756182
+]
 },
 "757136": {
 "tags": [
@@ -5591,9 +9832,74 @@
 [
 "transform",
 "evolve"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
+]
+],
+"keywords": [
+756141,
+756143,
+756150,
+756151,
+756186
+]
 },
 "757144": {
 "tags": [
@@ -5616,9 +9922,40 @@
 [
 "movement",
 "Move self to the opposite row"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
+],
+[
+"on_kill",
+"Deathblow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"donate",
+"Disloyal"
+],
+[
+"on_kill",
+"Deathblow"
+]
+],
+"keywords": [
+756141,
+756170,
+756192
+]
 },
 "757148": {
 "tags": [
@@ -5641,9 +9978,30 @@
 [
 "immunity",
 "give it Veil"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
+]
+],
+"keywords": [
+756198
+]
 },
 "757150": {
 "tags": [
@@ -5670,9 +10028,48 @@
 [
 "random_effect",
 "a random non-Neutral unit"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"immunity",
+"Veil"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"immunity",
+"Veil"
+]
+],
+"keywords": [
+756143,
+756151,
+756161
+]
 },
 "757153": {
 "tags": [
@@ -5683,9 +10080,72 @@
 [
 "damage",
 "Damage an enemy unit by 2"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"immunity",
+"Veil"
+],
+[
+"on_ally_play",
+"Symbiosis"
+],
+[
+"summon",
+"Symbiosis"
+],
+[
+"variable_stats",
+"Symbiosis"
+],
+[
+"tribal",
+"Symbiosis"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"immunity",
+"Veil"
+],
+[
+"on_ally_play",
+"Symbiosis"
+],
+[
+"summon",
+"Symbiosis"
+],
+[
+"variable_stats",
+"Symbiosis"
+],
+[
+"tribal",
+"Symbiosis"
+]
+],
+"keywords": [
+756143,
+756161,
+756204
+]
 },
 "757155": {
 "tags": [
@@ -5708,9 +10168,22 @@
 [
 "condition_count",
 "the number of Dryads on this row"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757156": {
 "tags": [
@@ -5733,9 +10206,22 @@
 [
 "delayed",
 "Counter: 3"
+],
+[
+"delayed",
+"Counter"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Counter"
+]
+],
+"keywords": [
+756223
+]
 },
 "757158": {
 "tags": [
@@ -5760,7 +10246,10 @@
 "Transform adjacent units into random units"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "757165": {
 "tags": [
@@ -5775,9 +10264,22 @@
 [
 "deck_position",
 "move a card to the bottom of it"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757166": {
 "tags": [
@@ -5792,9 +10294,48 @@
 [
 "damage",
 "Damage an enemy unit by 4"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+],
+[
+"card_quality",
+"Swap"
+],
+[
+"draw",
+"Swap"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+],
+[
+"card_quality",
+"Swap"
+],
+[
+"draw",
+"Swap"
+]
+],
+"keywords": [
+756141,
+756153,
+756227
+]
 },
 "757167": {
 "tags": [
@@ -5846,9 +10387,22 @@
 [
 "stat_gain",
 "boost self by its power"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757174": {
 "tags": [
@@ -5892,9 +10446,40 @@
 [
 "scope_multi",
 "all other units on that row"
+],
+[
+"rows",
+"Melee"
+],
+[
+"rows",
+"Ranged"
+],
+[
+"hand_size",
+"Adrenaline"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"rows",
+"Melee"
+],
+[
+"rows",
+"Ranged"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+],
+"keywords": [
+756144,
+756146,
+756153
+]
 },
 "757177": {
 "tags": [
@@ -5913,9 +10498,23 @@
 [
 "stealth",
 "Stealth"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143,
+756151
+]
 },
 "757179": {
 "tags": [
@@ -5930,9 +10529,31 @@
 [
 "condition_count",
 "with at least 5 units"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+],
+"keywords": [
+756141,
+756153
+]
 },
 "757184": {
 "tags": [
@@ -5947,9 +10568,22 @@
 [
 "condition_count",
 "equal to the number of units on that unit's row"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757185": {
 "tags": [
@@ -6005,9 +10639,33 @@
 [
 "round_carryover",
 "Resilience"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"heal",
+"Heal"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"heal",
+"Heal"
+]
+],
+"keywords": [
+756141,
+756143,
+756157,
+756191
+]
 },
 "757190": {
 "tags": [
@@ -6022,9 +10680,22 @@
 [
 "condition_life",
 "damaged enemy unit"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757192": {
 "tags": [
@@ -6043,9 +10714,31 @@
 [
 "condition_life",
 "damaged allied unit"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+],
+"keywords": [
+756141,
+756153
+]
 },
 "757194": {
 "tags": [
@@ -6074,7 +10767,10 @@
 "While not damaged"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141
+]
 },
 "757195": {
 "tags": [
@@ -6093,9 +10789,22 @@
 [
 "block_armor",
 "give them 1 Armor"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756150
+]
 },
 "757200": {
 "tags": [
@@ -6110,9 +10819,31 @@
 [
 "turn_end",
 "At the end of your turn"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"hand_size",
+"Adrenaline"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+],
+"keywords": [
+756150,
+756153
+]
 },
 "757203": {
 "tags": [
@@ -6135,9 +10866,64 @@
 [
 "stat_gain",
 "Transfer all boost from self to an allied unit"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+],
+"keywords": [
+756141,
+756143,
+756167
+]
 },
 "757211": {
 "tags": [
@@ -6168,9 +10954,31 @@
 [
 "hand_size",
 "Adrenaline 4"
+],
+[
+"hand_size",
+"Adrenaline"
+],
+[
+"death_trigger",
+"Deathwish"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"hand_size",
+"Adrenaline"
+],
+[
+"death_trigger",
+"Deathwish"
+]
+],
+"keywords": [
+756153,
+756173
+]
 },
 "757213": {
 "tags": [
@@ -6185,9 +10993,64 @@
 [
 "stat_gain",
 "boost all copies of the Consumed unit on that unit's row by 1"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
+]
+],
+"keywords": [
+756141,
+756153,
+756185
+]
 },
 "757217": {
 "tags": [
@@ -6210,9 +11073,48 @@
 [
 "damage_over_time",
 "Poison"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+],
+"keywords": [
+756141,
+756143,
+756191
+]
 },
 "757230": {
 "tags": [
@@ -6243,9 +11145,56 @@
 [
 "deckbuilding_effect",
 "Devotion"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
+],
+[
+"delayed",
+"Counter"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
+],
+[
+"delayed",
+"Counter"
+]
+],
+"keywords": [
+756141,
+756196,
+756223
+]
 },
 "757231": {
 "tags": [
@@ -6272,9 +11221,31 @@
 [
 "stat_gain",
 "boost all Dwarves with Armor on this row by 1"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"condition_count",
+"Barricade"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"condition_count",
+"Barricade"
+]
+],
+"keywords": [
+756141,
+756178
+]
 },
 "757237": {
 "tags": [
@@ -6313,9 +11284,57 @@
 [
 "suppress",
 "Intimidate"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"on_ally_play",
+"Intimidate"
+],
+[
+"permanent_growth",
+"Intimidate"
+],
+[
+"tribal",
+"Intimidate"
+]
+],
+"keywords": [
+756141,
+756150,
+756213,
+756215
+]
 },
 "757238": {
 "tags": [
@@ -6350,9 +11369,57 @@
 [
 "activated",
 "Fee 3"
+],
+[
+"deck_condition",
+"Devotion"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"life_payment",
+"Insanity"
+],
+[
+"coin_economy",
+"Insanity"
+],
+[
+"piercing",
+"Insanity"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"deck_condition",
+"Devotion"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"life_payment",
+"Insanity"
+],
+[
+"coin_economy",
+"Insanity"
+],
+[
+"piercing",
+"Insanity"
+]
+],
+"keywords": [
+756141,
+756182,
+756213,
+756216
+]
 },
 "757239": {
 "tags": [
@@ -6389,7 +11456,10 @@
 "power equal to that unit's power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141
+]
 },
 "757244": {
 "tags": [
@@ -6418,7 +11488,10 @@
 "Rain and Storm"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "757253": {
 "tags": [
@@ -6456,7 +11529,10 @@
 "give Resilience"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756221
+]
 },
 "757256": {
 "tags": [
@@ -6479,9 +11555,22 @@
 [
 "tribal",
 "Relict"
+],
+[
+"condition_count",
+"Sabbath"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"condition_count",
+"Sabbath"
+]
+],
+"keywords": [
+756221
+]
 },
 "757257": {
 "tags": [
@@ -6504,9 +11593,22 @@
 [
 "tribal",
 "Relict"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757259": {
 "tags": [
@@ -6529,9 +11631,31 @@
 [
 "stat_condition",
 "highest-power enemy unit"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756141,
+756150
+]
 },
 "757273": {
 "tags": [
@@ -6558,9 +11682,31 @@
 [
 "heal",
 "Heal self by 2"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Berserk"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Berserk"
+]
+],
+"keywords": [
+756141,
+756197
+]
 },
 "757274": {
 "tags": [
@@ -6571,9 +11717,22 @@
 [
 "cast_from_zone",
 "Play all copies of a bronze special card from your deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757278": {
 "tags": [
@@ -6592,9 +11751,22 @@
 [
 "tribal",
 "Mages"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757279": {
 "tags": [
@@ -6605,9 +11777,47 @@
 [
 "delayed",
 "At the end of this turn"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"permanent_growth",
+"Patience"
+],
+[
+"turn_end",
+"Patience"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"permanent_growth",
+"Patience"
+],
+[
+"turn_end",
+"Patience"
+]
+],
+"keywords": [
+756143,
+756172
+]
 },
 "757282": {
 "tags": [
@@ -6626,9 +11836,22 @@
 [
 "transform",
 "transform self into Gernichora"
+],
+[
+"condition_count",
+"Sabbath"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"condition_count",
+"Sabbath"
+]
+],
+"keywords": [
+756221
+]
 },
 "757283": {
 "tags": [
@@ -6655,9 +11878,57 @@
 [
 "summon",
 "Summon a copy of it from your deck"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"banish",
+"Banish"
+],
+[
+"condition_count",
+"Sabbath"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"banish",
+"Banish"
+],
+[
+"condition_count",
+"Sabbath"
+]
+],
+"keywords": [
+756143,
+756151,
+756158,
+756221
+]
 },
 "757284": {
 "tags": [
@@ -6688,9 +11959,22 @@
 [
 "summon",
 "Spawn a copy with the same base power on this row"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757286": {
 "tags": [
@@ -6725,9 +12009,48 @@
 [
 "damage",
 "Damage the enemy unit with a Bounty by 1"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"coin_economy",
+"Fee"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"on_play",
+"Tribute"
+],
+[
+"coin_economy",
+"Tribute"
+],
+[
+"coin_economy",
+"Fee"
+]
+],
+"keywords": [
+756141,
+756211,
+756213
+]
 },
 "757290": {
 "tags": [
@@ -6771,9 +12094,22 @@
 [
 "graveyard",
 "Play a bronze special card from your opponent's graveyard"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757300": {
 "tags": [
@@ -6788,9 +12124,22 @@
 [
 "cost_condition",
 "provision cost equal to this unit's power"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757316": {
 "tags": [
@@ -6809,9 +12158,48 @@
 [
 "summon",
 "Spawn and play Golden Froth"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+],
+"keywords": [
+756141,
+756143,
+756191
+]
 },
 "757318": {
 "tags": [
@@ -6844,7 +12232,10 @@
 "boost self by 1"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756159
+]
 },
 "757319": {
 "tags": [
@@ -6908,9 +12299,73 @@
 [
 "return_to_hand",
 "move self back to your hand"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"discard",
+"Discard"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"discard",
+"Discard"
+],
+[
+"permanent_growth",
+"Veteran"
+],
+[
+"turn_number",
+"Veteran"
+],
+[
+"turn_start",
+"Veteran"
+]
+],
+"keywords": [
+756141,
+756143,
+756195,
+756196
+]
 },
 "757326": {
 "tags": [
@@ -6947,7 +12402,10 @@
 "Spawn and play Loc Feainn: Convergence"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756159
+]
 },
 "757333": {
 "tags": [
@@ -6974,9 +12432,22 @@
 [
 "turn_end",
 "At the end of your turn"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757334": {
 "tags": [
@@ -7007,9 +12478,23 @@
 [
 "stat_condition",
 "highest-power"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756150,
+756159
+]
 },
 "757335": {
 "tags": [
@@ -7040,9 +12525,39 @@
 [
 "rule_change",
 "Units played on your opponent's side can trigger your Thrive abilities"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756141,
+756143
+]
 },
 "757337": {
 "tags": [
@@ -7065,9 +12580,55 @@
 [
 "rows",
 "Deploy (Ranged)"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
+]
+],
+"keywords": [
+756141,
+756185
+]
 },
 "757338": {
 "tags": [
@@ -7114,9 +12675,23 @@
 [
 "resource_banking",
 "Hoard 8"
+],
+[
+"resource_banking",
+"Hoard"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_banking",
+"Hoard"
+]
+],
+"keywords": [
+756159,
+756217
+]
 },
 "757339": {
 "tags": [
@@ -7151,9 +12726,41 @@
 [
 "cost_reduction",
 "Your Hoards require 1 less Coins to trigger"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"resource_banking",
+"Hoard"
+],
+[
+"delayed",
+"Counter"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"resource_banking",
+"Hoard"
+],
+[
+"delayed",
+"Counter"
+]
+],
+"keywords": [
+756141,
+756150,
+756217,
+756223
+]
 },
 "757347": {
 "tags": [
@@ -7180,9 +12787,90 @@
 [
 "copy",
 "Spawn a base copy of the Consumed unit"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
+]
+],
+"keywords": [
+756141,
+756143,
+756150,
+756173,
+756185
+]
 },
 "757348": {
 "tags": [
@@ -7213,9 +12901,22 @@
 [
 "deck_condition",
 "the number of Tactics in your starting deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757353": {
 "tags": [
@@ -7242,9 +12943,31 @@
 [
 "permanent_growth",
 "increase own base power by 1"
+],
+[
+"piercing",
+"Drain"
+],
+[
+"stat_gain",
+"Drain"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"piercing",
+"Drain"
+],
+[
+"stat_gain",
+"Drain"
+]
+],
+"keywords": [
+756141,
+756145
+]
 },
 "757354": {
 "tags": [
@@ -7271,9 +12994,31 @@
 [
 "delayed",
 "When the Counter reaches 0"
+],
+[
+"coin_economy",
+"Fee"
+],
+[
+"delayed",
+"Counter"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"coin_economy",
+"Fee"
+],
+[
+"delayed",
+"Counter"
+]
+],
+"keywords": [
+756213,
+756223
+]
 },
 "757356": {
 "tags": [
@@ -7304,9 +13049,30 @@
 [
 "points_scoring",
 "if you have more points than your opponent"
+],
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"turn_start",
+"Echo"
+],
+[
+"graveyard",
+"Echo"
+]
+],
+"keywords": [
+756198
+]
 },
 "757357": {
 "tags": [
@@ -7337,9 +13103,48 @@
 [
 "turn_end",
 "At the end of your turn"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"cooldowns",
+"Cooldown"
+]
+],
+"keywords": [
+756143,
+756151,
+756152
+]
 },
 "757359": {
 "tags": [
@@ -7378,9 +13183,23 @@
 [
 "transform",
 "transform"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143,
+756151
+]
 },
 "757360": {
 "tags": [
@@ -7453,9 +13272,31 @@
 [
 "draw",
 "draw as many cards"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"banish",
+"Banish"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"banish",
+"Banish"
+]
+],
+"keywords": [
+756141,
+756158
+]
 },
 "757365": {
 "tags": [
@@ -7478,9 +13319,31 @@
 [
 "temporary_effect",
 "until the end of round"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"hand_size",
+"Adrenaline"
+]
+],
+"keywords": [
+756141,
+756153
+]
 },
 "757374": {
 "tags": [
@@ -7507,9 +13370,40 @@
 [
 "round_carryover",
 "Resilience"
+],
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Profit"
+],
+[
+"on_play",
+"Profit"
+],
+[
+"coin_economy",
+"Fee"
+]
+],
+"keywords": [
+756191,
+756212,
+756213
+]
 },
 "757376": {
 "tags": [
@@ -7538,7 +13432,10 @@
 "play the top unit, special, and artifact from your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141
+]
 },
 "757379": {
 "tags": [
@@ -7574,9 +13471,22 @@
 [
 "ping",
 "damage it by 1"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757384": {
 "tags": [
@@ -7597,7 +13507,10 @@
 "repeat the Deploy ability with a different target"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "757390": {
 "tags": [
@@ -7624,9 +13537,47 @@
 [
 "on_ally_play",
 "Whenever you Spawn a Soldier"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"rows",
+"Formation"
+],
+[
+"haste",
+"Formation"
+],
+[
+"stat_gain",
+"Formation"
+]
+],
+"keywords": [
+756143,
+756167
+]
 },
 "757391": {
 "tags": [
@@ -7653,9 +13604,48 @@
 [
 "stat_condition",
 "highest-power enemy unit"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"condition_count",
+"Bonded"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"condition_count",
+"Bonded"
+]
+],
+"keywords": [
+756143,
+756150,
+756190
+]
 },
 "757394": {
 "tags": [
@@ -7703,9 +13693,30 @@
 [
 "temporary_effect",
 "for 1 turn"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757397": {
 "tags": [
@@ -7748,9 +13759,23 @@
 [
 "random_effect",
 "a random unit"
+],
+[
+"on_play",
+"Tribute"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Tribute"
+]
+],
+"keywords": [
+756141,
+756211
+]
 },
 "757398": {
 "tags": [
@@ -7814,9 +13839,49 @@
 [
 "transform",
 "evolve after you win a round"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"banish",
+"Banish"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"banish",
+"Banish"
+]
+],
+"keywords": [
+756141,
+756143,
+756158,
+756159
+]
 },
 "757407": {
 "tags": [
@@ -7849,7 +13914,12 @@
 "Gain Resilience"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141,
+756159,
+756192
+]
 },
 "757408": {
 "tags": [
@@ -7872,9 +13942,39 @@
 [
 "banish",
 "Doomed"
+],
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
+]
+],
+"keywords": [
+756159,
+756207
+]
 },
 "757409": {
 "tags": [
@@ -7893,9 +13993,30 @@
 [
 "generate_cards",
 "Spawn and play Loc Feainn: Convergence"
+],
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+]
+],
+"keywords": [
+756207
+]
 },
 "757410": {
 "tags": [
@@ -7918,9 +14039,31 @@
 [
 "random_effect",
 "random 4-provision"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756141,
+756150
+]
 },
 "757411": {
 "tags": [
@@ -7967,9 +14110,43 @@
 [
 "round_carryover",
 "Resilience"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Create"
+],
+[
+"random_effect",
+"Create"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Create"
+],
+[
+"random_effect",
+"Create"
+]
+],
+"keywords": [
+756141,
+756143,
+756159,
+756184,
+756191,
+756201
+]
 },
 "757412": {
 "tags": [
@@ -8016,9 +14193,57 @@
 [
 "banish",
 "Doomed"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"destroy",
+"Consume"
+],
+[
+"stat_gain",
+"Consume"
+],
+[
+"banish",
+"Consume"
+],
+[
+"graveyard",
+"Consume"
+]
+],
+"keywords": [
+756141,
+756143,
+756159,
+756185
+]
 },
 "757414": {
 "tags": [
@@ -8055,7 +14280,11 @@
 "gain a Coin for each Firesworn card you control"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141,
+756159
+]
 },
 "757417": {
 "tags": [
@@ -8090,9 +14319,32 @@
 [
 "deck_position",
 "at the bottom of your opponent's deck"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756141,
+756143,
+756150
+]
 },
 "757427": {
 "tags": [
@@ -8111,9 +14363,22 @@
 [
 "damage",
 "damage self by 1"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757430": {
 "tags": [
@@ -8128,9 +14393,48 @@
 [
 "summon",
 "Summon self from your deck to its row"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"silence",
+"Purify"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"silence",
+"Purify"
+]
+],
+"keywords": [
+756143,
+756151,
+756183
+]
 },
 "757432": {
 "tags": [
@@ -8174,9 +14478,22 @@
 [
 "adjacency",
 "adjacent units"
+],
+[
+"coin_economy",
+"Fee"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"coin_economy",
+"Fee"
+]
+],
+"keywords": [
+756213
+]
 },
 "757440": {
 "tags": [
@@ -8203,9 +14520,40 @@
 [
 "round_carryover",
 "Resilience"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756141,
+756143,
+756191
+]
 },
 "757442": {
 "tags": [
@@ -8224,9 +14572,97 @@
 [
 "turn_end",
 "At the end of your turn"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
+],
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
+],
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
+]
+],
+"keywords": [
+756143,
+756155,
+756200,
+756202
+]
 },
 "757445": {
 "tags": [
@@ -8249,9 +14685,64 @@
 [
 "permanent_growth",
 "boost self by 1"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+],
+[
+"adjacency",
+"Flanking"
+],
+[
+"repeat_trigger",
+"Flanking"
+],
+[
+"damage_reduction",
+"Flanking"
+],
+[
+"rows",
+"Flanking"
+],
+[
+"turn_end",
+"Flanking"
+]
+],
+"keywords": [
+756143,
+756151,
+756200
+]
 },
 "757452": {
 "tags": [
@@ -8278,9 +14769,22 @@
 [
 "variety_payoff",
 "unique Traps"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757453": {
 "tags": [
@@ -8309,7 +14813,10 @@
 "Play a Trap from your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756141
+]
 },
 "757455": {
 "tags": [
@@ -8348,9 +14855,31 @@
 [
 "in_hand_buff",
 "Boost a unit in your hand by [6]"
+],
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"trap_secret",
+"Spring"
+],
+[
+"activated",
+"Spring"
+]
+],
+"keywords": [
+756193,
+756194
+]
 },
 "757456": {
 "tags": [
@@ -8377,9 +14906,31 @@
 [
 "trap_secret",
 "Trap"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
+]
+],
+"keywords": [
+756141,
+756186
+]
 },
 "757457": {
 "tags": [
@@ -8400,7 +14951,10 @@
 "face-down allied Trap"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "757462": {
 "tags": [
@@ -8423,9 +14977,22 @@
 [
 "count_payoff",
 "for each time you used an Order ability this turn"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "757464": {
 "tags": [
@@ -8448,9 +15015,22 @@
 [
 "round_carryover",
 "Gain Resilience"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757466": {
 "tags": [
@@ -8477,9 +15057,31 @@
 [
 "block_armor",
 "gain 1 Armor"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Might"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"stat_condition",
+"Might"
+]
+],
+"keywords": [
+756141,
+756205
+]
 },
 "757469": {
 "tags": [
@@ -8502,9 +15104,31 @@
 [
 "condition_count",
 "for each Ogroid in your hand"
+],
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"turn_end",
+"Timer"
+],
+[
+"delayed",
+"Timer"
+]
+],
+"keywords": [
+756141,
+756149
+]
 },
 "757471": {
 "tags": [
@@ -8535,9 +15159,23 @@
 [
 "count_payoff",
 "as many Coins as you spent this turn"
+],
+[
+"coin_economy",
+"Fee"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"coin_economy",
+"Fee"
+]
+],
+"keywords": [
+756141,
+756213
+]
 },
 "757476": {
 "tags": [
@@ -8560,9 +15198,22 @@
 [
 "deck_position",
 "move the rest to the bottom of your opponent's deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757478": {
 "tags": [
@@ -8597,9 +15248,22 @@
 [
 "condition_count",
 "for each Alchemy in your starting deck"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757479": {
 "tags": [
@@ -8628,7 +15292,10 @@
 "5 random Skellige bronze Humans"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "757481": {
 "tags": [
@@ -8667,9 +15334,22 @@
 [
 "banish",
 "Banish self"
+],
+[
+"generate_cards",
+"Spawn"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+]
+],
+"keywords": [
+756150
+]
 },
 "757482": {
 "tags": [
@@ -8696,9 +15376,22 @@
 [
 "stat_gain",
 "boost self by its base power"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "757485": {
 "tags": [
@@ -8713,9 +15406,22 @@
 [
 "debuff",
 "Bleeding enemy units cannot be boosted"
+],
+[
+"on_play",
+"Deploy"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+]
+],
+"keywords": [
+756141
+]
 },
 "795314": {
 "tags": [],
@@ -8764,7 +15470,10 @@
 "Doomed"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756159
+]
 },
 "813593": {
 "tags": [
@@ -8806,7 +15515,10 @@
 "Transform the rightmost card in each player's hand"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+756141
+]
 },
 "813596": {
 "tags": [],
@@ -8821,9 +15533,31 @@
 [
 "banish",
 "Doomed"
+],
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"protection",
+"Defender"
+],
+[
+"targeting_rules",
+"Defender"
+]
+],
+"keywords": [
+756159,
+756218
+]
 },
 "813617": {
 "tags": [
@@ -8832,7 +15566,10 @@
 "Doomed"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756159
+]
 },
 "813622": {
 "tags": [
@@ -8871,9 +15608,23 @@
 [
 "banish",
 "give it Doomed"
+],
+[
+"deck_condition",
+"Devotion"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"deck_condition",
+"Devotion"
+]
+],
+"keywords": [
+756141,
+756182
+]
 },
 "813626": {
 "tags": [
@@ -8882,7 +15633,10 @@
 "Doomed"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756159
+]
 },
 "813630": {
 "tags": [
@@ -8913,9 +15667,83 @@
 [
 "transform",
 "evolve"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"deck_condition",
+"Devotion"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"deck_condition",
+"Devotion"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
+]
+],
+"keywords": [
+756141,
+756143,
+756150,
+756151,
+756182,
+756186
+]
 },
 "813631": {
 "tags": [
@@ -8942,9 +15770,83 @@
 [
 "stat_gain",
 "boost self by 1"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"immunity",
+"Veil"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"haste",
+"Zeal"
+],
+[
+"immunity",
+"Veil"
+],
+[
+"forced_movement",
+"Seize"
+],
+[
+"rows",
+"Seize"
+]
+],
+"keywords": [
+756141,
+756143,
+756150,
+756151,
+756161,
+756186
+]
 },
 "813632": {
 "tags": [
@@ -8963,9 +15865,22 @@
 [
 "condition_count",
 "for each Spying enemy unit"
+],
+[
+"immunity",
+"Immunity"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immunity",
+"Immunity"
+]
+],
+"keywords": [
+756184
+]
 },
 "813648": {
 "tags": [
@@ -8980,9 +15895,30 @@
 [
 "resource_gain",
 "gain 5 Coins"
+],
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"destroy",
+"Poison"
+],
+[
+"stacking_keyword",
+"Poison"
+]
+],
+"keywords": [
+756202
+]
 },
 "813649": {
 "tags": [
@@ -9010,9 +15946,40 @@
 [
 "mark_target",
 "Infuse it with \"Whenever this unit takes damage from other abilities, damage self by the same amount\""
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"activated",
+"Charge"
+]
+],
+"keywords": [
+756143,
+756155,
+756159
+]
 },
 "813663": {
 "tags": [
@@ -9029,7 +15996,10 @@
 "destroy self"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+756159
+]
 },
 "813669": {
 "tags": [
@@ -9048,9 +16018,30 @@
 [
 "deck_position",
 "top 3 units from your deck"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143
+]
 },
 "813671": {
 "tags": [
@@ -9073,9 +16064,23 @@
 [
 "adjacency",
 "adjacent units"
+],
+[
+"cooldowns",
+"Order"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Order"
+]
+],
+"keywords": [
+756143,
+756192
+]
 },
 "813674": {
 "tags": [
@@ -9116,9 +16121,22 @@
 [
 "cooldowns",
 "Cooldown: 8"
+],
+[
+"cooldowns",
+"Cooldown"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cooldowns",
+"Cooldown"
+]
+],
+"keywords": [
+756152
+]
 },
 "813679": {
 "tags": [
@@ -9162,9 +16180,48 @@
 [
 "on_ally_play",
 "Whenever you play a non-Neutral unit"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"on_ally_play",
+"Harmony"
+],
+[
+"permanent_growth",
+"Harmony"
+],
+[
+"variety_payoff",
+"Harmony"
+]
+],
+"keywords": [
+756141,
+756159,
+756207
+]
 },
 "813686": {
 "tags": [
@@ -9199,9 +16256,50 @@
 [
 "cast_from_zone",
 "Play the shuffled unit from your deck"
+],
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Deploy"
+],
+[
+"activated",
+"Order"
+],
+[
+"cooldowns",
+"Order"
+],
+[
+"round_carryover",
+"Resilience"
+]
+],
+"keywords": [
+756141,
+756143,
+756159,
+756184,
+756191
+]
 },
 "813687": {
 "tags": [
@@ -9248,9 +16346,41 @@
 [
 "copy",
 "Spawn a base copy of self in your hand"
+],
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"delayed",
+"Counter"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Spawn"
+],
+[
+"death_trigger",
+"Deathwish"
+],
+[
+"delayed",
+"Counter"
+]
+],
+"keywords": [
+756150,
+756159,
+756173,
+756223
+]
 },
 "813691": {
 "tags": [
@@ -9285,8 +16415,22 @@
 [
 "delayed",
 "If the Fee cost was 0, destroy self instead"
+],
+[
+"coin_economy",
+"Fee"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"coin_economy",
+"Fee"
+]
+],
+"keywords": [
+756159,
+756213
+]
 }
 }

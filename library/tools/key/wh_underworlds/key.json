@@ -80,9 +80,22 @@
 [
 "adjacency",
 "adjacent enemy fighter"
+],
+[
+"forced_movement",
+"Push"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"forced_movement",
+"Push"
+]
+],
+"keywords": [
+762734
+]
 },
 "762781": {
 "tags": [
@@ -2570,9 +2583,22 @@
 [
 "movement",
 "Push that fighter 3 hexes"
+],
+[
+"forced_movement",
+"Push"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"forced_movement",
+"Push"
+]
+],
+"keywords": [
+762734
+]
 },
 "764172": {
 "tags": [
@@ -3250,9 +3276,22 @@
 [
 "immobilize",
 "give that fighter one Move token"
+],
+[
+"forced_movement",
+"Push"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"forced_movement",
+"Push"
+]
+],
+"keywords": [
+762734
+]
 },
 "764424": {
 "tags": [
@@ -4481,9 +4520,22 @@
 [
 "terrain",
 "feature token"
+],
+[
+"forced_movement",
+"Push"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"forced_movement",
+"Push"
+]
+],
+"keywords": [
+762734
+]
 },
 "765007": {
 "tags": [
@@ -4968,9 +5020,22 @@
 [
 "terrain",
 "cover hex"
+],
+[
+"forced_movement",
+"Push"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"forced_movement",
+"Push"
+]
+],
+"keywords": [
+762734
+]
 },
 "765165": {
 "tags": [
@@ -6652,9 +6717,22 @@
 [
 "scope_multi",
 "choose two enemy fighters"
+],
+[
+"forced_movement",
+"Push"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"forced_movement",
+"Push"
+]
+],
+"keywords": [
+762734
+]
 },
 "765824": {
 "tags": [
@@ -6872,9 +6950,22 @@
 [
 "scope_multi",
 "up to two friendly fighters"
+],
+[
+"forced_movement",
+"Push"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"forced_movement",
+"Push"
+]
+],
+"keywords": [
+762734
+]
 },
 "765916": {
 "tags": [
@@ -7057,9 +7148,22 @@
 [
 "scope_multi",
 "up to 3 friendly minions or fighters"
+],
+[
+"forced_movement",
+"push"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"forced_movement",
+"push"
+]
+],
+"keywords": [
+762734
+]
 },
 "796413": {
 "tags": [

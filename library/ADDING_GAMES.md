@@ -57,10 +57,9 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
 
 ## 4. Measuring (only if Kaptain approves reading)
 1. Take the sample with `key.py sample <game>` (500 entries, seed 1; all of a game with 500 or fewer).
-2. Read it as in "Reading cards". The request says that a keyword named on a card counts; without that rule all 168 Blood Bowl
-   players were read as empty, and every score for keyword-heavy games went wrong (`KEY_BUG.md`).
-3. `key.py answer <game>` checks every quote and writes `key.json`.
-4. Score with `key.py score`, crediting named keywords (the `key_kw` layer in `KEY_BUG.md`).
+2. Read it as in "Reading cards".
+3. `key.py answer <game>` checks every quote and writes `key.json`; `key.py credit <game>` then adds the keyword tags (below).
+4. Score with `key.py score`.
 5. To make patterns from the key, run `tools/step3/key_patterns.py`. It builds on one half of the key, tests on the other half,
    and keeps a pattern only if it is 90%+ right there.
 6. To get rid of wrong tags, narrow a pattern only after a sample of what the narrowing drops has been judged 90%+ wrong (`patterns3.py accept`).
@@ -121,9 +120,14 @@ gap in the game block is a gap in every score of that game.
 **Before reading: no undefined keyword or term.** Every keyword the game has needs a definition in the game block: its entry's
 text, or a `# term:` line in `tools/mechanics/<game>.txt`. Research each missing one in the game's rules pages and wikis (several
 sources if the first lacks it). If no source defines it, write the definition from game knowledge and common sense, marked
-`(assumed)` (Kaptain's decision). `key.py read` refuses to write the request while any keyword is undefined. Cards that name a
-keyword get that keyword's tags through `key.py credit` (from the keyword entries' key tags), so the keyword entries must be
-read with their definitions.
+`(assumed)` (Kaptain's decision). `key.py read` refuses to write the request while any keyword is undefined.
+
+**Keywords on cards.** A card that has a keyword has that keyword's effects, so its key entry carries the keyword's tags
+(without this, all 168 Blood Bowl players, whose text is only "Skills: Dodge." and the like, were read as empty). `key.py credit
+<game>` writes them into the card's entry in `key.json`: a card has a keyword when its source data lists it or when the name stands
+where the game prints keywords (start of the text, a line, sentence or clause, or a "Keywords:" list; the name may be in square
+brackets), and the tags are the keyword entry's own key tags, quoted with the keyword's name. The added tags are also listed in
+the entry's `credited` field, so running `credit` again replaces them. So the keyword entries must be read with their definitions.
 
 Patterns are written from the sample of step 0, the mechanics checklist and the coverage scan; reading every card is not needed
 for tagging. Where cards must be read (an answer key, a review, judging a pattern sample), it goes like this:

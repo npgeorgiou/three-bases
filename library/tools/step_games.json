@@ -44,5 +44,5 @@
   "wh_killteam",
   "wh_underworlds"
  ],
- "_note": "final comparison 19 Oct 2026, re-run with the keyword credit (KEY_BUG.md): kw_links is on where it lowers wrong+missed per 100 key entries (Claude's rule for mixed results), off for faeria, marvel_snap"
+ "_note": "final comparison 19 Oct 2026, re-run with the keyword credit: kw_links is on where it lowers wrong+missed per 100 key entries (Claude's rule for mixed results), off for faeria, marvel_snap"
 }

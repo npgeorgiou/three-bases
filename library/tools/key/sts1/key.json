@@ -275,9 +275,31 @@
 [
 "permanent_loss",
 "Cannot be removed from your deck"
+],
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
+]
+],
+"keywords": [
+757499,
+757524
+]
 },
 "757547": {
 "tags": [
@@ -427,7 +449,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757582": {
 "tags": [
@@ -443,9 +468,30 @@
 [
 "damage",
 "Deal 20 damage"
+],
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"Ethereal"
+],
+[
+"turn_end",
+"Ethereal"
+]
+],
+"keywords": [
+757499
+]
 },
 "757590": {
 "tags": [
@@ -466,7 +512,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757592": {
 "tags": [
@@ -483,7 +532,11 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501,
+757515
+]
 },
 "757598": {
 "tags": [
@@ -504,7 +557,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+757501
+]
 },
 "757599": {
 "tags": [
@@ -568,7 +624,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757609": {
 "tags": [
@@ -619,7 +678,10 @@
 "Cannot be removed from your deck"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+757524
+]
 },
 "757618": {
 "tags": [
@@ -666,7 +728,10 @@
 "take 2 damage"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757524
+]
 },
 "757627": {
 "tags": [
@@ -751,9 +816,22 @@
 [
 "exhaust",
 "Exhaust"
+],
+[
+"exhaust",
+"exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"exhaust",
+"exhaust"
+]
+],
+"keywords": [
+757501
+]
 },
 "757669": {
 "tags": [
@@ -802,9 +880,22 @@
 [
 "condition_count",
 "for each card Exhausted"
+],
+[
+"exhaust",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"exhaust",
+"Exhaust"
+]
+],
+"keywords": [
+757501
+]
 },
 "757678": {
 "tags": [
@@ -984,7 +1075,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757712": {
 "tags": [
@@ -1057,7 +1151,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757724": {
 "tags": [
@@ -1102,9 +1199,30 @@
 [
 "damage",
 "Deal 3 damage"
+],
+[
+"selection",
+"Scry"
+],
+[
+"deck_position",
+"Scry"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"Scry"
+],
+[
+"deck_position",
+"Scry"
+]
+],
+"keywords": [
+757517
+]
 },
 "757727": {
 "tags": [
@@ -1130,7 +1248,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757733": {
 "tags": [
@@ -1177,7 +1298,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757739": {
 "tags": [
@@ -1235,9 +1359,22 @@
 [
 "deck_condition",
 "number of cards in your draw pile"
+],
+[
+"combat_start",
+"Innate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"combat_start",
+"Innate"
+]
+],
+"keywords": [
+757506
+]
 },
 "757755": {
 "tags": [
@@ -1248,9 +1385,22 @@
 [
 "junk_cards",
 "Unplayable"
+],
+[
+"play_restriction",
+"Unplayable"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"play_restriction",
+"Unplayable"
+]
+],
+"keywords": [
+757524
+]
 },
 "757759": {
 "tags": [
@@ -1280,7 +1430,10 @@
 "whenever you play another card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757524
+]
 },
 "757762": {
 "tags": [
@@ -1310,7 +1463,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757768": {
 "tags": [
@@ -1355,9 +1511,23 @@
 [
 "exhaust",
 "Exhaust"
+],
+[
+"combat_start",
+"Innate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"combat_start",
+"Innate"
+]
+],
+"keywords": [
+757501,
+757506
+]
 },
 "757779": {
 "tags": [
@@ -1370,7 +1540,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757785": {
 "tags": [
@@ -1404,7 +1577,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+757501
+]
 },
 "757789": {
 "tags": [
@@ -1472,7 +1648,10 @@
 "lose HP equal to the number of cards in your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+757524
+]
 },
 "757799": {
 "tags": [
@@ -1493,7 +1672,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757800": {
 "tags": [
@@ -1561,7 +1743,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757809": {
 "tags": [
@@ -1574,7 +1759,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757810": {
 "tags": [
@@ -1587,7 +1775,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757812": {
 "tags": [
@@ -1600,7 +1791,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757814": {
 "tags": [
@@ -1811,7 +2005,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+757501
+]
 },
 "757867": {
 "tags": [
@@ -1824,7 +2021,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757869": {
 "tags": [
@@ -1841,7 +2041,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+757501
+]
 },
 "757873": {
 "tags": [
@@ -1875,7 +2078,10 @@
 "Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+757501
+]
 },
 "757876": {
 "tags": [
@@ -1934,7 +2140,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "757882": {
 "tags": [
@@ -1951,7 +2160,10 @@
 "increase its damage by 4 this combat"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757515
+]
 },
 "757887": {
 "tags": [
@@ -1975,9 +2187,23 @@
 [
 "play_restriction",
 "Unplayable"
+],
+[
+"combat_start",
+"Innate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"combat_start",
+"Innate"
+]
+],
+"keywords": [
+757506,
+757524
+]
 },
 "757892": {
 "tags": [
@@ -2471,9 +2697,22 @@
 [
 "deck_modification",
 "Upon pickup, obtain a special Curse"
+],
+[
+"junk_cards",
+"Curse"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"junk_cards",
+"Curse"
+]
+],
+"keywords": [
+757494
+]
 },
 "757986": {
 "tags": [
@@ -4641,9 +4880,22 @@
 [
 "friendly_fire",
 "Take 20% Max HP damage"
+],
+[
+"upgrade",
+"Upgrade"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"upgrade",
+"Upgrade"
+]
+],
+"keywords": [
+757525
+]
 },
 "758361": {
 "tags": [
@@ -4705,9 +4957,30 @@
 [
 "transform",
 "Transform a card"
+],
+[
+"transform",
+"Transform"
+],
+[
+"random_effect",
+"Transform"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"Transform"
+],
+[
+"random_effect",
+"Transform"
+]
+],
+"keywords": [
+757523
+]
 },
 "758370": {
 "tags": [
@@ -4806,9 +5079,22 @@
 [
 "block_armor",
 "gain 1 Block"
+],
+[
+"combat_start",
+"Innate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"combat_start",
+"Innate"
+]
+],
+"keywords": [
+757506
+]
 },
 "813521": {
 "tags": [
@@ -4832,9 +5118,22 @@
 [
 "repeat_trigger",
 "Trigger the passive ability of ALL Dark orbs"
+],
+[
+"slots_queue",
+"Channel"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"slots_queue",
+"Channel"
+]
+],
+"keywords": [
+757492
+]
 },
 "813527": {
 "tags": [
@@ -4889,7 +5188,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "813536": {
 "tags": [
@@ -4984,7 +5286,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "813559": {
 "tags": [
@@ -4997,7 +5302,10 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501
+]
 },
 "813563": {
 "tags": [
@@ -5014,7 +5322,11 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501,
+757515
+]
 },
 "813566": {
 "tags": [
@@ -5031,7 +5343,11 @@
 "Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+757501,
+757515
+]
 },
 "813567": {
 "tags": [

@@ -58,7 +58,7 @@ out = []; stats = collections.Counter()
 for g in [g for g in P.GAMES if g in ONLY]:
     f = os.path.join(TOOLS, 'key', g, 'key.json')
     if not os.path.exists(f): continue
-    raw = K.load(g)   # with the keyword credit (KEY_BUG.md)
+    raw = K.load(g)   # keyword credit included
     ids = sorted(int(i) for i in raw if int(i) in ent)
     keyset = {i: K.narrow({k for k, _ in raw[str(i)]['tags']}) for i in ids}
     text = {i: P.norm_text(g, ent[i][1], ent[i][2]) for i in ids}

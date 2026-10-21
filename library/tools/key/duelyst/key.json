@@ -303,9 +303,23 @@
 [
 "count_payoff",
 "for each time you healed anything this game"
+],
+[
+"immobilize",
+"Provoke"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immobilize",
+"Provoke"
+]
+],
+"keywords": [
+741526,
+741557
+]
 },
 "741567": {
 "tags": [
@@ -338,9 +352,31 @@
 [
 "stat_multiply",
 "double damage"
+],
+[
+"movement",
+"Flying"
+],
+[
+"area_templates",
+"Blast"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+],
+[
+"area_templates",
+"Blast"
+]
+],
+"keywords": [
+741522,
+741523
+]
 },
 "741586": {
 "tags": [
@@ -470,9 +506,30 @@
 [
 "stat_gain",
 "Gains +1 Attack"
+],
+[
+"adjacency",
+"Zeal"
+],
+[
+"buff",
+"Zeal"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"adjacency",
+"Zeal"
+],
+[
+"buff",
+"Zeal"
+]
+],
+"keywords": [
+741551
+]
 },
 "741609": {
 "tags": [
@@ -487,9 +544,22 @@
 [
 "regeneration",
 "fully heal this minion"
+],
+[
+"buff",
+"Zeal"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Zeal"
+]
+],
+"keywords": [
+741551
+]
 },
 "741611": {
 "tags": [
@@ -510,7 +580,10 @@
 "nearby minion"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "741615": {
 "tags": [
@@ -538,9 +611,22 @@
 [
 "aura",
 "Your minions and General may move"
+],
+[
+"immobilize",
+"Provoke"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immobilize",
+"Provoke"
+]
+],
+"keywords": [
+741557
+]
 },
 "741620": {
 "tags": [
@@ -549,7 +635,10 @@
 "Celerity"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741526
+]
 },
 "741623": {
 "tags": [
@@ -607,9 +696,22 @@
 [
 "area_templates",
 "2x2 area"
+],
+[
+"silence",
+"Dispel"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"silence",
+"Dispel"
+]
+],
+"keywords": [
+741560
+]
 },
 "741635": {
 "tags": [
@@ -713,7 +815,10 @@
 "Ranged"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741541
+]
 },
 "741654": {
 "tags": [
@@ -730,7 +835,10 @@
 "Return this minion to your action bar"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741555
+]
 },
 "741655": {
 "tags": [
@@ -820,7 +928,10 @@
 "Next turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "741665": {
 "tags": [
@@ -927,9 +1038,23 @@
 [
 "draw",
 "Draw a card"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741522,
+741529
+]
 },
 "741698": {
 "tags": [
@@ -946,7 +1071,10 @@
 "nearby space"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "741699": {
 "tags": [
@@ -959,7 +1087,10 @@
 "Repair all of your artifacts to full durability"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "741701": {
 "tags": [
@@ -991,9 +1122,23 @@
 [
 "self_destruct",
 "Ephemeral"
+],
+[
+"temporary_effect",
+"Ephemeral"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"temporary_effect",
+"Ephemeral"
+]
+],
+"keywords": [
+741530,
+741555
+]
 },
 "741704": {
 "tags": [
@@ -1010,7 +1155,10 @@
 "Dervish"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "741708": {
 "tags": [
@@ -1033,9 +1181,23 @@
 [
 "random_effect",
 "random artifacts"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741522,
+741529
+]
 },
 "741712": {
 "tags": [
@@ -1198,7 +1360,10 @@
 "nearby enemy"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "741748": {
 "tags": [
@@ -1215,7 +1380,10 @@
 "deal 4 damage to the enemy General"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741555
+]
 },
 "741751": {
 "tags": [
@@ -1402,9 +1570,30 @@
 [
 "permanent_growth",
 "Grow: +1/+1"
+],
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
+]
+],
+"keywords": [
+741534
+]
 },
 "741781": {
 "tags": [
@@ -1442,7 +1631,10 @@
 "nearby friendly minion"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "741787": {
 "tags": [
@@ -1619,7 +1811,10 @@
 "Summon a 3/2 Ghost Wolf"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741529
+]
 },
 "741819": {
 "tags": [
@@ -1634,9 +1829,22 @@
 [
 "multi_attack",
 "Celerity"
+],
+[
+"buff",
+"Infiltrate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Infiltrate"
+]
+],
+"keywords": [
+741536
+]
 },
 "741821": {
 "tags": [
@@ -1651,9 +1859,22 @@
 [
 "return_to_hand",
 "return it to your action bar"
+],
+[
+"buff",
+"Infiltrate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Infiltrate"
+]
+],
+"keywords": [
+741536
+]
 },
 "741824": {
 "tags": [
@@ -1666,7 +1887,10 @@
 "Switch positions with ANY other minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "741825": {
 "tags": [
@@ -1687,7 +1911,10 @@
 "all friendly minions"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "741826": {
 "tags": [
@@ -1710,18 +1937,45 @@
 [
 "scope_multi",
 "Your minions"
+],
+[
+"immobilize",
+"Provoke"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immobilize",
+"Provoke"
+]
+],
+"keywords": [
+741539,
+741557
+]
 },
 "741830": {
 "tags": [
 [
 "evasion",
 "Flying"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741522
+]
 },
 "741832": {
 "tags": [
@@ -1743,7 +1997,10 @@
 "Permanently gain 1 mana crystal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741529
+]
 },
 "741838": {
 "tags": [
@@ -1868,7 +2125,10 @@
 "Ranged"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741541
+]
 },
 "741865": {
 "tags": [
@@ -1881,7 +2141,10 @@
 "Put a copy of the most recently cast spell into your action bar"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "741868": {
 "tags": [
@@ -1890,16 +2153,32 @@
 "Ranged"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741541
+]
 },
 "741869": {
 "tags": [
 [
 "taunt",
 "Provoke"
+],
+[
+"immobilize",
+"Provoke"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immobilize",
+"Provoke"
+]
+],
+"keywords": [
+741557
+]
 },
 "741871": {
 "tags": [
@@ -1942,7 +2221,11 @@
 "Progresses MECHAZ0R build by +20%"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539,
+741556
+]
 },
 "741881": {
 "tags": [
@@ -1959,7 +2242,11 @@
 "Progresses MECHAZ0R build by +20%"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539,
+741541
+]
 },
 "741882": {
 "tags": [
@@ -1976,7 +2263,11 @@
 "Progresses MECHAZ0R build by +20%"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741533,
+741539
+]
 },
 "741883": {
 "tags": [
@@ -1993,7 +2284,11 @@
 "Progresses MECHAZ0R build by +20%"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741532,
+741539
+]
 },
 "741890": {
 "tags": [
@@ -2036,7 +2331,10 @@
 "nearby friendly minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "741902": {
 "tags": [
@@ -2062,7 +2360,10 @@
 "random space"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741529
+]
 },
 "741905": {
 "tags": [
@@ -2096,7 +2397,10 @@
 "around it"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741529
+]
 },
 "741910": {
 "tags": [
@@ -2109,7 +2413,10 @@
 "Deal 1 damage to an enemy"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "741911": {
 "tags": [
@@ -2126,7 +2433,10 @@
 "in front of this"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "741912": {
 "tags": [
@@ -2143,7 +2453,10 @@
 "with Ranged"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "741917": {
 "tags": [
@@ -2152,7 +2465,10 @@
 "Celerity"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741526
+]
 },
 "741919": {
 "tags": [
@@ -2190,7 +2506,10 @@
 "random spell"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "741921": {
 "tags": [
@@ -2220,7 +2539,10 @@
 "Celerity"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741526
+]
 },
 "741927": {
 "tags": [
@@ -2245,7 +2567,10 @@
 "all nearby friendly minions"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741541
+]
 },
 "741928": {
 "tags": [
@@ -2258,16 +2583,32 @@
 "pulled in front of him"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741541
+]
 },
 "741931": {
 "tags": [
 [
 "taunt",
 "Provoke"
+],
+[
+"immobilize",
+"Provoke"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immobilize",
+"Provoke"
+]
+],
+"keywords": [
+741557
+]
 },
 "741932": {
 "tags": [
@@ -2284,7 +2625,10 @@
 "nearby enemy minion"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "741941": {
 "tags": [
@@ -2318,7 +2662,10 @@
 "Whenever this minion deals damage, restore that much Health to it"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741541
+]
 },
 "741943": {
 "tags": [
@@ -2361,7 +2708,10 @@
 "nearby enemy minion"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "741950": {
 "tags": [
@@ -2386,7 +2736,11 @@
 "nearby"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539,
+741556
+]
 },
 "741953": {
 "tags": [
@@ -2412,7 +2766,10 @@
 "Hallowed Ground"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "741956": {
 "tags": [
@@ -2517,9 +2874,30 @@
 [
 "transform",
 "transforms into a powerful minion"
+],
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+]
+],
+"keywords": [
+741543
+]
 },
 "741973": {
 "tags": [
@@ -2534,9 +2912,48 @@
 [
 "flanking",
 "Backstab"
+],
+[
+"movement",
+"Flying"
+],
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+],
+[
+"damage",
+"Backstab"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+],
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+],
+[
+"damage",
+"Backstab"
+]
+],
+"keywords": [
+741522,
+741543,
+741552
+]
 },
 "741978": {
 "tags": [
@@ -2647,7 +3064,10 @@
 "Turn that space into Exhuming Sand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "741988": {
 "tags": [
@@ -2707,7 +3127,10 @@
 "Draw two minions with Dying Wish from your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741529
+]
 },
 "741995": {
 "tags": [
@@ -2762,7 +3185,11 @@
 "Return Desolator to your action bar"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741529,
+741539
+]
 },
 "741999": {
 "tags": [
@@ -2790,9 +3217,30 @@
 [
 "information",
 "hidden condition"
+],
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+]
+],
+"keywords": [
+741543
+]
 },
 "742004": {
 "tags": [
@@ -2849,9 +3297,32 @@
 [
 "aura",
 "Your General has"
+],
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
+]
+],
+"keywords": [
+741532,
+741533,
+741534
+]
 },
 "742013": {
 "tags": [
@@ -2928,7 +3399,10 @@
 "nearby enemies"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741529
+]
 },
 "742022": {
 "tags": [
@@ -2947,9 +3421,31 @@
 [
 "resource_gain",
 "permanently gain 1 mana crystal"
+],
+[
+"movement",
+"Flying"
+],
+[
+"buff",
+"Infiltrate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"movement",
+"Flying"
+],
+[
+"buff",
+"Infiltrate"
+]
+],
+"keywords": [
+741522,
+741536
+]
 },
 "742025": {
 "tags": [
@@ -2960,9 +3456,30 @@
 [
 "transform",
 "transforms into a powerful minion"
+],
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+]
+],
+"keywords": [
+741543
+]
 },
 "742026": {
 "tags": [
@@ -2973,9 +3490,30 @@
 [
 "swap",
 "switches positions with the minion that transformed it"
+],
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Sentinel"
+],
+[
+"reactions",
+"Sentinel"
+]
+],
+"keywords": [
+741543
+]
 },
 "742029": {
 "tags": [
@@ -3022,7 +3560,10 @@
 "Your opponent summons two Komodo Chargers"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "742035": {
 "tags": [
@@ -3074,7 +3615,10 @@
 "a cub joins the pack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741541
+]
 },
 "742043": {
 "tags": [
@@ -3083,7 +3627,10 @@
 "Rush"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741555
+]
 },
 "742044": {
 "tags": [
@@ -3096,7 +3643,10 @@
 "Replace each card in your action bar"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "742045": {
 "tags": [
@@ -3132,9 +3682,23 @@
 [
 "enemy_benefit",
 "Each player summons three Spriggin Kin"
+],
+[
+"immobilize",
+"Provoke"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immobilize",
+"Provoke"
+]
+],
+"keywords": [
+741539,
+741557
+]
 },
 "742047": {
 "tags": [
@@ -3162,9 +3726,22 @@
 [
 "lifesteal",
 "Whenever this damages a minion, restore 2 Health to your General"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741522
+]
 },
 "742050": {
 "tags": [
@@ -3198,7 +3775,11 @@
 "Spit out the devoured minion"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741529,
+741539
+]
 },
 "742055": {
 "tags": [
@@ -3207,7 +3788,10 @@
 "Ranged"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741541
+]
 },
 "742057": {
 "tags": [
@@ -3218,9 +3802,22 @@
 [
 "low_life",
 "cost is your General's health"
+],
+[
+"immobilize",
+"Provoke"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immobilize",
+"Provoke"
+]
+],
+"keywords": [
+741557
+]
 },
 "742062": {
 "tags": [
@@ -3231,9 +3828,22 @@
 [
 "shield",
 "your General has Forcefield"
+],
+[
+"shield",
+"Forcefield"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"shield",
+"Forcefield"
+]
+],
+"keywords": [
+741532
+]
 },
 "742064": {
 "tags": [
@@ -3263,7 +3873,10 @@
 "Whenever ANY player summons a minion with Rush"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741532
+]
 },
 "742068": {
 "tags": [
@@ -3284,7 +3897,11 @@
 "in front of this minion"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741522,
+741539
+]
 },
 "742071": {
 "tags": [
@@ -3299,9 +3916,23 @@
 [
 "scope_multi",
 "all enemy minions"
+],
+[
+"silence",
+"Dispel"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"silence",
+"Dispel"
+]
+],
+"keywords": [
+741529,
+741560
+]
 },
 "742077": {
 "tags": [
@@ -3323,7 +3954,10 @@
 "Rush"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741555
+]
 },
 "742082": {
 "tags": [
@@ -3340,7 +3974,10 @@
 "two random friendly minions"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "742083": {
 "tags": [
@@ -3361,7 +3998,10 @@
 "ALL spell damage"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "742084": {
 "tags": [
@@ -3395,7 +4035,10 @@
 "nearby this minion"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "742086": {
 "tags": [
@@ -3425,7 +4068,10 @@
 "gains +2 Attack this turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741522
+]
 },
 "742088": {
 "tags": [
@@ -3470,9 +4116,22 @@
 [
 "adjacency",
 "around this one"
+],
+[
+"immobilize",
+"Provoke"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immobilize",
+"Provoke"
+]
+],
+"keywords": [
+741557
+]
 },
 "742092": {
 "tags": [
@@ -3483,9 +4142,31 @@
 [
 "silence",
 "Dispel any minion that deals damage to this one"
+],
+[
+"immobilize",
+"Provoke"
+],
+[
+"silence",
+"Dispel"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immobilize",
+"Provoke"
+],
+[
+"silence",
+"Dispel"
+]
+],
+"keywords": [
+741557,
+741560
+]
 },
 "742094": {
 "tags": [
@@ -3494,7 +4175,10 @@
 "Forcefield"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741532
+]
 },
 "742095": {
 "tags": [
@@ -3503,7 +4187,10 @@
 "Forcefield"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741532
+]
 },
 "742097": {
 "tags": [
@@ -3524,7 +4211,10 @@
 "nearby"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "742098": {
 "tags": [
@@ -3541,7 +4231,10 @@
 "+1 Attack"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741541
+]
 },
 "742100": {
 "tags": [
@@ -3556,9 +4249,22 @@
 [
 "aura",
 "Your other minions with Flying cost 1 less"
+],
+[
+"movement",
+"Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"movement",
+"Flying"
+]
+],
+"keywords": [
+741522
+]
 },
 "742102": {
 "tags": [
@@ -3637,9 +4343,22 @@
 [
 "turn_end",
 "at the end of your turn"
+],
+[
+"buff",
+"Zeal"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"buff",
+"Zeal"
+]
+],
+"keywords": [
+741551
+]
 },
 "742122": {
 "tags": [
@@ -3682,7 +4401,10 @@
 "It costs 1 less"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741529
+]
 },
 "742132": {
 "tags": [
@@ -3703,16 +4425,41 @@
 "next turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539,
+741541
+]
 },
 "742133": {
 "tags": [
 [
 "flanking",
 "Backstab: (1)"
+],
+[
+"flanking",
+"Backstab"
+],
+[
+"damage",
+"Backstab"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"flanking",
+"Backstab"
+],
+[
+"damage",
+"Backstab"
+]
+],
+"keywords": [
+741552
+]
 },
 "742134": {
 "tags": [
@@ -3827,7 +4574,10 @@
 "nearby"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741529
+]
 },
 "742151": {
 "tags": [
@@ -3900,7 +4650,10 @@
 "random corner"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741529
+]
 },
 "742160": {
 "tags": [
@@ -3921,7 +4674,10 @@
 "nearby Wraithling"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "742164": {
 "tags": [
@@ -3983,9 +4739,30 @@
 [
 "permanent_growth",
 "Grow: +1/+1"
+],
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
+]
+],
+"keywords": [
+741534
+]
 },
 "742175": {
 "tags": [
@@ -4051,9 +4828,22 @@
 [
 "random_effect",
 "random Battle Pet"
+],
+[
+"buff",
+"Infiltrate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"buff",
+"Infiltrate"
+]
+],
+"keywords": [
+741536
+]
 },
 "742187": {
 "tags": [
@@ -4070,7 +4860,10 @@
 "Vespyr"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "742188": {
 "tags": [
@@ -4091,7 +4884,10 @@
 "nearby"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741532
+]
 },
 "742191": {
 "tags": [
@@ -4163,7 +4959,10 @@
 "random"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741529
+]
 },
 "742198": {
 "tags": [
@@ -4172,7 +4971,10 @@
 "Celerity"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741526
+]
 },
 "742200": {
 "tags": [
@@ -4189,7 +4991,10 @@
 "double damage to Generals"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741541
+]
 },
 "742201": {
 "tags": [
@@ -4232,7 +5037,10 @@
 "Battle Pet"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "742211": {
 "tags": [
@@ -4255,9 +5063,22 @@
 [
 "adjacency",
 "nearby"
+],
+[
+"immobilize",
+"Provoke"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immobilize",
+"Provoke"
+]
+],
+"keywords": [
+741557
+]
 },
 "742217": {
 "tags": [
@@ -4270,7 +5091,10 @@
 "Gain the combined Attack and Health"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "742221": {
 "tags": [
@@ -4285,18 +5109,60 @@
 [
 "stat_gain",
 "+2 Attack"
+],
+[
+"adjacency",
+"Zeal"
+],
+[
+"buff",
+"Zeal"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"adjacency",
+"Zeal"
+],
+[
+"buff",
+"Zeal"
+]
+],
+"keywords": [
+741551
+]
 },
 "742224": {
 "tags": [
 [
 "generate_cards",
 "Put a Mist Dragon Seal into your action bar"
+],
+[
+"on_play",
+"Bond"
+],
+[
+"tribal",
+"Bond"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Bond"
+],
+[
+"tribal",
+"Bond"
+]
+],
+"keywords": [
+741525
+]
 },
 "742228": {
 "tags": [
@@ -4338,7 +5204,10 @@
 "Golem"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "742233": {
 "tags": [
@@ -4366,9 +5235,30 @@
 [
 "tribal",
 "Arcanyst"
+],
+[
+"on_play",
+"Bond"
+],
+[
+"tribal",
+"Bond"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_play",
+"Bond"
+],
+[
+"tribal",
+"Bond"
+]
+],
+"keywords": [
+741525
+]
 },
 "742236": {
 "tags": [
@@ -4417,9 +5307,30 @@
 [
 "adjacency",
 "nearby"
+],
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"permanent_growth",
+"Grow"
+],
+[
+"turn_start",
+"Grow"
+]
+],
+"keywords": [
+741534
+]
 },
 "742243": {
 "tags": [
@@ -4494,9 +5405,30 @@
 [
 "temporary_effect",
 "this turn"
+],
+[
+"on_play",
+"Bond"
+],
+[
+"tribal",
+"Bond"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_play",
+"Bond"
+],
+[
+"tribal",
+"Bond"
+]
+],
+"keywords": [
+741525
+]
 },
 "742256": {
 "tags": [
@@ -4623,9 +5555,38 @@
 [
 "temporary_effect",
 "this turn"
+],
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
+]
+],
+"keywords": [
+741554
+]
 },
 "742282": {
 "tags": [
@@ -4689,7 +5650,10 @@
 "Progresses MECHAZ0R build by +40%"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741539
+]
 },
 "742296": {
 "tags": [
@@ -4723,7 +5687,10 @@
 "on this row"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "742305": {
 "tags": [
@@ -4736,7 +5703,10 @@
 "Shuffle a MECHAZ0R into your deck"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741529
+]
 },
 "742310": {
 "tags": [
@@ -4823,9 +5793,38 @@
 [
 "scope_multi",
 "other friendly minions"
+],
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
+]
+],
+"keywords": [
+741554
+]
 },
 "742321": {
 "tags": [
@@ -4842,7 +5841,10 @@
 "closest enemy"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741524
+]
 },
 "742324": {
 "tags": [
@@ -4870,9 +5872,46 @@
 [
 "transform",
 "turn it into an Egg"
+],
+[
+"death_trigger",
+"Rebirth"
+],
+[
+"summon",
+"Rebirth"
+],
+[
+"revive",
+"Rebirth"
+],
+[
+"delayed",
+"Rebirth"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"death_trigger",
+"Rebirth"
+],
+[
+"summon",
+"Rebirth"
+],
+[
+"revive",
+"Rebirth"
+],
+[
+"delayed",
+"Rebirth"
+]
+],
+"keywords": [
+741542
+]
 },
 "742326": {
 "tags": [
@@ -4919,7 +5958,10 @@
 "in this row"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+741524
+]
 },
 "742333": {
 "tags": [
@@ -4981,9 +6023,38 @@
 [
 "immobilize",
 "enemy minions and Generals can only move 1 space"
+],
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
+]
+],
+"keywords": [
+741554
+]
 },
 "742340": {
 "tags": [
@@ -5033,9 +6104,22 @@
 [
 "stat_gain",
 "Gains +2/+2"
+],
+[
+"on_spell",
+"Blood Surge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_spell",
+"Blood Surge"
+]
+],
+"keywords": [
+741524
+]
 },
 "742349": {
 "tags": [
@@ -5056,7 +6140,10 @@
 "cost 2 or less"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "742351": {
 "tags": [
@@ -5082,7 +6169,10 @@
 "Forge a friendly minion into a Faction artifact"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+741539
+]
 },
 "742355": {
 "tags": [
@@ -5097,9 +6187,38 @@
 [
 "heal",
 "restore 5 Health to your General"
+],
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"summon",
+"Build"
+],
+[
+"transform",
+"Build"
+],
+[
+"delayed",
+"Build"
+]
+],
+"keywords": [
+741554
+]
 },
 "742358": {
 "tags": [
@@ -5123,7 +6242,21 @@
 "by": "A=B"
 },
 "795371": {
-"tags": [],
-"by": "A=B"
+"tags": [
+[
+"cant_attack",
+"Structure"
+]
+],
+"by": "A=B",
+"credited": [
+[
+"cant_attack",
+"Structure"
+]
+],
+"keywords": [
+741545
+]
 }
 }

@@ -113,9 +113,22 @@
 [
 "return_to_hand",
 "Return this creature to its owner's hand"
+],
+[
+"cost_reduction",
+"Affinity"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cost_reduction",
+"Affinity"
+]
+],
+"keywords": [
+765969
+]
 },
 "766301": {
 "tags": [
@@ -130,9 +143,30 @@
 [
 "selection",
 "put one of those cards onto the battlefield"
+],
+[
+"generate_cards",
+"Draft from a spellbook"
+],
+[
+"selection",
+"Draft from a spellbook"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"Draft from a spellbook"
+],
+[
+"selection",
+"Draft from a spellbook"
+]
+],
+"keywords": [
+765970
+]
 },
 "766332": {
 "tags": [
@@ -189,9 +223,30 @@
 [
 "targeting_rules",
 "target creature with a +1/+1 counter on it"
+],
+[
+"stat_gain",
+"Graft"
+],
+[
+"on_ally_play",
+"Graft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"Graft"
+],
+[
+"on_ally_play",
+"Graft"
+]
+],
+"keywords": [
+765989
+]
 },
 "766388": {
 "tags": [
@@ -218,9 +273,22 @@
 [
 "banish",
 "Exile Game Plan"
+],
+[
+"team_play",
+"Assist"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"team_play",
+"Assist"
+]
+],
+"keywords": [
+765990
+]
 },
 "766397": {
 "tags": [
@@ -249,7 +317,10 @@
 "deals 6 damage"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765993
+]
 },
 "766406": {
 "tags": [
@@ -266,7 +337,10 @@
 "exile that creature until Hixus leaves the battlefield"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765947
+]
 },
 "766423": {
 "tags": [
@@ -318,9 +392,38 @@
 [
 "rule_change",
 "Damage can't be prevented"
+],
+[
+"modal_choice",
+"Riot"
+],
+[
+"haste",
+"Riot"
+],
+[
+"stat_gain",
+"Riot"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Riot"
+],
+[
+"haste",
+"Riot"
+],
+[
+"stat_gain",
+"Riot"
+]
+],
+"keywords": [
+766007
+]
 },
 "766477": {
 "tags": [
@@ -422,9 +525,47 @@
 [
 "scope_multi",
 "other creatures you control"
+],
+[
+"blocking",
+"Reach"
+],
+[
+"counter_spell",
+"Ward"
+],
+[
+"cost_increase",
+"Ward"
+],
+[
+"protection",
+"Ward"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"blocking",
+"Reach"
+],
+[
+"counter_spell",
+"Ward"
+],
+[
+"cost_increase",
+"Ward"
+],
+[
+"protection",
+"Ward"
+]
+],
+"keywords": [
+765991,
+766027
+]
 },
 "766640": {
 "tags": [
@@ -451,9 +592,31 @@
 [
 "temporary_buff",
 "until end of turn"
+],
+[
+"untap",
+"Vigilance"
+],
+[
+"variety_payoff",
+"Coven"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"untap",
+"Vigilance"
+],
+[
+"variety_payoff",
+"Coven"
+]
+],
+"keywords": [
+765943,
+766028
+]
 },
 "766642": {
 "tags": [
@@ -484,9 +647,39 @@
 [
 "transform",
 "This Vehicle becomes an artifact creature"
+],
+[
+"activated",
+"Crew"
+],
+[
+"transform",
+"Crew"
+],
+[
+"temporary_effect",
+"Crew"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Crew"
+],
+[
+"transform",
+"Crew"
+],
+[
+"temporary_effect",
+"Crew"
+]
+],
+"keywords": [
+765948,
+765953
+]
 },
 "766657": {
 "tags": [
@@ -572,9 +765,22 @@
 [
 "damage",
 "deals damage equal to its power to any target"
+],
+[
+"modal_choice",
+"Fuse"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Fuse"
+]
+],
+"keywords": [
+766014
+]
 },
 "766750": {
 "tags": [
@@ -608,7 +814,10 @@
 "shuffle it into its owner's library"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "766800": {
 "tags": [
@@ -646,7 +855,10 @@
 "Trample"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765927
+]
 },
 "766845": {
 "tags": [
@@ -665,9 +877,24 @@
 [
 "stacking_keyword",
 "proliferate"
+],
+[
+"damage_over_time",
+"Toxic"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"damage_over_time",
+"Toxic"
+]
+],
+"keywords": [
+765927,
+766010,
+766055
+]
 },
 "766857": {
 "tags": [
@@ -690,9 +917,30 @@
 [
 "tribal",
 "if it targets a colorless creature"
+],
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
+]
+],
+"keywords": [
+765937
+]
 },
 "766861": {
 "tags": [
@@ -939,9 +1187,22 @@
 [
 "summon",
 "create three 8/8 blue Octopus creature tokens"
+],
+[
+"damage",
+"fight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"fight"
+]
+],
+"keywords": [
+765957
+]
 },
 "767032": {
 "tags": [
@@ -972,9 +1233,32 @@
 [
 "condition_count",
 "LEVEL 7+"
+],
+[
+"first_strike",
+"Double strike"
+],
+[
+"upgrade",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"first_strike",
+"Double strike"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"keywords": [
+765958,
+765985,
+766073
+]
 },
 "767063": {
 "tags": [
@@ -1040,9 +1324,23 @@
 [
 "temporary_effect",
 "as long as it entered this turn"
+],
+[
+"immunity",
+"indestructible"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immunity",
+"indestructible"
+]
+],
+"keywords": [
+765975,
+765988
+]
 },
 "767125": {
 "tags": [
@@ -1105,7 +1403,11 @@
 "Artifacts and creatures entering don't cause abilities to trigger"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931,
+765947
+]
 },
 "767305": {
 "tags": [
@@ -1174,9 +1476,22 @@
 [
 "transform",
 "except it's an enchantment and loses all other card types"
+],
+[
+"immunity",
+"indestructible"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immunity",
+"indestructible"
+]
+],
+"keywords": [
+765988
+]
 },
 "767464": {
 "tags": [
@@ -1195,9 +1510,22 @@
 [
 "temporary_buff",
 "until end of turn"
+],
+[
+"condition_count",
+"Battalion"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"condition_count",
+"Battalion"
+]
+],
+"keywords": [
+766106
+]
 },
 "767508": {
 "tags": [
@@ -1266,9 +1594,22 @@
 [
 "card_advantage",
 "Put all creature cards with activated abilities that aren't mana abilities from among the milled cards into your hand"
+],
+[
+"mill",
+"Mill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"mill",
+"Mill"
+]
+],
+"keywords": [
+766004
+]
 },
 "767689": {
 "tags": [
@@ -1365,9 +1706,22 @@
 [
 "stat_gain",
 "two +1/+1 counters"
+],
+[
+"on_ally_play",
+"Landfall"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_ally_play",
+"Landfall"
+]
+],
+"keywords": [
+765934
+]
 },
 "767800": {
 "tags": [
@@ -1394,9 +1748,31 @@
 [
 "tribal",
 "Samurai"
+],
+[
+"cheat_death",
+"Regenerate"
+],
+[
+"temporary_buff",
+"Bushido"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cheat_death",
+"Regenerate"
+],
+[
+"temporary_buff",
+"Bushido"
+]
+],
+"keywords": [
+765956,
+766001
+]
 },
 "767852": {
 "tags": [
@@ -1436,9 +1812,31 @@
 [
 "transform",
 "Turn it face up"
+],
+[
+"cost_type",
+"Morph"
+],
+[
+"transform",
+"Morph"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cost_type",
+"Morph"
+],
+[
+"transform",
+"Morph"
+]
+],
+"keywords": [
+765927,
+766068
+]
 },
 "767951": {
 "tags": [
@@ -1514,9 +1912,38 @@
 [
 "transform",
 "This Vehicle becomes an artifact creature"
+],
+[
+"activated",
+"Crew"
+],
+[
+"transform",
+"Crew"
+],
+[
+"temporary_effect",
+"Crew"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Crew"
+],
+[
+"transform",
+"Crew"
+],
+[
+"temporary_effect",
+"Crew"
+]
+],
+"keywords": [
+765953
+]
 },
 "768031": {
 "tags": [
@@ -1545,7 +1972,10 @@
 "each creature you control with a +1/+1 counter"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765947
+]
 },
 "768034": {
 "tags": [
@@ -1584,9 +2014,22 @@
 [
 "spell_speed",
 "Activate only as a sorcery"
+],
+[
+"generate_cards",
+"conjure"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"conjure"
+]
+],
+"keywords": [
+765928
+]
 },
 "768050": {
 "tags": [
@@ -1661,7 +2104,10 @@
 "and/or graveyard"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765991
+]
 },
 "768241": {
 "tags": [
@@ -1697,9 +2143,22 @@
 [
 "enemy_benefit",
 "target opponent creates two Treasure tokens"
+],
+[
+"resource_gain",
+"Treasure"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"resource_gain",
+"Treasure"
+]
+],
+"keywords": [
+765933
+]
 },
 "768272": {
 "tags": [
@@ -1745,7 +2204,10 @@
 "gains 2 life"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765948
+]
 },
 "768409": {
 "tags": [
@@ -1774,7 +2236,10 @@
 "Any player may activate this ability"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765985
+]
 },
 "768413": {
 "tags": [
@@ -1852,9 +2317,31 @@
 [
 "selection",
 "Scry 1"
+],
+[
+"selection",
+"Scry"
+],
+[
+"on_ally_play",
+"Alliance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"selection",
+"Scry"
+],
+[
+"on_ally_play",
+"Alliance"
+]
+],
+"keywords": [
+765968,
+766011
+]
 },
 "768618": {
 "tags": [
@@ -1900,7 +2387,10 @@
 "mana value less than or equal to this creature's power"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "768809": {
 "tags": [
@@ -1919,9 +2409,22 @@
 [
 "deck_position",
 "Put the rest on the bottom of your library"
+],
+[
+"blocking",
+"Reach"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"blocking",
+"Reach"
+]
+],
+"keywords": [
+765991
+]
 },
 "768926": {
 "tags": [
@@ -2014,9 +2517,22 @@
 [
 "banish",
 "Exile Alchemist's Gambit"
+],
+[
+"cost_type",
+"Cleave"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cost_type",
+"Cleave"
+]
+],
+"keywords": [
+766036
+]
 },
 "768984": {
 "tags": [
@@ -2109,9 +2625,47 @@
 [
 "resource_banking",
 "you don't lose this mana"
+],
+[
+"untap",
+"Vigilance"
+],
+[
+"counter_spell",
+"Ward"
+],
+[
+"cost_increase",
+"Ward"
+],
+[
+"protection",
+"Ward"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"untap",
+"Vigilance"
+],
+[
+"counter_spell",
+"Ward"
+],
+[
+"cost_increase",
+"Ward"
+],
+[
+"protection",
+"Ward"
+]
+],
+"keywords": [
+765943,
+766027
+]
 },
 "769147": {
 "tags": [
@@ -2247,9 +2801,39 @@
 [
 "permanent_growth",
 "put that many +1/+1 counters on it"
+],
+[
+"counter_spell",
+"Ward"
+],
+[
+"cost_increase",
+"Ward"
+],
+[
+"protection",
+"Ward"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"counter_spell",
+"Ward"
+],
+[
+"cost_increase",
+"Ward"
+],
+[
+"protection",
+"Ward"
+]
+],
+"keywords": [
+765931,
+766027
+]
 },
 "769519": {
 "tags": [
@@ -2260,9 +2844,22 @@
 [
 "extra_turn",
 "there is an additional beginning phase after this phase"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765959
+]
 },
 "769546": {
 "tags": [
@@ -2293,9 +2890,32 @@
 [
 "cast_from_zone",
 "You may cast the creature later from exile"
+],
+[
+"untap",
+"vigilance"
+],
+[
+"card_advantage",
+"Investigate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"untap",
+"vigilance"
+],
+[
+"card_advantage",
+"Investigate"
+]
+],
+"keywords": [
+765931,
+765943,
+765976
+]
 },
 "769571": {
 "tags": [
@@ -2318,9 +2938,22 @@
 [
 "cost_condition",
 "if their card had a greater mana value"
+],
+[
+"deck_position",
+"Clash"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"deck_position",
+"Clash"
+]
+],
+"keywords": [
+765998
+]
 },
 "769661": {
 "tags": [
@@ -2339,9 +2972,30 @@
 [
 "activated",
 "Equip {2}"
+],
+[
+"merge_attach",
+"equip"
+],
+[
+"activated",
+"equip"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"equip"
+],
+[
+"activated",
+"equip"
+]
+],
+"keywords": [
+765937
+]
 },
 "769678": {
 "tags": [
@@ -2445,7 +3099,10 @@
 "put a +1/+1 counter on The Vision and Scarlet Witch"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "769842": {
 "tags": [
@@ -2506,9 +3163,22 @@
 [
 "banish",
 "Exile all nonland permanents"
+],
+[
+"team_play",
+"Assist"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"team_play",
+"Assist"
+]
+],
+"keywords": [
+765990
+]
 },
 "769877": {
 "tags": [
@@ -2574,7 +3244,10 @@
 "the number of Swamps you control"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765974
+]
 },
 "769988": {
 "tags": [
@@ -2597,9 +3270,22 @@
 [
 "type_grant",
 "target land becomes an Island in addition to its other types"
+],
+[
+"stat_gain",
+"Monstrosity"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"Monstrosity"
+]
+],
+"keywords": [
+766079
+]
 },
 "770005": {
 "tags": [
@@ -2650,9 +3336,22 @@
 [
 "summon",
 "They become 6/6 Elemental creatures"
+],
+[
+"transform",
+"transform"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"transform"
+]
+],
+"keywords": [
+765996
+]
 },
 "770060": {
 "tags": [
@@ -2679,9 +3378,22 @@
 [
 "piercing",
 "the damage can't be prevented"
+],
+[
+"kicker",
+"Kicker"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Kicker"
+]
+],
+"keywords": [
+765942
+]
 },
 "770101": {
 "tags": [
@@ -2704,9 +3416,56 @@
 [
 "activated",
 "Equip {3}"
+],
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
+],
+[
+"generate_cards",
+"Draft from a spellbook"
+],
+[
+"selection",
+"Draft from a spellbook"
+],
+[
+"summon",
+"For Mirrodin!"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
+],
+[
+"generate_cards",
+"Draft from a spellbook"
+],
+[
+"selection",
+"Draft from a spellbook"
+],
+[
+"summon",
+"For Mirrodin!"
+]
+],
+"keywords": [
+765937,
+765970,
+766169
+]
 },
 "770106": {
 "tags": [
@@ -2731,7 +3490,10 @@
 "You gain 4 life"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "770170": {
 "tags": [
@@ -2816,9 +3578,22 @@
 [
 "evasion",
 "flying"
+],
+[
+"once_per_game",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"once_per_game",
+"Exhaust"
+]
+],
+"keywords": [
+766136
+]
 },
 "770220": {
 "tags": [
@@ -2837,9 +3612,22 @@
 [
 "condition_count",
 "for each opponent"
+],
+[
+"untap",
+"Vigilance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"untap",
+"Vigilance"
+]
+],
+"keywords": [
+765943
+]
 },
 "770224": {
 "tags": [
@@ -2868,7 +3656,10 @@
 "Activate only if this card is in your graveyard"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "770291": {
 "tags": [
@@ -2898,7 +3689,11 @@
 "All damage that would be dealt to you is dealt to this creature instead"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931,
+766025
+]
 },
 "770368": {
 "tags": [
@@ -2927,7 +3722,10 @@
 "your team controls"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "770392": {
 "tags": [
@@ -2974,7 +3772,10 @@
 "that ability triggers an additional time"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765991
+]
 },
 "770634": {
 "tags": [
@@ -3035,9 +3836,22 @@
 [
 "copy",
 "become a copy of target creature"
+],
+[
+"on_spell",
+"Heroic"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_spell",
+"Heroic"
+]
+],
+"keywords": [
+765965
+]
 },
 "770736": {
 "tags": [
@@ -3077,9 +3891,40 @@
 [
 "condition_count",
 "for each creature that convoked it"
+],
+[
+"counter_spell",
+"ward"
+],
+[
+"cost_increase",
+"ward"
+],
+[
+"protection",
+"ward"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"counter_spell",
+"ward"
+],
+[
+"cost_increase",
+"ward"
+],
+[
+"protection",
+"ward"
+]
+],
+"keywords": [
+765927,
+765940,
+766027
+]
 },
 "770799": {
 "tags": [
@@ -3102,9 +3947,22 @@
 [
 "temporary_effect",
 "this turn"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765959
+]
 },
 "770890": {
 "tags": [
@@ -3135,9 +3993,22 @@
 [
 "direct_damage",
 "deals 2 damage to any target"
+],
+[
+"modal_choice",
+"Fuse"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Fuse"
+]
+],
+"keywords": [
+766014
+]
 },
 "770908": {
 "tags": [
@@ -3162,7 +4033,10 @@
 "put an oil counter on this creature"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "770988": {
 "tags": [
@@ -3173,9 +4047,22 @@
 [
 "counter_spell",
 "Counter target spell"
+],
+[
+"team_play",
+"Assist"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"team_play",
+"Assist"
+]
+],
+"keywords": [
+765990
+]
 },
 "771037": {
 "tags": [
@@ -3249,9 +4136,22 @@
 [
 "heal",
 "you gain 1 life"
+],
+[
+"on_ally_play",
+"Landfall"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_ally_play",
+"Landfall"
+]
+],
+"keywords": [
+765934
+]
 },
 "771253": {
 "tags": [
@@ -3278,9 +4178,22 @@
 [
 "summon",
 "Create a 1/1 colorless Myr artifact creature token"
+],
+[
+"immunity",
+"Indestructible"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immunity",
+"Indestructible"
+]
+],
+"keywords": [
+765988
+]
 },
 "771272": {
 "tags": [
@@ -3307,9 +4220,65 @@
 [
 "cost_type",
 "Disguise {2}{G}{G}"
+],
+[
+"counter_spell",
+"ward"
+],
+[
+"cost_increase",
+"ward"
+],
+[
+"protection",
+"ward"
+],
+[
+"cost_type",
+"Disguise"
+],
+[
+"transform",
+"Disguise"
+],
+[
+"protection",
+"Disguise"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"counter_spell",
+"ward"
+],
+[
+"cost_increase",
+"ward"
+],
+[
+"protection",
+"ward"
+],
+[
+"cost_type",
+"Disguise"
+],
+[
+"transform",
+"Disguise"
+],
+[
+"protection",
+"Disguise"
+]
+],
+"keywords": [
+765927,
+765975,
+766027,
+766042
+]
 },
 "771274": {
 "tags": [
@@ -3342,7 +4311,10 @@
 "it can't attack or block"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "771367": {
 "tags": [
@@ -3390,9 +4362,38 @@
 [
 "free_play",
 "without paying its mana cost"
+],
+[
+"cast_from_zone",
+"Rebound"
+],
+[
+"free_play",
+"Rebound"
+],
+[
+"turn_start",
+"Rebound"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cast_from_zone",
+"Rebound"
+],
+[
+"free_play",
+"Rebound"
+],
+[
+"turn_start",
+"Rebound"
+]
+],
+"keywords": [
+765994
+]
 },
 "771465": {
 "tags": [
@@ -3413,7 +4414,10 @@
 "copy it"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765993
+]
 },
 "771490": {
 "tags": [
@@ -3459,7 +4463,10 @@
 "for each artifact you control"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "771515": {
 "tags": [
@@ -3518,7 +4525,11 @@
 "at the beginning of the next end step"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931,
+765935
+]
 },
 "771589": {
 "tags": [
@@ -3637,9 +4648,47 @@
 [
 "direct_damage",
 "deals 1 damage to target opponent"
+],
+[
+"on_ally_play",
+"Landfall"
+],
+[
+"kicker",
+"Offspring"
+],
+[
+"copy",
+"Offspring"
+],
+[
+"on_play",
+"Offspring"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_ally_play",
+"Landfall"
+],
+[
+"kicker",
+"Offspring"
+],
+[
+"copy",
+"Offspring"
+],
+[
+"on_play",
+"Offspring"
+]
+],
+"keywords": [
+765934,
+766082
+]
 },
 "771875": {
 "tags": [
@@ -3662,9 +4711,39 @@
 [
 "suppress",
 "tap target creature defending player controls"
+],
+[
+"generate_cards",
+"conjure"
+],
+[
+"on_attack",
+"Double team"
+],
+[
+"copy",
+"Double team"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"conjure"
+],
+[
+"on_attack",
+"Double team"
+],
+[
+"copy",
+"Double team"
+]
+],
+"keywords": [
+765928,
+766148
+]
 },
 "771934": {
 "tags": [
@@ -3715,7 +4794,10 @@
 "Draw a card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765976
+]
 },
 "772031": {
 "tags": [
@@ -3762,9 +4844,32 @@
 [
 "removal",
 "airbend up to one other target nonland permanent"
+],
+[
+"transform",
+"transform"
+],
+[
+"removal",
+"airbend"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"transform"
+],
+[
+"removal",
+"airbend"
+]
+],
+"keywords": [
+765931,
+765996,
+766008
+]
 },
 "772061": {
 "tags": [
@@ -3787,9 +4892,30 @@
 [
 "self_mill",
 "put it into your graveyard"
+],
+[
+"deck_position",
+"explore"
+],
+[
+"stat_gain",
+"explore"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"deck_position",
+"explore"
+],
+[
+"stat_gain",
+"explore"
+]
+],
+"keywords": [
+766065
+]
 },
 "772080": {
 "tags": [
@@ -3816,9 +4942,22 @@
 [
 "condition_count",
 "if a player cast two or more spells last turn"
+],
+[
+"transform",
+"transform"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"transform"
+]
+],
+"keywords": [
+765996
+]
 },
 "772103": {
 "tags": [
@@ -3855,7 +4994,10 @@
 "the number of cards you've discarded this turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765975
+]
 },
 "772174": {
 "tags": [
@@ -3907,9 +5049,38 @@
 [
 "reactions",
 "Whenever an opponent casts a spell"
+],
+[
+"delayed",
+"Suspend"
+],
+[
+"free_play",
+"Suspend"
+],
+[
+"turn_start",
+"Suspend"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Suspend"
+],
+[
+"free_play",
+"Suspend"
+],
+[
+"turn_start",
+"Suspend"
+]
+],
+"keywords": [
+766017
+]
 },
 "772246": {
 "tags": [
@@ -3953,9 +5124,22 @@
 [
 "temporary_buff",
 "until end of turn"
+],
+[
+"direct_damage",
+"Afflict"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"direct_damage",
+"Afflict"
+]
+],
+"keywords": [
+766131
+]
 },
 "772289": {
 "tags": [
@@ -4000,9 +5184,22 @@
 [
 "taunt",
 "all creatures able to block target creature this turn do so"
+],
+[
+"kicker",
+"Kicker"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Kicker"
+]
+],
+"keywords": [
+765942
+]
 },
 "772480": {
 "tags": [
@@ -4052,7 +5249,11 @@
 "When this creature blocks"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765927,
+765993
+]
 },
 "772557": {
 "tags": [
@@ -4077,7 +5278,10 @@
 "put a +1/+1 counter on Jackal"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765927
+]
 },
 "772566": {
 "tags": [
@@ -4120,9 +5324,48 @@
 [
 "spell_speed",
 "Activate only as a sorcery"
+],
+[
+"transform",
+"convert"
+],
+[
+"transform",
+"More Than Meets the Eye"
+],
+[
+"stat_gain",
+"modular"
+],
+[
+"death_trigger",
+"modular"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"convert"
+],
+[
+"transform",
+"More Than Meets the Eye"
+],
+[
+"stat_gain",
+"modular"
+],
+[
+"death_trigger",
+"modular"
+]
+],
+"keywords": [
+766133,
+766134,
+766181
+]
 },
 "772568": {
 "tags": [
@@ -4147,7 +5390,10 @@
 "that targets you or a creature you control"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "772616": {
 "tags": [
@@ -4207,9 +5453,23 @@
 [
 "cost_reduction",
 "Reduce the cost by his mana cost if he entered this turn"
+],
+[
+"upgrade",
+"Power-up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"upgrade",
+"Power-up"
+]
+],
+"keywords": [
+765931,
+766056
+]
 },
 "772693": {
 "tags": [
@@ -4269,9 +5529,38 @@
 [
 "polymorph",
 "is a green Elk creature with base power and toughness 3/3"
+],
+[
+"merge_attach",
+"Bestow"
+],
+[
+"transform",
+"Bestow"
+],
+[
+"cost_type",
+"Bestow"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Bestow"
+],
+[
+"transform",
+"Bestow"
+],
+[
+"cost_type",
+"Bestow"
+]
+],
+"keywords": [
+766100
+]
 },
 "772754": {
 "tags": [
@@ -4290,9 +5579,22 @@
 [
 "tutor",
 "seek a nonland card"
+],
+[
+"tutor",
+"seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tutor",
+"seek"
+]
+],
+"keywords": [
+765979
+]
 },
 "772782": {
 "tags": [
@@ -4323,9 +5625,22 @@
 [
 "recycle",
 "return this card from your graveyard to your hand"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765959
+]
 },
 "772794": {
 "tags": [
@@ -4348,9 +5663,22 @@
 [
 "temporary_buff",
 "until end of turn"
+],
+[
+"evasion",
+"flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"evasion",
+"flying"
+]
+],
+"keywords": [
+765931
+]
 },
 "772841": {
 "tags": [
@@ -4442,7 +5770,10 @@
 "each creature without flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "772894": {
 "tags": [
@@ -4473,9 +5804,31 @@
 [
 "spell_speed",
 "Activate only as a sorcery"
+],
+[
+"mill",
+"mill"
+],
+[
+"once_per_game",
+"Exhaust"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"mill",
+"mill"
+],
+[
+"once_per_game",
+"Exhaust"
+]
+],
+"keywords": [
+766004,
+766136
+]
 },
 "772902": {
 "tags": [
@@ -4494,9 +5847,22 @@
 [
 "direct_damage",
 "each opponent loses 1 life"
+],
+[
+"mill",
+"mill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"mill",
+"mill"
+]
+],
+"keywords": [
+766004
+]
 },
 "772975": {
 "tags": [
@@ -4526,7 +5892,11 @@
 "investigate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931,
+765976
+]
 },
 "772988": {
 "tags": [
@@ -4541,9 +5911,22 @@
 [
 "heal",
 "you gain 5 life"
+],
+[
+"death_count",
+"Morbid"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"death_count",
+"Morbid"
+]
+],
+"keywords": [
+765982
+]
 },
 "773052": {
 "tags": [
@@ -4574,9 +5957,47 @@
 [
 "cost_type",
 "Crew 5"
+],
+[
+"activated",
+"Crew"
+],
+[
+"transform",
+"Crew"
+],
+[
+"temporary_effect",
+"Crew"
+],
+[
+"once_per_game",
+"Exhaust"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"activated",
+"Crew"
+],
+[
+"transform",
+"Crew"
+],
+[
+"temporary_effect",
+"Crew"
+],
+[
+"once_per_game",
+"Exhaust"
+]
+],
+"keywords": [
+765953,
+766136
+]
 },
 "773089": {
 "tags": [
@@ -4624,9 +6045,30 @@
 [
 "summon",
 "Create a 1/1 red Goblin creature token"
+],
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
+]
+],
+"keywords": [
+765937
+]
 },
 "773158": {
 "tags": [
@@ -4645,9 +6087,22 @@
 [
 "comeback",
 "becomes the highest life total among all players"
+],
+[
+"untap",
+"Vigilance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"untap",
+"Vigilance"
+]
+],
+"keywords": [
+765943
+]
 },
 "773160": {
 "tags": [
@@ -4786,9 +6241,38 @@
 [
 "activated",
 "Crew 1"
+],
+[
+"activated",
+"Crew"
+],
+[
+"transform",
+"Crew"
+],
+[
+"temporary_effect",
+"Crew"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Crew"
+],
+[
+"transform",
+"Crew"
+],
+[
+"temporary_effect",
+"Crew"
+]
+],
+"keywords": [
+765953
+]
 },
 "773321": {
 "tags": [
@@ -4868,9 +6352,48 @@
 [
 "blink",
 "Exile this Saga, then return it to the battlefield (front face up)"
+],
+[
+"untap",
+"Vigilance"
+],
+[
+"transform",
+"transform"
+],
+[
+"summon",
+"Incubate"
+],
+[
+"transform",
+"Incubate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"untap",
+"Vigilance"
+],
+[
+"transform",
+"transform"
+],
+[
+"summon",
+"Incubate"
+],
+[
+"transform",
+"Incubate"
+]
+],
+"keywords": [
+765943,
+765996,
+766022
+]
 },
 "773340": {
 "tags": [
@@ -4901,9 +6424,47 @@
 [
 "revive",
 "return a non-Avatar creature card or a planeswalker card from your graveyard to your hand"
+],
+[
+"mill",
+"mill"
+],
+[
+"cost_type",
+"Impending"
+],
+[
+"delayed",
+"Impending"
+],
+[
+"turn_end",
+"Impending"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"mill",
+"mill"
+],
+[
+"cost_type",
+"Impending"
+],
+[
+"delayed",
+"Impending"
+],
+[
+"turn_end",
+"Impending"
+]
+],
+"keywords": [
+766004,
+766174
+]
 },
 "773369": {
 "tags": [
@@ -4956,9 +6517,22 @@
 [
 "stat_loss",
 "base power and toughness 1/1"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765959
+]
 },
 "773417": {
 "tags": [
@@ -4981,9 +6555,22 @@
 [
 "count_payoff",
 "for each time it regenerated this turn"
+],
+[
+"cheat_death",
+"Regenerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cheat_death",
+"Regenerate"
+]
+],
+"keywords": [
+765956
+]
 },
 "773455": {
 "tags": [
@@ -5006,9 +6593,22 @@
 [
 "temporary_effect",
 "Until your next turn"
+],
+[
+"immunity",
+"indestructible"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immunity",
+"indestructible"
+]
+],
+"keywords": [
+765988
+]
 },
 "773465": {
 "tags": [
@@ -5035,9 +6635,23 @@
 [
 "temporary_buff",
 "until end of turn"
+],
+[
+"first_strike",
+"first strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"first_strike",
+"first strike"
+]
+],
+"keywords": [
+765958,
+765975
+]
 },
 "773498": {
 "tags": [
@@ -5058,7 +6672,10 @@
 "put it onto the battlefield attached to target player"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765935
+]
 },
 "773500": {
 "tags": [
@@ -5118,9 +6735,22 @@
 [
 "modal_choice",
 "You may cast one or both halves"
+],
+[
+"modal_choice",
+"Fuse"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"modal_choice",
+"Fuse"
+]
+],
+"keywords": [
+766014
+]
 },
 "773528": {
 "tags": [
@@ -5147,9 +6777,38 @@
 [
 "summon",
 "create X 1/1 white Soldier creature tokens"
+],
+[
+"discard",
+"Cycling"
+],
+[
+"draw",
+"Cycling"
+],
+[
+"activated",
+"Cycling"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"discard",
+"Cycling"
+],
+[
+"draw",
+"Cycling"
+],
+[
+"activated",
+"Cycling"
+]
+],
+"keywords": [
+765950
+]
 },
 "773539": {
 "tags": [
@@ -5189,9 +6848,23 @@
 [
 "selection",
 "scry 1"
+],
+[
+"selection",
+"scry"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"scry"
+]
+],
+"keywords": [
+765968,
+765974
+]
 },
 "773597": {
 "tags": [
@@ -5214,9 +6887,39 @@
 [
 "stat_condition",
 "the least toughness"
+],
+[
+"merge_attach",
+"Enchant"
+],
+[
+"stat_gain",
+"Bolster"
+],
+[
+"stat_condition",
+"Bolster"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+],
+[
+"stat_gain",
+"Bolster"
+],
+[
+"stat_condition",
+"Bolster"
+]
+],
+"keywords": [
+765959,
+766094
+]
 },
 "773639": {
 "tags": [
@@ -5239,9 +6942,38 @@
 [
 "information",
 "exile this card from your hand face down"
+],
+[
+"cost_type",
+"Foretell"
+],
+[
+"delayed",
+"Foretell"
+],
+[
+"cast_from_zone",
+"Foretell"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Foretell"
+],
+[
+"delayed",
+"Foretell"
+],
+[
+"cast_from_zone",
+"Foretell"
+]
+],
+"keywords": [
+766059
+]
 },
 "773669": {
 "tags": [
@@ -5270,7 +7002,10 @@
 "Draw a card"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "773691": {
 "tags": [
@@ -5301,9 +7036,31 @@
 [
 "condition_count",
 "LEVEL 8+"
+],
+[
+"protection",
+"Protection"
+],
+[
+"upgrade",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"protection",
+"Protection"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"keywords": [
+765936,
+766073
+]
 },
 "773739": {
 "tags": [
@@ -5328,7 +7085,11 @@
 "Combat damage can't be prevented"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765927,
+765975
+]
 },
 "773782": {
 "tags": [
@@ -5453,7 +7214,10 @@
 "create a 1/1 green and white Citizen creature token"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "774223": {
 "tags": [
@@ -5484,9 +7248,22 @@
 [
 "evasion",
 "gains flying"
+],
+[
+"resource_gain",
+"Treasure"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"resource_gain",
+"Treasure"
+]
+],
+"keywords": [
+765933
+]
 },
 "774275": {
 "tags": [
@@ -5505,9 +7282,22 @@
 [
 "cheat_death",
 "Regenerate this creature"
+],
+[
+"cheat_death",
+"Regenerate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cheat_death",
+"Regenerate"
+]
+],
+"keywords": [
+765956
+]
 },
 "774352": {
 "tags": [
@@ -5563,9 +7353,22 @@
 [
 "lifesteal",
 "Each opponent loses 1 life and you gain 1 life"
+],
+[
+"on_ally_play",
+"Landfall"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_ally_play",
+"Landfall"
+]
+],
+"keywords": [
+765934
+]
 },
 "774396": {
 "tags": [
@@ -5588,9 +7391,22 @@
 [
 "banish",
 "Exile Secret of Bloodbending"
+],
+[
+"cost_reduction",
+"waterbend"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cost_reduction",
+"waterbend"
+]
+],
+"keywords": [
+766103
+]
 },
 "774407": {
 "tags": [
@@ -5617,9 +7433,58 @@
 [
 "condition_count",
 "six or more unspent mana"
+],
+[
+"evasion",
+"flying"
+],
+[
+"immunity",
+"indestructible"
+],
+[
+"on_attack",
+"firebending"
+],
+[
+"resource_gain",
+"firebending"
+],
+[
+"temporary_effect",
+"firebending"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"evasion",
+"flying"
+],
+[
+"immunity",
+"indestructible"
+],
+[
+"on_attack",
+"firebending"
+],
+[
+"resource_gain",
+"firebending"
+],
+[
+"temporary_effect",
+"firebending"
+]
+],
+"keywords": [
+765927,
+765931,
+765975,
+765988,
+766051
+]
 },
 "774411": {
 "tags": [
@@ -5642,9 +7507,38 @@
 [
 "permanent_growth",
 "{T}: Put a +1/+1 counter on this creature"
+],
+[
+"kicker",
+"Offspring"
+],
+[
+"copy",
+"Offspring"
+],
+[
+"on_play",
+"Offspring"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Offspring"
+],
+[
+"copy",
+"Offspring"
+],
+[
+"on_play",
+"Offspring"
+]
+],
+"keywords": [
+766082
+]
 },
 "774414": {
 "tags": [
@@ -5693,9 +7587,30 @@
 [
 "activated",
 "{B}{B}: Attach this Equipment"
+],
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
+]
+],
+"keywords": [
+765937
+]
 },
 "774469": {
 "tags": [
@@ -5803,7 +7718,10 @@
 "untap this creature"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765948
+]
 },
 "774682": {
 "tags": [
@@ -5887,7 +7805,11 @@
 "proliferate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765975,
+766010
+]
 },
 "774878": {
 "tags": [
@@ -5912,7 +7834,10 @@
 "return up to one target creature card from your graveyard to your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765935
+]
 },
 "774899": {
 "tags": [
@@ -5985,9 +7910,22 @@
 [
 "enemy_benefit",
 "Each player adds {B}{R}{G}"
+],
+[
+"untap",
+"Vigilance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"untap",
+"Vigilance"
+]
+],
+"keywords": [
+765943
+]
 },
 "774998": {
 "tags": [
@@ -6027,9 +7965,22 @@
 [
 "disable",
 "doesn't untap during its controller's untap step"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765959
+]
 },
 "775114": {
 "tags": [
@@ -6062,7 +8013,10 @@
 "deals that much damage to each opponent"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765935
+]
 },
 "775160": {
 "tags": [
@@ -6093,9 +8047,22 @@
 [
 "temporary_effect",
 "this turn do so"
+],
+[
+"cast_from_zone",
+"Aftermath"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cast_from_zone",
+"Aftermath"
+]
+],
+"keywords": [
+766009
+]
 },
 "775200": {
 "tags": [
@@ -6151,9 +8118,38 @@
 [
 "temporary_effect",
 "this turn"
+],
+[
+"modal_choice",
+"Riot"
+],
+[
+"haste",
+"Riot"
+],
+[
+"stat_gain",
+"Riot"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Riot"
+],
+[
+"haste",
+"Riot"
+],
+[
+"stat_gain",
+"Riot"
+]
+],
+"keywords": [
+766007
+]
 },
 "775274": {
 "tags": [
@@ -6224,7 +8220,11 @@
 "creatures you control"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931,
+765985
+]
 },
 "775342": {
 "tags": [
@@ -6294,7 +8294,10 @@
 "It gains haste until end of turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765927
+]
 },
 "775374": {
 "tags": [
@@ -6450,9 +8453,24 @@
 [
 "removal",
 "exile up to one target attacking or blocking creature until Sigrid leaves the battlefield"
+],
+[
+"protection",
+"protection"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"protection",
+"protection"
+]
+],
+"keywords": [
+765936,
+765947,
+765958
+]
 },
 "775577": {
 "tags": [
@@ -6498,7 +8516,10 @@
 "At the beginning of your upkeep, this token deals 1 damage to you"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765975
+]
 },
 "775695": {
 "tags": [
@@ -6555,9 +8576,30 @@
 [
 "merge_attach",
 "put it onto the battlefield attached to that creature"
+],
+[
+"lone_unit",
+"Exalted"
+],
+[
+"temporary_buff",
+"Exalted"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"lone_unit",
+"Exalted"
+],
+[
+"temporary_buff",
+"Exalted"
+]
+],
+"keywords": [
+766023
+]
 },
 "775785": {
 "tags": [
@@ -6576,9 +8618,22 @@
 [
 "temporary_buff",
 "gets +20/+20 until end of turn"
+],
+[
+"cheat_death",
+"regenerate"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cheat_death",
+"regenerate"
+]
+],
+"keywords": [
+765956
+]
 },
 "775805": {
 "tags": [
@@ -6630,9 +8685,22 @@
 [
 "generate_cards",
 "a Clue token"
+],
+[
+"resource_gain",
+"Treasure"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"resource_gain",
+"Treasure"
+]
+],
+"keywords": [
+765933
+]
 },
 "775858": {
 "tags": [
@@ -6653,7 +8721,10 @@
 "all creatures your opponents control"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "775873": {
 "tags": [
@@ -6703,7 +8774,10 @@
 "get +2/+2"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "775921": {
 "tags": [
@@ -6920,7 +8994,11 @@
 "lifelink"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931,
+765974
+]
 },
 "776160": {
 "tags": [
@@ -7013,9 +9091,57 @@
 [
 "condition_count",
 "If this is the second time this ability has resolved this turn"
+],
+[
+"transform",
+"Living metal"
+],
+[
+"transform",
+"convert"
+],
+[
+"transform",
+"More Than Meets the Eye"
+],
+[
+"cost_type",
+"Prowl"
+],
+[
+"tribal",
+"Prowl"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Living metal"
+],
+[
+"transform",
+"convert"
+],
+[
+"transform",
+"More Than Meets the Eye"
+],
+[
+"cost_type",
+"Prowl"
+],
+[
+"tribal",
+"Prowl"
+]
+],
+"keywords": [
+766132,
+766133,
+766134,
+766191
+]
 },
 "776288": {
 "tags": [
@@ -7126,9 +9252,22 @@
 [
 "temporary_buff",
 "gets +2/+2 until end of turn"
+],
+[
+"on_spell",
+"Magecraft"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_spell",
+"Magecraft"
+]
+],
+"keywords": [
+766002
+]
 },
 "776418": {
 "tags": [
@@ -7172,9 +9311,31 @@
 [
 "temporary_buff",
 "gets +1/+0 until end of turn"
+],
+[
+"upkeep",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"upkeep",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
+]
+],
+"keywords": [
+765975,
+765981
+]
 },
 "776609": {
 "tags": [
@@ -7264,9 +9425,30 @@
 [
 "stat_gain",
 "Put a +1/+1 counter on target creature"
+],
+[
+"upkeep",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"upkeep",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
+]
+],
+"keywords": [
+765981
+]
 },
 "776657": {
 "tags": [
@@ -7305,9 +9487,32 @@
 [
 "heal",
 "double your life total"
+],
+[
+"first_strike",
+"double strike"
+],
+[
+"transform",
+"transform"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"first_strike",
+"double strike"
+],
+[
+"transform",
+"transform"
+]
+],
+"keywords": [
+765931,
+765985,
+765996
+]
 },
 "776688": {
 "tags": [
@@ -7359,9 +9564,31 @@
 [
 "first_strike",
 "with first strike"
+],
+[
+"kicker",
+"Kicker"
+],
+[
+"cheat_death",
+"Regenerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Kicker"
+],
+[
+"cheat_death",
+"Regenerate"
+]
+],
+"keywords": [
+765942,
+765956
+]
 },
 "776724": {
 "tags": [
@@ -7399,7 +9626,10 @@
 "return this card from your graveyard to the battlefield tapped"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "776771": {
 "tags": [
@@ -7422,9 +9652,48 @@
 [
 "cost_type",
 "Warp {1}{B}"
+],
+[
+"generate_cards",
+"conjure"
+],
+[
+"cost_type",
+"Warp"
+],
+[
+"cast_from_zone",
+"Warp"
+],
+[
+"delayed",
+"Warp"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"generate_cards",
+"conjure"
+],
+[
+"cost_type",
+"Warp"
+],
+[
+"cast_from_zone",
+"Warp"
+],
+[
+"delayed",
+"Warp"
+]
+],
+"keywords": [
+765928,
+765975,
+766119
+]
 },
 "776805": {
 "tags": [
@@ -7504,9 +9773,32 @@
 [
 "blink",
 "Exile this Saga, then return it to the battlefield (front face up)"
+],
+[
+"transform",
+"transform"
+],
+[
+"mill",
+"mill"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"transform"
+],
+[
+"mill",
+"mill"
+]
+],
+"keywords": [
+765948,
+765996,
+766004
+]
 },
 "776935": {
 "tags": [
@@ -7539,7 +9831,10 @@
 "only during an opponent's turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "776939": {
 "tags": [
@@ -7583,9 +9878,31 @@
 [
 "enemy_benefit",
 "Target opponent may draw a card"
+],
+[
+"evasion",
+"flying"
+],
+[
+"protection",
+"protection"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"evasion",
+"flying"
+],
+[
+"protection",
+"protection"
+]
+],
+"keywords": [
+765931,
+765936
+]
 },
 "776969": {
 "tags": [
@@ -7627,7 +9944,10 @@
 "Your opponents can't play land cards from graveyards"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "777038": {
 "tags": [
@@ -7654,9 +9974,22 @@
 [
 "temporary_buff",
 "until end of turn"
+],
+[
+"team_play",
+"Assist"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"team_play",
+"Assist"
+]
+],
+"keywords": [
+765990
+]
 },
 "777049": {
 "tags": [
@@ -7693,7 +10026,10 @@
 "the other into your graveyard"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "777342": {
 "tags": [
@@ -7793,7 +10129,10 @@
 "100 or more tower counters"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+766025
+]
 },
 "777392": {
 "tags": [
@@ -7881,7 +10220,10 @@
 "you may reveal No-Regrets Egret"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "777497": {
 "tags": [
@@ -7991,9 +10333,22 @@
 [
 "graveyard",
 "from your graveyard to your hand"
+],
+[
+"transform",
+"Specialize"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Specialize"
+]
+],
+"keywords": [
+766013
+]
 },
 "777636": {
 "tags": [
@@ -8016,9 +10371,39 @@
 [
 "untap",
 "Untap this creature"
+],
+[
+"counter_spell",
+"ward"
+],
+[
+"cost_increase",
+"ward"
+],
+[
+"protection",
+"ward"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"counter_spell",
+"ward"
+],
+[
+"cost_increase",
+"ward"
+],
+[
+"protection",
+"ward"
+]
+],
+"keywords": [
+765931,
+766027
+]
 },
 "777644": {
 "tags": [
@@ -8093,7 +10478,10 @@
 "they're 3/3 Dragon creatures"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "777739": {
 "tags": [
@@ -8116,9 +10504,38 @@
 [
 "distribute",
 "move X +1/+1 counters from this creature onto another target creature"
+],
+[
+"on_spell",
+"Increment"
+],
+[
+"permanent_growth",
+"Increment"
+],
+[
+"stat_condition",
+"Increment"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_spell",
+"Increment"
+],
+[
+"permanent_growth",
+"Increment"
+],
+[
+"stat_condition",
+"Increment"
+]
+],
+"keywords": [
+766188
+]
 },
 "777793": {
 "tags": [
@@ -8170,9 +10587,22 @@
 [
 "scope_multi",
 "other creatures you control and creature cards in your hand"
+],
+[
+"first_strike",
+"Double strike"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"first_strike",
+"Double strike"
+]
+],
+"keywords": [
+765985
+]
 },
 "777819": {
 "tags": [
@@ -8191,9 +10621,22 @@
 [
 "permanent_growth",
 "perpetually gets +1/+1"
+],
+[
+"on_spell",
+"Repartee"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_spell",
+"Repartee"
+]
+],
+"keywords": [
+766164
+]
 },
 "777867": {
 "tags": [
@@ -8253,9 +10696,31 @@
 [
 "protection",
 "you may exile this creature, then return it to the battlefield"
+],
+[
+"first_strike",
+"Double strike"
+],
+[
+"transform",
+"Specialize"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"first_strike",
+"Double strike"
+],
+[
+"transform",
+"Specialize"
+]
+],
+"keywords": [
+765985,
+766013
+]
 },
 "778015": {
 "tags": [
@@ -8286,9 +10751,22 @@
 [
 "hand_size",
 "if you have no cards in hand"
+],
+[
+"hand_size",
+"Hellbent"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"hand_size",
+"Hellbent"
+]
+],
+"keywords": [
+766149
+]
 },
 "778056": {
 "tags": [
@@ -8347,9 +10825,44 @@
 [
 "attack_now",
 "tapped and attacking"
+],
+[
+"transform",
+"transform"
+],
+[
+"mill",
+"Mill"
+],
+[
+"activated",
+"Craft"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"transform"
+],
+[
+"mill",
+"Mill"
+],
+[
+"activated",
+"Craft"
+]
+],
+"keywords": [
+765927,
+765948,
+765974,
+765980,
+765996,
+766004,
+766167
+]
 },
 "778086": {
 "tags": [
@@ -8462,7 +10975,10 @@
 "create a 2/2 white Knight creature token"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765935
+]
 },
 "778358": {
 "tags": [
@@ -8493,9 +11009,48 @@
 [
 "draw",
 "draw a card"
+],
+[
+"transform",
+"Transform"
+],
+[
+"rule_change",
+"Daybound"
+],
+[
+"rule_change",
+"Nightbound"
+],
+[
+"condition_count",
+"Nightbound"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Transform"
+],
+[
+"rule_change",
+"Daybound"
+],
+[
+"rule_change",
+"Nightbound"
+],
+[
+"condition_count",
+"Nightbound"
+]
+],
+"keywords": [
+765996,
+766071,
+766072
+]
 },
 "778385": {
 "tags": [
@@ -8510,9 +11065,39 @@
 [
 "turn_start",
 "At the beginning of your upkeep"
+],
+[
+"evasion",
+"Landwalk"
+],
+[
+"upkeep",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"evasion",
+"Landwalk"
+],
+[
+"upkeep",
+"Echo"
+],
+[
+"turn_start",
+"Echo"
+]
+],
+"keywords": [
+765966,
+765981
+]
 },
 "778520": {
 "tags": [
@@ -8602,9 +11187,30 @@
 [
 "cast_from_zone",
 "You may cast this card from your graveyard"
+],
+[
+"cast_from_zone",
+"Flashback"
+],
+[
+"banish",
+"Flashback"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cast_from_zone",
+"Flashback"
+],
+[
+"banish",
+"Flashback"
+]
+],
+"keywords": [
+765973
+]
 },
 "778624": {
 "tags": [
@@ -8621,7 +11227,10 @@
 "{T}: Add {R}"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765927
+]
 },
 "778649": {
 "tags": [
@@ -8640,9 +11249,22 @@
 [
 "in_hand_buff",
 "Creature cards in your hand perpetually get +1/+1"
+],
+[
+"tutor",
+"Seek"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tutor",
+"Seek"
+]
+],
+"keywords": [
+765979
+]
 },
 "778657": {
 "tags": [
@@ -8665,9 +11287,22 @@
 [
 "free_play",
 "put it onto the battlefield attached to that player"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765959
+]
 },
 "778684": {
 "tags": [
@@ -8711,9 +11346,22 @@
 [
 "temporary_buff",
 "base power and toughness 4/4 until end of turn"
+],
+[
+"blocking",
+"Reach"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"blocking",
+"Reach"
+]
+],
+"keywords": [
+765991
+]
 },
 "778889": {
 "tags": [
@@ -8924,9 +11572,22 @@
 [
 "resource_gain",
 "create a Treasure token"
+],
+[
+"resource_gain",
+"Treasure"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Treasure"
+]
+],
+"keywords": [
+765933
+]
 },
 "779098": {
 "tags": [
@@ -8972,7 +11633,11 @@
 "non-Dragon"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931,
+765975
+]
 },
 "779172": {
 "tags": [
@@ -8999,9 +11664,22 @@
 [
 "enemy_benefit",
 "Its owner creates a 1/1 black and green Snake enchantment creature token"
+],
+[
+"immunity",
+"Indestructible"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immunity",
+"Indestructible"
+]
+],
+"keywords": [
+765988
+]
 },
 "779241": {
 "tags": [
@@ -9020,9 +11698,22 @@
 [
 "swap",
 "Exchange this Aura with an Aura card in your hand"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765959
+]
 },
 "779251": {
 "tags": [
@@ -9039,7 +11730,10 @@
 "put any number of creature cards from your hand onto the battlefield"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765927
+]
 },
 "779279": {
 "tags": [
@@ -9091,9 +11785,23 @@
 [
 "other_death_trigger",
 "Whenever an enchantment you control is put into a graveyard from the battlefield"
+],
+[
+"selection",
+"scry"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"scry"
+]
+],
+"keywords": [
+765948,
+765968
+]
 },
 "779374": {
 "tags": [
@@ -9124,9 +11832,38 @@
 [
 "disruption",
 "destroy target nonbasic land"
+],
+[
+"delayed",
+"Suspend"
+],
+[
+"free_play",
+"Suspend"
+],
+[
+"turn_start",
+"Suspend"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"delayed",
+"Suspend"
+],
+[
+"free_play",
+"Suspend"
+],
+[
+"turn_start",
+"Suspend"
+]
+],
+"keywords": [
+766017
+]
 },
 "779398": {
 "tags": [
@@ -9153,9 +11890,22 @@
 [
 "transform",
 "Turn it face up"
+],
+[
+"summon",
+"cloak"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"summon",
+"cloak"
+]
+],
+"keywords": [
+766190
+]
 },
 "779422": {
 "tags": [
@@ -9232,9 +11982,22 @@
 [
 "condition_count",
 "LEVEL 3+"
+],
+[
+"upgrade",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"upgrade",
+"Level up"
+]
+],
+"keywords": [
+766073
+]
 },
 "779489": {
 "tags": [
@@ -9257,9 +12020,22 @@
 [
 "alt_wincon",
 "you win the game"
+],
+[
+"immunity",
+"Indestructible"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immunity",
+"Indestructible"
+]
+],
+"keywords": [
+765988
+]
 },
 "779577": {
 "tags": [
@@ -9288,7 +12064,10 @@
 "until end of turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765985
+]
 },
 "779609": {
 "tags": [
@@ -9330,7 +12109,10 @@
 "X is the number of cards in your hand"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "779673": {
 "tags": [
@@ -9408,9 +12190,23 @@
 [
 "graveyard",
 "Exile four other cards from your graveyard"
+],
+[
+"mill",
+"mill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"mill",
+"mill"
+]
+],
+"keywords": [
+765997,
+766004
+]
 },
 "779795": {
 "tags": [
@@ -9431,7 +12227,10 @@
 "A player with ten or more poison counters loses the game"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765935
+]
 },
 "779859": {
 "tags": [
@@ -9464,7 +12263,10 @@
 "sacrifice this enchantment"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765947
+]
 },
 "779887": {
 "tags": [
@@ -9491,9 +12293,22 @@
 [
 "spell_speed",
 "Activate only as a sorcery"
+],
+[
+"generate_cards",
+"Conjure"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Conjure"
+]
+],
+"keywords": [
+765928
+]
 },
 "779910": {
 "tags": [
@@ -9518,7 +12333,10 @@
 "return it to the battlefield tapped"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765935
+]
 },
 "779921": {
 "tags": [
@@ -9537,9 +12355,22 @@
 [
 "summon",
 "create a 2/2 green Wolf creature token"
+],
+[
+"tribal",
+"Kinship"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"tribal",
+"Kinship"
+]
+],
+"keywords": [
+766057
+]
 },
 "779947": {
 "tags": [
@@ -9566,9 +12397,22 @@
 [
 "rewind",
 "remove all -1/-1 counters from it"
+],
+[
+"direct_damage",
+"Afflict"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"direct_damage",
+"Afflict"
+]
+],
+"keywords": [
+766131
+]
 },
 "779960": {
 "tags": [
@@ -9641,9 +12485,23 @@
 [
 "stat_gain",
 "escapes with three +1/+1 counters"
+],
+[
+"cast_from_zone",
+"Escape"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cast_from_zone",
+"Escape"
+]
+],
+"keywords": [
+765991,
+765997
+]
 },
 "780091": {
 "tags": [
@@ -9678,9 +12536,31 @@
 [
 "tribal",
 "Rat card"
+],
+[
+"tutor",
+"seek"
+],
+[
+"graveyard",
+"Threshold"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"tutor",
+"seek"
+],
+[
+"graveyard",
+"Threshold"
+]
+],
+"keywords": [
+765979,
+766012
+]
 },
 "780097": {
 "tags": [
@@ -9778,9 +12658,30 @@
 [
 "activated",
 "Equip {2}"
+],
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
+]
+],
+"keywords": [
+765937
+]
 },
 "780215": {
 "tags": [
@@ -9819,9 +12720,63 @@
 [
 "free_play",
 "without paying its mana cost"
+],
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
+],
+[
+"on_play",
+"Cascade"
+],
+[
+"free_play",
+"Cascade"
+],
+[
+"cost_condition",
+"Cascade"
+],
+[
+"random_effect",
+"Cascade"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
+],
+[
+"on_play",
+"Cascade"
+],
+[
+"free_play",
+"Cascade"
+],
+[
+"cost_condition",
+"Cascade"
+],
+[
+"random_effect",
+"Cascade"
+]
+],
+"keywords": [
+765937,
+766029
+]
 },
 "780220": {
 "tags": [
@@ -9970,9 +12925,22 @@
 [
 "excess_damage",
 "gains trample"
+],
+[
+"excess_damage",
+"trample"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"excess_damage",
+"trample"
+]
+],
+"keywords": [
+765927
+]
 },
 "780392": {
 "tags": [
@@ -10003,9 +12971,30 @@
 [
 "heal",
 "you gain 2 life"
+],
+[
+"selection",
+"surveil"
+],
+[
+"self_mill",
+"surveil"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"selection",
+"surveil"
+],
+[
+"self_mill",
+"surveil"
+]
+],
+"keywords": [
+765945
+]
 },
 "780484": {
 "tags": [
@@ -10065,9 +13054,40 @@
 [
 "life_payment",
 "pay life equal to its mana value"
+],
+[
+"counter_spell",
+"Ward"
+],
+[
+"cost_increase",
+"Ward"
+],
+[
+"protection",
+"Ward"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"counter_spell",
+"Ward"
+],
+[
+"cost_increase",
+"Ward"
+],
+[
+"protection",
+"Ward"
+]
+],
+"keywords": [
+765931,
+765974,
+766027
+]
 },
 "780553": {
 "tags": [
@@ -10084,7 +13104,10 @@
 "that player skips their next combat phase"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "780583": {
 "tags": [
@@ -10111,9 +13134,22 @@
 [
 "temporary_effect",
 "Until your next turn"
+],
+[
+"suppress",
+"detain"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"suppress",
+"detain"
+]
+],
+"keywords": [
+766161
+]
 },
 "780734": {
 "tags": [
@@ -10136,9 +13172,23 @@
 [
 "generate_cards",
 "Conjure two cards named Forest into your hand"
+],
+[
+"generate_cards",
+"Conjure"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"generate_cards",
+"Conjure"
+]
+],
+"keywords": [
+765928,
+766000
+]
 },
 "780743": {
 "tags": [
@@ -10202,9 +13252,31 @@
 [
 "blink",
 "exile it, then return it to the battlefield (front face up)"
+],
+[
+"damage",
+"fight"
+],
+[
+"transform",
+"transform"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"fight"
+],
+[
+"transform",
+"transform"
+]
+],
+"keywords": [
+765957,
+765996
+]
 },
 "780806": {
 "tags": [
@@ -10225,7 +13297,10 @@
 "all enchantments"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "780811": {
 "tags": [
@@ -10290,9 +13365,31 @@
 [
 "evasion",
 "gains flying"
+],
+[
+"excess_damage",
+"trample"
+],
+[
+"evasion",
+"flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"excess_damage",
+"trample"
+],
+[
+"evasion",
+"flying"
+]
+],
+"keywords": [
+765927,
+765931
+]
 },
 "780869": {
 "tags": [
@@ -10355,7 +13452,10 @@
 "won't untap during your next untap step"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765927
+]
 },
 "780993": {
 "tags": [
@@ -10429,9 +13529,22 @@
 [
 "resource_gain",
 "Treasure token"
+],
+[
+"resource_gain",
+"Treasure"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Treasure"
+]
+],
+"keywords": [
+765933
+]
 },
 "781160": {
 "tags": [
@@ -10481,7 +13594,10 @@
 "distribute up to that many +1/+1 counters among any number of other target creatures"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765974
+]
 },
 "781183": {
 "tags": [
@@ -10500,9 +13616,22 @@
 [
 "cost_condition",
 "mana value 2 or less"
+],
+[
+"cost_type",
+"Cleave"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cost_type",
+"Cleave"
+]
+],
+"keywords": [
+766036
+]
 },
 "781192": {
 "tags": [
@@ -10553,7 +13682,10 @@
 "Tap target creature blocking New Master of Arms"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765958
+]
 },
 "781208": {
 "tags": [
@@ -10574,7 +13706,11 @@
 "deals double that damage to you instead"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931,
+765975
+]
 },
 "781227": {
 "tags": [
@@ -10618,9 +13754,38 @@
 [
 "variable_stats",
 "power is equal to the number of creatures you control"
+],
+[
+"on_attack",
+"Mobilize"
+],
+[
+"summon",
+"Mobilize"
+],
+[
+"self_destruct",
+"Mobilize"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_attack",
+"Mobilize"
+],
+[
+"summon",
+"Mobilize"
+],
+[
+"self_destruct",
+"Mobilize"
+]
+],
+"keywords": [
+766102
+]
 },
 "781460": {
 "tags": [
@@ -10706,9 +13871,22 @@
 [
 "direct_damage",
 "defending player loses 3 life"
+],
+[
+"direct_damage",
+"Afflict"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"direct_damage",
+"Afflict"
+]
+],
+"keywords": [
+766131
+]
 },
 "781509": {
 "tags": [
@@ -10743,9 +13921,22 @@
 [
 "turn_start",
 "At the beginning of your first main phase"
+],
+[
+"transform",
+"transform"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"transform",
+"transform"
+]
+],
+"keywords": [
+765996
+]
 },
 "781531": {
 "tags": [
@@ -10797,9 +13988,23 @@
 [
 "quests",
 "venture into the dungeon"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765959,
+766092
+]
 },
 "781625": {
 "tags": [
@@ -10901,9 +14106,30 @@
 [
 "temporary_buff",
 "gets +2/+1 until end of turn"
+],
+[
+"cost_type",
+"Prowl"
+],
+[
+"tribal",
+"Prowl"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cost_type",
+"Prowl"
+],
+[
+"tribal",
+"Prowl"
+]
+],
+"keywords": [
+766191
+]
 },
 "781795": {
 "tags": [
@@ -10939,9 +14165,22 @@
 [
 "cheat_death",
 "Regenerate this creature"
+],
+[
+"cheat_death",
+"Regenerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cheat_death",
+"Regenerate"
+]
+],
+"keywords": [
+765956
+]
 },
 "781897": {
 "tags": [
@@ -10964,9 +14203,23 @@
 [
 "draw",
 "Draw a card"
+],
+[
+"immunity",
+"hexproof"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"immunity",
+"hexproof"
+]
+],
+"keywords": [
+765931,
+765980
+]
 },
 "781914": {
 "tags": [
@@ -11024,7 +14277,10 @@
 "the number of artifacts you control"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "782052": {
 "tags": [
@@ -11041,7 +14297,10 @@
 "deals 1 damage to each creature that player controls"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "782107": {
 "tags": [
@@ -11124,7 +14383,10 @@
 "Put two +1/+1 counters on Kalitas"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765974
+]
 },
 "782153": {
 "tags": [
@@ -11147,9 +14409,24 @@
 [
 "temporary_buff",
 "until end of turn"
+],
+[
+"on_ally_play",
+"Alliance"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"on_ally_play",
+"Alliance"
+]
+],
+"keywords": [
+765927,
+765975,
+766011
+]
 },
 "782209": {
 "tags": [
@@ -11174,7 +14451,10 @@
 "Put the rest on the bottom of your library"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765958
+]
 },
 "782279": {
 "tags": [
@@ -11213,9 +14493,22 @@
 [
 "direct_damage",
 "target opponent loses that much life"
+],
+[
+"immunity",
+"Indestructible"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immunity",
+"Indestructible"
+]
+],
+"keywords": [
+765988
+]
 },
 "782322": {
 "tags": [
@@ -11417,9 +14710,23 @@
 [
 "cost_condition",
 "the same mana value"
+],
+[
+"transform",
+"transform"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"transform"
+]
+],
+"keywords": [
+765931,
+765996
+]
 },
 "782527": {
 "tags": [
@@ -11436,7 +14743,10 @@
 "Look at target face-down creature"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "782528": {
 "tags": [
@@ -11455,9 +14765,38 @@
 [
 "resource_gain",
 "put them onto the battlefield tapped"
+],
+[
+"cost_type",
+"Sneak"
+],
+[
+"return_to_hand",
+"Sneak"
+],
+[
+"attack_now",
+"Sneak"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cost_type",
+"Sneak"
+],
+[
+"return_to_hand",
+"Sneak"
+],
+[
+"attack_now",
+"Sneak"
+]
+],
+"keywords": [
+766099
+]
 },
 "782537": {
 "tags": [
@@ -11499,7 +14838,10 @@
 "other attacking creatures you control with flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "782576": {
 "tags": [
@@ -11551,9 +14893,22 @@
 [
 "discard",
 "discards a card"
+],
+[
+"blocking",
+"Shadow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"blocking",
+"Shadow"
+]
+],
+"keywords": [
+766182
+]
 },
 "782664": {
 "tags": [
@@ -11617,7 +14972,11 @@
 "proliferate"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931,
+766010
+]
 },
 "782805": {
 "tags": [
@@ -11692,7 +15051,10 @@
 "target opponent each draw three cards"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765958
+]
 },
 "782872": {
 "tags": [
@@ -11709,7 +15071,10 @@
 "unlock a locked door"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "782884": {
 "tags": [
@@ -11757,9 +15122,22 @@
 [
 "condition_count",
 "LEVEL 5+"
+],
+[
+"upgrade",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"upgrade",
+"Level up"
+]
+],
+"keywords": [
+766073
+]
 },
 "782965": {
 "tags": [
@@ -11786,9 +15164,30 @@
 [
 "blocking",
 "untap and block it if able"
+],
+[
+"stat_gain",
+"Amplify"
+],
+[
+"tribal",
+"Amplify"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"stat_gain",
+"Amplify"
+],
+[
+"tribal",
+"Amplify"
+]
+],
+"keywords": [
+766095
+]
 },
 "782966": {
 "tags": [
@@ -11873,9 +15272,22 @@
 [
 "graveyard",
 "Exile five other cards from your graveyard"
+],
+[
+"cast_from_zone",
+"escape"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cast_from_zone",
+"escape"
+]
+],
+"keywords": [
+765997
+]
 },
 "783009": {
 "tags": [
@@ -11902,9 +15314,38 @@
 [
 "spell_speed",
 "Unearth only as a sorcery"
+],
+[
+"revive",
+"Unearth"
+],
+[
+"haste",
+"Unearth"
+],
+[
+"self_destruct",
+"Unearth"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"revive",
+"Unearth"
+],
+[
+"haste",
+"Unearth"
+],
+[
+"self_destruct",
+"Unearth"
+]
+],
+"keywords": [
+765984
+]
 },
 "783042": {
 "tags": [
@@ -11923,9 +15364,22 @@
 [
 "mill",
 "mills six cards"
+],
+[
+"mill",
+"mill"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"mill",
+"mill"
+]
+],
+"keywords": [
+766004
+]
 },
 "783104": {
 "tags": [
@@ -11942,7 +15396,10 @@
 "exile up to one target creature you own, then return it to the battlefield"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "783121": {
 "tags": [
@@ -12001,7 +15458,10 @@
 "venture into the dungeon"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+766092
+]
 },
 "783219": {
 "tags": [
@@ -12032,9 +15492,23 @@
 [
 "temporary_buff",
 "Target creature gets +X/-X until end of turn"
+],
+[
+"evasion",
+"Landwalk"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"evasion",
+"Landwalk"
+]
+],
+"keywords": [
+765966,
+766193
+]
 },
 "783250": {
 "tags": [
@@ -12069,9 +15543,22 @@
 [
 "free_play",
 "play it this turn without paying its mana cost"
+],
+[
+"blocking",
+"Shadow"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"blocking",
+"Shadow"
+]
+],
+"keywords": [
+766182
+]
 },
 "783322": {
 "tags": [
@@ -12148,9 +15635,22 @@
 [
 "tribal",
 "as long as you control an Illusion"
+],
+[
+"immunity",
+"hexproof"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"immunity",
+"hexproof"
+]
+],
+"keywords": [
+765980
+]
 },
 "783438": {
 "tags": [
@@ -12181,9 +15681,39 @@
 [
 "activated",
 "Equip {1}{B}"
+],
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
+],
+[
+"card_quality",
+"learn"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Equip"
+],
+[
+"activated",
+"Equip"
+],
+[
+"card_quality",
+"learn"
+]
+],
+"keywords": [
+765937,
+766135
+]
 },
 "783466": {
 "tags": [
@@ -12220,7 +15750,10 @@
 "return the exiled cards to their owners' hands"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "783467": {
 "tags": [
@@ -12262,7 +15795,10 @@
 "exile it instead"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "783490": {
 "tags": [
@@ -12287,7 +15823,10 @@
 "Untap target creature"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765947
+]
 },
 "783543": {
 "tags": [
@@ -12331,9 +15870,22 @@
 [
 "resource_gain",
 "create a Treasure token"
+],
+[
+"resource_gain",
+"Treasure"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Treasure"
+]
+],
+"keywords": [
+765933
+]
 },
 "783565": {
 "tags": [
@@ -12365,9 +15917,22 @@
 [
 "tutor",
 "seek a nonland card"
+],
+[
+"tutor",
+"seek"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"tutor",
+"seek"
+]
+],
+"keywords": [
+765979
+]
 },
 "783673": {
 "tags": [
@@ -12390,9 +15955,30 @@
 [
 "friendly_fire",
 "each player gets a poison counter"
+],
+[
+"stat_loss",
+"Infect"
+],
+[
+"damage_over_time",
+"Infect"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_loss",
+"Infect"
+],
+[
+"damage_over_time",
+"Infect"
+]
+],
+"keywords": [
+765954
+]
 },
 "783725": {
 "tags": [
@@ -12419,9 +16005,23 @@
 [
 "cheat_death",
 "Regenerate this creature"
+],
+[
+"cheat_death",
+"Regenerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"cheat_death",
+"Regenerate"
+]
+],
+"keywords": [
+765956,
+765958
+]
 },
 "783764": {
 "tags": [
@@ -12462,7 +16062,10 @@
 "until end of turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "783836": {
 "tags": [
@@ -12489,9 +16092,22 @@
 [
 "mill",
 "library for all cards with the same name"
+],
+[
+"play_restriction",
+"Split second"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"play_restriction",
+"Split second"
+]
+],
+"keywords": [
+766075
+]
 },
 "783874": {
 "tags": [
@@ -12595,7 +16211,10 @@
 "perpetually gets +X/+X, where X is its power"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765927
+]
 },
 "784042": {
 "tags": [
@@ -12620,7 +16239,10 @@
 "until end of turn"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765931
+]
 },
 "784151": {
 "tags": [
@@ -12652,9 +16274,31 @@
 [
 "immunity",
 "protection from black and from green"
+],
+[
+"protection",
+"protection"
+],
+[
+"first_strike",
+"Double strike"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"protection",
+"protection"
+],
+[
+"first_strike",
+"Double strike"
+]
+],
+"keywords": [
+765936,
+765985
+]
 },
 "784163": {
 "tags": [
@@ -12693,9 +16337,24 @@
 [
 "aura",
 "Creatures your opponents control get -1/-1"
+],
+[
+"card_quality",
+"connive"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"card_quality",
+"connive"
+]
+],
+"keywords": [
+765931,
+765938,
+765974
+]
 },
 "784179": {
 "tags": [
@@ -12790,9 +16449,22 @@
 [
 "stat_gain",
 "Put a +1/+1 counter on that token"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765959
+]
 },
 "801441": {
 "tags": [
@@ -12825,7 +16497,10 @@
 "deals damage equal to its power to each opponent"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765948
+]
 },
 "801595": {
 "tags": [
@@ -12868,9 +16543,48 @@
 [
 "activated",
 "Crew 1"
+],
+[
+"activated",
+"Crew"
+],
+[
+"transform",
+"Crew"
+],
+[
+"temporary_effect",
+"Crew"
+],
+[
+"transform",
+"Transform"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"activated",
+"Crew"
+],
+[
+"transform",
+"Crew"
+],
+[
+"temporary_effect",
+"Crew"
+],
+[
+"transform",
+"Transform"
+]
+],
+"keywords": [
+765931,
+765953,
+765996
+]
 },
 "801603": {
 "tags": [
@@ -12992,9 +16706,31 @@
 [
 "condition_count",
 "three or more creatures"
+],
+[
+"merge_attach",
+"Enchant"
+],
+[
+"variety_payoff",
+"Coven"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+],
+[
+"variety_payoff",
+"Coven"
+]
+],
+"keywords": [
+765959,
+766028
+]
 },
 "802489": {
 "tags": [
@@ -13021,9 +16757,22 @@
 [
 "haste",
 "has haste"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765959
+]
 },
 "802622": {
 "tags": [
@@ -13042,9 +16791,30 @@
 [
 "temporary_effect",
 "this turn"
+],
+[
+"kicker",
+"Buyback"
+],
+[
+"recycle",
+"Buyback"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Buyback"
+],
+[
+"recycle",
+"Buyback"
+]
+],
+"keywords": [
+766096
+]
 },
 "802886": {
 "tags": [
@@ -13113,9 +16883,39 @@
 [
 "disable",
 "doesn't untap during its controller's untap step"
+],
+[
+"merge_attach",
+"Enchant"
+],
+[
+"cost_type",
+"Surge"
+],
+[
+"team_play",
+"Surge"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+],
+[
+"cost_type",
+"Surge"
+],
+[
+"team_play",
+"Surge"
+]
+],
+"keywords": [
+765959,
+766185
+]
 },
 "803285": {
 "tags": [
@@ -13150,9 +16950,22 @@
 [
 "free_play",
 "may put a permanent card from their hand onto the battlefield"
+],
+[
+"untap",
+"Vigilance"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"untap",
+"Vigilance"
+]
+],
+"keywords": [
+765943
+]
 },
 "803298": {
 "tags": [
@@ -13177,7 +16990,10 @@
 "draw cards equal to the difference"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765935
+]
 },
 "803417": {
 "tags": [
@@ -13223,7 +17039,10 @@
 "from your graveyard"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765948
+]
 },
 "804053": {
 "tags": [
@@ -13293,9 +17112,22 @@
 [
 "cant_block",
 "This creature can't block"
+],
+[
+"stat_loss",
+"Flanking"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"stat_loss",
+"Flanking"
+]
+],
+"keywords": [
+766104
+]
 },
 "804502": {
 "tags": [
@@ -13318,9 +17150,22 @@
 [
 "enemy_benefit",
 "Any player may activate this ability"
+],
+[
+"team_play",
+"Assist"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"team_play",
+"Assist"
+]
+],
+"keywords": [
+765990
+]
 },
 "804601": {
 "tags": [
@@ -13351,9 +17196,38 @@
 [
 "card_quality",
 "Cycling {2}"
+],
+[
+"discard",
+"Cycling"
+],
+[
+"draw",
+"Cycling"
+],
+[
+"activated",
+"Cycling"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"discard",
+"Cycling"
+],
+[
+"draw",
+"Cycling"
+],
+[
+"activated",
+"Cycling"
+]
+],
+"keywords": [
+765950
+]
 },
 "805085": {
 "tags": [
@@ -13430,9 +17304,40 @@
 [
 "condition_count",
 "LEVEL 5+"
+],
+[
+"evasion",
+"landwalk"
+],
+[
+"evasion",
+"Islandwalk"
+],
+[
+"upgrade",
+"Level up"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"evasion",
+"landwalk"
+],
+[
+"evasion",
+"Islandwalk"
+],
+[
+"upgrade",
+"Level up"
+]
+],
+"keywords": [
+765966,
+765967,
+766073
+]
 },
 "805793": {
 "tags": [
@@ -13447,9 +17352,49 @@
 [
 "rule_change",
 "it becomes night next turn"
+],
+[
+"transform",
+"Transform"
+],
+[
+"rule_change",
+"Daybound"
+],
+[
+"rule_change",
+"Nightbound"
+],
+[
+"condition_count",
+"Nightbound"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"transform",
+"Transform"
+],
+[
+"rule_change",
+"Daybound"
+],
+[
+"rule_change",
+"Nightbound"
+],
+[
+"condition_count",
+"Nightbound"
+]
+],
+"keywords": [
+765927,
+765996,
+766071,
+766072
+]
 },
 "806630": {
 "tags": [
@@ -13472,9 +17417,38 @@
 [
 "draw",
 "Draw a card"
+],
+[
+"discard",
+"Cycling"
+],
+[
+"draw",
+"Cycling"
+],
+[
+"activated",
+"Cycling"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"discard",
+"Cycling"
+],
+[
+"draw",
+"Cycling"
+],
+[
+"activated",
+"Cycling"
+]
+],
+"keywords": [
+765950
+]
 },
 "806776": {
 "tags": [
@@ -13499,7 +17473,10 @@
 "Venture into the dungeon"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+766092
+]
 },
 "806867": {
 "tags": [
@@ -13534,9 +17511,30 @@
 [
 "piercing",
 "it can't be regenerated"
+],
+[
+"flanking",
+"Flanking"
+],
+[
+"stat_loss",
+"Flanking"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"flanking",
+"Flanking"
+],
+[
+"stat_loss",
+"Flanking"
+]
+],
+"keywords": [
+766104
+]
 },
 "807524": {
 "tags": [
@@ -13604,7 +17602,10 @@
 "roll one or more dice"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "809015": {
 "tags": [
@@ -13619,9 +17620,23 @@
 [
 "stat_gain",
 "enters with a +1/+1 counter"
+],
+[
+"kicker",
+"Kicker"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"kicker",
+"Kicker"
+]
+],
+"keywords": [
+765942,
+765993
+]
 },
 "809033": {
 "tags": [
@@ -13669,9 +17684,22 @@
 [
 "kicker",
 "Entwine {3}{R}"
+],
+[
+"modal_choice",
+"Entwine"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"modal_choice",
+"Entwine"
+]
+],
+"keywords": [
+766041
+]
 },
 "809381": {
 "tags": [
@@ -13729,7 +17757,11 @@
 "The tokens are goaded"
 ]
 ],
-"by": "C"
+"by": "C",
+"keywords": [
+765948,
+765991
+]
 },
 "809623": {
 "tags": [
@@ -13804,7 +17836,10 @@
 "It doesn't untap during its controller's next untap step"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765947
+]
 },
 "811370": {
 "tags": [
@@ -13835,9 +17870,32 @@
 [
 "permanent_growth",
 "put a +1/+1 counter on Strax"
+],
+[
+"untap",
+"Vigilance"
+],
+[
+"damage",
+"fight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"untap",
+"Vigilance"
+],
+[
+"damage",
+"fight"
+]
+],
+"keywords": [
+765927,
+765943,
+765957
+]
 },
 "811403": {
 "tags": [
@@ -13856,9 +17914,47 @@
 [
 "heal",
 "You gain life rather than lose life from radiation"
+],
+[
+"on_damaged",
+"Enrage"
+],
+[
+"counter_spell",
+"Ward"
+],
+[
+"cost_increase",
+"Ward"
+],
+[
+"protection",
+"Ward"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_damaged",
+"Enrage"
+],
+[
+"counter_spell",
+"Ward"
+],
+[
+"cost_increase",
+"Ward"
+],
+[
+"protection",
+"Ward"
+]
+],
+"keywords": [
+765939,
+766027
+]
 },
 "811767": {
 "tags": [
@@ -13881,9 +17977,23 @@
 [
 "no_damage_output",
 "Prevent all damage that would be dealt by enchanted creature"
+],
+[
+"merge_attach",
+"Enchant"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"merge_attach",
+"Enchant"
+]
+],
+"keywords": [
+765947,
+765959
+]
 },
 "811860": {
 "tags": [
@@ -13926,9 +18036,22 @@
 [
 "damage",
 "fights another target creature named Fenric"
+],
+[
+"damage",
+"fight"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"damage",
+"fight"
+]
+],
+"keywords": [
+765957
+]
 },
 "811883": {
 "tags": [
@@ -13955,9 +18078,23 @@
 [
 "type_grant",
 "it becomes an Island in addition to its other types"
+],
+[
+"evasion",
+"landwalk"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"evasion",
+"landwalk"
+]
+],
+"keywords": [
+765966,
+765967
+]
 },
 "812150": {
 "tags": [
@@ -14051,9 +18188,47 @@
 [
 "discard",
 "Discard this card"
+],
+[
+"discard",
+"cycling"
+],
+[
+"draw",
+"cycling"
+],
+[
+"activated",
+"cycling"
+],
+[
+"cheat_death",
+"Regenerate"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"credited": [
+[
+"discard",
+"cycling"
+],
+[
+"draw",
+"cycling"
+],
+[
+"activated",
+"cycling"
+],
+[
+"cheat_death",
+"Regenerate"
+]
+],
+"keywords": [
+765950,
+765956
+]
 },
 "812421": {
 "tags": [
@@ -14068,9 +18243,30 @@
 [
 "scope_multi",
 "two permanents"
+],
+[
+"on_attack",
+"Annihilator"
+],
+[
+"destroy",
+"Annihilator"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"on_attack",
+"Annihilator"
+],
+[
+"destroy",
+"Annihilator"
+]
+],
+"keywords": [
+766130
+]
 },
 "812477": {
 "tags": [
@@ -14089,9 +18285,22 @@
 [
 "stat_gain",
 "escapes with a +1/+1 counter"
+],
+[
+"cast_from_zone",
+"Escape"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"cast_from_zone",
+"Escape"
+]
+],
+"keywords": [
+765997
+]
 },
 "812633": {
 "tags": [
@@ -14159,9 +18368,22 @@
 [
 "deck_position",
 "the top card of your library"
+],
+[
+"summon",
+"cloak"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"summon",
+"cloak"
+]
+],
+"keywords": [
+766190
+]
 },
 "813302": {
 "tags": [
@@ -14246,9 +18468,22 @@
 [
 "condition_count",
 "for each opponent who was dealt damage this turn"
+],
+[
+"resource_gain",
+"Treasure"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"resource_gain",
+"Treasure"
+]
+],
+"keywords": [
+765933
+]
 },
 "813466": {
 "tags": [
@@ -14275,9 +18510,39 @@
 [
 "temporary_buff",
 "gains first strike until end of turn"
+],
+[
+"first_strike",
+"first strike"
+],
+[
+"flanking",
+"Flanking"
+],
+[
+"stat_loss",
+"Flanking"
 ]
 ],
-"by": "C"
+"by": "C",
+"credited": [
+[
+"first_strike",
+"first strike"
+],
+[
+"flanking",
+"Flanking"
+],
+[
+"stat_loss",
+"Flanking"
+]
+],
+"keywords": [
+765958,
+766104
+]
 },
 "815737": {
 "tags": [
@@ -14299,7 +18564,10 @@
 "Menace"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765948
+]
 },
 "815987": {
 "tags": [
@@ -14308,7 +18576,10 @@
 "Flying"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765931
+]
 },
 "816019": {
 "tags": [
@@ -14317,7 +18588,10 @@
 "Trample"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765927
+]
 },
 "816052": {
 "tags": [
@@ -14359,7 +18633,10 @@
 "You gain 3 life"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"keywords": [
+765975
+]
 },
 "816256": {
 "tags": [
