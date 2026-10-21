@@ -1,8 +1,6 @@
 #!/bin/sh
-# Incremental build. The raw corpus of the first build is gone and not needed: three-bases-library.sqlite is the base for all work.
-# One-time loads (Marvel Snap, Underworlds warscrolls, Runeterra, Hearthstone and Battlegrounds created cards, the Oct 2026 loads)
-# are already in the database; their scripts and data files are removed. One-time fixes of 12 Oct 2026 are in tools/fixes/ (f01-f12);
-# the idempotent ones (f03, f05, f07) are also build steps.
+# The library build: one chain of steps from the frozen base tagging (make_base.py), the card data and the record files.
+# Loads add cards first (load_cards.py). fixes/ holds the three idempotent fix steps (f03, f05, f07).
 # Usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]
 #   One chain (21 Oct 2026): the first step removes every derived tag and pair, so the output depends only on the card data,
 #   the record files and the tools, never on an earlier build. With loads, the new cards are added first, then every step runs
