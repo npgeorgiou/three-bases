@@ -13,10 +13,16 @@
   Stormbound all 202; Monster Train all 362). Each game block has sourced rules and terms (`# term:` lines in `tools/mechanics/<game>.txt`),
   except Monster Train (its 66 keyword entries already cover it). Stormbound's is thin: no glossary page could be reached.
 
+- **New keys for the five newest games** (one-request reading, 21 Oct): Lorcana 500, Stormbound 202, SWU 500, Legends 497 (3
+  cards skipped), Monster Train 362 (its 66 keywords re-read once their definitions were in the mechanics file; 21 have no
+  definition and got none). About 715k subagent tokens in all, 106k-144k per game, most of it each subagent's start-up and the
+  game block. Scores of the stored library, wrong / missed per 100: Lorcana 125.2 / 89.6, Stormbound 75.7 / 81.7, SWU 155.6 / 95.2,
+  Legends 116.9 / 64.8, Monster Train 82.0 / 69.9 (the old 40-50 entry keys gave 164 / 78, 105 / 70, 177.5 / 70, 110 / 40,
+  102.5 / 42.5: the new keys tag more, so missed rose).
+
 ## Next steps, in order
-1. Read the five requests (one game first, check its answer by hand), then `key.py answer <game> --force` and `key.py credit`.
-   Their current `key.json` (40-50 entries, read earlier) is replaced by the new answers.
-2. Score the five games on the new keys: `key.py score <db> lorcana stormbound swu tesl monster_train`.
+1. Use the new keys to fix the five games' patterns (missed is high everywhere).
+2. Mechanics files for the 16 games without one (todo.md item 10).
 3. Retire `final_revert.py` (measure first: a build without it, compared on key, regression and real-world).
 4. One vocabulary: move the pattern files and early steps to the tree's ids, so `concept_tree.py` no longer moves tags each build.
 5. Faeria re-measure, then the mechanics check of the remaining 16 older games (README suggestion 1), one game per pass.

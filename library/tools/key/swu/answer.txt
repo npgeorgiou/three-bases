@@ -1,0 +1,500 @@
+819488|steal:does:Take control of a non-leader unit;temporary_effect:does:At the start of the regroup phase, its owner takes control of it
+820505|excess_damage:does:Overwhelm;on_play:does:When Played;untap:does:ready this unit;tribal:benefits:Sith leader unit
+821175|death_trigger:does:When Defeated;draw:does:Draw a card
+821069|activated:does:Action [2 resources, Exhaust];summon:does:create a Mandalorian token;aura:does:Other friendly Mandalorian units get +1/+0;tribal:benefits:friendly Mandalorian units;on_attack:does:On Attack;condition_count:benefits:10 or more
+820970|on_attack:does:On Attack;recycle:does:put a Aggression card from your discard pile on the bottom of your deck;graveyard:does:from your discard pile;direct_damage:does:deal 1 damage to each enemy base
+819332|shield:does:Shielded;on_play:does:When Played;tribal:benefits:another [Vigilance] unit;heal:does:heal 4 damage from your base
+819768|cost_reduction:does:Ignore the aspect penalty on Clone units you play;tribal:benefits:Clone units;death_trigger:grants:When Defeated;heal:grants:Heal 2 damage from your base;condition_count:benefits:4 or more resources
+819449|shield:does:Shielded;on_attack:does:On Attack;information:does:An opponent reveals their hand;hand_disruption:does:discards a card with that name
+820329|shield:grants:give a Shield token;stat_gain:grants:2 Experience tokens
+820963|temporary_buff:grants:+1/+1 for this phase;variety_payoff:benefits:each different aspect among units you control
+820224|temporary_buff:does:Raid 1;merge_attach:does:Piloting;temporary_buff:grants:Attached unit gains Raid 1
+820276|activated:does:Action [Exhaust, use the Force;stat_loss:does:Give a unit –1/–1;temporary_effect:does:for this phase;on_attack:does:On Attack
+820704|on_play:does:When Played;aoe_damage:does:Deal 1 damage to each of up to 4 other ground units;friendly_fire:does:deal 2 damage to your base
+820065|merge_attach:does:Piloting;on_attack:grants:On Attack;mill:grants:Discard a card from the defending player's deck;draw:grants:draw a card;cost_condition:benefits:costs 3 or less
+821038|disruption:does:Name a card;play_restriction:does:can't be played this phase
+819668|excess_damage:does:Overwhelm;on_play:does:When Played;aoe_damage:does:Deal 2 damage to each other ground unit;friendly_fire:does:each other ground unit
+819398|on_play:does:When Played;death_trigger:does:When Defeated;direct_damage:does:2 damage to an enemy base;damage:does:2 damage to an enemy unit
+820314|heal:does:Restore 2;on_attack:does:Restore 2;on_play:does:When Played;destroy:does:defeat each non-Sith unit with 3 or less remaining HP;stat_condition:benefits:3 or less remaining HP
+819250|
+821287|merge_attach:does:Attach to a ground unit;activated:grants:Action;selection:grants:Search the top 3 cards of your deck;self_mill:grants:discard it;attack_now:grants:you may attack with this unit;copy:grants:gains the discarded unit's abilities
+821150|summon:does:Create a Mandalorian token;taunt:grants:Sentinel;temporary_effect:does:for this phase
+820091|shield:does:prevent that damage;temporary_effect:does:this phase
+820187|damage:does:deal 2 damage to a different enemy unit;condition_count:benefits:For each of its;attack_now:does:Then, attack with the chosen unit
+820603|variable_stats:does:Grit;condition_life:benefits:Grit;on_play:does:When Played;heal:does:heal 6 damage from your base;donate:does:the enemy unit captures the friendly unit
+820966|steal:does:Exchange control of those units;donate:does:Exchange control of those units;resource_gain:does:creates Credit tokens;cost_condition:benefits:lower-cost unit
+820979|on_attack:does:On Attack;damage:does:Deal 2 damage to an enemy ground unit;direct_damage:does:2 damage to a base
+819196|variable_stats:does:This unit gets +1/+0 for each damage on it;condition_life:benefits:for each damage on it
+820806|cost_reduction:does:ignore the aspect penalties on Heroism units you play;condition_count:benefits:2 or more units;tribal:benefits:Heroism units;heal:does:Restore 1;on_attack:does:Restore 1
+820216|attack_now:does:Ambush;merge_attach:does:Piloting;attack_now:grants:You may attack with attached unit;first_strike:grants:it deals its combat damage before the defender
+819799|death_trigger:does:When Defeated;summon:does:Create a Battle Droid token
+820866|on_play:does:When Played;stat_gain:grants:Experience token;shield:grants:Shield token;scope_multi:does:each of up to 2 units;tribal:benefits:If you control a Vigilance or Aggression unit
+821068|activated:does:Action [Exhaust];temporary_buff:grants:+2/+0 for this phase;stat_condition:benefits:less power than a friendly unit;attack_now:does:Support;on_attack:does:On Attack;condition_count:benefits:6 or more resources
+819708|on_attack:does:On Attack;resource_gain:does:ready a resource
+820554|activated:does:Action [Exhaust];cost_reduction:does:It costs 1 resource less;piercing:does:Saboteur;haste:grants:enter play ready
+819415|damage:does:deals damage to an enemy unit;condition_life:benefits:amount of damage on the friendly unit
+821308|on_play:does:When Played;buff:does:Advantage token
+819914|temporary_buff:grants:+2/+0 for this phase;tribal:benefits:share the same Trait;scope_multi:does:up to 3 units
+819254|
+819237|
+819244|
+820697|on_attack:does:On Attack;friendly_fire:does:deal 1 damage to another friendly unit;direct_damage:does:deal 2 damage to the defending player's base
+820442|merge_attach:does:Attach to a non-Vehicle unit;on_play:does:When Played;damage:does:deal 1 damage to a ground unit;repeat_trigger:does:Then, deal 1 damage to the same unit
+819210|
+821259|attack_now:does:Support;first_strike:does:deals combat damage before the defender
+820068|on_play:does:When Played;friendly_fire:cost:deal 2 damage to this unit;draw:does:draw a card
+820785|on_play:does:When Played;removal:does:captures an enemy non-leader unit;cost_condition:benefits:costs 2 or less
+819683|merge_attach:does:Attach to a non-VEHICLE unit;cast_from_zone:does:Smuggle;attack_now:does:Attack with attached unit
+820163|on_attack:does:On Attack;direct_damage:does:Deal 3 indirect damage to the defending player;distribute:does:indirect damage
+820876|attack_now:does:Ambush;on_attack:does:On Attack;damage:does:deal 3 damage to a damaged ground unit;condition_life:benefits:damaged ground unit
+819251|
+820410|excess_damage:does:Overwhelm;on_play:does:When Played;death_trigger:does:When Defeated;friendly_fire:does:deal 9 damage to your base
+819694|shield:does:Shielded;enemy_benefit:does:Ready up to 12 resources
+821363|draw:does:Draw 2 cards;discard:does:discard a card from your hand
+820199|on_attack:does:On Attack;draw:does:you may draw a card;combo_sequence:benefits:If you played a Bounty Hunter or Pilot card this phase;tribal:benefits:Bounty Hunter or Pilot card
+820330|turn_start:does:When the regroup phase starts;permanent_growth:grants:Give an Experience token to each other friendly non-Vehicle unit;scope_multi:does:each other friendly non-Vehicle unit
+820468|on_attack:does:On Attack;repeat_trigger:does:use that ability again
+819718|on_play:does:When Played;bounce_enemy:does:return a non-unique upgrade to its owner's hand
+819976|sacrifice:cost:Exploit 2;cost_reduction:does:Exploit 2;on_play:does:When Played;suppress:does:Exhaust an enemy ground unit
+819713|attack_now:does:it gains Ambush;cast_from_zone:does:Smuggle
+820764|information:does:look at an opponent's hand;hand_disruption:does:discard a unit from it
+819688|attack_now:does:Attack with a damaged unit;condition_life:benefits:damaged unit;temporary_buff:grants:+2/+0 for this attack
+821355|activated:does:Action [Exhaust];heal:does:Heal 2 damage from a Villainy unit;tribal:benefits:Villainy unit
+820247|direct_damage:does:Deal 5 indirect damage to a player;distribute:does:indirect damage
+819853|sacrifice:cost:Exploit 3;cost_reduction:does:Exploit 3
+819236|
+820151|stat_condition:benefits:4 or more power;excess_damage:does:Overwhelm;temporary_buff:does:Raid 1
+821154|attack_now:does:Support;heal:does:Restore 1;on_attack:does:Restore 1
+820475|on_attack:does:On Attack;mill:does:discard the top card of the defending player's deck;deck_position:does:top card of the defending player's deck;temporary_buff:does:+4/+0 for this attack
+820679|aoe_damage:does:deal 2 damage to each enemy space unit;combo_sequence:benefits:If you've dealt damage to an enemy base this phase
+819410|on_kill:does:If the defender was defeated;damage:does:deal 4 damage to a ground unit
+819614|on_play:does:When Played;on_attack:does:On Attack;stat_gain:grants:give an Experience token to it;taunt:grants:it gains Sentinel for this phase;temporary_effect:does:for this phase
+820649|variable_stats:does:+1/+0 for each other exhausted friendly unit;condition_count:benefits:for each other exhausted friendly unit
+820872|on_play:does:When Played;suppress:does:Exhaust an enemy unit;hand_disruption:does:its controller discards a card from their hand;cost_condition:benefits:costs 3 or less
+821208|merge_attach:does:attached unit;mark_target:does:it takes twice as much damage instead;silence:does:the attacker loses Overwhelm
+819867|on_ally_play:does:When you play another unit;tutor:does:search the top 4 cards of your deck for a unit
+819455|on_play:does:When Played;stat_gain:does:Experience token;count_payoff:benefits:For each other card you played this phase
+820914|taunt:does:Sentinel;shield:does:Shielded
+819948|revive:does:Play a unit that was defeated this phase from your discard pile;cost_reduction:does:It costs 2 resources less;haste:does:enters play ready;self_destruct:does:At the start of the regroup phase, defeat it
+821319|cost_reduction:does:costs 1 resource less;tribal:benefits:Mandalorian unit
+820845|on_attack:does:On Attack;symmetric_effect:does:they each draw a card;draw:does:they each draw a card
+820343|on_play:does:When Played;stat_loss:does:give a unit –3/–3;temporary_effect:does:for this phase;graveyard:benefits:Heroism card in your discard pile
+821297|stat_gain:does:this unit gets +2/+0
+820360|attack_now:does:Ambush;on_ally_play:does:When you play another unit;temporary_buff:grants:+2/+2 for this phase
+821137|taunt:does:Sentinel
+820745|selection:does:Search the top 3 cards of your deck for a card;summon:does:create 2 Spy tokens
+819623|taunt:does:Sentinel;tribal:benefits:another Command unit
+819882|sacrifice:cost:Exploit 2;cost_reduction:does:Exploit 2;attack_now:does:Ambush
+819839|protection:does:Choose a friendly unit;stat_loss:does:Each enemy unit gets –4/–0 while attacking that unit;temporary_effect:does:this phase
+820547|activated:does:Action [1 resource, Exhaust];untap:does:Ready a token unit;variable_stats:does:+1/+0 for each ready friendly token unit;on_attack:does:On Attack;summon:does:Create a Spy token
+820338|on_attack:does:On Attack;stat_gain:does:You give an Experience token to a friendly unit;draw:does:You draw a card
+821173|merge_attach:does:Attach to a non-Vehicle unit;heal:grants:Restore 2;tribal:benefits:Force unit
+820354|stat_gain:does:this unit gets +2/+0;tribal:benefits:another Villainy unit
+820099|on_play:does:When Played;kicker:cost:You may pay 3 resources;merge_attach:does:attach this unit as an upgrade;steal:does:Take control of that unit;leave_trigger:does:When this upgrade detaches from a unit
+820550|activated:does:Action [1 resource, Exhaust];summon:does:create a Spy token;condition_count:benefits:4 or more exhausted units;on_attack:does:On Attack;damage:does:deal 2 damage to an exhausted unit
+821190|on_play:does:When Played;on_attack:does:On Attack;information:does:reveal a unit from your hand;damage:does:deal 3 damage to a unit;cost_condition:benefits:same cost as the revealed unit
+819262|
+820293|activated:does:Action [Exhaust, use the Force;cost_reduction:does:ignoring its aspect penalties;tribal:benefits:Villainy non-unit card
+819739|removal:does:captures an enemy non-leader unit;cost_condition:benefits:costs the same as or less than it;shield:does:give a Shield token to it;tribal:benefits:Bounty Hunter
+820917|taunt:does:Sentinel;on_block:does:On Defense;resource_gain:does:Create a Credit token
+821059|shield:does:Shielded
+820122|temporary_buff:grants:+1/+1 for this phase;variety_payoff:benefits:each friendly unit with a different name;scope_multi:does:each unit you control
+820146|on_attack:does:On Attack;death_trigger:does:When Defeated;ping:does:Deal 1 indirect damage;distribute:does:indirect damage
+820734|on_play:does:When Played;bounce_enemy:does:return an upgrade that costs 3 or less to its owner's hand;cost_condition:benefits:costs 3 or less
+819588|merge_attach:does:Attach to a non-Vehicle unit;on_attack:grants:On Attack;suppress:grants:Exhaust the defender
+820029|activated:does:Action [Exhaust];temporary_buff:grants:+1/+0 for this phase;merge_attach:does:Deploy this leader as an upgrade;type_grant:does:Attached unit is a leader unit;modal_choice:does:choose one
+820457|stat_multiply:does:Each friendly unit's Raid is doubled;aura:does:Each friendly unit's Raid is doubled
+820828|on_attack:does:On Attack;temporary_buff:grants:+1/+1 for this phase;stat_loss:does:You may give a unit
+821001|ping:does:Deal 1 damage to a unit;on_discard:does:When this event is discarded from your hand or deck
+820758|temporary_buff:does:Raid 2;stat_loss:does:Each exhausted enemy unit gets;aura:does:Each exhausted enemy unit gets
+820903|on_play:does:When Played;disruption:does:defeat an enemy Credit token
+820055|heal:does:Restore 2;on_attack:does:Restore 2;on_play:does:When Played;merge_attach:does:attach a friendly Pilot unit or upgrade to this unit
+819381|attack_now:does:Ambush;excess_damage:does:Overwhelm
+820201|cost_increase:does:costs 1 resource more
+820731|on_attack:does:On Attack;discard:does:discard a card from your hand;draw:does:draw a card
+820362|attack_now:does:Ambush;aura:does:Other friendly Vehicle units get +6/+6;tribal:benefits:Vehicle units
+819428|excess_damage:does:Overwhelm
+821010|deck_position:does:reveal the top card of a deck;free_play:does:play the revealed card for free;resource_gain:does:creates Credit tokens
+819563|cost_reduction:does:ignore her Heroism aspect penalty;on_attack:does:On Attack;heal:does:heal 2 damage from a unit;shield:does:give a Shield token to it
+820394|heal:does:Restore 4;on_attack:does:Restore 4;on_play:does:When Played;draw:does:Draw a card for each friendly unit;stat_condition:benefits:7 or more remaining HP
+821159|aura:does:Other friendly units with 2 or more different keywords get +2/+2;condition_count:benefits:2 or more different keywords
+821245|untap:does:Ready a unit;condition_life:benefits:damaged this phase
+820036|activated:does:Action [Exhaust];silence:does:loses all abilities for this round;extra_turn:does:Take an extra action after this one;on_attack:does:On Attack;merge_attach:does:Deploy this leader as an upgrade;modal_choice:does:choose one
+820317|shield:grants:give 2 Shield tokens;stat_gain:grants:2 Experience tokens;sacrifice:does:Defeat all other friendly units;tribal:benefits:Sith units
+820890|on_play:does:When Played;return_to_hand:does:return a non-leader unit that costs 3 or less to its owner's hand;free_play:does:play it for free;shield:grants:It gains Shielded for this phase
+819252|
+820269|deckbuilding_effect:does:A deck can have up to 15 copies of this card;variable_stats:does:+1/+0 for each other friendly Swarming Vulture Droid;board_presence:benefits:each other friendly Swarming Vulture Droid
+819281|activated:does:Action [exhaust];resource_gain:does:Put a card from your hand into play as a resource;delayed:does:At the start of the next action phase;on_attack:does:On Attack
+819892|death_trigger:does:When Defeated;direct_damage:does:Deal 2 damage to a base
+820829|shield:does:Shielded;excess_damage:does:Overwhelm;on_attack:does:On Attack;sacrifice:does:Defeat any number of friendly Credit tokens;stat_gain:does:Experience token
+821178|activated:does:Action [1 resource, Exhaust];summon:does:create a Mandalorian token
+820619|on_play:does:When Played;stat_gain:grants:Experience token;tribal:benefits:Official units;cast_from_zone:does:Plot
+820567|aura:does:Each friendly ground unit with Sentinel gets +0/+2
+820528|attack_now:does:Ambush
+820100|merge_attach:does:Piloting;on_play:does:When played as an upgrade;summon:does:Create a TIE Fighter token
+820690|temporary_buff:grants:Raid 2;reveal_order:benefits:While you have the initiative;on_play:does:When Played;aoe_damage:does:Deal 2 damage to each of up to 3 ground units
+819582|on_play:does:When Played;cost_reduction:does:It costs 2 resources less;on_ally_play:does:When you play an upgrade on this unit;stat_loss:does:Give an enemy unit;temporary_effect:does:for this phase
+819576|on_kill:does:If the defender was defeated;heal:does:heal up to 2 damage from a unit
+820346|shield:does:Shielded;immunity:grants:can't be exhausted or returned to hand by enemy card abilities;type_grant:grants:Friendly leaders gain the Mandalorian trait
+819704|enemy_benefit:does:Draw a card
+819217|
+820989|on_attack:does:On Attack;self_mill:does:Discard 3 cards from your deck;card_quality:does:return an Underworld card discarded this way to your hand;tribal:benefits:Underworld card
+819645|activated:does:Action;cast_from_zone:does:play it from your discard pile
+820438|on_play:does:When Played;aoe_damage:does:deal 1 damage to each of up to 3 units;reveal_order:benefits:If you have the initiative
+820456|stealth:does:Hidden;on_play:does:When Played;bounce_enemy:does:return a non-leader unit that costs 4 or less to its owner's hand;free_play:does:its owner may play it for free
+819716|bounce_enemy:does:Return a non-leader unit that costs 6 or less;free_play:does:its owner may play it for free
+820123|taunt:does:Sentinel;tribal:benefits:Vehicle unit
+820374|on_play:does:When Played;heal:does:heal 5 damage from a base;damage:does:deal damage to a unit equal to twice the number of units you control;condition_count:benefits:twice the number of units you control
+819972|board_presence:benefits:Coordinate;on_play:does:When Played;removal:does:captures an enemy non-leader unit;cost_condition:benefits:costs 3 or less
+821369|sacrifice:does:Defeat a friendly unit;untap:does:ready a friendly unit with 5 or less power
+820526|on_play:does:When Played;kicker:cost:Pay up to 6 resources;stat_gain:does:Experience token
+819994|cost_reduction:does:costs 2 resources less;merge_attach:does:Attach to a non-Vehicle unit;excess_damage:grants:Attached unit gains Overwhelm
+820246|bounce_enemy:does:Return up to 2 non-leader units;cost_condition:benefits:combined cost 3 or less
+819805|sacrifice:cost:Exploit 2;cost_reduction:does:Exploit 2;on_attack:does:On Attack;stat_loss:does:Give an enemy space unit
+820722|on_attack:does:On Attack;untap:does:ready a non-unit leader
+821183|stealth:does:Hidden;stat_gain:does:this unit gets +2/+0;reveal_order:benefits:While you have the initiative
+820606|merge_attach:does:attached unit;taunt:grants:it gains Sentinel
+820883|attack_now:does:Ambush;variable_stats:does:Grit;condition_life:benefits:Grit
+819203|on_attack:does:When this unit attacks;evasion:does:ignore Sentinel;piercing:does:defeat the defender's Shields
+820073|shield:does:Shielded;on_attack:does:On Attack;steal:does:take control of a non-Pilot upgrade
+821024|cost_reduction:does:costs 1 resource less;tribal:benefits:Gambit card;on_play:does:When Played;tutor:does:Search the top 8 cards of your deck for a Gambit card
+821115|on_attack:does:On Attack;stat_loss:does:give an upgraded unit;temporary_effect:does:for this phase
+820908|merge_attach:does:Attach to a non-Vehicle unit;type_grant:grants:Attached unit gains the Underworld trait;shield:does:give a Shield token to a friendly unit
+820371|activated:does:Action [use the Force];movement:does:Move this unit to the ground arena;temporary_buff:grants:+2/+2 for this phase;tribal:benefits:friendly Heroism unit
+821091|on_damaged:does:When a friendly unit is dealt damage and survives;ping:does:Deal 1 damage to any number of bases;direct_damage:does:Deal 1 damage to any number of bases
+819475|taunt:does:Sentinel;tribal:benefits:another [Cunning] unit
+820387|on_play:does:When Played;excess_damage:grants:give another friendly unit Overwhelm for this phase
+821008|on_play:does:When Played;damage:does:deal 2 damage to an exhausted ground unit
+820486|merge_attach:does:Attach to a non-Vehicle unit;piercing:grants:Attached unit gains Saboteur;evasion:grants:ignore Sentinel
+819658|cast_from_zone:does:Smuggle;untap:does:Ready this unit
+820171|on_attack:does:On Attack;untap:does:Ready this unit
+819315|heal:does:Restore 3;on_attack:does:Restore 3;on_play:does:When Played;stat_loss:does:Give an enemy unit;death_count:benefits:If a friendly unit was defeated this phase
+820295|on_attack:does:When a friendly Force unit attacks;tribal:benefits:Force unit;resource_gain:does:create your Force token
+820024|activated:does:Action [Exhaust];summon:does:create a TIE Fighter token;type_grant:does:Attached unit is a leader unit;merge_attach:does:Deploy this leader as an upgrade;modal_choice:does:choose one
+820508|aura:does:each friendly unit gets +2/+0
+820471|attack_now:does:Ambush;death_trigger:does:When Defeated;bounce_enemy:does:Its owner puts it on the top or bottom of their deck
+819646|variable_stats:does:Grit;excess_damage:does:Overwhelm
+820352|modal_choice:does:Choose one;destroy:does:Defeat a non-leader unit;stat_condition:benefits:3 or less remaining HP
+820142|sacrifice:does:Defeat a friendly space unit;damage:does:deal damage equal to its power to an enemy space unit;direct_damage:does:indirect damage
+820308|on_play:does:When Played;suppress:does:exhaust a Force unit;on_attack:does:On Attack
+821099|silence:does:All units lose Sentinel;scope_global:does:All units
+820003|taunt:does:Sentinel
+821235|stealth:does:Hidden;on_play:does:When Played;buff:does:Advantage token;condition_count:benefits:For each enemy unit
+819977|merge_attach:does:Attached unit gains;death_trigger:grants:When Defeated;summon:grants:Create a Battle Droid token
+819195|sacrifice:cost:defeat up to 2 units you control;cost_reduction:does:costs 2 resources less for each unit defeated this way
+820435|on_attack:does:On Attack;direct_damage:does:deal 2 damage to an enemy base;stat_condition:benefits:6 or more power
+820440|aura:does:Friendly Droid units gain Raid 2;temporary_buff:grants:Raid 2;tribal:benefits:Droid units
+820636|on_play:does:When Played;summon:does:Create 2 Spy tokens;sacrifice:does:defeat another friendly unit that shares a trait;protection:does:prevent that damage
+821031|on_play:does:When Played;on_attack:does:On Attack;discard:cost:discard a card from your hand;resource_gain:does:create a Credit token
+820613|board_wipe:does:Defeat all space units;scope_global:does:Defeat all space units
+819945|sacrifice:cost:Exploit 3;cost_reduction:does:Exploit 3;on_attack:does:On Attack;resource_gain:does:ready a friendly resource;death_count:benefits:For each friendly unit that was defeated this phase
+820244|attack_now:does:Attack with a Vehicle unit;temporary_buff:grants:+2/+0 for this attack;tribal:benefits:Vehicle unit
+820583|on_play:does:When Played;on_attack:does:When this unit completes an attack;taunt:grants:Sentinel for this phase;temporary_effect:does:for this phase
+819249|
+821073|reveal_order:benefits:When you take the initiative;kicker:cost:You may pay 1 resource;draw:does:draw a card;attack_now:does:Support;on_attack:does:On Attack
+819711|on_play:does:When Played;information:does:Look at an opponent's hand;cost_increase:does:costs 3 resources more for your opponents to play
+820664|temporary_buff:grants:+2/+2 for this phase
+819596|taunt:does:Sentinel;on_damaged:does:When combat damage is dealt to this unit;permanent_growth:does:Give an Experience token to this unit
+820461|stealth:does:Hidden;shield:does:Shielded
+820540|activated:does:Action [1 resource, Exhaust];information:does:reveal a card from your hand;stat_gain:grants:Experience token;on_attack:does:On Attack
+819604|tutor:does:Search the top 5 cards of your deck for up to 3 units;card_advantage:does:draw them
+819393|activated:does:Action [exhaust];haste:grants:It enters play ready;tribal:benefits:Imperial unit;enemy_benefit:does:Each opponent may ready a unit
+821061|merge_attach:does:attached unit;self_destruct:does:Defeat this upgrade
+820462|stealth:does:Hidden;on_play:does:When Played;aura:does:the chosen unit gets +1/+0;piercing:grants:gains Saboteur
+821058|activated:does:Action [Exhaust];cast_from_zone:does:Play an upgrade from your resources;resource_gain:does:resource the top card of your deck
+821106|on_ally_play:does:When you play an upgrade on this unit;summon:does:create a Mandalorian token
+821359|on_play:does:When Played;tribal:benefits:Vigilance unit;direct_damage:does:deal 2 damage to an enemy base;heal:does:heal 2 damage from your base
+819258|
+820754|on_attack:does:On Attack;deck_position:does:Reveal the top 2 cards of a deck;suppress:does:exhaust a unit;tribal:benefits:shares a Trait
+819347|death_trigger:does:When Defeated;resource_gain:does:put this unit into play as a resource
+819374|sacrifice:cost:defeat this unit;attack_now:does:Attack with a unit, even if it's exhausted;targeting_rules:does:It can't attack bases for this attack
+819226|
+820232|on_play:does:When Played;on_attack:does:On Attack;friendly_fire:does:Deal 1 damage to a friendly unit;resource_gain:does:ready a resource
+819221|
+820945|immunity:does:Opponents can't take control of this unit;protection:does:This unit can't be defeated by enemy card abilities
+820948|on_attack:does:On Attack;stat_gain:grants:Experience token;tribal:benefits:shares a Trait with a friendly leader
+819831|board_presence:benefits:Coordinate;reactions:does:When an opponent plays their second card each phase;draw:does:draw 2 cards
+819755|heal:does:Restore 2;on_damaged:does:is dealt combat damage and isn't defeated;counterattack:grants:That unit deals that much damage to an enemy ground unit;tribal:benefits:Wookiee unit
+819804|sacrifice:cost:Exploit 2;cost_reduction:does:Exploit 2;taunt:does:Sentinel
+819431|hand_disruption:does:That player discards a card from their hand;damage:does:deal damage to a unit equal to the cost of the discarded card;tribal:benefits:FORCE unit
+821117|death_trigger:does:When Defeated;summon:does:Create a Mandalorian token
+820639|merge_attach:does:Attach to a;aura:grants:each other friendly unit gains Overwhelm, Raid 1, and Restore 1;excess_damage:grants:Overwhelm;heal:grants:Restore 1
+819612|on_play:does:When Played;attack_now:does:You may attack with a unit;temporary_buff:grants:+2/+0 for this attack;reveal_order:benefits:If you have the initiative
+819974|sacrifice:cost:Exploit 2;cost_reduction:does:Exploit 2;on_play:does:When Played;bounce_enemy:does:return a non-leader unit that costs 3 or less
+819854|graveyard:does:units in your discard pile;recycle:does:Put them on the bottom of your deck;summon:does:create that many Battle Droid tokens
+819345|stat_gain:does:this unit gets +2/+0;condition_count:benefits:6 or more resources
+819573|stat_gain:does:it gets +1/+1;synergy_payoff:benefits:While this unit is upgraded
+819553|variable_stats:does:Grit;aura:grants:Each other friendly non-leader unit gains Grit;cast_from_zone:does:Smuggle;friendly_fire:cost:deal 4 damage to a friendly unit
+821164|temporary_buff:does:Raid 2;tribal:benefits:another Mandalorian unit
+821293|return_to_hand:does:Return a friendly non-leader unit;bounce_enemy:does:return an enemy non-leader unit
+819575|enemy_benefit:does:Deal 3 damage to a unit;death_trigger:does:When Defeated;stat_gain:grants:Give 2 Experience tokens to a friendly unit
+820716|summon:does:Create a Spy token
+819812|board_presence:benefits:Coordinate;stat_gain:does:+0/+3
+820692|attack_now:does:Attack with a unit;temporary_buff:grants:+1/+0;excess_damage:grants:Overwhelm;silence:does:the defender loses all abilities for this attack
+820846|taunt:does:Sentinel;piercing:does:Saboteur
+819863|on_play:does:When Played;summon:does:Create 2 Clone Trooper tokens
+820236|merge_attach:does:When a Pilot attaches to this unit;bounce_enemy:does:return a non-leader unit that costs 2 or less;cost_condition:benefits:costs 2 or less
+820826|activated:does:Epic Action [1 resource];card_quality:does:resource the top card of your deck
+819925|board_presence:benefits:Coordinate;temporary_buff:does:Raid 2;death_trigger:does:When Defeated;aoe_damage:does:Deal 1 damage to each enemy ground unit
+820331|cost_reduction:does:this upgrade costs 1 resource less to play;tribal:benefits:Force unit;stat_gain:grants:printed power is considered to be 5
+820280|activated:does:Action [Exhaust];cost_reduction:does:It costs 1 resource less;on_attack:does:On Attack
+819441|shield:does:Shielded;activated:does:Action [Exhaust];cost_reduction:does:It costs [1 resource] less
+819240|
+819901|sacrifice:does:Defeat a friendly unit;damage:does:deal 4 damage to a unit
+820080|death_trigger:does:When Defeated;draw:does:draw a card
+819971|on_play:does:When Played;kicker:cost:You may pay 2 resources;damage:does:deal 2 damage to a unit
+820161|stat_gain:does:it gets +1/+0;on_attack:does:On Attack;ping:does:deal 1 damage to a unit
+821054|stealth:does:Hidden
+819619|sacrifice:does:Defeat a friendly unit;draw:does:draw 2 cards
+819775|board_presence:benefits:Coordinate;activated:does:Action [1 resource, Exhaust];tutor:does:Search the top 3 cards of your deck for a Republic card;heal:does:Restore 1;on_attack:does:On Attack
+819429|variable_stats:does:Grit
+819763|heal:does:Restore 2;on_attack:does:Restore 2
+820885|return_to_hand:does:return it to its owner's hand;heal:does:heal 2 damage from your base
+820365|on_play:does:When Played;stat_gain:does:Experience token;tribal:benefits:Jedi unit
+819667|death_trigger:does:When Defeated;draw:does:draw a card;condition_count:benefits:15 or more damage on their base
+820598|taunt:does:Sentinel
+820185|merge_attach:does:Attach to a Vehicle unit;on_attack:grants:On Attack;aoe_damage:grants:Deal 1 damage to each of up to 2 units in this arena
+819234|
+819701|shield:does:Shielded;on_play:does:When Played;free_play:does:play it for free under your control;steal:does:under your control
+819228|
+820107|sacrifice:does:Defeat a friendly unit;stat_gain:grants:2 Experience tokens
+819516|recycle:does:Put them on the bottom of their owner's deck;graveyard:does:cards in a discard pile
+819264|
+820861|piercing:does:Saboteur;on_attack:does:On Attack;damage:does:deal damage equal to this unit's power to a ground unit;tribal:benefits:another Bounty Hunter unit
+819556|destroy:does:Defeat a non-leader unit that costs 3 or less;cost_condition:benefits:costs 3 or less;stat_gain:grants:Experience token
+821323|taunt:does:Sentinel
+820832|temporary_buff:does:Raid 1;on_play:does:When Played;heal:does:heal 2 damage from a unit
+820356|variable_stats:does:+1/+0 for each Trooper unit in your discard pile;graveyard:benefits:Trooper unit in your discard pile
+820766|draw:does:Draw 3 cards;deck_position:does:on the top of your deck;card_quality:does:put a card from your hand on the top of your deck
+820172|on_play:does:When Played;friendly_fire:does:deal 1 damage to this unit;lone_unit:does:no other Fighter units
+820449|activated:does:Action [Exhaust, use the Force;suppress:does:Exhaust a unit
+819691|cost_reduction:does:costs 2 resources less;untap:does:Ready a unit
+820652|taunt:does:Sentinel
+820804|on_kill:does:If the defending unit was defeated;resource_gain:does:create a Credit token;tribal:benefits:Bounty Hunter unit;temporary_buff:does:Raid 1
+820379|on_attack:does:On Attack;temporary_buff:grants:+5/+5 for this phase
+820228|merge_attach:does:Piloting;self_mill:does:Discard 2 cards from your deck;card_quality:does:Return each of those cards with an odd cost to your hand;cost_condition:benefits:odd cost
+819697|attack_now:does:Ambush;aura:grants:Each friendly unit named Zuckuss gets +1/+1
+820400|temporary_buff:grants:+2/+2 for this phase;tribal:benefits:Creature unit
+820693|draw:does:draw 3 cards;death_count:benefits:If a friendly unit was defeated while attacking this phase
+821311|death_trigger:does:When Defeated;buff:grants:Advantage tokens
+820102|merge_attach:does:Piloting;stat_gain:grants:Experience token
+820759|stealth:does:Hidden;on_attack:does:On Attack;resource_gain:does:ready a friendly resource;condition_count:benefits:For each friendly unit
+820520|on_ally_play:does:When you play another;shield:does:Shield token;stat_gain:does:Experience token
+819923|board_presence:benefits:Coordinate;on_play:does:When Played;friendly_fire:does:2 damage to a friendly unit;damage:does:2 damage to an enemy unit
+820723|on_play:does:When Played;suppress:does:exhaust a unit;cast_from_zone:does:Plot
+820654|on_play:does:When Played;death_trigger:does:When Defeated;stat_gain:grants:Give an Experience token to each other friendly unit
+821040|cast_from_zone:does:Play an Item upgrade from your discard pile;cost_reduction:does:costs 3 resources less;delayed:does:At the start of the next regroup phase;self_destruct:does:defeat it
+819321|merge_attach:does:Attached unit gains Sentinel;taunt:grants:Attached unit gains Sentinel
+820902|taunt:does:Sentinel
+819871|activated:does:Action [2 resources, Exhaust];attack_now:does:Attack with a unit;temporary_buff:grants:+2/+0 for this attack
+819466|on_play:does:When Played;bounce_enemy:does:return a non-leader unit to its owner's hand
+819673|on_discard:does:When a player discards a card from their hand;damage:does:deal 2 damage to a unit or base
+819297|on_play:does:When Played;friendly_fire:does:2 damage to a friendly ground unit;damage:does:2 damage to an enemy ground unit
+819888|summon:does:Create that many Clone Trooper tokens;enemy_benefit:does:Each opponent creates that many Battle Droid tokens
+821112|on_play:does:When Played;destroy:does:Defeat any number of non;distribute:does:a total of 6 or less remaining HP;summon:does:Create a Mandalorian token for each unit defeated this way
+819360|on_play:does:When Played;tutor:does:Search the top 5 cards of your deck for a REBEL card
+819898|on_play:does:When Played;untap:does:ready this unit;comeback:benefits:If you control fewer units
+819870|temporary_buff:does:Raid 1;death_trigger:does:When Defeated;temporary_buff:grants:+2/+2 for this phase;tribal:benefits:Trooper unit
+821238|merge_attach:does:Attach to a damaged unit;excess_damage:grants:Attached unit gains Overwhelm;condition_life:benefits:damaged unit
+819551|shield:does:Shielded;taunt:does:Sentinel
+821277|on_play:does:When Played;information:does:Look at an opponent's hand;hand_disruption:does:discard a card from it;enemy_benefit:does:they draw a card
+820494|suppress:does:Exhaust an enemy unit;taunt:grants:A friendly unit gains Sentinel for this phase
+819760|on_ally_play:does:When you play another Underworld card;ping:does:deal 1 damage to a base;tribal:benefits:Underworld card
+819479|on_play:does:When Played;attack_now:does:attack with attached unit
+819209|
+820485|shield:does:Shielded
+819269|activated:does:Action [1 resource, exhaust];shield:grants:Give a Shield token;tribal:benefits:[Heroism] unit;on_attack:does:On Attack
+820553|deck_position:does:look at the top 2 cards of the defending player's deck;mill:does:Discard 1 of those cards;temporary_buff:does:Raid 1;information:does:Look at the defending player's hand;hand_disruption:does:You may discard a card from it
+819685|merge_attach:does:Attached unit gains;enemy_benefit:grants:Draw 2 cards
+821151|destroy:does:defeat a unit with 2 or less remaining HP;summon:does:Create a Mandalorian token
+820249|merge_attach:does:Piloting
+819585|enemy_benefit:grants:Heal 4 damage from a unit or base
+820830|destroy:does:defeat a unit with less power than this unit;stat_condition:benefits:less power than this unit
+820635|attack_now:does:Ambush;cast_from_zone:does:Plot
+820363|merge_attach:does:Attach to a non-Vehicle unit;temporary_buff:grants:this unit gets +2/+0;tribal:benefits:Force unit
+819268|activated:does:Action [Exhaust];temporary_buff:grants:Give a unit +0/+2 for this phase;cheat_death:does:During the action phase, this unit isn
+820062|heal:does:Restore 1;merge_attach:does:Piloting;heal:grants:Attached unit gains Restore 1
+819647|other_death_trigger:does:When an upgraded enemy unit is defeated;untap:does:ready this unit
+819979|immunity:grants:can't be captured, defeated, or returned to its owner's hand by enemy card abilities
+819408|temporary_buff:does:Raid 1;aura:grants:Each other friendly [Heroism] unit gains Raid 1
+819659|cast_from_zone:does:Smuggle
+820515|stat_gain:does:+1/+0 if you control another Jedi unit;tribal:benefits:Jedi unit
+820757|on_play:does:When Played;hand_disruption:does:each opponent discards a random card from their hand;random_effect:does:random card
+821333|heal:does:Heal 5 damage from a unit
+820563|heal:does:Restore 1;death_trigger:does:When Defeated;stat_gain:grants:Experience token
+819632|attack_now:does:Ambush;on_kill:does:When this unit attacks and defeats a non-leader unit;steal:does:Put the defeated unit into play as a resource under your control;resource_gain:does:into play as a resource
+820323|shield:does:Shielded;on_play:does:When Played;heal:does:heal 3 damage from a base
+819419|modal_choice:does:Choose two;draw:does:Draw a card;debuff:does:Defeat up to 2 upgrades;untap:does:Ready a unit with 3 or less power;damage:does:Deal 4 damage to a unit
+820736|on_play:does:When Played;death_trigger:does:When Defeated;temporary_buff:grants:+1/+0;piercing:grants:Saboteur
+821335|death_trigger:does:When Defeated;heal:does:Heal 2 damage from your base
+819866|draw:does:draw 3 cards;condition_count:benefits:3 or more Official units;tribal:benefits:Official units
+820350|destroy:does:Defeat a non-leader unit that costs 2 or less;cost_condition:benefits:costs 2 or less
+820340|taunt:does:Sentinel;on_block:does:When this unit is attacked;stat_loss:does:the attacker gets
+819227|
+819932|attack_now:does:Attack with a non-leader unit;variable_stats:grants:It gains Grit for this attack
+820612|destroy:does:Defeat a unit that dealt damage to a base this phase
+820118|on_play:does:When Played;damage:does:deal damage to a unit equal to the number of friendly space units;condition_count:benefits:the number of friendly space units
+819833|sacrifice:cost:Exploit 2;cost_reduction:does:Exploit 2;on_attack:does:On Attack;summon:does:Create a Battle Droid token
+819229|
+819548|shield:does:Shielded;activated:does:Action [Exhaust];heal:grants:Heal 5 damage from a base
+819648|temporary_buff:does:+3/+0;excess_damage:does:gains Overwhelm;on_kill:does:When this unit attacks and defeats a unit;draw:does:Draw a card
+819938|on_attack:does:On Attack;temporary_buff:does:+2/+0 for this attack;tribal:benefits:Droid unit
+820491|attack_now:grants:It gains Ambush for this phase;damage_reduction:grants:prevent 2 of that damage;tribal:benefits:Force unit
+819490|death_trigger:does:When Defeated;untap:does:ready a [Villainy] unit
+819961|on_attack:does:On Attack;damage:does:Deal 2 damage to a random unit or base;random_effect:does:random unit or base
+820178|on_play:does:When Played;comeback:benefits:If an opponent controls more resources than you;resource_gain:does:put the top card of your deck into play as a resource
+819675|piercing:does:Saboteur;enemy_benefit:does:Heal 5 damage from your base
+821321|activated:does:Action [1 resource, Exhaust];heal:does:Heal 1 damage from a friendly unit;on_attack:does:On Attack
+821226|on_draw:does:When you draw 1 or more cards;buff:does:Advantage token
+819403|cost_reduction:does:costs [1 resource] less;damage:does:Deal 5 damage to a non-VEHICLE unit;enemy_benefit:does:That unit's controller draws a card
+820064|on_play:does:When Played;modal_choice:does:Choose Grit, Restore 1, Sentinel, or Shielded;aura:grants:each friendly Vehicle unit gains the chosen keyword
+820455|on_attack:does:On Attack;self_mill:does:discard 2 cards from your deck;resource_gain:does:ready a resource
+821179|taunt:does:Sentinel
+820787|on_play:does:When Played;taunt:grants:Give a unit Sentinel for this phase;cast_from_zone:does:Plot
+820424|merge_attach:does:Attach to a Jedi non-Vehicle unit;tribal:benefits:Jedi
+820306|death_trigger:does:When Defeated;stat_loss:does:give a unit;temporary_effect:does:for this phase
+820420|piercing:does:Saboteur;on_play:does:When Played;debuff:does:defeat any number of upgrades on a unit
+819721|shield:does:Shielded
+819336|merge_attach:does:Attached unit;targeting_rules:does:Attached unit can't attack bases
+820875|attack_now:does:Ambush;on_play:does:When Played;debuff:does:you may defeat an upgrade instead
+819274|activated:does:Action [1 resource, exhaust];ping:does:deal 1 damage to a unit;direct_damage:does:1 damage to a base;on_attack:does:On Attack;damage:does:deal 2 damage to a unit
+819377|taunt:does:Sentinel;condition_count:benefits:6 or more resources
+819485|suppress:does:Exhaust each unit in that arena;scope_multi:does:Exhaust each unit in that arena
+819581|taunt:does:Sentinel;cast_from_zone:does:Smuggle
+819570|merge_attach:does:Attach to a non-leader unit;death_trigger:grants:When Defeated;revive:grants:may play it from their discard pile for free
+821140|on_play:does:When Played;heal:does:heal 3 damage from a unit or base
+820940|on_play:does:When Played;stat_gain:grants:give an Experience token to it;tribal:benefits:Heroism unit
+819802|heal:does:Restore 1;on_attack:does:On Attack;sacrifice:does:defeat another friendly unit;draw:does:draw a card
+819947|selection:does:Look at cards from the top of your deck;death_count:benefits:number of units that were defeated this phase;draw:does:Draw 1
+820585|damage_reduction:grants:prevent 1 of that damage;cast_from_zone:does:Plot
+821042|resource_gain:does:Create a Credit token;damage:does:deal damage to a unit equal to the number of friendly Credit tokens;condition_count:benefits:the number of friendly Credit tokens
+821092|attack_now:does:Support;on_kill:does:If the defending unit was defeated;untap:does:ready this unit
+820031|activated:does:Action [1 resource, Exhaust];transform:does:Flip this leader;merge_attach:does:attach him as an upgrade
+819960|tutor:does:Search the top 10 cards of your deck for 2 Heroism non-unit cards;cast_from_zone:does:you may play the discarded cards;cost_reduction:does:cost 2 resources less
+819963|steal:does:each player takes control of the chosen unit;symmetric_effect:does:each player takes control of the chosen unit;temporary_effect:does:At the start of the regroup phase
+821071|activated:does:Action [Exhaust, defeat a friendly upgrade];sacrifice:cost:defeat a friendly upgrade;direct_damage:does:Deal 2 damage to a base;on_attack:does:On Attack
+819856|board_presence:benefits:Coordinate;stat_gain:does:+2/+2
+819722|cast_from_zone:does:Smuggle;steal:does:Take control of an enemy resource;leave_trigger:does:When this unit leaves play
+820592|taunt:does:Sentinel;variable_stats:does:Grit
+820853|on_kill:does:If the defending unit was defeated;direct_damage:does:deal 2 damage to a base
+820316|damage:does:Deal 2 damage to a unit;resource_gain:does:create your Force token
+819491|on_play:does:When Played;attack_now:does:attack with a unit;temporary_buff:grants:+2/+0 for this attack;tribal:benefits:Imperial unit
+820531|friendly_fire:cost:deal 1 damage to this unit;resource_gain:does:the Force is with you
+821118|attack_now:does:Support;on_attack:does:On Attack;friendly_fire:cost:deal 1 damage to this unit;heal:does:heal 2 damage from your base
+820964|stat_gain:grants:Experience token;damage:does:deals damage equal to its power to an enemy unit
+819921|on_play:does:When Played;direct_damage:does:deal 2 damage to an enemy base;tribal:benefits:Separatist unit
+819272|cost_reduction:does:Ignore the aspect penalty on SPECTRE cards;tribal:benefits:SPECTRE cards;on_attack:does:On Attack;stat_gain:grants:Experience token
+820128|attack_now:does:Ambush
+819352|on_kill:does:When this unit attacks and defeats a unit;excess_damage:does:deal the excess damage from this attack to an enemy ground unit
+820066|cheat_death:does:If this unit would be defeated;merge_attach:does:attach her as an upgrade
+819519|aura:does:Each friendly upgraded unit gets +1/+0;death_trigger:grants:When Defeated
+819465|on_play:does:When Played;information:does:Look at an opponent's hand;hand_disruption:does:discard a non-unit card from it
+819965|activated:does:Action [2 resources, Exhaust];suppress:does:Exhaust a unit with 4 or less power;stat_condition:benefits:4 or less power
+819442|on_play:does:When Played;suppress:does:exhaust an enemy unit that costs 4 or less;tribal:benefits:another [Cunning] unit
+821200|activated:does:Action [Exhaust];aoe_damage:does:Deal 1 damage to each of up to 3 ground units
+821251|attack_now:does:Ambush;on_play:does:When Played;ping:does:Deal 1 damage to a space unit
+820978|on_play:does:When Played;aoe_damage:does:Deal 1 damage to each of up to 2 space units
+821005|temporary_buff:does:Raid 2;haste:does:this unit enters play ready
+820509|merge_attach:does:Attach to a non-Vehicle unit;variable_stats:grants:it gains Grit;tribal:benefits:Sith
+820460|steal:does:take control of a non-leader unit;temporary_effect:does:At the start of the regroup phase
+819698|on_play:does:When Played;untap:does:ready another unit;condition_count:benefits:number of upgrades on enemy units
+820497|information:does:Look at an opponent's hand;hand_disruption:does:discard a non-unit card from it
+819371|modal_choice:does:Choose two;stat_gain:grants:Give 2 Experience tokens to a unit;damage:does:deals damage equal to its power to a non-unique enemy unit;resource_gain:does:Put this event into play as a resource;recycle:does:Return a unit from your discard pile to your hand
+819800|on_play:does:When Played;other_death_trigger:does:When a friendly unit is defeated;taunt:does:gains Sentinel for this phase
+820025|activated:does:Action [1 resource, Exhaust];temporary_buff:grants:+2/+2 for this phase;tribal:benefits:Resistance unit;on_attack:does:On Attack
+819865|damage:does:Deal damage to an enemy unit;condition_count:benefits:equal to the number of units you control in its arena
+820493|bounce_enemy:does:Return an enemy non-leader unit to its owner's hand;free_play:does:for free;cast_from_zone:does:from your hand or resources
+820930|on_play:does:When Played;resource_gain:does:create a Credit token;tribal:benefits:another Underworld unit
+821169|on_play:does:When Played;sacrifice:does:defeat this unit;tutor:does:search the top 10 cards of your deck for any number of space units;free_play:does:play each of them for free
+820243|damage:does:Deal 2 damage to a Droid or Vehicle unit;suppress:does:exhaust it;tribal:benefits:Droid or Vehicle unit
+819822|stat_loss:does:Give a unit;temporary_effect:does:for this phase;comeback:benefits:if you control fewer units
+819427|death_trigger:does:When Defeated;draw:does:draw 2 cards;reveal_order:benefits:If you have the initiative
+819289|activated:does:Epic Action;damage:does:Deal 3 damage to a damaged non-leader unit;condition_life:benefits:damaged non-leader unit
+820871|tutor:does:search the top 5 cards of your deck for an Underworld unit;cost_reduction:does:costs 4 resources less;haste:does:enters play ready;delayed:does:At the start of the regroup phase
+821188|attack_now:does:Support
+820616|excess_damage:does:Overwhelm;temporary_buff:does:+2/+2 for this phase;tribal:benefits:Official unit
+820746|variable_stats:does:+1/+0 for each captured card it's guarding;on_play:does:When Played;donate:does:The enemy unit captures the friendly unit
+821108|taunt:does:Sentinel;lone_unit:benefits:only friendly non-leader ground unit
+821121|shield:does:Shielded;bodyguard:does:If damage would be dealt to another friendly unit;protection:does:prevent that damage
+821147|merge_attach:does:Attached unit gains;upkeep:cost:You may pay 3 resources;suppress:grants:exhaust this unit
+819443|on_attack:does:On Attack;damage:does:deal 3 damage to the defender
+819273|activated:does:Action [exhaust];attack_now:does:Attack with a Rebel unit;multi_attack:does:attack with another Rebel unit;tribal:benefits:Rebel unit;temporary_buff:does:Raid 1
+819618|death_trigger:does:When Defeated;sacrifice:cost:defeat a friendly resource;resource_gain:does:put this unit into play as a resource;cast_from_zone:does:Smuggle
+819732|merge_attach:does:Attach to a non-Vehicle unit;damage_reduction:grants:prevent 2 of that damage
+820545|cost_reduction:does:Ignore the aspect penalties;tribal:benefits:Official units;aura:does:Each other friendly Official unit gets +0/+1
+821066|activated:does:Action [Exhaust];modal_choice:does:Choose one;taunt:grants:Sentinel;excess_damage:grants:Overwhelm;aura:does:Each other friendly unit gains Overwhelm and Sentinel
+819559|taunt:does:Sentinel;stat_gain:does:This unit gets +2/+0 while defending
+819444|shield:does:Shielded
+821032|taunt:does:Sentinel;on_play:does:When Played;on_attack:does:On Attack;selection:does:Look at the top 3 cards of your deck;self_mill:does:You may discard 1 of them
+821094|immunity:does:This unit can't be attacked;condition_count:benefits:2 or more exhausted units;on_attack:does:On Attack;damage:does:Deal 2 damage to a ground unit for each friendly exhausted unit
+820773|on_play:does:When Played;friendly_fire:does:Deal 2 damage to this unit
+819736|tutor:does:Search your deck for a Bounty upgrade
+819552|taunt:does:Sentinel;on_block:does:When this unit is attacked;stat_gain:grants:Experience token
+819416|deck_position:does:Reveal the top 4 cards of your deck;direct_damage:does:deal 1 damage to an enemy base;tribal:benefits:[Heroism] card;self_mill:does:You may discard any of the revealed cards
+820192|untap:does:Ready a Fighter or Transport unit;stat_condition:benefits:6 or less power
+820880|on_play:does:When Played;hand_size:benefits:fewer cards in hand than an opponent;draw:does:draw a card;comeback:benefits:If you control fewer resources than an opponent;resource_gain:does:resource the top card of your deck
+820445|untap:does:Ready a Force unit with 4 or less power;tribal:benefits:Force unit
+819862|board_presence:benefits:Coordinate;on_attack:does:On Attack;protection:does:Prevent all combat damage that would be dealt to this unit
+820877|on_play:does:When Played;enemy_benefit:does:They create a Credit token;untap:does:Ready this unit;damage:does:deal 5 damage to a unit
+819762|on_play:does:When Played;stat_gain:grants:Experience token;tribal:benefits:another Mandalorian unit
+820286|activated:does:Action [1 resource, Exhaust];damage:does:deal 2 damage to a unit;piercing:does:Saboteur;variable_stats:does:+1/+0 for each other friendly Jedi unit;tribal:benefits:Jedi unit
+819908|board_presence:benefits:Coordinate;on_attack:does:On Attack;draw:does:Draw a card
+819411|on_play:does:When Played;death_trigger:does:When Defeated;discard:does:discard your hand;draw:does:draw 3 cards
+819664|excess_damage:does:Overwhelm;on_play:does:When Played;sacrifice:cost:defeat a friendly resource;damage:does:deal 5 damage to a ground unit
+820706|temporary_buff:does:This unit gains Raid 1 for each damaged enemy unit;condition_life:benefits:damaged enemy unit;on_play:does:When Played;on_attack:does:On Attack;ping:does:deal 1 damage to a unit
+821312|stealth:does:Hidden;piercing:does:Saboteur;on_play:does:When Played;shield:grants:Give a Shield token to another friendly unit
+820854|on_attack:does:On Attack;ping:does:Deal 1 damage to an enemy ground unit;death_trigger:does:When Defeated;direct_damage:does:Deal 1 damage to a base
+819247|
+819213|
+820862|on_play:does:When Played;attack_now:does:attack with a friendly Bounty Hunter unit, even if it's exhausted;tribal:benefits:Bounty Hunter unit
+820574|merge_attach:does:Attached unit gains;death_trigger:grants:When Defeated;destroy:grants:defeat a unit with 3 or less remaining HP
+819919|board_presence:benefits:Coordinate;stat_gain:does:This unit gets +2/+0
+820226|merge_attach:does:attach this unit as an upgrade to an enemy Vehicle unit
+820094|destroy:does:Defeat a non-leader Vehicle unit;tribal:benefits:Vehicle unit
+819905|on_play:does:When Played;summon:does:Create a Clone Trooper token
+820110|merge_attach:does:Piloting;cheat_death:does:If this upgrade would be defeated;movement:does:move him to the ground arena
+819331|variable_stats:does:Grit;on_attack:does:On Attack;draw:does:you may draw a card
+819334|heal:grants:Attached unit gains Restore 2
+819913|merge_attach:does:Attach to a non-Vehicle unit;on_play:does:When Played;draw:does:draw 2 cards
+820587|on_block:grants:When this unit is attacked;stat_loss:grants:the attacker gets
+820239|stat_loss:does:Each enemy non-leader unit gets;condition_life:benefits:for each damage on it;on_play:does:When Played;direct_damage:does:Deal 5 indirect damage to a player
+819436|damage:does:Deal 4 damage to a unit
+819756|merge_attach:does:Attach to a friendly non-VEHICLE unit;on_play:does:When Played;removal:does:captures an exhausted enemy non-leader unit
+819680|variable_stats:does:Grit;on_play:does:When Played;on_attack:does:On Attack;damage:does:deal 2 damage to a unit with a Bounty
+820625|taunt:does:Sentinel;on_block:does:When this unit is attacked;self_mill:does:Discard a card from your deck;card_quality:does:you may return it to your hand
+820839|shield:does:Shielded
+820789|cost_reduction:does:It costs 1 resource less for each Heroism aspect icon;condition_count:benefits:for each Heroism aspect icon
+820268|merge_attach:does:Piloting
+820727|on_play:does:When Played;removal:does:this unit captures that unit;untap:does:ready this unit;death_trigger:does:When Defeated
+820000|attack_now:does:Ambush
+819776|activated:does:Action [Exhaust];attack_now:does:Attack with a unit;excess_damage:does:Overwhelm;aura:does:Each other friendly unit gains Overwhelm
+819609|temporary_buff:does:Raid 2;heal:does:Restore 2
+820443|damage:does:deal 3 damage to a unit
+821043|resource_gain:does:Create 3 Credit tokens
+819890|temporary_effect:does:For this phase;heal:grants:Restore 2;death_trigger:grants:When Defeated;summon:grants:Create a Clone Trooper token;tribal:benefits:Republic unit
+819644|piercing:does:Saboteur;enemy_benefit:does:Draw a card
+819747|excess_damage:does:Overwhelm;on_play:does:When Played;free_play:does:for free;cast_from_zone:does:from your hand or discard pile;cost_condition:benefits:costs 3 or less
+820012|silence:does:Each leader loses all abilities;scope_global:does:Each leader
+819370|temporary_buff:grants:+3/+3 for this phase;scope_multi:does:Give a third friendly unit
+821104|death_trigger:does:When Defeated;deck_position:does:Look at the top card of a deck;mill:does:You may discard it
+819387|tutor:does:Search the top 5 cards of your deck for a unit
+820221|mill:does:Discard 3 cards from an opponent's deck;self_mill:does:3 cards from your deck;damage:does:Deal damage to a unit;cost_condition:benefits:odd cost
+819389|tutor:does:Search the top 8 cards of your deck for up to 2 Vehicle units;card_advantage:does:draw them
+820831|excess_damage:does:Overwhelm;on_kill:does:If the defending unit was defeated;stat_gain:does:give an Experience token to this unit;heal:does:heal 3 damage from him
+820517|stealth:does:Hidden;activated:does:Action [Exhaust];heal:does:Heal up to 2 damage from a unit;damage:does:deal that much damage to a unit
+820682|symmetric_effect:does:Each player discards a card from their hand;hand_disruption:does:Each player discards a card from their hand
+820943|on_play:does:When Played;stat_gain:does:Experience token;variety_payoff:benefits:each different aspect among units you control
+819705|activated:does:Action [exhaust];suppress:does:Exhaust an enemy unit
+820092|summon:does:Create an X-Wing token;shield:grants:give a Shield token to another unit
+819889|temporary_buff:grants:Give each friendly unit +1/+1 for this phase;scope_multi:does:each friendly unit
+819276|activated:does:Action [Exhaust];attack_now:does:Attack with a unit;temporary_buff:grants:+1/+0 for this attack;board_presence:benefits:If you control more units than the defending player;aura:grants:Each other friendly unit gains Raid 1
+819937|sacrifice:cost:Exploit 3;cost_reduction:does:Exploit 3;untap:does:Ready up to 3 units;temporary_buff:grants:+1/+0;excess_damage:grants:gains Overwhelm
+819616|graveyard:does:Choose a unit in your discard pile;resource_gain:does:put it into play as a resource
+819912|cost_reduction:does:costs 1 resource less to play for every 5 damage on your base;low_life:benefits:for every 5 damage on your base;on_play:does:When Played;on_attack:does:On Attack;damage:does:Deal 2 damage to an enemy unit
+820529|on_attack:does:On Attack;stat_gain:grants:Give an Experience token to a friendly Vehicle or Droid unit;tribal:benefits:Vehicle or Droid unit
+819881|copy:does:enter play as a copy of a non-leader;type_grant:does:it gains the Clone trait
+819746|reactions:does:When an enemy unit attacks your base;shield:grants:Give a Shield token to a friendly unit
+819951|board_presence:benefits:Coordinate;on_attack:does:On Attack;stat_loss:does:Give an enemy unit;temporary_effect:does:for this phase
+819412|variable_stats:does:Grit;on_play:does:When Played;untap:does:ready this unit;condition_count:benefits:15 or more damage
+820448|symmetric_effect:does:Each player chooses a unit they control;aoe_damage:does:Deal 3 damage to each unit not chosen this way
+820611|destroy:does:defeat a damaged non-leader unit;condition_life:benefits:damaged non-leader unit
