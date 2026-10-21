@@ -1,9 +1,0 @@
-766190 | Cloak | 
-   A: []
-   B: [["summon", "Cloak"]]
-766196 | Jump-start | You may cast this card from your graveyard by discarding a card in addition to paying its other costs. Then exile this card.
-   A: [["cast_from_zone", "cast this card from your graveyard"], ["discard", "by discarding a card"]]
-   B: [["cast_from_zone", "You may cast this card from your graveyard"], ["discard", "discarding a card"], ["banish", "Then exile this card"]]
-766198 | Paradigm | Then exile this spell. After you first resolve a spell with this name, you may cast a copy of it from exile without paying its mana cost at the beginning of each of your first main phases.
-   A: [["free_play", "cast a copy of it from exile without paying its mana cost"], ["cast_from_zone", "from exile"], ["turn_start", "at the beginning of each of your first main phases"]]
-   B: [["banish", "Then exile this spell"], ["cast_from_zone", "cast a copy of it from exile"], ["free_play", "without paying its mana cost"], ["turn_start", "at the beginning of each of your first main phases"]]

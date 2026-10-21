@@ -30,10 +30,9 @@ Written 20 Oct 2026 from what the tag-fix plan got wrong. Read this whole file b
    ext_id, name, category, faction, subtypes, cost, stats, text, and `keywords` as a field.
 2. Keep the source's keyword lists as a field and set `_keywords_from_field`. Links taken from source fields are trusted; links found by matching text are not.
 3. Build with the load: `sh tools/build.sh three-bases-library.sqlite <scratch>/new.sqlite <game>=<cards.json>`.
-   - Loading is insert-only (`add_games.py`): the steps run on a copy holding only the new games, their rows are added, and the
-     build stops if any existing row changed. To reload a game, drop it first (`drop_game.py`).
-   - Never run a build without loads just "to see". It re-applies every pattern and review file to all games and changes other games' tags.
-     That is how the plan's first full rebuild made some games worse.
+   - One chain (21 Oct 2026): the new cards are added, their first tags join the frozen base (`start_clean.py keep`), and every
+     step runs over all games. The stored database is always the output of one such build; building twice gives identical tags.
+     To reload a game, drop it first (`drop_game.py`).
 
 ## 2. Keywords before cards
 1. Add the game's glossary keywords as category `keyword` entries, each with its definition text.

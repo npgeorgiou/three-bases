@@ -1,6 +1,0 @@
-741074 | Aquatic | Can only travel over lakes and ocean; drowns at end of turn on other land.
-   A: [["terrain", "Can only travel over lakes and ocean"], ["self_destruct", "drowns at end of turn on other land"]]
-   B: [["placement_rules", "Can only travel over lakes and ocean"], ["self_destruct", "drowns at end of turn on other land"]]
-741075 | Swallow | Removes a creature from the game until the swallower dies, then releases it.
-   A: [["removal", "Removes a creature from the game"], ["death_trigger", "until the swallower dies"]]
-   B: [["removal", "Removes a creature from the game until the swallower dies"]]

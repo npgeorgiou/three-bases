@@ -1,64 +1,0 @@
-# definitions
-damage | Deal damage | Damage is dealt to a unit, player or base. | Not: Killing regardless of health is destroy; damage to my own side is friendly_fire.
-damage_over_time | Damage over time (poison, burn) | Damage repeats over turns: poison, burn, bleed. | Not: One-time damage is damage.
-# questions: qid | concept | game | name | text
-196* | damage | runeterra | Ziggs (level 2) | Attack: I deal 2 damage to my blocker and the enemy Nexus. When you destroy an allied landmark, deal 2 to the enemy Nexus.
-197 | damage | runeterra | Rumble (level 2) | Keywords: Quick Attack, SpellShield, Impact. When you deal damage to the enemy Nexus, create a random Mecha Yordle in hand or if you have one, grant all Mecha Yordles in hand +1|+1 and reduce their cost by 1.
-198 | damage | runeterra | Morellonomicon | Applies Gloom instead of dealing damage to units.
-199 | damage | runeterra | Captain Kalrix | Keywords: Overwhelm. Nexus Strike: Deal damage to the enemy Nexus equal to half its Health, rounded up.
-298* | damage | runeterra | Flashbomb Trap | Keywords: Trap. Deal 1 damage to a random ally.
-299* | damage | runeterra | Captive Greyback | Keywords: Overwhelm. Attack: I deal 3 damage to my blocker. If it's dead or gone, I deal 3 damage to the enemy Nexus instead.
-300* | damage | runeterra | Charging Sigil III | +4 damage
-301* | damage | runeterra | Charging Sigil I | +1 damage
-302* | damage | runeterra | Charging Sigil II | +2 damage
-303* | damage | runeterra | Nilah's Formless Blade | Keywords: Burst. Deal 2 damage to a unit. It can't drop below 1 Health from this damage. Create a Nilah in your deck.
-304* | damage | runeterra | Nilah (level 2) | Keywords: Brash. Attack: Create a Slipstream in the top 6 cards of your deck and deal 2 damage to all enemies and the enemy Nexus. They cannot drop below 1 Health from this damage.
-381 | damage | runeterra | Tibbers | Keywords: Fearsome. Play: Stun an enemy, then deal 2 to all Stunned or damaged enemies.
-382 | damage | runeterra | Ravenous Flock | Deal 4 to a unit if it's damaged or Stunned.
-383 | damage | runeterra | Tidal Invocation | Deal 1 to a unit. Spawn 1 for each damage dealt.
-384 | damage | runeterra | LeBlanc | Keywords: Quick Attack. Level up: I've seen you deal 15+ damage. When I level up, create a Mirror Image in hand.
-385 | damage | runeterra | Swain's Ravenous Flock | Keywords: Fast. Deal 4 to a unit if it's damaged or Stunned. Create a Swain in your deck.
-386 | damage | runeterra | LeBlanc (level 2) | Keywords: Quick Attack. Each time you deal 15+ damage, create a Mirror Image in hand. If you already have one, reduce its cost by 1 instead.
-387* | damage | runeterra | Blowback | Deal 1 to an enemy and the enemy Nexus. Discard up to 2 to increase the damage by 1 for each card discarded.
-388 | damage | runeterra | Deluge | For the rest of the game, all of your Elemental spells and Skills deal 1 extra damage.
-1631 | damage | runeterra | Midenstokke Henchmen | Nexus Strike: Summon an exact copy of me.
-1632 | damage | runeterra | Stylish Shot | Deal 1 to the enemy Nexus. The next time an ally strikes the Nexus this round, create a Stylish Shot in hand.
-1633 | damage | runeterra | Sand Soldier | Keywords: Ephemeral. Nexus Strike: Deal 1 to the enemy Nexus.
-1634 | damage | runeterra | Samira (level 2) | Keywords: Quick Attack, Plunder. Plunder or strike: Create a Flair in hand if you don't already have one. When you play 6 cards, Rally. Resets when you start a round with the attack token.
-1635 | damage | runeterra | Zoe (level 2) | Keywords: Elusive, Missing Translation. When I level up, grant your Nexus "When you summon an ally, grant its keywords to all allies." Nexus Strike: Create a Behold the Infinite that costs 0 in hand.
-1636 | damage | runeterra | Silent Shadowseer | Keywords: Elusive, Ephemeral. Nexus Strike: Create a copy of me in hand.
-1637 | damage | runeterra | Bone Skewer | An ally strikes an enemy, then moves to the top of your deck.
-1638 | damage | runeterra | Teemo | Keywords: Elusive. Nexus Strike: Plant 5 Poison Puffcaps on random cards in the enemy deck. Level up: You've planted 15+ Poison Puffcaps.
-1639 | damage | runeterra | The Darkin Staff | Keywords: Equipment, Impact. Strike: Refill 1 spell mana. / You may spend 8 mana to play me as Baalkux.
-1640 | damage | runeterra | Scavenged Camocloaker | Grant an ally Elusive and "Nexus Strike: Draw 1."
-4241* | damage | runeterra | Barrier | Negates the next damage the unit would take. Lasts one round.
-4242* | damage | runeterra | Loaded Dice | Next round, when you damage the enemy Nexus, Nab 1.
-4243* | damage | runeterra | Fix-Em-Uppers | The first time you discard a card or damage the enemy Nexus, grant me +2|+1.
-4244* | damage | runeterra | Lord Broadmane | Keywords: Missing Translation. Play: Deal 2 to an enemy. / Your Fast spells, Slow spells, and Skills have "When I damage a Stunned or damaged enemy, kill it."
-4245* | damage | runeterra | Howling Gale | Deal 2 to a unit. / Increase my damage by 1 for each other card you've played this round, up to 3 times.
-4246* | damage | runeterra | Kindred's Mark | When I damage an enemy, mark it.
-4247* | damage | runeterra | Sejuani (level 2) | Keywords: Overwhelm. Play: Give an enemy Frostbite and Vulnerable this round. Each round, the first time you damage the enemy Nexus, Frostbite all enemies.
-7607 | damage | runeterra | Blade of Ledros | Keywords: Skill. Deal damage to the enemy Nexus equal to half its Health, rounded up.
-7608 | damage | runeterra | Atrocity | Kill an ally to deal damage equal to its Power to anything.
-7609 | damage | runeterra | Banana Blaster | Play: Deal damage equal to my Power to a unit.
-7610 | damage | runeterra | Gwen's Thread the Needle | Keywords: Fast. Kill an ally to deal damage equal to its Power to an enemy. Create a Gwen in your deck.
-7611 | damage | runeterra | Thread the Needle | Kill an ally to deal damage equal to its Power to an enemy.
-7612 | damage | runeterra | Commander Ledros | Keywords: Fearsome, Last Breath. Play: Deal damage to the enemy Nexus equal to half its Health, rounded up. / Last Breath: Return me to hand.
-8106 | damage | runeterra | Double Up | Deal 2 to an enemy. / If this kills it, deal 4 to the enemy Nexus.
-8107 | damage | runeterra | Crimson Pact | Keywords: Skill. For each attacking ally on Vladimir's right, deal 1 to it and drain 1 from the enemy Nexus.
-8108 | damage | runeterra | Molten Shield | Keywords: Elemental Skill. Deal 2 to Annie's blocker. If it's dead or gone, deal 2 to the enemy Nexus instead.
-8109 | damage | runeterra | Bouncing Bomb (created) | Keywords: Slow. Deal 2 to a unit.
-8110 | damage | runeterra | Kennen's Lightning Rush | Keywords: Fast. Recall an ally to deal 2 to anything. Create a Kennen in your deck.
-8111 | damage | runeterra | Statikk Shock | Deal 1 to an enemy or the enemy Nexus, and 1 to another. / Draw 1.
-8112 | damage | runeterra | Ice Shard | Deal 1 to EVERYTHING.
-8113 | damage | runeterra | Crackshot Corsair | When allies attack, deal 1 to the enemy Nexus.
-8114 | damage | runeterra | Iron Legionary | Play: Deal 3 to an ally to deal 3 to an enemy.
-8115 | damage | runeterra | Yuumi's Prowling Projectile | Keywords: Fast. Grant an ally +1|+0. Deal 1 to an enemy. Create a Yuumi in your deck.
-6580 | damage_over_time | runeterra | Teemo | Keywords: Elusive. Nexus Strike: Plant 5 Poison Puffcaps on random cards in the enemy deck. Level up: You've planted 15+ Poison Puffcaps.
-6581 | damage_over_time | runeterra | Puffcap Peddler | Keywords: Imbue. When you play a spell, plant 3 Poison Puffcaps in the enemy deck.
-6582 | damage_over_time | runeterra | Mushroom Cloud | Plant 5 Poison Puffcaps in the enemy deck.
-6583 | damage_over_time | runeterra | Poison Dart | Deal 1 to anything and plant 3 Poison Puffcaps in the enemy deck.
-6584 | damage_over_time | runeterra | Puffcap Pup | Keywords: Quick Attack. Strike: Plant 3 Poison Puffcaps in the enemy deck.
-6585 | damage_over_time | runeterra | Ava Achiever | When I'm summoned or Round End: Plant 3 Poison Puffcaps in the enemy deck.  / Traps on enemy cards are doubled when activated.
-6586 | damage_over_time | runeterra | Stinky Whump | Keywords: Last Breath. Last Breath: Create a copy of me in the enemy deck with 2 Poison Puffcaps attached.
-6587 | damage_over_time | runeterra | Bursting Backpack | For each Bursting Backpack you've played this game, plant 4 Chimes in your deck and 4 Poison Puffcaps in the enemy deck. Create a Bursting Backpack in your deck.

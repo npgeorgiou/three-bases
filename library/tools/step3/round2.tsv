@@ -1,4 +1,0 @@
-ranged|does|*|\bshoot	wh_killteam
-permanent_growth|does|*|\blevels? up	runeterra
-stacking_keyword|does|sts2|\b(\d+|x) (strength|poison|doom|plating|vigor|regen|ritual)\b	sts2
-passive|does|*|\bpassive	wh_bloodbowl3

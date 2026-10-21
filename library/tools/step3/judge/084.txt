@@ -1,68 +1,0 @@
-# definitions
-discard | Discard my own cards | The owner discards cards from their own hand, as a cost or to fuel effects. | Not: Making the opponent discard is hand_disruption.
-draw | Draw cards | Cards are drawn from the owner's deck into hand. | Not: Searching the deck for a chosen kind of card is tutor; making a new card is generate_cards.
-forced_movement | Move enemy units (push, pull) | Enemy units are moved against their will: push, pull, knockback, sent to another lane. | Not: Moving my own units is movement.
-generate_cards | Create new cards | New cards that were not in the deck are put into hand or deck. | Not: Units made on the board are summon.
-hand_disruption | Attack the opponent's hand | Cards in the opponent's hand are discarded, taken, weakened, made dearer or looked at. | Not: Discarding my own cards is discard.
-heal | Restore health (heal) | Lost health of a unit, hero or player is restored. | Not: Preventing damage before it happens is protection.
-# questions: qid | concept | game | name | text
-1876 | discard | runeterra | Salt And Stitches | To play, discard a card. / Summon a Reborn Grenadier and give it +2|+0 this round.
-1877 | discard | runeterra | Electro Harpoon | To play, discard 1. Deal 2 to a unit and 2 to the enemy Nexus.
-487 | draw | runeterra | Deep Meditation | Keywords: Flow. Flow: I cost 2 less. / Draw 2 other spells.
-488 | draw | runeterra | Relic of Power (created) | Keywords: Focus, Fleeting. Predict, then draw 1.
-489 | draw | runeterra | Poro Herder | When I'm summoned, draw a Poro if you Behold a Poro.
-490 | draw | runeterra | Sai'nen Thousand-Tailed | When I'm summoned, draw 2 and give allies +1|+1 this round.
-491 | draw | runeterra | Pick a Card | To play, place a card from hand into your deck. / Draw 2 at the next Round Start and grant them Fleeting.
-492 | draw | runeterra | Twisted Fate's Pick a Card | Keywords: Burst. To play, place a card from hand into your deck. Draw 2 at the next Round Start and grant them Fleeting. Create a Twisted Fate in your deck.
-493 | draw | runeterra | Heroes Call | Draw a unit.
-494 | draw | runeterra | Elixir of Skill | Draw 1.
-495 | draw | runeterra | The Swindler's Den | Keywords: Landmark. Your cards in hand have Fleeting. / When you play a card, draw 1.
-496 | draw | runeterra | Unraveled Earth | Summon 2 Roiling Sands. / Draw 1.
-818* | draw | runeterra | Astute Academic | When you draw a card, give me +1|+0 this round.
-819* | draw | runeterra | Chief Mechanist Zevi | When you draw a card, grant it Fleeting and create an exact copy of it in hand.
-820* | draw | runeterra | Twisted Fate | Keywords: Quick Attack. Play: Play a Destiny Card. Level up: I've seen you draw 9 cards.
-821* | draw | runeterra | Janna | Play: Updraft 2 to draw 2 at the next Round Start. / Each round, the first 3 times you draw a card, reduce its cost by 1 this round. Level up: I've seen you play 8 cost reduced cards.
-822* | draw | runeterra | Janna (level 2) | Keywords: Elusive. Round Start: Draw 1. When you draw a card, reduce its cost by 1 this round.
-1472* | forced_movement | runeterra | Draven's Biggest Fan | When I'm summoned, move Draven to the top of your deck if you don't have him in hand or in play.
-1473* | forced_movement | runeterra | Bone Skewer | An ally strikes an enemy, then moves to the top of your deck.
-1474* | forced_movement | runeterra | Sharesies | Give an ally with an attachment the stats and keywords of its attachment this round and move the attachment to another ally.
-7126 | forced_movement | runeterra | Preservationist | Play: Advance an allied landmark 3 rounds.
-7127 | forced_movement | runeterra | Akshan (level 2) | Keywords: Quick Attack. When I'm summoned or strike: Summon a Warlord's Hoard or advance it 1 round.
-7128 | forced_movement | runeterra | Warlord's Hoard | Keywords: Countdown, Landmark. Countdown 8: Create a Sentinel's Hoard in hand. When you target allies advance me 1.
-7129 | forced_movement | runeterra | Imagined Possibilities | Create a random landmark with Countdown in hand, or advance your landmarks 1 round.
-7130 | forced_movement | runeterra | Time in a Bottle | Predict and advance an allied landmark 2 rounds.
-7131 | forced_movement | runeterra | Time Bomb | Keywords: Countdown, Landmark. When I'm summoned, draw 1 and advance other allied Time Bombs 1 round. Countdown 1: Deal 1 to enemies and the enemy Nexus.
-7132 | forced_movement | runeterra | Boadir of Blackened Ice | When I'm summoned, summon 2 Frozen Thralls and advance them to 2.
-7133 | forced_movement | runeterra | Stopwatch | When I'm summoned, advance me 1.
-7134 | forced_movement | runeterra | Vekauran Vagabond | When I'm summoned, summon a Warlord's Palace or advance it 2 rounds.
-7135 | forced_movement | runeterra | Draklorn Inquisitor | When I'm summoned, summon a Frozen Thrall. / Round End: If the Countdown of any of your Frozen Thralls is 4 or less, advance them to 0.
-6268* | generate_cards | runeterra | Wyrding Stones | Round Start: Get an extra mana gem this round.
-6269* | generate_cards | runeterra | Catalyst of Aeons | Get an empty mana gem and heal your Nexus 3.
-6270* | generate_cards | runeterra | Wolfrider | Keywords: Overwhelm, Plunder. Plunder: Get an empty mana gem.
-6271* | generate_cards | runeterra | Voices of the Old Ones | Get 2 empty mana gems. / For the top 5 cards in your deck, draw each card that costs 8+. Then place the rest into your deck.
-6272* | generate_cards | runeterra | Hunting Boar | Keywords: Can't Block, Last Breath. Last Breath: Get an empty mana gem.
-6273* | generate_cards | runeterra | Winter's Touch | Get an empty mana gem. Enlightened: I cost 1. Draw 1.
-6274* | generate_cards | runeterra | Wild Mysticism | Get an empty mana gem. / Summon a Feral Mystic.
-6275* | generate_cards | runeterra | Sapphire Crystal | Get an empty mana gem.
-7943 | generate_cards | runeterra | Retreat | Recall an ally to create a Fleeting Return in hand.
-7944 | generate_cards | runeterra | Perfidious Promoter | When you refill mana, create a Fleeting random follower in hand you can exactly afford.
-7945 | generate_cards | runeterra | Professor Von Mech | Keywords: Impact. When I'm summoned, create a random 1, 2, and 3 cost follower in hand.
-7946 | generate_cards | runeterra | Karma's Insight of Ages | Keywords: Burst. Create in hand another random spell from your regions. Enlightened: Create 2 instead. Create a Karma in your deck.
-7947 | generate_cards | runeterra | Rumble (level 2) | Keywords: Quick Attack, SpellShield, Impact. When you deal damage to the enemy Nexus, create a random Mecha Yordle in hand or if you have one, grant all Mecha Yordles in hand +1|+1 and reduce their cost by 1.
-7948 | generate_cards | runeterra | Ezreal | Keywords: Elusive. Nexus Strike: Create a Fleeting Mystic Shot in hand. Level up: You've targeted enemies 8+ times.
-7949 | generate_cards | runeterra | The Absolver | Give an ally +2|+1 this round. If you have leveled a champion this game, create a The Absolver's Return in hand.
-7950 | generate_cards | runeterra | Jaull Hunters | Keywords: Challenger. When I'm summoned, create a random Sea Monster in hand.
-7951 | generate_cards | runeterra | Poro Stories | Create 3 random 1 cost Poros in hand.
-7952 | generate_cards | runeterra | Grand Overseer Veigar (level 2) | Keywords: Missing Translation. When I'm summoned or Round Start: Create a Darkness in hand if you don't have one. Round Start: Grant your Darkness everywhere 1 extra damage. When you play Darkness, it can target anything.
-1960 | hand_disruption | runeterra | The University of Piltover | Keywords: Landmark. Round Start: Discard your hand. Create 3 random cards in hand and grant them Fleeting.
-1961 | hand_disruption | runeterra | Rummage | To play, discard up to 2 cards. Draw 1 for each card you discarded.
-1962 | hand_disruption | runeterra | Aloof Travelers | When I’m summoned, ALL players draw 1, then your opponent discards their highest cost card.
-1963 | hand_disruption | runeterra | Sump Dredger | Play: Discard a card to draw 1.
-1964 | hand_disruption | runeterra | Fix-Em-Uppers | The first time you discard a card or damage the enemy Nexus, grant me +2|+1.
-1965 | hand_disruption | runeterra | Salvaged Scrap | To play, discard up to 2 cards. Create that many followers from your regions that cost 1 more and reduce their costs by 1.
-1966 | hand_disruption | runeterra | Tricksy Tentacles | Your opponent discards their lowest cost card.
-1967 | hand_disruption | runeterra | Spinning Axe | Keywords: Burst. To play, discard 1. Give an ally +1|+0 this round.
-1968 | hand_disruption | runeterra | Salt And Stitches | To play, discard a card. / Summon a Reborn Grenadier and give it +2|+0 this round.
-1969 | hand_disruption | runeterra | Electro Harpoon | To play, discard 1. Deal 2 to a unit and 2 to the enemy Nexus.
-3509* | heal | runeterra | Starshaping | Invoke a Celestial card that costs 7 or more, then heal an ally or your Nexus 5.
-3510* | heal | runeterra | Ebb and Flow | Keywords: Fast, Fleeting. Deal 2 randomly to an enemy or the enemy Nexus and heal an ally or your Nexus 2.

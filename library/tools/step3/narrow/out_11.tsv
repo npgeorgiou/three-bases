@@ -1,9 +1,0 @@
-summon|does|*|\bspawn	into_the_breach,gwent,dnd5e	(?<!troll )(?<!cannot )(?<!can only )(?<!to one )(?<!to two )\bspawn(?!s? of\b)(?! frost)(?!s? per)(?! once)(?! on the first)(?! on missions)(?! on an island)(?! on island)(?! on [a-z ]{0,20}(island|mission))(?! an operative on each enemy row)(?! it on the opposite row)
-stress_morale|does|darkest_dungeon|\bstress\b|\bresolve\b|\baffliction|\bvirtue	darkest_dungeon	\bstress\b|\bresolve\b(?! check percent)(?! level)|\baffliction|\bvirtue
-destroy|benefits|*|whenever .{0,40}(is destroyed|dies|is killed)	faeria,duelyst,sts2,gwent,hs_battlegrounds,shadowverse,hearthstone,mtg	(?!)whenever .{0,40}(is destroyed|dies|is killed)
-movement|does|*|\badvance\b	dnd5e,hearthstone,runeterra	(?!)\badvance\b
-forced_movement|does|*|\badvance\b	dnd5e,wh_killteam,runeterra,wh_aos_4th,wh_40k_10e,hearthstone	(?!)\badvance\b
-upgrade|does|shadowverse|\bevolve (it|this|an?|target|all|that|them)\b|\bcan evolve\b|\bwhen this follower evolves\b|\bthis follower evolves\b	shadowverse	(?!)\bevolve (it|this|an?|target|all|that|them)\b
-reactions|does|*|\breaction\b	dnd5e	(?<!or a )(?<!require a )(?<!action or )\breaction\b(?! to deliver)(?! to cast)
-reactions|does|*|\breaction\b	wh_aos_4th	keep
-cost_reduction|does|*|costs? \(?\d+\)? less	hearthstone	(?<!\bit )(?<!that )costs? \(?\d+\)? less

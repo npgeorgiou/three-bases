@@ -1,3 +1,0 @@
-814505 | Significant Find | Pick one: Place one available feature token in an empty hex 2 or more hexes from each fighter, or increase your Exploration count by 1 if one or more surviving friendly explorers are not in your territory.
-   A: [["modal_choice", "Pick one:"], ["terrain", "Place one available feature token"], ["resource_gain", "increase your Exploration count by 1"], ["tribal", "explorers"]]
-   B: [["modal_choice", "Pick one:"], ["terrain", "Place one available feature token"], ["tribal", "explorers"]]

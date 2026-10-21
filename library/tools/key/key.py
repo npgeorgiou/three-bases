@@ -118,6 +118,8 @@ def disagree(g, prefix='settle'):
     print(g, 'entries read by both', len(set(a) & set(b)), 'disagreements', len(todo), 'settle batches', (len(todo) + 49) // 50)
 
 def final(g):
+    if os.path.exists(os.path.join(HERE, g, 'key.json')) and '--force' not in sys.argv:   # key.json is corrected by hand since (death_split.py ...): never overwrite it
+        sys.exit(g + ': key.json exists and has corrections; key.py final would overwrite them (--force to do it anyway)')
     a = check(g, 'A'); b = check(g, 'B'); ents = texts(g)
     cdir = os.path.join(gdir(g), 'C'); csets = {}
     if os.path.isdir(cdir): csets = check(g, 'C')

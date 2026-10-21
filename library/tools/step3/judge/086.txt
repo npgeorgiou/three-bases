@@ -1,69 +1,0 @@
-# definitions
-on_play | When played (battlecry, on reveal) | Triggers when the card is played or revealed: battlecry, on reveal, enters. | Not: When another card is played is on_ally_play.
-passive | Passive / always on | The effect is always on while the card is in play. | Not: Effects that fire on an event are triggers.
-permanent_growth | Grows again and again | A unit gains stats repeatedly (each turn, each trigger) and keeps them. | Not: A single lasting bonus is stat_gain.
-ping | Small repeatable damage | A small amount of damage (1 or 2) that can be dealt again and again. | Not: One big hit is damage.
-polymorph | Turn an enemy into something weaker | An enemy unit is turned into a weaker or harmless card or unit. | Not: My own card turning into another is transform.
-random_effect | Random results | The outcome is random: random target, random card, chance, dice. | Not: A random ability is random_ability.
-regeneration | Heal every turn (regeneration) | A unit heals again each turn or returns to full health each turn. | Not: A single heal is heal.
-# questions: qid | concept | game | name | text
-8800 | on_play | runeterra | Avarosan Marksman | Play: Deal 1 to an enemy.
-8801 | on_play | runeterra | Aspiring Chronomancer | Play: Predict.
-8802 | on_play | runeterra | Sejuani | Keywords: Overwhelm. Play: Give an enemy Frostbite and Vulnerable this round. Level up: You've damaged the enemy Nexus in 5+ different rounds.
-8803 | on_play | runeterra | Tufted Webspinner | Keywords: Fearsome. Play: If an ally has a different subtype than me, give an enemy -2|-0 this round.
-8804 | on_play | runeterra | Ruby-Eyed Conjurer (created) | Play: Grant Overwhelm to an ally in hand.
-8805 | on_play | runeterra | Widowed Huntress | Keywords: Challenger. Play: Equip me with an equipment that costs 2 or less from hand.
-8806 | on_play | runeterra | Smooth Mixologist | Play: Heal an ally or your Nexus 3 and create a Coin in hand.
-593 | passive | runeterra | Vi | Keywords: Challenger, Tough. While I'm in play or in hand, grant me +1|+0 when you play another card (max +8|+0). Level up: I've struck for 10+ damage in one strike.
-594 | passive | runeterra | Sett (level 2) | Keywords: Challenger. While I'm attacking, I can't take damage or die. Each round, create a Show Stopper in hand once you've spent 12+ mana that round.
-595 | passive | runeterra | Impact | When this strikes while attacking, it deals 1 to the enemy Nexus. This keyword can stack.
-596 | passive | runeterra | Bloodcursed Harpy | Keywords: Scout. Play: Equip me with an equipment that costs 2 or less from hand.  / The first time I would die while Equipped, fully heal me and destroy the equipment instead.
-597 | passive | runeterra | Rainbowfish (created) | Keywords: Elusive, Attach. Attach me to an ally to give it my stats and keywords while I'm Attached. When that ally leaves play, Recall me.
-598 | passive | runeterra | Vi (level 2) | Keywords: Challenger, Tough. When I strike a unit while attacking, deal 5 to the enemy Nexus.
-599 | passive | runeterra | Shady Spectacles | Keywords: Equipment. Pick an allied follower. Transform my bearer into an exact copy of it while I'm equipped.
-600 | passive | runeterra | Hextech Anomaly | When you draw or create me in hand or each Round Start: while I'm in hand, transform me into a random 6+ cost spell.
-601 | passive | runeterra | Sett | Keywords: Challenger. The first time I would drop below 1 Health while attacking, give me Barrier instead. Level up: You've spent 40+ mana.
-602 | passive | runeterra | Quick Quill (created) | Keywords: Attach, Quick Attack. Attach me to an ally to give it my stats and keywords while I'm Attached. When that ally leaves play, Recall me.
-3722* | passive | runeterra | Curse | Applies a negative effect as long as it's in hand. Multiples of the same curse on a unit combine, increasing their cost and effect. Cannot be targeted in hand.
-1251 | permanent_growth | runeterra | Void Abomination | Keywords: Evolve. When I'm summoned, grant me all positive keywords allies have had this game. / When an ally has a new positive keyword, grant it to me.
-1252 | permanent_growth | runeterra | Hive Herald | Keywords: Evolve. Play: Grant a unit and me each other's positive keywords.
-1253 | permanent_growth | runeterra | Belvethi Elder | Keywords: Evolve, SpellShield.
-1254 | permanent_growth | runeterra | Void Seeker | Deal 1 to a follower. If you've Evolved, deal  3 to a unit instead.
-1255 | permanent_growth | runeterra | Void Blaster | Keywords: Overwhelm, Evolve.
-1256 | permanent_growth | runeterra | Camouflaged Horror | Keywords: Fearsome, Evolve. Play: I strike an enemy.
-3989* | ping | runeterra | Ziggs | Attack: I deal 1 damage to my blocker and the enemy Nexus. Level up: You've destroyed 4+ allied landmarks.
-3990* | ping | runeterra | Flashbomb Trap | Keywords: Trap. Deal 1 damage to a random ally.
-4793 | polymorph | runeterra | Black Rose Spy | Reputation: When I'm summoned, transform me into an exact copy of the strongest ally that struck this round.
-4794 | polymorph | runeterra | Liminal Guardian | When I'm summoned, summon a random 1 cost follower from your regions. When I'm Recalled, transform me into Nine Lives.
-4795 | polymorph | runeterra | Go Hard | Drain 1 from a unit. / Create 2 copies of Go Hard in your deck. Every third time this happens, transform all copies of me everywhere into Pack Your Bags.
-4796 | polymorph | runeterra | Hextech Anomaly | When you draw or create me in hand or each Round Start: while I'm in hand, transform me into a random 6+ cost spell.
-4797 | polymorph | runeterra | Destined Poro | Round Start: If you've leveled a champion, transform me into Exalted Poro.
-4798 | polymorph | runeterra | Impersonate | Keywords: Skill. Pick a follower. Transform me into an exact copy of it.
-4799 | polymorph | runeterra | Pyke (level 2) | Keywords: Lurk, Quick Attack. When I Lurk, transform me into Death From Below. When I kill an enemy, I strike the weakest enemy.
-4800 | polymorph | runeterra | Packmother Nidalee (level 2) | Keywords: Overwhelm, Quick Attack. Ambush 2 Nexus Strike: Transform me back into Nidalee and create a Javelin Toss in hand.
-4801 | polymorph | runeterra | Big Game Tycoon | Play: Manifest a card with Ambush. / When an ally transforms, double its Power and Health.
-4802 | polymorph | runeterra | Chief Nakotak | When an ally transforms, fully heal it and grant it +1|+1 and Impact.
-6964* | polymorph | runeterra | Ripper's Bay | Keywords: Lurk, Landmark. When allies attack, before activating Lurk, grant the top ally in your deck Lurk and it becomes a Lurker.
-738 | random_effect | runeterra | Coral Creatures | Keywords: Attune. When I'm summoned, create in hand a random 1 cost spell from your regions.
-739 | random_effect | runeterra | Acoustician | Strike: Create a random new 2 cost spell in hand.
-740 | random_effect | runeterra | Rek'Sai's Call the Pack | Keywords: Burst, Lurk. To play, put a card from hand on top of your deck. Create 2 random Lurkers in hand. Create a Rek'Sai in your deck.
-741 | random_effect | runeterra | Treasure Trove | Keywords: Slow. Create 5 random cards in hand. They cost 0 and are Fleeting. If I'm Tossed, draw me instead.
-742 | random_effect | runeterra | Rumble (level 2) | Keywords: Quick Attack, SpellShield, Impact. When you deal damage to the enemy Nexus, create a random Mecha Yordle in hand or if you have one, grant all Mecha Yordles in hand +1|+1 and reduce their cost by 1.
-743 | random_effect | runeterra | Teemo | Keywords: Elusive. Nexus Strike: Plant 5 Poison Puffcaps on random cards in the enemy deck. Level up: You've planted 15+ Poison Puffcaps.
-744 | random_effect | runeterra | The University of Piltover | Keywords: Landmark. Round Start: Discard your hand. Create 3 random cards in hand and grant them Fleeting.
-745 | random_effect | runeterra | Warden's Prey | Keywords: Last Breath. Last Breath: Create in hand another random Last Breath follower that costs 3 or less.
-746 | random_effect | runeterra | Steem | Keywords: Scout. When I'm summoned, summon a random Husk. / When you summon a 1 cost ally, grant the strongest enemy Vulnerable.
-747 | random_effect | runeterra | Avatar of the Tides | Keywords: Imbue. If you would get a mana gem, instead refill your spell mana. / When you play a spell, create in hand a random spell that costs 3 or less and grant it Fleeting.
-9077 | random_effect | runeterra | Barknuckles | Keywords: Equipment, Brash. Strike: Create a Coin in hand.
-9078 | random_effect | runeterra | Jack (level 2) | Keywords: Overwhelm, Brash. Strike: Create 2 Coins in hand. When you refill mana, grant me +1|+0 and heal me 1 for each mana refilled.
-9079 | random_effect | runeterra | Pocket Picker | Keywords: Last Breath. Last Breath: Create a Coin in hand.
-9080 | random_effect | runeterra | Attentive Accountant | Keywords: Elusive. Nexus Strike: Create a Coin in hand.
-9081 | random_effect | runeterra | Sett's Facebreaker | Keywords: Slow. Stun 2 enemies and create a Coin in hand. Create a Sett in your deck.
-9082 | random_effect | runeterra | Facebreaker | Stun 2 enemies and create a Coin in hand.
-9083 | random_effect | runeterra | The Pit Champion | Keywords: Landmark. I: An ally and an enemy Strike each other. They can't drop below 1 Health from this Strike. / II: Fully heal an ally. / III: Create 3 Coins in hand.
-9084 | random_effect | runeterra | Tag Out! | Recall an ally and create a Coin in hand, or spend 5 mana to Recall an enemy and create a Coin in hand.
-9085 | random_effect | runeterra | Smooth Mixologist | Play: Heal an ally or your Nexus 3 and create a Coin in hand.
-9086 | random_effect | runeterra | Pit Professional | When I'm summoned, create a Coin in hand.
-6795 | regeneration | runeterra | Uzgar the Ancient | Keywords: Challenger, Regeneration.
-6796 | regeneration | runeterra | Dragon's Claw | SpellShield, Regeneration
-6797 | regeneration | runeterra | Murkwolf Rager | Keywords: Regeneration. When I transform, draw a unit.
