@@ -1,15 +1,26 @@
-# Real-world checks (Step 7)
+# Real-world cases: how they are made
 
-Work only in /home/claude/three-bases/library/tools/realworld/. Do not open the database, git or other workers' files.
-For each game named in your task, search the web (wikis, strategy guides, community discussion) for each faction's identity,
-its known combos and its archetypes. Use few searches (about 3-5 per game); prefer one good wiki or guide page per game.
+The cases are the benchmark the library's queries are checked against (`realworld.py`, `realworld_why.py`). They come from
+sources only, in four steps per game, one game at a time:
 
-Write `<game>.tsv`, one test case per line, tab-separated: `type  a  b  why  source URL`
-- `signature  <faction>  <concept id>`  the faction is known for this mechanic (concept ids: ../key/defs.txt)
-- `archetype  <faction>  <archetype id>`  the faction is known for this archetype (ids: archetypes.txt)
-- `combo  <card A>  <card B>`  a well-known combo of two cards of that game (exact card names as the game prints them)
-- `splash  <faction>  <concept id>`  a mechanic that is another faction's specialty but this faction uses a little
-Faction names must be written exactly as in factions/ (game, faction, size). Up to 10 cases per type per game, fewer where the
-sources are thin; cases must differ from each other. Every line needs a source URL that states it; never invent cases.
-`why` is one short phrase. Save the file after each game; if it already exists when you start, skip that game.
-Reply with one line: `finished: <games>`.
+1. **Find sources.** Per faction: the official or wiki page on the faction or class, strategy guides, deck or tier pages for
+   archetypes, guide or community pages for known combos. Prefer pages that cover all factions at once.
+2. **Read them**, faction by faction.
+3. **Summarise** in `<game>.md`: terse, one block per faction: what it is known for, its archetypes, what it uses a little
+   that is another faction's specialty, and known combos with why they work. Every line ends with its source URL (or a short
+   [n] that the file's source list resolves). Only what the sources say; a source claim with no matching concept says so.
+4. **Write the cases** in `<game>.tsv` from the summary, in the library's own names, written correctly from the start:
+   one case per line, tab-separated: `type  a  b  why  source URL`
+   - `signature  <faction>  <concept id>`  the faction is known for this mechanic
+   - `archetype  <faction>  <archetype id>`  the faction is known for this archetype (`archetypes.txt`)
+   - `splash  <faction>  <concept id>`  another faction's specialty that this faction uses a little
+   - `combo  <card A>  <card B>`  a known two-card combo, card names as the library has them
+   Faction names as the library has them (`faction_signature`); concept ids from `../key/defs.txt`, the most specific one
+   that means the same outcome (the check also accepts narrower and broader concepts below the four branches). `why` is one
+   short phrase. Cases must differ from each other. A combo with a card the library lacks stays: it marks missing data.
+
+Not factions, so no faction cases: Neutral, Colorless, Curse, Status, Token, Event, Shared, Universal, Lores, Path to Glory,
+Regiments of Renown, rule-book entries named after the game. Games without factions in the library get combos only.
+
+When a case misses, read the cards before changing anything: if their text supports the case, the tags are wrong (fix the
+game's pattern so every card with that wording gets the tag); if not, the case or its source is wrong.
