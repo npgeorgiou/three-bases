@@ -1,9 +1,24 @@
-signature	Hellhorned	multi_attack	especially if you play their Multistrike and Rage capabilities	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
-signature	Hellhorned	stat_gain	especially if you play their Multistrike and Rage capabilities	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
-archetype	Hellhorned	aggro_tempo	they provide much more firepower	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
-signature	Awoken	multi_target_attack	giant minions that can sweep enemies	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
-archetype	Awoken	fortress	When used as tanks, these demonic plants are excellent	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
-archetype	Stygian Guard	spellslinger	they rely on their powerful spells	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
-signature	Melting Remnant	revive	they return to the deck with upgraded stats	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
-archetype	Melting Remnant	sacrifice	you want Melting Remnants to die as soon as possible	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
-signature	Wurmkin	transform	Charged Echoes and Hatching Eggs	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Hellhorned	multi_attack	Multistrike	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Hellhorned	temporary_buff	Rage	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Hellhorned	tribal	Imps	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Hellhorned	summon	Imp Parade makes Imps	https://progameguides.com/monster-train/best-builds-in-monster-train/
+signature	Awoken	multi_target_attack	Sweep	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Awoken	tank	giant minions that protect others	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Stygian Guard	damage_over_time	Frostbite	https://progameguides.com/monster-train/best-builds-in-monster-train/
+signature	Umbra	sacrifice	buffing units by killing other units	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
+signature	Umbra	stat_gain	eating Morsels for their buffs	https://progameguides.com/monster-train/best-builds-in-monster-train/
+signature	Melting Remnant	death_trigger	minions with death abilities	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Melting Remnant	revive	Reform	https://progameguides.com/monster-train/best-builds-in-monster-train/
+signature	Melting Remnant	self_destruct	Burnout	https://progameguides.com/monster-train/best-builds-in-monster-train/
+signature	Melting Remnant	other_death_trigger	Harvest	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
+signature	Wurmkin	buff	Infused cards and Eggs buff monsters	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+archetype	Hellhorned	aggro_tempo	glass-cannon offence	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+archetype	Hellhorned	tribal	Imp build	https://progameguides.com/monster-train/best-builds-in-monster-train/
+archetype	Awoken	fortress	tanks	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+archetype	Stygian Guard	spellslinger	powerful spells	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+archetype	Stygian Guard	poison_attrition	Frostbite	https://progameguides.com/monster-train/best-builds-in-monster-train/
+archetype	Umbra	sacrifice	killing units to buff others	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
+archetype	Melting Remnant	sacrifice	wanting minions to die	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+combo	Molded	Rector Flicker	returns the fallen Flicker by Reform	https://progameguides.com/monster-train/best-builds-in-monster-train/
+combo	Crushing Demise	Rector Flicker	Flicker upgrades on each death	https://progameguides.com/monster-train/best-builds-in-monster-train/
+combo	Cannibalize	Penumbra	Morsels for Penumbra to Gorge on	https://progameguides.com/monster-train/best-builds-in-monster-train/
