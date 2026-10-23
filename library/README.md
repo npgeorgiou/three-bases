@@ -156,7 +156,6 @@ game's rules and terms as `# term:` lines with their source (`(assumed)` where n
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Improving the library: the open work, in order
-Item 1 is what Kaptain asked for instead of more real-world cases; the rest are Claude's suggestions.
 1. **Check the patterns against the mechanics files.** The regexes in `tools/mechanics/<game>.txt` are not yet run for the 13
    games whose files came from the real-world sources (darkest_dungeon, duelyst, gwent, hearthstone, hs_battlegrounds,
    marvel_snap, mtg, runeterra, shadowverse, sts1, sts2, wh_40k_10e, wh_aos_4th). For each game: `coverage.py --mechanics`,
@@ -171,3 +170,6 @@ Item 1 is what Kaptain asked for instead of more real-world cases; the rest are 
    (fandom wiki), the keyword entry texts of Monster Train and two Legends keywords. The built-in browser reaches both wikis.
 5. **One vocabulary** (a cleanup): move the pattern files and early build steps to the concept tree's ids, so `concept_tree.py`
    no longer moves tags on each build and the `v2_*` tables can go.
+6. **Make `final_revert.py` unneeded.** Each build it puts back about 790 tags (of the 1464 in `tools/final/revert.tsv`) that
+   the answer key or the judged sample shows right and that the steps lose. Find which steps drop them and fix those steps, then
+   retire it (with `final_compare.py` and `tools/final/`) once a build without it is nothing worse (`compare_builds.py`).
