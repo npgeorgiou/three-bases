@@ -94,7 +94,8 @@ Read this whole file before you add a game.
   (`trigger_pairs.py <db> pairs_only`).
 - Scripts that rewrite `tools/step3/decisions.tsv` must keep the other scripts' lines (each script marks its own: `|key`, `|trigger`,
   `|amp`, `|redirect`, `|manual`).
-- After any tag change run `compare_builds.py <stored> <new>` (key, real-world cases per game and kind, regression, combos, lost
+- While working on one game, check each try with `tools/game_check.sh` (`PATTERNS_CHECK.md`). After a tag change that reaches
+  other games (shared code, `_all.txt`, the concept tree), and after adding a game, run `compare_builds.py <stored> <new>` (key, real-world cases per game and kind, regression, combos, lost
   pairs, with every case newly met or missed) and keep the change only if nothing is worse; `realworld_why.py` says why a case misses.
 
 ## 5. Never

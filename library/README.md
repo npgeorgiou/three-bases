@@ -3,7 +3,7 @@
 ## What it is
 A SQLite database of game mechanics from 21 other games, built for Three Bases design questions: faction ideas, alternatives to a mechanic, cards that work with a concept or with other cards, and fixes for design problems. It holds mechanics only: names and wording are never reused in Three Bases.
 
-It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite`, `tools/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results).
+It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `three-bases-library.sqlite`, `tools/` (query and build scripts, data files), this README and `SEARCH_GUIDE.md` (how to search and read results), `PATTERNS_CHECK.md` (the per-game patterns check).
 
 ## Contents
 55,480 entries (cards, units, locations, abilities, items, rules), 1,069 keywords and 655 card types/tribes. Entries that repeat a mechanic within one faction are merged, so the counts are distinct mechanics, not printed cards.
@@ -156,24 +156,10 @@ game's rules and terms as `# term:` lines with their source (`(assumed)` where n
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Improving the library: the open work, in order
-1. **Check the patterns against the mechanics files.** The regexes in the ```mechanics blocks of `tools/games/<game>.md` are to be checked for every game
-   (all 21; the 13 whose files came from the real-world sources have never been run). For each game: `coverage.py --mechanics`,
-   fix the regexes that miss the cards' wording, then the gaps in its patterns, reload it (`reload_game.sh`), keep only if
-   nothing is worse (`compare_builds.py`). One game per pass. The keys exist; do not re-read them. A plain reload is not better
-   by itself (Into the Breach went from 74 to 130 wrong per 100 key entries). Faeria: first re-measure its reload on the
-   corrected key, then the same check. In each pass also re-run `key_patterns.py` for the game, measured per game.
-   **Goal (Kaptain, 24 Oct 2026):** test each game against 1) its key and 2) its real-world cases and make them match as much as
-   possible. The goal is not to make the tags agree with the key and cases artificially, but to find entry tagging errors and fix
-   them, so the whole game's tagging gets better. Keep an open mind that the key and the cases may sometimes be wrong. Find the
-   reasons why the game's tags and the key or cases disagree, and improve the entry tagging. Fix the regexes of the mechanics
-   (the ```mechanics block of `tools/games/<game>.md`) first, then the gaps in `tools/patterns/<game>.txt`.
-   **Every try: `sh tools/game_check.sh <scratch> <game>`** (about 20 s: the build's steps on a one-game copy, then the game's
-   coverage, key score and real-world cases; its unchanged result equals the library's). Never run a full reload or
-   `compare_builds.py` per try. Once per game, at the end: `sh tools/reload_game.sh <scratch> <game>`, `compare_builds.py`,
-   re-run `key_patterns.py` for the game, copy the build over `three-bases-library.sqlite`, then commit and push.
-   One game per pass, starting with `python3 tools/coverage.py three-bases-library.sqlite <game> 0 --mechanics tools/games/<game>.md`.
-   At the end of each game's pass, add whatever this work found that fits the game file (`tools/games/<game>.md`: rules and terms,
-   faction facts, notes on the key or the cases) there.
+1. **Check the patterns against the mechanics files, for all 21 games** (the 13 whose files came from the real-world sources have
+   never been run). One game per pass: test it against its key and its real-world cases, find why they disagree, fix the entry
+   tagging (mechanics regexes first, then the game's patterns), present the results to Kaptain before pushing. The goal, the rules,
+   the steps, how tags get there and the status are in `PATTERNS_CHECK.md`: read it whole before starting.
 2. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
    "a card that names a type of its game cares about that type" needs only a short stop list per game.
 3. **Learn the archetype recipes again** with the real-world cases, split 50/50 with seed 1 (`learn_recipes.py`).
