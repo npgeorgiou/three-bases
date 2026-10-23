@@ -156,9 +156,8 @@ game's rules and terms as `# term:` lines with their source (`(assumed)` where n
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Improving the library: the open work, in order
-1. **Check the patterns against the mechanics files.** The regexes in the ```mechanics blocks of `tools/games/<game>.md` are not yet run for the 13
-   games whose files came from the real-world sources (darkest_dungeon, duelyst, gwent, hearthstone, hs_battlegrounds,
-   marvel_snap, mtg, runeterra, shadowverse, sts1, sts2, wh_40k_10e, wh_aos_4th). For each game: `coverage.py --mechanics`,
+1. **Check the patterns against the mechanics files.** The regexes in the ```mechanics blocks of `tools/games/<game>.md` are to be checked for every game
+   (all 21; the 13 whose files came from the real-world sources have never been run). For each game: `coverage.py --mechanics`,
    fix the regexes that miss the cards' wording, then the gaps in its patterns, reload it (`reload_game.sh`), keep only if
    nothing is worse (`compare_builds.py`). One game per pass. The keys exist; do not re-read them. A plain reload is not better
    by itself (Into the Breach went from 74 to 130 wrong per 100 key entries). Faeria: first re-measure its reload on the
@@ -171,6 +170,8 @@ game's rules and terms as `# term:` lines with their source (`(assumed)` where n
    `sh tools/reload_game.sh <scratch> <game>`, `compare_builds.py`, and re-run `key_patterns.py` for the game. After every
    change: run `compare_builds.py`, copy the build over `three-bases-library.sqlite`, then commit and push.
    One game per pass, starting with `python3 tools/coverage.py three-bases-library.sqlite <game> 0 --mechanics tools/games/<game>.md`.
+   At the end of each game's pass, add whatever this work found that fits the game file (`tools/games/<game>.md`: rules and terms,
+   faction facts, notes on the key or the cases) there.
 2. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
    "a card that names a type of its game cares about that type" needs only a short stop list per game.
 3. **Learn the archetype recipes again** with the real-world cases, split 50/50 with seed 1 (`learn_recipes.py`).
