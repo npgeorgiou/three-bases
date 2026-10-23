@@ -27,21 +27,33 @@ Hero classes are not measured factions in the library; skill combos only.
 - Disorienting Blast (Plague Doctor) + Point Blank Shot: the Blast clears the corpses the Shot leaves
 - If It Bleeds + Hound's Harry: same bleed party, not said to combine (not a case)
 
+## Notes from the patterns check (24 Oct 2026)
+Claude's reading of the card text, from the check against the key and the cases:
+- "+N ... in the first round" is a condition on the round number (turn_number), not a start-of-combat effect.
+- "resolve check" is the roll a hero makes at 100 stress (saving_throws); Resolve XP and Resolve Level are hero levels, not stress.
+- "Deals damage (modifier -100%)" means the skill deals no damage (no_damage_output); "Effects: stun" disables the target.
+- "Takes N ranks": a large monster fills several ranks (board_limit), it is not many units.
+- "Class: X" on a trinket limits it to that hero class (tribal, as the key reads it).
+- "trap resistance" and "stun / bleed / blight resistance" are resistances (saving_throws), not traps or the effect itself.
+- Key disagreements kept, as Claude's judgement: "Targets all of enemy ranks" is one skill hitting several (multi_target_attack, by
+  its definition) where the key reads aoe_damage only; self effects "(self)" are scope_self, which the key rarely tags; resisting
+  bleed or blight keeps damage_over_time as a counter.
+
 ## Mechanics
 The mechanics the guides name, one per line as `name|concept|regex`, and the rules and terms as `# term:` lines. Read by `coverage.py --mechanics` and `key/key.py`.
 
 ```mechanics
 # Mechanics the guides name: name|expected concept|wording on the cards. Checked with coverage.py --mechanics (not yet run).
 # Sources (21 Oct 2026): gameskinny.com/7xyiu/darkest-dungeon-party-building-guide (skill pairs and parties).
-stun|disable|\bstun\b
-bleed|damage_over_time|\bbleed\b
-blight|damage_over_time|\bblight\b
+stun|disable|\bstun\b(?! (resistance|chance))
+bleed|damage_over_time|\bbleed\b(?! (resistance|chance))
+blight|damage_over_time|\bblight\b(?! (resistance|chance))
 pull forward|forced_movement|\bpull\b
 push back|forced_movement|\bknockback\b|\bpush\b
 bonus damage on stunned|condition_life|\bvs\.? stunned\b|\bon stunned\b
 stress relief|stress_morale|\bstress\b
 transform (beast mode)|stances|\btransform\b
-corpse clearing|blocking|\bcorpses?\b
+corpse clearing|board_clog|\bclear_corpses\b|\bcorpses?\b
 # term: Stress: the party gains stress; some skills remove it (gameskinny: Cry Havoc removes stress, the Abomination's transform adds it).
 # term: Corpses: killed enemies can leave corpses that hold their rank; some skills clear them (gameskinny).
 ```

@@ -3,7 +3,7 @@
 !movement|\bpush
 !movement|\bpull
 !damage_over_time|\bbleed
-damage|does|\btargets (all of )?enemy ranks [^.]*\.( moves self[^.]*\.)? deals damage\b
+damage|does|\btargets (all of )?enemy ranks [^.]*\.( moves self[^.]*\.)? deals damage\b(?! \(modifier -100%\))
 multi_target_attack|does|\btargets all of enemy ranks\b
 scope_multi|does|\btargets all of ally ranks\b
 buff|does|\+\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit|max hp)\b|\bbuff: \+
@@ -11,7 +11,8 @@ drawback|does|-\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit)\b[^;.
 damage_over_time|does|\b(bleed|blight) \d+ per round\b|\bbleed debuff\b|\bblight debuff\b|\bbleed \d|\bblight \d
 damage_over_time|counters|\bcure (bleed|blight)\b|\bremove (bleeding|poison|blight)\b|\+\d+(\.\d+)?% (bleed|blight|poison) resistance\b|\bbandage\b|\bantivenom\b
 heal|does|\bhealth heal\b|\bheals \d+ \d+\b
-stress_morale|does|\bstress\b|\bresolve\b|\baffliction|\bvirtue
+stress_morale|does|\bstress\b|\baffliction|\bvirtue
+saving_throws|does|\bresolve check\b
 mark_target|benefits|\bonly if target is tagged\b
 disable|benefits|\bonly if target is stunned\b
 condition|does|\bonly if target is\b|\bwhile light (below|above)\b|\bwhile in rank\b
@@ -20,17 +21,17 @@ light_level|does|\blight (below|above)\b|\b(increase|decrease) light\b|\btorch\b
 immunity|does|\+\d+(\.\d+)?% (stun|poison|bleed|disease|debuff|move|trap|death_blow|blight) resistance\b
 tribal|does|\bvs (beast|eldritch|man|unholy|human|husk|bloodsucker|corpse|stress|veteran) enemies\b|\b(beast|eldritch|man|unholy) enemies\b
 condition_life|does|\bwhile hp (below|above)\b|\bhp below \d|\bdeaths? door\b
-combat_start|does|\bin the first round\b
+turn_number|does|\bin the first round\b
 upkeep|does|\bfood consumption\b
 damage_over_time|benefits|\+\d+(\.\d+)?% (bleed|poison|blight) chance\b
 disable|benefits|\+\d+(\.\d+)?% stun chance\b
 forced_movement|benefits|\+\d+(\.\d+)?% move chance\b
 debuff|benefits|\+\d+(\.\d+)?% debuff chance\b
-play_restriction|does|\bclass: \w+
+tribal|does|\bclass: \w+
 board_clog|counters|\bclear_corpses\b
 cooldowns|does|\buses per camp\b|\blimit: \d
 summon|does|\bsummons allies\b|\b(effects: |; )summon \w+
-board_presence|does|\btakes [2-4] ranks\b
+board_limit|does|\btakes [2-4] ranks\b
 multi_attack|does|\bacts [2-9] times per round\b
 !zone_control|\bcapture
 disable|does|\bcapture target\b
@@ -47,3 +48,8 @@ items_consumables|benefits|\buse (holy_water|medicinal_herbs|torch|shovel|skelet
 trap_secret|does|\bon failure:.{0,80}\bon success:
 passive|does|^[+-]\d+(\.\d+)?%? [a-z]
 cheat_death|does|\+\d+% death_blow resistance
+!trap_secret|\btrap\b
+disable|does|\beffects:[^|]*?\bstun\b
+debuff|does|\beffects:[^|]*?-\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit)\b
+!stress_morale|\bresolve check
+no_damage_output|does|\bdeals damage \(modifier -100%\)

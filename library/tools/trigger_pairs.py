@@ -32,6 +32,12 @@ if len(sys.argv) < 3 or sys.argv[2] != 'check':
             root.setdefault(con, 'trigger')
         pats.setdefault(None, []).extend([('death_trigger', 'trigger', DS.OWN_KW), ('other_death_trigger', 'trigger', re.compile(r"\b" + DS.DIE + r"\b", re.I)),
                                           ('leave_trigger', 'trigger', re.compile(DS.LEAVE, re.I)), ('other_leave_trigger', 'trigger', re.compile(DS.LEAVE, re.I))])
+    import os
+    excl = {}   # a pattern file's '!concept|pattern' lines (game_patterns.py): that pattern adds no tag of the concept here either
+    pd = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'patterns')
+    for f in os.listdir(pd):
+        if f.endswith('.txt'):
+            excl[f[:-4]] = {tuple(l[1:].rstrip('\n').split('|', 1)) for l in open(os.path.join(pd, f), encoding='utf-8') if l.startswith('!')}
     have = {(e, t, f) for e, t, f in q('SELECT entity, trigger, effect FROM trigger_effect')}
     ONLY = sys.argv[2:] == ['pairs_only']
     tags = {}
@@ -45,6 +51,8 @@ if len(sys.argv) < 3 or sys.argv[2] != 'check':
         if root.get(k) == 'trigger' and k not in ('passive', 'aura', 'trigger'): whole.setdefault(e, set()).add(k)
     for e, g, t in q("SELECT id, game, text FROM entities WHERE text IS NOT NULL AND category NOT IN ('tribe') AND length(text) < 6000"):
         P = pats.get(None, []) + pats.get(g, [])
+        X = excl.get(g, set()) | (excl.get('_all', set()) if g != 'marvel_snap' else set())
+        if X: P = [x for x in P if (x[0], x[2].pattern) not in X]
         tl = t.lower()   # a whole-entry pattern ("(?s)^(?!.*timing:)...": no Timing line anywhere) is checked on the whole text, not per clause
         P = [x for x in P if not x[2].pattern.startswith('(?s)^(?!') or x[2].search(tl)]
         found = False
