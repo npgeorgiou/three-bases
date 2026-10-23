@@ -163,6 +163,14 @@ game's rules and terms as `# term:` lines with their source (`(assumed)` where n
    nothing is worse (`compare_builds.py`). One game per pass. The keys exist; do not re-read them. A plain reload is not better
    by itself (Into the Breach went from 74 to 130 wrong per 100 key entries). Faeria: first re-measure its reload on the
    corrected key, then the same check. In each pass also re-run `key_patterns.py` for the game, measured per game.
+   **Goal (Kaptain, 24 Oct 2026):** test each game against 1) its key and 2) its real-world cases and make them match as much as
+   possible. The goal is not to make the tags agree with the key and cases artificially, but to find entry tagging errors and fix
+   them, so the whole game's tagging gets better. Keep an open mind that the key and the cases may sometimes be wrong. Find the
+   reasons why the game's tags and the key or cases disagree, and improve the entry tagging. Fix the regexes of the mechanics
+   (the ```mechanics block of `tools/games/<game>.md`) first, then the gaps in `tools/patterns/<game>.txt`. Then
+   `sh tools/reload_game.sh <scratch> <game>`, `compare_builds.py`, and re-run `key_patterns.py` for the game. After every
+   change: run `compare_builds.py`, copy the build over `three-bases-library.sqlite`, then commit and push.
+   One game per pass, starting with `python3 tools/coverage.py three-bases-library.sqlite <game> 0 --mechanics tools/games/<game>.md`.
 2. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
    "a card that names a type of its game cares about that type" needs only a short stop list per game.
 3. **Learn the archetype recipes again** with the real-world cases, split 50/50 with seed 1 (`learn_recipes.py`).
