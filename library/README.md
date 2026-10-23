@@ -87,6 +87,10 @@ time, two writers corrupt the scratch database). It starts from the frozen base 
 `base_patterns`, made once by `tools/make_base.py`), the card data and the record files, so its output never depends on an earlier
 build. Every build writes `<out>.steps.tsv` (what each step removed, `step_log.py`). The stored file is compact (`compact_text.py`)
 and without its indexes (`indexes.py`); copy a checked build over `three-bases-library.sqlite`, then commit and push.
+To rebuild only the games worked on: `build.sh --only <game>,... <in> <out>` (2 to 3 minutes; `reload_game.sh` does this for the
+games it reloads). No step crosses games, so the steps run on a copy with only those games and the other games' rows are copied
+unchanged (`only_games.py`; checked 23 Oct 2026, the result equals a full build row for row); the checks after the steps still run
+on every game. A change that reaches every game (general patterns, the concept tree, a shared record file) needs a full build.
 
 **Where tags come from**, and where to fix them:
 - general wording patterns (all games), applied once when an entry is loaded;
@@ -99,7 +103,8 @@ and without its indexes (`indexes.py`); copy a checked build over `three-bases-l
   (`key_patterns.py <db> <game> ...`); re-run it for a game whose key or patterns change;
 - the hand reviews (`tools/reviews/<game>.json`, then `regression.py <db> make`) and the keyword reviews against the outcome tree
   (`tools/reviews_outcome/<game>.json`); where a review and the answer key disagree on what a card does, the key wins (`key_wins.py`);
-- `final_revert.py`, which puts back tags of the original library (commit c7a77a4) where the newer steps made them worse;
+- `final_revert.py`, which puts back tags of the original library (commit c7a77a4) where the newer steps made them worse (kept:
+  on 23 Oct 2026 a build without it missed more key entries in 11 games and one more real-world case);
 - keyword inheritance, outcome concepts, link rules and trigger pairs, re-derived on every build. Text is read lower-cased with the
   entry's own name as "name"; Magic without reminder text. Entries that no pattern or keyword reaches are dropped.
 
@@ -151,22 +156,18 @@ game's rules and terms as `# term:` lines with their source (`(assumed)` where n
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Improving the library: the open work, in order
-Kaptain's requests in his own words are in `todo.md` (items 11 and 12); the rest are Claude's suggestions.
-1. **Rebuild only the games worked on** (todo.md 11). Find which build steps really cross games and whether a build can run on
-   the changed games alone; every later item needs many builds, at about 10 minutes each.
-2. **Check the patterns against the mechanics files.** The regexes in `tools/mechanics/<game>.txt` are not yet run for the 13
+Item 1 is what Kaptain asked for instead of more real-world cases; the rest are Claude's suggestions.
+1. **Check the patterns against the mechanics files.** The regexes in `tools/mechanics/<game>.txt` are not yet run for the 13
    games whose files came from the real-world sources (darkest_dungeon, duelyst, gwent, hearthstone, hs_battlegrounds,
    marvel_snap, mtg, runeterra, shadowverse, sts1, sts2, wh_40k_10e, wh_aos_4th). For each game: `coverage.py --mechanics`,
    fix the regexes that miss the cards' wording, then the gaps in its patterns, reload it (`reload_game.sh`), keep only if
    nothing is worse (`compare_builds.py`). One game per pass. The keys exist; do not re-read them. A plain reload is not better
    by itself (Into the Breach went from 74 to 130 wrong per 100 key entries). Faeria: first re-measure its reload on the
    corrected key, then the same check. In each pass also re-run `key_patterns.py` for the game, measured per game.
-3. **Retire `final_revert.py`.** It puts back 915 tags of the original library (c7a77a4). Build without it and retire it only
-   if nothing is worse; `final_compare.py` and `tools/final/` (its input and reports) go with it.
-4. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
+2. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
    "a card that names a type of its game cares about that type" needs only a short stop list per game.
-5. **Learn the archetype recipes again** with the real-world cases, split 50/50 with seed 1 (`learn_recipes.py`).
-6. **Missing data through the browser.** Legends sets after Houses of Morrowind (UESP), Stormbound cards after February 2022
+3. **Learn the archetype recipes again** with the real-world cases, split 50/50 with seed 1 (`learn_recipes.py`).
+4. **Missing data through the browser.** Legends sets after Houses of Morrowind (UESP), Stormbound cards after February 2022
    (fandom wiki), the keyword entry texts of Monster Train and two Legends keywords. The built-in browser reaches both wikis.
-7. **One vocabulary** (a cleanup): move the pattern files and early build steps to the concept tree's ids, so `concept_tree.py`
+5. **One vocabulary** (a cleanup): move the pattern files and early build steps to the concept tree's ids, so `concept_tree.py`
    no longer moves tags on each build and the `v2_*` tables can go.

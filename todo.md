@@ -18,6 +18,4 @@ Work not done yet. Kaptain's requests in his own words where he gave them. Remov
    - Supply: plain supply units (Supply +1) stay allowed in every faction (needed for self-sufficiency); supply as a mechanic (Treasury-style) is a signature. Claude's suggestion, not agreed.
    - Horde (E2): wins with its big units (measured), so self-harm must feed the big units.
    - Not yet applied: Blitz Ambush loop (Ambush, Fall Back, Reserves, Momentum), Bastion defence web (Cover, Unbroken, Brace, Answering Fire, Palisades), Pierce removed, Gravity as a swap of the enemy front unit with the one behind.
-10. **Library improvements.** The open work, in order, is the list at the end of `library/README.md` (it includes item 11; item 12 is open here only: the cases are made, their cards' tags are not yet checked).
-11. **Library: rebuild only the games worked on.** "Do you do changes that affect all games? If not, what is the purpose of full rebuilds? (I assume they are full because they take a long time). Can you rebuild only the games on whom you work?"
-12. **Library: real-world cases.** "If you need more real world cases (I cant imagine something less than archetypes and signatures and splash for EACH faction for EACH game, and a good amount of combos, of course where info exists as not all games have so much info available), then make them. and make sure all current and new cases are tagged correctly."
+10. **Library improvements.** The open work, in order, is the list at the end of `library/README.md`.

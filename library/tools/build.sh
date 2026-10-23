@@ -1,13 +1,16 @@
 #!/bin/sh
 # The library build: one chain of steps from the frozen base tagging (make_base.py), the card data and the record files.
 # Loads add cards first (load_cards.py). fixes/ holds the three idempotent fix steps (f03, f05, f07).
-# Usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]
+# Usage: build.sh [--only <game>,...] <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]
+#   --only: the steps run on those games (and the loaded ones) alone, every other game's rows are copied unchanged
+#   (only_games.py); the checks after the steps still run on every game.
 #   One chain (21 Oct 2026): the first step removes every derived tag and pair, so the output depends only on the card data,
 #   the record files and the tools, never on an earlier build. With loads, the new cards are added first, then every step runs
 #   over all games. To reload a game, drop it first (drop_game.py).
 #   Any failed check stops the build.
 set -e
-[ $# -ge 2 ] || { echo "usage: build.sh <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]"; exit 2; }
+ONLY=""; if [ "$1" = "--only" ]; then ONLY=$(echo "$2" | tr ',' ' '); shift 2; fi
+[ $# -ge 2 ] || { echo "usage: build.sh [--only <game>,...] <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]"; exit 2; }
 IN=$(readlink -f "$1"); OUT=$(readlink -f "$2"); shift 2
 LOADS=""; for a in "$@"; do LOADS="$LOADS ${a%%=*}=$(readlink -f "${a#*=}")"; done; set -- $LOADS   # load paths relative to the caller
 cd "$(dirname "$0")"
@@ -51,7 +54,12 @@ steps() {   # $1 = db
   run fixes/f05_factions.py "$D"
   run distinct.py "$D"
 }
-rm -f "$OUT" "$OUT.steps.tsv" "$OUT.work.steps.tsv"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the full form of the stored database (indexes.py)
+rm -f "$OUT" "$OUT.steps.tsv" "$OUT.work.steps.tsv" "$OUT.part" "$OUT.part.steps.tsv"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the full form of the stored database (indexes.py)
+FULL="$OUT"
+if [ -n "$ONLY" ]; then   # the steps work on a copy with only these games
+  ONLY="$ONLY $(for a in "$@"; do echo "${a%%=*}"; done | tr '\n' ' ')"
+  $P compact_text.py "$FULL" expand; $P only_games.py split "$FULL" "$OUT.part" $ONLY; OUT="$OUT.part"
+fi
 if [ $# -gt 0 ]; then   # loads: the new cards go into the library copy, then every step runs over all games (one chain)
   GAMES=$(for a in "$@"; do echo "${a%%=*}"; done | sort -u | tr '\n' ' ')
   $P compact_text.py "$OUT" expand; $P concept_tree.py "$OUT" restore   # old ids, as the patterns read them
@@ -60,6 +68,7 @@ if [ $# -gt 0 ]; then   # loads: the new cards go into the library copy, then ev
 fi
 steps "$OUT"
 $P step_log.py "$OUT" --done
+if [ -n "$ONLY" ]; then $P only_games.py merge "$FULL" "$OUT" $ONLY; if [ -f "$OUT.steps.tsv" ]; then mv "$OUT.steps.tsv" "$FULL.steps.tsv"; fi; rm -f "$OUT"; OUT="$FULL"; fi
 $P signature.py "$OUT"
 $P precision.py "$OUT"
 $P finalize.py "$OUT"

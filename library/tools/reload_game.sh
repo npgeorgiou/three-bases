@@ -7,4 +7,4 @@ cp ../three-bases-library.sqlite "$S/reload_in.sqlite"; $P indexes.py "$S/reload
 L=""
 for g in "$@"; do $P export_game.py "$S/reload_in.sqlite" "$g" "$S/reload_$g"; $P drop_game.py "$S/reload_in.sqlite" "$g" --reload; L="$L $g=$S/reload_${g}_kw.json $g=$S/reload_$g.json"; done
 $P compact_text.py "$S/reload_in.sqlite" compact >/dev/null
-sh build.sh "$S/reload_in.sqlite" "$S/reloaded.sqlite" $L
+sh build.sh --only "$(echo "$@" | tr ' ' ',')" "$S/reload_in.sqlite" "$S/reloaded.sqlite" $L   # only the reloaded games are rebuilt

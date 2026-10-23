@@ -48,7 +48,7 @@ orig = set(byname)
 seen = set(q("SELECT name, faction FROM entities WHERE game=?", G))
 import reading as RD; STRIP = d.get('_strip_reminder', False) or G in RD.NO_REMINDER; FIELD = d.get('_keywords_from_field', False)
 NAMED = re.compile(r'\bnamed ' + '(' + '|'.join(re.escape(x.lower()) for x in sorted(byname, key=len, reverse=True) if len(x) >= 4) + r')\b') if byname else re.compile(r'(?!x)x')
-nid = q('SELECT max(id) FROM entities')[0][0] + 1
+nid = max(q('SELECT coalesce(max(id), 0) FROM entities')[0][0], *(m for m, in (q('SELECT max_id FROM only_games_ids') if q("SELECT 1 FROM sqlite_master WHERE name='only_games_ids'") else []))) + 1   # build.sh --only: above every game's ids
 n = skipped = 0; new_ids = []
 for card in d['cards']:
     name = card['name']
