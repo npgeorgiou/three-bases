@@ -1,7 +1,8 @@
 #!/bin/sh
 # The library build: one chain of steps from the frozen base tagging (make_base.py), the card data and the record files.
 # Loads add cards first (load_cards.py). fixes/ holds the three idempotent fix steps (f03, f05, f07).
-# Usage: build.sh [--only <game>,...] <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]
+# Usage: build.sh [--only <game>,...] <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]   or   build.sh --steps <db>
+#   --steps: run only the steps on <db> in place, no checks (game_check.sh uses it on a one-game copy)
 #   --only: the steps run on those games (and the loaded ones) alone, every other game's rows are copied unchanged
 #   (only_games.py); the checks after the steps still run on every game.
 #   One chain (21 Oct 2026): the first step removes every derived tag and pair, so the output depends only on the card data,
@@ -9,6 +10,7 @@
 #   over all games. To reload a game, drop it first (drop_game.py).
 #   Any failed check stops the build.
 set -e
+STEPS=""; if [ "$1" = "--steps" ]; then STEPS=$(readlink -f "$2"); set -- "$STEPS" "$STEPS"; fi   # --steps <db>: only the steps, in place (game_check.sh)
 ONLY=""; if [ "$1" = "--only" ]; then ONLY=$(echo "$2" | tr ',' ' '); shift 2; fi
 [ $# -ge 2 ] || { echo "usage: build.sh [--only <game>,...] <in.sqlite> <out.sqlite> [<game>=<cards.json> ...]"; exit 2; }
 IN=$(readlink -f "$1"); OUT=$(readlink -f "$2"); shift 2
@@ -54,6 +56,7 @@ steps() {   # $1 = db
   run fixes/f05_factions.py "$D"
   run distinct.py "$D"
 }
+if [ -n "$STEPS" ]; then steps "$STEPS"; $P step_log.py "$STEPS" --done; exit 0; fi
 rm -f "$OUT" "$OUT.steps.tsv" "$OUT.work.steps.tsv" "$OUT.part" "$OUT.part.steps.tsv"; cp "$IN" "$OUT"; $P indexes.py "$OUT" create   # the full form of the stored database (indexes.py)
 FULL="$OUT"
 if [ -n "$ONLY" ]; then   # the steps work on a copy with only these games

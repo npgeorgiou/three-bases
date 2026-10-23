@@ -166,9 +166,11 @@ game's rules and terms as `# term:` lines with their source (`(assumed)` where n
    possible. The goal is not to make the tags agree with the key and cases artificially, but to find entry tagging errors and fix
    them, so the whole game's tagging gets better. Keep an open mind that the key and the cases may sometimes be wrong. Find the
    reasons why the game's tags and the key or cases disagree, and improve the entry tagging. Fix the regexes of the mechanics
-   (the ```mechanics block of `tools/games/<game>.md`) first, then the gaps in `tools/patterns/<game>.txt`. Then
-   `sh tools/reload_game.sh <scratch> <game>`, `compare_builds.py`, and re-run `key_patterns.py` for the game. After every
-   change: run `compare_builds.py`, copy the build over `three-bases-library.sqlite`, then commit and push.
+   (the ```mechanics block of `tools/games/<game>.md`) first, then the gaps in `tools/patterns/<game>.txt`.
+   **Every try: `sh tools/game_check.sh <scratch> <game>`** (about 20 s: the build's steps on a one-game copy, then the game's
+   coverage, key score and real-world cases; its unchanged result equals the library's). Never run a full reload or
+   `compare_builds.py` per try. Once per game, at the end: `sh tools/reload_game.sh <scratch> <game>`, `compare_builds.py`,
+   re-run `key_patterns.py` for the game, copy the build over `three-bases-library.sqlite`, then commit and push.
    One game per pass, starting with `python3 tools/coverage.py three-bases-library.sqlite <game> 0 --mechanics tools/games/<game>.md`.
    At the end of each game's pass, add whatever this work found that fits the game file (`tools/games/<game>.md`: rules and terms,
    faction facts, notes on the key or the cases) there.
