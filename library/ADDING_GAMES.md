@@ -14,13 +14,13 @@ Read this whole file before you add a game.
    board rule the game has, with the page it comes from. Use the built-in browser for pages WebFetch cannot read (fandom wikis,
    pages behind scripts). This is the checklist the patterns are measured against; a thin checklist hides gaps.
 1. From that research, write every mechanic it names,
-   with the expected concept and the wording to look for, into `tools/mechanics/<game>.txt` (`name|concept|regex`, source URL in
+   with the expected concept and the wording to look for, into the ```mechanics block of `tools/games/<game>.md` (`name|concept|regex`, source URL in
    a comment). Write the real-world cases (section 6) from the same pages now, so tagging and test read the same sources.
 2. Read a random sample of about 300 cards in one go (a script prints `name|faction|text`, one line each, about 20k tokens), or
    all cards when the game has fewer than 500. Note the game's wording families ("exhaust a unit", "When Defeated:", "Apply Rage 3")
    and what each does. Guides are a checklist, not the whole game: the sample shows the wording the patterns must read.
 3. Convert and load (sections 1-2), write the patterns (section 3) from the sample and the checklist.
-4. After the build, run `tools/coverage.py <db> <game> 40 --mechanics tools/mechanics/<game>.txt`. It prints, per faction, how
+4. After the build, run `tools/coverage.py <db> <game> 40 --mechanics tools/games/<game>.md`. It prints, per faction, how
    many cards show each listed mechanic and how many carry the expected concept, and the clauses no pattern reads grouped by their
    first words. A GAP line is a missing pattern or a later build step that removed the tag; a frequent unread clause is a
    mechanic nobody listed. Fix and rebuild (insert-only, two minutes).
@@ -104,8 +104,8 @@ Read this whole file before you add a game.
 
 ## 6. Finish
 1. All build checks must pass: regression, combos, trigger pairs, query tests, realworld.
-2. Make the real-world cases as `tools/realworld/RESEARCH.md` says: a source summary `tools/realworld/<game>.md`, then the cases
-   `<game>.tsv` (signatures, archetypes, combos, splashes in the library's own names). They are the real test: run
+2. Make the real-world cases as `tools/realworld/RESEARCH.md` says: a source summary in `tools/games/<game>.md`, then the cases
+   in its ```tsv block (signatures, archetypes, combos, splashes in the library's own names). They are the real test: run
    `realworld_why.py` and fix what misses before finishing.
 3. Check the database size. GitHub refuses files over 100 MB; the database is stored compact (`compact_text.py`) and without its indexes (`indexes.py`), about 55 MB (`indexes.py` also keeps the frozen base only as its differences from the output).
 4. Copy the build over `three-bases-library.sqlite`, then commit and push after each step together with its progress files, keys and decisions.
@@ -119,7 +119,7 @@ pattern look right, or a right one look wrong. So the key must be read with ever
 gap in the game block is a gap in every score of that game.
 
 **Before reading: no undefined keyword or term.** Every keyword the game has needs a definition in the game block: its entry's
-text, or a `# term:` line in `tools/mechanics/<game>.txt`. Research each missing one in the game's rules pages and wikis (several
+text, or a `# term:` line in the ```mechanics block of `tools/games/<game>.md`. Research each missing one in the game's rules pages and wikis (several
 sources if the first lacks it). If no source defines it, write the definition from game knowledge and common sense, marked
 `(assumed)` (Kaptain's decision). `key.py read` refuses to write the request while any keyword is undefined.
 
@@ -136,7 +136,7 @@ for tagging. Where cards must be read (an answer key, a review, judging a patter
 2. `python3 library/tools/key/key.py read <game>` writes the one request, `tools/key/<game>/read.txt`: the reading rules, the
    game block and the cards. The game block is everything the library holds about how the game is played: the rules summary
    (`games.structure`, `games.notes`), the keyword glossary (the game's `keyword` entries), factions, card types and tribes, the
-   game's mechanics file (`tools/mechanics/<game>.txt`: the mechanics its guides name, and its rules and terms as `# term:` lines,
+   game's mechanics (the ```mechanics block of `tools/games/<game>.md`: the mechanics its guides name, and its rules and terms as `# term:` lines,
    sourced, only facts the pages state), and the concept definitions with their "Not:" lines (`tools/key/defs.txt`). Keep the
    mechanics file as full as the game's rules pages allow before reading. Cards are `<ids>|<name>: <text>` lines; identical cards are sent once.
 3. One fresh process reads `read.txt` once and writes `tools/key/<game>/answer.txt`: one line per card line,

@@ -23,7 +23,7 @@ A key concept is missed when no library tag is that concept, a descendant of it,
 branches and the roots. An older database is scored after its tags are moved through the Step 1 map (concept_tree.py)."""
 import json, os, random, re, sqlite3, sys, glob, collections
 HERE = os.path.dirname(os.path.abspath(__file__)); TOOLS = os.path.dirname(HERE)
-sys.path.insert(0, TOOLS)
+sys.path.insert(0, TOOLS); import games as GM
 from concept_tree import TREE, targets, MAP, REMOVED
 DB = os.environ.get('TB_LIB', os.path.join(os.path.dirname(TOOLS), 'three-bases-library.sqlite'))
 NOT_IN_KEY = {l.strip() for l in open(os.path.join(HERE, 'added_concepts.txt'), encoding='utf-8') if l.strip() and not l.startswith('#')} if os.path.exists(os.path.join(HERE, 'added_concepts.txt')) else set()
@@ -116,9 +116,9 @@ def block(g):
     if fs: out += ['', '## Factions (cards)'] + ['- %s (%s)' % f for f in fs]
     ts = [n for n, in c.execute("SELECT name FROM entities WHERE game=? AND category='tribe' ORDER BY name", (g,))]
     if ts: out += ['', '## Card types and tribes', ', '.join(ts)]
-    mf = os.path.join(TOOLS, 'mechanics', g + '.txt')   # the game's mechanics file: its rules and terms, and the mechanics its guides name
+    mf = GM.path(g)   # the game's mechanics file: its rules and terms, and the mechanics its guides name
     if os.path.exists(mf):
-        ls = [l.rstrip('\n') for l in open(mf, encoding='utf-8')]
+        ls = [l.rstrip('\n') for l in GM.block(mf, 'mechanics')]
         ts = [l[len('# term: '):] for l in ls if l.startswith('# term: ')]
         if ts: out += ['', '## Rules and terms'] + ['- ' + t for t in ts]
         ms = [l.split('|')[0].strip() for l in ls if l.strip() and not l.startswith('#')]
@@ -141,11 +141,11 @@ def card_lines(g, part):
 def undefined(g):
     """Refuse to read while a keyword of the game has no definition: neither its entry's text nor a '# term:' line of the
     mechanics file explains it (the reading would then tag it from guesses). --force reads anyway."""
-    mf = os.path.join(TOOLS, 'mechanics', g + '.txt')
-    terms = {norm(l[len('# term: '):].split(':')[0].split(' (')[0]) for l in open(mf, encoding='utf-8') if l.startswith('# term: ')} if os.path.exists(mf) else set()
+    mf = GM.path(g)
+    terms = {norm(l[len('# term: '):].split(':')[0].split(' (')[0]) for l in GM.block(mf, 'mechanics') if l.startswith('# term: ')} if os.path.exists(mf) else set()
     miss = [n for n, t in db().execute("SELECT name, text FROM entities WHERE game=? AND category='keyword'", (g,)) if not (t or '').strip() and norm(n) not in terms]
     if miss and '--force' not in sys.argv:
-        sys.exit(g + ': keywords without a definition (research them, or assume from game knowledge, into tools/mechanics/' + g + '.txt): ' + ', '.join(sorted(miss)))
+        sys.exit(g + ': keywords without a definition (research them, or assume from game knowledge, into the ```mechanics block of tools/games/' + g + '.md): ' + ', '.join(sorted(miss)))
 
 PART = 200   # card lines per cards file: each file and read.txt can be read in one go
 def read(g, part=''):

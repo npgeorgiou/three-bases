@@ -123,13 +123,13 @@ cases newly met or missed, and the trigger -> effect pairs lost (`lost_pairs.py`
 Against the original library (`git show c7a77a4:library/three-bases-library.sqlite`): `final_compare.py <orig> <new> check`.
 
 **Real-world cases** are the benchmark of the queries: facts that wikis and guides state about a game (a faction's signature
-mechanic, its archetype, a mechanic it uses a little, a two-card combo). Per game, `tools/realworld/<game>.md` summarises the
-sources and `<game>.tsv` holds the cases written from it, as `tools/realworld/RESEARCH.md` says: 859 cases, 499 met
+mechanic, its archetype, a mechanic it uses a little, a two-card combo). Per game, `tools/games/<game>.md` holds the game's overview and factions,
+the source summary and, in its ```tsv block, the cases written from it, as `tools/realworld/RESEARCH.md` says: 859 cases, 499 met
 (`REALWORLD_REPORT.md`, made by `realworld_report.py`). Why a case misses: `realworld_why.py <db>`. A miss is fixed only when the
 cards' text supports the case, through the game's patterns; misses of lift, of archetype bundles or of cards the library lacks
 are measurement or data, not tagging.
 
-**Mechanics files** (`tools/mechanics/<game>.txt`, every game): the mechanics the guides name as `name|concept|regex`, and the
+**Mechanics** (the ```mechanics block of `tools/games/<game>.md`, every game): the mechanics the guides name as `name|concept|regex`, and the
 game's rules and terms as `# term:` lines with their source (`(assumed)` where no source has it), read by `coverage.py
 --mechanics` and by `key.py read`.
 
@@ -156,7 +156,7 @@ game's rules and terms as `# term:` lines with their source (`(assumed)` where n
 - Some faction-signature mechanics are generic for factions whose own keyword maps to a concept every faction uses (Magic Black's Fear = evasion); the keyword signature shows them.
 
 ## Improving the library: the open work, in order
-1. **Check the patterns against the mechanics files.** The regexes in `tools/mechanics/<game>.txt` are not yet run for the 13
+1. **Check the patterns against the mechanics files.** The regexes in the ```mechanics blocks of `tools/games/<game>.md` are not yet run for the 13
    games whose files came from the real-world sources (darkest_dungeon, duelyst, gwent, hearthstone, hs_battlegrounds,
    marvel_snap, mtg, runeterra, shadowverse, sts1, sts2, wh_40k_10e, wh_aos_4th). For each game: `coverage.py --mechanics`,
    fix the regexes that miss the cards' wording, then the gaps in its patterns, reload it (`reload_game.sh`), keep only if

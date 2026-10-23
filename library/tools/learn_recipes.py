@@ -1,4 +1,4 @@
-"""Learn archetype recipes from the real-world archetype cases (tools/realworld/*.tsv). Each game's archetype cases are split in
+"""Learn archetype recipes from the real-world archetype cases (the ```tsv blocks of tools/games/*.md). Each game's archetype cases are split in
 two halves (seed 1): the build half teaches, the test half only measures.
 For an archetype, an ingredient's weight is how much more the factions the build half calls that archetype use the mechanic than
 the average faction of the same games (mean over-representation from table faction_concept_ov, signature.py); the 12 heaviest
@@ -6,12 +6,11 @@ positive ingredients make the recipe. Archetypes without build cases keep their 
 then signature.py must run again. Prints the test half met with the fixed concepts and with the recipes.
 Usage: learn_recipes.py <db> [measure]   (measure: only print the test-half result of the current faction_archetypes)"""
 import collections, csv, glob, os, random, sqlite3, sys
-HERE = os.path.dirname(os.path.abspath(__file__)); db = sys.argv[1]
+HERE = os.path.dirname(os.path.abspath(__file__)); db = sys.argv[1]; sys.path.insert(0, HERE); import games
 c = sqlite3.connect(db); q = lambda s, *a: c.execute(s, a).fetchall()
 build, test = [], []
-for fn in sorted(glob.glob(os.path.join(HERE, 'realworld', '*.tsv'))):
-    g = os.path.basename(fn)[:-4]
-    rows = [(g, r[1].strip(), r[2].strip()) for r in csv.reader(open(fn, encoding='utf-8'), delimiter='\t') if len(r) > 2 and r[0].strip() == 'archetype']
+for g, fn in games.files():
+    rows = [(g, r[1].strip(), r[2].strip()) for r in csv.reader(games.block(fn, 'tsv'), delimiter='\t') if len(r) > 2 and r[0].strip() == 'archetype']
     random.Random(1).shuffle(rows); h = len(rows) // 2
     build += rows[:h]; test += rows[h:]
 met = lambda rows: sum(1 for g, f, a in rows if q('SELECT 1 FROM faction_archetypes WHERE game=? AND faction=? AND archetype=? AND lift>1', g, f, a))

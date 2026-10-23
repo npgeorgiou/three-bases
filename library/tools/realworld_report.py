@@ -1,4 +1,4 @@
-"""Readable report of the real-world test: every case of tools/realworld/*.tsv with its result, the number behind it and its source.
+"""Readable report of the real-world test: every case of the ```tsv blocks of tools/games/*.md with its result, the number behind it and its source.
   signature  the faction's cards with the concept, how many times the rest of the game's share that is, the chance test, and
              its rank among the game's factions (combined factions counted in each of theirs, as signature.py counts)
   archetype  the faction's recipe score over the average of the game's other factions (counts at 1.5)
@@ -8,7 +8,7 @@ Writes library/REALWORLD_REPORT.md (or the path given). Usage: realworld_report.
 import collections, csv, glob, os, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); db = sys.argv[1]
 out = sys.argv[2] if len(sys.argv) > 2 else os.path.join(os.path.dirname(HERE), 'REALWORLD_REPORT.md')
-os.environ['TB_LIB'] = os.path.abspath(db); sys.path.insert(0, HERE); import query as Qy
+os.environ['TB_LIB'] = os.path.abspath(db); sys.path.insert(0, HERE); import query as Qy, games
 c = sqlite3.connect(db); q = lambda s, *a: c.execute(s, a).fetchall()
 desc = collections.defaultdict(set); anc = collections.defaultdict(set)
 for r, i in q('SELECT root, id FROM concept_tree'): desc[r].add(i); anc[i].add(r)
@@ -26,9 +26,8 @@ def share(g, ks):
     return fac, len(allc), ids
 
 rows, tot, met, why = [], collections.Counter(), collections.Counter(), collections.Counter()
-for fn in sorted(glob.glob(os.path.join(HERE, 'realworld', '*.tsv'))):
-    g = os.path.basename(fn)[:-4]
-    for row in csv.reader(open(fn, encoding='utf-8'), delimiter='\t'):
+for g, fn in games.files():
+    for row in csv.reader(games.block(fn, 'tsv'), delimiter='\t'):
         if len(row) < 3 or row[0].startswith('#'): continue
         t, a, b = (x.strip() for x in row[:3]); note = row[3].strip() if len(row) > 3 else ''; url = row[-1].strip() if row[-1].startswith('http') else ''
         if t == 'signature':

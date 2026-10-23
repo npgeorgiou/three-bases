@@ -1,4 +1,4 @@
-"""Why real-world cases miss (20 Oct 2026). For every case of tools/realworld/*.tsv that realworld.py does not meet, the reason:
+"""Why real-world cases miss (20 Oct 2026). For every case of the ```tsv blocks of tools/games/*.md that realworld.py does not meet, the reason:
   signature  no card of the faction has the concept / only 1-4 cards have it / used, but not more than the game's other factions
   splash     missing from the faction's splash list
   archetype  not above the game average (lift < 1.25 in faction_archetypes)
@@ -7,7 +7,7 @@ Tagging can fix only the first two signature reasons and 'no connection'; the ot
 archetype concept bundles) or missing cards. Prints counts and every case per reason. Usage: realworld_why.py <db>"""
 import collections, csv, glob, os, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); db = sys.argv[1]
-os.environ['TB_LIB'] = os.path.abspath(db); sys.path.insert(0, HERE); import query as Qy
+os.environ['TB_LIB'] = os.path.abspath(db); sys.path.insert(0, HERE); import query as Qy, games
 c = sqlite3.connect(db); q = lambda s, *a: c.execute(s, a).fetchall()
 desc = collections.defaultdict(set); anc = collections.defaultdict(set)
 for r, i in q('SELECT root, id FROM concept_tree'): desc[r].add(i); anc[i].add(r)
@@ -15,9 +15,8 @@ GROUPS = {'effect', 'helps_me', 'hurts_enemy', 'drawback', 'game_rules'} | {i fo
 near = lambda k: desc[k] | (anc[k] - GROUPS) | {k}
 facs = {(g, f) for g, f in q('SELECT DISTINCT game, faction FROM entities WHERE faction IS NOT NULL')}
 why = collections.Counter(); ex = collections.defaultdict(list)
-for fn in sorted(glob.glob(os.path.join(HERE, 'realworld', '*.tsv'))):
-    g = os.path.basename(fn)[:-4]
-    for row in csv.reader(open(fn, encoding='utf-8'), delimiter='\t'):
+for g, fn in games.files():
+    for row in csv.reader(games.block(fn, 'tsv'), delimiter='\t'):
         if len(row) < 3 or row[0].startswith('#'): continue
         t, a, b = row[0].strip(), row[1].strip(), row[2].strip()
         if t == 'signature':

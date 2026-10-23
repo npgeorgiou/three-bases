@@ -7,7 +7,7 @@ show the mechanic's wording, and how many of those carry the expected concept (o
 whose cards show the wording but lack the concept is a tagging gap (a missing pattern, or a later build step that removed it).
 Usage: coverage.py <db> <game> [top_n] [--mechanics <file>] [--keywords]   (top_n 0: only the mechanics)"""
 import collections, os, re, sqlite3, sys
-HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE); import reading as RD
+HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE); import reading as RD, games as G_
 args = [a for a in sys.argv[1:] if not a.startswith('--')]; db, G = args[:2]; top = int(args[2]) if len(args) > 2 and args[2].isdigit() else 40
 c = sqlite3.connect(db); q = lambda s, *a: c.execute(s, a).fetchall()
 pats = []
@@ -37,7 +37,7 @@ if '--mechanics' in sys.argv:
     mf = sys.argv[sys.argv.index('--mechanics') + 1]
     tree = collections.defaultdict(set)
     for r_, i_ in q('SELECT root, id FROM concept_tree'): tree[r_].add(i_)
-    for ln in open(mf, encoding='utf-8'):
+    for ln in G_.block(mf, 'mechanics'):
         if not ln.strip() or ln.startswith('#'): continue
         name, con, rx = ln.rstrip('\n').split('|', 2); r = re.compile(rx, re.I)
         want = tree.get(con, {con})

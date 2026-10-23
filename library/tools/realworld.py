@@ -1,4 +1,4 @@
-"""Step 7: real-world test cases (tools/realworld/<game>.tsv, from wikis and guides, each with its source URL) checked against
+"""Step 7: real-world test cases (the ```tsv block of tools/games/<game>.md, from wikis and guides, each with its source URL) checked against
 the library. Build check that reports how many cases are met per game (the final comparison needs final >= original).
   signature  faction, concept     met when the faction's signature (or keyword signature) concepts include it, a narrower or
                                   a broader one below the four branches
@@ -9,16 +9,15 @@ Usage: realworld.py <db> [-v]"""
 import csv, glob, os, sqlite3, sys, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 db = sys.argv[1]; os.environ['TB_LIB'] = os.path.abspath(db); sys.path.insert(0, HERE)
-import query as Qy
+import query as Qy, games
 c = sqlite3.connect(db); q = lambda s, *a: c.execute(s, a).fetchall()
 desc = collections.defaultdict(set); anc = collections.defaultdict(set)
 for r, i in q('SELECT root, id FROM concept_tree'): desc[r].add(i); anc[i].add(r)
 GROUPS = {'effect', 'helps_me', 'hurts_enemy', 'drawback', 'game_rules'} | {i for i, in q('SELECT id FROM concepts WHERE id NOT IN (SELECT child FROM concept_parents)')}
 def near(k): return desc[k] | (anc[k] - GROUPS)
 tot = collections.Counter(); met = collections.Counter(); miss = []
-for f in sorted(glob.glob(os.path.join(HERE, 'realworld', '*.tsv'))):
-    g = os.path.basename(f)[:-4]
-    for row in csv.reader(open(f, encoding='utf-8'), delimiter='\t'):
+for g, f in games.files():
+    for row in csv.reader(games.block(f, 'tsv'), delimiter='\t'):
         if len(row) < 3 or row[0].startswith('#'): continue
         t, a, b = row[0].strip(), row[1].strip(), row[2].strip(); ok = False
         if t == 'signature':
