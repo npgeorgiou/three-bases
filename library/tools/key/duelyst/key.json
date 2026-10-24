@@ -1004,6 +1004,14 @@
 [
 "direct_damage",
 "deal 1 damage to the enemy General"
+],
+[
+"merge_attach",
+"Whenever you cast a spell, deal 1 damage to the enemy General"
+],
+[
+"buff",
+"Whenever you cast a spell, deal 1 damage to the enemy General"
 ]
 ],
 "by": "A=B"
@@ -1069,6 +1077,10 @@
 [
 "adjacency",
 "nearby space"
+],
+[
+"summon",
+"Summon a copy of this minion"
 ]
 ],
 "by": "C",
@@ -1303,6 +1315,10 @@
 [
 "multi_target_attack",
 "Blast"
+],
+[
+"merge_attach",
+"Your General gains Blast"
 ]
 ],
 "by": "A=B"
@@ -1544,6 +1560,14 @@
 [
 "heal",
 "restore 2 Health to your General"
+],
+[
+"merge_attach",
+"Your General gains +2 Attack"
+],
+[
+"buff",
+"Your General gains +2 Attack"
 ]
 ],
 "by": "A=B"
@@ -2097,6 +2121,10 @@
 [
 "tutor",
 "Draw a Vespyr minion from your deck"
+],
+[
+"tribal",
+"Draw a Vespyr minion from your deck"
 ]
 ],
 "by": "A=B"
@@ -2114,6 +2142,14 @@
 [
 "adjacency",
 "around them"
+],
+[
+"merge_attach",
+"At the end of your turn, your General deals 2 damage to each enemy minion around them"
+],
+[
+"buff",
+"At the end of your turn, your General deals 2 damage to each enemy minion around them"
 ]
 ],
 "by": "A=B"
@@ -3099,6 +3135,14 @@
 [
 "terrain",
 "Exhuming Sand"
+],
+[
+"merge_attach",
+"Whenever your General destroys an enemy, turn that space into Exhuming Sand"
+],
+[
+"buff",
+"Whenever your General destroys an enemy, turn that space into Exhuming Sand"
 ]
 ],
 "by": "A=B"
@@ -3145,6 +3189,10 @@
 [
 "condition_count",
 "If you have another Wraithling"
+],
+[
+"tribal",
+"If you have another Wraithling"
 ]
 ],
 "by": "A=B"
@@ -3162,6 +3210,14 @@
 [
 "temporary_effect",
 "until the end of your turn"
+],
+[
+"merge_attach",
+"After your General damages a minion, reactivate and take control of it until the end of your turn"
+],
+[
+"buff",
+"After your General damages a minion, reactivate and take control of it until the end of your turn"
 ]
 ],
 "by": "A=B"
@@ -4696,6 +4752,10 @@
 [
 "on_kill",
 "If it dies"
+],
+[
+"tribal",
+"put a random Battle Pet into your action bar"
 ]
 ],
 "by": "A=B"
@@ -4730,6 +4790,14 @@
 [
 "terrain",
 "Shadow Creep"
+],
+[
+"merge_attach",
+"Your General gains +1 Attack for each friendly Shadow Creep"
+],
+[
+"buff",
+"Your General gains +1 Attack for each friendly Shadow Creep"
 ]
 ],
 "by": "C"
@@ -4832,6 +4900,10 @@
 [
 "buff",
 "Infiltrate"
+],
+[
+"tribal",
+"put a random Battle Pet into your action bar"
 ]
 ],
 "by": "A=B",
@@ -4940,6 +5012,14 @@
 [
 "summon",
 "summon a 3/3 Blazing Spine Wall"
+],
+[
+"merge_attach",
+"Your General gains +3 Attack"
+],
+[
+"buff",
+"Your General gains +3 Attack"
 ]
 ],
 "by": "A=B"
@@ -4957,6 +5037,10 @@
 [
 "random_effect",
 "random"
+],
+[
+"tribal",
+"Draw a random battle pet"
 ]
 ],
 "by": "C",
@@ -5035,6 +5119,10 @@
 [
 "autonomous_units",
 "Battle Pet"
+],
+[
+"tribal",
+"Activate a friendly Battle Pet"
 ]
 ],
 "by": "C",
@@ -5218,6 +5306,14 @@
 [
 "copy",
 "summon a copy of it"
+],
+[
+"merge_attach",
+"When your General destroys a minion, summon a copy of it nearby"
+],
+[
+"buff",
+"When your General destroys a minion, summon a copy of it nearby"
 ]
 ],
 "by": "A=B"
@@ -5282,6 +5378,14 @@
 [
 "permanent_growth",
 "Grow: +1/+1"
+],
+[
+"merge_attach",
+"Your minions have \"Grow: +1/+1"
+],
+[
+"buff",
+"Your minions have \"Grow: +1/+1"
 ]
 ],
 "by": "A=B"
@@ -5805,6 +5909,10 @@
 [
 "delayed",
 "Build"
+],
+[
+"permanent_growth",
+"Whenever this minion attacks, other friendly minions gain +3/+3"
 ]
 ],
 "by": "C",
@@ -5993,6 +6101,14 @@
 [
 "tribal",
 "Vespyr"
+],
+[
+"merge_attach",
+"Your General gains +2 Attack"
+],
+[
+"buff",
+"Your General gains +2 Attack"
 ]
 ],
 "by": "C"

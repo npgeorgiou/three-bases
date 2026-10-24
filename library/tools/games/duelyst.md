@@ -59,21 +59,22 @@ provoke|taunt|\bprovoke\b
 zeal|adjacency|\bzeal\b
 backstab|flanking|\bbackstab\b
 ranged|ranged|\branged\b
-rebirth|cheat_death|\brebirth\b
+rebirth|revive|\brebirth\b
 grow|permanent_growth|\bgrow\b
 infiltrate|territory_trigger|\binfiltrate\b
 deathwatch|other_death_trigger|\bdeathwatch\b
 shadow creep|terrain|\bshadow creep\b
 dying wish|death_trigger|\bdying wish\b
 opening gambit|on_play|\bopening gambit\b
-wraithlings|summon|\bwraithlings?\b
-dervish (short-lived)|self_destruct|\bdervish\b
-artifacts on the General|merge_attach|\bartifact\b
-displacement and teleport|movement|\bteleports?\b
+wraithlings|summon|\b(summon|make)s?\b[^.]{0,40}\bwraithlings?\b
+dervish (short-lived)|self_destruct|\bephemeral\b|\bdisappears at the end\b
+artifacts on the General|merge_attach|\bequip
+displacement and teleport (own units)|movement|\bteleport (a friendly|your general|it)\b|\bswitch positions\b|\bmay move an additional space\b
+displacement and teleport (enemies)|forced_movement|\bteleport (an? |that |the )?(random )?enemy\b|\bteleport them\b
 heal|heal|\brestore \d+ health\b
 dispel|silence|\bdispel\b
 stun|disable|\bstun\b
-walls|summon|\bwall\b
+walls|summon|\bsummon[^.]{0,40}\bwalls?\b
 # term: Zeal: a bonus while the minion is next to its General (Duelyst II store page: close-quarters fighters with Provoke and Zeal).
 # term: Infiltrate: a bonus while the minion is on the enemy's side of the board (assumed: the store page names Infiltrate without defining it).
 # term: Deathwatch: triggers when any minion dies (assumed: the store page says Abyssians profit from death through Deathwatch).
@@ -86,12 +87,10 @@ The real-world cases, one per line, tab-separated: `type  a  b  why  source` (se
 signature	Lyonar Kingdoms	taunt	Provoke	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Lyonar Kingdoms	adjacency	Zeal	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Lyonar Kingdoms	heal	healing	https://store.steampowered.com/app/2004320/Duelyst_II/
-signature	Lyonar Kingdoms	board_presence	strong board presence	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Songhai Empire	movement	displacement, extended movement	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Songhai Empire	ranged	ranged attacks	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Songhai Empire	flanking	Backstab	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Songhai Empire	on_spell	spell synergies	https://store.steampowered.com/app/2004320/Duelyst_II/
-signature	Songhai Empire	combo_sequence	chained combos	https://gamewave.fr/duelyst/duelyst-le-jeu-de-carte-aux-six-factions/
 signature	Vetruvian Imperium	summon	Dervish summons	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Vetruvian Imperium	self_destruct	short-lived Dervishes	https://store.steampowered.com/app/2004320/Duelyst_II/
 splash	Vetruvian Imperium	buff	buffs (Lyonar's specialty; Vetruvian's own buffs are the artifacts on the General)	https://store.steampowered.com/app/2004320/Duelyst_II/
@@ -102,7 +101,7 @@ signature	Abyssian Host	terrain	Shadow Creep	https://store.steampowered.com/app/
 signature	Abyssian Host	summon	Wraithlings	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Abyssian Host	board_presence	strong in numbers	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Magmar Aspects	permanent_growth	Grow	https://store.steampowered.com/app/2004320/Duelyst_II/
-signature	Magmar Aspects	cheat_death	Rebirth	https://store.steampowered.com/app/2004320/Duelyst_II/
+signature	Magmar Aspects	revive	Rebirth	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Vanar Kindred	territory_trigger	Infiltrate	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Vanar Kindred	removal	swift, precise removal	https://store.steampowered.com/app/2004320/Duelyst_II/
 archetype	Lyonar Kingdoms	sustain	healing, war of attrition	https://store.steampowered.com/app/2004320/Duelyst_II/
@@ -114,3 +113,19 @@ archetype	Magmar Aspects	scaling	Grow	https://store.steampowered.com/app/2004320
 archetype	Vanar Kindred	control	tactical control	https://gamewave.fr/duelyst/duelyst-le-jeu-de-carte-aux-six-factions/
 archetype	Vanar Kindred	positional	battlefield manipulation	https://store.steampowered.com/app/2004320/Duelyst_II/
 ```
+
+## Notes from the patterns check
+- Artifacts (category item) are deck cards equipped on the General: `merge_attach`, not `items_consumables`. What an artifact
+  gives the General is `buff` (and stat_gain or the keyword where it says so).
+- Rebirth (a Dying Wish that leaves an Egg, which hatches into the minion) is `revive`, not `cheat_death`.
+- Replace (put a card from the action bar back for a new one) is a redraw, not `recycle`; replacing the whole action bar is
+  `hand_deck_swap`. "Action bar" is the hand.
+- Celerity is `multi_attack`; Rush is `haste`; "in front of" is a grid space, not a lane; a space that turns into Shadow Creep or
+  Exhuming Sand is `terrain`, not `transform`. Transforming ANY minion is `polymorph` (and `transform`).
+- Tribal: a card that picks, counts or targets cards by tribe (a random Battle Pet, a Vespyr minion from your deck, another
+  Wraithling); summoning a named token of a tribe is not tribal.
+- Teleporting enemies is `forced_movement`; teleporting your own minions or General, swapping and extra move are `movement`.
+- Cases removed: Lyonar "strong board presence" (the store page says Provoke and Zeal give the presence; both are cases) and
+  Songhai `combo_sequence` (no card cares about play order; the store page's "damage combos" are the spell synergies).
+- Not met, and the card data does not support them: Songhai `ranged` (7 of 98 cards, the same share as Neutral) and
+  Vetruvian `debuff` (4 of 94 cards).

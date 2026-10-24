@@ -1,305 +1,115 @@
 game	entity	trigger	effect	removed tag	cause	key says the removed tag is
-darkest_dungeon	760689	passive	temporary_buff		pair no longer derived (both tags still there)	
-darkest_dungeon	760705	passive	stat_gain		pair no longer derived (both tags still there)	
-darkest_dungeon	760705	passive	temporary_buff		pair no longer derived (both tags still there)	
-darkest_dungeon	760719	passive	stat_gain		pair no longer derived (both tags still there)	
-darkest_dungeon	760719	passive	temporary_buff		pair no longer derived (both tags still there)	
-darkest_dungeon	760724	passive	stat_gain		pair no longer derived (both tags still there)	
-darkest_dungeon	760724	passive	temporary_buff		pair no longer derived (both tags still there)	
-darkest_dungeon	760733	passive	stat_gain		pair no longer derived (both tags still there)	
-darkest_dungeon	760733	passive	temporary_buff		pair no longer derived (both tags still there)	
-darkest_dungeon	760734	passive	stat_gain		pair no longer derived (both tags still there)	
-darkest_dungeon	760734	passive	temporary_buff		pair no longer derived (both tags still there)	
-duelyst	742164	on_kill	draw	draw	other: 	wrong
-faeria	741248	activated	ping		pair no longer derived (both tags still there)	
-gwent	756741	turn_start	copy		pair no longer derived (both tags still there)	
-gwent	756818	activated	damage_over_time	activated	other: 	
-hearthstone	745144	other_death_trigger	evasion	evasion	other: 	
-inscryption	740759	trap_secret	excess_damage	trap_secret	other: 	wrong
-inscryption	740897	turn_end	damage	damage	switch-off	right
-into_the_breach	760870	turn_start	damage	damage	other: 	right
-into_the_breach	760919	turn_start	damage	damage	other: 	right
-into_the_breach	761039	turn_start	damage	damage	other: 	right
-into_the_breach	761083	telegraphed_threats	evasion	evasion	switch-off	wrong
-into_the_breach	761083	telegraphed_threats	forced_movement	forced_movement	switch-off	wrong
-into_the_breach	761083	telegraphed_threats	summon	summon	other: 	wrong
-into_the_breach	761084	telegraphed_threats	evasion	evasion	switch-off	wrong
-into_the_breach	761084	telegraphed_threats	forced_movement	forced_movement	switch-off	wrong
-into_the_breach	761084	telegraphed_threats	summon	summon	other: 	wrong
-into_the_breach	761112	turn_start	forced_movement	forced_movement	switch-off	wrong
-into_the_breach	761112	turn_start	movement	movement	switch-off	wrong
-into_the_breach	761124	on_kill	upgrade	upgrade	other: 	wrong
-into_the_breach	761129	turn_start	upgrade	upgrade	other: 	wrong
-into_the_breach	761135	turn_start	damage	damage	other: 	right
-into_the_breach	761151	turn_start	damage	damage	other: 	right
-lorcana	816638	activated	upgrade	activated	other: text_pattern	
-lorcana	816656	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816670	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816670	death_trigger	banish		pair no longer derived (both tags still there)	
-lorcana	816675	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816675	delayed	disable	delayed	other: text_pattern	wrong
-lorcana	816709	activated	upgrade	activated	other: text_pattern	
-lorcana	816721	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816737	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816756	activated	upgrade	activated	other: text_pattern	
-lorcana	816772	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816782	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816808	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816826	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816853	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816856	activated	upgrade	activated	other: text_pattern	
-lorcana	816862	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816863	activated	upgrade	activated	other: text_pattern	
-lorcana	816878	activated	upgrade	activated	other: text_pattern	
-lorcana	816885	activated	upgrade		pair no longer derived (both tags still there)	
-lorcana	816894	activated	upgrade	activated	other: text_pattern	
-lorcana	816897	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	816909	activated	upgrade	activated	other: text_pattern	
-lorcana	816912	activated	upgrade		pair no longer derived (both tags still there)	
-lorcana	816914	activated	upgrade	activated	other: text_pattern	
-lorcana	816919	activated	upgrade	activated	other: text_pattern	
-lorcana	816947	activated	upgrade	activated	other: text_pattern	
-lorcana	816951	activated	upgrade	activated	other: text_pattern	
-lorcana	816957	activated	upgrade	activated	other: text_pattern	
-lorcana	816960	activated	upgrade	activated	other: text_pattern	
-lorcana	816970	delayed	evasion	delayed	other: text_pattern	
-lorcana	816975	activated	upgrade	activated	other: text_pattern	
-lorcana	816979	activated	upgrade	activated	other: text_pattern	
-lorcana	816982	activated	upgrade	activated	other: text_pattern	
-lorcana	816984	activated	upgrade	activated	other: text_pattern	
-lorcana	817010	activated	upgrade	activated	other: text_pattern	
-lorcana	817014	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817018	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817020	activated	upgrade	activated	other: text_pattern	
-lorcana	817048	activated	upgrade	activated	other: text_pattern	
-lorcana	817058	activated	upgrade	activated	other: text_pattern	
-lorcana	817083	activated	upgrade	activated	other: text_pattern	
-lorcana	817090	activated	upgrade	activated	other: text_pattern	
-lorcana	817115	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817119	death_trigger	banish		pair no longer derived (both tags still there)	
-lorcana	817121	activated	upgrade	activated	other: text_pattern	
-lorcana	817144	delayed	evasion	delayed	other: text_pattern	wrong
-lorcana	817157	activated	upgrade	activated	other: text_pattern	
-lorcana	817161	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817173	delayed	evasion	delayed	other: text_pattern	
-lorcana	817184	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817188	activated	upgrade	activated	other: text_pattern	
-lorcana	817219	activated	upgrade	activated	other: text_pattern	
-lorcana	817231	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817261	activated	upgrade	activated	other: text_pattern	
-lorcana	817267	activated	upgrade	activated	other: text_pattern	
-lorcana	817281	activated	upgrade	activated	other: text_pattern	
-lorcana	817303	activated	upgrade	activated	other: text_pattern	
-lorcana	817328	activated	upgrade	activated	other: text_pattern	
-lorcana	817332	activated	upgrade	activated	other: text_pattern	
-lorcana	817359	activated	upgrade	activated	other: text_pattern	
-lorcana	817370	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817385	activated	upgrade		pair no longer derived (both tags still there)	
-lorcana	817403	activated	upgrade	activated	other: text_pattern	
-lorcana	817420	activated	ping	activated	other: text_pattern	wrong
-lorcana	817420	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817432	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817492	activated	upgrade	activated	other: text_pattern	
-lorcana	817495	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817499	activated	upgrade	activated	other: text_pattern	
-lorcana	817515	activated	upgrade	activated	other: text_pattern	
-lorcana	817526	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817527	activated	upgrade	activated	other: text_pattern	
-lorcana	817556	activated	temporary_buff	activated	other: text_pattern	
-lorcana	817564	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817568	activated	upgrade	activated	other: text_pattern	
-lorcana	817572	activated	upgrade	activated	other: text_pattern	
-lorcana	817579	delayed	immunity	delayed	other: text_pattern	
-lorcana	817587	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817597	activated	upgrade		pair no longer derived (both tags still there)	
-lorcana	817603	activated	upgrade	activated	other: text_pattern	
-lorcana	817604	delayed	evasion	delayed	other: text_pattern	
-lorcana	817624	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817634	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817638	delayed	immunity	delayed	other: text_pattern	wrong
-lorcana	817639	activated	upgrade	activated	other: text_pattern	
-lorcana	817665	activated	upgrade	activated	other: text_pattern	
-lorcana	817672	activated	upgrade	activated	other: text_pattern	
-lorcana	817674	activated	upgrade	activated	other: text_pattern	
-lorcana	817693	activated	upgrade	activated	other: text_pattern	
-lorcana	817698	activated	upgrade	activated	other: text_pattern	
-lorcana	817704	activated	upgrade	activated	other: text_pattern	
-lorcana	817732	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817736	activated	upgrade	activated	other: text_pattern	
-lorcana	817745	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817747	delayed	disable	delayed	other: text_pattern	wrong
-lorcana	817751	delayed	temporary_buff	delayed	other: text_pattern	
-lorcana	817756	activated	upgrade	activated	other: text_pattern	
-lorcana	817757	activated	evasion	activated	other: text_pattern	
-lorcana	817768	activated	upgrade	activated	other: text_pattern	
-lorcana	817772	delayed	evasion	delayed	other: text_pattern	wrong
-lorcana	817775	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817787	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817789	delayed	evasion	delayed	other: text_pattern	
-lorcana	817803	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817805	activated	upgrade	activated	other: text_pattern	
-lorcana	817816	delayed	evasion	delayed	other: text_pattern	
-lorcana	817824	activated	upgrade	activated	other: text_pattern	
-lorcana	817830	delayed	evasion	delayed	other: text_pattern	
-lorcana	817834	activated	upgrade	activated	other: text_pattern	
-lorcana	817844	activated	upgrade	activated	other: text_pattern	
-lorcana	817860	activated	upgrade	activated	other: text_pattern	
-lorcana	817867	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817878	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817892	activated	upgrade		pair no longer derived (both tags still there)	
-lorcana	817900	death_trigger	banish		pair no longer derived (both tags still there)	
-lorcana	817911	activated	upgrade	activated	other: text_pattern	
-lorcana	817914	activated	upgrade	activated	other: text_pattern	
-lorcana	817916	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817919	delayed	temporary_buff	delayed	other: text_pattern	wrong
-lorcana	817923	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817942	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	817956	activated	upgrade	activated	other: text_pattern	
-lorcana	817957	activated	upgrade	activated	other: text_pattern	
-lorcana	817967	activated	upgrade	activated	other: text_pattern	
-lorcana	817983	activated	upgrade	activated	other: text_pattern	
-lorcana	817984	activated	upgrade	activated	other: text_pattern	
-lorcana	817992	activated	upgrade	activated	other: text_pattern	
-lorcana	817994	delayed	evasion	delayed	other: text_pattern	
-lorcana	818002	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818008	delayed	evasion	delayed	other: text_pattern	
-lorcana	818014	activated	upgrade	activated	other: text_pattern	
-lorcana	818029	activated	upgrade	activated	other: text_pattern	
-lorcana	818051	activated	upgrade	activated	other: text_pattern	
-lorcana	818112	activated	upgrade	activated	other: text_pattern	
-lorcana	818114	activated	upgrade	activated	other: text_pattern	
-lorcana	818116	activated	upgrade	activated	other: text_pattern	
-lorcana	818119	activated	upgrade	activated	other: text_pattern	
-lorcana	818122	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818158	activated	upgrade	activated	other: text_pattern	
-lorcana	818160	activated	upgrade	activated	other: text_pattern	
-lorcana	818163	activated	upgrade	activated	other: text_pattern	
-lorcana	818189	activated	upgrade	activated	other: text_pattern	
-lorcana	818195	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818198	activated	upgrade	activated	other: text_pattern	
-lorcana	818199	on_spell	drawback		pair no longer derived (both tags still there)	
-lorcana	818200	activated	upgrade	activated	other: text_pattern	
-lorcana	818230	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818233	activated	upgrade	activated	other: text_pattern	
-lorcana	818241	delayed	evasion	delayed	other: text_pattern	wrong
-lorcana	818262	activated	upgrade	activated	other: text_pattern	
-lorcana	818337	delayed	evasion	delayed	other: text_pattern	wrong
-lorcana	818343	activated	upgrade	activated	other: text_pattern	
-lorcana	818345	delayed	evasion	delayed	other: text_pattern	
-lorcana	818348	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818349	activated	upgrade	activated	other: text_pattern	
-lorcana	818380	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818386	activated	upgrade	activated	other: text_pattern	
-lorcana	818398	activated	upgrade	activated	other: text_pattern	
-lorcana	818398	death_trigger	banish		pair no longer derived (both tags still there)	
-lorcana	818416	activated	upgrade	activated	other: text_pattern	
-lorcana	818427	delayed	disable	delayed	other: text_pattern	
-lorcana	818447	activated	upgrade	activated	other: text_pattern	
-lorcana	818455	activated	upgrade	activated	other: text_pattern	
-lorcana	818477	activated	upgrade	activated	other: text_pattern	
-lorcana	818490	activated	upgrade		pair no longer derived (both tags still there)	
-lorcana	818511	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818515	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818534	activated	upgrade	activated	other: text_pattern	
-lorcana	818547	activated	upgrade	activated	other: text_pattern	
-lorcana	818559	activated	ping	activated	other: text_pattern	wrong
-lorcana	818581	activated	upgrade	activated	other: text_pattern	
-lorcana	818586	activated	upgrade	activated	other: text_pattern	
-lorcana	818599	delayed	evasion	delayed	other: text_pattern	
-lorcana	818609	delayed	disable	delayed	other: text_pattern	
-lorcana	818611	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818614	activated	upgrade	activated	other: text_pattern	
-lorcana	818628	delayed	evasion	delayed	other: text_pattern	
-lorcana	818644	delayed	evasion	delayed	other: text_pattern	wrong
-lorcana	818647	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818653	delayed	evasion	delayed	other: text_pattern	
-lorcana	818655	activated	upgrade	activated	other: text_pattern	
-lorcana	818659	delayed	evasion	delayed	other: text_pattern	
-lorcana	818678	activated	upgrade	activated	other: text_pattern	
-lorcana	818685	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818709	activated	upgrade	activated	other: text_pattern	
-lorcana	818714	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818714	delayed	immunity	delayed	other: text_pattern	wrong
-lorcana	818743	activated	upgrade	activated	other: text_pattern	
-lorcana	818747	delayed	temporary_buff	delayed	other: text_pattern	
-lorcana	818752	activated	ping	activated	other: text_pattern	
-lorcana	818752	activated	upgrade	activated	other: text_pattern	
-lorcana	818779	activated	upgrade	activated	other: text_pattern	
-lorcana	818783	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818817	activated	upgrade	activated	other: text_pattern	
-lorcana	818819	activated	upgrade		pair no longer derived (both tags still there)	
-lorcana	818843	activated	upgrade	activated	other: text_pattern	
-lorcana	818845	activated	upgrade	activated	other: text_pattern	
-lorcana	818853	delayed	evasion	delayed	other: text_pattern	
-lorcana	818856	activated	upgrade	activated	other: text_pattern	
-lorcana	818862	delayed	evasion	delayed	other: text_pattern	
-lorcana	818870	activated	temporary_buff	activated	other: text_pattern	
-lorcana	818877	activated	upgrade	activated	other: text_pattern	
-lorcana	818880	delayed	evasion	delayed	other: text_pattern	
-lorcana	818896	activated	upgrade	activated	other: text_pattern	
-lorcana	818908	delayed	immunity	delayed	other: text_pattern	
-lorcana	818917	activated	upgrade	activated	other: text_pattern	wrong
-lorcana	818927	activated	upgrade	activated	other: text_pattern	
-lorcana	818932	activated	upgrade	activated	other: text_pattern	
-mtg	778640	activated	damage	damage	switch-off	
-runeterra	751360	other_leave_trigger	haste	haste	other: 	
-runeterra	751361	other_leave_trigger	stat_multiply	stat_multiply	other: 	
-runeterra	751722	on_kill	generate_cards	generate_cards	switch-off	
-shadowverse	752472	on_play	damage	damage	switch-off	
-shadowverse	753262	on_play	damage	damage	switch-off	
-shadowverse	754361	death_trigger	shield		pair no longer derived (both tags still there)	
-shadowverse	754858	other_death_trigger	permanent_growth	permanent_growth	other: 	
-shadowverse	755001	on_play	damage	damage	switch-off	
-shadowverse	755008	on_play	damage	damage	switch-off	
-shadowverse	755711	on_play	damage	damage	switch-off	
-shadowverse	755986	death_trigger	shield		pair no longer derived (both tags still there)	
-sts1	757851	delayed	damage_over_time	damage_over_time	switch-off	wrong
-sts2	758675	turn_start	damage	damage	switch-off	right
-sts2	758917	delayed	damage_over_time	damage_over_time	switch-off	wrong
-sts2	759429	turn_start	damage	damage	switch-off	right
-swu	819381	on_play	extra_turn	extra_turn	other: 	wrong
-swu	819459	on_play	extra_turn	extra_turn	other: 	
-swu	820053	on_play	upgrade	upgrade	other: 	
-swu	820335	on_play	upgrade	upgrade	other: 	
-swu	820346	on_play	exhaust	exhaust	other: 	wrong
-swu	820346	on_play	upgrade	upgrade	other: 	wrong
-wh_40k_10e	785622	passive	buff	passive	switch-off	
-wh_40k_10e	786373	passive	buff		pair no longer derived (both tags still there)	
-wh_40k_10e	786373	passive	merge_attach		pair no longer derived (both tags still there)	
-wh_40k_10e	787403	on_attack	movement	on_attack	switch-off	
-wh_40k_10e	787957	on_attack	ranged	on_attack	switch-off	wrong
-wh_40k_10e	787992	passive	bodyguard		pair no longer derived (both tags still there)	
-wh_40k_10e	787992	passive	buff		pair no longer derived (both tags still there)	
-wh_40k_10e	787992	passive	death_trigger		pair no longer derived (both tags still there)	
-wh_40k_10e	787992	passive	merge_attach		pair no longer derived (both tags still there)	
-wh_40k_10e	788009	on_attack	movement	movement	switch-off	
-wh_40k_10e	788009	reactions	merge_attach		pair no longer derived (both tags still there)	
-wh_40k_10e	788009	reactions	movement	movement	switch-off	
-wh_40k_10e	788026	on_play	damage	damage	other: 	
-wh_40k_10e	788026	reactions	damage	damage	other: 	
-wh_40k_10e	788049	reactions	stat_loss	stat_loss	other: 	wrong
-wh_40k_10e	788171	reactions	stat_loss	stat_loss	other: 	wrong
-wh_40k_10e	788245	passive	disable	disable	switch-off	wrong
-wh_40k_10e	788259	passive	merge_attach		pair no longer derived (both tags still there)	
-wh_40k_10e	788411	passive	buff	buff	other: 	
-wh_40k_10e	788474	reactions	damage_reduction	damage_reduction	switch-off	
-wh_40k_10e	788493	passive	bodyguard		pair no longer derived (both tags still there)	
-wh_40k_10e	788493	passive	merge_attach		pair no longer derived (both tags still there)	
-wh_40k_10e	788493	passive	stat_loss	stat_loss	other: 	
-wh_40k_10e	788496	reactions	stat_loss	stat_loss	other: 	
-wh_40k_10e	788562	reactions	damage	damage	other: 	
-wh_40k_10e	788575	reactions	stat_loss	stat_loss	other: 	
-wh_aos_4th	791525	activated	temporary_buff	activated	switch-off	wrong
-wh_aos_4th	792368	activated	aoe_damage	activated	switch-off	wrong
-wh_aos_4th	792400	activated	piercing	activated	switch-off	wrong
-wh_aos_4th	793372	activated	movement	activated	switch-off	wrong
-wh_aos_4th	793609	activated	destroy		pair no longer derived (both tags still there)	
-wh_aos_4th	793610	activated	first_strike	activated	switch-off	wrong
-wh_aos_4th	793613	on_attack	damage	damage	switch-off	
-wh_aos_4th	793808	passive	damage_reduction		pair no longer derived (both tags still there)	
-wh_aos_4th	794030	activated	movement	activated	switch-off	wrong
-wh_aos_4th	794125	activated	modal_choice	activated	switch-off	wrong
-wh_aos_4th	794125	activated	piercing	activated	switch-off	wrong
-wh_aos_4th	794173	activated	movement		pair no longer derived (both tags still there)	
-wh_aos_4th	794566	activated	destroy		pair no longer derived (both tags still there)	
-wh_aos_4th	794570	activated	movement		pair no longer derived (both tags still there)	
+duelyst	741564	activated	stat_gain	activated	switch-off	wrong
+duelyst	741564	activated	taunt	activated	switch-off	wrong
+duelyst	741647	hero_power	draw	draw	other: 	wrong
+duelyst	741647	hero_power	recycle	recycle	other: text_pattern	wrong
+duelyst	741655	on_damaged	draw	draw	other: 	wrong
+duelyst	741688	counterattack	stat_gain	counterattack	other: 	
+duelyst	741703	turn_end	stat_gain	turn_end	other: 	
+duelyst	741703	turn_start	stat_gain	turn_start	other: 	
+duelyst	741707	on_damaged	stat_gain	on_damaged	other: 	
+duelyst	741734	turn_end	damage	turn_end	other: 	wrong
+duelyst	741736	turn_end	damage	damage	other: 	
+duelyst	741738	death_trigger	summon	death_trigger	other: text_pattern	
+duelyst	741738	other_death_trigger	death_trigger	death_trigger	other: text_pattern	
+duelyst	741739	death_trigger	stat_gain	death_trigger	other: text_pattern	
+duelyst	741739	other_death_trigger	death_trigger	death_trigger	other: text_pattern	
+duelyst	741740	on_damaged	stat_gain	on_damaged	other: 	
+duelyst	741743	turn_end	damage	turn_end	other: 	
+duelyst	741743	turn_end	stat_multiply	turn_end	other: 	
+duelyst	741746	death_trigger	direct_damage	death_trigger	other: text_pattern	
+duelyst	741746	death_trigger	heal	death_trigger	other: text_pattern	
+duelyst	741746	death_trigger	ping	death_trigger	other: text_pattern	
+duelyst	741746	other_death_trigger	death_trigger	death_trigger	other: text_pattern	
+duelyst	741756	turn_end	damage	turn_end	other: 	
+duelyst	741758	death_trigger	stat_gain	death_trigger	other: via_keyword	
+duelyst	741758	other_death_trigger	death_trigger	death_trigger	other: via_keyword	
+duelyst	741770	death_trigger	stat_gain	death_trigger	other: text_pattern	
+duelyst	741770	other_death_trigger	death_count	other_death_trigger	other: 	
+duelyst	741770	other_death_trigger	death_trigger	other_death_trigger	other: 	
+duelyst	741779	on_damaged	haste	on_damaged	other: 	
+duelyst	741798	death_count	death_trigger	death_trigger	other: 	wrong
+duelyst	741821	death_trigger	stat_gain		pair no longer derived (both tags still there)	
+duelyst	741821	territory_trigger	stat_gain		pair no longer derived (both tags still there)	
+duelyst	741865	on_play	draw	draw	other: 	wrong
+duelyst	741879	delayed	transform	delayed	other: 	
+duelyst	741880	delayed	transform	delayed	other: 	wrong
+duelyst	741883	delayed	transform	delayed	other: 	wrong
+duelyst	741884	on_damaged	ranged	on_damaged	other: 	
+duelyst	741884	on_damaged	shield	on_damaged	other: 	
+duelyst	741961	turn_end	heal	turn_end	other: 	
+duelyst	741961	turn_end	stat_gain	turn_end	other: 	
+duelyst	741963	turn_end	destroy	turn_end	other: 	wrong
+duelyst	741963	turn_end	heal	turn_end	other: 	wrong
+duelyst	741965	turn_end	damage	turn_end	other: 	
+duelyst	741965	turn_end	heal	turn_end	other: 	
+duelyst	741974	trap_secret	draw	draw	other: 	
+duelyst	741984	death_trigger	draw	draw	other: 	
+duelyst	741985	on_ally_play	sacrifice	on_ally_play	other: 	
+duelyst	741989	on_ally_play	evasion		pair no longer derived (both tags still there)	
+duelyst	742003	trap_secret	draw	draw	other: 	
+duelyst	742009	on_damaged	shield	on_damaged	other: 	
+duelyst	742016	turn_start	permanent_growth	turn_start	other: 	
+duelyst	742022	on_attack	stat_gain	stat_gain	other: 	wrong
+duelyst	742022	territory_trigger	stat_gain	stat_gain	other: 	wrong
+duelyst	742027	on_attack	evasion		pair no longer derived (both tags still there)	
+duelyst	742032	passive	board_clog	passive	switch-off	
+duelyst	742032	territory_trigger	board_clog	board_clog	other: 	
+duelyst	742032	territory_trigger	stat_gain		pair no longer derived (both tags still there)	
+duelyst	742036	on_play	draw	draw	other: 	
+duelyst	742039	on_play	draw	draw	other: 	
+duelyst	742040	on_damaged	stat_gain	on_damaged	other: 	
+duelyst	742044	on_play	recycle	recycle	other: text_pattern	wrong
+duelyst	742091	on_damaged	destroy	on_damaged	other: 	
+duelyst	742091	on_damaged	taunt	on_damaged	other: 	
+duelyst	742093	on_damaged	taunt	on_damaged	other: 	
+duelyst	742125	activated	generate_cards	activated	switch-off	
+duelyst	742125	activated	stat_gain	activated	switch-off	
+duelyst	742125	turn_start	generate_cards	turn_start	other: 	
+duelyst	742125	turn_start	stat_gain	turn_start	other: 	
+duelyst	742129	death_trigger	draw	draw	other: 	wrong
+duelyst	742157	turn_end	damage	turn_end	other: 	
+duelyst	742159	turn_end	damage	turn_end	other: 	
+duelyst	742162	turn_end	damage	turn_end	other: 	
+duelyst	742164	activated	damage	activated	switch-off	wrong
+duelyst	742164	activated	generate_cards	activated	switch-off	wrong
+duelyst	742164	turn_start	damage	turn_start	other: 	wrong
+duelyst	742164	turn_start	generate_cards	turn_start	other: 	wrong
+duelyst	742165	turn_end	damage	turn_end	other: 	
+duelyst	742165	turn_end	draw	turn_end	other: 	
+duelyst	742177	activated	generate_cards	activated	switch-off	
+duelyst	742177	activated	stat_gain	activated	switch-off	
+duelyst	742177	turn_start	generate_cards	turn_start	other: 	
+duelyst	742177	turn_start	stat_gain	turn_start	other: 	
+duelyst	742179	activated	copy	activated	switch-off	wrong
+duelyst	742179	turn_start	copy	turn_start	other: 	wrong
+duelyst	742183	on_play	evasion		pair no longer derived (both tags still there)	
+duelyst	742184	territory_trigger	draw	draw	other: 	wrong
+duelyst	742184	territory_trigger	stat_gain		pair no longer derived (both tags still there)	
+duelyst	742194	activated	transform	activated	switch-off	
+duelyst	742194	turn_start	transform	turn_start	other: 	
+duelyst	742201	other_death_trigger	death_trigger	death_trigger	other: 	wrong
+duelyst	742203	on_damaged	multi_attack	on_damaged	other: 	
+duelyst	742204	on_play	draw	draw	other: 	
+duelyst	742209	death_trigger	draw	draw	other: 	
+duelyst	742222	on_damaged	multi_attack	on_damaged	other: 	
+duelyst	742222	on_damaged	shield	on_damaged	other: 	
+duelyst	742222	on_damaged	taunt	on_damaged	other: 	
+duelyst	742224	on_play	draw	draw	other: 	wrong
+duelyst	742226	on_attack	draw	draw	other: 	
+duelyst	742231	on_play	evasion		pair no longer derived (both tags still there)	
+duelyst	742254	on_spell	draw	draw	other: 	
+duelyst	742257	on_play	draw	draw	other: 	
+duelyst	742257	on_play	evasion		pair no longer derived (both tags still there)	
+duelyst	742262	delayed	transform	delayed	other: 	
+duelyst	742281	hero_power	draw	draw	other: 	
+duelyst	742281	on_spell	draw	draw	other: 	
+duelyst	742286	counterattack	draw	draw	other: 	
+duelyst	742286	delayed	draw	delayed	other: 	
+duelyst	742286	delayed	generate_cards	delayed	other: 	
+duelyst	742288	delayed	transform	delayed	other: 	
+duelyst	742292	delayed	transform	delayed	other: 	wrong
+duelyst	742308	death_trigger	summon	death_trigger	other: text_pattern	
+duelyst	742308	delayed	death_trigger	death_trigger	other: text_pattern	
+duelyst	742308	other_death_trigger	death_trigger	death_trigger	other: text_pattern	
+duelyst	742344	hero_power	draw	draw	other: 	

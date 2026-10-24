@@ -70,10 +70,16 @@ c.execute("DELETE FROM entity_concepts WHERE method='text_pattern' AND concept I
 gp = {}   # the games' own patterns for these concepts (tools/patterns/<game>.txt) are re-applied, so the delete above does not wipe them
 for con, role, p, g in q("SELECT concept, role, pattern, game FROM concept_patterns WHERE game IS NOT NULL AND concept IN (%s)" % ','.join('?' * len(CON)), *CON):
     gp.setdefault(g, []).append((con, role, re.compile(p, re.I)))
+excl = {}   # a pattern file's '!concept|pattern' lines (game_patterns.py): that pattern adds no tag of the concept here either
+for f in _os.listdir(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'patterns')):
+    if f.endswith('.txt'):
+        excl[f[:-4]] = {tuple(l[1:].rstrip('\n').split('|', 1)) for l in open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'patterns', f), encoding='utf-8') if l.startswith('!')}
 n = npair = 0
 for e, g, t, nm in q("SELECT id, game, text, name FROM entities WHERE text IS NOT NULL AND category NOT IN ('tribe')"):
     low = t.lower()
+    X = excl.get(g, set()) | (excl.get('_all', set()) if g != 'marvel_snap' else set())
     for con, p in new:
+        if (con, p.pattern) in X: continue
         m = p.search(low)
         if m: n += c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, con, ROLE.get(con, 'does') if con not in CON else 'does', 'text_pattern', low[max(0, m.start() - 20): m.start() + 40])).rowcount
     if g in gp:   # read as game_patterns.py reads it: Magic without reminder text, the entry's own name as 'name'

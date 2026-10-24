@@ -10,11 +10,30 @@ adjacency|does|\bnearby\b|\baround (it|them|him|her|your general|the enemy gener
 area_templates|does|\b\dx\d area\b|\bcolumn\b|\bstraight line\b|\brow\b
 # Duelyst Frenzy hits all nearby enemies when attacking; it is not a when-damaged trigger
 !on_damaged|\bfrenzy
-# Replace = put a card from your action bar (hand) back into the deck for a new one, once a turn
-recycle|does|\breplac(e|es|ed|ing)\b
+# Replace = put a card from your action bar (hand) back into the deck for a new one: a redraw, not reusing a used card; replacing the whole action bar swaps the hand
+hand_deck_swap|does|\breplace each card in your action bar\b
 untap|does|reactivate
 aoe_damage|does|damage to (all |each )?(nearby )?enemies|damage to (all )?enemies around|damage to everything
-death_trigger|does|deathwatch|whenever (a|an|any) [a-z ]*(is destroyed|dies)
-tribal|does|\b(friendly|your|a|an|all) (vespyr|golem|dervish|spriggin|wraithling|battle pet|arcanyst|mech|egg|wall)s?(es)? minions?\b|\byour (golems|dervishes|wraithlings|vespyrs|arcanysts)\b|whenever a (friendly )?(spriggin|battle pet|golem|vespyr)
+tribal|does|\b(friendly|your|a|an|all) (vespyr|golem|dervish|spriggin|wraithling|battle pet|arcanyst|mech|egg|wall)s?(es)? minions?\b|\byour (golems|dervishes|wraithlings|vespyrs|arcanysts)\b|whenever a (friendly )?(spriggin|battle pet|golem|vespyr)|\b(another|other|friendly|nearby) (vespyr|golem|dervish|spriggin|wraithling|battle pet|arcanyst|mech|obelysk)(s|es|'s)?\b|\bthere is an? (vespyr|golem|dervish|spriggin|wraithling|battle pet|arcanyst|mech|obelysk)\b
 !extra_turn|\breactivate
 !death_count|whenever .{0,60}(dies|die|perishes|is destroyed|are destroyed|is put into a graveyard)
+# "In front of" is a grid space, not a lane
+!lanes|in front of
+# Rush (move and attack immediately) is haste, not an attack outside the attack step
+!attack_now|\battacks? immediately\b
+# Shadow Creep is a board feature
+terrain|does|\bshadow creep\b
+# A minion that gains stats on every trigger or every turn and keeps them
+permanent_growth|does|\b(whenever|each time|at the (start|end|beginning) of (your|each) turn)\b[^.]*?(\b(this minion|it|your general) gains?|(?<=, )gain|\bgive (all|each)[^.]{0,40}?) \+\d+(?![^.]*\b(this turn|until)\b)
+# ALL minions includes the owner's own; damage to your own General
+friendly_fire|does|\b(damage to|destroy) all minions\b|\byour general takes \d+ damage\b|\bdamage to your general\b
+# The Obelysks' "Summon Dervish" line has no keyword link, so it is read here
+summon|does|\bsummon dervish\b
+# A minus to Attack or Health is a stat loss
+debuff|does|(?<![+\w/])-\d+ (attack|health)\b|(?<![\w/])-\d+/-\d+
+# Picking cards by tribe: a random X, an X minion from your deck
+tribal|does|\brandom (vespyr|golem|dervish|spriggin|wraithling|battle pet|arcanyst|mech|obelysk)\b(?! eggs?)|\b(a|an|two|three) (vespyr|golem|dervish|spriggin|wraithling|battle pet|arcanyst|mech|obelysk) minions? from your deck\b|\b(vespyr|golem|dervish|spriggin|wraithling|battle pet|arcanyst|mech|obelysk) minions? from your deck\b
+# Moving your own General or minions
+movement|does|\bmay move an additional space\b|\bteleport (a friendly minion|your general)\b
+# A space that turns into Shadow Creep or sand is terrain, not a transformed card
+!transform|\bturns? into\b

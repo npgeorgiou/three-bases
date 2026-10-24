@@ -95,4 +95,11 @@ Things that confused earlier chats:
   has `aoe_damage`; 40k "selected to fight" has `on_attack` (3 entries); Duelyst "Vetruvian buff" is a splash, not a signature.
   Patterns: ITB explosions (`aoe_damage`) and Fire (`damage_over_time`); 40k "selected to fight" (`on_attack`); Lorcana costs printed
   without their number ("ink —") are activated abilities.
-- Next: duelyst, then the other games in the order of `tools/key/key.py` GAMES.
+- duelyst: **done** 24 Oct 2026 (key wrong 46.5 → 39.8, missed 41.5 → 27.5 per 100; signature 13/21 → 17/19, archetype 6/8 → 7/8,
+  splash 1/1). Key changes (Kaptain): artifacts have `merge_attach` and `buff`; tribal where a card picks, counts or targets by
+  tribe (Cryogenesis, Inkling Surge, Inkhorn Gaze, Snow Rippler, Fog, Sol); Gigaloth `permanent_growth`; Orb Weaver `summon`.
+  Cases: Magmar Rebirth is `revive`; Lyonar `board_presence` and Songhai `combo_sequence` removed. Review: artifacts
+  `merge_attach` instead of `items_consumables`. Shared (all games, nothing worse): "action bar" read as the hand in the
+  own/enemy split of return_to_hand; "transform ANY" counts as possibly an enemy; `link_types.py` honours the `!` lines; the
+  summon narrowing skips "player summons". The key_patterns rewrite was not kept (it lost more than it found).
+- Next: the other games in the order of `tools/key/key.py` GAMES.

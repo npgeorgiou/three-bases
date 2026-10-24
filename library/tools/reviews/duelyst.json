@@ -1,22 +1,22 @@
 {
  "741642": {
   "add": [
-   "items_consumables",
    "adjacency",
-   "aura"
+   "aura",
+   "merge_attach"
   ],
   "drop": []
  },
  "741643": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741644": {
   "add": [
-   "items_consumables",
-   "damage_reduction"
+   "damage_reduction",
+   "merge_attach"
   ],
   "drop": [
    "damage"
@@ -24,33 +24,33 @@
  },
  "741688": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741689": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741690": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741730": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741731": {
   "add": [
-   "items_consumables",
    "area_templates",
-   "multi_target_attack"
+   "multi_target_attack",
+   "merge_attach"
   ],
   "drop": [
    "lanes"
@@ -58,44 +58,44 @@
  },
  "741732": {
   "add": [
-   "items_consumables",
-   "stat_loss"
+   "stat_loss",
+   "merge_attach"
   ],
   "drop": []
  },
  "741770": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741771": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741772": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741810": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741811": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741812": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": [
    "on_damaged"
@@ -103,14 +103,14 @@
  },
  "741855": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741856": {
   "add": [
-   "items_consumables",
-   "adjacency"
+   "adjacency",
+   "merge_attach"
   ],
   "drop": [
    "damage_over_time"
@@ -118,29 +118,29 @@
  },
  "741857": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741958": {
   "add": [
-   "items_consumables",
    "adjacency",
-   "aura"
+   "aura",
+   "merge_attach"
   ],
   "drop": []
  },
  "741969": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "741990": {
   "add": [
-   "items_consumables",
    "on_kill",
-   "terrain"
+   "terrain",
+   "merge_attach"
   ],
   "drop": [
    "summon"
@@ -148,47 +148,47 @@
  },
  "741997": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "742018": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "742023": {
   "add": [
-   "items_consumables",
-   "forced_movement"
+   "forced_movement",
+   "merge_attach"
   ],
   "drop": []
  },
  "742128": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "742141": {
   "add": [
-   "items_consumables",
-   "spell_power"
+   "spell_power",
+   "merge_attach"
   ],
   "drop": []
  },
  "742156": {
   "add": [
-   "items_consumables",
-   "on_kill"
+   "on_kill",
+   "merge_attach"
   ],
   "drop": []
  },
  "742169": {
   "add": [
-   "items_consumables",
-   "terrain:benefits"
+   "terrain:benefits",
+   "merge_attach"
   ],
   "drop": [
    "damage",
@@ -197,86 +197,86 @@
  },
  "742182": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "742195": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "742223": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "742227": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "742233": {
   "add": [
-   "items_consumables",
    "adjacency",
    "copy",
    "on_kill",
-   "summon"
+   "summon",
+   "merge_attach"
   ],
   "drop": []
  },
  "742238": {
   "add": [
-   "items_consumables",
    "revive",
    "adjacency",
-   "random_effect"
+   "random_effect",
+   "merge_attach"
   ],
   "drop": []
  },
  "742240": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "742249": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "742274": {
   "add": [
-   "items_consumables",
    "adjacency",
-   "positional"
+   "positional",
+   "merge_attach"
   ],
   "drop": []
  },
  "742277": {
   "add": [
-   "items_consumables",
    "draw",
-   "on_spell"
+   "on_spell",
+   "merge_attach"
   ],
   "drop": []
  },
  "742299": {
   "add": [
-   "items_consumables",
    "damage_reduction",
-   "immunity"
+   "immunity",
+   "merge_attach"
   ],
   "drop": []
  },
  "742312": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": [
    "on_damaged"
@@ -284,13 +284,13 @@
  },
  "742327": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
  "742337": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
@@ -417,7 +417,7 @@
  },
  "741579": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
@@ -651,7 +651,7 @@
  },
  "741992": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
@@ -736,9 +736,7 @@
   "drop": []
  },
  "742354": {
-  "add": [
-   "items_consumables"
-  ],
+  "add": [],
   "drop": []
  },
  "742024": {
@@ -1139,7 +1137,7 @@
  "741959": {
   "add": [
    "deck_condition",
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
@@ -1445,7 +1443,6 @@
  },
  "741699": {
   "add": [
-   "items_consumables",
    "on_play"
   ],
   "drop": []
@@ -1614,7 +1611,7 @@
  },
  "741708": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },
@@ -1682,9 +1679,7 @@
   "drop": []
  },
  "742353": {
-  "add": [
-   "items_consumables"
-  ],
+  "add": [],
   "drop": []
  },
  "742199": {
@@ -1746,8 +1741,7 @@
  },
  "742294": {
   "add": [
-   "generate_cards",
-   "items_consumables"
+   "generate_cards"
   ],
   "drop": []
  },
@@ -1887,7 +1881,7 @@
  },
  "742231": {
   "add": [
-   "items_consumables"
+   "merge_attach"
   ],
   "drop": []
  },

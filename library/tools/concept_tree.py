@@ -96,9 +96,9 @@ def aura(t):
     return {'aura', 'debuff'} if enemy and not own else {'aura', 'buff', 'debuff'} if enemy and own else {'aura', 'buff'}
 def in_hand_buff(t): return {'in_hand_buff'} | ({'stat_gain'} if has(r"\+\d|\+x\b|(gains?|gets?|give|have) [^.]{0,25}\b(power|attack|health|stats)\b", t) else set())
 def return_to_hand(t):
-    enemy = has(r"return[^.]{0,40}\b(enemy|enemies|opponents? controls?|opposing)\b|" + E_ + r"[^.]{0,30}\bto (its|their) (owner'?s?|owners'?) hands?", t)
-    own = has(r"return[^.]{0,30}\b(you control|your|friendly|allied|ally|allies|this|itself|namedcard|~|me|it)\b[^.]{0,30}\bhand|recall (an? ally|this|me|it|a unit you)|\breturn (this|it|me|namedcard|~) to (your|my|its owner'?s?) hand", t)
-    either = has(r"return (up to (one|two|three|\w+) )?(target|a|an|another|all|each|any)\b[^.]{0,40}\bto (its|their) owners?'? hands?", t)
+    enemy = has(r"return[^.]{0,40}\b(enemy|enemies|opponents? controls?|opposing)\b|" + E_ + r"[^.]{0,30}\bto (its|their) (owner'?s?|owners'?) (hands?|action bar)", t)
+    own = has(r"return[^.]{0,30}\b(you control|your|friendly|allied|ally|allies|this|itself|namedcard|~|me|it)\b[^.]{0,30}\b(hand|action bar)|recall (an? ally|this|me|it|a unit you)|\breturn (this|it|me|namedcard|~) to (your|my|its owner'?s?) (hand|action bar)", t)
+    either = has(r"return (up to (one|two|three|\w+) )?(target|a|an|another|all|each|any)\b[^.]{0,40}\bto (its|their) owners?'? (hands?|action bar)", t)
     return {'bounce_enemy'} if enemy and not own and not either else {'return_to_hand'} if own and not enemy and not either else {'return_to_hand', 'bounce_enemy'}
 def sacrifice(t):
     out = {'sacrifice'}
@@ -116,7 +116,7 @@ def movement(t):
     return {'forced_movement'} if enemy and not own else {'movement', 'forced_movement'} if enemy and own else {'movement'}
 def swap(t): return {'swap', 'forced_movement'} if has(r"\bswap[^.]{0,40}" + E_ + "|" + E_ + r"[^.]{0,40}\bswap", t) else {'swap'}
 def transform(t):
-    other = has(r"\btransforms? (a|an|target|another|all|each|up to|enemy|enemies)\b|\bturn (a|an|target|all|each|an enemy|enemy)\b[^.]{0,30}\binto\b", t)
+    other = has(r"\btransforms? (a|an|target|another|all|each|up to|enemy|enemies|any)\b|\bturn (a|an|target|all|each|an enemy|enemy|any)\b[^.]{0,30}\binto\b", t)
     if not other: return {'transform'}
     enemy = has(r"\b(transforms?|turn)\b[^.]{0,20}\b(enemy|enemies|opponent'?s?|opposing)\b|\b(enemy|opponent'?s?) [^.]{0,20}\btransforms?\b", t)
     own = has(r"\b(transforms?|turn)\b[^.]{0,20}\b(friendly|your|allied|ally|you control)\b", t)

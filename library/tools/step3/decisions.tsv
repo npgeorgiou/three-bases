@@ -16,7 +16,7 @@ narrow	destroy|does|*|\bdestroy (target|a|an|all|each|that|it|the)	hearthstone,h
 narrow	terrain|does|*|\blands?\b	wh_40k_10e	\bno man.s land\b
 narrow	terrain|does|*|\blands?\b	mtg,into_the_breach,inscryption,wh_killteam,wh_bloodbowl3	(?!)\blands?\b
 narrow	hand_disruption|does|*|\bdiscards?\b(?! piles?\b)	inscryption,sts1,sts2,gwent,hs_battlegrounds,wh_killteam,runeterra,wh_underworlds,wh_40k_10e,hearthstone,mtg	(?:\b(?:opponent|opponents|player|players|enemy|enemies|they|their)\b[^.]{0,30}|\bthat player |\beach player |\beach opponent )\bdiscards?\b(?! piles?\b)
-narrow	summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	inscryption,duelyst,gwent	(?<!you )(?<!opponent )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b(?![^.]{0,80}(for your opponent|from your hand|opposite row|from your deck to the opposite))
+narrow	summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	inscryption,duelyst,gwent	(?<!you )(?<!opponent )(?<!player )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b(?![^.]{0,80}(for your opponent|from your hand|opposite row|from your deck to the opposite))
 narrow	summon|does|*|(?<!you )\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b	wh_40k_10e	(?!)\bsummons? (a|an|one|two|three|four|five|six|\d+|x|another|that many|copies|a copy|the)\b
 narrow	discard|does|*|\bdiscards?\b(?! piles?\b)	inscryption,sts1	\bdiscards? (a|an|one|any|up to|\d+|x|your|all cards|cards|two|three)\b(?! piles?)(?! (attack|shadow))
 narrow	discard|does|*|\bdiscards?\b(?! piles?\b)	wh_underworlds	\bdiscards? (a|an|one|any|up to|\d+|x|your|two|three)\b[^.]{0,30}\bcards?\b
@@ -1026,7 +1026,6 @@ new	sacrifice|does|gwent|trigger	gwent	\b(?:exiles?|banish(?:es)?|consumes?|devo
 new	sacrifice|does|mtg|trigger	mtg	\bexile (?:a|an|another|one|two|x) (?:[\w-]+\s+){0,2}?(?:creatures?|permanents?|artifacts?) you control\s*:|\badditional cost to cast this spell, exile (?:a|an|another) (?:[\w-]+\s+){0,2}?(?:creature|permanent|artifact)s? you control\b
 # amp_patterns.py: amplifiers (cards that make more of what other cards do) benefit from what they amplify
 new	buff|benefits|shadowverse|amp	shadowverse	\b(?:attack|defense) (?:or (?:attack|defense) )?(?:is|are) increased by an effect\b
-new	repeat_trigger|does|duelyst|amp	duelyst	\b(?:trigger|triggers|activate|activates|resolve|resolves)\s+(?:an? (?:extra|additional) time|twice|two times)\b
 new	repeat_trigger|does|hearthstone|amp	hearthstone	\b(?:trigger|triggers|activate|activates|resolve|resolves)\s+(?:an? (?:extra|additional) time|twice|two times)\b
 new	repeat_trigger|does|hs_battlegrounds|amp	hs_battlegrounds	\b(?:trigger|triggers|activate|activates|resolve|resolves)\s+(?:an? (?:extra|additional) time|twice|two times)\b
 new	repeat_trigger|does|mtg|amp	mtg	\b(?:trigger|triggers|activate|activates|resolve|resolves)\s+(?:an? (?:extra|additional) time|twice|two times)\b
