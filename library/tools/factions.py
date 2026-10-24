@@ -25,9 +25,10 @@ def parts(name, plain):
         if len(ps) > 1 and all(p in plain for p in ps): return ps
     return None
 
+SHARED = re.compile(r"^(neutral|colorless|any)\b", re.I)   # a shared card pool (Neutral, Colorless, Any), not a faction: left out of the comparison
 def members(q, g):
     """faction -> set of its card ids (combined cards in each of their factions); all card ids with a faction"""
-    rows = q(f'SELECT e.id, e.faction FROM entities e WHERE e.game=? AND {CARD} AND e.faction IS NOT NULL', g)
+    rows = [(i, f) for i, f in q(f'SELECT e.id, e.faction FROM entities e WHERE e.game=? AND {CARD} AND e.faction IS NOT NULL', g) if not SHARED.match(f)]
     names = {f for _, f in rows}; plain = {f for f in names if not parts(f, names - {f})}
     mem = collections.defaultdict(set)
     for i, f in rows:

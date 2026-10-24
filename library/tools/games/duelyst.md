@@ -91,11 +91,8 @@ signature	Songhai Empire	movement	displacement, extended movement	https://store.
 signature	Songhai Empire	ranged	ranged attacks	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Songhai Empire	flanking	Backstab	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Songhai Empire	on_spell	spell synergies	https://store.steampowered.com/app/2004320/Duelyst_II/
-signature	Vetruvian Imperium	summon	Dervish summons	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Vetruvian Imperium	self_destruct	short-lived Dervishes	https://store.steampowered.com/app/2004320/Duelyst_II/
 splash	Vetruvian Imperium	buff	buffs (Lyonar's specialty; Vetruvian's own buffs are the artifacts on the General)	https://store.steampowered.com/app/2004320/Duelyst_II/
-signature	Vetruvian Imperium	debuff	debuffs	https://store.steampowered.com/app/2004320/Duelyst_II/
-signature	Vetruvian Imperium	merge_attach	artifacts on the General	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Abyssian Host	other_death_trigger	Deathwatch	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Abyssian Host	terrain	Shadow Creep	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Abyssian Host	summon	Wraithlings	https://store.steampowered.com/app/2004320/Duelyst_II/
@@ -127,5 +124,6 @@ archetype	Vanar Kindred	positional	battlefield manipulation	https://store.steamp
 - Teleporting enemies is `forced_movement`; teleporting your own minions or General, swapping and extra move are `movement`.
 - Cases removed: Lyonar "strong board presence" (the store page says Provoke and Zeal give the presence; both are cases) and
   Songhai `combo_sequence` (no card cares about play order; the store page's "damage combos" are the spell synergies).
-- Not met, and the card data does not support them: Songhai `ranged` (7 of 98 cards, the same share as Neutral) and
-  Vetruvian `debuff` (4 of 94 cards).
+- Cases removed (the cards show no Vetruvian lead; the store page's words fit the whole game): Dervish summons (Vetruvian
+  summons on 24% of its cards, Abyssian 28%, Magmar 24%; its own part, the short-lived Dervishes, is the `self_destruct` case);
+  artifacts on the General (every faction has 7 artifacts); debuffs (4 of 94 cards).

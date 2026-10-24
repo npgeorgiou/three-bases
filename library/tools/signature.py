@@ -52,7 +52,7 @@ for (g,) in q('SELECT DISTINCT game FROM entities'):
     N = len(allc)
     has = collections.defaultdict(set)
     for e, k in q(f"SELECT DISTINCT e.id, ec.concept FROM entities e JOIN entity_concepts ec ON ec.entity=e.id WHERE e.game=? AND {CARD} AND e.faction IS NOT NULL AND ec.role IN ('does','grants')", g):
-        has[k].add(e)
+        if e in allc: has[k].add(e)
     def test(ids):
         K = len(ids); res = []
         for f, s in fac.items():
@@ -72,7 +72,8 @@ for (g,) in q('SELECT DISTINCT game FROM entities'):
     # keyword signatures: a keyword is a faction's own when at least 60% of the cards that have, grant or mention it are that faction's (8+ cards)
     kwids = collections.defaultdict(set)
     for k, e in q(f"""SELECT kk.name, e.id FROM entity_links l JOIN entities kk ON kk.id=l.dst JOIN entities e ON e.id=l.src WHERE kk.game=? AND kk.category='keyword'
-                     AND {CARD} AND l.rel IN ('has_keyword','grants_keyword','mentions_keyword')""", g): kwids[k].add(e)
+                     AND {CARD} AND l.rel IN ('has_keyword','grants_keyword','mentions_keyword')""", g):
+        if e in allc: kwids[k].add(e)
     for k, ids in kwids.items():
         for f, s in fac.items():
             n = len(s & ids)

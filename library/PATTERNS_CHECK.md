@@ -95,11 +95,20 @@ Things that confused earlier chats:
   has `aoe_damage`; 40k "selected to fight" has `on_attack` (3 entries); Duelyst "Vetruvian buff" is a splash, not a signature.
   Patterns: ITB explosions (`aoe_damage`) and Fire (`damage_over_time`); 40k "selected to fight" (`on_attack`); Lorcana costs printed
   without their number ("ink —") are activated abilities.
-- duelyst: **done** 24 Oct 2026 (key wrong 46.5 → 39.8, missed 41.5 → 27.5 per 100; signature 13/21 → 17/19, archetype 6/8 → 7/8,
+- duelyst: **done** 24 Oct 2026 (key wrong 44.4 → 37.7, missed 41.5 → 27.5 per 100; signature 13/21 → 16/16, archetype 6/8 → 7/8,
   splash 1/1). Key changes (Kaptain): artifacts have `merge_attach` and `buff`; tribal where a card picks, counts or targets by
   tribe (Cryogenesis, Inkling Surge, Inkhorn Gaze, Snow Rippler, Fog, Sol); Gigaloth `permanent_growth`; Orb Weaver `summon`.
-  Cases: Magmar Rebirth is `revive`; Lyonar `board_presence` and Songhai `combo_sequence` removed. Review: artifacts
+  Cases: Magmar Rebirth is `revive`; removed: Lyonar `board_presence`, Songhai `combo_sequence`, Vetruvian `summon`,
+  `merge_attach` and `debuff` (the cards show no faction lead; reasons in the game file). Review: artifacts
   `merge_attach` instead of `items_consumables`. Shared (all games, nothing worse): "action bar" read as the hand in the
   own/enemy split of return_to_hand; "transform ANY" counts as possibly an enemy; `link_types.py` honours the `!` lines; the
   summon narrowing skips "player summons". The key_patterns rewrite was not kept (it lost more than it found).
+- Shared 24 Oct 2026 (Kaptain's decision): shared card pools (Neutral, Colorless, Any) are left out of the faction comparison
+  (`factions.py` SHARED); signatures and archetypes are measured between real factions only.
+- Key rule (Kaptain's decision): a card that reacts to summons ("Whenever you summon a minion…") also has `summon` (it benefits
+  from summons). Done for duelyst; add it in each other game's pass.
+- Cases missed since shared pools left the comparison (24 Oct 2026; each a narrow lead now under 1.5 times): check them in
+  their game's pass, tagging first: hearthstone Deathknight control and board_presence, Mage tribal and board_presence (splash),
+  Demonhunter draw, Shaman tribal; shadowverse Swordcraft tribal; sts1 Defect cost_condition, Silent draw; tesl Willpower
+  board_presence.
 - Next: the other games in the order of `tools/key/key.py` GAMES.

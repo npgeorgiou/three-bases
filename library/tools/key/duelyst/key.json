@@ -2238,6 +2238,10 @@
 [
 "ping",
 "deal 1 damage"
+],
+[
+"summon",
+"Whenever your opponent summons a minion"
 ]
 ],
 "by": "C"
@@ -2820,6 +2824,10 @@
 [
 "permanent_growth",
 "this minion gains +2 Attack"
+],
+[
+"summon",
+"Whenever you summon a minion with 2 or less Attack"
 ]
 ],
 "by": "C"
@@ -3156,6 +3164,10 @@
 [
 "in_hand_buff",
 "give a minion in your action bar +1 Attack"
+],
+[
+"summon",
+"Whenever your opponent summons a minion"
 ]
 ],
 "by": "A=B"
@@ -3927,6 +3939,10 @@
 [
 "symmetric_effect",
 "Whenever ANY player summons a minion with Rush"
+],
+[
+"summon",
+"Whenever ANY player summons a minion with Rush"
 ]
 ],
 "by": "A=B",
@@ -3999,6 +4015,10 @@
 [
 "random_ability",
 "gains a random keyword ability"
+],
+[
+"summon",
+"Whenever you summon a minion"
 ]
 ],
 "by": "A=B"
@@ -4068,6 +4088,10 @@
 [
 "permanent_growth",
 "gain +2 Attack"
+],
+[
+"summon",
+"Whenever you summon a minion with Opening Gambit from your action bar"
 ]
 ],
 "by": "C"
@@ -6349,6 +6373,10 @@
 [
 "buff",
 "gain all keywords"
+],
+[
+"summon",
+"Whenever you summon this or another Mech"
 ]
 ],
 "by": "A=B"
