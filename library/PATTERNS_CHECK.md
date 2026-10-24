@@ -19,6 +19,12 @@ then the gaps in `tools/patterns/<game>.txt`.
   (`compare_builds.py`), not only the current game's.
 - Never invent rules or mechanics; mark judgements and suggestions as Claude's.
 - One game per pass, all 21 games. Faeria: first re-measure its reload on the corrected key, then the same check.
+- **Summon payoffs** (24 Oct 2026): a card that reacts to summons ("Whenever you summon a minion…") also has `summon` in the key,
+  since it benefits from summons. Add it in each game's pass.
+- **Shared pools** (24 Oct 2026): Neutral, Colorless and Any are not factions; `factions.py` SHARED leaves them out of the
+  signature and archetype comparison.
+- **Cases the cards don't support** (24 Oct 2026): when the faction shows no lead in the cards (the mechanic is as common in other
+  factions), remove the case and give the reason in the game's "Notes from the patterns check". Fix the key where it is wrong.
 - The keys exist: do not re-read the cards for them. A plain reload is not better by itself (Into the Breach once went from 74 to
   130 wrong per 100).
 
