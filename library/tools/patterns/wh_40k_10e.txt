@@ -88,3 +88,5 @@ cheat_death|does|the first time (this model|the bearer) is destroyed
 temporary_buff|does|until the end of the (phase|turn), (add|improve)
 reactions|does|each time an enemy unit (has shot|is selected to shoot|ends a)
 !on_attack|when .{0,20}attacks
+# A unit chosen to fight is the moment it attacks in melee (not when an enemy unit is chosen)
+on_attack|does|(?<!enemy )\b(unit|model|bearer|squad) is selected to fight\b

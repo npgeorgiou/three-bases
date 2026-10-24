@@ -13,7 +13,7 @@ on_kill|does|\b(this character|name|he|she|one of your characters) banishes anot
 on_attack|does|\bwhenever (this character|name|he|she|one of your [a-z ]{0,30}characters) challenges\b
 on_damaged|does|\bwhenever (this character|name|he|she) is challenged\b
 on_play|does|\bwhen (you play|[a-z]+ plays) (this character|this item|this location|name|her|him)\b
-activated|does|(^|\n)(exert|\d+ ink|banish (this|one of your)[^—\n]{0,30}|choose and discard [^—\n]{0,20})[^—\n]{0,40} —
+activated|does|(^|\n)(exert|(\d+ )?ink|banish (this|one of your)[^—\n]{0,30}|choose and discard [^—\n]{0,20})[^—\n]{0,40} —
 !activated|\bpay \d
 # Ink: the inkwell is the resource. Putting a card there is ramp; putting an opposing card there removes it.
 !stealth|\bface-?down\b

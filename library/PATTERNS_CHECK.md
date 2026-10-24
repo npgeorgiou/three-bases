@@ -90,4 +90,9 @@ Things that confused earlier chats:
 - darkest_dungeon: **done** 24 Oct 2026 (key wrong 78.9 → 57.6, missed 44.2 → 26.6 per 100; combos 6/7 → 6/7; it has no other cases).
   Key change (Kaptain): skills that target all enemy ranks also have `multi_target_attack` (wrong then 53.5). Its key_patterns
   run came after the reload, so the next build adds its decisions.
+- Shared fixes 24 Oct 2026 (Kaptain's OK; all games, nothing worse): `multi_target_attack` moved under `damage`; `final_revert.py`
+  restores only tags still shown right; ITB "in a row" redirect to `positional`. Key and case fixes: ITB Psion "explode on death"
+  has `aoe_damage`; 40k "selected to fight" has `on_attack` (3 entries); Duelyst "Vetruvian buff" is a splash, not a signature.
+  Patterns: ITB explosions (`aoe_damage`) and Fire (`damage_over_time`); 40k "selected to fight" (`on_attack`); Lorcana costs printed
+  without their number ("ink —") are activated abilities.
 - Next: duelyst, then the other games in the order of `tools/key/key.py` GAMES.

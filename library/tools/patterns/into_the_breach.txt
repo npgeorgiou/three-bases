@@ -17,7 +17,10 @@ exhaust|does|\bsingle-use\b
 !zone_control|\bobjective
 !rows|\bfront\b
 ranged|does|\bprojectile\b|\bartillery\b|\bthrows?\b
-multi_target_attack|does|\bbeam\b|\b(damag|push)\w* (all )?adjacent tiles\b|\bdamages? all tiles\b
+multi_target_attack|does|\bbeam\b|\bpush\w* (all )?adjacent tiles\b|\bdamag\w* adjacent tiles\b|\bdamages? all tiles\b
+# Explosions damage the tiles around them (aoe); Fire left on tiles or units burns each turn
+aoe_damage|does|\bexplod\w*
+damage_over_time|does|(?<!be )\b(adds?|sets?|lights?) (\w+ ){0,3}fire\b|\bfire to\b
 immobilize|does|\bwebs?\b|\bwebbed\b
 boss_phases|does|\bboss\b
 # mechanics check (tools/mechanics/into_the_breach.txt): "tile" is every board square here, not terrain; line attacks, self damage, flipped attacks, cracked tiles, deployed tanks

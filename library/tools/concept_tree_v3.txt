@@ -22,7 +22,7 @@ counterattack | Strike back when attacked (counterattack, thorns) | combat | buf
 piercing | Ignore armour or defence | combat | buff | The unit's damage or attacks ignore or lower the target's armour, saves or defence. | Damage that carries on to another target is excess_damage.
 evasion | Hard to block (flying, unblockable) | combat | buff | The unit can't be blocked, can be blocked only by some units, or hits the player past blockers. | Can't be targeted is immunity; hidden until it acts is stealth.
 ranged | Ranged attack / long reach | combat | buff,positional | The unit attacks from a distance, from the back row or over other units. | Damage from a spell is damage.
-multi_target_attack | One attack hits several targets (cleave) | combat | buff,scope_multi | A single attack also hits other units or spaces: cleave, sweep, splash. | Area damage from an effect is aoe_damage; several separate attacks are multi_attack.
+multi_target_attack | One attack hits several targets (cleave) | combat | damage,scope_multi | A single attack also hits other units or spaces: cleave, sweep, splash. | Area damage from an effect is aoe_damage; several separate attacks are multi_attack.
 excess_damage | Excess damage carries on (trample) | effect | buff,damage | Damage beyond what kills the target goes on to the player or another unit. | Ignoring armour is piercing.
 deathtouch | Any damage kills (deathtouch, poisonous) | combat | buff,destroy | Any damage this unit deals destroys the unit it hits. | Destroying by an effect without combat damage is destroy.
 random_ability | Gain a random ability or keyword | effect | buff,random_effect | A unit gains a randomly chosen keyword or ability. | Other random results are random_effect.

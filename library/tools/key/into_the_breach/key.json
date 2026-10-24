@@ -252,6 +252,10 @@
 [
 "death_trigger",
 "explode on death"
+],
+[
+"aoe_damage",
+"explode on death"
 ]
 ],
 "by": "C"
@@ -4230,6 +4234,10 @@
 [
 "death_trigger",
 "Overpowered"
+],
+[
+"aoe_damage",
+"explode on death"
 ]
 ],
 "by": "C",

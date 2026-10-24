@@ -1,692 +1,305 @@
 game	entity	trigger	effect	removed tag	cause	key says the removed tag is
-darkest_dungeon	759768	death_trigger	forced_movement	death_trigger	other: 	right
-darkest_dungeon	759768	death_trigger	ranged	death_trigger	other: 	right
-darkest_dungeon	759923	counterattack	mark_target		pair no longer derived (both tags still there)	
-darkest_dungeon	760037	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760037	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760038	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760040	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760040	trap_secret	damage_reduction	trap_secret	other: text_pattern	right
-darkest_dungeon	760040	trap_secret	damage_types	trap_secret	other: text_pattern	right
-darkest_dungeon	760040	trap_secret	immunity	trap_secret	other: text_pattern	right
-darkest_dungeon	760040	trap_secret	stat_gain	trap_secret	other: text_pattern	right
-darkest_dungeon	760049	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760050	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760050	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760052	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760053	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760054	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760055	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760056	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760057	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760059	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760060	passive	damage_over_time	damage_over_time	switch-off	
-darkest_dungeon	760060	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760062	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760062	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760062	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760064	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760064	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760069	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760070	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760074	combat_start	speed	combat_start	other: text_pattern	
-darkest_dungeon	760074	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760075	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760076	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760078	passive	play_restriction		pair no longer derived (both tags still there)	
-darkest_dungeon	760080	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760082	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760083	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760083	passive	play_restriction		pair no longer derived (both tags still there)	
-darkest_dungeon	760085	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760088	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760089	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760091	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760092	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760094	combat_start	speed	combat_start	other: text_pattern	wrong
-darkest_dungeon	760095	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760096	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760098	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760098	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760100	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760102	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760105	passive	damage_reduction		pair no longer derived (both tags still there)	
-darkest_dungeon	760113	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760114	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760116	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760117	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760119	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760120	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760122	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760123	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760125	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760126	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760130	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760131	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760132	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760132	trap_secret	damage_reduction	trap_secret	other: text_pattern	right
-darkest_dungeon	760132	trap_secret	damage_types	trap_secret	other: text_pattern	right
-darkest_dungeon	760132	trap_secret	immunity	trap_secret	other: text_pattern	right
-darkest_dungeon	760132	trap_secret	stat_gain	trap_secret	other: text_pattern	right
-darkest_dungeon	760133	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760134	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760138	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760142	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760143	passive	play_restriction		pair no longer derived (both tags still there)	
-darkest_dungeon	760144	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760144	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760144	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760144	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760144	trap_secret	immunity	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760144	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760145	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760146	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760149	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760150	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760152	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760158	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760159	passive	play_restriction		pair no longer derived (both tags still there)	
-darkest_dungeon	760161	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760161	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760162	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760164	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760164	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760164	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760164	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760164	trap_secret	immunity	trap_secret	other: text_pattern	
-darkest_dungeon	760164	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760165	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760166	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760168	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760168	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760170	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760173	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760175	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760176	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760176	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760183	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760184	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760184	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760187	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760189	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760190	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760191	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760193	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760197	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760198	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760200	passive	play_restriction	play_restriction	other: text_pattern	
-darkest_dungeon	760203	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760204	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760206	passive	play_restriction	play_restriction	other: text_pattern	wrong
-darkest_dungeon	760207	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760218	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760220	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760223	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760223	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760224	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760227	passive	damage_reduction		pair no longer derived (both tags still there)	
-darkest_dungeon	760227	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760227	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760227	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760227	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760228	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760228	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760234	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760234	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760234	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760234	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760236	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760237	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760237	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760238	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760238	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760238	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760241	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760241	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760242	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760242	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760242	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760243	passive	damage_over_time	damage_over_time	switch-off	wrong
-darkest_dungeon	760243	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760244	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760244	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760244	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760245	combat_start	damage_reduction	combat_start	other: text_pattern	
-darkest_dungeon	760245	combat_start	damage_types	combat_start	other: text_pattern	
-darkest_dungeon	760245	combat_start	disable	combat_start	other: text_pattern	
-darkest_dungeon	760245	combat_start	immunity	combat_start	other: text_pattern	
-darkest_dungeon	760245	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760245	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760245	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760246	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760246	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760247	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760252	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760253	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760255	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760256	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760256	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760258	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760259	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760259	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760260	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760260	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760262	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760262	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760262	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760262	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760262	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760262	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760263	combat_start	speed		pair no longer derived (both tags still there)	
-darkest_dungeon	760263	combat_start	stat_gain		pair no longer derived (both tags still there)	
-darkest_dungeon	760267	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760267	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760270	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760270	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760270	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760270	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760270	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760272	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760273	combat_start	stat_gain		pair no longer derived (both tags still there)	
-darkest_dungeon	760273	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760279	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760281	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760281	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760281	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760281	trap_secret	immunity	trap_secret	other: text_pattern	
-darkest_dungeon	760281	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760282	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760283	combat_start	stat_gain		pair no longer derived (both tags still there)	
-darkest_dungeon	760286	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760287	combat_start	stat_gain	combat_start	other: text_pattern	wrong
-darkest_dungeon	760288	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760289	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760289	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760291	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760291	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760292	passive	damage_over_time	damage_over_time	switch-off	wrong
-darkest_dungeon	760292	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760292	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760292	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760294	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760294	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760295	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760295	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760295	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760295	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760295	trap_secret	disable	trap_secret	other: text_pattern	
-darkest_dungeon	760295	trap_secret	immunity	trap_secret	other: text_pattern	
-darkest_dungeon	760295	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760297	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760297	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760299	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760300	passive	damage_over_time	damage_over_time	switch-off	
-darkest_dungeon	760300	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760300	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760301	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760301	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760301	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760302	combat_start	cheat_death	combat_start	other: text_pattern	wrong
-darkest_dungeon	760302	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760302	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760302	combat_start	immunity	combat_start	other: text_pattern	wrong
-darkest_dungeon	760302	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760303	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760303	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760304	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760306	combat_start	damage_over_time	combat_start	other: text_pattern	wrong
-darkest_dungeon	760306	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760306	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760306	passive	damage_over_time	damage_over_time	switch-off	wrong
-darkest_dungeon	760306	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760306	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760307	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760307	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760307	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760308	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760308	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760314	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760314	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760316	passive	damage_over_time	damage_over_time	switch-off	
-darkest_dungeon	760316	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760318	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760319	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760319	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760321	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760323	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760323	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760325	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760328	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760328	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760330	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760330	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760333	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760334	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760335	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760335	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760335	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760336	passive	damage_over_time	damage_over_time	switch-off	wrong
-darkest_dungeon	760336	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760336	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760338	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760338	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760339	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760339	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760344	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760344	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760344	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760344	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760345	combat_start	damage_reduction	combat_start	other: text_pattern	
-darkest_dungeon	760345	combat_start	damage_types	combat_start	other: text_pattern	
-darkest_dungeon	760345	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760345	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760345	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760346	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760346	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760349	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760349	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760350	combat_start	damage_reduction	combat_start	other: text_pattern	
-darkest_dungeon	760350	combat_start	damage_types	combat_start	other: text_pattern	
-darkest_dungeon	760350	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760350	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760354	passive	damage_over_time	damage_over_time	switch-off	wrong
-darkest_dungeon	760354	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760354	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760356	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760356	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760357	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760357	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760357	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760357	trap_secret	damage_over_time	trap_secret	other: text_pattern	
-darkest_dungeon	760357	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760357	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760357	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760358	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760358	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760360	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760360	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760368	combat_start	damage_reduction	combat_start	other: text_pattern	
-darkest_dungeon	760368	combat_start	damage_types	combat_start	other: text_pattern	
-darkest_dungeon	760368	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760368	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760368	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760368	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760368	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760369	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760369	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760369	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760369	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760370	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760370	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760370	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760371	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760371	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760371	combat_start	disable	combat_start	other: text_pattern	wrong
-darkest_dungeon	760371	combat_start	immunity	combat_start	other: text_pattern	wrong
-darkest_dungeon	760371	combat_start	stat_gain	combat_start	other: text_pattern	wrong
-darkest_dungeon	760371	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760372	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760373	combat_start	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760373	combat_start	damage_types	damage_types	switch-off	
-darkest_dungeon	760373	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760373	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760373	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760374	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760375	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760375	passive	damage_types		pair no longer derived (both tags still there)	
-darkest_dungeon	760376	combat_start	stat_gain	combat_start	other: text_pattern	wrong
-darkest_dungeon	760377	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760377	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760378	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760378	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760378	combat_start	speed	combat_start	other: text_pattern	wrong
-darkest_dungeon	760378	combat_start	stat_gain	combat_start	other: text_pattern	wrong
-darkest_dungeon	760378	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760378	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760378	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760378	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760378	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760380	combat_start	stat_gain	combat_start	other: text_pattern	wrong
-darkest_dungeon	760381	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760381	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760382	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760382	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760382	combat_start	stat_gain	combat_start	other: text_pattern	wrong
-darkest_dungeon	760382	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760383	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760384	passive	damage_reduction		pair no longer derived (both tags still there)	
-darkest_dungeon	760384	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760384	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760384	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760386	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760386	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760386	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760386	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760388	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760389	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760389	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760390	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760393	passive	damage_reduction		pair no longer derived (both tags still there)	
-darkest_dungeon	760393	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760395	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760395	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760395	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760395	trap_secret	immunity	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760395	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760396	passive	damage_over_time	damage_over_time	switch-off	wrong
-darkest_dungeon	760396	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760396	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760396	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760399	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760399	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760400	combat_start	speed	combat_start	other: text_pattern	wrong
-darkest_dungeon	760401	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760403	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760403	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760403	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760403	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760403	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760405	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760405	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760405	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760407	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760408	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760412	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760412	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760412	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760414	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760414	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760415	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760415	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760416	passive	damage_reduction		pair no longer derived (both tags still there)	
-darkest_dungeon	760420	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760420	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760420	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760421	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760422	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760422	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760422	combat_start	disable	combat_start	other: text_pattern	wrong
-darkest_dungeon	760422	combat_start	speed	combat_start	other: text_pattern	wrong
-darkest_dungeon	760422	combat_start	stat_gain	combat_start	other: text_pattern	wrong
-darkest_dungeon	760422	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760423	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760423	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760424	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760424	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760426	combat_start	stat_gain	combat_start	other: text_pattern	wrong
-darkest_dungeon	760427	combat_start	speed	combat_start	other: text_pattern	
-darkest_dungeon	760427	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760427	passive	damage_over_time	damage_over_time	switch-off	
-darkest_dungeon	760427	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760430	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760432	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760433	passive	damage_over_time	damage_over_time	switch-off	
-darkest_dungeon	760433	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760433	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760433	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760433	trap_secret	damage_over_time	trap_secret	other: text_pattern	
-darkest_dungeon	760433	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760433	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760433	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760435	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760435	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760435	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760435	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760435	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760438	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760438	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760439	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760439	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760440	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760440	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760441	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760441	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760443	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760443	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760443	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760443	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760443	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760444	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760444	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760444	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760444	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760444	trap_secret	immunity	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760444	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760448	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760448	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760448	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760448	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760448	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760449	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760449	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760450	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760450	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760450	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760452	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760453	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760453	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760453	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760453	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760453	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760454	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760455	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760456	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760456	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760458	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760458	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760459	combat_start	stat_gain	combat_start	other: text_pattern	wrong
-darkest_dungeon	760463	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760463	passive	permanent_growth	permanent_growth	other: 	wrong
-darkest_dungeon	760464	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760464	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760465	passive	damage_reduction		pair no longer derived (both tags still there)	
-darkest_dungeon	760465	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760466	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760469	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760471	passive	damage_over_time	damage_over_time	switch-off	
-darkest_dungeon	760471	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760471	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760471	trap_secret	damage_over_time	trap_secret	other: text_pattern	
-darkest_dungeon	760471	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760471	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760471	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760472	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760472	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760473	combat_start	damage_reduction	combat_start	other: text_pattern	
-darkest_dungeon	760473	combat_start	damage_types	combat_start	other: text_pattern	
-darkest_dungeon	760473	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760473	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760474	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760475	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760475	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760475	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760476	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760476	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760476	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760476	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760477	combat_start	damage_over_time	combat_start	other: text_pattern	
-darkest_dungeon	760477	combat_start	damage_reduction	combat_start	other: text_pattern	
-darkest_dungeon	760477	combat_start	damage_types	combat_start	other: text_pattern	
-darkest_dungeon	760477	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760477	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760477	passive	damage_types		pair no longer derived (both tags still there)	
-darkest_dungeon	760478	passive	damage_over_time	damage_over_time	switch-off	
-darkest_dungeon	760478	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760478	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760479	passive	damage_over_time	damage_over_time	switch-off	
-darkest_dungeon	760479	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760479	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760479	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760481	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760481	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760482	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760482	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760483	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760484	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760484	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760485	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760485	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760486	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760486	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760487	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760487	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760488	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760488	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760488	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760489	passive	damage_reduction		pair no longer derived (both tags still there)	
-darkest_dungeon	760489	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760490	combat_start	damage_reduction	combat_start	other: text_pattern	
-darkest_dungeon	760490	combat_start	damage_types	combat_start	other: text_pattern	
-darkest_dungeon	760490	combat_start	immunity	combat_start	other: text_pattern	
-darkest_dungeon	760490	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760490	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760490	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760490	trap_secret	damage_reduction	trap_secret	other: text_pattern	
-darkest_dungeon	760490	trap_secret	damage_types	trap_secret	other: text_pattern	
-darkest_dungeon	760490	trap_secret	immunity	trap_secret	other: text_pattern	
-darkest_dungeon	760490	trap_secret	stat_gain	trap_secret	other: text_pattern	
-darkest_dungeon	760494	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760494	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760496	combat_start	damage_over_time	combat_start	other: text_pattern	
-darkest_dungeon	760496	combat_start	damage_reduction	combat_start	other: text_pattern	
-darkest_dungeon	760496	combat_start	damage_types	combat_start	other: text_pattern	
-darkest_dungeon	760496	combat_start	immunity	combat_start	other: text_pattern	
-darkest_dungeon	760496	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760496	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760498	combat_start	damage_reduction	combat_start	other: text_pattern	
-darkest_dungeon	760498	combat_start	damage_types	combat_start	other: text_pattern	
-darkest_dungeon	760498	combat_start	disable	combat_start	other: text_pattern	
-darkest_dungeon	760498	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760501	combat_start	damage_over_time	combat_start	other: text_pattern	wrong
-darkest_dungeon	760501	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760501	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760501	passive	damage_over_time	damage_over_time	switch-off	wrong
-darkest_dungeon	760501	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760504	passive	damage_reduction		pair no longer derived (both tags still there)	
-darkest_dungeon	760504	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760504	passive	permanent_growth	permanent_growth	other: 	
-darkest_dungeon	760506	combat_start	damage_reduction	combat_start	other: text_pattern	
-darkest_dungeon	760506	combat_start	damage_types	combat_start	other: text_pattern	
-darkest_dungeon	760506	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760507	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760507	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760509	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760511	combat_start	speed	combat_start	other: text_pattern	wrong
-darkest_dungeon	760511	combat_start	stat_gain	combat_start	other: text_pattern	wrong
-darkest_dungeon	760512	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760512	passive	damage_types	damage_types	switch-off	
-darkest_dungeon	760514	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760514	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760515	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760515	passive	damage_types		pair no longer derived (both tags still there)	
-darkest_dungeon	760516	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760516	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760516	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760518	combat_start	damage_reduction	combat_start	other: text_pattern	wrong
-darkest_dungeon	760518	combat_start	damage_types	combat_start	other: text_pattern	wrong
-darkest_dungeon	760518	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760518	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760518	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760525	combat_start	speed	combat_start	other: text_pattern	
-darkest_dungeon	760525	combat_start	stat_gain	combat_start	other: text_pattern	
-darkest_dungeon	760547	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760549	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760551	passive	damage_over_time	damage_over_time	switch-off	
-darkest_dungeon	760551	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760552	passive	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760552	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760554	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760558	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760572	combat_start	speed		pair no longer derived (both tags still there)	
-darkest_dungeon	760572	combat_start	stat_gain		pair no longer derived (both tags still there)	
-darkest_dungeon	760591	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760599	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760600	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760604	passive	damage_over_time	damage_over_time	switch-off	wrong
-darkest_dungeon	760604	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760608	passive	damage_over_time	damage_over_time	switch-off	
-darkest_dungeon	760608	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760609	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760641	passive	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760682	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760682	trap_secret	blocking	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760682	trap_secret	damage_over_time	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760682	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760682	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760682	trap_secret	disable	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760682	trap_secret	friendly_fire	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760682	trap_secret	heal	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760682	trap_secret	mark_target	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760682	trap_secret	movement	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760682	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760682	trap_secret	temporary_buff	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760684	trap_secret	blocking	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	trap_secret	damage_over_time	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	trap_secret	disable	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	trap_secret	friendly_fire	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	trap_secret	heal	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	trap_secret	mark_target	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	trap_secret	movement	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760684	trap_secret	temporary_buff	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760685	trap_secret	blocking	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	trap_secret	damage_over_time	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	trap_secret	damage_reduction	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	trap_secret	damage_types	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	trap_secret	disable	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	trap_secret	friendly_fire	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	trap_secret	heal	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	trap_secret	mark_target	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	trap_secret	movement	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760685	trap_secret	temporary_buff	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760687	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760688	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760689	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760689	passive	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760689	trap_secret	blocking	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760689	trap_secret	friendly_fire	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760689	trap_secret	heal	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760689	trap_secret	mark_target	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760689	trap_secret	movement	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760689	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760689	trap_secret	temporary_buff	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760691	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760691	trap_secret	blocking	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760691	trap_secret	friendly_fire	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760691	trap_secret	heal	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760691	trap_secret	mark_target	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760691	trap_secret	movement	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760691	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760691	trap_secret	temporary_buff	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760692	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760692	trap_secret	blocking	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760692	trap_secret	friendly_fire	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760692	trap_secret	heal	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760692	trap_secret	mark_target	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760692	trap_secret	movement	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760692	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760692	trap_secret	temporary_buff	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760693	passive	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760693	trap_secret	blocking	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760693	trap_secret	friendly_fire	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760693	trap_secret	heal	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760693	trap_secret	mark_target	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760693	trap_secret	movement	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760693	trap_secret	stat_gain	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760693	trap_secret	temporary_buff	trap_secret	other: text_pattern	wrong
-darkest_dungeon	760698	cooldowns	damage_over_time		pair no longer derived (both tags still there)	
-darkest_dungeon	760715	passive	stat_loss	stat_loss	other: 	
-darkest_dungeon	760732	cooldowns	damage_reduction	damage_reduction	switch-off	wrong
-darkest_dungeon	760732	cooldowns	damage_types	damage_types	switch-off	wrong
-darkest_dungeon	760743	activated	damage_over_time	activated	other: 	
-darkest_dungeon	760743	cooldowns	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760743	cooldowns	damage_types	damage_types	switch-off	
-darkest_dungeon	760756	activated	damage_over_time	activated	other: 	
-darkest_dungeon	760756	cooldowns	damage_reduction	damage_reduction	switch-off	
-darkest_dungeon	760756	cooldowns	damage_types	damage_types	switch-off	
-darkest_dungeon	760761	trap_secret	deck_position	deck_position	other: 	wrong
+darkest_dungeon	760689	passive	temporary_buff		pair no longer derived (both tags still there)	
+darkest_dungeon	760705	passive	stat_gain		pair no longer derived (both tags still there)	
+darkest_dungeon	760705	passive	temporary_buff		pair no longer derived (both tags still there)	
+darkest_dungeon	760719	passive	stat_gain		pair no longer derived (both tags still there)	
+darkest_dungeon	760719	passive	temporary_buff		pair no longer derived (both tags still there)	
+darkest_dungeon	760724	passive	stat_gain		pair no longer derived (both tags still there)	
+darkest_dungeon	760724	passive	temporary_buff		pair no longer derived (both tags still there)	
+darkest_dungeon	760733	passive	stat_gain		pair no longer derived (both tags still there)	
+darkest_dungeon	760733	passive	temporary_buff		pair no longer derived (both tags still there)	
+darkest_dungeon	760734	passive	stat_gain		pair no longer derived (both tags still there)	
+darkest_dungeon	760734	passive	temporary_buff		pair no longer derived (both tags still there)	
+duelyst	742164	on_kill	draw	draw	other: 	wrong
+faeria	741248	activated	ping		pair no longer derived (both tags still there)	
+gwent	756741	turn_start	copy		pair no longer derived (both tags still there)	
+gwent	756818	activated	damage_over_time	activated	other: 	
+hearthstone	745144	other_death_trigger	evasion	evasion	other: 	
+inscryption	740759	trap_secret	excess_damage	trap_secret	other: 	wrong
+inscryption	740897	turn_end	damage	damage	switch-off	right
+into_the_breach	760870	turn_start	damage	damage	other: 	right
+into_the_breach	760919	turn_start	damage	damage	other: 	right
+into_the_breach	761039	turn_start	damage	damage	other: 	right
+into_the_breach	761083	telegraphed_threats	evasion	evasion	switch-off	wrong
+into_the_breach	761083	telegraphed_threats	forced_movement	forced_movement	switch-off	wrong
+into_the_breach	761083	telegraphed_threats	summon	summon	other: 	wrong
+into_the_breach	761084	telegraphed_threats	evasion	evasion	switch-off	wrong
+into_the_breach	761084	telegraphed_threats	forced_movement	forced_movement	switch-off	wrong
+into_the_breach	761084	telegraphed_threats	summon	summon	other: 	wrong
+into_the_breach	761112	turn_start	forced_movement	forced_movement	switch-off	wrong
+into_the_breach	761112	turn_start	movement	movement	switch-off	wrong
+into_the_breach	761124	on_kill	upgrade	upgrade	other: 	wrong
+into_the_breach	761129	turn_start	upgrade	upgrade	other: 	wrong
+into_the_breach	761135	turn_start	damage	damage	other: 	right
+into_the_breach	761151	turn_start	damage	damage	other: 	right
+lorcana	816638	activated	upgrade	activated	other: text_pattern	
+lorcana	816656	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816670	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816670	death_trigger	banish		pair no longer derived (both tags still there)	
+lorcana	816675	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816675	delayed	disable	delayed	other: text_pattern	wrong
+lorcana	816709	activated	upgrade	activated	other: text_pattern	
+lorcana	816721	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816737	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816756	activated	upgrade	activated	other: text_pattern	
+lorcana	816772	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816782	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816808	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816826	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816853	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816856	activated	upgrade	activated	other: text_pattern	
+lorcana	816862	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816863	activated	upgrade	activated	other: text_pattern	
+lorcana	816878	activated	upgrade	activated	other: text_pattern	
+lorcana	816885	activated	upgrade		pair no longer derived (both tags still there)	
+lorcana	816894	activated	upgrade	activated	other: text_pattern	
+lorcana	816897	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	816909	activated	upgrade	activated	other: text_pattern	
+lorcana	816912	activated	upgrade		pair no longer derived (both tags still there)	
+lorcana	816914	activated	upgrade	activated	other: text_pattern	
+lorcana	816919	activated	upgrade	activated	other: text_pattern	
+lorcana	816947	activated	upgrade	activated	other: text_pattern	
+lorcana	816951	activated	upgrade	activated	other: text_pattern	
+lorcana	816957	activated	upgrade	activated	other: text_pattern	
+lorcana	816960	activated	upgrade	activated	other: text_pattern	
+lorcana	816970	delayed	evasion	delayed	other: text_pattern	
+lorcana	816975	activated	upgrade	activated	other: text_pattern	
+lorcana	816979	activated	upgrade	activated	other: text_pattern	
+lorcana	816982	activated	upgrade	activated	other: text_pattern	
+lorcana	816984	activated	upgrade	activated	other: text_pattern	
+lorcana	817010	activated	upgrade	activated	other: text_pattern	
+lorcana	817014	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817018	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817020	activated	upgrade	activated	other: text_pattern	
+lorcana	817048	activated	upgrade	activated	other: text_pattern	
+lorcana	817058	activated	upgrade	activated	other: text_pattern	
+lorcana	817083	activated	upgrade	activated	other: text_pattern	
+lorcana	817090	activated	upgrade	activated	other: text_pattern	
+lorcana	817115	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817119	death_trigger	banish		pair no longer derived (both tags still there)	
+lorcana	817121	activated	upgrade	activated	other: text_pattern	
+lorcana	817144	delayed	evasion	delayed	other: text_pattern	wrong
+lorcana	817157	activated	upgrade	activated	other: text_pattern	
+lorcana	817161	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817173	delayed	evasion	delayed	other: text_pattern	
+lorcana	817184	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817188	activated	upgrade	activated	other: text_pattern	
+lorcana	817219	activated	upgrade	activated	other: text_pattern	
+lorcana	817231	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817261	activated	upgrade	activated	other: text_pattern	
+lorcana	817267	activated	upgrade	activated	other: text_pattern	
+lorcana	817281	activated	upgrade	activated	other: text_pattern	
+lorcana	817303	activated	upgrade	activated	other: text_pattern	
+lorcana	817328	activated	upgrade	activated	other: text_pattern	
+lorcana	817332	activated	upgrade	activated	other: text_pattern	
+lorcana	817359	activated	upgrade	activated	other: text_pattern	
+lorcana	817370	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817385	activated	upgrade		pair no longer derived (both tags still there)	
+lorcana	817403	activated	upgrade	activated	other: text_pattern	
+lorcana	817420	activated	ping	activated	other: text_pattern	wrong
+lorcana	817420	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817432	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817492	activated	upgrade	activated	other: text_pattern	
+lorcana	817495	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817499	activated	upgrade	activated	other: text_pattern	
+lorcana	817515	activated	upgrade	activated	other: text_pattern	
+lorcana	817526	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817527	activated	upgrade	activated	other: text_pattern	
+lorcana	817556	activated	temporary_buff	activated	other: text_pattern	
+lorcana	817564	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817568	activated	upgrade	activated	other: text_pattern	
+lorcana	817572	activated	upgrade	activated	other: text_pattern	
+lorcana	817579	delayed	immunity	delayed	other: text_pattern	
+lorcana	817587	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817597	activated	upgrade		pair no longer derived (both tags still there)	
+lorcana	817603	activated	upgrade	activated	other: text_pattern	
+lorcana	817604	delayed	evasion	delayed	other: text_pattern	
+lorcana	817624	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817634	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817638	delayed	immunity	delayed	other: text_pattern	wrong
+lorcana	817639	activated	upgrade	activated	other: text_pattern	
+lorcana	817665	activated	upgrade	activated	other: text_pattern	
+lorcana	817672	activated	upgrade	activated	other: text_pattern	
+lorcana	817674	activated	upgrade	activated	other: text_pattern	
+lorcana	817693	activated	upgrade	activated	other: text_pattern	
+lorcana	817698	activated	upgrade	activated	other: text_pattern	
+lorcana	817704	activated	upgrade	activated	other: text_pattern	
+lorcana	817732	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817736	activated	upgrade	activated	other: text_pattern	
+lorcana	817745	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817747	delayed	disable	delayed	other: text_pattern	wrong
+lorcana	817751	delayed	temporary_buff	delayed	other: text_pattern	
+lorcana	817756	activated	upgrade	activated	other: text_pattern	
+lorcana	817757	activated	evasion	activated	other: text_pattern	
+lorcana	817768	activated	upgrade	activated	other: text_pattern	
+lorcana	817772	delayed	evasion	delayed	other: text_pattern	wrong
+lorcana	817775	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817787	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817789	delayed	evasion	delayed	other: text_pattern	
+lorcana	817803	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817805	activated	upgrade	activated	other: text_pattern	
+lorcana	817816	delayed	evasion	delayed	other: text_pattern	
+lorcana	817824	activated	upgrade	activated	other: text_pattern	
+lorcana	817830	delayed	evasion	delayed	other: text_pattern	
+lorcana	817834	activated	upgrade	activated	other: text_pattern	
+lorcana	817844	activated	upgrade	activated	other: text_pattern	
+lorcana	817860	activated	upgrade	activated	other: text_pattern	
+lorcana	817867	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817878	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817892	activated	upgrade		pair no longer derived (both tags still there)	
+lorcana	817900	death_trigger	banish		pair no longer derived (both tags still there)	
+lorcana	817911	activated	upgrade	activated	other: text_pattern	
+lorcana	817914	activated	upgrade	activated	other: text_pattern	
+lorcana	817916	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817919	delayed	temporary_buff	delayed	other: text_pattern	wrong
+lorcana	817923	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817942	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	817956	activated	upgrade	activated	other: text_pattern	
+lorcana	817957	activated	upgrade	activated	other: text_pattern	
+lorcana	817967	activated	upgrade	activated	other: text_pattern	
+lorcana	817983	activated	upgrade	activated	other: text_pattern	
+lorcana	817984	activated	upgrade	activated	other: text_pattern	
+lorcana	817992	activated	upgrade	activated	other: text_pattern	
+lorcana	817994	delayed	evasion	delayed	other: text_pattern	
+lorcana	818002	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818008	delayed	evasion	delayed	other: text_pattern	
+lorcana	818014	activated	upgrade	activated	other: text_pattern	
+lorcana	818029	activated	upgrade	activated	other: text_pattern	
+lorcana	818051	activated	upgrade	activated	other: text_pattern	
+lorcana	818112	activated	upgrade	activated	other: text_pattern	
+lorcana	818114	activated	upgrade	activated	other: text_pattern	
+lorcana	818116	activated	upgrade	activated	other: text_pattern	
+lorcana	818119	activated	upgrade	activated	other: text_pattern	
+lorcana	818122	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818158	activated	upgrade	activated	other: text_pattern	
+lorcana	818160	activated	upgrade	activated	other: text_pattern	
+lorcana	818163	activated	upgrade	activated	other: text_pattern	
+lorcana	818189	activated	upgrade	activated	other: text_pattern	
+lorcana	818195	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818198	activated	upgrade	activated	other: text_pattern	
+lorcana	818199	on_spell	drawback		pair no longer derived (both tags still there)	
+lorcana	818200	activated	upgrade	activated	other: text_pattern	
+lorcana	818230	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818233	activated	upgrade	activated	other: text_pattern	
+lorcana	818241	delayed	evasion	delayed	other: text_pattern	wrong
+lorcana	818262	activated	upgrade	activated	other: text_pattern	
+lorcana	818337	delayed	evasion	delayed	other: text_pattern	wrong
+lorcana	818343	activated	upgrade	activated	other: text_pattern	
+lorcana	818345	delayed	evasion	delayed	other: text_pattern	
+lorcana	818348	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818349	activated	upgrade	activated	other: text_pattern	
+lorcana	818380	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818386	activated	upgrade	activated	other: text_pattern	
+lorcana	818398	activated	upgrade	activated	other: text_pattern	
+lorcana	818398	death_trigger	banish		pair no longer derived (both tags still there)	
+lorcana	818416	activated	upgrade	activated	other: text_pattern	
+lorcana	818427	delayed	disable	delayed	other: text_pattern	
+lorcana	818447	activated	upgrade	activated	other: text_pattern	
+lorcana	818455	activated	upgrade	activated	other: text_pattern	
+lorcana	818477	activated	upgrade	activated	other: text_pattern	
+lorcana	818490	activated	upgrade		pair no longer derived (both tags still there)	
+lorcana	818511	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818515	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818534	activated	upgrade	activated	other: text_pattern	
+lorcana	818547	activated	upgrade	activated	other: text_pattern	
+lorcana	818559	activated	ping	activated	other: text_pattern	wrong
+lorcana	818581	activated	upgrade	activated	other: text_pattern	
+lorcana	818586	activated	upgrade	activated	other: text_pattern	
+lorcana	818599	delayed	evasion	delayed	other: text_pattern	
+lorcana	818609	delayed	disable	delayed	other: text_pattern	
+lorcana	818611	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818614	activated	upgrade	activated	other: text_pattern	
+lorcana	818628	delayed	evasion	delayed	other: text_pattern	
+lorcana	818644	delayed	evasion	delayed	other: text_pattern	wrong
+lorcana	818647	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818653	delayed	evasion	delayed	other: text_pattern	
+lorcana	818655	activated	upgrade	activated	other: text_pattern	
+lorcana	818659	delayed	evasion	delayed	other: text_pattern	
+lorcana	818678	activated	upgrade	activated	other: text_pattern	
+lorcana	818685	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818709	activated	upgrade	activated	other: text_pattern	
+lorcana	818714	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818714	delayed	immunity	delayed	other: text_pattern	wrong
+lorcana	818743	activated	upgrade	activated	other: text_pattern	
+lorcana	818747	delayed	temporary_buff	delayed	other: text_pattern	
+lorcana	818752	activated	ping	activated	other: text_pattern	
+lorcana	818752	activated	upgrade	activated	other: text_pattern	
+lorcana	818779	activated	upgrade	activated	other: text_pattern	
+lorcana	818783	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818817	activated	upgrade	activated	other: text_pattern	
+lorcana	818819	activated	upgrade		pair no longer derived (both tags still there)	
+lorcana	818843	activated	upgrade	activated	other: text_pattern	
+lorcana	818845	activated	upgrade	activated	other: text_pattern	
+lorcana	818853	delayed	evasion	delayed	other: text_pattern	
+lorcana	818856	activated	upgrade	activated	other: text_pattern	
+lorcana	818862	delayed	evasion	delayed	other: text_pattern	
+lorcana	818870	activated	temporary_buff	activated	other: text_pattern	
+lorcana	818877	activated	upgrade	activated	other: text_pattern	
+lorcana	818880	delayed	evasion	delayed	other: text_pattern	
+lorcana	818896	activated	upgrade	activated	other: text_pattern	
+lorcana	818908	delayed	immunity	delayed	other: text_pattern	
+lorcana	818917	activated	upgrade	activated	other: text_pattern	wrong
+lorcana	818927	activated	upgrade	activated	other: text_pattern	
+lorcana	818932	activated	upgrade	activated	other: text_pattern	
+mtg	778640	activated	damage	damage	switch-off	
+runeterra	751360	other_leave_trigger	haste	haste	other: 	
+runeterra	751361	other_leave_trigger	stat_multiply	stat_multiply	other: 	
+runeterra	751722	on_kill	generate_cards	generate_cards	switch-off	
+shadowverse	752472	on_play	damage	damage	switch-off	
+shadowverse	753262	on_play	damage	damage	switch-off	
+shadowverse	754361	death_trigger	shield		pair no longer derived (both tags still there)	
+shadowverse	754858	other_death_trigger	permanent_growth	permanent_growth	other: 	
+shadowverse	755001	on_play	damage	damage	switch-off	
+shadowverse	755008	on_play	damage	damage	switch-off	
+shadowverse	755711	on_play	damage	damage	switch-off	
+shadowverse	755986	death_trigger	shield		pair no longer derived (both tags still there)	
+sts1	757851	delayed	damage_over_time	damage_over_time	switch-off	wrong
+sts2	758675	turn_start	damage	damage	switch-off	right
+sts2	758917	delayed	damage_over_time	damage_over_time	switch-off	wrong
+sts2	759429	turn_start	damage	damage	switch-off	right
+swu	819381	on_play	extra_turn	extra_turn	other: 	wrong
+swu	819459	on_play	extra_turn	extra_turn	other: 	
+swu	820053	on_play	upgrade	upgrade	other: 	
+swu	820335	on_play	upgrade	upgrade	other: 	
+swu	820346	on_play	exhaust	exhaust	other: 	wrong
+swu	820346	on_play	upgrade	upgrade	other: 	wrong
+wh_40k_10e	785622	passive	buff	passive	switch-off	
+wh_40k_10e	786373	passive	buff		pair no longer derived (both tags still there)	
+wh_40k_10e	786373	passive	merge_attach		pair no longer derived (both tags still there)	
+wh_40k_10e	787403	on_attack	movement	on_attack	switch-off	
+wh_40k_10e	787957	on_attack	ranged	on_attack	switch-off	wrong
+wh_40k_10e	787992	passive	bodyguard		pair no longer derived (both tags still there)	
+wh_40k_10e	787992	passive	buff		pair no longer derived (both tags still there)	
+wh_40k_10e	787992	passive	death_trigger		pair no longer derived (both tags still there)	
+wh_40k_10e	787992	passive	merge_attach		pair no longer derived (both tags still there)	
+wh_40k_10e	788009	on_attack	movement	movement	switch-off	
+wh_40k_10e	788009	reactions	merge_attach		pair no longer derived (both tags still there)	
+wh_40k_10e	788009	reactions	movement	movement	switch-off	
+wh_40k_10e	788026	on_play	damage	damage	other: 	
+wh_40k_10e	788026	reactions	damage	damage	other: 	
+wh_40k_10e	788049	reactions	stat_loss	stat_loss	other: 	wrong
+wh_40k_10e	788171	reactions	stat_loss	stat_loss	other: 	wrong
+wh_40k_10e	788245	passive	disable	disable	switch-off	wrong
+wh_40k_10e	788259	passive	merge_attach		pair no longer derived (both tags still there)	
+wh_40k_10e	788411	passive	buff	buff	other: 	
+wh_40k_10e	788474	reactions	damage_reduction	damage_reduction	switch-off	
+wh_40k_10e	788493	passive	bodyguard		pair no longer derived (both tags still there)	
+wh_40k_10e	788493	passive	merge_attach		pair no longer derived (both tags still there)	
+wh_40k_10e	788493	passive	stat_loss	stat_loss	other: 	
+wh_40k_10e	788496	reactions	stat_loss	stat_loss	other: 	
+wh_40k_10e	788562	reactions	damage	damage	other: 	
+wh_40k_10e	788575	reactions	stat_loss	stat_loss	other: 	
+wh_aos_4th	791525	activated	temporary_buff	activated	switch-off	wrong
+wh_aos_4th	792368	activated	aoe_damage	activated	switch-off	wrong
+wh_aos_4th	792400	activated	piercing	activated	switch-off	wrong
+wh_aos_4th	793372	activated	movement	activated	switch-off	wrong
+wh_aos_4th	793609	activated	destroy		pair no longer derived (both tags still there)	
+wh_aos_4th	793610	activated	first_strike	activated	switch-off	wrong
+wh_aos_4th	793613	on_attack	damage	damage	switch-off	
+wh_aos_4th	793808	passive	damage_reduction		pair no longer derived (both tags still there)	
+wh_aos_4th	794030	activated	movement	activated	switch-off	wrong
+wh_aos_4th	794125	activated	modal_choice	activated	switch-off	wrong
+wh_aos_4th	794125	activated	piercing	activated	switch-off	wrong
+wh_aos_4th	794173	activated	movement		pair no longer derived (both tags still there)	
+wh_aos_4th	794566	activated	destroy		pair no longer derived (both tags still there)	
+wh_aos_4th	794570	activated	movement		pair no longer derived (both tags still there)	

@@ -1,7 +1,8 @@
 """Final comparison of the tag-fix plan (19 Oct 2026): no game may end worse than the original database (c7a77a4) on the answer
 key. The full rebuild in this plan applied every pattern and review file to every entry, and some games gained wrong tags or lost
 right ones that way. This step reverts those changes per game, from tools/final/revert.tsv (made by final_compare.py):
-  restore  entity  concept  role   a tag of the original that the answer key shows right, missing now: put back (method 'restored')
+  restore  entity  concept  role   a tag of the original that the answer key shows right, missing now: put back (method 'restored'),
+                                   only while the key (with today's tree), a judged sample or a hand review still shows it right
   undo     game    concept         tags of this concept that the original did not have in this game, which made the game worse:
                                    removed again, except where the key, a judged sample or a hand review says the entry has it
 Build step right after parent_rule.py (a restored broader tag stays even where a narrower one is present). Idempotent. Usage: final_revert.py <db>"""
@@ -33,7 +34,7 @@ put = rem = 0
 for r in rows:
     if r[0] == 'restore':
         e, k, role = int(r[1]), r[2], r[3]
-        if e in game: put += c.execute('INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)', (e, k, role, 'restored', 'right in the original (final comparison)')).rowcount
+        if e in game and k in known[e]: put += c.execute('INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)', (e, k, role, 'restored', 'right in the original (final comparison)')).rowcount
     elif r[0] == 'undo':
         g, k = r[1], r[2]
         for e, in q('SELECT DISTINCT ec.entity FROM entity_concepts ec JOIN entities x ON x.id=ec.entity WHERE x.game=? AND ec.concept=? AND ec.method NOT IN (?,?,?)', g, k, 'restored', 'game_structure', 'data_rule'):

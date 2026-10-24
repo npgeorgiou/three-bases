@@ -94,7 +94,7 @@ signature	Songhai Empire	on_spell	spell synergies	https://store.steampowered.com
 signature	Songhai Empire	combo_sequence	chained combos	https://gamewave.fr/duelyst/duelyst-le-jeu-de-carte-aux-six-factions/
 signature	Vetruvian Imperium	summon	Dervish summons	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Vetruvian Imperium	self_destruct	short-lived Dervishes	https://store.steampowered.com/app/2004320/Duelyst_II/
-signature	Vetruvian Imperium	buff	buffs	https://store.steampowered.com/app/2004320/Duelyst_II/
+splash	Vetruvian Imperium	buff	buffs (Lyonar's specialty; Vetruvian's own buffs are the artifacts on the General)	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Vetruvian Imperium	debuff	debuffs	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Vetruvian Imperium	merge_attach	artifacts on the General	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Abyssian Host	other_death_trigger	Deathwatch	https://store.steampowered.com/app/2004320/Duelyst_II/

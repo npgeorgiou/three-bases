@@ -585,6 +585,10 @@
 [
 "other_death_trigger",
 "Each time a PENITENT model from your army is destroyed"
+],
+[
+"on_attack",
+"time a unit from your army is selected to fight"
 ]
 ],
 "by": "C"
@@ -15092,6 +15096,10 @@
 [
 "reserve_bench",
 "Deep Strike"
+],
+[
+"on_attack",
+"phecy: Each time this unit is selected to fight"
 ]
 ],
 "by": "C",
@@ -27204,6 +27212,10 @@
 [
 "buff",
 "have the [SUSTAINED HITS 2] ability"
+],
+[
+"on_attack",
+" When the bearer is selected to fight"
 ]
 ],
 "by": "C"

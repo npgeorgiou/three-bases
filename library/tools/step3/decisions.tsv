@@ -319,7 +319,7 @@ new	random_effect|does|hearthstone|redirect	hearthstone	\bshoot
 new	generate_cards|does|hearthstone|redirect	hearthstone	put .{0,30}on the (top|bottom) of
 new	recycle|does|sts1|redirect	sts1	return .{0,40}to (your|their|its) hand
 new	recycle|does|sts2|redirect	sts2	return .{0,40}to (your|their|its) hand
-new	buff|does|into_the_breach|redirect	into_the_breach	\brows?\b
+new	positional|does|into_the_breach|redirect	into_the_breach	\brows?\b
 new	tribal|does|hearthstone|redirect	hearthstone	\brows?\b
 new	upgrade|does|into_the_breach|redirect	into_the_breach	\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))
 new	friendly_fire|does|faeria|redirect	faeria	\ball (creatures|minions|units|characters|cards)\b(?! (in|from) (your|their|each player.s) (hand|deck|library|graveyard))

@@ -19,7 +19,6 @@ A concept with two parents is listed under both, with the other one named as "al
       - Ignore armour or defence `piercing`
       - Hard to block (flying, unblockable) `evasion`
       - Ranged attack / long reach `ranged` (also under Position and space)
-      - One attack hits several targets (cleave) `multi_target_attack` (also under Several targets)
       - Excess damage carries on (trample) `excess_damage` (also under Deal damage)
       - Any damage kills (deathtouch, poisonous) `deathtouch` (also under Destroy outright)
       - Gain a random ability or keyword `random_ability` (also under Random results)
@@ -76,6 +75,7 @@ A concept with two parents is listed under both, with the other one named as "al
       - Excess damage carries on (trample) `excess_damage` (also under Make a unit stronger (buff))
       - Lifesteal / drain `lifesteal` (also under Restore health (heal))
       - Damage to many at once `aoe_damage` (also under Several targets)
+      - One attack hits several targets (cleave) `multi_target_attack` (also under Several targets)
       - Damage over time (poison, burn) `damage_over_time`
       - Damage to the player or base `direct_damage`
       - Small repeatable damage `ping`
@@ -193,7 +193,7 @@ A concept with two parents is listed under both, with the other one named as "al
     - Send an enemy unit back (bounce) `bounce_enemy` (also under Remove an enemy unit)
 - Scope (who is affected) `scope`
   - Several targets `scope_multi`
-    - One attack hits several targets (cleave) `multi_target_attack` (also under Make a unit stronger (buff))
+    - One attack hits several targets (cleave) `multi_target_attack` (also under Deal damage)
     - Damage to many at once `aoe_damage` (also under Deal damage)
     - Board wipe `board_wipe` (also under Remove an enemy unit)
     - Area shapes (cone, line, sphere) `area_templates`
@@ -409,6 +409,8 @@ A concept with two parents is listed under both, with the other one named as "al
 - `stat_gain` (new): takes the old meaning of `buff` (+power, +health), now one kind of stronger.
 - `first_strike`, `multi_attack`, `piercing`, `evasion`: from `attack_mod` to `buff`; a unit gaining them gets stronger.
 - `ranged`, `multi_target_attack`, `excess_damage`, `deathtouch`: from `attack_mod` to `buff`; their second parents stay because they always hold.
+  (24 Oct 2026, Kaptain's decision: `multi_target_attack` moved again, from `buff` to `damage`, next to `aoe_damage`: one attack hitting
+  several enemies hurts the enemy; a card that gives cleave still gets `buff` as its own tag.)
 - `counterattack`: from `attack_mod` and `on_damaged` to `buff`; it is gaining free attacks, and it fires on being attacked, not only on damage.
 - `spell_power`: from `buff` to helps my side; stronger spells are not a stronger unit.
 - `protection`, `heal`, `card_advantage`: under helps my side.
