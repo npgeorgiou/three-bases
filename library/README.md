@@ -160,6 +160,7 @@ game's rules and terms as `# term:` lines with their source (`(assumed)` where n
    never been run). One game per pass: test it against its key and its real-world cases, find why they disagree, fix the entry
    tagging (mechanics regexes first, then the game's patterns), present the results to Kaptain before pushing. The goal, the rules,
    the steps, how tags get there and the status are in `PATTERNS_CHECK.md`: read it whole before starting.
+   Done: darkest_dungeon (24 Oct 2026). Next: duelyst.
 2. **Tribal from type links.** Hearthstone has 390 cards that name a minion type and 132 tagged tribal; Lorcana 278 and 2. A rule
    "a card that names a type of its game cares about that type" needs only a short stop list per game.
 3. **Learn the archetype recipes again** with the real-world cases, split 50/50 with seed 1 (`learn_recipes.py`).

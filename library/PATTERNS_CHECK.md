@@ -63,6 +63,22 @@ Things that confused earlier chats:
   game and concept, the count before and after (a gain has after > before).
 - **Scoring** (`key.py score`): a library tag is right when it is a key concept, an ancestor or a descendant of one; game_structure
   and data_rule tags are left out. Two siblings in the tree do not cover each other.
+- **The score depends on the tree file on disk** (`tools/concept_tree_v3.txt`, read by `key.py`): before and after must be scored
+  with the same tree file. With a tree change stashed, the numbers of `game_check.sh` are not comparable with an earlier run.
+- **A tag can be right for the wrong reason.** A pattern that matched other words ("When resolving those attacks" giving
+  `on_attack`) or a tree link (a concept under `buff` making every `buff` case met) can hide a real gap. When a fix removes it, the
+  score drops: find the real wording and add a pattern for it, instead of keeping the false match.
+- **`parent_rule.py` drops a parent tag where a narrower tag is present** (e.g. `damage` where `multi_target_attack` is under it).
+  An entry then loses the parent's coverage of the parent's other children (a key `aoe_damage` was met by `damage`): the fix is the
+  child that is really there (a pattern for `aoe_damage`), not the parent.
+- **Stale decisions after a tree change.** `step3/decisions.tsv` 'redirect' lines (`switch_off.py`) and `final/revert.tsv` restore
+  lines were judged with the tree of their day; a tree change can make them wrong (ITB "in a row" pointed at `buff`). Re-running
+  `switch_off.py` rewrites every game's lines (and data drift changes many), so fix the one line; `final_revert.py` restores a tag
+  only while the key, a judged sample or a hand review still shows it right (24 Oct 2026).
+- **Library-wide steps** (`signature.py`, `precision.py`, `finalize.py`, the checks) run only in `reload_game.sh` and `build.sh`;
+  `game_check.sh` runs `signature.py` itself for the real-world cases. Tags are the same either way.
+- **Times:** `game_check.sh` 40 s (wh_40k_10e about 2 min); `reload_game.sh` about 3 min; a full `build.sh` about 11 min and
+  `compare_builds.py` about 4 min (run them in the background).
 
 ## Tools
 - `tools/game_check.sh <scratch> <game>`: the build's steps on a one-game copy (`build.sh --steps`), then the game's mechanics
@@ -71,7 +87,7 @@ Things that confused earlier chats:
 - `tools/mechanic_gaps.py`, `tools/key_diag.py`, `tools/pattern_hits.py`: the diagnosis helpers above.
 
 ## Status
-- darkest_dungeon: done 24 Oct 2026 (key wrong 78.9 → 57.6, missed 44.2 → 26.6 per 100; combos 6/7 → 6/7; it has no other cases).
+- darkest_dungeon: **done** 24 Oct 2026 (key wrong 78.9 → 57.6, missed 44.2 → 26.6 per 100; combos 6/7 → 6/7; it has no other cases).
   Key change (Kaptain): skills that target all enemy ranks also have `multi_target_attack` (wrong then 53.5). Its key_patterns
   run came after the reload, so the next build adds its decisions.
 - Next: duelyst, then the other games in the order of `tools/key/key.py` GAMES.
