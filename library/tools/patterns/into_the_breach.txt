@@ -17,7 +17,7 @@ exhaust|does|\bsingle-use\b
 !zone_control|\bobjective
 !rows|\bfront\b
 ranged|does|\bprojectile\b|\bartillery\b|\bthrows?\b
-multi_target_attack|does|(?<!/)\bbeam\b|\bpush\w* (all )?adjacent tiles\b|\bdamag\w* adjacent tiles\b|\bdamages? all tiles\b
+aoe_damage|does|\bdamag\w* adjacent tiles\b|\bdamages? all tiles\b
 # Explosions damage the tiles around them (aoe); Fire left on tiles or units burns each turn
 aoe_damage|does|\bexplod\w*
 damage_over_time|does|(?<!be )\b(adds?|sets?|lights?) (\w+ ){0,3}fire\b|\bfire to\b
@@ -28,7 +28,6 @@ boss_phases|does|\bboss\b
 !terrain|\bterrain
 !placement_rules|\bflying\b
 placement_rules|does|\bflying units can\b
-multi_target_attack|does|\b(tiles|everything|all units) in a line\b
 friendly_fire|does|\b(damaging self|hurting yourself|damage itself|damages both shooter)\b
 disruption|does|\bflip\w* (its|a target's|the target's) attack direction\b
 terrain|does|\bcrack\w* (adjacent )?tiles\b

@@ -66,7 +66,7 @@ thorns and sentry|counterattack|\battacker of said card\b|\bthey are dealt 1 dam
 cannot be attacked|immunity|\bwould attack a card bearing this sigil, it does not\b|\bimmune to the effects\b
 worth more when sacrificed|sacrifice|\bwhen sacrificed\b|\bis sacrificed\b
 bones as a resource|resource_gain|\b\d+ bones are awarded\b|\bgenerate 1 bone\b|\bgain 3 bones\b|\balso grant bones\b
-hits several spaces|multi_target_attack|\bstrike each opposing space\b|\ban extra time\b
+hits several spaces|aoe_damage|\bstrike each opposing space\b|\ban extra time\b
 adjacent or circuit creatures gain power|aura|\bcreatures adjacent to a card bearing this sigil gain\b|\bwithin a circuit completed by a card bearing this sigil gain\b|\bmox cards on the owner's side of the board gain\b
 opposing creature loses power|stat_loss|\bopposing a card bearing this sigil loses\b
 dies after attacking|self_destruct|\bafter attacking, a card bearing this sigil perishes\b

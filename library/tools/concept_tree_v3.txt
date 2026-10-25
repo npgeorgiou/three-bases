@@ -17,12 +17,12 @@ temporary_buff | Temporary bonus (this turn only) | effect | buff,temporary_effe
 permanent_growth | Grows again and again | effect | buff | A unit gains stats repeatedly (each turn, each trigger) and keeps them. | A single lasting bonus is stat_gain.
 stat_multiply | Double or multiply stats | effect | buff | A stat or a total is doubled, tripled or multiplied. | Adding a fixed amount is stat_gain.
 first_strike | First strike (hits before the enemy) | combat | buff | The unit deals its combat damage before the enemy can strike back. | Attacking the turn it arrives is haste.
-multi_attack | Attack more than once | combat | buff | The unit attacks or strikes more than once per turn or round. | One attack that hits several targets the player chose is multi_target_attack; readying a used unit is untap.
+multi_attack | Attack more than once | combat | buff | The unit attacks or strikes more than once per turn or round. | One attack that hits several separately named targets is multi_target_attack; readying a used unit is untap.
 counterattack | Strike back when attacked (counterattack, thorns) | combat | buff | When the unit is attacked or hit, it deals damage back to the attacker. | Damage it deals when it attacks is on_attack.
 piercing | Ignore armour or defence | combat | buff | The unit's damage or attacks ignore or lower the target's armour, saves or defence. | Damage that carries on to another target is excess_damage.
 evasion | Hard to block (flying, unblockable) | combat | buff | The unit can't be blocked, can be blocked only by some units, or hits the player past blockers. | Can't be targeted is immunity; hidden until it acts is stealth.
 ranged | Ranged attack / long reach | combat | buff,positional | The unit attacks from a distance, from the back row or over other units. | Damage from a spell is damage.
-multi_target_attack | Damage to several chosen targets | combat | damage,scope_multi | The player picks every target of one damage effect: "3 to an enemy and 1 to another", "up to 3 chosen characters", damage divided as you choose. | Damage that also lands around the target, in a row or on all is aoe_damage; random targets are random_target; several separate attacks are multi_attack.
+multi_target_attack | Damage to several separate targets | combat | damage,scope_multi | One damage effect hits two or more separately named targets: all chosen by the player ("3 to an enemy and 1 to another", "up to 3 chosen characters", divided as you choose), or one chosen plus a fixed one (this unit, your general). | Damage that also lands around the target, in a row or on all is aoe_damage; random targets are random_target; several separate attacks are multi_attack.
 excess_damage | Excess damage carries on (trample) | effect | buff,damage | Damage beyond what kills the target goes on to the player or another unit. | Ignoring armour is piercing.
 deathtouch | Any damage kills (deathtouch, poisonous) | combat | buff,destroy | Any damage this unit deals destroys the unit it hits. | Destroying by an effect without combat damage is destroy.
 random_ability | Gain a random ability or keyword | effect | buff,random_effect | A unit gains a randomly chosen keyword or ability. | Other random results are random_effect.
@@ -76,7 +76,7 @@ steal | Steal from the opponent | effect | helps_me,hurts_enemy | The owner take
 
 ## Hurts the enemy
 damage | Deal damage | effect | hurts_enemy | Damage is dealt to a unit, player or base. | Killing regardless of health is destroy; damage to my own side is friendly_fire.
-aoe_damage | Damage to many at once | effect | damage,scope_multi | Damage reaches several units without the player choosing each: around the target, a row, a lane, an area or all. Full or reduced damage both count. | If the player picks every target it is multi_target_attack; random targets are random_target.
+aoe_damage | Damage to many at once | effect | damage,scope_multi | Damage reaches several units without the player choosing each: around the target, a row, a lane, an area or all. Full or reduced damage both count. | If the targets are named one by one it is multi_target_attack; random targets are random_target.
 damage_over_time | Damage over time (poison, burn) | effect | damage | Damage repeats over turns: poison, burn, bleed. | One-time damage is damage.
 direct_damage | Damage to the player or base | effect | damage | Damage goes straight to the enemy player, hero or base. | Damage to units is damage.
 ping | Small repeatable damage | effect | damage | A small amount of damage (1 or 2) that can be dealt again and again. | One big hit is damage.

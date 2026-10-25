@@ -1,115 +1,31 @@
 game	entity	trigger	effect	removed tag	cause	key says the removed tag is
-duelyst	741564	activated	stat_gain	activated	switch-off	wrong
-duelyst	741564	activated	taunt	activated	switch-off	wrong
-duelyst	741647	hero_power	draw	draw	other: 	wrong
-duelyst	741647	hero_power	recycle	recycle	other: text_pattern	wrong
-duelyst	741655	on_damaged	draw	draw	other: 	wrong
-duelyst	741688	counterattack	stat_gain	counterattack	other: 	
-duelyst	741703	turn_end	stat_gain	turn_end	other: 	
-duelyst	741703	turn_start	stat_gain	turn_start	other: 	
-duelyst	741707	on_damaged	stat_gain	on_damaged	other: 	
-duelyst	741734	turn_end	damage	turn_end	other: 	wrong
-duelyst	741736	turn_end	damage	damage	other: 	
-duelyst	741738	death_trigger	summon	death_trigger	other: text_pattern	
-duelyst	741738	other_death_trigger	death_trigger	death_trigger	other: text_pattern	
-duelyst	741739	death_trigger	stat_gain	death_trigger	other: text_pattern	
-duelyst	741739	other_death_trigger	death_trigger	death_trigger	other: text_pattern	
-duelyst	741740	on_damaged	stat_gain	on_damaged	other: 	
-duelyst	741743	turn_end	damage	turn_end	other: 	
-duelyst	741743	turn_end	stat_multiply	turn_end	other: 	
-duelyst	741746	death_trigger	direct_damage	death_trigger	other: text_pattern	
-duelyst	741746	death_trigger	heal	death_trigger	other: text_pattern	
-duelyst	741746	death_trigger	ping	death_trigger	other: text_pattern	
-duelyst	741746	other_death_trigger	death_trigger	death_trigger	other: text_pattern	
-duelyst	741756	turn_end	damage	turn_end	other: 	
-duelyst	741758	death_trigger	stat_gain	death_trigger	other: via_keyword	
-duelyst	741758	other_death_trigger	death_trigger	death_trigger	other: via_keyword	
-duelyst	741770	death_trigger	stat_gain	death_trigger	other: text_pattern	
-duelyst	741770	other_death_trigger	death_count	other_death_trigger	other: 	
-duelyst	741770	other_death_trigger	death_trigger	other_death_trigger	other: 	
-duelyst	741779	on_damaged	haste	on_damaged	other: 	
-duelyst	741798	death_count	death_trigger	death_trigger	other: 	wrong
-duelyst	741821	death_trigger	stat_gain		pair no longer derived (both tags still there)	
-duelyst	741821	territory_trigger	stat_gain		pair no longer derived (both tags still there)	
-duelyst	741865	on_play	draw	draw	other: 	wrong
-duelyst	741879	delayed	transform	delayed	other: 	
-duelyst	741880	delayed	transform	delayed	other: 	wrong
-duelyst	741883	delayed	transform	delayed	other: 	wrong
-duelyst	741884	on_damaged	ranged	on_damaged	other: 	
-duelyst	741884	on_damaged	shield	on_damaged	other: 	
-duelyst	741961	turn_end	heal	turn_end	other: 	
-duelyst	741961	turn_end	stat_gain	turn_end	other: 	
-duelyst	741963	turn_end	destroy	turn_end	other: 	wrong
-duelyst	741963	turn_end	heal	turn_end	other: 	wrong
-duelyst	741965	turn_end	damage	turn_end	other: 	
-duelyst	741965	turn_end	heal	turn_end	other: 	
-duelyst	741974	trap_secret	draw	draw	other: 	
-duelyst	741984	death_trigger	draw	draw	other: 	
-duelyst	741985	on_ally_play	sacrifice	on_ally_play	other: 	
-duelyst	741989	on_ally_play	evasion		pair no longer derived (both tags still there)	
-duelyst	742003	trap_secret	draw	draw	other: 	
-duelyst	742009	on_damaged	shield	on_damaged	other: 	
-duelyst	742016	turn_start	permanent_growth	turn_start	other: 	
-duelyst	742022	on_attack	stat_gain	stat_gain	other: 	wrong
-duelyst	742022	territory_trigger	stat_gain	stat_gain	other: 	wrong
-duelyst	742027	on_attack	evasion		pair no longer derived (both tags still there)	
-duelyst	742032	passive	board_clog	passive	switch-off	
-duelyst	742032	territory_trigger	board_clog	board_clog	other: 	
-duelyst	742032	territory_trigger	stat_gain		pair no longer derived (both tags still there)	
-duelyst	742036	on_play	draw	draw	other: 	
-duelyst	742039	on_play	draw	draw	other: 	
-duelyst	742040	on_damaged	stat_gain	on_damaged	other: 	
-duelyst	742044	on_play	recycle	recycle	other: text_pattern	wrong
-duelyst	742091	on_damaged	destroy	on_damaged	other: 	
-duelyst	742091	on_damaged	taunt	on_damaged	other: 	
-duelyst	742093	on_damaged	taunt	on_damaged	other: 	
-duelyst	742125	activated	generate_cards	activated	switch-off	
-duelyst	742125	activated	stat_gain	activated	switch-off	
-duelyst	742125	turn_start	generate_cards	turn_start	other: 	
-duelyst	742125	turn_start	stat_gain	turn_start	other: 	
-duelyst	742129	death_trigger	draw	draw	other: 	wrong
-duelyst	742157	turn_end	damage	turn_end	other: 	
-duelyst	742159	turn_end	damage	turn_end	other: 	
-duelyst	742162	turn_end	damage	turn_end	other: 	
-duelyst	742164	activated	damage	activated	switch-off	wrong
-duelyst	742164	activated	generate_cards	activated	switch-off	wrong
-duelyst	742164	turn_start	damage	turn_start	other: 	wrong
-duelyst	742164	turn_start	generate_cards	turn_start	other: 	wrong
-duelyst	742165	turn_end	damage	turn_end	other: 	
-duelyst	742165	turn_end	draw	turn_end	other: 	
-duelyst	742177	activated	generate_cards	activated	switch-off	
-duelyst	742177	activated	stat_gain	activated	switch-off	
-duelyst	742177	turn_start	generate_cards	turn_start	other: 	
-duelyst	742177	turn_start	stat_gain	turn_start	other: 	
-duelyst	742179	activated	copy	activated	switch-off	wrong
-duelyst	742179	turn_start	copy	turn_start	other: 	wrong
-duelyst	742183	on_play	evasion		pair no longer derived (both tags still there)	
-duelyst	742184	territory_trigger	draw	draw	other: 	wrong
-duelyst	742184	territory_trigger	stat_gain		pair no longer derived (both tags still there)	
-duelyst	742194	activated	transform	activated	switch-off	
-duelyst	742194	turn_start	transform	turn_start	other: 	
-duelyst	742201	other_death_trigger	death_trigger	death_trigger	other: 	wrong
-duelyst	742203	on_damaged	multi_attack	on_damaged	other: 	
-duelyst	742204	on_play	draw	draw	other: 	
-duelyst	742209	death_trigger	draw	draw	other: 	
-duelyst	742222	on_damaged	multi_attack	on_damaged	other: 	
-duelyst	742222	on_damaged	shield	on_damaged	other: 	
-duelyst	742222	on_damaged	taunt	on_damaged	other: 	
-duelyst	742224	on_play	draw	draw	other: 	wrong
-duelyst	742226	on_attack	draw	draw	other: 	
-duelyst	742231	on_play	evasion		pair no longer derived (both tags still there)	
-duelyst	742254	on_spell	draw	draw	other: 	
-duelyst	742257	on_play	draw	draw	other: 	
-duelyst	742257	on_play	evasion		pair no longer derived (both tags still there)	
-duelyst	742262	delayed	transform	delayed	other: 	
-duelyst	742281	hero_power	draw	draw	other: 	
-duelyst	742281	on_spell	draw	draw	other: 	
-duelyst	742286	counterattack	draw	draw	other: 	
-duelyst	742286	delayed	draw	delayed	other: 	
-duelyst	742286	delayed	generate_cards	delayed	other: 	
-duelyst	742288	delayed	transform	delayed	other: 	
-duelyst	742292	delayed	transform	delayed	other: 	wrong
-duelyst	742308	death_trigger	summon	death_trigger	other: text_pattern	
-duelyst	742308	delayed	death_trigger	death_trigger	other: text_pattern	
-duelyst	742308	other_death_trigger	death_trigger	death_trigger	other: text_pattern	
-duelyst	742344	hero_power	draw	draw	other: 	
+gwent	756228	on_play	damage	damage	switch-off	right
+gwent	756238	on_play	damage	damage	switch-off	
+gwent	756495	on_play	damage	damage	switch-off	right
+gwent	756690	on_play	damage	damage	switch-off	
+gwent	756998	on_play	damage	damage	switch-off	
+gwent	757325	on_play	damage	damage	switch-off	
+gwent	757325	other_death_trigger	damage	damage	switch-off	
+hearthstone	744098	on_play	damage	damage	switch-off	
+mtg	766283	activated	damage	damage	switch-off	
+mtg	767112	on_attack	damage	damage	switch-off	
+mtg	767591	trap_secret	damage	damage	switch-off	right
+mtg	772494	activated	damage	damage	switch-off	
+mtg	773132	death_trigger	damage	damage	switch-off	
+mtg	773518	activated	damage	damage	switch-off	
+mtg	773681	on_play	damage	damage	switch-off	
+mtg	776258	activated	damage	damage	switch-off	
+mtg	779283	turn_end	damage	damage	switch-off	
+mtg	779283	turn_start	damage	damage	switch-off	
+mtg	779721	activated	damage	damage	switch-off	
+mtg	783913	activated	damage	damage	switch-off	
+mtg	783959	on_play	damage	damage	switch-off	
+runeterra	751352	on_kill	damage	damage	switch-off	
+runeterra	796715	on_kill	damage	damage	switch-off	
+runeterra	796894	on_kill	damage	damage	switch-off	
+runeterra	796896	on_kill	damage	damage	switch-off	
+runeterra	796927	on_kill	damage	damage	switch-off	right
+shadowverse	753953	on_play	damage	damage	switch-off	
+swu	819399	on_play	damage	damage	other: 	
+swu	819686	on_attack	damage	damage	other: text_pattern	
+swu	820484	death_trigger	damage	damage	other: text_pattern	

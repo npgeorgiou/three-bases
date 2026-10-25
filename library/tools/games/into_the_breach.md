@@ -59,9 +59,8 @@ toss a unit|forced_movement|\b(toss\w*|throws?) (a|an|the|adjacent) (unit|target
 swap places|swap|\bswap
 teleport|movement|\bteleport
 leap or dash (mech moves as it attacks)|movement|\b(leap|dash|charge|fly) (to|in a line|forward|away)
-line attack|multi_target_attack|\b(tiles|everything|all units) in a line\b|\bpiercing beam\b
-chain lightning|multi_target_attack|\bchain
-area around target|multi_target_attack|\b(adjacent tiles|nearby tiles|surrounding tiles)\b
+line attack|area_templates|\b(tiles|everything|all units) in a line\b|\bpiercing beam\b
+area around target|adjacency|\b(adjacent tiles|nearby tiles|surrounding tiles)\b
 artillery and projectiles|ranged|\b(artillery|projectile)
 self damage|friendly_fire|\b(damaging self|hurting yourself|self damage|damage itself|damages both shooter)
 flip attack direction|disruption|\bflip\w* (its|a target's|the target's) attack direction

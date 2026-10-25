@@ -5,7 +5,6 @@
 !terrain|\bwall\b
 !movement|\bmoves?\b
 !stress_morale|\bafflict
-!multi_target_attack|\bcleave
 # added 12 Oct 2026 (MTGJSON load): wordings the general patterns missed
 return_to_hand|does|\breturn\b[^.]{0,90}\bto (its|their) owners?'?s?'? hands?\b
 counter_spell|does|(?<!opponent controls, )\bcounter (up to (one|two|three|four|x|\d+) )?(target|that|those|it|them|the (spell|ability)|all|each)\b(?! (creature|land|permanent|player|opponent|artifact|enchantment|planeswalker)s?\b)

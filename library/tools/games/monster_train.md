@@ -158,7 +158,7 @@ The mechanics the guides name, one per line as `name|concept|regex`, and the rul
 # term: Silence: the unit's abilities and triggers stop working. (assumed)
 multistrike|multi_attack|\bmultistrike\b
 rage|stat_gain|\brage\b
-sweep|multi_target_attack|\bsweep\b
+sweep|aoe_damage|\bsweep\b
 incant|on_spell|\bincant\b
 frostbite|damage_over_time|\bfrostbite\b
 morsels|summon|\bmorsel

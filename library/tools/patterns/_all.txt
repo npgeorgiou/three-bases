@@ -25,3 +25,11 @@
 !debuff|subtract \d from (the )?(hit|wound|save|charge|run|attacks?|movement)
 !debuff|subtract \d from .{0,25}(hit|wound|save|charge) rolls?
 !debuff|(worsen|subtract \d+ from) .{0,40}(characteristic|hit roll|wound roll|leadership|toughness)
+# multi_target_attack is damage to separately named targets; cleave, sweep and "attacks each" are area damage (aoe_damage)
+!multi_target_attack|bifurcated
+!multi_target_attack|trifurcated
+!multi_target_attack|attacks? (each|all|both) (enemy|enemies|adjacent|opposing|creatures?|minions?|units?)
+!multi_target_attack|also (strikes|attacks|hits)
+!multi_target_attack|\bcleave
+!multi_target_attack|\bsweep
+!multi_target_attack|also damages
