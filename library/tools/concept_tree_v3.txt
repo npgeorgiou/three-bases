@@ -17,12 +17,12 @@ temporary_buff | Temporary bonus (this turn only) | effect | buff,temporary_effe
 permanent_growth | Grows again and again | effect | buff | A unit gains stats repeatedly (each turn, each trigger) and keeps them. | A single lasting bonus is stat_gain.
 stat_multiply | Double or multiply stats | effect | buff | A stat or a total is doubled, tripled or multiplied. | Adding a fixed amount is stat_gain.
 first_strike | First strike (hits before the enemy) | combat | buff | The unit deals its combat damage before the enemy can strike back. | Attacking the turn it arrives is haste.
-multi_attack | Attack more than once | combat | buff | The unit attacks or strikes more than once per turn or round. | One attack that hits several targets is multi_target_attack; readying a used unit is untap.
+multi_attack | Attack more than once | combat | buff | The unit attacks or strikes more than once per turn or round. | One attack that hits several targets the player chose is multi_target_attack; readying a used unit is untap.
 counterattack | Strike back when attacked (counterattack, thorns) | combat | buff | When the unit is attacked or hit, it deals damage back to the attacker. | Damage it deals when it attacks is on_attack.
 piercing | Ignore armour or defence | combat | buff | The unit's damage or attacks ignore or lower the target's armour, saves or defence. | Damage that carries on to another target is excess_damage.
 evasion | Hard to block (flying, unblockable) | combat | buff | The unit can't be blocked, can be blocked only by some units, or hits the player past blockers. | Can't be targeted is immunity; hidden until it acts is stealth.
 ranged | Ranged attack / long reach | combat | buff,positional | The unit attacks from a distance, from the back row or over other units. | Damage from a spell is damage.
-multi_target_attack | One attack hits several targets (cleave) | combat | damage,scope_multi | A single attack also hits other units or spaces: cleave, sweep, splash. | Area damage from an effect is aoe_damage; several separate attacks are multi_attack.
+multi_target_attack | Damage to several chosen targets | combat | damage,scope_multi | The player picks every target of one damage effect: "3 to an enemy and 1 to another", "up to 3 chosen characters", damage divided as you choose. | Damage that also lands around the target, in a row or on all is aoe_damage; random targets are random_target; several separate attacks are multi_attack.
 excess_damage | Excess damage carries on (trample) | effect | buff,damage | Damage beyond what kills the target goes on to the player or another unit. | Ignoring armour is piercing.
 deathtouch | Any damage kills (deathtouch, poisonous) | combat | buff,destroy | Any damage this unit deals destroys the unit it hits. | Destroying by an effect without combat damage is destroy.
 random_ability | Gain a random ability or keyword | effect | buff,random_effect | A unit gains a randomly chosen keyword or ability. | Other random results are random_effect.
@@ -76,7 +76,7 @@ steal | Steal from the opponent | effect | helps_me,hurts_enemy | The owner take
 
 ## Hurts the enemy
 damage | Deal damage | effect | hurts_enemy | Damage is dealt to a unit, player or base. | Killing regardless of health is destroy; damage to my own side is friendly_fire.
-aoe_damage | Damage to many at once | effect | damage,scope_multi | Damage hits several units, a row, a lane or an area at once. | One unit's attack hitting several is multi_target_attack.
+aoe_damage | Damage to many at once | effect | damage,scope_multi | Damage reaches several units without the player choosing each: around the target, a row, a lane, an area or all. Full or reduced damage both count. | If the player picks every target it is multi_target_attack; random targets are random_target.
 damage_over_time | Damage over time (poison, burn) | effect | damage | Damage repeats over turns: poison, burn, bleed. | One-time damage is damage.
 direct_damage | Damage to the player or base | effect | damage | Damage goes straight to the enemy player, hero or base. | Damage to units is damage.
 ping | Small repeatable damage | effect | damage | A small amount of damage (1 or 2) that can be dealt again and again. | One big hit is damage.
@@ -138,7 +138,7 @@ target_choice | Choose attack targets | combat | targeting_rules | The owner cho
 
 ## Conditions
 condition | Conditions | condition |  | An effect works only if, unless or when something is true. | When it happens is a trigger.
-adjacency | Neighbours matter (adjacency) | condition | positional | The effect cares about units beside it, or the lane or location to the left or right. | Several lanes away is cross_lane.
+adjacency | Neighbours matter (adjacency) | condition | positional | The effect uses the units or tiles beside it for any purpose: hits them, moves them, gives or needs a bonus, or the lane or location to the left or right. | Several lanes away is cross_lane.
 assists_support | Help from nearby allies (assists) | condition | adjacency,synergy_payoff | Nearby allies add a bonus to an action: assists, support, flanking help. | Bonuses for any ally anywhere are tribal or aura.
 combo_sequence | Order of my plays matters (combo) | condition | condition | The effect cares about the order of the owner's plays: the last card played, played another card first. | Order between the players is reveal_order.
 condition_count | Counts / thresholds | condition | condition | The effect needs or scales with a number: for each, N or more. | Counts of past events this game are count_payoff.
@@ -158,6 +158,7 @@ quests | Quests / objectives with rewards | condition | condition_count | A goal
 race_objective | First to do it wins the reward | condition | quests | The reward goes to the first player to meet a condition. | A goal for one player only is quests.
 scoring_objectives | Objectives that score points | condition | quests,points_scoring | Objective or secret-goal cards score points when their condition is met. | Rewards other than points are quests.
 random_effect | Random results | condition | randomness | The outcome is random: random target, random card, chance, dice. | A random ability is random_ability.
+random_target | Random target | condition | random_effect | The effect picks its target or targets at random among units, players or places that exist: "a random enemy", "two random minions". | A random card, a random summoned unit or a random amount is random_effect.
 stacking_keyword | Stacking keywords / counters | condition | condition_count | A keyword or counter stacks and grows with each copy. | A one-time count is condition_count.
 stat_condition | Stats matter (highest, lowest) | condition | condition | The effect cares about stats: the highest or lowest power, N or more attack. | Changing stats is buff or debuff.
 tribal | Tribe / type matters | condition | condition,synergy_payoff | The effect cares about a tribe, type, team or family of cards. | Counting as another type is type_grant.
@@ -198,7 +199,7 @@ tempo | Tempo | role | role | Acting faster or more efficiently than the opponen
 
 ## Scope
 scope | Scope (who is affected) | scope |  | How many and which targets an effect touches. | Whether it helps or hurts is the effect branch.
-area_templates | Area shapes (cone, line, sphere) | scope | scope_multi | The effect covers a shape: cone, line, sphere. | All units everywhere is scope_global.
+area_templates | Area shapes (cone, line, sphere) | scope | scope_multi | The effect draws a named shape or counts a pattern: line, cone, cross, circle, "3 tiles". | Plain "adjacent" is adjacency; a named zone (row, lane) is its own concept; all units everywhere is scope_global.
 cross_lane | Reaches other lanes | scope | lanes | The effect reaches or counts other lanes, zones or locations. | Its own lane only is lanes.
 distribute | Split a total among several | scope | scope_multi | An amount of damage, power or counters is split among several units. | The full amount to each is scope_multi.
 scope_global | Whole board / all players | scope | scope_multi | The effect touches the whole board or all players. | Several but not all is scope_multi.
