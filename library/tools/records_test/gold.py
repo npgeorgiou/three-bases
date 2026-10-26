@@ -1,8 +1,8 @@
 """Gold sample for step 2 of the test. `pick`: per game 10 random entries + 5 targeted ones (seed 1) -> gold/sample.json, each with
-its text, the computed abilities and pieces, its tags with their piece and the computed trigger pairs (what the reading checks).
-`score`: compares gold/<game>.json with the computed structure -> per-game share of tags in the right piece and of right pairs.
-Gold file format, per entry id: {"pieces": ["exact text of each correct piece", ...], "tags": {"concept": "exact text of the
-piece holding it"}, "pairs": [["trigger", "effect"], ...]}.  Usage: gold.py pick|score <copy.sqlite>"""
+its text, its computed rows (the tags poured together) and its computed trigger pairs (what the reading checks).
+`score`: compares gold/<game>.json with the rows -> per game, the share of tags whose row mates are right, and of right pairs.
+Gold file format, per entry id: {"rows": [["concept", ...], ...] (the tags that belong together; whole-card tags in one row),
+"pairs": [["trigger", "effect"], ...]}.  Usage: gold.py pick|score <copy.sqlite>"""
 import collections, json, os, random, re, sys
 import common as C
 
@@ -13,18 +13,17 @@ BLOCK_GAMES = {'sts1', 'sts2', 'darkest_dungeon', 'wh_40k_10e', 'wh_aos_4th'}   
 def entry(c, e):
     q = lambda s, *a: c.execute(s, a).fetchall()
     g, n, t = q('SELECT game, name, text FROM entities WHERE id=?', e)[0]
-    ab = []
-    for a, k, p, l in q('SELECT id, kind, ev_pos, ev_len FROM abilities WHERE entity=? ORDER BY ord', e):
-        ab.append({'kind': k, 'pieces': [t[x:x + y] for x, y in q('SELECT ev_pos, ev_len FROM pieces WHERE ability=? ORDER BY ord', a)]})
-    piece_text = {i: t[x:x + y] for i, x, y in q('SELECT p.id, p.ev_pos, p.ev_len FROM pieces p JOIN abilities a ON a.id=p.ability WHERE a.entity=?', e)}
-    tags = sorted({(k, piece_text.get(p)) for k, p in q('SELECT concept, piece FROM entity_concepts WHERE entity=?', e)}, key=lambda x: (x[1] is None, x))
+    rows = []
+    for r, k, p, l in q('SELECT id, kind, ev_pos, ev_len FROM rows WHERE entity=? ORDER BY ord', e):
+        rows.append({'kind': k, 'text': t[p:p + l] if p is not None else '', 'tags': sorted(x for (x,) in q(
+            'SELECT DISTINCT ec.concept FROM row_tags rt JOIN entity_concepts ec ON ec.rowid=rt.rid WHERE rt.row=?', r))})
     pairs = sorted(set(q('SELECT trigger, effect FROM records_pairs WHERE entity=?', e)))
-    return {'id': e, 'game': g, 'name': n, 'text': t, 'abilities': ab, 'tags': [list(x) for x in tags], 'pairs': [list(x) for x in pairs]}
+    return {'id': e, 'game': g, 'name': n, 'text': t, 'rows': rows, 'pairs': [list(x) for x in pairs]}
 
 def pick(c):
     rnd = random.Random(1); out = []
-    nab = collections.Counter(e for (e,) in c.execute('SELECT entity FROM abilities'))
-    nkw = collections.Counter(e for (e,) in c.execute("SELECT entity FROM abilities WHERE kind='keyword'"))
+    nab = collections.Counter(e for (e,) in c.execute("SELECT entity FROM rows WHERE kind != 'card'"))
+    nkw = collections.Counter(e for (e,) in c.execute("SELECT entity FROM rows WHERE kind='keyword'"))
     for (g,) in c.execute('SELECT DISTINCT game FROM entities ORDER BY game').fetchall():
         pool = [(e, t) for e, t in c.execute("SELECT id, text FROM entities WHERE game=? AND category NOT IN ('keyword','tribe') AND text IS NOT NULL "
                 "AND id IN (SELECT entity FROM entity_concepts) AND length(text) < 1500 ORDER BY id", (g,))]
@@ -45,21 +44,22 @@ def pick(c):
         for e, w in why.items(): d = entry(c, e); d['why'] = w; out.append(d)
     os.makedirs(os.path.join(C.HERE, 'gold'), exist_ok=True)
     json.dump(out, open(os.path.join(C.HERE, 'gold', 'sample.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    print('entries', len(out), 'tags', sum(len(d['tags']) for d in out), 'pairs', sum(len(d['pairs']) for d in out))
+    print('entries', len(out), 'rows', sum(len(d['rows']) for d in out), 'pairs', sum(len(d['pairs']) for d in out))
 
 def score(c):
-    sample = {str(d['id']): d for d in json.load(open(os.path.join(C.HERE, 'gold', 'sample.json'), encoding='utf-8'))}
     res = {}
     for f in sorted(os.listdir(os.path.join(C.HERE, 'gold'))):
         if f == 'sample.json' or not f.endswith('.json'): continue
         gold = json.load(open(os.path.join(C.HERE, 'gold', f), encoding='utf-8')); tr = tt = pr = pt = 0
         for i, gd in gold.items():
-            d = entry(c, int(i)); have = {k: p for k, p in d['tags']}
-            for k, p in gd['tags'].items(): tt += 1; tr += have.get(k) == p
-            want, got = {tuple(x) for x in gd['pairs']}, {tuple(x) for x in d['pairs']}
-            pt += len(want | got); pr += len(want & got)
+            d = entry(c, int(i))
+            mates = lambda rows: {k: frozenset(r) - {k} for r in rows for k in r}
+            want, got = mates(gd['rows']), mates([r['tags'] for r in d['rows']])
+            for k in want: tt += 1; tr += got.get(k) == want[k]
+            wp, gp = {tuple(x) for x in gd['pairs']}, {tuple(x) for x in d['pairs']}
+            pt += len(wp | gp); pr += len(wp & gp)
         res[f[:-5]] = (tr, tt, pr, pt)
-        print(f"{f[:-5]:18} tags in the right piece {tr}/{tt}  pairs right {pr}/{pt}")
+        print(f"{f[:-5]:18} tags with the right row mates {tr}/{tt}  pairs right {pr}/{pt}")
     return res
 
 if __name__ == '__main__':

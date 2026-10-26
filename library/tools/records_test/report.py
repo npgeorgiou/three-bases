@@ -1,6 +1,6 @@
-"""Step 4 of the test: per-game numbers for test steps 1, 2 (answer-key part, known errors) and 3 (combos part) -> REPORT.md.
-Builds a second copy with the new structure in force (trigger_effect = the ability pairs, compound tags that failed dropped)
-so the existing tools (combo_check.py, key scoring) run unchanged on old and new.
+"""Step 3 of the test: per-game numbers for test steps 1, 2 (answer-key part, known errors) and 3 (combos part) -> REPORT.md.
+Builds a second copy with the rows in force (trigger_effect = the row pairs; aoe_damage, temporary_buff, permanent_growth =
+the computed ones) so the existing tools (combo_check.py, key scoring) run unchanged on old and new.
 Usage: report.py <copy.sqlite> <real.sqlite (read only)>"""
 import collections, json, os, re, shutil, sqlite3, subprocess, sys
 import common as C
@@ -18,33 +18,27 @@ def new_db(copy):
     c = C.connect(out)
     c.execute('DELETE FROM trigger_effect')
     c.execute("INSERT INTO trigger_effect(entity, game, trigger, effect, frequency, basis) SELECT DISTINCT r.entity, x.game, r.trigger, r.effect, NULL, 'records' FROM records_pairs r JOIN entities x ON x.id=r.entity")
-    c.execute('DELETE FROM entity_concepts WHERE rowid IN (SELECT ec.rowid FROM entity_concepts ec JOIN records_compound r ON r.entity=ec.entity AND r.concept=ec.concept WHERE r.kept=0)')
+    c.execute("DELETE FROM entity_concepts WHERE concept IN ('aoe_damage', 'temporary_buff', 'permanent_growth')")
+    c.execute("INSERT INTO entity_concepts(entity, concept, role, method) SELECT DISTINCT entity, concept, 'does', 'records' FROM records_compound")
     c.commit(); c.close(); return out
 
 def step1(c):
     q = lambda s, *a: c.execute(s, a).fetchall()
-    eff, trig = C.concept_kinds(c); anc = collections.defaultdict(set)
-    for i, r in q('SELECT id, root FROM concept_tree'): anc[i].add(r)
+    eff, trig = C.concept_kinds(c)
     G = collections.defaultdict(collections.Counter)
-    for g, how, cross in q('SELECT x.game, l.how, l.cross FROM place_log l JOIN entity_concepts ec ON ec.rowid=l.rid JOIN entities x ON x.id=ec.entity'):
-        G[g]['entry_level' if how == 'entry_level' else 'tags'] += 1
-        if how in ('entry_level',): continue
-        if how in ('nowhere', 'no_text'): G[g][how] += 1
-        else:
-            G[g]['placed'] += 1; G[g]['one'] += cross == 0
-            if how == 'span': G[g]['cross_excerpt'] += cross > 0   # stored excerpt not narrowed: the words are unknown
-            else: G[g]['cross_piece'] += cross == 1; G[g]['cross_ability'] += cross == 2
-    abil = collections.defaultdict(set)
-    for g, a, k in q('SELECT x.game, ab.id, ec.concept FROM abilities ab JOIN entities x ON x.id=ab.entity LEFT JOIN entity_concepts ec ON ec.ability=ab.id'):
-        abil[(g, a)].add(k)
-    for (g, a), ks in abil.items():
-        G[g]['abilities'] += 1; G[g]['ab_no_effect'] += not (ks & eff)
-    pcs = collections.defaultdict(set)
-    for g, p, k in q('SELECT x.game, ec.piece, ec.concept FROM entity_concepts ec JOIN entities x ON x.id=ec.entity WHERE ec.piece IS NOT NULL'):
-        if k in eff: pcs[(g, p)].add(k)
-    for (g, p), ks in pcs.items():   # two effects neither of which is a kind of the other
-        if any(a != b and a not in anc[b] and b not in anc[a] for a in ks for b in ks): G[g]['piece_two_effects'] += 1
-    for g, n in q('SELECT game, count(*) FROM pieces p JOIN abilities a ON a.id=p.ability JOIN entities x ON x.id=a.entity GROUP BY game'): G[g]['pieces'] = n
+    for g, how, cross, kind in q('SELECT x.game, w.how, rt.cross, r.kind FROM tag_words w JOIN row_tags rt ON rt.rid=w.rid JOIN rows r ON r.id=rt.row '
+                                 'JOIN entity_concepts ec ON ec.rowid=w.rid JOIN entities x ON x.id=ec.entity'):
+        if how == 'entry_level': G[g]['entry_level'] += 1; continue
+        G[g]['tags'] += 1
+        if kind == 'card': G[g]['card'] += 1
+        elif cross: G[g]['cross'] += 1
+        else: G[g]['clean'] += 1; G[g]['excerpt'] += how == 'excerpt'   # an excerpt inside the row holds the words somewhere
+    rows = collections.defaultdict(set)
+    for g, r, k, kind in q('SELECT x.game, r.id, ec.concept, r.kind FROM rows r JOIN entities x ON x.id=r.entity JOIN row_tags rt ON rt.row=r.id JOIN entity_concepts ec ON ec.rowid=rt.rid WHERE r.kind != "card"'):
+        rows[(g, r, kind)].add(k)
+    for (g, r, kind), ks in rows.items():
+        G[g]['rows'] += 1; G[g]['row_no_effect'] += not (ks & eff); G[g]['trigger_rows'] += kind == 'trigger'
+        G[g]['trigger_no_effect'] += kind == 'trigger' and not (ks & eff - trig)
     for g, n in q('SELECT game, count(*) FROM (SELECT DISTINCT entity, game, trigger, effect FROM trigger_effect) GROUP BY game'): G[g]['pairs_before'] = n
     for g, n in q('SELECT x.game, count(*) FROM (SELECT DISTINCT entity, trigger, effect FROM records_pairs) r JOIN entities x ON x.id=r.entity GROUP BY x.game'): G[g]['pairs_after'] = n
     return G
@@ -84,22 +78,24 @@ def main(copy, real):
     L = ['# Tagging per effect: test report', '', 'Built by `tools/records_test/` on a copy of the database (TAGGING_RECORDS.md). Script numbers only;',
          'the gold reading (step 2) and the read checks of step 3 are not in this report yet.', '',
          '## Step 1: does it fly', '',
-         'Tags: all tags except cost and structure tags (data_rule, game_structure), which describe the whole entry. Placed: in one',
-         f'ability and one piece, the matched words inside both. Pass: {PASS_PLACED:.0%}+ placed in every game.', '',
-         '| game | tags | placed (one ability+piece) | words cross pieces | words cross abilities | excerpt crosses (words unknown) | nowhere | no text | abilities without effect | pieces with two effects | pairs before | pairs after | pass |',
+         'Tags: all tags except cost and structure tags (data_rule, game_structure). Clean: the words that made the tag were found',
+         'and lie inside its row. Card-level: tags with no words in the text (hand-mapped whole-card tags), in the card row.',
+         'Excerpt: only an old fixed-length excerpt is stored and the patterns no longer find the words in it; clean when the whole excerpt lies in the row.',
+         f'Pass: clean + card-level {PASS_PLACED:.0%}+ in every game.', '',
+         '| game | tags | clean | card-level | of them excerpts | words cross rows | clean + card | rows | rows without effect | trigger rows without effect | pairs before | pairs after | pass |',
          '|---|---|---|---|---|---|---|---|---|---|---|---|---|']
     s1 = {}
     for g in games:
-        x = G[g]; share = x['one'] / x['tags'] if x['tags'] else 0; s1[g] = share >= PASS_PLACED
-        L.append(f"| {g} | {x['tags']} | {pct(x['one'], x['tags'])} | {x['cross_piece']} | {x['cross_ability']} | {x['cross_excerpt']} | {x['nowhere']} | {x['no_text']} | "
-                 f"{pct(x['ab_no_effect'], x['abilities'])} of {x['abilities']} | {x['piece_two_effects']} of {x['pieces']} | {x['pairs_before']} | {x['pairs_after']} | {'pass' if s1[g] else 'FAIL'} |")
+        x = G[g]; ok = x['clean'] + x['card']; s1[g] = x['tags'] and ok / x['tags'] >= PASS_PLACED
+        L.append(f"| {g} | {x['tags']} | {pct(x['clean'], x['tags'])} | {x['card']} | {x['excerpt']} | {x['cross']} | {pct(ok, x['tags'])} | {x['rows']} | "
+                 f"{pct(x['row_no_effect'], x['rows'])} | {x['trigger_no_effect']} of {x['trigger_rows']} | {x['pairs_before']} | {x['pairs_after']} | {'pass' if s1[g] else 'FAIL'} |")
     T = collections.Counter()
     for g in games: T.update(G[g])
-    L += ['', f"All games: {pct(T['one'], T['tags'])} placed; outliers (nowhere {T['nowhere']}, words across pieces {T['cross_piece']}, across abilities {T['cross_ability']}, excerpts across {T['cross_excerpt']}): {T['nowhere'] + T['cross_piece'] + T['cross_ability'] + T['cross_excerpt']}.", '']
-    how = collections.Counter(dict(c.execute('SELECT how, count(*) FROM place_log GROUP BY how').fetchall()))
-    L += ['How tags were placed: ' + ', '.join(f'{k} {v}' for k, v in how.most_common()) + '.', '']
+    L += ['', f"All games: clean {pct(T['clean'], T['tags'])}, clean + card {pct(T['clean'] + T['card'], T['tags'])}; outliers (words or excerpt across rows): {T['cross']}.", '']
+    how = collections.Counter(dict(c.execute('SELECT how, count(*) FROM tag_words GROUP BY how').fetchall()))
+    L += ['How the words were found: ' + ', '.join(f'{k} {v}' for k, v in how.most_common()) + '.', '']
     L += ['## Step 2 (answer-key part): compound tags', '',
-          'Per game and concept on the key entries: old (today) and new (compound kept only when its piece holds its base effect).',
+          'Per game and concept on the key entries: old (today\'s tags) and new (computed from the rows, rows.py). Scope tags are unchanged.',
           'P = right / tagged, R = found / key. Pass: no concept worse in any game (precision and recall both).', '',
           '| game | concept | old tagged | old P | old R | new tagged | new P | new R | key | worse |', '|---|---|---|---|---|---|---|---|---|---|']
     s2 = {}
