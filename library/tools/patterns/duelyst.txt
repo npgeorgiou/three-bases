@@ -7,7 +7,7 @@ generate_cards|does|\b(put|add)s? [^.]{0,60}\binto (your|their|the opponent's|yo
 !rows|\bfront\b
 positional|does|\bin front of\b|\bbehind (an? |each |the )?(enemy|enemies|it|them|your general)\b|\bdiagonal|\bcolumn\b|\bstarting side\b|\bcorner
 adjacency|does|\bnearby\b|\baround (it|them|him|her|your general|the enemy general|this minion)\b|\bsurrounding\b
-area_templates|does|\b\dx\d area\b|\bcolumn\b|\bstraight line\b|\brow\b
+area_templates|does|\b\dx\d area\b|\bstraight line\b
 # Duelyst Frenzy hits all nearby enemies when attacking; it is not a when-damaged trigger
 !on_damaged|\bfrenzy
 # Replace = put a card from your action bar (hand) back into the deck for a new one: a redraw, not reusing a used card; replacing the whole action bar swaps the hand
@@ -37,3 +37,7 @@ tribal|does|\brandom (vespyr|golem|dervish|spriggin|wraithling|battle pet|arcany
 movement|does|\bmay move an additional space\b|\bteleport (a friendly minion|your general)\b
 # A space that turns into Shadow Creep or sand is terrain, not a transformed card
 !transform|\bturns? into\b
+# Rows and columns are zones with their own tags (rows, lanes), not shapes; a named shape or direction is; 'joined' is the neighbouring wording
+aoe_damage|does|\bdamage to [^.]{0,20}minions in this row\b
+adjacency|does|\bjoined enemies\b
+area_templates|does|\bin front of this minion\b

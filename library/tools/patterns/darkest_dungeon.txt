@@ -53,3 +53,5 @@ disable|does|\beffects:[^|]*?\bstun\b
 debuff|does|\beffects:[^|]*?-\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit)\b
 !stress_morale|\bresolve check
 no_damage_output|does|\bdeals damage \(modifier -100%\)
+# '+100% riposte chance' is a stat, not a random effect
+!random_effect|\bchance\b

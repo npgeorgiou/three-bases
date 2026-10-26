@@ -315,6 +315,10 @@
 [
 "immobilize",
 "Provoke"
+],
+[
+"adjacency",
+"Provoke: nearby enemies must attack this"
 ]
 ],
 "by": "A=B",
@@ -623,6 +627,10 @@
 [
 "immobilize",
 "Provoke"
+],
+[
+"adjacency",
+"Provoke: nearby enemies must attack this"
 ]
 ],
 "by": "A=B",
@@ -2009,6 +2017,10 @@
 [
 "immobilize",
 "Provoke"
+],
+[
+"adjacency",
+"Provoke: nearby enemies must attack this"
 ]
 ],
 "by": "C",
