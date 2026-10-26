@@ -2888,15 +2888,19 @@
  },
  "749587": {
   "add": [
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "749007": {
   "add": [
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "Pass": {
   "add": [

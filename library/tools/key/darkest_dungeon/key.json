@@ -515,10 +515,6 @@
 [
 "rank_positions",
 "Usable from ranks 4, 3"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "A=B"
@@ -612,10 +608,6 @@
 [
 "aoe_damage",
 "Targets all of enemy ranks 1, 2"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "A=B"
@@ -678,10 +670,6 @@
 [
 "rank_positions",
 "Usable from ranks 4, 3, 2, 1"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "A=B"
@@ -774,10 +762,6 @@
 [
 "damage_over_time",
 "bleed"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -889,7 +873,7 @@
 "+9 speed (self)"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Targets all of enemy ranks"
 ]
 ],
@@ -1008,10 +992,6 @@
 [
 "disable",
 "stun"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "A=B",
@@ -1158,10 +1138,6 @@
 [
 "damage_over_time",
 "bleed"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -1284,10 +1260,6 @@
 [
 "damage_over_time",
 "blight"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -1351,10 +1323,6 @@
 [
 "self_destruct",
 "kill (self)"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "A=B"
@@ -1376,10 +1344,6 @@
 [
 "rank_positions",
 "Usable from ranks 1, 2, 3, 4"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C"
@@ -1409,10 +1373,6 @@
 [
 "movement",
 "Moves self (back/forward) 1 0"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C"
@@ -1442,10 +1402,6 @@
 [
 "ranged",
 "Ranged skill"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "A=B"
@@ -1577,10 +1533,6 @@
 [
 "damage_over_time",
 "bleed"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -2003,10 +1955,6 @@
 [
 "disable",
 "stun"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -2057,7 +2005,7 @@
 "bleed"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Targets all of enemy ranks"
 ]
 ],
@@ -2109,10 +2057,6 @@
 [
 "heal",
 "heal 6 (self)"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C"
@@ -2196,10 +2140,6 @@
 [
 "damage_over_time",
 "blight"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -2297,10 +2237,6 @@
 [
 "damage_over_time",
 "blight"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -2385,10 +2321,6 @@
 [
 "damage_over_time",
 "bleed"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -2443,10 +2375,6 @@
 [
 "damage_over_time",
 "bleed"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -2578,10 +2506,6 @@
 [
 "rank_positions",
 "Usable from ranks 1, 2, 3, 4"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -2665,10 +2589,6 @@
 [
 "ranged",
 "Ranged skill"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C",
@@ -2721,10 +2641,6 @@
 [
 "damage_over_time",
 "blight"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "A=B",
@@ -2776,10 +2692,6 @@
 [
 "damage_over_time",
 "blight"
-],
-[
-"multi_target_attack",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "A=B",
@@ -2824,7 +2736,7 @@
 "stress +7"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Targets all of enemy ranks"
 ]
 ],

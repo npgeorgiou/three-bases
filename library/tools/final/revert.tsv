@@ -387,7 +387,6 @@ restore	759959	damage	does
 restore	759971	stat_loss	does
 restore	759975	stat_loss	does
 restore	759993	damage	does
-restore	759994	multi_target_attack	does
 restore	759994	stat_loss	does
 restore	759995	damage	does
 restore	760019	damage	does
@@ -1461,5 +1460,4 @@ restore	816389	stat_loss	does
 restore	816420	count_payoff	does
 restore	816460	advantage	does
 restore	816492	ranged	does
-restore	816507	multi_target_attack	does
 restore	816507	ranged	does

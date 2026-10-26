@@ -129,7 +129,7 @@
  },
  "Sweep": {
   "add": [
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": []
  },
@@ -307,5 +307,61 @@
    "retain"
   ],
   "drop": []
+ },
+ "822463": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "822573": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "822548": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "822555": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "822582": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "822595": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "822735": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
  }
 }

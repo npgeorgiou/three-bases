@@ -1199,12 +1199,12 @@
 "748371": {
 "tags": [
 [
-"multi_target_attack",
-"Also damages the enemies next to whomever this attacks"
-],
-[
 "adjacency",
 "next to"
+],
+[
+"aoe_damage",
+"Also damages the enemies next to whomever this attacks"
 ]
 ],
 "by": "A=B"
@@ -3011,10 +3011,6 @@
 "749007": {
 "tags": [
 [
-"multi_target_attack",
-"Also damages adjacent minions"
-],
-[
 "combat_start",
 "Start of Combat"
 ],
@@ -3025,6 +3021,14 @@
 [
 "transform",
 "Morphs each turn"
+],
+[
+"aoe_damage",
+"Also damages adjacent minions"
+],
+[
+"adjacency",
+"Also damages adjacent minions"
 ]
 ],
 "by": "A=B",
@@ -4475,16 +4479,20 @@
 "749587": {
 "tags": [
 [
-"multi_target_attack",
-"Also damages adjacent minions"
-],
-[
 "combat_start",
 "Start of Combat"
 ],
 [
 "stat_multiply",
 "Double this minion's stats"
+],
+[
+"aoe_damage",
+"Also damages adjacent minions"
+],
+[
+"adjacency",
+"Also damages adjacent minions"
 ]
 ],
 "by": "A=B",
@@ -5679,12 +5687,12 @@
 "749981": {
 "tags": [
 [
-"multi_target_attack",
-"Also damages the minions next to whomever it attacks"
-],
-[
 "adjacency",
 "next to"
+],
+[
+"aoe_damage",
+"Also damages the minions next to whomever it attacks"
 ]
 ],
 "by": "C"
@@ -5717,12 +5725,12 @@
 "749990": {
 "tags": [
 [
-"multi_target_attack",
-"Also damages the minions next to whomever this attacks"
-],
-[
 "adjacency",
 "next to"
+],
+[
+"aoe_damage",
+"Also damages the minions next to whomever this attacks"
 ]
 ],
 "by": "C"

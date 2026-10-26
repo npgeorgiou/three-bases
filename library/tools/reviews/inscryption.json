@@ -1153,9 +1153,12 @@
  },
  "740952": {
   "add": [
-   "permanent_growth"
+   "permanent_growth",
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "740953": {
   "add": [
@@ -1166,11 +1169,13 @@
    "direct_damage",
    "evasion:counters",
    "immunity",
-   "multi_target_attack",
    "removal",
-   "turn_start"
+   "turn_start",
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "740935": {
   "add": [
@@ -1311,11 +1316,12 @@
    "stat_loss:counters",
    "evasion:counters",
    "immunity",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
    "direct_damage",
-   "movement"
+   "movement",
+   "multi_target_attack"
   ]
  },
  "741051": {
@@ -1375,9 +1381,11 @@
  "740932": {
   "add": [
    "link_formation",
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "740927": {
   "add": [
@@ -1514,10 +1522,11 @@
  "740699": {
   "add": [
    "adjacency",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
-   "lane_identity"
+   "lane_identity",
+   "multi_target_attack"
   ]
  },
  "740718": {
@@ -1533,10 +1542,11 @@
  "740833": {
   "add": [
    "adjacency",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
-   "lane_identity"
+   "lane_identity",
+   "multi_target_attack"
   ]
  },
  "740937": {
@@ -1625,10 +1635,11 @@
  "740854": {
   "add": [
    "adjacency",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
-   "lane_identity"
+   "lane_identity",
+   "multi_target_attack"
   ]
  },
  "740677": {
@@ -1748,9 +1759,11 @@
  "740673": {
   "add": [
    "direct_damage",
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "741028": {
   "add": [
@@ -1832,9 +1845,11 @@
  "740700": {
   "add": [
    "link_formation",
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "740731": {
   "add": [
@@ -1974,5 +1989,37 @@
    "items_consumables"
   ],
   "drop": []
+ },
+ "740621": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "740778": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "740855": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "740897": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
  }
 }

@@ -455,11 +455,11 @@
 "damaging a single tile"
 ],
 [
-"multi_target_attack",
+"forced_movement",
 "pushing adjacent tiles"
 ],
 [
-"forced_movement",
+"adjacency",
 "pushing adjacent tiles"
 ]
 ],
@@ -1094,10 +1094,6 @@
 "Deals 1 damage to the target"
 ],
 [
-"multi_target_attack",
-"pushing adjacent tiles"
-],
-[
 "forced_movement",
 "pushing adjacent tiles"
 ],
@@ -1108,6 +1104,10 @@
 [
 "protection",
 "This attack will no longer damage Grid Buildings"
+],
+[
+"adjacency",
+"pushing adjacent tiles"
 ]
 ],
 "by": "C"
@@ -1242,16 +1242,20 @@
 "760921": {
 "tags": [
 [
-"multi_target_attack",
-"Fire a piercing beam"
-],
-[
 "ranged",
 "Burst Beam"
 ],
 [
 "damage",
 "decreases in damage the further it goes"
+],
+[
+"aoe_damage",
+"Fire a piercing beam"
+],
+[
+"area_templates",
+"Fire a piercing beam"
 ]
 ],
 "by": "C"
@@ -1314,7 +1318,11 @@
 "760926": {
 "tags": [
 [
-"multi_target_attack",
+"damage",
+"Chain damage through adjacent targets"
+],
+[
+"adjacency",
 "Chain damage through adjacent targets"
 ]
 ],
@@ -1715,22 +1723,22 @@
 "760949": {
 "tags": [
 [
-"multi_target_attack",
+"upgrade",
+"Upgrade: Building Chain"
+],
+[
+"damage",
 "Chain damage through adjacent targets"
 ],
 [
-"upgrade",
-"Upgrade: Building Chain"
+"adjacency",
+"Chain damage through adjacent targets"
 ]
 ],
 "by": "C"
 },
 "760950": {
 "tags": [
-[
-"multi_target_attack",
-"Fire a piercing beam"
-],
 [
 "damage",
 "decreases in damage the further it goes"
@@ -1742,6 +1750,14 @@
 [
 "upgrade",
 "Upgrade: Ally Immune"
+],
+[
+"aoe_damage",
+"Fire a piercing beam"
+],
+[
+"area_templates",
+"Fire a piercing beam"
 ]
 ],
 "by": "C"
@@ -1888,10 +1904,6 @@
 "760958": {
 "tags": [
 [
-"multi_target_attack",
-"Stab multiple tiles"
-],
-[
 "forced_movement",
 "push the farthest hit tile"
 ],
@@ -1902,6 +1914,14 @@
 [
 "upgrade",
 "Upgrade: A.C.I.D. Tip"
+],
+[
+"aoe_damage",
+"Stab multiple tiles"
+],
+[
+"area_templates",
+"Stab multiple tiles"
 ]
 ],
 "by": "C"
@@ -1959,10 +1979,6 @@
 "760961": {
 "tags": [
 [
-"multi_target_attack",
-"damage and push 3 tiles"
-],
-[
 "forced_movement",
 "damage and push 3 tiles"
 ],
@@ -1973,6 +1989,14 @@
 [
 "upgrade",
 "Upgrade: +1 Use"
+],
+[
+"aoe_damage",
+"damage and push 3 tiles"
+],
+[
+"area_templates",
+"damage and push 3 tiles"
 ]
 ],
 "by": "A=B"
@@ -2026,10 +2050,6 @@
 "760964": {
 "tags": [
 [
-"multi_target_attack",
-"Fire two projectiles in opposite directions"
-],
-[
 "damage",
 "Deals 1 damage to both targets"
 ],
@@ -2040,6 +2060,14 @@
 [
 "upgrade",
 "Upgrade: +1 Damage"
+],
+[
+"aoe_damage",
+"Fire two projectiles in opposite directions"
+],
+[
+"area_templates",
+"Fire two projectiles in opposite directions"
 ]
 ],
 "by": "C"
@@ -2131,10 +2159,6 @@
 "760969": {
 "tags": [
 [
-"multi_target_attack",
-"hits 2 tiles"
-],
-[
 "forced_movement",
 "pushing them in opposite directions"
 ],
@@ -2145,6 +2169,14 @@
 [
 "upgrade",
 "Upgrade: +1 Damage"
+],
+[
+"aoe_damage",
+"hits 2 tiles"
+],
+[
+"area_templates",
+"hits 2 tiles"
 ]
 ],
 "by": "C"
@@ -2227,10 +2259,6 @@
 "760973": {
 "tags": [
 [
-"multi_target_attack",
-"the targeted tile, and the tiles to its left and right"
-],
-[
 "damage",
 "Deals 2 damage to the target"
 ],
@@ -2245,6 +2273,14 @@
 [
 "upgrade",
 "Upgrade: +1 Use"
+],
+[
+"aoe_damage",
+"the targeted tile, and the tiles to its left and right"
+],
+[
+"adjacency",
+"the targeted tile, and the tiles to its left and right"
 ]
 ],
 "by": "C"
@@ -2390,12 +2426,20 @@
 "Artillery with potential to launch multiple small projectiles"
 ],
 [
-"multi_target_attack",
+"upgrade",
+"Upgrade: +2 Tiles"
+],
+[
+"aoe_damage",
 "launch multiple small projectiles"
 ],
 [
-"upgrade",
-"Upgrade: +2 Tiles"
+"adjacency",
+"launch multiple small projectiles"
+],
+[
+"area_templates",
+"launch multiple small projectiles"
 ]
 ],
 "by": "C"
@@ -2403,16 +2447,20 @@
 "760981": {
 "tags": [
 [
-"multi_target_attack",
-"damage to two tiles"
-],
-[
 "forced_movement",
 "pushing one forwards and one backwards"
 ],
 [
 "upgrade",
 "Upgrade: +1 Damage"
+],
+[
+"aoe_damage",
+"damage to two tiles"
+],
+[
+"area_templates",
+"damage to two tiles"
 ]
 ],
 "by": "A=B"
@@ -2513,10 +2561,6 @@
 "760987": {
 "tags": [
 [
-"multi_target_attack",
-"Launch two missiles"
-],
-[
 "damage",
 "Deals 3 damage to both targets"
 ],
@@ -2531,6 +2575,14 @@
 [
 "upgrade",
 "Upgrade: +1 Use"
+],
+[
+"aoe_damage",
+"Launch two missiles"
+],
+[
+"area_templates",
+"Launch two missiles"
 ]
 ],
 "by": "C"
@@ -3240,7 +3292,11 @@
 "Launch Rockets at 3 tiles"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
+"3 tiles dealing 1 damage to each"
+],
+[
+"area_templates",
 "3 tiles dealing 1 damage to each"
 ]
 ],
@@ -3253,7 +3309,11 @@
 "Launch Rockets at 3 tiles"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
+"3 tiles dealing 3 damage to each"
+],
+[
+"area_templates",
 "3 tiles dealing 3 damage to each"
 ]
 ],
@@ -3262,12 +3322,16 @@
 "761022": {
 "tags": [
 [
-"multi_target_attack",
+"damage",
+"does 2 damage reduced by range"
+],
+[
+"aoe_damage",
 "Piercing beam"
 ],
 [
-"damage",
-"does 2 damage reduced by range"
+"area_templates",
+"Piercing beam"
 ]
 ],
 "by": "C"
@@ -3275,12 +3339,16 @@
 "761023": {
 "tags": [
 [
-"multi_target_attack",
+"damage",
+"does 4 damage reduced by range"
+],
+[
+"aoe_damage",
 "Piercing beam"
 ],
 [
-"damage",
-"does 4 damage reduced by range"
+"area_templates",
+"Piercing beam"
 ]
 ],
 "by": "C"
@@ -3370,10 +3438,6 @@
 "5 tile range"
 ],
 [
-"multi_target_attack",
-"Launch Rockets at 3 tiles dealing 2 damage to each"
-],
-[
 "on_damaged",
 "If damaged"
 ],
@@ -3400,6 +3464,14 @@
 [
 "movement",
 "Massive"
+],
+[
+"aoe_damage",
+"Launch Rockets at 3 tiles dealing 2 damage to each"
+],
+[
+"area_templates",
+"Launch Rockets at 3 tiles dealing 2 damage to each"
 ]
 ],
 "by": "C",
@@ -3673,10 +3745,6 @@
 "Web all targets"
 ],
 [
-"multi_target_attack",
-"Web all targets"
-],
-[
 "damage",
 "deal 2 damage to adjacent tiles"
 ],
@@ -3699,6 +3767,14 @@
 [
 "movement",
 "Massive"
+],
+[
+"aoe_damage",
+"Web all targets"
+],
+[
+"adjacency",
+"Web all targets"
 ]
 ],
 "by": "C",
@@ -3732,10 +3808,6 @@
 "761037": {
 "tags": [
 [
-"multi_target_attack",
-"Launch goo projectiles in two directions"
-],
-[
 "damage",
 "dealing 4 damage with each"
 ],
@@ -3746,6 +3818,14 @@
 [
 "movement",
 "Massive"
+],
+[
+"aoe_damage",
+"Launch goo projectiles in two directions"
+],
+[
+"area_templates",
+"Launch goo projectiles in two directions"
 ]
 ],
 "by": "C",
@@ -3842,12 +3922,16 @@
 "Launch artillery attack on 2 tiles"
 ],
 [
-"multi_target_attack",
+"damage",
+"for 1 damage"
+],
+[
+"aoe_damage",
 "Launch artillery attack on 2 tiles"
 ],
 [
-"damage",
-"for 1 damage"
+"area_templates",
+"Launch artillery attack on 2 tiles"
 ]
 ],
 "by": "C"
@@ -3859,12 +3943,16 @@
 "Launch artillery attack on 2 tiles"
 ],
 [
-"multi_target_attack",
+"damage",
+"for 3 damage"
+],
+[
+"aoe_damage",
 "Launch artillery attack on 2 tiles"
 ],
 [
-"damage",
-"for 3 damage"
+"area_templates",
+"Launch artillery attack on 2 tiles"
 ]
 ],
 "by": "C"
@@ -3884,7 +3972,15 @@
 "applying A.C.I.D. on nearby units"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
+"the targeted tile and the two tiles perpendicular"
+],
+[
+"adjacency",
+"the targeted tile and the two tiles perpendicular"
+],
+[
+"area_templates",
 "the targeted tile and the two tiles perpendicular"
 ]
 ],
@@ -3905,7 +4001,15 @@
 "applying A.C.I.D. on nearby units"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
+"the targeted tile and the two tiles perpendicular"
+],
+[
+"adjacency",
+"the targeted tile and the two tiles perpendicular"
+],
+[
+"area_templates",
 "the targeted tile and the two tiles perpendicular"
 ]
 ],
@@ -4003,10 +4107,6 @@
 "761048": {
 "tags": [
 [
-"multi_target_attack",
-"Stab 2 tiles in front of the unit"
-],
-[
 "damage",
 "for 2 damage"
 ],
@@ -4025,6 +4125,14 @@
 [
 "immunity",
 "Flying"
+],
+[
+"aoe_damage",
+"Stab 2 tiles in front of the unit"
+],
+[
+"area_templates",
+"Stab 2 tiles in front of the unit"
 ]
 ],
 "by": "C",
@@ -4045,10 +4153,6 @@
 "761049": {
 "tags": [
 [
-"multi_target_attack",
-"Stab three tiles in a row"
-],
-[
 "damage",
 "2 damage each"
 ],
@@ -4063,6 +4167,14 @@
 [
 "immunity",
 "Flying"
+],
+[
+"aoe_damage",
+"Stab three tiles in a row"
+],
+[
+"area_templates",
+"Stab three tiles in a row"
 ]
 ],
 "by": "C",
@@ -4420,10 +4532,6 @@
 "761059": {
 "tags": [
 [
-"multi_target_attack",
-"Slam against 3 tiles in a row"
-],
-[
 "stealth",
 "hide underground"
 ],
@@ -4446,6 +4554,14 @@
 [
 "on_damaged",
 "Burrower"
+],
+[
+"aoe_damage",
+"Slam against 3 tiles in a row"
+],
+[
+"area_templates",
+"Slam against 3 tiles in a row"
 ]
 ],
 "by": "C",
@@ -4466,10 +4582,6 @@
 "761060": {
 "tags": [
 [
-"multi_target_attack",
-"Slam against 3 tiles in a row"
-],
-[
 "stealth",
 "hide underground"
 ],
@@ -4492,6 +4604,14 @@
 [
 "on_damaged",
 "Burrower"
+],
+[
+"aoe_damage",
+"Slam against 3 tiles in a row"
+],
+[
+"area_templates",
+"Slam against 3 tiles in a row"
 ]
 ],
 "by": "C",
@@ -4712,7 +4832,11 @@
 "pushing projectile"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
+"pierces the first target and damages the second"
+],
+[
+"area_templates",
 "pierces the first target and damages the second"
 ]
 ],
@@ -4734,12 +4858,12 @@
 "761077": {
 "tags": [
 [
-"multi_target_attack",
-"Bounce a projectile off one target to hit another"
-],
-[
 "forced_movement",
 "pushes each target"
+],
+[
+"damage",
+"Bounce a projectile off one target to hit another"
 ]
 ],
 "by": "A=B"
@@ -4966,16 +5090,16 @@
 "761086": {
 "tags": [
 [
-"multi_target_attack",
-"Damage and push 3 tiles in a line"
-],
-[
 "forced_movement",
 "Damage and push 3 tiles in a line"
 ],
 [
 "area_templates",
 "3 tiles in a line"
+],
+[
+"aoe_damage",
+"Damage and push 3 tiles in a line"
 ]
 ],
 "by": "C"
@@ -5075,7 +5199,11 @@
 "761089": {
 "tags": [
 [
-"multi_target_attack",
+"aoe_damage",
+"Deal 1 damage to four oblique tiles"
+],
+[
+"area_templates",
 "Deal 1 damage to four oblique tiles"
 ]
 ],
@@ -5434,7 +5562,11 @@
 "761103": {
 "tags": [
 [
-"multi_target_attack",
+"aoe_damage",
+"Deal 2 damage to four oblique tiles"
+],
+[
+"area_templates",
 "Deal 2 damage to four oblique tiles"
 ]
 ],
@@ -5540,10 +5672,6 @@
 "761107": {
 "tags": [
 [
-"multi_target_attack",
-"Deal 2 damage to and push three tiles"
-],
-[
 "forced_movement",
 "push three tiles"
 ],
@@ -5562,6 +5690,14 @@
 [
 "movement",
 "Massive"
+],
+[
+"aoe_damage",
+"Deal 2 damage to and push three tiles"
+],
+[
+"area_templates",
+"Deal 2 damage to and push three tiles"
 ]
 ],
 "by": "A=B",
@@ -5583,10 +5719,6 @@
 "761108": {
 "tags": [
 [
-"multi_target_attack",
-"Deal 3 damage to 4 oblique tiles and push 4 others"
-],
-[
 "forced_movement",
 "push 4 others"
 ],
@@ -5597,6 +5729,18 @@
 [
 "movement",
 "Massive"
+],
+[
+"aoe_damage",
+"Deal 3 damage to 4 oblique tiles and push 4 others"
+],
+[
+"adjacency",
+"Deal 3 damage to 4 oblique tiles and push 4 others"
+],
+[
+"area_templates",
+"Deal 3 damage to 4 oblique tiles and push 4 others"
 ]
 ],
 "by": "A=B",
@@ -5625,16 +5769,20 @@
 "applying A.C.I.D. on nearby units"
 ],
 [
-"multi_target_attack",
-"damages the tile and the two nearby ones perpendicular"
-],
-[
 "movement",
 "Massive units can walk in Water"
 ],
 [
 "movement",
 "Massive"
+],
+[
+"aoe_damage",
+"damages the tile and the two nearby ones perpendicular"
+],
+[
+"adjacency",
+"damages the tile and the two nearby ones perpendicular"
 ]
 ],
 "by": "C",
@@ -5651,16 +5799,20 @@
 "761110": {
 "tags": [
 [
-"multi_target_attack",
-"Damage one or more tiles in a line"
-],
-[
 "forced_movement",
 "push away adjacent tiles"
 ],
 [
 "area_templates",
 "in a line"
+],
+[
+"aoe_damage",
+"Damage one or more tiles in a line"
+],
+[
+"adjacency",
+"Damage one or more tiles in a line"
 ]
 ],
 "by": "C"
@@ -5781,10 +5933,6 @@
 "5 tile range"
 ],
 [
-"multi_target_attack",
-"Launch Rockets at 3 tiles dealing 1 damage to each"
-],
-[
 "death_trigger",
 "Explodes on death"
 ],
@@ -5807,6 +5955,14 @@
 [
 "piercing",
 "Explosive Decay"
+],
+[
+"adjacency",
+"Launch Rockets at 3 tiles dealing 1 damage to each"
+],
+[
+"area_templates",
+"Launch Rockets at 3 tiles dealing 1 damage to each"
 ]
 ],
 "by": "C",
@@ -5830,10 +5986,6 @@
 },
 "761116": {
 "tags": [
-[
-"multi_target_attack",
-"Piercing beam"
-],
 [
 "damage",
 "does 2 damage reduced by range"
@@ -5861,6 +6013,14 @@
 [
 "piercing",
 "Explosive Decay"
+],
+[
+"adjacency",
+"Piercing beam"
+],
+[
+"area_templates",
+"Piercing beam"
 ]
 ],
 "by": "C",
@@ -5885,10 +6045,6 @@
 "761117": {
 "tags": [
 [
-"multi_target_attack",
-"Damage one or more tiles in a line"
-],
-[
 "forced_movement",
 "push away adjacent tiles"
 ],
@@ -5899,16 +6055,24 @@
 [
 "upgrade",
 "Upgrade: +2 Range"
+],
+[
+"aoe_damage",
+"Damage one or more tiles in a line"
+],
+[
+"adjacency",
+"Damage one or more tiles in a line"
+],
+[
+"area_templates",
+"Damage one or more tiles in a line"
 ]
 ],
 "by": "C"
 },
 "761118": {
 "tags": [
-[
-"multi_target_attack",
-"Pierces through units"
-],
 [
 "damage",
 "Damages the first tile hit for 3 damage, the next tile for 2 damage"
@@ -5920,6 +6084,18 @@
 [
 "upgrade",
 "Upgrade: Ally Immune"
+],
+[
+"aoe_damage",
+"Pierces through units"
+],
+[
+"adjacency",
+"Pierces through units"
+],
+[
+"area_templates",
+"Pierces through units"
 ]
 ],
 "by": "C"
@@ -5948,10 +6124,6 @@
 "761120": {
 "tags": [
 [
-"multi_target_attack",
-"increases in damage for each unit that it hits"
-],
-[
 "variable_stats",
 "increases in damage for each unit that it hits"
 ],
@@ -5962,6 +6134,14 @@
 [
 "upgrade",
 "Upgrade: Ally Immune"
+],
+[
+"aoe_damage",
+"increases in damage for each unit that it hits"
+],
+[
+"area_templates",
+"increases in damage for each unit that it hits"
 ]
 ],
 "by": "C"
@@ -6159,10 +6339,6 @@
 "761131": {
 "tags": [
 [
-"multi_target_attack",
-"Fire two projectiles in different directions"
-],
-[
 "damage",
 "1 damage to each target"
 ],
@@ -6173,6 +6349,14 @@
 [
 "upgrade",
 "Upgrade: Add Push"
+],
+[
+"aoe_damage",
+"Fire two projectiles in different directions"
+],
+[
+"area_templates",
+"Fire two projectiles in different directions"
 ]
 ],
 "by": "C"
@@ -6277,10 +6461,6 @@
 "761137": {
 "tags": [
 [
-"multi_target_attack",
-"continues to travel through any killed targets"
-],
-[
 "damage",
 "Deals 2 damage to the target"
 ],
@@ -6295,16 +6475,20 @@
 [
 "protection",
 "This attack will no longer damage Grid Buildings"
+],
+[
+"aoe_damage",
+"continues to travel through any killed targets"
+],
+[
+"area_templates",
+"continues to travel through any killed targets"
 ]
 ],
 "by": "C"
 },
 "761138": {
 "tags": [
-[
-"multi_target_attack",
-"Bounce a projectile off one target to hit another"
-],
 [
 "damage",
 "Deals 1 damage"
@@ -6352,10 +6536,6 @@
 "761140": {
 "tags": [
 [
-"multi_target_attack",
-"pierces the first target, and damages the second"
-],
-[
 "forced_movement",
 "pushing projectile"
 ],
@@ -6366,6 +6546,14 @@
 [
 "upgrade",
 "Upgrade: +1 Damage"
+],
+[
+"aoe_damage",
+"pierces the first target, and damages the second"
+],
+[
+"area_templates",
+"pierces the first target, and damages the second"
 ]
 ],
 "by": "C"
@@ -6398,10 +6586,6 @@
 "761142": {
 "tags": [
 [
-"multi_target_attack",
-"Damage and push 3 tiles in a line"
-],
-[
 "forced_movement",
 "pushes them away"
 ],
@@ -6412,6 +6596,10 @@
 [
 "upgrade",
 "Upgrade: +1 Damage"
+],
+[
+"aoe_damage",
+"Damage and push 3 tiles in a line"
 ]
 ],
 "by": "C"

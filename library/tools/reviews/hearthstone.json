@@ -3293,9 +3293,11 @@
  },
  "743515": {
   "add": [
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "744376": {
   "add": [
@@ -4411,10 +4413,11 @@
  "742758": {
   "add": [
    "positional",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
-   "adjacency"
+   "adjacency",
+   "multi_target_attack"
   ]
  },
  "746900": {

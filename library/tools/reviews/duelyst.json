@@ -49,11 +49,12 @@
  "741731": {
   "add": [
    "area_templates",
-   "multi_target_attack",
-   "merge_attach"
+   "merge_attach",
+   "aoe_damage"
   ],
   "drop": [
-   "lanes"
+   "lanes",
+   "multi_target_attack"
   ]
  },
  "741732": {
@@ -793,7 +794,8 @@
    "disable"
   ],
   "drop": [
-   "movement"
+   "movement",
+   "multi_target_attack"
   ]
  },
  "741809": {
@@ -2027,13 +2029,14 @@
   "add": [
    "adjacency",
    "delayed",
-   "multi_target_attack",
    "on_play",
-   "transform"
+   "transform",
+   "aoe_damage"
   ],
   "drop": [
    "on_damaged",
-   "count_payoff"
+   "count_payoff",
+   "multi_target_attack"
   ]
  },
  "742000": {
@@ -2209,14 +2212,15 @@
  },
  "742010": {
   "add": [
-   "multi_target_attack",
    "permanent_growth",
    "shield",
-   "turn_start"
+   "turn_start",
+   "aoe_damage"
   ],
   "drop": [
    "adjacency",
-   "on_damaged"
+   "on_damaged",
+   "multi_target_attack"
   ]
  },
  "742193": {
@@ -2317,12 +2321,13 @@
   "add": [
    "area_templates",
    "movement",
-   "multi_target_attack",
-   "stat_multiply"
+   "stat_multiply",
+   "aoe_damage"
   ],
   "drop": [
    "stat_loss",
-   "lanes"
+   "lanes",
+   "multi_target_attack"
   ]
  },
  "742114": {
@@ -2689,9 +2694,11 @@
  },
  "742045": {
   "add": [
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "741759": {
   "add": [
@@ -2733,5 +2740,31 @@
    "turn_end"
   ],
   "drop": []
+ },
+ "741523": {
+  "add": [
+   "aoe_damage"
+  ],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "741695": {
+  "add": [],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "741696": {
+  "add": [],
+  "drop": [
+   "multi_target_attack"
+  ]
+ },
+ "742291": {
+  "add": [],
+  "drop": [
+   "multi_target_attack"
+  ]
  }
 }

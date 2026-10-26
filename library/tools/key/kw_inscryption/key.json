@@ -111,7 +111,11 @@
 "740621": {
 "tags": [
 [
-"multi_target_attack",
+"aoe_damage",
+"strike each opposing space to the left and right of the space across from it"
+],
+[
+"adjacency",
 "strike each opposing space to the left and right of the space across from it"
 ]
 ],
@@ -799,7 +803,7 @@
 "740673": {
 "tags": [
 [
-"multi_target_attack",
+"aoe_damage",
 "strike each opposing space that is occupied by a creature"
 ]
 ],
@@ -1120,7 +1124,11 @@
 "740699": {
 "tags": [
 [
-"multi_target_attack",
+"aoe_damage",
+"strike each opposing space to the left and right of the spaces across from it"
+],
+[
+"adjacency",
 "strike each opposing space to the left and right of the spaces across from it"
 ]
 ],
@@ -1129,12 +1137,12 @@
 "740700": {
 "tags": [
 [
-"multi_target_attack",
-"it will strike each opposing space to the left, right and center of it"
-],
-[
 "link_formation",
 "within a circuit"
+],
+[
+"aoe_damage",
+"it will strike each opposing space to the left, right and center of it"
 ]
 ],
 "by": "A=B"

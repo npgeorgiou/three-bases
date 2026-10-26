@@ -7,6 +7,8 @@ gwent	756998	on_play	damage	damage	switch-off
 gwent	757325	on_play	damage	damage	switch-off	
 gwent	757325	other_death_trigger	damage	damage	switch-off	
 hearthstone	744098	on_play	damage	damage	switch-off	
+inscryption	740897	turn_end	multi_target_attack	multi_target_attack	other: via_keyword	wrong
+into_the_breach	761051	turn_end	damage	damage	other: 	right
 mtg	766283	activated	damage	damage	switch-off	
 mtg	767112	on_attack	damage	damage	switch-off	
 mtg	767591	trap_secret	damage	damage	switch-off	right

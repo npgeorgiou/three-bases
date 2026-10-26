@@ -5398,7 +5398,7 @@
 ],
 [
 "in_hand_buff",
-"gains \u201cI deal damage to all enemy targets.\u201d"
+"gains “I deal damage to all enemy targets.”"
 ],
 [
 "aoe_damage",
@@ -10221,12 +10221,12 @@
 "Fast"
 ],
 [
-"multi_target_attack",
-"strikes all battling enemies"
-],
-[
 "generate_cards",
 "Create a Garen in your deck"
+],
+[
+"aoe_damage",
+"strikes all battling enemies"
 ]
 ],
 "by": "C",

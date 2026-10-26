@@ -66,7 +66,7 @@ darkest_dungeon	759904	Blackjack	rank_positions	does	present
 darkest_dungeon	759929	Wyrd Reconstruction	drawback	does	present
 darkest_dungeon	759929	Wyrd Reconstruction	random_effect	does	present
 darkest_dungeon	759934	Plague Grenade	damage_over_time	does	present
-darkest_dungeon	759934	Plague Grenade	multi_target_attack	does	present
+darkest_dungeon	759934	Plague Grenade	aoe_damage	does	present
 darkest_dungeon	759934	Plague Grenade	ranged	does	present
 darkest_dungeon	759934	Plague Grenade	rank_positions	does	present
 darkest_dungeon	759939	Disorienting Blast	board_clog	counters	present
@@ -101,7 +101,7 @@ darkest_dungeon	759971	Cultist Brawler	rank_positions	does	present
 darkest_dungeon	759971	Cultist Brawler	temporary_effect	*	absent
 darkest_dungeon	759981	Large Ectoplasm	damage	does	present
 darkest_dungeon	759981	Large Ectoplasm	disable	does	present
-darkest_dungeon	759981	Large Ectoplasm	multi_target_attack	does	present
+darkest_dungeon	759981	Large Ectoplasm	aoe_damage	does	present
 darkest_dungeon	759981	Large Ectoplasm	rank_positions	does	present
 darkest_dungeon	759981	Large Ectoplasm	summon	does	present
 darkest_dungeon	759988	Inchoate Flesh	damage_over_time	does	present
@@ -110,7 +110,7 @@ darkest_dungeon	759991	Fungal Artillery	damage_over_time	counters	absent
 darkest_dungeon	759991	Fungal Artillery	stat_loss	does	present
 darkest_dungeon	759991	Fungal Artillery	mark_target	does	present
 darkest_dungeon	759991	Fungal Artillery	movement	does	present
-darkest_dungeon	759991	Fungal Artillery	multi_target_attack	does	present
+darkest_dungeon	759991	Fungal Artillery	aoe_damage	does	present
 darkest_dungeon	759991	Fungal Artillery	ranged	does	present
 darkest_dungeon	759991	Fungal Artillery	rank_positions	does	present
 darkest_dungeon	759991	Fungal Artillery	traits_quirks	does	present
@@ -125,7 +125,7 @@ darkest_dungeon	759994	Ghoul	temporary_effect	*	absent
 darkest_dungeon	759994	Ghoul	traits_quirks	does	present
 darkest_dungeon	759999	Necromancer Apprentice	damage	does	present
 darkest_dungeon	759999	Necromancer Apprentice	movement	does	present
-darkest_dungeon	759999	Necromancer Apprentice	multi_target_attack	does	present
+darkest_dungeon	759999	Necromancer Apprentice	aoe_damage	does	present
 darkest_dungeon	759999	Necromancer Apprentice	ranged	does	present
 darkest_dungeon	759999	Necromancer Apprentice	rank_positions	does	present
 darkest_dungeon	759999	Necromancer Apprentice	stress_morale	does	present
@@ -2884,7 +2884,7 @@ duelyst	741580	Grandmaster Nosh-Rak	area_templates	does	present
 duelyst	741580	Grandmaster Nosh-Rak	stat_loss	*	absent
 duelyst	741580	Grandmaster Nosh-Rak	lanes	*	absent
 duelyst	741580	Grandmaster Nosh-Rak	movement	does	present
-duelyst	741580	Grandmaster Nosh-Rak	multi_target_attack	does	present
+duelyst	741580	Grandmaster Nosh-Rak	aoe_damage	does	present
 duelyst	741580	Grandmaster Nosh-Rak	stat_multiply	does	present
 duelyst	741584	Abyssal Scar	damage	*	absent
 duelyst	741584	Abyssal Scar	terrain	benefits	present
@@ -2973,7 +2973,7 @@ duelyst	741726	Star's Fury	rows	*	absent
 duelyst	741727	Bone Swarm	adjacency	does	present
 duelyst	741730	Staff Of Y'Kir	items_consumables	does	present
 duelyst	741731	Wildfire Ankh	lanes	*	absent
-duelyst	741731	Wildfire Ankh	multi_target_attack	does	present
+duelyst	741731	Wildfire Ankh	aoe_damage	does	present
 duelyst	741732	Hexblade	stat_loss	does	present
 duelyst	741732	Hexblade	items_consumables	does	present
 duelyst	741736	Abyssal Crawler	damage_over_time	does	present
@@ -3073,7 +3073,7 @@ duelyst	741881	Cannon of MECHAZ0R	count_payoff	*	absent
 duelyst	741881	Cannon of MECHAZ0R	on_play	does	present
 duelyst	741881	Cannon of MECHAZ0R	ranged	does	present
 duelyst	741882	Sword of MECHAZ0R	count_payoff	*	absent
-duelyst	741882	Sword of MECHAZ0R	multi_target_attack	does	present
+duelyst	741882	Sword of MECHAZ0R	aoe_damage	does	present
 duelyst	741882	Sword of MECHAZ0R	on_damaged	*	absent
 duelyst	741882	Sword of MECHAZ0R	on_play	does	present
 duelyst	741890	Sand Burrower	on_damaged	does	present
@@ -3187,7 +3187,7 @@ duelyst	742005	Choking Tendrils	terrain	benefits	present
 duelyst	742005	Choking Tendrils	turn_end	*	absent
 duelyst	742006	Corporeal Cadence	direct_damage	does	present
 duelyst	742010	Grandmaster Kraigon	adjacency	*	absent
-duelyst	742010	Grandmaster Kraigon	multi_target_attack	does	present
+duelyst	742010	Grandmaster Kraigon	aoe_damage	does	present
 duelyst	742010	Grandmaster Kraigon	on_damaged	*	absent
 duelyst	742010	Grandmaster Kraigon	permanent_growth	does	present
 duelyst	742010	Grandmaster Kraigon	shield	does	present
@@ -3233,7 +3233,7 @@ duelyst	742042	Letigress	on_attack	does	present
 duelyst	742042	Letigress	ranged	does	present
 duelyst	742042	Letigress	summon	does	present
 duelyst	742043	Saberspine Cub	haste	does	present
-duelyst	742045	Thunderhorn	multi_target_attack	does	present
+duelyst	742045	Thunderhorn	aoe_damage	does	present
 duelyst	742046	Spriggin	enemy_benefit	does	present
 duelyst	742047	Glub	death_count	*	absent
 duelyst	742047	Glub	other_death_trigger	does	present
@@ -5154,7 +5154,7 @@ hearthstone	742737	Desperate Prayer	symmetric_effect	does	present
 hearthstone	742740	Soothsayer's Caravan	steal	does	present
 hearthstone	742750	Swinetusk Shank	damage_over_time	*	absent
 hearthstone	742758	Kurtrus Ashfallen	adjacency	*	absent
-hearthstone	742758	Kurtrus Ashfallen	multi_target_attack	does	present
+hearthstone	742758	Kurtrus Ashfallen	aoe_damage	does	present
 hearthstone	742758	Kurtrus Ashfallen	positional	does	present
 hearthstone	742760	Horde Operative	steal	does	present
 hearthstone	742767	Celestial Alignment	cost_set	does	present
@@ -5340,7 +5340,7 @@ hearthstone	743477	Ritual of Doom	summon	does	present
 hearthstone	743502	Prize Vendor	enemy_benefit	does	present
 hearthstone	743504	Expendable Performers	summon	does	present
 hearthstone	743510	Minefield	friendly_fire	does	present
-hearthstone	743515	Deathwing, Mad Aspect	multi_target_attack	does	present
+hearthstone	743515	Deathwing, Mad Aspect	aoe_damage	does	present
 hearthstone	743516	Flik Skyshiv	board_wipe	*	absent
 hearthstone	743516	Flik Skyshiv	hand_disruption	does	present
 hearthstone	743516	Flik Skyshiv	removal	does	present
@@ -7138,7 +7138,7 @@ hs_battlegrounds	749002	Broken Horn	stat_gain	does	present
 hs_battlegrounds	749002	Broken Horn	transform	*	absent
 hs_battlegrounds	749005	Ultralisk Cavern	transform	does	present
 hs_battlegrounds	749005	Ultralisk Cavern	tribal	does	present
-hs_battlegrounds	749007	Ultralisk	multi_target_attack	does	present
+hs_battlegrounds	749007	Ultralisk	aoe_damage	does	present
 hs_battlegrounds	749010	Hydralisk	auto_battle	benefits	absent
 hs_battlegrounds	749010	Hydralisk	multi_attack	does	present
 hs_battlegrounds	749010	Hydralisk	on_attack	does	present
@@ -7340,7 +7340,7 @@ hs_battlegrounds	749555	Timewarped Centurion	auto_battle	benefits	absent
 hs_battlegrounds	749555	Timewarped Centurion	copy	does	present
 hs_battlegrounds	749555	Timewarped Centurion	on_spell	does	present
 hs_battlegrounds	749575	Timewarped Enchanted Lasso	scope_global	*	absent
-hs_battlegrounds	749587	Timewarped Ultralisk	multi_target_attack	does	present
+hs_battlegrounds	749587	Timewarped Ultralisk	aoe_damage	does	present
 hs_battlegrounds	749599	Woodland Defiler	auto_battle	benefits	absent
 hs_battlegrounds	749599	Woodland Defiler	fodder	does	present
 hs_battlegrounds	749599	Woodland Defiler	turn_end	does	present
@@ -7772,7 +7772,7 @@ inscryption	740670	Morsel	stat_gain	grants	present
 inscryption	740670	Morsel	sacrifice	benefits	present
 inscryption	740672	Null Conduit (sigil)	link_formation	does	present
 inscryption	740673	Omni Strike	direct_damage	does	present
-inscryption	740673	Omni Strike	multi_target_attack	does	present
+inscryption	740673	Omni Strike	aoe_damage	does	present
 inscryption	740677	Rabbit Hole	fodder	*	absent
 inscryption	740677	Rabbit Hole	generate_cards	does	present
 inscryption	740677	Rabbit Hole	on_play	does	present
@@ -7786,9 +7786,9 @@ inscryption	740696	Tidal Lock	forced_movement	*	absent
 inscryption	740696	Tidal Lock	turn_start	does	present
 inscryption	740697	Touch of Death	deathtouch	does	present
 inscryption	740699	Trifurcated Strike	lane_identity	*	absent
-inscryption	740699	Trifurcated Strike	multi_target_attack	does	present
+inscryption	740699	Trifurcated Strike	aoe_damage	does	present
 inscryption	740700	Trifurcated When Powered	link_formation	does	present
-inscryption	740700	Trifurcated When Powered	multi_target_attack	does	present
+inscryption	740700	Trifurcated When Powered	aoe_damage	does	present
 inscryption	740701	Trinket Bearer	items_consumables	does	present
 inscryption	740701	Trinket Bearer	on_play	does	present
 inscryption	740701	Trinket Bearer	passive	*	absent
@@ -7931,7 +7931,7 @@ inscryption	740832	Curious Egg	deck_condition	does	present
 inscryption	740832	Curious Egg	transform	does	present
 inscryption	740832	Curious Egg	variety_payoff	does	present
 inscryption	740833	Hydra	lane_identity	*	absent
-inscryption	740833	Hydra	multi_target_attack	does	present
+inscryption	740833	Hydra	aoe_damage	does	present
 inscryption	740837	Inspector	link_formation	does	present
 inscryption	740837	Inspector	null_body	does	present
 inscryption	740840	Kingfisher	counterattack	*	absent
@@ -7953,7 +7953,7 @@ inscryption	740853	Magpie	evasion	does	present
 inscryption	740853	Magpie	on_play	does	present
 inscryption	740853	Magpie	tutor	does	present
 inscryption	740854	Mantis	lane_identity	*	absent
-inscryption	740854	Mantis	multi_target_attack	does	present
+inscryption	740854	Mantis	aoe_damage	does	present
 inscryption	740858	Master Orlu	direct_damage	benefits	present
 inscryption	740858	Master Orlu	direct_damage	does	present
 inscryption	740858	Master Orlu	draw	does	present
@@ -8026,7 +8026,7 @@ inscryption	740929	Skunk	stat_loss	does	present
 inscryption	740929	Skunk	lanes	*	absent
 inscryption	740930	Sniper Bot	target_choice	does	present
 inscryption	740932	Splinter Cell	link_formation	does	present
-inscryption	740932	Splinter Cell	multi_target_attack	does	present
+inscryption	740932	Splinter Cell	aoe_damage	does	present
 inscryption	740934	Squirrel Ball	movement	does	present
 inscryption	740934	Squirrel Ball	summon	does	present
 inscryption	740934	Squirrel Ball	turn_end	does	present
@@ -8046,14 +8046,14 @@ inscryption	740951	The Limoncello	direct_damage	*	absent
 inscryption	740951	The Limoncello	evasion	counters	present
 inscryption	740951	The Limoncello	immunity	does	present
 inscryption	740951	The Limoncello	movement	*	absent
-inscryption	740951	The Limoncello	multi_target_attack	does	present
+inscryption	740951	The Limoncello	aoe_damage	does	present
 inscryption	740952	The Moon	permanent_growth	does	present
 inscryption	740953	The Moon	blocking	does	present
 inscryption	740953	The Moon	deathtouch	counters	present
 inscryption	740953	The Moon	stat_loss	counters	present
 inscryption	740953	The Moon	evasion	counters	present
 inscryption	740953	The Moon	immunity	does	present
-inscryption	740953	The Moon	multi_target_attack	does	present
+inscryption	740953	The Moon	aoe_damage	does	present
 inscryption	740953	The Moon	permanent_growth	does	present
 inscryption	740953	The Moon	turn_start	does	present
 inscryption	740961	Tough Cell	stat_gain	does	present
@@ -8275,7 +8275,6 @@ into_the_breach	760918	Flame Mech	damage_over_time	does	present
 into_the_breach	760918	Flame Mech	forced_movement	does	present
 into_the_breach	760918	Flame Mech	immunity	does	present
 into_the_breach	760926	Lightning Mech	combo_sequence	*	absent
-into_the_breach	760926	Lightning Mech	multi_target_attack	does	present
 into_the_breach	760930	Unstable Mech	damage	does	present
 into_the_breach	760930	Unstable Mech	friendly_fire	does	present
 into_the_breach	760930	Unstable Mech	ranged	does	present
@@ -8319,9 +8318,8 @@ into_the_breach	760947	Force Amp	upgrade	*	absent
 into_the_breach	760948	Critical Shields	shield	does	present
 into_the_breach	760948	Critical Shields	upgrade	*	absent
 into_the_breach	760949	Electric Whip	combo_sequence	*	absent
-into_the_breach	760949	Electric Whip	multi_target_attack	does	present
 into_the_breach	760950	Burst Beam	damage	does	present
-into_the_breach	760950	Burst Beam	multi_target_attack	does	present
+into_the_breach	760950	Burst Beam	aoe_damage	does	present
 into_the_breach	760950	Burst Beam	piercing	*	absent
 into_the_breach	760952	Rock Launcher	ranged	does	present
 into_the_breach	760952	Rock Launcher	terrain	does	present
@@ -8338,7 +8336,7 @@ into_the_breach	760960	Vortex Fist	forced_movement	does	present
 into_the_breach	760960	Vortex Fist	friendly_fire	does	present
 into_the_breach	760961	Titanite Blade	exhaust	does	present
 into_the_breach	760961	Titanite Blade	forced_movement	does	present
-into_the_breach	760961	Titanite Blade	multi_target_attack	does	present
+into_the_breach	760961	Titanite Blade	aoe_damage	does	present
 into_the_breach	760962	Mercury Fist	adjacency	does	present
 into_the_breach	760962	Mercury Fist	exhaust	does	present
 into_the_breach	760962	Mercury Fist	forced_movement	does	present
@@ -8369,7 +8367,7 @@ into_the_breach	760972	Heavy Rocket	ranged	does	present
 into_the_breach	760973	Shrapnel Cannon	damage	does	present
 into_the_breach	760973	Shrapnel Cannon	exhaust	does	present
 into_the_breach	760973	Shrapnel Cannon	forced_movement	does	present
-into_the_breach	760973	Shrapnel Cannon	multi_target_attack	does	present
+into_the_breach	760973	Shrapnel Cannon	aoe_damage	does	present
 into_the_breach	760974	Astra Bombs	exhaust	does	present
 into_the_breach	760974	Astra Bombs	movement	does	present
 into_the_breach	760975	Hermes Engines	adjacency	does	present
@@ -8384,10 +8382,10 @@ into_the_breach	760979	Vulcan Artillery	attack_lock	*	absent
 into_the_breach	760979	Vulcan Artillery	damage_over_time	does	present
 into_the_breach	760979	Vulcan Artillery	forced_movement	does	present
 into_the_breach	760979	Vulcan Artillery	ranged	does	present
-into_the_breach	760980	Micro-Artillery	multi_target_attack	does	present
+into_the_breach	760980	Micro-Artillery	aoe_damage	does	present
 into_the_breach	760980	Micro-Artillery	ranged	does	present
 into_the_breach	760981	Aegon Mortar	forced_movement	does	present
-into_the_breach	760981	Aegon Mortar	multi_target_attack	does	present
+into_the_breach	760981	Aegon Mortar	aoe_damage	does	present
 into_the_breach	760982	Cryo-Launcher	drawback	does	present
 into_the_breach	760983	Smoke Mortar	forced_movement	does	present
 into_the_breach	760983	Smoke Mortar	ranged	does	present
@@ -8464,11 +8462,11 @@ into_the_breach	761019	Cannon-Mech	damage_over_time	does	present
 into_the_breach	761019	Cannon-Mech	ranged	does	present
 into_the_breach	761019	Cannon-Mech	rows	*	absent
 into_the_breach	761022	Laser-Bot	damage	does	present
-into_the_breach	761022	Laser-Bot	multi_target_attack	does	present
+into_the_breach	761022	Laser-Bot	aoe_damage	does	present
 into_the_breach	761022	Laser-Bot	piercing	*	absent
 into_the_breach	761022	Laser-Bot	symmetric_effect	*	absent
 into_the_breach	761023	Laser-Mech	damage	does	present
-into_the_breach	761023	Laser-Mech	multi_target_attack	does	present
+into_the_breach	761023	Laser-Mech	aoe_damage	does	present
 into_the_breach	761023	Laser-Mech	piercing	*	absent
 into_the_breach	761023	Laser-Mech	symmetric_effect	*	absent
 into_the_breach	761024	Mine-Bot	assists_support	*	absent
@@ -8503,7 +8501,7 @@ into_the_breach	761035	Scorpion Leader	telegraphed_threats	does	present
 into_the_breach	761037	Firefly Leader	damage	does	present
 into_the_breach	761037	Firefly Leader	damage_over_time	*	absent
 into_the_breach	761037	Firefly Leader	movement	does	present
-into_the_breach	761037	Firefly Leader	multi_target_attack	does	present
+into_the_breach	761037	Firefly Leader	aoe_damage	does	present
 into_the_breach	761038	Alpha Leaper	damage	does	present
 into_the_breach	761038	Alpha Leaper	immobilize	does	present
 into_the_breach	761038	Alpha Leaper	movement	does	present
@@ -8514,17 +8512,17 @@ into_the_breach	761040	Alpha Scarab	damage	does	present
 into_the_breach	761040	Alpha Scarab	ranged	does	present
 into_the_breach	761041	Crab	damage	does	present
 into_the_breach	761041	Crab	lanes	*	absent
-into_the_breach	761041	Crab	multi_target_attack	does	present
+into_the_breach	761041	Crab	aoe_damage	does	present
 into_the_breach	761041	Crab	ranged	does	present
 into_the_breach	761041	Crab	summon	*	absent
 into_the_breach	761042	Alpha Crab	damage	does	present
 into_the_breach	761042	Alpha Crab	lanes	*	absent
-into_the_breach	761042	Alpha Crab	multi_target_attack	does	present
+into_the_breach	761042	Alpha Crab	aoe_damage	does	present
 into_the_breach	761042	Alpha Crab	ranged	does	present
 into_the_breach	761042	Alpha Crab	summon	*	absent
 into_the_breach	761043	Centipede	summon	*	absent
 into_the_breach	761044	Alpha Centipede	damage	does	present
-into_the_breach	761044	Alpha Centipede	multi_target_attack	does	present
+into_the_breach	761044	Alpha Centipede	aoe_damage	does	present
 into_the_breach	761044	Alpha Centipede	ranged	does	present
 into_the_breach	761044	Alpha Centipede	summon	*	absent
 into_the_breach	761047	A.C.I.D. Hornet	damage	does	present
@@ -8532,7 +8530,7 @@ into_the_breach	761047	A.C.I.D. Hornet	movement	does	present
 into_the_breach	761047	A.C.I.D. Hornet	terrain	*	absent
 into_the_breach	761049	Hornet Leader	damage	does	present
 into_the_breach	761049	Hornet Leader	movement	does	present
-into_the_breach	761049	Hornet Leader	multi_target_attack	does	present
+into_the_breach	761049	Hornet Leader	aoe_damage	does	present
 into_the_breach	761049	Hornet Leader	terrain	*	absent
 into_the_breach	761050	Blast Psion	adjacency	does	present
 into_the_breach	761050	Blast Psion	aoe_damage	does	present
@@ -8572,7 +8570,7 @@ into_the_breach	761059	Burrower	flanking	*	absent
 into_the_breach	761059	Burrower	forced_movement	*	absent
 into_the_breach	761059	Burrower	immunity	does	present
 into_the_breach	761059	Burrower	lanes	*	absent
-into_the_breach	761059	Burrower	multi_target_attack	does	present
+into_the_breach	761059	Burrower	aoe_damage	does	present
 into_the_breach	761059	Burrower	on_damaged	does	present
 into_the_breach	761059	Burrower	stealth	does	present
 into_the_breach	761060	Alpha Burrower	counter_spell	*	absent
@@ -8581,7 +8579,7 @@ into_the_breach	761060	Alpha Burrower	flanking	*	absent
 into_the_breach	761060	Alpha Burrower	forced_movement	*	absent
 into_the_breach	761060	Alpha Burrower	immunity	does	present
 into_the_breach	761060	Alpha Burrower	lanes	*	absent
-into_the_breach	761060	Alpha Burrower	multi_target_attack	does	present
+into_the_breach	761060	Alpha Burrower	aoe_damage	does	present
 into_the_breach	761060	Alpha Burrower	on_damaged	does	present
 into_the_breach	761060	Alpha Burrower	stealth	does	present
 into_the_breach	761062	Chasm Tile	destroy	does	present
@@ -8657,7 +8655,7 @@ into_the_breach	761102	Alpha Plasmodia	damage	does	present
 into_the_breach	761102	Alpha Plasmodia	forced_movement	does	present
 into_the_breach	761102	Alpha Plasmodia	ranged	does	present
 into_the_breach	761102	Alpha Plasmodia	summon	does	present
-into_the_breach	761103	Alpha Starfish	multi_target_attack	does	present
+into_the_breach	761103	Alpha Starfish	aoe_damage	does	present
 into_the_breach	761103	Alpha Starfish	summon	*	absent
 into_the_breach	761104	Alpha Tumblebug	evasion	*	absent
 into_the_breach	761104	Alpha Tumblebug	telegraphed_threats	does	present
@@ -8670,7 +8668,7 @@ into_the_breach	761106	Tumblebug Leader	movement	does	present
 into_the_breach	761106	Tumblebug Leader	rows	*	absent
 into_the_breach	761106	Tumblebug Leader	summon	does	present
 into_the_breach	761109	Centipede Leader	damage	does	present
-into_the_breach	761109	Centipede Leader	multi_target_attack	does	present
+into_the_breach	761109	Centipede Leader	aoe_damage	does	present
 into_the_breach	761109	Centipede Leader	ranged	does	present
 into_the_breach	761110	Dispersal Mech	area_templates	does	present
 into_the_breach	761110	Dispersal Mech	forced_movement	does	present
@@ -8688,7 +8686,7 @@ into_the_breach	761115	Boom Artillery	aoe_damage	does	present
 into_the_breach	761115	Boom Artillery	damage_over_time	*	absent
 into_the_breach	761115	Boom Artillery	death_trigger	does	present
 into_the_breach	761115	Boom Artillery	destroy	*	absent
-into_the_breach	761115	Boom Artillery	multi_target_attack	does	present
+into_the_breach	761115	Boom Artillery	aoe_damage	does	present
 into_the_breach	761115	Boom Artillery	piercing	does	present
 into_the_breach	761115	Boom Artillery	quests	does	present
 into_the_breach	761115	Boom Artillery	ranged	does	present
@@ -8697,16 +8695,16 @@ into_the_breach	761116	Boom Laser	aoe_damage	does	present
 into_the_breach	761116	Boom Laser	damage_over_time	*	absent
 into_the_breach	761116	Boom Laser	death_trigger	does	present
 into_the_breach	761116	Boom Laser	destroy	*	absent
-into_the_breach	761116	Boom Laser	multi_target_attack	does	present
+into_the_breach	761116	Boom Laser	aoe_damage	does	present
 into_the_breach	761116	Boom Laser	piercing	does	present
 into_the_breach	761116	Boom Laser	quests	does	present
 into_the_breach	761116	Boom Laser	zone_control	*	absent
 into_the_breach	761118	Refractor Laser	damage	does	present
-into_the_breach	761118	Refractor Laser	multi_target_attack	does	present
+into_the_breach	761118	Refractor Laser	aoe_damage	does	present
 into_the_breach	761118	Refractor Laser	piercing	*	absent
 into_the_breach	761119	The Big One	area_templates	does	present
 into_the_breach	761119	The Big One	friendly_fire	does	present
-into_the_breach	761120	Prism Laser	multi_target_attack	does	present
+into_the_breach	761120	Prism Laser	aoe_damage	does	present
 into_the_breach	761121	Hydraulic Lifter	adjacency	does	present
 into_the_breach	761121	Hydraulic Lifter	aoe_damage	*	absent
 into_the_breach	761121	Hydraulic Lifter	damage	does	present
@@ -8745,17 +8743,16 @@ into_the_breach	761135	Smoldering Shells	passive	*	absent
 into_the_breach	761136	Reverse Thrusters	passive	*	absent
 into_the_breach	761138	Ricochet Rocket	damage	does	present
 into_the_breach	761138	Ricochet Rocket	forced_movement	does	present
-into_the_breach	761138	Ricochet Rocket	multi_target_attack	does	present
 into_the_breach	761139	Guided Missile	damage	does	present
 into_the_breach	761139	Guided Missile	forced_movement	does	present
 into_the_breach	761140	AP Cannon	damage	does	present
 into_the_breach	761140	AP Cannon	forced_movement	does	present
-into_the_breach	761140	AP Cannon	multi_target_attack	does	present
+into_the_breach	761140	AP Cannon	aoe_damage	does	present
 into_the_breach	761140	AP Cannon	piercing	*	absent
 into_the_breach	761142	Tri-Rocket	area_templates	does	present
 into_the_breach	761142	Tri-Rocket	damage	benefits	absent
 into_the_breach	761142	Tri-Rocket	forced_movement	does	present
-into_the_breach	761142	Tri-Rocket	multi_target_attack	does	present
+into_the_breach	761142	Tri-Rocket	aoe_damage	does	present
 into_the_breach	761142	Tri-Rocket	upgrade	benefits	absent
 into_the_breach	761143	Bomb Dispenser	summon	does	present
 into_the_breach	761144	Arachnoid Injector	damage	does	present
@@ -17740,3 +17737,32 @@ mtg	812633	Varchild, Betrayer of Kjeldor	death_trigger	*	absent
 mtg	813404	Yes Man, Personal Securitron	leave_trigger	does	present
 mtg	813404	Yes Man, Personal Securitron	death_trigger	*	absent
 shadowverse	755963	Conquering Dreadlord	leave_trigger	does	present
+runeterra	750656	Trueshot Barrage	multi_target_attack	does	present
+runeterra	750663	Statikk Shock	multi_target_attack	does	present
+runeterra	796715	Meteor Shower	multi_target_attack	does	present
+runeterra	796894	Ziggs' Bouncing Bomb	multi_target_attack	does	present
+runeterra	751106	Timewinder	multi_target_attack	does	present
+lorcana	818090	Double Trouble	multi_target_attack	does	present
+lorcana	817443	The Mob Song	multi_target_attack	does	present
+lorcana	818531	Robin Hood - Ephemeral Archer	multi_target_attack	does	present
+lorcana	817362	Namaari - Heir of Fang	multi_target_attack	does	present
+swu	819917	Unlimited Power	multi_target_attack	does	present
+swu	821325	I'll Cover For You	multi_target_attack	does	present
+swu	820284	Darth Maul - Sith Revealed	multi_target_attack	does	present
+swu	819395	Fifth Brother - Fear Hunter	multi_target_attack	does	present
+swu	819356	Overwhelming Barrage	multi_target_attack	does	present
+hearthstone	744098	Night Elf Huntress	multi_target_attack	does	present
+shadowverse	753953	Dandy Fencer	multi_target_attack	does	present
+mtg	766758	Electrolyze	multi_target_attack	does	present
+mtg	766379	Fire Covenant	multi_target_attack	does	present
+mtg	773405	Forked Lightning	multi_target_attack	does	present
+duelyst	741566	Draining Wave	multi_target_attack	does	present
+gwent	756228	Ciri	multi_target_attack	does	present
+wh_40k_10e	787245	Firestorm [Legends]	multi_target_attack	does	present
+shadowverse	752388	Elf Child May	random_target	does	present
+hearthstone	743788	Breath of Sindragosa	random_target	does	present
+gwent	757451	Funeral Boat	random_target	does	present
+duelyst	741829	Glacial Elemental	random_target	does	present
+hearthstone	742497	Magnataur Alpha	aoe_damage	does	present
+hearthstone	742497	Magnataur Alpha	adjacency	does	present
+monster_train	822548	Husk Hermit	aoe_damage	does	present

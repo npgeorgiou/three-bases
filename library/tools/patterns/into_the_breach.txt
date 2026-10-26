@@ -17,7 +17,10 @@ exhaust|does|\bsingle-use\b
 !zone_control|\bobjective
 !rows|\bfront\b
 ranged|does|\bprojectile\b|\bartillery\b|\bthrows?\b
-aoe_damage|does|\bdamag\w* adjacent tiles\b|\bdamages? all tiles\b
+# Area weapons: beams and lasers, damage to 2-4 named tiles, two projectiles, pierced targets, adjacent tiles; shapes and neighbours
+aoe_damage|does|\bdamages? all tiles\b|\bpiercing beam\b|\bbeam,? does\b|\blaser that\b|\bdamag\w* (?:self and )?adjacent tiles\b|\b(?:damage|damages|deals? \d+ damage to|stab|slam against|hits?) (?:and push )?(?:\d|two|three|four|multiple|both) (?:adjacent |oblique )?(?:tiles|targets)\b|\bdamage to (?:two|both|four|\d) (?:tiles|targets)\b|\bat \d tiles\b|\bfour oblique tiles\b|\btiles to its left and right\b|\b(?:two|multiple) (?:small )?(?:projectiles|missiles)\b|\bin (?:two|opposite|different) directions\b|\bpierces the first target\b|\bdamages everything it passes\b|\bhits every enemy\b|\ball player units take\b|\bone or more tiles\b|\bcontinues to travel\b|\bpush and damage three tiles\b|\bdamage and push \d tiles\b|\bpush three tiles\b
+area_templates|does|\bbeam\b(?! weapons)|\blaser that\b|\b(?:launch|fire|stab|hit|hits|damage|slam against|push) [^.]{0,40}?\b(?:2|3|4|two|three|four|multiple) tiles\b|\bat \d tiles\b|\boblique\b|\bin (?:two|opposite|different) directions\b|\bpierces the first target\b|\btwo (?:missiles|projectiles)\b|\bmultiple (?:small )?projectiles\b|\bcontinues to travel\b|\bone or more tiles in a line\b
+adjacency|does|\bapplying a\.c\.i\.d\. on nearby units\b|\bdamage to nearby tiles\b|\btiles to its left and right\b
 # Explosions damage the tiles around them (aoe); Fire left on tiles or units burns each turn
 aoe_damage|does|\bexplod\w*
 damage_over_time|does|(?<!be )\b(adds?|sets?|lights?) (\w+ ){0,3}fire\b|\bfire to\b

@@ -90,3 +90,5 @@ reactions|does|each time an enemy unit (has shot|is selected to shoot|ends a)
 !on_attack|when .{0,20}attacks
 # A unit chosen to fight is the moment it attacks in melee (not when an enemy unit is chosen)
 on_attack|does|(?<!enemy )\b(unit|model|bearer|squad) is selected to fight\b
+# Firestorm Skyfire: up to 3 more enemy units are selected and shot at
+multi_target_attack|does|\bselect up to \d other enemy units\b[^.]{0,120}\bshoot

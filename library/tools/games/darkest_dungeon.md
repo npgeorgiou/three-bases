@@ -35,8 +35,7 @@ Claude's reading of the card text, from the check against the key and the cases:
 - "Takes N ranks": a large monster fills several ranks (board_limit), it is not many units.
 - "Class: X" on a trinket limits it to that hero class (tribal, as the key reads it).
 - "trap resistance" and "stun / bleed / blight resistance" are resistances (saving_throws), not traps or the effect itself.
-- Key disagreements kept, as Claude's judgement: "Targets all of enemy ranks" is one skill hitting several (multi_target_attack, by
-  its definition) where the key reads aoe_damage only; self effects "(self)" are scope_self, which the key rarely tags; resisting
+- Key disagreements kept, as Claude's judgement: "Targets all of enemy ranks" is aoe_damage (the key read it as multi_target_attack until 26 Oct 2026); self effects "(self)" are scope_self, which the key rarely tags; resisting
   bleed or blight keeps damage_over_time as a counter.
 
 ## Mechanics

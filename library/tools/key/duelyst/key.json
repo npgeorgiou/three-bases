@@ -2,12 +2,12 @@
 "741523": {
 "tags": [
 [
-"multi_target_attack",
-"Attack all enemy minions and Generals in one straight line"
-],
-[
 "area_templates",
 "one straight line"
+],
+[
+"aoe_damage",
+"Attack all enemy minions and Generals in one straight line"
 ]
 ],
 "by": "A=B"
@@ -342,10 +342,6 @@
 "741580": {
 "tags": [
 [
-"multi_target_attack",
-"Blast"
-],
-[
 "evasion",
 "Flying"
 ],
@@ -359,6 +355,10 @@
 ],
 [
 "area_templates",
+"Blast"
+],
+[
+"aoe_damage",
 "Blast"
 ]
 ],
@@ -1313,12 +1313,16 @@
 "Your General gains Blast"
 ],
 [
-"multi_target_attack",
+"merge_attach",
+"Your General gains Blast"
+],
+[
+"aoe_damage",
 "Blast"
 ],
 [
-"merge_attach",
-"Your General gains Blast"
+"area_templates",
+"Blast"
 ]
 ],
 "by": "A=B"
@@ -2291,16 +2295,20 @@
 "741882": {
 "tags": [
 [
-"multi_target_attack",
-"Frenzy"
-],
-[
 "on_play",
 "Opening Gambit"
 ],
 [
 "quests",
 "Progresses MECHAZ0R build by +20%"
+],
+[
+"aoe_damage",
+"Frenzy"
+],
+[
+"adjacency",
+"Frenzy"
 ]
 ],
 "by": "C",
@@ -3355,10 +3363,6 @@
 "Forcefield"
 ],
 [
-"multi_target_attack",
-"Frenzy"
-],
-[
 "permanent_growth",
 "Grow: +7/+7"
 ],
@@ -3373,6 +3377,10 @@
 [
 "turn_start",
 "Grow"
+],
+[
+"aoe_damage",
+"Frenzy"
 ]
 ],
 "by": "C",
@@ -3719,12 +3727,16 @@
 "742045": {
 "tags": [
 [
-"multi_target_attack",
+"link_formation",
+"joined enemies"
+],
+[
+"aoe_damage",
 "it also damages all joined enemies"
 ],
 [
-"link_formation",
-"joined enemies"
+"adjacency",
+"it also damages all joined enemies"
 ]
 ],
 "by": "C"

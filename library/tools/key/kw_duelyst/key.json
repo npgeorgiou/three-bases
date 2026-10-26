@@ -11,12 +11,12 @@
 "741523": {
 "tags": [
 [
-"multi_target_attack",
-"Attack all enemy minions and Generals in one straight line"
-],
-[
 "area_templates",
 "one straight line"
+],
+[
+"aoe_damage",
+"Attack all enemy minions and Generals in one straight line"
 ]
 ],
 "by": "A=B"
@@ -121,7 +121,11 @@
 "741533": {
 "tags": [
 [
-"multi_target_attack",
+"aoe_damage",
+"simultaneously strike all other nearby enemies"
+],
+[
+"adjacency",
 "simultaneously strike all other nearby enemies"
 ]
 ],

@@ -1875,12 +1875,12 @@
 "When this attacks"
 ],
 [
-"multi_target_attack",
-"also damages each enemy adjacent to the target"
-],
-[
 "adjacency",
 "adjacent to the target"
+],
+[
+"aoe_damage",
+"also damages each enemy adjacent to the target"
 ]
 ],
 "by": "A=B",

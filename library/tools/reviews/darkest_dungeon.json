@@ -7267,11 +7267,11 @@
    "damage_over_time",
    "stat_loss",
    "light_level",
-   "multi_target_attack",
    "ranged",
    "rank_positions",
    "stress_morale",
-   "traits_quirks"
+   "traits_quirks",
+   "aoe_damage"
   ]
  },
  "760822": {
@@ -7297,11 +7297,11 @@
    "damage_over_time",
    "light_level",
    "multi_attack",
-   "multi_target_attack",
    "ranged",
    "rank_positions",
    "stress_morale",
-   "summon"
+   "summon",
+   "aoe_damage"
   ],
   "drop": []
  },
@@ -7310,11 +7310,11 @@
    "forced_movement",
    "damage_over_time",
    "movement",
-   "multi_target_attack",
    "ranged",
    "rank_positions",
    "stress_morale",
-   "summon"
+   "summon",
+   "aoe_damage"
   ],
   "drop": []
  },
@@ -7323,13 +7323,14 @@
    "stat_loss",
    "mark_target",
    "movement",
-   "multi_target_attack",
    "ranged",
    "rank_positions",
-   "traits_quirks"
+   "traits_quirks",
+   "aoe_damage"
   ],
   "drop": [
-   "damage_over_time:counters"
+   "damage_over_time:counters",
+   "multi_target_attack"
   ]
  },
  "760817": {
@@ -7458,11 +7459,13 @@
   "add": [
    "damage",
    "disable",
-   "multi_target_attack",
    "rank_positions",
-   "summon"
+   "summon",
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "759863": {
   "add": [
@@ -7493,20 +7496,20 @@
   "add": [
    "damage_over_time",
    "disable",
-   "multi_target_attack",
    "ranged",
    "rank_positions",
    "stress_morale",
-   "telegraphed_threats"
+   "telegraphed_threats",
+   "aoe_damage"
   ],
   "drop": []
  },
  "759871": {
   "add": [
    "damage",
-   "multi_target_attack",
    "ranged",
-   "rank_positions"
+   "rank_positions",
+   "aoe_damage"
   ],
   "drop": []
  },
@@ -7553,8 +7556,8 @@
   "add": [
    "damage",
    "movement",
-   "multi_target_attack",
-   "rank_positions"
+   "rank_positions",
+   "aoe_damage"
   ],
   "drop": []
  },
@@ -7613,11 +7616,13 @@
  "759934": {
   "add": [
    "damage_over_time",
-   "multi_target_attack",
    "ranged",
-   "rank_positions"
+   "rank_positions",
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "759793": {
   "add": [
@@ -7655,13 +7660,15 @@
   "add": [
    "damage",
    "movement",
-   "multi_target_attack",
    "ranged",
    "rank_positions",
    "stress_morale",
-   "summon"
+   "summon",
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "760004": {
   "add": [

@@ -177,7 +177,7 @@ signature	Hellhorned	multi_attack	Multistrike	https://progameguides.com/monster-
 signature	Hellhorned	temporary_buff	Rage	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 signature	Hellhorned	tribal	Imps	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 signature	Hellhorned	summon	Imp Parade makes Imps	https://progameguides.com/monster-train/best-builds-in-monster-train/
-signature	Awoken	multi_target_attack	Sweep	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
+signature	Awoken	aoe_damage	Sweep	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 signature	Awoken	tank	giant minions that protect others	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 signature	Stygian Guard	damage_over_time	Frostbite	https://progameguides.com/monster-train/best-builds-in-monster-train/
 signature	Umbra	sacrifice	buffing units by killing other units	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/

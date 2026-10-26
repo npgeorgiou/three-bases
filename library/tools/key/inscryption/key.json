@@ -123,7 +123,11 @@
 "attacks twice in a single turn"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
+"strike each opposing space to the left and right"
+],
+[
+"adjacency",
 "strike each opposing space to the left and right"
 ]
 ],
@@ -875,12 +879,12 @@
 "740673": {
 "tags": [
 [
-"multi_target_attack",
-"strike each opposing space that is occupied by a creature"
-],
-[
 "direct_damage",
 "It will strike directly"
+],
+[
+"aoe_damage",
+"strike each opposing space that is occupied by a creature"
 ]
 ],
 "by": "C"
@@ -1212,7 +1216,11 @@
 "attacks three times in a single turn"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
+"strike each opposing space to the left and right"
+],
+[
+"adjacency",
 "strike each opposing space to the left and right"
 ]
 ],
@@ -1225,11 +1233,11 @@
 "within a circuit"
 ],
 [
-"multi_target_attack",
+"multi_attack",
 "strike each opposing space to the left, right and center of it"
 ],
 [
-"multi_attack",
+"aoe_damage",
 "strike each opposing space to the left, right and center of it"
 ]
 ],
@@ -2469,7 +2477,7 @@
 "Bifurcated Strike"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Bifurcated Strike"
 ]
 ],
@@ -3595,16 +3603,12 @@
 "Bifurcated Strike"
 ],
 [
-"multi_target_attack",
-"Bifurcated Strike"
-],
-[
 "multi_attack",
 "Trifurcated Strike"
 ],
 [
-"multi_target_attack",
-"Trifurcated Strike"
+"aoe_damage",
+"Bifurcated Strike"
 ]
 ],
 "by": "C",
@@ -3921,7 +3925,7 @@
 "Bifurcated Strike"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Bifurcated Strike"
 ]
 ],
@@ -3937,7 +3941,7 @@
 "Trifurcated Strike"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Trifurcated Strike"
 ]
 ],
@@ -4596,12 +4600,12 @@
 "Bifurcated Strike"
 ],
 [
-"multi_target_attack",
-"Bifurcated Strike"
-],
-[
 "turn_end",
 "Sprinter"
+],
+[
+"aoe_damage",
+"Bifurcated Strike"
 ]
 ],
 "by": "C",
@@ -5126,15 +5130,15 @@
 "740932": {
 "tags": [
 [
-"multi_target_attack",
-"Trifurcated When Powered"
-],
-[
 "multi_attack",
 "Trifurcated When Powered"
 ],
 [
 "link_formation",
+"Trifurcated When Powered"
+],
+[
+"aoe_damage",
 "Trifurcated When Powered"
 ]
 ],
@@ -5400,12 +5404,12 @@
 "Mighty Leap"
 ],
 [
-"multi_target_attack",
-"Omni Strike"
-],
-[
 "immunity",
 "Made Of Stone"
+],
+[
+"aoe_damage",
+"Omni Strike"
 ]
 ],
 "by": "A=B",
@@ -5422,10 +5426,6 @@
 "Mighty Leap"
 ],
 [
-"multi_target_attack",
-"Omni Strike"
-],
-[
 "friendly_fire",
 "Tidal Lock"
 ],
@@ -5440,6 +5440,10 @@
 [
 "forced_movement",
 "Tidal Lock"
+],
+[
+"aoe_damage",
+"Omni Strike"
 ]
 ],
 "by": "C",
@@ -5470,10 +5474,6 @@
 "Mighty Leap"
 ],
 [
-"multi_target_attack",
-"Omni Strike"
-],
-[
 "friendly_fire",
 "Tidal Lock"
 ],
@@ -5488,6 +5488,10 @@
 [
 "forced_movement",
 "Tidal Lock"
+],
+[
+"aoe_damage",
+"Omni Strike"
 ]
 ],
 "by": "C",
@@ -7066,10 +7070,6 @@
 "remove all Squirrels and Rabbits from the board"
 ],
 [
-"multi_target_attack",
-"This card will strike all opposing creatures, or attack directly if there are none"
-],
-[
 "aura",
 "Creatures adjacent to this card gain 1 Power"
 ],
@@ -7340,14 +7340,6 @@
 [
 "card_crafting",
 "The SP costs of various sigils during the Act III Build-A-Card event"
-],
-[
-"multi_target_attack",
-"This card will strike each opposing space to the left and right of the spaces across it"
-],
-[
-"multi_target_attack",
-"This card will deal damage to the opposing spaces left, right, and opposite of it"
 ],
 [
 "passive",

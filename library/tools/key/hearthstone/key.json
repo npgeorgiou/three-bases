@@ -132,12 +132,12 @@
 "742497": {
 "tags": [
 [
-"multi_target_attack",
-"Also damages the minions next to whomever he attacks"
-],
-[
 "adjacency",
 "minions next to"
+],
+[
+"aoe_damage",
+"Also damages the minions next to whomever he attacks"
 ]
 ],
 "by": "A=B"
@@ -7154,7 +7154,7 @@
 "tags": [
 [
 "board_clog",
-"Summon a 0/4 Entr\u00e9e for your opponent"
+"Summon a 0/4 Entrée for your opponent"
 ],
 [
 "other_death_trigger",
@@ -7401,16 +7401,16 @@
 "Give your hero +3 Attack"
 ],
 [
-"multi_target_attack",
-"Also damages adjacent minions"
-],
-[
 "adjacency",
 "adjacent minions"
 ],
 [
 "temporary_effect",
 "this turn"
+],
+[
+"aoe_damage",
+"Also damages adjacent minions"
 ]
 ],
 "by": "C"
@@ -8809,12 +8809,12 @@
 "798264": {
 "tags": [
 [
-"multi_target_attack",
-"Also damages the minions next to whomever your hero attacks"
-],
-[
 "adjacency",
 "minions next to"
+],
+[
+"aoe_damage",
+"Also damages the minions next to whomever your hero attacks"
 ]
 ],
 "by": "A=B"
@@ -9404,12 +9404,12 @@
 "Rush"
 ],
 [
-"multi_target_attack",
-"Also damages the minions next to whomever this attacks"
-],
-[
 "adjacency",
 "minions next to"
+],
+[
+"aoe_damage",
+"Also damages the minions next to whomever this attacks"
 ]
 ],
 "by": "C"

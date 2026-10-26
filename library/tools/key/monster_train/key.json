@@ -612,7 +612,7 @@
 "822463": {
 "tags": [
 [
-"multi_target_attack",
+"aoe_damage",
 "Sweep"
 ]
 ],
@@ -2058,7 +2058,7 @@
 "822548": {
 "tags": [
 [
-"multi_target_attack",
+"aoe_damage",
 "Sweep"
 ]
 ],
@@ -2188,7 +2188,7 @@
 "Slay"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Sweep"
 ]
 ],
@@ -2554,7 +2554,7 @@
 "Strike"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Sweep"
 ]
 ],
@@ -2822,7 +2822,7 @@
 "Strike"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Sweep"
 ]
 ],
@@ -3066,7 +3066,7 @@
 "Strike"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Sweep"
 ]
 ],
@@ -6727,7 +6727,7 @@
 "Etch"
 ],
 [
-"multi_target_attack",
+"aoe_damage",
 "Sweep"
 ]
 ],

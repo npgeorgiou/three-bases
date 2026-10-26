@@ -296,12 +296,12 @@
  },
  "760949": {
   "add": [
-   "multi_target_attack",
    "adjacency",
    "damage"
   ],
   "drop": [
-   "combo_sequence"
+   "combo_sequence",
+   "multi_target_attack"
   ]
  },
  "761133": {
@@ -470,7 +470,6 @@
    "area_templates",
    "friendly_fire",
    "aoe_damage",
-   "multi_target_attack",
    "damage"
   ],
   "drop": []
@@ -507,8 +506,7 @@
    "adjacency",
    "aoe_damage",
    "forced_movement",
-   "friendly_fire",
-   "multi_target_attack"
+   "friendly_fire"
   ],
   "drop": []
  },
@@ -605,10 +603,11 @@
    "ranged",
    "terrain",
    "damage",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
-   "damage_over_time"
+   "damage_over_time",
+   "multi_target_attack"
   ]
  },
  "761049": {
@@ -617,10 +616,11 @@
    "area_templates",
    "damage",
    "movement",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "multi_target_attack"
   ]
  },
  "761052": {
@@ -676,10 +676,12 @@
    "damage",
    "stat_loss",
    "terrain",
-   "multi_target_attack",
-   "ranged"
+   "ranged",
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "761113": {
   "add": [
@@ -689,7 +691,7 @@
    "movement",
    "ranged",
    "terrain",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": []
  },
@@ -802,15 +804,21 @@
  },
  "761020": {
   "add": [
-   "telegraphed_threats"
+   "telegraphed_threats",
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "761021": {
   "add": [
-   "telegraphed_threats"
+   "telegraphed_threats",
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "761022": {
   "add": [
@@ -818,11 +826,12 @@
    "condition_count",
    "damage",
    "ranged",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
    "symmetric_effect",
-   "piercing"
+   "piercing",
+   "multi_target_attack"
   ]
  },
  "761023": {
@@ -831,11 +840,12 @@
    "condition_count",
    "damage",
    "ranged",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
    "symmetric_effect",
-   "piercing"
+   "piercing",
+   "multi_target_attack"
   ]
  },
  "761024": {
@@ -856,10 +866,12 @@
  },
  "761026": {
   "add": [
-   "telegraphed_threats"
+   "telegraphed_threats",
+   "aoe_damage"
   ],
   "drop": [
-   "stat_gain"
+   "stat_gain",
+   "multi_target_attack"
   ]
  },
  "761027": {
@@ -934,11 +946,12 @@
    "damage",
    "ranged",
    "terrain",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
    "summon",
-   "lanes"
+   "lanes",
+   "multi_target_attack"
   ]
  },
  "761042": {
@@ -947,11 +960,12 @@
    "damage",
    "ranged",
    "terrain",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
    "summon",
-   "lanes"
+   "lanes",
+   "multi_target_attack"
   ]
  },
  "761043": {
@@ -967,11 +981,12 @@
    "telegraphed_threats",
    "damage",
    "stat_loss",
-   "multi_target_attack",
-   "ranged"
+   "ranged",
+   "aoe_damage"
   ],
   "drop": [
-   "summon"
+   "summon",
+   "multi_target_attack"
   ]
  },
  "761045": {
@@ -1103,13 +1118,14 @@
    "on_damaged",
    "stealth",
    "terrain",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
    "counter_spell",
    "flanking",
    "forced_movement",
-   "lanes"
+   "lanes",
+   "multi_target_attack"
   ]
  },
  "761060": {
@@ -1121,14 +1137,15 @@
    "on_damaged",
    "stealth",
    "terrain",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
    "counter_spell",
    "flanking",
    "evasion",
    "forced_movement",
-   "lanes"
+   "lanes",
+   "multi_target_attack"
   ]
  },
  "761083": {
@@ -1284,10 +1301,11 @@
   "add": [
    "telegraphed_threats",
    "damage",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
-   "summon"
+   "summon",
+   "multi_target_attack"
   ]
  },
  "761104": {
@@ -1325,13 +1343,13 @@
    "disable",
    "piercing",
    "quests",
-   "ranged",
-   "multi_target_attack"
+   "ranged"
   ],
   "drop": [
    "damage_over_time",
    "zone_control",
-   "destroy"
+   "destroy",
+   "multi_target_attack"
   ]
  },
  "761116": {
@@ -1342,13 +1360,13 @@
    "death_trigger",
    "disable",
    "piercing",
-   "quests",
-   "multi_target_attack"
+   "quests"
   ],
   "drop": [
    "damage_over_time",
    "zone_control",
-   "destroy"
+   "destroy",
+   "multi_target_attack"
   ]
  },
  "760895": {
@@ -1672,11 +1690,11 @@
  "760926": {
   "add": [
    "adjacency",
-   "damage",
-   "multi_target_attack"
+   "damage"
   ],
   "drop": [
-   "combo_sequence"
+   "combo_sequence",
+   "multi_target_attack"
   ]
  },
  "761082": {
@@ -1744,9 +1762,11 @@
    "exhaust",
    "forced_movement",
    "ranged",
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "760899": {
   "add": [
@@ -1759,10 +1779,11 @@
   "add": [
    "damage",
    "immunity",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
-   "piercing"
+   "piercing",
+   "multi_target_attack"
   ]
  },
  "760847": {
@@ -1863,10 +1884,11 @@
   "add": [
    "damage",
    "immunity",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
-   "piercing"
+   "piercing",
+   "multi_target_attack"
   ]
  },
  "760956": {
@@ -1905,9 +1927,11 @@
    "damage",
    "exhaust",
    "forced_movement",
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "760991": {
   "add": [
@@ -1920,10 +1944,11 @@
   "add": [
    "damage",
    "forced_movement",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": [
-   "piercing"
+   "piercing",
+   "multi_target_attack"
   ]
  },
  "760994": {
@@ -1970,10 +1995,11 @@
    "damage",
    "forced_movement",
    "immunity",
-   "multi_target_attack",
    "ranged"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "760860": {
   "add": [
@@ -2022,7 +2048,6 @@
    "damage_over_time",
    "forced_movement",
    "ranged",
-   "multi_target_attack",
    "terrain"
   ],
   "drop": []
@@ -2066,17 +2091,21 @@
    "condition_count",
    "damage",
    "immunity",
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "760981": {
   "add": [
    "damage",
    "forced_movement",
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "760898": {
   "add": [
@@ -2091,7 +2120,7 @@
    "damage",
    "exhaust",
    "movement",
-   "multi_target_attack"
+   "aoe_damage"
   ],
   "drop": []
  },
@@ -2172,7 +2201,6 @@
    "exhaust",
    "ranged",
    "aoe_damage",
-   "multi_target_attack",
    "damage"
   ],
   "drop": []
@@ -2200,7 +2228,6 @@
  "760933": {
   "add": [
    "forced_movement",
-   "multi_target_attack",
    "ranged"
   ],
   "drop": [
@@ -2218,9 +2245,11 @@
    "adjacency",
    "damage",
    "ranged",
-   "multi_target_attack"
+   "aoe_damage"
   ],
-  "drop": []
+  "drop": [
+   "multi_target_attack"
+  ]
  },
  "760999": {
   "add": [
@@ -2247,12 +2276,12 @@
    "area_templates",
    "forced_movement",
    "immunity",
-   "ranged",
-   "multi_target_attack"
+   "ranged"
   ],
   "drop": [
    "damage:benefits",
-   "upgrade:benefits"
+   "upgrade:benefits",
+   "multi_target_attack"
   ]
  }
 }

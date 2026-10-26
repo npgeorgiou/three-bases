@@ -82,3 +82,5 @@ debuff|does|\bgive [^.]{0,30}-\d+ strength\b
 !drawback|opposing .{0,20}gains
 !shield|\bward\b
 !bodyguard|\bbodyguard
+# Namaari: the damage a challenge deals is copied to a second, chosen character
+multi_target_attack|does|\bsame amount of damage to another chosen\b
