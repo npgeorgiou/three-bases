@@ -83,10 +83,6 @@
 [
 "heal",
 "will heal 2 points"
-],
-[
-"spell_power",
-"the next attack deals more damage"
 ]
 ],
 "by": "C"
@@ -1716,10 +1712,6 @@
 },
 "760947": {
 "tags": [
-[
-"spell_power",
-"All Vek take +1 damage from Bumps"
-],
 [
 "collision_damage",
 "Bumps"
@@ -4863,10 +4855,6 @@
 [
 "stat_loss",
 "otherwise -1 Move"
-],
-[
-"spell_power",
-"the next attack deals more damage"
 ]
 ],
 "by": "C"
@@ -6447,10 +6435,6 @@
 [
 "terrain",
 "Standing on Fire removes Fire"
-],
-[
-"spell_power",
-"the next attack deals more damage"
 ]
 ],
 "by": "C"

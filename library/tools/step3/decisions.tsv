@@ -1274,5 +1274,4 @@ new	adjacency|does|hs_battlegrounds|manual	hs_battlegrounds	\bminion to the (?:l
 new	adjacency|does|gwent|manual	gwent	\bnext to an?\b|\bto the (?:left|right) of\b
 new	adjacency|does|wh_aos_4th|manual	wh_aos_4th	\bis next to an?\b|\bnext to an? (?:enemy|friendly)\b
 new	adjacency|does|stormbound|manual	stormbound	\bon both sides\b
-new	spell_power|does|into_the_breach|manual	into_the_breach	\bdamage is increased by \d\b
 new	terrain|does|into_the_breach|manual	into_the_breach	\b(?:adding|adds?|drops?|dropping|creates?|leaves?|applies) smoke\b[^.]{0,30}\btiles?\b
