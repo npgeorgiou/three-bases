@@ -14,7 +14,6 @@ It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `thr
 | Hearthstone | 8,045 |
 | Shadowverse | 4,382 |
 | Warhammer 40,000 (10th edition) | 3,774 |
-| Warhammer Age of Sigmar (4th edition) | 3,540 |
 | Legends of Runeterra | 2,431 |
 | Hearthstone Battlegrounds | 2,226 |
 | Star Wars: Unlimited | 1,813 |
@@ -29,7 +28,7 @@ It lives in the `library/` folder of **github.com/npgeorgiou/three-bases**: `thr
 | Faeria | 443 |
 | Into the Breach | 287 |
 | Monster Train | 272 |
-| Inscryption | 263 |
+| Inscryption | 222 |
 | Stormbound | 190 |
 
 What is in, beyond the cards each source lists as playable:
@@ -37,9 +36,9 @@ What is in, beyond the cards each source lists as playable:
 - **Slay the Spire 1 and 2 upgrades:** an upgrade that changes only numbers is kept on its base card (`extra.upgraded_text`, `extra.upgraded_cost`); an upgrade that changes the mechanic (Innate or Retain added, Exhaust dropped, all cards instead of one, ...) is its own entry `<name>+`, linked `variant_of` to the base card, and carries the base card's hand-review decisions. Slay the Spire 2 upgraded costs are unknown (the source lists no costs).
 - **Warhammer unit datasheets:** units with their stat line (`stats`; other models' lines in `extra.model_stats`) and abilities, weapon abilities and special rules as text. A unit without any ability or special rule is left out.
 - **Magic:** a selection (no commons, no Commander-only cards, no near-duplicates) plus 640 MTGJSON cards that bring a mechanic the others lack, so Magic does not drown the smaller games.
-- **Warhammer factions** are armies: a BSData "Library" file's entries belong to the army that uses it, and an Age of Sigmar army of renown or Legends list belongs to its army (`extra.army_of_renown`, `extra.legends`).
+- **Warhammer factions** are armies: a BSData "Library" file's entries belong to the army that uses it.
 
-Excluded: Shadowverse: Worlds Beyond, D&D 5e, Blood Bowl, Warhammer 40,000: Kill Team, Warhammer Underworlds.
+Excluded: Shadowverse: Worlds Beyond, D&D 5e, Blood Bowl, Warhammer 40,000: Kill Team, Warhammer Underworlds, Warhammer Age of Sigmar (dropped 26 Oct 2026).
 
 ## Structure
 **entities**: every card, unit, spell, item, location, ability, rule, keyword (its definition as text) and tribe, with game, category, faction, cost, stats and rules text. `variants` lists other names the same mechanic was printed under; **merged_entities** maps each merged name to the entry that kept it, so commands still find it. Keywords no card text uses are dropped; one that loses its last card is marked with `extra.note` "used by no card text in this library".
@@ -144,7 +143,8 @@ game's rules and terms as `# term:` lines with their source (`(assumed)` where n
 - Slay the Spire 2: the wiki's card lists, normal and upgraded, supplied by Kaptain [conv_sts2.py].
 - Gwent: the gwent.one v14.8 export, with its NonOwnable set [conv_gwent.py].
 - Shadowverse: the Portal card API export, with set 90000 (tokens) [conv_sv.py].
-- 40k, Age of Sigmar: the BSData repos [conv_bs.py]: abilities and rules; campaign content (Crusade, Path to Glory, hero creation) left out. Unit datasheets and stat lines [conv_bs_units.py].
+- 40k: the BSData repo [conv_bs.py]: abilities and rules; campaign content (Crusade) left out. Unit datasheets and stat lines [conv_bs_units.py]. Lists of special rules and weapon abilities and designer's notes cut from the text (trim_text.py; the units keep them as keyword links).
+- Inscryption: wiki rules and boss pages dropped; every entry keeps only its first paragraph (trim_text.py).
 
 ## Known limits
 - Automatic tags on long prose (Warhammer army rules, Inscryption and Into the Breach wiki text) are the least precise. Some concept/game cells are below 70% precision (Hearthstone hand_disruption, adjacency and debuff; Shadowverse tutor): their right and wrong tags come from the same wording, so `concept` warns there.

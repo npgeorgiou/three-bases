@@ -65,7 +65,6 @@ Order of `tools/key/key.py` GAMES. Numbers: key wrong / missed per 100 entries, 
 | gwent | to do | 65.2 / 77.9 | signature 15/22, archetype 7/8, combo 3/3 | Northern Realms activated (lost to merged-card counts) |
 | hs_battlegrounds | to do | 49.4 / 46.2 | combo 9/13 | |
 | runeterra | to do | 79.4 / 72.0 | signature 30/40, archetype 7/16, combo 7/19, splash 1/1 | Freljord resource_gain (lost to merged-card counts) |
-| wh_aos_4th | to do | 138.8 / 164.3 | signature 12/47, archetype 4/18 | |
 | wh_40k_10e | to do | 229.7 / 120.0 | signature 8/28, archetype 4/12, combo 5/8 | |
 | shadowverse | to do | 103.8 / 72.3 | signature 17/22, archetype 8/13 | |
 | hearthstone | to do | 56.2 / 62.2 | signature 37/57, archetype 12/34, combo 6/13, splash 7/9 | Deathknight control, Mage tribal, Shaman tribal (narrow leads); Druid swarm and draw (lost to merged-card counts) |

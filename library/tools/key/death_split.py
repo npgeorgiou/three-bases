@@ -14,7 +14,6 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, os.path.di
 import death_side as D
 # Kaptain's decisions per card (game, name): (concept to remove or None, concept to add or None)
 FIXED = [
- ('wh_aos_4th', 'Anvil of Apotheosis: Nighthaunt Hero', None, 'other_death_trigger'),
  ('duelyst', 'Cassyva Soulreaper', None, 'on_kill'), ('duelyst', 'Inkhorn Gaze', None, 'on_kill'),
  ('duelyst', 'Mana Deathgrip', None, 'on_kill'), ('faeria', "Seifer's Wrath", None, 'on_kill'),
  ('into_the_breach', 'High Tide', None, 'terrain'), ('into_the_breach', 'Seismic Activity', None, 'terrain'),
