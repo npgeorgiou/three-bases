@@ -55,3 +55,26 @@ variable_stats|does|\bdamage increases the further\b
 # Environments that turn a tile into Water or a Chasm, and Vek that leave Fire on death, change the terrain
 terrain|does|\bwill become (a |an )?(water|chasm|lava|ice|smoke|fire|ground|mountain|forest|sand|acid|hole)\b
 terrain|does|\bleaves? (fire|acid|a\.c\.i\.d|smoke|ice|water|lava) on death\b
+# Missed wording found in the key check (26 Oct 2026): damage verbs, "Upgrade:" lines, deployed mines, spawned Vek, self-freeze, rewards, kills, repair, delayed tiles, pulls and flips, A.C.I.D. as a debuff, flying moves, tile protection
+damage|does|\bdamag(?:es|ing)\b|\b(?:deals?|dealing|does|for) \d+ damage\b|\b\d+ damage (?:each|to)\b|\bdeal damage\b|\bdealt \d+ damage\b
+upgrade|does|\bupgrade:
+summon|does|\bdeploy (?:a|an) (?:single )?[a-z ]{0,12}(?:mine|bomb|tank)\b|\bspawned by other\b|\bspawning (?:alpha )?blob\w*|\bwill always spawn with \d+ other\b|\bshort-lived spore\b
+friendly_fire|does|\bfreeze yourself\b|\bincluding the tumblebug\b
+resource_gain|does|\bbonus xp\b|\bcan be regained\b|\bearned for\b|\breward a reactor core\b|\+\d reactor core\b
+ranged|does|\bburst beam\b|\blaunch a rock\b|\bair strike\b|\bhuge missile\b
+on_kill|does|\bper kill\b|\bkilling blow\b|\bif (?:the )?target is killed\b
+heal|does|\brepairs? (?:adjacent )?mechs?\b|\bprepare to heal\b
+self_destruct|does|\bdestroys itself\b|\bdismantle\b
+target_choice|does|\bchosen target\b|\bis chosen first\b|\bcan be chosen by\b
+delayed|does|\bprepare to heal\b|\bwill become (?:water|a chasm)\b|\bafter the end of that turn\b
+forced_movement|does|\bpulls? (?:its |the )?target\b|\bflips? (?:a target's|its) attack direction\b|\bpush three tiles\b|\bpush the target tile\b
+terrain|does|\bcreate an explosive boulder\b|\bbehaves like water\b
+debuff|does|\bapplies a\.c\.i\.d\.|\bapplying a\.c\.i\.d\.|\bapply a\.c\.i\.d\.|\binflicts a\.c\.i\.d\.|\bweapon damage against this unit is doubled
+movement|does|\bmove over any terrain tile\b|\bfly in a line\b|\bfly over the targets\b|\bdashing away\b|\bpushing shooter\b
+protection|does|\bshield tiles from damage\b|\bprotect a tile\b
+no_damage_output|does|\bdoes no damage\b|\bnon-damaging projectile\b
+variable_stats|does|\bincreases in damage for each unit\b|\bdamage is based on distance\b
+exhaust|does|\b\d uses per battle\b
+# "Natural Armor is disabled" is not block points; "projectile weapons can pass over" is not a ranged attack
+!block_armor|\bnatural armor is disabled\b
+!ranged|\bprojectile weapons\b
