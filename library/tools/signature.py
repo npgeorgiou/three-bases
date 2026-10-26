@@ -2,7 +2,7 @@
 
 Prominence is one rule, the same for every game, concept and archetype. A faction's mechanic is prominent when both hold:
   1. the faction uses it at least half again as often as the rest of the game: its share of cards with the mechanic is at
-     least RATIO (1.5) times the share among all the game's other cards;
+     least RATIO (1.3; 1.5 until 26 Oct 2026, Kaptain) times the share among all the game's other cards;
   2. that difference is not chance: if the faction's cards were drawn at random from the game's cards, at least this many
      would have the mechanic with probability under P_MAX (0.05, the usual bar; the hypergeometric tail, a one-sided Fisher
      exact test). This keeps a 3-card coincidence in a small faction out, and lets a small faction with a clear mechanic in.
@@ -25,7 +25,7 @@ average) are kept for reading. Usage: signature.py <db>"""
 import collections, json, os, sqlite3, sys
 from math import log
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
-P_MAX, RATIO = 0.05, 1.5
+P_MAX, RATIO = 0.05, 1.3
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from factions import MIN, CARD, tail, members   # noqa
 
 mech = {i for (i,) in q("SELECT id FROM concepts WHERE facet NOT IN ('role','scope','problem') AND id IN (SELECT child FROM concept_parents)")}

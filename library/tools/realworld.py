@@ -1,7 +1,7 @@
 """Step 7: real-world test cases (the ```tsv block of tools/games/<game>.md, from wikis and guides, each with its source URL) checked against
 the library. Build check that reports how many cases are met per game (the final comparison needs final >= original).
   signature  faction, concept     met when the faction's signature (or keyword signature) concepts include it, a narrower or
-                                  a broader one below the four branches
+                                  a broader one below the four branches; kw:<Keyword> names a keyword signature
   archetype  faction, archetype   met when faction_archetypes lists it for that faction with lift above 1
   combo      card A, card B       met when query.connections finds any connection between the two cards
   splash     faction, concept     met when the concept (or a narrower one) is a splash of that faction
@@ -26,7 +26,7 @@ for g, f in games.files():
         t, a, b = row[0].strip(), row[1].strip(), row[2].strip(); ok = False
         if t == 'signature':
             ks = {k for k, in q("SELECT concept FROM faction_signature WHERE game=? AND faction=? AND kind IN ('signature','keyword_signature')", g, a)}
-            ok = bool(ks & near(b))
+            ok = bool(ks & (near(b) | {b}))   # b may also be a keyword signature, written kw:<Keyword>
         elif t == 'splash':
             ks = {k for k, in q("SELECT concept FROM faction_signature WHERE game=? AND faction=? AND kind='splash'", g, a)}
             ok = bool(ks & (desc[b] | {b}))

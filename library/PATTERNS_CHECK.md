@@ -21,9 +21,10 @@ too. Find the reason for every disagreement and fix it where it is: the entry ta
 - One game per pass, all 21 games (table below).
 
 ## Decisions that apply to every game
-- **Cases the cards don't support:** a signature or archetype case whose faction shows no lead of 1.3 times in the cards (the key; Kaptain, 26 Oct 2026, was 1.5)
+- **Cases the cards don't support:** a signature or archetype case whose faction shows no lead of 1.3 times in the cards (the key; Kaptain, 26 Oct 2026, was 1.5). Signatures and archetypes use the same 1.3 (`signature.py` RATIO), so
+  a kept case can be met. A case may name a keyword signature (kw:Jump) where the source names a keyword
   is removed, with the reason in the game's "Notes from the patterns check".
-- **Shared pools** (Neutral, Colorless, Any) are not factions (`factions.py` SHARED).
+- **Shared pools** (Neutral, Colorless, Any; Faeria's Pandora) are not factions (`factions.py` SHARED).
 - **Faction counts:** a card merged into another with the same text (`dedupe.py`, table `merged_entities`) still counts as a card.
   Cost tags (role `cost`) count. A mechanic on more than 25% of the cards is too common for a signature, unless one faction holds
   at least 60% of it.
@@ -52,7 +53,7 @@ Order of `tools/key/key.py` GAMES. Numbers: key wrong / missed per 100 entries, 
 |---|---|---|---|---|
 | into_the_breach | done 26 Oct | 47.0 / 13.3 | signature 2/2, archetype 1/1, combo 6/6, splash 2/2 | |
 | inscryption | done 26 Oct | 50.4 / 26.9 | signature 6/7, combo 22/23 | Beast generate_cards (lead 1.8, too few cards); Mantis God + Fecundity |
-| faeria | done 26 Oct | 24.8 / 5.9 | signature 9/15, archetype 5/9, combo 8/12, splash 0/2 | Khalim's Prayer + Zealous Crusader, Ruby Yak + Ulani's Medallion and two more combos need new link types; Yellow sacrifice (recipe) |
+| faeria | done 26 Oct | 23.4 / 5.6 | signature 12/14, archetype 6/6, combo 10/12 | Khalim's Prayer + Zealous Crusader, Earthcraft + Three Wishes (need per-effect records); Blue terrain, Yellow on_spell (too few cards) |
 | duelyst | done 24 Oct, rechecked 26 Oct | 34.5 / 24.3 | signature 16/16, archetype 7/8, splash 1/1 | |
 | sts1 | **next** | 40.5 / 27.6 | signature 9/18, archetype 5/9, combo 18/21 | Defect cost_condition, Silent draw (narrow leads) |
 | marvel_snap | to do | 101.4 / 31.5 | combo 20/24 | |
@@ -179,7 +180,9 @@ Things that confused earlier chats:
   (39 entries) and the movement keywords are not terrain; land destruction, moving and taking lands are terrain; `scope_self` on
   50 self-only effects; hand discounts also `cost_reduction`; wild land `cost_type`; Aquatic `placement_rules` and `turn_end`.
   Library: keyword reviews (Taunt, Corrupt, Swallow, Aquatic, Flying), 30 Faeria pattern lines, wording-wide review drops,
-  11 new verified combos, the case rule lowered to 1.3 times.
+  11 new verified combos, the case rule lowered to 1.3 times. Then shared: signature RATIO 1.5 -> 1.3 (real-world cases
+  551 -> 572 of 860, no game worse), Pandora a shared pool, keyword-signature cases, relations copy + tribal and summon +
+  transform; Faeria key wrong 23.4, missed 5.6, cases signature 12/14, archetype 6/6, combo 10/12.
 
 ## Open, outside the game passes
 - Tagging redesign: tags per effect instead of per card (`TAGGING_RECORDS.md`, proposal for Kaptain). It would settle area

@@ -47,7 +47,9 @@ REL = [('spell_power', 'synergizes', 'direct_damage', 'more spell damage makes d
        ('revive', 'synergizes', 'sacrifice', 'units that return are reusable fodder'),
        ('graveyard', 'synergizes', 'sacrifice', 'sacrificed units fill the graveyard'),
        ('discard', 'synergizes', 'hand_size', 'discarding empties the hand for empty-hand payoffs'),
-       ('generate_cards', 'enables', 'on_ally_play', 'generated cards are extra plays')]
+       ('generate_cards', 'enables', 'on_ally_play', 'generated cards are extra plays'),
+       ('copy', 'synergizes', 'tribal', 'copies of a tribe member are more of the tribe (Ulani\'s Medallion turns a board into Ruby Yaks)'),
+       ('summon', 'synergizes', 'transform', 'summoned bodies are more units for an effect that turns your own units into something better')]
 r = 0
 for a, rel, b, note in REL:
     if a in root or q('SELECT 1 FROM concepts WHERE id=?', a):

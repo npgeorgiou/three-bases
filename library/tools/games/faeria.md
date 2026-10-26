@@ -113,9 +113,8 @@ land alteration (create, transform, move, destroy or take lands)|terrain|\b(crea
 The real-world cases, one per line, tab-separated: `type  a  b  why  source` (see `realworld/RESEARCH.md`). Read by `realworld.py`, `realworld_report.py`, `realworld_why.py` and `learn_recipes.py`.
 
 ```tsv
-signature	Blue	movement	mobility, jump	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Blue	transform	transforming creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Blue	stat_loss	shrinking big creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Blue	kw:Jump	mobility, jump	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Blue	polymorph	transforming creatures and shrinking big creatures (Frogify, the Phantasms)	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 signature	Blue	terrain	turning lands into lakes, moving lands	https://boards.faeria.com/t/board-and-colour-a-state-of-the-game-analysis/2586
 signature	Green	taunt	Taunt	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 signature	Green	buff	many buffs	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
@@ -124,21 +123,16 @@ signature	Red	damage	damaging events	https://boards.faeria.com/t/color-identity-
 signature	Red	direct_damage	burn	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 signature	Red	ranged	ranged creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 signature	Yellow	haste	rush and haste	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-signature	Yellow	movement	flight (Flying moves over ocean; Faeria has no blocking)	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
+signature	Yellow	kw:Flying	flight	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 signature	Yellow	sacrifice	sacrificing creatures	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 signature	Yellow	life_payment	sacrificing health	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 signature	Yellow	on_spell	cards buffed by events	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 archetype	Yellow	aggro_tempo	Yellow Rush	https://www.faeria.com/the-hub/guide/42-deck-archetypes
 archetype	Yellow	control	Yellow control	https://www.faeria.com/the-hub/guide/42-deck-archetypes
 archetype	Yellow	spellslinger	Blue Yellow Events	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Yellow	burn	Red Yellow Burn	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Yellow	sacrifice	Green and Yellow sacrifice	https://www.faeria.com/the-hub/guide/42-deck-archetypes
 archetype	Blue	spellslinger	Blue Yellow Events	https://www.faeria.com/the-hub/guide/42-deck-archetypes
 archetype	Red	burn	Red Yellow Burn	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Red	aggro_tempo	Rush decks	https://boards.faeria.com/t/board-and-colour-a-state-of-the-game-analysis/2586
 archetype	Green	sacrifice	Green and Yellow sacrifice	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-splash	Green	resource_gain	a dash of ramp	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
-splash	Yellow	resource_gain	cards that give mana	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 combo	Khalim's Prayer	Zealous Crusader	orb attacks give faeria and buff the Crusader	https://www.faeria.com/the-hub/guide/42-deck-archetypes
 combo	Feed the Forest	Oakling	destroying Oakling triggers its Last Words (+5/+5 to a green creature in hand) and gains faeria	https://www.faeria.com/the-hub/guide/13-how-to-build-a-green-deck
 combo	Feed the Forest	Ruunin, the Relentless	each death returns Ruunin bigger; Feed the Forest turns her Life into faeria	https://www.faeria.com/the-hub/deck/1720-illusion-of-failed-ruunin
@@ -164,14 +158,19 @@ Patterns check, 26 Oct 2026 (Claude, decisions by Kaptain). Counts are from the 
 - Attacking the enemy god is direct damage: cards rewarded for it carry direct_damage as benefits.
 - Discounts on cards in hand are both in_hand_buff and cost_reduction. "Becomes wild land" is cost_type.
 - "Give the next X creature you summon +1/+1" is delayed plus on_ally_play plus the stat gains, not in_hand_buff.
+- Pandora cards need no land colour: a shared pool like Neutral, not a faction (`factions.py`). Without it, Yellow holds 29 of
+  40 Flying faction cards, so Flying is a Yellow keyword signature.
+- Cases changed: Blue "mobility, jump" and Yellow "flight" are the keyword signatures kw:Jump and kw:Flying (movement is on a
+  third of the cards, too common for any one colour); Blue "transforming creatures" and "shrinking big creatures" are one case,
+  polymorph (Frogify and the Phantasms turn enemies into weaker creatures; Blue had 2 own-transform cards and 1 stat_loss card).
 - Cases removed, lead under 1.3 times in the cards: Green high_cost (6 of 67 expensive cards against 50 of 376 elsewhere;
   "big creatures" are big in Life, not in cost); Red taunt (1 of 68, rest 6 of 248); Red terrain (1 of 68, rest 10 of 248:
-  Meteor only); Yellow aoe_damage (0 of 70); Yellow terrain (0 of 70: no Yellow card converts lands).
-- Cases kept but not met: Blue and Yellow movement (movement is on more than a quarter of the cards, too common for a
-  signature); Blue transform (2 of 71) and stat_loss (1 of 71), too few cards; Blue terrain (4 of 71, 2.0 times, p 0.22);
-  Yellow on_spell (2 of 70; Blue has the other event payoffs). Splash resource_gain (Green, Yellow): no faction owns faeria
-  gain. Yellow sacrifice archetype: Yellow leads sacrifice, but the recipe also counts self_destruct, where Blue's drowning and
-  self-damaging towers now count.
+  Meteor only); Yellow aoe_damage (0 of 70); Yellow terrain (0 of 70: no Yellow card converts lands); archetypes Yellow burn
+  (the burn of Red-Yellow decks is Red's: Yellow 0, Red 2.5), Yellow sacrifice (1.22 times: Green's Last Words and death counts
+  lead the recipe; Yellow's sacrifice itself is a signature, met), Red aggro_tempo (1.17 times: haste and temporary bonuses
+  are Yellow's); splash Green and Yellow resource_gain (no colour leads faeria gain, so it is nobody's to splash).
+- Cases kept but not met, too few cards for the chance test: Blue terrain (7 of 71 against 13 of 205, p 0.23); Yellow on_spell
+  (2 of 70, and Blue has as many event payoffs).
 - Combos from Kaptain's list (another AI's, 26 Oct 2026), kept where the card texts and a guide or deck agree: Feed the Forest
   with Oakling, Ruunin and Tarum; Gabrian Enchantment with Oak Father; Doomsday with Soul Eater; Doomgate with Annoying Gnat;
   Ruby Yak with Famine and Ulani's Medallion; Rain of Fish with Ulani's Medallion; Ruunin with Shaytan Monstrosity ("Shaytan
@@ -182,5 +181,6 @@ Patterns check, 26 Oct 2026 (Claude, decisions by Kaptain). Counts are from the 
   other card's gains; Seifer gains Attack and Life alike); pairs with no named partner card. Thyrian Golem (5/10, named in the
   green deck guide) is not in the library.
 - Combos the library does not find: Khalim's Prayer + Zealous Crusader (two payoffs of the same thing, attacking the god; no
-  link joins two cards that benefit from the same effect); Ulani's Medallion + Ruby Yak, Rain of Fish + Ulani's Medallion,
-  Earthcraft + Three Wishes (no link for copying a board into one tribe, or for land colours a cost needs).
+  link joins two cards that benefit from the same effect); Earthcraft + Three Wishes (no concept for the land colours a cost
+  needs). Both need the per-effect records (`library/TAGGING_RECORDS.md`). Two relations found the Ruby Yak pairs: copy
+  synergizes tribal, summon synergizes transform (`engine_links.py`).

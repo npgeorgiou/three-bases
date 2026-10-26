@@ -153,7 +153,7 @@
 ],
 [
 "placement_rules",
-"lakes"
+"Can only travel over lakes and ocean"
 ]
 ],
 "by": "C"
@@ -3491,11 +3491,11 @@
 ],
 [
 "attack_gain",
-"+1/+1"
+"Give the next Jump creature you summon +1/+1"
 ],
 [
 "defence_gain",
-"+1/+1"
+"Give the next Jump creature you summon +1/+1"
 ]
 ],
 "by": "C",
@@ -3636,6 +3636,10 @@
 [
 "draw",
 "draw 2 cards"
+],
+[
+"direct_damage",
+"Drain 4 Life from your opponent"
 ]
 ],
 "by": "A=B"
@@ -4601,6 +4605,10 @@
 [
 "friendly_fire",
 "EVERYTHING"
+],
+[
+"direct_damage",
+"Drain 1 life from EVERYTHING"
 ]
 ],
 "by": "C",
@@ -5458,6 +5466,10 @@
 ],
 [
 "lifesteal",
+"drain 1 life from your opponent"
+],
+[
+"direct_damage",
 "drain 1 life from your opponent"
 ]
 ],

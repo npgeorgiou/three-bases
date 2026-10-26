@@ -85,7 +85,9 @@
    "transform",
    "count_payoff"
   ],
-  "drop": []
+  "drop": [
+   "attack_gain"
+  ]
  },
  "741446": {
   "add": [
@@ -1749,7 +1751,9 @@
    "stat_gain",
    "on_play"
   ],
-  "drop": []
+  "drop": [
+   "attack_gain"
+  ]
  },
  "741072": {
   "add": [
@@ -2085,7 +2089,8 @@
  "741066": {
   "add": [],
   "drop": [
-   "zone_of_control"
+   "zone_of_control",
+   "adjacency"
   ]
  },
  "741075": {
@@ -2100,7 +2105,8 @@
  "741155": {
   "add": [],
   "drop": [
-   "destroy"
+   "destroy",
+   "attack_gain"
   ]
  },
  "741277": {
@@ -2242,7 +2248,8 @@
  "741192": {
   "add": [],
   "drop": [
-   "terrain"
+   "terrain",
+   "attack_gain"
   ]
  },
  "741270": {
@@ -2435,6 +2442,36 @@
   "add": [],
   "drop": [
    "evasion"
+  ]
+ },
+ "741193": {
+  "add": [],
+  "drop": [
+   "attack_gain"
+  ]
+ },
+ "741178": {
+  "add": [],
+  "drop": [
+   "attack_gain"
+  ]
+ },
+ "741184": {
+  "add": [],
+  "drop": [
+   "attack_gain"
+  ]
+ },
+ "741495": {
+  "add": [],
+  "drop": [
+   "attack_gain"
+  ]
+ },
+ "741209": {
+  "add": [],
+  "drop": [
+   "attack_gain"
   ]
  }
 }

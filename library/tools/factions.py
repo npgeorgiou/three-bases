@@ -25,7 +25,7 @@ def parts(name, plain):
         if len(ps) > 1 and all(p in plain for p in ps): return ps
     return None
 
-SHARED = re.compile(r"^(neutral|colorless|any)\b", re.I)   # a shared card pool (Neutral, Colorless, Any), not a faction: left out of the comparison
+SHARED = re.compile(r"^(neutral|colorless|any|pandora)\b", re.I)   # a shared card pool (Neutral, Colorless, Any; Faeria's Pandora treasures, which need no land colour), not a faction: left out of the comparison
 def members(q, g):
     """faction -> set of its card ids (combined cards in each of their factions); all card ids with a faction"""
     rows = [(i, f) for i, f in q(f'SELECT e.id, e.faction FROM entities e WHERE e.game=? AND {CARD} AND e.faction IS NOT NULL', g) if not SHARED.match(f)]

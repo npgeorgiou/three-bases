@@ -1,1 +1,6 @@
 game	entity	trigger	effect	removed tag	cause	key says the removed tag is
+faeria	741192	on_play	attack_gain	attack_gain	other: text_pattern	right
+faeria	741193	turn_start	attack_gain	attack_gain	other: text_pattern	wrong
+faeria	741209	on_play	attack_gain	attack_gain	other: text_pattern	wrong
+faeria	741222	on_play	attack_gain	attack_gain	other: text_pattern	right
+faeria	741307	activated	attack_gain	attack_gain	other: text_pattern	wrong

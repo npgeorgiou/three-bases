@@ -1268,7 +1268,6 @@ new	stealth|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|ke
 new	turn_end|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)sprinter(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
 # key_patterns.py (patterns from the answer key quotes, 90%+ right on held-out key entries): new <concept|role|game|key> <game> <regex>
 new	activated|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)activate(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
-new	attack_gain|does|faeria|key	faeria	\+\d+/\+\d+\b
 new	copy|does|faeria|key	faeria	(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)discover(?=\s*(?:$|[\n.,:;(/]|\d|\s-))|(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)discover\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b)
 new	cost_reduction|does|faeria|key	faeria	\bcost\s+\d+\s+faeria\s+less\b
 new	cost_type|cost|faeria|key	faeria	(?:\bbecome\s+wild\s+land\b)|(?:\bbecomes\s+wild\s+land\b)|(?:\bwild\s+land\b)
