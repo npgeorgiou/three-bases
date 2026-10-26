@@ -17769,3 +17769,5 @@ monster_train	822548	Husk Hermit	aoe_damage	does	present
 sts1	757653	Electrodynamics	random_target	*	absent
 sts1	758161	Electro	random_target	*	absent
 sts1	758192	Lightning Mastery	random_target	*	absent
+runeterra	750409	Fury	attack_gain	*	absent
+runeterra	750409	Fury	defence_gain	*	absent
