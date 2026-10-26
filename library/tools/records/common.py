@@ -10,7 +10,9 @@ target: "<who> <how>[ <count>]", or just "self", "my_player", "enemy_player" or 
 card:discard). how: HOW. count only when more than one, or a number is printed ("enemy_unit random 2").
 duration: one of DURATION; "n_turns" and "n_rounds" carry the number in amount after a semicolon ("+45%; 2").
 Records are TSV files with these columns in this order; load_records.py (step 6) checks them with check()."""
-import re
+import os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import reading as RD
 
 COLUMNS = ('entity', 'ability', 'trigger', 'effect', 'target', 'amount', 'duration', 'condition', 'source')
 WHO = ('self', 'ally_unit', 'enemy_unit', 'any_unit', 'my_player', 'enemy_player', 'each_player', 'card', 'position')
@@ -51,9 +53,10 @@ def check(rec, triggers, effects):
     return out
 
 
-def norm(name, text):
-    """Card text with the card's own name and every number blanked: texts equal here share one reading (step 4)."""
-    t = text or ''
+def norm(game, name, text):
+    """Card text with the card's own name and every number blanked, and reminder text dropped where the patterns drop it
+    (reading.py: Magic, Lorcana, Star Wars Unlimited; the keyword records carry it): texts equal here share one reading."""
+    t = RD.strip(game, text or '')
     if name:
         t = t.replace(name, '~')
         if ',' in name: t = t.replace(name.split(',')[0], '~')  # Magic: "Gideon, Ally of Zendikar" -> "Gideon"

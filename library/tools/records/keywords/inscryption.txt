@@ -1,0 +1,101 @@
+# entity | ability | trigger | effect | target | amount | duration | condition   (source: keyword; read by Claude 27 Oct 2026)
+# Wiki entries that only point to other articles (Ant, Ants) and unused sigils described only as unused get no record.
+740612 | 1 | passive | evasion | self | strikes the opponent directly, even if opposed | permanent |
+740613 | 1 | on_draw | random_ability | self | the sigil becomes a random other sigil | permanent |
+740614 | 1 | passive | drawback | enemy_unit triggering | the opposing creature gains 1 Power | while |
+740615 | 1 | on_play | generate_cards | my_player | an Ant in your hand | instant |
+740616 | 1 | passive | shield | self | the first damage | stacks |
+740617 | 1 | passive | attack_gain | ally_unit all | +1 Power to others in its circuit | while | in a completed circuit
+740618 | 1 | on_play | resource_gain | my_player | 1 Energy Cell | permanent |
+740619 | 1 | on_damaged | generate_cards | my_player | a Bee (1/1 Airborne) in your hand | instant |
+740713 | 1 | passive | variable_stats | self | Power = space number, more near the bell | while |
+740620 | 1 | on_play | summon | position adjacent | a 0/1 Chime on each empty adjacent space | permanent |
+740621 | 1 | passive | multi_target_attack | enemy_unit adjacent 2 | strikes left and right of the space across | permanent |
+740622 | 1 | on_kill | permanent_growth | self | +1 Power | this_combat |
+740623 | 1 | death_trigger | type_grant | ally_unit chosen | gains Detonator | permanent |
+740624 | 1 | on_play | summon | position all | Explode Bots in all empty spaces | permanent |
+740626 | 1 | turn_end | resource_gain | my_player | 1 Bone | instant |
+740627 | 1 | death_trigger | resource_gain | my_player | 4 Bones instead of 1 | instant |
+740628 | 1 | activated | resource_conversion | my_player | 1 Energy for 3 Bones | instant |
+740629 | 1 | on_attack | self_destruct | self | perishes after attacking | instant |
+740630 | 1 | death_trigger | type_grant | ally_unit chosen | gains Brittle | permanent |
+740631 | 1 | on_play | board_clog | position triggering | an Egg on the opposing space | permanent |
+740632 | 1 | passive | attack_gain | self | +2 Power | while | in a circuit
+740633 | 1 | passive | bodyguard | self | moves to receive strikes at empty spaces | permanent |
+740711 | 1 | passive | variable_stats | self | Power = cards in your hand | while |
+740634 | 1 | on_ally_play | movement | self | moves toward the placed creature | instant |
+740635 | 1 | other_death_trigger | free_play | self | played in place of your first card to perish in combat | instant | in your hand
+740636 | 1 | on_play | summon | position adjacent | a 0/2 Dam on each empty adjacent space | permanent |
+740637 | 1 | death_trigger | direct_damage | my_player | damage on the scales by a file's size | instant |
+740638 | 1 | death_trigger | aoe_damage | any_unit adjacent | 10 to cards left, right and in front | instant |
+740639 | 1 | activated | generate_cards | my_player | a Skeleton in your hand for 1 Bone | instant |
+740640 | 1 | other_death_trigger | repeat_trigger | ally_unit triggering | returns to life and dies again | instant |
+740641 | 1 | passive | multi_attack | self | strikes the opposing space an extra time | permanent |
+740712 | 1 | passive | variable_stats | self | Power = your Green Mox cards alive | while |
+740642 | 1 | passive | resource_gain | my_player | your Energy never depletes | while | in a completed circuit
+740643 | 1 | activated | ping | enemy_unit triggering | 1 to the creature across, for 1 Energy | instant |
+740644 | 1 | activated | permanent_growth | self | +1/+1 for 2 Bones | permanent |
+740645 | 1 | on_play | copy | self | a copy in your hand | instant |
+740646 | 1 | on_draw | transform | self | hatches | permanent | your deck covers 1-5 Power and Health and each tribe
+740647 | 1 | turn_start | transform | self | grows into a stronger form after 1 turn | permanent |
+740648 | 1 | death_trigger | summon | position triggering | the creature inside, in its place | permanent |
+740649 | 1 | passive | attack_gain | ally_unit all | +1 Power to your Mox cards | while |
+740650 | 1 | passive | self_destruct | self | perishes | instant | you control no Mox cards
+740651 | 1 | other_death_trigger | aoe_damage | any_unit adjacent | 10 to the opposing and adjacent friendly creatures | instant | your Gem Vessels die
+740652 | 1 | on_play | shield | ally_unit all | Nano Armor to your Gem Vessels | stacks |
+740653 | 1 | turn_end | summon | position all | Gem Vessels in empty spaces of the circuit | permanent | in a completed circuit
+740654 | 1 | death_trigger | generate_cards | my_player | a random card in your hand | instant |
+740655 | 1 | death_trigger | generate_cards | my_player | a random card in your hand | instant | in a circuit
+740656 | 1 | on_enemy_enter | movement | self | moves opposite the new creature | instant | it faces an empty space
+740657 | 1 | on_play | hand_deck_swap | my_player | discard your hand, draw 4 | instant |
+740658 | 1 | turn_end | heal | ally_unit all | others in its circuit | instant | in a completed circuit
+740659 | 1 | turn_end | forced_movement | self | moves in its direction, pushing cards in the way | instant |
+740660 | 1 | on_play | tutor | card:deck chosen | any card | instant | you choose to
+740661 | 1 | death_trigger | drawback | my_player | the file is really deleted | permanent |
+740662 | 1 | passive | attack_gain | ally_unit adjacent | +1 Power | while |
+740663 | 1 | on_targeted | cheat_death | self | a Tail takes its place; it moves right | instant | it would be struck
+740664 | 1 | on_attack | draw | my_player | 1 per direct damage | instant | it deals damage directly
+740714 | 1 | passive | variable_stats | self | Power = the opposing card's Power, 0 if unopposed | while |
+740665 | 1 | passive | immunity | self | Touch of Death and Stinky | permanent |
+740666 | 1 | on_sacrifice | cheat_death | self | does not perish | instant | it is sacrificed
+740668 | 1 | on_play | draw | my_player | per gem sigil | instant |
+740669 | 1 | passive | blocking | self | blocks Airborne creatures | permanent |
+740670 | 1 | on_sacrifice | stat_gain | ally_unit triggering | its stats, to the card it was sacrificed for | permanent |
+740671 | 1 | on_play | resource_gain | my_player | a Green, Orange or Blue Gem | while |
+740672 | 1 | passive | link_formation | self | completes a circuit, no effect | permanent |
+740673 | 1 | passive | multi_target_attack | enemy_unit all | each occupied opposing space; direct if none | permanent |
+740674 | 1 | passive | variable_stats | self | Power = half your Bones | while |
+740675 | 1 | death_trigger | permanent_loss | self | removed from your deck for good | permanent |
+740676 | 1 | activated | random_effect | self | Power set to 1-6 for 1 Energy | permanent |
+740677 | 1 | on_play | generate_cards | my_player | a Rabbit in your hand | instant |
+740678 | 1 | turn_end | forced_movement | self | moves; creatures in the way are thrown behind it | instant |
+740679 | 1 | passive | immunity | self | creatures don't attack it | permanent |
+740680 | 1 | death_trigger | summon | position triggering | a Ruby Mox in its place | permanent |
+740709 | 1 | on_draw | quests | my_player | passes the Trial of the Ring | instant | you have no Ring
+740681 | 1 | other_death_trigger | resource_gain | my_player | Bones from opposing deaths too | while |
+740682 | 1 | on_enemy_enter | ping | enemy_unit triggering | 1 | instant | it moves into the opposing space
+740683 | 1 | on_damaged | counterattack | enemy_unit triggering | 1 to the attacker | instant |
+740684 | 1 | death_trigger | type_grant | ally_unit chosen | gains Nano Armor | permanent |
+740686 | 1 | turn_end | summon | position triggering | moves, leaving a Skeleton in its old space | permanent |
+740687 | 1 | passive | target_choice | enemy_unit chosen | you choose the space it strikes | permanent |
+740688 | 1 | turn_end | summon | position all | L33pB0ts in empty spaces of the circuit | permanent | in a completed circuit
+740689 | 1 | passive | variable_stats | self | sacrifices made this turn | while |
+740690 | 1 | turn_end | movement | self | moves in its direction | instant |
+740691 | 1 | turn_end | summon | position triggering | moves, leaving a Squirrel in its old space | permanent |
+740692 | 1 | death_trigger | destroy | enemy_unit triggering | the opposing creature | instant |
+740692 | 2 | death_trigger | generate_cards | my_player | a Pelt in your hand | instant |
+740693 | 1 | activated | permanent_growth | self | +1/+1 for 3 Energy | permanent |
+740694 | 1 | passive | debuff | enemy_unit triggering | -1 Power to the opposing creature | while |
+740695 | 1 | on_damaged | swap | self | Power and Health swap | permanent |
+740696 | 1 | turn_start | forced_movement | enemy_unit all | pulls small creatures into its orbit | instant |
+740697 | 1 | passive | deathtouch | any_unit triggering | any creature it damages perishes | instant |
+740698 | 1 | turn_start | transform | self | to or from Beast mode | permanent |
+740699 | 1 | passive | multi_target_attack | enemy_unit adjacent 3 | left, right and across | permanent |
+740700 | 1 | passive | multi_target_attack | enemy_unit adjacent 3 | left, right and across | while | in a circuit
+740701 | 1 | on_play | generate_cards | my_player | a random item | instant | you have fewer than 3 items
+740702 | 1 | activated | draw | my_player | 3, sacrificing this | instant | you have a Blue gem
+740708 | 1 | passive | immunity | self | can't be cut, skinned or stolen | permanent |
+740703 | 1 | death_trigger | return_to_hand | self | returns to hand | instant |
+740704 | 1 | on_damaged | draw | my_player | 1 from your Empty Vessel pile | instant |
+740705 | 1 | passive | immunity | self | submerged; attacks skip it | next_turn |
+740706 | 1 | passive | sacrifice | self | counts as 3 Blood | permanent |

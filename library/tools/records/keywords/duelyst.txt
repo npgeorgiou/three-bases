@@ -1,0 +1,40 @@
+# entity | ability | trigger | effect | target | amount | duration | condition   (source: keyword; read by Claude 27 Oct 2026)
+741556 | 1 | on_play | placement_rules | self | summoned anywhere | instant |
+741549 | 1 | passive | immunity | self | spells can't target or damage it | permanent |
+741552 | 1 | on_attack | attack_gain | self | extra damage, no counterattack | instant | attacking from behind
+741548 | 1 | turn_start | attack_now | enemy_unit triggering | moves to attack the nearest enemy | instant |
+741523 | 1 | passive | multi_target_attack | enemy_unit all | all enemies in one straight line | permanent |
+741524 | 1 | activated |  |  |  |  | after you activate your Bloodbound Spell
+741525 | 1 | on_play |  |  |  |  | you have another minion of the same tribe
+741554 | 1 | on_play | transform | self | a 0/10 Structure; true form after some turns | n_turns |
+741526 | 1 | passive | multi_attack | self | activates twice per turn | permanent |
+741527 | 1 | other_death_trigger |  |  |  |  | any minion dies
+741528 | 1 | on_life_loss | self_destruct | self | 3 Durability, -1 when your General is damaged | stacks |
+741560 | 1 | - | silence | any_unit chosen | all added abilities and enchantments | permanent |
+741529 | 1 | death_trigger |  |  |  |  |
+741530 | 1 | turn_end | self_destruct | self | exists only until end of turn | this_turn |
+741531 | 1 | on_ally_play | summon | position chosen | a 2/2 Iron Dervish | permanent | its owner summons a minion from the action bar
+741522 | 1 | passive | movement | self | moves anywhere | permanent |
+741532 | 1 | passive | shield | self | the first damage each turn | this_turn |
+741533 | 1 | on_attack | aoe_damage | enemy_unit adjacent | all other nearby enemies | instant | attacking in melee range
+741534 | 1 | turn_start | permanent_growth | self | gets bigger | permanent |
+741535 | 1 | turn_end | heal | ally_unit all | 1 to units standing on it | while |
+741536 | 1 | passive | buff | self | a bonus | while | on the enemy side
+741553 | 1 | passive | immunity | self | can't die or be affected | permanent |
+741538 | 1 | passive | quests | my_player | MECHAZ0R when complete | permanent |
+741539 | 1 | on_play |  |  |  |  | summoned from your action bar
+741540 | 1 | passive | buff | ally_unit all | "Grow: +2/+2" to units standing on it | while |
+741557 | 1 | passive | taunt | enemy_unit adjacent | can't move; must attack this first | while |
+741541 | 1 | passive | ranged | self | attacks from anywhere | permanent |
+741559 | 1 | passive | taunt | enemy_unit all | ranged attackers must attack it first | permanent |
+741542 | 1 | death_trigger | revive | self | a 0/1 Egg hatches into it | next_turn |
+741555 | 1 | passive | haste | self | move and attack at once | permanent |
+741543 | 1 | on_play | stealth | self | a 3/3 with no abilities | while | until a specific event on the opponent's turn
+741544 | 1 | turn_end | damage | enemy_unit all | enemies standing on it | while |
+741558 | 1 | passive | immunity | self | can't be targeted by spells | permanent |
+741545 | 1 | passive | cant_attack | self | can't move or attack | permanent |
+741546 | 1 | - | disable | any_unit chosen | loses its next action | next_turn |
+741547 | 1 | turn_start | summon | position adjacent | a 2/2 Wind Dervish with Rush, gone at end of turn | this_turn |
+741561 | 1 | passive | immunity | self | can't be targeted | permanent |
+741550 | 1 | passive | cant_attack | self | can't move; removed if dispelled | permanent |
+741551 | 1 | passive | buff | self | a bonus | while | near your General

@@ -31,9 +31,16 @@ Read this section only; the sections below it are the earlier test and its histo
    Done: lists agreed (Kaptain, 26 Oct 2026), in `tools/records/common.py`; `tools/records/check_records.py` checks files.
    "this round" in Runeterra is often a condition ("if an ally died this round"), not a duration.
 2. Keywords first: about 1,000 keyword definitions read once into records; every card with a keyword inherits them.
-3. Scripts per game: the effect from today's patterns, plus new patterns for target, amount and duration. A card the script
+   Done (27 Oct 2026): `tools/records/keywords/<game>.txt`, 831 records. Three kinds: effect keywords (full record), trigger
+   keywords (Battlecry: trigger only), condition keywords (Combo: condition only). No record for the 228 keywords with no
+   definition text (Magic 113, Monster Train 66, Shadowverse 31, Battlegrounds 16, Legends 2), for Magic's Scry (its text is
+   a snow-mana line) or for glossary entries (Darkest Dungeon stats and provisions).
+3. Started: `tools/records/script_records.py`, Hearthstone wording (18% of cards covered, 1 wrong record in a 30-card check).
+   Scripts per game: the effect from today's patterns, plus new patterns for target, amount and duration. A card the script
    covers completely is not read. Start with the games with fixed wording (Magic, Hearthstone, Runeterra, Lorcana, SWU).
 4. Repeats read once: texts that differ only in name or numbers share one reading.
+   Done: `tools/records/repeats.py`; reminder text is left out where the patterns leave it out (Magic, Lorcana, Star Wars
+   Unlimited). 50,243 distinct texts, about 1.64 million tokens.
 5. Trial, per game: about 25 hard cards (most triggers, most tags, longest distinct text) and about 5 ordinary ones, so the
    estimate can weight each kind by how many cards a game has (hard cards alone would overstate the cost). Measure: share the
    scripts cover, tokens per read card, error rate (checked by reading). Then the full estimate is arithmetic. Present it.

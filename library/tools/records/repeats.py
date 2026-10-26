@@ -1,6 +1,6 @@
-"""Step 4: texts that differ only in the card's name or in numbers share one reading.
+"""Step 4: texts that differ only in the card's name, in numbers or in reminder text share one reading.
 groups(db) -> {entity id: id of the first entity with the same game, category and normalised text}.
-Run alone it prints, per game, entries, distinct texts and their size in tokens (about 4 characters per token).
+Run alone it prints, per game, entries, distinct texts and their size in tokens (about 4 characters per token, reminder text left out).
 Usage: repeats.py <db>"""
 import collections, os, sqlite3, sys
 sys.path.insert(0, os.path.dirname(__file__))
@@ -11,7 +11,7 @@ def groups(c):
     first, out = {}, {}
     for i, g, cat, name, text in c.execute("SELECT id, game, category, name, text FROM entities "
                                            "WHERE category NOT IN ('keyword','tribe') AND text IS NOT NULL AND text != '' ORDER BY id"):
-        k = (g, cat, norm(name, text))
+        k = (g, cat, norm(g, name, text))
         out[i] = first.setdefault(k, i)
     return out
 
@@ -19,7 +19,7 @@ def groups(c):
 if __name__ == '__main__':
     c = sqlite3.connect(sys.argv[1])
     gr = groups(c)
-    size = dict(c.execute("SELECT id, length(text) FROM entities"))
+    size = {i: len(norm(g, n, t)) for i, g, n, t in c.execute("SELECT id, game, name, text FROM entities")}
     game = dict(c.execute("SELECT id, game FROM entities"))
     n, d, tok = collections.Counter(), collections.Counter(), collections.Counter()
     for i, f in gr.items():

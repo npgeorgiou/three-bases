@@ -1,0 +1,20 @@
+# entity | ability | trigger | effect | target | amount | duration | condition   (source: keyword; read by Claude 27 Oct 2026)
+741062 | 1 | activated |  |  |  |  | structures only; once per turn
+741074 | 1 | passive | movement | self | only over lakes and ocean; drowns elsewhere at end of turn | permanent |
+741064 | 1 | passive | movement | self | several spaces in a straight line | permanent |
+741060 | 1 | on_attack |  |  |  |  | exchanges attacks; not when shot by a ranged creature
+741061 | 1 | territory_trigger |  |  |  |  | first time it moves onto enemy land, on a later turn than played
+741067 | 1 | on_play | movement | self | X spaces in a straight line | instant |
+741073 | 1 | passive | deathtouch | any_unit triggering | any creature it damages dies | instant |
+741070 | 1 | - | copy | card chosen | a copy of a card | instant |
+741072 | 1 | passive | immunity | self | can't be targeted by spells or abilities | permanent |
+741063 | 1 | passive | movement | self | over ocean and land, not through units | permanent |
+741057 | 1 | on_play |  |  |  |  |
+741068 | 1 | passive | haste | self | move, attack and harvest at once | permanent |
+741065 | 1 | passive | movement | self | up to two tiles, leaping obstacles | permanent |
+741058 | 1 | death_trigger |  |  |  |  |
+741059 | 1 | turn_start |  |  |  |  |
+741069 | 1 | passive | shield | self | the next damage source | stacks |
+741071 | 1 | passive | ranged | self | straight line of sight; no retaliation unless adjacent | permanent | can't attack after moving normally
+741075 | 1 | - | banish | any_unit chosen | released when the swallower dies | until_leaves |
+741066 | 1 | passive | taunt | enemy_unit adjacent | can't move; attack only the taunt | while |

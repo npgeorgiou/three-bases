@@ -1,0 +1,17 @@
+# entity | ability | trigger | effect | target | amount | duration | condition   (source: keyword; read by Claude 27 Oct 2026)
+816574 | 1 | passive | evasion | self | challenges as if it had Evasive | permanent |
+816575 | 1 | passive | bodyguard | self | must be chosen by challengers if able; may enter exerted | permanent |
+816576 | 1 | activated | merge_attach | card:deck chosen | the top card facedown under this character for N ink | permanent | once during your turn
+816577 | 1 | passive | temporary_buff | self | +N strength | while | challenging
+816578 | 1 | passive | evasion | self | challenged only by Evasive characters | permanent |
+816579 | 1 | on_play | cost_set | self | N ink, on top of one of your Puppy characters | instant |
+816580 | 1 | passive | forced_attack | self | can't quest; must challenge each turn if able | permanent |
+816581 | 1 | passive | damage_reduction | self | N | permanent |
+816582 | 1 | passive | haste | self | can challenge the turn it's played | permanent |
+816583 | 1 | on_play | cost_set | self | N ink, on top of one of your characters with that name | instant |
+816584 | 1 | on_play | free_play | self | exert your or teammates' characters with total cost N+ | instant |
+816585 | 1 | passive | cost_set | self | counts as cost N to sing songs | permanent |
+816586 | 1 | activated | temporary_buff | ally_unit chosen | +its strength | this_turn | this character quests; you choose to
+816587 | 1 | on_play | cost_set | self | N ink, on top of any one of your characters | instant |
+816588 | 1 | on_targeted | banish | self | banished | instant | an opponent chooses it for an action
+816589 | 1 | passive | immunity | self | opponents can't choose it except to challenge | permanent |

@@ -1,0 +1,8 @@
+# entity | ability | trigger | effect | target | amount | duration | condition   (source: keyword; read by Claude 27 Oct 2026)
+758397 | 1 | passive | immunity | self | can't be removed or transformed from your Deck | permanent |
+758398 | 1 | turn_end | exhaust | self | exhausted | this_combat | in your Hand at end of turn
+758399 | 1 | - | exhaust | self | removed | this_combat |
+758400 | 1 | start_of_game | draw | self | starts in your Hand each combat | instant |
+758401 | 1 | turn_end | retain | self | not discarded | permanent |
+758402 | 1 | on_discard | free_play | self | played for free | instant | discarded before the end of your turn
+758403 | 1 | passive | play_restriction | self | can't be played | permanent |

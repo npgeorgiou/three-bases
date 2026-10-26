@@ -1,0 +1,176 @@
+# entity | ability | trigger | effect | target | amount | duration | condition   (source: keyword; read by Claude 27 Oct 2026)
+# Keywords with no definition text in the library get no record (listed in TAGGING_RECORDS.md); Scry's text is wrong (a snow-mana line), no record.
+766131 | 1 | on_block | direct_damage | enemy_player | 4 life | instant | this creature becomes blocked
+766080 | 1 | death_trigger | summon | position chosen 2 | two 1/1 flying Spirits | permanent |
+766095 | 1 | on_play | stat_gain | self | +1/+1 counter per Zombie revealed from hand | permanent |
+766130 | 1 | on_attack | sacrifice | enemy_player | 2 permanents of their choice | instant |
+766032 | 1 | passive | rule_change | my_player | the city's blessing | this_game | you control ten or more permanents
+765990 | 1 | - | cost_reduction | self | another player pays up to 5 | instant |
+765963 | 1 | on_play | stat_gain | card chosen | four +1/+1 counters; your land becomes a 0/0 creature with haste | permanent | cast for the awaken cost
+766195 | 1 | on_play | stat_gain | any_unit chosen | +1/+1 counter | permanent |
+766195 | 2 | on_play | buff | any_unit chosen | this creature's abilities | this_turn | the target is another creature
+766047 | 1 | passive | combat | ally_unit all | attack as a band; you divide combat damage | permanent |
+766040 | 1 | on_play | sacrifice | card chosen | an artifact, enchantment or token | instant | you choose to
+766100 | 1 | on_play | merge_attach | any_unit chosen | becomes an Aura on a creature | while | cast for the bestow cost; a creature again if not attached
+766035 | 1 | on_play | haste | self |  | this_turn | cast for the blitz cost
+766035 | 2 | death_trigger | draw | my_player | 1 | instant | cast for the blitz cost
+766035 | 3 | turn_end | self_destruct | self | sacrificed | instant | cast for the blitz cost
+765941 | 1 | on_play | stat_gain | self | three +1/+1 counters | permanent | an opponent was dealt damage this turn
+766094 | 1 | - | stat_gain | ally_unit chosen | three +1/+1 counters, on your least-toughness creature | permanent |
+766001 | 1 | on_block | temporary_buff | self | +2/+2 | this_turn |
+766096 | 1 | on_play | return_to_hand | self | pay 3 more | instant | you pay the extra cost
+766029 | 1 | on_spell | free_play | card:deck random 1 | the first cheaper nonland card from the top | instant | you cast this spell
+766045 | 1 | on_play | copy | self | 1 copy of this spell | instant | you sacrifice a creature with power 1 or more
+766128 | 1 | passive | type_grant | self | every creature type | permanent |
+766172 | 1 | on_play | merge_attach | ally_unit chosen | this spell encoded on it | permanent |
+766172 | 2 | on_attack | free_play | self | a copy of the encoded spell | instant | that creature deals combat damage to a player
+766036 | 1 | on_play | flexibility | self | text without the bracketed words | instant | cast for the cleave cost
+765983 | 1 | - | life_payment | my_player | 2 life for a Phyrexian mana | instant |
+765983 | 2 | on_play | stat_loss | self | two fewer loyalty counters | permanent | life was paid
+765940 | 1 | - | cost_reduction | self | 1 per creature you tap | instant |
+765953 | 1 | activated | transform | self | becomes an artifact creature; tap creatures with total power 3+ | this_turn |
+766088 | 1 | turn_start | upkeep | self | pay the cost once per age counter, or sacrifice it | permanent |
+765950 | 1 | activated | draw | my_player | 1; pay the cost and discard this | instant | in hand
+766030 | 1 | on_play | haste | self |  | this_turn | cast for the dash cost
+766030 | 2 | turn_end | return_to_hand | self |  | instant | cast for the dash cost
+766071 | 1 | turn_end | rule_change | each_player | it becomes night | next_turn | a player casts no spells in their own turn
+765935 | 1 | passive | deathtouch | any_unit triggering | any damage destroys | instant |
+765993 | 1 | passive | cant_attack | self |  | permanent |
+766048 | 1 | - | cost_reduction | card:discard chosen | 1 per card exiled from your graveyard | instant |
+765999 | 1 | death_trigger | banish | self | exiled instead of dying | instant | it has a finality counter
+765978 | 1 | passive | rule_change | self | no color | permanent |
+766143 | 1 | on_play | sacrifice | ally_unit chosen | any number | instant |
+766143 | 2 | on_play | stat_gain | self | three +1/+1 counters per creature sacrificed | permanent |
+765971 | 1 | - | free_play | card:deck random 1 | first nonland card with mana value N or less; or put it in hand | instant |
+766042 | 1 | on_play | stealth | self | face down 2/2 with ward 2 for 3 mana | while | until turned face up for its disguise cost
+766063 | 1 | activated | cast_from_zone | self | transformed, for the disturb cost | instant | in the graveyard
+765985 | 1 | passive | first_strike | self | first-strike and regular combat damage | permanent |
+765985 | 2 | passive | multi_attack | self | 2 damage steps | permanent |
+766148 | 1 | on_attack | copy | self | 1 duplicate into your hand; both lose double team | permanent |
+766192 | 1 | on_draw | self_mill | my_player | 3 cards instead of the draw | instant | in the graveyard; you choose to
+766192 | 2 | on_draw | recycle | self | back to hand | instant | in the graveyard; you milled instead
+766145 | 1 | - | transform | card chosen | your land becomes a 0/0 creature with haste and X +1/+1 counters | permanent |
+766145 | 2 | death_trigger | revive | self | the land returns tapped | instant | it dies or is exiled
+765981 | 1 | turn_start | upkeep | self | pay the echo cost or sacrifice it | instant | came under your control since your last upkeep
+766158 | 1 | activated | copy | self | a token copy, a white Zombie with no mana cost | permanent | in the graveyard; exile it; sorcery speed
+766165 | 1 | on_play | cost_reduction | self | the sacrificed creature's mana value | instant | you sacrifice a creature
+765946 | 1 | - | stat_gain | card chosen | two loyalty counters on your Jace token; create one first if needed | permanent |
+766085 | 1 | activated | copy | self | 1 token copy per opponent, with haste, attacking that opponent | this_turn | in the graveyard; exile it; sorcery speed
+766097 | 1 | on_attack | attack_gain | self | the tapped creature's power | this_turn | you tap a nonattacking creature you control
+766041 | 1 | on_play | modal_choice | self | both modes | instant | you pay the entwine cost
+766098 | 1 | on_play | play_restriction | my_player | you can't cast spells | this_game |
+766098 | 2 | turn_start | copy | self | a copy of this spell each upkeep | this_game |
+765937 | 1 | activated | merge_attach | ally_unit chosen | for its equip cost | permanent | sorcery speed
+766153 | 1 | on_play | modal_choice | self | pay the cost for each mode beyond the first | instant |
+766183 | 1 | activated | copy | self | a token copy, a 4/4 black Zombie with no mana cost | permanent | in the graveyard; exile it; sorcery speed
+766086 | 1 | on_play | self_destruct | self | sacrificed when it enters | instant | cast for the evoke cost
+766147 | 1 | on_ally_play | permanent_growth | self | +1/+1 counter | permanent | the entering creature has greater power or toughness
+766023 | 1 | on_attack | temporary_buff | ally_unit triggering | +1/+1 | this_turn | a creature you control attacks alone
+766129 | 1 | on_play | sacrifice | ally_unit chosen | 1 | instant | you choose to
+765977 | 1 | on_spell | lifesteal | each_player | each opponent loses 1, you gain that much | instant | you pay 1 mana
+766126 | 1 | on_play | modal_choice | self | two +1/+1 counters or two 1/1 Servo tokens | permanent |
+766069 | 1 | on_play | stat_gain | self | five fade counters | permanent |
+766069 | 2 | turn_start | self_destruct | self | remove a fade counter; sacrifice it if you can't | stacks |
+765992 | 1 | passive | evasion | self | blocked only by artifact or black creatures | permanent |
+766051 | 1 | on_attack | resource_gain | my_player | 1 red mana | this_combat |
+765958 | 1 | passive | first_strike | self |  | permanent |
+766104 | 1 | on_block | debuff | enemy_unit triggering | -1/-1 | this_turn | the blocker has no flanking
+765947 | 1 | passive | spell_speed | self | cast any time you could cast an instant | permanent |
+765973 | 1 | activated | cast_from_zone | self | for the flashback cost, then exiled | instant | in the graveyard
+765931 | 1 | passive | evasion | self | blocked only by flying or reach | permanent |
+766193 | 1 | passive | evasion | self | can't be blocked | while | the defending player controls a Forest
+766059 | 1 | activated | cast_from_zone | self | exile face down for 2, cast later for the foretell cost | permanent | your turn; in hand
+766014 | 1 | on_play | modal_choice | self | one or both halves | instant | cast from hand
+765989 | 1 | on_play | stat_gain | self | two +1/+1 counters | permanent |
+765989 | 2 | on_ally_play | donate | ally_unit triggering | move a +1/+1 counter onto it | permanent | you choose to
+765987 | 1 | activated | cast_from_zone | self | for the harmonize cost, less a tapped creature's power; then exiled | instant | in the graveyard
+765975 | 1 | passive | haste | self | attack and tap at once | permanent |
+766180 | 1 | death_trigger | merge_attach | any_unit chosen | exiled, haunting it | permanent |
+765980 | 1 | passive | immunity | self | spells and abilities of opponents | permanent |
+766105 | 1 | on_play | selection | card:deck chosen | 1 of the top 5 exiled face down; rest to the bottom | permanent |
+765986 | 1 | passive | evasion | self | blocked only by horsemanship | permanent |
+766174 | 1 | on_play | transform | self | four time counters; not a creature until the last is removed | stacks | cast for the impending cost
+766115 | 1 | - | cost_reduction | self | 1 per artifact you tap | instant |
+766188 | 1 | on_spell | permanent_growth | self | +1/+1 counter | permanent | the mana spent is greater than its power or toughness
+766022 | 1 | - | summon | position chosen | an Incubator token with X +1/+1 counters; {2}: becomes a 0/0 Phyrexian artifact creature | permanent |
+765988 | 1 | passive | protection | self | not destroyed by damage or "destroy" | permanent |
+765954 | 1 | passive | stat_loss | any_unit triggering | damage as -1/-1 counters | permanent |
+765954 | 2 | passive | alt_wincon | enemy_player | damage as poison counters | permanent |
+766163 | 1 | passive | evasion | self | blocked only by artifact creatures or creatures sharing a color | permanent |
+765967 | 1 | passive | evasion | self | can't be blocked | while | the defending player controls an Island
+766189 | 1 | on_play | summon | position chosen | a 1/1 Hero token, then attach this to it | permanent |
+766196 | 1 | activated | cast_from_zone | self | discard a card in addition; then exiled | instant | in the graveyard
+765942 | 1 | on_play | kicker | self | an additional cost | instant |
+765974 | 1 | passive | lifesteal | my_player | damage dealt | permanent |
+766016 | 1 | on_play | summon | position chosen | a 0/0 Germ token, then attach this to it | permanent |
+765995 | 1 | on_discard | free_play | self | cast for the madness cost, from exile | instant | this card is discarded
+766034 | 1 | - | summon | card:deck chosen | 1 of the top 2 as a face-down 2/2; the other to the graveyard | permanent |
+766093 | 1 | activated | cast_from_zone | self | for 2 mana | instant | in the graveyard; discarded this turn
+766081 | 1 | on_play | stealth | self | face down 2/2 for 3 | while | until turned face up for its megamorph cost
+766081 | 2 | activated | stat_gain | self | +1/+1 counter when turned face up | permanent |
+765948 | 1 | passive | evasion | self | blocked only by two or more creatures | permanent |
+766078 | 1 | on_attack | stat_gain | ally_unit chosen | +1/+1 counter on an attacker with lesser power | permanent |
+766108 | 1 | on_draw | cost_reduction | self | cast for the miracle cost | instant | the first card you drew this turn
+766102 | 1 | on_attack | summon | position chosen | a tapped, attacking 1/1 Warrior token, sacrificed at end step | this_turn |
+766181 | 1 | on_play | stat_gain | self | two +1/+1 counters | permanent |
+766181 | 2 | death_trigger | donate | any_unit chosen | its +1/+1 counters, onto an artifact creature | permanent | you choose to
+766068 | 1 | on_play | stealth | self | face down 2/2 for 3 | while | until turned face up for its morph cost
+765962 | 1 | on_play | kicker | self | an additional cost any number of times | instant |
+766053 | 1 | on_play | merge_attach | ally_unit chosen | over or under a non-Human you own; one creature with all abilities | permanent | cast for the mutate cost
+766072 | 1 | turn_end | rule_change | each_player | it becomes day | next_turn | a player casts two or more spells in their own turn
+766043 | 1 | activated | free_play | self | onto the battlefield tapped and attacking | instant | return an unblocked attacker you control to hand
+766082 | 1 | on_play | copy | self | a 1/1 token copy | permanent | you pay an additional cost
+766138 | 1 | activated | permanent_growth | self | +1/+1 counter for 1 mana and tapping | permanent | sorcery speed
+766154 | 1 | on_play | scope_global | self | "target" becomes "each" | instant | cast for the overload cost
+766198 | 1 | turn_start | free_play | self | a copy from exile each first main phase | this_game | after it first resolves
+765960 | 1 | death_trigger | cheat_death | self | returns with a -1/-1 counter | instant | it had no -1/-1 counters
+766179 | 1 | turn_start | blink | self | phases in or out; treated as not existing while out | permanent |
+765961 | 1 | activated | cast_from_zone | self | exile from hand for 3; cast free on a later turn | permanent | sorcery speed
+766197 | 1 | - | copy | ally_unit chosen | a copy of a creature token you control, X times | permanent |
+766010 | 1 | - | stacking_keyword | any_unit chosen | another counter of each kind already there; also players | permanent |
+766077 | 1 | on_play | flexibility | self | a different cost, color and size | permanent |
+765951 | 1 | on_spell | temporary_buff | self | +1/+1 | this_turn | a noncreature spell
+766191 | 1 | on_play | cost_reduction | self | cast for the prowl cost | instant | you dealt combat damage to a player with a Rogue this turn
+766114 | 1 | on_block | temporary_buff | self | +2/+2 per blocker beyond the first | this_turn |
+765991 | 1 | passive | blocking | self | can block flying creatures | permanent |
+765994 | 1 | turn_start | free_play | self | cast again from exile | next_turn | cast from your hand
+766061 | 1 | activated | merge_attach | ally_unit chosen | attach or unattach for 5; not a creature while attached | permanent | sorcery speed
+766142 | 1 | on_attack | stat_gain | self | +1/+1 counter, once | permanent | it deals combat damage to a player; not yet renowned
+766123 | 1 | on_spell | copy | self | 1 copy per replicate cost paid | instant |
+766026 | 1 | activated | cast_from_zone | self | discard a land in addition | instant | in the graveyard
+766007 | 1 | on_play | modal_choice | self | a +1/+1 counter or haste | permanent |
+766122 | 1 | activated | transform | self | becomes saddled; tap creatures with total power 3+ | this_turn | sorcery speed
+766182 | 1 | passive | evasion | self | blocks and is blocked only by shadow creatures | permanent |
+766025 | 1 | passive | immunity | self | can't be the target of spells or abilities | permanent |
+766070 | 1 | passive | evasion | self | can't be blocked by greater power | permanent |
+766099 | 1 | on_play | free_play | self | for 4 mana, enters tapped and attacking | instant | return an unblocked attacker you control to hand
+766170 | 1 | on_play | link_formation | ally_unit chosen | paired with another unpaired creature | while | you control both
+766168 | 1 | death_trigger | recycle | card:discard chosen | a Spirit with mana value 7 or less to hand | instant | you choose to
+766090 | 1 | on_play | cost_reduction | self | cast for the spectacle cost | instant | an opponent lost life this turn
+766075 | 1 | passive | rule_change | each_player | can't cast spells or activate non-mana abilities | while | this spell is on the stack
+765964 | 1 | on_play | modal_choice | self | one or more modes, each with an additional cost | instant |
+766003 | 1 | activated | stat_gain | self | charge counters equal to a tapped creature's power; creature at 9+ | permanent | sorcery speed
+766084 | 1 | passive | rule_change | my_player | an enduring story | this_game | you control three or more artifacts, legendaries or Sagas
+766150 | 1 | on_spell | copy | self | 1 copy per spell cast before it this turn | instant | you cast this spell
+766116 | 1 | on_play | stat_gain | self | +1/+1 counter per color of mana spent | permanent |
+766112 | 1 | - | stat_gain | any_unit chosen 2 | +1/+1 counter each | permanent |
+766185 | 1 | on_play | cost_reduction | self | cast for the surge cost | instant | you or a teammate cast another spell this turn
+765945 | 1 | - | self_mill | card:deck chosen | look at the top N; any to the graveyard, rest on top in any order | instant |
+766017 | 1 | activated | free_play | self | exile with three time counters for 0; cast free when the last is removed | stacks | in hand, instead of casting
+766076 | 1 | passive | evasion | self | can't be blocked | while | the defending player controls a Swamp
+766055 | 1 | on_attack | alt_wincon | enemy_player | 1 poison counter | permanent | combat damage dealt to a player
+766049 | 1 | on_attack | permanent_growth | self | +1/+1 counter | permanent | attacks with another creature with greater power
+765927 | 1 | passive | excess_damage | enemy_player | excess combat damage | instant |
+766044 | 1 | activated | tutor | card:deck chosen | a card with the same mana value; discard this | instant | in hand; sorcery speed
+766020 | 1 | on_play | stat_gain | self | two +1/+1 counters | permanent | an opponent of your choice chooses to
+766166 | 1 | passive | cheat_death | ally_unit triggering | remove all damage; destroy this Aura instead | instant | the enchanted creature would be destroyed
+766015 | 1 | death_trigger | cheat_death | self | returns with a +1/+1 counter | instant | it had no +1/+1 counters
+765984 | 1 | activated | revive | self | returns with haste; exiled at the end step | this_turn | in the graveyard; sorcery speed
+766021 | 1 | on_play | stat_gain | self | 1 time counter | permanent |
+766021 | 2 | turn_start | self_destruct | self | remove a time counter; sacrifice when the last is removed | stacks |
+765943 | 1 | passive | untap | self | attacking doesn't tap it | permanent |
+766027 | 1 | on_targeted | counter_spell | card triggering | unless that player pays 2 | instant | an opponent's spell or ability
+766119 | 1 | on_play | cast_from_zone | self | cast for the warp cost; exiled at end step, cast again later | permanent |
+766103 | 1 | - | cost_reduction | self | 1 per artifact or creature you tap | instant |
+766109 | 1 | on_play | cost_reduction | self | cast for 2 mana | instant | you return a tapped creature you control to hand
+766155 | 1 | passive | stat_loss | any_unit triggering | damage as -1/-1 counters | permanent |

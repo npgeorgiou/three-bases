@@ -1,0 +1,27 @@
+# entity | ability | trigger | effect | target | amount | duration | condition   (source: keyword; read by Claude 27 Oct 2026)
+821372 | 1 | activated |  |  |  |  | uses of the support
+821373 | 1 | - | modal_choice | ally_unit all | 1 of 2 bonuses, to all your Factotums | permanent |
+821374 | 1 | - | combat | any_unit chosen | two creatures damage each other | instant |
+821376 | 1 | on_play | sacrifice | ally_unit chosen | play it again | instant | you choose to
+821377 | 1 | passive | excess_damage | enemy_player | damage beyond what kills | instant |
+821378 | 1 | passive | haste | self |  | permanent |
+821379 | 1 | passive | immunity | self | can't be attacked | while |
+821380 | 1 | passive | lifesteal | my_player | heals you by its damage | while | on your turn
+821381 | 1 | passive | transform | self | a stronger creature | permanent | its condition is met
+821382 | 1 | on_play | kicker | self | extra magicka for a bonus | instant |
+821383 | 1 | passive | taunt | self | enemies in its lane must attack it first | permanent |
+821384 | 1 | death_trigger |  |  |  |  |
+821385 | 1 | passive | deathtouch | any_unit triggering | any damage destroys | instant |
+821387 | 1 | on_attack |  |  |  |  | deals damage to the opponent
+821388 | 1 | on_play |  |  |  |  | you played another card this turn
+821389 | 1 | on_draw | free_play | self | played at once for free | instant | drawn from a broken rune
+821390 | 1 | on_attack | in_hand_buff | card:hand random 1 | +1/+1 | permanent |
+821391 | 1 | turn_start | regeneration | self | heals all damage | permanent |
+821392 | 1 | - | disable | any_unit chosen | can't attack or block | next_turn |
+821393 | 1 | on_play | upgrade | card all | all your copies level up | permanent |
+821394 | 1 | - | silence | any_unit chosen | all text and effects | permanent |
+821395 | 1 | on_kill |  |  |  |  | on your turn
+821396 | 1 | on_play |  |  |  |  |
+821397 | 1 | on_draw | quests | my_player | treasure; a bonus once all are found | permanent | you draw cards of the listed kinds
+821398 | 1 | - | bounce_enemy | any_unit chosen | to its owner's hand | instant |
+821399 | 1 | passive | shield | self | the first damage or effect | stacks |

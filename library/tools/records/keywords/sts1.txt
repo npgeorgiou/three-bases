@@ -1,0 +1,45 @@
+# entity | ability | trigger | effect | target | amount | duration | condition   (source: keyword; read by Claude 27 Oct 2026)
+757488 | 1 | passive | immunity | self | negates the next debuff | stacks |
+757489 | 1 | - | block_armor | self | prevents damage | until_my_next_turn |
+757490 | 1 | turn_end | junk_cards | my_player | an unplayable card that damages you | instant |
+757491 | 1 | passive | resource_gain | my_player | 2 Energy when exiting this stance | instant |
+757492 | 1 | - | slots_queue | my_player | an Orb into the first empty slot; the first is Evoked if full | permanent |
+757493 | 1 | on_draw | random_effect | card:hand triggering | its cost randomized | permanent |
+757494 | 1 | passive | junk_cards | my_player | a negative card in your deck | permanent |
+757495 | 1 | turn_end | permanent_growth | self | damage grows every turn; Evoked: damage to the enemy with the least HP | permanent |
+757496 | 1 | passive | junk_cards | my_player | an unplayable status card | permanent |
+757497 | 1 | passive | defence_gain | self | more Block from cards | this_combat |
+757498 | 1 | passive | stat_multiply | self | 3 Energy; attacks deal triple damage | until_my_next_turn | entering the stance
+757499 | 1 | turn_end | exhaust | self | exhausted | this_combat | in your hand at end of turn
+757500 | 1 | - | slots_queue | my_player | your rightmost Orb's Evoke effect | instant |
+757501 | 1 | - | exhaust | self | removed | this_combat |
+757502 | 1 | on_kill |  |  |  |  | kills a non-minion enemy
+757503 | 1 | passive | spell_power | my_player | stronger Orbs | this_combat |
+757504 | 1 | passive | debuff | self | 25% less Block | stacks |
+757505 | 1 | turn_end | block_armor | self | Orb: Block | permanent |
+757506 | 1 | start_of_game | draw | self | starts in your hand each combat | instant |
+757507 | 1 | passive | damage_reduction | self | all damage and HP loss to 1 | stacks |
+757508 | 1 | turn_end | damage | enemy_unit random 1 | Orb: damage | permanent |
+757509 | 1 | passive | mark_target | enemy_unit chosen | 50% more Orb damage | stacks |
+757513 | 1 | passive | stances | self | enter Divinity at 10 Mantra | permanent |
+757510 | 1 | passive | play_restriction | self | first card each turn only | permanent |
+757511 | 1 | turn_start | resource_gain | my_player | Orb: Energy | permanent |
+757512 | 1 | turn_start | damage_over_time | any_unit chosen | HP loss, Poison -1 each turn | stacks |
+757514 | 1 | turn_end | regeneration | self | heals HP, Regen -1 each turn | stacks |
+757515 | 1 | turn_end | retain | self | not discarded | permanent |
+757516 | 1 | turn_end | permanent_growth | self | Strength | this_combat |
+757517 | 1 | - | selection | card:deck chosen | top X; discard any | instant |
+757518 | 1 | passive | exhaust | self | a 0-cost Attack that Exhausts | instant |
+757519 | 1 | passive | stances | self | one stance at a time | permanent |
+757520 | 1 | passive | junk_cards | my_player | removed at the end of combat | this_combat |
+757521 | 1 | passive | attack_gain | self | more attack damage | this_combat |
+757522 | 1 | on_damaged | counterattack | enemy_unit triggering | damage back | this_combat | Attack damage received
+757523 | 1 | - | transform | card chosen | a random card of any rarity | permanent |
+757524 | 1 | passive | play_restriction | self | can't be played from hand | permanent |
+757525 | 1 | - | upgrade | card chosen | once per card | permanent |
+757526 | 1 | on_attack | attack_gain | self | your next Attack deals more | stacks |
+757527 | 1 | on_draw | drawback | my_player | consumes energy; unplayable | instant | drawn
+757528 | 1 | passive | debuff | any_unit chosen | 50% more Attack damage taken | stacks |
+757529 | 1 | passive | debuff | any_unit chosen | 25% less Attack damage | stacks |
+757530 | 1 | passive | junk_cards | my_player | an unplayable status card | permanent |
+757531 | 1 | passive | stances | self | deal and receive double attack damage | while | in this stance
