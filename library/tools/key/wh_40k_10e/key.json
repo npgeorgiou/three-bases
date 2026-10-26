@@ -24835,6 +24835,10 @@
 [
 "play_restriction",
 "Blast"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",
@@ -24914,6 +24918,10 @@
 [
 "bodyguard",
 "Leader"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",
@@ -25051,6 +25059,10 @@
 [
 "bodyguard",
 "Leader"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",
@@ -25141,6 +25153,10 @@
 [
 "random_effect",
 "Deadly Demise"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",
@@ -25924,6 +25940,10 @@
 [
 "targeting_rules",
 "Lone Operative"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",

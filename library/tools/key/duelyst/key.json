@@ -769,6 +769,10 @@
 [
 "forced_movement",
 "Pull ANY minion to the space in front of your General"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "A=B"
@@ -1318,6 +1322,10 @@
 [
 "condition_count",
 "in front of each enemy minion and General"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "A=B"
@@ -2665,6 +2673,10 @@
 [
 "forced_movement",
 "pulled in front of him"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "A=B",
@@ -3694,6 +3706,10 @@
 [
 "enemy_benefit",
 "Your opponent summons two Komodo Chargers"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "A=B",
@@ -3826,6 +3842,10 @@
 [
 "immobilize",
 "Provoke"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",
@@ -4047,6 +4067,10 @@
 [
 "area_templates",
 "in front of this minion"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",
@@ -4271,6 +4295,10 @@
 [
 "friendly_fire",
 "Your General takes 2 damage"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C"
@@ -4709,6 +4737,10 @@
 [
 "cost_condition",
 "costs 2 or less"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "A=B"
@@ -6375,6 +6407,10 @@
 [
 "tribal",
 "Mech"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C"

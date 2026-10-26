@@ -2410,6 +2410,10 @@
 [
 "movement",
 "Move Wind Gate"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "A=B",

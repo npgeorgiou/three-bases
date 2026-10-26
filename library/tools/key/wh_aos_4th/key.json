@@ -9308,6 +9308,10 @@
 [
 "piercing",
 "Anti-Infantry (+1 Rend)"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C"
@@ -11785,6 +11789,10 @@
 [
 "attack_gain",
 "attack, damage or power goes up"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C"

@@ -7963,6 +7963,10 @@
 [
 "ping",
 "deal 1 damage to a random enemy follower"
+],
+[
+"random_target",
+"the target is picked at random"
 ]
 ],
 "by": "A=B",

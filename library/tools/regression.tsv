@@ -17766,3 +17766,6 @@ duelyst	741829	Glacial Elemental	random_target	does	present
 hearthstone	742497	Magnataur Alpha	aoe_damage	does	present
 hearthstone	742497	Magnataur Alpha	adjacency	does	present
 monster_train	822548	Husk Hermit	aoe_damage	does	present
+sts1	757653	Electrodynamics	random_target	*	absent
+sts1	758161	Electro	random_target	*	absent
+sts1	758192	Lightning Mastery	random_target	*	absent

@@ -1135,6 +1135,10 @@
 [
 "movement",
 "move them to the right"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "A=B",
@@ -1223,6 +1227,10 @@
 [
 "movement",
 "Move"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",
@@ -3019,6 +3027,10 @@
 [
 "movement",
 "Move"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "A=B",
@@ -3646,6 +3658,10 @@
 [
 "lane_identity",
 "right location"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",

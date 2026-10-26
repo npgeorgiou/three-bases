@@ -127,10 +127,6 @@
 [
 "mark_target",
 "Lock-On targets receive 50% more damage from Orbs"
-],
-[
-"attack_gain",
-"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -2844,10 +2840,6 @@
 [
 "mark_target",
 "Enemies with Vulnerable take 75% more damage"
-],
-[
-"attack_gain",
-"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -3429,6 +3421,10 @@
 [
 "permanent_growth",
 "gains X Strength"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -3451,10 +3447,6 @@
 [
 "stat_multiply",
 "Deals X50% more damage"
-],
-[
-"attack_gain",
-"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -3952,10 +3944,6 @@
 [
 "stat_multiply",
 "Receive X50% more damage"
-],
-[
-"attack_gain",
-"attack, damage or power goes up"
 ]
 ],
 "by": "C"

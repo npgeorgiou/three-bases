@@ -5469,6 +5469,10 @@
 [
 "immunity",
 "Flying"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",

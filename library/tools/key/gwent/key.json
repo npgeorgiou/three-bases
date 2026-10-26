@@ -8069,6 +8069,10 @@
 [
 "cooldowns",
 "Order"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",
@@ -14540,6 +14544,10 @@
 [
 "cooldowns",
 "Order"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "C",

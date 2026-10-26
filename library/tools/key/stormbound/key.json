@@ -64,6 +64,10 @@
 [
 "random_effect",
 "a random surrounding enemy unit"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -192,6 +196,10 @@
 [
 "random_effect",
 "a random surrounding enemy"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -260,6 +268,10 @@
 [
 "friendly_fire",
 "destroy all surrounding units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -371,6 +383,10 @@
 [
 "aoe_damage",
 "deal 4/5/6/7/8 damage to all surrounding enemy structures"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -392,6 +408,10 @@
 [
 "random_effect",
 "spread randomly"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -431,6 +451,10 @@
 [
 "friendly_fire",
 "all units bordering your base"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -490,6 +514,10 @@
 [
 "random_effect",
 "a random enemy"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -507,6 +535,10 @@
 [
 "aoe_damage",
 "deal 2/3/4/5/6 damage to each"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -694,6 +726,10 @@
 [
 "aoe_damage",
 "deal 2/2/3/3/4 damage to all surrounding enemy units and structures"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -749,6 +785,10 @@
 [
 "summon",
 "Spawn 3/4/5/6/7 strength units on all tiles bordering a target friendly unit"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -834,6 +874,10 @@
 [
 "random_effect",
 "spread randomly"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -860,6 +904,10 @@
 [
 "summon",
 "spawn 2/3/4/5/6 strength Knights in front of all surrounding enemy units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -894,6 +942,10 @@
 [
 "random_effect",
 "randomly"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -924,6 +976,10 @@
 [
 "random_effect",
 "a random bordering enemy"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -937,6 +993,10 @@
 [
 "aoe_damage",
 "deal up to 5/6/7/8/9 of its strength as damage to all enemies surrounding it"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1026,6 +1086,10 @@
 [
 "stat_condition",
 "or lower strength"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1081,6 +1145,10 @@
 [
 "random_effect",
 "a random bordering tile"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1157,6 +1225,10 @@
 [
 "forced_movement",
 "force it/it/them/them/them to move"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1174,6 +1246,10 @@
 [
 "condition_count",
 "as there are friendly units on the board"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1187,6 +1263,10 @@
 [
 "silence",
 "disable the ability of 1/2/2/3/4 surrounding enemy"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1246,6 +1326,10 @@
 [
 "stat_condition",
 "the weakest confused unit"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1272,6 +1356,10 @@
 [
 "summon",
 "spawn a unit with 2/2/3/3/4 strength on both sides"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1349,6 +1437,10 @@
 [
 "repeat_trigger",
 "trigger the ability of all"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1379,6 +1471,10 @@
 [
 "random_effect",
 "a random bordering enemy"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1409,6 +1505,10 @@
 [
 "random_effect",
 "a random bordering tile"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1426,6 +1526,10 @@
 [
 "tribal",
 "a surrounding friendly Dragon"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1477,6 +1581,10 @@
 [
 "tribal",
 "friendly Constructs"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1490,6 +1598,10 @@
 [
 "random_effect",
 "a random friendly unit"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1507,6 +1619,10 @@
 [
 "random_effect",
 "a random bordering enemy"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1528,6 +1644,10 @@
 [
 "random_effect",
 "randomly spawn"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1575,6 +1695,10 @@
 [
 "random_effect",
 "a random surrounding friendly unit"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1660,6 +1784,10 @@
 [
 "cheat_death",
 "randomly respawn at your base"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1677,6 +1805,10 @@
 [
 "aoe_damage",
 "deal 3/4/5/6/7 damage to all bordering enemy units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1737,6 +1869,10 @@
 [
 "return_to_hand",
 "return to the hand"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1750,6 +1886,10 @@
 [
 "permanent_growth",
 "vitalize itself"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1792,6 +1932,10 @@
 [
 "summon",
 "spawn a 1 strength Toad"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1822,6 +1966,10 @@
 [
 "enemy_benefit",
 "spawn a 1 strength Raven on a random bordering tile to fight for the enemy"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1843,6 +1991,10 @@
 [
 "friendly_fire",
 "all surrounding units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1864,6 +2016,10 @@
 [
 "friendly_fire",
 "all bordering units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -1932,6 +2088,10 @@
 [
 "random_effect",
 "random surrounding tiles"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2008,6 +2168,10 @@
 [
 "friendly_fire",
 "all bordering units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2029,6 +2193,10 @@
 [
 "random_effect",
 "a random surrounding poisoned unit"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2118,6 +2286,10 @@
 [
 "stat_condition",
 "or less strength"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2139,6 +2311,10 @@
 [
 "random_effect",
 "random surrounding tiles"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2198,6 +2374,10 @@
 [
 "random_effect",
 "a random bordering enemy unit"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2245,6 +2425,10 @@
 [
 "rewind",
 "restore 1/2/2/3/3 of them to that state"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2283,6 +2467,10 @@
 [
 "damage_over_time",
 "enemy poisoned unit"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2351,6 +2539,10 @@
 [
 "random_effect",
 "randomly spawn"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2372,6 +2564,10 @@
 [
 "random_effect",
 "a random bordering friendly Satyr"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2385,6 +2581,10 @@
 [
 "movement",
 "command"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2419,6 +2619,10 @@
 [
 "random_effect",
 "a random bordering tile"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2440,6 +2644,10 @@
 [
 "condition_count",
 "for each bordering friendly Satyr"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2461,6 +2669,10 @@
 [
 "life_payment",
 "Deal 3 damage to your base"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2491,6 +2703,10 @@
 [
 "random_effect",
 "a random tile"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2517,6 +2733,10 @@
 [
 "stat_gain",
 "give 1/1/2/2/3 strength to all surrounding friendly units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2526,6 +2746,10 @@
 [
 "aoe_damage",
 "Deal 2/3/4/5/6 damage to all enemies surrounding a friendly unit"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2543,6 +2767,10 @@
 [
 "random_effect",
 "random bordering tiles"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2722,6 +2950,10 @@
 [
 "random_effect",
 "a random surrounding tile"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2769,6 +3001,10 @@
 [
 "disable",
 "freeze all bordering enemy units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2795,6 +3031,10 @@
 [
 "aoe_damage",
 "deal 4/5/6/7/8 damage to all surrounding frozen enemies"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2829,6 +3069,10 @@
 [
 "disable",
 "Freeze all surrounding enemy units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2952,6 +3196,10 @@
 [
 "random_effect",
 "a random bordering tile"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -2986,6 +3234,10 @@
 [
 "friendly_fire",
 "all non-Dragon units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -3033,6 +3285,10 @@
 [
 "random_effect",
 "a random bordering friendly unit"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"
@@ -3196,6 +3452,10 @@
 [
 "friendly_fire",
 "all surrounding units"
+],
+[
+"adjacency",
+"neighbouring units or tiles matter"
 ]
 ],
 "by": "read"

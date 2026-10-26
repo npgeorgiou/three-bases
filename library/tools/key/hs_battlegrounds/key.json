@@ -6870,6 +6870,10 @@
 [
 "stat_multiply",
 "Double its Health"
+],
+[
+"random_target",
+"the target is picked at random"
 ]
 ],
 "by": "A=B"
