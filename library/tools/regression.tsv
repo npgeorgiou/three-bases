@@ -3557,14 +3557,12 @@ faeria	741060	Combat	combat	does	present
 faeria	741060	Combat	on_damaged	*	absent
 faeria	741061	Corrupt	territory_trigger	does	present
 faeria	741063	Flying	movement	does	present
-faeria	741063	Flying	terrain	does	present
 faeria	741068	Haste	haste	does	present
 faeria	741070	Discover	copy	does	present
 faeria	741071	Ranged Attack	drawback	does	present
 faeria	741071	Ranged Attack	ranged	does	present
 faeria	741072	Divine	immunity	does	present
 faeria	741074	Aquatic	drawback	does	present
-faeria	741074	Aquatic	terrain	does	present
 faeria	741078	Imperial Engineer	repeat_trigger	does	present
 faeria	741079	Hold the Line!	blocking	*	absent
 faeria	741079	Hold the Line!	generate_cards	does	present
@@ -17746,3 +17744,189 @@ sts1	758161	Electro	random_target	*	absent
 sts1	758192	Lightning Mastery	random_target	*	absent
 runeterra	750409	Fury	attack_gain	*	absent
 runeterra	750409	Fury	defence_gain	*	absent
+faeria	741061	Corrupt	forced_movement	*	absent
+faeria	741063	Flying	terrain	*	absent
+faeria	741066	Taunt	adjacency	*	absent
+faeria	741066	Taunt	zone_of_control	*	absent
+faeria	741074	Aquatic	placement_rules	does	present
+faeria	741074	Aquatic	self_destruct	does	present
+faeria	741074	Aquatic	terrain	*	absent
+faeria	741074	Aquatic	turn_end	does	present
+faeria	741075	Swallow	banish	*	absent
+faeria	741075	Swallow	death_trigger	*	absent
+faeria	741075	Swallow	removal	does	present
+faeria	741109	Day of the Dragons	cost_reduction	does	present
+faeria	741119	Imperial Drain	damage	*	absent
+faeria	741120	Rainforest Explorer	terrain	*	absent
+faeria	741121	Caldera Explorer	terrain	*	absent
+faeria	741122	Oasis Explorer	terrain	*	absent
+faeria	741124	Savannah Explorer	terrain	*	absent
+faeria	741128	Gabrian Cistern	damage	*	absent
+faeria	741129	Gabrian Enchantress	defence_gain	benefits	present
+faeria	741129	Gabrian Enchantress	variable_stats	*	absent
+faeria	741130	Gabrian Commander	draw	*	absent
+faeria	741139	Gabrian Enchantment	defence_gain	benefits	present
+faeria	741139	Gabrian Enchantment	variable_stats	*	absent
+faeria	741140	Aurora's Creation	cost_reduction	does	present
+faeria	741140	Aurora's Creation	cost_set	*	absent
+faeria	741144	Aurora's Disciple	scope_self	does	present
+faeria	741150	Orosei, Dream of the Deep	evasion	*	absent
+faeria	741152	Gemsilk Faerie	evasion	*	absent
+faeria	741152	Gemsilk Faerie	scope_self	does	present
+faeria	741153	Sunken Tower	damage	*	absent
+faeria	741153	Sunken Tower	movement	*	absent
+faeria	741154	Azure Wisp	scope_self	does	present
+faeria	741155	Triton Sanctuary	attack_gain	*	absent
+faeria	741155	Triton Sanctuary	destroy	*	absent
+faeria	741158	Luduan	cost_set	*	absent
+faeria	741174	Bone Collector	scope_self	does	present
+faeria	741178	Gaea's Grace	attack_gain	*	absent
+faeria	741180	Bloomsprite	cost_set	*	absent
+faeria	741184	Shamanic Dance	attack_gain	*	absent
+faeria	741192	Oak Father	attack_gain	*	absent
+faeria	741192	Oak Father	terrain	*	absent
+faeria	741193	Faeria Tree	attack_gain	*	absent
+faeria	741197	Tethra, Soul of the Wild	evasion	*	absent
+faeria	741199	Flowersilk Faerie	evasion	*	absent
+faeria	741200	Overgrown Tower	damage	*	absent
+faeria	741202	Spirit of Rebirth	death_count	*	absent
+faeria	741204	Ruunin's Messenger	cost_reduction	does	present
+faeria	741204	Ruunin's Messenger	cost_set	*	absent
+faeria	741209	Wild Avenger	attack_gain	*	absent
+faeria	741222	Architect	attack_gain	*	absent
+faeria	741233	Blood Singer	death_count	*	absent
+faeria	741236	Lord of Terror	scope_self	does	present
+faeria	741238	Blood Obelisk	death_count	*	absent
+faeria	741245	Garudan, Heart of the Mountain	evasion	*	absent
+faeria	741247	Flamesilk Faerie	evasion	*	absent
+faeria	741247	Flamesilk Faerie	scope_self	does	present
+faeria	741249	Bloodfire Wisp	death_trigger	*	absent
+faeria	741249	Bloodfire Wisp	scope_self	does	present
+faeria	741251	Firebringer	permanent_growth	does	present
+faeria	741251	Firebringer	scope_self	does	present
+faeria	741261	Meteor	terrain	does	present
+faeria	741270	Desert Twister	terrain	*	absent
+faeria	741273	Khalim, Sky Prodigy	evasion	*	absent
+faeria	741277	Altar of Souls	damage	*	absent
+faeria	741279	Khalim's Skyguard	evasion	*	absent
+faeria	741282	Drakkar Skycaptain	evasion	*	absent
+faeria	741283	Windborne Emissary	evasion	*	absent
+faeria	741285	Dune Drake	evasion	*	absent
+faeria	741286	Windborne Champion	evasion	*	absent
+faeria	741288	Azarai, Wrath of the Desert	evasion	*	absent
+faeria	741289	Air Elemental	evasion	*	absent
+faeria	741290	Sunsilk Faerie	evasion	*	absent
+faeria	741290	Sunsilk Faerie	scope_self	does	present
+faeria	741291	Celestial Tower	damage	*	absent
+faeria	741292	Wind Wisp	evasion	*	absent
+faeria	741301	Shaytan Monstrosity	death_trigger	*	absent
+faeria	741302	Iona, Beloved by All	evasion	*	absent
+faeria	741303	Demon Wing	evasion	*	absent
+faeria	741307	Doomgate, Door to Oblivion	attack_gain	*	absent
+faeria	741309	Windstorm Charger	scope_self	does	present
+faeria	741312	Twinsoul Spirit	evasion	*	absent
+faeria	741314	Soul Eater	evasion	*	absent
+faeria	741315	Scourgeflame Specter	evasion	*	absent
+faeria	741317	Three Wishes	cost_reduction	does	present
+faeria	741318	Rebel Glider	evasion	*	absent
+faeria	741319	Radiance, Imperial Airship	evasion	*	absent
+faeria	741324	Blood Song	damage	*	absent
+faeria	741327	Annoying Gnat	damage	*	absent
+faeria	741327	Annoying Gnat	evasion	*	absent
+faeria	741332	Herald of War	run_structure	*	absent
+faeria	741333	Mistral Guide	evasion	*	absent
+faeria	741334	Divine Guardian	destroy	*	absent
+faeria	741336	Illusion of Grandeur	scope_self	does	present
+faeria	741338	Krog's Dinner	destroy	*	absent
+faeria	741342	Astral Weapon	evasion	*	absent
+faeria	741344	Djinn's Lamp	cost_reduction	does	present
+faeria	741359	Void Guardian	self_mill	does	present
+faeria	741360	Crystal Dragon	evasion	*	absent
+faeria	741363	Earthfire Shaker	scope_self	does	present
+faeria	741366	Dancing Blade	evasion	*	absent
+faeria	741368	Jeweled Magpie	evasion	*	absent
+faeria	741371	Monkey Genius	scope_self	does	present
+faeria	741373	Crystal Flower	damage_over_time	*	absent
+faeria	741376	Mobie, Azure Skywhale	evasion	*	absent
+faeria	741377	Balloon Fish	evasion	*	absent
+faeria	741377	Balloon Fish	removal	*	absent
+faeria	741379	Seed of Paradise	evasion	*	absent
+faeria	741388	Flash Salmon	evasion	*	absent
+faeria	741389	Manta Rider	evasion	*	absent
+faeria	741390	Istanu, Eternal Light	evasion	*	absent
+faeria	741395	Skyward Swordfish	evasion	*	absent
+faeria	741396	Swarming Carassius	evasion	*	absent
+faeria	741399	Flight of the Mantas	evasion	*	absent
+faeria	741400	Oversky Towship	evasion	*	absent
+faeria	741402	Sky Anemone	evasion	*	absent
+faeria	741405	Imperial Drakerider	evasion	*	absent
+faeria	741406	Deranged Monkey	scope_self	does	present
+faeria	741410	Shadowsilk Faerie	evasion	*	absent
+faeria	741413	Flying Piranha	evasion	*	absent
+faeria	741422	Spirit Theft	destroy	*	absent
+faeria	741423	Solem	evasion	*	absent
+faeria	741424	Mother of All Yaks	evasion	*	absent
+faeria	741431	Majinata, Spirit of Everlife	evasion	*	absent
+faeria	741432	Rakoakopter	evasion	*	absent
+faeria	741434	Ghost Dragon	evasion	*	absent
+faeria	741435	Lion Fish	evasion	*	absent
+faeria	741436	Topaz Yak	scope_self	does	present
+faeria	741437	Rakoan War Machine	removal	*	absent
+faeria	741440	Rakoan Shield Mates	tribal	*	absent
+faeria	741442	Rakoan Recruiter	tribal	*	absent
+faeria	741444	Tower of Curses	damage	*	absent
+faeria	741445	Shozen, the Sky Eater	destroy	*	absent
+faeria	741445	Shozen, the Sky Eater	evasion	*	absent
+faeria	741448	Gagana, Rainbow Birdship	evasion	*	absent
+faeria	741449	Radiance, Scourge of Oversky	evasion	*	absent
+faeria	741451	Beast Trainer	cost_reduction	does	present
+faeria	741457	Vile Bloatfly	evasion	*	absent
+faeria	741460	Barrensky Vulture	evasion	*	absent
+faeria	741462	Thunder Eel	evasion	*	absent
+faeria	741468	Oversky Yak	evasion	*	absent
+faeria	741475	Chrysalis	destroy	*	absent
+faeria	741475	Chrysalis	removal	*	absent
+faeria	741479	Zephyr Vulpine	terrain	*	absent
+faeria	741480	Dwordia, Chief of the Bright Fox Tribe	terrain	*	absent
+faeria	741485	Celeste, Crystal Dragon	evasion	*	absent
+faeria	741486	Gagana, Treasure Seeker	evasion	*	absent
+faeria	741495	Seek Shelter	attack_gain	*	absent
+faeria	741497	Ogre Adventurer	cost_reduction	does	present
+faeria	741503	Amai Merchant	evasion	*	absent
+faeria	741505	Aryana, Soul of Gagana	evasion	*	absent
+faeria	741509	Airbot	evasion	*	absent
+faeria	741511	Glidehopper	evasion	*	absent
+faeria	741513	Thyrian Globe	evasion	*	absent
+faeria	741514	Ancient Gargoyle	self_mill	does	present
+faeria	741515	Crystalis	destroy	*	absent
+faeria	741515	Crystalis	removal	*	absent
+faeria	741516	Magic Carpet	evasion	*	absent
+faeria	741516	Magic Carpet	spell_speed	*	absent
+faeria	741518	Spear of the Guardians	evasion	*	absent
+faeria	741342	Astral Weapon	terrain	does	present
+faeria	741407	Imperial Trooper	terrain	does	present
+faeria	741474	Coral Polliwog	terrain	does	present
+faeria	741272	Malevolent Spirit	direct_damage	does	present
+faeria	741340	Dark Crystal	direct_damage	does	present
+faeria	741461	Haunted Husk	direct_damage	does	present
+faeria	741330	Triton Trainer	delayed	does	present
+faeria	741330	Triton Trainer	on_ally_play	does	present
+faeria	741330	Triton Trainer	in_hand_buff	does	absent
+faeria	741332	Herald of War	delayed	does	present
+faeria	741332	Herald of War	in_hand_buff	does	absent
+faeria	741093	Magda, Queen of Meroval	cost_type	does	present
+faeria	741109	Day of the Dragons	cost_type	does	present
+faeria	741143	Gabrian Noble	placement_rules	does	present
+faeria	741192	Oak Father	scope_self	does	present
+faeria	741217	Ruunin, the Relentless	scope_self	does	present
+faeria	741417	Nekomata	scope_self	does	present
+faeria	741088	Master Swordsman	scope_self	does	present
+faeria	741229	Krog, the Ogre King	cost_reduction	does	present
+faeria	741229	Krog, the Ogre King	in_hand_buff	does	present
+faeria	741435	Lion Fish	evasion	does	absent
+faeria	741435	Lion Fish	movement	does	present
+faeria	741145	Sturdy Shell	placement_rules	does	present
+faeria	741145	Sturdy Shell	self_destruct	does	present
+faeria	741145	Sturdy Shell	turn_end	does	present
+faeria	741198	Wood Elemental	zone_of_control	does	absent
+faeria	741295	Zealous Crusader	direct_damage	benefits	present

@@ -54,7 +54,7 @@ Order of `tools/key/key.py` GAMES. Numbers: key wrong / missed per 100 entries, 
 |---|---|---|---|---|
 | into_the_breach | done 26 Oct | 47.0 / 13.3 | signature 2/2, archetype 1/1, combo 6/6, splash 2/2 | |
 | inscryption | done 26 Oct | 50.4 / 26.9 | signature 6/7, combo 22/23 | Beast generate_cards (lead 1.8, too few cards); Mantis God + Fecundity |
-| faeria | done 26 Oct | 23.4 / 5.6 | signature 12/14, archetype 6/6, combo 10/12 | Khalim's Prayer + Zealous Crusader, Earthcraft + Three Wishes (need per-effect records); Blue terrain, Yellow on_spell (too few cards) |
+| faeria | done 26 Oct | 22.4 / 5.9 | signature 12/14, archetype 6/6, combo 10/12 | Khalim's Prayer + Zealous Crusader, Earthcraft + Three Wishes (need per-effect records); Blue terrain, Yellow on_spell (too few cards) |
 | duelyst | done 24 Oct, rechecked 26 Oct | 34.5 / 24.3 | signature 16/16, archetype 7/8, splash 1/1 | |
 | sts1 | **next** | 40.5 / 27.6 | signature 9/18, archetype 5/9, combo 18/21 | Defect cost_condition, Silent draw (narrow leads) |
 | marvel_snap | to do | 101.4 / 31.5 | combo 20/24 | |
@@ -183,7 +183,9 @@ Things that confused earlier chats:
   Library: keyword reviews (Taunt, Corrupt, Swallow, Aquatic, Flying), 30 Faeria pattern lines, wording-wide review drops,
   11 new verified combos, the case rule lowered to 1.3 times. Then shared: signature RATIO 1.5 -> 1.3 (real-world cases
   551 -> 572 of 860, no game worse), Pandora a shared pool, keyword-signature cases, relations copy + tribal and summon +
-  transform; Faeria key wrong 23.4, missed 5.6, cases signature 12/14, archetype 6/6, combo 10/12.
+  transform; Faeria key wrong 22.4, missed 5.9, cases signature 12/14, archetype 6/6, combo 10/12. Regression: 184 new Faeria lines
+  for the pass's decisions (pattern_fix honours the 'absent' ones, so general patterns cannot re-add a reviewed drop); the Taunt
+  keyword keeps no adjacency until the area decision (the one key miss this costs).
 
 ## Open, outside the game passes
 - Tagging redesign: tags per effect instead of per card (`TAGGING_RECORDS.md`, proposal for Kaptain). It would settle area
