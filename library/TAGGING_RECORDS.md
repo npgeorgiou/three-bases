@@ -28,6 +28,8 @@ Read this section only; the sections below it are the earlier test and its histo
 ### Plan (Claude's proposal, steps 1-4 agreed as preparation)
 1. Record format: a table `effects(entity, ability, trigger, effect, target, amount, duration, condition, source)`; source =
    keyword / script / reading. Write the exact value lists for target and duration first and show them to Kaptain.
+   Done: lists agreed (Kaptain, 26 Oct 2026), in `tools/records/common.py`; `tools/records/check_records.py` checks files.
+   "this round" in Runeterra is often a condition ("if an ally died this round"), not a duration.
 2. Keywords first: about 1,000 keyword definitions read once into records; every card with a keyword inherits them.
 3. Scripts per game: the effect from today's patterns, plus new patterns for target, amount and duration. A card the script
    covers completely is not read. Start with the games with fixed wording (Magic, Hearthstone, Runeterra, Lorcana, SWU).
