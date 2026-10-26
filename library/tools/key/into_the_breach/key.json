@@ -70,10 +70,6 @@
 [
 "debuff",
 "Weapon damage against this unit is doubled"
-],
-[
-"silence",
-"Natural Armor is disabled"
 ]
 ],
 "by": "A=B"
@@ -129,7 +125,7 @@
 "760842": {
 "tags": [
 [
-"suppress",
+"attack_lock",
 "cannot attack or repair"
 ]
 ],
@@ -384,6 +380,10 @@
 [
 "immunity",
 "Flying"
+],
+[
+"attack_lock",
+"explosive smoke bomb"
 ]
 ],
 "by": "C",
@@ -485,7 +485,7 @@
 "Water Tile"
 ],
 [
-"suppress",
+"attack_lock",
 "Units cannot attack in Water"
 ],
 [
@@ -1129,6 +1129,10 @@
 [
 "forced_movement",
 "damaging and pushing adjacent tiles"
+],
+[
+"adjacency",
+"pushing adjacent tiles"
 ]
 ],
 "by": "C"
@@ -1201,6 +1205,10 @@
 [
 "forced_movement",
 "push adjacent tiles"
+],
+[
+"adjacency",
+"pushing adjacent tiles"
 ]
 ],
 "by": "C"
@@ -1363,6 +1371,10 @@
 [
 "forced_movement",
 "pushing adjacent tiles"
+],
+[
+"adjacency",
+"pushing adjacent tiles"
 ]
 ],
 "by": "C"
@@ -1523,6 +1535,10 @@
 [
 "forced_movement",
 "pushes adjacent tiles away"
+],
+[
+"adjacency",
+"pushing adjacent tiles"
 ]
 ],
 "by": "C"
@@ -2043,6 +2059,10 @@
 [
 "upgrade",
 "Upgrade: +1 Damage"
+],
+[
+"attack_lock",
+"explosive smoke bomb"
 ]
 ],
 "by": "A=B"
@@ -2177,6 +2197,10 @@
 [
 "area_templates",
 "hits 2 tiles"
+],
+[
+"ranged",
+"projectile or missile weapon"
 ]
 ],
 "by": "C"
@@ -2252,6 +2276,10 @@
 [
 "upgrade",
 "Upgrade: +1 Use"
+],
+[
+"adjacency",
+"pushing adjacent tiles"
 ]
 ],
 "by": "C"
@@ -2281,6 +2309,10 @@
 [
 "adjacency",
 "the targeted tile, and the tiles to its left and right"
+],
+[
+"ranged",
+"projectile or missile weapon"
 ]
 ],
 "by": "C"
@@ -2369,6 +2401,10 @@
 [
 "upgrade",
 "Upgrade: Buildings Immune"
+],
+[
+"adjacency",
+"pushing adjacent tiles"
 ]
 ],
 "by": "C"
@@ -2415,6 +2451,10 @@
 [
 "upgrade",
 "Upgrade: Backburn"
+],
+[
+"adjacency",
+"pushing adjacent tiles"
 ]
 ],
 "by": "C"
@@ -2485,7 +2525,7 @@
 "Artillery shot"
 ],
 [
-"suppress",
+"attack_lock",
 "applies Smoke"
 ],
 [
@@ -2533,6 +2573,10 @@
 [
 "upgrade",
 "Upgrade: Buildings Immune"
+],
+[
+"ranged",
+"projectile or missile weapon"
 ]
 ],
 "by": "A=B"
@@ -2583,6 +2627,10 @@
 [
 "area_templates",
 "Launch two missiles"
+],
+[
+"ranged",
+"projectile or missile weapon"
 ]
 ],
 "by": "C"
@@ -2684,7 +2732,7 @@
 "760994": {
 "tags": [
 [
-"suppress",
+"attack_lock",
 "Surround yourself with Smoke to defend against nearby enemies"
 ],
 [
@@ -2827,7 +2875,7 @@
 "Fly over the targets"
 ],
 [
-"suppress",
+"attack_lock",
 "dropping Smoke"
 ],
 [
@@ -2903,7 +2951,7 @@
 "761005": {
 "tags": [
 [
-"suppress",
+"attack_lock",
 "Drops Smoke on 5 tiles"
 ],
 [
@@ -2947,6 +2995,10 @@
 [
 "upgrade",
 "Upgrade: +1 Damage"
+],
+[
+"ranged",
+"projectile or missile weapon"
 ]
 ],
 "by": "C"
@@ -3027,6 +3079,10 @@
 [
 "upgrade",
 "Upgrade: +1 Tile"
+],
+[
+"adjacency",
+"pushing adjacent tiles"
 ]
 ],
 "by": "C"
@@ -4074,10 +4130,6 @@
 [
 "debuff",
 "A.C.I.D."
-],
-[
-"silence",
-"A.C.I.D."
 ]
 ],
 "by": "A=B",
@@ -4679,7 +4731,7 @@
 "If damaged"
 ],
 [
-"suppress",
+"attack_lock",
 "Units in Smoke cannot attack or repair"
 ]
 ],
@@ -4864,6 +4916,10 @@
 [
 "damage",
 "Bounce a projectile off one target to hit another"
+],
+[
+"ranged",
+"projectile or missile weapon"
 ]
 ],
 "by": "A=B"
@@ -4892,7 +4948,7 @@
 "dashing away"
 ],
 [
-"suppress",
+"attack_lock",
 "Smoke and deal damage to a tile"
 ],
 [
@@ -4934,7 +4990,7 @@
 "apply Fire to a tile"
 ],
 [
-"suppress",
+"attack_lock",
 "adding Smoke to adjacent tiles"
 ],
 [
@@ -4989,7 +5045,7 @@
 "761083": {
 "tags": [
 [
-"suppress",
+"attack_lock",
 "Smoke the target"
 ],
 [
@@ -5031,7 +5087,7 @@
 "761084": {
 "tags": [
 [
-"suppress",
+"attack_lock",
 "Smoke the target"
 ],
 [
@@ -5596,7 +5652,7 @@
 "761105": {
 "tags": [
 [
-"suppress",
+"attack_lock",
 "Smoke and Web the target"
 ],
 [
@@ -6304,10 +6360,6 @@
 "Weapon damage against this unit is doubled"
 ],
 [
-"silence",
-"disable Armor until the unit Repairs"
-],
-[
 "terrain",
 "present in the environment"
 ]
@@ -6423,7 +6475,7 @@
 "apply Fire to a tile"
 ],
 [
-"suppress",
+"attack_lock",
 "adding Smoke to adjacent tiles"
 ],
 [
@@ -6440,7 +6492,7 @@
 "dashing away"
 ],
 [
-"suppress",
+"attack_lock",
 "Smoke and deal damage to a tile"
 ],
 [
@@ -6504,6 +6556,10 @@
 [
 "upgrade",
 "Upgrade: +1 Damage"
+],
+[
+"ranged",
+"projectile or missile weapon"
 ]
 ],
 "by": "C"
@@ -6523,7 +6579,7 @@
 "pushes"
 ],
 [
-"suppress",
+"attack_lock",
 "adds Smoke to each tile passed through"
 ],
 [
@@ -6554,6 +6610,10 @@
 [
 "area_templates",
 "pierces the first target, and damages the second"
+],
+[
+"ranged",
+"projectile or missile weapon"
 ]
 ],
 "by": "C"
@@ -6758,7 +6818,7 @@
 "Smoke Tile"
 ],
 [
-"suppress",
+"attack_lock",
 "Units in Smoke cannot attack or repair"
 ]
 ],

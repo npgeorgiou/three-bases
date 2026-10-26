@@ -117,4 +117,6 @@ Things that confused earlier chats:
   their game's pass, tagging first: hearthstone Deathknight control and board_presence, Mage tribal and board_presence (splash),
   Demonhunter draw, Shaman tribal; shadowverse Swordcraft tribal; sts1 Defect cost_condition, Silent draw; tesl Willpower
   board_presence.
-- Next: the other games in the order of `tools/key/key.py` GAMES.
+- Damage types, shared (26 Oct 2026, Kaptain's rules): `multi_target_attack` = several separately named targets (all chosen, or one chosen plus a fixed one: "4 to a minion and your general"); `aoe_damage` = damage reaching several units without choosing each (around the target, a row, all; full or reduced); new `random_target` under `random_effect` = a random existing target; `adjacency` = neighbours for any purpose; `area_templates` = a named shape (plain "adjacent" is `adjacency`). Cleave/sweep/"attacks each" moved to `aoe_damage`; 112 key entries and 66 old hand reviews moved with them; `chain_damage` was not added (almost no wording). Gwent "damage N units by X" is read as chosen targets (Kaptain). Smoke is `attack_lock`.
+- into_the_breach: **done** 26 Oct 2026 (key wrong 70.5 → 53.3, missed 36.2 → 13.7 per 100; 10 cases and 1 combo removed, reasons in the game file). Open for a shared pass: keyword over-inheritance (entries that only mention a keyword) and old reviews over-tagging `terrain`.
+- Next: the other games in the order of `tools/key/key.py` GAMES (inscryption next; check summon payoffs and the narrow-lead cases listed above in each).

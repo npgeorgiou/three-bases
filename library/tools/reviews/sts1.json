@@ -3049,7 +3049,8 @@
    "aoe_damage"
   ],
   "drop": [
-   "random_effect"
+   "random_effect",
+   "random_target"
   ]
  },
  "757658": {
@@ -4678,7 +4679,8 @@
   ],
   "drop": [
    "damage",
-   "random_effect"
+   "random_effect",
+   "random_target"
   ]
  },
  "757878": {
@@ -5057,5 +5059,11 @@
    "random_effect"
   ],
   "drop": []
+ },
+ "758192": {
+  "add": [],
+  "drop": [
+   "random_target"
+  ]
  }
 }

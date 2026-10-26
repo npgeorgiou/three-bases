@@ -1865,6 +1865,10 @@
 [
 "on_damaged",
 "Whenever you receive unblocked attack damage"
+],
+[
+"random_effect",
+"Channel Lightning (hits a random enemy)"
 ]
 ],
 "by": "A=B"
@@ -2390,6 +2394,10 @@
 [
 "slots_queue",
 "Channel 1 Lightning"
+],
+[
+"random_effect",
+"Channel Lightning (hits a random enemy)"
 ]
 ],
 "by": "A=B"
@@ -4630,7 +4638,7 @@
 ],
 [
 "heal",
-"Heal \u2153 Max HP"
+"Heal ⅓ Max HP"
 ],
 [
 "stat_gain",

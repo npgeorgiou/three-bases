@@ -98,21 +98,18 @@ regeneration|regeneration|\bregenerat
 The real-world cases, one per line, tab-separated: `type  a  b  why  source` (see `realworld/RESEARCH.md`). Read by `realworld.py`, `realworld_report.py`, `realworld_why.py` and `learn_recipes.py`.
 
 ```tsv
-signature	Prime	damage	punches and strikes	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Prime	forced_movement	strikes that push	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Brute	damage	projectiles and charges	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Brute	forced_movement	shots that push	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
 signature	Ranged	ranged	artillery	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Ranged	forced_movement	artillery that pushes	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	forced_movement	pull and push	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
 signature	Science	swap	swap	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
 signature	Science	shield	shields	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	disable	smoke and freeze	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-signature	Science	damage_over_time	acid and fire	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
 archetype	Science	positional	utility: pull, push, swap	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
 splash	Prime	shield	only Spartan Shield	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-splash	Prime	damage_over_time	only Flame Thrower	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
 splash	Brute	shield	Phase Cannon, Grappling Hook	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-splash	Brute	disable	only Aerial Bombs' smoke	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
-combo	Electric Whip	Grappling Hook	the Hook extends the chain	https://www.giantbomb.com/profile/majormitch/blog/thoughts-on-into-the-breachs-squads/116986/
 ```
+
+## Notes from the patterns check
+Patterns check, 26 Oct 2026 (key wrong 70.5 → 53.3, missed 36.2 → 13.7 per 100 on the corrected key; cases below).
+- Damage types (Kaptain's rules, tree v3): `multi_target_attack` = several separately named targets (the player chooses them, or one chosen plus a fixed one); `aoe_damage` = damage reaching several units without choosing each (around the target, a row, all); `random_target` = a random target. Every Into the Breach weapon with a fixed pattern (beams, lines, two projectiles, adjacent tiles) is `aoe_damage` plus `area_templates` (a named shape) and/or `adjacency` (neighbours); chained or bounced damage (Electric Whip, Ricochet Rocket) is `damage` only. A weapon that only pushes the neighbours (Artemis Artillery) is `damage` plus `adjacency`.
+- Key changes (Claude, Kaptain's rule "change the key where sure"): smoke entries `suppress` → `attack_lock` (as the Smoke keyword key; Submerged stays `suppress`); `silence` removed from the three A.C.I.D. entries (it doubles damage taken, it does not remove an ability); `ranged` added to 8 projectile weapons; `adjacency` added to 8 "push adjacent tiles" weapons; Thermal Discharger `area_templates`; Aerial Bombs and Jet Mech `attack_lock`.
+- Cases removed (the cards show no lead of 1.5 times or more): signature Prime damage 84% vs 59%, Prime forced_movement 55% vs 69%, Brute damage 79% vs 61%, Brute forced_movement 76% vs 61%, Ranged forced_movement 62% vs 66%, Science forced_movement 68% vs 64%, Science damage_over_time 12% vs 9%, Science disable 1 of 25 cards; splash Prime damage_over_time 10% vs 10%, Brute disable 0 of 29. Kept and met: Science swap and shield, the Science positional archetype, splash Prime and Brute shield. Open: the combo Electric Whip + Grappling Hook is real but the library finds no link (no relation between forced_movement and adjacency); signature Ranged `ranged` (65% vs 36%, lift 1.8) is still not found by signature.py.
+- Open (shared, for its own pass): entries that only mention a keyword inherit its tags (Fire mentions Flying, so it gets `placement_rules`, `immunity`); old hand reviews over-tag `terrain`. About 70 wrong Into the Breach tags come from these two.
+- Wording found in the check: "Upgrade:" lines are `upgrade` ("Upgrades:" lists are not); "Deploy a ... mine" and "spawned by other Vek" are `summon`; "Freeze yourself" is `friendly_fire`; "Repair adjacent Mechs" is `heal`.

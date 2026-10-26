@@ -66,10 +66,6 @@
 [
 "debuff",
 "Weapon damage against this unit is doubled"
-],
-[
-"silence",
-"Natural Armor is disabled"
 ]
 ],
 "by": "C"
