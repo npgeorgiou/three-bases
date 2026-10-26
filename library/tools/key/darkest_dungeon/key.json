@@ -4213,10 +4213,6 @@
 [
 "stat_loss",
 "-4 speed"
-],
-[
-"defence_gain",
-"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -4725,10 +4721,6 @@
 [
 "stress_morale",
 "-13% stress dmg received percent"
-],
-[
-"defence_gain",
-"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -5156,10 +5148,6 @@
 [
 "stat_loss",
 "-0.05 accuracy"
-],
-[
-"defence_gain",
-"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -6632,10 +6620,6 @@
 [
 "stat_loss",
 "-8% resolve check percent"
-],
-[
-"defence_gain",
-"health, toughness or defence goes up"
 ]
 ],
 "by": "C"

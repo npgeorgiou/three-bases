@@ -326,12 +326,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"temporary_buff",
-"Challenger"
-]
-],
 "keywords": [
 816577
 ]
@@ -468,7 +462,7 @@
 "When you play this character"
 ],
 [
-"revive",
+"return_to_hand",
 "return a character card from your discard to your hand"
 ],
 [
@@ -600,7 +594,7 @@
 "2 strength or less"
 ],
 [
-"revive",
+"return_to_hand",
 "Return a character card from your discard to your hand"
 ]
 ],
@@ -672,12 +666,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Singer"
-]
-],
 "keywords": [
 816585
 ]
@@ -1137,7 +1125,7 @@
 "When you play this character"
 ],
 [
-"revive",
+"return_to_hand",
 "return a character card with 4 willpower or more"
 ],
 [
@@ -2292,12 +2280,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Singer"
-]
-],
 "keywords": [
 816585
 ]
@@ -2720,7 +2702,7 @@
 "When this location is banished"
 ],
 [
-"revive",
+"return_to_hand",
 "return this card from your discard to your hand"
 ]
 ],
@@ -2965,7 +2947,7 @@
 "When you play this character"
 ],
 [
-"revive",
+"return_to_hand",
 "return up to 2 character cards"
 ],
 [
@@ -3086,7 +3068,7 @@
 "When you play this character"
 ],
 [
-"revive",
+"return_to_hand",
 "return a character card from your discard"
 ],
 [
@@ -4166,12 +4148,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Singer"
-]
-],
 "keywords": [
 816585
 ]
@@ -4470,12 +4446,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Singer"
-]
-],
 "keywords": [
 816585
 ]
@@ -4487,7 +4457,7 @@
 "exert to sing this song for free"
 ],
 [
-"revive",
+"return_to_hand",
 "Return a character card with cost 2 or less"
 ],
 [
@@ -5437,7 +5407,7 @@
 "Shift 4 ink"
 ],
 [
-"revive",
+"return_to_hand",
 "return a Robot character card"
 ],
 [
@@ -5462,7 +5432,7 @@
 "Sing Together 9"
 ],
 [
-"revive",
+"return_to_hand",
 "Return up to 3 character cards"
 ],
 [
@@ -6581,7 +6551,7 @@
 "exert, 3 ink"
 ],
 [
-"revive",
+"return_to_hand",
 "Return a character card with Support"
 ],
 [
@@ -7648,7 +7618,7 @@
 "Shift 4"
 ],
 [
-"revive",
+"return_to_hand",
 "return a character card from your discard to your hand"
 ]
 ],

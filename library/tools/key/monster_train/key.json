@@ -744,10 +744,6 @@
 "822491": {
 "tags": [
 [
-"block_armor",
-"Armor"
-],
-[
 "multi_attack",
 "Multistrike"
 ],
@@ -762,73 +758,53 @@
 [
 "on_kill",
 "Slay"
+],
+[
+"block_armor",
+"Armor"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"block_armor",
-"Armor"
-],
-[
-"multi_attack",
-"Multistrike"
-],
-[
-"temporary_buff",
-"Rage"
-],
-[
-"on_damaged",
-"Revenge"
-],
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822402,
 822436,
 822444,
 822452,
 822457
+],
+"credited": [
+[
+"block_armor",
+"Armor"
+]
 ]
 },
 "822492": {
 "tags": [
 [
-"combat_start",
-"Action"
-],
-[
 "on_ally_play",
 "Rally"
 ],
 [
 "turn_end",
 "Resolve"
+],
+[
+"combat_start",
+"Action"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"combat_start",
-"Action"
-],
-[
-"on_ally_play",
-"Rally"
-],
-[
-"turn_end",
-"Resolve"
-]
-],
 "keywords": [
 822401,
 822445,
 822451
+],
+"credited": [
+[
+"combat_start",
+"Action"
+]
 ]
 },
 "822493": {
@@ -847,12 +823,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822462
 ]
@@ -865,14 +835,14 @@
 ]
 ],
 "by": "read",
+"keywords": [
+822409
+],
 "credited": [
 [
 "exhaust",
 "Consume"
 ]
-],
-"keywords": [
-822409
 ]
 },
 "822495": {
@@ -930,12 +900,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -973,12 +937,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -999,12 +957,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -1029,16 +981,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"temporary_buff",
-"Rage"
-],
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822444,
 822457
@@ -1064,12 +1006,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"temporary_buff",
-"Rage"
-]
-],
 "keywords": [
 822444
 ]
@@ -1086,12 +1022,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822462
 ]
@@ -1108,12 +1038,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"movement",
-"Ascend"
-]
-],
 "keywords": [
 822404
 ]
@@ -1134,12 +1058,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"piercing",
-"Piercing"
-]
-],
 "keywords": [
 822440
 ]
@@ -1160,16 +1078,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"self_destruct",
-"Fragile"
-],
-[
-"multi_attack",
-"Multistrike"
-]
-],
 "keywords": [
 822421,
 822436
@@ -1191,12 +1099,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822462
 ]
@@ -1234,12 +1136,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"spell_power",
-"Attuned"
-]
-],
 "keywords": [
 822405
 ]
@@ -1273,12 +1169,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822462
 ]
@@ -1295,12 +1185,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822462
 ]
@@ -1329,16 +1213,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"block_armor",
-"Armor"
-],
-[
-"on_attack",
-"Strike"
-]
-],
 "keywords": [
 822402,
 822461
@@ -1360,12 +1234,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"turn_end",
-"Resolve"
-]
-],
 "keywords": [
 822451
 ]
@@ -1403,16 +1271,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"recycle",
-"Endless"
-],
-[
-"leave_trigger",
-"Endless"
-]
-],
 "keywords": [
 822417
 ]
@@ -1433,12 +1291,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822462
 ]
@@ -1459,12 +1311,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_attack",
-"Strike"
-]
-],
 "keywords": [
 822461
 ]
@@ -1489,12 +1335,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"piercing",
-"Piercing"
-]
-],
 "keywords": [
 822440
 ]
@@ -1528,12 +1368,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"movement",
-"Ascend"
-]
-],
 "keywords": [
 822404
 ]
@@ -1567,12 +1401,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"piercing",
-"Piercing"
-]
-],
 "keywords": [
 822440
 ]
@@ -1589,12 +1417,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -1611,12 +1433,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -1642,12 +1458,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -1672,16 +1482,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"block_armor",
-"Armored"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822403,
 822462
@@ -1690,10 +1490,6 @@
 "822532": {
 "tags": [
 [
-"stat_gain",
-"Cultivate"
-],
-[
 "on_lifegain",
 "Rejuvenate"
 ],
@@ -1704,41 +1500,29 @@
 [
 "counterattack",
 "Spikes"
+],
+[
+"stat_gain",
+"Cultivate"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"stat_gain",
-"Cultivate"
-],
-[
-"on_lifegain",
-"Rejuvenate"
-],
-[
-"on_damaged",
-"Revenge"
-],
-[
-"counterattack",
-"Spikes"
-]
-],
 "keywords": [
 822410,
 822449,
 822452,
 822459
+],
+"credited": [
+[
+"stat_gain",
+"Cultivate"
+]
 ]
 },
 "822533": {
 "tags": [
 [
-"aura",
-"Enchant"
-],
-[
 "on_spell",
 "Incant"
 ],
@@ -1761,39 +1545,13 @@
 [
 "on_play",
 "Summon"
+],
+[
+"aura",
+"Enchant"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"aura",
-"Enchant"
-],
-[
-"on_spell",
-"Incant"
-],
-[
-"multi_attack",
-"Multistrike"
-],
-[
-"first_strike",
-"Quick"
-],
-[
-"immobilize",
-"Rooted"
-],
-[
-"on_attack",
-"Strike"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822416,
 822429,
@@ -1802,6 +1560,12 @@
 822453,
 822461,
 822462
+],
+"credited": [
+[
+"aura",
+"Enchant"
+]
 ]
 },
 "822534": {
@@ -1820,12 +1584,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -1863,12 +1621,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -1885,12 +1637,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -1942,14 +1688,14 @@
 ]
 ],
 "by": "read",
+"keywords": [
+822443
+],
 "credited": [
 [
 "first_strike",
 "Quick"
 ]
-],
-"keywords": [
-822443
 ]
 },
 "822542": {
@@ -1964,12 +1710,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"multi_attack",
-"Multistrike"
-]
-],
 "keywords": [
 822436
 ]
@@ -1998,20 +1738,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"stat_gain",
-"Cultivate"
-],
-[
-"on_lifegain",
-"Rejuvenate"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822410,
 822449,
@@ -2046,12 +1772,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -2107,12 +1827,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"multi_target_attack",
-"Sweep"
-]
-],
 "keywords": [
 822463
 ]
@@ -2129,12 +1843,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -2215,12 +1923,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"counterattack",
-"Spikes"
-]
-],
 "keywords": [
 822459
 ]
@@ -2245,16 +1947,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_kill",
-"Slay"
-],
-[
-"multi_target_attack",
-"Sweep"
-]
-],
 "keywords": [
 822457,
 822463
@@ -2280,16 +1972,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_lifegain",
-"Rejuvenate"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822449,
 822462
@@ -2311,16 +1993,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"turn_end",
-"Resolve"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822451,
 822462
@@ -2338,12 +2010,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -2360,12 +2026,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -2386,12 +2046,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -2438,12 +2092,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -2464,12 +2112,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"movement",
-"Descend"
-]
-],
 "keywords": [
 822413
 ]
@@ -2516,12 +2158,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_damaged",
-"Revenge"
-]
-],
 "keywords": [
 822452
 ]
@@ -2572,16 +2208,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_lifegain",
-"Rejuvenate"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822449,
 822462
@@ -2589,10 +2215,6 @@
 },
 "822573": {
 "tags": [
-[
-"damage_over_time",
-"Frostbite"
-],
 [
 "turn_end",
 "Frostbite"
@@ -2608,45 +2230,29 @@
 [
 "aoe_damage",
 "Sweep"
-]
 ],
-"by": "read",
-"credited": [
 [
 "damage_over_time",
 "Frostbite"
-],
-[
-"turn_end",
-"Frostbite"
-],
-[
-"mark_target",
-"Spell Weakness"
-],
-[
-"on_attack",
-"Strike"
-],
-[
-"multi_target_attack",
-"Sweep"
 ]
 ],
+"by": "read",
 "keywords": [
 822422,
 822458,
 822461,
 822463
+],
+"credited": [
+[
+"damage_over_time",
+"Frostbite"
+]
 ]
 },
 "822574": {
 "tags": [
 [
-"combat_start",
-"Action"
-],
-[
 "damage_over_time",
 "Frostbite"
 ],
@@ -2669,45 +2275,25 @@
 [
 "on_damaged",
 "Revenge"
+],
+[
+"combat_start",
+"Action"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"combat_start",
-"Action"
-],
-[
-"damage_over_time",
-"Frostbite"
-],
-[
-"turn_end",
-"Frostbite"
-],
-[
-"on_spell",
-"Incant"
-],
-[
-"immunity",
-"Phased"
-],
-[
-"cant_attack",
-"Phased"
-],
-[
-"on_damaged",
-"Revenge"
-]
-],
 "keywords": [
 822401,
 822422,
 822429,
 822439,
 822452
+],
+"credited": [
+[
+"combat_start",
+"Action"
+]
 ]
 },
 "822575": {
@@ -2718,14 +2304,14 @@
 ]
 ],
 "by": "read",
+"keywords": [
+822409
+],
 "credited": [
 [
 "exhaust",
 "Consume"
 ]
-],
-"keywords": [
-822409
 ]
 },
 "822576": {
@@ -2740,12 +2326,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -2788,16 +2368,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"retain",
-"Permafrost"
-],
-[
-"on_draw",
-"Permafrost"
-]
-],
 "keywords": [
 822438
 ]
@@ -2822,20 +2392,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-],
-[
-"retain",
-"Permafrost"
-],
-[
-"on_draw",
-"Permafrost"
-]
-],
 "keywords": [
 822409,
 822438
@@ -2853,12 +2409,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -2879,16 +2429,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_attack",
-"Strike"
-],
-[
-"multi_target_attack",
-"Sweep"
-]
-],
 "keywords": [
 822461,
 822463
@@ -2988,12 +2528,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_spell",
-"Incant"
-]
-],
 "keywords": [
 822429
 ]
@@ -3014,12 +2548,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_spell",
-"Incant"
-]
-],
 "keywords": [
 822429
 ]
@@ -3040,12 +2568,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_spell",
-"Incant"
-]
-],
 "keywords": [
 822429
 ]
@@ -3079,16 +2601,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"spell_power",
-"Attuned"
-],
-[
-"play_restriction",
-"Pyrebound"
-]
-],
 "keywords": [
 822405,
 822442
@@ -3131,20 +2643,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"combat_start",
-"Action"
-],
-[
-"on_attack",
-"Strike"
-],
-[
-"multi_target_attack",
-"Sweep"
-]
-],
 "keywords": [
 822401,
 822461,
@@ -3163,12 +2661,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_spell",
-"Incant"
-]
-],
 "keywords": [
 822429
 ]
@@ -3194,12 +2686,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_spell",
-"Incant"
-]
-],
 "keywords": [
 822429
 ]
@@ -3220,12 +2706,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_spell",
-"Incant"
-]
-],
 "keywords": [
 822429
 ]
@@ -3250,12 +2730,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_spell",
-"Incant"
-]
-],
 "keywords": [
 822429
 ]
@@ -3280,16 +2754,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"movement",
-"Ascend"
-],
-[
-"play_restriction",
-"Pyrebound"
-]
-],
 "keywords": [
 822404,
 822442
@@ -3307,12 +2771,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_damaged",
-"Revenge"
-]
-],
 "keywords": [
 822452
 ]
@@ -3333,12 +2791,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"spell_power",
-"Attuned"
-]
-],
 "keywords": [
 822405
 ]
@@ -3359,12 +2811,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -3453,20 +2899,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"spell_power",
-"Attuned"
-],
-[
-"on_discard",
-"Offering"
-],
-[
-"free_play",
-"Offering"
-]
-],
 "keywords": [
 822405,
 822437
@@ -3488,16 +2920,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_discard",
-"Offering"
-],
-[
-"free_play",
-"Offering"
-]
-],
 "keywords": [
 822437
 ]
@@ -3526,16 +2948,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"retain",
-"Permafrost"
-],
-[
-"on_draw",
-"Permafrost"
-]
-],
 "keywords": [
 822438
 ]
@@ -3560,16 +2972,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_discard",
-"Offering"
-],
-[
-"free_play",
-"Offering"
-]
-],
 "keywords": [
 822437
 ]
@@ -3590,16 +2992,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_spell",
-"Incant"
-],
-[
-"turn_end",
-"Resolve"
-]
-],
 "keywords": [
 822429,
 822451
@@ -3608,10 +3000,6 @@
 "822614": {
 "tags": [
 [
-"on_sacrifice",
-"Gorge"
-],
-[
 "lifesteal",
 "Lifesteal"
 ],
@@ -3622,32 +3010,24 @@
 [
 "excess_damage",
 "Trample"
+],
+[
+"on_sacrifice",
+"Gorge"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_sacrifice",
-"Gorge"
-],
-[
-"lifesteal",
-"Lifesteal"
-],
-[
-"on_play",
-"Summon"
-],
-[
-"excess_damage",
-"Trample"
-]
-],
 "keywords": [
 822425,
 822433,
 822462,
 822464
+],
+"credited": [
+[
+"on_sacrifice",
+"Gorge"
+]
 ]
 },
 "822615": {
@@ -3670,16 +3050,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"repeat_trigger",
-"Buffet"
-],
-[
-"leave_trigger",
-"Eaten"
-]
-],
 "keywords": [
 822406,
 822414
@@ -3702,14 +3072,14 @@
 ]
 ],
 "by": "read",
+"keywords": [
+822409
+],
 "credited": [
 [
 "exhaust",
 "Consume"
 ]
-],
-"keywords": [
-822409
 ]
 },
 "822618": {
@@ -3728,12 +3098,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822457
 ]
@@ -3754,12 +3118,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -3772,14 +3130,14 @@
 ]
 ],
 "by": "read",
+"keywords": [
+822409
+],
 "credited": [
 [
 "exhaust",
 "Consume"
 ]
-],
-"keywords": [
-822409
 ]
 },
 "822621": {
@@ -3802,12 +3160,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -3824,12 +3176,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"leave_trigger",
-"Eaten"
-]
-],
 "keywords": [
 822414
 ]
@@ -3846,12 +3192,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -3890,12 +3230,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"leave_trigger",
-"Eaten"
-]
-],
 "keywords": [
 822414
 ]
@@ -3916,12 +3250,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"leave_trigger",
-"Eaten"
-]
-],
 "keywords": [
 822414
 ]
@@ -3942,12 +3270,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"leave_trigger",
-"Eaten"
-]
-],
 "keywords": [
 822414
 ]
@@ -3964,12 +3286,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"leave_trigger",
-"Eaten"
-]
-],
 "keywords": [
 822414
 ]
@@ -3986,12 +3302,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -4042,12 +3352,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"leave_trigger",
-"Eaten"
-]
-],
 "keywords": [
 822414
 ]
@@ -4061,19 +3365,9 @@
 [
 "exhaust",
 "Consume"
-],
-[
-"defence_gain",
-"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -4111,12 +3405,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822457
 ]
@@ -4150,12 +3438,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_sacrifice",
-"Gorge"
-]
-],
 "keywords": [
 822425
 ]
@@ -4172,12 +3454,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_sacrifice",
-"Gorge"
-]
-],
 "keywords": [
 822425
 ]
@@ -4207,12 +3483,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -4258,12 +3528,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822457
 ]
@@ -4306,20 +3570,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_sacrifice",
-"Gorge"
-],
-[
-"cant_attack",
-"Inert"
-],
-[
-"multi_attack",
-"Multistrike"
-]
-],
 "keywords": [
 822425,
 822430,
@@ -4342,12 +3592,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"movement",
-"Descend"
-]
-],
 "keywords": [
 822413
 ]
@@ -4377,12 +3621,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -4421,12 +3659,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"turn_end",
-"Resolve"
-]
-],
 "keywords": [
 822451
 ]
@@ -4447,12 +3679,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_sacrifice",
-"Gorge"
-]
-],
 "keywords": [
 822425
 ]
@@ -4473,12 +3699,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_sacrifice",
-"Gorge"
-]
-],
 "keywords": [
 822425
 ]
@@ -4495,12 +3715,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -4529,12 +3743,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"permanent_loss",
-"Purge"
-]
-],
 "keywords": [
 822441
 ]
@@ -4563,12 +3771,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822457
 ]
@@ -4610,16 +3812,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_sacrifice",
-"Gorge"
-],
-[
-"on_ally_play",
-"Hunger"
-]
-],
 "keywords": [
 822425,
 822428
@@ -4628,10 +3820,6 @@
 "822661": {
 "tags": [
 [
-"self_destruct",
-"Burnout"
-],
-[
 "other_death_trigger",
 "Harvest"
 ],
@@ -4646,45 +3834,29 @@
 [
 "turn_end",
 "Resolve"
+],
+[
+"self_destruct",
+"Burnout"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"self_destruct",
-"Burnout"
-],
-[
-"other_death_trigger",
-"Harvest"
-],
-[
-"revive",
-"Reform"
-],
-[
-"upgrade",
-"Reform"
-],
-[
-"turn_end",
-"Resolve"
-]
-],
 "keywords": [
 822407,
 822426,
 822447,
 822451
+],
+"credited": [
+[
+"self_destruct",
+"Burnout"
+]
 ]
 },
 "822662": {
 "tags": [
 [
-"self_destruct",
-"Burnout"
-],
-[
 "recycle",
 "Endless"
 ],
@@ -4707,39 +3879,13 @@
 [
 "counterattack",
 "Spikes"
+],
+[
+"self_destruct",
+"Burnout"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"self_destruct",
-"Burnout"
-],
-[
-"recycle",
-"Endless"
-],
-[
-"leave_trigger",
-"Endless"
-],
-[
-"death_trigger",
-"Extinguish"
-],
-[
-"first_strike",
-"Quick"
-],
-[
-"on_kill",
-"Slay"
-],
-[
-"counterattack",
-"Spikes"
-]
-],
 "keywords": [
 822407,
 822417,
@@ -4747,6 +3893,12 @@
 822443,
 822457,
 822459
+],
+"credited": [
+[
+"self_destruct",
+"Burnout"
+]
 ]
 },
 "822663": {
@@ -4765,12 +3917,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -4787,12 +3933,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"self_destruct",
-"Burnout"
-]
-],
 "keywords": [
 822407
 ]
@@ -4817,16 +3957,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"revive",
-"Reform"
-],
-[
-"upgrade",
-"Reform"
-]
-],
 "keywords": [
 822447
 ]
@@ -4843,12 +3973,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -4865,12 +3989,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -4891,12 +4009,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -4938,20 +4050,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-],
-[
-"revive",
-"Reform"
-],
-[
-"upgrade",
-"Reform"
-]
-],
 "keywords": [
 822409,
 822447
@@ -4985,12 +4083,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -5023,16 +4115,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"death_trigger",
-"Extinguish"
-],
-[
-"stealth",
-"Stealth"
-]
-],
 "keywords": [
 822419,
 822460
@@ -5079,16 +4161,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"death_trigger",
-"Extinguish"
-],
-[
-"other_death_trigger",
-"Harvest"
-]
-],
 "keywords": [
 822419,
 822426
@@ -5114,16 +4186,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"self_destruct",
-"Burnout"
-],
-[
-"multi_attack",
-"Multistrike"
-]
-],
 "keywords": [
 822407,
 822436
@@ -5150,12 +4212,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"death_trigger",
-"Extinguish"
-]
-],
 "keywords": [
 822419
 ]
@@ -5172,12 +4228,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"self_destruct",
-"Burnout"
-]
-],
 "keywords": [
 822407
 ]
@@ -5206,20 +4256,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"self_destruct",
-"Burnout"
-],
-[
-"on_damaged",
-"Revenge"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822407,
 822452,
@@ -5242,16 +4278,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"revive",
-"Reform"
-],
-[
-"upgrade",
-"Reform"
-]
-],
 "keywords": [
 822447
 ]
@@ -5268,12 +4294,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"death_trigger",
-"Extinguish"
-]
-],
 "keywords": [
 822419
 ]
@@ -5290,12 +4310,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_attack",
-"Strike"
-]
-],
 "keywords": [
 822461
 ]
@@ -5312,12 +4326,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822457
 ]
@@ -5338,16 +4346,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"death_trigger",
-"Extinguish"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822419,
 822462
@@ -5365,12 +4363,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -5395,20 +4387,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"recycle",
-"Endless"
-],
-[
-"leave_trigger",
-"Endless"
-],
-[
-"death_trigger",
-"Extinguish"
-]
-],
 "keywords": [
 822417,
 822419
@@ -5447,12 +4425,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"other_death_trigger",
-"Harvest"
-]
-],
 "keywords": [
 822426
 ]
@@ -5469,12 +4441,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"other_death_trigger",
-"Harvest"
-]
-],
 "keywords": [
 822426
 ]
@@ -5504,12 +4470,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"other_death_trigger",
-"Harvest"
-]
-],
 "keywords": [
 822426
 ]
@@ -5530,12 +4490,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"movement",
-"Descend"
-]
-],
 "keywords": [
 822413
 ]
@@ -5543,7 +4497,7 @@
 "822695": {
 "tags": [
 [
-"revive",
+"return_to_hand",
 "Return a random defeated unit to your hand"
 ],
 [
@@ -5564,12 +4518,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"death_trigger",
-"Extinguish"
-]
-],
 "keywords": [
 822419
 ]
@@ -5598,20 +4546,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"death_trigger",
-"Extinguish"
-],
-[
-"on_damaged",
-"Revenge"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822419,
 822452,
@@ -5638,16 +4572,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"piercing",
-"Piercing"
-],
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822440,
 822457
@@ -5673,16 +4597,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"revive",
-"Reform"
-],
-[
-"upgrade",
-"Reform"
-]
-],
 "keywords": [
 822447
 ]
@@ -5720,12 +4634,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"spell_power",
-"Attuned"
-]
-],
 "keywords": [
 822405
 ]
@@ -5750,10 +4658,6 @@
 "822702": {
 "tags": [
 [
-"cost_type",
-"Charged Echo"
-],
-[
 "resource_gain",
 "Inspire"
 ],
@@ -5772,50 +4676,30 @@
 [
 "on_attack",
 "Strike"
+],
+[
+"cost_type",
+"Charged Echo"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-],
-[
-"resource_gain",
-"Inspire"
-],
-[
-"multi_attack",
-"Multistrike"
-],
-[
-"damage_over_time",
-"Reap"
-],
-[
-"condition_count",
-"Reap"
-],
-[
-"on_attack",
-"Strike"
-]
-],
 "keywords": [
 822408,
 822432,
 822436,
 822446,
 822461
+],
+"credited": [
+[
+"cost_type",
+"Charged Echo"
+]
 ]
 },
 "822703": {
 "tags": [
 [
-"block_armor",
-"Armor"
-],
-[
 "exhaust",
 "Consume"
 ],
@@ -5830,37 +4714,25 @@
 [
 "on_play",
 "Summon"
+],
+[
+"block_armor",
+"Armor"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"block_armor",
-"Armor"
-],
-[
-"exhaust",
-"Consume"
-],
-[
-"exhaust",
-"Etch"
-],
-[
-"block_armor",
-"Shell"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822402,
 822409,
 822418,
 822455,
 822462
+],
+"credited": [
+[
+"block_armor",
+"Armor"
+]
 ]
 },
 "822704": {
@@ -5888,12 +4760,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-]
-],
 "keywords": [
 822408
 ]
@@ -5914,12 +4780,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-]
-],
 "keywords": [
 822408
 ]
@@ -5936,12 +4796,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -5962,12 +4816,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Extract"
-]
-],
 "keywords": [
 822420
 ]
@@ -5984,12 +4832,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -6010,12 +4852,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Extract"
-]
-],
 "keywords": [
 822420
 ]
@@ -6036,12 +4872,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -6066,16 +4896,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"spell_power",
-"Attuned"
-],
-[
-"cost_type",
-"Extract"
-]
-],
 "keywords": [
 822405,
 822420
@@ -6105,16 +4925,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-],
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822408,
 822409
@@ -6148,24 +4958,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"transform",
-"Hatch"
-],
-[
-"delayed",
-"Hatch"
-],
-[
-"block_armor",
-"Shell"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822427,
 822455,
@@ -6184,12 +4976,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"resource_gain",
-"Inspire"
-]
-],
 "keywords": [
 822432
 ]
@@ -6222,16 +5008,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822408,
 822462
@@ -6277,36 +5053,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"block_armor",
-"Armor"
-],
-[
-"transform",
-"Hatch"
-],
-[
-"delayed",
-"Hatch"
-],
-[
-"damage_over_time",
-"Reap"
-],
-[
-"condition_count",
-"Reap"
-],
-[
-"block_armor",
-"Shell"
-],
-[
-"on_attack",
-"Strike"
-]
-],
 "keywords": [
 822402,
 822427,
@@ -6347,20 +5093,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"block_armor",
-"Armor"
-],
-[
-"multi_attack",
-"Multistrike"
-],
-[
-"on_attack",
-"strike"
-]
-],
 "keywords": [
 822402,
 822436,
@@ -6379,12 +5111,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Etch"
-]
-],
 "keywords": [
 822418
 ]
@@ -6405,12 +5131,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"resource_gain",
-"Inspire"
-]
-],
 "keywords": [
 822432
 ]
@@ -6435,12 +5155,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Extract"
-]
-],
 "keywords": [
 822420
 ]
@@ -6461,12 +5175,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-]
-],
 "keywords": [
 822408
 ]
@@ -6487,12 +5195,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -6513,12 +5215,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Extract"
-]
-],
 "keywords": [
 822420
 ]
@@ -6539,16 +5235,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-],
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822408,
 822409
@@ -6612,20 +5298,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-],
-[
-"cost_type",
-"Extract"
-],
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822408,
 822420,
@@ -6644,12 +5316,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -6674,16 +5340,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-],
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822408,
 822409
@@ -6709,12 +5365,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Extract"
-]
-],
 "keywords": [
 822420
 ]
@@ -6739,12 +5389,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -6777,24 +5421,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"transform",
-"Hatch"
-],
-[
-"delayed",
-"Hatch"
-],
-[
-"block_armor",
-"Shell"
-],
-[
-"excess_damage",
-"Trample"
-]
-],
 "keywords": [
 822427,
 822455,
@@ -6817,16 +5443,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Etch"
-],
-[
-"excess_damage",
-"Trample"
-]
-],
 "keywords": [
 822418,
 822464
@@ -6848,16 +5464,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Etch"
-],
-[
-"multi_target_attack",
-"Sweep"
-]
-],
 "keywords": [
 822418,
 822463
@@ -6895,20 +5501,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Extract"
-],
-[
-"resource_gain",
-"Inspire"
-],
-[
-"on_damaged",
-"Revenge"
-]
-],
 "keywords": [
 822420,
 822432,
@@ -6931,12 +5523,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -6961,12 +5547,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-]
-],
 "keywords": [
 822408
 ]
@@ -6979,14 +5559,14 @@
 ]
 ],
 "by": "read",
+"keywords": [
+822408
+],
 "credited": [
 [
 "cost_type",
 "Charged Echo"
 ]
-],
-"keywords": [
-822408
 ]
 },
 "822741": {
@@ -7005,12 +5585,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Extract"
-]
-],
 "keywords": [
 822420
 ]
@@ -7031,16 +5605,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"cost_type",
-"Charged Echo"
-],
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822408,
 822409
@@ -7058,12 +5622,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -7084,12 +5642,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -7114,12 +5666,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822457
 ]
@@ -7136,12 +5682,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -7158,12 +5698,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"permanent_loss",
-"Purge"
-]
-],
 "keywords": [
 822441
 ]
@@ -7176,14 +5710,14 @@
 ]
 ],
 "by": "read",
+"keywords": [
+822441
+],
 "credited": [
 [
 "permanent_loss",
 "Purge"
 ]
-],
-"keywords": [
-822441
 ]
 },
 "822749": {
@@ -7202,16 +5736,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"piercing",
-"Piercing"
-],
-[
-"permanent_loss",
-"Purge"
-]
-],
 "keywords": [
 822440,
 822441
@@ -7225,14 +5749,14 @@
 ]
 ],
 "by": "read",
+"keywords": [
+822441
+],
 "credited": [
 [
 "permanent_loss",
 "Purge"
 ]
-],
-"keywords": [
-822441
 ]
 },
 "822751": {
@@ -7251,16 +5775,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"turn_end",
-"Reserve"
-],
-[
-"play_restriction",
-"Unplayable"
-]
-],
 "keywords": [
 822450,
 822465
@@ -7269,28 +5783,24 @@
 "822752": {
 "tags": [
 [
-"play_restriction",
-"Unplayable"
-],
-[
 "deck_modification",
 "Unpurgeable"
+],
+[
+"play_restriction",
+"Unplayable"
 ]
 ],
 "by": "read",
+"keywords": [
+822465,
+822466
+],
 "credited": [
 [
 "play_restriction",
 "Unplayable"
-],
-[
-"deck_modification",
-"Unpurgeable"
 ]
-],
-"keywords": [
-822465,
-822466
 ]
 },
 "822753": {
@@ -7309,12 +5819,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -7331,12 +5835,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"permanent_loss",
-"Purge"
-]
-],
 "keywords": [
 822441
 ]
@@ -7377,24 +5875,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"recycle",
-"Endless"
-],
-[
-"leave_trigger",
-"Endless"
-],
-[
-"death_trigger",
-"Extinguish"
-],
-[
-"multi_attack",
-"Multistrike"
-]
-],
 "keywords": [
 822417,
 822419,
@@ -7421,16 +5901,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-],
-[
-"movement",
-"Descend"
-]
-],
 "keywords": [
 822409,
 822413
@@ -7460,12 +5930,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822462
 ]
@@ -7486,16 +5950,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"turn_end",
-"Reserve"
-],
-[
-"deck_modification",
-"Unpurgeable"
-]
-],
 "keywords": [
 822450,
 822466
@@ -7517,12 +5971,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822457
 ]
@@ -7543,16 +5991,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"permanent_loss",
-"Purge"
-],
-[
-"turn_end",
-"Reserve"
-]
-],
 "keywords": [
 822441,
 822450
@@ -7566,14 +6004,14 @@
 ]
 ],
 "by": "read",
+"keywords": [
+822441
+],
 "credited": [
 [
 "permanent_loss",
 "Purge"
 ]
-],
-"keywords": [
-822441
 ]
 },
 "822763": {
@@ -7588,12 +6026,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"turn_end",
-"Reserve"
-]
-],
 "keywords": [
 822450
 ]
@@ -7618,16 +6050,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"movement",
-"Ascend"
-],
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822404,
 822409
@@ -7641,14 +6063,14 @@
 ]
 ],
 "by": "read",
+"keywords": [
+822441
+],
 "credited": [
 [
 "permanent_loss",
 "Purge"
 ]
-],
-"keywords": [
-822441
 ]
 },
 "822768": {
@@ -7671,12 +6093,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"on_kill",
-"Slay"
-]
-],
 "keywords": [
 822457
 ]
@@ -7697,16 +6113,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"turn_end",
-"Resolve"
-],
-[
-"excess_damage",
-"Trample"
-]
-],
 "keywords": [
 822451,
 822464
@@ -7715,10 +6121,6 @@
 "822770": {
 "tags": [
 [
-"block_armor",
-"Armor"
-],
-[
 "movement",
 "Ascend"
 ],
@@ -7757,55 +6159,13 @@
 [
 "counterattack",
 "Spikes"
+],
+[
+"block_armor",
+"Armor"
 ]
 ],
 "by": "read",
-"credited": [
-[
-"block_armor",
-"Armor"
-],
-[
-"movement",
-"Ascend"
-],
-[
-"movement",
-"Descend"
-],
-[
-"damage_over_time",
-"Frostbite"
-],
-[
-"turn_end",
-"Frostbite"
-],
-[
-"temporary_buff",
-"Rage"
-],
-[
-"regeneration",
-"Regen"
-],
-[
-"turn_end",
-"Regen"
-],
-[
-"stat_loss",
-"Sap"
-],
-[
-"temporary_effect",
-"Sap"
-],
-[
-"counterattack",
-"Spikes"
-]
-],
 "keywords": [
 822402,
 822404,
@@ -7815,6 +6175,12 @@
 822448,
 822454,
 822459
+],
+"credited": [
+[
+"block_armor",
+"Armor"
+]
 ]
 },
 "822771": {
@@ -7829,12 +6195,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"exhaust",
-"Consume"
-]
-],
 "keywords": [
 822409
 ]
@@ -7887,48 +6247,6 @@
 ]
 ],
 "by": "read",
-"credited": [
-[
-"block_armor",
-"Armor"
-],
-[
-"shield",
-"Damage Shield"
-],
-[
-"death_trigger",
-"Extinguish"
-],
-[
-"mark_target",
-"Melee Weakness"
-],
-[
-"multi_attack",
-"Multistrike"
-],
-[
-"first_strike",
-"Quick"
-],
-[
-"temporary_buff",
-"Rage"
-],
-[
-"counterattack",
-"Spikes"
-],
-[
-"stealth",
-"Stealth"
-],
-[
-"on_play",
-"Summon"
-]
-],
 "keywords": [
 822402,
 822411,

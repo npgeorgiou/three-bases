@@ -120,12 +120,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cost_reduction",
-"Affinity"
-]
-],
 "keywords": [
 765969
 ]
@@ -154,16 +148,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"generate_cards",
-"Draft from a spellbook"
-],
-[
-"selection",
-"Draft from a spellbook"
-]
-],
 "keywords": [
 765970
 ]
@@ -234,16 +218,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"stat_gain",
-"Graft"
-],
-[
-"on_ally_play",
-"Graft"
-]
-],
 "keywords": [
 765989
 ]
@@ -280,12 +254,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"team_play",
-"Assist"
-]
-],
 "keywords": [
 765990
 ]
@@ -407,20 +375,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"modal_choice",
-"Riot"
-],
-[
-"haste",
-"Riot"
-],
-[
-"stat_gain",
-"Riot"
-]
-],
 "keywords": [
 766007
 ]
@@ -544,24 +498,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"blocking",
-"Reach"
-],
-[
-"counter_spell",
-"Ward"
-],
-[
-"cost_increase",
-"Ward"
-],
-[
-"protection",
-"Ward"
-]
-],
 "keywords": [
 765991,
 766027
@@ -603,16 +539,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"untap",
-"Vigilance"
-],
-[
-"variety_payoff",
-"Coven"
-]
-],
 "keywords": [
 765943,
 766028
@@ -662,20 +588,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"activated",
-"Crew"
-],
-[
-"transform",
-"Crew"
-],
-[
-"temporary_effect",
-"Crew"
-]
-],
 "keywords": [
 765948,
 765953
@@ -772,12 +684,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"modal_choice",
-"Fuse"
-]
-],
 "keywords": [
 766014
 ]
@@ -892,12 +798,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"damage_over_time",
-"Toxic"
-]
-],
 "keywords": [
 765927,
 766010,
@@ -936,16 +836,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Equip"
-],
-[
-"activated",
-"Equip"
-]
-],
 "keywords": [
 765937
 ]
@@ -1202,12 +1092,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"damage",
-"fight"
-]
-],
 "keywords": [
 765957
 ]
@@ -1252,16 +1136,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"first_strike",
-"Double strike"
-],
-[
-"upgrade",
-"Level up"
-]
-],
 "keywords": [
 765958,
 765985,
@@ -1339,12 +1213,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"immunity",
-"indestructible"
-]
-],
 "keywords": [
 765975,
 765988
@@ -1491,12 +1359,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"immunity",
-"indestructible"
-]
-],
 "keywords": [
 765988
 ]
@@ -1525,12 +1387,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"condition_count",
-"Battalion"
-]
-],
 "keywords": [
 766106
 ]
@@ -1609,12 +1465,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"mill",
-"Mill"
-]
-],
 "keywords": [
 766004
 ]
@@ -1721,12 +1571,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"on_ally_play",
-"Landfall"
-]
-],
 "keywords": [
 765934
 ]
@@ -1775,16 +1619,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cheat_death",
-"Regenerate"
-],
-[
-"temporary_buff",
-"Bushido"
-]
-],
 "keywords": [
 765956,
 766001
@@ -1839,16 +1673,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cost_type",
-"Morph"
-],
-[
-"transform",
-"Morph"
-]
-],
 "keywords": [
 765927,
 766068
@@ -1914,7 +1738,7 @@
 "Whenever this Vehicle attacks"
 ],
 [
-"revive",
+"return_to_hand",
 "return target creature or Vehicle card with mana value 2 or less from your graveyard to your hand"
 ],
 [
@@ -1943,20 +1767,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"activated",
-"Crew"
-],
-[
-"transform",
-"Crew"
-],
-[
-"temporary_effect",
-"Crew"
-]
-],
 "keywords": [
 765953
 ]
@@ -2037,12 +1847,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"generate_cards",
-"conjure"
-]
-],
 "keywords": [
 765928
 ]
@@ -2166,12 +1970,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"resource_gain",
-"Treasure"
-]
-],
 "keywords": [
 765933
 ]
@@ -2352,16 +2150,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Scry"
-],
-[
-"on_ally_play",
-"Alliance"
-]
-],
 "keywords": [
 765968,
 766011
@@ -2448,12 +2236,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"blocking",
-"Reach"
-]
-],
 "keywords": [
 765991
 ]
@@ -2556,12 +2338,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cost_type",
-"Cleave"
-]
-],
 "keywords": [
 766036
 ]
@@ -2676,24 +2452,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"untap",
-"Vigilance"
-],
-[
-"counter_spell",
-"Ward"
-],
-[
-"cost_increase",
-"Ward"
-],
-[
-"protection",
-"Ward"
-]
-],
 "keywords": [
 765943,
 766027
@@ -2761,6 +2519,10 @@
 ],
 [
 "revive",
+"Return target creature card from your graveyard to the battlefield"
+],
+[
+"return_to_hand",
 "return target creature card from your graveyard to your hand"
 ]
 ],
@@ -2820,7 +2582,7 @@
 ],
 [
 "protection",
-"Ward—Discard a card"
+"Ward\u2014Discard a card"
 ],
 [
 "hand_disruption",
@@ -2856,20 +2618,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"counter_spell",
-"Ward"
-],
-[
-"cost_increase",
-"Ward"
-],
-[
-"protection",
-"Ward"
-]
-],
 "keywords": [
 765931,
 766027
@@ -2891,12 +2639,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765959
 ]
@@ -2941,16 +2683,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"untap",
-"vigilance"
-],
-[
-"card_advantage",
-"Investigate"
-]
-],
 "keywords": [
 765931,
 765943,
@@ -2960,7 +2692,7 @@
 "769571": {
 "tags": [
 [
-"revive",
+"return_to_hand",
 "Return target creature card from a graveyard to its owner's hand"
 ],
 [
@@ -2985,12 +2717,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"deck_position",
-"Clash"
-]
-],
 "keywords": [
 765998
 ]
@@ -3023,16 +2749,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"equip"
-],
-[
-"activated",
-"equip"
-]
-],
 "keywords": [
 765937
 ]
@@ -3218,12 +2934,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"team_play",
-"Assist"
-]
-],
 "keywords": [
 765990
 ]
@@ -3325,12 +3035,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"stat_gain",
-"Monstrosity"
-]
-],
 "keywords": [
 766079
 ]
@@ -3391,12 +3095,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"transform"
-]
-],
 "keywords": [
 765996
 ]
@@ -3433,12 +3131,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Kicker"
-]
-],
 "keywords": [
 765942
 ]
@@ -3487,28 +3179,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Equip"
-],
-[
-"activated",
-"Equip"
-],
-[
-"generate_cards",
-"Draft from a spellbook"
-],
-[
-"selection",
-"Draft from a spellbook"
-],
-[
-"summon",
-"For Mirrodin!"
-]
-],
 "keywords": [
 765937,
 765970,
@@ -3601,7 +3271,7 @@
 ],
 [
 "activated",
-"Exhaust — {R}:"
+"Exhaust \u2014 {R}:"
 ],
 [
 "haste",
@@ -3633,12 +3303,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"once_per_game",
-"Exhaust"
-]
-],
 "keywords": [
 766136
 ]
@@ -3667,12 +3331,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"untap",
-"Vigilance"
-]
-],
 "keywords": [
 765943
 ]
@@ -3891,12 +3549,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_spell",
-"Heroic"
-]
-],
 "keywords": [
 765965
 ]
@@ -3954,20 +3606,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"counter_spell",
-"ward"
-],
-[
-"cost_increase",
-"ward"
-],
-[
-"protection",
-"ward"
-]
-],
 "keywords": [
 765927,
 765940,
@@ -4002,12 +3640,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765959
 ]
@@ -4048,12 +3680,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"modal_choice",
-"Fuse"
-]
-],
 "keywords": [
 766014
 ]
@@ -4110,12 +3736,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"team_play",
-"Assist"
-]
-],
 "keywords": [
 765990
 ]
@@ -4199,12 +3819,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"on_ally_play",
-"Landfall"
-]
-],
 "keywords": [
 765934
 ]
@@ -4241,12 +3855,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"immunity",
-"Indestructible"
-]
-],
 "keywords": [
 765988
 ]
@@ -4311,32 +3919,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"counter_spell",
-"ward"
-],
-[
-"cost_increase",
-"ward"
-],
-[
-"protection",
-"ward"
-],
-[
-"cost_type",
-"Disguise"
-],
-[
-"transform",
-"Disguise"
-],
-[
-"protection",
-"Disguise"
-]
-],
 "keywords": [
 765927,
 765975,
@@ -4441,20 +4023,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cast_from_zone",
-"Rebound"
-],
-[
-"free_play",
-"Rebound"
-],
-[
-"turn_start",
-"Rebound"
-]
-],
 "keywords": [
 765994
 ]
@@ -4739,24 +4307,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"on_ally_play",
-"Landfall"
-],
-[
-"kicker",
-"Offspring"
-],
-[
-"copy",
-"Offspring"
-],
-[
-"on_play",
-"Offspring"
-]
-],
 "keywords": [
 765934,
 766082
@@ -4798,20 +4348,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"generate_cards",
-"conjure"
-],
-[
-"on_attack",
-"Double team"
-],
-[
-"copy",
-"Double team"
-]
-],
 "keywords": [
 765928,
 766148
@@ -4927,16 +4463,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"transform"
-],
-[
-"removal",
-"airbend"
-]
-],
 "keywords": [
 765931,
 765996,
@@ -4975,16 +4501,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"deck_position",
-"explore"
-],
-[
-"stat_gain",
-"explore"
-]
-],
 "keywords": [
 766065
 ]
@@ -5021,12 +4537,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"transform"
-]
-],
 "keywords": [
 765996
 ]
@@ -5144,20 +4654,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"delayed",
-"Suspend"
-],
-[
-"free_play",
-"Suspend"
-],
-[
-"turn_start",
-"Suspend"
-]
-],
 "keywords": [
 766017
 ]
@@ -5211,12 +4707,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"direct_damage",
-"Afflict"
-]
-],
 "keywords": [
 766131
 ]
@@ -5271,12 +4761,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Kicker"
-]
-],
 "keywords": [
 765942
 ]
@@ -5431,24 +4915,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"convert"
-],
-[
-"transform",
-"More Than Meets the Eye"
-],
-[
-"stat_gain",
-"modular"
-],
-[
-"death_trigger",
-"modular"
-]
-],
 "keywords": [
 766133,
 766134,
@@ -5528,7 +4994,7 @@
 ],
 [
 "activated",
-"Power-up — {6}{R}"
+"Power-up \u2014 {6}{R}"
 ],
 [
 "stat_gain",
@@ -5548,12 +5014,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"upgrade",
-"Power-up"
-]
-],
 "keywords": [
 765931,
 766056
@@ -5632,20 +5092,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Bestow"
-],
-[
-"transform",
-"Bestow"
-],
-[
-"cost_type",
-"Bestow"
-]
-],
 "keywords": [
 766100
 ]
@@ -5674,12 +5120,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"tutor",
-"seek"
-]
-],
 "keywords": [
 765979
 ]
@@ -5720,12 +5160,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765959
 ]
@@ -5758,12 +5192,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"evasion",
-"flying"
-]
-],
 "keywords": [
 765931
 ]
@@ -5879,7 +5307,7 @@
 ],
 [
 "activated",
-"Exhaust — {5}{B}:"
+"Exhaust \u2014 {5}{B}:"
 ],
 [
 "revive",
@@ -5903,16 +5331,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"mill",
-"mill"
-],
-[
-"once_per_game",
-"Exhaust"
-]
-],
 "keywords": [
 766004,
 766136
@@ -5942,12 +5360,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"mill",
-"mill"
-]
-],
 "keywords": [
 766004
 ]
@@ -6006,12 +5418,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"death_count",
-"Morbid"
-]
-],
 "keywords": [
 765982
 ]
@@ -6032,7 +5438,7 @@
 ],
 [
 "activated",
-"Exhaust — {W}{U}{B}{R}{G}:"
+"Exhaust \u2014 {W}{U}{B}{R}{G}:"
 ],
 [
 "transform",
@@ -6064,24 +5470,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"activated",
-"Crew"
-],
-[
-"transform",
-"Crew"
-],
-[
-"temporary_effect",
-"Crew"
-],
-[
-"once_per_game",
-"Exhaust"
-]
-],
 "keywords": [
 765953,
 766136
@@ -6144,16 +5532,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Equip"
-],
-[
-"activated",
-"Equip"
-]
-],
 "keywords": [
 765937
 ]
@@ -6182,12 +5560,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"untap",
-"Vigilance"
-]
-],
 "keywords": [
 765943
 ]
@@ -6344,20 +5716,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"activated",
-"Crew"
-],
-[
-"transform",
-"Crew"
-],
-[
-"temporary_effect",
-"Crew"
-]
-],
 "keywords": [
 765953
 ]
@@ -6459,24 +5817,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"untap",
-"Vigilance"
-],
-[
-"transform",
-"transform"
-],
-[
-"summon",
-"Incubate"
-],
-[
-"transform",
-"Incubate"
-]
-],
 "keywords": [
 765943,
 765996,
@@ -6510,7 +5850,7 @@
 "mill four cards"
 ],
 [
-"revive",
+"return_to_hand",
 "return a non-Avatar creature card or a planeswalker card from your graveyard to your hand"
 ],
 [
@@ -6531,24 +5871,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"mill",
-"mill"
-],
-[
-"cost_type",
-"Impending"
-],
-[
-"delayed",
-"Impending"
-],
-[
-"turn_end",
-"Impending"
-]
-],
 "keywords": [
 766004,
 766174
@@ -6612,12 +5934,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765959
 ]
@@ -6650,12 +5966,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cheat_death",
-"Regenerate"
-]
-],
 "keywords": [
 765956
 ]
@@ -6688,12 +5998,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"immunity",
-"indestructible"
-]
-],
 "keywords": [
 765988
 ]
@@ -6730,12 +6034,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"first_strike",
-"first strike"
-]
-],
 "keywords": [
 765958,
 765975
@@ -6830,12 +6128,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"modal_choice",
-"Fuse"
-]
-],
 "keywords": [
 766014
 ]
@@ -6880,20 +6172,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"discard",
-"Cycling"
-],
-[
-"draw",
-"Cycling"
-],
-[
-"activated",
-"Cycling"
-]
-],
 "keywords": [
 765950
 ]
@@ -6943,12 +6221,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"selection",
-"scry"
-]
-],
 "keywords": [
 765968,
 765974
@@ -6990,20 +6262,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-],
-[
-"stat_gain",
-"Bolster"
-],
-[
-"stat_condition",
-"Bolster"
-]
-],
 "keywords": [
 765959,
 766094
@@ -7045,20 +6303,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Foretell"
-],
-[
-"delayed",
-"Foretell"
-],
-[
-"cast_from_zone",
-"Foretell"
-]
-],
 "keywords": [
 766059
 ]
@@ -7135,16 +6379,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"protection",
-"Protection"
-],
-[
-"upgrade",
-"Level up"
-]
-],
 "keywords": [
 765936,
 766073
@@ -7351,12 +6585,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"resource_gain",
-"Treasure"
-]
-],
 "keywords": [
 765933
 ]
@@ -7385,12 +6613,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cheat_death",
-"Regenerate"
-]
-],
 "keywords": [
 765956
 ]
@@ -7456,12 +6678,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_ally_play",
-"Landfall"
-]
-],
 "keywords": [
 765934
 ]
@@ -7494,12 +6710,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cost_reduction",
-"waterbend"
-]
-],
 "keywords": [
 766103
 ]
@@ -7552,28 +6762,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"evasion",
-"flying"
-],
-[
-"immunity",
-"indestructible"
-],
-[
-"on_attack",
-"firebending"
-],
-[
-"resource_gain",
-"firebending"
-],
-[
-"temporary_effect",
-"firebending"
-]
-],
 "keywords": [
 765927,
 765931,
@@ -7626,20 +6814,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Offspring"
-],
-[
-"copy",
-"Offspring"
-],
-[
-"on_play",
-"Offspring"
-]
-],
 "keywords": [
 766082
 ]
@@ -7702,16 +6876,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Equip"
-],
-[
-"activated",
-"Equip"
-]
-],
 "keywords": [
 765937
 ]
@@ -7942,7 +7106,7 @@
 "each opponent sacrifices a creature of their choice"
 ],
 [
-"revive",
+"return_to_hand",
 "return up to one target creature card from your graveyard to your hand"
 ]
 ],
@@ -8029,12 +7193,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"untap",
-"Vigilance"
-]
-],
 "keywords": [
 765943
 ]
@@ -8084,12 +7242,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765959
 ]
@@ -8166,12 +7318,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cast_from_zone",
-"Aftermath"
-]
-],
 "keywords": [
 766009
 ]
@@ -8245,20 +7391,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"modal_choice",
-"Riot"
-],
-[
-"haste",
-"Riot"
-],
-[
-"stat_gain",
-"Riot"
-]
-],
 "keywords": [
 766007
 ]
@@ -8442,7 +7574,7 @@
 "Exile three artifact cards from your graveyard:"
 ],
 [
-"revive",
+"return_to_hand",
 "Return this card from your graveyard to your hand"
 ]
 ],
@@ -8584,12 +7716,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"protection",
-"protection"
-]
-],
 "keywords": [
 765936,
 765947,
@@ -8719,16 +7845,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"lone_unit",
-"Exalted"
-],
-[
-"temporary_buff",
-"Exalted"
-]
-],
 "keywords": [
 766023
 ]
@@ -8765,12 +7881,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cheat_death",
-"regenerate"
-]
-],
 "keywords": [
 765956
 ]
@@ -8832,12 +7942,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"resource_gain",
-"Treasure"
-]
-],
 "keywords": [
 765933
 ]
@@ -9262,28 +8366,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Living metal"
-],
-[
-"transform",
-"convert"
-],
-[
-"transform",
-"More Than Meets the Eye"
-],
-[
-"cost_type",
-"Prowl"
-],
-[
-"tribal",
-"Prowl"
-]
-],
 "keywords": [
 766132,
 766133,
@@ -9294,7 +8376,7 @@
 "776288": {
 "tags": [
 [
-"revive",
+"return_to_hand",
 "from your graveyard to your hand"
 ],
 [
@@ -9415,12 +8497,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_spell",
-"Magecraft"
-]
-],
 "keywords": [
 766002
 ]
@@ -9482,16 +8558,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"upkeep",
-"Echo"
-],
-[
-"turn_start",
-"Echo"
-]
-],
 "keywords": [
 765975,
 765981
@@ -9604,16 +8670,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"upkeep",
-"Echo"
-],
-[
-"turn_start",
-"Echo"
-]
-],
 "keywords": [
 765981
 ]
@@ -9666,16 +8722,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"first_strike",
-"double strike"
-],
-[
-"transform",
-"transform"
-]
-],
 "keywords": [
 765931,
 765985,
@@ -9743,16 +8789,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Kicker"
-],
-[
-"cheat_death",
-"Regenerate"
-]
-],
 "keywords": [
 765942,
 765956
@@ -9839,24 +8875,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"generate_cards",
-"conjure"
-],
-[
-"cost_type",
-"Warp"
-],
-[
-"cast_from_zone",
-"Warp"
-],
-[
-"delayed",
-"Warp"
-]
-],
 "keywords": [
 765928,
 765975,
@@ -9952,16 +8970,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"transform"
-],
-[
-"mill",
-"mill"
-]
-],
 "keywords": [
 765948,
 765996,
@@ -10057,16 +9065,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"evasion",
-"flying"
-],
-[
-"protection",
-"protection"
-]
-],
 "keywords": [
 765931,
 765936
@@ -10149,12 +9147,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"team_play",
-"Assist"
-]
-],
 "keywords": [
 765990
 ]
@@ -10508,12 +9500,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Specialize"
-]
-],
 "keywords": [
 766013
 ]
@@ -10554,20 +9540,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"counter_spell",
-"ward"
-],
-[
-"cost_increase",
-"ward"
-],
-[
-"protection",
-"ward"
-]
-],
 "keywords": [
 765931,
 766027
@@ -10695,20 +9667,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"on_spell",
-"Increment"
-],
-[
-"permanent_growth",
-"Increment"
-],
-[
-"stat_condition",
-"Increment"
-]
-],
 "keywords": [
 766188
 ]
@@ -10770,12 +9728,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"first_strike",
-"Double strike"
-]
-],
 "keywords": [
 765985
 ]
@@ -10812,12 +9764,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_spell",
-"Repartee"
-]
-],
 "keywords": [
 766164
 ]
@@ -10833,7 +9779,7 @@
 "if this card is in your graveyard"
 ],
 [
-"revive",
+"return_to_hand",
 "return this card to your hand"
 ],
 [
@@ -10891,16 +9837,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"first_strike",
-"Double strike"
-],
-[
-"transform",
-"Specialize"
-]
-],
 "keywords": [
 765985,
 766013
@@ -10942,12 +9878,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"hand_size",
-"Hellbent"
-]
-],
 "keywords": [
 766149
 ]
@@ -11024,20 +9954,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"transform"
-],
-[
-"mill",
-"Mill"
-],
-[
-"activated",
-"Craft"
-]
-],
 "keywords": [
 765927,
 765948,
@@ -11212,24 +10128,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Transform"
-],
-[
-"rule_change",
-"Daybound"
-],
-[
-"rule_change",
-"Nightbound"
-],
-[
-"condition_count",
-"Nightbound"
-]
-],
 "keywords": [
 765996,
 766071,
@@ -11264,20 +10162,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"evasion",
-"Landwalk"
-],
-[
-"upkeep",
-"Echo"
-],
-[
-"turn_start",
-"Echo"
-]
-],
 "keywords": [
 765966,
 765981
@@ -11382,16 +10266,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cast_from_zone",
-"Flashback"
-],
-[
-"banish",
-"Flashback"
-]
-],
 "keywords": [
 765973
 ]
@@ -11448,12 +10322,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"tutor",
-"Seek"
-]
-],
 "keywords": [
 765979
 ]
@@ -11486,12 +10354,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765959
 ]
@@ -11545,12 +10407,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"blocking",
-"Reach"
-]
-],
 "keywords": [
 765991
 ]
@@ -11771,12 +10627,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"resource_gain",
-"Treasure"
-]
-],
 "keywords": [
 765933
 ]
@@ -11863,12 +10713,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"immunity",
-"Indestructible"
-]
-],
 "keywords": [
 765988
 ]
@@ -11897,12 +10741,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765959
 ]
@@ -11946,7 +10784,7 @@
 "whose graveyard has fewer creature cards"
 ],
 [
-"revive",
+"return_to_hand",
 "return a creature card from their graveyard to their hand"
 ]
 ],
@@ -11963,7 +10801,7 @@
 "When Neva enters"
 ],
 [
-"revive",
+"return_to_hand",
 "return target creature or enchantment card from your graveyard to your hand"
 ],
 [
@@ -11992,12 +10830,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"selection",
-"scry"
-]
-],
 "keywords": [
 765948,
 765968
@@ -12047,20 +10879,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"delayed",
-"Suspend"
-],
-[
-"free_play",
-"Suspend"
-],
-[
-"turn_start",
-"Suspend"
-]
-],
 "keywords": [
 766017
 ]
@@ -12097,12 +10915,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"summon",
-"cloak"
-]
-],
 "keywords": [
 766190
 ]
@@ -12189,12 +11001,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"upgrade",
-"Level up"
-]
-],
 "keywords": [
 766073
 ]
@@ -12227,12 +11033,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"immunity",
-"Indestructible"
-]
-],
 "keywords": [
 765988
 ]
@@ -12413,12 +11213,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"mill",
-"mill"
-]
-],
 "keywords": [
 765997,
 766004
@@ -12516,12 +11310,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"generate_cards",
-"Conjure"
-]
-],
 "keywords": [
 765928
 ]
@@ -12578,12 +11366,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"tribal",
-"Kinship"
-]
-],
 "keywords": [
 766057
 ]
@@ -12620,12 +11402,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"direct_damage",
-"Afflict"
-]
-],
 "keywords": [
 766131
 ]
@@ -12688,7 +11464,7 @@
 ],
 [
 "cost_type",
-"Escape—{3}{G}{G}"
+"Escape\u2014{3}{G}{G}"
 ],
 [
 "graveyard",
@@ -12708,12 +11484,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cast_from_zone",
-"Escape"
-]
-],
 "keywords": [
 765991,
 765997
@@ -12763,16 +11533,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"tutor",
-"seek"
-],
-[
-"graveyard",
-"Threshold"
-]
-],
 "keywords": [
 765979,
 766012
@@ -12893,16 +11653,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Equip"
-],
-[
-"activated",
-"Equip"
-]
-],
 "keywords": [
 765937
 ]
@@ -12971,32 +11721,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Equip"
-],
-[
-"activated",
-"Equip"
-],
-[
-"on_play",
-"Cascade"
-],
-[
-"free_play",
-"Cascade"
-],
-[
-"cost_condition",
-"Cascade"
-],
-[
-"random_effect",
-"Cascade"
-]
-],
 "keywords": [
 765937,
 766029
@@ -13059,7 +11783,7 @@
 "permanent card in your graveyard that was put there from the battlefield this turn"
 ],
 [
-"revive",
+"return_to_hand",
 "Return it to your hand"
 ]
 ],
@@ -13160,12 +11884,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"excess_damage",
-"trample"
-]
-],
 "keywords": [
 765927
 ]
@@ -13210,16 +11928,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"selection",
-"surveil"
-],
-[
-"self_mill",
-"surveil"
-]
-],
 "keywords": [
 765945
 ]
@@ -13265,7 +11973,7 @@
 ],
 [
 "protection",
-"Ward—Sacrifice three nonland permanents"
+"Ward\u2014Sacrifice three nonland permanents"
 ],
 [
 "banish",
@@ -13297,20 +12005,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"counter_spell",
-"Ward"
-],
-[
-"cost_increase",
-"Ward"
-],
-[
-"protection",
-"Ward"
-]
-],
 "keywords": [
 765931,
 765974,
@@ -13369,12 +12063,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"suppress",
-"detain"
-]
-],
 "keywords": [
 766161
 ]
@@ -13407,12 +12095,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"generate_cards",
-"Conjure"
-]
-],
 "keywords": [
 765928,
 766000
@@ -13491,16 +12173,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"damage",
-"fight"
-],
-[
-"transform",
-"transform"
-]
-],
 "keywords": [
 765957,
 765996
@@ -13604,16 +12276,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"excess_damage",
-"trample"
-],
-[
-"evasion",
-"flying"
-]
-],
 "keywords": [
 765927,
 765931
@@ -13764,12 +12426,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"resource_gain",
-"Treasure"
-]
-],
 "keywords": [
 765933
 ]
@@ -13859,12 +12515,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cost_type",
-"Cleave"
-]
-],
 "keywords": [
 766036
 ]
@@ -14005,20 +12655,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_attack",
-"Mobilize"
-],
-[
-"summon",
-"Mobilize"
-],
-[
-"self_destruct",
-"Mobilize"
-]
-],
 "keywords": [
 766102
 ]
@@ -14114,12 +12750,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"direct_damage",
-"Afflict"
-]
-],
 "keywords": [
 766131
 ]
@@ -14164,12 +12794,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"transform"
-]
-],
 "keywords": [
 765996
 ]
@@ -14231,12 +12855,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765959,
 766092
@@ -14361,16 +12979,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cost_type",
-"Prowl"
-],
-[
-"tribal",
-"Prowl"
-]
-],
 "keywords": [
 766191
 ]
@@ -14416,12 +13024,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cheat_death",
-"Regenerate"
-]
-],
 "keywords": [
 765956
 ]
@@ -14454,12 +13056,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"immunity",
-"hexproof"
-]
-],
 "keywords": [
 765931,
 765980
@@ -14664,12 +13260,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_ally_play",
-"Alliance"
-]
-],
 "keywords": [
 765927,
 765975,
@@ -14748,12 +13338,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"immunity",
-"Indestructible"
-]
-],
 "keywords": [
 765988
 ]
@@ -14977,12 +13561,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"transform"
-]
-],
 "keywords": [
 765931,
 765996
@@ -15040,20 +13618,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Sneak"
-],
-[
-"return_to_hand",
-"Sneak"
-],
-[
-"attack_now",
-"Sneak"
-]
-],
 "keywords": [
 766099
 ]
@@ -15176,12 +13740,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"blocking",
-"Shadow"
-]
-],
 "keywords": [
 766182
 ]
@@ -15405,12 +13963,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"upgrade",
-"Level up"
-]
-],
 "keywords": [
 766073
 ]
@@ -15451,16 +14003,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"stat_gain",
-"Amplify"
-],
-[
-"tribal",
-"Amplify"
-]
-],
 "keywords": [
 766095
 ]
@@ -15555,12 +14097,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cast_from_zone",
-"escape"
-]
-],
 "keywords": [
 765997
 ]
@@ -15605,20 +14141,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"revive",
-"Unearth"
-],
-[
-"haste",
-"Unearth"
-],
-[
-"self_destruct",
-"Unearth"
-]
-],
 "keywords": [
 765984
 ]
@@ -15647,12 +14169,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"mill",
-"mill"
-]
-],
 "keywords": [
 766004
 ]
@@ -15779,12 +14295,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"evasion",
-"Landwalk"
-]
-],
 "keywords": [
 765966,
 766193
@@ -15830,12 +14340,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"blocking",
-"Shadow"
-]
-],
 "keywords": [
 766182
 ]
@@ -15922,12 +14426,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"immunity",
-"hexproof"
-]
-],
 "keywords": [
 765980
 ]
@@ -15976,20 +14474,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Equip"
-],
-[
-"activated",
-"Equip"
-],
-[
-"card_quality",
-"learn"
-]
-],
 "keywords": [
 765937,
 766135
@@ -16157,12 +14641,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"resource_gain",
-"Treasure"
-]
-],
 "keywords": [
 765933
 ]
@@ -16204,12 +14682,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"tutor",
-"seek"
-]
-],
 "keywords": [
 765979
 ]
@@ -16246,16 +14718,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"stat_loss",
-"Infect"
-],
-[
-"damage_over_time",
-"Infect"
-]
-],
 "keywords": [
 765954
 ]
@@ -16292,12 +14754,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cheat_death",
-"Regenerate"
-]
-],
 "keywords": [
 765956,
 765958
@@ -16379,12 +14835,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"play_restriction",
-"Split second"
-]
-],
 "keywords": [
 766075
 ]
@@ -16577,16 +15027,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"protection",
-"protection"
-],
-[
-"first_strike",
-"Double strike"
-]
-],
 "keywords": [
 765936,
 765985
@@ -16636,12 +15076,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"card_quality",
-"connive"
-]
-],
 "keywords": [
 765931,
 765938,
@@ -16748,12 +15182,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765959
 ]
@@ -16854,24 +15282,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"activated",
-"Crew"
-],
-[
-"transform",
-"Crew"
-],
-[
-"temporary_effect",
-"Crew"
-],
-[
-"transform",
-"Transform"
-]
-],
 "keywords": [
 765931,
 765953,
@@ -17009,16 +15419,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-],
-[
-"variety_payoff",
-"Coven"
-]
-],
 "keywords": [
 765959,
 766028
@@ -17056,12 +15456,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765959
 ]
@@ -17094,16 +15488,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Buyback"
-],
-[
-"recycle",
-"Buyback"
-]
-],
 "keywords": [
 766096
 ]
@@ -17190,20 +15574,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-],
-[
-"cost_type",
-"Surge"
-],
-[
-"team_play",
-"Surge"
-]
-],
 "keywords": [
 765959,
 766185
@@ -17213,7 +15583,7 @@
 "tags": [
 [
 "on_play",
-"Whenever Círdan enters or attacks"
+"Whenever C\u00edrdan enters or attacks"
 ],
 [
 "on_attack",
@@ -17249,12 +15619,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"untap",
-"Vigilance"
-]
-],
 "keywords": [
 765943
 ]
@@ -17411,12 +15775,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"stat_loss",
-"Flanking"
-]
-],
 "keywords": [
 766104
 ]
@@ -17449,12 +15807,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"team_play",
-"Assist"
-]
-],
 "keywords": [
 765990
 ]
@@ -17503,20 +15855,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"discard",
-"Cycling"
-],
-[
-"draw",
-"Cycling"
-],
-[
-"activated",
-"Cycling"
-]
-],
 "keywords": [
 765950
 ]
@@ -17611,20 +15949,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"evasion",
-"landwalk"
-],
-[
-"evasion",
-"Islandwalk"
-],
-[
-"upgrade",
-"Level up"
-]
-],
 "keywords": [
 765966,
 765967,
@@ -17663,24 +15987,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Transform"
-],
-[
-"rule_change",
-"Daybound"
-],
-[
-"rule_change",
-"Nightbound"
-],
-[
-"condition_count",
-"Nightbound"
-]
-],
 "keywords": [
 765927,
 765996,
@@ -17724,20 +16030,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"discard",
-"Cycling"
-],
-[
-"draw",
-"Cycling"
-],
-[
-"activated",
-"Cycling"
-]
-],
 "keywords": [
 765950
 ]
@@ -17814,16 +16106,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"flanking",
-"Flanking"
-],
-[
-"stat_loss",
-"Flanking"
-]
-],
 "keywords": [
 766104
 ]
@@ -17919,12 +16201,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Kicker"
-]
-],
 "keywords": [
 765942,
 765993
@@ -17983,12 +16259,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"modal_choice",
-"Entwine"
-]
-],
 "keywords": [
 766041
 ]
@@ -18087,7 +16357,7 @@
 "attacks"
 ],
 [
-"revive",
+"return_to_hand",
 "return target creature card with no abilities from your graveyard to your hand"
 ],
 [
@@ -18189,16 +16459,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"untap",
-"Vigilance"
-],
-[
-"damage",
-"fight"
-]
-],
 "keywords": [
 765927,
 765943,
@@ -18249,24 +16509,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"on_damaged",
-"Enrage"
-],
-[
-"counter_spell",
-"Ward"
-],
-[
-"cost_increase",
-"Ward"
-],
-[
-"protection",
-"Ward"
-]
-],
 "keywords": [
 765939,
 766027
@@ -18300,12 +16542,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Enchant"
-]
-],
 "keywords": [
 765947,
 765959
@@ -18359,12 +16595,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"damage",
-"fight"
-]
-],
 "keywords": [
 765957
 ]
@@ -18401,12 +16631,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"evasion",
-"landwalk"
-]
-],
 "keywords": [
 765966,
 765967
@@ -18531,24 +16755,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"discard",
-"cycling"
-],
-[
-"draw",
-"cycling"
-],
-[
-"activated",
-"cycling"
-],
-[
-"cheat_death",
-"Regenerate"
-]
-],
 "keywords": [
 765950,
 765956
@@ -18578,16 +16784,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"on_attack",
-"Annihilator"
-],
-[
-"destroy",
-"Annihilator"
-]
-],
 "keywords": [
 766130
 ]
@@ -18596,7 +16792,7 @@
 "tags": [
 [
 "cost_type",
-"Escape—{3}{R}"
+"Escape\u2014{3}{R}"
 ],
 [
 "graveyard",
@@ -18616,12 +16812,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cast_from_zone",
-"Escape"
-]
-],
 "keywords": [
 765997
 ]
@@ -18699,12 +16889,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"summon",
-"cloak"
-]
-],
 "keywords": [
 766190
 ]
@@ -18799,12 +16983,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"resource_gain",
-"Treasure"
-]
-],
 "keywords": [
 765933
 ]
@@ -18849,20 +17027,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"first_strike",
-"first strike"
-],
-[
-"flanking",
-"Flanking"
-],
-[
-"stat_loss",
-"Flanking"
-]
-],
 "keywords": [
 765958,
 766104

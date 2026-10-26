@@ -6168,7 +6168,6 @@ hearthstone	746317	Wretched Tutor	friendly_fire	does	present
 hearthstone	746329	Shardshatter Mystic	friendly_fire	does	present
 hearthstone	746341	Raise Dead	bounce_enemy	does	present
 hearthstone	746341	Raise Dead	return_to_hand	does	present
-hearthstone	746341	Raise Dead	revive	does	present
 hearthstone	746344	Coerce	combo_sequence	does	present
 hearthstone	746344	Coerce	condition_life	does	present
 hearthstone	746344	Coerce	destroy	does	present

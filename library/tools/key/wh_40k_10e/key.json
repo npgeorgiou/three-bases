@@ -161,7 +161,7 @@
 ],
 [
 "advantage",
-"to re‑roll the result of that roll, throw or test"
+"to re\u2011roll the result of that roll, throw or test"
 ],
 [
 "kicker",
@@ -309,7 +309,7 @@
 ],
 [
 "advantage",
-"re‑roll one or both of the dice"
+"re\u2011roll one or both of the dice"
 ],
 [
 "stat_gain",
@@ -547,7 +547,7 @@
 ],
 [
 "delayed",
-"At the end of the Reinforcements step of your opponent’s next Movement phase"
+"At the end of the Reinforcements step of your opponent\u2019s next Movement phase"
 ]
 ],
 "by": "C"
@@ -638,7 +638,7 @@
 ],
 [
 "mark_target",
-"select one unit from your opponent’s army"
+"select one unit from your opponent\u2019s army"
 ],
 [
 "temporary_effect",
@@ -701,7 +701,7 @@
 "tags": [
 [
 "advantage",
-"re‑roll a Hit roll of 1"
+"re\u2011roll a Hit roll of 1"
 ],
 [
 "stances",
@@ -911,7 +911,7 @@
 ],
 [
 "advantage",
-"re‑roll the Damage roll"
+"re\u2011roll the Damage roll"
 ],
 [
 "type_grant",
@@ -956,7 +956,7 @@
 ],
 [
 "advantage",
-"re‑roll Advance and Charge rolls"
+"re\u2011roll Advance and Charge rolls"
 ],
 [
 "control_reward",
@@ -1294,7 +1294,7 @@
 ],
 [
 "advantage",
-"re‑roll Charge rolls"
+"re\u2011roll Charge rolls"
 ],
 [
 "temporary_buff",
@@ -3008,7 +3008,7 @@
 ],
 [
 "turn_end",
-"at the end of your opponent’s turn"
+"at the end of your opponent\u2019s turn"
 ],
 [
 "reserve_bench",
@@ -3025,7 +3025,7 @@
 ],
 [
 "on_enemy_enter",
-"ends a Normal, Advance or Fall Back move within 9\" of the bearer’s unit"
+"ends a Normal, Advance or Fall Back move within 9\" of the bearer\u2019s unit"
 ],
 [
 "movement",
@@ -3135,7 +3135,7 @@
 ],
 [
 "stat_gain",
-"Add 1 to the Attacks characteristic of the bearer’s melee weapons"
+"Add 1 to the Attacks characteristic of the bearer\u2019s melee weapons"
 ],
 [
 "once_per_game",
@@ -3151,7 +3151,7 @@
 ],
 [
 "scope_multi",
-"all other models in the bearer’s unit"
+"all other models in the bearer\u2019s unit"
 ]
 ],
 "by": "C"
@@ -3492,7 +3492,7 @@
 "tags": [
 [
 "stat_gain",
-"Add 2 to the bearer’s Wounds characteristic"
+"Add 2 to the bearer\u2019s Wounds characteristic"
 ]
 ],
 "by": "A=B"
@@ -3877,7 +3877,7 @@
 ],
 [
 "stat_loss",
-"subtract 2 from that unit’s Move characteristic"
+"subtract 2 from that unit\u2019s Move characteristic"
 ],
 [
 "temporary_effect",
@@ -3898,7 +3898,7 @@
 ],
 [
 "deckbuilding_effect",
-"the bearer’s unit cannot contain any models without the Destroyer Cult keyword"
+"the bearer\u2019s unit cannot contain any models without the Destroyer Cult keyword"
 ],
 [
 "stat_gain",
@@ -3915,11 +3915,11 @@
 ],
 [
 "other_death_trigger",
-"if any models from the bearer’s unit were destroyed as a result of those attacks"
+"if any models from the bearer\u2019s unit were destroyed as a result of those attacks"
 ],
 [
 "movement",
-"the bearer’s unit can make a Surge move"
+"the bearer\u2019s unit can make a Surge move"
 ],
 [
 "random_effect",
@@ -3927,7 +3927,7 @@
 ],
 [
 "stress_morale",
-"while it is Battle‑shocked"
+"while it is Battle\u2011shocked"
 ]
 ],
 "by": "C"
@@ -4124,7 +4124,7 @@
 "tags": [
 [
 "tribal",
-"T’au Empire model only"
+"T\u2019au Empire model only"
 ],
 [
 "start_of_game",
@@ -4136,7 +4136,7 @@
 ],
 [
 "scope_multi",
-"up to two friendly T’au Empire units"
+"up to two friendly T\u2019au Empire units"
 ]
 ],
 "by": "C"
@@ -4234,7 +4234,7 @@
 ],
 [
 "stat_gain",
-"add 1 to that unit’s Leadership characteristic"
+"add 1 to that unit\u2019s Leadership characteristic"
 ],
 [
 "tribal",
@@ -5157,7 +5157,7 @@
 ],
 [
 "mark_target",
-"select one unit from your opponent’s army"
+"select one unit from your opponent\u2019s army"
 ],
 [
 "buff",
@@ -6706,7 +6706,7 @@
 "tags": [
 [
 "type_grant",
-"The bearer’s unit has the Smoke and Grenades keywords"
+"The bearer\u2019s unit has the Smoke and Grenades keywords"
 ],
 [
 "saving_throws",
@@ -6873,7 +6873,7 @@
 "tags": [
 [
 "turn_end",
-"At the end of your opponent’s Fight phase"
+"At the end of your opponent\u2019s Fight phase"
 ],
 [
 "coin_economy",
@@ -9796,7 +9796,7 @@
 ],
 [
 "death_trigger",
-"Each time a model in this model’s unit is destroyed"
+"Each time a model in this model\u2019s unit is destroyed"
 ],
 [
 "attack_now",
@@ -9938,7 +9938,7 @@
 ],
 [
 "stat_loss",
-"subtract 2 from that unit’s Move characteristic"
+"subtract 2 from that unit\u2019s Move characteristic"
 ],
 [
 "debuff",
@@ -9946,7 +9946,7 @@
 ],
 [
 "temporary_effect",
-"until the end of your opponent’s next turn"
+"until the end of your opponent\u2019s next turn"
 ],
 [
 "aura",
@@ -10087,11 +10087,11 @@
 ],
 [
 "random_effect",
-"roll one D6 for each of this model’s remaining wounds"
+"roll one D6 for each of this model\u2019s remaining wounds"
 ],
 [
 "condition_count",
-"for each of this model’s remaining wounds"
+"for each of this model\u2019s remaining wounds"
 ],
 [
 "damage",
@@ -10158,7 +10158,7 @@
 ],
 [
 "cheat_death",
-"The first time this unit’s Fabius Bile model is destroyed"
+"The first time this unit\u2019s Fabius Bile model is destroyed"
 ],
 [
 "random_effect",
@@ -10264,7 +10264,7 @@
 ],
 [
 "friendly_fire",
-"this model’s unit suffers 1 mortal wound"
+"this model\u2019s unit suffers 1 mortal wound"
 ],
 [
 "spell_power",
@@ -11081,10 +11081,6 @@
 [
 "damage_types",
 "Psychic"
-],
-[
-"attack_gain",
-"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -12454,7 +12450,7 @@
 ],
 [
 "turn_start",
-"At the start of each player’s Command phase"
+"At the start of each player\u2019s Command phase"
 ],
 [
 "saving_throws",
@@ -12945,7 +12941,7 @@
 "tags": [
 [
 "turn_start",
-"At the start of each player’s Command phase"
+"At the start of each player\u2019s Command phase"
 ],
 [
 "regeneration",
@@ -13868,7 +13864,7 @@
 ],
 [
 "reactions",
-"At the start of your opponent’s Shooting phase"
+"At the start of your opponent\u2019s Shooting phase"
 ],
 [
 "stat_gain",
@@ -13947,7 +13943,7 @@
 ],
 [
 "turn_start",
-"At the start of each player’s Command phase"
+"At the start of each player\u2019s Command phase"
 ],
 [
 "merge_attach",
@@ -14988,7 +14984,7 @@
 ],
 [
 "on_attack",
-"Each time this model’s unit is selected to fight"
+"Each time this model\u2019s unit is selected to fight"
 ],
 [
 "coin_economy",
@@ -15287,11 +15283,11 @@
 ],
 [
 "mark_target",
-"to be this unit’s quarry"
+"to be this unit\u2019s quarry"
 ],
 [
 "advantage",
-"you can re‑roll the Hit roll"
+"you can re\u2011roll the Hit roll"
 ],
 [
 "buff",
@@ -15303,7 +15299,7 @@
 ],
 [
 "other_death_trigger",
-"Each time the bearer’s unit’s quarry is destroyed"
+"Each time the bearer\u2019s unit\u2019s quarry is destroyed"
 ],
 [
 "turn_end",
@@ -15572,7 +15568,7 @@
 ],
 [
 "on_spell",
-"Each time you select the bearer’s unit as the target of a Stratagem"
+"Each time you select the bearer\u2019s unit as the target of a Stratagem"
 ],
 [
 "resource_gain",
@@ -16449,7 +16445,7 @@
 ],
 [
 "reactions",
-"At the start of your opponent’s Shooting phase"
+"At the start of your opponent\u2019s Shooting phase"
 ],
 [
 "random_effect",
@@ -17025,7 +17021,7 @@
 ],
 [
 "advantage",
-"you can re‑roll the Hit roll"
+"you can re\u2011roll the Hit roll"
 ],
 [
 "tribal",
@@ -19773,7 +19769,7 @@
 ],
 [
 "turn_end",
-"At the end of your opponent’s turn"
+"At the end of your opponent\u2019s turn"
 ],
 [
 "return_to_hand",
@@ -21919,11 +21915,11 @@
 ],
 [
 "stat_loss",
-"subtract 2 from that unit’s Move characteristic"
+"subtract 2 from that unit\u2019s Move characteristic"
 ],
 [
 "temporary_effect",
-"until the end of your opponent’s next turn"
+"until the end of your opponent\u2019s next turn"
 ],
 [
 "board_limit",
@@ -22451,7 +22447,7 @@
 ],
 [
 "reactions",
-"In your opponent’s Shooting phase"
+"In your opponent\u2019s Shooting phase"
 ],
 [
 "movement",
@@ -23194,7 +23190,7 @@
 ],
 [
 "stat_loss",
-"subtract 6 from this model’s Objective Control characteristic"
+"subtract 6 from this model\u2019s Objective Control characteristic"
 ],
 [
 "debuff",
@@ -23262,7 +23258,7 @@
 ],
 [
 "stat_loss",
-"subtract 5 from this model’s Objective Control characteristic"
+"subtract 5 from this model\u2019s Objective Control characteristic"
 ],
 [
 "debuff",
@@ -23341,7 +23337,7 @@
 ],
 [
 "stat_loss",
-"subtract 8 from this model’s Objective Control characteristic"
+"subtract 8 from this model\u2019s Objective Control characteristic"
 ],
 [
 "debuff",
@@ -23591,7 +23587,7 @@
 ],
 [
 "stat_condition",
-"if the Strength characteristic of that attack is greater than this model’s Toughness characteristic"
+"if the Strength characteristic of that attack is greater than this model\u2019s Toughness characteristic"
 ],
 [
 "protection",
@@ -23876,7 +23872,7 @@
 ],
 [
 "reactions",
-"at the start of your opponent’s Shooting phase"
+"at the start of your opponent\u2019s Shooting phase"
 ],
 [
 "saving_throws",
@@ -24103,7 +24099,7 @@
 ],
 [
 "reactions",
-"At the start of your opponent’s Movement phase"
+"At the start of your opponent\u2019s Movement phase"
 ],
 [
 "temporary_effect",
@@ -24224,7 +24220,7 @@
 ],
 [
 "death_trigger",
-"If this unit’s Szarekh model is destroyed"
+"If this unit\u2019s Szarekh model is destroyed"
 ],
 [
 "friendly_fire",
@@ -24552,7 +24548,7 @@
 ],
 [
 "stat_gain",
-"Add 2 to the bearer’s Toughness characteristic"
+"Add 2 to the bearer\u2019s Toughness characteristic"
 ],
 [
 "silence",
@@ -25585,7 +25581,7 @@
 ],
 [
 "tribal",
-"friendly T’au Empire unit"
+"friendly T\u2019au Empire unit"
 ],
 [
 "stat_gain",
@@ -26003,7 +25999,7 @@
 "tags": [
 [
 "turn_end",
-"At the end of your opponent’s turn"
+"At the end of your opponent\u2019s turn"
 ],
 [
 "return_to_hand",
@@ -26125,7 +26121,7 @@
 ],
 [
 "stat_loss",
-"subtract 5 from this model’s Objective Control characteristic"
+"subtract 5 from this model\u2019s Objective Control characteristic"
 ],
 [
 "debuff",
@@ -26258,7 +26254,7 @@
 "tags": [
 [
 "reactions",
-"At the end of your opponent’s Movement phase"
+"At the end of your opponent\u2019s Movement phase"
 ],
 [
 "condition_life",
@@ -26342,7 +26338,7 @@
 ],
 [
 "stat_loss",
-"subtract 2 from that unit’s Move characteristic"
+"subtract 2 from that unit\u2019s Move characteristic"
 ],
 [
 "debuff",
@@ -26350,7 +26346,7 @@
 ],
 [
 "temporary_effect",
-"until the end of your opponent’s next turn"
+"until the end of your opponent\u2019s next turn"
 ],
 [
 "reserve_bench",
@@ -27469,7 +27465,7 @@
 ],
 [
 "counterattack",
-"can fight after the attacking model’s unit has finished making its attacks"
+"can fight after the attacking model\u2019s unit has finished making its attacks"
 ],
 [
 "first_strike",

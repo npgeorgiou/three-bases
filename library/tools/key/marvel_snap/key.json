@@ -503,12 +503,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"discard",
-"Discard"
-]
-],
 "keywords": [
 795390,
 795404
@@ -658,12 +652,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"movement",
-"Move"
-]
-],
 "keywords": [
 795390,
 795405
@@ -719,12 +707,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"passive",
-"Ongoing"
-]
-],
 "keywords": [
 795391
 ]
@@ -830,12 +812,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"discard",
-"Discard"
-]
-],
 "keywords": [
 795390,
 795404
@@ -1091,12 +1067,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"stat_loss",
-"Afflict"
-]
-],
 "keywords": [
 795390,
 795407
@@ -1234,12 +1204,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"movement",
-"Move"
-]
-],
 "keywords": [
 795390,
 795405
@@ -1438,12 +1402,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"movement",
-"Move"
-]
-],
 "keywords": [
 795390,
 795405
@@ -1558,12 +1516,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"discard",
-"When Discarded"
-]
-],
 "keywords": [
 795397
 ]
@@ -1584,12 +1536,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"discard",
-"Discard"
-]
-],
 "keywords": [
 795392,
 795404
@@ -1623,12 +1569,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"stat_loss",
-"Afflict"
-]
-],
 "keywords": [
 795393,
 795407
@@ -1706,12 +1646,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"passive",
-"Ongoing"
-]
-],
 "keywords": [
 795391
 ]
@@ -2175,12 +2109,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"stat_loss",
-"Afflict"
-]
-],
 "keywords": [
 795390,
 795407
@@ -2206,12 +2134,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"discard",
-"Discard"
-]
-],
 "keywords": [
 795390,
 795404
@@ -2233,12 +2155,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"stat_loss",
-"Afflict"
-]
-],
 "keywords": [
 795392,
 795407
@@ -2501,12 +2417,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"movement",
-"Move"
-]
-],
 "keywords": [
 795390,
 795405
@@ -2739,7 +2649,7 @@
 "On Reveal"
 ],
 [
-"revive",
+"return_to_hand",
 "Return all your discarded and destroyed cards to hand"
 ],
 [
@@ -3034,12 +2944,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"movement",
-"Move"
-]
-],
 "keywords": [
 795405
 ]
@@ -3229,12 +3133,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"discard",
-"When Discarded"
-]
-],
 "keywords": [
 795397
 ]
@@ -3537,12 +3435,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"discard",
-"When Discarded"
-]
-],
 "keywords": [
 795397
 ]
@@ -3584,12 +3476,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"stat_loss",
-"Afflict"
-]
-],
 "keywords": [
 795390,
 795407
@@ -3615,12 +3501,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"quests",
-"Objective"
-]
-],
 "keywords": [
 795398
 ]
@@ -3878,16 +3758,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Merge"
-],
-[
-"stat_gain",
-"Merge"
-]
-],
 "keywords": [
 795390,
 795406
@@ -4022,12 +3892,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"stat_loss",
-"Afflict"
-]
-],
 "keywords": [
 795390,
 795407
@@ -4202,12 +4066,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"quests",
-"Objective"
-]
-],
 "keywords": [
 795398
 ]
@@ -4236,16 +4094,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Merge"
-],
-[
-"stat_gain",
-"Merge"
-]
-],
 "keywords": [
 795393,
 795406
@@ -4312,12 +4160,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"destroy",
-"Destroy"
-]
-],
 "keywords": [
 795390,
 795403
@@ -4380,12 +4222,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"discard",
-"When Discarded"
-]
-],
 "keywords": [
 795397
 ]
@@ -4418,16 +4254,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Merge"
-],
-[
-"stat_gain",
-"Merge"
-]
-],
 "keywords": [
 795392,
 795406
@@ -4461,16 +4287,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Merge"
-],
-[
-"stat_gain",
-"Merge"
-]
-],
 "keywords": [
 795392,
 795406
@@ -5006,12 +4822,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"destroy",
-"Destroy"
-]
-],
 "keywords": [
 795390,
 795403
@@ -5114,12 +4924,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"discard",
-"When Discarded"
-]
-],
 "keywords": [
 795397
 ]
@@ -5208,12 +5012,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"destroy",
-"Destroy"
-]
-],
 "keywords": [
 795403
 ]
@@ -5519,12 +5317,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"destroy",
-"Destroy"
-]
-],
 "keywords": [
 795390,
 795403
@@ -6598,12 +6390,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"discard",
-"Discard"
-]
-],
 "keywords": [
 795404
 ]
@@ -6646,12 +6432,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"destroy",
-"Destroy"
-]
-],
 "keywords": [
 795403
 ]

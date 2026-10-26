@@ -57,7 +57,7 @@ cost_reduction | Cards cost less | effect | resource_advantage,economy | The own
 cost_set | Set a cost to a fixed number | effect | resource_advantage,economy | A card's cost becomes a fixed number (costs 0, costs 3). | A reduction by an amount is cost_reduction.
 free_play | Put into play for free | effect | resource_advantage,economy,tempo | A card enters play without its cost being paid, by an effect or automatically. | A dead unit coming back is revive.
 summon | Summon units / tokens | effect | helps_me,board_presence | New units are put onto the owner's side of the board. | Units put on the opponent's side are board_clog; units back from death are revive.
-revive | Bring back dead units (revive) | effect | helps_me,death | A unit that died or was destroyed earlier comes back to play or to hand. | Surviving at the moment of death is cheat_death.
+revive | Bring back dead units (revive) | effect | helps_me,death | A unit that died or was destroyed earlier comes back into play. (Kaptain, 26 Oct 2026: back to hand is return_to_hand.) | Surviving at the moment of death is cheat_death.
 self_mill | Fill my own discard pile (self-mill) | effect | helps_me,graveyard,card_flow | The owner puts cards from their own deck straight into their discard pile or graveyard. | Doing it to the opponent is mill.
 speed | Act sooner or more often | effect | helps_me | The owner's units or turns act earlier or more times than normal. | Several strikes in one attack step is multi_attack.
 haste | Act the turn it arrives (haste, rush) | combat | speed,tempo | A unit can attack or act on the turn it is played. | An effect that makes it attack at once is attack_now.
@@ -67,7 +67,7 @@ untap | Ready a used unit again (untap) | effect | speed | A used or tapped unit
 movement | Move my units (reposition) | effect | helps_me,positional | The owner moves their own unit to another space, row, lane or location. | Moving enemy units is forced_movement.
 swap | Swap positions | effect | movement | Two units trade places, or trade lanes or locations. | Trading stats is stat_gain or stat_loss; trading hands or decks is hand_deck_swap.
 blink | Blink (leave and come back fresh) | effect | helps_me | A unit leaves play and returns at once, reset, repeating its on-enter effect. | Going back to hand is return_to_hand.
-return_to_hand | Return my unit to hand | effect | helps_me | The owner returns their own unit to hand, to replay it or save it. | Sending an enemy unit back is bounce_enemy.
+return_to_hand | Return my unit to hand | effect | helps_me | The owner returns their own unit to hand, to replay it or save it: from play, when it dies, or from the discard pile or graveyard. (Widened 26 Oct 2026, Kaptain.) | Sending an enemy unit back is bounce_enemy.
 copy | Copy cards or units | effect | helps_me | A copy of a card, unit or effect is made for the owner. | Doing a trigger again is repeat_trigger; a copy given to the opponent is enemy_benefit.
 repeat_trigger | Repeat or double triggers | effect | helps_me | A trigger or effect happens again, or twice. | Copying a whole card is copy.
 transform | Transform my card into another | effect | helps_me | The owner's own card or unit turns into a different one: evolve, flip, become. | Turning an enemy into something weaker is polymorph.

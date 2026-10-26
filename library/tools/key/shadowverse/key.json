@@ -379,12 +379,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752308,
 752310
@@ -418,7 +412,7 @@
 "At the end of this turn"
 ],
 [
-"revive",
+"return_to_hand",
 "put into your hand copies of 2 different random allied Swordcraft followers destroyed"
 ],
 [
@@ -859,12 +853,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752302,
@@ -891,12 +879,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752304
 ]
@@ -1174,12 +1156,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752307
@@ -1339,12 +1315,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752302,
@@ -1775,12 +1745,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -1922,12 +1886,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304,
@@ -1966,12 +1924,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"evolve"
-]
-],
 "keywords": [
 752301,
 752303
@@ -2419,12 +2371,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304
@@ -2454,12 +2400,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304,
@@ -2494,12 +2434,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"graveyard",
-"Necromancy"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -2538,12 +2472,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304
@@ -2633,16 +2561,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"Evolve"
-],
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -2682,12 +2600,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"revive",
-"Reanimate"
-]
-],
 "keywords": [
 752321
 ]
@@ -2817,12 +2729,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -2905,12 +2811,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"evolve"
-]
-],
 "keywords": [
 752300,
 752303
@@ -3168,12 +3068,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -3202,12 +3096,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752307
@@ -3245,12 +3133,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752307
@@ -3292,12 +3174,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752307
@@ -3495,12 +3371,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304,
@@ -3556,12 +3426,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752310
 ]
@@ -3586,12 +3450,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Evolve"
-]
-],
 "keywords": [
 752300,
 752303
@@ -3723,12 +3581,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752304
 ]
@@ -3881,12 +3733,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304,
@@ -4066,12 +3912,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"in_hand_buff",
-"Spellboost"
-]
-],
 "keywords": [
 752311
 ]
@@ -4222,12 +4062,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"in_hand_buff",
-"Spellboost"
-]
-],
 "keywords": [
 752300,
 752311
@@ -4517,12 +4351,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Evolve"
-]
-],
 "keywords": [
 752300,
 752303
@@ -4692,12 +4520,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -4726,12 +4548,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"graveyard",
-"Necromancy"
-]
-],
 "keywords": [
 752300,
 752314
@@ -4830,16 +4646,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"Evolve"
-],
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -5097,12 +4903,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"evolve"
-]
-],
 "keywords": [
 752300,
 752303
@@ -5260,12 +5060,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -5358,16 +5152,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"Evolve"
-],
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -5417,12 +5201,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752307
@@ -5464,12 +5242,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304
@@ -5503,12 +5275,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752300,
 752307
@@ -5550,16 +5316,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-],
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752304,
@@ -5667,12 +5423,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -5855,16 +5605,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"Evolve"
-],
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752303,
 752304
@@ -5936,12 +5676,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"evolve"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -5980,12 +5714,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304
@@ -6031,12 +5759,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -6067,12 +5789,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304
@@ -6171,20 +5887,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_number",
-"Skybound Art"
-],
-[
-"condition_count",
-"Skybound Art"
-],
-[
-"turn_number",
-"Super Skybound Art"
-]
-],
 "keywords": [
 752300,
 752305,
@@ -6269,12 +5971,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -6333,20 +6029,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"evolve"
-],
-[
-"kicker",
-"Enhance"
-],
-[
-"graveyard",
-"Necromancy"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -6394,12 +6076,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"graveyard",
-"Necromancy"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -6427,12 +6103,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"graveyard",
-"Necromancy"
-]
-],
 "keywords": [
 752314
 ]
@@ -6457,12 +6127,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"graveyard",
-"Necromancy"
-]
-],
 "keywords": [
 752314
 ]
@@ -6547,12 +6211,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"evolve"
-]
-],
 "keywords": [
 752300,
 752303
@@ -6566,7 +6224,7 @@
 ],
 [
 "summon",
-"Summon a Liberté, Werewolf Pup"
+"Summon a Libert\u00e9, Werewolf Pup"
 ],
 [
 "kicker",
@@ -6618,16 +6276,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"kicker",
-"Enhance"
-],
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752300,
 752304,
@@ -6710,16 +6358,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-],
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752300,
 752304,
@@ -6770,20 +6408,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"Evolve"
-],
-[
-"kicker",
-"Enhance"
-],
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -6820,12 +6444,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -6961,12 +6579,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304
@@ -7036,12 +6648,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752300,
 752310
@@ -7202,12 +6808,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752304
 ]
@@ -7358,12 +6958,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"Evolve"
-]
-],
 "keywords": [
 752303
 ]
@@ -7828,12 +7422,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752309
@@ -7899,12 +7487,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -8002,12 +7584,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -8038,12 +7614,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752304
@@ -8101,12 +7671,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Evolve"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -8248,12 +7812,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"evolve"
-]
-],
 "keywords": [
 752300,
 752303
@@ -8440,16 +7998,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"evolve"
-],
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -8534,12 +8082,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -8597,10 +8139,6 @@
 [
 "immunity",
 "Reduce damage from effects to 0"
-],
-[
-"defence_gain",
-"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -8636,12 +8174,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752300,
 752310,
@@ -8696,20 +8228,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"evolve"
-],
-[
-"cost_type",
-"Accelerate"
-],
-[
-"revive",
-"Reanimate"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -8738,12 +8256,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"revive",
-"Reanimate"
-]
-],
 "keywords": [
 752300,
 752321
@@ -8797,16 +8309,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"delayed",
-"Countdown"
-],
-[
-"revive",
-"Reanimate"
-]
-],
 "keywords": [
 752300,
 752302,
@@ -8907,20 +8409,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"Evolve"
-],
-[
-"cost_type",
-"Accelerate"
-],
-[
-"graveyard",
-"Necromancy"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -8965,12 +8453,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -9155,12 +8637,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752300,
 752306,
@@ -9231,12 +8707,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752300,
 752307
@@ -9344,12 +8814,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -9487,12 +8951,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752306,
@@ -9559,12 +9017,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -9805,12 +9257,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752307
@@ -9889,12 +9335,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"graveyard",
-"Necromancy"
-]
-],
 "keywords": [
 752300,
 752314
@@ -9997,12 +9437,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752301,
 752308,
@@ -10105,16 +9539,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"evolve"
-],
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -10323,16 +9747,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-],
-[
-"modal_choice",
-"Choose"
-]
-],
 "keywords": [
 752300,
 752306,
@@ -10409,12 +9823,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752309
@@ -10513,12 +9921,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752310,
 752317
@@ -10652,12 +10054,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752309
@@ -10707,12 +10103,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"revive",
-"Reanimate"
-]
-],
 "keywords": [
 752300,
 752321
@@ -10788,12 +10178,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -10830,12 +10214,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752309,
@@ -10874,12 +10252,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -10918,12 +10290,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -10958,12 +10324,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752309
@@ -11013,16 +10373,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"Evolve"
-],
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -11230,12 +10580,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752309
@@ -11277,12 +10621,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752307
@@ -11376,12 +10714,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752309
@@ -11443,12 +10775,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752301,
@@ -11492,12 +10818,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"in_hand_buff",
-"Spellboost"
-]
-],
 "keywords": [
 752311
 ]
@@ -11538,12 +10858,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752306,
 752308,
@@ -11622,12 +10936,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752307,
@@ -11678,16 +10986,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"cost_type",
-"Accelerate"
-],
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752309,
 752310,
@@ -11758,16 +11056,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"evolve"
-],
-[
-"cost_type",
-"Accelerate"
-]
-],
 "keywords": [
 752300,
 752303,
@@ -11794,12 +11082,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"in_hand_buff",
-"Spellboost"
-]
-],
 "keywords": [
 752311
 ]
@@ -12177,12 +11459,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Evolve"
-]
-],
 "keywords": [
 752303
 ]
@@ -12267,12 +11543,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -12372,12 +11642,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"kicker",
-"Enhance"
-]
-],
 "keywords": [
 752304
 ]
@@ -12492,12 +11756,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"Evolve"
-]
-],
 "keywords": [
 752300,
 752302,
@@ -12532,12 +11790,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752307
@@ -12587,12 +11839,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -12882,12 +12128,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"damage",
-"Strike"
-]
-],
 "keywords": [
 752305,
 752310
@@ -13003,16 +12243,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"damage",
-"Strike"
-],
-[
-"tribal",
-"Maneuver"
-]
-],
 "keywords": [
 752310,
 752333
@@ -13046,12 +12276,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Evolve"
-]
-],
 "keywords": [
 752303
 ]
@@ -13105,12 +12329,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752302,
 752307
@@ -13140,12 +12358,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -13260,12 +12472,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"transform",
-"Evolve"
-]
-],
 "keywords": [
 752303
 ]
@@ -13406,12 +12612,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -13436,12 +12636,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Countdown"
-]
-],
 "keywords": [
 752307
 ]
@@ -13470,12 +12664,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"tribal",
-"Maneuver"
-]
-],
 "keywords": [
 752333
 ]

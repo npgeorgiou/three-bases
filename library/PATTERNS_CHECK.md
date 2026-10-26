@@ -129,4 +129,27 @@ Things that confused earlier chats:
 - Darkest Dungeon and Duelyst rechecked 26 Oct 2026 under the damage rules: darkest_dungeon wrong 50.6 → 46.8 (`!random_effect` on plain "chance"); duelyst wrong 33.9 → 32.7, missed 26.6 → 23.4 (rows are zones, not `area_templates`; "in this row" and "in front" are `aoe_damage`/`adjacency`; "all friendly/enemy minions" is `scope_global`, Kaptain 26 Oct 2026, 18 key entries changed from `scope_multi` or extended; Lux Ignis and Dauntless Advance stay `scope_multi`; lines like "in one straight line" are excluded).
 - Speed, second part (26 Oct 2026): `tools/refast.py` rejects a pattern with a plain substring test of a literal it must contain before running the regex; `trigger_pairs.py` and `pattern_fix.py` use it. The tag, link, trigger-pair and faction tables of a full build are identical to the build before (0 differences), and the steps of a build take 154-161 s instead of 238 s (`trigger_pairs.py` 139 s → 75 s, `pattern_fix.py` 41 s → 21 s). `build.sh` now prints the seconds each step takes (`time:` lines), so the next slow step is easy to see; `step_log.py` takes 26 s in all and is left as it is.
 - Into the Breach signature case Ranged removed (26 Oct 2026): `ranged` is on 46% of the cards, above the 25% bound.
-- Next: (1) the other games in the order of `tools/key/key.py` GAMES, inscryption first: follow this file's procedure; check summon payoffs and the narrow-lead cases listed above in each. (2) Nothing open on speed (see the Speed note). (3) Keyword denial rule: it covers only the 7 games where the position rule is skipped (`kw_links.py` SKIP); other games are covered by the position rule.
+- inscryption: **done** 26 Oct 2026 (key wrong 72.8 -> 49.6, missed 57.3 -> 26.9 per 100; signature 1/12 -> 5/7, combos 1/5).
+  Sigil entries are wiki pages: tags from notes about single cards no longer reach every card with the sigil. Cases (reasons in the
+  game file): removed Beast deathtouch, Undead death_trigger, Technology resource_gain, aura, autonomous_units, Undead sacrifice
+  (the hammer is an item) and the Undead archetype; Magick multiple_resources -> cost_type; added Undead resource_gain.
+  Key (Kaptain): Stimulate, Enlarge, Marrow Sucker `scope_self`; Unkillable `return_to_hand`, no `defence_gain`; Fledgling no
+  `attack_gain`/`defence_gain`; Waterborne's `transform`/`random_effect` moved to Great Kraken, Many Lives' `transform` to the Cat;
+  the Mox sigil gives `resource_gain`, not `multiple_resources`.
+- Shared, 26 Oct 2026 (Kaptain; all games compared, none worse, real-world 508 -> 518 of 842):
+  - `cost_rules.py` (new build step): tags from the cost field where cards print it apart from the text (Inscryption: Blood ->
+    `sacrifice` as the cost, Bones and Mox -> `cost_type`). Faction signatures count cost tags (`signature.py`).
+  - A mechanic on more than 25% of the cards is still a signature when one faction holds at least 60% of it.
+  - Summon reactions have the trigger, never `summon` (see Rules); undone in Duelyst (7 cards) and Inscryption.
+  - `revive` is back into play; back to hand (when it dies, or from the discard pile or graveyard) is `return_to_hand`. Definitions
+    changed; 27 key entries moved (MTG, Lorcana, Hearthstone, Faeria, Marvel Snap, Monster Train, Shadowverse, Inscryption);
+    `patterns/_all.txt` lines now tag every game (`game_patterns.py`); a card from your own discard pile counts as yours.
+  - 26 Oct bulk `attack_gain`/`defence_gain` key tags quoted the definition, not the card: 458 checked, 7 wrong removed
+    (Darkest Dungeon resistances and healing received, Space Prism capacity, Shadowverse Forte, 40k Masters of the Maelstrom).
+    Warhammer "+1 to Hit/Wound/save rolls" count as gains (Kaptain).
+  - `trigger_pairs.py`: "the start/end of the battle, phase, run, fight, game" is not a turn trigger. `key_wins.py`: a keyword's
+    drop also reaches the copies its cards inherited. `load_cards.py`: a reload keeps entries without an external id.
+- Next: (1) the other games in the order of `tools/key/key.py` GAMES, faeria next: follow this file's procedure; check the
+  narrow-lead cases listed above in each, and key tags whose quote is not in the card text. (2) Nothing open on speed (see the
+  Speed note). (3) Keyword denial rule: it covers only the 7 games where the position rule is skipped (`kw_links.py` SKIP); other
+  games are covered by the position rule.

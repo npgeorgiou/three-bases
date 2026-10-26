@@ -97,7 +97,7 @@ def aura(t):
 def in_hand_buff(t): return {'in_hand_buff'} | ({'stat_gain'} if has(r"\+\d|\+x\b|(gains?|gets?|give|have) [^.]{0,25}\b(power|attack|health|stats)\b", t) else set())
 def return_to_hand(t):
     enemy = has(r"return[^.]{0,40}\b(enemy|enemies|opponents? controls?|opposing)\b|" + E_ + r"[^.]{0,30}\bto (its|their) (owner'?s?|owners'?) (hands?|action bar)", t)
-    own = has(r"return[^.]{0,30}\b(you control|your|friendly|allied|ally|allies|this|itself|namedcard|~|me|it)\b[^.]{0,30}\b(hand|action bar)|recall (an? ally|this|me|it|a unit you)|\breturn (this|it|me|namedcard|~) to (your|my|its owner'?s?) (hand|action bar)", t)
+    own = has(r"return[^.]{0,30}\b(you control|your|friendly|allied|ally|allies|this|itself|namedcard|~|me|it)\b[^.]{0,30}\b(hand|action bar)|recall (an? ally|this|me|it|a unit you)|\breturn (this|it|me|namedcard|~) to (your|my|its owner'?s?) (hand|action bar)|\bfrom your (graveyard|discard)( pile)?\b[^.]{0,30}\bto your hand", t)   # a card from your own discard pile is yours
     either = has(r"return (up to (one|two|three|\w+) )?(target|a|an|another|all|each|any)\b[^.]{0,40}\bto (its|their) owners?'? (hands?|action bar)", t)
     return {'bounce_enemy'} if enemy and not own and not either else {'return_to_hand'} if own and not enemy and not either else {'return_to_hand', 'bounce_enemy'}
 def sacrifice(t):

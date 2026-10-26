@@ -28,8 +28,18 @@ for f in sorted(os.listdir(d)):
                 low = (t or '').lower()
                 if badre.search(low) and not any(r == role and o.search(low) for r, o in others):
                     c.execute("delete from entity_concepts where entity=? and concept=? and role=? and method='text_pattern'", (e, con, role)); nx += 1
-    if g == '_all':
-        print('_all exclusions removed', nx); continue
+    if g == '_all':   # its pattern lines tag every game (stored as game '_all')
+        c.execute("delete from concept_patterns where game='_all'")
+        for con, role, p in rows: c.execute("insert into concept_patterns values(?,?,?,?)", (con, role, p, '_all'))
+        n = 0; comp = [(con, role, re.compile(p, re.I)) for con, role, p in rows]
+        for e, t, nm, gg in c.execute("select id,text,name,game from entities where text is not null and game!='marvel_snap'").fetchall() if comp else []:
+            low = RD.strip(gg, t.lower())
+            for x in [nm] + nm.split(' // '):
+                if len(x) > 2: low = low.replace(x.lower(), 'name')
+            for con, role, p in comp:
+                m = p.search(low)
+                if m: c.execute("insert or ignore into entity_concepts values(?,?,?,?,?)", (e, con, role, 'text_pattern', low[max(0, m.start() - 20): m.start() + 40])); n += 1
+        print('_all exclusions removed', nx, 'patterns', len(rows), 'tags', n); continue
     # a line removed from the file also takes its tags away (where no remaining pattern of the concept still matches)
     newset = {(con, role, p) for con, role, p in rows}
     gone = [(con, role, p) for con, role, p in c.execute("select concept, role, pattern from concept_patterns where game=?", (g,)).fetchall() if (con, role, p) not in newset]

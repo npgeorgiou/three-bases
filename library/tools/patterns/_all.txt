@@ -33,3 +33,7 @@
 !multi_target_attack|\bcleave
 !multi_target_attack|\bsweep
 !multi_target_attack|also damages
+# a dead card taken back into the hand is return_to_hand; revive is back into play (Kaptain, 26 Oct 2026)
+!revive|return .{0,40}from (your |the |a )?(graveyard|discard pile|discard)( to the (battlefield|board|field))?
+revive|does|\breturn\b[^.;]{0,60}\bfrom (?:your |the |a |their )?(?:graveyard|discard pile|discard)\b[^.;]{0,20}\b(?:to|onto) the (?:battlefield|board|field)\b
+return_to_hand|does|\b(?:return|put)s?\b[^.;]{0,60}\b(?:creature|character|minion|unit|follower|vehicle|ally|allies|this card|it|them|models?)\b[^.;]{0,40}\bfrom (?:your|a|their|its owner's|an opponent's|any) (?:graveyard|discard pile|discard)\b[^.;]{0,20}\b(?:in)?to (?:your|their|its owner's|his|her) hand\b|\breturn\b[^.;]{0,50}\b(?:died|destroyed|discarded|defeated)\b[^.;]{0,40}\bto (?:your |their )?hand\b

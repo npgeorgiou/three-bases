@@ -7350,5 +7350,13 @@
    "return_to_hand"
   ],
   "drop": []
+ },
+ "799283": {
+  "add": [
+   "return_to_hand"
+  ],
+  "drop": [
+   "revive"
+  ]
  }
 }

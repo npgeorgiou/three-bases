@@ -70,7 +70,7 @@ for card in d['cards']:
     if card.get('created'):   # created cards carry edition 'non-collectible', as in the earlier loads; the source's set goes to extra.set
         card['extra'] = dict(card.get('extra') or {}, **({'set': card['edition']} if card.get('edition') else {})); card['edition'] = 'non-collectible'
     c.execute("INSERT INTO entities(id, game, ext_id, name, category, source_type, edition, faction, subtypes, rarity, cost, cost_num, stats, text, extra, variants) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-              (nid, G, card['ext_id'] if RELOAD else PRE + str(card['ext_id']), name, card['category'], card.get('source_type'), card.get('edition'), card.get('faction'),
+              (nid, G, card.get('ext_id') if RELOAD else PRE + str(card['ext_id']), name, card['category'], card.get('source_type'), card.get('edition'), card.get('faction'),
                json.dumps(sub) if sub else None, card.get('rarity'), cost, cn, stats, text or None, json.dumps(card['extra']) if card.get('extra') else None,
                json.dumps(card['variants'], ensure_ascii=False) if card.get('variants') else None))
     if card.get('keep_tags'):   # reload: the entry's current tags instead of today's general patterns

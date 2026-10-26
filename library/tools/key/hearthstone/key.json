@@ -682,12 +682,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"overload_debt",
-"Overload"
-]
-],
 "keywords": [
 742359,
 742370
@@ -717,12 +711,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"overload_debt",
-"Overload"
-]
-],
 "keywords": [
 742370
 ]
@@ -1009,16 +997,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"summon",
-"Herald"
-],
-[
-"upgrade",
-"Herald"
-]
-],
 "keywords": [
 742408
 ]
@@ -1182,12 +1160,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742359,
 742363
@@ -1362,20 +1334,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-],
-[
-"tribal",
-"Kindred"
-]
-],
 "keywords": [
 742363,
 742392
@@ -1528,16 +1486,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -1566,16 +1514,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -1962,16 +1900,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742359,
 742363
@@ -2327,16 +2255,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -2365,16 +2283,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -2556,12 +2464,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -2611,16 +2513,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -2649,16 +2541,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -2737,16 +2619,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"generate_cards",
-"Excavate"
-],
-[
-"permanent_growth",
-"Excavate"
-]
-],
 "keywords": [
 742409
 ]
@@ -2829,12 +2701,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"disable",
-"Freeze"
-]
-],
 "keywords": [
 742371
 ]
@@ -2867,12 +2733,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"tribal",
-"Kindred"
-]
-],
 "keywords": [
 742359,
 742392
@@ -2923,16 +2783,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"in_hand_buff",
-"Corrupt"
-],
-[
-"cost_condition",
-"Corrupt"
-]
-],
 "keywords": [
 742390
 ]
@@ -3269,12 +3119,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"overload_debt",
-"Overload"
-]
-],
 "keywords": [
 742370
 ]
@@ -3507,12 +3351,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"silence",
-"Silence"
-]
-],
 "keywords": [
 742383
 ]
@@ -3708,12 +3546,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"silence",
-"Silence"
-]
-],
 "keywords": [
 742360,
 742383,
@@ -4324,16 +4156,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"cost_reduction",
-"Prepare"
-],
-[
-"play_restriction",
-"Prepare"
-]
-],
 "keywords": [
 742360,
 742404
@@ -4379,12 +4201,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"resource_banking",
-"Finale"
-]
-],
 "keywords": [
 742395
 ]
@@ -4669,12 +4485,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"disable",
-"Freeze"
-]
-],
 "keywords": [
 742371
 ]
@@ -5873,16 +5683,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -6140,16 +5940,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -6379,16 +6169,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363,
 742382
@@ -6624,16 +6404,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742359,
 742363
@@ -6655,12 +6425,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"excess_damage",
-"Overkill"
-]
-],
 "keywords": [
 742414
 ]
@@ -7270,7 +7034,7 @@
 "tags": [
 [
 "board_clog",
-"Summon a 0/4 Entrée for your opponent"
+"Summon a 0/4 Entr\u00e9e for your opponent"
 ],
 [
 "other_death_trigger",
@@ -7387,16 +7151,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742359,
 742363
@@ -7479,16 +7233,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742359,
 742363
@@ -7591,16 +7335,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -7805,16 +7539,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -7953,16 +7677,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -8062,12 +7776,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"disable",
-"Freeze"
-]
-],
 "keywords": [
 742371
 ]
@@ -9315,16 +9023,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -9647,12 +9345,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"overload_debt",
-"Overload"
-]
-],
 "keywords": [
 742370
 ]
@@ -10124,7 +9816,7 @@
 "Deal 3 damage to your hero"
 ],
 [
-"revive",
+"return_to_hand",
 "Return two friendly minions that died this game to your hand"
 ]
 ],
@@ -10211,12 +9903,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"disable",
-"Freeze"
-]
-],
 "keywords": [
 742371
 ]
@@ -10762,12 +10448,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"overload_debt",
-"Overload"
-]
-],
 "keywords": [
 742359,
 742370
@@ -10830,16 +10510,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -10927,12 +10597,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"silence",
-"Silence"
-]
-],
 "keywords": [
 742383
 ]
@@ -11235,16 +10899,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"selection",
-"Discover"
-],
-[
-"random_effect",
-"Discover"
-]
-],
 "keywords": [
 742363
 ]
@@ -11310,12 +10964,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"disable",
-"Freeze"
-]
-],
 "keywords": [
 742359,
 742371
@@ -11345,12 +10993,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"disable",
-"Freeze"
-]
-],
 "keywords": [
 742359,
 742371
@@ -11380,12 +11022,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"disable",
-"Freeze"
-]
-],
 "keywords": [
 742359,
 742371

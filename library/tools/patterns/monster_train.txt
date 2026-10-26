@@ -4,7 +4,7 @@ lane_identity|does|\bon this floor\b|\bthis room\b|\bbottom floor\b|\bpyre room\
 movement|does|\b(ascend|descend)s?\b|\bmove (a|that|it|this)\b[^.]{0,20}\b(front|back)\b|\bpush it to the back\b
 resource_gain|does|\bgain (\d+ |\+\d+ )?ember\b|\+\d+ ember per turn\b
 heal|does|\brestore (\d+|full|\d+ per x)\b|\bto full health\b
-revive|does|\breturn a random defeated unit\b|\breform\b
+revive|does|\breturn a random defeated unit\b(?! to your hand)|\breform\b
 board_limit|does|\b[+-]\d+ capacity\b
 # "Summon:" opening a clause is the unit's on-play ability; "Summon 2 Bog Fly units" creates units (not on play). 10/10 right on the key.
 on_play|does|(?:^|[\n.:;/]\s*)summon:
