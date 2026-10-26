@@ -41,3 +41,5 @@ movement|does|\bmay move an additional space\b|\bteleport (a friendly minion|you
 aoe_damage|does|\bdamage to [^.]{0,20}minions in this row\b
 adjacency|does|\bjoined enemies\b
 area_templates|does|\bin front of this minion\b
+# 'all friendly minions', 'your minions', 'other friendly minions' reach every minion of a side: scope_global (Kaptain); 'nearby' ones are limited to an area and stay scope_multi
+scope_global|does|\ball (?:friendly|enemy|your)(?: \w+)? minions\b(?![^.]{0,40}\b(?:in this row|in one straight line|in a straight line|in front)\b)|\b(?:your|(?:other )?friendly) minions (?:gain|have|get|can)\b|\bof friendly minions\b|\bgive friendly minions\b|\ball enemy minions\b(?![^.]{0,40}\b(?:in this row|in one straight line|in a straight line|in front)\b)

@@ -1001,6 +1001,10 @@
 [
 "aoe_damage",
 "Deal 1 damage to all enemy minions"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "A=B"
@@ -1484,6 +1488,10 @@
 [
 "heal",
 "Fully heal all friendly minions"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "A=B"
@@ -1564,8 +1572,8 @@
 "this turn"
 ],
 [
-"scope_multi",
-"all friendly minions"
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "A=B"
@@ -1829,6 +1837,10 @@
 [
 "temporary_effect",
 "until the end of your opponent's turn"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "A=B"
@@ -1983,8 +1995,8 @@
 "this turn"
 ],
 [
-"scope_multi",
-"all friendly minions"
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "C",
@@ -2011,16 +2023,16 @@
 "Summon a 1/1 Treant with Provoke"
 ],
 [
-"scope_multi",
-"Your minions"
-],
-[
 "immobilize",
 "Provoke"
 ],
 [
 "adjacency",
 "Provoke: nearby enemies must attack this"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "C",
@@ -3148,6 +3160,10 @@
 [
 "self_destruct",
 "destroy this"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "A=B"
@@ -4102,12 +4118,12 @@
 "Dispel all enemy minions"
 ],
 [
-"scope_multi",
-"all enemy minions"
-],
-[
 "silence",
 "Dispel"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "C",
@@ -4493,12 +4509,12 @@
 "give all friendly minions +1 health"
 ],
 [
-"scope_multi",
-"all friendly minions"
-],
-[
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "A=B"
@@ -4850,6 +4866,10 @@
 [
 "random_effect",
 "random spaces"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "A=B"
@@ -5177,12 +5197,12 @@
 "+4/+4"
 ],
 [
-"scope_multi",
-"all friendly Wall minions"
-],
-[
 "tribal",
 "Wall minions"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "C"
@@ -5582,6 +5602,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "A=B"
@@ -6052,8 +6076,8 @@
 "until your next turn"
 ],
 [
-"scope_multi",
-"all enemy minions"
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "C"
@@ -6071,6 +6095,10 @@
 [
 "stat_gain",
 "gains their Attack, Health, and keywords"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "A=B"
@@ -6103,10 +6131,6 @@
 "gain +3/+3"
 ],
 [
-"scope_multi",
-"other friendly minions"
-],
-[
 "summon",
 "Build"
 ],
@@ -6121,6 +6145,10 @@
 [
 "permanent_growth",
 "Whenever this minion attacks, other friendly minions gain +3/+3"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "C",
@@ -6317,6 +6345,10 @@
 [
 "buff",
 "Your General gains +2 Attack"
+],
+[
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "C"
@@ -6332,8 +6364,8 @@
 "Re-summon this minion on this space"
 ],
 [
-"scope_multi",
-"friendly minions"
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "C"
@@ -6387,8 +6419,8 @@
 "Double the Attack and Health buffs"
 ],
 [
-"scope_multi",
-"friendly minions"
+"scope_global",
+"every minion of that side"
 ]
 ],
 "by": "A=B"
