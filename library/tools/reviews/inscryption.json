@@ -474,7 +474,8 @@
   "add": [
    "null_body",
    "blocking",
-   "terrain"
+   "terrain",
+   "fodder"
   ],
   "drop": [
    "board_clog"
@@ -2192,6 +2193,39 @@
  "740693": {
   "add": [
    "scope_self"
+  ],
+  "drop": []
+ },
+ "Squirrel": {
+  "add": [
+   "null_body",
+   "fodder",
+   "free_play"
+  ],
+  "drop": []
+ },
+ "Rabbit": {
+  "add": [
+   "fodder"
+  ],
+  "drop": []
+ },
+ "Geck": {
+  "add": [
+   "free_play",
+   "fodder"
+  ],
+  "drop": []
+ },
+ "Urayuli": {
+  "add": [
+   "null_body"
+  ],
+  "drop": []
+ },
+ "Junior Sage": {
+  "add": [
+   "resource_gain:benefits"
   ],
   "drop": []
  }

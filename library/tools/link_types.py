@@ -40,7 +40,11 @@ REL = [('attack_now', 'enables', 'on_attack', 'an immediate attack sets off atta
        ('resource_gain', 'enables', 'high_cost', 'ramp reaches expensive cards sooner'),
        ('cost_reduction', 'enables', 'high_cost', 'cheaper expensive cards'),
        ('free_play', 'enables', 'high_cost', 'cheating an expensive card into play'),
-       ('revive', 'enables', 'high_cost', 'reanimating an expensive unit for a low price')]
+       ('revive', 'enables', 'high_cost', 'reanimating an expensive unit for a low price'),
+       ('deathtouch', 'synergizes', 'multi_attack', 'each extra strike kills what it hits'),
+       ('deathtouch', 'synergizes', 'aoe_damage', 'every unit the damage reaches dies'),
+       ('free_play', 'synergizes', 'on_play', 'a card played for free still sets off its when-played effect'),
+       ('free_play', 'synergizes', 'copy', 'copies of a free card cost nothing')]
 EXTRA = [('tribal', r"\bshares? (a|any|the same) (color|colour|type|creature type|card type|faction|region|tribe|keyword)\b"),
          ('on_play', r"\bwhen (this|~) (creature|permanent|artifact|enchantment|vehicle|land|minion|unit|follower|card) enters\b"),
          ('revive', r"\bput [^.]{0,50}card[^.]{0,30} from (a|your|an opponent's|any) graveyard onto the battlefield")]

@@ -176,6 +176,14 @@ Things that confused earlier chats:
     Warhammer "+1 to Hit/Wound/save rolls" count as gains (Kaptain).
   - `trigger_pairs.py`: "the start/end of the battle, phase, run, fight, game" is not a turn trigger. `key_wins.py`: a keyword's
     drop also reaches the copies its cards inherited. `load_cards.py`: a reload keeps entries without an external id.
+- Inscryption combos (26 Oct 2026, Kaptain's list, verified against the wiki; doubtful ones left out): 19 added, combos 21/23.
+  Six missing cards added from readable pages (`tools/convert/inscryption_missing_cards.json`: Squirrel, Rabbit, Geck, Urayuli,
+  Child 13, Junior Sage). Shared: combo cases may name a keyword or a tribe and follow merges (`query._ent`, `realworld.py`); a tribe
+  and a keyword connect when a card of the tribe bears the keyword; concept relations deathtouch + multi_attack / aoe_damage,
+  free_play + on_play / copy; faction counts weigh merged cards (`signature.py`); `drop_untagged.py` keeps entries a review names;
+  `reload_game.sh` takes new cards. All games: real-world 529 -> 542 of 860, key scores unchanged outside Inscryption; newly
+  missed: gwent Northern Realms activated, hearthstone Druid swarm and draw, runeterra Freljord resource_gain (shares changed by
+  the merged-card weights).
 - Next: (1) the other games in the order of `tools/key/key.py` GAMES, faeria next: follow this file's procedure; check the
   narrow-lead cases listed above in each, and key tags whose quote is not in the card text. (2) Nothing open on speed (see the
   Speed note). (3) Keyword denial rule: it covers only the 7 games where the position rule is skipped (`kw_links.py` SKIP); other

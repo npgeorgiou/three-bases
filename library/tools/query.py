@@ -110,6 +110,8 @@ def _ent(name, game=None):
     if not r and q("SELECT 1 FROM sqlite_master WHERE name='merged_entities'"):
         r = q(f"SELECT x.id, x.game, x.name FROM merged_entities m JOIN entities x ON x.id=m.kept_id WHERE m.name=? {'AND m.game=?' if game else ''}", *([name] + ([game] if game else [])))
         if r: print(f'{name} was merged into {r[0][2]} (same mechanic)')
+    if not r:   # a combo can name a keyword (an Inscryption sigil given to a card) or a tribe (a totem gives a sigil to a tribe)
+        r = q(f"SELECT id, game, name FROM entities WHERE name=? {'AND game=?' if game else ''} AND category IN ('keyword','tribe')", *([name] + ([game] if game else [])))
     if not r: print('not found', name); return None
     if len(r) > 1: print('several matches, using first:', r[:5])
     return r[0]
@@ -171,6 +173,11 @@ def connections(ia, ib):
     for r in q('SELECT rel FROM entity_links WHERE src=? AND dst=?', ib, ia): out.append(('link', f'B {r[0]} A'))
     for k, r1, r2, cat in q('SELECT k.name, l1.rel, l2.rel, k.category FROM entity_links l1 JOIN entity_links l2 ON l1.dst=l2.dst JOIN entities k ON k.id=l1.dst WHERE l1.src=? AND l2.src=? AND k.category IN ("keyword","tribe")', ia, ib):
         out.append(('type' if cat == 'tribe' else 'keyword', f'{k} (A {r1}, B {r2})'))
+    cats = {i: (q('SELECT category FROM entities WHERE id=?', i) or [(None,)])[0][0] for i in (ia, ib)}
+    if {cats[ia], cats[ib]} == {'tribe', 'keyword'}:   # a tribe and a keyword: cards of the tribe that bear the keyword
+        t, k = (ia, ib) if cats[ia] == 'tribe' else (ib, ia)
+        for (n,) in q("SELECT DISTINCT e.name FROM entity_links a JOIN entity_links b ON a.src=b.src JOIN entities e ON e.id=a.src WHERE a.dst=? AND a.rel='has_type' AND b.dst=? AND b.rel='has_keyword'", t, k):
+            out.append(('type', f'{n} is of the tribe and bears the keyword'))
     ca = q('SELECT concept, role FROM entity_concepts WHERE entity=?', ia); cb = q('SELECT concept, role FROM entity_concepts WHERE entity=?', ib)
     rel = {}
     for a, r, b in q('SELECT a, rel, b FROM concept_relations WHERE rel IN ("synergizes","enables")'):

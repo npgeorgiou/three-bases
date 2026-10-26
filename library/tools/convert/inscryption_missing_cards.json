@@ -1,0 +1,76 @@
+{
+ "_source": "Cards missing from the library, from the pages that could be read (26 Oct 2026): inscryption.fandom.com/wiki/Urayuli, inscryption.fandom.com/wiki/Geck, pockettactics.com/inscryption/cards, progameguides.com/inscryption/all-cards-in-act-1-of-inscryption (names), the library's Rabbit Hole sigil. Fields the pages do not give are left empty. Junior Sage: primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide ('Junior Sage; 1/2; Emerald Mox').",
+ "_tag": "act1-missing",
+ "cards": [
+  {
+   "ext_id": "squirrel",
+   "name": "Squirrel",
+   "category": "unit",
+   "faction": "Beast",
+   "edition": "Act I",
+   "cost": "Free",
+   "cost_num": 0,
+   "text": ""
+  },
+  {
+   "ext_id": "rabbit",
+   "name": "Rabbit",
+   "category": "unit",
+   "faction": "Beast",
+   "edition": "Act I",
+   "created": true,
+   "text": ""
+  },
+  {
+   "ext_id": "geck",
+   "name": "Geck",
+   "category": "unit",
+   "faction": "Beast",
+   "edition": "Act I",
+   "rarity": "Rare",
+   "cost": "Free",
+   "cost_num": 0,
+   "stats": {
+    "power": "1",
+    "health": "1"
+   },
+   "text": ""
+  },
+  {
+   "ext_id": "urayuli",
+   "name": "Urayuli",
+   "category": "unit",
+   "faction": "Beast",
+   "edition": "Act I",
+   "rarity": "Rare",
+   "cost": "4 Blood",
+   "cost_num": 4,
+   "stats": {
+    "power": "7",
+    "health": "7"
+   },
+   "text": ""
+  },
+  {
+   "ext_id": "child-13",
+   "name": "Child 13",
+   "category": "unit",
+   "faction": "Beast",
+   "edition": "Act I",
+   "text": "Sigils: Many Lives."
+  },
+  {
+   "ext_id": "junior-sage",
+   "name": "Junior Sage",
+   "category": "unit",
+   "faction": "Magick",
+   "edition": "Act II",
+   "cost": "Green Mox",
+   "stats": {
+    "power": "1",
+    "health": "2"
+   },
+   "text": ""
+  }
+ ]
+}

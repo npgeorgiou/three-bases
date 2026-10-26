@@ -11,7 +11,10 @@ rows = c.execute("""SELECT id, game FROM entities e WHERE category NOT IN ('keyw
     AND NOT EXISTS (SELECT 1 FROM entity_links l WHERE l.src=e.id AND l.rel LIKE '%keyword')""").fetchall()
 import glob, json
 for f in glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'key', '*', 'key.json')): reviewed |= {int(i) for i in json.load(open(f, encoding='utf-8'))}
-rows = [(i, g) for i, g in rows if i not in reviewed]
+named = {}   # a review file entry keyed by name (not id) also keeps the entry: the review adds its tags later
+for f in glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'reviews', '*.json')):
+    named[os.path.basename(f)[:-5]] = {k for k in json.load(open(f, encoding='utf-8')) if not k.isdigit()}
+rows = [(i, g) for i, g in rows if i not in reviewed and c.execute('SELECT name FROM entities WHERE id=?', (i,)).fetchone()[0] not in named.get(g, ())]
 n = {}
 for i, g in rows:
     for s in ("DELETE FROM entity_links WHERE src=? OR dst=?", "DELETE FROM trigger_effect WHERE entity=?", "DELETE FROM entities WHERE id=?"):

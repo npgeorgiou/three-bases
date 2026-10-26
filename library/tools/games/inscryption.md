@@ -108,11 +108,29 @@ signature	Undead	cost_type	Bones	https://primagames.com/gaming/inscryption-scryb
 signature	Undead	resource_gain	Bones from Gravedigger and from cards that die	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Magick	cost_type	Magick cards are paid with Mox gems	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Magick	draw	Blue Mage draws per Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-combo	Necromancer	Obol	the Obol dies twice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
+combo	Necromancer	Right	the Obol dies twice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
 combo	Warren	Rabbit	Warren supplies Rabbits	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 combo	Blue Mage	Sapphire Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 combo	Mage Knight	Ruby Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 combo	Junior Sage	Emerald Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+combo	Ouroboros	Fecundity	Ouroboros grows each time it dies; Unkillable returns it and Fecundity copies it	Kaptain's combo list, 26 Oct 2026; source named: Inscryption Wiki
+combo	Warren	Unkillable	Warren returns to hand on death and gives a Rabbit each time it is played	Kaptain's combo list, 26 Oct 2026; source named: r/inscryption
+combo	Cuckoo	Fecundity	copies of Cuckoo put an egg opposite each time one is played	Kaptain's combo list, 26 Oct 2026; source named: YouTube
+combo	Beaver	Worthy Sacrifice	Dams adopt the Beaver's sigils, so each Dam counts as 3 Blood	https://inscryption.fandom.com/wiki/Dam_Builder
+combo	Urayuli	Corpse Eater	Corpse Eater plays Urayuli without its 4 Blood cost	https://inscryption.fandom.com/wiki/Urayuli
+combo	Fecundity	Corpse Eater	a card played by Corpse Eater triggers Fecundity	Kaptain's combo list, 26 Oct 2026; source named: r/inscryption
+combo	Black Goat	Boon of the Bone Lord	sacrificing the Black Goat to the Bone Lord gives 8 Bones each battle	https://inscryption.fandom.com/wiki/The_Bone_Lord
+combo	Pronghorn	Touch of Death	Bifurcated Strike with Touch of Death kills both creatures it strikes	Kaptain's combo list, 26 Oct 2026; source named: YouTube
+combo	Mantis God	Fecundity	copies of a three-way striker in hand	Kaptain's combo list, 26 Oct 2026; source named: Steam
+combo	Geck	Fecundity	a free card that copies itself when played	Kaptain's combo list, 26 Oct 2026; source named: r/inscryption
+combo	Tomb Robber	Necromancer	Skeletons from Tomb Robber die twice with Necromancer: more Bones	https://inscryption.fandom.com/wiki/Bones
+combo	Necromancer	Bone Heap	the Bones loop pays for Bone Heap's Enlarge	Kaptain's combo list, 26 Oct 2026; source named: Inscryption Wiki
+combo	Squirrel	Worthy Sacrifice	Squirrel totem with Worthy Sacrifice: every Squirrel counts as 3 Blood	https://inscryption.fandom.com/wiki/Totem
+combo	Squirrel	Fecundity	Squirrel totem with Fecundity: every Squirrel played copies itself	https://inscryption.fandom.com/wiki/Totem
+combo	Squirrel	Unkillable	Squirrel totem with Unkillable: sacrificed Squirrels return to hand	Kaptain's combo list, 26 Oct 2026; source named: TheGamer
+combo	Squirrel	Ant Spawner	Squirrel totem with Ant Spawner: every Squirrel played gives an Ant	Kaptain's combo list, 26 Oct 2026; source named: ResetEra
+combo	Insect	Bees Within	Insect totem with Bees Within: struck insects give a Bee	https://inscryption.fandom.com/wiki/Totem
+combo	Reptile	Corpse Eater	Reptile totem with Corpse Eater: reptiles replace dying creatures for free	https://inscryption.fandom.com/wiki/Totem
 ```
 
 ## Notes from the patterns check

@@ -14,6 +14,10 @@ c = sqlite3.connect(db); q = lambda s, *a: c.execute(s, a).fetchall()
 desc = collections.defaultdict(set); anc = collections.defaultdict(set)
 for r, i in q('SELECT root, id FROM concept_tree'): desc[r].add(i); anc[i].add(r)
 GROUPS = {'effect', 'helps_me', 'hurts_enemy', 'drawback', 'game_rules'} | {i for i, in q('SELECT id FROM concepts WHERE id NOT IN (SELECT child FROM concept_parents)')}
+def ent(name, g):
+    import contextlib, io
+    with contextlib.redirect_stdout(io.StringIO()): r = Qy._ent(name, g)
+    return r[0] if r else None
 def near(k): return desc[k] | (anc[k] - GROUPS)
 tot = collections.Counter(); met = collections.Counter(); miss = []
 for g, f in games.files():
@@ -29,8 +33,8 @@ for g, f in games.files():
         elif t == 'archetype':
             ok = bool(q('SELECT 1 FROM faction_archetypes WHERE game=? AND faction=? AND archetype=? AND lift>1', g, a, b))
         elif t == 'combo':
-            ia = q('SELECT id FROM entities WHERE game=? AND name=? LIMIT 1', g, a); ib = q('SELECT id FROM entities WHERE game=? AND name=? LIMIT 1', g, b)
-            ok = bool(ia and ib and Qy.connections(ia[0][0], ib[0][0]))
+            ia, ib = ent(a, g), ent(b, g)   # a card, a merged card's kept entry, or a keyword or tribe (query._ent)
+            ok = bool(ia and ib and Qy.connections(ia, ib))
         else: continue
         tot[g, t] += 1; met[g, t] += ok
         if not ok: miss.append((g, t, a, b))

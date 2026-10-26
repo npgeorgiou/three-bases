@@ -49,20 +49,23 @@ ins = lambda *v: c.execute('INSERT INTO faction_signature VALUES(?,?,?,?,?,?,?,?
 for (g,) in q('SELECT DISTINCT game FROM entities'):
     fac, allc = members(q, g)
     if len(fac) < 2: continue
-    N = len(allc)
+    # a card merged into another with the same text (dedupe.py) still counts as a card of the faction: the kept entry weighs 1 + its merged copies
+    mw = collections.Counter(k for k, in q('SELECT kept_id FROM merged_entities WHERE game=?', g)) if q("SELECT 1 FROM sqlite_master WHERE name='merged_entities'") else {}
+    wl = lambda S: sum(1 + mw.get(i, 0) for i in S)
+    N = wl(allc)
     has = collections.defaultdict(set)
     for e, k in q(f"SELECT DISTINCT e.id, ec.concept FROM entities e JOIN entity_concepts ec ON ec.entity=e.id WHERE e.game=? AND {CARD} AND e.faction IS NOT NULL AND ec.role IN ('does','grants','cost')", g):
         if e in allc: has[k].add(e)
     def test(ids):
-        K = len(ids); res = []
+        K = wl(ids); res = []
         for f, s in fac.items():
-            x = len(s & ids); n = len(s); rest = (K - x) / (N - n) if N > n else 0
+            x = wl(s & ids); n = wl(s); rest = (K - x) / (N - n) if N > n else 0
             ok = x > 0 and (rest == 0 or (x / n) / rest >= RATIO) and tail(N, K, n, x) < P_MAX
             res.append((x / n, f, x, ok))
         return K, sorted(res, reverse=True)
     for k, ids in has.items():
         if k not in mech: continue
-        if len(ids) > 0.25 * N and max(len(s & ids) for s in fac.values()) < 0.6 * len(ids): continue   # common and spread over the factions: no one's own
+        if wl(ids) > 0.25 * N and max(wl(s & ids) for s in fac.values()) < 0.6 * wl(ids): continue   # common and spread over the factions: no one's own
         K, res = test(ids); avg = K / N
         own = [(sh, f, x) for sh, f, x, ok in res if ok]
         for sh, f, x in own: ins(g, f, k, 'signature', x, round(sh, 3), round(sh / avg, 2), f, round(sh, 3))
@@ -83,9 +86,9 @@ for (g,) in q('SELECT DISTINCT game FROM entities'):
     for k in mech:
         ids = set().union(*[has[x] for x in tree.get(k, {k}) if x in has])
         if not ids: continue
-        K = len(ids)
+        K = wl(ids)
         for f, s_ in fac.items():
-            x, n = len(s_ & ids), len(s_)
+            x, n = wl(s_ & ids), wl(s_)
             v = log(((x + 0.5) / (n + 1)) / ((K - x + 0.5) / (N - n + 1)))
             if v > 0: c.execute('INSERT INTO faction_concept_ov VALUES(?,?,?,?,?)', (g, f, k, x, round(v, 4)))
     ov = collections.defaultdict(dict)

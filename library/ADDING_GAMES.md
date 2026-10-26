@@ -121,8 +121,12 @@ Read this whole file before you add a game.
   (`tools/pattern_eval.py`), and check that each real-world case shows a lead in the cards (`tools/case_lead.py`). Build once per
   batch, not once per pattern.
 - Key quotes must be words of the card. A tag quoted with a definition or with a name that does not say the effect is unverified.
-- Combos are tested between two cards (`query._ent` skips keywords and tribes); a combo that puts a keyword on a card is written
-  with a card that has that keyword.
+- A combo case can name a card, a merged card (it resolves to the kept entry), a keyword or a tribe: in games where abilities move
+  between cards (Inscryption sigils and totems) a combo is "card + keyword" or "tribe + keyword".
+- Adding cards to a game that is already in the library: `tools/reload_game.sh <scratch> <game> <game>=<cards.json>`. Never
+  `build.sh ... <game>=<cards.json>` for an existing game: its `start_clean.py keep` makes the game's built tags its base and every
+  game came out worse (26 Oct 2026). A card with no tag is dropped by `drop_untagged.py`; a card with no text needs a review entry
+  keyed by its name. Faction counts include cards merged into another with the same text (`signature.py`).
 
 ## Reading cards (Kaptain's decision; the only way cards are read)
 **Why there is a key.** The library's tags come from regexes (patterns). The answer key is the only place where cards are
