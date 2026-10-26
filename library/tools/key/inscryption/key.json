@@ -499,6 +499,14 @@
 [
 "turn_start",
 "At the beginning of the owner's turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -1302,6 +1310,10 @@
 [
 "revive",
 "return to the owner's hand after death"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"

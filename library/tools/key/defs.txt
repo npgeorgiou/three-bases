@@ -1,5 +1,7 @@
 buff | Make a unit stronger (buff) | A unit gains stats or a combat ability it did not have: more power or health, first strike, flying, extra attacks, reach, piercing. | Not: Improving a card still in hand is in_hand_buff; a unit printed with high stats is not buffed.
 stat_gain | Stat gain (+power, +health) | A unit's power, attack, health or other stat goes up, or is set or swapped to a higher value. | Not: Gaining only a keyword is that keyword's concept (evasion, first_strike...); a lasting rise each turn is permanent_growth.
+attack_gain | Attack gain (+attack) | A unit's attack, damage, power or strength goes up: +2 attack, +1/+0, gain strength. | Not: Health, defence or armour going up is defence_gain; a bonus that raises both (+1/+1) carries both; a bonus whose stat the text does not name stays stat_gain.
+defence_gain | Defence gain (+health) | A unit's health, toughness, defence or armour stat goes up: +2 health, +0/+2, gain plated armor. | Not: Attack going up is attack_gain; block points that wear off are block_armor; healing lost health is heal.
 temporary_buff | Temporary bonus (this turn only) | A unit's bonus lasts only this turn, round or fight. | Not: A bonus that stays is stat_gain or permanent_growth.
 permanent_growth | Grows again and again | A unit gains stats repeatedly (each turn, each trigger) and keeps them. | Not: A single lasting bonus is stat_gain.
 stat_multiply | Double or multiply stats | A stat or a total is doubled, tripled or multiplied. | Not: Adding a fixed amount is stat_gain.

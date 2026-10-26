@@ -319,6 +319,10 @@
 [
 "temporary_buff",
 "Challenger"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -387,6 +391,10 @@
 [
 "tribal",
 "Villain character"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1012,6 +1020,10 @@
 [
 "draw",
 "draw 3 cards"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1135,6 +1147,10 @@
 [
 "aura",
 "Your characters named Dale get +1 willpower"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -1148,6 +1164,10 @@
 [
 "aura",
 "Your other characters with Support get +1 strength"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1439,6 +1459,14 @@
 [
 "tribal",
 "Princess characters"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -1469,6 +1497,10 @@
 [
 "temporary_buff",
 "gets +1 strength this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1678,6 +1710,14 @@
 [
 "variable_stats",
 "+1 willpower for each card under him"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -2161,6 +2201,10 @@
 [
 "damage_reduction",
 "gain Resist +1 this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -2542,6 +2586,10 @@
 [
 "temporary_buff",
 "your characters get +2 strength this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -2877,6 +2925,10 @@
 [
 "temporary_buff",
 "gets +2 strength this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -2890,6 +2942,10 @@
 [
 "temporary_buff",
 "gains Challenger +2 this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3371,6 +3427,10 @@
 [
 "stat_condition",
 "strength equal to or less"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3397,6 +3457,10 @@
 [
 "assists_support",
 "Support"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3545,6 +3609,10 @@
 [
 "haste",
 "Rush this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3571,6 +3639,10 @@
 [
 "temporary_buff",
 "gets +5 strength this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3584,6 +3656,10 @@
 [
 "condition_life",
 "damage on him"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3593,6 +3669,10 @@
 [
 "assists_support",
 "gains Support this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3767,6 +3847,10 @@
 [
 "tribal",
 "Illusion characters"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3789,6 +3873,10 @@
 [
 "aura",
 "Your other characters get +1 strength"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3814,6 +3902,10 @@
 [
 "tribal",
 "Pirate character"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3852,6 +3944,10 @@
 [
 "points_scoring",
 "gain 1 lore"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3941,6 +4037,10 @@
 [
 "temporary_buff",
 "gets +2 strength this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4601,6 +4701,10 @@
 [
 "draw",
 "draw a card"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4759,6 +4863,10 @@
 [
 "disruption",
 "cards enter opponents' inkwells exerted"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4852,6 +4960,10 @@
 [
 "tribal",
 "named Ariel"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4904,6 +5016,10 @@
 [
 "variable_stats",
 "+1 strength for each card in opponents' hands"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4972,6 +5088,10 @@
 [
 "tribal",
 "Floodborn character card"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -5698,6 +5818,10 @@
 [
 "aura",
 "Your other Musketeer characters get +1 strength"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -5762,6 +5886,10 @@
 [
 "tribal",
 "Detective character"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -5999,6 +6127,10 @@
 [
 "temporary_buff",
 "gets +1 lore this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -6302,6 +6434,10 @@
 [
 "tribal",
 "Detective character"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -6319,6 +6455,10 @@
 [
 "tribal",
 "named Magic Broom"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -6516,6 +6656,10 @@
 [
 "temporary_buff",
 "gains Challenger +3"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -6632,6 +6776,10 @@
 [
 "damage_reduction",
 "gains Resist +1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -6708,6 +6856,10 @@
 [
 "hand_size",
 "for each card in your hand"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -6814,6 +6966,10 @@
 [
 "stat_condition",
 "5 strength or more"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -6993,6 +7149,10 @@
 [
 "damage_reduction",
 "gain Resist +1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7256,6 +7416,10 @@
 [
 "graveyard",
 "each card in your discard"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7324,6 +7488,10 @@
 [
 "temporary_buff",
 "gains Challenger +2"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7406,6 +7574,10 @@
 [
 "temporary_buff",
 "gets +2 strength this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7499,6 +7671,10 @@
 [
 "temporary_buff",
 "gain Challenger +1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7613,6 +7789,10 @@
 [
 "tribal",
 "Madrigal characters"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7643,6 +7823,10 @@
 [
 "board_presence",
 "for each character you have in play"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7716,6 +7900,10 @@
 [
 "temporary_buff",
 "gains Challenger +2 this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7759,6 +7947,10 @@
 [
 "assists_support",
 "gains Support this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -8101,6 +8293,10 @@
 [
 "assists_support",
 "gains Support this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"

@@ -795,6 +795,14 @@
 [
 "permanent_growth",
 "put that many +1/+1 counters on this creature"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -1756,6 +1764,14 @@
 [
 "temporary_buff",
 "Bushido"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -2325,6 +2341,14 @@
 [
 "on_ally_play",
 "Alliance"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -2385,6 +2409,14 @@
 [
 "stat_condition",
 "mana value less than or equal to this creature's power"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -2788,7 +2820,7 @@
 ],
 [
 "protection",
-"Ward\u2014Discard a card"
+"Ward—Discard a card"
 ],
 [
 "hand_disruption",
@@ -2813,6 +2845,14 @@
 [
 "protection",
 "Ward"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -3097,6 +3137,14 @@
 [
 "permanent_growth",
 "put a +1/+1 counter on The Vision and Scarlet Witch"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -3553,7 +3601,7 @@
 ],
 [
 "activated",
-"Exhaust \u2014 {R}:"
+"Exhaust — {R}:"
 ],
 [
 "haste",
@@ -4031,6 +4079,14 @@
 [
 "permanent_growth",
 "put an oil counter on this creature"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -4244,6 +4300,14 @@
 [
 "protection",
 "Disguise"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -4548,6 +4612,14 @@
 [
 "haste",
 "haste"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -4992,6 +5064,14 @@
 [
 "count_payoff",
 "the number of cards you've discarded this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -5276,6 +5356,14 @@
 [
 "permanent_growth",
 "put a +1/+1 counter on Jackal"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -5440,7 +5528,7 @@
 ],
 [
 "activated",
-"Power-up \u2014 {6}{R}"
+"Power-up — {6}{R}"
 ],
 [
 "stat_gain",
@@ -5791,7 +5879,7 @@
 ],
 [
 "activated",
-"Exhaust \u2014 {5}{B}:"
+"Exhaust — {5}{B}:"
 ],
 [
 "revive",
@@ -5944,7 +6032,7 @@
 ],
 [
 "activated",
-"Exhaust \u2014 {W}{U}{B}{R}{G}:"
+"Exhaust — {W}{U}{B}{R}{G}:"
 ],
 [
 "transform",
@@ -7252,6 +7340,14 @@
 [
 "resource_gain",
 "Treasure"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -7519,6 +7615,14 @@
 [
 "on_play",
 "Offspring"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -7678,6 +7782,14 @@
 [
 "temporary_buff",
 "gets +4/+4 until end of turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -8255,6 +8367,10 @@
 [
 "extra_turn",
 "additional combat phase"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -8292,6 +8408,14 @@
 [
 "haste",
 "It gains haste until end of turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -8584,6 +8708,14 @@
 [
 "temporary_buff",
 "Exalted"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -8622,6 +8754,14 @@
 [
 "cheat_death",
 "regenerate"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -9111,6 +9251,14 @@
 [
 "tribal",
 "Prowl"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -9256,6 +9404,14 @@
 [
 "on_spell",
 "Magecraft"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -9319,6 +9475,10 @@
 [
 "turn_start",
 "Echo"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -9379,6 +9539,14 @@
 [
 "permanent_growth",
 "put a +1/+1 counter on this creature"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -10516,6 +10684,14 @@
 [
 "stat_condition",
 "Increment"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -10625,6 +10801,14 @@
 [
 "on_spell",
 "Repartee"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -11253,6 +11437,14 @@
 [
 "tutor",
 "Seek"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -11789,6 +11981,14 @@
 [
 "selection",
 "scry"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -12135,6 +12335,14 @@
 [
 "temporary_effect",
 "this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -12173,6 +12381,14 @@
 [
 "permanent_growth",
 "put a +1/+1 counter on this creature"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -12472,7 +12688,7 @@
 ],
 [
 "cost_type",
-"Escape\u2014{3}{G}{G}"
+"Escape—{3}{G}{G}"
 ],
 [
 "graveyard",
@@ -12600,6 +12816,14 @@
 [
 "first_strike",
 "gains first strike"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -12929,6 +13153,10 @@
 [
 "excess_damage",
 "trample"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -13037,7 +13265,7 @@
 ],
 [
 "protection",
-"Ward\u2014Sacrifice three nonland permanents"
+"Ward—Sacrifice three nonland permanents"
 ],
 [
 "banish",
@@ -13592,6 +13820,14 @@
 [
 "distribute",
 "distribute up to that many +1/+1 counters among any number of other target creatures"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -14114,6 +14350,14 @@
 [
 "tribal",
 "Prowl"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -14275,6 +14519,10 @@
 [
 "condition_count",
 "the number of artifacts you control"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -14540,6 +14788,10 @@
 [
 "aura",
 "Creatures you control get +1/+0"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -14561,6 +14813,14 @@
 [
 "sacrifice",
 "Sacrifice an artifact"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -14815,6 +15075,14 @@
 [
 "permanent_growth",
 "put a +1/+1 counter on this creature"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -14836,6 +15104,14 @@
 [
 "scope_multi",
 "other attacking creatures you control with flying"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -15496,6 +15772,10 @@
 [
 "evasion",
 "Landwalk"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -16184,6 +16464,10 @@
 [
 "spell_speed",
 "Activate only as a sorcery"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -16209,6 +16493,14 @@
 [
 "stat_multiply",
 "perpetually gets +X/+X, where X is its power"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -16921,7 +17213,7 @@
 "tags": [
 [
 "on_play",
-"Whenever C\u00edrdan enters or attacks"
+"Whenever Círdan enters or attacks"
 ],
 [
 "on_attack",
@@ -17809,6 +18101,14 @@
 [
 "evasion",
 "assign its combat damage as though it weren't blocked"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -17878,6 +18178,14 @@
 [
 "damage",
 "fight"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -17930,6 +18238,14 @@
 [
 "protection",
 "Ward"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -18113,6 +18429,14 @@
 [
 "temporary_buff",
 "it gets +1/+1 until end of turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -18272,7 +18596,7 @@
 "tags": [
 [
 "cost_type",
-"Escape\u2014{3}{R}"
+"Escape—{3}{R}"
 ],
 [
 "graveyard",

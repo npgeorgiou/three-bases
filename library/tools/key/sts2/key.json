@@ -3688,6 +3688,10 @@
 [
 "stat_multiply",
 "Deals 50% more damage"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -3888,6 +3892,10 @@
 [
 "permanent_growth",
 "gain 2 Strength"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -4087,6 +4095,10 @@
 [
 "temporary_buff",
 "gain 1 Strength this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -4412,6 +4424,10 @@
 [
 "mark_target",
 "Receive 50% more damage"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -4469,6 +4485,10 @@
 [
 "stat_multiply",
 "attack damage is doubled"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -5874,6 +5894,10 @@
 [
 "permanent_growth",
 "Whenever you create a card, gain 1 Strength"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",

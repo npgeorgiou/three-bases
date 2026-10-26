@@ -704,6 +704,10 @@
 [
 "mark_target",
 "only if target is tagged, +25% damage (self)"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -733,6 +737,10 @@
 [
 "damage",
 "Deals damage"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -913,6 +921,10 @@
 [
 "rank_positions",
 "Usable from ranks 1, 2, 3, 4"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -938,6 +950,10 @@
 [
 "damage",
 "Deals damage"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -1575,6 +1591,10 @@
 [
 "damage_over_time",
 "bleed"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -1667,6 +1687,10 @@
 [
 "damage_over_time",
 "bleed"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -2409,6 +2433,10 @@
 [
 "movement",
 "Moves self (back/forward) 1 0"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -2506,6 +2534,10 @@
 [
 "rank_positions",
 "Usable from ranks 1, 2, 3, 4"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -4181,6 +4213,10 @@
 [
 "stat_loss",
 "-4 speed"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -4689,6 +4725,10 @@
 [
 "stress_morale",
 "-13% stress dmg received percent"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -5116,6 +5156,10 @@
 [
 "stat_loss",
 "-0.05 accuracy"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -6588,6 +6632,10 @@
 [
 "stat_loss",
 "-8% resolve check percent"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"

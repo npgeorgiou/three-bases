@@ -83,6 +83,10 @@
 [
 "heal",
 "will heal 2 points"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"

@@ -435,6 +435,14 @@
 [
 "tribal",
 "Whelp"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -460,6 +468,14 @@
 [
 "death_count",
 "Avenge"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -682,6 +698,14 @@
 [
 "permanent_growth",
 "Gains +1/+1 after you sell a minion!"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -955,6 +979,10 @@
 [
 "death_count",
 "Eternal Knight that died"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -1038,6 +1066,10 @@
 [
 "tribal",
 "Murloc"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -1072,6 +1104,10 @@
 [
 "tribal",
 "Beast"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -1189,6 +1225,14 @@
 [
 "on_ally_play",
 "after you summon a minion in combat"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -1363,6 +1407,14 @@
 [
 "in_hand_buff",
 "give a minion in your hand +2/+2"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -1804,6 +1856,14 @@
 [
 "count_payoff",
 "you've cast this game"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -1998,6 +2058,10 @@
 [
 "permanent_growth",
 "+X/+Y permanently"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -2403,6 +2467,14 @@
 [
 "cost_condition",
 "Tier 3 or lower"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -3145,6 +3217,10 @@
 [
 "turn_start",
 "Spellcraft"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -3204,6 +3280,14 @@
 [
 "tribal",
 "Demons"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -3275,6 +3359,10 @@
 [
 "in_hand_buff",
 "wherever they are"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -3585,6 +3673,10 @@
 [
 "permanent_growth",
 "+X/+Y permanently"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -3642,6 +3734,10 @@
 [
 "count_payoff",
 "Improved by each Beast you've summoned this combat"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -4042,6 +4138,10 @@
 [
 "upgrade",
 "improve this"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -4089,6 +4189,10 @@
 [
 "hand_position",
 "left-most minion in your hand"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -4227,6 +4331,10 @@
 [
 "spell_power",
 "your Blood Gems give an extra +X Attack this game"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -4247,6 +4355,10 @@
 [
 "permanent_growth",
 "give your minions +X/+Y permanently"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -4364,6 +4476,10 @@
 [
 "spell_power",
 "Your Tavern spells give an extra +X/+Y this game"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -5996,6 +6112,10 @@
 [
 "permanent_growth",
 "gain +1 Attack"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -6201,6 +6321,10 @@
 [
 "in_hand_buff",
 "Give it +X/+Y"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -6540,6 +6664,10 @@
 [
 "permanent_growth",
 "give it +1 Health permanently"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -6579,6 +6707,14 @@
 [
 "permanent_growth",
 "give your minions +1/+1 permanently"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -6969,6 +7105,10 @@
 [
 "symmetric_effect",
 "ALL minions"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",

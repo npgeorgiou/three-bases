@@ -71,6 +71,10 @@
 [
 "condition_count",
 "10 or more"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -185,6 +189,14 @@
 [
 "variety_payoff",
 "each different aspect among units you control"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -202,6 +214,10 @@
 [
 "temporary_buff",
 "Attached unit gains Raid 1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -214,7 +230,7 @@
 ],
 [
 "stat_loss",
-"Give a unit \u20131/\u20131"
+"Give a unit –1/–1"
 ],
 [
 "temporary_effect",
@@ -504,6 +520,10 @@
 [
 "condition_life",
 "for each damage on it"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -617,6 +637,10 @@
 [
 "condition_count",
 "6 or more resources"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -715,6 +739,10 @@
 [
 "scope_multi",
 "up to 3 units"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -960,6 +988,14 @@
 [
 "scope_multi",
 "each other friendly non-Vehicle unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -1071,6 +1107,10 @@
 [
 "temporary_buff",
 "+2/+0 for this attack"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1156,6 +1196,10 @@
 [
 "temporary_buff",
 "Raid 1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1194,6 +1238,10 @@
 [
 "temporary_buff",
 "+4/+0 for this attack"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1258,6 +1306,10 @@
 [
 "condition_count",
 "for each other exhausted friendly unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1402,7 +1454,7 @@
 ],
 [
 "stat_loss",
-"give a unit \u20133/\u20133"
+"give a unit –3/–3"
 ],
 [
 "temporary_effect",
@@ -1437,6 +1489,14 @@
 [
 "temporary_buff",
 "+2/+2 for this phase"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -1522,7 +1582,7 @@
 ],
 [
 "stat_loss",
-"Each enemy unit gets \u20134/\u20130 while attacking that unit"
+"Each enemy unit gets –4/–0 while attacking that unit"
 ],
 [
 "temporary_effect",
@@ -1552,6 +1612,10 @@
 [
 "summon",
 "Create a Spy token"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1759,6 +1823,14 @@
 [
 "scope_multi",
 "each unit you control"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -1839,6 +1911,10 @@
 [
 "modal_choice",
 "choose one"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1869,6 +1945,14 @@
 [
 "stat_loss",
 "You may give a unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -1899,6 +1983,10 @@
 [
 "aura",
 "Each exhausted enemy unit gets"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -1989,6 +2077,14 @@
 [
 "tribal",
 "Vehicle units"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -2074,6 +2170,14 @@
 [
 "condition_count",
 "2 or more different keywords"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -2179,6 +2283,10 @@
 [
 "board_presence",
 "each other friendly Swarming Vulture Droid"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -2281,6 +2389,10 @@
 [
 "aura",
 "Each friendly ground unit with Sentinel gets +0/+2"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -2811,6 +2923,14 @@
 [
 "tribal",
 "friendly Heroism unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -2986,6 +3106,10 @@
 [
 "aura",
 "each friendly unit gets +2/+0"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3020,6 +3144,10 @@
 [
 "condition_life",
 "Grit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -3305,6 +3433,10 @@
 [
 "tribal",
 "Vehicle unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3381,6 +3513,14 @@
 [
 "temporary_buff",
 "+2/+2 for this phase"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -3398,6 +3538,14 @@
 [
 "permanent_growth",
 "Give an Experience token to this unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -3500,6 +3648,10 @@
 [
 "piercing",
 "gains Saboteur"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -3813,6 +3965,10 @@
 [
 "reveal_order",
 "If you have the initiative"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4018,6 +4174,10 @@
 [
 "silence",
 "the defender loses all abilities for this attack"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4116,6 +4276,10 @@
 [
 "aoe_damage",
 "Deal 1 damage to each enemy ground unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4291,6 +4455,10 @@
 [
 "condition_life",
 "Grit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -4530,6 +4698,10 @@
 [
 "heal",
 "heal 2 damage from a unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4543,6 +4715,10 @@
 [
 "graveyard",
 "Trooper unit in your discard pile"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4633,6 +4809,10 @@
 [
 "temporary_buff",
 "Raid 1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4646,6 +4826,14 @@
 [
 "temporary_buff",
 "+5/+5 for this phase"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -4680,6 +4868,14 @@
 [
 "aura",
 "Each friendly unit named Zuckuss gets +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -4693,6 +4889,14 @@
 [
 "tribal",
 "Creature unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -4885,6 +5089,10 @@
 [
 "temporary_buff",
 "+2/+0 for this attack"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -5013,6 +5221,14 @@
 [
 "tribal",
 "Trooper unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -5253,6 +5469,10 @@
 [
 "tribal",
 "Force unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -5270,6 +5490,10 @@
 [
 "cheat_death",
 "During the action phase, this unit isn"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -5322,6 +5546,10 @@
 [
 "aura",
 "Each other friendly [Heroism] unit gains Raid 1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -5471,6 +5699,10 @@
 [
 "piercing",
 "Saboteur"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -5548,6 +5780,10 @@
 [
 "variable_stats",
 "It gains Grit for this attack"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -5658,6 +5894,10 @@
 [
 "draw",
 "Draw a card"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -5675,6 +5915,10 @@
 [
 "tribal",
 "Droid unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -6302,6 +6546,10 @@
 [
 "condition_life",
 "Grit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -6358,6 +6606,10 @@
 [
 "tribal",
 "Imperial unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -6491,6 +6743,10 @@
 [
 "death_trigger",
 "When Defeated"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -6721,6 +6977,14 @@
 [
 "on_attack",
 "On Attack"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -6904,6 +7168,14 @@
 [
 "tribal",
 "Official unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -6921,6 +7193,10 @@
 [
 "donate",
 "The enemy unit captures the friendly unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7006,6 +7282,10 @@
 [
 "temporary_buff",
 "Raid 1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7057,6 +7337,10 @@
 [
 "aura",
 "Each other friendly Official unit gets +0/+1"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -7349,6 +7633,10 @@
 [
 "evasion",
 "Saboteur"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -7637,6 +7925,10 @@
 [
 "condition_life",
 "Grit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -7757,6 +8049,10 @@
 [
 "condition_life",
 "Grit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -7882,6 +8178,10 @@
 [
 "heal",
 "Restore 2"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -8010,6 +8310,14 @@
 [
 "scope_multi",
 "Give a third friendly unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -8181,6 +8489,14 @@
 [
 "scope_multi",
 "each friendly unit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -8206,6 +8522,10 @@
 [
 "aura",
 "Each other friendly unit gains Raid 1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -8239,6 +8559,10 @@
 [
 "cost_reduction",
 "Exploit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -8379,6 +8703,10 @@
 [
 "condition_life",
 "Grit"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",

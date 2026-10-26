@@ -214,6 +214,14 @@
 [
 "permanent_growth",
 "+1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -262,6 +270,10 @@
 [
 "taunt",
 "attacks a Guard"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -795,6 +807,14 @@
 [
 "permanent_growth",
 "he gains +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -1117,6 +1137,10 @@
 [
 "lifesteal",
 "Drain"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -2243,6 +2267,14 @@
 [
 "permanent_growth",
 "+1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -2277,6 +2309,14 @@
 [
 "deck_position",
 "top three creatures"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -2328,6 +2368,14 @@
 [
 "in_hand_buff",
 "give it +3/+3"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -3113,6 +3161,14 @@
 [
 "transform",
 "Evolves"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -3261,6 +3317,14 @@
 [
 "deck_position",
 "top creature of your deck"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -3654,6 +3718,10 @@
 [
 "cross_lane",
 "attack creatures in the other lane"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -4009,6 +4077,14 @@
 [
 "permanent_growth",
 "gets +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -4612,6 +4688,14 @@
 [
 "random_effect",
 "a random creature"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -4905,6 +4989,14 @@
 [
 "permanent_growth",
 "gains +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -5303,6 +5395,14 @@
 [
 "permanent_growth",
 "he gains +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -5810,6 +5910,14 @@
 [
 "permanent_growth",
 "+1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -5844,6 +5952,14 @@
 [
 "permanent_growth",
 "gains +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -5948,6 +6064,14 @@
 [
 "permanent_growth",
 "+1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -6923,6 +7047,14 @@
 [
 "in_hand_buff",
 "Give creatures in your deck +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -7319,6 +7451,14 @@
 [
 "aura",
 "Ongoing"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -7511,6 +7651,10 @@
 [
 "draw",
 "Draw a card"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -7665,6 +7809,10 @@
 [
 "permanent_growth",
 "+3/+0"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -8053,6 +8201,14 @@
 [
 "permanent_growth",
 "give Craglorn Scavenger +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -8222,6 +8378,14 @@
 [
 "graveyard",
 "from your discard pile"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -8417,6 +8581,14 @@
 [
 "permanent_growth",
 "gains +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -8660,6 +8832,14 @@
 [
 "in_hand_buff",
 "give all creatures in your hand +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -8696,6 +8876,14 @@
 [
 "permanent_growth",
 "it gains +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -9361,6 +9549,10 @@
 [
 "permanent_growth",
 "gains +2/+0"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read"
@@ -9398,6 +9590,14 @@
 [
 "on_draw",
 "Prophecy"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",

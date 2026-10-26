@@ -902,6 +902,10 @@
 [
 "block_armor",
 "Apply Armor 5"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -988,6 +992,10 @@
 [
 "exhaust",
 "Consume"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -1049,6 +1057,10 @@
 [
 "temporary_buff",
 "Rage"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -1241,6 +1253,10 @@
 [
 "block_armor",
 "apply Armor 10"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read"
@@ -1306,6 +1322,10 @@
 [
 "on_attack",
 "Strike"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -1333,6 +1353,10 @@
 [
 "turn_end",
 "Resolve"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -1402,6 +1426,10 @@
 [
 "on_play",
 "Summon"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -1424,6 +1452,10 @@
 [
 "on_attack",
 "Strike"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -1450,6 +1482,10 @@
 [
 "piercing",
 "Piercing"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -1999,6 +2035,14 @@
 [
 "exhaust",
 "Consume"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -2164,6 +2208,10 @@
 [
 "counterattack",
 "Spikes"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -2190,6 +2238,10 @@
 [
 "aoe_damage",
 "Sweep"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -2955,6 +3007,10 @@
 [
 "on_spell",
 "Incant"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -2977,6 +3033,10 @@
 [
 "on_spell",
 "Incant"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -3179,6 +3239,14 @@
 [
 "on_spell",
 "Incant"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -3993,6 +4061,10 @@
 [
 "exhaust",
 "Consume"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -4368,6 +4440,10 @@
 [
 "on_sacrifice",
 "Gorge"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -4523,6 +4599,14 @@
 [
 "on_ally_play",
 "Hunger"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -4894,6 +4978,10 @@
 [
 "exhaust",
 "Consume"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -4928,6 +5016,10 @@
 [
 "stealth",
 "Stealth"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -5344,6 +5436,14 @@
 [
 "other_death_trigger",
 "Harvest"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -5457,6 +5557,10 @@
 [
 "death_trigger",
 "Extinguish"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -5803,6 +5907,10 @@
 [
 "cost_type",
 "Charged Echo"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "read",
@@ -5990,6 +6098,10 @@
 [
 "exhaust",
 "Consume"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",
@@ -6228,6 +6340,10 @@
 [
 "on_attack",
 "strike"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "read",

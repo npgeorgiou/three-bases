@@ -6,3 +6,4 @@ movement	synergizes	adjacency	moving a unit puts it next to others, which sets u
 summon	synergizes	adjacency	a summoned unit is put on a chosen space next to others, which sets up anything that needs neighbours
 forced_movement	synergizes	area_templates	moving units into the line or shape an attack covers lets one attack hit more of them
 swap	synergizes	terrain	swapping a unit into a tile with an effect puts it under that effect
+attack_gain	synergizes	on_kill	more damage on the next attack makes the kill that triggers the effect more likely

@@ -100,6 +100,14 @@
 [
 "permanent_growth",
 "Grow: +2/+2"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -879,6 +887,14 @@
 [
 "permanent_growth",
 "gains +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -1357,6 +1373,14 @@
 [
 "terrain",
 "Shadow Creep"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -1606,6 +1630,14 @@
 [
 "turn_start",
 "Grow"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -2426,6 +2458,10 @@
 [
 "permanent_growth",
 "this minion gains +4 Attack"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -2799,6 +2835,14 @@
 [
 "permanent_growth",
 "gains +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -2836,6 +2880,10 @@
 [
 "summon",
 "Whenever you summon a minion with 2 or less Attack"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -3176,6 +3224,10 @@
 [
 "summon",
 "Whenever your opponent summons a minion"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -3381,6 +3433,14 @@
 [
 "aoe_damage",
 "Frenzy"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -3793,6 +3853,14 @@
 [
 "tribal",
 "Spriggin"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -4104,6 +4172,10 @@
 [
 "summon",
 "Whenever you summon a minion with Opening Gambit from your action bar"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -4158,6 +4230,10 @@
 [
 "temporary_buff",
 "gains +2 Attack this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -4170,6 +4246,14 @@
 [
 "in_hand_buff",
 "it costs 3 less and gains +3/+3"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -4371,6 +4455,10 @@
 [
 "scope_multi",
 "all friendly minions"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -4388,6 +4476,10 @@
 [
 "adjacency",
 "nearby friendly minion"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -4851,6 +4943,14 @@
 [
 "turn_start",
 "Grow"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -5014,6 +5114,14 @@
 [
 "tribal",
 "Vespyr"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -5422,6 +5530,14 @@
 [
 "buff",
 "Your minions have \"Grow: +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -5455,6 +5571,14 @@
 [
 "turn_start",
 "Grow"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -5665,6 +5789,10 @@
 [
 "temporary_buff",
 "gains +1 Attack until your next turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"

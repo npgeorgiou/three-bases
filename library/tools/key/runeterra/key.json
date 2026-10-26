@@ -233,6 +233,10 @@
 [
 "in_hand_buff",
 "everywhere"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -393,6 +397,14 @@
 [
 "spell_speed",
 "Burst"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -427,6 +439,14 @@
 [
 "in_hand_buff",
 "Grant an ally in hand +3|+3"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -493,6 +513,10 @@
 [
 "spell_speed",
 "Burst"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -951,6 +975,14 @@
 [
 "on_spell",
 "Imbue"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -1092,6 +1124,14 @@
 [
 "spell_speed",
 "Slow"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -1396,6 +1436,10 @@
 [
 "spell_speed",
 "Burst"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -1643,6 +1687,14 @@
 [
 "count_payoff",
 "Plunder"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -2317,6 +2369,14 @@
 [
 "temporary_effect",
 "Barrier"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -3004,6 +3064,10 @@
 [
 "permanent_growth",
 "grant me +1|+0"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -3771,6 +3835,14 @@
 [
 "temporary_buff",
 "give me and my supporting ally +1|+1 this round"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -4786,6 +4858,14 @@
 [
 "spell_speed",
 "Burst"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -5706,6 +5786,10 @@
 [
 "terrain",
 "Landmark"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -6319,6 +6403,14 @@
 [
 "stat_condition",
 "Empowered"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -6366,6 +6458,14 @@
 [
 "stat_condition",
 "Empowered"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -7473,6 +7573,10 @@
 [
 "tribal",
 "Bird allies"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -7984,6 +8088,14 @@
 [
 "permanent_growth",
 "grant me +1|+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -8360,6 +8472,10 @@
 [
 "spell_speed",
 "Fast"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -9679,6 +9795,14 @@
 [
 "permanent_growth",
 "Grant me +1|+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -9711,6 +9835,14 @@
 [
 "count_payoff",
 "I have +1|+1 for each stance you've played this game"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -10207,6 +10339,14 @@
 [
 "generate_cards",
 "Create a Vladimir in your deck"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -10372,6 +10512,10 @@
 [
 "aura",
 "Other Fearsome allies have +1|+0"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -10392,6 +10536,10 @@
 [
 "generate_cards",
 "Create a Vi in your deck"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -10572,6 +10720,14 @@
 [
 "generate_cards",
 "Create a Sejuani in your deck"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -10992,6 +11148,14 @@
 [
 "generate_cards",
 "Create a Leona in your deck"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -12337,6 +12501,14 @@
 [
 "scope_multi",
 "other allies"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -12896,6 +13068,14 @@
 [
 "reactions",
 "Skill"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -13001,6 +13181,10 @@
 [
 "reactions",
 "Skill"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",

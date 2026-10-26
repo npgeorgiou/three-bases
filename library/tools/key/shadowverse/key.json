@@ -152,6 +152,10 @@
 [
 "targeting_rules",
 "Can't attack the enemy leader"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -487,6 +491,14 @@
 [
 "permanent_growth",
 "gain +2/+0"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -532,6 +544,10 @@
 [
 "aura",
 "While this follower is in play"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -1970,6 +1986,10 @@
 [
 "temporary_buff",
 "gain +1/+0 until the end of the turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -2367,6 +2387,10 @@
 [
 "random_effect",
 "random"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -4599,6 +4623,10 @@
 [
 "transform",
 "evolve this follower"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -5756,6 +5784,14 @@
 [
 "permanent_growth",
 "gain +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -6530,7 +6566,7 @@
 ],
 [
 "summon",
-"Summon a Libert\u00e9, Werewolf Pup"
+"Summon a Liberté, Werewolf Pup"
 ],
 [
 "kicker",
@@ -7291,6 +7327,10 @@
 [
 "spell_power",
 "Your spells deal +1 damage"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -8553,6 +8593,10 @@
 [
 "immunity",
 "Reduce damage from effects to 0"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -11321,6 +11365,10 @@
 [
 "cost_type",
 "Accelerate"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -11384,6 +11432,10 @@
 [
 "cost_type",
 "Accelerate"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -12819,6 +12871,10 @@
 [
 "damage",
 "Strike"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -13314,6 +13370,14 @@
 [
 "permanent_growth",
 "gain +2/+2"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"

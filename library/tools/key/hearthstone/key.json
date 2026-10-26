@@ -887,6 +887,14 @@
 [
 "scope_multi",
 "your other minions"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -1448,6 +1456,14 @@
 [
 "permanent_growth",
 "gain +2/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -1685,6 +1701,14 @@
 [
 "permanent_growth",
 "gain +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -2238,6 +2262,14 @@
 [
 "kicker",
 "Spend 2 Corpses"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -2394,6 +2426,10 @@
 [
 "scope_multi",
 "your characters"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -3061,6 +3097,14 @@
 [
 "in_hand_buff",
 "Give all minions in your deck +2/+2"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -3415,6 +3459,14 @@
 [
 "permanent_growth",
 "gain +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -3742,6 +3794,10 @@
 [
 "damage_reduction",
 "gain 8 Armor"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C",
@@ -4017,6 +4073,14 @@
 [
 "tribal",
 "Legendary minions get an extra +2/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -4529,6 +4593,14 @@
 [
 "merge_attach",
 "reequip this"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -4696,6 +4768,14 @@
 [
 "merge_attach",
 "Give your weapon +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -4796,6 +4876,10 @@
 [
 "merge_attach",
 "Give your weapon +2 Attack"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -4816,6 +4900,14 @@
 [
 "in_hand_buff",
 "Give your C'Thun +1/+1 and Taunt (wherever it is)"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -5216,6 +5308,14 @@
 [
 "in_hand_buff",
 "Give both +1/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -5244,6 +5344,14 @@
 [
 "permanent_growth",
 "gain +3/+3"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -6830,6 +6938,14 @@
 [
 "in_hand_buff",
 "with permanent +3/+3"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -7411,6 +7527,10 @@
 [
 "aoe_damage",
 "Also damages adjacent minions"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -7822,6 +7942,14 @@
 [
 "random_effect",
 "Discover"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -8220,6 +8348,10 @@
 [
 "summon",
 "Summon two 0/6 Glowcap Mushrooms"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -8360,6 +8492,10 @@
 [
 "temporary_buff",
 "Give your hero +1 Attack this turn"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -8423,6 +8559,14 @@
 [
 "hand_position",
 "Each turn this is in your hand"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "C",
@@ -9332,6 +9476,14 @@
 [
 "permanent_growth",
 "this gains +2/+1"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B",
@@ -9816,6 +9968,10 @@
 [
 "alt_wincon",
 "Victory!"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -10173,6 +10329,14 @@
 [
 "hand_disruption",
 "steal any Coins in your opponent's hand"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
+],
+[
+"defence_gain",
+"health, toughness or defence goes up"
 ]
 ],
 "by": "A=B"
@@ -10495,6 +10659,10 @@
 [
 "tribal",
 "Demon"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
@@ -10799,6 +10967,10 @@
 [
 "temporary_buff",
 "+1 Attack on their turns"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "C"
@@ -10936,6 +11108,10 @@
 [
 "return_to_hand",
 "Return this to your hand"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B",
@@ -11367,6 +11543,10 @@
 [
 "adjacency",
 "Adjacent minions"
+],
+[
+"attack_gain",
+"attack, damage or power goes up"
 ]
 ],
 "by": "A=B"
