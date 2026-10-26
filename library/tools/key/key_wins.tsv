@@ -277,7 +277,6 @@ entity	concept	action	why
 741098	symmetric_effect	drop	review tag the key calls wrong
 741101	scope_global	add	key concept
 741101	symmetric_effect	drop	review concept broader or narrower than the key's
-741109	cost_reduction	drop	review tag the key calls wrong
 741113	condition_life	drop	review tag the key calls wrong
 741123	passive	drop	review tag the key calls wrong
 741123	terrain	drop	review tag the key calls wrong
@@ -285,16 +284,12 @@ entity	concept	action	why
 741125	terrain	drop	review tag the key calls wrong
 741138	polymorph	add	key concept
 741138	removal	drop	review concept broader or narrower than the key's
-741140	cost_reduction	drop	review tag the key calls wrong
 741140	generate_cards	drop	review tag the key calls wrong
 741143	terrain	drop	review tag the key calls wrong
-741144	scope_self	drop	review tag the key calls wrong
 741144	stat_gain	drop	review tag the key calls wrong
 741145	movement	drop	review tag the key calls wrong
 741145	terrain	drop	review tag the key calls wrong
 741150	upgrade	drop	review tag the key calls wrong
-741152	scope_self	drop	review tag the key calls wrong
-741154	scope_self	drop	review tag the key calls wrong
 741154	stat_gain	drop	review tag the key calls wrong
 741159	copy	drop	review tag the key calls wrong
 741162	movement	drop	review tag the key calls wrong
@@ -303,24 +298,17 @@ entity	concept	action	why
 741169	combo_sequence	drop	review tag the key calls wrong
 741174	death_count	add	review dropped a key concept
 741174	death_trigger	drop	review tag the key calls wrong
-741174	scope_self	drop	review tag the key calls wrong
 741174	stat_gain	drop	review tag the key calls wrong
 741176	terrain	drop	review tag the key calls wrong
 741189	zone_of_control	drop	review tag the key calls wrong
 741196	terrain	drop	review tag the key calls wrong
-741204	cost_reduction	drop	review tag the key calls wrong
 741216	stat_gain	drop	review tag the key calls wrong
 741230	adjacency	add	key concept
 741230	positional	drop	review concept broader or narrower than the key's
 741236	on_damaged	drop	review tag the key calls wrong
-741236	scope_self	drop	review tag the key calls wrong
-741247	scope_self	drop	review tag the key calls wrong
 741248	ping	add	review dropped a key concept
-741249	scope_self	drop	review tag the key calls wrong
 741249	stat_gain	drop	review tag the key calls wrong
 741251	passive	drop	review tag the key calls wrong
-741251	permanent_growth	drop	review tag the key calls wrong
-741251	scope_self	drop	review tag the key calls wrong
 741251	stat_gain	drop	review tag the key calls wrong
 741254	damage	drop	review concept broader or narrower than the key's
 741254	direct_damage	add	key concept
@@ -330,16 +318,12 @@ entity	concept	action	why
 741261	board_wipe	add	review dropped a key concept
 741261	destroy	drop	review tag the key calls wrong
 741261	symmetric_effect	drop	review tag the key calls wrong
-741261	terrain	drop	review tag the key calls wrong
 741288	lifesteal	drop	review tag the key calls wrong
-741290	scope_self	drop	review tag the key calls wrong
 741295	passive	drop	review tag the key calls wrong
 741295	stat_gain	drop	review tag the key calls wrong
 741301	lifesteal	drop	review tag the key calls wrong
 741307	count_payoff	drop	review tag the key calls wrong
-741309	scope_self	drop	review tag the key calls wrong
 741310	variable_stats	drop	review tag the key calls wrong
-741317	cost_reduction	drop	review tag the key calls wrong
 741317	information	drop	review tag the key calls wrong
 741318	on_play	drop	review tag the key calls wrong
 741319	condition_count	drop	review tag the key calls wrong
@@ -352,10 +336,8 @@ entity	concept	action	why
 741334	immunity	add	key concept
 741334	protection	drop	review concept broader or narrower than the key's
 741336	passive	drop	review tag the key calls wrong
-741336	scope_self	drop	review tag the key calls wrong
 741337	damage	drop	review tag the key calls wrong
 741342	symmetric_effect	drop	review tag the key calls wrong
-741344	cost_reduction	drop	review tag the key calls wrong
 741347	enemy_benefit	drop	review tag the key calls wrong
 741347	symmetric_effect	drop	review tag the key calls wrong
 741351	polymorph	drop	review tag the key calls wrong
@@ -367,8 +349,6 @@ entity	concept	action	why
 741361	damage	drop	review concept broader or narrower than the key's
 741361	friendly_fire	drop	review tag the key calls wrong
 741361	symmetric_effect	drop	review tag the key calls wrong
-741363	scope_self	drop	review tag the key calls wrong
-741371	scope_self	drop	review tag the key calls wrong
 741371	stat_gain	drop	review tag the key calls wrong
 741371	zone_of_control	drop	review tag the key calls wrong
 741391	immobilize	drop	review tag the key calls wrong
@@ -376,7 +356,6 @@ entity	concept	action	why
 741392	damage	drop	review tag the key calls wrong
 741397	hand_deck_swap	drop	review tag the key calls wrong
 741400	on_play	drop	review tag the key calls wrong
-741406	scope_self	drop	review tag the key calls wrong
 741406	symmetric_effect	drop	review tag the key calls wrong
 741411	scope_global	add	key concept
 741411	symmetric_effect	drop	review concept broader or narrower than the key's
@@ -385,10 +364,8 @@ entity	concept	action	why
 741426	passive	drop	review tag the key calls wrong
 741427	hand_size	drop	review tag the key calls wrong
 741429	damage	drop	review tag the key calls wrong
-741436	scope_self	drop	review tag the key calls wrong
 741448	rule_change	drop	review tag the key calls wrong
 741449	temporary_effect	drop	review tag the key calls wrong
-741451	cost_reduction	drop	review tag the key calls wrong
 741452	terrain	drop	review tag the key calls wrong
 741463	deck_modification	drop	review tag the key calls wrong
 741463	stat_gain	drop	review tag the key calls wrong
@@ -405,7 +382,6 @@ entity	concept	action	why
 741488	deck_modification	drop	review tag the key calls wrong
 741489	deck_modification	drop	review tag the key calls wrong
 741493	copy	add	review dropped a key concept
-741497	cost_reduction	drop	review tag the key calls wrong
 741502	deck_modification	drop	review tag the key calls wrong
 741503	copy	add	review dropped a key concept
 741504	deck_modification	drop	review tag the key calls wrong

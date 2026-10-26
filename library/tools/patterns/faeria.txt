@@ -1,9 +1,9 @@
 # Faeria: Flying is movement over ocean (blocked by creatures and structures), not evasion
 !evasion|\bflying\b
-# Structures pay for Activate with damage to themselves
-life_payment|cost|\bactivate - [^.]*\. deal \d+ damage to this\b
+# Structures that damage themselves wear down until they die ("Deal 1 damage to this"): self_destruct (reviews drop the damage tag)
+self_destruct|does|\bdeal \d+ damage to this\b
 # "wherever they are" reaches hand and deck
-in_hand_buff|does|\bwherever they are\b|\bin your (hand|deck)\b[^.]{0,30}\+\d+/\+\d+
+in_hand_buff|does|\bwherever they are\b|\bin your (hand|deck)\b(?! and gain)[^.]{0,30}\+\d+/\+\d+
 stat_condition|does|\bwith \d+ (attack|life) or (more|less)\b
 drawback|does|\bcan't harvest\b|\bcan only attack gods\b
 !ping|deal 1 damage
@@ -11,3 +11,56 @@ tribal|does|\b(friendly|adjacent friendly|another|a random) (yaks?|beasts?|trito
 # mechanics check: killing a creature outright; Fight (attacks a creature anywhere, outside its own attack)
 destroy|does|\bdestroy (a|an|another|target) (enemy )?creature\b
 attack_now|does|\bfights? (a|an|your) (enemy|opponent)\b|\bthen it fights\b
+# Grows again and again: a repeated trigger, Production or Activate that gives itself stats it keeps
+permanent_growth|does|\b(whenever|each time|after)\b[^.\n]*\b(this|it|this creature|this structure|[a-z]+) gains? \+\d+/\+\d+(?! this turn)
+permanent_growth|does|\bthis gains \+\d+/\+\d+ whenever\b|\bgains \+\d+/\+\d+ for each time\b|\bthis gains that much attack\b
+permanent_growth|does|\bproduction - (this|the swallowed creature)( structure| creature)? gains \+\d+/\+\d+
+permanent_growth|does|\bactivate - [^.\n]*\b[a-z]+ gains \+\d+/\+\d+
+# Cards improved in hand or deck: "(while in your deck or hand)", a card added or returned to hand with a discount or stats
+in_hand_buff|does|\(while in your (deck or hand|hand or deck|hand|deck)\)
+in_hand_buff|does|\bto your hand\. (it|they) costs? \d+ faeria less\b|\bto your hand\. give it \+\d+/\+\d+
+in_hand_buff|does|\ba random card in your hand costs? \d+ faeria less\b|\breduce (the cost of all cards|a card) in your hand by\b
+in_hand_buff|does|\bdiscover [^.\n]*\. it (becomes wild land and )?(gains|gets) \+\d+/\+\d+|\bdiscover [^.\n]*\. it gains \+\d+/\+\d+ and becomes wild land\b
+in_hand_buff|does|\bcopy the top \d+ cards[^.\n]*\. they cost \d+ faeria less\b
+in_hand_buff|does|\breturn [a-z]+ to your hand[^.\n]*\. (she|he|it) gains \+\d+/\+\d+
+in_hand_buff|does|\binto your deck\. they gain \+\d+/\+\d+|\bdraw [^.\n]*\. give it \+\d+/\+\d+
+# Destroys itself: Aquatic drowning, dying at end of turn, a condition or Activate that destroys this
+self_destruct|does|\bdrowns at end of turn\b|\bdies at end of turn\b|\bdestroy (it|this)\b(?! creature)|\bprevent it and destroy this\b
+turn_end|does|\bdies at end of turn\b
+on_kill|does|\bif you kill it\b|\bwould kill a creature\b
+# Another creature dying is a trigger (old id death_trigger; reviews drop death_count)
+death_trigger|does|\bwhen(ever)? (an?|another) (adjacent |enemy |friendly |other )*(friendly |enemy )?(creature|yak|unit)s? dies\b
+condition_count|does|\bwhile you control (lake|desert|mountain|forest)( \1)+\b
+# "Attack becomes equal to its Life" raises Attack (reviews drop variable_stats)
+buff|does|\battack becomes equal to its life\b|\bgain attack and life equal to\b
+# New cards shuffled into a deck or added to a hand or deck
+generate_cards|does|\bshuffle (?!them\b|your hand\b|the [a-z]+ into\b|[a-z]+ back\b)[^.\n]*\b(into (your|it)|in)\b
+generate_cards|does|\badd an? [a-z' ]+ to (each player's hand|your deck|the top of your deck)\b
+# Wild land: a card that can be paid with any land colour
+cost_type|does|\b(it|they|cards in your hand) (all )?(becomes?|are) wild land\b|\bbecomes? wild land\b
+cost_condition|does|\bwith a base cost of \d+ faeria or higher\b|\bthat costs? \d+ faeria or (more|less)\b|\bcost \d+ faeria or more\b
+stat_condition|does|\bwith (exactly )?\d+ attack\b|\bwith higher attack than life\b|\bwhen [a-z]+ has \d+ life or more\b|\bwhen this has \d+ or more life\b|\bwith 0 attack\b
+# Damage to your own god as the price of an effect
+life_payment|cost|\bdeal \d+ damage to yourself and (gain|add)\b|\band deal \d+ damage to yourself\b
+friendly_fire|does|\b(production|last words) - deal \d+ damage to yourself\b
+on_spell|does|\bwhenever you play an event\b
+temporary_effect|does|\b(give|gives|play|summoned on it)\b[^.\n]*\bthis turn\b
+territory_trigger|does|\bif this is on an enemy land\b
+merge_attach|does|\bswallow (a friendly creature|another friendly)\b
+haste|does|\bcan harvest faeria the turn you play it\b
+cost_set|does|\bcost equals your life\b
+aura|does|\ball your [a-z ]*creatures have \+\d+/\+\d+
+hand_size|does|\b\d+ or more cards in hand\b
+tribal|does|\bdiscover an? beast\b|\byour legends\b|\ba random legend\b
+draw|does|\bdraw that many cards\b
+permanent_growth|does|\bwhenever [^.\n]*\bdies, this drains its attack\b
+placement_rules|does|\byou may summon it on an ocean tile\b
+# Land alteration is terrain: lands destroyed, moved or taken over (only counting or entering lands is not)
+terrain|does|\bdestroy (all creatures, structures,? and lands|all adjacent creatures, structures and lands|\d+ unoccupied lands)\b|\bmove this creature's land\b|\bgain control of this creature's land\b
+# "Give the next X creature you summon +1/+1": a later bonus on a summon, not a card in hand
+delayed|does|\bgive the next [a-z]+ creature you summon\b
+on_ally_play|does|\bgive the next [a-z]+ creature you summon\b
+# Attacking the enemy god deals direct damage: cards rewarded by it benefit from direct_damage
+direct_damage|benefits|\b(attacks?|attacked) (a|the enemy|an enemy) god\b|\bagainst gods\b|\bcan only attack gods\b
+# Effects on the card itself (scope_self) in wordings the general pattern misses
+scope_self|does|(?:^|\n)(?:gains|has) \+\d+/\+\d+|\b(?:he|she) gains\b|\bdouble (?:this creature's|its) attack\b|\bthis drains its attack\b|\bthis gains (?:haste|deathtouch|attack and life|that much attack)\b|\bto gain \+\d+/\+\d+|\bgain (?:haste and protection|attack and life equal to)\b|\bgain \+\d+/\+\d+ for each\b|\bafter this attacks, it gains\b

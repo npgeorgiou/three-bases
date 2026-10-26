@@ -40,10 +40,6 @@
 [
 "movement",
 "Can move over ocean and land"
-],
-[
-"terrain",
-"ocean"
 ]
 ],
 "by": "C"
@@ -62,10 +58,6 @@
 [
 "movement",
 "Moves up to two tiles"
-],
-[
-"terrain",
-"leap over obstacles"
 ]
 ],
 "by": "C"
@@ -152,16 +144,16 @@
 "741074": {
 "tags": [
 [
-"terrain",
-"Can only travel over lakes and ocean"
-],
-[
 "self_destruct",
 "drowns at end of turn"
 ],
 [
 "turn_end",
 "at end of turn"
+],
+[
+"placement_rules",
+"lakes"
 ]
 ],
 "by": "C"
@@ -213,6 +205,10 @@
 [
 "attack_gain",
 "attack, damage or power goes up"
+],
+[
+"scope_self",
+"Has +2/+0 during your turn"
 ]
 ],
 "by": "C"
@@ -282,6 +278,10 @@
 [
 "random_effect",
 "random Legend"
+],
+[
+"cost_type",
+"It becomes wild land"
 ]
 ],
 "by": "C",
@@ -361,6 +361,10 @@
 [
 "attack_gain",
 "attack, damage or power goes up"
+],
+[
+"scope_self",
+"it gains +1/+0"
 ]
 ],
 "by": "A=B",
@@ -489,6 +493,14 @@
 [
 "in_hand_buff",
 "They cost 3 faeria less"
+],
+[
+"cost_reduction",
+"cost 3 faeria less"
+],
+[
+"cost_type",
+"become wild land"
 ]
 ],
 "by": "C"
@@ -539,6 +551,10 @@
 [
 "finisher",
 "while your opponent has 10 Life or less"
+],
+[
+"scope_self",
+"Has +2/+0"
 ]
 ],
 "by": "C"
@@ -628,6 +644,10 @@
 [
 "condition_count",
 "while you control desert desert"
+],
+[
+"scope_self",
+"Has +1/+1"
 ]
 ],
 "by": "A=B"
@@ -645,6 +665,10 @@
 [
 "stat_gain",
 "+0/+2 while you control forest forest"
+],
+[
+"scope_self",
+"Has +2/+0"
 ]
 ],
 "by": "C"
@@ -662,6 +686,10 @@
 [
 "stat_gain",
 "+1/+1 while you control desert desert"
+],
+[
+"scope_self",
+"Has +2/+0"
 ]
 ],
 "by": "C"
@@ -717,15 +745,19 @@
 "this gains +1/+1"
 ],
 [
-"evasion",
-"Flying"
-],
-[
 "placement_rules",
 "Aquatic"
 ],
 [
 "self_destruct",
+"Aquatic"
+],
+[
+"scope_self",
+"this gains +1/+1 and Flying"
+],
+[
+"turn_end",
 "Aquatic"
 ]
 ],
@@ -807,6 +839,10 @@
 [
 "in_hand_buff",
 "It costs 5 faeria less"
+],
+[
+"cost_reduction",
+"costs 5 faeria less"
 ]
 ],
 "by": "C"
@@ -874,6 +910,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"this gains +1/+1"
 ]
 ],
 "by": "C"
@@ -886,6 +926,10 @@
 ],
 [
 "self_destruct",
+"Aquatic"
+],
+[
+"turn_end",
 "Aquatic"
 ]
 ],
@@ -924,6 +968,10 @@
 ],
 [
 "self_destruct",
+"Aquatic"
+],
+[
+"turn_end",
 "Aquatic"
 ]
 ],
@@ -974,10 +1022,6 @@
 },
 "741150": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "movement",
 "Charge 2"
@@ -1035,10 +1079,6 @@
 "741152": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "stat_gain",
 "this gains +2/+2"
 ],
@@ -1049,6 +1089,10 @@
 [
 "movement",
 "Flying"
+],
+[
+"scope_self",
+"this gains +2/+2"
 ]
 ],
 "by": "C",
@@ -1095,6 +1139,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"this gains +1/+1"
 ]
 ],
 "by": "A=B"
@@ -1116,6 +1164,10 @@
 [
 "attack_gain",
 "attack, damage or power goes up"
+],
+[
+"scope_self",
+"this gains +2/+0 this turn"
 ]
 ],
 "by": "C",
@@ -1285,6 +1337,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"this gains +1/+1"
 ]
 ],
 "by": "A=B"
@@ -1350,6 +1406,10 @@
 [
 "stat_multiply",
 "double its Attack"
+],
+[
+"scope_self",
+"double its Attack"
 ]
 ],
 "by": "A=B"
@@ -1402,6 +1462,10 @@
 [
 "condition_count",
 "for each forest you control"
+],
+[
+"scope_self",
+"This gains +0/+1"
 ]
 ],
 "by": "A=B",
@@ -1434,6 +1498,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"This structure gains +0/+1"
 ]
 ],
 "by": "C",
@@ -1564,6 +1632,10 @@
 [
 "in_hand_buff",
 "It costs 2 faeria less"
+],
+[
+"cost_reduction",
+"costs 2 faeria less"
 ]
 ],
 "by": "C",
@@ -1661,6 +1733,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"This gains +0/+1"
 ]
 ],
 "by": "C",
@@ -1811,6 +1887,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"She gains +2/+2"
 ]
 ],
 "by": "C",
@@ -1904,6 +1984,10 @@
 [
 "permanent_growth",
 "he gains Attack and Life equal to the destroyed creature's base Attack and Life"
+],
+[
+"scope_self",
+"he gains Attack and Life"
 ]
 ],
 "by": "C"
@@ -1921,6 +2005,10 @@
 [
 "random_effect",
 "random card"
+],
+[
+"cost_reduction",
+"costs 7 faeria less"
 ]
 ],
 "by": "A=B",
@@ -2006,6 +2094,10 @@
 [
 "permanent_growth",
 "Whenever a god is dealt damage, this gains that much Attack"
+],
+[
+"scope_self",
+"this gains that much Attack"
 ]
 ],
 "by": "C"
@@ -2023,6 +2115,10 @@
 [
 "stat_condition",
 "higher Attack than Life"
+],
+[
+"scope_self",
+"This gains +2/+2"
 ]
 ],
 "by": "A=B",
@@ -2095,10 +2191,6 @@
 "741247": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "stat_gain",
 "gains +3/+1"
 ],
@@ -2109,6 +2201,10 @@
 [
 "movement",
 "Flying"
+],
+[
+"scope_self",
+"this gains +3/+1 and Ranged Attack"
 ]
 ],
 "by": "A=B",
@@ -2159,6 +2255,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"this gains +2/+1"
 ]
 ],
 "by": "C"
@@ -2184,6 +2284,14 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"This gains +1/+1"
+],
+[
+"permanent_growth",
+"This gains +1/+1 whenever you summon a creature"
 ]
 ],
 "by": "C"
@@ -2305,6 +2413,10 @@
 [
 "area_templates",
 "on or adjacent to that space"
+],
+[
+"terrain",
+"Destroy all creatures, structures, and lands"
 ]
 ],
 "by": "C"
@@ -2339,6 +2451,10 @@
 [
 "stat_gain",
 "Has +2/+0 against gods"
+],
+[
+"scope_self",
+"Has +2/+0 against gods"
 ]
 ],
 "by": "A=B",
@@ -2363,6 +2479,10 @@
 [
 "on_play",
 "Dash"
+],
+[
+"scope_self",
+"Has +3/+0 against gods"
 ]
 ],
 "by": "C",
@@ -2443,10 +2563,6 @@
 },
 "741273": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "movement",
 "Charge 2"
@@ -2577,10 +2693,6 @@
 "741288": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "movement",
 "Charge 2"
 ],
@@ -2616,10 +2728,6 @@
 "741290": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "stat_gain",
 "gains +3/+1"
 ],
@@ -2630,6 +2738,10 @@
 [
 "movement",
 "Flying"
+],
+[
+"scope_self",
+"this gains +3/+1 and Charge 3"
 ]
 ],
 "by": "C",
@@ -2670,10 +2782,6 @@
 "741292": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "movement",
 "Charge 3"
 ],
@@ -2688,6 +2796,10 @@
 [
 "attack_gain",
 "attack, damage or power goes up"
+],
+[
+"scope_self",
+"this gains +3/+0"
 ]
 ],
 "by": "C",
@@ -2739,6 +2851,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"Gains +1/+1"
 ]
 ],
 "by": "C",
@@ -2790,10 +2906,6 @@
 [
 "summon",
 "summoning a 5/2 Flying Demon Wing in its place"
-],
-[
-"evasion",
-"Flying"
 ]
 ],
 "by": "C",
@@ -2835,6 +2947,10 @@
 [
 "movement",
 "Charge"
+],
+[
+"scope_self",
+"this drains its attack"
 ]
 ],
 "by": "C",
@@ -2850,10 +2966,6 @@
 },
 "741302": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "immunity",
 "Can't be attacked"
@@ -2929,6 +3041,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"Doomgate gains +0/+2"
 ]
 ],
 "by": "C",
@@ -2953,6 +3069,10 @@
 [
 "temporary_buff",
 "this turn"
+],
+[
+"scope_self",
+"this gains +1/+0 this turn"
 ]
 ],
 "by": "A=B",
@@ -2981,6 +3101,10 @@
 [
 "movement",
 "Charge"
+],
+[
+"scope_self",
+"this gains +2/+0 this turn"
 ]
 ],
 "by": "C",
@@ -3007,6 +3131,10 @@
 [
 "stat_gain",
 "Gain Attack and Life equal to any creature's"
+],
+[
+"scope_self",
+"Gain Attack and Life"
 ]
 ],
 "by": "C",
@@ -3069,10 +3197,6 @@
 "741314": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "movement",
 "Charge 3"
 ],
@@ -3095,6 +3219,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"Gains +1/+1"
 ]
 ],
 "by": "C",
@@ -3110,10 +3238,6 @@
 },
 "741315": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "haste",
 "Haste"
@@ -3180,16 +3304,16 @@
 [
 "in_hand_buff",
 "They cost 1 faeria less"
+],
+[
+"cost_reduction",
+"cost 1 faeria less"
 ]
 ],
 "by": "C"
 },
 "741318": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "movement",
 "Dash 2"
@@ -3212,10 +3336,6 @@
 },
 "741319": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "movement",
 "Dash 3"
@@ -3358,12 +3478,24 @@
 "Gift"
 ],
 [
-"stat_gain",
+"tribal",
+"Jump creature"
+],
+[
+"delayed",
+"Give the next Jump creature you summon +1/+1"
+],
+[
+"on_ally_play",
+"Give the next Jump creature you summon +1/+1"
+],
+[
+"attack_gain",
 "+1/+1"
 ],
 [
-"tribal",
-"Jump creature"
+"defence_gain",
+"+1/+1"
 ]
 ],
 "by": "C",
@@ -3379,16 +3511,20 @@
 "Combat"
 ],
 [
-"in_hand_buff",
-"Give the next Combat creature you summon +1/+1"
-],
-[
 "attack_gain",
 "attack, damage or power goes up"
 ],
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"delayed",
+"Give the next Combat creature you summon +1/+1"
+],
+[
+"on_ally_play",
+"Give the next Combat creature you summon +1/+1"
 ]
 ],
 "by": "A=B",
@@ -3454,6 +3590,10 @@
 [
 "movement",
 "Charge"
+],
+[
+"scope_self",
+"this gains Attack and Life"
 ]
 ],
 "by": "C",
@@ -3516,10 +3656,6 @@
 "741342": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "on_play",
 "Gift"
 ],
@@ -3538,6 +3674,10 @@
 [
 "movement",
 "Flying"
+],
+[
+"terrain",
+"Destroy all adjacent creatures, structures and lands"
 ]
 ],
 "by": "C",
@@ -3578,6 +3718,10 @@
 [
 "in_hand_buff",
 "They cost 3 faeria less"
+],
+[
+"cost_reduction",
+"cost {faeria / 3. less"
 ]
 ],
 "by": "C"
@@ -3641,10 +3785,6 @@
 [
 "transform",
 "Transform a creature that attacked a god this turn into a 10/10 Sky Swallower with Flying"
-],
-[
-"evasion",
-"Flying"
 ]
 ],
 "by": "C"
@@ -3733,10 +3873,6 @@
 "741360": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "movement",
 "Charge 3"
 ],
@@ -3803,6 +3939,10 @@
 [
 "condition_count",
 "For each enemy destroyed"
+],
+[
+"scope_self",
+"this gains +2/+2"
 ]
 ],
 "by": "A=B",
@@ -3812,10 +3952,6 @@
 },
 "741366": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "movement",
 "Jump"
@@ -3890,6 +4026,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"this gains +2/+2"
 ]
 ],
 "by": "C",
@@ -4045,6 +4185,10 @@
 [
 "stat_gain",
 "this gains +3/+3"
+],
+[
+"scope_self",
+"this gains +3/+3"
 ]
 ],
 "by": "A=B",
@@ -4082,10 +4226,6 @@
 [
 "immunity",
 "Divine"
-],
-[
-"evasion",
-"Flying"
 ],
 [
 "haste",
@@ -4208,6 +4348,10 @@
 [
 "immobilize",
 "Taunt"
+],
+[
+"cost_reduction",
+"Reduce the cost of all cards in your hand by 1 faeria"
 ]
 ],
 "by": "A=B",
@@ -4233,10 +4377,6 @@
 "Summon a 2/2 Manta"
 ],
 [
-"evasion",
-"Flying"
-],
-[
 "movement",
 "Charge 2"
 ]
@@ -4245,10 +4385,6 @@
 },
 "741400": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "movement",
 "Dash 1"
@@ -4318,10 +4454,6 @@
 "741402": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "taunt",
 "Taunt"
 ],
@@ -4363,10 +4495,6 @@
 },
 "741405": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "movement",
 "Charge 2"
@@ -4413,6 +4541,10 @@
 [
 "condition_count",
 "for each well emptied"
+],
+[
+"scope_self",
+"This gains +1/+1"
 ]
 ],
 "by": "C",
@@ -4428,6 +4560,10 @@
 ],
 [
 "steal",
+"Gain control of this creature's land"
+],
+[
+"terrain",
 "Gain control of this creature's land"
 ]
 ],
@@ -4476,10 +4612,6 @@
 "741413": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "adjacency",
 "When an adjacent creature dies"
 ],
@@ -4498,6 +4630,10 @@
 [
 "movement",
 "Flying"
+],
+[
+"scope_self",
+"this gains Deathtouch and Jump"
 ]
 ],
 "by": "A=B",
@@ -4583,6 +4719,10 @@
 [
 "immobilize",
 "Taunt"
+],
+[
+"scope_self",
+"Double this creature's Attack"
 ]
 ],
 "by": "C",
@@ -4658,10 +4798,6 @@
 "Taunt"
 ],
 [
-"evasion",
-"Flying"
-],
-[
 "adjacency",
 "adjacent to Mother of Yaks"
 ],
@@ -4696,6 +4832,10 @@
 [
 "movement",
 "Jump"
+],
+[
+"scope_self",
+"Has +2/+0 and Jump"
 ]
 ],
 "by": "A=B"
@@ -4716,6 +4856,10 @@
 ],
 [
 "self_destruct",
+"Aquatic"
+],
+[
+"turn_end",
 "Aquatic"
 ]
 ],
@@ -4795,10 +4939,6 @@
 "+5/+5"
 ],
 [
-"evasion",
-"Flying"
-],
-[
 "movement",
 "Charge 2"
 ],
@@ -4839,10 +4979,6 @@
 "741435": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "deathtouch",
 "Deathtouch"
 ],
@@ -4879,6 +5015,10 @@
 [
 "haste",
 "this gains Haste"
+],
+[
+"scope_self",
+"this gains Haste"
 ]
 ],
 "by": "A=B"
@@ -4908,6 +5048,10 @@
 [
 "movement",
 "Charge"
+],
+[
+"scope_self",
+"to gain +2/+0"
 ]
 ],
 "by": "C",
@@ -5061,10 +5205,6 @@
 "741445": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "movement",
 "Charge 3"
 ],
@@ -5094,10 +5234,6 @@
 },
 "741448": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "cost_type",
 "Cards in your hand are wild land"
@@ -5137,10 +5273,6 @@
 },
 "741449": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "on_play",
 "Gift"
@@ -5203,6 +5335,10 @@
 [
 "tribal",
 "Beast"
+],
+[
+"cost_reduction",
+"Reduce the cost of a random Beast in your hand by 5 faeria"
 ]
 ],
 "by": "C",
@@ -5265,10 +5401,6 @@
 },
 "741457": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "territory_trigger",
 "Corrupt"
@@ -5532,6 +5664,10 @@
 [
 "tribal",
 "tritons"
+],
+[
+"scope_self",
+"this gets +1/+1"
 ]
 ],
 "by": "C",
@@ -5551,6 +5687,10 @@
 ],
 [
 "movement",
+"move this creature's land"
+],
+[
+"terrain",
 "move this creature's land"
 ]
 ],
@@ -5643,6 +5783,10 @@
 [
 "stat_gain",
 "he gains +1/+1"
+],
+[
+"scope_self",
+"he gains +1/+1"
 ]
 ],
 "by": "A=B"
@@ -5712,10 +5856,6 @@
 "741485": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "movement",
 "Charge 2"
 ],
@@ -5746,6 +5886,10 @@
 [
 "movement",
 "Flying"
+],
+[
+"scope_self",
+"gain Haste and Protection"
 ]
 ],
 "by": "C",
@@ -5763,10 +5907,6 @@
 },
 "741486": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "on_play",
 "Gift"
@@ -5883,6 +6023,10 @@
 [
 "stat_gain",
 "this gains +2/+2"
+],
+[
+"scope_self",
+"this gains +2/+2"
 ]
 ],
 "by": "C",
@@ -5908,6 +6052,10 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"scope_self",
+"Fugoro gains +3/+3"
 ]
 ],
 "by": "C",
@@ -6045,6 +6193,10 @@
 [
 "on_play",
 "Dash"
+],
+[
+"cost_reduction",
+"reduce a card in your hand by 1 faeria"
 ]
 ],
 "by": "C",
@@ -6106,10 +6258,6 @@
 },
 "741503": {
 "tags": [
-[
-"evasion",
-"Flying"
-],
 [
 "on_play",
 "Gift"
@@ -6179,10 +6327,6 @@
 "741505": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "on_play",
 "Gift"
 ],
@@ -6229,10 +6373,6 @@
 [
 "movement",
 "Charge 3"
-],
-[
-"evasion",
-"Flying"
 ],
 [
 "cost_reduction",
@@ -6286,10 +6426,6 @@
 "Charge 3"
 ],
 [
-"evasion",
-"Flying"
-],
-[
 "on_play",
 "Gift"
 ],
@@ -6308,6 +6444,10 @@
 [
 "movement",
 "Charge"
+],
+[
+"scope_self",
+"gain +1/+1 for each map destroyed"
 ]
 ],
 "by": "C",
@@ -6366,10 +6506,6 @@
 "741516": {
 "tags": [
 [
-"evasion",
-"Flying"
-],
-[
 "movement",
 "Dash 5"
 ],
@@ -6416,10 +6552,6 @@
 [
 "immunity",
 "Divine"
-],
-[
-"evasion",
-"Flying"
 ],
 [
 "movement",

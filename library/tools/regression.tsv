@@ -3555,7 +3555,6 @@ faeria	741058	Last Words	death_trigger	does	present
 faeria	741059	Production	turn_start	does	present
 faeria	741060	Combat	combat	does	present
 faeria	741060	Combat	on_damaged	*	absent
-faeria	741061	Corrupt	forced_movement	benefits	present
 faeria	741061	Corrupt	territory_trigger	does	present
 faeria	741063	Flying	movement	does	present
 faeria	741063	Flying	terrain	does	present
@@ -3614,7 +3613,6 @@ faeria	741145	Sturdy Shell	drawback	does	present
 faeria	741150	Orosei, Dream of the Deep	cost_increase	*	absent
 faeria	741150	Orosei, Dream of the Deep	random_effect	does	present
 faeria	741152	Gemsilk Faerie	stat_gain	does	present
-faeria	741152	Gemsilk Faerie	evasion	does	present
 faeria	741152	Gemsilk Faerie	movement	does	present
 faeria	741152	Gemsilk Faerie	terrain	*	absent
 faeria	741153	Sunken Tower	ping	*	absent
@@ -3703,7 +3701,6 @@ faeria	741246	Fire Elemental	terrain	does	present
 faeria	741247	Flamesilk Faerie	stat_gain	does	present
 faeria	741247	Flamesilk Faerie	counterattack	*	absent
 faeria	741247	Flamesilk Faerie	drawback	*	absent
-faeria	741247	Flamesilk Faerie	evasion	does	present
 faeria	741247	Flamesilk Faerie	movement	does	present
 faeria	741247	Flamesilk Faerie	ranged	does	present
 faeria	741247	Flamesilk Faerie	terrain	*	absent
@@ -3742,7 +3739,6 @@ faeria	741271	Wind Gate	placement_rules	does	present
 faeria	741272	Malevolent Spirit	lifesteal	does	present
 faeria	741272	Malevolent Spirit	on_play	does	present
 faeria	741273	Khalim, Sky Prodigy	cost_set	does	present
-faeria	741273	Khalim, Sky Prodigy	evasion	does	present
 faeria	741273	Khalim, Sky Prodigy	generate_cards	does	present
 faeria	741273	Khalim, Sky Prodigy	movement	does	present
 faeria	741273	Khalim, Sky Prodigy	on_attack	does	present
@@ -3760,12 +3756,10 @@ faeria	741281	Wind Soldier	self_destruct	does	present
 faeria	741284	Shaytan Scavenger	condition	does	present
 faeria	741284	Shaytan Scavenger	cost_reduction	does	present
 faeria	741288	Azarai, Wrath of the Desert	stat_loss	does	present
-faeria	741288	Azarai, Wrath of the Desert	evasion	does	present
 faeria	741288	Azarai, Wrath of the Desert	movement	does	present
 faeria	741288	Azarai, Wrath of the Desert	on_play	does	present
 faeria	741288	Azarai, Wrath of the Desert	terrain	*	absent
 faeria	741290	Sunsilk Faerie	stat_gain	does	present
-faeria	741290	Sunsilk Faerie	evasion	does	present
 faeria	741290	Sunsilk Faerie	movement	does	present
 faeria	741290	Sunsilk Faerie	terrain	*	absent
 faeria	741291	Celestial Tower	ping	*	absent
@@ -3802,7 +3796,6 @@ faeria	741313	Crackthorn Beast	on_play	does	present
 faeria	741313	Crackthorn Beast	random_effect	does	present
 faeria	741314	Soul Eater	in_hand_buff	does	present
 faeria	741315	Scourgeflame Specter	direct_damage	does	present
-faeria	741315	Scourgeflame Specter	evasion	does	present
 faeria	741315	Scourgeflame Specter	haste	does	present
 faeria	741315	Scourgeflame Specter	movement	does	present
 faeria	741315	Scourgeflame Specter	on_attack	does	present
@@ -3814,10 +3807,8 @@ faeria	741317	Three Wishes	deck_position	does	present
 faeria	741317	Three Wishes	heal	does	present
 faeria	741317	Three Wishes	terrain	*	absent
 faeria	741318	Rebel Glider	drawback	does	present
-faeria	741318	Rebel Glider	evasion	does	present
 faeria	741318	Rebel Glider	movement	does	present
 faeria	741318	Rebel Glider	terrain	*	absent
-faeria	741319	Radiance, Imperial Airship	evasion	does	present
 faeria	741319	Radiance, Imperial Airship	hand_size	does	present
 faeria	741319	Radiance, Imperial Airship	heal	does	present
 faeria	741319	Radiance, Imperial Airship	movement	does	present
@@ -3886,7 +3877,6 @@ faeria	741355	Magda's Rose	steal	does	present
 faeria	741356	Aurora's Teapot	stat_gain	does	present
 faeria	741357	Stone of Fair Fortune	recycle	*	absent
 faeria	741359	Void Guardian	drawback	does	present
-faeria	741360	Crystal Dragon	evasion	does	present
 faeria	741360	Crystal Dragon	movement	does	present
 faeria	741360	Crystal Dragon	terrain	*	absent
 faeria	741361	Flame Burst Ruby	aoe_damage	does	present
@@ -3921,7 +3911,6 @@ faeria	741385	Grappling Hook	drawback	grants	absent
 faeria	741388	Flash Salmon	destroy	*	absent
 faeria	741388	Flash Salmon	draw	does	present
 faeria	741388	Flash Salmon	drawback	does	present
-faeria	741388	Flash Salmon	evasion	does	present
 faeria	741388	Flash Salmon	haste	does	present
 faeria	741388	Flash Salmon	immunity	does	present
 faeria	741388	Flash Salmon	movement	does	present
@@ -3943,7 +3932,6 @@ faeria	741393	Path to Paradise	modal_choice	does	present
 faeria	741393	Path to Paradise	terrain	does	present
 faeria	741396	Swarming Carassius	adjacency	does	present
 faeria	741396	Swarming Carassius	death_count	does	present
-faeria	741396	Swarming Carassius	evasion	does	present
 faeria	741396	Swarming Carassius	movement	does	present
 faeria	741396	Swarming Carassius	on_play	does	present
 faeria	741396	Swarming Carassius	placement_rules	does	present
@@ -3956,17 +3944,14 @@ faeria	741398	Gemshell Tortoise	draw	does	present
 faeria	741398	Gemshell Tortoise	on_play	does	present
 faeria	741399	Flight of the Mantas	copy	does	present
 faeria	741399	Flight of the Mantas	draw	benefits	present
-faeria	741399	Flight of the Mantas	evasion	grants	present
 faeria	741399	Flight of the Mantas	movement	benefits	present
 faeria	741399	Flight of the Mantas	summon	does	present
 faeria	741399	Flight of the Mantas	terrain	benefits	absent
-faeria	741400	Oversky Towship	evasion	does	present
 faeria	741400	Oversky Towship	movement	does	present
 faeria	741400	Oversky Towship	terrain	does	present
 faeria	741403	Ulani, Oversky Shaman	on_play	does	present
 faeria	741403	Ulani, Oversky Shaman	tutor	does	present
 faeria	741405	Imperial Drakerider	stat_gain	does	present
-faeria	741405	Imperial Drakerider	evasion	does	present
 faeria	741405	Imperial Drakerider	movement	does	present
 faeria	741405	Imperial Drakerider	movement	benefits	present
 faeria	741405	Imperial Drakerider	terrain	*	absent
@@ -4000,7 +3985,6 @@ faeria	741424	Mother of All Yaks	adjacency	does	present
 faeria	741424	Mother of All Yaks	blocking	*	absent
 faeria	741424	Mother of All Yaks	cost_reduction	does	present
 faeria	741424	Mother of All Yaks	death_count	does	present
-faeria	741424	Mother of All Yaks	evasion	grants	present
 faeria	741424	Mother of All Yaks	movement	benefits	absent
 faeria	741424	Mother of All Yaks	on_play	does	present
 faeria	741424	Mother of All Yaks	summon	does	present
@@ -4022,7 +4006,6 @@ faeria	741430	Emerald Yak	summon	does	present
 faeria	741430	Emerald Yak	taunt	grants	present
 faeria	741430	Emerald Yak	zone_of_control	benefits	absent
 faeria	741431	Majinata, Spirit of Everlife	stat_gain	does	present
-faeria	741431	Majinata, Spirit of Everlife	evasion	grants	present
 faeria	741431	Majinata, Spirit of Everlife	immunity	does	present
 faeria	741431	Majinata, Spirit of Everlife	merge_attach	does	present
 faeria	741431	Majinata, Spirit of Everlife	movement	grants	present
@@ -4042,7 +4025,6 @@ faeria	741447	Destructive Volley	condition	does	present
 faeria	741447	Destructive Volley	evasion	*	absent
 faeria	741449	Radiance, Scourge of Oversky	delayed	*	absent
 faeria	741449	Radiance, Scourge of Oversky	disable	*	absent
-faeria	741449	Radiance, Scourge of Oversky	evasion	does	present
 faeria	741449	Radiance, Scourge of Oversky	immobilize	does	present
 faeria	741449	Radiance, Scourge of Oversky	movement	does	present
 faeria	741449	Radiance, Scourge of Oversky	on_play	does	present
@@ -4066,7 +4048,6 @@ faeria	741458	Blightborn Specter	condition	does	present
 faeria	741460	Barrensky Vulture	stat_condition	does	present
 faeria	741462	Thunder Eel	condition	does	present
 faeria	741462	Thunder Eel	damage	does	present
-faeria	741462	Thunder Eel	evasion	does	present
 faeria	741462	Thunder Eel	movement	does	present
 faeria	741462	Thunder Eel	on_play	does	present
 faeria	741462	Thunder Eel	terrain	does	present
@@ -4105,14 +4086,12 @@ faeria	741481	Victory Celebration	resource_gain	does	present
 faeria	741483	Compass of Gagana	deck_position	does	present
 faeria	741483	Compass of Gagana	tutor	does	present
 faeria	741485	Celeste, Crystal Dragon	death_trigger	does	present
-faeria	741485	Celeste, Crystal Dragon	evasion	does	present
 faeria	741485	Celeste, Crystal Dragon	haste	does	present
 faeria	741485	Celeste, Crystal Dragon	movement	does	present
 faeria	741485	Celeste, Crystal Dragon	on_play	does	present
 faeria	741485	Celeste, Crystal Dragon	recycle	does	present
 faeria	741485	Celeste, Crystal Dragon	terrain	*	absent
 faeria	741485	Celeste, Crystal Dragon	variety_payoff	does	present
-faeria	741486	Gagana, Treasure Seeker	evasion	does	present
 faeria	741486	Gagana, Treasure Seeker	hand_deck_swap	does	present
 faeria	741486	Gagana, Treasure Seeker	hand_size	does	present
 faeria	741486	Gagana, Treasure Seeker	movement	does	present
@@ -4145,7 +4124,6 @@ faeria	741499	Fragmenter	summon	does	present
 faeria	741502	Keldran Adventurer	recycle	*	absent
 faeria	741503	Amai Merchant	cost_condition	does	present
 faeria	741503	Amai Merchant	enemy_benefit	does	present
-faeria	741503	Amai Merchant	evasion	does	present
 faeria	741503	Amai Merchant	generate_cards	does	present
 faeria	741503	Amai Merchant	hand_disruption	*	absent
 faeria	741503	Amai Merchant	movement	does	present
@@ -4162,13 +4140,11 @@ faeria	741512	Sorocco, First Mate	terrain	*	absent
 faeria	741513	Thyrian Globe	adjacency	does	present
 faeria	741513	Thyrian Globe	aoe_damage	does	present
 faeria	741513	Thyrian Globe	death_trigger	does	present
-faeria	741513	Thyrian Globe	evasion	does	present
 faeria	741513	Thyrian Globe	movement	does	present
 faeria	741513	Thyrian Globe	terrain	*	absent
 faeria	741514	Ancient Gargoyle	in_hand_buff	*	absent
 faeria	741516	Magic Carpet	slot_filler	*	absent
 faeria	741517	Simulacrum of Obedience	cost_reduction	does	present
-faeria	741518	Spear of the Guardians	evasion	does	present
 faeria	741518	Spear of the Guardians	immunity	does	present
 faeria	741518	Spear of the Guardians	movement	does	present
 faeria	741518	Spear of the Guardians	on_play	*	absent

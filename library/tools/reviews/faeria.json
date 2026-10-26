@@ -3,31 +3,37 @@
   "add": [],
   "drop": [
    "on_attack",
-   "on_damaged"
+   "on_damaged",
+   "death_count"
   ]
  },
  "741291": {
   "add": [],
   "drop": [
-   "ping"
+   "ping",
+   "damage"
   ]
  },
  "741200": {
   "add": [],
   "drop": [
-   "ping"
+   "ping",
+   "damage"
   ]
  },
  "741444": {
   "add": [],
   "drop": [
-   "ping"
+   "ping",
+   "damage"
   ]
  },
  "741153": {
   "add": [],
   "drop": [
-   "ping"
+   "ping",
+   "damage",
+   "movement"
   ]
  },
  "741248": {
@@ -39,7 +45,8 @@
  "741128": {
   "add": [],
   "drop": [
-   "ping"
+   "ping",
+   "damage"
   ]
  },
  "741119": {
@@ -48,7 +55,8 @@
    "symmetric_effect"
   ],
   "drop": [
-   "ping"
+   "ping",
+   "damage"
   ]
  },
  "741350": {
@@ -68,7 +76,9 @@
   "add": [
    "removal"
   ],
-  "drop": []
+  "drop": [
+   "damage_over_time"
+  ]
  },
  "741307": {
   "add": [
@@ -121,7 +131,8 @@
  "741324": {
   "add": [],
   "drop": [
-   "generate_cards"
+   "generate_cards",
+   "damage"
   ]
  },
  "741306": {
@@ -358,7 +369,6 @@
    "enemy_benefit",
    "selection",
    "cost_condition",
-   "evasion",
    "generate_cards",
    "movement",
    "on_play"
@@ -368,7 +378,8 @@
    "return_to_hand",
    "hand_disruption",
    "copy",
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741177": {
@@ -389,7 +400,8 @@
  },
  "741514": {
   "add": [
-   "deck_modification"
+   "deck_modification",
+   "self_mill"
   ],
   "drop": [
    "in_hand_buff"
@@ -412,7 +424,10 @@
    "drawback",
    "revive"
   ],
-  "drop": []
+  "drop": [
+   "damage",
+   "evasion"
+  ]
  },
  "741310": {
   "add": [
@@ -437,7 +452,9 @@
    "symmetric_effect",
    "friendly_fire"
   ],
-  "drop": []
+  "drop": [
+   "evasion"
+  ]
  },
  "741230": {
   "add": [
@@ -452,13 +469,13 @@
  "741288": {
   "add": [
    "stat_loss",
-   "evasion",
    "lifesteal",
    "movement",
    "on_play"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741154": {
@@ -497,7 +514,9 @@
   "add": [
    "stat_condition"
   ],
-  "drop": []
+  "drop": [
+   "evasion"
+  ]
  },
  "741258": {
   "add": [
@@ -547,7 +566,6 @@
  "741485": {
   "add": [
    "variety_payoff",
-   "evasion",
    "death_trigger",
    "deck_condition",
    "haste",
@@ -557,7 +575,8 @@
    "shield"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741259": {
@@ -593,7 +612,9 @@
   "add": [
    "protection"
   ],
-  "drop": []
+  "drop": [
+   "destroy"
+  ]
  },
  "741397": {
   "add": [
@@ -618,7 +639,6 @@
  "741388": {
   "add": [
    "self_destruct",
-   "evasion",
    "drawback",
    "draw",
    "haste",
@@ -628,7 +648,8 @@
   ],
   "drop": [
    "terrain",
-   "destroy"
+   "destroy",
+   "evasion"
   ]
  },
  "741392": {
@@ -658,7 +679,9 @@
   "add": [
    "rule_change"
   ],
-  "drop": []
+  "drop": [
+   "evasion"
+  ]
  },
  "741323": {
   "add": [
@@ -710,7 +733,9 @@
   "add": [
    "tutor"
   ],
-  "drop": []
+  "drop": [
+   "destroy"
+  ]
  },
  "741465": {
   "add": [
@@ -737,7 +762,9 @@
    "hand_size"
   ],
   "drop": [
-   "slot_filler"
+   "slot_filler",
+   "spell_speed",
+   "evasion"
   ]
  },
  "741088": {
@@ -750,7 +777,9 @@
   "add": [
    "removal"
   ],
-  "drop": []
+  "drop": [
+   "evasion"
+  ]
  },
  "741414": {
   "add": [
@@ -761,7 +790,6 @@
  "741424": {
   "add": [
    "taunt:grants",
-   "evasion:grants",
    "tribal",
    "adjacency",
    "cost_reduction",
@@ -773,7 +801,8 @@
    "blocking",
    "movement:benefits",
    "terrain:benefits",
-   "zone_of_control:benefits"
+   "zone_of_control:benefits",
+   "evasion"
   ]
  },
  "741497": {
@@ -789,14 +818,17 @@
    "random_effect"
   ],
   "drop": [
-   "cost_increase"
+   "cost_increase",
+   "evasion"
   ]
  },
  "741468": {
   "add": [
    "condition_count"
   ],
-  "drop": []
+  "drop": [
+   "evasion"
+  ]
  },
  "741098": {
   "add": [
@@ -809,7 +841,6 @@
   "add": [
    "cost_reduction",
    "low_life",
-   "evasion",
    "condition_count",
    "hand_size",
    "heal",
@@ -817,21 +848,22 @@
    "on_play"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741449": {
   "add": [
    "immobilize",
    "temporary_effect",
-   "evasion",
    "movement",
    "on_play"
   ],
   "drop": [
    "delayed",
    "disable",
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741427": {
@@ -865,7 +897,9 @@
   "add": [
    "self_destruct"
   ],
-  "drop": []
+  "drop": [
+   "evasion"
+  ]
  },
  "741228": {
   "add": [
@@ -882,13 +916,13 @@
  "741301": {
   "add": [
    "lifesteal",
-   "death_trigger",
-   "movement",
-   "sacrifice:benefits"
+   "sacrifice:benefits",
+   "other_death_trigger"
   ],
   "drop": [
    "death_count",
-   "destroy:benefits"
+   "destroy:benefits",
+   "death_trigger"
   ]
  },
  "741284": {
@@ -921,25 +955,29 @@
   "add": [
    "disruption"
   ],
-  "drop": []
+  "drop": [
+   "evasion"
+  ]
  },
  "741314": {
   "add": [
    "in_hand_buff"
   ],
-  "drop": []
+  "drop": [
+   "evasion"
+  ]
  },
  "741518": {
   "add": [
    "placement_rules",
-   "evasion",
    "adjacency",
    "immunity",
    "movement"
   ],
   "drop": [
    "on_play",
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741489": {
@@ -967,13 +1005,14 @@
  "741462": {
   "add": [
    "condition",
-   "evasion",
    "damage",
    "movement",
    "on_play",
    "terrain"
   ],
-  "drop": []
+  "drop": [
+   "evasion"
+  ]
  },
  "741464": {
   "add": [
@@ -1002,8 +1041,8 @@
  },
  "741359": {
   "add": [
-   "mill",
-   "drawback"
+   "drawback",
+   "self_mill"
   ],
   "drop": []
  },
@@ -1066,13 +1105,13 @@
  },
  "741290": {
   "add": [
-   "evasion",
    "stat_gain",
    "movement",
    "scope_self"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741309": {
@@ -1100,15 +1139,16 @@
  },
  "741174": {
   "add": [
-   "death_trigger",
    "adjacency",
    "stat_gain",
    "sacrifice:benefits",
-   "scope_self"
+   "scope_self",
+   "other_death_trigger"
   ],
   "drop": [
    "death_count",
-   "destroy:benefits"
+   "destroy:benefits",
+   "death_trigger"
   ]
  },
  "741109": {
@@ -1139,7 +1179,6 @@
  "741431": {
   "add": [
    "merge_attach",
-   "evasion:grants",
    "stat_gain",
    "immunity",
    "movement:grants",
@@ -1147,7 +1186,8 @@
    "shield"
   ],
   "drop": [
-   "terrain:grants"
+   "terrain:grants",
+   "evasion"
   ]
  },
  "741330": {
@@ -1161,14 +1201,14 @@
  },
  "741513": {
   "add": [
-   "evasion",
    "adjacency",
    "aoe_damage",
    "death_trigger",
    "movement"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741343": {
@@ -1207,25 +1247,25 @@
  },
  "741273": {
   "add": [
-   "evasion",
    "cost_set",
    "generate_cards",
    "movement",
    "on_attack"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741152": {
   "add": [
-   "evasion",
    "stat_gain",
    "movement",
    "scope_self"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741430": {
@@ -1262,34 +1302,34 @@
  },
  "741360": {
   "add": [
-   "evasion",
    "movement"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741315": {
   "add": [
-   "evasion",
    "direct_damage",
    "haste",
    "movement",
    "on_attack"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741318": {
   "add": [
-   "evasion",
    "drawback",
    "movement",
    "on_play"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741266": {
@@ -1302,16 +1342,16 @@
  },
  "741400": {
   "add": [
-   "evasion",
    "movement",
    "on_play",
    "terrain"
   ],
-  "drop": []
+  "drop": [
+   "evasion"
+  ]
  },
  "741247": {
   "add": [
-   "evasion",
    "stat_gain",
    "movement",
    "ranged",
@@ -1320,7 +1360,8 @@
   "drop": [
    "terrain",
    "counterattack",
-   "drawback"
+   "drawback",
+   "evasion"
   ]
  },
  "741340": {
@@ -1343,14 +1384,14 @@
  },
  "741405": {
   "add": [
-   "evasion",
    "stat_gain",
    "movement",
    "movement:benefits",
    "territory_trigger"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741251": {
@@ -1377,14 +1418,14 @@
  },
  "741399": {
   "add": [
-   "evasion:grants",
    "draw:benefits",
    "copy",
    "movement:benefits",
    "summon"
   ],
   "drop": [
-   "terrain:benefits"
+   "terrain:benefits",
+   "evasion"
   ]
  },
  "741320": {
@@ -1412,19 +1453,19 @@
  },
  "741249": {
   "add": [
-   "death_trigger",
    "stat_gain",
-   "scope_self"
+   "scope_self",
+   "other_death_trigger"
   ],
   "drop": [
    "death_count",
    "destroy:benefits",
-   "sacrifice:benefits"
+   "sacrifice:benefits",
+   "death_trigger"
   ]
  },
  "741486": {
   "add": [
-   "evasion",
    "condition_count",
    "deck_modification",
    "hand_deck_swap",
@@ -1434,7 +1475,8 @@
    "recycle"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741374": {
@@ -1463,11 +1505,12 @@
  },
  "741063": {
   "add": [
-   "evasion",
-   "movement",
-   "terrain"
+   "movement"
   ],
-  "drop": []
+  "drop": [
+   "evasion",
+   "terrain"
+  ]
  },
  "741159": {
   "add": [
@@ -1531,7 +1574,6 @@
  },
  "741396": {
   "add": [
-   "evasion",
    "adjacency",
    "death_count",
    "movement",
@@ -1540,7 +1582,8 @@
    "summon"
   ],
   "drop": [
-   "terrain"
+   "terrain",
+   "evasion"
   ]
  },
  "741325": {
@@ -1729,10 +1772,11 @@
  },
  "741061": {
   "add": [
-   "forced_movement:benefits",
    "territory_trigger"
   ],
-  "drop": []
+  "drop": [
+   "forced_movement"
+  ]
  },
  "741255": {
   "add": [
@@ -1810,7 +1854,9 @@
    "death_trigger",
    "summon"
   ],
-  "drop": []
+  "drop": [
+   "tribal"
+  ]
  },
  "741316": {
   "add": [
@@ -1841,15 +1887,21 @@
    "on_attack",
    "random_effect"
   ],
-  "drop": []
+  "drop": [
+   "cost_set"
+  ]
  },
  "741074": {
   "add": [
    "drawback",
    "movement",
-   "terrain"
+   "self_destruct",
+   "turn_end",
+   "placement_rules"
   ],
-  "drop": []
+  "drop": [
+   "terrain"
+  ]
  },
  "741305": {
   "add": [
@@ -1891,7 +1943,9 @@
    "cost_reduction",
    "generate_cards"
   ],
-  "drop": []
+  "drop": [
+   "cost_set"
+  ]
  },
  "741300": {
   "add": [
@@ -2027,5 +2081,360 @@
    "terrain"
   ],
   "drop": []
+ },
+ "741066": {
+  "add": [],
+  "drop": [
+   "zone_of_control"
+  ]
+ },
+ "741075": {
+  "add": [
+   "removal"
+  ],
+  "drop": [
+   "banish",
+   "death_trigger"
+  ]
+ },
+ "741155": {
+  "add": [],
+  "drop": [
+   "destroy"
+  ]
+ },
+ "741277": {
+  "add": [],
+  "drop": [
+   "damage"
+  ]
+ },
+ "741475": {
+  "add": [],
+  "drop": [
+   "destroy",
+   "removal"
+  ]
+ },
+ "741515": {
+  "add": [],
+  "drop": [
+   "destroy",
+   "removal"
+  ]
+ },
+ "741139": {
+  "add": [
+   "defence_gain:benefits"
+  ],
+  "drop": [
+   "variable_stats"
+  ]
+ },
+ "741422": {
+  "add": [],
+  "drop": [
+   "destroy"
+  ]
+ },
+ "741129": {
+  "add": [
+   "defence_gain:benefits"
+  ],
+  "drop": [
+   "variable_stats"
+  ]
+ },
+ "741158": {
+  "add": [],
+  "drop": [
+   "cost_set"
+  ]
+ },
+ "741180": {
+  "add": [],
+  "drop": [
+   "cost_set"
+  ]
+ },
+ "741202": {
+  "add": [],
+  "drop": [
+   "death_count"
+  ]
+ },
+ "741227": {
+  "add": [],
+  "drop": []
+ },
+ "741229": {
+  "add": [],
+  "drop": []
+ },
+ "741233": {
+  "add": [],
+  "drop": [
+   "death_count"
+  ]
+ },
+ "741332": {
+  "add": [],
+  "drop": [
+   "run_structure"
+  ]
+ },
+ "741442": {
+  "add": [],
+  "drop": [
+   "tribal"
+  ]
+ },
+ "741445": {
+  "add": [],
+  "drop": [
+   "destroy",
+   "evasion"
+  ]
+ },
+ "741130": {
+  "add": [],
+  "drop": [
+   "draw"
+  ]
+ },
+ "741377": {
+  "add": [],
+  "drop": [
+   "removal",
+   "evasion"
+  ]
+ },
+ "741437": {
+  "add": [],
+  "drop": [
+   "removal"
+  ]
+ },
+ "741120": {
+  "add": [],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741121": {
+  "add": [],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741122": {
+  "add": [],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741124": {
+  "add": [],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741192": {
+  "add": [],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741270": {
+  "add": [],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741479": {
+  "add": [],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741480": {
+  "add": [],
+  "drop": [
+   "terrain"
+  ]
+ },
+ "741197": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741199": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741245": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741279": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741282": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741283": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741285": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741286": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741289": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741292": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741302": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741303": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741312": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741333": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741366": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741368": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741389": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741390": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741395": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741402": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741410": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741413": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741432": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741434": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741435": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741457": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741505": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741509": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
+ },
+ "741511": {
+  "add": [],
+  "drop": [
+   "evasion"
+  ]
  }
 }

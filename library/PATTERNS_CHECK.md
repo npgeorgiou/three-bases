@@ -21,7 +21,7 @@ too. Find the reason for every disagreement and fix it where it is: the entry ta
 - One game per pass, all 21 games (table below).
 
 ## Decisions that apply to every game
-- **Cases the cards don't support:** a signature or archetype case whose faction shows no lead of 1.5 times in the cards (the key)
+- **Cases the cards don't support:** a signature or archetype case whose faction shows no lead of 1.3 times in the cards (the key; Kaptain, 26 Oct 2026, was 1.5)
   is removed, with the reason in the game's "Notes from the patterns check".
 - **Shared pools** (Neutral, Colorless, Any) are not factions (`factions.py` SHARED).
 - **Faction counts:** a card merged into another with the same text (`dedupe.py`, table `merged_entities`) still counts as a card.
@@ -38,6 +38,10 @@ too. Find the reason for every disagreement and fix it where it is: the entry ta
 - **Stat gains:** `attack_gain` / `defence_gain` where the text names the stat; `stat_gain` where it does not; Gwent, Stormbound and
   Marvel Snap are single-stat games (no split). Warhammer "+1 to Hit / Wound / save rolls" are gains.
 - **Data outside the text** (costs) is tagged from its field (`cost_rules.py`), not by text patterns.
+- **Effects on the card itself** carry `scope_self` in every wording ("this gains", "Has +2/+0 while", "She gains", "double its
+  Attack"), in the key and in the patterns (Kaptain, 26 Oct 2026; Faeria done, the other games in their passes).
+- **Discounts on cards in hand** are `in_hand_buff` and `cost_reduction` both; a discount on the card itself is `cost_reduction`.
+  "Give the next X creature you summon +1/+1" is `delayed` + `on_ally_play` + the stat gains, not `in_hand_buff`.
 - **Key quotes** must be words of the card; a quote that is a definition marks an unverified tag.
 
 ## Games
@@ -48,9 +52,9 @@ Order of `tools/key/key.py` GAMES. Numbers: key wrong / missed per 100 entries, 
 |---|---|---|---|---|
 | into_the_breach | done 26 Oct | 47.0 / 13.3 | signature 2/2, archetype 1/1, combo 6/6, splash 2/2 | |
 | inscryption | done 26 Oct | 50.4 / 26.9 | signature 6/7, combo 22/23 | Beast generate_cards (lead 1.8, too few cards); Mantis God + Fecundity |
-| faeria | **next** | 52.8 / 43.0 | signature 10/20, archetype 6/9, combo 0/1, splash 0/2 | |
+| faeria | done 26 Oct | 24.8 / 5.9 | signature 9/15, archetype 5/9, combo 8/12, splash 0/2 | Khalim's Prayer + Zealous Crusader, Ruby Yak + Ulani's Medallion and two more combos need new link types; Yellow sacrifice (recipe) |
 | duelyst | done 24 Oct, rechecked 26 Oct | 34.5 / 24.3 | signature 16/16, archetype 7/8, splash 1/1 | |
-| sts1 | to do | 40.5 / 27.6 | signature 9/18, archetype 5/9, combo 18/21 | Defect cost_condition, Silent draw (narrow leads) |
+| sts1 | **next** | 40.5 / 27.6 | signature 9/18, archetype 5/9, combo 18/21 | Defect cost_condition, Silent draw (narrow leads) |
 | marvel_snap | to do | 101.4 / 31.5 | combo 20/24 | |
 | darkest_dungeon | done 24 Oct, rechecked 26 Oct | 48.0 / 26.6 | combo 6/7 | |
 | sts2 | to do | 51.1 / 38.2 | signature 8/16, archetype 2/6, combo 0/2 | |
@@ -80,7 +84,7 @@ Order of `tools/key/key.py` GAMES. Numbers: key wrong / missed per 100 entries, 
    how many cards the matched keywords pass the tag to), keep the good ones, then build once. Fix generically: every entry with the
    same wording.
 5. **Cases:** `tools/case_lead.py <db> <game> <faction:concept>` shows whether the faction leads, in the key and in the library.
-   Under 1.5 times in the key: the case, the key or the data source is the problem, not the patterns. Verify combos against the
+   Under 1.3 times in the key: the case, the key or the data source is the problem, not the patterns. Verify combos against the
    game's wiki; add missing cards (below) rather than drop a true combo.
 6. **The key:** check that its quotes are words of the card; propose corrections (Rules).
 7. **Each try:** `game_check.sh`. Then re-run `tools/step3/key_patterns.py <scratch>/gc_<game>.sqlite <game>` and check once more.
@@ -171,6 +175,15 @@ Things that confused earlier chats:
   worse): cost tags in signatures, the 25%/60% rule, merged cards counted, summon reactions (Duelyst undone), revive vs
   return_to_hand (27 key entries, definitions), 7 bulk stat-gain key tags removed, combos may name keywords and tribes,
   four concept relations (deathtouch + multi_attack / aoe_damage, free_play + on_play / copy), `_all.txt` lines tag every game.
+- 26 Oct: faeria pass (key wrong 52.8 -> 24.8, missed 43.0 -> 5.9; combos 0/1 -> 8/12). Key (Kaptain): Flying is not evasion
+  (39 entries) and the movement keywords are not terrain; land destruction, moving and taking lands are terrain; `scope_self` on
+  50 self-only effects; hand discounts also `cost_reduction`; wild land `cost_type`; Aquatic `placement_rules` and `turn_end`.
+  Library: keyword reviews (Taunt, Corrupt, Swallow, Aquatic, Flying), 30 Faeria pattern lines, wording-wide review drops,
+  11 new verified combos, the case rule lowered to 1.3 times.
 
 ## Open, outside the game passes
+- Tagging redesign: tags per effect instead of per card (`TAGGING_RECORDS.md`, proposal for Kaptain). It would settle area
+  effects for any effect (not only damage) and the overlap of stat gains, temporary bonuses and growth.
+- Cases removed in earlier passes under the old 1.5 rule that reach 1.3: Into the Breach signature Prime damage (1.42), Brute
+  damage (1.30), Science damage_over_time (1.33); recheck them in that game's next pass.
 - Keyword denial rule: it covers only the 7 games where the position rule is skipped (`kw_links.py` SKIP).

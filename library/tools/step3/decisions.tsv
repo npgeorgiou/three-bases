@@ -395,29 +395,6 @@ new	turn_end|does|wh_bloodbowl3|key	wh_bloodbowl3	\bsecret\s+weapon\b
 new	turnover|does|wh_bloodbowl3|key	wh_bloodbowl3	\bsteady\s+footing\b
 new	untap|does|wh_bloodbowl3|key	wh_bloodbowl3	\bjump\s+up\b
 new	zone_of_control|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bprehensile\s+tail\b)|(?:\bshadowing\b)
-new	activated|does|faeria|key	faeria	\bactivate\b
-new	copy|does|faeria|key	faeria	\bdiscover\b
-new	cost_set|does|faeria|key	faeria	\bit\s+costs\s+\d+\s+faeria\b
-new	death_trigger|does|faeria|key	faeria	\blast\s+words\b
-new	deathtouch|does|faeria|key	faeria	\bdeathtouch\b
-new	direct_damage|does|faeria|key	faeria	\bdeal\s+\d+\s+damage\s+to\s+your\s+opponent\b
-new	draw|does|faeria|key	faeria	\bdraw\s+a\s+card\b
-new	haste|does|faeria|key	faeria	\bhaste\b
-new	immunity|does|faeria|key	faeria	\bdivine\b
-new	modal_choice|does|faeria|key	faeria	\bchoose\s+one\b
-new	movement|does|faeria|key	faeria	(?:\bcharge\b)|(?:\bcharge\s+\d+\b)|(?:\bdash\b)|(?:\bdash\s+\d+\b)|(?:\bjump\b)
-new	on_play|does|faeria|key	faeria	\bgift\b
-new	protection|does|faeria|key	faeria	\bprotection\b
-new	random_effect|does|faeria|key	faeria	\brandomly\s+split\b
-new	ranged|does|faeria|key	faeria	\branged\s+attack\b
-new	resource_gain|does|faeria|key	faeria	\bgain\s+\d+\s+faeria\b
-new	selection|does|faeria|key	faeria	\bdiscover\b
-new	self_destruct|does|faeria|key	faeria	\bdeal\s+\d+\s+damage\s+to\s+this\b
-new	stat_gain|does|faeria|key	faeria	\bhas\s+\+\d+/\+\d+\b
-new	territory_trigger|does|faeria|key	faeria	\bcorrupt\b
-new	tribal|does|faeria|key	faeria	\brakoan\b
-new	turn_end|does|faeria|key	faeria	\bat\s+the\s+end\s+of\s+your\s+turn\b
-new	turn_start|does|faeria|key	faeria	\bproduction\b
 new	adjacency|does|duelyst|key	duelyst	(?:\bnearby\s+enemy\b)|(?:\bnearby\s+your\s+general\b)|(?:\bzeal\b)
 new	area_templates|does|duelyst|key	duelyst	\b\d+x\d+\s+area\b
 new	buff|does|duelyst|key	duelyst	\binfiltrate\b
@@ -1272,7 +1249,6 @@ new	defence_gain|does|*|manual	hearthstone	\bgain \+\d+ durability\b
 new	summon|does|*|manual	darkest_dungeon,duelyst,faeria,gwent,hearthstone,hs_battlegrounds,inscryption,into_the_breach,lorcana,monster_train,mtg,runeterra,shadowverse,stormbound,sts1,sts2,swu,tesl,wh_40k_10e,wh_aos_4th	\bsummon (?:it|them)\b|\b(?:your )?opponent summons? (?:an?|\d+|two|three|\w+) 
 new	movement|does|*|manual	wh_aos_4th	\bcan (?:each )?(?:immediately )?move (?:up to )?\d+"|\bcan each move\b|\beach target can (?:immediately )?move\b
 new	forced_movement|does|*|manual	inscryption	\bpull (?:one of )?(?:your )?opponent's cards? to your side\b
-# key_patterns.py (patterns from the answer key quotes, 90%+ right on held-out key entries): new <concept|role|game|key> <game> <regex>
 new	blocking|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)mighty\s+leap(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
 new	damage|does|inscryption|key	inscryption	(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)sentry(?=\s*(?:$|[\n.,:;(/]|\d|\s-))|(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)sentry\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b)
 new	death_trigger|does|inscryption|key	inscryption	(?:\bwhen\s+a\s+card\s+bearing\s+this\s+sigil\s+dies\b)|(?:\bwhen\s+a\s+card\s+bearing\s+this\s+sigil\s+perishes\b)
@@ -1290,3 +1266,30 @@ new	self_destruct|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}
 new	stat_gain|does|inscryption|key	inscryption	\bgains\s+\d+\s+power\b
 new	stealth|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)waterborne(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
 new	turn_end|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)sprinter(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+# key_patterns.py (patterns from the answer key quotes, 90%+ right on held-out key entries): new <concept|role|game|key> <game> <regex>
+new	activated|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)activate(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	attack_gain|does|faeria|key	faeria	\+\d+/\+\d+\b
+new	copy|does|faeria|key	faeria	(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)discover(?=\s*(?:$|[\n.,:;(/]|\d|\s-))|(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)discover\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b)
+new	cost_reduction|does|faeria|key	faeria	\bcost\s+\d+\s+faeria\s+less\b
+new	cost_type|cost|faeria|key	faeria	(?:\bbecome\s+wild\s+land\b)|(?:\bbecomes\s+wild\s+land\b)|(?:\bwild\s+land\b)
+new	death_trigger|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)last\s+words(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	direct_damage|does|faeria|key	faeria	\bdeal\s+\d+\s+damage\s+to\s+your\s+opponent\b
+new	draw|does|faeria|key	faeria	\bdraw\s+a\s+card\b
+new	haste|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)haste(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	immobilize|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)taunt(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	immunity|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)divine(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	modal_choice|does|faeria|key	faeria	\bchoose\s+one\b
+new	movement|does|faeria|key	faeria	(?:(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)charge(?=\s*(?:$|[\n.,:;(/]|\d|\s-))|(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)charge\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b))|(?:(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)dash(?=\s*(?:$|[\n.,:;(/]|\d|\s-))|(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)dash\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b))|(?:(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)flying(?=\s*(?:$|[\n.,:;(/]|\d|\s-))|(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)flying\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b))|(?:(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)jump(?=\s*(?:$|[\n.,:;(/]|\d|\s-))|(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)jump\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b))|(?:\bcharge\s+\d+\b)|(?:\bdash\s+\d+\b)
+new	on_attack|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)combat(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	on_play|does|faeria|key	faeria	(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)dash(?=\s*(?:$|[\n.,:;(/]|\d|\s-)))|(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)gift(?=\s*(?:$|[\n.,:;(/]|\d|\s-)))
+new	random_effect|does|faeria|key	faeria	\brandomly\s+split\b
+new	ranged|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)ranged\s+attack(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	resource_gain|does|faeria|key	faeria	\bgain\s+\d+\s+faeria\b
+new	scope_self|does|faeria|key	faeria	(?:\bhas\s+\+\d+/\+\d+\b)|(?:\bthis\s+gains\s+\+\d+/\+\d+\b)
+new	selection|does|faeria|key	faeria	(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)discover(?=\s*(?:$|[\n.,:;(/]|\d|\s-))|(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)discover\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b)
+new	self_destruct|does|faeria|key	faeria	\bdeal\s+\d+\s+damage\s+to\s+this\b
+new	stat_gain|does|faeria|key	faeria	(?:\+\d+/\+\d+\b)|(?:\bgains\s+\+\d+/\+\d+\b)|(?:\bhas\s+\+\d+/\+\d+\b)|(?:\bthis\s+gains\s+\+\d+/\+\d+\b)
+new	taunt|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)taunt(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	territory_trigger|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)corrupt(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	turn_end|does|faeria|key	faeria	\bat\s+the\s+end\s+of\s+your\s+turn\b
+new	turn_start|does|faeria|key	faeria	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)production(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
