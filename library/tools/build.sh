@@ -19,7 +19,7 @@ cd "$(dirname "$0")"
 P="python3 -I"
 steps() {   # $1 = db
   D="$1"
-  run() { $P "$@"; $P step_log.py "$D" "$(echo "$*" | sed "s#$D##")"; }   # each step, then what it removed (step_log.py)
+  run() { t0=$(date +%s); $P "$@"; t1=$(date +%s); $P step_log.py "$D" "$(echo "$*" | sed "s#$D##")"; t2=$(date +%s); echo "time: $((t1-t0)) s step, $((t2-t1)) s log: $(echo "$*" | cut -c1-60 | sed "s#$D##")"; }   # each step, then what it removed (step_log.py); the times show where a build is slow
   run compact_text.py "$D" expand
   run concept_tree.py "$D" restore
   run start_clean.py "$D"   # one chain: every build starts from the frozen base (make_base.py)
