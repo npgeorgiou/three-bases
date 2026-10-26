@@ -12,6 +12,8 @@ New patterns tag their matches (method text_pattern). The concept_patterns table
 pattern_fixes lists every decision. Idempotent: other steps may re-derive older tags, and this step removes them again.
 Usage: pattern_fix.py <db>"""
 import collections, json, os, re, sqlite3, sys
+HERE0 = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE0)
+from refast import Fast
 HERE = os.path.dirname(os.path.abspath(__file__)); S3 = os.path.join(HERE, 'step3')
 sys.path.insert(0, S3)
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
@@ -55,7 +57,7 @@ c.execute('CREATE TABLE IF NOT EXISTS pattern_fixes(kind TEXT, concept TEXT, rol
 c.execute('DELETE FROM pattern_fixes')
 removed = kept = added = 0
 for kind, p, games, new in dec:
-    k, role, g, pat = p.split('|', 3); nrx = re.compile(new, re.I)
+    k, role, g, pat = p.split('|', 3); nrx = Fast(re.compile(new, re.I))
     if kind == 'new':
         for gg in games:
             c.execute('INSERT OR IGNORE INTO concept_patterns VALUES(?,?,?,?)', (k, role, new, gg))
@@ -64,9 +66,9 @@ for kind, p, games, new in dec:
                 if m and (e, k) not in dropped: added += c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, k, role, 'text_pattern', t[max(0, m.start() - 20): m.start() + 40])).rowcount
             c.execute('INSERT INTO pattern_fixes VALUES(?,?,?,?,?,?)', ('new', k, role, gg, None, new))
         continue
-    orx = re.compile(pat, re.I)
+    orx = Fast(re.compile(pat, re.I))
     for gg in games:
-        others = [re.compile(x, re.I) for x, in q('SELECT pattern FROM concept_patterns WHERE concept=? AND role=? AND (game IS NULL OR game=?) AND pattern!=?', k, role, gg, pat)]
+        others = [Fast(re.compile(x, re.I)) for x, in q('SELECT pattern FROM concept_patterns WHERE concept=? AND role=? AND (game IS NULL OR game=?) AND pattern!=?', k, role, gg, pat)]
         have = {e for e, in q("SELECT entity FROM entity_concepts WHERE concept=? AND role=? AND method='text_pattern'", k, role)}
         for e, t in ents[gg]:
             if not orx.search(t) or nrx.search(t): continue

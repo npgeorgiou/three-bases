@@ -3,7 +3,9 @@
 paired. Entries inherit the pairs of the keywords they have. Existing rows are kept (Marvel Snap's own loader); new pairs are added.
 Coverage check: per game, the share of entries with a trigger tag that have at least one pair; `check` fails below 50%.
 Usage: trigger_pairs.py <db> [check | pairs_only]  (pairs_only: after the tree move, pairs the entry's existing tags and adds no tag)"""
-import re, sqlite3, sys
+import os, re, sqlite3, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from refast import Fast
 c = sqlite3.connect(sys.argv[1]); q = lambda s, *a: c.execute(s, a).fetchall()
 EXTRA = {   # trigger wording the general patterns miss (Claude's list, from the misses)
  'on_attack': [r"\b(whenever|when|each time) (this|it|~|this (creature|unit|minion|follower|model|operative|vehicle)|enchanted creature|equipped creature|(a|another|one or more) (\w+ )?creatures? you control)\b[^.,:]{0,20}\bdeals? combat damage to (a player|an opponent|one or more players|a creature)\b", r"\b(the first time|whenever|when|each time|after) (i|this|it|~|he|she|they|this (unit|creature|minion|follower|model|operative))\b[^.,:]{0,15}\battacks?\b", r"\b(nexus )?strike:", r"\bclash:", r"\battack:", r"\brally:"],
@@ -56,13 +58,13 @@ if len(sys.argv) < 3 or sys.argv[2] != 'check':
             X = excl.get(g, set()) | (excl.get('_all', set()) if g != 'marvel_snap' else set())
             if X: P = [x for x in P if (x[0], x[2].pattern) not in X]
             whole = lambda x: x[2].pattern.startswith('(?s)^(?!')
-            LISTS[g] = tuple([(x[0], x[2]) for x in P if x[1] == r and whole(x) == w] for r in ('trigger', 'effect') for w in (False, True))
+            LISTS[g] = tuple([(x[0], Fast(x[2])) for x in P if x[1] == r and whole(x) == w] for r in ('trigger', 'effect') for w in (False, True))
         return LISTS[g]
     for e, g, t in q("SELECT id, game, text FROM entities WHERE text IS NOT NULL AND category NOT IN ('tribe') AND length(text) < 6000"):
         tl = t.lower()   # a whole-entry pattern is checked on the whole text, not per clause
         trN, trW, efN, efW = lists(g)
-        TR = trN + [x for x in trW if x[1].search(tl)]
-        EF = efN + [x for x in efW if x[1].search(tl)]
+        TR = [x for x in trN if x[1].maybe(tl)] + [x for x in trW if x[1].search(tl)]   # only the patterns whose literal the entry holds can match a clause
+        EF = [x for x in efN if x[1].maybe(tl)] + [x for x in efW if x[1].search(tl)]
         efm = {}
         def effects(low):   # the effect concepts of one clause, found once
             if low not in efm: efm[low] = {con for con, p in EF if p.search(low)}
