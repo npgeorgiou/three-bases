@@ -183,7 +183,7 @@ Things that confused earlier chats:
   Library: keyword reviews (Taunt, Corrupt, Swallow, Aquatic, Flying), 30 Faeria pattern lines, wording-wide review drops,
   11 new verified combos, the case rule lowered to 1.3 times. Then shared: signature RATIO 1.5 -> 1.3 (real-world cases
   551 -> 572 of 860, no game worse), Pandora a shared pool, keyword-signature cases, relations copy + tribal and summon +
-  transform; Faeria key wrong 22.4, missed 5.9, cases signature 12/14, archetype 6/6, combo 10/12. Regression: 184 new Faeria lines
+  transform; Faeria key wrong 22.4, missed 5.9, cases signature 12/14, archetype 6/6, combo 10/12. Regression: 186 new Faeria lines
   for the pass's decisions (pattern_fix honours the 'absent' ones, so general patterns cannot re-add a reviewed drop); the Taunt
   keyword keeps no adjacency until the area decision (the one key miss this costs).
 
