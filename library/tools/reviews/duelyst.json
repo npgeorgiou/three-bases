@@ -2541,8 +2541,7 @@
   "add": [
    "stat_gain",
    "on_ally_play",
-   "stat_condition",
-   "summon:benefits"
+   "stat_condition"
   ],
   "drop": []
  },

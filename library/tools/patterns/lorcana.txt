@@ -43,7 +43,9 @@ zone_control|does|\bwhile here\b|\b(at|to) (a|this|that|another) location\b|\blo
 discard|does|(?<!opponent may )(?<!player may )\bchoose and discard\b|(?<!opponent )(?<!player )(?<!choose and )\bdiscard (a|an|\d+|your|up to|that)\b(?! (card )?(from|to|into))
 hand_disruption|does|\b(opponent|opponents|chosen player|each player|that player|illumineer)s? (may )?(chooses and discards|choose and discard|discards?)\b|\bof your choice\b[^.]{0,20}\bdiscard|\breveals their hand\b
 !revive|return .{0,40}from (your |the |a )?(graveyard|discard pile|discard)( to the (battlefield|board|field))?
-revive|does|\b(return|play) [^.]{0,40}\bcharacter cards? [^.]{0,30}\bfrom your discard\b|\bbanished[^.]{0,60}\breturn (this card|that card|them|it) to your hand\b
+revive|does|\b(return|play) [^.]{0,40}\bcharacter cards? [^.]{0,30}\bfrom your discard\b
+# a character banished (dying) that goes back to hand is return_to_hand (Kaptain, 26 Oct 2026), not revive
+return_to_hand|does|\bbanished[^.]{0,60}\breturn (this card|that card|them|it) to your hand\b
 !recycle|put .{0,30}on the (top|bottom) of
 !recycle|shuffle .{0,40}into (your|their|its owner.s) (deck|library)
 recycle|does|\b(action|item|song|location) cards? [^.]{0,30}\bfrom your discard\b|\bfrom your discard (on|into) (the )?(top|bottom of )?(of )?your deck\b|\bshuffle [^.]{0,40}\bfrom your discard into your deck\b

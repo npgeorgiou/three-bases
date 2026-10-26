@@ -322,12 +322,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"immobilize",
-"Provoke"
-]
-],
 "keywords": [
 741526,
 741557
@@ -375,16 +369,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"movement",
-"Flying"
-],
-[
-"area_templates",
-"Blast"
-]
-],
 "keywords": [
 741522,
 741523
@@ -529,16 +513,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"adjacency",
-"Zeal"
-],
-[
-"buff",
-"Zeal"
-]
-],
 "keywords": [
 741551
 ]
@@ -563,12 +537,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"buff",
-"Zeal"
-]
-],
 "keywords": [
 741551
 ]
@@ -634,12 +602,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"immobilize",
-"Provoke"
-]
-],
 "keywords": [
 741557
 ]
@@ -719,12 +681,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"silence",
-"Dispel"
-]
-],
 "keywords": [
 741560
 ]
@@ -1085,12 +1041,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"movement",
-"Flying"
-]
-],
 "keywords": [
 741522,
 741529
@@ -1173,12 +1123,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"temporary_effect",
-"Ephemeral"
-]
-],
 "keywords": [
 741530,
 741555
@@ -1232,12 +1176,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"movement",
-"Flying"
-]
-],
 "keywords": [
 741522,
 741529
@@ -1665,16 +1603,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"permanent_growth",
-"Grow"
-],
-[
-"turn_start",
-"Grow"
-]
-],
 "keywords": [
 741534
 ]
@@ -1924,12 +1852,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"buff",
-"Infiltrate"
-]
-],
 "keywords": [
 741536
 ]
@@ -1954,12 +1876,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"buff",
-"Infiltrate"
-]
-],
 "keywords": [
 741536
 ]
@@ -2036,12 +1952,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"immobilize",
-"Provoke"
-]
-],
 "keywords": [
 741539,
 741557
@@ -2059,12 +1969,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"movement",
-"Flying"
-]
-],
 "keywords": [
 741522
 ]
@@ -2274,12 +2178,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"immobilize",
-"Provoke"
-]
-],
 "keywords": [
 741557
 ]
@@ -2306,10 +2204,6 @@
 [
 "ping",
 "deal 1 damage"
-],
-[
-"summon",
-"Whenever your opponent summons a minion"
 ]
 ],
 "by": "C"
@@ -2720,12 +2614,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"immobilize",
-"Provoke"
-]
-],
 "keywords": [
 741557
 ]
@@ -2914,10 +2802,6 @@
 "this minion gains +2 Attack"
 ],
 [
-"summon",
-"Whenever you summon a minion with 2 or less Attack"
-],
-[
 "attack_gain",
 "attack, damage or power goes up"
 ]
@@ -3021,16 +2905,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Sentinel"
-],
-[
-"reactions",
-"Sentinel"
-]
-],
 "keywords": [
 741543
 ]
@@ -3067,24 +2941,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"movement",
-"Flying"
-],
-[
-"transform",
-"Sentinel"
-],
-[
-"reactions",
-"Sentinel"
-],
-[
-"damage",
-"Backstab"
-]
-],
 "keywords": [
 741522,
 741543,
@@ -3262,10 +3118,6 @@
 "give a minion in your action bar +1 Attack"
 ],
 [
-"summon",
-"Whenever your opponent summons a minion"
-],
-[
 "attack_gain",
 "attack, damage or power goes up"
 ]
@@ -3396,16 +3248,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Sentinel"
-],
-[
-"reactions",
-"Sentinel"
-]
-],
 "keywords": [
 741543
 ]
@@ -3481,23 +3323,23 @@
 [
 "defence_gain",
 "health, toughness or defence goes up"
+],
+[
+"adjacency",
+"Frenzy"
 ]
 ],
 "by": "C",
-"credited": [
-[
-"permanent_growth",
-"Grow"
-],
-[
-"turn_start",
-"Grow"
-]
-],
 "keywords": [
 741532,
 741533,
 741534
+],
+"credited": [
+[
+"adjacency",
+"Frenzy"
+]
 ]
 },
 "742013": {
@@ -3608,16 +3450,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"movement",
-"Flying"
-],
-[
-"buff",
-"Infiltrate"
-]
-],
 "keywords": [
 741522,
 741536
@@ -3643,16 +3475,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Sentinel"
-],
-[
-"reactions",
-"Sentinel"
-]
-],
 "keywords": [
 741543
 ]
@@ -3677,16 +3499,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Sentinel"
-],
-[
-"reactions",
-"Sentinel"
-]
-],
 "keywords": [
 741543
 ]
@@ -3877,12 +3689,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"immobilize",
-"Provoke"
-]
-],
 "keywords": [
 741539,
 741557
@@ -3929,12 +3735,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"movement",
-"Flying"
-]
-],
 "keywords": [
 741522
 ]
@@ -4005,12 +3805,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"immobilize",
-"Provoke"
-]
-],
 "keywords": [
 741557
 ]
@@ -4031,12 +3825,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"shield",
-"Forcefield"
-]
-],
 "keywords": [
 741532
 ]
@@ -4069,7 +3857,11 @@
 "Whenever ANY player summons a minion with Rush"
 ],
 [
-"summon",
+"on_ally_play",
+"Whenever ANY player summons a minion with Rush"
+],
+[
+"on_enemy_enter",
 "Whenever ANY player summons a minion with Rush"
 ]
 ],
@@ -4127,12 +3919,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"silence",
-"Dispel"
-]
-],
 "keywords": [
 741529,
 741560
@@ -4147,10 +3933,6 @@
 [
 "random_ability",
 "gains a random keyword ability"
-],
-[
-"summon",
-"Whenever you summon a minion"
 ]
 ],
 "by": "A=B"
@@ -4220,10 +4002,6 @@
 [
 "permanent_growth",
 "gain +2 Attack"
-],
-[
-"summon",
-"Whenever you summon a minion with Opening Gambit from your action bar"
 ],
 [
 "attack_gain",
@@ -4355,12 +4133,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"immobilize",
-"Provoke"
-]
-],
 "keywords": [
 741557
 ]
@@ -4385,16 +4157,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"immobilize",
-"Provoke"
-],
-[
-"silence",
-"Dispel"
-]
-],
 "keywords": [
 741557,
 741560
@@ -4488,12 +4250,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"movement",
-"Flying"
-]
-],
 "keywords": [
 741522
 ]
@@ -4590,12 +4346,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"buff",
-"Zeal"
-]
-],
 "keywords": [
 741551
 ]
@@ -4687,16 +4437,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"flanking",
-"Backstab"
-],
-[
-"damage",
-"Backstab"
-]
-],
 "keywords": [
 741552
 ]
@@ -5018,16 +4758,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"permanent_growth",
-"Grow"
-],
-[
-"turn_start",
-"Grow"
-]
-],
 "keywords": [
 741534
 ]
@@ -5107,12 +4837,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"buff",
-"Infiltrate"
-]
-],
 "keywords": [
 741536
 ]
@@ -5366,12 +5090,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"immobilize",
-"Provoke"
-]
-],
 "keywords": [
 741557
 ]
@@ -5416,16 +5134,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"adjacency",
-"Zeal"
-],
-[
-"buff",
-"Zeal"
-]
-],
 "keywords": [
 741551
 ]
@@ -5446,16 +5154,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Bond"
-],
-[
-"tribal",
-"Bond"
-]
-],
 "keywords": [
 741525
 ]
@@ -5550,16 +5248,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Bond"
-],
-[
-"tribal",
-"Bond"
-]
-],
 "keywords": [
 741525
 ]
@@ -5650,16 +5338,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"permanent_growth",
-"Grow"
-],
-[
-"turn_start",
-"Grow"
-]
-],
 "keywords": [
 741534
 ]
@@ -5748,16 +5426,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"on_play",
-"Bond"
-],
-[
-"tribal",
-"Bond"
-]
-],
 "keywords": [
 741525
 ]
@@ -5906,20 +5574,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"summon",
-"Build"
-],
-[
-"transform",
-"Build"
-],
-[
-"delayed",
-"Build"
-]
-],
 "keywords": [
 741554
 ]
@@ -6152,20 +5806,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"summon",
-"Build"
-],
-[
-"transform",
-"Build"
-],
-[
-"delayed",
-"Build"
-]
-],
 "keywords": [
 741554
 ]
@@ -6235,24 +5875,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Rebirth"
-],
-[
-"summon",
-"Rebirth"
-],
-[
-"revive",
-"Rebirth"
-],
-[
-"delayed",
-"Rebirth"
-]
-],
 "keywords": [
 741542
 ]
@@ -6394,20 +6016,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"summon",
-"Build"
-],
-[
-"transform",
-"Build"
-],
-[
-"delayed",
-"Build"
-]
-],
 "keywords": [
 741554
 ]
@@ -6471,12 +6079,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_spell",
-"Blood Surge"
-]
-],
 "keywords": [
 741524
 ]
@@ -6562,20 +6164,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"summon",
-"Build"
-],
-[
-"transform",
-"Build"
-],
-[
-"delayed",
-"Build"
-]
-],
 "keywords": [
 741554
 ]
@@ -6593,10 +6181,6 @@
 [
 "buff",
 "gain all keywords"
-],
-[
-"summon",
-"Whenever you summon this or another Mech"
 ]
 ],
 "by": "A=B"
@@ -6613,14 +6197,14 @@
 ]
 ],
 "by": "A=B",
+"keywords": [
+741545
+],
 "credited": [
 [
 "cant_attack",
 "Structure"
 ]
-],
-"keywords": [
-741545
 ]
 }
 }

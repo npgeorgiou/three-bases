@@ -92,10 +92,9 @@ signature	Beast	sacrifice	Blood costs paid by sacrifice	https://steamcommunity.c
 signature	Beast	generate_cards	Warren puts a Rabbit in hand	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Beast	evasion	Hawk hits past blockers	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Undead	cost_type	Bones	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-signature	Undead	sacrifice	destroying its own cards	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Undead	resource_gain	Bones from Gravedigger and from cards that die	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Magick	cost_type	Magick cards are paid with Mox gems	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Magick	draw	Blue Mage draws per Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-archetype	Undead	sacrifice	Necromancers and perish effects	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
 combo	Necromancer	Obol	the Obol dies twice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
 combo	Warren	Rabbit	Warren supplies Rabbits	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 combo	Blue Mage	Sapphire Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
@@ -110,8 +109,14 @@ Patterns check, 26 Oct 2026 (Claude). Counts are from the answer key (what the c
   vessels give gems too); Technology aura (1 of 57, rest 2 of 117: Buff Conduit only); Technology autonomous_units (no card;
   moving on its own is movement: 3 of 57 against 18 of 117 elsewhere).
 - Costs are not in the card text. Cards list only sigils and traits; the cost is in the cost field: Beast 56 of 77 Blood,
-  Undead 18 of 20 Bones, Technology 50 of 57 Energy, Magick Mox gems. So Beast sacrifice (Blood) and Undead cost_type (Bones)
-  have no lead in the tagged text, and Magick multiple_resources is met only through the Mox cards' Mox sigil.
+  Undead 18 of 20 Bones, Technology 50 of 57 Energy, Magick Mox gems. `cost_rules.py` tags them (Blood: sacrifice as the cost;
+  Bones and Mox: cost_type), and faction signatures count cost tags (Kaptain, 26 Oct 2026). "Several resource types" is a fact of
+  the whole game, so the Magick case is cost_type (paid with gems).
+- Undead (Kaptain, 26 Oct 2026): the "destroying its own cards" of source [1] is the hammer, an item every player gets, not an
+  Undead card (1 of 20 Undead cards destroys its own units): case removed. Bones gained when cards die is Undead's (case added).
+  The archetype "Necromancers and perish effects" is one card (Necromancer), not the faction: 6 of 20 Undead cards have a death
+  mechanic, and Beast's Blood costs make Beast the faction whose units die on purpose: case removed.
+- Unkillable and the like ("when it dies, a copy goes to your hand") are return_to_hand, not revive (Kaptain, 26 Oct 2026).
 - Sigil entries are wiki pages: the rulebook line, then notes on single cards (Many Lives: "on certain cards ... transform";
   Waterborne: the Kraken's "random Tentacle card"). Tags from the notes reach every card bearing the sigil, so patterns read the
   rulebook wording, and sigil names in another entry's prose are not that entry's ability.

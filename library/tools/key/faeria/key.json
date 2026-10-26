@@ -1789,7 +1789,7 @@
 "Last Words"
 ],
 [
-"revive",
+"return_to_hand",
 "Return Ruunin to your hand at the end of the turn"
 ],
 [
@@ -6199,7 +6199,7 @@
 "Last Words"
 ],
 [
-"revive",
+"return_to_hand",
 "Return Aryana to your hand"
 ],
 [

@@ -294,10 +294,6 @@
 [
 "on_ally_play",
 "When one of your creatures is placed in a space"
-],
-[
-"summon",
-"When one of your creatures is placed in a space"
 ]
 ],
 "by": "A=B"

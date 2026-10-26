@@ -20,7 +20,7 @@ factions of their own. Factions with fewer than MIN cards (after that) are left 
                      of those mechanics (table faction_concept_ov: ln of its share over the rest of the game's share, 0 if not above);
                      it has the archetype when its score is at least 1.5 times the average of the game's other factions; several can hold
 Mechanics only: the root concepts and the role, scope and problem facets are left out, and so are concepts on more than 25% of
-a game's cards (too common to belong to anyone). Roles counted: does, grants and cost (how a card is paid for). Columns share and lift (share over the game
+a game's cards (too common to belong to anyone) unless one faction holds at least 60% of them (Kaptain, 26 Oct 2026). Roles counted: does, grants and cost (how a card is paid for). Columns share and lift (share over the game
 average) are kept for reading. Usage: signature.py <db>"""
 import collections, json, os, sqlite3, sys
 from math import log
@@ -61,7 +61,8 @@ for (g,) in q('SELECT DISTINCT game FROM entities'):
             res.append((x / n, f, x, ok))
         return K, sorted(res, reverse=True)
     for k, ids in has.items():
-        if k not in mech or len(ids) > 0.25 * N: continue
+        if k not in mech: continue
+        if len(ids) > 0.25 * N and max(len(s & ids) for s in fac.values()) < 0.6 * len(ids): continue   # common and spread over the factions: no one's own
         K, res = test(ids); avg = K / N
         own = [(sh, f, x) for sh, f, x, ok in res if ok]
         for sh, f, x in own: ins(g, f, k, 'signature', x, round(sh, 3), round(sh / avg, 2), f, round(sh, 3))

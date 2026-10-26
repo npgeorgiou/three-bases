@@ -145,7 +145,7 @@
 "banished in a challenge"
 ],
 [
-"revive",
+"return_to_hand",
 "return this card to your hand"
 ]
 ],
@@ -2186,7 +2186,7 @@
 "other characters is banished"
 ],
 [
-"revive",
+"return_to_hand",
 "return that card to your hand"
 ]
 ],
@@ -2601,7 +2601,7 @@
 "banished in a challenge"
 ],
 [
-"revive",
+"return_to_hand",
 "return this card to your hand"
 ],
 [
@@ -6731,7 +6731,7 @@
 "When this character is banished in a challenge"
 ],
 [
-"revive",
+"return_to_hand",
 "return this card to your hand"
 ]
 ],

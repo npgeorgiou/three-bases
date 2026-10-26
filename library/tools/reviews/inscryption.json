@@ -1040,7 +1040,7 @@
   "add": [
    "null_body",
    "aura",
-   "multiple_resources:benefits"
+   "resource_gain:benefits"
   ],
   "drop": [
    "multiple_resources:does"
@@ -1501,8 +1501,7 @@
   "add": [
    "on_ally_play",
    "adjacency",
-   "movement",
-   "summon:benefits"
+   "movement"
   ],
   "drop": []
  },

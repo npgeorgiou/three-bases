@@ -24,8 +24,9 @@ then the gaps in `tools/patterns/<game>.txt`.
   (`compare_builds.py`), not only the current game's.
 - Never invent rules or mechanics; mark judgements and suggestions as Claude's.
 - One game per pass, all 21 games. Faeria: first re-measure its reload on the corrected key, then the same check.
-- **Summon payoffs** (24 Oct 2026): a card that reacts to summons ("Whenever you summon a minion…") also has `summon` in the key,
-  since it benefits from summons. Add it in each game's pass.
+- **Summon reactions** (26 Oct 2026, Kaptain): a card that reacts to summons ("Whenever you summon a minion…") has the trigger
+  (`on_ally_play`, or `on_enemy_enter` for the opponent's summons), never `summon`: it does not summon. The earlier rule that gave it
+  `summon` was wrong and is undone in Duelyst and Inscryption.
 - **Shared pools** (24 Oct 2026): Neutral, Colorless and Any are not factions; `factions.py` SHARED leaves them out of the
   signature and archetype comparison.
 - **Cases the cards don't support** (24 Oct 2026): when the faction shows no lead in the cards (the mechanic is as common in other
@@ -116,8 +117,6 @@ Things that confused earlier chats:
   summon narrowing skips "player summons". The key_patterns rewrite was not kept (it lost more than it found).
 - Shared 24 Oct 2026 (Kaptain's decision): shared card pools (Neutral, Colorless, Any) are left out of the faction comparison
   (`factions.py` SHARED); signatures and archetypes are measured between real factions only.
-- Key rule (Kaptain's decision): a card that reacts to summons ("Whenever you summon a minion…") also has `summon` (it benefits
-  from summons). Done for duelyst; add it in each other game's pass.
 - Cases missed since shared pools left the comparison (24 Oct 2026; each a narrow lead now under 1.5 times): check them in
   their game's pass, tagging first: hearthstone Deathknight control and board_presence, Mage tribal and board_presence (splash),
   Demonhunter draw, Shaman tribal; shadowverse Swordcraft tribal; sts1 Defect cost_condition, Silent draw; tesl Willpower

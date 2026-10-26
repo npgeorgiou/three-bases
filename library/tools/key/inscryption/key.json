@@ -310,10 +310,6 @@
 [
 "movement",
 "will move towards them as far as possible"
-],
-[
-"summon",
-"When one of your creatures is placed in a space"
 ]
 ],
 "by": "A=B"
@@ -2180,12 +2176,6 @@
 "by": "C",
 "keywords": [
 740703
-],
-"credited": [
-[
-"return_to_hand",
-"Unkillable"
-]
 ]
 },
 "740769": {
@@ -3331,10 +3321,6 @@
 [
 "on_ally_play",
 "Clinger"
-],
-[
-"summon",
-"Clinger"
 ]
 ],
 "by": "A=B",
@@ -3830,12 +3816,6 @@
 "by": "C",
 "keywords": [
 740703
-],
-"credited": [
-[
-"return_to_hand",
-"Unkillable"
-]
 ]
 },
 "740886": {
@@ -3852,12 +3832,6 @@
 "by": "C",
 "keywords": [
 740703
-],
-"credited": [
-[
-"return_to_hand",
-"Unkillable"
-]
 ]
 },
 "740887": {

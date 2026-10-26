@@ -7735,7 +7735,7 @@ inscryption	740640	Double Death	aura	*	absent
 inscryption	740640	Double Death	cross_lane	*	absent
 inscryption	740640	Double Death	death_count	*	absent
 inscryption	740640	Double Death	death_trigger	benefits	present
-inscryption	740640	Double Death	death_trigger	does	present
+inscryption	740640	Double Death	other_death_trigger	does	present
 inscryption	740640	Double Death	reveal_order	*	absent
 inscryption	740640	Double Death	revive	does	present
 inscryption	740641	Double Strike	stat_multiply	*	absent
@@ -7827,7 +7827,7 @@ inscryption	740734	Bell Tentacle	adjacency	*	absent
 inscryption	740735	Black Goat	resource_gain	does	present
 inscryption	740735	Black Goat	sacrifice	benefits	present
 inscryption	740740	Blue Sporemage	draw	does	present
-inscryption	740740	Blue Sporemage	multiple_resources	benefits	present
+inscryption	740740	Blue Sporemage	resource_gain	benefits	present
 inscryption	740740	Blue Sporemage	on_play	does	present
 inscryption	740745	Bonehound	activated	*	absent
 inscryption	740745	Bonehound	movement	does	present
@@ -7981,7 +7981,7 @@ inscryption	740874	Sarcophagus	delayed	does	present
 inscryption	740874	Sarcophagus	permanent_growth	*	absent
 inscryption	740874	Sarcophagus	transform	does	present
 inscryption	740882	Orange Mage	aura	does	present
-inscryption	740882	Orange Mage	multiple_resources	benefits	present
+inscryption	740882	Orange Mage	resource_gain	benefits	present
 inscryption	740883	Orlu's Mox	activated	*	absent
 inscryption	740883	Orlu's Mox	resource_gain	does	present
 inscryption	740883	Orlu's Mox	terrain	does	present
