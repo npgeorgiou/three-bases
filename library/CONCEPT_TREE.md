@@ -10,6 +10,8 @@ A concept with two parents is listed under both, with the other one named as "al
   - Helps my side `helps_me`
     - Make a unit stronger (buff) `buff`
       - Stat gain (+power, +health) `stat_gain`
+        - Attack gain (+attack) `attack_gain`
+        - Defence gain (+health) `defence_gain`
       - Temporary bonus (this turn only) `temporary_buff` (also under This turn / round only)
       - Grows again and again `permanent_growth`
       - Double or multiply stats `stat_multiply`
@@ -198,7 +200,7 @@ A concept with two parents is listed under both, with the other one named as "al
     - Board wipe `board_wipe` (also under Remove an enemy unit)
     - Area shapes (cone, line, sphere) `area_templates`
     - Split a total among several `distribute`
-    - Whole board / all players `scope_global`
+    - Whole board / all players, or all friendly / all enemy minions `scope_global`
       - Both players alike `symmetric_effect`
   - Only itself `scope_self`
 - Game structure `structure`
@@ -287,6 +289,7 @@ A concept with two parents is listed under both, with the other one named as "al
       - Block enemy spawns `spawn_blocking` (also under Where units can be placed)
     - Zones of control (leaving is punished) `zone_of_control` (also under Neighbours matter (adjacency))
     - In or entering enemy territory `territory_trigger` (also under Triggers & timing)
+      - Random target among existing units or places `random_target`
   - Randomness in the game's structure `randomness`
     - Random results `random_effect`
       - Gain a random ability or keyword `random_ability` (also under Make a unit stronger (buff))
