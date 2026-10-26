@@ -36,6 +36,13 @@ Read this section only; the sections below it are the earlier test and its histo
    definition text (Magic 113, Monster Train 66, Shadowverse 31, Battlegrounds 16, Legends 2), for Magic's Scry (its text is
    a snow-mana line) or for glossary entries (Darkest Dungeon stats and provisions).
 3. Started: `tools/records/script_records.py`, Hearthstone wording (18% of cards covered, 1 wrong record in a 30-card check).
+   Kaptain (27 Oct 2026): reading costs too much; the vast majority of cards of ALL games must get records by script, using the
+   patterns as far as they go, plus new ones. `tools/records/auto_records.py` (every game): sentences of the text, trigger and
+   effect from the stored tags' patterns (all patterns of the game when no tag matches), keyword verbs and grants from the
+   keyword records, a cross-game target phrase table, amounts, durations, conditions; Darkest Dungeon has its own format reader.
+   Result 27 Oct: 50-89% of entries covered per game (Magic 66%, Hearthstone 76%, Lorcana 84%), but a hand check of 48 covered
+   cards (Magic, Hearthstone, Lorcana, Gwent) found only about 60% of records right (wrong target or wrong effect most often).
+   The strict Hearthstone script was 97% right at 18% coverage. Open: Kaptain's choice between coverage and accuracy.
    Scripts per game: the effect from today's patterns, plus new patterns for target, amount and duration. A card the script
    covers completely is not read. Start with the games with fixed wording (Magic, Hearthstone, Runeterra, Lorcana, SWU).
 4. Repeats read once: texts that differ only in name or numbers share one reading.
