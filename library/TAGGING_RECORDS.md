@@ -1,6 +1,55 @@
 # Tagging per effect
 
-## Agreed with Kaptain (26 Oct 2026)
+## Instructions for the next chat (26 Oct 2026, evening): a library that describes cards
+Read this section only; the sections below it are the earlier test and its history.
+
+### What the test found
+- The test of "abilities and pieces from existing tags" (sections below, code in `tools/records_test/`) was run on a copy.
+  Cutting text into abilities and pieces failed (placement 94.9%, 2 of 21 games at 98%). Grouping tags straight from the
+  card (`records_test/abilities.py`: simple cards from their tags alone, the text read only for cards with 2+ triggers) worked
+  as grouping: the four known errors come out right, combos found unchanged.
+- But Kaptain read the Runeterra results and every tag set was unreadable as a description: the tags are search labels made
+  by word patterns ("draw" fires on "when you draw", "random_effect" on any random unit, "cost_condition" says nothing useful),
+  and they carry no target, amount or duration (the record schema was dropped on 26 Oct morning). Grouping labels cannot make
+  them describe a card. The answer-key scores measured whether each label is defensible, not whether the labels describe the
+  card. Lesson: say this kind of limit before building, not after.
+- The current library stays good for finding cards by mechanic; it cannot explain a card.
+
+### Agreed (Kaptain, 26 Oct 2026)
+- Goal: a library that describes cards, queryable to find combos, mechanics, ideas and possibilities.
+- Cost is measured in tokens of Kaptain's Claude subscription (no API). Reuse as much as possible, read as little as possible.
+- One record per effect: card, ability, trigger, effect, who it hits (self, ally, enemy, all, random, ...), how much, how long,
+  condition. Accepted error: about 95% of records right on a hand-checked sample.
+- Games: Age of Sigmar dropped; 40k kept, trimmed; Inscryption kept without its wiki prose; Darkest Dungeon kept (its stat
+  lists are easy for scripts). Done and pushed: `tools/trim_text.py` (a build step), `drop_game.py --category`.
+- Distinct text left: about 1.17 million tokens (texts that differ only in name or numbers counted once); Magic is two thirds
+  of it, and its fixed wording should let scripts cover most of it.
+
+### Plan (Claude's proposal, steps 1-4 agreed as preparation)
+1. Record format: a table `effects(entity, ability, trigger, effect, target, amount, duration, condition, source)`; source =
+   keyword / script / reading. Write the exact value lists for target and duration first and show them to Kaptain.
+2. Keywords first: about 1,000 keyword definitions read once into records; every card with a keyword inherits them.
+3. Scripts per game: the effect from today's patterns, plus new patterns for target, amount and duration. A card the script
+   covers completely is not read. Start with the games with fixed wording (Magic, Hearthstone, Runeterra, Lorcana, SWU).
+4. Repeats read once: texts that differ only in name or numbers share one reading.
+5. Trial, per game: about 25 hard cards (most triggers, most tags, longest distinct text) and about 5 ordinary ones, so the
+   estimate can weight each kind by how many cards a game has (hard cards alone would overstate the cost). Measure: share the
+   scripts cover, tokens per read card, error rate (checked by reading). Then the full estimate is arithmetic. Present it.
+6. Full run in batches per game; results saved as files, loaded by a script, pushed after Kaptain's OK.
+7. Check: about 20 hand-read cards per game, `combos.tsv`, and the six fixed questions (step 3 of the earlier test) on old and new.
+8. Queries: new `query.py` commands over the records (combo = A's effect on a target matches B's trigger on that target).
+
+### Patterns check (PATTERNS_CHECK.md)
+The four games done are reused as they are (better labels = better trigger and effect fields). Do not run more game passes
+before the trial: the passes improve labels, not target, amount or duration, and read cards get their whole record from the
+reading. If the trial shows wrong labels are a main source of wrong records, run the patterns check on the games where it hurts.
+
+### How to work with Kaptain here
+- Explain plainly with a card example; no internal jargon (no "pieces", "spans", "excerpts" without saying what they are).
+- Show real cards and results early (5-10 cards), before building on a method.
+- State what a method cannot do before building it.
+
+## Agreed with Kaptain (26 Oct 2026, morning; the earlier test)
 - **All or nothing.** A new structure is built for every entry of every game, or not at all. No mix of entries with and
   without it. It is built in a copy of the database; the real one is replaced only when the whole test below passes.
 - **The full record schema below is not pursued now.** Its slots (filters, amounts, which one, area, duration) need new
