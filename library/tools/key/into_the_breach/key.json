@@ -1213,6 +1213,10 @@
 [
 "adjacency",
 "pushing adjacent tiles"
+],
+[
+"terrain",
+"terrain and board features matter"
 ]
 ],
 "by": "C"
@@ -2121,6 +2125,10 @@
 [
 "upgrade",
 "Upgrade: Phase Shield"
+],
+[
+"terrain",
+"terrain and board features matter"
 ]
 ],
 "by": "C"
@@ -3268,6 +3276,10 @@
 [
 "telegraphed_threats",
 "prepare to stab it during the enemy turn"
+],
+[
+"terrain",
+"terrain and board features matter"
 ]
 ],
 "by": "C"
@@ -3957,6 +3969,10 @@
 [
 "movement",
 "Massive"
+],
+[
+"terrain",
+"terrain and board features matter"
 ]
 ],
 "by": "C",
@@ -4201,6 +4217,10 @@
 [
 "area_templates",
 "Stab 2 tiles in front of the unit"
+],
+[
+"terrain",
+"terrain and board features matter"
 ]
 ],
 "by": "C",

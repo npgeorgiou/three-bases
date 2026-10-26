@@ -1280,3 +1280,6 @@ new	defence_gain|does|*|manual	darkest_dungeon,duelyst,faeria,hearthstone,hs_bat
 new	attack_gain|does|*|manual	sts1,sts2	\bgain(?:s|ed)? (?:x|\d+) strength\b|\b(?:x|\d+) additional strength\b|\bincreases attack damage by\b
 new	attack_gain|does|*|manual	into_the_breach	\bdamage is increased by \d\b
 new	defence_gain|does|*|manual	hearthstone	\bgain \+\d+ durability\b
+new	summon|does|*|manual	darkest_dungeon,duelyst,faeria,gwent,hearthstone,hs_battlegrounds,inscryption,into_the_breach,lorcana,monster_train,mtg,runeterra,shadowverse,stormbound,sts1,sts2,swu,tesl,wh_40k_10e,wh_aos_4th	\bsummon (?:it|them)\b|\b(?:your )?opponent summons? (?:an?|\d+|two|three|\w+) 
+new	movement|does|*|manual	wh_aos_4th	\bcan (?:each )?(?:immediately )?move (?:up to )?\d+"|\bcan each move\b|\beach target can (?:immediately )?move\b
+new	forced_movement|does|*|manual	inscryption	\bpull (?:one of )?(?:your )?opponent's cards? to your side\b
