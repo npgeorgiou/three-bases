@@ -7125,6 +7125,10 @@
 [
 "free_play",
 "summon it instead"
+],
+[
+"summon",
+"the card is put onto the board instead"
 ]
 ],
 "by": "C",

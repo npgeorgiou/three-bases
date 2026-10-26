@@ -17,6 +17,7 @@ INDEXES = [
     'CREATE INDEX IF NOT EXISTS ix_el_dst ON entity_links(dst)',
     'CREATE INDEX IF NOT EXISTS ix_ec_concept ON entity_concepts(concept)',
     'CREATE INDEX IF NOT EXISTS ix_te ON trigger_effect(trigger, effect)',
+    'CREATE INDEX IF NOT EXISTS ix_te_ent ON trigger_effect(entity)',
 ]
 NAMES = [s.split()[5] for s in INDEXES]
 FTS = "CREATE VIRTUAL TABLE IF NOT EXISTS entity_fts USING fts5(name, text, content='entities', content_rowid='id')"

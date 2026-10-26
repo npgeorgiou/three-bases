@@ -148,9 +148,12 @@ def interactions(name, game=None, per=8):
     partners(does, ('benefits',), 'feeds (cards that benefit from)')
     partners({b for c in does for b in syn.get(c, ())} - does, ('does', 'grants'), 'synergy (concept relation) with')
 
+_ANC = {}
 def _anc(c):
     """A concept with all its ancestors (a payoff for a parent concept is also a payoff for its children)."""
-    return {r[0] for r in q('SELECT root FROM concept_tree WHERE id=?', c)} | {c}
+    if not _ANC:   # the whole tree once: one query instead of one per concept per call
+        for i, r in q('SELECT id, root FROM concept_tree'): _ANC.setdefault(i, set()).add(r)
+    return _ANC.get(c, set()) | {c}
 
 FEEDS = {   # which effects set off which triggers (Claude's mapping)
     'on_ally_play': {'summon', 'revive', 'free_play'}, 'death_count': {'sacrifice', 'destroy', 'self_destruct', 'board_wipe', 'aoe_damage'},

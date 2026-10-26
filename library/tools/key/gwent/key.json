@@ -2459,6 +2459,10 @@
 [
 "graveyard",
 "from your graveyard"
+],
+[
+"summon",
+"a unit is put onto the board (from the graveyard)"
 ]
 ],
 "by": "C"
@@ -11177,6 +11181,10 @@
 [
 "delayed",
 "Counter"
+],
+[
+"summon",
+"a unit is put onto the board (from the graveyard)"
 ]
 ],
 "by": "C",
