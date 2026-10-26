@@ -33,6 +33,11 @@ Read this whole file before you add a game.
    - One chain: the new cards are added, their first tags join the frozen base (`start_clean.py keep`), and every
      step runs over all games. The stored database is always the output of one such build; building twice gives identical tags.
      To reload a game, drop it first (`drop_game.py`).
+4. Data that cards print outside their text (costs, types, stats) is tagged from its field: the converter's `tags` or a data
+   rule like `tools/cost_rules.py`. Text patterns cannot see it.
+5. Adding cards to a game already in the library: `tools/reload_game.sh <scratch> <game> <game>=<cards.json>`. Never `build.sh` with
+   a load for an existing game (`start_clean.py keep` would make the game's built tags its base; every game came out worse,
+   26 Oct 2026). A card with no tag is dropped (`drop_untagged.py`); a card with no text needs a review entry keyed by its name.
 
 ## 2. Keywords before cards
 1. Add the game's glossary keywords as category `keyword` entries, each with its definition text.
@@ -43,6 +48,8 @@ Read this whole file before you add a game.
    - the keyword stands where the game prints keywords: at the start of the text, a line, a sentence or a clause, or in a "Keywords:" list (`valid()` in `tools/kw_links.py`).
 
    Anything else is `mentions_keyword`. Cards inherit a keyword's tags only through has/grants links.
+   A keyword's tags reach every card that has it: tag only what the keyword itself does. A glossary entry that is a wiki page
+   (rule, then notes about single cards) is tagged from its rule; a note's effect belongs to that card.
 5. Test `kw_links` on the new game before switching it on in `tools/step_games.json`. It made 7 games worse and helps the rest.
 
 ## 3. Patterns
@@ -60,6 +67,7 @@ Read this whole file before you add a game.
 2. Read it as in "Reading cards".
 3. `key.py answer <game>` checks every quote and writes `key.json`; `key.py credit <game>` then adds the keyword tags (below).
 4. Score with `key.py score`.
+   Key quotes must be words of the card; a tag quoted with a definition is unverified.
 5. To make patterns from the key, run `tools/step3/key_patterns.py`. It builds on one half of the key, tests on the other half,
    and keeps a pattern only if it is 90%+ right there.
 6. To get rid of wrong tags, narrow a pattern only after a sample of what the narrowing drops has been judged 90%+ wrong (`patterns3.py accept`).
@@ -94,7 +102,8 @@ Read this whole file before you add a game.
   (`trigger_pairs.py <db> pairs_only`).
 - Scripts that rewrite `tools/step3/decisions.tsv` must keep the other scripts' lines (each script marks its own: `|key`, `|trigger`,
   `|amp`, `|redirect`, `|manual`).
-- While working on one game, check each try with `tools/game_check.sh` (`PATTERNS_CHECK.md`). After a tag change that reaches
+- While working on one game, check each try with `tools/game_check.sh` (`PATTERNS_CHECK.md`). Before writing patterns, see where the
+  errors come from (`tools/entry_diff.py`) and test candidate lines on the key (`tools/pattern_eval.py`); build once per batch. After a tag change that reaches
   other games (shared code, `_all.txt`, the concept tree), and after adding a game, run `compare_builds.py <stored> <new>` (key, real-world cases per game and kind, regression, combos, lost
   pairs, with every case newly met or missed) and keep the change only if nothing is worse; `realworld_why.py` says why a case misses.
 
@@ -108,25 +117,12 @@ Read this whole file before you add a game.
 2. Make the real-world cases as `tools/realworld/RESEARCH.md` says: a source summary in `tools/games/<game>.md`, then the cases
    in its ```tsv block (signatures, archetypes, combos, splashes in the library's own names). They are the real test: run
    `realworld_why.py` and fix what misses before finishing.
+   Check that each signature or archetype case shows a lead in the cards (`tools/case_lead.py`). A combo case can name a card, a
+   merged card, a keyword or a tribe (where abilities move between cards, as Inscryption sigils and totems).
 3. Check the database size. GitHub refuses files over 100 MB; the database is stored compact (`compact_text.py`) and without its indexes (`indexes.py`), about 55 MB (`indexes.py` also keeps the frozen base only as its differences from the output).
-4. Copy the build over `three-bases-library.sqlite`, then commit and push after each step together with its progress files, keys and decisions.
+4. Copy the build over `three-bases-library.sqlite` and commit, together with its progress files, keys and decisions. Push only when
+   Kaptain says "push".
 5. Update `README.md`. Write a short handoff that says what is done, what the build applies, what is left, and the exact commands.
-
-## Lessons from the patterns checks (26 Oct 2026)
-- Keyword and glossary entries pass their tags to every card that has them: tag only what the keyword itself does. If the source
-  is a wiki page with notes about single cards, the notes' effects belong to those cards, not to the keyword.
-- Data that cards print outside their text (costs, types, stats) is read from its field with a data rule (`tools/cost_rules.py`,
-  the converter's `tags`), not with text patterns.
-- Before writing patterns, see where errors come from (`tools/entry_diff.py`), test candidate lines on the key
-  (`tools/pattern_eval.py`), and check that each real-world case shows a lead in the cards (`tools/case_lead.py`). Build once per
-  batch, not once per pattern.
-- Key quotes must be words of the card. A tag quoted with a definition or with a name that does not say the effect is unverified.
-- A combo case can name a card, a merged card (it resolves to the kept entry), a keyword or a tribe: in games where abilities move
-  between cards (Inscryption sigils and totems) a combo is "card + keyword" or "tribe + keyword".
-- Adding cards to a game that is already in the library: `tools/reload_game.sh <scratch> <game> <game>=<cards.json>`. Never
-  `build.sh ... <game>=<cards.json>` for an existing game: its `start_clean.py keep` makes the game's built tags its base and every
-  game came out worse (26 Oct 2026). A card with no tag is dropped by `drop_untagged.py`; a card with no text needs a review entry
-  keyed by its name. Faction counts include cards merged into another with the same text (`signature.py`).
 
 ## Reading cards (Kaptain's decision; the only way cards are read)
 **Why there is a key.** The library's tags come from regexes (patterns). The answer key is the only place where cards are
