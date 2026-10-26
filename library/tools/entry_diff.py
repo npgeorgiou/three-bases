@@ -7,15 +7,13 @@ os.environ['TB_LIB'] = os.path.abspath(db); HERE = os.path.dirname(os.path.abspa
 import key as K
 c = sqlite3.connect(db); key = K.load(g); ids = [int(i) for i in key]
 meth = collections.defaultdict(dict)
-for e, k, m in c.execute('SELECT entity, concept, method FROM entity_concepts WHERE entity IN (%s)' % ','.join(map(str, ids))): meth[e][k] = m
-L = K.lib_tags(c, ids); W = M = 0; byw = collections.Counter(); bym = collections.Counter()
+for e, k, r, m in c.execute('SELECT entity, concept, role, method FROM entity_concepts WHERE entity IN (%s)' % ','.join(map(str, ids))): meth[e][k] = m; meth[e][f'{k}:{r}'] = m
+LR = K.lib_roles(c, ids); W = M = 0; byw = collections.Counter(); bym = collections.Counter()
 for i in ids:
     r = c.execute('SELECT name, text, category FROM entities WHERE id=?', (i,)).fetchone()
     if not r or (cat != 'all' and r[2] != cat): continue
-    Kt = K.narrow({k for k, _ in key[str(i)]['tags']})
-    ok = set(Kt) | {a for k in Kt for a in K.ANC[k]} | {d for k in Kt for d in K.DESC[k]}
-    wr = sorted(f'{l}({meth[i].get(l, "?")[:6]})' for l in L[i] if l not in ok and l not in K.GROUPS)
-    mi = sorted(k for k in Kt if not (L[i] & ({k} | K.DESC[k] | (K.ANC[k] - K.GROUPS))))
+    Kt = K.narrow({k for k, _ in key[str(i)]['tags']}) | {f'{k}:{r}' for k, _, r in key[str(i)].get('payoff', [])}
+    w, mi = K.judge(key[str(i)], LR[i]); wr = [f'{l}({meth[i].get(l, "?")[:6]})' for l in w]
     W += len(wr); M += len(mi); byw.update(wr); bym.update(mi)
     if wr or mi: print(f'[{i}] {r[0]} <{r[2]}> wrong: {" ".join(wr)}  missed: {" ".join(mi)}  key={sorted(Kt)}\n    {(r[1] or "")[:mx]!r}')
 print('wrong', W, 'missed', M); print('wrong by concept(method):', byw.most_common(15)); print('missed by concept:', bym.most_common(15))

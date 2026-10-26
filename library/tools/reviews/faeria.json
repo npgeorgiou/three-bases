@@ -4,7 +4,8 @@
   "drop": [
    "on_attack",
    "on_damaged",
-   "death_count"
+   "death_count",
+   "sacrifice:benefits"
   ]
  },
  "741291": {
@@ -214,7 +215,9 @@
   "add": [
    "removal"
   ],
-  "drop": []
+  "drop": [
+   "movement:counters"
+  ]
  },
  "741220": {
   "add": [
@@ -235,7 +238,9 @@
   ],
   "drop": [
    "blocking",
-   "zone_of_control:benefits"
+   "zone_of_control:benefits",
+   "immobilize:benefits",
+   "taunt:benefits"
   ]
  },
  "741429": {
@@ -329,7 +334,9 @@
   "add": [
    "condition"
   ],
-  "drop": []
+  "drop": [
+   "movement:benefits"
+  ]
  },
  "741317": {
   "add": [
@@ -658,12 +665,13 @@
   "add": [
    "damage",
    "adjacency",
-   "movement:benefits",
    "on_play",
    "random_effect",
    "summon"
   ],
-  "drop": []
+  "drop": [
+   "movement:benefits"
+  ]
  },
  "741383": {
   "add": [
@@ -691,7 +699,9 @@
    "drawback",
    "movement"
   ],
-  "drop": []
+  "drop": [
+   "direct_damage:benefits"
+  ]
  },
  "741116": {
   "add": [
@@ -2020,10 +2030,11 @@
   "add": [
    "condition_count",
    "cost_reduction",
-   "high_cost:benefits",
    "terrain"
   ],
-  "drop": []
+  "drop": [
+   "high_cost:benefits"
+  ]
  },
  "741499": {
   "add": [
@@ -2180,7 +2191,8 @@
  "741233": {
   "add": [],
   "drop": [
-   "death_count"
+   "death_count",
+   "sacrifice:benefits"
   ]
  },
  "741332": {
@@ -2465,13 +2477,27 @@
  "741495": {
   "add": [],
   "drop": [
-   "attack_gain"
+   "attack_gain",
+   "immobilize:benefits",
+   "taunt:benefits"
   ]
  },
  "741209": {
   "add": [],
   "drop": [
    "attack_gain"
+  ]
+ },
+ "741157": {
+  "add": [],
+  "drop": [
+   "summon:benefits"
+  ]
+ },
+ "741308": {
+  "add": [],
+  "drop": [
+   "summon:benefits"
   ]
  }
 }

@@ -3655,7 +3655,6 @@ faeria	741195	Wild Growth	random_effect	does	present
 faeria	741195	Wild Growth	terrain	does	present
 faeria	741196	Primeval Colossus	condition_count	does	present
 faeria	741196	Primeval Colossus	cost_reduction	does	present
-faeria	741196	Primeval Colossus	high_cost	benefits	present
 faeria	741200	Overgrown Tower	ping	*	absent
 faeria	741204	Ruunin's Messenger	generate_cards	does	present
 faeria	741204	Ruunin's Messenger	movement	does	present
@@ -3921,7 +3920,6 @@ faeria	741391	Shifting Octopus	modal_choice	does	present
 faeria	741391	Shifting Octopus	movement	does	present
 faeria	741391	Shifting Octopus	taunt	does	present
 faeria	741392	Frog-Tosser	adjacency	does	present
-faeria	741392	Frog-Tosser	movement	benefits	present
 faeria	741392	Frog-Tosser	on_play	does	present
 faeria	741392	Frog-Tosser	random_effect	does	present
 faeria	741392	Frog-Tosser	summon	does	present
@@ -17930,3 +17928,16 @@ faeria	741145	Sturdy Shell	self_destruct	does	present
 faeria	741145	Sturdy Shell	turn_end	does	present
 faeria	741198	Wood Elemental	zone_of_control	does	absent
 faeria	741295	Zealous Crusader	direct_damage	benefits	present
+faeria	741323	God Hunter	direct_damage	benefits	absent
+faeria	741196	Primeval Colossus	high_cost	benefits	absent
+faeria	741079	Hold the Line!	immobilize	benefits	absent
+faeria	741079	Hold the Line!	taunt	benefits	absent
+faeria	741495	Seek Shelter	immobilize	benefits	absent
+faeria	741495	Seek Shelter	taunt	benefits	absent
+faeria	741138	Frogify	movement	counters	absent
+faeria	741352	The World's Tear	movement	benefits	absent
+faeria	741392	Frog-Tosser	movement	benefits	absent
+faeria	741233	Blood Singer	sacrifice	benefits	absent
+faeria	741238	Blood Obelisk	sacrifice	benefits	absent
+faeria	741157	Snowstorm Lancer	summon	benefits	absent
+faeria	741308	Windstorm Archer	summon	benefits	absent

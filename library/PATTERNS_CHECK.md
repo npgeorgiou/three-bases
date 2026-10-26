@@ -10,6 +10,8 @@ too. Find the reason for every disagreement and fix it where it is: the entry ta
 
 ## Rules (Kaptain)
 - **Never push without Kaptain's "push".** Present the results first; an OK to a change is not an OK to push.
+- **The key can be wrong or incomplete.** Whenever the library is right and the key disagrees (any concept, any role, including
+  `benefits` and `counters`), the fix is a key proposal to Kaptain, never a change to the scoring or to the library.
 - **Never change the key yourself.** Propose: the entries, what each card says (quote it), the tag to add or remove, one yes/no
   question. Proposing is mandatory, in the same report, whenever something shows a key tag wrong or missing. Apply only what
   Kaptain approves (or settles with "change the key where you are sure"), and list it in the game's line below.
@@ -54,7 +56,7 @@ Order of `tools/key/key.py` GAMES. Numbers: key wrong / missed per 100 entries, 
 |---|---|---|---|---|
 | into_the_breach | done 26 Oct | 47.0 / 13.3 | signature 2/2, archetype 1/1, combo 6/6, splash 2/2 | |
 | inscryption | done 26 Oct | 50.4 / 26.9 | signature 6/7, combo 22/23 | Beast generate_cards (lead 1.8, too few cards); Mantis God + Fecundity |
-| faeria | done 26 Oct | 22.4 / 5.9 | signature 12/14, archetype 6/6, combo 10/12 | Khalim's Prayer + Zealous Crusader, Earthcraft + Three Wishes (need per-effect records); Blue terrain, Yellow on_spell (too few cards) |
+| faeria | done 26 Oct | 13.6 / 5.9 | signature 12/14, archetype 6/6, combo 10/12 | Khalim's Prayer + Zealous Crusader, Earthcraft + Three Wishes (need per-effect records); Blue terrain, Yellow on_spell (too few cards) |
 | duelyst | done 24 Oct, rechecked 26 Oct | 34.5 / 24.3 | signature 16/16, archetype 7/8, splash 1/1 | |
 | sts1 | **next** | 40.5 / 27.6 | signature 9/18, archetype 5/9, combo 18/21 | Defect cost_condition, Silent draw (narrow leads) |
 | marvel_snap | to do | 101.4 / 31.5 | combo 20/24 | |
@@ -99,8 +101,11 @@ Order of `tools/key/key.py` GAMES. Numbers: key wrong / missed per 100 entries, 
 **Things that silently undo a fix:** a review drop without a role also drops the `benefits`/`counters` tags (write `concept:does`);
 reviews are applied in the old ids too, where `death_trigger` still means any death (write `other_death_trigger`); `!` lines
 remove only text_pattern tags, and `pattern_fix.py` re-adds its decision patterns after them; a review or key change can break a
-`regression.tsv` line (fix it in the same change). `benefits` and `counters` tags count as wrong in the score (the key lists what a
-card does): do not chase them.
+`regression.tsv` line (fix it in the same change).
+
+**Benefits and counters.** A `benefits` or `counters` tag the key lacks is a key gap, not a scoring problem. Check it against the
+card text: if true, propose adding it to the key's `payoff` list (concept, the card's words, role); if false, drop it from the
+library. Never propose leaving these tags out of the score. `key.py` judges them against `payoff` (Kaptain, 26 Oct 2026).
 
 **Adding cards to a game already in the library:** `reload_game.sh <scratch> <game> <game>=<cards.json>`, never `build.sh` with a
 load (it makes the game's built tags its base: every game came out worse). A card without tags is dropped; a card without text
@@ -185,7 +190,9 @@ Things that confused earlier chats:
   551 -> 572 of 860, no game worse), Pandora a shared pool, keyword-signature cases, relations copy + tribal and summon +
   transform; Faeria key wrong 22.4, missed 5.9, cases signature 12/14, archetype 6/6, combo 10/12. Regression: 186 new Faeria lines
   for the pass's decisions (pattern_fix honours the 'absent' ones, so general patterns cannot re-add a reviewed drop); the Taunt
-  keyword keeps no adjacency until the area decision (the one key miss this costs).
+  keyword keeps no adjacency until the area decision (the one key miss this costs). Key entries got a `payoff` list
+  (benefits, counters; scored by `key.py` judge(), every game unchanged): 23 Faeria payoffs added, 13 false benefit tags dropped;
+  Faeria key wrong 22.4 -> 13.6.
 
 ## Open, outside the game passes
 - Tagging redesign: tags per effect instead of per card (`TAGGING_RECORDS.md`, proposal for Kaptain). It would settle area

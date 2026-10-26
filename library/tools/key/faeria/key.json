@@ -728,6 +728,13 @@
 "by": "A=B",
 "keywords": [
 741057
+],
+"payoff": [
+[
+"defence_gain",
+"Attack becomes equal to its Life",
+"benefits"
+]
 ]
 },
 "741130": {
@@ -828,7 +835,14 @@
 "Draw a card"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"payoff": [
+[
+"defence_gain",
+"Attack becomes equal to its Life",
+"benefits"
+]
+]
 },
 "741140": {
 "tags": [
@@ -1343,7 +1357,14 @@
 "this gains +1/+1"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"payoff": [
+[
+"sacrifice",
+"Whenever an adjacent creature dies",
+"benefits"
+]
+]
 },
 "741175": {
 "tags": [
@@ -1412,7 +1433,14 @@
 "double its Attack"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"payoff": [
+[
+"damage",
+"After this creature is dealt damage",
+"benefits"
+]
+]
 },
 "741189": {
 "tags": [
@@ -1609,7 +1637,14 @@
 "health, toughness or defence goes up"
 ]
 ],
-"by": "C"
+"by": "C",
+"payoff": [
+[
+"sacrifice",
+"Whenever another friendly creature dies",
+"benefits"
+]
+]
 },
 "741204": {
 "tags": [
@@ -1641,6 +1676,13 @@
 "by": "C",
 "keywords": [
 741065
+],
+"payoff": [
+[
+"direct_damage",
+"Whenever this attacks a god",
+"benefits"
+]
 ]
 },
 "741206": {
@@ -2100,7 +2142,14 @@
 "this gains that much Attack"
 ]
 ],
-"by": "C"
+"by": "C",
+"payoff": [
+[
+"damage",
+"Whenever a god is dealt damage",
+"benefits"
+]
+]
 },
 "741237": {
 "tags": [
@@ -2381,7 +2430,14 @@
 "deal that much damage back to your opponent"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"payoff": [
+[
+"damage",
+"Whenever this is dealt damage",
+"benefits"
+]
+]
 },
 "741259": {
 "tags": [
@@ -2460,6 +2516,13 @@
 "by": "A=B",
 "keywords": [
 741068
+],
+"payoff": [
+[
+"direct_damage",
+"Has +2/+0 against gods",
+"benefits"
+]
 ]
 },
 "741267": {
@@ -2498,6 +2561,13 @@
 ],
 "keywords": [
 741067
+],
+"payoff": [
+[
+"direct_damage",
+"Has +3/+0 against gods",
+"benefits"
+]
 ]
 },
 "741269": {
@@ -2593,6 +2663,13 @@
 ],
 "keywords": [
 741063
+],
+"payoff": [
+[
+"direct_damage",
+"When Khalim attacks a god",
+"benefits"
+]
 ]
 },
 "741275": {
@@ -2688,7 +2765,14 @@
 "Costs 2 faeria less if you attacked a god this turn"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"payoff": [
+[
+"direct_damage",
+"if you attacked a god this turn",
+"benefits"
+]
+]
 },
 "741288": {
 "tags": [
@@ -2811,6 +2895,13 @@
 ],
 "keywords": [
 741063
+],
+"payoff": [
+[
+"direct_damage",
+"Whenever a friendly creature attacks a god",
+"benefits"
+]
 ]
 },
 "741294": {
@@ -2866,6 +2957,13 @@
 ],
 "keywords": [
 741064
+],
+"payoff": [
+[
+"direct_damage",
+"each time a friendly creature attacks a god",
+"benefits"
+]
 ]
 },
 "741297": {
@@ -2962,6 +3060,13 @@
 ],
 "keywords": [
 741064
+],
+"payoff": [
+[
+"sacrifice",
+"Whenever a friendly creature dies",
+"benefits"
+]
 ]
 },
 "741302": {
@@ -3415,6 +3520,13 @@
 "by": "C",
 "keywords": [
 741065
+],
+"payoff": [
+[
+"direct_damage",
+"Whenever this attacks a god",
+"benefits"
+]
 ]
 },
 "741323": {
@@ -3605,6 +3717,13 @@
 ],
 "keywords": [
 741064
+],
+"payoff": [
+[
+"summon",
+"Whenever you summon a creature that costs 1 faeria or less",
+"benefits"
+]
 ]
 },
 "741337": {
@@ -3791,7 +3910,14 @@
 "Transform a creature that attacked a god this turn into a 10/10 Sky Swallower with Flying"
 ]
 ],
-"by": "C"
+"by": "C",
+"payoff": [
+[
+"direct_damage",
+"a creature that attacked a god this turn",
+"benefits"
+]
+]
 },
 "741353": {
 "tags": [
@@ -4385,7 +4511,14 @@
 "Charge 2"
 ]
 ],
-"by": "C"
+"by": "C",
+"payoff": [
+[
+"draw",
+"When you draw this card",
+"benefits"
+]
+]
 },
 "741400": {
 "tags": [
@@ -4615,6 +4748,13 @@
 "keywords": [
 741061,
 741072
+],
+"payoff": [
+[
+"movement",
+"Corrupt",
+"benefits"
+]
 ]
 },
 "741413": {
@@ -4982,7 +5122,14 @@
 "deal 1 damage to your opponent"
 ]
 ],
-"by": "A=B"
+"by": "A=B",
+"payoff": [
+[
+"damage",
+"Whenever a friendly Yak is dealt damage",
+"benefits"
+]
+]
 },
 "741435": {
 "tags": [
@@ -5376,6 +5523,13 @@
 "by": "C",
 "keywords": [
 741061
+],
+"payoff": [
+[
+"movement",
+"Corrupt",
+"benefits"
+]
 ]
 },
 "741453": {
@@ -6073,6 +6227,13 @@
 "by": "C",
 "keywords": [
 741065
+],
+"payoff": [
+[
+"generate_cards",
+"Whenever you discover a Treasure",
+"benefits"
+]
 ]
 },
 "741493": {

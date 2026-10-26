@@ -61,7 +61,7 @@ terrain|does|\bdestroy (all creatures, structures,? and lands|all adjacent creat
 delayed|does|\bgive the next [a-z]+ creature you summon\b
 on_ally_play|does|\bgive the next [a-z]+ creature you summon\b
 # Attacking the enemy god deals direct damage: cards rewarded by it benefit from direct_damage
-direct_damage|benefits|\b(attacks?|attacked) (a|the enemy|an enemy) god\b|\bagainst gods\b|\bcan only attack gods\b
+direct_damage|benefits|\b(attacks?|attacked) (a|the enemy|an enemy) god\b|\bagainst gods\b
 # Effects on the card itself (scope_self) in wordings the general pattern misses
 scope_self|does|(?:^|\n)(?:gains|has) \+\d+/\+\d+|\b(?:he|she) gains\b|\bdouble (?:this creature's|its) attack\b|\bthis drains its attack\b|\bthis gains (?:haste|deathtouch|attack and life|that much attack)\b|\bto gain \+\d+/\+\d+|\bgain (?:haste and protection|attack and life equal to)\b|\bgain \+\d+/\+\d+ for each\b|\bafter this attacks, it gains\b
 # Draining life from the enemy god is direct damage (and heals you)

@@ -16,7 +16,8 @@ edited to agree with the library. Prints counts and sampled lines only.
 READING (Kaptain's decision, 21 Oct 2026): one process reads read.txt and the cards files once and writes one line per card to answer.txt;
 ADDING_GAMES.md, "Reading cards", says how.
 
-SCORING. Key concepts K (narrowest, as read) and library tags L of an entry, any role. Game-structure tags (method
+SCORING (judge()). Key concepts K (narrowest, as read) and library tags L of an entry; benefits and counters tags are judged
+against the entry's 'payoff' list (concept, words, role), every other role against K. Game-structure tags (method
 game_structure: "this game has lanes") and cost-data tags (data_rule) are left out on both sides, since they are not read
 from the text. A library tag is right when it is a key concept, an ancestor of one, or a descendant of one; otherwise wrong.
 A key concept is missed when no library tag is that concept, a descendant of it, or an ancestor of it below the four
@@ -217,6 +218,36 @@ def lib_tags(c, ids, old=False):
         out[e] |= {x for x in ks if x in TREE and x not in NOT_IN_KEY}
     return out
 
+PAY = ('benefits', 'counters')
+def lib_roles(c, ids, old=False):
+    """Like lib_tags, with roles: {entity: {(concept, role)}}."""
+    out = collections.defaultdict(set)
+    txt = dict(c.execute('SELECT id, text FROM entities'))
+    q = 'SELECT entity, concept, role, method FROM entity_concepts WHERE entity IN (%s)' % ','.join(str(i) for i in ids)
+    for e, k, r, m in c.execute(q):
+        if m in ('game_structure', 'data_rule'): continue
+        ks = targets(k, txt.get(e)) if (old and (k in MAP or k in REMOVED)) else {k}
+        out[e] |= {(x, r) for x in ks if x in TREE and x not in NOT_IN_KEY}
+    return out
+
+def judge(v, LR):
+    """One key entry v against the library's (concept, role) tags LR: (wrong, missed) lists. The key's 'tags' are what the card
+    does (any role but benefits and counters is judged against them, as before); its 'payoff' list [[concept, words, role], ...]
+    holds what the card benefits from or counters. A library benefits/counters tag is right when the payoff has that concept (or a
+    broader or narrower one) with the same role, or the key's own tags have it; a payoff concept is missed when no library tag of
+    that role is near it. A concept the library has both ways is judged once."""
+    K = narrow({k for k, _ in v['tags']})
+    ok = set(K) | {a for k in K for a in ANC[k]} | {d for k in K for d in DESC[k]}
+    pay = collections.defaultdict(set)
+    for k, _, r in v.get('payoff', []): pay[r] |= {k} | ANC[k] | DESC[k]
+    does = {k for k, r in LR if r not in PAY}; anyrole = {k for k, _ in LR}
+    wrong = [k for k in does if k not in ok and k not in GROUPS]
+    wrong += [f'{k}:{r}' for k, r in LR if r in PAY and k not in does and k not in ok and k not in pay[r] and k not in GROUPS]
+    missed = [k for k in K if not (anyrole & ({k} | DESC[k] | (ANC[k] - GROUPS)))]
+    for k, _, r in v.get('payoff', []):
+        if not ({x for x, y in LR if y == r} & ({k} | DESC[k] | (ANC[k] - GROUPS))): missed.append(f'{k}:{r}')
+    return sorted(set(wrong)), sorted(set(missed))
+
 def score(dbpath, games):
     c = sqlite3.connect(dbpath)
     old = not c.execute("SELECT 1 FROM concepts WHERE id='helps_me'").fetchone()
@@ -227,15 +258,10 @@ def score(dbpath, games):
         key = load(g); ids = [int(i) for i in key]
         live = {i for i, in c.execute('SELECT id FROM entities WHERE game=?', (g,))}
         ids = [i for i in ids if i in live]
-        L = lib_tags(c, ids, old)
+        LR = lib_roles(c, ids, old)
         wrong = missed = 0
         for i in ids:
-            K = narrow({k for k, _ in key[str(i)]['tags']})
-            ok = set(K) | {a for k in K for a in ANC[k]} | {d for k in K for d in DESC[k]}
-            wrong += sum(1 for l in L[i] if l not in ok and l not in GROUPS)
-            for k in K:
-                near = {k} | DESC[k] | (ANC[k] - GROUPS)
-                if not (L[i] & near): missed += 1
+            w, m = judge(key[str(i)], LR[i]); wrong += len(w); missed += len(m)
         n = len(ids); tot[0] += n; tot[1] += wrong; tot[2] += missed
         print(f'{g:18} entries {n:4}  wrong/100 {100 * wrong / max(n, 1):6.1f}  missed/100 {100 * missed / max(n, 1):6.1f}')
     print(f"{'all':18} entries {tot[0]:4}  wrong/100 {100 * tot[1] / max(tot[0], 1):6.1f}  missed/100 {100 * tot[2] / max(tot[0], 1):6.1f}")
@@ -294,7 +320,8 @@ def credit(g):
     print(f'{g:18} key entries credited {nk:4}  keyword tags {nt:5}')
 
 def load(g):
-    """The game's key, keyword credit included: {id: {'tags': [[concept, words], ...], ...}}."""
+    """The game's key, keyword credit included: {id: {'tags': [[concept, words], ...], 'payoff': [[concept, words, role]], ...}}.
+    The key may be wrong: changes are proposed to Kaptain and applied only with his OK."""
     return json.load(open(os.path.join(HERE, g, 'key.json')))
 
 GAMES = ['into_the_breach', 'inscryption', 'faeria', 'duelyst', 'sts1', 'marvel_snap', 'darkest_dungeon', 'sts2',
