@@ -1,4 +1,70 @@
-# Tagging per effect: a proposal (Claude, 26 Oct 2026; for Kaptain to decide)
+# Tagging per effect
+
+## Agreed with Kaptain (26 Oct 2026)
+- **All or nothing.** A new structure is built for every entry of every game, or not at all. No mix of entries with and
+  without it. It is built in a copy of the database; the real one is replaced only when the whole test below passes.
+- **The full record schema below is not pursued now.** Its slots (filters, amounts, which one, area, duration) need new
+  pattern sets for every game, a second round of the pattern work, and its feasibility for the prose games is unproven.
+- **What is tested instead** (Claude's suggestion): abilities and effect pieces built only from what exists: the tags, their
+  stored text positions, the patterns that made them, and generic rules. No new patterns per game, no new tagging.
+- Filters ("the next Jump creature") are left out for now. Wrong tags such as Triton Trainer's movement stay until a review.
+
+### The structure under test
+- New table `abilities(id, entity, ord, ev_pos, ev_len, kind)`: one row per ability of an entry, cut at sentence ends,
+  line breaks and keyword prefixes (Gift, Battlecry, Deathrattle, Deploy, Last Words, "When/Whenever/At", "{T}:").
+  Keywords in a keyword list are one ability each. Kind: keyword, triggered, activated, static.
+- New table `pieces(id, ability, ord, ev_pos, ev_len)`: an ability cut at "and" / "then" only when a new effect tag or a
+  new number follows ("deal 2 to a random enemy" | "1 to all adjacent ones"). Not cut where "and" joins targets or
+  conditions.
+- `entity_concepts` gets the columns `ability` and `piece`. Each tag's own pattern is re-run inside its stored span to find
+  the exact matched words (wide spans like Wild Avenger's "taunt, dash 2 this gains ..." get narrowed), and the tag goes to
+  the ability and piece holding them. A piece without its own effect tag inherits the previous piece's effect. Tags from a
+  keyword go to that keyword's ability.
+- Computed instead of stored: trigger pairs form only inside one ability (replaces the cross product in `trigger_effect`);
+  compound tags (aoe_damage, random_target damage, temporary_buff, permanent_growth, scope_*) form only inside one piece.
+- Limits: no amounts, filters or areas by distance beyond existing concepts; where sentences are cut badly (prose
+  games) abilities are cut badly.
+
+## The test (all 21 games; one failing game fails the whole test)
+Pass numbers are Claude's suggestion.
+1. **Does it fly (script only).** Per game: share of tags placed in exactly one ability and piece, tags placed nowhere,
+   abilities with no effect tag, pieces holding two different effects, trigger pairs before and after.
+   Pass: 98%+ of tags placed in every game; outliers few enough to read.
+2. **Is it accurate.**
+   - Gold sample: per game 10 random entries + 5 targeted ones (modal "choose one", "would ... instead", "for each", X
+     costs, multi-sentence text, keyword lists; Spire intents, Darkest Dungeon skills, 40k/AoS ability blocks where the game
+     has them), 315 entries. For each, the correct ability and piece cuts, the piece of each tag and the correct trigger
+     pairs are written down once (checking reads, not tagging) in `tools/records_test/gold/<game>.json`. Pass: 95%+ of tags in
+     the right piece, and trigger pairs right, in every game.
+   - The answer key (`tools/key/<game>/key.json`, all 21 games): precision and recall of the computed compound tags against
+     the key, compared with today's (`concept_precision`). Pass: no concept worse in any game.
+   - Known errors must come out right: Wild Avenger, Invincible, Mortarion, Buzz Lightyear - Jungle Ranger (section "The
+     problem" below).
+3. **Does it answer questions better.** Old and new database, same questions:
+   - `tools/combos.tsv` through `query.py combo`: at least as many known combos found; a sample of found links checked for
+     false ones.
+   - Six fixed questions: random-target damage; trigger on own unit's death that summons; temporary attack gain on summon;
+     growth on a per-turn trigger; engine pairs inside one faction; a three-card chain in one game. Top 3 results per game
+     per question are checked by reading (up to 378 rows). Pass: more correct results than today in every game where the
+     question has answers.
+
+## Instructions for the chat that runs the test
+- Library task: clone as CLAUDE.md says, then `git sparse-checkout disable`. Read only this section and "The structure
+  under test"; read code only where the task needs it (`tools/trigger_pairs.py` for the current sentence split,
+  `tools/compact_text.py` for evidence positions, `tools/query.py` for `connections`/`combo`).
+- Work on a copy: `cp library/three-bases-library.sqlite <scratchpad>/records.sqlite`, and point the tools at it with
+  `TB_LIB`. Never write to the real database; push only code and test files.
+- New code goes in `tools/records_test/` (one script per step: build abilities and pieces, place tags, compute pairs and
+  compounds, report). Steps 1, 2 (key part) and 3 (combos part) are scripts; write their per-game numbers to
+  `tools/records_test/REPORT.md`.
+- Gold sample: a script picks the 315 entries with a fixed seed and lists them; Claude writes the gold files in batches per
+  game, reading only each entry's text. Then the script scores against them.
+- Reading budget: gold entries, the outliers from step 1, the top-3 results of step 3. Nothing else is read entry by entry.
+  Before the gold reading starts, tell Kaptain the outlier count and an estimate of the reading left, and wait.
+- At the end: the report per game with pass or fail per step, and a one-line verdict. Present it to Kaptain before anything
+  goes into the real database.
+
+## Earlier proposal (Claude, 26 Oct 2026; not pursued, kept for reference)
 
 ## The problem
 A card's tags are one flat list. Nothing says which tags belong to the same effect, so the library glues facts together with
