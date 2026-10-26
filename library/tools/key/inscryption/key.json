@@ -310,6 +310,10 @@
 [
 "movement",
 "will move towards them as far as possible"
+],
+[
+"summon",
+"When one of your creatures is placed in a space"
 ]
 ],
 "by": "A=B"
@@ -1468,12 +1472,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Sprinter"
-]
-],
 "keywords": [
 740690
 ]
@@ -1514,12 +1512,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"adjacency",
-"Leader"
-]
-],
 "keywords": [
 740662
 ]
@@ -1584,16 +1576,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Ant Spawner"
-],
-[
-"variable_stats",
-"Ants"
-]
-],
 "keywords": [
 740615,
 740710
@@ -1644,12 +1626,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"variable_stats",
-"One Half Bones"
-]
-],
 "keywords": [
 740612,
 740674
@@ -1667,12 +1643,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Dam Builder"
-]
-],
 "keywords": [
 740636
 ]
@@ -1689,12 +1659,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_damaged",
-"Bees Within"
-]
-],
 "keywords": [
 740619
 ]
@@ -1707,14 +1671,14 @@
 ]
 ],
 "by": "A=B",
+"keywords": [
+740713
+],
 "credited": [
 [
 "variable_stats",
 "Bell Ringer"
 ]
-],
-"keywords": [
-740713
 ]
 },
 "740735": {
@@ -1757,16 +1721,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -1791,16 +1745,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -1817,12 +1761,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_enemy_enter",
-"Guardian"
-]
-],
 "keywords": [
 740656
 ]
@@ -1839,12 +1777,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mental Gemnastics"
-]
-],
 "keywords": [
 740668
 ]
@@ -1861,12 +1793,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mental Gemnastics"
-]
-],
 "keywords": [
 740668
 ]
@@ -1883,12 +1809,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_enemy_enter",
-"Guardian"
-]
-],
 "keywords": [
 740656
 ]
@@ -1909,16 +1829,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Bomb Latch"
-],
-[
-"target_choice",
-"Bomb Latch"
-]
-],
 "keywords": [
 740623
 ]
@@ -1935,12 +1845,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"activated",
-"Enlarge"
-]
-],
 "keywords": [
 740644
 ]
@@ -1957,12 +1861,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"activated",
-"Bonehorn"
-]
-],
 "keywords": [
 740628
 ]
@@ -1979,12 +1877,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_enemy_enter",
-"Guardian"
-]
-],
 "keywords": [
 740656
 ]
@@ -2090,16 +1982,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Detonator"
-],
-[
-"adjacency",
-"Detonator"
-]
-],
 "keywords": [
 740638
 ]
@@ -2153,12 +2035,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"death_trigger",
-"Bone King"
-]
-],
 "keywords": [
 740627
 ]
@@ -2223,20 +2099,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"bodyguard",
-"Burrower"
-],
-[
-"death_trigger",
-"Steel Trap"
-],
-[
-"generate_cards",
-"Steel Trap"
-]
-],
 "keywords": [
 740633,
 740692
@@ -2258,16 +2120,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_damaged",
-"Vessel Printer"
-],
-[
-"side_deck",
-"Vessel Printer"
-]
-],
 "keywords": [
 740704
 ]
@@ -2334,12 +2186,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"death_trigger",
-"Unkillable"
-]
-],
 "keywords": [
 740703
 ]
@@ -2364,16 +2210,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"link_formation",
-"Null Conduit (sigil)"
-],
-[
-"null_body",
-"Null Conduit (sigil)"
-]
-],
 "keywords": [
 740672
 ]
@@ -2406,12 +2242,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Brood Parasite"
-]
-],
 "keywords": [
 740612,
 740631
@@ -2437,16 +2267,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"on_play",
-"Handy"
-],
-[
-"hand_deck_swap",
-"Handy"
-]
-],
 "keywords": [
 740657
 ]
@@ -2487,16 +2307,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Bone Digger"
-],
-[
-"delayed",
-"Fledgling"
-]
-],
 "keywords": [
 740626,
 740647
@@ -2511,11 +2321,21 @@
 [
 "aoe_damage",
 "Bifurcated Strike"
+],
+[
+"adjacency",
+"Bifurcated Strike"
 ]
 ],
 "by": "C",
 "keywords": [
 740621
+],
+"credited": [
+[
+"adjacency",
+"Bifurcated Strike"
+]
 ]
 },
 "740779": {
@@ -2571,16 +2391,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"variable_stats",
-"Spilled Blood"
-],
-[
-"turn_end",
-"Sprinter"
-]
-],
 "keywords": [
 740689,
 740690
@@ -2606,16 +2416,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Fledgling"
-],
-[
-"turn_end",
-"Sprinter"
-]
-],
 "keywords": [
 740647,
 740690
@@ -2641,16 +2441,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -2671,16 +2461,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -2701,16 +2481,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -2731,16 +2501,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -2757,12 +2517,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Battery Bearer"
-]
-],
 "keywords": [
 740618
 ]
@@ -2815,44 +2569,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"resource_gain",
-"Energy Conduit (sigil)"
-],
-[
-"link_formation",
-"Energy Conduit (sigil)"
-],
-[
-"other_death_trigger",
-"Gem Detonator (sigil)"
-],
-[
-"aoe_damage",
-"Gem Detonator (sigil)"
-],
-[
-"friendly_fire",
-"Gem Detonator (sigil)"
-],
-[
-"on_play",
-"Gem Guardian (sigil)"
-],
-[
-"protection",
-"Gem Guardian (sigil)"
-],
-[
-"link_formation",
-"Null Conduit (sigil)"
-],
-[
-"null_body",
-"Null Conduit (sigil)"
-]
-],
 "keywords": [
 740642,
 740651,
@@ -2872,12 +2588,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_attack",
-"Brittle"
-]
-],
 "keywords": [
 740629
 ]
@@ -2898,16 +2608,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Detonator"
-],
-[
-"adjacency",
-"Detonator"
-]
-],
 "keywords": [
 740638
 ]
@@ -2928,16 +2628,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Spawn Conduit"
-],
-[
-"link_formation",
-"Spawn Conduit"
-]
-],
 "keywords": [
 740688
 ]
@@ -2954,12 +2644,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Fecundity"
-]
-],
 "keywords": [
 740645
 ]
@@ -2976,12 +2660,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Fecundity"
-]
-],
 "keywords": [
 740645
 ]
@@ -3010,12 +2688,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_enemy_enter",
-"Sentry"
-]
-],
 "keywords": [
 740669,
 740682,
@@ -3039,12 +2711,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_attack",
-"Brittle"
-]
-],
 "keywords": [
 740614,
 740629
@@ -3066,16 +2732,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Gift Bearer"
-],
-[
-"random_effect",
-"Gift Bearer"
-]
-],
 "keywords": [
 740654
 ]
@@ -3096,16 +2752,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Gift Bearer"
-],
-[
-"random_effect",
-"Gift Bearer"
-]
-],
 "keywords": [
 740654
 ]
@@ -3122,12 +2768,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"variable_stats",
-"Ants"
-]
-],
 "keywords": [
 740612,
 740710
@@ -3181,16 +2821,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Transformer"
-],
-[
-"turn_start",
-"Transformer"
-]
-],
 "keywords": [
 740698
 ]
@@ -3207,12 +2837,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"activated",
-"Power Dice"
-]
-],
 "keywords": [
 740676
 ]
@@ -3245,16 +2869,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Gem Spawn Conduit"
-],
-[
-"link_formation",
-"Gem Spawn Conduit"
-]
-],
 "keywords": [
 740653
 ]
@@ -3279,16 +2893,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Skeleton Crew"
-],
-[
-"movement",
-"Skeleton Crew"
-]
-],
 "keywords": [
 740686,
 740705
@@ -3318,16 +2922,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -3352,16 +2946,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -3378,12 +2962,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"activated",
-"Enlarge"
-]
-],
 "keywords": [
 740644
 ]
@@ -3400,12 +2978,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Bone Digger"
-]
-],
 "keywords": [
 740626
 ]
@@ -3422,12 +2994,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Bone Digger"
-]
-],
 "keywords": [
 740626
 ]
@@ -3444,12 +3010,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"stealth",
-"Waterborne"
-]
-],
 "keywords": [
 740705
 ]
@@ -3474,40 +3034,36 @@
 ]
 ],
 "by": "A=B",
+"keywords": [
+740712
+],
 "credited": [
 [
 "variable_stats",
 "Emerald Power"
 ]
-],
-"keywords": [
-740712
 ]
 },
 "740826": {
 "tags": [
 [
-"variable_stats",
+"hand_size",
 "Card Counter"
 ],
 [
-"hand_size",
+"variable_stats",
 "Card Counter"
 ]
 ],
 "by": "A=B",
+"keywords": [
+740711
+],
 "credited": [
 [
 "variable_stats",
 "Card Counter"
-],
-[
-"hand_size",
-"Card Counter"
 ]
-],
-"keywords": [
-740711
 ]
 },
 "740828": {
@@ -3526,12 +3082,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Sprinter"
-]
-],
 "keywords": [
 740612,
 740690
@@ -3549,12 +3099,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"temporary_buff",
-"Blood Lust"
-]
-],
 "keywords": [
 740622
 ]
@@ -3587,12 +3131,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Battery Bearer"
-]
-],
 "keywords": [
 740618,
 740705
@@ -3614,16 +3152,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"deck_condition",
-"Finical Hatchling"
-],
-[
-"variety_payoff",
-"Finical Hatchling"
-]
-],
 "keywords": [
 740646
 ]
@@ -3641,12 +3169,38 @@
 [
 "aoe_damage",
 "Bifurcated Strike"
+],
+[
+"adjacency",
+"Bifurcated Strike"
+],
+[
+"aoe_damage",
+"Trifurcated Strike"
+],
+[
+"adjacency",
+"Trifurcated Strike"
 ]
 ],
 "by": "C",
 "keywords": [
 740621,
 740699
+],
+"credited": [
+[
+"adjacency",
+"Bifurcated Strike"
+],
+[
+"aoe_damage",
+"Trifurcated Strike"
+],
+[
+"adjacency",
+"Trifurcated Strike"
+]
 ]
 },
 "740834": {
@@ -3689,16 +3243,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"link_formation",
-"Null Conduit (sigil)"
-],
-[
-"null_body",
-"Null Conduit (sigil)"
-]
-],
 "keywords": [
 740672
 ]
@@ -3723,20 +3267,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Gift When Powered"
-],
-[
-"link_formation",
-"Gift When Powered"
-],
-[
-"random_effect",
-"Gift When Powered"
-]
-],
 "keywords": [
 740655
 ]
@@ -3782,16 +3312,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Steel Trap"
-],
-[
-"generate_cards",
-"Steel Trap"
-]
-],
 "keywords": [
 740669,
 740692
@@ -3813,12 +3333,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Dead Byte"
-]
-],
 "keywords": [
 740637,
 740669
@@ -3833,17 +3347,21 @@
 [
 "on_ally_play",
 "Clinger"
-]
 ],
-"by": "A=B",
-"credited": [
 [
-"on_ally_play",
+"summon",
 "Clinger"
 ]
 ],
+"by": "A=B",
 "keywords": [
 740634
+],
+"credited": [
+[
+"summon",
+"Clinger"
+]
 ]
 },
 "740846": {
@@ -3862,12 +3380,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Sprinter"
-]
-],
 "keywords": [
 740690,
 740697
@@ -3909,16 +3421,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -3939,12 +3441,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Hoarder"
-]
-],
 "keywords": [
 740612,
 740660
@@ -3959,11 +3455,21 @@
 [
 "aoe_damage",
 "Bifurcated Strike"
+],
+[
+"adjacency",
+"Bifurcated Strike"
 ]
 ],
 "by": "C",
 "keywords": [
 740621
+],
+"credited": [
+[
+"adjacency",
+"Bifurcated Strike"
+]
 ]
 },
 "740855": {
@@ -3975,17 +3481,21 @@
 [
 "aoe_damage",
 "Trifurcated Strike"
-]
 ],
-"by": "A=B",
-"credited": [
 [
-"multi_target_attack",
+"adjacency",
 "Trifurcated Strike"
 ]
 ],
+"by": "A=B",
 "keywords": [
 740699
+],
+"credited": [
+[
+"adjacency",
+"Trifurcated Strike"
+]
 ]
 },
 "740856": {
@@ -4004,16 +3514,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"activated",
-"True Scholar"
-],
-[
-"sacrifice",
-"True Scholar"
-]
-],
 "keywords": [
 740702
 ]
@@ -4034,12 +3534,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"direct_damage",
-"Looter"
-]
-],
 "keywords": [
 740612,
 740664
@@ -4057,12 +3551,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"sacrifice",
-"Morsel"
-]
-],
 "keywords": [
 740670
 ]
@@ -4091,14 +3579,14 @@
 ]
 ],
 "by": "A=B",
+"keywords": [
+740714
+],
 "credited": [
 [
 "variable_stats",
 "M!rror r0rriM"
 ]
-],
-"keywords": [
-740714
 ]
 },
 "740862": {
@@ -4117,12 +3605,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"bodyguard",
-"Burrower"
-]
-],
 "keywords": [
 740633
 ]
@@ -4139,12 +3621,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"bodyguard",
-"Burrower"
-]
-],
 "keywords": [
 740633
 ]
@@ -4165,12 +3641,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"bodyguard",
-"Burrower"
-]
-],
 "keywords": [
 740633,
 740669
@@ -4192,12 +3662,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"turn_end",
-"Hefty"
-]
-],
 "keywords": [
 740659
 ]
@@ -4214,12 +3678,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Fledgling"
-]
-],
 "keywords": [
 740647
 ]
@@ -4240,16 +3698,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -4266,12 +3714,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Bomb Spewer"
-]
-],
 "keywords": [
 740624
 ]
@@ -4300,12 +3742,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Fledgling"
-]
-],
 "keywords": [
 740647
 ]
@@ -4326,12 +3762,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"turn_end",
-"Hefty"
-]
-],
 "keywords": [
 740659
 ]
@@ -4352,16 +3782,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"other_death_trigger",
-"Double Death"
-],
-[
-"repeat_trigger",
-"Double Death"
-]
-],
 "keywords": [
 740640
 ]
@@ -4402,16 +3822,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -4436,16 +3846,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -4462,12 +3862,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"death_trigger",
-"Unkillable"
-]
-],
 "keywords": [
 740703
 ]
@@ -4484,12 +3878,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"death_trigger",
-"Unkillable"
-]
-],
 "keywords": [
 740703
 ]
@@ -4506,12 +3894,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Sprinter"
-]
-],
 "keywords": [
 740690
 ]
@@ -4532,16 +3914,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Trinket Bearer"
-],
-[
-"random_effect",
-"Trinket Bearer"
-]
-],
 "keywords": [
 740701
 ]
@@ -4599,16 +3971,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"activated",
-"Energy Gun"
-],
-[
-"ping",
-"Energy Gun"
-]
-],
 "keywords": [
 740643
 ]
@@ -4642,18 +4004,22 @@
 [
 "aoe_damage",
 "Bifurcated Strike"
+],
+[
+"adjacency",
+"Bifurcated Strike"
 ]
 ],
 "by": "C",
-"credited": [
-[
-"turn_end",
-"Sprinter"
-]
-],
 "keywords": [
 740621,
 740690
+],
+"credited": [
+[
+"adjacency",
+"Bifurcated Strike"
+]
 ]
 },
 "740899": {
@@ -4676,16 +4042,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Transformer"
-],
-[
-"turn_start",
-"Transformer"
-]
-],
 "keywords": [
 740683,
 740698
@@ -4703,12 +4059,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"other_death_trigger",
-"Scavenger"
-]
-],
 "keywords": [
 740681
 ]
@@ -4725,12 +4075,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Bone King"
-]
-],
 "keywords": [
 740627
 ]
@@ -4747,12 +4091,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_attack",
-"Brittle"
-]
-],
 "keywords": [
 740629
 ]
@@ -4773,12 +4111,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Ruby Heart"
-]
-],
 "keywords": [
 740680
 ]
@@ -4803,16 +4135,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -4837,16 +4159,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"transform",
-"Transformer"
-],
-[
-"turn_start",
-"Transformer"
-]
-],
 "keywords": [
 740612,
 740698
@@ -4868,12 +4180,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Sprinter"
-]
-],
 "keywords": [
 740690,
 740705
@@ -4899,16 +4205,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Mox Sigils"
-],
-[
-"resource_gain",
-"Mox Sigils"
-]
-],
 "keywords": [
 740671
 ]
@@ -4925,12 +4221,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_enemy_enter",
-"Sentry"
-]
-],
 "keywords": [
 740682
 ]
@@ -4947,12 +4237,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_enemy_enter",
-"Sentry"
-]
-],
 "keywords": [
 740682
 ]
@@ -4977,16 +4261,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"merge_attach",
-"Shield Latch"
-],
-[
-"target_choice",
-"Shield Latch"
-]
-],
 "keywords": [
 740684
 ]
@@ -5019,12 +4293,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_enemy_enter",
-"Sentry"
-]
-],
 "keywords": [
 740682,
 740697
@@ -5046,16 +4314,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"merge_attach",
-"Brittle Latch"
-],
-[
-"target_choice",
-"Brittle Latch"
-]
-],
 "keywords": [
 740630
 ]
@@ -5076,12 +4334,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_attack",
-"Brittle"
-]
-],
 "keywords": [
 740629,
 740650
@@ -5099,12 +4351,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_attack",
-"Brittle"
-]
-],
 "keywords": [
 740629
 ]
@@ -5129,16 +4375,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"summon",
-"Loose Tail"
-],
-[
-"movement",
-"Loose Tail"
-]
-],
 "keywords": [
 740663
 ]
@@ -5187,12 +4423,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"link_formation",
-"Trifurcated When Powered"
-]
-],
 "keywords": [
 740700
 ]
@@ -5217,16 +4447,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Squirrel Shedder"
-],
-[
-"movement",
-"Squirrel Shedder"
-]
-],
 "keywords": [
 740691
 ]
@@ -5260,12 +4480,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Fecundity"
-]
-],
 "keywords": [
 740645
 ]
@@ -5282,12 +4496,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"activated",
-"Stimulate"
-]
-],
 "keywords": [
 740693
 ]
@@ -5332,12 +4540,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_damaged",
-"Swapper"
-]
-],
 "keywords": [
 740695
 ]
@@ -5358,12 +4560,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"delayed",
-"Fledgling"
-]
-],
 "keywords": [
 740647,
 740705
@@ -5389,20 +4585,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Bellist"
-],
-[
-"adjacency",
-"Bellist"
-],
-[
-"other_death_trigger",
-"Bellist"
-]
-],
 "keywords": [
 740620
 ]
@@ -5427,20 +4609,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Bellist"
-],
-[
-"adjacency",
-"Bellist"
-],
-[
-"other_death_trigger",
-"Bellist"
-]
-],
 "keywords": [
 740620
 ]
@@ -5495,16 +4663,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"turn_start",
-"Tidal Lock"
-],
-[
-"forced_movement",
-"Tidal Lock"
-]
-],
 "keywords": [
 740669,
 740673,
@@ -5543,16 +4701,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"turn_start",
-"Tidal Lock"
-],
-[
-"forced_movement",
-"Tidal Lock"
-]
-],
 "keywords": [
 740665,
 740669,
@@ -5581,12 +4729,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"death_trigger",
-"Bone King"
-]
-],
 "keywords": [
 740627
 ]
@@ -5603,12 +4745,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"activated",
-"Disentomb"
-]
-],
 "keywords": [
 740639
 ]
@@ -5641,12 +4777,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"link_formation",
-"Buff When Powered"
-]
-],
 "keywords": [
 740632
 ]
@@ -5663,12 +4793,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_play",
-"Rabbit Hole"
-]
-],
 "keywords": [
 740677
 ]
@@ -5689,16 +4813,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"turn_end",
-"Rampager"
-],
-[
-"movement",
-"Rampager"
-]
-],
 "keywords": [
 740678
 ]
@@ -5715,12 +4829,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"temporary_buff",
-"Blood Lust"
-]
-],
 "keywords": [
 740622
 ]
@@ -5733,14 +4841,14 @@
 ]
 ],
 "by": "A=B",
+"keywords": [
+740710
+],
 "credited": [
 [
 "variable_stats",
 "Ants"
 ]
-],
-"keywords": [
-740710
 ]
 },
 "740971": {
@@ -5759,12 +4867,6 @@
 ]
 ],
 "by": "A=B",
-"credited": [
-[
-"on_attack",
-"Brittle"
-]
-],
 "keywords": [
 740612,
 740629
@@ -7447,48 +6549,6 @@
 ]
 ],
 "by": "C",
-"credited": [
-[
-"random_ability",
-"Amorphous"
-],
-[
-"death_trigger",
-"Bomb Latch"
-],
-[
-"merge_attach",
-"Bomb Latch"
-],
-[
-"target_choice",
-"Bomb Latch"
-],
-[
-"death_trigger",
-"Brittle Latch"
-],
-[
-"merge_attach",
-"Brittle Latch"
-],
-[
-"target_choice",
-"Brittle Latch"
-],
-[
-"death_trigger",
-"Shield Latch"
-],
-[
-"merge_attach",
-"Shield Latch"
-],
-[
-"target_choice",
-"Shield Latch"
-]
-],
 "keywords": [
 740613,
 740623,

@@ -395,16 +395,6 @@ new	turn_end|does|wh_bloodbowl3|key	wh_bloodbowl3	\bsecret\s+weapon\b
 new	turnover|does|wh_bloodbowl3|key	wh_bloodbowl3	\bsteady\s+footing\b
 new	untap|does|wh_bloodbowl3|key	wh_bloodbowl3	\bjump\s+up\b
 new	zone_of_control|does|wh_bloodbowl3|key	wh_bloodbowl3	(?:\bprehensile\s+tail\b)|(?:\bshadowing\b)
-new	death_trigger|does|inscryption|key	inscryption	(?:\bwhen\s+a\s+card\s+bearing\s+this\s+sigil\s+dies\b)|(?:\bwhen\s+a\s+card\s+bearing\s+this\s+sigil\s+perishes\b)
-new	immunity|does|inscryption|key	inscryption	\bmade\s+of\s+stone\b
-new	items_consumables|does|inscryption|key	inscryption	\bthe\s+name\s+is\s+an\s+item\b
-new	link_formation|does|inscryption|key	inscryption	\bwithin\s+a\s+circuit\b
-new	movement|does|inscryption|key	inscryption	\bmove\s+in\s+the\s+direction\s+inscribed\s+in\s+the\s+sigil\b
-new	on_play|does|inscryption|key	inscryption	\bwhen\s+a\s+card\s+bearing\s+this\s+sigil\s+is\s+played\b
-new	random_effect|does|inscryption|key	inscryption	\ba\s+random\s+card\b
-new	resource_gain|does|inscryption|key	inscryption	(?:\bbattery\s+bearer\b)|(?:\bblue\s+mox\b)|(?:\bbone\s+digger\b)|(?:\bbone\s+king\b)|(?:\borange\s+mox\b)
-new	terrain|does|inscryption|key	inscryption	\bterrain\b
-new	turn_end|does|inscryption|key	inscryption	\bbone\s+digger\b
 new	activated|does|faeria|key	faeria	\bactivate\b
 new	copy|does|faeria|key	faeria	\bdiscover\b
 new	cost_set|does|faeria|key	faeria	\bit\s+costs\s+\d+\s+faeria\b
@@ -1212,7 +1202,6 @@ new	spell_power|does|monster_train|key	monster_train	(?:^|[\n.:;/]\s*|\s-\s*|-{3
 new	stat_gain|does|monster_train|key	monster_train	(?:\bapply\s+rage\s+\d+\b)|(?:\brage\s+\d+\b)
 new	turn_end|does|monster_train|key	monster_train	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)resolve(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
 new	upkeep|does|monster_train|key	monster_train	\bemberdrain\s+\d+\b
-# key_patterns.py (patterns from the answer key quotes, 90%+ right on held-out key entries): new <concept|role|game|key> <game> <regex>
 new	activated|does|darkest_dungeon|key	darkest_dungeon	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)camping\s+skill(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
 new	aoe_damage|does|darkest_dungeon|key	darkest_dungeon	(?:\btargets\s+all\s+of\s+enemy\s+ranks\s+\d+,\s+\d+,\s+\d+,\s+\d+\b)|(?:\btargets\s+all\s+of\s+enemy\s+ranks\s+\d+,\s+\d+,\s+\d+\b)|(?:\btargets\s+all\s+of\s+enemy\s+ranks\s+\d+,\s+\d+\b)
 new	autonomous_units|does|darkest_dungeon|key	darkest_dungeon	\bacts\s+on\s+its\s+own\b
@@ -1283,3 +1272,21 @@ new	defence_gain|does|*|manual	hearthstone	\bgain \+\d+ durability\b
 new	summon|does|*|manual	darkest_dungeon,duelyst,faeria,gwent,hearthstone,hs_battlegrounds,inscryption,into_the_breach,lorcana,monster_train,mtg,runeterra,shadowverse,stormbound,sts1,sts2,swu,tesl,wh_40k_10e,wh_aos_4th	\bsummon (?:it|them)\b|\b(?:your )?opponent summons? (?:an?|\d+|two|three|\w+) 
 new	movement|does|*|manual	wh_aos_4th	\bcan (?:each )?(?:immediately )?move (?:up to )?\d+"|\bcan each move\b|\beach target can (?:immediately )?move\b
 new	forced_movement|does|*|manual	inscryption	\bpull (?:one of )?(?:your )?opponent's cards? to your side\b
+# key_patterns.py (patterns from the answer key quotes, 90%+ right on held-out key entries): new <concept|role|game|key> <game> <regex>
+new	blocking|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)mighty\s+leap(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	damage|does|inscryption|key	inscryption	(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)sentry(?=\s*(?:$|[\n.,:;(/]|\d|\s-))|(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)sentry\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b)
+new	death_trigger|does|inscryption|key	inscryption	(?:\bwhen\s+a\s+card\s+bearing\s+this\s+sigil\s+dies\b)|(?:\bwhen\s+a\s+card\s+bearing\s+this\s+sigil\s+perishes\b)
+new	evasion|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)airborne(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	immunity|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)repulsive(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	items_consumables|does|inscryption|key	inscryption	\bthe\s+name\s+is\s+an\s+item\b
+new	link_formation|does|inscryption|key	inscryption	\bwithin\s+a\s+circuit\b
+new	movement|does|inscryption|key	inscryption	(?:(?:(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)sprinter(?=\s*(?:$|[\n.,:;(/]|\d|\s-))|(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)sprinter\s+(?:a|an|the|all|each|your|any|one|two|three|\d|it|them|this|that|up to|another|enemy|friendly|random)\b))|(?:\bmove\s+in\s+the\s+direction\s+inscribed\s+in\s+the\s+sigil\b)
+new	on_attack|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)brittle(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	on_enemy_enter|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)sentry(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	on_play|does|inscryption|key	inscryption	\bwhen\s+a\s+card\s+bearing\s+this\s+sigil\s+is\s+played\b
+new	random_effect|does|inscryption|key	inscryption	\ba\s+random\s+card\b
+new	resource_gain|does|inscryption|key	inscryption	(?:\bblue\s+mox\b)|(?:\borange\s+mox\b)
+new	self_destruct|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)brittle(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	stat_gain|does|inscryption|key	inscryption	\bgains\s+\d+\s+power\b
+new	stealth|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)waterborne(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
+new	turn_end|does|inscryption|key	inscryption	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)sprinter(?=\s*(?:$|[\n.,:;(/]|\d|\s-))

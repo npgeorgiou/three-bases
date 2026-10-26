@@ -244,7 +244,9 @@
    "null_body"
   ],
   "drop": [
-   "blocking"
+   "blocking",
+   "lanes",
+   "summon"
   ]
  },
  "740711": {
@@ -278,16 +280,16 @@
  "740640": {
   "add": [
    "revive",
-   "death_trigger",
-   "death_trigger:benefits",
-   "repeat_trigger"
+   "repeat_trigger",
+   "other_death_trigger"
   ],
   "drop": [
    "cross_lane",
    "reveal_order",
    "activated",
    "aura",
-   "death_count"
+   "death_count",
+   "death_trigger"
   ]
  },
  "740641": {
@@ -301,13 +303,15 @@
    "variety_payoff"
   ],
   "drop": [
-   "in_hand_buff"
+   "in_hand_buff",
+   "polymorph"
   ]
  },
  "740647": {
   "add": [],
   "drop": [
-   "variety_payoff"
+   "variety_payoff",
+   "permanent_growth"
   ]
  },
  "740657": {
@@ -710,10 +714,11 @@
    "repeat_trigger",
    "condition_count",
    "draw",
-   "multiple_resources:benefits",
    "on_play"
   ],
-  "drop": []
+  "drop": [
+   "multiple_resources"
+  ]
  },
  "740742": {
   "add": [
@@ -1030,10 +1035,11 @@
  "740882": {
   "add": [
    "null_body",
-   "aura",
-   "multiple_resources:benefits"
+   "aura"
   ],
-  "drop": []
+  "drop": [
+   "multiple_resources"
+  ]
  },
  "740884": {
   "add": [
@@ -1133,10 +1139,6 @@
   ],
   "drop": []
  },
- "740954": {
-  "add": [],
-  "drop": []
- },
  "740959": {
   "add": [
    "null_body"
@@ -1164,8 +1166,6 @@
   "add": [
    "permanent_growth",
    "blocking",
-   "deathtouch:counters",
-   "stat_loss:counters",
    "direct_damage",
    "evasion:counters",
    "immunity",
@@ -1181,10 +1181,6 @@
   "add": [
    "fatigue"
   ],
-  "drop": []
- },
- "740926": {
-  "add": [],
   "drop": []
  },
  "740680": {
@@ -1214,7 +1210,8 @@
    "revive"
   ],
   "drop": [
-   "death_count"
+   "death_count",
+   "summon"
   ]
  },
  "740902": {
@@ -1312,8 +1309,6 @@
  "740951": {
   "add": [
    "blocking",
-   "deathtouch:counters",
-   "stat_loss:counters",
    "evasion:counters",
    "immunity",
    "aoe_damage"
@@ -1495,7 +1490,8 @@
   "add": [
    "on_ally_play",
    "adjacency",
-   "movement"
+   "movement",
+   "summon:benefits"
   ],
   "drop": []
  },
@@ -1627,10 +1623,11 @@
  },
  "740770": {
   "add": [
-   "death_trigger:benefits",
    "free_play"
   ],
-  "drop": []
+  "drop": [
+   "death_trigger"
+  ]
  },
  "740854": {
   "add": [
@@ -1689,11 +1686,12 @@
  },
  "740644": {
   "add": [
-   "activated",
-   "graveyard:cost",
-   "permanent_growth"
+   "activated"
   ],
-  "drop": []
+  "drop": [
+   "graveyard",
+   "permanent_growth"
+  ]
  },
  "740672": {
   "add": [
@@ -1716,11 +1714,12 @@
  },
  "740626": {
   "add": [
-   "graveyard",
    "resource_gain",
    "turn_end"
   ],
-  "drop": []
+  "drop": [
+   "graveyard"
+  ]
  },
  "740613": {
   "add": [
@@ -1910,10 +1909,11 @@
  },
  "740612": {
   "add": [
-   "direct_damage",
    "evasion"
   ],
-  "drop": []
+  "drop": [
+   "direct_damage"
+  ]
  },
  "740697": {
   "add": [
@@ -1971,10 +1971,11 @@
  },
  "740635": {
   "add": [
-   "death_trigger:benefits",
    "free_play"
   ],
-  "drop": []
+  "drop": [
+   "death_trigger"
+  ]
  },
  "740845": {
   "add": [
@@ -2020,6 +2021,137 @@
   ],
   "drop": [
    "multi_target_attack"
+  ]
+ },
+ "740649": {
+  "add": [
+   "resource_gain:benefits"
+  ],
+  "drop": [
+   "multiple_resources"
+  ]
+ },
+ "740650": {
+  "add": [
+   "resource_gain:benefits"
+  ],
+  "drop": [
+   "multiple_resources"
+  ]
+ },
+ "740668": {
+  "add": [
+   "resource_gain:benefits"
+  ],
+  "drop": [
+   "multiple_resources"
+  ]
+ },
+ "740702": {
+  "add": [
+   "resource_gain:benefits"
+  ],
+  "drop": [
+   "multiple_resources"
+  ]
+ },
+ "740712": {
+  "add": [
+   "resource_gain:benefits"
+  ],
+  "drop": [
+   "multiple_resources"
+  ]
+ },
+ "740643": {
+  "add": [],
+  "drop": [
+   "lanes"
+  ]
+ },
+ "740682": {
+  "add": [],
+  "drop": [
+   "lanes"
+  ]
+ },
+ "740694": {
+  "add": [],
+  "drop": [
+   "lanes"
+  ]
+ },
+ "740639": {
+  "add": [],
+  "drop": [
+   "graveyard"
+  ]
+ },
+ "740674": {
+  "add": [],
+  "drop": [
+   "graveyard"
+  ]
+ },
+ "740681": {
+  "add": [],
+  "drop": [
+   "graveyard"
+  ]
+ },
+ "740976": {
+  "add": [
+   "other_death_trigger"
+  ],
+  "drop": [
+   "graveyard",
+   "death_trigger"
+  ]
+ },
+ "740979": {
+  "add": [],
+  "drop": [
+   "graveyard"
+  ]
+ },
+ "740703": {
+  "add": [],
+  "drop": [
+   "summon",
+   "return_to_hand"
+  ]
+ },
+ "740651": {
+  "add": [
+   "other_death_trigger"
+  ],
+  "drop": [
+   "death_trigger",
+   "side_deck"
+  ]
+ },
+ "740652": {
+  "add": [],
+  "drop": [
+   "side_deck"
+  ]
+ },
+ "740729": {
+  "add": [],
+  "drop": [
+   "direct_damage"
+  ]
+ },
+ "740830": {
+  "add": [],
+  "drop": [
+   "direct_damage"
+  ]
+ },
+ "740836": {
+  "add": [],
+  "drop": [
+   "direct_damage"
   ]
  }
 }

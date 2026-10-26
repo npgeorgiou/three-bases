@@ -90,14 +90,9 @@ The real-world cases, one per line, tab-separated: `type  a  b  why  source` (se
 ```tsv
 signature	Beast	sacrifice	Blood costs paid by sacrifice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
 signature	Beast	generate_cards	Warren puts a Rabbit in hand	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-signature	Beast	deathtouch	Adder kills what it damages	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Beast	evasion	Hawk hits past blockers	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Undead	cost_type	Bones	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Undead	sacrifice	destroying its own cards	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-signature	Undead	death_trigger	Draugr releases a creature when it perishes	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-signature	Technology	resource_gain	energy-boosting cards	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-signature	Technology	aura	support circuits buff robots	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-signature	Technology	autonomous_units	49er moves on its own	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Magick	multiple_resources	Mox of three colours	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Magick	draw	Blue Mage draws per Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 archetype	Undead	sacrifice	Necromancers and perish effects	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
@@ -107,3 +102,18 @@ combo	Blue Mage	Sapphire Mox	needs the matching Mox	https://primagames.com/gamin
 combo	Mage Knight	Ruby Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 combo	Junior Sage	Emerald Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 ```
+
+## Notes from the patterns check
+Patterns check, 26 Oct 2026 (Claude). Counts are from the answer key (what the card text shows), cards of the four factions only.
+- Cases removed, no lead of 1.5 times in the cards: Beast deathtouch (2 of 77 cards, rest 2 of 97: 1.3 times); Undead
+  death_trigger (3 of 20, rest 18 of 154: 1.3 times); Technology resource_gain (10 of 57, rest 19 of 117: 1.1 times; the Mox
+  vessels give gems too); Technology aura (1 of 57, rest 2 of 117: Buff Conduit only); Technology autonomous_units (no card;
+  moving on its own is movement: 3 of 57 against 18 of 117 elsewhere).
+- Costs are not in the card text. Cards list only sigils and traits; the cost is in the cost field: Beast 56 of 77 Blood,
+  Undead 18 of 20 Bones, Technology 50 of 57 Energy, Magick Mox gems. So Beast sacrifice (Blood) and Undead cost_type (Bones)
+  have no lead in the tagged text, and Magick multiple_resources is met only through the Mox cards' Mox sigil.
+- Sigil entries are wiki pages: the rulebook line, then notes on single cards (Many Lives: "on certain cards ... transform";
+  Waterborne: the Kraken's "random Tentacle card"). Tags from the notes reach every card bearing the sigil, so patterns read the
+  rulebook wording, and sigil names in another entry's prose are not that entry's ability.
+- "At the start of the battle / phase / run" is not a turn trigger. "Activate: Pay" is an activated ability, "activated" in
+  passing is not.

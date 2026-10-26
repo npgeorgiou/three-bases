@@ -1,3 +1,53 @@
 !death_count|^rulebook: when a card bearing this sigil (perishes|dies)
 !trap_secret|\btrap\b
 !trap_secret|\bsecret\b
+# sigil names mentioned in another entry's text are not that entry's ability (the cards bearing them inherit the sigil's tags)
+!counterattack|sharp quills
+!revive|many lives
+!sacrifice|many lives
+!summon|gift bearer
+!on_kill|\boverkill
+# sigil and rule wording (26 Oct 2026)
+multi_attack|does|\battacks? twice\b|\bstrikes? each opposing space to the left\b|\bstrikes? the opposing space an extra time\b
+random_effect|does|\b\d+% chance\b
+on_damaged|does|\bthis sigil would be struck\b
+stances|does|\btransform to, or from\b|\bswitch between its base version and\b
+generate_cards|does|\b(?:an?|the) (?!copy\b)[a-z]+(?: [a-z]+)? is created in your hand\b
+adjacency|does|\badjacent (?:friendly|enemy|opposing) (?:creature|card|space)s?\b|\bplaced on the (?:left|right) of\b
+scope_self|does|\b(?:increase the power and health of|heal) a card bearing this sigil\b
+start_of_game|does|\bat the start of (?:the|all|every|each) battles?\b|\bstart the battle with\b
+board_wipe|does|\ball (?:of your |the )?cards (?:on the table|in play|on the board) (?:will be|are) destroyed\b|\bdestroy all cards on\b|\bremoving all cards in play\b
+resource_conversion|does|\bconverts? \d+ \w+ into\b|\bconverted (?:in)?to an?\b
+death_trigger|does|\bwhen(?:ever)? (?:a|another|any) (?!card bearing this sigil)(?:friendly )?(?:card|creature)\b[^.]{0,50}\b(?:perishes|dies|is destroyed|is defeated)\b|\bif one of your creatures is destroyed\b
+# "activated" and "activate" in passing (a totem activated, bones used to activate) are not activated abilities; "Activate: Pay" is
+!activated|\bactivate
+!activated|\bactivated
+activated|does|\bactivate: pay\b
+# overkill is excess damage, not a kill trigger
+!on_kill|\boverkill\b
+# a run, a battle, a boss phase or a fight is not a turn
+!turn_start|\bat the (?:start|beginning) of (?:each |every )?(?:subsequent )?runs?\b|\bat the (?:start|beginning) of the (?:\w+ )?(?:phase|fight|battle)\b
+# rule, boss and item wording (26 Oct 2026; each tested on the key)
+draw|does|\bdraws? (?:\d+|a|one|two|three|four) (?:\w+ )?cards?\b
+summon|does|\b(?:places?|start(?:s)?(?: the battle)? with) (?:an?|\d+|two|three) [a-z' ]{2,40}\bon (?:the|all|each|their|your|the players?'?) ?[a-z' ]{0,20}(?:board|spaces?|side)\b|\bplace [a-z ]{2,30} on all empty spaces\b|\bspawns? an? [a-z ]{2,30} in its place\b|\bsummons? [a-z ]{2,30} in front of\b
+buff|does|\bincreas\w* (?:either )?(?:a|the|its) (?:creature|card)'?s? (?:power|health) by \d+|\bincrease the power of cards\b|\bpower can be increased\b
+resource_gain|does|(?<!to )\b(?:immediately )?gain \d+ bones\b|\bstart (?:the|a) battle with \d+ bones\b|\bgiv(?:es|ing) (?:you|the player) (?:\d+|one|an?) (?:bones?|ancient obol|energy)\b
+death_trigger|does|\bwhen(?:ever)? (?:an?|your|the) (?!card bearing this sigil)[a-z ]{2,30}? (?:is|are) (?:defeated|killed)\b|\bwhen your creatures die\b|\bif a card that you own dies\b|\bwhenever a card on the players? side perishes\b
+immunity|does|\brendering them immune\b|\bcannot be skinned\b
+items_consumables|does|(?<!non-)\bconsumable items?\b|\breceive an item\b|\bitems sit on\b
+card_crafting|does|\bcreate (?:your own|a custom) card\b|\bbuild-a-card\b|\bto create a card\b
+deck_modification|does|\b(?:removing|remove) (?:it|a card) from (?:their|your) deck\b|\bimproving your deck\b|\bto be replaced by the new card\b
+tribal|does|\bhave a tribe\b|\bfrom the same tribe\b|\bant trait\b
+board_wipe|does|\bclears all spaces\b|\bkill all of your cards\b|\bboard is wiped\b
+permanent_growth|does|\bincreases? (?:its|their) (?:power|health) by (?:one|\d+) every turn\b|\b(?:increase|incremented) by (?:one|\d+) each time\b
+shield|does|\b(?:gain|gains|get|gets) nano armou?r\b|\bfirst time this card would take damage\b
+silence|does|\blose all of their sigils\b|\bremove sigils from\b
+steal|does|\btake it as your own\b|\bhook the targeted card\b
+movement|does|\brotate one space\b|\bmoves in the sigil'?s direction\b
+tutor|does|\bdraw any one card from (?:their|your) deck\b|\bchoose a card from your deck to be drawn\b
+evasion|does|\bas though they have the airborne\b|\bstrike an opponent directly\b
+cheat_death|does|\bwill not die when sacrificed\b|\bdoes not perish\b
+random_effect|does|\brandomly chosen\b|\bchosen at random\b|\bplay random cards\b
+upgrade|does|\bfuse a pair\b|\bcombine them into\b
+forced_movement|does|\bpushing back any cards\b|\bdragging it to\b
+shop_gold|does|\bcan be purchased\b|\blets you buy\b

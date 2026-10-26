@@ -58,6 +58,11 @@ else:
     for (g,) in c.execute('SELECT id FROM games'):
         try: keyed.update({int(i): {t[0] for t in v['tags']} for i, v in K.load(g).items()})
         except FileNotFoundError: pass
+    kws = {i for i, in c.execute("SELECT id FROM entities WHERE category='keyword'")}
+    def holders(kw):   # entries that inherited from the keyword (kw_sync's links)
+        return [s for s, in c.execute("SELECT src FROM entity_links WHERE dst=? AND rel IN ('has_keyword', 'mentions_keyword')", (kw,))]
+    def kw_has(x, k):   # another keyword of the entry still gives the concept
+        return c.execute("SELECT 1 FROM entity_links l JOIN entity_concepts ec ON ec.entity=l.dst WHERE l.src=? AND l.rel IN ('has_keyword', 'mentions_keyword') AND ec.concept=?", (x, k)).fetchone()
     add = drop = 0
     for r in csv.DictReader(open(OUT, encoding='utf-8'), delimiter='\t'):
         e, k = int(r['entity']), r['concept']
@@ -66,6 +71,10 @@ else:
         if r['action'] == 'drop':
             drop += c.execute("DELETE FROM entity_concepts WHERE entity=? AND concept=? AND role NOT IN ('benefits', 'counters')", (e, k)).rowcount   # payoff and answer tags stay
             c.execute('DELETE FROM trigger_effect WHERE entity=? AND (trigger=? OR effect=?)', (e, k, k))
+            if e in kws:   # a keyword's drop also reaches the copies its holders inherited, unless their key has it or another keyword still gives it
+                for x in holders(e):
+                    if k in keyed.get(x, ()) or kw_has(x, k): continue
+                    drop += c.execute("DELETE FROM entity_concepts WHERE entity=? AND concept=? AND method='via_keyword' AND role NOT IN ('benefits', 'counters')", (x, k)).rowcount
         elif not c.execute('SELECT 1 FROM entity_concepts WHERE entity=? AND concept=?', (e, k)).fetchone():
             add += c.execute('INSERT INTO entity_concepts VALUES(?,?,?,?,?)', (e, k, role.get(k, 'does'), 'answer_key', 'key wins over review (19 Oct 2026)')).rowcount
     c.commit(); print('key wins: tags removed', drop, 'added', add)
