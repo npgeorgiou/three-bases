@@ -49,27 +49,39 @@ if len(sys.argv) < 3 or sys.argv[2] != 'check':
     whole = {}
     for e, k in q("SELECT entity, concept FROM entity_concepts WHERE role='does' AND method IN ('game_structure','data_rule','claude_review','via_keyword','claude_inference')"):
         if root.get(k) == 'trigger' and k not in ('passive', 'aura', 'trigger'): whole.setdefault(e, set()).add(k)
+    LISTS = {}   # per game, once: the trigger and effect patterns, and the whole-entry ones ("(?s)^(?!...") apart, since they are checked on the entry's text
+    def lists(g):
+        if g not in LISTS:
+            P = pats.get(None, []) + pats.get(g, [])
+            X = excl.get(g, set()) | (excl.get('_all', set()) if g != 'marvel_snap' else set())
+            if X: P = [x for x in P if (x[0], x[2].pattern) not in X]
+            whole = lambda x: x[2].pattern.startswith('(?s)^(?!')
+            LISTS[g] = tuple([(x[0], x[2]) for x in P if x[1] == r and whole(x) == w] for r in ('trigger', 'effect') for w in (False, True))
+        return LISTS[g]
     for e, g, t in q("SELECT id, game, text FROM entities WHERE text IS NOT NULL AND category NOT IN ('tribe') AND length(text) < 6000"):
-        P = pats.get(None, []) + pats.get(g, [])
-        X = excl.get(g, set()) | (excl.get('_all', set()) if g != 'marvel_snap' else set())
-        if X: P = [x for x in P if (x[0], x[2].pattern) not in X]
-        tl = t.lower()   # a whole-entry pattern ("(?s)^(?!.*timing:)...": no Timing line anywhere) is checked on the whole text, not per clause
-        P = [x for x in P if not x[2].pattern.startswith('(?s)^(?!') or x[2].search(tl)]
+        tl = t.lower()   # a whole-entry pattern is checked on the whole text, not per clause
+        trN, trW, efN, efW = lists(g)
+        TR = trN + [x for x in trW if x[1].search(tl)]
+        EF = efN + [x for x in efW if x[1].search(tl)]
+        efm = {}
+        def effects(low):   # the effect concepts of one clause, found once
+            if low not in efm: efm[low] = {con for con, p in EF if p.search(low)}
+            return efm[low]
         found = False
         cls = [x.lower().strip() for x in SPLIT.split(t)]
         for j, low in enumerate(cls):
             cl = low
             if not low: continue
-            tr = {con for con, r, p in P if r == 'trigger' and p.search(low)}
+            tr = {con for con, p in TR if p.search(low)}
             if ONLY: tr &= tags.get(e, set())   # after the tree move: pair only the tags the entry has, add none
             if not tr: continue
             found = True
             if not ONLY:
                 for a in tr: c.execute("INSERT OR IGNORE INTO entity_concepts VALUES(?,?,?,?,?)", (e, a, 'does', 'text_pattern', low[:60]))   # the entry gets the trigger tag too
-            ef = {con for con, r, p in P if r == 'effect' and p.search(low)}
+            ef = set(effects(low))
             if not ef:   # "At the start of each turn, repeat this." — the effect is in the clause before or after
                 for nb in (cls[j - 1] if j else '', cls[j + 1] if j + 1 < len(cls) else ''):
-                    ef |= {con for con, r, p in P if r == 'effect' and p.search(nb)}
+                    ef |= effects(nb)
             if ONLY: ef &= tags.get(e, set())
             for a in tr:
                 for b in ef:
@@ -79,7 +91,7 @@ if len(sys.argv) < 3 or sys.argv[2] != 'check':
         if not found and e in whole:
             for cl in SPLIT.split(t):
                 low = cl.lower().strip()
-                ef = {con for con, r, p in P if r == 'effect' and p.search(low)}
+                ef = effects(low)
                 for a in whole[e]:
                     for b in ef:
                         if (e, a, b) in have: continue
