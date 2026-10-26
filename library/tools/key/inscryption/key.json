@@ -456,6 +456,10 @@
 [
 "scope_self",
 "of a card bearing this sigil"
+],
+[
+"scope_self",
+"increase the Power and Health of a card bearing this sigil"
 ]
 ],
 "by": "C"
@@ -503,14 +507,6 @@
 [
 "turn_start",
 "At the beginning of the owner's turn"
-],
-[
-"attack_gain",
-"attack, damage or power goes up"
-],
-[
-"defence_gain",
-"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -806,10 +802,6 @@
 [
 "cheat_death",
 "it does not perish"
-],
-[
-"transform",
-"sacrificing the card enough times will cause it to transform"
 ]
 ],
 "by": "C"
@@ -827,6 +819,10 @@
 [
 "scope_self",
 "a card bearing this sigil"
+],
+[
+"scope_self",
+"heal a card bearing this sigil"
 ]
 ],
 "by": "C"
@@ -879,10 +875,6 @@
 [
 "resource_gain",
 "a (Green, Orange, or Blue) Gem is provided to the owner"
-],
-[
-"multiple_resources",
-"Green, Orange, or Blue"
 ]
 ],
 "by": "C"
@@ -1172,6 +1164,10 @@
 [
 "stat_gain",
 "increase the Power and Health of a card bearing this sigil by 1"
+],
+[
+"scope_self",
+"increase the Power and Health of a card bearing this sigil"
 ]
 ],
 "by": "A=B"
@@ -1312,12 +1308,8 @@
 "When a card bearing this sigil perishes"
 ],
 [
-"revive",
+"return_to_hand",
 "return to the owner's hand after death"
-],
-[
-"defence_gain",
-"health, toughness or defence goes up"
 ]
 ],
 "by": "C"
@@ -1344,14 +1336,6 @@
 [
 "stealth",
 "submerged for the enemy's turn"
-],
-[
-"transform",
-"it transforms into a random Tentacle card"
-],
-[
-"random_effect",
-"random Tentacle card"
 ]
 ],
 "by": "C"
@@ -1842,6 +1826,10 @@
 [
 "activated",
 "Enlarge"
+],
+[
+"scope_self",
+"Enlarge"
 ]
 ],
 "by": "A=B",
@@ -2138,6 +2126,10 @@
 [
 "cheat_death",
 "Many Lives"
+],
+[
+"transform",
+"Special behaviour: Cat"
 ]
 ],
 "by": "A=B",
@@ -2177,17 +2169,23 @@
 "740768": {
 "tags": [
 [
-"revive",
+"death_trigger",
 "Unkillable"
 ],
 [
-"death_trigger",
+"return_to_hand",
 "Unkillable"
 ]
 ],
 "by": "C",
 "keywords": [
 740703
+],
+"credited": [
+[
+"return_to_hand",
+"Unkillable"
+]
 ]
 },
 "740769": {
@@ -2330,12 +2328,6 @@
 "by": "C",
 "keywords": [
 740621
-],
-"credited": [
-[
-"adjacency",
-"Bifurcated Strike"
-]
 ]
 },
 "740779": {
@@ -2959,6 +2951,10 @@
 [
 "activated",
 "Enlarge"
+],
+[
+"scope_self",
+"Enlarge"
 ]
 ],
 "by": "A=B",
@@ -3007,6 +3003,14 @@
 [
 "stealth",
 "Waterborne"
+],
+[
+"transform",
+"Kraken Waterborne"
+],
+[
+"random_effect",
+"Kraken Waterborne"
 ]
 ],
 "by": "A=B",
@@ -3058,12 +3062,6 @@
 "by": "A=B",
 "keywords": [
 740711
-],
-"credited": [
-[
-"variable_stats",
-"Card Counter"
-]
 ]
 },
 "740828": {
@@ -3187,20 +3185,6 @@
 "keywords": [
 740621,
 740699
-],
-"credited": [
-[
-"adjacency",
-"Bifurcated Strike"
-],
-[
-"aoe_damage",
-"Trifurcated Strike"
-],
-[
-"adjacency",
-"Trifurcated Strike"
-]
 ]
 },
 "740834": {
@@ -3356,12 +3340,6 @@
 "by": "A=B",
 "keywords": [
 740634
-],
-"credited": [
-[
-"summon",
-"Clinger"
-]
 ]
 },
 "740846": {
@@ -3464,12 +3442,6 @@
 "by": "C",
 "keywords": [
 740621
-],
-"credited": [
-[
-"adjacency",
-"Bifurcated Strike"
-]
 ]
 },
 "740855": {
@@ -3490,12 +3462,6 @@
 "by": "A=B",
 "keywords": [
 740699
-],
-"credited": [
-[
-"adjacency",
-"Trifurcated Strike"
-]
 ]
 },
 "740856": {
@@ -3853,33 +3819,45 @@
 "740885": {
 "tags": [
 [
-"revive",
+"death_trigger",
 "Unkillable"
 ],
 [
-"death_trigger",
+"return_to_hand",
 "Unkillable"
 ]
 ],
 "by": "C",
 "keywords": [
 740703
+],
+"credited": [
+[
+"return_to_hand",
+"Unkillable"
+]
 ]
 },
 "740886": {
 "tags": [
 [
-"revive",
+"death_trigger",
 "Unkillable"
 ],
 [
-"death_trigger",
+"return_to_hand",
 "Unkillable"
 ]
 ],
 "by": "C",
 "keywords": [
 740703
+],
+"credited": [
+[
+"return_to_hand",
+"Unkillable"
+]
 ]
 },
 "740887": {
@@ -4014,12 +3992,6 @@
 "keywords": [
 740621,
 740690
-],
-"credited": [
-[
-"adjacency",
-"Bifurcated Strike"
-]
 ]
 },
 "740899": {
@@ -4492,6 +4464,10 @@
 ],
 [
 "activated",
+"Stimulate"
+],
+[
+"scope_self",
 "Stimulate"
 ]
 ],

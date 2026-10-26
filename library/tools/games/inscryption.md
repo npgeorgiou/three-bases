@@ -93,7 +93,7 @@ signature	Beast	generate_cards	Warren puts a Rabbit in hand	https://primagames.c
 signature	Beast	evasion	Hawk hits past blockers	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Undead	cost_type	Bones	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Undead	sacrifice	destroying its own cards	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-signature	Magick	multiple_resources	Mox of three colours	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+signature	Magick	cost_type	Magick cards are paid with Mox gems	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Magick	draw	Blue Mage draws per Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 archetype	Undead	sacrifice	Necromancers and perish effects	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
 combo	Necromancer	Obol	the Obol dies twice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930

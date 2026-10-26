@@ -7987,7 +7987,7 @@ inscryption	740883	Orlu's Mox	resource_gain	does	present
 inscryption	740883	Orlu's Mox	terrain	does	present
 inscryption	740885	Ouroboros	death_count	*	absent
 inscryption	740885	Ouroboros	death_trigger	does	present
-inscryption	740885	Ouroboros	revive	does	present
+inscryption	740885	Ouroboros	return_to_hand	does	present
 inscryption	740893	Pharaoh's Pets	resource_gain	does	present
 inscryption	740893	Pharaoh's Pets	sacrifice	benefits	present
 inscryption	740901	Raccoon	resource_gain	does	present

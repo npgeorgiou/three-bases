@@ -20,7 +20,7 @@ factions of their own. Factions with fewer than MIN cards (after that) are left 
                      of those mechanics (table faction_concept_ov: ln of its share over the rest of the game's share, 0 if not above);
                      it has the archetype when its score is at least 1.5 times the average of the game's other factions; several can hold
 Mechanics only: the root concepts and the role, scope and problem facets are left out, and so are concepts on more than 25% of
-a game's cards (too common to belong to anyone). Roles counted: does and grants. Columns share and lift (share over the game
+a game's cards (too common to belong to anyone). Roles counted: does, grants and cost (how a card is paid for). Columns share and lift (share over the game
 average) are kept for reading. Usage: signature.py <db>"""
 import collections, json, os, sqlite3, sys
 from math import log
@@ -51,7 +51,7 @@ for (g,) in q('SELECT DISTINCT game FROM entities'):
     if len(fac) < 2: continue
     N = len(allc)
     has = collections.defaultdict(set)
-    for e, k in q(f"SELECT DISTINCT e.id, ec.concept FROM entities e JOIN entity_concepts ec ON ec.entity=e.id WHERE e.game=? AND {CARD} AND e.faction IS NOT NULL AND ec.role IN ('does','grants')", g):
+    for e, k in q(f"SELECT DISTINCT e.id, ec.concept FROM entities e JOIN entity_concepts ec ON ec.entity=e.id WHERE e.game=? AND {CARD} AND e.faction IS NOT NULL AND ec.role IN ('does','grants','cost')", g):
         if e in allc: has[k].add(e)
     def test(ids):
         K = len(ids); res = []

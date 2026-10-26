@@ -35,6 +35,7 @@ steps() {   # $1 = db
   run outcome_tree.py "$D"
   for f in reviews_outcome/*.json; do g=$(basename "$f" .json); run apply_review.py "$D" "$g" "$f" old; done
   run link_types.py "$D"
+  run cost_rules.py "$D"   # tags from the cost field where cards print the cost apart from the text
   run engine_links.py "$D"
   run design_problems.py "$D"
   run trigger_pairs.py "$D"

@@ -281,7 +281,8 @@
   "add": [
    "revive",
    "repeat_trigger",
-   "other_death_trigger"
+   "other_death_trigger",
+   "death_trigger:benefits"
   ],
   "drop": [
    "cross_lane",
@@ -289,7 +290,7 @@
    "activated",
    "aura",
    "death_count",
-   "death_trigger"
+   "death_trigger:does"
   ]
  },
  "740641": {
@@ -311,7 +312,9 @@
   "add": [],
   "drop": [
    "variety_payoff",
-   "permanent_growth"
+   "permanent_growth",
+   "attack_gain",
+   "defence_gain"
   ]
  },
  "740657": {
@@ -778,7 +781,8 @@
  },
  "740762": {
   "add": [
-   "null_body"
+   "null_body",
+   "transform"
   ],
   "drop": []
  },
@@ -1035,10 +1039,11 @@
  "740882": {
   "add": [
    "null_body",
-   "aura"
+   "aura",
+   "multiple_resources:benefits"
   ],
   "drop": [
-   "multiple_resources"
+   "multiple_resources:does"
   ]
  },
  "740884": {
@@ -1171,7 +1176,9 @@
    "immunity",
    "removal",
    "turn_start",
-   "aoe_damage"
+   "aoe_damage",
+   "deathtouch:counters",
+   "stat_loss:counters"
   ],
   "drop": [
    "multi_target_attack"
@@ -1206,12 +1213,12 @@
   "add": [
    "death_trigger",
    "bounce_enemy",
-   "return_to_hand",
-   "revive"
+   "return_to_hand"
   ],
   "drop": [
    "death_count",
-   "summon"
+   "summon",
+   "revive"
   ]
  },
  "740902": {
@@ -1311,7 +1318,9 @@
    "blocking",
    "evasion:counters",
    "immunity",
-   "aoe_damage"
+   "aoe_damage",
+   "deathtouch:counters",
+   "stat_loss:counters"
   ],
   "drop": [
    "direct_damage",
@@ -1414,7 +1423,9 @@
  },
  "740822": {
   "add": [
-   "stealth"
+   "stealth",
+   "transform",
+   "random_effect"
   ],
   "drop": [
    "counterattack",
@@ -1623,10 +1634,11 @@
  },
  "740770": {
   "add": [
-   "free_play"
+   "free_play",
+   "death_trigger:benefits"
   ],
   "drop": [
-   "death_trigger"
+   "death_trigger:does"
   ]
  },
  "740854": {
@@ -1686,7 +1698,8 @@
  },
  "740644": {
   "add": [
-   "activated"
+   "activated",
+   "scope_self"
   ],
   "drop": [
    "graveyard",
@@ -1829,7 +1842,8 @@
   "add": [
    "activated",
    "graveyard:cost",
-   "heal"
+   "heal",
+   "scope_self"
   ],
   "drop": []
  },
@@ -1971,10 +1985,11 @@
  },
  "740635": {
   "add": [
-   "free_play"
+   "free_play",
+   "death_trigger:benefits"
   ],
   "drop": [
-   "death_trigger"
+   "death_trigger:does"
   ]
  },
  "740845": {
@@ -2115,10 +2130,12 @@
   ]
  },
  "740703": {
-  "add": [],
+  "add": [
+   "return_to_hand"
+  ],
   "drop": [
    "summon",
-   "return_to_hand"
+   "revive"
   ]
  },
  "740651": {
@@ -2153,5 +2170,30 @@
   "drop": [
    "direct_damage"
   ]
+ },
+ "740705": {
+  "add": [],
+  "drop": [
+   "transform",
+   "random_effect"
+  ]
+ },
+ "740666": {
+  "add": [],
+  "drop": [
+   "transform"
+  ]
+ },
+ "740671": {
+  "add": [],
+  "drop": [
+   "multiple_resources"
+  ]
+ },
+ "740693": {
+  "add": [
+   "scope_self"
+  ],
+  "drop": []
  }
 }

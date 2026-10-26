@@ -428,6 +428,10 @@
 [
 "stat_gain",
 "increase the Power and Health of a card bearing this sigil by 1"
+],
+[
+"scope_self",
+"increase the Power and Health of a card bearing this sigil"
 ]
 ],
 "by": "A=B"
@@ -738,6 +742,10 @@
 ],
 [
 "heal",
+"heal a card bearing this sigil"
+],
+[
+"scope_self",
 "heal a card bearing this sigil"
 ]
 ],
@@ -1064,6 +1072,10 @@
 [
 "stat_gain",
 "increase the Power and Health of a card bearing this sigil by 1"
+],
+[
+"scope_self",
+"increase the Power and Health of a card bearing this sigil"
 ]
 ],
 "by": "A=B"
@@ -1192,8 +1204,8 @@
 "When a card bearing this sigil perishes"
 ],
 [
-"revive",
-"a copy of it is created in your hand"
+"return_to_hand",
+"return to the owner's hand after death"
 ]
 ],
 "by": "C"
