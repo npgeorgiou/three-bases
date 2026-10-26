@@ -4,8 +4,6 @@ life_payment	enables	on_life_loss	paying or losing your own life fires effects t
 forced_movement	synergizes	adjacency	pushing, pulling or tossing units puts them next to others, which sets up anything that needs neighbours
 movement	synergizes	adjacency	moving a unit puts it next to others, which sets up anything that needs neighbours
 summon	synergizes	adjacency	a summoned unit is put on a chosen space next to others, which sets up anything that needs neighbours
-swap	synergizes	attack_lock	swapping an enemy into an area that stops attacks leaves it unable to attack
-forced_movement	synergizes	attack_lock	moving an enemy into an area that stops attacks leaves it unable to attack
-temporary_buff	synergizes	on_kill	a damage boost secures the kill that triggers the effect
-stat_gain	synergizes	on_kill	a damage boost secures the kill that triggers the effect
 forced_movement	synergizes	area_templates	moving units into the line or shape an attack covers lets one attack hit more of them
+spell_power	synergizes	on_kill	more damage on the next attack makes the kill that triggers the effect more likely
+swap	synergizes	terrain	swapping a unit into a tile with an effect puts it under that effect

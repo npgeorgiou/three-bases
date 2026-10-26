@@ -83,6 +83,10 @@
 [
 "heal",
 "will heal 2 points"
+],
+[
+"spell_power",
+"the next attack deals more damage"
 ]
 ],
 "by": "C"
@@ -4859,6 +4863,10 @@
 [
 "stat_loss",
 "otherwise -1 Move"
+],
+[
+"spell_power",
+"the next attack deals more damage"
 ]
 ],
 "by": "C"
@@ -4986,6 +4994,10 @@
 [
 "immunity",
 "Flying"
+],
+[
+"terrain",
+"changes tiles (Smoke, Fire, cracks)"
 ]
 ],
 "by": "A=B",
@@ -5020,6 +5032,10 @@
 [
 "heal",
 "Standing on Smoke repairs Mechs"
+],
+[
+"terrain",
+"changes tiles (Smoke, Fire, cracks)"
 ]
 ],
 "by": "C"
@@ -5091,6 +5107,10 @@
 [
 "immunity",
 "Flying"
+],
+[
+"terrain",
+"changes tiles (Smoke, Fire, cracks)"
 ]
 ],
 "by": "C",
@@ -5133,6 +5153,10 @@
 [
 "immunity",
 "Flying"
+],
+[
+"terrain",
+"changes tiles (Smoke, Fire, cracks)"
 ]
 ],
 "by": "C",
@@ -5217,6 +5241,10 @@
 [
 "adjacency",
 "adjacent tiles"
+],
+[
+"terrain",
+"changes tiles (Smoke, Fire, cracks)"
 ]
 ],
 "by": "A=B",
@@ -6419,6 +6447,10 @@
 [
 "terrain",
 "Standing on Fire removes Fire"
+],
+[
+"spell_power",
+"the next attack deals more damage"
 ]
 ],
 "by": "C"
@@ -6529,6 +6561,10 @@
 [
 "adjacency",
 "adjacent tiles"
+],
+[
+"terrain",
+"changes tiles (Smoke, Fire, cracks)"
 ]
 ],
 "by": "C"
@@ -6554,6 +6590,10 @@
 [
 "upgrade",
 "Upgrade: +1 Range"
+],
+[
+"terrain",
+"changes tiles (Smoke, Fire, cracks)"
 ]
 ],
 "by": "A=B"
