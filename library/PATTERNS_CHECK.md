@@ -21,9 +21,10 @@ too. Find the reason for every disagreement and fix it where it is: the entry ta
 - One game per pass, all 21 games (table below).
 
 ## Decisions that apply to every game
-- **Cases the cards don't support:** a signature or archetype case whose faction shows no lead of 1.3 times in the cards (the key; Kaptain, 26 Oct 2026, was 1.5). Signatures and archetypes use the same 1.3 (`signature.py` RATIO), so
-  a kept case can be met. A case may name a keyword signature (kw:Jump) where the source names a keyword
-  is removed, with the reason in the game's "Notes from the patterns check".
+- **Cases the cards don't support:** a signature or archetype case whose faction shows no lead of 1.3 times in the cards (the key)
+  is removed, with the reason in the game's "Notes from the patterns check" (Kaptain, 26 Oct 2026; was 1.5). Signatures and
+  archetypes use the same 1.3 (`signature.py` RATIO), so a kept case can be met. A case may name a keyword signature (kw:Jump)
+  where the source names a keyword.
 - **Shared pools** (Neutral, Colorless, Any; Faeria's Pandora) are not factions (`factions.py` SHARED).
 - **Faction counts:** a card merged into another with the same text (`dedupe.py`, table `merged_entities`) still counts as a card.
   Cost tags (role `cost`) count. A mechanic on more than 25% of the cards is too common for a signature, unless one faction holds
