@@ -61,12 +61,19 @@ def is_action(kid):
 # dropped links' tags as mostly wrong (50% or less right) and less right than the kept links' tags; elsewhere dropping them would
 # lose right tags (not-real keywords still lose their links everywhere).
 SKIP = {'hearthstone', 'into_the_breach', 'faeria', 'hs_battlegrounds', 'marvel_snap', 'shadowverse', 'sts1'}
+NEG = re.compile(r"\b(cannot|can't|can not|unaffected|not affected|immun\w*|does not|do not|no longer|avoids?|unable)\b", re.I)
+def negated(src, kw):
+    t = (q("SELECT text FROM entities WHERE id=?", src)[0][0] or '')
+    return any(re.search(r'\b' + re.escape(kw) + r'\b', sent, re.I) and NEG.search(sent) for sent in re.split(r'[.|\n]', t))
 links = q("SELECT l.rowid, l.src, l.dst, l.evidence FROM entity_links l WHERE l.rel='has_keyword'")
 drop = []
 for rid, s, d, ev in links:
     if d not in kws: continue
     if ALLOW is not None and kws[d][0] not in ALLOW: continue
-    if kws[d][0] in SKIP and not read.get(d, (None, False))[1]: continue
+    if kws[d][0] in SKIP and not read.get(d, (None, False))[1]: 
+        # in the skipped games a mention is kept as a link only when the sentence does not deny the keyword ("Flying units cannot submerge", "unaffected by Smoke", "Smoke Immunity")
+        if ev != 'special field' and negated(s, kws[d][1]): drop.append(rid)
+        continue
     if read.get(d, (None, False))[1]: drop.append(rid); continue
     if ev and FIELD.search(ev): continue
     if not valid(txt.get(s), kws[d][1], is_action(d)): drop.append(rid)

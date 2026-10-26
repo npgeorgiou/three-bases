@@ -1230,6 +1230,10 @@
 [
 "immunity",
 "Flying"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "A=B",
@@ -2695,6 +2699,10 @@
 [
 "upgrade",
 "Upgrade: +1 Range"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "C"
@@ -2767,6 +2775,10 @@
 [
 "upgrade",
 "Upgrade: +3 Area"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "C"
@@ -2944,6 +2956,10 @@
 [
 "exhaust",
 "Single-use"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "C"
@@ -4453,6 +4469,10 @@
 [
 "delayed",
 "will hatch into a Spiderling on the next turn"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "C"
@@ -4903,6 +4923,10 @@
 [
 "forced_movement",
 "Force a nearby unit to swap places"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "A=B"
@@ -5189,6 +5213,10 @@
 [
 "immunity",
 "Flying"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "A=B",
@@ -5261,6 +5289,10 @@
 [
 "area_templates",
 "Deal 1 damage to four oblique tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "A=B"
@@ -5375,6 +5407,10 @@
 [
 "movement",
 "Massive"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "C",
@@ -5624,6 +5660,10 @@
 [
 "area_templates",
 "Deal 2 damage to four oblique tiles"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "C"
@@ -5645,6 +5685,10 @@
 [
 "friendly_fire",
 "including the Tumblebug"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "C"
@@ -6481,6 +6525,10 @@
 [
 "upgrade",
 "Upgrade: More Smoke"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "C"
@@ -6740,6 +6788,10 @@
 [
 "upgrade",
 "Upgrade: +2 Range"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "C"
@@ -6786,6 +6838,10 @@
 [
 "upgrade",
 "Upgrade: +1 Damage"
+],
+[
+"adjacency",
+"adjacent tiles"
 ]
 ],
 "by": "A=B"

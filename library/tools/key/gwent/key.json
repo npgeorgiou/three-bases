@@ -2023,11 +2023,11 @@
 ],
 [
 "destroy",
-"Destroy all other units with power equal to Schirr\u00fa"
+"Destroy all other units with power equal to Schirrú"
 ],
 [
 "stat_condition",
-"power equal to Schirr\u00fa"
+"power equal to Schirrú"
 ],
 [
 "friendly_fire",
@@ -4182,6 +4182,10 @@
 [
 "activated",
 "Spring"
+],
+[
+"adjacency",
+"between two Soldiers"
 ]
 ],
 "by": "C",
@@ -4973,6 +4977,10 @@
 [
 "activated",
 "Spring"
+],
+[
+"adjacency",
+"between two Soldiers"
 ]
 ],
 "by": "A=B",

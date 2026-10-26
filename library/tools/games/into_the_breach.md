@@ -16,6 +16,9 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 Sources:
 [1] https://intothebreach.fandom.com/wiki/Weapons?oldid=3699 (weapon list by mech class)
 [2] https://www.giantbomb.com/profile/majormitch/blog/thoughts-on-into-the-breachs-squads/116986/ (squads)
+[3] https://www.thegamer.com/into-the-breach-best-most-powerful-mech-squads-teams/ (best squads; also r/IntoTheBreach comments/1r85f24)
+[4] https://www.reddit.com/r/IntoTheBreach/comments/155pe9u/most_op_combos/ (most op combos; given by Kaptain, not readable from here)
+[5] https://steamcommunity.com/app/590380/discussions/0/1694914736001439741/ (Steam custom squad guide, Laser Mech line-ups)
 
 "Any" is not a mech class. Push and pull are forced_movement; smoke and freeze stop an enemy from acting (disable); fire and
 acid are damage_over_time.
@@ -43,6 +46,11 @@ Weapons: utility, not damage: pull, push, swap, acid, shields, smoke, fire, free
 
 ## Combos
 - Electric Whip + Grappling Hook: the Hook Mech extends the Whip's chain [2]
+- Smog Mech + Rocket Mech: the Smog Mech spreads Smoke, the Rocket Mech's Storm Generator makes Smoke deal damage [3]
+- Smog Mech + Exchange Mech: the Exchange Mech swaps a Vek into the Smoke, where it cannot attack [3]
+- Kai Miller + Arachnoid Injector: Kai's boost secures the kill, the kill creates a friendly spider [4]
+- Laser Mech + Combat Mech: pushes line the Vek up for the piercing beam [5]
+- Laser Mech + Judo Mech: tosses line the Vek up for the piercing beam [5]
 
 ## Mechanics
 The mechanics the guides name, one per line as `name|concept|regex`, and the rules and terms as `# term:` lines. Read by `coverage.py --mechanics` and `key/key.py`.
@@ -104,6 +112,12 @@ signature	Science	shield	shields	https://intothebreach.fandom.com/wiki/Weapons?o
 archetype	Science	positional	utility: pull, push, swap	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
 splash	Prime	shield	only Spartan Shield	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
 splash	Brute	shield	Phase Cannon, Grappling Hook	https://intothebreach.fandom.com/wiki/Weapons?oldid=3699
+combo	Electric Whip	Grappling Hook	the Hook pulls Vek next to each other for the Whip's chain	https://www.giantbomb.com/profile/majormitch/blog/thoughts-on-into-the-breachs-squads/116986/
+combo	Smog Mech	Rocket Mech	Smog Mech spreads Smoke, Rocket Mech's Storm Generator makes Smoke deal damage	https://www.thegamer.com/into-the-breach-best-most-powerful-mech-squads-teams/
+combo	Smog Mech	Exchange Mech	the Exchange Mech swaps a Vek into the Smoke	https://www.thegamer.com/into-the-breach-best-most-powerful-mech-squads-teams/
+combo	Kai Miller	Arachnoid Injector	Kai's boost secures the kill, the kill creates a spider	https://www.reddit.com/r/IntoTheBreach/comments/155pe9u/most_op_combos/
+combo	Combat Mech	Laser Mech	pushes line the Vek up for the piercing beam	https://steamcommunity.com/app/590380/discussions/0/1694914736001439741/
+combo	Judo Mech	Laser Mech	tosses line the Vek up for the piercing beam	https://steamcommunity.com/app/590380/discussions/0/1694914736001439741/
 ```
 
 ## Notes from the patterns check

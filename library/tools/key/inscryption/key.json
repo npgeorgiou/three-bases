@@ -401,6 +401,10 @@
 [
 "multi_attack",
 "attack twice"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "A=B"
@@ -751,6 +755,10 @@
 [
 "protection",
 "evade a direct hit"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "C"
@@ -1118,6 +1126,10 @@
 [
 "summon",
 "drop a Squirrel in its old space"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "A=B"
@@ -1239,6 +1251,10 @@
 [
 "aoe_damage",
 "strike each opposing space to the left, right and center of it"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "C"
@@ -2428,6 +2444,10 @@
 [
 "multi_attack",
 "Double Strike"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "A=B",
@@ -4519,6 +4539,10 @@
 [
 "multi_attack",
 "Double Strike"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "A=B",
@@ -5086,6 +5110,10 @@
 [
 "movement",
 "Loose Tail"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "C",
@@ -5140,6 +5168,10 @@
 [
 "aoe_damage",
 "Trifurcated When Powered"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "C",
@@ -5166,6 +5198,10 @@
 [
 "movement",
 "Squirrel Shedder"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "A=B",
@@ -7514,6 +7550,10 @@
 [
 "other_death_trigger",
 "When a card perishes, it spawns a Leaping Trap in its place"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "C"
@@ -7892,6 +7932,10 @@
 [
 "hand_size",
 "equal to the number of cards in your hand"
+],
+[
+"adjacency",
+"each empty adjacent space"
 ]
 ],
 "by": "C"

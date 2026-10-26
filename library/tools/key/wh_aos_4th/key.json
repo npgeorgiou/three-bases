@@ -2085,7 +2085,7 @@
 "tags": [
 [
 "tribal",
-"Lumineth Realm\u2011lords Wizard"
+"Lumineth Realm‑lords Wizard"
 ],
 [
 "random_effect",
@@ -5230,7 +5230,7 @@
 ],
 [
 "piercing",
-"Anti\u2011Wizard (+1 Rend)"
+"Anti‑Wizard (+1 Rend)"
 ]
 ],
 "by": "C"
@@ -5372,6 +5372,10 @@
 [
 "debuff",
 "that enemy unit's attacks cannot score critical hits"
+],
+[
+"adjacency",
+"within the combat range of a friendly non-Hero Skaven Infantry unit"
 ]
 ],
 "by": "C"
@@ -9626,7 +9630,7 @@
 ],
 [
 "piercing",
-"Anti\u2011Infantry (+1 Rend)"
+"Anti‑Infantry (+1 Rend)"
 ],
 [
 "stat_gain",

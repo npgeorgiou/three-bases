@@ -10825,6 +10825,10 @@
 [
 "immunity",
 "Elusive"
+],
+[
+"adjacency",
+"Played next to a Mech"
 ]
 ],
 "by": "A=B"

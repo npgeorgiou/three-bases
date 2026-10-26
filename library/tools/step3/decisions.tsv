@@ -347,7 +347,6 @@ new	movement|does|wh_40k_10e|redirect	wh_40k_10e	\bterrain
 new	piercing|does|wh_aos_4th|redirect	wh_aos_4th	\banti-[a-z]
 new	zone_control|does|wh_aos_4th|redirect	wh_aos_4th	at the (start|beginning) of (your|each|the|their)? ?(turn|round)\b
 new	modal_choice|does|wh_killteam|redirect	wh_killteam	\bupgrade
-new	adjacency|does|into_the_breach|key	into_the_breach	\ball\s+adjacent\s+tiles\b
 new	damage|does|into_the_breach|key	into_the_breach	(?:\b\d+\s+damage\s+each\b)|(?:\bdealing\s+\d+\s+damage\b)|(?:\bdeals\s+\d+\s+damage\s+to\s+the\s+target\b)|(?:\bfor\s+\d+\s+damage\b)|(?:\bstab\s+it\s+for\s+\d+\s+damage\b)
 new	damage_reduction|does|into_the_breach|key	into_the_breach	\breduced\s+by\s+\d+\b
 new	death_trigger|does|into_the_breach|key	into_the_breach	\bon\s+death\b
@@ -1266,3 +1265,12 @@ new	random_target|does|*|manual	darkest_dungeon,duelyst,faeria,gwent,hearthstone
 # Into the Breach wording found in the key check, written in the new concept ids
 new	other_death_trigger|does|into_the_breach|manual	into_the_breach	\bwhen a medium goo is defeated\b|\bexplosive decay effect\b
 new	buff|does|into_the_breach|manual	into_the_breach	\bgains flying\b|\bgives the mech an? "?boost\b|\bis boosted if\b
+new	adjacency|does|into_the_breach|manual	into_the_breach	\badjacent (?:tiles|targets|units|enemies|mechs|ally|allies)\b|\ball tiles adjacent\b|\banything adjacent\b|\bthe ones adjacent\b|\badjacent to each\b|\bnearby\b|\bsurround\w*|\btiles around\b|\baround the target\b|\bcorner tiles\b|\bnext to your landing\b|\bleft and right\b|\bto the left\b|\bto the right\b
+new	adjacency|does|inscryption|manual	inscryption	\badjacent (?:space|slot|card|creature|empty)s?\b|\bnext to (?:the card|each other)\b|\bto the left and right of\b|\bspace to the left\b|\bto the left, right\b
+new	adjacency|does|hearthstone|manual	hearthstone	\badjacent\b|\bnext to a\b|\bto the left and right\b
+new	adjacency|does|faeria|manual	faeria	\badjacent\b|\bnext to\b
+new	adjacency|does|duelyst|manual	duelyst	\bin front of (?:this|him|your general|each|the)\b|\bnot nearby\b
+new	adjacency|does|hs_battlegrounds|manual	hs_battlegrounds	\bminion to the (?:left|right)\b|\bDemon to the right\b|\bUndead to the right\b|\bto the (?:left|right)\.
+new	adjacency|does|gwent|manual	gwent	\bnext to an?\b|\bto the (?:left|right) of\b
+new	adjacency|does|wh_aos_4th|manual	wh_aos_4th	\bis next to an?\b|\bnext to an? (?:enemy|friendly)\b
+new	adjacency|does|stormbound|manual	stormbound	\bon both sides\b

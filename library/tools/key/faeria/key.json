@@ -123,6 +123,10 @@
 [
 "targeting_rules",
 "with line of sight"
+],
+[
+"adjacency",
+"Adjacent enemy creatures"
 ]
 ],
 "by": "C"
