@@ -42,7 +42,16 @@ Read this section only; the sections below it are the earlier test and its histo
    keyword records, a cross-game target phrase table, amounts, durations, conditions; Darkest Dungeon has its own format reader.
    Result 27 Oct: 50-89% of entries covered per game (Magic 66%, Hearthstone 76%, Lorcana 84%), but a hand check of 48 covered
    cards (Magic, Hearthstone, Lorcana, Gwent) found only about 60% of records right (wrong target or wrong effect most often).
-   The strict Hearthstone script was 97% right at 18% coverage. Open: Kaptain's choice between coverage and accuracy.
+   The strict Hearthstone script was 97% right at 18% coverage.
+   Agreed (Kaptain, 27 Oct 2026, night): rows built mostly from the tags (trigger and effect tags; side from the tree, helps my
+   side or hurts the enemy; how many from the scope tags; duration words), the text for numbers and to override the side, the
+   target read first inside the words the pattern matched. The five games with the patterns check done (Into the Breach,
+   Inscryption, Faeria, Duelyst, Darkest Dungeon) first; then the fixed-wording games (Hearthstone, Lorcana, Magic, Star Wars
+   Unlimited, Runeterra, Legends, Gwent) with the effect from their wording first and tags as backup; a game whose tags make the
+   rows wrong gets its patterns check; 40k, Shadowverse, Marvel Snap, Monster Train last. No tag changes, no reading run.
+   `tools/records/key_score.py`: the effect field against the hand answer keys (tools/key/<game>/key.json), no reading needed;
+   27 Oct night: effect precision 67-94% per game (Faeria 94, Darkest Dungeon 88, Shadowverse 87, Hearthstone 80, Magic 78),
+   recall 39-79%. Targets are checked by hand (about 20 covered cards per game).
    Scripts per game: the effect from today's patterns, plus new patterns for target, amount and duration. A card the script
    covers completely is not read. Start with the games with fixed wording (Magic, Hearthstone, Runeterra, Lorcana, SWU).
 4. Repeats read once: texts that differ only in name or numbers share one reading.

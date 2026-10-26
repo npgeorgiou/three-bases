@@ -41,6 +41,7 @@ TARGETS = [  # (pattern, target); within a span the earliest match wins, ties go
     (rf"\b{U} attacking you\b|\battacking {U}\b", 'enemy_unit all'),
     (r"\b(?:each opponent|target opponent|target player|your opponent|the opponent|the enemy (?:hero|nexus|player|base|leader|general)|enemy (?:hero|nexus|base|leader|general)|opponent's (?:hero|nexus|base|leader))\b|\bdefending player\b", 'enemy_player'),
     (r"\b(?:each|every|both) players?\b", 'each_player'),
+    (r"\bthat player\b|\bthat opponent\b", 'enemy_player'),
     (r"\b(?:your (?:hero|nexus|base|leader|general|life|health)|you gain|you lose|you draw|you may draw|you get|you have|you)\b", 'my_player'),
     (r"\b(?:that|the) (?:creature|unit|minion|character|follower|card|ally|enemy|attacker|blocker|target)\b|\bthe (?:attacking|blocking|damaged|chosen|dead|destroyed) \w+", 'any_unit triggering'),
     (rf"\bname\b|\bthis (?:{U}|card|spirit|vehicle|equipment|aura|saga|class|creature|unit|minion|character|follower|champion|hero|item|weapon|relic|skill)\b|\bitself\b|\b(?:grant|give) me\b|\bi (?:have|get|deal|strike)\b|\bme\b|\bself\b", 'self'),
@@ -99,9 +100,10 @@ def load(c):
 
 
 def find(pats, k, game, s):
-    """Positions where concept k's patterns (general and this game's) match sentence s."""
+    """Positions where concept k's patterns (general, patterns/_all.txt for every game but Marvel Snap, and this game's
+    patterns/<game>.txt) match sentence s."""
     out = []
-    for rx in pats.get((k, None), []) + pats.get((k, game), []):
+    for rx in pats.get((k, None), []) + (pats.get((k, '_all'), []) if game != 'marvel_snap' else []) + pats.get((k, game), []):
         out += [(m.start(), m.end()) for m in rx.finditer(s)]
     return sorted(out)
 
@@ -174,6 +176,18 @@ def dd_records(e, cat, text):
         cond = f'{m.group(3)} {m.group(4)}'.strip() if m.group(3) else ''
         out.append((e, 1, 'passive', k, 'self', f'{m.group(1)} {m.group(2).strip()}', 'while' if cond else 'permanent', cond, 'script'))
     return out, unread
+
+
+def hinted(k, tags, anc):
+    """A target from the entry's own tags when the words name none: the side from who the effect helps or hurts (concept
+    tree), how many from its scope tags (random_target; aoe_damage, board_wipe, scope_global; adjacency; scope_self)."""
+    if 'scope_self' in tags: return 'self'
+    side = 'enemy_unit' if 'hurts_enemy' in anc.get(k, ()) else 'ally_unit' if 'helps_me' in anc.get(k, ()) else ''
+    if not side: return ''
+    if 'random_target' in tags: return side + ' random 1'
+    if tags & {'aoe_damage', 'board_wipe', 'scope_global'}: return side + ' all'
+    if 'adjacency' in tags: return side + ' adjacent'
+    return side + ' chosen' if side == 'enemy_unit' else 'self'
 
 
 def records(c, e, game, name, cat, text, tags, facet, anc, pats, kwre=None, allfx=(), kwfx=(), kwgrant=(), kwtrig={}):
@@ -275,7 +289,7 @@ def records(c, e, game, name, cat, text, tags, facet, anc, pats, kwre=None, allf
             if not tg and re.match(r"(?:lose|loses|pay|pays|take|takes|discard)\b", s[x:]): tg = 'my_player' if cat in ONE_OFF else 'self'
             tg = tg or OWN.get(k, '') or ('self' if cat not in ONE_OFF and k in LASTING else '') \
                 or ('self' if cat in ('item', 'relic', 'status', 'hero') else '') \
-                or ('enemy_unit chosen' if 'hurts_enemy' in anc.get(k, ()) else 'self' if 'helps_me' in anc.get(k, ()) else '')
+                or hinted(k, tags, anc)
             cut = re.search(r",| unless | if | as long as | instead\b", span[1:])
             am = ', '.join(m.group(0) for m in AMOUNT.finditer(span[:cut.start() + 1] if cut else span))[:40]
             if k in OBJECT_FX:
@@ -295,7 +309,7 @@ def prep(c, g, facet, pats):
     kws = sorted((re.escape(x.lower()) for (x,) in c.execute("SELECT name FROM entities WHERE game=? AND category='keyword'", (g,))), key=len, reverse=True)
     kw = rf"(?:{'|'.join(kws)})(?::? ?\+?\d+\+?| \{{[^}}]*\}}+| x)?" if kws else None
     kwre = re.compile(rf"(?:keywords?: )?{kw}(?:[,.]? (?:and )?{kw})*") if kw else None
-    allfx = [k for k in facet if facet[k] in EFFECT_FACETS and k not in SKIP and ((k, None) in pats or (k, g) in pats)]
+    allfx = [k for k in facet if facet[k] in EFFECT_FACETS and k not in SKIP and ((k, None) in pats or (k, g) in pats or (k, '_all') in pats)]
     kwfx, kwgrant, kwtrig, f = [], [], {}, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'keywords', f'{g}.txt')
     if os.path.exists(f):
         names = dict(c.execute("SELECT id, lower(name) FROM entities WHERE game=? AND category='keyword'", (g,)))
