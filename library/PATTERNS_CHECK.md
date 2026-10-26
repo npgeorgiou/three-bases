@@ -184,6 +184,9 @@ Things that confused earlier chats:
   `reload_game.sh` takes new cards. All games: real-world 529 -> 542 of 860, key scores unchanged outside Inscryption; newly
   missed: gwent Northern Realms activated, hearthstone Druid swarm and draw, runeterra Freljord resource_gain (shares changed by
   the merged-card weights).
+  Then (Kaptain): a tribe connects to a keyword through any card of the tribe (Reptile + Corpse Eater: Ouroboros, a reptile, dies
+  and Corpse Eater benefits); Fecundity has `generate_cards` in the key; Boulder and Frozen Opossum lose it (their text describes the
+  bottle item; Consumable Items keeps it). Inscryption key wrong 50.4, missed 26.9; combos 22/23.
 - Next: (1) the other games in the order of `tools/key/key.py` GAMES, faeria next: follow this file's procedure; check the
   narrow-lead cases listed above in each, and key tags whose quote is not in the card text. (2) Nothing open on speed (see the
   Speed note). (3) Keyword denial rule: it covers only the 7 games where the position rule is skipped (`kw_links.py` SKIP); other

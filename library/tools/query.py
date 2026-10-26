@@ -174,10 +174,11 @@ def connections(ia, ib):
     for k, r1, r2, cat in q('SELECT k.name, l1.rel, l2.rel, k.category FROM entity_links l1 JOIN entity_links l2 ON l1.dst=l2.dst JOIN entities k ON k.id=l1.dst WHERE l1.src=? AND l2.src=? AND k.category IN ("keyword","tribe")', ia, ib):
         out.append(('type' if cat == 'tribe' else 'keyword', f'{k} (A {r1}, B {r2})'))
     cats = {i: (q('SELECT category FROM entities WHERE id=?', i) or [(None,)])[0][0] for i in (ia, ib)}
-    if {cats[ia], cats[ib]} == {'tribe', 'keyword'}:   # a tribe and a keyword: cards of the tribe that bear the keyword
-        t, k = (ia, ib) if cats[ia] == 'tribe' else (ib, ia)
-        for (n,) in q("SELECT DISTINCT e.name FROM entity_links a JOIN entity_links b ON a.src=b.src JOIN entities e ON e.id=a.src WHERE a.dst=? AND a.rel='has_type' AND b.dst=? AND b.rel='has_keyword'", t, k):
-            out.append(('type', f'{n} is of the tribe and bears the keyword'))
+    if (cats[ia] == 'tribe') != (cats[ib] == 'tribe'):   # a tribe connects through its cards (Inscryption: a totem gives a tribe a sigil)
+        t, o = (ia, ib) if cats[ia] == 'tribe' else (ib, ia)
+        for m, n in q("SELECT DISTINCT e.id, e.name FROM entity_links l JOIN entities e ON e.id=l.src WHERE l.dst=? AND l.rel='has_type'", t):
+            hit = connections(m, o)
+            if hit: out.append(('type', f'{n}, a card of the tribe: {hit[0][1]}')); break
     ca = q('SELECT concept, role FROM entity_concepts WHERE entity=?', ia); cb = q('SELECT concept, role FROM entity_concepts WHERE entity=?', ib)
     rel = {}
     for a, r, b in q('SELECT a, rel, b FROM concept_relations WHERE rel IN ("synergizes","enables")'):

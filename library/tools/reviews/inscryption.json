@@ -474,8 +474,7 @@
   "add": [
    "null_body",
    "blocking",
-   "terrain",
-   "fodder"
+   "terrain"
   ],
   "drop": [
    "board_clog"
@@ -740,13 +739,17 @@
   "add": [
    "null_body"
   ],
-  "drop": []
+  "drop": [
+   "generate_cards"
+  ]
  },
  "740749": {
   "add": [
    "null_body"
   ],
-  "drop": []
+  "drop": [
+   "generate_cards"
+  ]
  },
  "740755": {
   "add": [

@@ -441,6 +441,10 @@
 [
 "copy",
 "a copy of it is created in your hand"
+],
+[
+"generate_cards",
+"a copy of it is created in your hand"
 ]
 ],
 "by": "A=B"

@@ -130,7 +130,7 @@ combo	Squirrel	Fecundity	Squirrel totem with Fecundity: every Squirrel played co
 combo	Squirrel	Unkillable	Squirrel totem with Unkillable: sacrificed Squirrels return to hand	Kaptain's combo list, 26 Oct 2026; source named: TheGamer
 combo	Squirrel	Ant Spawner	Squirrel totem with Ant Spawner: every Squirrel played gives an Ant	Kaptain's combo list, 26 Oct 2026; source named: ResetEra
 combo	Insect	Bees Within	Insect totem with Bees Within: struck insects give a Bee	https://inscryption.fandom.com/wiki/Totem
-combo	Reptile	Corpse Eater	Reptile totem with Corpse Eater: reptiles replace dying creatures for free	https://inscryption.fandom.com/wiki/Totem
+combo	Reptile	Corpse Eater	Reptile totem with Corpse Eater: a reptile in hand is played free into the space of a creature that died; Unkillable Ouroboros (a reptile) returns to hand and comes back	https://inscryption.fandom.com/wiki/Totem
 ```
 
 ## Notes from the patterns check

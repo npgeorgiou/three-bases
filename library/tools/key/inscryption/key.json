@@ -469,6 +469,10 @@
 [
 "copy",
 "a copy of it is created in your hand"
+],
+[
+"generate_cards",
+"a copy of it is created in your hand"
 ]
 ],
 "by": "A=B"
@@ -1894,10 +1898,6 @@
 [
 "summon",
 "Frozen Away"
-],
-[
-"generate_cards",
-"A frozen opossum is created in your hand"
 ]
 ],
 "by": "C",
@@ -1910,10 +1910,6 @@
 [
 "immunity",
 "Made of Stone"
-],
-[
-"generate_cards",
-"A boulder is created in your hand"
 ]
 ],
 "by": "A=B",
@@ -2623,11 +2619,21 @@
 [
 "on_play",
 "Fecundity"
+],
+[
+"generate_cards",
+"Fecundity"
 ]
 ],
 "by": "A=B",
 "keywords": [
 740645
+],
+"credited": [
+[
+"generate_cards",
+"Fecundity"
+]
 ]
 },
 "740794": {
@@ -2639,11 +2645,21 @@
 [
 "on_play",
 "Fecundity"
+],
+[
+"generate_cards",
+"Fecundity"
 ]
 ],
 "by": "A=B",
 "keywords": [
 740645
+],
+"credited": [
+[
+"generate_cards",
+"Fecundity"
+]
 ]
 },
 "740795": {
@@ -4423,11 +4439,21 @@
 [
 "on_play",
 "Fecundity"
+],
+[
+"generate_cards",
+"Fecundity"
 ]
 ],
 "by": "A=B",
 "keywords": [
 740645
+],
+"credited": [
+[
+"generate_cards",
+"Fecundity"
+]
 ]
 },
 "740938": {
