@@ -289,9 +289,9 @@ A concept with two parents is listed under both, with the other one named as "al
       - Block enemy spawns `spawn_blocking` (also under Where units can be placed)
     - Zones of control (leaving is punished) `zone_of_control` (also under Neighbours matter (adjacency))
     - In or entering enemy territory `territory_trigger` (also under Triggers & timing)
-      - Random target among existing units or places `random_target`
   - Randomness in the game's structure `randomness`
     - Random results `random_effect`
+      - Random target among existing units or places `random_target`
       - Gain a random ability or keyword `random_ability` (also under Make a unit stronger (buff))
       - Advantage / disadvantage (roll twice) `advantage` (also under Combat rules)
       - Defender rolls to resist (saves) `saving_throws` (also under Combat rules)
