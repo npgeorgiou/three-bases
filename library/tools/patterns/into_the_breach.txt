@@ -80,3 +80,5 @@ exhaust|does|\b\d uses per battle\b
 !ranged|\bprojectile weapons\b
 # Smoke and water stop attacks (attack_lock); a mech's own smoke bomb is a damage source
 attack_lock|does|\bunits cannot attack in water\b|\bsmoke the target\b|\bdropping smoke\b|\bsmoke and (?:deal damage|web)\b|\badding smoke\b|\bapplies smoke\b|\bdrops smoke\b|\bsmoke bomb\b|\bsurround yourself with smoke\b|\badds smoke\b|\bsmoke on\b
+# fire set on tiles is a change of the board
+terrain|does|\blights? (?:every |each |all )?tiles? [^.]{0,30}on fire\b|\bfire to a tile\b
