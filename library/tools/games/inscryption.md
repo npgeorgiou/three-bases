@@ -10,6 +10,19 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Costs: four cost systems: Blood (sacrifice your creatures), Bones (gained when your creatures die), Energy (refills each turn and grows), Mox gems (gem cards on the board).
 - Sigils: card abilities such as Airborne, Touch of Death, Bifurcated Strike, Unkillable, Fledgling, Worthy Sacrifice.
 - Specific: each act has its own rules and boss; the four Scrybes stand for the four cost systems.
+- Sigils move between cards (patterns check, 26 Oct 2026, from the wiki pages and the library's sigil entries): in Act I a card
+  sacrificed at the Mysterious Stones gives its sigil to another card, so most combos are a card plus a sigil it was given, not two
+  cards. A totem (head = tribe, body = sigil) gives that sigil to every card of the tribe; the Squirrel head is found in Leshy's
+  cabin and is not in Kaycee's Mod.
+- Created cards copy sigils: Dams from Dam Builder "adopt any other sigils from the card that spawned them" (so Worthy Sacrifice or
+  Unkillable on a Beaver reaches its Dams). A card played by Corpse Eater triggers "when played" sigils (Fecundity, Rabbit Hole).
+- Bones: 1 per card of yours that dies (4 with Bone King); the Bone Lord's altar gives 8 Bones at the start of every battle when
+  the Black Goat is sacrificed to him, 1 for any other card. Act II: Tomb Robber's Skeletons broken with the Hammer give a Bone per
+  Necromancer in play.
+- Library entries: cards list only their sigils and traits ("Sigils: Unkillable."); costs are in the cost field; sigil entries
+  are wiki pages (rulebook line first, then notes on single cards). Several cards were merged into a card with the same text
+  (Dam into Bait Bucket, Bee into Bat, Skeleton into Revenant, Red Hart into Elk); Squirrel, Rabbit, Pelts, Geck, Urayuli and
+  Child 13 are not in the library.
 
 ## Sources and notes
 

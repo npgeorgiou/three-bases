@@ -53,6 +53,31 @@ then the gaps in `tools/patterns/<game>.txt`.
 8. **Game file:** add what the pass found that fits `tools/games/<game>.md` (rules and terms, faction facts, notes on the key or
    the cases) to its "Notes from the patterns check" section.
 
+## Working fast (lessons of the Inscryption pass, 26 Oct 2026)
+The Inscryption pass took many builds because patterns were tried before the errors were understood. Do it in this order:
+1. **Find where each error comes from before changing anything.** `tools/entry_diff.py <db> <game>` lists every wrong and missed
+   tag per key entry with the method that made it. In Inscryption most errors were not patterns: they were review files
+   (claude_review) and tags inherited from keyword entries (via_keyword). A pattern cannot fix those.
+2. **Keyword entries reach every card that has the keyword.** One wrong tag on a keyword is wrong on all its holders. Keyword
+   entries can be wiki pages (rule line, then notes about single cards): tag the rule, not the notes; a note about one card belongs
+   to that card. Fix the keyword, never the holders one by one.
+3. **Test a pattern on the key before building.** `tools/pattern_eval.py <db> <game> <file>` gives right/wrong per line and how
+   many cards the matched keywords pass the tag to. Write all candidate lines, keep the good ones, then build once.
+4. **Check whether a case can be met before tagging for it.** `tools/case_lead.py <db> <game> <faction:concept>` shows the lead in
+   the key and in the library. Under 1.5 times in the key: the case or the key is wrong, or the mechanic is not in the text
+   (Inscryption costs are in the cost field: `cost_rules.py`). Patterns cannot fix that.
+5. **Check the key's quotes.** A quote that is not words of the card (a definition, a keyword name for an unrelated tag) marks a
+   bulk addition: verify it against the card text (Unkillable's "health goes up" was one).
+6. **Build rarely.** `game_check.sh` once per batch of changes; the full build and `compare_builds.py` once at the end for shared
+   changes. Diff two builds per entry instead of rebuilding to guess.
+7. **Things that silently undo a fix:** a review drop without a role also drops the `benefits`/`counters` tags (write
+   `concept:does`); reviews are applied in the old ids too, where `death_trigger` still means any death (write
+   `other_death_trigger`); `!` lines remove only text_pattern tags, and `pattern_fix.py` re-adds its decision patterns after them;
+   a review or key change can break a `regression.tsv` line: fix the line in the same change.
+8. **Scores:** `benefits` and `counters` tags count as wrong (the key lists what a card does); do not chase them.
+9. **Reporting:** one short message: what changed, then the decisions needed, each with the situation explained for someone who
+   has not played the game. Push only when Kaptain says "push".
+
 ## How a tag gets there (read before guessing)
 A game's tags come from the whole build chain (`tools/build.sh`, function `steps`), not only from its pattern file. In order:
 - `start_clean.py`: back to the frozen base tags (`make_base.py`; a reload makes the game's base from today's patterns).
@@ -97,6 +122,8 @@ Things that confused earlier chats:
   coverage, key score, real-world cases, regression lines and combo misses. The one-game base is cached until the library changes.
 - `tools/coverage.py <db> <game> 0 --mechanics tools/games/<game>.md`: the mechanics check alone.
 - `tools/mechanic_gaps.py`, `tools/key_diag.py`, `tools/pattern_hits.py`: the diagnosis helpers above.
+- `tools/entry_diff.py`, `tools/pattern_eval.py`, `tools/case_lead.py`: per-entry errors with their source, candidate patterns
+  tested on the key, and whether a faction leads in a mechanic (see "Working fast").
 
 ## Status
 - darkest_dungeon: **done** 24 Oct 2026 (key wrong 78.9 → 57.6, missed 44.2 → 26.6 per 100; combos 6/7 → 6/7; it has no other cases).

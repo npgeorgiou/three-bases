@@ -112,6 +112,18 @@ Read this whole file before you add a game.
 4. Copy the build over `three-bases-library.sqlite`, then commit and push after each step together with its progress files, keys and decisions.
 5. Update `README.md`. Write a short handoff that says what is done, what the build applies, what is left, and the exact commands.
 
+## Lessons from the patterns checks (26 Oct 2026)
+- Keyword and glossary entries pass their tags to every card that has them: tag only what the keyword itself does. If the source
+  is a wiki page with notes about single cards, the notes' effects belong to those cards, not to the keyword.
+- Data that cards print outside their text (costs, types, stats) is read from its field with a data rule (`tools/cost_rules.py`,
+  the converter's `tags`), not with text patterns.
+- Before writing patterns, see where errors come from (`tools/entry_diff.py`), test candidate lines on the key
+  (`tools/pattern_eval.py`), and check that each real-world case shows a lead in the cards (`tools/case_lead.py`). Build once per
+  batch, not once per pattern.
+- Key quotes must be words of the card. A tag quoted with a definition or with a name that does not say the effect is unverified.
+- Combos are tested between two cards (`query._ent` skips keywords and tribes); a combo that puts a keyword on a card is written
+  with a card that has that keyword.
+
 ## Reading cards (Kaptain's decision; the only way cards are read)
 **Why there is a key.** The library's tags come from regexes (patterns). The answer key is the only place where cards are
 read and tagged by judgement, so it is the only measure of whether the patterns are right: every score (wrong and missed per 100
