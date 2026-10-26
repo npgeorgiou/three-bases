@@ -13,6 +13,11 @@ then the gaps in `tools/patterns/<game>.txt`.
 - **Present before pushing.** Never push a pattern change, a key change or a shared change without first presenting the results and
   the findings to Kaptain. Push only after his OK.
 - **Never change the key yourself.** Propose a key change; Kaptain decides. Key changes made so far are listed under Status.
+  **Proposing is mandatory, not optional.** Whenever you learn something that makes a key tag wrong or missing (the card text shows it,
+  a concept definition changed, a pattern now finds more cards, a later step gives better information), write the proposal in your
+  report to Kaptain in the same step: the entries, what each card says (quote it), the tag to add or remove, and one yes/no
+  question. Do not silently leave the key as it was and do not leave it for a later pass. If Kaptain has said "change the key
+  where you are sure" for a task, apply the changes the card text settles and list every one under Status.
 - **Report the game's own numbers**, before and after: key wrong and missed per 100 key entries, and its real-world cases per kind
   (signature, archetype, splash, combo). Library totals are not the result of a game's pass.
 - **Shared changes** (`tools/patterns/_all.txt`, code in `tools/`, the concept tree) reach every game: present every game's numbers
