@@ -37,17 +37,17 @@ SHAPES = {
     'ability': {'when', 'limit', 'if', 'do'},
     'event': {'event', 'actor', 'object'},
     'target': {'kind', 'side', 'pick', 'n', 'zone', 'with'},
-    'filter': {'attr', 'op', 'n', 'ref', 'val'},
+    'filter': {'attr', 'op', 'n', 'ref', 'val', 'vals', 'refs'},
     'cond': {'test', 'of', 'attr', 'op', 'n', 'span', 'event', 'ref'},
     'effect': {'act', 'on', 'to', 'zone', 'card', 'keyword', 'params', 'lasts', 'link'},
-    'amount': {'x', 'of', 'attr', 'event', 'span', 'inner'},
+    'amount': {'x', 'of', 'attr', 'event', 'span', 'inner', 'items'},
 }
 NEEDS_LASTS = {'stat_change', 'give_keyword', 'cant', 'can', 'cost_change'}
 
 
 class Checker:
     def __init__(self, game):
-        self.v = vocab(); self.names = Names(sqlite3.connect(DB), game); self.errors = []; self.links = []
+        self.v = vocab(); self.names = Names(sqlite3.connect(DB), game); self.errors = []; self.links = []; self.stubs = []
     def err(self, cid, path, msg): self.errors.append((cid, path, msg))
     def enum(self, cid, path, field, val):
         if val not in self.v.get(field, ()): self.err(cid, path, f'{field} value {val!r} not in vocab')
@@ -58,7 +58,9 @@ class Checker:
         return True
     def link(self, cid, path, kind, name):
         ids = self.names.resolve(kind, name)
-        if not ids: self.err(cid, path, f'{kind} name {name!r} not found')
+        if not ids and kind in ('card', 'keyword') and isinstance(name, str) and name.strip():
+            self.stubs.append((cid, path, kind, name))  # named in the text but missing from the library: kept as a stub entry
+        elif not ids: self.err(cid, path, f'{kind} name {name!r} not found')
         elif len(ids) > 1 and kind == 'card': self.links.append((cid, path, kind, name, ids))  # several entries share the name
         return ids
     def amount(self, cid, path, a):
@@ -70,6 +72,7 @@ class Checker:
         if 'event' in a: self.event(cid, path + '.event', a['event'])
         if 'span' in a: self.enum(cid, path + '.span', 'span', a['span'])
         if 'inner' in a: self.amount(cid, path + '.inner', a['inner'])
+        for k, it in enumerate(a.get('items', [])): self.amount(cid, f'{path}.items[{k}]', it)
     def target(self, cid, path, t):
         if not self.keys(cid, path, 'target', t): return
         for f in ('kind', 'side', 'pick', 'zone'):
@@ -79,9 +82,13 @@ class Checker:
     def filt(self, cid, path, f):
         if not self.keys(cid, path, 'filter', f): return
         a = f.get('attr'); self.enum(cid, path + '.attr', 'attr', a); self.enum(cid, path + '.op', 'op', f.get('op'))
-        if a in ('keyword', 'type', 'card'): self.link(cid, path + '.ref', a, f.get('ref'))
-        elif a in ('state', 'category', 'region', 'origin'): self.enum(cid, path + '.val', 'state' if a == 'origin' else a, f.get('val'))
-        elif a in ('power', 'health', 'cost', 'count'):
+        if a in ('keyword', 'type', 'card'):
+            for r in (f['refs'] if 'refs' in f else [f.get('ref')]): self.link(cid, path + '.ref', a, r)
+        elif a in ('state', 'category', 'region', 'origin'):
+            for x in (f['vals'] if 'vals' in f else [f.get('val')]): self.enum(cid, path + '.val', 'state' if a == 'origin' else a, x)
+        elif a == 'name_has':
+            if not isinstance(f.get('ref'), str) or not f['ref'].strip(): self.err(cid, path + '.ref', 'name word expected')
+        elif a in ('power', 'health', 'cost', 'count', 'base_power', 'base_health'):
             if not isinstance(f.get('n'), (int, float)): self.err(cid, path + '.n', 'number expected')
     def event(self, cid, path, e):
         if not self.keys(cid, path, 'event', e): return
@@ -108,6 +115,7 @@ class Checker:
         if 'keyword' in e: self.link(cid, path + '.keyword', 'keyword', e['keyword'])
         for p, a in (e.get('params') or {}).items():
             if p == 'event': self.enum(cid, f'{path}.params.event', 'event', a)
+            elif p == 'attr': self.enum(cid, f'{path}.params.attr', 'attr', a)
             else: self.enum(cid, f'{path}.params', 'param', p); self.amount(cid, f'{path}.params.{p}', a)
         if 'lasts' in e: self.enum(cid, path + '.lasts', 'lasts', e['lasts'])
         elif act in NEEDS_LASTS: self.err(cid, path, f'{act} needs lasts')
@@ -143,7 +151,8 @@ def main():
         for i in set(want) - set(seen): ch.err(i, '', 'card missing from the output')
         for i in set(seen) - set(want): ch.err(i, '', 'card not in the input')
     for e in ch.errors: print('%s | %s | %s' % e)
-    print(f'{len(seen)} records, {len(ch.errors)} problems, {len(ch.links)} names with several entries')
+    for e in ch.stubs: print('stub | %s | %s | %s %r' % e)
+    print(f'{len(seen)} records, {len(ch.errors)} problems, {len(ch.links)} names with several entries, {len(ch.stubs)} stub names')
     sys.exit(1 if ch.errors else 0)
 
 

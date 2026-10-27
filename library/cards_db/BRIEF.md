@@ -1,4 +1,4 @@
-# Reader brief: describe each card as a record (version 1)
+# Reader brief: describe each card as a record (version 2)
 
 You read card texts and write what each card DOES as JSON records. Every value is a number, a value from
 `vocab.tsv` (column `value`, grouped by `field`), or the exact name of another card, keyword or type (the script turns names into
@@ -23,9 +23,11 @@ EVENT    `{"event": event, "actor": TARGET, "object": TARGET}`  actor = who does
          Static abilities ("Allies have +1|+0", "I can't be blocked") use `{"event": "always"}`.
 TARGET   `{"kind": kind, "side": side, "pick": pick, "n": AMOUNT, "zone": zone, "with": [FILTER, ...]}`  n defaults to 1;
          "all" targets use pick all and omit n. `{"pick": "self"}` alone means the card itself.
-FILTER   `{"attr": "power|health|cost", "op": op, "n": number}`
+FILTER   `{"attr": "power|health|cost|base_power|base_health", "op": op, "n": number}`
          `{"attr": "keyword|type|card", "op": "is|not", "ref": "<exact name>"}`
          `{"attr": "state|category|region|origin", "op": "is|not", "val": <value of that field>}`
+         one of several: `"op": "in"` with `"vals": [...]` or `"refs": [...]` ("a Fast spell, Slow spell, or Skill")
+         card families by name: `{"attr": "name_has", "op": "is", "ref": "Crimson"}` ("Crimson allies", "Storm Conduits")
 COND     `{"test": test, "of": TARGET, "attr": attr, "op": op, "n": AMOUNT, "span": span, "event": EVENT, "ref": "<name>"}`
          (only the keys the test needs)
 EFFECT   `{"act": act, "on": TARGET, "to": TARGET, "zone": zone, "card": "<exact name>", "keyword": "<exact name>",
@@ -33,7 +35,8 @@ EFFECT   `{"act": act, "on": TARGET, "to": TARGET, "zone": zone, "card": "<exact
          on = what the effect acts on; to = second target (strike X to Y, move to); zone = where a created or moved card goes;
          card = the card created, summoned or transformed into; keyword = the keyword given, removed or used.
          lasts is required for stat_change, give_keyword, cant, can, cost_change; link is required from the 2nd effect on.
-AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "span": span, "inner": AMOUNT}` (only the keys needed)
+AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "span": span, "inner": AMOUNT, "items": [AMOUNT]}`
+         (only the keys needed; "items" for x sum: "the number of allies stunned or recalled")
 
 ## Reading rules
 1. "I", "me", "my" = the card itself (pick self). "You", "your" = the player (kind player, side mine). "Allies" = side mine,
@@ -55,13 +58,20 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
    = X (target filtered "not Y"), then Z with link instead (target pick it, filtered "Y"). "X, or if <you / the game state> Y,
    Z" = two abilities with the same when: one with the cond "not Y" doing X, one with the cond "Y" doing Z (see Gnar).
 9. Stages "I-II:" / "III:" = COND test stage, n 1 and 2 (two conds are OR inside one stage: write one ability per stage).
-10. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Never add an effect the text does not state.
+10. "When X or Y" (two different events) = one ability per event, same effects. "I or a Living Shadow strike" = two abilities.
+11. A card, keyword or token the text names but names_in_text does not list: still write its exact name as the text spells
+   it (singular: "2 Dauntless Vanguards" = card "Dauntless Vanguard", params amount 2). The script keeps it as a named stub.
+12. Combat abilities have their own acts: first_strike (Quick Attack), double_strike, excess_damage (Overwhelm, on the enemy
+   player), damage_reduction (Tough), strike_with (Formidable, params attr health). "can't" / "can only be blocked by X":
+   act cant on the units that cannot act, params event, and `"to": {"pick": "self"}` (they cannot block ME).
+13. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Never add an effect the text does not state.
 
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:
 - Status keywords (a unit has it: Elusive, Barrier, Stun, Quick Attack, Ephemeral, ...): abilities of the holder, "I" / "this
   unit" = pick self. Stun: `{"when": {"event": "always"}, "do": [{"act": "cant", "on": {"pick": "self"}, "params": {"event":
-  "attacks"}, "lasts": "this_round"}, ...]}`.
+  "attacks"}, "lasts": "this_round"}, ...]}`. Quick Attack: `{"when": {"event": "attacks", "actor": {"pick": "self"}}, "do":
+  [{"act": "first_strike", "on": {"pick": "self"}, "lasts": "this_round"}]}`.
 - Action keywords (a card does it to something: Recall, Obliterate, Invoke, Predict, Toss, Nab, Rally, Forge, ...): one ability
   with `{"event": "activated"}`; what it acts on is `{"pick": "it"}` (the target the card names); numbers the card gives (Toss 2)
   are `{"x": "event_amount"}`.

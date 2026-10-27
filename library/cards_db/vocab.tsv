@@ -227,3 +227,22 @@ x	half	half of the inner value			27 Oct 2026, v1
 x	double	double the inner value			27 Oct 2026, v1
 state	combat	came from combat (strikes), for damage events			27 Oct 2026, v1
 state	spent	spent (mana)			27 Oct 2026, v1
+act	first_strike	the target strikes before the unit it fights (Quick Attack)	first_strike	strikes	27 Oct 2026, v2
+act	double_strike	the target strikes before and together with the unit it fights (Double Attack)	multi_attack	strikes	27 Oct 2026, v2
+act	excess_damage	damage beyond what kills the struck unit goes to the target (Overwhelm: target enemy player)	excess_damage	damaged;nexus_damaged	27 Oct 2026, v2
+act	damage_reduction	damage the target takes is reduced by param amount (Tough)	damage_reduction		27 Oct 2026, v2
+act	strike_with	the target strikes with the stat in param attr instead of Power (Formidable)	stat_multiply		27 Oct 2026, v2
+event	mana_spent	mana is spent (object: what it was spent on)			27 Oct 2026, v2
+event	keyword_used	an action keyword is used (object carries the keyword filter: Plant, Toss, Predict...)			27 Oct 2026, v2
+x	full	the amount needed to fill up (heal fully)			27 Oct 2026, v2
+x	sum	the sum of the amounts in items			27 Oct 2026, v2
+attr	name_has	the card name contains the word in ref (card families: Crimson, Storm Conduit)			27 Oct 2026, v2
+attr	base_power	printed Power			27 Oct 2026, v2
+attr	base_health	printed Health			27 Oct 2026, v2
+op	in	is one of vals (or refs)			27 Oct 2026, v2
+kind	keyword	a keyword (for counting keywords)			27 Oct 2026, v2
+state	positive	a positive keyword or effect			27 Oct 2026, v2
+region	own_regions	one of my deck's regions			27 Oct 2026, v2
+region	same_as_self	the same region as the card itself			27 Oct 2026, v2
+param	attr	an attr value (for strike_with)			27 Oct 2026, v2
+zone	attached	attached to a unit or card			27 Oct 2026, v2
