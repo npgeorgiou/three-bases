@@ -14,6 +14,7 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `input/<game>/` | Reader input batches |
 | `read/<game>/` | Reader output: one JSON record per card (the source of truth), plus proposals for new values |
 | `CHANGES.md` | Every change to the shapes or values, with the card that caused it |
+| `RESULTS.md`, `CHECK_20.md` | What the Runeterra test showed (accuracy, cost, batch size); 20 random cards with their rows |
 | `STATUS.md` | Which batches are done, partial or still to read (made by `status.py <game>` from the files) |
 | `status.py`, `show.py`, `compare.py`, `queries.py` | Progress from the files; cards with their records for checking by eye; first vs second reading; connection queries |
 | `rows.py` | A card's rows from `cards.sqlite` as a table with names (what Kaptain checks) |
