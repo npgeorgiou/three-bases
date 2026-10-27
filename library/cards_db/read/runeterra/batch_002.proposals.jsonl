@@ -1,0 +1,9 @@
+{"id": 750660, "field": "if", "need": "distinct_new_cards_played"}
+{"id": 750666, "field": "act", "need": "spend_all_mana"}
+{"id": 750672, "field": "with", "need": "rarity_epic"}
+{"id": 750693, "field": "if", "need": "damage_amount_sum"}
+{"id": 750714, "field": "act", "need": "combine"}
+{"id": 750757, "field": "when", "need": "next_round_start_delay"}
+{"id": 750769, "field": "with", "need": "summoned_this_round"}
+{"id": 750773, "field": "act", "need": "gain_control"}
+{"id": 750781, "field": "with", "need": "cost_relative_to_killed"}
