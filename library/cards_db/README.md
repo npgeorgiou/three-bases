@@ -33,5 +33,7 @@ Nothing about the run lives only in a chat. Everything needed to continue is in 
    `--only` with those ids, or the reader skips ids already in the parts), then the parts are joined and checked.
 4. Values and rules change only through `vocab.tsv`, `BRIEF.md` and a line in `CHANGES.md`, committed in the same step.
 5. The reader prompt is in `READER_PROMPT.md`; a new chat uses it unchanged, filling in the batch name.
-6. Order of work for a game: all batches -> `normalize.py` on all records -> `reread.py make <game> unsure` and read the
+6. `reread.py merge` and `normalize.py` run only on batches whose reader has finished (a running reader rewrites a file
+   that disappears under it).
+7. Order of work for a game: all batches -> `normalize.py` on all records -> `reread.py make <game> unsure` and read the
    fix batches -> `reread.py merge` -> `normalize.py` again -> `compare.py` on the second-reading sample -> `load.py`.
