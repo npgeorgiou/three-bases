@@ -238,7 +238,8 @@ class Game:
         rel0 = lambda a, b: a == b or b in self.anc.get(a, ()) or a in self.anc.get(b, ())
         for k, (a, b) in windows:
             cand = [i for i, (x, y) in enumerate(sents) if i not in skip and min(b, y) > max(a, x) and any(rel0(k, o) for o in hint[i])]
-            i = cand[0] if cand else place(sents, a, b, skip)
+            touches_skip = any(min(b, sents[j][1]) > max(a, sents[j][0]) for j in skip)
+            i = cand[0] if cand else (None if touches_skip else place(sents, a, b, skip))  # words on a keyword line belong to it
             if i is not None: add(i, k, 'tag', max(a, sents[i][0]) if not cand else None)
         # a tag with no stored words (a hand review) goes to the sentence where a hint of the same or a related concept is,
         # or to the only sentence; card-level facts (from the cost field, the game's structure) go on every row as extra
@@ -266,6 +267,7 @@ class Game:
         rows, diffs = [], []
         kwre, allfx, kwfx, kwgrant, kwtrig = self.prep
         prev, ab, last_tg, last_fx, leftover = None, 0, '', '', []
+        uses_early = [('has_keyword', d) for d in named] + [(r_, d) for r_, d in self.links.get(e, [])]
         rel = lambda a, b: a == b or b in self.anc.get(a, ()) or a in self.anc.get(b, ())
         tagset = {k for k, *_ in self.tags[e]}
         for i, (x, y) in enumerate(sents):
@@ -300,7 +302,10 @@ class Game:
             else: t = 'on_play' if cat in A.ONE_OFF else 'passive'; ab += 1
             prev = t if t != 'passive' else None
             skip_to = op.end() if op else 0
-            fx = [k for k in ok if self.facet.get(k) in EFFECT and k not in A.SKIP and k not in CARD_KIND - {'terrain'} and k not in PROPERTY
+            if cat == 'item': fx_block = {'merge_attach', 'items_consumables'}  # an artifact attaching to its bearer is what it is
+            else: fx_block = set()
+            if lab and lab.group(1).strip() in {self.kwname.get(d) for _, d in uses_early}: fx_block |= set(ok)  # "Sentinel: ...": the keyword's rows
+            fx = [k for k in ok if self.facet.get(k) in EFFECT and k not in A.SKIP and k not in CARD_KIND - {'terrain'} and k not in PROPERTY and k not in fx_block
                   and role.get(k, 'does') in ('does', 'grants', 'trigger')]
             fx = [k for k in fx if not any(o != k and k in self.anc.get(o, ()) for o in fx)]  # keep the narrowest
             fx.sort(key=lambda k: pos[i].get(k, 9e9))
@@ -319,7 +324,8 @@ class Game:
                 used = set()
                 for r in crow:
                     k = r['effect']
-                    narrow = [o for o in ok if o in fx and k in self.anc.get(o, ())]
+                    narrow = [o for o in ok if o in fx and k in self.anc.get(o, ())
+                              and not (k == 'stat_gain' and o in ('attack_gain', 'defence_gain'))]  # +2/+2 stays one stat gain
                     if narrow: r['effect'] = narrow[0]; used.add(narrow[0])
                     used |= {o for o in fx if rel(o, r['effect'])}
                     d = r['duration'] or ('while' if r['trigger'] in ('passive', 'aura') else 'permanent' if r['effect'] in A.LASTING else 'instant')
@@ -328,14 +334,25 @@ class Game:
                     src = 'words+tag' if r['effect'] in used or any(rel(o, r['effect']) for o in ok) else 'words'
                     if src == 'words' and any(rel(o, r['effect']) for o in hint[i]): src = 'words+hint'
                     if src == 'words': diffs.append((e, i, r['effect'], 'words, no tag', s[:160]))
-                    if src == 'words' and g in CHECKED:  # tags redone by hand there: words no hint backs are only a maybe
+                    if src == 'words' and g in CHECKED and (cat in ('game_rule', 'terrain', 'event', 'modifier') or len(s) > 140):
+                        # tags redone by hand there: in rule pages and long prose, words no hint backs are only a maybe
                         leftover.append('maybe:' + r['effect']); continue
                     rows.append((e, ab, r['trigger'], r['effect'], r['target'], shape_of(r['words']), r['amount'].replace('name', name or '~'),
                                  d, r['condition'], extra, src, ''))
                     if r['effect'] in ('draw', 'generate_cards', 'tutor', 'copy'): last_fx = r['effect']
+                spans = [(s.find(r['words'][:30]), s.find(r['words'][:30]) + len(r['words'])) for r in crow if s.find(r['words'][:30]) >= 0]
+                rest = []
                 for k in fx:
-                    if k not in used: diffs.append((e, i, k, 'tag, no clause', s[:160]))
-                fx = [k for k in fx if k not in used]  # a tag no clause answers still makes its row, from the tag's own words
+                    if k in used: continue
+                    diffs.append((e, i, k, 'tag, no clause', s[:160]))
+                    at = pos[i].get(k, x) - x
+                    if any(a0 <= at < b0 for a0, b0 in spans): leftover.append('tag:' + k)  # its words are a clause already read
+                    else: rest.append(k)
+                fx = rest  # a tag no clause answers, outside the clauses read, still makes its row from its own words
+            # a tag no clause answers makes a row only where its own wording pattern also matches this sentence
+            keep_fx = [k for k in fx if hint[i][k] & {'pattern', 'rule'}]
+            leftover += ['tag:' + k for k in fx if k not in keep_fx]
+            fx = keep_fx
             plain = blank_conditions(s)
             for n, k in enumerate(fx):
                 a = max(0, pos[i].get(k, x) - x)
@@ -366,7 +383,11 @@ class Game:
         for rel, d in self.links.get(e, []):
             nm = self.kwname.get(d, '')
             base = re.sub(r"\s*(?:\(sigil\)|sigils?)$", '', nm)  # "Mox Sigils" is named on cards as "Green Mox"
-            if d not in named and nm and re.search(rf"\b{re.escape(base)}\b", rt): uses.append((rel, d))  # a link counts only where the text names it
+            # a keyword the card has opens a line ("Backstab: (2)", "Flying"); named after "with", "gain" or "give" it is
+            # given to something else, so the card does not have it
+            if d not in named and nm and (re.search(rf"(?:^|\n|[.:] )(?:keywords?: )?{re.escape(base)}\b", rt) if rel == 'has_keyword'
+                                          else re.search(rf"\b(?:give|gives|gain|gains|grant|grants|get|gets|has|have)\b[^.]{{0,40}}\b{re.escape(base)}\b(?! (?:minions?|creatures?|units?|characters?|cards?|allies))", rt)):
+                uses.append((rel, d))  # given only where a verb gives it; "summon a 1/2 with Zeal" describes the new card
         for rel, d in uses:
             nm = self.kwname.get(d, '')
             for kr in self.kwrows.get(d, []):
@@ -376,7 +397,7 @@ class Game:
                 if m and 'N' in kam: kam = kam.replace('N', m.group(1))
                 if rel == 'grants_keyword':
                     j = rt.find(nm); i = place(sents, j, j + len(nm)) if j >= 0 else None
-                    ktg = A.target(rt[sents[i][0]:sents[i][1]], '') if i is not None else ''
+                    ktg = (A.target(rt[sents[i][0]:sents[i][1]], '') if i is not None else '') or 'any_unit chosen'
                     kt = 'passive'
                 rows.append((e, 'kw', '' if kt == '-' else kt, kfx, ktg, '', kam, kdur, kcond, '', 'keyword', nm))
         keep = sorted({k for k, r, meth, ev in unplaced if meth != 'key' and self.facet.get(k) != 'problem'})
@@ -391,7 +412,12 @@ class Game:
             if self.facet.get(k) == 'problem': continue
             if meth == 'via_keyword' and self.links.get(e): continue  # the keyword's own rows carry it
             diffs.append((e, None, k, f'unplaced {meth}', ev[:160]))
-        return rows, diffs
+        seen, uniq = set(), []
+        for r in rows:  # the same effect on the same target with the same amount, said twice (wiki pages repeat), is one row
+            key = (r[2], r[3], r[4], r[6])
+            if r[3] and key in seen: continue
+            seen.add(key); uniq.append(r)
+        return uniq, diffs
 
     def run(self, outdir=None, sample=0):
         rows = self.c.execute("SELECT id, name, category, text FROM entities WHERE game=? AND category NOT IN ('keyword','tribe') "
@@ -408,6 +434,7 @@ class Game:
             for r in res[e][0]:
                 if k == r[2] or k == r[3] or re.search(rf"(?:^|[ :,]){re.escape(k)}(?:,|$)", r[9] or ''): return True
                 if k in self.anc.get(r[3], ()) or k in self.anc.get(r[2], ()): return True
+                if r[3] == 'stat_gain' and k in ('attack_gain', 'defence_gain'): return True  # "+1/+1" is one stat gain row
                 if r[10] == 'keyword': return True if any(k == x[3] for x in []) else None
             return False
         kwk = collections.defaultdict(set)

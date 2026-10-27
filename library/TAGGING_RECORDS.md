@@ -63,6 +63,17 @@ Read this section only; the sections below it are the earlier test and its histo
    Tags found nowhere in the rows: 15 of 1197, 52 of 769, 37 of 1779, 66 of 2630, 135 of 5564.
    Main errors left: who is hit in long or unusual sentences, wiki prose (ITB) and "Choose one" cards; the test sets carry
    the reader's own mistakes (some expected targets are wrong), so a second reader pass is needed for a true number.
+   27 Oct, late morning (Kaptain: ask the questions per card; fix tags, key, keywords and test cards that are surely wrong):
+   `tools/records/clauses.py` cuts each sentence into clauses (one per verb) and answers when / what / who / how much / how
+   long / condition from each clause; tags make "what" narrower and fill what no clause answers where their own pattern also
+   matches. Keyword rows: a card has a keyword only where the keyword opens a line; it is given only after give/gain/grant
+   ("summon a 1/2 with Zeal" describes the new card); sigil names match their base ("Green Mox" is Mox Sigils).
+   Second reader pass (same 100 cards): fully right ITB 3, Inscryption 67, Faeria 28, Duelyst 43, Darkest Dungeon 41.
+   Test sets rebuilt from it; after this round's fixes: 7, 72, 48, 52, 67 of 100 right; expected rows met 58, 78, 72, 73, 94%.
+   Tags found nowhere in the rows: 30/1197, 57/768, 40/1779, 92/2630, 13/5556.
+   Sure fixes: 8 Darkest Dungeon area-damage tags on skills that deal no damage (reviews, the game's pattern and the step-3
+   decision now need "deals damage", not -100%), 5 of them in the key too; Inscryption Skinning Knife "immunity" (from cut wiki
+   text). Into the Breach stays low: its wiki prose repeats and describes, and needs its own reading rules.
    Scripts per game: the effect from today's patterns, plus new patterns for target, amount and duration. A card the script
    covers completely is not read. Start with the games with fixed wording (Magic, Hearthstone, Runeterra, Lorcana, SWU).
 4. Repeats read once: texts that differ only in name or numbers share one reading.

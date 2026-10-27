@@ -4,7 +4,7 @@
 !movement|\bpull
 !damage_over_time|\bbleed
 damage|does|\btargets (all of )?enemy ranks [^.]*\.( moves self[^.]*\.)? deals damage\b(?! \(modifier -100%\))
-aoe_damage|does|\btargets all of enemy ranks\b
+aoe_damage|does|\btargets all of enemy ranks [\d, ]+\.(?: moves self[^.]*\.)? deals damage\b(?! \(modifier -100%\))
 scope_multi|does|\btargets all of ally ranks\b
 buff|does|\+\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit|max hp)\b|\bbuff: \+
 drawback|does|-\d+(\.\d+)?%? (accuracy|damage|dodge|speed|protection|crit)\b[^;.]*\(self\)|\bstress damage amount \d+ \((self|party_other|individual)\)

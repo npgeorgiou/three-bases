@@ -879,10 +879,6 @@
 [
 "speed",
 "+9 speed (self)"
-],
-[
-"aoe_damage",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C"
@@ -996,10 +992,6 @@
 [
 "rank_positions",
 "Usable from ranks 4, 3"
-],
-[
-"aoe_damage",
-"Targets all of enemy ranks 3, 4"
 ],
 [
 "no_damage_output",
@@ -1260,10 +1252,6 @@
 [
 "ranged",
 "Ranged skill"
-],
-[
-"aoe_damage",
-"Targets all of enemy ranks 1, 2, 3, 4"
 ],
 [
 "damage_over_time",
@@ -2027,10 +2015,6 @@
 [
 "damage_over_time",
 "bleed"
-],
-[
-"aoe_damage",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "A=B",
@@ -2766,10 +2750,6 @@
 [
 "stress_morale",
 "stress +7"
-],
-[
-"aoe_damage",
-"Targets all of enemy ranks"
 ]
 ],
 "by": "C"

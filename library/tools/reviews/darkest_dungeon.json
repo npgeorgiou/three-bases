@@ -7261,7 +7261,8 @@
   "drop": [
    "board_presence",
    "piercing",
-   "temporary_effect"
+   "temporary_effect",
+   "aoe_damage"
   ],
   "add": [
    "damage_over_time",
@@ -7270,8 +7271,7 @@
    "ranged",
    "rank_positions",
    "stress_morale",
-   "traits_quirks",
-   "aoe_damage"
+   "traits_quirks"
   ]
  },
  "760822": {
@@ -7679,5 +7679,47 @@
    "stress_morale"
   ],
   "drop": []
+ },
+ "759844": {
+  "add": [],
+  "drop": [
+   "aoe_damage"
+  ]
+ },
+ "759886": {
+  "add": [],
+  "drop": [
+   "aoe_damage"
+  ]
+ },
+ "759908": {
+  "add": [],
+  "drop": [
+   "aoe_damage"
+  ]
+ },
+ "759935": {
+  "add": [],
+  "drop": [
+   "aoe_damage"
+  ]
+ },
+ "759951": {
+  "add": [],
+  "drop": [
+   "aoe_damage"
+  ]
+ },
+ "759997": {
+  "add": [],
+  "drop": [
+   "aoe_damage"
+  ]
+ },
+ "760029": {
+  "add": [],
+  "drop": [
+   "aoe_damage"
+  ]
  }
 }

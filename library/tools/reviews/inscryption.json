@@ -204,7 +204,8 @@
    "items_consumables"
   ],
   "drop": [
-   "once_per_game"
+   "once_per_game",
+   "immunity"
   ]
  },
  "740614": {

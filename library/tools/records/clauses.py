@@ -137,7 +137,7 @@ def A_from_opening(op):
     return w + ' triggering' if w.endswith('_unit') else t
 
 
-def side(k, tg):
+def side(k, tg, qual=False):
     """The effect's concept, made exact by who it hits (moving an enemy is forced movement, returning one bounces it)."""
     enemy = tg.startswith(('enemy_unit', 'enemy_player'))
     if k == 'move': return 'forced_movement' if enemy else 'terrain' if tg.startswith('position') else 'movement'
@@ -146,7 +146,8 @@ def side(k, tg):
     if k == 'discard': return 'hand_disruption' if enemy or tg.startswith('enemy') else 'discard'
     if k == 'life_loss': return 'direct_damage' if tg == 'enemy_player' else 'life_payment'
     if k == 'damage': return 'direct_damage' if tg == 'enemy_player' else 'aoe_damage' if ' all' in tg else 'damage'
-    if k == 'destroy': return 'self_destruct' if tg == 'self' else 'board_wipe' if tg.endswith(' all') and tg.startswith(('any_unit', 'enemy_unit')) else 'destroy'
+    if k == 'destroy': return 'self_destruct' if tg == 'self' else 'board_wipe' if tg.endswith(' all') and tg.startswith(('any_unit', 'enemy_unit')) and not qual else 'destroy'
+    if k == 'sacrifice' and tg.startswith('any_unit'): return k  # the target is set to one's own below
     return k
 
 
@@ -177,7 +178,7 @@ def answer(s, cat, default_trigger, kwtrig, kwfx, last=''):
         out.append(dict(trigger=trig, effect='modal_choice', target='self', shape='', amount='', duration='instant', condition='', words='choose one'))
         body = re.sub(r"^choose one\W*", '', body)
     parts = [x for x in SPLIT.split(body) if x and x.strip(' ,.')]
-    verb_prev = None
+    verb_prev, prev_subj = None, ''
     for cl in parts:
         cl = cl.strip(' ,.;')
         hit = None
@@ -193,12 +194,14 @@ def answer(s, cat, default_trigger, kwtrig, kwfx, last=''):
         if hit is None: continue
         mm, k, w = hit; verb_prev = hit
         subj, rest = cl[:mm.start()], cl[mm.start():]
+        if subj.strip(' ,'): prev_subj = who(re.split(r",\s*", subj.strip())[-1], last, op, cat, k)  # "each player draws 2 and gains 2 life"
         if w == 'obj':
             obj = re.search(r"\bto (.+)$", rest) if k in ('damage', 'heal') else None
             tg = who(obj.group(1) if obj else re.sub(r"^\S+\s*", '', rest), last, op, cat, k) if rest else ''
             if not tg and subj.strip(): tg = who(subj, last, op, cat, k)
         elif w in ('subj', 'subj_player'):
-            tg = who(subj, last, op, cat, k) if subj.strip(' ,') else ''
+            sj = re.split(r",\s*", subj.strip())[-1] if subj.strip(' ,') else ''  # the subject is the last phrase before the verb
+            tg = who(sj, last, op, cat, k) if sj else (prev_subj or '')
             if not tg: tg = 'my_player' if w == 'subj_player' or cat in A.ONE_OFF else 'self'
         elif w == 'grant':
             g = re.match(r"\S+\s+(.*?)\b" + re.escape(mm.group('kw')), rest)
@@ -223,7 +226,8 @@ def answer(s, cat, default_trigger, kwtrig, kwfx, last=''):
                                     'ward': 'shield', 'protection': 'shield', 'trample': 'excess_damage'}.get(kname, 'buff')
             amount = kname
         if k == 'stat_set': k = 'stat_loss' if re.search(r"\bto [01]\b", rest) else 'stat_gain'
-        k = side(k, tg)
+        if k == 'sacrifice' and tg.startswith('any_unit'): tg = tg.replace('any_unit', 'ally_unit')  # one sacrifices one's own
+        k = side(k, tg, bool(re.search(r"\b(?:with|that|which|who|whose)\b", rest)))
         dur = next((d for rx, d in A.DURATIONS if rx.search(cl)), None)
         conds = [c.group(0).strip() for c in COND.finditer(cl)] or cond_all
         out.append(dict(trigger=trig, effect=k, target=tg, shape='', amount=amount, duration=dur or '', condition='; '.join(conds)[:80], words=cl[:80]))

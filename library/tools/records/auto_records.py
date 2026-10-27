@@ -187,7 +187,11 @@ def dd_records(e, cat, text):
             if dm and '-100%' not in dm.group(0): out.append((e, ab, 'activated', 'aoe_damage' if tm and tm.group(1) else 'damage', tg, dm.group(1) or dm.group(2) or '', 'instant', '', 'script'))
             hm = re.search(r"\bheals (\d+)(?: (\d+))?", sk)
             if hm: out.append((e, ab, 'activated', 'heal', tg, '-'.join(x for x in hm.groups() if x), 'instant', '', 'script'))
-            if re.search(r"moves self", sk): out.append((e, ab, 'activated', 'movement', 'self', '', 'instant', '', 'script'))
+            mv = re.search(r"moves self \(back/forward\) (\d+) (\d+)", sk)
+            if mv: out.append((e, ab, 'activated', 'movement', 'self', ', '.join(x for x in (f'back {mv.group(1)}' if mv.group(1) != '0' else '',
+                                                                                          f'forward {mv.group(2)}' if mv.group(2) != '0' else '') if x),
+                               'instant', '', 'script'))
+            elif re.search(r"moves self", sk): out.append((e, ab, 'activated', 'movement', 'self', '', 'instant', '', 'script'))
             fx = sk.split('effects:')[1] if 'effects:' in sk else ''
             for it in [x.strip(' .') for x in re.split(r"[;,]", fx) if x.strip(' .')]:
                 own = next((v for kk, v in DD_WHO.items() if kk in it), tg)
@@ -211,10 +215,13 @@ def dd_records(e, cat, text):
     for ln in [x.strip(' .') for x in re.split(r"[;\n]", t) if x.strip(' .')]:
         m = DD_STAT.match(ln)
         if not m:
-            if cat == 'status' and re.search(r"[a-z]{4}", ln): out.append((e, 1, 'passive', 'traits_quirks', 'self', ln[:60], 'while', '', 'script'))
+            if ln.startswith('acts on its own'): out.append((e, 1, 'passive', 'autonomous_units', 'self', ln.split(':', 1)[-1].strip()[:60], 'while', '', 'script'))
+            elif cat == 'status' and re.search(r"[a-z]{4}", ln): out.append((e, 1, 'passive', 'traits_quirks', 'self', ln[:60], 'while', '', 'script'))
             else: unread += 1
             continue
         k = 'stat_loss' if m.group(1).startswith('-') else DD_STATK.get(next((w for w in DD_STATK if w in m.group(2)), ''), 'stat_gain')
+        if re.search(r"received|monsters?|surprise|ambush|stress dmg", m.group(2)):  # lower is better for these
+            k = 'stat_gain' if m.group(1).startswith('-') else 'stat_loss'
         cond = '; '.join(x for x in (f'{m.group(3)} {m.group(4)}'.strip() if m.group(3) else '', m.group(5) or '') if x)
         out.append((e, 1, 'passive', k, 'self', f'{m.group(1)} {m.group(2).strip()}', 'while' if cond else 'permanent', cond, 'script'))
     return out, unread

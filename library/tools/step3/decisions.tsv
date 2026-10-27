@@ -1180,7 +1180,7 @@ new	stat_gain|does|monster_train|key	monster_train	(?:\bapply\s+rage\s+\d+\b)|(?
 new	turn_end|does|monster_train|key	monster_train	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)resolve(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
 new	upkeep|does|monster_train|key	monster_train	\bemberdrain\s+\d+\b
 new	activated|does|darkest_dungeon|key	darkest_dungeon	(?:^|[\n.:;/]\s*|\s-\s*|-{3,}\s*|keywords?:\s*(?:[^.\n]*?,\s*)*)camping\s+skill(?=\s*(?:$|[\n.,:;(/]|\d|\s-))
-new	aoe_damage|does|darkest_dungeon|key	darkest_dungeon	(?:\btargets\s+all\s+of\s+enemy\s+ranks\s+\d+,\s+\d+,\s+\d+,\s+\d+\b)|(?:\btargets\s+all\s+of\s+enemy\s+ranks\s+\d+,\s+\d+,\s+\d+\b)|(?:\btargets\s+all\s+of\s+enemy\s+ranks\s+\d+,\s+\d+\b)
+new	aoe_damage|does|darkest_dungeon|key	darkest_dungeon	\btargets all of enemy ranks [\d, ]+\.(?: moves self[^.]*\.)? deals damage\b(?! \(modifier -100%\))
 new	autonomous_units|does|darkest_dungeon|key	darkest_dungeon	\bacts\s+on\s+its\s+own\b
 new	bodyguard|does|darkest_dungeon|key	darkest_dungeon	(?:\bguard\s+target\s+ally\b)|(?:\bguard\s+target\s+ally\s+for\s+\d+\s+rounds\b)
 new	buff|does|darkest_dungeon|key	darkest_dungeon	\bbuff\s+party\b
