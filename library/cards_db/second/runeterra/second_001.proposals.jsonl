@@ -1,0 +1,15 @@
+{"id":750773,"field":"act","need":"steal"}
+{"id":750779,"field":"when","need":"next_time_after_death"}
+{"id":750781,"field":"with","need":"cost_relative_to_target"}
+{"id":750867,"field":"test","need":"different_rounds"}
+{"id":750930,"field":"test","need":"captured_count"}
+{"id":751050,"field":"with","need":"cost_relative_to_target"}
+{"id":751075,"field":"event","need":"supported"}
+{"id":751100,"field":"act","need":"gain_empty_mana_gem"}
+{"id":751320,"field":"test","need":"same_card_summoned"}
+{"id":751375,"field":"with","need":"power_relative_to_self"}
+{"id":751489,"field":"event","need":"would_gain_mana_gem"}
+{"id":751611,"field":"act","need":"grant_ability"}
+{"id":751614,"field":"x","need":"different_rounds_count"}
+{"id":751652,"field":"attr","need":"damage_dealt_amount"}
+{"id":751710,"field":"x","need":"different_subtypes_count"}
