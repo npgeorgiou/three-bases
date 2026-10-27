@@ -9,12 +9,18 @@ condition keyword (Combo) only a condition: cards with them inherit that field.
 target: "<who> <how>[ <count>]", or just "self", "my_player", "enemy_player" or "each_player". who: WHO; a card target names its zone after a colon (card:hand, card:deck,
 card:discard). how: HOW. count only when more than one, or a number is printed ("enemy_unit random 2").
 duration: one of DURATION; "n_turns" and "n_rounds" carry the number in amount after a semicolon ("+45%; 2").
-Records are TSV files with these columns in this order; load_records.py (step 6) checks them with check()."""
+shape: the area, when the text gives one (row, line, lane, column, cone, cross, around, adjacent, opposite, behind, diagonal,
+"N tiles", "ranks 1, 2"). extra: every other concept the card's words put on this row (conditions, scope, roles, costs as
+"cost:<concept>"), so no information is lost. keyword: the keyword whose rows these are, for rows copied from a keyword.
+Records are TSV files with these columns in this order; load_records.py (step 6) checks them with check().
+The keyword files (keywords/<game>.txt) use KEYWORD_FILE_COLUMNS."""
 import os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import reading as RD
 
-COLUMNS = ('entity', 'ability', 'trigger', 'effect', 'target', 'amount', 'duration', 'condition', 'source')
+COLUMNS = ('entity', 'ability', 'trigger', 'effect', 'target', 'shape', 'amount', 'duration', 'condition', 'extra', 'source',
+           'keyword')
+KEYWORD_FILE_COLUMNS = ('entity', 'ability', 'trigger', 'effect', 'target', 'amount', 'duration', 'condition')
 WHO = ('self', 'ally_unit', 'enemy_unit', 'any_unit', 'my_player', 'enemy_player', 'each_player', 'card', 'position')
 HOW = ('chosen', 'all', 'random', 'adjacent', 'triggering')
 DURATION = ('instant', 'this_turn', 'this_round', 'until_my_next_turn', 'next_turn', 'n_turns', 'n_rounds', 'this_combat',

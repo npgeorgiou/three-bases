@@ -3,7 +3,7 @@ duration | condition", # comments) against the record format in common.py. Print
 Usage: check_records.py <db> <file>..."""
 import os, sqlite3, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from common import COLUMNS, check
+from common import KEYWORD_FILE_COLUMNS, check
 c = sqlite3.connect(sys.argv[1])
 triggers = {r[0] for r in c.execute("SELECT id FROM concepts WHERE facet='trigger'")}
 effects = {r[0] for r in c.execute("SELECT id FROM concepts WHERE facet NOT IN ('trigger','problem')")}
@@ -16,7 +16,7 @@ def read(path):
         if not line.strip() or line.startswith('#'): continue
         f = [x.strip() for x in line.rstrip('\n').split('|')]
         f += [''] * (8 - len(f))
-        yield n, dict(zip(COLUMNS, f[:8] + [src]))
+        yield n, dict(zip(KEYWORD_FILE_COLUMNS, f[:8]), source=src)
 
 
 if __name__ == '__main__':

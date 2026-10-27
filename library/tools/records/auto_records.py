@@ -136,21 +136,49 @@ SUBJECT_VERB = re.compile(r"\b(?:gets?|gains?|has|have|becomes?|costs?|loses?|ca
 PRONOUN = re.compile(r"\b(?:it|its|them|they|their|that card|those \w+|he|she|him|her)\b")
 OBJECT_FX = {'summon', 'generate_cards', 'copy', 'transform', 'polymorph', 'tutor'}  # "summon a 2/2 with Rush": the keywords describe the new card
 
-DD_STAT = re.compile(r"^([+-]?\d+(?:\.\d+)?%?) ([a-z_ ]+?)(?: (while|with|vs|when|on|in) (.*))?$")
+DD_STAT = re.compile(r"^([+-]?\d+(?:\.\d+)?%?) ([a-z_' ]+?)(?: (while|with|vs|when|on|in|at) (.*?))?(?:\. (class: \w+))?$")
+DD_STATK = {'dodge': 'defence_gain', 'protection': 'defence_gain', 'max hp': 'defence_gain', 'damage': 'attack_gain',
+            'accuracy': 'attack_gain', 'crit': 'attack_gain', 'speed': 'speed'}  # which stat goes up
+DD_WHO = {'(self)': 'self', '(party_other)': 'ally_unit all', '(party)': 'ally_unit all', '(global)': 'each_player', '(target)': 'ally_unit chosen'}
+DD_FX = [  # (words, effect) for skill and camping effects the stat reader does not cover; the rest of the item is the amount
+    (r"^(?:relieve stress|stress heal|reduce stress)", 'stress_morale'), (r"^(?:health heal|heal)", 'heal'),
+    (r"^health damage", 'damage'), (r"^(?:inflict )?disease", 'debuff'), (r"^summon\b", 'summon'),
+    (r"^(?:increase|decrease|reduce) light|^light ", 'light_level'), (r"^reduce ambush|^ambush", 'protection'),
+    (r"^buff: ", 'temporary_buff'), (r"^remove (?:bleed|blight|debuff|disease)|^cure", 'heal'), (r".*\bstress\b", 'stress_morale'),
+    (r".*\bdebuff\b", 'debuff'), (r".*\bbuff\b", 'temporary_buff'), (r"^(?:clear|remove) .*", 'rewind'),
+    (r"^(?:kill|execute)\b", 'destroy'), (r"^(?:tag|mark)\b", 'mark_target'), (r"^(?:shuffle|swap)", 'forced_movement')]
+DD_FX = [(re.compile(p), k) for p, k in DD_FX]
 
 
 def dd_records(e, cat, text):
     """Darkest Dungeon's fixed formats: skills (targets, damage, effects list), stat lines of items and statuses, event outcomes."""
     out, unread, t = [], 0, (text or '').lower()
-    if cat == 'event' and 'possible outcomes:' in t:
-        return [(e, 1, 'activated', 'random_effect', 'my_player', t.split('possible outcomes:')[1].split(';')[0].strip()[:40], 'instant', '', 'script')], 0
+    if cat == 'event' and 'possible outcomes:' in t:  # a curio: random outcomes, and outcomes for using an item on it
+        body = t.split('possible outcomes:', 1)[1]
+        parts = [x.strip(' .') for x in body.split(';') if x.strip(' .')]
+        rnd = [x for x in parts if not x.startswith('use ')]
+        out.append((e, 1, 'activated', 'random_effect', 'my_player', '; '.join(rnd)[:80], 'instant', '', 'script'))
+        for n, x in enumerate([x for x in parts if x.startswith('use ')], 2):
+            item, _, res = x[4:].partition(':')
+            out.append((e, n, 'activated', 'items_consumables', 'my_player', res.strip()[:60], 'instant', f'use {item.strip()}', 'script'))
+        return out, 0
+    if t.startswith('camping skill'):  # camping: "effect amount (who)" items
+        for it in [x.strip(' .') for x in re.split(r";", t.split('.', 1)[1]) if x.strip(' .')]:
+            if it.startswith('uses per camp'): continue
+            who = next((v for k, v in DD_WHO.items() if k in it), 'self'); it2 = re.sub(r"\([a-z_]+\)", '', it).strip()
+            k = next((k for rx, k in DD_FX if rx.search(it2)), None)
+            if k: out.append((e, 1, 'activated', k, who, it2[:50], 'instant' if k != 'temporary_buff' else 'this_combat', 'camping', 'script'))
+            else: unread += 1
+        return out, unread
     if 'skill.' in t or cat == 'ability':
         for ab, sk in enumerate(re.split(r" \| ", re.sub(r"^skills: ", "", t)), 1):
             sk = re.sub(r"^[^.:]+: (?=(?:melee|ranged) skill)", "", sk)
             tm = re.search(r"targets (all of )?(enemy|ally) ranks", sk)
             tg = (('enemy_unit' if tm.group(2) == 'enemy' else 'ally_unit') + (' all' if tm.group(1) else ' chosen')) if tm else 'self'
             dm = re.search(r"deals damage(?: \(modifier ([+-]?\d+%)\)| (\d+-\d+))?", sk)
-            if dm and '-100%' not in dm.group(0): out.append((e, ab, 'activated', 'damage', tg, dm.group(1) or dm.group(2) or '', 'instant', '', 'script'))
+            if dm and '-100%' not in dm.group(0): out.append((e, ab, 'activated', 'aoe_damage' if tm and tm.group(1) else 'damage', tg, dm.group(1) or dm.group(2) or '', 'instant', '', 'script'))
+            hm = re.search(r"\bheals (\d+)(?: (\d+))?", sk)
+            if hm: out.append((e, ab, 'activated', 'heal', tg, '-'.join(x for x in hm.groups() if x), 'instant', '', 'script'))
             if re.search(r"moves self", sk): out.append((e, ab, 'activated', 'movement', 'self', '', 'instant', '', 'script'))
             fx = sk.split('effects:')[1] if 'effects:' in sk else ''
             for it in [x.strip(' .') for x in re.split(r"[;,]", fx) if x.strip(' .')]:
@@ -165,15 +193,20 @@ def dd_records(e, cat, text):
                 elif it.startswith('mark'): out.append((e, ab, 'activated', 'mark_target', own, '', dur or 'instant', '', 'script'))
                 elif m := re.match(r"heal (\d+(?:-\d+)?)", it): out.append((e, ab, 'activated', 'heal', own, m.group(1), 'instant', '', 'script'))
                 elif m := re.match(r"([+-]\d+(?:\.\d+)?%?) ([a-z ]+?)(?: for \d+ rounds?)?$", it):
-                    k = 'stat_gain' if m.group(1).startswith('+') else 'stat_loss'
+                    k = DD_STATK.get(next((w for w in DD_STATK if w in m.group(2)), ''), 'stat_gain') if m.group(1).startswith('+') else 'stat_loss'
                     out.append((e, ab, 'activated', k, own, f'{m.group(1)} {m.group(2)}' + rn, dur or 'n_rounds', '', 'script'))
+                elif it.startswith('only if '): pass  # a condition of the skill, kept by the tags
+                elif (k := next((k for rx, k in DD_FX if rx.search(it)), None)): out.append((e, ab, 'activated', k, own, it[:50], dur or 'instant', '', 'script'))
                 else: unread += 1
         if out or unread: return out, unread
     for ln in [x.strip(' .') for x in re.split(r"[;\n]", t) if x.strip(' .')]:
         m = DD_STAT.match(ln)
-        if not m: unread += 1; continue
-        k = 'stat_loss' if m.group(1).startswith('-') else 'stat_gain'
-        cond = f'{m.group(3)} {m.group(4)}'.strip() if m.group(3) else ''
+        if not m:
+            if cat == 'status' and re.search(r"[a-z]{4}", ln): out.append((e, 1, 'passive', 'traits_quirks', 'self', ln[:60], 'while', '', 'script'))
+            else: unread += 1
+            continue
+        k = 'stat_loss' if m.group(1).startswith('-') else DD_STATK.get(next((w for w in DD_STATK if w in m.group(2)), ''), 'stat_gain')
+        cond = '; '.join(x for x in (f'{m.group(3)} {m.group(4)}'.strip() if m.group(3) else '', m.group(5) or '') if x)
         out.append((e, 1, 'passive', k, 'self', f'{m.group(1)} {m.group(2).strip()}', 'while' if cond else 'permanent', cond, 'script'))
     return out, unread
 
@@ -343,7 +376,7 @@ def run(c, games, sample=0, outdir=None):
         print(f'{g:18} entries {len(rows):6}  covered {100 * n_cov / max(1, len(rows)):5.1f}%  records {n_rec:6}  with target {100 * n_tg / max(1, n_rec):5.1f}%')
         if outdir:
             with open(os.path.join(outdir, f'{g}.tsv'), 'w') as f:
-                f.write('\t'.join(COLUMNS) + '\n')
+                f.write('\t'.join(c for c in COLUMNS if c not in ('shape', 'extra', 'keyword')) + '\n')
                 for recs, _ in got.values():
                     for r in recs: f.write('\t'.join(str(x) for x in r) + '\n')
         for e, nm, cat, t in random.sample(rows, min(sample, len(rows))):
