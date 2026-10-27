@@ -54,7 +54,7 @@ act	shuffle_into_deck	shuffle the target into a deck	recycle	shuffled	27 Oct 202
 act	put_on_top	put the target on top of a deck	tutor		27 Oct 2026, v1
 act	cost_change	change the cost of the target (signed param cost)	cost_reduction		27 Oct 2026, v1
 act	mana_gain	refill or gain mana / spell mana (param amount, kind via target)	resource_gain	mana_refilled	27 Oct 2026, v1
-act	gain_attack_token	the player gains the attack token (Rally)	extra_turn		27 Oct 2026, v1
+act	gain_attack_token	the player gains the attack token (Rally)	extra_turn	attack_token_gained	27 Oct 2026, v1
 act	strike	the target unit strikes another target now	attack_now	strikes;damaged	27 Oct 2026, v1
 act	start_attack	start a free attack with the targets	attack_now	attacks	27 Oct 2026, v1
 act	challenge	force a unit to block / choose its blocker	forced_attack	blocks	27 Oct 2026, v1
@@ -73,7 +73,7 @@ act	swap	swap the positions of the targets	swap		27 Oct 2026, v1
 act	move	move the target to another position or zone	forced_movement		27 Oct 2026, v1
 act	countdown_advance	make a Countdown count down (param amount)		countdown_done	27 Oct 2026, v1
 act	attach	attach the source to the target unit	merge_attach	equipped	27 Oct 2026, v1
-act	keyword_action	do what the linked keyword describes (Recall, Invoke, Predict, Toss, Nab, ...)			27 Oct 2026, v1
+act	keyword_action	do what the linked keyword describes (Recall, Invoke, Predict, Toss, Nab, ...)		keyword_used	27 Oct 2026, v1
 act	win_game	the player wins the game	win_condition		27 Oct 2026, v1
 act	repeat	cast or trigger the target effect again	repeat_trigger		27 Oct 2026, v1
 act	cant	the target cannot do the event named in param event (attack, block, be targeted, ...)	cant_attack		27 Oct 2026, v1
@@ -254,8 +254,8 @@ act	give_ability	"give the target the ability in the effect key ""ability"" (a w
 act	give_random_keyword	"give the target a random keyword (filters on the keyword in ""on"" are not used; use params amount)"	random_ability	given_keyword	28 Oct 2026, v3
 act	give_type	"give the target the type in the effect key ""type"""	type_grant		28 Oct 2026, v3
 act	cost_set	set the target's cost to params cost	cost_set		28 Oct 2026, v3
-act	max_mana_change	gain or lose mana gems (params amount, signed; empty gem = not refilled)	resource_gain		28 Oct 2026, v3
-act	spend_mana	spend mana (params amount)			28 Oct 2026, v3
+act	max_mana_change	gain or lose mana gems (params amount, signed; empty gem = not refilled)	resource_gain	mana_refilled	28 Oct 2026, v3
+act	spend_mana	spend mana (params amount)		mana_spent	28 Oct 2026, v3
 act	play_card	play the target or the linked card without paying (cast it)	free_play	played	28 Oct 2026, v3
 event	challenges	a unit challenges (forces a blocker)			28 Oct 2026, v3
 event	supports	a unit supports the ally to its right (actor the supporter, object the supported)			28 Oct 2026, v3
@@ -297,3 +297,38 @@ keyword	Capture	concept of using or giving this keyword	banish		28 Oct 2026, v3
 keyword	Terrify	concept of using or giving this keyword	mill		28 Oct 2026, v3
 keyword	Blade Dance	concept of using or giving this keyword	attack_now		28 Oct 2026, v3
 keyword	Can't Block	concept of using or giving this keyword	cant_block		28 Oct 2026, v3
+keyword	Lifesteal	concept of having, using or giving this keyword	lifesteal		28 Oct 2026, v3
+keyword	Drain	concept of having, using or giving this keyword	lifesteal		28 Oct 2026, v3
+keyword	Regeneration	concept of having, using or giving this keyword	regeneration		28 Oct 2026, v3
+keyword	Barrier	concept of having, using or giving this keyword	shield		28 Oct 2026, v3
+keyword	SpellShield	concept of having, using or giving this keyword	immunity		28 Oct 2026, v3
+keyword	Elusive	concept of having, using or giving this keyword	evasion		28 Oct 2026, v3
+keyword	Fearsome	concept of having, using or giving this keyword	evasion		28 Oct 2026, v3
+keyword	Brash	concept of having, using or giving this keyword	evasion		28 Oct 2026, v3
+keyword	Overwhelm	concept of having, using or giving this keyword	excess_damage		28 Oct 2026, v3
+keyword	Tough	concept of having, using or giving this keyword	damage_reduction		28 Oct 2026, v3
+keyword	Ephemeral	concept of having, using or giving this keyword	self_destruct		28 Oct 2026, v3
+keyword	Deathless	concept of having, using or giving this keyword	cheat_death		28 Oct 2026, v3
+keyword	Challenger	concept of having, using or giving this keyword	target_choice		28 Oct 2026, v3
+keyword	Vulnerable	concept of having, using or giving this keyword	forced_attack		28 Oct 2026, v3
+keyword	Spirit	concept of having, using or giving this keyword	stacking_keyword		28 Oct 2026, v3
+keyword	Gloom	concept of having, using or giving this keyword	stacking_keyword		28 Oct 2026, v3
+keyword	Impact	concept of having, using or giving this keyword	stacking_keyword		28 Oct 2026, v3
+keyword	Quick Attack	concept of having, using or giving this keyword	first_strike		28 Oct 2026, v3
+keyword	Double Attack	concept of having, using or giving this keyword	multi_attack		28 Oct 2026, v3
+keyword	Fury	concept of having, using or giving this keyword	permanent_growth		28 Oct 2026, v3
+keyword	Evolve	concept of having, using or giving this keyword	variety_payoff		28 Oct 2026, v3
+keyword	Formidable	concept of having, using or giving this keyword	stat_multiply		28 Oct 2026, v3
+keyword	Immobile	concept of having, using or giving this keyword	cant_attack		28 Oct 2026, v3
+keyword	Landmark	concept of having, using or giving this keyword	board_clog		28 Oct 2026, v3
+keyword	Attach	concept of having, using or giving this keyword	merge_attach		28 Oct 2026, v3
+keyword	Equipment	concept of having, using or giving this keyword	merge_attach		28 Oct 2026, v3
+keyword	Fleeting	concept of having, using or giving this keyword	retain		28 Oct 2026, v3
+keyword	Augment	concept of having, using or giving this keyword	permanent_growth		28 Oct 2026, v3
+keyword	Hallowed	concept of having, using or giving this keyword	death_trigger		28 Oct 2026, v3
+keyword	Support	concept of having, using or giving this keyword	assists_support		28 Oct 2026, v3
+keyword	Ambush	concept of having, using or giving this keyword	stealth		28 Oct 2026, v3
+keyword	Disguise	concept of having, using or giving this keyword	stealth		28 Oct 2026, v3
+keyword	Lurk	concept of having, using or giving this keyword	tribal		28 Oct 2026, v3
+keyword	Scout	concept of having, using or giving this keyword	multi_attack		28 Oct 2026, v3
+keyword	Sleep	concept of using this keyword (a unit is removed for a round)	disable		28 Oct 2026, v3

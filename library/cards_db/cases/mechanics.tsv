@@ -6,7 +6,7 @@ m04	mechanic	triggers when you summon an ally	text:\bwhen you summon\b	select ca
 m05	mechanic	kills own units	text:\bkill (?:an? |another |)all(?:y|ies)\b|\bto play me,? kill\b	select card from flat_do where act='kill' and on_side='mine'
 m06	mechanic	stuns	text:\bstuns?\b(?! (?:units?|enemies|allies)\b)(?!ned)	select card from flat_do where act='stun' or (act='cant' and param_event='attacks' and lasts='this_round' and on_side in ('enemy','any'))
 m07	mechanic	frostbites (power to 0)	text:\bfrostbite\b(?!n)	select card from flat_do where act='stat_set' and params like '%power=0%'
-m08	mechanic	recalls units	text:\brecall\b(?!ed)	select card from flat_do where act='return_to_hand'
+m08	mechanic	recalls units or cares about recalling	text:\brecall\b(?!ed)	select card from flat_do where act='return_to_hand' union select card from flat_when where event='recalled' union select card from flat_if where event='recalled'
 m09	mechanic	draws cards	text:\bdraw (?:\d|a |an |\w+ (?:card|champion|unit|spell|follower))|\bdraws? (?:\d|1)	select card from flat_do where act='draw'
 m10	mechanic	creates cards	text:\bcreate\b	select card from flat_do where act in ('create','copy','choose_card') or (act='keyword_action' and keyword_ref in (select id from card where name in ('Invoke','Manifest','Reforge')))
 m11	mechanic	damages the enemy Nexus	text:\b(?:deal|deals) \d+ to (?:the enemy nexus|each player's nexus|both nexuses|all enemies and the enemy nexus|an enemy or the enemy nexus|anything|the enemy nexus and)	select card from flat_do where act in ('damage','excess_damage') and on_kind in ('player','any')
@@ -26,16 +26,56 @@ m24	mechanic	Elusive units can't be blocked by most units	kw:Elusive	select card
 m25	mechanic	Ephemeral units die at round end	kw:Ephemeral	select w.card from flat_when w join flat_do d on d.ability=w.ability and d.card=w.card where w.event in ('round_end','strikes') and d.act='kill'
 m26	mechanic	Plunder: needs damage to the enemy Nexus this round	kw:Plunder	select card from flat_if where event='nexus_damaged'
 m27	mechanic	Countdown landmarks	text:\bcountdown \d+:	select card from flat_when where event='countdown_done'
-m28	mechanic	refills or gains mana	text:\brefill\b|\bgain (?:an? |\d )?(?:empty )?mana gem	select card from flat_do where act in ('mana_gain','max_mana_change')
+m28	mechanic	refills/gains mana or cares about refilling	text:\brefill\b|\bgain (?:an? |\d )?(?:empty )?mana gem	select card from flat_do where act in ('mana_gain','max_mana_change') union select card from flat_when where event='mana_refilled'
 m29	mechanic	Toss (obliterate own deck)	text:\btoss \d	select card from flat_do where act='obliterate' and on_side='mine' and on_zone in ('deck','deck_bottom')
 m30	mechanic	Rally (attack token)	text:\brally\b	select card from flat_do where act='gain_attack_token'
 m31	mechanic	Predict	text:\bpredict\b	select card from flat_do where act='choose_card' and origin='uses_keyword'
 m32	mechanic	reduces costs	text:\breduce (?:the |its |their )?cost|\bcosts? \d less\b|\bcost (?:\d )?less\b	select card from flat_do where act in ('cost_change','cost_set')
-m33	mechanic	copies cards or spells	text:\b(?:copy|copies)\b	select card from flat_do where act='copy'
-m34	mechanic	Behold (have a card)	text:\bbehold\b	select card from flat_if where test='have'
+m33	mechanic	copies cards or spells (incl. becoming an exact copy)	text:\b(?:create|summon|make|play|cast|grant|give|draw)s? (?:in hand |an? |\d |two |three |exact |ephemeral |fleeting )*cop(?:y|ies)\b|\bcopy (?:it|that|the|a|an|this|them|of)\b|\bexact copy\b	select card from flat_do where act in ('copy','repeat','revive') or (act='transform' and card_ref is null)
+m34	mechanic	Behold (have a card)	text:\bbehold (?:a|an|\d|two|three)\b|\bif you behold\b|\byou behold\b	select card from flat_if where test='have'
 m35	mechanic	Daybreak / Nightfall	text:\b(?:daybreak|nightfall):	select card from flat_if where test='first_card'
 m36	mechanic	can't block	text:\bcan'?t block\b	select card from flat_do where act='cant' and param_event='blocks'
-m37	mechanic	summons units	text:\bsummon (?:a|an|\d|two|three|it|me|them|the|that|exact|copies)\b	select card from flat_do where act in ('summon','revive','copy','play_card')
+m37	mechanic	summons units or cares about summoning	text:\bsummon (?:a|an|\d|two|three|it|me|them|the|that|exact|copies)\b	select card from flat_do where act in ('summon','revive','copy','play_card') union select card from flat_when where event='summoned' and coalesce(obj_pick,'')!='self' union select card from flat_if where event='summoned'
 m38	mechanic	revives	text:\brevive\b	select card from flat_do where act='revive'
 m39	mechanic	silences	text:\bsilence\b	select card from flat_do where act='silence'
-m40	mechanic	shuffles cards into a deck	text:\bshuffle\b|\binto (?:your|the enemy|their) deck\b|\bplace (?:it|that unit|them) into\b	select card from flat_do where on_zone in ('deck','deck_top','deck_bottom') and act in ('shuffle_into_deck','put_on_top','create','copy','move')
+m40	mechanic	shuffles cards into a deck	text:\bshuffle\b(?! (?:my|its|their) stats)|\binto (?:your|the enemy|their|its player's) deck\b|\bplace (?:it|that unit|them|me|the rest) into\b	select card from flat_do where act in ('shuffle_into_deck','put_on_top') or (eff_zone in ('deck','deck_top','deck_bottom') and act in ('create','copy','move','summon'))
+m41	mechanic	triggers when you draw	text:\bwhen(?:ever)? (?:you|your opponent|an? \w+) draws?\b	select card from flat_when where event='drawn'
+m42	mechanic	When I'm summoned triggers	text:\bwhen i'?m summoned\b	select card from flat_when where event='summoned' and obj_pick='self'
+m43	mechanic	Strike triggers	text:(?<!nexus )\bstrike:|\bor strike:	select card from flat_when where event='strikes'
+m44	mechanic	gives Challenger	text:\b(?:give|grant)s? (?:\w+ ){0,5}challenger\b	select card from flat_do where keyword_ref=(select id from card where name='Challenger' and is_keyword=1) or concept='target_choice'
+m45	mechanic	gives Elusive	text:\b(?:give|grant)s? (?:\w+ ){0,5}elusive\b	select card from flat_do where keyword_ref=(select id from card where name='Elusive' and is_keyword=1)
+m46	mechanic	gives Vulnerable	text:\bvulnerable\b	select card from flat_do where keyword_ref=(select id from card where name='Vulnerable' and is_keyword=1) union select card from flat_when where obj_with like '%keyword is '||(select id from card where name='Vulnerable' and is_keyword=1)||'%' union select card from card_keyword where keyword=(select id from card where name='Vulnerable' and is_keyword=1)
+m47	mechanic	Lifesteal units heal their Nexus	kw:Lifesteal	select card from flat_concept where concept='lifesteal'
+m48	mechanic	Regeneration units heal fully	kw:Regeneration	select card from flat_concept where concept='regeneration'
+m49	mechanic	Tough units take less damage	kw:Tough	select card from flat_do where act='damage_reduction'
+m50	mechanic	Fearsome units evade weak blockers	kw:Fearsome	select card from flat_concept where concept='evasion'
+m51	mechanic	Quick Attack strikes first	kw:Quick Attack	select card from flat_do where act='first_strike'
+m52	mechanic	SpellShield negates enemy spells	kw:SpellShield	select card from flat_do where act='counter'
+m53	mechanic	Spirit / Gloom / Impact stacking keywords	kw:Impact	select card from flat_concept where concept='stacking_keyword'
+m54	mechanic	damage equal to a stat or count	text:\bdeal (?:damage )?equal to\b|\bdeal (?:that much|damage equal)	select card from flat_do where act='damage' and params like '%amount=None%'
+m55	mechanic	effects scaling with a count (for each)	text:\bfor each\b	select card from flat_if where test like 'amount_%' union select card from flat_do where params like '%=None%'
+m56	mechanic	temporary buffs this round	text:\bgive (?:\w+ ){0,5}\+\d+\|\+\d+ (?:\w+ ){0,3}this round	select card from flat_do where act='stat_change' and lasts='this_round'
+m57	mechanic	Invoke	text:\binvoke\b	select card from flat_do where keyword_ref=(select id from card where name='Invoke' and is_keyword=1)
+m58	mechanic	Manifest	text:\bmanifest\b	select card from flat_do where keyword_ref=(select id from card where name='Manifest' and is_keyword=1)
+m59	mechanic	Plants traps or Puffcaps	text:\bplant\b	select card from flat_concept where concept='trap_secret'
+m60	mechanic	Imbue (when a spell resolves)	kw:Imbue	select card from flat_when where event in ('spell_resolves','played') and (obj_kind='spell' or obj_with like '%spell%')
+m61	mechanic	Spawn	text:\bspawn \d	select card from flat_do where keyword_ref=(select id from card where name='Spawn' and is_keyword=1)
+m62	mechanic	Equipment attaches	kw:Equipment	select card from flat_do where act='attach'
+m63	mechanic	Augment grows on created cards	kw:Augment	select card from flat_when where event='played' and obj_with like '%created%'
+m64	mechanic	Formidable strikes with Health	kw:Formidable	select card from flat_do where act='strike_with'
+m65	mechanic	Reputation	text:\breputation\b	select card from flat_if where test='keyword_condition' or test='event_count' and event='strikes'
+m66	mechanic	Allegiance	text:\ballegiance\b	select card from flat_if where test='have' and of_zone='deck_top'
+m67	mechanic	Enlightened	text:\benlightened\b	select card from flat_if where test='max_mana'
+m68	mechanic	Empowered	text:\bempowered \d	select card from flat_if where test='stat' and op='ge'
+m69	mechanic	Fury grows on kills	kw:Fury	select card from flat_when where event='killed' and actor_pick='self'
+m70	mechanic	transforms	text:\btransform\b	select card from flat_do where act='transform' union select card from flat_when where event='transformed'
+m71	mechanic	Capture	text:\bcapture	select card from flat_do where act='capture' or on_zone='removed' union select card from flat_if where of_zone='removed'
+m72	mechanic	Deathless / cheat death	kw:Deathless	select card from flat_concept where concept='cheat_death'
+m73	mechanic	Nab	text:\bnab\b	select card from flat_do where keyword_ref=(select id from card where name='Nab' and is_keyword=1)
+m74	mechanic	Flow	text:\bflow:	select card from flat_if where event='played' and span='last_round'
+m75	mechanic	Support	text:\bsupport:	select card from flat_do where on_pick='right_of_self' union select card from flat_when where event='supports'
+m76	mechanic	Attune refills spell mana	kw:Attune	select card from flat_do where act='mana_gain' and on_kind='spell_mana'
+m77	mechanic	Scout attacks again	kw:Scout	select card from flat_concept where concept='multi_attack'
+m78	mechanic	Fleeting cards are discarded at round end	kw:Fleeting	select card from flat_when where event='round_end' and card in (select card from flat_do where act='discard' and on_pick='self')
+m79	mechanic	Advance (Countdowns)	text:\badvance\b	select card from flat_do where act='countdown_advance' or keyword_ref=(select id from card where name='Advance' and is_keyword=1)
+m80	mechanic	counters spells	text:\bstop (?:a|an|all)\b|\bnegate\b	select card from flat_do where act='counter'

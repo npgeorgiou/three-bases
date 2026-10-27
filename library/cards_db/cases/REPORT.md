@@ -1,7 +1,7 @@
 # Case tests: runeterra
 
 Made by `cases/run.py runeterra`.
-**174 of 193 cases pass.**
+**246 of 248 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -15,7 +15,7 @@ Made by `cases/run.py runeterra`.
 | m05 | kills own units | 34 | 34 | 100% | 20 | yes |
 | m06 | stuns | 68 | 65 | 96% | 10 | yes |
 | m07 | frostbites (power to 0) | 21 | 21 | 100% | 2 | yes |
-| m08 | recalls units | 58 | 54 | 93% | 58 | NO |
+| m08 | recalls units or cares about recalling | 58 | 58 | 100% | 64 | yes |
 | m09 | draws cards | 178 | 175 | 98% | 22 | yes |
 | m10 | creates cards | 413 | 412 | 100% | 146 | yes |
 | m11 | damages the enemy Nexus | 89 | 87 | 98% | 232 | yes |
@@ -35,28 +35,64 @@ Made by `cases/run.py runeterra`.
 | m25 | Ephemeral units die at round end | 23 | 23 | 100% | 43 | yes |
 | m26 | Plunder: needs damage to the enemy Nexus this round | 33 | 33 | 100% | 11 | yes |
 | m27 | Countdown landmarks | 26 | 26 | 100% | 6 | yes |
-| m28 | refills or gains mana | 29 | 26 | 90% | 36 | NO |
+| m28 | refills/gains mana or cares about refilling | 29 | 29 | 100% | 36 | yes |
 | m29 | Toss (obliterate own deck) | 13 | 13 | 100% | 4 | yes |
 | m30 | Rally (attack token) | 25 | 25 | 100% | 18 | yes |
 | m31 | Predict | 20 | 20 | 100% | 62 | yes |
 | m32 | reduces costs | 125 | 123 | 98% | 54 | yes |
-| m33 | copies cards or spells | 112 | 83 | 74% | 8 | NO |
-| m34 | Behold (have a card) | 18 | 16 | 89% | 100 | NO |
+| m33 | copies cards or spells (incl. becoming an exact copy) | 98 | 97 | 99% | 61 | yes |
+| m34 | Behold (have a card) | 15 | 15 | 100% | 101 | yes |
 | m35 | Daybreak / Nightfall | 42 | 42 | 100% | 1 | yes |
 | m36 | can't block | 8 | 8 | 100% | 321 | yes |
-| m37 | summons units | 273 | 248 | 91% | 133 | NO |
+| m37 | summons units or cares about summoning | 273 | 273 | 100% | 175 | yes |
 | m38 | revives | 23 | 22 | 96% | 7 | yes |
 | m39 | silences | 11 | 11 | 100% | 37 | yes |
-| m40 | shuffles cards into a deck | 21 | 7 | 33% | 11 | NO |
+| m40 | shuffles cards into a deck | 20 | 19 | 95% | 179 | yes |
+| m41 | triggers when you draw | 7 | 7 | 100% | 9 | yes |
+| m42 | When I'm summoned triggers | 279 | 279 | 100% | 29 | yes |
+| m43 | Strike triggers | 35 | 35 | 100% | 241 | yes |
+| m44 | gives Challenger | 23 | 23 | 100% | 11 | yes |
+| m45 | gives Elusive | 16 | 16 | 100% | 9 | yes |
+| m46 | gives Vulnerable | 33 | 33 | 100% | 2 | yes |
+| m47 | Lifesteal units heal their Nexus | 17 | 17 | 100% | 35 | yes |
+| m48 | Regeneration units heal fully | 15 | 15 | 100% | 5 | yes |
+| m49 | Tough units take less damage | 27 | 27 | 100% | 9 | yes |
+| m50 | Fearsome units evade weak blockers | 80 | 80 | 100% | 133 | yes |
+| m51 | Quick Attack strikes first | 84 | 84 | 100% | 18 | yes |
+| m52 | SpellShield negates enemy spells | 26 | 26 | 100% | 35 | yes |
+| m53 | Spirit / Gloom / Impact stacking keywords | 32 | 32 | 100% | 45 | yes |
+| m54 | damage equal to a stat or count | 9 | 9 | 100% | 14 | yes |
+| m55 | effects scaling with a count (for each) | 85 | 80 | 94% | 235 | NO |
+| m56 | temporary buffs this round | 120 | 120 | 100% | 44 | yes |
+| m57 | Invoke | 19 | 18 | 95% | 0 | NO |
+| m58 | Manifest | 32 | 32 | 100% | 0 | yes |
+| m59 | Plants traps or Puffcaps | 37 | 37 | 100% | 8 | yes |
+| m60 | Imbue (when a spell resolves) | 20 | 20 | 100% | 20 | yes |
+| m61 | Spawn | 15 | 15 | 100% | 0 | yes |
+| m62 | Equipment attaches | 42 | 42 | 100% | 32 | yes |
+| m63 | Augment grows on created cards | 10 | 10 | 100% | 2 | yes |
+| m64 | Formidable strikes with Health | 8 | 8 | 100% | 2 | yes |
+| m65 | Reputation | 13 | 13 | 100% | 137 | yes |
+| m66 | Allegiance | 10 | 10 | 100% | 18 | yes |
+| m67 | Enlightened | 14 | 14 | 100% | 0 | yes |
+| m68 | Empowered | 10 | 10 | 100% | 4 | yes |
+| m69 | Fury grows on kills | 26 | 26 | 100% | 6 | yes |
+| m70 | transforms | 56 | 56 | 100% | 19 | yes |
+| m71 | Capture | 18 | 18 | 100% | 3 | yes |
+| m72 | Deathless / cheat death | 3 | 3 | 100% | 3 | yes |
+| m73 | Nab | 4 | 4 | 100% | 0 | yes |
+| m74 | Flow | 13 | 13 | 100% | 1 | yes |
+| m75 | Support | 34 | 34 | 100% | 1 | yes |
+| m76 | Attune refills spell mana | 24 | 24 | 100% | 19 | yes |
+| m77 | Scout attacks again | 15 | 15 | 100% | 13 | yes |
+| m78 | Fleeting cards are discarded at round end | 42 | 42 | 100% | 0 | yes |
+| m79 | Advance (Countdowns) | 22 | 22 | 100% | 0 | yes |
+| m80 | counters spells | 10 | 10 | 100% | 51 | yes |
 
 Missed cards (first 8 per failing case):
 
-- m08 recalls units: Fae Bladetwirler, Tail-Cloak Matriarch, Yasuo, Yasuo (level 2)
-- m28 refills or gains mana: Jack, Jack (level 2), Perfidious Promoter
-- m33 copies cards or spells: Black Rose Spy, Bladebound Berserker, Curious Changelings, Entrapment, Entrapment (created), Entrapment (created), Eternal Dancers, Frozen Tomb
-- m34 Behold (have a card): Targonian Tellstones, Zoe (level 2)
-- m37 summons units: Adaptatron 3000, Altar to Unity, Ardent Tracker, Battlesmith, Chamber of Renewal, Deathgrasp Cultist, Dragon Prince Grinzo, Portal Scholar
-- m40 shuffles cards into a deck: Careful Preparation, Coup de Grace, Nautilus, Nautilus' Riptide, Pick a Card, Rek'Sai, Riptide, Salty Spinner
+- m55 effects scaling with a count (for each): Buried Sun Disc, Dreamlight Alina, Mountain Sojourners, Ravenbloom Conservatory, Wraith of Echoes
+- m57 Invoke: Dragonsong Dreamer
 
 ## Combos (the enabler must set off the payoff)
 
@@ -66,7 +102,7 @@ Missed cards (first 8 per failing case):
 | c02 | Thresh | Kalista | revive the strongest dead champion | condition: damage -> dies (via Thresh's The Box) | yes |
 | c03 | Ezreal | Mystic Shot | Nexus Strike creates Mystic Shot | makes | yes |
 | c04 | Elise | Frenzied Skitterer | spider tribal | event: summon -> summoned (via Elise's Crawling Sensation) | yes |
-| c05 | Get Excited! | Jinx | discarding empties the hand for Jinx's level up | - | NO |
+| c05 | Get Excited! | Jinx | discarding empties the hand for Jinx's level up | zone: hand | yes |
 | c06 | Thresh (level 2) | Kalista (level 2) | summon a champion attacking; Kalista's attack payoff | event: start_attack -> attacks | yes |
 | c07 | Vladimir | Legion Veteran | Vladimir damages allies; Veteran buffs allies that survive damage | event: damage -> survives_damage | yes |
 | c08 | Puffcap Peddler | Teemo | Peddler plants Puffcaps; Teemo levels on Puffcaps planted | makes | yes |
@@ -82,9 +118,27 @@ Missed cards (first 8 per failing case):
 | c18 | Vladimir | Braum | damaging Braum makes him survive damage and summon a Poro | event: damage -> survives_damage | yes |
 | c19 | Shadow Assassin | Twisted Fate | drawing cards levels Twisted Fate | condition: draw -> drawn | yes |
 | c20 | Mystic Shot | Annie | playing Fast spells levels Annie | is: counted as a played spell | yes |
-| c21 | Aurelion Sol | The Scourge | Invoked Celestial cards grow The Scourge | - | NO |
+| c21 | Aurelion Sol | The Scourge | Invoked Celestial cards grow The Scourge | type: Celestial | yes |
 | c22 | Noxian Fervor | Legion Veteran | damaging an ally that survives | event: damage -> survives_damage | yes |
 | c23 | Mystic Shot | Lux | playing spells levels Lux | event: damage -> damaged | yes |
+| c24 | Shadow Assassin | Astute Academic | drawing a card buffs the Academic | event: draw -> drawn | yes |
+| c25 | Ritual of Renewal | Chief Mechanist Zevi | drawing a card makes Zevi copy it | event: draw -> drawn | yes |
+| c26 | Recall | Ahri (level 2) | recalling an ally reduces its cost | event: return_to_hand -> recalled | yes |
+| c27 | Decisive Maneuver | Yasuo | stunning an enemy makes Yasuo deal 2 to it | event: stun -> given_keyword | yes |
+| c28 | Arachnoid Sentry | Fae Bladetwirler | stunning a unit buffs the Bladetwirler | event: stun -> given_keyword (via Paralyzing Bite) | yes |
+| c29 | Ritual of Renewal | Star Shepherd | healing a damaged ally buffs the Shepherd | event: heal -> healed | yes |
+| c30 | Health Potion | Stargazer | healing a damaged ally gives it Elusive | event: heal -> healed | yes |
+| c31 | Spectral Rider | Shadow Apprentice | summoning an Ephemeral ally buffs the Apprentice | is: playing Spectral Rider is a summoned the payoff waits for | yes |
+| c32 | Riposte | Greenglade Caretaker | an ally getting Barrier buffs the Caretaker | event: give_keyword -> given_keyword | yes |
+| c33 | Spirit's Refuge | Shen (level 2) | an ally getting Barrier gets +3|+0 from Shen | event: give_keyword -> given_keyword | yes |
+| c34 | Shunpo | Windswept Hillock | gaining the attack token stuns the strongest enemy | event: gain_attack_token -> attack_token_gained | yes |
+| c35 | Tianna Crownguard | Riven | gaining the attack token makes Riven Reforge | event: gain_attack_token -> attack_token_gained | yes |
+| c36 | Glimpse Beyond | Kalista | killing an ally counts toward Kalista's level up | condition: kill -> dies | yes |
+| c37 | Ravenous Butcher | Lucian | killing an ally counts toward Lucian's level up | condition: kill -> dies | yes |
+| c38 | Mushroom Cloud | Teemo | planting Puffcaps counts toward Teemo's level up | makes | yes |
+| c39 | Harsh Winds | Ashe | Frostbite sets Power to 0 for Ashe's level up | condition: stat_set -> stat_changed | yes |
+| c40 | Staggering Strikes | Yasuo (level 2) | stunning an enemy makes Yasuo strike it | event: stun -> given_keyword | yes |
+| c41 | Skyward Strikes | Yasuo | recalling enemies makes Yasuo deal 2 | event: return_to_hand -> recalled | yes |
 
 ## Region identity (signature, splash, archetype)
 
@@ -131,10 +185,9 @@ Missed cards (first 8 per failing case):
 | r40 | Bilgewater | splash (library tags) | summon | 19 | 43 | yes |
 | r41 | Demacia | signature (library tags) | damage_reduction | 10 | 17 | yes |
 | r42 | Demacia | signature (library tags) | stat_gain | 7 | 74 | yes |
-| r43 | Demacia | signature (library tags) | multi_attack | 4 | 3 | NO |
+| r43 | Demacia | signature (library tags) | multi_attack | 4 | 17 | yes |
 | r44 | Demacia | splash (library tags) | merge_attach | 6 | 11 | yes |
 | r45 | Demacia | splash (library tags) | on_ally_play | 6 | 43 | yes |
-| r46 | Demacia | signature (library tags) | on_kill | 25 | 13 | NO |
 | r47 | Demacia | splash (library tags) | banish | 2 | 9 | yes |
 | r48 | Demacia | splash (library tags) | on_attack | 12 | 65 | yes |
 | r49 | Freljord | signature (library tags) | on_damaged | 4 | 8 | yes |
@@ -148,7 +201,7 @@ Missed cards (first 8 per failing case):
 | r57 | Ionia | signature (library tags) | swap | 2 | 6 | yes |
 | r58 | Ionia | signature (library tags) | return_to_hand | 26 | 51 | yes |
 | r59 | Ionia | signature (library tags) | attack_now | 5 | 15 | yes |
-| r60 | Ionia | signature (library tags) | disable | 14 | 13 | NO |
+| r60 | Ionia | signature (library tags) | disable | 14 | 21 | yes |
 | r61 | Ionia | splash (library tags) | turn_end | 8 | 33 | yes |
 | r62 | Ionia | splash (library tags) | cost_reduction | 6 | 23 | yes |
 | r63 | Ionia | splash (library tags) | resource_gain | 4 | 8 | yes |
@@ -174,10 +227,9 @@ Missed cards (first 8 per failing case):
 | r83 | Shadow Isles | signature (library tags) | death_trigger | 14 | 50 | yes |
 | r84 | Shadow Isles | signature (library tags) | summon | 34 | 43 | yes |
 | r85 | Shadow Isles | splash (library tags) | attack_now | 2 | 11 | yes |
-| r86 | Shadow Isles | splash (library tags) | on_kill | 26 | 11 | NO |
 | r87 | Shadow Isles | splash (library tags) | cant_attack | 6 | 61 | yes |
 | r88 | Shadow Isles | splash (library tags) | merge_attach | 4 | 6 | yes |
-| r89 | Shurima | signature (library tags) | variety_payoff | 4 | 3 | NO |
+| r89 | Shurima | signature (library tags) | variety_payoff | 4 | 11 | yes |
 | r90 | Shurima | signature (library tags) | delayed | 12 | 15 | yes |
 | r91 | Shurima | signature (library tags) | counter_spell | 2 | 20 | yes |
 | r92 | Shurima | signature (library tags) | selection | 6 | 27 | yes |
@@ -191,32 +243,31 @@ Missed cards (first 8 per failing case):
 | r100 | Targon | signature (library tags) | disable | 15 | 27 | yes |
 | r101 | Targon | splash (library tags) | delayed | 4 | 7 | yes |
 | r102 | Targon | splash (library tags) | cost_reduction | 6 | 22 | yes |
-| r103 | Targon | splash (library tags) | on_kill | 28 | 13 | NO |
 | r104 | Targon | splash (library tags) | discard | 2 | 8 | yes |
-| r105 | Bandle City | archetype (library) | scaling | 34 | 14 | NO |
-| r106 | Bandle City | archetype (library) | chaos | 28 | 63 | yes |
+| r105 | Bandle City | archetype (library) | scaling | 34 | 79 | yes |
+| r106 | Bandle City | archetype (library) | chaos | 28 | 71 | yes |
 | r107 | Bandle City | archetype (library) | trickery | 6 | 26 | yes |
 | r108 | Bandle City | archetype (library) | transformation | 16 | 28 | yes |
-| r109 | Bilgewater | archetype (library) | chaos | 30 | 54 | yes |
+| r109 | Bilgewater | archetype (library) | chaos | 30 | 78 | yes |
 | r110 | Bilgewater | archetype (library) | ramp | 17 | 37 | yes |
-| r111 | Bilgewater | archetype (library) | graveyard | 4 | 28 | yes |
-| r112 | Demacia | archetype (library) | scaling | 21 | 12 | NO |
-| r113 | Demacia | archetype (library) | fortress | 22 | 30 | yes |
+| r111 | Bilgewater | archetype (library) | graveyard | 4 | 39 | yes |
+| r112 | Demacia | archetype (library) | scaling | 21 | 38 | yes |
+| r113 | Demacia | archetype (library) | fortress | 22 | 49 | yes |
 | r114 | Freljord | archetype (library) | sustain | 14 | 25 | yes |
 | r115 | Freljord | archetype (library) | transformation | 11 | 16 | yes |
-| r116 | Ionia | archetype (library) | positional | 8 | 0 | NO |
-| r117 | Ionia | archetype (library) | control | 38 | 87 | yes |
+| r116 | Ionia | archetype (library) | positional | 8 | 12 | yes |
+| r117 | Ionia | archetype (library) | control | 38 | 88 | yes |
 | r118 | Ionia | archetype (library) | ramp | 14 | 32 | yes |
-| r119 | Ionia | archetype (library) | card_advantage | 30 | 31 | yes |
-| r120 | Piltover & Zaun | archetype (library) | chaos | 24 | 58 | yes |
+| r119 | Ionia | archetype (library) | card_advantage | 30 | 41 | yes |
+| r120 | Piltover & Zaun | archetype (library) | chaos | 24 | 68 | yes |
 | r121 | Piltover & Zaun | archetype (library) | trickery | 6 | 17 | yes |
 | r122 | Piltover & Zaun | archetype (library) | ramp | 18 | 47 | yes |
-| r123 | Piltover & Zaun | archetype (library) | spellslinger | 14 | 44 | yes |
-| r124 | Shadow Isles | archetype (library) | sacrifice | 47 | 50 | yes |
-| r125 | Shadow Isles | archetype (library) | graveyard | 14 | 21 | yes |
-| r126 | Shadow Isles | archetype (library) | sustain | 17 | 34 | yes |
-| r127 | Shadow Isles | archetype (library) | swarm | 36 | 65 | yes |
-| r128 | Shurima | archetype (library) | trickery | 5 | 0 | NO |
-| r129 | Shurima | archetype (library) | swarm | 30 | 85 | yes |
-| r130 | Targon | archetype (library) | spellslinger | 18 | 7 | NO |
+| r123 | Piltover & Zaun | archetype (library) | spellslinger | 14 | 45 | yes |
+| r124 | Shadow Isles | archetype (library) | sacrifice | 47 | 106 | yes |
+| r125 | Shadow Isles | archetype (library) | graveyard | 14 | 30 | yes |
+| r126 | Shadow Isles | archetype (library) | sustain | 17 | 36 | yes |
+| r127 | Shadow Isles | archetype (library) | swarm | 36 | 69 | yes |
+| r128 | Shurima | archetype (library) | trickery | 5 | 8 | yes |
+| r129 | Shurima | archetype (library) | swarm | 30 | 89 | yes |
+| r130 | Targon | archetype (library) | spellslinger | 18 | 37 | yes |
 | r131 | Targon | archetype (library) | card_advantage | 15 | 43 | yes |

@@ -26,3 +26,4 @@ Each change: date, what changed, the card that caused it, and which records were
   challenge it). Applied to all records read so far (575 records changed).
 - 28 Oct 2026: N4 in normalize.py (follower/champion are categories; redundant category unit dropped), from the judged disagreements; queries count a used or given keyword as doing what the keyword's record does.
 - 28 Oct 2026: Path of Champions items excluded (exclude.tsv; 156 entries; their records moved to excluded/). pattern_check.py: plain wording (triggers, verbs, keywords named in the text) must show up in the record; 61 flagged cards re-read as fix_007.
+- 28 Oct 2026: acts gain_attack_token, spend_mana, keyword_action, max_mana_change now cause attack_token_gained, mana_spent, keyword_used, mana_refilled (combo tests c34, c35 found them missing). Query layer flat.py, derived concepts, keyword concepts in vocab (field keyword), Can't Block record (keywords_stub.jsonl).

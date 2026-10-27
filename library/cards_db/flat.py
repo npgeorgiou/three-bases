@@ -18,6 +18,7 @@ create table flat_if(card integer, origin text, via integer, ability integer, te
 create table flat_do(card integer, origin text, via integer, ability integer, seq integer, act text, concept text, on_kind text,
   on_side text, on_pick text, on_zone text, card_ref integer, keyword_ref integer, lasts text, link text, on_with text,
   param_event text, params text, eff_zone text);
+create table flat_concept(card integer, concept text, rule text);
 create index fw on flat_when(event); create index fd on flat_do(act); create index fi on flat_if(test, event);
 create index fwc on flat_when(card); create index fdc on flat_do(card); create index fic on flat_if(card);
 """
@@ -113,3 +114,49 @@ def build(c):
     for card, aid, kw in c.execute("select a.card, a.id, cd.ref_keyword from cond cd join ability a on a.id=cd.ability "
                                    "where cd.test='keyword_condition' and cd.ref_keyword is not null").fetchall():
         keyword_conds(card, kw, aid, 'uses_keyword')
+
+
+# Concepts derived from the shape of a row (Claude's rules from the concept tree's definitions, 28 Oct 2026). Each rule: concept,
+# table, SQL condition on that table. A card gets the concept when any of its rows matches.
+RULES = [
+    ('permanent_growth', 'flat_do', "act='stat_change' and on_pick='self' and lasts in ('permanent','while') and params not like '%=-%'"),
+    ('temporary_buff', 'flat_do', "act='stat_change' and lasts='this_round' and coalesce(on_side,'mine')!='enemy' and params not like '%=-%'"),
+    ('stat_loss', 'flat_do', "(act='stat_change' and params like '%=-%') or (act='stat_set' and on_side='enemy')"),
+    ('aoe_damage', 'flat_do', "act='damage' and on_pick='all'"),
+    ('direct_damage', 'flat_do', "act in ('damage','excess_damage') and on_kind in ('player','any')"),
+    ('ping', 'flat_do', "act='damage' and params like 'amount=1.0%'"),
+    ('self_destruct', 'flat_do', "act='kill' and on_pick='self'"),
+    ('sacrifice', 'flat_do', "act='kill' and on_side='mine' and coalesce(on_pick,'')!='self'"),
+    ('evasion', 'flat_do', "act='cant' and param_event='blocks' and on_side='enemy'"),
+    ('cant_block', 'flat_do', "act='cant' and param_event='blocks' and on_pick='self'"),
+    ('cant_attack', 'flat_do', "act='cant' and param_event='attacks'"),
+    ('bounce_enemy', 'flat_do', "act='return_to_hand' and on_side='enemy'"),
+    ('polymorph', 'flat_do', "act='transform' and on_side='enemy'"),
+    ('information', 'flat_do', "act in ('reveal','look')"),
+    ('random_effect', 'flat_do', "on_pick='random' or act='give_random_keyword'"),
+    ('junk_cards', 'flat_do', "act in ('create','keyword_action') and on_side='enemy' and coalesce(on_zone,eff_zone,'') in ('deck','hand','deck_top')"),
+    ('hand_disruption', 'flat_do', "act in ('discard','obliterate','steal','draw') and on_side='enemy' and coalesce(on_zone,'') in ('hand','deck','deck_bottom')"),
+    ('cost_increase', 'flat_do', "act='cost_change' and params like 'cost=%' and params not like 'cost=-%' and on_side='enemy'"),
+    ('aura', 'flat_do', "origin in ('own','has_keyword') and act in ('stat_change','give_keyword') and on_pick='all' and lasts in ('while','permanent') and ability in (select a.id from ability a join event v on v.id=a.event where v.event='always')"),
+    ('tribal', 'flat_do', "on_with like '%type is%' or on_with like '%name_has%'"),
+    ('tribal', 'flat_when', "obj_with like '%type is%' or obj_with like '%name_has%'"),
+    ('variable_stats', 'flat_do', "act='stat_change' and on_pick='self' and params like '%=None%'"),
+    ('death_count', 'flat_if', "event='dies' and test in ('event_count','amount_event_count','amount_count')"),
+    ('combo_sequence', 'flat_if', "test='first_card' or (event='played' and span in ('this_round','last_round'))"),
+    ('adjacency', 'flat_do', "on_pick in ('right_of_self','left_of_self')"),
+    ('movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board'"),
+    ('board_presence', 'flat_if', "test in ('count','amount_count') and of_zone='board' and of_side='mine'"),
+    ('count_payoff', 'flat_if', "test in ('amount_count','amount_event_count')"),
+    ('removal', 'flat_do', "act in ('kill','obliterate','capture') and on_side in ('enemy','any')"),
+]
+
+
+def derive(c):
+    """flat_concept: concepts of the rows themselves, the keywords' concepts, and the shape rules above."""
+    c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_do where concept is not null and concept!=''")
+    c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_when where concept is not null and concept!=''")
+    c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_if where concept is not null and concept!=''")
+    c.execute("insert into flat_concept select distinct ck.card, v.tree, 'keyword' from card_keyword ck join card k on k.id=ck.keyword "
+              "join vocab v on v.field='keyword' and v.value=k.name where v.tree!=''")
+    for concept, table, cond in RULES:
+        c.execute(f"insert into flat_concept select distinct card, ?, ? from {table} where {cond}", (concept, 'rule ' + concept))

@@ -1,0 +1,26 @@
+[
+{
+"id": 752114,
+"what_was_wrong": "the trigger is the first time each round you Invoke (event keyword_used with keyword Invoke), not missing"
+},
+{
+"id": 751829,
+"what_was_wrong": "\"for each ally that died this round\": the grant repeats per dead ally (amount count of allies dead this round)"
+},
+{
+"id": 751208,
+"what_was_wrong": "\"I advance 9 rounds for each time an Ascended ally has leveled up\": amount is 9 times a count of level-ups"
+},
+{
+"id": 752073,
+"what_was_wrong": "\"for each one there isn't space for\": the Spirit amount is a count, not a fixed 2"
+},
+{
+"id": 751023,
+"what_was_wrong": "\"continue for each supported ally in succession\": repeats per supported ally"
+},
+{
+"id": 750727,
+"what_was_wrong": "\"place the rest into your deck\": the other cards go back into the deck (shuffle_into_deck)"
+}
+]

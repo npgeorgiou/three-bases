@@ -51,7 +51,16 @@ def explain(c, enabler, payoff):
             kw_have = {k for x in makers for (k,) in c.execute('select keyword from card_keyword where card=?', (x,))}
             kw_have |= {k for x in makers for (k,) in c.execute("select keyword_ref from flat_do where card=? and act='give_keyword' and keyword_ref is not null", (x,))}
             ty_have = {t for x in makers for (t,) in c.execute('select type from card_type where card=?', (x,))}
+            for x in makers:  # cards made by description ("a random Celestial card") carry their type filter
+                for (w,) in c.execute("select on_with from flat_do where card=? and act in ('create','summon','choose_card') and on_with like '%type is%'", (x,)):
+                    ty_have |= {int(p.split(' ')[2]) for p in w.split(';') if p.startswith('type is ') and p.split(' ')[2].lstrip('-').isdigit()}
+            # emptying or filling a zone that the payoff counts (discarding empties the hand)
+            zones = {z for x in makers for (z,) in c.execute("select coalesce(on_zone, eff_zone) from flat_do where card=? and act in "
+                                                             "('discard','draw','create','obliterate','play_card','shuffle_into_deck')", (x,)) if z}
+            for (z,) in c.execute("select of_zone from flat_if where card=? and test in ('count','have','amount_count') and of_zone is not null", (p,)):
+                if z in zones: return f'zone: {z}'
             asks = [w for (w,) in c.execute('select obj_with from flat_when where card=? and obj_with is not null', (p,))]
+            asks += [w for (w,) in c.execute('select coalesce(ev_obj_with, of_with) from flat_if where card=? and coalesce(ev_obj_with, of_with) is not null', (p,))]
             asks += [w for (w,) in c.execute("select f.attr || ' is ' || coalesce(f.ref_keyword, f.ref_type) from cond cd join ability a on a.id=cd.ability "
                                              "join filter f on f.target=cd.of_target where a.card=? and f.attr in ('keyword','type')", (p,))]
             for w in asks:
