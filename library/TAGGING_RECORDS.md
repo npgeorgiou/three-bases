@@ -115,6 +115,23 @@ E. Fix sure errors where they live: tags through reviews/<game>.json or the game
    Check with tools/game_check.sh that the fix survives a rebuild (an old review "add" can put the tag back).
 F. Into the Breach: its tags cover 92% of the reader's effects and 76% are right; pour the tags into rows (A) and drop own
    clause rows there, instead of more reading rules.
+Mistakes Claude made (27 Oct; do not repeat):
+- Built a whole method before showing 5-10 real cards, and started work without a clear order from Kaptain.
+- Trusted the answer key as truth (it is often wrong) and scored against it.
+- Wrote own verb lists instead of using the patterns' matched spans; asked the questions only indirectly.
+- Threw away tags that carry who / how many (random_target, scope_self, aoe_damage, adjacency) as "noise".
+- Did not run the library's _all.txt patterns at first.
+- Explained in internal jargon (coverage, precision, recall) instead of plain words with a card.
+Not done yet (open, in this order):
+1. Rebuild the five games with A-C above (tags first, clauses only fill fields), then re-score with testset.py.
+2. Fix the rest of the second reader pass's findings (check2 *.out.jsonl in the session's scratch folder are gone with the
+   session; the stored test cards in tools/records/tests/<game>.json hold the corrected rows).
+3. Mine patterns from the checked cards and the hand reviews (D).
+4. Fix the wrong keyword links in the build (kw_links.py), not only in the records: a card has a keyword only where it opens
+   a line; "with X" after summon/create and "X minions" are not the card's keyword.
+5. Open readings: long sentences with two subjects ("Its controller gains ... and draws 2"), "Choose one" cards, Into the
+   Breach wiki prose.
+6. Then the other 15 games, in the order of step 3 (fixed-wording games first).
 
 ### Patterns check (PATTERNS_CHECK.md)
 The four games done are reused as they are (better labels = better trigger and effect fields). Do not run more game passes
