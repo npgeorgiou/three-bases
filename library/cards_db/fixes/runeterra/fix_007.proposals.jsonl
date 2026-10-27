@@ -1,0 +1,5 @@
+{"id": 751017, "field": "act", "need": "make_permanent"}
+{"id": 751406, "field": "act", "need": "keep_buffs_on_recall"}
+{"id": 751520, "field": "attr", "need": "has_act"}
+{"id": 796562, "field": "attr", "need": "has_act"}
+{"id": 796941, "field": "state", "need": "recalled_this_game"}
