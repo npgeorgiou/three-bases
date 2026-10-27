@@ -90,7 +90,9 @@ class Checker:
         elif a == 'name_has':
             if not isinstance(f.get('ref'), str) or not f['ref'].strip(): self.err(cid, path + '.ref', 'name word expected')
         elif a in ('power', 'health', 'cost', 'count', 'base_power', 'base_health', 'damage', 'countdown'):
-            if 'n' not in f: self.err(cid, path + '.n', 'number or amount expected')
+            if 'vals' in f and f.get('op') == 'in':
+                if not all(isinstance(v, (int, float)) for v in f['vals']): self.err(cid, path + '.vals', 'numbers expected')
+            elif 'n' not in f: self.err(cid, path + '.n', 'number or amount expected')
             else: self.amount(cid, path + '.n', f['n'])
     def event(self, cid, path, e):
         if not self.keys(cid, path, 'event', e): return

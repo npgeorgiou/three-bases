@@ -14,7 +14,21 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `input/<game>/` | Reader input batches |
 | `read/<game>/` | Reader output: one JSON record per card (the source of truth), plus proposals for new values |
 | `CHANGES.md` | Every change to the shapes or values, with the card that caused it |
+| `STATUS.md` | Which batches are done, partial or still to read (made by `status.py <game>` from the files) |
+| `status.py`, `show.py`, `compare.py`, `queries.py` | Progress from the files; cards with their records for checking by eye; first vs second reading; connection queries |
+| `second/<game>/` | Independent second reading of a 10% sample, to measure how often readers disagree |
 
 Tables in `cards.sqlite`: card, type, card_type, card_keyword, card_link (levels into, generates), ability, event, cond,
 effect, param, target, filter, amount, keyword_trigger, unsure, vocab, causes (which effect causes which event: the join for
 connections).
+
+## Surviving session limits (rules for every chat doing this work)
+Nothing about the run lives only in a chat. Everything needed to continue is in these files:
+1. Before anything else, run `python3 status.py <game>`: it says from the files which batches are done, partial or todo.
+2. Every finished batch is checked (`check.py ... --input ...`) and committed and pushed at once, one commit per batch or
+   group of batches. Readers write in parts (`<batch>.partN.jsonl`); part files are committed too when a session ends, so a
+   stopped reader loses at most the part it was writing.
+3. A partial batch is finished by a new reader told to read only the cards missing from the output (`build_input.py`
+   `--only` with those ids, or the reader skips ids already in the parts), then the parts are joined and checked.
+4. Values and rules change only through `vocab.tsv`, `BRIEF.md` and a line in `CHANGES.md`, committed in the same step.
+5. The reader prompt is in `READER_PROMPT.md`; a new chat uses it unchanged, filling in the batch name.

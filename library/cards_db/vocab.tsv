@@ -278,3 +278,4 @@ lasts	next_card	until the next card is played			28 Oct 2026, v3
 lasts	unstated	the text does not say how long			28 Oct 2026, v3
 pick	highest	"highest value of the target key ""by"" (an attr)"			28 Oct 2026, v3
 pick	lowest	"lowest value of the target key ""by"" (an attr)"			28 Oct 2026, v3
+param	except	"how many are left out (""obliterate the enemy deck, leaving 3"")"			28 Oct 2026, v3
