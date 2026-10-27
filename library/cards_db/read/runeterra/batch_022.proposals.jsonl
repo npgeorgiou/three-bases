@@ -1,0 +1,9 @@
+{"id":797112,"field":"pick","need":"opposing_enemy"}
+{"id":797117,"field":"attr","need":"shares_subtype_with_it"}
+{"id":797118,"field":"attr","need":"shares_subtype_with_ally"}
+{"id":797144,"field":"state","need":"cursed"}
+{"id":797150,"field":"attr","need":"total_power_and_health"}
+{"id":797153,"field":"attr","need":"total_power_and_health"}
+{"id":797166,"field":"state","need":"captured_by_allies"}
+{"id":797200,"field":"attr","need":"has_subtype"}
+{"id":797201,"field":"attr","need":"different_subtype_than_allies"}
