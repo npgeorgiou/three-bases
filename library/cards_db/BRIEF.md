@@ -28,7 +28,8 @@ FILTER   `{"attr": "power|health|cost|base_power|base_health", "op": op, "n": nu
          `{"attr": "state|category|region|origin", "op": "is|not", "val": <value of that field>}`
          one of several: `"op": "in"` with `"vals": [...]` or `"refs": [...]` ("a Fast spell, Slow spell, or Skill")
          card families by name: `{"attr": "name_has", "op": "is", "ref": "Crimson"}` ("Crimson allies", "Storm Conduits")
-COND     `{"test": test, "of": TARGET, "attr": attr, "op": op, "n": AMOUNT, "span": span, "event": EVENT, "ref": "<name>"}`
+COND     `{"test": test, "of": TARGET, "attr": attr, "op": op, "n": AMOUNT, "span": span, "event": EVENT, "ref": "<name>",
+          "value": AMOUNT}`
          (only the keys the test needs)
 EFFECT   `{"act": act, "on": TARGET, "to": TARGET, "zone": zone, "card": "<exact name>", "keyword": "<exact name>",
           "params": {param: AMOUNT}, "lasts": lasts, "link": link}`
@@ -64,7 +65,12 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
 12. Combat abilities have their own acts: first_strike (Quick Attack), double_strike, excess_damage (Overwhelm, on the enemy
    player), damage_reduction (Tough), strike_with (Formidable, params attr health). "can't" / "can only be blocked by X":
    act cant on the units that cannot act, params event, and `"to": {"pick": "self"}` (they cannot block ME).
-13. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Never add an effect the text does not state.
+13. "1 less for each X" = `{"x": "minus", "inner": {"x": "count", "of": X}}`. A condition that adds up a stat over events
+   ("summon 12+ Power of Tech allies") is test event_count with "attr": "power" (the sum of that stat, not the number of
+   events). One total over two events ("5+ units Stunned or Recalled") = `{"test": "amount", "value": {"x": "sum", "items":
+   [{"x": "event_count", "event": EVENT1, "span": "this_game"}, {"x": "event_count", "event": EVENT2, "span": "this_game"}]},
+   "op": "ge", "n": 5}`.
+14. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Never add an effect the text does not state.
 
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:

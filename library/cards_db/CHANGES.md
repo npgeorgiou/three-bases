@@ -11,3 +11,5 @@ Each change: date, what changed, the card that caused it, and which records were
   base_power, base_health; kind keyword, state positive (Evolve); regions own_regions, same_as_self (Allegiance);
   zone attached; cards and keywords named in a text but missing from the library become stub entries (Dauntless Vanguard,
   Spiderling, Living Shadow, Plant, Turret); rules 10-12 in BRIEF.md.
+- 27 Oct 2026, v2: x listed (Empowered N: the number the card writes; Empowered corrected), state from_hand (Improvise).
+- 27 Oct 2026, v2: x minus (Remembrance, "1 less for each"); rule 13 and test amount with cond key value: stat sums over events (Heimerdinger), one total over two events (Yasuo).

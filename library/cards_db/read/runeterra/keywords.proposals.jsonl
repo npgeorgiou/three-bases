@@ -1,0 +1,16 @@
+{"id":750375,"field":"card","need":"next_act"}
+{"id":750377,"field":"card","need":"next_act"}
+{"id":750385,"field":"act","need":"activate_effect"}
+{"id":750386,"field":"act","need":"activate_effect"}
+{"id":750406,"field":"act","need":"stacking_effect"}
+{"id":750436,"field":"on","need":"still_needed_fragment"}
+{"id":750437,"field":"card","need":"secret_form"}
+{"id":750438,"field":"x","need":"one_of_each"}
+{"id":750448,"field":"attr","need":"power_or_health"}
+{"id":750450,"field":"zone","need":"landmark_storage"}
+{"id":750452,"field":"if","need":"played_from_hand"}
+{"id":750456,"field":"act","need":"deckbuilding_rule"}
+{"id":750458,"field":"zone","need":"onto_unit"}
+{"id":750460,"field":"n","need":"listed_number"}
+{"id":750474,"field":"card","need":"base_card"}
+{"id":750476,"field":"n","need":"chance_percent"}

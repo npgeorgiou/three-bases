@@ -9,7 +9,7 @@ def tg(t):
     if 'n' in t: parts.insert(0, am(t['n']))
     if t.get('zone'): parts.append('in ' + t['zone'])
     for f in t.get('with', []):
-        parts.append('[%s %s %s]' % (f.get('attr'), f.get('op'), f.get('ref', f.get('val', f.get('n')))))
+        parts.append('[%s %s %s]' % (f.get('attr'), f.get('op'), f.get('ref', f.get('val', f.get('n', f.get('vals', f.get('refs')))))))
     return ' '.join(parts)
 
 def am(a):
@@ -20,6 +20,7 @@ def am(a):
     if 'event' in a: s += ' of (' + ev(a['event']) + ')'
     if 'span' in a: s += ' ' + a['span']
     if 'inner' in a: s += ' (' + am(a['inner']) + ')'
+    if 'items' in a: s += ' (' + ' + '.join(am(i) for i in a['items']) + ')'
     return s
 
 def ev(e):

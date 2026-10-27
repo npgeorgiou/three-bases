@@ -38,7 +38,7 @@ SHAPES = {
     'event': {'event', 'actor', 'object'},
     'target': {'kind', 'side', 'pick', 'n', 'zone', 'with'},
     'filter': {'attr', 'op', 'n', 'ref', 'val', 'vals', 'refs'},
-    'cond': {'test', 'of', 'attr', 'op', 'n', 'span', 'event', 'ref'},
+    'cond': {'test', 'of', 'attr', 'op', 'n', 'span', 'event', 'ref', 'value'},
     'effect': {'act', 'on', 'to', 'zone', 'card', 'keyword', 'params', 'lasts', 'link'},
     'amount': {'x', 'of', 'attr', 'event', 'span', 'inner', 'items'},
 }
@@ -105,6 +105,7 @@ class Checker:
         if 'span' in c: self.enum(cid, path + '.span', 'span', c['span'])
         if 'event' in c: self.event(cid, path + '.event', c['event'])
         if 'ref' in c: self.link(cid, path + '.ref', 'keyword', c['ref'])
+        if 'value' in c: self.amount(cid, path + '.value', c['value'])
     def effect(self, cid, path, e, first):
         if not self.keys(cid, path, 'effect', e): return
         act = e.get('act'); self.enum(cid, path + '.act', 'act', act)

@@ -24,11 +24,11 @@ create table amount(id integer primary key, x text, value real, of_target intege
 create table amount_item(amount integer, item integer);
 create table ability(id integer primary key, card integer, seq integer, event integer, lim text);
 create table cond(id integer primary key, ability integer, keyword integer, test text, of_target integer, attr text, op text,
-  n integer, span text, event integer, ref_keyword integer);
+  n integer, span text, event integer, ref_keyword integer, value integer);
 create table keyword_trigger(keyword integer primary key, event integer);
 create table effect(id integer primary key, ability integer, seq integer, act text, on_target integer, to_target integer,
   zone text, card_ref integer, keyword_ref integer, lasts text, link text);
-create table param(effect integer, param text, amount integer, event_value text);
+create table param(effect integer, param text, amount integer, value text);
 create table unsure(card integer, field text);
 create table name_part(id integer primary key, game text, word text);
 create table causes(act text, event text);
@@ -85,7 +85,7 @@ class Loader:
     def cond(self, c, ability=None, keyword=None):
         self.ins('cond', ability=ability, keyword=keyword, test=c['test'], of_target=self.target(c.get('of')), attr=c.get('attr'),
                  op=c.get('op'), n=self.amount(c.get('n')), span=c.get('span'), event=self.event(c.get('event')),
-                 ref_keyword=self.ref('keyword', c['ref']) if 'ref' in c else None)
+                 ref_keyword=self.ref('keyword', c['ref']) if 'ref' in c else None, value=self.amount(c.get('value')))
     def record(self, rec):
         cid = rec['id']
         if 'trigger' in rec: self.ins('keyword_trigger', keyword=cid, event=self.event(rec['trigger']))
@@ -99,7 +99,7 @@ class Loader:
                                zone=e.get('zone'), card_ref=self.ref('card', e['card']) if 'card' in e else None,
                                keyword_ref=self.ref('keyword', e['keyword']) if 'keyword' in e else None, lasts=e.get('lasts'), link=e.get('link'))
                 for p, a in (e.get('params') or {}).items():
-                    if p == 'event': self.ins('param', effect=eid, param=p, event_value=a)
+                    if p in ('event', 'attr'): self.ins('param', effect=eid, param=p, value=a)
                     else: self.ins('param', effect=eid, param=p, amount=self.amount(a))
 
     def game_data(self, game):

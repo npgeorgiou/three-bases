@@ -1,0 +1,4 @@
+{"id": 750480, "field": "if", "need": "sum_of_two_event_counts_in_cond"}
+{"id": 750532, "field": "event", "need": "strike_with_item"}
+{"id": 750536, "field": "n", "need": "starting_health_of_player"}
+{"id": 750606, "field": "params", "need": "negative_amount"}

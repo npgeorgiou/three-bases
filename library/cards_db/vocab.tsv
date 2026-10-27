@@ -246,3 +246,7 @@ region	own_regions	one of my deck's regions			27 Oct 2026, v2
 region	same_as_self	the same region as the card itself			27 Oct 2026, v2
 param	attr	an attr value (for strike_with)			27 Oct 2026, v2
 zone	attached	attached to a unit or card			27 Oct 2026, v2
+x	listed	the number the card writes after the keyword (Empowered 5, Toss 2, Countdown 3)			27 Oct 2026, v2
+state	from_hand	played from hand (not created into play or summoned)			27 Oct 2026, v2
+x	minus	"the negative of the inner amount (""1 less for each ..."": cost = minus of count)"			27 Oct 2026, v2
+test	amount	"the amount in value compares op n (totals: ""5+ units Stunned or Recalled"")"			27 Oct 2026, v2
