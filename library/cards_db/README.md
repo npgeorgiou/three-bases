@@ -16,6 +16,7 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `CHANGES.md` | Every change to the shapes or values, with the card that caused it |
 | `STATUS.md` | Which batches are done, partial or still to read (made by `status.py <game>` from the files) |
 | `status.py`, `show.py`, `compare.py`, `queries.py` | Progress from the files; cards with their records for checking by eye; first vs second reading; connection queries |
+| `reread.py`, `normalize.py` | Re-reading chosen records under the current brief (old readings kept in `replaced/`); one canonical form for equal meanings |
 | `second/<game>/` | Independent second reading of a 10% sample, to measure how often readers disagree |
 
 Tables in `cards.sqlite`: card, type, card_type, card_keyword, card_link (levels into, generates), ability, event, cond,
@@ -32,3 +33,5 @@ Nothing about the run lives only in a chat. Everything needed to continue is in 
    `--only` with those ids, or the reader skips ids already in the parts), then the parts are joined and checked.
 4. Values and rules change only through `vocab.tsv`, `BRIEF.md` and a line in `CHANGES.md`, committed in the same step.
 5. The reader prompt is in `READER_PROMPT.md`; a new chat uses it unchanged, filling in the batch name.
+6. Order of work for a game: all batches -> `normalize.py` on all records -> `reread.py make <game> unsure` and read the
+   fix batches -> `reread.py merge` -> `normalize.py` again -> `compare.py` on the second-reading sample -> `load.py`.

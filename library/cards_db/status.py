@@ -21,6 +21,9 @@ def main():
         out = os.path.join(HERE, folder, game, name + '.jsonl')
         parts = glob.glob(os.path.join(HERE, folder, game, name + '.part*.jsonl'))
         got = ids(out) if os.path.exists(out) else set()
+        merged = os.path.join(HERE, 'fixes', game, name + '.jsonl')
+        if name.startswith('fix_') and os.path.exists(merged):
+            tot['done'] += 1; rows.append(f'| {name} | {len(want)} | {len(ids(merged))} | merged |'); continue
         if got >= want:
             r = subprocess.run([sys.executable, os.path.join(HERE, 'check.py'), game, out, '--input', inp], capture_output=True, text=True)
             state = 'done' if r.returncode == 0 else 'problems'
