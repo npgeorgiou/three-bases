@@ -20,3 +20,7 @@ Each change: date, what changed, the card that caused it, and which records were
   unstated; picks highest/lowest with target key by; filter n may be an amount (relative to another stat); rule 14.
   Records marked unsure under v2 are re-read under v3 after all batches are in.
 - 28 Oct 2026, v3: param except (Watcher: "leaving 3"); numeric filters accept op in with vals (Elnuk-type "cost 2 or 3"); null keys dropped from records; Tentacle is a card, Udyr's stances a name family (batch 17).
+- 28 Oct 2026: normalize.py (from the first comparison of first and second readings, 200 cards): N1 create/summon of a named
+  card drop the receiving player; N2 keyword use is keyword_action for action keywords and give_keyword for statuses,
+  decided by the keyword's own record; N3 empty values dropped. Vulnerable's record corrected to a status (the enemy can
+  challenge it). Applied to all records read so far (575 records changed).

@@ -33,7 +33,7 @@
 {"id":750400,"abilities":[]}
 {"id":750401,"abilities":[],"condition":[{"test":"event_count","event":{"event":"nexus_damaged","object":{"kind":"player","side":"enemy"}},"op":"ge","n":1,"span":"this_round"}]}
 {"id":750402,"abilities":[{"when":{"event":"attacks","actor":{"pick":"self"}},"do":[{"act":"double_strike","on":{"pick":"self"},"lasts":"this_round"}]}]}
-{"id":750403,"abilities":[{"when":{"event":"activated","actor":{"kind":"player","side":"enemy"}},"do":[{"act":"challenge","on":{"pick":"self"}}]}]}
+{"id":750403,"abilities":[{"when":{"event":"always"},"do":[{"act":"can","on":{"kind":"player","side":"enemy"},"to":{"pick":"self"},"params":{"event":"challenges"},"lasts":"while"}]}]}
 {"id":750404,"abilities":[{"when":{"event":"always"},"do":[{"act":"cant","on":{"kind":"unit","side":"enemy","pick":"all","with":[{"attr":"keyword","op":"not","ref":"Elusive"}]},"to":{"pick":"self"},"params":{"event":"blocks"},"lasts":"while"}]}]}
 {"id":750405,"abilities":[{"when":{"event":"always"},"do":[{"act":"cant","on":{"pick":"self"},"params":{"event":"attacks"},"lasts":"this_round"},{"act":"cant","on":{"pick":"self"},"params":{"event":"blocks"},"lasts":"this_round","link":"and"}]}]}
 {"id":750406,"abilities":[{"when":{"event":"always"},"do":[{"act":"cant","on":{"pick":"self","zone":"hand"},"params":{"event":"targeted"},"lasts":"while"}]}],"unsure":["act"]}
