@@ -86,6 +86,36 @@ Read this section only; the sections below it are the earlier test and its histo
 7. Check: about 20 hand-read cards per game, `combos.tsv`, and the six fixed questions (step 3 of the earlier test) on old and new.
 8. Queries: new `query.py` commands over the records (combo = A's effect on a target matches B's trigger on that target).
 
+### Learnings from the five checked games (27 Oct 2026; use them for every next game)
+Measured on the 500 reader-checked cards: a game's current effect tags cover 87-92% of what the reader says the cards do
+(Inscryption 81%), and 73-77% of them are right once property concepts are left out (ranged, rank_positions, placement_rules,
+items_consumables, drawback, saving_throws: what a card is, not what it does). The tags are the best source for "what".
+What worked:
+1. Placing each tag at the words it stores (ev_pos), then reading who / how much / how long from those words.
+2. Keyword rows copied from the keyword records, but only where the keyword opens a line of the card; "give/gain/grant X"
+   makes a row for the receiver; "with X" after summon/create describes the new card; "X minions" is a tribe word.
+3. A fixed-format reader where the source has one (Darkest Dungeon skills and stat lines: 94% of expected rows).
+4. Reader agents (cheap model, the brief in the check folder) on 50 random + 50 complicated cards, stored as test cards;
+   every change re-scored by script, no reading.
+What did not work:
+5. Own verb lists that ignore the tags: the clause reader added rows from prose (Into the Breach fell from 25 to 7 right).
+6. Accepting a wording pattern alone in games whose tags were redone: patterns overfire where the tag pass removed them.
+7. Trusting keyword links: wrong in the checked games too (Conscript "with Zeal", Mother of All Yaks' Yak Guards).
+8. Scoring against the first reader pass: its expected rows carried the old rows' conventions (+2/+2 as two rows).
+Do next time, in this order:
+A. Rows from the tags first: one row per effect tag, at its stored words; the clause questions only fill who, how much, how
+   long and condition from those words. A clause makes a row of its own only for a verb no tag covers, and only in a short,
+   rule-like sentence (not wiki prose, not game_rule / terrain pages).
+B. Use the patterns' matched span as the clause: the object after the span is "who", the numbers inside it "how much".
+C. Properties (ranged, rank_positions, placement_rules, items_consumables, drawback, saving_throws, cost_type) go to extra.
+D. Mine patterns from the checked cards: every reader-confirmed row and every hand-review tag with its words is a candidate
+   wording; run it on the game (tools/pattern_eval.py) and add it to the game's pattern file when it stays right. Not done yet.
+E. Fix sure errors where they live: tags through reviews/<game>.json or the game's pattern file (a direct database edit is
+   lost on the next build), step3/decisions.tsv when a "new" pattern came from a wrong key, the key itself, the keyword file.
+   Check with tools/game_check.sh that the fix survives a rebuild (an old review "add" can put the tag back).
+F. Into the Breach: its tags cover 92% of the reader's effects and 76% are right; pour the tags into rows (A) and drop own
+   clause rows there, instead of more reading rules.
+
 ### Patterns check (PATTERNS_CHECK.md)
 The four games done are reused as they are (better labels = better trigger and effect fields). Do not run more game passes
 before the trial: the passes improve labels, not target, amount or duration, and read cards get their whole record from the
