@@ -1,5 +1,7 @@
 # Card database (what cards do, as a network)
 
+Start here for a new game: GUIDE.md. What Runeterra showed: RESULTS.md. Example questions: QUERIES.md.
+
 Each card is described as abilities: an event (when), conditions (if) and effects (do). Every field is a value from
 `vocab.tsv`, a number, or a link (id) to another card, keyword or type. No free text. The reader records in `read/<game>/`
 are the source; `cards.sqlite` is rebuilt from them.
@@ -10,7 +12,11 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `vocab.tsv` | Every allowed value per field, its meaning, its concept-tree concept, and (for effects) the events it causes |
 | `build_input.py` | Cards to read, cut into batches by amount of text; keyword-only cards get an empty record directly |
 | `check.py` | Checks records against the shapes and values and resolves names to ids |
-| `load.py` | Builds `cards.sqlite` from the records |
+| `load.py` | Builds `cards.sqlite` from the records, then the query layer |
+| `flat.py` | Query layer: flat_when / flat_if / flat_do rows with keywords expanded, flat_concept with concept-tree concepts (RULES) |
+| `connections.py` | How one card sets off another (event, made card, zone, keyword or type asked for) |
+| `cases/` | Case tests: mechanics.tsv, combos.tsv, regions.tsv, run.py, REPORT.md, DROPPED.md (cases dropped and why) |
+| `GUIDE.md`, `RESULTS.md`, `QUERIES.md`, `examples.py` | How to do the next game; the Runeterra findings; example queries with real answers |
 | `input/<game>/` | Reader input batches |
 | `read/<game>/` | Reader output: one JSON record per card (the source of truth), plus proposals for new values |
 | `CHANGES.md` | Every change to the shapes or values, with the card that caused it |
@@ -24,9 +30,10 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `reread.py`, `normalize.py` | Re-reading chosen records under the current brief (old readings kept in `replaced/`); one canonical form for equal meanings |
 | `second/<game>/` | Independent second reading of a 10% sample, to measure how often readers disagree |
 
-Tables in `cards.sqlite`: card, type, card_type, card_keyword, card_link (levels into, generates), ability, event, cond,
-effect, param, target, filter, amount, keyword_trigger, unsure, vocab, causes (which effect causes which event: the join for
-connections).
+Tables in `cards.sqlite`: card, type, card_type, card_keyword, card_link (levels into, generates), ability (given_by_effect
+for abilities an effect gives), event, cond, effect, param, target, filter (op in on several rows of one attr = one of them),
+amount, amount_item, name_part, keyword_trigger, unsure, vocab, causes (which effect causes which event), and the query layer
+flat_when, flat_if, flat_do, flat_concept. Searches use the flat tables and concepts, never keyword names.
 
 ## Surviving session limits (rules for every chat doing this work)
 Nothing about the run lives only in a chat. Everything needed to continue is in these files:
@@ -40,5 +47,6 @@ Nothing about the run lives only in a chat. Everything needed to continue is in 
 5. The reader prompt is in `READER_PROMPT.md`; a new chat uses it unchanged, filling in the batch name.
 6. `reread.py merge` and `normalize.py` run only on batches whose reader has finished (a running reader rewrites a file
    that disappears under it).
+8. After every rebuild: `cases/run.py <game>` must pass; `examples.py` refreshes QUERIES.md.
 7. Order of work for a game: all batches -> `normalize.py` on all records -> `pattern_check.py` and re-read what it flags -> `reread.py make <game> unsure` and read the
    fix batches -> `reread.py merge` -> `normalize.py` again -> `compare.py` on the second-reading sample -> `load.py`.

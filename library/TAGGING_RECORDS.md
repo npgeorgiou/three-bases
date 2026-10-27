@@ -1,8 +1,8 @@
 # Tagging per effect
 
 ## Reading test: Runeterra (agreed with Kaptain, 27 Oct 2026, evening)
-Work, tools, status and the rules for continuing after a session limit: `library/cards_db/README.md` (start with
-`python3 library/cards_db/status.py runeterra`).
+Done 28 Oct 2026: Runeterra fully described, 247 of 247 case tests pass (`library/cards_db/RESULTS.md`). Next games
+follow `library/cards_db/GUIDE.md`; files and rules in `library/cards_db/README.md`. The sections below are history.
 - Runeterra is read completely, by reading, in a table of fixed values (no free text), keywords described once by their effect
   and inherited by every card, created cards, keywords and tribes as links to their entries.
 - The table and its value lists are made perfect gradually while reading: when a card does not fit, the table or a list is

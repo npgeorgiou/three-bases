@@ -1,0 +1,6 @@
+{"id": 751033, "field": "keyword", "need": "hand_keyword"}
+{"id": 751038, "field": "x", "need": "max_of"}
+{"id": 751630, "field": "to", "need": "ever_had"}
+{"id": 751642, "field": "keyword", "need": "hand_keyword"}
+{"id": 752066, "field": "test", "need": "keywords_total"}
+{"id": 796563, "field": "x", "need": "rounds_with_event"}

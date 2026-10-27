@@ -1,34 +1,35 @@
 # Runeterra reading test: results (27-28 Oct 2026)
 
 ## What was built
-- All 2,431 Runeterra entries described: 2,333 read, 98 keyword-only (no reading needed), plus the 104 keywords described once.
-- `cards.sqlite`: 3,092 abilities and 4,497 effects, every field a value from `vocab.tsv` (280 values), a number or a link.
-  69 cards and keywords the texts name but the library lacks (Dauntless Vanguard, Plant, Tentacle...) are name-only stubs,
-  so the links still work.
-- Connections are queries over the links (`queries.py feeds/fed_by/event/same`): an effect causes an event, another card's
-  ability waits for that event on a matching target. Created cards and used keywords are followed through their own records.
+- All base-game Runeterra entries described (Path of Champions items excluded, `exclude.tsv`): 2,177 cards with text read,
+  98 keyword-only, 104 keywords described once, plus one keyword the library lacks (Can't Block, by its name).
+- `cards.sqlite`: 2,955 abilities, 4,334 effects; every field a value from `vocab.tsv` (302 values), a number or an id.
+  69 cards and keywords the texts name but the library lacks are name-only stubs, so links still work.
+- Query layer (`flat.py`): 4,826 trigger rows, 1,474 condition rows, 6,631 effect rows, with each card's keywords copied
+  onto it in general terms (Tough on Malphite is damage_reduction) and 109 concept-tree concepts on 12,995 card-concept rows.
+- Connections (`connections.py`): an effect causes an event another card waits for; created cards, used keywords, zones
+  (discarding empties the hand) and asked-for types or keywords are followed. Example questions and answers: QUERIES.md.
+
+## Tests (cases/REPORT.md): 247 of 247 pass
+- 80 mechanics: the expected cards come from the card texts themselves; each query must find 95% of them.
+- 40 combos: 5 from the library's combos.tsv (one dropped: the texts do not support it, cases/DROPPED.md) and 35 pairs
+  taken from the texts (enabler wording and payoff wording).
+- 127 region cases: Claude's list of each region's known mechanics, plus the library's signature, splash and archetype rows
+  (three on_kill rows dropped: the old tags are wrong there, DROPPED.md).
+- Failing cases were fixed at their cause: text patterns that caught card names, queries that asked too narrowly, missing
+  values (copy_keywords), acts that caused no event (gain the attack token), and 87 records re-read with notes.
 
 ## Accuracy
-- 219 cards (10%) were read twice by independent readers. 131 identical; 44 the same meaning written differently;
-  44 with a misreading in at least one reading (judged against the card text by a stronger model).
-- The readings kept in the database were wrong on 19 of the 219 (about 9%), mostly partial: a missing "only the next time",
-  a dropped filter, "hand or deck" read as deck only. Those 19 were re-read with the judge's notes and replaced.
-  Errors where both readers made the same mistake are not measured; Kaptain's own check of `CHECK_20.md` is the outside test.
-- 120 cards (5%) stay marked unsure: a long tail of about 100 rare mechanics the values cannot say yet ("in 5+ different
-  rounds", "every third time", swapping Power and Health). Their records hold the closest correct description.
-- The 44 "same meaning, different form" cases led to the normalization rules N1-N4 (`normalize.py`), so queries match.
+- 219 cards (10%) read twice independently; differences judged against the text by a stronger model: the kept readings
+  were wrong on 19 (9%), mostly partial (a dropped filter, a missing "only the next time"); all 19 were re-read.
+- Word checks (`pattern_check.py`): 12 cards still flagged, all looked at: correct records ("summoned this round" is a
+  state, not a summon) or broken source text ("Level up: Missing Translation").
+- 122 cards (5%) stay marked unsure: rare mechanics the values cannot say yet; their records hold the closest description.
+- Not measured: mistakes both readers made the same way. CHECK_20.md / CHECK_20_RAW.txt are for Kaptain's own check.
 
-## Batch size and cost
-- Batches were cut at 8,000 characters of card text (about 100 cards; 59-189 cards depending on text length).
-- One reader per batch used about 110,000-125,000 tokens, roughly 1,100 tokens per card including the reader's fixed start
-  (brief, values, checking). Many readers wrote their records through a small script instead of the Write tool; quality was
-  the same and it used fewer steps.
-- Whole test, all readers: about 33 runs, roughly 3.8 million tokens (22 batches, keywords, 2 second readings, 6 re-read
-  batches, the judge, the trial corrections).
-- The table grew while reading: v1 (13 cards) to v3, 226 to 280 values; every change and the card that caused it is in
-  `CHANGES.md`. Values were added in rounds from the readers' proposals, then the unsure cards were re-read.
+## Cost and batch size
+- About 33 reader runs for the main reading, 110,000-125,000 tokens each, plus 9 smaller fix runs and 2 judge runs:
+  roughly 4.5 million tokens in all.
+- Cost per reader was nearly fixed whatever the batch size (39 to 189 cards): the next game uses ~20,000-character batches.
 
-## What went wrong and was fixed
-- Readers were stopped by a session limit; their part files were saved and the batches finished (rules in README.md).
-- A merge ran while two readers were still writing, so they rewrote their files; merges now wait for readers to finish.
-- Readers shared a scratch folder once; each reader now uses its own.
+## What the next game needs: GUIDE.md

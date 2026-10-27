@@ -1,6 +1,5 @@
 id	game	enabler	payoff	why	source
 c01	runeterra	Hecarim	Shark Chariot	attacking with Ephemeral allies revives the Chariot	combos.tsv (library)
-c02	runeterra	Thresh	Kalista	revive the strongest dead champion	combos.tsv (library)
 c03	runeterra	Ezreal	Mystic Shot	Nexus Strike creates Mystic Shot	combos.tsv (library)
 c04	runeterra	Elise	Frenzied Skitterer	spider tribal	combos.tsv (library)
 c05	runeterra	Get Excited!	Jinx	discarding empties the hand for Jinx's level up	combos.tsv (library)

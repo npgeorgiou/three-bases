@@ -1,6 +1,4 @@
-# 20 random Runeterra cards with their rows (for Kaptain to check)
-
-Made by `python3 rows.py --random 20 7` from cards.sqlite. Keyword rows live on the keyword entries (e.g. `python3 rows.py "Quick Attack"`).
+# 19 random Runeterra cards with their rows (names put back by rows.py; the stored rows are in CHECK_20_RAW.txt)
 
 **All-Seeing Oracle**
 Card text: "Play: Pick 1 of 3 Fast or Slow spells in the enemy's hand or deck. Create a Carvings of Divination for it."
@@ -18,14 +16,6 @@ Keywords (their own rows are on the keyword entries): Countdown, Landmark
 | when | if | link | what | who | where | card/keyword | numbers | lasts |
 |---|---|---|---|---|---|---|---|---|
 | countdown_done of self |  |  | summon |  | board | Grumpy Rockbear |  |  |
-
-**Radiant Plate Armor**
-Card text: "+3|+3, but cost 1 more"
-
-| when | if | link | what | who | where | card/keyword | numbers | lasts |
-|---|---|---|---|---|---|---|---|---|
-| always |  |  | stat_change | attached_to |  |  | power=3, health=3 | while_attached |
-| always |  | and | cost_change | self |  |  | cost=1 | while |
 
 **Ashe**
 Card text: "Attack: Frostbite the strongest enemy. Level up: You've reduced the Power of 5+ enemies to 0. When I level up, create a Crystal Arrow on top of deck."
@@ -82,13 +72,13 @@ Card text: "When you summon an Ephemeral ally, grant it +1|+1."
 | summoned by mine player of mine unit [state is ephemeral] |  |  | stat_change | it |  |  | power=1, health=1 | permanent |
 
 **Bouncing Bomb (created)**
-Card text: "Keywords: Slow. Deal 1 to two enemies."
+Card text: "Keywords: Slow. Deal 2 to a unit."
 
 Keywords (their own rows are on the keyword entries): Slow
 
 | when | if | link | what | who | where | card/keyword | numbers | lasts |
 |---|---|---|---|---|---|---|---|---|
-| played of self |  |  | damage | 2 chosen enemy unit in board |  |  | amount=1 |  |
+| played of self |  |  | damage | chosen any unit in board |  |  | amount=2 |  |
 
 **Inner Beast**
 Card text: "Give an ally +1|+1 this round. Create a Stance Swap in hand."
@@ -132,9 +122,9 @@ Keywords (their own rows are on the keyword entries): Elusive, Missing Translati
 
 | when | if | link | what | who | where | card/keyword | numbers | lasts |
 |---|---|---|---|---|---|---|---|---|
-| levels_up of self |  |  | give_ability | mine player |  |  |  |  |
+| levels_up of self |  |  | give_ability | mine player |  |  |  | permanent |
 | strikes_nexus by self |  |  | create |  | hand | Behold the Infinite |  |  |
-| strikes_nexus by self |  | and | cost_set | it |  |  | cost=0 |  |
+| strikes_nexus by self |  | then | cost_set | mine card in hand [card is Behold the Infinite] |  |  | cost=0 | permanent |
 
 **Insightful Investigator**
 Card text: "When you play a 2 cost card, draw 1 and grant it Fleeting."
@@ -151,7 +141,7 @@ Keywords (their own rows are on the keyword entries): Formidable
 
 | when | if | link | what | who | where | card/keyword | numbers | lasts |
 |---|---|---|---|---|---|---|---|---|
-| summoned of mine unit |  |  | give_keyword | self |  | Challenger |  | permanent |
+| summoned of mine unit [card not Petricite Broadwing] |  |  | give_keyword | self |  | Challenger |  | permanent |
 
 **Concerted Strike**
 Card text: "Pick an enemy. 2 allies strike it one after another."

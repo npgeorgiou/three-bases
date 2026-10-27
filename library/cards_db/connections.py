@@ -12,6 +12,11 @@ def ids(c, name):
 def agree(a, b):
     return not a or not b or a == b or 'any' in (a, b)
 
+def narrow_ok(want, have):
+    """the payoff asks for a specific card, type or keyword ('card is 123'): the enabler's target must name the same one"""
+    asks = [p for p in (want or '').split(';') if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['keyword', 'is'])]
+    return all(a in (have or '') for a in asks)
+
 def made_by(c, card, depth=2):
     """cards a card creates, summons or generates (a few steps deep), including itself"""
     out, todo = {card}, [card]
@@ -40,13 +45,17 @@ def explain(c, enabler, payoff):
             for ev, owith in c.execute("select event, of_kind from flat_if where card=? and event in ('played','summoned')", (p,)).fetchall():
                 if ev == 'played' and cat == 'spell': return 'is: counted as a played spell'
             for m in makers:
-                for act, side, kind, kref, cref in c.execute('select act, on_side, on_kind, keyword_ref, card_ref from flat_do where card=?', (m,)).fetchall():
+                for act, side, kind, kref, cref, onw in c.execute('select act, on_side, on_kind, keyword_ref, card_ref, on_with from flat_do where card=?', (m,)).fetchall():
+                    # what the effect itself carries: the keyword it gives or uses (a stun is the keyword Stun)
+                    kid = kref or (c.execute("select id from card where is_keyword=1 and lower(name)=?", (act,)).fetchone() or [None])[0]
+                    if kid: onw = (onw or '') + f';keyword is {kid}'
                     for (ev,) in c.execute('select event from causes where act=?', (act,)).fetchall():
-                        for oside, opick in c.execute('select obj_side, obj_pick from flat_when where card=? and event=?', (p, ev)).fetchall():
+                        for oside, opick, ow in c.execute('select obj_side, obj_pick, obj_with from flat_when where card=? and event=?', (p, ev)).fetchall():
                             if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', None)): continue
+                            if not narrow_ok(ow, onw): continue
                             if agree(side, oside): return f'event: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else '')
-                        for (oside,) in c.execute('select of_side from flat_if where card=? and event=?', (p, ev)).fetchall():
-                            if agree(side, oside): return f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else '')
+                        for oside, ow in c.execute('select ev_obj_side, ev_obj_with from flat_if where card=? and event=?', (p, ev)).fetchall():
+                            if agree(side, oside) and narrow_ok(ow, onw): return f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else '')
             # keyword or type the payoff asks for, carried by what the enabler makes or gives
             kw_have = {k for x in makers for (k,) in c.execute('select keyword from card_keyword where card=?', (x,))}
             kw_have |= {k for x in makers for (k,) in c.execute("select keyword_ref from flat_do where card=? and act='give_keyword' and keyword_ref is not null", (x,))}
