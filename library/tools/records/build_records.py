@@ -12,6 +12,7 @@ import collections, json, os, random, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE); sys.path.insert(0, os.path.dirname(HERE))
 import auto_records as A
+import clauses as C
 import compact_text as CT
 from common import COLUMNS
 
@@ -149,6 +150,11 @@ class Game:
         self.facet, self.anc, self.pats = A.load(c)
         self.prep = A.prep(c, game, self.facet, self.pats)
         self.sup, self.rej = rules(game)
+        self.kwfx = {}  # a keyword's name -> its record's effect, for "gains Taunt"
+        for d, krs in keyword_rows(game).items():
+            nm = dict(c.execute("SELECT id, lower(name) FROM entities WHERE id=?", (d,))).get(d)
+            fxs = [kr[3] for kr in krs if kr[3]]
+            if nm and fxs: self.kwfx[re.sub(r"\s*\([^)]*\)$", '', nm)] = fxs[0]
         self.anypat = collections.defaultdict(list)
         for (k, g2), rxs in self.pats.items(): self.anypat[k] += rxs
         self.kwrows = keyword_rows(game)
@@ -256,6 +262,7 @@ class Game:
         rows, diffs = [], []
         kwre, allfx, kwfx, kwgrant, kwtrig = self.prep
         prev, ab, last_tg, last_fx, leftover = None, 0, '', '', []
+        rel = lambda a, b: a == b or b in self.anc.get(a, ()) or a in self.anc.get(b, ())
         tagset = {k for k, *_ in self.tags[e]}
         for i, (x, y) in enumerate(sents):
             if i in skip: continue
@@ -299,6 +306,32 @@ class Game:
             dur = next((d for rx, d in A.DURATIONS if rx.search(s)), None)
             conds = [m.group(0).strip() for m in A.COND.finditer(s)]
             if op and t == 'trigger': conds.insert(0, op.group(0).strip(' ,:'))
+            # the questions, per clause: when, what, who, how much, how long, condition; tags only make "what" narrower
+            crow, last_tg = C.answer(body, cat, t if (trig or op or prev) else ('on_play' if cat in A.ONE_OFF else 'passive'),
+                                     kwtrig, self.kwfx, last_tg)
+            if crow:
+                if trig and all(r['trigger'] in ('passive', 'on_play', 'trigger') for r in crow): 
+                    for r in crow: r['trigger'] = trig[0]
+                used = set()
+                for r in crow:
+                    k = r['effect']
+                    narrow = [o for o in ok if o in fx and k in self.anc.get(o, ())]
+                    if narrow: r['effect'] = narrow[0]; used.add(narrow[0])
+                    used |= {o for o in fx if rel(o, r['effect'])}
+                    d = r['duration'] or ('while' if r['trigger'] in ('passive', 'aura') else 'permanent' if r['effect'] in A.LASTING else 'instant')
+                    if d in ('n_turns', 'n_rounds'):
+                        nm = re.search(r'for (\d+|two|three|four)', s); r['amount'] += '; ' + (A.WORDNUM.get(nm.group(1), nm.group(1)) if nm else 'N')
+                    src = 'words+tag' if r['effect'] in used or any(rel(o, r['effect']) for o in ok) else 'words'
+                    if src == 'words' and any(rel(o, r['effect']) for o in hint[i]): src = 'words+hint'
+                    if src == 'words': diffs.append((e, i, r['effect'], 'words, no tag', s[:160]))
+                    if src == 'words' and g in CHECKED:  # tags redone by hand there: words no hint backs are only a maybe
+                        leftover.append('maybe:' + r['effect']); continue
+                    rows.append((e, ab, r['trigger'], r['effect'], r['target'], shape_of(r['words']), r['amount'].replace('name', name or '~'),
+                                 d, r['condition'], extra, src, ''))
+                    if r['effect'] in ('draw', 'generate_cards', 'tutor', 'copy'): last_fx = r['effect']
+                for k in fx:
+                    if k not in used: diffs.append((e, i, k, 'tag, no clause', s[:160]))
+                fx = [k for k in fx if k not in used]  # a tag no clause answers still makes its row, from the tag's own words
             plain = blank_conditions(s)
             for n, k in enumerate(fx):
                 a = max(0, pos[i].get(k, x) - x)

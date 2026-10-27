@@ -82,7 +82,10 @@ def score(db, game, show=0):
         used, miss = set(), []
         for w in want:
             hit = next((i for i, x in enumerate(got) if i not in used and eff_ok(w['effect'], x[3]) and tg_ok(w['target'], x[4])), None)
-            if hit is None: miss.append(w)
+            if hit is None:  # one "+2/+2" row meets both an attack and a defence row of the same target
+                hit2 = next((i for i in used if got[i][3] in ('stat_gain', 'temporary_buff', 'permanent_growth') and eff_ok(w['effect'], got[i][3])
+                             and tg_ok(w['target'], got[i][4])), None)
+                if hit2 is None: miss.append(w)
             else: used.add(hit)
         extra = [x for i, x in enumerate(got) if i not in used and not (x[10] == 'keyword' and x[11] and x[11] in text.lower())]
         # a keyword row for a keyword the text names is backed by the text even when the judged rows lacked it
