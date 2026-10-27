@@ -1,7 +1,7 @@
 # Case tests: runeterra
 
 Made by `cases/run.py runeterra`.
-**247 of 248 cases pass.**
+**248 of 248 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -64,7 +64,7 @@ Made by `cases/run.py runeterra`.
 | m54 | damage equal to a stat or count | 9 | 9 | 100% | 14 | yes |
 | m55 | effects scaling with a count (for each) | 85 | 83 | 98% | 235 | yes |
 | m56 | temporary buffs this round | 120 | 120 | 100% | 44 | yes |
-| m57 | Invoke | 19 | 18 | 95% | 0 | NO |
+| m57 | Invoke (does it or cares about it) | 19 | 19 | 100% | 0 | yes |
 | m58 | Manifest | 32 | 32 | 100% | 0 | yes |
 | m59 | Plants traps or Puffcaps | 37 | 37 | 100% | 8 | yes |
 | m60 | Imbue (when a spell resolves) | 20 | 20 | 100% | 20 | yes |
@@ -88,10 +88,6 @@ Made by `cases/run.py runeterra`.
 | m78 | Fleeting cards are discarded at round end | 42 | 42 | 100% | 0 | yes |
 | m79 | Advance (Countdowns) | 22 | 22 | 100% | 0 | yes |
 | m80 | counters spells | 10 | 10 | 100% | 51 | yes |
-
-Missed cards (first 8 per failing case):
-
-- m57 Invoke: Dragonsong Dreamer
 
 ## Combos (the enabler must set off the payoff)
 
