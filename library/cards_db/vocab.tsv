@@ -1,0 +1,229 @@
+field	value	meaning	tree	causes	added
+event	always	no event: the ability is on as long as its conditions hold (static)	passive		27 Oct 2026, v1
+event	activated	the player chooses to use it (landmark activation, skill-like use)	activated		27 Oct 2026, v1
+event	played	the actor card is played from hand (Play:, a spell being cast)	on_play		27 Oct 2026, v1
+event	summoned	a unit enters play by any means	on_ally_play		27 Oct 2026, v1
+event	created	a card is created (in hand, deck or play)			27 Oct 2026, v1
+event	drawn	a card is drawn	on_draw		27 Oct 2026, v1
+event	discarded	a card is discarded	on_discard		27 Oct 2026, v1
+event	attacks	a unit attacks (declared as attacker)	on_attack		27 Oct 2026, v1
+event	blocks	a unit blocks	on_block		27 Oct 2026, v1
+event	strikes	a unit strikes (deals damage with its Power)	on_attack		27 Oct 2026, v1
+event	strikes_nexus	a unit strikes the enemy player (Nexus Strike)	on_attack		27 Oct 2026, v1
+event	damaged	a unit or player takes damage	on_damaged		27 Oct 2026, v1
+event	survives_damage	a unit takes damage and does not die	on_damaged		27 Oct 2026, v1
+event	dies	a unit dies (Last Breath when the object is self)	death_trigger		27 Oct 2026, v1
+event	killed	the actor kills the object (Slay when the actor is the player)	on_kill		27 Oct 2026, v1
+event	leaves_play	a card leaves play by any means	leave_trigger		27 Oct 2026, v1
+event	recalled	a unit is returned to hand (Recall)	leave_trigger		27 Oct 2026, v1
+event	obliterated	a card is obliterated	leave_trigger		27 Oct 2026, v1
+event	targeted	a card is targeted by a spell, skill or ability	on_targeted		27 Oct 2026, v1
+event	given_keyword	a unit is given a keyword (Stun, Barrier, ...)			27 Oct 2026, v1
+event	stat_changed	a unit gets a stat change (buff or debuff)			27 Oct 2026, v1
+event	healed	a unit or player is healed	on_lifegain		27 Oct 2026, v1
+event	round_start	the round starts	turn_start		27 Oct 2026, v1
+event	round_end	the round ends	turn_end		27 Oct 2026, v1
+event	game_start	the game starts	start_of_game		27 Oct 2026, v1
+event	levels_up	a champion levels up			27 Oct 2026, v1
+event	spell_resolves	a spell or skill finishes (Imbue)	on_spell		27 Oct 2026, v1
+event	mana_refilled	mana or spell mana is refilled			27 Oct 2026, v1
+event	equipped	an item or equipment is attached to a unit			27 Oct 2026, v1
+event	countdown_done	a Countdown reaches 0	delayed		27 Oct 2026, v1
+event	shuffled	a card is shuffled into a deck			27 Oct 2026, v1
+event	transformed	a card transforms			27 Oct 2026, v1
+event	revived	a unit is revived			27 Oct 2026, v1
+event	predicts	the player Predicts			27 Oct 2026, v1
+event	nexus_damaged	a player is damaged (any source)	on_life_loss		27 Oct 2026, v1
+act	damage	deal damage	damage	damaged;survives_damage;dies;killed;nexus_damaged	27 Oct 2026, v1
+act	heal	restore Health or player life	heal	healed	27 Oct 2026, v1
+act	kill	kill (destroy) without damage	destroy	dies;killed;leaves_play	27 Oct 2026, v1
+act	obliterate	remove from the game; no death effects	banish	obliterated;leaves_play	27 Oct 2026, v1
+act	stat_change	change Power and/or Health by the params (signed)	stat_gain	stat_changed	27 Oct 2026, v1
+act	stat_set	set Power and/or Health to the params	stat_multiply	stat_changed	27 Oct 2026, v1
+act	give_keyword	give the target the linked keyword	buff	given_keyword	27 Oct 2026, v1
+act	remove_keyword	remove the linked keyword from the target	debuff		27 Oct 2026, v1
+act	silence	remove all keywords, abilities and ongoing effects	silence		27 Oct 2026, v1
+act	draw	draw cards (the target says which cards and from where)	draw	drawn	27 Oct 2026, v1
+act	discard	discard cards	discard	discarded	27 Oct 2026, v1
+act	create	create a card (linked) in a zone	generate_cards	created	27 Oct 2026, v1
+act	summon	put a unit (linked or described) into play	summon	summoned	27 Oct 2026, v1
+act	copy	make a copy of the target in a zone	copy	created	27 Oct 2026, v1
+act	transform	turn the target into another card (linked or described)	transform	transformed	27 Oct 2026, v1
+act	return_to_hand	return a unit in play to its owner's hand (Recall)	return_to_hand	recalled;leaves_play	27 Oct 2026, v1
+act	shuffle_into_deck	shuffle the target into a deck	recycle	shuffled	27 Oct 2026, v1
+act	put_on_top	put the target on top of a deck	tutor		27 Oct 2026, v1
+act	cost_change	change the cost of the target (signed param cost)	cost_reduction		27 Oct 2026, v1
+act	mana_gain	refill or gain mana / spell mana (param amount, kind via target)	resource_gain	mana_refilled	27 Oct 2026, v1
+act	gain_attack_token	the player gains the attack token (Rally)	extra_turn		27 Oct 2026, v1
+act	strike	the target unit strikes another target now	attack_now	strikes;damaged	27 Oct 2026, v1
+act	start_attack	start a free attack with the targets	attack_now	attacks	27 Oct 2026, v1
+act	challenge	force a unit to block / choose its blocker	forced_attack	blocks	27 Oct 2026, v1
+act	stun	stun (cannot attack or block this round, removed from combat)	disable	given_keyword	27 Oct 2026, v1
+act	mark	mark the target for a later effect	mark_target		27 Oct 2026, v1
+act	capture	remove the target until the capturer leaves play	banish	leaves_play	27 Oct 2026, v1
+act	revive	return a dead unit to play	revive	summoned;revived	27 Oct 2026, v1
+act	level_up	level up the target champion	upgrade	levels_up	27 Oct 2026, v1
+act	reveal	reveal cards			27 Oct 2026, v1
+act	look	look at cards without taking them	selection		27 Oct 2026, v1
+act	choose_one	the player chooses one of the following effects (they carry link=or)	modal_choice		27 Oct 2026, v1
+act	choose_card	pick a card among options (Invoke, Manifest, Predict, Discover)	selection		27 Oct 2026, v1
+act	counter	negate a spell or skill	counter_spell		27 Oct 2026, v1
+act	negate_damage	prevent damage to the target	damage_prevention		27 Oct 2026, v1
+act	swap	swap the positions of the targets	swap		27 Oct 2026, v1
+act	move	move the target to another position or zone	forced_movement		27 Oct 2026, v1
+act	countdown_advance	make a Countdown count down (param amount)		countdown_done	27 Oct 2026, v1
+act	attach	attach the source to the target unit	merge_attach	equipped	27 Oct 2026, v1
+act	keyword_action	do what the linked keyword describes (Recall, Invoke, Predict, Toss, Nab, ...)			27 Oct 2026, v1
+act	win_game	the player wins the game	win_condition		27 Oct 2026, v1
+act	repeat	cast or trigger the target effect again	repeat_trigger		27 Oct 2026, v1
+act	cant	the target cannot do the event named in param event (attack, block, be targeted, ...)	cant_attack		27 Oct 2026, v1
+act	can	the target may do something normally forbidden (param event)	rule_change		27 Oct 2026, v1
+act	increase_effect	the target's effects or numbers are increased (param amount)	spell_power		27 Oct 2026, v1
+kind	unit	a unit (follower or champion)			27 Oct 2026, v1
+kind	card	a card in a zone other than play			27 Oct 2026, v1
+kind	spell	a spell or skill			27 Oct 2026, v1
+kind	player	a player (Nexus)			27 Oct 2026, v1
+kind	landmark	a landmark			27 Oct 2026, v1
+kind	equipment	an equipment or item			27 Oct 2026, v1
+kind	any	a unit or a player (anything)			27 Oct 2026, v1
+kind	effect	an effect or ability (for counter, repeat)			27 Oct 2026, v1
+kind	mana	mana			27 Oct 2026, v1
+kind	spell_mana	spell mana			27 Oct 2026, v1
+kind	position	a board space			27 Oct 2026, v1
+side	mine	mine / allied			27 Oct 2026, v1
+side	enemy	the opponent's			27 Oct 2026, v1
+side	any	either side			27 Oct 2026, v1
+pick	self	the card that has the ability			27 Oct 2026, v1
+pick	chosen	chosen by the player			27 Oct 2026, v1
+pick	random	random			27 Oct 2026, v1
+pick	all	all that match			27 Oct 2026, v1
+pick	weakest	lowest Power (Weakest)			27 Oct 2026, v1
+pick	strongest	highest Power (Strongest)			27 Oct 2026, v1
+pick	it	the event's object, or the previous effect's target			27 Oct 2026, v1
+pick	actor	the event's actor			27 Oct 2026, v1
+pick	attached_to	the unit this is attached to			27 Oct 2026, v1
+pick	right_of_self	the unit to my right			27 Oct 2026, v1
+pick	left_of_self	the unit to my left			27 Oct 2026, v1
+pick	highest_cost	highest cost			27 Oct 2026, v1
+pick	lowest_cost	lowest cost			27 Oct 2026, v1
+pick	top	top of the zone			27 Oct 2026, v1
+pick	bottom	bottom of the zone			27 Oct 2026, v1
+pick	owner	the owner of the event's object or of the previous target			27 Oct 2026, v1
+zone	board	in play			27 Oct 2026, v1
+zone	hand	hand			27 Oct 2026, v1
+zone	deck	deck			27 Oct 2026, v1
+zone	deck_top	top of deck			27 Oct 2026, v1
+zone	deck_bottom	bottom of deck			27 Oct 2026, v1
+zone	everywhere	play, hand, deck and later created (Everywhere)			27 Oct 2026, v1
+zone	removed	removed from the game / captured			27 Oct 2026, v1
+zone	discard	discard pile / dead			27 Oct 2026, v1
+attr	power	Power			27 Oct 2026, v1
+attr	health	Health			27 Oct 2026, v1
+attr	cost	cost			27 Oct 2026, v1
+attr	keyword	has the linked keyword			27 Oct 2026, v1
+attr	type	has the linked type			27 Oct 2026, v1
+attr	card	is the linked card			27 Oct 2026, v1
+attr	category	is of a category (value from category)			27 Oct 2026, v1
+attr	region	is from a region (value from region)			27 Oct 2026, v1
+attr	state	is in a state (value from state)			27 Oct 2026, v1
+attr	count	number of matching things (for conditions)			27 Oct 2026, v1
+attr	origin	how the card got there (value from state)			27 Oct 2026, v1
+op	eq	equals			27 Oct 2026, v1
+op	ge	at least			27 Oct 2026, v1
+op	le	at most			27 Oct 2026, v1
+op	gt	more than			27 Oct 2026, v1
+op	lt	less than			27 Oct 2026, v1
+op	is	is / has			27 Oct 2026, v1
+op	not	is not / lacks			27 Oct 2026, v1
+state	attacking	attacking			27 Oct 2026, v1
+state	blocking	blocking			27 Oct 2026, v1
+state	damaged	damaged			27 Oct 2026, v1
+state	stunned	stunned			27 Oct 2026, v1
+state	frostbitten	frostbitten			27 Oct 2026, v1
+state	marked	marked by the source			27 Oct 2026, v1
+state	created	created (not from the deck)			27 Oct 2026, v1
+state	champion	is a champion			27 Oct 2026, v1
+state	follower	is not a champion			27 Oct 2026, v1
+state	equipped	has equipment			27 Oct 2026, v1
+state	buffed	has a positive stat change			27 Oct 2026, v1
+state	leveled	is a leveled champion			27 Oct 2026, v1
+state	hidden	played hidden (Ambush)			27 Oct 2026, v1
+state	ephemeral	Ephemeral			27 Oct 2026, v1
+state	in_combat	in combat			27 Oct 2026, v1
+state	dead_this_round	died this round			27 Oct 2026, v1
+state	fleeting	Fleeting			27 Oct 2026, v1
+category	unit	unit			27 Oct 2026, v1
+category	follower	non-champion unit			27 Oct 2026, v1
+category	champion	champion			27 Oct 2026, v1
+category	spell	spell			27 Oct 2026, v1
+category	skill	skill			27 Oct 2026, v1
+category	landmark	landmark			27 Oct 2026, v1
+category	equipment	equipment			27 Oct 2026, v1
+category	burst_spell	Burst spell			27 Oct 2026, v1
+category	fast_spell	Fast spell			27 Oct 2026, v1
+category	slow_spell	Slow spell			27 Oct 2026, v1
+category	focus_spell	Focus spell			27 Oct 2026, v1
+region	Bandle City	region			27 Oct 2026, v1
+region	Bilgewater	region			27 Oct 2026, v1
+region	Demacia	region			27 Oct 2026, v1
+region	Freljord	region			27 Oct 2026, v1
+region	Ionia	region			27 Oct 2026, v1
+region	Noxus	region			27 Oct 2026, v1
+region	Piltover & Zaun	region			27 Oct 2026, v1
+region	Shadow Isles	region			27 Oct 2026, v1
+region	Shurima	region			27 Oct 2026, v1
+region	Targon	region			27 Oct 2026, v1
+region	Runeterra	region			27 Oct 2026, v1
+test	count	a count of things meets op n (field of: a target)			27 Oct 2026, v1
+test	event_count	an event happened op n times in span			27 Oct 2026, v1
+test	have	the player has a matching card (Behold when zone hand+board)			27 Oct 2026, v1
+test	stat	a stat of a target meets op n			27 Oct 2026, v1
+test	first_card	this is (or is not, op not) the first card played this round (Daybreak / Nightfall)			27 Oct 2026, v1
+test	attack_token	the player has (op is) or lacks (op not) the attack token			27 Oct 2026, v1
+test	max_mana	the player's max mana op n (Enlightened)			27 Oct 2026, v1
+test	keyword_condition	the linked condition keyword holds (Plunder, Flow, Allegiance, Reputation, Empowered...)			27 Oct 2026, v1
+test	stage	the ability belongs to stage n of a staged card (I, II, III)			27 Oct 2026, v1
+test	chance	happens with chance n percent			27 Oct 2026, v1
+test	it_matches	the event's object matches the filters			27 Oct 2026, v1
+span	now	at this moment			27 Oct 2026, v1
+span	this_round	this round			27 Oct 2026, v1
+span	last_round	last round			27 Oct 2026, v1
+span	this_game	this game			27 Oct 2026, v1
+span	this_turn	this action			27 Oct 2026, v1
+lasts	instant	one-time			27 Oct 2026, v1
+lasts	this_round	until the round ends			27 Oct 2026, v1
+lasts	next_round	through the next round			27 Oct 2026, v1
+lasts	permanent	for the rest of the game			27 Oct 2026, v1
+lasts	while	while the ability's conditions hold or the source is in play			27 Oct 2026, v1
+lasts	while_attached	while attached			27 Oct 2026, v1
+lasts	n_rounds	for param rounds rounds			27 Oct 2026, v1
+link	and	also, independent			27 Oct 2026, v1
+link	then	after the previous effect			27 Oct 2026, v1
+link	if_done	only if the previous effect happened			27 Oct 2026, v1
+link	otherwise	only if the previous effect did not happen			27 Oct 2026, v1
+link	or	alternative of a choose_one / either-or			27 Oct 2026, v1
+link	instead	replaces the previous effect when the ability conditions hold			27 Oct 2026, v1
+link	for_each	repeat once per item of the previous effect's targets			27 Oct 2026, v1
+param	amount	how much / how many			27 Oct 2026, v1
+param	power	Power change or value			27 Oct 2026, v1
+param	health	Health change or value			27 Oct 2026, v1
+param	cost	cost change or value			27 Oct 2026, v1
+param	rounds	number of rounds			27 Oct 2026, v1
+param	options	number of options to choose from			27 Oct 2026, v1
+param	times	number of repetitions			27 Oct 2026, v1
+param	percent	percent			27 Oct 2026, v1
+param	event	an event value (for cant/can)			27 Oct 2026, v1
+limit	once_per_round	at most once each round			27 Oct 2026, v1
+limit	first_each_round	only the first time each round			27 Oct 2026, v1
+limit	once_per_game	once per game			27 Oct 2026, v1
+limit	n_times	at most param times			27 Oct 2026, v1
+limit	each_time	every time (default)			27 Oct 2026, v1
+x	n	a plain number			27 Oct 2026, v1
+x	count	the number of matching things (field of)			27 Oct 2026, v1
+x	stat	a stat (attr) of a target (field of)			27 Oct 2026, v1
+x	event_amount	the amount of the triggering event (that much)			27 Oct 2026, v1
+x	event_count	the number of times an event happened in span			27 Oct 2026, v1
+x	half	half of the inner value			27 Oct 2026, v1
+x	double	double the inner value			27 Oct 2026, v1
+state	combat	came from combat (strikes), for damage events			27 Oct 2026, v1
+state	spent	spent (mana)			27 Oct 2026, v1

@@ -1,0 +1,104 @@
+{"id": 750368, "name": "Overwhelm", "category": "keyword", "text": "Inflicts damage beyond what would kill the target(s) to the enemy Nexus."}
+{"id": 750369, "name": "Burst", "category": "keyword", "text": "Can be played whenever you may act. Happens instantly and allows you to continue to play other cards."}
+{"id": 750370, "name": "Countdown", "category": "keyword", "text": "Round Start: I count down 1. At 0, activate the Countdown effect, then destroy me."}
+{"id": 750371, "name": "Play", "category": "keyword", "text": "Get this effect when you play this unit from hand."}
+{"id": 750372, "name": "Landmark", "category": "keyword", "text": "Landmarks take up a space on the board. They can't attack, block, or take damage."}
+{"id": 750373, "name": "Capture", "category": "keyword", "text": "A Captured card is removed from the game. It returns when the Capturing unit leaves play."}
+{"id": 750374, "name": "Attack", "category": "keyword", "text": "Get this effect when this unit attacks."}
+{"id": 750375, "name": "Story: Slow", "category": "keyword", "text": "Activatable once per round. When activated, play the skill of the current Act at Slow speed, then transform me to the next Act."}
+{"id": 750376, "name": "Attach", "category": "keyword", "text": "Attach me to an ally to give it my stats and keywords while I'm attached. When that ally leaves play, Recall me."}
+{"id": 750377, "name": "Story: Focus", "category": "keyword", "text": "Activatable once per round. When activated, play the skill of the current Act at Focus speed, then transform me to the next Act."}
+{"id": 750378, "name": "Fleeting", "category": "keyword", "text": "Fleeting cards discard from hand when the round ends."}
+{"id": 750379, "name": "Elemental Skill", "category": "keyword", "text": "A unit's spell-like effect that allows enemy reactions. It's elemental!"}
+{"id": 750380, "name": "Nab", "category": "keyword", "text": "Draw a non-champion card from the bottom of the enemy deck."}
+{"id": 750381, "name": "Focus", "category": "keyword", "text": "Can be played outside combat or when no other spells or skills are pending. Happens instantly and allows you to continue to play other cards."}
+{"id": 750382, "name": "Enlightened", "category": "keyword", "text": "You're Enlightened when you have 10 max mana."}
+{"id": 750383, "name": "Invoke", "category": "keyword", "text": "Pick a Celestial card from among 3 to create in hand."}
+{"id": 750384, "name": "Flow", "category": "keyword", "text": "A card activates its Flow on Round Start if you played 2+ spells or skills last round."}
+{"id": 750385, "name": "Boon", "category": "keyword", "text": "Attaches to another card in a deck. When that card is drawn, activate the effect."}
+{"id": 750386, "name": "Trap", "category": "keyword", "text": "Attaches to another card in a deck. When that card is drawn, activate the effect."}
+{"id": 750387, "name": "Drain", "category": "keyword", "text": "Heal your Nexus for the amount of damage dealt"}
+{"id": 750388, "name": "Last Breath", "category": "keyword", "text": "These abilities take effect when the unit dies."}
+{"id": 750389, "name": "Level Up", "category": "keyword", "text": "A champion in play levels up everywhere once this condition is met. Some champions must be in play to see their condition progress."}
+{"id": 750390, "name": "Fast", "category": "keyword", "text": "Can be played whenever you may act. Happens after your opponent has a chance to react."}
+{"id": 750391, "name": "Recall", "category": "keyword", "text": "Return a unit to hand and remove all effects applied to it."}
+{"id": 750392, "name": "Weakest", "category": "keyword", "text": "Lowest Power, with ties broken by lowest Health then lowest Cost"}
+{"id": 750393, "name": "Support", "category": "keyword", "text": "Attacking with a support unit will buff the unit to its right."}
+{"id": 750394, "name": "Slow", "category": "keyword", "text": "Can be played outside of combat when no spells or skills are pending. Happens after your opponent has a chance to react."}
+{"id": 750395, "name": "Imbue", "category": "keyword", "text": "These abilities trigger when you resolve a spell."}
+{"id": 750396, "name": "Equipment", "category": "keyword", "text": "Equip to a unit to grant the listed bonuses. If the unit leaves play, the equipment will return to your hand. You may play each equipment at most once per round."}
+{"id": 750397, "name": "Nightfall", "category": "keyword", "text": "Bonus if this is NOT the first card you play in a round."}
+{"id": 750398, "name": "Attune", "category": "keyword", "text": "When I'm summoned, refill 1 spell mana."}
+{"id": 750399, "name": "Daybreak", "category": "keyword", "text": "Bonus if this is the FIRST card you play in a round."}
+{"id": 750400, "name": "Skill", "category": "keyword", "text": "A unit's spell-like effect that allows enemy reactions."}
+{"id": 750401, "name": "Plunder", "category": "keyword", "text": "A card activates its plunder ability when played if you damaged the enemy Nexus this round."}
+{"id": 750402, "name": "Double Attack", "category": "keyword", "text": "While attacking, it strikes both before AND at the same time as its blocker."}
+{"id": 750403, "name": "Vulnerable", "category": "keyword", "text": "The enemy can challenge this unit, forcing it to block."}
+{"id": 750404, "name": "Elusive", "category": "keyword", "text": "Can only be blocked by an Elusive unit."}
+{"id": 750405, "name": "Stun", "category": "keyword", "text": "Remove a unit from combat. It can't attack or block for the rest of the round."}
+{"id": 750406, "name": "Curse", "category": "keyword", "text": "Applies a negative effect as long as it's in hand. Multiples of the same curse on a unit combine, increasing their cost and effect. Cannot be targeted in hand."}
+{"id": 750407, "name": "Fated", "category": "keyword", "text": "Each round, the first time an allied card targets me, grant me +1|+1."}
+{"id": 750408, "name": "Sharpsight", "category": "keyword", "text": "Can block Elusive units"}
+{"id": 750409, "name": "Fury", "category": "keyword", "text": "When I kill a unit, grant me +1|+1."}
+{"id": 750410, "name": "Barrier", "category": "keyword", "text": "Negates the next damage the unit would take. Lasts one round."}
+{"id": 750411, "name": "Immobile", "category": "keyword", "text": "Can't attack or block."}
+{"id": 750412, "name": "Hallowed", "category": "keyword", "text": "After I die, for the rest of the game when allies attack, hallow your first attacker giving it +1|+0 that round"}
+{"id": 750413, "name": "Evolve", "category": "keyword", "text": "I have +2|+2 once you've had Units with 6+ other unique positive keywords in play this game."}
+{"id": 750414, "name": "Frostbite", "category": "keyword", "text": "Set a unit's Power to 0 this round. It can be changed after."}
+{"id": 750415, "name": "Quick Attack", "category": "keyword", "text": "While attacking, strikes before its blocker."}
+{"id": 750416, "name": "Spirit", "category": "keyword", "text": "This unit has +1|+1. This keyword can stack."}
+{"id": 750417, "name": "Tough", "category": "keyword", "text": "Takes 1 less damage from all sources."}
+{"id": 750418, "name": "Regeneration", "category": "keyword", "text": "Heals fully at the end of each round."}
+{"id": 750419, "name": "Silenced", "category": "keyword", "text": "Removes all text and keywords from a unit."}
+{"id": 750420, "name": "SpellShield", "category": "keyword", "text": "Negates the next enemy spell or skill that would affect me."}
+{"id": 750421, "name": "Lifesteal", "category": "keyword", "text": "Damage this unit deals heals its Nexus that amount."}
+{"id": 750422, "name": "Gloom", "category": "keyword", "text": "This unit has -1|-1. This keyword can stack."}
+{"id": 750423, "name": "Augment", "category": "keyword", "text": "When you play a created card, grant me +1|+0."}
+{"id": 750424, "name": "Impact", "category": "keyword", "text": "When this strikes while attacking, it deals 1 to the enemy Nexus. This keyword can stack."}
+{"id": 750425, "name": "Scout", "category": "keyword", "text": "The first time only Scout units attack each round, ready your attack."}
+{"id": 750426, "name": "Ephemeral", "category": "keyword", "text": "This unit dies when it strikes or when the round ends."}
+{"id": 750427, "name": "Lurk", "category": "keyword", "text": "When you attack while I'm on top of your deck, I Lurk, granting Lurker allies everywhere +1|+0. Max once per round."}
+{"id": 750428, "name": "Formidable", "category": "keyword", "text": "I strike with my Health instead of my Power."}
+{"id": 750429, "name": "Deathless", "category": "keyword", "text": "The next time this unit dies, remove Deathless and revive it Stunned with 1 Health."}
+{"id": 750430, "name": "Brash", "category": "keyword", "text": "Can only be blocked by enemies with 3 or more Health."}
+{"id": 750431, "name": "Challenger", "category": "keyword", "text": "Can choose which enemy unit blocks."}
+{"id": 750432, "name": "Fearsome", "category": "keyword", "text": "Can only be blocked by enemies with 3 or more Power."}
+{"id": 750433, "name": "Allegiance", "category": "keyword", "text": "When you summon this unit, it gets its allegiance bonus if the top card of your deck matches its region."}
+{"id": 750435, "name": "Phase", "category": "keyword", "text": "Pick the next Moon Weapon for Aphelios."}
+{"id": 750436, "name": "Reforge", "category": "keyword", "text": "Create a random Blade Fragment still needed to restore the blade. Once you\u2019ve played all 3, create the Blade of the Exile."}
+{"id": 750437, "name": "Disguise", "category": "keyword", "text": "Secretly transforms into another unit before entering play. They won't reveal their true identity to your opponent until they leave play or level up."}
+{"id": 750438, "name": "Restore the Sun Disc", "category": "keyword", "text": "Immediately draw 1 of each Ascended ally. For the rest of the game, level 2 Ascended allies are level 3."}
+{"id": 750440, "name": "Attack Strike", "category": "keyword", "text": "Effect when unit strikes with an attack"}
+{"id": 750441, "name": "Spawn", "category": "keyword", "text": "For each Spawn: Summon a 1|1 Tentacle, or if you already have one, grant your strongest Tentacle +1|+1."}
+{"id": 750442, "name": "Strongest", "category": "keyword", "text": "Highest Power, with ties broken by highest Health then highest Cost."}
+{"id": 750443, "name": "Toss", "category": "keyword", "text": "Obliterate X non-champion cards from the bottom of your deck."}
+{"id": 750444, "name": "Blade Dance", "category": "keyword", "text": "Start a free attack with that many summoned Blades."}
+{"id": 750445, "name": "Behold", "category": "keyword", "text": "You behold something if you have it in play or hand."}
+{"id": 750446, "name": "Terrify", "category": "keyword", "text": "Obliterate X cards from the top of the enemy deck, activating any traps on them."}
+{"id": 750447, "name": "Round End", "category": "keyword", "text": "Get this effect when the round ends."}
+{"id": 750448, "name": "Titanic", "category": "keyword", "text": "Units with 8+ power or health"}
+{"id": 750449, "name": "Obliterate", "category": "keyword", "text": "Completely removed from the game. Doesn't cause Last Breath and can't be revived."}
+{"id": 750450, "name": "Sleep", "category": "keyword", "text": "Obliterate a unit and recall its attachments to store an exact copy in a landmark for one round."}
+{"id": 750451, "name": "Updraft", "category": "keyword", "text": "Shuffle a card into its player's deck and reduce its cost by 1"}
+{"id": 750452, "name": "Improvise", "category": "keyword", "text": "Choose one of two random options from a depleting pool of equipment and equip it to this ally. If the ally wasn't played from hand, it equips a random equipment instead."}
+{"id": 750455, "name": "Boost", "category": "keyword", "text": "Increase allies' positive stackable keywords or enemies' negative stackable keywords."}
+{"id": 750456, "name": "Origin", "category": "keyword", "text": "This champion counts as one of your deck's regions. During deckbuilding, you may add the specified cards to your deck regardless of region. Origins may also have an effect that begins at Start of Game."}
+{"id": 750457, "name": "Strike", "category": "keyword", "text": "Get this effect when a unit attempts to deal damage using its Power, either at the end of battle or with spells. Units with 0 Power can't strike."}
+{"id": 750458, "name": "Animate", "category": "keyword", "text": "For each allied target, summon a 1|1 Ephemeral unit. Copy the animated spell onto them."}
+{"id": 750459, "name": "Nexus Strike", "category": "keyword", "text": "Effect when unit Strikes the enemy Nexus."}
+{"id": 750460, "name": "Empowered", "category": "keyword", "text": "A unit has its Empowered bonus while its Power is at least the listed number."}
+{"id": 750461, "name": "Reputation", "category": "keyword", "text": "Activates if allies have struck for 5+ damage at least 4 times this game."}
+{"id": 750462, "name": "Equip", "category": "keyword", "text": "Equipping an Item to a unit grants it the listed bonuses. If the unit leaves play, the Item will return to your hand. You may play each item at most once per round."}
+{"id": 750463, "name": "Recast", "category": "keyword", "text": "When you play this spell, create in hand a fleeting copy of it with +1 cost."}
+{"id": 750464, "name": "Round Start", "category": "keyword", "text": "Get this effect when the round starts."}
+{"id": 750465, "name": "Forge", "category": "keyword", "text": "Grant an ally +1|+1. If the ally is equipped, grant it to their item instead."}
+{"id": 750466, "name": "Everywhere", "category": "keyword", "text": "In play, in hand, in deck, in discard, and even if created/summoned later."}
+{"id": 750467, "name": "Advance", "category": "keyword", "text": "Makes a Countdown landmark count down that many times"}
+{"id": 750468, "name": "Rally", "category": "keyword", "text": "If you don't have one, gain the attack token. You can attack this round."}
+{"id": 750469, "name": "Slay", "category": "keyword", "text": "When you kill a unit via damage, kill effect, or striking it with an ally. (Self-killing, like from Ephemeral, doesn't count.)"}
+{"id": 750470, "name": "Gathering Storm", "category": "keyword", "text": "Reduce the cost of Storm Conduits in your hand by 1."}
+{"id": 750471, "name": "Silence", "category": "keyword", "text": "Remove all keywords, abilities, and ongoing effects. Doesn't affect damage or subtype."}
+{"id": 750473, "name": "Manifest", "category": "keyword", "text": "Create in hand 1 of 3 randomly selected cards."}
+{"id": 750474, "name": "Ambush", "category": "keyword", "text": "Can be played hidden if you have no other hidden Ambush allies. Hidden allies are 2 cost 2|2s. You may pay a hidden ally's Ambush cost to transform it into its base card."}
+{"id": 750476, "name": "Critical Strike", "category": "keyword", "text": "This has a chance to deal double damage."}
+{"id": 750477, "name": "Predict", "category": "keyword", "text": "Pick a card from among 3 in your deck. Put that card on top and place the others in your deck."}
